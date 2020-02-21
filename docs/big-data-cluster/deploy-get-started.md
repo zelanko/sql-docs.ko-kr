@@ -1,5 +1,5 @@
 ---
-title: 시작
+title: 시작하기
 titleSuffix: SQL Server Big Data Clusters
 description: SQL Server 빅 데이터 클러스터를 배포하기 위한 단계와 리소스를 알아봅니다.
 author: MikeRayMSFT
@@ -9,14 +9,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2bbb4c05a6760709fcb873cd8c39f301c37aeb2b
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 02c3e6e217ea2918ab36829d6f0cceb4a6269e81
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706363"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190385"
 ---
-# <a name="get-started-with-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 시작
+# <a name="get-started-with-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 시작
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -24,7 +24,7 @@ ms.locfileid: "73706363"
 
 기타 배포 시나리오는 다음을 참조하세요.
 
-- [창](../database-engine/install-windows/install-sql-server.md)
+- [Windows](../database-engine/install-windows/install-sql-server.md)
 - [Linux](../linux/sql-server-linux-setup.md)
 - [Docker 컨테이너](../linux/sql-server-linux-configure-docker.md)
 
@@ -33,11 +33,16 @@ ms.locfileid: "73706363"
 > [!TIP]
 > Kubernetes 및 빅 데이터 클러스터가 배포된 환경을 신속하게 구축하여 기능을 강화하려면 [스크립트 섹션](#scripts) 에서 가리키는 샘플 스크립트 중 하나를 사용합니다. 배포 후 클러스터를 관리하려면 다음 섹션의 [클라이언트 도구](#tools)를 사용합니다.
 
+빅 데이터 클러스터를 배포하는 방법에 대한 개요는 9분 분량의 다음 동영상을 시청하세요.
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Clusters-deployment-overview/player?WT.mc_id=dataexposed-c9-niner]
+
+
 ## <a id="tools"></a> 클라이언트 도구
 
 빅 데이터 클러스터를 사용하려면 특정 클라이언트 도구 세트가 필요합니다. Kubernetes에 빅 데이터 클러스터를 배포하기 전에 다음 도구를 설치해야 합니다.
 
-| 도구 | 설명 |
+| 도구 | Description |
 |---|---|
 | **azdata** | 빅 데이터 클러스터를 배포하고 관리합니다. |
 | **kubectl** | 기본 Kubernetes 클러스터를 만들고 관리합니다. |

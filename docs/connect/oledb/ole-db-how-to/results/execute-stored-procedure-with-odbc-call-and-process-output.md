@@ -1,6 +1,6 @@
 ---
 title: ODBC 호출 및 프로세스 출력을 사용하여 저장 프로시저 실행 | Microsoft Docs
-description: SQL Server에 대 한 OLE DB 드라이버를 사용 하 여 반환 코드 및 출력 매개 변수 처리
+description: OLE DB Driver for SQL Server를 사용하여 반환 코드 및 출력 매개 변수 처리
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c8b591cf2c903bb974af613dec17269c2d9f10fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015632"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>ODBC 호출 및 프로세스 출력을 사용하여 저장 프로시저 실행

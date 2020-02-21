@@ -1,5 +1,5 @@
 ---
-title: setNCharacterStream 메서드를 판독기 개체로-문자열 | Microsoft Docs
+title: Reader 개체에 대한 setNCharacterStream 메서드 - string | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: fd19fbb8-a878-4d98-a584-e4969d649844
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 34eb40d6c36f5c1586ac690de5e9fc354c8fd1f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973864"
 ---
 # <a name="setncharacterstream-method-javalangstring-javaioreader"></a>setNCharacterStream 메서드(java.lang.String, java.io.Reader)
@@ -37,15 +37,15 @@ public final void setNCharacterStream(java.lang.String parameterName,
   
  *value*  
   
- 판독기 개체입니다.  
+ Reader 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 setNCharacterStream 메서드는 setNCharacterStream 메서드를 통해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 setNCharacterStream 메서드는 java.sql.CallableStatement 인터페이스의 setNCharacterStream 메서드에 의해 지정됩니다.  
   
- 이 메서드는 **NCHAR**, **NVARCHAR**, **NTEXT**및 **XML** 데이터 형식에 사용 해야 합니다.  
+ 이 메서드는 **NCHAR**, **NVARCHAR**, **NTEXT**및 **XML** 데이터 형식에 사용해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [setNCharacterStream 메서드 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlservercallablestatement.md)   

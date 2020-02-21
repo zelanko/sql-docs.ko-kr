@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: bd26e2ddcacd91269a51e663b80acd4edf95c196
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580065"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 데이터 경고
@@ -58,7 +58,7 @@ SQL Server Reporting Services 데이터 경고는 사용자가 관심을 가지�
   
  기본 모드 또는 SharePoint 모드로 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 를 설치하거나 보고서 작성기의 독립 실행형 버전을 사용하는 경우 보고서를 보고서 서버, 자신의 컴퓨터 또는 SharePoint 라이브러리에 저장할 수 있습니다. 보고서에 대해 데이터 경고를 만들려면 보고서를 SharePoint 라이브러리에 업로드하거나 저장해야 합니다. 즉, 기본 모드로 보고서 서버에 저장되거나 자신의 컴퓨터에 저장된 보고서에 대해서는 경고를 만들 수 없습니다. 또한 사용자 지정 애플리케이션에 포함된 경고는 만들 수 없습니다.  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 보고서의 다양한 자격 증명 유형을 지원합니다. 저장된 자격 증명을 사용하거나 자격 증명을 아예 사용하지 않도록 구성된 데이터 원본이 포함된 보고서에 대해 데이터 경고를 만들 수 있습니다. 통합 보안 자격 증명을 사용하거나 자격 증명을 요청하도록 구성된 보고서에 대해서는 경고를 만들 수 없습니다. 보고서는 경고 정의를 처리하는 중에 실행되며 자격 증명이 없으면 처리가 실패합니다. 자세한 내용은 다음 항목을 참조하세요.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 보고서의 다양한 자격 증명 유형을 지원합니다. 저장된 자격 증명을 사용하거나 자격 증명을 아예 사용하지 않도록 구성된 데이터 원본이 포함된 보고서에 대해 데이터 경고를 만들 수 있습니다. 통합 보안 자격 증명을 사용하거나 자격 증명을 요청하도록 구성된 보고서에 대해서는 경고를 만들 수 없습니다. 보고서는 경고 정의를 처리하는 중에 실행되며 자격 증명이 없으면 처리가 실패합니다. 자세한 내용은  
   
 -   [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
@@ -116,7 +116,7 @@ SQL Server Reporting Services 데이터 경고는 사용자가 관심을 가지�
 ##  <a name="InstallAlerting"></a> 데이터 경고 설치  
  데이터 경고 기능은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 가 SharePoint 모드로 설치된 경우에만 사용할 수 있습니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 를 SharePoint 모드로 설치하면 데이터 경고 정보 및 경고 메타데이터를 저장하는 경고 데이터베이스와 경고 관리를 위한 두 개의 SharePoint 페이지가 자동으로 생성되고 SharePoint 사이트에 데이터 경고 디자이너가 추가됩니다. 수행할 특수 단계 또는 설치 중 경고에 대해 설정할 옵션이 없습니다.  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 을 SharePoint 모드로 설치하는 방법과 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 새로 도입된 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 공유 서비스 및 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능을 사용하기 전에 만들고 구성해야 하는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대한 자세한 내용은 MSDN Library의 [SharePoint 2010용 Reporting Services SharePoint 모드 설치](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) 를 참조하세요.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 SharePoint 모드로 설치하는 방법과 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 새로 도입된 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 공유 서비스 및 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능을 사용하기 전에 만들고 구성해야 하는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대한 자세한 내용은 MSDN Library의 [SharePoint 2010용 Reporting Services SharePoint 모드 설치](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)를 참조하세요.  
   
  이 항목 앞부분의 다이어그램에 나와 있는 것처럼 데이터 경고에는 SQL Server 에이전트 작업이 사용됩니다. 작업을 만들려면 SQL Server 에이전트가 실행되고 있어야 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 설치할 때 SQL Server 에이전트가 자동으로 시작되도록 구성했을 수 있습니다. 그렇지 않은 경우 SQL Server 에이전트를 수동으로 시작할 수 있습니다. 자세한 내용은 [SQL Server 에이전트 구성](../ssms/agent/configure-sql-server-agent.md) 및 [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)을 참조하세요.  
   
@@ -131,7 +131,7 @@ SQL Server Reporting Services 데이터 경고는 사용자가 관심을 가지�
   
  다음 표에서는 데이터 경고에 대한 구성 요소, 해당 기본값, 설명 및 위치를 보여 줍니다.  
   
-|설정|기본값|설명|위치|  
+|설정|기본값|Description|위치|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|정리 주기가 시작되는 지점 간의 간격(분)입니다.|보고서 서버 구성 파일|  
 |AlertingExecutionLogCleanupMinutes|10080|실행 로그 항목이 유지되는 시간(분)입니다.|보고서 서버 구성 파일|  
@@ -145,7 +145,7 @@ SQL Server Reporting Services 데이터 경고는 사용자가 관심을 가지�
 ### <a name="event-handlers-and-retry"></a>이벤트 처리기 및 다시 시도  
  이벤트 처리기는 다음과 같습니다.  
   
-|이벤트 처리기|설명|  
+|이벤트 처리기|Description|  
 |-------------------|-----------------|  
 |FireAlert|데이터 경고 관리자에서 **실행**  을 클릭하여 경고 정의 처리를 즉시 시작합니다.|  
 |FireSchedule|SQL Server 에이전트에서 경고 정의에 대한 작업 일정이 시작됩니다.|  
@@ -313,7 +313,7 @@ SQL Server Reporting Services 데이터 경고는 사용자가 관심을 가지�
   
 -   [데이터 경고 관리자에서 SharePoint 사이트의 모든 데이터 경고 관리](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
   
--   [사용자 및 경고 담당자에게 권한 부여](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
+-   [사용자 및 경고 관리자에게 사용 권한 부여](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   
 ## <a name="see-also"></a>참고 항목
 

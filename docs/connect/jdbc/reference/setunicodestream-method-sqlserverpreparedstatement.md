@@ -16,10 +16,10 @@ ms.assetid: 0a413e83-e0a4-41f8-9fe0-33ce4d368ee4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a80dddc28fbca156fe31a7620f1d1b0460359a75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972163"
 ---
 # <a name="setunicodestream-method-sqlserverpreparedstatement"></a>setUnicodeStream 메서드(SQLServerPreparedStatement)
@@ -55,8 +55,8 @@ public final void setUnicodeStream(int n,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 setUnicodeStream 메서드는 Java.sql.preparedstatement 인터페이스의 setUnicodeStream 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 setUnicodeStream 메서드는 java.sql.PreparedStatement 인터페이스의 setUnicodeStream 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerPreparedStatement 멤버](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

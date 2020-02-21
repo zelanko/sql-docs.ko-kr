@@ -5,16 +5,16 @@ description: '[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ve
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 964b6db780564797e35c4a40377227d3b56e4a3e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: fd1cab79ce226a710de1f701cfff5094a82704a5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532234"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75721703"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>SQL Server 2019 빅 데이터 도구 설치
 
@@ -26,19 +26,19 @@ ms.locfileid: "73532234"
 
 다음 표에는 일반적인 빅 데이터 클러스터 도구와 도구 설치 방법이 나와 있습니다.
 
-| 도구 | 필수 | 설명 | 설치 |
+| 도구 | 필수 | Description | 설치 |
 |---|---|---|---|
-| `python` | 예 | python은 동적 의미 체계를 사용하는 해석된 개체 지향 고급 프로그래밍 언어입니다. SQL Server 빅 데이터 클러스터의 대부분은 python을 사용합니다. | [python 설치](#python).|
-| `azdata` | 예 | 빅 데이터 클러스터를 설치하고 관리하기 위한 명령줄 도구입니다. | [설치](deploy-install-azdata.md) |
-| `kubectl`<sup>1</sup> | 예 | 기본 Kubernetes 클러스터를 모니터링하기 위한 명령줄 도구입니다([자세한 정보](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
-| **Azure Data Studio** | 예 | SQL Server를 쿼리하기 위한 플랫폼 간 그래픽 도구입니다. | [설치](https://aka.ms/getazuredatastudio) |
-| **데이터 가상화 확장** | 예 | 데이터 가상화 마법사를 제공하는 Azure Data Studio용 확장입니다. | [설치](../azure-data-studio/data-virtualization-extension.md) |
+| `python` | yes | python은 동적 의미 체계를 사용하는 해석된 개체 지향 고급 프로그래밍 언어입니다. SQL Server 빅 데이터 클러스터의 대부분은 python을 사용합니다. | [python 설치](#python).|
+| `azdata` | yes | 빅 데이터 클러스터를 설치하고 관리하기 위한 명령줄 도구입니다. | [설치](deploy-install-azdata.md) |
+| `kubectl`<sup>1</sup> | yes | 기본 Kubernetes 클러스터를 모니터링하기 위한 명령줄 도구입니다([자세한 정보](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
+| **Azure Data Studio** | yes | SQL Server를 쿼리하기 위한 플랫폼 간 그래픽 도구입니다. | [설치](https://aka.ms/getazuredatastudio) |
+| **데이터 가상화 확장** | yes | 데이터 가상화 마법사를 제공하는 Azure Data Studio용 확장입니다. | [설치](../azure-data-studio/data-virtualization-extension.md) |
 | **Azure CLI**<sup>2</sup> | AKS의 경우 | Azure 서비스를 관리하기 위한 최신 명령줄 인터페이스입니다. AKS 빅 데이터 클러스터 배포와 함께 사용됩니다([자세한 정보](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [설치](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
-| **mssql-cli** | 선택 사항 | SQL Server를 쿼리하기 위한 최신 명령줄 인터페이스입니다([자세한 정보](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
+| **mssql-cli** | 옵션 | SQL Server를 쿼리하기 위한 최신 명령줄 인터페이스입니다([자세한 정보](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
 | **sqlcmd** | 일부 스크립트의 경우 | SQL Server를 쿼리하기 위한 레거시 명령줄 도구입니다([자세한 정보](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | `curl` <sup>3</sup> | 일부 스크립트의 경우 | URL을 사용하여 데이터를 전송하기 위한 명령줄 도구입니다. | [Windows](https://curl.haxx.se/windows/) \| Linux: curl 패키지 설치 |
 
-<sup>1</sup> `kubectl` 버전 1.13 이상을 사용해야 합니다. 또한 `kubectl` 버전은 Kubernetes 클러스터의 바로 이전 또는 이후 부 버전이어야 합니다. `kubectl` 클라이언트에서 특정 버전을 설치하려는 경우 [Install `kubectl` binary via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl)(curl을 통해 kubectl 이진 설치)를 참조하세요(Windows 10에서는 Windows PowerShell이 아닌 cmd.exe를 사용하여 curl 실행).
+<sup>1</sup>`kubectl` 버전 1.13 이상을 사용해야 합니다. 또한 `kubectl` 버전은 Kubernetes 클러스터의 바로 이전 또는 이후 부 버전이어야 합니다. `kubectl` 클라이언트에서 특정 버전을 설치하려는 경우 [Install `kubectl` binary via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl)(curl을 통해 kubectl 이진 설치)를 참조하세요(Windows 10에서는 Windows PowerShell이 아닌 cmd.exe를 사용하여 curl 실행).
 
 > [!TIP]
 > AKS(Azure Kubernetes Service)에서 이전에 배포한 클러스터와 함께 `kubectl`을 사용하려면 다음 Azure CLI 명령을 사용하여 클러스터 컨텍스트를 설정해야 합니다.
@@ -58,7 +58,7 @@ ms.locfileid: "73532234"
 - `azdata`
 - `kubectl`
 - **Azure Data Studio**
-- **SQL Server 2019 확장**
+- **데이터 가상화 확장**
 
 나머지 도구는 특정 시나리오에서만 필요합니다. **Azure CLI**는 AKS 배포와 관련된 Azure 서비스를 관리하는 데 사용할 수 있습니다. **mssql-cli**는 선택 사항이지만, 클러스터의 SQL Server 마스터 인스턴스에 연결하고 명령줄에서 쿼리를 실행할 수 있도록 하는 유용한 도구입니다. 또한 GitHub 스크립트를 사용하여 샘플 데이터를 설치하려는 경우 **sqlcmd** 및 `curl`이 필요합니다.
 

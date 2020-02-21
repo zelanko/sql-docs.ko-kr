@@ -11,10 +11,10 @@ ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d6a64589b44de50328aa3384a51e29e0c2cc9a6e
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027626"
 ---
 # <a name="troubleshooting-connectivity"></a>연결 문제 해결
@@ -24,11 +24,11 @@ ms.locfileid: "69027626"
   
  데이터베이스 연결 시도가 실패하는 데는 여러 가지 이유가 있습니다. 예를 들면 다음과 같습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 TCP/IP를 사용하고 있지 않거나 지정한 서버 또는 포트 번호가 잘못되었습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 지정한 서버 및 포트에서 TCP/IP로 수신 대기 중인지 확인합니다. 이 경우 "로그인에 실패했습니다. 호스트에 TCP/IP 연결을 설정하지 못했습니다."와 유사한 예외가 함께 보고됩니다. 이는 다음 중 하나를 나타냅니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 TCP/IP를 사용하고 있지 않거나 지정한 서버 또는 포트 번호가 잘못되었습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 지정한 서버 및 포트에서 TCP/IP로 수신 대기 중인지 확인합니다. 이 경우 “로그인에 실패했습니다. 호스트에 TCP/IP 연결을 설정하지 못했습니다."와 유사한 예외가 함께 보고됩니다. 이는 다음 중 하나를 나타냅니다.  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 설치되어 있지만 TCP/IP가 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워크 유틸리티 또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 네트워크 프로토콜로 설치되어 있지 않습니다.  
   
-    -   TCP/IP가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로토콜로 설치되어 있지만 JDBC 연결 URL에 지정한 포트에서 수신 대기하고 있지 않습니다. 기본 포트는 1433이지만 제품 설치 시 임의의 포트에서 수신 대기하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 구성할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 포트 1433에서 수신 대기 중인지 확인합니다. 또는 포트를 변경한 경우 JDBC 연결 URL에 지정된 포트가 변경된 포트와 일치하는지 확인합니다. JDBC 연결 Url에 대 한 자세한 내용은 [연결 Url 작성](../../connect/jdbc/building-the-connection-url.md)을 참조 하세요.  
+    -   TCP/IP가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로토콜로 설치되어 있지만 JDBC 연결 URL에 지정한 포트에서 수신 대기하고 있지 않습니다. 기본 포트는 1433이지만 제품 설치 시 임의의 포트에서 수신 대기하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 구성할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 포트 1433에서 수신 대기 중인지 확인합니다. 또는 포트를 변경한 경우 JDBC 연결 URL에 지정된 포트가 변경된 포트와 일치하는지 확인합니다. JDBC 연결 URL에 대한 자세한 내용은 [연결 URL 작성](../../connect/jdbc/building-the-connection-url.md)을 참조하세요.  
   
     -   JDBC 연결 URL에 지정한 컴퓨터 주소가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 설치되어 실행되는 서버를 가리키지 않습니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "69027626"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하려면 JDBC 드라이버에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증과 함께 설치해야 합니다. 이 인증은 기본적으로 설치되지 않습니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 설치하거나 구성할 때 이 옵션을 반드시 포함합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버 관련 문제 진단](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
  [JDBC 드라이버로 SQL Server에 연결](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   

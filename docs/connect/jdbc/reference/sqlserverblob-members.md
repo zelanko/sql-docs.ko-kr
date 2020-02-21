@@ -11,10 +11,10 @@ ms.assetid: 90e48555-ea83-4a90-80a3-51bc685015ec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81ce2d655214de3d31eb233deb4de2b1c3ae49f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971947"
 ---
 # <a name="sqlserverblob-members"></a>SQLServerBlob 멤버
@@ -24,7 +24,7 @@ ms.locfileid: "67971947"
   
 ## <a name="constructors"></a>생성자  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-constructor-sqlserverconnection-byte.md)|SQLServerBlob 클래스의 새 인스턴스를 초기화합니다.|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67971947"
   
 ## <a name="methods"></a>메서드  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[free](../../../connect/jdbc/reference/free-method-sqlserverblob.md)|이 메서드는 BLOB 개체 및 이 개체가 보유한 리소스를 해제합니다.|  
 |[getBinaryStream](../../../connect/jdbc/reference/getbinarystream-method-sqlserverblob.md)|BLOB에서 데이터를 읽기 위한 입력 스트림을 반환합니다.|  

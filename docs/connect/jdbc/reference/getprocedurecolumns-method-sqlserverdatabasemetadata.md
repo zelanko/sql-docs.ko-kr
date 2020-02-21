@@ -16,10 +16,10 @@ ms.assetid: 4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1767519cc2f36bac4a70da84efeb8da9e2a1ec3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980757"
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>getProcedureColumns 메서드(SQLServerDatabaseMetaData)
@@ -54,18 +54,18 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
   
  열 이름 패턴이 포함된 **문자열**입니다. 이 매개 변수에 null을 제공하면 각 열에 대한 행이 반환됩니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getProcedureColumns 메서드는 getProcedureColumns 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getProcedureColumns 메서드는 java.sql.DatabaseMetaData 인터페이스의 getProcedureColumns 메서드에 의해 지정됩니다.  
   
  getProcedureColumns 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   
-|속성|형식|설명|  
+|속성|Type|Description|  
 |----------|----------|-----------------|  
 |PROCEDURE_CAT|**String**|지정된 저장 프로시저가 있는 데이터베이스의 이름입니다.|  
 |PROCEDURE_SCHEM|**String**|저장 프로시저의 스키마입니다.|  
@@ -82,7 +82,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |REMARKS|**String**|프로시저 열에 대한 설명입니다.<br /><br /> <br /><br /> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 이 열의 값을 반환하지 않습니다.|  
 |COLUMN_DEF|**String**|열의 기본값입니다.|  
 |SQL_DATA_TYPE|**smallint**|이 열은 **datetime** 및 ISO **interval** 데이터 형식을 제외하고는 **DATA_TYPE** 열과 동일합니다.|  
-|SQL_DATETIME_SUB|**smallint**|**SQL_DATA_TYPE** 값이 **SQL_DATETIME** 또는 **SQL_INTERVAL**인 경우 **datetime** ISO **interval** 하위 코드입니다. **Datetime** 및 ISO **간격이**아닌 데이터 형식의 경우이 열은 NULL입니다.|  
+|SQL_DATETIME_SUB|**smallint**|**SQL_DATA_TYPE** 값이 **SQL_DATETIME** 또는 **SQL_INTERVAL**인 경우 **datetime** ISO **interval** 하위 코드입니다. **datetime**과 ISO **interval**이 아닌 데이터 형식의 경우 이 열은 NULL입니다.|  
 |CHAR_OCTET_LENGTH|**int**|열의 최대 바이트 수입니다.|  
 |ORDINAL_POSITION|**int**|테이블 내의 열 인덱스입니다.|  
 |IS_NULLABLE|**String**|열에 null 값을 사용할 수 있는지 여부를 나타냅니다.|  
@@ -94,7 +94,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**String**|XML 스키마 컬렉션의 이름입니다. 이름을 찾을 수 없는 경우 이 변수는 빈 문자열입니다.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**String**|UDT(사용자 정의 형식)를 포함하는 카탈로그의 이름입니다.|  
 |SS_XML_SCHEMACOLLECTION_NAME|**String**|UDT(사용자 정의 형식)를 포함하는 스키마의 이름입니다.|  
-|SS_DATA_TYPE|**tinyint**|확장 저장 프로시저에 사용되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식입니다.<br /><br /> <br /><br /> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 반환하는 데이터 형식에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서의 “데이터 형식(Transact-SQL)”을 참조하십시오.|  
+|SS_DATA_TYPE|**tinyint**|확장 저장 프로시저에 사용되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식입니다.<br /><br /> <br /><br /> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 반환하는 데이터 형식에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서의 “데이터 형식(Transact-SQL)”을 참조하세요.|  
   
 > [!NOTE]  
 >  getProcedureColumns 메서드에서 반환되는 데이터에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서의 “sp_sproc_columns(Transact-SQL)”를 참조하십시오.  

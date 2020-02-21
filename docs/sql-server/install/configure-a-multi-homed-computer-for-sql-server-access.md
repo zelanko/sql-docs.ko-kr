@@ -1,7 +1,7 @@
 ---
-title: SQL Server 액세스를 허용하도록 다중 홈 컴퓨터 구성 | Microsoft 문서
-ms.custom: ''
-ms.date: 03/14/2017
+title: 액세스를 위해 다중 홈 컴퓨터 구성
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a024707b5fa7ab70394a068ed47110898ae0518
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8733c9a4624bcadb60eb5cfa70cf81f242f43a7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126219"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244457"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>SQL Server 액세스를 허용하도록 다중 홈 컴퓨터 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "68126219"
   
 3.  사용 중인 IPv4 주소와 IPv6 주소를 기록해 둡니다. 임시 주소, 서브넷 마스크 및 기본 게이트웨이 등과 같은 기타 정보는 TCP/IP 네트워크를 구성할 때 중요한 정보입니다. 그러나 이 예에서는 이 정보를 사용하지 않습니다.  
   
-#### <a name="to-determine-the-ip-addresses-and-ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>사용하는 IP 주소와 포트를 확인하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="to-determine-the-ip-addresses-and-ports-used-by-ssnoversion"></a>사용하는 IP 주소와 포트를 확인하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  **시작**을 클릭하고 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 선택한 다음 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자**를 클릭합니다.  
   

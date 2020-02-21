@@ -16,10 +16,10 @@ ms.assetid: b844cd9d-3d2d-4385-ab01-ecc89692054f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5eb50fafceefa312fe1b73daf2b2d88d4238403d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67985436"
 ---
 # <a name="updatebigdecimal-method-javalangstring-javamathbigdecimal"></a>updateBigDecimal 메서드(java.lang.String, java.math.BigDecimal)
@@ -42,13 +42,13 @@ public void updateBigDecimal(java.lang.String columnName,
   
  *x*  
   
- 가는 10 진수 개체입니다.  
+ BigDecimal 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 Update의 Decimal 메서드는 java. ResultSet 인터페이스의 Update이상 Decimal 메서드로 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 updateBigDecimal 메서드는 java.sql.ResultSet 인터페이스의 updateBigDecimal 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [updateBigDecimal 메서드(SQLServerResultSet)](../../../connect/jdbc/reference/updatebigdecimal-method-sqlserverresultset.md)   

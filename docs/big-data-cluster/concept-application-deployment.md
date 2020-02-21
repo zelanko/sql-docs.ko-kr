@@ -1,24 +1,26 @@
 ---
 title: 애플리케이션 배포란?
-titleSuffix: Big Data Clusters for SQL Server 2019
+titleSuffix: SQL Server Big Data Clusters
 description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터의 애플리케이션 배포를 설명합니다.
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: da497f8d7c435a807ba530ae619ff91a6f2dff71
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 4b647ab4d03d110ce303388a8b62461f28033b6c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653005"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831576"
 ---
-# <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 빅 데이터 클러스터의 애플리케이션 배포란?
+# <a name="what-is-application-deployment-on-a-big-data-cluster"></a>빅 데이터 클러스터의 애플리케이션 배포란?
 
-애플리케이션 배포는 애플리케이션을 만들고 관리 및 실행하기 위한 인터페이스를 제공하여 빅 데이터 클러스터에 애플리케이션을 배포할 수 있게 합니다. 빅 데이터 클러스터에 배포된 애플리케이션은 클러스터의 계산 능력을 활용하며, 클러스터에서 사용할 수 있는 데이터에 액세스할 수 있습니다. 이로 인해 데이터가 있는 애플리케이션을 관리하는 동시에 애플리케이션의 확장성과 성능이 향상됩니다.
+애플리케이션 배포는 애플리케이션을 만들고 관리 및 실행하기 위한 인터페이스를 제공하여 빅 데이터 클러스터에 애플리케이션을 배포할 수 있게 합니다. 빅 데이터 클러스터에 배포된 애플리케이션은 클러스터의 계산 능력을 활용하며, 클러스터에서 사용할 수 있는 데이터에 액세스할 수 있습니다. 이로 인해 데이터가 있는 애플리케이션을 관리하는 동시에 애플리케이션의 확장성과 성능이 향상됩니다. SQL Server 빅 데이터 클러스터에서 지원되는 애플리케이션 런타임은 R, Python, SSIS, MLeap입니다.
+
 다음 섹션에서는 애플리케이션 배포의 아키텍처 및 기능을 설명합니다.
 
 ## <a name="application-deployment-architecture"></a>애플리케이션 배포 아키텍처

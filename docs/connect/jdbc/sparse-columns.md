@@ -11,10 +11,10 @@ ms.assetid: 7d4237e0-818f-4639-9093-d5ac9683fc71
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 328b25b4494ff69368147c9369a0949f3094108f
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027718"
 ---
 # <a name="sparse-columns"></a>스파스 열
@@ -35,11 +35,11 @@ ms.locfileid: "69027718"
 
 ## <a name="example"></a>예제
 
-### <a name="description"></a>설명
+### <a name="description"></a>Description
 
 이 예제에서는 열 집합을 검색하는 방법을 보여 줍니다. 또한 열 집합의 XML 출력을 구문 분석하여 스파스 열에서 데이터를 가져오는 방법도 보여 줍니다.
 
-코드 목록은 Java 소스 코드입니다. 응용 프로그램을 컴파일하기 전에 연결 문자열을 변경 합니다.
+코드 목록은 Java 소스 코드입니다. 애플리케이션을 컴파일하기 전에 연결 문자열을 변경합니다.
 
 ### <a name="code"></a>코드
 
@@ -158,6 +158,6 @@ public class SparseColumns {
 
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [JDBC 드라이버로 성능 및 안정성 개선](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

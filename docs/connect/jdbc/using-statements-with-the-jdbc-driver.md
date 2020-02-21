@@ -11,10 +11,10 @@ ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9ddd61d15e3c363766c7e49b8e9045b60a7be164
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025790"
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>JDBC 드라이버에서 문 사용
@@ -35,7 +35,7 @@ JDBC 드라이버는 다음과 같은 세 개의 클래스를 통해 [!INCLUDE[s
   
 ## <a name="in-this-section"></a>섹션 내용  
 
-| 항목                                                                                                    | 설명                                                                                                                                            |
+| 항목                                                                                                    | Description                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [SQL이 있는 문 사용](../../connect/jdbc/using-statements-with-sql.md)                             | JDBC 드라이버에서 SQL 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 데이터를 사용하는 방법을 설명합니다.    |
 | [저장 프로시저가 있는 문 사용](../../connect/jdbc/using-statements-with-stored-procedures.md) | JDBC 드라이버에서 저장 프로시저를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 데이터를 사용하는 방법을 설명합니다. |
@@ -45,6 +45,6 @@ JDBC 드라이버는 다음과 같은 세 개의 클래스를 통해 [!INCLUDE[s
 | [일괄 처리 작업 수행](../../connect/jdbc/performing-batch-operations.md)                         | JDBC 드라이버를 사용하여 일괄 작업을 수행하는 방법을 설명합니다.                                                                                      |
 | [복잡한 문 처리](../../connect/jdbc/handling-complex-statements.md)                         | JDBC 드라이버를 사용하여 다양한 태스크를 수행하고 서로 다른 데이터 형식을 반환할 수 있는 복잡한 문을 실행하는 방법을 설명합니다.               |
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

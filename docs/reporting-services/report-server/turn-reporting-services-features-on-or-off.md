@@ -12,10 +12,10 @@ ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 67945db1fd131b27b37a7e34853987c38fad8d84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140376"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Reporting Services 기능 설정 또는 해제
@@ -96,7 +96,7 @@ ms.locfileid: "67140376"
   
 ##  <a name="WebPortal"></a> 웹 포털
   
-SQL Server 2016 Reporting Services 누적 업데이트 2를 기준으로 웹 포털은 항상 사용할 수 있습니다.
+SQL Server 2016 Reporting Services 누적 업데이트 2부터 웹 포털은 항상 사용됩니다.
   
 ##  <a name="WinIntSec"></a> Windows 통합 보안  
   
@@ -114,7 +114,7 @@ SQL Server 2016 Reporting Services 누적 업데이트 2를 기준으로 웹 포
   
 4.  **확인**을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [Reporting Services 구성 관리자(기본 모드)](../install-windows/reporting-services-configuration-manager-native-mode.md)
 
  추가 질문이 있으신가요? [Reporting Services 포럼을 이용해 보세요.](https://go.microsoft.com/fwlink/?LinkId=620231)

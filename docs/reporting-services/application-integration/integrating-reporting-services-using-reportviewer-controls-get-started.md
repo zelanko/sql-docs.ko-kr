@@ -1,6 +1,8 @@
 ---
-title: ReportViewer 2016 컨트롤 시작하기 | Microsoft Docs
-ms.date: 09/18/2018
+title: 보고서 뷰어 컨트롤 시작
+description: 보고서 뷰어 컨트롤은 Reporting Services RDL 보고서를 WebForms 및 WinForms 앱에 통합하는 데 사용할 수 있습니다.
+ms.custom: seo-lt-2019
+ms.date: 12/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
@@ -8,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1fd408e5459aea50c04c29d234fce54d8a3ab772
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: d7e1e64bddcdcc7efed701770aea0e97c8e84ec5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503915"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241834"
 ---
 # <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>보고서 뷰어 컨트롤을 사용하여 Reporting Services 통합 - 시작
 
@@ -48,7 +50,7 @@ ms.locfileid: "65503915"
     
 마지막 페이지는 다음과 같아야 합니다.
 
-```
+```html
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Sample" %>
 
 <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
@@ -69,7 +71,6 @@ ms.locfileid: "65503915"
     </form>
 </body>
 </html>
-
 ```
 
 ## <a name="updating-an-existing-project-to-use-the-report-viewer-control"></a>보고서 뷰어 컨트롤을 사용하도록 기존 프로젝트 업데이트
@@ -78,7 +79,7 @@ ms.locfileid: "65503915"
 
 ### <a name="sample-webconfig-changes"></a>샘플 web.config 변경 내용
 
-```
+```xml
 <?xml version="1.0"?>
 <!--
   For more information on how to configure your ASP.NET application, please visit
@@ -145,9 +146,9 @@ ms.locfileid: "65503915"
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
     ```
-3. 코드에서 새 컨트롤을 추가하거나 [도구 상자에 컨트롤을 추가](##adding-control-to-visual-studio-toolbar)합니다.
+3. 코드에서 새 컨트롤을 추가하거나 [도구 상자에 컨트롤을 추가](#adding-control-to-visual-studio-toolbar)합니다.
 
-    ```
+    ```csharp
     private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     
     private void InitializeComponent()
@@ -175,7 +176,7 @@ ms.locfileid: "65503915"
 
 ### <a name="setting-the-height-of-all-the-ancestors-to-100"></a>모든 상위 항목의 높이 100%로 설정
 
-```
+```html
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -196,14 +197,13 @@ ms.locfileid: "65503915"
     </form>
 </body>
 </html>
-
 ```
 
 ### <a name="setting-the-parents-height-attribute"></a>부모의 높이 특성 설정
 
 뷰포트 백분율 길이 대한 자세한 내용은 [뷰포트 백분율 길이](http://www.w3.org/TR/css3-values/#viewport-relative-lengths)를 참조하세요.
 
-```
+```html
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -219,7 +219,6 @@ ms.locfileid: "65503915"
     </form>
 </body>
 </html>
-
 ```
 
 ## <a name="adding-control-to-visual-studio-toolbar"></a>Visual Studio 도구 모음에 컨트롤 추가
@@ -257,11 +256,11 @@ ms.locfileid: "65503915"
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     ```
       
-## <a name="feedback"></a>피드백
+## <a name="feedback"></a>사용자 의견
 
 [Reporting Services 포럼](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices)에서 문제를 게시하여 팀에 알려주세요.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [보고서 뷰어 컨트롤의 데이터 컬렉션](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
 추가 질문이 있으신가요? [Reporting Services 포럼을 이용해 보세요.](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: a6ed79b08fb4d20e184206185c991336636fe570
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015601"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>IBCPSession을 사용하여 파일에 대한 FILESTREAM 열 읽기(OLE DB)
@@ -24,7 +24,7 @@ ms.locfileid: "68015601"
 
   이 예제에서는 IBCPSession 인터페이스를 사용하여 파일에 대한 filestream 열을 읽고 서식 파일을 씁니다.  
   
- Filestream 기능에 대 한 자세한 내용은 [Filestream 지원](../../../oledb/features/filestream-support.md)을 참조 하세요.  
+ 파일 스트림 기능에 대한 자세한 내용은 [FILESTREAM 지원](../../../oledb/features/filestream-support.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
  INCLUDE 환경 변수에 msoledbsql.h가 들어 있는 디렉터리를 포함해야 합니다.  

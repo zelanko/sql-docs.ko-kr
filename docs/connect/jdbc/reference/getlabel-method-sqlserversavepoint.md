@@ -1,5 +1,5 @@
 ---
-title: getLabel 메서드 (SQLServerSavepoint) | Microsoft Docs
+title: getLabel 메서드(SQLServerSavepoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: ccc32b87-8451-46c8-a173-068d33374e57
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ed7c88520657d822da288a7b66c1f99f2a5bfa50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982612"
 ---
 # <a name="getlabel-method-sqlserversavepoint"></a>getLabel 메서드(SQLServerSavepoint)
@@ -34,7 +34,7 @@ ms.locfileid: "67982612"
 public java.lang.String getLabel()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  저장점 레이블의 이름이 들어 있는 **String**입니다.  
   
 ## <a name="see-also"></a>참고 항목  

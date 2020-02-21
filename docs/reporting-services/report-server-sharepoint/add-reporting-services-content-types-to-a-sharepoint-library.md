@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: d50d7e273be27f6b03d98db40c2da1dc70b23306
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68887745"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>SharePoint 라이브러리에 Reporting Services 콘텐츠 형식 추가
@@ -38,7 +38,7 @@ ms.locfileid: "68887745"
 > [!TIP]  
 >  라이브러리에 이전에 구성한 콘텐츠 형식이 **없는** 경우 먼저 콘텐츠 형식 관리를 설정한 다음 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 콘텐츠 형식을 설정합니다. 단일 문서 라이브러리에서 콘텐츠 형식 관리 설정에 대한 절차를 참조하세요.  
   
- **짧은 비디오:** [(SSRS)Enabling Content Types in SharePoint2010.wmv](https://www.youtube.com/watch?v=yqhm3DrtT1w)(https://www.youtube.com/watch?v=yqhm3DrtT1w).  
+ **짧은 동영상:** [(SSRS) Enabling Content Types in SharePoint2010.wmv](https://www.youtube.com/watch?v=yqhm3DrtT1w)(https://www.youtube.com/watch?v=yqhm3DrtT1w).  
   
  **항목 내용**  
   
@@ -123,7 +123,7 @@ ms.locfileid: "68887745"
   
 ##  <a name="bkmk_enable_content_management_2010"></a> 단일 문서 라이브러리에 대해 콘텐츠 형식 관리를 설정하려면(SharePoint 2010)  
   
-1.  여러 개의 콘텐츠 형식을 설정할 라이브러리를 엽니다. 라이브러리 메뉴 모음에 **새로 만들기**, **업로드**, **동작**및 **설정**메뉴가 표시됩니다. **설정**이 표시되지 않는 경우 콘텐츠 형식을 추가할 권한이 없습니다.  
+1.  여러 개의 콘텐츠 형식을 설정할 라이브러리를 엽니다. 라이브러리 메뉴 모음에 **새로 만들기**, **업로드**, **동작** 및 **설정** 메뉴가 표시됩니다. **설정**이 표시되지 않는 경우 콘텐츠 형식을 추가할 권한이 없습니다.  
   
 2.  **라이브러리 도구** 리본에서 **라이브러리**를 클릭합니다.  
   
@@ -167,9 +167,9 @@ ms.locfileid: "68887745"
   
      ![rs_general_app_settings_old_integrations](../../reporting-services/report-server-sharepoint/media/rs-general-app-settings-old-integrations.gif "rs_general_app_settings_old_integrations")  
   
-4.  **확인**을 클릭합니다.  
+4.  **Ok**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [보고서 작성기 시작](../../reporting-services/report-builder/start-report-builder.md)  
   

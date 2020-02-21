@@ -9,17 +9,17 @@ ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 18d10f94696f901efd4f3938bf9b5e06d1c7078d
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70176282"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2008r2-and-later](../../includes/ssrs-appliesto-2008r2-and-later.md)] [!INCLUDE [ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-pbirs](../../includes/ssrs-appliesto-pbirs.md)]
 
-이 항목에는 **RS.exe** 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 다른 보고서 서버로 콘텐츠 항목 및 설정을 복사하는 샘플 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 스크립트가 포함되며, 이에 대해 설명합니다. RS.exe는 기본 및 SharePoint 모드에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 함께 설치됩니다. 이 스크립트는 보고서 및 구독과 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 항목을 한 서버에서 다른 서버로 복사합니다. 스크립트에서는 SharePoint 모드 및 기본 모드 보고서 서버가 모두 지원됩니다.  
+이 문서에는 **RS.exe** 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 다른 보고서 서버로 콘텐츠 항목 및 설정을 복사하는 샘플 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 스크립트가 포함되며 관련 설명이 제공됩니다. RS.exe는 기본 및 SharePoint 모드에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 함께 설치됩니다. 이 스크립트는 보고서 및 구독과 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 항목을 한 서버에서 다른 서버로 복사합니다. 스크립트에서는 SharePoint 모드 및 기본 모드 보고서 서버가 모두 지원됩니다.  
 
 ##  <a name="bkmk_download_script"></a> ssrs_migration.rss 스크립트를 다운로드하려면  
  스크립트를 GitHub 사이트 [Reporting Services RS.exe 마이그레이션 스크립트](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/reporting-services/ssrs-migration-rss)에서 로컬 폴더로 다운로드합니다. 자세한 내용은 이 문서의 [스크립트 사용 방법](#bkmk_how_to_use_the_script) 섹션을 참조하세요.  
@@ -46,28 +46,28 @@ ms.locfileid: "70176282"
 ###  <a name="bkmk_what_is_migrated"></a> 스크립트가 마이그레이션하는 항목 및 리소스  
  스크립트는 이름이 동일한 기존 콘텐츠 항목을 덮어쓰지 않습니다.  스크립트가 대상 서버에서 원본 서버와 동일한 이름의 항목을 검색하면 개별 항목에서 "오류" 메시지가 발생되고 스크립트는 계속 실행됩니다. 다음 표에서는 스크립트가 대상 보고서 서버 모드로 마이그레이션할 수 있는 콘텐츠 및 리소스 유형을 보여줍니다.  
   
-|항목|마이그레이션|SharePoint|설명|  
+|항목|마이그레이션|SharePoint|Description|  
 |----------|--------------|----------------|-----------------|  
 |암호|**아니요**|**아니요**|암호는 마이그레이션되지 **않습니다** . 콘텐츠 항목이 마이그레이션된 다음에는 대상 서버에서 자격 증명 정보를 업데이트합니다. 예: 저장된 자격 증명이 포함된 데이터 원본.|  
-|내 보고서|**아니오**|**아니요**|기본 모드의 "내 보고서" 기능은 개별 사용자 로그인을 기반으로 하므로, 스크립팅 서비스에는 rss 스크립트를 실행하는 데 사용된 **–u** 매개 변수 외에 사용자에 대해 "내 보고서" 폴더의 콘텐츠에 대한 액세스 권한이 없습니다. 또한 “내 보고서”는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드의 기능이 아니며, 해당 폴더의 항목을 SharePoint 환경으로 복사할 수 없습니다. 따라서 스크립트는 원본 기본 모드 보고서 서버에서 "내 보고서" 폴더에 있는 보고서 항목을 복사하지 않습니다.<br /><br /> 이 스크립트를 사용해서 “내 보고서” 폴더에 있는 콘텐츠를 마이그레이션하려면 다음 단계를 완료합니다.<br /><br /> 1.  웹 포털에서 새 폴더를 만듭니다. 필요에 따라 각 사용자에 대해 폴더 또는 하위 폴더를 만들 수 있습니다.<br />2.  “내 보고서” 콘텐츠가 있는 사용자 중 하나로 로그인합니다.<br />3.  웹 포털에서 **내 보고서** 폴더를 선택합니다.<br />4.  폴더에 대한 **세부 정보** 보기를 선택합니다.<br />5.  복사하려는 각 보고서를 선택합니다.<br />6.  웹 포털 도구 모음에서 **이동**을 선택합니다.<br />7.  원하는 대상 폴더를 선택합니다.<br />8.  각 사용자에 대해 2-7단계를 반복합니다.<br />9. 스크립트를 실행합니다.|  
+|내 보고서|**아니요**|**아니요**|기본 모드의 "내 보고서" 기능은 개별 사용자 로그인을 기반으로 하므로, 스크립팅 서비스에는 rss 스크립트를 실행하는 데 사용된 **–u** 매개 변수 외에 사용자에 대해 "내 보고서" 폴더의 콘텐츠에 대한 액세스 권한이 없습니다. 또한 “내 보고서”는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드의 기능이 아니며, 해당 폴더의 항목을 SharePoint 환경으로 복사할 수 없습니다. 따라서 스크립트는 원본 기본 모드 보고서 서버에서 "내 보고서" 폴더에 있는 보고서 항목을 복사하지 않습니다.<br /><br /> 이 스크립트를 사용해서 “내 보고서” 폴더에 있는 콘텐츠를 마이그레이션하려면 다음 단계를 완료합니다.<br /><br /> 1.  웹 포털에서 새 폴더를 만듭니다. 필요에 따라 각 사용자에 대해 폴더 또는 하위 폴더를 만들 수 있습니다.<br />2.  “내 보고서” 콘텐츠가 있는 사용자 중 하나로 로그인합니다.<br />3.  웹 포털에서 **내 보고서** 폴더를 선택합니다.<br />4.  폴더에 대한 **세부 정보** 보기를 선택합니다.<br />5.  복사하려는 각 보고서를 선택합니다.<br />6.  웹 포털 도구 모음에서 **이동**을 선택합니다.<br />7.  원하는 대상 폴더를 선택합니다.<br />8.  각 사용자에 대해 2-7단계를 반복합니다.<br />9. 스크립트를 실행합니다.|  
 |기록|**아니요**|**아니요**||  
-|기록 설정|예|예|기록 설정이 마이그레이션되지만 기록 세부 정보는 마이그레이션되지 않습니다.|  
-|일정|예|예|일정을 마이그레이션하려면 대상 서버에서 SQL Server 에이전트가 실행 중이어야 합니다. SQL Server 에이전트가 대상에서 실행 중이 아니면 다음과 비슷한 오류 메시지가 표시됩니다.<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service isn't running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service isn't running. This operation requires the SQL Agent service.`|  
-|역할 및 시스템 정책|예|예|기본적으로 스크립트에서는 서버 사이에 사용자 지정 권한 스키마가 복사되지 않습니다. 기본 동작에 따르면 해당 항목은 ‘부모 권한 상속’ 플래그가 TRUE로 설정되어 대상 서버로 복사됩니다. 스크립트가 개별 항목의 권한을 복사하도록 하려면 SECURITY 스위치를 사용합니다.<br /><br /> 원본 및 대상 서버가 **동일한 보고서 서버 모드가 아니고**(예: 기본 모드에서 SharePoint 모드로), SECURITY 스위치를 사용하는 경우, 스크립트는 [Reporting Services의 역할 및 작업과 SharePoint 그룹 및 사용 권한 비교](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md) 문서에 설명된 비교 방법을 기준으로 기본 역할 및 그룹을 매핑하려고 시도합니다. 사용자 지정 역할 및 그룹은 대상 서버로 복사되지 않습니다.<br /><br /> **동일한 모드**의 서버 사이에 스크립트를 복사하고 SECURITY 스위치를 사용하는 경우에는 스크립트가 새 역할(기본 모드) 또는 그룹(SharePoint 모드)을 대상 서버에 만듭니다.<br /><br /> 역할이 대상 서버에 이미 있을 경우 스크립트는 다음과 비슷한 “오류” 메시지를 만들고 다른 항목을 계속 마이그레이션합니다. 스크립트가 완료되면 대상 서버의 역할이 사용자 요구에 맞게 구성되었는지 확인합니다. 마이그레이션 역할: 8개 항목이 발견되었습니다.<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> 자세한 내용은 [사용자에게 보고서 서버에 대한 액세스 권한 부여](../../reporting-services/security/grant-user-access-to-a-report-server.md)를 참조하세요.<br /><br /> **참고:** 원본 서버에 있는 사용자가 대상 서버에 없을 경우 스크립트가 역할 지정을 대상 서버에 적용할 수 없고, SECURITY 스위치가 사용되었어도 스크립트가 역할 지정을 적용할 수 없습니다.|  
-|공유 데이터 원본|예|예|스크립트가 대상 서버에 있는 기존 항목을 덮어쓰지 않습니다. 대상 서버에 있는 항목이 동일한 이름으로 존재할 경우 다음과 비슷한 오류 메시지가 표시됩니다.<br /><br /> `Migrating DataSource: /Data Sources/Aworks2012_oltp ... FAILURE:The item '/Data Sources/Aworks2012_oltp' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Data Source s/Aworks2012_oltp' already exists.`<br /><br /> 자격 증명이 데이터 원본의 일부로서 복사되지 **않습니다** . 콘텐츠 항목이 마이그레이션된 다음에는 대상 서버에서 자격 증명 정보를 업데이트합니다.|  
-|공유 데이터 세트|예|예|| 
-|Folder|예|예|스크립트가 대상 서버에 있는 기존 항목을 덮어쓰지 않습니다. 대상 서버에 있는 항목이 동일한 이름으로 존재할 경우 다음과 비슷한 오류 메시지가 표시됩니다.<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  
-|보고서|예|예|스크립트가 대상 서버에 있는 기존 항목을 덮어쓰지 않습니다. 대상 서버에 있는 항목이 동일한 이름으로 존재할 경우 다음과 비슷한 오류 메시지가 표시됩니다.<br /><br /> `Migrating Report: /Reports/testThe item '/Reports/test' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports/test' already exists.`|  
-|매개 변수|예|예||  
-|구독|예|예||  
-|기록 설정|예|예|기록 설정이 마이그레이션되지만 기록 세부 정보는 마이그레이션되지 않습니다.|  
-|처리 옵션|예|예||  
-|캐시 새로 고침 옵션|예|예|종속 설정은 카탈로그 항목의 일부로 마이그레이션됩니다. 다음은 보고서(.rdl) 및 캐시 새로 고침 옵션과 같은 관련 설정을 마이그레이션하는 스크립트의 예제입니다.<br /><br /> - TitleOnly.rdl 보고서에 대한 매개 변수를 마이그레이션하는 중: 0개 항목이 발견되었습니다.<br />- TitleOnly.rdl 보고서에 대한 구독을 마이그레이션하는 중: 1개 항목이 발견되었습니다.<br />- \\\server\public\savedreports에서 TitleOnly로 구독 저장을 마이그레이션하는 중... SUCCESS<br />- TitleOnly.rdl 보고서에 대한 기록 설정을 마이그레이션하는 중... SUCCESS<br />- TitleOnly.rdl 보고서에 대한 처리 옵션을 마이그레이션하는 중... 0개 항목이 발견되었습니다.<br />- TitleOnly.rdl 보고서에 대한 캐시 새로 고침 옵션을 마이그레이션하는 중... SUCCESS<br />- TitleOnly.rdl 보고서에 대한 캐시 새로 고침 계획을 마이그레이션하는 중: 1개 항목이 발견되었습니다.<br />- 캐시 새로 고침 계획 titleonly_refresh735amM2F를 마이그레이션하는 중... SUCCESS|  
-|캐시 새로 고침 계획|예|예||  
-|이미지|예|예||  
-|보고서 파트|예|예||  
+|기록 설정|yes|yes|기록 설정이 마이그레이션되지만 기록 세부 정보는 마이그레이션되지 않습니다.|  
+|일정|yes|yes|일정을 마이그레이션하려면 대상 서버에서 SQL Server 에이전트가 실행 중이어야 합니다. SQL Server 에이전트가 대상에서 실행 중이 아니면 다음과 비슷한 오류 메시지가 표시됩니다.<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service isn't running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service isn't running. This operation requires the SQL Agent service.`|  
+|역할 및 시스템 정책|yes|yes|기본적으로 스크립트에서는 서버 사이에 사용자 지정 권한 스키마가 복사되지 않습니다. 기본 동작에 따르면 해당 항목은 ‘부모 권한 상속’ 플래그가 TRUE로 설정되어 대상 서버로 복사됩니다. 스크립트가 개별 항목의 권한을 복사하도록 하려면 SECURITY 스위치를 사용합니다.<br /><br /> 원본 및 대상 서버가 **동일한 보고서 서버 모드가 아니고**(예: 기본 모드에서 SharePoint 모드로), SECURITY 스위치를 사용하는 경우, 스크립트는 [Reporting Services의 역할 및 작업과 SharePoint 그룹 및 사용 권한 비교](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md) 문서에 설명된 비교 방법을 기준으로 기본 역할 및 그룹을 매핑하려고 시도합니다. 사용자 지정 역할 및 그룹은 대상 서버로 복사되지 않습니다.<br /><br /> **동일한 모드**의 서버 사이에 스크립트를 복사하고 SECURITY 스위치를 사용하는 경우에는 스크립트가 새 역할(기본 모드) 또는 그룹(SharePoint 모드)을 대상 서버에 만듭니다.<br /><br /> 역할이 대상 서버에 이미 있을 경우 스크립트는 다음과 비슷한 “오류” 메시지를 만들고 다른 항목을 계속 마이그레이션합니다. 스크립트가 완료되면 대상 서버의 역할이 사용자 요구에 맞게 구성되었는지 확인합니다. 마이그레이션 역할: 8개 항목이 발견되었습니다.<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> 자세한 내용은 [사용자에게 보고서 서버에 대한 액세스 권한 부여](../../reporting-services/security/grant-user-access-to-a-report-server.md)를 참조하세요.<br /><br /> **참고:** 원본 서버에 있는 사용자가 대상 서버에 없을 경우 스크립트가 역할 지정을 대상 서버에 적용할 수 없고, SECURITY 스위치가 사용되었어도 스크립트가 역할 지정을 적용할 수 없습니다.|  
+|공유 데이터 원본|yes|yes|스크립트가 대상 서버에 있는 기존 항목을 덮어쓰지 않습니다. 대상 서버에 있는 항목이 동일한 이름으로 존재할 경우 다음과 비슷한 오류 메시지가 표시됩니다.<br /><br /> `Migrating DataSource: /Data Sources/Aworks2012_oltp ... FAILURE:The item '/Data Sources/Aworks2012_oltp' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Data Source s/Aworks2012_oltp' already exists.`<br /><br /> 자격 증명이 데이터 원본의 일부로서 복사되지 **않습니다** . 콘텐츠 항목이 마이그레이션된 다음에는 대상 서버에서 자격 증명 정보를 업데이트합니다.|  
+|공유 데이터 세트|yes|yes|| 
+|폴더|yes|yes|스크립트가 대상 서버에 있는 기존 항목을 덮어쓰지 않습니다. 대상 서버에 있는 항목이 동일한 이름으로 존재할 경우 다음과 비슷한 오류 메시지가 표시됩니다.<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  
+|보고서|yes|yes|스크립트가 대상 서버에 있는 기존 항목을 덮어쓰지 않습니다. 대상 서버에 있는 항목이 동일한 이름으로 존재할 경우 다음과 비슷한 오류 메시지가 표시됩니다.<br /><br /> `Migrating Report: /Reports/testThe item '/Reports/test' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports/test' already exists.`|  
+|매개 변수|yes|yes||  
+|Subscriptions|yes|yes||  
+|기록 설정|yes|yes|기록 설정이 마이그레이션되지만 기록 세부 정보는 마이그레이션되지 않습니다.|  
+|처리 옵션|yes|yes||  
+|캐시 새로 고침 옵션|yes|yes|종속 설정은 카탈로그 항목의 일부로 마이그레이션됩니다. 다음은 보고서(.rdl) 및 캐시 새로 고침 옵션과 같은 관련 설정을 마이그레이션하는 스크립트의 예제입니다.<br /><br /> - TitleOnly.rdl 보고서에 대한 매개 변수를 마이그레이션하는 중: 0개 항목이 발견되었습니다.<br />- TitleOnly.rdl 보고서에 대한 구독을 마이그레이션하는 중: 1개 항목이 발견되었습니다.<br />- \\\server\public\savedreports에서 TitleOnly로 구독 저장을 마이그레이션하는 중... SUCCESS<br />- TitleOnly.rdl 보고서에 대한 기록 설정을 마이그레이션하는 중... SUCCESS<br />- TitleOnly.rdl 보고서에 대한 처리 옵션을 마이그레이션하는 중... 0개 항목이 발견되었습니다.<br />- TitleOnly.rdl 보고서에 대한 캐시 새로 고침 옵션을 마이그레이션하는 중... SUCCESS<br />- TitleOnly.rdl 보고서에 대한 캐시 새로 고침 계획을 마이그레이션하는 중: 1개 항목이 발견되었습니다.<br />- 캐시 새로 고침 계획 titleonly_refresh735amM2F를 마이그레이션하는 중... SUCCESS|  
+|캐시 새로 고침 계획|yes|yes||  
+|이미지|yes|yes||  
+|보고서 파트|yes|yes||  
   
-##  <a name="bkmk_required_permissions"></a> 필수 사용 권한  
+##  <a name="bkmk_required_permissions"></a> 필요한 권한  
  항목 및 리소스를 읽거나 쓰는 데 필요한 권한이 스크립트에 사용된 모든 메서드와 동일하지 않습니다. 다음 표에서는 각 항목 또는 리소스에 사용된 메서드 및 관련 내용에 대한 링크를 요약해서 보여줍니다. 필요한 권한을 보려면 개별 문서로 이동하세요. 예를 들어 ListChildren 메서드 항목에는 다음과 같은 필요 권한이 설명됩니다.  
   
 -   **기본 모드에 필요한 권한:** 항목의 ReadProperties  
@@ -80,7 +80,7 @@ ms.locfileid: "70176282"
 |역할|<xref:ReportService2010.ReportingService2010.ListRoles%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetRoleProperties%2A>|<xref:ReportService2010.ReportingService2010.CreateRole%2A>|  
 |시스템 정책|<xref:ReportService2010.ReportingService2010.GetSystemPolicies%2A>|<xref:ReportService2010.ReportingService2010.SetSystemPolicies%2A>|  
 |일정|<xref:ReportService2010.ReportingService2010.ListSchedules%2A>|<xref:ReportService2010.ReportingService2010.CreateSchedule%2A>|  
-|구독|<xref:ReportService2010.ReportingService2010.ListSubscriptions%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetSubscriptionProperties%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetDataDrivenSubscriptionProperties%2A>|<xref:ReportService2010.ReportingService2010.CreateSubscription%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>|  
+|Subscription|<xref:ReportService2010.ReportingService2010.ListSubscriptions%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetSubscriptionProperties%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetDataDrivenSubscriptionProperties%2A>|<xref:ReportService2010.ReportingService2010.CreateSubscription%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>|  
 |캐시 새로 고침 계획|<xref:ReportService2010.ReportingService2010.ListCacheRefreshPlans%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetCacheRefreshPlanProperties%2A>|<xref:ReportService2010.ReportingService2010.CreateCacheRefreshPlan%2A>|  
 |매개 변수|<xref:ReportService2010.ReportingService2010.GetItemParameters%2A>|<xref:ReportService2010.ReportingService2010.SetItemParameters%2A>|  
 |실행 옵션|<xref:ReportService2010.ReportingService2010.GetExecutionOptions%2A>|<xref:ReportService2010.ReportingService2010.SetExecutionOptions%2A>|  
@@ -106,7 +106,7 @@ ms.locfileid: "70176282"
   
  `rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p password -v ts="https://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"`  
   
- **사용 정보:**  
+ **사용 메모:**  
   
 -   스크립트는 두 단계로 실행됩니다.  
   
@@ -199,15 +199,15 @@ ms.locfileid: "70176282"
   
 ##  <a name="bkmk_parameter_description"></a> 매개 변수 설명  
   
-|매개 변수|설명|필수|  
+|매개 변수|Description|필수|  
 |---------------|-----------------|--------------|  
-|**-s** Source_URL|원본 보고서 서버의 URL|예|  
+|**-s** Source_URL|원본 보고서 서버의 URL|yes|  
 |**-u** Domain\password **–p** 암호|원본 서버의 자격 증명입니다.|선택 사항입니다. 누락된 경우 기본 자격 증명이 사용됩니다.|  
-|**-v st**="SITE"||선택 사항입니다. 이 매개 변수는 SharePoint 모드 보고서 서버에서만 사용됩니다.|  
+|**-v st**="SITE"||옵션. 이 매개 변수는 SharePoint 모드 보고서 서버에서만 사용됩니다.|  
 |**- v f**="SOURCEFOLDER"|모든 항목을 마이그레이션할 경우 "/"로 설정하고, 일부만 마이그레이션할 경우에는 "/folder/subfolder"와 같은 값으로 설정합니다. 이 폴더 내의 모든 항목이 복사됩니다.|선택 사항입니다. 기본값은 "/"입니다.|  
 |**-v ts**="TARGET_URL"|'대상 RS 서버의 URL'||  
 |**-v tu**="domain\username" **-v tp**="password"|'대상 서버의 자격 증명입니다.'|선택 사항입니다. 누락된 경우 기본 자격 증명이 사용됩니다. **참고:** 사용자가 공유 일정의 "생성자"로 나열되고 대상 서버에서 보고서 항목의 계정에 따라 "수정"됩니다.|  
-|**-v tst**="SITE"||선택 사항입니다. 이 매개 변수는 SharePoint 모드 보고서 서버에서만 사용됩니다.|  
+|**-v tst**="SITE"||옵션. 이 매개 변수는 SharePoint 모드 보고서 서버에서만 사용됩니다.|  
 |**-v tf** ="TARGETFOLDER"|'루트 수준으로 마이그레이션하려면 "/"로 설정합니다. 존재하는 폴더로 복사하려면 “/folder/subfolder”로 설정합니다. "SOURCEFOLDER" 안의 모든 항목이 "TARGETFOLDER"에 복사됩니다.|선택 사항입니다. 기본값은 "/"입니다.|  
 |**-v security**= "True/False"|“False”로 설정된 경우 대상 카탈로그 항목은 대상 시스템의 설정에 따라 보안 설정을 상속합니다. 이 설정은 기본 모드에서 SharePoint 모드로의 마이그레이션과 같이 서로 다른 보고서 서버 유형 사이의 마이그레이션에 대해 권장되는 설정입니다. “True”로 설정된 경우 스크립트가 보안 설정을 마이그레이션하려고 시도합니다.|선택 사항입니다. 기본값은 "False"입니다.|  
   
@@ -305,7 +305,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportser
   
 2.  **개체 탐색기** 에서 **보안**을 누릅니다.  
   
-3.  **역할**을 누릅니다.  
+3.  **역할**을 클릭합니다.  
   
 ##  <a name="bkmk_troubleshoot"></a> 문제 해결  
  추적 플래그 **–t**를 사용해서 추가 정보를 받습니다. 예를 들어 스크립트를 실행하면 다음과 비슷한 메시지가 표시됩니다.  
@@ -314,9 +314,9 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportser
   
  **–t** 플래그로 스크립트를 다시 실행하면 다음과 비슷한 메시지가 표시됩니다.  
   
--   System.Exception: 서버에 연결할 수 없습니다. https://\<servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **HTTP 상태 401 권한 없음으로 인해 요청이 실패했습니다**.   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall) at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (String methodName, Object parameters) at Microsoft.sqlserver.reportingservices2010.reportingservice2010.issslrequired at Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService (String url, String userName, String password String domain, Int32 timeout) at Microsoft.reportingservices.scripthost.scripthost.determineserverurlsecurity---내부 예외 스택 추적 끝--  
+-   System.Exception: 서버에 연결하지 못했습니다. https://\<servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **HTTP 상태 401 때문에 요청이 실패했습니다. 권한 없음**.   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall) at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (String methodName, Object parameters) at Microsoft.sqlserver.reportingservices2010.reportingservice2010.issslrequired at Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService (String url, String userName, String password String domain, Int32 timeout) at Microsoft.reportingservices.scripthost.scripthost.determineserverurlsecurity---내부 예외 스택 추적 끝--  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [RS.exe 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   
  [Reporting Services의 역할 및 작업과 SharePoint 그룹 및 사용 권한 비교](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   

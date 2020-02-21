@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: setFetchMode | Microsoft Docs'
+title: PDOStatement::setFetchMode | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: f132b2af-0433-4fbe-b03f-69a7d631093a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f5a9065123bbacc828c7949aabcb44de6136f62c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935981"
 ---
 # <a name="pdostatementsetfetchmode"></a>PDOStatement::setFetchMode
@@ -32,10 +32,10 @@ bool PDOStatement::setFetchMode( $mode );
 #### <a name="parameters"></a>매개 변수  
 $*mode*: [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md)에 전달할 수 있는 매개 변수입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 성공하면 true이고, 그렇지 않으면 false입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 2.0에 추가되었습니다.  
   
 ## <a name="example"></a>예제  

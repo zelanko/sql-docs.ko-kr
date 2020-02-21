@@ -1,10 +1,9 @@
 ---
-title: 쿼리에서 테이블 제거(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 쿼리에서 테이블 제거
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,34 +14,36 @@ helpviewer_keywords:
 ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b0b861034b3d95fd653358b91e31352776e1dad3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 32c25c3ded07e84e436b69af5baac5634909998c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68255991"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255255"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>쿼리에서 테이블 제거(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 쿼리에서 테이블이나 모든 테이블 반환 개체를 제거할 수 있습니다.  
   
 > [!NOTE]  
-> 테이블이나 테이블 반환 개체를 제거해도 데이터베이스에서 실제로 삭제되는 항목은 없으며 현재 쿼리에서 해당 항목이 제거될 뿐입니다. 데이터베이스에서 테이블을 제거하는 자세한 내용은 [방법: 데이터베이스에서 테이블 삭제(Visual Database Tools)](https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)를 참조하세요.  
+> 테이블이나 테이블 반환 개체를 제거해도 데이터베이스에서 실제로 삭제되는 항목은 없으며 현재 쿼리에서 해당 항목이 제거될 뿐입니다. 데이터베이스에서 테이블을 제거하는 방법에 대한 자세한 내용은 [방법: 데이터베이스에서 테이블 삭제(https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec) 를 참조하세요.  
   
 ### <a name="to-remove-a-table-or-table-structured-object"></a>테이블이나 테이블 구조 개체를 제거하려면  
   
 -   **다이어그램 창**에서 테이블, 뷰, 사용자 정의 함수, 동의어 또는 쿼리를 선택한 다음 Delete 키를 누르거나, 개체를 마우스 오른쪽 단추로 클릭한 다음 대화 상자가 나타나면 **제거** 를 선택합니다. 여러 개체를 한번에 선택하거나 제거할 수 있습니다.  
   
-    -또는-  
+    또는  
   
 -   **SQL 창**에서 개체에 대한 모든 참조를 제거합니다.  
   
 테이블이나 테이블 반환 개체를 제거할 때 쿼리 및 뷰 디자이너에서는 해당 테이블이나 테이블 반환 개체가 관련된 조인을 자동으로 제거하고 **SQL 창** 과 **조건 창**에서 개체의 열에 대한 참조를 제거합니다. 그러나 해당 개체가 관련된 복합 식이 쿼리에 포함되어 있으면 개체가 자동으로 제거되지 않습니다. 이 경우 개체를 제거하려면 해당 개체에 대한 모든 참조를 제거해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[쿼리에 테이블 추가(Visual Database Tools)](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md)  
-[테이블 별칭 만들기(Visual Database Tools)](../../ssms/visual-db-tools/create-table-aliases-visual-database-tools.md)  
-[검색 조건 지정(Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
-[쿼리 결과 요약(Visual Database Tools)](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
-[쿼리 관련 기본 작업 수행(Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[쿼리에 테이블 추가](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md)  
+[테이블 별칭 만들기](../../ssms/visual-db-tools/create-table-aliases-visual-database-tools.md)  
+[검색 조건 지정](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[쿼리 결과 요약](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
+[쿼리 관련 기본 작업 수행](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   

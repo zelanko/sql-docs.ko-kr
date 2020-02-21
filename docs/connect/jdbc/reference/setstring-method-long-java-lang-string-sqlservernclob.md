@@ -11,16 +11,16 @@ ms.assetid: 698073b2-3f0c-449c-ad68-48144698fe8f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9c549d3e1b7b9b63663333a59b263a2aa6ad4113
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972672"
 ---
 # <a name="setstring-method-long-javalangstring-sqlservernclob"></a>setString 메서드(long, java.lang.String)(SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정 된 **문자열** 을 지정 된 위치에서 시작 하는 **NCLOB** 에 씁니다.  
+  지정된 **문자열**을 **NCLOB**의 지정된 위치에서부터 씁니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,13 +39,13 @@ public int setString(long pos,
   
  **NCLOB**에 쓸 문자열입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  쓴 문자 수입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 setString 메서드는 java.sql.NClob 인터페이스의 setString 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

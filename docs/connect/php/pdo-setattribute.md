@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 56f9ee96-e1d2-46cc-b137-38f06a251863
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 091cdf12600ca5244a6feef8062522b903edf787
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 80a3f907e4606201255d0442d136f77c9b31dd40
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993165"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940462"
 ---
 # <a name="pdosetattribute"></a>PDO::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,15 +33,16 @@ bool PDO::setAttribute ( $attribute, $value );
   
 *$value*: 값(혼합 형식)입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 성공하면 true이고, 그렇지 않으면 false입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
-|attribute|처리기|지원되는 값|설명|  
+|attribute|처리기|지원되는 값|Description|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|열 이름의 대/소문자를 지정합니다.<br /><br />PDO::CASE_LOWER를 사용하면 열 이름이 소문자가 됩니다.<br /><br />PDO::CASE_NATURAL(기본값)은 데이터베이스에서 반환된 열 이름을 표시합니다.<br /><br />PDO::CASE_UPPER를 사용하면 열 이름이 대문자가 됩니다.<br /><br />PDO::setAttribute를 사용하면 이 특성을 설정할 수 있습니다.|  
 |PDO::ATTR_DEFAULT_FETCH_MODE|PDO|PDO 설명서를 참조하세요.|PDO 설명서를 참조하세요.|  
+|PDO::ATTR_DEFAULT_STR_PARAM|PDO|PDO::PARAM_STR_CHAR<br /><br />PDO::PARAM_STR_NATL|자세한 내용은 [PDO::quote](../../connect/php/pdo-quote.md)의 예제를 참조하세요.|
 |PDO::ATTR_ERRMODE|PDO|PDO::ERRMODE_SILENT<br /><br />PDO::ERRMODE_WARNING<br /><br />PDO::ERRMODE_EXCEPTION|드라이버에서 오류를 보고하는 방법을 지정합니다.<br /><br />PDO::ERRMODE_SILENT(기본값)에서는 오류 코드 및 정보를 설정합니다.<br /><br />PDO::ERRMODE_WARNING은 E_WARNING을 발생시킵니다.<br /><br />PDO::ERRMODE_EXCEPTION은 예외를 발생시킵니다.<br /><br />PDO::setAttribute를 사용하면 이 특성을 설정할 수 있습니다.|  
 |PDO::ATTR_ORACLE_NULLS|PDO|PDO 설명서를 참조하세요.|Null이 반환되는 방법을 지정합니다.<br /><br />PDO::NULL_NATURAL은 변환되지 않습니다.<br /><br />PDO::NULL_EMPTY_STRING은 빈 문자열을 null로 변환합니다.<br /><br />PDO::NULL_TO_STRING은 null을 빈 문자열로 변환합니다.|  
 |PDO::ATTR_STATEMENT_CLASS|PDO|PDO 설명서를 참조하세요.|PDOStatement에서 파생된 사용자 제공 문 클래스를 설정합니다.<br /><br />`array(string classname, array(mixed constructor_args))`가 필요합니다.<br /><br />자세한 내용은 PDO 설명서를 참조하세요.|  

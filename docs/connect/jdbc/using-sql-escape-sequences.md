@@ -11,10 +11,10 @@ ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da2ae6b5353448d5281910d94aeef05ee0999c6a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025887"
 ---
 # <a name="using-sql-escape-sequences"></a>SQL 이스케이프 시퀀스 사용
@@ -61,7 +61,7 @@ JDBC 드라이버는 다음 구문을 사용하여 SQL 문에서 함수 이스�
 {fn functionName}  
 ```
 
-여기서 `functionName`은 JDBC 드라이버에서 지원하는 함수입니다. 예를 들어 
+여기서 `functionName`은 JDBC 드라이버에서 지원하는 함수입니다. 다음은 그 예입니다. 
 
 ```sql
 SELECT {fn UCASE(Name)} FROM Employee  
@@ -71,7 +71,7 @@ SELECT {fn UCASE(Name)} FROM Employee
   
 | 문자열 함수                                                                                                                                                                                                                                                                                                                        | 숫자 함수                                                                                                                                                                                                                                                                                                                                                                                                   | Datetime 함수                                                                                                                                                                                                                                                                                                                                             | 시스템 함수                             |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| ASCII<br /><br /> CHAR<br /><br /> CONCAT<br /><br /> DIFFERENCE<br /><br /> INSERT<br /><br /> LCASE<br /><br /> LEFT<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> LTRIM<br /><br /> REPEAT<br /><br /> REPLACE<br /><br /> RIGHT<br /><br /> RTRIM<br /><br /> SOUNDEX<br /><br /> SPACE<br /><br /> SUBSTRING<br /><br /> UCASE | ABS<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> LOG<br /><br /> LOG10<br /><br /> MOD<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> ROUND<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE | CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> DAYOFWEEK<br /><br /> DAYOFYEAR<br /><br /> EXTRACT<br /><br /> HOUR<br /><br /> MINUTE<br /><br /> MONTH<br /><br /> MONTHNAME<br /><br /> NOW<br /><br /> QUARTER<br /><br /> SECOND<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> WEEK<br /><br /> YEAR | DATABASE<br /><br /> IFNULL<br /><br /> User |
+| ASCII<br /><br /> CHAR<br /><br /> CONCAT<br /><br /> DIFFERENCE<br /><br /> INSERT<br /><br /> LCASE<br /><br /> LEFT<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> LTRIM<br /><br /> REPEAT<br /><br /> REPLACE<br /><br /> RIGHT<br /><br /> RTRIM<br /><br /> SOUNDEX<br /><br /> SPACE<br /><br /> SUBSTRING<br /><br /> UCASE | ABS<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> LOG<br /><br /> LOG10<br /><br /> MOD<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> ROUND<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE | CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> DAYOFWEEK<br /><br /> DAYOFYEAR<br /><br /> EXTRACT<br /><br /> HOUR<br /><br /> MINUTE<br /><br /> MONTH<br /><br /> MONTHNAME<br /><br /> NOW<br /><br /> QUARTER<br /><br /> SECOND<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> WEEK<br /><br /> YEAR | DATABASE<br /><br /> IFNULL<br /><br /> USER |
 
 > [!NOTE]  
 > 데이터베이스에서 지원하지 않는 함수를 사용하려고 하면 오류가 발생합니다.  
@@ -86,13 +86,13 @@ SELECT {fn UCASE(Name)} FROM Employee
 
 여기서 `literal-type`은 다음 값 중 하나입니다.  
   
-| 리터럴 형식 | 설명 | 값 형식               |
+| 리터럴 형식 | Description | 값 형식               |
 | ------------ | ----------- | -------------------------- |
-| d            | date        | yyyy-mm-dd                 |
+| d            | Date        | yyyy-mm-dd                 |
 | t            | Time        | hh:mm:ss [1]               |
 | ts           | 타임스탬프   | yyyy-mm-dd hh:mm:ss[.f...] |
   
-예를 들어  
+다음은 그 예입니다.  
 
 ```sql
 UPDATE Orders SET OpenDate={d '2005-01-31'}
@@ -111,7 +111,7 @@ JDBC 드라이버는 반환 매개 변수를 처리해야 하는지 여부에 �
 
 여기서 `procedure-name`은 저장 프로시저의 이름을 지정하고 `parameter`는 저장 프로시저 매개 변수를 지정합니다.  
   
-저장 프로시저에서 이스케이프 시퀀스를 `call` 사용 하는 방법에 대 한 자세한 내용은 [저장 프로시저와 함께 문 사용](../../connect/jdbc/using-statements-with-stored-procedures.md)을 참조 하세요.  
+저장 프로시저에서 `call` 이스케이프 시퀀스를 사용하는 방법에 대한 자세한 내용은 [저장 프로시저가 있는 문 사용](../../connect/jdbc/using-statements-with-stored-procedures.md)을 참조하세요.  
 
 ## <a name="outer-joins"></a>외부 조인
 
@@ -130,7 +130,7 @@ table-reference {LEFT | RIGHT | FULL} OUTER JOIN
 
 여기서 `table-reference`는 테이블 이름이고 `search-condition`은 테이블에 사용할 조인 조건입니다.  
   
-예를 들어  
+다음은 그 예입니다.  
 
 ```sql
 SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
@@ -159,6 +159,6 @@ LIMIT <rows> [OFFSET <row offset>]
 
 이스케이프 구문은 두 가지 요소로 구성되어 있습니다. \<*rows*>는 필수이며 반환할 행 수를 지정합니다. OFFSET 및 \<*row offset*>은 선택 사항이며 행 반환을 시작하기 전에 건너뛸 행 수를 지정합니다. JDBC 드라이버는 LIMIT 대신 TOP를 사용하도록 쿼리를 변환하여 필수 요소만 지원합니다. SQL Server는 LIMIT 절을 지원하지 않습니다. **JDBC 드라이버는 선택적인 \<row offset>을 지원하지 않으며 사용될 경우 드라이버에서 예외가 throw됩니다**.  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [JDBC 드라이버에서 문 사용](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

@@ -17,10 +17,10 @@ ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5d277089fded73524e55d05bbc21078d5df426e3
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67412651"
 ---
 # <a name="monitoring-report-server-performance"></a>보고서 서버 성능 모니터링
@@ -57,7 +57,7 @@ ms.locfileid: "67412651"
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
   
 ## <a name="reporting-services-performance-objects"></a>Reporting Services 성능 개체  
-SQL Server 2016 Reporting Services 또는 이후 (SSRS) 같은 성능 개체가 포함 됩니다.  
+SQL Server 2016 Reporting Services 이상(SSRS)에는 다음과 같은 성능 개체가 포함됩니다.  
   
 -   보고서 서버 성능을 모니터링하기 위한**MSRS 2011 Web Service** 및 **MSRS 2011 SharePoint Mode Web Service** . 이러한 성능 개체에는 일반적으로 대화형 보고서 보기 작업을 통해 시작된 보고서 서버 처리를 추적하는 데 사용되는 카운터 모음이 들어 있습니다. 이러한 카운터는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 이 보고서 서버 웹 서비스를 중지할 때마다 다시 설정됩니다.  
   
@@ -70,9 +70,9 @@ SQL Server 2016 Reporting Services 또는 이후 (SSRS) 같은 성능 개체가 
 ## <a name="other-performance-counters"></a>기타 성능 카운터  
  사용자 지정 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 성능 카운터는 **MSRS 2008 Web Service**, **MSRS 2008 Windows Service**및 **ReportServer:Service**용으로만 제공됩니다. 다음 성능 개체는 보고서 서버에 대한 추가 성능 모니터링 데이터를 제공합니다.  
   
-|성능 개체|참고|  
+|성능 개체|메모|  
 |------------------------|-----------|  
-|**.NET CLR Data** 및 **.NET CLR Memory**|웹 포털을 사용 하 여 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 성능 카운터입니다. 자세한 내용은 MSDN에서 "Improving .NET Application Performance and Scalability"를 참조하십시오.|  
+|**.NET CLR Data** 및 **.NET CLR Memory**|웹 포털에서는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 성능 카운터를 사용합니다. 자세한 내용은 MSDN에서 "Improving .NET Application Performance and Scalability"를 참조하십시오.|  
 |**처리**|ReportingServicesService 인스턴스에 대한 **Elapsed Time** 및 **ID Process** 성능 카운터를 추가하여 프로세스 ID별로 프로세스 작동 시간을 추적합니다.|  
   
 ## <a name="sharepoint-events"></a>SharePoint 이벤트  
@@ -90,7 +90,7 @@ SQL Server 2016 Reporting Services 또는 이후 (SSRS) 같은 성능 개체가 
 
 ::: moniker-end
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
  [Reporting Services 보고서 서버&#40;기본 모드&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)  

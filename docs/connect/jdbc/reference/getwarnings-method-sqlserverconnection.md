@@ -16,10 +16,10 @@ ms.assetid: 15af39bf-6285-44cc-a021-7341e7a055c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e92087315c468f435cf9eb22b56b587cb1743a3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978115"
 ---
 # <a name="getwarnings-method-sqlserverconnection"></a>getWarnings 메서드(SQLServerConnection)
@@ -34,16 +34,16 @@ ms.locfileid: "67978115"
 public java.sql.SQLWarning getWarnings()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  SQLWarning 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getWarnings 메서드는 java.sql.Connection 인터페이스의 getWarnings 메서드에 의해 지정됩니다.  
   
- 후속 경고는 첫 번째 SQLWarning에 연결 되 고 getNextWarning 메서드를 사용 하 여 호출 됩니다. 닫혀 있는 연결에 대해 호출될 경우에는 예외가 발생합니다.  
+ 이후의 경고는 첫 번째 SQLWarning에 연결되며 getNextWarning 메서드를 통해 호출됩니다. 닫혀 있는 연결에 대해 호출될 경우에는 예외가 발생합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerConnection 멤버](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

@@ -1,23 +1,24 @@
 ---
-title: '방법: 프로젝트에서 Microsoft SQL Server 2012 개체 사용 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 프로젝트의 SQL Server 2012 개체
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 222b725e7e5497adaf679f710fa390dcea8aecf7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c9ea326bc37d4843b6cb7e3bc4e21fa356af5435
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034981"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244248"
 ---
 # <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>방법: 프로젝트에서 Microsoft SQL Server 2012 개체 사용
+
 이 예제에서는 Microsoft SQL Server 2012를 대상으로 하는 데이터베이스 프로젝트에 시퀀스 개체를 추가합니다.  
   
 Microsoft SQL Server 2012에는 시퀀스가 도입되었습니다. 시퀀스는 시퀀스를 만들 때 지정한 사양에 따라 숫자 값의 시퀀스를 생성하는 사용자 정의 스키마 바인딩된 개체입니다. 숫자 값의 시퀀스는 지정된 간격으로 올림차순 또는 내림차순으로 생성되며 요청된 경우 순환(반복)할 수 있습니다.  시퀀스 개체에 대한 자세한 내용은 [시퀀스 번호](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx)를 참조하세요. Microsoft SQL Server 2012의 새로운 기능에 대한 자세한 내용은 [SQL Server 2012의 새로운 기능](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx)을 참조하세요.  
@@ -31,7 +32,7 @@ Microsoft SQL Server 2012에는 시퀀스가 도입되었습니다. 시퀀스는
   
 2.  왼쪽 창에서 **프로그래밍 기능**을 클릭하고 **시퀀스**를 선택합니다. **추가**를 클릭하여 프로젝트에 개 개체를 추가합니다.  
   
-3.  기본 코드를 다음과 같이 바꿉니다.  
+3.  기본 코드를 다음 코드로 바꿉니다.  
   
     ```  
     CREATE SEQUENCE [dbo].[Seq1]  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27da48f6d124baed5202d5cb75e8086b97fc684e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a7195055e95abe07770633ec672d746c5927054d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577867"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190437"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>보고서 디자이너로 Reporting Services 페이지가 매겨진 보고서 디자인(SSRS)
 
@@ -44,7 +44,7 @@ ms.locfileid: "65577867"
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 클라이언트 도구입니다. 보고 솔루션을 로컬 컴퓨터에서 테스트하고, 서버 솔루션 테스트용으로 테스트 환경에 배포한 후, 프로덕션 환경에 배포할 수 있습니다. 배포 후 데이터 원본 처리 확장 프로그램 및 데이터 원본 자격 증명이 보고서 서버 환경에 맞게 구성되었는지 확인합니다. 구성 관리자를 사용하면 서로 다른 배포의 속성을 관리하는 데 유용합니다. 자세한 내용은 [SQL Server Data Tools의 Reporting Services&#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)를 참조하세요.  
   
- 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.  
+ 자세한 내용은 [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)를 참조하세요.  
    
 ##  <a name="bkmk_SharedDatasets"></a> 공유 데이터 세트  
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]를 사용하여 보고 솔루션용 공유 데이터 세트를 정의하고 배포합니다. **OverwriteDatasets** 및 **TargetDatasetFolder** 속성을 사용하면 공유 데이터 세트를 프로젝트의 다른 항목과 별도로 배포할 수 있습니다. 자세한 내용은 [배포 속성 설정&#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)을 참조하세요.  
@@ -90,7 +90,7 @@ ms.locfileid: "65577867"
  **TargetReportPartFolder** 및 기타 속성을 사용하면 보고서 파트를 프로젝트의 다른 항목과 별도로 배포할 수 있습니다. 자세한 내용은 [배포 속성 설정&#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)을 참조하세요.  
   
 ##  <a name="bkmk_Resources"></a> 리소스  
- 보고서와 관련되지만 보고서 서버에서 처리되지 않는 파일을 프로젝트에 추가할 수 있습니다. 예를 들어 사진의 경우 이미지를, 공간 데이터의 경우 ESRI 셰이프 파일을 추가할 수 있습니다. 자세한 내용은 [Resources](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources)를 참조하세요.  
+ 보고서와 관련되지만 보고서 서버에서 처리되지 않는 파일을 프로젝트에 추가할 수 있습니다. 예를 들어 사진의 경우 이미지를, 공간 데이터의 경우 ESRI 셰이프 파일을 추가할 수 있습니다. 자세한 내용은 [리소스](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources)를 참조하세요.  
  
 ##  <a name="bkmk_ReportLayout"></a> 페이지 매긴 보고서 레이아웃  
  보고서 레이아웃을 만들려면 보고서 항목 및 데이터 영역을 도구 상자에서 디자인 화면으로 끈 다음 해당 항목을 정렬합니다. 데이터 세트 필드를 디자인 화면의 항목으로 끌어 보고서에 데이터를 추가합니다. 테이블릭스 데이터 영역에서 데이터를 그룹으로 구성하려면 데이터 세트 필드를 그룹화 창으로 끕니다. 보고서 제작 도구는 기본적으로 보고서 정의를 만드는 방법이므로 보고서 디자인에 대한 접근 방식이 보고서 작성기와 보고서 디자이너 간에 유사합니다.  
@@ -168,7 +168,7 @@ ms.locfileid: "65577867"
   
  다음 표에서는 오류 수준을 보여 줍니다.  
   
-|오류 수준|설명|  
+|오류 수준|Description|  
 |-----------------|-----------------|  
 |0|보고서 미리 보기 및 배포를 불가능하게 만드는 가장 심각하고 불가피한 빌드 문제|  
 |1|보고서 레이아웃을 대폭 변경하는 심각한 빌드 문제|  

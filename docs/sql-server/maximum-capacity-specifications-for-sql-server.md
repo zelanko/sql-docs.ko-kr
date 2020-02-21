@@ -21,10 +21,10 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0fae5c47de0b8017d3f374afe18e926eea9818cc
-ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72008441"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server의 최대 용량 사양
@@ -43,9 +43,9 @@ ms.locfileid: "72008441"
 ##  <a name="Engine"></a> [!INCLUDE[ssDE](../includes/ssde-md.md)] 개체  
  다음 표에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스에 정의되거나 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에서 참조되는 다양한 개체의 최대 크기 및 개수가 나와 있습니다.  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 개체(object)||최대 크기/개수 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64비트)|추가 정보|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 개체||최대 크기/개수 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64비트)|추가 정보|  
 |---------------------------------------------------------|-|------------------------------------------------------------------|----------------------------|  
-|일괄 처리 크기||65,536 * 네트워크 패킷 크기|네트워크 패킷 크기는 애플리케이션과 관계형 [!INCLUDE[ssDE](../includes/ssde-md.md)]간의 통신에 사용되는 TDS(Tabular Data Stream) 패킷의 크기입니다. 기본 패킷 크기는 4KB이며 네트워크 패킷 크기 구성 옵션으로 제어됩니다.|  
+|Batch 크기||65,536 * 네트워크 패킷 크기|네트워크 패킷 크기는 애플리케이션과 관계형 [!INCLUDE[ssDE](../includes/ssde-md.md)]간의 통신에 사용되는 TDS(Tabular Data Stream) 패킷의 크기입니다. 기본 패킷 크기는 4KB이며 네트워크 패킷 크기 구성 옵션으로 제어됩니다.|  
 |짧은 문자열 열당 바이트 수||8,000||  
 |GROUP BY, ORDER BY당 바이트 수||8,060||  
 |인덱스 키당 바이트 수||클러스터형 인덱스의 경우 900바이트, 비클러스터형 인덱스의 경우 1,700바이트|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 클러스터형 인덱스 키의 최대 바이트 수는 900을 초과할 수 없습니다. 비클러스터형 인덱스 키에 대한 최대값은 1700바이트입니다.<br /><br /> 최대 크기가 제한을 초과하는 가변 길이 열을 사용하여 키를 정의할 수 있습니다. 그러나 이러한 열에 있는 데이터의 총 크기는 제한을 초과할 수 없습니다.<br /><br /> 비클러스터형 인덱스에 키가 아닌 열을 추가로 포함할 수 있으며 해당 열은 키의 크기 제한에 포함되지 않습니다. 키가 아닌 열은 일부 쿼리의 성능 향상에 도움이 될 수 있습니다.|  
@@ -120,7 +120,7 @@ ms.locfileid: "72008441"
   
  \* [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티에서 지원하는 관리되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 최대 개수는 서버의 하드웨어 구성에 따라 달라질 수 있습니다. 시작 정보는 [SQL Server 유틸리티 기능 및 태스크](../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 제어 지점은 일부 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]버전에서는 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](https://msdn.microsoft.com/library/cc645993.aspx)을 참조하세요.    
   
-##  <a name="DAC"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 계층 애플리케이션 개체  
+##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 계층 애플리케이션 개체  
  다음 표에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC(데이터 계층 애플리케이션)에서 테스트된 다양한 개체의 최대 크기 및 개수가 나와 있습니다.  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC 개체||최대 크기/개수 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64비트)|  

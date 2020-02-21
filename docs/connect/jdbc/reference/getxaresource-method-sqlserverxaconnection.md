@@ -1,5 +1,5 @@
 ---
-title: getXAResource 메서드 (SQLServerXAConnection) | Microsoft Docs
+title: getXAResource 메서드(SQLServerXAConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: e1d2828f-fd20-44b0-b796-dc70f77c5b03
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c3d4b2132c3bbcf5612faa5f319a5358f158e2b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977981"
 ---
 # <a name="getxaresource-method-sqlserverxaconnection"></a>getXAResource 메서드(SQLServerXAConnection)
@@ -34,14 +34,14 @@ ms.locfileid: "67977981"
 public javax.transaction.xa.XAResource getXAResource()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  XAResource 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- 이 getXAResource 메서드는 Javax.sql.xaconnection 인터페이스의 getXAResource 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getXAResource 메서드는 javax.sql.XAConnection 인터페이스의 getXAResource 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerXAConnection 메서드](../../../connect/jdbc/reference/sqlserverxaconnection-methods.md)   

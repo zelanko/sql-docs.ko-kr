@@ -13,10 +13,10 @@ ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d227b5d6b6681ecebbef9c2b910f9525e877cad8
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72907874"
 ---
 # <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server에 대한 지원 리소스
@@ -24,7 +24,7 @@ ms.locfileid: "72907874"
 
 이 항목에서는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 사용하는 애플리케이션을 개발할 때 유용할 수 있는 리소스를 나열합니다.  
   
-## <a name="includessdriverphpincludesssdriverphp_mdmd-support-resources"></a>[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 지원 리소스  
+## <a name="ssdriverphp-support-resources"></a>[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 지원 리소스  
 [에 대한 최신 설명서는](../../connect/php/microsoft-php-driver-for-sql-server.md) Microsoft PHP Driver for SQL Server [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 참조하세요.  
   
 피어 투 피어 지원은 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [포럼](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqldriverforphp)을 방문하세요.  
@@ -46,12 +46,12 @@ SQL Server 및 Transact-SQL 설명서는 [SQL Server 설명서](../../sql-server
 ## <a name="php-support-resources"></a>PHP 지원 리소스  
 [Windows용 PHP 설명서](https://windows.php.net/)  
   
-PHP에 대 한 최신 정보는 [http://www.php.net/](http://www.php.net)를 참조 하세요.  
+PHP에 대한 최신 정보는 [http://www.php.net/](http://www.php.net)을 방문하세요.  
   
-PHP 설명서는 [http://www.php.net/docs.php](http://www.php.net/docs.php)를 참조 하세요.  
+PHP 설명서는 [http://www.php.net/docs.php](http://www.php.net/docs.php)를 방문하세요.  
   
 ## <a name="microsoft-customer-support"></a>Microsoft 고객 지원  
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]관련 된 지원 질문에 대 한 자세한 내용은 [Github 프로젝트 페이지](https://github.com/Microsoft/msphpsql/issues)를 [Microsoft 지원](https://support.microsoft.com/contactus/)하거나 문의해 보세요.  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 관련 지원에 대한 질문은 [Microsoft 지원](https://support.microsoft.com/contactus/)에 문의하거나 [Github 프로젝트 페이지](https://github.com/Microsoft/msphpsql/issues)에서 질문할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [Microsoft Drivers for PHP for SQL Server 개요](../../connect/php/overview-of-the-php-sql-driver.md)

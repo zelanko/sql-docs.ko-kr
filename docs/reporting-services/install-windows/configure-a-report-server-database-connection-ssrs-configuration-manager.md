@@ -1,19 +1,20 @@
 ---
-title: 보고서 서버 데이터베이스 연결 구성(SSRS 구성 관리자) | Microsoft Docs
+title: 보고서 서버 데이터베이스 연결 구성(구성 관리자) | Microsoft Docs
+description: 각 보고서 서버 인스턴스에는 서버에서 관리하는 보고서, 공유 데이터 원본, 리소스 및 메타데이터를 저장하는 보고서 서버 데이터베이스에 대한 연결이 필요합니다.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
-ms.custom: seodec18
-ms.date: 10/09/2019
-ms.openlocfilehash: 7c781721ff9dcd2ec82844e8e0604aca83a186e4
-ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019, seo-mmd-2019
+ms.date: 12/04/2019
+ms.openlocfilehash: d65c0e8bebf9f4019055e2fbabb30785235dacea
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72239374"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866045"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>보고서 서버 데이터베이스 연결 구성(SSRS 구성 관리자)
 
@@ -109,7 +110,7 @@ Windows 통합 보안을 사용하면 보고서 서버 서비스 계정을 통�
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
 > [!NOTE]
-> Azure SQL Managed Instance를 사용 하 여 Reporting Services 2019 데이터베이스를 호스트 하는 경우에는 연결에 SQL Server 로그인 자격 증명을 사용 하도록 지원 됩니다.
+> Azure SQL Managed Instance를 사용하여 Reporting Services 2019 데이터베이스를 호스트하는 경우에는 연결에 SQL Server 로그인 자격 증명을 사용해야 합니다.
 
 ::: moniker-end
 

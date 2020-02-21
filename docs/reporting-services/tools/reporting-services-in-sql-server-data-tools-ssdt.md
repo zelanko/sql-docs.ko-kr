@@ -11,17 +11,17 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c1f327b42dd3cdc18be769ef4b4b6fac571578e0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68889838"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools의 Reporting Services(SSDT)
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 비즈니스 인텔리전스 솔루션을 만들기 위한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 환경입니다. SSDT에서는 페이지를 매긴 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서 정의, 공유 데이터 원본, 공유 데이터 세트 및 보고서 파트를 열고 수정하고 미리 보고 저장하고 배포할 수 있는 보고서 디자이너 제작 환경을 사용할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 SQL Server에 포함되어 있지 않습니다. [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)를 다운로드합니다. 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 비즈니스 인텔리전스 솔루션을 만들기 위한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 환경입니다. SSDT에서는 페이지를 매긴 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서 정의, 공유 데이터 원본, 공유 데이터 세트 및 보고서 파트를 열고 수정하고 미리 보고 저장하고 배포할 수 있는 보고서 디자이너 제작 환경을 사용할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 SQL Server에 포함되어 있지 않습니다. [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)를 다운로드합니다. 
   
- 이 항목에서는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 에 사용되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]솔루션, 프로젝트, 프로젝트 템플릿 및 구성과 보고서 디자이너에서 사용할 수 있는 뷰, 메뉴, 도구 모음 및 바로 가기에 대해 설명합니다.  
+ 이 문서에서는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 에 사용되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]솔루션, 프로젝트, 프로젝트 템플릿 및 구성과 보고서 디자이너에서 사용할 수 있는 뷰, 메뉴, 도구 모음 및 바로 가기에 대해 설명합니다.  
   
  보고서 디자인을 시작하려면 [보고서 디자이너로 보고서 디자인&#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)을 참조하세요.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "68889838"
 ###  <a name="bkmk_SolutionExplorer"></a> 솔루션 탐색기  
  솔루션 탐색기는 프로젝트에 있는 모든 항목을 표시하는 표준 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 구성 요소입니다. 보고서 서버 프로젝트의 경우 이 구성 요소에는 공유 데이터 원본, 공유 데이터 세트, 보고서 및 리소스를 구성하는 폴더가 포함됩니다. 폴더 항목은 솔루션 파일을 열 때 사전순으로 자동 정렬됩니다. 속성 창에서 항목 속성을 보려면 해당 항목을 선택합니다.  
   
-###  <a name="bkmk_Output"></a> 출력  
+###  <a name="bkmk_Output"></a> Output  
  출력 창은 보고서를 미리 볼 때에는 처리 오류를 표시하고 보고서 또는 공유 데이터 원본을 배포할 때에는 게시 오류를 표시합니다.  
   
  출력 및 문서 개요 창을 사용하여 식에서 오류를 디버그할 수 있습니다.  
@@ -173,9 +173,9 @@ ms.locfileid: "68889838"
 ###  <a name="ReportMenu"></a> 보고서 메뉴  
  보고서 디자인 화면에 포커스가 있으면 **보고서** 메뉴에 다음 옵션이 포함됩니다.  
   
--   **보고서 속성**   **보고서 속성** 대화 상자를 열려면 선택합니다. 이 대화 상자에서 작성자 이름, 눈금 간격 등의 일반 보고서 속성을 할당하고 열 개수 및 페이지 크기와 같은 보고서 레이아웃 속성을 지정할 수 있습니다. 또한 데이터 출력 요소, 데이터 변환 및 데이터 스키마의 이름과 사용자 지정 코드, 어셈블리와 클래스에 대한 참조를 포함할 수 있습니다.  
+-   **보고서 속성** **보고서 속성** 대화 상자를 열려면 선택합니다. 이 대화 상자에서 작성자 이름, 눈금 간격 등의 일반 보고서 속성을 할당하고 열 개수 및 페이지 크기와 같은 보고서 레이아웃 속성을 지정할 수 있습니다. 또한 데이터 출력 요소, 데이터 변환 및 데이터 스키마의 이름과 사용자 지정 코드, 어셈블리와 클래스에 대한 참조를 포함할 수 있습니다.  
   
--   **뷰** 보고서 디자이너의 디자인 탭과 미리 보기 탭 간에 전환합니다.  
+-   **뷰** 보고서 디자이너의 [디자인] 탭과 [미리 보기] 탭 간에 전환합니다.  
   
 -   **페이지 머리글** 보고서에서 페이지 머리글을 추가하거나 삭제합니다. 페이지 머리글을 삭제하면 페이지 머리글의 모든 항목이 삭제됩니다.  
   
@@ -198,7 +198,7 @@ ms.locfileid: "68889838"
   
     -   **문서 개요** 보고서에 있는 보고서 항목 및 해당 입력란 컬렉션의 계층 뷰를 표시하려면 이 옵션을 사용합니다.  
   
--   **도구 모음**   **보고서 테두리** 및 **보고서 서식**을 비롯한 보고서 디자이너 기능을 지원하는 도구 모음을 표시하려면 이 옵션을 사용합니다. 자세한 내용은 [보고서 디자이너 도구 모음](#bkmk_ReportDesignerToolbars)을 참조하십시오.  
+-   **도구 모음** **보고서 테두리** 및 **보고서 서식**을 비롯한 보고서 디자이너 기능을 지원하는 도구 모음을 표시하려면 이 옵션을 사용합니다. 자세한 내용은 [보고서 디자이너 도구 모음](#bkmk_ReportDesignerToolbars)을 참조하십시오.  
   
 -   **보고서 데이터** 보고서 매개 변수, 데이터 원본, 데이터 세트, 이미지를 추가할 수 있는 보고서 데이터 창을 표시하려면 이 옵션을 사용합니다.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "68889838"
   
   
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> SQL Server Data Tools에 대한 명령줄 지원  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 및 기본 devenv.exe 애플리케이션을 기반으로 합니다. 이러한 옵션을 사용하려면 먼저 다음 두 항목에 대한 올바른 값을 설정해야 합니다.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 및 기본 devenv.exe 애플리케이션을 기반으로 합니다. 이러한 옵션을 사용하려면 먼저 다음 두 항목에 대한 올바른 값을 설정해야 합니다.  
   
 -   OverwriteDataSources, TargetDataSourceFolder, TargetReportFolder 및 TargetServerURL의 프로젝트 속성  
   
@@ -279,17 +279,17 @@ ms.locfileid: "68889838"
   
 -   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 창 및 모드를 제어합니다.  
   
-    |설명|키 조합|  
+    |Description|키 조합|  
     |-----------------|---------------------|  
     |선택한 프로젝트 빌드|Ctrl+Shift+B|  
     |속성 창 표시|F4|  
     |데이터 창 표시|Ctrl+Alt+D|  
-    |디버깅 시작|F5|  
+    |디버그 시작|F5|  
     |열려 있는 특정 창에서 다음 창으로 이동|F6|  
   
 -   보고서 디자인 화면에서 항목을 제어합니다.  
   
-    |설명|키 조합|  
+    |Description|키 조합|  
     |-----------------|---------------------|  
     |특정 보고서 항목에서 다음 보고서 항목으로 포커스 이동|Tab|  
     |선택한 보고서 항목 이동|화살표 키|  

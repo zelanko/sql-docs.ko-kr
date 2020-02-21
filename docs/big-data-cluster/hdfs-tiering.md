@@ -9,14 +9,14 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 673b3eed760af4b36c494e2dd45cdfc8ed8e8dc8
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 008a62d3d36acf96b0c63559cd4d8ecbf27641c1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706054"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190399"
 ---
-# <a name="configure-hdfs-tiering-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에서 HDFS 계층화 구성
+# <a name="configure-hdfs-tiering-on-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에서 HDFS 계층화 구성
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -25,6 +25,11 @@ HDFS 계층화는 HDFS에서 외부 HDFS 호환 파일 시스템을 탑재하는
 ## <a name="hdfs-tiering-overview"></a>HDFS 계층화 개요
 
 계층화를 사용하는 경우 애플리케이션은 데이터가 로컬 HDFS에 있는 것처럼 다양한 외부 저장소의 데이터에 원활하게 액세스할 수 있습니다. 탑재는 외부 파일 시스템의 네임스페이스를 설명하는 메타데이터가 로컬 HDFS로 복사되는 메타데이터 작업입니다. 이 메타데이터에는 외부 디렉터리와 파일에 대한 정보와 해당 사용 권한 및 ACL이 포함됩니다. 예를 들어 쿼리를 통해 데이터 자체에 액세스하는 경우, 해당 데이터는 요청이 있을 때만 복사됩니다. 이제 SQL Server 빅 데이터 클러스터에서 외부 파일 시스템 데이터에 액세스할 수 있습니다. 클러스터의 HDFS에 저장된 로컬 데이터에 실행하는 것과 동일한 방식으로 이 데이터에 대해 Spark 작업 및 SQL 쿼리를 실행할 수 있습니다.
+
+7분 분량의 다음 동영상에서는 HDFS 계층화의 개요를 제공합니다.
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Unify-your-data-lakes-with-HDFS-tiering/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ### <a name="caching"></a>캐싱
 현재, 기본적으로 총 HDFS 스토리지의 1%가 탑재된 데이터의 캐싱용으로 예약됩니다. 캐싱은 탑재 전체의 전역 설정입니다.

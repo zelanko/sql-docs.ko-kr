@@ -16,10 +16,10 @@ ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af40d79d876edb8f0448bd5abaef5c173a6edce9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572595"
 ---
 # <a name="configurationsetting-method---setdatabaseconnection"></a>ConfigurationSetting 메서드 - SetDatabaseConnection
@@ -47,7 +47,7 @@ public void BackupEncryptionKey(string Server,
  보고서 서버 데이터베이스의 이름입니다.  
   
  *CredentialsType*  
- 연결에 사용할 자격 증명의 유형입니다. 사용할 수 있는 값에는  
+ 연결에 사용할 자격 증명의 유형입니다. 값은  
   
 -   0 - Windows  
   
@@ -64,10 +64,10 @@ public void BackupEncryptionKey(string Server,
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  *CredentialsType* 매개 변수를 0(Windows)으로 설정하면 *UserName* 및 *Password* 매개 변수를 설정해야 합니다. *UserName* 매개 변수는 "domain\username" 형식이어야 하며 값은 유효한 Windows 로그온을 나타내야 합니다.  
   
  *CredentialsType* 매개 변수를 1([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])로 설정하면 *UserName* 매개 변수에 전달되는 값이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름의 요구 사항을 따라야 합니다.  
@@ -78,7 +78,7 @@ public void BackupEncryptionKey(string Server,
   
  SetDatabaseConnection 메서드는 보고서 서버에서 지정된 데이터를 사용하여 보고서 서버 데이터베이스에 연결할 수 있는지 확인하지 않습니다.  
   
- 처음 설정하는 경우 ConnectionPoolSize 속성은 ConnectionPoolSize = #Processors * 75 프로세서를 기반으로 설정됩니다.  
+ 처음 설정하는 경우 ConnectionPoolSize 속성은 다음 프로세서를 기반으로 설정됩니다. ConnectionPoolSize = #Processors * 75.  
   
  SetDatabaseConnection 메서드는 지정된 계정에 권한을 부여하지 않습니다. 보고서 서버 데이터베이스에 액세스하고 결과 스크립트를 실행해야 하는 각 계정에 대해 [GenerateDatabaseRightsScript](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md) 메서드를 호출해야 합니다.  
   

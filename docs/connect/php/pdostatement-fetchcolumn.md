@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: fetchColumn | Microsoft Docs'
+title: PDOStatement::fetchColumn | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 6ebf385c-ddb0-4c53-9dc6-7df0d3740b04
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4021a6a5c550ea9674c0bf699462eece1d9c2f9b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993041"
 ---
 # <a name="pdostatementfetchcolumn"></a>PDOStatement::fetchColumn
@@ -32,10 +32,10 @@ string PDOStatement::fetchColumn ([ $column_number ] );
 #### <a name="parameters"></a>매개 변수  
 $*column_number*: 0부터 시작하는 열 번호를 나타내는 선택적 정수입니다. 기본값은 0입니다(행의 첫 번째 열).  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 한 열이거나 행이 더 이상 없는 경우 false입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 2.0에 추가되었습니다.  
   
 ## <a name="example"></a>예제  

@@ -1,5 +1,5 @@
 ---
-title: getLastUpdateCount 메서드 (SQLServerDataSource) | Microsoft Docs
+title: getLastUpdateCount 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 4c4fbb24-0b02-42da-928c-a903bb591cc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0d284e02be13af60bf7d8e7d447835f7eccd90a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982606"
 ---
 # <a name="getlastupdatecount-method-sqlserverdatasource"></a>getLastUpdateCount 메서드(SQLServerDataSource)
@@ -34,10 +34,10 @@ ms.locfileid: "67982606"
 public boolean getLastUpdateCount()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  lastUpdateCount가 사용되면 **true**이고, 그렇지 않으면 **false**입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  lastUpdateCount 속성이 **true**로 설정된 경우 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에서는 SQL 문에서 서버로 전달된 마지막 업데이트 횟수만 반환합니다. lastUpdateCount 속성이 **false**로 설정된 경우 드라이버에서는 실행된 모든 트리거에서 반환된 업데이트 횟수를 포함하여 모든 업데이트 횟수를 반환합니다. lastUpdateCount 속성이 설정되어 있지 않으면 getLastUpdateCount 메서드는 기본값인 **true**를 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -1,5 +1,5 @@
 ---
-title: JDBC 드라이버를 사용 하 여 메타 데이터 처리 | Microsoft Docs
+title: JDBC 드라이버로 메타데이터 처리 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 5cfb35d4-ddcd-40a2-8091-f29cddc32552
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0176e1da9a64e4ed32ba6989496178f5f9741193
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028020"
 ---
 # <a name="handling-metadata-with-the-jdbc-driver"></a>JDBC 드라이버로 메타데이터 처리
@@ -37,13 +37,13 @@ ms.locfileid: "69028020"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[데이터베이스 메타데이터 사용](../../connect/jdbc/using-database-metadata.md)|현재 연결된 데이터베이스에 관한 메타데이터 정보를 검색하는 방법을 설명합니다.|  
 |[결과 집합 메타데이터 사용](../../connect/jdbc/using-result-set-metadata.md)|현재 결과 집합에 관한 메타데이터 정보를 검색하는 방법을 설명합니다.|  
 |[매개 변수 메타데이터 사용](../../connect/jdbc/using-parameter-metadata.md)|준비된 문 및 호출 가능한 문의 매개 변수에 관한 메타데이터 정보를 검색하는 방법을 설명합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

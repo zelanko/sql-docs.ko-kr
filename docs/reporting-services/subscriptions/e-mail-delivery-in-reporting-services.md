@@ -13,10 +13,10 @@ ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b2d5f511fe6008801b25f7c93300911851482025
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72305049"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services의 전자 메일 배달
@@ -32,7 +32,7 @@ ms.locfileid: "72305049"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드|  
   
 ## <a name="e-mail-delivery-options"></a>전자 메일 배달 옵션  
  보고서 서버 전자 메일 배달에서는 다음과 같은 방법으로 보고서를 배달할 수 있습니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "72305049"
 ## <a name="native-mode-role-based-e-mail-settings"></a>기본 모드 역할 기반 전자 메일 설정  
  기본 모드 보고서 서버 환경에서 사용하는 전자 메일 배달 설정은 역할에 "개별 구독 관리" 태스크가 포함되어 있는지 아니면 "모든 구독 관리" 태스크가 포함되어 있는지에 따라 달라집니다.  
   
-|태스크|사용 가능한 설정|  
+|Task|사용 가능한 설정|  
 |----------|------------------------|  
 |개별 구독 관리|사용자가 보고서 배달을 자동화하고 자신에게 보고서가 배달되도록 할 수 있는 필드가 표시됩니다. 이 모드에서는 전자 메일 별칭이 적용되는 필드를 사용할 수 없습니다.|  
 |모든 구독 관리|받는 사람:, 참조:, 숨은 참조: 및 회신: 필드를 비롯하여 보다 폭넓은 배포를 지원하는 필드를 표시하여 보고서를 더 많은 구독자에게 라우팅하는 추가 방법을 제공합니다. 전자 메일 별칭 필드의 사용 여부는 RSReportServer 구성 파일 설정을 통해 정의됩니다.|  
@@ -81,7 +81,7 @@ ms.locfileid: "72305049"
  기본 모드 보고서 서버의 경우에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 파일을 편집하는 방식으로 기본 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 통해 메일 배달 확장 프로그램을 구성합니다. SharePoint 모드 보고서 서버의 경우에는 SharePoint 관리 페이지 및 PowerShell 스크립트에서 전자 메일 배달 확장 프로그램을 구성합니다.  
   
  
- 기본 모드 보고서 서버를 구성하는 방법은 [메일 설정 - Reporting Services 기본 모드(구성 관리자)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)를 참조하세요.
+ 기본 모드 보고서 서버를 구성하는 방법은 [메일 설정 - Reporting Services 기본 모드(Configuration Manager)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)를 참조하세요.
  
  
  SharePoint 모드 보고서 서버를 구성하는 방법에 대한 자세한 내용은 다음을 참조하십시오.  
@@ -90,7 +90,7 @@ ms.locfileid: "72305049"
 ## <a name="see-also"></a>참고 항목  
  [태스크 및 권한](../../reporting-services/security/tasks-and-permissions.md)   
  [구독 및 배달&#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [데이터 기반 구독](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [역할 할당](../../reporting-services/security/role-assignments.md)  
   
   

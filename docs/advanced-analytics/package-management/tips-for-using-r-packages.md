@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5e283ab478a6d65243e9962fd5c26f5f91d87c15
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 64799766b8b9d69a5577fd589c8f610be75ebb8f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70196346"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479398"
 ---
 # <a name="tips-for-using-r-packages"></a>R 패키지 사용 팁
 
@@ -88,8 +88,13 @@ SQL Server에서 R 패키지를 설치하는 방법에 대한 내용은 [SQL Ser
 
 + 인스턴스와 연결된 패키지 라이브러리를 확인합니다. 자세한 내용은 [R 패키지 정보 가져오기](../package-management/r-package-information.md)를 참조하세요.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
-+ [새 R 패키지 설치](install-additional-r-packages-on-sql-server.md)
+::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
++ [R 도구를 사용하여 패키지 설치](install-r-packages-standard-tools.md)
+::: moniker-end
+::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
++ [sqlmlutils를 사용하여 새 R 패키지 설치](install-additional-r-packages-on-sql-server.md)
+::: moniker-end
 + [새 Python 패키지 설치](../python/install-additional-python-packages-on-sql-server.md)
 + [자습서, 샘플, 솔루션](../tutorials/machine-learning-services-tutorials.md)

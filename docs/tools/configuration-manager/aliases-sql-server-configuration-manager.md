@@ -1,6 +1,6 @@
 ---
-title: 별칭(SQL Server 구성 관리자) | Microsoft Docs
-ms.custom: ''
+title: 별칭(SQL Server 구성 관리자)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,15 +11,15 @@ ms.assetid: 7dc5d029-a1ed-4c13-a5c2-2aafb0f7866f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ba080ecb9d93a36c28f730ac8f77f3f040d0312
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 15624da8e22932f90dadfd7568c9266824f26afb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010393"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306597"
 ---
 # <a name="aliases-sql-server-configuration-manager"></a>별칭(SQL Server 구성 관리자)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  별칭은 연결 설정에 사용할 수 있는 대체 이름입니다. 별칭은 연결 문자열의 필수 요소를 캡슐화하고 사용자가 선택한 이름으로 나타납니다. 이 컴퓨터의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트에 대한 별칭을 만들려면 콘솔 창에서 **별칭** 을 마우스 오른쪽 단추로 클릭한 다음 **새 별칭**을 클릭합니다. 이 컴퓨터의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트에 대한 기존 별칭을 구성하려면 콘솔 창에서 **별칭** 을 클릭하고 세부 정보 창에서 기존 별칭을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+  별칭은 연결 설정에 사용할 수 있는 대체 이름입니다. 별칭은 연결 문자열의 필수 요소를 캡슐화하고 사용자가 선택한 이름으로 나타납니다. 이 컴퓨터의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트에 대한 별칭을 만들려면 콘솔 창에서 **별칭**을 마우스 오른쪽 단추로 클릭한 다음, **새 별칭**을 클릭합니다. 이 컴퓨터의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트에 대한 기존 별칭을 구성하려면 콘솔 창에서 **별칭** 을 클릭하고 세부 정보 창에서 기존 별칭을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
   

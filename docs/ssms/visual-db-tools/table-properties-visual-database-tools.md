@@ -1,10 +1,9 @@
 ---
-title: 테이블 속성(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 테이블 속성
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0d40b20c75b6ce9c86767ee655e6e7992ed32cff
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: b53bed28d05d490b9b6d603260917f7ffbb4d047
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261572"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242178"
 ---
 # <a name="table-properties-visual-database-tools"></a>테이블 속성(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -84,5 +85,5 @@ Microsoft SQL Server에서 테이블의 ROWGUID 열로 사용되는 열을 표�
 데이터 형식이 텍스트 또는 이미지인 열에 대한 파일 그룹을 선택하는 데 사용할 수 있는 드롭다운 목록을 제공합니다. 분할 구성표를 사용하여 테이블을 저장한 경우 이 필드를 비워 둡니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[테이블 디자인(Visual Database Tools)](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[테이블 디자인](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
   

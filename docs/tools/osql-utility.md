@@ -1,10 +1,7 @@
 ---
-title: osql 유틸리티 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/16/2017
+title: osql 유틸리티
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,17 +20,23 @@ helpviewer_keywords:
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 author: markingmyname
 ms.author: maghan
+ms.manageR: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: cfd8bc56a642442e1a5c5f673ca70bd86eb3ef6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: dbc103ea44027056541dada86451c757a27619ff
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105756"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307362"
 ---
 # <a name="osql-utility"></a>osql 유틸리티
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  **osql** 유틸리티를 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 문, 시스템 프로시저 및 스크립트 파일을 입력할 수 있습니다. 이 유틸리티에서는 ODBC를 사용하여 서버와 통신합니다.  
+
+**osql** 유틸리티를 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 문, 시스템 프로시저 및 스크립트 파일을 입력할 수 있습니다. 이 유틸리티에서는 ODBC를 사용하여 서버와 통신합니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이후 버전에서는 이 기능이 제거됩니다. 향후 개발 작업에서는 이 기능을 사용하지 않도록 하고 현재 이 기능을 사용하는 애플리케이션은 수정하십시오. 대신 **sqlcmd** 을 사용합니다. 자세한 내용은 [sqlcmd Utility](../tools/sqlcmd-utility.md)을(를) 참조하십시오.  
@@ -138,7 +141,7 @@ C:\>osql
  명령 종료 문자를 지정합니다. 기본적으로 줄에 GO만 단독으로 입력하면 명령이 종료되어 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로 보내집니다. 명령 종료 문자를 다시 설정할 때는 앞에 백슬래시를 지정하는지 여부에 상관없이 [!INCLUDE[tsql](../includes/tsql-md.md)] 예약어 또는 운영 체제와 연관된 특별한 의미를 가진 문자를 사용하지 마십시오.  
   
  **-q "** _query_ **"**  
- **osql** 이 시작될 때 쿼리를 실행하지만 쿼리가 완료되더라도 **osql** 을 끝내지 않습니다. 쿼리 문에는 GO를 포함할 수 없습니다. 일괄 처리에서 쿼리를 실행하면 %변수 또는 환경 %변수%를 사용할 수 있습니다. 예를 들어  
+ **osql** 이 시작될 때 쿼리를 실행하지만 쿼리가 완료되더라도 **osql** 을 끝내지 않습니다. 쿼리 문에는 GO를 포함할 수 없습니다. 일괄 처리에서 쿼리를 실행하면 %변수 또는 환경 %변수%를 사용할 수 있습니다. 다음은 그 예입니다.  
   
 ```  
 SET table=sys.objects  
@@ -193,7 +196,7 @@ osql -E -q "select name, object_id from %table%"
 > [!NOTE]  
 >  **osql**에서는 **-n** , **-O** 및 **-D**옵션이 더 이상 지원되지 않습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  위에 나열된 대/소문자를 구분하는 옵션을 사용하여 **osql** 유틸리티를 운영 체제에서 직접 시작할 수 있습니다. **osql**을 시작하면 osql이 SQL 문을 받아서 대화형으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 보냅니다. 결과는 서식 지정되어 화면에 표시됩니다(**stdout**). **osql**을 끝내려면 QUIT 또는 EXIT를 사용합니다.  
   
  **osql**을 시작할 때 사용자 이름을 지정하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 환경 변수를 검사한 후 사용합니다. 예를 들어 **osqluser=(** _user_ **)** 또는 **osqlserver=(** _server_ **)** 를 사용합니다. 환경 변수를 설정하지 않으면 워크스테이션 사용자 이름이 사용됩니다. 서버를 지정하지 않으면 워크스테이션 이름이 사용됩니다.  
@@ -208,9 +211,9 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="osql-commands"></a>OSQL 명령  
  [!INCLUDE[tsql](../includes/tsql-md.md)] osql **내에서**문 외에도 다음 명령을 사용할 수 있습니다.  
   
-|Command|설명|  
+|명령|Description|  
 |-------------|-----------------|  
-|GO|마지막 GO 이후에 입력한 모든 문을 실행합니다.|  
+|이동|마지막 GO 이후에 입력한 모든 문을 실행합니다.|  
 |RESET|입력한 모든 문을 지웁니다.|  
 |QUIT 또는 EXIT( )|**osql**을 끝냅니다.|  
 |CTRL+C|**osql**을 끝내지 않고 쿼리를 끝냅니다.|  
@@ -270,13 +273,13 @@ osql -E -i titles.qry -o titles.res
 EXIT ( < query > )  
 ```  
   
- 예를 들어  
+ 다음은 그 예입니다.  
   
 ```  
 EXIT(SELECT @@ROWCOUNT)  
 ```  
   
- EXIT 매개 변수를 배치 파일의 일부로 포함할 수도 있습니다. 예를 들어  
+ EXIT 매개 변수를 배치 파일의 일부로 포함할 수도 있습니다. 다음은 그 예입니다.  
   
 ```  
 osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"  
@@ -304,7 +307,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 -   상태가 127인 RAISERROR  
   
 > [!NOTE]  
->  **osql** 스크립트에 RAISERROR를 사용할 때 상태 127이 발생하면 **osql** 이 종료되고 메시지 ID가 클라이언트에 반환됩니다. 예를 들어  
+>  **osql** 스크립트에 RAISERROR를 사용할 때 상태 127이 발생하면 **osql** 이 종료되고 메시지 ID가 클라이언트에 반환됩니다. 다음은 그 예입니다.  
   
 ```  
 RAISERROR(50001, 10, 127)  
@@ -338,7 +341,7 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [설명&#40;MDX&#41;](../mdx/comment-mdx.md)   
- [--&#40;설명&#41;&#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
+ [-- &#40;설명&#41;&#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
  [CAST 및 CONVERT&#40;Transact-SQL&#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   
  [RAISERROR&#40;Transact-SQL&#41;](../t-sql/language-elements/raiserror-transact-sql.md)  
   

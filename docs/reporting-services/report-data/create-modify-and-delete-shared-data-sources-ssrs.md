@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1045f9a0c271ee4c3befe434a3eef50f0edee6df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9f5ed3f000f13d965d9f45c853d831e18d5dd4e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573201"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190864"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>공유 데이터 원본 만들기, 수정 및 삭제(SSRS)
   공유 데이터 원본은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 실행되는 여러 보고서, 모델 및 데이터 기반 구독에서 참조할 수 있는 데이터 원본 연결 속성의 집합입니다.  공유 데이터 원본을 사용하면 시간이 지나면서 자주 변경되는 데이터 원본 속성을 쉽게 관리할 수 있습니다. 사용자 계정 또는 암호가 변경되거나 데이터베이스를 다른 서버로 이동하는 경우 한 위치에서 연결 정보를 업데이트할 수 있습니다.  
@@ -30,12 +30,12 @@ ms.locfileid: "65573201"
   
  공유 데이터 원본은 다음과 같은 부분으로 구성됩니다.  
   
-|부분|설명|  
+|부분|Description|  
 |----------|-----------------|  
 |속성|보고서 서버 폴더 계층 내에서 항목을 식별하는 이름입니다.|  
-|설명|폴더 내용을 볼 때 웹 포털에 항목과 함께 표시되는 설명입니다.|  
+|Description|폴더 내용을 볼 때 웹 포털에 항목과 함께 표시되는 설명입니다.|  
 |연결 형식|데이터 원본과 함께 사용되는 데이터 처리 확장 프로그램입니다. 보고서 서버에 배포된 데이터 처리 확장 프로그램만 사용할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 포함된 데이터 처리 확장 프로그램에 대한 자세한 내용은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)을 참조하세요.|  
-|연결 문자열|데이터베이스에 대한 연결 문자열입니다. 자세한 정보 및 자주 사용되는 데이터 원본에 대한 연결 문자열의 예를 보려면 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.|  
+|연결 문자열|데이터베이스에 대한 연결 문자열입니다. 자세한 내용 및 자주 사용되는 데이터 원본의 연결 문자열 예제를 보려면 [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)를 참조하세요.|  
 |자격 증명 유형|연결에 대한 자격 증명을 가져오는 방법 및 연결된 이후 자격 증명이 사용되는지 여부를 지정합니다. 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.|  
   
  공유 데이터 원본에는 데이터를 검색하는 데 사용되는 쿼리 정보가 포함되지 않습니다. 쿼리는 항상 보고서 정의 안에 보관됩니다.  
@@ -167,7 +167,7 @@ ms.locfileid: "65573201"
   
 4.  **데이터 원본 유형**의 목록에서 데이터 원본 유형을 선택합니다. 자세한 내용은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)을 참조하세요.  
   
-5.  **연결 문자열**에 데이터 원본에 대한 포인터 및 외부 데이터 원본에 대한 연결을 설정하는 데 필요한 모든 기타 설정을 지정합니다. 사용하는 데이터 원본 유형에 따라 연결 문자열의 구문이 결정됩니다. 자세한 내용 및 예제는 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.  
+5.  **연결 문자열**에 데이터 원본에 대한 포인터 및 외부 데이터 원본에 대한 연결을 설정하는 데 필요한 모든 기타 설정을 지정합니다. 사용하는 데이터 원본 유형에 따라 연결 문자열의 구문이 결정됩니다. 자세한 내용 및 예제는 [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)를 참조하세요.  
   
 6.  **자격 증명**에서 보고서 서버가 외부 데이터 원본에 액세스하는 데 필요한 자격 증명을 얻는 방법을 지정합니다. 자격 증명은 저장 및 통합하거나 무인 보고서 처리를 위해 구성할 수 있으며 입력 메시지가 표시되도록 구성할 수도 있습니다.  
   
@@ -214,7 +214,7 @@ ms.locfileid: "65573201"
      보고서 모델의 경우 종속 항목 목록에 보고서 작성기에서 만든 보고서가 표시됩니다. 공유 데이터 원본의 경우에는 종속 항목 목록에 보고서와 보고서 모델이 모두 포함될 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [보고서 데이터 원본 관리](../../reporting-services/report-data/manage-report-data-sources.md)   
  [페이지를 매긴 보고서의 데이터 원본 속성 구성](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   

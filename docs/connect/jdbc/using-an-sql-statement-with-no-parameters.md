@@ -11,10 +11,10 @@ ms.assetid: 4b0728bd-059b-4b71-895c-999335bc7427
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da4342b8640e89a0183a3f80889dd27ecfb1a76e
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026537"
 ---
 # <a name="using-an-sql-statement-with-no-parameters"></a>매개 변수가 없는 SQL 문 사용
@@ -27,8 +27,8 @@ ms.locfileid: "69026537"
 
 [!code[JDBC#UsingSQLWithNoParams1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-w_0_1.java)]
 
-결과 집합을 사용 하는 방법에 대 한 자세한 내용은 [JDBC 드라이버를 사용 하 여 결과 집합 관리](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)를 참조 하세요.
+결과 집합 사용에 대한 자세한 내용은 [JDBC 드라이버로 결과 집합 관리](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)를 참조하세요.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [SQL이 있는 문 사용](../../connect/jdbc/using-statements-with-sql.md)

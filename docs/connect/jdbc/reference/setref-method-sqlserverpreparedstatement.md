@@ -16,10 +16,10 @@ ms.assetid: 1a09bbf9-6f8f-4a21-85d2-2182111b5ce7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a002ec9f607804854e0bf390c455e6b492432a42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973123"
 ---
 # <a name="setref-method-sqlserverpreparedstatement"></a>setRef 메서드(SQLServerPreparedStatement)
@@ -47,7 +47,7 @@ public final void setRef(int i,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 setRef 메서드는 java.sql.PreparedStatement 인터페이스의 setRef 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -1,6 +1,6 @@
 ---
-title: SQL Server Management Studio - 사용 및 진단 데이터(SSMS) | Microsoft Docs
-ms.custom: ''
+title: 사용량 현황 및 진단 데이터
+ms.custom: seo-lt-2019
 ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 82b4af04963c5161cbea300054d19c61b61ec34a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 5b61b32ab266c4068f610b9138bf3fc8ea364f0e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028826"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245697"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>SSMS 사용 현황 및 진단 데이터 수집에 대한 로컬 감사
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ SSMS 사용량 현황 데이터 수집에 참여하거나 참여하지 않으려
 
   항목 유형 `DWORD`: `0`은 참여하지 않음, `1`은 참여함
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 - [SQL Server 사용 현황 및 진단 데이터 수집 구성](../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)
 - [SQL Server 사용 현황 및 진단 데이터 수집에 대한 로컬 감사](https://msdn.microsoft.com/library/mt743085.aspx)

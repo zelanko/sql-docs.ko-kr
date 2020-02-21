@@ -11,10 +11,10 @@ ms.assetid: 52c6b133-f7ed-468d-8f34-bc2e4b81553e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4212817f44485d0ceaf56b2dcbe40264a617269e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971325"
 ---
 # <a name="sqlserverdatasourceobjectfactory-members"></a>SQLServerDataSourceObjectFactory 멤버
@@ -24,7 +24,7 @@ ms.locfileid: "67971325"
   
 ## <a name="constructors"></a>생성자  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[SQLServerDataSourceObjectFactory()](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-constructor.md)|[SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md) 클래스의 새 인스턴스를 초기화합니다.|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67971325"
   
 ## <a name="methods"></a>메서드  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md)|지정된 데이터 원본 개체의 인스턴스를 검색합니다.|  
   

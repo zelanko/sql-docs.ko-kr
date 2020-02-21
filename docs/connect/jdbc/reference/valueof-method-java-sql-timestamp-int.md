@@ -1,5 +1,5 @@
 ---
-title: valueOf 메서드 (java. Timestamp, int) | Microsoft Docs
+title: valueOf 메서드(java.sql.Timestamp, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 114f55af-62ab-4c60-8724-0affbbbbbcdc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c13438851fdc543a3567abdc001af5b5b9e726fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68001567"
 ---
 # <a name="valueof-method-javasqltimestamp-int"></a>valueOf 메서드(java.sql.Timestamp, int)
@@ -38,8 +38,8 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, int minutesOf
   
  분 단위 오프셋입니다.  
   
-## <a name="return-value"></a>반환 값  
- GMT에서 지정 된 오프셋 (분)에 표시 되는 특정 시점을 나타내는 DateTimeOffset 개체를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ GMT를 기준으로 지정된 오프셋(분)에서 java.sql.Timestamp 개체가 제공하는 시점을 나타내는 DateTimeOffset 개체를 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [DateTimeOffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md)   

@@ -1,5 +1,5 @@
 ---
-title: JDBC 드라이버를 사용 하 여 결과 집합 관리 | Microsoft Docs
+title: JDBC 드라이버로 결과 집합 관리 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 9ed5ad41-22e0-4e4a-8a79-10512db60d50
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 273a03e088036057f6d7b31c98074391138de07e
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027908"
 ---
 # <a name="managing-result-sets-with-the-jdbc-driver"></a>JDBC 드라이버로 결과 집합 관리
@@ -32,13 +32,13 @@ ms.locfileid: "69027908"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[커서 유형 이해](../../connect/jdbc/understanding-cursor-types.md)|[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서 지원하는 다양한 커서 유형에 대해 설명합니다.|  
 |[동시성 제어 이해](../../connect/jdbc/understanding-concurrency-control.md)|JDBC 드라이버에서 동시성 제어를 지원하는 방법을 설명합니다.|  
 |[행 잠금 이해](../../connect/jdbc/understanding-row-locking.md)|JDBC 드라이버에서 행 잠금을 지원하는 방법을 설명합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

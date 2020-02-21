@@ -14,10 +14,10 @@ ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6bd60789112a8aa28481b3bb615f1df2a957125a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68067571"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server의 버전별 컴퓨팅 용량 제한
@@ -28,7 +28,7 @@ ms.locfileid: "68067571"
   
  이 표에서는 위 다이어그램의 표기법에 대해 설명합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |0..1|없거나 1개|  
 |1|정확히 1개|  
@@ -61,7 +61,7 @@ ms.locfileid: "68067571"
   
 -   실제 프로세서는 하나 이상의 코어로 구성될 수 있습니다. 실제 프로세서는 프로세서 패키지 또는 소켓과 동일합니다.  
   
-하나 이상의 실제 프로세서가 포함된 시스템이나 여러 코어 및/또는 하이퍼 스레드가 있는 실제 프로세서가 포함된 시스템은 운영 체제에서 여러 태스크를 동시에 실행할 수 있도록 합니다. 각 실행 스레드는 논리적 프로세서로 나타납니다. 예를 들어 하이퍼스레딩을 사용하고 코어당 스레드 두 개인 쿼드 코어 프로세서 두 개가 컴퓨터에 있는 경우, 논리 프로세서 수는 프로세서 2개 x 프로세서당 코어 4개 x 코어당 스레드 2개로 16개가 됩니다. 다음 사항에 주목할 필요가 있습니다.  
+하나 이상의 실제 프로세서가 포함된 시스템이나 여러 코어 및/또는 하이퍼 스레드가 있는 실제 프로세서가 포함된 시스템은 운영 체제에서 여러 태스크를 동시에 실행할 수 있도록 합니다. 각 실행 스레드는 논리적 프로세서로 나타납니다. 예를 들어 하이퍼스레딩을 사용하고 코어당 스레드 두 개인 쿼드 코어 프로세서 두 개가 컴퓨터에 있는 경우, 논리 프로세서 수는 프로세서 2개 x 프로세서당 코어 4개 x 코어당 스레드 2개로 16개가 됩니다. 주의해야 할 사항은 다음과 같습니다.  
   
 -   하이퍼 스레드 코어의 단일 스레드에서 논리적 프로세서의 컴퓨팅 용량은 하이퍼 스레딩을 사용하지 않은 동일한 코어에서 논리적 프로세서의 컴퓨팅 용량보다 적습니다.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "68067571"
   
 각각의 가상 프로세서 성능이 중요한 경우 하이퍼 스레딩을 해제할 수 있습니다. BIOS 설정 도중 프로세서에 대해 BIOS 설정을 사용하여 하이퍼 스레딩을 활성화 또는 비활성화할 수 있습니다. 그러나 일반적으로 서버에서 실행되는 모든 작업 부하에 영향을 주는 서버 범위 작업입니다. 이는 물리적 운영 체제 환경에서 하이퍼 스레딩 성능을 향상시킬 수 있는 워크로드로부터 가상화된 환경에서 실행되는 워크로드를 분리할 것을 제안할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 2016 버전 및 구성 요소](../sql-server/editions-and-components-of-sql-server-2016.md)   
  [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server의 최대 용량 사양](../sql-server/maximum-capacity-specifications-for-sql-server.md)   

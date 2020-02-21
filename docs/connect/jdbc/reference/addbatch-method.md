@@ -1,5 +1,5 @@
 ---
-title: addBatch 메서드 () | Microsoft Docs
+title: addBatch 메서드() | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 737c3785-e2d4-4b5c-8718-c0e435b50599
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3b4762059620cd4608c7fc817af716bbd7630391
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955981"
 ---
 # <a name="addbatch-method-"></a>addBatch 메서드()
@@ -37,8 +37,8 @@ public final void addBatch()
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 addBatch 메서드는 Java.sql.preparedstatement 인터페이스의 addBatch 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 addBatch 메서드는 java.sql.PreparedStatement 인터페이스의 addBatch 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [addBatch 메서드&#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)   

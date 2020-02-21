@@ -1,22 +1,22 @@
 ---
-title: SSMS(SQL Server Management Studio)를 사용하여 SQL Server 인스턴스에 연결 및 쿼리
+title: SQL Server 인스턴스에 연결 및 쿼리
 description: SQL Server Management Studio를 사용하고 기본 T-SQL 쿼리를 실행하여 SQL Server 인스턴스에 연결하는 방법에 대한 자습서입니다.
 keywords: SQL Server, SSMS, SQL Server Management Studio
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: sstein
+author: markingmyname
+ms.author: maghan
+ms.reviewer: sstein; maghan
 ms.topic: quickstart
 ms.prod_service: sql-tools
 ms.prod: sql
 ms.technology: ssms
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: eaf544085bfe6040bdf9f54300eb733ee4fd92f0
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: c1d13b939dc0846c88e9bd05a1384d259c3f911c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708337"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76162652"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>자습서: SSMS(SQL Server Management Studio)를 사용하여 SQL Server 인스턴스에 연결 및 쿼리
 
@@ -109,7 +109,7 @@ SQL Server 연결에 성공했는지 확인하려면 **개체 탐색기** 내에
    ![데이터베이스 변경](media/connect-query-sql-server/changedb.png)
 
 2. 다음 T-SQL 코드 조각을 쿼리 창에 붙여넣고, 선택한 다음, **실행**(또는 키보드의 F5 키)을 선택합니다.  
-   쿼리 창에서 기존 텍스트를 대체하거나 끝에 추가할 수 있습니다. 쿼리 창에서 모든 항목을 실행하려면 **실행**을 선택합니다. 텍스트를 추가한 경우, 텍스트의 일부만 실행하려면 해당 부분을 강조 표시하고 **실행**을 선택합니다.  
+   쿼리 창에서 기존 텍스트를 대체하거나 끝에 추가할 수 있습니다. 쿼리 창에서 모든 항목을 실행하려면 **실행**을 선택합니다. 텍스트를 추가한 경우 텍스트의 일부만 실행하려면 해당 부분을 강조 표시하고 **실행**을 선택합니다.  
   
    ```sql
    USE [TutorialDB]
@@ -195,11 +195,16 @@ SQL Server 연결에 성공했는지 확인하려면 **개체 탐색기** 내에
     > [!NOTE]
     > 이 작업에서는 개체 탐색기가 사용하는 서버가 아닌 쿼리 창이 연결된 서버만 변경합니다.
 
+## <a name="azure-data-studio"></a>Azure Data Studio
+
+Azure Data Studio를 사용하여 [SQL Server](../../azure-data-studio/quickstart-sql-server.md), [Azure SQL Database](../../azure-data-studio/quickstart-sql-database.md) 및 [Azure SQL Data Warehouse](../../azure-data-studio/quickstart-sql-dw.md)를 연결하고 쿼리할 수도 있습니다.
+
 ## <a name="next-steps"></a>다음 단계
 
-실습을 통해 SSMS에 익숙해지는 것이 가장 좋습니다. 이러한 문서에서는 SSMS 내에서 사용할 수 있는 다양한 기능에 관해 도움을 얻을 수 있습니다.  이러한 문서에서는 SSMS의 구성 요소를 관리하는 방법과 정기적으로 사용하는 기능을 찾는 방법을 알아봅니다.
+실습을 통해 SSMS에 익숙해지는 것이 가장 좋습니다. 이러한 문서에서는 SSMS 내에서 사용할 수 있는 다양한 기능에 관해 도움을 얻을 수 있습니다. 이러한 문서에서는 SSMS의 구성 요소를 관리하는 방법과 정기적으로 사용하는 기능을 찾는 방법을 알아봅니다.
 
 * [스크립팅](scripting-ssms.md)
 * [SSMS에서 템플릿 사용](../template/templates-ssms.md)
 * [SSMS 구성](ssms-configuration.md)
 * [SSMS 사용을 위한 추가 팁과 요령](ssms-tricks.md)
+* [Azure Data Studio](../../azure-data-studio/download.md)

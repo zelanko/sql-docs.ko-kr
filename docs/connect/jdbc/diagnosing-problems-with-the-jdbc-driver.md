@@ -11,10 +11,10 @@ ms.assetid: 723e2680-a0c5-4a7d-a319-1e49e41078cf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9c36e81631435e4e079d2b52aea4fe9bce587159
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028101"
 ---
 # <a name="diagnosing-problems-with-the-jdbc-driver"></a>JDBC 드라이버 관련 문제 진단
@@ -26,7 +26,7 @@ ms.locfileid: "69028101"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[오류 처리](../../connect/jdbc/handling-errors.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 반환된 오류를 처리하는 방법에 대해 설명합니다.|  
 |[드라이버 버전 가져오기](../../connect/jdbc/getting-the-driver-version.md)|설치된 JDBC 드라이버 버전을 확인하는 방법에 대해 설명합니다.|  
@@ -34,7 +34,7 @@ ms.locfileid: "69028101"
 |[연결 문제 해결](../../connect/jdbc/troubleshooting-connectivity.md)|데이터베이스 연결성 문제를 해결하는 방법에 대해 설명합니다.|  
 |[확장 이벤트 로그의 진단 정보 액세스](../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)|연결 실패 이유를 파악하기 위해 서버의 확장 이벤트 로그의 정보에 액세스하는 방법을 설명합니다.|  
   
-## <a name="see-also"></a>관련 항목: 
+## <a name="see-also"></a>참고 항목 
  [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

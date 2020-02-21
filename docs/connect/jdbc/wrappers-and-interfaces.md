@@ -11,10 +11,10 @@ ms.assetid: 27fc9b72-9f21-4728-abcb-5c015f28a6ab
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a74f5ccd8a36527dd7c37fc02150d11be632ba9
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025578"
 ---
 # <a name="wrappers-and-interfaces"></a>래퍼 및 인터페이스
@@ -29,7 +29,7 @@ ms.locfileid: "69025578"
 
 **IsWrapperFor** 인터페이스는 두 메서드인 및 **래핑**해제를 정의 합니다. **isWrapperFor** 메서드는 지정된 입력 개체가 이 인터페이스를 구현하는지 확인합니다. **unwrap** 메서드는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 관련 메서드에 액세스할 수 있도록 이 인터페이스를 구현하는 개체를 반환합니다.
 
-**isWrapperFor** 및 **래핑** 해제 메서드는 다음과 같이 노출 됩니다.
+**isWrapperFor** 및 **unwrap** 메서드는 다음과 같이 공개됩니다.
 
 - [isWrapperFor 메서드&#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)
 
@@ -41,7 +41,7 @@ ms.locfileid: "69025578"
 
 - [isWrapperFor 메서드&#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)
 
-- [래핑 해제 &#40;방법 SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)
+- [unwrap 메서드&#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)
 
 - [isWrapperFor 메서드&#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)
 
@@ -49,11 +49,11 @@ ms.locfileid: "69025578"
 
 - [isWrapperFor 메서드&#40;SQLServerStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)
 
-- [래핑 해제 &#40;방법 SQLServerStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)
+- [unwrap 메서드&#40;SQLServerStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)
 
 - [isWrapperFor 메서드&#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md)
 
-- [래핑 해제 &#40;방법 SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)
+- [unwrap 메서드&#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)
 
 ## <a name="interfaces"></a>인터페이스
 
@@ -77,7 +77,7 @@ ms.locfileid: "69025578"
 
 ## <a name="example"></a>예제
 
-### <a name="description"></a>설명
+### <a name="description"></a>Description
 
 이 샘플에서는 DataSource 개체에서 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 관련 함수에 액세스하는 방법을 보여 줍니다. 이 DataSource 클래스는 애플리케이션 서버에 의해 래핑되었을 수 있습니다. JDBC 드라이버 관련 함수나 상수에 액세스하려면 데이터 원본을 ISQLServerDataSource 인터페이스로 래핑 해제하고 이 인터페이스에서 선언된 함수를 사용할 수 있습니다.
 
@@ -111,6 +111,6 @@ public class UnWrapTest {
 }  
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [JDBC 드라이버 데이터 형식 이해](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

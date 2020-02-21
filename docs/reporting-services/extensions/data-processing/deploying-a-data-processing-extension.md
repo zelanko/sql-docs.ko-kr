@@ -13,10 +13,10 @@ ms.assetid: e5c0b5a9-1386-47cb-aade-96653ecfaa54
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3e8c86c1ba590ab574e7afe351b3e29c2c918b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194064"
 ---
 # <a name="deploying-a-data-processing-extension"></a>데이터 처리 확장 프로그램 배포
@@ -27,7 +27,7 @@ ms.locfileid: "63194064"
   
  다음 표는 데이터 처리 확장 프로그램에 대한 **Extension** 요소의 특성을 설명합니다.  
   
-|attribute|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |**이름**|확장 프로그램에 대한 고유한 이름입니다(예: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 처리 확장 프로그램의 경우 "SQL" 또는 OLE DB 데이터 처리 확장 프로그램의 경우 "OLEDB"). **Name** 특성의 최대 길이는 255자입니다. 이름은 구성 파일의 **Extension** 요소에 있는 모든 항목 중에서 고유해야 합니다.|  
 |**형식**|정규화된 네임스페이스와 어셈블리 이름을 포함하는 쉼표로 구분된 목록입니다.|  
@@ -37,7 +37,7 @@ ms.locfileid: "63194064"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[방법: 보고서 서버에 데이터 처리 확장 프로그램 배포](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-a-report-server.md)|데이터 처리 확장 프로그램을 보고서 서버에 배포하는 방법을 설명합니다.|  
 |[방법: 보고서 디자이너에 데이터 처리 확장 프로그램 배포](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-report-designer.md)|데이터 처리 확장 프로그램을 보고서 디자이너에 배포하는 방법을 설명합니다.|  

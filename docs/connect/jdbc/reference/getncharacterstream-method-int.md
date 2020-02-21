@@ -1,5 +1,5 @@
 ---
-title: getNCharacterStream 메서드 (int) | Microsoft Docs
+title: getNCharacterStream 메서드(int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 6ae704f5-823c-4dfe-8c08-07b547c61a3c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6ed91df645edd7083e0d91346dfdf6d39bebd91d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981653"
 ---
 # <a name="getncharacterstream-method-int"></a>getNCharacterStream 메서드(int)
@@ -34,16 +34,16 @@ public final java.io.Reader getNCharacterStream(int parameterIndex)
   
  매개 변수 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>반환 값  
- AReaderobject입니다.  
+## <a name="return-value"></a>Return Value  
+ Reader 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- **NCHAR**, **NVARCHAR** 및 **LONGNVARCHAR** 매개 변수에 액세스할 때이 메서드를 사용 해야 합니다.  
+## <a name="remarks"></a>설명  
+ 이 메서드는 **NCHAR**, **NVARCHAR** 및 **LONGNVARCHAR** 매개 변수에 액세스할 때 사용해야 합니다.  
   
- 이 getNCharacterStream 메서드는 getNCharacterStream 메서드를 통해 지정 됩니다.  
+ 이 getNCharacterStream 메서드는 java.sql.CallableStatement 인터페이스의 getNCharacterStream 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [getNCharacterStream 메서드 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getncharacterstream-method-sqlservercallablestatement.md)   

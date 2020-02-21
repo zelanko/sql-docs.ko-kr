@@ -16,10 +16,10 @@ ms.assetid: d7031a89-e964-4ffd-87b7-63825799435d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4ad0910814cd4600b3d70c9037c03e1b9997888
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972859"
 ---
 # <a name="setshort-method-sqlservercallablestatement"></a>setShort 메서드(SQLServerCallableStatement)
@@ -42,12 +42,12 @@ public void setShort(java.lang.String sCol,
   
  *s*  
   
- **Short** 값입니다.  
+ **short** 값입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 setShort 메서드는 java.sql.CallableStatement 인터페이스의 setShort 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

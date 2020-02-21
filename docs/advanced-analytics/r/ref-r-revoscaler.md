@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7b24d5499e618a09c4d80e8614b08219e6c6f788
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706759"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR(SQL Server의 R 라이브러리)
@@ -36,7 +36,7 @@ RevoScaleR는 분산 데이터 과학을 위한 플랫폼 역할을 합니다. �
 **RevoScaleR** 라이브러리는 R 3.4.3을 기준으로 하며, 다음 Microsoft 제품 또는 다운로드 중 하나를 설치한 경우에만 사용할 수 있습니다.
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
-+ [SQL Server 컴퓨터 학습 서비스](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning 서비스](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 이상](https://docs.microsoft.com/machine-learning-server/)
 + [Microsoft R Client](set-up-a-data-science-client.md)
 
@@ -53,7 +53,7 @@ RevoScaleR는 분산 데이터 과학을 위한 플랫폼 역할을 합니다. �
 
 경우에 따라 SQL Server와 R은 다른 데이터 형식을 사용합니다. SQL 및 R 데이터 형식 간 매핑 목록은 [R-SQL 데이터 형식](r-libraries-and-data-types.md)을 참조하세요.
 
-| 함수| 설명|
+| 함수| Description|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) |  SQL Server 컴퓨팅 컨텍스트 개체를 만들어 원격 인스턴스에 컴퓨팅을 푸시합니다. 여러 **RevoScaleR** 함수는 컴퓨팅 컨텍스트를 인수로 사용합니다. |
 |[rxGetComputeContext / rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | 활성 컴퓨팅 컨텍스트를 가져오거나 설정합니다. |
@@ -68,7 +68,7 @@ RevoScaleR는 분산 데이터 과학을 위한 플랫폼 역할을 합니다. �
 
 인스턴스 및 데이터베이스에 대한 필요한 권한이 있는 경우 R에서 DDL 문을 실행할 수 있습니다. 다음 함수는 ODBC 호출을 사용하여 DDL 문을 실행하거나 데이터베이스 스키마를 검색합니다.
 
-| 함수| 설명|
+| 함수| Description|
 | ------- | ---------- |
 | [rxSqlServerTableExists 및 rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) | [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 테이블을 삭제하거나 데이터베이스 테이블 또는 개체가 있는지 확인합니다. |
 | [rxExecuteSQLDDL](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexecutesqlddl) | 데이터베이스 개체를 정의하거나 조작하는 DDL(데이터 정의 언어) 명령을 실행합니다. 이 함수는 데이터를 반환할 수 없으며, 개체 스키마 또는 메타데이터를 검색하거나 수정하는 데만 사용됩니다.|
@@ -77,7 +77,7 @@ RevoScaleR는 분산 데이터 과학을 위한 플랫폼 역할을 합니다. �
 
 데이터 원본 개체를 만든 후 해당 개체를 사용하여 데이터를 로드하거나, 데이터를 변환하거나, 지정된 대상에 새 데이터를 쓸 수 있습니다. 원본의 데이터 크기에 따라 일괄 처리 크기를 데이터 원본의 일부로 정의하고 데이터를 청크로 이동할 수도 있습니다.
 
-| 함수 | 설명 |
+| 함수 | Description |
 |----------|-------------|
 | [rxOpen-methods](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxopen-methods) | 데이터 원본을 사용할 수 있는지 확인하고, 데이터 원본을 열거나 닫고, 원본에서 데이터를 읽고, 대상에 데이터를 쓰고, 데이터 원본을 닫습니다.|
 | [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) | 데이터 원본의 데이터를 파일 스토리지 또는 데이터 프레임으로 이동합니다.|
@@ -87,7 +87,7 @@ RevoScaleR는 분산 데이터 과학을 위한 플랫폼 역할을 합니다. �
 
 ## <a name="3-graphing-functions"></a>3 - 그래프 함수
 
-| 함수 이름 | 설명 |
+| 함수 이름 | Description |
 |---------------|-------------|
 |[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)  |데이터에서 히스토그램을 만듭니다. | 
 |[rxLinePlot](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlineplot) |데이터에서 선 그림을 만듭니다. | 
@@ -98,7 +98,7 @@ RevoScaleR는 분산 데이터 과학을 위한 플랫폼 역할을 합니다. �
 
 ## <a name="4-descriptive-statistics"></a>4 - 설명 통계
 
-| 함수 이름 | 설명 |
+| 함수 이름 | Description |
 |---------------|-------------|
 |[rxQuantile](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxquantile) <sup>*</sup> |.xdf 파일 또는 데이터 프레임에 대한 근사 변위치를 정렬하지 않고 계산합니다. | 
 |[rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) <sup>*</sup> |그룹별 컴퓨팅을 포함하는 데이터의 기본 요약 통계입니다. .xdf 파일에 대한 그룹별 컴퓨팅 쓰기는 지원되지 않습니다. | 
@@ -119,7 +119,7 @@ RevoScaleR는 분산 데이터 과학을 위한 플랫폼 역할을 합니다. �
 
 ## <a name="5-prediction-functions"></a>5 - 예측 함수
 
-| 함수 이름 | 설명 |
+| 함수 이름 | Description |
 |---------------|-------------|
 |[rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) <sup>*</sup> |선형 모델을 데이터에 맞춥니다. | 
 |[rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) <sup>*</sup> |로지스틱 회귀 모델을 데이터에 맞춥니다. | 
@@ -147,7 +147,7 @@ RevoScaleR는 분산 데이터 과학을 위한 플랫폼 역할을 합니다. �
 
 저장 프로시저 내에서 R 스크립트 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)를 캡슐화할 준비가 되면 코드를 입력 및 출력이 명확하게 정의된 단일 함수로 다시 작성하는 것이 좋습니다. 
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 + [R 자습서](../tutorials/sql-server-r-tutorials.md)
 + [컴퓨팅 컨텍스트 사용 방법 알아보기](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)

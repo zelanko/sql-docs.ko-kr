@@ -1,6 +1,6 @@
 ---
 title: 보고서 매개 변수(보고서 작성기 및 보고서 디자이너) | Microsoft Docs
-description: 이 항목에서는 Reporting Services 보고서 매개 변수의 일반적인 용도와 설정할 수 있는 속성 등에 대해 설명합니다.
+description: 이 문서에서는 Reporting Services 보고서 매개 변수의 일반적인 용도와 설정할 수 있는 속성 등에 대해 설명합니다.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -11,10 +11,10 @@ ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
 ms.openlocfilehash: 494b682853425b40699ff698117d2941805ab7da
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68941145"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>보고서 매개 변수(보고서 작성기 및 보고서 디자이너)
@@ -31,9 +31,9 @@ ms.locfileid: "68941145"
 
 ::: moniker-end
 
-이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 매개 변수의 일반적인 용도와 설정할 수 있는 속성 등에 대해 설명합니다. 보고서 매개 변수를 사용하면 보고서 데이터를 제어하고, 관련된 보고서를 서로 연결하고, 다양하게 보고서를 표현할 수 있습니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 및 보고서 디자이너에서 만드는 페이지를 매긴 보고서와 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]에서 만드는 모바일 보고서에서 보고서 매개 변수를 사용할 수 있습니다. 자세한 내용은 [보고서 매개 변수 개념](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)을 참조하세요.  
+이 문서에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 매개 변수의 일반적인 용도와 설정할 수 있는 속성 등에 대해 설명합니다. 보고서 매개 변수를 사용하면 보고서 데이터를 제어하고, 관련된 보고서를 서로 연결하고, 다양하게 보고서를 표현할 수 있습니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 및 보고서 디자이너에서 생성한 페이지를 매긴 보고서와 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]에서 생성한 모바일 보고서에서도 보고서 매개 변수를 사용할 수 있습니다. 자세한 내용은 [보고서 매개 변수 개념](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)을 참조하세요.  
 
-직접 보고서에 매개 변수를 추가하려면 [자습서: 보고서에 매개 변수 추가&#40;보고서 작성기&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)에서 만드는 모바일 보고서에서 보고서 매개 변수를 사용할 수 있습니다.  
+보고서에 매개 변수를 직접 추가하려면 [자습서: 보고서에 매개 변수 추가&#40;보고서 작성기&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)를 참조하세요.  
 
 ## <a name="bkmk_Common_Uses_for_Parameters"></a> 매개 변수의 일반적인 용도
 
@@ -75,13 +75,13 @@ ms.locfileid: "68941145"
   
 1. **매개 변수 창** 보고서 뷰어 도구 모음에 프롬프트와 각 매개 변수에 대한 기본값이 표시됩니다. 매개 변수 창에서 매개 변수 레이아웃을 사용자 지정할 수 있습니다. 자세한 내용은 [보고서에서 매개 변수 창 사용자 지정&#40;보고서 작성기&#41;](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)에서 만드는 모바일 보고서에서 보고서 매개 변수를 사용할 수 있습니다.  
   
-2. **\@SalesDate 매개 변수** @SalesDate 매개 변수는 **DateTime** 데이터 형식입니다. 날짜 선택 프롬프트가 입력란 옆에 표시됩니다. 이 날짜를 수정하려면 입력란에 새 날짜를 입력하거나 달력 컨트롤을 사용합니다.  
+2. **\@SalesDate 매개 변수**@SalesDate 매개 변수는 **DateTime** 데이터 형식입니다. 날짜 선택 프롬프트가 입력란 옆에 표시됩니다. 이 날짜를 수정하려면 입력란에 새 날짜를 입력하거나 달력 컨트롤을 사용합니다.  
   
-3. **\@ShowAll 매개 변수** @ShowAll 매개 변수는 **Boolean** 데이터 형식입니다. 라디오 단추를 사용하여 **True** 또는 **False**를 지정합니다.  
+3. **\@ShowAll 매개 변수**@ShowAll 매개 변수는 **Boolean** 데이터 형식입니다. 라디오 단추를 사용하여 **True** 또는 **False**를 지정합니다.  
   
 4. **매개 변수 영역 핸들 표시 또는 숨기기** 보고서 뷰어 도구 모음에서 이 화살표를 클릭하여 매개 변수 창을 표시하거나 숨깁니다.  
   
-5. **\@CategoryQuota 매개 변수** @CategoryQuota 매개 변수는 **Float** 데이터 형식이므로 숫자 값을 사용합니다.  @CategoryQuota은 다중 값 허용하도록 설정됩니다.  
+5. **\@CategoryQuota 매개 변수**@CategoryQuota 매개 변수는 **Float** 데이터 형식이므로 숫자 값을 사용합니다.  @CategoryQuota은 다중 값 허용하도록 설정됩니다.  
   
 6. **보고서 보기**  매개 변수 값을 입력한 후 **보고서 보기** 를 클릭하여 보고서를 실행합니다. 모든 매개 변수에 기본값이 있는 경우 보고서를 처음으로 볼 때 보고서가 자동으로 실행됩니다.  
   
@@ -146,15 +146,15 @@ ms.locfileid: "68941145"
 
  보고서 속성 대화 상자를 사용하여 보고서 매개 변수 속성을 변경할 수 있습니다. 다음 표에는 각 매개 변수에 대해 설정할 수 있는 속성이 요약되어 있습니다.  
   
-|속성|설명|  
+|속성|Description|  
 |--------------|-----------------|  
 |속성|매개 변수의 대/소문자를 구분하는 이름을 입력합니다. 이 이름은 문자로 시작해야 하고 문자, 숫자 및 밑줄(_)을 포함할 수 있습니다. 이름에 공백은 포함할 수 없습니다. 자동으로 생성된 매개 변수의 경우 이름이 데이터 세트 쿼리의 매개 변수와 일치합니다. 기본적으로 수동으로 만든 매개 변수는 ReportParameter1과 유사합니다.|  
-|프롬프트|보고서 뷰어 도구 모음에서 매개 변수 옆에 표시되는 텍스트입니다.|  
+|prompt|보고서 뷰어 도구 모음에서 매개 변수 옆에 표시되는 텍스트입니다.|  
 |데이터 형식|보고서 매개 변수는 다음 데이터 형식 중 하나여야 합니다.<br /><br /> **Boolean**. 사용자가 라디오 단추에서 True 또는 False를 선택합니다.<br /><br /> **DateTime**. 사용자가 달력 컨트롤에서 날짜를 선택합니다.<br /><br /> **Integer**. 사용자가 입력란에 값을 입력합니다.<br /><br /> **Float**. 사용자가 입력란에 값을 입력합니다.<br /><br /> **Text**. 사용자가 입력란에 값을 입력합니다.<br /><br /> 매개 변수에 대해 사용할 수 있는 값이 정의된 경우 사용자는 데이터 형식이 **DateTime**인 경우에도 드롭다운 목록에서 값을 선택합니다.<br /><br /> 보고서 데이터 형식에 대한 자세한 내용은 [RDL Data Types](../../reporting-services/reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)을 참조하세요.|  
 |빈 값 허용|매개 변수 값에 빈 문자열이나 공백을 허용하려면 이 옵션을 선택합니다.<br /><br /> 매개 변수에 대한 유효한 값을 지정할 경우 공백 값을 유효한 값 중 하나로 허용하려면 지정한 값 중 하나로 공백 값을 포함시켜야 합니다. 이 옵션을 선택해도 사용 가능한 값에 공백이 자동으로 포함되지는 않습니다.|  
 |Null 값 허용|매개 변수 값이 Null이 될 수 있도록 허용하려면 이 옵션을 선택합니다.<br /><br /> 매개 변수에 대한 유효한 값을 지정할 경우 null을 유효한 값 중 하나로 허용하려면 지정한 값 중 하나로 null을 포함시켜야 합니다. 이 옵션을 선택해도 사용 가능한 값에 null이 자동으로 포함되지는 않습니다.|  
 |다중 값 허용|사용자가 선택할 수 있는 드롭다운 목록을 만드는 데 사용 가능한 값을 제공합니다. 이렇게 하면 데이터 세트 쿼리에서 유효한 값만 제출되도록 할 수 있습니다.<br /><br /> 매개 변수의 값이 드롭다운 목록에 표시되는 다중 값이 될 수 있도록 허용하려면 이 옵션을 선택합니다. Null 값은 허용되지 않습니다. 이 옵션을 선택하면 매개 변수 드롭다운 목록의 사용 가능한 값 목록에 확인란이 추가되고 목록의 맨 위에 **모두 선택**에 대한 확인란이 포함됩니다. 사용자는 원하는 값을 선택할 수 있습니다.<br /><br /> 값을 제공하는 데이터가 빠르게 변동될 경우 사용자에게 표시되는 목록이 최신 상태가 아닐 수도 있습니다.|  
-|표시|보고서를 실행할 때 보고서 위쪽에 보고서 매개 변수를 표시하려면 이 옵션을 선택합니다. 이 옵션을 설정하면 사용자가 런타임에 매개 변수 값을 선택할 수 있습니다.|  
+|Visible|보고서를 실행할 때 보고서 위쪽에 보고서 매개 변수를 표시하려면 이 옵션을 선택합니다. 이 옵션을 설정하면 사용자가 런타임에 매개 변수 값을 선택할 수 있습니다.|  
 |숨김|게시된 보고서에서 보고서 매개 변수를 숨기려면 이 옵션을 선택합니다. 보고서 매개 변수 값은 여전히 보고서 URL, 구독 정의 또는 보고서 서버에 설정할 수 있습니다.|  
 |내부|보고서 매개 변수를 숨기려면 이 옵션을 선택합니다. 게시된 보고서에서 보고서 매개 변수는 보고서 정의에서만 볼 수 있습니다.|  
 |사용 가능한 값|매개 변수에 대해 사용 가능한 값을 지정한 경우에는 유효한 값이 항상 드롭다운 목록으로 표시됩니다. 예를 들어 **DateTime** 매개 변수에 사용할 수 있는 값을 제공하면 날짜에 대한 드롭다운 목록이 달력 컨트롤 대신 매개 변수 창에 표시됩니다.<br /><br /> 값 목록이 보고서와 하위 보고서 간에 일관되도록 하려면 데이터 원본과 연관된 데이터 세트의 모든 쿼리에 단일 트랜잭션을 사용하도록 데이터 원본에서 옵션을 설정할 수 있습니다.<br /><br /> **보안 정보** **텍스트** 데이터 형식의 매개 변수가 포함된 보고서에서는 유효한 값 목록이라고도 하는 사용 가능한 값 목록을 사용해야 하며 보고서를 실행하는 모든 사용자가 보고서의 데이터를 보는 데 필요한 권한만 갖도록 해야 합니다. 자세한 내용은 [보안&#40;보고서 작성기&#41;](../../reporting-services/report-builder/security-report-builder.md)에서 만드는 모바일 보고서에서 보고서 매개 변수를 사용할 수 있습니다.|  

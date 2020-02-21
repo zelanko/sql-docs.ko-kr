@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 51c21800dcddec471d6760c31c3cea12e6123b6e
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 7a4deeec624f349f7fd40bb89dc9b14b6baf309b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592310"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190681"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>보고서 포함된 데이터 세트 및 공유 데이터 세트(보고서 작성기 및 SSRS)
   데이터 세트는 데이터 연결에서 사용할 데이터를 지정합니다. 데이터 세트는 포함된 데이터 원본 또는 보고서 서버의 공유 데이터 원본에 대한 참조로 보고서에 저장된 데이터 연결을 기반으로 합니다. 데이터 세트는 필드 집합을 지정하는 쿼리를 포함합니다. 이러한 필드를 디자인 화면으로 끌면 보고서를 실행할 때 실제 데이터를 계산하는 식이 만들어집니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "73592310"
   
 -   등록 및 구성된 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자의 결과 집합  
   
--   미리 정의된 엔터티,  엔터티 관계 및 필드를 포함하여 특정 데이터 원본에 대해 디자인된 보고서 모델의 데이터. 자세한 내용은 [Reporting Services 설명서](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)의 "보고서 데이터 집합"을 참조 하십시오.  
+-   미리 정의된 엔터티,  엔터티 관계 및 필드를 포함하여 특정 데이터 원본에 대해 디자인된 보고서 모델의 데이터. 자세한 내용은 [Reporting Services 설명서](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)의 “보고서 데이터 세트”를 참조하세요.  
   
  런타임에 보고서가 처리되면 쿼리에 대해 반환된 실제 결과 집합에는 0개 이상의 행이 있을 수 있습니다. 또한 데이터 원본에 쿼리에서 정의한 열이 없을 수도 있습니다. 데이터 원본의 Null 값은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 값 **System.DBNull.Value**로 매핑됩니다.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "73592310"
   
  포함된 데이터 원본과 공유 데이터 원본은 작성,  저장 및 관리되는 방법이 다릅니다. 다음 표에는 포함된 데이터 원본과 공유 데이터 원본의 차이점이 요약되어 있습니다.  
   
-|설명|포함된<br /><br /> 데이터 원본|Shared<br /><br /> 데이터 원본|  
+|Description|포함된<br /><br /> 데이터 원본|공유됨<br /><br /> 데이터 원본|  
 |-----------------|------------------------------|----------------------------|  
 |데이터 연결이 보고서 정의에 포함되어 있습니다.|![사용 가능](../../reporting-services/report-data/media/greencheck.gif "사용 가능")||  
 |보고서 서버의 데이터 연결에 대한 포인터가 보고서 정의에 포함되어 있습니다.||![사용 가능](../../reporting-services/report-data/media/greencheck.gif "사용 가능")|  
@@ -219,7 +219,7 @@ ms.locfileid: "73592310"
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 세트 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [보고서 데이터 세트&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   

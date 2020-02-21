@@ -1,5 +1,5 @@
 ---
-title: 향상 된 날짜 및 시간 기능 사용 (OLE DB) | Microsoft Docs
+title: 향상된 날짜 및 시간 기능 사용(OLE DB) | Microsoft Docs
 description: 향상된 날짜 및 시간 기능 사용(OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 907d810c1579229ea69d39ecb32af9f06dec01b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015533"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>향상된 날짜 및 시간 기능 사용(OLE DB)

@@ -1,5 +1,5 @@
 ---
-title: 'ISSAsynchStatus:: Abort (OLE DB) | Microsoft Docs'
+title: ISSAsynchStatus::Abort(OLE DB) | Microsoft Docs
 description: ISSAsynchStatus::Abort(OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4cb57bfac5af957bd9f2f539b025f32b5f481d66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015431"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort(OLE DB)
@@ -43,7 +43,7 @@ HRESULT Abort(
  작업을 중단할 장의 처리기입니다. 호출되는 개체가 행 집합 개체가 아니거나 작업이 장에 적용되지 않는 경우 호출자가 *hChapter* 를 DB_NULL_HCHAPTER로 설정해야 합니다.  
   
  *eOperation*[in]  
- 중단할 작업입니다. 다음 값을 사용 해야 합니다.  
+ 중단할 작업입니다. 다음 값을 사용해야 합니다.  
   
  DBASYNCHOP_OPEN - 취소 요청이 행 세트의 비동기 열기 또는 채우기나 데이터 원본 개체의 비동기 초기화에 적용됩니다.  
   
@@ -72,7 +72,7 @@ HRESULT Abort(
   
  초기화 단계에서 비동기적으로 취소된 행 집합에서**ISSAsynchStatus::Abort** 가 취소되었습니다. 행 집합이 좀비 상태에 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  행 집합이나 데이터 원본 개체의 초기화를 중단하면 행 집합이나 데이터 원본 개체가 좀비 상태로 유지되어 **IUnknown** 메서드가 아닌 모든 메서드에서 E_UNEXPECTED를 반환할 수 있습니다. 이 경우 소비자가 사용할 수 있는 유일한 동작은 행 집합이나 데이터 원본 개체를 해제하는 것입니다.  
   
  **ISSAsynchStatus::Abort** 를 호출하고 DBASYNCHOP_OPEN이 아닌 *eOperation* 값을 전달하면 S_OK가 반환됩니다. 작업이 완료 또는 취소된 것은 아닙니다.  

@@ -1,7 +1,7 @@
 ---
 title: PDOStatement::setAttribute | Microsoft Docs
 ms.custom: ''
-ms.date: 04/22/2019
+ms.date: 01/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 329d9b5e-1c5d-40b0-9127-1051d0646fc7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6dab577ea12544d6dd40081283b46378dd07d5e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 2e88504bd68c9f61d0178423b8e57ecf6679e4e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992943"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918387"
 ---
 # <a name="pdostatementsetattribute"></a>PDOStatement::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,15 +33,16 @@ $*attribute*: PDO::ATTR_* 또는 PDO::SQLSRV_ATTR_\* 상수 중 하나인 정수
   
 $*value*: 지정된 $*attribute*에 대해 설정할 (혼합) 값입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 성공하면 TRUE이고, 그렇지 않으면 FALSE입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 다음 표에는 사용 가능한 특성 목록이 나와 있습니다.  
   
-|attribute|값|설명|  
+|attribute|값|Description|  
 |-------------|----------|---------------|  
 |PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|1부터 PHP 메모리 제한까지입니다.|클라이언트 쪽 커서에 대한 결과 집합을 보유하는 버퍼의 크기를 구성합니다.<br /><br />기본값은 10240KB(10MB)입니다.<br /><br />클라이언트 쪽 커서에 대한 자세한 내용은 [커서 유형&#40;PDO_SQLSRV 드라이버&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)를 참조하세요.|  
+|PDO::SQLSRV_ATTR_DATA_CLASSIFICATION|true 또는 false|[PDOStatement::getColumnMeta](../../connect/php/pdostatement-getcolumnmeta.md)를 호출할 때 데이터 분류 메타데이터를 검색할지 여부를 지정합니다. 기본값은 false입니다.|
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|0과 4(포함) 사이의 정수|가져온 money 값의 서식을 지정할 때 사용할 소수 자릿수를 지정합니다.<br /><br />음의 정수 또는 4보다 큰 값은 무시됩니다.<br /><br />이 옵션은 PDO::SQLSRV_ATTR_FORMAT_DECIMALS가 true인 경우에만 실행됩니다.<br /><br />연결 수준에서 이 옵션을 설정할 수도 있습니다. 연결 수준에서 설정하면, 이 옵션이 연결 수준 옵션을 재정의합니다.<br /><br />자세한 내용은 [10진수 문자열 및 Money 값 서식 지정(PDO_SQLSRV 드라이버)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)을 참조하세요.|
 |PDO::SQLSRV_ATTR_ENCODING|정수<br /><br />PDO::SQLSRV_ENCODING_UTF8(기본값)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|드라이버에서 서버와 통신하는 데 사용되는 문자 집합 인코딩을 설정합니다.|  
 |PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|true 또는 false|날짜 및 시간 형식을 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 개체로 검색할지를 지정합니다. false로 유지하면, 기본적으로 문자열로 반환됩니다.<br /><br />연결 수준에서 이 옵션을 설정할 수도 있습니다. 연결 수준에서 설정하면, 이 옵션이 연결 수준 옵션을 재정의합니다.<br /><br />자세한 내용은 [방법: PDO_SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 PHP DateTime 개체로 검색](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)을 참조하세요.|  

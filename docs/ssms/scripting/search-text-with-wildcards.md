@@ -1,6 +1,6 @@
 ---
-title: 와일드카드로 텍스트 검색 | Microsoft 문서
-ms.custom: ''
+title: 와일드카드로 텍스트 검색
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -16,12 +16,12 @@ ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdc79f8162ef95fdbaa34e36629484f1a17d6436
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 766bb8d9a90fb3f1af5a7697e52ae42f6c8fc8d7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264165"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253621"
 ---
 # <a name="search-text-with-wildcards"></a>와일드카드로 텍스트 검색
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68264165"
   
  다음 표에서는 **참조 목록**에서 사용할 수 있는 와일드카드를 설명합니다.  
   
-|식|구문|설명|  
+|식|구문|Description|  
 |----------------|------------|-----------------|  
 |임의의 단일 문자|?|임의의 문자 하나에 대응합니다.|  
 |임의의 단일 숫자|#|임의의 숫자 하나와 대응합니다. 예를 들어 7#은 7 다음에 다른 숫자 하나가 표시되는 숫자와 일치합니다(즉, 71과는 일치하지만 17과는 일치하지 않음).|  

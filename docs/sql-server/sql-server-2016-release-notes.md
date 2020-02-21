@@ -13,18 +13,18 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 741aec40bf972ae6caedfc0301e7a3dcd080d593
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: 7db6dbdbe45102c2a1bc2533d156e55060869b58
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632914"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76909853"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
   이 문서는 서비스 팩을 포함하여 SQL Server 2016 릴리스 관련 제한 사항 및 문제를 설명합니다. 새로운 기능에 대한 자세한 내용은 [SQL Server 2016의 새로운 기능](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2016)을 참조하세요.
 
-- [![평가 센터에서 다운로드](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 에서 SQL Server 2016 다운로드
+- [![평가 센터에서 다운로드](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 에서 SQL Server 2016 다운로드
 - [![Azure 가상 컴퓨터 소형](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016) Azure 계정이 있습니까?  계정이 있는 경우 **[여기](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016)** 로 이동하여 SQL Server 2016 SP1이 이미 설치된 가상 머신을 실행해 보세요.
 - [![SSMS 다운로드](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) SQL Server Management Studio의 최신 버전을 얻으려면 **[SSMS(SQL Server Management Studio) 다운로드](../ssms/download-sql-server-management-studio-ssms.md)** 를 참조하세요.
 
@@ -39,7 +39,7 @@ SQL Server 2016 SP2를 설치하면 설치 후 다시 부팅이 필요할 수 �
 
 SQL Server 2016 SP2에 포함된 성능 및 확장성 관련 개선 사항.
 
-|기능|설명|자세한 정보|
+|기능|Description|자세한 정보|
 |---|---|---|
 |향상된 배포 DB 정리 프로시저 |   대형 배포 데이터베이스 테이블로 인해 차단 및 교착 상태가 발생했었습니다. 향상된 정리 프로시저는 이러한 일부 차단 또는 교착 상태 시나리오를 제거하려고 합니다. |   [KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding)  |
 |변경 내용 추적 정리    |   변경 내용 추적 정리 성능 및 변경 내용 추적 측면 테이블에 대한 효율성이 개선되었습니다.    |   [KB4052129](https://support.microsoft.com//help/4052129/update-for-manual-change-tracking-cleanup-procedure-in-sql-server-2016) |
@@ -54,7 +54,7 @@ SQL Server 2016 SP2에 포함된 성능 및 확장성 관련 개선 사항.
 
 SQL Server 2016 SP2에는 지원 가능성 및 진단 관련 개선 사항이 포함되어 있습니다.
 
-|기능|설명|자세한 정보|
+|기능|Description|자세한 정보|
 |---|---|---|
 |가용성 그룹의 데이터베이스에 완벽한 DTC 지원    |   가용성 그룹의 일부인 데이터베이스에 대한 데이터베이스 간 트랜잭션은 현재 SQL Server 2016에서 지원되지 않습니다. SQL Server 2016 SP2에서는 가용성 그룹 데이터베이스를 사용한 분산 트랜잭션을 완벽하게 지원합니다.   |       |
 |TempDB의 암호화 상태를 정확하게 반영하도록 sys.databases is_encrypted 열 업데이트 |   sys.databases의 is_encryptedcolumn 열 값은 모든 사용자 데이터베이스의 암호화를 해제하고 SQL Server를 다시 시작한 후에도 TempDB의 경우 1입니다. 예상되는 동작은 TempDB가 이 상황에서 더 이상 암호화되지 않으므로 이 값은 0입니다. SQL Server 2016 SP2부터 sys.databases.is_encrypted는 TempDB의 암호화 상태를 정확하게 반영합니다.  |       |
@@ -105,7 +105,7 @@ SQL Server 2016 SP2에는 지원 가능성 및 진단 관련 개선 사항이 �
 
 다음 표에는 SQL Server 2016 SP1에서 제공하는 주요 향상 기능이 요약되어 있습니다.
 
-|기능|설명|자세한 정보|
+|기능|Description|자세한 정보|
 |---|---|---|
 |TF 715에서 자동 TABLOCK을 사용하여 힙으로 대량 삽입| 추적 플래그 715는 대량 로드 작업에 대한 테이블 잠금을 비클러스터형 인덱스가 없는 힙에 사용하도록 설정합니다.|[2.5x배 더 빠르게 SQL Server로 SAP 워크로드 마이그레이션](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
 |CREATE OR ALTER|저장 프로시저, 트리거, 사용자 정의 함수 및 뷰와 같은 개체를 배포합니다.|[SQL Server 데이터베이스 엔진 블로그](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
@@ -141,7 +141,7 @@ SQL Server 2016 SP1 설치는 설치 후에 다시 부팅해야 합니다. 모�
 -   [쿼리 저장소(GA)](#bkmk_ga_query_store)
 -   [제품 설명서(GA)](#bkmk_ga_docs)
 
-### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA)
+### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> 패치 설치 요구 사항(GA)
 **문제 및 고객에게 미치는 영향:** Microsoft는 SQL Server 2016에서 필수 구성 요소로 설치되는 Microsoft VC++ 2013 런타임 이진 파일에 영향을 주는 문제를 확인했습니다. 업데이트로 이 문제를 해결할 수 있습니다. VC 런타임 이진 파일에 대한 이 업데이트가 없으면 SQL Server 2016의 특정 시나리오에서 안정성 문제를 발생할 수 있습니다. SQL Server 2016을 설치하기 전에 컴퓨터에 [KB 3164398](https://support.microsoft.com/kb/3164398)에서 설명한 패치가 필요한지 확인합니다. 패치는 [SQL Server 2016 RTM용 누적 업데이트 패키지 1(CU1)](https://www.microsoft.com/download/details.aspx?id=53338)에도 포함되어 있습니다.
 
 **해결 방법:** 다음 솔루션 중 하나를 사용하세요.

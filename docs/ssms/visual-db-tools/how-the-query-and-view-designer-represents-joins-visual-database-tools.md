@@ -1,10 +1,9 @@
 ---
-title: 쿼리 및 뷰 디자이너의 조인 표시 방법 | Microsoft 문서
-ms.custom: ''
+title: 쿼리 및 뷰 디자이너의 조인 표시 방법
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6318dfe2cc886e3ea2ea10d089023325ff074c95
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7e0d4b8ff645ad918cea32cbbed3eade62017254
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254435"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255874"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>쿼리 및 뷰 디자이너의 조인 표시 방법(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "68254435"
 ## <a name="diagram-pane"></a>다이어그램 창  
 다이어그램 창에서 쿼리 및 뷰 디자이너는 조인에 포함된 데이터 열 사이에 조인 선을 표시합니다. 쿼리 및 뷰 디자이너는 각 조인 조건에 대해 한 개의 조인 선을 표시합니다. 예를 들어, 아래 그림은 조인된 두 테이블 사이에 있는 조인 선을 보여 줍니다.  
   
-![조인 선은 두 테이블 간 관계를 보여줌](../../ssms/visual-db-tools/media/dv3wbig.gif "조인 선은 두 테이블 간 관계를 보여줌")  
+![조인 선은 두 테이블 간 관계를 보여 줌](../../ssms/visual-db-tools/media/dv3wbig.gif "조인 선은 두 테이블 간 관계를 보여 줌")  
   
 테이블이 두 개 이상의 조인 조건을 사용하여 조인된 경우 쿼리 및 뷰 디자이너는 다음 예에서와 같이 여러 개의 조인 선을 표시합니다.  
   

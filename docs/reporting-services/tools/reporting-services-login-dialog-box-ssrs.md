@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 2037d797-0b61-44c7-931f-6c689c3fc733
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 25d2741a8449875852c733aa763322011834a6b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 05d33d719be8bc2e136e34ebb14da394d5d99db9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581275"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190407"
 ---
 # <a name="reporting-services-login-dialog-box-ssrs"></a>Reporting Services 로그인 대화 상자(SSRS)
   **Reporting Services 로그인** 대화 상자를 사용하여 보고서 서버에 보고서를 게시하는 데 사용할 자격 증명을 제공할 수 있습니다.  
@@ -26,14 +26,14 @@ ms.locfileid: "65581275"
  **Server**  
  보고서 서버의 이름을 표시합니다. `https://localhost/reportserver`)을 입력합니다. 기본 포트 80 이외의 다른 포트를 사용하는 보고서 서버의 경우 포트 번호를 포함해야 합니다. `https://localhost:81/reportserver`)을 입력합니다.  
   
- **User name**  
+ **사용자 이름**  
  웹 서비스에 로그인할 사용자 이름을 입력합니다.  
   
  **암호**  
  웹 서비스에 로그인할 암호를 입력합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [보고서 디자이너 F1 도움말](../../reporting-services/tools/report-designer-f1-help.md)  
   

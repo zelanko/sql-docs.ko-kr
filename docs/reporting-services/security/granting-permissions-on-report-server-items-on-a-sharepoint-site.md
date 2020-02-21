@@ -14,14 +14,14 @@ ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e1d11d26ccc86b9db04d29856adfbd4c9ce643a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580032"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 은 SharePoint 사이트 및 라이브러리에서 액세스하는 보고서 서버 항목에 대한 액세스를 허용하는 데 사용할 수 있는 기본 제공 보안 기능을 제공합니다. 이미 사용자에게 사용 권한을 할당한 경우 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 와 보고서 서버 간의 통합 설정을 구성하는 즉시 해당 사용자가 보고서 서버 항목 및 작업에 액세스할 수 있게 됩니다. 기존 사용 권한을 사용하여 보고서 정의와 기타 문서를 업로드하고, 보고서를 보고, 구독을 만들고, 항목을 관리할 수 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]은 SharePoint 사이트 및 라이브러리에서 액세스하는 보고서 서버 항목에 대한 액세스를 허용하는 데 사용할 수 있는 기본 제공 보안 기능을 제공합니다. 이미 사용자에게 사용 권한을 할당한 경우 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 와 보고서 서버 간의 통합 설정을 구성하는 즉시 해당 사용자가 보고서 서버 항목 및 작업에 액세스할 수 있게 됩니다. 기존 사용 권한을 사용하여 보고서 정의와 기타 문서를 업로드하고, 보고서를 보고, 구독을 만들고, 항목을 관리할 수 있습니다.  
   
  사용 권한을 할당하지 않았거나 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]의 보안 기능에 대해 잘 모르는 경우 다음 지침을 따르세요.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "65580032"
  서버 관리자나 사이트 모음 관리자는 다른 사이트 소유자가 사용 권한을 설정할 수 있는지 여부를 결정하는 옵션을 설정할 수 있습니다. 현재 사용 권한 수준에 따라 SharePoint 그룹 또는 사용 권한 수준을 만들거나 사용자 지정하지 못할 수 있습니다.  
   
 ## <a name="using-predefined-sharepoint-groups-and-permission-levels"></a>미리 정의된 SharePoint 그룹 및 사용 권한 수준 사용  
- [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 제품 설명서의 권장 사항에 따르면 표준 SharePoint 그룹( *Site name* **소유자**, *Site name* **멤버**및 *Site name* **방문자**)을 사용하고 사이트 수준에서 사용 권한을 할당하는 것이 좋습니다. 사용 권한을 할당하는 사용자는 대부분 *Site name* **방문자** 또는 *Site name* **멤버** 그룹의 멤버여야 합니다. 부모 사이트에 대한 사용 권한은 전체 사이트 계층에서 상속됩니다. 추가 제한이 필요한 항목이 있을 경우 이 항목에 대해 사용 권한 상속을 해제할 수 있습니다.  
+ [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 제품 설명서의 권장 사항에 따르면 표준 SharePoint 그룹(*Site name***소유자**, *Site name* **멤버** 및 *Site name* **방문자**)을 사용하고 사이트 수준에서 권한을 할당하는 것이 좋습니다. 권한을 할당하는 사용자는 대부분 *Site name* **방문자** 또는 *Site name* **멤버** 그룹의 멤버여야 합니다. 부모 사이트에 대한 사용 권한은 전체 사이트 계층에서 상속됩니다. 추가 제한이 필요한 항목이 있을 경우 이 항목에 대해 사용 권한 상속을 해제할 수 있습니다.  
   
  다음 SharePoint 그룹에는 아래와 같은 사용 권한 수준이 미리 정의되어 있습니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "65580032"
  [SharePoint 웹 애플리케이션에서 보고서 서버 작업에 대한 사용 권한 설정](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
  임시 보고에 대한 사용 권한 요구 사항을 설명하고 기능을 사용할 수 있게 만드는 방법을 제안합니다.  
   
- [Reporting Services의 역할 및 태스크와 SharePoint 그룹 및 사용 권한 비교](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ [Reporting Services의 역할 및 작업과 SharePoint 그룹 및 사용 권한 비교](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
  SharePoint 그룹과 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 미리 정의된 역할 정의를 비교하여 간략하게 설명합니다.  
   
  [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  

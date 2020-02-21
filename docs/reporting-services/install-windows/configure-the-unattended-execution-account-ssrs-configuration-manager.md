@@ -1,8 +1,10 @@
 ---
-title: 무인 실행 계정 구성(SSRS 구성 관리자) | Microsoft Docs
-ms.date: 05/31/2016
+title: 무인 실행 계정 구성(구성 관리자) | Microsoft Docs
+description: Reporting Services에서는 무인 모드로 보고서를 처리하고 네트워크를 통해 연결 요청을 전송하는 데 사용되는 특수 계정을 제공합니다.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
@@ -15,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4326c38c84ad7af8fb23a5dde035720a1a7024d4
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: b09992c53a680e19bd5676e8944b2ddab8358296
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593311"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866320"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>무인 실행 계정 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 무인 모드로 보고서를 처리하고 네트워크를 통해 연결 요청을 전송하는 데 사용되는 특수 계정을 제공합니다. 이 계정은 다음과 같은 방법으로 사용됩니다.  
@@ -32,7 +34,7 @@ ms.locfileid: "73593311"
  무인 모드로 실행되는 보고서 처리란 사용자 요청 대신 이벤트(일정 기반 이벤트 또는 데이터 새로 고침 이벤트)에 의해 트리거되는 모든 보고서 실행 프로세스를 말합니다. 보고서 서버는 무인 모드로 실행되는 보고서 처리 계정을 사용하여 외부 데이터 원본을 호스팅하는 컴퓨터에 로그온합니다. 보고서 서버 서비스 계정의 자격 증명은 다른 컴퓨터에 연결할 때 사용되지 않으므로 이 계정이 필요합니다.  
   
 > [!IMPORTANT]  
->  이 계정 구성은 선택 사항입니다. 그러나 계정을 구성하지 않는 경우 일부 데이터 원본에 연결하는 옵션이 제한되며 원격 컴퓨터에서 이미지 파일을 검색하지 못할 수 있습니다. 계정을 구성하는 경우 최신 상태로 유지해야 합니다. 특히 암호가 만료되도록 하거나 Active Directory에서 계정 정보를 변경하는 경우 다음에 보고서를 처리하면 "로그온하지 못했습니다(rsLogonFailed). 로그온 실패: 알 수 없는 사용자 이름이거나 암호가 틀립니다."와 같은 오류가 발생할 수 있습니다. 외부 이미지를 검색하거나 연결 요청을 외부 컴퓨터로 보내지 않는 경우에도 무인 모드로 실행되는 보고서 처리 계정을 적절하게 유지 관리해야 합니다. 계정을 구성한 다음 사용할 필요가 없게 되면 삭제하여 일상적인 계정 유지 관리 태스크를 수행하지 않을 수 있습니다.  
+>  이 계정 구성은 선택 사항입니다. 그러나 계정을 구성하지 않는 경우 일부 데이터 원본에 연결하는 옵션이 제한되며 원격 컴퓨터에서 이미지 파일을 검색하지 못할 수 있습니다. 계정을 구성하는 경우 최신 상태로 유지해야 합니다. 특히 암호가 만료되도록 하거나 Active Directory에서 계정 정보를 변경하는 경우 다음에 보고서를 처리하면 “로그온하지 못했습니다(rsLogonFailed). 로그온 실패: 알 수 없는 사용자 이름이거나 암호가 틀립니다.”와 같은 오류가 발생할 수 있습니다. 외부 이미지를 검색하거나 연결 요청을 외부 컴퓨터로 보내지 않는 경우에도 무인 모드로 실행되는 보고서 처리 계정을 적절하게 유지 관리해야 합니다. 계정을 구성한 다음 사용할 필요가 없게 되면 삭제하여 일상적인 계정 유지 관리 태스크를 수행하지 않을 수 있습니다.  
   
 ## <a name="how-to-configure-the-account"></a>계정 구성 방법  
  도메인 사용자 계정을 사용해야 합니다. 원래 용도대로 사용하려면 이 계정은 보고서 서버 서비스를 실행하는 데 사용되는 계정과 달라야 합니다. 보고서 서버에 데이터 원본 및 리소스를 제공하는 컴퓨터에 대해서만 최소 사용 권한(네트워크 연결 권한이 포함된 읽기 전용 액세스 권한이면 충분함)과 제한된 액세스 권한이 있는 계정을 사용해야 합니다.  
@@ -50,7 +52,7 @@ ms.locfileid: "73593311"
   
 1.  보고서 서버에 데이터 또는 서비스를 제공하는 컴퓨터와 서버에 액세스할 수 있는 도메인 계정을 만들거나 선택합니다. 축소된 권한(예: 읽기 전용 권한)을 가진 계정을 사용해야 합니다.  
   
-2.  명령 프롬프트 열기: **시작** 메뉴에서 **실행**을 클릭한 다음 **cmd**를 입력하고 **확인**을 클릭합니다.  
+2.  명령 프롬프트를 엽니다. **시작** 메뉴에서 **실행**을 클릭하고, **cmd**를 입력한 다음, **확인**을 클릭합니다.  
   
 3.  다음 명령을 입력하여 로컬 보고서 서버 인스턴스에서 계정을 구성합니다.  
   

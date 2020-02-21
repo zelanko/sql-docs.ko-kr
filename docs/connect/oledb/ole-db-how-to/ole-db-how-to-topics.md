@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 5e1a6ea1debfb4a432ef63395e3e8b7fd476d891
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015621"
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB 방법 도움말 항목
@@ -30,7 +30,7 @@ ms.locfileid: "68015621"
   
 -   [결과 처리 방법 도움말 항목&#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
--   [대량 데이터 &#40;OLE DB 설정&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)  
+-   [큰 데이터 설정&#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)  
   
 -   [OLE DB 데이터 원본 열거&#40;OLE DB&#41;](../../oledb/ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "68015621"
   
 -   [IROWSETFASTLOAD 및 ISEQUENTIALSTREAM&#40;OLE DB&#41;을 사용하여 BLOB 데이터를 SQL Server로 보내기](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   
--   [OLE DB 큼 CLR Udt &#40;사용&#41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)  
+-   [큰 CLR UDT 사용&#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)  
   
 -   [열 및 스파스 열의 카탈로그 메타데이터&#40;OLE DB&#41; 표시](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   

@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 6e1b69fc176281e9be65ca7a9766fc8fb270a3de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580084"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Reporting Services SharePoint 서비스 애플리케이션 관리
@@ -34,7 +34,7 @@ ms.locfileid: "65580084"
   
 2.  서비스 애플리케이션 이름 근처를 클릭하거나 **유형** 열을 클릭하여 전체 행을 선택하고 SharePoint 리본에서 **속성** 을 클릭합니다.  
   
- 서비스 애플리케이션 속성에 대한 자세한 내용은 [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)을 참조하세요.  
+ 서비스 애플리케이션 속성에 대한 자세한 내용은 [3단계: Reporting Services 서비스 애플리케이션 만들기](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)의 "서비스 애플리케이션" 섹션을 참조하세요.  
   
 ## <a name="open-service-application-management-pages"></a>서비스 애플리케이션 관리 페이지 열기
 
@@ -73,7 +73,7 @@ ms.locfileid: "65580084"
   
 |설정|주석|  
 |-------------|--------------|  
-|실행 로깅 사용|기본값은 TRUE입니다.<br /><br /> 보고서 서버에서 추적 로그를 생성할지 여부와 로그를 보관할 일 수를 지정합니다. 를 클릭합니다. 로그는 보고서 서버 컴퓨터의 \Microsoft SQL Server\MSSQL.n\ReportServer\Log 폴더에 저장됩니다. 서비스가 다시 시작될 때마다 새 로그 파일이 시작됩니다. 로그 파일에 대한 자세한 내용은 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)를 참조하세요.|  
+|실행 로깅 사용|기본값은 TRUE입니다.<br /><br /> 보고서 서버에서 추적 로그를 생성할지 여부와 로그를 보관할 일 수를 지정합니다. . 로그는 보고서 서버 컴퓨터의 \Microsoft SQL Server\MSSQL.n\ReportServer\Log 폴더에 저장됩니다. 서비스가 다시 시작될 때마다 새 로그 파일이 시작됩니다. 로그 파일에 대한 자세한 내용은 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)를 참조하세요.|  
 |실행 로그 보관 일 수|기본값은 60일입니다.|  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 SharePoint ULS 로깅을 지원합니다.  자세한 내용은 [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
@@ -109,7 +109,7 @@ ms.locfileid: "65580084"
 > [!IMPORTANT]  
 >  Reporting Services 암호화 키를 주기적으로 변경하는 것은 최상의 보안 권장 방법입니다. Reporting Services의 중요 버전 업그레이드 직후에 키를 변경하는 것이 가장 좋습니다. 업그레이드 후에 키를 변경하면 업그레이드 주기를 벗어나 Reporting Services 암호화 키를 변경할 경우에 발생하는 추가 서비스 중단이 최소화됩니다.  
   
-|호출|설명|  
+|호출|Description|  
 |----------|-----------------|  
 |암호화 키 백업|1) **암호:** 상자와 **암호 확인:** 상자에 암호를 입력하고 **내보내기**를 클릭합니다. 입력한 암호가 도메인 정책의 복잡성 요구 사항을 충족하지 않으면 경고가 표시됩니다.<br /><br /> 2) 키 파일을 저장할 파일 위치를 묻는 메시지가 나타납니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 실행 중인 컴퓨터와 별도의 컴퓨터에 키 파일을 저장해야 합니다. 기본 파일 이름은 서비스 애플리케이션의 이름과 동일합니다.|  
 |암호화 키 복원|1) **파일 위치** 상자에서 키 파일을 입력하거나 해당 위치를 찾습니다.<br /><br /> 2) **암호** 상자에 암호화 파일을 백업하는 데 사용된 암호를 입력합니다.<br /><br /> 3) **확인**을 클릭합니다.|  

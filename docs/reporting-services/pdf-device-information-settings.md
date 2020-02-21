@@ -12,10 +12,10 @@ ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5442980dd2f67cf72e301a82ae3730f90a173116
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70911325"
 ---
 # <a name="pdf-device-information-settings"></a>PDF 디바이스 정보 설정
@@ -28,7 +28,7 @@ ms.locfileid: "70911325"
 |**ColumnSpacing**|보고서에 대해 설정할 열 간격입니다. 이 값은 보고서의 원래 설정을 재정의합니다.|  
 |**DpiX**|X 방향의 출력 디바이스 해상도입니다.|  
 |**DpiY**|Y 방향의 출력 디바이스 해상도입니다.|  
-|**EmbedFonts**|PDF 파일에 글꼴을 포함할지 여부를 나타냅니다 .이는 크기가 크고 보고서 글꼴은 모든 클라이언트에 대해 올바르게 렌더링 됩니다. **None** 값은 글꼴 포함을 사용 하지 않습니다.|  
+|**EmbedFonts**|PDF 파일에 글꼴을 포함할지 여부를 나타냅니다. 그러면 크기는 더 크지만 보고서 글꼴이 모든 클라이언트에 올바르게 렌더링됩니다. **None** 값을 선택하면 글꼴 포함이 사용되지 않습니다.|  
 |**EndPage**|렌더링할 보고서의 마지막 페이지입니다. 기본값은 **StartPage**에 대한 값입니다.|  
 |**HumanReadablePDF**|압축되지 않은 PDF 파일을 렌더링할지 여부를 나타냅니다. 그러면 크기는 크지만 일반 텍스트 편집기에서 보다 읽기 쉬워집니다. 기본값은 **false.** 입니다.|  
 |**MarginBottom**|보고서에 대해 설정할 아래쪽 여백 값(인치)입니다. 정수 또는 10진수 값과 그 뒤의 "in"을 포함해야 합니다(예: 1in). 이 값은 보고서의 원래 설정을 재정의합니다.|  
@@ -41,7 +41,7 @@ ms.locfileid: "70911325"
   
 ## <a name="see-also"></a>참고 항목  
  [디바이스 정보 설정을 렌더링 확장 프로그램에 전달](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수를 사용자 지정](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [기술 참조&#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

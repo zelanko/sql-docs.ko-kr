@@ -16,10 +16,10 @@ ms.assetid: ef181e04-003a-442a-9b7e-0c508a7cc873
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3195b0eafb5eb48f7ec6b159fef05036d6efd7df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67968490"
 ---
 # <a name="truncate-method-sqlserverblob"></a>truncate 메서드(SQLServerBlob)
@@ -42,8 +42,8 @@ public void truncate(long len)
 ## <a name="exceptions"></a>예외  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- 이 truncate 메서드는 java. Blob 인터페이스의 truncate 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 truncate 메서드는 java.sql.Blob 인터페이스의 truncate 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerBlob 메서드](../../../connect/jdbc/reference/sqlserverblob-methods.md)   

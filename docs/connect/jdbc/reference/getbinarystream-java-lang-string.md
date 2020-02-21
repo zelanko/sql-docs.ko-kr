@@ -1,5 +1,5 @@
 ---
-title: getBinaryStream (java. lang) | Microsoft Docs
+title: getBinaryStream(java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 17f1ea5d-47f8-4a66-a0fc-d6554b8e3866
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b450cd6a925aa5543262d70714cd36749113ed03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953711"
 ---
 # <a name="getbinarystream-javalangstring"></a>getBinaryStream(java.lang.String)
@@ -39,7 +39,7 @@ public final java.io.InputStream getBinaryStream(java.lang.String paramName)
   
  매개 변수 이름을 나타내는 **문자열**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  InputStream 개체입니다.  
   
 ## <a name="exceptions"></a>예외  

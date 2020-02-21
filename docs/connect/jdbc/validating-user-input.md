@@ -11,10 +11,10 @@ ms.assetid: 8aa867b0-e6f0-49eb-93d3-817ae2ed8f77
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3b732f1f09d4852f30d3b086ea5d88ea1a71eca9
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025587"
 ---
 # <a name="validating-user-input"></a>사용자 입력 유효성 검사
@@ -27,6 +27,6 @@ ms.locfileid: "69025587"
 
 SQL 삽입 및 방지 방법에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "SQL 삽입"을 참조하세요. 저장 프로시저 매개 변수의 유효성 검사에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "저장 프로시저([!INCLUDE[ssDE](../../includes/ssde_md.md)])"를 참조하세요.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [JDBC 드라이버 애플리케이션 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)

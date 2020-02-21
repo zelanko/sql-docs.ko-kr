@@ -1,6 +1,7 @@
 ---
 title: 보고서 및 공유 데이터 세트 처리에 대한 시간 제한 값 설정(SSRS) | Microsoft Docs
-ms.date: 05/30/2019
+description: Reporting Services에서 시간 제한 값을 지정하여 시스템 리소스 사용 방식에 대해 한도를 설정할 수 있습니다.
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f4d98747a2f00de41dd5661b76a05a9f22d341df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 1bc1f2f27fa46f8262d3c0ca99549d23f2381ff0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506444"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259413"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>보고서 및 공유 데이터 세트 처리에 대한 시간 제한 값 설정(SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 제한 시간 값을 지정하여 시스템 리소스 사용 방식에 대해 제한을 설정할 수 있습니다. 보고서 서버는 다음 두 가지 제한 시간 값을 지원합니다.  
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 시간 제한 값을 지정하여 시스템 리소스 사용 방식에 대해 한도를 설정할 수 있습니다. 보고서 서버는 두 가지 시간 제한 값을 지원합니다.  
   
 - 포함된 데이터 세트 쿼리 제한 시간 값은 보고서 서버가 데이터베이스의 응답을 기다리는 시간(초)입니다. 이 값은 보고서에서 정의됩니다.  
   
@@ -33,7 +34,10 @@ ms.locfileid: "66506444"
   
 ## <a name="setting-a-query-time-out-for-an-embedded-dataset-in-a-report"></a>보고서에 포함된 데이터 세트의 쿼리 제한 시간 설정  
  쿼리 제한 시간 값은 보고서를 작성하는 동안 포함된 데이터 세트를 정의할 때 지정됩니다. 쿼리 제한 시간 값은 보고서 정의의 **Timeout** 요소에 보고서와 함께 저장됩니다. 기본적으로 이 값은 30초로 설정됩니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
-  
+ 
+ > [!NOTE]  
+ > **Power BI에서 페이지를 매긴 보고서**의 경우 기본값은 **600초**로 설정됩니다.
+ 
  게시된 보고서의 속성을 수정할 권한이 있는 사용자는 보고서 정의 파일을 편집하여 이 값을 다시 설정할 수 있습니다.  
   
  데이터 기반 구독에 대한 쿼리 제한 시간 값도 지정할 수 있습니다. 이 쿼리 제한 시간 값은 데이터 기반 구독 페이지에서 지정합니다. 지정한 값에 따라 구독자 데이터 원본에서 데이터를 검색할 때 보고서 서버에서 쿼리 처리가 완료되기를 기다리는 시간이 결정됩니다.  
@@ -52,7 +56,7 @@ ms.locfileid: "66506444"
 > [!NOTE]  
 > RSReportServer.config 파일에서 **RunningRequestsDbCycle** 을 설정하여 실행 작업의 평가 빈도를 변경할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [처리 옵션 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Reporting Services 보고서 서버&#40;기본 모드&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [실행 중인 프로세스 관리](../../reporting-services/subscriptions/manage-a-running-process.md)   

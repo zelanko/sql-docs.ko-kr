@@ -1,6 +1,6 @@
 ---
-title: 오류 정보를 검색 하는 중 | Microsoft Docs
-description: SQL Server에 대 한 OLE DB 드라이버를 사용 하 여 오류 정보 검색
+title: 오류 정보 검색 | Microsoft Docs
+description: OLE DB Driver for SQL Server를 사용하여 오류 정보 검색
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: efde220b1cdc849eec9c0483453739b47fac7a75
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70874644"
 ---
 # <a name="retrieving-error-information"></a>오류 정보 검색
@@ -221,6 +221,6 @@ void DumpErrorInfo
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [오류](../../oledb/ole-db-errors/errors.md)  
+ [Errors](../../oledb/ole-db-errors/errors.md)  
   
   

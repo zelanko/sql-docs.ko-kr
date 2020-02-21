@@ -17,10 +17,10 @@ ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d93840b2b1b7354238ccae12ba3a540889038fb2
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67228682"
 ---
 # <a name="upload-files-to-a-folder"></a>폴더에 파일 업로드
@@ -33,23 +33,23 @@ ms.locfileid: "67228682"
     >[!NOTE]  
     >공유 데이터 원본을 만들 때는 보고서 데이터 원본 파일(.rds)을 업로드할 수 없습니다. .rds 파일은 보고서 디자이너에서만 사용됩니다. 이 파일은 웹 포털을 통해 정의하고 관리하는 공유 데이터 원본 항목에는 내용을 제공할 수 없습니다. 데이터 원본을 업로드하는 대신 .rds 파일을 기반으로 공유 데이터 원본을 만드는 스크립트를 작성할 수 있습니다.  
   
- 업로드 된 항목에 대 한 최대 파일 크기를 2GB 이며 MaxFileSizeMb 속성을 사용 하 여 설정할 수 있습니다 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다.  
+ 업로드한 항목의 최대 파일 크기는 2GB이며 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 MaxFileSizeMb 속성을 사용하여 설정할 수 있습니다.  
   
  보고서 서버 데이터베이스에 업로드한 파일은 폴더 계층에 다음 아이콘으로 표시됩니다.  
   
-  ![보고서 서버 파일을 업로드할 수 있는 아이콘](../../reporting-services/report-server/media/upload-files-to-a-folder/report-server-uploadable-file-icons.png)
+  ![보고서 서버 업로드 가능 파일 아이콘](../../reporting-services/report-server/media/upload-files-to-a-folder/report-server-uploadable-file-icons.png)
   
  파일을 업로드하는 경우 파일은 항상 현재 선택된 폴더에 놓입니다. 처음에 항목을 포함시킬 폴더로 이동하거나 파일을 업로드한 다음 나중에 최종 위치로 이동할 수 있습니다.  
   
- 파일을 업로드 하려면 웹 포털을 사용 합니다. 보고서 서버로 파일을 업로드할 수 있는지 여부는 사용자의 역할 할당에 속하는 태스크에 따라 다릅니다. 기본 보안을 사용할 경우 로컬 관리자는 보고서 서버에 항목을 추가할 수 있습니다. 내 보고서를 설정한 경우 내 보고서 폴더를 갖고 있는 모든 사용자가 해당 폴더로 항목을 업로드할 수 있습니다. 사용자 지정 역할 할당을 사용하는 경우 역할 할당에 폴더 관리 지원 태스크가 포함되어야 합니다.  
+ 파일을 업로드하려면 웹 포털을 사용합니다. 보고서 서버로 파일을 업로드할 수 있는지 여부는 사용자의 역할 할당에 속하는 태스크에 따라 다릅니다. 기본 보안을 사용할 경우 로컬 관리자는 보고서 서버에 항목을 추가할 수 있습니다. 내 보고서를 설정한 경우 내 보고서 폴더를 갖고 있는 모든 사용자가 해당 폴더로 항목을 업로드할 수 있습니다. 사용자 지정 역할 할당을 사용하는 경우 역할 할당에 폴더 관리 지원 태스크가 포함되어야 합니다.  
   
-|수행 작업|포함되는 태스크|  
+|원하는 작업|포함되는 태스크|  
 |----------------|-------------------------|  
 |폴더에 .rdl 파일 업로드|보고서 관리|  
 |파일을 이진 개체로 업로드|리소스 관리|  
 |폴더의 내용 보기|리소스 보기, 보고서 보기|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 서버의 웹 포털(SSRS 기본 모드)](../../reporting-services/web-portal-ssrs-native-mode.md)  
  [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [태스크 및 권한](../../reporting-services/security/tasks-and-permissions.md)   

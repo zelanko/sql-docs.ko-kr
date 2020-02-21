@@ -14,10 +14,10 @@ ms.assetid: f7b9ca05-fc4c-4b30-8e5d-172dd0f4a832
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ad5251471fe9be594bf0ffb09c13f5f9afc35990
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63128954"
 ---
 # <a name="supplying-web-service-method-arguments"></a>웹 서비스 메서드 인수 제공
@@ -34,7 +34,7 @@ rs.CreateFolder("Product Sales", "/Sales", null);
 ```  
   
 ## <a name="complex-data-types"></a>복합 데이터 형식  
- 보고서 웹 서비스의 핵심 클래스는 <xref:ReportService2010.ReportingService2010>이며, 이를 사용하여 프록시 클래스의 SOAP 작업 또는 웹 메서드를 호출합니다. 이 클래스와 해당 메서드를 지원하기 위해 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에 웹 서비스 메서드의 입출력 매개 변수를 위한 특정 사용자 정의 복합 데이터 형식이 포함되어 있습니다. 이러한 복합 데이터 형식은 생성된 프록시 클래스의 일부이며, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 환경에서 개발할 때 사용할 수 있습니다.  
+ 보고서 웹 서비스의 핵심 클래스는 <xref:ReportService2010.ReportingService2010>이며, 이를 사용하여 프록시 클래스의 SOAP 작업 또는 웹 메서드를 호출합니다. 이 클래스와 해당 메서드를 지원하기 위해 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에 웹 서비스 메서드의 입출력 매개 변수를 위한 특정 사용자 정의 복합 데이터 형식이 포함되어 있습니다. 이 복합 데이터 형식은 생성된 프록시 클래스의 일부이며, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 환경에서 개발할 때 사용할 수 있습니다.  
   
  프록시 클래스를 생성하면 WSDL 파일에 정의된 복합 데이터 형식이 해당 프록시의 클래스에 의해 나타나며, 여기에는 복합 데이터 형식의 다양한 SOAP 요소에 해당하는 속성이 포함됩니다. 이러한 데이터 형식의 시퀀스는 코드에서 열거할 수 있는 개체 배열이 됩니다. 그러면 SOAP 메시지로 전송된 XML 구조를 직접 사용하여 작업할 필요가 없습니다. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서 자동으로 변환이 처리됩니다.  
   

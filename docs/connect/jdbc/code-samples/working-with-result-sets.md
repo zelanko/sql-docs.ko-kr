@@ -11,10 +11,10 @@ ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 44eac2fbcc156b3591bdf02fd00ff0d6bd19366b
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028240"
 ---
 # <a name="working-with-result-sets"></a>결과 집합 작업
@@ -26,19 +26,19 @@ ms.locfileid: "69028240"
 또한 SQLServerResultSet 개체는 데이터 행을 탐색하고 포함된 데이터를 수집 또는 설정하며 기본 데이터베이스의 변경 내용에 따라 중요도 수준을 다양하게 설정할 수 있는 메서드를 제공합니다.  
   
 > [!NOTE]  
-> 변경에 대 한 민감도를 포함 하 여 결과 집합을 관리 하는 방법에 대 한 자세한 내용은 [JDBC 드라이버를 사용 하 여 결과 집합 관리](../../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)를 참조 하세요.  
+> 변경 내용에 따른 민감도를 포함하여 결과 집합에 대한 자세한 내용은 [JDBC 드라이버로 결과 집합 관리](../../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)를 참조하세요.  
   
 이 섹션의 항목에서는 결과 집합을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 포함된 데이터를 조작하는 다양한 방법에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-| 항목                                                                                           | 설명                                                                                                                                                                                             |
+| 항목                                                                                           | Description                                                                                                                                                                                             |
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [결과 집합 데이터 검색 샘플](../../../connect/jdbc/code-samples/retrieving-result-set-data-sample.md) | 결과 집합을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에서 데이터를 검색하고 이를 표시하는 방법을 설명합니다.                                                         |
 | [결과 집합 데이터 수정 샘플](../../../connect/jdbc/code-samples/modifying-result-set-data-sample.md)   | 결과 집합을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에서 데이터를 삽입, 검색 및 수정하는 방법을 설명합니다.                                                      |
 | [결과 집합 데이터 캐싱 샘플](../../../connect/jdbc/code-samples/caching-result-set-data-sample.md)       | 결과 집합을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에서 대량의 데이터를 검색하고 클라이언트에서 해당 데이터가 캐시되는 방식을 제어하는 방법을 설명합니다. |
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 
 [샘플 JDBC 드라이버 애플리케이션](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
   

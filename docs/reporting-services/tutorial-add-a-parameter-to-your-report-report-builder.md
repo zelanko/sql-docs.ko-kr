@@ -9,10 +9,10 @@ ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a50e32eb3d13e2b78705a3f2ba4fd63e9ccd442
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72252132"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>자습서: 보고서에 매개 변수 추가(보고서 작성기)
@@ -23,7 +23,7 @@ ms.locfileid: "72252132"
 보고서 매개 변수는 데이터 세트 쿼리에 포함하는 각 쿼리 매개 변수에 대해 자동으로 만들어집니다. 매개 변수 데이터 형식에 따라 보고서 뷰 도구 모음에 매개 변수가 표시되는 방식이 결정됩니다. 
    
 > [!NOTE]  
-> 이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고, 데이터 원본을 선택하고, 데이터 세트를 만드는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)을 참조하세요.  
+> 이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고 데이터 원본을 선택하고 데이터 세트를 만드는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 다음 자습서를 참조하세요. [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 이 자습서에 소요되는 예상 시간: 25분  
   
@@ -82,7 +82,7 @@ ms.locfileid: "72252132"
   
 11. 쿼리 디자이너 도구 모음에서 **실행** ( **!** )을 클릭하여 데이터를 확인합니다.   
   
-    결과 집합은 네 상점의 각 하위 범주에 대한 판매 항목의 수량을 StoreID, Subcategory, Quantity 열에 표시하는 11개 데이터 행으로 구성되어 있습니다. 상점 이름은 결과 집합에 포함되는 데이터가 아닙니다. 이 자습서의 뒷부분에 나오는 별도의 데이터 세트에서 상점 식별자에 해당하는 상점 이름을 조회할 수 있습니다.  
+    결과 집합은 네 상점의 각 하위 범주에 대한 판매 항목의 수량을 StoreID, Subcategory, Quantity 열에 표시하는 11개 데이터 행으로 구성됩니다. 상점 이름은 결과 집합에 포함되지 않습니다. 이 자습서의 뒷부분에 나오는 별도의 데이터 세트에서 상점 식별자에 해당하는 상점 이름을 조회할 수 있습니다.  
   
     이 쿼리에는 쿼리 매개 변수가 포함되어 있지 않습니다. 이 자습서의 뒷부분에서 쿼리 매개 변수를 추가합니다.   
   
@@ -109,7 +109,7 @@ ms.locfileid: "72252132"
   
 6.  **다음**을 클릭합니다.  
   
-8.  **마침**을 클릭합니다.  
+8.  **Finish**를 클릭합니다.  
   
     디자인 화면에 행렬이 추가됩니다. 행렬에는 열 3개와 행 3개가 표시됩니다. 첫 번째 행의 셀 내용은 Subcategory, [StoreID] 및 Total입니다. 두 번째 행의 셀 내용에는 하위 범주, 각 상점의 판매 항목 수량 및 모든 상점에 대한 각 하위 범주의 총 수량을 나타내는 식이 포함됩니다. 마지막 행의 셀에는 각 상점의 총합계가 표시됩니다.  
       
@@ -308,7 +308,7 @@ ms.locfileid: "72252132"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    상점 열 머리글에 복잡한 식의 표시 텍스트인 **Expr**이 포함됩니다.  
+    상점 열 머리글에 복잡한 식의 다음 표시 텍스트가 포함됩니다. **Expr**.  
   
 8.  보고서를 미리 봅니다.  
   
@@ -379,7 +379,7 @@ ms.locfileid: "72252132"
   
 5.  보고서 데이터 창에서 **데이터 세트** 폴더를 확장하고 **DataSet1**을 마우스 오른쪽 단추로 클릭한 다음, **쿼리**를 클릭합니다.  
   
-6.  쿼리의 마지막 줄에 있는 [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE** 절에서 다음과 같이 **등호**(=)를 **IN**으로 변경합니다:  
+6.  쿼리의 마지막 줄에 있는 [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE** 절에서 다음과 같이 **등호**(=)를 **IN**으로 변경합니다.  
   
     ```  
     WHERE StoreID IN (@StoreID)  
@@ -496,7 +496,7 @@ ms.locfileid: "72252132"
   
 보고서가 보고서 서버에 저장됩니다. 연결된 보고서 서버는 창 아래쪽에 있는 상태 표시줄에 나타납니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
 보고서에 매개 변수를 추가하는 방법에 대한 연습을 완료했습니다. 매개 변수에 대한 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

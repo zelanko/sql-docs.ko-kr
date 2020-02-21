@@ -1,5 +1,5 @@
 ---
-title: 암호화를 위한 클라이언트 구성 | Microsoft Docs
+title: 암호화에 대한 클라이언트 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 123e847e01c07ab04bf5be97593af838abfdc4bd
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71713283"
 ---
 # <a name="configuring-the-client-for-encryption"></a>암호화에 대한 클라이언트 구성
@@ -22,7 +22,7 @@ ms.locfileid: "71713283"
 
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 또는 클라이언트는 서버가 올바른 서버이며 서버 인증서가 클라이언트에서 신뢰하는 인증 기관에서 발행되었는지 유효성을 검사해야 합니다. 서버 인증서의 유효성을 검사하기 위해서는 연결 시 트러스트 자료를 제공해야 합니다. 또한 서버 인증서의 발급자가 클라이언트에서 신뢰하는 인증 기관이어야 합니다.  
   
- 이 항목에서는 먼저 클라이언트 컴퓨터에 트러스트 자료를 제공하는 방법에 대해 설명합니다. 그런 다음 SQL Server 인스턴스의 TLS(전송 계층 보안) 인증서가 프라이빗 인증 기관에서 발행된 경우 서버 인증서를 클라이언트 컴퓨터의 트러스트 저장소로 가져오는 방법에 대해 설명합니다.  
+ 이 문서에서는 먼저 클라이언트 컴퓨터에 트러스트 자료를 제공하는 방법에 대해 설명합니다. 그런 다음 SQL Server 인스턴스의 TLS(전송 계층 보안) 인증서가 프라이빗 인증 기관에서 발행된 경우 서버 인증서를 클라이언트 컴퓨터의 트러스트 저장소로 가져오는 방법에 대해 설명합니다.  
   
  서버 인증서의 유효성을 검사하는 방법은 [암호화 지원 이해](../../connect/jdbc/understanding-ssl-support.md)의 서버 TLS 인증서 유효성 검사 섹션을 참조하세요.  
   
@@ -83,6 +83,6 @@ keytool -import -v -trustcacerts -alias myServer -file caCert.cer -keystore trus
   
 9. 다음을 클릭한 다음 마침을 클릭하여 인증서를 내보냅니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [암호화 사용](../../connect/jdbc/using-ssl-encryption.md)   
  [JDBC 드라이버 애플리케이션 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)

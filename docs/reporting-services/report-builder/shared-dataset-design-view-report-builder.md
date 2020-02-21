@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6b4936ef2889d433985d4ff0206d72722300ac91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: be5689ab2d098fab41bc8e73acb6e945991c4e6f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500519"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190034"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>공유 데이터 세트 디자인 뷰(보고서 작성기)
   보고서에서 데이터 세트는 외부 데이터 원본에 대해 쿼리를 실행할 때 반환되는 보고서 데이터를 나타냅니다. 공유 데이터 세트는 보고서 서버에 게시되며 여러 보고서에서 사용할 수 있습니다. 다른 사용자와 공유할 데이터 세트를 만들 수 있습니다. 공유 데이터 세트 디자인 창에서 공유 데이터 원본을 선택하고, 공유 데이터 세트에 대한 속성을 지정하고, 쿼리 디자이너를 통해 쿼리를 만듭니다.  
@@ -31,9 +31,9 @@ ms.locfileid: "66500519"
 > [!NOTE]  
 >  공유 데이터 세트는 공유 데이터 원본을 기반으로 해야 합니다. 필요한 데이터 원본을 사용할 수 없는 경우 보고서 서버에서 만들어야 합니다. 자세한 내용은 [공유 데이터 원본 만들기, 수정 및 삭제&#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)를 참조하세요.  
   
- 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.  
+ 자세한 내용은 [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)를 참조하세요.  
   
-### <a name="dataset"></a>Dataset  
+### <a name="dataset"></a>데이터 세트  
  **옵션 설정** 단추를 사용하여 공유 데이터 세트 속성을 설정할 수 있습니다. 여기에는 다음과 같은 옵션이 포함됩니다.  
   
 -   필드. 필드 컬렉션에 필드를 추가하거나 편집할 수 있습니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "66500519"
   
  보고서에 매개 변수가 있는 경우 모든 매개 변수에 기본값이 있어야 보고서를 자동으로 실행할 수 있습니다. 매개 변수에 기본값이 없는 경우 보고서를 실행할 때에는 매개 변수 값을 선택한 후 **실행** 탭에서 **보고서 보기** 를 클릭해야 합니다.  
   
- 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)을 참조하세요.  
+ 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)에 대해 자세히 알아봅니다.  
   
   
 ##  <a name="Save"></a> 공유 데이터 세트 저장  

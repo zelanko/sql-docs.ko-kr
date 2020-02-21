@@ -11,10 +11,10 @@ ms.assetid: 256b5f55-7a6d-44fb-9a09-19fa39f19c35
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b76a8cbf6e0946c90dbf6033d5276f475f3123ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974889"
 ---
 # <a name="setclob-method-javalangstring-javasqlclob"></a>setClob 메서드(java.lang.String, java.sql.Clob)
@@ -42,7 +42,7 @@ public final void setClob(java.lang.String parameterName,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 setClob 메서드는 java.sql.CallableStatement 인터페이스의 setClob 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

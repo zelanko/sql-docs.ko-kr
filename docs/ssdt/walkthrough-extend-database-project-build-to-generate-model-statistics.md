@@ -1,23 +1,24 @@
 ---
-title: '연습: 데이터베이스 프로젝트 빌드를 확장하여 모델 통계 생성 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 데이터베이스 프로젝트 빌드를 확장하여 모델 통계 생성
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5e1844ae19de96b13b36fad59f5032fe68caaf19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: fbbedff0adbe0302465344d437f9646bf68d997f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069015"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242686"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>연습: 데이터베이스 프로젝트 빌드를 확장하여 모델 통계 생성
+
 빌드 참가자를 만들어서 데이터베이스 프로젝트를 빌드할 때 사용자 지정 작업을 수행할 수 있습니다. 이 연습에서는 데이터베이스 프로젝트를 빌드할 때 SQL 데이터베이스 모델에서 통계를 출력하는 ModelStatistics라는 빌드 참가자를 만듭니다. 이 빌드 참가자는 빌드할 때 매개 변수가 사용되기 때문에 몇 가지 추가 단계가 필요합니다.  
   
 이 연습에서 수행하는 주요 작업은 다음과 같습니다.  
@@ -587,7 +588,7 @@ Relationships
   
     보고된 결과는 XML 파일에도 저장됩니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
 출력 XML 파일의 처리를 수행하기 위한 추가 도구를 만들 수도 있습니다. 이 예는 빌드 참가자의 한 가지 예일 뿐입니다. 예를 들어 빌드의 일부로 데이터 사전 파일을 출력하는 빌드 참가자를 만들 수도 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

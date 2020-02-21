@@ -11,10 +11,10 @@ ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f769e35477d564365df702bd768ac1953c7affa
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71712970"
 ---
 # <a name="using-encryption"></a>암호화 사용
@@ -32,16 +32,16 @@ TLS 암호화를 사용하면 네트워크에서 [!INCLUDE[ssNoVersion](../../in
 이 섹션의 항목에서는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 버전에서 새 연결 속성을 비롯한 TLS 암호화를 지원하는 방식과 클라이언트 쪽에서 트러스트 저장소를 구성하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
-> **HostNameInCertificate** connection 속성은 TLS 인증서의 유효성을 검사 하는 데 권장 됩니다.  
+> **hostNameInCertificate** 연결 속성을 사용하여 TLS 인증서의 유효성을 검사하는 것이 좋습니다.  
 
 ## <a name="in-this-section"></a>섹션 내용  
 
-| 항목                                                                                                        | 설명                                                                                                                                           |
+| 항목                                                                                                        | Description                                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [암호화 지원 이해](../../connect/jdbc/understanding-ssl-support.md)                                 | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서 TLS 암호화를 지원하는 방식에 대해 설명합니다.                                              |
 | [암호화를 사용하여 연결](../../connect/jdbc/connecting-with-ssl-encryption.md)                       | 새 TLS 특정 연결 속성을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 방법에 대해 설명합니다. |
 | [암호화에 대한 클라이언트 구성](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md) | 클라이언트 쪽에서 기본 트러스트 저장소를 구성하는 방법과 프라이빗 인증서를 클라이언트 컴퓨터의 트러스트 저장소로 가져오는 방법에 대해 설명합니다.   |
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [JDBC 드라이버 애플리케이션 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)  

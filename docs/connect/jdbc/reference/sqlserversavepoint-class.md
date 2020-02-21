@@ -11,10 +11,10 @@ ms.assetid: 1ae7db7b-959f-4142-8d9f-aa427869c6ac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 96dd323d0966185b42e1c7d11fb5b17917ba848f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970467"
 ---
 # <a name="sqlserversavepoint-class"></a>SQLServerSavepoint 클래스

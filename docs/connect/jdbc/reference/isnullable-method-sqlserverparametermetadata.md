@@ -1,5 +1,5 @@
 ---
-title: isNullable 메서드 (SQLServerParameterMetaData) | Microsoft Docs
+title: isNullable 메서드(SQLServerParameterMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: d7e07cff-6fc4-4c9c-8e8f-838c77734bc5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f340a182da1cd232aab70e61c268ba6ec58633db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977537"
 ---
 # <a name="isnullable-method-sqlserverparametermetadata"></a>isNullable 메서드(SQLServerParameterMetaData)
@@ -39,7 +39,7 @@ public int isNullable(int param)
   
  매개 변수 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  지정된 매개 변수의 null 허용 여부를 나타내는 **int**로, 다음 값 중 하나에 해당됩니다.  
   
  ParameterMetaData.parameterNoNulls  
@@ -51,8 +51,8 @@ public int isNullable(int param)
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 isNullable 메서드는 isNullable 메타 데이터 인터페이스의 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 isNullable 메서드는 java.sql.ParameterMetaData 인터페이스의 isNullable 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerParameterMetaData 메서드](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   

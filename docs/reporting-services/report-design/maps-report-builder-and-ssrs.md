@@ -16,10 +16,10 @@ ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c03db76d1c8ad67bf9db43c1b4acfa728396b703
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66428977"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>지도(보고서 작성기 및 SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "66428977"
   
  ![rs_MapElements](../../reporting-services/report-design/media/rs-mapelements.gif "rs_MapElements")  
   
- 지도 사용을 즉시 시작하려면 [자습서: 지도 보고서&#40;보고서 작성기&#41;](../../reporting-services/tutorial-map-report-report-builder.md) 또는 [보고서 예제(보고서 작성기 및 SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)를 참조하세요.  
+ 지도 사용을 즉시 시작하려면 [자습서: 맵 보고서&#40;보고서 작성기&#41;](../../reporting-services/tutorial-map-report-report-builder.md) 또는 [보고서 예제(보고서 작성기 및 SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)를 참조하세요.  
   
 > [!NOTE]  
 >  보고서와는 별도로 지도를 보고서 파트로 저장할 수 있습니다. [보고서 파트](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)에 대해 자세히 알아봅니다.  
@@ -152,7 +152,7 @@ ms.locfileid: "66428977"
   
     -   **항공.** 텍스트 없이 항공 이미지 스타일을 표시합니다.  
   
-    -   **혼합.** **도로** 및 **항공** 스타일의 조합을 표시합니다.  
+    -   **하이브리드.** **도로** 및 **항공** 스타일의 조합을 표시합니다.  
   
 -   타일의 표시 텍스트 언어  
   
@@ -160,7 +160,7 @@ ms.locfileid: "66428977"
   
  단계별 지침은 [지도 또는 지도 계층 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)를 참조하세요.  
   
- 타일에 대한 자세한 내용은 [Bing 지도 타일 시스템(Bing Maps Tiles System)](https://go.microsoft.com/fwlink/?linkid=147315)을 참조하십시오. 보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](https://go.microsoft.com/fwlink/?LinkId=151371)를 참조하세요.  
+ 타일에 대한 자세한 내용은 [Bing 지도 타일 시스템(Bing Maps Tiles System)](https://go.microsoft.com/fwlink/?linkid=147315)을 참조하십시오. 보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](https://go.microsoft.com/fwlink/?LinkId=151371)을 참조하세요.  
   
 ##  <a name="MapLayers"></a> 지도 계층 및 지도 요소 이해  
  지도 하나에 계층이 여러 개 있을 수 있습니다. 세 가지 계층 유형이 있으며, 각 계층에는 한 가지 공간 데이터 형식이 표시됩니다.  
@@ -224,7 +224,7 @@ ms.locfileid: "66428977"
   
  지도 보고서를 볼 때 원하는 결과가 표시되지 않으면 근본 원인은 다양한 문제에서 비롯될 수 있습니다. 각 문제를 확인하고 이해하려면 한 번에 한 계층에서 작업하는 것이 유용합니다. 지도 창을 사용하여 계층을 선택하고 계층의 표시 유형을 쉽게 설정/해제할 수 있습니다.  
   
- 지도 보고서 문제에 대한 자세한 내용은 [보고서 문제해결: 지도 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ 맵 보고서 문제에 대한 자세한 내용은 [보고서 문제 해결: 맵 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
 ##  <a name="HowTo"></a> 방법 도움말 항목  
  이 섹션에는 보고서에서 지도와 지도 계층을 사용하여 작업하는 방법을 단계별로 보여 주는 절차가 나열되어 있습니다.  
@@ -250,6 +250,6 @@ ms.locfileid: "66428977"
   
  [지도에 사용자 지정 위치 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [보고서 문제해결: 지도 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [보고서 문제 해결: 맵 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

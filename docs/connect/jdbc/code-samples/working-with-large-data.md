@@ -1,5 +1,5 @@
 ---
-title: 대량 데이터 작업 | Microsoft Docs
+title: 큰 데이터 작업 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 425beac7bcae36170ff378b59d36da05838df645
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028249"
 ---
 # <a name="working-with-large-data"></a>대규모 데이터 작업
@@ -31,13 +31,13 @@ JDBC 드라이버에서는 서버 커서 오버헤드 없이 모든 종류의 �
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-| 항목                                                                                                                         | 설명                                                              |
+| 항목                                                                                                                         | Description                                                              |
 | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | [대규모 데이터 읽기 샘플](../../../connect/jdbc/code-samples/reading-large-data-sample.md)                                               | SQL 문을 사용하여 큰 값 데이터를 검색하는 방법에 대해 설명합니다.       |
 | [저장 프로시저에서 대규모 데이터 읽기 샘플](../../../connect/jdbc/code-samples/reading-large-data-with-stored-procedures-sample.md) | 큰 CallableStatement OUT 매개 변수 값을 검색하는 방법에 대해 설명합니다. |
 | [대규모 데이터 업데이트 샘플](../../../connect/jdbc/code-samples/updating-large-data-sample.md)                                             | 데이터베이스에서 큰 값 데이터를 업데이트하는 방법에 대해 설명합니다.                |
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [샘플 JDBC 드라이버 애플리케이션](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
   

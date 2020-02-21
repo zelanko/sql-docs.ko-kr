@@ -11,10 +11,10 @@ ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 684f2ec1878e7918f9aa43017feb4b4f8d32cfa1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573816"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services 오류
@@ -53,7 +53,7 @@ ms.locfileid: "65573816"
   
 -   Nullable 속성이 **False** 로 설정된 매개 변수가 해당 매개 변수에서 Null 값을 검색했습니다.  
   
--   데이터 영역의 Hidden 속성에 대한 식에 다음 오류가 있습니다. 개체의 인스턴스에 개체 참조가 설정되지 않았습니다.  
+-   데이터 영역의 Hidden 속성에 대한 식에 다음 오류가 있습니다. 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.  
   
 -   식에 잘못된 함수 호출 또는 구문 오류가 있습니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "65573816"
  다중값 매개 변수는 Null이 될 수 없습니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)에 대해 자세히 알아봅니다.  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>하위 보고서가 있는 주 보고서를 처리할 수 없음  
- 하위 보고서가 있는 보고서는 동일한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 프로세서 버전으로 처리해야 합니다. 보고서를 현재 버전의 보고서 정의 스키마로 업그레이드할 때 주 보고서와 하위 보고서는 동시에 업데이트될 수도 있고 업데이트되지 않을 수도 있습니다. 보고서와 하위 보고서 간에 버전이 호환되지 않는 경우 "하위 보고서를 처리할 수 없습니다." 메시지가 나타납니다.  
+ 하위 보고서가 있는 보고서는 동일한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 프로세서 버전으로 처리해야 합니다. 보고서를 현재 버전의 보고서 정의 스키마로 업그레이드할 때 주 보고서와 하위 보고서는 동시에 업데이트될 수도 있고 업데이트되지 않을 수도 있습니다. 보고서와 하위 보고서 간에 버전이 호환되지 않는 경우 “하위 보고서를 처리할 수 없습니다.” 메시지가 나타납니다.  
   
  주 보고서 또는 하위 보고서 중 하나를 변경하여 동일한 보고서 프로세서 버전으로 두 보고서를 처리할 수 있도록 해야 합니다. 보고서 업그레이드가 실패하는 이유에 대한 자세한 내용은 [보고서 업그레이드](../../reporting-services/install-windows/upgrade-reports.md)를 참조하세요.  
   

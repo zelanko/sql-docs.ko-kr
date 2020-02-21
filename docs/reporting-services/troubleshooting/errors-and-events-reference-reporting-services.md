@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/12/2019
 ms.openlocfilehash: d2d1a8c853bd4ad577dd1c0ced9aed47b15a2ee7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68258542"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>오류 및 이벤트 참조(Reporting Services)
@@ -28,26 +28,26 @@ ms.locfileid: "68258542"
 
 다음과 같은 보고서 서버 이벤트가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 애플리케이션 로그에 기록됩니다.  
   
-|이벤트 ID|형식|범주|원본|설명|  
+|이벤트 ID|Type|Category|원본|Description|  
 |--------------|----------|--------------|------------|-----------------|  
-|106|Error|일정 예약|보고서 서버|예약된 작업(예: 보고서 구독 및 배달)을 정의하려면 SQL Server 에이전트를 실행하고 있어야 합니다.|  
+|106|Error|일정 계획|보고서 서버|예약된 작업(예: 보고서 구독 및 배달)을 정의하려면 SQL Server 에이전트를 실행하고 있어야 합니다.|  
 |[107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)|Error|시작/종료|보고서 서버<br /><br /> 일정 예약 및 배달 프로세서|*\<Source>* 에서 보고서 서버 데이터베이스에 연결할 수 없습니다. 자세한 내용은 [보고서 서버 Windows 서비스&#40;MSSQLServer&#41; 107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)을 참조하세요.|  
-|108|Error|확장명|보고서 서버<br /><br /> 웹 포털|*\<Source>* 에서 배달, 데이터 처리 또는 렌더링 확장 프로그램을 로드할 수 없습니다.<br /><br /> 확장 프로그램이 불완전하게 배포되었거나 제거된 것 같습니다. 자세한 내용은 [Deploying a Data Processing Extension](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md) 및 [Deploying a Delivery Extension](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)를 참조하세요.|  
+|108|Error|내선 번호|보고서 서버<br /><br /> 웹 포털|*\<Source>* 에서 배달, 데이터 처리 또는 렌더링 확장 프로그램을 로드할 수 없습니다.<br /><br /> 확장 프로그램이 불완전하게 배포되었거나 제거된 것 같습니다. 자세한 내용은 [Deploying a Data Processing Extension](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md) 및 [Deploying a Delivery Extension](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)를 참조하세요.|  
 |109|정보|관리|보고서 서버<br /><br /> 웹 포털|구성 파일이 수정되었습니다. 자세한 내용은 [Reporting Services Configuration Files](../../reporting-services/report-server/reporting-services-configuration-files.md)을 참조하세요.|  
-|110|경고|관리|보고서 서버<br /><br /> 웹 포털|구성 파일 중 하나의 설정이 수정되어 더 이상 사용할 수 없습니다. 기본값이 대신 사용됩니다. 자세한 내용은 [Reporting Services Configuration Files](../../reporting-services/report-server/reporting-services-configuration-files.md)을 참조하세요.|  
+|110|Warning|관리|보고서 서버<br /><br /> 웹 포털|구성 파일 중 하나의 설정이 수정되어 더 이상 사용할 수 없습니다. 기본값이 대신 사용됩니다. 자세한 내용은 [Reporting Services Configuration Files](../../reporting-services/report-server/reporting-services-configuration-files.md)을 참조하세요.|  
 |111|Error|로깅|보고서 서버<br /><br /> 웹 포털|*\<Source>* 에서 추적 로그를 만들 수 없습니다. 자세한 내용은 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)을 참조하세요.|  
-|112|경고|보안|보고서 서버|보고서 서버에서 서비스 거부 공격이 발생했습니다. 자세한 내용은 [Reporting Services 보안 및 보호](../../reporting-services/security/reporting-services-security-and-protection.md)를 참조하세요.|  
+|112|Warning|보안|보고서 서버|보고서 서버에서 서비스 거부 공격이 발생했습니다. 자세한 내용은 [Reporting Services 보안 및 보호](../../reporting-services/security/reporting-services-security-and-protection.md)를 참조하세요.|  
 |113|Error|로깅|보고서 서버|보고서 서버에서 성능 카운터를 만들 수 없습니다.|  
 |114|Error|시작/종료|웹 포털|웹 포털에 서 보고서 서버 서비스에 연결할 수 없습니다.|  
-|115|경고|일정 예약|일정 예약 및 배달 프로세서|SQL Server 에이전트 큐의 예약된 태스크가 수정되거나 삭제되었습니다.|  
+|115|Warning|일정 계획|일정 예약 및 배달 프로세서|SQL Server 에이전트 큐의 예약된 태스크가 수정되거나 삭제되었습니다.|  
 |116|Error|내부|보고서 서버<br /><br /> 웹 포털<br /><br /> 일정 예약 및 배달 프로세서|내부 오류가 발생했습니다.|  
 |117|Error|시작/종료|보고서 서버|보고서 서버 데이터베이스 버전이 잘못되었습니다.|  
-|118|경고|로깅|보고서 서버<br /><br /> 웹 포털|추적 로그가 올바른 디렉터리 위치에 없습니다. 새 추적 로그가 기본 디렉터리에 만들어집니다. 자세한 내용은 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)을 참조하세요.|  
+|118|Warning|로깅|보고서 서버<br /><br /> 웹 포털|추적 로그가 올바른 디렉터리 위치에 없습니다. 새 추적 로그가 기본 디렉터리에 만들어집니다. 자세한 내용은 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)을 참조하세요.|  
 |119|Error|활성화|보고서 서버<br /><br /> 일정 예약 및 배달 프로세서|*\<Source>* 에 보고서 서버 데이터베이스의 내용에 대한 액세스 권한이 부여되지 않았습니다.|  
 |120|Error|활성화|보고서 서버|대칭 키를 해독할 수 없습니다. 서비스가 실행되는 계정이 변경된 것 같습니다. 자세한 내용은 [암호화 키 구성 및 관리&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)를 참조하세요.|  
 |121|Error|시작/종료|보고서 서버|RPC(원격 프로시저 호출) 서비스를 시작하지 못했습니다.|  
-|122|경고|배달|일정 예약 및 배달 프로세서|일정 예약 및 배달 프로세서에서 전자 메일 배달에 사용되는 SMTP 서버에 연결할 수 없습니다. SMTP 서버 연결에 대 한 자세한 내용은 [전자 메일 설정-Reporting Services 기본 모드 (Configuration Manager)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)를 참조 하세요.|  
-|123|경고|로깅|보고서 서버<br /><br /> 웹 포털|보고서 서버에서 추적 로그에 쓰지 못했습니다. 추적 로그에 대한 자세한 내용은 [보고서 서버 서비스 추적 로그](../../reporting-services/report-server/report-server-service-trace-log.md)를 참조하세요.|  
+|122|Warning|배달|일정 예약 및 배달 프로세서|일정 예약 및 배달 프로세서에서 전자 메일 배달에 사용되는 SMTP 서버에 연결할 수 없습니다. SMTP 서버 연결에 대한 자세한 내용은 [메일 설정 - Reporting Services 기본 모드(구성 관리자)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)를 참조하세요.|  
+|123|Warning|로깅|보고서 서버<br /><br /> 웹 포털|보고서 서버에서 추적 로그에 쓰지 못했습니다. 추적 로그에 대한 자세한 내용은 [보고서 서버 서비스 추적 로그](../../reporting-services/report-server/report-server-service-trace-log.md)를 참조하세요.|  
 |124|정보|활성화|보고서 서버|보고서 서버 서비스가 활성화되었습니다. 자세한 내용은 [보고서 서버 초기화&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)를 참조하세요.|  
 |125|정보|활성화|보고서 서버|데이터 암호화에 사용된 키를 추출했습니다. 키에 대한 자세한 내용은 [암호화 키 구성 및 관리&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)를 참조하세요.|  
 |126|정보|활성화|보고서 서버|데이터 암호화에 사용된 키를 적용했습니다. 키에 대한 자세한 내용은 [암호화 키 구성 및 관리&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)를 참조하세요.|  
@@ -60,7 +60,7 @@ ms.locfileid: "68258542"
 |133|Error|관리|보고서 서버<br /><br /> 웹 포털<br /><br /> 일정 예약 및 배달 프로세서|구성 파일을 로드하지 못했습니다. XML이 잘못된 경우 이러한 오류가 발생할 수 있습니다.|  
 |134|Error|관리|보고서 서버|보고서 서버에서 구성 파일의 설정 값을 암호화하지 못했습니다.|  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
  [Reporting Services 구독 모니터링](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)  
  [Reporting Services 로그 파일 및 원본](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)

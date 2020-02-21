@@ -1,6 +1,6 @@
 ---
-title: 옵션(환경 - 글꼴 및 색 페이지) | Microsoft 문서
-ms.custom: ''
+title: 옵션(환경 - 글꼴 및 색 페이지)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7270a67f9f040f986b58ee0bb9d0d5366fe05169
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 97d8667e7c6972331471622685d8a0bb97303dcd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265949"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245733"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>옵션(환경 - 글꼴 및 색 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,13 +72,13 @@ ms.locfileid: "68265949"
 **항목 배경**  
 **표시 항목**에서 선택한 항목의 배경색을 선택할 수 있는 색상표를 제공합니다. 일부 항목은 서로 관련이 있기 때문에 표시 구성표의 일관성을 유지해야 합니다. 예를 들어 텍스트의 배경색을 변경하면 문자열과 같은 요소의 배경색도 변경됩니다.  
   
-**사용자 지정**  
+**Custom**  
 **표시 항목** 목록에서 선택한 항목의 사용자 지정 색을 설정하는 **색** 대화 상자를 표시합니다.  
   
 **굵게**  
 선택한 표시 항목의 텍스트를 굵은 글꼴로 표시하려면 이 확인란을 선택합니다. 굵은 글꼴의 텍스트는 편집기에서 찾기가 쉽습니다.  
   
-**예제**  
+**샘플**  
 **설정 표시** 및 **표시 항목**에서 선택한 값에 대한 글꼴 스타일, 크기 및 색 구성표 샘플을 표시합니다. 이 입력란을 사용하여 여러 서식 옵션을 적용한 결과를 미리 볼 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

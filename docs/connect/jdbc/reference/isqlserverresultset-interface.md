@@ -11,10 +11,10 @@ ms.assetid: 002496f7-8ec0-4267-b4e6-ba095e2ef306
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: edbf5a7feb65d39cb5158c42a218f077a3332236
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977415"
 ---
 # <a name="isqlserverresultset-interface"></a>ISQLServerResultSet 인터페이스
@@ -33,12 +33,12 @@ ms.locfileid: "67977415"
 public interface ISQLServerResultSet  
 ```  
   
-## <a name="remarks"></a>Remarks  
- 이 인터페이스는 [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)에 의해 구현 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 인터페이스는 [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)에 의해 구현됩니다.  
   
  이 인터페이스는 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 관련 메서드를 노출합니다.  
   
-|메서드|자세한 내용은 다음을 참조하세요.|  
+|방법|자세한 내용은 다음을 참조하세요.|  
 |------------|-------------------------------|  
 |public microsoft.sql.DateTimeOffset getDateTimeOffset(int)|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-int-sqlserverresultset.md)|  
 |public microsoft.sql.DateTimeOffset getDateTimeOffset(String)|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-java-lang-string-sqlserverresultset.md)|  

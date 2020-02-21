@@ -1,6 +1,7 @@
 ---
-title: Windows Server 2008/2008 R2/2012 클러스터에서 실행 중인 SQL Server 인스턴스 업그레이드 | Microsoft Docs
-ms.date: 01/25/2018
+title: 'SQL Server 인스턴스 업그레이드: Windows Server 2012 이하 클러스터'
+description: Windows Server 2008, Windows Server 2008 R2 및 Windows Server 2012에서 실행되는 SQL Server 장애 조치(failover) 클러스터를 업그레이드하는 방법을 설명합니다.
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: high-availability
 ms.topic: conceptual
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - failover clustering [SQL Server], upgrading
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c8825d0d4c8ff0ac6d83b152b8606be6d9fd0cc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b9d0c843e9a116a6d89198db22053224c2f1d19
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904967"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242849"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Windows Server 2008/2008 R2/2012 클러스터에서 실행 중인 SQL Server 인스턴스 업그레이드
 
@@ -282,7 +283,7 @@ SQL FCI 인스턴스만 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 
     원격 서비스 바인딩을 사용하는 모든 사용자는 올바르게 마이그레이션되기 때문에 원격 서비스 바인딩은 마이그레이션 후에 올바르게 작동합니다.
 
-### <a name="includessnoversionincludesssnoversion-mdmd-agent"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트
+### <a name="ssnoversion-agent"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트
 
 -   **작업**
 
@@ -320,6 +321,6 @@ SQL FCI 인스턴스만 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 - [데이터베이스 엔진 업그레이드 완료](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)
 - [데이터베이스 호환성 모드 변경 및 쿼리 저장소 사용](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)
 - [새 SQL Server 2016 기능 활용](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)
-- [SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드](upgrade-a-sql-server-failover-cluster-instance.md)
+- [SQL Server 장애 조치(Failover) 클러스터 인스턴스 업그레이드](upgrade-a-sql-server-failover-cluster-instance.md)
 - [SQL Server 설치 로그 파일 보기 및 읽기](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 - [SQL Server 2016 인스턴스에 기능 추가(설치 프로그램)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)

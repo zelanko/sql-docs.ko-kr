@@ -11,10 +11,10 @@ ms.assetid: a069bf2c-1b70-4817-b084-a508445de799
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b420dd7c4bc714e26c8078112c5af54ae5aa7b0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970061"
 ---
 # <a name="sqlserverxaresource-members"></a>SQLServerXAResource 멤버
@@ -27,7 +27,7 @@ ms.locfileid: "67970061"
   
 ## <a name="fields"></a>필드  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[SSTRANSTIGHTLYCPLD](../../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)|XID(XA 분기 트랜잭션 ID)가 다르지만 GTRID(전역 트랜잭션 ID)는 동일한 밀접하게 결합된 XA 트랜잭션을 허용하는 데 사용됩니다.|  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67970061"
   
 ## <a name="methods"></a>메서드  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[commit](../../../connect/jdbc/reference/commit-method-sqlserverxaresource.md)|지정된 Xid 개체가 지정하는 글로벌 트랜잭션을 커밋합니다.|  
 |[end](../../../connect/jdbc/reference/end-method-sqlserverxaresource.md)|트랜잭션 분기를 대신하여 수행되는 작업을 종료합니다.|  
@@ -47,7 +47,7 @@ ms.locfileid: "67970061"
 |[getTransactionTimeout](../../../connect/jdbc/reference/gettransactiontimeout-method-sqlserverxaresource.md)|이 [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) 개체에 대해 설정된 현재 트랜잭션 시간 제한 값을 가져옵니다.|  
 |[isSameRM](../../../connect/jdbc/reference/issamerm-method-sqlserverxaresource.md)|대상 개체가 나타내는 리소스 관리자 인스턴스가 지정된 XAResource 개체에서 나타내는 리소스 관리자 인스턴스와 동일한지 확인합니다.|  
 |[prepare](../../../connect/jdbc/reference/prepare-method-sqlserverxaresource.md)|지정된 Xid 개체가 지정하는 트랜잭션의 트랜잭션 커밋을 준비하도록 리소스 관리자에 요청합니다.|  
-|[복구](../../../connect/jdbc/reference/recover-method-sqlserverxaresource.md)|리소스 관리자에서 준비된 트랜잭션 분기 목록을 가져옵니다.|  
+|[recover](../../../connect/jdbc/reference/recover-method-sqlserverxaresource.md)|리소스 관리자에서 준비된 트랜잭션 분기 목록을 가져옵니다.|  
 |[rollback](../../../connect/jdbc/reference/rollback-method-sqlserverxaresource.md)|리소스 관리자에 트랜잭션 분기 대신 수행된 작업을 롤백하도록 요청합니다.|  
 |[setTransactionTimeout](../../../connect/jdbc/reference/settransactiontimeout-method-sqlserverxaresource.md)|이 [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) 개체에 대한 현재 트랜잭션 시간 제한 값을 설정합니다.|  
 |[start](../../../connect/jdbc/reference/start-method-sqlserverxaresource.md)|Xid 개체에 지정된 트랜잭션 분기를 대신하여 작업을 시작합니다.|  

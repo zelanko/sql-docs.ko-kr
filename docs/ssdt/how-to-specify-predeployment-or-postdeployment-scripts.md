@@ -1,24 +1,25 @@
 ---
-title: '방법: 배포 전 또는 배포 후 스크립트 지정 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 배포 전 또는 배포 후 스크립트 지정
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e8bbc783901c7dd93515424ae811fe66239e9f33
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 56b69a6b84aa3c529c02690f7e6554e76e46b079
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199292"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244271"
 ---
 # <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>방법: 배포 전 또는 배포 후 스크립트 지정
-배포 전 및 배포 후 스크립트는 데이터베이스 프로젝트에서 생성되는 주 배포 스크립트 이전과 이후에 Transact\-SQL 문을 실행합니다. Visual Studio의 스키마 비교 결과에서 대상을 업데이트할 때 배포 전 스크립트가 실행되지 않습니다. 프로젝트에는 배포 전 스크립트와 배포 후 스크립트가 각각 하나씩만 포함될 수 있습니다. 이러한 스크립트는 다양한 용도로 사용할 수 있습니다. 예를 들어  
+
+배포 전 및 배포 후 스크립트는 데이터베이스 프로젝트에서 생성되는 주 배포 스크립트 이전과 이후에 Transact\-SQL 문을 실행합니다. Visual Studio의 스키마 비교 결과에서 대상을 업데이트할 때 배포 전 스크립트가 실행되지 않습니다. 프로젝트에는 배포 전 스크립트와 배포 후 스크립트가 각각 하나씩만 포함될 수 있습니다. 이러한 스크립트는 다양한 용도로 사용할 수 있습니다. 다음은 그 예입니다.  
   
 -   배포 전 스크립트는 변경할 테이블에 있는 데이터의 서식을 다시 지정하고 해당 데이터를 배포 후 스크립트의 변경된 테이블에 적용하기 전에 임시 테이블로 복사할 수 있습니다.  
   
@@ -45,7 +46,7 @@ END
   
     Transact\-SQL 편집기가 열리고 파일 내용이 표시됩니다.  
   
-스크립트에 SQLCMD 구문 및 변수를 사용하고 이러한 구문과 변수를 데이터베이스 프로젝트 속성에 설정할 수 있습니다. 예를 들어  
+스크립트에 SQLCMD 구문 및 변수를 사용하고 이러한 구문과 변수를 데이터베이스 프로젝트 속성에 설정할 수 있습니다. 다음은 그 예입니다.  
   
 -   SQLCMD 구문을 사용하여 파일 내용을 배포 전 스크립트 또는 배포 후 스크립트에 포함할 수 있습니다. 파일은 정의하는 순서대로 포함되고 실행됩니다(`:r .\myfile.sql`).  
   

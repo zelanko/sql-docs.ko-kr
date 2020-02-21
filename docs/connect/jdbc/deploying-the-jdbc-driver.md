@@ -11,10 +11,10 @@ ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 518f6bd2605d92857520f870b20edcd351771c54
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73049842"
 ---
 # <a name="deploying-the-jdbc-driver"></a>JDBC 드라이버 배포
@@ -52,13 +52,13 @@ ms.locfileid: "73049842"
   
  `tar -xf sqljdbc_<version>_<language>.tar`  
 
-## <a name="legalities-of-driver-redistribution"></a>Legalities 드라이버 재배포
+## <a name="legalities-of-driver-redistribution"></a>드라이버 재배포의 법률적 측면
 
-JDBC 드라이버 버전 6.0, 6.2, 6.4 및 7.0은 재배포 가능 합니다. 라이선스 계약의 _배포 가능 코드_ 절을 검토하세요.
+JDBC 드라이버 버전 6.0, 6.2, 6.4 및 7.0은 재배포 가능합니다. 라이선스 계약의 _배포 가능 코드_ 절을 검토하세요.
 
-JDBC 드라이버 버전 4.x는 오래 된 버전입니다. 2018에 대 한 지원이 만료 되었습니다.
+JDBC 드라이버 버전 4.x는 더 이상 사용되지 않습니다. 4\.x에 대한 지원은 2018년 이전에 만료되었습니다.
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

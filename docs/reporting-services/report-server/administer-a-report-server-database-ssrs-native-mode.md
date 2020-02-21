@@ -16,10 +16,10 @@ ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7822cadea8dbe051c0e7dbc11417987dd5e5c543
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593762"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>보고서 서버 데이터베이스 관리(SSRS 기본 모드)
@@ -56,7 +56,7 @@ ms.locfileid: "73593762"
  이 오류는 ReportServerTempdb 이름이 내부적으로 저장되어 내부 작업을 수행하는 저장 프로시저에서 사용되기 때문에 발생합니다. 임시 데이터베이스의 이름을 바꾸면 저장 프로시저가 제대로 작동할 수 없습니다.  
   
 ## <a name="enabling-snapshot-isolation-on-the-report-server-database"></a>보고서 서버 데이터베이스에서 스냅샷 격리 사용  
- 보고서 서버 데이터베이스에서는 스냅샷 격리를 사용할 수 없습니다. 스냅샷 격리를 설정하면 "선택한 보고서는 아직 볼 수 없습니다. 보고서를 렌더링하고 있거나 보고서 스냅샷을 사용할 수 없습니다"라는 오류가 발생합니다.  
+ 보고서 서버 데이터베이스에서는 스냅샷 격리를 사용할 수 없습니다. 스냅샷 격리를 설정하면 “선택한 보고서는 아직 볼 수 없습니다. 보고서를 렌더링하고 있거나 보고서 스냅샷을 사용할 수 없습니다”라는 오류가 발생합니다.  
   
  스냅샷 격리를 의도적으로 사용하지 않은 경우 다른 애플리케이션이 해당 특성을 설정했거나 **model** 데이터베이스가 스냅샷 격리를 사용할 수 있도록 설정되어 모든 새 데이터베이스가 해당 설정을 상속하는 것일 수 있습니다.  
   

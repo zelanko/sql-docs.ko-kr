@@ -1,10 +1,9 @@
 ---
-title: 인덱스 - 키 대화 상자(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 인덱스 - 키 대화 상자
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dc4ca010e03090b1ba695247023858b2d1541c40
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7043ec4173bf1a14ca80b915e1ea6ac10fd0d72d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254337"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75224918"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>인덱스 - 키 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +57,7 @@ ms.locfileid: "68254337"
 키나 인덱스의 이름을 표시합니다. 키나 인덱스를 새로 만들면 테이블 디자이너의 활성 창에 있는 테이블을 기반으로 한 기본 이름이 지정됩니다. 언제든지 이름을 변경할 수 있습니다.  
   
 **설명**  
-키나 인덱스에 대한 설명을 입력할 수 있습니다. 자세한 설명을 기록하려면 **설명** 을 클릭한 다음, 속성 필드의 오른쪽에 나타나는 줄임표 단추( **...** )를 클릭합니다. 이렇게 하면 텍스트를 쓸 수 있는 더 큰 영역이 제공됩니다.  
+키나 인덱스에 대한 설명을 입력할 수 있습니다. 자세한 설명을 기록하려면 **설명**을 클릭한 다음, 속성 필드의 오른쪽에 있는 줄임표 단추( **...** )를 클릭합니다. 이렇게 하면 텍스트를 쓸 수 있는 더 큰 영역이 제공됩니다.  
   
 **테이블 디자이너 범주**  
 확장하면 **클러스터형으로 만들기**에 대한 정보가 표시됩니다.  
@@ -92,9 +93,9 @@ ms.locfileid: "68254337"
 **중복 키 무시**  
 기존의 키 값과 동일한 키 값이 있는 일괄 삽입 작업을 진행하는 동안 행이 삽입되는 경우 적용할 결과를 지정합니다. 다음 옵션을 선택할 수 있습니다.  
   
--   **예** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 경고가 표시되고 문제가 발생한 행을 삽입하지 않은 채 나머지 행을 삽입합니다.  
+-   **예** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 경고가 표시되고 문제가 발생한 행을 삽입하지 않은 채 나머지 행을 삽입합니다.  
   
--   **아니요** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 오류 메시지가 표시되고 일괄 삽입 작업 전체가 롤백됩니다.  
+-   **아니요** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 오류 메시지가 표시되고 일괄 삽입 작업 전체가 롤백됩니다.  
   
 **포함된 열**  
 인덱스 키를 구성하는 열 전체의 이름을 쉼표로 구분된 목록으로 표시합니다. 하위 키 열은 비클러스터형 인덱스에 대해서만 지정할 수 있습니다. XML 인덱스에 대해서는 이 속성이 숨겨집니다.  
@@ -115,6 +116,6 @@ ms.locfileid: "68254337"
 현재 인덱스에 대해 행 수준의 잠금이 허용되는지 여부를 지정합니다. 행 수준의 잠금 허용 여부는 데이터베이스 성능에 영향을 줍니다. 권장 설정은 **예**입니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[제약 조건 작업(Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
-[키 작업(Visual Database Tools)](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
+[제약 조건 작업(https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e) ]  
+[키 사용(https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd) ]  
   

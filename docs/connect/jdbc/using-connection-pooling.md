@@ -11,10 +11,10 @@ ms.assetid: 699d4e8a-34bf-4c60-b0d5-4a10dad6084a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69aa4d7f29d8c7963f9b300f868bc8265cde2fd0
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026369"
 ---
 # <a name="using-connection-pooling"></a>연결 풀링 사용
@@ -26,11 +26,11 @@ ms.locfileid: "69026369"
 > [!NOTE]  
 > JDBC 드라이버는 Java EE 연결 풀링을 지원하지만 자체 풀링 구현을 제공하지는 않습니다. 대신 JDBC 드라이버는 타사 Java 애플리케이션 서버를 통해 연결을 관리합니다.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 연결 풀링을 구현하는 데 필요한 클래스는 다음과 같습니다.  
   
-| 클래스                                                           | 구현                                                    | 설명                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| 클래스                                                           | 구현                                                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | --------------------------------------------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | com.microsoft.sqlserver.jdbc. SQLServerXADataSource             | javax.sql.ConnectionPoolDataSource and javax.sql.XADataSource | [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) 클래스는 모든 JDBC 3.0 풀링과 XA 인터페이스를 구현하므로 Java EE 서버가 필요한 모든 경우에 이 클래스를 사용하는 것이 좋습니다.                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | com.microsoft.sqlserver.jdbc. SQLServerConnectionPoolDataSource | javax.sql.ConnectionPoolDataSource                            | 이 클래스는 Java EE 애플리케이션 서버에서 해당 연결 풀을 실제 연결로 채울 수 있도록 하는 연결 팩터리입니다. Java EE 공급업체의 구성에 javax.sql.ConnectionPoolDataSource를 구현하는 클래스가 필요한 경우 클래스 이름을 [SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)로 지정합니다. [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) 클래스는 풀링 및 XA 인터페이스를 모두 구현하고 더 많은 Java EE 서버 구성에서 검증되었으므로 일반적으로 이 클래스를 사용하는 것이 좋습니다. |
@@ -40,6 +40,6 @@ ms.locfileid: "69026369"
 > [!NOTE]  
 > JDBC 드라이버는 현재 연결을 풀에 반환할 때 sp_reset_connection 저장 프로시저를 호출하지 않습니다. 대신 JDBC 드라이버는 타사 Java 애플리케이션 서버를 통해 연결을 원래 상태로 되돌립니다.  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [JDBC 드라이버로 SQL Server에 연결](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  

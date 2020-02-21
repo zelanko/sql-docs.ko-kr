@@ -16,13 +16,13 @@ ms.assetid: 55c6c8b6-dfad-499f-befa-042c1caba17f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 924db3a5f26fad62baaded79471786619d1ef9ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65569125"
 ---
-# <a name="msreportserverinstance-properties---instanceid"></a>MSReportServer_Instance 속성 - InstanceID
+# <a name="msreportserver_instance-properties---instanceid"></a>MSReportServer_Instance 속성 - InstanceID
   이 개체는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  

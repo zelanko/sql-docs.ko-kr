@@ -17,14 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f8dbafaede198c82b3e41625d3e670afd980c57a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893449"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>성능 카운터 MSRS 2011 웹 서비스, 성능 개체
-  이 항목에서는 **MSRS 2011 Web Service** 및 **MSRS 2011 Windows Service** 성능 개체에 대한 성능 카운터에 대해 설명합니다. 이 개체는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 기본 코드 배포의 일부입니다.  
+  이 문서에서는 **MSRS 2011 Web Service** 및 **MSRS 2011 Windows Service** 성능 개체에 대한 성능 카운터에 대해 설명합니다. 이 개체는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 기본 코드 배포의 일부입니다.  
   
 > [!NOTE]  
 >  이 성능 개체는 로컬 보고서 서버의 이벤트를 모니터링합니다. 스케일 아웃 배포에서 보고서 서버를 실행 중이면 개수는 현재 서버에만 적용되고 스케일 아웃 배포에는 적용되지 않습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "68893449"
   
  SharePoint 모드 성능 카운터와 관련된 내용은 [MSRS 2011 웹 서비스 SharePoint 모드 및 MSRS 2011 Windows 서비스 SharePoint 모드 성능 개체에 대한 성능 카운터&#40;SharePoint 모드&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)를 참조하세요.  
   
- 항목 내용  
+ 이 항목의 내용:  
   
 -   [MSRS 2011 웹 서비스 성능 카운터](#bkmk_webservice)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68893449"
   
  다음 표에서는 **MSRS 2011 Web Service** 성능 개체와 함께 제공되는 카운터를 나열합니다.  
   
-|카운터|설명|  
+|카운터|Description|  
 |-------------|-----------------|  
 |**Active Sessions**|활성 세션 수입니다. 이 카운터는 활성 상태인지 여부에 관계없이 보고서 실행에서 생성된 모든 브라우저 세션의 누적 개수를 제공합니다.<br /><br /> 이 카운터는 세션 레코드를 제거하면 감소합니다. 기본적으로 10분 동안 활동이 없으면 세션이 제거됩니다.|  
 |**Cache Hits/Sec**|캐시된 보고서에 대한 초당 요청 수입니다. 이러한 요청은 다시 렌더링된 보고서에 대한 것이며 캐시에서 직접 처리된 보고서에 대한 요청은 아닙니다. (이 항목 뒷부분에 나오는 **Total Cache Hits** 참조)|  
@@ -69,14 +69,14 @@ ms.locfileid: "68893449"
 |**Total Processing Failures**|보고서 서버 웹 서비스에 대한 요청 처리 오류 수입니다.|  
 |**Total Rejected Threads**|비동기 처리에 대해 거부되고 나중에 동일한 스레드에서 동기 프로세스로 처리된 총 스레드 수입니다. 각 데이터 원본은 하나의 스레드에서 처리됩니다. 스레드 볼륨이 용량을 초과하면 스레드는 비동기 처리에는 거부되고 순차 방식으로 처리됩니다.|  
 |**Total Reports Executed**|서비스 시작 이후 성공적으로 실행된 총 보고서 수입니다. 이 카운터는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 이 보고서 서버 웹 서비스를 중지할 때마다 다시 설정됩니다.|  
-|**Total Requests**|서비스 시작 이후 보고서 서버에 대한 총 요청 수입니다. 이 카운터는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 이 보고서 서버 웹 서비스를 중지할 때마다 다시 설정됩니다.|  
+|**총 요청 수**|서비스 시작 이후 보고서 서버에 대한 총 요청 수입니다. 이 카운터는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 이 보고서 서버 웹 서비스를 중지할 때마다 다시 설정됩니다.|  
   
 ##  <a name="bkmk_windowsservice"></a> MSRS 2011 Windows 서비스 성능 카운터  
  **MSRS 2011 Windows Service** 성능 개체는 보고서 서버 Windows 서비스를 모니터링합니다. 이 성능 개체에는 예약된 작업을 통해 시작된 보고서 처리를 추적하는 데 사용되는 카운터 모음이 들어 있습니다. 예약된 작업에는 구독 및 배달, 보고서 실행 스냅샷 및 보고서 기록이 포함될 수 있습니다. 이 카운터를 설정하면 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스에 카운터를 적용하거나 특정 인스턴스를 선택할 수 있습니다.  
   
  다음 표에서는 **MSRS 2011 Windows Service** 성능 개체에 포함된 카운터를 나열합니다.  
   
-|카운터|설명|  
+|카운터|Description|  
 |-------------|-----------------|  
 |**Active Sessions**|보고서 서버 데이터베이스에 저장된 활성 세션의 수입니다. 이 카운터는 활성 상태인지 여부에 관계없이 보고서 구독에서 생성된 사용 가능한 모든 브라우저 세션의 누적 개수를 제공합니다.|  
 |**Cache Flushes/Sec**|초당 캐시 플러시 수입니다.|  
@@ -107,11 +107,11 @@ ms.locfileid: "68893449"
 |**Total Processing Failures**|보고서 서버 Windows 서비스의 요청 처리 오류 수입니다.|  
 |**Total Rejected Threads**|비동기 처리에 대해 거부되고 나중에 동일한 스레드에서 동기 프로세스로 처리된 총 스레드 수입니다. 보통 또는 과도한 로드 상태에서 이 카운터는 계속 증가합니다.|  
 |**Total Reports Executed**|실행된 총 보고서 수입니다.|  
-|**Total Requests**|서비스 시작 이후 성공적으로 실행된 총 보고서 수입니다. 애플리케이션 도메인을 재활용하면 이 카운터가 다시 설정됩니다.|  
+|**총 요청 수**|서비스 시작 이후 성공적으로 실행된 총 보고서 수입니다. 애플리케이션 도메인을 재활용하면 이 카운터가 다시 설정됩니다.|  
 |**Total Snapshot Updates**|보고서 실행 스냅샷에 대한 총 업데이트 수입니다.|  
   
 ##  <a name="bkmk_powershell"></a> PowerShell Cmdlet을 사용하여 목록 반환  
- ![PowerShell 관련 콘텐츠](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")다음 Windows PowerShell 스크립트는 CounterSetName이 "msr"로 시작하는 카운터 집합을 반환합니다.  
+ ![PowerShell 관련 콘텐츠](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")다음 Windows PowerShell 스크립트는 CounterSetName이 “msr”로 시작되는 카운터 집합을 반환합니다.  
   
 ```  
 get-counter -listset msr*  

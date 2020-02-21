@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cc2f32dd81e8dd505b6eaa79359ce10c757ea744
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577766"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>SharePoint 통합 모드에서 Reporting Services에 RDL 샌드박싱 설정 및 해제
@@ -39,7 +39,7 @@ RDL(Report Definition Language) 샌드박싱 기능을 사용하면 보고서 �
   
 -   식의 명명된 매개 변수  
   
- 이 항목에서는 RSReportServer.Config 파일에서 \<**RDLSandboxing**> 요소의 각 요소에 대해 설명합니다. 이 파일을 수정하는 방법은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요. 서버 추적 로그는 RDL 샌드박싱 기능과 관련된 작업을 기록합니다. 추적 로그에 대한 자세한 내용은 [보고서 서버 서비스 추적 로그](../../reporting-services/report-server/report-server-service-trace-log.md)를 참조하세요.  
+ 이 문서에서는 RSReportServer.Config 파일에서 \<**RDLSandboxing**> 요소의 각 요소에 대해 설명합니다. 이 파일을 수정하는 방법은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요. 서버 추적 로그는 RDL 샌드박싱 기능과 관련된 작업을 기록합니다. 추적 로그에 대한 자세한 내용은 [보고서 서버 서비스 추적 로그](../../reporting-services/report-server/report-server-service-trace-log.md)를 참조하세요.  
   
 ## <a name="example-configuration"></a>구성 예
  다음 예에서는 RSReportServer.Config 파일의 \<**RDLSandboxing**> 요소에 대한 설정 및 값 예를 보여 줍니다.  
@@ -65,17 +65,17 @@ RDL(Report Definition Language) 샌드박싱 기능을 사용하면 보고서 �
 
  다음 표에서는 구성 설정 정보를 제공합니다. 설정은 구성 파일에 나타나는 순서로 표시됩니다.  
   
-|설정|설명|  
+|설정|Description|  
 |-------------|-----------------|  
-|**MaxExpressionLength**|RDL 식에 허용되는 최대 문자 수입니다.<br /><br /> 기본값: 1000|  
-|**MaxResourceSize**|외부 리소스에 허용되는 최대 크기(KB)입니다.<br /><br /> 기본값: 100|  
-|**MaxStringResultLength**|RDL 식의 반환 값에 허용되는 최대 문자 수입니다.<br /><br /> 기본값: 1000|  
-|**MaxArrayResultLength**|RDL 식의 배열 반환 값에 허용되는 최대 항목 수입니다.<br /><br /> 기본값: 100|  
+|**MaxExpressionLength**|RDL 식에 허용되는 최대 문자 수입니다.<br /><br /> Default: 1000|  
+|**MaxResourceSize**|외부 리소스에 허용되는 최대 크기(KB)입니다.<br /><br /> Default: 100|  
+|**MaxStringResultLength**|RDL 식의 반환 값에 허용되는 최대 문자 수입니다.<br /><br /> Default: 1000|  
+|**MaxArrayResultLength**|RDL 식의 배열 반환 값에 허용되는 최대 항목 수입니다.<br /><br /> Default: 100|  
 |**유형**|RDL 식 내에 허용할 멤버 목록입니다.|  
-|**Allow**|RDL 식에 허용할 형식 또는 형식 집합입니다.|  
+|**허용**|RDL 식에 허용할 형식 또는 형식 집합입니다.|  
 |**Namespace**|**Allow** 의 특성이며, Value에 적용되는 하나 이상의 형식이 포함된 네임스페이스입니다. 이 속성은 대/소문자를 구분하지 않습니다.|  
 |**AllowNew**|**Allow**의 부울 특성이며, 새 형식 인스턴스를 RDL 식에 만들 수 있는지 아니면 RDL **\<Class>** 요소에 만들 수 있는지를 제어합니다.<br /><br /> 참고: **RDLSandboxing**을 사용하도록 설정하면 **AllowNew** 설정에 관계 없이 새 배열을 RDL 식에 만들 수 없습니다.|  
-|**Value**|**Allow** 의 값이며, RDL 식에 허용할 형식의 이름입니다. **\*** 값은 네임스페이스의 모든 형식이 허용됨을 나타냅니다. 이 속성은 대/소문자를 구분하지 않습니다.|  
+|**값**|**Allow** 의 값이며, RDL 식에 허용할 형식의 이름입니다. **\*** 값은 네임스페이스의 모든 형식이 허용됨을 나타냅니다. 이 속성은 대/소문자를 구분하지 않습니다.|  
 |**멤버**|**\<Types>** 요소에 포함된 형식 목록의 경우 RDL 식에 허용되지 않는 멤버 이름 목록입니다.|  
 |**거부**|RDL 식에 허용되지 않는 멤버의 이름입니다. 이 속성은 대/소문자를 구분하지 않습니다.<br /><br /> 멤버에 **거부**가 지정되면 모든 형식에 대해 이 이름을 사용하는 멤버가 모두 허용되지 않습니다.|  
   
@@ -104,7 +104,7 @@ RDL(Report Definition Language) 샌드박싱 기능을 사용하면 보고서 �
   
 -   형식의 정적 멤버  
   
--   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **New** 메서드  
+-   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **New** 메서드.  
   
 -   보고서 정의의 **\<Classes>** 요소  
   
@@ -174,7 +174,7 @@ RDL(Report Definition Language) 샌드박싱 기능을 사용하면 보고서 �
   
 -   이 클래스를 허용 목록에 추가합니다.  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
  [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [보고서 서버 서비스 추적 로그](../../reporting-services/report-server/report-server-service-trace-log.md)  

@@ -11,10 +11,10 @@ ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b4886b1bd0f4ff62df06334af469a76b64600839
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027387"
 ---
 # <a name="understanding-isolation-levels"></a>격리 수준 이해
@@ -41,17 +41,17 @@ ms.locfileid: "69027387"
   
 격리 수준이 낮을수록 데이터에 동시에 액세스할 수 있는 사용자가 많아지지만 동시성 부작용(예: 커밋되지 않은 읽기 또는 업데이트 손실) 횟수도 늘어납니다. 반대로 격리 수준이 높을수록 동시성 부작용 종류가 줄어들지만 시스템 리소스가 더 많이 필요하게 되고 한 트랜잭션이 다른 트랜잭션을 차단하게 될 확률도 높아집니다. 적절한 격리 수준을 선택하려면 애플리케이션의 데이터 무결성 요구 사항과 각 격리 수준에 의해 야기되는 오버헤드를 신중하게 평가해야 합니다. 최상위 격리 수준인 직렬화 가능의 경우 트랜잭션이 읽기 작업을 반복할 때마다 정확히 동일한 데이터를 검색하지만 다중 사용자 시스템에서 다른 사용자에게 영향을 줄 수 있는 수준의 잠금을 수행함으로써 이를 달성합니다. 최하위 격리 수준인 커밋되지 않은 읽기의 경우 다른 트랜잭션에서 수정했지만 커밋되지 않은 데이터를 검색할 수 있습니다. 커밋되지 않은 읽기에서는 모든 동시성 부작용이 발생할 수 있지만 읽기 잠금이나 버전 관리가 수행되지 않으므로 오버헤드가 최소화됩니다.  
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
  다음 표에서는 각 격리 수준에서 허용되는 동시성 부작용을 보여 줍니다.  
   
 | 격리 수준  | 커밋되지 않은 읽기 | 반복하지 않는 읽기 | 가상 |
 | ---------------- | ---------- | ------------------- | ------- |
-| 커밋되지 않은 읽기 | 예        | 예                 | 예     |
-| 커밋된 읽기   | 아니오         | 예                 | 예     |
-| 반복 읽기  | 아니오         | 아니오                  | 예     |
-| 스냅샷         | 아니오         | 아니오                  | 아니오      |
-| 직렬화 가능     | 아니오         | 아니오                  | 아니오      |
+| 커밋되지 않은 읽기 | yes        | yes                 | yes     |
+| 커밋된 읽기   | 예         | yes                 | yes     |
+| 반복 읽기  | 예         | 예                  | yes     |
+| 스냅샷         | 예         | 예                  | 예      |
+| 직렬화 가능     | 예         | 예                  | 예      |
   
 두 트랜잭션이 각기 동일한 행을 검색할 때 발생할 수 있는 업데이트 손실을 방지하려면 반복 읽기 이상의 격리 수준에서 트랜잭션을 실행해야 합니다. 그런 다음 원래 검색된 값에 따라 행을 업데이트하십시오. 두 트랜잭션이 한 개의 UPDATE 문을 사용하여 행을 업데이트하더라도 업데이트가 이전에 검색된 값에 따라 수행되지 않을 경우 기본 격리 수준인 커밋된 읽기에서는 업데이트 손실이 발생하지 않습니다.  
 
@@ -75,6 +75,6 @@ con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 격리 수준에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 "[!INCLUDE[ssDE](../../includes/ssde_md.md)]의 격리 수준"을 참조하세요.  
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [JDBC 드라이버로 트랜잭션 수행](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  

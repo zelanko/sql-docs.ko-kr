@@ -11,10 +11,10 @@ ms.assetid: 40f75549-5d5a-4de3-a271-4b8f0dd7b124
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c5a75910ee54db4e764d63755e3d7c8c174c16a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67997099"
 ---
 # <a name="updateblob-method-javalangstring-javaioinputstream-long"></a>updateBlob 메서드(java.lang.String, java.io.InputStream, long)
@@ -47,7 +47,7 @@ public void updateBlob(java.lang.String columnLabel,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 updateBlob 메서드는 java.sql.ResultSet 인터페이스의 updateBlob 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

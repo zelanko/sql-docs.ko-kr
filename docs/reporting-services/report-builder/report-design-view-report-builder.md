@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3dff76f6293b5f02373234fb2546076f7584f13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 7ecc2115b106fe61492be388c90cfa2bd27eae9f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577982"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190040"
 ---
 # <a name="report-design-view-report-builder"></a>보고서 디자인 뷰(보고서 작성기)
   보고서 작성기 창은 보고서 리소스를 쉽게 구성하고 필요한 페이지가 매겨진 보고서를 신속하게 작성할 수 있도록 디자인되어 있습니다. 디자인 화면은 창의 가운데에 있고 그 주위에 리본과 창이 있습니다. 디자인 화면에서 보고서 항목을 추가하고 구성합니다. 이 문서에서는 보고서 리소스를 추가, 선택 및 구성하고 보고서 항목 속성을 변경하는 데 사용하는 창에 대해 설명합니다.  
@@ -98,7 +98,7 @@ ms.locfileid: "65577982"
   
 -   [이미지&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)  
   
--   [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+-   [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
 -   [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
@@ -139,11 +139,11 @@ ms.locfileid: "65577982"
 ### <a name="changing-the-properties-pane-view"></a>속성 창 보기 변경  
  속성 창에 표시되는 속성은 기본적으로 Action, Border, Fill, Font 및 General이라는 큰 범주로 나뉘어 표시됩니다. 범주마다 연관된 속성 집합이 있습니다. 예를 들어 Color, FontFamily, FontSize, FontStyle, FontWeight, LineHeight 및 TextDecoration 속성은 Font 범주에 나타납니다. 원하는 경우 속성 창에서 모든 속성을 사전순으로 표시할 수 있습니다. 이 경우 범주가 없어지고 모든 속성이 범주에 관계없이 사전순으로 표시됩니다.  
   
- 속성 창의 아래쪽에는 범주, 사전순, 속성 페이지라는 세 개의 단추가 있습니다. 범주 및 사전순 단추를 클릭하면 속성 창 보기를 전환할 수 있고 **속성 페이지** 단추를 클릭하면 선택한 보고서 항목의 속성 대화 상자를 열 수 있습니다.  
+ 속성 창의 위쪽에는 범주, 사전순, 속성 페이지라는 세 개의 단추가 있습니다. 범주 및 사전순 단추를 클릭하면 속성 창 보기를 전환할 수 있고 **속성 페이지** 단추를 클릭하면 선택한 보고서 항목의 속성 대화 상자를 열 수 있습니다.  
   
   
 ##  <a name="GroupPane"></a> 그룹화 창(보고서 작성기)  
- 그룹은 보고서 데이터를 시각적 계층으로 구성하고 합계를 계산하는 데 사용됩니다. 디자인 화면은 물론 그룹화 창에서도 데이터 영역 내의 행 및 열 그룹을 볼 수 있습니다. 그룹화 창에는 행 그룹과 열 그룹의 두 창이 있습니다. 데이터 영역을 선택하면 해당 데이터 영역 내의 모든 그룹이 계층적 목록으로 그룹화 창에 표시되며, 자식 그룹은 해당 부모 그룹보다 한 수준 아래에 표시됩니다.  
+ 그룹은 보고서 데이터를 시각적 계층으로 구성하고 합계를 계산하는 데 사용됩니다. 디자인 화면은 물론 그룹화 창에서도 데이터 영역 내의 행 및 열 그룹을 볼 수 있습니다. 그룹화 창에는 행 그룹과 열 그룹이라는 두 개의 창이 있습니다. 데이터 영역을 선택하면 해당 데이터 영역 내의 모든 그룹이 계층적 목록으로 그룹화 창에 표시되며, 자식 그룹은 해당 부모 그룹보다 한 수준 아래에 표시됩니다.  
   
  ![보고서 작성기 행 그룹](../../reporting-services/report-builder/media/ssrb-rowgroups.png "보고서 작성기 행 그룹")  
   
@@ -162,7 +162,7 @@ ms.locfileid: "65577982"
  자세한 내용은 [보고서 작성기에서 보고서 미리 보기](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)를 참조하세요.  
   
 ### <a name="running-a-report-with-parameters"></a>매개 변수가 있는 보고서 실행  
- 보고서를 실행하면 보고서가 자동으로 처리됩니다. 보고서에 매개 변수가 있는 경우 모든 매개 변수에 기본값이 있어야 보고서를 자동으로 실행할 수 있습니다. 매개 변수에 기본값이 없는 경우 보고서를 실행할 때에는 매개 변수 값을 선택한 후 실행 탭에서 **보고서 보기** 를 클릭해야 합니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)를 참조하세요.  
+ 보고서를 실행하면 보고서가 자동으로 처리됩니다. 보고서에 매개 변수가 있는 경우 모든 매개 변수에 기본값이 있어야 보고서를 자동으로 실행할 수 있습니다. 매개 변수에 기본값이 없는 경우 보고서를 실행할 때에는 매개 변수 값을 선택한 후 실행 탭에서 **보고서 보기** 를 클릭해야 합니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)에 대해 자세히 알아봅니다.  
   
 ### <a name="print-preview"></a>인쇄 미리 보기  
  보고서를 실행 모드에서 미리 보면 HTML로 생성된 보고서와 유사하게 표시됩니다. 미리 보기는 HTML 형식은 아니지만 보고서의 레이아웃 및 페이지 매기기는 HTML 출력과 유사합니다. 인쇄 미리 보기 모드로 전환하여 인쇄될 보고서를 표시할 수 있습니다. **실행** 탭에서 **인쇄 미리 보기** 단추를 클릭합니다. 보고서는 실제 인쇄된 페이지처럼 표시되며 이미지 및 PDF 렌더링 확장 프로그램에서 생성된 출력과도 유사합니다. 인쇄 미리 보기는 이미지나 PDF 파일 형식은 아니지만 보고서의 레이아웃 및 페이지 매기기는 해당 형식의 출력과 유사합니다.  

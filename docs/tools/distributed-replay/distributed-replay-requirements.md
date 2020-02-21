@@ -1,7 +1,6 @@
 ---
-title: Distributed Replay 요구 사항 | Microsoft Docs
-ms.custom: ''
-ms.date: 01/18/2018
+title: Distributed Replay 요구 사항
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -9,12 +8,14 @@ ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 12b27321182e19d2a366e44c0a5ad1c325ee486d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 01/18/2018
+ms.openlocfilehash: 1adafe699b1168305042fbe3e9e840ca7a06e703
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075029"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74993624"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "68075029"
 ### <a name="input-trace-versions"></a>입력 추적 버전  
  Distributed Replay는 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 수집된 입력 추적 데이터를 지원합니다.  
   
--   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]누적 업데이트 1 이상 [SQL Server 2017 누적 업데이트](https://aka.ms/sql2017cu)를 참조 하세요.
+-   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 누적 업데이트 1 이상. [SQL Server 2017 누적 업데이트](https://aka.ms/sql2017cu)를 참조하세요.
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
@@ -49,9 +50,9 @@ ms.locfileid: "68075029"
   
  사용자 지정 추적 템플릿을 만들고 이를 통해 Distributed Replay를 사용하여 이벤트를 재생할 수도 있습니다. 이 경우 사용자 지정 추적 템플릿에 다음 이벤트가 포함되어 있어야 합니다.  
   
--   Audit Login  
+-   로그인 감사  
   
--   Audit Logout  
+-   로그아웃 감사  
   
 -   ExistingConnection  
   
@@ -91,7 +92,7 @@ ms.locfileid: "68075029"
   
 -   TextData  
   
--   Application Name  
+-   애플리케이션 이름  
   
 -   LoginName  
   
@@ -101,7 +102,7 @@ ms.locfileid: "68075029"
   
 -   HostName  
   
--   Binary Data  
+-   이진 데이터  
   
 -   SPID  
   
@@ -160,6 +161,6 @@ ms.locfileid: "68075029"
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Distributed Replay 보안](../../tools/distributed-replay/distributed-replay-security.md)   
- [Install Distributed Replay - Overview](../../tools/distributed-replay/install-distributed-replay-overview.md)  
+ [Distributed Replay 설치 - 개요](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   
   

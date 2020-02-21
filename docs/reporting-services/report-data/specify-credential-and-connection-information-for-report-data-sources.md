@@ -1,6 +1,7 @@
 ---
-title: 보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정 | Microsoft Docs
-ms.date: 08/17/2018
+title: 보고서 데이터 원본에 대한 자격 증명 및 연결 정보 설정 | Microsoft Docs
+description: 보고서 서버에서는 자격 증명을 사용하여 보고서에 내용을 제공하거나 데이터 기반 구독에 받는 사람 정보를 제공하는 외부 데이터 원본에 연결합니다.
+ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d6b5041b07551ba8bbd23cc3f737fc0c09d72ff1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: ab7f9d0717cac0dae86eb2b5202fd02de254c5e0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575346"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244560"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정
   보고서 서버에서는 자격 증명을 사용하여 보고서에 내용을 제공하거나 데이터 기반 구독에 받는 사람 정보를 제공하는 외부 데이터 원본에 연결합니다. Windows 인증, 데이터베이스 인증, 인증 안 함 또는 사용자 지정 인증을 사용하는 자격 증명을 지정할 수 있습니다. 네트워크를 통해 연결 요청을 보낼 경우 보고서 서버에서는 사용자 계정 또는 무인 실행 계정을 가장하게 됩니다. 연결 요청이 이루어지는 보안 컨텍스트에 대한 자세한 내용은 이 항목의 [데이터 원본 구성 및 네트워크 연결](#DataSourceConfigurationConnections) 을 더 참조하십시오.  
@@ -39,7 +40,7 @@ ms.locfileid: "65575346"
 > [!NOTE]  
 >  자격 증명은 보고서 서버에 액세스하는 사용자를 인증하는 데도 사용됩니다. 보고서 서버에 대해 사용자를 인증하는 방법은 다른 항목에서 제공합니다.  
   
- 외부 데이터 원본에 대한 연결은 사용자가 보고서를 만들 때 정의됩니다. 이것은 보고서가 게시된 후 별도로 관리할 수 있습니다. 사용자가 동적 목록에서 데이터 원본을 선택할 수 있도록 하는 정적 연결 문자열 또는 식을 지정할 수 있습니다. 데이터 원본 유형 및 연결 문자열을 지정하는 방법은 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.  
+ 외부 데이터 원본에 대한 연결은 사용자가 보고서를 만들 때 정의됩니다. 이것은 보고서가 게시된 후 별도로 관리할 수 있습니다. 사용자가 동적 목록에서 데이터 원본을 선택할 수 있도록 하는 정적 연결 문자열 또는 식을 지정할 수 있습니다. 데이터 원본 형식 및 연결 문자열을 지정하는 방법에 대한 자세한 내용은 [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="when-credentials-are-used-in-report-builder"></a>보고서 작성기에서 자격 증명이 사용된 경우  
  보고서 작성기에서 자격 증명은 주로 보고서 서버에 연결할 때 또는 포함된 데이터 원본 작성, 데이터 세트 쿼리 실행 또는 보고서 미리 보기와 같은 데이터 관련 태스크를 위해 사용됩니다. 자격 증명은 보고서에 저장되지 않습니다. 자격 증명은 보고서 서버나 로컬 클라이언트에서 별도로 관리됩니다. 다음 목록에서는 제공해야 하는 자격 증명 유형, 자격 증명이 저장되는 위치 및 사용 방법을 설명합니다.  
@@ -153,15 +154,15 @@ ms.locfileid: "65575346"
 |--------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|  
 |통합 보안|현재 사용자를 가장합니다.|모든 데이터 원본 유형에 대해 현재 사용자 계정을 사용하여 연결합니다.|  
 |Windows 자격 증명|지정한 사용자를 가장합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC 및 OLE DB의 경우: 가장된 사용자 계정을 사용하여 연결합니다.|  
-|데이터베이스 자격 증명|무인 실행 계정 또는 서비스 계정을 가장합니다.<br /><br /> Reporting Services는 서비스 ID를 사용하여 연결 요청을 보낼 경우 관리자 권한을 제거합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC 및 OLE DB의 경우:<br /><br /> 사용자 이름과 암호를 연결 문자열에 추가합니다.<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 경우:<br /><br /> TCP/IP 프로토콜을 사용할 경우 연결되고 그렇지 않을 경우 연결에 실패합니다.<br /><br /> XML의 경우<br /><br /> 데이터베이스 자격 증명을 사용할 경우 보고서 서버에서 연결에 실패합니다.|  
-|없음|무인 실행 계정을 가장합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC 및 OLE DB의 경우:<br /><br /> 연결 문자열에 정의된 자격 증명을 사용합니다. 무인 실행 계정이 정의되어 있지 않으면 보고서 서버에서 연결에 실패합니다.<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 경우:<br /><br /> 무인 실행 계정이 정의되어 있더라도 자격 증명을 지정하지 않으면 항상 연결에 실패합니다.<br /><br /> XML의 경우<br /><br /> 무인 실행 계정이 정의되어 있는 경우 익명 사용자로 연결하고, 그렇지 않으면 연결에 실패합니다.|  
+|데이터베이스 자격 증명|무인 실행 계정 또는 서비스 계정을 가장합니다.<br /><br /> Reporting Services는 서비스 ID를 사용하여 연결 요청을 보낼 경우 관리자 권한을 제거합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC 및 OLE DB의 경우:<br /><br /> 사용자 이름과 암호를 연결 문자열에 추가합니다.<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 경우<br /><br /> TCP/IP 프로토콜을 사용할 경우 연결되고 그렇지 않을 경우 연결에 실패합니다.<br /><br /> XML의 경우<br /><br /> 데이터베이스 자격 증명을 사용할 경우 보고서 서버에서 연결에 실패합니다.|  
+|None|무인 실행 계정을 가장합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC 및 OLE DB의 경우:<br /><br /> 연결 문자열에 정의된 자격 증명을 사용합니다. 무인 실행 계정이 정의되어 있지 않으면 보고서 서버에서 연결에 실패합니다.<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 경우<br /><br /> 무인 실행 계정이 정의되어 있더라도 자격 증명을 지정하지 않으면 항상 연결에 실패합니다.<br /><br /> XML의 경우<br /><br /> 무인 실행 계정이 정의되어 있는 경우 익명 사용자로 연결하고, 그렇지 않으면 연결에 실패합니다.|  
   
 ## <a name="setting-credentials-programmatically"></a>프로그래밍 방식으로 자격 증명 설정  
  코드에 자격 증명을 설정하여 보고서 및 보고서 서버에 대한 액세스를 제어할 수 있습니다. 자세한 내용은 [Data Sources and Connection Methods](../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
- [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [보고서 데이터 원본 관리](../../reporting-services/report-data/manage-report-data-sources.md)   
  [보고서의 데이터 원본 속성 구성](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   

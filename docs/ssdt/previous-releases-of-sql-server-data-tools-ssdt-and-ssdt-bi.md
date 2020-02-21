@@ -1,24 +1,26 @@
 ---
-title: SQL Server Data Tools(SSDT 및 SSDT-BI)의 이전 릴리스 | Microsoft Docs
-ms.custom: ''
-ms.date: 09/05/2018
+title: SSDT의 이전 릴리스
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
+ms.reviewer: “”
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 5d32e301-0f44-4916-b0db-76e8322c0ab7
 author: markingmyname
 ms.author: maghan
+manager: jroth
+ms.custom: seo-lt-2019
+ms.date: 09/05/2018
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: e51d931d46fe490303df20c1590e721e25f5ab92
-ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
+ms.openlocfilehash: 07504e19591b1f64aac77ebbc825bea58931b536
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68290332"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75688571"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>SQL Server Data Tools(SSDT 및 SSDT-BI)의 이전 릴리스
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 SSDT(SQL Server Data Tools)는 관계형 데이터베이스, Analysis Services 모델, Reporting Services 보고서, Integration Services 패키지 등의 SQL Server 콘텐츠 형식을 빌드하기 위한 프로젝트 템플릿 및 디자인 화면을 제공합니다.  
   
@@ -33,6 +35,7 @@ SSDT는 이전 버전과 호환되므로 항상 [최신 SSDT](download-sql-serve
 
 |SSDT 릴리스| Visual Studio 2017|
 |:---|:---|
+|15.9.2|[VS2017 15.9.2용 SSDT](https://go.microsoft.com/fwlink/?linkid=2095463)|
 |15.9.1|[VS2017 15.9.1용 SSDT](https://go.microsoft.com/fwlink/?linkid=2086373)|
 |15.9.0|[VS2017 15.9.0용 SSDT](https://go.microsoft.com/fwlink/?linkid=2052454)|
 |15.8.2|[VS2017 15.8.2용 SSDT](https://go.microsoft.com/fwlink/?linkid=2038031)|

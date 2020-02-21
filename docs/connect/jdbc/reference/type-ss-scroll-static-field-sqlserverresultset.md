@@ -1,5 +1,5 @@
 ---
-title: TYPE_SS_SCROLL_STATIC 필드 (SQLServerResultSet) | Microsoft Docs
+title: TYPE_SS_SCROLL_STATIC 필드(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: 179551a0-3ca4-4816-8098-8195898c997f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b37347b41fb0a1a4305934c8611538a9cba92fa4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67985681"
 ---
-# <a name="typessscrollstatic-field-sqlserverresultset"></a>TYPE_SS_SCROLL_STATIC 필드(SQLServerResultSet)
+# <a name="type_ss_scroll_static-field-sqlserverresultset"></a>TYPE_SS_SCROLL_STATIC 필드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 정적 커서 유형을 지정하는 데 사용됩니다.  

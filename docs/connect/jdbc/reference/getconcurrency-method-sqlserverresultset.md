@@ -16,10 +16,10 @@ ms.assetid: 207e25f4-769c-4ff3-913c-3517b06208e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5d0d59186e15dc07d1d4e91ac673c456ec592d01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952820"
 ---
 # <a name="getconcurrency-method-sqlserverresultset"></a>getConcurrency 메서드(SQLServerResultSet)
@@ -34,7 +34,7 @@ ms.locfileid: "67952820"
 public int getConcurrency()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  다음 값 중 하나에 해당되는 동시성 유형을 나타내는 **int**입니다.  
   
  ResultSet.CONCUR_READ_ONLY  
@@ -44,8 +44,8 @@ public int getConcurrency()
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getConcurrency 메서드는 java. ResultSet 인터페이스의 getConcurrency 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getConcurrency 메서드는 java.sql.ResultSet 인터페이스의 getConcurrency 메서드에 의해 지정됩니다.  
   
  사용되는 동시성은 해당 결과 집합을 만든 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체에 의해 결정됩니다.  
   

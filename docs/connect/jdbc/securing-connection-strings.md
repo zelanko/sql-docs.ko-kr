@@ -1,5 +1,5 @@
 ---
-title: 연결 문자열 보안 설정 | Microsoft Docs
+title: 연결 문자열 보안 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 69ce8557-5260-4ea4-81b8-d0c5481f0868
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1483beed275649156ab84c370facc716818fb974
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027738"
 ---
 # <a name="securing-connection-strings"></a>연결 문자열 보안
@@ -29,6 +29,6 @@ ms.locfileid: "69027738"
 
 사용자 ID와 암호를 제공하는 사용자처럼 외부 원본에서 연결 문자열 정보를 가져오는 경우 원본 입력의 유효성을 검사하여 입력이 올바른 형식을 따르며 연결에 영향을 주는 추가 매개 변수가 들어 있지 않은지 확인해야 합니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [JDBC 드라이버 애플리케이션 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)

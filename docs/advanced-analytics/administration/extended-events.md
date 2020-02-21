@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 272e92bed10261b5701e2dcb4d35092ad11d59c3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727741"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 확장 이벤트를 사용하여 Python 및 R 스크립트 모니터링
@@ -46,7 +46,7 @@ AND p.name = 'SQLSatellite';
 
 ## <a name="table-of-extended-events"></a>확장 이벤트 테이블
 
-|이벤트|설명|참고|  
+|행사|Description|메모|  
 |-----------|-----------------|---------|  
 |connection_accept|새 연결이 허용될 때 발생합니다. 이 이벤트는 모든 연결 시도를 기록합니다.||  
 |failed_launching|시작하지 못했습니다.|오류를 나타냅니다.|  
@@ -97,7 +97,7 @@ SQL Server Machine Learning Services는 SQL Server 프로세스 외부에서 실
      
     **R:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`.  
 
-    **python:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\library\RevoScaleR\rxLibs\x64`.
+    **Python:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\library\RevoScaleR\rxLibs\x64`.
 
 구성 파일은 "[name].xevents.xml" 형식을 사용하여 실행 파일과 같은 이름을 지정해야 합니다. 즉, 파일 이름을 다음과 같이 지정해야 합니다.
 
@@ -125,7 +125,7 @@ SQL Server Machine Learning Services는 SQL Server 프로세스 외부에서 실
 + 추적을 구성하려면 *세션 이름* 자리 표시자, 파일 이름(`[SessionName].xel`)의 자리 표시자, 캡처할 이벤트의 이름(예: `[XEvent Name 1]`, `[XEvent Name 1]`)을 편집합니다.  
 + 사용할 수 있는 이벤트 패키지 태그의 수에는 제한이 없으며, name 특성이 올바르기만 하면 수집됩니다.
 
-### <a name="example-capturing-launchpad-events"></a>예: 실행 패드 이벤트 캡처
+### <a name="example-capturing-launchpad-events"></a>예제: 실행 패드 이벤트 캡처
 
 다음 예제는 실행 패드 서비스 이벤트 추적에 대한 정의를 보여줍니다.
 
@@ -148,7 +148,7 @@ SQL Server Machine Learning Services는 SQL Server 프로세스 외부에서 실
 + SQL Server 인스턴스의 Binn 디렉터리에 *.config* 파일을 배치합니다.
 + 이 파일의 이름은 `Launchpad.xevents.xml`이어야 합니다.
 
-### <a name="example-capturing-bxlserver-events"></a>예: BXLServer 이벤트 캡처  
+### <a name="example-capturing-bxlserver-events"></a>예제: BXLServer 이벤트 캡처  
 
 다음 예는 BXLServer 실행 파일 이벤트 추적에 대한 정의를 보여줍니다.
   

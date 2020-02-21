@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 94175594fe2539320941b5a83c1a7aa4b127783f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70155684"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
@@ -27,7 +27,7 @@ SQL Server 2014 SP2는 SQL Server 2014 SP1 CU7에 대해 릴리스된 핫픽스�
 
 ### <a name="performance-and-scalability-improvements-in-sp2"></a>SP2의 향상된 성능 및 확장성
 
-|기능|설명|참조 항목|
+|기능|Description|참조 항목|
 |---|---|---|
 |자동 소프트 NUMA 분할|NUMA 노드당 8개 이상의 CPU를 보고하는 시스템에 소프트 NUMA를 자동으로 구성할 수 있습니다.|[soft-NUMA(SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)|
 |Buffer Pool Extension|8TB 이상으로 SQL Server 버퍼 풀을 확장할 수 있습니다.|[버퍼 풀 확장](https://docs.microsoft.com/sql/database-engine/configure-windows/buffer-pool-extension)|
@@ -38,7 +38,7 @@ SQL Server 2014 SP2는 SQL Server 2014 SP1 CU7에 대해 릴리스된 핫픽스�
 
 ### <a name="supportability-and-diagnostics-improvements-in-sp2"></a>SP2의 지원 가능성 및 진단 향상
 
-|기능|설명|참조 항목|
+|기능|Description|참조 항목|
 |---|---|---|
 |AlwaysON 시간 제한 로깅|현재 시간 및 예상된 갱신 시간이 기록되도록 임대 시간 제한 메시지에 대한 새 로깅 기능을 추가했습니다. |[향상된 AlwaysOn 가용성 그룹 임대 시간 제한 진단](https://blogs.msdn.microsoft.com/alwaysonpro/2016/02/23/improved-alwayson-availability-group-lease-timeout-diagnostics/)
 |AlwaysON XEvent 및 성능 카운터|AlwaysOn을 사용하여 대기 시간 문제를 해결할 때 진단을 개선하기 위한 새로운 AlwaysON XEvent 및 성능 카운터 |[KB 3107172](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve) 및 [KB 3107400](https://support.microsoft.com/help/3107400/improved-tempdb-spill-diagnostics-in-showplan-xml-schema-in-sql-server)
@@ -119,7 +119,7 @@ SQL Server 2014 SP1은 CU 5를 포함하여 SQL Server 2014 CU 1에서 제공하
   
 일부 언어에서 보고서 작성기 및 PowerPivot 콘텐츠를 사용할 수 없습니다. 
 
-**문제점:** 보고서 작성기 콘텐츠는 다음 언어에서 사용할 수 없습니다.  
+**문제:** 보고서 작성기 콘텐츠는 다음 언어에서 사용할 수 없습니다.  
   
 -   그리스어(el-GR)  
 -   노르웨이어(복말)(nb-NO)  
@@ -130,7 +130,7 @@ SQL Server 2014 SP1은 CU 5를 포함하여 SQL Server 2014 CU 1에서 제공하
   
 **해결 방법:** 없음  
   
-**문제점:** Power Pivot 콘텐츠는 다음 언어에서 사용할 수 없습니다.
+**문제:** Power Pivot 콘텐츠는 다음 언어에서 사용할 수 없습니다.
   
 -   그리스어(el-GR)  
 -   노르웨이어(복말)(nb-NO)  
@@ -157,7 +157,7 @@ SQL Server 2014 Standard의 변경 사항은 다음과 같습니다.
 -   최대 메모리가 64GB에서 128GB로 증가했습니다.  
  
 #### <a name="memory-optimization-advisor-flags-default-constraints-as-incompatible"></a>메모리 최적화 관리자가 호환되지 않는 것으로 기본 제약 조건에 플래그를 지정함  
-**문제점:** SQL Server Management Studio에서 메모리 최적화 관리자는 모든 기본 제약 조건에 호환되지 않는 것으로 플래그를 지정합니다. 일부 기본 제약 조건은 메모리 액세스에 최적화된 테이블에서 지원되지 않습니다. 메모리 최적화 관리자는 지원되는 유형의 기본 제약 조건과 지원되지 않는 유형의 기본 제약 조건을 구분하지 않습니다. 지원되는 기본 제약 조건에는 고유하게 컴파일된 저장 프로시저 내에서 지원되는 모든 상수, 식 및 기본 제공 함수가 포함됩니다. 고유하게 컴파일된 저장 프로시저에서 지원되는 함수 목록을 보려면 [고유하게 컴파일된 저장 프로시저에서 지원되는 구문](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx)을 참조하세요.  
+**문제:** SQL Server Management Studio에서 메모리 최적화 관리자는 모든 기본 제약 조건에 호환되지 않는 것으로 플래그를 지정합니다. 일부 기본 제약 조건은 메모리 액세스에 최적화된 테이블에서 지원되지 않습니다. 메모리 최적화 관리자는 지원되는 유형의 기본 제약 조건과 지원되지 않는 유형의 기본 제약 조건을 구분하지 않습니다. 지원되는 기본 제약 조건에는 고유하게 컴파일된 저장 프로시저 내에서 지원되는 모든 상수, 식 및 기본 제공 함수가 포함됩니다. 고유하게 컴파일된 저장 프로시저에서 지원되는 함수 목록을 보려면 [고유하게 컴파일된 저장 프로시저에서 지원되는 구문](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx)을 참조하세요.  
   
 **해결 방법:** 메모리 최적화 관리자를 사용하여 블로커를 식별하려면 호환되는 기본 제약 조건을 무시합니다. 메모리 최적화 관리자를 사용하여 다른 블로커를 제외하고 호환되는 기본 제약 조건이 있는 테이블을 마이그레이션하려면 다음 단계를 수행하십시오.  
   
@@ -167,7 +167,7 @@ SQL Server 2014 Standard의 변경 사항은 다음과 같습니다.
 4.  마이그레이션 스크립트를 실행합니다.  
   
 #### <a name="informational-message-file-access-denied-incorrectly-reported-as-an-error-in-the-sql-server-2014-error-log"></a>정보 메시지 "파일 액세스 거부됨"이 SQL Server 2014 오류 로그에서 오류로 잘못 보고됨  
-**문제점:** 메모리 최적화 테이블이 포함된 데이터베이스가 있는 서버를 다시 시작하면 다음과 같은 유형의 오류 메시지가 SQL Server 2014 오류 로그에 표시될 수 있습니다.  
+**문제:** 메모리 최적화 테이블이 포함된 데이터베이스가 있는 서버를 다시 시작하면 다음과 같은 유형의 오류 메시지가 SQL Server 2014 오류 로그에 표시될 수 있습니다.  
   
 ```  
 [ERROR]Unable to delete file C:\Program Files\Microsoft SQL   
@@ -179,19 +179,19 @@ memory-optimized table DLLs.
 **해결 방법:** 없음 이 메시지는 정보 제공용입니다.  
   
 #### <a name="missing-index-details-incorrectly-report-included-columns-for-memory-optimized-table"></a>메모리 최적화 테이블의 포함된 열이 누락된 인덱스 정보에서 잘못 보고됨  
-**문제점:** SQL Server 2014에서는 메모리 최적화 테이블에 대한 쿼리의 누락된 인덱스를 검색하는 경우 누락된 인덱스를 SHOWPLAN_XML에 보고하고, sys.dm_db_missing_index_details 등의 누락된 인덱스 DMV에도 보고합니다. 포함된 열이 누락된 인덱스 정보에 들어 있는 경우도 있습니다. 모든 열이 메모리 최적화 테이블의 모든 인덱스와 함께 암시적으로 포함되므로 메모리 최적화 인덱스를 사용하여 포함된 열을 명시적으로 지정할 수 없습니다.  
+**문제:** SQL Server 2014에서는 메모리 최적화 테이블에 대한 쿼리의 누락된 인덱스를 검색하는 경우 누락된 인덱스를 SHOWPLAN_XML에 보고하고, sys.dm_db_missing_index_details 등의 누락된 인덱스 DMV에도 보고합니다. 포함된 열이 누락된 인덱스 정보에 들어 있는 경우도 있습니다. 모든 열이 메모리 최적화 테이블의 모든 인덱스와 함께 암시적으로 포함되므로 메모리 최적화 인덱스를 사용하여 포함된 열을 명시적으로 지정할 수 없습니다.  
   
 **해결 방법:** 메모리 최적화 테이블의 인덱스를 사용하여 INCLUDE 절을 지정하지 않습니다.  
   
 #### <a name="missing-index-details-omit-missing-indexes-when-a-hash-index-exists-but-is-not-suitable-for-the-query"></a>해시 인덱스가 있지만 쿼리에 적합하지 않은 경우 누락된 인덱스가 누락된 인덱스 정보에서 생략됨  
-**문제점:** 쿼리에서 참조되는 메모리 최적화 테이블의 열에 HASH 인덱스가 있지만 이 인덱스를 쿼리에 사용할 수 없는 경우, SQL Server 2014에서 누락된 인덱스가 SHOWPLAN_XML과 sys.dm_db_missing_index_details DMV에 보고되지 않을 수도 있습니다.  
+**문제:** 쿼리에서 참조되는 메모리 최적화 테이블의 열에 HASH 인덱스가 있지만 이 인덱스를 쿼리에 사용할 수 없는 경우, SQL Server 2014에서 누락된 인덱스가 SHOWPLAN_XML과 sys.dm_db_missing_index_details DMV에 보고되지 않을 수도 있습니다.  
   
 특히 쿼리에 인덱스 키 열의 하위 집합이 포함된 같음 조건자가 있거나 인덱스 키 열이 포함된 같지 않음 조건자가 있는 경우, 해시 인덱스를 그대로 사용할 수 없으며 쿼리를 효율적으로 실행하려면 다른 인덱스가 필요합니다.  
   
 **해결 방법:** 해시 인덱스를 사용하는 경우 쿼리와 쿼리 계획을 조사하여 쿼리에서 인덱스 키의 하위 집합이나 같지 않음 조건자에 대한 Index Seek 연산을 활용할 수 있는지 여부를 확인합니다. 인덱스 키의 하위 집합에서 검색해야 하는 경우, 비클러스터형 인덱스를 사용하거나 검색해야 하는 정확한 열에서 해시 인덱스를 사용합니다. 같지 않음 조건자에서 검색해야 하는 경우에는 해시 대신 비클러스터형 인덱스를 사용합니다.  
   
 #### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-read_committed_snapshot-is-set-to-on"></a>READ_COMMITTED_SNAPSHOT 데이터베이스 옵션이 ON으로 설정된 경우 메모리 최적화 테이블과 메모리 최적화 테이블 변수를 동일한 쿼리에서 사용하면 실패함  
-**문제점:** READ_COMMITTED_SNAPSHOT 데이터베이스 옵션이 ON으로 설정된 경우, 사용자 트랜잭션 컨텍스트 외부의 동일한 문에서 메모리 최적화 테이블과 메모리 최적화 테이블 변수 둘 다에 액세스하면 다음과 같은 오류 메시지가 나타날 수 있습니다.  
+**문제:** READ_COMMITTED_SNAPSHOT 데이터베이스 옵션이 ON으로 설정된 경우, 사용자 트랜잭션 컨텍스트 외부의 동일한 문에서 메모리 최적화 테이블과 메모리 최적화 테이블 변수 둘 다에 액세스하면 다음과 같은 오류 메시지가 나타날 수 있습니다.  
   
 ```  
 Msg 41359  
@@ -209,12 +209,12 @@ SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
 ```  
   
 #### <a name="procedure-and-query-execution-statistics-for-natively-compiled-stored-procedures-record-worker-time-in-multiples-of-1000"></a>고유하게 컴파일된 저장 프로시저의 프로시저 및 쿼리 실행 통계에서 작업자 시간이 1000의 배수로 기록됨  
-**문제점:** sp_xtp_control_proc_exec_stats 또는 sp_xtp_control_query_exec_stats를 사용하여 고유하게 컴파일된 저장 프로시저에 대한 프로시저 또는 쿼리 실행 통계를 수집하도록 설정하면 sys.dm_exec_procedure_stats 및 sys.dm_exec_query_stats DMV에 *_worker_time이 1000의 배수로 표시됩니다. 작업자 시간이 500마이크로초 미만인 쿼리 실행은 worker_time 0으로 보고됩니다.  
+**문제:** sp_xtp_control_proc_exec_stats 또는 sp_xtp_control_query_exec_stats를 사용하여 고유하게 컴파일된 저장 프로시저에 대한 프로시저 또는 쿼리 실행 통계를 수집하도록 설정하면 sys.dm_exec_procedure_stats 및 sys.dm_exec_query_stats DMV에 *_worker_time이 1000의 배수로 표시됩니다. 작업자 시간이 500마이크로초 미만인 쿼리 실행은 worker_time 0으로 보고됩니다.  
   
 **해결 방법:** 없음 고유하게 컴파일된 저장 프로시저의 단기 실행 쿼리에 대한 실행 통계 DMV에 보고되는 worker_time에 의존하지 마십시오.  
   
 #### <a name="error-with-showplan_xml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>긴 식이 포함된 고유하게 컴파일된 저장 프로시저에 대한 SHOWPLAN_XML의 오류  
-**문제점:** 고유하게 컴파일된 저장 프로시저에 긴 식이 포함된 경우, T-SQL 옵션 SET SHOWPLAN_XML ON을 사용하거나 Management Studio의 ‘예상 실행 계획 표시’ 옵션을 사용하여 프로시저에 대한 SHOWPLAN_XML을 가져오면 다음과 같은 오류가 발생할 수 있습니다.  
+**문제:** 고유하게 컴파일된 저장 프로시저에 긴 식이 포함된 경우, T-SQL 옵션 SET SHOWPLAN_XML ON을 사용하거나 Management Studio의 ‘예상 실행 계획 표시’ 옵션을 사용하여 프로시저에 대한 SHOWPLAN_XML을 가져오면 다음과 같은 오류가 발생할 수 있습니다.  
   
 ```  
 Msg 41322. MAT/PIT export/import encountered a failure for memory  
@@ -233,7 +233,7 @@ optimized table or natively compiled stored procedure with object ID
     SELECT @v0 + @v1 + @v2 + ... + @v199  
     ```  
   
-    다음과 같은 식을 작성합니다.  
+    쓰기:  
   
     ```  
     SELECT((@v0 + ... + @v49) + (@v50 + ... + @v99)) + ((@v100 + ... + @v149) + (@v150 + ... + @v199))  
@@ -245,16 +245,16 @@ optimized table or natively compiled stored procedure with object ID
     SELECT @v0 +@v1 +@v2 +...+@v199  
     ```  
   
-    다음과 같은 식을 작성합니다.  
+    쓰기:  
   
     ```  
     SELECT @v0 +@v1  
     ```  
   
 #### <a name="using-a-string-parameter-or-variable-with-datepart-and-related-functions-in-a-natively-compiled-stored-procedure-results-in-an-error"></a>고유하게 컴파일된 저장 프로시저에서 DATEPART 및 관련 함수와 함께 문자열 매개 변수 또는 변수를 사용하면 오류가 발생함  
-**문제점:** DATEPART, DAY, MONTH, YEAR 등의 기본 제공 함수와 함께 문자열 매개 변수나 변수를 사용하는 고유하게 컴파일된 저장 프로시저를 사용하는 경우 datetimeoffset이 고유하게 컴파일된 저장 프로시저에서 지원되지 않는다는 오류 메시지가 나타납니다.  
+**문제:** DATEPART, DAY, MONTH, YEAR 등의 기본 제공 함수와 함께 문자열 매개 변수나 변수를 사용하는 고유하게 컴파일된 저장 프로시저를 사용하는 경우 datetimeoffset이 고유하게 컴파일된 저장 프로시저에서 지원되지 않는다는 오류 메시지가 나타납니다.  
   
-**해결 방법:** 문자열 매개 변수 또는 변수를 datetime2 형식의 새로운 변수에 할당하고 DATEPART, DAY, MONTH 또는 YEAR 함수에서 해당 변수를 사용합니다. 예를 들어  
+**해결 방법:** 문자열 매개 변수 또는 변수를 datetime2 형식의 새로운 변수에 할당하고 DATEPART, DAY, MONTH 또는 YEAR 함수에서 해당 변수를 사용합니다. 다음은 그 예입니다.  
   
 ```  
 DECLARE @d datetime2 = @string  
@@ -262,12 +262,12 @@ DATEPART(weekday, @d)
 ```  
   
 #### <a name="native-compilation-advisor-flags-delete-from-clauses-incorrectly"></a>네이티브 컴파일 관리자가 DELETE FROM 절에 플래그를 잘못 지정함  
-**문제점:** 네이티브 컴파일 관리자가 저장 프로시저 내부의 DELETE FROM 절에 플래그를 호환되지 않는 것으로 잘못 지정합니다.  
+**문제:** 네이티브 컴파일 관리자가 저장 프로시저 내부의 DELETE FROM 절에 플래그를 호환되지 않는 것으로 잘못 지정합니다.  
   
 **해결 방법:** 없음  
   
 #### <a name="register-through-ssms-adds-dac-meta-data-with-mismatched-instance-ids"></a>SSMS를 통해 등록하면 일치하지 않는 인스턴스 ID가 있는 DAC 메타데이터가 추가됨  
-**문제점:** SQL Server Management Studio를 통해 데이터 계층 애플리케이션 패키지(.dacpac)를 등록하거나 삭제할 때 sysdac * 테이블이 제대로 업데이트되지 않아 사용자가 데이터베이스에 대한 dacpac 기록을 쿼리할 수 없게 됩니다.  instance_id for sysdac_history_internal 및 sysdac_instances_internal이 일치하지 않아 조인이 허용되지 않습니다.  
+**문제:** SQL Server Management Studio를 통해 데이터 계층 애플리케이션 패키지(.dacpac)를 등록하거나 삭제할 때 sysdac * 테이블이 제대로 업데이트되지 않아 사용자가 데이터베이스에 대한 dacpac 기록을 쿼리할 수 없게 됩니다.  instance_id for sysdac_history_internal 및 sysdac_instances_internal이 일치하지 않아 조인이 허용되지 않습니다.  
   
 **해결 방법:** 이 문제는 [데이터 계층 애플리케이션 프레임워크](https://www.microsoft.com/download/details.aspx?id=42295)의 기능 팩 재배포를 통해 해결됩니다.  업데이트가 적용된 후 모든 새 기록 항목은 sysdac_instances_internal 테이블에서 instance_id에 대해 나열된 값을 사용합니다.  
   
@@ -291,7 +291,7 @@ DATEPART(weekday, @d)
 ### <a name="SSRS"></a>Reporting Services(RTM)
   
 #### <a name="the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>SQL Server 2012 Reporting Services 기본 모드 보고서 서버가 SQL Server 2014 Reporting Services SharePoint 구성 요소와 함께 실행될 수 없음  
-**문제점:** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 구성 요소가 동일한 서버에 설치되어 있으면 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기본 모드 Windows 서비스 'SQL Server Reporting Services'(ReportingServicesService.exe)가 시작되지 않습니다.  
+**문제:** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 구성 요소가 동일한 서버에 설치되어 있으면 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기본 모드 Windows 서비스 ‘SQL Server Reporting Services’(ReportingServicesService.exe)가 시작되지 않습니다.  
   
 **해결 방법:** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 구성 요소를 제거하고 Microsoft SQL Server 2012 Reporting Services Windows 서비스를 다시 시작합니다.  
   
@@ -299,7 +299,7 @@ DATEPART(weekday, @d)
   
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기본 모드는 다음 조건 중 하나와 함께 실행될 수 없습니다.  
   
--   SharePoint 제품용[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능    
+-   SharePoint 제품용 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능    
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 공유 서비스  
   
 함께 설치하면 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기본 모드 Windows 서비스가 시작되지 않습니다. Windows 이벤트 로그에 여기에 표시된 것과 비슷한 오류 메시지가 표시됩니다.  
@@ -325,7 +325,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 자세한 내용은 [SQL Server 2014 Reporting Services 팁, 요령 및 문제 해결](https://go.microsoft.com/fwlink/?LinkID=391254)을 참조하십시오.  
   
 #### <a name="required-upgrade-order-for-multi-node-sharepoint-farm-to-sql-server-2014-reporting-services"></a>다중 노드 SharePoint 팜을 SQL Server 2014 Reporting Services로 업그레이드하는 데 필요한 순서  
-**문제점:** SharePoint 제품용 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능의 모든 인스턴스 전에 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 공유 서비스의 인스턴스가 업그레이드되면 다중 노드 팜에서 보고서 렌더링이 실패합니다.  
+**문제:** SharePoint 제품용 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능의 모든 인스턴스 전에 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 공유 서비스의 인스턴스가 업그레이드되면 다중 노드 팜에서 보고서 렌더링이 실패합니다.  
   
 **해결 방법:** 다중 노드 SharePoint 팜에서 다음을 수행합니다.  
   
@@ -337,7 +337,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 ### <a name="AzureVM"></a>Azure Virtual Machines의 SQL Server 2014 RTM  
   
 #### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-azure"></a>Azure에서 가용성 그룹 수신기를 구성하면 Azure 복제본 추가 마법사에서 오류를 반환함  
-**문제점:** 가용성 그룹에 수신기가 있는 경우 Azure에서 수신기를 구성하려고 하면 Azure 복제본 추가 마법사에서 오류를 반환합니다.  
+**문제:** 가용성 그룹에 수신기가 있는 경우 Azure에서 수신기를 구성하려고 하면 Azure 복제본 추가 마법사에서 오류를 반환합니다.  
   
 이 문제는 가용성 그룹 수신기가 Azure 서브넷을 포함하여 가용성 그룹 복제본을 호스팅하는 모든 서브넷에서 IP 주소를 하나씩 할당해야 하기 때문입니다.  
   
@@ -352,7 +352,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 ### <a name="SSAS"></a>Analysis Services(RTM)
   
 #### <a name="msolap5-must-be-downloaded-installed-and-registered-for-a-sharepoint-2010-new-farm-configured-with-sql-server-2014"></a>SQL Server 2014에서 구성된 새로운 SharePoint 2010 팜에 대해 MSOLAP.5를 다운로드 및 설치하고 등록해야 함  
-**문제점:**  
+**문제:**  
   
 -   SharePoint 2010의 경우 SQL Server 2014 RTM 배포에서 구성된 SQL Server 2014 팜에서 구성된 새로운 SharePoint 2013 팜에 대해 MSOLAP.5를 다운로드 및 설치하고 등록해야 합니다. 연결 문자열에서 참조된 공급자가 설치되지 않았기 때문에 PowerPivot 통합 문서가 데이터 모델에 연결할 수 없습니다.  
   
@@ -367,7 +367,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 에는 MSOLAP.6이 포함되어 있습니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 및 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 통합 문서에서는 MSOLAP.5를 사용합니다. MSOLAP.5가 Excel 서비스를 실행하는 컴퓨터에 설치되어 있지 않으면 Excel 서비스에서 데이터 모델을 로드할 수 없습니다.  
   
 #### <a name="msolap5-must-be-downloaded-installed-and-registered-for-a-sharepoint-2013-new-farm-configured-with-sql-server-2014"></a>SQL Server 2014에서 구성된 새로운 SharePoint 2013 팜에 대해 MSOLAP.5를 다운로드 및 설치하고 등록해야 함  
-**문제점:**  
+**문제:**  
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 배포에서 구성된 SharePoint 2013 팜의 경우, 연결 문자열에서 참조된 공급자가 설치되지 않았기 때문에 MSOLAP.5 공급자를 참조하는 Excel 통합 문서에서 테이블 형식 데이터 모델에 연결할 수 없습니다.  
   
@@ -382,7 +382,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 에는 MSOLAP.6이 포함되어 있습니다. 그러나 SQL Server 2014 PowerPivot 통합 문서에서는 MSOLAP.5를 사용합니다. MSOLAP.5가 Excel 서비스를 실행하는 컴퓨터에 설치되어 있지 않으면 Excel 서비스에서 데이터 모델을 로드할 수 없습니다.  
   
 #### <a name="corrupt-data-refresh-schedules-rtm"></a>데이터 새로 고침 일정 손상(RTM)
-**문제점:**  
+**문제:**  
   
 -   새로 고침 일정을 업데이트하면 일정이 손상되어 사용할 수 없게 됩니다.  
   
@@ -397,7 +397,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 ### <a name="DQS"></a>Data Quality Services(RTM)
   
 #### <a name="no-cross-version-support-for-data-quality-services-in-master-data-services"></a>MDS(Master Data Services)의 Data Quality Services에 대한 버전 간 지원 없음  
-**문제점:** 다음과 같은 시나리오는 지원되지 않습니다.  
+**문제:** 다음과 같은 시나리오는 지원되지 않습니다.  
   
 -   Data Quality Services 2012가 설치된 SQL Server 2012에서 SQL Server 데이터베이스 엔진 데이터베이스에 호스트된 Master Data Services 2014  
   
@@ -408,12 +408,12 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 ### <a name="UA"></a>업그레이드 관리자 문제(RTM)
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>SQL Server 2014 업그레이드 관리자가 SQL Server Reporting Services에 대해 관련이 없는 업그레이드 문제를 보고함  
-**문제점:** SQL Server 2014 미디어에 포함된 SSUA(SQL Server 업그레이드 관리자)가 SQL Server Reporting Services 서버를 분석할 때 여러 오류를 잘못 보고합니다.  
+**문제:** SQL Server 2014 미디어에 포함된 SSUA(SQL Server 업그레이드 관리자)가 SQL Server Reporting Services 서버를 분석할 때 여러 오류를 잘못 보고합니다.  
   
 **해결 방법:** 이 문제는 [SSUA용 SQL Server 2014 기능 팩](https://go.microsoft.com/fwlink/?LinkID=306709)에서 제공되는 SQL Server 업그레이드 관리자에서 해결되었습니다.  
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-an-error-when-analyzing-sql-server-integration-services-server"></a>SQL Server 2014 업그레이드 관리자가 SQL Server Integration Services 서버를 분석할 때 오류를 보고함  
-**문제점:** SQL Server 2014 미디어에서 제공된 SSUA(SQL Server 업그레이드 관리자)가 SQL Server Integration Services 서버를 분석할 때 오류를 보고합니다.  사용자에게 표시되는 오류는 다음과 같습니다.  
+**문제:** SQL Server 2014 미디어에서 제공된 SSUA(SQL Server 업그레이드 관리자)가 SQL Server Integration Services 서버를 분석할 때 오류를 보고합니다.  사용자에게 표시되는 오류는 다음과 같습니다.  
   
 ```  
 The installed version of Integration Services does not support Upgrade Advisor.   

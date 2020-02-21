@@ -1,6 +1,6 @@
 ---
 title: 자습서용 뉴욕시 택시 데모 데이터
-description: 뉴욕시 택시 샘플 데이터를 다운로드하고 데이터베이스를 만드는 방법에 대한 지침입니다. 데이터는 SQL Server 저장 프로시저 및 T-SQL 함수에 스크립트를 포함하는 방법을 보여주는 SQL Server Python 및 R 언어 자습서에서 사용됩니다.
+description: 뉴욕시 택시 샘플 데이터를 포함하는 데이터베이스를 만듭니다. 이 데이터 세트는 SQL Server Machine Learning Services용 R 및 Python 자습서에서 사용됩니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/31/2018
@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8413456563a85f9c126dd9981e3e6df548cd30c4
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: e55076a539cb2a932c2f1e0c432daf774899518f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727160"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908917"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 및 R 자습서용 뉴욕시 택시 데모 데이터
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "73727160"
 
 |**개체 이름**|**개체 유형**|**설명**|
 |----------|------------------------|---------------|
-|**NYCTaxi_Sample** | database | 데이터베이스와 다음 두 개의 테이블을 만듭니다.<br /><br />dbo. nyctaxi_sample 테이블: 주 뉴욕시 택시 데이터 세트를 포함합니다. 스토리지 및 쿼리 성능 향상을 위해 클러스터형 columnstore 인덱스가 테이블에 추가됩니다. 뉴욕시 택시 데이터 세트의 1% 샘플이 이 테이블에 삽입됩니다.<br /><br />dbo.nyc_taxi_models 테이블: 학습된 고급 분석 모델을 저장하는 데 사용됩니다.|
+|**NYCTaxi_Sample** | 데이터베이스 | 데이터베이스와 다음 두 개의 테이블을 만듭니다.<br /><br />dbo. nyctaxi_sample 테이블: 주 뉴욕시 택시 데이터 세트를 포함합니다. 스토리지 및 쿼리 성능 향상을 위해 클러스터형 columnstore 인덱스가 테이블에 추가됩니다. 뉴욕시 택시 데이터 세트의 1% 샘플이 이 테이블에 삽입됩니다.<br /><br />dbo.nyc_taxi_models 테이블: 학습된 고급 분석 모델을 저장하는 데 사용됩니다.|
 |**fnCalculateDistance** |스칼라 반환 함수(scalar-valued function) | 승하차 위치 사이의 직접 거리를 계산합니다. 이 함수는 [데이터 요소 만들기](sqldev-create-data-features-using-t-sql.md), [모델 학습 및 저장](sqldev-train-and-save-a-model-using-t-sql.md)과 [R 모델 운영화](sqldev-operationalize-the-model.md)에서 사용됩니다.|
 |**fnEngineerFeatures** |테이블 반환 함수(table-valued function) | 모델 학습을 위한 새 데이터 요소를 만듭니다. 이 함수는 [데이터 요소 만들기](sqldev-create-data-features-using-t-sql.md) 및 [R 모델 운영화](sqldev-operationalize-the-model.md)에서 사용됩니다.|
 

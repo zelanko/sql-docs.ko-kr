@@ -11,10 +11,10 @@ ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3eb2778f11aa83498bdfc47ece599aa07c403fe0
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027259"
 ---
 # <a name="understanding-java-ee-support"></a>Java EE 지원 이해
@@ -39,7 +39,7 @@ JDBC Driver 7.2의 경우 드라이버는 **mssql-jdbc-7.2.2.jre8.jar** 또는 *
 
 JDBC Driver 7.4의 경우 드라이버는 **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** 또는 **mssql-jdbc-7.4.1.jre12.jar**에 포함되어 있습니다.
   
-클래스 이름은 JDBC DriverManager 클래스를 사용 하 여 드라이버를 로드할 때마다 그리고 드라이버 구성에서 드라이버의 클래스 이름을 지정할 때마다 사용 됩니다. 예를 들어 Java EE 애플리케이션 서버 내에서 데이터 원본을 구성하려면 드라이버 클래스 이름을 입력해야 할 수 있습니다.  
+클래스 이름은 JDBC DriverManager 클래스를 사용하여 드라이버를 로드할 때마다, 그리고 드라이버 구성에서 드라이버의 클래스 이름을 지정할 때마다 사용됩니다. 예를 들어 Java EE 애플리케이션 서버 내에서 데이터 원본을 구성하려면 드라이버 클래스 이름을 입력해야 할 수 있습니다.  
   
 ## <a name="data-sources"></a>데이터 원본
 
@@ -59,7 +59,7 @@ JDBC 드라이버는 Java EE/JDBC 3.0 데이터 원본을 지원합니다. JDBC 
 
 모든 데이터 원본은 기본 드라이버의 속성 집합과 연관된 속성을 설정하고 가져오는 기능을 지원합니다.  
   
-예:  
+예제:  
   
 `setServerName("localhost");`  
 `setDatabaseName("AdventureWorks");`  
@@ -76,6 +76,6 @@ Connection c = ds.getConnection("user", "pwd");
 
 데이터 원본 속성에 대한 자세한 내용은 [데이터 원본 속성 설정](../../connect/jdbc/setting-the-data-source-properties.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

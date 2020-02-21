@@ -16,10 +16,10 @@ ms.assetid: 099dd0bf-b017-479d-9696-f5b06f4c6bf9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f23da4d83217fbed39e6dddacfe92541eae0db23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67984221"
 ---
 # <a name="getcrossreference-method-sqlserverdatabasemetadata"></a>getCrossReference 메서드(SQLServerDatabaseMetaData)
@@ -64,18 +64,18 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
   
  외래 키가 포함된 테이블의 테이블 이름이 들어 있는 **문자열**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getCrossReference 메서드는 getCrossReference 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getCrossReference 메서드는 java.sql.DatabaseMetaData 인터페이스의 getCrossReference 메서드에 의해 지정됩니다.  
   
  getCrossReference 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   
-|속성|형식|설명|  
+|속성|Type|Description|  
 |----------|----------|-----------------|  
 |PKTABLE_CAT|**String**|기본 키 테이블이 들어 있는 카탈로그의 이름입니다.|  
 |PKTABLE_SCHEM|**String**|기본 키 테이블의 스키마 이름입니다.|  

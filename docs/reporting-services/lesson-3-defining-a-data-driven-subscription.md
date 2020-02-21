@@ -9,13 +9,13 @@ ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fafd591e4b29f9b8beb1639ff64f4e2d43b65c2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66826860"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>3단원: 데이터 기반 구독 정의
 이 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 자습서 단원에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 웹 포털 데이터 기반 구독 페이지를 사용하여 구독 데이터 원본에 연결하고 구독 데이터를 검색하는 쿼리를 작성하며 결과 세트를 보고서 및 전송 옵션에 매핑합니다.  
   
 > [!NOTE]  
@@ -33,7 +33,7 @@ ms.locfileid: "66826860"
 ## <a name="define-a-description"></a>설명 정의  
 1.  설명에 **Sales Order 배달** 을 입력합니다.
 
-## <a name="type"></a>설명에
+## <a name="type"></a>Type
 1.  **데이터 기반 구독**을 클릭합니다.  
 
 ## <a name="schedule"></a>일정
@@ -41,10 +41,10 @@ ms.locfileid: "66826860"
 2. **일정 편집**을 클릭합니다.
 3. **일정 정보**에서 **한 번**을 누릅니다.  
 4. 시작 시간을 현재 시간보다 몇 분 앞당겨 지정합니다.  
-5. 지정 된 **시작 및 종료 날짜**합니다.
+5. **시작 및 종료 날짜**를 지정합니다.
 6. **적용**을 선택합니다.
 
-## <a name="destination"></a>Destination  
+## <a name="destination"></a>대상  
 1.  대상 섹션에서 배달 방법으로 **Windows 파일 공유** 를 선택합니다.  
 
 ## <a name="dataset"></a>데이터 세트
@@ -82,7 +82,7 @@ ms.locfileid: "66826860"
 매개 변수  |값 원본  | 값/필드  
 ---------|---------|---------
 **파일 이름**     |데이터 세트에서 값 가져오기 | 주문     
-**경로**     | 값 입력  | 값에 쓰기 권한이 있는 공용 파일 공유의 이름(예: `\\mycomputer\public\myreports`)을 입력합니다. 
+**Path**     | 값 입력  | 값에 쓰기 권한이 있는 공용 파일 공유의 이름(예: `\\mycomputer\public\myreports`)을 입력합니다. 
 **렌더링 형식** | 데이터 세트에서 값 가져오기 | 형식
 **쓰기 모드**| 값 입력| 자동 증분    
 **파일 확장명** |값 입력 |True

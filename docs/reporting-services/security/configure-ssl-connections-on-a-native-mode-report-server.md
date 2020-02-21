@@ -11,10 +11,10 @@ ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b90383fb387f8593db7aa4ee4760181a7322a475
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028926"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>기본 모드 보고서 서버에서 SSL 연결 구성
@@ -82,9 +82,9 @@ ms.locfileid: "69028926"
   
  SSL 바인딩은 Microsoft Windows의 공유 리소스입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자 또는 IIS 관리자와 같은 다른 도구에서 변경한 내용은 동일한 컴퓨터의 다른 애플리케이션에 영향을 줄 수 있습니다. 바인딩을 만들 때 사용한 것과 동일한 도구를 사용하여 바인딩을 편집하는 것이 가장 좋습니다.  예를 들어 Configuration Manager를 사용하여 SSL 바인딩을 만든 경우 Configuration Manager를 사용하여 바인딩의 수명 주기를 관리하는 것이 좋습니다. IIS 관리자를 사용하여 바인딩을 만드는 경우 IIS 관리자를 사용하여 바인딩의 수명 주기를 관리하는 것이 좋습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치하기 전에 IIS가 이미 컴퓨터에 설치되어 있는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 구성하기 전에 IIS에서 SSL 구성을 검토하는 것이 가장 좋습니다.  
   
- Reporting Services 구성 관리자를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 대한 SSL 바인딩을 제거하는 경우 인터넷 정보 서비스(IIS)를 실행하는 서버 또는 다른 HTTP.SYS 서버의 웹 사이트에 대해 SSL이 더 이상 작동하지 않을 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager 다음 레지스트리 키를 제거 합니다. **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443** 이 레지스트리 키가 제거 되 면 IIS에 대 한 SSL 바인딩도 제거 됩니다. 이 바인딩이 없으면 HTTPS 프로토콜에 대해 SSL이 제공되지 않습니다. 이 문제를 진단하려면 IIS 관리자 또는 HTTPCFG.exe 명령줄 유틸리티를 사용합니다. 이 문제를 해결하려면 IIS 관리자를 사용하여 웹 사이트에 대한 SSL 바인딩을 복원합니다. 나중에 이 문제를 방지하려면 IIS 관리자를 사용하여 SSL 바인딩을 제거하고, IIS 관리자를 사용하여 원하는 웹 사이트에 대한 바인딩을 복원합니다. 자세한 내용은 기술 자료 문서 [SSL 바인딩을 제거한 후 SSL이 더 이상 작동하지 않습니다(https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n)를 참조하세요.  
+ Reporting Services 구성 관리자를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 대한 SSL 바인딩을 제거하는 경우 인터넷 정보 서비스(IIS)를 실행하는 서버 또는 다른 HTTP.SYS 서버의 웹 사이트에 대해 SSL이 더 이상 작동하지 않을 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 다음 레지스트리 키를 제거합니다. **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443**. 이 레지스트리 키가 제거되면 IIS에 대한 SSL 바인딩도 제거됩니다. 이 바인딩이 없으면 HTTPS 프로토콜에 대해 SSL이 제공되지 않습니다. 이 문제를 진단하려면 IIS 관리자 또는 HTTPCFG.exe 명령줄 유틸리티를 사용합니다. 이 문제를 해결하려면 IIS 관리자를 사용하여 웹 사이트에 대한 SSL 바인딩을 복원합니다. 나중에 이 문제를 방지하려면 IIS 관리자를 사용하여 SSL 바인딩을 제거하고, IIS 관리자를 사용하여 원하는 웹 사이트에 대한 바인딩을 복원합니다. 자세한 내용은 기술 자료 문서 [SSL 바인딩을 제거한 후 SSL이 더 이상 작동하지 않습니다(https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 서버 인증](../../reporting-services/security/authentication-with-the-report-server.md)   
  [보고서 서버 구성 및 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [RSReportServer 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

@@ -1,10 +1,9 @@
 ---
-title: 테이블 만들기 쿼리 만들기(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 테이블 만들기 쿼리 만들기
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,14 @@ helpviewer_keywords:
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dbacf31bf3fcbb9cafd88e57e7c798a584b74ef7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 50b9e158fe828271cc4e96c6175895cc858ac962
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264376"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254327"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>테이블 만들기 쿼리 만들기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,24 +67,24 @@ WHERE country = 'UK'
   
     다른 데이터베이스에 대상 테이블을 만들려면 대상 데이터베이스의 이름, 소유자(필요한 경우) 및 테이블의 이름을 포함하는 정규화된 테이블 이름을 지정합니다.  
   
-4.  쿼리에 열을 추가하여 복사할 열을 지정합니다. 자세한 내용은 [쿼리에 열 추가(Visual Database Tools)](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md)를 참조하세요. 열을 쿼리에 추가한 경우에만 열이 복사됩니다. 행 전체를 복사하려면 **&#42;(모든 열)** 를 선택합니다.  
+4.  쿼리에 열을 추가하여 복사할 열을 지정합니다. 자세한 내용은 [쿼리에 열 추가](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md)를 참조하세요. 열을 쿼리에 추가한 경우에만 열이 복사됩니다. 행 전체를 복사하려면 **&#42;(모든 열)** 를 선택합니다.  
   
     사용자가 선택한 열이 쿼리 및 뷰 디자이너에서 조건 창의 **열** 열에 추가됩니다.  
   
 5.  행을 특정 순서에 따라 복사하려면 정렬 순서를 지정합니다. 자세한 내용은 **쿼리 결과 정렬 및 그룹화**를 참조하세요.  
   
-6.  검색 조건을 입력하여 복사할 행을 지정합니다. 자세한 내용은 [검색 조건 지정(Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)을 참조하세요.  
+6.  검색 조건을 입력하여 복사할 행을 지정합니다. 자세한 내용은 [검색 조건 지정]\(../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md\)을 참조하세요.  
   
     검색 조건을 지정하지 않으면 원본 테이블의 행 전체가 대상 테이블에 복사됩니다.  
   
     > [!NOTE]  
     > 검색할 열을 조건 창에 추가하면 쿼리 및 뷰 디자이너의 복사할 열 목록에도 이 열이 추가됩니다. 열을 검색만 하고 복사는 하지 않으려면 테이블 또는 테이블 구조 개체를 나타내는 사각형에서 열 이름 옆에 있는 확인란의 선택을 취소합니다.  
   
-7.  요약 정보를 복사하려면 그룹화 방법 옵션을 지정합니다. 자세한 내용은 [쿼리 결과 요약(Visual Database Tools)](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)을 참조하세요.  
+7.  요약 정보를 복사하려면 그룹화 방법 옵션을 지정합니다. 자세한 내용은 [쿼리 결과 요약]\(../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md\)을 참조하세요.  
   
 테이블 만들기 쿼리를 실행해도 [결과 창](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)에는 결과가 보고되지 않습니다. 대신, 복사한 행의 수를 나타내는 메시지가 표시됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[쿼리 및 뷰 디자인 방법 도움말 항목(Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[쿼리 형식(Visual Database Tools)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
+쿼리 및 뷰 디자인 방법 도움말 항목(../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+쿼리 형식(. /.. /ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   

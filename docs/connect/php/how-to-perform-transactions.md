@@ -13,10 +13,10 @@ ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26ca7fbe56a17e1bf2a7c69b9e8c2dcd63073f87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936432"
 ---
 # <a name="how-to-perform-transactions"></a>방법: 트랜잭션 수행
@@ -42,7 +42,7 @@ PDO_SQLSRV 드라이버는 트랜잭션을 수행하기 위해 세 가지 메서
   
 이 항목의 나머지 부분에서는 SQLSRV 드라이버를 사용하여 트랜잭션을 수행하는 방법을 설명하고 예로 보여 줍니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 트랜잭션을 실행하는 단계는 다음과 같이 요약할 수 있습니다.  
   
 1.  **sqlsrv_begin_transaction**을 사용하여 트랜잭션을 시작합니다.  
@@ -61,7 +61,7 @@ PDO_SQLSRV 드라이버는 트랜잭션을 수행하기 위해 세 가지 메서
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>설명  
+### <a name="description"></a>Description  
 다음 예제는 트랜잭션의 일부로 여러 개의 쿼리를 실행합니다. 모든 쿼리가 성공하면 트랜잭션이 커밋됩니다. 쿼리 중 하나라도 실패하면 트랜잭션이 롤백됩니다.  
   
 이 예제에서는 *Sales.SalesOrderDetail* 테이블에서 판매 주문을 삭제하고 판매 주문의 각 제품에 대해 *Product.ProductInventory* 테이블에서 제품 재고 수준을 조정합니다. 두 쿼리 모두 성공해야 데이터베이스에 주문 및 제품 가용성 상태가 정확하게 반영되므로 이러한 쿼리가 트랜잭션에 포함되어 있습니다.  
@@ -150,7 +150,7 @@ function perform_trans_ops($conn, $orderId)
 ```  
   
 ### <a name="comments"></a>주석  
-트랜잭션 동작에 중점을 두기 위해 몇 가지 권장 오류 처리 방법은 이전 예제에 포함되지 않았습니다. 프로덕션 응용 프로그램의 경우 **sqlsrv** 함수에 대 한 호출에서 오류를 확인 하 고 적절 하 게 처리 하는 것이 좋습니다.
+트랜잭션 동작에 중점을 두기 위해 몇 가지 권장 오류 처리 방법은 이전 예제에 포함되지 않았습니다. 프로덕션 애플리케이션에서는 **sqlsrv** 함수 호출에 오류가 있는지 확인하고 적절하게 처리하는 것이 좋습니다.
   
 ## <a name="see-also"></a>참고 항목  
 [데이터 업데이트&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)

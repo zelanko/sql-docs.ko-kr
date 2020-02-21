@@ -14,10 +14,10 @@ ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72517935"
 ---
 # <a name="before-installing-failover-clustering"></a>장애 조치(Failover) 클러스터링을 설치하기 전에
@@ -39,7 +39,7 @@ ms.locfileid: "72517935"
   
 ##  <a name="BestPractices"></a> 최선의 구현 방법  
   
--   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [릴리스 정보](https://go.microsoft.com/fwlink/?LinkId=296445)검토  
+-   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [릴리스 정보](https://go.microsoft.com/fwlink/?LinkId=296445) 검토  
   
 -   필수 구성 요소 소프트웨어를 설치합니다. 설치 프로그램을 실행하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 설치하거나 업그레이드하기 전에 다음과 같은 필수 구성 요소를 설치하여 설치 시간을 절약합니다. 각 장애 조치(Failover) 클러스터 노드에 필수 구성 요소 소프트웨어를 설치하고 노드를 한 번 다시 시작한 후 설치 프로그램을 실행해야 합니다.  
   
@@ -188,12 +188,12 @@ ms.locfileid: "72517935"
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise(64비트) x64*|예|예|예**|예**|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise(32비트)|예|예|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer(64비트)|예|예|예**|예**|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer(32비트)|예|예|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard(64비트)|예|예|예|예|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard(32비트)|예|예|||  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise(64비트) x64*|yes|yes|예**|예**|  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise(32비트)|yes|yes|||  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer(64비트)|yes|yes|예**|예**|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer(32비트)|yes|yes|||  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard(64비트)|yes|yes|yes|yes|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard(32비트)|yes|yes|||  
   
  *[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클러스터는 WOW 모드에서 지원되지 않습니다. 또한 WOW에 원래 설치했던 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에서 업그레이드하는 것도 지원되지 않습니다. 이 경우 업그레이드할 수 있는 유일한 방법은 새 버전을 추가로 설치한 후 마이그레이션하는 것 뿐입니다.  
   
@@ -202,7 +202,7 @@ ms.locfileid: "72517935"
 ##  <a name="MultiSubnet"></a> 다중 서브넷 구성을 위한 추가 고려 사항  
  아래 섹션에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다중 서브넷 장애 조치(Failover) 클러스터를 설치할 때 고려해야 하는 요구 사항에 대해 설명합니다. 다중 서브넷 구성에는 여러 서브넷 간의 클러스터링이 포함됩니다. 따라서 IP 주소가 여러 개 사용되고 IP 주소 리소스 종속성이 변경될 수 있습니다.  
   
-### <a name="includessnoversionincludesssnoversion-mdmd-edition-and-operating-system-considerations"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전 및 운영 체제 고려 사항  
+### <a name="ssnoversion-edition-and-operating-system-considerations"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전 및 운영 체제 고려 사항  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다중 서브넷 장애 조치(failover) 클러스터를 지원하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전에 대한 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
@@ -253,7 +253,7 @@ ms.locfileid: "72517935"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 로컬 클러스터 그룹에 설치된 MSDTC 인스턴스가 실패한 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 MSDTC의 기본 클러스터 인스턴스 또는 로컬 컴퓨터 인스턴스를 사용하려고 자동으로 시도하지 않습니다. 다른 MSDTC 인스턴스를 사용하려면 실패한 MSDTC 인스턴스를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 그룹에서 완전히 제거해야 합니다. 마찬가지로, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 대한 매핑을 만든 경우 매핑된 MSDTC 인스턴스가 실패하면 분산 트랜잭션도 실패합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 다른 MSDTC 인스턴스를 사용하도록 하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 로컬 클러스터 그룹에 MSDTC 인스턴스를 추가하거나 매핑을 삭제해야 합니다.  
   
-### <a name="configure-includemsconameincludesmsconame-mdmd-distributed-transaction-coordinator"></a>[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator 구성  
+### <a name="configure-msconame-distributed-transaction-coordinator"></a>[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator 구성  
  운영 체제를 설치하고 클러스터를 구성한 다음에는 클러스터 관리자를 사용하여 MSDTC가 클러스터에서 작동하도록 구성해야 합니다. MSDTC 클러스터링에 실패해도 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치에는 문제가 없지만 MSDTC가 올바로 구성되지 않으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 애플리케이션의 기능에 영향을 줄 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

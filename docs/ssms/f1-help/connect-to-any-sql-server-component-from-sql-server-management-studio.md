@@ -1,6 +1,6 @@
 ---
-title: SSMS에서 SQL Server 구성 요소에 연결 | Microsoft 문서
-ms.custom: ''
+title: SQL Server 구성 요소에 연결
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5ff8f8f4b71b108597f367c7ca041f2a3feba962
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ebc0f4a5ca2be46e607ccd8d18399b7fe0ef6814
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265133"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243934"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>SQL Server Management Studio에서 SQL Server 구성 요소로 연결
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,11 +28,11 @@ ms.locfileid: "68265133"
   
 -   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]인스턴스  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]의 모든 구성 요소를 관리하기 위한 기능을 제공합니다.  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]입니다.  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 모든 구성 요소를 관리하기 위한 기능을 제공합니다.  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]입니다.  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 모든 구성 요소를 관리하기 위한 기능을 제공합니다.  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]입니다.  
   
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서는 데이터 원본에 먼저 연결하지 않은 상태에서 쿼리 작업을 할 수 있지만 대부분의 다른 태스크를 하려면 연결이 필요합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**구성 요소에 대한 연결 속성을 구성하기 위한** 서버에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대화 상자를 제공합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 가 시작되면 **서버에 연결** 대화 상자가 열리고 서버에 연결하라는 메시지가 나타납니다. **서버에 연결** 대화 상자에서는 마지막으로 사용된 연결 설정이 유지됩니다.  
   

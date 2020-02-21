@@ -1,5 +1,5 @@
 ---
-title: setAuthenticationScheme (SQLServerDataSource) | Microsoft Docs
+title: setAuthenticationScheme(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: b942f78e-7ce1-44ef-923d-a7c3d7c76b83
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c728bd32a0aff2549d9e572955c8fb6d889e127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975278"
 ---
 # <a name="setauthenticationscheme-sqlserverdatasource"></a>setAuthenticationScheme(SQLServerDataSource)
@@ -31,7 +31,7 @@ public void setAuthenticationScheme(String authenticationScheme);
 #### <a name="parameters"></a>매개 변수  
  *authenticationScheme*  
   
- 값은 **"JavaKerberos"** 이며 기본값은 " **NativeAuthentication"** 입니다. 자세한 내용은 [Kerberos 통합 인증을 사용하여 SQL Server에 연결](../../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)을 참조하세요.  
+ 값은 **“JavaKerberos”** 및 기본값 **“NativeAuthentication”** 입니다. 자세한 내용은 [Kerberos 통합 인증을 사용하여 SQL Server에 연결](../../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

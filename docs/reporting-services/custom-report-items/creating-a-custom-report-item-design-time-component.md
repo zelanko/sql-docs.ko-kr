@@ -11,10 +11,10 @@ ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a9789c2d017200650bcae7b5f864da708e5c7453
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194299"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>사용자 지정 보고서 항목 디자인 타임 구성 요소 만들기
@@ -22,7 +22,7 @@ ms.locfileid: "63194299"
   
  사용자 지정 보고서 항목 디자인 타임 구성 요소를 사용하여 사용자는 디자인 환경에서 보고서에 사용자 지정 보고서 항목을 배치하고, 사용자 지정 보고서 항목에 사용자 지정 데이터 속성을 설정한 다음, 사용자 지정 보고서 항목을 보고서 프로젝트의 일부로 저장할 수 있습니다.  
   
- 개발 환경에서 디자인 타임 구성 요소를 사용하여 설정된 속성은 호스트 디자인 환경에 의해 serialize 및 deserialize된 다음 RDL(Report Definition Language) 파일에 요소로 저장됩니다. 보고서 처리기에 의해 보고서가 실행되면, 디자인 타임 구성 요소를 사용하여 설정된 속성을 보고서 처리기가 사용자 지정 보고서 항목 런타임 구성 요소로 전달하고, 이 런타임 구성 요소는 사용자 지정 보고서 항목을 렌더링한 뒤 다시 보고서 처리기로 전달합니다.  
+ 개발 환경에서 디자인 타임 구성 요소를 사용하여 설정된 속성은 호스트 디자인 환경에 의해 직렬화 및 역직렬화된 다음 RDL(Report Definition Language) 파일에 요소로 저장됩니다. 보고서 처리기에 의해 보고서가 실행되면, 디자인 타임 구성 요소를 사용하여 설정된 속성을 보고서 처리기가 사용자 지정 보고서 항목 런타임 구성 요소로 전달하고, 이 런타임 구성 요소는 사용자 지정 보고서 항목을 렌더링한 뒤 다시 보고서 처리기로 전달합니다.  
   
 > [!NOTE]
 >  사용자 지정 보고서 항목 디자인 타임 구성 요소는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 구성 요소로 구현됩니다. 이 문서에서는 사용자 지정 보고서 항목 디자인 타임 구성 요소와 관련된 구현 세부 사항을 설명합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 구성 요소를 개발하는 방법은 MSDN 라이브러리에서 [Visual Studio의 구성 요소](https://go.microsoft.com/fwlink/?LinkId=116576)를 참조하십시오.  

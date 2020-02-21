@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d553d991bd07785a6a6a7592cee38a1e66badf29
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0117ff1ccbd90a18c1198c9a46fa60c27d28107d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73723705"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479395"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>R 모델을 배포하고 SQL Server에서 사용(연습)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "73723705"
 
     + SELECT 문을 사용하여 SQL 테이블에서 저장된 모델을 호출합니다. 테이블에서 **varbinary(max)** 데이터로 모델을 검색하고, SQL 변수 _\@lmodel2_에 저장한 다음, 시스템 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에 *mod* 매개 변수로 전달합니다.
 
-    + 점수 매기기에 대한 입력으로 사용되는 데이터는 SQL 쿼리로 정의되고 SQL 변수 _\@input_에 문자열로 저장됩니다. 데이터베이스에서 검색된 데이터는 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 프로시저에 대한 입력 데이터의 기본 이름인 *InputDataSet* 데이터 프레임에 저장됩니다. 필요한 경우 매개 변수 *_\@input_data_1_name_* 을 사용하여 다른 변수 이름을 정의할 수 있습니다.
+    + 점수 매기기에 대한 입력으로 사용되는 데이터는 SQL 쿼리로 정의되고 SQL 변수 _\@input_에 문자열로 저장됩니다. 데이터베이스에서 검색된 데이터는 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 프로시저에 대한 입력 데이터의 기본 이름인 *InputDataSet* 데이터 프레임에 저장됩니다. 필요한 경우 매개 변수 _\@input_data_1_name_을 사용하여 다른 변수 이름을 정의할 수 있습니다.
 
     + 점수를 생성하기 위해 저장 프로시저가 **RevoScaleR** 라이브러리에서 rxPredict 함수를 호출합니다.
 

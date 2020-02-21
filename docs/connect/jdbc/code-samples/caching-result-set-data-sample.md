@@ -1,5 +1,5 @@
 ---
-title: 결과 집합 데이터 샘플 캐싱 | Microsoft Docs
+title: 결과 집합 데이터 캐싱 샘플 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 13a95ebb-996c-4713-a1bd-5834fe22a334
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 33998300281a274067a0879775dc33c9d7635471
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028410"
 ---
 # <a name="caching-result-set-data-sample"></a>결과 집합 데이터 캐싱 샘플
@@ -29,7 +29,7 @@ ms.locfileid: "69028410"
 클라이언트에서 캐시되는 행 수에 제한을 설정하려면 우선 Statement 개체를 만들 때 사용할 커서 유형을 구체적으로 지정하여 Statement 개체 중 하나를 만들 때 서버측 커서를 제일 먼저 사용해야 합니다. 예를 들어 JDBC 드라이버에서 제공하는 커서 유형인 TYPE_SS_SERVER_CURSOR_FORWARD_ONLY는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 사용되는 빨리 감기 및 읽기 전용 서버측 커서입니다.  
   
 > [!NOTE]  
-> 이 대신에 SQL Server 전용 커서 유형을 사용하려면 selectMethod 연결 문자열 속성 값을 "cursor"로 설정하여 사용하면 됩니다. JDBC 드라이버에서 지 원하는 커서 유형에 대 한 자세한 내용은 [커서 유형 이해](../../../connect/jdbc/understanding-cursor-types.md)를 참조 하세요.  
+> 이 대신에 SQL Server 전용 커서 유형을 사용하려면 selectMethod 연결 문자열 속성 값을 "cursor"로 설정하여 사용하면 됩니다. JDBC 드라이버에서 지원하는 커서 유형에 대한 자세한 내용은 [커서 형식 이해](../../../connect/jdbc/understanding-cursor-types.md)를 참조하세요.  
   
 Statement 개체에서 쿼리를 실행하고 해당 데이터가 결과 집합으로 클라이언트에 반환된 후에는 setFetchSize 메서드를 호출하여 한 번에 데이터베이스에서 검색할 수 있는 데이터 양을 제어할 수 있습니다. 예를 들어 하나의 테이블에 데이터 행이 100개가 있으며 페치 크기를 10으로 설정한 경우, 클라이언트에서는 항상 10개의 데이터 행만 캐시됩니다. 이와 같은 경우 데이터 처리 속도가 저하되기는 하지만 클라이언트의 메모리를 적게 사용한다는 이점이 있으므로 대량의 데이터를 처리해야 하는 경우 특히 유용합니다.  
   
@@ -41,7 +41,7 @@ Statement 개체에서 쿼리를 실행하고 해당 데이터가 결과 집합�
 
 ## <a name="requirements"></a>요구 사항  
 
-이 샘플 애플리케이션을 실행하려면 mssql-jdbc jar 파일을 포함하도록 클래스 경로를 설정해야 합니다. 또한 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 대한 액세스 권한이 필요합니다. 클래스 경로를 설정 하는 방법에 대 한 자세한 내용은 [JDBC 드라이버 사용](../../../connect/jdbc/using-the-jdbc-driver.md)을 참조 하세요.  
+이 샘플 애플리케이션을 실행하려면 mssql-jdbc jar 파일을 포함하도록 클래스 경로를 설정해야 합니다. 또한 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 대한 액세스 권한이 필요합니다. 클래스 경로를 설정하는 방법에 대한 자세한 내용은 [JDBC 드라이버 사용](../../../connect/jdbc/using-the-jdbc-driver.md)을 참조하세요.  
   
 > [!NOTE]  
 > [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]는 기본 설정된 JRE(Java Runtime Environment)에 따라 사용할 수 있는 mssql-jdbc 클래스 라이브러리 파일을 제공합니다. 선택할 JAR 파일에 대한 자세한 내용은 [System Requirements for the JDBC Driver](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)(JDBC Driver 시스템 요구 사항)를 참조하세요.  
@@ -124,6 +124,6 @@ public class CacheResultSet {
 }
 ```
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 
 [결과 집합 작업](../../../connect/jdbc/code-samples/working-with-result-sets.md)  

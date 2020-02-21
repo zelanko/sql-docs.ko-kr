@@ -16,10 +16,10 @@ ms.assetid: 58833726-3a7e-46be-ac0e-4c602d865262
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c5f71c162b4be606be1aedcc56a0c3f9edcd29db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974196"
 ---
 # <a name="setinstancename-method-sqlserverdatasource"></a>setInstanceName 메서드(SQLServerDataSource)
@@ -37,7 +37,7 @@ public void setInstanceName(java.lang.String instanceName)
 #### <a name="parameters"></a>매개 변수  
  *instanceName*  
   
- 인스턴스 이름을 포함 하는 **문자열** 입니다.  
+ 인스턴스 이름을 포함하는 **문자열**입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

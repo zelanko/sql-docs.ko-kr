@@ -11,10 +11,10 @@ ms.assetid: e7e362d1-6b5f-4e8c-8862-2001102cf4f9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 94ccd1eb15972992e46d58aeaa9547d58f0b9bcb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970729"
 ---
 # <a name="sqlserverresource-class"></a>SQLServerResource 클래스

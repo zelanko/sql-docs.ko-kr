@@ -11,10 +11,10 @@ ms.assetid: 82900342-bc80-445f-98a4-468a303aae1e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3b443e3541dbf86fd0cfa947f057faaf62e08226
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027905"
 ---
 # <a name="managing-transaction-size"></a>트랜잭션 크기 관리
@@ -28,7 +28,7 @@ ms.locfileid: "69027905"
   
  또한 애플리케이션에서 차단 문제가 발생할 가능성이 있어 제한 시간을 설정해야 하는 경우 잠금 제한 시간 설정을 사용하십시오. [setLockTimeout](../../connect/jdbc/reference/setlocktimeout-method-sqlserverdatasource.md) 메서드를 사용하면 됩니다. 잠금 제한 시간의 기본값은 -1이며 이는 잠금을 기다리는 동안 무제한으로 차단됨을 의미합니다. 잠금 제한 시간을 30초로 설정하면 다른 연결에 의해 연결이 차단된 경우 차단된 연결이 30초 내에 해제됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버로 성능 및 안정성 개선](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: getTime 메서드 (int) | Microsoft Docs
+title: getTime 메서드(int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6c13dea2-511f-48dc-b3db-2d3b72ccc9de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e0426a89de1e3cf78f1f41e45fc35ba81816362
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979090"
 ---
 # <a name="gettime-method-int"></a>getTime 메서드(int)
@@ -39,16 +39,16 @@ public java.sql.Time getTime(int index)
   
  매개 변수 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>반환 값  
- 시간 개체입니다.  
+## <a name="return-value"></a>Return Value  
+ Time 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getTime 메서드는 java.sql.CallableStatement 인터페이스의 getTime 메서드에 의해 지정됩니다.  
   
- 이 메서드를 사용 하 여 검색할 수 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식에 대 한 자세한 내용은 [데이터 형식 변환 이해](../../../connect/jdbc/understanding-data-type-conversions.md) 의 "Getter 메서드 변환" 이라는 차트를 참조 하세요.  
+ 이 메서드를 사용하여 검색할 수 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식을 보려면 [데이터 형식 변환 이해](../../../connect/jdbc/understanding-data-type-conversions.md)의 “Getter 메서드 변환”이라는 차트를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [getTime 메서드&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

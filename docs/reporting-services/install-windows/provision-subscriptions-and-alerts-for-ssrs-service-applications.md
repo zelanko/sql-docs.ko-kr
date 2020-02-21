@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ef70b3430cc1028b7486bf663280cfcf740d9290
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62651959"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>SSRS 서비스 애플리케이션에 대한 구독 및 경고 프로비전
@@ -30,7 +30,7 @@ ms.locfileid: "62651959"
   
  ![서비스 애플리케이션 DB에 대한 SQL 에이전트 권한](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "서비스 애플리케이션 DB에 대한 SQL 에이전트 권한")  
   
-||설명|  
+||Description|  
 |------|-----------------|  
 |**1**|Reporting Services 서비스 애플리케이션 데이터베이스를 호스팅하는 SQL Server 데이터베이스 엔진의 인스턴스입니다.|  
 |**2**|SQL 데이터베이스 엔진의 인스턴스에 대한 SQL Server 에이전트의 인스턴스입니다.|  

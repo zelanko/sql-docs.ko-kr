@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 49027d7b9ab230f80bb8154a746eb503846534f2
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: fc1803724f0dafccc1fe41d8e17060810a85e001
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727778"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252833"
 ---
 # <a name="create-a-resource-pool-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 사용자 계정 풀 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,9 +41,9 @@ SQL Server Machine Learning Services에서 Python 및 R 워크로드를 관리�
 
     **샘플 결과**
 
-    |pool_id|NAME|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
+    |pool_id|name|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
     |-|-|-|-|-|-|-|-|-|
-    |2|기본|0|100|0|100|100|0|0|
+    |2|기본값|0|100|0|100|100|0|0|
 
 2.  기본 **외부** 리소스 풀에 할당된 리소스를 확인합니다.
   
@@ -53,9 +53,9 @@ SQL Server Machine Learning Services에서 Python 및 R 워크로드를 관리�
 
     **샘플 결과**
 
-    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|버전|
     |-|-|-|-|-|-|
-    |2|기본|100|20|0|2|
+    |2|기본값|100|20|0|2|
  
 3.  이러한 서버 기본 설정에서 외부 런타임은 대부분의 작업을 완료하기 위한 리소스가 부족합니다. 이를 변경하려면 다음과 같이 서버 리소스 사용을 수정해야 합니다.
   
@@ -123,7 +123,7 @@ SQL Server Machine Learning Services에서 Python 및 R 워크로드를 관리�
   
 2.  각 리소스 풀에 대한 분류자 함수에서 리소스 풀에 할당되어야 하는 명령문 또는 들어오는 요청의 유형을 정의합니다.
   
-     예를 들어 다음 함수는 요청을 보낸 애플리케이션이 'Microsoft R Host' 또는 'RStudio'인 경우 사용자 정의 외부 리소스 풀에 할당된 스키마의 이름을 반환하고, 그렇지 않으면 기본 리소스 풀을 반환합니다.
+     예를 들어 다음 함수는 요청을 보낸 애플리케이션이 ‘Microsoft R Host’, ‘RStudio’ 또는 ‘Mashup’인 경우 사용자 정의 외부 리소스 풀에 할당된 스키마의 이름을 반환하고, 그렇지 않으면 기본 리소스 풀을 반환합니다.
   
     ```sql
     USE master
@@ -133,7 +133,7 @@ SQL Server Machine Learning Services에서 Python 및 R 워크로드를 관리�
     WITH schemabinding
     AS
     BEGIN
-        IF program_name() in ('Microsoft R Host', 'RStudio') RETURN 'ds_wg';
+        IF program_name() in ('Microsoft R Host', 'RStudio', 'Mashup') RETURN 'ds_wg';
         RETURN 'default'
         END;
     GO
@@ -143,7 +143,7 @@ SQL Server Machine Learning Services에서 Python 및 R 워크로드를 관리�
   
     ```sql
     ALTER RESOURCE GOVERNOR WITH  (classifier_function = dbo.is_ds_apps);
-    ALTER RESOURCE GOVERNOR WITH reconfigure;
+    ALTER RESOURCE GOVERNOR RECONFIGURE;
     GO
     ```
 
@@ -163,11 +163,11 @@ SQL Server Machine Learning Services에서 Python 및 R 워크로드를 관리�
 
     **샘플 결과**
 
-    |group_id|NAME|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
+    |group_id|name|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
     |-|-|-|-|-|-|-|-|-|-|
-    |1|내부|보통|25|0|0|0|0|1|2|
-    |2|기본|보통|25|0|0|0|0|2|2|
-    |256|ds_wg|보통|25|0|0|0|0|2|256|
+    |1|내부|중간|25|0|0|0|0|1|2|
+    |2|기본값|중간|25|0|0|0|0|2|2|
+    |256|ds_wg|중간|25|0|0|0|0|2|256|
   
 2.  새 카탈로그 보기인 [sys.resource_governor_external_resource_pools&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)를 사용하여 모든 외부 리소스 풀을 봅니다.
   
@@ -177,9 +177,9 @@ SQL Server Machine Learning Services에서 Python 및 R 워크로드를 관리�
 
     **샘플 결과**
     
-    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|버전|
     |-|-|-|-|-|-|
-    |2|기본|100|20|0|2|
+    |2|기본값|100|20|0|2|
     |256|ds_ep|100|40|0|1|
   
      자세한 내용은 [리소스 관리자 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)를 참조하세요.

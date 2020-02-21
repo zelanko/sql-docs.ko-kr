@@ -11,10 +11,10 @@ ms.assetid: 1a576d95-7da6-4b7b-8b32-59e5b4d354c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a77816598e7c8e3f0589f71cb5c02e40e0e17317
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027921"
 ---
 # <a name="performing-batch-operations"></a>일괄 처리 작업 수행
@@ -24,7 +24,7 @@ ms.locfileid: "69027921"
   
  [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 및 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스는 모두 일괄 처리 업데이트를 전송하는 데 사용할 수 있습니다. [addBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md) 메서드는 명령을 추가하는 데 사용됩니다. [clearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md) 메서드는 명령 목록을 지우는 데 사용됩니다. [executeBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md) 메서드는 처리할 모든 명령을 전송하는 데 사용됩니다. 단순 업데이트 횟수를 반환하는 DDL(데이터 정의 언어) 및 DML(데이터 조작 언어) 문만 일괄 처리의 일부로 실행할 수 있습니다.  
   
- executeBatch 메서드는 각 명령의 업데이트 횟수에 해당하는 **int** 값 배열을 반환합니다. 명령 중 하나가 실패 하면 BatchUpdateException이 throw 되며, BatchUpdateException 클래스의 getUpdateCounts 메서드를 사용 하 여 업데이트 횟수 배열을 검색 해야 합니다. 명령 하나가 실패하더라도 드라이버는 계속해서 나머지 명령을 처리합니다. 그러나 명령에 구문 오류가 있으면 일괄 처리에 있는 문이 실패합니다.  
+ executeBatch 메서드는 각 명령의 업데이트 횟수에 해당하는 **int** 값 배열을 반환합니다. 명령 중 하나가 실패하면 BatchUpdateException이 throw되며, BatchUpdateException 클래스의 getUpdateCounts 메서드를 사용하여 업데이트 횟수 배열을 검색해야 합니다. 명령 하나가 실패하더라도 드라이버는 계속해서 나머지 명령을 처리합니다. 그러나 명령에 구문 오류가 있으면 일괄 처리에 있는 문이 실패합니다.  
   
 > [!NOTE]  
 >  업데이트 횟수를 사용할 필요가 없다면 SET NOCOUNT ON 문을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 먼저 발급할 수 있습니다. 이렇게 하면 네트워크 트래픽이 감소하고 애플리케이션의 성능도 향상됩니다.  
@@ -56,7 +56,7 @@ public static void executeBatchUpdate(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버에서 문 사용](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   

@@ -1,20 +1,21 @@
 ---
-title: 보고서 서버 데이터베이스 만들기, SSRS Configuration Manager | Microsoft Docs
+title: 보고서 서버 데이터베이스 만들기, 구성 관리자 | Microsoft Docs
+description: SQL Server Reporting Services 기본 모드에서는 보고서 서버 메타데이터 및 개체를 저장하기 위해 두 개의 SQL Server 관계형 데이터베이스를 사용합니다. 한 데이터베이스는 주 스토리지로 사용되고 다른 데이터베이스는 임시 데이터를 저장하는 데 사용됩니다.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 08/28/2019
-ms.openlocfilehash: d8bbc1436b3615259248598a9fa19346d4f2a43f
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
-ms.translationtype: MTE75
+ms.date: 12/16/2019
+ms.openlocfilehash: a0ff8c253af6165602b626da9aedbba09bb819f8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123013"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253310"
 ---
-# <a name="create-a-report-server-database"></a>보고서 서버 데이터베이스 만들기 
+# <a name="create-a-report-server-database-ssrs-configuration-manager"></a>보고서 서버 데이터베이스 만들기, SSRS 구성 관리자  
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
@@ -68,7 +69,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 보고서 서버 데이터베이스를 호스팅하는 데 사용됩니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스는 로컬 또는 원격 인스턴스일 수 있습니다. 보고서 서버 데이터베이스를 호스팅할 수 있는 지원되는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 버전은 다음과 같습니다.  
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-- Azure SQL 관리되는 인스턴스
+- Azure SQL Managed Instance
 
 - SQL Server 2019
 

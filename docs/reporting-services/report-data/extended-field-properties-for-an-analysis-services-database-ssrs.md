@@ -9,10 +9,10 @@ ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d315aa1c5037e27d5c48e1ee03addef35cbc22df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573317"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services 데이터베이스에 대한 확장 필드 속성(SSRS)
@@ -42,19 +42,19 @@ ms.locfileid: "65573317"
   
 |**속성**|**형식**|**설명 또는 필요한 값**|  
 |------------------|--------------|---------------------------------------|  
-|**Value**|**개체**|필드의 데이터 값을 지정합니다.|  
+|**값**|**Object**|필드의 데이터 값을 지정합니다.|  
 |**IsMissing**|**Boolean**|필드가 결과 데이터 집합에 있는지 여부를 나타냅니다.|  
 |**UniqueName**|**String**|수준의 정규화된 이름을 반환합니다. 예를 들어 직원의 **UniqueName** 값은 *[Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]* 일 수 있습니다.|  
 |**BackgroundColor**|**String**|필드에 대해 데이터베이스에 정의된 배경색을 반환합니다.|  
-|**색**|**String**|항목에 대해 데이터베이스에 정의된 전경색을 반환합니다.|  
+|**Color**|**String**|항목에 대해 데이터베이스에 정의된 전경색을 반환합니다.|  
 |**FontFamily**|**String**|항목에 대해 데이터베이스에 정의된 글꼴 이름을 반환합니다.|  
 |**FontSize**|**String**|항목에 대해 데이터베이스에 정의된 글꼴 크기를 반환합니다.|  
 |**FontWeight**|**String**|항목에 대해 데이터베이스에 정의된 글꼴 두께를 반환합니다.|  
 |**FontStyle**|**String**|항목에 대해 데이터베이스에 정의된 글꼴 스타일을 반환합니다.|  
 |**TextDecoration**|**String**|항목에 대해 데이터베이스에 정의된 특수 텍스트 서식을 반환합니다.|  
 |**FormattedValue**|**String**|측정값 또는 주요 숫자 값의 형식화된 값을 반환합니다. 예를 들어 **Sales Amount Quota** 에 대한 **FormattedValue** 속성은 $1,124,400.00과 같은 통화 형식을 반환합니다.|  
-|**Key**|**개체**|수준의 키를 반환합니다.|  
-|**LevelNumber**|**Integer**|부모-자식 계층에 대해 수준 또는 차원 번호를 반환합니다.|  
+|**Key**|**Object**|수준의 키를 반환합니다.|  
+|**LevelNumber**|**정수**|부모-자식 계층에 대해 수준 또는 차원 번호를 반환합니다.|  
 |**ParentUniqueName**|**String**|부모-자식 계층에 대해 부모 수준의 정규화된 이름을 반환합니다.|  
   
 > [!NOTE]  
@@ -129,7 +129,7 @@ CELL PROPERTIES
 |속성|값|  
 |--------------|-----------|  
 |CellOrdinal|0|  
-|Value|2481|  
+|값|2481|  
 |BACK_COLOR|(null)|  
 |FORE_COLOR|(null)|  
 |FORMATTED_VALUE|2,481|  

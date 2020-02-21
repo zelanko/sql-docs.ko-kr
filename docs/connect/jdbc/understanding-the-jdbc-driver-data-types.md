@@ -11,10 +11,10 @@ ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a8daea8b477be13dd7b267a17ddf5f960868f579
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027269"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>JDBC 드라이버 데이터 형식 이해
@@ -29,7 +29,7 @@ JDBC 유형 시스템은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-| 항목                                                                                                                                            | 설명                                                                                                                                                                                                                                                          |
+| 항목                                                                                                                                            | Description                                                                                                                                                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [기본 데이터 형식 사용](../../connect/jdbc/using-basic-data-types.md)                                                                           | JDBC 기본 데이터 형식을 설명합니다. 결과 집합, 매개 변수가 있는 쿼리 및 저장 프로시저로 데이터 형식을 사용하는 방법에 대한 예가 포함되어 있습니다.                                                                                                        |
 | [java.sql.Time 값을 서버에 보내는 방식 구성](../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md) | JDBC 드라이버에서 날짜를 생성하는 방식을 설명합니다.                                                                                                                                                                                                                       |
@@ -40,6 +40,6 @@ JDBC 유형 시스템은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 | [XML 데이터 지원](../../connect/jdbc/supporting-xml-data.md)                                                                                 | SQLXML 인터페이스에 대해 설명합니다. **SQLXML** Java 데이터 형식으로 관계형 데이터베이스에 XML 데이터를 읽고 쓰는 방법에 대해서도 설명합니다.                                                                                                             |
 | [래퍼 및 인터페이스](../../connect/jdbc/wrappers-and-interfaces.md)                                                                         | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 관련 메서드와 상수가 있는 인터페이스에 대해 설명합니다. 애플리케이션 서버는 이 인터페이스를 사용하여 클래스의 프록시를 만들 수 있습니다. 또한 `java.sql.Wrapper` 인터페이스에 대한 지원에 대해서도 설명합니다. |
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

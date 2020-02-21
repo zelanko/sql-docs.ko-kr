@@ -11,10 +11,10 @@ ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: df376535f8f6c6a7d98e1744a2d2b70e813d400a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028279"
 ---
 # <a name="sqlxml-data-type-sample"></a>SQLXML 데이터 형식 샘플
@@ -38,7 +38,7 @@ DOM(문서 개체 모델)은 XML 문서, 조각, 노드 또는 노드 집합의 
 
 ## <a name="requirements"></a>요구 사항
 
-이 샘플 애플리케이션을 실행하려면 sqljdbc4.jar 파일을 포함하도록 클래스 경로를 설정해야 합니다. 클래스 경로에 sqljdbc4.jar에 대한 항목이 없으면 샘플 애플리케이션에서 &quot;클래스를 찾을 수 없습니다.&quot; 예외가 발생합니다. 클래스 경로를 설정 하는 방법에 대 한 자세한 내용은 [JDBC 드라이버 사용](../../../connect/jdbc/using-the-jdbc-driver.md)을 참조 하세요.
+이 샘플 애플리케이션을 실행하려면 sqljdbc4.jar 파일을 포함하도록 클래스 경로를 설정해야 합니다. 클래스 경로에 sqljdbc4.jar에 대한 항목이 없으면 샘플 애플리케이션에서 &quot;클래스를 찾을 수 없습니다.&quot; 예외가 발생합니다. 클래스 경로를 설정하는 방법에 대한 자세한 내용은 [JDBC 드라이버 사용](../../../connect/jdbc/using-the-jdbc-driver.md)을 참조하세요.
 
 또한 이 샘플 애플리케이션을 실행하려면 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 대한 액세스 권한이 필요합니다.
 
@@ -60,6 +60,6 @@ showTransformer 메서드는 SAX 및 Transformer를 사용하여 한 테이블�
 
 [!code[JDBC#UsingSQLXML1](../../../connect/jdbc/codesnippet/Java/sqlxml-data-type-sample_1.java)]
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [데이터 형식 작업 &#40;JDBC&#41;](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)

@@ -1,5 +1,5 @@
 ---
-title: '방법: 지정 된 포트에서 연결 | Microsoft Docs'
+title: '방법: 지정된 포트에서 연결 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: af055a73904bb8feec92fb2afe93df064a09ab23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015054"
 ---
 # <a name="how-to-connect-on-a-specified-port"></a>방법: 지정된 포트에서 연결
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-이 항목은 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 사용하여 지정된 포트에서 SQL Server에 연결하는 방법을 설명합니다.  
+이 문서에서는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 사용하여 지정된 포트에서 SQL Server에 연결하는 방법을 설명합니다.  
   
 ### <a name="to-connect-on-a-specified-port"></a>지정된 포트에서 연결하려면  
   
-1.  연결을 허용하도록 서버가 구성된 포트를 확인합니다. 지정된 포트에서 연결을 허용하도록 서버를 구성하는 방법에 대한 자세한 내용은 [방법: 특정 TCP 포트에서 수신할 서버 구성(SQL Server 구성 관리자)](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)을 참조하세요.  
+1.  연결을 허용하도록 서버가 구성된 포트를 확인합니다. 지정된 포트에서 연결을 허용하도록 서버를 구성하는 방법에 대한 자세한 내용은 [방법: 특정 TCP 포트에서 수신 대기할 서버 구성(SQL Server 구성 관리자)](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)을 참조하세요.  
   
 2.  원하는 포트를 [sqlsrv_connect](../../connect/php/sqlsrv-connect.md) 함수의 *$serverName* 매개 변수에 추가합니다. 서버 이름과 포트를 쉼표로 구분합니다. 예를 들어 다음 코드 줄은 포트 1521에서 *myServer* 라는 서버에 연결하는 방법을 보여 주기 위해 SQLSRV 드라이버를 사용합니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68015054"
 ## <a name="see-also"></a>참고 항목  
 [서버에 연결](../../connect/php/connecting-to-the-server.md)
 
-[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드 | Microsoft Docs](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Microsoft Drivers for PHP for SQL Server 시작](../../connect/php/getting-started-with-the-php-sql-driver.md)
 

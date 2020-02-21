@@ -1,5 +1,5 @@
 ---
-title: JDBC 드라이버를 사용 하 여 트랜잭션 수행 | Microsoft Docs
+title: JDBC 드라이버로 트랜잭션 수행 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: afbb776f-05dc-4e79-bb25-2c340483e401
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58c6282a11e3fcc0ca896a2e3e4075a4b51d928e
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027848"
 ---
 # <a name="performing-transactions-with-the-jdbc-driver"></a>JDBC 드라이버로 트랜잭션 수행
@@ -26,7 +26,7 @@ ms.locfileid: "69027848"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[트랜잭션 이해](../../connect/jdbc/understanding-transactions.md)|JDBC 드라이버에서 트랜잭션을 사용하는 방법의 개요를 제공합니다.|  
 |[XA 트랜잭션 이해](../../connect/jdbc/understanding-xa-transactions.md)|JDBC 드라이버에서 XA 트랜잭션을 사용하는 방법의 개요를 제공합니다.|  
@@ -34,7 +34,7 @@ ms.locfileid: "69027848"
 |[저장점 사용](../../connect/jdbc/using-savepoints.md)|JDBC 드라이버를 트랜잭션 저장점과 함께 사용하는 방법을 설명합니다.|  
 |[유지 기능 사용](../../connect/jdbc/using-holdability.md)|JDBC 드라이버를 결과 집합 유지 기능과 함께 사용하는 방법을 설명합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

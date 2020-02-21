@@ -12,14 +12,14 @@ ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 52222f154ccc8068c77b0925f246e738a66721cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581254"
 ---
 # <a name="access-report-server-items-using-url-access"></a>URL 액세스를 사용하여 보고서 서버 항목 액세스
-  이 항목에서는 *rs:Command*=*Value*를 사용하여 보고서 서버 데이터베이스 또는 SharePoint 사이트에서 여러 형식의 카탈로그 항목에 액세스하는 방법에 대해 설명합니다. 이 매개 변수 문자열을 실제로 추가할 필요는 없습니다. 이 문자열을 생략한 경우 보고서 서버에서 항목 형식을 평가하고 알맞은 매개 변수 값을 자동으로 선택합니다. 그러나 URL에서 *rs:Command*=*Value* 문자열을 사용하면 보고서 서버의 성능이 향상됩니다.  
+  이 문서에서는 *rs:Command*=*Value*를 사용하여 보고서 서버 데이터베이스 또는 SharePoint 사이트에서 여러 형식의 카탈로그 항목에 액세스하는 방법에 대해 설명합니다. 이 매개 변수 문자열을 실제로 추가할 필요는 없습니다. 이 문자열을 생략한 경우 보고서 서버에서 항목 형식을 평가하고 알맞은 매개 변수 값을 자동으로 선택합니다. 그러나 URL에서 *rs:Command*=*Value* 문자열을 사용하면 보고서 서버의 성능이 향상됩니다.  
   
  아래 예의 `_vti_bin` 프록시 구문을 참고하십시오. 프록시 구문을 사용하는 방법에 대한 자세한 내용은 [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md)를 참조하십시오.  
 
@@ -27,9 +27,9 @@ ms.locfileid: "65581254"
 > SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
   
 ## <a name="access-a-report"></a>보고서 액세스  
- 브라우저에서 보고서를 보려면 *rs:Command*=*Render* 매개 변수를 사용합니다. 예를 들어  
+ 브라우저에서 보고서를 보려면 *rs:Command*=*Render* 매개 변수를 사용합니다. 다음은 그 예입니다.  
   
- - **네이티브** `https://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
+ - **기본** `https://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
@@ -43,7 +43,7 @@ ms.locfileid: "65581254"
 ## <a name="access-a-resource"></a>리소스 액세스  
  리소스에 액세스하려면 *rs:Command*=*GetResourceContents* 매개 변수를 사용합니다. 이미지와 같이 브라우저와 호환되는 리소스는 브라우저에서 열립니다. 그렇지 않으면 파일 또는 리소스를 열거나 디스크에 저장하라는 메시지가 나타납니다.  
   
- **네이티브** `https://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`  
+ **기본** `https://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -52,9 +52,9 @@ ms.locfileid: "65581254"
 ::: moniker-end
   
 ## <a name="access-a-data-source"></a>데이터 원본 액세스  
- 데이터 원본에 액세스하려면 *rs:Command*=*GetDataSourceContents* 매개 변수를 사용합니다. 브라우저에서 XML을 지원하는 경우 데이터 원본에 대해 **Read Contents** 권한을 가진 인증된 사용자이면 데이터 원본 정의가 표시됩니다. 예를 들어  
+ 데이터 원본에 액세스하려면 *rs:Command*=*GetDataSourceContents* 매개 변수를 사용합니다. 브라우저에서 XML을 지원하는 경우 데이터 원본에 대해 **Read Contents** 권한을 가진 인증된 사용자이면 데이터 원본 정의가 표시됩니다. 다음은 그 예입니다.  
   
- **네이티브** `https://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
+ **기본** `https://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -79,9 +79,9 @@ ms.locfileid: "65581254"
  연결 문자열은 보고서 서버의 **SecureConnectionLevel** 설정을 기준으로 반환됩니다. **SecureConnectionLevel** 설정에 대한 자세한 내용은 [Using Secure Web Service Methods](../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)을 참조하십시오.  
   
 ## <a name="access-the-contents-of-a-folder"></a>폴더 내용 액세스  
- 폴더의 내용에 액세스하려면 *rs:Command*=*GetChildren* 매개 변수를 사용합니다. 요청된 폴더의 하위 폴더, 보고서, 데이터 원본 및 리소스에 대한 링크가 포함된 일반적인 폴더 탐색 페이지가 반환됩니다. 예를 들어  
+ 폴더의 내용에 액세스하려면 *rs:Command*=*GetChildren* 매개 변수를 사용합니다. 요청된 폴더의 하위 폴더, 보고서, 데이터 원본 및 리소스에 대한 링크가 포함된 일반적인 폴더 탐색 페이지가 반환됩니다. 다음은 그 예입니다.  
   
- **네이티브** `https://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
+ **기본** `https://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   

@@ -1,10 +1,9 @@
 ---
-title: 쿼리 변경 내용 취소(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 쿼리의 변경 내용 취소
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cb5db1e50e23772219bd7cd822d8e04615b13a29
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 1739a1a7d3fa42ccd0df4ba80bf6961b4e58ca08
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263759"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254644"
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>쿼리 변경 내용 취소(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,8 +38,8 @@ ms.locfileid: "68263759"
     마지막 저장 상태로 쿼리 정의가 되돌아갑니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[쿼리 저장(Visual Database Tools)](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
-[쿼리 및 뷰 디자인 방법 도움말 항목(Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[쿼리 관련 기본 작업 수행(Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
-[결과 창에서 데이터 작업(Visual Database Tools)](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[쿼리 저장](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
+[쿼리 및 뷰 디자인 방법 도움말 항목](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[쿼리 관련 기본 작업 수행](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[결과 창에서 데이터 작업](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   

@@ -1,10 +1,7 @@
 ---
-title: 프록시 편집기 - 보안 주체 추가 | Microsoft 문서
-ms.custom: ''
-ms.date: 01/19/2017
+title: 프록시 편집기 - 보안 주체 추가
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +9,20 @@ f1_keywords:
 ms.assetid: 9d33749f-9653-4691-9a0f-06ed7dd6166f
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 17f528cb340e42d6445e6ef0d54fc33901061fe6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 17811051ed091d3c091a9e6c354afdb38759ebb4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263099"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247368"
 ---
 # <a name="proxy-editor---add-principal"></a>프록시 편집기 - 보안 주체 추가
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -29,7 +31,7 @@ ms.locfileid: "68263099"
 이 페이지를 사용하여 서버 보안 주체에 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정에 대한 액세스 권한을 부여할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
-**보안 주체 유형**  
+**주체 유형**  
 표시할 보안 주체의 유형입니다.  
   
 **사용 가능한 보안 주체**  

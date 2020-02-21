@@ -14,10 +14,10 @@ ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0359a53fafa4c738b80d4ad44b3c9babdd534cf7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68892548"
 ---
 # <a name="grouping-pane"></a>그룹화 창
@@ -49,7 +49,7 @@ ms.locfileid: "68892548"
 ## <a name="advanced-mode"></a>고급 모드  
 고급 모드에서는 그룹의 모든 정적 및 동적 멤버를 볼 수 있습니다. 멤버를 선택하면 속성 창에 현재 선택한 **테이블릭스 멤버**에 대한 속성이 표시됩니다.  
   
-![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) **고급 모드**를 전환하려면 열 그룹 창 옆에 있는 아래쪽 화살표를 마우스 오른쪽 단추로 클릭한 다음 **고급 모드**를 클릭합니다.  
+![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png)**고급 모드**를 전환하려면 열 그룹 창 옆에 있는 아래쪽 화살표를 마우스 오른쪽 단추로 클릭한 다음 **고급 모드**를 클릭합니다.  
   
 대부분의 경우 정적 및 동적 그룹 행과 열의 표시를 제어하는 속성은 그룹을 만들거나 합계를 추가할 때 자동으로 설정됩니다. 
 

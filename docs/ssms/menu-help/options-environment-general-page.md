@@ -1,6 +1,6 @@
 ---
-title: 옵션(환경 - 일반 페이지) | Microsoft 문서
-ms.custom: ''
+title: 옵션(환경 - 일반 페이지)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ddb14bf485eb7bdd91c2383d165fc02ce20637b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 808fcde7587a68f45bda472ba51e03bddc0884af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68257256"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245735"
 ---
 # <a name="options-environment---general-page"></a>옵션(환경 - 일반 페이지)
 
@@ -35,6 +35,6 @@ ms.locfileid: "68257256"
 
 이 확인란을 선택하면 도킹된 집합의 모든 도구 창을 숨기는 것이 아니라 현재 포커스가 있는 도구 창만 자동으로 숨깁니다. 이 확인란은 기본적으로 선택되어 있지 않습니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 - [옵션 대화 상자 F1 도움말](options-dialog-boxes-f1-help.md)

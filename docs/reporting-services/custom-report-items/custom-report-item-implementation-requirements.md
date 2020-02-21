@@ -11,10 +11,10 @@ ms.assetid: cfacd816-00d6-4a3d-be72-1bba6f7f6886
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e25938d690d6e1046d1d0e75ae5a4952b05d4615
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594519"
 ---
 # <a name="custom-report-item-implementation-requirements"></a>사용자 지정 보고서 항목 구현 요구 사항
@@ -23,9 +23,9 @@ ms.locfileid: "73594519"
 ## <a name="development-and-deployment-requirements"></a>개발 및 배포 요구 사항  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대한 사용자 지정 보고서 항목을 개발하려면 다음이 필요합니다.  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 함께 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 실행하는 서버에 대한 관리 액세스  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]와 함께 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 서버에 대한 관리 액세스.  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK(소프트웨어 개발 키트)가 설치된 [!INCLUDE[vsprvsext](../../includes/vsprvsext-md.md)] 이상  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK(소프트웨어 개발 키트)가 설치된 [!INCLUDE[vsprvsext](../../includes/vsprvsext-md.md)] 이상.  
   
 -   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK 설명서에 대한 액세스  
   

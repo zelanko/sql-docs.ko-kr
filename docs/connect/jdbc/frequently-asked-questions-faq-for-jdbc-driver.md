@@ -11,10 +11,10 @@ ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 37f644b07b02c90e74b0b4fe4e0d5215f5efa298
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73049814"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 드라이버에 대한 FAQ(질문과 대답)
@@ -39,9 +39,9 @@ Microsoft JDBC Driver 7.4는 JDBC 4.2 및 4.3(부분) 사양을 지원하며 설
 
 | JAR                        | JDBC 사양            | JDK 버전 |
 | -------------------------- | ----------------------------- | ----------- |
-| mssql-jdbc-7.4.1. jre12 | JDBC 4.3(부분) 및 4.2 | JDK 12.0    |
-| mssql-jdbc-7.4.1. jre11 | JDBC 4.3(부분) 및 4.2 | JDK 11.0    |
-| mssql-jdbc-7.4.1. jre8  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-7.4.1.jre12.jar | JDBC 4.3(부분) 및 4.2 | JDK 12.0    |
+| mssql-jdbc-7.4.1.jre11.jar | JDBC 4.3(부분) 및 4.2 | JDK 11.0    |
+| mssql-jdbc-7.4.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 | &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 Microsoft JDBC Driver 7.2는 JDBC 4.2 및 4.3(부분) 사양을 지원하며 설치 패키지에 다음과 같은 두 개의 JAR 클래스 라이브러리를 포함합니다.
@@ -102,7 +102,7 @@ Microsoft JDBC Driver for SQL Server는 추가 비용 없이 사용할 수 있�
 JDBC 드라이버 6.0, 6.2, 6.4 및 7.0은 재배포 가능합니다. 라이선스 계약의 "배포 가능 코드" 절을 검토하세요.
 
 **이 드라이버를 사용하여 Linux 컴퓨터에서 Microsoft SQL Server에 액세스할 수 있나요?**  
-예 이 드라이버를 사용하여 Linux, Unix 및 기타 Windows 이외의 플랫폼에서 SQL Server에 액세스할 수 있습니다. 자세한 내용은 [Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)(SQL Server용 Microsoft JDBC Driver 지원 매트릭스)를 참조하세요.
+예! 이 드라이버를 사용하여 Linux, Unix 및 기타 Windows 이외의 플랫폼에서 SQL Server에 액세스할 수 있습니다. 자세한 내용은 [Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)(SQL Server용 Microsoft JDBC Driver 지원 매트릭스)를 참조하세요.
 
 **드라이버가 SSL(Secure Sockets Layer) 암호화를 지원하나요?**  
 버전 1.2부터 이 드라이버는 SSL(Secure Sockets Layer) 암호화를 지원합니다. 자세한 내용은 [Using SSL Encryption](../../connect/jdbc/using-ssl-encryption.md)(SSL 암호화 사용)을 참조하세요.
@@ -117,19 +117,19 @@ JDBC 드라이버 6.0, 6.2, 6.4 및 7.0은 재배포 가능합니다. 라이선�
 | 비 Windows | Azure Active Directory 인증 |
 | Windows     | 순수 Java Kerberos                    |
 | Windows     | SQL Server                            |
-| 창     | NTLM 백업을 사용하는 Kerberos             |
+| Windows     | NTLM 백업을 사용하는 Kerberos             |
 | Windows     | NTLM                                  |
 | Windows     | Azure Active Directory 인증 |
 | &nbsp;      | &nbsp;                                |
 
 **이 드라이버가 IPv6(인터넷 프로토콜 버전 6) 주소를 지원하나요?**  
-예 드라이버는 IPv6 주소 사용을 지원합니다. 연결 속성 컬렉션 및 serverName 연결 문자열 속성을 사용합니다. 자세한 내용은 [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md)(연결 URL 작성)을 참조하세요.
+예. 드라이버는 IPv6 주소 사용을 지원합니다. 연결 속성 컬렉션 및 serverName 연결 문자열 속성을 사용합니다. 자세한 내용은 [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md)(연결 URL 작성)을 참조하세요.
 
 **적응 버퍼링이란 무엇인가요?**  
 적응 버퍼링 Microsoft SQL Server 2005 JDBC 드라이버 버전 1.2부터 도입되었습니다. 이 기능은 서버 커서 오버헤드 없이 모든 종류의 큰 값 데이터를 검색할 수 있도록 설계되었습니다. Microsoft SQL Server JDBC Driver의 선택 버퍼링 기능은 "선택" 또는 "전체"로 설정될 수 있는 responseBuffering 연결 문자열 속성을 제공합니다. 버전 1.2 릴리스에서는 버퍼링 모드가 기본적으로 "full"이므로 애플리케이션에서 명시적으로 적응 버퍼링 모드를 설정해야 합니다. JDBC Driver 버전 2.0부터, 이 드라이버의 기본 동작은 "선택"입니다. 따라서 적응 버퍼링을 사용하기 위해 애플리케이션에서 명시적으로 적응 버퍼링을 요청할 필요가 없습니다. 자세한 내용은 [적응 버퍼링 사용](../../connect/jdbc/using-adaptive-buffering.md) 및 [적응 응답 버퍼링이란 무엇이며 왜 사용해야 하나요?](https://go.microsoft.com/fwlink/?LinkId=111575) 블로그를 참조하세요.
 
 **이 드라이버는 연결 풀링을 지원하나요?**  
-이 드라이버는 Java Platform, Enterprise Edition 5(Java EE 5) 연결 풀링을 지원합니다. 미들웨어 애플리케이션 서버 공급업체가 제공하며 JDBC 3.0과 호환되는 모든 연결 풀링 구현에 참여할 수 있도록 드라이버는 JDBC 3.0 필수 인터페이스를 구현합니다. 이 드라이버는 이러한 환경에서 풀링된 연결에 참여합니다. 자세한 내용은 [Using Connection Pooling](../../connect/jdbc/using-connection-pooling.md)을 참조하세요. 이 드라이버는 자체 풀링 구현을 제공하지 않으며 타사 Java 애플리케이션 서버에 의존합니다.
+이 드라이버는 Java Platform, Enterprise Edition 5(Java EE 5) 연결 풀링을 지원합니다. 미들웨어 애플리케이션 서버 공급업체가 제공하며 JDBC 3.0과 호환되는 모든 연결 풀링 구현에 참여할 수 있도록 드라이버는 JDBC 3.0 필수 인터페이스를 구현합니다. 이 드라이버는 이러한 환경에서 풀링된 연결에 참여합니다. 자세한 내용은 [Using Connection Pooling](../../connect/jdbc/using-connection-pooling.md)(연결 풀링 사용)을 참조하세요. 이 드라이버는 자체 풀링 구현을 제공하지 않으며 타사 Java 애플리케이션 서버에 의존합니다.
 
 **이 드라이버에 대한 지원을 사용할 수 있나요?**  
 몇 가지 지원 옵션을 사용할 수 있습니다. Microsoft에서 모니터링하는 [GitHub 리포지토리](https://github.com/microsoft/mssql-jdbc)에 질문이나 문제를 게시할 수 있습니다. [포럼](https://go.microsoft.com/fwlink/?LinkID=246673)은 Microsoft, MVP 및 커뮤니티에서 모니터링합니다. Microsoft 고객 지원 서비스에 문의할 수도 있습니다. 개발 팀에서는 타사 애플리케이션 서버 외부에서 발생하는 문제를 재현하도록 요청할 수도 있습니다. 호스팅 Java 컨테이너 환경 외부에서 발생하는 문제를 재현할 수 없는 경우 관련 타사에 문의해야만 계속 팀의 지원을 받을 수 있습니다. 팀에서는 문제와 관련하여 최적의 도움을 주기 위해 Windows와 같은 운영 체제에서 문제를 재현하도록 요청할 수도 있습니다.
@@ -149,6 +149,6 @@ SAP 제품을 사용하고 있으며 JRE 1.4 지원이 필요한 고객의 경�
 **이 드라이버가 FIPS 유효성 검사 알고리즘을 사용하여 통신할 수 있나요?**  
 Microsoft JDBC Driver에는 암호화 알고리즘이 포함되어 있지 않습니다. 고객이 FIPS(Federal Information Processing Standards)에서 허용될 수 있는 운영 체제, 애플리케이션 및 JVM 알고리즘을 활용하며 해당 알고리즘을 사용하도록 드라이버를 구성하는 경우 해당 드라이버는 지정된 알고리즘만 통신에 사용합니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)
