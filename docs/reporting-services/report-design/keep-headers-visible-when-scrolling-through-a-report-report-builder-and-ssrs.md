@@ -9,10 +9,10 @@ ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 61263520f5d519c2b908c753b72c1d5ec7f67e13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580137"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>보고서를 스크롤할 때 머리글 계속 표시(보고서 작성기 및 SSRS)
@@ -56,7 +56,7 @@ ms.locfileid: "65580137"
   
 3.  스크롤하는 동안 계속 표시할 정적 멤버(행 또는 열)를 클릭합니다. 속성 창에 **테이블릭스 멤버** 속성이 표시됩니다.  
   
-     ![테이블릭스 구성원 속성](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "테이블릭스 구성원 속성")  
+     ![테이블릭스 멤버 속성](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "테이블릭스 멤버 속성")  
   
 4.  속성 창에서 **FixedData** 를 **True**로 설정합니다.  
   

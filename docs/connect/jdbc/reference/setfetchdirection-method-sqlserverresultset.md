@@ -16,10 +16,10 @@ ms.assetid: 4ee82290-508d-4bff-a5c5-8a56338deef8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d801a0184259ae22f86ea5ec23391ef78b23ce38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974270"
 ---
 # <a name="setfetchdirection-method-sqlserverresultset"></a>setFetchDirection 메서드(SQLServerResultSet)
@@ -51,8 +51,8 @@ public void setFetchDirection(int direction)
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 setFetchDirection 메서드는 java. ResultSet 인터페이스의 setFetchDirection 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 setFetchDirection 메서드는 java.sql.ResultSet 인터페이스의 setFetchDirection 메서드에 의해 지정됩니다.  
   
  이 메서드의 초기 값은 이 SQLServerResultSet 개체를 생성한 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체에 의해 결정됩니다. 인출 방향은 언제든지 변경할 수 있습니다.  
   

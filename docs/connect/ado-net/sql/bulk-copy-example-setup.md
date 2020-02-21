@@ -1,6 +1,6 @@
 ---
 title: 대량 복사 예제 설정
-description: 대량 복사 예에 사용 된 테이블에 대해 설명 하 고 AdventureWorks 데이터베이스에서 테이블을 만들기 위한 SQL 스크립트를 제공 합니다.
+description: 대량 복사 예제에 사용된 테이블에 대해 설명하고 AdventureWorks 데이터베이스에서 테이블을 만들기 위한 SQL 스크립트를 제공합니다.
 ms.date: 09/30/2019
 dev_langs:
 - sql
@@ -9,21 +9,21 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 68a453efa165d73df521bc2ce3a00984f843f4fd
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 129dc64fc9bac2111cd0bc5cb61f3ce7f1d98ee1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452302"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247871"
 ---
 # <a name="bulk-copy-example-setup"></a>대량 복사 예제 설정
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET 다운로드](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-@No__t_0 클래스를 사용 하 여 SQL Server 테이블에만 데이터를 쓸 수 있습니다. 이 항목에 표시된 코드 샘플에서는 SQL Server 샘플 데이터베이스 **AdventureWorks**를 사용합니다. 기존 테이블 코드 샘플이 변경되지 않도록 하려면 먼저 만들어야 하는 테이블에 데이터를 씁니다.  
+<xref:Microsoft.Data.SqlClient.SqlBulkCopy> 클래스를 사용하면 SQL Server 테이블에만 데이터를 작성할 수 있습니다. 이 항목에 표시된 코드 샘플에서는 SQL Server 샘플 데이터베이스 **AdventureWorks**를 사용합니다. 기존 테이블 코드 샘플이 변경되지 않도록 하려면 먼저 만들어야 하는 테이블에 데이터를 씁니다.  
   
 **BulkCopyDemoMatchingColumns** 및 **BulkCopyDemoDifferentColumns** 테이블은 모두 **AdventureWorks** **Production.Products** 테이블을 기반으로 합니다. 이러한 테이블을 사용하는 코드 샘플에서 데이터는 **Production.Products** 테이블에서 이러한 샘플 테이블 중 하나에 추가됩니다. **BulkCopyDemoDifferentColumns** 테이블은 샘플에서 원본 데이터의 열을 대상 테이블에 매핑하는 방법을 보여 주는 경우에 사용되고, **BulkCopyDemoMatchingColumns**는 대부분의 다른 샘플에서 사용됩니다.  
   

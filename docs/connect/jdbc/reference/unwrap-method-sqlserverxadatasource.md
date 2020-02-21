@@ -11,10 +11,10 @@ ms.assetid: d97c99b3-2224-4abb-8b32-40aff49fe759
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f7406bce05278cad83b28b14f95a241b3eff026
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67986050"
 ---
 # <a name="unwrap-method-sqlserverxadatasource"></a>unwrap 메서드(SQLServerXADataSource)
@@ -34,20 +34,20 @@ public <T> T unwrap(Class<T> iface)
   
  인터페이스를 정의하는 **T** 형식의 클래스입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  지정된 인터페이스를 구현하는 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md) 메서드는 JDBC 4.0 사양에서 도입된 java.sql.Wrapper 인터페이스에 의해 정의됩니다.  
   
  애플리케이션에서는 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]와 관련된 JDBC API에 대한 확장에 액세스해야 할 수 있습니다. unwrap 메서드는 이 개체가 확장하는 공용 클래스에서 공급업체 확장을 노출하는 경우 이 클래스에 대한 래핑 해제를 지원합니다.  
   
- [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) 클래스는 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스에서 확장된 [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) 클래스를 확장합니다. 이 메서드가 호출되면 개체가 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) 및 [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) 클래스로 래핑 해제됩니다.  
+ [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) 클래스는 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스에서 확장된 [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) 클래스를 확장합니다. 이 메서드가 호출되면 개체가 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) 및 [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)로 래핑 해제됩니다.  
   
- 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조 하세요.  
+ 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerXADataSource 메서드](../../../connect/jdbc/reference/sqlserverxadatasource-methods.md)   

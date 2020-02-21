@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 201314f5869b9b1aab52b2f101f2396656448f79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994790"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>ISequentialStream을 사용하여 FILESTREAM 열에서 데이터 검색(OLE DB)
@@ -24,7 +24,7 @@ ms.locfileid: "67994790"
 
   이 예제에서는 ICommandText 인터페이스의 ISequentialStream 인터페이스를 사용하여 Filestream 열에서 레코드 하나를 검색하는 방법을 보여 줍니다.  
   
- Filestream 기능에 대 한 자세한 내용은 [Filestream 지원](../../../oledb/features/filestream-support.md)을 참조 하세요.  
+ 파일 스트림 기능에 대한 자세한 내용은 [FILESTREAM 지원](../../../oledb/features/filestream-support.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
  INCLUDE 환경 변수에 msoledbsql.h가 들어 있는 디렉터리를 포함해야 합니다.  

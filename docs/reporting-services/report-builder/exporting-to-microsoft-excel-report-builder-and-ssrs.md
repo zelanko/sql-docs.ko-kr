@@ -9,10 +9,10 @@ ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9973ce2f9c5eac344307258e1c212979146c1695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580773"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Microsoft Excel로 내보내기(보고서 작성기 및 SSRS)
@@ -171,7 +171,7 @@ ms.locfileid: "65580773"
 |워크시트당 최대 열 수|256|16,384|  
 |워크시트당 최대 행 수|65,536|1,048,576|  
 |워크시트에 허용된 색상 수|56(색상표)<br /><br /> 보고서에 56개보다 많은 수의 색을 사용한 경우 렌더링 확장 프로그램에서는 필요한 색을 사용자 지정 색상표에 이미 들어 있는 56색 중 하나로 대체합니다.|약 1600만(24비트 색상)|  
-|ZIP 압축 파일|없음|ZIP 압축|  
+|ZIP 압축 파일|None|ZIP 압축|  
 |기본 글꼴 패밀리|Arial|Calibri|  
 |기본 글꼴 크기|10pt|11pt|  
 |기본 행 높이|12.75pt|15pt|  
@@ -206,9 +206,9 @@ ms.locfileid: "65580773"
   
 |보고서 요소 속성|Description|  
 |-------------------------------|-----------------|  
-|만든 날짜|보고서 실행 날짜와 시간을 나타내는 ISO 날짜/시간 값입니다.|  
+|생성일|보고서 실행 날짜와 시간을 나타내는 ISO 날짜/시간 값입니다.|  
 |작성자|Report.Author|  
-|설명|Report.Description|  
+|Description|Report.Description|  
 |LastSaved|보고서 실행 날짜와 시간을 나타내는 ISO 날짜/시간 값입니다.|  
   
 ##  <a name="PageHeadersFooters"></a> 페이지 머리글 및 바닥글  

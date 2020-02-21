@@ -16,10 +16,10 @@ ms.assetid: d853b2f3-fb72-4d4b-8997-f4a45a9dfefc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 47b1cff27860a09e4f9b8cc43f8523b5a1846a3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972082"
 ---
 # <a name="seturl-method-sqlserverpreparedstatement"></a>setURL 메서드(SQLServerPreparedStatement)
@@ -47,7 +47,7 @@ public final void setURL(int parameterIndex,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 setURL 메서드는 java.sql.PreparedStatement 인터페이스의 setURL 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

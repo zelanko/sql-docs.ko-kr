@@ -16,10 +16,10 @@ ms.assetid: da1d5dae-2517-448e-96fb-5379c93222ea
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 869967e3f8797aa9af4bf59f128730a9fc39641d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570829"
 ---
 # <a name="configurationsetting-method---backupencryptionkey"></a>ConfigurationSetting Method - BackupEncryptionKey
@@ -55,7 +55,7 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
  *ExtendedErrors[]*  
  [out] 호출에서 반환되는 추가 오류가 들어 있는 문자열 배열입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.  
   
 ## <a name="requirements"></a>요구 사항  

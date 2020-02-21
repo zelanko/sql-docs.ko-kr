@@ -16,10 +16,10 @@ ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4b7425b205bdc630d17e5c962519348d2b1ce7a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63284657"
 ---
 # <a name="report-server-web-service-methods"></a>보고서 서버 웹 서비스 메서드
@@ -28,7 +28,7 @@ ms.locfileid: "63284657"
 ## <a name="endpoints-and-methods"></a>엔드포인트 및 메서드  
  다음 표는 보고서 서버 웹 서비스의 엔드포인트와 <xref:ReportService2010.ReportingService2010> 엔드포인트에서 제공하는 메서드의 범주를 나열합니다. 다른 엔드포인트에서 사용할 수 있는 메서드에 대한 자세한 내용은 [기술 참조&#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)를 참조하세요.  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[보고서 서버 웹 서비스 엔드포인트](../../../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md)|보고서 서버 웹 서비스의 관리 및 실행 엔드포인트를 설명합니다.|  
 |[보고서 서버 네임스페이스 관리 메서드](../../../reporting-services/report-server-web-service/methods/report-server-namespace-management-methods.md)|보고서 서버 데이터베이스를 관리하는 데 사용할 수 있는 메서드를 설명합니다. 특히 폴더 및 리소스를 관리하고 항목 속성을 설정할 수 있습니다.|  

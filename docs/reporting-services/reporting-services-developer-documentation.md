@@ -12,14 +12,14 @@ helpviewer_keywords:
 - programming [Reporting Services]
 ms.date: 03/17/2017
 ms.openlocfilehash: e2db4a113ebdb53756200879e3797ccbbeec8a52
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68259612"
 ---
 # <a name="reporting-services-developer-documentation"></a>Reporting Services 개발자 설명서
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]는 애플리케이션에서 활용할 수 있는 프로그래밍 인터페이스를 다수 제공합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 의 기존 기능을 사용하여 웹 사이트와 Windows 애플리케이션에 사용자 지정 보고 및 관리 도구를 작성할 수 있으며 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 플랫폼을 확장할 수도 있습니다.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]는 애플리케이션에서 활용할 수 있는 프로그래밍 인터페이스를 다수 제공합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 의 기존 기능을 사용하여 웹 사이트와 Windows 애플리케이션에 사용자 지정 보고 및 관리 도구를 작성할 수 있으며 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 플랫폼을 확장할 수도 있습니다.  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 플랫폼 확장에는 데이터 액세스, 보고서 배달 등에 사용할 수 있는 새 구성 요소 및 리소스를 만드는 작업이 포함됩니다. 조직에서 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 를 사용하는 회사를 대상으로 이러한 구성 요소 및 리소스를 마케팅할 수 있습니다.  
   

@@ -8,17 +8,17 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3c9f44a580ef8207c58ec86ed9df668590266e1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579917"
 ---
 # <a name="high-availability-in-sql-server-reporting-services"></a>SQL Server Reporting Services의 고가용성
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버는 애플리케이션 데이터, 내용, 속성 및 세션 정보를 두 개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스에 저장하는 상태 비저장 서버입니다. 따라서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능의 가용성을 보장하는 가장 좋은 방법은 다음을 수행하는 것입니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 고가용성 기능을 사용하여 보고서 서버 데이터베이스의 작동 시간을 최대화합니다. 장애 조치(Failover) 클러스터에서 실행되도록 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 구성하는 경우 보고서 서버 데이터베이스를 만들 때 해당 인스턴스를 선택할 수 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 고가용성 기능을 사용하여 보고서 서버 데이터베이스의 작동 시간을 최대화합니다. 장애 조치(Failover) 클러스터에서 실행되도록 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 구성하는 경우 보고서 서버 데이터베이스를 만들 때 해당 인스턴스를 선택할 수 있습니다.  
   
 -   가능하면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터베이스 및 데이터 원본에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]을 사용하세요. 자세한 내용은 [Always On 가용성 그룹이 포함된 Reporting Services](../../database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md)를 참조하세요.  
   

@@ -16,10 +16,10 @@ ms.assetid: c14ed187-bdd9-4304-88e3-72072f03c21b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9e86c1964a4ece26115116b8e21c763caaab797b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572224"
 ---
 # <a name="configurationsetting-method---deleteencryptedinformation"></a>ConfigurationSetting 메서드 - DeleteEncryptedInformation
@@ -42,10 +42,10 @@ public void DeleteEncryptedInformation(out Int32 HRESULT, out string[] ExtendedE
  *ExtendedErrors[]*  
  [out] 호출에서 반환되는 추가 오류가 들어 있는 문자열 배열입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드를 호출하면 다음 데이터가 삭제됩니다.  
   
 -   사용자 이름 및 암호를 비롯하여 암호화되는 데이터 원본 정보  

@@ -11,10 +11,10 @@ ms.assetid: 88cd0936-b202-4ab8-90f2-d9c3f66d37f4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1e39c771872b0afbb614257145f447d1a47386a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571335"
 ---
 # <a name="configurationsetting-method---listsslcertificates"></a>ConfigurationSetting 메서드 - ListSSLCertificates
@@ -50,10 +50,10 @@ public void ListSSLCertificates(out string[] CertificateHash,
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타내고 오류 코드는 호출이 실패했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="requirements"></a>요구 사항  
  **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

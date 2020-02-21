@@ -11,10 +11,10 @@ ms.assetid: b00e5a90-2af7-4d04-8ef8-256183777dcf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bb073be8ef92d44f8821078f60622341638a010d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971653"
 ---
 # <a name="sqlserverconnectionpooldatasource-class"></a>SQLServerConnectionPoolDataSource 클래스
@@ -24,7 +24,7 @@ ms.locfileid: "67971653"
   
  **패키지:** com.microsoft.sqlserver.jdbc  
   
- **Extends:** [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
+ **확장:** [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
  **구현:** javax.sql.ConnectionPoolDataSource  
   
@@ -35,7 +35,7 @@ ms.locfileid: "67971653"
 public class SQLServerConnectionPoolDataSource  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SQLServerConnectionPoolDataSource는 일반적으로 기본 제공 연결 풀링을 지원하는 JDBC 3.0 API 사양 연결 풀링을 제공하는 Java 애플리케이션 서버 환경에서 사용되며, Java Platform, Enterprise Edition(Java EE) 애플리케이션 서버와 같이 실제 연결을 제공하기 위해 ConnectionPoolDataSource가 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  

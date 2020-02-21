@@ -20,10 +20,10 @@ ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fd9288a630dd24dd8d79deef184cfc4c4fabcd9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578041"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>구독 및 배달(Reporting Services)
@@ -31,7 +31,7 @@ ms.locfileid: "65578041"
   
  단일 보고서에 대해 여러 구독을 만들어 구독 옵션을 다양화할 수 있습니다. 예를 들어 서로 다른 매개 변수 값을 지정하여 세 가지 버전의 보고서(예: 서부 지역 판매 보고서, 동부 지역 판매 보고서, 모든 판매 보고서)를 생성할 수 있습니다.  
   
- ![ssrs 구독 흐름 예제](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "ssrs 구독 흐름 예제")  
+ ![SSRS 구독 흐름 예제](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "SSRS 구독 흐름 예제")  
   
  일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 구독을 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2017의 버전과 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "65578041"
   
  다음 테이블은 일반적인 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독 시나리오를 설명합니다.  
   
-|시나리오|설명|  
+|시나리오|Description|  
 |--------------|-----------------|  
 |전자 메일 보고서|전자 메일은 개별 사용자 및 그룹에 보고합니다. 배포할 보고서를 받으려면 구독을 만들고 그룹 별칭 또는 전자 메일 별칭을 지정합니다. 런타임에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 구독 데이터를 결정하도록 할 수 있습니다. 멤버 목록이 변경된 그룹에 동일한 보고서를 보내려면 쿼리를 사용하여 런타임에 구독 목록을 파생시킵니다.|  
 |오프라인으로 보고서 보기|사용자는 다음 구독 출력 형식 중 하나를 선택할 수 있습니다.<br /><br /> - 보고서 데이터를 가진 XML 파일<br />- CSV(쉼표로 분리)<br />- PDF<br />- MHTML(웹 보관 파일)<br />- Microsoft Excel<br />- TIFF 파일<br />- Microsoft Word<br /><br /> 보관할 보고서는 심야 백업 일정을 지정한 공유 폴더로 직접 보낼 수 있습니다. 브라우저에서 로드하는 데 시간이 오래 걸리는 대용량 보고서는 데스크톱 애플리케이션에서 볼 수 있는 형식으로 공유 폴더로 보낼 수 있습니다.|  
@@ -88,7 +88,7 @@ ms.locfileid: "65578041"
 ##  <a name="bkmk_standard_and_datadriven"></a> 표준 및 데이터 기반 구독  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 두 가지 구독인 **표준** 과 **데이터 기반**구독을 지원합니다. 표준 구독은 개별 사용자가 만들어 관리합니다. 표준 구독은 구독 처리 시에 변경되지 않는 정적 값으로 구성됩니다. 각 표준 구독에는 보고서 표시 옵션, 배달 옵션 및 보고서 매개 변수 세트가 하나씩 있습니다.  
   
- 데이터 기반 구독은 받는 사람, 보고서 매개 변수 또는 애플리케이션 형식을 지정하는 데 사용되는 값을 제공하는 외부 데이터 원본을 쿼리하여 런타임에 구독 정보를 가져옵니다. 받는 사람 목록이 아주 크거나 받는 사람마다 보고서 출력을 다르게 나타내려는 경우 데이터 기반 구독을 사용할 수 있습니다. 데이터 기반 구독을 사용하려면 쿼리 작성에 대한 전문 지식이 필요하며 매개 변수 사용 방법을 잘 알고 있어야 합니다. 일반적으로 보고서 서버 관리자가 이러한 구독을 만들고 관리합니다. 자세한 내용은 다음 항목을 참조하세요.  
+ 데이터 기반 구독은 받는 사람, 보고서 매개 변수 또는 애플리케이션 형식을 지정하는 데 사용되는 값을 제공하는 외부 데이터 원본을 쿼리하여 런타임에 구독 정보를 가져옵니다. 받는 사람 목록이 아주 크거나 받는 사람마다 보고서 출력을 다르게 나타내려는 경우 데이터 기반 구독을 사용할 수 있습니다. 데이터 기반 구독을 사용하려면 쿼리 작성에 대한 전문 지식이 필요하며 매개 변수 사용 방법을 잘 알고 있어야 합니다. 일반적으로 보고서 서버 관리자가 이러한 구독을 만들고 관리합니다. 자세한 내용은  
   
 -   [데이터 기반 구독](../../reporting-services/subscriptions/data-driven-subscriptions.md)  
   
@@ -97,7 +97,7 @@ ms.locfileid: "65578041"
 ##  <a name="bkmk_subscription_requirements"></a> 구독 요구 사항  
  보고서에 대한 구독을 만들려면 다음과 같은 사전 요구 사항을 충족해야 합니다.  
   
-|요구 사항|설명|  
+|요구 사항|Description|  
 |-----------------|-----------------|  
 |사용 권한|보고서에 대한 액세스 권한이 있어야 합니다. 보고서를 구독하려면 보고서를 볼 사용 권한이 있어야 합니다.<br /><br /> 기본 모드 보고서 서버의 경우 다음과 같은 역할 할당은 구독에 영향을 줍니다.<br /><br /> - "개별 구독 관리" 태스크를 사용하면 특정 보고서에 대한 구독을 생성, 수정 및 삭제할 수 있습니다. 미리 정의된 역할에서 이 태스크는 브라우저 및 보고서 작성기 역할의 일부입니다. 사용자는 이 태스크를 포함하는 역할 할당을 사용하여 자신이 만든 구독만 관리할 수 있습니다.<br />- "모든 구독 관리" 태스크를 사용하면 모든 구독을 액세스 및 수정할 수 있습니다. 이 태스크는 데이터 기반 구독을 만드는 데 필요합니다. 미리 정의된 역할에서 내용 관리자 역할에만 이 태스크가 포함됩니다.|  
 |저장된 자격 증명|구독을 만들려면 보고서는 런타임에 데이터를 검색하기 위해 저장된 자격 증명을 사용하거나 자격 증명을 사용하지 말아야 합니다. 현재 사용자의 가장된 자격 증명이나 위임된 자격 증명을 사용하여 외부 데이터 원본에 연결하도록 구성된 보고서는 구독할 수 없습니다. 저장된 자격 증명은 Windows 계정이거나 데이터베이스 사용자 계정일 수 있습니다. 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.<br /><br /> 사용자에게는 보고서를 보고 개별 구독을 만들 수 있는 권한이 있어야 합니다. 또한 보고서 서버에서**예약된 이벤트 및 보고서 배달** 을 설정해야 합니다. 자세한 내용은 [기존_기본 모드 보고서 서버 구독 만들기 및 관리](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)를 참조하세요.|  
@@ -110,7 +110,7 @@ ms.locfileid: "65578041"
   
  사용자는 구독을 만들 때 사용 가능한 배달 확장 프로그램 중 하나를 선택하여 보고서를 배달하는 방법을 결정할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 다음과 같은 배달 확장 프로그램이 포함되어 있습니다.  
   
-|배달 확장 프로그램|설명|  
+|배달 확장 프로그램|Description|  
 |------------------------|-----------------|  
 |Windows 파일 공유|보고서를 정적 애플리케이션 파일 형식으로 네트워크에서 액세스할 수 있는 공유 폴더로 배달합니다.|  
 |전자 메일|알림 또는 보고서를 전자 메일 첨부 파일 또는 URL 링크로 배달합니다.|  

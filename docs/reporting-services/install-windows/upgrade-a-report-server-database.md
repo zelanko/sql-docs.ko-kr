@@ -12,10 +12,10 @@ ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4873e91d33363743652f36d15c9015438e479476
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65575236"
 ---
 # <a name="upgrade-a-report-server-database"></a>보고서 서버 데이터베이스 업그레이드
@@ -56,7 +56,7 @@ ms.locfileid: "65575236"
  보고서 서버 데이터베이스 이외에도 보고서 서버는 임시 데이터베이스도 사용합니다. 임시 데이터베이스는 보고서 서버 데이터베이스를 업그레이드할 때 자동으로 업그레이드됩니다.  
   
 ## <a name="permissions-required-to-upgrade-a-report-server-database"></a>보고서 서버 데이터베이스를 업그레이드하는 데 필요한 사용 권한  
- 보고서 서버 데이터베이스가 포함된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 업그레이드하는 경우 사용 권한이 없는 상태에서 데이터베이스 업그레이드를 수행하면 오류 메시지가 나타날 수 있습니다. 기본적으로 설치 프로그램에서는 해당 설치 프로그램을 실행하는 사용자의 보안 토큰을 사용하여 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하고 스키마를 업데이트합니다. 보고서 서버 데이터베이스를 호스팅하는 데이터베이스 서버에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** 권한이 있으면 데이터베이스가 정상적으로 업그레이드됩니다. 마찬가지로 명령 프롬프트에서 설치 프로그램을 실행하고 원격 컴퓨터에서 스키마를 수정할 수 있는 **sysadmin** 권한이 있는 계정에 대해 RSUPGRADEDATABASEACCOUNT 및 RSUPGRADEPASSWORD 인수를 지정하는 경우에도 데이터베이스가 정상적으로 업그레이드됩니다.  
+ 보고서 서버 데이터베이스가 포함된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 업그레이드하는 경우 사용 권한이 없는 상태에서 데이터베이스 업그레이드를 수행하면 오류 메시지가 나타날 수 있습니다. 기본적으로 설치 프로그램에서는 해당 설치 프로그램을 실행하는 사용자의 보안 토큰을 사용하여 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하고 스키마를 업데이트합니다. 보고서 서버 데이터베이스를 호스트하는 데이터베이스 서버에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** 권한이 있으면 데이터베이스가 정상적으로 업그레이드됩니다. 마찬가지로 명령 프롬프트에서 설치 프로그램을 실행하고 원격 컴퓨터에서 스키마를 수정할 수 있는 **sysadmin** 권한이 있는 계정에 대해 RSUPGRADEDATABASEACCOUNT 및 RSUPGRADEPASSWORD 인수를 지정하는 경우에도 데이터베이스가 정상적으로 업그레이드됩니다.  
   
  그러나 원격 컴퓨터의 데이터베이스에 대한 **sysadmin** 권한이 없으면 다음과 같은 오류로 인해 연결이 거부됩니다.  
   

@@ -11,10 +11,10 @@ ms.assetid: 828cbaa9-ea7a-4986-95c3-5ba0d7d01d83
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72eededd01cd61d6845cc92bbdfbfd073668dd76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970356"
 ---
 # <a name="sqlserverstatement-members"></a>SQLServerStatement 멤버
@@ -30,13 +30,13 @@ ms.locfileid: "67970356"
   
 ## <a name="inherited-fields"></a>상속된 필드  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |java.sql.Statement|CLOSE_ALL_RESULTS, CLOSE_CURRENT_RESULT, EXECUTE_FAILED, KEEP_CURRENT_RESULT, NO_GENERATED_KEYS, RETURN_GENERATED_KEYS, SUCCESS_NO_INFO|  
   
 ## <a name="methods"></a>메서드  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverstatement.md)|이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체에 대한 명령의 현재 목록에 지정된 SQL 명령을 추가합니다.|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체에 의해 현재 실행되고 있는 SQL 문을 취소합니다.|  

@@ -9,10 +9,10 @@ ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e87bea9a9bd4807b1d91735cc5a620ac3242de73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581524"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>보고서 페이지에서 테이블릭스 데이터 영역 표시 제어
@@ -50,7 +50,7 @@ ms.locfileid: "65581524"
 ## <a name="controlling-how-tablix-row-and-column-groups-render"></a>테이블릭스 행과 열 그룹의 렌더링 방법 제어  
  테이블릭스 데이터 영역 그룹이 렌더링되는 방식을 제어하려면 그룹 구조를 고려해야 합니다. 테이블릭스 데이터 영역은 그림과 같이 네 가지 영역으로 구성될 수 있습니다.  
   
- ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
+ ![테이블릭스 데이터 영역](../../reporting-services/report-design/media/rs-tablixareas.gif "테이블릭스 데이터 영역")  
   
  행 그룹 영역과 열 그룹 영역에는 그룹 머리글이 들어 있습니다. 테이블릭스 데이터 영역에 그룹 머리글이 있는 경우에는 **테이블릭스 속성** 대화 상자의 **일반** 페이지에 있는 속성을 설정하여 행과 열이 반복되는 방식을 제어합니다.  
   

@@ -13,10 +13,10 @@ ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b4bf1f99d6ebadaa0b5740d3563386802bbc3e69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578072"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services의 SharePoint 라이브러리 배달
@@ -66,9 +66,9 @@ ms.locfileid: "65578072"
  내부에서만 사용되거나 SharePoint 통합 모드로 실행되는 보고서 서버에 대해 지원되지 않는 출력 형식은 지정할 수 없습니다. 이러한 형식에는 Null, RGDI 및 HTMLOWC가 있습니다.  
   
  파일 이름 및 확장명  
- 대상 라이브러리에 표시할 보고서의 파일 이름과 확장명을 지정합니다. 파일 확장명을 지정하지 않으면 보고서 서버에서 보고서 출력 형식을 기반으로 확장명을 만듭니다. 이 값은 필수 사항입니다. 파일 이름에 다음 문자는 포함하지 마세요. : \ / * ? " < > | # { } %  
+ 대상 라이브러리에 표시할 보고서의 파일 이름과 확장명을 지정합니다. 파일 확장명을 지정하지 않으면 보고서 서버에서 보고서 출력 형식을 기반으로 확장명을 만듭니다. 이 값은 필수입니다. 파일 이름에 다음 문자는 포함하지 마세요. : \ / * ? " < > | # { } %  
   
- Title  
+ 제목  
  대상 라이브러리에 있는 보고서의 선택적 **Title** 속성을 지정합니다. 이는 라이브러리에 저장된 모든 항목의 표준 속성입니다. 사용자는 SharePoint 사이트의 라이브러리 내용을 볼 때 이 속성을 표시할지 여부를 지정할 수 있습니다.  
   
  경로  

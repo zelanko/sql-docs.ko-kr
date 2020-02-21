@@ -16,28 +16,28 @@ ms.assetid: 5fd726a4-aed7-4e6c-9404-ccb2db66cf26
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 42313894264979caf49ccbbe54d25b91261a8a10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573574"
 ---
 # <a name="analysis-services-dmx-query-designer-user-interface"></a>Analysis Services DMX 쿼리 디자이너 사용자 인터페이스
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에 대한 DMX(Data Mining Expressions) 쿼리 및 MDX(Multidimensional Expressions) 쿼리를 작성하기 위한 그래픽 쿼리 디자이너를 제공합니다. 이 항목에서는 DMX 쿼리 디자이너에 대해 설명합니다. MDX 쿼리 디자이너에 대한 자세한 내용은 [Analysis Services MDX Query Designer User Interface](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)를 참조하십시오.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에 대한 DMX(Data Mining Expressions) 쿼리 및 MDX(Multidimensional Expressions) 쿼리를 작성하기 위한 그래픽 쿼리 디자이너를 제공합니다. 이 문서에서는 DMX 쿼리 디자이너에 대해 설명합니다. MDX 쿼리 디자이너에 대한 자세한 내용은 [Analysis Services MDX Query Designer User Interface](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)를 참조하십시오.  
   
- DMX 그래픽 쿼리 디자이너에는 디자인, 쿼리 및 결과의 3가지 모드가 있습니다. 모드를 전환하려면 쿼리 디자인 창을 마우스 오른쪽 단추로 클릭하고 모드를 선택합니다. 각 모드는 메타데이터 창을 제공하며 이 창에서는 선택한 큐브에서 멤버를 끌어서 보고서 처리 시 데이터 세트의 데이터를 검색하는 DMX 쿼리를 작성할 수 있습니다.  
+ DMX 그래픽 쿼리 디자이너에는 3개의 모드인 디자인, 쿼리 및 결과 모드가 있습니다. 모드를 전환하려면 쿼리 디자인 창을 마우스 오른쪽 단추로 클릭하고 모드를 선택합니다. 각 모드는 메타데이터 창을 제공하며 이 창에서는 선택한 큐브에서 멤버를 끌어서 보고서 처리 시 데이터 세트의 데이터를 검색하는 DMX 쿼리를 작성할 수 있습니다.  
   
 ## <a name="graphical-dmx-query-designer-toolbar"></a>그래픽 DMX 쿼리 디자이너 도구 모음  
  쿼리 디자이너 도구 모음은 그래픽 인터페이스를 사용하여 DMX 쿼리를 디자인하는 데 도움이 되는 단추를 제공합니다. 다음 표에서는 단추와 해당 기능을 설명합니다.  
   
-|단추|설명|  
+|단추|Description|  
 |------------|-----------------|  
 |**텍스트로 편집**|이 데이터 원본 유형에 대해서는 사용할 수 없습니다.|  
 |**가져오기**|파일 시스템의 보고서 정의 파일(.rdl)에서 기존 쿼리를 가져옵니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.|  
 |![MDX 쿼리 뷰로 변경](../../reporting-services/report-data/media/rsqdicon-commandtypemdx.gif "MDX 쿼리 뷰로 변경")|MDX 쿼리 디자이너 모드로 전환합니다.|  
 |![DMX 쿼리 언어 뷰로 변경](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "DMX 쿼리 언어 뷰로 변경")|DMX 쿼리 디자이너 모드로 전환합니다.|  
 |![결과 데이터 새로 고침](../../reporting-services/report-data/media/rsqdicon-refresh.gif "결과 데이터 새로 고침")|데이터 원본의 메타데이터를 새로 고칩니다.|  
-|![삭제](../../reporting-services/report-data/media/rsqdicon-delete.gif "삭제")|데이터 창의 선택된 열을 쿼리에서 삭제합니다.|  
+|![Delete](../../reporting-services/report-data/media/rsqdicon-delete.gif "DELETE")|데이터 창의 선택된 열을 쿼리에서 삭제합니다.|  
 |![쿼리 매개 변수 대화 상자 아이콘](../../reporting-services/report-data/media/iconqueryparameter.gif "쿼리 매개 변수 대화 상자 아이콘")|**쿼리 매개 변수** 대화 상자를 표시합니다. 기본값을 변수에 할당할 경우 보고서 디자이너에서 레이아웃 뷰로 전환할 때 해당 보고서 매개 변수가 만들어집니다.|  
 |![쿼리 실행](../../reporting-services/report-data/media/rsqdicon-run.gif "쿼리 실행")|쿼리를 준비합니다.|  
 |![디자인 모드로 전환](../../reporting-services/media/rsqdicon-designmode.gif "디자인 모드로 전환")|디자인 모드와 쿼리 모드 사이를 전환합니다. 결과 뷰로 변경하려면 디자인 창을 마우스 오른쪽 단추로 클릭하고 **결과**를 선택합니다.|  

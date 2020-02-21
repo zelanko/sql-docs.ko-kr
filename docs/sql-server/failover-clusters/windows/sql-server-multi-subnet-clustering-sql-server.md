@@ -1,6 +1,7 @@
 ---
-title: SQL Server 다중 서브넷 클러스터링(SQL Server) | Microsoft 문서
-ms.custom: ''
+title: SQL Server 다중 서브넷 클러스터링
+description: 다중 서브넷 환경에서 SQL Server 장애 조치(failover) 클러스터 인스턴스를 구성하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 09/01/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 16f89fcc50ec7db910d88d8ec807cb28c66cde89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e257ead5f858e80095c077643b283645917271be
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044729"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258147"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server 다중 서브넷 클러스터링(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +48,10 @@ ms.locfileid: "68044729"
     > **참고:** 이 구성은 클러스터형 노드가 동일한 서브넷 집합에 있기 때문에 다중 서브넷 장애 조치(Failover) 클러스터 구성으로 간주되지 않습니다.  
   
 ##  <a name="ComponentsAndConcepts"></a> IP 주소 리소스 고려 사항  
- 다중 서브넷 장애 조치(Failover) 클러스터 구성에서는 장애 조치(Failover) 클러스터의 일부 노드에서 IP 주소를 소유하지 않으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 시작 중에 일부 IP 주소가 온라인 상태가 되지 않을 수도 있습니다. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]부터 IP 주소 리소스 종속성을 **OR**로 설정할 수 있습니다. 이를 통해 바인딩할 수 있는 유효한 IP 주소가 하나 이상 있는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 온라인 상태로 만들 수 있습니다.  
+ 다중 서브넷 장애 조치(Failover) 클러스터 구성에서는 장애 조치(Failover) 클러스터의 일부 노드에서 IP 주소를 소유하지 않으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 시작 중에 일부 IP 주소가 온라인 상태가 되지 않을 수도 있습니다. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]부터 IP 주소 리소스 종속성을 **OR**로 설정할 수 있습니다. 이를 통해 바인딩할 수 있는 유효한 IP 주소가 하나 이상 있는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 온라인 상태로 만들 수 있습니다.  
   
   > [!NOTE] 
-  > - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전의 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 버전에서는 다중 사이트 클러스터 구성에 V-LAN 늘이기 기술을 사용하여 사이트 간 장애 조치(Failover)에 단일 IP 주소를 제공했습니다. 이제 여러 서브넷의 노드를 클러스터링하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 새 기능을 사용하면 V-LAN 늘이기 기술을 구현하지 않고도 다중 사이트에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 구성할 수 있습니다.  
+  > - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전의 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]버전에서는 다중 사이트 클러스터 구성에 V-LAN 늘이기 기술을 사용하여 사이트 간 장애 조치(Failover)에 단일 IP 주소를 제공했습니다. 이제 여러 서브넷의 노드를 클러스터링하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 새 기능을 사용하면 V-LAN 늘이기 기술을 구현하지 않고도 다중 사이트에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 구성할 수 있습니다.  
 
   
 ### <a name="ip-address-resource-or-dependency-considerations"></a>IP 주소 리소스 OR 종속성 고려 사항  
@@ -80,7 +81,7 @@ ms.locfileid: "68044729"
 |-------------------------|-----------|  
 |SQL Server 장애 조치(Failover) 클러스터 설치|[새 SQL Server 장애 조치(Failover) 클러스터 만들기(설치)](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |SQL Server 장애 조치(Failover) 클러스터의 전체 업그레이드|[SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드&#40;설치 프로그램&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
-|기존 SQL Server 장애 조치(Failover) 클러스터 유지 관리|[SQL Server 장애 조치(failover) 클러스터에서 노드 추가 또는 제거&#40;설치 프로그램&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
+|기존 SQL Server 장애 조치(Failover) 클러스터 유지 관리|[SQL Server 장애 조치(Failover) 클러스터에서 노드 추가 또는 제거&#40;설치&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
 |장애 조치(Failover) 클러스터 관리 스냅인을 사용하여 WSFC 이벤트 및 로그 보기|[장애 조치(Failover) 클러스터에 대한 이벤트 및 로그 보기](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
 |Windows PowerShell을 사용하여 WSFC 장애 조치(Failover) 클러스터에 모든 노드나 특정 노드에 대한 로그 파일 만들기|[Get-ClusterLog 장애 조치(Failover) 클러스터 Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)|  
   

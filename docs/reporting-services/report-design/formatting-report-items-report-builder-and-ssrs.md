@@ -11,10 +11,10 @@ ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2e3b6101111fea08c86bbf79bf431d91aaa24261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580315"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>보고서 항목 서식 지정(보고서 작성기 및 SSRS)
@@ -22,15 +22,15 @@ ms.locfileid: "65580315"
   
  ![rs_FormattingReporttItems](../../reporting-services/report-design/media/rs-formattingreporttitems.gif "rs_FormattingReporttItems")  
   
- 1\. 이중선 테두리와 링크를 비롯한 다양한 서식 스타일이 있는 입력란  
+ A. 이중선 테두리와 링크를 비롯한 다양한 서식 스타일이 있는 입력란  
   
- 2\. 파선 테두리와 원시 HTML 및 렌더링된 HTML이 있는 입력란  
+ B. 파선 테두리와 원시 HTML 및 렌더링된 HTML이 있는 입력란  
   
  C. 텍스트 레이블과 자리 표시자가 있는 입력란  
   
  서식을 지정하려는 항목을 선택한 다음 해당 항목의 속성 대화 상자를 열어 서식 옵션을 변경할 수 있습니다. 예를 들어 전체 입력란 내용의 서식 또는 입력란 내에서 선택한 단어의 서식을 지정하려는 경우 해당 항목을 마우스 오른쪽 단추로 클릭하고 **입력란 속성**을 선택합니다. 그런 다음 원하는 서식 스타일을 적용할 수 있습니다.  
   
- 빠르게 시작하려면 [자습서: 텍스트 서식 지정&#40;보고서 작성기&#41;](../../reporting-services/tutorial-format-text-report-builder.md)을 참조하세요.  
+ 빠르게 시작하려면 [자습서: 텍스트 서식 지정&#40;보고서 작성기&#41;](../../reporting-services/tutorial-format-text-report-builder.md)를 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

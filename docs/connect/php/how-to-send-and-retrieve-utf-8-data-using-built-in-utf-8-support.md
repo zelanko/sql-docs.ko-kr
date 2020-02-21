@@ -15,13 +15,13 @@ ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 74d64aa0a5a93587997bc66d064d0c5c47ffb132
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993376"
 ---
-# <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>기본 제공 UTF-8 지원을 사용하여 UTF-8 데이터를 보내고 검색하는 방법
+# <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>방법: 기본 제공 UTF-8 지원을 사용하여 UTF-8 데이터 보내기 및 검색
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 PDO_SQLSRV 드라이버를 사용하는 경우 PDO::SQLSRV_ATTR_ENCODING 특성으로 인코딩을 지정할 수 있습니다. 자세한 내용은 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)를 참조하세요.  
@@ -221,7 +221,7 @@ sqlsrv_close( $conn);
 ## <a name="see-also"></a>참고 항목  
 [데이터 검색](../../connect/php/retrieving-data.md)
 
-[비 Windows에서 ASCII 데이터 작업](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
+[비 Windows에서 ASCII 데이터 사용](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
 
 [데이터 업데이트&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 

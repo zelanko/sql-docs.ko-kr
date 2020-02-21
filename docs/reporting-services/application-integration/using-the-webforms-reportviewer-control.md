@@ -1,23 +1,25 @@
 ---
-title: WebForms ReportViewer 컨트롤 사용 | Microsoft Docs
+title: WebForms ReportViewer 컨트롤 사용
+description: 보고서 서버에 배포된 보고서 또는 로컬 파일 시스템에 있는 보고서를 보려면 WebForms ReportViewer 컨트롤을 사용하여 웹 애플리케이션에서 렌더링할 수 있습니다.
 ms.date: 06/12/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a5ea5370cbb59d5fb70fa233f3695ac77e412669
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
-ms.translationtype: MTE75
+ms.openlocfilehash: 1271a159feaf20dd46d23c5fc3ff4a0cb2aa87be
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71687377"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796929"
 ---
-# <a name="using-the-webforms-reportviewer-control"></a>WebForms ReportViewer 컨트롤 사용
+# <a name="use-the-webforms-reportviewer-control"></a>WebForms ReportViewer 컨트롤 사용
   보고서 서버에 배포된 보고서 또는 로컬 파일 시스템에 있는 보고서를 보려면 WebForms ReportViewer 컨트롤을 사용하여 웹 애플리케이션에서 렌더링할 수 있습니다.  
   
 ## <a name="to-use-the-reportviewer-control-in-a-web-application"></a>웹 애플리케이션에서 ReportViewer 컨트롤을 사용하려면  

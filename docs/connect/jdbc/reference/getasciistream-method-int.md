@@ -1,5 +1,5 @@
 ---
-title: getAsciiStream 메서드 (int) | Microsoft Docs
+title: getAsciiStream 메서드(int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 1ec7e246-4b91-4420-9a4c-0ebd98e2e38b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2f7bc5b4729e071f2a65670522735654e550a453
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954202"
 ---
 # <a name="getasciistream-method-int"></a>getAsciiStream 메서드(int)
@@ -39,14 +39,14 @@ public java.io.InputStream getAsciiStream(int columnIndex)
   
  열 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  InputStream 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getAsciiStream 메서드는 getAsciiStream 인터페이스의 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getAsciiStream 메서드는 java.sql.ResultSet 인터페이스의 getAsciiStream 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [getAsciiStream 메서드&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)   

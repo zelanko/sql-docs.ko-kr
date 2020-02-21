@@ -16,10 +16,10 @@ ms.assetid: 44e6e9df-4724-4c86-bbd2-ca750c248333
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc7aea1b0b03981d21e9ab3f5e5453c68476a0b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982333"
 ---
 # <a name="getmaxcharliterallength-method-sqlserverdatabasemetadata"></a>getMaxCharLiteralLength 메서드(SQLServerDatabaseMetaData)
@@ -34,14 +34,14 @@ ms.locfileid: "67982333"
 public int getMaxCharLiteralLength()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  허용되는 최대 문자 수를 나타내는 **int**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getMaxCharLiteralLength 메서드는 getMaxCharLiteralLength 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getMaxCharLiteralLength 메서드는 java.sql.DatabaseMetaData 인터페이스의 getMaxCharLiteralLength 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

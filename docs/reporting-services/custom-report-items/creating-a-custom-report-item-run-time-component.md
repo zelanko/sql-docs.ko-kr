@@ -11,14 +11,14 @@ ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f92a148ec6f967fe1d3fe4282af68c0f801aa0c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194011"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>사용자 지정 보고서 항목 런타임 구성 요소 만들기
-  사용자 지정 보고서 항목 런타임 구성 요소는 CLS 호환 언어를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 구성 요소로 구현되며 런타임에 보고서 처리기에 의해 호출됩니다. 사용자 지정 보고서 항목의 해당 디자인 타임 구성 요소를 수정하여 디자인 환경에서 런타임 구성 요소에 대한 속성을 정의합니다.  
+  사용자 지정 보고서 항목 런타임 구성 요소는 CLS 규격 언어를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 구성 요소로 구현되며 런타임에 보고서 처리기에 의해 호출됩니다. 사용자 지정 보고서 항목의 해당 디자인 타임 구성 요소를 수정하여 디자인 환경에서 런타임 구성 요소에 대한 속성을 정의합니다.  
   
  완전히 구현된 사용자 지정 보고서 항목 예는 [SQL Server Reporting Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.  
   

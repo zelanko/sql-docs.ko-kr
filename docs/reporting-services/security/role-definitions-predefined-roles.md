@@ -13,10 +13,10 @@ ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 18ac0bfb10914b8e0afb1aca363e53f9dff3af91
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67500193"
 ---
 # <a name="role-definitions---predefined-roles"></a>역할 정의 - 미리 정의된 역할
@@ -24,7 +24,7 @@ ms.locfileid: "67500193"
   
 ## <a name="how-to-use-predefined-roles"></a>미리 정의된 역할을 사용하는 방법  
   
-1. 미리 정의된 역할을 검토하여 이를 그대로 사용할 수 있는지 확인합니다. 태스크를 조정하거나 추가 역할을 정의해야 하는 경우 특정 역할에 사용자를 할당하기 전에 이 작업을 수행해야 합니다. 사용자 지정 역할을 만들거나 편집 하려면 SQL Server Management Studio를 사용 합니다. 자세한 내용은 [역할 만들기, 삭제 또는 수정&#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)을 참조하세요.
+1. 미리 정의된 역할을 검토하여 이를 그대로 사용할 수 있는지 확인합니다. 태스크를 조정하거나 추가 역할을 정의해야 하는 경우 특정 역할에 사용자를 할당하기 전에 이 작업을 수행해야 합니다. 사용자 지정 역할을 만들거나 편집하려면 SQL Server Management Studio를 사용합니다. 자세한 내용은 [역할 만들기, 삭제 또는 수정&#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)을 참조하세요.
   
 2. 보고서 서버에 대한 액세스 권한이 필요한 사용자 및 그룹과 필요한 수준을 확인합니다. **브라우저** 역할이나 **보고서 작성기** 역할에 대부분의 사용자를 할당해야 합니다. **게시자** 역할에는 소수의 사용자를 할당하고 **내용 관리자**에는 극소수의 사용자만 할당해야 합니다.  
 
@@ -37,7 +37,7 @@ ms.locfileid: "67500193"
   
  다음 표에서는 역할의 미리 정의된 범위에 대해 설명합니다.  
   
-|미리 정의된 역할|범위|설명|  
+|미리 정의된 역할|범위|Description|  
 |---------------------|-----------|-----------------|  
 |[내용 관리자 역할](#bkmk_content)|항목|보고서 서버의 콘텐츠를 관리할 수 있습니다. 폴더, 보고서 및 리소스를 포함합니다.|  
 |[게시자 역할](#bkmk_publisher)|항목|보고서 서버에 보고서 및 링크된 보고서를 게시할 수 있습니다.|  
@@ -55,7 +55,7 @@ ms.locfileid: "67500193"
 ### <a name="content-manager-tasks"></a>내용 관리자 태스크  
  다음 표에서는 **내용 관리자** 역할에 포함되는 태스크를 나열합니다.  
   
-|태스크|설명|  
+|Task|Description|  
 |----------|-----------------|  
 |보고서 사용|보고서 정의를 읽습니다.|  
 |링크된 보고서 만들기|링크되지 않은 보고서를 기반으로 하는 링크된 보고서를 만듭니다.|  
@@ -92,7 +92,7 @@ ms.locfileid: "67500193"
 ### <a name="publisher-tasks"></a>게시자 태스크  
  다음 표에서는 **게시자** 역할에 포함되는 태스크를 나열합니다.  
   
-|태스크|설명|  
+|Task|Description|  
 |----------|-----------------|  
 |링크된 보고서 만들기|링크된 보고서를 만들어 보고서 서버 폴더에 게시합니다.|  
 |데이터 원본 관리|공유 데이터 원본 항목을 만들고 삭제하며 데이터 원본 속성과 내용을 확인하고 수정합니다.|  
@@ -114,7 +114,7 @@ ms.locfileid: "67500193"
 ### <a name="browser-tasks"></a>브라우저 태스크  
  다음 표에서는 **브라우저** 역할에 포함되는 태스크에 대해 설명합니다.  
   
-|태스크|설명|  
+|Task|Description|  
 |----------|-----------------|  
 |보고서 보기|보고서를 실행하고 보고서 속성을 봅니다.|  
 |리소스 보기|리소스 및 리소스 속성을 봅니다.|  
@@ -133,7 +133,7 @@ ms.locfileid: "67500193"
 ### <a name="report-builder-tasks"></a>보고서 작성기 작업  
  다음 표에서는 **보고서 작성기** 역할에 포함되는 태스크에 대해 설명합니다.  
   
-|태스크|설명|  
+|Task|Description|  
 |----------|-----------------|  
 |보고서 사용|보고서 정의를 읽습니다.|  
 |보고서 보기|보고서를 실행하고 보고서 속성을 봅니다.|  
@@ -155,7 +155,7 @@ ms.locfileid: "67500193"
 ### <a name="my-reports-tasks"></a>내 보고서 태스크  
  다음 표에서는 **내 보고서** 역할에 포함된 태스크를 나열합니다.  
   
-|태스크|설명|  
+|Task|Description|  
 |----------|-----------------|  
 |링크된 보고서 만들기|사용자의 내 보고서 폴더에 저장되어 있는 보고서를 기반으로 하는 링크된 보고서를 만듭니다.|  
 |폴더 관리|폴더를 만들고, 확인하고, 삭제하며 폴더 속성을 확인하고 수정합니다.|  
@@ -183,7 +183,7 @@ ms.locfileid: "67500193"
 ### <a name="system-administrator-tasks"></a>시스템 관리자 태스크  
  다음 표에서는 **시스템 관리자** 역할에 포함되는 태스크를 나열합니다.  
   
-|태스크|설명|  
+|Task|Description|  
 |----------|-----------------|  
 |보고서 정의 실행|보고서 정의를 보고서 서버에 게시하지 않고 실행을 시작합니다.|  
 |작업 관리|실행 중인 작업을 확인 및 취소합니다. 자세한 내용은 [실행 중인 프로세스 관리](../../reporting-services/subscriptions/manage-a-running-process.md)를 참조하세요.|  
@@ -201,15 +201,15 @@ ms.locfileid: "67500193"
   
 ### <a name="system-user-tasks"></a>시스템 사용자 태스크  
   
-|태스크|설명|  
+|Task|Description|  
 |----------|-----------------|  
 |보고서 정의 실행|보고서를 보고서 서버에 게시하지 않고 실행합니다.|  
-|보고서 서버 속성 보기|애플리케이션 이름, 내 보고서 설정을 사용하도록 지정하는지 여부 및 보고서 기록 기본값 등 보고서 서버에 적용되는 속성을 봅니다.<br /><br /> **시스템 사용자** 역할에서 이 태스크를 제거하면 사이트 설정 페이지를 사용할 수 없습니다. 각 페이지의 맨 위에 애플리케이션 제목도 표시되지 않습니다. 기본적으로 웹 포털의 제목은 "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]"입니다.|  
+|보고서 서버 속성 보기|애플리케이션 이름, 내 보고서 설정을 사용하도록 지정하는지 여부 및 보고서 기록 기본값 등 보고서 서버에 적용되는 속성을 봅니다.<br /><br /> **시스템 사용자** 역할에서 이 태스크를 제거하면 사이트 설정 페이지를 사용할 수 없습니다. 각 페이지의 맨 위에 애플리케이션 제목도 표시되지 않습니다. 기본적으로 웹 포털의 제목은 “[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]”입니다.|  
 |공유 일정 보기|보고서를 실행하거나 새로 고치는 데 사용되는 공유 일정을 봅니다.<br /><br /> **시스템 사용자** 역할에서 이 태스크를 제거하면 사용자가 구독 및 다른 예약된 작업에 사용하는 공유 일정을 선택할 수 없습니다.|  
   
  **시스템 사용자** 역할은 기본 보안을 보완하기 위해 사용할 수 있습니다. 보고서 서버 액세스를 보고서 사용자에게 확대하는 새 역할 할당에 이 역할을 포함할 수 있습니다. 자세한 내용은 [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [역할 만들기, 삭제 또는 수정&#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)  
 [보고서 서버에 사용자 액세스 권한 부여](../../reporting-services/security/grant-user-access-to-a-report-server.md)  
 [역할 할당 수정 또는 삭제 &#40;SSRS 웹 포털&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  

@@ -9,10 +9,10 @@ ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bc8b459c3ecfe9c34ff7552acb2565c1b25239a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581680"
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>차트 범례 - 항목 텍스트 변경(보고서 작성기)
@@ -35,7 +35,7 @@ ms.locfileid: "65581680"
   
  다음 표에서는 **사용자 지정 범례 텍스트** 속성에 사용하는 차트별 키워드의 예를 보여 줍니다. 키워드에 대한 자세한 내용은 [차트의 데이터 요소에 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)을 참조하세요.  
   
-|키워드|설명|범례에 텍스트로 나타나는 항목의 예|  
+|키워드|Description|범례에 텍스트로 나타나는 항목의 예|  
 |-------------|-----------------|---------------------------------------------------|  
 |`#PERCENT{P1}`|합계 값의 백분율을 소수점 한 자리 수로 표시합니다.|85.0%|  
 |`#VALY`|데이터 필드의 실제 숫자 값을 표시합니다.|17000|  

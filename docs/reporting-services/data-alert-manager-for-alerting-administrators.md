@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a80b90f30ce2b304bd7bbb0229f172407589d3c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571545"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>경고 담당자를 위한 데이터 경고 관리자입니다.
@@ -54,7 +54,7 @@ SQL Server Reporting Services는 데이터 경고를 관리할 수 있도록 Sha
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Lauren Johnson|4|6/12/2011|6/1/2011|마지막 경고가 성공적으로 실행되고 경고가 전송되었습니다.|  
 |UnitsSold|ProductsSalesByQTR|Michael Blythe|2|7/1/2011|6/28/2011|마지막 경고가 성공적으로 실행되었지만 데이터가 변경되지 않아서 경고를 보내지 않았습니다.|  
-|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<오류 메시지>로그 파일에 오류에 대한 자세한 내용이 포함되어 있습니다. 식별자가 포함된 로그 항목을 참조하세요. \<GUID>|  
+|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<오류 메시지>로그 파일에 오류에 대한 자세한 내용이 포함되어 있습니다. 다음 식별자가 포함된 로그 항목을 참조하세요. \<GUID>.|  
 |TopPromotion|PromotionTracking|Cristian Petculescu|0||5/23/2011|경고를 만들었습니다.|  
   
  자세한 내용은 [데이터 경고 관리자에서 SharePoint 사이트의 모든 데이터 경고 관리](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)를 참조하세요.  

@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: bindValue | Microsoft Docs'
+title: PDOStatement::bindValue | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 13bc4ece-420e-4887-8809-bf0705ddf126
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 89126d696f7210132adb5ef10ec557604ebc543f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993116"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
@@ -34,12 +34,12 @@ $*parameter*: (혼합) 매개 변수 식별자입니다. 명명된 자리 표시
   
 $*value*: 매개 변수에 바인딩할 (혼합) 값입니다.  
   
-$*data_type*: PDO::PARAM_* 상수로 표현되는 선택적(정수) 데이터 형식입니다. 기본값은 PDO::PARAM_STR입니다.  
+$*data_type*: PDO::PARAM_* 상수로 표현되는 선택적 (정수) 데이터 형식입니다. 기본값은 PDO::PARAM_STR입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 성공하면 TRUE이고, 그렇지 않으면 FALSE입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 2.0에 추가되었습니다.  
   

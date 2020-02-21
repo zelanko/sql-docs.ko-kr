@@ -11,10 +11,10 @@ ms.assetid: 7c1bc931-d1ec-47fc-8f82-55560ddaf776
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5f767424e9ec24215e280b49fe1ed6b820b7a3d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576043"
 ---
 # <a name="report-designer-f1-help"></a>보고서 디자이너 F1 도움말

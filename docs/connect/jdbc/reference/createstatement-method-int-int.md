@@ -1,5 +1,5 @@
 ---
-title: createStatement 메서드 (int, int) | Microsoft Docs
+title: createStatement 메서드(int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 90dbf639-c3d8-4519-9300-5447c79aec17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84afda93fa79d226eec21cb92c16ff5ebbc55fa5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955311"
 ---
 # <a name="createstatement-method-int-int"></a>createStatement 메서드(int, int)
@@ -44,14 +44,14 @@ public java.sql.Statement createStatement(int resultSetType,
   
  결과 집합 동시성 유형을 나타내는 **int** 값입니다.  
   
-## <a name="return-value"></a>반환 값  
- 문 개체입니다.  
+## <a name="return-value"></a>Return Value  
+ Statement 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 createStatement 메서드는 createStatement 인터페이스의 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 createStatement 메서드는 java.sql.Connection 인터페이스의 createStatement 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [createStatement 메서드(SQLServerConnection)](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)   

@@ -11,13 +11,13 @@ ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bc04865c9dcbdf16627c1ab4598610426e4a8d5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571943"
 ---
-# <a name="msreportserverinstance-methods---getreportserverurls"></a>MSReportServer_Instance 메서드 - GetReportServerUrls
+# <a name="msreportserver_instance-methods---getreportserverurls"></a>MSReportServer_Instance 메서드 - GetReportServerUrls
   사용자가 보고서 서버 및 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]에 액세스하는 데 사용할 수 있는 URL 목록을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -47,7 +47,7 @@ public void GetReportServerUrls(out string[] applicationName,
   
 ## <a name="return-values"></a>반환 값  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  WMI 관리 개체에서 노출되는 메서드는 InvokeMethod 함수를 통해 호출됩니다. 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework WMI 설명서의 "관리 개체에서 메서드 실행(Executing Methods on Management Objects)"을 참조하십시오.  
   
 ## <a name="requirements"></a>요구 사항  

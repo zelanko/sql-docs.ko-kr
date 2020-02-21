@@ -1,5 +1,5 @@
 ---
-title: getResultSetHoldability 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+title: getResultSetHoldability 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f0bd6283-83ab-4a0a-b825-ec4cdccf03e1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f6fbf7a0cf66db8bbcc2f2f69d603bc5d32fb74d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980374"
 ---
 # <a name="getresultsetholdability-method-sqlserverdatabasemetadata"></a>getResultSetHoldability 메서드(SQLServerDatabaseMetaData)
@@ -34,14 +34,14 @@ ms.locfileid: "67980374"
 public int getResultSetHoldability()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  기본 유지 기능을 나타내는 **int**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getResultSetHoldability 메서드는 getResultSetHoldability 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getResultSetHoldability 메서드는 java.sql.DatabaseMetaData 인터페이스의 getResultSetHoldability 메서드에 의해 지정됩니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스와 함께 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]를 사용할 경우 이 메서드는 1을 반환합니다. 이 값은 ResultSet.HOLD_CURSORS_OVER_COMMIT 상수와 같습니다.  
   

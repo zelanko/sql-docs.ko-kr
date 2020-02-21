@@ -15,10 +15,10 @@ ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b54290c582dab62b7e0f5b8a1cb7ca4dd2eb642c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573305"
 ---
 # <a name="upload-a-file-or-report-in-the-report-server"></a>보고서 서버에서 파일 또는 보고서 업로드

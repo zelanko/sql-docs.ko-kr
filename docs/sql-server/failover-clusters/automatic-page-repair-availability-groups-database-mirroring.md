@@ -1,6 +1,7 @@
 ---
-title: '자동 페이지 복구(가용성 그룹: 데이터베이스 미러링) | Microsoft Docs'
-ms.custom: ''
+title: 가용성 그룹 및 데이터베이스 미러링에 대한 자동 페이지 복구
+description: '데이터베이스가 Always On 가용성 그룹 또는 데이터베이스 미러링 관계에 참여하는 경우 특정 유형의 페이지 손상을 자동으로 복구합니다. 이 문서에서는 오류 유형과 가능한 해결 방법에 대한 정보를 제공합니다. '
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9e445d15401b747be6bd690e4ae6884a831e66de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c8d58b7bdc836f44871560c0d1e9908d1f72f23
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035267"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822648"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>자동 페이지 복구(가용성 그룹: 데이터베이스 미러링)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "68035267"
 ##  <a name="ErrorTypes"></a> 자동 페이지 복구 시도가 발생하는 오류 유형  
  데이터베이스 미러링 자동 페이지 복구는 다음 표에 나열된 오류 중 하나로 인해 실패한 작업이 있는 데이터 파일의 페이지만 복구하도록 시도합니다.  
   
-|오류 번호|설명|자동 페이지 복구 시도가 발생되는 인스턴스|  
+|오류 번호|Description|자동 페이지 복구 시도가 발생되는 인스턴스|  
 |------------------|-----------------|---------------------------------------------------------|  
 |823|운영 체제가 데이터에서 실패한 CRC(순환 중복 검사)를 수행한 경우에만 동작이 수행됩니다.|ERROR_CRC이며 이 오류에 대한 운영 체제 값은 23입니다.|  
 |824|논리 오류입니다.|조각난 쓰기 오류 또는 잘못된 페이지 체크섬과 같은 논리적 데이터 오류입니다.|  

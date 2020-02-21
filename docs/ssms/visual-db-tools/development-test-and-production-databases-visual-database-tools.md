@@ -1,10 +1,9 @@
 ---
-title: 개발, 테스트 및 프로덕션 데이터베이스 | Microsoft 문서
-ms.custom: ''
+title: 개발, 테스트 및 프로덕션 데이터베이스
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: cb403330-8cbe-41c6-bd23-bc432d50f173
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f667fd107935eb0373e7d3ee0c1fcaa2711b8776
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 2b055385ca5ee06b0fba1c87376835b16695ef57
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254805"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251831"
 ---
 # <a name="development-test-and-production-databases-visual-database-tools"></a>개발, 테스트 및 프로덕션 데이터베이스(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

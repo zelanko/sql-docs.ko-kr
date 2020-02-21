@@ -13,10 +13,10 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7acbf53f3a77252d00d3ad5de65ffb221afe3b7a
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66499892"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>지도 마법사 및 지도 계층 마법사(보고서 작성기 및 SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "66499892"
   
 -   **공간 데이터 원본.** 공간 데이터를 포함하는 데이터베이스 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름 또는 ESRI(Environmental Systems Research Institute, Inc.) 셰이프 파일의 이름과 같은 공간 데이터를 제공하는 원본에 대한 위치 또는 연결입니다.  
   
--   **공간 데이터 또는 ESRI 셰이프 파일인 공간 데이터를 제공하는 타사 사이트** 공간 데이터 원본에 있는 필드로, 위치를 지정하는 좌표 집합을 포함합니다.  
+-   **Spatial data.** 공간 데이터 원본에 있는 필드로, 위치를 지정하는 좌표 집합을 포함합니다.  
   
 -   **분석 데이터.** 연간 상점 판매량과 같이 지도를 다양하게 표시하는 데 사용할 분석 데이터입니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66499892"
   
  마법사 페이지의 제목을 클릭하면 해당 도움말 내용을 볼 수 있습니다. 표시되는 페이지는 선택한 지도 유형과 공간 데이터 원본 및 분석 데이터 원본에 따라 달라집니다.  
   
-1.  [공간 데이터의 원본 선택](#SpatialDataSource). 공간 데이터는 지도 갤러리, ESRI(Environmental Systems Research Institute, Inc.) 셰이프 파일 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스의 공간 데이터에서 제공될 수 있습니다.  
+1.  [공간 데이터의 원본 선택](#SpatialDataSource). 공간 데이터는 지도 갤러리, ESRI(Environmental Systems Research Institute, Inc.) 셰이프 파일 또는 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스의 공간 데이터에서 제공될 수 있습니다.  
   
     -   [공간 데이터란?](#SpatialData)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66499892"
   
     -   지도 시각화 선택: 점  
   
-4.  데이터 원본에 대한 연결 선택 지도 시각화 선택: 점 데이터 원본 연결을 선택하거나 지도에 표시할 분석 데이터가 포함된 외부 데이터 원본에 대한 연결을 만듭니다.  
+4.  데이터 원본에 대한 연결 선택 지도 시각화 선택: 점. 데이터 원본 연결을 선택하거나 지도에 표시할 분석 데이터가 포함된 외부 데이터 원본에 대한 연결을 만듭니다.  
   
 5.  쿼리를 디자인합니다. 분석 데이터를 지정하는 쿼리를 작성합니다.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66499892"
   
  지도 또는 지도 계층을 추가하고 보고서를 미리 본 후 마법사에서 설정하는 지도 및 지도 계층 옵션을 변경할 수 있습니다. 자세한 내용은 [지도 또는 지도 계층의 데이터 및 표시 사용자 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)을 참조하세요.  
   
- 지도에 대한 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)를 클릭합니다. 보고서에 지도를 추가하는 방법에 대한 단계별 지침은 [자습서: 지도 보고서&#40;보고서 작성기&#41;](../../reporting-services/tutorial-map-report-report-builder.md)를 참조하세요.  
+ 지도에 대한 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)를 클릭합니다. 보고서에 맵을 추가하는 방법에 대한 단계별 지침은 [자습서: 맵 보고서&#40;보고서 작성기&#41;](../../reporting-services/tutorial-map-report-report-builder.md)를 참조하세요.  
   
 ##  <a name="SpatialDataSource"></a> 공간 데이터의 원본 선택  
  이 페이지에서는 공간 데이터 원본과 포함할 공간 데이터를 지정합니다. 공간 데이터는 지도 갤러리, ESRI 셰이프 파일 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이상 버전 데이터베이스의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 공간 데이터를 지정하는 데이터 세트 쿼리에서 제공될 수 있습니다.  
@@ -116,7 +116,7 @@ ms.locfileid: "66499892"
 > [!NOTE]  
 >  이 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 지도 제작 기능은 미 통계국([https://www.census.gov/](https://www.census.gov/)). TIGER/Line Shapefile은 Census MAF/TIGER 데이터베이스에서 선택한 지리 및 지도 정보를 추출한 것입니다. TIGER/Line Shapefile은 미 통계국에 요금을 지불하지 않고 사용할 수 있습니다. TIGER/Line Shapefile에 대한 자세한 내용은 [TIGER/Line Shapefile 및 TIGER/Line Files 기술 설명서](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html)를 참조하세요. TIGER/Line Shapefile의 경계 정보는 통계 데이터 수집 및 집계 목적으로만 사용되며 통계 목적의 설명 및 지정은 사법권이나 소유권 또는 수급권의 판결에 영향을 미치지 않고 법적인 토지 설명이 아닙니다. Census TIGER 및 TIGER/Line은 미 통계국의 등록 상표입니다.  
   
- 지도 갤러리를 확장하려면 지도 갤러리 디렉터리에서 보고서를 추가하거나 제거하고 폴더를 추가하여 지도를 구성할 수 있습니다. 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)를 클릭합니다.  
+ 지도 갤러리를 확장하려면 지도 갤러리 디렉터리에서 보고서를 추가하거나 제거하고 폴더를 추가하여 지도를 구성할 수 있습니다. 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)를 참조하세요.  
   
 ###  <a name="Shapefile"></a> What is an ESRI shapefile?  
  ESRI 셰이프 파일은 ESRI(Environmental Systems Research Institute, Inc.) 셰이프 파일 공간 데이터 형식을 따르는 데이터가 포함된 파일 집합입니다. 일반적으로 이 파일 집합에는 공간 데이터가 들어 있는 *\<filename>* .shp 파일과 지원 파일 *\<filename>* .dbf가 포함됩니다.  
@@ -134,7 +134,7 @@ ms.locfileid: "66499892"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공간 쿼리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스의 SQLGeometry 또는 SQLGeography 데이터 형식인 데이터를 지정하는 데이터 세트 쿼리입니다.  
   
 > [!NOTE]  
->  마법사에서 데이터 원본을 정의하는 경우 연결 중인 데이터 원본의 유형에 따라 쿼리 디자인 페이지에 다른 쿼리 디자이너가 표시됩니다. 자세한 내용은 [쿼리 디자인 도구 &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)합니다.  
+>  마법사에서 데이터 원본을 정의하는 경우 연결 중인 데이터 원본의 유형에 따라 쿼리 디자인 페이지에 다른 쿼리 디자이너가 표시됩니다. 자세한 내용은 [쿼리 디자인 도구&#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)를 참조하세요.  
   
  쿼리 디자이너에서 쿼리를 실행하면 결과 집합에 텍스트로 나타나는 공간 데이터가 포함된 열이 표시됩니다. 예를 들어 한 행에 한 점인 공간 데이터가 포함되고 다음 행에 점 집합을 정의하는 공간 데이터가 포함될 수 있습니다. 각 행은 하나의 지도 요소가 됩니다. 각 지도 요소의 표시를 나눌 수 없는 단위로 변경할 수 있습니다.  
   
@@ -181,11 +181,11 @@ ms.locfileid: "66499892"
   
 -   **항공.** 위성뷰만 표시합니다. 이 모드에서는 텍스트가 표시되지 않습니다.  
   
--   **혼합.** **도로** 및 **항공** 보기의 조합을 표시합니다.  
+-   **하이브리드.** **도로** 및 **항공** 보기의 조합을 표시합니다.  
   
- 타일에 대한 자세한 내용은 [Bing Maps 타일 시스템(Bing Maps Tiles System)](https://go.microsoft.com/fwlink/?LinkId=147315)을 참조하십시오. 보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](https://go.microsoft.com/fwlink/?LinkId=151371)를 클릭합니다.  
+ 타일에 대한 자세한 내용은 [Bing Maps 타일 시스템(Bing Maps Tiles System)](https://go.microsoft.com/fwlink/?LinkId=147315)을 참조하십시오. 보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](https://go.microsoft.com/fwlink/?LinkId=151371)을 참조하세요.  
   
- 디자인 뷰에서 타일 배경을 보려면 인터넷에 액세스할 수 있어야 합니다. 보고서 서버에 있는 보고서의 타일 배경을 미리 보기에서 보려면 보고서 서버가 Bing Map 타일을 지원하도록 구성되어 있어야 합니다. 자세한 내용은 [보고서 문제해결: 지도 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) 및 [지도 보고서 계획](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)를 클릭합니다.  
+ 디자인 뷰에서 타일 배경을 보려면 인터넷에 액세스할 수 있어야 합니다. 보고서 서버에 있는 보고서의 타일 배경을 미리 보기에서 보려면 보고서 서버가 Bing Map 타일을 지원하도록 구성되어 있어야 합니다. 자세한 내용은 [보고서 문제 해결: 맵 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) 및 [지도 보고서 계획](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)을 참조하세요.  
   
  타일 계층을 사용자 지정하는 다른 방법에 대한 자세한 내용은 [지도 또는 지도 계층 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -201,7 +201,7 @@ ms.locfileid: "66499892"
   
  **분석 지도** 는 각 지도 요소에 대한 하나 이상의 분석 데이터 집계의 상대적 값을 나타냅니다. 예를 들어 표식 크기로 상점 판매량을 나타내고, 표식 색으로 제품 범주의 수익 범위를 나타내고, 표식 유형으로 가장 많이 판매되는 제품을 나타냅니다.  
   
- 자세한 내용은 [지도 보고서 계획&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)를 클릭합니다.  
+ 자세한 내용은 [지도 보고서 계획&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)를 참조하세요.  
   
 ##  <a name="AnalyticalData"></a> 분석 데이터 세트 선택  
  이 페이지에서는 이 지도 계층에 표시할 분석 데이터를 가져올 위치를 지정합니다.  
@@ -248,7 +248,7 @@ ms.locfileid: "66499892"
  보고서 처리기는 사용자가 설정하는 규칙을 적용하고 범례에 표시할 항목의 목록을 자동으로 결정합니다. 기본적으로 모든 계층에 대한 모든 규칙의 결과가 첫 번째 범례에 표시됩니다. 마법사를 완료한 후 이를 조정할 수 있습니다. 자세한 내용은 [규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 문제해결: 지도 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [보고서 문제 해결: 맵 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [지도 보고서 계획&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
  [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   

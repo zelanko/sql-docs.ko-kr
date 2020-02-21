@@ -9,17 +9,17 @@ ms.assetid: 84d66436-ed62-4967-bbbd-b457593ee787
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f21fe04e31c4360400934afc76376165083c1dc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581951"
 ---
 # <a name="add-scale-breaks-to-a-chart-report-builder-and-ssrs"></a>차트에 배율 구분선 추가(보고서 작성기 및 SSRS)
 
   배율 구분선은 값 축(일반적으로 세로 또는 Y축)에서 높은 값과 낮은 값 사이의 연속성을 구분하기 위해 차트의 그리기 영역에 표시되는 줄무늬입니다. 배율 구분선을 사용하여 동일한 차트 영역에 두 개의 서로 다른 범위를 표시할 수 있습니다.  
   
- ![배율 구분선을 포함하는 차트](../../reporting-services/report-design/media/rs-multipledatarangeschart-scalebreak.gif "배율 구분선을 포함하는 차트")  
+ ![눈금 구분선을 포함하는 차트](../../reporting-services/report-design/media/rs-multipledatarangeschart-scalebreak.gif "눈금 구분선을 포함하는 차트")  
   
 > [!NOTE]  
 >  차트에서 배율 구분선의 배치 위치는 지정할 수 없습니다. 차트는 데이터 세트의 값을 기반으로 자체 계산을 사용하여 런타임에 값 축(y축)에 배율 구분선을 그릴 수 있을 만큼 데이터 범위가 충분히 분리되어 있는지 여부를 확인합니다.  

@@ -1,5 +1,5 @@
 ---
-title: 예제 응용 프로그램 (SQLSRV 드라이버) | Microsoft Docs
+title: 예제 애플리케이션(SQLSRV 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1276097ce011560471e8d25b10d70a240a2dce3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015083"
 ---
 # <a name="example-application-sqlsrv-driver"></a>예제 애플리케이션(SQLSRV 드라이버)
@@ -29,12 +29,12 @@ AdventureWorks 제품 검토 예제 애플리케이션은 [!INCLUDE[ssDriverPHP]
 1.  [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 설치합니다. 자세한 내용은 [시작 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)합니다.
 2.  이 문서의 뒷부분에 나열된 코드를 adventureworks_demo.php 및 photo.php 두 파일에 복사합니다.  
 3.  adventureworks_demo.php 및 photo.php 파일을 웹 서버의 루트 디렉터리에 배치합니다.  
-4.  브라우저에서를 시작 `https://localhost/adventureworks_demo.php` 하 여 응용 프로그램을 실행 합니다.  
+4.  브라우저에서 `https://localhost/adventureworks_demo.php`를 시작하여 애플리케이션을 실행합니다.  
   
 ## <a name="requirements"></a>요구 사항  
 AdventureWorks 제품 검토 예제 애플리케이션을 실행하려면 해당 컴퓨터에 대해 다음 조건을 만족해야 합니다.  
   
--   시스템이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]요구 사항을 만족해야 합니다. 자세한 내용은 [Microsoft Drivers FOR PHP for SQL Server의 시스템 요구 사항](../../connect/php/system-requirements-for-the-php-sql-driver.md)을 참조 하세요.  
+-   시스템이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]요구 사항을 만족해야 합니다. 자세한 내용은 [Microsoft Drivers for PHP for SQL Server에 대한 시스템 요구 사항](../../connect/php/system-requirements-for-the-php-sql-driver.md)을 참조하세요.  
 -   adventureworks_demo.php 및 photo.php 파일이 웹 서버의 루트 디렉터리에 있어야 합니다. 파일에 이 문서 뒷부분에 나열된 코드가 있어야 합니다.  
 -   [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 연결된 SQL Server 2005 또는 SQL Server 2008이 로컬 컴퓨터에 설치되어 있어야 합니다.  
 -   웹 브라우저가 설치됩니다.  

@@ -9,10 +9,10 @@ ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a893a9a25f4ad19dcc71f538b62110b5838fa3ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573161"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>데이터 세트 필드 컬렉션(보고서 작성기 및 SSRS)
@@ -89,7 +89,7 @@ ms.locfileid: "65573161"
   
      예를 들어 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 에서 새로 도입된 새 날짜 및 시간 유형에 대해 보고서 처리기가 사용하는 데이터 형식이 다음 표에 표시됩니다.  
   
-    |SQL 데이터 형식|CLR 데이터 형식|설명|  
+    |SQL 데이터 형식|CLR 데이터 형식|Description|  
     |-------------------|-------------------|-----------------|  
     |**Date**|**DateTime**|날짜만|  
     |**Time**|**TimeSpan**|시간만|  

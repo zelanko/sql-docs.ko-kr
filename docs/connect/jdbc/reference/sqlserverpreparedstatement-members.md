@@ -11,10 +11,10 @@ ms.assetid: 2363902f-d4c6-4cd4-a5fc-86079eb9e418
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d99bf6118af71981ad2f45b5c7b722b458cc158c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970755"
 ---
 # <a name="sqlserverpreparedstatement-members"></a>SQLServerPreparedStatement 멤버
@@ -36,7 +36,7 @@ ms.locfileid: "67970755"
   
 ## <a name="methods"></a>메서드  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|이 Statement 개체의 명령 일괄 처리에 대한 매개 변수 집합을 추가합니다.|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 이 Statement 개체에 의해 현재 실행되고 있는 SQL 문을 취소합니다.|  
@@ -55,7 +55,7 @@ ms.locfileid: "67970755"
 |[getMaxFieldSize](../../../connect/jdbc/reference/getmaxfieldsize-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 이 Statement 개체에 의해 생성된 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 문자 및 이진 열 값에 대해 반환될 수 있는 최대 바이트 수를 검색합니다.|  
 |[getMaxRows](../../../connect/jdbc/reference/getmaxrows-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 이 Statement 개체에 의해 생성된 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체에 포함될 수 있는 최대 행 수를 검색합니다.|  
 |[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverpreparedstatement.md)|이 Statement 개체가 실행될 때 반환되는 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 열에 대한 정보가 들어 있는 [SQLServerResultSetMetaData 클래스](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) 개체를 검색합니다.|  
-|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 이 문 개체의 다음 결과로 이동 합니다.|  
+|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 이 Statement 개체의 다음 결과로 이동합니다.|  
 |[getParameterMetaData](../../../connect/jdbc/reference/getparametermetadata-method-sqlserverpreparedstatement.md)|이 Statement 개체에 대한 매개 변수의 수, 형식 및 속성을 검색합니다.|  
 |[getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체에 대한 응답 버퍼링 모드를 검색합니다.|  
 |[getQueryTimeout](../../../connect/jdbc/reference/getquerytimeout-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에서 이 Statement 개체가 실행될 때까지 대기하는 시간(초)을 검색합니다.|  
@@ -80,7 +80,7 @@ ms.locfileid: "67970755"
 |[setClob](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)|지정된 매개 변수를 지정된 Clob 개체로 설정합니다.|  
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, SQL 커서 이름을 이후 실행 메서드에 사용될 지정된 문자열로 설정합니다.|  
 |[setDate](../../../connect/jdbc/reference/setdate-method-sqlserverpreparedstatement.md)|지정된 매개 변수를 지정된 날짜 값으로 설정합니다.|  
-|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md)|지정 된 열의 값을 [DateTimeOffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md) 값으로 설정 합니다.|  
+|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md)|지정된 열의 값을 [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) 값으로 설정합니다.|  
 |[setDouble](../../../connect/jdbc/reference/setdouble-method-sqlserverpreparedstatement.md)|지정된 매개 변수를 지정된 **double** 값으로 설정합니다.|  
 |[setEscapeProcessing](../../../connect/jdbc/reference/setescapeprocessing-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 이스케이프 처리 모드를 설정합니다.|  
 |[setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 결과 집합 행을 처리할 방향에 관한 힌트를 JDBC 드라이버에 제공합니다.|  
@@ -93,9 +93,9 @@ ms.locfileid: "67970755"
 |[setNCharacterStream](../../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md)|지정된 매개 변수를 지정된 Reader 개체로 설정합니다.|  
 |[setNClob](../../../connect/jdbc/reference/setnclob-method-sqlserverpreparedstatement.md)|지정된 매개 변수를 지정된 개체로 설정합니다.|  
 |[setNull](../../../connect/jdbc/reference/setnull-method-sqlserverpreparedstatement.md)|설정할 매개 변수 형식이 지정된 경우 지정된 매개 변수를 null 값으로 설정합니다.|  
-|[setNString](../../../connect/jdbc/reference/setnstring-method-int-java-lang-string.md)|지정된 매개 변수를 지정된 **String** 개체로 설정합니다.|  
+|[setNString](../../../connect/jdbc/reference/setnstring-method-int-java-lang-string.md)|지정된 매개 변수를 지정된 **문자열** 개체로 설정합니다.|  
 |[setObject](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)|지정된 개체를 사용하여 지정된 매개 변수의 값을 설정합니다.|  
-|[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 문을 풀링하거나 풀링하지 않도록 요청합니다. 기본적으로 SQLServerPreparedStatement 개체는 생성 시 poolable 됩니다.|  
+|[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 문을 풀링하거나 풀링하지 않도록 요청합니다. 기본적으로 SQLServerPreparedStatement 개체는 생성될 때 풀링이 가능합니다.|  
 |[setQueryTimeout](../../../connect/jdbc/reference/setquerytimeout-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 드라이버에서 Statement 개체가 실행될 때까지 대기하는 시간(초)을 지정된 시간(초)으로 설정합니다.|  
 |[setRef](../../../connect/jdbc/reference/setref-method-sqlserverpreparedstatement.md)|지정된 매개 변수를 지정된 Ref 개체로 설정합니다.|  
 |[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체의 응답 버퍼링 모드를 대/소문자를 구분하지 않는 **String full** 또는 **adaptive**로 설정합니다.|  

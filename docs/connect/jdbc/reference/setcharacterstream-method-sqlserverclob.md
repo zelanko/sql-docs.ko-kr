@@ -1,5 +1,5 @@
 ---
-title: setCharacterStream 메서드 (SQLServerClob) | Microsoft Docs
+title: setCharacterStream 메서드(SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: c02778f2-6681-4a84-a58b-2bcfac4233e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da842fbc6240b072c7fe907aaa344d8d2ff1c6e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974657"
 ---
 # <a name="setcharacterstream-method-sqlserverclob"></a>setCharacterStream 메서드(SQLServerClob)
@@ -39,14 +39,14 @@ public java.io.Writer setCharacterStream(long pos)
   
  CLOB 개체에 쓰기 시작할 위치입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  유니코드 인코딩 문자를 쓸 수 있는 스트림입니다.  
   
 ## <a name="exceptions"></a>예외  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- 이 setCharacterStream 메서드는 setCharacterStream 인터페이스의 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 setCharacterStream 메서드는 java.sql.Clob 인터페이스의 setCharacterStream 메서드에 의해 지정됩니다.  
   
  CLOB의 문자 데이터는 기록기에 의해 지정된 위치부터 덮어쓰여지며 CLOB의 초기 길이를 초과할 수 있습니다. 위치+1 값을 지정하면 문자가 추가되고, 위치+2 이상(또는 0 이하)의 값을 지정하면 위치 오류가 발생합니다.  
   

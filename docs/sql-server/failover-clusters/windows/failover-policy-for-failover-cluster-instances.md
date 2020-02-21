@@ -1,6 +1,7 @@
 ---
-title: 장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책 | Microsoft 문서
-ms.custom: ''
+title: 장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책
+description: SQL Server 장애 조치(failover) 클러스터 인스턴스에 사용할 수 있는 여러 장애 조치(failover) 정책에 대한 설명입니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e2fae9bbc5f0f601f4d455204df6c9d18383458
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 153de78e01099cf1079c6fe0ad34c15c6d7afc44
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044753"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258162"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +77,7 @@ ms.locfileid: "68044753"
   
 4.  io_subsystem  
   
-5.  이벤트  
+5.  events  
   
  시스템, 리소스 및 쿼리 프로세스 구성 요소는 실패 감지에 사용됩니다. IO 하위 시스템 및 이벤트 구성 요소는 진단용으로만 사용됩니다.  
   
@@ -92,7 +93,7 @@ ms.locfileid: "68044753"
   
  이 시스템 저장 프로시저는 오류 상태 수준에서 중요한 역할을 하므로 [sp_server_diagnostics&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)를 검토하세요.  
   
-|Level|조건|설명|  
+|Level|조건|Description|  
 |-----------|---------------|-----------------|  
 |0|자동 장애 조치(Failover) 또는 다시 시작 안 함|어떤 실패 조건에서도 장애 조치(Failover) 또는 다시 시작이 자동으로 트리거되지 않음을 나타냅니다. 이 수준은 시스템 유지 관리 목적으로만 제공됩니다.|  
 |1|서버 다운 시 장애 조치(Failover) 또는 다시 시작|다음 조건이 발생한 경우 서버가 다시 시작되거나 장애 조치(Failover)됨을 나타냅니다.<br /><br /> SQL Server 서비스가 다운된 경우|  

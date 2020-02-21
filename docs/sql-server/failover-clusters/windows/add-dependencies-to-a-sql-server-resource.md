@@ -1,6 +1,7 @@
 ---
-title: SQL Server 리소스에 종속성 추가 | Microsoft 문서
-ms.custom: ''
+title: SQL Server FCI 리소스에 종속성 추가
+descriptoin: Describes how to add dependencies to an Always On failover cluster instance (FCI) resource using the Failover Cluster Manager.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dfaad71ac357ed261643267c7eab019b91548fa4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e78380d509d2b291c0794cb408909a10622c3f53
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063822"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822065"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>SQL Server 리소스에 종속성 추가
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 장애 조치(Failover) 클러스터 관리자 스냅인을 사용하여 Always On 장애 조치(Failover) 클러스터 인스턴스(FCI) 리소스에 종속성을 추가하는 방법을 설명합니다. 장애 조치 클러스터 관리자 스냅인은 WSFC(Windows Server 장애 조치(failover) 클러스터링) 서비스용 클러스터 관리 애플리케이션입니다.  
+  이 문서에서는 장애 조치(failover) 클러스터 관리자 스냅인을 사용하여 Always On FCI(장애 조치(failover) 클러스터 인스턴스) 리소스에 종속성을 추가하는 방법을 설명합니다. 장애 조치 클러스터 관리자 스냅인은 WSFC(Windows Server 장애 조치(failover) 클러스터링) 서비스용 클러스터 관리 애플리케이션입니다.  
   
 -   **시작하기 전 주의 사항:**  [제한 사항](#Restrictions), [필수 조건](#Prerequisites)  
   
@@ -54,7 +55,7 @@ ms.locfileid: "68063822"
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 그룹에 MS DTC를 설치하고 MS DTC에 종속된 다른 리소스가 있을 경우 이 그룹이 오프라인 상태가 되거나 장애 조치(failover) 중인 경우 MS DTC를 사용할 수 없습니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 가능하면 MS DTC를 자체의 실제 디스크 리소스가 있는 해당 그룹에 추가하는 것이 좋습니다.  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 조건  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 여러 개의 디스크 드라이브가 있는 WSFC 리소스 그룹에 설치하고 여러 드라이브 중 하나의 드라이브에 데이터를 저장하도록 선택하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스는 그 드라이브에만 종속되도록 설정됩니다. 다른 디스크에 데이터나 로그를 저장하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스에 추가 디스크에 대한 종속성을 추가해야 합니다.  
   
 ##  <a name="WinClusManager"></a> 장애 조치(Failover) 클러스터 관리자 스냅인 사용  

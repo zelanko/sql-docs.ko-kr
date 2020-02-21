@@ -1,9 +1,11 @@
 ---
-title: Windows 애플리케이션에서 URL 액세스 사용 | Microsoft Docs
+title: Windows 애플리케이션에서 URL 액세스 사용
+description: 보고서 서버에 대한 URL 액세스는 웹 환경에 최적화되어 있지만, URL 액세스를 사용하여 Reporting Services 보고서를 Windows 애플리케이션에 포함할 수도 있습니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - Windows applications [Reporting Services]
@@ -14,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 30ebdf11faf4780e8091f44ef1460d8980e82505
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: f133f6cf53123ed7c05f7a7181d5c829b45a258d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63012181"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796907"
 ---
 # <a name="integrating-reporting-services-using-url-access---windows-application"></a>URL 액세스를 사용하여 Reporting Services 통합 - Windows 애플리케이션
   보고서 서버에 대한 URL 액세스는 웹 환경에 최적화되어 있지만, URL 액세스를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 애플리케이션에 포함시킬 수도 있습니다. 하지만 Windows Forms와 관련된 URL 액세스의 경우에는 웹 브라우저 기술을 사용해야 합니다. URL 액세스 및 Windows Forms에서 다음과 같은 통합 시나리오를 사용할 수 있습니다.  
@@ -29,7 +31,7 @@ ms.locfileid: "63012181"
 -   Windows Form에서 <xref:System.Windows.Forms.WebBrowser> 컨트롤을 사용하여 보고서를 표시합니다.  
   
 ## <a name="starting-internet-explorer-from-a-windows-form"></a>Windows Form에서 Internet Explorer 시작  
- <xref:System.Diagnostics.Process> 클래스를 사용하여 컴퓨터에서 실행 중인 프로세스에 액세스할 수 있습니다. <xref:System.Diagnostics.Process> 클래스는 애플리케이션의 시작, 중지, 제어 및 모니터링을 위한 유용한 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 구문입니다. 보고서 서버 데이터베이스의 특정 보고서를 보려면 **IExplore** 프로세스를 시작하여 보고서에 대한 URL을 전달합니다. 다음 코드 예제를 사용하면 사용자가 Windows Form에서 단추를 클릭할 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer를 시작하고 특정 보고서 URL을 전달할 수 있습니다.  
+ <xref:System.Diagnostics.Process> 클래스를 사용하여 컴퓨터에서 실행 중인 프로세스에 액세스할 수 있습니다. <xref:System.Diagnostics.Process> 클래스는 애플리케이션의 시작, 중지, 제어 및 모니터링을 위한 유용한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 구문입니다. 보고서 서버 데이터베이스의 특정 보고서를 보려면 **IExplore** 프로세스를 시작하여 보고서에 대한 URL을 전달합니다. 다음 코드 예제를 사용하면 사용자가 Windows Form에서 단추를 클릭할 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer를 시작하고 특정 보고서 URL을 전달할 수 있습니다.  
   
 ```vb  
 Private Sub viewReportButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles viewReportButton.Click  
@@ -85,7 +87,7 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 ###### <a name="to-add-the-webbrowser-control-to-your-windows-form"></a>WebBrowser 컨트롤을 Windows Form에 추가하려면  
   
-1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[csprcs](../../includes/csprcs-md.md)] 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 새 Windows 애플리케이션을 만듭니다.  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 새 Windows 애플리케이션을 만듭니다.  
   
 2.  **도구 상자** 대화 상자에서 <xref:System.Windows.Forms.WebBrowser> 컨트롤을 찾습니다.  
   

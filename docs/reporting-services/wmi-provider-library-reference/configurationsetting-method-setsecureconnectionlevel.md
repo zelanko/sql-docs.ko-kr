@@ -16,10 +16,10 @@ ms.assetid: 0fac7d5e-2670-4657-9439-331e7d93babb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5318d25ed1e6113e65f6e41d40add3ff0203856c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580993"
 ---
 # <a name="configurationsetting-method---setsecureconnectionlevel"></a>ConfigurationSetting 메서드 - SetSecureConnectionLevel
@@ -44,10 +44,10 @@ public void SetSecureConnectionLevel(Int32 Level,
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  메서드를 호출하면 보고서 서버의 SecureConnectionLevel 속성이 지정된 값으로 설정됩니다. 값이 0이면 SSL이 해제되어 있음을 나타냅니다. 값이 1보다 크거나 같으면 SSL이 설정됨을 나타냅니다.  
   
 -   값을 설정하면 보고서 서버 구성 파일의 SecureConnectionLevel 요소가 변경되며 구성 파일의 **URLRoot** 요소는 지정된 *Level* 이 1보다 크거나 같은 경우 "https://"를 사용하도록 설정되고 지정된 *Level* 이 0인 경우에는 "http://"를 사용하도록 설정됩니다.  

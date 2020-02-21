@@ -1,26 +1,25 @@
 ---
-title: 추적 파일에 최대 파일 크기 설정(SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 추적 파일에 최대 파일 크기 설정
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- maximum file size for traces
-- size [SQL Server], trace files
 ms.assetid: e86dc4ce-5aa3-4c0d-acb5-c9e8871ed963
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7eb97c28901f5f88c5e741d0d34b845bc40b93ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 74d0d90ed27da0cd66ccf4a14232731a9eeb8f7b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928738"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307918"
 ---
 # <a name="set-a-maximum-file-size-for-a-trace-file-sql-server-profiler"></a>추적 파일에 최대 파일 크기 설정(SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   추적 파일에 최대 파일 크기를 설정하려면 다음 절차를 수행하십시오.  
   
@@ -46,9 +45,9 @@ ms.locfileid: "67928738"
      파일 롤오버 옵션이 설정되어 있으면 추적은 다른 방법으로 중단되기 전까지 계속됩니다. 파일 크기 제한에 도달한 후 추적을 중지하려면 파일 롤오버 옵션을 사용하지 마십시오.  
   
     > [!NOTE]  
-    >  FAT32 파일 시스템에서 파일의 크기는 4GB 미만으로 제한됩니다. 추적 파일의 크기가 이 크기에 도달하면 추적이 실패하고 "디스크 공간이 부족합니다"라는 오류 메시지가 표시됩니다. 더 큰 파일을 만들려면 NTFS 파일 시스템을 사용하십시오.  
+    >  FAT32 파일 시스템에서 파일의 크기는 4GB 미만으로 제한됩니다. 추적 파일의 크기가 이 크기에 도달하면 추적이 실패하고 “디스크 공간이 부족합니다.”라는 오류 메시지가 표시됩니다. 더 큰 파일을 만들려면 NTFS 파일 시스템을 사용하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

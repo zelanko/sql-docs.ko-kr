@@ -1,5 +1,5 @@
 ---
-title: 솔루션 탐색기 | Microsoft 문서
+title: 솔루션 탐색기
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -15,19 +15,19 @@ ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: a0e2a3512528bdddc62d89e182a6f074b05bdc75
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: d95b590d4ec0bd9daef6b81822317cfdda0bdad3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988132"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242837"
 ---
 # <a name="solution-explorer"></a>솔루션 탐색기
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 솔루션 탐색기 창은 데이터베이스 스크립트, 쿼리, 데이터 연결 및 파일을 관리하기 위해 프로젝트라는 컨테이너를 제공합니다. 서로 관련된 하나 이상의 프로젝트를 솔루션이라는 하나의 컨테이너에 결합할 수 있습니다.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 솔루션 탐색기 창은 데이터베이스 스크립트, 쿼리, 데이터 연결 및 파일을 관리하기 위해 프로젝트라는 컨테이너를 제공합니다. 서로 관련된 하나 이상의 프로젝트를 솔루션이라는 하나의 컨테이너에 결합할 수 있습니다.  
   
 솔루션은 하나 이상의 프로젝트와 솔루션을 전체적으로 정의할 수 있는 파일 및 메타데이터로 구성됩니다. 프로젝트는 파일 집합과 연결 정보 같은 관련 메타데이터로 구성됩니다. 솔루션과 프로젝트에는 데이터베이스 솔루션을 만드는 데 필요한 스크립트, 쿼리, 연결 정보 및 파일을 나타내는 항목이 있습니다.  
   

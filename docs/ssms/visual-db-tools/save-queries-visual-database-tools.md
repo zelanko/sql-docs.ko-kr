@@ -1,10 +1,9 @@
 ---
-title: 쿼리 저장(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 쿼리 저장
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 1909b7be-cc87-44f1-9eb0-a3c355628ce6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a5f3370f0dfa6fcd6a258a74f061cde800a2507
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: d25aeb06239ac1f9a0087516771d13e797330adb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266884"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255105"
 ---
 # <a name="save-queries-visual-database-tools"></a>쿼리 저장(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,10 +37,10 @@ ms.locfileid: "68266884"
 3.  솔루션 탐색기에서 프로젝트의 쿼리 폴더에 쿼리가 저장됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[쿼리 만들기(Visual Database Tools)](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
-[쿼리 실행(Visual Database Tools)](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
-[쿼리 변경 내용 취소(Visual Database Tools)](../../ssms/visual-db-tools/discard-changes-made-to-queries-visual-database-tools.md)  
-[쿼리 및 뷰 디자인 방법 도움말 항목(Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[쿼리 형식(Visual Database Tools)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
-[쿼리 관련 기본 작업 수행(Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[쿼리 만들기](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
+[쿼리 실행](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
+[쿼리의 변경 내용 취소](../../ssms/visual-db-tools/discard-changes-made-to-queries-visual-database-tools.md)  
+[쿼리 및 뷰 디자인 방법 도움말 항목](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[쿼리 형식](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
+[쿼리 관련 기본 작업 수행](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   

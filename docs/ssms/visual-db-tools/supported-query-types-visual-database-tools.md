@@ -1,10 +1,9 @@
 ---
-title: 지원되는 쿼리 형식(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 지원되는 쿼리 형식
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,14 @@ helpviewer_keywords:
 ms.assetid: 72b9116c-c128-4078-a78d-257a2955a3f6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 36da701cefd3f74cd21bd960d74b684336a7858c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: a8f5fae345543a3a63bacad0c5cdf0d8f62d2aa5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263177"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242174"
 ---
 # <a name="supported-query-types-visual-database-tools"></a>지원되는 쿼리 형식(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,6 +54,6 @@ ms.locfileid: "68263177"
 그래픽 창에 나타낼 수 없는 SQL 문을 사용하여 쿼리를 만드는 경우 쿼리 및 뷰 디자이너는 해당 창을 흐리게 표시하여 현재 만들고 있는 쿼리를 반영하지 않음을 표시합니다. 그러나 흐리게 표시된 창은 여전히 활성 상태이며 대부분 이 창에서도 쿼리를 변경할 수 있습니다. 그래픽 창에 나타낼 수 있는 쿼리에 변경 내용이 반영되면 해당 그래픽 창은 더 이상 흐리게 표시되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[쿼리 및 뷰 디자인 방법 도움말 항목(Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[쿼리 형식(Visual Database Tools)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
+[쿼리 및 뷰 디자인 방법 도움말 항목](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[쿼리 형식](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   

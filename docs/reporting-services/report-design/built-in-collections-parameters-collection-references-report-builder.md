@@ -9,16 +9,16 @@ ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 137eb9b9cf7a5a64843e163ece3b4767dd8e1852
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581799"
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>기본 제공 컬렉션 - 매개 변수 컬렉션 참조(보고서 작성기)
   보고서 매개 변수는 식에서 참조할 수 있는 기본 제공 컬렉션 중 하나입니다. 식에 매개 변수를 포함하면 사용자의 선택에 따라 보고서 데이터와 모양을 사용자 지정할 수 있습니다. 식은 (*Fx*) 또는 \<**Expression**> 옵션을 제공하는 모든 보고서 항목 속성 또는 입력란 속성에 사용할 수 있습니다. 식은 보고서의 내용과 모양을 다른 방법으로 제어하는 데도 사용됩니다. 자세한 내용은 [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)를 참조하세요.  
   
- 런타임에 매개 변수 값을 데이터 세트 필드 값과 비교할 때는 비교하는 두 항목의 데이터 형식이 같아야 합니다. 보고서 매개 변수는 다음 유형 중 하나일 수 있습니다. Boolean, DateTime, Integer, Float 또는 Text(기본 데이터 형식인 String을 나타냄). 필요한 경우에는 데이터 세트 값과 일치하도록 매개 변수 값의 데이터 형식을 변환해야 할 수 있습니다. 자세한 내용은 [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)).  
+ 런타임에 매개 변수 값을 데이터 세트 필드 값과 비교할 때는 비교하는 두 항목의 데이터 형식이 같아야 합니다. 보고서 매개 변수는 Boolean, DateTime, Integer, Float 또는 Text(기본 데이터 형식인 String을 나타냄) 형식 중 하나일 수 있습니다. 필요한 경우에는 데이터 세트 값과 일치하도록 매개 변수 값의 데이터 형식을 변환해야 할 수 있습니다. 자세한 내용은 [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)).  
   
  식에 매개 변수 참조를 포함하려면 매개 변수가 단일 값인지 다중값 매개 변수인지에 따라 달라지는 매개 변수 참조의 올바른 구문을 지정하는 방법을 이해해야 합니다.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "65581799"
 ##  <a name="Single"></a> 식에서 단일 값 매개 변수 사용  
  다음 표에서는 식에서 임의 데이터 형식의 단일 값 매개 변수에 대한 참조를 포함할 때 사용할 구문의 예를 보여 줍니다.  
   
-|예제|설명|  
+|예제|Description|  
 |-------------|-----------------|  
 |`=Parameters!` *\<ParameterName>* `.IsMultiValue`|**False**를 반환합니다.<br /><br /> 매개 변수가 다중값인지 확인합니다. **True**일 경우 매개 변수는 다중값이며 개체 컬렉션입니다. **False**일 경우 매개 변수는 단일 값이며 단일 개체입니다.|  
 |`=Parameters!` *\<ParameterName>* `.Count`|정수 값 1을 반환합니다. 단일 값 매개 변수의 경우 개수는 항상 1입니다.|  
@@ -42,7 +42,7 @@ ms.locfileid: "65581799"
 ##  <a name="Multi"></a> 식에서 다중값 매개 변수 사용  
  다음 표에서는 식에서 임의 데이터 형식의 다중값 매개 변수에 대한 참조를 포함할 때 사용할 구문의 예를 보여 줍니다.  
   
-|예제|설명|  
+|예제|Description|  
 |-------------|-----------------|  
 |`=Parameters!` *\<MultivalueParameterName>* `.IsMultiValue`|**True** 또는 **False**를 반환합니다.<br /><br /> 매개 변수가 다중값인지 확인합니다. **True**일 경우 매개 변수는 다중값이며 개체 컬렉션입니다. **False**일 경우 매개 변수는 단일 값이며 단일 개체입니다.|  
 |`=Parameters!` *\<MultivalueParameterName>* `.Count`|정수 값을 반환합니다.<br /><br /> 값 개수를 나타냅니다. 단일 값 매개 변수의 경우 개수는 항상 1입니다. 다중값 매개 변수의 경우 개수는 0개 이상입니다.|  

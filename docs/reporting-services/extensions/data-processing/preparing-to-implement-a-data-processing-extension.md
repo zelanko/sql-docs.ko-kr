@@ -12,10 +12,10 @@ ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3ae11d41956f37f1a203235abad71639f942ae7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193897"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>데이터 처리 확장 프로그램 구현 준비
@@ -62,18 +62,18 @@ ms.locfileid: "63193897"
 ## <a name="available-extension-interfaces"></a>사용 가능한 확장 프로그램 인터페이스  
  다음 표에서는 사용 가능한 인터페이스를 보여 주고 구현이 필수인지 선택적인지 설명합니다.  
   
-|인터페이스|설명|구현|  
+|인터페이스|Description|구현|  
 |---------------|-----------------|--------------------|  
 |IDbConnection|데이터 원본의 고유 세션을 나타냅니다. 클라이언트/서버 데이터베이스 시스템의 경우에는 세션이 서버에 대한 네트워크 연결과 같을 수 있습니다.|필수|  
-|IDbConnectionExtension|보안 및 인증과 관련하여 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 데이터 처리 확장 프로그램으로 구현할 수 있는 추가 연결 속성을 나타냅니다.|선택 사항|  
+|IDbConnectionExtension|보안 및 인증과 관련하여 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 데이터 처리 확장 프로그램으로 구현할 수 있는 추가 연결 속성을 나타냅니다.|옵션|  
 |IDbTransaction|로컬 트랜잭션을 나타냅니다.|필수|  
-|IDbTransactionExtension|[!INCLUDE[ssRS](../../../includes/ssrs.md)] 데이터 처리 확장 프로그램으로 구현할 수 있는 추가 트랜잭션 속성을 나타냅니다.|선택 사항|  
+|IDbTransactionExtension|[!INCLUDE[ssRS](../../../includes/ssrs.md)] 데이터 처리 확장 프로그램으로 구현할 수 있는 추가 트랜잭션 속성을 나타냅니다.|옵션|  
 |IDbCommand|데이터 원본에 연결되었을 때 사용되는 쿼리 또는 명령을 나타냅니다.|필수|  
-|IDbCommandAnalysis|쿼리를 분석하고 쿼리에서 사용된 매개 변수 이름 목록을 반환하기 위한 추가 명령 정보를 나타냅니다.|선택 사항|  
+|IDbCommandAnalysis|쿼리를 분석하고 쿼리에서 사용된 매개 변수 이름 목록을 반환하기 위한 추가 명령 정보를 나타냅니다.|옵션|  
 |IDataParameter|명령 또는 쿼리에 전달된 매개 변수 또는 이름/값 쌍을 나타냅니다.|필수|  
 |IDataParameterCollection|명령 또는 쿼리와 관련된 모든 매개 변수의 모음을 나타냅니다.|필수|  
 |IDataReader|데이터 원본에서 데이터의 정방향 전용, 읽기 전용 스트림을 읽는 방법을 제공합니다.|필수|  
-|IDataReaderExtension|데이터 원본에서 명령을 실행하여 얻은 정방향 전용 결과 집합 스트림을 하나 이상 읽는 방법을 제공합니다. 이 인터페이스는 필드 집계에 대한 추가 지원을 제공합니다.|선택 사항|  
+|IDataReaderExtension|데이터 원본에서 명령을 실행하여 얻은 정방향 전용 결과 집합 스트림을 하나 이상 읽는 방법을 제공합니다. 이 인터페이스는 필드 집계에 대한 추가 지원을 제공합니다.|옵션|  
 |IExtension|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램에 대한 기본 클래스를 제공합니다. 또한 구현 전문가는 이 인터페이스를 사용하여 확장 프로그램에 대한 지역화된 이름을 포함시키고 구성 파일에서 확장 프로그램으로 구성 설정을 전달할 수 있습니다.|필수|  
   
  데이터 처리 확장 프로그램 인터페이스는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 데이터 공급자 인터페이스, 메서드 및 속성의 하위 집합과 동일합니다(가능한 경우 항상). 전체 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 데이터 공급자를 구현하는 방법은 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK(소프트웨어 개발 키트) 설명서의 ".NET Framework 데이터 공급자 구현(Implementing a .NET Framework Data Provider)"을 참조하십시오.  

@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9d29e75f75332f207c64a7b502e60300e9aae3d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994975"
 ---
 # <a name="processing-results"></a>결과 처리
@@ -29,7 +29,7 @@ ms.locfileid: "67994975"
 
   명령을 실행하거나 공급자에서 직접 행 집합 개체를 생성하여 행 집합 개체가 만들어진 경우 소비자가 행 집합의 데이터를 검색하여 액세스해야 합니다.  
   
- 행 집합은 SQL Server OLE DB 드라이버에서 데이터를 테이블 형식으로 표시할 수 있도록 하는 중앙 개체입니다. 개념상, 행 집합은 각 행이 열 데이터를 갖는 행의 집합입니다. 행 집합 개체는 **IRowset**(행 집합에서 순차적으로 행을 인출하기 위한 메서드 포함), **IAccessor**(테이블 형식 데이터가 소비자 프로그램 변수에 바인딩되는 방법을 설명하는 열 바인딩 그룹의 정의 허용), **IColumnsInfo**(행 집합의 열에 대한 정보 제공) 및 **IRowsetInfo**(행 집합에 대한 정보 제공)와 같은 인터페이스를 노출합니다.  
+ 행 집합은 OLE DB Driver for SQL Server가 데이터를 테이블 형식으로 공개할 수 있도록 하는 중앙 개체입니다. 개념상, 행 집합은 각 행이 열 데이터를 갖는 행의 집합입니다. 행 집합 개체는 **IRowset**(행 집합에서 순차적으로 행을 인출하기 위한 메서드 포함), **IAccessor**(테이블 형식 데이터가 소비자 프로그램 변수에 바인딩되는 방법을 설명하는 열 바인딩 그룹의 정의 허용), **IColumnsInfo**(행 집합의 열에 대한 정보 제공) 및 **IRowsetInfo**(행 집합에 대한 정보 제공)와 같은 인터페이스를 노출합니다.  
   
  소비자는 **IRowset::GetData** 메서드를 호출하여 행 집합의 데이터 행을 버퍼로 검색할 수 있습니다. **GetData**를 호출하기 전에 소비자는 DBBINDING 구조 집합을 사용하여 버퍼를 설명합니다. 각 바인딩은 행 집합이 소비자 버퍼에 저장되는 방법을 설명하며 다음을 포함합니다.  
   

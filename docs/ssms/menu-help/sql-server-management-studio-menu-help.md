@@ -1,6 +1,6 @@
 ---
-title: SQL Server Management Studio 메뉴 도움말 | Microsoft 문서
-ms.custom: ''
+title: SQL Server Management Studio 메뉴 도움말
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5b8b2e45-bee6-42c8-93d6-31432f4d5699
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d541d10f86e1ca0f12b421bee71b4923088214b7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5d44d4d2c4c825e671eb8f4210994324b3a0c094
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260137"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75240529"
 ---
 # <a name="sql-server-management-studio-menu-help"></a>SQL Server Management Studio 메뉴 도움말
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

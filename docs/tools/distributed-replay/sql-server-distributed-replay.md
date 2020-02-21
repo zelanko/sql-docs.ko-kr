@@ -1,33 +1,33 @@
 ---
-title: SQL Server Distributed Replay | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: SQL Server Distributed Replay
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.technology: tools-other
 ms.topic: conceptual
-helpviewer_keywords:
-- Distributed Replay
-- SQL Server Distributed Replay
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f71b19977746ecc52817fa0128d6f0a8e681ff5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: c52325045cd21d0eb11edef8b0664d14c292e729
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949916"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74993423"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업그레이드에 따르는 영향을 쉽게 평가할 수 있습니다. 또한 하드웨어 및 운영 체제 업그레이드와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 튜닝에 따르는 영향도 쉽게 평가할 수 있습니다.  
+
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업그레이드에 따르는 영향을 쉽게 평가할 수 있습니다. 또한 하드웨어 및 운영 체제 업그레이드와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 튜닝에 따르는 영향도 쉽게 평가할 수 있습니다.  
   
 ## <a name="benefits-of-distributed-replay"></a>Distributed Replay의 이점  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]와 마찬가지로 Distributed Replay를 사용하면 캡처된 추적을 업그레이드된 테스트 환경에 대해 재생할 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]와 달리 Distributed Replay는 여러 컴퓨터의 작업을 재생할 수 있습니다.  
   
  Distributed Replay는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]보다 확장성이 뛰어난 솔루션을 제공합니다. Distributed Replay를 사용하면 여러 컴퓨터의 작업을 재생하고 중요한 작업을 효율적으로 시뮬레이션할 수 있습니다.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능은 여러 컴퓨터를 사용하여 추적 데이터를 재생하고 중요 업무용 작업을 시뮬레이트할 수 있습니다. 애플리케이션 호환성 테스트, 성능 테스트 또는 용량 계획에 Distributed Replay를 사용할 수 있습니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능은 여러 컴퓨터를 사용하여 추적 데이터를 재생하고 중요 업무용 워크로드를 시뮬레이트할 수 있습니다. 애플리케이션 호환성 테스트, 성능 테스트 또는 용량 계획에 Distributed Replay를 사용할 수 있습니다.  
   
 ## <a name="when-to-use-distributed-replay"></a>Distributed Replay를 사용하는 경우  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 와 Distributed Replay는 기능이 일부 중복됩니다.  
@@ -46,13 +46,13 @@ ms.locfileid: "67949916"
 ## <a name="distributed-replay-concepts"></a>Distributed Replay 개념  
  Distributed Replay 환경을 구성하는 요소는 다음과 같습니다.  
   
--   **Distributed Replay 관리 도구**: Distributed Replay Controller와 통신하는 데 사용되는 콘솔 애플리케이션 **DReplay.exe**. 관리 도구를 사용하여 Distributed Replay를 제어할 수 있습니다.  
+-   **Distributed Replay 관리 도구**: Distributed Replay Controller와 통신하는 데 사용되는 콘솔 애플리케이션인 **DReplay.exe**입니다. 관리 도구를 사용하여 Distributed Replay를 제어할 수 있습니다.  
   
--   **Distributed Replay Controller**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller라는 Windows 서비스를 실행하는 컴퓨터. Distributed Replay Controller는 Distributed Replay Client의 동작을 조정합니다. 각 Distributed Replay 환경에는 컨트롤러 인스턴스가 하나만 있을 수 있습니다.  
+-   **Distributed Replay 컨트롤러**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller라는 Windows 서비스를 실행하는 컴퓨터입니다. Distributed Replay Controller는 Distributed Replay Client의 동작을 조정합니다. 각 Distributed Replay 환경에는 컨트롤러 인스턴스가 하나만 있을 수 있습니다.  
   
--   **Distributed Replay Client**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client라는 Windows 서비스를 실행하는 하나 이상의 컴퓨터(물리적 또는 가상). 여러 Distributed Replay Client가 함께 작동하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대해 작업을 시뮬레이션합니다. 각 Distributed Replay 환경에 하나 이상의 클라이언트가 있을 수 있습니다.  
+-   **Distributed Replay Client**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client라는 Windows 서비스를 실행하는 하나 이상의 컴퓨터(물리적 또는 가상)입니다. 여러 Distributed Replay Client가 함께 작동하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대해 작업을 시뮬레이션합니다. 각 Distributed Replay 환경에 하나 이상의 클라이언트가 있을 수 있습니다.  
   
--   **대상 서버**: Distributed Replay Client가 추적 데이터를 재생하는 데 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스. 테스트 환경에 대상 서버를 배치하는 것이 좋습니다.  
+-   **대상 서버**: Distributed Replay Client가 추적 데이터를 재생하는 데 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스입니다. 테스트 환경에 대상 서버를 배치하는 것이 좋습니다.  
   
  Distributed Replay 관리 도구, Controller 및 Client를 서로 다른 컴퓨터에 설치하거나 동일한 컴퓨터에 설치할 수 있습니다. Distributed Replay Controller 또는 Client 서비스 인스턴스는 동일한 컴퓨터에서 하나만 실행할 수 있습니다.  
   

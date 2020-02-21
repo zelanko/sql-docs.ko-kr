@@ -11,10 +11,10 @@ ms.assetid: 3b0a8bbf-9369-4456-9ab8-1434ccacdd7e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3915690475e5ce9321af7fc15498c2bde018c640
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977134"
 ---
 # <a name="isvalid-method-sqlserverconnection"></a>isValid 메서드(SQLServerConnection)
@@ -34,14 +34,14 @@ public boolean isValid(int timeout)
   
  연결의 유효성을 검사하는 동안 대기하는 시간(초)을 지정하는 **int**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  연결이 유효하면 **true**이고, 연결이 유효하지 않거나 제한 시간이 만료되기 전에 연결의 유효성을 확인할 수 없으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 isValid 메서드는 java. .sql. 연결 인터페이스에서 isValid 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 isValid 메서드는java.sql.Connection 인터페이스의 isValid 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerConnection 멤버](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

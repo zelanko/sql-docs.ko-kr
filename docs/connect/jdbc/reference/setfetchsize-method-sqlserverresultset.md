@@ -16,10 +16,10 @@ ms.assetid: 233bf4f8-4758-42d0-a80b-33e34fa78027
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b253ad989593fa88b2281d933387dfe38fee1732
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974247"
 ---
 # <a name="setfetchsize-method-sqlserverresultset"></a>setFetchSize 메서드(SQLServerResultSet)
@@ -42,8 +42,8 @@ public void setFetchSize(int rows)
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 setFetchSize 메서드는 java. ResultSet 인터페이스의 setFetchSize 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 setFetchSize 메서드는 java.sql.ResultSet 인터페이스의 setFetchSize 메서드에 의해 지정됩니다.  
   
  지정된 인출 크기가 0이면 JDBC 드라이버는 이 값을 무시하고 필요한 인출 크기를 예측합니다. 기본값은 해당 결과 집합을 만든 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체에 의해 설정됩니다. 인출 크기는 언제든지 변경할 수 있습니다.  
   

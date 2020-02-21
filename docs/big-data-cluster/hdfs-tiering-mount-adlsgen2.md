@@ -9,12 +9,12 @@ ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ddf088bc8f7ba3d53bb989145e778deb3472e2a7
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: 2afc9fce446d277422c564330c5cc7db254f2d00
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632789"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252003"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>빅 데이터 클러스터에 HDFS 계층화를 위한 ADLS Gen2를 탑재하는 방법
 
@@ -84,7 +84,7 @@ OAuth 자격 증명을 사용하여 탑재하려면 아래 단계를 수행해�
 Azure Portal에서 ADLS 계정에 대해 얻을 수 있는 액세스 키를 사용하여 탑재할 수도 있습니다.
 
  > [!TIP]
-   > 스토리지 계정의 액세스 키(`<storage-account-access-key>`)를 찾는 방법에 대한 자세한 내용은 [계정 키 및 연결 문자열 보기](/azure/storage/common/storage-account-manage#view-account-keys-and-connection-string)를 참조하세요.
+   > 스토리지 계정의 액세스 키(`<storage-account-access-key>`)를 찾는 방법에 대한 자세한 내용은 [계정 키 및 연결 문자열 보기](/azure/storage/common/storage-account-keys-manage#view-access-keys-and-connection-string)를 참조하세요.
 
 ### <a name="set-environment-variable-for-access-key-credentials"></a>액세스 키 자격 증명에 대해 환경 변수 설정
 

@@ -9,10 +9,10 @@ ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: adf756e3ef9cbed7689a5cceb80e6ef4d93e2fb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581724"
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>행 높이 또는 열 너비 변경(보고서 작성기 및 SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "65581724"
   
 1.  디자인 뷰에서 테이블 행의 셀을 클릭합니다.  
   
-     ![테이블에서 선택한 셀](../../reporting-services/report-design/media/table-selectcell.png "테이블에서 선택한 셀")  
+     ![테이블의 선택된 셀](../../reporting-services/report-design/media/table-selectcell.png "테이블의 선택된 셀")  
   
 2.  표시되는 **속성** 창에서 **높이** 속성을 수정한 다음 **속성** 창 외부 아무 곳이나 클릭합니다.  
   

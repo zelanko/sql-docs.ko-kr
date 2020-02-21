@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SQL Server Management Studio for Integration Services
 - SQL Server Management Studio for Reporting Services
 - SQL Server Management Studio for Analysis Services
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: a185d7506b23931787699b52fedddfddf21c1cb8
-ms.sourcegitcommit: 059da40428ee9766b6f9b16b66c689b788c41df1
+ms.openlocfilehash: 613e3eddce55fbc52cd011f5070def12d31d83b9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71038851"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76037178"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)란?
 
@@ -37,7 +37,7 @@ ms.locfileid: "71038851"
 
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 구성 요소  
   
-|설명|구성 요소|  
+|Description|구성 요소|  
 |---------------|---------|  
 |**개체 탐색기** 를 사용하여 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에서 모든 개체를 보고 관리합니다.|[개체 탐색기](../ssms/object/object-explorer.md)|  
 |**템플릿 탐색기**를 사용하여 쿼리 및 스크립트 개발 속도를 높이는 데 사용하는 상용구 텍스트 파일을 작성 및 관리하는 방법입니다.|[템플릿 탐색기](../ssms/template/template-explorer.md)|  
@@ -91,6 +91,10 @@ SQL Server Management Studio를 사용하여 Reporting Services 기능을 활성
 - SSMS 17.0부터는 SQL 도구 팀이 [Microsoft 최신 수명 주기 정책](https://support.microsoft.com/help/30881/modern-lifecycle-policy)을 채택했습니다.
 - 원래 [최신 수명 주기 정책 알림](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy)을 읽어 보세요. 자세한 내용은 [최신 정책 FAQ](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq)를 참조하세요.
 - 진단 데이터 수집 및 기능 사용에 대한 자세한 내용은 [SQL Server 개인 정보 보완](https://docs.microsoft.com/sql/sql-server/sql-server-privacy)을 참조하세요.
+
+## <a name="cross-platform-tool"></a>플랫폼 간 도구
+
+[!INCLUDE[ssms-azure-data-studio-mention](../includes/ssms-azure-data-studio-mention.md)]
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

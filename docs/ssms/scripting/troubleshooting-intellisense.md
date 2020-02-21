@@ -1,6 +1,7 @@
 ---
-title: IntelliSense 문제 해결(SQL Server Management Studio) | Microsoft 문서
-ms.custom: ''
+title: IntelliSense를 사용하여 문제 식별(SSMS)
+description: SSMS(SQL Server Management Studio)에서 Intellisense를 사용하여 문제를 해결하고 문제를 식별하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -15,14 +16,14 @@ ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9dcff5c71d8093f4049983393ee7a10622f57f5b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: de4491bdeecdc635d12dca7cb0a51426524bdd67
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253114"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558683"
 ---
-# <a name="troubleshooting-intellisense"></a>문제 해결 IntelliSense
+# <a name="identify-issues-with-intellisense---sql-server-management-studio-ssms"></a>IntelliSense를 사용하여 문제 식별 - SSMS(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   다음과 같은 몇몇 경우에서는 IntelliSense 옵션이 제대로 작동하지 않을 수 있습니다.  
   

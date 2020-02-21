@@ -1,6 +1,6 @@
 ---
-title: 개체 종속성 | Microsoft 문서
-ms.custom: ''
+title: 개체 종속성
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 78be395cccceff6c01152b38ddf9aa7008a273c8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 82aa0e5ae67d3dbbf4e2a897ba5e49976cfc09a6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264087"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257160"
 ---
 # <a name="object-dependencies"></a>개체 종속성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,14 +28,14 @@ ms.locfileid: "68264087"
 선택한 개체를 변경하거나 삭제하기 전에 개체의 종속성을 파악하려면 이 대화 상자를 사용하십시오.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
-_\<선택한 개체>에_ **종속된 개체 표시**  
+\<선택한 개체>**에 종속된 개체**   
 이 단추를 클릭하면 종속성이 추적되고 선택한 개체에 종속된 개체의 목록이 표시됩니다.  
   
-_\<선택한 개체>에_ **종속된** **개체**  
+\<선택한 개체>**가 종속된** **개체**   
 이 단추를 클릭하면 종속성이 추적되고 선택한 개체가 종속된 개체의 목록이 표시됩니다.  
   
 **종속성**  
-*<selected object>* **에 종속된 개체**를 클릭하면 선택한 개체에 종속된 개체의 계층 뷰가 표시됩니다. *<selected object>* **가 **종속된 개체**** 를 클릭하면 선택한 개체가 종속된 개체의 계층 뷰가 표시됩니다.  
+*<selected object>* **에 종속된 개체**를 클릭하면 선택한 개체에 종속된 개체의 계층 뷰가 표시됩니다. *<selected object>* **가 종속된** **개체**를 클릭하면 선택한 개체가 종속된 개체의 계층 뷰가 표시됩니다.  
   
 **이름**  
 위의 **종속성** 트리 뷰에서 선택한 개체의 이름을 표시합니다.  

@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: errorInfo | Microsoft Docs'
+title: PDOStatement::errorInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: e45bebe8-ea4c-49b6-93db-cf1ae65f530c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 15686a93c5e23a476968332479897d2fb5b90220
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993073"
 ---
 # <a name="pdostatementerrorinfo"></a>PDOStatement::errorInfo
@@ -29,7 +29,7 @@ ms.locfileid: "67993073"
 array PDOStatement::errorInfo();  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 문 핸들에서 최근 작업에 대한 오류 정보 배열입니다. 배열은 다음 필드로 구성됩니다.  
   
 -   SQLSTATE 오류 코드  
@@ -40,7 +40,7 @@ array PDOStatement::errorInfo();
   
 오류가 없거나 SQLSTATE가 설정되지 않은 경우 드라이버 관련 필드는 NULL입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 2.0에 추가되었습니다.  
   
 ## <a name="example"></a>예제  

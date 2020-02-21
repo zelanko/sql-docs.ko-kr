@@ -15,10 +15,10 @@ ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f20551117454ca742c8c681cd43f2704695dd276
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571412"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>rs.exe 유틸리티 및 웹 서비스를 사용한 스크립팅

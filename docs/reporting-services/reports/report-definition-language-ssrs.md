@@ -18,10 +18,10 @@ ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 25a6872cd74faae521f9687d20d54541ef1798a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579994"
 ---
 # <a name="report-definition-language-ssrs"></a>SSRS(Report Definition Language)
@@ -39,9 +39,9 @@ ms.locfileid: "65579994"
  특정 스키마 버전에 대한 사양을 다운로드하려면 [Report Definition Language 사양(Report Definition Language Specification)](https://go.microsoft.com/fwlink/?linkid=116865)을 참조하십시오.  
   
 ##  <a name="bkmk_RDL_XML_Schema_Definition"></a> RDL XML 스키마 정의  
- A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RDL(Report Definition Language) 파일은 XSD(XML 스키마 정의) 파일을 사용하여 검증됩니다. 스키마는 .rdl 파일에 RDL 요소의 발생 규칙을 정의합니다. 요소는 데이터 형식과 카디널리티, 즉 허용되는 발생 횟수를 포함합니다. 요소에는 단순 요소와 복합 요소가 있습니다. 단순 요소에는 자식 요소 또는 특성이 없습니다. 복합 요소에는 자식이 있고 선택적으로 특성도 보유합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RDL(Report Definition Language) 파일은 XSD(XML 스키마 정의) 파일을 사용하여 유효성이 검사됩니다. 스키마는 .rdl 파일에 RDL 요소의 발생 규칙을 정의합니다. 요소는 데이터 형식과 카디널리티, 즉 허용되는 발생 횟수를 포함합니다. 요소에는 단순 요소와 복합 요소가 있습니다. 단순 요소에는 자식 요소 또는 특성이 없습니다. 복합 요소에는 자식이 있고 선택적으로 특성도 보유합니다.  
   
- 예를 들어 스키마가 복합 유형 **ReportParameters**인 RDL 요소 **ReportParametersType**를 포함합니다. 규칙에 따라 요소의 복합 유형 이름은 요소 이름 뒤에 **Type**이라는 단어를 붙여 만듭니다. **ReportParameters** 요소는 **Report** 요소(복합 형식)에 포함될 수 있고 **ReportParameter** 요소를 포함할 수 있습니다. **ReportParameterType** 은 단순 유형으로 값은 **Boolean**, **DateTime**, **Integer**, **Float**또는 **String**중 하나와 같을 수 있습니다. XML 스키마 데이터 형식에 대한 자세한 내용은 [XML 스키마 2부: Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871)을 참조하세요.  
+ 예를 들어 스키마가 복합 유형 **ReportParameters**인 RDL 요소 **ReportParametersType**를 포함합니다. 규칙에 따라 요소의 복합 유형 이름은 요소 이름 뒤에 **Type**이라는 단어를 붙여 만듭니다. **ReportParameters** 요소는 **Report** 요소(복합 형식)에 포함될 수 있고 **ReportParameter** 요소를 포함할 수 있습니다. **ReportParameterType**은 단순 형식으로 다음 값 중 하나일 수 있습니다. **Boolean**, **DateTime**, **Integer**, **Float** 또는 **String** XML 스키마 데이터 형식에 대한 자세한 내용은 [XML 스키마 2부: Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871)을 참조하세요.  
   
  RDL XSD는 제품 CD-ROM의 Extras 폴더에 있는 ReportDefinition.xsd 파일에서 사용할 수 있습니다. 다음 URL을 통해 보고서 서버에서도 사용할 수 있습니다.`https://servername/reportserver/reportdefinition.xsd`  
   
@@ -50,21 +50,21 @@ ms.locfileid: "65579994"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 RDL 파일을 빌드하는 여러 도구를 제공합니다. 자세한 내용은 [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)를 참조하세요.  
   
- 애플리케이션에서 RDL을 생성하는 가장 쉬운 방법은 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 네임스페이스 및 <xref:System.Xml> 네임스페이스의 <xref:System.Linq> 클래스를 사용하는 것입니다. 특히 **XmlTextWriter** 클래스는 RDL을 쓰는 데 사용할 수 있습니다. **XmlTextWriter**를 사용하여 전체 보고서 정의를 처음부터 생성하여 임의의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 애플리케이션에서 완료할 수 있습니다. 개발자는 또한 사용자 지정 속성이 포함된 사용자 지정 보고서 항목을 추가하여 RDL을 확장할 수도 있습니다. **XmlTextWriter** 클래스 및 <xref:System.Xml> 네임스페이스에 대한 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 개발자 가이드를 참조하세요. LINQ(Language-Integrated Query)에 대한 자세한 내용은 MSDN에서 "LINQ to XML"을 참조하십시오.  
+ 애플리케이션에서 RDL을 생성하는 가장 쉬운 방법은 <xref:System.Xml> 네임스페이스 및 <xref:System.Linq> 네임스페이스의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 클래스를 사용하는 것입니다. 특히 **XmlTextWriter** 클래스는 RDL을 쓰는 데 사용할 수 있습니다. **XmlTextWriter**를 사용하여 전체 보고서 정의를 처음부터 생성하여 임의의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 애플리케이션에서 완료할 수 있습니다. 개발자는 또한 사용자 지정 속성이 포함된 사용자 지정 보고서 항목을 추가하여 RDL을 확장할 수도 있습니다. **XmlTextWriter** 클래스 및 <xref:System.Xml> 네임스페이스에 대한 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 개발자 가이드를 참조하세요. LINQ(Language-Integrated Query)에 대한 자세한 내용은 MSDN에서 "LINQ to XML"을 참조하십시오.  
   
  보고서 정의 파일의 표준 파일 확장명은 .rdl입니다. 확장명이 .rdlc인 클라이언트 보고서 정의 파일을 개발할 수도 있습니다. 두 확장명 모두 MIME 형식은 텍스트/xml입니다. 보고서에 대한 자세한 내용은 [Reporting Services 보고서&#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)를 참조하세요.  
   
 ##  <a name="bkmk_RDL_Types"></a> RDL 형식  
  다음 표에서는 RDL 요소 및 특성에 사용되는 유형을 보여 줍니다.  
   
-|형식|설명|  
+|Type|Description|  
 |----------|-----------------|  
 |**이진**|Base-64로 인코딩된 이진 값을 갖는 속성입니다.|  
 |**Boolean**|개체 값으로 **true** 또는 **false** 를 갖는 속성입니다. 다르게 지정되지 않는 이상 생략된 선택적 Boolean 개체의 값은 **False**입니다.|  
 |**Date**|완전히 지정된 날짜 또는 ISO8601 날짜 형식(YYYY-MM-DD[THH:MM[:SS[.S]]])으로 지정된 날짜/시간 값을 갖는 속성입니다.|  
 |**Enum**|지정된 값 목록의 하나인 문자열 텍스트 값을 갖는 속성입니다.|  
-|**Float**|float 값을 갖는 속성입니다. 마침표(.)를 선택적 소수 구분 기호로 사용합니다.|  
-|**Integer**|정수(int32) 값을 갖는 속성입니다.|  
+|**부동**|float 값을 갖는 속성입니다. 마침표(.)를 선택적 소수 구분 기호로 사용합니다.|  
+|**정수**|정수(int32) 값을 갖는 속성입니다.|  
 |**언어**|미국 영어의 경우 "en-us"와 같이 언어 및 culture 코드가 포함된 텍스트 값을 갖는 속성입니다. 값은 기본 언어가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]에 정의된 중립 언어 또는 특정 언어여야 합니다.|  
 |**이름**|문자열 텍스트 값을 갖는 속성입니다. 이름은 항목의 네임스페이스 내에서 고유해야 합니다. 지정하지 않을 경우 항목의 네임스페이스는 가장 안쪽에 위치하고 있으며 이름이 있는 포함하는 개체입니다.|  
 |**NormalizedString**|일반화된 문자열 텍스트 값을 갖는 속성입니다.|  
@@ -78,7 +78,7 @@ ms.locfileid: "65579994"
   
 |**CLR 유형**|**해당 데이터 형식**|  
 |-----------------------|---------------------------------|  
-|Boolean|Boolean|  
+|부울|부울|  
 |DateTime, DateTimeOffset|DateTime|  
 |Int16, Int32, UInt16, Byte, SByte|정수|  
 |Single, Double|Float|  

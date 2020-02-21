@@ -13,14 +13,14 @@ ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 32d38fd943628b25ab8fd9ce47b779b75c05e211
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193938"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>데이터 처리 확장 프로그램에 대한 Connection 클래스 구현
-  **Connection** 개체는 데이터 연결 또는 유사한 리소스를 나타내며 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램 사용자의 시작 위치입니다. 데이터베이스 서버에 대한 연결을 나타내며 유사한 동작의 모든 엔터티를 **Connection**으로 표시할 수 있습니다.  
+  **Connection** 개체는 데이터베이스 연결 또는 유사한 리소스를 나타내며 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램 사용자의 시작 위치입니다. 데이터베이스 서버에 대한 연결을 나타내며 유사한 동작의 모든 엔터티를 **Connection**으로 표시할 수 있습니다.  
   
  **Connection** 개체를 구현하려면 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>을 구현하고 선택적으로 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>을 구현하는 클래스를 만듭니다.  
   

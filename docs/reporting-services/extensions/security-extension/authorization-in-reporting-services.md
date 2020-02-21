@@ -11,10 +11,10 @@ ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2210d5eb5997ec66e707a90cdc52dc24328e6f6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193342"
 ---
 # <a name="authorization-in-reporting-services"></a>Reporting Services의 권한 부여
@@ -68,7 +68,7 @@ public bool CheckAccess(
 ### <a name="authorization-flow"></a>권한 부여 흐름  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 권한 부여는 현재 서버에서 실행되도록 구성된 보안 확장 프로그램에서 제어됩니다. 권한 부여는 역할 기반으로 이루어지며 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보안 아키텍처에서 제공되는 권한과 작업으로 제한됩니다. 다음 다이어그램은 사용자가 보고서 서버 데이터베이스의 항목에 대해 작업을 수행할 수 있도록 권한을 부여하는 과정을 나타냅니다.  
   
- ![Reporting Services 보안 인증 흐름](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthorizationflow.gif "Reporting Services 보안 인증 흐름")  
+ ![Reporting Services 보안 권한 부여 흐름](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthorizationflow.gif "Reporting Services 보안 권한 부여 흐름")  
   
  이 다이어그램에 나타난 대로 권한 부여는 다음 순서를 따릅니다.  
   

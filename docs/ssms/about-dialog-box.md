@@ -1,6 +1,6 @@
 ---
-title: 정보 대화 상자 | Microsoft 문서
-ms.custom: ''
+title: 대화 상자 정보
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 5fb6f3e9-c511-419b-b0b6-173c057e3a54
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 23ee5e291bc1007e11a1342968c9cafbc3440909
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ee278c968bbfc9e0bde214080fcdcf20f61e4198
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263306"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254568"
 ---
-# <a name="about-dialog-box"></a>정보 대화 상자
+# <a name="about-dialog-box"></a>대화 상자 정보
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]  
-**정보** 대화 상자에는 제품 정보가 제공되며 이 대화 상자에서 제품을 실행 중인 시스템에 대한 정보를 액세스할 수 있습니다. 평가본의 경우 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 항목은 설치가 만료되기 전까지 남은 일 수를 나열합니다. 이 대화 상자는 **도움말** 메뉴에서 사용할 수 있습니다.  
+**정보** 대화 상자에는 제품 정보가 제공되며 이 대화 상자에서 제품을 실행 중인 시스템에 대한 정보를 액세스할 수 있습니다. 평가본의 경우 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 항목은 설치가 만료되기 전까지 남은 일수를 나열합니다. 이 대화 상자는 **도움말** 메뉴에서 사용할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
 **구성 요소 이름**  

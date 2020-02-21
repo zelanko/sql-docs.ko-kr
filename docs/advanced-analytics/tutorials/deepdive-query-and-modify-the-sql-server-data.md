@@ -1,6 +1,6 @@
 ---
 title: RevoScaleR을 사용하여 SQL 데이터 수정
-description: SQL Server에서 R 언어를 사용하여 데이터를 쿼리하고 수정하는 방법에 대한 자습서 연습입니다.
+description: 'RevoScaleR 자습서 3: SQL Server에서 R 언어를 사용하여 데이터를 쿼리하고 수정하는 방법입니다.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 65db15d8c6778723ff04f82cde985c4827813339
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 48802f815515948c957c718e4bf666b0d7133670
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727191"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947082"
 ---
 # <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>SQL Server 데이터 쿼리 및 수정(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 단원은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)의 일부입니다.
+이것은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 3에 해당됩니다.
 
-이전 단원에서는 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드했습니다. 이 단계에서는 **RevoScaleR**을 사용하여 데이터를 탐색하고 수정할 수 있습니다.
+이전 자습서에서는 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드했습니다. 이 자습서에서는 **RevoScaleR**을 사용하여 데이터를 탐색하고 수정할 수 있습니다.
 
 > [!div class="checklist"]
 > * 변수에 대한 기본 정보 반환

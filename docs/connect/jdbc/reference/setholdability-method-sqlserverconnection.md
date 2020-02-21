@@ -16,10 +16,10 @@ ms.assetid: 552eebd0-4c38-43f0-961f-35244f99109b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fe53c38e1b3f1633be27f4c82a9c2edfe9820495
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68213662"
 ---
 # <a name="setholdability-method-sqlserverconnection"></a>setHoldability 메서드(SQLServerConnection)
@@ -46,8 +46,8 @@ public void setHoldability(int nNewHold)
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 setHoldability 메서드는 setHoldability 인터페이스의 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 setHoldability 메서드는 java.sql.Connection 인터페이스의 setHoldability 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerConnection 멤버](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

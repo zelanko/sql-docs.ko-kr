@@ -20,10 +20,10 @@ ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f64ee56ddbd88f2d981d35fb24d9e156b734ff88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571473"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 유틸리티(SSRS)
@@ -145,7 +145,7 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  보고서 서버 수평적 스케일 아웃 배포란 여러 보고서 서버 인스턴스가 같은 보고서 서버 데이터베이스를 공유하는 배포 모델을 말합니다. 보고서 서버 데이터베이스에 대칭 키를 저장하는 모든 보고서 서버 인스턴스에서 이 데이터베이스를 사용할 수 있습니다. 예를 들어 보고서 서버 데이터베이스에 3개의 보고서 서버 인스턴스에 대한 키 정보가 포함된 경우 세 인스턴스는 모두 같은 수평적 스케일 아웃 배포의 멤버로 간주됩니다.  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>같은 컴퓨터에서 보고서 서버 인스턴스 조인  
- 같은 컴퓨터에 설치된 여러 보고서 서버 인스턴스에서 스케일 아웃 배포를 만들 수 있습니다. 로컬로 설치된 보고서 서버 인스턴스를 조인하는 경우에는 **-u** 및 **-v** 인수를 설정하지 마세요. **-u** 및 **-v** 인수는 원격 컴퓨터에서 인스턴스를 조인하는 경우에만 사용됩니다. 로컬인 경우 이러한 인수를 지정하면 "로컬 연결에 대해 사용자 자격 증명을 사용할 수 없습니다" 오류가 발생합니다.  
+ 같은 컴퓨터에 설치된 여러 보고서 서버 인스턴스에서 스케일 아웃 배포를 만들 수 있습니다. 로컬로 설치된 보고서 서버 인스턴스를 조인하는 경우에는 **-u** 및 **-v** 인수를 설정하지 마세요. **-u** 및 **-v** 인수는 원격 컴퓨터에서 인스턴스를 조인하는 경우에만 사용됩니다. 로컬인 경우 해당 인수를 지정하면 “로컬 연결에 대해 사용자 자격 증명을 사용할 수 없습니다.”라는 오류가 표시됩니다.  
   
  다음 예에서는 여러 로컬 인스턴스를 사용하여 스케일 아웃 배포를 만드는 구문을 보여 줍니다. 이 예에서 \<**initializedinstance**>는 보고서 서버 데이터베이스를 사용하도록 이미 초기화된 인스턴스의 이름이고, \<**newinstance**>는 배포에 추가할 인스턴스의 이름입니다.  
   
@@ -165,7 +165,7 @@ rskeymgmt -r <installationID>
 ## <a name="file-location"></a>파일 위치  
  Rskeymgmt.exe는 **\<*drive*>:\Program Files\Microsoft SQL Server\110\Tools\Binn** 또는 **\<*drive*>:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn**에 있습니다. 파일 시스템의 모든 폴더에서 유틸리티를 실행할 수 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  보고서 서버는 저장된 자격 증명과 연결 정보를 암호화합니다. 데이터를 암호화하는 데 공개 키와 대칭 키가 사용됩니다. 보고서 서버를 실행하려면 보고서 서버 데이터베이스에 유효한 키가 있어야 합니다. **rskeymgmt** 를 사용하여 키를 백업, 삭제 또는 복원할 수 있습니다. 키를 복원할 수 없을 경우 이 도구는 더 이상 사용할 수 없는 암호화된 내용을 삭제하는 방법을 제공합니다.  
   
  **rskeymgmt** 유틸리티를 사용하여 설치하는 동안 또는 초기화하는 동안 정의되는 키 집합을 관리할 수 있습니다. 이 유틸리티는 원격 프로시저 호출(RPC) 엔드포인트를 통해 로컬 보고서 서버 Windows 서비스에 연결합니다. 이 유틸리티가 올바르게 작동하려면 보고서 서버 Windows 서비스가 실행 중이어야 합니다.  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1aeae63d9fdec1b7afb876364b2fc36714e72479
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a9e401ab8fd48e6d1bbb487be3692897add2e225
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500477"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190879"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>공유 데이터 세트 또는 포함된 데이터 세트 만들기(보고서 작성기 및 SSRS)
 포함된 데이터 세트는 단일 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에 사용하기 위한 것입니다. 보고서 서버의 공유 데이터 세트는 여러 보고서(모바일 및 페이지 매김 둘 다)에서 사용될 수 있습니다. 데이터 세트를 만들려면 포함된 데이터 원본 또는 공유 데이터 원본이 필요합니다.  
@@ -116,7 +116,7 @@ ms.locfileid: "66500477"
  [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [데이터 세트 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [보고서 데이터 세트&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

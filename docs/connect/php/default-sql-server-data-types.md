@@ -14,10 +14,10 @@ ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69c138e7eb5d2c4f6dbace0db59ce235e1c0a5f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993662"
 ---
 # <a name="default-sql-server-data-types"></a>기본 SQL Server 데이터 형식
@@ -28,9 +28,9 @@ ms.locfileid: "67993662"
 |PHP 데이터 형식|SQLSRV 드라이버에서 기본 SQL Server 형식|PDO_SQLSRV 드라이버에서 기본 SQL Server 형식|  
 |-----------------|------------------------------------------------|-----------------------------------------------------|  
 |NULL|varchar(1)|지원되지 않음|  
-|Boolean|bit|bit|  
+|부울|bit|bit|  
 |정수|int|int|  
-|float|float(24)|지원되지 않음|  
+|Float|float(24)|지원되지 않음|  
 |String(8000바이트보다 작은 길이)|varchar(<string length>)|varchar(<string length>)|  
 |문자열(8,000바이트를 초과하는 길이)|varchar(max)|varchar(max)|  
 |리소스|지원되지 않습니다.|지원되지 않습니다.|  
@@ -38,7 +38,7 @@ ms.locfileid: "67993662"
 |Stream(인코딩: 이진)|varbinary|varbinary|  
 |Array|지원되지 않습니다.|지원되지 않습니다.|  
 |Object|지원되지 않습니다.|지원되지 않습니다.|  
-|DateTime(1)|DATETIME|지원되지 않습니다.|  
+|DateTime(1)|Datetime|지원되지 않습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)

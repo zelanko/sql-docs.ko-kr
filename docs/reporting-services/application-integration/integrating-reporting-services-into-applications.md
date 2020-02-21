@@ -1,5 +1,7 @@
 ---
-title: 애플리케이션에 Reporting Services 통합 | Microsoft Docs
+title: 애플리케이션에 통합
+description: Reporting Services는 개발자에게 솔루션 개발을 위한 포괄적인 API 세트를 제공하도록 디자인된 개방형의 확장 가능한 보고 플랫폼입니다.
+ms.custom: seo-lt-2019
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +10,12 @@ ms.topic: reference
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 64f4e77a943f1d71fc7655a4a1d36dffafe7afcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 889967d4a7731b25b2704b8695c6b8797d367430
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175140"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796957"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>애플리케이션에 Reporting Services 통합
 
@@ -24,7 +26,7 @@ ms.locfileid: "66175140"
 > [!NOTE]
 > SQL Server 2017 Reporting Services부터 솔루션을 개발하는 데 REST API 액세스를 사용할 수 있습니다. SOAP API 액세스는 더 이상 사용되지 않습니다. 자세한 내용은 [Reporting Services에 대한 REST API를 사용하여 개발](../developer/rest-api.md)을 참조하세요.
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 애플리케이션에 통합하는 데는 보고서 서버 웹 서비스([!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SOAP API라고도 함), [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]용 보고서 뷰어 컨트롤, URL 액세스의 세 가지 옵션이 있습니다. 각 옵션에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 애플리케이션에 통합하기 위한 서로 다른 방법을 제공합니다.
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 애플리케이션에 통합하는 데는 보고서 서버 웹 서비스([!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SOAP API라고도 함), [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]용 보고서 뷰어 컨트롤, URL 액세스의 세 가지 옵션이 있습니다. 각 옵션에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 애플리케이션에 통합하기 위한 서로 다른 방법을 제공합니다.
   
 ## <a name="report-server-web-service"></a>보고서 서버 웹 서비스
 

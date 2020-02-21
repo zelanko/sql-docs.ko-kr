@@ -16,10 +16,10 @@ ms.assetid: a4bf5968-c46f-484f-a510-65e2dde65a0d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4b88e5006ab772d232f65016033738c0b46848c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579896"
 ---
 # <a name="configurationsetting-method---listreportserversindatabase"></a>ConfigurationSetting 메서드 - ListReportServersInDatabase
@@ -63,10 +63,10 @@ public void ListReportServersInDatabase (out string[] MachineNames,
  *ExtendedErrors[]*  
  [out] 호출에서 반환되는 추가 오류가 들어 있는 문자열 배열입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ListReportServersInDatabase는 보고서 서버에 보안 정보에 대한 액세스 권한이 있는지 여부에 관계없이 보고서 서버 데이터베이스에 있는 보고서 서버 설치 목록을 나열하고 각 설치 정보가 들어 있는 일치하는 배열 집합을 반환합니다.  
   
 ## <a name="requirements"></a>요구 사항  

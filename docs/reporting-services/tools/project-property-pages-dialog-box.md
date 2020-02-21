@@ -13,10 +13,10 @@ ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8800d8c8b88ef4aeb486513fdff590ddec221bd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578235"
 ---
 # <a name="project-property-pages-dialog-box"></a>프로젝트 속성 페이지 대화 상자
@@ -29,14 +29,14 @@ ms.locfileid: "65578235"
   
 ## <a name="options"></a>옵션  
  **Configuration**  
- 편집할 구성을 선택합니다. 처음에는 **Debug**, **DebugLocal**및 **Release**의 3가지 구성을 사용할 수 있습니다. 활성 구성이 첫 번째로 표시됩니다(예: **활성(디버그)** ).  
+ 편집할 구성을 선택합니다. 처음에는 **Debug**, **DebugLocal** 및 **Release**의 3가지 구성을 사용할 수 있습니다. 활성 구성이 첫 번째로 표시됩니다(예: **활성(디버그)** ).  
   
  두 개 이상의 구성에 대한 속성을 동시에 보려면 **모든 구성** 또는 **여러 구성**을 선택합니다.  
   
  추가 구성을 만들려면 도구 모음의 **구성 관리자** 를 클릭합니다.  
   
  **구성 관리자**  
- 다른 구성을 추가하거나 전체 솔루션의 구성을 관리합니다. 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 설명서를 참조하십시오.  
+ 다른 구성을 추가하거나 전체 솔루션의 구성을 관리합니다. 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 설명서를 참조하세요.  
   
  **OutputPath**  
  보고서의 빌드 확인, 배포 및 미리 보기에 사용되는 보고서 정의를 저장할 경로를 입력하거나 붙여 넣습니다. 이 경로는 프로젝트에 사용하는 경로 및 프로젝트 경로 아래의 자식 폴더인 상대 경로와 달라야 합니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "65578235"
   
  기본 모드로 실행 중인 보고서 서버에 게시하는 경우 보고서 서버의 가상 디렉터리 URL을 사용합니다(예: `http:\\<server>\reportserver`)을 입력합니다. 이는 보고서 관리자가 아닌 보고서 서버의 가상 디렉터리입니다. 기본적으로 보고서 서버는 "reportserver"라는 가상 디렉터리에 설치되어 있습니다.  
   
- SharePoint 통합 모드로 실행 중인 보고서 서버에 게시하는 경우 SharePoint 최상위 사이트나 하위 사이트에 대한 URL을 사용합니다. 사이트를 지정하지 않으면 기본 최상위 사이트가 사용됩니다. 예를 들어 
+ SharePoint 통합 모드로 실행 중인 보고서 서버에 게시하는 경우 SharePoint 최상위 사이트나 하위 사이트에 대한 URL을 사용합니다. 사이트를 지정하지 않으면 기본 최상위 사이트가 사용됩니다. 다음은 그 예입니다. 
 + `http:\\<servername>`, 
 + `http:\\<servername\<site>` 
 + `http:\\<servername>\<site>\<subsite>`입니다.  

@@ -1,6 +1,6 @@
 ---
-title: 등록된 서버 F1 도움말 | Microsoft 문서
-ms.custom: ''
+title: 등록된 서버 F1 도움말
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf08f76b0df0b3624aa1450b2463599b31fb85fa
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: f8422cd501258d15365e7125c11e616c94d7dc8d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266141"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256235"
 ---
 # <a name="registered-servers-f1-help"></a>등록된 서버 F1 도움말
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "68266141"
  **등록된 서버 설명**  
  서버에 대한 선택적 설명을 입력합니다.  
   
- **테스트**  
+ **Test**  
  **서버 이름**에서 선택한 서버 연결을 테스트하려면 클릭합니다.  
   
  
@@ -91,7 +91,7 @@ ms.locfileid: "68266141"
  **인증**  
  Windows 인증을 사용하는 경우 사용자가 자신의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 자격 증명을 사용하거나 Windows 사용자 또는 Windows 그룹의 멤버로 연결할 수 있습니다.  
   
- **User name**  
+ **사용자 이름**  
  이 릴리스에서는 이 옵션을 사용할 수 없습니다.  
   
  **암호**  
@@ -106,7 +106,7 @@ ms.locfileid: "68266141"
  **등록된 서버 설명**  
  서버에 대한 선택적 설명을 입력합니다.  
   
- **테스트**  
+ **Test**  
  **서버 이름**에서 선택한 서버 연결을 테스트하려면 클릭합니다. 
  
  ## <a name="ssis-new-or-edit-server-registration-general-tab"></a>SSIS 새 서버 등록 또는 서버 등록 편집(일반 탭) 
@@ -117,7 +117,7 @@ ms.locfileid: "68266141"
   
 ### <a name="options"></a>옵션  
  **서버 유형**  
- 등록된 서버에서 서버를 등록하는 경우 **서버 유형** 상자는 읽기 전용이며 등록된 서버에 표시된 서버 유형과 일치합니다. 다른 유형의 서버를 등록하려면 새 서버를 등록하기 전에 **등록된 서버**, **데이터베이스 엔진**, **데이터베이스 엔진**, **Analysis Server** **SQL Server Compact** **등록된 서버** 도구 모음에서 **Integration Services** 를 클릭합니다.  
+ 등록된 서버에서 서버를 등록하는 경우 **서버 유형** 상자는 읽기 전용이며 등록된 서버에 표시된 서버 유형과 일치합니다. 다른 유형의 서버를 등록하려면 새 서버를 등록하기 전에 **등록된 서버** 도구 모음에서 **데이터베이스 엔진**, **Analysis Server**, **Reporting Services**, **SQL Server Compact** **Edition** 또는 **Integration Services**를 클릭합니다.  
   
  **서버 이름**  
  연결할 서버를 선택합니다. 기본적으로 마지막으로 연결한 서버가 표시됩니다.  
@@ -125,7 +125,7 @@ ms.locfileid: "68266141"
  **인증**  
  Windows 인증 모드를 사용하면 사용자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 계정을 통해 연결할 수 있습니다.  
   
- **User name**  
+ **사용자 이름**  
  이 릴리스에서는 이 옵션을 사용할 수 없습니다.  
   
  **암호**  
@@ -140,7 +140,7 @@ ms.locfileid: "68266141"
  **등록된 서버 설명**  
  서버에 대한 선택적 설명을 입력합니다.  
   
- **테스트**  
+ **Test**  
  **서버 이름**에서 선택한 서버 연결을 테스트하려면 클릭합니다. 
   
 

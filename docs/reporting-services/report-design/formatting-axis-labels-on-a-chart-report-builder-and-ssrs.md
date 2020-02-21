@@ -26,10 +26,10 @@ ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 36eb4aff0571be5eb25115df06df5079a59da75b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65575621"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>차트의 축 레이블 서식 지정(보고서 작성기 및 SSRS)
@@ -56,7 +56,7 @@ ms.locfileid: "65575621"
   
  축 눈금은 축을 따라 표시될 데이터 범위를 정의하는 최소값과 최대값으로 바인딩됩니다. 차트는 결과 집합의 값을 바탕으로 각 축에서 최소값과 최대값을 계산합니다. 값 축에서 눈금은 항상 값 필드의 가장 작은 수와 가장 큰 수에 의해 결정됩니다. 범주 축에서 최소값과 최대값 형식은 범주 필드의 형식에 따라 결정됩니다. 데이터 세트의 모든 필드는 세 가지 범주 필드 유형 중 하나로 분류할 수 있습니다. 다음 표에서는 이러한 세 가지 유형의 범주 필드에 대해 설명합니다.  
   
-|범주 필드 유형|설명|예제|  
+|범주 필드 유형|Description|예제|  
 |-------------------------|-----------------|-------------|  
 |숫자|범주는 x축을 따라 숫자순으로 표시됩니다.|x축을 따라 직원 ID 번호를 표시하는 직원 ID 번호별 판매 보고서|  
 |날짜/시간|범주는 시간순으로 x축을 따라 표시됩니다.|x축을 따라 서식이 지정된 날짜를 표시하는 월별 판매 보고서|  

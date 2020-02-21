@@ -1,7 +1,5 @@
 ---
-title: SQL Server Management Studio를 사용하여 데이터베이스 프로젝트 빌드 | Microsoft 문서
-ms.custom: ''
-ms.date: 01/19/2017
+title: 데이터베이스 프로젝트 빌드
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -15,16 +13,20 @@ helpviewer_keywords:
 ms.assetid: c2e80045-894d-44cf-b65c-e547ed738947
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 07dfe77992cb5e0e8011424d9cea878063a18943
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 503bf99e9300a155a3521f52f8fecd18d3d65005
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267608"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243960"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 데이터베이스 프로젝트 빌드
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-데이터베이스 스크립트 프로젝트는 데이터베이스와 관련되거나 데이터베이스의 일부인 스크립트, 연결 정보 및 템플릿으로 구성된 집합입니다. [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 스크립트 프로젝트의 컨텍스트 내에서 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 데이터베이스를 관리하고 디자인할 수 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 제공합니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 사용자의 데이터베이스 개발, 배포 및 유지 관리를 도와 주는 디자이너, 편집기, 지침 및 마법사가 포함되어 있습니다.  
+
+데이터베이스 스크립트 프로젝트는 데이터베이스와 관련되거나 데이터베이스의 일부인 스크립트, 연결 정보 및 템플릿으로 구성된 집합입니다. [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 스크립트 프로젝트의 컨텍스트 내에서 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 데이터베이스를 관리하고 디자인할 수 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 제공합니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 사용자의 데이터베이스 개발, 배포 및 유지 관리를 도와 주는 디자이너, 편집기, 지침 및 마법사가 포함되어 있습니다.  
   
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 속한 구성 요소를 관리하는 관리 도구 모음입니다. 이 통합 환경에서는 단일 인터페이스로 데이터 백업, 쿼리 편집, 일반 기능 자동화 등의 다양한 태스크를 수행할 수 있습니다.  
@@ -60,7 +62,7 @@ ms.locfileid: "68267608"
   
 -   스크립트와 함께 연결 정보를 저장합니다.  
   
-솔루션 탐색기는 같은 프로젝트에 관련된 스크립트를 작성하고 다시 사용하기 위한 개발자용 도구입니다. 나중에 유사한 태스크가 필요할 경우 프로젝트에 저장된 스크립트 그룹을 사용할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame_md.md)][!INCLUDE[vsprvs](../includes/vsprvs-md.md)]를 사용하여 애플리케이션을 만들어 본 경험이 있다면 솔루션 탐색기가 전혀 낯설지 않을 것입니다.  
+솔루션 탐색기는 같은 프로젝트에 관련된 스크립트를 작성하고 다시 사용하기 위한 개발자용 도구입니다. 나중에 유사한 태스크가 필요할 경우 프로젝트에 저장된 스크립트 그룹을 사용할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]를 사용하여 애플리케이션을 만들어 본 경험이 있다면 솔루션 탐색기가 전혀 낯설지 않을 것입니다.  
   
 솔루션은 하나 이상의 스크립트 프로젝트로 구성됩니다. 프로젝트는 하나 이상의 스크립트 또는 연결로 구성되며 스크립트가 아닌 파일도 포함할 수 있습니다.  
   

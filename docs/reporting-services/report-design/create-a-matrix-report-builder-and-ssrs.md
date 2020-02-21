@@ -9,10 +9,10 @@ ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: aec3e79fbfbaf96475cf10457c9f21c8c3d78b6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581550"
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>행렬 만들기(보고서 작성기 및 SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "65581550"
   
  디자인 화면에서 행렬을 선택하면 다음 그림과 같이 행 및 열 핸들이 나타납니다.  
   
- ![도구 상자에서 추가된 새 행렬 선택](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "도구 상자에서 추가된 새 행렬 선택")  
+ ![도구 상자에서 추가된 새 행렬이 선택됨](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "도구 상자에서 추가된 새 행렬이 선택됨")  
   
  데이터 세트 필드를 그룹화 창의 행 그룹 및 열 그룹 영역으로 끌어 그룹을 추가합니다. 행 그룹 또는 열 그룹 창으로 끌어 놓은 첫 번째 필드는 최초의 비어 있는 기본 그룹을 대체합니다. 그런 다음 데이터에 따라 각 셀에 대한 서식을 적용할 수 있습니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "65581550"
   
  미리 보기에서 행렬은 행 그룹 및 열 그룹 값을 표시하도록 확장됩니다. 다음 그림과 같이 셀에는 요약 값이 표시됩니다.  
   
- ![확장된 그룹이 있는 렌더링 된 행렬 미리 보기](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "확장된 그룹이 있는 렌더링 된 행렬 미리 보기")  
+ ![확장 그룹이 있는 렌더링된 행렬 미리 보기](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "확장 그룹이 있는 렌더링된 행렬 미리 보기")  
   
  시작 행렬은 테이블릭스 데이터 영역을 기반으로 하는 템플릿입니다. 중첩/인접 행 그룹 또는 열 그룹, 심지어는 정보 행까지 추가하여 끊임없이 행렬 디자인을 개발할 수 있습니다. 자세한 내용은 [테이블릭스 데이터 영역의 유연성 살펴보기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)를 참조하세요.  
   

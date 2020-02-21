@@ -15,10 +15,10 @@ ms.assetid: ca9f19d7-6e86-46f2-b9ad-9bf807eaa52e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 31479ae9b460b6a660ec865e68e46afd912f49b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194082"
 ---
 # <a name="using-strong-named-custom-assemblies"></a>강력한 이름의 사용자 지정 어셈블리 사용
@@ -35,7 +35,7 @@ ms.locfileid: "63194082"
 [assembly:AllowPartiallyTrustedCallers]  
 ```  
   
- **AllowPartiallyTrustedCallersAttribute**는 어셈블리 수준에서 강력한 이름의 어셈블리에 의해 적용될 때만 유효합니다. 어셈블리 수준에서 특성을 적용하는 방법은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK 설명서의 "특성 적용"을 참조하세요.  
+ **AllowPartiallyTrustedCallersAttribute**는 어셈블리 수준에서 강력한 이름의 어셈블리에 의해 적용될 때만 유효합니다. 어셈블리 수준에서 특성을 적용하는 방법은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK 설명서의 “특성 적용”을 참조하세요.  
   
 > [!CAUTION]  
 >  **AllowPartiallyTrustedCallersAttribute**가 있는 경우에는 기본 **FullTrustLinkDemand** 보안 검사가 수행되지 않아 부분적으로 신뢰할 수 있는 다른 어셈블리에서 어셈블리를 호출할 수 있게 됩니다. 클래스 수준 또는 메서드 수준의 선언적 보안 특성을 포함한 모든 보안 검사는 명시적으로 지정되어야 합니다.  

@@ -1,5 +1,5 @@
 ---
-title: connect 메서드 (SQLServerDriver) | Microsoft Docs
+title: connect 메서드(SQLServerDriver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 43813a4c-1cc7-4659-ba27-f1786f1371eb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 518be09d4a4929a06866eec253a49a39d7865263
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955414"
 ---
 # <a name="connect-method-sqlserverdriver"></a>connect 메서드(SQLServerDriver)
@@ -44,14 +44,14 @@ public java.sql.Connection connect(java.lang.String Url,
   
  연결 인수로 사용되는 문자열 값 쌍의 집합입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  연결 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 connect 메서드는 java. Driver 인터페이스의 connect 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 connect 메서드는 java.sql.Driver 인터페이스의 connect 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDriver 메서드](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

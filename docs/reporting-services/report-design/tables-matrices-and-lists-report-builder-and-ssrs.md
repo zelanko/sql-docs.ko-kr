@@ -34,10 +34,10 @@ ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a326ce7ea6701b1fe55f76861bced6c3c86174d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574673"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>테이블, 행렬 및 목록(보고서 작성기 및 SSRS)
@@ -53,7 +53,7 @@ ms.locfileid: "65574673"
   
  ![RS_TableMatrixList](../../reporting-services/report-design/media/rs-tablematrixlist.gif "RS_TableMatrixList")  
   
- 테이블, 행렬 및 목록으로 빠르게 시작하려면 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md), [자습서: 행렬 보고서 만들기&#40;보고서 작성기&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md) 및 [자습서: 자유 형식 보고서 만들기&#40;보고서 작성기&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)를 참조하세요.  
+ 테이블, 행렬 및 목록을 빠르게 시작하려면 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md), [자습서: 행렬 보고서 만들기&#40;보고서 작성기&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md) 및 [자습서: 자유 형식 보고서 만들기&#40;보고서 작성기&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)를 참조하세요.  
   
 > [!NOTE]  
 >  테이블, 행렬 및 목록을 보고서와는 별도로 보고서 파트로 게시할 수 있습니다. [보고서 파트](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)에 대해 자세히 알아봅니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "65574673"
 ##  <a name="Table"></a> 테이블  
  세부 데이터를 표시하거나, 데이터를 행 그룹으로 구성하거나, 두 가지 모두를 수행할 때 테이블을 사용합니다. 테이블 템플릿에는 테이블 머리글 행 및 데이터를 위한 정보 행이 있는 세 열이 들어 있습니다. 다음 그림에서는 디자인 화면에서 선택한 초기 테이블 템플릿을 보여 줍니다.  
   
- ![디자인 화면에서 테이블 템플릿 선택](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "디자인 화면에서 테이블 템플릿 선택")  
+ ![디자인 화면에서 테이블 템플릿이 선택됨](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "디자인 화면에서 테이블 템플릿이 선택됨")  
   
  단일 필드, 여러 필드를 기준으로 하거나 사용자 고유의 식을 작성하여 데이터를 그룹화할 수 있습니다. 중첩된 그룹이나 인접한 독립 그룹을 만들고 그룹화된 데이터의 집계된 값을 표시하거나 합계를 그룹에 추가할 수 있습니다. 예를 들어 테이블에 [Category]라는 행 그룹이 있는 경우 각 그룹의 부분합과 보고서의 총합을 모두 추가할 수 있습니다. 테이블의 모양을 개선하고 뚜렷하게 표시할 데이터를 강조하려면 셀을 병합하고 데이터 및 테이블 제목에 서식을 적용할 수 있습니다.  
   
@@ -72,9 +72,9 @@ ms.locfileid: "65574673"
 ##  <a name="Matrix"></a> 행렬  
  피벗 테이블 또는 크로스탭처럼 집계된 데이터 요약을 행 및 열로 그룹화하여 표시할 때 행렬을 사용합니다. 그룹의 행과 열 수는 각 행 및 열 그룹의 고유 값 수에 따라 결정됩니다. 다음 그림에서는 디자인 화면에서 선택한 초기 행렬 템플릿을 보여 줍니다.  
   
- ![도구 상자에서 추가된 새 행렬 선택](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "도구 상자에서 추가된 새 행렬 선택")  
+ ![도구 상자에서 추가된 새 행렬이 선택됨](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "도구 상자에서 추가된 새 행렬이 선택됨")  
   
- 행 및 열 그룹의 여러 필드나 식으로 데이터를 그룹화할 수 있습니다. 런타임에 보고서 데이터 및 데이터 영역이 결합되면 열 그룹에는 열이, 행 그룹에는 행이 추가되면 페이지에서 행렬이 가로와 세로 방향으로 확장됩니다. 행렬 셀에는 셀이 속한 행 및 열 그룹의 교차점으로 한정된 집계 값이 표시됩니다. 예를 들어 행렬에 판매량 합계를 표시하는 행 그룹 하나(Category)와 열 그룹 두 개(Territory, Year)가 있는 경우 보고서에서는 두 개의 셀에 Category 그룹의 각 값에 대한 판매량 합계가 표시됩니다. 셀의 범위가 되는 두 교차점은 범주와 지역 및 범주와 연도입니다. 이 행렬에는 중첩된 그룹과 인접 그룹이 포함될 수 있습니다. 중첩된 그룹에는 부모-자식 관계가 있으며 인접 그룹에는 피어 관계가 있습니다. 행렬 내에 있는 중첩된 행 및 열 그룹의 일부 및 모든 수준에 대해 부분합을 추가할 수 있습니다.  
+ 행 및 열 그룹의 여러 필드나 식으로 데이터를 그룹화할 수 있습니다. 런타임에 보고서 데이터 및 데이터 영역이 결합되면 열 그룹에는 열이, 행 그룹에는 행이 추가되면 페이지에서 행렬이 가로와 세로 방향으로 확장됩니다. 행렬 셀에는 셀이 속한 행 및 열 그룹의 교차점으로 한정된 집계 값이 표시됩니다. 예를 들어 행렬에 판매량 합계를 표시하는 행 그룹 하나(Category)와 열 그룹 두 개(Territory, Year)가 있는 경우 보고서에서는 두 개의 셀에 Category 그룹의 각 값에 대한 판매량 합계가 표시됩니다. 셀의 범위가 되는 두 교차점은 Category/Territory 및 Category/Year입니다. 이 행렬에는 중첩된 그룹과 인접 그룹이 포함될 수 있습니다. 중첩된 그룹에는 부모-자식 관계가 있으며 인접 그룹에는 피어 관계가 있습니다. 행렬 내에 있는 중첩된 행 및 열 그룹의 일부 및 모든 수준에 대해 부분합을 추가할 수 있습니다.  
   
  행렬 데이터를 보다 읽기 쉽게 만들고 뚜렷하게 표시할 데이터를 강조하려면 셀을 가로 또는 세로로 병합하거나 분할하고 데이터 및 그룹 제목에 서식을 적용할 수 있습니다.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "65574673"
 ##  <a name="List"></a> 목록  
  자유 형식 레이아웃을 만들 때 목록을 사용합니다. 이를 사용하면 모눈 레이아웃에 제한되지 않고 목록 안에서 필드를 자유롭게 배치할 수 있습니다. 목록을 사용하여 여러 데이터 세트 필드를 표시하는 폼을 디자인할 수 있으며, 그룹화된 데이터를 위해 여러 데이터 영역을 나란히 표시하기 위한 컨테이너로 목록을 사용할 수도 있습니다. 예를 들어 직원 레코드나 환자 레코드에서 목록에 대한 그룹을 정의하고, 테이블, 차트 및 이미지를 추가하고, 각 그룹 값에 대해 테이블 및 그래픽 형식으로 값을 표시할 수 있습니다.  
   
- ![도구 상자에서 추가된 새 목록 선택](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "도구 상자에서 추가된 새 목록 선택")  
+ ![도구 상자에서 추가된 새 목록이 선택됨](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "도구 상자에서 추가된 새 목록이 선택됨")  
   
  자세한 내용은 [목록을 사용하여 송장 및 양식 만들기]를 참조하세요.  
   

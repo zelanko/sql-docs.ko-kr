@@ -16,10 +16,10 @@ ms.assetid: 6aece4e5-027d-434e-a8cf-a67c0484f189
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0b9df5512466c5f12c5fda1b4e5cb4a91504499
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982075"
 ---
 # <a name="getmaxrows-method-sqlserverstatement"></a>getMaxRows 메서드(SQLServerStatement)
@@ -34,14 +34,14 @@ ms.locfileid: "67982075"
 public final int getMaxRows()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  최대 행 수를 나타내는 **int**이며, 제한이 없는 경우에는 0입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getMaxRows 메서드는 getMaxRows 인터페이스의 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getMaxRows 메서드는 java.sql.Statement 인터페이스의 getMaxRows 메서드에 의해 지정됩니다.  
   
  동적 스크롤 가능 커서의 경우 이 getMaxRows 메서드는 항상 0을 반환합니다.  
   

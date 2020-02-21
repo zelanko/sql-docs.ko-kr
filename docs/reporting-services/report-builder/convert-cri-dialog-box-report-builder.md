@@ -14,10 +14,10 @@ ms.assetid: 2a3f2ac6-667e-4498-8b73-9c40beb993f5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 16d2e745c923e719699c8295e186d5f91e7462da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580793"
 ---
 # <a name="convert-cri-dialog-box-report-builder"></a>CRI 변환 대화 상자(보고서 작성기)

@@ -1,5 +1,5 @@
 ---
-title: getScale 메서드 (SQLServerParameterMetaData) | Microsoft Docs
+title: getScale 메서드(SQLServerParameterMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 7b8d8d9c-74aa-4e6e-88f1-2fc5c74004ae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 29c2da8d8b6645ec9d5186f79db80b03626b2978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980198"
 ---
 # <a name="getscale-method-sqlserverparametermetadata"></a>getScale 메서드(SQLServerParameterMetaData)
@@ -39,14 +39,14 @@ public int getScale(int param)
   
  매개 변수 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  지정된 매개 변수의 소수 자릿수를 나타내는 **int**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getScale 메서드는 java. ParameterMetaData 인터페이스의 getScale 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getScale 메서드는 java.sql.ParameterMetaData 인터페이스의 getScale 메서드에 의해 지정됩니다.  
   
  이 메서드는 열의 소수점 이하 자릿수를 가져옵니다. 소수점이 없는 형식의 경우 이 메서드는 "0"을 반환합니다.  
   

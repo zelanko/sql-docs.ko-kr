@@ -16,10 +16,10 @@ ms.assetid: 10c93cbf-f831-4e00-8e37-ea728bf34b1e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa968eaf8b34a1959f17474ae79f65f1a2fd0ebc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972444"
 ---
 # <a name="settimestamp-method-int-javasqltimestamp-javautilcalendar"></a>setTimestamp 메서드(int, java.sql.Timestamp, java.util.Calendar)
@@ -47,12 +47,12 @@ public final void setTimestamp(int n,
   
  *cal*  
   
- 일정 개체입니다.  
+ Calendar 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 setTimestamp 메서드는 java.sql.PreparedStatement 인터페이스의 setTimestamp 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

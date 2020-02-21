@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f259c5a8a9b32d723c62d73f2b0563093851ef5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571601"
 ---
 # <a name="data-alert-designer"></a>데이터 경고 디자이너
@@ -203,7 +203,7 @@ ms.locfileid: "65571601"
  자세한 내용은 [경고 디자이너에서 데이터 경고 편집](../reporting-services/edit-a-data-alert-in-alert-designer.md)을 참조하세요.  
   
   
-##  <a name="HowTo"></a> 관련 태스크  
+##  <a name="HowTo"></a> 관련 작업  
  이 섹션에는 경고를 만들고 편집하는 방법을 보여 주는 절차가 나와 있습니다.  
   
 -   [경고 디자이너에서 데이터 경고 편집](../reporting-services/edit-a-data-alert-in-alert-designer.md)  

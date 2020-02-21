@@ -1,6 +1,6 @@
 ---
-title: 대량 데이터 설정 | Microsoft Docs
-description: SQL Server에 대 한 OLE DB 드라이버를 사용 하 여 대량 데이터 설정
+title: 대규모 데이터 설정 | Microsoft Docs
+description: OLE DB Driver for SQL Server를 사용하여 대규모 데이터 설정
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 03baaafbc3fed654bcd463a2971bf1fca6712304
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936524"
 ---
 # <a name="setting-large-data"></a>대규모 데이터 설정
@@ -28,7 +28,7 @@ ms.locfileid: "67936524"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server에 대 한 OLE DB 드라이버를 사용 하 여 소비자 저장소 개체에 대 한 포인터를 전달 하 여 BLOB 데이터를 설정할 수 있습니다.  
+  OLE DB Driver for SQL Server를 사용하면 포인터를 소비자 스토리지 개체에 전달하여 BLOB 데이터를 설정할 수 있습니다.  
   
  소비자는 이 데이터가 포함된 스토리지 개체를 만들고 이 스토리지 개체에 대한 포인터를 공급자에게 전달합니다. 그러면 공급자는 소비자 스토리지 개체에서 데이터를 읽고 이를 BLOB 열에 씁니다.  
   

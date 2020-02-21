@@ -1,10 +1,9 @@
 ---
-title: 작업 속성 - 새 작업(경고 페이지) | Microsoft 문서
-ms.custom: ''
+title: 작업 속성 - 새 작업(경고 페이지)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: 6d3f9b24-d214-4e82-b161-c00ff8eff813
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 50e797dbdeb118fd44cd517040a39a6a6f540bb4
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: a819f2ffbb327d967193de32cb0a55b48e2e3aaa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252659"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242311"
 ---
 # <a name="job-properties---new-job-alerts-page"></a>작업 속성 - 새 작업(경고 페이지)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

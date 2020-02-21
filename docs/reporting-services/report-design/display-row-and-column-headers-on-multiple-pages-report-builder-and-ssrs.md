@@ -1,18 +1,19 @@
 ---
-title: 여러 페이지에 행 및 열 머리글 표시(보고서 작성기 및 SSRS) | Microsoft Docs
+title: 여러 페이지에 행 및 열 머리글 표시(보고서 작성기) | Microsoft Docs
+description: 여러 페이지에 걸쳐 있는 테이블릭스 데이터 영역(테이블, 매트릭스 또는 목록)에 대해 페이지를 매긴 보고서의 Reporting Services 페이지마다 행 및 열 머리글을 반복할지 여부를 제어할 수 있습니다.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
-ms.date: 03/01/2017
-ms.openlocfilehash: 1f1ae9d45e98cc847a89562c93040c4465e51efe
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.date: 12/09/2019
+ms.openlocfilehash: ca1b00d98c71808cd42acb220e7fbf5d1c382555
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263326"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254589"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>여러 페이지에 행 및 열 머리글 표시(보고서 작성기 및 SSRS)
 
@@ -20,7 +21,7 @@ ms.locfileid: "68263326"
   
  행과 열을 제어하는 방법은 테이블릭스 데이터 영역에 그룹 머리글이 있는지 여부에 따라 달라집니다. 그룹 머리글이 있는 테이블릭스 데이터 영역을 클릭하면 다음 그림에서처럼 테이블릭스 영역이 점선으로 표시됩니다.  
   
- ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
+ ![테이블릭스 데이터 영역](../../reporting-services/report-design/media/rs-tablixareas.gif "테이블릭스 데이터 영역")  
   
  새 테이블 또는 행렬 마법사나 새 차트 마법사를 사용하거나, 그룹화 창에 필드를 추가하거나, 상황에 맞는 메뉴를 사용하여 그룹을 추가하면 행 및 열 그룹 머리글이 자동으로 만들어집니다. 테이블릭스 데이터 영역에 테이블릭스 본문 영역만 있고 그룹 머리글은 없는 경우 행과 열은 테이블릭스 멤버입니다.  
   

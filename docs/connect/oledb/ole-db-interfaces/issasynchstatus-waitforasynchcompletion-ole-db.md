@@ -1,5 +1,5 @@
 ---
-title: 'ISSAsynchStatus:: WaitForAsynchCompletion (OLE DB) | Microsoft Docs'
+title: ISSAsynchStatus::WaitForAsynchCompletion(OLE DB) | Microsoft Docs
 description: ISSAsynchStatus::WaitForAsynchCompletion(OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 6779c0892137ee60f011f365e0f3ee4d46b046f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994366"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion(OLE DB)
@@ -57,7 +57,7 @@ HRESULT WaitForAsynchCompletion(
 > [!NOTE]  
 >  위에 나열된 반환 코드 값 외에도 **ISSAsynchStatus::WaitForAsynchCompletion** 메서드는 코어 OLEDB **ICommand::Execute** 및 **IDBInitialize::Initialize** 메서드에서 반환하는 반환 코드 값을 지원합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **ISSAsynchStatus::WaitForAsynchCompletion** 메서드는 제한 시간 값(밀리초)이 경과하거나 보류 중인 작업이 완료될 때까지 값을 반환하지 않습니다. **Command** 개체에는 제한 시간이 초과되기 전까지의 쿼리 실행 시간(초)을 제어하는 **CommandTimeout** 속성이 있습니다. **CommandTimeout** 속성을 **ISSAsynchStatus::WaitForAsynchCompletion** 메서드와 함께 사용하면 이 속성이 무시됩니다.  
   
  비동기 작업의 경우 제한 시간 속성이 무시됩니다. **ISSAsynchStatus::WaitForAsynchCompletion** 의 제한 시간 매개 변수는 컨트롤이 호출자에게 반환되기 전까지의 최대 경과 시간을 지정합니다. 제한 시간이 만료되면 DB_S_ASYNCHRONOUS가 반환됩니다. 제한 시간을 지정해도 비동기 작업이 취소되지 않습니다. 애플리케이션이 제한 시간 내에 완료되지 않은 비동기 작업을 취소해야 할 경우 애플리케이션은 제한 시간에 도달할 때까지 기다린 다음 DB_S_ASYNCHRONOUS가 반환되면 작업을 명시적으로 취소해야 합니다.  
@@ -73,6 +73,6 @@ HRESULT WaitForAsynchCompletion(
   
 ## <a name="see-also"></a>참고 항목  
  [비동기 작업 수행](../../oledb/features/performing-asynchronous-operations.md)   
- [ISSAsynchStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus&#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

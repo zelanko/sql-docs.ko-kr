@@ -14,10 +14,10 @@ ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c2c4ad1faa149a384e42c52e7bbd8437dfc03d6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573725"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>입력란(보고서 작성기 및 SSRS)
@@ -51,7 +51,7 @@ ms.locfileid: "65573725"
   
  방향은 입력란에 대해 설정되며 입력란의 모든 텍스트에 적용됩니다. 입력란의 일부에 대해 다른 방향을 지정할 수는 없습니다.  
   
- 시작하려면 [자습서: 텍스트 서식 지정&#40;보고서 작성기&#41;](../../reporting-services/tutorial-format-text-report-builder.md)의 텍스트 회전 섹션 및 [입력란 방향 설정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md)을 참조하세요.  
+ 시작하려면 [자습서: 텍스트 서식 지정&#40;보고서 작성기&#41;](../../reporting-services/tutorial-format-text-report-builder.md)의 텍스트 회전 섹션 및 [텍스트 상자 방향 설정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md)을 참조하세요.  
   
 ##  <a name="HowTo"></a> 방법 도움말 항목  
  [입력란 추가, 이동 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  

@@ -9,10 +9,10 @@ ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: adfde8e92d249c40749dba76f42c6d1d5ba20d71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581533"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>단계별 보고서 만들기(보고서 작성기 및 SSRS)
@@ -54,7 +54,7 @@ ms.locfileid: "65581533"
   
 3.  단계별 보고서의 경우 그룹 인스턴스를 표시하는 첫 번째 열이 필요하지 않습니다. 대신 그룹 머리글 셀의 값을 복사하고 그룹 열을 삭제한 다음 그룹 머리글 행의 첫 번째 입력란에 붙여넣습니다. 그룹 열을 제거하려면 그룹 열 또는 셀을 마우스 오른쪽 단추로 클릭하고 **열 삭제**를 클릭합니다. 다음 그림에서는 디자인 화면의 데이터 영역을 보여 줍니다.  
   
-     ![그룹 머리글 행이 있는 데이터 영역](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "그룹 머리글 행이 있는 데이터 영역")  
+     ![그룹 헤더 행이 있는 데이터 영역](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "그룹 헤더 행이 있는 데이터 영역")  
   
 4.  정보 행을 동일한 열의 그룹 머리글 행 아래 들여 쓰려면 정보 데이터 셀의 안쪽 여백을 변경합니다.  
   

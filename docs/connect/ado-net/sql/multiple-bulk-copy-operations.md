@@ -1,6 +1,6 @@
 ---
 title: 여러 대량 복사 작업
-description: SqlBulkCopy 클래스를 사용 하 여 SQL Server 인스턴스에 데이터의 여러 대량 복사 작업을 수행 하는 방법을 설명 합니다.
+description: SqlBulkCopy 클래스를 사용하여 SQL Server 인스턴스에 데이터의 여러 대량 복사 작업을 수행하는 방법을 설명합니다.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 6cc373224f4df437665cc48edb78ff81b85b8ac1
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 423300788a020a18914a5bd25abac379cbb71500
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452135"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247686"
 ---
 # <a name="multiple-bulk-copy-operations"></a>여러 대량 복사 작업
 
@@ -33,7 +33,7 @@ ms.locfileid: "72452135"
 ## <a name="example"></a>예제
 
 > [!IMPORTANT]
->  이 샘플은 가져올 [대량 복사 샘플 설정](bulk-copy-example-setup.md)에 설명된 대로 작업 테이블을 만들지 않은 경우 실행되지 않습니다. 이 코드는 **SqlBulkCopy**를 사용하는 구문을 보여 주는 용도로 제공됩니다. 소스 테이블과 대상 테이블이 동일한 SQL Server 인스턴스에 있으면 Transact-SQL `INSERT … SELECT` 문을 사용하여 데이터를 더 쉽고 빠르게 복사할 수 있습니다.  
+>  이 샘플은 가져올 [대량 복사 샘플 설정](bulk-copy-example-setup.md)에 설명된 대로 작업 테이블을 만들지 않은 경우 실행되지 않습니다. 이 코드는 **SqlBulkCopy**를 사용하는 구문을 보여 주는 용도로 제공됩니다. 원본 테이블과 대상 테이블이 동일한 SQL Server 인스턴스에 있으면 Transact-SQL `INSERT … SELECT` 문을 사용하여 데이터를 더 쉽고 빠르게 복사할 수 있습니다.  
   
 [!code-csharp[DataWorks SqlBulkCopy_._ColumnMappingOrdersDetails#1](~/../sqlclient/doc/samples/SqlBulkCopy_ColumnMappingOrdersDetails.cs#1)]
   

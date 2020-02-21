@@ -9,10 +9,10 @@ ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a623762a7424036ffe8b9b5b669be426480bbb4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582223"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>원형 차트(보고서 작성기 및 SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "65582223"
   
 -   Null이거나, 비어 있거나, 음수이거나, 0인 값은 비율을 계산하는 데 영향을 주지 않습니다. 따라서 이러한 값은 원형 차트에 표시되지 않습니다. 이러한 유형의 값을 차트에서 시각적으로 표현하려면 원형 차트가 아닌 다른 차트 종류로 변경해야 합니다.  
   
--   사용자 지정 색상표를 사용하여 원형 차트의 색을 직접 정의하는 경우에는 쉽게 구분할 수 있는 고유한 색으로 각 데이터 요소를 표시할 수 있도록 색상표에 다양한 색을 준비해야 합니다. 자세한 내용은 [차트에서 계열 색 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)를 참조하세요.  
+-   사용자 지정 색상표를 사용하여 원형 차트의 색을 직접 정의하는 경우에는 쉽게 구분할 수 있는 고유한 색으로 각 데이터 요소를 표시할 수 있도록 색상표에 다양한 색을 준비해야 합니다. 자세한 내용은 [차트에서 계열 색 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)을 클릭합니다.  
   
 -   대부분의 다른 차트 종류와 달리 원형 차트에서는 개별 계열이 아니라 개별 데이터 요소를 범례에 표시합니다.  
   

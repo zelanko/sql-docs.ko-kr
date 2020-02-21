@@ -11,10 +11,10 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eecf4868791a9dcd963a31963f742f90a2cf3843
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008428"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC 드라이버에서 연결 복원
@@ -35,7 +35,7 @@ ms.locfileid: "68008428"
   
      다음과 같이 하면 연결 다시 시도 횟수를 수정할 수 있습니다.  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 연결 다시 시도 횟수 **컨트롤을 사용하여 ODBC Driver for** 를 사용하는 데이터 원본을 정의하거나 수정합니다.  
+    -   **연결 다시 시도 횟수** 컨트롤을 사용하여 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용하는 데이터 원본을 정의하거나 수정합니다.  
   
     -   **ConnectRetryCount** 연결 문자열 키워드를 사용합니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68008428"
   
      다음과 같이 하면 연결 다시 시도 간격을 수정할 수 있습니다.  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 연결 다시 시도 간격 **컨트롤을 사용하여 ODBC Driver for** 를 사용하는 데이터 원본을 정의하거나 수정합니다.  
+    -   **연결 다시 시도 간격** 컨트롤을 사용하여 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용하는 데이터 원본을 정의하거나 수정합니다.  
   
     -   **ConnectRetryInterval** 연결 문자열 키워드를 사용합니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68008428"
   
  다음 상태 코드는 서버에서 명령을 실행하는 함수에 의해 반환됩니다.  
   
-|State|메시지|  
+|시스템 상태|메시지|  
 |-----------|-------------|  
 |IMC01|연결이 끊어져서 복구가 불가능합니다. 클라이언트 드라이버가 한 번 이상 연결을 복구하려고 시도했지만 모든 시도가 실패했습니다. 복구 시도 횟수를 늘리려면 ConnectRetryCount의 값을 늘립니다.|  
 |IMC02|서버가 복구 시도를 승인하지 않았으므로 연결 복구가 가능하지 않습니다.|  
@@ -71,7 +71,7 @@ ms.locfileid: "68008428"
 |IMC06|연결이 끊어져서 복구가 불가능합니다. 클라이언트 드라이버에서 연결을 복구할 수 없다고 표시합니다. 연결을 복원하려고 시도하지 않았습니다.|  
   
 ## <a name="example"></a>예제  
- 다음 샘플에는 두 가지 함수가 포함되어 있습니다. **func1**은 Windows 기반 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용하는 DSN(데이터 원본 이름)과 연결할 수 있는 방법을 보여 줍니다. DSN은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하고 사용자 ID를 지정합니다. **func1** 는 **SQL_COPT_SS_CONNECT_RETRY_COUNT**를 사용 하 여 연결 재시도 횟수를 검색 합니다.  
+ 다음 샘플에는 두 가지 함수가 포함되어 있습니다. **func1**은 Windows 기반 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용하는 DSN(데이터 원본 이름)과 연결할 수 있는 방법을 보여 줍니다. DSN은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하고 사용자 ID를 지정합니다. 그러면 **func1**이 **SQL_COPT_SS_CONNECT_RETRY_COUNT**를 사용하여 연결 다시 시도 횟수를 검색합니다.  
   
  **func2** 가 **SQLDriverConnect**, **ConnectRetryCount** 연결 문자열 키워드 및 연결 특성을 사용하여 연결 다시 시도 및 다시 시도 간격에 대한 설정을 검색합니다.  
   

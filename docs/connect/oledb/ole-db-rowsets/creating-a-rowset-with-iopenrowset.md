@@ -1,6 +1,6 @@
 ---
-title: IOpenRowset을 사용 하 여 행 집합 만들기 | Microsoft Docs
-description: SQL Server 용 OLE DB Driver의 IOpenRowset 인터페이스를 사용 하 여 행 집합 만들기
+title: IOpenRowset을 사용하여 행 집합 만들기 | Microsoft Docs
+description: OLE DB Driver for SQL Server의 IOpenRowset 인터페이스를 사용하여 행 집합 만들기
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2c6da41d19fed61fd83a7d4a1521ddba8726ba46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994303"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>IOpenRowset을 사용하여 행 집합 만들기
@@ -27,7 +27,7 @@ ms.locfileid: "67994303"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server에 대 한 OLE DB 드라이버는 다음과 같은 제한 사항이 있는 **Iopenrowset:: OpenRowset** 메서드를 지원 합니다.  
+  OLE DB Driver for SQL Server는 다음과 같은 제한이 있는 **IOpenRowset::OpenRowset** 메서드를 지원합니다.  
   
 -   데이터베이스 ID(DBID) 구조체에 *pTableID* 매개 변수가 가리키는 기본 테이블 또는 뷰를 지정해야 합니다.  
   

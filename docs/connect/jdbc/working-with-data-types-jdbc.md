@@ -1,5 +1,5 @@
 ---
-title: 데이터 형식 (JDBC) 사용 | Microsoft Docs
+title: 데이터 형식(JDBC) 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f45b8fdf1fa0ef03bdb014ee3553d2e8bf23d29a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.openlocfilehash: 19d75051b03a3d6d966961e681e9ce9d70396e86
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69025697"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76934440"
 ---
 # <a name="working-with-data-types-jdbc"></a>데이터 형식 사용(JDBC)
 
@@ -32,12 +32,12 @@ SQL Server 데이터 형식 작업을 위해 JDBC 드라이버에서는 [SQLServ
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[기본 데이터 형식 샘플](../../connect/jdbc/basic-data-types-sample.md)|결과 집합 getter 메서드를 사용하여 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 값을 검색하는 방법 및 결과 집합 업데이트 메서드를 사용하여 이러한 값을 업데이트하는 방법을 설명합니다.|  
 |[SQLXML 데이터 형식 샘플](../../connect/jdbc/sqlxml-data-type-sample.md)|XML 데이터를 관계형 데이터베이스에 저장하는 방법, XML 데이터를 데이터베이스에서 검색하는 방법 및 **SQLXML** Java 데이터 형식으로 XML 데이터를 구문 분석하는 방법을 보여 줍니다.|  
-|[공간 데이터 형식 샘플](../../connect/jdbc/spatial-data-types-sample.md)|Microsoft JDBC Driver에서 정의한 **geometry** 및 **Geography** Java 형식으로 공간 데이터 형식 ' geometry ' 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 ' Geography '를 사용 하 여 데이터를 저장 하 고 검색 하는 방법을 설명 합니다.|
+|[공간 데이터 형식 샘플](../../connect/jdbc/spatial-data-types-sample.md)|Microsoft JDBC 드라이버에서 정의된 **Geometry** 및 **Geography** Java 형식이 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 공간 데이터 형식 ‘Geometry’ 및 ‘Geography’를 사용하여 데이터를 저장하고 검색하는 방법을 설명합니다.|
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [샘플 JDBC 드라이버 애플리케이션](../../connect/jdbc/sample-jdbc-driver-applications.md)  

@@ -7,10 +7,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 11/06/2018
 ms.openlocfilehash: 5db33f22ffd5143d88c5654c753f1b08811c0c8a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68262900"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Reporting Services 설치 마이그레이션(기본 모드)
@@ -201,7 +201,7 @@ SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업
 
     * 사용자 지정 보안 확장 프로그램은 [IAuthenticationExtension2](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.iauthenticationextension2.aspx) 인터페이스를 사용하여 다시 작성해야 합니다.
   
-    * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 대한 사용자 지정 렌더링 확장 프로그램은 ROM(렌더링 개체 모델)을 사용하여 다시 작성해야 합니다.  
+    * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]용 사용자 지정 렌더링 확장 프로그램은 ROM(렌더링 개체 모델)을 사용하여 다시 작성해야 합니다.  
   
     * HTML 3.2 및 HTML OWC 렌더러는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이상 버전에서 지원되지 않습니다.  
   

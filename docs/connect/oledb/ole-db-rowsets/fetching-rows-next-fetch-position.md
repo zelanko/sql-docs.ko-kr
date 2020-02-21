@@ -1,5 +1,5 @@
 ---
-title: 다음 인출 위치 | Microsoft Docs
+title: 다음 페치 위치 | Microsoft Docs
 description: 행 인출 - 다음 인출 위치
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,13 +16,13 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2ea743770323505c611210c0bb3acd0e93c719cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994193"
 ---
-# <a name="fetching-rows---next-fetch-position"></a>행 인출 - 다음 인출 위치
+# <a name="fetching-rows---next-fetch-position"></a>행 페치 - 다음 페치 위치
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
