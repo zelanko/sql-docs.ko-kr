@@ -1,5 +1,5 @@
 ---
-title: 보고서 업그레이드(SSRS) | Microsoft Docs
+title: 보고서 업그레이드 | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c4d5684850dff9157a56435547e48b5446dd929c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bae0cffce8cfacd56feaab289d75b7c70d509ce7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69494548"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082276"
 ---
 # <a name="upgrade-reports-ssrs"></a>보고서 업그레이드(SSRS)
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 69cc078dc5ce605f1d7bf55d872c2a4629eb3301
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5bcfeabda2eda62a6a4118ac5542e83a4b0afd66
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66403260"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971311"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>기본 모드 보고서 서버 구독 만들기 및 관리
   표준 구독은 전자 메일을 통해 또는 공유 폴더로 보고서를 배달하려는 개인이 만든 구독입니다. 이 항목에서는 개별 사용자가 만들고 관리하는 표준 구독에 대한 정보를 제공합니다. 데이터 기반 구독의 경우 다른 요구 사항과 단계가 필요하며 이에 대해서는 별도의 항목에 설명되어 있습니다. 자세한 내용은 [데이터 기반 구독 만들기, 수정 및 삭제](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)를 참조하세요.  
@@ -46,7 +46,7 @@ ms.locfileid: "66403260"
   
  이 문서에서는 데이터 기반 구독을 만드는 방법에 대해 설명하지 않습니다. 데이터 기반 구독을 만드는 방법에 대한 지침은 [데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)를 참조하세요.  
   
-###  <a name="bkmk_create_fileshare_subscription"></a> 파일 공유 구독을 만들려면  
+## <a name="bkmk_create_fileshare_subscription"></a> 파일 공유 구독을 만들려면  
   
 1. [보고서 서버의 웹 포털(SSRS 기본 모드)](../../reporting-services/web-portal-ssrs-native-mode.md)을 찾습니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66403260"
   
 보고서는 정적 파일로 배달됩니다. 보고서에 대화형 기능(예: 추가 행과 열에 대한 링크)이 있는 경우 해당 기능은 사용할 수 없습니다.  
   
-###  <a name="bkmk_create_email_subscription"></a> 메일 구독을 만들려면  
+##  <a name="bkmk_create_email_subscription"></a> 메일 구독을 만들려면  
   
 1. [보고서 서버의 웹 포털(SSRS 기본 모드)](../../reporting-services/web-portal-ssrs-native-mode.md)을 찾습니다.  
   
@@ -170,4 +170,3 @@ ms.locfileid: "66403260"
  [구독 및 배달&#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
  [보고서 서버의 웹 포털(SSRS 기본 모드)](../../reporting-services/web-portal-ssrs-native-mode.md)  
  [내 구독 사용&#40;기본 모드 보고서 서버&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
-  

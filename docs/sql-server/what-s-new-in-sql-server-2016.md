@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 103f74b4a1be1ee2111f8ed3e983f8a468f8db2c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: dba29bb00f0b8d54edd8c8c98d4134cf794fe2fd
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68893031"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478500"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016의 새로운 기능
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -52,7 +52,6 @@ ms.locfileid: "68893031"
     - **동적 데이터 마스킹:** 테이블 정의에 지정된 경우, 마스킹된 데이터가 대부분의 사용자로부터 숨겨지고 UNMASK 권한이 있는 사용자만 완전한 데이터를 볼 수 있습니다.
     - **행 수준 보안:** 데이터 액세스를 데이터베이스 엔진 수준에서 제한할 수 있으므로 사용자는 자신과 관련된 항목만 볼 수 있습니다. 
 
-[데이터베이스 엔진](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)을 참조하세요.
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SSAS(SQL Server 2016 Analysis Services)
 SQL Server 2016 Analysis Services는 **1200 호환성 수준**을 기준으로 테이블 형식 모델 데이터베이스에 대한 향상된 성능, 제작, 데이터베이스 관리, 필터링, 프로세싱 및 그 외 많은 기능을 제공합니다.
 - **[SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** 는 통계 분석에 사용되는 R 프로그래밍 언어를 SQL Server에 통합합니다. 

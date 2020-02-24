@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: d94e90e67814ec2dd1541abdbd52b04152681d84
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9b953861799e380e4b4221a2cd7fe80badf83ffe
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75776401"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507543"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>빠른 시작: Red Hat에 SQL Server 설치 및 데이터베이스 만들기
 
@@ -117,6 +117,11 @@ RHEL에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실행
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ## <a id="install"></a>SQL Server 설치
+
+> [!NOTE]
+> SQL Server 2019에 대한 다음 명령은 RHEL 8 리포지토리를 가리킵니다. RHEL 8에는 SQL Server에 필요한 python2이 사전 설치되어 있지 않습니다. 자세한 내용은 python2 설치 및 기본 인터프리터로 구성하는 방법에 대한 블로그(https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta )를 참조하세요.
+>
+> RHEL 7을 사용 중인 경우 아래 경로를 `/rhel/8` 대신 `/rhel/7`(으)로 변경합니다.
 
 RHEL에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실행하여 **mssql-server** 패키지를 설치합니다.
 

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0b5cbbd49d331f838bd0047f259f8b5addf8de84
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 2879665878826a4469cd2652c305f079d7cb5c14
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74821966"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507739"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>가용성 그룹 마법사 사용(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 **의** 새 가용성 그룹 마법사[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]를 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 Always On 가용성 그룹을 만들고 구성하는 방법에 대해 설명합니다. *가용성 그룹* 은 단일 단위로 장애 조치(Failover)될 사용자 데이터베이스 집합과 장애 조치(Failover)를 지원하는 장애 조치(Failover) 파트너 집합( *가용성 복제본*이라고 함)을 정의합니다.  
+  이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]의 **새 가용성 그룹 마법사**를 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 Always On 가용성 그룹을 만들고 구성하는 방법에 대해 설명합니다. *가용성 그룹* 은 단일 단위로 장애 조치(Failover)될 사용자 데이터베이스 집합과 장애 조치(Failover)를 지원하는 장애 조치(Failover) 파트너 집합( *가용성 복제본*이라고 함)을 정의합니다.  
   
 > [!NOTE]  
 >  가용성 그룹에 대한 개요를 보려면 [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "74821966"
   
 4.  이 마법사를 처음 실행하는 경우 **소개** 페이지가 나타납니다. 다음부터 이 페이지를 건너뛰려면 **이 페이지를 다시 표시 안 함**을 클릭합니다. 이 페이지를 읽은 후 **다음**을 클릭합니다.  
   
-5.  **가용성 그룹 옵션 지정** 페이지의 **가용성 그룹 이름** 필드에서 새 가용성 그룹의 이름을 입력합니다. 이 이름은 클러스터와 도메인 전체에서 고유하고 유효한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 식별자여야 합니다. 가용성 그룹 이름의 최대 길이는 128자입니다. e
+5.  **가용성 그룹 옵션 지정** 페이지의 **가용성 그룹 이름** 필드에서 새 가용성 그룹의 이름을 입력합니다. 이 이름은 클러스터와 도메인 전체에서 고유하고 유효한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 식별자여야 합니다. 가용성 그룹 이름의 최대 길이는 128자입니다.
 
 6. 다음으로 클러스터 유형을 지정합니다. 가능한 클러스터 유형은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전 및 운영 체제에 따라 다릅니다. **WSFC**, **외부** 또는 **없음** 중 하나를 선택합니다. 자세한 내용은 [가용성 그룹 이름 지정 페이지](specify-availability-group-name-page.md)를 참조하세요.
  
@@ -92,7 +92,7 @@ ms.locfileid: "74821966"
   
      데이터베이스에 데이터베이스 마스터 키가 들어 있는 경우 데이터베이스 마스터 키에 대한 암호를 **암호** 열에 입력합니다.  
   
-7.  **복제본 선택** 페이지에서 새 가용성 그룹에 대해 하나 이상의 복제본을 지정하고 구성합니다. 이 페이지에는 네 개의 탭이 있습니다. 다음 표에서는 이러한 탭을 보여 줍니다. 자세한 내용은 [복제본 지정 페이지&#40;새 가용성 그룹 마법사: 복제본 추가 마법사&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md) 항목을 참조하세요.  
+7.  **복제본 선택** 페이지에서 새 가용성 그룹에 대해 하나 이상의 복제본을 지정하고 구성합니다. 이 페이지에는 네 개의 탭이 있습니다. 다음 표에서는 이러한 탭을 보여 줍니다. 자세한 내용은 [복제본 페이지 지정&#40;새 가용성 그룹 마법사: 복제본 추가 마법사&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md) 항목을 참조하세요.  
   
     |탭|간략한 설명|  
     |---------|-----------------------|  
@@ -181,7 +181,7 @@ ms.locfileid: "74821966"
   
 -   **블로그:**  
   
-     [Always On - HADRON 학습 시리즈: HADRON 지원 데이터베이스에 대한 작업자 풀 사용](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [Always On - HADRON 학습 시리즈: HADRON 사용 데이터베이스의 작업자 풀 사용](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
      [SQL Server Always On 팀 블로그: 공식 SQL Server Always On 팀 블로그](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
@@ -191,7 +191,7 @@ ms.locfileid: "74821966"
   
      [Microsoft SQL Server 코드 이름 "Denali" Always On 시리즈, 1부: 차세대 고가용성 솔루션 소개](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server 코드 이름 "Denali" Always On 시리즈, 2부: Always On을 사용하여 중요 업무용 고가용성 솔루션을 구축](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server 코드 이름 "Denali" Always On 시리즈, 2부: Always On을 사용하여 중요 업무용 고가용성 솔루션 빌드](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **백서:**  
   

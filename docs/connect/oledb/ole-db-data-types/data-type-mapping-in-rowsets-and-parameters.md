@@ -2,7 +2,7 @@
 title: 행 집합 및 매개 변수의 데이터 형식 매핑 | Microsoft Docs
 description: 행 집합 및 매개 변수의 데이터 형식 매핑
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - OLE DB, data types
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 529c3189676ce704d10a90902bd44f7f2c8e8f6c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e496790c2c6f6798edcec1f9ee63c99aa98e9b00
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67995209"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558387"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>행 집합 및 매개 변수의 데이터 형식 매핑
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "67995209"
 |**bit**|DBTYPE_BOOL|  
 |**char**|DBTYPE_STR|  
 |**datetime**|DBTYPE_DBTIMESTAMP|  
-|**datetime2**|DBTYPE_DBTIME2|  
+|**datetime2**|DBTYPE_DBTIMESTAMP|  
 |**decimal**|DBTYPE_NUMERIC|  
 |**float**|DBTYPE_R8|  
 |**image**|DBTYPE_BYTES|  

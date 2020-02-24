@@ -10,12 +10,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 87537979ab3459727f07aec460118a74e15561f9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 92f289ec22ca35834420dc7ee84d667c55e29a19
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "70874818"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478493"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017의 새로운 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -54,8 +54,6 @@ SQL Server 2017은 새로운 많은 데이터베이스 엔진 기능과 기능 �
 - **메모리 최적화 개체의 기능이 향상**되어, sp_spaceused가 제공되고, 메모리 최적화 테이블에 대한 8개 인덱스 제한이 제거되었으며, 메모리 최적화 테이블과 고유하게 컴파일된 T-SQL 모듈에 대한 sp_rename과 고유하게 컴파일된 T-SQL 모듈에 대한 CASE 및 TOP (N) WITH TIES가 함께 제공됩니다. 메모리 액세스에 최적화된 파일 그룹 파일을 이제 Azure Storage에서 저장, 백업 및 복원할 수 있습니다. (CTP 1.0)
 - **DATABASE SCOPED CREDENTIAL**는 보안 가능하고 보조적인 CONTROL, ALTER, REFERENCES, TAKE OWNERSHIP 및 VIEW DEFINITION 사용 권한의 새 클래스입니다. 이제 ADMINISTER DATABASE BULK OPERATIONS가 sys.fn_builtin_permissions에 표시됩니다. (CTP 1.0)
 - 데이터베이스 **COMPATIBILITY_LEVEL 140**이 추가되었습니다. (CTP 1.0).  
-
-자세한 내용은 [What's new in SQL Server 2017 Database Engine](~/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md)(SQL Server 2017 데이터베이스 엔진의 새로운 기능)을 참조하세요.
 
 ## <a name="sql-server-2017-integration-services-ssis"></a>SQL Server 2017 Integration Services(SSIS)
 - SSIS의 새 **Scale Out** 기능에서 다음과 같은 새로운 기능과 변경된 기능을 제공합니다. 자세한 내용은 [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)(SQL Server 2017에서 Integration Services의 새로운 기능)을 참조하세요. (RC1)

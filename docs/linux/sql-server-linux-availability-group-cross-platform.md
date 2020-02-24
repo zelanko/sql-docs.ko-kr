@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: f6758760d8ea73d9ec0ac95a0e824a0fd46a6dbb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 651467463e0563c9da00e23115ffb7bc4f151d23
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68045191"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77479678"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Windows 및 Linux에서 SQL Server Always On 가용성 그룹 구성(플랫폼 간)
 
@@ -55,7 +55,7 @@ AG를 만드는 단계는 읽기 확장 워크로드를 위한 AG를 만드는 �
 
    **혼합 모드 인증**
 
-   자세한 내용은 [서버 인증 모드 변경](../database-engine/configure-windows/change-server-authentication-mode.md#SSMSProcedure)을 참조하세요.
+   자세한 내용은 [서버 인증 모드 변경](../database-engine/configure-windows/change-server-authentication-mode.md#change-authentication-mode-with-ssms)을 참조하세요.
 
 1. Linux에서 SQL Server 2017을 설치합니다. 자세한 내용은 [SQL Server 설치](sql-server-linux-setup.md)를 참조하세요. mssql-conf를 통해 `hadr`을 사용하도록 설정합니다.
 

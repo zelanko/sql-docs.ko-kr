@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c46cf3fbc2138350c50e3f520871b0b6a8efde7a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 34599160e206d89eaee04074ddbaee2bac7c5f89
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74317034"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173565"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 사용한 데이터 지속성
 
@@ -30,7 +30,7 @@ SQL Server 빅 데이터 클러스터는 [스토리지 클래스](https://kubern
 
 - 빅 데이터 클러스터를 성공적으로 배포하려면 사용 가능한 영구적 볼륨을 필요한 만큼 확보해야 합니다. AKS(Azure Kubernetes Service) 클러스터에 배포하는 경우 기본 제공 스토리지 클래스(`default` 또는 `managed-premium`)를 사용하는 경우 이 클래스는 영구적 볼륨에 대한 동적 프로비저닝을 지원합니다. 따라서 영구적 볼륨을 미리 만들 필요가 없지만 AKS 클러스터에서 사용할 수 있는 작업자 노드가 배포에 필요한 영구적 볼륨 수 만큼의 디스크를 연결할 수 있는지 확인해야 합니다. 작업자 노드에 지정된 [VM 크기](https://docs.microsoft.com/azure/virtual-machines/linux/sizes)에 따라 각 노드에서 특정 개수의 디스크를 연결할 수 있습니다. 기본 크기 클러스터(고가용성 없음)의 경우 최소 24개의 디스크가 필요합니다. 고가용성을 설정하거나 풀을 확장하는 경우 확장하는 리소스에 관계 없이 각 추가 복제본당 두 개 이상의 영구적 볼륨이 있어야 합니다.
 
-- 구성에서 제공하려는 스토리지 클래스의 스토리지 프로비저닝 프로그램이 동적 프로비저닝을 지원하지 않는 경우 영구적 볼륨을 미리 만들어야 합니다. 예를 들어 `local-storage` 프로비저닝 프로그램은 동적 프로비저닝을 지원하지 않습니다. `kubeadm`을 사용하여 배포된 Kubernetes 클러스터에서 진행하는 방법에 대한 지침은 이 [샘플 스크립트](https://github.com/microsoft/sql-server-samples/tree/cu1-bdc/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu)를 참조하세요.
+- 구성에서 제공하려는 스토리지 클래스의 스토리지 프로비저닝 프로그램이 동적 프로비저닝을 지원하지 않는 경우 영구적 볼륨을 미리 만들어야 합니다. 예를 들어 `local-storage` 프로비저닝 프로그램은 동적 프로비저닝을 지원하지 않습니다. `kubeadm`을 사용하여 배포된 Kubernetes 클러스터에서 진행하는 방법에 대한 지침은 이 [샘플 스크립트](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu)를 참조하세요.
 
 - 빅 데이터 클러스터를 배포할 때 클러스터의 모든 구성 요소에서 동일한 스토리지 클래스를 사용하도록 구성할 수 있습니다. 하지만 프로덕션 배포의 모범 사례에 따라, 다양한 구성 요소에는 크기 또는 처리량의 측면에서 다양한 워크로드를 수용할 수 있는 다양한 스토리지 구성이 필요합니다. 각 SQL Server 마스터 인스턴스, 데이터 세트 및 스토리지 풀의 컨트롤러에 지정된 기본 스토리지 구성을 덮어쓸 수 있습니다. 이 문서에서는 이 작업을 수행하는 방법을 보여 줍니다.
 

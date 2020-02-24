@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a20b058d187f7c1ddade6b609b0002f7bbcbdb60
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5f1a134e6792eedca184c74b7973d4cb267b104b
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910146"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074461"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET(Transact-SQL)
 
@@ -75,13 +75,23 @@ OPENROWSET
 
 ## <a name="arguments"></a>인수
 
-‘*provider_name*’ 레지스트리에 지정된 OLE DB 공급자의 이름(또는 PROGID)을 나타내는 문자열입니다. *provider_name*에는 기본값이 없습니다.
+### <a name="provider_name"></a>'*provider_name*'
+레지스트리에 지정된 OLE DB 공급자의 이름(또는 PROGID)을 나타내는 문자열입니다. *provider_name*에는 기본값이 없습니다.
 
 ‘*datasource*’ 특정 OLE DB 데이터 원본에 해당하는 문자열 상수입니다. *datasource*는 공급자의 IDBProperties 인터페이스에 전달되어 공급자를 초기화하는 DBPROP_INIT_DATASOURCE 속성입니다. 일반적으로 이 문자열에는 데이터베이스 파일의 이름, 데이터베이스 서버의 이름 또는 공급자가 데이터베이스의 위치를 알 수 있는 이름이 포함됩니다.
 
 ‘*user_id*’ 지정한 OLE DB 공급자에게 전달되는 사용자 이름을 나타내는 문자열 상수입니다. *user_id*는 연결의 보안 컨텍스트를 지정하고 DBPROP_AUTH_USERID 속성으로 전달되어 공급자를 초기화합니다. *user_id*는 Microsoft Windows 로그인 이름일 수 없습니다.
 
 ‘*password*’ OLE DB 공급자에게 전달되는 사용자 암호를 나타내는 문자열 상수입니다. *password*는 공급자를 초기화할 때 DBPROP_AUTH_PASSWORD 속성으로 전달됩니다. *password*는 Microsoft Windows 암호일 수 없습니다.
+
+```sql
+SELECT a.*
+   FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
+                   'C:\SAMPLES\Northwind.mdb';
+                   'admin';
+                   'password',
+                   Customers) AS a;
+```
 
 ‘*provider_string*’ DBPROP_INIT_PROVIDERSTRING 속성으로 전달되어 OLE DB 공급자를 초기화하는 공급자별 연결 문자열입니다. *provider_string*은 일반적으로 공급자를 초기화하는 데 필요한 모든 연결 정보를 캡슐화합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 인식하는 키워드 목록은 [초기화 및 권한 부여 속성](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)을 참조하세요.
 
@@ -91,9 +101,23 @@ OPENROWSET
 
 *object* 작업할 개체를 고유하게 식별하는 개체 이름입니다.
 
+```sql
+SELECT a.*
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
+                 AdventureWorks2012.HumanResources.Department) AS a;
+```
+
 ‘*query*’ 공급자에게 전송되어 공급자가 실행하는 문자열 상수입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 로컬 인스턴스는 이 쿼리를 처리하지 않지만 공급자에 의해 반환되는 쿼리 결과(통과 쿼리)는 처리합니다. 통과 쿼리는 테이블 형식의 데이터를 테이블 이름을 통해서는 사용할 수 없고 명령 언어를 통해서만 사용할 수 있는 공급자에 대해 사용할 경우 유용합니다. 쿼리 공급자가 OLE DB 명령 개체와 해당 필수 인터페이스를 지원하는 경우에는 원격 서버에서 통과 쿼리를 사용할 수 있습니다. 자세한 내용은 [SQL Server Native Client&#40;OLE DB&#41; 참조](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)를 참조하세요.
 
-BULK OPENROWSET의 BULK 행 집합 공급자를 사용하여 파일에서 데이터를 읽습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 OPENROWSET은 데이터를 대상 테이블에 로드하지 않고 데이터 파일에서 읽을 수 있습니다. 이를 통해 간단한 SELECT 문과 함께 OPENROWSET을 사용할 수 있습니다.
+```sql
+SELECT a.*
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
+     'SELECT TOP 10 GroupName, Name
+     FROM AdventureWorks2012.HumanResources.Department') AS a;
+```
+
+### <a name="bulk"></a>BULK
+OPENROWSET의 BULK 행 집합 공급자를 사용하여 파일에서 데이터를 읽습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 OPENROWSET은 데이터를 대상 테이블에 로드하지 않고 데이터 파일에서 읽을 수 있습니다. 이를 통해 간단한 SELECT 문과 함께 OPENROWSET을 사용할 수 있습니다.
 
 > [!IMPORTANT]
 > Azure SQL Database는 Azure Blob Storage에서 읽기만 지원합니다.
@@ -181,10 +205,23 @@ SINGLE_CLOB
 
 SINGLE_NCLOB *data_file*을 UNICODE로 읽은 후 현재 데이터베이스의 데이터 정렬을 사용하여 내용을 **nvarchar(max)** 형식의 단일 행 및 단일 열로 된 행 집합으로 반환합니다.
 
+```sql
+SELECT *
+   FROM OPENROWSET(BULK N'C:\Text1.txt', SINGLE_NCLOB) AS Document;
+```
+
 ### <a name="input-file-format-options"></a>입력 파일 형식 옵션
 
 FORMAT **=** ‘CSV’ **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 [RFC 4180](https://tools.ietf.org/html/rfc4180) 표준을 준수하는 쉼표로 구분된 값 파일을 지정합니다.
+
+```sql
+SELECT *
+FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
+    FORMATFILE = N'D:\XChange\test-csv.fmt',
+    FIRSTROW=2,
+    FORMAT='CSV') AS cars;
+```
 
 FORMATFILE =’*format_file_path*’ 서식 파일의 전체 경로를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음과 같은 두 가지 유형의 형식 파일을 지원합니다. XML 및 비 XML.
 

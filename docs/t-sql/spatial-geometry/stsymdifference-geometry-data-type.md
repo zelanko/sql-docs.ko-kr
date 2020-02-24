@@ -1,7 +1,7 @@
 ---
 title: STSymDifference(geometry Data Type) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 02/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1d4cf35a-ca89-4aa4-ae30-e61a0ff18b53
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ea26c364621910d6dd5148a5753bd6709d3e0f07
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 2845ecc6189b113bc31ae85b869985cf2ddfdb16
+ms.sourcegitcommit: cf8db6330be0d89bbec362e4c7e187b5461026f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68066284"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77051683"
 ---
 # <a name="stsymdifference-geometry-data-type"></a>STSymDifference(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68066284"
   
 ## <a name="arguments"></a>인수  
  *other_geometry*  
- **를 호출할 인스턴스 외의 다른** geometry`STSymDistance()` 인스턴스입니다.  
+ `STSymDifference()`를 호출할 인스턴스 외의 다른 **geometry** 인스턴스입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  
