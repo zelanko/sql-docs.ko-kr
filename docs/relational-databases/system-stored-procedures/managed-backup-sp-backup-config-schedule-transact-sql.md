@@ -1,7 +1,7 @@
 ---
 title: managed_backup. sp_backup_config_schedule (Transact-sql) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 02/20/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - managed_backup.sp_backup_config_schedule
 - sp_backup_config_schedule
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 52df69439cecad5fddf3d38b8852a1ce86cc4dbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: e7bb477901dee22c70bb47cd0eaf7da5eb163b7f
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67942078"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507538"
 ---
 # <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup. sp_backup_config_schedule (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -67,10 +67,10 @@ EXEC managed_backup.sp_backup_config_schedule
  백업 시간 기간의 기간입니다. 및 @backup_begin_time @backup_duration에 정의 된 기간 동안에는 백업이 완료 될 수도 없습니다. 이 기간에 시작 되었지만 기간을 초과 하는 백업 작업은 취소 되지 않습니다.  
   
  @log_backup_freq  
- 이는 트랜잭션 로그 백업의 빈도를 결정 합니다. 이러한 백업은 데이터베이스 백업에 지정 된 일정 대신 정기적으로 수행 됩니다. @log_backup_freq는 분 또는 시간 일 수 있으며 0은 유효 하며 로그 백업이 없음을 나타냅니다. 로그 백업을 사용 하지 않도록 설정 하는 것은 단순 복구 모델을 사용 하는 데이터베이스에만 적합 합니다.  
+ 이는 트랜잭션 로그 백업의 빈도를 결정 합니다. 이러한 백업은 데이터베이스 백업에 지정 된 일정 대신 정기적으로 수행 됩니다. @log_backup_freq`0:00` 는 분 또는 시간 일 수 있으며 로그 백업이 없음을 나타내는 유효 합니다. 로그 백업을 사용 하지 않도록 설정 하는 것은 단순 복구 모델을 사용 하는 데이터베이스에만 적합 합니다.  
   
 > [!NOTE]  
->  복구 모델이 단순에서 전체로 변경 되는 경우 log_backup_freq 0에서 0이 아닌 값으로 다시 구성 해야 합니다.  
+>  복구 모델이 단순에서 전체로 변경 되는 경우의 `0:00` log_backup_freq을 0이 아닌 값으로 다시 구성 해야 합니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

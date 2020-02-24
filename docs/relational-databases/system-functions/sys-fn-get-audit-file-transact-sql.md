@@ -1,7 +1,7 @@
 ---
 title: sys. fn_get_audit_file (Transact-sql) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/16/2017
+ms.date: 02/19/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,15 +21,15 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 25d4aa1e82097dcc4027809c7292587a20862d75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5d0702848a6fce3255e9bb54597dc20b518b50c7
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73981869"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507523"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 서버 감사에 의해 생성된 감사 파일로부터 정보를 반환합니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요.  
@@ -58,7 +58,7 @@ fn_get_audit_file ( file_pattern,
   
     -   **경로> \ LoginsAudit_ {GUID} _00_29384. sqlaudit-특정 감사 파일을 수집 합니다. \<**  
   
- - **Azure SQL Database 또는 Azure SQL Data Warehouse**:
+ - **Azure SQL Database**:
  
     이 인수는 blob URL (저장소 끝점 및 컨테이너 포함)을 지정 하는 데 사용 됩니다. 별표 와일드 카드를 지원 하지 않는 경우 전체 blob 이름 대신 부분 파일 (blob) 이름 접두사를 사용 하 여이 접두사로 시작 하는 여러 파일 (blob)을 수집할 수 있습니다. 다음은 그 예입니다.
  
