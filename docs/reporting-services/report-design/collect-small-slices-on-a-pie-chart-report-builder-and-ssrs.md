@@ -1,5 +1,5 @@
 ---
-title: 원형 차트에서 작은 조각 수집(보고서 작성기 및 SSRS) | Microsoft Docs
+title: 원형 차트에서 작은 조각 수집(보고서 작성기) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8718570c6a370368eaf227280245607b182eba25
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: dfcf8ddd7b77132a1658c2ea1d55f7a220c336d0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581624"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082251"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>원형 차트에서 작은 조각 수집(보고서 작성기 및 SSRS)
 너무 많은 조각이 있는 원형 차트는 복잡하게 보일 수 있습니다. [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지가 매겨진 보고서에서 원형 차트의 많은 작은 조각을 하나의 단일 조각으로 수집하는 방법을 알아봅니다.

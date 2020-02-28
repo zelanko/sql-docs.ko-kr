@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2020
+ms.date: 02/07/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -26,12 +26,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5acb6181d1878d7d657c8115f78e293427a037f0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: fc4b442fc6d6afb7f5e913293733296cdaa4c2b9
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75952444"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074425"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
 
@@ -131,7 +131,7 @@ CURRENT **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이
 
 현재 사용 중인 데이터베이스를 변경하도록 지정합니다.
 
-MODIFY NAME **=** _new_database_name_ 데이터베이스의 이름을 지정된 이름 *new_database_name*으로 바꿉니다.
+MODIFY NAME **=**_new_database_name_ 데이터베이스의 이름을 지정된 이름 *new_database_name*으로 바꿉니다.
 
 COLLATE *collation_name* 데이터베이스에 대한 데이터 정렬을 지정합니다. *collation_name*으로는 Windows 데이터 정렬 이름 또는 SQL 데이터 정렬 이름을 사용할 수 있습니다. 이를 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 데이터 정렬이 지정됩니다.
 
@@ -142,7 +142,7 @@ COLLATE *collation_name* 데이터베이스에 대한 데이터 정렬을 지정
 
 Windows 데이터 정렬 이름 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [COLLATE](~/t-sql/statements/collations.md)를 참조하세요.
 
-**\<delayed_durability_option> ::=** 
+**\<delayed_durability_option> ::=**
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상
 
 자세한 내용은 [ALTER DATABASE SET 옵션](../../t-sql/statements/alter-database-transact-sql-set-options.md) 및 [트랜잭션 내구성 제어](../../relational-databases/logs/control-transaction-durability.md)를 참조하세요.
@@ -311,7 +311,7 @@ ALTER DATABASE { database_name | CURRENT }
 {
 
   MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 ... 1024 ... 4096 GB }
-  | EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'}
+  | EDITION = { 'Basic' | 'Standard' | 'Premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'}
   | SERVICE_OBJECTIVE =
        { <service-objective>
        | { ELASTIC_POOL (name = <elastic_pool_name>) }
@@ -327,7 +327,7 @@ ALTER DATABASE { database_name | CURRENT }
        }
    }
 
-<service-objective> ::={ 'basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
+<service-objective> ::={ 'Basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
        | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15'
       | 'GP_Gen4_1' | 'GP_Gen4_2' | 'GP_Gen4_3' | 'GP_Gen4_4' | 'GP_Gen4_5' | 'GP_Gen4_6'
       | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24'
@@ -374,20 +374,20 @@ ALTER DATABASE { database_name | CURRENT }
 
 CURRENT 현재 사용 중인 데이터베이스를 변경하도록 지정합니다.
 
-MODIFY NAME **=** _new_database_name_ 데이터베이스의 이름을 지정된 이름 *new_database_name*으로 바꿉니다. 다음 예에서는 `db1` 데이터베이스의 이름을 `db2`로 변경합니다.
+MODIFY NAME **=**_new_database_name_ 데이터베이스의 이름을 지정된 이름 *new_database_name*으로 바꿉니다. 다음 예에서는 `db1` 데이터베이스의 이름을 `db2`로 변경합니다.
 
 ```sql
 ALTER DATABASE db1
     MODIFY Name = db2 ;
 ```
 
-MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale']) 데이터베이스의 서비스 계층을 변경합니다.
+MODIFY (EDITION **=** ['Basic' | 'Standard' | 'Premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale']) 데이터베이스의 서비스 계층을 변경합니다.
 
-다음 예제에서는 버전을 `premium`으로 변경합니다.
+다음 예제에서는 버전을 `Premium`으로 변경합니다.
 
 ```sql
 ALTER DATABASE current
-    MODIFY (EDITION = 'premium');
+    MODIFY (EDITION = 'Premium');
 ```
 
 > [!IMPORTANT]
@@ -660,9 +660,9 @@ ALTER DATABASE db1 FAILOVER
 ALTER DATABASE db1 FORCE_FAILOVER_ALLOW_DATA_LOSS
 ```
 
-### <a name="g-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>G. 단일 데이터베이스를 서비스 계층 S0(표준 버전, 성능 수준 0)으로 업데이트
+### <a name="g-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>G. 단일 데이터베이스를 서비스 계층 S0(Standard Edition, 성능 수준 0)으로 업데이트
 
-성능 수준 S0 및 최대 크기 250GB인 단일 데이터베이스를 표준 버전(서비스 계층)으로 업데이트합니다.
+성능 수준 S0 및 최대 크기 250GB인 단일 데이터베이스를 Standard Edition(서비스 계층)으로 업데이트합니다.
 
 ```sql
 ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJECTIVE = 'S0');
@@ -1075,7 +1075,7 @@ WHERE type = 'CONTROL';
 
 TDE를 구현하는 모든 단계를 보여주는 포괄적인 예제는 [TDE(투명한 데이터 암호화)](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하세요.
 
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## <a name="examples-sspdw"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 ### <a name="a-altering-the-autogrow-setting"></a>A. AUTOGROW 설정 변경
 

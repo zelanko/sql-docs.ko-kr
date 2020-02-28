@@ -1,5 +1,5 @@
 ---
-title: 식 예(보고서 작성기 및 SSRS) | Microsoft Docs
+title: 식 예(보고서 작성기) | Microsoft Docs
 ms.date: 04/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3becfd5ede4ddd1ca7bfd7d12a6c88db225ced3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 12933c259fa02e77a76b8c31edf61db916dcde49
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68661349"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080343"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>식 예(보고서 작성기 및 SSRS)
 식은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 내용과 보고서 모양을 제어하는 데 자주 사용됩니다. 식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 작성되며 기본 제공 함수, 사용자 지정 코드, 보고서와 그룹 변수 및 사용자 정의 변수를 사용할 수 있습니다. 식은 등호(=)로 시작됩니다. 식 편집기와 포함할 수 있는 참조 형식에 대한 자세한 내용은 [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) 및 [식 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)를 참조하세요.  
@@ -208,7 +208,7 @@ ms.locfileid: "68661349"
   
      입력란에 날짜 또는 숫자만 있는 경우 입력란 내에서 **Format** 함수 대신 서식을 적용하려면 입력란의 Format 속성을 사용해야 합니다.  
   
--   **Right**, **Len**및 **InStr** 함수는 하위 문자열을 반환하는 데 유용합니다. 예를 들어 *DOMAIN*\\*username* 에서 사용자 이름만 잘라서 반환할 수 있습니다. 다음 식에서는\\User *라는 매개 변수에서 백슬래시(* ) 문자의 오른쪽에 있는 문자열 부분을 반환합니다.  
+-   **Right**, **Len**및 **InStr** 함수는 하위 문자열을 반환하는 데 유용합니다. 예를 들어 *DOMAIN*\\*username* 에서 사용자 이름만 잘라서 반환할 수 있습니다. 다음 식에서는\\User *라는 매개 변수에서 백슬래시(*) 문자의 오른쪽에 있는 문자열 부분을 반환합니다.  
   
     ```  
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
@@ -233,7 +233,7 @@ ms.locfileid: "68661349"
   
     ```  
   
--   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions>의 **Regex** 함수는 전화번호 형식을 지정하는 등 기존 문자열의 형식을 변경하는 데 유용합니다. 다음 식에서는 **Replace** 함수를 사용하여 필드의 10자리 전화번호 서식을 "*nnn*-*nnn*-*nnnn*"에서 "(*nnn*) *nnn*-*nnnn*"으로 변경합니다.  
+-   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions>의 **Regex** 함수는 전화번호 형식을 지정하는 등 기존 문자열의 형식을 변경하는 데 유용합니다. 다음 식에서는 **Replace** 함수를 사용하여 필드의 10자리 전화 번호 서식을 "*nnn*-*nnn*-*nnnn*"에서 "(*nnn*) *nnn*-*nnnn*"으로 변경합니다.  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -252,7 +252,7 @@ ms.locfileid: "68661349"
   
 ### <a name="lookupset"></a>LookupSet  
   
--   키 필드를 지정하면 **LookupSet** 함수를 사용하여 일 대 다 관계가 있는 데이터 세트에서 값 집합을 검색할 수 있습니다. 예를 들어 한 사람이 전화번호를 여러 개 가질 수 있습니다. 다음 예에서는 PhoneList 데이터 세트의 각 행에 개인 식별자와 전화번호가 포함되어 있다고 가정합니다. **LookupSet** 은 값 배열을 반환합니다. 다음 식은 반환 값을 단일 문자열로 결합하고 ContactID로 지정된 사람의 전화번호 목록을 표시합니다.  
+-   키 필드를 지정하면 **LookupSet** 함수를 사용하여 일 대 다 관계가 있는 데이터 세트에서 값 집합을 검색할 수 있습니다. 예를 들어 한 사람이 전화 번호를 여러 개 가질 수 있습니다. 다음 예에서는 PhoneList 데이터 세트의 각 행에 개인 식별자와 전화 번호가 포함되어 있다고 가정합니다. **LookupSet** 은 값 배열을 반환합니다. 다음 식은 반환 값을 단일 문자열로 결합하고 ContactID로 지정된 사람의 전화 번호 목록을 표시합니다.  
   
     ```  
     =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
@@ -303,7 +303,7 @@ ms.locfileid: "68661349"
     =IIF(DateDiff("d",Fields!ImportantDate.Value, Now())>7,"Red","Blue")  
     ```  
   
--   `PhoneNumber` 필드의 값을 테스트하여 **null** (**의** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])이면 "No Value"를 반환하고, 그렇지 않으면 전화번호 값을 반환합니다. 이 식은 보고서 항목에 있는 입력란의 값을 제어하는 데 사용할 수 있습니다.  
+-   `PhoneNumber` 필드의 값을 테스트하여 **null** (**의** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])이면 "No Value"를 반환하고, 그렇지 않으면 전화 번호 값을 반환합니다. 이 식은 보고서 항목에 있는 입력란의 값을 제어하는 데 사용할 수 있습니다.  
   
     ```  
     =IIF(Fields!PhoneNumber.Value Is Nothing,"No Value",Fields!PhoneNumber.Value)  

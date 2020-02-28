@@ -9,12 +9,12 @@ ms.technology: tools
 ms.topic: conceptual
 ms.date: 01/28/2020
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6f7a1e8d3d6341da5812bb44726c5bf8186d3b19
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d1bfbb7a1abb13df05ce402fa79a1598ee04ca1f
+ms.sourcegitcommit: cf8db6330be0d89bbec362e4c7e187b5461026f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831941"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77054844"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>서버 속성 고급 페이지 - Power BI Report Server 및 Reporting Services
 
@@ -141,6 +141,9 @@ ms.locfileid: "76831941"
 ### <a name="enablepowerbireportexportdata"></a>EnablePowerBIReportExportData 
 (Power BI Report Server 전용) Power BI 시각적 개체에서 Power BI Report Server 데이터 내보내기를 사용하도록 설정합니다. 사용 가능한 값은 True 또는 False입니다.  기본값은 True입니다. 
 
+### <a name="enablepowerbireportexportunderlyingdata"></a>EnablePowerBIReportExportUnderlyingData 
+(Power BI Report Server 전용) 고객이 Power BI Report Server에서 Power BI 시각적 개체의 기본 데이터를 내보낼 수 있는지 여부를 나타냅니다. True 값은 이 기능이 설정되어 있음을 나타냅니다.
+
 ### <a name="enableremoteerrors"></a>EnableRemoteErrors
 원격 컴퓨터에서 보고서를 요청하는 사용자에 대해 반환되는 오류 메시지에 외부 오류 정보(예: 보고서 데이터 원본에 대한 오류 정보)를 포함합니다. 유효한 값은 **true** 및 **false**입니다. 기본 값은 **false**입니다. 자세한 내용은 [원격 오류 사용&#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md)을 참조하세요.  
 
@@ -220,7 +223,7 @@ ms.locfileid: "76831941"
 보고서 서버에서 저장할 수 있는 매개 변수 값의 최대 수를 지정합니다. 유효한 값은 **-1**, **+1** 에서 **2,147,483,647**까지입니다. 기본값은 **1500**입니다.  
 
 ### <a name="supportedhyperlinkschemes"></a>SupportedHyperlinkSchemes 
-(Power BI Report Server 2019년 1월, Reporting Services 2019 이상에만 해당) 허용된 URI 체계의 쉼표로 구분된 목록을 렌더링될 수 있는 하이퍼링크 작업에서 정의되도록 설정하거나 "&ast;"를 모든 하이퍼링크 체계를 사용하도록 설정할 수 있습니다. 예를 들어 "http, https"를 설정하면 "https://www contoso.com"에 대한 하이퍼링크를 허용하지만, "mailto:bill@contoso.com" 또는 "javascript:window.open(‘ www.contoso.com’, ‘_blank’)"에 대한 하이퍼링크를 제거합니다. 기본값은 "&ast;"입니다.
+(Power BI Report Server 2019년 1월, Reporting Services 2019 이상에만 해당) 허용된 URI 체계의 쉼표로 구분된 목록을 렌더링될 수 있는 하이퍼링크 작업에서 정의되도록 설정하거나 "&ast;"를 모든 하이퍼링크 체계를 사용하도록 설정할 수 있습니다. 예를 들어 "http, https"를 설정하면 "https://www contoso.com"에 대한 하이퍼링크를 허용하지만, "mailto:bill@contoso.com" 또는 "javascript:window.open(‘www.contoso.com’, ‘_blank’)"에 대한 하이퍼링크를 제거합니다. 기본값은 "&ast;"입니다.
 
 ### <a name="systemreporttimeout"></a>SystemReportTimeout
 보고서 서버 네임스페이스에서 관리되는 모든 보고서에 대한 기본 보고서 처리 제한 시간 값(초)입니다. 이 값은 보고서 수준에서 무시할 수 있습니다. 이 속성을 설정하면 지정된 시간이 만료될 경우 보고서 서버가 보고서 처리를 중지합니다. 유효한 값은 **-1** 에서 **2**까지,**147**,**483**,**647**입니다. 값이 **-1**이면 네임스페이스의 보고서 처리 중 시간 제한으로 인한 중지가 발생하지 않습니다. 기본값은 **1800**입니다.  

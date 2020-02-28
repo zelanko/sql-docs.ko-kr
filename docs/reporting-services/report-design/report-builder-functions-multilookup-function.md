@@ -1,5 +1,5 @@
 ---
-title: Multilookup 함수(보고서 작성기 및 SSRS) | Microsoft Docs
+title: Multilookup 함수(보고서 작성기) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1631f5f07c26e8b57cf8bc977ef6d6ccf4b3ae48
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 94883e68a4543c7fe98794d8b89dc38f05d2b410
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577159"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081192"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>보고서 작성기 함수 - Multilookup 함수
   이름/값 쌍을 포함하는 데이터 세트에서 지정된 이름 집합과 처음 일치하는 값 집합을 반환합니다.  

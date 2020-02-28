@@ -1,5 +1,5 @@
 ---
-title: 일반적으로 사용되는 필터(보고서 작성기 및 SSRS) | Microsoft Docs
+title: 일반적으로 사용되는 필터(보고서 작성기) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0757982d8e1e758a771d7ccdf880c88576f980f7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d0a096fd9dcb292f1a71b74aaf853abcbd7c02ae
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581585"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082312"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>일반적으로 사용되는 필터(보고서 작성기 및 SSRS)
   필터를 만들려면 하나 이상의 필터 수식을 지정해야 합니다. 필터 수식에는 식, 데이터 형식, 연산자 및 값이 포함됩니다. 이 항목에서는 일반적으로 사용되는 필터의 예를 제공합니다.  
@@ -46,8 +46,8 @@ ms.locfileid: "65581585"
   
 |매개 변수 형식|(필터) 식|연산자|값|데이터 형식|  
 |--------------------|---------------------------|--------------|-----------|---------------|  
-|단일 값|`[EmployeeID]`|=|`[@EmployeeID]`|정수|  
-|다중값|`[EmployeeID]`|IN|`[@EmployeeID]`|정수|  
+|단일 값|`[EmployeeID]`|=|`[@EmployeeID]`|정수 |  
+|다중값|`[EmployeeID]`|IN|`[@EmployeeID]`|정수 |  
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   

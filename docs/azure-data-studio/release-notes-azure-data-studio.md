@@ -9,17 +9,47 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 12/26/2019
-ms.openlocfilehash: a6907422afd32296b88d8160af4c35692277e94e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.date: 02/19/2020
+ms.openlocfilehash: 441679bbcf6d6a24e48233d4134d575ec526e0b2
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75521733"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77479696"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio의 릴리스 정보
 
 **[최신 릴리스 다운로드 및 설치](download.md)**
+
+## <a name="february-hotfix"></a>2월(핫픽스)
+
+2019년 2월 19일 &nbsp; / &nbsp; 버전: 1.15.1
+
+&nbsp;
+
+| 변경 | 세부 정보 |
+| :----- | :------ |
+| 버그 수정 #9149 활성 연결 표시 | [#9149](https://github.com/microsoft/azuredatastudio/issues/9149)  |
+| 버그 수정 #9061 SQL 창을 표시하거나 숨길 때 데이터 편집 그리드의 크기가 제대로 조정되지 않음 | [#9061](https://github.com/microsoft/azuredatastudio/issues/9061)  |
+| &nbsp; | &nbsp; |
+
+## <a name="february-2020"></a>2020년 2월
+
+2019년 2월 13일 &nbsp; / &nbsp; 버전: 1.15.0 
+
+&nbsp;
+
+| 변경 | 세부 정보 |
+| :----- | :------ |
+| 새 Azure 로그인 향상 | 좀 더 원활한 연결 환경을 만들기 위해 디바이스 코드의 복사/붙여넣기 제거를 포함하여 향상된 Azure 로그인 환경이 추가되었습니다. |
+| Notebook 지원 찾기 | 이제 사용자는 Notebook 내에서 Ctrl+F를 사용할 수 있습니다. Notebook 지원 검색에서 코드와 텍스트 셀 모두를 통해 한 줄씩 찾습니다. |
+| 1\.38에서 1.42로 VS Code 병합 | 이 릴리스에는 이전 VS Code 릴리스 3개의 VS Code에 대한 업데이트가 포함되어 있습니다. 자세한 내용은 [릴리스 정보](https://code.visualstudio.com/updates/v1_42)를 참조하세요. |
+| 여러 사용자가 보고한 [“흰색/빈 화면”](https://github.com/microsoft/azuredatastudio/issues/8775) 문제를 해결합니다. | |
+| 버그 및 이슈 해결 | 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22February+2020%22)를 참조하세요. |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issue"></a>알려진 문제
+- macOS Catalina의 사용자는 Azure Data Studio를 마우스 오른쪽 단추로 클릭한 다음, 열기를 클릭해야 합니다.
 
 ## <a name="december-2019-hotfix"></a>2019년 12월(핫픽스)
 

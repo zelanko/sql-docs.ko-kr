@@ -1,5 +1,5 @@
 ---
-title: StDev 함수(보고서 작성기 및 SSRS) | Microsoft Docs
+title: StDev 함수(보고서 작성기) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: cb51e96e-a828-42f0-b67c-cee3f4d221e7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c6d6a9890f5115042290b4ea59486f13cec10976
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bbf17d4c642d3ccdb14f6a6f1f42212d6e9152a7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577205"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081146"
 ---
 # <a name="report-builder-functions---stdev-function"></a>보고서 작성기 함수 - StDev 함수
   식으로 지정되어 정해진 범위에서 계산되는 Null이 아닌 모든 숫자 값의 표준 편차를 반환합니다.  

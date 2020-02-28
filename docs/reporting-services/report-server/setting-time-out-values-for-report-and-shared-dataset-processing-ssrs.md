@@ -1,5 +1,5 @@
 ---
-title: 보고서 및 공유 데이터 세트 처리에 대한 시간 제한 값 설정(SSRS) | Microsoft Docs
+title: 보고서 및 공유 데이터 세트 처리에 대한 시간 제한 값 설정 | Microsoft Docs
 description: Reporting Services에서 시간 제한 값을 지정하여 시스템 리소스 사용 방식에 대해 한도를 설정할 수 있습니다.
 ms.date: 01/16/2020
 ms.prod: reporting-services
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1bc1f2f27fa46f8262d3c0ca99549d23f2381ff0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5996c21b09a722a3cbeac41917bf83ca132feed2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76259413"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082327"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>보고서 및 공유 데이터 세트 처리에 대한 시간 제한 값 설정(SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 시간 제한 값을 지정하여 시스템 리소스 사용 방식에 대해 한도를 설정할 수 있습니다. 보고서 서버는 두 가지 시간 제한 값을 지원합니다.  

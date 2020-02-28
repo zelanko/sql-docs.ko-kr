@@ -20,17 +20,17 @@ ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 91d3d04efa0300683a5ee727cfa0a1fcd31e3c10
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 90ef549988aefd2740d10cf12b04fb5510400ab8
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74822055"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478462"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>분리된 사용자 문제 해결(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 분리된 사용자는 데이터베이스 사용자가 **마스터** 데이터베이스의 로그인을 기반으로 하지만 해당 로그인이 **마스터**에 더 이상 존재하지 않는 경우 발생합니다. 이는 로그인이 삭제되었거나 데이터베이스가 로그인이 존재하지 않는 다른 서버로 이동된 경우에 발생할 수 있습니다. 이 문서에서는 분리된 사용자를 찾아서 로그인에 다시 매핑하는 방법을 설명합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 분리된 사용자는 데이터베이스 사용자가 **마스터** 데이터베이스의 로그인을 기반으로 하지만 해당 로그인이 **마스터**에 더 이상 존재하지 않는 경우 발생합니다. 이는 로그인이 삭제되었거나 데이터베이스가 로그인이 존재하지 않는 다른 서버로 이동된 경우에 발생할 수 있습니다. 이 항목에서는 분리된 사용자를 찾아서 로그인에 다시 매핑하는 방법을 설명합니다.  
   
 > [!NOTE]  
 >  포함된 데이터베이스 사용자를 이동될 수 있는 데이터베이스에 사용하면 분리된 사용자가 발생할 가능성이 감소합니다. 자세한 내용은 [포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기](../../relational-databases/security/contained-database-users-making-your-database-portable.md)를 참조하세요.  
@@ -118,7 +118,7 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
 ```  
   
 > [!IMPORTANT]  
->  어떤 로그인도 자신의 암호를 변경할 수 있습니다. `ALTER ANY LOGIN` 사용 권한이 있는 로그인으로만 다른 사용자의 로그인 암호를 변경할 수 있습니다. 그러나 **sysadmin** 역할의 멤버만 **sysadmin** 역할 멤버의 암호를 수정할 수 있습니다.  
+>  어떤 로그인으로도 자신의 암호를 변경할 수 있습니다. `ALTER ANY LOGIN` 사용 권한이 있는 로그인으로만 다른 사용자의 로그인 암호를 변경할 수 있습니다. 그러나 **sysadmin** 역할의 멤버만 **sysadmin** 역할 멤버의 암호를 수정할 수 있습니다.  
   
  사용되지 않는 프로시저 [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md) 은 분리된 사용자에 대해서도 작동합니다. `sp_change_users_login` 에 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]을 사용할 수 없습니다.  
   

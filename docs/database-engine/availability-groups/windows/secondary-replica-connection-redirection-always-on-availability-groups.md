@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8bf76e0929dea69758b1f9152af0df8f3170227d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: cb7ac494a8a87b0ac5f2f6692763d526b7f26af6
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75235201"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256666"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>보조-주 복제본 읽기/쓰기 연결 리디렉션(Always On 가용성 그룹)
 
@@ -35,7 +35,7 @@ ms.locfileid: "75235201"
 
 ## <a name="use-cases"></a>사용 사례
 
-[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] 이전에는 장애 조치(Failover) 후에 다시 연결되도록 하기 위해 AG 수신기 및 해당 클러스터 리소스가 사용자 트래픽을 주 복제본으로 리디렉션합니다. [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)]에서는 AG 수신기 기능을 계속 지원하고 수신기를 포함할 수 없는 시나리오를 위해 복제본 연결 리디렉션을 추가합니다. 다음은 그 예입니다.
+[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] 이전에는 장애 조치(Failover) 후에 다시 연결되도록 하기 위해 AG 수신기 및 해당 클러스터 리소스가 사용자 트래픽을 주 복제본으로 리디렉션합니다. [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)]에서는 AG 수신기 기능을 계속 지원하고 수신기를 포함할 수 없는 시나리오를 위해 복제본 연결 리디렉션을 추가합니다. 다음은 그 예입니다. 
 
 * SQL Server 가용성 그룹과 통합되는 클러스터 기술은 수신기 유사 기능을 제공하지 않습니다. 
 * 클라우드 또는 다중 서브넷 부동 IP(Pacemaker 포함)의 다중 서브넷 구성(관련된 여러 구성 요소로 인해 구성이 복잡해지고 오류가 발생하기 쉬우며 문제 해결이 어려움)
@@ -46,7 +46,7 @@ ms.locfileid: "75235201"
 보조 복제본이 읽기/쓰기 연결 요청을 리디렉션하려면 다음이 충족되어야 합니다.
 * 보조 복제본이 온라인 상태여야 합니다. 
 * 복제본 사양 `PRIMARY_ROLE`에는 `READ_WRITE_ROUTING_URL`이 포함되어야 합니다.
-* 연결 문자열은 `ApplicationIntent`를 `ReadWrite`로 정의해야 합니다(기본값).
+* `ApplicationIntent`를 `ReadWrite`로 정의하거나 `ApplicationIntent`를 설정하지 않고 기본값(`ReadWrite`)이 적용되도록 함으로써 연결 문자열은 `ReadWrite`가 되어야 합니다.
 
 ## <a name="set-read_write_routing_url-option"></a>READ_WRITE_ROUTING_URL 옵션 설정
 

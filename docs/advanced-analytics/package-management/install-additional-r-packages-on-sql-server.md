@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e9435c52cc0bf318291d38a2511f496c818c2fd6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0e28d62292c8bcc4b98d8991fbf4bd8708bbbc76
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74479428"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558369"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>sqlmlutils를 사용하여 새 R 패키지 설치
 
@@ -51,7 +51,7 @@ ms.locfileid: "74479428"
 
 클라이언트 컴퓨터에서 인터넷에 액세스할 수 있는 경우 **sqlmlutils** 및 해당 종속 패키지를 온라인으로 다운로드하여 설치할 수 있습니다.
 
-1. 최신 **sqlmlutils** zip 파일을 https://github.com/Microsoft/sqlmlutils/tree/master/R/dist 에서 클라이언트 컴퓨터로 다운로드합니다. 파일 압축을 풀지 마세요.
+1. 최신 **sqlmlutils** zip 파일을 https://github.com/Microsoft/sqlmlutils/tree/master/R/dist에서 클라이언트 컴퓨터로 다운로드합니다. 파일 압축을 풀지 마세요.
 
 1. **명령 프롬프트**를 열고 다음 명령을 실행하여 **sqlmlutils** 및 **RODBCext** 패키지를 설치합니다. 다운로드한 **sqlmlutils** zip 파일의 전체 경로를 바꿉니다(이 예제에서는 파일이 문서 폴더에 있는 것으로 가정). **RODBCext** 패키지는 온라인으로 찾아서 설치합니다.
 
@@ -108,7 +108,7 @@ ms.locfileid: "74479428"
     , @script = N'print(R.version)'
    ```
 
-1. **에서 최신** sqlmlutils https://github.com/Microsoft/sqlmlutils/tree/master/R/dist zip 파일을 다운로드합니다. 단, 파일 압축을 풀지 마세요. 예를 들어 `c:\downloads\sqlmlutils_0.7.1.zip`에 파일을 다운로드합니다.
+1. https://github.com/Microsoft/sqlmlutils/tree/master/R/dist에서 최신 **sqlmlutils** zip 파일을 다운로드합니다. 단, 파일 압축을 풀지 마세요. 예를 들어 `c:\downloads\sqlmlutils_0.7.1.zip`에 파일을 다운로드합니다.
 
 1. 전체 **RODBCext** 리포지토리 폴더(`c:\downloads\rodbcext`) 및 **sqlmlutils** zip 파일(`c:\downloads\sqlmlutils_0.7.1.zip`)을 클라이언트 컴퓨터에 복사합니다. 예를 들어 클라이언트 컴퓨터의 `c:\temp\packages` 폴더에 복사합니다.
 
@@ -129,13 +129,15 @@ SQL Server에 연결하는 데 사용하는 클라이언트 컴퓨터가 인터�
 
 1. 클라이언트 컴퓨터에서 RStudio를 열고 새 **R 스크립트** 파일을 만듭니다.
 
-1. 다음 R 스크립트를 사용하여 **sqlmlutils**를 통해 **glue** 패키지를 설치합니다. SQL Server 데이터베이스 연결 정보를 바꿉니다(Windows 인증을 사용하지 않는 경우 `uid` 및 `pwd` 매개 변수 추가).
+1. 다음 R 스크립트를 사용하여 **sqlmlutils**를 통해 **glue** 패키지를 설치합니다. 사용자의 SQL Server 데이터베이스 연결 정보를 대체합니다.
 
    ```R
    library(sqlmlutils)
    connection <- connectionInfo(
-     server= "yourserver",
-     database = "yourdatabase")
+     server   = "server",
+     database = "database",
+     uid      = "username",
+     pwd      = "password")
 
    sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC")
    ```
@@ -146,7 +148,7 @@ SQL Server에 연결하는 데 사용하는 클라이언트 컴퓨터가 인터�
 ### <a name="add-the-package-offline"></a>오프라인으로 패키지 추가
 
 클라이언트 컴퓨터가 인터넷에 연결되어 있지 않은 경우에는 인터넷에 액세스할 수 있는 컴퓨터에서 **miniCRAN**을 사용하여 **glue** 패키지를 다운로드할 수 있습니다. 그런 다음, 패키지를 오프라인으로 설치할 수 있는 클라이언트 컴퓨터에 이 패키지를 복사합니다.
-[miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) 설치에 대한 자세한 내용은 **miniCRAN 설치**를 참조하세요.
+**miniCRAN** 설치에 대한 자세한 내용은 [miniCRAN 설치](create-a-local-package-repository-using-minicran.md#install-minicran)를 참조하세요.
 
 인터넷에 액세스할 수 있는 컴퓨터의 경우:
 

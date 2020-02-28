@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 737e64973e4651dd36c58fa9ff97a61c65a604a9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ab33fa19b968990e81851edac9d91fb55db81049
+ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68137089"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77146314"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,6 +73,7 @@ ms.locfileid: "68137089"
 |12|올바른 로그인이지만 서버 액세스에 실패했습니다.|  
 |18|암호를 변경해야 합니다.|  
 |38, 46|사용자가 요청한 데이터베이스를 찾을 수 없습니다.|
+|58| SQL Server가 Windows 인증만 사용하도록 설정되고 클라이언트가 SQL 인증을 사용하여 로그인을 시도하는 경우입니다. 또 다른 원인은 SID가 일치하지 않는 경우입니다.|
 |102 - 111|AAD 오류입니다.|
 |122 - 124|빈 사용자 이름 또는 암호로 인한 오류입니다.|
 |126|사용자가 요청한 데이터베이스가 없습니다.|

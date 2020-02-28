@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fd1cab79ce226a710de1f701cfff5094a82704a5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 12dea4163feba35af6346d347503f42ab31c852a
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75721703"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173629"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>SQL Server 2019 빅 데이터 도구 설치
 
@@ -35,7 +35,7 @@ ms.locfileid: "75721703"
 | **데이터 가상화 확장** | yes | 데이터 가상화 마법사를 제공하는 Azure Data Studio용 확장입니다. | [설치](../azure-data-studio/data-virtualization-extension.md) |
 | **Azure CLI**<sup>2</sup> | AKS의 경우 | Azure 서비스를 관리하기 위한 최신 명령줄 인터페이스입니다. AKS 빅 데이터 클러스터 배포와 함께 사용됩니다([자세한 정보](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [설치](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | 옵션 | SQL Server를 쿼리하기 위한 최신 명령줄 인터페이스입니다([자세한 정보](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
-| **sqlcmd** | 일부 스크립트의 경우 | SQL Server를 쿼리하기 위한 레거시 명령줄 도구입니다([자세한 정보](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
+| **sqlcmd** | 일부 스크립트의 경우 | SQL Server를 쿼리하기 위한 레거시 명령줄 도구입니다([자세한 정보](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). SQLCMD 패키지를 설치하기 전에 Microsoft ODBC Driver 11 for SQL Server를 설치해야 할 수 있습니다. | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | `curl` <sup>3</sup> | 일부 스크립트의 경우 | URL을 사용하여 데이터를 전송하기 위한 명령줄 도구입니다. | [Windows](https://curl.haxx.se/windows/) \| Linux: curl 패키지 설치 |
 
 <sup>1</sup>`kubectl` 버전 1.13 이상을 사용해야 합니다. 또한 `kubectl` 버전은 Kubernetes 클러스터의 바로 이전 또는 이후 부 버전이어야 합니다. `kubectl` 클라이언트에서 특정 버전을 설치하려는 경우 [Install `kubectl` binary via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl)(curl을 통해 kubectl 이진 설치)를 참조하세요(Windows 10에서는 Windows PowerShell이 아닌 cmd.exe를 사용하여 curl 실행).

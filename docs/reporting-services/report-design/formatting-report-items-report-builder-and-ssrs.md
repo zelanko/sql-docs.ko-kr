@@ -1,5 +1,5 @@
 ---
-title: 보고서 항목 서식 지정(보고서 작성기 및 SSRS) | Microsoft Docs
+title: 보고서 항목 서식 지정(보고서 작성기) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2e3b6101111fea08c86bbf79bf431d91aaa24261
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2d0433667ba85af242374933a028974d1960416c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580315"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079642"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>보고서 항목 서식 지정(보고서 작성기 및 SSRS)
   보고서의 항목에 서식을 지정하여 보고서를 더 보기 좋게 만들고 가독성을 높일 수 있습니다. 보고서 디자인 모드에서 데이터, 식, 이미지, 입력란 내에 있는 개별 항목 및 입력란의 서식을 지정할 수 있습니다.  

@@ -5,18 +5,18 @@ description: SQL Server 빅 데이터 클러스터를 새 릴리스로 업그레
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: afb12477dd220e71cf2cf97d6a13b54aa2d35be4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2f8ca3e42221387470ee4fc4cbd6873b526bc8b7
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75831832"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256877"
 ---
-# <a name="how-to-upgrade-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 업그레이드하는 방법
+# <a name="how-to-upgrade-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 업그레이드하는 방법
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -34,7 +34,7 @@ ms.locfileid: "75831832"
 
 ## <a name="upgrade-from-supported-release"></a>지원되는 릴리스에서 업그레이드
 
-이 섹션에서는 지원되는 릴리스(SQL Server 2019 GDR1)에서 최신 지원되는 릴리스로 SQL Server BDC를 업그레이드하는 방법에 대해 설명합니다.
+이 섹션에서는 지원되는 릴리스(SQL Server 2019 GDR1)에서 지원되는 최신 릴리스로 SQL Server BDC를 업그레이드하는 방법에 대해 설명합니다.
 
 1. SQL Server 마스터 인스턴스를 백업합니다.
 2. HDFS를 백업합니다.
@@ -43,7 +43,7 @@ ms.locfileid: "75831832"
    azdata bdc hdfs cp --from-path <path> --to-path <path>
    ```
    
-   다음은 그 예입니다. 
+   다음은 그 예입니다.  
 
    ```
    azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
@@ -76,7 +76,7 @@ ms.locfileid: "75831832"
 >최신 이미지 태그는 [SQL Server 2019 빅 데이터 클러스터 릴리스 정보](release-notes-big-data-cluster.md)에서 확인할 수 있습니다.
 
 >[!IMPORTANT]
->프라이빗 리포지토리를 사용하여 BDC를 배포하거나 업그레이드하기 위해 이미지를 미리 가져오는 경우 현재 빌드 이미지와 대상 빌드 이미지가 프라이빗 리포지토리에 있는지 확인합니다. 이렇게 하면 필요한 경우 성공적으로 롤백할 수 있습니다. 또한 원래 배포 이후 프라이빗 리포지토리의 자격 증명을 변경한 경우 업그레이드하기 전에 Kubernetes에서 해당 암호를 업데이트합니다. DOCKER_PASSWORD 및 DOCKER_USERNAME 환경 변수를 통한 자격 증명 업데이트는 지원되지 않습니다. [kubectl 편집 암호](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret)를 사용하여 암호를 업데이트합니다. 현재 및 대상 빌드에 다른 프라이빗 리포지토리를 사용하여 업그레이드할 수 없습니다.
+>프라이빗 리포지토리를 사용하여 BDC를 배포하거나 업그레이드하기 위해 이미지를 미리 가져오는 경우 현재 빌드 이미지와 대상 빌드 이미지가 프라이빗 리포지토리에 있는지 확인합니다. 이렇게 하면 필요한 경우 성공적으로 롤백할 수 있습니다. 또한 원래 배포 이후 프라이빗 리포지토리의 자격 증명을 변경한 경우 해당 환경 변수 DOCKER_PASSWORD 및 DOCKER_USERNAME을 업데이트합니다. 현재 및 대상 빌드에 다른 프라이빗 리포지토리를 사용하여 업그레이드할 수 없습니다.
 
 ### <a name="increase-the-timeout-for-the-upgrade"></a>업그레이드 시간 제한 늘리기
 
@@ -93,7 +93,15 @@ ms.locfileid: "75831832"
    Control plane upgrade failed. Failed to upgrade controller.
    ```
 
-업그레이드에 대한 시간 제한을 늘리려면 업그레이드 구성 맵을 편집합니다. 업그레이드 구성 맵을 편집하려면 다음을 수행합니다.
+업그레이드에 대한 시간 제한을 늘리려면 **--controller-timeout** 및 **--component-timeout** 매개 변수를 사용하여 업그레이드를 실행할 때 더 높은 값을 지정합니다. 이 옵션은 SQL Server 2019 CU2 릴리스부터 사용할 수 있습니다. 다음은 그 예입니다. 
+
+   ```bash
+   azdata bdc upgrade -t 2019-CU2-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
+   ```
+**--controller-timeout**은 컨트롤러 또는 컨트롤러 db의 업그레이드가 완료될 때까지 대기할 시간(분)을 지정합니다.
+**--component-timeout**은 업그레이드의 각 후속 단계를 완료해야 하는 기간을 지정합니다.
+
+SQL Server 2019 CU2 릴리스 전에 업그레이드에 대한 시간 제한을 늘리려면 업그레이드 구성 맵을 편집합니다. 업그레이드 구성 맵을 편집하려면 다음을 수행합니다.
 
 다음 명령 실행:
 

@@ -1,5 +1,5 @@
 ---
-title: 보고서 파트 게시 및 다시 게시(보고서 작성기 및 SSRS) | Microsoft Docs
+title: 보고서 파트 게시 및 다시 게시(보고서 작성기) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f48415c35b57b889b764abfe44f5bf937ee3f650
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2ea76e42cb7230bc4195cc8c2dc1615308fa4058
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576630"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082353"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>보고서 파트 게시 및 다시 게시(보고서 작성기 및 SSRS)
   보고서 파트는 보고서 서버에 별도로 게시된 페이지를 매긴 보고서 항목으로, 다른 페이지를 매긴 보고서에서 다시 사용할 수 있습니다. 보고서 파트는 기본 설정으로 기본 위치에 게시할 수도 있고 이름, 설명 등의 보고서 파트 메타데이터를 편집한 다음 보고서 서버의 다른 위치에 저장할 수도 있습니다. 또한 올바른 권한이 있는 경우에는 보고서 서버와 통합된 SharePoint 사이트에 보고서 파트를 저장할 수도 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "65576630"
   
      그렇지 않으면 **게시하기 전에 보고서 파트 검토 및 수정**을 클릭합니다.  
   
-3.  보고서 파트 이름 및 설명을 편집하려면 이름을 두 번 클릭해 편집하고 **설명** 필드를 클릭해 설명을 추가합니다.  
+3.  보고서 파트 이름 및 설명을 편집합니다. 이름을 두 번 클릭하여 편집하고 **설명** 필드를 클릭하여 설명을 추가합니다.  
   
     > [!NOTE]  
     >  다른 사람들이 검색할 때 쉽게 식별할 수 있도록 명확한 보고서 파트 이름과 설명을 지정하는 것이 좋습니다. 보고서 파트 이름의 최대 길이는 260자(전체 경로)입니다. 여기에는 서버의 폴더 이름 뒤에 보고서 파트의 실제 이름이 붙습니다.  

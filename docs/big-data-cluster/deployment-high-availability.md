@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 31e5d851b6c049bdd7fd81a4c90be1de7ceff77f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5d6edf4115156bda58c44615e99ffcb19b87913f
+ms.sourcegitcommit: 38c61c7e170b57dddaae5be72239a171afd293b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76115424"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77259214"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>고가용성을 사용하여 SQL Server 빅 데이터 클러스터 배포
 
@@ -150,7 +150,7 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
     kubectl -n <namespaceName> expose pod <podName> --port=1533  --name=<serviceName> --type=NodePort
     ```
 
-    AKS 클러스터 실행의 경우 만드는 서비스의 유형이 `LoadBalancer`라는 점을 제외하고 동일한 명령을 실행합니다. 다음은 그 예입니다. 
+    AKS 클러스터 실행의 경우 만드는 서비스의 유형이 `LoadBalancer`라는 점을 제외하고 동일한 명령을 실행합니다. 다음은 그 예입니다.  
 
     ```bash
     kubectl -n <namespaceName> expose pod <podName> --port=1533  --name=<serviceName> --type=LoadBalancer
@@ -197,7 +197,7 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 
 빅 데이터 클러스터의 SQL Server 마스터에 대한 가용성 그룹과 관련된 알려진 문제 및 제한 사항은 다음과 같습니다.
 
-- `CREATE DATABASE` 이외의 워크플로(예: `RESTORE DATABSE`, `CREATE DATABASE FROM SNAPSHOT`)의 결과로 만들어진 데이터베이스는 가용성 그룹에 자동으로 추가되지 않습니다. [인스턴스에 연결](#instance-connect)하고, 데이터베이스를 가용성 그룹에 수동으로 추가합니다.
+- `CREATE DATABASE` 이외의 워크플로(예: `RESTORE DATABASE`, `CREATE DATABASE FROM SNAPSHOT`)의 결과로 만들어진 데이터베이스는 가용성 그룹에 자동으로 추가되지 않습니다. [인스턴스에 연결](#instance-connect)하고, 데이터베이스를 가용성 그룹에 수동으로 추가합니다.
 - `sp_configure`를 사용하여 서버 구성 설정을 실행하는 것과 같은 특정 작업을 수행하려면 `master` 가용성 그룹이 아니라 SQL Server 인스턴스 `master` 데이터베이스에 연결해야 합니다. 해당 기본 엔드포인트는 사용할 수 없습니다. [지침](#instance-connect)에 따라 엔드포인트를 공개하고, SQL Server 인스턴스에 연결하고, `sp_configure`를 실행합니다. 엔드포인트를 수동으로 공개하여 SQL Server 인스턴스 `master` 데이터베이스에 연결하는 경우에만 SQL 인증을 사용할 수 있습니다.
 - 빅 데이터 클러스터가 배포될 때 고가용성 구성을 만들어야 합니다. 배포 후에는 가용성 그룹을 사용하여 고가용성 구성을 사용하도록 설정할 수 없습니다.
 - 포함된 msdb 데이터베이스는 가용성 그룹에 포함되어 있고 SQL 에이전트 작업은 두루 복제되지만 일정에 따라 작업이 트리거되지 않습니다. 해결 방법은 [각 SQL Server 인스턴스에 연결](#instance-connect)하고 인스턴스 msdb에서 작업을 만드는 것입니다.

@@ -1,5 +1,5 @@
 ---
-title: Oracle 연결 형식(SSRS, Power BI Report Server 및 보고서 작성기) | Microsoft Docs
+title: Oracle 연결 형식(보고서 작성기 및 Power BI Report Server) | Microsoft Docs
 ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f6918d240a6da7f961899d1a4cb71996bbec9ec6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c2e9ee78c6a033443b960ba972b74be2a1e6aebd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76259401"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081740"
 ---
-# <a name="oracle-connection-type-ssrs-power-bi-report-server-and-report-builder"></a>Oracle 연결 형식(SSRS, Power BI Report Server 및 보고서 작성기)
+# <a name="oracle-connection-type-report-builder--power-bi-report-server--microsoft-docs"></a>Oracle 연결 형식((보고서 작성기 및 Power BI Report Server) | Microsoft Docs)
 
 보고서에서 Oracle 데이터베이스의 데이터를 사용하려면 Oracle 유형의 보고서 데이터 원본을 기반으로 하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 유형은 Oracle Data Provider를 사용하며 Oracle 클라이언트 소프트웨어 구성 요소를 필요로 합니다. 이 문서에서는 Reporting Services, Power BI Report Server 및 보고서 작성기에 대한 드라이버를 다운로드하고 설치하는 방법을 설명합니다.
 

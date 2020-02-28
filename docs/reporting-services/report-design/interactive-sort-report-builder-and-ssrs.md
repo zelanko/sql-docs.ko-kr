@@ -1,5 +1,5 @@
 ---
-title: 대화형 정렬(보고서 작성기 및 SSRS) | Microsoft Docs
+title: 대화형 정렬(보고서 작성기) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d3f379c104b5b957fba197f9ed9317b2d5b23f16
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5d87ccdb5cc240f73dc22c132bf4d3f88685919c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580182"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081981"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>대화형 정렬(보고서 작성기 및 SSRS)
   대화형 정렬 단추를 추가하여 사용자가 테이블의 행 또는 행렬의 행 및 열에 대해 오름차순 및 내림차순 사이를 전환하도록 할 수 있습니다. 대화형 정렬의 일반적인 용도는 열 머리글마다 정렬 단추를 추가하는 것입니다. 그러면 사용자는 정렬할 기준이 되는 열을 선택할 수 있습니다.  
@@ -29,11 +29,11 @@ ms.locfileid: "65580182"
   
 -   **정렬 기준:** 테이블 열에 표시되는 필드 또는 표시되지 않는 필드  
   
--   **정렬할 컨텍스트:** 예를 들어 행 그룹에 연결된 행, 열 그룹에 연결된 열, 정보 행, 부모 그룹 내 자식 그룹 또는 부모 및 자식 그룹 모두를 기준으로 정렬할 수 있습니다.  
+-   **정렬할 컨텍스트:** 예를 들어 행 그룹에 연결된 행, 열 그룹에 연결된 열, 정보 행, 부모 그룹 내 자식 그룹 또는 부모/자식 그룹 모두를 기준으로 정렬할 수 있습니다.  
   
--   **정렬 단추를 추가할 입력란:** 열 머리글 또는 그룹 행 머리글  
+-   **정렬 단추를 추가할 텍스트 상자:** 열 머리글 또는 그룹 행 머리글  
   
--   **여러 데이터 영역에 대해 정렬을 동기화할지 여부:** 보고서를 디자인하여 사용자가 정렬 순서를 전환할 때 다른 데이터 영역도 같은 순서로 정렬되도록 할 수 있습니다.  
+-   **여러 데이터 영역에 대해 정렬을 동기화할지 여부:** 사용자가 정렬 순서를 전환할 때 상위 항목이 동일한 다른 데이터 영역도 정렬되도록 보고서를 디자인할 수 있습니다.  
   
  단계별 지침은 [테이블 또는 행렬에 대화형 정렬 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)를 참조하세요.  
   

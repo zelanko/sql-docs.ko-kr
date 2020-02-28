@@ -1,7 +1,7 @@
 ---
 title: JDBC 드라이버 시스템 요구 사항 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5759a1f9936fdb8a6df4de422ae2ff0542dc63a8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e9e74d080ed0e7cd91dcde6cbaa2ca2e32f04dc6
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69027667"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004552"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC 드라이버 시스템 요구 사항
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,6 +26,8 @@ ms.locfileid: "69027667"
 - Java Runtime Environment
 
 ## <a name="java-runtime-environment-requirements"></a>Java Runtime Environment 요구 사항  
+
+ SQL Server용 Microsoft JDBC Driver 8.2부터는 JDK(Java Development Kit) 13.0 및 JRE(Java Runtime Environment) 13.0이 지원됩니다.
 
  SQL Server용 Microsoft JDBC Driver 7.4부터는 JDK(Java Development Kit) 12.0 및 JRE(Java Runtime Environment) 12.0이 지원됩니다.
 
@@ -42,6 +44,31 @@ ms.locfileid: "69027667"
  [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]에서는 JDBC 4.0 API를 포함하도록 JDBC(Java Database Connectivity) 사양 API에 대한 지원이 확장되었습니다. JDBC 4.0 API는 JDK(Java Development Kit) 6.0 및 JRE(Java Runtime Environment) 6.0의 일부로 제공되었습니다. JDBC 4.0은 JDBC 3.0 API를 포함합니다.
   
  Windows 및 UNIX 운영 체제에서 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]를 배포하는 경우 각각 설치 패키지 *sqljdbc_\<version>_enu.exe* 및 *sqljdbc_\<version>_enu.tar.gz*를 사용해야 합니다. JDBC 드라이버를 배포하는 방법에 대한 자세한 내용은 [JDBC 드라이버 배포](../../connect/jdbc/deploying-the-jdbc-driver.md) 항목을 참조하세요.  
+
+**SQL Server용 Microsoft JDBC Driver 8.2:**  
+
+  JDBC Driver 8.2에는 각 설치 패키지에 **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** 및 **mssql-jdbc-8.2.0.jre13.jar**이라는 세 개의 JAR 클래스 라이브러리가 포함되어 있습니다.
+
+  JDBC Driver 8.2는 모든 주요 Java 가상 머신에서 사용 가능하고 지원되지만, OpenJDK 1.8, OpenJDK 11.0, OpenJDK 13.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0 및 Azul Zulu JRE 13.0에서만 테스트되었습니다.
+  
+  SQL Server용 Microsoft JDBC Driver 8.2에 포함된 2개의 JAR 파일에서 제공하는 지원은 다음과 같이 요약됩니다.  
+  
+  |JAR|JDBC 버전 규격|권장 Java 버전|Description|  
+|---------|-----------------------------|----------------------|-----------------|   
+|mssql-jdbc-8.2.0.jre8.jar|4.2|8|JRE(Java Runtime Environment) 1.8이 필요합니다. JRE 1.7 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 8\.2의 새로운 기능: JDK 13 지원, 보안 Enclave를 사용한 Always Encrypted 및 임시 데이터 형식 성능 개선 |
+|mssql-jdbc-8.2.0.jre11.jar|4.3|11|JRE(Java Runtime Environment) 11.0이 필요합니다. JRE 10.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 8\.2의 새로운 기능: JDK 13 지원, 보안 Enclave를 사용한 Always Encrypted 및 임시 데이터 형식 성능 개선 |
+|mssql-jdbc-8.2.0.jre13.jar|4.3|13|JRE(Java Runtime Environment) 13.0이 필요합니다. JRE 11.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 8\.2의 새로운 기능: JDK 13 지원, 보안 Enclave를 사용한 Always Encrypted 및 임시 데이터 형식 성능 개선 |
+
+
+  또한, JDBC Driver 8.2는 Maven 중앙 리포지토리에서도 사용할 수 있고 POM.XML에 다음 코드를 추가하여 Maven 프로젝트에 추가할 수 있습니다.  
+  
+ ```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>8.2.0.jre11</version>
+</dependency>
+```
 
 **SQL Server용 Microsoft JDBC Driver 7.4:**  
 
@@ -196,7 +223,7 @@ JDBC Driver 6.4는 Maven 중앙 리포지토리에서도 사용할 수 있고 PO
  JDBC 드라이버는 Azure SQL 데이터베이스 및 SQL Server에 대한 연결을 지원합니다. SQL Server용 Microsoft JDBC Driver 4.2 및 4.1의 경우 SQL Server 2008에서 지원이 시작됩니다.
   
 ## <a name="operating-system-requirements"></a>운영 체제 요구 사항  
- JDBC 드라이버는 JVM(Java Virtual Machine)의 사용을 지원하는 모든 운영 체제에서 작동하도록 설계되어 있지만 Sun Solaris, SUSE Linux 및 Windows 운영 체제에서만 공식적으로 테스트가 완료되었습니다.  
+ JDBC 드라이버는 JVM(Java Virtual Machine)의 사용을 지원하는 모든 운영 체제에서 작동하도록 설계되어 있지만 그러나 Sun Solaris, SUSE Linux, Ubuntu Linux, CentOS Linux, macOS 및 Windows 운영 체제에서만 공식적으로 테스트가 완료되었습니다.  
   
 ## <a name="supported-languages"></a>지원되는 언어  
  JDBC 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 모든 열 데이터 정렬을 지원합니다. JDBC 드라이버에서 지원하는 데이터 정렬에 대한 자세한 내용은 [JDBC 드라이버의 국가별 기능](../../connect/jdbc/international-features-of-the-jdbc-driver.md)을 참조하세요.  

@@ -1,5 +1,5 @@
 ---
-title: rsconfig 유틸리티(SSRS) | Microsoft Docs
+title: rsconfig 유틸리티 | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 38c2cd6242e9515872ef086ec4851bf6cec103ef
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7ad41870ac9bcb162e792dc6abd8ca21ceeeb3f2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65571523"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082184"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 유틸리티(SSRS)
   **rsconfig.exe** 유틸리티는 연결 및 계정 값을 암호화하여 RSReportServer.config 파일에 저장합니다. 암호화되는 값에는 무인 보고서 처리에 사용되는 보고서 서버 데이터베이스 연결 정보 및 계정 값이 포함됩니다.  
@@ -46,7 +46,7 @@ rsconfig {-?}
 |용어|선택/필수|정의|  
 |----------|------------------------|----------------|  
 |**-?**|(선택 사항)|Rsconfig.exe 인수의 구문을 표시합니다.|  
-|**-c**|**-e** 인수를 사용하지 않는 경우 필요합니다.|보고서 서버에서 보고서 서버 데이터베이스에 연결하는 데 사용되는 연결 문자열, 자격 증명 및 데이터 원본 값을 지정합니다.<br /><br /> 이 인수는 값을 가지지 않습니다. 그러나 모든 필수 연결 값을 제공하려면 이 인수와 함께 추가 인수를 지정해야 합니다.<br /><br /> **-c** 를 사용하여 지정할 수 있는 인수에는 **-m**, **-s**, **-i**, **-d**, **-a**, **-u**, **-p**및 **-t**가 있습니다.|  
+|**-c**|**-e** 인수를 사용하지 않는 경우 필요합니다.|보고서 서버에서 보고서 서버 데이터베이스에 연결하는 데 사용되는 연결 문자열, 자격 증명 및 데이터 원본 값을 지정합니다.<br /><br /> 이 인수는 값을 가지지 않습니다. 그러나 모든 필수 연결 값을 제공하려면 이 인수와 함께 추가 인수를 지정해야 합니다.<br /><br /> **-c** 를 사용하여 지정할 수 있는 인수에는 **-m**, **-s**, **-i**,**-d**,**-a**,**-u**,**-p**및 **-t**가 있습니다.|  
 |**-e**|**-c** 인수를 사용하지 않는 경우 필요합니다.|무인 보고서 실행 계정을 지정합니다.<br /><br /> 이 인수는 값을 가지지 않습니다. 그러나 구성 파일에 암호화된 값을 지정하려면 명령줄에 추가 인수를 포함해야 합니다.<br /><br /> **-e** 를 사용하여 지정할 수 있는 인수에는 **-u** 및 **-p**가 있습니다. **-t**도 설정할 수 있습니다.|  
 |**-m**  *computername*|원격 보고서 서버 인스턴스를 구성하는 경우 필요합니다.|보고서 서버를 호스팅하는 컴퓨터의 이름입니다. 이 인수를 생략할 경우 기본값은 **localhost**입니다.|  
 |**-s**  *servername*|필수 사항입니다.|보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정합니다.|  

@@ -1,7 +1,7 @@
 ---
 title: 연결 URL 작성 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 18ed8477e6fc7c276db1842dba4f8856629bd29a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2461413e6f41c82404ac11cc5769b74993f13ed8
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69028449"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004538"
 ---
 # <a name="building-the-connection-url"></a>연결 URL 작성
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "69028449"
   
  각 항목이 나타내는 의미는 다음과 같습니다.  
   
--   **jdbc:sqlserver://** (필수)는 하위 프로토콜이라고 하며 일정한 형태를 나타냅니다.  
+-   **jdbc:sqlserver://**(필수)는 하위 프로토콜이라고 하며 일정한 형태를 나타냅니다.  
   
 -   **serverName**(옵션)은 연결할 서버의 주소입니다. 이는 DNS나 IP 주소일 수도 있고 로컬 컴퓨터인 경우 localhost나 127.0.0.1일 수도 있습니다. 연결 URL에 지정하지 않은 경우 속성 컬렉션에 서버 이름을 지정해야 합니다.  
   
@@ -92,18 +92,18 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 >  중괄호 안의 공백은 리터럴이며 잘리지 않습니다.  
   
 ##  <a name="Connectingintegrated"></a> Windows에서 통합 인증으로 연결  
- JDBC 드라이버는 integratedSecurity 연결 문자열 속성을 통해 Windows 운영 체제에서 형식 2 통합 인증을 사용할 수 있습니다. 통합 인증을 사용하려면 sqljdbc_auth.dll 파일을 JDBC 드라이버가 설치된 컴퓨터의 Windows 시스템 경로에 있는 디렉터리에 복사합니다.  
+ JDBC 드라이버는 integratedSecurity 연결 문자열 속성을 통해 Windows 운영 체제에서 형식 2 통합 인증을 사용할 수 있습니다. 통합 인증을 사용하려면 mssql-jdbc_auth-\<버전\<arch>.dll 파일을 JDBC 드라이버가 설치된 컴퓨터의 Windows 시스템 경로에 있는 디렉터리에 복사합니다.  
   
- sqljdbc_auth.dll 파일은 다음 위치에 설치되어 있습니다.  
+ mssql-jdbc_auth-\<버전>-\<arch>.dll 파일은 다음 위치에 설치됩니다.  
   
  \<*설치 디렉터리*>\sqljdbc_\<*버전*>\\<*언어*>\auth\  
   
  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서 지원되는 운영 체제의 경우 [Kerberos 통합 인증을 사용하여 SQL Server에 연결](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)에서 애플리케이션이 유형 4 Kerberos 통합 인증을 사용하는 데이터베이스에 연결할 수 있도록 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]에 추가된 기능에 대한 설명을 참조하세요.  
   
 > [!NOTE]  
->  32비트 JVM(Java Virtual Machine)을 실행할 경우 운영 체제가 x64 버전이라도 x86 폴더에 있는 sqljdbc_auth.dll 파일을 사용하십시오. x64 프로세서에서 64비트 JVM을 실행할 경우 x64 폴더의 sqljdbc_auth.dll 파일을 사용하십시오.  
+>  32비트 JVM(Java Virtual Machine)을 실행할 경우 운영 체제가 x64 버전이라도 x86 폴더에 있는 mssql-jdbc_auth-\<버전>-\<arch>.dll 파일을 사용하세요. x64 프로세서에서 64비트 JVM을 실행할 경우 x64 폴더의 mssql-jdbc_auth-\<버전>-\<arch>.dll 파일을 사용하세요.  
   
- 또는 java.library.path 시스템 속성을 설정하여 sqljdbc_auth.dll의 디렉터리를 지정할 수도 있습니다. 예를 들어 JDBC 드라이버가 기본 디렉터리에 설치된 경우 Java 애플리케이션이 시작될 때 다음과 같은 가상 컴퓨터(VM) 인수를 사용하여 DLL의 위치를 지정할 수 있습니다.  
+ 또는 java.library.path 시스템 속성을 설정하여 mssql-jdbc_auth-\<버전>-\<arch>.dll의 디렉터리를 지정할 수도 있습니다. 예를 들어 JDBC 드라이버가 기본 디렉터리에 설치된 경우 Java 애플리케이션이 시작될 때 다음과 같은 가상 컴퓨터(VM) 인수를 사용하여 DLL의 위치를 지정할 수 있습니다.  
   
  `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
   

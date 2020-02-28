@@ -2,7 +2,7 @@
 title: 분산 가용성 그룹 구성
 description: 'Always On 분산 가용성 그룹을 만들고 구성하는 방법을 설명합니다. '
 ms.custom: seodec18
-ms.date: 08/17/2017
+ms.date: 01/28/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c49fb6ad9ad1d824a91f2a91c399770f3032b8aa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ebe6152ea59de28c9df7f3bb3abfa149900c826f
+ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75952491"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77146300"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Always On 분산 가용성 그룹 구성  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -146,7 +146,7 @@ GO
 ### <a name="create-a-listener-for--the-secondary-availability-group"></a>보조 가용성 그룹에 대한 수신기 만들기  
  그런 다음 두 번째 WSFC에 보조 가용성 그룹에 대한 수신기를 추가합니다. 이 예제에서 수신기 이름은 `ag2-listener`입니다. 수신기를 만드는 방법은 [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)을 참조하세요.  
   
-```  
+```sql  
 ALTER AVAILABILITY GROUP [ag2]    
     ADD LISTENER 'ag2-listener' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173);    
 GO  
@@ -228,15 +228,15 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
 이 경우에는 수동 장애 조치(failover)만 지원됩니다. 분산 가용성 그룹을 수동으로 장애 조치(failover)하려면 다음을 수행합니다.
 
-1. 데이터가 손실되지 않도록 하려면 분산 가용성 그룹을 동기 커밋으로 설정합니다.
-1. 분산 가용성 그룹이 동기화될 때까지 기다립니다.
+1. 데이터가 손실되지 않도록 하려면 전역 주 데이터베이스(주 가용성 그룹의 데이터베이스)에서 모든 트랜잭션을 중지한 다음, 분산 가용성 그룹을 동기 커밋으로 설정합니다.
+1. 분산 가용성 그룹이 동기화되고 데이터베이스당 동일한 last_hardened_lsn을 포함할 때까지 기다립니다. 
 1. 글로벌 기본 복제본에서 분산 가용성 그룹 역할을 `SECONDARY`로 설정합니다.
 1. 장애 조치(failover) 준비 상태를 테스트합니다.
 1. 기본 가용성 그룹을 장애 조치(failover)합니다.
 
 다음 Transact-SQL 예제에서는 `distributedag`라는 분산 가용성 그룹을 장애 조치(failover)하는 자세한 단계를 보여줍니다.
 
-1. 전역 기본 및 전달자 *모두*에서 다음 코드를 실행하여 분산 가용성 그룹을 동기 커밋으로 설정합니다.   
+1. 데이터가 손실되지 않도록 하려면 전역 주 데이터베이스(주 가용성 그룹의 데이터베이스)에서 모든 트랜잭션을 중지합니다. 그런 다음, 전역 기본 및 전달자 ‘모두’에서 다음 코드를 실행하여 분산 가용성 그룹을 동기 커밋으로 설정합니다.   
     
       ```sql  
       -- sets the distributed availability group to synchronous commit 
@@ -262,24 +262,29 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
        GO
 
       ```  
-   >[!NOTE]
-   >분산 가용성 그룹에서 두 가용성 그룹 간의 동기화 상태는 두 복제본의 가용성 모드에 따라 다릅니다. 동기 커밋 모드의 경우 현재 기본 가용성 그룹과 현재 보조 가용성 그룹 모두 `SYNCHRONOUS_COMMIT` 가용성 모드가 있어야 합니다. 이러한 이유로 글로벌 기본 복제본과 전달자 모두에서 위의 스크립트를 실행해야 합니다.
+   > [!NOTE]
+   > 분산 가용성 그룹에서 두 가용성 그룹 간의 동기화 상태는 두 복제본의 가용성 모드에 따라 다릅니다. 동기 커밋 모드의 경우 현재 기본 가용성 그룹과 현재 보조 가용성 그룹 모두 `SYNCHRONOUS_COMMIT` 가용성 모드가 있어야 합니다. 이러한 이유로 글로벌 기본 복제본과 전달자 모두에서 위의 스크립트를 실행해야 합니다.
 
-1. 분산 가용성 그룹의 상태가 `SYNCHRONIZED`으로 변경될 때까지 대기합니다. 기본 가용성 그룹의 주 복제본인 전역 기본에서 다음 쿼리를 실행합니다. 
+
+1. 분산 가용성 그룹의 상태가 `SYNCHRONIZED`로 변경되고 모든 복제본이 동일한 last_hardened_lsn(데이터베이스당)을 포함할 때까지 기다립니다. 기본 가용성 그룹의 주 복제본인 전역 기본 및 전달자에서 둘 다 다음 쿼리를 실행하여 synchronization_state_desc 및 last_hardened_lsn을 확인합니다. 
     
       ```sql  
+      -- Run this query on the Global Primary and the forwarder
+      -- Check the results to see if synchronization_state_desc is SYNCHRONIZED, and the last_hardened_lsn is the same per database on both the global primary and       forwarder 
+      -- If not rerun the query on both side every 5 seconds until it is the case
+      --
       SELECT ag.name
              , drs.database_id
+             , db_name(drs.database_id) as database_name
              , drs.group_id
              , drs.replica_id
              , drs.synchronization_state_desc
-             , drs.end_of_log_lsn 
-        FROM sys.dm_hadr_database_replica_states drs,
-        sys.availability_groups ag
-          WHERE drs.group_id = ag.group_id;      
+             , drs.last_hardened_lsn  
+      FROM sys.dm_hadr_database_replica_states drs 
+      INNER JOIN sys.availability_groups ag on drs.group_id = ag.group_id;
       ```  
 
-    가용성 그룹 **synchronization_state_desc** 가 `SYNCHRONIZED`가 되면 계속합니다. **synchronization_state_desc** 가 `SYNCHRONIZED`가 아니면 변경될 때까지 5초 마다 명령을 실행합니다. **synchronization_state_desc** = `SYNCHRONIZED`가 될 때까지 진행하지 마세요. 
+    가용성 그룹 **synchronization_state_desc**가 `SYNCHRONIZED`가 되고 last_hardened_lsn이 전역 기본 및 전달자에서 둘 다 데이터베이스당 동일해진 후 계속 진행합니다.  **synchronization_state_desc**가 `SYNCHRONIZED`가 아니거나 last_hardened_lsn이 동일하지 않으면 변경될 때까지 5초마다 명령을 실행합니다. **synchronization_state_desc** = `SYNCHRONIZED`가 되고 last_hardened_lsn이 데이터베이스당 동일해질 때까지 진행하지 마세요. 
 
 1. 전역 기본에서 분산 가용성 그룹 역할을 `SECONDARY`로 설정합니다. 
 
@@ -289,23 +294,41 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
     이 시점에서 분산 가용성 그룹은 사용할 수 없습니다.
 
-1. 장애 조치(failover) 준비를 테스트합니다. 다음 쿼리를 실행합니다.
+1. 장애 조치(failover) 준비를 테스트합니다. 전역 기본 및 전달자에서 둘 다 다음 쿼리를 실행합니다.
 
     ```sql
-    SELECT ag.name, 
-        drs.database_id, 
-        drs.group_id, 
-        drs.replica_id, 
-        drs.synchronization_state_desc, 
-        drs.end_of_log_lsn 
-    FROM sys.dm_hadr_database_replica_states drs, sys.availability_groups ag
-    WHERE drs.group_id = ag.group_id; 
+     -- Run this query on the Global Primary and the forwarder
+     -- Check the results to see if the last_hardened_lsn is the same per database on both the global primary and forwarder 
+     -- The availability group is ready to fail over when the last_hardened_lsn is the same for both availability groups per database
+     --
+     SELECT ag.name, 
+         drs.database_id, 
+         db_name(drs.database_id) as database_name,
+         drs.group_id, 
+         drs.replica_id,
+         drs.last_hardened_lsn
+     FROM sys.dm_hadr_database_replica_states drs
+     INNER JOIN sys.availability_groups ag ON drs.group_id = ag.group_id;
     ```  
-    **synchronization_state_desc**가 `SYNCHRONIZED`이고, **end_of_log_lsn**이 두 가용성 그룹에 대해 동일할 경우 가용성 그룹은 장애 조치(failover)할 준비가 됩니다. 
 
-1. 주 가용성 그룹에서 보조 가용성 그룹으로 장애 조치(failover)합니다. 보조 가용성 그룹의 주 복제본을 호스트하는 SQL Server에서 다음 명령을 실행합니다. 
+    **last_hardened_lsn**이 데이터베이스당 두 가용성 그룹에 대해 모두 동일한 경우 가용성 그룹을 장애 조치(failover)할 준비가 된 것입니다. 일정 시간 후에 last_hardened_lsn이 동일하지 않으면 데이터 손실을 방지하기 위해 전역 기본에서 이 명령을 실행하여 전역 기본으로 장애 복구(failback)한 다음, 두 번째 단계에서 다시 시작합니다. 
 
     ```sql
+    -- If the last_hardened_lsn is not the same after a period of time, to avoid data loss, 
+    -- we need to fail back to the global primary by running this command on the global primary 
+    -- and then start over from the second step:
+
+    ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
+    ```
+
+
+1. 주 가용성 그룹에서 보조 가용성 그룹으로 장애 조치(failover)합니다. 보조 가용성 그룹의 주 복제본을 호스트하는 전달자인 SQL Server에서 다음 명령을 실행합니다. 
+
+    ```sql
+    -- Once the last_hardened_lsn is the same per database on both sides
+    -- We can Fail over from the primary availability group to the secondary availability group. 
+    -- Run the following command on the forwarder, the SQL Server instance that hosts the primary replica of the secondary availability group.
+
     ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
     ```  
 

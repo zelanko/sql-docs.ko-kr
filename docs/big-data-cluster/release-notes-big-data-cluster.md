@@ -5,16 +5,16 @@ description: 이 문서에서는 SQL Server 빅 데이터 클러스터의 최신
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ba9d87d4985655b314faf391eaffb8f28ba35519
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9de368594383ef1f7fe3ae3c062f92873fb15698
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75721693"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256906"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 빅 데이터 클러스터 릴리스 정보
 
@@ -50,7 +50,7 @@ ms.locfileid: "75721693"
 
 |플랫폼|지원되는 버전|
 |---------|---------|
-|`azdata`|서버와 동일한 부 버전이어야 합니다(SQL Server 마스터 인스턴스와 동일).<br/>`azdata –-version`을 실행하여 버전을 확인하세요. 현재 이 버전은 `15.0.2070`입니다.|
+|`azdata`|서버와 동일한 부 버전이어야 합니다(SQL Server 마스터 인스턴스와 동일).<br/><br/>`azdata –-version`을 실행하여 버전을 확인하세요.<br/><br/>SQL Server 2019 CU2 기준으로 이 버전은 `15.0.4013`입니다.|
 |Azure Data Studio|[Azure Data Studio](https://aka.ms/getazuredatastudio)의 최신 빌드를 받으세요.|
 
 ## <a name="release-history"></a>릴리스 기록
@@ -59,12 +59,21 @@ ms.locfileid: "75721693"
 
 | 해제               | 버전       | 릴리스 날짜 |
 |-----------------------|---------------|--------------|
+| [CU2](#cu2)           | 15.0.4013.40    | 2020-02-13   |
 | [CU1](#cu1)           | 15.0.4003.23   | 2020-01-07   |
 | [GDR1](#rtm)            | 15.0.2070.34  | 2019-11-04   |
 
 ## <a name="how-to-install-updates"></a>업데이트 설치 방법
 
 업데이트를 설치하려면 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 업그레이드하는 방법](deployment-upgrade.md)을 참조하세요.
+
+## <a id="cu2"></a> CU2(2020년 2월)
+
+SQL Server 2019의 CU2(누적 업데이트 2) 릴리스입니다. 이 릴리스에 대한 SQL Server 데이터베이스 엔진 버전은 15.0.4003.23입니다.
+
+|패키지 버전 | 이미지 태그 |
+|-----|-----|
+|15.0.4013.40 |[2019-CU2-ubuntu-16.04]
 
 ## <a id="cu1"></a> CU1(2020년 1월)
 
@@ -127,9 +136,9 @@ SQL Server 2019 GDR1(일반 배포 릴리스 1) - [!INCLUDE[big-data-clusters-20
 
        **`controllerUpgradeTimeoutInMinutes`** 컨트롤러 또는 컨트롤러 db의 업그레이드가 완료될 때까지 대기할 시간(분)을 지정합니다. 기본값은 5입니다. 20 이상으로 업데이트합니다.
 
-       **`totalUpgradeTimeoutInMinutes`** : 컨트롤러와 컨트롤러 db 모두가 업그레이드를 완료하는 데 걸리는 시간을 합한 값을 지정합니다(컨트롤러 + 컨트롤러 db 업그레이드). 기본값은 10입니다. 40 이상으로 업데이트합니다.
+       **`totalUpgradeTimeoutInMinutes`**: 컨트롤러와 컨트롤러 db 모두가 업그레이드를 완료하는 데 걸리는 시간을 합한 값을 지정합니다(컨트롤러 + 컨트롤러 db 업그레이드). 기본값은 10입니다. 40 이상으로 업데이트합니다.
 
-       **`componentUpgradeTimeoutInMinutes`** : 업그레이드의 각 후속 단계를 완료해야 하는 기간을 지정합니다.  기본값은 30입니다. 45로 업데이트합니다.
+       **`componentUpgradeTimeoutInMinutes`**: 업그레이드의 각 후속 단계를 완료해야 하는 기간을 지정합니다.  기본값은 30입니다. 45로 업데이트합니다.
 
    3.   저장한 후 종료합니다.
 

@@ -1,5 +1,5 @@
 ---
-title: 지도에 사용자 지정 위치 추가(보고서 작성기 및 SSRS) | Microsoft Docs
+title: 지도에 사용자 지정 위치 추가(보고서 작성기) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 7d36faae-5bcc-446a-9eba-f42349cafacb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a30767791e18e0ba3162e8fd8f15df2f1c3dde6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 137b15dc1390ed6b5aef352041d8c9c481db89e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65582021"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081643"
 ---
 # <a name="add-custom-locations-to-a-map-report-builder-and-ssrs"></a>지도에 사용자 지정 위치 추가(보고서 작성기 및 SSRS)
   페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에 지도를 추가한 후 점 위치를 추가할 수 있습니다.  

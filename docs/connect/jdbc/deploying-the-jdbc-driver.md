@@ -1,7 +1,7 @@
 ---
 title: JDBC 드라이버 배포 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/28/2019
+ms.date: 01/20/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 518f6bd2605d92857520f870b20edcd351771c54
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 99ca0fab9a23689ac9c20cad6ebf0d94dd7b2113
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73049842"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004671"
 ---
 # <a name="deploying-the-jdbc-driver"></a>JDBC 드라이버 배포
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -30,15 +30,8 @@ ms.locfileid: "73049842"
 >  일반적으로 Java 애플리케이션을 배포하는 방법은 Java 웹 사이트(영문)를 참조하십시오.  
   
 ## <a name="deploying-the-jdbc-driver-on-windows-systems"></a>Windows 시스템에서 JDBC 드라이버 배포  
- Windows 운영 체제에서 JDBC 드라이버를 배포하는 경우 일반적으로 이름이 `sqljdbc_<version>_<language>.exe`인 설치 패키지의 zip 실행 파일 버전을 사용해야 합니다.  
-  
- 이 zip 실행 파일을 자동으로 실행하려면 다음과 같이 명령줄이나 배치 파일에서 `/auto` 명령줄 옵션을 사용해야 합니다.  
-  
- `sqljdbc_<version>_<language>.exe /auto`  
-  
-> [!NOTE]  
->  `/auto` 옵션을 사용하더라도 WinZip 대화 상자가 사용자 화면에 표시되므로 완전한 자동 설치 작업은 아닙니다. 그러나 대화 상자에 답할 필요는 없으며 압축 풀기 작업이 완료되자마자 대화 상자가 닫힙니다.  
-  
+ Windows 운영 체제에서 JDBC 드라이버를 배포하는 경우 일반적으로 이름이 `sqljdbc_<version>_<language>.zip`인 압축된 설치 패키지의 압축을 풀어야 합니다.
+
 ## <a name="deploying-the-driver-on-unix-systems"></a>UNIX 시스템에서 JDBC 드라이버 배포 
  UNIX 운영 체제에서 JDBC 드라이버를 배포하는 경우 일반적으로 이름이 `sqljdbc_<version>_<language>.tar.gz`인 설치 패키지의 gzip 파일 버전을 사용해야 합니다.  
   
@@ -54,7 +47,7 @@ ms.locfileid: "73049842"
 
 ## <a name="legalities-of-driver-redistribution"></a>드라이버 재배포의 법률적 측면
 
-JDBC 드라이버 버전 6.0, 6.2, 6.4 및 7.0은 재배포 가능합니다. 라이선스 계약의 _배포 가능 코드_ 절을 검토하세요.
+JDBC 드라이버 버전 6.0, 6.2, 6.4, 7.0, 7.2, 7.4 및 8.2는 재배포 가능합니다. 라이선스 계약의 _배포 가능 코드_ 절을 검토하세요.
 
 JDBC 드라이버 버전 4.x는 더 이상 사용되지 않습니다. 4\.x에 대한 지원은 2018년 이전에 만료되었습니다.
 

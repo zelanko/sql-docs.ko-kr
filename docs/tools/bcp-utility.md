@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/23/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 6fcb5285a7ec24b8b27afd86cd0b77777f716ce3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8aefcae2c8e9c449061b18b4287968120dbae852
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76761547"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544912"
 ---
 # <a name="bcp-utility"></a>bcp 유틸리티
 
@@ -52,16 +52,16 @@ ms.locfileid: "76761547"
 
 ## <a name="download-the-latest-version-of-bcp-utility"></a>최신 버전의 bcp 유틸리티 다운로드
 
-**[![다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15.0(x64) 다운로드](https://go.microsoft.com/fwlink/?linkid=2043518)**
-<br>**[![다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15.0(x86) 다운로드](https://go.microsoft.com/fwlink/?linkid=2043622)**
+**[![다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15(x64) 다운로드](https://go.microsoft.com/fwlink/?linkid=2082790)**
+<br>**[![다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15(x86) 다운로드](https://go.microsoft.com/fwlink/?linkid=2082695)**
 
 명령줄 도구는 일반적으로 공급되지만(GA) [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 설치 관리자 패키지로 릴리스됩니다.
 
 ### <a name="version-information"></a>버전 정보
 
 릴리스 번호: 15.0 <br>
-빌드 번호: 15.0.1000.34<br>
-릴리스 날짜: 2018년 10월 18일
+빌드 번호: 15.0.1300.359<br>
+릴리스 날짜: 2019년 3월 13일
 
 신규 버전의 SQLCMD는 Azure AD 인증을 지원하며, 여기에는 SQL Database, SQL Data Warehouse, Always Encrypted 기능에 대한 다단계 인증(MFA) 지원이 포함됩니다.
 신규 버전의 BCP는 Azure AD 인증을 지원하며, 여기에는 SQL Database, SQL Data Warehouse 기능에 대한 다단계 인증(MFA) 지원이 포함됩니다.
@@ -70,9 +70,9 @@ ms.locfileid: "76761547"
 
 Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
 
-이 구성 요소에는 [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 및 [Microsoft ODBC Driver 17.3 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567)가 모두 필요합니다.
+이 구성 요소에는 [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 및 [Microsoft ODBC Driver 17 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567)가 둘 다 필요합니다.
 
-BCP 버전 확인을 위해 `bcp /v` 명령을 실행하고 15.0.1000.34 이상이 사용 중인지 확인합니다.
+BCP 버전 확인을 위해 `bcp /v` 명령을 실행하고 15.0.1300.359 이상이 사용 중인지 확인합니다.
 
 <table><th>구문</th><tr><td><pre>
 bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}
@@ -117,12 +117,12 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
  _**data\_file**_ <a name="data_file"></a>  
  데이터 파일의 전체 경로입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로 데이터를 대량으로 가져오는 경우 데이터 파일에는 지정한 테이블 또는 뷰로 복사할 데이터가 포함됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 데이터를 대량으로 내보내는 경우 데이터 파일에는 테이블 또는 뷰에서 복사한 데이터가 포함됩니다. 데이터 파일 경로는 1에서 255자까지 포함할 수 있습니다. 데이터 파일에는 최대 2^63 - 1개의 행이 포함될 수 있습니다.  
-  
+
  _**database\_name**_ <a name="db_name"></a>  
  지정한 테이블 또는 뷰가 있는 데이터베이스의 이름입니다. 이 인수를 지정하지 않으면 사용자의 기본 데이터베이스를 사용합니다.  
-  
+
  **d-** 를 사용하여 데이터베이스 이름을 명시적으로 지정할 수도 있습니다.  
-  
+
  **in** *data_file* | **out** *data_file* | **queryout** *data_file* | **format nul**  
  다음과 같이 대량 복사 방향을 지정합니다.  
   
@@ -211,7 +211,8 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  *first_row* 는 최대 2^63-1의 값을 갖는 양의 정수입니다. **-F***first_row*는 1부터 시작합니다.  
 
-**-G**<a name="G"></a>  
+**-G**<a name="G"></a>
+
  이 스위치는 Azure Active Directory 인증을 사용하여 사용자를 인증하도록 지정하기 위해 Azure SQL Data Warehouse 또는 Azure SQL Database에 연결할 때 클라이언트에서 사용됩니다. -G 스위치를 사용하려면 [버전 14.0.3008.27 이상](https://go.microsoft.com/fwlink/?LinkID=825643)이 필요합니다. 사용 중인 버전을 확인하려면 bcp -v를 실행하세요. 자세한 내용은 [SQL Database 및 SQL Data Warehouse에서 인증을 위해 Azure Active Directory 인증 사용](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)을 참조하세요. 
 
 > [!IMPORTANT]
@@ -219,58 +220,60 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > AAD 통합 및 대화형 인증은 현재 Linux 또는 macOS에서 지원되지 않습니다.
 
 > [!TIP]
->  해당 버전의 bcp에 AAD(Azure Active Directory) 인증에 대한 지원이 포함되는지 확인하려면 **bcp --** (bcp\<space>\<dash>\<dash>)를 입력하고 사용 가능한 인수 목록에 -G가 표시되는지 확인합니다.
+> 해당 버전의 bcp에 AAD(Azure Active Directory) 인증에 대한 지원이 포함되는지 확인하려면 **bcp --** (bcp\<space>\<dash>\<dash>)를 입력하고 사용 가능한 인수 목록에 -G가 표시되는지 확인합니다.
 
 - **Azure Active Directory 사용자 이름 및 암호:** 
 
     Azure Active Directory의 사용자 이름과 암호를 사용하려는 경우 **-G** 옵션을 제공하고 **-U** 및 **-P** 옵션도 제공하여 사용자 이름 및 암호를 사용할 수 있습니다. 
 
     다음 예제에서는 Azure AD 사용자 이름과 암호가 AAD 자격 증명일 경우 이 사용자와 암호를 사용하여 데이터를 내보냅니다. 이 예제에서는 Azure 서버 `aadserver.database.windows.net`에서 데이터베이스 `testdb`의 테이블 `bcptest`를 내보내고 데이터를 파일 `c:\last\data1.dat`에 저장합니다.
-    ``` 
+
+    ```cmd
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
-    ``` 
+    ```
 
     다음 예제에서는 Azure AD 사용자 이름과 암호가 AAD 자격 증명일 경우 이 사용자와 암호를 사용하여 데이터를 가져옵니다. 예제에서는 Azure AD 사용자/암호를 사용하여 Azure 서버 `aadserver.database.windows.net`의 데이터베이스 `testdb`에 대해 파일 `c:\last\data1.dat`의 데이터를 테이블 `bcptest`로 가져옵니다.
-    ```
+
+    ```cmd
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
 - **Azure Active Directory 통합**
 
-    Azure Active Directory 통합 인증을 위해 사용자 이름이나 암호 없이 **-G** 옵션을 제공합니다. 이 구성에서는 현재 Windows 사용자 계정(bcp 명령이 실행 중인 계정)이 Azure AD와 페더레이션되었다고 가정합니다. 
+    Azure Active Directory 통합 인증을 위해 사용자 이름이나 암호 없이 **-G** 옵션을 제공합니다. 이 구성에서는 현재 Windows 사용자 계정(bcp 명령이 실행 중인 계정)이 Azure AD와 페더레이션되었다고 가정합니다.
 
     다음 예제에서는 Azure AD 통합 계정을 사용하여 데이터를 내보냅니다. 이 예제에서는 Azure 서버 `aadserver.database.windows.net`에서 Azure AD 통합을 사용하는 데이터베이스 `testdb`의 테이블 `bcptest`를 내보내고 데이터를 파일 `c:\last\data2.dat`에 저장합니다.
 
-    ```
+    ```cmd
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
     다음 예제에서는 Azure AD 통합 인증을 사용하여 데이터를 가져옵니다. 예제에서는 Azure AD 통합 인증을 사용하여 Azure 서버 `aadserver.database.windows.net`의 데이터베이스 `testdb`에 대해 파일 `c:\last\data2.txt`의 데이터를 테이블 `bcptest`로 가져옵니다.
 
-    ```
+    ```cmd
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
 - **Azure Active Directory 대화형**  
 
-   사용자는 Azure SQL Database와 SQL Data Warehouse의 Azure AD 대화형 인증으로 다단계 인증을 지원하는 대화형 메서드를 사용할 수 있습니다. 자세한 내용은 [Active Directory 대화형 인증](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)을 참조하세요. 
+   사용자는 Azure SQL Database와 SQL Data Warehouse의 Azure AD 대화형 인증으로 다단계 인증을 지원하는 대화형 메서드를 사용할 수 있습니다. 자세한 내용은 [Active Directory 대화형 인증](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)을 참조하세요.
 
    Azure AD 대화형에는 **bcp** [버전 15.0.1000.34](#download-the-latest-version-of-bcp-utility) 이상과 [ODBC 버전 17.2 이상](https://www.microsoft.com/download/details.aspx?id=56567)이 필요합니다.  
 
-   대화형 인증을 사용 설정하려면 암호 없이 사용자 이름(-U)으로만 -G 옵션을 제공해야 합니다.   
+   대화형 인증을 사용 설정하려면 암호 없이 사용자 이름(-U)으로만 -G 옵션을 제공해야 합니다.
 
-   다음 예제에서는 사용자가 AAD 계정에 해당할 경우 Azure AD 대화형 모드(사용자 이름 표시)를 사용하여 데이터를 내보냅니다. 이는 이전 섹션에 사용된 예제와 동일합니다. *Azure Active Directory 사용자 이름 및 암호*  
+   다음 예제에서는 사용자가 AAD 계정에 해당할 경우 Azure AD 대화형 모드(사용자 이름 표시)를 사용하여 데이터를 내보냅니다. 이는 이전 섹션 *Azure Active Directory 사용자 이름 및 암호*에 사용된 예제와 동일합니다.  
 
-   대화형 모드에서는 암호를 수동으로 입력해야 하며, 다단계 인증이 사용 설정된 계정의 경우에는 구성된 MFA 인증 메서드를 완료해야 합니다. 
+   대화형 모드에서는 암호를 수동으로 입력해야 하며, 다단계 인증이 사용 설정된 계정의 경우에는 구성된 MFA 인증 메서드를 완료해야 합니다.
 
-   ``` 
-   bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com 
-   ``` 
-
-   Azure AD 사용자가 Windows 계정을 사용하여 페더레이션되는 도메인인 경우에는 명령줄에 필요한 사용자 이름에 도메인 계정이 포함됩니다(예: joe@contoso.com 아래 참조).   
-
+   ```cmd
+   bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com
    ```
-   bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com 
+
+   Azure AD 사용자가 Windows 계정을 사용하여 페더레이션되는 도메인인 경우에는 명령줄에 필요한 사용자 이름에 도메인 계정이 포함됩니다(예: joe@contoso.com 아래 참조).
+
+   ```cmd
+   bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com
    ```
 
    특정 Azure AD에 있는 게스트 사용자가 bcp 명령을 실행할 데이터베이스 권한이 있는 SQL DB 내의 그룹에 포함되는 경우, 이들의 게스트 사용자 별칭이 사용됩니다(예: *keith0@adventureworks.com* ).
@@ -304,7 +307,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
   > [!NOTE]
   > **bcp**는 이제 데이터 유효성 검사 및 데이터 검사를 강제로 실행하므로 스크립트를 데이터 파일의 잘못된 데이터에 대해 실행할 경우 오류가 발생할 수 있습니다.
-  
+
   > [!NOTE]
   > **-m** *max_errors* 스위치는 제약 조건 검사에 적용되지 않습니다.
   
@@ -439,18 +442,29 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 ## 주의<a name="remarks"></a>
 
- 총 **bcp** 도구를 설치하면 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 13.0 클라이언트가 설치됩니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 와 이전 버전 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]둘 다에 대해 도구가 설치된 경우 PATH 환경 변수의 값에 따라 **bcp** 13.0 클라이언트 대신 이전 **bcp** 클라이언트를 사용하게 될 수 있습니다. 이 환경 변수는 실행 파일을 검색하기 위해 Windows에서 사용하는 디렉터리 집합을 정의합니다. 사용 중인 버전을 확인하려면 Windows 명령 프롬프트에서 **bcp /v** 명령을 실행합니다. PATH 환경 변수에서 명령 경로를 설정하는 방법은 Windows 도움말을 참조하십시오.  
- 
-bcp 유틸리티는 [Microsoft SQL Server 2016 기능 팩](https://www.microsoft.com/download/details.aspx?id=52676)에서 별도로 다운로드할 수도 있습니다.  `ENU\x64\MsSqlCmdLnUtils.msi` 또는 `ENU\x86\MsSqlCmdLnUtils.msi`중에 선택합니다.
+- 총 **bcp** 도구를 설치하면 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 13.0 클라이언트가 설치됩니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 와 이전 버전 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]둘 다에 대해 도구가 설치된 경우 PATH 환경 변수의 값에 따라 **bcp** 13.0 클라이언트 대신 이전 **bcp** 클라이언트를 사용하게 될 수 있습니다. 이 환경 변수는 실행 파일을 검색하기 위해 Windows에서 사용하는 디렉터리 집합을 정의합니다. 사용 중인 버전을 확인하려면 Windows 명령 프롬프트에서 **bcp /v** 또는 **bcp -v** 명령을 실행합니다. PATH 환경 변수에서 명령 경로를 설정하는 방법은 [환경 변수](https://docs.microsoft.com/windows/win32/shell/user-environment-variables)를 참조하거나 Windows 도움말에서 환경 변수를 검색하세요.
 
-  
- XML 서식 파일은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 도구를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client와 함께 설치한 경우에만 지원됩니다.  
-  
- **bcp** 유틸리티의 위치 또는 실행 방법과 명령 프롬프트 유틸리티 구문 표기 규칙에 대한 자세한 내용은 [명령 프롬프트 유틸리티 참조&#40;데이터베이스 엔진#41;](../tools/command-prompt-utility-reference-database-engine.md)를 참조하세요.  
-  
- 대량 가져오기 또는 내보내기 작업을 위해 데이터를 준비하는 방법은 [대량 내보내기 또는 가져오기를 위한 데이터 준비&#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)에 대한 지식이 필요하지 않습니다.  
-  
- 대량 가져오기로 수행된 행 삽입 작업이 트랜잭션 로그에 기록되는 경우에 대한 자세한 내용은 [대량 가져오기의 최소 로깅을 위한 선행 조건](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)을 참조하세요.  
+    최신 버전의 bcp 유틸리티가 실행되고 있는지 확인하려면 이전 버전의 bcp 유틸리티를 모두 제거해야 합니다.
+    
+    모든 버전의 bcp 유틸리티가 설치된 위치를 확인하려면 명령 프롬프트에 다음을 입력합니다.
+    
+    ```cmd
+    where bcp.exe
+    ```
+
+- bcp 유틸리티는 [Microsoft SQL Server 2016 기능 팩](https://www.microsoft.com/download/details.aspx?id=52676)에서 별도로 다운로드할 수도 있습니다.  `ENU\x64\MsSqlCmdLnUtils.msi` 또는 `ENU\x86\MsSqlCmdLnUtils.msi`중에 선택합니다.
+
+- XML 서식 파일은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 도구를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client와 함께 설치한 경우에만 지원됩니다.
+
+- **bcp** 유틸리티의 위치 또는 실행 방법과 명령 프롬프트 유틸리티 구문 표기 규칙에 대한 자세한 내용은 [명령 프롬프트 유틸리티 참조&#40;데이터베이스 엔진#41;](../tools/command-prompt-utility-reference-database-engine.md)를 참조하세요.
+
+- 대량 가져오기 또는 내보내기 작업을 위해 데이터를 준비하는 방법은 [대량 내보내기 또는 가져오기를 위한 데이터 준비&#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)에 대한 지식이 필요하지 않습니다.
+
+- 대량 가져오기로 수행된 행 삽입 작업이 트랜잭션 로그에 기록되는 경우에 대한 자세한 내용은 [대량 가져오기의 최소 로깅을 위한 선행 조건](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)을 참조하세요.
+
+- [추가 특수 문자 사용](https://docs.microsoft.com/windows-server/administration/windows-commands/set_1#remarks)
+
+    <, >, |, &, ^ 문자는 특수 명령 셸 문자이며, 문자열에서 사용될 경우 이스케이프 문자(^) 또는 따옴표로 묶어야 합니다(예: “StringContaining&Symbol”). 따옴표를 사용하여 특수 문자 중 하나를 포함하는 문자열을 묶을 경우 따옴표는 환경 변수 값의 일부로 설정됩니다.
 
 ## <a name="native-data-file-support"></a>네이티브 데이터 파일 지원
 
@@ -569,7 +583,7 @@ GO
 
 SET NOCOUNT ON;
 
-IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Warehouse.StockItemTransactions_bcp')     
+IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Warehouse.StockItemTransactions_bcp')
 BEGIN
     SELECT * INTO WideWorldImporters.Warehouse.StockItemTransactions_bcp
     FROM WideWorldImporters.Warehouse.StockItemTransactions  
@@ -590,7 +604,7 @@ END
 
 명령 프롬프트에서 다음 명령을 입력합니다.
 
-```
+```cmd
 bcp -v
 ```
   
@@ -602,7 +616,7 @@ bcp -v
 
   명령 프롬프트에서 다음 명령을 입력합니다.
 
-  ```
+  ```cmd
   bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -624,7 +638,7 @@ bcp -v
 
 명령 프롬프트에서 다음 명령을 입력합니다. \(시스템에서 암호를 묻는 메시지를 표시합니다.\)
 
-```
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```
 
@@ -636,7 +650,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTrans
 
   명령 프롬프트에서 다음 명령을 입력합니다.
 
-  ```
+  ```cmd
   bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -644,7 +658,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTrans
   
 명령 프롬프트에서 다음 명령을 입력합니다.
 
-```
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T
 ```
 
@@ -656,7 +670,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTr
   
 명령 프롬프트에서 다음 명령을 입력합니다.
 
-```
+```cmd
 bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
 ```
 
@@ -666,7 +680,7 @@ bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTr
   
 명령 프롬프트에서 다음 명령을 입력합니다.
 
-```
+```cmd
 bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
 ```
 
@@ -676,7 +690,7 @@ Transact-SQL 문의 결과 집합을 데이터 파일로 복사하려면 **query
 
 명령 프롬프트에서 다음 명령을 입력합니다.
 
-```
+```cmd
 bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
 ```
 
@@ -686,7 +700,7 @@ bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People O
 
 명령 프롬프트에서 다음 명령을 입력합니다.
 
-```
+```cmd
 REM non-XML character format
 bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
@@ -708,12 +722,12 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\Stoc
 
 명령 프롬프트에서 다음 명령을 입력합니다.
 
-```
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T
 ```
 
-> [!NOTE]  
->  데이터 파일 필드와 테이블 열의 숫자, 순서, 데이터 형식 등이 다른 경우 서식 파일을 사용하면 유용합니다. 자세한 내용은 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)를 참조하세요.  
+> [!NOTE]
+> 데이터 파일 필드와 테이블 열의 숫자, 순서, 데이터 형식 등이 다른 경우 서식 파일을 사용하면 유용합니다. 자세한 내용은 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)를 참조하세요.  
 
 ### <a name="j-specifying-a-code-page"></a>J. 코드 페이지 지정
 
@@ -731,13 +745,19 @@ bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...
 
 ## <a name="see-also"></a>참고 항목
 
- [대량 내보내기 또는 가져오기를 위한 데이터 준비&#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
- [BULK INSERT&#40;Transact-SQL&#41;](../t-sql/statements/bulk-insert-transact-sql.md)   
- [OPENROWSET&#40;Transact-SQL&#41;](../t-sql/functions/openrowset-transact-sql.md)   
- [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../t-sql/statements/set-quoted-identifier-transact-sql.md)   
- [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [sp_tableoption&#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
- [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
+- [대량 내보내기 또는 가져오기를 위한 데이터 준비&#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)
+
+- [BULK INSERT&#40;Transact-SQL&#41;](../t-sql/statements/bulk-insert-transact-sql.md)
+
+- [OPENROWSET&#40;Transact-SQL&#41;](../t-sql/functions/openrowset-transact-sql.md)
+
+- [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../t-sql/statements/set-quoted-identifier-transact-sql.md)
+
+- [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+
+- [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)
+
+- [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
 
 ## <a name="feedback"></a>사용자 의견
 

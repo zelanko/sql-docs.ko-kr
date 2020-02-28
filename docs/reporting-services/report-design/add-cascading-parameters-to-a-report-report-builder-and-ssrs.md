@@ -1,5 +1,5 @@
 ---
-title: 보고서에 연계 매개 변수 추가(보고서 작성기 및 SSRS) | Microsoft Docs
+title: 보고서에 연계 매개 변수 추가(보고서 작성기) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 56f701d86c180b6bb1d10c3c6ffebfbe057eaf7c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 55cba07f738c9a7a6b87f656687f545b64fd14cf
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65582084"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080624"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>보고서에 연계 매개 변수 추가(보고서 작성기 및 SSRS)
   연계 매개 변수를 사용하면 대량의 보고서 데이터를 관리할 수 있습니다. 한 매개 변수의 값 목록이 다른 매개 변수에서 선택한 값에 따라 달라지는 관련 매개 변수 집합을 정의할 수 있습니다. 예를 들어 첫 번째 매개 변수가 제품 범주 목록을 나타내는 독립적인 매개 변수이고 사용자가 범주를 선택하면 두 번째 매개 변수가 첫 번째 매개 변수의 값에 종속됩니다. 즉, 두 번째 매개 변수의 값이 선택된 범위 내 하위 범주의 목록으로 업데이트됩니다. 사용자가 보고서를 볼 때 범주 및 하위 범주 매개 변수 모두에 대한 값으로 보고서 데이터가 필터링됩니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "65582084"
   
     2.  각 연계 매개 변수당 하나의 쿼리 매개 변수. 쿼리 매개 변수는 쿼리에서 포함하거나 제외할 값을 지정하여 데이터 원본에서 검색되는 데이터를 제한합니다. 일반적으로 쿼리 매개 변수는 쿼리의 제약 조건 절에 넣습니다. 예를 들어 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문에서는 WHERE 절에 쿼리 매개 변수를 넣습니다.  
   
-6.  **실행** ( **!** )을 클릭합니다. 쿼리 매개 변수를 넣은 다음 쿼리를 실행하면 쿼리 매개 변수에 해당하는 보고서 매개 변수가 자동으로 생성됩니다.  
+6.  **실행** (**!**)을 클릭합니다. 쿼리 매개 변수를 넣은 다음 쿼리를 실행하면 쿼리 매개 변수에 해당하는 보고서 매개 변수가 자동으로 생성됩니다.  
   
     > [!NOTE]  
     >  처음 쿼리를 실행할 때 쿼리 매개 변수의 순서에 따라 보고서에서 매개 변수가 생성되는 순서가 결정됩니다. 순서를 변경하려면 [보고서 매개 변수의 순서 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)을 참조하세요.  
@@ -70,7 +70,7 @@ ms.locfileid: "65582084"
   
      SELECT DISTINCT 명령은 지정된 테이블의 지정된 열에서 각각의 고유값을 가져올 수 있도록 결과 집합에서 중복 값을 제거합니다.  
   
-     **실행** ( **!** )을 클릭합니다. 결과 집합은 이 첫 번째 매개 변수에 사용 가능한 값을 표시합니다.  
+     **실행** (**!**)을 클릭합니다. 결과 집합은 이 첫 번째 매개 변수에 사용 가능한 값을 표시합니다.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

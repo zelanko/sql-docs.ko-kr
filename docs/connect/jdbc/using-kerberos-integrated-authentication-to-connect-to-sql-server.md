@@ -1,7 +1,7 @@
 ---
 title: Kerberos 통합 인증을 사용하여 SQL Server에 연결 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2215e9f6b6c8cd0e19c220d16ebc7a1520550a42
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cfa4c91dc0d4d40f8cf903301acb2433dcaf6f7a
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69026188"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004633"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Kerberos 통합 인증을 사용하여 SQL Server에 연결
 
@@ -37,13 +37,13 @@ Java **Krb5LoginModule**과 함께 통합 인증을 사용하면 [Class Krb5Logi
 
 ## <a name="remarks"></a>설명
 
-[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 이전에는 [연결 URL 작성](../../connect/jdbc/building-the-connection-url.md)에 설명된 대로 애플리케이션에서 **integratedSecurity** 연결 속성을 사용하고 **sqljdbc_auth.dll**을 참조하여 통합 인증(Kerberos 또는 NTLM 중 사용 가능한 인증 사용)을 지정할 수 있었습니다.
+[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 이전에는 [연결 URL 작성](../../connect/jdbc/building-the-connection-url.md)에 설명된 대로 애플리케이션에서 **integratedSecurity** 연결 속성을 사용하고 **mssql-jdbc_auth-\<버전>-\<arch>.dll**을 참조하여 통합 인증(Kerberos 또는 NTLM 중 사용 가능한 인증 사용)을 지정할 수 있었습니다.
 
 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]부터 애플리케이션에서는 순수한 Java Kerberos 구현을 사용하는 Kerberos 통합 인증을 사용하여 데이터베이스에 연결한다는 것을 나타내기 위해 **authenticationScheme** 연결 속성을 사용할 수 있습니다.
 
 - **Krb5LoginModule**을 사용하는 통합 인증을 원하는 경우에도 여전히 **integratedSecurity=true** 연결 속성을 지정해야 합니다. 그런 다음 **authenticationScheme=JavaKerberos** 연결 속성도 지정해야 합니다.
 
-- 통합 인증을 계속 **sqljdbc_auth.dll**과 함께 사용하려면 **integratedSecurity=true** 연결 속성을 지정하고 필요에 따라 **authenticationScheme=NativeAuthentication**을 지정하면 됩니다.
+- 통합 인증을 계속 **mssql-jdbc_auth-\<버전>-\<arch>.dll**과 함께 사용하려면 **integratedSecurity=true** 연결 속성을 지정하고 필요에 따라 **authenticationScheme=NativeAuthentication**을 지정하면 됩니다.
 
 - **authenticationScheme=JavaKerberos**를 지정하지만 **integratedSecurity=true**는 지정하지 않는 경우 드라이버는 **authenticationScheme** 연결 속성을 무시하고 연결 문자열에 사용자 이름 및 암호 자격 증명이 있을 것으로 예상합니다.
 

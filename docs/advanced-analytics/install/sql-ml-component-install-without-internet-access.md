@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e966406a20df723c453a5c8083f00f2e4989d9d0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 29beb747952451f11762132726a204ada903a24e
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74064134"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074491"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>인터넷 액세스가 없는 컴퓨터에 SQL Server 기계 학습 R 및 Python 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "74064134"
 해제  |다운로드 링크  |
 ---------|---------------|
 Microsoft R Open        | [SRO_3.5.2.125_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085686) |
-Microsoft R 서버      | [SRS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085792) |
+Microsoft R 서버      | [SRS_9.4.7.32_1033.cab](https://go.microsoft.com/fwlink/?linkid=2100159) |
 Microsoft Python Open   | [SPO_4.5.12.120_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085793) |
-Microsoft Python Server | [SPS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085685) |
+Microsoft Python Server | [SPS_9.4.7.32_1033.cab](https://go.microsoft.com/fwlink/?linkid=2100160) |
 
 > [!NOTE]
 > Java 기능은 SQL Server 설치 미디어에 포함되어 있으며 별도의 CAB 파일이 필요하지 않습니다.

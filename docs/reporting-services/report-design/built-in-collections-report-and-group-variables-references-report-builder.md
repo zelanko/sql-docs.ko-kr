@@ -1,5 +1,5 @@
 ---
-title: 보고서 및 그룹 변수 컬렉션 참조(보고서 작성기 및 SSRS) | Microsoft Docs
+title: 보고서 및 그룹 변수 컬렉션 참조(보고서 작성기) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 97123f3e9802ddbdf452f66e83a1b3c00f99764d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 77373c2a1a160c7621f54f3701564eebe1312618
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581775"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081448"
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>기본 제공 컬렉션 - 보고서 및 그룹 변수 참조(보고서 작성기)
   보고서의 식에서 두 번 이상 사용되는 복잡한 계산이 있는 경우 변수를 만들어 사용할 수 있습니다. 보고서 변수 또는 그룹 변수를 만들 수 있습니다. 변수 이름은 보고서에서 고유해야 합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "65581775"
 ## <a name="group-variables"></a>그룹 변수  
  그룹 변수를 사용하여 복잡한 식을 그룹 범위에서 한 번에 계산할 수 있습니다. 그룹 변수는 그룹 및 해당 자식 그룹의 범위 내에서만 유효합니다.  
   
- 예를 들어 서로 다른 세금 범주에 속한 항목에 대한 재고 데이터를 표시하는 데이터 영역이 있고 각 범주에 대해 서로 다른 세율을 적용하려는 경우를 가정해 보겠습니다. Category에서 데이터를 그룹화하고 부모 그룹에서 *Tax* 변수를 정의합니다. 그런 다음 *ItemTax* 에 대한 그룹 변수를 각 세금 범주에 정의하고 서로 다른 각 Category 하위 그룹을 적절한 그룹 변수에 할당합니다. 다음은 그 예입니다.  
+ 예를 들어 서로 다른 세금 범주에 속한 항목에 대한 재고 데이터를 표시하는 데이터 영역이 있고 각 범주에 대해 서로 다른 세율을 적용하려는 경우를 가정해 보겠습니다. Category에서 데이터를 그룹화하고 부모 그룹에서 *Tax* 변수를 정의합니다. 그런 다음 *ItemTax* 에 대한 그룹 변수를 각 세금 범주에 정의하고 서로 다른 각 Category 하위 그룹을 적절한 그룹 변수에 할당합니다. 다음은 그 예입니다.   
   
 -   `[Category]`기반의 부모 그룹에 대해 *Tax* 변수를 `[Tax]`값으로 정의합니다. 범주 값은 Food와 Clothing이라고 가정하겠습니다.  
   

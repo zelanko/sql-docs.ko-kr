@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: ca998b57715b874d6bc9b851f4710bb3c3e749d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 15165b25ba9b8bb4b44172ccd99c3c0c1a2f29bf
+ms.sourcegitcommit: 74afe6bdd021f62275158a8448a07daf4cb6372b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75002338"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144200"
 ---
 # <a name="hints-transact-sql---query"></a>힌트(Transact-SQL) - 쿼리
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,6 +105,7 @@ ms.locfileid: "75002338"
   | OPTIMIZE FOR ( @variable_name { UNKNOWN | = literal_constant } [ , ...n ] )  
   | OPTIMIZE FOR UNKNOWN  
   | PARAMETERIZATION { SIMPLE | FORCED }   
+  | QUERYTRACEON trace_flag   
   | RECOMPILE  
   | ROBUST PLAN   
   | USE HINT ( '<hint_name>' [ , ...n ] )
@@ -154,7 +155,7 @@ EXPAND VIEWS
   
 이 쿼리 힌트는 쿼리 계획에서 인덱싱된 뷰와 인덱싱된 뷰의 인덱스를 직접 사용하도록 허용하지 않습니다.  
   
-인덱싱된 뷰는 쿼리의 SELECT 부분에서 뷰를 직접 참조하는 경우 축소되어 있습니다. WITH (NOEXPAND) 또는 WITH (NOEXPAND, INDEX(index\_value_ [ **,** _...n_ ] ) )를 지정하는 경우에도 뷰는 축소되어 있습니다. 쿼리 힌트 NOEXPAND에 대한 자세한 내용은 [NOEXPAND 사용](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand)을 참조하세요.  
+인덱싱된 뷰는 쿼리의 SELECT 부분에서 뷰를 직접 참조하는 경우 축소되어 있습니다. WITH (NOEXPAND) 또는 WITH (NOEXPAND, INDEX(index\_value_ [ **,**_...n_ ] ) )를 지정하는 경우에도 뷰는 축소되어 있습니다. 쿼리 힌트 NOEXPAND에 대한 자세한 내용은 [NOEXPAND 사용](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand)을 참조하세요.  
   
 힌트는 INSERT, UPDATE, MERGE 및 DELETE 문에 해당 뷰를 포함하여 문의 SELECT 부분에서만 뷰에 영향을 줍니다.  
   
@@ -186,7 +187,7 @@ KEEPFIXED PLAN
 통계 변경 시에 최적화 프로그램이 쿼리를 다시 컴파일하지 않도록 합니다. KEEPFIXED PLAN을 지정하면 원본으로 사용하는 테이블의 스키마가 바뀌거나 해당 테이블에 대해 **sp_recompile**이 실행되는 경우에만 쿼리를 다시 컴파일합니다.  
   
 IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX       
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상부터)  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상부터).  
   
 쿼리에 비클러스터형 메모리 액세스에 최적화된 columnstore 인덱스가 사용되지 않도록 방지합니다. 쿼리에 columnstore 인덱스 사용을 방지하기 위한 쿼리 힌트와 columnstore 인덱스를 사용하기 위한 인덱스 힌트가 포함되어 있으면 힌트가 충돌하게 되고 오류가 반환됩니다.  
   
@@ -240,7 +241,7 @@ OPTIMIZE FOR UNKNOWN
 쿼리가 컴파일 및 최적화될 때 쿼리 최적화 프로그램이 모든 지역 변수에 대해 초기 값 대신 통계 데이터를 사용하도록 지시합니다. 이 최적화에는 강제 매개 변수화를 통해 만든 매개 변수가 포함됩니다.  
   
 같은 쿼리 힌트에서 OPTIMIZE FOR @variable_name = _literal\_constant_ 및 OPTIMIZE FOR UNKNOWN을 사용하면 쿼리 최적화 프로그램이 특정 값에는 지정된 _literal\_constant_를 사용합니다. 쿼리 최적화 프로그램은 나머지 변수 값에 UNKNOWN을 사용합니다. 해당 값은 쿼리 최적화 중에만 사용되고 쿼리 실행 중에는 사용되지 않습니다.  
-  
+
 PARAMETERIZATION { SIMPLE | FORCED }     
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램에서 쿼리 컴파일 시 적용하는 매개 변수화 규칙을 지정합니다.  
   
@@ -249,6 +250,11 @@ PARAMETERIZATION { SIMPLE | FORCED }
 > 자세한 내용은 [계획 지침을 사용하여 쿼리 매개 변수화 동작 지정](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)을 참조하세요.
   
 SIMPLE은 쿼리 최적화 프로그램이 단순 매개 변수화를 시도하도록 지시합니다. FORCED는 쿼리 최적화 프로그램이 강제 매개 변수화를 시도하도록 지시합니다. 자세한 내용은 [쿼리 처리 아키텍처 가이드에서 강제 매개 변수화](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) 및 [쿼리 처리 아키텍처 가이드에서 단순 매개 변수화](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)를 참조하세요.  
+
+QUERYTRACEON trace_flag    
+이 옵션을 사용하면 단일 쿼리를 컴파일하는 동안 계획에 영향을 주는 추적 플래그만 사용하도록 설정할 수 있습니다. 다른 쿼리 수준 옵션과 마찬가지로 이 옵션을 계획 지침과 함께 사용하여 세션에서 실행되는 쿼리의 텍스트를 대응시키고 이 쿼리가 컴파일되는 동안 계획에 영향을 주는 추적 플래그를 자동으로 적용할 수 있습니다. QUERYTRACEON 옵션은 “추가 정보” 섹션의 표와 [추적 플래그](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)에 설명된 쿼리 최적화 프로그램 추적 플래그에만 지원됩니다. 그러나 지원되지 않는 추적 플래그 번호를 사용하는 경우 이 옵션은 오류 또는 경고를 반환하지 않습니다. 지정된 추적 플래그가 쿼리 실행 계획에 영향을 주지 않는 경우에는 옵션이 자동으로 무시됩니다.
+
+QUERYTRACEON trace_flag_number가 다른 추적 플래그 번호와 중복되는 경우 OPTION 절에 둘 이상의 추적 플래그를 지정할 수 있습니다.
 
 RECOMPILE  
 새로운 임시 쿼리 계획을 생성하고 쿼리 실행이 완료된 후 해당 계획을 즉시 무시하도록 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 지시합니다. 동일한 쿼리가 RECOMPILE 힌트 없이 실행될 경우 생성된 쿼리 계획은 캐시에 저장된 계획을 바꾸지 않습니다. RECOMPILE을 지정하지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 쿼리 계획을 캐시하여 다시 사용합니다. 쿼리 계획을 컴파일할 때 RECOMPILE 쿼리 힌트는 쿼리에 있는 지역 변수의 현재 값을 사용합니다. 쿼리가 저장 프로시저 안에 있는 경우 매개 변수에 전달된 현재 값을 사용합니다.  
@@ -260,7 +266,7 @@ ROBUST PLAN
   
 이 계획이 불가능할 경우 쿼리 최적화 프로그램은 쿼리 실행 시 오류를 검색하도록 지연시키지 않고 오류를 반환합니다. 행에는 가변 길이 열이 포함될 수 있으며 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 처리할 수 있는 범위 이상의 잠재적 최대 크기를 가진 행을 정의하도록 허용합니다. 그러나 대개 애플리케이션은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 처리할 수 있는 한도 내의 실제 크기를 가진 행을 저장합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 너무 긴 행이 있으면 실행 오류가 반환됩니다.  
  
-<a name="use_hint"></a> USE HINT ( **'** _hint\_name_ **'** )    
+<a name="use_hint"></a> USE HINT ( **'**_hint\_name_**'** )    
  **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
  
 쿼리 프로세서에 하나 이상의 추가 힌트를 제공합니다. 추가 힌트는 **작은따옴표 안**의 힌트 이름으로 지정됩니다.   
@@ -341,9 +347,9 @@ ROBUST PLAN
 > 일부 USE HINT 힌트는 전역 또는 세션 수준에서 사용하는 추적 플래그나 데이터베이스 범위 구성 설정과 충돌할 수 있습니다. 이 경우 쿼리 수준 힌트(USE HINT)가 항상 우선합니다. USE HINT가 쿼리 수준에서 사용하는 다른 쿼리 힌트나 추적 플래그와 충돌하는 경우(예: QUERYTRACEON) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 쿼리를 실행할 때 오류를 생성합니다. 
 
 <a name="use-plan"></a> USE PLAN N'_xml\_plan_'  
- 쿼리 최적화 프로그램이 **'** _xml\_plan_ **'** 에 의해 지정된 쿼리에 대해 기존의 쿼리 계획을 사용하도록 합니다. USE PLAN은 INSERT, UPDATE, MERGE 또는 DELETE 문에서 지정할 수 없습니다.  
+ 쿼리 최적화 프로그램이 **'**_xml\_plan_**'** 에 의해 지정된 쿼리에 대해 기존의 쿼리 계획을 사용하도록 합니다. USE PLAN은 INSERT, UPDATE, MERGE 또는 DELETE 문에서 지정할 수 없습니다.  
   
-TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** 지정된 테이블 힌트를 _exposed\_object\_name_에 해당하는 테이블 또는 뷰에 적용합니다. 테이블 힌트는 [계획 지침](../../relational-databases/performance/plan-guides.md)의 컨텍스트에서 쿼리 힌트로만 사용하는 것이 좋습니다.  
+TABLE HINT **(**_exposed\_object\_name_ [ **,** \<table_hint> [ [**,** ]..._n_ ] ] **)** 지정된 테이블 힌트를 _exposed\_object\_name_에 해당하는 테이블 또는 뷰에 적용합니다. 테이블 힌트는 [계획 지침](../../relational-databases/performance/plan-guides.md)의 컨텍스트에서 쿼리 힌트로만 사용하는 것이 좋습니다.  
   
  _exposed\_object\_name_은 다음 참조 중 하나일 수 있습니다.  
   
@@ -353,7 +359,7 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
   
  테이블 힌트를 지정하지 않고 _exposed\_object\_name_을 지정하면 개체에 대한 테이블 힌트의 일부로 쿼리에서 지정한 인덱스가 모두 무시됩니다. 쿼리 최적화 프로그램에서 인덱스 사용 여부를 결정합니다. 이 방법은 원래 쿼리를 수정할 수 없을 때 INDEX 테이블 힌트의 효과를 제거하는 데 이용할 수 있습니다. 자세한 내용은 예 10을 참조하세요.  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) | INDEX = ( _index\_value_ ) | FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } *exposed_object_name*에 해당하는 테이블 또는 뷰에 쿼리 힌트로 적용할 테이블 힌트입니다. 이러한 힌트에 대한 설명은 [테이블 힌트 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)을 참조하세요.  
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) | INDEX = ( _index\_value_ ) | FORCESEEK [**(**_index\_value_**(**_index\_column\_name_ [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } *exposed_object_name*에 해당하는 테이블 또는 뷰에 쿼리 힌트로 적용할 테이블 힌트입니다. 이러한 힌트에 대한 설명은 [테이블 힌트 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)을 참조하세요.  
   
  쿼리에 테이블 힌트를 지정하는 WITH 절이 없다면 INDEX, FORCESCAN 및 FORCESEEK 이외의 테이블 힌트를 쿼리 힌트로 사용할 수 없습니다. 자세한 내용은 설명 부분을 참조하세요.  
   
@@ -521,7 +527,7 @@ EXEC sp_create_plan_guide
 GO    
 ```  
   
-### <a name="i-using-multiple-table-hints"></a>9\. 여러 테이블 힌트 사용  
+### <a name="i-using-multiple-table-hints"></a>9. 여러 테이블 힌트 사용  
  다음 예에서는 한 테이블에 INDEX 힌트를 적용하고 다른 테이블에 FORCESEEK 힌트를 적용합니다. 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다.  
   
 ```sql  
@@ -599,7 +605,24 @@ WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DISABLE_PARAMETER_SNIFFING')); 
 GO  
 ```  
-    
+### <a name="m-using-querytraceon-hint"></a>13. QUERYTRACEON HINT 사용  
+ 다음 예제에서는 QUERYTRACEON 쿼리 힌트를 사용합니다. 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다. 다음 쿼리를 사용하여 특정 쿼리에 대해 추적 플래그 4199로 제어되는 계획에 영향을 주는 모든 핫픽스를 사용하도록 설정할 수 있습니다.
+  
+```sql  
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (QUERYTRACEON 4199);
+```  
+
+ 다음 쿼리와 같이 여러 추적 플래그를 사용할 수도 있습니다.
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION  (QUERYTRACEON 4199, QUERYTRACEON 4137);
+```
+
+
 ## <a name="see-also"></a>참고 항목  
 [힌트&#40;Transact SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
 [sp_create_plan_guide&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   

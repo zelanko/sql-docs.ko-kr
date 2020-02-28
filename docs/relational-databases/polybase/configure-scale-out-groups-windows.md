@@ -8,12 +8,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: d686cbe2fb314a59085adee76b3bbad22fcea0fc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: dfc8560c9834d920a132a54587ba80947db9425d
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72906884"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256756"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Windows에서 PolyBase 스케일 아웃 그룹 구성
 
@@ -61,7 +61,7 @@ ms.locfileid: "72906884"
   
 3. 서버 구성 페이지에서 SQL Server PolyBase 엔진 및 SQL Server PolyBase 데이터 이동 서비스에 대해 PQTH4A\PolyBaseUser **도메인 계정**을 사용합니다.
   
-4. PolyBase 구성 페이지에서 **PolyBase 스케일 아웃 그룹의 일부로 SQL Server 인스턴스 사용**옵션을 선택합니다. 이 옵션은 PolyBase 서비스로 들어오는 연결을 허용하도록 방화벽을 엽니다.
+4. PolyBase 구성 페이지에서 **PolyBase 스케일 아웃 그룹의 일부로 SQL Server 인스턴스 사용**옵션을 선택합니다. 이 옵션은 PolyBase 서비스로 들어오는 연결을 허용하도록 방화벽을 엽니다. 헤드 노드가 명명된 인스턴스인 경우 헤드 노드의 Windows 방화벽에 SQL Server 포트를 수동으로 추가하고 헤드 노드에서 SQL Browser를 시작해야 합니다.
   
 5. 설치가 완료된 후 **services.msc**를 실행합니다. SQL Server, PolyBase 엔진 및 PolyBase 데이터 이동 서비스가 실행 중인지 확인합니다.
   

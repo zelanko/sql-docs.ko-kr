@@ -1,5 +1,5 @@
 ---
-title: Hyperion Essbase 연결 형식(SSRS) | Microsoft Docs
+title: Hyperion Essbase 연결 형식 | Microsoft Docs
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 61cfc9c83e5d9c2976f5fcb00eab29e91c1f726d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e65c3ca2bd6866ede2eb9924f8465e5b66d37c0b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190834"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079021"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase 연결 형식(SSRS)
   보고서에 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 외부 데이터 원본의 데이터를 포함하려면 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 유형의 보고서 데이터 원본에 기초하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]외부 데이터 원본에서 다차원 데이터를 검색할 수 있게 하는 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 에 대한 데이터 확장 프로그램을 기반으로 합니다.  
@@ -75,7 +75,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="predefined-field-properties"></a>미리 정의된 필드 속성  
- 일반적으로 여러 데이터 공급자에 의해 지원되며 보고서 데이터 세트에 대한 기본 MDX 쿼리에 나타나는 미리 정의된 필드 속성. 예를 들어 MDX 차원 속성 MEMBER_UNIQUE_NAME은 미리 정의된 보고서 데이터 세트 필드 속성 **UniqueName**에 매핑됩니다. 입력란에 고유한 이름 값을 포함하려면 `=Fields!` *\<FieldName>* `.UniqueName` 식을 사용합니다.  
+ 일반적으로 여러 데이터 공급자에 의해 지원되며 보고서 데이터 세트에 대한 기본 MDX 쿼리에 나타나는 미리 정의된 필드 속성. 예를 들어 MDX 차원 속성 MEMBER_UNIQUE_NAME은 미리 정의된 보고서 데이터 세트 필드 속성 **UniqueName**에 매핑됩니다. 입력란에 고유한 이름 값을 포함하려면 `=Fields!`*\<FieldName>*`.UniqueName` 식을 사용합니다.  
   
  다음 표에서는 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 데이터 원본에 사용할 수 있는 미리 정의된 필드 속성 목록을 제공합니다.  
   
@@ -92,7 +92,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="custom-properties"></a>사용자 지정 속성  
- 데이터 공급자가 지원하고 보고서 데이터 세트에 대한 기본 MDX 쿼리에 나타나지만 보고서 데이터 세트 창에 해당 데이터 세트 아래의 필드로 표시되지 않는 사용자 지정 필드 속성. 예를 들어 **Long Names** 는 차원 수준에 대해 정의된 멤버 속성입니다. 입력란에 값을 포함하려면 `=Fields!` *\<FieldName>* `("Long Names")` 식을 사용합니다. 식의 필드 이름은 대/소문자를 구분합니다.  
+ 데이터 공급자가 지원하고 보고서 데이터 세트에 대한 기본 MDX 쿼리에 나타나지만 보고서 데이터 세트 창에 해당 데이터 세트 아래의 필드로 표시되지 않는 사용자 지정 필드 속성. 예를 들어 **Long Names** 는 차원 수준에 대해 정의된 멤버 속성입니다. 입력란에 값을 포함하려면 `=Fields!`*\<FieldName>*`("Long Names")` 식을 사용합니다. 식의 필드 이름은 대/소문자를 구분합니다.  
   
  식에서 사용자 지정 확장 속성을 참조하려면 다음 구문을 사용합니다.  
   

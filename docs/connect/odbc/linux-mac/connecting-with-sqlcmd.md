@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a782db89033da42ebf17ed33565ec680fafa0d04
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c73ee7914d0d9ac560d57a204458e5cd4ba57a0d
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68005916"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971442"
 ---
 # <a name="connecting-with-sqlcmd"></a>sqlcmd를 사용하여 연결
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -52,6 +52,9 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 - -e 표준 출력 디바이스(stdout)에 입력 스크립트를 기록합니다.
 
 - -E 신뢰할 수 있는 연결을 사용합니다(통합된 인증). Linux 또는 macOS 클라이언트에서 통합된 인증을 사용하는 신뢰할 수 있는 연결을 만드는 방법에 대한 자세한 내용은 [통합 인증 사용](../../../connect/odbc/linux-mac/using-integrated-authentication.md)을 참조하세요.
+
+- -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage] 입력 및 출력 코드 페이지를 지정합니다. 코드 페이지 번호는 설치된 Linux 코드 페이지를 지정하는 숫자 값입니다.
+(17.5.1.1부터 사용 가능)
 
 - -h *number_of_rows* 열 머리글 사이에 출력할 행의 수를 지정합니다.  
   
@@ -97,7 +100,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 - -s *column_separator_char* 열 구분 기호를 지정합니다.  
 
-- -S [*protocol*:] *server*[ **,** _port_]  
+- -S [*protocol*:] *server*[**,**_port_]  
 연결할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정하거나 -D가 사용된 경우 DSN을 지정합니다. Linux 및 macOS 기반 ODBC 드라이버에는 -S가 필요합니다. **tcp**만 유효한 프로토콜입니다.  
   
 - -t *query_timeout* 명령(또는 SQL 문)이 시간 초과까지의 시간(초)을 지정합니다.  
@@ -160,8 +163,6 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 
 - -A DAC(관리자 전용 연결)를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 로그인합니다. DAC(관리자 전용 연결)를 만드는 방법에 대한 자세한 내용은 [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md)을 참조하세요.  
   
-- -f *code_page* 입력 및 출력 코드 페이지를 지정합니다.  
-  
 - -L 로컬로 구성된 서버 컴퓨터와 네트워크상에서 브로드캐스팅하는 서버 컴퓨터의 이름을 나열합니다.  
   
 - -v `sqlcmd` 스크립트에서 사용할 수 있는 `sqlcmd` 스크립팅 변수를 만듭니다.  
@@ -209,19 +210,19 @@ Linux 또는 macOS의 DSN에서 다음 항목이 지원됩니다.
 
 -   **ApplicationIntent=ReadOnly**  
 
--   **Database=** _database\_name_  
+-   **Database=**_database\_name_  
   
 -   **Driver=ODBC Driver 11 for SQL Server** 또는 **Driver=ODBC Driver 13 for SQL Server**
   
 -   **MultiSubnetFailover=Yes**  
   
--   **Server=** _server\_name\_or\_IP\_address_  
+-   **Server=**_server\_name\_or\_IP\_address_  
   
 -   **Trusted_Connection=yes**|**no**  
   
 DSN에서는 DRIVER 항목만 필요하지만 서버에 연결하려면 `sqlcmd` 또는 `bcp`에서 SERVER 항목의 값이 필요합니다.  
 
-동일한 옵션이 DSN 및 `sqlcmd` 또는 `bcp` 명령줄에서 지정된 경우 명령줄 옵션이 DSN에서 사용되는 값을 재정의합니다. 예를 들어 DSN에 DATABASE 항목이 있고 `sqlcmd` 명령줄이 **-d**를 포함하는 경우 **-d**에 전달된 값이 사용됩니다. **Trusted_Connection=yes**가 DSN에서 지정된 경우 Kerberos 인증이 사용되고 사용자 이름( **–U**) 및 암호( **–P**)(제공된 경우)가 무시됩니다.
+동일한 옵션이 DSN 및 `sqlcmd` 또는 `bcp` 명령줄에서 지정된 경우 명령줄 옵션이 DSN에서 사용되는 값을 재정의합니다. 예를 들어 DSN에 DATABASE 항목이 있고 `sqlcmd` 명령줄이 **-d**를 포함하는 경우 **-d**에 전달된 값이 사용됩니다. **Trusted_Connection=yes**가 DSN에서 지정된 경우 Kerberos 인증이 사용되고 사용자 이름(**–U**) 및 암호(**–P**)(제공된 경우)가 무시됩니다.
 
 다음 별칭을 정의하여 `isql`을 호출하는 기존 스크립트는 `sqlcmd`를 사용하도록 수정할 수 있습니다. `alias isql="sqlcmd -D"`  
 

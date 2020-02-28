@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b34d69ea0d402f568efa4e6951367cce3cfa0eca
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 626b4277edcb049b2c7b755b70199df899dc5637
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75558060"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256656"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>SQL Server 사용 현황 및 진단 데이터 수집(CEIP)에 대한 로컬 감사
 
@@ -29,7 +29,7 @@ ms.locfileid: "75558060"
 
 Microsoft SQL Server에는 컴퓨터 또는 디바이스에 대한 정보를 수집하여 보낼 수 있는 인터넷 사용 기능이 포함되어 있습니다. 이를 *표준 컴퓨터 정보*라고 합니다. [SQL Server 사용 현황 및 진단 데이터 수집](usage-and-diagnostic-data-configuration-for-sql-server.md)의 로컬 감사 구성 요소는 서비스에서 수집한 데이터를 지정된 폴더에 기록하여 Microsoft로 보낼 데이터(로그)를 나타냅니다. 로컬 감사의 목적은 규정 준수 또는 개인 정보 유효성 검사를 위해 Microsoft가 이 기능을 사용하여 수집하는 모든 데이터를 고객이 확인할 수 있도록 하는 것입니다.  
 
-SQL Server 2016 CU2부터 SQL Server 데이터베이스 엔진 및 SSAS(SQL Server Analysis Services)에 대한 인스턴스 수준에서 구성할 수 있습니다. SQL Server 2016 CU4 및 SQL Server 2016 SP1에서는 SSIS(SQL Server Integration Services)에도 로컬 감사를 사용할 수 있습니다. 설정 중 설치한 다른 SQL Server 구성 요소와 설정 후 다운로드하거나 설치한 SQL Server 도구에는 사용 현황 및 진단 데이터 수집에 대한 로컬 감사 기능이 포함되어 있지 않습니다.
+SQL Server 2016 CU2 및 CU3의 경우 SQL Server 데이터베이스 엔진 및 Analysis Services(SSAS)에 대한 인스턴스 수준에서 로컬 감사를 구성할 수 있습니다. SQL Server 2016 CU4, 2016 SP1 및 이후 릴리스에서는 SSIS(SQL Server Integration Services)에도 로컬 감사를 사용할 수 있습니다. 설정 중 설치한 다른 SQL Server 구성 요소와 설정 후 다운로드하거나 설치한 SQL Server 도구에는 사용 현황 및 진단 데이터 수집에 대한 로컬 감사 기능이 포함되어 있지 않습니다.
 
 ## <a name="remarks"></a>설명
 
@@ -42,7 +42,7 @@ SQL Server 2016 CU2부터 SQL Server 데이터베이스 엔진 및 SSAS(SQL Serv
 
 각 SQL Server 인스턴스에서 로컬 감사를 사용하도록 설정하는 데 필요한 사전 요구 사항은 다음과 같습니다. 
 
-1. 인스턴스는 SQL Server 2016 RTM CU2 이상으로 패치됩니다. Integration Services의 경우 인스턴스가 SQL 2016 RTM CU4 또는 SQL 2016 SP1로 패치됩니다.
+1. 인스턴스는 SQL Server 2016 RTM CU2 이상으로 패치됩니다. Integration Services의 경우 인스턴스가 SQL 2016 RTM CU4, SQL 2016 SP1 이상으로 패치됩니다.
 
 1. 사용자는 레지스트리 키 추가 및 수정, 폴더 만들기, 폴더 보안 관리 및 Windows 서비스를 중지/시작이 가능한 액세스 권한이 부여된 시스템 관리자 또는 역할이어야 합니다.  
 
@@ -65,7 +65,7 @@ SQL Server CEIP 서비스 로그온 계정을 가져오려면 다음 단계를 �
  
 1. **서비스** 콘솔을 시작합니다. 이렇게 하려면 키보드에서 **Windows 키 + R**을 눌러 **실행** 대화 상자를 엽니다. 그런 다음, 텍스트 필드에 *services.msc*를 입력하고 **확인**을 선택하여 **서비스** 콘솔을 시작합니다.  
 
-2. 적절한 서비스로 이동합니다. 예를 들어 데이터베이스 엔진의 경우 **SQL Server CEIP 서비스** **(*Your-Instance-Name*)** 를 찾습니다. Analysis Services의 경우 **SQL Server Analysis Services CEIP** **(*Your-Instance-Name*)** 를 찾습니다. Integration Services의 경우 **SQL Server Integration Services CEIP 서비스**를 찾습니다.
+2. 적절한 서비스로 이동합니다. 예를 들어 데이터베이스 엔진의 경우 **SQL Server CEIP 서비스****(*Your-Instance-Name*)** 를 찾습니다. Analysis Services의 경우 **SQL Server Analysis Services CEIP****(*Your-Instance-Name*)** 를 찾습니다. Integration Services의 경우 **SQL Server Integration Services CEIP 서비스**를 찾습니다.
 
 3. 서비스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 
 
@@ -73,7 +73,7 @@ SQL Server CEIP 서비스 로그온 계정을 가져오려면 다음 단계를 �
 
 ### <a name="configure-a-new-folder-for-the-local-audit-files"></a>로컬 감사 파일에 사용할 새 폴더를 구성합니다.    
 
-로컬 감사에서 로그를 기록할 새 폴더(로컬 감사 디렉터리)를 만듭니다. 예를 들어 데이터베이스 엔진의 기본 인스턴스에 대한 로컬 감사 디렉터리의 전체 경로는 다음과 같습니다. *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* . 
+로컬 감사에서 로그를 기록할 새 폴더(로컬 감사 디렉터리)를 만듭니다. 예를 들어 데이터베이스 엔진의 기본 인스턴스에 대한 로컬 감사 디렉터리의 전체 경로는 다음과 같습니다. *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*. 
  
   >[!NOTE] 
   >감사 기능 및 패치 허용으로 인해 SQL Server에 문제가 발생하는 것을 방지하려면 SQL Server 설치 경로 외부에 로컬 감사 디렉터리 경로를 구성하세요.
@@ -81,7 +81,7 @@ SQL Server CEIP 서비스 로그온 계정을 가져오려면 다음 단계를 �
   ||디자인 결정|권장|  
   |------|-----------------|----------|  
   |![확인란](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|공간 가용성 |약 10개의 데이터베이스를 사용하는 보통의 작업에서 인스턴스당 데이터베이스별로 약 2MB의 디스크 공간을 계획합니다.|  
-|![확인란](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|개별 디렉터리 | 각 인스턴스에 대한 디렉터리를 만듭니다. 예를 들어 `MSSQLSERVER`의 SQL Server 인스턴스의 경우 *c:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* 를 사용합니다. 이렇게 하면 파일 관리가 간소화됩니다.
+|![확인란](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|개별 디렉터리 | 각 인스턴스에 대한 디렉터리를 만듭니다. 예를 들어 `MSSQLSERVER`의 SQL Server 인스턴스의 경우 *c:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*를 사용합니다. 이렇게 하면 파일 관리가 간소화됩니다.
 |![확인란](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|개별 폴더 |각 서비스에 대해 특정 폴더를 사용합니다. 예를 들어 지정된 인스턴스 이름에 대해 데이터베이스 엔진에 하나의 폴더를 설정합니다. Analysis Services 인스턴스에서 동일한 인스턴스 이름을 사용할 경우 Analysis Services에 별도 폴더를 만듭니다. 데이터베이스 엔진 및 Analysis Services 인스턴스를 모두 동일한 폴더에 구성하면 모든 로컬 감사에서 두 인스턴스를 모두 동일한 로그 파일에 기록하게 됩니다.| 
 |![확인란](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|SQL Server CEIP 서비스 로그온 계정에 사용 권한 부여|SQL Server CEIP 서비스 로그온 계정에 대해 **폴더 내용 목록**, **읽기** 및 **쓰기** 액세스를 사용하도록 설정합니다.|
 
@@ -143,7 +143,7 @@ SQL Server CEIP 서비스 로그온 계정을 가져오려면 다음 단계를 �
 
 1. **UserRequestedLocalAuditDirectory**를 마우스 오른쪽 단추로 클릭하고 *수정*을 선택합니다. 
 
-1. 로컬 감사를 켜려면 로컬 감사 경로를 입력합니다(예: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* ).
+1. 로컬 감사를 켜려면 로컬 감사 경로를 입력합니다(예: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*).
  
     로컬 감사를 끄려면 **UserRequestedLocalAuditDirectory** 값을 비워 둡니다.
 
@@ -158,9 +158,9 @@ SQL Server CEIP 서비스 로그온 계정을 가져오려면 다음 단계를 �
     - 데이터베이스 엔진의 경우 **SQL Server CEIP 서비스(*Your-Instance-Name*)** 를 사용합니다.     
     - Analysis Services의 경우 **SQL Server Analysis Services CEIP(*Your-Instance-Name*)** 를 사용합니다.
     - Integration Services의 경우 
-        - SQL 2016의 경우 ‘SQL Server Integration Services CEIP 서비스 13.0’을 사용합니다. 
-        - SQL 2017의 경우 ‘SQL Server Integration Services CEIP 서비스 14.0’을 사용합니다. 
-    - SQL 2019의 경우 ‘SQL Server Integration Services CEIP 서비스 15.0’을 사용합니다. 
+        - SQL 2016의 경우 *SQL Server Integration Services CEIP 서비스 13.0*을 사용합니다.
+        - SQL 2017의 경우 *SQL Server Integration Services CEIP 서비스 14.0*을 사용합니다.
+    - SQL 2019의 경우 ‘SQL Server Integration Services CEIP 서비스 15.0’을 사용합니다.
 
 1. 서비스를 마우스 오른쪽 단추로 클릭하고 다시 시작을 선택합니다. 
 
@@ -320,7 +320,7 @@ SQL Server CEIP 서비스 로그온 계정을 가져오려면 다음 단계를 �
 로컬 감사 파일이 기록되지 않습니다.
 
 **인터넷에 연결되지 않았거나 컴퓨터가 방화벽으로 보호되는 경우에는 어떻게 되나요?**
-SQL Server 2016 사용 현황 및 진단 데이터를 Microsoft로 보내지 않습니다. 올바르게 구성된 경우에는 계속해서 로컬 감사 로그를 작성하려고 시도합니다.
+SQL Server 사용 현황 및 진단 데이터를 Microsoft로 보내지 않습니다. 올바르게 구성된 경우에는 계속해서 로컬 감사 로그를 작성하려고 시도합니다.
 
 **DBA가 로컬 감사를 사용하지 않도록 설정하려면 어떻게 해야 하나요?**
 UserRequestedLocalAuditDirectory 레지스트리 키 항목을 제거합니다.
@@ -333,7 +333,7 @@ DBA는 디스크 공간을 너무 많이 사용하지 않도록 디렉터리에�
 
 **이 JSON 출력을 읽는 데 사용하는 클라이언트 또는 도구가 있나요?**
 메모장, Visual Studio 또는 어떤 JSON 판독기든지 사용자가 선택하여 출력을 읽을 수 있습니다.
-또는 JSON 파일을 읽고 아래와 같이 SQL Server 2016 인스턴스에서 데이터를 분석할 수 있습니다. SQL Server에서 JSON 파일을 읽는 방법에 대한 자세한 내용은 [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)(OPENROWSET(BULK) 및 OPENJSON(TRANSACT-SQL)를 사용하여 SQL Server로 JSON 파일 가져오기)을 참조하세요.
+또는 JSON 파일을 읽고 아래와 같이 SQL Server 인스턴스에서 데이터를 분석할 수 있습니다. SQL Server에서 JSON 파일을 읽는 방법에 대한 자세한 내용은 [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)(OPENROWSET(BULK) 및 OPENJSON(TRANSACT-SQL)를 사용하여 SQL Server로 JSON 파일 가져오기)을 참조하세요.
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)

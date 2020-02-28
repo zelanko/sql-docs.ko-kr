@@ -22,13 +22,13 @@ author: dnethi
 ms.author: dinethi
 ms.reviewer: sstein, maghan
 ms.custom: seo-lt-2019
-ms.date: 11/04/2019
-ms.openlocfilehash: 3532c1d7cfe148c4fe4f1d5331e711a994916818
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.date: 02/18/2020
+ms.openlocfilehash: 5004b46f878a5098e63fb3842569e826b21b764f
+ms.sourcegitcommit: 5a9b8bc4fcb5e875d5ef25362b68ffe7f8a1b6d7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76761797"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77520946"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
 
@@ -54,7 +54,7 @@ SSMS 18.4는 SSMS의 최신 GA(일반 공급) 버전입니다. 이전 GA 버전�
 
 의견 또는 제안 사항이 있거나 문제를 보고하려는 경우 SSMS 팀에 연락하는 가장 좋은 방법은 [UserVoice](https://aka.ms/sqlfeedback)를 사용하는 것입니다.
 
-SSMS 18.x 설치는 SSMS 17.x 이전 버전을 업그레이드 또는 대체하지 않습니다. SSMS 18.x는 이전 버전과 함께 설치되므로 두 버전을 모두 사용할 수 있습니다. 그러나 SSMS 18.x의 ***미리 보기*** 버전이 설치된 경우에는 해당 버전을 **제거**한 후에 SSMS 18.4를 설치해야 합니다.
+SSMS 18.x 설치는 SSMS 17.x 이전 버전을 업그레이드 또는 대체하지 않습니다. SSMS 18.x는 이전 버전과 함께 설치되므로 두 버전을 모두 사용할 수 있습니다. 그러나 SSMS 18.x의 ***미리 보기*** 버전이 설치된 경우에는 해당 버전을 **제거**한 후에 SSMS 18.4를 설치해야 합니다. [도움말] > [정보] 창으로 이동하여 ‘미리 보기’ 버전이 있는지 확인할 수 있습니다. 
 
 컴퓨터에 SSMS가 병렬로 설치되어 있으면 특정 요구에 맞는 올바른 버전을 시작해야 합니다. 최신 버전에는 **Microsoft SQL Server Management Studio 18** 레이블이 지정됩니다.
 
@@ -71,25 +71,15 @@ SQL Server Management Studio 18.4:
 > [!NOTE]
 > SQL Server PowerShell 모듈은 PowerShell 갤러리를 통해 별도로 설치됩니다. 자세한 내용은 [SQL Server PowerShell 모듈 다운로드](download-sql-server-ps-module.md)를 참조하세요.
 
-## <a name="new-in-this-release-ssms-184"></a>이 릴리스의 새로운 기능(SSMS 18.4)
+## <a name="whats-new"></a>새로운 기능
 
-| 새 항목 | 세부 정보 |
-|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 데이터 분류 | 데이터 분류에 대한 사용자 지정 정보 보호 정책에 대한 지원을 추가했습니다. |
-| 쿼리 저장소 | 대화 상자 속성에서 *쿼리당 최대 계획* 값을 추가했습니다. |
-| 쿼리 저장소 | 새 사용자 지정 캡처 정책에 대한 지원을 추가했습니다. |
-| SMO/스크립팅 | SQL DW에서 구체화된 뷰의 스크립트를 지원합니다. |
-| SMO/스크립팅 | *SQL On Demand*에 대한 지원을 추가했습니다. |
-| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - 50개 평가 규칙을 추가했습니다(GitHub에서 세부 정보 참조). |
-| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - 규칙 조건에 기본 수학 식 및 비교를 추가했습니다. |
-| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - RegisteredServer 개체에 대한 지원을 추가했습니다. |
-| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - 규칙이 JSON 형식으로 저장되는 방식을 업데이트하고 재정의/사용자 지정을 적용하는 메커니즘도 업데이트했습니다. |
-| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - Linux에서 SQL을 지원하도록 규칙을 업데이트했습니다. |
-| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - 규칙 집합 JSON 형식을 업데이트하고 스키마 버전을 추가했습니다. |
-| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - cmdlet 출력을 업데이트하여 권장 사항의 가독성을 향상했습니다. |
-| XEvent 프로파일러 | XEvent Profiler 세션에 *error_reported* 이벤트를 추가했습니다. |
+이 릴리스의 새로운 기능에 대한 자세한 내용은 S[SSMS 릴리스 정보](release-notes-ssms.md)를 참조하세요.
 
-이 릴리스의 새로운 기능에 대한 자세한 내용은 [SSMS release notes](release-notes-ssms.md)(SSMS 릴리스 정보)를 참조하세요.
+이 릴리스에는 몇 가지 [알려진 문제](release-notes-ssms.md#known-issues-184)가 있습니다.
+
+## <a name="previous-versions"></a>이전 버전
+
+이 문서는 SSMS의 최신 버전에만 적용됩니다. 이전 버전의 SSMS를 다운로드하려면 [이전 SSMS 릴리스](../ssms/release-notes-ssms.md#previous-ssms-releases)를 참조하세요.
 
 ## <a name="supported-sql-offerings-ssms-184"></a>지원되는 SQL 제품(SSMS 18.4)
 
@@ -112,17 +102,7 @@ SQL Server Management Studio 18.4:
 <sup>*</sup> 버전 1607(10.0.14393) 이상이 필요
 
 > [!NOTE]
-> SSMS는 Windows(AMD 또는 Intel)에서만 실행됩니다. Windows 이외의 플랫폼에서 실행되는 도구가 필요한 경우 Azure Data Studio를 살펴보세요. Azure Data Studio는 macOS, Linux 및 Windows에서 실행되는 새로운 플랫폼 간 도구입니다. 자세한 내용은 [Azure Data Studio](../azure-data-studio/what-is.md)를 참조하세요.
-
-## <a name="release-notes-ssms-184"></a>릴리스 정보(SSMS 18.4)
-
-이 릴리스에는 몇 가지 [알려진 문제](release-notes-ssms.md#known-issues-184)가 있습니다.
-
-이 릴리스에 대한 자세한 내용은 [SSMS 릴리스 정보](release-notes-ssms.md)를 참조하세요.
-
-## <a name="previous-ssms-releases"></a>이전 SSMS 릴리스
-
-[이전 SQL Server Management Studio 릴리스](../ssms/release-notes-ssms.md#previous-ssms-releases)
+> SSMS는 Windows(AMD 또는 Intel)에서만 실행됩니다. Windows 이외의 플랫폼에서 실행되는 도구가 필요한 경우 Azure Data Studio를 살펴보세요. Azure Data Studio는 macOS, Linux 및 Windows를 실행하는 새로운 플랫폼 간 도구입니다. 자세한 내용은 [Azure Data Studio](../azure-data-studio/what-is.md)를 참조하세요.
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 

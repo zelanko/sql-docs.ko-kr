@@ -1,5 +1,5 @@
 ---
-title: 보고서 서버 명령 프롬프트 유틸리티(SSRS) | Microsoft Docs
+title: 보고서 서버 명령 프롬프트 유틸리티 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68f2f9f4-f894-40ff-a71c-f9756bf4b68c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 94c21d86b1a89d8de30d0be558fcab008f49d044
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: db8be061664d720ba3be1a4f66ed05062bb1af21
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576275"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081921"
 ---
 # <a name="report-server-command-prompt-utilities-ssrs"></a>보고서 서버 명령 프롬프트 유틸리티(SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에는 보고서 서버를 관리하는 데 사용할 수 있는 몇 가지 명령줄 유틸리티가 포함되어 있습니다. 이러한 유틸리티는 보고서 서버를 설치할 때 자동으로 설치됩니다.  

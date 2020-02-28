@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 994d7f21df09f49329e7547c4330aa95b5745873
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3a6a21cf82a7b94d5526e4492d69bc5f1578b716
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75236297"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478457"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹 개요(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "75236297"
   
  자동, 수동 및 강제(데이터가 손실될 수 있음)라는 세 가지 형태의 장애 조치(Failover)가 있습니다. 지정된 보조 복제본에서 지원되는 장애 조치(Failover)의 형태는 가용성 모드에 따라 다르며 동기-커밋 모드의 경우 다음과 같이 주 복제본 및 대상 보조 복제본의 장애 조치(Failover) 모드에 따라 다릅니다.  
   
--   대상 보조 복제본이 주 복제본과 현재 동기화되어 있는 경우 동기-커밋 모드는 ‘계획된 수동 장애 조치’ 및 ‘자동 장애 조치’라는 두 가지 형태의 장애 조치를 지원합니다.   이러한 형태의 장애 조치(Failover)에 대한 지원은 장애 조치(Failover) 파트너에서 *장애 조치(Failover) 모드 속성* 의 설정에 따라 다릅니다. 주 복제본 또는 보조 복제본에서 장애 조치(Failover) 모드가 "수동"으로 설정된 경우 해당 보조 복제본에 대해 수동 장애 조치(Failover)만 지원됩니다. 주 복제본과 보조 복제본에서 모두 장애 조치(Failover) 모드가 "자동"으로 설정된 경우 해당 보조 복제본에서는 자동 및 수동 장애 조치(Failover)가 모두 지원됩니다.  
+-   대상 보조 복제본이 주 복제본과 현재 동기화되어 있는 경우 동기-커밋 모드는 ‘계획된 수동 장애 조치’ 및 ‘자동 장애 조치’라는 두 가지 형태의 장애 조치를 지원합니다. 이러한 형태의 장애 조치(Failover)에 대한 지원은 장애 조치(Failover) 파트너에서 *장애 조치(Failover) 모드 속성* 의 설정에 따라 다릅니다. 주 복제본 또는 보조 복제본에서 장애 조치(Failover) 모드가 "수동"으로 설정된 경우 해당 보조 복제본에 대해 수동 장애 조치(Failover)만 지원됩니다. 주 복제본과 보조 복제본에서 모두 장애 조치(Failover) 모드가 "자동"으로 설정된 경우 해당 보조 복제본에서는 자동 및 수동 장애 조치(Failover)가 모두 지원됩니다.  
   
     -   **계획된 수동 장애 조치(Failover)** (데이터가 손실되지 않음)  
   

@@ -1,6 +1,6 @@
 ---
 title: 보고서 서버의 SPN(서비스 사용자 이름) 등록 | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 02/12/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 92c0943b17f22c63481f1dbfb0f76977a4b71381
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9bfe7a68dc64d2248b9ff9fc4c0696970f692b60
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66500228"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256426"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>보고서 서버의 SPN(서비스 사용자 이름) 등록
   상호 인증에 Kerberos 프로토콜을 사용하는 네트워크에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 배포하는 경우 도메인 사용자 계정으로 실행되도록 보고서 서버 서비스 SPN(서비스 사용자 이름)을 구성하려면 보고서 서버 서비스에 대한 SPN을 만들어야 합니다.  
@@ -21,19 +21,20 @@ ms.locfileid: "66500228"
 ## <a name="about-spns"></a>SPN 정보  
  SPN은 Kerberos 인증을 사용하는 네트워크에서 고유한 서비스 식별자로 서비스 클래스, 호스트 이름 및 때로는 포트로 구성됩니다. HTTP SPN은 포트가 필요 없습니다. Kerberos 인증을 사용하는 네트워크에서 서버에 대한 SPN은 기본 제공 컴퓨터 계정(예: NetworkService 또는 LocalSystem) 또는 사용자 계정에서 등록되어야 합니다. 기본 제공 계정에 대해서는 SPN이 자동으로 등록됩니다. 그러나 도메인 사용자 계정에서 서비스를 실행할 경우 사용할 계정에 대한 SPN을 수동으로 등록해야 합니다.  
   
- SPN을 만들려면 **SetSPN** 명령줄 유틸리티를 사용할 수 있습니다. 자세한 내용은  
+ SPN을 만들려면 **SetSPN** 명령줄 유틸리티를 사용할 수 있습니다. 자세한 내용은   
   
--   [SetSPN](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx)(https://technet.microsoft.com/library/cc731241(WS.10).aspx).  
+-   [SetSPN](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11))(https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)).  
   
 -   [서비스 사용자 이름(SPN) SetSPN 구문(Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)(https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx).  
   
  도메인 컨트롤러에서 이 유틸리티를 실행하려면 도메인 관리자여야 합니다.  
   
 ## <a name="syntax"></a>구문  
- SetSPN 유틸리티를 사용하여 보고서 서버의 SPN을 만드는 명령 구문은 다음과 같습니다.  
+
+setspn을 사용하여 SPN을 조작하는 경우 SPN을 올바른 형식으로 입력해야 합니다. SPN의 형식은 `<serviceclass>/host:<por>`입니다. SetSPN 유틸리티를 사용하여 보고서 서버의 SPN을 만드는 명령 구문은 다음과 같습니다.  
   
 ```  
-Setspn -s http/<computername>.<domainname> <domain-user-account>  
+Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
 ```  
   
  **SetSPN** 은 Windows Server에서 사용할 수 있습니다. **-s** 인수는 중복이 없는지 확인한 후 SPN을 추가합니다. **참고: -s** 는 Windows Server(Windows Server 2008부터)에서 사용할 수 있습니다.  
@@ -44,7 +45,7 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
   
 ## <a name="register-an-spn-for-domain-user-account"></a>도메인 사용자 계정에 대한 SPN 등록  
   
-#### <a name="to-register-an-spn-for-a-report-server-service-running-as-a-domain-user"></a>도메인 사용자로 실행 중인 보고서 서버 서비스에 대한 SPN을 등록하려면  
+### <a name="to-register-an-spn-for-a-report-server-service-running-as-a-domain-user"></a>도메인 사용자로 실행 중인 보고서 서버 서비스에 대한 SPN을 등록하려면  
   
 1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치하고 도메인 사용자 계정으로 실행되도록 보고서 서버 서비스를 구성합니다. 다음 단계를 완료해야 보고서 서버에 연결할 수 있습니다.  
   
@@ -55,10 +56,10 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
 4.  다음 명령을 복사하되 자리 표시자 값은 사용자의 네트워크에 유효한 실제 값으로 대체합니다.  
   
     ```  
-    Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
+    Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
     ```  
   
-     예: `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
+    예: `Setspn -s http/MyReportServer.MyDomain.com:80 MyDomainUser`  
   
 5.  명령을 실행합니다.  
   

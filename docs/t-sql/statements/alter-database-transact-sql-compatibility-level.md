@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ed32cf93d5bbf13580fc15d649ad403b98524cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 1980e9c96e568352fe616b6de8a6c7320c3d6c86
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76909653"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544898"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE(Transact-SQL) 호환성 수준
 
@@ -307,6 +307,7 @@ SQL Server 2017 이전의 SQL Server 이전 버전에서 추적 플래그 4199�
 |아래 예제 섹션의 예제 E를 참조하세요.|아래 예제 섹션의 예제 F를 참조하세요.|낮음|
 |ODBC 함수 {fn CONVERT()}는 언어의 기본 날짜 형식을 사용합니다. 일부 언어에서 기본 형식은 YDM입니다. 이 경우 CONVERT()가 YMD 형식을 사용하는 `{fn CURDATE()}`와 같은 다른 함수와 결합되면 변환 오류가 발생합니다.|ODBC 함수 `{fn CONVERT()}`는 ODBC 데이터 형식 SQL_TIMESTAMP, SQL_DATE, SQL_TIME, SQLDATE, SQL_TYPE_TIME 및 SQL_TYPE_TIMESTAMP로 변환할 때 스타일 121(언어와 상관없는 YMD 형식)을 사용합니다.|낮음|
 |DATEPART와 같은 datetime 내장 함수에서 문자열 입력 값은 유효한 datetime 리터럴이 아니어도 됩니다. 예를 들어 `SELECT DATEPART (year, '2007/05-30')`는 성공적으로 컴파일됩니다.|`DATEPART`와 같은 datetime 내장 함수에서 문자열 입력 값은 유효한 datetime 리터럴이어야 합니다. 유효하지 않은 datetime 리터럴을 사용하면 오류 241이 반환됩니다.|낮음|
+|REPLACE 함수의 첫 번째 입력 매개 변수가 char 형식인 경우 이 매개 변수에 지정된 후행 공백이 잘립니다. 예를 들어 SELECT '<' + REPLACE(CONVERT(char(6), 'ABC '), ' ', 'L') + '>' 문에서 'ABC ' 값은 'ABC'로 잘못 평가됩니다.|후행 공백이 항상 유지됩니다. 이 함수의 이전 동작에 의존하는 애플리케이션의 경우 이 함수의 첫 번째 입력 매개 변수를 지정할 때 RTRIM 함수를 사용합니다. 예를 들어 다음 구문은 SQL Server 2005 동작 SELECT '<' + REPLACE(RTRIM(CONVERT(char(6), 'ABC ')), ' ', 'L') + '>'을 재현합니다.|낮음|
 
 ## <a name="reserved-keywords"></a>예약 키워드
 
@@ -324,7 +325,7 @@ SQL Server 2017 이전의 SQL Server 이전 버전에서 추적 플래그 4199�
 
 정의된 키워드는 예약된 상태로 유지됩니다. 예를 들어 호환성 수준 90에서 정의된 예약 키워드 PIVOT은 수준 100, 110 및 120에서도 예약되어 있습니다.
 
-애플리케이션이 호환성 수준에 대한 키워드로 예약되어 있는 식별자를 사용할 경우 제대로 실행되지 않습니다. 이러한 문제를 해결하려면 식별자를 대괄호( **[]** )나 따옴표( **""** )로 묶으십시오. 예를 들어 식별자`EXTERNAL`을 사용하는 애플리케이션을 호환성 수준 90으로 업그레이드하려면 식별자를 `[EXTERNAL]`이나 `"EXTERNAL"`로 변경할 수 있습니다.
+애플리케이션이 호환성 수준에 대한 키워드로 예약되어 있는 식별자를 사용할 경우 제대로 실행되지 않습니다. 이러한 문제를 해결하려면 식별자를 대괄호(**[]**)나 따옴표(**""**)로 묶으십시오. 예를 들어 식별자`EXTERNAL`을 사용하는 애플리케이션을 호환성 수준 90으로 업그레이드하려면 식별자를 `[EXTERNAL]`이나 `"EXTERNAL"`로 변경할 수 있습니다.
 
 자세한 내용은 [예약 키워드](../../t-sql/language-elements/reserved-keywords-transact-sql.md)를 참조하세요.
 

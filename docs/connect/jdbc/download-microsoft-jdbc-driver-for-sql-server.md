@@ -1,7 +1,7 @@
 ---
 title: Microsoft JDBC Driver for SQL Server 다운로드
 description: Microsoft JDBC Driver for SQL Server를 다운로드하여 SQL Server에 연결하는 Java 애플리케이션을 개발합니다.
-ms.date: 09/30/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: dc273bccf054408f48e7bb2bd0409a31bb18bd18
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: fcf034b332494750885d4808b54c9cb62c37077c
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "71682000"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77013118"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server 다운로드
 
@@ -27,6 +27,7 @@ ms.locfileid: "71682000"
 
 | 버전 | 릴리스 날짜 | Java 버전 |
 |---|---|---|
+| [Microsoft JDBC Driver 8.2](https://go.microsoft.com/fwlink/?linkid=2116870) | 1/31/2020 | JRE 8, 11, 13 |
 | [Microsoft JDBC Driver 7.4](https://go.microsoft.com/fwlink/?linkid=2099962) | 2019/8/1 | JRE 8, 11, 12 |
 | [Microsoft JDBC Driver 7.2](https://go.microsoft.com/fwlink/?linkid=2063159) | 2019/4/17 | JRE 8, 11 |
 | [Microsoft JDBC Driver 7.0](https://go.microsoft.com/fwlink/?linkid=2005972) | 2018/7/31 | JRE 8, 10 |
@@ -34,7 +35,6 @@ ms.locfileid: "71682000"
 | [Microsoft JDBC Driver 6.2](https://go.microsoft.com/fwlink/?linkid=852460) | 2018/2/12 | JRE 7, 8 |
 | [Microsoft JDBC Driver 6.0](https://go.microsoft.com/fwlink/?LinkId=245496) | 2018/2/27 | JRE 7, 8 |
 | [Microsoft JDBC Driver 4.2](https://go.microsoft.com/fwlink/?linkid=841534) | 2018/2/26 | JRE 7, 8 |
-| [Microsoft JDBC Driver 4.1](https://go.microsoft.com/fwlink/?linkid=841533) | 2018/2/27 | JRE 7 |
 
 드라이버를 다운로드할 때 여러 JAR 파일이 있습니다. JAR 파일의 이름은 지원되는 Java 버전을 나타냅니다. 각 릴리스에 대한 자세한 내용은 [릴리스 정보](release-notes-for-the-jdbc-driver.md) 및 [시스템 요구 사항](system-requirements-for-the-jdbc-driver.md)을 참조하세요.
 
@@ -46,7 +46,7 @@ POM.xml에서 다음 코드로 JDBC 드라이버를 종속성으로 추가하여
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.4.1.jre11</version>
+    <version>8.2.0.jre11</version>
 </dependency>
 ```  
 

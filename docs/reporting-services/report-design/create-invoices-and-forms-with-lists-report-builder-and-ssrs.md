@@ -1,5 +1,5 @@
 ---
-title: 목록을 사용하여 송장 및 양식 만들기(보고서 작성기 및 SSRS) | Microsoft Docs
+title: 목록을 사용하여 청구서 및 양식 만들기(보고서 작성기) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b8ec0531056ea1a4ae3ff1850baed21dfb61df8e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ce4867fdbaff2ff83f2c7e36d450e6c3b0f07471
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581502"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078594"
 ---
 # <a name="create-invoices-and-forms-with-lists-report-builder-and-ssrs"></a>목록을 사용하여 송장 및 양식 만들기(보고서 작성기 및 SSRS)
   목록 데이터 영역은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서 데이터 세트의 각 그룹 또는 행에서 반복됩니다. 목록은 자유 형식 보고서나 송장 등의 양식을 만드는 데 사용하거나 다른 데이터 영역과 함께 사용할 수 있습니다. 여러 보고서 항목을 포함하는 목록을 정의할 수 있습니다. 목록은 중첩된 wit일 수 있습니다.  

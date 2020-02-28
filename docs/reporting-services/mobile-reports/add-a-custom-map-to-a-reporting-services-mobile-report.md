@@ -1,6 +1,6 @@
 ---
 title: Reporting Services 모바일 보고서의 사용자 지정 지도 추가 | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fd259b95-bb58-4eb1-a436-6aa12fc6f5f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2f2d3b15021569fe53bfc886f744ed7e53c1444
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9410aac6b74fbb515010517a2fe0667f3c197802
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63141251"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971403"
 ---
 # <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>Reporting Services 모바일 보고서의 사용자 지정 지도 추가
 사용자 지정 지도에는 다음과 같은 두 개의 파일이 필요합니다.  
@@ -22,11 +22,11 @@ ms.locfileid: "63141251"
   
 [Reporting Services 모바일 보고서의 사용자 지정 맵](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)에 대해 자세히 알아봅니다.  
   
-두 파일은 같은 폴더에 저장합니다. canada.shp 및 canada.dbf와 같이 두 파일의 이름이 같아야 합니다. 메타데이터(DBF 파일)에는 지도에 데이터를 입력할 때 사용할 해당 셰이프의 이름(키) 값이 들어 있는 "“NAME" 필드가 포함되어 있어야 합니다.   
+두 파일은 같은 폴더에 저장합니다. canada.shp 및 canada.dbf와 같이 두 파일의 이름이 같아야 합니다. 메타데이터(DBF 파일)의 첫 번째 열은 지도에 데이터를 입력할 때 사용할 해당 셰이프의 이름(키)의 키 값과 대응시키는 데 사용됩니다.
   
 ## <a name="load-a-custom-map"></a>사용자 지정 지도 로드  
   
-1. **레이아웃** 탭에서 지도 유형을 **그라데이션 열 지도**, **범위 중지 열 지도**또는 **거품형 지도**중에서 선택하고 디자인 화면으로 끌어서 원하는 크기로 만듭니다.  
+1. **레이아웃** 탭에서 맵 유형을 **그라데이션 열 지도**, **범위 중지 열 지도**또는 **거품형 지도** 중에서 선택하고 디자인 화면으로 끌어서 원하는 크기로 만듭니다.  
   
    ![SSMRP_MapsGallery](../../reporting-services/mobile-reports/media/ssmrp-mapsgallery.png)  
   

@@ -1,5 +1,5 @@
 ---
-title: 보고서 내보내기(보고서 작성기 및 SSRS) | Microsoft Docs
+title: 보고서 내보내기(보고서 작성기) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +7,12 @@ ms.technology: report-builder
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0cb5c07545a719571c9fee26edc820006e9f0827
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a213d0decf0b2765dca07faec69135ddd3e44d99
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580812"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078492"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>보고서 내보내기(보고서 작성기 및 SSRS)
 
@@ -117,7 +117,7 @@ ms.locfileid: "65580812"
 |EXCELOPENXML|소프트 페이지 나누기|보고서를 검토할 때 내보내기 메뉴에 "Excel"로 표시됩니다. Excel 렌더링 확장 프로그램은 보고서를 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2013과 호환되는 Excel 문서(.xlsx)로 렌더링합니다.  자세한 내용은 [Microsoft Excel로 내보내기](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)를 참조하세요.|  
 |PowerPoint|하드 페이지 나누기|PowerPoint 렌더링 확장 프로그램은 보고서를 PowerPoint 2013과 호환되는 PowerPoint 문서(.pptx)로 렌더링합니다.|  
 |TIFF 파일|하드 페이지 나누기|이미지 렌더링 확장 프로그램은 보고서를 비트맵이나 메타파일로 렌더링합니다. 기본적으로 이미지 렌더링 확장 프로그램은 보고서를 여러 페이지로 볼 수 있도록 TIFF 파일로 만듭니다. 클라이언트가 이미지를 수신하면 이미지 뷰어에서 확인하거나 인쇄할 수 있습니다.<br /><br /> 이미지 렌더링 확장 프로그램은 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]에서 지원하는 BMP, EMF, EMFPlus, GIF, JPEG, PNG 및 TIFF 형식으로 파일을 생성할 수 있습니다.<br /><br /> 자세한 내용은 [이미지 파일로 내보내기](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)를 참조하세요.|  
-|웹 보관|소프트 페이지 나누기|HTML 렌더링 확장 프로그램은 보고서를 HTML 형식으로 렌더링합니다. 완전한 형식의 HTML 페이지 또는 HTML 조각을 만들어 다른 HTML 페이지에 포함시킬 수도 있습니다. 모든 HTML은 UTF-8 인코딩을 사용하여 만들어집니다.<br /><br /> HTML 렌더링 확장 프로그램은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털에서 실행될 때를 포함하여 보고서 작성기에서 미리 보거나 브라우저에서 보는 보고서의 기본 렌더링 확장 프로그램입니다.<br /><br /> 자세한 내용은 [HTML로 렌더링](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)을 참조하세요.|  
+|웹 보관 파일|소프트 페이지 나누기|HTML 렌더링 확장 프로그램은 보고서를 HTML 형식으로 렌더링합니다. 완전한 형식의 HTML 페이지 또는 HTML 조각을 만들어 다른 HTML 페이지에 포함시킬 수도 있습니다. 모든 HTML은 UTF-8 인코딩을 사용하여 만들어집니다.<br /><br /> HTML 렌더링 확장 프로그램은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털에서 실행될 때를 포함하여 보고서 작성기에서 미리 보거나 브라우저에서 보는 보고서의 기본 렌더링 확장 프로그램입니다.<br /><br /> 자세한 내용은 [HTML로 렌더링](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)을 참조하세요.|  
 |WORDOPENXML|소프트 페이지 나누기|보고서를 볼 때 내보내기 메뉴에 "Word"로 표시됩니다. Word 렌더링 확장 프로그램은 보고서를 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013과 호환되는 Word 문서(.docx)로 렌더링합니다.  자세한 내용은 [Microsoft Word로 내보내기](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)를 참조하세요.|  
 |XML|데이터|XML 렌더링 확장 프로그램은 보고서를 XML 형식으로 반환합니다. 보고서의 XML 스키마는 보고서마다 고유하며 데이터만 포함합니다. 레이아웃 정보는 렌더링되지 않으며 페이지 번호는 XML 렌더링 확장 프로그램을 통해 유지되지 않습니다. 이 확장 프로그램에서 생성된 XML은 데이터베이스로 가져오거나 XML 데이터 메시지로 사용하거나 사용자 지정 애플리케이션으로 전송할 수 있습니다.<br/><br/> 자세한 내용은 [XML로 내보내기](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)를 참조하세요.|  
   

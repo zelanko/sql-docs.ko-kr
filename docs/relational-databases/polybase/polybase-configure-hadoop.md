@@ -9,12 +9,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 1e5a45aa66d7d49f2c7499e0dcf975e5ebcb5b78
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 979d0f5d57c7d761e5c9c3f1b302046312396554
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75255437"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77147425"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Hadoop의 외부 데이터에 액세스하도록 PolyBase 구성
 
@@ -40,7 +40,7 @@ ms.locfileid: "75255437"
   - Linux의 Cloudera CDH 4.3, 5.1 – 5.5, 5.9 - 5.13
 
 > [!NOTE]
-> PolyBase는 SQL Server 2016 SP1 CU7 및 SQL Server 2017 CU3부터 Hadoop 암호화 영역을 지원합니다. [PolyBase 스케일 아웃 그룹](polybase-scale-out-groups.md)을 사용 중인 경우 모든 컴퓨팅 노드도 Haddop 암호화 영역 지원을 포함하는 빌드에 있어야 합니다.
+> PolyBase는 SQL Server 2016 SP1 CU7 및 SQL Server 2017 CU3부터 Hadoop 암호화 영역을 지원합니다. [PolyBase 스케일 아웃 그룹](polybase-scale-out-groups.md)을 사용 중인 경우 모든 컴퓨팅 노드도 Hadoop 암호화 영역 지원을 포함하는 빌드에 있어야 합니다.
 
 ### <a name="configure-hadoop-connectivity"></a>Hadoop 연결 구성
 

@@ -27,12 +27,12 @@ ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2ce739f026afc8f61e490cb359b23b7f61c931ee
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 413d8fffc505c8b2cfb5404e70cdd9f64cd150de
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75306682"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544940"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,8 +53,8 @@ ms.locfileid: "75306682"
 
 ## <a name="download-the-latest-version-of-sqlcmd-utility"></a>최신 버전의 sqlcmd 유틸리티 다운로드
 
-**[![다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15.0.x(x64) 다운로드(2.6MB)](https://go.microsoft.com/fwlink/?linkid=2082790)**
-<br>**[![다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15.0.x(x86) 다운로드(2.3MB)](https://go.microsoft.com/fwlink/?linkid=2082695)**
+**[![다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15(x64) 다운로드(2.6MB)](https://go.microsoft.com/fwlink/?linkid=2082790)**
+<br>**[![다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15(x86) 다운로드(2.3MB)](https://go.microsoft.com/fwlink/?linkid=2082695)**
 
 명령줄 도구는 일반 공급(GA)이지만 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 설치 프로그램 패키지로 릴리스됩니다.
 
@@ -67,11 +67,11 @@ ms.locfileid: "75306682"
 신규 버전의 SQLCMD는 Azure AD 인증을 지원하며, 여기에는 SQL Database, SQL Data Warehouse, Always Encrypted 기능에 대한 다단계 인증(MFA) 지원이 포함됩니다.
 신규 버전의 BCP는 Azure AD 인증을 지원하며, 여기에는 SQL Database, SQL Data Warehouse 기능에 대한 다단계 인증(MFA) 지원이 포함됩니다.
 
-**시스템 요구 사항** Windows 10 , Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2 이 구성 요소에는 [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 및 [Microsoft ODBC Driver 17.3.1.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567)가 모두 필요합니다.
+**시스템 요구 사항** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2
+
+이 구성 요소에는 [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 및 [Microsoft ODBC Driver 17 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567)가 둘 다 필요합니다.
  
 SQLCMD 버전을 확인하려면 `sqlcmd -?` 명령을 실행하여 15.0.1300.359 버전 이상을 사용하는지 확인합니다.
-
-
 
 > [!NOTE]
 > Always Encrypted(`-g`) 및 Azure Active Directory 인증(`-G`)을 지원하려면 버전 13.1 이상이 필요합니다. (컴퓨터에 설치된 sqlcmd.exe 버전이 여러 개일 수 있습니다. 올바른 버전을 사용해야 합니다. 버전을 확인하려면 `sqlcmd -?`를 실행하세요.)
@@ -231,7 +231,7 @@ sqlcmd
    sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U joe@contoso.com  
    ```
  
-   특정 Azure AD에 있는 게스트 사용자가 sqlcmd 명령을 실행할 데이터베이스 권한이 있는 SQL DB 내의 그룹에 포함되는 경우, 이들의 게스트 사용자 별칭이 사용됩니다(예: *keith0@adventureworks.com* ).
+   특정 Azure AD에 있는 게스트 사용자가 sqlcmd 명령을 실행할 데이터베이스 권한이 있는 SQL DB 내의 그룹에 포함되는 경우, 이들의 게스트 사용자 별칭이 사용됩니다(예: *keith0@adventureworks.com*).
 
   >[!IMPORTANT]
   >SQLCMD를 사용하여 `-G` 및 `-U` 옵션을 사용하는 경우 알려진 문제가 있습니다. `-G` 옵션 앞에 `-U` 옵션을 배치하면 인증이 실패할 수 있습니다. 항상 `-G` 옵션부터 시작하고 그 다음에 `-U` 옵션을 사용합니다.
@@ -259,7 +259,7 @@ sqlcmd
 
 강력한 암호를 사용하는 것이 좋습니다.
  
-#### <a name="use-a-strong-password"></a>[**강력한 암호를 사용하세요.** ](../relational-databases/security/strong-passwords.md)
+#### <a name="use-a-strong-password"></a>[**강력한 암호를 사용하세요.**](../relational-databases/security/strong-passwords.md)
   
   
  암호 프롬프트는 다음과 같이 콘솔에 출력되어 표시됩니다. `Password:`  
@@ -283,14 +283,14 @@ sqlcmd
   
  **-P** 옵션 다음에 둘 이상의 인수를 지정하면 오류 메시지가 생성되고 프로그램이 종료됩니다.  
   
- **-S** [*protocol*:]*server*[ **\\** _instance\_name_][ **,** _port_]  
+ **-S** [*protocol*:]*server*[**\\**_instance\_name_][**,**_port_]  
  연결할 SQL Server 인스턴스를 지정합니다. **sqlcmd** 스크립팅 변수 SQLCMDSERVER를 설정합니다.  
   
- 해당 서버 컴퓨터에 있는 기본 SQL Server 인스턴스에 연결하려면 *server_name*을 지정합니다. 해당 서버 컴퓨터에 있는 명명된 SQL Server 인스턴스에 연결하려면 *server_name* [ **\\** _instance\_name_ ]을 지정합니다. 서버 컴퓨터를 지정하지 않으면 **sqlcmd** 가 로컬 컴퓨터에 있는 기본 SQL Server 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터에서 **sqlcmd** 를 실행할 경우에는 이 옵션을 지정해야 합니다.  
+ 해당 서버 컴퓨터에 있는 기본 SQL Server 인스턴스에 연결하려면 *server_name*을 지정합니다. 해당 서버 컴퓨터에 있는 명명된 SQL Server 인스턴스에 연결하려면 *server_name* [ **\\**_instance\_name_ ]을 지정합니다. 서버 컴퓨터를 지정하지 않으면 **sqlcmd** 가 로컬 컴퓨터에 있는 기본 SQL Server 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터에서 **sqlcmd** 를 실행할 경우에는 이 옵션을 지정해야 합니다.  
   
  *protocol* 은 **tcp** (TCP/IP), **lpc** (공유 메모리) 또는 **np** (명명된 파이프)일 수 있습니다.  
   
- **sqlcmd**를 시작할 때 *server_name* [ **\\** _instance\_name_ ]을 지정하지 않으면 SQL Server에서 SQLCMDSERVER 환경 변수를 확인하고 사용합니다.  
+ **sqlcmd**를 시작할 때 *server_name* [ **\\**_instance\_name_ ]을 지정하지 않으면 SQL Server에서 SQLCMDSERVER 환경 변수를 확인하고 사용합니다.  
   
 > [!NOTE]  
 >  OSQLSERVER 환경 변수는 이전 버전과의 호환성을 위해 유지되었습니다. SQLCMDSERVER 환경 변수는 OSQLSERVER 환경 변수보다 우선 적용됩니다. 따라서 **sqlcmd** 와 **osql** 을 문제 없이 함께 사용할 수 있으며 이전 스크립트를 계속 사용할 수 있습니다.  
@@ -316,7 +316,7 @@ sqlcmd
  `sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd`  
   
  **입/출력 옵션**  
-  **-f** _codepage_ | **i:** _codepage_[ **,o:** _codepage_] | **o:** _codepage_[ **,i:** _codepage_]  
+  **-f** _codepage_ | **i:**_codepage_[**,o:**_codepage_] | **o:**_codepage_[**,i:**_codepage_]  
  입력 및 출력 코드 페이지를 지정합니다. 코드 페이지 번호는 설치된 Windows 코드 페이지를 지정하는 숫자 값입니다.  
   
  코드 페이지 변환 규칙은 다음과 같습니다.  
@@ -331,7 +331,7 @@ sqlcmd
   
  명령 프롬프트에서 **chcp** 를 입력하여 Cmd.exe의 코드 페이지를 확인합니다.  
   
- **-i** _input_file_[ **,** _input\_file2_...]  
+ **-i** _input_file_[**,**_input\_file2_...]  
  SQL 문 또는 저장 프로시저의 일괄 처리가 포함된 파일을 나타냅니다. 순서대로 읽고 처리할 파일을 여러 개 지정할 수 있습니다. 파일 이름 사이에 공백을 넣지 마십시오. 먼저**sqlcmd** 는 지정한 모든 파일이 있는지 확인합니다. 하나 이상의 파일이 없을 경우 **sqlcmd** 가 종료됩니다. -i 옵션과 -Q/-q 옵션은 함께 사용할 수 없습니다.  
   
  경로 예는 다음과 같습니다.  
@@ -413,7 +413,7 @@ sqlcmd
 >  실제 제한 시간 값은 지정한 *time_out* 값과 몇 초 정도 차이가 날 수 있습니다.  
   
  **-vvar =**  _value_[ **var =** _value_...]  
- **sqlcmd**스크립트에서 사용할 수 있는 **sqlcmd** 스크립팅 변수를 만듭니다. 공백이 포함된 값은 따옴표로 묶습니다. 여러 _**var**_ = **"** _values_ **"** 값을 지정할 수 있습니다. 지정한 값에 오류가 있을 경우 **sqlcmd** 는 오류 메시지를 생성하고 종료됩니다.  
+ **sqlcmd**스크립트에서 사용할 수 있는 **sqlcmd** 스크립팅 변수를 만듭니다. 공백이 포함된 값은 따옴표로 묶습니다. 여러 _**var**_=**"**_values_**"** 값을 지정할 수 있습니다. 지정한 값에 오류가 있을 경우 **sqlcmd** 는 오류 메시지를 생성하고 종료됩니다.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -467,15 +467,15 @@ sqlcmd
  **-Y** _fixed_length_type_display_width_  
  **sqlcmd** 스크립팅 변수 `SQLCMDMAXFIXEDTYPEWIDTH`를 설정합니다. 기본값은 0(무제한)입니다. 다음 데이터 형식에 대해 반환되는 문자 수를 제한합니다.  
   
--   **char(** _n_ **)** , 여기서 n의 범위는 1<=n<=8000  
+-   **char(** _n_ **)**, 여기서 n의 범위는 1<=n<=8000  
   
--   **nchar(n** _n_ **)** , 여기서 n의 범위는 1<=n<=4000  
+-   **nchar(n** _n_ **)**, 여기서 n의 범위는 1<=n<=4000  
   
--   **varchar(n** _n_ **)** , 여기서 n의 범위는 1<=n<=8000  
+-   **varchar(n** _n_ **)**, 여기서 n의 범위는 1<=n<=8000  
   
--   **nvarchar(n** _n_ **)** , 여기서 n의 범위는 1<=n<=4000  
+-   **nvarchar(n** _n_ **)**, 여기서 n의 범위는 1<=n<=4000  
   
--   **varbinary(n** _n_ **)** , 여기서 n의 범위는 1<=n\<=4000  
+-   **varbinary(n** _n_ **)**, 여기서 n의 범위는 1<=n\<=4000  
   
 -   **variant**  
   
@@ -601,16 +601,16 @@ sqlcmd
  R/W는 값이 **setvar** 명령을 사용하여 수정될 수 있으며 후속 명령이 새 값의 영향을 받을 수 있음을 나타냅니다.  
   
 ## <a name="sqlcmd-commands"></a>sqlcmd 명령  
- **sqlcmd**에서 Transact-SQL 문 외에도 다음 명령을 사용할 수 있습니다.  
+ ** sqlcmd **에서 Transact-SQL 문 외에도 다음 명령을 사용할 수 있습니다.  
   
 |||  
 |-|-|  
 |**GO** [*count*]|**:List**|  
-|[ **:** ] **RESET**|**:Error**|  
-|[ **:** ] **ED**|**:Out**|  
-|[ **:** ] **!!**|**:Perftrace**|  
-|[ **:** ] **QUIT**|**:Connect**|  
-|[ **:** ] **EXIT**|**:On Error**|  
+|[**:**] **RESET**|**:Error**|  
+|[**:**] **ED**|**:Out**|  
+|[**:**] **!!**|**:Perftrace**|  
+|[**:**] **QUIT**|**:Connect**|  
+|[**:**] **EXIT**|**:On Error**|  
 |**:r**|**:Help**|  
 |**:ServerList**|**:XML** [**ON** &#124; **OFF**]|  
 |**:Setvar**|**:Listvar**|  
@@ -620,7 +620,7 @@ sqlcmd
 -   GO를 제외한 모든 **sqlcmd** 명령에는 접두사로 콜론(:)을 붙여야 합니다.  
   
     > [!IMPORTANT]  
-    >  **osql** 스크립트와의 호환성을 유지하기 위해 일부 명령은 콜론 없이, [ **:** ] 형식으로 표시되어 인식됩니다.
+    >  **osql** 스크립트와의 호환성을 유지하기 위해 일부 명령은 콜론 없이, [**:**] 형식으로 표시되어 인식됩니다.
   
 -   **sqlcmd** 명령은 줄 시작 부분에 나타난 경우에만 인식됩니다.  
   
@@ -631,21 +631,21 @@ sqlcmd
 -   명령은 즉시 실행되며 Transact-SQL 문처럼 실행 버퍼에 포함되지 않습니다.  
   
  **명령 편집**  
-  [ **:** ] **ED**  
+  [**:**] **ED**  
  텍스트 편집기를 시작합니다. 이 편집기를 사용하여 현재 Transact-SQL 일괄 처리를 편집하거나 마지막으로 실행된 일괄 처리를 편집할 수 있습니다. 마지막으로 실행된 일괄 처리를 편집하려면 마지막 일괄 처리 실행을 마친 후 즉시 **ED** 명령을 입력해야 합니다.  
   
  텍스트 편집기는 SQLCMDEDITOR 환경 변수에 의해 정의됩니다. 기본 편집기는 'Edit'입니다. 편집기를 변경하려면 SQLCMDEDITOR 환경 변수를 설정합니다. 예를 들어 편집기를 Microsoft 메모장으로 설정하려면 명령 프롬프트에서 다음을 입력합니다.  
   
  `SET SQLCMDEDITOR=notepad`  
   
- [ **:** ] **RESET**  
+ [**:**] **RESET**  
  문 캐시를 지웁니다.  
   
  **:List**  
  문 캐시 내용을 출력합니다.  
   
  **변수**  
-  **:Setvar** \<**var**> [ **"** _value_ **"** ]  
+  **:Setvar** \<**var**> [ **"**_value_**"** ]  
  **sqlcmd** 스크립팅 변수를 정의합니다. 스크립팅 변수의 형식은 다음과 같습니다. `$(VARNAME)`.  
   
  변수 이름은 대/소문자를 구분하지 않습니다.  
@@ -689,10 +689,10 @@ sqlcmd
  **STDOUT**  
  오류 출력을 **stdout** 스트림으로 전환합니다. 스트림을 리디렉션할 경우 리디렉션된 스트림 대상이 오류 출력을 받습니다.  
   
- **:Out \<** _filename_ **>** | **STDERR**| **STDOUT**  
+ **:Out \<** _filename_ **>**| **STDERR**| **STDOUT**  
  쿼리 결과를 만들어 *file name*에 지정된 파일, **stderr** 또는 **stdout**으로 모두 리디렉션합니다. 기본적으로 출력은 **stdout**으로 전송됩니다. 이 파일이 이미 있을 경우 0바이트로 잘립니다. 스크립트에서 **Out** 명령이 여러 번 나타날 수 있습니다.  
   
- **:Perftrace \<** _filename_ **>** | **STDERR**| **STDOUT**  
+ **:Perftrace \<** _filename_ **>**| **STDERR**| **STDOUT**  
  성능 추적 정보를 만들어 *file name*에 지정된 파일, **stderr** 또는 **stdout**으로 모두 리디렉션합니다. 기본적으로 성능 추적 출력은 **stdout**으로 전송됩니다. 이 파일이 이미 있을 경우 0바이트로 잘립니다. 스크립트에서 **Perftrace** 명령이 여러 번 나타날 수 있습니다.  
   
  **실행 제어 명령**  
@@ -703,15 +703,15 @@ sqlcmd
   
  **ignore** 옵션을 사용하면 **sqlcmd** 는 오류를 무시하고 일괄 처리 또는 스크립트를 계속 실행합니다. 기본적으로 오류 메시지가 출력됩니다.  
   
- [ **:** ] **QUIT**  
+ [**:**] **QUIT**  
  **sqlcmd** 가 종료되도록 합니다.  
   
- [ **:** ] **EXIT**[ **(** _statement_ **)** ]  
+ [**:**] **EXIT**[ **(**_statement_**)** ]  
  SELECT 문의 결과를 **sqlcmd**의 반환 값으로 사용할 수 있도록 합니다. 숫자일 경우 마지막 결과 행의 첫째 열은 4바이트 정수(long)로 변환됩니다. MS-DOS는 하위 바이트를 부모 프로세스 또는 운영 체제 오류 수준에 전달합니다. Windows 200x에서는 4바이트 정수 전체를 전달합니다. 구문은 다음과 같습니다.  
   
  `:EXIT(query)`  
   
- 다음은 그 예입니다.  
+ 다음은 그 예입니다.   
   
  `:EXIT(SELECT @@ROWCOUNT)`  
   
@@ -737,7 +737,7 @@ sqlcmd
   
  쿼리를 포함하는 일괄 처리를 실행하며 쿼리 결과를 반환한 다음 종료합니다.  
   
- **sqlcmd** 스크립트에 RAISERROR를 사용할 때 상태 127이 발생하면 **sqlcmd** 가 종료되고 메시지 ID가 클라이언트에 반환됩니다. 다음은 그 예입니다.  
+ **sqlcmd** 스크립트에 RAISERROR를 사용할 때 상태 127이 발생하면 **sqlcmd** 가 종료되고 메시지 ID가 클라이언트에 반환됩니다. 다음은 그 예입니다.   
   
  `RAISERROR(50001, 10, 127)`  
   
@@ -756,7 +756,7 @@ sqlcmd
   
  **기타 명령**  
   **:r \<** _filename_ **>**  
- **\<** _filename_ **>** 으로 지정된 파일의 추가 Transact-SQL 문과 **sqlcmd** 명령을 명령문 캐시로 구문 분석합니다.  
+ **\<**_filename_**>** 으로 지정된 파일의 추가 Transact-SQL 문과 **sqlcmd** 명령을 명령문 캐시로 구문 분석합니다.  
   
  파일에 Transact-SQL 문이 포함되어 있고 뒤에 **GO**가 오지 않을 경우 **:r** 뒤에 오는 줄에 **GO**를 입력해야 합니다.  
   
@@ -771,7 +771,7 @@ sqlcmd
  **:Serverlist**  
  로컬로 구성된 서버와 네트워크상에서 브로드캐스팅하는 서버의 이름을 표시합니다.  
   
- **:Connect**  _server_name_[ **\\** _instance\_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
+ **:Connect**  _server_name_[**\\**_instance\_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
  SQL Server 인스턴스에 연결합니다. 또한 현재 연결을 종료합니다.  
   
  제한 시간 옵션은 다음과 같습니다.  
@@ -797,8 +797,8 @@ sqlcmd
   
  `:connect $(myservername) $(myusername)`  
   
- [ **:** ] **!!** < *명령*>  
- 운영 체제 명령을 실행합니다. 운영 체제 명령을 실행하려면 느낌표 두 개( **!!** )로 줄을 시작하고 운영 체제 명령을 입력합니다. 다음은 그 예입니다.  
+ [**:**] **!!**< *명령*>  
+ 운영 체제 명령을 실행합니다. 운영 체제 명령을 실행하려면 느낌표 두 개(**!!**)로 줄을 시작하고 운영 체제 명령을 입력합니다. 다음은 그 예입니다.   
   
  `:!! Dir`  
   
@@ -814,7 +814,7 @@ sqlcmd
 ### <a name="sqlcmd-file-names"></a>sqlcmd 파일 이름  
  **sqlcmd** 입력 파일은 **-i** 옵션 또는 **:r** 명령을 사용하여 지정할 수 있습니다. 출력 파일은 **-o** 옵션 또는 **:Error**, **:Out** 및 **:Perftrace** 명령을 사용하여 지정할 수 있습니다. 다음은 이러한 파일 작업에 대한 지침입니다.  
   
--   **:Error**, **:Out** 및 **:Perftrace** 는 별도의 **\<** _filename_ **>** 을 사용해야 합니다. 동일한 **\<** _filename_ **>** 을 사용하면 명령의 입력이 섞일 수 있습니다.  
+-   **:Error**, **:Out** 및 **:Perftrace** 는 별도의 **\<**_filename_**>** 을 사용해야 합니다. 동일한 **\<**_filename_**>** 을 사용하면 명령의 입력이 섞일 수 있습니다.  
   
 -   원격 서버에 있는 입력 파일을 로컬 컴퓨터에 있는 **sqlcmd** 에서 호출할 경우 이 파일에 :Out c:\OutputFile.txt와 같은 드라이브 파일 경로가 포함되어 있으면 출력 파일이 원격 서버가 아닌 로컬 컴퓨터에 생성됩니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: 차트 문제 해결(보고서 작성기 및 SSRS) | Microsoft Docs
+title: 차트 문제 해결(보고서 작성기) | Microsoft Docs
 ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 3a327ffa-3b69-40d6-8015-cc01cfae9161
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 365128fe0fd67f1b270481f827eef6871acccb5d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 96579c7dadc33c9d8dd74e823cee9cc5ef8e3367
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65573748"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078451"
 ---
 # <a name="troubleshoot-charts-report-builder-and-ssrs"></a>차트 문제 해결(보고서 작성기 및 SSRS)
   다음은 차트로 작업할 때 도움이 되는 문제 관련 정보입니다.  

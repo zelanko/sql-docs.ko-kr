@@ -1,5 +1,5 @@
 ---
-title: Last 함수(보고서 작성기 및 SSRS) | Microsoft Docs
+title: Last 함수(보고서 작성기) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 123b78a0-d6c9-4f78-b0e7-73b21854a250
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6f6a30101e4ee1472845d11dc1ab6b7cb3d70bc5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e1856df527f071c5366be84c8260d16ea92bf087
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579533"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081246"
 ---
 # <a name="report-builder-functions---last-function"></a>보고서 작성기 함수 - Last 함수
   지정된 식의 지정된 범위에서 마지막 값을 반환합니다.  

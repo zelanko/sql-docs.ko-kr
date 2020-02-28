@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 10e46d39d312f47fa327d79523a2613ef4b80634
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d23ae15a277c866c62f3e9be9e2eab19c5255c10
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251207"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173604"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>SQL Server 빅 데이터 클러스터 배포에 대해 Azure Kubernetes Service 구성
 
@@ -70,7 +70,13 @@ Azure 리소스 그룹은 Azure 리소스가 배포되고 관리되는 논리 �
    az account set --subscription <subscription id>
    ```
 
-1. **az group create** 명령을 사용하여 리소스 그룹을 만듭니다. 다음 예제에서는 `sqlbdcgroup` 위치에 `westus2`이라는 리소스 그룹을 만듭니다.
+1. 다음 명령을 사용하여 클러스터 및 리소스를 배포하려는 Azure 지역을 확인합니다.
+
+   ```azurecli
+   az account list-locations -o table
+   ```
+
+1. **az group create** 명령을 사용하여 리소스 그룹을 만듭니다. 다음 예제에서는 `westus2` 위치에 `sqlbdcgroup`이라는 리소스 그룹을 만듭니다.
 
    ```azurecli
    az group create --name sqlbdcgroup --location westus2
@@ -104,7 +110,7 @@ Azure 리소스 그룹은 Azure 리소스가 배포되고 관리되는 논리 �
 
 ## <a name="create-a-kubernetes-cluster"></a>Kubernetes 클러스터 만들기
 
-1. [az aks create](https://docs.microsoft.com/cli/azure/aks) 명령을 사용하여 AKS에서 Kubernetes 클러스터를 만듭니다. 다음 예제에서는 크기가 *Standard_L8s*인 Linux 에이전트 노드 1개를 사용하여 **kubcluster**라는 Kubernetes 클러스터를 만듭니다.
+1. [az aks create](https://docs.microsoft.com/cli/azure/aks) 명령을 사용하여 AKS에서 Kubernetes 클러스터를 만듭니다. 다음 예제에서는 크기가 **Standard_L8s**인 Linux 에이전트 노드 1개를 사용하여 *kubcluster*라는 Kubernetes 클러스터를 만듭니다.
 
    스크립트를 실행하기 전에 `<version number>`를 이전 단계에서 확인한 버전 번호로 바꿉니다.
 
@@ -132,7 +138,7 @@ Azure 리소스 그룹은 Azure 리소스가 배포되고 관리되는 논리 �
    --kubernetes-version <version number>
    ```
 
-   `--node-count <n>`를 변경하여 Kubernetes 에이전트 노드 수를 늘리거나 줄일 수 있습니다. 여기서 `<n>`은 사용하려는 에이전트 노드 수입니다. AKS에서 백그라운드로 관리하는 마스터 Kubernetes 노드는 여기에 포함되지 않습니다. 위 예제에서는 평가 목적으로 단일 노드만 사용합니다.
+   `--node-count <n>`를 변경하여 Kubernetes 에이전트 노드 수를 늘리거나 줄일 수 있습니다. 여기서 `<n>`은 사용하려는 에이전트 노드 수입니다. AKS에서 백그라운드로 관리하는 마스터 Kubernetes 노드는 여기에 포함되지 않습니다. 위 예제에서는 평가 목적으로 단일 노드만 사용합니다. 워크로드 요구 사항과 일치하는 적절한 가상 머신 크기를 선택하기 위해 `--node-vm-size`를 변경할 수도 있습니다. `az vm list-sizes --location westus2 -o table` 명령을 사용하여 해당 지역에서 사용 가능한 가상 머신 크기를 나열합니다.
 
    몇 분 후에 명령이 완료되고 클러스터에 대한 JSON 형식의 정보가 반환됩니다.
 
@@ -161,6 +167,7 @@ Azure 리소스 그룹은 Azure 리소스가 배포되고 관리되는 논리 �
 
 - [최신 Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)를 설치했는지 확인합니다.
 - 다른 리소스 그룹 및 클러스터 이름을 사용하여 동일한 단계를 시도합니다.
+- [AKS에 대한 자세한 문제 해결 설명서](https://docs.microsoft.com/azure/aks/troubleshooting)를 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 

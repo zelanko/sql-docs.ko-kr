@@ -1,5 +1,5 @@
 ---
-title: 주식형 차트(보고서 작성기 및 SSRS) | Microsoft Docs
+title: 주식형 차트(보고서 작성기) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f75ca11e-b7f5-4ac0-ba17-fe6f82742dad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 524b04f08b533046e4ed16c02b175c1c30f3442d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d59677d4259e8e25e8e58c20b461fe25e2f762dc
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65578554"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77077117"
 ---
 # <a name="stock-charts-report-builder-and-ssrs"></a>주식형 차트(보고서 작성기 및 SSRS)
 

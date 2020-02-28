@@ -1,5 +1,5 @@
 ---
-title: 단계별 보고서 만들기(보고서 작성기 및 SSRS) | Microsoft Docs
+title: 단계별 보고서 만들기(보고서 작성기) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: adfde8e92d249c40749dba76f42c6d1d5ba20d71
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: dca297ff55b9bd845e6fcb8379dcb7cc7147d32e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581533"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080614"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>단계별 보고서 만들기(보고서 작성기 및 SSRS)
 단계별 보고서는 아래 예제와 같이 동일한 열의 부모 그룹 아래에 들여 쓴 정보 행 또는 자식 그룹을 표시하는 페이지가 매겨진  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서의 한 유형입니다.  

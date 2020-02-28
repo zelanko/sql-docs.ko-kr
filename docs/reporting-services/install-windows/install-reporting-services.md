@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 749dfd8f7cce37aeeb9721af9f951caa6ab15dfd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 42d3d697ace0f427dcad7fdcd394695672061e13
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "71952740"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77429054"
 ---
 # <a name="install-sql-server-reporting-services"></a>SQL Server Reporting Services 설치
 
@@ -67,7 +67,7 @@ Reporting Services를 설치하기 전에 [SQL Server 설치를 위한 하드웨
 
 7. 성공적으로 설치 후 **보고서 서버 구성**을 선택하여 Reporting Services 구성 관리자를 시작합니다.
 
-## <a name="configuration-your-report-server"></a>보고서 서버 구성
+## <a name="configure-your-report-server"></a>보고서 서버 구성
 
 설치에서 **보고서 서버 구성**을 설치한 후 **보고서 서버 구성 관리자**가 나타납니다. 자세한 내용은 [보고서 서버 구성 관리자](reporting-services-configuration-manager-native-mode.md)를 참조하세요.
 

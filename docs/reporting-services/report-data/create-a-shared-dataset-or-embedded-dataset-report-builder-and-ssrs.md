@@ -1,5 +1,5 @@
 ---
-title: 공유 데이터 세트 또는 포함된 데이터 세트 만들기(보고서 작성기 및 SSRS) | Microsoft Docs
+title: 공유 데이터 세트 또는 포함된 데이터 세트 만들기(보고서 작성기) | Microsoft Docs
 ms.date: 10/17/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a9e401ab8fd48e6d1bbb487be3692897add2e225
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b19b5442731bf52e299450a32cb8536c0f95467f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190879"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081415"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>공유 데이터 세트 또는 포함된 데이터 세트 만들기(보고서 작성기 및 SSRS)
 포함된 데이터 세트는 단일 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에 사용하기 위한 것입니다. 보고서 서버의 공유 데이터 세트는 여러 보고서(모바일 및 페이지 매김 둘 다)에서 사용될 수 있습니다. 데이터 세트를 만들려면 포함된 데이터 원본 또는 공유 데이터 원본이 필요합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "74190879"
   
 4.  쿼리 디자이너에서 데이터 세트에 포함할 필드를 지정합니다.  
   
-5.  **실행** ( **!** )을 클릭하여 쿼리를 실행합니다.  
+5.  **실행** (**!**)을 클릭하여 쿼리를 실행합니다.  
   
 6.  **보고서 작성기** 단추에서 **저장** 또는 **다른 이름으로 저장**을 클릭하여 공유 데이터 세트를 보고서 서버에 저장합니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: RunningValue 함수(보고서 작성기 및 SSRS) | Microsoft Docs
+title: RunningValue 함수(보고서 작성기) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 91447a23f04b05dc27d0ddcc47ba845d3dc313a2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f90054a62168032ca29d99819061537e6a0b179a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577180"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081164"
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>보고서 작성기 함수 - RunningValue 함수
   식으로 지정되어 정해진 범위에서 계산되는 Null이 아닌 모든 숫자 값의 실행 집계를 반환합니다.  
@@ -36,7 +36,7 @@ RunningValue(expression, function, scope)
  (**Enum**) 식에 적용할 집계 함수의 이름입니다(예: **Sum**). 이 함수는 **RunningValue**, **RowNumber**또는 **Aggregate**일 수 없습니다.  
   
  *범위*  
- (**String**) 집계를 계산할 컨텍스트를 지정하는 데이터 세트, 데이터 영역, 그룹의 이름인 문자열 상수 또는 null(**의** Nothing[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])입니다. **Nothing**은 가장 바깥쪽 컨텍스트를 지정하며 이는 일반적으로 보고서 데이터 세트입니다.  
+ (**String**) 집계를 계산할 컨텍스트를 지정하는 데이터 세트, 데이터 영역, 그룹의 이름인 문자열 상수 또는 null([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]의 **Nothing**)입니다. **Nothing**은 가장 바깥쪽 컨텍스트를 지정하며 이는 일반적으로 보고서 데이터 세트입니다.  
   
 ## <a name="return-type"></a>반환 형식  
  반환 형식은 *function* 매개 변수에 지정된 집계 함수에 의해 결정됩니다.  

@@ -4,17 +4,17 @@ titleSuffix: ''
 description: Machine Learning Services는 관계형 데이터를 사용하여 Python 및 R 스크립트를 실행할 수 있는 기능을 제공하는 SQL Server의 기능입니다. 예측 분석 및 기계 학습에 오픈 소스 패키지와 프레임워크, Microsoft Python과 R 패키지를 사용할 수 있습니다. 스크립트는 SQL Server 외부에서 또는 네트워크를 통해 데이터를 이동하지 않고 데이터베이스 내에서 실행됩니다. 이 문서에서는 SQL Server Machine Learning Services의 기본 사항에 대해 설명합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/07/2019
+ms.date: 02/04/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fe7a83c66dba9af372e82fc2814828aae32d6a2d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3cf2b6f61e01230c8657051388647e336d46ed71
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75558291"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004569"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>SQL Server Machine Learning Services(Python 및 R)이란?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,6 +61,19 @@ Machine Learning Services에서 Python 및 R 스크립트를 실행하는 두 �
 
 + 기본 설정 Python 또는 R 클라이언트를 사용하고 실행(*원격 컴퓨팅 컨텍스트*라고도 함)을 원격 SQL Server로 푸시하는 스크립트를 작성할 수도 있습니다. 자세한 내용은 [Python 개발](python/setup-python-client-tools-sql.md) 및 [R 개발](r/set-up-a-data-science-client.md)을 위해 데이터 과학 클라이언트를 설정하는 방법을 참조하세요.
 
+<a name="versions"></a>
+
+## <a name="python-and-r-versions"></a>Python 및 R 버전
+
+Machine Learning Services에 포함되는 Python 및 R 버전은 사용하는 SQL Server 버전에 따라 달라집니다. 
+
+| SQL Server 버전 | Python 버전 | R 버전 |
+|-|-|-|
+| SQL Server 2017 | 3.5.2 | 3.3.3 |
+| SQL Server 2019 | 3.7.3 | 3.5.2 |
+
+SQL Server 2016의 R 버전에 대한 자세한 내용은 [R Services란?의 R 버전 섹션](r/sql-server-r-services.md#version)을 참조하세요.
+
 <a name="packages"></a>
 
 ## <a name="python-and-r-packages"></a>Python 및 R 패키지
@@ -95,11 +108,10 @@ Machine Learning Services와 함께 설치되는 패키지와 기타 패키지�
 
 1. 첫 번째 Python 또는 R 스크립트 작성
 
-    + 빠른 시작: [SQL에서 간단한 R 스크립트를 만들고 실행](tutorials/quickstart-r-create-script.md)
-    + 빠른 시작: [R에서 예측 모델 만들기 및 학습](tutorials/quickstart-r-train-score-model.md)
+    + 빠른 시작: [간단한 Python 스크립트 실행](tutorials/quickstart-python-create-script.md)
+    + 빠른 시작: [간단한 R 스크립트 실행](tutorials/quickstart-r-create-script.md)
     + 자습서: [T-SQL에서 Python 사용](tutorials/sqldev-in-database-python-for-sql-developers.md): 데이터 살펴보기, 기능 엔지니어링 수행, 모델 학습 및 배포, 예측 수행(5부 시리즈)
     + 자습서: [T-SQL에서 R 사용](tutorials/sqldev-in-database-r-for-sql-developers.md): 데이터 살펴보기, 기능 엔지니어링 수행, 모델 학습 및 배포, 예측 수행(5부 시리즈)
-    + 자습서: [R 도구에서 Machine Learning Services 사용](tutorials/walkthrough-data-science-end-to-end-walkthrough.md): 데이터 살펴보기, 그래프와 그림 만들기, 기능 엔지니어링 수행, 모델 학습 및 배포, 예측 수행(6부 시리즈)
 
 ## <a name="next-steps"></a>다음 단계
 

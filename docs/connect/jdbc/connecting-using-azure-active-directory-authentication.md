@@ -1,7 +1,7 @@
 ---
 title: Azure Active Directory 인증을 사용하여 연결 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b596936010fcdce4eb5c0701c5f0c6631cd9687e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7019efd6e1071624eb3e89873918fb9eb2775833
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69028119"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004642"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Azure Active Directory 인증을 사용하여 연결
 
@@ -30,7 +30,7 @@ Microsoft JDBC Driver for SQL Server에서 Azure Active Directory 인증을 지�
     * **ActiveDirectoryMSI**
         * 드라이버 버전 **v7.2**부터 지원되며, `authentication=ActiveDirectoryMSI`를 사용하여 "ID" 지원이 사용하도록 설정된 Azure 리소스 내부로부터 Azure SQL Database/Data Warehouse에 연결할 수 있습니다. 필요에 따라 이 인증 모드와 함께 연결/데이터 원본 속성에 **msiClientId**를 지정할 수도 있습니다. 여기에는 연결 설정을 위한 **accessToken**을 획득하는 데 사용할 관리 서비스 ID의 클라이언트 ID가 포함되어야 합니다.
     * **ActiveDirectoryIntegrated**
-        * 드라이버 버전 **v6.0**부터 지원되며, `authentication=ActiveDirectoryIntegrated`를 사용하여 통합 인증을 통해 Azure SQL Database/Data Warehouse에 연결할 수 있습니다. 이 인증 모드를 사용하려면 온-프레미스 ADFS(Active Directory Federation Services)를 클라우드의 Azure Active Directory와 페더레이션해야 합니다. 설정되면 네이티브 라이브러리 'sqljdbc_auth.dll'을 Windows OS의 애플리케이션 클래스 경로에 추가하거나 플랫폼 간 인증 지원을 위한 Kerberos 티켓을 설정하여 연결할 수 있습니다. 도메인 가입 컴퓨터에 로그인하는 경우 자격 증명을 묻는 메시지가 표시되지 않고 Azure SQL DB/DW에 액세스할 수 있습니다.
+        * 드라이버 버전 **v6.0**부터 지원되며, `authentication=ActiveDirectoryIntegrated`를 사용하여 통합 인증을 통해 Azure SQL Database/Data Warehouse에 연결할 수 있습니다. 이 인증 모드를 사용하려면 온-프레미스 ADFS(Active Directory Federation Services)를 클라우드의 Azure Active Directory와 페더레이션해야 합니다. 설정되면 네이티브 라이브러리 ‘mssql-jdbc_auth-\<버전>-\<arch>.dll’을 Windows OS의 애플리케이션 클래스 경로에 추가하거나 플랫폼 간 인증 지원을 위한 Kerberos 티켓을 설정하여 연결할 수 있습니다. 도메인 가입 컴퓨터에 로그인하는 경우 자격 증명을 묻는 메시지가 표시되지 않고 Azure SQL DB/DW에 액세스할 수 있습니다.
     * **ActiveDirectoryPassword**
         * 드라이버 버전 **v6.0**부터 지원되며, `authentication=ActiveDirectoryPassword`를 사용하여 Azure AD 보안 주체 이름 및 암호를 통해 Azure SQL Database/Data Warehouse에 연결할 수 있습니다.
     * **SqlPassword**
@@ -107,7 +107,7 @@ You have successfully logged on as: <your MSI username>
 
 ## <a name="connecting-using-activedirectoryintegrated-authentication-mode"></a>ActiveDirectoryIntegrated 인증 모드를 사용하여 연결
 Microsoft JDBC Driver는 버전 6.4에서 여러 플랫폼(Windows, Linux 및 macOS)에서 Kerberos 티켓을 사용하는 ActiveDirectoryIntegrated 인증에 대한 지원을 추가합니다.
-자세한 내용은 [Windows, Linux 및 Mac에서 Kerberos 티켓 설정](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac)을 참조하세요. 또한 Windows의 경우 JDBC 드라이버를 사용하는 ActiveDirectoryIntegrated 인증에 sqljdbc_auth.dll을 사용할 수도 있습니다.
+자세한 내용은 [Windows, Linux 및 Mac에서 Kerberos 티켓 설정](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac)을 참조하세요. 또는 Windows에서 JDBC 드라이버를 사용하는 ActiveDirectoryIntegrated 인증에 mssql-jdbc_auth-\<버전>-\<arch>.dll을 사용할 수도 있습니다.
 
 > [!NOTE]
 >  이전 버전의 드라이버를 사용하는 경우 이 인증 모드를 사용하는 데 필요한 각 종속성에 대한 이 [링크](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)를 확인하세요. 
@@ -281,7 +281,7 @@ You have successfully logged on as: <your user name>
     6. 로그온 URL은 필요하지 않습니다. 아무 것도 제공할: "https://mytokentest" 입니다.
     7. 맨 아래에서 "만들기"를 클릭합니다.
     9. 여전히 Azure Portal에 있는 상태에서 애플리케이션의 "설정" 탭을 클릭하고 "속성" 탭을 엽니다.
-    10. "애플리케이션 ID"(즉, 클라이언트 ID) 값을 찾아 복사해 둡니다. 나중에 애플리케이션을 구성할 때 이 값이 필요합니다(예: 1846943b-ad04-4808-aa13-4702d908b5c1). 다음 스냅샷을 참조하세요.
+    10. “애플리케이션 ID”(클라이언트 ID라고도 함) 값을 찾아 복사해 둡니다. 나중에 애플리케이션을 구성할 때 이 값이 필요합니다(예: 1846943b-ad04-4808-aa13-4702d908b5c1). 다음 스냅샷을 참조하세요.
     11. "키" 섹션에서 이름 필드를 입력하고 키의 기간을 선택한 다음 구성을 저장하여 키를 만듭니다. 값 필드는 비워 둡니다. 저장하면 값 필드가 자동으로 채워집니다. 생성된 값을 복사합니다. 클라이언트 비밀입니다.
     12. 왼쪽 패널에서 Azure Active Directory를 클릭합니다. "앱 등록"에서 "엔드포인트" 탭을 찾습니다. "OATH 2.0 토큰 엔드포인트"에서 URL을 복사합니다. 이것이 STS URL입니다.
     

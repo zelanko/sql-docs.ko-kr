@@ -9,14 +9,14 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 23eb15b1f7b763688a3657406bab12106a18f977
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c751992e666151752783e9813efa2f696fcdcb6e
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75720938"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173643"
 ---
-# <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]란 무엇인가요?
+# <a name="what-are-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]란 무엇인가요?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -71,12 +71,11 @@ SQL Server 빅 데이터 클러스터에는 확장 가능한 HDFS *스토리지 
 
 관리 및 모니터링은 명령줄 도구, API, 포털 및 동적 관리 뷰를 조합하여 제공됩니다.
 
-Azure Data Studio를 사용하여 빅 데이터 클러스터에서 다양한 작업을 수행할 수 있습니다. 이러한 작업은 새 **SQL Server 2019 확장**을 통해 수행할 수 있습니다. 이 확장은 다음을 제공합니다.
-
+[Azure Data Studio](../azure-data-studio/what-is.md)를 사용하여 빅 데이터 클러스터에서 다양한 작업을 수행할 수 있습니다.
 - 일반적인 관리 작업을 위한 기본 제공 코드 조각
 - HDFS를 찾아보고, 파일을 업로드하고, 파일을 미리 보고, 디렉터리를 만드는 기능
 - Jupyter 호환 Notebook을 만들고 열고 실행하는 기능
-- 외부 데이터 원본 만들기를 간소화하기 위한 데이터 가상화 마법사
+- 외부 데이터 원본 만들기를 간소화하기 위한 데이터 가상화 마법사(**데이터 가상화 확장**에 의해 사용하도록 설정됨).
 
 ## <a id="architecture"></a> 아키텍처
 

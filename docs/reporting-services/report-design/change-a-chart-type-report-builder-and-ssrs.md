@@ -1,5 +1,5 @@
 ---
-title: 차트 종류 변경(보고서 작성기 및 SSRS) | Microsoft Docs
+title: 차트 종류 변경(보고서 작성기) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b035a1efda99ac47063cb16c3b6ff57b40035da
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: de9785121ebd5703abda6c1a52dfb02e180a42cb
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581755"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081881"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>차트 종류 변경(보고서 작성기 및 SSRS)
 처음으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에 차트를 삽입하면 **차트 종류 선택** 대화 상자가 나타납니다. 이 대화 상자를 취소하면 세로 막대형 차트가 기본적으로 추가됩니다.  

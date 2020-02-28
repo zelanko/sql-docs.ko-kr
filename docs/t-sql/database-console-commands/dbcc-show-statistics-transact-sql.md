@@ -33,12 +33,12 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 327b084471155c9e7d8451fc8dceec8e4c00496f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 50587bc33f6fd37e4c114fa28a7171e6ea951b84
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68116479"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074451"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,7 +86,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  심각도가 0에서 10 사이인 모든 정보 메시지를 표시하지 않습니다.  
   
- STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,** _n_ ]  
+ STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,**_n_ ]  
  이 옵션 중 하나 이상을 지정하면 문에서 반환하는 결과 집합이 지정한 옵션으로 제한됩니다. 옵션을 지정하지 않으면 모든 통계 정보가 반환됩니다.  
   
  STATS_STREAM은 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]입니다.  
@@ -103,7 +103,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |단계|히스토그램의 총 단계 수입니다. 각 단계의 범위는 열 값에서 상한 열 값까지입니다. 히스토그램 단계는 통계의 첫 번째 키 열에 정의됩니다. 최대 단계 수는 200개입니다.|  
 |밀도|히스토그램 경계 값을 제외하고 통계 개체의 첫 번째 키 열에 있는 모든 값에 대해 1/ *고유 값* 으로 계산됩니다. 이 밀도 값은 쿼리 최적화 프로그램에서 사용되지 않으며 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전 버전과의 호환성을 위해 표시됩니다.|  
 |평균 키 길이|통계 개체의 키 열에 있는 모든 값에 대한 값당 평균 바이트 수입니다.|  
-|문자열 인덱스|'예'는 통계 개체에 LIKE 연산자를 사용하는 쿼리 조건자(예: `WHERE ProductName LIKE '%Bike'`)의 카디널리티 예상치 정확도를 높이기 위한 문자열 요약 통계가 있음을 나타냅니다. 문자열 요약 통계는 히스토그램과는 별도로 저장되며 통계 개체에서 **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text**또는 **ntext**형식인 첫 번째 키 열에 생성됩니다.|  
+|문자열 인덱스|'예'는 통계 개체에 LIKE 연산자를 사용하는 쿼리 조건자(예: `WHERE ProductName LIKE '%Bike'`)의 카디널리티 예상치 정확도를 높이기 위한 문자열 요약 통계가 있음을 나타냅니다. 문자열 요약 통계는 히스토그램과는 별도로 저장되며 통계 개체에서 **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text**또는 **ntext**형식인 첫 번째 키 열에 생성됩니다.|  
 |필터 식|통계 개체에 포함된 테이블 행의 하위 집합에 대한 조건자입니다. NULL = 필터링되지 않은 통계입니다. 필터링된 조건자에 대한 자세한 내용은 [필터링된 인덱스 만들기](../../relational-databases/indexes/create-filtered-indexes.md)를 참조하세요. 필터링된 통계에 대한 자세한 내용은 [통계](../../relational-databases/statistics/statistics.md)를 참조하세요.|  
 |필터링되지 않은 행|필터 식을 적용하기 전 테이블에 있는 전체 행 수입니다. 필터 식이 NULL이면 필터링되지 않은 행과 행이 동일합니다.|  
 |지속된 샘플 비율|샘플링 비율을 명시적으로 지정하지 않은 통계 업데이트에 사용되는 샘플 비율을 유지합니다. 값이 0이면 이 통계에 대해 지속 된 샘플 백분율이 설정되지 않습니다.<br /><br /> **적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4| 
@@ -158,28 +158,30 @@ DBCC SHOW_STATISTICS ( table_name , target )
 ## <a name="restrictions"></a>제한  
  DBCC SHOW_STATISTICS는 공간 인덱스 또는 xVelocity 메모리 최적화 columnstore 인덱스에 대한 통계를 제공하지 않습니다.  
   
-## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 대한 사용 권한  
-통계 개체를 보려면 테이블의 소유자이거나 `sysadmin` 고정 서버 역할, `db_owner` 고정 데이터베이스 역할 또는 `db_ddladmin` 고정 데이터베이스 역할의 멤버여야 합니다.
-  
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1에서는 권한 제한을 수정하여 사용자가 SELECT 권한을 통해 이 명령을 사용할 수 있게 되었습니다. 다음 요구 사항에서는 명령을 실행하기 위해 SELECT 권한이 있어야 합니다.
+## <a name="permissions-for-ssnoversion-and-sssds"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 대한 사용 권한  
+통계 개체를 보려면 사용자에게 테이블에 대한 SELECT 권한이 있어야 합니다.
+다음 요구 사항에서는 명령을 실행하기 위해 SELECT 권한이 있어야 합니다.
 -   사용자는 통계 개체의 모든 열에 대해 권한이 있어야 합니다.  
 -   사용자는 필터 조건(있는 경우)에서 모든 열에 대해 권한이 있어야 합니다.  
--   테이블에 행 수준 보안 정책을 사용할 수 없습니다.  
+-   테이블에 행 수준 보안 정책을 사용할 수 없습니다.
+-   통계 개체 내의 열이 SELECT 권한 외에 동적 데이터 마스킹 규칙을 사용하여 마스킹되는 경우 사용자는 UNMASK 권한이 있어야 합니다.
+
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 이전 버전의 경우 사용자는 테이블의 소유자이거나 `sysadmin` 고정 서버 역할, `db_owner` 고정 데이터베이스 역할 또는 `db_ddladmin` 고정 데이터베이스 역할의 멤버여야 합니다.
+[!NOTE]
+이전 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 동작으로 동작을 다시 변경하려면 traceflag 9485를 사용합니다.
   
-이 동작을 해제하려면 traceflag 9485를 사용하세요.
-  
-## <a name="permissions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대한 사용 권한  
+## <a name="permissions-for-sssdw-and-sspdw"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대한 사용 권한  
 DBCC SHOW_STATISTICS에는 다음 중 하나의 테이블이나 멤버 자격에 대한 SELECT 권한이 필요합니다.
 -   고정 서버 역할(fixed server role)  
 -   db_owner 고정 데이터베이스 역할  
 -   db_ddladmin 고정 데이터베이스 역할  
   
-## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대한 제한 사항  
+## <a name="limitations-and-restrictions-for-sssdw-and-sspdw"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대한 제한 사항  
 DBCC SHOW_STATISTICS는 셸 데이터베이스의 제어 노드 수준에 저장된 통계를 표시합니다. 컴퓨팅 노드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 자동 생성된 통계는 표시되지 않습니다.
   
 DBCC SHOW_STATISTICS는 외부 테이블에 대해 지원되지 않습니다.
   
-## <a name="examples-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>예: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+## <a name="examples-ssnoversion-and-sssds"></a>예: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
 ### <a name="a-returning-all-statistics-information"></a>A. 모든 통계 정보 반환  
 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Person.Address` 테이블의 `AK_Address_rowguid` 인덱스에 대한 모든 통계 정보를 표시합니다.
   
@@ -196,7 +198,7 @@ DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>예: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="c-display-the-contents-of-one-statistics-object"></a>C. 하나의 통계 개체 내용 표시  
  다음 예제는 DimCustomer 테이블의 Customer_LastName 통계 내용을 표시합니다.  
   

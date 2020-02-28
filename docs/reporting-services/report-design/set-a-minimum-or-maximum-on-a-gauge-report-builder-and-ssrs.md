@@ -1,5 +1,5 @@
 ---
-title: 계기의 최소값 또는 최대값 설정(보고서 작성기 및 SSRS) | Microsoft Docs
+title: 계기의 최솟값 또는 최댓값 설정(보고서 작성기) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b4c260c0-5a88-4f30-8977-eb5cc78fc146
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a2cbda4af8898233e27aa2ad2c505981e343116c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ab0aa643285b4afb0129c2bcd33455967571c750
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576863"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081030"
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>계기의 최소값 또는 최대값 설정(보고서 작성기 및 SSRS)
   여러 그룹이 정의되어 있는 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서의 차트와 달리 계기는 하나의 값만 표시합니다. 보고서 작성기 및 보고서 디자이너에서 사용자가 계기에 표시하려고 하는 한 값의 컨텍스트 또는 상대적 중요도를 확인하므로 사용자가 눈금의 최소값 및 최대값을 정의해야 합니다.   

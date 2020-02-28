@@ -1,7 +1,7 @@
 ---
 title: JDBC 드라이버 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,22 +10,24 @@ ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 828f58249f525a7c694b15eb85f051d80ba2211a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 34478dfb61f59835ab6373849876cec26dc35984
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69025768"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004662"
 ---
 # <a name="using-the-jdbc-driver"></a>JDBC 드라이버 사용
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 데이터베이스에 손쉽게 연결하는 방법에 대한 빠른 시작 지침을 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하려면 먼저 로컬 컴퓨터 또는 서버에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하고 로컬 컴퓨터에 JDBC 드라이버를 설치해야 합니다.  
+이 섹션에서는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 손쉽게 연결하는 방법에 대한 빠른 시작 지침을 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하려면 먼저 로컬 컴퓨터 또는 서버에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하고 로컬 컴퓨터에 JDBC 드라이버를 설치해야 합니다.  
   
 ## <a name="choosing-the-right-jar-file"></a>올바른 JAR 파일 선택
 
 Microsoft JDBC Driver에서는 기본 JRE(Java Runtime Environment) 설정에 따라 아래와 같이 다른 Jar를 사용할 수 있습니다.
+
+SQL Server용 Microsoft JDBC Driver 8.2에서는 **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** 및 **mssql-jdbc-8.2.0.jre13.jar** 클래스 라이브러리 파일을 제공합니다.
 
 SQL Server용 Microsoft JDBC Driver 7.4에서는 **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** 및 **mssql-jdbc-7.4.1.jre12.jar** 클래스 라이브러리 파일을 제공합니다.
 
@@ -59,7 +61,31 @@ JDBC Driver 7.2를 사용하는 경우**mssql-jdbc-7.2.2.jre8.jar** 또는 **mss
 
 JDBC Driver 7.4를 사용하는 경우 **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** 또는 **mssql-jdbc-7.4.1.jre12.jar**를 포함하도록 클래스 경로를 설정합니다.
 
+JDBC Driver 8.2를 사용하는 경우 **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** 또는 **mssql-jdbc-8.2.0.jre13.jar**을 포함하도록 클래스 경로를 설정합니다.
+
 클래스 패스에 적절한 Jar 파일 항목이 없는 경우, 애플리케이션은 공통의 `Class not found`예외를 throw합니다.  
+
+### <a name="for-microsoft-jdbc-driver-82"></a>Microsoft JDBC Driver 8.2의 경우
+
+**mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** 또는 **mssql-jdbc-8.2.0.jre13.jar** 파일이 다음 위치에 설치됩니다.
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.0.jre8.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.0.jre11.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.0.jre13.jar
+```
+
+다음 코드 조각은 Windows 애플리케이션에 사용되는 CLASSPATH 문의 예제입니다.
+
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 8.2 for SQL Server\sqljdbc_8.2\enu\mssql-jdbc-8.2.0.jre11.jar`
+
+다음 코드 조각은 Unix/Linux 애플리케이션에 사용되는 CLASSPATH 문의 예제입니다.
+
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_8.2/enu/mssql-jdbc-8.2.0.jre11.jar`
+
+CLASSPATH 문에는 **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** 또는 **mssql-jdbc-8.2.0.jre13.jar**과 같은 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]가 하나만 포함되어 있어야 합니다.
 
 ### <a name="for-microsoft-jdbc-driver-74"></a>Microsoft JDBC Driver 7.4의 경우
 
@@ -81,7 +107,7 @@ JDBC Driver 7.4를 사용하는 경우 **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jd
 
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.4/enu/mssql-jdbc-7.4.1.jre11.jar`
 
-CLASSPATH 문에는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]mssql-jdbc-7.4.1.jre8.jar **,** mssql-jdbc-7.4.1.jre11.jar**또는**mssql-jdbc-7.4.1.jre12.jar**와 같은** 이(가) 하나만 포함되어 있어야 합니다.
+CLASSPATH 문에는 **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** 또는 **mssql-jdbc-7.4.1.jre12.jar**와 같은 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]이(가) 하나만 포함되어 있어야 합니다.
 
 ### <a name="for-microsoft-jdbc-driver-72"></a>Microsoft JDBC Driver 7.2의 경우
 
@@ -101,7 +127,7 @@ CLASSPATH 문에는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)
 
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.2/enu/mssql-jdbc-7.2.2.jre11.jar`
 
-CLASSPATH 문에는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]mssql-jdbc-7.2.2.jre8.jar**또는**mssql-jdbc-7.2.2.jre11.jar**와 같은** 가 하나만 포함되어 있어야 합니다.
+CLASSPATH 문에는 **mssql-jdbc-7.2.2.jre8.jar** 또는 **mssql-jdbc-7.2.2.jre11.jar**와 같은 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]가 하나만 포함되어 있어야 합니다.
   
 ### <a name="for-microsoft-jdbc-driver-70"></a>Microsoft JDBC Driver 7.0의 경우
 
@@ -121,7 +147,7 @@ CLASSPATH 문에는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)
   
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.0/enu/mssql-jdbc-7.0.0.jre10.jar`  
   
-CLASSPATH 문에는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]mssql-jdbc-7.0.0.jre8.jar**또는**mssql-jdbc-7.0.0.jre10.jar**와 같은** 가 하나만 포함되어 있어야 합니다.
+CLASSPATH 문에는 **mssql-jdbc-7.0.0.jre8.jar** 또는 **mssql-jdbc-7.0.0.jre10.jar**와 같은 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]가 하나만 포함되어 있어야 합니다.
 
 ### <a name="for-microsoft-jdbc-driver-64"></a>Microsoft JDBC Driver 6.4의 경우
 
@@ -143,7 +169,7 @@ CLASSPATH 문에는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)
   
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.4/enu/mssql-jdbc-6.4.0.jre9.jar`  
   
-CLASSPATH 문에는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]mssql-jdbc-6.4.0.jre7.jar **, **mssql-jdbc-6.4.0.jre8.jar 또는** mssql-jdbc-6.4.0.jre9.jar**와 같은** 가 하나만 포함되어 있어야 합니다.
+CLASSPATH 문에는 **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar 또는 **mssql-jdbc-6.4.0.jre9.jar**와 같은 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]가 하나만 포함되어 있어야 합니다.
 
 ### <a name="for-microsoft-jdbc-driver-62"></a>Microsoft JDBC Driver 6.2의 경우
 
@@ -227,7 +253,7 @@ JDBC API 4.0부터는 JDBC Driver를 자동으로 로드할 수 있도록 `Drive
 DriverManager 클래스의 getConnection 메서드가 호출되면 등록된 JDBC 드라이버 집합에서 적합한 드라이버가 검색됩니다. sqljdbc4.jar, sqljdbc41.jar 또는 sqljdbc42.jar 파일에는 "META-INF/services/java.sql.Driver" 파일이 포함되어 있으며, 이 파일에는 **com.microsoft.sqlserver.jdbc.SQLServerDriver**가 등록된 드라이버로 포함되어 있습니다. 현재 Class.forName 메서드를 사용하여 드라이버를 로드하는 기존 애플리케이션은 수정하지 않아도 계속 작동합니다.  
   
 > [!NOTE]  
-> sqljdbc4.jar, sqljdbc41.jar 또는 sqljdbc42.jar 클래스 라이브러리를 이전 버전의 JRE(Java Runtime Environment)와 함께 사용할 수는 없습니다. [에서 지원되는 JRE 버전 목록은 ](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)JDBC 드라이버 시스템 요구 사항[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]을 참조하세요.  
+> sqljdbc4.jar, sqljdbc41.jar 또는 sqljdbc42.jar 클래스 라이브러리를 이전 버전의 JRE(Java Runtime Environment)와 함께 사용할 수는 없습니다. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서 지원되는 JRE 버전 목록은 [JDBC 드라이버 시스템 요구 사항](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)을 참조하세요.  
 
 데이터 원본에 연결하는 방법 및 연결 URL을 사용하는 방법에 대한 자세한 내용은 [연결 URL 작성](../../connect/jdbc/building-the-connection-url.md) 및 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)을 참조하세요.  
   

@@ -12,12 +12,12 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c7912e3048021255da0340f19f5d449d1c13a6c7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9314afbfa0cdcb917edd8942157c87e7db605b9d
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75245294"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544949"
 ---
 # <a name="accelerated-database-recovery"></a>가속 데이터베이스 복구
 
@@ -92,6 +92,10 @@ ADR 복구 프로세스는 현재 복구 프로세스와 동일한 3단계로 �
 - **실행 취소 단계**
 
    ADR을 사용하는 실행 취소 단계는 sLog를 사용하여 작업을 실행 취소하고 논리적 되돌리기를 사용하여 PVS(지속형 버전 저장소)를 실행하여 행 수준 버전 기반 실행 취소를 수행하여 거의 즉시 완료됩니다.
+
+가속화된 데이터베이스 복구에 대해 설명하는 8분 분량의 다음 동영상을 시청할 수도 있습니다.
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Advanced-Database-Recovery--Data-Exposed/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="adr-recovery-components"></a>ADR 복구 구성 요소
 

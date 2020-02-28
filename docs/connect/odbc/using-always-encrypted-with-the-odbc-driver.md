@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: c140087942ebe39870316e21994b6a1169daeba0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8e654dd5be4a306078bd6262220e29470b9a16e7
+ms.sourcegitcommit: 12051861337c21229cfbe5584e8adaff063fc8e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76706276"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77363239"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server용 ODBC 드라이버와 함께 상시 암호화 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -288,7 +288,7 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 `SQLSetPos` API를 사용하면 애플리케이션이 SQLBindCol로 바인딩되고 이전에 행 데이터를 가져온 버퍼를 통해 결과 집합의 행을 업데이트할 수 있습니다. 암호화된 고정 길이 형식의 비대칭 패딩 동작으로 인해 행의 다른 열을 업데이트하는 동안 이러한 열의 데이터가 예기치 않게 변경될 수 있습니다. AE에서는 값이 버퍼 크기보다 작을 경우 고정 길이 문자 값이 패딩됩니다.
 
-이 동작을 완화하려면 커서 기반 업데이트에 `SQLSetPos`를 사용하는 경우 `SQL_COLUMN_IGNORE` 플래그를 사용하여 `SQLBulkOperations`의 일부로 업데이트되지 않는 열을 무시합니다.  실제 (DB) 크기보다 ‘작은’ 버퍼에 바인딩된 열의 잘림을 방지하고 성능을 최적화하려면 애플리케이션에서 직접 수정되지 않는 열을 모두 무시해야 합니다.  자세한 내용은 [SQLSetPos 함수 참조](https://msdn.microsoft.com/library/ms713507(v=vs.85).aspx)를 참조하세요.
+이 동작을 완화하려면 커서 기반 업데이트에 `SQLSetPos`를 사용하는 경우 `SQL_COLUMN_IGNORE` 플래그를 사용하여 `SQLBulkOperations`의 일부로 업데이트되지 않는 열을 무시합니다.  실제 (DB) 크기보다 ‘작은’ 버퍼에 바인딩된 열의 잘림을 방지하고 성능을 최적화하려면 애플리케이션에서 직접 수정되지 않는 열을 모두 무시해야 합니다. 자세한 내용은 [SQLSetPos 함수 참조](https://msdn.microsoft.com/library/ms713507(v=vs.85).aspx)를 참조하세요.
 
 #### <a name="sqlmoreresults--sqldescribecol"></a>SQLMoreResults 및 SQLDescribeCol
 
@@ -381,7 +381,7 @@ ODBC Driver for SQL Server에는 다음과 같은 기본 제공 키 저장소 �
 AKV(Azure Key Vault)는 Always Encrypted에 대한 열 마스터 키를 저장 및 관리하는 편리한 옵션입니다(특히 애플리케이션이 Azure에서 호스트되는 경우). Linux, macOS 및 Windows의 ODBC Driver for SQL Server에는 Azure Key Vault용 기본 제공 열 마스터 키 저장소 공급자가 포함되어 있습니다. Always Encrypted에 대해 Azure Key Vault를 구성하는 방법에 대한 자세한 내용은 [Azure Key Vault - 단계별](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [Key Vault 시작](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) 및 [Azure Key Vault에 열 마스터 키 만들기](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2)를 참조하세요.
 
 > [!NOTE]
-> ODBC 드라이버는 AKV 인증에 Active Directory Federation Services를 지원하지 않습니다. AKV에 Azure Active Directory 인증을 사용하는 경우 Active Directory 구성에 페더레이션된 서비스가 포함되면 인증에 실패할 수 있습니다.
+> ODBC 드라이버는 Azure Active Directory에 대해 직접 AKV 인증만을 지원합니다. AKV에 Azure Active Directory 인증을 사용하고 Active Directory 구성에 Active Directory Federation Services 엔드포인트에 대한 인증이 필요한 경우 인증이 실패할 수 있습니다.
 > Linux 및 macOS의 드라이버 버전 17.2 이상에서 이 공급자를 사용하려면 `libcurl`이 필요하지만, 다른 드라이버 관련 작업에서는 필요하지 않기 때문에 명시적 종속성은 아닙니다. `libcurl`에 관한 오류가 발생하는 경우 해당 패키지가 설치되었는지 확인하십시오.
 
 드라이버에서 다음과 같은 자격 증명 유형을 사용하여 Azure Key Vault에 인증할 수 있습니다.
@@ -528,7 +528,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 #### <a name="reading-data-from-a-provider"></a>공급자에서 데이터 읽기
 
-`SQL_COPT_SS_CEKEYSTOREDATA` 특성을 사용하는 `SQLGetConnectAttr` 호출은 ‘마지막으로 기록된’ 공급자로부터 데이터 “패킷”을 읽습니다.  데이터 패킷이 없으면 함수 시퀀스 오류가 발생합니다. 키 저장소 공급자 구현자는 타당한 경우 다른 부작용 없이 읽기 작업에 사용할 공급자를 선택하는 방법으로 0바이트의 “더미 쓰기”를 지원하는 것이 좋습니다.
+`SQL_COPT_SS_CEKEYSTOREDATA` 특성을 사용하는 `SQLGetConnectAttr` 호출은 ‘마지막으로 기록된’ 공급자로부터 데이터 “패킷”을 읽습니다. 데이터 패킷이 없으면 함수 시퀀스 오류가 발생합니다. 키 저장소 공급자 구현자는 타당한 경우 다른 부작용 없이 읽기 작업에 사용할 공급자를 선택하는 방법으로 0바이트의 “더미 쓰기”를 지원하는 것이 좋습니다.
 
 ```
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);

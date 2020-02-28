@@ -1,7 +1,7 @@
 ---
 title: 쿼리 처리 아키텍처 가이드 | Microsoft 문서
 ms.custom: ''
-ms.date: 02/24/2019
+ms.date: 02/14/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - row mode execution
 - batch mode execution
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: e5b890ff4a9d58f531f3a72e41e8280faf2511a3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+author: pmasl
+ms.author: pelopes
+ms.openlocfilehash: b6000c540d2847686fd8f14c4ae6a0926f8dbb72
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76909753"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77466174"
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ GO
 
 여러 가능한 실행 계획 중에서 하나의 실행 계획을 선택하는 프로세스를 최적화라고 합니다. 쿼리 최적화 프로그램은 SQL 데이터베이스 시스템의 가장 중요한 구성 요소 중 하나입니다. 쿼리 최적화 프로그램에서 쿼리를 분석하고 계획을 선택할 때 오버헤드가 발생하지만 효율적인 실행 계획을 선택하면 오버헤드가 상당히 절감됩니다. 예를 들어 두 개의 건설 회사에 하나의 집에 대한 동일한 청사진이 제공될 수 있습니다. 한 회사에서는 며칠 동안 그 집을 어떻게 지을지 계획을 하는 동안 다른 회사는 계획 없이 집을 짓기 시작할 경우 프로젝트를 계획하는 데 시간을 소요한 회사가 먼저 작업을 끝내는 것과 같습니다.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 비용을 기반으로 하는 쿼리 최적화 프로그램입니다. 가능한 각 실행 계획은 사용되는 컴퓨팅 리소스의 양과 관련하여 비용을 추산합니다. 쿼리 최적화 프로그램은 가능한 실행 계획을 분석하고 예상 비용이 가장 낮은 계획을 선택해야 합니다. 일부 복잡한 `SELECT` 문은 가능한 수많은 실행 계획을 포함합니다. 이 경우에 쿼리 최적화 프로그램은 가능한 모든 조합을 분석하지는 않습니다. 대신 복잡한 알고리즘을 사용하여 가장 최소 비용에 근접하는 실행 계획을 찾습니다.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 비용을 기반으로 하는 최적화 프로그램입니다. 가능한 각 실행 계획은 사용되는 컴퓨팅 리소스의 양과 관련하여 비용을 추산합니다. 쿼리 최적화 프로그램은 가능한 실행 계획을 분석하고 예상 비용이 가장 낮은 계획을 선택해야 합니다. 일부 복잡한 `SELECT` 문은 가능한 수많은 실행 계획을 포함합니다. 이 경우에 쿼리 최적화 프로그램은 가능한 모든 조합을 분석하지는 않습니다. 대신 복잡한 알고리즘을 사용하여 가장 최소 비용에 근접하는 실행 계획을 찾습니다.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램이 리소스 비용이 가장 낮은 실행 계획만 선택하는 것은 아닙니다. 쿼리 최적화 프로그램은 타당한 리소스 비용을 사용하여 사용자에게 결과를 반환하고 가장 빠른 결과를 반환하는 계획을 선택합니다. 예를 들어 병렬로 쿼리를 처리하는 것은 대개 직렬로 처리하는 것보다 많은 리소스를 사용하지만 쿼리를 좀 더 빠르게 끝냅니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 서버 로드에 나쁜 영향을 미치지 않는 경우 병렬 실행 계획을 사용하여 결과를 반환합니다.
 
@@ -132,7 +132,7 @@ GO
 5. 관계형 엔진은 스토리지 엔진에서 반환된 데이터를 결과 집합에 대해 정의된 서식으로 처리하고 클라이언트에 결과 집합을 반환합니다.
 
 ### <a name="ConstantFolding"></a> 상수 폴딩 및 식 평가 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 일부 상수 식을 초기에 평가하여 쿼리 성능을 향상시킵니다. 이를 상수 폴딩이라고 합니다. 상수는 [!INCLUDE[tsql](../includes/tsql-md.md)] 리터럴(예: 3, 'ABC', '2005-12-31', 1.0e3 또는 0x12345678)입니다.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 일부 상수 식을 초기에 평가하여 쿼리 성능을 향상시킵니다. 이를 상수 폴딩이라고 합니다. 상수는 `3`, `'ABC'`, `'2005-12-31'`, `1.0e3` 또는 `0x12345678` 같은 [!INCLUDE[tsql](../includes/tsql-md.md)] 리터럴입니다.
 
 #### <a name="foldable-expressions"></a>폴딩 가능 식
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 다음 유형의 식에 상수 폴딩을 사용합니다.
@@ -203,11 +203,11 @@ GO
 CREATE PROCEDURE MyProc2( @d datetime )
 AS
 BEGIN
-DECLARE @d2 datetime
-SET @d2 = @d+1
-SELECT COUNT(*)
-FROM Sales.SalesOrderHeader
-WHERE OrderDate > @d2
+  DECLARE @d2 datetime
+  SET @d2 = @d+1
+  SELECT COUNT(*)
+  FROM Sales.SalesOrderHeader
+  WHERE OrderDate > @d2
 END;
 ```
 
@@ -240,7 +240,7 @@ CREATE VIEW EmployeeName AS
 SELECT h.BusinessEntityID, p.LastName, p.FirstName
 FROM HumanResources.Employee AS h 
 JOIN Person.Person AS p
-ON h.BusinessEntityID = p.BusinessEntityID;
+  ON h.BusinessEntityID = p.BusinessEntityID;
 GO
 ```
 
@@ -251,16 +251,16 @@ GO
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.Sales.SalesOrderHeader AS soh
 JOIN AdventureWorks2014.dbo.EmployeeName AS EmpN
-ON (soh.SalesPersonID = EmpN.BusinessEntityID)
+  ON (soh.SalesPersonID = EmpN.BusinessEntityID)
 WHERE OrderDate > '20020531';
 
 /* SELECT referencing the Person and Employee tables directly. */
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.HumanResources.Employee AS e 
 JOIN AdventureWorks2014.Sales.SalesOrderHeader AS soh
-ON soh.SalesPersonID = e.BusinessEntityID
+  ON soh.SalesPersonID = e.BusinessEntityID
 JOIN AdventureWorks2014.Person.Person AS p
-ON e.BusinessEntityID =p.BusinessEntityID
+  ON e.BusinessEntityID =p.BusinessEntityID
 WHERE OrderDate > '20020531';
 ```
 
@@ -328,7 +328,7 @@ WHERE TableA.ColZ = TableB.Colz;
   * `ARITHABORT`
   * `CONCAT_NULL_YIELDS_NULL`
   * `QUOTED_IDENTIFIER` 
-  * 세션 옵션 `NUMERIC_ROUNDABORT` 이 OFF로 설정되어 있습니다.
+* 세션 옵션 `NUMERIC_ROUNDABORT` 이 OFF로 설정되어 있습니다.
 * 쿼리 최적화 프로그램에서 쿼리의 요소와 뷰 인덱스 열 간의 일치 사항을 찾습니다. 예를 들어 다음과 같은 사항이 일치합니다. 
   * WHERE 절의 검색 조건 조건자
   * 조인 작업
@@ -348,7 +348,6 @@ WHERE TableA.ColZ = TableB.Colz;
 쿼리 최적화 프로그램은 `FROM` 절에서 참조하는 인덱싱된 뷰를 표준 뷰로 간주하고 처리합니다. 쿼리 최적화 프로그램은 최적화 프로세스 시작 시 뷰의 정의를 쿼리로 확장합니다. 그런 다음 인덱싱된 뷰 일치가 수행됩니다. 쿼리 최적화 프로그램에서 선택하는 최종 실행 계획에 인덱싱된 뷰가 사용될 수 있습니다. 또는 계획이 뷰에서 참조하는 기본 테이블에 액세스하여 뷰에서 필요한 데이터를 구체화할 수 있습니다. 쿼리 최적화 프로그램에서는 이 중 가장 저렴한 비용의 방법이 선택됩니다.
 
 #### <a name="using-hints-with-indexed-views"></a>인덱싱된 뷰에 힌트 사용
-
 `EXPAND VIEWS` 쿼리 힌트를 사용하여 쿼리에 뷰 인덱스가 사용되지 않도록 하거나 `NOEXPAND` 테이블 힌트를 사용하여 쿼리의 `FROM` 절에 지정된 인덱싱된 뷰에 인덱스가 사용되도록 할 수 있습니다. 그러나 쿼리 최적화 프로그램이 각 쿼리에 사용할 최상의 액세스 방법을 동적으로 결정하도록 해야 합니다. `EXPAND` 와 `NOEXPAND` 는 성능을 크게 향상하는 것으로 확인된 특정 경우에만 사용합니다.
 
 `EXPAND VIEWS` 옵션은 쿼리 최적화 프로그램이 전체 쿼리에 뷰 인덱스를 사용하지 않도록 지정합니다. 
@@ -364,7 +363,6 @@ WHERE TableA.ColZ = TableB.Colz;
 인덱싱된 뷰 정의에는 힌트가 허용되지 않습니다. 호환 모드 80 이상에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 인덱싱된 뷰 정의를 유지 관리할 때나 인덱싱된 뷰를 사용하는 쿼리를 실행할 때 인덱싱된 뷰 정의 내의 힌트를 무시합니다. 80 호환 모드에서는 인덱싱된 뷰 정의에 힌트를 사용해도 구문 오류가 발생하지 않지만 힌트가 무시됩니다.
 
 ### <a name="resolving-distributed-partitioned-views"></a>분산형 분할 뷰 확인
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 프로세서에서는 분산형 분할 뷰의 성능을 최적화합니다. 분산형 분할 뷰 성능의 가장 중요한 측면은 멤버 서버 간에 전송되는 데이터의 양을 최소화하는 것입니다.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 분산 쿼리를 효율적으로 사용하여 원격 멤버 테이블의 데이터에 액세스하는 지능적이고 동적인 계획을 작성합니다. 
@@ -408,34 +406,66 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 매개 변수가 없는 쿼리에 대해서도 이러한 유형의 동적 실행 계획을 작성할 때가 있습니다. 실행 계획을 다시 사용할 수 있도록 쿼리 최적화 프로그램이 쿼리를 매개 변수화할 수 있습니다. 쿼리 최적화 프로그램이 분할된 뷰를 참조하는 쿼리를 매개 변수화하는 경우 쿼리 최적화 프로그램에서는 지정된 기본 테이블에서 필요한 행이 나오는 것으로 간주하지 않게 되므로 실행 계획에서 동적 필터를 사용해야 합니다.
 
 ## <a name="stored-procedure-and-trigger-execution"></a>저장 프로시저 및 트리거 실행
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 저장 프로시저와 트리거의 원본만 저장합니다. 저장 프로시저나 트리거가 먼저 실행될 때 원본은 실행 계획으로 컴파일됩니다. 실행 계획이 메모리에서 에이징되기 전에 저장 프로시저나 트리거가 다시 실행되는 경우 관계형 엔진은 기존 계획을 검색하고 다시 사용합니다. 계획이 메모리에서 에이징되면 새 계획이 작성됩니다. 이 프로세스는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 모든 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에 대해 수행하는 프로세스와 유사합니다. 성능 면에서 동적 [!INCLUDE[tsql](../includes/tsql-md.md)]의 일괄 처리와 비교했을 때 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 저장 프로시저와 트리거의 주요 이점은 [!INCLUDE[tsql](../includes/tsql-md.md)] 문이 항상 동일하다는 것입니다. 따라서 관계형 엔진이 기존 실행 계획과 SQL 문을 쉽게 대응시킵니다. 또한 저장 프로시저와 트리거 계획이 쉽게 다시 사용됩니다.
 
 저장 프로시저나 트리거의 실행 계획은 저장 프로시저를 호출하거나 트리거를 실행하는 일괄 처리의 실행 계획과는 별도로 실행됩니다. 따라서 저장 프로시저와 트리거 실행 계획을 더 많이 다시 사용할 수 있습니다.
 
 ## <a name="execution-plan-caching-and-reuse"></a>실행 계획 캐싱 및 다시 사용
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에는 실행 계획과 데이터 버퍼를 모두 저장하는 데 사용되는 메모리 풀이 있습니다. 실행 계획이나 데이터 버퍼에 할당되는 풀 비율은 시스템 상태에 따라 동적으로 변동됩니다. 실행 계획을 저장하는 데 사용되는 메모리 풀 부분을 계획 캐시라고 합니다.
+
+계획 캐시에는 컴파일된 모든 계획을 위한 두 개의 저장소가 있습니다.
+-  지속형 개체(저장 프로시저, 함수 및 트리거)에 관련된 계획에 사용되는 **Object Plans** 캐시 저장소(OBJCP).
+-  자동으로 매개 변수화된 쿼리, 동적 쿼리 또는 준비된 쿼리에 관련된 계획에 사용되는 **SQL Plans** 캐시 저장소(SQLCP).
+
+아래 쿼리는 두 가지 관련 캐시 저장소의 메모리 사용량 정보를 제공합니다.
+
+```sql
+SELECT * FROM sys.dm_os_memory_clerks
+WHERE name LIKE '%plans%';
+```
+
+> [!NOTE]
+> 계획 캐시에는 계획을 저장하는 데 사용되지 않는 두 개의 추가 저장소가 있습니다.     
+> -  뷰, 제약 조건 및 기본값에 대한 계획 컴파일 중에 사용되는 데이터 구조에 사용되는 **Bound Trees** 캐시 저장소(PHDR). 해당 구조를 Bound Trees 또는 Algebrizer Trees라고 합니다.      
+> -  Transact-SQL 문을 사용하지 않고 DLL을 사용하여 정의되는 `sp_executeSql` 또는 `xp_cmdshell` 같이 미리 정의된 시스템 프로시저에 사용되는 **확장 저장 프로시저** 캐시 저장소(XPROC). 캐시된 구조에는 프로시저가 구현되는 함수 이름과 DLL 이름만 포함됩니다.      
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 실행 계획은 다음으로 구성됩니다. 
 
-- **쿼리 실행 계획**     
-  대량 실행 계획은 여러 사용자가 사용하는 재진입용 읽기 전용 데이터 구조입니다. 이것을 쿼리 계획이라고 합니다. 쿼리 계획에는 사용자 컨텍스트가 저장되지 않습니다. 메모리에는 쿼리 계획의 복사본이 한 개나 두 개만 있습니다. 하나는 모든 직렬 실행용이고 다른 하나는 모든 병렬 실행용입니다. 병렬 복사본은 병렬 처리 수준에 관계없이 모든 병렬 실행에 적용됩니다. 
+- **컴파일된 계획**(또는 쿼리 계획)     
+  컴파일 프로세스에서 생성되는 쿼리 계획은 주로 여러 사용자가 사용하는 재진입용 읽기 전용 데이터 구조입니다. 다음 정보를 저장합니다.
+  -  논리 연산자가 설명한 작업을 구현하는 물리 연산자. 
+  -  데이터가 액세스, 필터링 및 집계되는 순서를 결정하는 해당 작업의 순서. 
+  -  연산자를 통해 흐르는 예상 행 수. 
+  
+     > [!NOTE]
+     > 최신 버전의 [!INCLUDE[ssde_md](../includes/ssde_md.md)]에서 [카디널리티 예측](../relational-databases/performance/cardinality-estimation-sql-server.md)에 사용된 통계 개체에 관한 정보도 저장됩니다.
+     
+  -  tempdb의 [작업 테이블](#worktables) 또는 작업 파일 같이 만들어야 하는 지원 개체. 
+  사용자 컨텍스트 또는 런타임 정보는 쿼리 계획에 저장되지 않습니다. 메모리에는 쿼리 계획의 복사본이 한 개나 두 개만 있습니다. 하나는 모든 직렬 실행용이고 다른 하나는 모든 병렬 실행용입니다. 병렬 복사본은 병렬 처리 수준에 관계없이 모든 병렬 실행에 적용됩니다.   
+  
 - **실행 컨텍스트**     
-  쿼리를 현재 실행하고 있는 각 사용자는 매개 변수 값 등의 해당 실행 관련 데이터를 보유하는 데이터 구조를 갖습니다. 이 데이터 구조를 실행 컨텍스트라고 합니다. 실행 컨텍스트 데이터 구조는 다시 사용됩니다. 사용자가 쿼리를 실행하는 경우 사용 중인 구조가 없으면 새 사용자를 위한 컨텍스트로 다시 초기화됩니다. 
+  쿼리를 현재 실행하고 있는 각 사용자는 매개 변수 값 등의 해당 실행 관련 데이터를 보유하는 데이터 구조를 갖습니다. 이 데이터 구조를 실행 컨텍스트라고 합니다. 실행 컨텍스트 데이터 구조는 다시 사용되지만 해당 콘텐츠는 다시 사용되지 않습니다. 다른 사용자가 동일한 쿼리를 실행하는 경우 데이터 구조는 새 사용자의 컨텍스트를 사용하여 다시 초기화됩니다. 
 
-![execution_context](../relational-databases/media/execution-context.gif)
-
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 실행할 때 관계형 엔진은 먼저 계획 캐시를 조사하여 동일한 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에 대해 기존 실행 계획이 있는지 확인합니다. [!INCLUDE[tsql](../includes/tsql-md.md)] 문은 문자 그대로 문자당 캐시된 계획 및 문자 하나와 이전에 실행된 [!INCLUDE[tsql](../includes/tsql-md.md)] 문이 일치하는 경우 존재하는 것으로 규정합니다. 기존 계획을 찾으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 그것을 재사용하기 때문에 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 다시 컴파일하기 위한 오버헤드가 발생하지 않습니다. 기존의 실행 계획이 없는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 쿼리에 대해 새로운 실행 계획이 생성됩니다.
+  ![execution_context](../relational-databases/media/execution-context.gif)
 
 > [!NOTE]
-> rowstore에서 실행 중인 대량 작업 명령문이나 8KB를 넘는 문자열 리터럴이 포함된 명령문과 같은 일부 [!INCLUDE[tsql](../includes/tsql-md.md)] 문은 캐시되지 않습니다.
+> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에는 실행 계획을 표시하는 세 가지 옵션이 있습니다.        
+> -  컴파일된 계획인 ***[예상 실행 계획](../relational-databases/performance/display-the-estimated-execution-plan.md)***.        
+> -  컴파일된 계획 및 관련 실행 컨텍스트와 동일한 ***[실제 실행 계획](../relational-databases/performance/display-an-actual-execution-plan.md)***. 여기에는 실행 경고와 같이 실행이 완료된 후에 사용할 수 있는 런타임 정보가 포함되거나 최신 버전의 [!INCLUDE[ssde_md](../includes/ssde_md.md)]에서는 실행 중에 사용되는 경과 및 CPU 시간이 포함됩니다.        
+> -  컴파일된 계획 및 관련 실행 컨텍스트와 동일한 ***[활성 쿼리 통계](../relational-databases/performance/live-query-statistics.md)***. 여기에는 실행되는 동안 제공되는 런타임 정보가 포함되며 1초마다 업데이트됩니다. 예를 들어 런타임 정보에는 연산자를 통해 흐르는 실제 행 수가 포함됩니다.       
+
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 실행할 때 [!INCLUDE[ssde_md](../includes/ssde_md.md)]은 먼저 계획 캐시를 조사하여 동일한 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에 대해 기존 실행 계획이 있는지 확인합니다. [!INCLUDE[tsql](../includes/tsql-md.md)] 문은 문자 그대로 문자당 캐시된 계획 및 문자 하나와 이전에 실행된 [!INCLUDE[tsql](../includes/tsql-md.md)] 문이 일치하는 경우 존재하는 것으로 규정합니다. 기존 계획을 찾으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 그것을 재사용하기 때문에 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 다시 컴파일하기 위한 오버헤드가 발생하지 않습니다. 실행 계획이 없는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 쿼리에 대해 새로운 실행 계획이 생성됩니다.
+
+> [!NOTE]
+> rowstore에서 실행 중인 대량 작업 명령문이나 크기가 8KB를 넘는 문자열 리터럴이 포함된 문과 같은 일부 [!INCLUDE[tsql](../includes/tsql-md.md)] 문의 실행 계획은 일부 문은 계획 캐시에서 지속되지 않습니다. 해당 계획은 쿼리가 실행되는 동안에만 존재합니다.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에는 특정 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에 대한 기존 실행 계획을 찾는 효율적인 알고리즘이 있습니다. 대부분의 시스템에서 이러한 검색에 사용되는 최소 리소스는 모든 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 컴파일하는 대신 기존 계획을 다시 사용함으로써 절약되는 리소스보다도 적습니다.
 
-캐시에서 사용되지 않은 기존 실행 계획과 새 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 대응시키는 알고리즘을 적용하려면 모든 개체 참조가 정규화되어야 합니다. 예를 들어 `Person`은 아래 `SELECT` 문을 실행하는 사용자의 기본 스키마입니다. 이 예제에서는 `Person` 테이블이 실행되기 위해 정규화되어야 할 필요가 없는 반면, 두 번째 명령문은 기존 계획과 일치하지 않지만 세 번째 명령문은 일치한다는 의미입니다.
+계획 캐시에서 사용되지 않는 기존 실행 계획과 새 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 대응시키는 알고리즘을 적용하려면 모든 개체 참조가 정규화되어야 합니다. 예를 들어 `Person`은 아래 `SELECT` 문을 실행하는 사용자의 기본 스키마입니다. 이 예제에서는 `Person` 테이블이 실행되기 위해 정규화되어야 할 필요가 없는 반면, 두 번째 명령문은 기존 계획과 일치하지 않지만 세 번째 명령문은 일치한다는 의미입니다.
 
 ```sql
+USE AdventureWorks2014;
+GO
 SELECT * FROM Person;
 GO
 SELECT * FROM Person.Person;
@@ -444,8 +474,154 @@ SELECT * FROM Person.Person;
 GO
 ```
 
-### <a name="removing-execution-plans-from-the-plan-cache"></a>계획 캐시에서 실행 계획 제거
+지정된 실행에 대해 다음 SET 옵션을 변경하면 계획을 다시 사용하는 기능에 영향을 줍니다. 이는 [!INCLUDE[ssde_md](../includes/ssde_md.md)]이 [상수 폴딩](#ConstantFolding)을 수행하고 이 옵션이 해당 식의 결과에 영향을 주기 때문입니다.
 
+|||   
+|-----------|------------|------------|    
+|ANSI_NULL_DFLT_OFF|FORCEPLAN|ARITHABORT|    
+|DATEFIRST|ANSI_PADDING|NUMERIC_ROUNDABORT|    
+|ANSI_NULL_DFLT_ON|LANGUAGE|CONCAT_NULL_YIELDS_NULL|    
+|DATEFORMAT|ANSI_WARNINGS|QUOTED_IDENTIFIER|    
+|ANSI_NULLS|NO_BROWSETABLE|ANSI_DEFAULTS|    
+
+### <a name="caching-multiple-plans-for-the-same-query"></a>동일한 쿼리의 여러 계획 캐싱 
+쿼리와 실행 계획은 지문과 비슷하게 [!INCLUDE[ssde_md](../includes/ssde_md.md)]에서 고유하게 식별할 수 있습니다.
+-  **쿼리 계획 해시**는 지정된 쿼리의 실행 계획에서 계산되는 이진 해시 값으로, 비슷한 실행 계획을 고유하게 식별하는 데 사용됩니다. 
+-  **쿼리 해시**는 쿼리의 [!INCLUDE[tsql](../includes/tsql-md.md)] 텍스트에서 계산되는 이진 해시 값으로, 쿼리를 고유하게 식별하는 데 사용됩니다. 
+
+계획이 캐시에 남아 있는 동안에만 일정하게 유지되는 임시 식별자인 **계획 핸들**을 사용하여 계획 캐시에서 컴파일된 계획을 검색할 수 있습니다. 계획 핸들은 전체 일괄 처리의 컴파일된 계획에서 파생되는 해시 값입니다. 일괄 처리에서 하나 이상의 문이 다시 컴파일되는 경우에도 컴파일된 계획의 계획 핸들은 동일하게 유지됩니다.
+
+> [!NOTE]
+> 계획이 단일 문 대신 일괄 처리용으로 컴파일된 경우 계획 핸들 및 문 오프셋을 사용하여 일괄 처리에 있는 개별 문의 계획을 검색할 수 있습니다.     
+> `sys.dm_exec_requests` DMV는 현재 실행 중인 일괄 처리 또는 지속형 개체의 현재 실행 중인 문을 참조하는 각 레코드의 `statement_start_offset` 및 `statement_end_offset` 열을 포함합니다. 자세한 내용은 [dm_exec_requests(Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)를 참조하세요.       
+> `sys.dm_exec_query_stats` DMV는 일괄 처리 또는 지속형 개체 내에서 문의 위치를 참조하는 각 레코드의 해당 열도 포함합니다. 자세한 내용은 [dm_exec_query_stats(Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)를 참조하세요.     
+
+일괄 처리의 실제 [!INCLUDE[tsql](../includes/tsql-md.md)] 텍스트는 **SQL 관리자** 캐시(SQLMGR)라는 계획 캐시의 별도 메모리 공간에 저장됩니다. 식별자를 참조하는 하나 이상의 계획이 계획 캐시에 남아 있는 동안에만 일정하게 유지되는 임시 식별자인 **SQL 핸들**을 사용하여 SQL 관리자 캐시에서 컴파일된 계획의 [!INCLUDE[tsql](../includes/tsql-md.md)] 텍스트는 검색할 수 있습니다. SQL 핸들은 전체 일괄 처리 텍스트에서 파생되는 해시 값이며 모든 일괄 처리에서 고유하게 됩니다.
+
+> [!NOTE]
+> 컴파일된 계획처럼 [!INCLUDE[tsql](../includes/tsql-md.md)] 텍스트는 주석을 포함하여 일괄 처리별로 저장됩니다. SQL 핸들은 전체 일괄 처리 텍스트의 MD5 해시를 포함하며 모든 일괄 처리에서 고유하게 됩니다.
+
+아래 쿼리는 SQL 관리자 캐시의 메모리 사용량 정보를 제공합니다.
+
+```sql
+SELECT * FROM sys.dm_os_memory_objects
+WHERE type = 'MEMOBJ_SQLMGR';
+```
+
+SQL 핸들과 계획 핸들 간에는 1:N 관계가 있습니다. 해당 조건은 컴파일된 계획의 캐시 키가 서로 다른 경우 발생합니다. 이 조건은 동일한 일괄 처리의 두 실행 간에 SET 옵션이 변경되기 때문에 발생할 수 있습니다.
+
+다음 저장 프로시저를 고려해 보세요.
+
+```sql
+USE WideWorldImporters;
+GO
+CREATE PROCEDURE usp_SalesByCustomer @CID int
+AS
+SELECT * FROM Sales.Customers
+WHERE CustomerID = @CID
+GO
+
+SET ANSI_DEFAULTS ON
+GO
+
+EXEC usp_SalesByCustomer 10
+GO
+```
+
+아래 쿼리를 사용하여 계획 캐시에서 찾을 수 있는 항목을 확인합니다.
+
+```sql
+SELECT cp.memory_object_address, cp.objtype, refcounts, usecounts, 
+    qs.query_plan_hash, qs.query_hash,
+    qs.plan_handle, qs.sql_handle
+FROM sys.dm_exec_cached_plans AS cp
+CROSS APPLY sys.dm_exec_sql_text (cp.plan_handle)
+CROSS APPLY sys.dm_exec_query_plan (cp.plan_handle)
+INNER JOIN sys.dm_exec_query_stats AS qs ON qs.plan_handle = cp.plan_handle
+WHERE text LIKE '%usp_SalesByCustomer%'
+GO
+```
+
+[!INCLUDE[ssResult](../includes/ssresult-md.md)]
+
+```
+memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------   -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+
+plan_handle                                                                               
+------------------------------------------------------------------------------------------
+0x0500130095555D02D022F111CD01000001000000000000000000000000000000000000000000000000000000
+
+sql_handle
+------------------------------------------------------------------------------------------
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+```
+
+이제 실행 컨텍스트는 변경하지 않지만 다른 매개 변수를 사용하여 저장 프로시저를 실행합니다.
+
+```sql
+EXEC usp_SalesByCustomer 8
+GO
+```
+
+계획 캐시에서 찾을 수 있는 항목을 다시 확인합니다. [!INCLUDE[ssResult](../includes/ssresult-md.md)]
+
+```
+memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------   -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+
+plan_handle                                                                               
+------------------------------------------------------------------------------------------
+0x0500130095555D02D022F111CD01000001000000000000000000000000000000000000000000000000000000
+
+sql_handle
+------------------------------------------------------------------------------------------
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+```
+
+`usecounts`가 2로 증가했습니다. 즉, 실행 컨텍스트 데이터 구조가 다시 사용되었으므로 동일한 캐시된 계획이 그대로 다시 사용되었습니다. 이제 `SET ANSI_DEFAULTS` 옵션을 변경하고 동일한 매개 변수를 사용하여 저장 프로시저를 실행합니다.
+
+```sql
+SET ANSI_DEFAULTS OFF
+GO
+
+EXEC usp_SalesByCustomer 8
+GO
+```
+
+계획 캐시에서 찾을 수 있는 항목을 다시 확인합니다. [!INCLUDE[ssResult](../includes/ssresult-md.md)]
+
+```
+memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------   -------   ---------   ---------   ------------------ ------------------ 
+0x000001CD01DEC060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
+
+plan_handle                                                                               
+------------------------------------------------------------------------------------------
+0x0500130095555D02B031F111CD01000001000000000000000000000000000000000000000000000000000000
+0x0500130095555D02D022F111CD01000001000000000000000000000000000000000000000000000000000000
+
+sql_handle
+------------------------------------------------------------------------------------------
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+```
+
+이제 `sys.dm_exec_cached_plans` DMV 출력에 두 개의 항목이 있습니다.
+-  `usecounts` 열에는 `SET ANSI_DEFAULTS OFF`를 사용하여 한 번 실행된 계획인 첫 번째 레코드의 `1` 값이 표시됩니다.
+-  `usecounts` 열에는 두 번 실행되었기 때문에 `SET ANSI_DEFAULTS ON`을 사용하여 실행된 계획인 두 번째 레코드의 `2` 값이 표시됩니다.    
+-  다른 `memory_object_address`는 계획 캐시의 다른 실행 계획 항목을 참조합니다. 그러나 두 항목 모두 동일한 일괄 처리를 참조하므로 두 항목의 `sql_handle` 값은 동일합니다. 
+   -  `ANSI_DEFAULTS`가 OFF로 설정된 실행은 새로운 `plan_handle`을 포함하며 동일한 SET 옵션 세트가 포함된 호출에 다시 사용될 수 있습니다. 변경된 SET 옵션으로 인해 실행 컨텍스트가 다시 초기화되었으므로 새 계획 핸들이 필요합니다. 그러나 다시 컴파일을 트리거하지 않습니다. 동일한 `query_plan_hash` 및 `query_hash` 값에서 알 수 있듯이 두 항목은 모두 동일한 계획 및 쿼리를 참조합니다.
+
+이는 동일한 일괄 처리에 해당하는 두 개의 계획 항목이 캐시에 있음을 의미하며, 계획 다시 사용에 맞게 최적화하고 계획 캐시 크기를 필요한 최솟값으로 유지하기 위해 동일한 쿼리를 반복해서 실행하는 경우 SET 옵션에 영향을 주는 계획 캐시가 동일한지 확인하는 것의 중요성을 강조합니다. 
+
+> [!TIP]
+> 일반적인 문제는 클라이언트에 따라 SET 옵션의 기본값이 다를 수 있다는 것입니다. 예를 들어 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 통해 설정된 연결은 자동으로 `QUOTED_IDENTIFIER`를 ON으로 설정하는 반면, SQLCMD는 `QUOTED_IDENTIFIER`를 OFF로 설정합니다. 위의 예제에 설명된 것처럼 두 클라이언트에서 동일한 쿼리를 실행하면 여러 계획이 생성됩니다.
+
+### <a name="removing-execution-plans-from-the-plan-cache"></a>계획 캐시에서 실행 계획 제거
 실행 계획은 이를 저장하기에 충분한 메모리가 있는 한 계획 캐시에 계속 남아 있습니다. 메모리의 여유가 많지 않으면 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 비용을 기반으로 한 방법을 사용하여 계획 캐시에서 어떤 실행 계획을 제거할지 결정합니다. 비용을 기반으로 한 결정을 내리기 위해 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 다음 요인에 따라 각 실행 계획에 대한 현재 비용 변수를 늘리거나 줄입니다.
 
 사용자 프로세스에서 캐시에 실행 계획을 삽입하는 경우 현재 비용을 원래 쿼리 컴파일 비용과 같게 설정하고, 임시 실행 계획의 경우 사용자 프로세스에서 현재 비용을 0으로 설정합니다. 그 후 사용자 프로세스에서 실행 계획을 참조할 때마다 현재 비용을 원래 컴파일 비용으로 다시 설정하고, 임시 실행 계획의 경우 사용자 프로세스에서 현재 비용을 늘립니다. 모든 계획의 경우 현재 비용의 최대값은 원래 컴파일 비용입니다.
@@ -503,14 +679,13 @@ GO
 
 > [!NOTE]
 > xEvent를 사용할 수 없는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전에서는 문 수준의 재컴파일을 보고하기 위한 동일한 목적으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로파일러 [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) 추적 이벤트를 사용할 수 있습니다.
-> 추적 이벤트 [SQL:StmtRecompile](../relational-databases/event-classes/sql-stmtrecompile-event-class.md)도 문 수준의 재컴파일을 보고하며, 재컴파일을 추적하고 디버그하는 데에도 이 추적 이벤트를 사용할 수 있습니다. SP:Recompile은 저장 프로시저와 트리거에 대해서만 생성되는 반면 `SQL:StmtRecompile`은 `sp_executesql`, 준비된 쿼리 및 동적 SQL을 사용하여 실행되는 저장 프로시저, 트리거, 임시 일괄 처리 및 일괄 처리에 대해 생성됩니다.
+> 추적 이벤트 `SQL:StmtRecompile`도 문 수준의 다시 컴파일을 보고하며, 다시 컴파일을 추적하고 디버그하는 데에도 이 추적 이벤트를 사용할 수 있습니다. `SP:Recompile` 은 저장 프로시저와 트리거에 대해서만 생성되는 반면 `SQL:StmtRecompile` 은 `sp_executesql`, 준비된 쿼리 및 동적 SQL을 사용하여 실행되는 저장 프로시저, 트리거, 임시 일괄 처리 및 일괄 처리에 대해 생성됩니다.
 > `SP:Recompile` 및 `SQL:StmtRecompile`의 *EventSubClass* 열에는 다시 컴파일할 이유를 나타내는 정수 코드가 들어 있습니다. 코드에 대한 설명은 [여기](../relational-databases/event-classes/sql-stmtrecompile-event-class.md)에 있습니다.
 
 > [!NOTE]
 > `AUTO_UPDATE_STATISTICS` 데이터베이스 옵션을 `ON`으로 설정하면 마지막 실행 이후 통계가 업데이트되거나 카디널리티가 크게 변경된 테이블이나 인덱싱된 뷰를 대상으로 하는 쿼리가 모두 다시 컴파일됩니다. 이러한 동작은 일반 사용자 정의 테이블, 임시 테이블 및 DML 트리거로 생성된 삽입 테이블과 삭제 테이블에 적용됩니다. 과도한 재컴파일로 인해 쿼리 성능이 저하되면 이 설정을 `OFF`로 변경하세요. `AUTO_UPDATE_STATISTICS` 데이터베이스 옵션을 `OFF`로 설정하면 통계나 카디널리티 변경 내용에 따른 재컴파일은 발생하지 않습니다. 단, DML `INSTEAD OF` 트리거에 의해 생성되는 삽입 테이블과 삭제 테이블은 예외입니다. 두 테이블은 tempdb에 생성되므로 두 테이블에 액세스하는 쿼리의 다시 컴파일은 tempdb의 `AUTO_UPDATE_STATISTICS` 설정에 따라 결정됩니다. 2005 이전 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 이 설정이 `OFF`인 경우에도 DML 트리거에 의한 삽입 테이블과 삭제 테이블의 카디널리티 변경 내용에 따라 계속하여 쿼리가 다시 컴파일됩니다.
 
 ### <a name="PlanReuse"></a> 매개 변수 및 실행 계획 재사용
-
 ADO, OLE DB 및 ODBC 애플리케이션의 매개 변수 표식을 포함하여 매개 변수를 사용하면 실행 계획을 좀 더 많이 재사용할 수 있습니다. 
 
 > [!WARNING] 
@@ -579,7 +754,6 @@ WHERE AddressID = 1 + 2;
 그러나 단순 매개 변수화 규칙에 따르면 매개 변수화할 수 있습니다. 강제 매개 변수화를 시도한 후 실패하면 그 다음으로는 단순 매개 변수화를 시도합니다.
 
 ### <a name="SimpleParam"></a> 단순 매개 변수화
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 Transact-SQL 문에 매개 변수 또는 매개 변수 표식을 사용하여 새 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 이전에 컴파일된 기존의 실행 계획과 일치시키는 관계형 엔진의 성능을 향상시킵니다.
 
 > [!WARNING] 
@@ -615,7 +789,6 @@ WHERE ProductSubcategoryID = 4;
 또는 구문은 동일하고 매개 변수 값만 다른 쿼리 및 단일 쿼리를 매개 변수화하도록 지정할 수 있습니다. 
 
 ### <a name="ForcedParam"></a> 강제 매개 변수화
-
 데이터베이스의 모든 `SELECT`, `INSERT`, `UPDATE` 및 `DELETE` 문이 특정 제한에 따라 매개 변수화되도록 지정하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기본 단순 매개 변수화 동작을 재정의할 수 있습니다. 강제 매개 변수화는 `PARAMETERIZATION` 문에서 `FORCED` 옵션을 `ALTER DATABASE` 로 설정하면 적용됩니다. 강제 매개 변수화를 사용하여 쿼리 컴파일 및 재컴파일 빈도를 줄여 특정 데이터베이스의 성능을 향상시킬 수 있습니다. 일반적으로 POS(Point of Sale) 애플리케이션과 같은 원본으로부터 대량의 동시 쿼리를 처리하는 데이터베이스에서 강제 매개 변수화를 사용하면 도움이 될 수 있습니다.
 
 `PARAMETERIZATION` 옵션을 `FORCED`로 설정하면 임의의 형식으로 전송된 `SELECT`, `INSERT`, `UPDATE`또는 `DELETE` 문에 표시되는 리터럴 값이 쿼리 컴파일 중에 매개 변수로 변환됩니다. 그러나 다음 쿼리 구문에 나타나는 리터럴은 예외입니다. 
@@ -654,7 +827,6 @@ WHERE ProductSubcategoryID = 4;
 > 매개 변수 이름은 임의로 지정하므로 사용자나 애플리케이션에서는 특정 명명 순서를 따를 필요가 없습니다. 또한 다음 요소는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 서비스 팩 업그레이드의 버전에 따라 달라질 수 있습니다. 매개 변수 이름, 매개 변수화되는 리터럴 선택 항목 및 매개 변수화된 텍스트의 공백이 여기에 포함됩니다.
 
 #### <a name="data-types-of-parameters"></a>매개 변수의 데이터 형식
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 리터럴을 매개 변수화하면 매개 변수가 다음 데이터 형식으로 변환됩니다.
 
 * 정수 리터럴은 그 크기가 int 데이터 형식에 적합하면 int로 매개 변수화됩니다. 비교 연산자와 관련된 조건자의 일부인 큰 정수 리터럴(<, \<=, =, !=, >, >=, , !\<, !>, <>, `ALL`, `ANY`, `SOME`, `BETWEEN` 및 `IN` 포함)은 numeric(38,0)으로 매개 변수화됩니다. 비교 연산자와 관련된 조건자의 일부가 아닌 큰 리터럴은 전체 자릿수가 리터럴의 크기를 지원할 만큼 크고 소수 자릿수가 0인 numeric으로 매개 변수화됩니다.
@@ -666,7 +838,6 @@ WHERE ProductSubcategoryID = 4;
 * 통화 유형 리터럴은 money로 매개 변수화됩니다.
 
 #### <a name="ForcedParamGuide"></a> 강제 매개 변수화 사용 지침
-
 `PARAMETERIZATION` 옵션을 FORCED로 설정할 때는 다음 사항을 고려해야 합니다.
 
 * 강제 매개 변수화를 적용하면 쿼리 컴파일 시 쿼리의 리터럴 상수가 매개 변수로 변경됩니다. 따라서 쿼리 최적화 프로그램에서는 만족스럽지 못한 쿼리 계획을 선택할 수 있습니다. 특히 쿼리 최적화 프로그램에서는 인덱싱된 뷰 또는 계산 열의 인덱스에 쿼리를 대응시키지 못할 수 있습니다. 또한 분할된 테이블 및 분산형 분할 뷰에 대해 만족스럽지 못한 쿼리 계획을 선택할 수도 있습니다. 계산 열의 인덱스 및 인덱싱된 뷰를 많이 사용하는 환경에서는 강제 매개 변수화를 사용하면 안 됩니다. 일반적으로 `PARAMETERIZATION FORCED` 옵션은 숙련된 데이터베이스 관리자가 성능에 영향을 주지 않는다는 것을 확인한 후에만 사용해야 합니다.
@@ -681,7 +852,6 @@ WHERE ProductSubcategoryID = 4;
 > `PARAMETERIZATION` 옵션이 `FORCED`로 설정되어 있으면 `PARAMETERIZATION` 옵션이 `SIMPLE`로 설정되어 있는 경우와 오류 메시지 보고가 다를 수 있습니다. 강제 매개 변수화에서는 여러 오류 메시지가 보고될 수 있지만 단순 매개 변수화에서는 더 적은 메시지가 보고되며, 오류가 발생한 줄 번호가 잘못 보고될 수 있습니다.
 
 ### <a name="preparing-sql-statements"></a>SQL 문 준비
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관계형 엔진에서는 실행하기 전에 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 준비할 수 있는 기능을 제공합니다. 애플리케이션에서 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 여러 번 실행해야 하는 경우에는 데이터베이스 API를 사용하여 다음을 수행할 수 있습니다. 
 
 * 문을 한 번 준비합니다. 이렇게 하면 [!INCLUDE[tsql](../includes/tsql-md.md)] 문이 실행 계획으로 컴파일됩니다.
@@ -734,7 +904,6 @@ WHERE ProductID = 63;
 > `RECOMPILE` 힌트를 사용하는 쿼리는 매개 변수 값과 지역 변수의 현재 값을 모두 검사합니다. 검사되는 매개 변수 및 지역 변수 값은 `RECOMPILE` 힌트가 포함된 문 바로 앞에 있는 일괄 처리 위치의 값입니다. 특히 매개 변수의 경우 일괄 처리 호출과 함께 사용된 값은 검사하지 않습니다.
 
 ## <a name="parallel-query-processing"></a>병렬 쿼리 처리
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 마이크로프로세서(CPU)를 두 개 이상 사용하는 컴퓨터에서 쿼리 실행과 인덱스 작업을 최적화하는 병렬 쿼리 기능을 제공합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 여러 개의 운영 체제 작업자 스레드로 쿼리나 인덱스 작업을 병렬 수행할 수 있으므로 작업을 빠르고 효율적으로 완료할 수 있습니다.
 
 쿼리를 최적화하는 동안 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 병렬 실행에 적합한 쿼리나 인덱스 작업을 찾습니다. 이러한 쿼리에 대해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 쿼리 실행 계획에 교환 연산자를 삽입하여 병렬 실행할 쿼리를 준비합니다. 교환 연산자는 프로세스 관리, 데이터 재배포 및 흐름 제어를 제공하는 쿼리 실행 계획의 연산자입니다. 교환 연산자에는 하위 유형으로 `Distribute Streams`, `Repartition Streams`및 `Gather Streams` 논리 연산자가 포함되며 이 중에서 하나 이상이 병렬 쿼리에 대한 쿼리 계획의 실행 계획 출력에 표시될 수 있습니다. 
@@ -752,7 +921,7 @@ WHERE ProductID = 63;
 >   커서에 대한 자세한 내용은 [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md)를 참조하세요.
 > - **재귀 쿼리**    
 >   재귀에 대한 자세한 내용은 [재귀 공통 테이블 식 정의 및 사용 지침](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) 및 [T-SQL의 재귀](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx)를 참조하세요.
-> - **TVF(테이블 반환된 함수)**     
+> - **TVF(테이블 반환된 함수)**    
 >   TVF에 대한 자세한 내용은 [사용자 정의 함수 만들기(데이터베이스 엔진)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)를 참조하세요.
 > - **TOP 키워드**    
 >   자세한 내용은 [TOP(Transact-SQL)](../t-sql/queries/top-transact-sql.md)을 참조하세요.
@@ -766,23 +935,22 @@ WHERE ProductID = 63;
 * 쿼리에 병렬로 실행할 수 없는 스칼라 또는 관계형 연산자가 포함되어 있습니다. 특정 연산자는 쿼리 계획의 한 섹션이 직렬 모드로 실행되도록 하거나 전체 계획이 직렬 모드로 실행되도록 할 수 있습니다.
 
 ### <a name="DOP"></a> 병렬 처리 수준
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 병렬 쿼리 실행 또는 인덱스 DDL(데이터 정의 언어) 작업 각각의 인스턴스에 대해 가장 적합한 병렬 처리 수준이 자동으로 검색됩니다. 이것은 다음과 조건을 기준으로 수행됩니다. 
 
 1. SMP(대칭적 다중 처리) 컴퓨터와 같이 둘 이상의 마이크로프로세서 또는 CPU가 있는 컴퓨터에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 실행 중인지 여부  
-  두 개 이상의 CPU가 있는 컴퓨터에서만 병렬 쿼리를 사용할 수 있습니다. 
+   두 개 이상의 CPU가 있는 컴퓨터에서만 병렬 쿼리를 사용할 수 있습니다. 
 
 2. 사용할 수 있는 작업자 스레드 수가 충분한지 여부  
-  각 쿼리 또는 인덱스 작업을 실행하려면 일정 수의 작업자 스레드가 필요합니다. 병렬 계획을 실행하려면 직렬 계획보다 많은 작업자 스레드가 필요하고, 필요한 작업자 스레드의 수는 병렬 처리 수준에 따라 증가합니다. 특정 병렬 처리 수준에 대한 병렬 계획의 작업자 스레드 요구 사항이 충족되지 않는 경우에는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 병렬 처리 수준을 자동으로 낮추거나 지정된 작업 컨텍스트의 병렬 계획을 완전히 중단합니다. 그런 다음 하나의 작업자 스레드만 사용되는 직렬 계획을 실행합니다. 
+   각 쿼리 또는 인덱스 작업을 실행하려면 일정 수의 작업자 스레드가 필요합니다. 병렬 계획을 실행하려면 직렬 계획보다 많은 작업자 스레드가 필요하고, 필요한 작업자 스레드의 수는 병렬 처리 수준에 따라 증가합니다. 특정 병렬 처리 수준에 대한 병렬 계획의 작업자 스레드 요구 사항이 충족되지 않는 경우에는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 병렬 처리 수준을 자동으로 낮추거나 지정된 작업 컨텍스트의 병렬 계획을 완전히 중단합니다. 그런 다음 하나의 작업자 스레드만 사용되는 직렬 계획을 실행합니다. 
 
 3. 실행한 쿼리 또는 인덱스 작업의 유형  
-  병렬 계획은 인덱스를 새로 작성 또는 다시 작성하거나 클러스터형 인덱스 및 CPU 주기 사용량이 큰 쿼리를 삭제하는 등의 인덱스 작업에 적합합니다. 예를 들어 대형 테이블의 조인, 대규모 집계 및 대형 결과 집합의 정렬이 병렬 쿼리에 적절합니다. 주로 트랜잭션 처리 애플리케이션에서 사용되는 단순 쿼리의 경우 이 쿼리를 병렬로 실행하는 데 필요한 추가 조정 작업은 성능을 향상시키기보다는 부담이 됩니다. 병렬 처리로 유용한 쿼리와 그렇지 않은 쿼리를 구분하기 위해, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 쿼리 또는 인덱스 작업 실행 시 예상 비용을 [병렬 처리에 대한 비용 임계값](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) 값과 비교합니다. 적절한 테스트를 통해 다른 값이 워크로드 실행에 더 적합하다고 확인되는 경우 사용자들은 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용하여 기본값 5를 변경할 수 있습니다. 
+   병렬 계획은 인덱스를 새로 작성 또는 다시 작성하거나 클러스터형 인덱스 및 CPU 주기 사용량이 큰 쿼리를 삭제하는 등의 인덱스 작업에 적합합니다. 예를 들어 대형 테이블의 조인, 대규모 집계 및 대형 결과 집합의 정렬이 병렬 쿼리에 적절합니다. 주로 트랜잭션 처리 애플리케이션에서 사용되는 단순 쿼리의 경우 이 쿼리를 병렬로 실행하는 데 필요한 추가 조정 작업은 성능을 향상시키기보다는 부담이 됩니다. 병렬 처리로 유용한 쿼리와 그렇지 않은 쿼리를 구분하기 위해, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 쿼리 또는 인덱스 작업 실행 시 예상 비용을 [병렬 처리에 대한 비용 임계값](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) 값과 비교합니다. 적절한 테스트를 통해 다른 값이 워크로드 실행에 더 적합하다고 확인되는 경우 사용자들은 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용하여 기본값 5를 변경할 수 있습니다. 
 
 4. 처리할 행 수가 충분한지 여부  
-  쿼리 최적화 프로그램에서 행 수가 부족하다고 판단하는 경우 행을 배포하기 위해 교환 연산자를 사용하지 않습니다. 결과적으로 연산자는 직렬로 실행됩니다. 시작, 배포 및 조정 비용이 병렬 연산자 실행으로 얻은 이익보다 큰 경우 연산자를 직렬 계획으로 실행하면 이 시나리오를 피할 수 있습니다.
+   쿼리 최적화 프로그램에서 행 수가 부족하다고 판단하는 경우 행을 배포하기 위해 교환 연산자를 사용하지 않습니다. 결과적으로 연산자는 직렬로 실행됩니다. 시작, 배포 및 조정 비용이 병렬 연산자 실행으로 얻은 이익보다 큰 경우 연산자를 직렬 계획으로 실행하면 이 시나리오를 피할 수 있습니다.
 
 5. 최신 배포 통계를 사용할 수 있는지 여부  
-  가장 높은 병렬 처리 수준을 제공할 수 없는 경우 병렬 처리를 중단하기 전에 더 낮은 병렬 처리 수준이 가능한지 확인합니다.  
+   가장 높은 병렬 처리 수준을 제공할 수 없는 경우 병렬 처리를 중단하기 전에 더 낮은 병렬 처리 수준이 가능한지 확인합니다.  
   예를 들어 뷰에서 클러스터형 인덱스를 만드는 경우 클러스터형 인덱스가 아직 생성되지 않았으므로 배포 통계를 계산할 수 없습니다. 이 경우 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 이 인덱스 작업에는 가장 높은 병렬 처리 수준을 할당하지 않습니다. 그러나 이 경우에도 정렬 또는 검색과 같은 일부 연산자에는 병렬 처리의 이점이 적용될 수 있습니다.
 
 > [!NOTE]
@@ -795,7 +963,6 @@ WHERE ProductID = 63;
 정적 커서 및 키 집합 커서는 병렬 실행 계획에 따라 채워질 수 있습니다. 그러나 동적 커서의 동작은 직렬 실행에 의해서만 제공될 수 있습니다. 쿼리 최적화 프로그램은 동적 커서에 포함된 쿼리에 대해서는 항상 직렬 실행 계획을 생성합니다.
 
 #### <a name="overriding-degrees-of-parallelism"></a>병렬 처리 수준 재정의
-
 MAXDOP([최대 병렬 처리 수준](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)) 서버 구성 옵션([!INCLUDE[ssSDS_md](../includes/sssds-md.md)]에서 [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md))을 사용하여 병렬 계획 실행에 사용할 프로세서 수를 제한할 수 있습니다. 개별 쿼리 및 인덱스 작업 문에 대한 max degree of parallelism 옵션은 MAXDOP 쿼리 힌트나 MAXDOP 인덱스 옵션을 지정하여 재정의할 수 있습니다. MAXDOP 옵션을 사용하면 개별 쿼리 작업과 인덱스 작업을 보다 상세히 제어할 수 있습니다. 예를 들어 MAXDOP 옵션을 사용하여 온라인 인덱스 작업 전용으로 사용되는 프로세서의 수를 늘리거나 줄일 수 있습니다. 이런 방법으로 인덱스 작업에 사용되는 리소스와 동시 사용자의 리소스 간에 균형을 유지할 수 있습니다. 
 
 최대 병렬 처리 수준 옵션을 0(기본값)으로 설정하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용 가능한 모든 프로세서(최대 64개)를 병렬 계획 실행에 사용할 수 있습니다. MAXDOP 옵션을 0으로 설정하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 64개 논리적 프로세서의 런타임 대상을 설정해도 필요한 경우 다른 값을 수동으로 설정할 수 있습니다. 쿼리와 인덱스에 대해 MAXDOP를 0으로 설정하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용 가능한 모든 프로세서(최대 64개)를 병렬 계획 실행의 지정된 쿼리 또는 인덱스에 대해 사용할 수 있습니다. MAXDOP는 일부 병렬 쿼리에만 적용되는 값이나 병렬 처리에 적합한 모든 쿼리의 미정 대상입니다. 즉, 런타임에 사용할 수 있는 작업자 스레드가 충분하지 않은 경우 MAXDOP 서버 구성 옵션보다 낮은 병렬 처리 수준으로 쿼리를 실행할 수 있습니다.
@@ -803,7 +970,6 @@ MAXDOP([최대 병렬 처리 수준](../database-engine/configure-windows/config
 MAXDOP 구성에 대한 모범 사례는 이 [Microsoft 지원 문서](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server)를 참조하십시오.
 
 ### <a name="parallel-query-example"></a>병렬 쿼리 예제
-
 다음 쿼리에서는 2000년 4월 1일에 시작하는 특정 분기 동안의 주문 수를 계산합니다. 이 기간 동안에는 최소한 한 개의 주문 상품이 약속한 날짜보다 늦게 고객에게 배달되었습니다. 이 쿼리는 각 주문 우선 순위에 따라 그룹화되고 우선 순위를 오름차순으로 정렬하여 각 주문의 수를 표시합니다. 
 
 다음 예에서는 가상의 테이블 및 열 이름을 사용합니다.
@@ -913,7 +1079,6 @@ Index Seek 연산자 위의 Parallelism 연산자는 `O_ORDERKEY` 값을 사용�
 개별 `CREATE TABLE` 또는 `ALTER TABLE` 문에는 인덱스를 생성해야 하는 여러 제약 조건이 있을 수 있습니다. 각 개별 인덱스 만들기 작업은 여러 CPU가 있는 컴퓨터에서 병렬로 수행될 수 있지만 이러한 여러 인덱스 만들기 작업은 연속해서 수행됩니다.
 
 ## <a name="distributed-query-architecture"></a>분산 쿼리 아키텍처
-
 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에서 다른 유형의 OLE DB 데이터 원본을 참조하는 두 가지 메서드를 지원합니다.
 
 * 연결된 서버 이름  
@@ -1013,16 +1178,15 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 
 #### <a name="partitioned-attribute"></a>Partitioned 특성
 
-`Index Seek` 와 같은 연산자가 분할된 테이블 또는 인덱스에서 실행되면 `Partitioned` 특성이 컴파일 시간 및 런타임 계획에 나타나고 이 특성이 `True` (1)로 설정됩니다. 이 특성이 `False` (0)로 설정되면 표시되지 않습니다.
+Index Seek와 같은 연산자가 분할된 테이블 또는 인덱스에서 실행되면 `Partitioned` 특성이 컴파일 시간 및 런타임 계획에 나타나고 이 특성이 `True` (1)로 설정됩니다. 이 특성이 `False` (0)로 설정되면 표시되지 않습니다.
 
 `Partitioned` 특성은 다음 물리적 및 논리적 연산자에서 나타날 수 있습니다.  
-* `Table Scan`  
-* `Index Scan`  
-* `Index Seek`  
-* `Insert`  
-* `Update`  
-* `Delete`  
-* `Merge`  
+|||
+|--------|--------|
+|Table Scan|Index Scan|
+|Index Seek|삽입|
+|업데이트|DELETE|
+|병합||
 
 앞의 그림과 같이 이 특성은 자신이 정의된 연산자의 속성에서 표시됩니다. XML 실행 계획 출력에서 이 특성은 자신이 정의된 연산자의 `Partitioned="1"` 노드에서 `RelOp` 로 표시됩니다.
 

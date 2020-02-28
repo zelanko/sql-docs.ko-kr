@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c8fd7d734bee00a22af02b014e950f6694b534a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c6c74d73a531a40e0f8e57e7104109de71e27ce3
+ms.sourcegitcommit: acfdeacc80c112992c1201748e0b5c59a473032d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831761"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76977547"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services를 사용하여 Python에서 예측 모델 만들기 및 채점
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -174,7 +174,7 @@ SQL Server에서 다시 사용하기 위해 저장된 모델은 바이트 스트
 
 이 연습에서는 다른 작업에 전용될 저장 프로시저를 만드는 방법을 알아보았으며, 해당 작업에서 각 저장 프로시저는 시스템 저장 프로시저 `sp_execute_external_script`를 사용하여 Python 프로세스를 시작합니다. Python 프로세스에 대한 입력은 `sp_execute_external`에 매개 변수로 전달됩니다. Python 스크립트 자체와 SQL Server 데이터베이스의 데이터 변수는 모두 입력으로 전달됩니다.
 
-일반적으로 세련된 Python 코드와 함께 SSMS를 사용하거나 행 기반 출력을 반환하는 간단한 Python 코드만 사용하도록 계획을 세워야 합니다. SSMS 도구는 T-SQL 같은 쿼리 언어를 지원하고 평면화된 행 세트를 반환합니다. 코드에서 산점도 또는 히스토그램 같은 시각적 출력을 생성하는 경우 이미지를 렌더링할 수 있는 도구나 최종 사용자 애플리케이션이 필요합니다.
+일반적으로 세련된 Python 코드와 함께 SSMS를 사용하거나 행 기반 출력을 반환하는 간단한 Python 코드만 사용하도록 계획을 세워야 합니다. SSMS 도구는 T-SQL 같은 쿼리 언어를 지원하고 평면화된 행 세트를 반환합니다. 코드에서 산점도 또는 히스토그램과 같은 시각적 출력을 생성하는 경우 저장 프로시저 외부에서 이미지를 렌더링할 수 있는 별도의 도구 또는 최종 사용자 애플리케이션이 필요합니다.
 
 광범위한 작업을 처리하는 모든 것이 포함된 스크립트를 작성하는 데 익숙한 Python 개발자의 경우 작업을 별도의 프로시저로 구성할 필요가 없다고 생각할 수 있습니다. 하지만 학습과 채점의 사용 사례는 서로 다릅니다. 둘을 구분하면 각 작업을 서로 다른 일정에 배치하고 각 작업의 권한 범위를 지정할 수 있습니다.
 

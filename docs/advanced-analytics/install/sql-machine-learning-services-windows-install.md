@@ -3,18 +3,18 @@ title: Windows에 설치
 description: Windows에서 SQL Server Machine Learning Services를 설치하는 방법을 알아봅니다. Machine Learning Services를 사용하여 데이터베이스에서 R 또는 Python 스크립트를 실행할 수 있습니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/23/2020
+ms.date: 02/20/2020
 ms.topic: conceptual
 author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 26fe15ff88a52b6673d5e7de7dcad3a047fca6ba
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9ce47719415c97f7e9e6cecb27768717710537d4
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76891732"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507593"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Windows에 SQL Server Machine Learning Services(Python 및 R) 설치
 
@@ -40,7 +40,8 @@ Windows에서 SQL Server Machine Learning Services를 설치하는 방법을 알
   + 외부 라이브러리에서 실행되는 R 및 Python 스크립트는 SQL Server로 관리할 수 없으며 리소스 경합이 발생할 수 있습니다.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-+ Machine Learning Services는 기본적으로 SQL Server 빅 데이터 클러스터에 설치됩니다. 빅 데이터 클러스터를 사용하는 경우에는 이 문서의 단계를 수행하지 않아도 됩니다. 자세한 내용은 [빅 데이터 클러스터에서 Machine Learning Services(Python 및 R) 사용](../../big-data-cluster/machine-learning-services.md)을 참조하세요.
+> [!NOTE]
+> Machine Learning Services는 기본적으로 **SQL Server 빅 데이터 클러스터**에 설치됩니다. **빅 데이터 클러스터**를 사용하는 경우에는 이 문서의 단계를 수행하지 않아도 됩니다. 자세한 내용은 [빅 데이터 클러스터에서 Machine Learning Services(Python 및 R) 사용](../../big-data-cluster/machine-learning-services.md)을 참조하세요.
 ::: moniker-end
 
 > [!IMPORTANT]

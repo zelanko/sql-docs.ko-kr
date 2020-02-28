@@ -1,5 +1,5 @@
 ---
-title: URL에 하이퍼링크 추가(보고서 작성기 및 SSRS) | Microsoft Docs
+title: URL에 하이퍼링크 추가(보고서 작성기) | Microsoft Docs
 ms.date: 09/07/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 84f7ebd295cb64ca4d6f77427a727c1d0182b142
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 85f3b3cabf180d85da9c348a7ec2cf9062b3a4c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574823"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080722"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>URL에 하이퍼링크 추가(보고서 작성기 및 SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  의 페이지를 매긴 보고서에서 입력란, 이미지, 차트 및 계기에 하이퍼링크 동작을 추가하는 방법을 알아봅니다. 링크를 통해 다른 보고서, 보고서의 책갈피 또는 정적 또는 동적 URL로 이동할 수 있습니다. 

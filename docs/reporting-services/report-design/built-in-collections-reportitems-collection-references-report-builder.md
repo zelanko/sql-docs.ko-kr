@@ -1,5 +1,5 @@
 ---
-title: ReportItems 컬렉션 참조(보고서 작성기 및 SSRS) | Microsoft Docs
+title: ReportItems 컬렉션 참조(보고서 작성기) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 24a50de92a2b182295abc926c98358fa56e2f379
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e8819e97cbece0ab9682252c3afdedee7d671428
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581771"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081895"
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>기본 제공 컬렉션 - ReportItems 컬렉션 참조(보고서 작성기)
   **ReportItems** 기본 제공 컬렉션은 데이터 영역의 행 또는 보고서 디자인 화면의 입력란과 같은 보고서 항목의 입력란 집합입니다. **ReportItems** 컬렉션에는 페이지 머리글, 페이지 바닥글 또는 보고서 본문의 현재 범위에 있는 입력란이 포함됩니다. 이 컬렉션은 보고서 처리기 및 보고서 렌더러에 의해 런타임에 결정됩니다. 현재 범위는 사용자가 보고서 페이지를 볼 때 보고서 처리기가 보고서 데이터 및 보고서 항목 레이아웃 요소를 연속적으로 조합함에 따라 변경됩니다. **ReportItems** 기본 제공 컬렉션을 사용하여 각 페이지의 첫 번째 및 마지막 항목을 표시하는 사전 스타일의 페이지 머리글을 만들 수 있습니다.  
@@ -22,9 +22,9 @@ ms.locfileid: "65581771"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-reportitems-value-property"></a>ReportItems 값 속성 사용  
- **ReportItems** 컬렉션 내의 항목에는 Value라는 하나의 속성만 있습니다. **ReportItems** 항목의 값을 사용하면 보고서에 있는 다른 필드의 데이터를 표시하거나 계산할 수 있습니다. 현재 입력란의 값에 액세스하려는 경우 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 기본 제공 전역 Me.Value를 사용하거나 그냥 Value만 사용할 수 있습니다. First와 같은 보고서 함수 및 집계 함수에서는 정규화된 구문을 사용해야 합니다.  
+ **ReportItems** 컬렉션 내의 항목에는 Value 속성 하나만 포함됩니다. **ReportItems** 항목의 값을 사용하면 보고서에 있는 다른 필드의 데이터를 표시하거나 계산할 수 있습니다. 현재 입력란의 값에 액세스하려는 경우 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 기본 제공 전역 Me.Value를 사용하거나 그냥 Value만 사용할 수 있습니다. First와 같은 보고서 함수 및 집계 함수에서는 정규화된 구문을 사용해야 합니다.  
   
- 다음은 그 예입니다.  
+ 다음은 그 예입니다.   
   
 -   이 식을 입력란에 배치하면 **이라는** ReportItem `Textbox1`입력란의 값이 표시됩니다.  
   

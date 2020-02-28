@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9d759921ac82f34156856b587161f44c64269ea0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 83635ac9cb5b35aba25ace6947bc1281d468cb65
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76929896"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558314"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>sqlmlutils를 사용하여 Python 패키지 설치
 
@@ -37,7 +37,7 @@ ms.locfileid: "76929896"
 
 ### <a name="other-considerations"></a>기타 고려 사항
 
-+ 패키지는 Python 3.5과 호환되며 Windows에서 실행되어야 합니다.
++ 패키지는 사용 중인 Python 버전의 규격을 준수해야 합니다. 각 SQL Server 버전에 포함된 Python 버전에 대한 자세한 내용은 [SQL Server Machine Learning Services(Python 및 R)이란?의 Python 및 R 버전](../what-is-sql-server-machine-learning.md#versions)을 참조하세요.
 
 + Python 패키지 라이브러리는 SQL Server 인스턴스의 Program Files 폴더에 있으며, 기본적으로 이 폴더에 설치하려면 관리자 권한이 필요합니다. 자세한 내용은 [패키지 라이브러리 위치](../package-management/python-package-information.md#default-python-library-location)를 참조하세요.
 
@@ -58,13 +58,13 @@ ms.locfileid: "76929896"
 
 **sqlmlutils**를 사용하려면 먼저 SQL Server에 연결하는 데 사용하는 클라이언트 컴퓨터에 설치해야 합니다. `pip`를 설치했는지 확인합니다. 자세한 내용은 [pip 설치](https://pip.pypa.io/en/stable/installing/)를 참조하세요.
 
-1. 최신 **sqlmlutils** zip 파일을 https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist 에서 클라이언트 컴퓨터로 다운로드합니다. 파일 압축을 풀지 마세요.
+1. 최신 **sqlmlutils** zip 파일을 https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist에서 클라이언트 컴퓨터로 다운로드합니다. 파일 압축을 풀지 마세요.
 
 1. **명령 프롬프트**를 열고 다음 명령을 실행하여 **sqlmlutils** 패키지를 설치합니다. 다운로드한 **sqlmlutils** zip 파일의 전체 경로를 대체합니다. 이 예제에서는 다운로드한 파일을 `c:\temp\sqlmlutils_0.7.2.zip`이라고 가정합니다.
 
    ```console
    pip install "pymssql<3.0"
-   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.7.2.zip
+   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils-0.7.2.zip
    ```
 
 ## <a name="add-a-python-package-on-sql-server"></a>SQL Server에 Python 패키지 추가
@@ -77,11 +77,11 @@ SQL Server에 연결하는 데 사용하는 클라이언트 컴퓨터가 인터�
 
 1. 클라이언트 컴퓨터에서 **Python** 또는 Python 환경을 엽니다.
 
-1. 다음 명령을 사용하여 **text-tools** 패키지를 설치합니다. SQL Server 데이터베이스 연결 정보를 바꿉니다(Windows 인증을 사용하지 않는 경우 `uid` 및 `pwd` 매개 변수 추가).
+1. 다음 명령을 사용하여 **text-tools** 패키지를 설치합니다. 사용자의 SQL Server 데이터베이스 연결 정보를 대체합니다.
 
    ```python
    import sqlmlutils
-   connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
+   connection = sqlmlutils.ConnectionInfo(server="server", database="database", uid="username", pwd="password")
    sqlmlutils.SQLPackageManager(connection).install("text-tools")
    ```
 
@@ -115,7 +115,7 @@ sqlmlutils.SQLPackageManager(connection).install("c:/temp/packages/text-tools/te
 
 ## <a name="use-the-package-in-sql-server"></a>SQL Server에서 패키지 사용
 
-이제 SQL Server의 Python 스크립트에서 이 패키지를 사용할 수 있습니다. 다음은 그 예입니다.
+이제 SQL Server의 Python 스크립트에서 이 패키지를 사용할 수 있습니다. 다음은 그 예입니다. 
 
 ```python
 EXECUTE sp_execute_external_script

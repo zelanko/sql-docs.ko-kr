@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e0e8d41e22efd3f51e1e0812d9476cce9b4b324d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6e88e6cf9cb4101f22d3a30f5ca53fdf15b754fa
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75320613"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256746"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 데이터베이스 백업 및 복원
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "75320613"
  전체 데이터베이스(데이터베이스 백업), 부분 데이터베이스(부분 백업) 또는 데이터 파일 집합이나 파일 그룹(파일 백업)의 데이터 백업입니다.  
   
 **데이터베이스 백업(database backup)**  
- 데이터베이스 백업입니다. 전체 데이터베이스 백업은 백업이 완료된 시점의 전체 데이터베이스를 나타냅니다. 차등 데이터베이스 백업은 가장 최근의 전체 데이터베이스 백업 이후에 데이터베이스에 수행된 변경 내용만 포함합니다.  
+ 데이터베이스 백업입니다. 전체 데이터베이스 백업은 백업이 완료된 시점의 전체 데이터베이스를 나타냅니다. 차등 데이터베이스 백업은 최근의 전체 데이터베이스 백업 이후에 데이터베이스에 수행된 변경 내용만 포함합니다.  
   
 **차등 백업(differential backup)**  
  전체 또는 부분 데이터베이스, 데이터 파일 집합 또는 파일 그룹(차등 기반)에 대한 최신 전체 백업을 기반으로 하고, 해당 기준 이후에 변경된 데이터만 포함하는 데이터 백업입니다.  
@@ -154,7 +154,7 @@ ms.locfileid: "75320613"
  백업을 테스트해야만 복원 전략을 갖추게 됩니다. 데이터베이스 복사본을 테스트 시스템으로 복원하여 각 데이터베이스에 대한 백업 전략을 철저히 테스트하는 것이 중요합니다. 사용할 모든 유형의 백업 복원을 테스트해야 합니다. 백업을 복원한 후에 데이터베이스의 DBCC CHECKDB를 통해 데이터베이스 일관성 검사를 수행하여 백업 미디어가 손상되지 않았는지 확인하는 것이 좋습니다. 
 
 ### <a name="verify-media-stability-and-consistency"></a>미디어 안정성 및 일관성 확인
-백업 유틸리티(BACKUP T-SQL 명령, SQL Server 유지 관리 계획, 백업 소프트웨어 또는 솔루션 등)에서 제공하는 확인 옵션을 사용합니다. 예를 보려면 [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md)를 참조하세요. BACKUP CHECKSUM과 같은 고급 기능을 사용하여 백업 미디어 자체의 문제를 검색합니다. 자세한[ 내용은 ](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)를 참조하세요.
+백업 유틸리티(BACKUP T-SQL 명령, SQL Server 유지 관리 계획, 백업 소프트웨어 또는 솔루션 등)에서 제공하는 확인 옵션을 사용합니다. 예를 보려면 [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md)를 참조하세요. BACKUP CHECKSUM과 같은 고급 기능을 사용하여 백업 미디어 자체의 문제를 검색합니다. 자세한 내용은 [백업 및 복원 중 발생 가능한 미디어 오류(SQL Server)](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)를 참조하세요.
 
 ### <a name="document-backuprestore-strategy"></a>백업/복원 전략 문서화 
 백업 및 복원 절차를 문서화하고 실행 문서에 사본을 보관하는 것이 좋습니다.

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f6f89e973d5f021dbd48a1bc7fc8234f9c9b6a89
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 18f91c30715dbf44058a204bd17f9ab1e6e393c6
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67902012"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77255989"
 ---
 # <a name="hints-transact-sql---join"></a>힌트 (Transact-SQL) - 조인
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "67902012"
   
 ## <a name="arguments"></a>인수  
  LOOP | HASH | MERGE  
- 쿼리의 조인이 루프, 해시 또는 병합을 사용하도록 지정합니다. LOOP | HASH | MERGE JOIN을 사용하면 두 테이블 간에 특정 조인이 적용됩니다. LOOP에는 조인 형식으로 RIGHT 또는 FULL을 지정할 수 없습니다.  
+ 쿼리의 조인이 루프, 해시 또는 병합을 사용하도록 지정합니다. LOOP | HASH | MERGE JOIN을 사용하면 두 테이블 간에 특정 조인이 적용됩니다. LOOP에는 조인 형식으로 RIGHT 또는 FULL을 지정할 수 없습니다. 자세한 내용은 [Joins](../../relational-databases/performance/joins.md)를 참조하세요.
   
  REMOTE  
  오른쪽 테이블에서 조인 작업을 수행하도록 지정합니다. 왼쪽 테이블이 로컬 테이블이고 오른쪽 테이블이 원격 테이블인 경우에 유용합니다. 왼쪽 테이블의 행 수가 오른쪽 테이블보다 적을 때만 REMOTE를 사용해야 합니다.  

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0129999e61e1df1c61c3a0fb58eab1b3a1cca7b6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6c79f2e87ccb6706eab6621cc72bb2fa45b7e9e6
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75245296"
+ms.lasthandoff: 02/13/2020
+ms.locfileid: "77179284"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ INSERT INTO MyTest (myKey, myValue) VALUES (2, 0);
 GO  
 ```  
   
-그런 후 다음 예제 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 업데이트 중에 `MyTest` 테이블에 대한 낙관적 동시성 제어를 구현할 수 있습니다.
+그런 후 다음 예제 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 업데이트 중에 `MyTest` 테이블에 대한 낙관적 동시성 제어를 구현할 수 있습니다. 이 스크립트는 행을 마지막으로 읽을 때의 **rowversion** 값을 나타내기 위해 `<myRv>`를 사용합니다. 값을 실제 **rowversion** 값으로 바꿉니다. 실제 **rowversion** 값의 예는 `0x00000000000007D3`입니다.
   
 ```sql
 DECLARE @t TABLE (myKey int);  
@@ -89,7 +89,7 @@ UPDATE MyTest
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND RV = myRv;  
+    AND RV = <myRv>;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  
@@ -99,12 +99,12 @@ IF (SELECT COUNT(*) FROM @t) = 0
     END;  
 ```  
   
-`myRv`는 마지막으로 행을 읽은 시간을 나타내는 행에 대한 **rowversion** 열 값입니다. 이 값은 실제 **rowversion** 값으로 바꾸어야 합니다. 예를 들어 실제 **rowversion** 값은 0x00000000000007D3입니다.
-  
+
+
 또한 예제 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 트랜잭션에 삽입할 수도 있습니다. 트랜잭션 범위 내에서 `@t` 변수를 쿼리하면 `myKey` 테이블을 다시 쿼리하지 않고도 테이블의 업데이트된 `MyTest` 열을 검색할 수 있습니다.
-  
-다음은 **timestamp** 구문을 사용하는 동일한 예입니다.
-  
+
+다음은 **timestamp** 구문을 사용하는 동일한 예입니다. `<myTS>`를 실제 **timestamp**로 바꿉니다.
+
 ```sql
 CREATE TABLE MyTest2 (myKey int PRIMARY KEY  
     ,myValue int, TS timestamp);  
@@ -118,7 +118,7 @@ UPDATE MyTest2
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND TS = myTS;  
+    AND TS = <myTS>;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  

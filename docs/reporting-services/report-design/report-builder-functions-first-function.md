@@ -1,5 +1,5 @@
 ---
-title: First 함수(보고서 작성기 및 SSRS) | Microsoft Docs
+title: First 함수(보고서 작성기) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8d7f2db5b2b212dd529ac800819c5aa58b5d121a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c7dee0fc2085ff370a5c76ece56f9ed54f6e2e4a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579525"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081268"
 ---
 # <a name="report-builder-functions---first-function"></a>보고서 작성기 함수 - First 함수
   지정된 식의 지정된 범위에서 첫 번째 값을 반환합니다.  

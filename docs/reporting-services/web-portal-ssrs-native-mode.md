@@ -1,6 +1,6 @@
 ---
-title: 보고서 서버의 웹 포털(SSRS 기본 모드) | Microsoft Docs
-ms.date: 12/05/2018
+title: 보고서 서버의 웹 포털(기본 모드) | Microsoft Docs
+ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 42844a8783f5d1e1066667ed828906c0549f84c2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 24afa6ec8daa26730ad202d1aad612ba01213bb4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "70874917"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082513"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>보고서 서버의 웹 포털(SSRS 기본 모드)
 
@@ -30,7 +30,7 @@ Reporting Services 보고서 서버의 웹 포털은 웹 기반 환경입니다.
 
 - 보고서 보기, 검색, 인쇄 및 구독
 - 서버의 항목을 체계적으로 구성하도록 폴더 계층 구조 생성, 보안 설정 및 유지 관리
-- 항목 및 작업에 대한 액세스 권한을 결정하는 역할 기반 보안 구성
+- 항목 및 작업에 대한 액세스 권한을 결정하는 역할 기반 보안 구성 자세한 내용은 [역할 정의 - 미리 정의된 역할](security/role-definitions-predefined-roles.md)을 참조하세요.
 - 보고서 실행 속성, 보고서 기록 및 보고서 매개 변수 구성
 - 일정 및 데이터 원본 연결을 편리하게 관리하기 위해 공유 일정 및 공유 데이터 원본 만들기
 - 다수의 받는 사람 목록에 보고서를 전달하는 데이터 기반 구독 만들기

@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 94e2fe49e52ed224a35183f9629bf8eeab112d17
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9e2204000400c06ea0fd884dbf4db6c08085d495
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831601"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256886"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Kubernetes에 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 배포하는 방법
 
@@ -71,7 +71,7 @@ Kubernetes 클러스터를 구성한 후에는 새로운 SQL Server 빅 데이�
 
 ## <a name="ensure-you-have-storage-configured"></a>스토리지를 구성했는지 확인
 
-대부분의 빅 데이터 클러스터 배포는 영구 스토리지가 있어야 합니다. 이번에는 BDC를 배포하기 전에 Kubernetes 클러스터에서 영구 스토리지를 제공하는 방법에 대한 계획이 있는지 확인해야 합니다.
+대부분의 빅 데이터 클러스터 배포에는 영구 스토리지가 있어야 합니다. 이번에는 BDC를 배포하기 전에 Kubernetes 클러스터에서 영구 스토리지를 제공하는 방법에 대한 계획이 있는지 확인해야 합니다.
 
 AKS에서 배포하는 경우에는 스토리지를 설치할 필요가 없습니다. AKS는 동적 프로비저닝을 사용하는 기본 제공 스토리지 클래스를 제공합니다. 배포 구성 파일에서 스토리지 클래스(`default` 또는 `managed-premium`)를 사용자 지정할 수 있습니다. 기본 제공 프로필은 `default` 스토리지 클래스를 사용합니다. `kubeadm`을 사용하여 배포한 Kubernetes 클러스터에 배포하는 경우 원하는 크기의 클러스터에 대해 충분한 스토리지를 사용할 수 있는지 사용할 수 있게 구성되어 있는지 확인해야 합니다. 스토리지를 사용하는 방법을 사용자 지정하려는 경우 계속하기 전에 이 작업을 수행해야 합니다. [Kubernetes의 SQL Server 빅 데이터 클러스터를 사용한 데이터 지속성](concept-data-persistence.md)을 참조하세요.
 

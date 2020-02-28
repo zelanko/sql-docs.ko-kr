@@ -1,22 +1,22 @@
 ---
-title: Active Directory 모드에서 SQL Server 빅 데이터 클러스터 배포
-titleSuffix: Deploy SQL Server Big Data Cluster in Active Directory mode
+title: Active Directory 모드에서 배포
+titleSuffix: SQL Server Big Data Cluster
 description: Active Directory 도메인에서 SQL Server 빅 데이터 클러스터를 업그레이드하는 방법을 알아봅니다.
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 12/02/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e47af4ef20bc3dac6c61b9c5f851822348d36650
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bd8e571417e7b2171dc135e986fa77f1f0eff089
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253114"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544878"
 ---
-# <a name="deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-active-directory-mode"></a>Active Directory 모드에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포
+# <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Active Directory 모드에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -164,23 +164,23 @@ export DOMAIN_SERVICE_ACCOUNT_PASSWORD=<AD principal password>
 
 AD 통합에 필요한 매개 변수는 다음과 같습니다. 이 문서의 아래 부분에 나오는 `config replace` 명령을 사용하여 이러한 매개 변수를 `control.json` 및 `bdc.json` 파일에 추가합니다. 아래의 모든 예제에서는 `contoso.local` 도메인 예제를 사용합니다.
 
-- `security.ouDistinguishedName`: 클러스터 배포에서 만든 모든 AD 계정이 추가될 OU(조직 구성 단위)의 고유 이름입니다. 도메인을 `contoso.local`이라고 하는 경우 OU의 고유 이름은 `OU=BDC,DC=contoso,DC=local`입니다.
+- `security.activeDirectory.ouDistinguishedName`: 클러스터 배포에서 만든 모든 AD 계정이 추가될 OU(조직 구성 단위)의 고유 이름입니다. 도메인을 `contoso.local`이라고 하는 경우 OU의 고유 이름은 `OU=BDC,DC=contoso,DC=local`입니다.
 
-- `security.dnsIpAddresses`: 도메인 컨트롤러의 IP 주소 목록입니다.
+- `security.activeDirectory.dnsIpAddresses`: 도메인 컨트롤러의 IP 주소 목록입니다.
 
-- `security.domainControllerFullyQualifiedDns`: 도메인 컨트롤러의 FQDN 목록입니다. FQDN에는 도메인 컨트롤러의 머신/호스트 이름이 포함됩니다. 여러 도메인 컨트롤러가 있는 경우 여기에 목록을 제공할 수 있습니다. 예: `HOSTNAME.CONTOSO.LOCAL`
+- `security.activeDirectory.domainControllerFullyQualifiedDns`: 도메인 컨트롤러의 FQDN 목록입니다. FQDN에는 도메인 컨트롤러의 머신/호스트 이름이 포함됩니다. 여러 도메인 컨트롤러가 있는 경우 여기에 목록을 제공할 수 있습니다. 예: `HOSTNAME.CONTOSO.LOCAL`
 
-- `security.realm` **선택적 매개 변수**: 대부분의 경우 영역은 도메인 이름과 동일합니다. 동일하지 않은 경우 이 매개 변수를 사용하여 영역 이름(예: `CONTOSO.LOCAL`)을 정의합니다.
+- `security.activeDirectory.realm` **선택적 매개 변수**: 대부분의 경우 영역은 도메인 이름과 동일합니다. 동일하지 않은 경우 이 매개 변수를 사용하여 영역 이름(예: `CONTOSO.LOCAL`)을 정의합니다.
 
-- `security.domainDnsName`: 도메인 이름입니다(예: `contoso.local`).
+- `security.activeDirectory.domainDnsName`: 도메인 이름입니다(예: `contoso.local`).
 
-- `security.clusterAdmins`: 이 매개 변수는 **one- AD 그룹**을 사용합니다. 이 그룹의 멤버는 클러스터에서 관리자 권한을 얻게 됩니다. 즉 SQL Server에 대한 sysadmin 권한, HDFS에 대한 슈퍼 사용자 권한 및 컨트롤러에 대한 관리자 권한을 갖습니다. **배포를 시작하기 전에 이 그룹이 AD에 있어야 합니다. 또한 이 그룹은 Active Directory에서 DomainLocal로 범위가 지정될 수 없습니다. 도메인 로컬 범위 그룹으로 인해 배포가 실패합니다.**
+- `security.activeDirectory.clusterAdmins`: 이 매개 변수는 **one- AD 그룹**을 사용합니다. 이 그룹의 멤버는 클러스터에서 관리자 권한을 얻게 됩니다. 즉 SQL Server에 대한 sysadmin 권한, HDFS에 대한 슈퍼 사용자 권한 및 컨트롤러에 대한 관리자 권한을 갖습니다. **배포를 시작하기 전에 이 그룹이 AD에 있어야 합니다. 또한 이 그룹은 Active Directory에서 DomainLocal로 범위가 지정될 수 없습니다. 도메인 로컬 범위 그룹으로 인해 배포가 실패합니다.**
 
-- `security.clusterUsers`: 빅 데이터 클러스터에서 일반 사용자(관리자 권한 없음)인 AD 그룹의 목록입니다. **배포를 시작하기 전에 이러한 그룹이 AD에 있어야 합니다. 또한 이러한 그룹은 Active Directory에서 DomainLocal로 범위가 지정될 수 없습니다. 도메인 로컬 범위 그룹으로 인해 배포가 실패합니다.**
+- `security.activeDirectory.clusterUsers`: 빅 데이터 클러스터에서 일반 사용자(관리자 권한 없음)인 AD 그룹의 목록입니다. **배포를 시작하기 전에 이러한 그룹이 AD에 있어야 합니다. 또한 이러한 그룹은 Active Directory에서 DomainLocal로 범위가 지정될 수 없습니다. 도메인 로컬 범위 그룹으로 인해 배포가 실패합니다.**
 
-- `security.appOwners` **선택적 매개 변수**: 애플리케이션을 만들고, 삭제하고, 실행할 수 있는 권한이 있는 AD 그룹의 목록입니다. **배포를 시작하기 전에 이러한 그룹이 AD에 있어야 합니다. 또한 이러한 그룹은 Active Directory에서 DomainLocal로 범위가 지정될 수 없습니다. 도메인 로컬 범위 그룹으로 인해 배포가 실패합니다.**
+- `security.activeDirectory.appOwners` **선택적 매개 변수**: 애플리케이션을 만들고, 삭제하고, 실행할 수 있는 권한이 있는 AD 그룹의 목록입니다. **배포를 시작하기 전에 이러한 그룹이 AD에 있어야 합니다. 또한 이러한 그룹은 Active Directory에서 DomainLocal로 범위가 지정될 수 없습니다. 도메인 로컬 범위 그룹으로 인해 배포가 실패합니다.**
 
-- `security.appReaders`**선택적 매개 변수**: 애플리케이션을 실행할 수 있는 권한이 있는 AD 그룹의 목록입니다. **배포를 시작하기 전에 이러한 그룹이 AD에 있어야 합니다. 또한 이러한 그룹은 Active Directory에서 DomainLocal로 범위가 지정될 수 없습니다. 도메인 로컬 범위 그룹으로 인해 배포가 실패합니다.**
+- `security.activeDirectory.appReaders`**선택적 매개 변수**: 애플리케이션을 실행할 수 있는 권한이 있는 AD 그룹의 목록입니다. **배포를 시작하기 전에 이러한 그룹이 AD에 있어야 합니다. 또한 이러한 그룹은 Active Directory에서 DomainLocal로 범위가 지정될 수 없습니다. 도메인 로컬 범위 그룹으로 인해 배포가 실패합니다.**
 
 **AD 그룹 범위를 확인하는 방법:** 
 AD 그룹의 범위를 확인하여 DomainLocal인지 살펴보기 위한 지침을 보려면 [여기를 클릭](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)하세요.
@@ -193,7 +193,22 @@ azdata bdc config init --source kubeadm-prod  --target custom-prod-kubeadm
 
 `control.json` 파일에서 위의 매개 변수를 설정하려면 다음 `azdata` 명령을 사용합니다. 이러한 명령은 구성을 바꾸고, 배포하기 전에 사용자 고유의 값을 제공합니다.
 
-아래 예제에서는 배포 구성의 AD 관련 매개 변수 값을 바꿉니다. 아래의 도메인 세부 정보는 예제 값입니다.
+ > [!IMPORTANT]
+ > SQL Server 2019 CU2 릴리스에서는 배포 프로필의 보안 구성 섹션 구조가 약간 변경되었고 Active Directory와 관련된 모든 설정이 *control.json* 파일의 *security* 아래에 있는 json 트리의 새로운 *activeDirectory*에 있습니다.
+
+아래 예제는 SQL Server 2019 CU2 사용을 기반으로 합니다. 배포 구성에서 AD 관련 매개 변수 값을 대체하는 방법을 보여 줍니다. 아래의 도메인 세부 정보는 예제 값입니다.
+
+```bash
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.ouDistinguishedName=OU\=bdc\,DC\=contoso\,DC\=local"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.dnsIpAddresses=[\"10.100.10.100\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.domainControllerFullyQualifiedDns=[\"HOSTNAME.CONTOSO.LOCAL\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.domainDnsName=contoso.local"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.clusterAdmins=[\"bdcadminsgroup\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.clusterUsers=[\"bdcusersgroup\"]"
+#Example for providing multiple clusterUser groups: [\"bdcusergroup1\",\"bdcusergroup2\"]
+```
+
+마찬가지로 SQL Server 2019 CU2 이전 릴리스에서는 다음을 실행할 수 있습니다.
 
 ```bash
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.ouDistinguishedName=OU\=bdc\,DC\=contoso\,DC\=local"

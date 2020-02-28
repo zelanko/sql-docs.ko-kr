@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: c5f0b10d0b2bbd953b14873e76b938ecfdce6fd9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d08ee2e48fca1cf7cd473dbd02714b460089353f
+ms.sourcegitcommit: 9b8b71cab6e340f2cb171397f66796d7a76c497e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74993018"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77250598"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -35,7 +35,7 @@ ms.locfileid: "74993018"
   
 **SqlPackage.exe** 명령줄을 사용하면 작업별 매개 변수 및 속성과 함께 이러한 작업을 지정할 수 있습니다.  
 
-**[최신 버전 다운로드](sqlpackage-download.md)** . 최신 릴리스에 대한 자세한 내용은 [릴리스 정보](release-notes-sqlpackage.md)를 참조하세요.
+**[최신 버전 다운로드](sqlpackage-download.md)**. 최신 릴리스에 대한 자세한 내용은 [릴리스 정보](release-notes-sqlpackage.md)를 참조하세요.
   
 ## <a name="command-line-syntax"></a>명령줄 구문
 
@@ -44,7 +44,29 @@ ms.locfileid: "74993018"
 ```
 SqlPackage {parameters}{properties}{SQLCMD Variables}  
 ```
-  
+
+### <a name="usage-examples"></a>사용 예
+
+**SQL 스크립트 출력과 함께 .dacpac 파일을 사용하여 데이터베이스 간 비교 생성**
+
+최신 데이터베이스 변경 내용의 .dacpac 파일을 만들어 시작합니다.
+
+```
+sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_current_version.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
+ ```
+ 
+변경되지 않은 데이터베이스 대상의 .dacpac 파일을 만듭니다.
+
+ ```
+ sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
+ ```
+
+두 .dacpac 파일의 차이점을 생성하는 SQL 스크립트를 만듭니다.
+
+```
+sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
+ ```
+
 ### <a name="help-for-the-extract-action"></a>Extract 동작에 대한 도움말
 
 |매개 변수|약식|값|Description|
@@ -206,6 +228,7 @@ SqlPackage.exe 게시 작업은 원본 데이터베이스의 구조와 일치하
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|데이터베이스에 게시할 때 SQL Server가 라우팅 테이블에 경로를 유지하는 시간에 대한 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|데이터베이스에 게시할 때 T-SQL 문 사이의 세미콜론의 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|데이터베이스에 게시할 때 테이블 옵션의 차이를 무시할지 또는 업데이트할지를 지정합니다.|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|데이터베이스에 게시할 때 테이블 파티션 옵션의 차이를 무시할지 또는 업데이트할지를 지정합니다.  이 옵션은 Azure Synapse Analytics 데이터 웨어하우스 데이터베이스에만 적용됩니다.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|데이터베이스에 게시할 때 사용자 설정 개체의 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|데이터베이스에 게시할 때 공백의 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|데이터베이스에 게시할 때 CHECK 제약 조건의 WITH NOCHECK 절에 대한 값의 차이를 무시할지 또는 업데이트할지를 지정합니다.|
@@ -433,6 +456,7 @@ Import 동작과 관련된 속성:
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|데이터베이스에 게시할 때 SQL Server가 라우팅 테이블에 경로를 유지하는 시간에 대한 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|데이터베이스에 게시할 때 T-SQL 문 사이의 세미콜론의 차이를 무시할지 또는 업데이트할지를 지정합니다.| 
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|데이터베이스에 게시할 때 테이블 옵션의 차이를 무시할지 또는 업데이트할지를 지정합니다.| 
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|데이터베이스에 게시할 때 테이블 파티션 옵션의 차이를 무시할지 또는 업데이트할지를 지정합니다.  이 옵션은 Azure Synapse Analytics 데이터 웨어하우스 데이터베이스에만 적용됩니다.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|데이터베이스에 게시할 때 사용자 설정 개체의 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|데이터베이스에 게시할 때 공백의 차이를 무시할지 또는 업데이트할지를 지정합니다. |
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|데이터베이스에 게시할 때 CHECK 제약 조건의 WITH NOCHECK 절에 대한 값의 차이를 무시할지 또는 업데이트할지를 지정합니다.| 
@@ -597,6 +621,7 @@ Import 동작과 관련된 속성:
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|데이터베이스에 게시할 때 SQL Server가 라우팅 테이블에 경로를 유지하는 시간에 대한 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|데이터베이스에 게시할 때 T-SQL 문 사이의 세미콜론의 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|데이터베이스에 게시할 때 테이블 옵션의 차이를 무시할지 또는 업데이트할지를 지정합니다.|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|데이터베이스에 게시할 때 테이블 파티션 옵션의 차이를 무시할지 또는 업데이트할지를 지정합니다.  이 옵션은 Azure Synapse Analytics 데이터 웨어하우스 데이터베이스에만 적용됩니다.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|데이터베이스에 게시할 때 사용자 설정 개체의 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|데이터베이스에 게시할 때 공백의 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|데이터베이스에 게시할 때 CHECK 제약 조건의 WITH NOCHECK 절에 대한 값의 차이를 무시할지 또는 업데이트할지를 지정합니다.|

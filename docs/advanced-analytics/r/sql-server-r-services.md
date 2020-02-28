@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 99aba9748e7ee6d53aabb18919324243740d996a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 48f3b3433d0ca2f4daf08048228989598c5cf36a
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "71149931"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971431"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>SQL Server 2016 R Services란?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,6 +55,12 @@ R Services에서 R 스크립트를 실행하는 방법에는 다음 두 가지�
 + 가장 일반적인 방법은 T-SQL 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 사용하는 것입니다.
 
 + 기본 설정 R 클라이언트를 사용하고 실행(*원격 컴퓨팅 컨텍스트*라고도 함)을 원격 SQL Server로 푸시하는 스크립트를 작성할 수도 있습니다. 자세한 내용은 [데이터 과학 클라이언트 R 개발 설정](../r/set-up-a-data-science-client.md) 방법을 참조하세요.
+
+<a name="version"></a>
+
+## <a name="r-version"></a>R 버전
+
+R 버전 3.2.2는 SQL Server 2016 R Services에 포함되어 있습니다. 최신 버전 R의 경우 [SQL Server 2017 이상용 Machine Learning Services](../what-is-sql-server-machine-learning.md)를 사용합니다.
 
 <a name="packages"></a>
 

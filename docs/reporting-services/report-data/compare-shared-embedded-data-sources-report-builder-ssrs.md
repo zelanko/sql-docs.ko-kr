@@ -1,5 +1,5 @@
 ---
-title: 공유 및 포함된 데이터 원본 비교 - 보고서 작성기 및 Reporting Services(SSRS) | Microsoft Docs
+title: 공유 및 포함된 데이터 원본 비교 - 보고서 작성기 및 Reporting Services | Microsoft Docs
 ms.date: 11/18/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +7,12 @@ ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5ae21994a83659204f6a5053288ff632ce44be06
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 33e257659922e3e0dcf06f559838db0c58f0b18e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74196785"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081794"
 ---
 # <a name="compare-shared-and-embedded-data-sources---report-builder--reporting-services-ssrs"></a>공유 및 포함된 데이터 원본 비교 - 보고서 작성기 및 Reporting Services(SSRS)
 
