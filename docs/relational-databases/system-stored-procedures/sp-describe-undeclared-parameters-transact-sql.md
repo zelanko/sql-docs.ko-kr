@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1205572235b141709cd463476182d9b405446188
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: efa15bffc3b00dfce2c1c5d11bc3705f2b6f677e
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72908323"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180128"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)] 
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리의 선언 되지 않은 매개 변수에 대 한 메타 데이터를 포함 하는 결과 집합을 반환 합니다. Tsql 일괄 처리에 사용 되지만 ** \@params**에 선언 되지 않은 각 매개 변수를 고려 합니다. ** \@** 이러한 각 매개 변수에 대한 추론된 형식의 정보와 함께 해당 매개 변수에 대한 하나의 행이 포함된 결과 집합이 반환됩니다. Tsql 입력 일괄 처리에 ** \@params**에 선언 된 매개 변수가 없는 경우이 프로시저는 빈 결과 집합을 반환 합니다. ** \@**  
   
@@ -40,7 +40,10 @@ sp_describe_undeclared_parameters
     [ @tsql = ] 'Transact-SQL_batch'   
     [ , [ @params = ] N'parameters' data type ] [, ...n]  
 ```  
-  
+
+> [!Note] 
+> Azure Synapse Analytics (이전의 SQL DW)에서이 저장 프로시저를 사용 하려면 데이터베이스의 호환성 수준이 10 보다 커야 합니다. 
+
 ## <a name="arguments"></a>인수  
 `[ \@tsql = ] 'Transact-SQL\_batch'`하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *SQL_batch* 는 **nvarchar (**_n_**)** 또는 **nvarchar (max)** 일 수 있습니다.  
   
@@ -167,7 +170,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   단순 추론  
   
-     E\@(p) \@= p 및 TT (\@p)가 있는 경우 (예: \@p가 2 단계 시작 부분에 나열 된 식 중 하나에 대 한 인수) 이면 형식 추론 알고리즘에서 p의 \@데이터 형식을 TT (\@p)로 추론 합니다. 다음은 그 예입니다.  
+     E\@(p) \@= p 및 TT (\@p)가 있는 경우 (예: \@p가 2 단계 시작 부분에 나열 된 식 중 하나에 대 한 인수) 이면 형식 추론 알고리즘에서 p의 \@데이터 형식을 TT (\@p)로 추론 합니다. 다음은 그 예입니다.   
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
@@ -215,7 +218,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 1.  E (\@p)에서 가장 적은 수의 암시적 변환을 생성 하는 데이터 형식이 선택 됩니다. \@특정 데이터 형식이 e (p)에 대해 tt (\@p)와 다른 데이터 형식을 생성 하는 경우 형식 추론 알고리즘은이를 e (\@p)의 데이터 형식에서 tt (\@p)로 추가 암시적 변환으로 간주 합니다.  
   
-     다음은 그 예입니다.  
+     다음은 그 예입니다.   
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  

@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da115c8d4cf48cfbcd6190c88a83bee4e61ae5a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||= azure-sqldw-latest
+ms.openlocfilehash: 372d3a1b5722b1a19e9560fe92f61e45b6744ace
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73240764"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180111"
 ---
 # <a name="sysdatabase_scoped_configurations-transact-sql"></a>sys. database_scoped_configurations (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-addw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 구성 당 한 개의 행을 포함 합니다. 
 
@@ -35,9 +35,10 @@ ms.locfileid: "73240764"
 |-----------------|---------------|-----------------|
 |**configuration_id**|**int**|구성 옵션의 ID입니다.|
 |**name**|**nvarchar (60)**|구성 옵션의 이름입니다. 가능한 구성에 대 한 자세한 내용은 [ALTER DATABASE 범위 구성 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 참조 하세요.|
-|**기본값**|**sqlvariant**|주 복제본에 대 한이 구성 옵션에 설정 된 값입니다.|
+|**value**|**sqlvariant**|주 복제본에 대 한이 구성 옵션에 설정 된 값입니다.|
 |**value_for_secondary**|**sqlvariant**|보조 복제본에 대 한이 구성 옵션에 설정 된 값입니다.|
 |**is_value_default**|**bit** |설정 값이 기본값 인지 여부를 지정 합니다.|
+|**dw_compatibility_level**|**int**|데이터베이스의 호환성 수준입니다.  기본값 = 0 (자동)|
 
 ## <a name="Permissions"></a> 권한
 
