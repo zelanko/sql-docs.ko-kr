@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 91a7278230a0e7201e78354a38af58f417ac26ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2a51fcc7108c7f6af6237d77cbad73c87ed7c6e6
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68108161"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180118"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  고정 데이터베이스 역할에 대한 사용 권한을 표시합니다. **sp_dbfixedrolepermission** 는에서 올바른 정보 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]를 반환 합니다. 출력에는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 구현된 사용 권한 계층 구조의 변경 내용은 출력에 반영되지 않습니다. 자세한 내용은[사용 권한 &#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-database-engine.md)를 참조 하세요.  
+  고정 데이터베이스 역할에 대한 사용 권한을 표시합니다. **sp_dbfixedrolepermission** 는에서 올바른 정보 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]를 반환 합니다. 출력에는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 구현된 사용 권한 계층 구조의 변경 내용은 출력에 반영되지 않습니다. 자세한 내용은 고정 데이터베이스 역할의 목록과 해당 권한이 있는 [데이터베이스 수준 역할](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles)을 참조 하세요.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
