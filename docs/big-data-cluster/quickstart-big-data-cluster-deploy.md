@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b2f96f79b81b79d2abfaadc40c37b864d20a93dc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: eea087ed3a4859e179f7bb0d1e77140bb8229a17
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831398"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608388"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>python 스크립트를 사용하여 AKS(Azure Kubernetes Service)에 SQL Server 빅 데이터 클러스터 배포
 
@@ -82,7 +82,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **사용자 이름** | 컨트롤러 사용자의 사용자 이름입니다(기본값 **admin**). |
 
    > [!IMPORTANT]
-   > 일부 Azure 지역에서는 기본 머신 크기인 **Standard_L8s**를 사용하지 못할 수도 있습니다. 다른 머신 크기를 선택하는 경우 클러스터의 노드에서 연결할 수 있는 총 디스크 수가 24개 이상인지 확인합니다. 클러스터의 영구적 볼륨 클레임마다 연결된 디스크 1개가 필요합니다. 현재, 빅 데이터 클러스터에는 24개의 영구적 볼륨 클레임이 필요합니다. 예를 들어 [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series) 머신 크기는 32개의 연결된 디스크를 지원하기 때문에 이 머신 크기의 단일 노드에서 빅 데이터 클러스터를 평가할 수 있습니다.
+   > 일부 Azure 지역에서는 기본 머신 크기인 **Standard_L8s**를 사용하지 못할 수도 있습니다. 다른 머신 크기를 선택하는 경우 클러스터의 노드에서 연결할 수 있는 총 디스크 수가 24개 이상인지 확인합니다. 클러스터의 영구적 볼륨 클레임마다 연결된 디스크 1개가 필요합니다. 현재, 빅 데이터 클러스터에는 24개의 영구적 볼륨 클레임이 필요합니다. 예를 들어 [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/lsv2-series) 머신 크기는 32개의 연결된 디스크를 지원하기 때문에 이 머신 크기의 단일 노드에서 빅 데이터 클러스터를 평가할 수 있습니다.
 
    > [!NOTE]
    > 빅 데이터 클러스터 배포 중에는 SQL Server `sa` 계정을 사용할 수 없습니다. 새 sysadmin 로그인은 **사용자 이름** 입력에 지정된 것과 동일한 이름과 **암호** 입력에 해당하는 암호로 SQL Server 마스터 인스턴스에 프로비저닝됩니다. 컨트롤러 관리 사용자를 프로비저닝하는 데 동일한 **사용자 이름** 및 **암호** 값이 사용됩니다. 게이트웨이(Knox)에 대해 지원되는 사용자만 **루트**이며 암호는 위와 동일합니다.

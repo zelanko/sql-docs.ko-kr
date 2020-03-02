@@ -31,10 +31,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
 ms.openlocfilehash: 6fea23921dd3b01032de8c8960970526502eee17
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 02/27/2020
 ms.locfileid: "76831892"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL)
@@ -1029,25 +1029,25 @@ NO_WAIT 요청된 데이터베이스 상태 또는 옵션 변경을 즉시 완�
 
 |옵션 범주|다른 옵션과 함께 지정할 수 있음|WITH \<termination> 절을 사용할 수 있음|
 |----------------------|-----------------------------------------|---------------------------------------------|
-|\<db_state_option>|yes|yes|
-|\<db_user_access_option>|yes|yes|
-|\<db_update_option>|yes|yes|
-|\<delayed_durability_option>|yes|yes|
-|\<external_access_option>|yes|예|
-|\<cursor_option>|yes|예|
-|\<auto_option>|yes|예|
-|\<sql_option>|yes|예|
-|\<recovery_option>|yes|예|
-|\<target_recovery_time_option>|예|yes|
+|\<db_state_option>|예|예|
+|\<db_user_access_option>|예|예|
+|\<db_update_option>|예|예|
+|\<delayed_durability_option>|예|예|
+|\<external_access_option>|예|예|
+|\<cursor_option>|예|예|
+|\<auto_option>|예|예|
+|\<sql_option>|예|예|
+|\<recovery_option>|예|예|
+|\<target_recovery_time_option>|예|예|
 |\<database_mirroring_option>|예|예|
 |ALLOW_SNAPSHOT_ISOLATION|예|예|
-|READ_COMMITTED_SNAPSHOT|예|yes|
-|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|yes|yes|
-|\<service_broker_option>|yes|예|
-|DATE_CORRELATION_OPTIMIZATION|yes|yes|
-|\<parameterization_option>|yes|yes|
-|\<change_tracking_option>|yes|yes|
-|\<db_encryption_option>|yes|예|
+|READ_COMMITTED_SNAPSHOT|예|예|
+|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|예|예|
+|\<service_broker_option>|예|예|
+|DATE_CORRELATION_OPTIMIZATION|예|예|
+|\<parameterization_option>|예|예|
+|\<change_tracking_option>|예|예|
+|\<db_encryption_option>|예|예|
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스에 대한 계획 캐시는 다음 옵션 중 하나를 설정하여 삭제됩니다.
 
@@ -1815,20 +1815,20 @@ NO_WAIT 요청된 데이터베이스 상태 또는 옵션 변경을 즉시 완�
 
 |옵션 범주|다른 옵션과 함께 지정할 수 있음|WITH \<termination> 절을 사용할 수 있음|
 |----------------------|-----------------------------------------|---------------------------------------------|
-|\<auto_option>|yes|예|
-|\<change_tracking_option>|yes|yes|
-|\<cursor_option>|yes|예|
-|\<db_encryption_option>|yes|예|
-|\<db_update_option>|yes|yes|
-|\<db_user_access_option>|yes|yes|
-|\<delayed_durability_option>|yes|yes|
-|\<parameterization_option>|yes|yes|
+|\<auto_option>|예|예|
+|\<change_tracking_option>|예|예|
+|\<cursor_option>|예|예|
+|\<db_encryption_option>|예|예|
+|\<db_update_option>|예|예|
+|\<db_user_access_option>|예|예|
+|\<delayed_durability_option>|예|예|
+|\<parameterization_option>|예|예|
 |ALLOW_SNAPSHOT_ISOLATION|예|예|
-|READ_COMMITTED_SNAPSHOT|예|yes|
-|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|yes|yes|
-|DATE_CORRELATION_OPTIMIZATION|yes|yes|
-|\<sql_option>|yes|예|
-|\<target_recovery_time_option>|예|yes|
+|READ_COMMITTED_SNAPSHOT|예|예|
+|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|예|예|
+|DATE_CORRELATION_OPTIMIZATION|예|예|
+|\<sql_option>|예|예|
+|\<target_recovery_time_option>|예|예|
 
 ## <a name="examples"></a>예
 

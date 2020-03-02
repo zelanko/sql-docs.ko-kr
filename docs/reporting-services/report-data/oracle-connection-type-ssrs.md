@@ -1,6 +1,6 @@
 ---
 title: Oracle 연결 형식(보고서 작성기 및 Power BI Report Server) | Microsoft Docs
-ms.date: 01/16/2020
+ms.date: 02/26/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2e9ee78c6a033443b960ba972b74be2a1e6aebd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 216ab9a4d5dcfe18fe6346eadeec8778415cdeb4
+ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77081740"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634842"
 ---
 # <a name="oracle-connection-type-report-builder--power-bi-report-server--microsoft-docs"></a>Oracle 연결 형식((보고서 작성기 및 Power BI Report Server) | Microsoft Docs)
 
@@ -93,7 +93,7 @@ Data Source="Oracle"; Unicode="True"
   
  자세한 내용은 다음 문서를 참조하세요.  
   
--   [Reporting Services를 사용한 Oracle 데이터 원본 구성 및 액세스 방법](https://support.microsoft.com/kb/834305)  
+-   [Reporting Services를 사용한 Oracle 데이터 원본 구성 및 액세스 방법](https://docs.microsoft.com/archive/blogs/dataaccesstechnologies/configure-oracle-data-source-for-sql-server-reporting-services-ssdt-and-report-server)  
 -   [NETWORK SERVICE 보안 주체에 대한 사용 권한을 추가하는 방법](https://support.microsoft.com/kb/870668)  
   
 ### <a name="alternate-data-extensions"></a>대체 데이터 확장 프로그램 

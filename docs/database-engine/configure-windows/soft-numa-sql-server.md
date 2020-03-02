@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68232821ac186aa63d113319373b8326dae987a4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ee31095ad1650ce17af6ddaa19237cd3ae73486d
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74165183"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903890"
 ---
 # <a name="soft-numa-sql-server"></a>soft-NUMA(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ soft-NUMA를 사용하도록 수동으로 [!INCLUDE[ssNoVersion](../../includes/
   
  이제 I/O가 많은 인스턴스 A에는 I/O 스레드 두 개와 지연 기록기 스레드 하나가 있습니다. 프로세서를 많이 사용하는 작업을 수행하는 인스턴스 B에는 I/O 스레드와 지연 기록기 스레드가 각각 하나뿐입니다. 두 인스턴스에 서로 다른 양의 메모리를 할당할 수 있지만 하드웨어 NUMA와 달리 두 인스턴스는 모두 동일한 운영 체제 메모리 블록에서 메모리를 받으며 메모리에서 프로세서로의 선호도가 없습니다.  
   
- 지연 기록기 스레드는 물리적 NUMA 메모리 노드의 SQLOS 보기와 연결되어 있습니다. 따라서, 물리적 NUMA 노드 수로 표시되는 하드웨어는 생성되는 지연 기록기 스레드의 수와 같습니다. 자세한 내용은 [작동 방법: 소프트 NUMA, I/O 완료 스레드, 지연 기록기 노동자와 메모리 노드](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx)를 참조하세요.  
+ 지연 기록기 스레드는 물리적 NUMA 메모리 노드의 SQLOS 보기와 연결되어 있습니다. 따라서, 물리적 NUMA 노드 수로 표시되는 하드웨어는 생성되는 지연 기록기 스레드의 수와 같습니다. 자세한 내용은 [작동 방법: 소프트 NUMA, I/O 완료 스레드, 지연 기록기 노동자와 메모리 노드](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers/ba-p/316044)를 참조하세요.  
   
 > [!NOTE]
 > **Soft-NUMA** 레지스트리 키는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 업그레이드할 때 복사되지 않습니다.  

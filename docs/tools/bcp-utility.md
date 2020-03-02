@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/23/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8aefcae2c8e9c449061b18b4287968120dbae852
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.openlocfilehash: 22a1a64e11d7cae779531c46ee6b39d26ae403f4
+ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544912"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634852"
 ---
 # <a name="bcp-utility"></a>bcp 유틸리티
 
@@ -228,13 +228,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
     다음 예제에서는 Azure AD 사용자 이름과 암호가 AAD 자격 증명일 경우 이 사용자와 암호를 사용하여 데이터를 내보냅니다. 이 예제에서는 Azure 서버 `aadserver.database.windows.net`에서 데이터베이스 `testdb`의 테이블 `bcptest`를 내보내고 데이터를 파일 `c:\last\data1.dat`에 저장합니다.
 
-    ```cmd
+    ```console
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
     다음 예제에서는 Azure AD 사용자 이름과 암호가 AAD 자격 증명일 경우 이 사용자와 암호를 사용하여 데이터를 가져옵니다. 예제에서는 Azure AD 사용자/암호를 사용하여 Azure 서버 `aadserver.database.windows.net`의 데이터베이스 `testdb`에 대해 파일 `c:\last\data1.dat`의 데이터를 테이블 `bcptest`로 가져옵니다.
 
-    ```cmd
+    ```console
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
@@ -244,13 +244,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
     다음 예제에서는 Azure AD 통합 계정을 사용하여 데이터를 내보냅니다. 이 예제에서는 Azure 서버 `aadserver.database.windows.net`에서 Azure AD 통합을 사용하는 데이터베이스 `testdb`의 테이블 `bcptest`를 내보내고 데이터를 파일 `c:\last\data2.dat`에 저장합니다.
 
-    ```cmd
+    ```console
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
     다음 예제에서는 Azure AD 통합 인증을 사용하여 데이터를 가져옵니다. 예제에서는 Azure AD 통합 인증을 사용하여 Azure 서버 `aadserver.database.windows.net`의 데이터베이스 `testdb`에 대해 파일 `c:\last\data2.txt`의 데이터를 테이블 `bcptest`로 가져옵니다.
 
-    ```cmd
+    ```console
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
@@ -266,13 +266,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
    대화형 모드에서는 암호를 수동으로 입력해야 하며, 다단계 인증이 사용 설정된 계정의 경우에는 구성된 MFA 인증 메서드를 완료해야 합니다.
 
-   ```cmd
+   ```console
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com
    ```
 
    Azure AD 사용자가 Windows 계정을 사용하여 페더레이션되는 도메인인 경우에는 명령줄에 필요한 사용자 이름에 도메인 계정이 포함됩니다(예: joe@contoso.com 아래 참조).
 
-   ```cmd
+   ```console
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com
    ```
 
@@ -448,7 +448,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     
     모든 버전의 bcp 유틸리티가 설치된 위치를 확인하려면 명령 프롬프트에 다음을 입력합니다.
     
-    ```cmd
+    ```console
     where bcp.exe
     ```
 
@@ -604,7 +604,7 @@ END
 
 명령 프롬프트에서 다음 명령을 입력합니다.
 
-```cmd
+```console
 bcp -v
 ```
   
@@ -616,7 +616,7 @@ bcp -v
 
   명령 프롬프트에서 다음 명령을 입력합니다.
 
-  ```cmd
+  ```console
   bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -638,7 +638,7 @@ bcp -v
 
 명령 프롬프트에서 다음 명령을 입력합니다. \(시스템에서 암호를 묻는 메시지를 표시합니다.\)
 
-```cmd
+```console
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```
 
@@ -650,7 +650,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTrans
 
   명령 프롬프트에서 다음 명령을 입력합니다.
 
-  ```cmd
+  ```console
   bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -658,7 +658,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTrans
   
 명령 프롬프트에서 다음 명령을 입력합니다.
 
-```cmd
+```console
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T
 ```
 
@@ -670,7 +670,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTr
   
 명령 프롬프트에서 다음 명령을 입력합니다.
 
-```cmd
+```console
 bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
 ```
 
@@ -680,7 +680,7 @@ bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTr
   
 명령 프롬프트에서 다음 명령을 입력합니다.
 
-```cmd
+```console
 bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
 ```
 
@@ -690,7 +690,7 @@ Transact-SQL 문의 결과 집합을 데이터 파일로 복사하려면 **query
 
 명령 프롬프트에서 다음 명령을 입력합니다.
 
-```cmd
+```console
 bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
 ```
 
@@ -700,7 +700,7 @@ bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People O
 
 명령 프롬프트에서 다음 명령을 입력합니다.
 
-```cmd
+```console
 REM non-XML character format
 bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
@@ -722,7 +722,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\Stoc
 
 명령 프롬프트에서 다음 명령을 입력합니다.
 
-```cmd
+```console
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T
 ```
 

@@ -14,15 +14,15 @@ dev_langs:
 author: joesackmsft
 ms.author: josack
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f5a9846ddc19320b3299893929c7ebf11ca0269
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 56485f088d375ceffaadb923999f27f794acb5c5
+ms.sourcegitcommit: d876425e5c465ee659dd54e7359cda0d993cbe86
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73962338"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77568116"
 ---
 # <a name="approx_count_distinct-transact-sql"></a>APPROX_COUNT_DISTINCT(Transact-SQL)
-[!INCLUDE[appliesto-xx-asdb-asdw-pdw-md](../../includes/appliesto-xx-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 이 함수는 그룹에 있는 고유한 null이 아닌 값의 대략적인 개수를 반환합니다. 
   
@@ -38,7 +38,7 @@ APPROX_COUNT_DISTINCT ( expression )
   
 ## <a name="arguments"></a>인수  
 *expression*  
-[image](../../t-sql/language-elements/expressions-transact-sql.md), **sql_variant**, **ntext** 또는 **text**를 제외한 모든 형식의 **식**입니다. 
+**image**, **sql_variant**, **ntext** 또는 **text**를 제외한 모든 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 
 
 ## <a name="return-types"></a>반환 형식
  **bigint**  
