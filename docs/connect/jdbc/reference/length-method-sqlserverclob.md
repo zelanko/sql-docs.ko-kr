@@ -41,7 +41,7 @@ public long length()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>설명  
- This length method is specified by the length method in the java.sql.Clob interface.  
+ 이 length 메서드는 java.sql.Clob 인터페이스의 length 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerClob 메서드](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
