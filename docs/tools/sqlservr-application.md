@@ -55,7 +55,7 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 > [!NOTE]
 >이 옵션을 사용하는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스 관리자 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] net stop **명령을 사용하여** 를 중지할 수 없으며 컴퓨터에서 로그오프하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가 중지됩니다.
 
-**-d** *master_path***master** 데이터베이스 파일의 정규화된 경로를 나타냅니다. **-d** 와 *master_path*사이에 공백이 없어야 합니다. 이 옵션이 제공되지 않으면 기존의 레지스트리 매개 변수를 사용합니다.
+**-d** *master_path* **master** 데이터베이스 파일의 정규화된 경로를 나타냅니다. **-d** 와 *master_path*사이에 공백이 없어야 합니다. 이 옵션이 제공되지 않으면 기존의 레지스트리 매개 변수를 사용합니다.
 
 **-f**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 최소 구성으로 시작합니다. 예를 들어 오버 커밋 메모리 같은 구성 값의 설정 때문에 서버를 시작할 수 없을 경우에 유용합니다.
 
