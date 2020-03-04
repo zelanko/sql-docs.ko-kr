@@ -3,18 +3,18 @@ title: 확장 이벤트를 사용하여 스크립트 모니터링
 description: 확장 이벤트를 사용하여 SQL Server Machine Learning Services, SQL Server 실행 패드, Python 또는 R 작업 외부 스크립트와 관련된 작업을 모니터링하고 문제를 해결하는 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2019
+ms.date: 02/28/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 272e92bed10261b5701e2dcb4d35092ad11d59c3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: fe8601801a92b28022a83b54ea06ec5836c6c013
+ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73727741"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78200984"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 확장 이벤트를 사용하여 Python 및 R 스크립트 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,13 +87,13 @@ SQL Server Machine Learning Services는 SQL Server 프로세스 외부에서 실
   
 + **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**   
   
-    실행 패드 관련 이벤트를 캡처하려면, SQL Server 인스턴스의 Binn 디렉터리에 *.config* 파일을 배치합니다. 기본 설치의 경우 다음과 같습니다.
+    실행 패드 관련 이벤트를 캡처하려면 SQL Server 인스턴스의 Binn 디렉터리에 *.xml* 파일을 배치합니다. 기본 설치의 경우 다음과 같습니다.
 
     `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`입니다.  
   
 + **BXLServer**는 R 또는 Python과 같은 외부 스크립트 언어를 사용하여 SQL 확장성을 지원하는 위성 프로세스입니다. 각 외부 언어 인스턴스에 대해 별도의 BxlServer 인스턴스가 실행됩니다.
   
-    BXLServer와 관련된 이벤트를 캡처하려면 *.config* 파일을 R 또는 Python 설치 디렉터리에 배치합니다. 기본 설치의 경우 다음과 같습니다.
+    BXLServer 관련 이벤트를 캡처하려면 R 또는 Python 설치 디렉터리에 *.xml* 파일을 배치합니다. 기본 설치의 경우 다음과 같습니다.
      
     **R:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`.  
 
@@ -145,7 +145,7 @@ SQL Server Machine Learning Services는 SQL Server 프로세스 외부에서 실
 </event_sessions>  
 ```
 
-+ SQL Server 인스턴스의 Binn 디렉터리에 *.config* 파일을 배치합니다.
++ SQL Server 인스턴스의 Binn 디렉터리에 *.xml* 파일을 배치합니다.
 + 이 파일의 이름은 `Launchpad.xevents.xml`이어야 합니다.
 
 ### <a name="example-capturing-bxlserver-events"></a>예제: BXLServer 이벤트 캡처  
@@ -175,7 +175,7 @@ SQL Server Machine Learning Services는 SQL Server 프로세스 외부에서 실
 </event_sessions>  
 ```
 
-+ BXLServer 실행 파일과 같은 디렉터리에 *.config* 파일을 배치합니다.
++ BXLServer 실행 파일과 동일한 디렉터리에 *.xml* 파일을 배치합니다.
 + 이 파일의 이름은 `bxlserver.xevents.xml`이어야 합니다.
 
 ## <a name="next-steps"></a>다음 단계

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 570ac300f8f522d0ea4acfb711d78bd7cfaf7ef2
-ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
+ms.openlocfilehash: f5aa9a2373d622e74b2964c7a6dc967a82ab4e36
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77146293"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78177383"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>Always On 가용성 그룹의 보조 복제본에서 백업 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,6 +34,9 @@ ms.locfileid: "77146293"
   
 ##  <a name="Prerequisites"></a> 필수 조건  
  주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
+ 
+   > [!NOTE]
+   > 보조 복제본에 백업을 오프로드하기 위해 보조 복제본을 읽을 필요는 없습니다. `Readable Secondary`가 `no`로 설정된 경우에도 보조 복제본에서 백업이 성공적으로 수행됩니다. 
   
   
 ##  <a name="Permissions"></a> 권한  

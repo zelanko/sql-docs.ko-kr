@@ -1,5 +1,5 @@
 ---
-title: SSIS(SQL Server Integration Services) Scale Out 마스터 | Microsoft Docs
+title: Scale Out 마스터 | Microsoft Docs
 description: 이 문서에서는 SSIS Scale Out의 Scale Out 마스터 구성 요소 설명
 ms.custom: performance
 ms.date: 01/19/2019
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: e3e52a854224210ed4561dbce12877fbb4c0f6fb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e2ec01c0dcb22317e2e20e4485621d2a9aa8352a
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68082121"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903810"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Integration Services(SSIS) 규모 확장 마스터
 
@@ -31,7 +31,7 @@ Scale Out 마스터 서비스는 Scale Out 작업자와의 통신을 담당하�
 
 ## <a name="scale-out-views-and-stored-procedures-in-ssisdb"></a>SSISDB의 Scale Out 보기 및 저장 프로시저
 
-### <a name="views"></a>뷰
+### <a name="views"></a>보기
 
 - [[catalog].[master_properties]](../../integration-services/system-views/catalog-master-properties-ssisdb-database.md)
 - [[catalog].[worker_agents]](../../integration-services/system-views/catalog-worker-agents-ssisdb-database.md)

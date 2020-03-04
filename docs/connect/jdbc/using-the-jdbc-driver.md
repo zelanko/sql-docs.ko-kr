@@ -1,7 +1,7 @@
 ---
 title: JDBC 드라이버 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 02/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 34478dfb61f59835ab6373849876cec26dc35984
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: 965c8aa6e47c230d2d876f81300f2bb890e2c16e
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004662"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903560"
 ---
 # <a name="using-the-jdbc-driver"></a>JDBC 드라이버 사용
 
@@ -27,7 +27,7 @@ ms.locfileid: "77004662"
 
 Microsoft JDBC Driver에서는 기본 JRE(Java Runtime Environment) 설정에 따라 아래와 같이 다른 Jar를 사용할 수 있습니다.
 
-SQL Server용 Microsoft JDBC Driver 8.2에서는 **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** 및 **mssql-jdbc-8.2.0.jre13.jar** 클래스 라이브러리 파일을 제공합니다.
+Microsoft JDBC Driver 8.2 for SQL Server에서는 **mssql-jdbc-8.2.1.jre8.jar**, **mssql-jdbc-8.2.1.jre11.jar** 및 **mssql-jdbc-8.2.1.jre13.jar** 클래스 라이브러리 파일을 제공합니다.
 
 SQL Server용 Microsoft JDBC Driver 7.4에서는 **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** 및 **mssql-jdbc-7.4.1.jre12.jar** 클래스 라이브러리 파일을 제공합니다.
 
@@ -61,31 +61,31 @@ JDBC Driver 7.2를 사용하는 경우**mssql-jdbc-7.2.2.jre8.jar** 또는 **mss
 
 JDBC Driver 7.4를 사용하는 경우 **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** 또는 **mssql-jdbc-7.4.1.jre12.jar**를 포함하도록 클래스 경로를 설정합니다.
 
-JDBC Driver 8.2를 사용하는 경우 **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** 또는 **mssql-jdbc-8.2.0.jre13.jar**을 포함하도록 클래스 경로를 설정합니다.
+JDBC Driver 8.2를 사용하는 경우 **mssql-jdbc-8.2.1.jre8.jar**, **mssql-jdbc-8.2.1.jre11.jar** 또는 **mssql-jdbc-8.2.1.jre13.jar**을 포함하도록 클래스 경로를 설정합니다.
 
 클래스 패스에 적절한 Jar 파일 항목이 없는 경우, 애플리케이션은 공통의 `Class not found`예외를 throw합니다.  
 
 ### <a name="for-microsoft-jdbc-driver-82"></a>Microsoft JDBC Driver 8.2의 경우
 
-**mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** 또는 **mssql-jdbc-8.2.0.jre13.jar** 파일이 다음 위치에 설치됩니다.
+**mssql-jdbc-8.2.1.jre8.jar**, **mssql-jdbc-8.2.1.jre11.jar** 또는 **mssql-jdbc-8.2.1.jre13.jar** 파일이 다음 위치에 설치됩니다.
 
 ```bash
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.0.jre8.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.1.jre8.jar
 
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.0.jre11.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.1.jre11.jar
 
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.0.jre13.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.1.jre13.jar
 ```
 
 다음 코드 조각은 Windows 애플리케이션에 사용되는 CLASSPATH 문의 예제입니다.
 
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 8.2 for SQL Server\sqljdbc_8.2\enu\mssql-jdbc-8.2.0.jre11.jar`
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 8.2 for SQL Server\sqljdbc_8.2\enu\mssql-jdbc-8.2.1.jre11.jar`
 
 다음 코드 조각은 Unix/Linux 애플리케이션에 사용되는 CLASSPATH 문의 예제입니다.
 
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_8.2/enu/mssql-jdbc-8.2.0.jre11.jar`
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_8.2/enu/mssql-jdbc-8.2.1.jre11.jar`
 
-CLASSPATH 문에는 **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** 또는 **mssql-jdbc-8.2.0.jre13.jar**과 같은 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]가 하나만 포함되어 있어야 합니다.
+CLASSPATH 문에는 **mssql-jdbc-8.2.1.jre8.jar**, **mssql-jdbc-8.2.1.jre11.jar** 또는 **mssql-jdbc-8.2.1.jre13.jar**과 같은 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]가 하나만 포함되어 있어야 합니다.
 
 ### <a name="for-microsoft-jdbc-driver-74"></a>Microsoft JDBC Driver 7.4의 경우
 

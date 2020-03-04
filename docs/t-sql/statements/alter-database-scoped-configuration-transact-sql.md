@@ -23,18 +23,21 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8dce4ae0ec739bad6df3ac064ca96d04e91dcf7
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
+ms.openlocfilehash: 1637b46d896e0114d5b66004bc1c160e23521e30
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558356"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180078"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-이 명령문은 **개별 데이터베이스** 수준에서 다양한 데이터베이스 구성 설정을 활성화합니다. 이 명령문은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 있습니다. 해당 설정은 다음과 같습니다.
+이 명령은 **개별 데이터베이스** 수준에서 여러 데이터베이스 구성 설정을 사용하도록 설정합니다. 
+
+다음 설정은 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터)에서 지원됩니다. 
 
 - 프로시저 캐시를 지웁니다.
 - 주 데이터베이스의 경우 MAXDOP 매개 변수를 해당 데이터베이스에 가장 적합한 임의 값(1,2, ...)으로 설정하고 사용되는 보조 데이터베이스(예: 보고 쿼리용)에는 다른 값(예: 0)을 설정합니다.
@@ -54,11 +57,16 @@ ms.locfileid: "77558356"
 - [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)에서 마지막 실제 실행 계획의 수집을 활성화하거나 비활성화합니다.
 - 일시 중지된 다시 시작 가능 인덱스 작업이 SQL Server 엔진에서 자동으로 중단되기 전에 일시 중지되는 시간(분)을 지정합니다.
 
+이 설정은 Azure Synapse Analytics(이전의 SQL DW)에서만 사용할 수 있습니다.
+- 사용자 데이터베이스의 호환성 수준 설정
+
 ![링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>구문
 
 ```
+-- Syntax for SQL Server and Azure SQL Database
+
 ALTER DATABASE SCOPED CONFIGURATION
 {
     { [ FOR SECONDARY] SET <set_options>}
@@ -101,6 +109,21 @@ ALTER DATABASE SCOPED CONFIGURATION
 > -  `DISABLE_INTERLEAVED_EXECUTION_TVF`가 `INTERLEAVED_EXECUTION_TVF`로 변경됨
 > -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK`가 `BATCH_MODE_MEMORY_GRANT_FEEDBACK`로 변경됨
 > -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS`가 `BATCH_MODE_ADAPTIVE_JOINS`로 변경됨
+
+```
+-- Synatx for Azure Synapse Analytics (Formerly SQL DW)
+
+ALTER DATABASE SCOPED CONFIGURATION
+{
+    SET <set_options>
+}
+[;]
+
+< set_options > ::=
+{
+    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 }
+}
+```
 
 ## <a name="arguments"></a>인수
 
@@ -374,6 +397,18 @@ ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 
 RLS([행 수준 보안](../../relational-databases/security/row-level-security.md)) 조건자가 전체 사용자 쿼리 실행 계획의 카디널리티에 영향을 주는지 아닌지를 제어할 수 있습니다. ISOLATE_SECURITY_POLICY_CARDINALITY가 ON이면 RLS 조건자는 실행 계획의 카디널리티에 영향을 주지 않습니다. 예를 들어 쿼리를 실행하는 특정 사용자에 대해 결과를 10개 행으로 제한하는 RLS 조건자와 100만 개의 행이 포함된 테이블이 있다고 가정합니다. 이 데이터베이스 범위 구성을 OFF로 설정할 경우 이 조건자의 예상 카디널리티는 10이 됩니다. 이 데이터베이스 범위 구성이 ON이면 쿼리 최적화는 100만 개의 행을 추정합니다. 대부분의 워크로드에는 기본값을 사용하는 것이 좋습니다.
 
+DW_COMPATIBILITY_LEVEL **=** {**AUTO** | 10 | 20 }
+
+**적용 대상**: Azure Synapse Analytics만(이전의 SQL DW)
+
+지정된 버전의 데이터베이스 엔진과 호환되도록 Transact-SQL 및 쿼리 처리 동작을 설정합니다.  설정하고 나면, 해당 데이터베이스에서 쿼리를 실행할 때 호환되는 기능만 실행됩니다.  처음 만들 때는 데이터베이스의 호환성 수준이 기본적으로 AUTO로 설정됩니다.  호환성 수준은 데이터베이스 일시 중지/다시 시작, 백업/복원 작업 후에도 유지됩니다. 
+
+|호환성 수준    |   주석|  
+|-----------------------|--------------|
+|**AUTO**| 기본값  해당 값은 지원되는 최신 호환성 수준과 같습니다.|
+|**10**| 호환성 수준 지원이 도입되기 전의 Transact-SQL 및 쿼리 처리 동작을 실행합니다.|
+|**20**| 제어된 Transact-SQL 및 쿼리 처리 동작을 포함하는 첫 번째 호환성 수준입니다. |
+
 ## <a name="Permissions"></a> 권한
 
 데이터베이스에 `ALTER ANY DATABASE SCOPE CONFIGURATION`이 필요합니다. 이 사용 권한은 데이터베이스에서 CONTROL 권한이 있는 사용자에 의해 부여될 수 있습니다.
@@ -532,7 +567,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
-### <a name="i-set-elevate_online"></a>9. ELEVATE_ONLINE 설정
+### <a name="i-set-elevate_online"></a>9\. ELEVATE_ONLINE 설정
 
 **적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 퍼블릭 미리 보기 상태임)
 

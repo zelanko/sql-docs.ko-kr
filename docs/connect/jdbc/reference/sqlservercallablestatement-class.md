@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 30710a63-c05d-47d9-9cf9-c087a1c76373
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 637b56c7f64d35501be0efef30e8f2a055b5be4b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f47c034a720be5409d83868a7a61dd229ab70e24
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67971907"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600131"
 ---
 # <a name="sqlservercallablestatement-class"></a>SQLServerCallableStatement 클래스
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  입력 및 출력 매개 변수와 함께 호출할 저장 프로시저 이름을 지정할 수 있도록 합니다. 이 클래스는 ? = call( ?, ..) 구문을 사용하여 반환 상태 값을 검색하는 기능도 제공합니다.  
+  입력 및 출력 매개 변수와 함께 호출할 저장 프로시저 이름을 지정할 수 있도록 합니다. 이 클래스는 `? = call( ?, ..)` 구문으로 반환 상태 값을 검색하는 기능도 제공합니다.  
   
  **패키지:** com.microsoft.sqlserver.jdbc  
   

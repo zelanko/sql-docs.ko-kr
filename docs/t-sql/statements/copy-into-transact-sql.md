@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 4e42c60e945512c09b88b19b18b6f24ce45b46dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 2c6647dfab3a095228023fd56af2c766a8b40fee
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76536649"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903820"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY(Transact-SQL)(미리 보기)
 
@@ -205,7 +205,7 @@ COPY 명령은 이 매개 변수가 지정되지 않은 경우 파일 확장명�
 
 - .gz  - **GZIP**
 - .snappy – **Snappy**
-- .deflate - **DefaultCodec**
+- .deflate - **DefaultCodec**(Parquet 및 ORC만 해당)
 
  *FIELDQUOTE = 'field_quote'*</br>
 *FIELDQUOTE*는 CSV에 적용되며 CSV 파일에서 따옴표 문자(문자열 구분 기호)로 사용될 단일 문자를 지정합니다. 지정하지 않으면 RFC 4180 표준에 정의한 대로 따옴표 문자(")가 따옴표 문자로 사용됩니다. 확장 ASCII 문자는 FIELDQUOTE의 UTF-8에서 지원되지 않습니다.

@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 99e38f169b250a2a1ab6a81d8983a428f2334606
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+ms.openlocfilehash: 058becae07f15857f0509cbbc90261b960bc4713
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558329"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705918"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 추적 플래그(Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
 
-추적 플래그는 특정 서버 특성을 설정하거나 특정 동작을 변경하는 데 사용됩니다. 예를 들어 추적 플래그 3226은 오류 로그에서 성공적인 백업 메시지를 표시하지 못하게 하는 일반적으로 사용되는 시작 추적 플래그입니다. 추적 플래그는 성능 문제를 진단하거나 저장 프로시저 또는 복잡한 컴퓨터 시스템을 디버그하는 데 자주 사용되지만, 특정 작업에 부정적인 영향을 주는 동작을 해결하기 위해 Microsoft 지원에서 권장할 수도 있습니다.  모든 문서화된 추적 플래그와 Microsoft 추적 플래그를 지시에 따라 사용하는 경우 프로덕션 환경에서 완전히 지원됩니다.  이 목록의 추적 플래그는 특정 용도와 관련하여 추가 고려 사항이 있을 수 있으므로, 본 문서 및/또는 지원 엔지니어가 제공하는 모든 권장 사항을 주의 깊게 검토하는 것이 좋습니다. 또한 SQL Server의 구성 변경과 마찬가지로 배포하기 전에 비프로덕션 환경에서 플래그를 철저히 테스트하는 것이 가장 좋습니다.
+추적 플래그는 특정 서버 특성을 설정하거나 특정 동작을 변경하는 데 사용됩니다. 예를 들어 추적 플래그 3226은 오류 로그에서 성공적인 백업 메시지를 표시하지 못하게 하는 일반적으로 사용되는 시작 추적 플래그입니다. 추적 플래그는 성능 문제를 진단하거나 저장 프로시저 또는 복잡한 컴퓨터 시스템을 디버그하는 데 자주 사용되지만, 특정 작업에 부정적인 영향을 주는 동작을 해결하기 위해 Microsoft 지원에서 권장할 수도 있습니다. 모든 문서화된 추적 플래그와 Microsoft 추적 플래그를 지시에 따라 사용하는 경우 프로덕션 환경에서 완전히 지원됩니다. 이 목록의 추적 플래그는 특정 용도와 관련하여 추가 고려 사항이 있을 수 있으므로, 본 문서 및/또는 지원 엔지니어가 제공하는 모든 권장 사항을 주의 깊게 검토하는 것이 좋습니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 구성 변경과 마찬가지로, 배포하기 전에 비프로덕션 환경에서 플래그를 철저히 테스트하는 것이 가장 좋습니다.
 
 ## <a name="remarks"></a>설명  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 추적 플래그가 작동할 수 있는 세 가지 범위, 즉 쿼리, 세션 및 전역이 있습니다. 쿼리 추적 플래그는 특정 쿼리의 컨텍스트에 대해 활성화됩니다. 세션 추적 플래그는 특정 연결에 대해 설정되며 해당 연결에서만 볼 수 있습니다. 전역 추적 플래그는 서버 수준에서 설정되며 서버의 모든 연결에서 볼 수 있습니다. 전역으로만 설정할 수 있는 플래그도 있고 전역 또는 세션 범위에서 설정할 수 있는 플래그도 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "77558329"
 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 있는 추적 플래그와 그에 대한 설명을 보여 줍니다. 
 
 > [!NOTE]
-> Azure SQL Database Managed Instance는 전역 추적 플래그 460, 2301, 2389, 2390, 2453, 2467, 7471, 8207, 9389, 1 0316 및 11024를 지원합니다. 세션 추적-플래그는 Managed Instance에서 아직 지원되지 않습니다.
+> Azure SQL Database Managed Instance는 전역 추적 플래그 460, 2301, 2389, 2390, 2453, 2467, 7471, 8207, 9389, 10316 및 11024를 지원합니다. 세션 추적-플래그는 Managed Instance에서 아직 지원되지 않습니다.
  
 > [!NOTE]
 > 일부 추적 플래그는 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 도입되었습니다. 해당 버전에 대한 자세한 내용은 특정 추적 플래그와 관련된 Microsoft 지원 문서를 참조하세요.
@@ -64,8 +64,8 @@ ms.locfileid: "77558329"
   
 |추적 플래그|Description|  
 |---|---|
-|**101**|병합 복제 에이전트 로깅의 정보를 늘립니다.<br /><br />**경고:** 추적 플래그 101은 프로덕션 환경에서 계속 사용하도록 설정되는 것이 아니며 시간이 제한된 문제 해결 목적으로만 사용됩니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/2892633)를 참조하세요.<br /><br />**범위**: 전역만|
-|**102**|병합 복제 에이전트 로깅의 정보를 늘리고 \<배포 서버>*..msmerge_history* 테이블로 전달합니다.<br /><br />**경고:** 추적 플래그 102는 프로덕션 환경에서 계속 사용하도록 설정되는 것이 아니며 시간이 제한된 문제 해결 목적으로만 사용됩니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/2892633)를 참조하세요.<br /><br />**범위**: 전역만|
+|**101**|병합 복제 에이전트 로깅의 정보를 늘립니다.<br /><br />**중요:** 명령 프롬프트에서 **replmerg.exe**를 실행하는 경우, **-T** 옵션을 사용하여 [복제 병합 에이전트](../../relational-databases/replication/agents/replication-merge-agent.md)에 대해서만 추적 플래그 101을 사용하도록 설정할 수 있습니다.<br /><br />**경고:** 추적 플래그 101은 프로덕션 환경에서 계속 사용하도록 설정되는 것이 아니며 시간이 제한된 문제 해결 목적으로만 사용됩니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/2892633)를 참조하세요.<br /><br />**범위**: 복제 병합 에이전트만|
+|**102**|병합 복제 에이전트 로깅의 정보를 늘리고 \<배포 서버> *..msmerge_history* 테이블로 전달합니다.<br /><br />**중요:** 명령 프롬프트에서 **replmerg.exe**를 실행하는 경우, **-T** 옵션을 사용하여 [복제 병합 에이전트](../../relational-databases/replication/agents/replication-merge-agent.md)에 대해서만 추적 플래그 102를 사용하도록 설정할 수 있습니다.<br /><br />**경고:** 추적 플래그 102는 프로덕션 환경에서 계속 사용하도록 설정되는 것이 아니며 시간이 제한된 문제 해결 목적으로만 사용됩니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/2892633)를 참조하세요.<br /><br />**범위**: 복제 병합 에이전트만|
 |**139**| 호환성 수준이 낮은 데이터베이스에서 특정 데이터 형식에 대해 130 호환성 수준으로 도입된 향상된 정밀도 및 변환 논리를 분석할 때 DBCC 검사(예: [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) 및 [DBCC CHECKCONSTRAINTS](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md)) 명령의 범위에서 올바른 변환 의미 체계를 적용합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/help/4010261)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM CU3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 이상의 빌드에 적용됩니다.<br /><br />**경고:** 139 추적 플래그는 프로덕션 환경에서 지속적으로 사용하도록 설정되지 않으며, 이 [Microsoft 지원 문서](https://support.microsoft.com/help/4010261)에서 설명하는 데이터베이스 유효성 검사를 수행하기 위한 용도로만 사용해야 합니다. 유효성 검사가 완료되면 사용하지 않도록 즉시 해제되어야 합니다.<br /><br />**범위**: 전역만|
 |**174**|64비트 시스템에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 계획 캐시 버킷 수를 40,009개에서 160,001개로 늘립니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/3026083)를 참조하세요.<br /><br />**참고:** 프로덕션 환경에 배포하기 전에 이 옵션을 철저히 테스트하세요.<br /><br />**범위**: 전역만|
 |**176**|계산된 분할 열이 포함된 테이블에 대한 파티션을 온라인으로 다시 작성할 때 수정 프로그램에서 오류를 해결할 수 있도록 합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/3213683)와 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/4541096)를 참조하세요.<br /><br />**범위**: 전역 또는 세션|
@@ -89,8 +89,8 @@ ms.locfileid: "77558329"
 |**1204**|교착 상태에 있는 잠금의 유형과 리소스 및 현재 영향을 받은 명령을 반환합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/832524)를 참조하세요.<br /><br />**범위**: 전역만|  
 |**1211**|메모리 가중이나 잠금 수를 기반으로 잠금 에스컬레이션을 해제합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 행 또는 페이지 잠금을 테이블 잠금으로 에스컬레이션하지 않습니다.<br /><br />이 추적 플래그를 사용하면 잠금이 지나치게 많이 생성될 수 있으며, 잠금 메모리가 충분히 커지면 쿼리에 대해 추가 잠금을 할당하지 못할 수 있습니다. 이로 인해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 성능이 저하되거나 메모리가 부족하게 되어 잠금 리소스를 할당할 수 없는 1204 오류가 발생할 수 있습니다.<br /><br />추적 플래그 1211과 1224를 모두 설정하면 1211이 1224보다 우선 적용됩니다. 그러나 추적 플래그 1211은 메모리 부족 등의 모든 경우에서 에스컬레이션을 차단하므로 1224를 대신 사용하는 것이 좋습니다. 이렇게 하면 많은 잠금을 사용할 때 "잠금 부족" 오류를 방지하는 데 도움이 됩니다.<br /><br />[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 잠금 에스컬레이션으로 인해 발생하는 차단 문제를 해결하는 방법에 대한 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/help/323630)를 참조하세요.<br /><br />**범위**: 전역 또는 세션|  
 |**1222**|교착 상태에 있는 잠금 유형과 리소스 및 현재 영향을 받은 명령을 XSD 스키마에 맞지 않는 XML 형식으로 반환합니다.<br /><br />**범위**: 전역만|  
-|**1224**|잠금 수를 기반으로 잠금 에스컬레이션을 해제합니다. 그러나 메모리 가중으로 잠금 에스컬레이션이 활성화될 수 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 잠금 개체에 사용되는 메모리 양이 다음 조건 중 하나를 초과하면 행 또는 페이지 잠금을 테이블(또는 파티션) 잠금으로 에스컬레이션합니다.<br /><ul><li>[!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 사용하는 메모리의 40%입니다. sp_configure의 **locks** 매개 변수가 0으로 설정된 경우에만 적용됩니다. <li>- sp_configure의 **locks** 매개 변수를 사용하여 구성된 메모리 잠금의 40%입니다. 자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.</li></ul><br />추적 플래그 1211과 1224를 모두 설정하면 1211이 1224보다 우선 적용됩니다. 그러나 추적 플래그 1211은 메모리 부족 등의 모든 경우에서 에스컬레이션을 차단하므로 1224를 사용하는 것이 좋습니다. 이렇게 하면 많은 잠금을 사용할 때 "잠금 부족" 오류를 방지하는 데 도움이 됩니다.<br /><br />**참고:** 테이블 수준 또는 HoBT 수준 세분성에 대한 잠금 에스컬레이션은 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 문의 LOCK_ESCALATION 옵션을 사용하여 제어할 수도 있습니다.<br /><br />[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 잠금 에스컬레이션으로 인해 발생하는 차단 문제를 해결하는 방법에 대한 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/help/323630)를 참조하세요.<br /><br />**범위:** 전역 또는 세션|
-|**1229**|CPU 수에 관계없이 모든 잠금 분할을 사용하지 않도록 설정합니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 서버에 16개 이상의 CPU가 있는 경우 대규모 시스템의 확장성 특성을 향상하기 위해 잠금 분할을 사용합니다. 잠금 분할에 대한 자세한 내용은 [트랜잭션 잠금 및 행 버전 관리 가이드](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#lock_partitioning)를 참조하세요.<br /><br />**경고:** 추적 플래그 1229를 사용하면 spinlock 경합 및 성능 저하나, 파티션 전환 시 예기치 않은 동작이 발생할 수 있습니다.<br /><br />**범위**: 전역만|  
+|**1224**|잠금 수를 기반으로 잠금 에스컬레이션을 해제합니다. 그러나 메모리 가중으로 잠금 에스컬레이션이 활성화될 수 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 잠금 개체에 사용되는 메모리 양이 다음 조건 중 하나를 초과하면 행 또는 페이지 잠금을 테이블(또는 파티션) 잠금으로 에스컬레이션합니다.<br /><ul><li>[!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 사용하는 메모리의 40%입니다. sp_configure의 **locks** 매개 변수가 0으로 설정된 경우에만 적용됩니다. <li>\- sp_configure의 **locks** 매개 변수를 사용하여 구성된 메모리 잠금의 40%입니다. 자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.</li></ul><br />추적 플래그 1211과 1224를 모두 설정하면 1211이 1224보다 우선 적용됩니다. 그러나 추적 플래그 1211은 메모리 부족 등의 모든 경우에서 에스컬레이션을 차단하므로 1224를 사용하는 것이 좋습니다. 이렇게 하면 많은 잠금을 사용할 때 "잠금 부족" 오류를 방지하는 데 도움이 됩니다.<br /><br />**참고:** 테이블 수준 또는 HoBT 수준 세분성에 대한 잠금 에스컬레이션은 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 문의 LOCK_ESCALATION 옵션을 사용하여 제어할 수도 있습니다.<br /><br />[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 잠금 에스컬레이션으로 인해 발생하는 차단 문제를 해결하는 방법에 대한 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/help/323630)를 참조하세요.<br /><br />**범위:** 전역 또는 세션|
+|**1229**|CPU 수에 관계없이 모든 잠금 분할을 사용하지 않도록 설정합니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 서버에 16개 이상의 CPU가 있는 경우 대규모 시스템의 확장성 특성을 향상하기 위해 잠금 분할을 사용합니다. 잠금 분할에 대한 자세한 내용은 [트랜잭션 잠금 및 행 버전 관리 가이드](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#lock_partitioning)를 참조하세요.<br /><br />**경고:** 추적 플래그 1229를 사용하면 spinlock 경합이 발생하고 성능이 저하될 수 있습니다.<br /><br />**범위**: 전역만|  
 |**1236**|데이터베이스 잠금 분할을 사용하도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/2926217)를 참조하세요.<br /><br />**참고:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP3 및 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1부터 이 동작은 엔진에서 제어되며, 1236 추적 플래그는 아무 효과가 없습니다.<br /><br />**범위**: 전역만|
 |**1237**|ALTER PARTITION FUNCTION 문은 기본적으로 교착 상태를 발생시키는 대신 현재 사용자 정의 세션 교착 상태 우선 순위를 적용하도록 합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/help/4025261)를 참조하세요.<br /><br />**참고:** [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 및 140 데이터베이스 [호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)부터 이 동작은 기본 동작이며, 1237 추적 플래그는 아무 효과가 없습니다.<br /><br />**범위**: 전역, 세션 또는 쿼리(QUERYTRACEON)|
 |**1260**|스케줄러 모니터 덤프를 사용하지 않도록 설정합니다.<br /><br />**범위**: 전역만|   

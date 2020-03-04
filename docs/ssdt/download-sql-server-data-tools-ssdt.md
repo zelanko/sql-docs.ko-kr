@@ -13,12 +13,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 97f4ebef586d7e0deb77f753ff264120f97cef5a
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.openlocfilehash: 6be69f873785f413b4edddf42f303e8eb7d4b14c
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544902"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77652942"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio용 SSDT(SQL Server Data Tools) 다운로드
 
@@ -32,13 +32,16 @@ ms.locfileid: "77544902"
 
 데이터베이스 프로젝트를 만드는 데 핵심적인 SSDT 기능은 Visual Studio에 필수 요소로 유지되어 있습니다.
 
-Visual Studio 2019에서는 Analysis Services, Integration Services 및 Reporting Services 프로젝트를 사용하는 데 필요한 기능이 각 Visual Studio (VSIX) 확장으로만 이동되었습니다. 독립 실행형 SSDT 설치는 더 이상 필요하지 않습니다.
+Visual Studio 2019에서는 Analysis Services, Integration Services 및 Reporting Services 프로젝트를 사용하는 데 필요한 기능이 각 Visual Studio (VSIX) 확장으로만 이동되었습니다.
+
+> [!NOTE]
+> Visual Studio 2019용 SSDT 독립 실행형 설치 관리자는 없습니다.
 
 ### <a name="install-ssdt-with-visual-studio-2019"></a>Visual Studio 2019를 사용하여 SSDT 설치
 
 [Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019)가 이미 설치된 경우 워크로드 목록을 편집하여 SSDT를 포함할 수 있습니다.
 
-* SQL 데이터베이스 프로젝트의 경우 **데이터 스토리지 및 처리**에서 **SQL Server Data Tools**를 선택합니다.
+* SQL Database 프로젝트의 경우, **데이터 스토리지 및 처리**에서 **SQL Server Data Tools**를 선택합니다.
 
    ![데이터 스토리지 및 처리 워크로드](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2019.png)
 
@@ -46,7 +49,7 @@ Visual Studio 2019에서는 Analysis Services, Integration Services 및 Reportin
 
 Visual Studio 2019가 설치되지 않은 경우 [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/)를 다운로드하고 설치할 수 있습니다. 
 
-* SQL 데이터베이스 프로젝트의 경우 설치하는 동안 워크로드 목록의 **데이터 스토리지 및 처리**에서 **SQL Server Data Tools**를 선택합니다.
+* SQL Database 프로젝트의 경우, 설치하는 동안 워크로드 목록의 **데이터 스토리지 및 처리**에서 **SQL Server Data Tools**를 선택합니다.
 
 * Analysis Services, Integration Services 또는 Reporting Services 프로젝트의 경우 *도구 > 확장 및 업데이트*에서나 [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance)에서 적절한 [확장](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions)을 설치할 수 있습니다.
 

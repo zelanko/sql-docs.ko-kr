@@ -23,12 +23,12 @@ ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e31898c8252084a34ed645e5b3f5113f9893ee48
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3360957d62c6af05c6d650c0143f9f45fde3bd19
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68055454"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705878"
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ columnstore 테이블 및 인덱스의 경우 모든 columnstore 테이블 및 �
 -   분할된 columnstore 테이블과 columnstore 인덱스의 경우 파티션별로 보관 압축 옵션을 구성할 수 있고 다양한 파티션에 동일한 보관 압축 설정을 구성할 필요가 없습니다.  
   
 > [!NOTE]  
->  데이터는 GZIP 알고리즘 형식을 사용하여 압축될 수도 있습니다. 이는 추가 단계이며 장기 스토리지에 이전 데이터를 보관하는 경우 데이터의 일부를 압축하는 데 가장 적합합니다. COMPRESS 함수를 사용하여 압축된 데이터는 인덱싱할 수 없습니다. 자세한 내용은 [COMPRESS&#40;Transact-SQL&#41;](../../t-sql/functions/compress-transact-sql.md)를 참조하세요.  
+> 데이터는 GZIP 알고리즘 형식을 사용하여 압축될 수도 있습니다. 이는 추가 단계이며 장기 스토리지에 이전 데이터를 보관하는 경우 데이터의 일부를 압축하는 데 가장 적합합니다. `COMPRESS` 함수를 사용하여 압축된 데이터는 인덱싱할 수 없습니다. 자세한 내용은 [COMPRESS&#40;Transact-SQL&#41;](../../t-sql/functions/compress-transact-sql.md)를 참조하세요.  
   
 ## <a name="considerations-for-when-you-use-row-and-page-compression"></a>행 및 페이지 압축 시 고려 사항  
  행 및 페이지 압축을 사용할 때 다음 사항을 고려해야 합니다.  
@@ -57,7 +57,7 @@ columnstore 테이블 및 인덱스의 경우 모든 columnstore 테이블 및 �
 -   일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 압축을 사용할 수 없습니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
 -   시스템 테이블에는 압축을 사용할 수 없습니다.  
 -   압축하면 한 페이지에 더 많은 행을 저장할 수 있지만 테이블 또는 인덱스의 최대 행 크기는 변경되지 않습니다.  
--   최대 행 크기와 압축 오버헤드를 더한 값이 최대 행 크기 8060바이트를 초과하는 테이블에서는 압축을 사용할 수 없습니다. 예를 들어 c1**char(8000)** 및 c2**char(53)** 열이 있는 테이블은 추가 압축 오버헤드 때문에 압축할 수 없습니다. vardecimal 스토리지 형식이 사용되는 경우 해당 형식을 사용하면 행 크기 검사가 수행됩니다. 행 및 페이지 압축의 경우 개체가 처음 압축될 때 행 크기 검사가 수행된 다음 각 행을 삽입하거나 수정할 때 검사됩니다. 압축에는 다음 두 가지 규칙이 적용됩니다.  
+-   최대 행 크기와 압축 오버헤드를 더한 값이 최대 행 크기 8060바이트를 초과하는 테이블에서는 압축을 사용할 수 없습니다. 예를 들어 `c1 CHAR(8000)` 및 `c2 CHAR(53)` 열이 있는 테이블은 추가 압축 오버헤드 때문에 압축할 수 없습니다. vardecimal 스토리지 형식이 사용되는 경우 해당 형식을 사용하면 행 크기 검사가 수행됩니다. 행 및 페이지 압축의 경우 개체가 처음 압축될 때 행 크기 검사가 수행된 다음 각 행을 삽입하거나 수정할 때 검사됩니다. 압축에는 다음 두 가지 규칙이 적용됩니다.  
     -   고정 길이 형식으로의 업데이트가 항상 성공해야 합니다.  
     -   데이터 압축 비활성화에 항상 성공해야 합니다. 압축된 행이 8060바이트 미만으로 페이지에 맞더라도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 압축하지 않을 경우 행에 맞지 않는 업데이트 내용을 적용할 수 없도록 합니다.  
 -   파티션 목록을 지정하는 경우 개별 파티션에 대한 압축 유형을 ROW, PAGE 또는 NONE으로 설정할 수 있습니다. 파티션 목록을 지정하지 않은 경우에는 모든 파티션이 문에 지정된 데이터 압축 속성을 사용하여 설정됩니다. 테이블이나 인덱스를 만들 때 달리 지정하지 않는 한 데이터 압축이 NONE으로 설정됩니다. 테이블을 수정할 경우에는 달리 지정하지 않는 한 기존 압축이 유지됩니다.  
@@ -66,8 +66,8 @@ columnstore 테이블 및 인덱스의 경우 모든 columnstore 테이블 및 �
 -   힙에 클러스터형 인덱스를 만드는 경우 이 클러스터형 인덱스는 다른 압축 상태를 지정하지 않는 한 힙의 압축 상태를 상속합니다.  
 -   힙이 페이지 수준 압축을 사용하도록 구성된 경우 페이지는 다음과 같은 방식으로만 페이지 수준 압축을 받습니다.  
     -   대량 최적화가 사용하도록 설정된 상태로 데이터를 대량으로 가져옵니다.  
-    -   INSERT INTO ... WITH (TABLOCK) 구문 및 테이블에 비클러스터형 인덱스가 없습니다.  
-    -   ALTER TABLE ... REBUILD 문을 PAGE 압축 옵션과 함께 실행하여 테이블을 다시 작성합니다.  
+    -   `INSERT INTO ... WITH (TABLOCK)` 구문을 사용하여 데이터를 삽입하고, 테이블에 비클러스터형 인덱스가 없습니다.  
+    -   페이지 압축 옵션과 함께 `ALTER TABLE ... REBUILD` 문을 실행하여 테이블을 다시 작성합니다.  
 -   DML 작업의 일부로 힙에 할당된 새 페이지에서는 힙이 다시 작성될 때까지 PAGE 압축을 사용하지 않습니다. 압축을 제거하고 다시 적용하거나, 클러스터형 인덱스를 만들거나 제거하여 힙을 다시 작성하십시오.  
 -   힙의 압축 설정을 변경하는 경우 힙의 새 행 위치에 대한 포인터를 포함하도록 테이블의 모든 비클러스터형 인덱스를 다시 작성해야 합니다.  
 -   온라인이나 오프라인으로 ROW 또는 PAGE 압축을 사용하거나 사용하지 않도록 설정할 수 있습니다. 힙에서 압축을 사용하도록 설정하는 것은 온라인 작업의 경우 단일 스레드입니다.  
@@ -78,11 +78,11 @@ columnstore 테이블 및 인덱스의 경우 모든 columnstore 테이블 및 �
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 vardecimal 스토리지 형식을 구현한 테이블을 업그레이드해도 해당 설정은 유지됩니다. vardecimal 스토리지 형식의 테이블에 행 압축을 적용할 수 있습니다. 그러나 행 압축이 vardecimal 스토리지 형식의 상위 집합이므로 vardecimal 스토리지 형식을 유지할 필요가 없습니다. vardecimal 스토리지 형식과 행 압축을 함께 사용해도 10진수 값이 추가로 압축되지 않습니다. vardecimal 스토리지 형식의 테이블에 페이지 압축을 적용할 수 있지만 vardecimal 스토리지 형식 열이 추가로 압축되지는 않습니다.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 vardecimal 스토리지 형식을 지원하지만 행 수준 압축으로 동일한 결과를 얻을 수 있으므로 vardecimal 스토리지 형식은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+    > [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 vardecimal 스토리지 형식을 지원하지만 행 수준 압축으로 동일한 결과를 얻을 수 있으므로 vardecimal 스토리지 형식은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## <a name="using-columnstore-and-columnstore-archive-compression"></a>Columnstore 및 Columnstore 보관 압축 사용  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)].  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]  
   
 ### <a name="basics"></a>기본 사항  
  Columnstore 테이블 및 인덱스는 항상 columnstore 압축으로 저장됩니다. 보관 압축이라고 하는 추가 압축을 구성하여 columnstore 데이터 크기를 더 줄일 수 있습니다.  보관 압축을 수행하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터에 대해 Microsoft XPRESS 압축 알고리즘을 실행합니다. 다음 데이터 압축 유형을 사용하여 보관 압축을 추가하거나 제거합니다.  
@@ -92,7 +92,8 @@ columnstore 테이블 및 인덱스의 경우 모든 columnstore 테이블 및 �
 보관 압축을 추가하려면 REBUILD 옵션 및DATA COMPRESSION = COLUMNSTORE_ARCHIVE와 함께 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) 또는 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)을 사용하세요.  
   
 #### <a name="examples"></a>예제:  
-```  
+
+```sql  
 ALTER TABLE ColumnstoreTable1   
 REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE) ;  
   
@@ -107,7 +108,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE ON PARTITI
   
 #### <a name="examples"></a>예제:  
   
-```  
+```sql  
 ALTER TABLE ColumnstoreTable1   
 REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  COLUMNSTORE) ;  
   
@@ -120,7 +121,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE ON PARTITIONS (2,4
   
 다음 예에서는 데이터 압축을 일부 파티션의 경우 columnstore로 설정하고 다른 파티션의 경우 columnstore 보관으로 설정합니다.  
   
-```  
+```sql  
 ALTER TABLE ColumnstoreTable1   
 REBUILD PARTITION = ALL WITH (  
     DATA_COMPRESSION =  COLUMNSTORE ON PARTITIONS (4,5),  
@@ -142,33 +143,37 @@ REBUILD PARTITION = ALL WITH (
   
 ## <a name="how-compression-affects-partitioned-tables-and-indexes"></a>압축이 분할된 테이블 및 인덱스에 주는 영향  
  분할된 테이블 및 인덱스에서 데이터 압축을 사용할 때는 다음 사항을 고려해야 합니다.  
--   ALTER PARTITION 문을 사용하여 파티션을 분할할 경우 두 파티션이 모두 원래 파티션의 데이터 압축 특성을 상속합니다.  
+-   `ALTER PARTITION` 문을 사용하여 파티션을 분할할 경우 두 파티션이 모두 원래 파티션의 데이터 압축 특성을 상속합니다.  
 -   두 파티션을 병합할 경우 결과 파티션이 대상 파티션의 데이터 압축 특성을 상속합니다.  
 -   파티션을 전환하려면 파티션의 데이터 압축 속성이 테이블의 압축 속성과 일치해야 합니다.  
 -   분할된 테이블 또는 인덱스의 압축을 수정하는 데에는 다음과 같은 두 가지 구문 변형을 사용할 수 있습니다.  
     -   다음 구문에서는 참조된 파티션만 다시 작성합니다.  
-        ```  
+    
+        ```sql  
         ALTER TABLE <table_name>   
         REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  <option>)  
         ```  
+    
     -   다음 구문에서는 참조되지 않는 파티션의 기존 압축 설정을 사용하여 전체 테이블을 다시 작성합니다.  
-        ```  
+    
+        ```sql  
         ALTER TABLE <table_name>   
         REBUILD PARTITION = ALL   
         WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(<range>),  
         ... )  
         ```  
   
-     분할된 인덱스에서는 같은 원칙에 따라 ALTER INDEX를 사용합니다.  
+     분할된 인덱스에서는 같은 원칙에 따라 `ALTER INDEX`를 사용합니다.  
   
 -   클러스터형 인덱스를 삭제한 경우 파티션 구성표를 수정하지 않으면 해당 힙 파티션에서 데이터 압축 설정이 유지됩니다. 파티션 구성표를 변경하는 경우 모든 파티션이 압축되지 않은 상태로 다시 작성됩니다. 클러스터형 인덱스를 삭제하고 파티션 구성표를 변경하려면 다음 단계를 수행해야 합니다.  
      1. 클러스터형 인덱스를 삭제합니다.  
-     2. 압축 옵션을 지정하는 ALTER TABLE ... REBUILD ... 옵션을 사용하여 테이블을 수정합니다.  
+     2. 압축 옵션을 지정하는 `ALTER TABLE ... REBUILD` 옵션을 사용하여 테이블을 수정합니다.  
   
      클러스터형 인덱스를 OFFLINE으로 삭제하면 클러스터형 인덱스의 상위 수준만 제거되므로 작업이 상당히 빠르게 수행됩니다. 클러스터형 인덱스를 ONLINE으로 삭제하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 1단계와 2단계에서 한 번씩, 총 두 번에 걸쳐 힙을 다시 작성해야 합니다.  
   
 ## <a name="how-compression-affects-replication"></a>압축이 복제에 주는 영향 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).   
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])   
+
 데이터 압축과 복제를 함께 사용할 때는 다음 사항을 고려해야 합니다.  
 -   스냅샷 에이전트에서 초기 스키마 스크립트를 생성할 때 새 스키마는 테이블과 해당 인덱스 모두에 대해 동일한 압축 설정을 사용합니다. 압축을 인덱스에 사용하지 않고 테이블에만 사용할 수는 없습니다.  
 -   트랜잭션 복제의 경우 아티클 스키마 옵션에 따라 스크립팅할 종속 개체 및 속성이 결정됩니다. 자세한 내용은 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 참조하세요.  
@@ -186,7 +191,7 @@ REBUILD PARTITION = ALL WITH (
 |게시자에서 모든 파티션이 압축된 경우 구독자에서 테이블을 압축하지만 파티션 구성표를 복제하지 않음|False|True|모든 파티션에서 압축을 사용할 수 있는지 확인합니다.<br /><br /> 테이블 수준에서 압축을 스크립팅합니다.|  
   
 ## <a name="how-compression-affects-other-sql-server-components"></a>압축이 다른 SQL Server 구성 요소에 주는 영향 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
    
  압축은 스토리지 엔진에서 발생하므로 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 다른 구성 요소 대부분에 압축되지 않은 상태로 제공됩니다. 따라서 압축이 다른 구성 요소에 주는 영향은 다음으로 제한됩니다.  
 -   대량 가져오기 및 내보내기 작업  

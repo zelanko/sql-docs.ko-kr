@@ -23,12 +23,12 @@ ms.author: dinethi
 ms.reviewer: sstein, maghan
 ms.custom: seo-lt-2019
 ms.date: 02/18/2020
-ms.openlocfilehash: 5004b46f878a5098e63fb3842569e826b21b764f
-ms.sourcegitcommit: 5a9b8bc4fcb5e875d5ef25362b68ffe7f8a1b6d7
+ms.openlocfilehash: 8045c054d05a1e92eaf18f9aba852d9301f7ef60
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77520946"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77652932"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
 
@@ -80,6 +80,30 @@ SQL Server Management Studio 18.4:
 ## <a name="previous-versions"></a>이전 버전
 
 이 문서는 SSMS의 최신 버전에만 적용됩니다. 이전 버전의 SSMS를 다운로드하려면 [이전 SSMS 릴리스](../ssms/release-notes-ssms.md#previous-ssms-releases)를 참조하세요.
+
+## <a name="unattended-install"></a>무인 설치
+
+명령 프롬프트 스크립트를 사용하여 SSMS를 설치할 수도 있습니다.
+
+GUI 프롬프트 없이 백그라운드에서 SSMS를 설치하려면 아래 단계를 수행합니다.
+
+1. 높은 권한으로 명령 프롬프트를 시작합니다.
+
+2. 명령 프롬프트에서 아래 명령을 입력합니다.
+
+    ```console
+    start "" <path where SSMS-ENU.exe file is located> /Quiet SSMSInstallRoot=<path where you want to install SSMS>
+    ```
+
+    예제:
+
+    ```console
+    start "" %systemdrive%\SSMSfrom\SSMS-Setup-ENU.exe /Quiet SSMSInstallRoot=%systemdrive%\SSMSto
+    ```
+
+    */Quiet* 대신 */Passive*를 전달하여 설치 UI를 표시할 수도 있습니다.
+
+3. 모두 제대로 완료되면, 예제의 경우 SSMS가 %systemdrive%\SSMSto\Common7\IDE\Ssms.exe에 설치된 것을 확인할 수 있습니다. 오류가 발생한 경우에는 반환된 오류 코드를 검사하고 %TEMP%\SSMSSetup에서 로그 파일을 살펴볼 수 있습니다.
 
 ## <a name="supported-sql-offerings-ssms-184"></a>지원되는 SQL 제품(SSMS 18.4)
 

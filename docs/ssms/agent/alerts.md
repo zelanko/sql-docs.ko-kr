@@ -24,12 +24,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b88680cb965ff44384d54b09e0c7244a074bd0db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8baf9a3ab87f53bf1e193f680e5977dc9631c4b3
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75252693"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608479"
 ---
 # <a name="alerts"></a>경고
 
@@ -104,6 +104,12 @@ ms.locfileid: "75252693"
   
     > [!NOTE]  
     > 성능 데이터를 주기적으로 샘플링하므로 도달할 임계값과 성능 경고의 발생 간에 몇 초 정도 지연될 수 있습니다.  
+  
+    > [!NOTE]  
+    > 서버 이름을 저장하는 이벤트 로그 변수는 32자로 제한됩니다. 따라서 호스트 이름과 인스턴스 이름을 결합한 크기가 32자를 초과하면 다음과 같은 오류가 발생할 수 있습니다.
+    
+    경고, [466] 성능 카운터 경고를 생성하는 중 서버 이름 LONGNAMESQLSERV\LONGINSTANCENAME을 복사하지 못했습니다.
+  
   
 ## <a name="selecting-a-wmi-event"></a>WMI 이벤트 선택  
 특정 WMI 이벤트에 응답하여 경고가 발생하도록 지정할 수 있습니다. WMI 이벤트를 선택하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 새 경고 **의** 에이전트 **일반** 페이지 또는 **경고 속성** 대화 상자에서 다음을 정의해야 합니다.  

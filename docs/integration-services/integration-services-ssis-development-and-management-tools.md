@@ -1,5 +1,5 @@
 ---
-title: SSIS(Integration Services) 배포 및 관리 도구 | Microsoft Docs
+title: 개발 및 관리 도구 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6ef390245e632b3e2c39bcc9ab27450839dcab2e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 8df702e1b77a551e1073e4d5834535e27b4ea43f
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71284364"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903851"
 ---
 # <a name="integration-services-ssis-development-and-management-tools"></a>SSIS(Integration Services) 배포 및 관리 도구
 

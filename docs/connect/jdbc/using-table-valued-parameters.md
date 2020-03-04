@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 66d9c24a31002f0c991fbf1dfdd7210adbf53172
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1dfa8438e7afb1763129748368a7f6e08fa892c3
+ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74249711"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575337"
 ---
 # <a name="using-table-valued-parameters"></a>테이블 반환 매개 변수 사용
 
@@ -127,7 +127,7 @@ pStmt.execute();
   
 ## <a name="passing-a-table-valued-parameter-as-a-sqlserverdatatable-object"></a>테이블 반환 매개 변수를 SQLServerDataTable 개체로 전달  
 
-Microsoft JDBC Driver 6.0 for SQL Server부터 SQLServerDataTable 클래스는 관계형 데이터의 메모리 내 테이블을 나타냅니다. 이 예제에서는 SQLServerDataTable 개체를 사용하여 메모리 내 데이터에서 테이블 반환 매개 변수를 생성하는 방법을 보여 줍니다. 이 코드는 먼저 SQLServerDataTable 개체를 만들고, 해당 스키마를 정의하고, 테이블에 데이터를 채웁니다. 그런 다음 이 데이터 테이블을 테이블 반환 매개 변수로 SQL Server로 전달하도록 SQLServerPreparedStatement를 구성합니다.  
+Microsoft JDBC Driver 6.0 for SQL Server부터 SQLServerDataTable 클래스는 관계형 데이터의 메모리 내 테이블을 나타냅니다. 이 예제에서는 SQLServerDataTable 개체를 사용하여 메모리 내 데이터에서 테이블 반환 매개 변수를 생성하는 방법을 보여 줍니다. 이 코드는 먼저 SQLServerDataTable 개체를 만들고 해당 스키마를 정의한 다음, 테이블에 데이터를 채웁니다. 그런 다음 이 데이터 테이블을 테이블 반환 매개 변수로 SQL Server로 전달하도록 SQLServerPreparedStatement를 구성합니다.  
 
 ```java
 /* Assumes connection is an active Connection object. */
@@ -156,7 +156,7 @@ pStmt.execute();
   
 ## <a name="passing-a-table-valued-parameter-as-a-resultset-object"></a>테이블 반환 매개 변수를 ResultSet 개체로 전달  
 
-이 예제에서는 ResultSet의 데이터 행을 테이블 반환 매개 변수로 스트림하는 방법을 보여 줍니다. 이 코드는 먼저 원본 테이블에서 데이터를 검색하고, SQLServerDataTable 개체를 만들고, 해당 스키마를 정의하고, 테이블에 데이터를 채웁니다. 그런 다음 이 데이터 테이블을 테이블 반환 매개 변수로 SQL Server로 전달하도록 SQLServerPreparedStatement를 구성합니다.  
+이 예제에서는 ResultSet의 데이터 행을 테이블 반환 매개 변수로 스트림하는 방법을 보여 줍니다. 이 코드는 먼저 SQLServerDataTable 개체의 원본 테이블에서 데이터를 검색하고 해당 스키마를 정의한 다음, 테이블에 데이터를 채웁니다. 그런 다음 이 데이터 테이블을 테이블 반환 매개 변수로 SQL Server로 전달하도록 SQLServerPreparedStatement를 구성합니다.  
 
 ```java
 /* Assumes connection is an active Connection object. */

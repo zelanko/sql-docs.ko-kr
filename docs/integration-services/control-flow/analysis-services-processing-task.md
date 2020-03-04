@@ -1,10 +1,8 @@
 ---
 title: Analysis Services 처리 태스크 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 92e0656fd3625f2b93a1e097d2f81291056d01cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e95fd78657a043683d04fa86fd66edd345e2f483
+ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71298464"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634793"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 처리 태스크
 
@@ -84,7 +82,7 @@ ms.locfileid: "71298464"
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.DTSProcessingTask>  
   
 ## <a name="analysis-services-processing-task-editor-general-page"></a>Analysis Services 처리 태스크 편집기(일반 페이지)
-  **Analysis Services 처리 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 Analysis Services 처리 태스크를 명명 및 설명할 수 있습니다.  
+  **Analysis Services 처리 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 Analysis Services 처리 태스크의 이름을 지정하고 설명할 수 있습니다.  
   
 ### <a name="options"></a>옵션  
  **이름**  
@@ -119,7 +117,8 @@ ms.locfileid: "71298464"
  **관련 항목:** [Analysis Services 연결 관리자](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Analysis Services 연결 관리자 추가 대화 상자 UI 참조](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **개체 목록**  
- |속성|Description|  
+ 
+|속성|Description|  
 |--------------|-----------------|  
 |**개체 이름**|지정한 개체 이름을 나열합니다.|  
 |**형식**|지정한 개체의 유형을 나열합니다.|  
@@ -138,7 +137,8 @@ ms.locfileid: "71298464"
  **관련 항목:** [영향 분석 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **일괄 처리 설정 요약**  
- |속성|Description|  
+ 
+|속성|Description|  
 |--------------|-----------------|  
 |**처리 순서**|개체가 순차적으로 또는 일괄 처리 방식으로 처리되는지 여부를 지정합니다. 병렬 처리가 사용되면 동시에 처리할 개체 수를 지정합니다.|  
 |**트랜잭션 모드**|순차적 처리를 위한 트랜잭션 모드를 지정합니다.|  
@@ -150,4 +150,3 @@ ms.locfileid: "71298464"
  처리 옵션 및 차원 키의 오류 처리를 변경합니다.  
   
  **관련 항목:** [설정 변경 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
-  

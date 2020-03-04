@@ -1,7 +1,7 @@
 ---
 title: CREATE FUNCTION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 02/26/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 35cf1b37a7c10992e17a52e4a44a473127ffb586
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 183edfbae4da98f12d9ed32b594e74b1932b6f1b
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73982790"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705898"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -313,7 +313,7 @@ RETURNS return_data_type
  함수의 매개 변수에 기본값을 지정한 경우 기본값을 가져오는 함수를 호출할 때 DEFAULT 키워드를 지정해야 합니다. 이 동작은 매개 변수를 생략할 경우 자동으로 기본값이 사용되는 저장 프로시저에서 기본값이 있는 매개 변수를 사용하는 것과는 다릅니다. 그러나 DEFAULT 키워드는 EXECUTE 문을 사용하여 스칼라 함수를 호출할 때 필요하지 않습니다.  
   
  READONLY  
- 함수 정의 내에서 매개 변수를 업데이트하거나 수정할 수 없음을 나타냅니다. 매개 변수 유형이 사용자 정의 테이블 형식인 경우 READONLY를 지정해야 합니다.  
+ 함수 정의 내에서 매개 변수를 업데이트하거나 수정할 수 없음을 나타냅니다. 사용자 정의 테이블 형식 매개 변수(TVP)에는 READONLY가 필요하고, 다른 매개 변수 형식에는 사용할 수 없습니다.
   
  *return_data_type*  
  스칼라 사용자 정의 함수의 반환 값입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수의 경우 **timestamp** 데이터 형식을 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. CLR 함수의 경우 **text**, **ntext**, **image** 및 **timestamp** 데이터 형식을 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CLR 함수에는 비스칼라 형식, **cursor** 및 **table**을 반환 데이터 형식으로 지정할 수 없습니다.  
@@ -810,7 +810,7 @@ GO
   
  CLR 테이블 반환 함수를 만드는 방법에 대한 예는 [CLR 테이블 반환 함수](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md)를 참조하세요.  
   
-### <a name="e-displaying-the-definition-of-includetsqlincludestsql-mdmd-user-defined-functions"></a>E. [!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수의 정의를 표시합니다.  
+### <a name="e-displaying-the-definition-of-tsql-user-defined-functions"></a>E. [!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수의 정의를 표시합니다.  
   
 ```sql  
 SELECT definition, type   

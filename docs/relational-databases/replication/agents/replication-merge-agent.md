@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 97b36ba7e90aeaa32a0d073b972f06a9fc336750
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ece6ef614e336b2478779107a4e4f37d2903841a
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "70846742"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705870"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,8 @@ replmerg [-?]
 [-SubscriberSecurityMode [0|1]]  
 [-SubscriberType [0|1|2|3|4|5|6|7|8|9]]  
 [-SubscriptionType [0|1|2]]  
-[-SyncToAlternate [0|1]  
+[-SyncToAlternate [0|1]]  
+[-T [101|102]]  
 [-UploadGenerationsPerBatch upload_generations_per_batch]  
 [-UploadReadChangesPerBatch upload_read_changes_per_batch]  
 [-UploadWriteChangesPerBatch upload_write_changes_per_batch]  
@@ -358,7 +359,10 @@ replmerg [-?]
   
  **-SyncToAlternate** [ **0|1**]  
  병합 에이전트에서 구독자와 대체 게시자 간의 동기화를 수행하는지 여부를 지정합니다. 값 **1** 은 동기화 대상이 대체 게시자임을 나타냅니다. 기본값은 **0**입니다.  
-  
+ 
+ **-T** [**101|102**]  
+ 병합 에이전트에 대해 추가 기능을 사용하도록 설정하는 추적 플래그입니다. **101** 값을 지정하면 자세한 로깅 정보를 사용하여 병합 복제 동기화 프로세스의 각 단계에서 소요되는 시간을 확인할 수 있습니다. **102** 값을 지정하면 추적 플래그 **101**과 동일한 통계가 기록되지만, <Distribution server>..msmerge_history 테이블에 기록됩니다. 추적 플래그 101을 사용하는 경우 `-output` 및 `-outputverboselevel` 매개 변수를 사용하여 병합 에이전트 로깅을 사용하도록 설정합니다.  예를 들어 병합 에이전트에 `-T 101, -output, -outputverboselevel` 매개 변수를 추가한 다음, 에이전트를 다시 시작합니다. 
+ 
  **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
  구독자의 변경 내용을 게시자로 업로드하는 동안 한 번의 일괄 처리에서 처리할 세대 수입니다. 세대는 아티클 단위의 논리적 변경 내용 그룹으로 정의됩니다. 안정적인 통신 연결의 기본값은 **100**이고, 안정적이지 않은 통신 연결의 기본값은 **1**입니다.  
   
@@ -394,7 +398,12 @@ replmerg [-?]
   
  병합 에이전트를 시작하려면 명령 프롬프트에서 **replmerg.exe** 를 실행합니다. 자세한 내용은 [복제 에이전트 실행 파일](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)을 참조하십시오.  
   
+ ### <a name="troubleshooting-merge-agent-performance"></a>병합 에이전트 성능 문제 해결 
  연속 모드에서 실행하는 동안 현재 세션에 대한 병합 에이전트 기록은 제거되지 않습니다. 장기 실행 에이전트로 인해 성능에 영향을 미칠 수 있는 병합 기록 테이블에 다수의 항목이 발생할 수 있습니다. 이 문제를 해결하려면 예약 모드로 전환하거나, 계속해서 연속 모드를 사용하지만 정기적으로 병합 에이전트를 다시 시작하는 전용 작업을 만들거나, 기록 수준의 자세한 정도를 줄여 행 수를 줄임으로써 성능에 미치는 영향을 줄이십시오.  
+ 
+  복제 병합 에이전트에서 변경 내용을 복제하는 데 시간이 오래 걸리는 경우도 있습니다. 병합 복제 동기화 프로세스에서 가장 많은 시간이 소요되는 단계를 확인하려면 병합 에이전트 로깅과 함께 추적 플래그 101을 사용합니다. 병합 에이전트 매개 변수로 다음 매개 변수를 사용하고 에이전트를 다시 시작하면 됩니다.   <br/>-T 101   <br/>-output   <br/>-outputverboselevel
+
+또한 <Distribution server>..msmerge_history 테이블에 통계를 기록해야 하는 경우 추적 플래그 -T 102를 사용합니다.
   
 ## <a name="see-also"></a>참고 항목  
  [복제 에이전트 관리](../../../relational-databases/replication/agents/replication-agent-administration.md)  

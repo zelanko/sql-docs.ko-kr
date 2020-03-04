@@ -10,13 +10,14 @@ ms.technology: install
 ms.topic: conceptual
 author: tmichael-ms
 ms.author: tmichael
+ms.reviewer: hristins
 mtps_version: v=MSDN.10
-ms.openlocfilehash: 1aa72f7e0d383d4baefd47577282687e4882a555
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.openlocfilehash: aa78f1c759fe86dbb203f6e63d09f2ab3d5f6fad
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256778"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608469"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Microsoft SQL Server에 대한 최신 업데이트
 
@@ -32,7 +33,7 @@ SQL Server 제품에 대해 한 곳에서 업데이트를 찾고 관리합니다
 |--|--|--|--|--|--|
 |SQL Server 2019|해당 없음|[KB 4517790](https://support.microsoft.com/help/4517790)|CU 2[(KB 4536075)](https://support.microsoft.com/help/4536075)|2/13/2020|[SQL Server 2019 설치](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
 |SQL Server 2017|해당 없음|[KB 4505224](https://support.microsoft.com/help/4505224)|CU 19[(KB 4535007)](https://support.microsoft.com/help/4535007)|2/5/2020|[SQL Server 2017 설치](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
-|SQL Server 2016|SP2[(KB 4052908)](https://support.microsoft.com/help/4052908)|[KB 4532097](https://support.microsoft.com/help/4532097)|CU 11[(KB 4535706)](https://support.microsoft.com/kb/4535706)|2/11/2020|[SQL Server 2016 설치](https://technet.microsoft.com/library/bb500469.aspx)|
+|SQL Server 2016|SP2[(KB 4052908)](https://support.microsoft.com/help/4052908)|[KB 4532097](https://support.microsoft.com/help/4532097)|CU 12[(KB 4536648)](https://support.microsoft.com/kb/4536648)|2020/2/25|[SQL Server 2016 설치](https://technet.microsoft.com/library/bb500469.aspx)|
 |SQL Server 2016|SP1[(KB 3182545)](https://support.microsoft.com/help/3182545/sql-server-2016-service-pack-1-release-information)|[KB 4505219](https://support.microsoft.com/help/4505219)|CU 15 + GDR[(KB 4505221)](https://support.microsoft.com/help/4505221)|2019/7/9|[SQL Server 2016 설치](https://technet.microsoft.com/library/bb500469.aspx)|
 |SQL Server 2016|해당 없음|[KB4058560](https://support.microsoft.com/help/4058560)|CU 9[(KB 4058559)](https://support.microsoft.com/help/4058559)|2017/11/22|[SQL Server 2016 설치](https://technet.microsoft.com/library/bb500469.aspx)|
 |SQL Server 2014|SP3[(KB 4022619)](https://support.microsoft.com/kb/4022619)|[KB 4532095](https://support.microsoft.com/help/4532095)|CU 4[(KB 4535288)](https://support.microsoft.com/kb/4535288)|2/11/2020|[SQL Server 2014 설치](https://technet.microsoft.com/library/cc281837(v=sql.120).aspx)|
@@ -50,7 +51,7 @@ SQL Server 제품에 대해 한 곳에서 업데이트를 찾고 관리합니다
 |SQL Server 2005 |SP4[(KB 2463332)](https://support.microsoft.com/kb/2463332)|해당 없음|해당 없음|해당 없음|[SQL Server 2005 설치](https://msdn.microsoft.com/library/ms143516(sql.90).aspx)|
 |SQL Server 2000|SP4[(KB 290211)](https://support.microsoft.com/kb/290211)|해당 없음|해당 없음|해당 없음|[SQL Server 2000 설치](https://technet.microsoft.com/library/aa197941(sql.80).aspx)|
 
-**업데이트를 테스트하는 방법에 대해 알아봅니다.** [Testing and Developing Supportability Roadmaps for ISV Applications(PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
+**업데이트를 테스트하는 방법에 대해 알아봅니다.**  [Testing and Developing Supportability Roadmaps for ISV Applications(PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
 
 ### <a name="knowledge-base"></a>기술 자료
 

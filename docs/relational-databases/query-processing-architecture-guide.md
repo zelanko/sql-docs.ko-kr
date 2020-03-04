@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: b6000c540d2847686fd8f14c4ae6a0926f8dbb72
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.openlocfilehash: 88e2325af328e32a246ca484ab447cc99be887c0
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77466174"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903880"
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,19 +139,22 @@ GO
 - 상수만 포함된 산술 식(예: 1+1, 5/3*2)
 - 상수만 포함된 논리 식(1=1 and 1>2 AND 3>4)
 - `CAST` 및 `CONVERT`를 비롯하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 폴딩 가능한 것으로 간주하는 기본 제공 함수. 일반적으로 입력으로만 사용되고, SET 옵션, 언어 설정, 데이터베이스 옵션 및 암호화 키와 같은 다른 컨텍스트 정보를 제공하지 않는 내장 함수가 폴딩 가능한 함수입니다. 비결정적 함수는 폴딩 가능하지 않습니다. 몇 가지 예외를 제외하고 결정적 기본 제공 함수는 폴딩 가능 함수입니다.
+- CLR 사용자 정의 형식의 결정적 메서드 및 결정적 스칼라 반환 CLR 사용자 정의 함수([!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터). 자세한 내용은 [CLR 사용자 정의 함수 및 메서드를 위한 상수 폴딩](https://docs.microsoft.com/sql/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods)을 참조하세요.
 
 > [!NOTE] 
-> 큰 개체 유형의 경우에는 예외입니다. 폴딩 프로세스의 출력 유형이 큰 개체 유형(text, image, nvarchar(max), varchar(max) 또는 varbinary(max))이면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 식을 폴딩하지 않습니다.
+> 큰 개체 유형의 경우에는 예외입니다. 폴딩 프로세스의 출력 유형이 큰 개체 유형(text, ntext, image, nvarchar(max), varchar(max), varbinary(max) 또는 XML)이면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 식을 폴딩하지 않습니다.
 
 #### <a name="nonfoldable-expressions"></a>폴딩 가능하지 않은 식
 다른 모든 식 유형은 폴딩할 수 없습니다. 특히 다음 식 유형은 폴딩할 수 없습니다.
 - 비상수 식(예: 열 값에 따라 결과가 달라지는 식)
 - 지역 변수 또는 매개 변수에 따라 결과가 달라지는 식(예: @x)
 - 비결정적 함수
-- 사용자 정의 함수([!INCLUDE[tsql](../includes/tsql-md.md)] 및 CLR)
+- 사용자 정의 [!INCLUDE[tsql](../includes/tsql-md.md)] 함수<sup>1</sup>.
 - 언어 설정에 따라 결과가 달라지는 식
 - SET 옵션에 따라 결과가 달라지는 식
 - 서버 구성 옵션에 따라 결과가 달라지는 식
+
+<sup>1</sup> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 이전에는 결정적 스칼라 반환 CLR 사용자 정의 함수와 CLR 사용자 정의 형식의 메서드를 폴딩할 수 없었습니다. 
 
 #### <a name="examples-of-foldable-and-nonfoldable-constant-expressions"></a>폴딩 가능 식 및 폴딩 가능하지 않은 식의 예
 다음과 같은 쿼리를 고려해 보세요.
@@ -912,21 +915,27 @@ WHERE ProductID = 63;
 > 특정 구문은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 실행 계획의 전체 또는 일부에서 병렬 처리를 활용할 수 있는 기능을 방해합니다.
 
 병렬 처리를 방해하는 구문은 다음과 같습니다.
->
-> - **스칼라 UDF**    
->   스칼라 사용자 정의 함수에 대한 자세한 내용은 [사용자 정의 함수 만들기](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)를 참조하세요. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]부터 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 이러한 함수를 인라인 처리하고, 쿼리를 처리하는 도중 병렬 처리 사용을 잠금 해제할 수 있습니다. 스칼라 UDF 인라인 처리에 대한 자세한 내용은 [SQL 데이터베이스의 인텔리전트 쿼리 처리](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)를 참조하세요.
-> - **원격 쿼리**    
->   원격 쿼리에 대한 자세한 내용은 [실행 계획 논리 및 물리 연산자 참조](../relational-databases/showplan-logical-and-physical-operators-reference.md)를 참조하세요.
-> - **동적 커서**    
->   커서에 대한 자세한 내용은 [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md)를 참조하세요.
-> - **재귀 쿼리**    
->   재귀에 대한 자세한 내용은 [재귀 공통 테이블 식 정의 및 사용 지침](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) 및 [T-SQL의 재귀](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx)를 참조하세요.
-> - **TVF(테이블 반환된 함수)**    
->   TVF에 대한 자세한 내용은 [사용자 정의 함수 만들기(데이터베이스 엔진)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)를 참조하세요.
-> - **TOP 키워드**    
->   자세한 내용은 [TOP(Transact-SQL)](../t-sql/queries/top-transact-sql.md)을 참조하세요.
+-   **스칼라 UDF**        
+    스칼라 사용자 정의 함수에 대한 자세한 내용은 [사용자 정의 함수 만들기](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)를 참조하세요. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]부터 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 이러한 함수를 인라인 처리하고, 쿼리를 처리하는 도중 병렬 처리 사용을 잠금 해제할 수 있습니다. 스칼라 UDF 인라인 처리에 대한 자세한 내용은 [SQL 데이터베이스의 인텔리전트 쿼리 처리](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)를 참조하세요.
+    
+-   **원격 쿼리**        
+    원격 쿼리에 대한 자세한 내용은 [실행 계획 논리 및 물리 연산자 참조](../relational-databases/showplan-logical-and-physical-operators-reference.md)를 참조하세요.
+    
+-   **동적 커서**        
+    커서에 대한 자세한 내용은 [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md)를 참조하세요.
+    
+-   **재귀 쿼리**        
+    재귀에 대한 자세한 내용은 [재귀 공통 테이블 식 정의 및 사용 지침](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) 및 [T-SQL의 재귀](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx)를 참조하세요.
 
-교환 연산자를 삽입하면 병렬 쿼리 실행 계획이 완성됩니다. 병렬 쿼리 실행 계획은 작업자 스레드를 여러 개 사용할 수 있습니다. 병렬이 아닌 쿼리에서 사용하는 직렬 실행 계획은 실행에 한 작업자 스레드만 사용합니다. 병렬 쿼리에서 사용하는 실제 작업자 스레드 수는 쿼리 계획 실행 초기화 시 결정되며 계획의 복잡성과 병렬 처리 수준에 따라 다릅니다. 병렬 처리 수준에 따라 사용할 최대 CPU 수가 결정됩니다. 사용할 작업자 스레드 수를 의미하지는 않습니다. 병렬 처리 수준 값은 서버 수준에서 설정되며 sp_configure 시스템 저장 프로시저를 사용하여 수정할 수 있습니다. 또한 `MAXDOP` 쿼리 힌트나 `MAXDOP` 인덱스 옵션을 지정하여 개별 쿼리나 인덱스 문에 대해 이 값을 재정의할 수 있습니다. 
+-   **TVF(테이블 반환된 함수)**         
+    TVF에 대한 자세한 내용은 [사용자 정의 함수 만들기(데이터베이스 엔진)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)를 참조하세요.
+    
+-   **TOP 키워드**        
+    자세한 내용은 [TOP(Transact-SQL)](../t-sql/queries/top-transact-sql.md)을 참조하세요.
+
+교환 연산자를 삽입하면 병렬 쿼리 실행 계획이 완성됩니다. 병렬 쿼리 실행 계획은 작업자 스레드를 여러 개 사용할 수 있습니다. 병렬이 아닌(직렬) 쿼리에서 사용하는 직렬 실행 계획은 해당 실행에 작업자 스레드 한 개만 사용합니다. 병렬 쿼리에서 사용하는 실제 작업자 스레드 수는 쿼리 계획 실행 초기화 시 결정되며 계획의 복잡성과 병렬 처리 수준에 따라 다릅니다. 
+
+DOP(병렬 처리 수준)에 따라 사용되는 최대 CPU 수가 결정됩니다. 사용되는 작업자 스레드 수를 의미하지는 않습니다. DOP 제한은 [작업](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)별로 설정됩니다. [요청](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)별 또는 쿼리 제한별로 수행되지 않습니다. 즉, 병렬 쿼리 실행 중에 단일 요청은 [스케줄러](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)에 할당되는 여러 작업을 생성할 수 있습니다. 여러 작업을 동시에 실행하는 경우, 특정 쿼리 실행 지점에서 MAXDOP로 지정된 개수보다 많은 프로세서가 동시에 사용될 수 있습니다. 자세한 내용은 [스레드 및 태스크 아키텍처 가이드](../relational-databases/thread-and-task-architecture-guide.md)를 참조하세요.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 다음 중 해당하는 조건이 있을 경우 병렬 실행 계획을 사용하지 않습니다.
 
@@ -937,21 +946,15 @@ WHERE ProductID = 63;
 ### <a name="DOP"></a> 병렬 처리 수준
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 병렬 쿼리 실행 또는 인덱스 DDL(데이터 정의 언어) 작업 각각의 인스턴스에 대해 가장 적합한 병렬 처리 수준이 자동으로 검색됩니다. 이것은 다음과 조건을 기준으로 수행됩니다. 
 
-1. SMP(대칭적 다중 처리) 컴퓨터와 같이 둘 이상의 마이크로프로세서 또는 CPU가 있는 컴퓨터에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 실행 중인지 여부  
-   두 개 이상의 CPU가 있는 컴퓨터에서만 병렬 쿼리를 사용할 수 있습니다. 
+1. SMP(대칭적 다중 처리) 컴퓨터와 같이 **둘 이상의 마이크로프로세서 또는 CPU가 있는 컴퓨터**에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 실행 중인지 여부. 두 개 이상의 CPU가 있는 컴퓨터에서만 병렬 쿼리를 사용할 수 있습니다. 
 
-2. 사용할 수 있는 작업자 스레드 수가 충분한지 여부  
-   각 쿼리 또는 인덱스 작업을 실행하려면 일정 수의 작업자 스레드가 필요합니다. 병렬 계획을 실행하려면 직렬 계획보다 많은 작업자 스레드가 필요하고, 필요한 작업자 스레드의 수는 병렬 처리 수준에 따라 증가합니다. 특정 병렬 처리 수준에 대한 병렬 계획의 작업자 스레드 요구 사항이 충족되지 않는 경우에는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 병렬 처리 수준을 자동으로 낮추거나 지정된 작업 컨텍스트의 병렬 계획을 완전히 중단합니다. 그런 다음 하나의 작업자 스레드만 사용되는 직렬 계획을 실행합니다. 
+2. **사용할 수 있는 작업자 스레드 수가 충분**한지 여부. 각 쿼리 또는 인덱스 작업을 실행하려면 일정 수의 작업자 스레드가 필요합니다. 병렬 계획을 실행하려면 직렬 계획보다 많은 작업자 스레드가 필요하고, 필요한 작업자 스레드의 수는 병렬 처리 수준에 따라 증가합니다. 특정 병렬 처리 수준에 대한 병렬 계획의 작업자 스레드 요구 사항이 충족되지 않는 경우에는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 병렬 처리 수준을 자동으로 낮추거나 지정된 작업 컨텍스트의 병렬 계획을 완전히 중단합니다. 그런 다음 하나의 작업자 스레드만 사용되는 직렬 계획을 실행합니다. 
 
-3. 실행한 쿼리 또는 인덱스 작업의 유형  
-   병렬 계획은 인덱스를 새로 작성 또는 다시 작성하거나 클러스터형 인덱스 및 CPU 주기 사용량이 큰 쿼리를 삭제하는 등의 인덱스 작업에 적합합니다. 예를 들어 대형 테이블의 조인, 대규모 집계 및 대형 결과 집합의 정렬이 병렬 쿼리에 적절합니다. 주로 트랜잭션 처리 애플리케이션에서 사용되는 단순 쿼리의 경우 이 쿼리를 병렬로 실행하는 데 필요한 추가 조정 작업은 성능을 향상시키기보다는 부담이 됩니다. 병렬 처리로 유용한 쿼리와 그렇지 않은 쿼리를 구분하기 위해, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 쿼리 또는 인덱스 작업 실행 시 예상 비용을 [병렬 처리에 대한 비용 임계값](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) 값과 비교합니다. 적절한 테스트를 통해 다른 값이 워크로드 실행에 더 적합하다고 확인되는 경우 사용자들은 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용하여 기본값 5를 변경할 수 있습니다. 
+3. **실행한 쿼리 또는 인덱스 작업의 유형**. 병렬 계획은 인덱스를 새로 작성 또는 다시 작성하거나 클러스터형 인덱스 및 CPU 주기 사용량이 큰 쿼리를 삭제하는 등의 인덱스 작업에 적합합니다. 예를 들어 대형 테이블의 조인, 대규모 집계 및 대형 결과 집합의 정렬이 병렬 쿼리에 적절합니다. 주로 트랜잭션 처리 애플리케이션에서 사용되는 단순 쿼리의 경우 이 쿼리를 병렬로 실행하는 데 필요한 추가 조정 작업은 성능을 향상시키기보다는 부담이 됩니다. 병렬 처리로 유용한 쿼리와 그렇지 않은 쿼리를 구분하기 위해, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 쿼리 또는 인덱스 작업 실행 시 예상 비용을 [병렬 처리에 대한 비용 임계값](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) 값과 비교합니다. 적절한 테스트를 통해 다른 값이 워크로드 실행에 더 적합하다고 확인되는 경우 사용자들은 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용하여 기본값 5를 변경할 수 있습니다. 
 
-4. 처리할 행 수가 충분한지 여부  
-   쿼리 최적화 프로그램에서 행 수가 부족하다고 판단하는 경우 행을 배포하기 위해 교환 연산자를 사용하지 않습니다. 결과적으로 연산자는 직렬로 실행됩니다. 시작, 배포 및 조정 비용이 병렬 연산자 실행으로 얻은 이익보다 큰 경우 연산자를 직렬 계획으로 실행하면 이 시나리오를 피할 수 있습니다.
+4. **처리할 행 수가 충분**한지 여부. 쿼리 최적화 프로그램에서 행 수가 부족하다고 판단하는 경우 행을 배포하기 위해 교환 연산자를 사용하지 않습니다. 결과적으로 연산자는 직렬로 실행됩니다. 시작, 배포 및 조정 비용이 병렬 연산자 실행으로 얻은 이익보다 큰 경우 연산자를 직렬 계획으로 실행하면 이 시나리오를 피할 수 있습니다.
 
-5. 최신 배포 통계를 사용할 수 있는지 여부  
-   가장 높은 병렬 처리 수준을 제공할 수 없는 경우 병렬 처리를 중단하기 전에 더 낮은 병렬 처리 수준이 가능한지 확인합니다.  
-  예를 들어 뷰에서 클러스터형 인덱스를 만드는 경우 클러스터형 인덱스가 아직 생성되지 않았으므로 배포 통계를 계산할 수 없습니다. 이 경우 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 이 인덱스 작업에는 가장 높은 병렬 처리 수준을 할당하지 않습니다. 그러나 이 경우에도 정렬 또는 검색과 같은 일부 연산자에는 병렬 처리의 이점이 적용될 수 있습니다.
+5. **최신 배포 통계를 사용**할 수 있는지 여부. 가장 높은 병렬 처리 수준을 제공할 수 없는 경우 병렬 처리를 중단하기 전에 더 낮은 병렬 처리 수준이 가능한지 확인합니다. 예를 들어 뷰에서 클러스터형 인덱스를 만드는 경우 클러스터형 인덱스가 아직 생성되지 않았으므로 배포 통계를 계산할 수 없습니다. 이 경우 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 이 인덱스 작업에는 가장 높은 병렬 처리 수준을 할당하지 않습니다. 그러나 이 경우에도 정렬 또는 검색과 같은 일부 연산자에는 병렬 처리의 이점이 적용될 수 있습니다.
 
 > [!NOTE]
 > 병렬 인덱스 작업은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise, Developer 및 Evaluation Edition에서만 사용할 수 있습니다.
@@ -963,11 +966,23 @@ WHERE ProductID = 63;
 정적 커서 및 키 집합 커서는 병렬 실행 계획에 따라 채워질 수 있습니다. 그러나 동적 커서의 동작은 직렬 실행에 의해서만 제공될 수 있습니다. 쿼리 최적화 프로그램은 동적 커서에 포함된 쿼리에 대해서는 항상 직렬 실행 계획을 생성합니다.
 
 #### <a name="overriding-degrees-of-parallelism"></a>병렬 처리 수준 재정의
-MAXDOP([최대 병렬 처리 수준](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)) 서버 구성 옵션([!INCLUDE[ssSDS_md](../includes/sssds-md.md)]에서 [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md))을 사용하여 병렬 계획 실행에 사용할 프로세서 수를 제한할 수 있습니다. 개별 쿼리 및 인덱스 작업 문에 대한 max degree of parallelism 옵션은 MAXDOP 쿼리 힌트나 MAXDOP 인덱스 옵션을 지정하여 재정의할 수 있습니다. MAXDOP 옵션을 사용하면 개별 쿼리 작업과 인덱스 작업을 보다 상세히 제어할 수 있습니다. 예를 들어 MAXDOP 옵션을 사용하여 온라인 인덱스 작업 전용으로 사용되는 프로세서의 수를 늘리거나 줄일 수 있습니다. 이런 방법으로 인덱스 작업에 사용되는 리소스와 동시 사용자의 리소스 간에 균형을 유지할 수 있습니다. 
+병렬 처리 수준은 병렬 계획 실행에 사용할 프로세서 수를 설정합니다. 이 구성은 다음과 같은 여러 수준에서 설정할 수 있습니다.
+
+1.  서버 수준, **최대 병렬 처리 수준(MAXDOP)** [서버 구성 옵션](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 사용</br> **적용 대상:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+
+    > [!NOTE]
+    > [!INCLUDE [sssqlv15-md](../includes/sssqlv15-md.md)]에서는 설치하는 동안 MAXDOP 서버 구성 옵션을 설정하기 위한 자동 권장 사항이 도입되었습니다. 설정 사용자 인터페이스를 사용하여 권장 설정을 적용하거나 사용자 고유 값을 입력할 수 있습니다. 자세한 내용은 [데이터베이스 엔진 구성 - MaxDOP 페이지](../sql-server/install/instance-configuration.md#maxdop)를 참조하세요.
+
+2.  워크로드 수준, **MAX_DOP** [Resource Governor 작업 그룹 구성 옵션](../t-sql/statements/create-workload-group-transact-sql.md) 사용</br> **적용 대상:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+
+3.  데이터베이스 수준, **MAXDOP** [데이터베이스 범위 구성](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 사용</br> **적용 대상:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 
+
+4.  쿼리 또는 인덱스 문 수준, **MAXDOP** [쿼리 힌트](../t-sql/queries/hints-transact-sql-query.md) 또는 **MAXDOP** 인덱스 옵션 사용. 예를 들어 MAXDOP 옵션을 사용하여 온라인 인덱스 작업 전용으로 사용되는 프로세서의 수를 늘리거나 줄일 수 있습니다. 이런 방법으로 인덱스 작업에 사용되는 리소스와 동시 사용자의 리소스 간에 균형을 유지할 수 있습니다.</br> **적용 대상:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 
 
 최대 병렬 처리 수준 옵션을 0(기본값)으로 설정하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용 가능한 모든 프로세서(최대 64개)를 병렬 계획 실행에 사용할 수 있습니다. MAXDOP 옵션을 0으로 설정하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 64개 논리적 프로세서의 런타임 대상을 설정해도 필요한 경우 다른 값을 수동으로 설정할 수 있습니다. 쿼리와 인덱스에 대해 MAXDOP를 0으로 설정하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용 가능한 모든 프로세서(최대 64개)를 병렬 계획 실행의 지정된 쿼리 또는 인덱스에 대해 사용할 수 있습니다. MAXDOP는 일부 병렬 쿼리에만 적용되는 값이나 병렬 처리에 적합한 모든 쿼리의 미정 대상입니다. 즉, 런타임에 사용할 수 있는 작업자 스레드가 충분하지 않은 경우 MAXDOP 서버 구성 옵션보다 낮은 병렬 처리 수준으로 쿼리를 실행할 수 있습니다.
 
-MAXDOP 구성에 대한 모범 사례는 이 [Microsoft 지원 문서](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server)를 참조하십시오.
+> [!TIP]
+> MAXDOP 구성에 대한 지침은 [설명서 페이지](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)를 참조하세요.
 
 ### <a name="parallel-query-example"></a>병렬 쿼리 예제
 다음 쿼리에서는 2000년 4월 1일에 시작하는 특정 분기 동안의 주문 수를 계산합니다. 이 기간 동안에는 최소한 한 개의 주문 상품이 약속한 날짜보다 늦게 고객에게 배달되었습니다. 이 쿼리는 각 주문 우선 순위에 따라 그룹화되고 우선 순위를 오름차순으로 정렬하여 각 주문의 수를 표시합니다. 

@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: e8acc3ef73c51ccbbf195f9d18dc5f12d661931f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: fd41b851ac7240ded3b0508f0bfd45fad0377c27
+ms.sourcegitcommit: d876425e5c465ee659dd54e7359cda0d993cbe86
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75226739"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77568076"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT(Transact-SQL)  
 
@@ -50,7 +50,7 @@ ms.locfileid: "75226739"
 
 이 문서에서는 솔루션 개발을 위한 Azure SQL Data Warehouse의 CREATE MATERIALIZED VIEW AS SELECT T-SQL 문에 대해 설명합니다. 코드 예제도 제공합니다.
 
-구체화된 뷰는 뷰 정의 쿼리에서 반환되는 데이터를 유지하고 기본 테이블에서 데이터가 변경될 때 자동으로 업데이트됩니다.   간단한 유지 관리 작업을 제공하면서 복잡한 쿼리(일반적으로 조인 및 집계를 사용한 쿼리)의 성능을 향상시킵니다.   실행 계획 자동 일치 기능을 사용할 경우 최적화 프로그램에서 뷰의 대체를 고려할 때 쿼리에서 구체화된 뷰를 참조할 필요가 없습니다.  따라서 데이터 엔지니어는 쿼리를 변경하지 않고도 구체화된 뷰를 쿼리 응답 시간을 개선하기 위한 메커니즘으로 구현할 수 있습니다.  
+구체화된 뷰는 뷰 정의 쿼리에서 반환되는 데이터를 유지하고 기본 테이블에서 데이터가 변경될 때 자동으로 업데이트됩니다.   간단한 유지 관리 작업을 제공하면서 복잡한 쿼리(일반적으로 조인 및 집계를 사용한 쿼리)의 성능을 향상시킵니다.   실행 계획 자동 일치 기능을 사용할 경우 최적화 프로그램에서 뷰의 대체를 고려할 때 쿼리에서 구체화된 뷰를 참조할 필요가 없습니다.  이 기능을 통해 데이터 엔지니어는 쿼리를 변경하지 않고도 쿼리 응답 시간을 개선하기 위한 메커니즘으로 구체화된 뷰를 구현할 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -108,22 +108,26 @@ MIN/MAX 집계가 구체화된 뷰 정의의 SELECT 목록에 사용될 경우 �
   
 ## <a name="remarks"></a>설명
 
-Azure Data Warehouse의 구체화된 뷰는 SQL Server의 인덱싱된 뷰와 매우 비슷합니다.  구체화된 뷰는 집계 함수를 지원한다는 점을 제외하고, 인덱싱된 뷰와 거의 같은 제한을 공유합니다([인덱싱된 뷰 만들기](/sql/relational-databases/views/create-indexed-views)에서 자세한 내용 참조).   구체화된 뷰에 대한 추가 고려 사항은 다음과 같습니다.  
- 
+Azure Data Warehouse의 구체화된 뷰는 SQL Server의 인덱싱된 뷰와 비슷합니다.  구체화된 뷰는 집계 함수를 지원한다는 점을 제외하고, 인덱싱된 뷰와 거의 같은 제한을 공유합니다([인덱싱된 뷰 만들기](/sql/relational-databases/views/create-indexed-views)에서 자세한 내용 참조).   
+
 구체화된 뷰는 CLUSTERED COLUMNSTORE INDEX만 지원합니다. 
 
 구체화된 뷰는 다른 뷰를 참조할 수 없습니다.  
- 
-구체화된 뷰는 분할된 테이블에서 만들 수 있습니다.  SPLIT/MERGE 작업은 구체화된 뷰에서 참조되는 테이블에서 지원됩니다.  SWITCH는 구체화된 뷰에서 참조되는 테이블에서 지원되지 않습니다. 사용하려고 하면 오류 `Msg 106104, Level 16, State 1, Line 9`이 표시됩니다.
+
+DDM 열이 구체화된 뷰의 일부가 아닌 경우에도 DDM(동적 데이터 마스킹)이 포함된 테이블에는 구체화된 뷰를 만들 수 없습니다.  테이블 열이 활성 구체화된 뷰 또는 사용할 수 없는 구체화된 뷰의 일부인 경우 이 열에는 DDM을 추가할 수 없습니다.  
+
+행 수준 보안이 사용되는 테이블에는 구체화된 뷰를 만들 수 없습니다.
+
+구체화된 뷰는 분할된 테이블에서 만들 수 있습니다.  구체화된 뷰 기본 테이블에서 파티션 분할/병합은 지원되고 파티션 전환은 지원되지 않습니다.  
  
 ALTER TABLE SWITCH는 구체화된 뷰에서 참조되는 테이블에서 지원되지 않습니다. ALTER TABLE SWITCH를 사용하기 전에 구체화된 뷰를 사용하지 않도록 설정하거나 삭제합니다. 다음 시나리오에서 구체화된 뷰를 만들려면 새 열을 구체화된 뷰에 추가해야 합니다.
 
 |시나리오|구체화된 뷰에 추가할 새 열|주석|  
 |-----------------|---------------|-----------------|
 |COUNT_BIG()이 구체화된 뷰 정의의 SELECT 목록에 없습니다.| COUNT_BIG (*) |구체화된 뷰를 만들면 자동으로 추가됩니다.  추가적인 조치가 필요하지 않습니다.|
-|사용자가 구체화된 뷰 정의의 SELECT 목록에서 SUM(a)을 지정하며, 'a'는 null 허용 가능 식입니다. |COUNT_BIG (a) |사용자가 구체화된 뷰 정의에서 수동으로 식 'a'를 추가해야 합니다.|
-|사용자가 구체화된 뷰 정의의 SELECT 목록에서 AVG(a)를 지정합니다. 여기서 'a'는 식입니다.|SUM(a), COUNT_BIG(a)|구체화된 뷰를 만들면 자동으로 추가됩니다.  추가적인 조치가 필요하지 않습니다.|
-|사용자가 구체화된 뷰 정의의 SELECT 목록에서 STDEV(a)를 지정합니다. 여기서 'a'는 식입니다.|SUM(a), COUNT_BIG(a), SUM(square(a))|구체화된 뷰를 만들면 자동으로 추가됩니다.  추가적인 조치가 필요하지 않습니다. |
+|사용자가 구체화된 뷰 정의의 SELECT 목록에서 SUM(a)을 지정하며, ‘a’는 null 허용 식입니다. |COUNT_BIG (a) |사용자가 구체화된 뷰 정의에서 수동으로 식 'a'를 추가해야 합니다.|
+|사용자가 구체화된 뷰 정의의 SELECT 목록에서 AVG(a)를 지정합니다. 여기서 ‘a’는 식입니다.|SUM(a), COUNT_BIG(a)|구체화된 뷰를 만들면 자동으로 추가됩니다.  추가적인 조치가 필요하지 않습니다.|
+|사용자가 구체화된 뷰 정의의 SELECT 목록에서 STDEV(a)를 지정합니다. 여기서 ‘a’는 식입니다.|SUM(a), COUNT_BIG(a), SUM(square(a))|구체화된 뷰를 만들면 자동으로 추가됩니다.  추가적인 조치가 필요하지 않습니다. |
 | | | |
 
 만들고 나면, 구체화된 뷰는 Azure SQL Data Warehouse 인스턴스의 뷰 폴더 아래에 있는 SQL Server Management Studio 내에 표시됩니다.

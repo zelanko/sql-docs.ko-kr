@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 563f984ed5aa401ae67572ad0f915698286f0aa4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c50eee13c4831bfb8d3830da6dbd20b9efc64298
+ms.sourcegitcommit: d876425e5c465ee659dd54e7359cda0d993cbe86
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75329955"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77568086"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Integration Services에 대한 Azure 기능 팩(SSIS)
 
@@ -191,8 +191,17 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
  Azure Blob 열거자에서 Foreach 루프 컨테이너를 사용하여 다중 blob 파일의 데이터를 처리합니다.
 
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
-  
+
 ## <a name="release-notes"></a>릴리스 정보
+
+### <a name="version-1170"></a>버전 1.17.0
+
+SQL Server 2019에 대해서만 릴리스된 핫픽스 버전입니다.
+
+#### <a name="bugfixes"></a>버그 수정
+
+1. Visual Studio 2019에서 SQL Server 2019를 대상으로 실행하는 경우 유연한 파일 작업/원본/대상이 실패하고 다음 오류 메시지가 표시될 수 있습니다. `Attempted to access an element as a type incompatible with the array.`
+1. Visual Studio 2019에서 SQL Server 2019를 대상으로 실행하는 경우 ORC/Parquet 형식을 사용한 유연한 파일 원본/대상이 실패하고 다음 오류 메시지가 표시될 수 있습니다. `Microsoft.DataTransfer.Common.Shared.HybridDeliveryException: An unknown error occurred. JNI.JavaExceptionCheckException.`
 
 ### <a name="version-1160"></a>버전 1.16.0
 
