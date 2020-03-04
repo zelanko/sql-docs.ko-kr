@@ -1860,7 +1860,7 @@
           href: relational-databases/user-defined-functions/rename-user-defined-functions.md
         - name: 보기
           href: relational-databases/user-defined-functions/view-user-defined-functions.md
-    - name: 뷰
+    - name: 보기
       href: relational-databases/views/views.md
       items:
         - name: 생성
@@ -3471,7 +3471,7 @@
               href: relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-triggers.md
             - name: 사용자 정의 함수
               href: relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-user-defined-functions.md
-            - name: 뷰
+            - name: 보기
               href: relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-views.md
             - name: 사용 권한
               href: relational-databases/server-management-objects-smo/tasks/granting-revoking-and-denying-permissions.md
@@ -8521,7 +8521,7 @@
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
                     - name: 데이터베이스 엔진 쿼리 편집기
-                      href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
+                      href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
                     - name: XML 편집기
                       href: ssms/scripting/xml-editor-sql-server-management-studio.md
                     - name: 쿼리 편집기에서 코드 색상 지정

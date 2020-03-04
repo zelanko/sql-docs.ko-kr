@@ -12,12 +12,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 15d27881378a88c8f4ae6d65640be6218ecd3530
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 15049436b0d1769361ae1cfc47b52bfb503ba763
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632760"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256883"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-sql)
 
@@ -44,10 +44,26 @@ ms.locfileid: "73632760"
 |group_name|**sysname** |리소스를 활용 하는 요청의 경우 group_name은 요청을 실행 중인 작업 그룹의 이름입니다.  요청에서 리소스를 사용 하지 않는 경우 group_name은 null입니다.</br>적용 대상: Azure SQL Data Warehouse|
 |classifier_name|**sysname**|리소스를 활용 하는 요청의 경우 리소스 및 중요도를 할당 하는 데 사용 되는 분류자의 이름입니다.||
 |resource_allocation_percentage|**decimal (5, 2)**|요청에 할당 된 리소스의 비율입니다.</br>적용 대상: Azure SQL Data Warehouse|
-|result_set_cache|**bit**|완료 된 쿼리가 결과 캐시 적중 (1) 되었는지 아니면 그렇지 않은지 (0)에 대해 자세히 설명 합니다. </br>적용 대상: Azure SQL Data Warehouse|0, 1|
+|result_set_cache|**bit**|완료 된 쿼리가 결과 집합 캐시를 사용 했는지 여부를 자세히 나타냅니다.  </br>적용 대상: Azure SQL Data Warehouse| 1 = 결과 집합 캐시 적중 </br> 0 = 결과 집합 캐시 누락 </br> 음수 값 = 결과 집합 캐싱이 사용 되지 않은 이유입니다.  자세한 내용은 설명 부분을 참조 하세요.|
 ||||
   
+## <a name="remarks"></a>설명 
  이 보기에 의해 유지 되는 최대 행에 대 한 자세한 내용은 [용량 제한](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) 항목에서 메타 데이터 섹션을 참조 하세요.
+
+ Result_set_cache은 쿼리의 결과 집합 캐시 사용에 대 한 비트 마스크입니다.  이 열은 [| (비트 or)](../../t-sql/language-elements/bitwise-or-transact-sql.md) 다음 값 중 하나 이상의 곱입니다.  
+  
+|값|Description|  
+|-----------|-----------------|  
+|**1**|결과 집합 캐시 적중|  
+|-**0x00**|결과 집합 캐시 누락|  
+|-**0x01**|데이터베이스에서 결과 집합 캐싱이 사용 되지 않습니다.|  
+|-**제외한**|세션에서 결과 집합 캐싱이 사용 되지 않습니다. | 
+|-**0x04**|쿼리의 데이터 원본이 없기 때문에 결과 집합 캐싱이 사용 하지 않도록 설정 되었습니다.|  
+|-**0x08**|행 수준 보안 조건자로 인해 결과 집합 캐싱이 사용 하지 않도록 설정 되었습니다.|  
+|-**10**|쿼리에서 시스템 테이블, 임시 테이블 또는 외부 테이블을 사용 하 여 결과 집합 캐싱을 사용할 수 없습니다.|  
+|-**0x20**|쿼리는 런타임 상수, 사용자 정의 함수 또는 비 결정적인 함수를 포함 하기 때문에 결과 집합 캐싱을 사용할 수 없습니다.|  
+|-**0x40**|예상 결과 집합 크기가 너무 커서 (> 100만 행) 인해 결과 집합 캐싱이 사용 하지 않도록 설정 되었습니다.|  
+|-**0x80**|결과 집합에 크기가 큰 행 (>64kb)이 포함 되어 있으므로 결과 집합 캐싱이 사용 되지 않습니다.|  
   
 ## <a name="permissions"></a>사용 권한
 

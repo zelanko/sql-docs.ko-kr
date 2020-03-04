@@ -1,24 +1,40 @@
 ---
 title: D b 2 용 SSMA의 새로운 기능 (DB2ToSQL) | Microsoft Docs
+authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 01/22/2020
+ms.date: 3/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
-author: HJToland3
-ms.author: Shamikg
-ms.openlocfilehash: 9b4fc1f9d0ce1128306f27a5f7bf6658377528cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.author: jtoland;alexiva
+ms.openlocfilehash: 4ddcdb42d7d474b10e9cadd798d1feb4c429161b
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76516571"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256839"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>D b 2 용 SSMA의 새로운 기능 (DB2ToSQL)
 
 이 문서에서는 각 릴리스의 DB2 변경에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
+
+## <a name="ssma-v87"></a>SSMA v 8.7
+
+D b 2 용 SSMA의 v2.0 릴리스에는 새 DB2 구문 파서 뿐만 아니라 그래픽 사용자 인터페이스의 사소한 수정 및 성능 향상이 포함 되어 있습니다.
+
+또한 d b 2 용 SSMA는 이제 다음을 제공 합니다.
+
+* LUW의 DB2에서 마이그레이션할 때 외래 키 검색에 대 한 수정 사항입니다.
+* `SELECT ... FOR UPDATE` 문의 변환이 개선 되었습니다.
+* MQ 테이블의 `COUNT` 함수에 대 한 변환 기능이 향상 되었습니다.
+* `SAVEPOINT` 문을 변환 합니다.
+* 절에서 `ORDER BY` 값에 대 한 `NULL` DB2's 동작을 에뮬레이트하는 변환입니다.
+* RESULT SET 문 연결에 대 한 구문 분석 지원.
+
+> [!IMPORTANT]
+> SSMA v 8.5 이상에서 .NET 4.7.2는 설치 필수 구성 요소입니다. 이 버전을 설치 해야 하는 경우 [여기](https://dotnet.microsoft.com/download/dotnet-framework/net472)에서 런타임 파일을 다운로드할 수 있습니다.
 
 ## <a name="ssma-v86"></a>SSMA v 8.6
 
@@ -30,12 +46,12 @@ ms.locfileid: "76516571"
 
 또한 d b 2 용 SSMA는 이제 다음을 제공 합니다.
 
--   기본 인수 값을 사용 하는 함수 변환에 대 한 수정
--   매개 변수 절에서 함수의 구문 분석 기능이 향상 되었습니다.
-- LEAVE 문을 변환할 수 있는 권한입니다.
+* 기본 인수 값을 사용 하는 함수 변환에 대 한 수정입니다.
+* 함수의 `PARAMETER` 절 구문 분석 기능이 향상 되었습니다.
+* `LEAVE` 문을 변환 하는 기능입니다.
 
 > [!IMPORTANT]
-> SSMA v 8.5 이상에서 .Net 4.7.2는 설치 필수 구성 요소입니다. 이 버전을 설치 해야 하는 경우 [여기](https://dotnet.microsoft.com/download/dotnet-framework/net472)에서 런타임 파일을 다운로드할 수 있습니다.
+> SSMA v 8.5 이상에서 .NET 4.7.2는 설치 필수 구성 요소입니다. 이 버전을 설치 해야 하는 경우 [여기](https://dotnet.microsoft.com/download/dotnet-framework/net472)에서 런타임 파일을 다운로드할 수 있습니다.
 
 ## <a name="ssma-v85"></a>SSMA v 8.5
 
@@ -43,40 +59,40 @@ D b 2 용 SSMA의 v 8.5 릴리스는 유용성 및 성능을 향상 시 키도 �
 
 또한 DB2 용 SSMA는 다음과 같이 향상 되었습니다.
 
-* ROW_NUMBER를 사용 하 여 GET 진단 문에 대 한 변환 추가를 지원 합니다.
+* `GET DIAGNOSTICS` 문을 사용 하 여 `ROW_NUMBER`변환 추가를 지원 합니다.
 * 개체 이름 시작 부분에 있는 공백과 관련 된 버그에 대 한 수정 사항이 적용 되지 않습니다.
 
 > [!IMPORTANT]
-> SSMA v 8.5를 사용 하는 경우 .Net 4.7.2 설치 필수 구성 요소입니다. 이 버전을 설치 해야 하는 경우 [여기](https://dotnet.microsoft.com/download/dotnet-framework/net472)에서 런타임 파일을 다운로드할 수 있습니다.
+> SSMA v 8.5를 사용 하는 경우 .NET 4.7.2 설치 필수 구성 요소입니다. 이 버전을 설치 해야 하는 경우 [여기](https://dotnet.microsoft.com/download/dotnet-framework/net472)에서 런타임 파일을 다운로드할 수 있습니다.
 
 ## <a name="ssma-v84"></a>SSMA v 8.4
 
 D b 2 용 SSMA 릴리스는 SQL Server 2016 이상 버전에 대 한 액세스 가능성 문제를 해결 하 고 max index 열 (16 대신 32을 허용 하도록)과 관련 된 버그를 수정 하도록 설계 된 대상 수정으로 향상 되었습니다.
 
 > [!IMPORTANT]
-> SSMA 버전 7.4 (8.4)을 사용 하 여 .Net 4.5.2는 설치 필수 구성 요소입니다.
+> SSMA 버전 7.4 (8.4)을 사용 하 여 .NET 4.5.2는 설치 필수 구성 요소입니다.
 
 ## <a name="ssma-v83"></a>SSMA v 8.3
 
 D b 2 용 SSMA의 v2.0 릴리스는 품질 및 변환 메트릭을 향상 시 키도 록 설계 된 대상 수정 기능으로 향상 되었습니다. 또한 d b 2 용 SSMA 릴리스는 다음과 같은 수정 사항을 제공 합니다.
 
-* 접근성 문제 해결
-* SQL Server에서 ' hierarchyid ' 형식에 대 한 기본 지원 추가
-* Z/OS 검색 쿼리에서 TRIM 함수 사용을 RTRIM/LTRIM으로 바꾸기
-* 사용자가 "표준 모드" (기본값은 NULLID)에서 연결할 때 패키지 컬렉션을 지정 하도록 허용
-* CREATE TABLE에 대 한 변환을 SELECT로 추가
-* 전역 임시 테이블에 대 한 변환 향상
+* 접근성 문제를 해결 합니다.
+* SQL Server 형식에 대 `hierarchyid` 한 기본 지원을 추가 합니다.
+* Z/OS 검색 쿼리에서 TRIM 함수 사용을로 `RTRIM` / `LTRIM`바꿉니다.
+* 사용자가 ' 표준 모드 '에서 연결할 때 패키지 컬렉션을 지정할 수 있도록 허용 `NULLID`합니다 (기본값).
+* 에 대 한 `CREATE TABLE AS SELECT`변환을 추가 합니다.
+* 전역 임시 테이블의 변환을 향상 시킵니다.
 * 이름이 충돌 하는 경우 제약 조건에 대 한 테이블의 우선 순위를 지정 하기 위해 개체 고유성 검사의 문제를 해결 합니다.
-* Z/OS의 날짜 및 타임 스탬프에 대 한 기본 열 값 로드와 관련 된 문제 해결
-* 유니코드 줄 바꿈 문자 (NEL 라고도 함)를 지원 합니다.
-* 누락 된 RETURN TO 절을 사용한 커서 변환 문제 해결
-* 레이블 및 GOTO에 대 한 지원 추가
+* Z/OS의 및 `DATE` `TIMESTAMP` 에 대 한 기본 열 값 로드 문제를 해결 합니다.
+* 유니코드 줄 바꿈 문자 (라고도 함 `NEL`)를 지원 합니다.
+* 누락 `RETURN TO` 된 절이 있는 커서 변환 문제를 해결 합니다.
+* 레이블 및 `GOTO`에 대 한 지원을 추가 합니다.
 
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
 D b 2 용 SSMA의 v 8.2 릴리스는로 향상 되어, SSMA 콘솔 도구에서 Azure SQL Database에 대 한 연결 문제를 해결 하 고, 변환 하는 동안 보기 선언에 COUNT_BIG 열이 누락 되었습니다. 또한이 버전에는 품질 및 변환 메트릭을 개선 하기 위해 설계 된 수정 내용 집합 뿐만 아니라에 대 한 수정 프로그램도 포함 됩니다.
 
-* 데이터 마이그레이션 후 비활성화 된 비클러스터형 인덱스에 문제가 있습니다.
+* 데이터 마이그레이션 후 사용 하지 않도록 설정 된 비클러스터형 인덱스에 문제가 있습니다.
 * 자동 설치 중에 .NET Framework를 검색 합니다.
 * 새 버전이 다운로드 될 때 발생 하는 일시적인 충돌입니다.
 
@@ -111,7 +127,7 @@ D b 2 용 SSMA 릴리스는 품질 및 변환 메트릭을 개선 하기 위해 
 D b 2 용 SSMA의 v 7.10 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
 
 * 글로벌 요구 사항에 대 한 변경 내용을 충족 하기 위해 추가 보안 및 개인 정보 보호를 제공 하도록 설계 된 대상 수정
-* BEGIN END 블록의 변환에 대 한 수정입니다.
+* 블록의 `BEGIN-END` 변환에 대 한 수정입니다.
 
 ## <a name="ssma-v79"></a>SSMA v 7.9
 
@@ -126,7 +142,7 @@ D b 2 용 SSMA의 v 7.9 릴리스에는 다음과 같은 변경 내용이 포함
 
 D b 2 용 SSMA의 v 7.8 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
 
-* 프로젝트 설정에서 강조 표시 된 형식 매핑을 변경 합니다.
+* *프로젝트 설정*에서 강조 표시 된 형식 매핑을 변경 합니다.
 * 사용자가 원격 분석을 사용 하지 않도록 설정할 수 있는 기능입니다.
 
 ## <a name="ssma-v77"></a>SSMA v 7.7
@@ -155,7 +171,7 @@ D b 2 용 SSMA의 v 7.4 릴리스에는 다음과 같은 변경 내용이 포함
 * 사용자 의견에 따라 대상 수정으로 품질 및 변환 메트릭이 개선 되었습니다.
 
   > [!IMPORTANT]
-  > .Net 4.5.2은 SSMA v 7.4를 설치 하기 위한 필수 구성 요소입니다. 또한 v 7.4부터 SSMA의 32 비트 버전이 더 이상 사용 되지 않습니다.
+  > .NET 4.5.2은 SSMA v 7.4를 설치 하기 위한 필수 구성 요소입니다. 또한 v 7.4부터 SSMA의 32 비트 버전이 더 이상 사용 되지 않습니다.
 
 ## <a name="ssma-v73"></a>SSMA v 7.3
 
@@ -189,17 +205,17 @@ D b 2 용 SSMA의 v 7.1 릴리스에는 다음과 같은 변경 내용이 포함
 
 ## <a name="may-2016"></a>2016년 5월
 
-D b 2 용 SSMA 릴리스 2016 릴리스는 다음과 같은 변경 내용을 포함 하 고 있습니다.  
+D b 2 용 SSMA 릴리스 2016 릴리스는 다음과 같은 변경 내용을 포함 하 고 있습니다.
 
 * SQL Server 2016에 대 한 지원이 추가 되었습니다.
 * DB2 메모리 내 및 일반 테이블의 변환이 추가 되어 메모리 내 및 hekaton 기능을 SQL Server.
 * Db2 액세스 제어를 SQL Server 정책 개체 (DB2 용 행 수준 보안)로 변환 했습니다.
 * DB2 시스템 버전 관리 테이블을 SQL Server 임시 테이블로 변환 했습니다.
 * DB2 파서 및 해결 프로그램을 개선 했습니다.
-* .Net 2.0에 대 한 설치 관리자 검사가 제거 되었습니다.
-* Db2 설치 관리자에서 불필요 한 * .dll을 제거 했습니다.
-* SSMA 콘솔에 대 한 "프로젝트 저장" 및 "프로젝트 열기" 명령을 수정 했습니다.
-* SSMA 콘솔에 대 한 "securepassword" 명령을 수정 했습니다.
+* .NET 2.0에 대 한 설치 관리자 검사가 제거 되었습니다.
+* Db2 설치 \*관리자에서 불필요 한 .dll을 제거 했습니다.
+* SSMA `open-project` 콘솔에 대 한 및 명령이 수정 `save-project` 되었습니다.
+* SSMA 콘솔에 대 한 고정 `securepassword` 명령입니다.
 * 초기 로드에 대 한 개체 계산을 수정 했습니다.
 * 전역 설정에서 버그가 수정 되었습니다.
   
@@ -209,13 +225,13 @@ D b 2 용 SSMA의 2016 preview 릴리스는 SQL Server 2016로 마이그레이�
 
 ## <a name="january-2016"></a>2016년 1월
 
-D b 2 용 SSMA의 1 월 2016 유지 관리 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.  
+D b 2 용 SSMA의 1 월 2016 유지 관리 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
   
-* 여러 표준 함수에 대 한 지원이 추가 되었습니다.  
-* DB2 파서 오류가 수정 되었습니다.  
-* DB2 v9 zOS 지원 (RFC 5690920)을 수정 했습니다.  
-* 변환 하는 동안 d b 2의 확인 되지 않은 식별자 오류가 수정 되었습니다.  
-* SSMA에 보기 로그 메뉴 항목을 추가 했습니다 (RFC 5706203).  
+* 여러 표준 함수에 대 한 지원이 추가 되었습니다.
+* DB2 파서 오류가 수정 되었습니다.
+* DB2 v9 zOS 지원 (RFC 5690920)을 수정 했습니다.
+* 변환 하는 동안 d b 2의 확인 되지 않은 식별자 오류가 수정 되었습니다.
+* SSMA에 보기 로그 메뉴 항목을 추가 했습니다 (RFC 5706203).
 * 원격 분석 추가.
   
 ## <a name="november-2014"></a>2014년 11월
