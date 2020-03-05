@@ -10,12 +10,12 @@ ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd7fed6fff4ddd55ef56e4c5b342c56b6c2f462f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: af3f08bcde8b2a325784ef7a99ba5ffad89ce617
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632793"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288989"
 ---
 # <a name="start-sql-server-management-studio"></a>SQL Server Management Studio 시작
   이 자습서를 시작하기 전에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 간단히 살펴봅니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "73632793"
     > [!NOTE]  
     >  기본적으로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 설치되지 않습니다. 
   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용할 수 없으면 설치 프로그램을 실행하여 설치합니다. 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]에서 사용할 수 없습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Express는 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=7593)에서 무료로 다운로드할 수 있지만이 자습서에 설명 된 것과 다른 사용자 인터페이스가 있습니다.  
+  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]에서 사용할 수 없습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Express는 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=14630)에서 무료로 다운로드할 수 있지만이 자습서에 설명 된 것과 다른 사용자 인터페이스가 있습니다.  
   
 2.  
   **서버에 연결** 대화 상자에서 기본 설정을 확인한 다음 **연결**을 클릭합니다. 연결 하려면 **서버 이름** 상자에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치 된 컴퓨터의 이름을 포함 해야 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 명명 된 인스턴스인 경우 **서버 이름** 상자에 \< *computer_name*>\\<*instance_name*> 형식의 인스턴스 이름도 포함 되어야 합니다.  

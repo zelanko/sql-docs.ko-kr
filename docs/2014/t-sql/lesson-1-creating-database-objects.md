@@ -10,19 +10,19 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 90780c16c2ba4b94b4e4a88c6f2c249176ef072b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a1c05ed678fd0c23fc00466396f306763dfbc54b
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632710"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280921"
 ---
 # <a name="lesson-1-creating-database-objects"></a>1단원: 데이터베이스 개체 만들기
   이 단원에서는 데이터베이스를 만들고 데이터베이스에서 테이블을 만든 다음 테이블의 데이터에 액세스 및 변경하는 방법에 대해 보여 줍니다. 이 단원은 [!INCLUDE[tsql](../includes/tsql-md.md)]사용을 소개하는 데 목적이 있으므로 이러한 문에 사용 가능한 많은 옵션을 사용하거나 설명하지는 않습니다.  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 다음과 같은 방법으로 작성하여 [!INCLUDE[ssDE](../includes/ssde-md.md)] 에 제출할 수 있습니다.  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]사용. 이 자습서에서는 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]를 사용한다고 가정하지만 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Microsoft 다운로드 센터 [에서 무료로 다운로드할 수 있는](https://www.microsoft.com/download/details.aspx?id=7593)Express를 사용할 수도 있습니다.  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]사용. 이 자습서에서는 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]를 사용한다고 가정하지만 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Microsoft 다운로드 센터 [에서 무료로 다운로드할 수 있는](https://www.microsoft.com/download/details.aspx?id=14630)Express를 사용할 수도 있습니다.  
   
 -   [sqlcmd 유틸리티](../tools/sqlcmd-utility.md)사용  
   
