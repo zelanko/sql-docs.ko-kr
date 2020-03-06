@@ -39,11 +39,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
-ms.translationtype: HT
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68742841"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339451"
 ---
 # <a name="database-level-roles"></a>데이터베이스 수준 역할
 
@@ -86,7 +86,7 @@ ms.locfileid: "68742841"
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
-## <a name="special-roles-for-includesssds_mdincludessssds-mdmd-and-includesssdw_mdincludessssdw-mdmd"></a>[!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]의 특수 역할
+## <a name="special-roles-for-sssds_md-and-sssdw_md"></a>[!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]의 특수 역할
 
 이러한 데이터베이스 역할은 가상 master 데이터베이스에만 존재합니다. 해당 권한은 master에서 수행된 작업으로 제한됩니다. master에서 데이터베이스 사용자만 이러한 역할에 추가할 수 있습니다. 이 역할에는 로그인을 추가할 수 없습니다. 하지만 로그인을 기반으로 사용자를 만들어 해당 사용자를 역할에 추가할 수는 있습니다. 마스터에서 포함된 데이터베이스 사용자도 역할에 추가할 수 있습니다. 그러나 마스터의 **dbmanager** 역할에 추가되는 포함된 데이터베이스 사용자를 사용하여 새 데이터베이스를 만들 수 없습니다.
 

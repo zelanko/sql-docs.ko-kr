@@ -11,11 +11,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8874d4c57e2fb7b94e4efac44c90e93865d2b40f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72798342"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339224"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>Install Reporting Services SharePoint Mode for SharePoint 2013
   이 항목의 절차에서는 SharePoint 배포 모드에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 단일 서버 설치 과정을 안내합니다. 이 단계에는 SharePoint 중앙 관리를 사용하는 구성 태스크 및 SQL Server 설치 마법사의 실행이 포합됩니다. 
@@ -63,8 +63,8 @@ ms.locfileid: "72798342"
 |**(1**|SQL Server와 함께 설치되는 SharePoint 서비스입니다. 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 하나 이상 만들 수 있습니다.|  
 |**fs**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint 제품용 추가 기능은 SharePoint 서버에 사용자 인터페이스 구성 요소를 제공 합니다.|  
-|**(3)**|Excel Services 애플리케이션은 Power View 및 PowerPivot에서 사용됩니다.|  
-|**(4)**|PowerPivot 서비스 애플리케이션입니다.|  
+|**3**|Excel Services 애플리케이션은 Power View 및 PowerPivot에서 사용됩니다.|  
+|**3-4**|PowerPivot 서비스 애플리케이션입니다.|  
   
  ![SSRS SharePoint 모든 단일 서버 배포](../../../2014/sql-server/install/media/rs-sharepoint-1server-deployment.gif "SSRS SharePoint 모든 단일 서버 배포")  
   
@@ -132,7 +132,7 @@ ms.locfileid: "72798342"
   
     -   **SharePoint 제품용 추가 기능을 Reporting Services**합니다.  
   
-         ![참고](../../../2014/reporting-services/media/rs-fyinote.png "note") 추가 기능을 설치 하는 설치 마법사 옵션은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 릴리스의 새로운 기능입니다.  
+         ![참고](../../../2014/reporting-services/media/rs-fyinote.png "참고") 추가 기능을 설치 하는 설치 마법사 옵션은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 릴리스의 새로운 기능입니다.  
   
     -   아직 SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인스턴스가 없는 경우 전체 환경에 대해 **데이터베이스 엔진 서비스** 및 **관리 도구 전체** 를 선택할 수 있습니다.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "72798342"
   
 12. 데이터베이스 엔진 서비스를 선택한 경우 **인스턴스 구성** 페이지에서 **MSSQLSERVER** 의 기본 인스턴스를 적용하고 **다음**을 클릭합니다.  
   
-     ![참고](../../../2014/reporting-services/media/rs-fyinote.png "note") Reporting Services SharePoint 서비스 아키텍처는 이전 Reporting Services 아키텍처와 같이 SQL Server "인스턴스"를 기반으로 하지 않습니다.  
+     ![참고](../../../2014/reporting-services/media/rs-fyinote.png "참고") Reporting Services SharePoint 서비스 아키텍처는 이전 Reporting Services 아키텍처와 같이 SQL Server "인스턴스"를 기반으로 하지 않습니다.  
   
 13. 
   **디스크 공간 요구 사항** 페이지를 검토하고 **다음**을 클릭합니다.  
@@ -422,7 +422,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
  이 섹션에서는 대부분의 SharePoint 배포에서 중요한 추가 구성 단계에 대해 설명합니다.  
   
 ###  <a name="bkmk_configure_ECS"></a>Excel Services 및 PowerPivot 구성  
- SharePoint의 Excel 2013 통합 문서에서 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] Power View 보고서를 보려는 경우 팜에서 Excel Services 애플리케이션을 SharePoint 모드의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버를 사용하도록 구성해야 합니다. 또한, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에서 사용하는 애플리케이션 풀 보안 계정은 Analysis Services 서버에서 관리자여야 합니다. 자세한 내용은  
+ SharePoint의 Excel 2013 통합 문서에서 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] Power View 보고서를 보려는 경우 팜에서 Excel Services 애플리케이션을 SharePoint 모드의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버를 사용하도록 구성해야 합니다. 또한, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에서 사용하는 애플리케이션 풀 보안 계정은 Analysis Services 서버에서 관리자여야 합니다. 자세한 내용은   
   
 -   [SharePoint용 PowerPivot 2013 설치](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)에서 "Analysis Services 통합을 위한 Excel Services 구성" 섹션  
   
@@ -455,7 +455,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
   
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services SharePoint 모드용 PowerShell cmdlet](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
- [업그레이드 및 마이그레이션 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+ [Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
  [콘텐츠 로드맵: SharePoint Server 및 SQL Server BI 설정 및 구성](https://technet.microsoft.com/library/dn205112.aspx)   
  [SQL Server 2012 버전에서 지 원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473)   
  [SharePoint 서비스 및 서비스 응용 프로그램 Reporting Services](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)

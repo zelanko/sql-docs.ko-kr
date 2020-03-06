@@ -11,17 +11,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 04f8eaf855d33faf0d2eab8fde718c92f9a24906
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75232319"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339032"
 ---
 # <a name="sql-server-backup-to-url"></a>URL에 대한 SQL Server 백업
   이 항목에서는 Azure Blob 저장소 서비스를 백업 대상으로 사용 하는 데 필요한 개념, 요구 사항 및 구성 요소를 소개 합니다. 백업 및 복원 기능은 디스크나 테이프를 사용하는 경우와 동일하거나 비슷하지만 몇 가지 차이점이 있습니다. 이러한 차이점과 주목할 만한 예외 및 몇 가지 코드 예가 이 항목에서 소개됩니다.  
   
 ## <a name="requirements-components-and-concepts"></a>요구 사항, 구성 요소 및 개념  
- **이 섹션의 설명:**  
+ **섹션 내용**  
   
 -   [보안](#security)  
   
@@ -35,11 +35,11 @@ ms.locfileid: "75232319"
   
 -   [Backup/Restore 문 지원](#Support)  
   
--   [SQL Server Management Studio에서 백업 작업 사용](sql-server-backup-to-url.md#BackupTaskSSMS)  
+-   [SQL Server Management Studio에서 백업 태스크 사용](sql-server-backup-to-url.md#BackupTaskSSMS)  
   
--   [유지 관리 계획 마법사를 사용 하 여 URL에 백업 SQL Server](sql-server-backup-to-url.md#MaintenanceWiz)  
+-   [유지 관리 계획 마법사를 사용하여 URL로 SQL Server 백업](sql-server-backup-to-url.md#MaintenanceWiz)  
   
--   [SQL Server Management Studio를 사용 하 여 Azure storage에서 복원](sql-server-backup-to-url.md#RestoreSSMS)  
+-   [SQL Server Management Studio를 사용하여 Azure Storage에서 복원](sql-server-backup-to-url.md#RestoreSSMS)  
   
 ###  <a name="security"></a> 보안  
  다음은 Azure Blob 저장소 서비스로 백업 하거나 복원 하는 경우의 보안 고려 사항 및 요구 사항입니다.  
@@ -51,20 +51,19 @@ ms.locfileid: "75232319"
   
 -   BACKUP 또는 RESTORE 명령을 실행하는 데 사용되는 사용자 계정은 **모든 자격 증명 변경** 권한이 있는 **db_backup operator** 데이터베이스 역할에 있어야 합니다.  
   
-###  <a name="intorkeyconcepts"></a>주요 구성 요소 및 개념 소개  
+###  <a name="intorkeyconcepts"></a> 주요 구성 요소 및 개념 소개  
  다음 두 섹션에서는 azure blob storage 서비스와 Azure Blob 저장소 서비스로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 하거나 복원할 때 사용 되는 구성 요소를 소개 합니다. Azure Blob 저장소 서비스에 대 한 백업 또는 복원 작업을 수행 하기 위해 구성 요소와 구성 요소 간의 상호 작용을 이해 하는 것이 중요 합니다.  
   
- 이 프로세스의 첫 번째 단계는 Azure 계정을 만드는 것입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 **Azure storage 계정 이름** 및 해당 **액세스 키** 값을 사용 하 여 저장소 서비스에 대 한 blob을 인증 하 고 쓰고 읽습니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명은 이 인증 정보를 저장하며 백업 또는 복원 작업 중에 사용됩니다. 저장소 계정을 만들고 간단한 복원을 수행 하는 전체 연습은 [자습서를 사용 하 여 SQL Server 백업 및 복원에 대 한 Azure Storage 서비스 사용 자습서](https://go.microsoft.com/fwlink/?LinkId=271615)를 참조 하세요.  
+ 이 프로세스의 첫 번째 단계는 Azure 계정을 만드는 것입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 **Azure storage 계정 이름** 및 해당 **액세스 키** 값을 사용 하 여 저장소 서비스에 대 한 blob을 인증 하 고 쓰고 읽습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명은 이 인증 정보를 저장하며 백업 또는 복원 작업 중에 사용됩니다. 저장소 계정을 만들고 간단한 복원을 수행 하는 전체 연습은 [자습서를 사용 하 여 SQL Server 백업 및 복원에 대 한 Azure Storage 서비스 사용 자습서](https://go.microsoft.com/fwlink/?LinkId=271615)를 참조 하세요.  
   
  ![SQL 자격 증명에 저장소 계정 매핑](../../tutorials/media/backuptocloud-storage-credential-mapping.gif "SQL 자격 증명에 저장소 계정 매핑")  
   
 ###  <a name="Blob"></a>Azure Blob Storage 서비스  
- **저장소 계정:** 저장소 계정은 모든 저장소 서비스의 시작 지점입니다. Azure Blob Storage 서비스에 액세스 하려면 먼저 Azure Storage 계정을 만듭니다. Azure Blob Storage 서비스와 해당 구성 요소를 인증 하려면 **저장소 계정 이름** 및 해당 **액세스 키** 속성이 필요 합니다.  
+ **스토리지 계정:** 스토리지 계정은 모든 스토리지 서비스를 사용하기 위한 출발점입니다. Azure Blob Storage 서비스에 액세스 하려면 먼저 Azure Storage 계정을 만듭니다. Azure Blob Storage 서비스와 해당 구성 요소를 인증 하려면 **저장소 계정 이름** 및 해당 **액세스 키** 속성이 필요 합니다.  
   
  **컨테이너:** 컨테이너는 Blob 집합의 그룹화를 제공 하며 Blob을 무제한으로 저장할 수 있습니다. Azure Blob service에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 쓰려면 적어도 루트 컨테이너가 만들어져 있어야 합니다.  
   
- **Blob:** 모든 형식 및 크기의 파일입니다. Azure Blob 저장소 서비스에는 블록 및 페이지 blob 이라는 두 가지 유형의 blob을 저장할 수 있습니다. 
+ **Blob:** 모든 형식과 크기의 파일입니다. Azure Blob 저장소 서비스에는 블록 및 페이지 blob 이라는 두 가지 유형의 blob을 저장할 수 있습니다. 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에서는 페이지 Blob을 Blob 유형으로 사용합니다. Blob은 URL 형식을 사용 하 여 주소를 지정할\<수 있습니다. https://저장소\<계정> blob.core.windows.net/\<container>/blob>  
   
  ![Azure Blob Storage](../../database-engine/media/backuptocloud-blobarchitecture.gif "Azure Blob Storage")  
@@ -73,15 +72,15 @@ ms.locfileid: "75232319"
   
  페이지 Blob에 대한 자세한 내용은 [블록 및 페이지 Blob 이해](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx)를 참조하세요.  
   
-###  <a name="sqlserver"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소  
- **URL:** URL은 고유한 백업 파일에 대 한 URI (Uniform Resource Identifier)를 지정 합니다. URL은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 파일의 위치와 이름을 제공하는 데 사용됩니다. 이 구현에서 올바른 URL은 Azure storage 계정의 페이지 Blob을 가리키는 유일한 URL입니다. URL은 컨테이너가 아닌 실제 Blob을 가리켜야 합니다. Blob이 없으면 만들어집니다. 기존 Blob이 지정 된 경우 "WITH FORMAT" 옵션을 지정 하지 않으면 백업이 실패 합니다.  
+###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소  
+ **URL:** URL은 고유한 백업 파일에 대한 URI(Uniform Resource Identifier)를 지정합니다. URL은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 파일의 위치와 이름을 제공하는 데 사용됩니다. 이 구현에서 올바른 URL은 Azure storage 계정의 페이지 Blob을 가리키는 유일한 URL입니다. URL은 컨테이너가 아닌 실제 Blob을 가리켜야 합니다. Blob이 없으면 만들어집니다. 기존 Blob이 지정 된 경우 "WITH FORMAT" 옵션을 지정 하지 않으면 백업이 실패 합니다.  
   
 > [!WARNING]  
 >  백업 파일을 복사 하 여 Azure Blob storage 서비스에 업로드 하도록 선택한 경우 페이지 Blob을 저장소 옵션으로 사용 합니다. 블록 Blob에서 복원은 지원되지 않습니다. 블록 Blob 유형에서 RESTORE는 오류와 함께 실패합니다.  
   
  예제 URL 값은 http [s]://ACCOUNTNAME.Blob.core.windows.net/\<CONTAINER>/\<FILENAME .bak>입니다. HTTPS는 필수 사항은 아니지만 권장 사항입니다.  
   
- **자격 증명:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명은 SQL Server 외부의 리소스에 연결 하는 데 필요한 인증 정보를 저장 하는 데 사용 되는 개체입니다.  여기에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원 프로세스는 자격 증명을 사용 하 여 Azure Blob 저장소 서비스에 인증 합니다. 자격 증명에는 스토리지 계정 이름과 스토리지 계정 **액세스 키** 값이 저장됩니다. 만든 자격 증명은 BACKUP/RESTORE 문을 실행할 때 WITH CREDENTIAL 옵션에 지정해야 합니다. 저장소 계정 **액세스 키**를 보고, 복사 하거나, 다시 생성 하는 방법에 대 한 자세한 내용은 [저장소 계정 액세스 키](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)를 참조 하세요.  
+ **자격 증명:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명은 SQL Server 외부의 리소스에 연결하는 데 필요한 인증 정보를 저장하는 데 사용되는 개체입니다.  여기에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원 프로세스는 자격 증명을 사용 하 여 Azure Blob 저장소 서비스에 인증 합니다. 자격 증명에는 스토리지 계정 이름과 스토리지 계정 **액세스 키** 값이 저장됩니다. 만든 자격 증명은 BACKUP/RESTORE 문을 실행할 때 WITH CREDENTIAL 옵션에 지정해야 합니다. 저장소 계정 **액세스 키**를 보고, 복사 하거나, 다시 생성 하는 방법에 대 한 자세한 내용은 [저장소 계정 액세스 키](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)를 참조 하세요.  
   
  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명을 만드는 방법에 대한 단계별 지침은 이 항목 뒷부분의 [Create a Credential](#credential) 예제를 참조하십시오.  
@@ -90,7 +89,7 @@ ms.locfileid: "75232319"
   
  자격 증명을 사용 하는 다른 예제에 대 한 자세한 내용은 [SQL Server 에이전트 프록시 만들기](../../ssms/agent/create-a-sql-server-agent-proxy.md)를 참조 하세요.  
   
-###  <a name="limitations"></a>제한을  
+###  <a name="limitations"></a> 제한 사항  
   
 -   Premium 스토리지로 백업은 지원 되지 않습니다.  
   
@@ -122,10 +121,9 @@ ms.locfileid: "75232319"
 -   
   `RETAINDAYS`와 `EXPIREDATE` 백업 세트 옵션 지정은 지원되지 않습니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 백업 디바이스 이름이 최대 259자로 제한됩니다. BACKUP TO URL에서 URL - ‘https://.blob.core.windows.net//.bak’를 지정하는 데 사용되는 필수 요소에 36자가 사용되며, 계정, 컨테이너 및 blob 이름에 사용할 수 있는 문자는 223자입니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 백업 디바이스 이름이 최대 259자로 제한됩니다. BACKUP TO URL에서 URL - ‘ https://.blob.core.windows.net//.bak ’를 지정하는 데 사용되는 필수 요소에 36자가 사용되며, 계정, 컨테이너 및 blob 이름에 사용할 수 있는 문자는 223자입니다.  
   
-###  <a name="Support"></a>Backup/Restore 문 지원  
+###  <a name="Support"></a> Backup/Restore 문 지원  
   
 |||||  
 |-|-|-|-|  
@@ -158,7 +156,7 @@ ms.locfileid: "75232319"
 |COPY_ONLY|&#x2713;|||  
 |COMPRESSION&#124;NO_COMPRESSION|&#x2713;|||  
 |설명|&#x2713;|||  
-|이름|&#x2713;|||  
+|NAME|&#x2713;|||  
 |EXPIREDATE &#124; RETAINDAYS|&#x2713;|||  
 |NOINIT &#124; INIT|&#x2713;||이 옵션은 사용 시 무시됩니다.<br /><br /> Blob에 추가는 불가능합니다. 백업을 덮어쓰려면 FORMAT 인수를 사용하십시오.|  
 |NOSKIP &#124; SKIP|&#x2713;|||  
@@ -186,7 +184,7 @@ ms.locfileid: "75232319"
 |DATABASE|&#x2713;|||  
 |LOG|&#x2713;|||  
 |FROM (URL)|&#x2713;||FROM URL 인수는 백업 파일에 대한 URL 경로를 지정하는 데 사용됩니다.|  
-|**WITH 옵션:**||||  
+|**WITH Options:**||||  
 |CREDENTIAL|&#x2713;||WITH CREDENTIAL은 RESTORE FROM URL 옵션을 사용 하 여 Azure Blob Storage 서비스에서 복원할 때만 지원 됩니다.|  
 |PARTIAL|&#x2713;|||  
 |RECOVERY &#124; NORECOVERY &#124; STANDBY|&#x2713;|||  
@@ -240,18 +238,17 @@ ms.locfileid: "75232319"
   
     4.  **URL 접두사:** 이는 이전 단계에서 설명한 필드에 지정 된 정보를 사용 하 여 자동으로 빌드됩니다. 이 값을 수동으로 편집하는 경우 이전에 제공한 다른 정보와 일치하는지 확인해야 합니다. 예를 들어 스토리지 URL을 수정하는 경우 SQL 자격 증명이 동일한 스토리지 계정에 인증하도록 설정되었는지 확인합니다.  
   
- 
-  URL 을 대상으로 선택하는 경우 **미디어 옵션** 페이지의 특정 옵션을 사용할 수 없습니다.  다음 항목에서는 데이터베이스 백업 대화 상자에 대한 자세한 정보를 제공합니다.  
+ URL 을 대상으로 선택하는 경우 **미디어 옵션** 페이지의 특정 옵션을 사용할 수 없습니다.  다음 항목에서는 데이터베이스 백업 대화 상자에 대한 자세한 정보를 제공합니다.  
   
- [데이터베이스 &#40;일반 페이지&#41;백업](../../integration-services/general-page-of-integration-services-designers-options.md)  
+ [데이터베이스 백업&#40;일반 페이지&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
- [데이터베이스 백업 &#40;미디어 옵션 페이지&#41;](back-up-database-media-options-page.md)  
+ [데이터베이스 백업&#40;미디어 옵션 페이지&#41;](back-up-database-media-options-page.md)  
   
- [데이터베이스 백업 &#40;백업 옵션 페이지&#41;](back-up-database-backup-options-page.md)  
+ [데이터베이스 백업&#40;백업 옵션 페이지&#41;](back-up-database-backup-options-page.md)  
   
- [자격 증명 만들기 - Azure 스토리지 인증](create-credential-authenticate-to-azure-storage.md)  
+ [자격 증명 만들기 - Azure Storage 인증](create-credential-authenticate-to-azure-storage.md)  
   
-##  <a name="MaintenanceWiz"></a>유지 관리 계획 마법사를 사용 하 여 URL에 백업 SQL Server  
+##  <a name="MaintenanceWiz"></a> 유지 관리 계획 마법사를 사용하여 URL로 SQL Server 백업  
  이전에 설명한 백업 작업과 마찬가지로, 대상 옵션 중 하나로 **URL** 을 포함 하 고 SQL 자격 증명과 같은 Azure storage로 백업 하는 데 필요한 다른 지원 개체를 포함 하도록 SQL Server Management Studio의 유지 관리 계획 마법사가 향상 되었습니다. 자세한 내용은 **Using Maintenance Plan Wizard** 의 [백업 태스크 정의](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)를 참조하세요.  
   
 ##  <a name="RestoreSSMS"></a>SQL Server Management Studio를 사용 하 여 Azure storage에서 복원  
@@ -267,11 +264,11 @@ ms.locfileid: "75232319"
   
      [데이터베이스 복원&#40;일반 페이지&#41;](restore-database-general-page.md)  
   
-     [데이터베이스 &#40;파일 복원 페이지&#41;](restore-database-files-page.md)  
+     [데이터베이스 복원&#40;파일 페이지&#41;](restore-database-files-page.md)  
   
      [데이터베이스 복원&#40;옵션 페이지&#41;](restore-database-options-page.md)  
   
-##  <a name="Examples"></a>코드 예제  
+##  <a name="Examples"></a> 코드 예제  
  이 섹션에서는 다음과 같은 예를 보여 줍니다.  
   
 -   [자격 증명 만들기](#credential)  
@@ -286,9 +283,9 @@ ms.locfileid: "75232319"
   
 -   [데이터베이스 복원 및 파일 이동](#restoredbwithmove)  
   
--   [STOPAT를 사용 하 여 지정 시간으로 복원](#PITR)  
+-   [STOPAT를 사용하여 지정 시간으로 복원](#PITR)  
   
-###  <a name="credential"></a>자격 증명 만들기  
+###  <a name="credential"></a> 자격 증명 만들기  
  다음 예제에서는 Azure Storage 인증 정보를 저장 하는 자격 증명을 만듭니다.  
 
    ```sql
@@ -696,7 +693,7 @@ ms.locfileid: "75232319"
    Restore-SqlDatabase -Database AdventureWorks2012 -SqlCredential $credentialName -BackupFile $backupdbFile -RelocateFile @($newDataFilePath,$newLogFilePath)
    ```  
   
-###  <a name="PITR"></a>STOPAT를 사용 하 여 지정 시간으로 복원  
+###  <a name="PITR"></a> STOPAT를 사용하여 지정 시간으로 복원  
  다음 예에서는 지정 시간의 상태로 데이터베이스를 복원하고 복원 작업을 보여 줍니다.  
   
    ```sql
@@ -813,5 +810,5 @@ ms.locfileid: "75232319"
    ```  
   
 ## <a name="see-also"></a>참고 항목  
- [URL에 대 한 백업 SQL Server 모범 사례 및 문제 해결](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
+ [URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74f81deb2d9f5e4fcb770217a228a8b081098d89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66079757"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339076"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services의 로그 작업
   Analysis Services 인스턴스는 설치 하는 각 인스턴스에 대해 서버 알림, 오류 및 경고를 msmdsrv.ini 파일에 기록 합니다. 관리자는 이 로그에서 루틴 및 비정상적 이벤트에 대한 정보를 참조합니다. 최신 릴리스에서는 더 많은 정보를 포함하도록 로깅이 향상되었습니다. 이제 로그 레코드에는 제품 버전과 버전 정보, 프로세서, 메모리, 연결, 차단 이벤트 등이 모두 포함되어 있습니다. 전체 변경 목록은 [로깅 개선 사항](https://support.microsoft.com/kb/2965035)에서 확인할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "66079757"
   
 |파일 이름 또는 위치|Type|사용 대상|기본적으로 설정|  
 |---------------------------|----------|--------------|-------------------|  
-|Msmdsrv.log|오류 로그|일상 모니터링 및 기본 문제 해결|yes|  
+|Msmdsrv.log|오류 로그|일상 모니터링 및 기본 문제 해결|예|  
 |관계형 데이터베이스의 OlapQueryLog 테이블|쿼리 로그|사용 최적화 마법사에 대한 입력 수집|예|  
 |SQLDmp\<guid> mdmp 파일|충돌 및 예외|상세한 문제 해결|예|  
   

@@ -27,11 +27,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 33f85b2f1cd8b259e46851aab818b258a6d78291
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68206102"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339311"
 ---
 # <a name="database-checkpoints-sql-server"></a>데이터베이스 검사점(SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 검사점에 대해 간략하게 설명합니다. *검사점* 은이 예기치 않은 종료 또는 충돌 후 복구 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 하는 동안 로그에 포함 된 변경 내용을 적용 하기 시작할 수 있는 알려진 올바른 지점을 만듭니다.  
@@ -72,8 +72,7 @@ ms.locfileid: "68206102"
 |>0|해당 사항 없음|대상 복구 간격이 TARGET_RECOVERY_TIME 설정에 의해 초 단위로 결정되는 간접 검사점|  
   
 ###  <a name="AutomaticChkpt"></a>자동 검사점  
- 자동 검사점은 로그 레코드 수가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] `recovery interval` 서버 구성 옵션에 지정 된 시간 동안 처리할 수 있는 것으로 예상 하는 수에 도달할 때마다 발생 합니다. 사용자 정의 대상 복구 시간이 없는 모든 데이터베이스에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 자동 검사점을 생성합니다. 자동 검사점의 빈도는 지정 된 서버 `recovery interval` 인스턴스에서 시스템을 다시 시작 하는 동안 데이터베이스를 복구 하는 데 사용 해야 하는 최대 시간을 지정 하는 고급 서버 구성 옵션에 따라 달라 집니다. 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 복구 간격 내에 처리할 수 있는 최대 로그 레코드 수를 예상합니다. 자동 검사점을 사용하는 데이터베이스가 이 최대 로그 레코드 수에 도달하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 데이터베이스에 대해 검사점을 실행합니다. 자동 검사점 사이의 시간 간격은 매우 가변적일 수 있습니다. 트랜잭션 작업이 많은 데이터베이스는 읽기 전용 작업에 주로 사용되는 데이터베이스보다 검사점이 더 많습니다.  
+ 자동 검사점은 로그 레코드 수가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] `recovery interval` 서버 구성 옵션에 지정 된 시간 동안 처리할 수 있는 것으로 예상 하는 수에 도달할 때마다 발생 합니다. 사용자 정의 대상 복구 시간이 없는 모든 데이터베이스에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 자동 검사점을 생성합니다. 자동 검사점의 빈도는 지정 된 서버 `recovery interval` 인스턴스에서 시스템을 다시 시작 하는 동안 데이터베이스를 복구 하는 데 사용 해야 하는 최대 시간을 지정 하는 고급 서버 구성 옵션에 따라 달라 집니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 복구 간격 내에 처리할 수 있는 최대 로그 레코드 수를 예상합니다. 자동 검사점을 사용하는 데이터베이스가 이 최대 로그 레코드 수에 도달하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 데이터베이스에 대해 검사점을 실행합니다. 자동 검사점 사이의 시간 간격은 매우 가변적일 수 있습니다. 트랜잭션 작업이 많은 데이터베이스는 읽기 전용 작업에 주로 사용되는 데이터베이스보다 검사점이 더 많습니다.  
   
  또한 단순 복구 모델에서 자동 검사점은 로그의 70%가 찬 경우에도 큐에 들어갑니다.  
   

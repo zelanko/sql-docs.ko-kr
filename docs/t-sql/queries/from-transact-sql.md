@@ -35,11 +35,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bcf4dc79c1b241d4a9f48a3d211c13871e32b711
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
-ms.translationtype: HT
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73981978"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340335"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 절과 JOIN, APPLY, PIVOT(Transact-SQL)
 
@@ -697,7 +697,7 @@ FOR SYSTEM_TIME FROM @AsOfFrom TO @AsOfTo
 WHERE ManagerID = 5;
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="n-using-the-inner-join-syntax"></a>14. INNER JOIN 구문 사용  
  다음 예제에서는 두 테이블 모두에서 `ProductKey` 조인 키가 일치하는 `FactInternetSales` 및 `DimProduct` 테이블에서 `SalesOrderNumber`, `ProductKey` 및 `EnglishProductName` 열을 반환합니다. `SalesOrderNumber` 및 `EnglishProductName` 열은 각각 테이블 중 하나에만 존재하므로 이러한 열을 표시된 대로 사용하여 테이블 별칭을 지정할 필요가 없습니다. 이러한 별칭은 가독성을 높이기 위해 포함되었습니다. **AS**라는 단어는 별칭 이름 앞에 필요하지 않지만, 가독성을 높이고 ANSI 표준을 준수하기 위해 사용하는 것이 좋습니다.  

@@ -11,11 +11,11 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 60ee313b41a3882c07c98dce08382a98fec9c962
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73728072"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338087"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 설치 및 구성
 
@@ -49,7 +49,7 @@ ms.locfileid: "73728072"
 - Windows Server 2012 컴퓨터에 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]를 설치하는 경우 웹 애플리케이션 사이트에 대한 스크립팅을 허용하도록 Internet Explorer 보안 강화를 구성해야 할 수 있습니다. 그렇게 하지 않으면 서버 컴퓨터에서 해당 사이트로의 이동에 실패합니다.
 - 웹 애플리케이션에서 작업하려면 클라이언트 컴퓨터에 Silverlight 5가 설치되어 있어야 합니다. 필요한 Silverlight 버전이 설치되어 있지 않으면 Silverlight이 필요한 웹 애플리케이션 영역으로 이동할 때 Silverlight를 설치하라는 메시지가 표시됩니다. Silverlight 5는 **[여기](https://www.microsoft.com/silverlight/)** 에서 설치할 수 있습니다.
 
-## <a name="includessmdsshort_mdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>Azure 가상 머신의 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
+## <a name="ssmdsshort_md-on-an-azure-virtual-machine"></a>Azure 가상 머신의 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
 기본적으로, [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 가 이미 설치 된 Azure 가상 컴퓨터를 실행 하면도 설치 됩니다. 
 
 다음 단계는 IIS(인터넷 정보 서비스)를 설치하는 것입니다. 

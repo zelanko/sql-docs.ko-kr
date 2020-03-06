@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74401155"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339576"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에 대 한 T-sql 권한 부여
 병렬 데이터 웨어하우스의 데이터베이스 작업에 대해 T-sql 사용 권한을 부여 합니다.

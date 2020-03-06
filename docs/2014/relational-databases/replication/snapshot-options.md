@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a611de458537156740521dae8b732eed3e2653c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63270249"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339106"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>SQL 복제에 대한 스냅샷 초기화 옵션 수정
 

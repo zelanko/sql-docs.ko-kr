@@ -11,11 +11,11 @@ ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a0300b7f613610403970862fe9e5aad594372b27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73728954"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340575"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>파생 계층에서 다 대 다 관계 표시(Master Data Services)
 

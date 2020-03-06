@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63065709"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339241"
 ---
 # <a name="hierarchical-data-sql-server"></a>계층적 데이터(SQL Server)
   기본 제공 `hierarchyid` 데이터 형식을 사용 하면 계층적 데이터를 보다 쉽게 저장 하 고 쿼리할 수 있습니다. `hierarchyid`는 계층적 데이터의 가장 일반적인 유형인 트리를 나타내기 위해 최적화 되었습니다.  
