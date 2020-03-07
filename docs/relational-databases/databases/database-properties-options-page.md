@@ -13,11 +13,11 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9ea3a23299c15a2d473b68f691345d69afaaf1eb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68049031"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338535"
 ---
 # <a name="database-properties-options-page"></a>데이터베이스 속성(옵션 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68049031"
  목록에서 선택하여 데이터베이스의 데이터 정렬을 지정합니다. 자세한 내용은 [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md)을 참조하세요.  
   
  **복구 모델**  
- 데이터베이스 복구 모델을 **전체**, **대량 로그**또는 **단순**중에서 하나 지정합니다. 복구 모델에 대한 자세한 내용은 [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)을 참조하세요.  
+ 데이터베이스 복구 모델로 **전체**, **대량 로그** 또는 **단순** 중에서 하나를 지정합니다. 복구 모델에 대한 자세한 내용은 [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)을 참조하세요.  
   
  **호환성 수준**  
  데이터베이스에서 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 최신 버전을 지정합니다. 가능한 값은 [ALTER DATABASE(Transact-SQL) 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요. SQL Server 데이터베이스가 업그레이드되면 해당 데이터베이스에 대한 호환성 수준이 보존되거나(가능한 경우) 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 지원되는 최소 수준으로 변경됩니다. 
@@ -131,7 +131,7 @@ Azure SQL Database에 연결되면 이 섹션에는 SLO(서비스 수준 목표)
  선택한 데이터베이스에 연결된 FILESTREAM 데이터에 대한 디렉터리 이름을 지정합니다.  
   
  **FILESTREAM 비트랜잭션 액세스**  
- 파일 시스템을 통해 FileTable에 저장된 FILESTREAM 데이터에 비트랜잭션 방식으로 액세스하기 위한 옵션을 **OFF**, **READ_ONLY**또는 **FULL**중 하나로 지정합니다. 서버에 FILESTREAM이 사용하도록 설정되어 있지 않은 경우에는 이 값이 OFF로 설정되고 사용할 수 없는 상태로 표시됩니다. 자세한 내용은 [FileTables&#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)를 참조하세요.  
+ 파일 시스템을 통해 FileTable에 저장된 FILESTREAM 데이터에 비트랜잭션 방식으로 액세스하기 위한 옵션을 **OFF**, **READ_ONLY** 또는 **FULL** 중 하나로 지정합니다. 서버에 FILESTREAM이 사용하도록 설정되어 있지 않은 경우에는 이 값이 OFF로 설정되고 사용할 수 없는 상태로 표시됩니다. 자세한 내용은 [FileTables&#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)를 참조하세요.  
   
 ## <a name="miscellaneous"></a>기타  
 **스냅샷 격리 허용**  

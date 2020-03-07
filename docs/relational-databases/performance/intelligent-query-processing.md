@@ -13,11 +13,11 @@ author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f555713a25db2068a4f6a923504db765d3f3a09e
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256796"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338551"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 데이터베이스의 지능형 쿼리 처리
 
@@ -43,7 +43,7 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 | **IQP 기능** | **Azure SQL Database에서 지원** | **SQL Server에서 지원** |**설명** |
 | --- | --- | --- |--- |
 | [적응 조인(일괄 처리 모드)](#batch-mode-adaptive-joins) | 예. 호환성 수준 140 미만| 예. 호환성 수준 140 미만 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터|적응형 조인은 실제 입력된 행에 따라 런타임 동안 조인 유형을 동적으로 선택합니다.|
-| [대략적인 Count Distinct](#approximate-query-processing) | yes| 예. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터|고성능 및 낮은 메모리 사용 공간을 통해 빅 데이터 시나리오에 대한 대략적인 COUNT DISTINCT를 제공합니다. |
+| [대략적인 Count Distinct](#approximate-query-processing) | 예| 예. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터|고성능 및 낮은 메모리 사용 공간을 통해 빅 데이터 시나리오에 대한 대략적인 COUNT DISTINCT를 제공합니다. |
 | [Rowstore의 일괄 처리 모드](#batch-mode-on-rowstore) | 예. 호환성 수준 150 미만| 예. 호환성 수준 150 미만 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터|columnstore 인덱스를 요구하지 않고 CPU 바인딩된 관계형 DW 워크로드에 대한 일괄 처리 모드를 제공합니다.  | 
 | [인터리브 실행](#interleaved-execution-for-mstvfs) | 예. 호환성 수준 140 미만| 예. 호환성 수준 140 미만 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터|고정 추측 대신 첫 번째 컴파일에서 발생한 다중 명령문 테이블 값 함수의 실제 카디널리티를 사용합니다.|
 | [메모리 부여 피드백(일괄 처리 모드)](#batch-mode-memory-grant-feedback) | 예. 호환성 수준 140 미만| 예. 호환성 수준 140 미만 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터|일괄 처리 모드 쿼리에 디스크로 분산되는 작업이 있는 경우 연속 실행을 위한 메모리를 더 추가합니다. 쿼리가 50%가 넘는 할당된 메모리를 낭비하는 경우 연속 실행을 위한 메모리 부여 측면을 줄입니다.|
