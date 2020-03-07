@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9da0f09c2506e0d596a485aee112f9f188b6d12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6aa40d6a7363dd991dc37ed5c619b656e74f0eed
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74947160"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866374"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "74947160"
 |hostname|**nchar (128)**|워크스테이션의 이름입니다.|  
 |program_name|**nchar (128)**|애플리케이션의 이름입니다.|  
 |hostprocess|**nchar (10)**|워크스테이션 프로세스 ID입니다.|  
-|cmd|**nchar (26)**|현재 실행 중인 명령입니다.|  
+|cmd|**nchar (52)**|현재 실행 중인 명령입니다.|  
 |nt_domain|**nchar (128)**|클라이언트(Windows 인증을 사용하는 경우) 또는 트러스트된 연결의 Windows 도메인입니다.|  
 |nt_username|**nchar (128)**|프로세스(Windows 인증을 사용하는 경우) 또는 트러스트된 연결의 Windows 사용자 이름입니다.|  
 |net_address|**nchar (12)**|각 사용자의 워크스테이션에서 네트워크 어댑터에 할당된 고유 식별자입니다. 사용자가 로그인하면 이 식별자가 net_address 열에 삽입됩니다.|  

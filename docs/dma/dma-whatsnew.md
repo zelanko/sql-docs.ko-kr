@@ -1,5 +1,6 @@
 ---
 title: Data Migration Assistant (SQL Server)의 새로운 기능 | Microsoft Docs
+description: SQL Server 및 Azure SQL Database에 대 한 Data Migration Assistant의 각 릴리스에 대 한 새로운 기능에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 11/05/2019
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-ms.openlocfilehash: 83009008745a696919aa5ae5795d60ddfe9ba80b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b5caa8b63175447daa04198768a67e7fe5e59c81
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632889"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896801"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Data Migration Assistant의 새로운 기능
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5d758c7ca2d21183b9486030704c31b9d5f621d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7c949e62261e710854aefda9b83a7ca20c222b78
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67950513"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866483"
 ---
 # <a name="sp_who-transact-sql"></a>sp_who(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,13 +59,13 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 |------------|---------------|-----------------|  
 |**spid**|**smallint**|세션 ID.|  
 |**ecid**|**smallint**|특정 세션 ID와 연결된 지정된 스레드의 실행 컨텍스트 ID입니다.<br /><br /> ECID = {0, 1, 2, 3, ... *n*}, 여기서 0은 항상 주 또는 부모 스레드를 나타내고 {1, 2, 3, ... *n*}은 하위 스레드를 나타냅니다.|  
-|**업무**|**nchar (30)**|프로세스 상태입니다. 사용 가능한 값은<br /><br /> **유휴**상태. 
+|**status**|**nchar (30)**|프로세스 상태입니다. 사용 가능한 값은<br /><br /> **유휴**상태. 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 세션을 다시 설정하고 있습니다.<br /><br /> **실행 중**. 세션에서 일괄 처리를 하나 이상 실행하고 있습니다. MARS(Multiple Active Result Sets)를 설정하면 세션에서 여러 개의 일괄 처리를 실행할 수 있습니다. 자세한 내용은 [MARS&#40;Multiple Active Result Sets&#41; 사용](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)을 참조하세요.<br /><br /> **배경**. 세션에서 교착 상태 감지와 같은 백그라운드 태스크를 실행하고 있습니다.<br /><br /> **롤백**. 세션에서 트랜잭션 롤백을 진행하고 있습니다.<br /><br /> **보류 중**. 세션이 작업자 스레드를 사용할 수 있을 때까지 기다리고 있습니다.<br /><br /> 실행 **가능.** 세션의 태스크는 시간 퀀텀을 얻기 위해 기다리는 동안 스케줄러의 실행 가능한 큐에 있습니다.<br /><br /> **spinloop**. 세션의 태스크가 spinlock을 사용할 수 있을 때까지 기다리고 있습니다.<br /><br /> **일시 중단 됨**. 세션이 I/O와 같은 이벤트가 완료되기를 기다리고 있습니다.|  
 |**loginame**|**nchar (128)**|특정 프로세스와 연결된 로그인 이름입니다.|  
 |**n**|**nchar (128)**|각 프로세스의 호스트 또는 컴퓨터 이름입니다.|  
 |**blk**|**char (5)**|프로세스를 차단하기 위한 세션 ID입니다(존재하는 경우). 없는 경우 이 열은 0이 됩니다.<br /><br /> 분리된 분산 트랜잭션이 지정된 세션 ID와 연결된 트랜잭션을 차단하는 경우 이 열은 분리된 트랜잭션을 차단하기 위한 값으로 '-2'를 반환합니다.|  
 |**dbname**|**nchar (128)**|프로세스가 사용하는 데이터베이스입니다.|  
-|**입력**|**nchar (16)**|프로세스에 대해 실행 중인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 명령([!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 내부 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 프로세스 등)입니다.|  
+|**입력**|**nchar (16)**|프로세스에 대해 실행 중인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 명령([!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 내부 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 프로세스 등)입니다. SQL Server 2019에서 데이터 형식이 **nchar (26)** 로 변경 되었습니다.|  
 |**request_id**|**int**|특정 세션에서 실행 중인 요청에 대한 ID입니다.|  
   
  병렬 처리의 경우 특정 세션 ID에 대해 하위 스레드가 생성됩니다. 주 스레드는 `spid = <xxx>` 및 `ecid =0`으로 표시됩니다. 다른 하위 스레드는 동일 `spid = <xxx>`하지만 **ecid** > 0입니다.  
