@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d79007dccddef604315c57beca1e1274d23c6f0f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74095688"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339681"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>트랜잭션 잠금 및 행 버전 관리 지침
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -258,7 +258,7 @@ GO
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 다양한 동시성 제어 유형을 지원합니다. 사용자는 연결에 대한 트랜잭션 격리 수준 또는 커서에 대한 동시성 옵션을 선택하여 동시성 제어 유형을 지정하게 됩니다. 이러한 특성은 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 사용하거나 ADO, ADO.NET, OLE DB 및 ODBC 등의 데이터베이스 API(응용 프로그래밍 인터페이스) 속성과 특성을 통해 정의할 수 있습니다.  
   
-#### <a name="isolation-levels-in-the-includessdenoversionincludesssdenoversion-mdmd"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 격리 수준  
+#### <a name="isolation-levels-in-the-ssdenoversion"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 격리 수준  
  한 트랜잭션을 리소스 또는 다른 트랜잭션에서 수정한 데이터 내용으로부터 격리하는 정도를 정의하는 격리 수준을 트랜잭션에 지정할 수 있습니다. 격리 수준은 허용되는 동시성 부작용(예: 커밋되지 않은 읽기 또는 가상 읽기)의 관점에서 설명됩니다.  
   
  트랜잭션 격리 수준으로 제어할 수 있는 사항은 다음과 같습니다.  
@@ -275,7 +275,7 @@ GO
   
  격리 수준이 낮을수록 동시에 데이터를 액세스할 수 있는 사용자가 많아지지만 동시성 부작용(예: 커밋되지 않은 읽기 또는 업데이트 손실) 횟수도 늘어납니다. 반대로 격리 수준이 높을수록 동시성 부작용 종류가 줄어들지만 시스템 리소스가 더 많이 필요하게 되고 한 트랜잭션이 다른 트랜잭션을 차단하게 될 확률도 높아집니다. 적절한 격리 수준을 선택하려면 애플리케이션의 데이터 무결성 요구 사항과 각 격리 수준에 의해 야기되는 오버헤드를 신중하게 평가해야 합니다. 최상위 격리 수준인 직렬화 가능의 경우 트랜잭션이 읽기 작업을 반복할 때마다 정확히 동일한 데이터를 검색하지만 다중 사용자 시스템에서 다른 사용자에게 영향을 줄 수 있는 수준의 잠금을 수행함으로써 이를 달성합니다. 최하위 격리 수준인 커밋되지 않은 읽기의 경우 다른 트랜잭션에서 수정했지만 커밋되지 않은 데이터를 검색할 수 있습니다. 커밋되지 않은 읽기에서는 모든 동시성 부작용이 발생할 수 있지만 읽기 잠금이나 버전 관리가 수행되지 않으므로 오버헤드가 최소화됩니다.  
   
-##### <a name="includessdenoversionincludesssdenoversion-mdmd-isolation-levels"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 격리 수준  
+##### <a name="ssdenoversion-isolation-levels"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 격리 수준  
  ISO 표준은 다음 격리 수준을 정의합니다. 이 격리 수준은 모두 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 지원됩니다.  
   
 |격리 수준|정의|  
@@ -296,9 +296,9 @@ GO
   
 |격리 수준|커밋되지 않은 읽기|반복되지 않는 읽기|가상|  
 |---------------------|----------------|------------------------|-------------|  
-|**READ UNCOMMITTED**|yes|yes|yes|  
-|**READ COMMITTED**|예|yes|yes|  
-|**REPEATABLE READ**|예|예|yes|  
+|**READ UNCOMMITTED**|예|예|예|  
+|**READ COMMITTED**|예|예|예|  
+|**REPEATABLE READ**|예|예|예|  
 |**스냅샷**|예|예|예|  
 |**직렬화 가능**|예|예|예|  
   
@@ -433,11 +433,11 @@ GO
 ||기존의 허가 모드||||||  
 |------|---------------------------|------|------|------|------|------|  
 |**요청 모드**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
-|**내재된 공유(IS)(IS)**|yes|yes|yes|yes|yes|예|  
-|**공유(S)**|yes|yes|yes|예|예|예|  
-|**업데이트(U)**|yes|yes|예|예|예|예|  
-|**의도 배타(IX)**|yes|예|예|yes|예|예|  
-|**의도 배타 공유(SIX)**|yes|예|예|예|예|예|  
+|**내재된 공유(IS)(IS)**|예|예|예|예|예|예|  
+|**공유(S)**|예|예|예|예|예|예|  
+|**업데이트(U)**|예|예|예|예|예|예|  
+|**의도 배타(IX)**|예|예|예|예|예|예|  
+|**의도 배타 공유(SIX)**|예|예|예|예|예|예|  
 |**배타적(X)**|예|예|예|예|예|예|  
   
 > [!NOTE]  
@@ -476,12 +476,12 @@ GO
 ||기존의 허가 모드|||||||  
 |------|---------------------------|------|------|------|------|------|------|  
 |**요청 모드**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
-|**공유(S)**|yes|yes|예|yes|yes|yes|예|  
-|**업데이트(U)**|yes|예|예|yes|예|yes|예|  
-|**배타적(X)**|예|예|예|예|예|yes|예|  
-|**RangeS-S**|yes|yes|예|yes|yes|예|예|  
-|**RangeS-U**|yes|예|예|yes|예|예|예|  
-|**RangeI-N**|yes|yes|yes|예|예|yes|예|  
+|**공유(S)**|예|예|예|예|예|예|예|  
+|**업데이트(U)**|예|예|예|예|예|예|예|  
+|**배타적(X)**|예|예|예|예|예|예|예|  
+|**RangeS-S**|예|예|예|예|예|예|예|  
+|**RangeS-U**|예|예|예|예|예|예|예|  
+|**RangeI-N**|예|예|예|예|예|예|예|  
 |**RangeX-X**|예|예|예|예|예|예|예|  
   
 #### <a name="lock_conversion"></a> 변환 잠금  
