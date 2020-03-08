@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 031650ba23c2ee99b4dda819c31bb423749038c5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e953d15c46459e0bd076cc85e9bc7bc65cae9d7c
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247794"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896710"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server 및 ADO.NET
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET 다운로드](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 ## <a name="microsoftdatasqlclient"></a>Microsoft.Data.SqlClient
 
