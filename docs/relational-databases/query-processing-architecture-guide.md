@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 88e2325af328e32a246ca484ab447cc99be887c0
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: d6f17b46cb396ee34133e67a528e22cab571cceb
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903880"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338556"
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 로컬 테이블, 분할된 테이블 및 여러 서버에 분산된 테이블과 같은 다양한 데이터 스토리지 아키텍처의 쿼리를 처리합니다. 다음 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 실행 계획 캐싱을 통해 쿼리를 처리하고 쿼리 재사용을 최적화하는 방법에 대해 설명합니다.
 
@@ -86,7 +86,7 @@ GO
 ```
 
 ### <a name="optimizing-select-statements"></a>SELECT 문 최적화
-`SELECT` 문은 프로시저를 통하지 않습니다. 즉, 데이터베이스 서버가 요청한 데이터를 검색하는 데 사용해야 하는 정확한 단계를 지정하고 있지 않습니다. 이는 데이터베이스 서버가 문을 분석하여 요청한 데이터를 추출하는 가장 효율적인 방법을 판단해야 함을 의미합니다. 이것을 `SELECT` 문 최적화라고 하며 이를 위한 구성 요소를 쿼리 최적화 프로그램이라고 합니다. 최적화 프로그램에 대한 입력은 쿼리, 데이터베이스 스키마(테이블 및 인덱스 정의) 및 데이터베이스 통계로 이루어집니다. 쿼리 최적화 프로그램의 출력은 쿼리 실행 계획이며 경우에 따라 쿼리 계획이나 그냥 계획이라고도 합니다. 쿼리 계획의 내용은 이 항목의 뒷부분에서 보다 자세히 설명됩니다.
+`SELECT` 문은 프로시저를 통하지 않습니다. 즉, 데이터베이스 서버가 요청한 데이터를 검색하는 데 사용해야 하는 정확한 단계를 지정하고 있지 않습니다. 이는 데이터베이스 서버가 문을 분석하여 요청한 데이터를 추출하는 가장 효율적인 방법을 판단해야 함을 의미합니다. 이것을 `SELECT` 문 최적화라고 하며 이를 위한 구성 요소를 쿼리 최적화 프로그램이라고 합니다. 최적화 프로그램에 대한 입력은 쿼리, 데이터베이스 스키마(테이블 및 인덱스 정의) 및 데이터베이스 통계로 이루어집니다. 쿼리 최적화 프로그램의 출력은 쿼리 실행 계획이며 경우에 따라 쿼리 계획이나 실행 계획이라고 합니다. 실행 계획의 내용은 이 항목의 뒷부분에서 보다 자세히 설명됩니다.
 
 다음 도표는 단일 `SELECT` 문을 최적화하는 동안 쿼리 최적화 프로그램에 입력되는 내용과 출력 내용을 보여 줍니다.
 
@@ -100,17 +100,19 @@ GO
 
 쿼리 실행 계획은 다음 사항을 정의합니다. 
 
-* 원본 테이블이 액세스되는 순서  
-  일반적으로 데이터베이스 서버는 다양한 방법으로 기본 테이블에 액세스하여 결과 집합을 작성할 수 있습니다. 예를 들어 `SELECT` 문이 세 개의 테이블을 참조하는 경우 데이터베이스 서버는 먼저 `TableA`에 액세스하고, `TableA` 의 데이터를 사용하여 `TableB`에서 일치하는 행을 추출한 후 `TableB` 의 데이터를 사용하여 `TableC`에서 데이터를 추출합니다. 다음은 데이터베이스 서버가 테이블에 액세스할 수 있는 여러 순서입니다.  
+- **원본 테이블이 액세스되는 순서** 일반적으로 데이터베이스 서버는 다양한 방법으로 기본 테이블에 액세스하여 결과 집합을 작성할 수 있습니다. 예를 들어 `SELECT` 문이 세 개의 테이블을 참조하는 경우 데이터베이스 서버는 먼저 `TableA`에 액세스하고, `TableA` 의 데이터를 사용하여 `TableB`에서 일치하는 행을 추출한 후 `TableB` 의 데이터를 사용하여 `TableC`에서 데이터를 추출합니다. 다음은 데이터베이스 서버가 테이블에 액세스할 수 있는 여러 순서입니다.  
   `TableC`, `TableB`, `TableA`또는  
   `TableB`, `TableA`, `TableC`또는  
   `TableB`, `TableC`, `TableA`또는  
   `TableC`, `TableA`, `TableB`  
 
-* 각 테이블에서 데이터를 추출하는 데 사용하는 방법  
+- **각 테이블에서 데이터를 추출하는 데 사용하는 방법**  
   일반적으로 각 테이블의 데이터에 액세스하는 방법에는 여러 가지가 있습니다. 특정 키 값을 가진 몇몇 행만 필요한 경우 데이터베이스 서버는 인덱스를 사용할 수 있습니다. 테이블의 모든 행이 필요한 경우 데이터베이스 서버는 인덱스를 무시하고 테이블을 검색할 수 있습니다. 테이블의 모든 행이 필요하지만 키 열이 `ORDER BY`에 있는 인덱스가 있으면 테이블 검색 대신 인덱스 검색을 수행하여 다른 종류의 결과 집합을 저장할 수 있습니다. 테이블이 매우 작은 경우 테이블 검색은 거의 모든 테이블 액세스를 위한 가장 효율적인 방법일 수 있습니다.
+  
+- **계산 컴퓨팅에 사용되는 방법과 각 테이블의 데이터를 필터링, 집계, 정렬하는 방법**  
+  데이터가 테이블에서 액세스되므로, 컴퓨팅 스칼라 값과 같은 데이터에 대한 계산 수행 방법과 쿼리 텍스트(예: `GROUP BY` 또는 `ORDER BY` 절을 사용하는 경우)와 데이터 필터링 방법(예: `WHERE` 또는 `HAVING` 절을 사용하는 경우)에 정의된 대로 데이터를 집계하고 정렬하는 방법에는 여러 가지가 있습니다.
 
-여러 가능한 실행 계획 중에서 하나의 실행 계획을 선택하는 프로세스를 최적화라고 합니다. 쿼리 최적화 프로그램은 SQL 데이터베이스 시스템의 가장 중요한 구성 요소 중 하나입니다. 쿼리 최적화 프로그램에서 쿼리를 분석하고 계획을 선택할 때 오버헤드가 발생하지만 효율적인 실행 계획을 선택하면 오버헤드가 상당히 절감됩니다. 예를 들어 두 개의 건설 회사에 하나의 집에 대한 동일한 청사진이 제공될 수 있습니다. 한 회사에서는 며칠 동안 그 집을 어떻게 지을지 계획을 하는 동안 다른 회사는 계획 없이 집을 짓기 시작할 경우 프로젝트를 계획하는 데 시간을 소요한 회사가 먼저 작업을 끝내는 것과 같습니다.
+여러 가능한 실행 계획 중에서 하나의 실행 계획을 선택하는 프로세스를 최적화라고 합니다. 쿼리 최적화 프로그램은 [!INCLUDE[ssde_md](../includes/ssde_md.md)]의 가장 중요한 구성 요소 중 하나입니다. 쿼리 최적화 프로그램에서 쿼리를 분석하고 계획을 선택할 때 오버헤드가 발생하지만 효율적인 실행 계획을 선택하면 오버헤드가 상당히 절감됩니다. 예를 들어 두 개의 건설 회사에 하나의 집에 대한 동일한 청사진이 제공될 수 있습니다. 한 회사에서는 며칠 동안 그 집을 어떻게 지을지 계획을 하는 동안 다른 회사는 계획 없이 집을 짓기 시작할 경우 프로젝트를 계획하는 데 시간을 소요한 회사가 먼저 작업을 끝내는 것과 같습니다.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 비용을 기반으로 하는 최적화 프로그램입니다. 가능한 각 실행 계획은 사용되는 컴퓨팅 리소스의 양과 관련하여 비용을 추산합니다. 쿼리 최적화 프로그램은 가능한 실행 계획을 분석하고 예상 비용이 가장 낮은 계획을 선택해야 합니다. 일부 복잡한 `SELECT` 문은 가능한 수많은 실행 계획을 포함합니다. 이 경우에 쿼리 최적화 프로그램은 가능한 모든 조합을 분석하지는 않습니다. 대신 복잡한 알고리즘을 사용하여 가장 최소 비용에 근접하는 실행 계획을 찾습니다.
 
@@ -121,6 +123,12 @@ GO
 <sup>1</sup> 밀도는 데이터에 존재하는 고유 값의 분포 또는 지정된 열에 대한 중복 값의 평균 개수를 정의합니다. 밀도가 감소하면 값의 선택도가 증가합니다.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 프로그래머나 데이터베이스 관리자의 입력을 요청하지 않고 데이터베이스 서버가 데이터베이스의 조건 변화에 맞춰 동적으로 조정될 수 있게 하므로 중요합니다. 이를 통해 프로그래머는 쿼리의 최종 결과를 설명하는 데 주안점을 둘 수 있습니다. 프로그래머는 문이 실행될 때마다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램이 데이터베이스의 상태에 맞게 효율적인 실행 계획을 세운다는 것을 신뢰할 수 있습니다.
+
+> [!NOTE]
+> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에는 실행 계획을 표시하는 세 가지 옵션이 있습니다.        
+> -  쿼리 최적화 프로그램에서 생성한 컴파일된 계획인 ***[예상 실행 계획](../relational-databases/performance/display-the-estimated-execution-plan.md)***.        
+> -  컴파일된 계획 및 관련 실행 컨텍스트와 동일한 ***[실제 실행 계획](../relational-databases/performance/display-an-actual-execution-plan.md)***. 여기에는 실행 경고와 같이 실행이 완료된 후에 사용할 수 있는 런타임 정보가 포함되거나 최신 버전의 [!INCLUDE[ssde_md](../includes/ssde_md.md)]에서는 실행 중에 사용되는 경과 및 CPU 시간이 포함됩니다.        
+> -  컴파일된 계획 및 관련 실행 컨텍스트와 동일한 ***[활성 쿼리 통계](../relational-databases/performance/live-query-statistics.md)***. 여기에는 실행되는 동안 제공되는 런타임 정보가 포함되며 1초마다 업데이트됩니다. 예를 들어 런타임 정보에는 연산자를 통해 흐르는 실제 행 수가 포함됩니다.       
 
 ### <a name="processing-a-select-statement"></a>SELECT 문 처리
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 단일 SELECT 문을 처리하는 데 사용하는 기본 단계는 다음과 같습니다. 
@@ -450,12 +458,6 @@ WHERE name LIKE '%plans%';
   쿼리를 현재 실행하고 있는 각 사용자는 매개 변수 값 등의 해당 실행 관련 데이터를 보유하는 데이터 구조를 갖습니다. 이 데이터 구조를 실행 컨텍스트라고 합니다. 실행 컨텍스트 데이터 구조는 다시 사용되지만 해당 콘텐츠는 다시 사용되지 않습니다. 다른 사용자가 동일한 쿼리를 실행하는 경우 데이터 구조는 새 사용자의 컨텍스트를 사용하여 다시 초기화됩니다. 
 
   ![execution_context](../relational-databases/media/execution-context.gif)
-
-> [!NOTE]
-> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에는 실행 계획을 표시하는 세 가지 옵션이 있습니다.        
-> -  컴파일된 계획인 ***[예상 실행 계획](../relational-databases/performance/display-the-estimated-execution-plan.md)***.        
-> -  컴파일된 계획 및 관련 실행 컨텍스트와 동일한 ***[실제 실행 계획](../relational-databases/performance/display-an-actual-execution-plan.md)***. 여기에는 실행 경고와 같이 실행이 완료된 후에 사용할 수 있는 런타임 정보가 포함되거나 최신 버전의 [!INCLUDE[ssde_md](../includes/ssde_md.md)]에서는 실행 중에 사용되는 경과 및 CPU 시간이 포함됩니다.        
-> -  컴파일된 계획 및 관련 실행 컨텍스트와 동일한 ***[활성 쿼리 통계](../relational-databases/performance/live-query-statistics.md)***. 여기에는 실행되는 동안 제공되는 런타임 정보가 포함되며 1초마다 업데이트됩니다. 예를 들어 런타임 정보에는 연산자를 통해 흐르는 실제 행 수가 포함됩니다.       
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 실행할 때 [!INCLUDE[ssde_md](../includes/ssde_md.md)]은 먼저 계획 캐시를 조사하여 동일한 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에 대해 기존 실행 계획이 있는지 확인합니다. [!INCLUDE[tsql](../includes/tsql-md.md)] 문은 문자 그대로 문자당 캐시된 계획 및 문자 하나와 이전에 실행된 [!INCLUDE[tsql](../includes/tsql-md.md)] 문이 일치하는 경우 존재하는 것으로 규정합니다. 기존 계획을 찾으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 그것을 재사용하기 때문에 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 다시 컴파일하기 위한 오버헤드가 발생하지 않습니다. 실행 계획이 없는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 쿼리에 대해 새로운 실행 계획이 생성됩니다.
 
