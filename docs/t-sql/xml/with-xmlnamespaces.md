@@ -86,7 +86,7 @@ DEFAULT <xml_namespace_uri>
   
 -   XML 네임스페이스 접두어 `xsi`는 쿼리에서 ELEMENTS XSINIL 지시어를 사용하고 있는 경우 다시 선언할 수 없습니다.  
 
--   xsi 표준 네임스페이스를 사용하기 위해 ‘ http://www.w3.org/2001/XMLSchema-instance ’를 선언할 필요는 없습니다. 지정되지 않은 경우 XML/XPATH 프로세서에 의해 암시적으로 추가되며 xpath 식은 xml 문서에서 'http://www.w3.org/2001/XMLSchema-instance ' 스키마가 올바르게 선언되어 있는 한 xsi 접두사를 사용할 수 있습니다.
+-   xsi 표준 네임스페이스를 사용하기 위해 'http://www.w3.org/2001/XMLSchema-instance '를 선언할 필요는 없습니다. 지정되지 않은 경우 XML/XPATH 프로세서에 의해 암시적으로 추가되며 xpath 식은 xml 문서에서 'http://www.w3.org/2001/XMLSchema-instance ' 스키마가 올바르게 선언되어 있는 한 xsi 접두사를 사용할 수 있습니다.
 
 -   URI 문자열 값은 현재 데이터베이스 데이터 정렬 코드 페이지에 따라 인코딩되며 내부적으로 유니코드로 변환됩니다.  
   
