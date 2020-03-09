@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 7855ef064061957cbc44dfcb4b075ebbd3893325
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a3a567d86cb70c5d6d931d631a0f744ea59d359f
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247728"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896689"
 ---
 # <a name="manipulating-data"></a>데이터 조작
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET 다운로드](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 MARS(Multiple Active Result Sets)가 도입되기 전에는 개발자가 여러 연결 또는 서버 쪽 커서를 사용하여 특정 시나리오를 해결해야 했습니다. 또한 트랜잭션 상황에서 다중 연결을 사용하는 경우 **sp_getbindtoken** 및 **sp_bindsession**으로 바인딩된 연결을 사용해야 했습니다. 다음 시나리오에서는 여러 연결 대신 MARS 사용 연결을 사용하는 방법을 보여 줍니다.  
   

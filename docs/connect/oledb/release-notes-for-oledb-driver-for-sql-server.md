@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 90da0d1d42878fcbe65b1086663775d546751c80
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 8c06b83241f377aa05d7e5c0e4cb0d83a424f15a
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177363"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866234"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>SQL Server용 Microsoft OLE DB 드라이버에 대한 릴리스 정보
 
@@ -31,8 +31,8 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1830"></a>18.3.0
 
-![다운로드](../../ssdt/media/download.png) [x64 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2117515)  
-![다운로드](../../ssdt/media/download.png) [x86 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2117517)  
+![다운로드](../../ssms/media/download-icon.png) [x64 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2117515)  
+![다운로드](../../ssms/media/download-icon.png) [x86 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2117517)  
 
 릴리스 날짜: 2019년 10월
 
@@ -61,8 +61,8 @@ x86 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/
 
 ## <a name="1823"></a>18.2.3
 
-![다운로드](../../ssdt/media/download.png) [x64 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2119554)  
-![다운로드](../../ssdt/media/download.png) [x86 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2119738)  
+![다운로드](../../ssms/media/download-icon.png) [x64 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2119554)  
+![다운로드](../../ssms/media/download-icon.png) [x86 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2119738)  
 
 릴리스 날짜: 2019년 6월
 
@@ -79,8 +79,8 @@ x86 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/
 
 ## <a name="1822"></a>18.2.2
 
-![다운로드](../../ssdt/media/download.png) [x64 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2118512)  
-![다운로드](../../ssdt/media/download.png) [x86 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2118415)  
+![다운로드](../../ssms/media/download-icon.png) [x64 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2118512)  
+![다운로드](../../ssms/media/download-icon.png) [x86 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2118415)  
 
 릴리스 날짜: 2019년 5월
 
@@ -97,8 +97,8 @@ x86 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/
 
 ## <a name="1821"></a>18.2.1
 
-![다운로드](../../ssdt/media/download.png) [x64 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2118511)  
-![다운로드](../../ssdt/media/download.png) [x86 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2118278)  
+![다운로드](../../ssms/media/download-icon.png) [x64 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2118511)  
+![다운로드](../../ssms/media/download-icon.png) [x86 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2118278)  
 
 릴리스 날짜: 2019년 2월
 
@@ -116,8 +116,8 @@ x86 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/
 
 ## <a name="1810"></a>18.1.0
 
-![다운로드](../../ssdt/media/download.png) [x64 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2118506)  
-![다운로드](../../ssdt/media/download.png) [x86 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2118509)  
+![다운로드](../../ssms/media/download-icon.png) [x64 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2118506)  
+![다운로드](../../ssms/media/download-icon.png) [x86 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2118509)  
 
 릴리스 날짜: 2018년 7월
 
@@ -141,8 +141,8 @@ x86 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/
 
 ## <a name="1802"></a>18.0.2
 
-![다운로드](../../ssdt/media/download.png) [x64 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2118504)  
-![다운로드](../../ssdt/media/download.png) [x86 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2118277)  
+![다운로드](../../ssms/media/download-icon.png) [x64 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2118504)  
+![다운로드](../../ssms/media/download-icon.png) [x86 설치 관리자 다운로드](https://go.microsoft.com/fwlink/?linkid=2118277)  
 
 릴리스 날짜: 2018년 3월
 

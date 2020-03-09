@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 2173a6aaf0f07ffaa50d87ed7563dca8022ceebc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 76ed05f39cba61ea7f26deaef6cd38552b11f199
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75250972"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897077"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>SQL Server의 애플리케이션 보안 시나리오
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET 다운로드](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 보안 SQL Server 클라이언트 애플리케이션을 만드는 한 가지 올바른 방법은 없습니다. 모든 애플리케이션은 요구 사항, 배포 환경 및 사용자 집단에서 고유합니다. 처음 배포될 때 적절하게 보호되는 애플리케이션은 시간이 지남에 따라 보안성이 떨어질 수 있습니다. 향후 발생할 수 있는 위협을 예측할 수는 없습니다.  
   

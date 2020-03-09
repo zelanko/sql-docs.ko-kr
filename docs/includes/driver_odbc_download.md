@@ -1,1 +1,1 @@
-![다운로드](../ssdt/media/download.png)[ODBC 드라이버 다운로드](../connect/odbc/download-odbc-driver-for-sql-server.md)
+![다운로드](../ssms/media/download-icon.png)[ODBC 드라이버 다운로드](../connect/odbc/download-odbc-driver-for-sql-server.md)

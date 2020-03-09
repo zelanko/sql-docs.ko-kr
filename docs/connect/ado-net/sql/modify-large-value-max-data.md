@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 4fd43dae7d45e1b2491f34efe4102499517bd5de
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9acbd8fb795fe1a14e77e5d746f729d37c11cc8d
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247707"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896682"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>ADO.NET에서 큰 값(최대) 데이터 수정
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET 다운로드](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 LOB(Large Object) 데이터 형식은 최대 행 크기가 8KB를 초과하는 형식입니다. SQL Server는 `max`, `varchar` 및 `nvarchar` 데이터 형식에 사용할 수 있는 `varbinary` 지정자를 도입하여 2^32바이트에 이르는 큰 값도 저장할 수 있습니다. 테이블 열과 Transact-SQL 변수는 `varchar(max)`, `nvarchar(max)` 또는 `varbinary(max)` 데이터 형식을 지정할 수 있습니다. .NET에서는 `DataReader`를 사용하여 새로운 `max` 데이터 형식을 가져올 수 있을 뿐 아니라 특별한 처리 없이도 입력 및 출력 매개 변수 값을 모두 지정할 수 있습니다. 큰 `varchar` 데이터 형식의 경우 데이터를 증분 방식으로 검색하고 업데이트할 수 있습니다.  
   

@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 95c250c0eff6d22bb5bc8b284503156d412d6a45
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 75d8b98726a758e0533053dbdf8d2e03b3bfdf0d
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247813"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896993"
 ---
 # <a name="date-and-time-data"></a>날짜 및 시간 데이터
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET 다운로드](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server 2008에는 날짜 및 시간 정보를 처리하기 위한 새로운 데이터 형식이 도입되었습니다. 새 데이터 형식에는 날짜 및 시간에 대한 별도의 형식, 그리고 더 큰 범위, 전체 자릿수 및 표준 시간대 인식이 포함된 확장된 데이터 형식이 포함됩니다. Microsoft SqlClient Data Provider for SQL Server(<xref:Microsoft.Data.SqlClient>)는 SQL Server 2008 데이터베이스 엔진의 새로운 기능을 모두 완벽하게 지원합니다. SqlClient에서 이러한 새로운 기능을 사용하려면 .NET Framework 3.5 SP1(이상) 또는 .NET Core 1.0(이상) 버전을 설치해야 합니다.  
   

@@ -57,7 +57,7 @@ ms.locfileid: "77080890"
   
 -   [추가 정보](#bkmk_addiitonal_informaiton)  
   
-##  <a name="bkmk_configuraiton_overview">구성 변경 개요</a>  
+##  <a name="bkmk_configuraiton_overview"></a>구성 변경 개요  
  다음 구성 변경은 표준 사용자 권한을 사용하여 보고서 서버 내용 및 작업을 관리할 수 있도록 서버를 구성합니다.  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL을 신뢰할 수 있는 사이트에 추가합니다. 기본적으로 위에 나와 있는 운영 체제에서 실행되는 Internet Explorer는 **보호 모드**로 실행됩니다. 이 모드는 같은 컴퓨터에서 실행되는 높은 수준의 프로세스에 브라우저 요청이 도달하지 못하도록 차단하는 기능입니다. 이 URL을 신뢰할 수 있는 사이트에 추가하면 보고서 서버 애플리케이션에 대한 보호 모드를 해제할 수 있습니다.  

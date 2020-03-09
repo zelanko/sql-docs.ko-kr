@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 837bb71e81ac2d2ead661915c332ad826c4f944f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 76fc14c112d47f04fc790df118eea77f1bec42cb
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251190"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896601"
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server의 공급자 통계
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET 다운로드](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 .NET Framework 버전 2.0 및 .NET Core 버전 1.0부터 Microsoft SqlClient Data Provider for SQL Server가 런타임 통계를 지원합니다. 유효한 연결 개체를 만든 후 <xref:Microsoft.Data.SqlClient.SqlConnection> 개체의 <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 속성을 `True`로 설정하여 통계를 사용하도록 설정해야 합니다. 통계를 사용하도록 설정한 후에는 <xref:Microsoft.Data.SqlClient.SqlConnection> 개체의 <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 메서드를 통해 <xref:System.Collections.IDictionary> 참조를 검색하여 "특정 시점 스냅샷"으로 검토할 수 있습니다. 목록 전체를 이름/값 쌍 사전 항목 집합으로 열거합니다. 이러한 이름/값 쌍은 순서가 지정되지 않습니다. 언제든지 <xref:Microsoft.Data.SqlClient.SqlConnection> 개체의 <xref:Microsoft.Data.SqlClient.SqlConnection.ResetStatistics%2A> 메서드를 호출하여 카운터를 초기화할 수 있습니다. 통계 수집을 사용하도록 설정하지 않은 경우 예외가 생성되지 않습니다. 또한 <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>를 먼저 호출하지 않고 <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>를 호출하는 경우 검색된 값은 각 항목의 초기 값입니다. 통계를 사용하도록 설정하고 잠시 동안 애플리케이션을 실행한 다음 통계를 사용하지 않도록 설정하면 검색된 값에 통계를 사용하지 않도록 설정한 지점까지 수집된 값이 반영됩니다. 모든 통계 값은 연결 단위로 수집됩니다.  
   

@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 5477b655554dceaa5f43b7d099e0fc156340f558
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b4ec71c2bd693599106692a45f9e9aa10a63babd
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75233810"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896231"
 ---
 # <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>SqlNotificationRequest를 사용한 SqlCommand 실행
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET 다운로드](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 서버에서 데이터를 가져온 후 데이터가 변경될 때 알림을 생성하도록 <xref:Microsoft.Data.SqlClient.SqlCommand>를 구성할 수 있으며 쿼리가 다시 실행되면 결과 집합이 달라집니다. 이 기능은 서버에서 사용자 지정 알림 큐를 사용하려는 시나리오 또는 라이브 개체를 유지하지 않으려는 경우에 유용합니다.
 

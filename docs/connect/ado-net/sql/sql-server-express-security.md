@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: ddf189bc9fead5c840ed46b638c31172b7699235
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f704511abd15c6bc4eb96afc633b4cfb46f45e1f
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75244026"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896293"
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express 보안
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET 다운로드](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Microsoft SQL Server Express Edition(SQL Server Express)은 Microsoft SQL Server 기반으로 하며 대부분의 데이터베이스 엔진 기능을 지원합니다. 필요하지 않은 기능 및 네트워크 연결은 기본적으로 해제되어 있습니다. 이렇게 하면 악의적인 사용자가 공격에 이용할 수 있는 노출 영역을 줄일 수 있습니다.  
   

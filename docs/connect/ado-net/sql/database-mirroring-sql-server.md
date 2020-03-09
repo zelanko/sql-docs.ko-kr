@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 354b3ef1f0db45c64363d508d4bb055ee32d6416
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c7ace2feb39bcc3f5f257c0ac2c7360649cfc33c
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247828"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897004"
 ---
 # <a name="database-mirroring-in-sql-server"></a>SQL Server의 데이터베이스 미러링
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET 다운로드](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server의 데이터베이스 미러링을 사용하면 대기 서버에서 SQL Server 데이터베이스의 복사본, 즉 미러를 유지할 수 있습니다. 미러링을 사용하면 별도의 데이터 복사본 두 개가 항상 존재하여 높은 가용성과 완전한 데이터 중복성을 보장합니다. Microsoft SqlClient Provider for SQL Server에서는 데이터베이스 미러링을 암시적으로 지원하므로 SQL Server 데이터베이스에 대해 미러링이 구성되고 나면 개발자는 별도로 작업을 수행하거나 코드를 작성할 필요가 없습니다. 또한 <xref:Microsoft.Data.SqlClient.SqlConnection> 개체는 <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A>에서의 장애 조치(failover) 파트너 서버 이름 제공을 지원합니다.  
   

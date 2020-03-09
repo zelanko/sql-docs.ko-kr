@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d1b5742d082fdb40b03663cf2db719399290a010
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bd0dbbedcb2fa33af80e0a1a1d593bf7df27edb6
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247769"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896953"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>SQL Server의 인스턴스 열거(ADO.NET)
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET 다운로드](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server에서 애플리케이션이 현재 네트워크 내에서 SQL Server 인스턴스를 찾을 수 있습니다. <xref:System.Data.Sql.SqlDataSourceEnumerator> 클래스는 표시되는 모든 서버에 대한 정보가 포함된 <xref:System.Data.DataTable>을 제공하여 애플리케이션 개발자에게 이 정보를 노출합니다. 이 반환된 테이블은 사용자가 새 연결을 만들려고 할 때 제공되는 목록과 일치하는 네트워크상에서 사용 가능한 서버 인스턴스의 목록을 포함하며, **Connection Properties** 대화 상자에서 사용 가능한 모든 서버가 포함된 드롭다운 목록을 확장합니다. 표시되는 결과가 항상 완전하지는 않습니다.  
   

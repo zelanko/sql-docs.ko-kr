@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ccd2ce331f6e88933ff546c18446b5edbc956511
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1f59b2d14ab34cee3e703eda9fb9db6750da96a2
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67935674"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866641"
 ---
 # <a name="python-sql-driver"></a>Python SQL Driver
 
-![](../../ssdt/media/download.png)[Python용 SQL 드라이버를 설치하려면](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![](../../ssms/media/download-icon.png)[Python용 SQL 드라이버를 설치하려면](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 Windows, Linux 또는 Mac에서 Python을 사용하여 SQL Database에 연결할 수 있습니다.   
   

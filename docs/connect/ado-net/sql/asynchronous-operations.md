@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 7a070d71b653b0afc9e94c898653432e7e388d07
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bc2a921e3aec0068c11b2baab45c396d853a1a36
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75250931"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897059"
 ---
 # <a name="asynchronous-operations"></a>비동기 작업
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET 다운로드](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 명령 실행과 같은 일부 데이터베이스 작업을 완료하는 데 상당한 시간이 걸릴 수 있습니다. 그런 경우 단일 스레드 애플리케이션에서는 다른 작업을 차단하고 명령이 완료될 때까지 대기한 다음 다른 작업을 계속해야 합니다. 반면에 장기 실행 작업을 백그라운드 스레드에 할당할 수 있으면 작업을 마칠 때까지 포그라운드 스레드를 활성 상태로 유지할 수 있습니다. 예를 들어 Windows 애플리케이션에서 장기 실행 작업을 백그라운드 스레드에 위임하면 작업이 실행되는 동안 사용자 인터페이스 스레드가 응답성을 유지할 수 있습니다.  
   

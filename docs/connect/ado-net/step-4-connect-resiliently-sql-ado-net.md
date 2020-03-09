@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 08/15/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 dev_langs:
@@ -13,16 +12,17 @@ dev_langs:
 ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b52267870338065589de9bb54e5a332b923348fd
-ms.sourcegitcommit: d876425e5c465ee659dd54e7359cda0d993cbe86
+ms.reviewer: v-kaywon
+ms.openlocfilehash: e0a042c6c5e937c08e5bcc6402caa8338f22b332
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/24/2020
-ms.locfileid: "77568102"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78895832"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>4단계: ADO.NET을 사용하여 탄력적으로 SQL에 연결
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[ADO.NET 다운로드](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 - 이전 문서:&nbsp;&nbsp;&nbsp;[3단계: ADO.NET을 사용하여 SQL에 연결하는 개념 증명](step-3-connect-sql-ado-net.md)  
 

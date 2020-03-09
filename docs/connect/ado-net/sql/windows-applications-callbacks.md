@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 83dca011087150eef5d8fdc948bb65cc6808830e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e8c5fbecb8892639e5e4e0cb608c3c4de0447508
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253377"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896018"
 ---
 # <a name="windows-applications-using-callbacks"></a>콜백을 사용하는 Windows 애플리케이션
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET 다운로드](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 대부분의 비동기 처리 시나리오에서는 데이터베이스 작업을 시작하고 데이터베이스 작업이 완료될 때까지 기다리지 않고 다른 프로세스를 계속 실행하려고 합니다. 그러나 많은 시나리오에서는 데이터베이스 작업이 종료된 후 다른 작업을 수행해야 합니다. 예를 들어 Windows 애플리케이션에서 장기 실행 작업을 백그라운드 스레드에 위임하는 동시에 사용자 인터페이스 스레드가 응답성을 유지하기를 원합니다. 그러나 데이터베이스 작업이 완료되면 결과를 사용하여 양식을 채워야 합니다. 이 시나리오 유형은 콜백을 사용하여 구현하는 것이 가장 좋습니다.  
   

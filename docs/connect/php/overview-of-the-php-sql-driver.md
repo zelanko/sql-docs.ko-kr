@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 25519d06df8b948d5cfc5d387029cf09beafc856
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: afa9863d955ef7f075ffd8c8c68844130bcfd9ca
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67936272"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866501"
 ---
 # <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 개요
 
@@ -29,7 +29,7 @@ ms.locfileid: "67936272"
   
 |항목|Description|  
 |---------|---------------|  
-| ![Download-DownArrow-Circled](../../ssdt/media/download.png)[SQL Server용 PHP 드라이버를 다운로드하려면](download-drivers-php-sql-server.md) | Microsoft Drivers for PHP for SQL Server를 다운로드하는 링크입니다. |
+| ![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[SQL Server용 PHP 드라이버를 다운로드하려면](download-drivers-php-sql-server.md) | Microsoft Drivers for PHP for SQL Server를 다운로드하는 링크입니다. |
 |[Microsoft Drivers for PHP for SQL Server 릴리스 정보](../../connect/php/release-notes-php-sql-driver.md)|버전 4.0, 3.2, 3.1, 3.0 및 2.0에 추가된 기능을 나열합니다.|  
 |[Microsoft Drivers for PHP for SQL Server에 대한 지원 리소스](../../connect/php/support-resources-for-the-php-sql-driver.md)|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 사용하는 애플리케이션을 개발할 때 도움이 될 수 있는 리소스에 대한 링크를 제공합니다.|  
 |[설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)|이 설명서의 코드 예제를 실행할 때 도움이 될 수 있는 정보를 제공합니다.|  

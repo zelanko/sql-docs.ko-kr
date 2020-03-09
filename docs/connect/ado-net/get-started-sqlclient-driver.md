@@ -5,22 +5,22 @@ ms.custom: ''
 ms.date: 09/30/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f7e0c8a7e6685f902fd383e8ae6421d43a529ae
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 39e83bab2e5a159d97b3b5bdd0ef5feaa69f43c5
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251013"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897100"
 ---
 # <a name="getting-started-with-the-sqlclient-driver"></a>SqlClient 드라이버 시작
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[ADO.NET 다운로드](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 * [1단계: ADO.NET 개발을 위한 개발 환경 구성](step-1-configure-development-environment-ado-net-development.md)  
 * [2단계: ADO.NET 개발을 위한 SQL 데이터베이스 만들기](step-2-create-sql-database-ado-net-development.md)  

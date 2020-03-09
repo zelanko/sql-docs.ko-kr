@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 45d1b1b6-363d-4924-bcb1-b2582b60f76b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1e1dca1a7240f5e0612713ba7f87a47f938e7e9f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d35336d1414df78e5d24c3133a176d3d232deadb
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67935654"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866546"
 ---
 # <a name="ruby-driver-for-sql-server"></a>SQL Server용 Ruby 드라이버
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[SQL용 Ruby 드라이버를 다운로드하려면](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[SQL용 Ruby 드라이버를 다운로드하려면](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 Windows, Linux 또는 Mac에서 Ruby를 사용하여 SQL Database에 연결할 수 있습니다.   
   

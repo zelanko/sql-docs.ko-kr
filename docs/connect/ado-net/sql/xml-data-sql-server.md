@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 36307dc43632a5ead207d6ddfefe1e90206a1c0e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 039efb5e3e2826fd4c337d2dbdced29295f05fdb
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253349"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78895877"
 ---
 # <a name="xml-data-in-sql-server"></a>SQL Server의 XML 데이터
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET 다운로드](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server에서는 .NET 내에 SQLXML의 기능을 노출시킵니다. 개발자들은 SQL Server의 인스턴스에서 XML 데이터에 액세스하고 .NET 환경으로 데이터를 가져와서 처리한 후 업데이트를 다시 SQL Server로 보내는 애플리케이션들을 작성할 수 있습니다. SQL Server에서는 데이터 스토리지 및 데이터 검색을 위한 매개 변수 값을 비롯하여 여러 가지 방식으로 XML 데이터를 사용할 수 있습니다. .NET의 **SqlXml** 클래스에서는 SQL Server 내의 XML 열에 저장된 데이터로 작업하기 위한 클라이언트 쪽 지원을 제공합니다. 자세한 내용은 SQL Server 온라인 설명서의 "SQLXML 관리되는 클래스"를 참조하세요.  
   

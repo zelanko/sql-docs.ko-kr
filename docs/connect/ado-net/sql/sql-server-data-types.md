@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 46edb611f29c447f7e1ca2228212ef3e0d594fff
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 50a6e158f5678b30028337b70e1da6914038e64a
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75244037"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896546"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server 데이터 형식 및 ADO.NET
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET 다운로드](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server와 .NET은 서로 다른 형식의 시스템을 기반으로 하기 때문에 데이터가 손실될 수 있습니다. SQL Server용 Microsoft SqlClient Data Provider(<xref:Microsoft.Data.SqlClient>)는 데이터 무결성 유지를 위해 SQL Server 데이터를 사용을 위해 형식화된 접근자 메서드를 제공합니다. 사용자는 <xref:System.Data.SqlDbType> 클래스의 열거형을 사용하여 <xref:Microsoft.Data.SqlClient.SqlParameter> 데이터 형식을 지정할 수 있습니다.  
   

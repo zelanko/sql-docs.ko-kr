@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 1b81b179657fc3564105a113712929ca8f3e10da
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 91b00848fb42c64f1c180019a7618bf649488bd9
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75246965"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896250"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 사용자 인스턴스
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET 다운로드](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Microsoft SQL Server Express Edition(SQL Server Express)은 사용자 인스턴스 기능을 지원하며, 이 기능은 Microsoft SqlClient Data Provider for SQL Server를 사용하는 경우에만 사용 가능합니다. 사용자 인스턴스는 부모 인스턴스에서 생성되는 SQL Server Express 데이터베이스 엔진의 개별 인스턴스입니다. 사용자 인스턴스를 사용하면 로컬 컴퓨터에서 관리자가 아닌 사용자가 SQL Server Express 데이터베이스에 연결할 수 있습니다. 각 인스턴스는 사용자당 하나씩 개별 사용자의 보안 컨텍스트에서 실행됩니다.  
   

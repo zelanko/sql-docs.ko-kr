@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 613ae5b3326bc49ab25f30628ecd85e13959e2dc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9d80f5eec2c33fed635c18937185e2e21798e93b
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247739"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896719"
 ---
 # <a name="inserting-an-image-from-a-file"></a>파일에서 이미지 삽입
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET 다운로드](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 데이터 원본에 있는 필드의 유형에 따라 BLOB(Binary Large Object) 이진 또는 문자 데이터로 데이터베이스에 쓸 수 있습니다. BLOB은 일반적으로 문서와 그림을 포함하는 `text`, `ntext` 및 `image` 데이터 형식을 지칭하는 일반 용어입니다.  
   

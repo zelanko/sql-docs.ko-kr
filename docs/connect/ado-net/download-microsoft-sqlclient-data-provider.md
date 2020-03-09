@@ -13,16 +13,14 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 5a590b6ad105837408db8454493a7a9d4e28862f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ca06e65c1794416cbc6a33fee1b7508a44c289a9
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251039"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897139"
 ---
 # <a name="download-microsoft-sqlclient-data-provider-for-sql-server"></a>Microsoft SqlClient Data Provider for SQL Server 다운로드
-
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[ADO.NET 다운로드](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ## <a name="downloading-the-driver"></a>드라이버 다운로드
 Microsoft.Data.SqlClient 패키지는 NuGet.org에서 얻을 수 있습니다. 종속성을 다운로드하려면 아래 링크에서 종속성 섹션을 참조하세요.

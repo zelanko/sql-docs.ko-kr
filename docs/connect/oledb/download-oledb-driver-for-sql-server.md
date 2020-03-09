@@ -7,12 +7,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a49f0ffe4de2f3242daf147ecb80dc950f8d8a9f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: b7c0e54f4193fcb918a5b4b5a362e1bbd9fee646
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177403"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866463"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>SQL Server용 Microsoft OLE DB 드라이버 다운로드
 
@@ -24,8 +24,8 @@ OLE DB Driver for SQL Server는 OLE DB에 사용되는 독립 실행형 데이�
 
 Microsoft OLE DB Driver 18.3 for SQL Server는 최신 GA(일반 공급) 버전입니다. 이전 버전의 Microsoft OLE DB Driver 18 for SQL Server가 설치되어 있을 경우 18.3을 설치하면 18.3으로 업그레이드됩니다.
 
-**[![다운로드](../../ssdt/media/download.png) Microsoft OLE DB Driver for SQL Server(x64) 다운로드](https://go.microsoft.com/fwlink/?linkid=2117515)**  
-**[![다운로드](../../ssdt/media/download.png) Microsoft OLE DB Driver for SQL Server(x86) 다운로드](https://go.microsoft.com/fwlink/?linkid=2117517)**  
+**[![다운로드](../../ssms/media/download-icon.png) Microsoft OLE DB Driver for SQL Server(x64) 다운로드](https://go.microsoft.com/fwlink/?linkid=2117515)**  
+**[![다운로드](../../ssms/media/download-icon.png) Microsoft OLE DB Driver for SQL Server(x86) 다운로드](https://go.microsoft.com/fwlink/?linkid=2117517)**  
 
 ### <a name="version-information"></a>버전 정보
 
