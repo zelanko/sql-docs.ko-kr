@@ -22,12 +22,12 @@ ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbe4665a1f690a41883ca3339e2e70f251c52a1a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 905c1dc08c2d2e766425b62d7e0a920730ae2b41
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177373"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78257001"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>변경 내용 추적 사용(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,16 +65,16 @@ ms.locfileid: "78177373"
  다음 예에서는 초기 동기화 버전 및 초기 데이터 집합을 가져오는 방법을 보여 줍니다.  
   
 ```sql  
-    declare @synchronization_version bigint;
+declare @synchronization_version bigint;
 
-    -- Obtain the current synchronization version. This will be used next time that changes are obtained.  
-    SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
+-- Obtain the current synchronization version. This will be used next time that changes are obtained.  
+SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
   
-    -- Obtain initial data set.  
-    SELECT  
-        P.ProductID, P.Name, P.ListPrice  
-    FROM  
-        SalesLT.Product AS P  
+-- Obtain initial data set.  
+SELECT  
+    P.ProductID, P.Name, P.ListPrice  
+FROM  
+   SalesLT.Product AS P  
 ```  
   
 ### <a name="using-the-change-tracking-functions-to-obtain-changes"></a>변경 내용 추적 함수를 사용하여 변경 내용 가져오기  
@@ -87,8 +87,7 @@ SELECT
     CT.ProductID, CT.SYS_CHANGE_OPERATION,  
     CT.SYS_CHANGE_COLUMNS, CT.SYS_CHANGE_CONTEXT  
 FROM  
-    CHANGETABLE(CHANGES SalesLT.Product, @last_synchronization_version) AS CT  
-  
+    CHANGETABLE(CHANGES SalesLT.Product, @last_synchronization_version) AS CT
 ```  
   
  일반적으로 클라이언트는 행에 대한 기본 키만 가져오는 대신 해당 행에 대한 최신 데이터를 가져오려고 합니다. 따라서 애플리케이션은 CHANGETABLE(CHANGES ...)의 결과를 사용자 테이블의 데이터와 조인합니다. 예를 들어 다음 쿼리에서는 `SalesLT.Product` 테이블과 조인하여 `Name` 및 `ListPrice` 열에 대한 값을 가져옵니다. 여기에서는 `OUTER JOIN`이 사용되었습니다. 이는 사용자 테이블에서 삭제된 행에 대해 변경 내용 정보가 반환되도록 하는 데 필요합니다.  
@@ -107,11 +106,11 @@ ON
 ```  
   
  다음 변경 내용 열거에서 사용할 버전을 가져오려면 아래 예와 같이 CHANGE_TRACKING_CURRENT_VERSION()을 사용합니다.  
-  
+
 ```sql  
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION()  
 ```  
-  
+ 
  변경 내용을 가져올 때 애플리케이션은 다음 예와 같이 CHANGETABLE(CHANGES...) 및 CHANGE_TRACKING_CURRENT_VERSION()을 모두 사용해야 합니다.  
   
 ```sql  
@@ -371,20 +370,20 @@ END
  일반적으로 컨텍스트 정보는 변경 내용의 원본을 식별하는 데 사용됩니다. 변경 내용의 원본을 식별할 수 있는 경우 이 컨텍스트 정보는 데이터 저장소에서 사용되어 데이터 저장소에서 다시 동기화할 때 변경 내용을 가져오지 않도록 할 수 있습니다.  
   
 ```sql  
-  -- Try to update the row and check for a conflict.  
-  WITH CHANGE_TRACKING_CONTEXT (@source_id)  
-  UPDATE  
-     SalesLT.Product  
-  SET  
-      ListPrice = @new_listprice  
-  FROM  
-      SalesLT.Product AS P  
-  WHERE  
-     ProductID = @product_id AND  
-     @last_sync_version >= ISNULL (  
-         (SELECT CT.SYS_CHANGE_VERSION FROM CHANGETABLE(VERSION SalesLT.Product,  
-         (ProductID), (P.ProductID)) AS CT),  
-         0)  
+-- Try to update the row and check for a conflict.  
+WITH CHANGE_TRACKING_CONTEXT (@source_id)  
+UPDATE  
+  SalesLT.Product  
+SET  
+  ListPrice = @new_listprice  
+FROM  
+  SalesLT.Product AS P  
+WHERE  
+  ProductID = @product_id AND  
+    @last_sync_version >= ISNULL (  
+    (SELECT CT.SYS_CHANGE_VERSION FROM CHANGETABLE(VERSION SalesLT.Product,  
+    (ProductID), (P.ProductID)) AS CT),  
+       0)  
 ```  
   
 ### <a name="ensuring-consistent-and-correct-results"></a>일관성 있고 올바른 결과 확인  

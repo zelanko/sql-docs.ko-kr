@@ -13,12 +13,12 @@ ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3cbe866530d9c2dfe7db299ea913db8749e4709
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7879c6c7d07e7e0caeb075652b87b42fdf3ab66c
+ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253820"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261842"
 ---
 # <a name="manage-bookmarks"></a>책갈피 관리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,4 +93,4 @@ ms.locfileid: "75253820"
  **책갈피** 창의 모든 책갈피에 대한 확인란을 선택하거나 확인란의 선택을 취소합니다. 책갈피를 제거하거나 책갈피가 표시된 코드 행을 변경하지는 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server Management Studio 바로 가기 키](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
+ [SQL Server Management Studio 바로 가기 키](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

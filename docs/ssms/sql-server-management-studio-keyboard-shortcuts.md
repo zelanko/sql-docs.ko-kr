@@ -20,16 +20,18 @@ helpviewer_keywords:
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2997c185dcd01c00b007cd676fe0eef7e3ac2048
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f835927ba9927b5614ac0660ce3cad2ae96ae483
+ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75242809"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261722"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio 바로 가기 키
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에는 두 개의 키보드 구성표가 있습니다. 기본적으로 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010을 기반으로 하는 바로 가기 키가 포함된 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 구성표가 사용됩니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 에서는 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]의 표준 구성표와 유사한 키보드 구성표도 제공합니다. 키보드 구성표를 변경하거나 다른 바로 가기 키를 추가하려면 **도구** 메뉴에서 **옵션**을 클릭합니다. **환경**, **키보드** 페이지에서 원하는 키보드 구성표를 선택합니다.  
+
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에는 두 개의 키보드 구성표가 있습니다. 기본적으로 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010을 기반으로 하는 바로 가기 키가 포함된 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 구성표가 사용됩니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 에서는 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]의 표준 구성표와 유사한 키보드 구성표도 제공합니다. 키보드 구성표를 변경하거나 다른 바로 가기 키를 추가하려면 **도구** 메뉴에서 **옵션**을 클릭합니다. **환경**, **키보드** 페이지에서 원하는 키보드 구성표를 선택합니다.  
   
 > [!NOTE]  
 >  이 페이지 상단의 **모두 축소** 를 클릭하면 제목만 표시됩니다.  

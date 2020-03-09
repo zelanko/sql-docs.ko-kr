@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 82634dc8169fa266e6fb1c92ec9a14129e40e947
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 03e19dd52f7ea996690eaf55bad9cdf9d5eccb6b
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78180095"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256961"
 ---
 # <a name="live-query-statistics"></a>활성 쿼리 통계
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,6 +67,8 @@ ms.locfileid: "78180095"
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 프리미엄 계층에서 활성 통계를 보려면 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 표준 및 기본 계층에서 활성 통계를 보려면 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요합니다.
   
 ## <a name="see-also"></a>참고 항목  
+ [실행 계획](../../relational-databases/performance/execution-plans.md)    
+ [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)    
  [성능 모니터링 및 튜닝](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [성능 모니터링 및 튜닝 도구](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [작업 모니터 열기&#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)     

@@ -21,12 +21,12 @@ ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b03a4fdc2d7a49cdd9896768fb7e7d989bc4d3d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4c1a77dfbe88a3018d7ae170675b84461f69a12b
+ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253749"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261850"
 ---
 # <a name="navigate-code-and-text"></a>코드 및 텍스트 이동
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "75253749"
 -   **이동** 명령  
   
 > [!NOTE]  
->  바로 가기 키의 전체 목록을 보려면 [SQL Server Management Studio 바로 가기 키](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)를 참조하세요.  
+>  바로 가기 키의 전체 목록을 보려면 [SQL Server Management Studio 바로 가기 키](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)를 참조하세요.  
   
 ## <a name="navigating-with-bookmarks"></a>책갈피로 이동  
  문서를 편집한 다음 원래 위치로 이동하려면 책갈피를 추가합니다. 책갈피를 설정하고 바로 가기 키를 사용하여 책갈피로 이동합니다. 책갈피 창에서 책갈피를 확인합니다.  

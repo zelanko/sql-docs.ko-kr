@@ -12,12 +12,12 @@ ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 787ab0e852055b7dcc53a16f14580f7e184500bf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 062fd4a1ecdf9e858e75d4d36292296bdee619fc
+ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253714"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261682"
 ---
 # <a name="replace-in-files"></a>파일에서 바꾸기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -154,4 +154,4 @@ ms.locfileid: "75253714"
  이 도구 모음 탭은 대화 상자를 **기호 찾기** 대화 상자로 변경합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server Management Studio 바로 가기 키](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
+ [SQL Server Management Studio 바로 가기 키](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

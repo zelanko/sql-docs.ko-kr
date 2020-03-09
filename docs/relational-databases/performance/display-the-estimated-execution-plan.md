@@ -20,12 +20,12 @@ ms.assetid: e94aa576-4c0c-4c54-ad05-6c3432cc615b
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d0d5930734bb48c0914300a735f81e3ca2ced38
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 224b7023df4187702c14b41f17caad7c0b53b911
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67946864"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256865"
 ---
 # <a name="display-the-estimated-execution-plan"></a>예상 실행 계획 표시
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,3 +53,7 @@ ms.locfileid: "67946864"
  
 > [!NOTE] 
 > 또는 [SET SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md)을 사용하여 각 문을 실행하지 않고 실행 계획 정보만 반환합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 사용한 경우 *결과* 탭에 실행 계획을 그래픽 형식으로 여는 링크가 포함됩니다.   
+  
+## <a name="see-also"></a>참고 항목  
+ [실행 계획](../../relational-databases/performance/execution-plans.md)    
+ [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)  

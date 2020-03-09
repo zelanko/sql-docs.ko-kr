@@ -10,12 +10,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6e19142ab4d447678aedf6c841a74ed435eccea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 4b2a0c7a298cda42940e08b532be0df39221a21b
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75257023"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280946"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>1단원: 데이터베이스 개체 만들기 및 쿼리
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "75257023"
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 다음과 같은 방법으로 작성하여 [!INCLUDE[ssDE](../includes/ssde-md.md)] 에 제출할 수 있습니다.  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]사용. 이 자습서에서는 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]를 사용한다고 가정하지만 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Microsoft 다운로드 센터 [에서 무료로 다운로드할 수 있는](https://www.microsoft.com/download/details.aspx?id=7593)Express를 사용할 수도 있습니다.  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]사용. 이 자습서에서는 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]를 사용한다고 가정하지만 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Microsoft 다운로드 센터 [에서 무료로 다운로드할 수 있는](https://www.microsoft.com/download/details.aspx?id=14630)Express를 사용할 수도 있습니다.  
   
 -   [sqlcmd 유틸리티](../tools/sqlcmd-utility.md)사용  
   
@@ -40,8 +40,8 @@ ms.locfileid: "75257023"
 - [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
 
 SQL Server 인스턴스에 대한 액세스 권한이 없는 경우 다음 링크에서 플랫폼을 선택합니다. SQL 인증을 선택한 경우 SQL Server 로그인 자격 증명을 사용합니다.
-- **Windows**: [SQL Server 2017 Developer Edition 다운로드](https://www.microsoft.com/sql-server/sql-server-downloads)
-- **macOS**: [Docker에서 SQL Server 2017 다운로드](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
+- **Windows**: [SQL Server 2017 Developer Edition 다운로드](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **macOS**: [Docker에서 SQL Server 2017 다운로드](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 ## <a name="create-a-database"></a>데이터베이스 만들기
 많은 [!INCLUDE[tsql](../includes/tsql-md.md)] 문과 마찬가지로 CREATE DATABASE 문에는 필수 매개 변수로 데이터베이스 이름이 있습니다. 또한 CREATE DATABASE에는 데이터베이스 파일을 저장할 디스크 위치와 같은 많은 선택적 매개 변수가 있습니다. 선택적 매개 변수 없이 CREATE DATABASE를 실행할 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 이러한 여러 매개 변수에 기본값을 사용합니다. 이 자습서에서는 아주 약간의 선택적 구문 매개 변수만 사용합니다.   
@@ -105,7 +105,7 @@ SQL Server 인스턴스에 대한 액세스 권한이 없는 경우 다음 링�
 |75|Tire Bar||Tool for changing tires.|  
 |3000|3mm Bracket|.52||  
   
-기본 구문은 INSERT, 테이블 이름, 열 목록, VALUES, 삽입할 값 목록을 차례로 포함합니다. 줄의 맨 앞에 있는 두 개의 하이픈은 해당 줄이 주석이며 컴파일러에서 텍스트를 무시한다는 것을 나타냅니다. 이 경우에는 허용되는 구문 변형을 주석에서 설명합니다.  
+기본 구문은 다음과 같습니다. INSERT, 테이블 이름, 열 목록, VALUES, 삽입할 값 목록을 차례로 포함합니다. 줄의 맨 앞에 있는 두 개의 하이픈은 해당 줄이 주석이며 컴파일러에서 텍스트를 무시한다는 것을 나타냅니다. 이 경우에는 허용되는 구문 변형을 주석에서 설명합니다.  
   
 ### <a name="insert-data-into-a-table"></a>데이터를 테이블에 삽입  
   

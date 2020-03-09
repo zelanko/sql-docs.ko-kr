@@ -16,12 +16,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6e96322cdd6dcd310a550fa1cd94d80dba38738
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: eaa3002837dd19335abcc8383612bcb31642265e
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67946882"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256878"
 ---
 # <a name="display-an-actual-execution-plan"></a>실제 실행 계획 표시
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,3 +56,7 @@ ms.locfileid: "67946882"
 > [!NOTE] 
 > 또는 [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md)을 사용하여 실행된 각 문에 대한 실행 계획 정보를 반환합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 사용한 경우 *결과* 탭에 실행 계획을 그래픽 형식으로 여는 링크가 포함됩니다.   
 > 자세한 내용은 [쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조하세요.
+  
+## <a name="see-also"></a>참고 항목  
+ [실행 계획](../../relational-databases/performance/execution-plans.md)    
+ [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)  

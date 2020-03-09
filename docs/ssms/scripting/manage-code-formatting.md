@@ -26,12 +26,12 @@ ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 741fce0949ce1a07f0f164c7f131579c220d4cfc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6d1c9bd306cf30ee0974aff2396946c131bfb824
+ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253814"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261867"
 ---
 # <a name="manage-code-formatting"></a>코드 서식 관리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -128,7 +128,7 @@ ms.locfileid: "75253814"
 3.  텍스트를 소문자로 변환하려면 Ctrl+Shift+L을 누르거나 **편집** 메뉴의 **고급** 하위 메뉴에서 **소문자로** 를 클릭합니다.  
   
 > [!NOTE]  
->  바로 가기 키의 전체 목록을 보려면 [SQL Server Management Studio 바로 가기 키](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)를 참조하세요.  
+>  바로 가기 키의 전체 목록을 보려면 [SQL Server Management Studio 바로 가기 키](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)를 참조하세요.  
   
 ## <a name="displaying-and-linking-to-urls"></a>URL 표시 및 연결  
  코드에서 클릭 가능한 URL을 만들고 표시할 수 있습니다. 기본적으로 URL은 다음과 같습니다.  

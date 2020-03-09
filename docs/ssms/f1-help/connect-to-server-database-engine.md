@@ -17,14 +17,15 @@ f1_keywords:
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 655adcb16dfac7fd6710137dfe538554b53df13d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c29717713a6b2e41456288f026b46e220be8b229
+ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75244997"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261708"
 ---
 # <a name="connect-to-server-database-engine"></a>서버에 연결(데이터베이스 엔진)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]에 연결할 때 이 대화 상자를 사용하여 옵션을 확인하거나 지정할 수 있습니다. 대부분의 경우 **서버 이름** 상자에서 데이터베이스 서버의 컴퓨터 이름을 입력한 다음 **연결**을 클릭하여 연결할 수 있습니다. 명명된 인스턴스에 연결하는 경우 컴퓨터 이름, 백슬래시, 인스턴스 이름의 순서로 사용합니다. `mycomputer\myinstance`)을 입력합니다. [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]에 연결하는 경우 컴퓨터 이름과 그 뒤에 **\sqlexpress**를 사용합니다.  
   
