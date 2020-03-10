@@ -13,11 +13,11 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 63be7df50b6dd590d0ec90346d27f6601e15cf45
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75557841"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339511"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Always Encrypted용 열 마스터 키 만들기 및 저장
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

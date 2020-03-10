@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 0bed12749231eb9ca4c4398699d662666004613a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75558318"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340485"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>클러스터 리소스 및 서비스에 대한 배포 설정 구성
 
