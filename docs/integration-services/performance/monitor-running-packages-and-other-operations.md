@@ -14,11 +14,11 @@ ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d7fd62f4f2f82e6dcc3921db7099b4f052db27b3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71295796"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338354"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>실행 중인 패키지 및 기타 작업 모니터링
 
@@ -35,7 +35,7 @@ ms.locfileid: "71295796"
   
      자세한 내용은 [Reports for the Integration Services Server](#reports)을(를) 참조하세요.  
   
--   뷰  
+-   보기  
   
      자세한 내용은 [뷰&#40;Integration Services 카탈로그&#41;](../../integration-services/system-views/views-integration-services-catalog.md)를 참조하세요.  
   

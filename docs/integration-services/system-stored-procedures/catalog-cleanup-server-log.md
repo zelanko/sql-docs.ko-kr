@@ -11,11 +11,11 @@ ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b80b346c426ae68a1c6b0750bca112417861f51e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71295588"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340675"
 ---
 # <a name="catalogcleanup_server_log"></a>catalog.cleanup_server_log 
 
@@ -78,7 +78,7 @@ catalog.cleanup_server_log
   
      범위 또는 수준(실행 및 프로젝트) 및 삭제할 키 수를 지정할 수 있습니다. 삭제할 기본 일괄 처리 크기는 1000입니다. 수준을 2로 설정하면 연결된 프로젝트가 삭제된 경우에만 키와 인증서가 삭제됩니다.  
   
- 자세한 내용은 [수정: SQL Server 2012에서 SSISDB를 배포 저장소로 사용하는 경우 성능 문제](https://support.microsoft.com/kb/2972285)에서 다음 기술 문서를 참조하세요.  
+ 자세한 내용은 다음 기술 자료 문서를 참조하세요. [수정: SQL Server 2012에서 SSISDB를 배포 저장소로 사용하는 경우 성능 문제](https://support.microsoft.com/kb/2972285)  
   
 ## <a name="example"></a>예제  
  다음 예제는 cleanup_server_log 저장 프로시저를 호출합니다.  
