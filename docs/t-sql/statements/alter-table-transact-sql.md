@@ -60,11 +60,11 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37cbb3621a1c9567a778fe58c4771e4336308647
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74127506"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339728"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE(Transact-SQL)
 
@@ -1779,7 +1779,7 @@ DROP PERIOD FOR SYSTEM_TIME;
 DROP TABLE DepartmentHistory;
 ```
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 다음의 예 A ~ C는 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 데이터베이스의 `FactResellerSales` 테이블을 사용합니다.
 
@@ -1939,11 +1939,11 @@ WITH
 
 |파티션|데이터 유무|경계 범위|
 |---------------|---------------|--------------------|
-|1|yes|OrderDate < '2004-01-01'|
-|2|yes|'2004-01-01' <= OrderDate < '2005-01-01'|
-|3|yes|'2005-01-01' <= OrderDate< '2006-01-01'|
-|4|yes|'2006-01-01'<= OrderDate < '2007-01-01'|
-|5|yes|'2007-01-01' <= OrderDate|
+|1|예|OrderDate < '2004-01-01'|
+|2|예|'2004-01-01' <= OrderDate < '2005-01-01'|
+|3|예|'2005-01-01' <= OrderDate< '2006-01-01'|
+|4|예|'2006-01-01'<= OrderDate < '2007-01-01'|
+|5|예|'2007-01-01' <= OrderDate|
 | &nbsp; | &nbsp; | &nbsp; |
 
 - 파티션 1(데이터 있음): OrderDate < '2004-01-01'

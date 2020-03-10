@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 626b4277edcb049b2c7b755b70199df899dc5637
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256656"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339761"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>SQL Server 사용 현황 및 진단 데이터 수집(CEIP)에 대한 로컬 감사
 
@@ -65,7 +65,7 @@ SQL Server CEIP 서비스 로그온 계정을 가져오려면 다음 단계를 �
  
 1. **서비스** 콘솔을 시작합니다. 이렇게 하려면 키보드에서 **Windows 키 + R**을 눌러 **실행** 대화 상자를 엽니다. 그런 다음, 텍스트 필드에 *services.msc*를 입력하고 **확인**을 선택하여 **서비스** 콘솔을 시작합니다.  
 
-2. 적절한 서비스로 이동합니다. 예를 들어 데이터베이스 엔진의 경우 **SQL Server CEIP 서비스****(*Your-Instance-Name*)** 를 찾습니다. Analysis Services의 경우 **SQL Server Analysis Services CEIP****(*Your-Instance-Name*)** 를 찾습니다. Integration Services의 경우 **SQL Server Integration Services CEIP 서비스**를 찾습니다.
+2. 적절한 서비스로 이동합니다. 예를 들어 데이터베이스 엔진의 경우 **SQL Server CEIP 서비스** **(*Your-Instance-Name*)** 를 찾습니다. Analysis Services의 경우 **SQL Server Analysis Services CEIP** **(*Your-Instance-Name*)** 를 찾습니다. Integration Services의 경우 **SQL Server Integration Services CEIP 서비스**를 찾습니다.
 
 3. 서비스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 
 
@@ -73,7 +73,7 @@ SQL Server CEIP 서비스 로그온 계정을 가져오려면 다음 단계를 �
 
 ### <a name="configure-a-new-folder-for-the-local-audit-files"></a>로컬 감사 파일에 사용할 새 폴더를 구성합니다.    
 
-로컬 감사에서 로그를 기록할 새 폴더(로컬 감사 디렉터리)를 만듭니다. 예를 들어 데이터베이스 엔진의 기본 인스턴스에 대한 로컬 감사 디렉터리의 전체 경로는 다음과 같습니다. *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*. 
+로컬 감사에서 로그를 기록할 새 폴더(로컬 감사 디렉터리)를 만듭니다. 예를 들어 데이터베이스 엔진의 기본 인스턴스에 대한 로컬 감사 디렉터리의 전체 경로는 다음과 같습니다. *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* . 
  
   >[!NOTE] 
   >감사 기능 및 패치 허용으로 인해 SQL Server에 문제가 발생하는 것을 방지하려면 SQL Server 설치 경로 외부에 로컬 감사 디렉터리 경로를 구성하세요.
@@ -81,7 +81,7 @@ SQL Server CEIP 서비스 로그온 계정을 가져오려면 다음 단계를 �
   ||디자인 결정|권장|  
   |------|-----------------|----------|  
   |![확인란](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|공간 가용성 |약 10개의 데이터베이스를 사용하는 보통의 작업에서 인스턴스당 데이터베이스별로 약 2MB의 디스크 공간을 계획합니다.|  
-|![확인란](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|개별 디렉터리 | 각 인스턴스에 대한 디렉터리를 만듭니다. 예를 들어 `MSSQLSERVER`의 SQL Server 인스턴스의 경우 *c:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*를 사용합니다. 이렇게 하면 파일 관리가 간소화됩니다.
+|![확인란](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|개별 디렉터리 | 각 인스턴스에 대한 디렉터리를 만듭니다. 예를 들어 `MSSQLSERVER`의 SQL Server 인스턴스의 경우 *c:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* 를 사용합니다. 이렇게 하면 파일 관리가 간소화됩니다.
 |![확인란](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|개별 폴더 |각 서비스에 대해 특정 폴더를 사용합니다. 예를 들어 지정된 인스턴스 이름에 대해 데이터베이스 엔진에 하나의 폴더를 설정합니다. Analysis Services 인스턴스에서 동일한 인스턴스 이름을 사용할 경우 Analysis Services에 별도 폴더를 만듭니다. 데이터베이스 엔진 및 Analysis Services 인스턴스를 모두 동일한 폴더에 구성하면 모든 로컬 감사에서 두 인스턴스를 모두 동일한 로그 파일에 기록하게 됩니다.| 
 |![확인란](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|SQL Server CEIP 서비스 로그온 계정에 사용 권한 부여|SQL Server CEIP 서비스 로그온 계정에 대해 **폴더 내용 목록**, **읽기** 및 **쓰기** 액세스를 사용하도록 설정합니다.|
 
@@ -143,7 +143,7 @@ SQL Server CEIP 서비스 로그온 계정을 가져오려면 다음 단계를 �
 
 1. **UserRequestedLocalAuditDirectory**를 마우스 오른쪽 단추로 클릭하고 *수정*을 선택합니다. 
 
-1. 로컬 감사를 켜려면 로컬 감사 경로를 입력합니다(예: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*).
+1. 로컬 감사를 켜려면 로컬 감사 경로를 입력합니다(예: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* ).
  
     로컬 감사를 끄려면 **UserRequestedLocalAuditDirectory** 값을 비워 둡니다.
 
@@ -160,7 +160,7 @@ SQL Server CEIP 서비스 로그온 계정을 가져오려면 다음 단계를 �
     - Integration Services의 경우 
         - SQL 2016의 경우 *SQL Server Integration Services CEIP 서비스 13.0*을 사용합니다.
         - SQL 2017의 경우 *SQL Server Integration Services CEIP 서비스 14.0*을 사용합니다.
-    - SQL 2019의 경우 ‘SQL Server Integration Services CEIP 서비스 15.0’을 사용합니다.
+    - SQL 2019의 경우 ‘SQL Server Integration Services CEIP 서비스 15.0’을 사용합니다. 
 
 1. 서비스를 마우스 오른쪽 단추로 클릭하고 다시 시작을 선택합니다. 
 
