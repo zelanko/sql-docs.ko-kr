@@ -11,11 +11,11 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5a68190ff087707bdf0b89dc756c9346d10d34ad
-ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77479703"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338725"
 ---
 # <a name="sql-server-backup-to-url"></a>URL에 대한 SQL Server 백업
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

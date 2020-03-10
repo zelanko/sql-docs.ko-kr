@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7db6dbdbe45102c2a1bc2533d156e55060869b58
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76909853"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338834"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

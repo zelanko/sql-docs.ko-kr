@@ -11,11 +11,11 @@ ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6cce219b5e5d5d324e5e116bb9f55a931d7caaf8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71298624"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339675"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 데이터베이스
 

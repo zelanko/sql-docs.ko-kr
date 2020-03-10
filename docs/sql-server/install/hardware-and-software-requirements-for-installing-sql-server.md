@@ -45,11 +45,11 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 25f925b53f93a1d03282a7113ce6946679283c2b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75657025"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340345"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -159,29 +159,29 @@ Server Core에 SQL Server를 설치하는 방법에 대한 자세한 내용은 [
   
 | SQL Server 버전:               | Enterprise | Developer | Standard | 웹 | Express |  
 | :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
-| Windows Server 2019 Datacenter    |    yes     |    yes    |    yes   | yes |   yes   |
-| Windows Server 2019 Standard      |    yes     |    yes    |    yes   | yes |   yes   |
-| Windows Server 2019 Essentials    |    yes     |    yes    |    yes   | yes |   yes   |
-| Windows Server 2016 Datacenter    |    yes     |    yes    |    yes   | yes |   yes   |
-| Windows Server 2016 Standard      |    yes     |    yes    |    yes   | yes |   yes   |
-| Windows Server 2016 Essentials    |    yes     |    yes    |    yes   | yes |   yes   |
-| Windows Server 2012 R2 Datacenter |    yes     |    yes    |    yes   | yes |   yes   |
-| Windows Server 2012 R2 Standard   |    yes     |    yes    |    yes   | yes |   yes   |
-| Windows Server 2012 R2 Essentials |    yes     |    yes    |    yes   | yes |   yes   |
-| Windows Server 2012 R2 Foundation |    yes     |    yes    |    yes   | yes |   yes   |
-| Windows Server 2012 데이터 센터    |    yes     |    yes    |    yes   | yes |   yes   |
-| Windows Server 2012 Standard      |    yes     |    yes    |    yes   | yes |   yes   |
-| Windows Server 2012 Essentials    |    yes     |    yes    |    yes   | yes |   yes   |
-| Windows Server 2012 Foundation    |    yes     |    yes    |    yes   | yes |   yes   |
-| Windows 10 IoT Enterprise         |    예      |    yes    |    yes   | 예  |   yes   |
-| Windows 10 Enterprise             |    예      |    yes    |    yes   | 예  |   yes   |
-| Windows 10 Professional           |    예      |    yes    |    yes   | 예  |   yes   |
-| Windows 10 Home                   |    예      |    yes    |    yes   | 예  |   yes   |
-| Windows 8.1 Enterprise            |    예      |    yes    |    yes   | 예  |   yes   |
-| Windows 8.1 Pro                   |    예      |    yes    |    yes   | 예  |   yes   |
-| Windows 8.1 Enterprise            |    예      |    yes    |    yes   | 예  |   yes   |
-| Windows 8 Pro                     |    예      |    yes    |    yes   | 예  |   yes   |
-| Windows 8                         |    예      |    yes    |    yes   | 예  |   yes   | 
+| Windows Server 2019 Datacenter    |    예     |    예    |    예   | 예 |   예   |
+| Windows Server 2019 Standard      |    예     |    예    |    예   | 예 |   예   |
+| Windows Server 2019 Essentials    |    예     |    예    |    예   | 예 |   예   |
+| Windows Server 2016 Datacenter    |    예     |    예    |    예   | 예 |   예   |
+| Windows Server 2016 Standard      |    예     |    예    |    예   | 예 |   예   |
+| Windows Server 2016 Essentials    |    예     |    예    |    예   | 예 |   예   |
+| Windows Server 2012 R2 Datacenter |    예     |    예    |    예   | 예 |   예   |
+| Windows Server 2012 R2 Standard   |    예     |    예    |    예   | 예 |   예   |
+| Windows Server 2012 R2 Essentials |    예     |    예    |    예   | 예 |   예   |
+| Windows Server 2012 R2 Foundation |    예     |    예    |    예   | 예 |   예   |
+| Windows Server 2012 데이터 센터    |    예     |    예    |    예   | 예 |   예   |
+| Windows Server 2012 Standard      |    예     |    예    |    예   | 예 |   예   |
+| Windows Server 2012 Essentials    |    예     |    예    |    예   | 예 |   예   |
+| Windows Server 2012 Foundation    |    예     |    예    |    예   | 예 |   예   |
+| Windows 10 IoT Enterprise         |    예      |    예    |    예   | 예  |   예   |
+| Windows 10 Enterprise             |    예      |    예    |    예   | 예  |   예   |
+| Windows 10 Professional           |    예      |    예    |    예   | 예  |   예   |
+| Windows 10 Home                   |    예      |    예    |    예   | 예  |   예   |
+| Windows 8.1 Enterprise            |    예      |    예    |    예   | 예  |   예   |
+| Windows 8.1 Pro                   |    예      |    예    |    예   | 예  |   예   |
+| Windows 8.1 Enterprise            |    예      |    예    |    예   | 예  |   예   |
+| Windows 8 Pro                     |    예      |    예    |    예   | 예  |   예   |
+| Windows 8                         |    예      |    예    |    예   | 예  |   예   | 
 
 > [!NOTE]  
 > 이 섹션에서 설명하는 운영 체제 지원에 대한 예외는 Windows Server 2008 R2 SP1 이상에 설치할 수 있는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이하용 다음 비즈니스 인텔리전스 기능입니다.  

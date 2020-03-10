@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7a73c0554c878aea4fa89ffb7170547d55271f15
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73982210"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339502"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT 데이터베이스 사용 권한(Transact-SQL)
 
@@ -61,7 +61,7 @@ permission | ALL [ PRIVILEGES ]
 
 *permission* 데이터베이스에 대해 부여할 수 있는 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.
 
-ALL 이 옵션은 모든 가능한 권한을 부여하지 않습니다. ALL을 부여하는 것은 BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE, CREATE VIEW 사용 권한을 부여하는 것과 같습니다.
+ALL 이 옵션은 모든 가능한 권한을 부여하지 않습니다. ALL을 부여하는 것은 다음 사용 권한을 부여하는 것과 동일합니다. BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE 및 CREATE VIEW.
 
 PRIVILEGES ISO 준수를 위해 포함됩니다. ALL의 동작을 변경하지 않습니다.
 
@@ -103,7 +103,7 @@ Windows 그룹으로 매핑된 데이터베이스 사용자를 지정합니다.
 ## <a name="remarks"></a>설명
 
 > [!IMPORTANT]
-> 일부 경우에서 ALTER 사용 권한과 REFERENCE 사용 권한의 조합을 사용하면 피부여자가 데이터를 보거나 권한 없는 함수를 실행할 수 있습니다. 예를 들어, 테이블에 대한 ALTER 사용 권한과 함수에 대한 REFERENCE 사용 권한을 가진 사용자는 함수를 통해 계산 열을 만들고 실행할 수 있습니다. 이 경우 계산 열에 대한 SELECT 사용 권한도 있어야 합니다.
+> 일부 경우에서 ALTER 사용 권한과 REFERENCE 사용 권한의 조합을 사용하면 피부여자가 데이터를 보거나 권한 없는 함수를 실행할 수 있습니다. 다음은 그 예입니다.  테이블에 대한 ALTER 권한과 함수에 대한 REFERENCE 권한을 가진 사용자는 함수를 통해 계산 열을 만들고 실행할 수 있습니다. 이 경우 계산 열에 대한 SELECT 사용 권한도 있어야 합니다.
 
 데이터베이스는 사용 권한 계층에서 해당 데이터베이스의 부모인 서버에 포함된 보안 개체입니다. 다음 표에는 데이터베이스에 대해 부여할 수 있는 가장 제한적인 특정 사용 권한이 의미상 이러한 사용 권한을 포함하는 보다 일반적인 사용 권한과 함께 나열되어 있습니다.
 
@@ -214,7 +214,7 @@ sysadmin 고정 서버 역할의 멤버와 같이 CONTROL SERVER 사용 권한�
 
 ### <a name="a-granting-permission-to-create-tables"></a>A. 테이블을 만들기 위한 사용 권한 부여
 
-다음 예에서는 사용자 `CREATE TABLE`에게 `AdventureWorks` 데이터베이스에 대한 `MelanieK` 권한을 부여합니다.
+다음 예에서는 사용자 `MelanieK`에게 `AdventureWorks` 데이터베이스에 대한 `CREATE TABLE` 권한을 부여합니다.
 
 ```sql
 USE AdventureWorks;
@@ -246,7 +246,7 @@ GO
 
 ### <a name="d-granting-control-permission-to-a-database-user"></a>D. 데이터베이스 사용자에게 CONTROL 권한 부여
 
- 다음 예에서는 데이터베이스 사용자 `CONTROL`에게 `AdventureWorks2012` 데이터베이스의 `Sarah` 권한을 부여합니다. 사용자가 데이터베이스에 존재해야 하며 컨텍스트가 데이터베이스로 설정되어야 합니다.
+ 다음 예에서는 데이터베이스 사용자 `Sarah`에게 `AdventureWorks2012` 데이터베이스의 `CONTROL` 권한을 부여합니다. 사용자가 데이터베이스에 존재해야 하며 컨텍스트가 데이터베이스로 설정되어야 합니다.
 
 ```sql
 USE AdventureWorks2012;
@@ -260,5 +260,5 @@ GO
 - [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
 - [GRANT](../../t-sql/statements/grant-transact-sql.md)
-- [사용 권한](../../relational-databases/security/permissions-database-engine.md)
+- [권한](../../relational-databases/security/permissions-database-engine.md)
 - [보안 주체](../../relational-databases/security/authentication-access/principals-database-engine.md)

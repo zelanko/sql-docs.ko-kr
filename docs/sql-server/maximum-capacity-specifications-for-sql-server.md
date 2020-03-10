@@ -21,11 +21,11 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0fae5c47de0b8017d3f374afe18e926eea9818cc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "72008441"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339561"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server의 최대 용량 사양
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

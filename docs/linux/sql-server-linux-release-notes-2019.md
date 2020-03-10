@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 95289a3c4ad263e2c3ef063e54984a4481cf6109
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256786"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339366"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>SQL Server 2019 on Linux 릴리스 정보
 

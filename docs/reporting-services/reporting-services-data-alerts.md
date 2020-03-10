@@ -10,11 +10,11 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: bd26e2ddcacd91269a51e663b80acd4edf95c196
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580065"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339641"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 데이터 경고
 

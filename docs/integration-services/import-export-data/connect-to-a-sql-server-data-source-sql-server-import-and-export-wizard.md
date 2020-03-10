@@ -10,11 +10,11 @@ ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 938a6d8ba779d1cef37b5fab767e609d00b4f022
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74308000"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339778"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>SQL Server 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
 
@@ -55,7 +55,7 @@ ms.locfileid: "74308000"
  원본 또는 대상 데이터베이스의 이름을 입력하거나 드롭다운 목록에서 데이터베이스를 선택합니다.  
   
  **통합 보안**  
- Windows 통합 인증을 사용하여 연결하려면(권장) **True**를 지정하고, **인증을 사용하여 연결하려면**False[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 지정합니다. **False**를 지정하면 사용자 ID와 암호를 입력해야 합니다. 기본값은 **False**입니다.  
+ Windows 통합 인증을 사용하여 연결하려면(권장) **True**를 지정하고, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 연결하려면 **False**를 지정합니다. **False**를 지정하면 사용자 ID와 암호를 입력해야 합니다. 기본값은 **False**입니다.  
   
  **사용자 ID**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 사용자 이름을 입력합니다.  

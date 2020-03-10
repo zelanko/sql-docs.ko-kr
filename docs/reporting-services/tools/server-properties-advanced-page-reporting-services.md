@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.date: 01/28/2020
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: d1bfbb7a1abb13df05ce402fa79a1598ee04ca1f
-ms.sourcegitcommit: cf8db6330be0d89bbec362e4c7e187b5461026f0
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77054844"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340395"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>서버 속성 고급 페이지 - Power BI Report Server 및 Reporting Services
 
@@ -223,7 +223,7 @@ ms.locfileid: "77054844"
 보고서 서버에서 저장할 수 있는 매개 변수 값의 최대 수를 지정합니다. 유효한 값은 **-1**, **+1** 에서 **2,147,483,647**까지입니다. 기본값은 **1500**입니다.  
 
 ### <a name="supportedhyperlinkschemes"></a>SupportedHyperlinkSchemes 
-(Power BI Report Server 2019년 1월, Reporting Services 2019 이상에만 해당) 허용된 URI 체계의 쉼표로 구분된 목록을 렌더링될 수 있는 하이퍼링크 작업에서 정의되도록 설정하거나 "&ast;"를 모든 하이퍼링크 체계를 사용하도록 설정할 수 있습니다. 예를 들어 "http, https"를 설정하면 "https://www contoso.com"에 대한 하이퍼링크를 허용하지만, "mailto:bill@contoso.com" 또는 "javascript:window.open(‘www.contoso.com’, ‘_blank’)"에 대한 하이퍼링크를 제거합니다. 기본값은 "&ast;"입니다.
+(Power BI Report Server 2019년 1월, Reporting Services 2019 이상에만 해당) 허용된 URI 체계의 쉼표로 구분된 목록을 렌더링될 수 있는 하이퍼링크 작업에서 정의되도록 설정하거나 "&ast;"를 모든 하이퍼링크 체계를 사용하도록 설정할 수 있습니다. 예를 들어 "http, https"를 설정하면 "https://www contoso.com"에 대한 하이퍼링크를 허용하지만, "mailto:bill@contoso.com" 또는 "javascript:window.open(‘ www.contoso.com’, ‘_blank’)"에 대한 하이퍼링크를 제거합니다. 기본값은 "&ast;"입니다.
 
 ### <a name="systemreporttimeout"></a>SystemReportTimeout
 보고서 서버 네임스페이스에서 관리되는 모든 보고서에 대한 기본 보고서 처리 제한 시간 값(초)입니다. 이 값은 보고서 수준에서 무시할 수 있습니다. 이 속성을 설정하면 지정된 시간이 만료될 경우 보고서 서버가 보고서 처리를 중지합니다. 유효한 값은 **-1** 에서 **2**까지,**147**,**483**,**647**입니다. 값이 **-1**이면 네임스페이스의 보고서 처리 중 시간 제한으로 인한 중지가 발생하지 않습니다. 기본값은 **1800**입니다.  

@@ -11,11 +11,11 @@ ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6365b86a4efe8d29273035d62f76c7bb02b15335
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74908852"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339481"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>시스템 요구 사항, 설치 및 드라이버 파일
 
@@ -109,7 +109,7 @@ BCP 함수를 사용하는 애플리케이션은 애플리케이션을 컴파일
 
 예를 들어 `msodbcsql11.lib` 및 `msodbcsql.h`로 ODBC 애플리케이션을 컴파일하는 경우 연결 문자열에 "DRIVER={ODBC Driver 11 for SQL Server}"를 사용합니다.
 
-## <a name="components-of-the-microsoft-odbc-driver-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Windows 기반 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용 ODBC 드라이버 구성 요소
+## <a name="components-of-the-microsoft-odbc-driver-for-ssnoversion-on-windows"></a>Windows 기반 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용 ODBC 드라이버 구성 요소
 
 Windows 기반 ODBC 드라이버는 다음 구성 요소를 포함합니다.
 

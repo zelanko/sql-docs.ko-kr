@@ -9,12 +9,12 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9de368594383ef1f7fe3ae3c062f92873fb15698
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.openlocfilehash: 38a1e2381bb3b7730a06af09b807886e18a50d13
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256906"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78925860"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 빅 데이터 클러스터 릴리스 정보
 
@@ -69,7 +69,7 @@ ms.locfileid: "77256906"
 
 ## <a id="cu2"></a> CU2(2020년 2월)
 
-SQL Server 2019의 CU2(누적 업데이트 2) 릴리스입니다. 이 릴리스에 대한 SQL Server 데이터베이스 엔진 버전은 15.0.4003.23입니다.
+SQL Server 2019의 CU2(누적 업데이트 2) 릴리스입니다. 이 릴리스에 대한 SQL Server 데이터베이스 엔진 버전은 15.0.4013.40입니다.
 
 |패키지 버전 | 이미지 태그 |
 |-----|-----|
@@ -136,9 +136,9 @@ SQL Server 2019 GDR1(일반 배포 릴리스 1) - [!INCLUDE[big-data-clusters-20
 
        **`controllerUpgradeTimeoutInMinutes`** 컨트롤러 또는 컨트롤러 db의 업그레이드가 완료될 때까지 대기할 시간(분)을 지정합니다. 기본값은 5입니다. 20 이상으로 업데이트합니다.
 
-       **`totalUpgradeTimeoutInMinutes`**: 컨트롤러와 컨트롤러 db 모두가 업그레이드를 완료하는 데 걸리는 시간을 합한 값을 지정합니다(컨트롤러 + 컨트롤러 db 업그레이드). 기본값은 10입니다. 40 이상으로 업데이트합니다.
+       **`totalUpgradeTimeoutInMinutes`** : 컨트롤러와 컨트롤러 db 모두가 업그레이드를 완료하는 데 걸리는 시간을 합한 값을 지정합니다(컨트롤러 + 컨트롤러 db 업그레이드). 기본값은 10입니다. 40 이상으로 업데이트합니다.
 
-       **`componentUpgradeTimeoutInMinutes`**: 업그레이드의 각 후속 단계를 완료해야 하는 기간을 지정합니다.  기본값은 30입니다. 45로 업데이트합니다.
+       **`componentUpgradeTimeoutInMinutes`** : 업그레이드의 각 후속 단계를 완료해야 하는 기간을 지정합니다.  기본값은 30입니다. 45로 업데이트합니다.
 
    3.   저장한 후 종료합니다.
 

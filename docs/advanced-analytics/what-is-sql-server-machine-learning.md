@@ -4,24 +4,22 @@ titleSuffix: ''
 description: Machine Learning Services는 관계형 데이터를 사용하여 Python 및 R 스크립트를 실행할 수 있는 기능을 제공하는 SQL Server의 기능입니다. 예측 분석 및 기계 학습에 오픈 소스 패키지와 프레임워크, Microsoft Python과 R 패키지를 사용할 수 있습니다. 스크립트는 SQL Server 외부에서 또는 네트워크를 통해 데이터를 이동하지 않고 데이터베이스 내에서 실행됩니다. 이 문서에서는 SQL Server Machine Learning Services의 기본 사항에 대해 설명합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/04/2020
+ms.date: 02/06/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3cf2b6f61e01230c8657051388647e336d46ed71
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: a94a3aea418a4c404b568fe6df7af701bc46de34
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004569"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78893101"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>SQL Server Machine Learning Services(Python 및 R)이란?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Machine Learning Services는 관계형 데이터를 사용하여 Python 및 R 스크립트를 실행할 수 있는 기능을 제공하는 SQL Server의 기능입니다. 예측 분석 및 기계 학습에 오픈 소스 패키지와 프레임워크, [Microsoft Python과 R 패키지](#packages)를 사용할 수 있습니다. 스크립트는 SQL Server 외부에서 또는 네트워크를 통해 데이터를 이동하지 않고 데이터베이스 내에서 실행됩니다. 이 문서에서는 SQL Server Machine Learning Services의 기본 사항에 대해 설명합니다.
-
-Azure SQL Database에서 [Machine Learning Services](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview)는 현재 퍼블릭 미리 보기로 제공됩니다.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!NOTE]

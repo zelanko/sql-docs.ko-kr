@@ -14,11 +14,11 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 80f6d40fd2c548135595fd96de6de4b967460a90
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74190364"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340260"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server의 JSON 데이터
 

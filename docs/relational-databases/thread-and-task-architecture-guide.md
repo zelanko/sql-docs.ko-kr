@@ -15,11 +15,11 @@ author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4c19e3ad3589cad6f7503ff9f0e92c090bef5035
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72305191"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340599"
 ---
 # <a name="thread-and-task-architecture-guide"></a>스레드 및 태스크 아키텍처 가이드
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ CPU가 여러 개인 컴퓨터에서 데이터베이스의 복구 모델을 임�
 
 |프로세스 이름   |실행 프로그램 |64개를 초과하는 CPU 사용 |  
 |----------|----------|----------|  
-|SQL Server 데이터베이스 엔진 |Sqlserver.exe  |yes |  
+|SQL Server 데이터베이스 엔진 |Sqlserver.exe  |예 |  
 |Reporting Services |Rs.exe |예 |  
 |Analysis Services  |As.exe |예 |  
 |Integration Services   |Is.exe |예 |  

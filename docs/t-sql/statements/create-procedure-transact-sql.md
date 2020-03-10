@@ -47,11 +47,11 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9ae139dda1837a6d8698809f984060f0b341b758
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76909823"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339815"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -966,7 +966,7 @@ WITH EXECUTE AS SELF
 AS TRUNCATE TABLE MyDB..MyTable;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="o-create-a-stored-procedure-that-runs-a-select-statement"></a>15. SELECT 문을 실행하는 저장 프로시저 만들기  
  이 예제는 프로시저를 만들고 실행하기 위한 기본 구문을 보여줍니다. 일괄 처리를 실행할 때 CREATE PROCEDURE가 첫 번째 명령문이어야 합니다. 예를 들어 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)]에서 다음 저장 프로시저를 만들려면 먼저 데이터베이스 컨텍스트를 설정 한 다음, CREATE PROCEDURE 문을 실행합니다.  

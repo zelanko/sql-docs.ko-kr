@@ -11,11 +11,11 @@ ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 95f2fc808723fa3a69222ead3f362007585231f1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71294518"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339635"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Oracle CDC Service 작업
 
