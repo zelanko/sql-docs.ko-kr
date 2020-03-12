@@ -1,5 +1,6 @@
 ---
 title: WideWorldImporters 샘플 데이터베이스 설치 및 구성
+description: SQL Server Management Studio를 사용 하 여 WideWorldImporters 예제 데이터베이스를 다운로드, 설치 및 구성 하려면 다음 지침을 따르세요.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -9,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e1683adfa20851d279e8b8e18a3c767db9e5810d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 14570059925fa5f8d8d24502c18593a118d84e37
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74056271"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112448"
 ---
 # <a name="installation-and-configuration"></a>설치 및 구성
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

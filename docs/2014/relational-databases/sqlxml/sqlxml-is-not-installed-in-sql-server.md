@@ -10,17 +10,17 @@ ms.assetid: 3dbb4f65-41de-48b8-ad62-47c9d7932de3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8fe1d4b937e5972eb90e567ded91f7a23af577d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8902c5dae5dea31393f658b13cb5c8773291f975
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66012155"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112235"
 ---
 # <a name="sqlxml-is-not-installed-in-sql-server"></a>SQLXML이 SQL Server에 설치되지 않음
   
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전에 SQLXML 4.0은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 제외한 모든 버전의 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 기본 설치에 포함되었습니다. 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터는 최신 버전의 SQLXML(SQLXML 4.0 SP1)이 더 이상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함되지 않습니다. SQLXML 4.0 s p 1을 사용할 수 있을 때 설치 하려면 [SQLXML Sp1 설치 위치](https://www.microsoft.com/download/details.aspx?id=16978)에서 다운로드 합니다.  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터는 최신 버전의 SQLXML(SQLXML 4.0 SP1)이 더 이상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함되지 않습니다. SQLXML 4.0 s p 1을 사용할 수 있을 때 설치 하려면 [SQLXML Sp1 설치 위치](https://www.microsoft.com/download/details.aspx?id=44272)에서 다운로드 합니다.  
   
  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행 중인 애플리케이션에 SQLXML 4.0이 필요하고 컴퓨터에 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]가 설치되어 있지 않으면 SQLXML 4.0 SP1을 다운로드하고 설치해야 합니다.  

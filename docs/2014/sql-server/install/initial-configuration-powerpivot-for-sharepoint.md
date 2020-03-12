@@ -10,12 +10,12 @@ ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: bc9b053b62a19cbe2c234f87010ae2a9652fb95c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 24a52b9dd190032a55306c1fe738c3c1e1787dad
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74200431"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112210"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>초기 구성(SharePoint용 PowerPivot)
   이 항목의 단계에 따라 SharePoint용 PowerPivot의 초기 설치를 구성합니다. 초기 설치를 구성하는 가장 쉬운 방법은 PowerPivot 구성 도구를 사용하는 것입니다. 그러면 아래에 설명한 모든 구성 단계를 자동화할 수 있습니다.  
@@ -70,7 +70,8 @@ ms.locfileid: "74200431"
   
      powerpivotfarm.wsp와 powerpivotwebapp.wsp의 두 개별 솔루션 패키지가 표시됩니다 첫 번째 솔루션(powerpivotfarm.wsp)은 이미 배포되어 있어야 합니다. 배포한 후에는 다시 배포할 필요가 없습니다. 두 번째 솔루션(powerpivotwebapp.wsp)은 중앙 관리용으로 배포되지만 PowerPivot 데이터 액세스를 지원할 각 SharePoint 웹 애플리케이션에 대해 이 솔루션을 수동으로 배포해야 합니다.  
   
-3.  **Powerpivotwebapp.wsp**을 클릭 합니다.  
+3.  
+  **powerpivotwebapp.wsp**를 클릭합니다.  
   
 4.  **솔루션 배포를 클릭 합니다.**  
   
@@ -245,7 +246,7 @@ ms.locfileid: "74200431"
   
  공급자를 설치하면 데이터 연결 문자열에서 MSOLAP.4를 참조하는 통합 문서가 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot 서버에서 정상적으로 작동할 수 있습니다. 이전 버전의 PowerPivot for Excel에서 만든 통합 문서를 업그레이드하는 다른 방법으로는 SQL Server 2008 R2 OLE DB 공급자를 설치하는 방법이 있습니다.  
   
- 이 공급자는 [SQL Server 2008 R2 기능 팩 페이지](https://www.microsoft.com/download/details.aspx?id=16978)에서 다운로드할 수 있습니다. Microsoft **® SQL Server® 2008 R2 Analysis Services OLE DB Provider microsoft®**를 찾은 다음 `SQLServer2008_ASOLEDB10.msi` 설치 프로그램의 x64 패키지를 다운로드 합니다.  
+ 이 공급자는 [SQL Server 2008 R2 기능 팩 페이지](https://www.microsoft.com/download/details.aspx?id=44272)에서 다운로드할 수 있습니다. Microsoft **® SQL Server® 2008 R2 Analysis Services OLE DB Provider microsoft®**를 찾은 다음 `SQLServer2008_ASOLEDB10.msi` 설치 프로그램의 x64 패키지를 다운로드 합니다.  
   
  확인 단계를 포함 하 여 공급자를 설치 하는 방법에 대 한 자세한 내용은 [SharePoint 서버에 Analysis Services OLE DB Provider 설치](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)를 참조 하세요.  
   

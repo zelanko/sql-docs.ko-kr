@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4db539979cf6a9e06d93b38fbc2aa92c8cdbabfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 34fdc72cfbb341e7b7d998a76036e6e2b060e7d8
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68811074"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112248"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 쿼리 처리 가이드
   메모리 내 OLTP는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저를 도입합니다. 이 문서에서는 메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저 모두의 쿼리 처리에 대한 개요를 제공합니다.  
@@ -60,7 +60,7 @@ CREATE INDEX IX_OrderDate ON dbo.[Order](OrderDate)
 GO  
 ```  
   
- 이 문서에 표시된 쿼리 계획을 생성하기 위해 두 테이블에는 Northwind 샘플 데이터베이스의 샘플 데이터가 입력되었습니다. 이 데이터베이스는 [SQL Server 2000의 Northwind 및 pubs 샘플 데이터베이스](https://www.microsoft.com/download/details.aspx?id=23654)에서 다운로드할 수 있습니다.  
+ 이 문서에 표시된 쿼리 계획을 생성하기 위해 두 테이블에는 Northwind 샘플 데이터베이스의 샘플 데이터가 입력되었습니다. 이 데이터베이스는 [SQL Server 2000의 Northwind 및 pubs 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)에서 다운로드할 수 있습니다.  
   
  다음 쿼리를 살펴보십시오. 이 쿼리는 Customer 및 Order 테이블을 조인하고 주문 ID와 연관된 고객 정보를 반환합니다.  
   
@@ -96,7 +96,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
  이 쿼리에서 Order 테이블의 행은 클러스터형 인덱스를 사용해서 검색됩니다. 
   `Hash Match` 물리 연산자는 이제 `Inner Join`에 사용됩니다. Order에 대한 클러스터형 인덱스가 CustomerID로 정렬되지 않았으므로 `Merge Join`을 위해 sort 연산자가 필요하지만, 이는 성능에 영향을 줄 수 있습니다. 이전 예에서 `Hash Match` 연산자의 비용(46%)에 대비해서 `Merge Join` 연산자의 상대적 비용(75%)에 주의하십시오. 이전 예에서 최적화 프로그램에는 `Hash Match` 연산자도 고려되었겠지만 `Merge Join` 연산자가 더 나은 성능을 제공하는 것으로 결정되었습니다.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 디스크 기반 테이블에 대한 쿼리 처리  
+## <a name="ssnoversion-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 디스크 기반 테이블에 대한 쿼리 처리  
  다음 다이어그램에서는 임시 쿼리를 위한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 쿼리 처리 흐름을 간단히 보여줍니다.  
   
  ![SQL Server 쿼리 처리 파이프라인.](../../database-engine/media/hekaton-query-plan-3.gif "SQL Server 쿼리 처리 파이프라인.")  
@@ -118,7 +118,7 @@ SQL Server 쿼리 처리 파이프라인.
   
  첫 번째 예제 쿼리에서 실행 엔진은 Access Methods에서 Customer의 클러스터형 인덱스 및 Order의 비클러스터형 인덱스에 있는 행을 요청합니다. Access Methods는 B-트리 인덱스 구조를 통과하여 요청된 행을 검색합니다. 이 경우에는 계획이 전체 인덱스 검색을 호출하므로 모든 행이 검색됩니다.  
   
-## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 해석된 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 액세스  
+## <a name="interpreted-tsql-access-to-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 해석된 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 액세스  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 임시 일괄 처리 및 저장 프로시저는 해석된 [!INCLUDE[tsql](../../../includes/tsql-md.md)]이라고도 부릅니다. 해석되었다는 용어는 쿼리 실행 엔진에서 쿼리 계획의 각 연산자에 대해 쿼리 계획이 해석되었음을 의미합니다. 실행 엔진은 연산자 및 해당 매개 변수를 읽고 작업을 수행합니다.  
   
  해석된 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하면 메모리 최적화 테이블 및 디스크 기반 테이블에 모두 액세스할 수 있습니다. 다음 그림에서는 메모리 최적화 테이블에 대한 해석된 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 액세스를 위한 쿼리 처리를 보여 줍니다.  
@@ -204,7 +204,7 @@ END
 ### <a name="compilation-and-query-processing"></a>컴파일 및 쿼리 처리  
  다음 다이어그램은 고유하게 컴파일된 저장 프로시저의 컴파일 프로세스를 보여줍니다.  
   
- ![저장 프로시저의 네이티브 컴파일](../../database-engine/media/hekaton-query-plan-6.gif "저장 프로시저의 고유 컴파일")  
+ ![저장 프로시저의 고유 컴파일](../../database-engine/media/hekaton-query-plan-6.gif "저장 프로시저의 고유 컴파일")  
 저장 프로시저의 고유 컴파일  
   
  프로세스에 대한 설명은 다음과 같습니다.  
@@ -221,7 +221,7 @@ END
   
  고유하게 컴파일된 저장 프로시저의 호출은 DLL의 함수 호출과 같습니다.  
   
- ![고유 하 게 컴파일된 저장 프로시저의 실행](../../database-engine/media/hekaton-query-plan-7.gif "고유하게 컴파일된 저장 프로시저의 실행")  
+ ![고유하게 컴파일된 저장 프로시저의 실행](../../database-engine/media/hekaton-query-plan-7.gif "고유하게 컴파일된 저장 프로시저의 실행")  
 고유하게 컴파일된 저장 프로시저의 실행  
   
  고유하게 컴파일된 저장 프로시저의 호출에 대한 설명은 다음과 같습니다.  
@@ -244,7 +244,7 @@ END
  고유하게 컴파일된 저장 프로시저를 컴파일하는 데에는 매개 변수 스니핑이 사용되지 않습니다. 이 저장 프로시저에 대한 모든 매개 변수는 UNKNOWN 값을 갖는 것으로 간주됩니다. 해석된 저장 프로시저처럼 고유하게 컴파일된 저장 프로시저도 `OPTIMIZE FOR` 힌트를 지원합니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)를 참조하세요.  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저에 대한 쿼리 실행 검색  
- 고유하게 컴파일된 저장 프로시저에 대한 쿼리 실행 계획은 **에서** 예상 실행 계획 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]을 사용하거나 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 SHOWPLAN_XML 옵션을 사용하여 검색할 수 있습니다. 다음은 그 예입니다.  
+ 고유하게 컴파일된 저장 프로시저에 대한 쿼리 실행 계획은 **에서** 예상 실행 계획 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]을 사용하거나 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 SHOWPLAN_XML 옵션을 사용하여 검색할 수 있습니다. 다음은 그 예입니다.   
   
 ```sql  
 SET SHOWPLAN_XML ON  
@@ -255,8 +255,7 @@ SET SHOWPLAN_XML OFF
 GO  
 ```  
   
- 쿼리 최적화 프로그램에서 생성되는 실행 계획은 트리의 노드 및 리프에 대한 쿼리 연산자가 포함된 트리로 구성됩니다. 트리 구조에 따라 연산자 사이의 상호 작용(한 연산자에서 다른 연산자로의 행 흐름)이 결정됩니다. 
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]의 그래픽 보기에서 흐름은 오른쪽에서 왼쪽의 방향으로 진행됩니다. 예를 들어, 그림 1의 쿼리 계획에는 merge join 연산자에 행을 제공하는 2개의 index scan 연산자가 포함됩니다. merge join 연산자는 select 연산자에 행을 제공합니다. select 연산자가 마지막으로 클라이언트에 행을 반환합니다.  
+ 쿼리 최적화 프로그램에서 생성되는 실행 계획은 트리의 노드 및 리프에 대한 쿼리 연산자가 포함된 트리로 구성됩니다. 트리 구조에 따라 연산자 사이의 상호 작용(한 연산자에서 다른 연산자로의 행 흐름)이 결정됩니다. [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]의 그래픽 보기에서 흐름은 오른쪽에서 왼쪽의 방향으로 진행됩니다. 예를 들어, 그림 1의 쿼리 계획에는 merge join 연산자에 행을 제공하는 2개의 index scan 연산자가 포함됩니다. merge join 연산자는 select 연산자에 행을 제공합니다. select 연산자가 마지막으로 클라이언트에 행을 반환합니다.  
   
 ### <a name="query-operators-in-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저의 쿼리 연산자  
  다음 표에서는 고유하게 컴파일 저장 프로시저 내부에서 지원되는 쿼리 연산자를 요약해서 보여줍니다.  

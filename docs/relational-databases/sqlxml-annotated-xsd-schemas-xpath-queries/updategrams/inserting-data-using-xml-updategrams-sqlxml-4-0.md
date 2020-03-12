@@ -34,12 +34,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: caf6c6bc9e9807b042baf365c3a1efbe9d2b74c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 671dc9c8a0091a2fb14a4aa1c42ea8246b376c7a
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75252495"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112263"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 삽입(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -215,7 +215,7 @@ ms.locfileid: "75252495"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 테이블 이름은 Northwind 데이터베이스의 Order Details 테이블과 같이 공백을 포함할 수 있습니다. 그러나 잘못 된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 식별자 인 xml 문자는 유효 하지 않지만 잘못 된 xml 식별자는 ' __xHHHH\_\_'를 인코딩 값으로 사용 하 여 인코딩할 수 있습니다. 여기서 HHHH는 가장 중요 한 비트 우선 순서로 문자에 대 한 4 자리 16 진수 UCS-2 코드를 나타냅니다.  
   
 > [!NOTE]  
->  이 예에서는 Northwind 데이터베이스를 사용합니다. 이 [Microsoft 웹 사이트](https://www.microsoft.com/download/details.aspx?id=23654)에서 다운로드할 수 있는 SQL 스크립트를 사용 하 여 Northwind 데이터베이스를 설치할 수 있습니다.  
+>  이 예에서는 Northwind 데이터베이스를 사용합니다. 이 [Microsoft 웹 사이트](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)에서 다운로드할 수 있는 SQL 스크립트를 사용 하 여 Northwind 데이터베이스를 설치할 수 있습니다.  
   
  또한 요소 이름을 대괄호([ ])로 묶어야 합니다. XML에서 [및] 문자는 유효 하지 않으므로 각각 _x005B\_ 및 _x005D\_로 인코딩해야 합니다. 매핑 스키마를 사용하는 경우 공백과 같은 유효하지 않은 문자가 포함된 요소 이름을 제공할 수 있습니다. 매핑 스키마에서 필요한 매핑을 수행하므로 이러한 문자를 인코딩할 필요가 없습니다.  
   
@@ -252,7 +252,7 @@ ms.locfileid: "75252495"
 ### <a name="d-using-the-at-identity-attribute-to-retrieve-the-value-that-has-been-inserted-in-the-identity-type-column"></a>D. at-identity 특성을 사용하여 IDENTITY 유형 열에 삽입된 값 검색  
  다음 Updategram은 두 개의 레코드를 삽입합니다. 하나는 Sales.SalesOrderHeader 테이블에 삽입하고 다른 하나는 Sales.SalesOrderDetail 테이블에 삽입합니다.  
   
- 먼저 Updategram은 Sales.SalesOrderHeader 테이블에 레코드를 추가합니다. 이 테이블에서 SalesOrderID 열은 IDENTITY 유형 열입니다. 따라서이 레코드를 테이블에 추가 하면 updategram는 **id** 특성을 사용 하 여 할당 된 SalesOrderID 값을 "x" (자리 표시자 값)로 캡처합니다. 그런 다음 updatSalesOrderDetail> 요소에서 **** \<이 id 변수를 SalesOrderID 특성의 값으로 지정 합니다.  
+ 먼저 Updategram은 Sales.SalesOrderHeader 테이블에 레코드를 추가합니다. 이 테이블에서 SalesOrderID 열은 IDENTITY 유형 열입니다. 따라서이 레코드를 테이블에 추가 하면 updategram는 **id** 특성을 사용 하 여 할당 된 SalesOrderID 값을 "x" (자리 표시자 값)로 캡처합니다. 그런 다음 updatSalesOrderDetail> 요소에서 **at-identity** \<이 id 변수를 SalesOrderID 특성의 값으로 지정 합니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

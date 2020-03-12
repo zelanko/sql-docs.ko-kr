@@ -1,5 +1,6 @@
 ---
 title: WideWorldImporters OLTP 데이터베이스 카탈로그-SQL | Microsoft Docs
+description: WideWorldImporters 예제 데이터베이스 카탈로그의 스키마, 테이블, 저장 프로시저 및 디자인 고려 사항을 이해 합니다.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -9,12 +10,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2560043ca6acc4b5df141bcbc898ac09b21f97a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d4502a64a3822741c1928fcf6faee69d80d893d5
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68811535"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112407"
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters 데이터베이스 카탈로그
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

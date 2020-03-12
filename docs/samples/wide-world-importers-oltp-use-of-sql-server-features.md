@@ -1,5 +1,6 @@
 ---
 title: SQL Server 기능 및 기능 사용 | Microsoft Docs
+description: WideWorldImporters 샘플 데이터베이스에서 SQL Server 기능과 기능 및 사용 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 69f0027041b4acf45a54d8d8d655bc8772417dc6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: abf7cff6bfcd1640f2115c2a7f097ba4fccb499d
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68811537"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112415"
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>SQL Server 기능 및 기능 사용
 

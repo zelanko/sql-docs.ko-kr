@@ -1,5 +1,6 @@
 ---
 title: 와이드 세계 가져오기-SQL 용 샘플 데이터베이스 | Microsoft Docs
+description: WideWorldImporters 샘플 데이터베이스에서 가상의 WideWorldImporters 회사 워크플로를 지 원하는 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -9,12 +10,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 872892d307883bb7df31b08de701b2030d9aeb1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2fb0c990c03e0dfbf1cd279efa7a249bb5bc9645
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68794600"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112386"
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Microsoft SQL 용 와이드 세계 가져오기 샘플 데이터베이스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

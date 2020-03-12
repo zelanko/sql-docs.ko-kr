@@ -10,12 +10,12 @@ ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 476159031ad00ada2e70b0c9eca5c775dab67285
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e107dde8a3f811cbc1a24533705863c954dd85c4
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73705293"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112158"
 ---
 # <a name="data-mining-projects"></a>데이터 마이닝 프로젝트
   데이터 마이닝 프로젝트는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 솔루션의 일부입니다. 디자인 프로세스 중에 이 프로젝트에서 만든 개체를 작업 영역 데이터베이스의 일부로 테스트 및 쿼리할 수 있습니다. 사용자가 프로젝트에서 개체를 쿼리하거나 찾아볼 수 있도록 하려면 다차원 모드로 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 프로젝트를 배포해야 합니다.  
@@ -165,7 +165,7 @@ ms.locfileid: "73705293"
   
  이러한 시각화 요소는 일시적이므로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 세션을 종료할 때 저장하지 않고 닫힙니다. 따라서 이러한 시각화 요소를 프레젠테이션이나 이후의 분석에 사용하기 위해 다른 애플리케이션으로 내보내야 하는 경우 뷰어 인터페이스의 각 탭이나 창에 제공된 **복사** 명령을 사용합니다.  
   
- Excel용 데이터 마이닝 추가 기능에서도 모델을 Visio 다이어그램으로 표시하고 Visio 도구를 사용하여 주석을 달거나 다이어그램을 수정하는 데 사용할 수 있는 Visio 템플릿을 제공합니다. 자세한 내용은 [Microsoft Office 2007용 Microsoft SQL Server 2008 SP2 데이터 마이닝 추가 기능](https://www.microsoft.com/download/details.aspx?id=7294)을 참조하세요.
+ Excel용 데이터 마이닝 추가 기능에서도 모델을 Visio 다이어그램으로 표시하고 Visio 도구를 사용하여 주석을 달거나 다이어그램을 수정하는 데 사용할 수 있는 Visio 템플릿을 제공합니다. 자세한 내용은 [Microsoft Office 2007용 Microsoft SQL Server 2008 SP2 데이터 마이닝 추가 기능](https://www.microsoft.com/download/details.aspx?id=8569)을 참조하세요.
   
 ###  <a name="bkmk_Validate"></a>모델 테스트 및 유효성 검사  
  모델을 만든 후 결과를 조사하여 가장 적합한 모델을 결정할 수 있습니다.  

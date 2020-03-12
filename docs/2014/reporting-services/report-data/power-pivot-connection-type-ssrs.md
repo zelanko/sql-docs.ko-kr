@@ -10,12 +10,12 @@ ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e9b8fb98082fb3509acf50e6546673e86962893c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 50ce060d270cf06a771136c581bf96fe1ec21eee
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74200414"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112147"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot 연결 유형(SSRS)
   SQL Server Analysis Services 데이터 처리 확장 프로그램을 사용하면 SharePoint PowerPivot 갤러리에 게시된 PowerPivot 통합 문서에서 데이터를 검색할 수 있습니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "74200414"
 ## <a name="prerequisites"></a>사전 요구 사항  
  PowerPivot 데이터 원본은 SharePoint 사이트의 PowerPivot 갤러리에 게시되어야 합니다.  
   
- 보고서 작성기에서 PowerPivot 통합 문서로의 연결을 지원하려면 워크스테이션 컴퓨터에 SQL Server 2008 R2 ADOMD.NET이 있어야 합니다. 이 클라이언트 라이브러리는 PowerPivot for Excel과 함께 설치되지만 이 애플리케이션이 없는 컴퓨터를 사용하는 경우에는 [SQL Server 2008 R2 기능 팩](https://www.microsoft.com/download/details.aspx?id=16978)에서 ADOMD.NET을 다운로드하여 설치해야 합니다.  
+ 보고서 작성기에서 PowerPivot 통합 문서로의 연결을 지원하려면 워크스테이션 컴퓨터에 SQL Server 2008 R2 ADOMD.NET이 있어야 합니다. 이 클라이언트 라이브러리는 PowerPivot for Excel과 함께 설치되지만 이 애플리케이션이 없는 컴퓨터를 사용하는 경우에는 [SQL Server 2008 R2 기능 팩](https://www.microsoft.com/download/details.aspx?id=44272)에서 ADOMD.NET을 다운로드하여 설치해야 합니다.  
   
 ## <a name="data-source-type"></a>데이터 원본 유형  
  보고서 데이터 원본 유형 **Microsoft SQL Server Analysis Services**를 사용합니다.  
@@ -39,8 +39,7 @@ ms.locfileid: "74200414"
 ## <a name="queries"></a>쿼리  
  PowerPivot 데이터 원본에 연결한 후 MDX 그래픽 쿼리를 통해 기본 데이터 구조에서 찾아보고 선택하여 쿼리를 작성합니다. 쿼리를 작성한 후에는 해당 쿼리를 실행하여 결과 창에서 예제 데이터를 봅니다.  
   
- 쿼리 디자이너는 쿼리를 분석하여 데이터 세트 필드를 결정합니다. 
-  **보고서 데이터** 창에서 데이터 세트 필드 컬렉션을 수동으로 편집할 수도 있습니다. 자세한 내용은 [보고서 데이터 창에서 필드 추가, 편집, 새로 고침&#40;보고서 작성기 및 SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)을 참조하세요.  
+ 쿼리 디자이너는 쿼리를 분석하여 데이터 세트 필드를 결정합니다. **보고서 데이터** 창에서 데이터 세트 필드 컬렉션을 수동으로 편집할 수도 있습니다. 자세한 내용은 [보고서 데이터 창에서 필드 추가, 편집, 새로 고침&#40;보고서 작성기 및 SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="filters"></a>필터  
  필터 창에서 쿼리 결과에 포함하거나 필터링하여 제외할 차원 및 멤버를 지정합니다.  
@@ -64,7 +63,7 @@ ms.locfileid: "74200414"
 -   보고서는 PowerPivot 데이터 원본의 PowerPivot 데이터만 포함합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [MDX 쿼리 디자이너 사용자 인터페이스를 Analysis Services &#40;보고서 작성기&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
+ [Analysis Services MDX 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
  [식&#40;보고서 작성기 및 SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

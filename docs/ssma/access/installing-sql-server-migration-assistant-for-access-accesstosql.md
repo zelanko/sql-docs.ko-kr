@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 80fc19b17ac1c01f0c57d828a3bc4821050f761d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cbbb7ed7a20937d9963af7080fb16be4f6c78da5
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75257887"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79111902"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>액세스용 SQL Server Migration Assistant 설치 (AccessToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ACCESS 용 ssma (Migration Assistant)는 Windows Installer 기반 마법사를 사용 하 여 설치 됩니다. 이 항목에서는 설치 필수 구성 요소, 최신 버전의 SSMA 링크 및 SSMA 설치, 라이선스, 제거 및 업그레이드에 대 한 지침을 제공 합니다.  
@@ -45,7 +45,7 @@ SSMA를 설치 하기 전에 시스템이 다음과 같은 요구 사항을 충�
   
 -   Microsoft DAO (Data Access Object) 공급자 버전 12.0 또는 14.0입니다. Microsoft Office 2010/2007 제품에서 DAO 공급자를 설치 하거나 Microsoft 웹 사이트에서 다운로드할 수 있습니다.  
   
--   SQL Azure 마이그레이션하기 위한 SNAC (SQL Server Native Access Client) 버전 10.5 이상 [Microsoft® SQL Server® 2008 R2 기능 팩](https://www.microsoft.com/download/details.aspx?id=16978) 에서 최신 버전의 SNAC를 가져올 수 있습니다.  
+-   SQL Azure 마이그레이션하기 위한 SNAC (SQL Server Native Access Client) 버전 10.5 이상 [Microsoft® SQL Server® 2008 R2 기능 팩](https://www.microsoft.com/download/details.aspx?id=44272) 에서 최신 버전의 SNAC를 가져올 수 있습니다.  
   
 -   4gb RAM (권장).  
   

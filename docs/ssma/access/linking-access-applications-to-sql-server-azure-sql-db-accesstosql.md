@@ -23,12 +23,12 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: c4e6d16645b8a7ecab9ed2e814ed345834e80f1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 58abfde651fb59bc69207db810324eb4c74b8c26
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75245922"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112066"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>SQL Server에 액세스 응용 프로그램 연결-Azure SQL DB (AccessToSQL)
 에서 기존 Access 응용 프로그램 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 사용 하려는 경우에는 원래 access 테이블을 마이그레이션된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블이 나 SQL Azure 테이블에 연결할 수 있습니다. 연결 하면 쿼리, 폼, 보고서 및 데이터 액세스 페이지에서 Access 데이터베이스의 데이터 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터베이스의 데이터를 사용 하도록 access 데이터베이스를 수정 합니다.  
@@ -56,7 +56,7 @@ Access에서 테이블을 열면 키 집합 커서를 사용 하 여 데이터�
   
 > [!IMPORTANT]  
 > Azure database를 사용 하 여 access 테이블을 연결 하려면 SQL Server Native Client (SNAC) 버전 10.5 이상이 필요 합니다.   
-> [Microsoft® SQL Server® 2008 R2 기능 팩](https://www.microsoft.com/download/details.aspx?id=16978)에서 최신 버전의 SNAC를 가져올 수 있습니다.  
+> [Microsoft® SQL Server® 2008 R2 기능 팩](https://www.microsoft.com/download/details.aspx?id=44272)에서 최신 버전의 SNAC를 가져올 수 있습니다.  
   
 ## <a name="unlinking-access-tables"></a>Access 테이블 연결 끊기  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 테이블에서 액세스 테이블의 연결을 끊으면 ssma에서 원래 액세스 테이블과 해당 데이터를 복원 합니다.  

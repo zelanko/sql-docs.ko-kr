@@ -1,5 +1,6 @@
 ---
 title: SQL 샘플에서 데이터 생성 WideWorldImporters
+description: 다음 SQL 문을 사용 하 여 WideWorldImporters 예제 데이터베이스에 대 한 현재 날짜로 샘플 데이터를 생성 하 고 가져옵니다.
 ms.date: 04/04/2018
 ms.reviewer: ''
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 0f880ea881b53c2600fb1fffdf7da5d16ab8d423
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 01bca0b4e0c8d98d0a31451686f0396af99ed430
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74056280"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112316"
 ---
 # <a name="wideworldimporters-data-generation"></a>WideWorldImporters 데이터 생성
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

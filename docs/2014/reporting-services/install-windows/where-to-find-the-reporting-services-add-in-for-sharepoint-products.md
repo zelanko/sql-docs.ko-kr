@@ -11,12 +11,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/16/2015
-ms.openlocfilehash: adee6ee7d0d769d8e87e228c475b224a3e78675b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1d6a27c171fafc8480cbbcdb03c4683816ec30d4
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637872"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112187"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>SharePoint 제품용 Reporting Services 추가 기능 검색 위치
 
@@ -60,7 +60,7 @@ ms.locfileid: "73637872"
 ##  <a name="bkmk_sql2008sp2"></a>SharePoint 2007 제품 및 기술용 SQL Server 2008 SP2 Reporting Services 추가 기능  
  Microsoft SQL Server 2008 SP2 Reporting Services 추가 기능은 2008 추가 기능의 업데이트 버전으로서 SharePoint 2007 제품과의 2008 R2 보고서 서버 통합 지원 기능이 추가되었습니다.  
   
- 이 파일의 최신 버전은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 다운로드 센터의 [Microsoft SharePoint 기술용 Microsoft SQL Server 2008 SP2 Reporting Services 추가 기능](https://www.microsoft.com/download/details.aspx?id=793)에서 온라인으로 제공됩니다.  
+ 이 파일의 최신 버전은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 다운로드 센터의 [Microsoft SharePoint 기술용 Microsoft SQL Server 2008 SP2 Reporting Services 추가 기능](https://www.microsoft.com/download/details.aspx?id=43344)에서 온라인으로 제공됩니다.  
   
 ##  <a name="bkmk_sql2008"></a>SharePoint 2007 제품 및 기술용 SQL Server 2008 Reporting Services 추가 기능  
  Microsoft SharePoint 기술용 Microsoft SQL Server 2008 Reporting Services 추가 기능은 Windows SharePoint Services 3.0 또는 Microsoft Office SharePoint Server 2007 배포 내에서 보고서 서버를 실행하기 위한 기능을 제공합니다.  

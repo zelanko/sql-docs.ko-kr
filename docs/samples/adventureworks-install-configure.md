@@ -1,5 +1,6 @@
 ---
 title: AdventureWorks 예제 데이터베이스 설치 및 구성
+description: SQL Server Management Studio 또는 Azure SQL Database를 사용 하 여 AdventureWorks 예제 데이터베이스를 다운로드 하 고 설치 하려면 다음 지침을 따르세요.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -9,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6a4b56a31ede0d8e011c1a2244f5d014e185e7e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 424d85e947769e8e78b828e5b46d3b384eb1b50a
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74318992"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112329"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>AdventureWorks 설치 및 구성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
