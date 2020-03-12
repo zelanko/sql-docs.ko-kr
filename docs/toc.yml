@@ -4163,12 +4163,8 @@
   items:
     - name: 개요
       items:
-        - name: What's New
+        - name: 새로운 기능
           href: sql-server/install/what-s-new-in-sql-server-installation.md
-        - name: 최대 용량 사양
-          href: sql-server/maximum-capacity-specifications-for-sql-server.md
-        - name: 버전별 컴퓨팅 용량 제한
-          href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
     - name: 릴리스 정보
       items:
         - name: SQL Server 에서 지원되지 않는 기능
@@ -4188,19 +4184,23 @@
     - name: 계획
       href: sql-server/install/planning-a-sql-server-installation.md
       items:
+        - name: 최대 용량 사양
+          href: sql-server/maximum-capacity-specifications-for-sql-server.md
+        - name: 버전별 컴퓨팅 용량 제한
+          href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
         - name: 하드웨어 및 소프트웨어 요구 사항
           items:
             - name: SQL Server 2019
               href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md
             - name: SQL Server 2017 및 이전
               href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
-        - name: 보안 고려사항
+        - name: 보안 고려 사항
           href: sql-server/install/security-considerations-for-a-sql-server-installation.md
-        - name: 네트워크 프로토콜 및 네트워크 라이브러리
+        - name: 네트워크 프로토콜 및 라이브러리
           href: sql-server/install/network-protocols-and-network-libraries.md
         - name: 여러 버전 및 인스턴스 작업
           href: sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md
-        - name: 로컬 언어 버전
+        - name: 언어 버전
           href: sql-server/install/local-language-versions-in-sql-server.md
         - name: 파일 위치
           href: sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
@@ -9837,6 +9837,8 @@
               href: linux/sql-server-linux-setup-ssis.md
             - name: SQL Server Machine Learning Services 설치
               href: linux/sql-server-linux-setup-machine-learning.md
+            - name: Docker에 SQL Server Machine Learning Services 설치
+              href: linux/sql-server-setup-machine-learning-docker.md
             - name: SQL Server 언어 확장 설치
               href: linux/sql-server-linux-setup-language-extensions.md
             - name: 리포지토리 구성
