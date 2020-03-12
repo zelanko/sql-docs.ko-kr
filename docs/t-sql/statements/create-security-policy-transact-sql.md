@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8cf0332d2a82113145e549d9419b855a222f7441
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 45a1b461c5a56bfd894122eeb67e69672c36d093
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68117290"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288954"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -76,11 +76,11 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
   
  *\<block_dml_operation>* 블록 조건자가 적용될 특정 DML 작업입니다. AFTER는 DML 작업 수행(INSERT 또는 UPDATE) 후 조건자가 행의 값에 따라 평가되도록 지정합니다. BEFORE는 DML 작업 수행(UPDATE 또는 DELETE) 전에 조건자가 행의 값에 따라 평가되도록 지정합니다. 작업이 지정되지 않은 경우 조건자는 모든 작업에 적용됩니다.  
   
- [ STATE = { ON | **OFF** } ]  
+ [ STATE = { **ON** | OFF } ]  
  대상 테이블에 대해 해당 보안 조건자를 강제 적용하여 보안 정책을 사용하거나 사용하지 않도록 설정합니다. 지정되지 않으면 생성되는 보안 정책이 사용되도록 설정됩니다.  
   
- [ SCHEMABINDING = { ON | OFF } ]  
- SCHEMABINDING 옵션을 사용하여 정책에서 모든 조건자 함수를 생성해야 하는지 여부를 표시합니다. 기본적으로 SCHEMABINDING을 사용해 모든 함수를 만들어야 합니다.  
+ [ SCHEMABINDING = { **ON** | OFF } ]  
+ SCHEMABINDING 옵션을 사용하여 정책에서 모든 조건자 함수를 생성해야 하는지 여부를 표시합니다. 기본적으로 이 설정은 **ON**이며 모든 함수는 SCHEMABINDING을 사용해 만들어져야 합니다.  
   
  NOT FOR REPLICATION  
  복제 에이전트가 대상 개체를 수정할 때 보안 정책을 실행하면 안 됨을 나타냅니다. 자세한 내용은 [동기화하는 동안 트리거 및 제약 조건 동작 제어&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md)를 참조하세요.  

@@ -3,18 +3,18 @@ title: 확장 이벤트를 사용하여 스크립트 모니터링
 description: 확장 이벤트를 사용하여 SQL Server Machine Learning Services, SQL Server 실행 패드, Python 또는 R 작업 외부 스크립트와 관련된 작업을 모니터링하고 문제를 해결하는 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2020
+ms.date: 03/04/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fe8601801a92b28022a83b54ea06ec5836c6c013
-ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
+ms.openlocfilehash: cf0253788e19061fe54b8e2b0b8dfd3142856472
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/29/2020
-ms.locfileid: "78200984"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78335735"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 확장 이벤트를 사용하여 Python 및 R 스크립트 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ AND p.name = 'SQLSatellite';
 |satellite_message_ring_buffer_record|메시지 링 버퍼 레코드||  
 |satellite_message_summary|메시징에 대한 요약 정보||  
 |satellite_message_version_mismatch|메시지 버전 필드가 일치하지 않습니다.||  
-|satellite_messaging|메시징 이벤트(바인딩, 언바인딩 등)을 추적하는 데 사용됩니다.||  
+|satellite_messaging|메시징 이벤트(바인딩, 바인딩 해제 등)을 추적하는 데 사용됩니다.||  
 |satellite_partial_message|네트워킹 계층의 부분적인 메시지를 추적하는 데 사용됩니다.||  
 |satellite_schema_received|SQL에서 스키마 메시지를 수신하고 읽었을 때 실행됩니다.||  
 |satellite_schema_sent|위성에서 스키마 메시지를 보냈을 때 실행됩니다.|외부 프로세스를 통해서만 실행됩니다. 외부 프로세스 이벤트 수집에 대한 지침을 참조하십시오.|  
@@ -84,7 +84,12 @@ AND p.name = 'SQLSatellite';
 ### <a name="collecting-events-from-external-processes"></a>외부 프로세스에서 이벤트 수집
 
 SQL Server Machine Learning Services는 SQL Server 프로세스 외부에서 실행되는 일부 서비스를 시작합니다. 외부 프로세스 관련 이벤트를 캡처하려면 이벤트 추적 구성 파일을 만들고 프로세스의 실행 파일과 동일한 디렉터리에 파일을 배치해야 합니다.  
-  
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+> [!IMPORTANT]
+> SQL Server 2019부터 격리 메커니즘이 변경되었습니다. 따라서 이벤트 추적 구성 파일이 저장되는 디렉터리에 적절한 권한을 부여해야 합니다. 이러한 권한을 설정하는 방법에 대한 자세한 내용은 [Windows의 SQL Server 2019: Machine Learning Services에 대한 격리 변경 내용의 파일 사용 권한 섹션](../install/sql-server-machine-learning-services-2019.md#file-permissions)을 참조하세요.
+::: moniker-end
+
 + **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**   
   
     실행 패드 관련 이벤트를 캡처하려면 SQL Server 인스턴스의 Binn 디렉터리에 *.xml* 파일을 배치합니다. 기본 설치의 경우 다음과 같습니다.

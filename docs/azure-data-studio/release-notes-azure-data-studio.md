@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 02/19/2020
-ms.openlocfilehash: 441679bbcf6d6a24e48233d4134d575ec526e0b2
-ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
+ms.openlocfilehash: 3b37609f6db3e9dc8fa0d6622574054686552350
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77479696"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78408864"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio의 릴리스 정보
 
@@ -23,7 +23,7 @@ ms.locfileid: "77479696"
 
 ## <a name="february-hotfix"></a>2월(핫픽스)
 
-2019년 2월 19일 &nbsp; / &nbsp; 버전: 1.15.1
+2020년 2월 19일 &nbsp; / &nbsp; 버전: 1.15.1
 
 &nbsp;
 
@@ -35,7 +35,7 @@ ms.locfileid: "77479696"
 
 ## <a name="february-2020"></a>2020년 2월
 
-2019년 2월 13일 &nbsp; / &nbsp; 버전: 1.15.0 
+2020년 2월 13일 &nbsp; / &nbsp; 버전: 1.15.0 
 
 &nbsp;
 

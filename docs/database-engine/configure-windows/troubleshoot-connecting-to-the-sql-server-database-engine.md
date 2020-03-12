@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b2394fc73483b78e5e90a4ccffa9ce45205dc237
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 562fda7c79681fa70e36bf19221ceb44b2dc87ec
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74542310"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866381"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진 연결 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,12 +160,12 @@ TCP/IP를 사용하여 SQL Server에 연결하려면 Windows에서 연결을 설
     - IPv4: `ping 192.168.1.101`
     - IPv6: `ping fe80::d51d:5ab5:6f09:8f48%11`
 
-1. 네트워크가 올바르게 구성된 경우 `ping`이 `Reply from <IP address>`를 반환하고 추가 정보가 표시됩니다. `ping`이 `Destination host unreachable` 또는 `Request timed out`을 반환한다면 TCP/IP가 올바르게 구성되니 않은 것입니다. 이 시점의 오류는 클라이언트 컴퓨터, 서버 컴퓨터 또는 라우터 등의 네트워크 관련 문제를 나타낼 수 있습니다. 네트워크 문제를 해결하려면 [TCP/IP 문제에 대한 고급 문제 해결](/windows/client-management/troubleshoot-tcpip)을 참조하세요.
+1. 네트워크가 올바르게 구성된 경우 `ping`이 `Reply from <IP address>`를 반환하고 추가 정보가 표시됩니다. `ping`이 `Destination host unreachable` 또는 `Request timed out`을 반환한다면 TCP/IP가 올바르게 구성되니 않은 것입니다. 이 시점의 오류는 클라이언트 컴퓨터, 서버 컴퓨터 또는 라우터 등의 네트워크 관련 문제를 나타낼 수 있습니다. 네트워크 문제를 해결하려면 [TCP/IP 문제의 고급 문제 해결](/windows/client-management/troubleshoot-tcpip)을 참조하세요.
 1. 그런 다음 IP 주소를 사용하여 ping 테스트에 성공한 경우 컴퓨터 이름을 TCP/IP 주소를 확인할 수 있는지 테스트합니다. 클라이언트 컴퓨터의 명령 프롬프트 창에서 `ping` 과 SQL Server를 실행하는 컴퓨터의 컴퓨터 이름을 입력합니다. 예를 들어 `ping newofficepc` 
 1. IP 주소에 대한 `ping`은 성공하지만 컴퓨터에 대한 `ping`이 `Destination host unreachable` 또는 `Request timed out`을 반환하는 경우 클라이언트 컴퓨터에 이전(오래된) 이름 확인 정보가 캐시되어 있을 수 있습니다. `ipconfig /flushdns` 를 입력하여 DNS(동적 이름 확인) 캐시를 지웁니다. 다시 이름으로 컴퓨터를 ping합니다. DNS 캐시가 비어 있으므로 클라이언트 컴퓨터가 서버 컴퓨터의 IP 주소에 대한 최신 정보를 확인합니다. 
 1. 네트워크가 올바르게 구성된 경우 `ping`이 `Reply from <IP address>`를 반환하고 추가 정보가 표시됩니다. IP 주소로 서버 컴퓨터를 ping할 수 있지만 컴퓨터 이름을 ping하는 경우 `Destination host unreachable.` 또는 `Request timed out.` 등의 오류가 발생한다면 이름 확인이 올바르게 구성되지 않은 것입니다. 자세한 내용은 앞에서 참조한 2006년 문서 [기본적인 TCP/IP 문제를 해결하는 방법](https://support.microsoft.com/kb/169790)을 참조하세요. SQL Server에 연결하기 위해 이름 확인에 성공해야 하는 것은 아니지만 컴퓨터 이름을 IP 주소로 확인할 수 없는 경우 IP 주소를 지정하여 연결해야 합니다. 이름 확인은 나중에 수정할 수 있습니다.
 
-## <a name = "openport"></a>방화벽에서 포트 열기
+## <a name="open-a-port-in-the-firewall"></a>방화벽에서 포트 열기
 
 기본적으로 Windows 방화벽이 켜져 있고 다른 컴퓨터에서 연결을 차단합니다. 다른 컴퓨터에서 TCP/IP를 사용하여 연결하려면 SQL Server 컴퓨터에서 데이터베이스 엔진이 사용하는 TCP 포트에 대한 연결을 허용하도록 방화벽을 구성해야 합니다. 기본 인스턴스는 기본적으로 TCP 포트 1433에서 수신 대기합니다. 명명된 인스턴스가 있거나, 기본 인스턴스 포트를 변경한 경우 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] TCP 포트는 다른 포트에서 수신할 수도 있습니다. [SQL Server 인스턴스 TCP 포트 가져오기](#getTCP)를 참조하세요.
 

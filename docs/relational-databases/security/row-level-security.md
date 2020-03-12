@@ -17,12 +17,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 886afc267d38ec92a478fc40bcbde53e428950f0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68809953"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288971"
 ---
 # <a name="row-level-security"></a>행 수준 보안
 
@@ -63,7 +63,7 @@ RLS는 두 가지 유형의 보안 조건자를 지원합니다.
   
  필터 조건자와 차단 조건자 및 보안 정책 모두 다음 동작을 수행합니다.  
   
-- 다른 테이블과 조인하거나 함수를 호출하는 조건자 함수를 정의할 수 있습니다. `SCHEMABINDING = ON`을 사용하여 보안 정책을 만든 경우에는 조인 또는 함수를 쿼리에서 액세스할 수 있으며, 다른 추가 권한 검사 없이 올바르게 작동 합니다. `SCHEMABINDING = OFF`를 사용하여 보안 정책을 만든 경우에는 대상 테이블을 쿼리하기 위해 이러한 추가 테이블 및 함수에 대해 **SELECT** 또는 **EXECUTE** 권한이 필요합니다.
+- 다른 테이블과 조인하거나 함수를 호출하는 조건자 함수를 정의할 수 있습니다. `SCHEMABINDING = ON`(기본값)을 사용하여 보안 정책을 만든 경우에는 조인 또는 함수를 쿼리에서 액세스할 수 있으며, 다른 추가 권한 검사 없이 올바르게 작동합니다. `SCHEMABINDING = OFF`를 사용하여 보안 정책을 만든 경우에는 대상 테이블을 쿼리하기 위해 이러한 추가 테이블 및 함수에 대해 **SELECT** 권한이 필요합니다. 조건자 함수가 CLR 스칼라 반환 함수를 호출하는 경우 **EXECUTE** 권한이 추가로 필요합니다.
   
 - 정의되었지만 사용할 수 없는 보안 조건자가 있는 테이블에 대한 쿼리를 실행할 수 있습니다. 필터링되거나 차단된 행은 영향을 받지 않습니다.  
   
@@ -121,7 +121,7 @@ RLS는 두 가지 유형의 보안 조건자를 지원합니다.
   
 ## <a name="Best"></a> 최선의 구현 방법  
   
-- RLS 개체, 조건자 함수 및 보안 정책에 대한 별도의 스키마를 만들 것을 적극 권장합니다.  
+- RLS 개체, 조건자 함수 및 보안 정책에 대한 별도의 스키마를 만들 것을 적극 권장합니다. 이렇게 하면 이러한 특수 개체에 필요한 사용 권한을 대상 테이블에서 구분할 수 있습니다. 다중 테넌트 데이터베이스에서는 다른 정책 및 조건자 함수를 추가로 분리해야 할 수 있지만 모든 경우에 대한 표준은 아닙니다.
   
 - **ALTER ANY SECURITY POLICY** 권한은 보안 정책 관리자와 같이 권한이 높은 사용자를 위한 것입니다. 보호하는 테이블에 대한 **SELECT** 권한은 보안 정책 관리자에게 필요하지 않습니다.  
   

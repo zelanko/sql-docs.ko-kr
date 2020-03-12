@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: 1637b46d896e0114d5b66004bc1c160e23521e30
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 99c252c81b081a7d4e0583e6722c5c853904cc27
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78180078"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288963"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 
@@ -121,7 +121,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 
 < set_options > ::=
 {
-    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 }
+    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 } -- Preview 
 }
 ```
 
@@ -397,7 +397,7 @@ ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 
 RLS([행 수준 보안](../../relational-databases/security/row-level-security.md)) 조건자가 전체 사용자 쿼리 실행 계획의 카디널리티에 영향을 주는지 아닌지를 제어할 수 있습니다. ISOLATE_SECURITY_POLICY_CARDINALITY가 ON이면 RLS 조건자는 실행 계획의 카디널리티에 영향을 주지 않습니다. 예를 들어 쿼리를 실행하는 특정 사용자에 대해 결과를 10개 행으로 제한하는 RLS 조건자와 100만 개의 행이 포함된 테이블이 있다고 가정합니다. 이 데이터베이스 범위 구성을 OFF로 설정할 경우 이 조건자의 예상 카디널리티는 10이 됩니다. 이 데이터베이스 범위 구성이 ON이면 쿼리 최적화는 100만 개의 행을 추정합니다. 대부분의 워크로드에는 기본값을 사용하는 것이 좋습니다.
 
-DW_COMPATIBILITY_LEVEL **=** {**AUTO** | 10 | 20 }
+DW_COMPATIBILITY_LEVEL (Preview) **=** {**AUTO** | 10 | 20 }
 
 **적용 대상**: Azure Synapse Analytics만(이전의 SQL DW)
 

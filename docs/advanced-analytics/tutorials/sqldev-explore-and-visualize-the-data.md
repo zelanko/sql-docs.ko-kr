@@ -3,18 +3,18 @@ title: 'R + T-SQL 자습서: 데이터 살펴보기'
 description: R 함수를 사용하여 SQL Server 데이터를 살펴보고 시각화하는 방법을 보여주는 자습서입니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/29/2018
+ms.date: 03/03/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 213db5ee9b88f7af34e3d000fc0f3b241d8e5791
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b524f312fa1978b55e74be3dd46a24c95a3f6d29
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73725229"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78335773"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>1단원: 데이터 탐색 및 시각화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,6 +61,11 @@ ms.locfileid: "73725229"
     |tip_class|Class 0: tip_amount = $0<br /><br />Class 1: tip_amount > $0 and tip_amount <= $5<br /><br />Class 2: tip_amount > $5 and tip_amount <= $10<br /><br />Class 3: tip_amount > $10 and tip_amount <= $20<br /><br />Class 4: tip_amount > $20|
 
 ## <a name="create-a-stored-procedure-using-rxhistogram-to-plot-the-data"></a>rxHistogram을 사용하여 데이터를 그리는 저장 프로시저 만들기
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+> [!IMPORTANT]
+> SQL Server 2019부터 격리 메커니즘이 변경되었습니다. 따라서 플롯 파일이 저장되는 디렉터리에 적절한 권한을 부여해야 합니다. 이러한 권한을 설정하는 방법에 대한 자세한 내용은 [Windows의 SQL Server 2019: Machine Learning Services에 대한 격리 변경 내용의 파일 사용 권한 섹션](../install/sql-server-machine-learning-services-2019.md#file-permissions)을 참조하세요.
+::: moniker-end
 
 플롯을 만들려면 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)에 제공되는 향상된 R 함수 중 하나인 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)을 사용합니다. 이 단계에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리의 데이터를 기반으로 하는 히스토그램을 그립니다. 이 함수를 저장 프로시저 **PlotRxHistogram**에 래핑할 수 있습니다.
 

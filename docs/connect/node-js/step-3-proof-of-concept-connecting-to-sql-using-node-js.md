@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7dc49b466885e63ad9bd380a53a432a936310e18
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7925b376fa7ec751faf0b109b6598ab86a348b3f
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68419260"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897150"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>3단계: Node.js를 사용하여 SQL에 연결하는 개념 증명
 
-![다운로드-아래쪽 화살표-원](../../ssdt/media/download.png)[Node.js SQL 드라이버를 다운로드하려면](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![다운로드-아래쪽 화살표-원](../../ssms/media/download-icon.png)[Node.js SQL 드라이버를 다운로드하려면](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-이 예제는 개념 증명으로만 간주해야 합니다.  이 샘플 코드는 명확한 이해를 돕기 위해 단순화되었으며 Microsoft에서 권장하는 모범 사례를 반드시 대표하는 것은 아닙니다. 동일한 중요 함수를 사용하는 다른 예제는 Github에서 얻을 수 있습니다.
+이 예제는 개념 증명으로만 간주해야 합니다.  이 샘플 코드는 명확히 이해할 수 있도록 단순화되었으며 Microsoft에서 권장하는 모범 사례를 대표하는 것은 아닙니다. 동일한 중요 함수를 사용하는 다른 예제는 GitHub에서 확인할 수 있습니다.
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
@@ -113,7 +113,7 @@ ms.locfileid: "68419260"
   
 ## <a name="step-3-insert-a-row"></a>3단계: 행 삽입  
   
-이 예제에서는 [INSERT](../../t-sql/statements/insert-transact-sql.md) 명령문을 안전하게 실행하고 [SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md) 값으로부터 애플리케이션을 보호하는 매개 변수를 전달하는 방법을 보여줍니다.    
+이 예제에서는 [INSERT](../../t-sql/statements/insert-transact-sql.md) 문을 안전하게 실행하고 [SQL injection](../../relational-databases/security/sql-injection.md) 값으로부터 애플리케이션을 보호하는 매개 변수를 전달하는 방법을 보여줍니다.    
   
   
 ```javascript  

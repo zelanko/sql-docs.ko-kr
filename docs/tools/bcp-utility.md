@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/23/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 22a1a64e11d7cae779531c46ee6b39d26ae403f4
-ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
+ms.openlocfilehash: 4aad2c9bfbd79079e96339e40d5e36a9146f3ae0
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77634852"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280898"
 ---
 # <a name="bcp-utility"></a>bcp 유틸리티
 
@@ -121,7 +121,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  _**database\_name**_ <a name="db_name"></a>  
  지정한 테이블 또는 뷰가 있는 데이터베이스의 이름입니다. 이 인수를 지정하지 않으면 사용자의 기본 데이터베이스를 사용합니다.  
 
- **d-** 를 사용하여 데이터베이스 이름을 명시적으로 지정할 수도 있습니다.  
+ **-d**를 사용하여 데이터베이스 이름을 명시적으로 지정할 수도 있습니다.  
 
  **in** *data_file* | **out** *data_file* | **queryout** *data_file* | **format nul**  
  다음과 같이 대량 복사 방향을 지정합니다.  
@@ -187,10 +187,11 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  *err_file* 이 하이픈(-) 또는 슬래시(/)로 시작하는 경우에는 **-e** 와 *err_file* 값 사이에 공백을 포함하지 마세요.  
   
- **-E**<a name="E"></a>   
- 가져온 데이터 파일의 ID 값이 ID 열에 사용되도록 지정합니다. **-E** 를 지정하지 않으면 가져오는 데이터 파일에 있는 이 열의 ID 값이 무시되고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 테이블을 만들 때 지정한 초기값 및 증가값을 기반으로 고유 값을 자동으로 할당합니다.  
+**-E**<a name="E"></a>
+
+가져온 데이터 파일의 ID 값이 ID 열에 사용되도록 지정합니다. **-E** 를 지정하지 않으면 가져오는 데이터 파일에 있는 이 열의 ID 값이 무시되고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 테이블을 만들 때 지정한 초기값 및 증가값을 기반으로 고유 값을 자동으로 할당합니다.  자세한 내용은 [DBCC CHECKIDENT](../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)를 참조하세요.
   
- 데이터 파일에 테이블이나 뷰의 ID 열 값이 포함되지 않은 경우 서식 파일을 사용하여 데이터를 가져올 때 테이블이나 뷰의 ID 열을 생략하도록 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 해당 열에 자동으로 고유 값을 할당합니다. 자세한 내용은 [DBCC CHECKIDENT&#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)를 참조하세요.  
+ 데이터 파일에 테이블이나 뷰의 ID 열 값이 포함되지 않은 경우 서식 파일을 사용하여 데이터를 가져올 때 테이블이나 뷰의 ID 열을 생략하도록 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 해당 열에 자동으로 고유 값을 할당합니다.
   
  **-E** 옵션을 사용하려면 특별한 권한이 있어야 합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "[주의](#remarks)"를 참조하세요.  
    
@@ -228,13 +229,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
     다음 예제에서는 Azure AD 사용자 이름과 암호가 AAD 자격 증명일 경우 이 사용자와 암호를 사용하여 데이터를 내보냅니다. 이 예제에서는 Azure 서버 `aadserver.database.windows.net`에서 데이터베이스 `testdb`의 테이블 `bcptest`를 내보내고 데이터를 파일 `c:\last\data1.dat`에 저장합니다.
 
-    ```console
+    ```cmd
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
     다음 예제에서는 Azure AD 사용자 이름과 암호가 AAD 자격 증명일 경우 이 사용자와 암호를 사용하여 데이터를 가져옵니다. 예제에서는 Azure AD 사용자/암호를 사용하여 Azure 서버 `aadserver.database.windows.net`의 데이터베이스 `testdb`에 대해 파일 `c:\last\data1.dat`의 데이터를 테이블 `bcptest`로 가져옵니다.
 
-    ```console
+    ```cmd
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
@@ -244,13 +245,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
     다음 예제에서는 Azure AD 통합 계정을 사용하여 데이터를 내보냅니다. 이 예제에서는 Azure 서버 `aadserver.database.windows.net`에서 Azure AD 통합을 사용하는 데이터베이스 `testdb`의 테이블 `bcptest`를 내보내고 데이터를 파일 `c:\last\data2.dat`에 저장합니다.
 
-    ```console
+    ```cmd
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
     다음 예제에서는 Azure AD 통합 인증을 사용하여 데이터를 가져옵니다. 예제에서는 Azure AD 통합 인증을 사용하여 Azure 서버 `aadserver.database.windows.net`의 데이터베이스 `testdb`에 대해 파일 `c:\last\data2.txt`의 데이터를 테이블 `bcptest`로 가져옵니다.
 
-    ```console
+    ```cmd
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
@@ -266,13 +267,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
    대화형 모드에서는 암호를 수동으로 입력해야 하며, 다단계 인증이 사용 설정된 계정의 경우에는 구성된 MFA 인증 메서드를 완료해야 합니다.
 
-   ```console
+   ```cmd
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com
    ```
 
    Azure AD 사용자가 Windows 계정을 사용하여 페더레이션되는 도메인인 경우에는 명령줄에 필요한 사용자 이름에 도메인 계정이 포함됩니다(예: joe@contoso.com 아래 참조).
 
-   ```console
+   ```cmd
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com
    ```
 
@@ -448,7 +449,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     
     모든 버전의 bcp 유틸리티가 설치된 위치를 확인하려면 명령 프롬프트에 다음을 입력합니다.
     
-    ```console
+    ```cmd
     where bcp.exe
     ```
 
@@ -604,7 +605,7 @@ END
 
 명령 프롬프트에서 다음 명령을 입력합니다.
 
-```console
+```cmd
 bcp -v
 ```
   
@@ -616,7 +617,7 @@ bcp -v
 
   명령 프롬프트에서 다음 명령을 입력합니다.
 
-  ```console
+  ```cmd
   bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -638,7 +639,7 @@ bcp -v
 
 명령 프롬프트에서 다음 명령을 입력합니다. \(시스템에서 암호를 묻는 메시지를 표시합니다.\)
 
-```console
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```
 
@@ -650,7 +651,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTrans
 
   명령 프롬프트에서 다음 명령을 입력합니다.
 
-  ```console
+  ```cmd
   bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -658,7 +659,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTrans
   
 명령 프롬프트에서 다음 명령을 입력합니다.
 
-```console
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T
 ```
 
@@ -670,7 +671,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTr
   
 명령 프롬프트에서 다음 명령을 입력합니다.
 
-```console
+```cmd
 bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
 ```
 
@@ -680,7 +681,7 @@ bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTr
   
 명령 프롬프트에서 다음 명령을 입력합니다.
 
-```console
+```cmd
 bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
 ```
 
@@ -690,7 +691,7 @@ Transact-SQL 문의 결과 집합을 데이터 파일로 복사하려면 **query
 
 명령 프롬프트에서 다음 명령을 입력합니다.
 
-```console
+```cmd
 bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
 ```
 
@@ -700,7 +701,7 @@ bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People O
 
 명령 프롬프트에서 다음 명령을 입력합니다.
 
-```console
+```cmd
 REM non-XML character format
 bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
@@ -722,7 +723,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\Stoc
 
 명령 프롬프트에서 다음 명령을 입력합니다.
 
-```console
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T
 ```
 

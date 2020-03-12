@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 88b8e54867aba5439af9ed87e4a42b2083a479b3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6a1f903d0be82d6f5057af68dce80bda1e48238a
+ms.sourcegitcommit: 951740963d5fe9cea7f2bfe053c45ad5d846df04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76281871"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78225925"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SSIS(SQL Server Integration Services) DevOps 도구(미리 보기)
 
@@ -38,6 +38,8 @@ ms.locfileid: "76281871"
 
 빌드할 프로젝트 폴더 또는 파일의 경로입니다. 폴더 경로를 지정하면 SSIS 빌드 작업은 이 폴더 아래에 있는 모든 dtproj 파일을 재귀적으로 검색하고 모두 빌드합니다.
 
+프로젝트 경로는 *비워 둘 수 없으며*, **.** 으로 설정해야 리포지토리의 루트 폴더에서 빌드할 수 있습니다.
+
 #### <a name="project-configuration"></a>프로젝트 구성
 
 빌드에 사용할 프로젝트 구성의 이름입니다. 지정하지 않으면 기본적으로 각 dtproj 파일에 정의된 첫 번째 프로젝트 구성으로 설정됩니다.
@@ -50,9 +52,19 @@ ms.locfileid: "76281871"
 
 - SSIS 빌드 작업은 빌드 에이전트의 필수 요소인 Visual Studio 및 SSIS 디자이너를 사용합니다. 따라서 파이프라인에서 SSIS 빌드 작업을 실행하려면 Microsoft 호스팅 에이전트를 위해 **vs2017-win2016**을 선택하거나, 자체 호스팅 에이전트에 Visual Studio 및 SSIS 디자이너(VS2017 + SSDT2017 또는 VS2019 + SSIS 프로젝트 확장)를 설치해야 합니다.
 
-- OOB 구성 요소(SSIS Azure 기능 팩 및 기타 타사 구성 요소 포함)를 사용하여 SSIS 프로젝트를 빌드하려면 파이프라인 에이전트가 실행되는 머신에 OOB 구성 요소를 설치해야 합니다.  Microsoft 호스팅 에이전트의 경우 사용자가 [PowerShell 스크립트 작업](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) 또는 [명령줄 스크립트 작업](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops)을 추가하여 SSIS 빌드 작업이 실행되기 전에 구성 요소를 다운로드하고 설치할 수 있습니다.
+- OOB 구성 요소(SSIS Azure 기능 팩 및 기타 타사 구성 요소 포함)를 사용하여 SSIS 프로젝트를 빌드하려면 파이프라인 에이전트가 실행되는 머신에 OOB 구성 요소를 설치해야 합니다.  Microsoft 호스팅 에이전트의 경우 사용자가 [PowerShell 스크립트 작업](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) 또는 [명령줄 스크립트 작업](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops)을 추가하여 SSIS 빌드 작업이 실행되기 전에 구성 요소를 다운로드하고 설치할 수 있습니다. 다음은 Azure 기능 팩을 설치하는 샘플 PowerShell 스크립트입니다. 
+
+```powershell
+wget -Uri https://download.microsoft.com/download/E/E/0/EE0CB6A0-4105-466D-A7CA-5E39FA9AB128/SsisAzureFeaturePack_2017_x86.msi -OutFile AFP.msi
+
+start -Wait -FilePath msiexec -Args "/i AFP.msi /quiet /l* log.txt"
+
+cat log.txt
+```
 
 - 보호 수준 **EncryptSensitiveWithPassword** 및 **EncryptAllWithPassword**는 SSIS 빌드 작업에서 지원되지 않습니다. 코드베이스의 모든 SSIS 프로젝트에서 이러한 두 보호 수준을 사용하지 않는지 확인하세요. 사용하면 SSIS 빌드 작업이 실행 중에 중단되고 시간 초과됩니다.
+
+- **ConnectByProxy**는 SSDT에 최근 추가된 새 속성입니다. Microsoft 호스팅 에이전트에 설치된 SSDT는 업데이트되지 않으므로 자체 호스팅 에이전트를 해결 방법으로 사용하세요.
 
 ## <a name="ssis-deploy-task"></a>SSIS 배포 작업
 

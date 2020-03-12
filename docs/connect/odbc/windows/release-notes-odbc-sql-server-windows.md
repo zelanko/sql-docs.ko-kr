@@ -11,12 +11,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 76ffaac48e8af454e887fd4fd30540eed4c4b453
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.openlocfilehash: 174ea00f9becf1445212c20137ea902f3892918e
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "77173517"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896756"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Windows 기반 SQL Server에 대한 ODBC 릴리스 정보
 
@@ -43,6 +43,15 @@ By the way, in GitHub, the file name is changing today 2019/03/30:
 Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
+
+## <a name="1752-march-2020"></a>17.5.2, 2020년 3월
+
+| 추가된 기능 | 세부 정보 |
+| :------------ | :------ |
+| 관리 ID로 Azure Key Vault 인증 지원 | [Always Encrypted와 ODBC 드라이버 사용](../using-always-encrypted-with-the-odbc-driver.md)을 참조하세요. |
+| 추가 Azure Key Vault 엔드포인트 지원 | [Always Encrypted와 ODBC 드라이버 사용](../using-always-encrypted-with-the-odbc-driver.md)을 참조하세요. |
+| 버그 수정. | [버그 수정](../bug-fixes.md)을 참조하세요. |
+| &nbsp; | &nbsp; |
 
 ## <a name="175-january-2020"></a>17.5, 2020년 1월
 

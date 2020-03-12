@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: cf6cd4cce3435491632afa98195650a73fe4a23b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 39e010f87b9cf0785ba025cfb8a9cf96825ae9d9
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76911204"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896767"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Linux 및 macOS 기반 Microsoft ODBC Driver for SQL Server에 대한 릴리스 정보
 
@@ -35,6 +35,15 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+## <a name="1752-march-2020"></a>17.5.2, 2020년 3월
+
+| 추가된 기능 | 세부 정보 |
+| :------------ | :------ |
+| 관리 ID로 Azure Key Vault 인증 지원 | [Always Encrypted와 ODBC 드라이버 사용](../using-always-encrypted-with-the-odbc-driver.md)을 참조하세요. |
+| 추가 Azure Key Vault 엔드포인트 지원 | [Always Encrypted와 ODBC 드라이버 사용](../using-always-encrypted-with-the-odbc-driver.md)을 참조하세요. |
+| 버그 수정. | [버그 수정](../bug-fixes.md)을 참조하세요. |
+| &nbsp; | &nbsp; |
 
 ## <a name="175-january-2020"></a>17.5, 2020년 1월
 
