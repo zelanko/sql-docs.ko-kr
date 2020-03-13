@@ -10,12 +10,12 @@ ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 048f737266e815a02058a51ebebce0b0f1ff46af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9d83a7111bbea13733190eeb612373d9136dd058
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66084922"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217124"
 ---
 # <a name="data-mining-services-and-data-sources"></a>데이터 마이닝 서비스 및 데이터 원본
   데이터 마이닝을 사용하려면 SQL Server Analysis Services 인스턴스에 대한 연결이 필요합니다. 큐브의 데이터는 데이터 마이닝에 필요하지 않으며 관계형 원본을 사용하는 것이 권장되지만 데이터 마이닝에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 엔진에서 제공하는 구성 요소를 사용합니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "66084922"
   
  프로시저가 데이터 세트를 반환하면 클라이언트는 데이터 세트 또는 행이 포함된 중첩된 테이블이 있는 데이터 테이블을 받게 됩니다. 예를 들어 모델에 대한 쿼리를 만들 경우 쿼리는 전체 모델을 반환합니다. 너무 많은 행을 가져오지 않도록 하려면 ADOMD+ 개체 모델을 사용하여 저장 프로시저를 작성하면 됩니다.  
   
- 서버 저장 프로시저를 작성하려면 Microsoft.AnalysisServices.AdomdServer 네임스페이스를 참조해야 합니다. 저장 프로시저를 만들고 사용하는 방법은 [User Defined Functions and Stored Procedures](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures)를 참조하십시오.  
+ 서버 저장 프로시저를 작성하려면 Microsoft.AnalysisServices.AdomdServer 네임스페이스를 참조해야 합니다. 저장 프로시저를 만들고 사용하는 방법은 [User Defined Functions and Stored Procedures](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures)를 참조하십시오.  
   
 > [!NOTE]  
 >  저장 프로시저는 데이터 서버 개체의 보안을 변경하는 데 사용할 수 없습니다. 저장 프로시저를 실행하면 모든 서버 개체에 대한 액세스를 확인하기 위해 사용자의 현재 컨텍스트가 사용됩니다. 따라서 사용자에게는 액세스하는 데이터베이스 개체에 대해 적절한 사용 권한이 있어야 합니다.  

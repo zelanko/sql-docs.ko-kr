@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338277"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289411"
 ---
 # <a name="the-transaction-log-sql-server"></a>트랜잭션 로그(SQL Server)
   각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에는 각 트랜잭션에 의해 적용된 모든 트랜잭션 및 데이터베이스 수정 내용을 기록하는 트랜잭션 로그가 있습니다. 트랜잭션 로그가 채워지지 않도록 트랜잭션 로그를 정기적으로 잘라야 합니다. 그러나 일부 요소로 인해 로그 잘림이 지연될 수 있으므로 로그 크기를 모니터링하는 것이 중요합니다. 일부 작업을 최소로 기록하여 트랜잭션 로그 크기에 주는 영향을 줄일 수 있습니다.  
@@ -46,8 +46,7 @@ ms.locfileid: "78338277"
   
 -   개별 트랜잭션 복구  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시작될 때 불완전한 모든 트랜잭션 복구  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시작될 때 불완전한 모든 트랜잭션 복구  
   
 -   복원된 데이터베이스, 파일, 파일 그룹 또는 페이지를 오류 지점으로 롤포워드  
   
@@ -83,22 +82,21 @@ ms.locfileid: "78338277"
 |1|CHECKPOINT|마지막 로그 잘림이나 로그 헤더가 가상 로그 파일을 넘어서 이동되지 않았기 때문에 검사점이 발생하지 있습니다(모든 복구 모델).<br /><br /> 로그 잘림 지연을 유발하는 일반적인 이유입니다. 자세한 내용은 [데이터베이스 검사점&#40;SQL Server&#41;](database-checkpoints-sql-server.md)을 참조하세요.|  
 |2|LOG_BACKUP|트랜잭션 로그를 자르려면 먼저 로그 백업이 필요합니다. 이는 전체 또는 대량 로그 복구 모델의 경우에만 해당됩니다.<br /><br /> 다음 로그 백업이 완료되면 일부 로그 공간이 다시 사용될 수 있습니다.|  
 |3|ACTIVE_BACKUP_OR_RESTORE|데이터 백업이나 복원이 진행되고 있습니다(모든 복구 모델).<br /><br /> 데이터 백업으로 인해 로그 잘림이 발생하지 않을 경우 해당 백업 작업을 취소하면 즉시 문제를 해결할 수 있습니다.|  
-|4|ACTIVE_TRANSACTION|트랜잭션이 활성 상태입니다(모든 복구 모델).<br /><br /> 로그 백업 시작 시 장기 실행 트랜잭션이 있을 수 있습니다. 이 경우 공간을 확보하려면 다른 로그 백업이 필요할 수 있습니다. 장기 실행 트랜잭션은 각 자동 검사점에서 트랜잭션 로그가 일반적으로 잘리는 단순 복구 모델을 비롯 한 모든 복구 모델에서 로그 잘림을 방지 합니다.<br /><br /> 트랜잭션이 지연되었습니다. 
-  *지연된 트랜잭션* 은 사실상 일부 사용할 수 없는 리소스로 인해 롤백이 차단된 활성 트랜잭션입니다. 지연된 트랜잭션의 원인 및 이러한 트랜잭션을 지연된 상태에서 벗어나게 하는 방법에 대한 자세한 내용은 [지연된 트랜잭션&#40;SQL Server&#41;](../backup-restore/deferred-transactions-sql-server.md)을 참조하십시오. <br /><br />장기 실행 트랜잭션은 tempdb의 트랜잭션 로그를 채울 수도 있습니다. Tempdb는 정렬을 위한 작업 테이블, 해싱을 위한 작업 파일, 커서 작업 테이블 및 행 버전 관리 등 내부 개체에 대한 사용자 트랜잭션에 의해 암시적으로 사용됩니다. 사용자 트랜잭션에 데이터 읽기 (쿼리 선택)만 포함 하는 경우에도 사용자 트랜잭션에서 내부 개체를 만들고 사용할 수 있습니다. 그런 다음 tempdb 트랜잭션 로그를 채울 수 있습니다.|  
+|4|ACTIVE_TRANSACTION|트랜잭션이 활성 상태입니다(모든 복구 모델).<br /><br /> 로그 백업 시작 시 장기 실행 트랜잭션이 있을 수 있습니다. 이 경우 공간을 확보하려면 다른 로그 백업이 필요할 수 있습니다. 장기 실행 트랜잭션은 각 자동 검사점에서 트랜잭션 로그가 일반적으로 잘리는 단순 복구 모델을 비롯 한 모든 복구 모델에서 로그 잘림을 방지 합니다.<br /><br /> 트랜잭션이 지연되었습니다. *지연된 트랜잭션* 은 사실상 일부 사용할 수 없는 리소스로 인해 롤백이 차단된 활성 트랜잭션입니다. 지연된 트랜잭션의 원인 및 이러한 트랜잭션을 지연된 상태에서 벗어나게 하는 방법에 대한 자세한 내용은 [지연된 트랜잭션&#40;SQL Server&#41;](../backup-restore/deferred-transactions-sql-server.md)을 참조하십시오. <br /><br />장기 실행 트랜잭션은 tempdb의 트랜잭션 로그를 채울 수도 있습니다. Tempdb는 정렬을 위한 작업 테이블, 해싱을 위한 작업 파일, 커서 작업 테이블 및 행 버전 관리 등 내부 개체에 대한 사용자 트랜잭션에 의해 암시적으로 사용됩니다. 사용자 트랜잭션에 데이터 읽기 (쿼리 선택)만 포함 하는 경우에도 사용자 트랜잭션에서 내부 개체를 만들고 사용할 수 있습니다. 그런 다음 tempdb 트랜잭션 로그를 채울 수 있습니다.|  
 |5|DATABASE_MIRRORING|데이터베이스 미러링이 일시 중지되거나 성능 우선 모드에서는 미러 데이터베이스가 주 데이터베이스보다 훨씬 않습니다(전체 복구 모델에만 해당).<br /><br /> 자세한 내용은 [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.|  
 |6|복제|트랜잭션 복제 중에 게시와 관련된 트랜잭션이 배포 데이터베이스로 배달되지 않습니다(전체 복구 모델에만 해당).<br /><br /> 트랜잭션 복제에 대한 자세한 내용은 [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)를 참조하십시오.|  
 |7|DATABASE_SNAPSHOT_CREATION|데이터베이스 스냅샷이 생성되고 있습니다(모든 복구 모델).<br /><br /> 로그 잘림 지연을 유발하는 일반적인 이유입니다.|  
 |8|LOG_SCAN|로그 검색이 수행되고 있습니다(모든 복구 모델).<br /><br /> 로그 잘림 지연을 유발하는 일반적인 이유입니다.|  
 |9|AVAILABILITY_REPLICA|가용성 그룹의 보조 복제본에서 해당하는 보조 데이터베이스에 이 데이터베이스의 트랜잭션 로그 레코드를 적용하고 있습니다(전체 복구 모델).<br /><br /> 자세한 내용은 [AlwaysOn 가용성 그룹 &#40;SQL Server&#41;개요 ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)를 참조 하세요.|  
-|10|-|내부 전용|  
-|11|-|내부 전용|  
-|12|-|내부 전용|  
+|10|-|내부용으로만 사용할 수 있습니다.|  
+|11|-|내부용으로만 사용할 수 있습니다.|  
+|12|-|내부용으로만 사용할 수 있습니다.|  
 |13|OLDEST_PAGE|데이터베이스가 간접 검사점을 사용하도록 구성된 경우 데이터베이스의 가장 오래된 페이지가 검사점 LSN보다 오래되었을 수 있습니다. 이 경우 가장 오래된 페이지는 로그 잘림이 지연될 수 있습니다(모든 복구 모델).<br /><br /> 간접 검사점에 대한 자세한 내용은 [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md)을 참조하세요.|  
 |14|OTHER_TRANSIENT|이 값은 현재 사용되지 않습니다.|  
 |16|XTP_CHECKPOINT|데이터베이스에 메모리 최적화 파일 그룹이 있는 경우 트랜잭션 로그는 자동 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 검사점이 트리거될 때까지(로그가 512MB 증가할 때마다 발생함) 잘릴 수 없습니다.<br /><br /> 참고: 512 MB 크기 전에 트랜잭션 로그를 잘라내려면 해당 데이터베이스에 대해 검사점 명령을 수동으로 실행 합니다.|  
   
 ##  <a name="MinimallyLogged"></a>최소로 기록 될 수 있는 작업  
- *최소 로깅은* 지정 시간 복구를 지원 하지 않고 트랜잭션을 복구 하는 데 필요한 정보만 기록 합니다. 이 항목에서는 대량 로그 복구 모델 및 단순 복구 모델(백업이 실행 중인 경우 제외)에서 최소 로깅되는 작업을 식별합니다.  
+ *최소 로깅* 은 지정 시간 복구를 지원하지 않고 트랜잭션을 복구하는 데 필요한 정보만 기록합니다. 이 항목에서는 대량 로그 복구 모델 및 단순 복구 모델(백업이 실행 중인 경우 제외)에서 최소 로깅되는 작업을 식별합니다.  
   
 > [!NOTE]  
 >  최소 로깅은 메모리 최적화 테이블에 대해 지원되지 않습니다.  
@@ -108,7 +106,7 @@ ms.locfileid: "78338277"
   
  전체 복구 모델에서 전체 로깅되는 다음 작업은 단순 및 대량 로그 복구 모델에서 최소 로깅됩니다.  
   
--   대량 가져오기 작업([bcp](../../tools/bcp-utility.md), [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql)및 [INSERT... SELECT](/sql/t-sql/statements/insert-transact-sql)) 테이블로 대량 가져오기 작업이 최소한으로 기록되는 경우에 대한 자세한 내용은 [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)을 참조하십시오.  
+-   대량 가져오기 작업([bcp](../../tools/bcp-utility.md), [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql) 및 [INSERT... SELECT](/sql/t-sql/statements/insert-transact-sql)) 테이블로 대량 가져오기 작업이 최소한으로 기록되는 경우에 대한 자세한 내용은 [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)을 참조하십시오.  
   
     > [!NOTE]  
     >  트랜잭션 복제를 사용하는 경우 대량 로그 복구 모델에서도 BULK INSERT 작업이 모두 기록됩니다.  
@@ -127,9 +125,9 @@ ms.locfileid: "78338277"
   
 -   데이터베이스가 단순 또는 대량 로그 복구 모델로 설정되면 작업이 오프라인으로 실행되든 온라인으로 실행되든 관계없이 일부 인덱스 DDL 작업이 최소 로깅됩니다. 최소한으로 로깅되는 인덱스 작업은 다음과 같습니다.  
   
-    -   [인덱스](/sql/t-sql/statements/create-index-transact-sql) 작업 (인덱싱된 뷰 포함)을 만듭니다.  
+    -   [CREATE INDEX](/sql/t-sql/statements/create-index-transact-sql) 작업(인덱싱된 뷰 포함)  
   
-    -   [인덱스 변경](/sql/t-sql/statements/alter-index-transact-sql) REBUILD 또는 DBCC DBREINDEX 작업  
+    -   [ALTER INDEX](/sql/t-sql/statements/alter-index-transact-sql) REBUILD 또는 DBCC DBREINDEX 작업  
   
         > [!NOTE]  
         >  DBCC DBREINDEX 문은 더 이상 사용되지 않으므로 새 애플리케이션에서 사용하지 마십시오.  
@@ -146,17 +144,17 @@ ms.locfileid: "78338277"
   
 -   [꽉 찬 트랜잭션 로그 문제 해결&#40;SQL Server 오류 9002&#41;](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
- **트랜잭션 로그 백업 (전체 복구 모델)**  
+ **트랜잭션 로그 백업(전체 복구 모델)**  
   
 -   [트랜잭션 로그 백업&#40;SQL Server&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)  
   
- **트랜잭션 로그 복원 (전체 복구 모델)**  
+ **트랜잭션 로그 복원(전체 복구 모델)**  
   
 -  [트랜잭션 로그 백업 복원](../backup-restore/restore-a-transaction-log-backup-sql-server.md)   
   
 ## <a name="see-also"></a>참고 항목  
  [트랜잭션 내구성 제어](control-transaction-durability.md)   
- [대량 가져오기의 최소 로깅을 위한 필수 구성 요소](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
+ [대량 가져오기의 최소 로깅을 위한 선행 조건](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
  [SQL Server 데이터베이스 백업 및 복원](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [데이터베이스 검사점&#40;SQL Server&#41;](database-checkpoints-sql-server.md)   
  [데이터베이스의 속성 보기 또는 변경](../databases/view-or-change-the-properties-of-a-database.md)   

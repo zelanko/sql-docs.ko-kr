@@ -11,11 +11,11 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 60ee313b41a3882c07c98dce08382a98fec9c962
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338087"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289781"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 설치 및 구성
 
@@ -36,7 +36,7 @@ ms.locfileid: "78338087"
 
   [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]를 알아보는 데 유용한 동영상 및 기타 학습 리소스의 링크는 [Master Data Services에 대해 알아보기](../master-data-services/learn-sql-server-master-data-services.md)를 참조하세요. 
   
-> **다운로드할지**  
+> **다운로드**  
 > -   
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]를 다운로드하려면  **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** 로 이동하세요.  
 > -   Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** 로 이동하여 SQL Server가 이미 설치된 가상 머신을 실행해 보세요.  

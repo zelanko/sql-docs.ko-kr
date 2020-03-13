@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339576"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289701"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에 대 한 T-sql 권한 부여
 병렬 데이터 웨어하우스의 데이터베이스 작업에 대해 T-sql 사용 권한을 부여 합니다.
@@ -232,7 +232,7 @@ GO
 ```  
   
 ### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views-and-to-terminate-connections"></a>시스템 뷰를 사용 하 여 어플라이언스를 모니터링 하 고 연결을 종료할 수 있는 권한 부여  
-다음 SQL 문은 `monitor_and_terminate_login` 라는 로그인을 만들고이 로그인에 **** `monitor_and_terminate_login` VIEW SERVER STATE 및 **ALTER ANY CONNECTION** 권한을 부여 합니다.  
+다음 SQL 문은 `monitor_and_terminate_login` 라는 로그인을 만들고이 로그인에 **VIEW SERVER STATE** `monitor_and_terminate_login` VIEW SERVER STATE 및 **ALTER ANY CONNECTION** 권한을 부여 합니다.  
   
 ```sql  
 USE master;  

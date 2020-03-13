@@ -10,12 +10,12 @@ ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9b6516c427f15c960c6bfb459c4fc375e798b798
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7cd6ea975462a7967c7938de8900d5b1877ff524
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67046675"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217072"
 ---
 # <a name="connection-string-properties-analysis-services"></a> 연결 문자열 속성(Analysis Services)
   이 항목에서는 디자이너 또는 관리 도구 중 하나에서 설정하거나 Analysis Services 데이터에 연결하고 쿼리하는 클라이언트 애플리케이션에 의해 작성된 연결 문자열에 표시될 수 있는 연결 문자열 속성에 대해 설명합니다. 여기에서는 사용 가능한 속성의 일부만 다룹니다. 전체 목록에는 다양한 서버 및 데이터베이스 속성이 포함되어 있으므로 인스턴스나 데이터베이스가 서버에서 구성된 방식과 관계없이 특정 애플리케이션에 대한 연결을 사용자 지정할 수 있습니다.  
@@ -50,12 +50,12 @@ ms.locfileid: "67046675"
   
 |속성|Description|예제|  
 |--------------|-----------------|-------------|  
-|`Data Source`디스크나`DataSource`|서버 인스턴스를 지정합니다. 이 속성은 모든 연결에 필요합니다. 유효한 값에는 서버의 네트워크 이름 또는 IP 주소, 로컬 연결에 대한 local 또는 localhost, 서버가 HTTP 또는 HTTPS 액세스에 대해 구성된 경우 URL, 로컬 큐브 파일(.cub)의 이름이 포함됩니다.|
+|`Data Source` 또는 `DataSource`|서버 인스턴스를 지정합니다. 이 속성은 모든 연결에 필요합니다. 유효한 값에는 서버의 네트워크 이름 또는 IP 주소, 로컬 연결에 대한 local 또는 localhost, 서버가 HTTP 또는 HTTPS 액세스에 대해 구성된 경우 URL, 로컬 큐브 파일(.cub)의 이름이 포함됩니다.|
   `Data source=AW-SRV01` - 기본 인스턴스 및 포트(TCP 2383)에 사용됩니다.<br /><br /> 
   `Data source=AW-SRV01$Finance:8081` - 명명된 인스턴스($Finance) 및 고정된 포트에 사용됩니다.<br /><br /> 
   `Data source=AW-SRV01.corp.Adventure-Works.com` - 정규화된 도메인 이름에 사용되며 기본 인스턴스 및 포트를 가정합니다.<br /><br /> 
   `Data source=172.16.254.1` - 서버의 IP 주소에 사용되며 DNS 서버 조회를 우회합니다. 연결 문제를 해결하는 데 유용합니다.|  
-|`Initial Catalog`디스크나`Catalog`|연결할 Analysis Services 데이터베이스의 이름을 지정합니다. 데이터베이스가 Analysis Services에 배포되어야 하며 데이터베이스에 연결할 권한이 있어야 합니다. 이 속성은 AMO 연결의 경우 선택적이지만 ADOMD.NET의 경우에는 필수입니다.|`Initial catalog=AdventureWorks2012`|  
+|`Initial Catalog` 또는 `Catalog`|연결할 Analysis Services 데이터베이스의 이름을 지정합니다. 데이터베이스가 Analysis Services에 배포되어야 하며 데이터베이스에 연결할 권한이 있어야 합니다. 이 속성은 AMO 연결의 경우 선택적이지만 ADOMD.NET의 경우에는 필수입니다.|`Initial catalog=AdventureWorks2012`|  
 |`Provider`|유효한 값으로는 MSOLAP 또는 MSOLAP가 있습니다. \<버전> \<버전>은 3, 4 또는 5입니다. 파일 시스템에서 데이터 공급자 이름은 SQL Server 2012 버전의 경우 msolap110.dll이고, SQL Server 2008 및 2008 R2의 경우 msolap100.dll이며, SQL Server 2005의 경우 msolap90.dll입니다.<br /><br /> 현재 버전은 MSOLAP.5입니다. 이 속성은 선택 사항입니다. 기본적으로 클라이언트 라이브러리는 레지스트리에서 OLE DB 공급자의 현재 버전을 읽습니다. SQL Server 2008 인스턴스에 연결하는 경우와 같이 특정 버전의 데이터 공급자가 필요한 경우에만 이 속성을 설정해야 합니다.<br /><br /> 데이터 공급자는 SQL Server의 버전에 해당합니다. 조직에서 현재 및 이전 버전의 Analysis Services를 사용하는 경우 수동으로 만드는 연결 문자열에서 사용할 공급자를 지정해야 할 수 있습니다. 필요한 버전이 없는 컴퓨터에서 특정 버전의 데이터 공급자를 다운로드하고 설치해야 할 수도 있습니다. 다운로드 센터의 SQL Server 기능 팩 페이지에서 OLE DB 공급자를 다운로드할 수 있습니다. SQL Server 2012용 Analysis Services OLE DB 공급자를 다운로드하려면 [Microsoft SQL Server 2012 기능 팩](https://go.microsoft.com/fwlink/?LinkId=296473) 으로 이동하십시오.<br /><br /> MSOLAP.4는 SQL Server 2008과 SQL Server 2008 R2에서 릴리스되었습니다. 2008 R2 버전은 PowerPivot 통합 문서를 지원하며 경우에 따라 SharePoint 서버에 수동으로 설치되어야 합니다. 이러한 버전을 구분하려면 공급자의 파일 속성에서 빌드 번호를 확인해야 합니다. Program files\Microsoft Analysis Services\AS OLEDB\10으로 이동합니다. msolap110.dll을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 
   **세부 정보**를 클릭합니다. 파일 버전 정보를 봅니다. 버전에는 10.50이 포함 되어야 합니다. \<SQL Server 2008 R2의 buildnumber>입니다. 자세한 내용은 [SharePoint Server에서 Analysis Services OLE DB 공급자 설치](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 및 [Analysis Services 연결에 사용되는 데이터 공급자](data-providers-used-for-analysis-services-connections.md)를 참조하세요.<br /><br /> MSOLAP. 3은 SQL Server 2005에서 릴리스 되었습니다.<br /><br /> M s o l a p. 4는 SQL Server 2008에서 릴리스 되었으며 다시 SQL Server 2008 R2<br /><br /> MSOLAP. 5는 SQL Server 2012에서 릴리스 되었습니다.|
   `Provider=MSOLAP.3`은 Analysis Services OLE DB 공급자의 SQL Server 2005 버전이 필요한 연결에 사용됩니다.|  
@@ -78,7 +78,7 @@ ms.locfileid: "67046675"
   `SSPI`를 사용하는 경우 `ProtectionLevel`은 `Connect`, `PktIntegrity`, `PktPrivacy` 중 하나로 설정되어야 합니다.|  
 |`Persist Encrypted`|클라이언트 애플리케이션에서 데이터 원본 개체에 암호화된 형태로 암호와 같은 중요한 인증 정보를 유지해야 하는 경우 이 속성을 설정합니다. 기본적으로 인증 정보는 유지되지 않습니다.|  
 |`Persist Security Info`|유효한 값은 True 및 False입니다. True로 설정되면 연결이 설정된 후 연결 문자열에서 이전에 지정된 사용자 ID 또는 암호와 같은 보안 정보를 연결에서 가져올 수 있습니다. 기본값은 False입니다.|  
-|`ProtectionLevel`|연결에서 사용되는 보안 수준을 결정합니다. 유효한 값은 다음과 같습니다.<br /><br /> `None`. 인증되지 않은 연결이나 익명 연결입니다. 서버에 전송되는 데이터에 대한 인증을 수행하지 않습니다.<br /><br /> `Connect`. 인증된 연결입니다. 클라이언트가 서버와 관계를 설정하는 경우에만 인증합니다.<br /><br /> `PktIntegrity`. 암호화된 연결입니다. 모든 데이터가 클라이언트에서 수신되었고 전송 중에 변경되지 않았는지 확인합니다.<br /><br /> `PktPrivacy`. XMLA에만 지원되는 서명된 암호화입니다. 모든 데이터가 클라이언트에서 수신되었고 전송 중에 변경되지 않았으며 암호화를 통해 데이터의 개인 정보를 보호하는지 확인합니다.<br /><br /> <br /><br /> 자세한 내용은 [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)를 참조하세요.|  
+|`ProtectionLevel`|연결에서 사용되는 보안 수준을 결정합니다. 유효한 값은 다음과 같습니다.<br /><br /> `None`. 인증되지 않은 연결이나 익명 연결입니다. 서버에 전송되는 데이터에 대한 인증을 수행하지 않습니다.<br /><br /> `Connect`. 인증된 연결입니다. 클라이언트가 서버와 관계를 설정하는 경우에만 인증합니다.<br /><br /> `PktIntegrity`. 암호화된 연결입니다. 모든 데이터가 클라이언트에서 수신되었고 전송 중에 변경되지 않았는지 확인합니다.<br /><br /> `PktPrivacy`. XMLA에만 지원되는 서명된 암호화입니다. 모든 데이터가 클라이언트에서 수신되었고 전송 중에 변경되지 않았으며 암호화를 통해 데이터의 개인 정보를 보호하는지 확인합니다.<br /><br /> <br /><br /> 자세한 내용은 [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)를 참조하세요.|  
 |`Roles`|해당 역할이 제공하는 사용 권한을 사용하여 서버 또는 데이터베이스에 연결할 미리 정의된 역할의 쉼표로 구분된 목록을 지정합니다. 이 속성을 생략하면 모든 역할이 사용되고 유효 사용 권한은 모든 역할의 조합이 됩니다. 속성을 빈 값 (예: Roles = ' ')으로 설정 하면 클라이언트 연결에 역할 멤버 자격이 없습니다.<br /><br /> 이 속성을 사용하는 관리자는 역할이 제공하는 사용 권한을 사용하여 연결됩니다. 일부 명령은 역할이 충분한 사용 권한을 제공하지 않는 경우 실패할 수도 있습니다.|  
 |`SSPI`|
   `Integrated Security`가 `SSPI`로 설정된 경우 클라이언트 인증에 사용할 보안 패키지를 명시적으로 지정합니다. SSPI는 여러 패키지를 지원하지만 이 속성을 사용하여 특정 패키지를 지정할 수 있습니다. 유효한 값은 Negotiate, Kerberos, NTLM 및 Anonymous User입니다. 이 속성이 설정되지 않으면 모든 패키지를 연결에 사용할 수 있습니다.|  
@@ -133,7 +133,7 @@ ms.locfileid: "67046675"
   
 -   디버그 모드  
   
--   모드  
+-   Mode  
   
 -   SQLCompatibility  
   

@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339241"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289191"
 ---
 # <a name="hierarchical-data-sql-server"></a>계층적 데이터(SQL Server)
   기본 제공 `hierarchyid` 데이터 형식을 사용 하면 계층적 데이터를 보다 쉽게 저장 하 고 쿼리할 수 있습니다. `hierarchyid`는 계층적 데이터의 가장 일반적인 유형인 트리를 나타내기 위해 최적화 되었습니다.  
@@ -119,7 +119,7 @@ GO
   
 -   계층의 섹션 간 쿼리를 거의 하지 않는 쿼리의 경우. 즉, 쿼리가 일반적으로 계층의 단일 지점만 다루는 경우입니다. 이러한 경우 같은 위치에 배치하는 작업이 중요하지 않습니다. 예를 들어 조직 테이블이 개별 직원에 대한 급여를 처리하는 데에만 사용되는 경우 부모/자식이 더 우수합니다.  
   
--   리프가 아닌 하위 트리가 자주 이동하며 성능이 매우 중요한 경우. 부모/자식 표현의 경우 한 계층에서 한 행의 위치를 변경하면 단일 행에 영향을 줍니다. 사용 중인 행의 위치를 변경 하면 *n* 개의 행에 영향을 줍니다. 여기서 n은 이동 하는 하위 트리의 노드 수입니다. ** `hierarchyid`  
+-   리프가 아닌 하위 트리가 자주 이동하며 성능이 매우 중요한 경우. 부모/자식 표현의 경우 한 계층에서 한 행의 위치를 변경하면 단일 행에 영향을 줍니다. 사용 중인 행의 위치를 변경 하면 *n* 개의 행에 영향을 줍니다. 여기서 n은 이동 하는 하위 트리의 노드 수입니다. *n* `hierarchyid`  
   
      리프가 아닌 하위 트리가 자주 이동하며 성능이 중요하지만 대부분의 이동이 잘 정의된 계층 수준에서 발생하는 경우에는 상위 수준과 하위 수준을 두 개의 계층으로 분할하십시오. 이렇게 하면 모든 트리가 상위 계층의 리프 수준으로 이동됩니다. 예를 들어 서비스에서 호스팅하는 웹 사이트 계층의 경우 사이트에는 계층으로 정렬된 많은 페이지가 있습니다. 호스팅된 사이트는 사이트 계층의 다른 위치로 이동될 수 있지만 하위 페이지는 거의 다시 정렬되지 않습니다. 이는 다음을 통해 나타낼 수 있습니다.  
   
@@ -171,7 +171,7 @@ GO
   
      너비 우선 인덱스에서는 노드의 모든 직계 자식이 같은 위치에 배치됩니다. 따라서 "이 관리자에게 직접 보고하는 모든 직원 찾기"와 같은 인접한 자식에 대한 쿼리에 답하는 데에는 너비 우선 인덱스가 효율적입니다.  
   
- 깊이 우선을 사용할 것인지, 너비 우선을 사용할 것인지 또는 둘 다를 사용할 것인지 여부와 클러스터링 키(있는 경우)를 만들 인덱스는 위의 쿼리 형식에 대한 상대적 중요도와 SELECT 및 DML 작업의 상대적 중요도에 따라 달라집니다. 인덱싱 방법에 대한 자세한 예는 [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)을 참조하십시오.  
+ 깊이 우선을 사용할 것인지, 너비 우선을 사용할 것인지 또는 둘 다를 사용할 것인지 여부와 클러스터링 키(있는 경우)를 만들 인덱스는 위의 쿼리 형식에 대한 상대적 중요도와 SELECT 및 DML 작업의 상대적 중요도에 따라 달라집니다. 인덱싱 방법에 대한 자세한 예는 [자습서: hierarchyid 데이터 형식 사용](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)의 1단원을 참조하세요.  
   
   
 ### <a name="creating-indexes"></a>인덱스 만들기  
@@ -277,7 +277,7 @@ VALUES ('/', 'Earth', 'Planet');
 ##  <a name="tasks"></a> 관련 작업  
   
 ###  <a name="migrating"></a> 부모/자식에서 hierarchyid로 마이그레이션  
- 대부분의 트리는 부모/자식을 사용하여 표현됩니다. 부모/자식 구조를 `hierarchyid`를 사용하는 테이블로 마이그레이션하는 가장 쉬운 방법은 임시 열이나 임시 테이블을 사용하여 계층의 각 수준에서 노드 수를 추적하는 것입니다. 부모/자식 테이블 마이그레이션의 예제는 [자습서: hierarchyid 데이터 형식 사용](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)의 1단원을 참조하세요.  
+ 대부분의 트리는 부모/자식을 사용하여 표현됩니다. 부모/자식 구조를 `hierarchyid`를 사용하는 테이블로 마이그레이션하는 가장 쉬운 방법은 임시 열이나 임시 테이블을 사용하여 계층의 각 수준에서 노드 수를 추적하는 것입니다. 부모/자식 테이블 마이그레이션의 예는 [자습서: hierarchyid 데이터 형식 사용](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)의 1단원을 참조하세요.  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> hierarchyid를 사용하여 트리 관리  
@@ -539,7 +539,7 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [hierarchyid 데이터 형식 메서드 참조](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
- [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [자습서: hierarchyid 데이터 형식 사용](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid&#40;Transact-SQL&#41;](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

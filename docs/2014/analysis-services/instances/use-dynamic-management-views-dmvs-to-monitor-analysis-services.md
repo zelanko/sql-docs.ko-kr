@@ -10,12 +10,12 @@ ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a02d8d5b113e4773aa7cdfbbf20975fd70218e1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1827cf0acf8e600c58efca82bb3223a00efb3e41
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66079577"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217115"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>DMV(동적 관리 뷰)를 사용하여 Analysis Services 모니터링
   Analysis Services DMV(동적 관리 뷰)는 로컬 서버 작업 및 서버 상태에 대한 정보를 표시하는 쿼리 구조입니다. 쿼리 구조는 Analysis Services 인스턴스에 대한 메타데이터 및 모니터링 정보를 반환하는 스키마 행 집합에 대한 인터페이스입니다.  
@@ -112,7 +112,7 @@ ORDER BY TABLE_NAME ASC
 |[DBSCHEMA_TABLES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-tables-rowset)|현재 데이터베이스에 있는 모든 테이블 목록을 반환합니다. 이 목록을 사용하여 DMV 쿼리를 생성할 수 있습니다.|  
 |[DISCOVER_CALC_DEPENDENCY 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)|모델에 사용된 열과 테이블 중 다른 열과 테이블에 종속된 열과 테이블 목록을 반환합니다.|  
 |[DISCOVER_COMMAND_OBJECTS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-command-objects-rowset)|참조된 명령에서 사용 중인 개체에 대한 리소스 사용량 및 작업 정보를 제공합니다.|  
-|[DISCOVER_COMMANDS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-commands-rowset)|현재 실행 중인 명령에 대한 리소스 사용량 및 작업 정보를 제공합니다.|  
+|[DISCOVER_COMMANDS 행 집합](https://docs.microsoft.com/analysis-services/instances/analysis-services-schema-rowsets)|현재 실행 중인 명령에 대한 리소스 사용량 및 작업 정보를 제공합니다.|  
 |[DISCOVER_CONNECTIONS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-connections-rowset)|Analysis Services에 대해 열려 있는 연결에 대한 리소스 사용량 및 작업 정보를 제공합니다.|  
 |[DISCOVER_CSDL_METADATA 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)|테이블 형식 모델에 대한 정보를 반환합니다.<br /><br /> SYSTEMRESTRICTSCHEMA 및 추가 매개 변수가 필요합니다.|  
 |[DISCOVER_DB_CONNECTIONS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-db-connections-rowset)|Analysis Services에서 외부 데이터 원본으로의 열린 연결(예: 처리하는 동안 또는 가져오는 동안)에 대한 리소스 사용량 및 작업 정보를 제공합니다.|  
@@ -159,9 +159,9 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_INPUT_DATASOURCES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset)|현재 데이터베이스에 정의된 데이터 원본 개체에 대한 정보를 반환합니다.|  
 |[MDSCHEMA_KPIS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-kpis-rowset)|현재 데이터베이스에 정의된 KPI에 대한 정보를 반환합니다.|  
 |[MDSCHEMA_LEVELS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-levels-rowset)|현재 데이터베이스에 정의된 계층 내 수준에 대한 정보를 반환합니다.|  
-|[MDSCHEMA_MEASUREGROUP_DIMENSIONS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset)|측정값 그룹의 차원을 나열합니다.|  
+|[MDSCHEMA_MEASUREGROUP_DIMENSIONS 행 집합](https://docs.microsoft.com/openspecs/sql_server_protocols/ms-ssas/e6399481-a289-41f3-94d2-e081bf29e094)|측정값 그룹의 차원을 나열합니다.|  
 |[MDSCHEMA_MEASUREGROUPS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset)|현재 연결의 측정값 그룹 목록을 반환합니다.|  
-|[MDSCHEMA_MEASURES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measures-rowset)|현재 연결의 측정값 목록을 반환합니다.|  
+|[MDSCHEMA_MEASURES 행 집합](https://docs.microsoft.com/openspecs/sql_server_protocols/ms-ssas/ab8e721f-9b9c-4ba1-b105-37a5f200d67c)|현재 연결의 측정값 목록을 반환합니다.|  
 |[MDSCHEMA_MEMBERS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)|현재 연결의 모든 멤버 목록을 데이터베이스, 큐브 및 차원별로 정렬하여 반환합니다.|  
 |[MDSCHEMA_PROPERTIES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)|속성 유형, 데이터 형식 및 기타 메타데이터와 함께 각 속성의 정규화된 이름을 반환합니다.|  
 |[MDSCHEMA_SETS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-sets-rowset)|현재 연결에 정의된 집합 목록을 반환합니다.|  

@@ -14,20 +14,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a611de458537156740521dae8b732eed3e2653c
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339106"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289481"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>SQL 복제에 대한 스냅샷 초기화 옵션 수정
 
 이 문서에서는 [스냅숏으로 구독을 초기화할](initialize-a-subscription-with-a-snapshot.md)때 다양 한 옵션을 수정 하는 방법을 설명 합니다.
 
 ## <a name="snapshot-format"></a>스냅숏 형식
-  **게시 속성 -** 게시&gt; **대화 상자의 \<스냅샷** 페이지에서 스냅샷 형식을 지정합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)을 참조하세요.  
+  **게시 속성 - \<게시&gt;** 대화 상자의 **스냅샷** 페이지에서 스냅샷 형식을 지정합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)을 참조하세요.  
 
-1.  **게시 속성 -** 게시&gt; **대화 상자의 \<스냅샷** 페이지에서 **네이티브 SQL Server - 모든 구독자는 SQL Server를 실행하는 서버여야 합니다** 또는 **문자 - 게시자 또는 구독자가 SQL Server를 실행하지 않는 경우 필요합니다**를 선택합니다. 
+1.  **게시 속성 - \<게시&gt;** 대화 상자의 **스냅샷** 페이지에서 **네이티브 SQL Server - 모든 구독자는 SQL Server를 실행하는 서버여야 합니다** 또는 **문자 - 게시자 또는 구독자가 SQL Server를 실행하지 않는 경우 필요합니다**를 선택합니다. 
 
     > [!NOTE]  
     >  이 게시가 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 데이터베이스 또는[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외의 데이터베이스에 대한 구독을 지원해야 하는 경우가 아니면 네이티브 형식을 선택하는 것이 좋습니다.    
@@ -38,11 +38,11 @@ ms.locfileid: "78339106"
 ### <a name="default-snapshot-location"></a>기본 스냅샷 위치
 기본 스냅숏 위치 (SQL Server Management Studio) 지정 배포 구성 마법사의 **스냅숏 폴더** 페이지에서 기본 스냅숏 위치를 지정 합니다. 이 마법사 사용에 대한 자세한 내용은 [게시 및 배포 구성](configure-publishing-and-distribution.md)을 참조하세요. 배포자로 구성되어 있지 않은 서버에서 게시를 만드는 경우 새 게시 마법사의 **스냅샷 폴더** 페이지에서 기본 스냅샷 위치를 지정합니다. 이 마법사를 사용하는 방법에 대한 자세한 내용은 [게시 만들기](publish/create-a-publication.md)를 참조하세요.  
   
- **배포자 속성 -** Distributor&gt; **대화 상자의 \<게시자** 페이지에서 기본 스냅샷 위치를 수정합니다. 자세한 내용은 [배포자 및 게시자 속성 보기 및 수정](view-and-modify-distributor-and-publisher-properties.md)을 참조하세요. **게시 속성 - \<게시&gt;** 대화 상자에서 각 게시에 대한 스냅샷 폴더를 설정합니다. 자세한 내용은 [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)을 참조하세요.  
+ **배포자 속성 - \<Distributor&gt;** 대화 상자의 **게시자** 페이지에서 기본 스냅샷 위치를 수정합니다. 자세한 내용은 [배포자 및 게시자 속성 보기 및 수정](view-and-modify-distributor-and-publisher-properties.md)을 참조하세요. **게시 속성 - \<게시&gt;** 대화 상자에서 각 게시에 대한 스냅샷 폴더를 설정합니다. 자세한 내용은 [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="modify-the-default-snapshot-location"></a>기본 스냅샷 위치 수정  
   
-1.  **배포자 속성 -** Distributor&gt; **대화 상자의 \<게시자** 페이지에서 기본 스냅샷 위치를 변경하려는 게시자의 속성 단추( **...** )를 클릭합니다.    
+1.  **배포자 속성 - \<Distributor&gt;** 대화 상자의 **게시자** 페이지에서 기본 스냅샷 위치를 변경하려는 게시자의 속성 단추( **...** )를 클릭합니다.    
 2.  **게시자 속성 - \<Publisher&gt;** 대화 상자에서 **기본 스냅샷 폴더** 속성에 대한 값을 입력합니다.
 
     > [!NOTE]  
@@ -56,7 +56,7 @@ ms.locfileid: "78339106"
   
 #### <a name="specify-an-alternate-snapshot-location"></a>대체 스냅숏 위치 지정  
   
-1.  **게시 속성 -** 게시&gt; **대화 상자의 \<스냅샷** 페이지에서 다음을 수행합니다.    
+1.  **게시 속성 - \<게시&gt;** 대화 상자의 **스냅샷** 페이지에서 다음을 수행합니다.    
     1.  **다음 폴더에 파일 보관**을 선택한 다음 **찾아보기** 를 클릭하여 디렉터리로 이동하거나 스냅샷 파일을 저장할 디렉터리 경로를 입력합니다.    
 
         > [!NOTE]  
@@ -69,7 +69,7 @@ ms.locfileid: "78339106"
 ## <a name="compress-snapshot-files"></a>스냅숏 파일 압축
 **게시 속성- \<게시>** 대화 상자의 **스냅숏** 페이지에서 파일을 압축 하도록 지정 합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
-1.  **게시 속성 -** 게시&gt; **대화 상자의 \<스냅샷** 페이지에서 다음을 수행합니다.  
+1.  **게시 속성 - \<게시&gt;** 대화 상자의 **스냅샷** 페이지에서 다음을 수행합니다.  
   
     1.  **다음 폴더에 파일 보관**을 선택한 다음 **찾아보기** 를 클릭하여 디렉터리로 이동하거나 스냅샷 파일을 저장할 디렉터리 경로를 입력합니다.    
         > [!NOTE]  
@@ -96,7 +96,7 @@ ms.locfileid: "78339106"
   **게시 속성 - **게시&gt;** 대화 상자의 \<스냅샷** 페이지에 적용되기 전 또는 후에 실행할 스크립트를 선택적으로 지정합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)을 참조하세요.  
 
 
-1.  **게시 속성 -** 게시&gt; **대화 상자의 \<스냅샷** 페이지에서 다음을 수행합니다.    
+1.  **게시 속성 - \<게시&gt;** 대화 상자의 **스냅샷** 페이지에서 다음을 수행합니다.    
     -   스냅샷이 적용되기 전에 실행할 스크립트를 지정하려면 **찾아보기** 를 클릭하여 스크립트로 이동하거나 **스냅샷 적용 전 다음 스크립트 실행** 입력란에 스크립트의 경로를 입력합니다. 
    
         > [!NOTE]  

@@ -14,12 +14,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ad185085c19d8286fa6a09e46742860a948849a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 365834e3c1cd239a245c1523947a359b7c2dcc57
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67934553"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289121"
 ---
 # <a name="automatic-tuning"></a>자동 조정
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 에서 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 최적의 계획을 적용할 수 있기 때문에 수동으로 강제 계획을 강제 적용할 수 없습니다. 사용자 또는 DBA는 프로시저를 사용 하 `sp_query_store_unforce_plan` 여 계획을 강제로 해제 하 고 최적의 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 계획을 찾도록 합니다. 
 
 > [!TIP]
-> Alternativelly 계획 쿼리 저장소 뷰에서 **쿼리** 를 사용 하 여 계획을 찾고 해제 합니다.
+> 또는 **강제 계획이 포함 된 쿼리** 쿼리 저장소 보기를 사용 하 여 계획을 찾고 해제 합니다.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]쿼리 저장소에서 성능을 모니터링 하 고 문제를 해결 하는 데 필요한 모든 보기 및 절차를 제공 합니다.
 
@@ -189,5 +189,5 @@ CROSS APPLY OPENJSON (Details, '$.planForceDetails')
  [실행 계획](../../relational-databases/performance/execution-plans.md)    
  [성능 모니터링 및 튜닝](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [성능 모니터링 및 튜닝 도구](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
- [쿼리 저장소를 사용하여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [쿼리 저장소를 사용 하 여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
  [쿼리 튜닝 길잡이](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)

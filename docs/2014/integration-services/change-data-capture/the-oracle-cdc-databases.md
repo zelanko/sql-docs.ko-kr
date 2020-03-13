@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338996"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289271"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 데이터베이스
   Oracle CDC 인스턴스는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 동일한 이름으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 연결됩니다. 이 데이터베이스를 Oracle CDC 데이터베이스 또는 CDC 데이터베이스라고 합니다.  
@@ -109,7 +109,7 @@ ms.locfileid: "78338996"
   
 |속성|기본값|최소값|최대값|정적|Description|  
 |----------|-------------|---------|---------|------------|-----------------|  
-|추적|False|-|-|False|사용 가능한 값:<br /><br /> **True**<br /><br /> **False**<br /><br /> **sign-on**<br /><br /> **끄기**|  
+|추적|False|-|-|False|사용 가능한 값:<br /><br /> **True**<br /><br /> **False**<br /><br /> **on**<br /><br /> **off**|  
 |cdc_update_state_interval|10|1|120|False|트랜잭션에 대해 할당된 메모리 청크의 크기(KB)입니다. 트랜잭션 하나가 둘 이상의 청크를 할당할 수 있습니다. [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config) 테이블의 memory_limit 열을 참조하세요.|  
 |target_max_batched_transactions|100|1|1000|True|SQL Server CT 테이블 업데이트에서 하나의 트랜잭션으로 처리될 수 있는 최대 Oracle 트랜잭션 수입니다.|  
 |target_idle_lsn_update_interval|10|0|1|False|캡처된 테이블에서 활동이 없을 때 **lsn_time_mapping** 테이블을 업데이트하는 간격(초)입니다.|  

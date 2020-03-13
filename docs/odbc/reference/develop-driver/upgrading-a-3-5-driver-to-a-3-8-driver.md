@@ -11,11 +11,11 @@ ms.assetid: ffba36ac-d22e-40b9-911a-973fa9e10bd3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97b100b1ade97e1e88cf1421f09a7723412c8b76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915493"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289801"
 ---
 # <a name="upgrading-a-35-driver-to-a-38-driver"></a>3.5 드라이버를 3.8 드라이버로 업그레이드
 이 항목에서는 odbc 3.5 드라이버를 ODBC 3.8 드라이버로 업그레이드 하는 방법에 대 한 지침과 고려 사항을 제공 합니다.  

@@ -17,11 +17,11 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: f826ce7ff54bb28738f79fbf22c8c8435035008c
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339046"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289451"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Azure 키 자격 증명 모음(SQL Server)을 사용한 확장 가능 키 관리
   Azure Key Vault [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 용 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 커넥터를 사용 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 하 여 암호화를 사용 하면 암호화 키를 보호 하기 위해 [EKM&#41;공급자로 확장 가능 키 관리 &#40;](extensible-key-management-ekm.md) Azure Key Vault 서비스를 활용할 수 있습니다.
@@ -288,7 +288,7 @@ ms.locfileid: "78339046"
     GO
     ```
 
-     자세한 내용은 
+     자세한 내용은
 
     -   [CREATE DATABASE ENCRYPTION KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)
 

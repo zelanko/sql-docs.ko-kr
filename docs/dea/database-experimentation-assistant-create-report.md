@@ -13,11 +13,11 @@ ms.author: jtoland
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: f82aba87632abea4ac5fbc8b54daa6dfd0eb5b4a
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338332"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289841"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant-sql-server"></a>데이터베이스 실험 도우미에서 분석 보고서 만들기 (SQL Server)
 

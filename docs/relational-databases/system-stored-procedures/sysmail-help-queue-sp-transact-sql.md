@@ -18,11 +18,11 @@ ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d506d7ea841e211d9ab6fb0715a6a9359cefa83d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72305221"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289951"
 ---
 # <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**queue_type**|**nvarchar (6)**|큐의 유형입니다. 가능한 값은 **mail** 및 **status**입니다.|  
-|**길이**|**int**|지정된 큐의 메일 항목 수입니다.|  
+|**length**|**int**|지정된 큐의 메일 항목 수입니다.|  
 |**상태일**|**nvarchar (64)**|모니터의 상태입니다. 가능한 값은 **비활성** (큐가 비활성 상태임), **알림** (큐에 수신 되었다는 알림이 표시 됨) 및 **RECEIVES_OCCURRING** (큐에서 수신 됨)입니다.|  
 |**last_empty_rowset_time**|**날짜**|쿼리가 마지막으로 비워진 날짜와 시간입니다. 군대식 시간 형식 및 GMT 표준 시간대로 표시됩니다.|  
 |**last_activated_time**|**날짜**|큐가 마지막으로 활성화된 날짜와 시간입니다. 군대식 시간 형식 및 GMT 표준 시간대로 표시됩니다.|  

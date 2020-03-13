@@ -12,12 +12,12 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d47c670088f088260435f9e046e0bbdbf1fb9e4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: eed1d8d35f7b23fd93b7cfb8046e0d6115483ad5
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637708"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217138"
 ---
 # <a name="upgrade-to-sql-server-2014"></a>SQL Server 2014로 업그레이드
   
@@ -47,7 +47,7 @@ ms.locfileid: "73637708"
   
 -   [복제된 데이터베이스 업그레이드](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
--   [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
+-   [Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
   
 -   [SQL Server 관리 도구 업그레이드](upgrade-sql-server-management-tools.md)  
   
@@ -56,12 +56,12 @@ ms.locfileid: "73637708"
 ## <a name="see-also"></a>참고 항목  
  [업그레이드 데이터베이스 엔진](upgrade-database-engine.md)   
  [업그레이드 Analysis Services](upgrade-analysis-services.md)   
- [업그레이드 및 마이그레이션 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+ [Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
  [업그레이드 Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)   
  [복제 된 데이터베이스 업그레이드](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [업그레이드 MDS(Master Data Services)](upgrade-master-data-services.md)   
- [SQL Server 2005 모범 사례 분석기](https://www.microsoft.com/download/details.aspx?id=23864)   
- [SQL Server 2008 R2 모범 사례 분석기](https://www.microsoft.com/download/details.aspx?id=15289)   
+ [SQL Server 2012 모범 사례 분석기](https://www.microsoft.com/download/details.aspx?id=29302)   
+ [SQL Server 2008 R2 모범 사례 분석기](https://www.microsoft.com/download/details.aspx?id=436)   
  [이전 버전과의 호환성](../../../2014/getting-started/backward-compatibility.md)  
   
   

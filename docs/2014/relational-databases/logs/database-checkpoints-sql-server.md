@@ -27,11 +27,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 33f85b2f1cd8b259e46851aab818b258a6d78291
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339311"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289401"
 ---
 # <a name="database-checkpoints-sql-server"></a>데이터베이스 검사점(SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 검사점에 대해 간략하게 설명합니다. *검사점* 은이 예기치 않은 종료 또는 충돌 후 복구 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 하는 동안 로그에 포함 된 변경 내용을 적용 하기 시작할 수 있는 알려진 올바른 지점을 만듭니다.  

@@ -11,11 +11,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63f45fa174296e4ce79985236da2d97d3f11e937
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339299"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289441"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>SharePoint용 Reporting Services 추가 기능 설치 또는 제거(SharePoint 2010 및 SharePoint 2013)
   Sharepoint 서버에서 sharepoint [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 제품용 설치 패키지 추가 기능 (rssharepoint.msi)을 실행 하 여 sharepoint 배포 내에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 사용 하도록 설정 합니다. 이러한 기능에는 SharePoint 사이트에서 보고서, 보고서 모델, 데이터 원본 및 기타 보고서 서버 내용을 생성, 확인 및 관리할 수 있도록 Power View, 보고서 뷰어 웹 파트, URL 프록시 엔드포인트, 콘텐츠 형식 및 애플리케이션 페이지가 포함됩니다. SharePoint 제품용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능은 SharePoint 모드에서 실행되는 보고서 서버의 필수 구성 요소입니다. 추가 기능은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사에서 설치하거나 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 기능 팩에서 rsSharePoint.msi를 다운로드하여 설치할 수 있습니다. 추가 기능의 버전 목록 및 다운로드 페이지는 [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)를 참조하세요.
@@ -92,12 +92,12 @@ ms.locfileid: "78339299"
 
  **SharePoint 2013**
 
- SharePoint 20103 제품 준비 도구는 SharePoint **** 제품용 추가 기능 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 을 설치 하지 않습니다.
+ SharePoint 20103 제품 준비 도구는 SharePoint **Not** 제품용 추가 기능 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 을 설치 하지 않습니다.
 
 ##  <a name="bkmk_3ways_to_install"></a>설치 방법 개요
  다음 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 두 가지 방법 중 하나를 사용 하 여 SharePoint 제품용 추가 기능을 설치할 수 있습니다.
 
--   **설치 마법사:** ![](../../../2014/reporting-services/media/rs-fyinote.png "참고")에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]대 한 새로운 정보, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 통해 추가 기능을 설치할 수 있습니다. 마법사의 **기능 선택** 페이지에서 **SharePoint 제품용 Reporting Services 추가 기능** 을 선택합니다.
+-   **설치 마법사:** ![note](../../../2014/reporting-services/media/rs-fyinote.png "참고")에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]대 한 새로운 정보, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 통해 추가 기능을 설치할 수 있습니다. 마법사의 **기능 선택** 페이지에서 **SharePoint 제품용 Reporting Services 추가 기능** 을 선택합니다.
 
 -   **rssharepoint.msi:** 추가 기능을 설치 미디어에서 직접 설치 하거나 다운로드 하 여 설치할 수 있습니다. rsSharepoint.msi는 그래픽 사용자 인터페이스 및 명령줄 설치를 둘 다 지원합니다. 먼저 승격된 권한으로 명령 프롬프트 창을 연 다음 명령줄에서 rsSharepoint.msi를 실행하여 관리자 권한으로 .msi를 실행해야 합니다. 추가 기능 다운로드에 대한 자세한 내용은 [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)를 참조하세요.
 

@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 033999701141387ee63712a8a9ce055ad3f55cb1
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339119"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289531"
 ---
 # <a name="specify-merge-replication-properties"></a>병합 복제 속성 지정
 이 항목에서는 병합 복제의 다양한 속성을 지정하는 방법을 설명합니다. 
@@ -64,7 +64,7 @@ ms.locfileid: "78339119"
 #### <a name="to-modify-an-existing-merge-table-article-to-be-download-only"></a>기존의 병합 테이블 아티클을 다운로드 전용으로 수정하려면  
   
 1.  아티클이 다운로드 전용인지 확인하려면 [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql)을 실행합니다. 결과 집합에서 아티클의 **upload_options** 값을 확인합니다.    
-2.  1 단계에서 반환 된 값이 **0**이면 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)를 실행 하 고, ** \@속성**에 **subscriber_upload_options** 값을 지정 하 고, ** \@force_invalidate_snapshot** 및 ** \@force_reinit_subscription**에 값 **1** 을 지정 하 고, 값 **** 에 ** \@** **1** 또는 2 값을 지정 합니다 .이 값은 다음 동작에 해당 합니다.  
+2.  1 단계에서 반환 된 값이 **0**이면 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)를 실행 하 고, ** \@속성**에 **subscriber_upload_options** 값을 지정 하 고, ** \@force_invalidate_snapshot** 및 ** \@force_reinit_subscription**에 값 **1** 을 지정 하 고, 값 **2** 에 ** \@** **1** 또는 2 값을 지정 합니다 .이 값은 다음 동작에 해당 합니다.  
   
     -   **1** - 구독자에서 변경이 허용되지만 변경 내용이 게시자로 업로드되지 않습니다.    
     -   **2** - 구독자에서 변경이 허용되지 않습니다.  
@@ -153,7 +153,7 @@ ms.locfileid: "78339119"
     -   **true** - 아티클에 대해 열 수준 추적을 사용합니다.
     -   **false** - 행 수준 추적을 사용합니다(기본값).  
   
-     ** \@Force_invalidate_snapshot** 및 **** **force_reinit_subscription 모두에 대해 값 1을 지정 \@** 합니다.  
+     ** \@Force_invalidate_snapshot** 및 **1** **force_reinit_subscription 모두에 대해 값 1을 지정 \@** 합니다.  
 
 ## <a name="tracking-deletes"></a>삭제 추적
 
