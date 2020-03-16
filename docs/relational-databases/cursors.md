@@ -1,7 +1,7 @@
 ---
 title: 커서 | Microsoft 문서
 ms.custom: ''
-ms.date: 11/28/2018
+ms.date: 03/11/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,12 +19,12 @@ ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de565a5d34ddbf8388e2c20a564bc8c872a0a1c9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: a053f49a6ab3b42e31c5b71c2d2d558ea3170440
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68140807"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112332"
 ---
 # <a name="cursors"></a>커서
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ API 커서는 OLE DB와 ODBC의 API 커서 함수를 지원합니다. API 서버
   
 > [!NOTE]
 > 정적 커서의 결과 세트는 **tempdb**의 작업 테이블에 저장되므로 결과 세트의 행 크기가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블의 최대 행 크기를 초과할 수 없습니다.  
-> 자세한 내용은 [쿼리 처리 아키텍처의 작업 테이블 가이드](../relational-databases/query-processing-architecture-guide.md#worktables)를 참조하세요. 자세한 내용은 [SQL Server의 최대 용량 사양](../sql-server/maximum-capacity-specifications-for-sql-server.md#Engine)을 참조하세요.  
+> 자세한 내용은 [쿼리 처리 아키텍처의 작업 테이블 가이드](../relational-databases/query-processing-architecture-guide.md#worktables)를 참조하세요. 자세한 내용은 [SQL Server의 최대 용량 사양](../sql-server/maximum-capacity-specifications-for-sql-server.md)을 참조하세요.  
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] 에서는 정적 커서와 무관한 용어를 사용합니다. 일부 데이터베이스 API에서는 정적 커서를 스냅샷 커서로 식별합니다.  
   

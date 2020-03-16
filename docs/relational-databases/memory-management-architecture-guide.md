@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68115274"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287947"
 ---
 # <a name="memory-management-architecture-guide"></a>메모리 관리 아키텍처 가이드
 
@@ -47,7 +47,7 @@ ms.locfileid: "68115274"
 > [!NOTE]
 > 사용량이 많고 메모리가 부족한 시스템에서는 쿼리가 비트맵에 필요한 최소 메모리를 얻지 못할 경우 쿼리 계획에 병합 조인, 정렬 및 비트맵이 포함된 쿼리에서 비트맵을 삭제할 수 있습니다. 이 경우 쿼리 성능에 영향을 줄 수 있으며 정렬 프로세스가 메모리에 들어가지 않을 경우 tempdb 데이터베이스의 작업 테이블 사용이 증가하여 tempdb가 확장될 수 있습니다. 이 문제를 해결하려면 실제 메모리를 추가하거나 더 빠른 다른 쿼리 계획을 사용하도록 쿼리를 튜닝합니다.
  
-### <a name="providing-the-maximum-amount-of-memory-to-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 최대 메모리 양 제공
+### <a name="providing-the-maximum-amount-of-memory-to-ssnoversion"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 최대 메모리 양 제공
 
 AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 엔진에 다음과 같이 메모리 양을 제공할 수 있습니다. 
 
@@ -72,7 +72,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 
 <a name="changes-to-memory-management-starting-2012-11x-gm"></a>
 
-## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 메모리 관리로 변경
+## <a name="changes-to-memory-management-starting-with-sssql11"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 메모리 관리로 변경
 
 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)])에서는 5가지 메커니즘을 사용하여 메모리 할당이 수행되었습니다.
 -  **SPA(단일 페이지 할당자)** 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스에서 8KB 이하인 메모리 할당만 포함합니다. *max server memory(MB)* 및 *min server memory(MB)* 구성 옵션은 SPA가 사용한 실제 메모리의 한계를 결정했습니다. 버퍼 풀은 SPA의 메커니즘이자 동시에 가장 큰 단일 페이지 할당 소비자였습니다.
@@ -90,9 +90,9 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 
 |메모리 할당 유형| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]로 시작|
 |-------|-------|-------|
-|단일 페이지 할당|yes|예, "임의 크기" 페이지 할당에 통합됨|
+|단일 페이지 할당|예|예, "임의 크기" 페이지 할당에 통합됨|
 |다중 페이지 할당|예|예, "임의 크기" 페이지 할당에 통합됨|
-|CLR 할당|예|yes|
+|CLR 할당|예|예|
 |스레드 스택 메모리|예|예|
 |Windows에서 직접 할당|예|예|
 
@@ -107,7 +107,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 -  큰 입력 매개 변수를 저장해야 하는 추적 작업.
 
 <a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
-## <a name="changes-to-memory_to_reserve-starting-with-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 "memory_to_reserve"로 변경
+## <a name="changes-to-memory_to_reserve-starting-with-sssql11"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 "memory_to_reserve"로 변경
 이전 버전의 SQL Server([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)])에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 관리자는 **MPA(Multi-Page Allocator)** , **CLR 할당자**, SQL Server 프로세스에서 **스레드 스택**에 대한 메모리 할당, **DWA(Direct Windows 할당)** 로 사용하기 위해 프로세스 VAS(가상 주소 공간)의 일부로 따로 지정했습니다. 가상 주소 공간의 이 부분은 "Mem-To-Leave" 또는 "non-Buffer Pool" 영역으로도 알려져 있습니다.
 
 이러한 할당을 위해 예약된 가상 주소 공간은 _**memory\_to\_reserve**_ 구성 옵션에 의해 결정됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 사용하는 기본값은 256MB입니다. 기본값을 재정의하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g* 시작 매개 변수를 사용합니다. *-g* 시작 매개 변수에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](../database-engine/configure-windows/database-engine-service-startup-options.md)의 설명서 페이지를 참조하세요.
@@ -119,10 +119,10 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 |메모리 할당 유형| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]로 시작|
 |-------|-------|-------|
 |단일 페이지 할당|예|아니요, "임의 크기" 페이지 할당에 통합됨|
-|다중 페이지 할당|yes|아니요, "임의 크기" 페이지 할당에 통합됨|
-|CLR 할당|yes|yes|
-|스레드 스택 메모리|yes|yes|
-|Windows에서 직접 할당|yes|yes|
+|다중 페이지 할당|예|아니요, "임의 크기" 페이지 할당에 통합됨|
+|CLR 할당|예|예|
+|스레드 스택 메모리|예|예|
+|Windows에서 직접 할당|예|예|
 
 ## <a name="dynamic-memory-management"></a> 동적 메모리 관리
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 기본 메모리 관리 동작은 시스템에 메모리가 부족해지지 않도록 필요한 만큼 메모리를 확보하는 것입니다. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 Microsoft Windows의 메모리 알림 API를 사용하여 이 작업을 수행합니다.

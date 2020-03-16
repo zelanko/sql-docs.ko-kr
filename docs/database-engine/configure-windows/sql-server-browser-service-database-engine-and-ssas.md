@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fade5e48340e8cc2b51b354f9717a561c632e4d3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 19479786362d6773339cc30953451f02e466c2ec
+ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68028633"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375560"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>SQL Server Browser 서비스(데이터베이스 엔진 및 SSAS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser 프로그램은 Windows 서비스로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에 대해 들어오는 요청을 수신하고 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 정보를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser를 사용할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser 프로그램은 Windows 서비스로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에 대해 들어오는 요청을 수신 대기하고 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 정보를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser를 사용할 수 있습니다.  
   
 -   사용할 수 있는 서버 목록 찾아보기  
   
@@ -52,7 +52,7 @@ ms.locfileid: "68028633"
   
  시작하자마자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser가 시작되어 UDP 포트 1434를 요청합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 레지스트리를 읽어 컴퓨터에 있는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 식별하여 사용되는 포트와 명명된 파이프를 기록합니다. 서버에 네트워크 카드가 두 개 이상 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용할 수 있는 포트 중 처음 발견된 포트를 반환합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 ipv6과 ipv4를 지원합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스를 요청하면 클라이언트 네트워크 라이브러리에서 포트 1434를 사용하여 서버로 UDP 메시지를 보냅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser에서는 요청된 인스턴스의 TCP/IP 포트나 명명된 파이프를 사용하여 응답합니다. 그러면 클라이언트 애플리케이션 네트워크 라이브러리가 원하는 인스턴스의 포트나 명명된 파이프를 사용하여 서버로 요청을 보내 연결을 완료합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 기본 인스턴스에 대한 포트 정보는 반환하지 않습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스를 요청하면 클라이언트 네트워크 라이브러리에서 포트 1434를 사용하여 서버로 UDP 메시지를 보냅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser에서는 요청된 인스턴스의 TCP/IP 포트나 명명된 파이프를 사용하여 응답합니다. 그러면 클라이언트 애플리케이션 네트워크 라이브러리가 원하는 인스턴스의 포트나 명명된 파이프를 사용하여 서버로 요청을 보내 연결을 완료합니다. 
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 시작 및 중지하는 방법은 [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개, 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)을 참조하세요.  
   

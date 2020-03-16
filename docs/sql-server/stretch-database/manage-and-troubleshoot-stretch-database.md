@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 786ebc0529d9af47c34840e0e2cb11bf2a448fec
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
-ms.translationtype: MT
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339491"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79285777"
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Stretch Database 관리 및 문제 해결
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -45,7 +45,7 @@ GO
  스트레치 데이터베이스에서 마이그레이션할 행을 선택하는 데 사용하는 함수를 식별하려면 **sys.remote_data_archive_tables** 카탈로그 뷰를 열고 **filter_predicate** 열의 값을 확인합니다. 값이 null이면 전체 테이블을 마이그레이션할 수 있습니다. 자세한 내용은 [sys.remote_data_archive_tables&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md) 및 [필터 함수를 사용하여 마이그레이션할 행 선택](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)을 참조하세요.  
   
 ###  <a name="Migration"></a> 데이터 마이그레이션 상태를 확인합니다.  
- Stretch Database 모니터에서 데이터 마이그레이션을 모니터링하려면 SQL Server Management Studio 데이터베이스에 대해 **작업 | 스트레치 | 모니터**를 선택합니다. 자세한 내용은 [데이터 마이그레이션 모니터링 및 문제 해결&#40;스트레치 데이터베이스&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)를 참조하세요.  
+ Stretch Database 모니터에서 데이터 마이그레이션을 모니터링하려면 SQL Server Management Studio에서 데이터베이스에 대한 **작업 | 스트레치 | 모니터**를 선택합니다. 자세한 내용은 [데이터 마이그레이션 모니터링 및 문제 해결&#40;스트레치 데이터베이스&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)를 참조하세요.  
   
  또는 마이그레이션된 데이터의 배치 및 행 수를 보려면 동적 관리 뷰 **sys.dm_db_rda_migration_status** 를 엽니다.  
   

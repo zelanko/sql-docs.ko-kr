@@ -22,11 +22,11 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: mikeray
 ms.openlocfilehash: a9e617488ac0543dd7794cce37137518c1422c80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "69028745"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288357"
 ---
 # <a name="server-memory-configuration-options"></a>서버 메모리 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "69028745"
 
 <sup>2</sup> 현재 호스트에서 선호도가 높은 CPU의 지정된 수에 대해 계산된 기본 작업자 스레드에 대한 내용은 [max worker threads 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) 방법에 대한 설명서 페이지를 참조하세요.
 
-## <a name="how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 메모리 옵션을 구성하는 방법  
+## <a name="how-to-configure-memory-options-using-ssmanstudiofull"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 메모리 옵션을 구성하는 방법  
 **min server memory** 및 **max server memory**의 두 가지 서버 메모리 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Memory Manager가 관리하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 메모리 양(MB)을 다시 구성할 수 있습니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 사용할 수 있는 시스템 리소스에 따라 메모리 요구 사항을 동적으로 변경할 수 있습니다.  
   
 ### <a name="procedure-for-configuring-a-fixed-amount-of-memory-not-recommended"></a>고정 메모리 양을 구성하는 절차(권장되지 않음)  
@@ -105,7 +105,7 @@ ms.locfileid: "69028745"
   
 6.  **로컬 보안 정책 설정** 대화 상자에서 sqlservr.exe 실행 권한이 있는 계정을 추가합니다([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 계정).  
   
-## <a name="running-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 실행  
+## <a name="running-multiple-instances-of-ssnoversion"></a>여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 실행  
  여러 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스를 실행하는 경우 다음 3가지 방법으로 메모리를 관리할 수 있습니다.  
   
 -   **max server memory**를 사용하여 [위에서 설명한 대로](#max_server_memory) 메모리 사용을 제어합니다. 허용되는 총 메모리가 컴퓨터의 실제 메모리 합계보다 크지 않도록 주의하여 각 인스턴스의 최대값을 설정합니다. 예상 작업이나 데이터베이스 크기에 비례하여 각 인스턴스에 메모리를 제공할 수 있습니다. 이 방법은 새 프로세스나 인스턴스 시작 시 여유 메모리를 즉시 사용할 수 있다는 장점이 있습니다. 단점은 모든 인스턴스를 실행하지 않는 경우 실행 중인 인스턴스가 남은 여유 메모리를 사용할 수 없다는 것입니다.  

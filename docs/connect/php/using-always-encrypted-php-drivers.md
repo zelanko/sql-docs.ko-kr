@@ -11,11 +11,11 @@ ms.author: jroth
 author: rothja
 manager: v-mabarw
 ms.openlocfilehash: 17bd2297a81ed8c4b9e62f80a8bffd7a4c87af34
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340535"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286367"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>SQL Server용 PHP 드라이버와 함께 Always Encrypted 사용
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

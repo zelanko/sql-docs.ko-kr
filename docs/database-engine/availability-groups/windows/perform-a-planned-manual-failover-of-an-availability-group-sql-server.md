@@ -16,15 +16,15 @@ ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2346c770c5fec742d7c5805f028bd87bebaf71b1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74822498"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287207"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Always On 가용성 그룹의 계획된 수동 장애 조치(failover) 수행(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-이 항목에서는 *에서* , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에서 데이터 손실 없이 수동 장애 조치(failover)를 수행하는 방법([!INCLUDE[tsql](../../../includes/tsql-md.md)]계획된 수동 장애 조치(failover)[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)])에 대해 설명합니다. 가용성 그룹은 가용성 복제본의 수준에서 장애 조치(Failover)됩니다. AlwaysOn 가용성 그룹 장애 조치(Failover)처럼 계획된 수동 장애 조치는 보조 복제본을 기본 역할로 전환합니다. 동시에 장애 조치(Failover)는 이전 주 복제본을 보조 역할로 전환합니다.  
+이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에서 데이터 손실 없이 수동 장애 조치(failover)를 수행하는 방법(*계획된 수동 장애 조치(failover)* )에 대해 설명합니다. 가용성 그룹은 가용성 복제본의 수준에서 장애 조치(Failover)됩니다. AlwaysOn 가용성 그룹 장애 조치(Failover)처럼 계획된 수동 장애 조치는 보조 복제본을 기본 역할로 전환합니다. 동시에 장애 조치(Failover)는 이전 주 복제본을 보조 역할로 전환합니다.  
   
 계획된 수동 장애 조치(Failover)는 주 복제본과 대상 보조 복제본이 동기 커밋 모드에서 실행 중이고 현재 동기화된 경우에만 지원됩니다. 계획된 수동 장애 조치(Failover)는 대상 보조 복제본의 가용성 그룹에 조인된 보조 데이터베이스의 모든 데이터를 유지합니다. 이전 주 복제본이 보조 역할로 전환되면 해당 데이터베이스는 보조 데이터베이스가 됩니다. 그런 다음 새 기본 데이터베이스와 동기화되기 시작합니다. 데이터베이스가 모두 SYNCHRONIZED 상태로 전환된 후 새로운 보조 복제본은 향후 계획 수동 장애 조치(failover)의 대상 역할을 수행할 수 있습니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "74822498"
 -   현재 대상 보조 복제본이 주 복제본과 동기화되어 있어야 합니다. 이 보조 복제본의 모든 보조 데이터베이스는 이미 가용성 그룹에 조인되어 있어야 합니다. 또한 해당 주 데이터베이스와 동기화되어야 합니다(즉, 로컬 보조 데이터베이스가 동기화되어야 함). 
   
     > [!TIP] 
-    >  보조 복제본의 장애 조치(Failover) 준비를 확인하려면 **sys.dm_hadr_database_replica_cluster_states** 동적 관리 뷰에서 [is_failover_ready](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) 열을 쿼리합니다. 또는 **AlwaysOn 그룹 대시 보드**의 [장애 조치(Failover) 준비](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) 열을 볼 수 있습니다. 
+    >  보조 복제본의 장애 조치(Failover) 준비를 확인하려면 [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) 동적 관리 뷰에서 **is_failover_ready** 열을 쿼리합니다. 또는 [AlwaysOn 그룹 대시 보드](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)의 **장애 조치(Failover) 준비** 열을 볼 수 있습니다. 
 -   이 태스크는 대상 보조 복제본에서만 지원됩니다. 대상 보조 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다. 
   
 ###  <a name="Security"></a> 보안 
@@ -107,7 +107,7 @@ ms.locfileid: "74822498"
     -   [SQL Server PowerShell 공급자](../../../relational-databases/scripting/sql-server-powershell-provider.md) 
     -   [SQL Server PowerShell에 대한 도움말 보기](../../../relational-databases/scripting/get-help-sql-server-powershell.md) 
 
-##  <a name="FollowUp"></a> 후속 작업: 가용성 그룹을 수동으로 장애 조치한 후 
+##  <a name="FollowUp"></a> 후속 작업: 가용성 그룹을 수동으로 장애 조치(failover)한 후 
  가용성 그룹의 [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] 외부로 장애 조치한 경우 새로운 가용성 그룹 구성을 반영하도록 Windows Server 장애 조치(Failover) 클러스터링 노드의 쿼럼 투표를 조정합니다. 자세한 내용은 [SQL Server의 WSFC&#40;Windows Server 장애 조치(Failover) 클러스터링&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)을 참조하세요. 
 
 <a name = "ReadScaleOutOnly"><a/>

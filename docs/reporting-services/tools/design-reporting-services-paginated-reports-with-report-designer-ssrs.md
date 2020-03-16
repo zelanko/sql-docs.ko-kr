@@ -11,11 +11,11 @@ ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e4cfac1ba56647ae0218242d0fb9228a3e80579
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77081706"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286167"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>보고서 디자이너로 Reporting Services 페이지가 매겨진 보고서 디자인(SSRS)
 
@@ -99,7 +99,7 @@ ms.locfileid: "77081706"
  **미리 보기** 를 사용하여 보고서 데이터 및 레이아웃 디자인을 확인할 수 있습니다. 보고서를 미리 보는 경우 보고서 처리기에서 보고서 정의 스키마와 식 구문의 유효성을 검사하고 문제를 [Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) 창에 나열합니다.  
   
 > [!NOTE]  
->  보고서를 미리 보면 보고서의 데이터가 로컬 컴퓨터의 파일에 캐시됩니다. 동일한 쿼리, 매개 변수 및 자격 증명을 사용하여 동일한 보고서를 다시 미리 보면 보고서 디자이너는 쿼리를 다시 실행하지 않고 캐시된 복사본을 검색합니다. 데이터 파일은 보고서 정의 파일과 같은 디렉터리에 *\<reportname>*.rdl.data로 저장됩니다. 이 파일은 보고서 디자이너를 닫아도 삭제되지 않습니다.  
+>  보고서를 미리 보면 보고서의 데이터가 로컬 컴퓨터의 파일에 캐시됩니다. 동일한 쿼리, 매개 변수 및 자격 증명을 사용하여 동일한 보고서를 다시 미리 보면 보고서 디자이너는 쿼리를 다시 실행하지 않고 캐시된 복사본을 검색합니다. 데이터 파일은 보고서 정의 파일과 같은 디렉터리에 *\<reportname>* .rdl.data로 저장됩니다. 이 파일은 보고서 디자이너를 닫아도 삭제되지 않습니다.  
   
  다음과 같은 방법으로 보고서를 미리 볼 수 있습니다.  
   

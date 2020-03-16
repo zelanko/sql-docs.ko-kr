@@ -25,11 +25,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
 ms.openlocfilehash: a652bc56a826469017ba4de643c9d3e1822d4c22
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75952526"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288447"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux의 SQL Server 2017 버전 및 지원되는 기능
 
@@ -49,7 +49,7 @@ Linux에서 사용할 수 없는 SQL Server 기능 목록은 [지원되지 않�
     
 [SQL Server 2017 다운로드](https://www.microsoft.com/sql-server/sql-server-2017)
 
-## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] 버전  
+## <a name="ssnoversion-editions"></a>[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] 버전  
  다음 표에서는 이러한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에 대해 설명합니다. 
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|정의|  
@@ -60,11 +60,11 @@ Linux에서 사용할 수 없는 SQL Server 기능 목록은 [지원되지 않�
 |Developer|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer 버전을 사용하면 개발자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]기반에서 어떤 유형의 애플리케이션도 빌드할 수 있습니다. 이 버전은 Enterprise 버전의 모든 기능을 포함하지만 프로덕션 서버가 아닌 개발 및 테스트 시스템으로 사용하도록 라이선스가 허여되어 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer는 애플리케이션을 빌드하고 테스트하는 사용자에게 적합한 버전입니다.|  
 |Express Edition|Express 버전은 초급 단계의 무료 데이터베이스로 데스크톱 및 소규모 서버 데이터 기반 애플리케이션을 분석 및 빌드하는 데 적합합니다. 이 버전은 개별 소프트웨어 공급업체, 개발자 및 취미로 클라이언트 애플리케이션을 빌드하는 사용자에게 이상적입니다. 고급 데이터베이스 기능이 필요할 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express를 다른 고급 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로 원활하게 업그레이드할 수 있습니다.|  
   
-## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>클라이언트/서버 애플리케이션으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용  
+## <a name="using-ssnoversion-with-clientserver-applications"></a>클라이언트/서버 애플리케이션으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용  
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 직접 연결되는 클라이언트/서버 애플리케이션 실행 컴퓨터에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]클라이언트 구성 요소만 설치하면 됩니다. 데이터베이스 서버의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 관리하거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 애플리케이션을 개발하려는 경우에는 클라이언트 구성 요소를 설치하는 것도 좋은 방법입니다.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-components"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소  
+## <a name="ssnoversion-components"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소  
 
 SQL Server 2017 on Linux는 SQL Server 데이터베이스 엔진을 지원합니다. 다음 표에서는 데이터베이스 엔진의 기능을 설명합니다.   
   
@@ -94,23 +94,23 @@ Developer, Enterprise Core 및 Evaluation Edition에서 지원하는 기능의 �
   
 |기능|Enterprise|Standard|웹|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
-|로그 전달|yes|yes|yes|예|  
-|백업 압축|yes|yes|예|예| 
-|데이터베이스 스냅샷|yes|예|예|예|
-|Always On 장애 조치(failover) 클러스터 인스턴스<sup>1</sup>|yes|yes|예|예| 
-|Always On 가용성 그룹<sup>2</sup>|yes|예|예|예|
-|기본 가용성 그룹<sup>3</sup>|예|yes|예|예|
-|최소 복제본 커밋 가용성 그룹|yes|yes|예|예|
-|클러스터가 없는 가용성 그룹|yes|yes|예|예|
-|온라인 페이지 및 파일 복원|yes|예|예|예|
-|온라인 인덱싱|yes|예|예|예|
-|다시 시작 가능한 온라인 인덱스 다시 작성|yes|예|예|예|
-|온라인 스키마 변경|yes|예|예|예|
-|빠른 복구|yes|예|예|예|
-|미러된 백업|yes|예|예|예|
-|Hot Add 메모리 및 CPU|yes|예|예|예|
-|암호화된 백업|yes|yes|예|예|
-|Azure에 하이브리드 백업(URL에 백업)|yes|yes|예|예|
+|로그 전달|예|예|예|예|  
+|백업 압축|예|예|예|예| 
+|데이터베이스 스냅샷|예|예|예|예|
+|Always On 장애 조치(failover) 클러스터 인스턴스<sup>1</sup>|예|예|예|예| 
+|Always On 가용성 그룹<sup>2</sup>|예|예|예|예|
+|기본 가용성 그룹<sup>3</sup>|예|예|예|예|
+|최소 복제본 커밋 가용성 그룹|예|예|예|예|
+|클러스터가 없는 가용성 그룹|예|예|예|예|
+|온라인 페이지 및 파일 복원|예|예|예|예|
+|온라인 인덱싱|예|예|예|예|
+|다시 시작 가능한 온라인 인덱스 다시 작성|예|예|예|예|
+|온라인 스키마 변경|예|예|예|예|
+|빠른 복구|예|예|예|예|
+|미러된 백업|예|예|예|예|
+|Hot Add 메모리 및 CPU|예|예|예|예|
+|암호화된 백업|예|예|예|예|
+|Azure에 하이브리드 백업(URL에 백업)|예|예|예|예|
   
 <sup>1</sup> Enterprise 버전에서 노드 수는 운영 체제 최댓값입니다. 스탠더드 버전에서는 두 개의 노드가 지원됩니다. 
 
@@ -122,23 +122,23 @@ Developer, Enterprise Core 및 Evaluation Edition에서 지원하는 기능의 �
   
 |기능|Enterprise|Standard|웹|Express|  
 |-------------|----------------|--------------|---------|------------------------| 
-|Columnstore <sup>1</sup>|yes|yes|yes|yes|  
-|클러스터형 columnstore 인덱스의 큰 개체 이진 파일|yes|yes|yes|yes|  
-|온라인 비클러스터형 columnstore 인덱스 다시 작성|yes|예|예|예|
-|메모리 내 OLTP <sup>1</sup>|yes|yes|yes|yes|
-|영구 주 메모리|yes|yes|yes|yes|
-|테이블 및 인덱스 분할|yes|yes|yes|yes|  
-|데이터 압축|yes|yes|yes|yes|
-|관리|yes|예|예|예|  
-|분할된 테이블 병렬 처리|yes|예|예|예|
-|NUMA 인식 및 큰 페이지 메모리 및 버퍼 배열 할당|yes|예|예|예|
-|IO 리소스 관리|yes|예|예|예|  
-|지연된 내구성|yes|yes|yes|yes|
-|자동 튜닝|yes|예|예|예|
-|일괄 처리 모드 적응 조인|yes|예|예|예|
-|일괄 처리 모드 메모리 부여 피드백|yes|예|예|예|
-|다중 문 테이블 반환 함수에 대한 인터리브 실행|yes|yes|yes|yes|
-|대량 삽입 기능 개선|yes|yes|yes|yes|
+|Columnstore <sup>1</sup>|예|예|예|예|  
+|클러스터형 columnstore 인덱스의 큰 개체 이진 파일|예|예|예|예|  
+|온라인 비클러스터형 columnstore 인덱스 다시 작성|예|예|예|예|
+|메모리 내 OLTP <sup>1</sup>|예|예|예|예|
+|영구 주 메모리|예|예|예|예|
+|테이블 및 인덱스 분할|예|예|예|예|  
+|데이터 압축|예|예|예|예|
+|관리|예|예|예|예|  
+|분할된 테이블 병렬 처리|예|예|예|예|
+|NUMA 인식 및 큰 페이지 메모리 및 버퍼 배열 할당|예|예|예|예|
+|IO 리소스 관리|예|예|예|예|  
+|지연된 내구성|예|예|예|예|
+|자동 튜닝|예|예|예|예|
+|일괄 처리 모드 적응 조인|예|예|예|예|
+|일괄 처리 모드 메모리 부여 피드백|예|예|예|예|
+|다중 문 테이블 반환 함수에 대한 인터리브 실행|예|예|예|예|
+|대량 삽입 기능 개선|예|예|예|예|
 
 
 <sup>1</sup> 메모리 내 OLTP 데이터 크기 및 Columnstore 세그먼트 캐시는 크기 조정 제한 섹션에서 버전별로 지정된 메모리 양으로 제한됩니다. 최대 병렬 처리 수준도 제한됩니다. 인덱스 작성의 DOP(프로세스 병렬도)는 Standard Edition의 경우 2DOP, Web, Express Edition의 경우 1DOP로 제한됩니다. 디스크 기반 테이블과 메모리 최적화 테이블에서 생성된 columnstore 인덱스가 해당합니다.
@@ -147,52 +147,52 @@ Developer, Enterprise Core 및 Evaluation Edition에서 지원하는 기능의 �
   
 |기능|Enterprise|Standard|웹|Express|
 |-------------|----------------|--------------|---------|------------------------------------| 
-|행 수준 보안|yes|yes|yes|yes|  
-|Always Encrypted|yes|yes|yes|yes| 
-|동적 데이터 마스킹|yes|yes|yes|yes|   
-|기본 감사|yes|yes|yes|yes| 
-|미세 감사|yes|yes|yes|yes| 
-|투명한 데이터베이스 암호화|yes|예|예|예|   
-|사용자 정의 역할|yes|yes|yes|yes| 
-|포함된 데이터베이스|yes|yes|yes|yes| 
-|백업을 위한 암호화|yes|yes|예|예|  
+|행 수준 보안|예|예|예|예|  
+|Always Encrypted|예|예|예|예| 
+|동적 데이터 마스킹|예|예|예|예|   
+|기본 감사|예|예|예|예| 
+|미세 감사|예|예|예|예| 
+|투명한 데이터베이스 암호화|예|예|예|예|   
+|사용자 정의 역할|예|예|예|예| 
+|포함된 데이터베이스|예|예|예|예| 
+|백업을 위한 암호화|예|예|예|예|  
 
 ##  <a name="RDBMSM"></a> RDBMS 관리성  
   
 |기능|Enterprise|Standard|웹|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
-|관리자 전용 연결|yes|yes|yes|예, 추적 플래그 있음|   
-|PowerShell 스크립팅 지원|yes|yes|yes|yes| 
-|데이터 계층 애플리케이션 구성 요소 작업 지원 - 추출, 배포, 업그레이드, 삭제|yes|yes|yes|yes| 
-|정책 자동화(일정 및 변경 내용 검사)|yes|yes|yes|예|  
-|성능 데이터 수집기|yes|yes|yes|예|
-|표준 성능 보고서|yes|yes|yes|예|
-|계획 지침을 위한 계획 지침 및 계획 고정|yes|yes|yes|예| 
-|인덱스 뷰의 직접 쿼리(NOEXPAND 힌트 사용)|yes|yes|yes|yes| 
-|인덱싱된 뷰의 자동 유지 관리|yes|yes|yes|예|
-|분산형 분할 뷰|yes|예|예|예| 
-|병렬 인덱스 작업|yes|예|예|예|  
-|쿼리 최적화 프로그램의 인덱싱된 뷰 자동 사용|yes|예|예|예| 
-|병렬 일관성 검사|yes|예|예|예| 
-|SQL Server 유틸리티 제어 지점|yes|예|예|예|    
+|관리자 전용 연결|예|예|예|예, 추적 플래그 있음|   
+|PowerShell 스크립팅 지원|예|예|예|예| 
+|데이터 계층 애플리케이션 구성 요소 작업 지원 - 추출, 배포, 업그레이드, 삭제|예|예|예|예| 
+|정책 자동화(일정 및 변경 내용 검사)|예|예|예|예|  
+|성능 데이터 수집기|예|예|예|예|
+|표준 성능 보고서|예|예|예|예|
+|계획 지침을 위한 계획 지침 및 계획 고정|예|예|예|예| 
+|인덱스 뷰의 직접 쿼리(NOEXPAND 힌트 사용)|예|예|예|예| 
+|인덱싱된 뷰의 자동 유지 관리|예|예|예|예|
+|분산형 분할 뷰|예|예|예|예| 
+|병렬 인덱스 작업|예|예|예|예|  
+|쿼리 최적화 프로그램의 인덱싱된 뷰 자동 사용|예|예|예|예| 
+|병렬 일관성 검사|예|예|예|예| 
+|SQL Server 유틸리티 제어 지점|예|예|예|예|    
 
 ##  <a name="Programmability"></a> Programmability  
   
 |기능|Enterprise|Standard|웹|Express 
 |-------------|----------------|--------------|---------|------------------------|  
-|JSON|yes|yes|yes|yes|   
-|쿼리 저장소|yes|yes|yes|yes|   
-|임시 테이블|yes|yes|yes|yes|   
-|네이티브 XML 지원|yes|yes|yes|yes| 
-|XML 인덱싱|yes|yes|yes|yes| 
-|MERGE 및 UPSERT 기능|yes|yes|yes|yes|   
-|날짜 및 시간 데이터 형식|yes|yes|yes|yes|  
-|국제화 지원|yes|yes|yes|yes| 
-|전체 텍스트 및 의미 체계 검색|yes|yes|yes|yes|
-|쿼리에서 언어 지정|yes|yes|yes|yes|
-|Service Broker(메시징)|yes|yes|아니요(클라이언트 전용)|아니요(클라이언트 전용)|
-|Transact-SQL 엔드포인트|yes|yes|yes|예|
-|그래프|yes|yes|yes|yes|  
+|JSON|예|예|예|예|   
+|쿼리 저장소|예|예|예|예|   
+|임시 테이블|예|예|예|예|   
+|네이티브 XML 지원|예|예|예|예| 
+|XML 인덱싱|예|예|예|예| 
+|MERGE 및 UPSERT 기능|예|예|예|예|   
+|날짜 및 시간 데이터 형식|예|예|예|예|  
+|국제화 지원|예|예|예|예| 
+|전체 텍스트 및 의미 체계 검색|예|예|예|예|
+|쿼리에서 언어 지정|예|예|예|예|
+|Service Broker(메시징)|예|예|아니요(클라이언트 전용)|아니요(클라이언트 전용)|
+|Transact-SQL 엔드포인트|예|예|예|예|
+|그래프|예|예|예|예|  
 
 
 <sup>1</sup> 여러 컴퓨팅 노드를 사용하는 확장에는 헤드 노드가 필요합니다.
@@ -205,10 +205,10 @@ Developer, Enterprise Core 및 Evaluation Edition에서 지원하는 기능의 �
   
 |기능 이름|Enterprise|Standard|웹|Express|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|
-|공간 인덱스|yes|yes|yes|yes|   
-|평면 및 측지 데이터 형식|yes|yes|yes|yes| 
-|고급 공간 라이브러리|yes|yes|yes|yes|   
-|산업 표준 공간 데이터 형식 가져오기/내보내기|yes|yes|yes|yes|   
+|공간 인덱스|예|예|예|예|   
+|평면 및 측지 데이터 형식|예|예|예|예| 
+|고급 공간 라이브러리|예|예|예|예|   
+|산업 표준 공간 데이터 형식 가져오기/내보내기|예|예|예|예|   
 ## <a name="Unsupported"></a> 지원되지 않는 기능 및 서비스
 
 다음 기능 및 서비스는 SQL Server 2017 on Linux에서 사용할 수 없습니다. 이 기능에 대한 지원은 시간이 지나면서 점점 더 활성화됩니다.

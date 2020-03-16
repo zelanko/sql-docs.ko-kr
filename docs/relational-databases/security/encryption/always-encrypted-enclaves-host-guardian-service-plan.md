@@ -11,11 +11,11 @@ author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d774df3329c6c9e49e9e1bd9a86dbeaf30ac5765
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74317954"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287147"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>호스트 보호자 서비스 증명 계획
 
@@ -112,7 +112,7 @@ HGS는 암호화 및 암호 해독이 필요한 작업 수 때문에 CPU 바인�
 
 시작하기 전에 HGS 컴퓨터를 도메인에 가입시키지 마세요.
 
-### <a name="include-ssnoversion-mdincludesssnoversion-mdmd-computer-prerequisites"></a>[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 컴퓨터 필수 구성 요소
+### <a name="ssnoversion-md-computer-prerequisites"></a>[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 컴퓨터 필수 구성 요소
 
 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]를 실행하는 컴퓨터는 [SQL Server 설치를 위한 요구 사항](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)과 [Hyper-V 하드웨어 요구 사항](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements)을 모두 충족해야 합니다.
 

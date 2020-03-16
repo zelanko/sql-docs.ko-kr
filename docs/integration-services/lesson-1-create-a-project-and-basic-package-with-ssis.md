@@ -11,11 +11,11 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ff31579a425f9e86fed11811c9d0a42c3113ee15
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338187"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288137"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>1단원: SSIS를 사용하여 프로젝트 및 기본 패키지 만들기
 

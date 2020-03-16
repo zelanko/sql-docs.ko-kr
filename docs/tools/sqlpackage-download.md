@@ -2,19 +2,20 @@
 title: sqlpackage 다운로드 및 설치
 description: Windows, macOS, 또는 Linux용 sqlpackage 다운로드 및 설치
 ms.custom: tools|sos
-ms.date: 06/20/2018
 ms.prod: sql
-ms.reviewer: alayu; sstein
 ms.prod_service: sql-tools
+ms.technology: tools-other
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: 76c1814306bfe155e8dea6faca7b0d4fd5d3fde5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.reviewer: alayu; sstein
+ms.date: 06/20/2018
+ms.openlocfilehash: 743e030b157590f1f33e961059c6bc9d710e7e0a
+ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75257500"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79058777"
 ---
 # <a name="download-and-install-sqlpackage"></a>sqlpackage 다운로드 및 설치
 

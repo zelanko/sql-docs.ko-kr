@@ -25,11 +25,11 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1980e9c96e568352fe616b6de8a6c7320c3d6c86
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544898"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288667"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE(Transact-SQL) 호환성 수준
 
@@ -325,7 +325,7 @@ SQL Server 2017 이전의 SQL Server 이전 버전에서 추적 플래그 4199�
 
 정의된 키워드는 예약된 상태로 유지됩니다. 예를 들어 호환성 수준 90에서 정의된 예약 키워드 PIVOT은 수준 100, 110 및 120에서도 예약되어 있습니다.
 
-애플리케이션이 호환성 수준에 대한 키워드로 예약되어 있는 식별자를 사용할 경우 제대로 실행되지 않습니다. 이러한 문제를 해결하려면 식별자를 대괄호(**[]**)나 따옴표(**""**)로 묶으십시오. 예를 들어 식별자`EXTERNAL`을 사용하는 애플리케이션을 호환성 수준 90으로 업그레이드하려면 식별자를 `[EXTERNAL]`이나 `"EXTERNAL"`로 변경할 수 있습니다.
+애플리케이션이 호환성 수준에 대한 키워드로 예약되어 있는 식별자를 사용할 경우 제대로 실행되지 않습니다. 이러한 문제를 해결하려면 식별자를 대괄호( **[]** )나 따옴표( **""** )로 묶으십시오. 예를 들어 식별자`EXTERNAL`을 사용하는 애플리케이션을 호환성 수준 90으로 업그레이드하려면 식별자를 `[EXTERNAL]`이나 `"EXTERNAL"`로 변경할 수 있습니다.
 
 자세한 내용은 [예약 키워드](../../t-sql/language-elements/reserved-keywords-transact-sql.md)를 참조하세요.
 

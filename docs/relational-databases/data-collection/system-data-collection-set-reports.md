@@ -20,11 +20,11 @@ ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d171085f34e2a20f9e4b1db809327d078ce08436
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339621"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287597"
 ---
 # <a name="system-data-collection-set-reports"></a>시스템 데이터 컬렉션 집합 보고서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

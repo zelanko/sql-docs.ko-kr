@@ -19,11 +19,11 @@ ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 498fe2391cd3e8109aed3f6e1e02436234ffe6f7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74957329"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288267"
 ---
 # <a name="transparent-data-encryption-tde"></a>TDE(투명한 데이터 암호화)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -244,7 +244,7 @@ ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
 ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
 ```
 
-암호화 검사의 현재 상태를 표시하기 위해 `encryption_scan_state` 동적 관리 뷰에 `sys.dm_database_encryption_keys`가 추가되었습니다. 마지막 암호화 검사 상태 변경 날짜와 시간을 포함하는 `encryption_scan_modify_date`라는 새 열도 있습니다. 또한 암호화 검사가 일시 중단된 상태에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작하면 일시 중지된 기존 검사가 있음을 나타내는 메시지가 시작 시 오류 로그에 기록됩니다.
+암호화 검사의 현재 상태를 표시하기 위해 `sys.dm_database_encryption_keys` 동적 관리 뷰에 `encryption_scan_state`가 추가되었습니다. 마지막 암호화 검사 상태 변경 날짜와 시간을 포함하는 `encryption_scan_modify_date`라는 새 열도 있습니다. 또한 암호화 검사가 일시 중단된 상태에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작하면 일시 중지된 기존 검사가 있음을 나타내는 메시지가 시작 시 오류 로그에 기록됩니다.
   
 ## <a name="transparent-data-encryption-and-buffer-pool-extension"></a>투명한 데이터 암호화 및 버퍼 풀 확장  
  TDE를 사용하여 데이터베이스를 암호화한 경우에 BPE(버퍼 풀 확장)와 관련된 파일을 암호화하지 않습니다. BitLocker와 같은 파일 시스템 수준 암호화 도구 또는 BPE 관련 파일에 대한 EFS를 사용해야 합니다.  

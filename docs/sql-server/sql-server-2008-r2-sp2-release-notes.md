@@ -13,12 +13,12 @@ ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 61afc55e04f7cd317e11c7db527dc97fb80fc7be
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9625b8f37d69a8360859c8fd17a207b696234b9f
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "72904262"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112369"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ SQL Server 2008 R2를 시작하고 설치하는 방법은 SQL Server 2008 R2 추
 |32비트 버전의 SQL Server 2008 R2 또는 SQL Server 2008 R2 SP1 클라이언트 및 관리 효율성 도구(SQL Server 2008 R2 Management Studio 포함)|32비트 버전의 SQL Server 2008 R2 SP2로 클라이언트 및 관리 효율성 도구 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkId=251790)에 있는 SQLServer2008R2SP2-KB2630458-x86-ENU.exe|  
 |32비트 버전의 SQL Server 2008 R2 Management Studio Express 또는 SQL Server 2008 R2 SP1 Management Studio Express|32비트 버전의 SQL Server 2008 R2 SP2 Management Studio Express로 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkId=251791)에 있는 SQLManagementStudio_x86_ENU.exe|  
 |32비트 버전 SQL Server 2008 R2 또는 SQL Server 2008 R2 SP1의 모든 버전 **및** 32비트 버전의 클라이언트 및 관리 도구(SQL Server 2008 R2 RTM Management Studio 포함)|32비트 버전의 SQL Server 2008 R2 SP2로 모든 제품 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkId=251790)에 있는 SQLServer2008R2SP2-KB2630458-x86-ENU.exe|  
-|32비트 버전 [Microsoft SQL Server 2008 R2 RTM 기능 팩](https://www.microsoft.com/download/en/details.aspx?id=16978)의 도구 하나 이상|32비트 버전의 Microsoft SQL Server 2008 R2 SP2 Feature Pack으로 도구 업그레이드|[Microsoft SQL Server 2008 R2 SP2 기능 팩](https://go.microsoft.com/fwlink/?LinkId=251792)의 파일 하나 이상|  
+|32비트 버전 [Microsoft SQL Server 2008 R2 RTM 기능 팩](https://www.microsoft.com/download/details.aspx?id=44272)의 도구 하나 이상|32비트 버전의 Microsoft SQL Server 2008 R2 SP2 Feature Pack으로 도구 업그레이드|[Microsoft SQL Server 2008 R2 SP2 기능 팩](https://go.microsoft.com/fwlink/?LinkId=251792)의 파일 하나 이상|  
 |SQL Server 2008 R2의 32비트 설치 없음|Server 2008 R2(SP2 포함) 설치|[SQL Server 2008 R2 SP2 – Express Edition](https://go.microsoft.com/fwlink/?LinkId=251791)으로 이동하여 지침을 따릅니다.|  
 |SQL Server 2008 R2 Management Studio의 32비트 설치 없음|SQL Server 2008 R2 Management Studio(SP2 포함) 설치|[여기](https://go.microsoft.com/fwlink/p/?LinkId=251791) 에 있는 SQLManagementStudio_x86_ENU.exe를 다운로드하여 무료로 SQL Server 2008 R2 SP2 Management Studio Express Edition을 설치합니다.|  
 |64비트 버전 SQL Server 2008 R2 또는 SQL Server 2008 R2 SP1의 모든 버전|64비트 버전의 SQL Server 2008 R2 SP2로 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkId=251790)에 있는 SQLServer2008R2SP2-KB2630458-x64-ENU 또는 SQLServer2008R2SP2-KB2630455-IA64-ENU.exe|  
@@ -50,14 +50,14 @@ SQL Server 2008 R2를 시작하고 설치하는 방법은 SQL Server 2008 R2 추
 |64비트 버전의 SQL Server 2008 R2 또는 SQL Server 2008 R2 SP1 클라이언트 및 관리 도구(SQL Server 2008 R2 Management Studio 포함)|64비트 버전의 SQL Server 2008 R2 SP2로 클라이언트 및 관리 도구 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkId=251790)에 있는 SQLServer2008R2SP2-KB2630458-x64-ENU.exe 또는 SQLServer2008R2SP2-KB2630455-IA64-ENU.exe|  
 |64비트 버전의 SQL Server 2008 R2 Management Studio Express 또는 SQL Server 2008 R2 SP1 Management Studio Express|64비트 버전의 SQL Server 2008 R2 SP2 Management Studio Express로 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkId=251791)에 있는 SQLManagementStudio_x64_ENU.exe|  
 |64비트 버전 SQL Server 2008 R2 또는 SQL Server 2008 R2 SP1의 모든 버전 **및** 64비트 버전의 클라이언트 및 관리 도구(SQL Server 2008 R2 RTM Management Studio 포함)|64비트 버전의 SQL Server 2008 R2 SP2로 모든 제품 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkId=251790)에 있는 SQLServer2008R2SP2-KB2630458-x64-ENU.exe|  
-|64비트 버전 [Microsoft SQL Server 2008 R2 RTM 기능 팩](https://www.microsoft.com/download/en/details.aspx?id=16978)의 도구 하나 이상|64비트 버전의 Microsoft SQL Server 2008 R2 SP2 기능 팩으로 도구 업그레이드|[Microsoft SQL Server 2008 R2 SP2 기능 팩](https://go.microsoft.com/fwlink/?LinkId=251792)의 파일 하나 이상|  
+|64비트 버전 [Microsoft SQL Server 2008 R2 RTM 기능 팩](https://www.microsoft.com/download/details.aspx?id=44272)의 도구 하나 이상|64비트 버전의 Microsoft SQL Server 2008 R2 SP2 기능 팩으로 도구 업그레이드|[Microsoft SQL Server 2008 R2 SP2 기능 팩](https://go.microsoft.com/fwlink/?LinkId=251792)의 파일 하나 이상|  
 |SQL Server 2008 R2의 64비트 설치 안 됨|Server 2008 R2(SP2 포함) 설치|[SQL Server 2008 R2 SP2 – Express Edition](https://go.microsoft.com/fwlink/?LinkId=251791)으로 이동하여 지침을 따릅니다.|  
 |SQL Server 2008 R2 Management Studio의 64비트 설치 안 됨|SQL Server 2008 R2 Management Studio(SP2 포함) 설치|[여기](https://go.microsoft.com/fwlink/p/?LinkId=251791) 에 있는 SQLManagementStudio_x64_ENU.exe를 다운로드하여 무료로 SQL Server 2008 R2 SP2 Management Studio Express Edition을 설치합니다.|  
   
 ### <a name="22-setup-might-fail-if-sqagtresdll-is-locked-by-another-process"></a>2.2 SQAGTRES.dll이 다른 프로세스에 의해 잠겨 있는 경우 설치 실패  
-**문제:** 다음 오류로 SQL Server 설치 작업이 실패할 수 있습니다. `Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.` 근본 원인은 C:\Windows\system32\SQAGTRES.DLL이 다른 프로세스에 의해 잠겨 있고 설치 프로그램에서 업데이트할 수 없었기 때문입니다.  
+**문제**: SQL Server 설치 작업이 다음 오류에 의해 실패할 수 있습니다. `Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.` 근본 원인은 C:\Windows\system32\SQAGTRES.DLL이 다른 프로세스에 의해 잠겨 있기 때문이며 이 경우 설치 작업에서 해당 파일을 업데이트할 수 없습니다.  
   
-**해결 방법**: C:\Windows\system32\SQAGTRES.DLL의 이름을 C:\Windows\system32\SQAGTRES_old.DLL과 같은 임시 이름으로 바꾼 다음 설치 오류 메시지에서 다시 시도 옵션을 선택합니다. 이렇게 하면 설치를 계속할 수 있습니다. 다시 부팅한 이후에 임시 파일 C:\Windows\system32\SQAGTRES_old.DLL을 삭제하면 됩니다.  
+**해결 방법**: C:\Windows\system32\SQAGTRES.DLL의 이름을 C:\Windows\system32\SQAGTRES_old.DLL과 같은 임시 이름으로 바꾼 다음, 설치 오류 메시지에서 다시 시도 옵션을 선택합니다. 이렇게 하면 설치를 계속할 수 있습니다. 다시 부팅한 이후에 임시 파일 C:\Windows\system32\SQAGTRES_old.DLL을 삭제하면 됩니다.  
   
 ## <a name="30-known-issues-fixed-in-this-service-pack"></a>3.0 이 서비스 팩에서 해결된 알려진 문제  
 이 서비스 팩에서 해결된 전체 버그 및 알려진 문제 목록은 이 [마스터 KB 문서](https://support.microsoft.com/kb/2630455)를 참조하십시오.  

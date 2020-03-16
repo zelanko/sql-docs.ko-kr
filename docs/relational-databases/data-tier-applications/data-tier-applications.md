@@ -15,11 +15,11 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2068c9a4daa05ec659fa074f431b86f7fee7bc81
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72278281"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287587"
 ---
 # <a name="data-tier-applications"></a>데이터 계층 애플리케이션
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "72278281"
   
 -   **가져오기** - 사용자가 스키마 및 데이터를 호스트 서버의 새 데이터베이스로 가져올 수 있습니다.  
   
- SQL Server Management Studio, Azure 포털 및 DACFx API와 같은 데이터베이스 관리 도구에서는 이 두 기능이 모두 지원됩니다.  
+ 이러한 두 기능은 SQL Server Management Studio, Azure Portal 및 DACFx API와 같은 데이터베이스 관리 도구에서 지원됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
  DAC 패키지를 배포하여 데이터베이스를 만드는 작업을 포함하여 데이터베이스를 만들기 위해서는 사용자가 **dbmanager** 역할의 멤버이거나 사용자에게 **CREATE DATABASE** 권한이 할당되어 있어야 합니다. 데이터베이스를 삭제하기 위해서는 사용자가 **dbmanager** 역할의 멤버이거나 사용자에게 **DROP DATABASE** 권한이 할당되어 있어야 합니다.  

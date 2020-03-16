@@ -1,6 +1,6 @@
 ---
 title: REST API를 사용한 개발
-ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
+description: REST API는 SQL Server 2017 Reporting Services 보고서 서버 카탈로그에 있는 개체에 대한 프로그래밍 방식 액세스를 제공합니다.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -9,12 +9,12 @@ ms.technology: developer
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
-ms.openlocfilehash: 48d3cea7dfb57ad771f512806fd0c95528566559
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 90ccb4084f9dc2a2a2cd1da4f51281df147524c6
+ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75321826"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78937674"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Reporting Services에 대한 REST API를 사용하여 개발
 

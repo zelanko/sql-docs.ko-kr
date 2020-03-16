@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ab12a58134dd5b7a183a60a2837f013a4de162b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fb4fe31bfddb1c2312ae7e99e8a53609b5e5d70c
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77081725"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112358"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>파워 피벗 연결 형식(SSRS)
   SQL Server Analysis Services 데이터 처리 확장 프로그램을 사용하면 SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에 게시된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에서 데이터를 검색할 수 있습니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "77081725"
 ## <a name="prerequisites"></a>사전 요구 사항  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본을 SharePoint 사이트의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에 게시해야 합니다.  
   
- 보고서 작성기에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서로의 연결을 지원하려면 워크스테이션 컴퓨터에 SQL Server 2008 R2 ADOMD.NET이 있어야 합니다. 이 클라이언트 라이브러리는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel과 함께 설치되지만 이 애플리케이션이 없는 컴퓨터를 사용하는 경우에는 [SQL Server 2008 R2 기능 팩](https://www.microsoft.com/download/details.aspx?id=16978)에서 ADOMD.NET을 다운로드하여 설치해야 합니다.  
+ 보고서 작성기에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서로의 연결을 지원하려면 워크스테이션 컴퓨터에 SQL Server 2008 R2 ADOMD.NET이 있어야 합니다. 이 클라이언트 라이브러리는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel과 함께 설치되지만 이 애플리케이션이 없는 컴퓨터를 사용하는 경우에는 [SQL Server 2008 R2 기능 팩](https://www.microsoft.com/download/details.aspx?id=44272)에서 ADOMD.NET을 다운로드하여 설치해야 합니다.  
   
 ## <a name="data-source-type"></a>데이터 원본 유형  
  보고서 데이터 원본 유형 **Microsoft SQL Server Analysis Services**를 사용합니다.  

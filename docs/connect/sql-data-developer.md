@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8d94f07f12269bb2d4690ae01a5c51dd91d051f7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2e750d14aae5006e1229130eb4055fac74a7029b
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68893915"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198420"
 ---
 # <a name="sql-data-developer"></a>SQL 데이터 개발자
 Microsoft의 SQL 데이터 플랫폼을 사용하여 웹 서버, 엔터프라이즈 서버 및 클라우드의 모바일 디바이스 및 데스크톱에서 데이터 중심 솔루션을 만들 수 있습니다.  
@@ -23,7 +23,7 @@ Microsoft의 SQL 데이터 플랫폼을 사용하여 웹 서버, 엔터프라이
 ## <a name="sql-data-storage"></a>SQL 데이터 스토리지
 * [SQL Server 데이터베이스 엔진](../database-engine/configure-windows/sql-server-database-engine.md) SQL Server 데이터베이스 엔진을 사용하여 OLTP(온라인 트랜잭션 처리) 또는 OLAP(온라인 분석 처리) 데이터에 사용할 관계형 데이터베이스를 만들 수 있습니다. 
 * [SQL Azure](https://docs.microsoft.com/azure/sql-database/): SQL Azure를 사용하여 데이터베이스를 클라우드로 이동합니다. 
-* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=17876): 모바일 디바이스, 데스크톱 및 웹 클라이언트를 위한 독립 실행형 애플리케이션과 간헐적으로 연결되는 애플리케이션을 구축하는 SQL Server Compact입니다.
+* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709): 모바일 디바이스, 데스크톱 및 웹 클라이언트를 위한 독립 실행형 애플리케이션과 간헐적으로 연결되는 애플리케이션을 구축하는 SQL Server Compact입니다.
 * [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): SQL Server의 전체 서버 인스턴스를 관리할 필요 없이 개발 중에 LocalDB를 사용하여 Transact-SQL 코드를 작성하고 테스트할 수 있습니다.
 
 ## <a name="sql-data-tools"></a>SQL 데이터 도구
