@@ -17,17 +17,20 @@ helpviewer_keywords:
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0594066f044288757e5e31f8e078fabb4c2f3775
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b0c847215d31bd2064467c3edbce42ba957c2e78
+ms.sourcegitcommit: f7af758b353b53ac3b596d79fd6e32ad7e1e61cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68120226"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79448335"
 ---
 # <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  기존 데이터베이스 사용자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 매핑합니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) 를 사용 해야 합니다.  
+  기존 데이터베이스 사용자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 매핑합니다. 
+  
+ > [!IMPORTANT]
+ > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) 를 사용 해야 합니다.  
   
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -61,7 +64,7 @@ sp_change_users_login [ @Action = ] 'action'
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 이름입니다. *login* 은 **sysname**이며 기본값은 NULL입니다.  
   
  [ @Password= ] '*암호*'  
- Auto_Fix를 지정 하 여 만든 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 할당 된 암호입니다 ****. 일치 하는 로그인이 이미 있는 경우 사용자와 로그인이 매핑되고 *암호* 는 무시 됩니다. 일치 하는 로그인이 없으면 sp_change_users_login 새 로그인을 만들고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *암호* 를 새 로그인의 암호로 할당 합니다. *password* 는 **sysname**이며 NULL이 아니어야 합니다.  
+ Auto_Fix를 지정 하 여 만든 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 할당 된 암호입니다 **Auto_Fix**. 일치 하는 로그인이 이미 있는 경우 사용자와 로그인이 매핑되고 *암호* 는 무시 됩니다. 일치 하는 로그인이 없으면 sp_change_users_login 새 로그인을 만들고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *암호* 를 새 로그인의 암호로 할당 합니다. *password* 는 **sysname**이며 NULL이 아니어야 합니다.  
   
 > **중요!!** 항상 [강력한 암호를 사용 하세요.](../../relational-databases/security/strong-passwords.md)
   
@@ -76,7 +79,7 @@ sp_change_users_login [ @Action = ] 'action'
 |UserSID|**varbinary (85)**|사용자의 보안 식별자입니다.|  
   
 ## <a name="remarks"></a>설명  
- sp_change_users_login을 사용하여 현재 데이터베이스의 데이터베이스 사용자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인과 연결할 수 있습니다. 사용자에 대한 로그인이 변경된 경우 sp_change_users_login을 통해 사용자 권한을 그대로 유지한 채 새 로그인에 사용자를 연결할 수 있습니다. 새 *로그인* 은 sa가 될 수 없으며 *사용자*는 dbo, guest 또는 INFORMATION_SCHEMA 사용자가 될 수 없습니다.  
+ sp_change_users_login을 사용하여 현재 데이터베이스의 데이터베이스 사용자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인과 연결할 수 있습니다. 사용자에 대한 로그인이 변경된 경우 sp_change_users_login을 통해 사용자 권한을 그대로 유지한 채 새 로그인에 사용자를 연결할 수 있습니다. 새 *로그인* 은 sa가 될 수 없으며 *사용자* 는 dbo, guest 또는 INFORMATION_SCHEMA 사용자가 될 수 없습니다.  
   
  sp_change_users_login은 데이터베이스 사용자를 Windows 수준 보안 주체, 인증서 또는 비대칭 키에 매핑하는 데 사용할 수 없습니다.  
   
@@ -122,7 +125,7 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;로그인 &#40;만들기](../../t-sql/statements/create-login-transact-sql.md)   
+ [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [Transact-sql&#41;sp_adduser &#40;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
  [Transact-sql&#41;sp_helplogins &#40;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

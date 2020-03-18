@@ -20,12 +20,12 @@ ms.assetid: 0d9c5b09-86fe-40ff-baab-00b7c051402f
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 362ccc5c85523b3d37cb792a42e8be4cd87d7510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c3dba46f4d0e2ecdebda13fe3fe9412219c2a755
+ms.sourcegitcommit: f7af758b353b53ac3b596d79fd6e32ad7e1e61cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68108997"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79448477"
 ---
 # <a name="syssql_logins-transact-sql"></a>sys.sql_logins(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68108997"
 |**is_expiration_checked**|**bit**|암호 만기가 확인됩니다.|  
 |**password_hash**|**varbinary (256)**|SQL 로그인 암호의 해시입니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 저장된 암호 정보는 솔트 암호의 SHA-512를 사용하여 계산됩니다.|  
   
- 이 뷰가 상속 하는 열 목록은 [server_principals &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)을 참조 하십시오.  
+ 이 뷰가 상속 하는 열 목록은 [server_principals &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)을 참조 하십시오. 및 `is_fixed_role` 열 `owning_principal_id` 은 sys. server_principals에서 상속 되지 않습니다.
   
 ## <a name="remarks"></a>설명  
  인증 로그인과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 인증 로그인을 모두 보려면 [server_principals &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)을 참조 하십시오.  
