@@ -220,6 +220,10 @@
               href: big-data-cluster/spark-hive-tools-vscode.md
             - name: 확장 Spark 기록 서버 사용
               href: big-data-cluster/spark-history-server.md
+        - name: 문제 해결
+          items:
+            - name: Active Directory 배포
+              href: big-data-cluster/troubleshoot-active-directory.md
     - name: 참조
       items:
         - name: 배포 참조

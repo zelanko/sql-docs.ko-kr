@@ -11,11 +11,11 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: a874aaf9ec136ff9ea27cbeaa92011a07f3718c7
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340445"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287067"
 ---
 # <a name="modify-user-and-workspace-settings"></a>사용자 및 작업 영역 설정 수정
 

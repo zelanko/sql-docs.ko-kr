@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2014을 설치 하기 위한 하드웨어 및 소프트웨어 요구 사항 | Microsoft Docs
+title: 'SQL Server 2014: 하드웨어 & 소프트웨어 요구 사항'
 ms.custom: ''
 ms.date: 07/10/2018
 ms.prod: sql-server-2014
@@ -45,14 +45,14 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce6cef69abe7c2461552229363c8334ca56555b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 664422d0875ade408e48166920852ee66162a885
+ms.sourcegitcommit: 976a246a92bd6d1665882484a3f49a6d3edd2b8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75245661"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79433820"
 ---
-# <a name="hardware-and-software-requirements-for-installing-sql-server-2014"></a>Hardware and Software Requirements for Installing SQL Server 2014
+# <a name="sql-server-2014-hardware-and-software-requirements"></a>SQL Server 2014: 하드웨어 및 소프트웨어 요구 사항
 
  > - ** [무료 Developer edition](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)을 설치 하 여 SQL Server 2016를 시도 하세요!**  
   
@@ -70,12 +70,11 @@ ms.locfileid: "75245661"
   
 -   터미널 서비스 클라이언트를 통한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램 실행은 지원되지 않습니다. 터미널 서비스 클라이언트를 통해 설치 프로그램을 시작 하면 설치가 실패 합니다.   
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 제품에 필요한 다음 소프트웨어 구성 요소를 설치합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 제품에 필요한 다음 소프트웨어 구성 요소를 설치합니다.  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치 지원 파일  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 지원 파일  
   
 -   또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[win8](../../includes/win8-md.md)]에 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 를 설치 하기 위한 최소 버전 요구 사항은 [windows Server 2012 또는 windows 8에 SQL Server 설치](https://support.microsoft.com/kb/2681562) (https://support.microsoft.com/kb/2681562))를 참조 하세요.  
   
@@ -95,8 +94,13 @@ ms.locfileid: "75245661"
   
 -   [도메인 컨트롤러에 SQL Server 설치](hardware-and-software-requirements-for-installing-sql-server.md#DC_support)  
   
-##  <a name="hwswr"></a>하드웨어 및 소프트웨어 요구 사항  
- 다음 요구 사항은 모든 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치에 적용됩니다.  
+##  <a name="hwswr"></a> 하드웨어 및 소프트웨어 요구 사항  
+
+
+이 섹션의 표에는 SQL Server를 실행 하기 위한 최소 요구 사항이 나와 있습니다. [최적의 성능을](https://support.microsoft.com/help/2964518)위해 권장 되는 구성 옵션을 사용할 수도 있습니다. 
+
+다음 소프트웨어 요구 사항은 모든 설치에 적용 됩니다.  
+
   
 |구성 요소|요구 사항|  
 |---------------|-----------------|  
@@ -107,30 +111,27 @@ ms.locfileid: "75245661"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 미디어에는 .NET Framework 4가 포함되어 있지 않기 때문에 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 설치 프로그램에서 .NET Framework 4를 다운로드하여 설치합니다.<br />-[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]는 SP1 또는 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] [!INCLUDE[win8srv](../../includes/win8srv-md.md)]의 Server Core 모드에서 .net 4.0을 설치 하지 않습니다. 
   [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] SP1 또는 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 의 Server Core 설치에 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]를 설치하려면 먼저 .NET 4.0을 설치해야 합니다.|  
 |Windows PowerShell|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Windows PowerShell 2.0;을 설치 하거나 사용 하도록 설정 하지 않습니다. 그러나 Windows PowerShell 2.0은 구성 요소 및 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 대 한 설치 필수 구성 요소입니다. 설치 프로그램에서 Windows PowerShell 2.0이 없는 것으로 보고하는 경우 [Windows 관리 프레임워크](https://go.microsoft.com/fwlink/?LinkId=186214) 페이지에 나오는 지침에 따라 Windows PowerShell 2.0을 설치하거나 사용하도록 설정할 수 있습니다.|  
-|네트워크 소프트웨어|
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에 대해 지원되는 운영 체제에는 기본 제공 네트워크 소프트웨어가 포함되어 있습니다. 독립 실행형 설치의 명명된 인스턴스 및 기본 인스턴스는 네트워크 프로토콜로 공유 메모리, 명명된 파이프, TCP/IP 및 VIA를 지원합니다.<br /><br /> 참고: VIA 프로토콜은 장애 조치(failover) 클러스터에서 지원되지 않습니다. SQL Server 인스턴스와 동일한 장애 조치(failover) 클러스터 노드에서 실행 중인 클라이언트 또는 애플리케이션은 공유 메모리 프로토콜을 사용하여 로컬 파이프 주소를 통해 SQL Server에 연결할 수 있습니다. 그러나 이러한 연결은 클러스터에서 인식되지 않으며 인스턴스 장애 조치(failover) 이후에 실패합니다. 따라서 이 연결은 권장되지 않으며 아주 특별한 경우에만 사용해야 합니다. VIA 프로토콜은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br /><br /> 네트워크 프로토콜 및 네트워크 라이브러리에 대한 자세한 내용은 [Network Protocols and Network Libraries](network-protocols-and-network-libraries.md)를 참조하십시오.|  
+|네트워크 소프트웨어|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에 대해 지원되는 운영 체제에는 기본 제공 네트워크 소프트웨어가 포함되어 있습니다. 독립 실행형 설치의 명명된 인스턴스 및 기본 인스턴스는 네트워크 프로토콜로 공유 메모리, 명명된 파이프, TCP/IP 및 VIA를 지원합니다.<br /><br /> 참고: VIA 프로토콜은 장애 조치(failover) 클러스터에서 지원되지 않습니다. SQL Server 인스턴스와 동일한 장애 조치(failover) 클러스터 노드에서 실행 중인 클라이언트 또는 애플리케이션은 공유 메모리 프로토콜을 사용하여 로컬 파이프 주소를 통해 SQL Server에 연결할 수 있습니다. 그러나 이러한 연결은 클러스터에서 인식되지 않으며 인스턴스 장애 조치(failover) 이후에 실패합니다. 따라서 이 연결은 권장되지 않으며 아주 특별한 경우에만 사용해야 합니다. VIA 프로토콜은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br /><br /> 네트워크 프로토콜 및 네트워크 라이브러리에 대한 자세한 내용은 [Network Protocols and Network Libraries](network-protocols-and-network-libraries.md)를 참조하십시오.|  
 |가상화|
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]는 다음 운영 체제의 Hyper-V 역할에서 실행되는 가상 컴퓨터 환경에서 지원됩니다.<br />-<br />                    
   [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard, Enterprise 및 Datacenter Edition<br />-[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]SP1 Standard, Enterprise 및 Datacenter edition<br />-<br />                    [!INCLUDE[win8srv](../../includes/win8srv-md.md)]Datacenter 및 Standard edition.<br /><br /> 각 가상 머신(자식 파티션)에는 부모 파티션에 필요한 리소스 외에 해당 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스에 필요한 프로세서 리소스, 메모리 및 디스크 리소스를 충분히 제공해야 합니다. 요구 사항은 이 항목의 뒷부분에 나열되어 있습니다.\*<br /><br /> 
   [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 또는 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1의 Hyper-V 역할 내에서 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 32비트/64비트 또는 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64비트 또는 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 64비트 버전을 실행하는 가상 컴퓨터에 최대 4개의 가상 프로세서를 할당할 수 있습니다.<br /><br /> Hyper-v 역할 내에서 다음을 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]수행 합니다.<br />
   [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 32비트/64비트를 실행하는 가상 컴퓨터에는 최대 8개의 가상 프로세서를 할당할 수 있습니다.<br />
   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64비트 또는 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 64비트 버전을 실행하는 가상 컴퓨터에 최대 64개의 가상 프로세서를 할당할 수 있습니다.<br /><br /> 다양 한 버전의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 계산 용량 제한에 대 한 자세한 내용과 하이퍼 스레드 프로세서를 사용 하는 물리적 및 가상화 된 환경에서의 차이점에 대 한 자세한 내용은 [SQL Server의 버전별 계산 용량 제한](../compute-capacity-limits-by-edition-of-sql-server.md)을 참조 하세요. Hyper-V 역할에 대한 자세한 내용은 [Windows Server 2008 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=182820)를 참조하십시오.<br /><br /> ** \* 중요 \* \* ** 게스트 장애 조치 (failover) [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]클러스터링은에서 지원 됩니다. 게스트 장애 조치(Failover) 클러스터링이 지원되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 및 운영 체제와 가상화 지원에 대한 자세한 내용은 [하드웨어 가상 환경에서 실행되는 Microsoft SQL Server 제품에 대한 지원 정책](https://go.microsoft.com/fwlink/?LinkId=151676)을 참조하십시오.|  
-|하드 디스크|
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에는 최소 6GB의 사용 가능한 하드 디스크 공간이 필요합니다.<br /><br /> 디스크 공간 요구 사항은 설치하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 요소에 따라 다릅니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [Hard Disk Space Requirements (32-Bit and 64 Bit)](hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) 을 참조하십시오. 데이터 파일에 대해 지원되는 스토리지 유형에 대한 자세한 내용은 [Storage Types for Data Files](hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)을 참조하십시오.|  
+|하드 디스크|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에는 최소 6GB의 사용 가능한 하드 디스크 공간이 필요합니다.<br /><br /> 디스크 공간 요구 사항은 설치하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 요소에 따라 다릅니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [Hard Disk Space Requirements (32-Bit and 64 Bit)](hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) 을 참조하십시오. 데이터 파일에 대해 지원되는 스토리지 유형에 대한 자세한 내용은 [Storage Types for Data Files](hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)을 참조하십시오.|  
 |드라이브|디스크에서 설치하려면 경우에 따라 DVD 드라이브가 필요합니다.|  
-|모니터|
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에는 Super-VGA(800x600) 이상 해상도의 모니터가 필요합니다.|  
+|모니터|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에는 Super-VGA(800x600) 이상 해상도의 모니터가 필요합니다.|  
 |인터넷|인터넷 기능을 사용하려면 인터넷에 액세스해야 합니다(요금이 부과될 수 있음).|  
   
  * 가상 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 머신에서 실행 되는는 가상화의 오버 헤드로 인해 기본적으로 실행 되는 것 보다 느립니다.  
   
-##  <a name="pmosr"></a>프로세서, 메모리 및 운영 체제 요구 사항  
+##  <a name="pmosr"></a> 프로세서, 메모리 및 운영 체제 요구 사항  
  모든 버전의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에는 다음과 같은 메모리 및 프로세서 요구 사항이 적용됩니다.  
   
 |구성 요소|요구 사항|  
 |---------------|-----------------|  
-|메모리<sup>[1]</sup>|**최대**<br /><br /> Express Edition: 512MB<br /><br /> 기타 모든 버전: 1GB<br /><br /> **바람직하지**<br /><br /> Express Edition: 1GB<br /><br /> 기타 모든 버전: 최소 4GB가 필요하며 데이터베이스 크기가 늘어남에 따라 메모리 크기를 늘려 성능을 최대화해야 합니다.|  
-|프로세서 속도|**최대**<br /><br /> x86 프로세서: 1.0GHz<br /><br /> x64 프로세서: 1.4GHz<br /><br /> **권장:** 2.0 GHz 이상|  
+|메모리<sup>[1]</sup>|**최소:**<br /><br /> Express Edition: 512MB<br /><br /> 기타 모든 버전: 1 GB<br /><br /> **권장:**<br /><br /> Express Edition: 1 GB<br /><br /> 기타 모든 버전: 최소 4GB가 필요하며 데이터베이스 크기가 늘어남에 따라 메모리 크기를 늘려 성능을 최대화해야 합니다.|  
+|프로세서 속도|**최소:**<br /><br /> x86 프로세서: 1.0GHz<br /><br /> x64 프로세서: 1.4GHz<br /><br /> **권장:** 2.0GHz 이상|  
 |프로세서 유형|x64 프로세서: AMD Opteron, AMD Athlon 64, Intel EM64T를 지원하는 Intel Xeon, Intel EM64T를 지원하는 Intel Pentium IV<br /><br /> x86 프로세서: Pentium III 호환 프로세서 이상|  
   
  <sup>[1]</sup> DQS ()에 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] 구성 요소를 설치 하는 데 필요한 최소 메모리는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 최소 메모리 요구 사항과 다른 2gb RAM입니다. DQS 설치에 대한 자세한 내용은 [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)를 참조하십시오.  
@@ -156,7 +157,7 @@ Server Core 모드에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]�
 | Windows Server 2019 Standard | Windows Server 2019 Datacenter |
 | Windows Server 2016 Standard | Windows Server 2016 Datacenter |
 | Windows Server 2012 R2 Standard | Windows Server 2012 R2 데이터 센터|
-| Windows Server 2012 Standard | Windows Server 2012 Datacenter |
+| Windows Server 2012 Standard | Windows Server 2012 데이터 센터 |
 | Windows Server 2008 R2 SP1 Standard | Windows Server 2008 R2 SP1 데이터 센터 |
 | Windows Server 2008 R2 SP1 Enterprise | Windows Server 2008 R2 SP1 웹|
    | &nbsp; | &nbsp; |
@@ -446,7 +447,7 @@ Server Core 모드에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]�
 -   SQL Server 2008 R2  
     및 SQL Server 2008은 Windows 10에서 지원되지 않습니다.  
   
-##  <a name="CrossLanguageSupport"></a>언어 간 호환성 지원  
+##  <a name="CrossLanguageSupport"></a> 언어 간 호환성 지원  
  지역화된 언어로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하기 위한 언어 간 호환성 지원 및 고려 사항에 대한 자세한 내용은 [SQL Server의 로컬 언어 버전](local-language-versions-in-sql-server.md)을 참조하세요.  
   
 ##  <a name="ess"></a>확장 시스템 지원  
@@ -460,10 +461,8 @@ Server Core 모드에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]�
   
 |**기능**|**디스크 공간 요구 사항**|  
 |-----------------|--------------------------------|  
-|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 데이터 파일, 복제, 전체 텍스트 검색 및 Data Quality Services|811MB|  
-|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 데이터 파일|345MB|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 데이터 파일, 복제, 전체 텍스트 검색 및 Data Quality Services|811MB|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 데이터 파일|345MB|  
 |
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 보고서 관리자|304MB|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|591MB|  
@@ -473,7 +472,7 @@ Server Core 모드에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]�
   
  <sup>1</sup> 다운로드 한 온라인 설명서 내용에 대 한 디스크 공간 요구 사항은 200 MB입니다.  
   
-##  <a name="StorageTypes"></a>데이터 파일의 저장소 유형  
+##  <a name="StorageTypes"></a> 데이터 파일 스토리지 유형  
  데이터 파일에 대해 지원되는 스토리지 유형은 다음과 같습니다.  
   
 -   로컬 디스크  
@@ -486,26 +485,20 @@ Server Core 모드에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]�
   
     > **중요!!** SMB 스토리지는 Windows 파일 서버 또는 타사 SMB 저장 디바이스에서 호스팅할 수 있습니다. Windows 파일 서버가 사용되는 경우 Windows 파일 서버 버전이 2008 이상이어야 합니다. 스토리지 옵션으로 SMB 파일 공유를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 대한 자세한 내용은 [SMB fileshare 기능이 있는 SQL Server를 스토리지 옵션으로 설치](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
   
-    > **경고!!!!**  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 설치에서는 tempdb 파일 설치에 대해서만 로컬 디스크를 지원합니다. Tempdb 데이터 및 로그 파일에 대해 지정 된 경로가 **모든** 클러스터 노드에서 올바른지 확인 하십시오. 장애 조치(failover) 중에 장애 조치 대상 노드에서 tempdb 디렉터리를 사용할 수 없으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스가 온라인이 될 수 없습니다.  
+    > **경고**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 설치에서는 tempdb 파일 설치에 대해서만 로컬 디스크를 지원합니다. Tempdb 데이터 및 로그 파일에 대해 지정 된 경로가 **모든** 클러스터 노드에서 올바른지 확인 하십시오. 장애 조치(failover) 중에 장애 조치 대상 노드에서 tempdb 디렉터리를 사용할 수 없으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스가 온라인이 될 수 없습니다.  
   
 ##  <a name="DC_support"></a>도메인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컨트롤러에 설치-제한 사항  
- 보안상의 이유로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 도메인 컨트롤러에 설치하지 않는 것이 좋습니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 도메인 컨트롤러 컴퓨터에 설치하는 것을 차단하지는 않지만 다음과 같은 제한 사항을 적용합니다.  
+ 보안상의 이유로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 도메인 컨트롤러에 설치하지 않는 것이 좋습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 도메인 컨트롤러 컴퓨터에 설치하는 것을 차단하지는 않지만 다음과 같은 제한 사항을 적용합니다.  
   
 -   도메인 컨트롤러에서는 로컬 서비스 계정으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 실행할 수 없습니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 컴퓨터에 설치한 후에는 도메인 멤버에서 도메인 컨트롤러로 컴퓨터를 변경할 수 없습니다. 호스트 컴퓨터를 도메인 컨트롤러로 변경하려면 먼저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 제거해야 합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 컴퓨터에 설치한 후에는 도메인 멤버에서 도메인 컨트롤러로 컴퓨터를 변경할 수 없습니다. 호스트 컴퓨터를 도메인 컨트롤러로 변경하려면 먼저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 제거해야 합니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 컴퓨터에 설치한 후에는 도메인 컨트롤러에서 도메인 멤버로 컴퓨터를 변경할 수 없습니다. 호스트 컴퓨터를 도메인 멤버로 변경하려면 먼저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 제거해야 합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 컴퓨터에 설치한 후에는 도메인 컨트롤러에서 도메인 멤버로 컴퓨터를 변경할 수 없습니다. 호스트 컴퓨터를 도메인 멤버로 변경하려면 먼저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 제거해야 합니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스는 클러스터 노드가 도메인 컨트롤러인 경우 지원되지 않습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스는 클러스터 노드가 도메인 컨트롤러인 경우 지원되지 않습니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 읽기 전용 도메인 컨트롤러에서 보안 그룹을 만들거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정을 프로비전할 수 없습니다. 이 경우 설치 프로그램에서 오류가 발생합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 읽기 전용 도메인 컨트롤러에서 보안 그룹을 만들거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정을 프로비전할 수 없습니다. 이 경우 설치 프로그램에서 오류가 발생합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 설치 계획](planning-a-sql-server-installation.md)   

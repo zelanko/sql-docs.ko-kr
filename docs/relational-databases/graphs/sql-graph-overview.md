@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ca26af4738de25937b71e0c97c6272414a0957a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2b0934562f2f0ff1a2dd3ec8df1ed15f10d955ee
+ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74096081"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79428154"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database를 사용한 Graph 처리
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -30,19 +30,19 @@ ms.locfileid: "74096081"
 
 ## <a name="what-is-a-graph-database"></a>그래프 데이터베이스용 이란?  
 그래프 데이터베이스는 노드(또는 꼭짓점) 및 모서리(또는 관계) 컬렉션입니다. 노드는 엔터티(예: 개인 또는 조직)를 나타내고 에지는 에지가 연결하는 두 노드 간의 관계(예: 좋아요 또는 친구)를 나타냅니다. 노드와 가장자리 모두에 연결 된 속성이 있을 수 있습니다. 그래프 데이터베이스를 고유하게 만드는 몇 가지 기능은 다음과 같습니다.  
--   에지 또는 관계는 그래프 데이터베이스의 첫 번째 클래스 엔터티이며 엔터티와 연결된 특성 또는 속성을 포함할 수 있습니다. 
--   단일 에지는 유연하게 그래프 데이터베이스의 여러 노드를 연결할 수 있습니다.
--   패턴 일치 및 멀티 홉 탐색 쿼리를 쉽게 표현할 수 있습니다.
--   이행적 폐쇄 및 다형적 쿼리를 쉽게 표현할 수 있습니다.
+-    에지 또는 관계는 그래프 데이터베이스의 첫 번째 클래스 엔터티이며 엔터티와 연결된 특성 또는 속성을 포함할 수 있습니다. 
+-    단일 에지는 유연하게 그래프 데이터베이스의 여러 노드를 연결할 수 있습니다.
+-    패턴 일치 및 멀티 홉 탐색 쿼리를 쉽게 표현할 수 있습니다.
+-    이행적 폐쇄 및 다형적 쿼리를 쉽게 표현할 수 있습니다.
 
 ## <a name="when-to-use-a-graph-database"></a>그래프 데이터베이스를 사용 하는 경우
 
-그래프 데이터베이스로 수행할 수 있는 작업은 없고, 이러한 작업은 관계형 데이터베이스로도 수행할 수 없습니다. 그러나 graph 데이터베이스를 사용 하면 특정 종류의 쿼리를 보다 쉽게 표현할 수 있습니다. 또한 특정 최적화를 사용 하면 특정 쿼리를 보다 효율적으로 수행할 수 있습니다. 둘 중 하나를 선택하는 결정은 다음 요소를 기반으로 할 수 있습니다.  
--   응용 프로그램에 계층적 데이터가 있습니다. HierarchyID 데이터 형식은 계층을 구현 하는 데 사용할 수 있지만 몇 가지 제한 사항이 있습니다. 예를 들어 노드에 대 한 여러 부모를 저장 하는 것은 허용 되지 않습니다.
--   응용 프로그램에 복잡 한 다 대 다 관계가 있습니다. 응용 프로그램이 진화 함에 따라 새 관계가 추가 됩니다.
--   상호 연결된 데이터 및 관계를 분석해야 합니다.
+관계형 데이터베이스는 그래프 데이터베이스에서 수행할 수 있는 모든 작업을 수행할 수 있습니다. 그러나 graph 데이터베이스를 사용 하면 특정 종류의 쿼리를 보다 쉽게 표현할 수 있습니다. 또한 특정 최적화를 사용 하면 특정 쿼리를 보다 효율적으로 수행할 수 있습니다. 관계형 데이터베이스 또는 그래프 데이터베이스를 선택 하는 것은 다음 요소에 따라 결정 됩니다.  
+-    응용 프로그램에 계층적 데이터가 있습니다. HierarchyID 데이터 형식은 계층을 구현 하는 데 사용할 수 있지만 몇 가지 제한 사항이 있습니다. 예를 들어 노드에 대 한 여러 부모를 저장 하는 것은 허용 되지 않습니다.
+-    응용 프로그램에 복잡 한 다 대 다 관계가 있습니다. 응용 프로그램이 진화 함에 따라 새 관계가 추가 됩니다.
+-    상호 연결된 데이터 및 관계를 분석해야 합니다.
 
-## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>에서 도입 된 그래프 기능[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-sssqlv14"></a>에서 도입 된 그래프 기능[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 그래프 데이터를 보다 쉽게 저장 하 고 쿼리할 수 있도록 SQL Server에 그래프 확장을 추가 하기 시작 합니다. 첫 번째 릴리스에서는 다음과 같은 기능이 도입 되었습니다. 
 
 
@@ -68,7 +68,7 @@ WHERE MATCH(Person1-(Friends)->Person2)
 AND Person1.Name = 'John';
 ```   
  
-### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>엔진에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 완벽 하 게 통합 
+### <a name="fully-integrated-in-ssnoversion-engine"></a>엔진에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 완벽 하 게 통합 
 그래프 확장은 엔진에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 완벽 하 게 통합 됩니다. 동일한 저장소 엔진, 메타 데이터, 쿼리 프로세서 등을 사용 하 여 그래프 데이터를 저장 하 고 쿼리 합니다. 단일 쿼리에서 그래프 및 관계형 데이터에 대해 쿼리 합니다. 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기술 (예: COLUMNSTORE, HA, R services 등)과 그래프 기능 결합 SQL graph 데이터베이스는 에서도 사용할 수 있는 모든 보안 및 규정 준수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]기능을 지원 합니다.
  
 ### <a name="tooling-and-ecosystem"></a>도구 및 에코 시스템

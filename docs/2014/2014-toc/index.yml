@@ -3,18 +3,18 @@ title: SQL Server 2014 설명서
 summary: Microsoft SQL Server 2014 온-프레미스는 관계형 데이터베이스입니다.
 metadata:
   title: SQL Server 2014 항목
-  description: SQL Server 2014에서 관심 있는 영역을 선택합니다.
+  description: 관심 있는 SQL Server 2014 온-프레미스 관계형 데이터베이스 영역이나 관련 제품 및 서비스를 선택합니다.
   ms.prod: sql
   ms.topic: landing-page
   author: MightyPen
   ms.author: genemi
   ms.date: 11/25/2019
-  ms.openlocfilehash: 68632f82835836b9097e8547683b069771143e2d
-  ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+  ms.openlocfilehash: 70af131ea185351e1034e1ec093094cce1369e4c
+  ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 01/31/2020
-  ms.locfileid: "75224395"
+  ms.lasthandoff: 03/12/2020
+  ms.locfileid: "79190518"
 landingContent:
 - title: 특수 문서
   linkLists:
