@@ -10,12 +10,12 @@ ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 94c38e6823f0cd52e44da7782bccada780265978
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 53c14ed48d2b95988b1d7d794e4ea711be659dd1
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75229399"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525464"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>다차원 모델용 파워 뷰 이해
   이 문서에서는 Microsoft SQL Server 2014의 다차원 모델용 Power View 기능에 대해 설명하고, 조직에서 다차원 모델용 Power View를 구현하려고 하는 BI 전문가 및 관리자에게 중요한 정보를 제공합니다.  
@@ -219,13 +219,13 @@ ms.locfileid: "75229399"
   
 |속성|필수|Description|  
 |----------|--------------|-----------------|  
-|CATALOG_NAME|yes|카탈로그\데이터베이스 이름입니다.|  
+|CATALOG_NAME|예|카탈로그\데이터베이스 이름입니다.|  
 |PERSPECTIVE_NAME|큐브에 둘 이상의 큐브 뷰가 포함된 경우 필수, 큐브가 하나뿐이고 기본 큐브 뷰가 있는 경우 선택적|다차원 데이터베이스의 큐브 이름 또는 큐브 뷰 이름입니다.|  
-|VERSION|yes|클라이언트가 요청한 CSDL 버전입니다. 다차원 기능 및 구문은 버전 2.0에서 지원됩니다.|  
+|VERSION|예|클라이언트가 요청한 CSDL 버전입니다. 다차원 기능 및 구문은 버전 2.0에서 지원됩니다.|  
   
  반환되는 CSDL 출력 문서에서는 모델을 네임스페이스, 포함 엔터티, 연결 및 속성으로 나타냅니다.  
   
- 테이블 형식 모델의 CSDLBI 주석에 대한 자세한 내용은 MSDN의 [CSDL용 BI 주석에 대한 기술 참조](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) 및 [\[MS-CSDLBI\]: 비즈니스 인텔리전스 주석을 사용하는 개념 스키마 정의 파일 형식](https://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)을 참조하세요.  
+ 테이블 형식 모델의 CSDLBI 주석에 대한 자세한 내용은 MSDN의 [CSDL용 BI 주석에 대한 기술 참조](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl) 및 [\[MS-CSDLBI\]: 비즈니스 인텔리전스 주석을 사용하는 개념 스키마 정의 파일 형식](https://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)을 참조하세요.  
   
 ## <a name="client-help-on-officecom"></a>Office.com의 클라이언트 도움말  
  Office.com에서 제공되는 다음 문서는 파워 뷰에서 다차원 모델 개체가 나타나는 방식과 예제 보고서를 만드는 방법을 배우는 데 유용합니다.  

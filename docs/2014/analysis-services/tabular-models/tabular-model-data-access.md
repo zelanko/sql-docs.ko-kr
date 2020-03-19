@@ -10,12 +10,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5bf8d4af44f7596bb632a05483c387752ba2e056
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3a35afb1c1bd38aa123211ae1801d914494aec91
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67284854"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525474"
 ---
 # <a name="tabular-model-data-access"></a>테이블 형식 모델 데이터 액세스
   Analysis Services의 테이블 형식 model 데이터베이스에는 다차원 모델에서 데이터 또는 메타데이터를 검색하는 데 사용하는 것과 동일한 대부분의 클라이언트, 인터페이스 및 언어로 액세스할 수 있습니다. 자세한 내용은 [다차원 모델 데이터 액세스&#40;Analysis Services - 다차원 데이터&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)를 참조하세요.  
@@ -41,7 +41,7 @@ ms.locfileid: "67284854"
   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 사용자 인터페이스에서 데이터를 필터링하고, 계산 또는 집계를 수행하고, 관련 데이터를 표시하는 후속 작업은 클라이언트에 의해 제어되며 프로그래밍 방식으로 조작할 수 없습니다.  
   
  
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 클라이언트에서 모델로 보내는 쿼리는 모델에 대해 추적을 설정하여 모니터링할 수 있는 DAX 문으로 실행됩니다.  또한 클라이언트는 CSDL(개념 스키마 정의 언어)에 따라 제공되는 초기 스키마 정의에 대한 요청을 서버에 보냅니다. 자세한 내용은 [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 클라이언트에서 모델로 보내는 쿼리는 모델에 대해 추적을 설정하여 모니터링할 수 있는 DAX 문으로 실행됩니다.  또한 클라이언트는 CSDL(개념 스키마 정의 언어)에 따라 제공되는 초기 스키마 정의에 대한 요청을 서버에 보냅니다. 자세한 내용은 [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  
@@ -83,7 +83,7 @@ ms.locfileid: "67284854"
 ### <a name="csdl"></a>CSDL  
  개념 스키마 정의 언어는 쿼리 언어가 아니지만 본질적으로 모델 및 모델 메타데이터 정보를 검색하는 데 사용될 수 있습니다. 이러한 정보는 나중에 해당 모델에 대한 보고서나 쿼리를 만드는 데 사용될 수 있습니다.  
   
- 테이블 형식 모델에서 CSDL을 사용하는 방법에 대한 자세한 내용은 [비즈니스 인텔리전스에 대한 CSDL 주석&#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)를 참조하세요.  
+ 테이블 형식 모델에서 CSDL을 사용하는 방법에 대한 자세한 내용은 [비즈니스 인텔리전스에 대한 CSDL 주석&#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)를 참조하세요.  
   
 ## <a name="programmatic-interfaces"></a>프로그래밍 방식 인터페이스  
  
@@ -100,7 +100,7 @@ ms.locfileid: "67284854"
   
  XML 기반 형식으로 Analysis Services 인스턴스에서 직접 데이터를 검색할 수도 있습니다. DISCOVER_CSDL_METADATA 행 집합을 사용하여 테이블 형식 모델의 스키마를 검색하거나 기본 ASSL 요소, 개체 또는 속성에 EXECUTE 또는 DISCOVER 명령을 사용할 수 있습니다. 자세한 내용은 다음 리소스를 참조하세요.  
   
--   [비즈니스 인텔리전스 &#40;CSDLBI&#41;에 대 한 CSDL 주석](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+-   [비즈니스 인텔리전스 &#40;CSDLBI&#41;에 대 한 CSDL 주석](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="manipulate-analysis-services-objects"></a>Analysis Services 개체 조작  
  XMLA 명령 또는 AMO를 사용하여 테이블 형식 모델과 해당 모델의 개체(예: 테이블, 열, 큐브 뷰, 측정값 및 파티션)를 생성, 수정, 삭제 및 처리할 수 있습니다. AMO와 XMLA 둘 다 향상된 보고 및 모델링을 위해 테이블 형식 모델에 사용되는 추가 속성을 지원하도록 업데이트되었습니다.  

@@ -10,12 +10,12 @@ ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 760e90c34c84bd4b44af90cbbb78aec7e025689a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0348c262453d2de8e4db0c379b5bf70a2d7d7977
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62757956"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525454"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>비즈니스 인텔리전스에 대한 CSDL 주석(CSDLBI)
   
@@ -37,7 +37,7 @@ ms.locfileid: "62757956"
   
  CSDLBI 스키마는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]와 같은 클라이언트의 모델 정의 요청에 대한 응답으로 Analysis Services 서버에서 생성됩니다. 클라이언트 애플리케이션에서 모델 데이터를 호스팅하는 Analysis Services 서버에 XML 쿼리를 보냅니다. 서버는 CSDLBI 주석을 사용하여 모델의 엔터티 정의가 포함된 XML 메시지를 응답으로 보냅니다. 그러면 보고 클라이언트는 이 정보를 토대로 모델에서 사용할 수 있는 필드, 집계 및 측정값을 표시합니다. CSDLBI 주석은 데이터의 그룹화, 정렬 및 서식 지정 방법에 대한 정보도 제공합니다.  
   
- CSDLBI에 대 한 일반 정보는 [CSDLBI 개념](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts)을 참조 하세요.  
+ CSDLBI에 대 한 일반 정보는 [CSDLBI 개념](/analysis-services/csdlbi/csdlbi-concepts)을 참조 하세요.  
   
 ### <a name="working-with-csdl"></a>CSDL 작업  
  특정 테이블 형식 모델을 나타내는 CSDLBI 주석 집합은 단순 및 복합 엔터티 컬렉션이 포함된 XML 문서입니다. 엔터티는 계산 열, 측정값 또는 KPI에 포함된 테이블(또는 차원), 열(특성), 연결(관계) 및 수식을 정의합니다.  
@@ -74,12 +74,12 @@ ms.locfileid: "62757956"
   
 -   큐브 뷰에 대한 지원.  
   
- CSDLBI 주석의 개별 요소에 대 한 자세한 내용은 [CSDL에 대 한 BI 주석에 대 한 기술 참조](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)를 참조 하세요. 핵심 CSDL 사양에 대 한 자세한 내용은 [csdl V3 사양](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)을 참조 하십시오.  
+ CSDLBI 주석의 개별 요소에 대 한 자세한 내용은 [CSDL에 대 한 BI 주석에 대 한 기술 참조](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl)를 참조 하세요. 핵심 CSDL 사양에 대 한 자세한 내용은 [csdl V3 사양](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)을 참조 하십시오.  
   
   
 ## <a name="see-also"></a>참고 항목  
  [테이블 형식 개체 모델 이해](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
- [CSDLBI 개념](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts)   
+ [CSDLBI 개념](/analysis-services/csdlbi/csdlbi-concepts)   
  [테이블 형식 개체 모델 이해](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
   

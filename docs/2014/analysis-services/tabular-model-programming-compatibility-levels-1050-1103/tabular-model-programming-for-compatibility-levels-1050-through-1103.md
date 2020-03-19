@@ -10,12 +10,12 @@ ms.assetid: 0ceb461e-12c1-44ea-97ac-b99bf308676b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2055602dae01e71ac320f5838181c8d8b08534a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1c9b04245e14be67242d5cd1ea6d257ac4fc6038
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62757638"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525434"
 ---
 # <a name="tabular-model-programming"></a>테이블 형식 모델 프로그래밍
   테이블 형식 모델은 분석 및 보고 애플리케이션에서 사용되는 Analysis Services 데이터를 모델링하는 데 관계형 구문을 사용합니다. 이러한 모델은 테이블 형식 모드에 맞게 구성된 Analysis Service 인스턴스에서 실행되며 이때 요청 시 데이터를 집계하고 계산하는 빠른 테이블 검색 및 스토리지용 메모리 내 분석 엔진을 사용합니다.  
@@ -25,11 +25,11 @@ ms.locfileid: "62757638"
  이 섹션에서는 프로그래밍 방식으로 테이블 형식 엔터티 및 해당 속성을 사용하여 작업하는 방법에 대해 자세히 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [비즈니스 인텔리전스 &#40;CSDLBI&#41;에 대 한 CSDL 주석](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+ [비즈니스 인텔리전스 &#40;CSDLBI&#41;에 대 한 CSDL 주석](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
  [테이블 형식 개체 모델 이해](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
- [CSDL에 대 한 BI 주석에 대 한 기술 참조](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)  
+ [CSDL에 대 한 BI 주석에 대 한 기술 참조](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl)  
   
  [IMDEmbedded 인터페이스](imdembeddeddata-interface.md)  
   
