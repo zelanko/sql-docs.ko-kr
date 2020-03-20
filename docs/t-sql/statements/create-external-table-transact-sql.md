@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61c8728fede661a91090d5cb15ee4feed5816e7c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 86702d159d3cc658a3c2e9e31477cca80f1eb6cc
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76831973"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112450"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE(Transact-SQL)
 
@@ -103,7 +103,7 @@ SQL Server에서는 CREATE EXTERNAL TABLE 문이 경로 및 폴더가 없으면 
 
 위치(LOCATION)를 폴더로 지정할 경우, 외부 테이블에서 선택하는 PolyBase 쿼리는 폴더 및 해당 폴더의 모든 하위 폴더에서 파일을 검색합니다. Hadoop과 마찬가지로 PolyBase도 숨겨진 폴더를 반환하지 않습니다. 또한 파일 이름이 밑줄(_) 또는 마침표(.)로 시작하는 파일을 반환하지 않습니다.
 
-이 예제에서 LOCATION='/webdata/'이면 PolyBase 쿼리는 mydata.txt 및 mydata2.txt에서 행을 반환합니다. mydata3.txt는 숨겨진 폴더의 하위 폴더이므로 반환하지 않습니다. 그리고 _hidden.txt는 숨겨진 파일이므로 반환하지 않습니다.
+이 예제에서 LOCATION='/webdata/'이면 PolyBase 쿼리는 mydata.txt 및 mydata2.txt에서 행을 반환합니다. mydata3.txt는 숨겨진 폴더의 파일이므로 반환하지 않습니다. 그리고 _hidden.txt는 숨겨진 파일이므로 반환하지 않습니다.
 
 ![외부 테이블에 대한 재귀적 데이터](../../t-sql/statements/media/aps-polybase-folder-traversal.png "외부 테이블에 대한 재귀적 데이터")
 
@@ -418,7 +418,7 @@ WITH
      );
 ```
 
-### <a name="i-create-an-external-table-for-oracle"></a>9\. Oracle용 외부 테이블 만들기
+### <a name="i-create-an-external-table-for-oracle"></a>9. Oracle용 외부 테이블 만들기
 
 ```sql
   -- Create a Master Key
@@ -623,7 +623,7 @@ column_name <data_type>
 
 DATA_SOURCE. DATA_SOURCE 절은 외부 테이블에 사용되는 외부 데이터 원본(분할된 데이터베이스 맵)을 정의합니다. 예제는 [외부 테이블 만들기](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables)를 참조하세요.
 
-SCHEMA_NAME 및 OBJECT_NAME. SCHEMA_NAME 및 OBJECT_NAME 절은 외부 테이블 정의를 다른 스키마의 테이블에 매핑합니다. 생략한 경우 원격 개체의 스키마를 “dbo”라 가정하고 그 이름이 정의하는 외부 테이블 이름과 동일하다고 간주합니다. 외부 테이블을 만들려는 데이터베이스에서 이미 원격 테이블의 이름을 가져온 경우에 유용합니다. 수평 확장된 데이터 계층에서 DMV의 카탈로그 뷰 집계를 가져오기 위해 외부 테이블을 정의하는 경우를 예로 들 수 있습니다. 카탈로그 뷰와 DMV는 이미 로컬로 존재하므로 외부 테이블 정의에 그 이름을 사용할 수 없습니다. 대신, 다른 이름을 사용하고 SCHEMA_NAME 및/또는 OBJECT_NAME 절에 카탈로그 뷰 또는 DMV의 이름을 사용합니다. 예제는 [외부 테이블 만들기](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables)를 참조하세요.
+SCHEMA_NAME 및 OBJECT_NAME. SCHEMA_NAME 및 OBJECT_NAME 절은 외부 테이블 정의를 다른 스키마의 테이블에 매핑합니다. 생략할 경우 원격 개체의 스키마를 “dbo”라 가정하고 그 이름이 정의하는 외부 테이블 이름과 동일하다고 간주합니다. 외부 테이블을 만들려는 데이터베이스에서 이미 원격 테이블의 이름을 가져온 경우에 유용합니다. 수평 확장된 데이터 계층에서 DMV의 카탈로그 뷰 집계를 가져오기 위해 외부 테이블을 정의하는 경우를 예로 들 수 있습니다. 카탈로그 뷰와 DMV는 이미 로컬로 존재하므로 외부 테이블 정의에 그 이름을 사용할 수 없습니다. 대신, 다른 이름을 사용하고 SCHEMA_NAME 및/또는 OBJECT_NAME 절에 카탈로그 뷰 또는 DMV의 이름을 사용합니다. 예제는 [외부 테이블 만들기](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables)를 참조하세요.
 
 DISTRIBUTION. DISTRIBUTION 절은 이 테이블에 사용되는 데이터 배포를 지정합니다. 쿼리 프로세서는 가장 효율적인 쿼리 계획을 구성하기 위해 DISTRIBUTION에서 제공하는 정보를 활용합니다.
 
@@ -881,7 +881,7 @@ SCHEMARESOLUTION 개체에 대한 공유 잠금입니다.
 
 ## <a name="examples"></a>예
 
-### <a name="a-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>A. Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]로 ADLS의 데이터 가져오기
+### <a name="a-importing-data-from-adls-into-azure-ssdw"></a>A. Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]로 ADLS의 데이터 가져오기
 
 ```sql
 

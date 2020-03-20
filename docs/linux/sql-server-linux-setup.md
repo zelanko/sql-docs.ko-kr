@@ -4,18 +4,18 @@ titleSuffix: SQL Server
 description: SQL Server on Linux를 설치, 업데이트 및 제거합니다. 이 문서에서는 온라인, 오프라인 및 무인 시나리오를 설명합니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 03/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 57041b528186bde743abfeec293e696b0155d0e1
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.openlocfilehash: ea308fca55cd5cc19a6d8cd74427a87e8fbe9ee2
+ms.sourcegitcommit: efb2bb07700f645b3fbfcb400a0666de01388305
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339321"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79319843"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>SQL Server on Linux 설치 지침
 
@@ -38,7 +38,7 @@ ms.locfileid: "78339321"
 
 질문과 대답은 [SQL Server on Linux FAQ](../linux/sql-server-linux-faq.md)를 참조하세요.
 
-## <a id="supportedplatforms"></a> 지원되는 플랫폼
+## <a name="supported-platforms"></a><a id="supportedplatforms"></a> 지원되는 플랫폼
 
 SQL Server는 RHEL(Red Hat Enterprise Linux), SLES(SUSE Linux Enterprise Server) 및 Ubuntu에서 지원됩니다. Linux Docker 엔진 또는 Windows/Mac용 Docker에서 실행할 수 있는 Docker 이미지로도 지원됩니다.
 
@@ -60,8 +60,8 @@ SQL Server는 RHEL(Red Hat Enterprise Linux), SLES(SUSE Linux Enterprise Server)
 | 플랫폼 | 지원되는 버전 | 가져오기
 |-----|-----|-----
 | **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6, 8.0 | [RHEL 8.0 가져오기](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
-| **SUSE Linux Enterprise Server** | v12 SP2, SP3, SP4 | [SLES v12 가져오기](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04 | [Ubuntu 16.04 다운로드](http://releases.ubuntu.com/xenial/)
+| **SUSE Linux Enterprise Server** | v12 SP2, SP3, SP4, SP5 | [SLES v12 가져오기](https://www.suse.com/products/server)
+| **Ubuntu** | 16.04, 18.04 | [Ubuntu 18.04 다운로드](http://releases.ubuntu.com/bionic/)
 | **Docker 엔진** | 1.8 이상 | [Docker 다운로드](https://www.docker.com/get-started)
 
 ::: moniker-end
@@ -71,7 +71,7 @@ Microsoft는 OpenShift와 Kubernetes를 사용하여 SQL Server 컨테이너의 
 > [!NOTE]
 > SQL Server는 앞에 나열된 배포에 대해 Linux에서 테스트되었으며 지원됩니다. 지원되지 않는 운영 체제에서 SQL Server를 설치하려는 경우 [Microsoft SQL Server 기술 지원 정책](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)의 **지원 정책** 섹션을 검토하여 지원 관련 영향을 파악하세요.
 
-## <a id="system"></a> 시스템 요구 사항
+## <a name="system-requirements"></a><a id="system"></a> 시스템 요구 사항
 
 SQL Server에 대한 Linux의 시스템 요구 사항은 다음과 같습니다.
 
@@ -90,11 +90,11 @@ SQL Server에 대한 Linux의 시스템 요구 사항은 다음과 같습니다.
 - NFS 탑재에 **/var/opt/mssql** 디렉터리만 배치합니다. SQL Server 시스템 이진 파일 등의 다른 파일은 지원되지 않습니다.
 - NFS 클라이언트가 원격 공유를 탑재할 때 ‘nolock’ 옵션을 사용하는지 확인합니다.
 
-## <a id="repositories"></a> 원본 리포지토리 구성
+## <a name="configure-source-repositories"></a><a id="repositories"></a> 원본 리포지토리 구성
 
 SQL Server를 설치하거나 업그레이드하는 경우 구성된 Microsoft 리포지토리에서 최신 버전의 SQL Server를 다운로드합니다. 이 빠른 시작에서는 SQL Server용 누적 업데이트 **CU** 리포지토리를 사용합니다. 그러나 **GDR** 리포지토리를 대신 구성할 수 있습니다. 리포지토리 및 구성 방법에 대한 자세한 내용은 [SQL Server on Linux용 리포지토리 구성](sql-server-linux-change-repo.md)을 참조하세요.
 
-## <a id="platforms"></a> SQL Server 설치
+## <a name="install-sql-server"></a><a id="platforms"></a> SQL Server 설치
 
 명령줄을 통해 Linux에 SQL Server 2017 또는 SQL Server 2019을 설치할 수 있습니다. 단계별 지침은 다음 빠른 시작 중 하나를 참조하세요.
 
@@ -109,7 +109,7 @@ Azure 가상 머신에서도 SQL Server on Linux를 실행할 수 있습니다. 
 
 설치 후에 성능을 최적화하기 위해 몇 가지 구성을 추가로 변경하는 것이 좋습니다. 자세한 내용은 [SQL Server on Linux의 성능 모범 사례 및 구성 지침](sql-server-linux-performance-best-practices.md)을 참조하세요.
 
-## <a id="upgrade"></a> SQL Server 설치 또는 업그레이드
+## <a name="update-or-upgrade-sql-server"></a><a id="upgrade"></a> SQL Server 설치 또는 업그레이드
 
 **mssql-server** 패키지를 최신 릴리스로 업데이트하려면 해당 플랫폼에 따라 다음 명령 중 하나를 사용합니다.
 
@@ -123,7 +123,7 @@ Azure 가상 머신에서도 SQL Server on Linux를 실행할 수 있습니다. 
 
 SQL Server를 업그레이드하려면 먼저 [구성된 리포지토리를 원하는 SQL Server 버전으로 변경](sql-server-linux-change-repo.md)합니다. 그런 다음 동일한 **업데이트** 명령을 사용하여 SQL Server 버전을 업그레이드합니다. 이 작업은 두 리포지토리 간에 업그레이드 경로가 지원되는 경우에만 가능합니다.
 
-## <a id="rollback"></a> SQL Server 롤백
+## <a name="rollback-sql-server"></a><a id="rollback"></a> SQL Server 롤백
 
 SQL Server를 이전 릴리스로 롤백 또는 다운그레이드하려면 다음 단계를 사용합니다.
 
@@ -140,7 +140,7 @@ SQL Server를 이전 릴리스로 롤백 또는 다운그레이드하려면 다�
 > [!NOTE]
 > SQL Server 2019과 같은 동일한 주 버전 내의 릴리스로만 다운그레이드할 수 있습니다.
 
-## <a id="versioncheck"></a> 설치된 SQL Server 버전 확인
+## <a name="check-installed-sql-server-version"></a><a id="versioncheck"></a> 설치된 SQL Server 버전 확인
 
 SQL Server on Linux의 현재 버전을 확인하려면 다음 절차를 사용합니다.
 
@@ -152,7 +152,7 @@ SQL Server on Linux의 현재 버전을 확인하려면 다음 절차를 사용�
    sqlcmd -S localhost -U SA -Q 'select @@VERSION'
    ```
 
-## <a id="uninstall"></a> SQL Server 제거
+## <a name="uninstall-sql-server"></a><a id="uninstall"></a> SQL Server 제거
 
 Linux에서 **mssql-server** 패키지를 제거하려면 해당 플랫폼에 따라 다음 명령 중 하나를 사용합니다.
 
@@ -168,7 +168,7 @@ Linux에서 **mssql-server** 패키지를 제거하려면 해당 플랫폼에 �
 sudo rm -rf /var/opt/mssql/
 ```
 
-## <a id="unattended"></a> 무인 설치
+## <a name="unattended-install"></a><a id="unattended"></a> 무인 설치
 
 다음과 같은 방법으로 무인 설치를 수행할 수 있습니다.
 
@@ -189,7 +189,7 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 - [SUSE 무인 설치 스크립트](sample-unattended-install-suse.md)
 - [Ubuntu 무인 설치 스크립트](sample-unattended-install-ubuntu.md)
 
-## <a id="offline"></a> 오프라인 설치
+## <a name="offline-install"></a><a id="offline"></a> 오프라인 설치
 
 Linux 머신에 [빠른 시작](#platforms)에서 사용된 온라인 리포지토리에 대한 액세스 권한이 없는 경우 패키지 파일을 직접 다운로드할 수 있습니다. 이 패키지는 Microsoft 리포지토리 [https://packages.microsoft.com](https://packages.microsoft.com)에 있습니다.
 

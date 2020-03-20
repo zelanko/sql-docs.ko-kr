@@ -4,18 +4,18 @@ titleSuffix: SQL Server
 description: 이 문서에서는 Linux에 SQL Server 도구를 설치하는 방법을 설명합니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 06/07/2019
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 23610c3144c7cf03a4c93be900bfc60a449448ed
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.openlocfilehash: a6ee495dc984273b8a1c20784542d6611edbbbba
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340425"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288787"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Linux에서 SQL Server 명령줄 도구 sqlcmd 및 bcp 설치
 
@@ -36,7 +36,7 @@ ms.locfileid: "78340425"
 
 이 문서에서는 명령줄 도구를 설치하는 방법을 설명합니다. **sqlcmd** 또는 **bcp**를 사용하는 방법에 대한 예제를 검색하는 경우 이 항목의 끝부분에 있는 [링크](#next-steps)를 참조하세요.
 
-## <a name="a-idrhelainstall-tools-on-rhel-7"></a><a id="RHEL"><a/>RHEL 7에 도구 설치
+## <a name="a-idrhelinstall-tools-on-rhel-7"></a><a id="RHEL"><a/>RHEL 7에 도구 설치
 
 다음 단계를 사용하여 Red Hat Enterprise Linux에서 **mssql-tools**를 설치합니다. 
 
@@ -92,9 +92,12 @@ ms.locfileid: "78340425"
    source ~/.bashrc
    ```
 
-## <a id="ubuntu"></a>Ubuntu 16.04에 도구 설치
+## <a name="install-tools-on-ubuntu-1604"></a><a id="ubuntu"></a>Ubuntu 16.04에 도구 설치
 
-다음 단계에 따라 Ubuntu에 **mssql-tools**를 설치합니다. 
+다음 단계에 따라 Ubuntu에 **mssql-tools**를 설치합니다.
+
+> [!NOTE]
+> SQL Server 2019 CU3부터 Ubuntu 18.04가 지원됩니다. Ubuntu 18.04를 사용하는 경우 리포지토리 경로를 `/ubuntu/16.04`에서 `/ubuntu/18.04`로 변경합니다.
 
 1. 공용 리포지토리 GPG 키를 가져옵니다.
 
@@ -137,7 +140,7 @@ ms.locfileid: "78340425"
    source ~/.bashrc
    ```
 
-## <a id="SLES"></a>SLES 12에 도구 설치
+## <a name="install-tools-on-sles-12"></a><a id="SLES"></a>SLES 12에 도구 설치
 
 다음 단계를 사용하여 SUSE Linux Enterprise Server에서 **mssql-tools**를 설치합니다. 
 
@@ -176,7 +179,7 @@ ms.locfileid: "78340425"
    source ~/.bashrc
    ```
 
-## <a id="macos"></a>macOS에 도구 설치
+## <a name="install-tools-on-macos"></a><a id="macos"></a>macOS에 도구 설치
 
 이제 macOS에서 **sqlcmd** 및 **bcp** 미리 보기를 사용할 수 있습니다. 자세한 내용은 [공지](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/)를 참조하세요.
 
@@ -195,7 +198,7 @@ brew install mssql-tools
 #HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=y brew install mssql-tools
 ```
 
-## <a id="docker"></a> Docker
+## <a name="docker"></a><a id="docker"></a> Docker
 
 [Docker 컨테이너에서 SQL Server를 실행](quickstart-install-connect-docker.md)하는 경우 SQL Server 명령줄 도구가 SQL Server Linux 컨테이너 이미지에 이미 포함되어 있어야 합니다. 대화형 bash 셸을 사용하여 실행 중인 컨테이너에 연결하는 경우 도구를 로컬로 실행할 수 있습니다.
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65bfd6d2-c83d-4528-a5e1-a85b125a4f4a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cc31a8ae385f2dbb28db30b299377ab5b38058f9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cab35e67c7c93ce0634a2bf1cd5a8c3c5677179d
+ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68702775"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79058801"
 ---
 # <a name="frequently-asked-questions-faq-for-odbc-linux-and-macos"></a>ODBC Linux 및 macOS에 대한 FAQ(질문과 대답)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -46,4 +46,6 @@ SQL_CHAR 데이터는 UTF-8을 사용하고 SQL_WCHAR 데이터는 UTF-16을 사
 아니요, Linux 및 macOS 기반 ODBC 드라이버는 오픈 소스 제품이 아닙니다.  
 
 ## <a name="see-also"></a>참고 항목
-[Linux 및 macOS 기반 SQL Server용 Microsoft ODBC Driver 설치](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+
+- [Linux 기반 Microsoft ODBC Driver for SQL Server 설치](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [macOS 기반 Microsoft ODBC Driver for SQL Server 설치](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)

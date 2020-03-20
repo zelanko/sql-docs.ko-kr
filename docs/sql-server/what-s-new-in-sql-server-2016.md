@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2016의 새로운 기능
+description: 새로운 SQL Server 2016 보안 기능, 쿼리 기능, Hadoop 및 클라우드 통합, R 분석 등에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 07/22/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dba29bb00f0b8d54edd8c8c98d4134cf794fe2fd
-ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
+ms.openlocfilehash: b0b4a72519a0fa20d0c4a7472760a8f06a9ced32
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77478500"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190619"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016의 새로운 기능
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  

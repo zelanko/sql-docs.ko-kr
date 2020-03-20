@@ -18,11 +18,11 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b16e58b8535d91fd29281aa986ab5ba26875dc38
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68014992"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286547"
 ---
 # <a name="sqlsrv_prepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,11 +37,11 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
 ```  
   
 #### <a name="parameters"></a>매개 변수  
-*$conn*: 만들어진 문과 연결된 연결 리소스입니다.  
+*$conn*: 만든 문과 관련된 연결 리소스입니다.  
   
-*$tsql*: 만들어진 명령문에 해당하는 Transact-SQL 식입니다.  
+*$tsql*: 만든 문에 해당하는 Transact-SQL 식입니다.  
   
-*$params* [선택 사항]: 매개 변수가 있는 쿼리의 매개 변수에 해당하는 값의 **배열**입니다. 배열의 각 요소는 다음 중 하나일 수 있습니다.
+*$params*[선택 사항]: 매개 변수가 있는 쿼리의 매개 변수에 해당하는 값의 **배열**입니다. 배열의 각 요소는 다음 중 하나일 수 있습니다.
   
 -   리터럴 값입니다.  
   
@@ -61,7 +61,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     |요소|Description|  
     |-----------|---------------|  
     |*&$value*|PHP 변수에 대한 리터럴 값 또는 참조입니다.|  
-    |*$direction*[선택 사항]|매개 변수 방향을 나타내기 위해 사용되는 다음 **SQLSRV_PARAM_\*** 상수 중 하나입니다. **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. 기본값은 **SQLSRV_PARAM_IN**입니다.<br /><br />PHP 상수에 대한 자세한 내용은 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)를 참조하세요.|  
+    |*$direction*[선택 사항]|매개 변수 방향을 지정하는 데 사용되는 **SQLSRV_PARAM_\*** 상수(**SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**) 중 하나입니다. 기본값은 **SQLSRV_PARAM_IN**입니다.<br /><br />PHP 상수에 대한 자세한 내용은 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)를 참조하세요.|  
     |*$phpType*[선택 사항]|반환된 값의 PHP 데이터 형식을 지정하는 **SQLSRV_PHPTYPE_\*** 상수입니다.|  
     |*$sqlType*[선택 사항]|입력 값의 SQL Server 데이터 형식을 지정하는 **SQLSRV_SQLTYPE_\*** 상수입니다.|  
   
@@ -87,7 +87,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 많은 양의 정보를 읽고 쓰기 위한 대체 전략은 [SQL 문 일괄 처리](../../odbc/reference/develop-app/batches-of-sql-statements.md) 및 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)를 참조하세요.  
   
-자세한 내용은 [방법: SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 문자열로 검색](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)을 참조하세요.  
+자세한 내용은 [방법: SQLSRV 드라이버를 사용하여 출력 매개 변수 검색](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
 다음 예제에서는 문을 준비하고 실행합니다. 명령문은 실행될 때([sqlsrv_execute 참조](../../connect/php/sqlsrv-execute.md)) AdventureWorks 데이터베이스의 *Sales.SalesOrderDetail* 테이블에 있는 필드를 업데이트합니다. 이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
@@ -222,7 +222,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> PHP에서는 [부동 소수점 숫자](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)의 정밀도가 제한되어 있으므로 [decimal 또는 numeric 열](https://php.net/manual/en/language.types.float.php)에 값을 바인딩할 때는 정밀도와 정확도를 보장하기 위해 문자열을 입력으로 사용하는 것이 좋습니다. bigint 열도 마찬가지이며, 값이 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) 범위를 벗어나는 경우 특히 그렇습니다.
+> PHP에서는 [부동 소수점 숫자](https://php.net/manual/en/language.types.float.php)의 정밀도가 제한되어 있으므로 [decimal 또는 numeric 열](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)에 값을 바인딩할 때는 정밀도와 정확도를 보장하기 위해 문자열을 입력으로 사용하는 것이 좋습니다. bigint 열도 마찬가지이며, 값이 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) 범위를 벗어나는 경우 특히 그렇습니다.
 
 ## <a name="example"></a>예제  
 이 코드 샘플에서는 10진수 값을 입력 매개 변수로 바인딩하는 방법을 보여 줍니다.  

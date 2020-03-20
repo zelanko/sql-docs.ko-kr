@@ -5,16 +5,16 @@ description: 이 문서에서는 SQL Server 빅 데이터 클러스터의 최신
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 02/13/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 38a1e2381bb3b7730a06af09b807886e18a50d13
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.openlocfilehash: 136665cbe354ce0fdbbc575d2e97759f35cb3444
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78925860"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286227"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 빅 데이터 클러스터 릴리스 정보
 
@@ -50,7 +50,7 @@ ms.locfileid: "78925860"
 
 |플랫폼|지원되는 버전|
 |---------|---------|
-|`azdata`|서버와 동일한 부 버전이어야 합니다(SQL Server 마스터 인스턴스와 동일).<br/><br/>`azdata –-version`을 실행하여 버전을 확인하세요.<br/><br/>SQL Server 2019 CU2 기준으로 이 버전은 `15.0.4013`입니다.|
+|`azdata`|서버와 동일한 부 버전이어야 합니다(SQL Server 마스터 인스턴스와 동일).<br/><br/>`azdata –-version`을 실행하여 버전을 확인하세요.<br/><br/>SQL Server 2019 CU3을 기준으로, 이 버전은 `15.0.4023`입니다.|
 |Azure Data Studio|[Azure Data Studio](https://aka.ms/getazuredatastudio)의 최신 빌드를 받으세요.|
 
 ## <a name="release-history"></a>릴리스 기록
@@ -59,6 +59,7 @@ ms.locfileid: "78925860"
 
 | 해제               | 버전       | 릴리스 날짜 |
 |-----------------------|---------------|--------------|
+| [CU3](#cu3)           | 15.0.4023.6    | 2020-03-12   |
 | [CU2](#cu2)           | 15.0.4013.40    | 2020-02-13   |
 | [CU1](#cu1)           | 15.0.4003.23   | 2020-01-07   |
 | [GDR1](#rtm)            | 15.0.2070.34  | 2019-11-04   |
@@ -67,7 +68,22 @@ ms.locfileid: "78925860"
 
 업데이트를 설치하려면 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 업그레이드하는 방법](deployment-upgrade.md)을 참조하세요.
 
-## <a id="cu2"></a> CU2(2020년 2월)
+## <a name="cu3-mar-2020"></a><a id="cu3"></a> CU3(2020년 5월)
+
+SQL Server 2019의 CU3(누적 업데이트 3) 릴리스입니다. 이 릴리스의 SQL Server 데이터베이스 엔진 버전은 15.0.4023.6입니다.
+
+|패키지 버전 | 이미지 태그 |
+|-----|-----|
+|15.0.4023.6 |[2019-CU3-ubuntu-16.04]
+
+### <a name="resolved-issues"></a>해결된 문제
+
+SQL Server 2019 CU3에서는 이전 릴리스의 다음 문제를 해결합니다.
+
+- [프라이빗 리포지토리를 사용하여 배포](#deployment-with-private-repository)
+- [시간 초과로 인해 업그레이드에 실패할 수 있음](#upgrade-may-fail-due-to-timeout)
+
+## <a name="cu2-feb-2020"></a><a id="cu2"></a> CU2(2020년 2월)
 
 SQL Server 2019의 CU2(누적 업데이트 2) 릴리스입니다. 이 릴리스에 대한 SQL Server 데이터베이스 엔진 버전은 15.0.4013.40입니다.
 
@@ -75,7 +91,7 @@ SQL Server 2019의 CU2(누적 업데이트 2) 릴리스입니다. 이 릴리스�
 |-----|-----|
 |15.0.4013.40 |[2019-CU2-ubuntu-16.04]
 
-## <a id="cu1"></a> CU1(2020년 1월)
+## <a name="cu1-jan-2020"></a><a id="cu1"></a> CU1(2020년 1월)
 
 SQL Server 2019의 CU1(누적 업데이트 1) 릴리스입니다. 이 릴리스에 대한 SQL Server 데이터베이스 엔진 버전은 15.0.4003.23입니다.
 
@@ -83,7 +99,7 @@ SQL Server 2019의 CU1(누적 업데이트 1) 릴리스입니다. 이 릴리스�
 |-----|-----|
 |15.0.4003.23|[2019-CU1-ubuntu-16.04]
 
-## <a id="rtm"></a> GDR1(2019년 11월)
+## <a name="gdr1-nov-2019"></a><a id="rtm"></a> GDR1(2019년 11월)
 
 SQL Server 2019 GDR1(일반 배포 릴리스 1) - [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-nover.md)]에 대한 일반 가용성이 도입되었습니다. 이 릴리스에 대한 SQL Server 데이터베이스 엔진 버전은 15.0.2070.34입니다.
 
@@ -97,6 +113,8 @@ SQL Server 2019 GDR1(일반 배포 릴리스 1) - [!INCLUDE[big-data-clusters-20
 
 ### <a name="deployment-with-private-repository"></a>프라이빗 리포지토리를 사용하여 배포
 
+- **영향을 받는 릴리스**: GDR1, CU1, CU2. CU3에서 문제가 해결되었습니다.
+
 - **문제 및 고객에게 미치는 영향**: 프라이빗 리포지토리에서 업그레이드하는 경우 특정 요구 사항이 있습니다.
 
 - **해결 방법**: 프라이빗 리포지토리를 사용하여 BDC를 배포하거나 업그레이드하기 위해 이미지를 미리 가져오는 경우 현재 빌드 이미지와 대상 빌드 이미지가 프라이빗 리포지토리에 있는지 확인합니다. 이렇게 하면 필요한 경우 성공적으로 롤백할 수 있습니다. 또한 원래 배포 이후 프라이빗 리포지토리의 자격 증명을 변경한 경우 업그레이드하기 전에 Kubernetes에서 해당 암호를 업데이트합니다. `azdata`는 `AZDATA_PASSWORD` 및 `AZDATA_USERNAME` 환경 변수를 통한 자격 증명 업데이트를 지원하지 않습니다. [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret)를 사용하여 암호를 업데이트합니다. 
@@ -104,6 +122,8 @@ SQL Server 2019 GDR1(일반 배포 릴리스 1) - [!INCLUDE[big-data-clusters-20
 현재 및 대상 빌드에 다른 리포지토리를 사용하여 업그레이드할 수 없습니다.
 
 ### <a name="upgrade-may-fail-due-to-timeout"></a>시간 초과로 인해 업그레이드가 실패할 수 있음
+
+- **영향을 받는 릴리스**: GDR1, CU1, CU2. CU3에서 문제가 해결되었습니다.
 
 - **문제 및 고객에게 미치는 영향**: 시간 초과로 인해 업그레이드가 실패할 수 있습니다.
 
@@ -132,7 +152,7 @@ SQL Server 2019 GDR1(일반 배포 릴리스 1) - [!INCLUDE[big-data-clusters-20
       kubectl edit configmap controller-upgrade-configmap
       ```
 
-   2.   다음 필드를 편집합니다.
+   2. 다음 필드를 편집합니다.
 
        **`controllerUpgradeTimeoutInMinutes`** 컨트롤러 또는 컨트롤러 db의 업그레이드가 완료될 때까지 대기할 시간(분)을 지정합니다. 기본값은 5입니다. 20 이상으로 업데이트합니다.
 
@@ -140,7 +160,7 @@ SQL Server 2019 GDR1(일반 배포 릴리스 1) - [!INCLUDE[big-data-clusters-20
 
        **`componentUpgradeTimeoutInMinutes`** : 업그레이드의 각 후속 단계를 완료해야 하는 기간을 지정합니다.  기본값은 30입니다. 45로 업데이트합니다.
 
-   3.   저장한 후 종료합니다.
+   3. 저장한 후 종료합니다.
 
    아래의 python 스크립트는 시간 제한을 설정하는 또 다른 방법입니다.
 

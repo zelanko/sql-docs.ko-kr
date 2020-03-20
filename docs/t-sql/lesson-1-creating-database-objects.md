@@ -10,12 +10,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b2a0c7a298cda42940e08b532be0df39221a21b
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.openlocfilehash: d2bea423a9ea039dbc9f0128c7d6b6f106ee03fe
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78280946"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198410"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>1단원: 데이터베이스 개체 만들기 및 쿼리
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,12 +39,12 @@ ms.locfileid: "78280946"
 
 - [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
 
-SQL Server 인스턴스에 대한 액세스 권한이 없는 경우 다음 링크에서 플랫폼을 선택합니다. SQL 인증을 선택한 경우 SQL Server 로그인 자격 증명을 사용합니다.
+SQL Server 인스턴스가 없는 경우 새로 만듭니다. 새로 만들려면 다음 링크에서 플랫폼을 선택합니다. SQL 인증을 선택한 경우 SQL Server 로그인 자격 증명을 사용합니다.
 - **Windows**: [SQL Server 2017 Developer Edition 다운로드](https://www.microsoft.com/sql-server/sql-server-downloads).
 - **macOS**: [Docker에서 SQL Server 2017 다운로드](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 ## <a name="create-a-database"></a>데이터베이스 만들기
-많은 [!INCLUDE[tsql](../includes/tsql-md.md)] 문과 마찬가지로 CREATE DATABASE 문에는 필수 매개 변수로 데이터베이스 이름이 있습니다. 또한 CREATE DATABASE에는 데이터베이스 파일을 저장할 디스크 위치와 같은 많은 선택적 매개 변수가 있습니다. 선택적 매개 변수 없이 CREATE DATABASE를 실행할 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 이러한 여러 매개 변수에 기본값을 사용합니다. 이 자습서에서는 아주 약간의 선택적 구문 매개 변수만 사용합니다.   
+대부분의 [!INCLUDE[tsql](../includes/tsql-md.md)] 문과 마찬가지로, [`CREATE DATABASE`](statements/create-database-transact-sql.md) 문에는 필수 매개 변수로 데이터베이스 이름이 포함됩니다.` CREATE DATABASE` 에는 데이터베이스 파일을 저장할 디스크 위치 등의 많은 선택적 매개 변수도 있습니다. 선택적 매개 변수 없이 `CREATE DATABASE`를 실행할 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 이러한 매개 변수에 기본값을 사용합니다.
 
 1.  쿼리 편집기 창에서 다음 코드를 입력하되 실행하지는 않습니다.  
   
@@ -53,7 +53,7 @@ SQL Server 인스턴스에 대한 액세스 권한이 없는 경우 다음 링�
     GO  
     ```  
   
-2.  포인터를 사용하여 `CREATE DATABASE`단어를 선택한 다음 **F1**키를 누릅니다. SQL Server 온라인 설명서의 CREATE DATABASE 항목이 열립니다. 이 기술을 사용하여 CREATE DATABASE 및 이 자습서에 사용되는 다른 문의 전체 구문을 찾을 수 있습니다.  
+2.  포인터를 사용하여 `CREATE DATABASE`단어를 선택한 다음 **F1**키를 누릅니다. SQL Server 온라인 설명서의 `CREATE DATABASE` 항목이 열립니다. 이 방법으로 `CREATE DATABASE`뿐 아니라 이 자습서에서 사용된 다른 문의 전체 구문을 확인할 수 있습니다.  
   
 3.  쿼리 편집기에서 **F5** 키를 눌러 문을 실행하고 `TestData`라는 데이터베이스를 만듭니다.  
   
@@ -63,6 +63,7 @@ SQL Server 인스턴스에 대한 액세스 권한이 없는 경우 다음 링�
 > 단일 일괄 처리에서 둘 이상의 문을 전송할 경우 GO 키워드는 문을 구분합니다. 일괄 처리에 문이 하나만 포함된 경우 GO는 선택 사항입니다.  
 
 ## <a name="create-a-table"></a>테이블 만들기
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 테이블을 만들려면 테이블의 이름과 테이블에 있는 각 열의 이름 및 데이터 형식을 제공해야 합니다. 또한 각 열에서 Null 값이 허용되는지 여부를 나타내는 것이 좋습니다. 테이블을 만들려면 테이블이 포함될 스키마에 대한 `CREATE TABLE` 권한 및 `ALTER SCHEMA` 권한이 있어야 합니다. [`db_ddladmin`](../relational-databases/security/authentication-access/database-level-roles.md) 고정 데이터베이스 역할에는 이러한 사용 권한이 있습니다.  
@@ -76,6 +77,7 @@ SQL Server 인스턴스에 대한 액세스 권한이 없는 경우 다음 링�
   
   
 ### <a name="switch-the-query-editor-connection-to-the-testdata-database"></a>쿼리 편집기 연결을 TestData 데이터베이스로 전환  
+
 쿼리 편집기 창에서 다음 코드를 입력하고 실행하여 연결을 `TestData` 데이터베이스로 변경합니다.  
   
   ```sql  
@@ -84,7 +86,8 @@ SQL Server 인스턴스에 대한 액세스 권한이 없는 경우 다음 링�
   ```  
   
 ### <a name="create-the-table"></a>테이블 만들기
-쿼리 편집기 창에서 다음 코드를 입력하고 실행하여 `Products`라는 간단한 테이블을 만듭니다. 이 테이블에 있는 열의 이름은 `ProductID`, `ProductName`, `Price`및 `ProductDescription`입니다. `ProductID` 열은 테이블의 기본 키입니다. `int`, `varchar(25)`, `money`및 `varchar(max)` 는 모두 데이터 형식입니다. 행을 삽입하거나 변경할 경우 `Price` 및 `ProductionDescription` 열만 데이터를 가질 수 없습니다. 이 문에는 스키마라고 하는 선택적 요소(`dbo.`)가 포함되어 있습니다. 스키마는 테이블을 소유하는 데이터베이스 개체입니다. 관리자의 경우에 기본 스키마는 `dbo` 입니다. `dbo` 는 데이터베이스 소유자를 나타냅니다.  
+
+쿼리 편집기 창에서 다음 코드를 입력하고 실행하여 `Products`라는 테이블을 만듭니다. 이 테이블에 있는 열의 이름은 `ProductID`, `ProductName`, `Price`및 `ProductDescription`입니다. `ProductID` 열은 테이블의 기본 키입니다. `int`, `varchar(25)`, `money`및 `varchar(max)` 는 모두 데이터 형식입니다. 행을 삽입하거나 변경할 경우 `Price` 및 `ProductionDescription` 열만 데이터를 가질 수 없습니다. 이 문에는 스키마라고 하는 선택적 요소(`dbo.`)가 포함되어 있습니다. 스키마는 테이블을 소유하는 데이터베이스 개체입니다. 관리자의 경우에 기본 스키마는 `dbo` 입니다. `dbo` 는 데이터베이스 소유자를 나타냅니다.  
   
   ```sql  
   CREATE TABLE dbo.Products  
@@ -103,13 +106,13 @@ SQL Server 인스턴스에 대한 액세스 권한이 없는 경우 다음 링�
 |1|Clamp|12.48|Workbench clamp|  
 |50|Screwdriver|3.17|Flat head|  
 |75|Tire Bar||Tool for changing tires.|  
-|3000|3mm Bracket|.52||  
+|3000|3 mm Bracket|0.52||  
   
 기본 구문은 다음과 같습니다. INSERT, 테이블 이름, 열 목록, VALUES, 삽입할 값 목록을 차례로 포함합니다. 줄의 맨 앞에 있는 두 개의 하이픈은 해당 줄이 주석이며 컴파일러에서 텍스트를 무시한다는 것을 나타냅니다. 이 경우에는 허용되는 구문 변형을 주석에서 설명합니다.  
   
 ### <a name="insert-data-into-a-table"></a>데이터를 테이블에 삽입  
   
-1.  다음 문을 실행하여 이전 태스크에서 만든 `Products` 테이블에 행을 삽입합니다. 기본 구문은 다음과 같습니다.  
+1.  다음 문을 실행하여 이전 태스크에서 만든 `Products` 테이블에 행을 삽입합니다.
   
    ```sql 
    -- Standard syntax  
@@ -117,7 +120,21 @@ SQL Server 인스턴스에 대한 액세스 권한이 없는 경우 다음 링�
        VALUES (1, 'Clamp', 12.48, 'Workbench clamp')  
    GO   
    ```  
-  
+
+   > [!NOTE]
+   > 삽입이 성공하면 다음 단계를 진행합니다.
+   >
+   > 삽입이 실패하는 경우 `Product` 테이블에 해당 제품 ID를 포함하는 행이 이미 있기 때문일 수 있습니다. 계속 진행하려면 테이블의 행을 모두 삭제하고 이전 단계를 반복합니다. [`TRUNCATE TABLE`](statements/truncate-table-transact-sql.md)은 테이블의 행을 모두 삭제합니다. 
+   >
+   > 테이블의 행을 모두 삭제하려면 다음 명령을 실행합니다.
+   > 
+   > ```sql
+   >TRUNCATE TABLE TestData.dbo.Products;
+   > GO
+   >```
+   >
+   > 테이블을 자른 후에는 이 단계에서 `INSERT` 명령을 반복합니다.
+
 2.  다음 문은 필드 목록(괄호로 묶인 부분) 및 값 목록에서 `ProductID` 및 `ProductName` 의 위치를 전환하여 매개 변수가 제공되는 순서를 변경하는 방법을 보여 줍니다.  
   
    ```sql  
@@ -141,7 +158,7 @@ SQL Server 인스턴스에 대한 액세스 권한이 없는 경우 다음 링�
    ```sql  
    -- Dropping the optional dbo and dropping the ProductDescription column  
    INSERT Products (ProductID, ProductName, Price)  
-       VALUES (3000, '3mm Bracket', .52)  
+       VALUES (3000, '3 mm Bracket', 0.52)  
    GO  
    ```  
   
@@ -169,7 +186,7 @@ SELECT 문을 사용하여 테이블의 데이터를 읽을 수 있습니다. SE
   GO  
   ```  
   
-2.  별표를 사용하여 테이블의 모든 열을 선택할 수 있습니다. 이 방법은 임시 쿼리에서 사용되는 경우가 많습니다. 나중에 새 열이 테이블에 추가되는 경우에도 문에서 예측된 열을 반환하도록 영구 코드로 열 목록을 제공해야 합니다.  
+2.  별표(`*`)를 사용하여 테이블의 열을 모두 선택할 수 있습니다. 별표는 임시 쿼리에 사용됩니다. 나중에 테이블에 새 열을 추가하더라도 문에서 예측한 열이 반환되도록 영구 코드로 열 목록을 제공합니다.  
   
   ```sql  
   -- Returns all columns in the table  
@@ -224,7 +241,7 @@ SELECT 문에서 데이터 작업을 수행하는 데 사용할 수 있는 일�
   
 ### <a name="create-a-view"></a>보기 만들기  
   
-다음 문을 실행하여 select 문을 실행하고 제품의 이름과 가격을 사용자에게 반환하는 매우 간단한 뷰를 만듭니다.  
+다음 문을 실행하여 SELECT 문을 실행하고 제품 이름과 가격을 사용자에게 반환하는 뷰를 만듭니다.  
   
   ```sql  
   CREATE VIEW vw_Names  

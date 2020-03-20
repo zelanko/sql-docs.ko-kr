@@ -1,7 +1,7 @@
 ---
-title: Linux 및 macOS 기반 ODBC 릴리스 정보 | Microsoft Docs
+title: Linux 및 macOS 기반 ODBC Driver for SQL Server 릴리스 정보
 ms.custom: ''
-ms.date: 06/30/2018
+ms.date: 03/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-jizho2
@@ -10,14 +10,14 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 39e010f87b9cf0785ba025cfb8a9cf96825ae9d9
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.openlocfilehash: b2adbb0fca6c717a5864570cad40c65d7c332f90
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78896767"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090500"
 ---
-# <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Linux 및 macOS 기반 Microsoft ODBC Driver for SQL Server에 대한 릴리스 정보
+# <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 및 macOS 기반 Microsoft ODBC Driver for SQL Server에 대한 릴리스 정보
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -51,7 +51,7 @@ GeneMi.  2019/04/03.
 | :------------ | :------ |
 | 서버를 왕복하지 않고 SPID를 검색하는 SQL_COPT_SS_SPID 연결 특성 | [DSN 및 연결 문자열 특성과 키워드](../dsn-connection-string-attribute.md)를 참조하세요. |
 | Debian 및 Ubuntu에서 `debconf`를 통해 EULA 승인 표시를 지원 | [드라이버 설치](./installing-the-microsoft-odbc-driver-for-sql-server.md)를 참조하세요. |
-| 지원되는 새 배포. | &bull; &nbsp; &nbsp; Alpine Linux(3.10, 3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nsbp; &nbsp; macOS 10.15 |
+| 지원되는 새 배포. | &bull; &nbsp; &nbsp; Alpine Linux(3.10, 3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nbsp; &nbsp; macOS 10.15 |
 | 버그 수정. | [버그 수정](../bug-fixes.md)을 참조하세요. |
 | &nbsp; | &nbsp; |
 
@@ -66,7 +66,7 @@ GeneMi.  2019/04/03.
 
 **알려진 문제:**
 
-보안 enclave 및 Azure Key Vault에서 Always Encrypted를 사용하는 경우 홀수 키 경로 길이는 CMK 서명 확인 오류가 발생할 수 있습니다. 이 문제가 발생하는 경우 AKV 키 이름을 바꿔서 키 경로의 길이를 한 문자씩 변경해 보세요.
+보안 enclave 및 Azure Key Vault에서 Always Encrypted를 사용하는 경우 홀수 키 경로 길이는 CMK 서명 확인 오류가 발생할 수 있습니다. 이 문제가 발생하는 경우 AKV 키의 이름을 바꿔 키 경로의 길이를 한 문자씩 변경해 보세요.
 
 ## <a name="174-august-2019"></a>17.4, 2019년 8월
 
@@ -82,7 +82,7 @@ GeneMi.  2019/04/03.
 
 | 새 항목 | 세부 정보 |
 | :------- | :------ |
-| 지원되는 새 배포. | &bull; &nbsp; &nbsp; SuSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
+| 지원되는 새 배포. | &bull; &nbsp; &nbsp; SUSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
 | Azure Active Directory 관리 서비스 ID(시스템 및 사용자 할당) 인증 모드. | [ODBC 드라이버에서 Azure Active Directory 사용](../using-azure-active-directory.md)을 참조하세요. |
 | Always Encrypted 열에 대해 입력 매개 변수를 스트리밍할 수 있음. | 자세한 내용은 [Always Encrypted를 사용할 때 ODBC 드라이버의 제한 사항](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)을 참조하세요. |
 | XA 분산 트랜잭션. | [XA 트랜잭션 사용](../use-xa-with-dtc.md)을 참조하세요.<br/><br/>XA는 둘 이상의 서버 쪽 데이터 스토리지 시스템에 액세스하는 전역 트랜잭션을 실행하기 위한 표준인 _확장 아키텍처_에 대한 두문자어입니다. |
@@ -122,7 +122,7 @@ BCP API에 대한 Always Encrypted 지원
 
 새 연결 문자열 속성 UseFMTOnly는 임시 테이블이 필요한 특별한 경우 드라이버에서 구형 메타데이터를 사용하게 합니다.
 
-Azure SQL Managed Instance 지원(프라이빗 미리 보기 확장). 
+Azure SQL Managed Instance 지원. 
 > [!NOTE]
 > Managed Instance를 사용하는 경우 여러 가지 차이점이 있습니다.
 > -   FILESTREAM이 지원되지 않음 
@@ -140,7 +140,7 @@ Azure SQL Managed Instance 지원(프라이빗 미리 보기 확장).
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용 ODBC 드라이버 13.1은 Microsoft SQL Server 2016과 함께 사용하는 경우 Always Encrypted 및 Azure Active Directory ODBC 드라이버 지원을 추가합니다.
 
-**지원되는 새 배포.** : OS X 10.11 및 macOS 10.12는 macOS 기반 ODBC 드라이버의 첫 번째 릴리스에서 지원됩니다. 이제 Red Hat 6, 7 및 SUSE 12와 함께 Ubuntu 16.10도 지원됩니다. 각 플랫폼에는 설치 및 구성을 용이하게 해주기 위한 플랫폼 관련 패키지(RPM 또는 DEB)가 있습니다.  설치 지침은 [드라이버 설치](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)를 참조하세요.
+**지원되는 새 배포.** : OS X 10.11 및 macOS 10.12는 macOS 기반 ODBC 드라이버의 첫 번째 릴리스에서 지원됩니다. 이제 Red Hat 6, 7 및 SUSE 12와 함께 Ubuntu 16.10도 지원됩니다. 각 플랫폼에는 설치 및 구성을 용이하게 해주기 위한 플랫폼 관련 패키지(RPM 또는 DEB)가 있습니다. 자세한 내용은 [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) 및 [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)의 ODBC 드라이버 설치 지침을 참조하세요.
 
 **unixODBC 드라이버 관리자 2.3.1 지원 변경 사항**: ODBC 드라이버는 더 이상 unixODBC 드라이버 관리자용 사용자 지정 패키징(RedHat 6의 경우 제외)에 의존하지 않으며, 배포 패키지 관리자에 의존하여 배포의 리포지토리에서 UnixODBC 종속성을 해결합니다.
 

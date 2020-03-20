@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 8e654dd5be4a306078bd6262220e29470b9a16e7
-ms.sourcegitcommit: 12051861337c21229cfbe5584e8adaff063fc8e3
+ms.openlocfilehash: 637198e079c6aa1b1e08e1a69e204b36f54f3827
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77363239"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79285847"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server용 ODBC 드라이버와 함께 상시 암호화 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -288,7 +288,7 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 `SQLSetPos` API를 사용하면 애플리케이션이 SQLBindCol로 바인딩되고 이전에 행 데이터를 가져온 버퍼를 통해 결과 집합의 행을 업데이트할 수 있습니다. 암호화된 고정 길이 형식의 비대칭 패딩 동작으로 인해 행의 다른 열을 업데이트하는 동안 이러한 열의 데이터가 예기치 않게 변경될 수 있습니다. AE에서는 값이 버퍼 크기보다 작을 경우 고정 길이 문자 값이 패딩됩니다.
 
-이 동작을 완화하려면 커서 기반 업데이트에 `SQLSetPos`를 사용하는 경우 `SQL_COLUMN_IGNORE` 플래그를 사용하여 `SQLBulkOperations`의 일부로 업데이트되지 않는 열을 무시합니다.  실제 (DB) 크기보다 ‘작은’ 버퍼에 바인딩된 열의 잘림을 방지하고 성능을 최적화하려면 애플리케이션에서 직접 수정되지 않는 열을 모두 무시해야 합니다. 자세한 내용은 [SQLSetPos 함수 참조](https://msdn.microsoft.com/library/ms713507(v=vs.85).aspx)를 참조하세요.
+이 동작을 완화하려면 커서 기반 업데이트에 `SQLSetPos`를 사용하는 경우 `SQL_COLUMN_IGNORE` 플래그를 사용하여 `SQLBulkOperations`의 일부로 업데이트되지 않는 열을 무시합니다.  실제 (DB) 크기보다 ‘작은’ 버퍼에 바인딩된 열의 잘림을 방지하고 성능을 최적화하려면 애플리케이션에서 직접 수정되지 않는 열을 모두 무시해야 합니다.  자세한 내용은 [SQLSetPos 함수 참조](https://msdn.microsoft.com/library/ms713507(v=vs.85).aspx)를 참조하세요.
 
 #### <a name="sqlmoreresults--sqldescribecol"></a>SQLMoreResults 및 SQLDescribeCol
 
@@ -390,12 +390,15 @@ AKV(Azure Key Vault)는 Always Encrypted에 대한 열 마스터 키를 저장 �
 
 - 클라이언트 ID/비밀 - 이 방법을 사용할 경우 자격 증명은 애플리케이션 클라이언트 ID 및 애플리케이션 비밀입니다.
 
+- 관리 ID(17.5.2 이상) - 시스템 또는 사용자 할당. 자세한 내용은 [Azure 리소스의 관리 ID](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/)를 참조하세요.
+
 드라이버가 AKV에 저장된 CMK를 열 암호화에 사용할 수 있게 하려면 다음과 같은 연결 문자열 전용 키워드를 사용합니다.
 
 |자격 증명 유형| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
 |-|-|-|-|
 |사용자 이름/암호| `KeyVaultPassword`|사용자 계정 이름|암호|
 |클라이언트 ID/비밀| `KeyVaultClientSecret`|클라이언트 ID|비밀|
+|관리 ID|`KeyVaultManagedIdentity`|개체 ID(선택 사항, 사용자 할당 전용)|[지정되지 않음]|
 
 #### <a name="example-connection-strings"></a>연결 문자열 예
 
@@ -413,7 +416,23 @@ DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
 ```
 
+**관리 ID(시스템 할당)** :
+
+```
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity
+```
+
+**관리 ID(사용자 할당)**
+
+```
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity;KeyStorePrincipalId=<objectID>
+```
+
 AKV를 CMK 스토리지에 사용하는 데 필요한 다른 ODBC 애플리케이션 변경 내용은 없습니다.
+
+> [!NOTE]
+> 드라이버는 신뢰할 수 있는 AKV 엔드포인트 목록을 포함합니다. 드라이버 버전 17.5.2부터 이 목록을 구성할 수 있습니다. 드라이버의 `AKVTrustedEndpoints` 속성이나 DSN의 ODBCINST.INI 또는 ODBC.INI 레지스트리 키(Windows)/`odbcinst.ini` 또는 `odbc.ini` 파일 섹션(Linux/Mac)을 세미콜론으로 구분된 목록으로 설정합니다. DSN의 설정이 드라이버의 설정보다 우선 적용됩니다. 값이 세미콜론으로 시작되면 기본 목록을 확장합니다. 그러지 않으면 기본 목록을 대체합니다. 기본 목록(17.5 기준)은 `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`입니다.
+
 
 ### <a name="using-the-windows-certificate-store-provider"></a>Windows 인증서 저장소 공급자 사용
 
@@ -528,7 +547,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 #### <a name="reading-data-from-a-provider"></a>공급자에서 데이터 읽기
 
-`SQL_COPT_SS_CEKEYSTOREDATA` 특성을 사용하는 `SQLGetConnectAttr` 호출은 ‘마지막으로 기록된’ 공급자로부터 데이터 “패킷”을 읽습니다. 데이터 패킷이 없으면 함수 시퀀스 오류가 발생합니다. 키 저장소 공급자 구현자는 타당한 경우 다른 부작용 없이 읽기 작업에 사용할 공급자를 선택하는 방법으로 0바이트의 “더미 쓰기”를 지원하는 것이 좋습니다.
+`SQL_COPT_SS_CEKEYSTOREDATA` 특성을 사용하는 `SQLGetConnectAttr` 호출은 ‘마지막으로 기록된’ 공급자로부터 데이터 “패킷”을 읽습니다.  데이터 패킷이 없으면 함수 시퀀스 오류가 발생합니다. 키 저장소 공급자 구현자는 타당한 경우 다른 부작용 없이 읽기 작업에 사용할 공급자를 선택하는 방법으로 0바이트의 “더미 쓰기”를 지원하는 것이 좋습니다.
 
 ```
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);

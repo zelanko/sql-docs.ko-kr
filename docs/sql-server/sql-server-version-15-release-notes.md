@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2019 릴리스 정보 | Microsoft Docs
+description: SQL Server 2019(15. x) 제한 사항, 알려진 문제, 도움말 리소스 및 기타 릴리스 정보에 대한 정보를 확인합니다.
 ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -9,14 +10,14 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: f03c9999471f1f196263cfab43960008c7d26aaf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0d27209448ece622a4906f6ba2cae28268c0210a
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74096114"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190603"
 ---
-# <a name="includesql-server-2019includessssqlv15-mdmd-release-notes"></a>[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 릴리스 정보
+# <a name="sql-server-2019-release-notes"></a>[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 릴리스 정보
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 문서에서는 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]의 관련 제한 사항 및 알려진 문제에 대해 설명합니다. 관련 정보는 다음을 참조하세요.

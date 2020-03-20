@@ -1,5 +1,6 @@
 ---
 title: 웹 서비스 메서드 인수 제공 | Microsoft Docs
+description: 선택적 매개 변수와 복합 데이터 형식을 포함하여 Reporting Services의 웹 서비스 메서드 인수에 대해 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f7b9ca05-fc4c-4b30-8e5d-172dd0f4a832
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ad5251471fe9be594bf0ffb09c13f5f9afc35990
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 112db971dd632b5114c8a05f9642b740335de03f
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63128954"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198550"
 ---
 # <a name="supplying-web-service-method-arguments"></a>웹 서비스 메서드 인수 제공
   보고서 서버 웹 서비스 메서드는 HTTP를 통해 SOAP을 사용하여 주어진 URL에 있는 서비스에 요청을 보냅니다. 서비스에서는 요청을 수신하고 처리한 다음 응답을 반환합니다. 이러한 요청과 응답은 XML 문서 형식입니다.  

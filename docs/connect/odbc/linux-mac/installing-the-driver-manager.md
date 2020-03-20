@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6fc46627dcbd10e4fc64a8520412105475e9c0a8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9a276d44cd67bf7d2d4befd24edefa6ebdf0759a
+ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68008787"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79058800"
 ---
 # <a name="installing-the-driver-manager"></a>드라이버 관리자 설치
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,7 +28,10 @@ ms.locfileid: "68008787"
 > unixODBC 드라이버 관리자를 설치하기 전에 컴퓨터에 설치된 드라이버 관리자 패키지를 삭제합니다. unixODBC 드라이버 관리자를 설치하면 기존 드라이버 관리자에 오류가 발생할 수 있습니다.  
 
 ## <a name="installing-the-driver-manager-for-microsoft-odbc-driver-13-131-and-17"></a>Microsoft ODBC Driver 13, 13.1 및 17용 드라이버 관리자 설치
-드라이버 관리자 종속성은 자동으로 해결 패키지 관리 시스템에서의 지침에 따라 Microsoft ODBC Driver 13.1, 13, 17 for Linux 또는 macOS에서 SQL Server를 설치할 때 [Microsoft ODBC Driver 설치 SQL Server Linux 또는 macOS에 대 한](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)합니다. 
+다음 문서의 지침에 따라 Linux 또는 macOS에 Microsoft ODBC Driver 13.1, 13, 17 for SQL Server를 설치하면 패키지 관리 시스템이 드라이버 관리자 종속성을 자동으로 해결합니다.
+
+- [Linux 기반 Microsoft ODBC Driver for SQL Server 설치](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [macOS 기반 Microsoft ODBC Driver for SQL Server 설치](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
 
 ## <a name="installing-the-driver-manager-for-microsoft-odbc-driver-11-for-sql-server"></a>Microsoft ODBC Driver 11 for SQL Server용 드라이버 관리자 설치  
 
@@ -57,7 +60,7 @@ ms.locfileid: "68008787"
 
 7.  스크립트가 실행을 중지한 후 화면의 지침을 따라 unixODBC 드라이버 관리자를 설치합니다.
 
-이제 드라이버를 설치할 준비가 되었습니다. 자세한 내용은 [Microsoft ODBC Driver for SQL Server Linux 및 macOS 설치](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)합니다.  
+이제 드라이버를 설치할 준비가 되었습니다. 자세한 내용은 [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) 또는 [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)의 ODBC 드라이버 설치 지침을 참조하세요.
 
 **수동 설치**
 
@@ -81,11 +84,10 @@ ms.locfileid: "68008787"
   
 9. 명령 프롬프트(루트로 로그인)에서 **make install** 명령을 실행합니다.  
 
-이제 드라이버를 설치할 준비가 되었습니다. 자세한 내용은 [Microsoft ODBC Driver for SQL Server Linux 및 macOS 설치](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)합니다.  
+이제 드라이버를 설치할 준비가 되었습니다. 자세한 내용은 [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) 또는 [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)의 ODBC 드라이버 설치 지침을 참조하세요.
   
 ## <a name="see-also"></a>참고 항목
-[Linux 및 macOS 기반 SQL Server용 Microsoft ODBC Driver 설치](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 
-[이 버전의 드라이버에서 알려진 문제](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
-
-[릴리스 정보](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+- [Linux 기반 Microsoft ODBC Driver for SQL Server 설치](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [macOS 기반 Microsoft ODBC Driver for SQL Server 설치](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
+- [릴리스 정보](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)

@@ -1,19 +1,20 @@
 ---
 title: SqlPackage.exe
 ms.prod: sql
-ms.technology: ssdt
-ms.date: 06/28/2018
-ms.reviewer: alayu; sstein
+ms.prod_service: sql-tools
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: d08ee2e48fca1cf7cd473dbd02714b460089353f
-ms.sourcegitcommit: 9b8b71cab6e340f2cb171397f66796d7a76c497e
+ms.reviewer: alayu; sstein
+ms.date: 06/28/2018
+ms.openlocfilehash: f5a1391865b2f08d6eb127fc360d94437c08155e
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77250598"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286487"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -35,7 +36,7 @@ ms.locfileid: "77250598"
   
 **SqlPackage.exe** 명령줄을 사용하면 작업별 매개 변수 및 속성과 함께 이러한 작업을 지정할 수 있습니다.  
 
-**[최신 버전 다운로드](sqlpackage-download.md)**. 최신 릴리스에 대한 자세한 내용은 [릴리스 정보](release-notes-sqlpackage.md)를 참조하세요.
+**[최신 버전 다운로드](sqlpackage-download.md)** . 최신 릴리스에 대한 자세한 내용은 [릴리스 정보](release-notes-sqlpackage.md)를 참조하세요.
   
 ## <a name="command-line-syntax"></a>명령줄 구문
 
@@ -228,7 +229,7 @@ SqlPackage.exe 게시 작업은 원본 데이터베이스의 구조와 일치하
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|데이터베이스에 게시할 때 SQL Server가 라우팅 테이블에 경로를 유지하는 시간에 대한 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|데이터베이스에 게시할 때 T-SQL 문 사이의 세미콜론의 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|데이터베이스에 게시할 때 테이블 옵션의 차이를 무시할지 또는 업데이트할지를 지정합니다.|
-|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|데이터베이스에 게시할 때 테이블 파티션 옵션의 차이를 무시할지 또는 업데이트할지를 지정합니다.  이 옵션은 Azure Synapse Analytics 데이터 웨어하우스 데이터베이스에만 적용됩니다.|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|데이터베이스에 게시할 때 테이블 파티션 옵션의 차이를 무시할지 또는 업데이트할지를 지정합니다.  이 옵션은 Azure Synapse Analytics SQL 풀(데이터 웨어하우스) 데이터베이스에만 적용됩니다.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|데이터베이스에 게시할 때 사용자 설정 개체의 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|데이터베이스에 게시할 때 공백의 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|데이터베이스에 게시할 때 CHECK 제약 조건의 WITH NOCHECK 절에 대한 값의 차이를 무시할지 또는 업데이트할지를 지정합니다.|

@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: 0315f181aad5c61b7d9c5fe7d46f3d81b27c9758
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 76a6e99d06061ae581b753ce0edd96a5a82d0f95
+ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73589137"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78946715"
 ---
 # <a name="sql-assessment-api"></a>SQL 평가 API
 
@@ -66,31 +66,31 @@ SqlServer 및 RegisteredServer 개체는 서로 교환할 수 있으므로 아�
     Get-SqlInstance -ServerInstance 'localhost' | Get-SqlAssessmentItem
     ```
 
-2. 인스턴스의 모든 데이터베이스에 대해 사용 가능한 검사 목록을 가져옵니다. 여기서는 Get-Item cmdlet과 Windows Powershel SQL Server 공급자를 사용하여 구현된 경로를 사용하여 데이터베이스 목록을 가져온 다음 이를 Get-SqlDatabase cmdlet으로 파이프합니다.
+2. 인스턴스의 모든 데이터베이스에 대해 사용 가능한 검사 목록을 가져옵니다. 여기서는 Get-Item cmdlet과 Windows PowerShell SQL Server 공급자로 구현된 경로를 사용하여 데이터베이스 목록을 가져온 다음, Get-SqlDatabase cmdlet으로 파이핑합니다.
 
     ```powershell
     Get-Item SQLSERVER:\SQL\localhost\default | Get-SqlAssessmentItem
     ```
-    
+
     또한 Get-SqlDatabase cmdlet을 사용하여 동일한 작업을 수행할 수 있습니다.
 
     ```powershell
     Get-SqlDatabase -ServerInstance 'localhost' | Get-SqlAssessmentItem
     ```
 
-3. 인스턴스의 모든 데이터베이스에 대해 사용 가능한 검사 목록을 가져옵니다. 여기서는 Get-Item cmdlet과 Windows Powershel SQL Server 공급자를 사용하여 구현된 경로를 사용하여 데이터베이스 목록을 가져온 다음 이를 Get-SqlDatabase cmdlet으로 파이프합니다.
+3. 인스턴스의 모든 데이터베이스에 대해 사용 가능한 검사 목록을 가져옵니다. 여기서는 Get-Item cmdlet과 Windows PowerShell SQL Server 공급자로 구현된 경로를 사용하여 데이터베이스 목록을 가져온 다음, Get-SqlDatabase cmdlet으로 파이핑합니다.
 
     ```powershell
     Get-Item SQLSERVER:\SQL\localhost\default | Get-SqlAssessmentItem
     ```
-    
+
     또한 Get-SqlDatabase cmdlet을 사용하여 동일한 작업을 수행할 수 있습니다.
 
     ```powershell
     Get-SqlDatabase -ServerInstance 'localhost' | Get-SqlAssessmentItem
     ```
 
-4. 인스턴스에 대한 평가를 호출하고 결과를 SQL 테이블에 저장합니다. 이 예제에서는 Get-SqlInstance cmdlet의 출력을 Invoke-SqlAssessment cmdlet으로 파이프하고, 해당 결과는 Write-SqlTableData cmdlet으로 파이프됩니다. `-FlattenOutput` 매개 변수가 이 예제에서 Invoke-Assessment cmdlet을 실행하는 데 사용됩니다. 이 매개 변수는 출력을 Write-SqlTableData cmdlet에 적합하게 만듭니다. 매개 변수를 생략하면 오류가 발생합니다.
+4. 인스턴스에 대한 평가를 호출하고 결과를 SQL 테이블에 저장합니다. 이 예제에서는 Get-SqlInstance cmdlet의 출력을 Invoke-SqlAssessment cmdlet으로 파이프하고, 해당 결과는 Write-SqlTableData cmdlet으로 파이프됩니다. 이 예제에서는 `-FlattenOutput` 매개 변수를 사용하여 Invoke-Assessment cmdlet을 실행합니다. 이 매개 변수는 출력을 Write-SqlTableData cmdlet에 적합하게 만듭니다. 매개 변수를 생략하면 오류가 발생합니다.
 
     ```powershell
     Get-SqlInstance -ServerInstance 'localhost' |
@@ -131,7 +131,7 @@ SqlServer 및 RegisteredServer 개체는 서로 교환할 수 있으므로 아�
 하나 이상의 JSON 파일을 SQL 평가 API 호출에 매개 변수로 추가하여 규칙 집합을 함께 지정할 수 있습니다. 조직에서 해당 파일을 작성하거나 타사에서 가져올 수 있습니다. 예를 들어 Microsoft 규칙 집합에서 특정 규칙을 사용하지 않도록 설정하는 JSON 파일을 사용하고 사용자 환경에 유용한 규칙을 포함하는 업계 전문가의 JSON 파일을 또 하나 사용하여 자체 JSON 파일에서 일부 임계값을 변경할 수 있습니다.
 
 > [!IMPORTANT]  
->  신뢰할 수 없는 소스에서 제공되는 규칙 집합은 철저히 검토하여 안전성이 확인되기 전에는 사용하지 않아야 합니다.
+> 신뢰할 수 없는 소스에서 제공되는 규칙 집합은 철저히 검토하여 안전성이 확인되기 전에는 사용하지 않아야 합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

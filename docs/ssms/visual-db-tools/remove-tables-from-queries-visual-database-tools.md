@@ -16,19 +16,19 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 32c25c3ded07e84e436b69af5baac5634909998c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9955b61f8c04aa890c156234838816976f41a585
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75255255"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198450"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>쿼리에서 테이블 제거(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 쿼리에서 테이블이나 모든 테이블 반환 개체를 제거할 수 있습니다.  
   
 > [!NOTE]  
-> 테이블이나 테이블 반환 개체를 제거해도 데이터베이스에서 실제로 삭제되는 항목은 없으며 현재 쿼리에서 해당 항목이 제거될 뿐입니다. 데이터베이스에서 테이블을 제거하는 방법에 대한 자세한 내용은 [방법: 데이터베이스에서 테이블 삭제(https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec) 를 참조하세요.  
+> 테이블이나 테이블 반환 개체를 제거해도 데이터베이스에서 실제로 삭제되는 항목은 없으며 현재 쿼리에서 해당 항목이 제거될 뿐입니다. 데이터베이스에서 테이블을 제거하는 자세한 내용은 [방법: 데이터베이스에서 테이블 삭제](https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)를 참조하세요.  
   
 ### <a name="to-remove-a-table-or-table-structured-object"></a>테이블이나 테이블 구조 개체를 제거하려면  
   

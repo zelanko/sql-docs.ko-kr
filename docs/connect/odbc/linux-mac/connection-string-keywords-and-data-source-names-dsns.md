@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 486d26dd3afeb91cb43181875e22592fb482af5f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 159aedf0665df441a31c93760c26523b843921bb
+ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68702800"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79058718"
 ---
 # <a name="connecting-to-sql-server"></a>SQL Server에 연결
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스와의 연결을 만들 수 있는 방법을 설명합니다.  
+이 문서에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스와의 연결을 만들 수 있는 방법을 설명합니다.  
   
 ## <a name="connection-properties"></a>연결 속성  
 
@@ -52,7 +52,7 @@ Server = [protocol:]server[,port]
 #  
 ```  
 
-필요에 따라 서버에 연결할 프로토콜 및 포트를 지정할 수 있습니다. 예를 들어 **Server=tcp:** _servername_ **,12345**입니다. Linux 및 macOS 드라이버에서 지원되는 유일한 프로토콜은 `tcp`입니다.
+필요에 따라 서버에 연결할 프로토콜 및 포트를 지정할 수 있습니다. 예를 들어 **Server=tcp:**_servername_**,12345**입니다. Linux 및 macOS 드라이버에서 지원되는 유일한 프로토콜은 `tcp`입니다.
 
 고정 포트의 명명된 인스턴스에 연결하려면 <b>Server =</b>*servername*,**port_number**를 사용합니다. 버전 17.4 이전에서 동적 포트에 연결하는 것은 지원되지 않습니다.
 
@@ -93,8 +93,8 @@ SSL은 OpenSSL 라이브러리를 사용합니다. 다음 표에서는 최소 �
 |Red Hat Enterprise Linux 8|1.1.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
-|SuSE Linux Enterprise 15|1.1.0|/etc/ssl/certs|
-|SuSE Linux Enterprise 11, 12|1.0.1|/etc/ssl/certs|
+|SUSE Linux Enterprise 15|1.1.0|/etc/ssl/certs|
+|SUSE Linux Enterprise 11, 12|1.0.1|/etc/ssl/certs|
 |Ubuntu 18.10, 19.04|1.1.1|/etc/ssl/certs|
 |Ubuntu 18.04|1.1.0|/etc/ssl/certs|
 |Ubuntu 16.04, 16.10, 17.10|1.0.2|/etc/ssl/certs|
@@ -111,7 +111,8 @@ ODBC 드라이버 17.4부터 드라이버가 연결 유지 패킷을 전송하�
 
 - `KeepAliveInterval=<integer>`은 응답이 수신될 때까지 연결 유지 재전송을 구분하는 간격을 결정합니다.  기본값은 **1** 초입니다.
 
+## <a name="see-also"></a>참고 항목
 
-## <a name="see-also"></a>참고 항목  
-[Linux 및 macOS 기반 SQL Server용 Microsoft ODBC Driver 설치](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)  
-[프로그래밍 지침](../../../connect/odbc/linux-mac/programming-guidelines.md)
+- [Linux 기반 Microsoft ODBC Driver for SQL Server 설치](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [macOS 기반 Microsoft ODBC Driver for SQL Server 설치](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
+- [프로그래밍 지침](../../../connect/odbc/linux-mac/programming-guidelines.md)

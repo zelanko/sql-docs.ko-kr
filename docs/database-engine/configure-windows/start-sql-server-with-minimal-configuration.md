@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d733c99-28b3-42d8-b7f6-7b943b548173
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 71fd26df641c1ac551dcc430c0fef555fc3c5df8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 0c919ad9202c99c7b010b6aee9c921e76784eb24
+ms.sourcegitcommit: 7008c7fe451a20d6610e40bb8f61dece86c0f17e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68037149"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79027958"
 ---
 # <a name="start-sql-server-with-minimal-configuration"></a>최소 구성으로 SQL Server 시작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,6 +34,8 @@ ms.locfileid: "68037149"
 -   시작 저장 프로시저는 실행되지 않습니다.  
 
 -   `tempdb`는 가능한 최소 크기로 구성됩니다.
+
+-   감사는 사용되지 않지만, 감사 DDL을 계속 실행할 수 있습니다. 실제로 SQL Server 감사 재구성이 필요한 대부분의 경우 **-m**만 사용하면 처리됩니다. 감사 구성의 보안에 대한 자세한 내용은 [SQL Server의 감사](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd392015(v=sql.100)#security)를 참조하세요.
   
  서버를 최소 구성으로 시작한 후에는 해당 서버 옵션 값을 변경하고 서버를 중지한 다음 다시 시작해야 합니다.  
   

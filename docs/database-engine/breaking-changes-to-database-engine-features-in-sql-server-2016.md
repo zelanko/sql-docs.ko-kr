@@ -1,7 +1,7 @@
 ---
 title: '데이터베이스 엔진: 호환성이 손상되는 변경 | Microsoft Docs'
 titleSuffix: SQL Server 2016
-description: SQL Server 2016 데이터베이스 엔진 기능의 호환성이 손상되는 변경
+description: 업그레이드 시 이전 버전의 기능이 중단될 수 있는 SQL Server 2016(13.x) 및 이전 버전의 데이터베이스 엔진 변경 내용에 대해 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 67a37dd07810facf3e18e94dc0f9e552ea05778a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: b2003a0adfd2883b83623f5b367e775cc526e052
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75244717"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190573"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 데이터베이스 엔진 기능의 호환성이 손상되는 변경
 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 및 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대한 호환성이 손상되는 변경에 대해 설명합니다. 이러한 변경 내용에 따라 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 기반을 둔 애플리케이션, 스크립트 또는 기능을 사용하지 못할 수도 있습니다. 이러한 문제는 업그레이드할 때 발생할 수 있습니다.  
+  이 문서에서는 [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 및 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대한 호환성이 손상되는 변경에 대해 설명합니다. 이러한 변경 내용에 따라 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 기반을 둔 애플리케이션, 스크립트 또는 기능을 사용하지 못할 수도 있습니다. 이러한 문제는 업그레이드할 때 발생할 수 있습니다.  
   
-##  <a name="SQL15"></a>[!INCLUDE[ssSQL15](../includes/sssql15-md.md)]의 주요 변경 내용  
+##  <a name="breaking-changes-in-sssql15"></a><a name="SQL15"></a>[!INCLUDE[ssSQL15](../includes/sssql15-md.md)]의 주요 변경 내용  
   
 -   `sys.dm_io_virtual_file_stats`의 *sample_ms* 열은 **int**에서 **bigint** 데이터 형식으로 확장되었습니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "75244717"
 
 -   데이터베이스 호환성 수준이 130 미만이면 특정 숫자 및 날짜/시간 데이터 형식 간에 암시적 변환을 수행하는 작업은 정확도가 향상되므로 다르게 변환된 값이 생성될 수 있습니다. 여기에는 `DATEDIFF` 및 `ROUND`와 같은 계산이 필요한 함수 사용이 포함됩니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/help/4010261)를 참조하세요.
 
-## <a name="previous-versions"></a> 이전 버전  
+## <a name="previous-versions"></a><a name="previous-versions"></a> 이전 버전  
 
 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 및 일부 이전 버전의 호환성이 손상되는 변경에 대한 자세한 내용은 [SQL Server 2014 데이터베이스 엔진 기능의 호환성이 손상되는 변경](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)을 참조하세요.
 

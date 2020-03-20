@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0e28d62292c8bcc4b98d8991fbf4bd8708bbbc76
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+ms.openlocfilehash: ff2d40dab5fa2d8f03bf3d1fa32b08e66a0ccdbc
+ms.sourcegitcommit: 7008c7fe451a20d6610e40bb8f61dece86c0f17e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558369"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79027941"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>sqlmlutils를 사용하여 새 R 패키지 설치
 
@@ -51,7 +51,7 @@ ms.locfileid: "77558369"
 
 클라이언트 컴퓨터에서 인터넷에 액세스할 수 있는 경우 **sqlmlutils** 및 해당 종속 패키지를 온라인으로 다운로드하여 설치할 수 있습니다.
 
-1. 최신 **sqlmlutils** zip 파일을 https://github.com/Microsoft/sqlmlutils/tree/master/R/dist에서 클라이언트 컴퓨터로 다운로드합니다. 파일 압축을 풀지 마세요.
+1. 최신 **sqlmlutils** zip 파일을 https://github.com/Microsoft/sqlmlutils/tree/master/R/dist 에서 클라이언트 컴퓨터로 다운로드합니다. 파일 압축을 풀지 마세요.
 
 1. **명령 프롬프트**를 열고 다음 명령을 실행하여 **sqlmlutils** 및 **RODBCext** 패키지를 설치합니다. 다운로드한 **sqlmlutils** zip 파일의 전체 경로를 바꿉니다(이 예제에서는 파일이 문서 폴더에 있는 것으로 가정). **RODBCext** 패키지는 온라인으로 찾아서 설치합니다.
 
@@ -108,7 +108,7 @@ ms.locfileid: "77558369"
     , @script = N'print(R.version)'
    ```
 
-1. https://github.com/Microsoft/sqlmlutils/tree/master/R/dist에서 최신 **sqlmlutils** zip 파일을 다운로드합니다. 단, 파일 압축을 풀지 마세요. 예를 들어 `c:\downloads\sqlmlutils_0.7.1.zip`에 파일을 다운로드합니다.
+1. [https://github.com/Microsoft/sqlmlutils/tree/master/R/dist](https://github.com/Microsoft/sqlmlutils/tree/master/R/dist)에서 최신 **sqlmlutils** zip 파일을 다운로드합니다(파일 압축을 풀지 않음). 예를 들어 `c:\downloads\sqlmlutils_0.7.1.zip`에 파일을 다운로드합니다.
 
 1. 전체 **RODBCext** 리포지토리 폴더(`c:\downloads\rodbcext`) 및 **sqlmlutils** zip 파일(`c:\downloads\sqlmlutils_0.7.1.zip`)을 클라이언트 컴퓨터에 복사합니다. 예를 들어 클라이언트 컴퓨터의 `c:\temp\packages` 폴더에 복사합니다.
 

@@ -14,12 +14,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 9bb0911a0aa678ee160894e6297e5636644bf475
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3e7f0abd6003583858fbf323f96b4cf203236083
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75307652"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286647"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor-dta"></a>1단원: DTA(데이터베이스 엔진 튜닝 관리자) 기본 탐색
 
@@ -57,7 +57,7 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
 ![데이터베이스 엔진 튜닝 관리자 기본 창](media/dta-tutorials/dta-default-gui.png)
   
 > [!NOTE]  
-> **세션 모니터** 탭에는 세션 이름, 즉 연결된 사용자 및 현재 데이터의 이름이 표시됩니다. 
+> **세션 모니터** 탭에는 연결된 사용자의 이름과 현재 날짜인 세션 이름이 표시됩니다. 
   
 데이터베이스 엔진 튜닝 관리자 GUI를 처음 열면 두 개의 주 창이 표시됩니다.  
   

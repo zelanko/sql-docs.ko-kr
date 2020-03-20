@@ -23,12 +23,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/03/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cef5bdc57a5fb5f0a2cbeed6be3356aade1ba491
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.openlocfilehash: 685397689b390175bd15f6241fc7036004e1e97a
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335771"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198540"
 ---
 # <a name="ssms-query-editor"></a>SSMS 쿼리 편집기
 
@@ -116,7 +116,7 @@ Ctrl + L을 선택하거나 [상황에 맞는 메뉴](#display-estimated-executi
 
 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서 IntelliSense 기능을 사용할지를 지정합니다. 이 옵션은 기본적으로 설정되어 있습니다.
 
-Ctrl + B를 선택한 후 Ctrl + I를 선택하거나 [상황에 맞는 메뉴](#intellisense-enabled-using-the-context-menu)에서 **IntelliSense 사용**을 선택할 수 있습니다.
+Ctrl+B, Ctrl+I를 차례로 선택하거나 [상황에 맞는 메뉴](#intellisense-enabled-using-the-context-menu)에서 **IntelliSense 사용**을 선택할 수도 있습니다.
 
 ### <a name="include-actual-execution-plan-using-the-editor-toolbar"></a>편집기 도구 모음을 사용하여 실제 실행 계획 포함
 
@@ -164,7 +164,7 @@ Ctrl + K를 선택한 후 Ctrl + C를 선택하여 줄을 주석으로 처리할
 
 줄의 시작 부분에서 주석 기호(--)를 제거하여 현재 줄을 활성 소스 코드 문으로 처리합니다.
 
-Ctrl + K를 선택한 후 Ctrl + U를 선택하여 줄의 주석을 제거할 수도 있습니다.
+Ctrl+K, Ctrl+U를 차례로 선택하여 줄의 주석 처리를 제거할 수도 있습니다.
 
 ### <a name="decrease-indent-using-the-editor-toolbar"></a>편집기 도구 모음을 사용하여 내어쓰기
 

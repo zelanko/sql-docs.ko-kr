@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 49cb24120d6c476e5b03c4a0cad2ddda511a9360
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9bc5f0a66cc891c1efa4810253a02d98f384e081
+ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76911207"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79058747"
 ---
 # <a name="system-requirements"></a>시스템 요구 사항
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-이 항목에서는 Linux 및 macOS 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver를 사용하기 위한 요구 사항을 나열합니다.
+이 문서에서는 Linux 및 macOS 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver를 사용하기 위한 요구 사항을 나열합니다.
 
 
 ## <a name="microsoft-odbc-driver-13-131-and-17-for-sql-server"></a>SQL Server용 Microsoft ODBC Driver 13, 13.1 및 17
@@ -46,9 +46,9 @@ Linux 및 macOS 드라이버는 다음 운영 체제의 64비트 버전에만 �
 |RedHat Enterprise Linux 6|13, 13.1, 17+|
 |RedHat Enterprise Linux 7|13, 13.1, 17+|
 |RedHat Enterprise Linux 8|17.4+|
-|SuSE Linux Enterprise Server 11|13, 13.1, 17+ <br /><br /> **참고:** ODBC 드라이버 17은 SuSE Linux Enterprise Server 11 SP4만 지원합니다.|
-|SuSE Linux Enterprise Server 12|13, 13.1, 17+|
-|SuSE Linux Enterprise Server 15|17+|
+|SUSE Linux Enterprise Server 11|13, 13.1, 17+ <br /><br /> **참고:** ODBC Driver 17은 SUSE Linux Enterprise Server 11 SP4만 지원합니다.|
+|SUSE Linux Enterprise Server 12|13, 13.1, 17+|
+|SUSE Linux Enterprise Server 15|17+|
 |Ubuntu Linux 14.04|13, 13.1, 17.4|
 |Ubuntu Linux 15.10|13, 13.1|
 |Ubuntu Linux 16.04|13, 13.1, 17+|

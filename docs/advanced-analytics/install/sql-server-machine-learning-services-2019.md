@@ -3,17 +3,17 @@ title: Windows에 대한 격리 변경 내용
 description: 이 문서에서는 Windows의 SQL Server 2019에서 사용되는 Machine Learning Services의 격리 메커니즘 변경 내용을 설명합니다. 이러한 변경 내용은 SQLRUserGroup, 방화벽 규칙, 파일 사용 권한 및 묵시적 인증에 영향을 줍니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 03/05/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4fae460e78682263c604d8e1e86ca40b7b62df97
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ad95817a7b1eb9afb8377b06d20a577eda49ea23
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69531042"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79285917"
 ---
 # <a name="sql-server-2019-on-windows-isolation-changes-for-machine-learning-services"></a>Windows의 SQL Server 2019: Machine Learning Services에 대한 격리 변경 내용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,26 @@ AppContainer로 전환하는 과정에서 AppContainer SID를 기준으로 새�
 > [!Note]
 > 네트워크 호출이 필요한 경우 Windows 방화벽에서 아웃바운드 규칙을 사용하지 않도록 설정할 수 있습니다.
 
-## <a name="program-file-permissions"></a>프로그램 파일 사용 권한
+<a name="file-permissions"></a>
+
+## <a name="file-permissions"></a>파일 사용 권한
+
+기본적으로 외부 Python 및 R 스크립트에는 작업 디렉터리에 대한 읽기 권한만 있습니다. 
+
+Python 또는 R 스크립트가 다른 디렉터리에 액세스해야 하는 경우 **NT Service\MSSQLLaunchpad** 서비스 사용자 계정과 이 디렉터리에 있는 **ALL APPLICATION PACKAGES**에 **읽기 및 실행** 및/또는 **쓰기** 권한을 제공해야 합니다.
+
+액세스 권한을 부여하려면 아래 단계를 수행합니다.
+
+1. 파일 탐색기에서 작업 디렉터리로 사용할 폴더를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.
+1. **보안**을 선택하고 **편집...** 을 클릭하여 사용 권한을 변경합니다.
+1. **추가...** 를 클릭합니다.
+1. **찾을 위치 선택**이 로컬 컴퓨터 이름인지 확인합니다.
+1. **선택할 개체 이름 입력**에서 **ALL APPLICATION PACKAGES**를 입력하고 **이름 확인**을 클릭합니다. **확인**을 클릭합니다.
+1. **허용** 열 아래에서 **읽기 및 실행**을 선택합니다.
+1. 쓰기 권한을 부여하려면 **허용** 열 아래에서 **쓰기**를 선택합니다.
+1. **확인**, **확인**을 차례로 클릭합니다.
+
+### <a name="program-file-permissions"></a>프로그램 파일 사용 권한
 
 이전 릴리스와 마찬가지로 **SQLRUserGroup**은 SQL Server **Binn**, **R_SERVICES**및 **PYTHON_SERVICES** 디렉터리의 실행 파일에 대해 읽기 및 실행 권한을 계속 제공합니다. 이 릴리스에서는 **SQLRUserGroup**의 멤버가 SQL Server 실행 패드 서비스 계정 뿐입니다.  실행 패드 서비스가 R 또는 Python 실행 환경을 시작하면 프로세스는 실행 패드 서비스로 실행됩니다.
 

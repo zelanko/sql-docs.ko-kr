@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7735298fc669d8e5b385501cd3f235a0a08abb9d
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.openlocfilehash: 0e3a0829702dfe46a2d6c00925a82938d23bad92
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340695"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287687"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ LOGON 트리거는 사용자 세션이 설정될 때 발생하는 LOGON 이벤�
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>구문  
+## <a name="sql-server-syntax"></a>SQL Server 구문  
   
 ``` 
 -- SQL Server Syntax  
@@ -127,7 +127,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ```  
   
-## <a name="syntax"></a>구문  
+## <a name="azure-sql-database-syntax"></a>Azure SQL Database 구문  
   
 ``` 
 -- Azure SQL Database Syntax   
@@ -215,7 +215,7 @@ INSTEAD OF
   
 테이블이나 뷰에 대해 INSERT, UPDATE 또는 DELETE 문당 최대한 하나의 INSTEAD OF 트리거를 정의할 수 있습니다. 고유한 INSTEAD OF 트리거가 있는 각 뷰에 대해 뷰를 정의할 수도 있습니다.  
   
-WITH CHECK OPTION을 사용하는 업데이트할 수 있는 뷰에는 INSTEAD OF 트리거를 정의할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 트리거를 정의하면 WITH CHECK OPTION이 지정된 업데이트할 수 있는 뷰에 INSTEAD OF 트리거를 추가할 경우 오류가 발생합니다. INSTEAD OF 트리거를 정의하기 전에 ALTER VIEW를 사용하여 해당 옵션을 제거합니다.  
+WITH CHECK OPTION을 사용하는 업데이트할 수 있는 뷰에는 INSTEAD OF 트리거를 정의할 수 없습니다. 이 트리거를 정의하면 WITH CHECK OPTION이 지정된, 업데이트할 수 있는 뷰에 INSTEAD OF 트리거를 추가할 경우 오류가 발생합니다. INSTEAD OF 트리거를 정의하기 전에 ALTER VIEW를 사용하여 해당 옵션을 제거합니다.  
   
 { [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] }  
 이 테이블이나 뷰에 수행될 경우 DML 트리거를 활성화하는 데이터 수정 문을 지정합니다. 옵션을 하나 이상 지정합니다. 트리거 정의에서 순서에 관계없이 해당 옵션의 조합을 사용합니다.  

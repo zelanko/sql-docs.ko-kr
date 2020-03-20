@@ -1,5 +1,6 @@
 ---
 title: 일정 예약 메서드 | Microsoft Docs
+description: Reporting Services에서 이러한 메서드는 보고서 실행 및 배달을 위한 공유 일정과 보고서 서버에서 사용되는 캐시 새로 고침 계획을 만들고 관리합니다.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68ae13f9-d91e-4572-a82a-8fa42001569e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 640564af3d2c46045d328c2d86788e803672512c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 087e2111987de00b347c400ce7255cb7f9eee97e
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284430"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198340"
 ---
 # <a name="scheduling-methods"></a>일정 예약 메서드
   이러한 메서드는 보고서 실행 및 전달을 위한 공유 일정을 만들고 관리하는 데 사용할 수 있으며 보고서 서버에서 사용하는 캐시 새로 고침 계획에도 사용할 수 있습니다.  

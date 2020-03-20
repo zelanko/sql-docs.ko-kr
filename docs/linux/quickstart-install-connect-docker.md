@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
-ms.date: 11/04/2019
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -13,12 +13,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 40c1573fb16bbf6d7cdbb98a168dcda064b59087
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: afc420ffe62f31c5793f00f3acea12dedac7f509
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75558681"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198400"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>빠른 시작: Docker에서 SQL Server 컨테이너 이미지 실행
 
@@ -36,15 +36,19 @@ ms.locfileid: "75558681"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
+> [!NOTE]
+> SQL Server 2019 CU3부터 Ubuntu 18.04가 지원됩니다.
+
 이 빠른 시작에서 Docker를 사용하여 SQL Server 2019 컨테이너 이미지인 [mssql-server](https://hub.docker.com/r/microsoft/mssql-server)를 끌어와 실행합니다. 그런 다음, **sqlcmd**로 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
 
 > [!TIP]
 > 이 빠른 시작에서는 SQL Server 2019 컨테이너를 만듭니다. SQL Server 2017 컨테이너를 만들려는 경우 [이 문서의 SQL Server 2017 버전](quickstart-install-connect-docker.md?view=sql-server-linux-2017)을 참조하세요.
+
 ::: moniker-end
 
-이 이미지는 Ubuntu 16.04 기반 Linux에서 실행 중인 SQL Server로 구성됩니다. Linux 또는 Mac/Windows용 Docker에서 Docker Engine 1.8+와 함께 사용할 수 있습니다. 이 빠른 시작에서는 특히 SQL Server on **Linux** 이미지 사용에 중점을 둡니다. Windows 이미지는 다루지 않지만, [mssql-server-windows-developer Docker 허브 페이지](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)에서 자세히 알아볼 수 있습니다.
+이 이미지는 Ubuntu 18.04 기반 Linux에서 실행되는 SQL Server로 구성되어 있습니다. Linux 또는 Mac/Windows용 Docker에서 Docker Engine 1.8+와 함께 사용할 수 있습니다. 이 빠른 시작에서는 특히 SQL Server on **Linux** 이미지 사용에 중점을 둡니다. Windows 이미지는 다루지 않지만, [mssql-server-windows-developer Docker 허브 페이지](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)에서 자세히 알아볼 수 있습니다.
 
-## <a id="requirements"></a> 필수 조건
+## <a name="prerequisites"></a><a id="requirements"></a> 필수 조건
 
 - 지원되는 모든 Linux 배포판 또는 Mac/Windows용 Docker에서 Docker Engine 1.8+. 자세한 내용은 [사용자 Docker 설치](https://docs.docker.com/engine/installation/)를 참조하세요.
 - Docker **overlay2** 스토리지 드라이버. 대부분의 사용자에게 적용되는 기본값입니다. 이 스토리지 공급자를 사용하지 않고 변경해야 하는 경우 [overlay2 구성에 대한 docker 설명서](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver)의 지침 및 경고를 참조하세요.
@@ -56,7 +60,7 @@ ms.locfileid: "75558681"
 any changes to one section should be duplicated in the other-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="pullandrun2017"></a> 컨테이너 이미지를 끌어와 실행
+## <a name="pull-and-run-the-container-image"></a><a id="pullandrun2017"></a> 컨테이너 이미지를 끌어와 실행
 
 다음 단계를 시작하기 전에 이 문서의 맨 위에서 기본 셸(bash, PowerShell 또는 cmd)을 선택했는지 확인합니다.
 
@@ -86,7 +90,7 @@ any changes to one section should be duplicated in the other-->
    이전 명령은 최신 SQL Server 2017 컨테이너 이미지를 끌어옵니다. 특정 이미지를 끌어오려면 콜론 및 태그 이름(예를 들어 `mcr.microsoft.com/mssql/server:2017-GA-ubuntu`)을 추가합니다. 사용 가능한 모든 이미지를 보려면 [mssql-server Docker 허브 페이지](https://hub.docker.com/r/microsoft/mssql-server)를 참조하세요.
 
    ::: zone pivot="cs1-bash"
-   이 문서의 bash 명령에는 `sudo`를 사용합니다. MacOS에서는 `sudo`가 필요하지 않을 수도 있습니다. Linux에서 `sudo`로 Docker를 실행하지 않으려는 경우 **docker** 그룹을 구성하고 해당 그룹에 사용자를 추가할 수 있습니다. 자세한 내용은 [Linux용 설치 후 단계](https://docs.docker.com/install/linux/linux-postinstall/)를 참조하세요.
+   이 문서의 bash 명령에는 `sudo`를 사용합니다. macOS에서는 `sudo`가 필요하지 않을 수도 있습니다. Linux에서 `sudo`로 Docker를 실행하지 않으려는 경우 **docker** 그룹을 구성하고 해당 그룹에 사용자를 추가할 수 있습니다. 자세한 내용은 [Linux용 설치 후 단계](https://docs.docker.com/install/linux/linux-postinstall/)를 참조하세요.
    ::: zone-end
 
 2. Docker를 사용하여 컨테이너 이미지를 실행하려면 bash 셸(Linux/macOS) 또는 상승된 권한 PowerShell 명령 프롬프트에서 다음 명령을 사용할 수 있습니다.
@@ -175,7 +179,7 @@ SELECT @@SERVERNAME,
 <!--This is the 2019 version of the "Pull and run" section-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="pullandrun2019"></a> 컨테이너 이미지를 끌어와 실행
+## <a name="pull-and-run-the-container-image"></a><a id="pullandrun2019"></a> 컨테이너 이미지를 끌어와 실행
 
 다음 단계를 시작하기 전에 이 문서의 맨 위에서 기본 셸(bash, PowerShell 또는 cmd)을 선택했는지 확인합니다.
 
@@ -183,19 +187,19 @@ SELECT @@SERVERNAME,
 
    ::: zone pivot="cs1-bash"
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-cmd"
    ```cmd
-   docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -205,7 +209,7 @@ SELECT @@SERVERNAME,
    이전 명령은 Ubuntu를 기반으로 하는 SQL Server 2019 컨테이너 이미지를 끌어옵니다. RedHat을 기반으로 하는 컨테이너 이미지를 대신 사용하려면 [RHEL 기반 컨테이너 이미지 실행](sql-server-linux-configure-docker.md#rhel)을 참조하세요. 사용 가능한 모든 이미지를 보려면 [mssql-server-linux Docker 허브 페이지](https://hub.docker.com/_/microsoft-mssql-server)를 참조하세요.
 
    ::: zone pivot="cs1-bash"
-   이 문서의 bash 명령에는 `sudo`를 사용합니다. MacOS에서는 `sudo`가 필요하지 않을 수도 있습니다. Linux에서 `sudo`로 Docker를 실행하지 않으려는 경우 **docker** 그룹을 구성하고 해당 그룹에 사용자를 추가할 수 있습니다. 자세한 내용은 [Linux용 설치 후 단계](https://docs.docker.com/install/linux/linux-postinstall/)를 참조하세요.
+   이 문서의 bash 명령에는 `sudo`를 사용합니다. macOS에서는 `sudo`가 필요하지 않을 수도 있습니다. Linux에서 `sudo`로 Docker를 실행하지 않으려는 경우 **docker** 그룹을 구성하고 해당 그룹에 사용자를 추가할 수 있습니다. 자세한 내용은 [Linux용 설치 후 단계](https://docs.docker.com/install/linux/linux-postinstall/)를 참조하세요.
    ::: zone-end
 
 2. Docker를 사용하여 컨테이너 이미지를 실행하려면 bash 셸(Linux/macOS) 또는 상승된 권한 PowerShell 명령 프롬프트에서 다음 명령을 사용할 수 있습니다.
@@ -214,7 +218,7 @@ SELECT @@SERVERNAME,
    ```bash
    sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -222,7 +226,7 @@ SELECT @@SERVERNAME,
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -230,7 +234,7 @@ SELECT @@SERVERNAME,
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -248,7 +252,7 @@ SELECT @@SERVERNAME,
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | 8자 이상이고 [SQL Server 암호 요구 사항](../relational-databases/security/password-policy.md)을 충족하는 자신만의 강력한 암호를 지정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
    | **-p 1433:1433** | 호스트 환경의 TCP 포트(첫 번째 값)를 컨테이너의 TCP 포트(두 번째 값)로 매핑합니다. 이 예제에서 SQL Server는 컨테이너의 TCP 1433에서 수신 대기하고 호스트의 포트 1433에 공개됩니다. |
    | **--name sql1** | 컨테이너에 대해 임의로 생성된 이름보다는 사용자 지정 이름을 지정합니다. 둘 이상의 컨테이너를 실행하는 경우 이 동일한 이름을 다시 사용할 수 없습니다. |
-   | **mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04** | SQL Server 2019 Ubuntu Linux 컨테이너 이미지입니다. |
+   | **mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04** | SQL Server 2019 Ubuntu Linux 컨테이너 이미지입니다. |
 
 3. Docker 컨테이너를 보려면 `docker ps` 명령을 사용합니다.
 
@@ -290,7 +294,7 @@ SELECT @@SERVERNAME,
 ::: moniker-end
 <!--End of 2019 "Pull and run" section-->
 
-## <a id="sapassword"></a> SA 암호 변경
+## <a name="change-the-sa-password"></a><a id="sapassword"></a> SA 암호 변경
 
 <!-- This section was pasted in from includes/sql-server-linux-change-docker-password.md, to better support zone pivots. 2019/02/11 -->
 
@@ -439,7 +443,7 @@ SELECT @@SERVERNAME,
 
 2. 컨테이너에서 대화형 명령 프롬프트를 종료하려면 `exit`을 입력합니다. 컨테이너는 대화형 bash 셸을 종료한 후에도 계속 실행됩니다.
 
-## <a id="connectexternal"></a> 컨테이너 외부에서 연결
+## <a name="connect-from-outside-the-container"></a><a id="connectexternal"></a> 컨테이너 외부에서 연결
 
 SQL 연결을 지원하는 모든 외부 Linux, Windows 또는 macOS 도구에서 Docker 컴퓨터에 있는 SQL Server 인스턴스에 연결할 수 있습니다.
 

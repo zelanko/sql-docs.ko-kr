@@ -11,12 +11,12 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: c7919232bcd2c84ea58ac2e8b9d23b48cc58ee60
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 1d1e595918b33ae4fcc11cd59bf0964b2e6d919c
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76831690"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112284"
 ---
 # <a name="hybrid-buffer-pool"></a>하이브리드 버퍼 풀
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,14 +86,9 @@ SELECT * FROM
 sys.server_memory_optimized_hybrid_buffer_pool_configuration;
 ```
 
-다음 예제는 테이블 두 개를 반환합니다.
-
-- 첫 번째 테이블은 SQL Server의 인스턴스에 대한 하이브리드 버퍼 풀 시스템 구성의 현재 상태를 보여줍니다.
-- 두 번째 테이블은 데이터베이스 및 하이브리드 버퍼 풀에 대한 데이터베이스 수준 설정(`is_memory_optimized_enabled`)을 나열합니다.
+다음 예제에서는 데이터베이스와 하이브리드 버퍼 풀의 데이터베이스 수준 설정(`is_memory_optimized_enabled`)을 나열합니다.
 
 ```sql
-SELECT * FROM sys.configurations WHERE name = 'hybrid_buffer_pool';
-
 SELECT name, is_memory_optimized_enabled FROM sys.databases;
 ```
 

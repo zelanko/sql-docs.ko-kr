@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2017의 새로운 기능 | Microsoft Docs
+description: Windows뿐 아니라 Linux 및 Linux 기반 Docker 컨테이너에서도 SQL Server를 사용하도록 지원하는 SQL Server 2017의 새로운 기능을 알아보세요.
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 92f289ec22ca35834420dc7ee84d667c55e29a19
-ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
+ms.openlocfilehash: 48188e98d992f45ca282c3687bf56e255d15a40a
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77478493"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190621"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017의 새로운 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
-SQL Server 2017에서는 SQL Server의 기능을 Linux, Linux 기반 Docker 컨테이너 및 Windows에서도 제공하여 SQL Server를 개발 언어, 데이터 형식, 온-프레미스 또는 클라우드, 운영 체제 등을 선택할 수 있는 플랫폼으로 만들기 위한 중요한 진전을 이루었습니다. 이 항목에서는 특정 기능 영역의 새로운 기능을 요약하고 추가 세부 정보에 대한 링크를 포함합니다. Linux의 SQL Server에 대한 자세한 내용은 [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/)(Linux 기반 SQL Server 설명서)을 참조하세요.
+SQL Server 2017에서는 SQL Server의 기능을 Linux, Linux 기반 Docker 컨테이너 및 Windows에서도 제공하여 SQL Server를 개발 언어, 데이터 형식, 온-프레미스 또는 클라우드, 운영 체제 등을 선택할 수 있는 플랫폼으로 만들기 위한 중요한 진전을 이루었습니다. 이 문서에서는 특정 기능 영역의 새로운 기능을 요약하고 추가 세부 정보에 대한 링크를 포함합니다. Linux의 SQL Server에 대한 자세한 내용은 [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/)(Linux 기반 SQL Server 설명서)을 참조하세요.
 
 [![평가 센터에서 다운로드](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **사용해 보기:** [SQL Server 2017 릴리스 다운로드 - 2017년 10월](https://go.microsoft.com/fwlink/?LinkID=829477).
 

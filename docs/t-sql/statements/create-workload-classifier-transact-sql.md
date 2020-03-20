@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD 분류자(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/27/2020
+ms.date: 03/11/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 73718d8fa49715a2cec91c43a9a91402fad6e031
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.openlocfilehash: 67f844ff5955f51b0c878f2a3161cc4762834f74
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77429034"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112256"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>워크로드 분류자 만들기(Transact-SQL)
 
@@ -43,12 +43,12 @@ ms.locfileid: "77429034"
 ```
 CREATE WORKLOAD CLASSIFIER classifier_name  
 WITH  
-    (   WORKLOAD_GROUP = ‘name’  
-    ,   MEMBERNAME = ‘security_account’ 
-[ [ , ] WLM_LABEL = ‘label’ ]  
-[ [ , ] WLM_CONTEXT = ‘context’ ]  
-[ [ , ] START_TIME = ‘HH:MM’ ]  
-[ [ , ] END_TIME = ‘HH:MM’ ]  
+    (   WORKLOAD_GROUP = 'name'  
+    ,   MEMBERNAME = 'security_account' 
+[ [ , ] WLM_LABEL = 'label' ]  
+[ [ , ] WLM_CONTEXT = 'context' ]  
+[ [ , ] START_TIME = 'HH:MM' ]  
+[ [ , ] END_TIME = 'HH:MM' ]  
   
 [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }]) 
 [;]
@@ -59,13 +59,13 @@ WITH
  *classifier_name*  
  워크로드 분류자를 식별하는 이름을 지정합니다.  classifier_name은 sysname입니다.  최대 128자까지 가능하며 인스턴스 내에서 고유해야 합니다.
 
- *WORKLOAD_GROUP* = *'name'*   
+ *WORKLOAD_GROUP* =  *'name'*    
  조건이 분류자 규칙으로 충족되면 이름은 요청을 작업 그룹에 매핑합니다.  이름은 sysname입니다.  최대 128자까지 가능하며 분류자 생성 시 유효한 작업 그룹 이름이어야 합니다.
 
  사용 가능한 워크로드 그룹은 [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md) 카탈로그 뷰에서 찾을 수 있습니다.
 
- *MEMBERNAME* ='security_account'*    
- 역할에 추가될 보안 계정입니다.  Security_account는 sysname이며 기본값은 없습니다. Security_account는 데이터베이스 사용자, 데이터베이스 역할, Azure Active Directory 로그인 또는 Azure Active Directory 그룹일 수 있습니다.
+ *MEMBERNAME* =  *‘security_account’*     
+ 분류하는 데 사용되는 보안 계정입니다.  Security_account는 sysname이며 기본값은 없습니다. Security_account는 데이터베이스 사용자, 데이터베이스 역할, Azure Active Directory 로그인 또는 Azure Active Directory 그룹일 수 있습니다.
  
  *WLM_LABEL*   
  요청을 분류하는 데 사용할 수 있는 레이블 값을 지정합니다.  Label은 nvarchar(255) 형식의 선택적 매개 변수입니다.  요청에 [OPTION (LABEL)](/azure/sql-data-warehouse/sql-data-warehouse-develop-label)을 사용하여 분류자 구성과 일치시킵니다.
@@ -158,7 +158,7 @@ CREATE WORKLOAD CLASSIFIER classifierB WITH
  ,END_TIME       = '07:00' )
 ```
 
-사용자 `userloginA`는 두 분류자에 대해 구성됩니다.  userloginA가 UTC 오후 6시에서 오전 7시 사이에 `salesreport`와 동일한 레이블을 사용하여 쿼리를 실행하는 경우 요청은 HIGH 중요도의 wgDashboards 워크로드 그룹으로 분류됩니다.  휴가 보고에서 요청을 LOW 중요도의 wgUserQueries로 분류할 수 있지만 WLM_LABEL의 가중치는 START_TIME/END_TIME보다 높습니다.  classifierA의 가중치는 80입니다(사용자 64와 WLM_LABEL 16의 합계).  classifierB의 가중치는 68입니다(사용자 64와 START_TIME/END_TIME 4의 합계).  이 경우 classifierB에 WLM_LABEL을 추가할 수 있습니다.
+사용자 `userloginA`는 두 분류자에 대해 구성됩니다.  userloginA가 UTC 오후 6시에서 오전 7시 사이에 `salesreport`와 동일한 레이블을 사용하여 쿼리를 실행하는 경우 요청은 HIGH 중요도의 wgDashboards 워크로드 그룹으로 분류됩니다.  휴가 보고에서 요청을 LOW 중요도의 wgUserQueries로 분류할 수 있지만 WLM_LABEL의 가중치는 START_TIME/END_TIME보다 높습니다.  classifierA의 가중치는 80입니다(사용자 64와 WLM_LABEL 16의 합계).  ClassifierB의 가중치는 68입니다(사용자 64와 START_TIME/END_TIME 4의 합계).  이 경우 classifierB에 WLM_LABEL을 추가할 수 있습니다.
 
  자세한 내용은 [워크로드 가중치](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-weighting)를 참조하세요.
 

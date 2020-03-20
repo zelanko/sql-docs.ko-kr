@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2019의 새로운 기능 | Microsoft Docs
+description: 개발 언어, 데이터 형식, 환경 및 운영 체제 선택 항목을 제공하는 SQL Server 2019(15.x)의 새로운 기능에 대해 알아봅니다.
 ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -8,12 +9,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0cddfe78555d5e5f57e57346aff1ead52f05cebf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 55d59d140d8b833cb4b2ea6b11360043710de60d
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831558"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79218049"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 새로운 기능
 
@@ -193,7 +194,7 @@ ms.locfileid: "76831558"
 ## <a name="platform-choice"></a>플랫폼 선택
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 이전보다 보강된 기능과 강화된 보안을 사용하여 선택한 플랫폼에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 실행할 수 있도록 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]에 도입된 혁신을 기반으로 합니다.
 
-### <a id="sql-server-on-linux"></a>Linux
+### <a name="linux"></a><a id="sql-server-on-linux"></a>Linux
 
 | 새로운 기능 또는 업데이트 | 세부 정보 |
 |:-----|:-----|
@@ -226,7 +227,7 @@ ms.locfileid: "76831558"
 |서버/CAL 라이선스 제품 키에 대한 설정 경고|엔터프라이즈 서버/CAL 라이선스 제품 키를 입력했으며, 머신에 20개가 넘는 물리적 코어가 있거나 하이퍼스레딩을 사용하는 경우 40개가 넘는 논리적 코어가 있는 경우 설치 중에 경고가 표시됩니다. 사용자는 여전히 제한을 승인하고 설치를 계속하거나 운영 체제의 최대 프로세서 수를 지원하는 라이선스 키를 입력할 수 있습니다.|
 | &nbsp; | &nbsp; |
 
-## <a id="ml"></a> SQL Server Machine Learning Services
+## <a name="sql-server-machine-learning-services"></a><a id="ml"></a> SQL Server Machine Learning Services
 
 |새로운 기능 또는 업데이트 | 세부 정보 |
 |:---|:---|

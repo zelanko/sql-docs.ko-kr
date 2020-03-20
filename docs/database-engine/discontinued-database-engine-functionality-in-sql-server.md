@@ -1,5 +1,6 @@
 ---
-title: 중단된 데이터베이스 엔진 기능 | Microsoft Docs
+title: 중단된 데이터베이스 엔진 기능
+description: SQL Server 2019(15.x), SQL Server 2016(13. x) 및 이전 버전에서 중단된 데이터베이스 엔진 기능 및 특성에 대해 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -35,19 +36,19 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: db10b57b5eda73cb2bb2105f4f99fb6e5cbed733
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 25da4c94448a6527e50fe759e6c75cdbad10b007
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75258126"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190534"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>SQL Server에서 중단된 데이터베이스 엔진 기능
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  이 항목에서는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 에서 더 이상 사용할 수 없는 [!INCLUDE[ssCurrent](../includes/ssnoversion-md.md)]기능에 대해 설명합니다.  
+  이 문서에서는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 에서 더 이상 사용할 수 없는 [!INCLUDE[ssCurrent](../includes/ssnoversion-md.md)]기능에 대해 설명합니다.  
 
-## <a name="discontinued-features-in-includesssqlv15includessssqlv15-mdmd"></a>[!INCLUDE[ssSQLv15](../includes/sssqlv15-md.md)]에서 중단된 기능  
+## <a name="discontinued-features-in-sssqlv15"></a>[!INCLUDE[ssSQLv15](../includes/sssqlv15-md.md)]에서 중단된 기능  
 
 - 다음 데이터베이스 범위 구성 옵션은 중단되었습니다.
 
@@ -60,7 +61,7 @@ ms.locfileid: "75258126"
 >[!NOTE]
 >[!INCLUDE[ssSQLv14](../includes/sssqlv14-md.md)]에서 중단된 기능은 없습니다.
 
-## <a name="discontinued-features-in-includesssql15includessssql15-mdmd"></a>[!INCLUDE[ssSQL15](../includes/sssql15-md.md)]에서 중단된 기능
+## <a name="discontinued-features-in-sssql15"></a>[!INCLUDE[ssSQL15](../includes/sssql15-md.md)]에서 중단된 기능
 
 - [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]는 64비트 애플리케이션입니다. 일부 요소는 32비트 구성 요소로 실행되지만 32비트 설치는 중단되었습니다.  
 

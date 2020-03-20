@@ -1,5 +1,6 @@
 ---
 title: 모델 메서드 - 보고서 서버 웹 서비스 | Microsoft Docs
+description: 보고서 서버 웹 서비스에서 모델을 관리하는 데 사용할 수 있는 이러한 메서드에 대해 알아봅니다.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.assetid: d3e658c9-bb22-480b-a3d5-bcde8f537ab2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: baecfdb1baef4fbfcc50f2e18e4e898325f31e60
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 73d4a0ee4c5db4059dfe5ceac908b92d41ab8a45
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284561"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198240"
 ---
 # <a name="model-methods---report-server-web-service"></a>모델 메서드 - 보고서 서버 웹 서비스
   다음 메서드를 사용하여 모델을 관리할 수 있습니다.  

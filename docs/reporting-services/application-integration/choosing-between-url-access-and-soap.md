@@ -1,6 +1,6 @@
 ---
 title: URL 액세스와 SOAP 중 선택
-description: Reporting Services를 사용자 지정 애플리케이션에 통합하기 위한 방법에는 URL 액세스와 Reporting Services SOAP API의 두 가지 방법이 있습니다. 어느 방법을 사용할지는 여러 요소에 따라 달라집니다.
+description: Reporting Services를 사용자 지정 애플리케이션에 통합하기 위한 방법에는 URL 액세스와 Reporting Services SOAP API의 두 가지 방법이 있습니다. 선택 방법을 알아보세요.
 ms.date: 10/19/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ ms.topic: reference
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d401c7d95cff5011dffbfaac2ebcc9bfa5ea5c24
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 115ff4521e347c1eb905f63c579df04f0a11adae
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74796916"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198220"
 ---
 # <a name="choose-between-url-access-and-soap-in-reporting-services"></a>Reporting Services에서 URL 액세스와 SOAP 중 선택
 
@@ -32,7 +32,7 @@ ms.locfileid: "74796916"
   
 -   사용자들이 일반적으로 어떤 유형의 환경에서 작업합니까? 사용하는 비즈니스 애플리케이션이 웹 애플리케이션입니까 아니면 Windows 애플리케이션입니까? 최종 사용자가 Win32 환경에서 웹 환경으로 얼마나 쉽게 전환할 수 있습니까? 보고서가 실행되고 관리되는 환경에 대해 어떤 유형의 컨트롤이 필요합니까?  
   
- 위의 질문에 대한 대답을 기준으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 IT 인프라에 통합할 방법을 결정할 수 있습니다. 일반적으로 URL 액세스는 개별 보고서를 보고 탐색하는 데 사용하는 것이 좋습니다. URL 액세스를 통해 웹 서비스 오버헤드 없이 보고서를 쉽고 빠르게 탐색할 수 있습니다. 또한 URL 액세스는 현재 보고서 도구 모음을 포함하여 보고서 탐색을 위해 전체 HTML 뷰어를 사용하는 유일한 프로그래밍 기술입니다. 그리고 URL 액세스는 서버를 상대로 한 SOAP 요청에 대한 마샬링을 거치지 않으므로 SOAP보다 뛰어난 성능을 제공합니다. 보기 및 탐색용 기본 제공 도구를 사용하여 보고서에 쉽고 빠르게 액세스해야 하는 통합 시나리오에서는 URL 액세스를 선택하는 것이 더 좋습니다.  
+ 위의 질문에 대한 대답을 기준으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 IT 인프라에 통합할 방법을 결정할 수 있습니다. 일반적으로 URL 액세스는 개별 보고서를 보고 탐색하는 데 사용하는 것이 좋습니다. URL 액세스를 통해 웹 서비스 오버헤드 없이 보고서를 쉽고 빠르게 탐색할 수 있습니다. 또한 URL 액세스는 현재 보고서 도구 모음을 포함하여 보고서 탐색을 위해 전체 HTML 뷰어를 사용하는 유일한 프로그래밍 기술입니다. URL 액세스는 서버와 주고받는 SOAP 요청의 마샬링을 무시하므로 SOAP보다 뛰어난 성능을 제공할 수도 있습니다. 보기 및 탐색용 기본 제공 도구를 사용하여 보고서에 쉽고 빠르게 액세스해야 하는 통합 시나리오에서는 URL 액세스를 선택하는 것이 더 좋습니다.  
   
 > [!NOTE]  
 > 보고서 서버 URL 액세스는 HTML 뷰어 및 보고서 도구 모음의 확장된 기능을 지원합니다. SOAP API는 이러한 종류의 렌더링된 보고서를 지원하지 않습니다. SOAP API를 사용하여 보고서를 렌더링하는 경우 고유의 보고서 도구 모음을 디자인하고 개발합니다.

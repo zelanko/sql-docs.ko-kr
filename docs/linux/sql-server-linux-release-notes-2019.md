@@ -3,16 +3,16 @@ title: SQL Server 2019 on Linux 릴리스 정보
 description: 이 문서에는 Linux에서 실행되는 SQL Server 2019에 대한 릴리스 정보 및 지원되는 기능이 포함됩니다. 최신 릴리스 및 여러 이전 릴리스에 대한 릴리스 정보가 포함됩니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 02/13/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 95289a3c4ad263e2c3ef063e54984a4481cf6109
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.openlocfilehash: bcb2ca2f9a7dd58570937417ad112c1073353783
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339366"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286867"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>SQL Server 2019 on Linux 릴리스 정보
 
@@ -28,8 +28,8 @@ ms.locfileid: "78339366"
 | 플랫폼 | 파일 시스템 | 설치 가이드 |
 |-----|-----|-----|
 | Red Hat Enterprise Linux 7.3, 7.4, 7.5, 7.6 또는 8 서버 | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-red-hat.md) | 
-| SUSE Enterprise Linux Server v12 SP2, SP3 또는 SP4 | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-suse.md) |
-| Ubuntu 16.04LTS | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-ubuntu.md) | 
+| SUSE Enterprise Linux Server v12 SP2, SP3, SP4 또는 SP5 | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-suse.md) |
+| Ubuntu 16.04LTS, 18.04 | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-ubuntu.md) | 
 | Windows, Mac 또는 Linux의 Docker Engine 1.8 이상 | 해당 없음 | [설치 가이드](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
@@ -45,12 +45,13 @@ SQL Server를 대상으로 하는 대부분의 기존 클라이언트 도구는 
 
 | 해제                   | 버전       | 릴리스 날짜 |
 |---------------------------|---------------|--------------|
+| [CU3](#cu3)               | 15.0.4023.6   | 2020-03-12   |
 | [CU2](#cu2)               | 15.0.4013.40  | 2020-02-13   |
 | [CU1](#cu1)               | 15.0.4003.23  | 2020-01-07   |
 | [GA](#ga)                 | 15.0.2000.5   | 2019-11-04   |
 | [릴리스 후보](#rc)  | 15.0.1900.25  | 2019-08-21   |
 
-## <a id="cuinstall"></a> 업데이트 설치 방법
+## <a name="how-to-install-updates"></a><a id="cuinstall"></a> 업데이트 설치 방법
 
 CU 리포지토리(mssql-server-2019)를 구성한 경우에는 새 설치를 수행할 때 SQL Server 패키지의 최신 CU가 제공됩니다. Docker 컨테이너 이미지가 필요한 경우 [Docker 엔진용 Microsoft SQL Server on Linux](https://hub.docker.com/r/microsoft/mssql-server/)의 공식 이미지를 참조하세요. 리포지토리 구성에 대한 자세한 내용은 [SQL Server on Linux용 리포지토리 구성](sql-server-linux-change-repo.md)을 참조하세요.
 
@@ -63,7 +64,26 @@ CU 리포지토리(mssql-server-2019)를 구성한 경우에는 새 설치를 �
 - [PolyBase 패키지 설치](../relational-databases/polybase/polybase-linux-setup.md)
 - [SQL Server 에이전트 사용](sql-server-linux-setup-sql-agent.md)
 
-## <a id="cu2"></a> CU2(2020년 2월)
+## <a name="cu3-march-2020"></a><a id="cu3"></a> CU3(2020년 3월)
+
+SQL Server 2019(15.x)의 CU3(누적 업데이트 3) 릴리스입니다. 이 릴리스의 SQL Server 데이터베이스 엔진 버전은 15.0.4023.6입니다. 수정 사항 및 개선 사항에 대한 자세한 내용은 <https://support.microsoft.com/help/4538853>를 참조하세요.
+
+### <a name="package-details"></a>패키지 세부 정보
+
+수동 또는 오프라인 패키지 설치의 경우 다음 표의 정보를 사용하여 RPM 및 Debian 패키지를 다운로드할 수 있습니다.
+
+> [!NOTE]
+> CU1부터 Red Hat의 오프라인 패키지 설치 링크는 RHEL 8 패키지를 가리킵니다. RHEL 7 패키지를 찾고 있는 경우 다운로드 경로 <https://packages.microsoft.com/rhel/7/mssql-server-2019/>를 참조하세요.
+>
+> **Ubuntu 18.04**는 CU3부터 SQL Server 2019에서 지원됩니다. Ubuntu의 오프라인 패키지 설치 링크는 Ubuntu 18.04 패키지를 가리킵니다. Ubuntu 16.04 패키지를 찾고 있는 경우 다운로드 경로 <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/>을 참조하세요.
+
+| 패키지 | 패키지 버전 | 다운로드 |
+|-----|-----|-----|
+| Red Hat RPM 패키지 | 15.0.4023.6-2 | [엔진 RPM 패키지](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4023.6-2.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4023.6-2.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4023.6-2.x86_64.rpm)</br>[확장성 RPM 패키지](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4023.6-2.x86_64.rpm)</br>[Java 확장성 RPM 패키지](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4023.6-2.x86_64.rpm)</br>[PolyBase RPM 패키지](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4023.6-2.x86_64.rpm)|
+| SLES RPM 패키지 | 15.0.4023.6-2 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4023.6-2.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4023.6-2.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4023.6-2.x86_64.rpm)</br>[확장성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4023.6-2.x86_64.rpm)</br>[Java 확장성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4023.6-2.x86_64.rpm)</br>[PolyBase RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4023.6-2.x86_64.rpm)|
+| Ubuntu 18.04 Debian 패키지 | 15.0.4023.6-2 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4023.6-2_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4023.6-2_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4023.6-2_amd64.deb)</br>[확장성 Debian 패키지](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4023.6-2_amd64.deb)</br>[Java 확장성 Debian 패키지](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4023.6-2_amd64.deb)</br>[PolyBase RPM 패키지](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4013.40-8_amd64.deb)|
+
+## <a name="cu2-february-2020"></a><a id="cu2"></a> CU2(2020년 2월)
 
 이것은 SQL Server 2019(15.x)의 CU2(누적 업데이트 2) 릴리스입니다. 이 릴리스에 대한 SQL Server 데이터베이스 엔진 버전은 15.0.4013.40입니다. 수정 사항 및 개선 사항에 대한 자세한 내용은 <https://support.microsoft.com/help/4536075>를 참조하세요.
 
@@ -80,7 +100,7 @@ CU 리포지토리(mssql-server-2019)를 구성한 경우에는 새 설치를 �
 | SLES RPM 패키지 | 15.0.4013.40-8 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4013.40-8.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4013.40-8.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4013.40-8.x86_64.rpm)</br>[확장성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4013.40-8.x86_64.rpm)</br>[Java 확장성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4013.40-8.x86_64.rpm)</br>[PolyBase RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4013.40-8.x86_64.rpm)|
 | Ubuntu 16.04 Debian 패키지 | 15.0.4013.40-8 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4013.40-8_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4013.40-8_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4013.40-8_amd64.deb)</br>[확장성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4013.40-8_amd64.deb)</br>[Java 확장성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4013.40-8_amd64.deb)</br>[PolyBase RPM 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4013.40-8_amd64.deb)|
 
-## <a id="cu1"></a> CU1(2020년 1월)
+## <a name="cu1-january-2020"></a><a id="cu1"></a> CU1(2020년 1월)
 
 이것은 SQL Server 2019(15.x)의 CU1(누적 업데이트 1) 릴리스입니다. 이 릴리스에 대한 SQL Server 데이터베이스 엔진 버전은 15.0.4003.23입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 <https://support.microsoft.com/en-us/help/4527376>을 참조하세요.
 
@@ -97,7 +117,7 @@ CU 리포지토리(mssql-server-2019)를 구성한 경우에는 새 설치를 �
 | SLES RPM 패키지 | 15.0.4003.23-3 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4003.23-3.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4003.23-3.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4003.23-3.x86_64.rpm)</br>[확장성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4003.23-3.x86_64.rpm)</br>[Java 확장성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4003.23-3.x86_64.rpm)</br>[PolyBase RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4003.23-3.x86_64.rpm)|
 | Ubuntu 16.04 Debian 패키지 | 15.0.4003.23-3 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4003.23-3_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4003.23-3_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4003.23-3_amd64.deb)</br>[확장성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4003.23-3_amd64.deb)</br>[Java 확장성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4003.23-3_amd64.deb)</br>[PolyBase RPM 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4003.23-3_amd64.deb)|
 
-## <a id="ga"></a> GA(2019년 11월)
+## <a name="ga-november-2019"></a><a id="ga"></a> GA(2019년 11월)
 
 이것은 SQL Server 2019(15.x)의 GA(일반 공급) 릴리스입니다. 이 릴리스에 대한 SQL Server 데이터베이스 엔진 버전은 15.0.2000.5입니다.
 
@@ -111,7 +131,7 @@ CU 리포지토리(mssql-server-2019)를 구성한 경우에는 새 설치를 �
 | SLES RPM 패키지 | 15.0.2000.5-5 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.2000.5-5.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.2000.5-5.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.2000.5-5.x86_64.rpm)</br>[확장성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.2000.5-5.x86_64.rpm)</br>[Java 확장성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.2000.5-5.x86_64.rpm)</br>[PolyBase RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.2000.5-5.x86_64.rpm)|
 | Ubuntu 16.04 Debian 패키지 | 15.0.2000.5-5 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.2000.5-5_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.2000.5-5_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.2000.5-5_amd64.deb)</br>[확장성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.2000.5-5_amd64.deb)</br>[Java 확장성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.2000.5-5_amd64.deb)</br>[PolyBase RPM 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.2000.5-5_amd64.deb)|
 
-## <a id="rc"></a> 릴리스 후보(2019년 8월)
+## <a name="release-candidate-august-2019"></a><a id="rc"></a> 릴리스 후보(2019년 8월)
 
 다음 섹션에서는 릴리스 후보의 패키지 위치 및 알려진 문제를 제공합니다. SQL Server 2019의 Linux용 새 기능에 대한 자세한 내용은 [SQL Server 2019의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md)을 참조하세요.
 
@@ -230,7 +250,7 @@ CU 리포지토리(mssql-server-2019)를 구성한 경우에는 새 설치를 �
 
 - 이 릴리스에서는 Office 문서용 필터를 비롯한 일부 필터를 사용할 수 없습니다. 지원되는 필터 목록은 [Linux에서 SQL Server 전체 텍스트 검색 설치](sql-server-linux-setup-full-text-search.md#filters)를 참조하세요.
 
-### <a id="ssis"></a> SSIS(SQL Server Integration Services)
+### <a name="sql-server-integration-services-ssis"></a><a id="ssis"></a> SSIS(SQL Server Integration Services)
 
 - **mssql-server-is** 패키지는 이 릴리스의 SUSE에서 지원되지 않습니다. 현재 Ubuntu 및 RHEL(Red Hat Enterprise Linux)에서는 지원됩니다.
 
@@ -254,7 +274,7 @@ Linux SSIS에 대한 자세한 내용은 다음 문서를 참조하세요.
 -   [Linux에서 SSIS(SQL Server Integration Services) 설치](sql-server-linux-setup-ssis.md)
 -   [SSIS를 사용하여 Linux에서 데이터 추출, 변환 및 로드](sql-server-linux-migrate-ssis.md)
 
-### <a id="ssms"></a> SSMS(SQL Server Management Studio)
+### <a name="sql-server-management-studio-ssms"></a><a id="ssms"></a> SSMS(SQL Server Management Studio)
 
 다음 제한 사항은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux에 연결된 Windows의 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 적용됩니다.
 

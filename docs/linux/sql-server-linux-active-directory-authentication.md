@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: be126095fc300820a60bd4b195d43ec7d2059072
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.openlocfilehash: 83337465d8f8a7c12c9a1d69d7e9e2186485f549
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256704"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198390"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>자습서: SQL Server on Linux와 Active Directory 인증 사용
 
@@ -46,11 +46,11 @@ AD 인증을 구성하기 전에 다음을 수행해야 합니다.
   * [SUSE Linux Enterprise Server(SLES)](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-## <a id="join"></a> AD 도메인에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 호스트 가입
+## <a name="join-ssnoversion-host-to-ad-domain"></a><a id="join"></a> AD 도메인에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 호스트 가입
 
 SQL Server Linux 호스트를 Active Directory 도메인 컨트롤러에 연결합니다. Active Directory 도메인을 가입시키는 방법에 대한 자세한 내용은 [Linux 호스트의 SQL Server를 Active Directory 도메인에 가입](sql-server-linux-active-directory-join-domain.md)을 참조하세요.
 
-## <a id="createuser"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 AD 사용자(또는 MSA) 만들기 및 SPN 설정
+## <a name="create-ad-user-or-msa-for-ssnoversion-and-set-spn"></a><a id="createuser"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 AD 사용자(또는 MSA) 만들기 및 SPN 설정
 
 > [!NOTE]
 > 다음 단계에서는 [정규화된 도메인 이름](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)을 사용합니다. **Azure**에서 계속하기 전에 **[AD 사용자를 만들어야](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** 합니다.
@@ -80,14 +80,14 @@ SQL Server Linux 호스트를 Active Directory 도메인 컨트롤러에 연결�
 
 자세한 내용은 [Kerberos 연결의 서비스 사용자 이름 등록](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)을 참조하세요.
 
-## <a id="configurekeytab"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스 keytab 구성
+## <a name="configure-ssnoversion-service-keytab"></a><a id="configurekeytab"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스 keytab 구성
 
 SQL Server on Linux에 AD 인증을 구성하려면 이전 섹션에서 만든 AD 계정(MSA 또는 AD 사용자 계정)과 SPN이 필요합니다.
 
 > [!IMPORTANT]
 > AD 계정의 암호를 변경했거나 SPN이 할당된 계정의 암호를 변경한 경우 새 암호와 KVNO(키 버전 번호)를 사용하여 keytab을 업데이트해야 합니다. 일부 서비스에서는 암호를 자동으로 순환시킬 수도 있습니다. 해당하는 계정에 대한 암호 순환 정책을 검토하고 예기치 않은 가동 중지 시간을 방지하기 위해 예약된 유지 관리 작업에 맞게 조정합니다.
 
-### <a id="spn"></a> SPN keytab 항목
+### <a name="spn-keytab-entries"></a><a id="spn"></a> SPN keytab 항목
 
 1. 이전 단계에서 만든 AD 계정의 KVNO(키 버전 번호)를 확인합니다. 일반적으로 2이지만, 계정 암호를 여러 번 변경한 경우에는 다른 정수일 수 있습니다. SQL Server 호스트 머신에서 다음 명령을 실행합니다.
 
@@ -125,6 +125,7 @@ SQL Server on Linux에 AD 인증을 구성하려면 이전 섹션에서 만든 A
 
    > [!NOTE]
    > 위 명령은 AD 인증에 AES 및 RC4 암호화 암호를 모두 허용합니다. RC4는 이전 암호화 암호이며, 더 높은 수준의 보안이 필요한 경우 AES 암호화 암호로만 keytab 항목을 만들도록 선택할 수 있습니다.
+   > 마지막 두 `UserName` 항목은 소문자여야 합니다. 그렇지 않으면 권한 인증에 실패할 수 있습니다.
 
 1. 위 명령을 실행하면 mssql.keytab이라는 keytab 파일이 생성됩니다. SQL Server 머신의 `/var/opt/mssql/secrets` 폴더에 파일을 복사합니다.
 
@@ -163,7 +164,7 @@ SQL Server on Linux에 AD 인증을 구성하려면 이전 섹션에서 만든 A
 
 이제 SQL Server에서 AD 기반 로그인을 사용할 수 있습니다.
 
-## <a id="createsqllogins"></a> Transact-SQL에서 AD 기반 로그인 만들기
+## <a name="create-ad-based-logins-in-transact-sql"></a><a id="createsqllogins"></a> Transact-SQL에서 AD 기반 로그인 만들기
 
 1. SQL Server에 연결하고 새 AD 기반 로그인을 만듭니다.
 
@@ -177,7 +178,7 @@ SQL Server on Linux에 AD 인증을 구성하려면 이전 섹션에서 만든 A
    SELECT name FROM sys.server_principals;
    ```
 
-## <a id="connect"></a> AD 인증을 사용하여 SQL Server에 연결
+## <a name="connect-to-sql-server-using-ad-authentication"></a><a id="connect"></a> AD 인증을 사용하여 SQL Server에 연결
 
 도메인 자격 증명을 사용하여 클라이언트 머신에 로그인합니다. 이제 AD 인증을 사용하여 암호를 다시 입력하지 않고 SQL Server에 연결할 수 있습니다. AD 그룹에 대한 로그인을 만드는 경우 해당 그룹의 멤버인 모든 AD 사용자는 동일한 방식으로 연결할 수 있습니다.
 
@@ -212,7 +213,7 @@ SQL Windows와 달리 Kerberos 인증은 SQL Linux의 로컬 연결에서 작동
 | **ODBC** | 통합 인증을 사용합니다. |
 | **ADO.NET** | 연결 문자열 구문입니다. |
 
-## <a id="additionalconfig"></a> 추가 구성 옵션
+## <a name="additional-configuration-options"></a><a id="additionalconfig"></a> 추가 구성 옵션
 
 [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/) 또는 [Centrify](https://www.centrify.com/)와 같은 타사 유틸리티를 사용하여 Linux 호스트를 AD 도메인에 가입시키며 openldap 라이브러리를 직접 사용할 때 SQL Server를 강제 실행하려는 경우 다음과 같이 **mssql-conf**를 사용하여 **disablesssd** 옵션을 구성할 수 있습니다.
 

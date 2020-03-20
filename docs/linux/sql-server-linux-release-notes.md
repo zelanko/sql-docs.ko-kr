@@ -3,17 +3,17 @@ title: SQL Server 2017 on Linux 릴리스 정보
 description: 이 문서에는 Linux에서 실행되는 SQL Server 2017에 대한 릴리스 정보 및 지원되는 기능이 포함됩니다. 최신 릴리스 및 여러 이전 릴리스에 대한 릴리스 정보가 포함됩니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/14/2020
+ms.date: 03/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 6887026d7aa549af0fef82b007b4034cffaf1d9d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e52132e0121b602092a9e1bb94cca3e5e8d1ba73
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75952517"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286697"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>SQL Server 2017 on Linux 릴리스 정보
 
@@ -46,6 +46,7 @@ ms.locfileid: "75952517"
 
 | 해제               | 버전       | 릴리스 날짜 |
 |-----------------------|---------------|--------------|
+| [CU19](#CU19)         | 14.0.3281.6   | 2020-02-05   |
 | [CU18](#CU18)         | 14.0.3257.3   | 2019-12-09   |
 | [CU17](#CU17)         | 14.0.3238.1   | 2019-10-08   |
 | [CU16](#CU16)         | 14.0.3223.3   | 2019-08-01   |
@@ -69,7 +70,7 @@ ms.locfileid: "75952517"
 | [CU1](#CU1)           | 14.0.3006.16  | 2017-10-24   |
 | [GA](#GA)             | 14.0.1000.169 | 2017-10-02   |
 
-## <a id="cuinstall"></a> 업데이트 설치 방법
+## <a name="how-to-install-updates"></a><a id="cuinstall"></a> 업데이트 설치 방법
 
 CU 리포지토리(**mssql-server-2017**)를 구성한 경우에는 새 설치를 수행할 때 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 패키지의 최신 CU가 제공됩니다. CU 리포지토리는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux에 대한 모든 패키지 설치 문서의 기본값입니다. GDR 리포지토리(**mssql-server-2017-gdr**)를 구성한 경우 GA 이후 릴리스된 중요 보안 업데이트만 제공됩니다. Docker 컨테이너 CU 또는 GDR 업데이트가 필요한 경우 [Docker 엔진용 Microsoft SQL Server on Linux](https://hub.docker.com/r/microsoft/mssql-server)의 공식 이미지를 참조하세요. 리포지토리 구성에 대한 자세한 내용은 [SQL Server on Linux용 리포지토리 구성](sql-server-linux-change-repo.md)을 참조하세요.
 
@@ -80,7 +81,21 @@ CU 리포지토리(**mssql-server-2017**)를 구성한 경우에는 새 설치�
 - [SQL Server Integration Services 설치](sql-server-linux-setup-ssis.md)
 - [SQL Server 에이전트 사용](sql-server-linux-setup-sql-agent.md)
 
-## <a id="CU18"></a> CU18(2019년 12월)
+## <a name="cu19-february-2020"></a><a id="CU19"></a> CU19(2020년 2월)
+
+[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU19(누적 업데이트 19) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3281.6입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/help/4535007](https://support.microsoft.com/help/4535007) 항목을 참조하세요.
+
+### <a name="package-details"></a>패키지 세부 정보
+
+수동 또는 오프라인 패키지 설치의 경우 다음 표의 정보를 사용하여 RPM 및 Debian 패키지를 다운로드할 수 있습니다.
+
+| 패키지 | 패키지 버전 | 다운로드 |
+|-----|-----|-----|
+| Red Hat RPM 패키지 | 14.0.3281.6-2 | [엔진 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3281.6-2.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3281.6-2.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3281.6-2.x86_64.rpm)</br>[SSIS 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM 패키지 | 14.0.3281.6-2 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3281.6-2.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3281.6-2.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3281.6-2.x86_64.rpm) | 
+| Ubuntu 16.04 Debian 패키지 | 14.0.3281.6-2 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3281.6-2_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3281.6-2_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3281.6-2_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+## <a name="cu18-december-2019"></a><a id="CU18"></a> CU18(2019년 12월)
 
 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU18(누적 업데이트 18) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3257.3입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/help/4527377](https://support.microsoft.com/help/4527377) 항목을 참조하세요.
 
@@ -125,7 +140,7 @@ Ubuntu 16.04 컨테이너를 기반으로 하는 최신 SQL Server 2017 버전(�
 > 이후에는 SQL Server 2017 컨테이너에 다른 태그 지정 패턴을 사용하여 컨테이너를 더 이상 게시하지 않습니다.
 
 
-## <a id="CU17"></a> CU17(2019년 10월)
+## <a name="cu17-october-2019"></a><a id="CU17"></a> CU17(2019년 10월)
 
 이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU17(누적 업데이트 17) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3238.1입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/help/4515579](https://support.microsoft.com/help/4515579) 항목을 참조하세요.
 
@@ -139,7 +154,7 @@ Ubuntu 16.04 컨테이너를 기반으로 하는 최신 SQL Server 2017 버전(�
 | SLES RPM 패키지 | 14.0.3238.1-19 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3238.1-19.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3238.1-19.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3238.1-19.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 패키지 | 14.0.3238.1-19 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3238.1-19_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3238.1-19_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3238.1-19_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU16"></a> CU16(2019년 8월)
+## <a name="cu16-august-2019"></a><a id="CU16"></a> CU16(2019년 8월)
 
 이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU16(누적 업데이트 16) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3223.3입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/help/4508218](https://support.microsoft.com/help/4508218) 항목을 참조하세요.
 
@@ -159,7 +174,7 @@ Ubuntu 16.04 컨테이너를 기반으로 하는 최신 SQL Server 2017 버전(�
 | SLES RPM 패키지 | 14.0.3223.3-15 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3223.3-15.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3223.3-15.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3223.3-15.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 패키지 | 14.0.3223.3-15 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3223.3-15_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3223.3-15_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3223.3-15_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU15"></a> CU15(2019년 5월)
+## <a name="cu15-may-2019"></a><a id="CU15"></a> CU15(2019년 5월)
 
 이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU15(누적 업데이트 15) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3162.1입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/help/4498951](https://support.microsoft.com/help/4498951) 항목을 참조하세요.
 
@@ -173,7 +188,7 @@ Ubuntu 16.04 컨테이너를 기반으로 하는 최신 SQL Server 2017 버전(�
 | SLES RPM 패키지 | 14.0.3162.1-1 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3162.1-1.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3162.1-1.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3162.1-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 패키지 | 14.0.3162.1-1 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3162.1-1_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3162.1-1_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3162.1-1_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU14"></a> CU14(2019년 3월)
+## <a name="cu14-mar-2019"></a><a id="CU14"></a> CU14(2019년 3월)
 
 이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU14(누적 업데이트 14) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3076.1입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/help/4484710](https://support.microsoft.com/help/4484710) 항목을 참조하세요.
 
@@ -187,7 +202,7 @@ Ubuntu 16.04 컨테이너를 기반으로 하는 최신 SQL Server 2017 버전(�
 | SLES RPM 패키지 | 14.0.3076.1-2 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3076.1-2.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3076.1-2.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3076.1-2.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 패키지 | 14.0.3076.1-2 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3076.1-2_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3076.1-2_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3076.1-2_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU13"></a> CU13(2018년 12월)
+## <a name="cu13-dec-2018"></a><a id="CU13"></a> CU13(2018년 12월)
 
 이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU13(누적 업데이트 13) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3048.4입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/help/4466404](https://support.microsoft.com/help/4466404) 항목을 참조하세요.
 
@@ -201,7 +216,7 @@ Ubuntu 16.04 컨테이너를 기반으로 하는 최신 SQL Server 2017 버전(�
 | SLES RPM 패키지 | 14.0.3048.4-1 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3048.4-1.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3048.4-1.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3048.4-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 패키지 | 14.0.3048.4-1 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3048.4-1_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3048.4-1_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3048.4-1_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU12"></a> CU12(2018년 10월)
+## <a name="cu12-oct-2018"></a><a id="CU12"></a> CU12(2018년 10월)
 
 이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU12(누적 업데이트 12) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3045.24입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/help/4464082](https://support.microsoft.com/help/4464082) 항목을 참조하세요.
 
@@ -215,7 +230,7 @@ Ubuntu 16.04 컨테이너를 기반으로 하는 최신 SQL Server 2017 버전(�
 | SLES RPM 패키지 | 14.0.3045.24-1 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3045.24-1.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3045.24-1.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3045.24-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 패키지 | 14.0.3045.24-1 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3045.24-1_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3045.24-1_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3045.24-1_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU11"></a> CU11(2018년 9월)
+## <a name="cu11-sept-2018"></a><a id="CU11"></a> CU11(2018년 9월)
 
 이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU11(누적 업데이트 11) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3038.14입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/help/4462262](https://support.microsoft.com/help/4462262) 항목을 참조하세요.
 
@@ -229,7 +244,7 @@ Ubuntu 16.04 컨테이너를 기반으로 하는 최신 SQL Server 2017 버전(�
 | SLES RPM 패키지 | 14.0.3038.14-2 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3038.14-2.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3038.14-2.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3038.14-2.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 패키지 | 14.0.3038.14-2 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3038.14-2_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3038.14-2_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3038.14-2_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU10"></a> CU10(2018년 8월)
+## <a name="cu10-aug-2018"></a><a id="CU10"></a> CU10(2018년 8월)
 
 이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU10(누적 업데이트 10) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3037.1입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/help/4342123](https://support.microsoft.com/help/4342123) 항목을 참조하세요.
 
@@ -243,7 +258,7 @@ Ubuntu 16.04 컨테이너를 기반으로 하는 최신 SQL Server 2017 버전(�
 | SLES RPM 패키지 | 14.0.3037.1-2 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3037.1-2.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3037.1-2.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3037.1-2.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 패키지 | 14.0.3037.1-2 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3037.1-2_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3037.1-2_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3037.1-2_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU9-GDR2"></a> CU9-GDR2(2018년 8월)
+## <a name="cu9-gdr2-aug-2018"></a><a id="CU9-GDR2"></a> CU9-GDR2(2018년 8월)
 
 이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 이전 릴리스 CU(CU9)가 포함된 보안 업데이트합니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3035.2입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/help/4293805](https://support.microsoft.com/help/4293805) 항목을 참조하세요.
 
@@ -257,7 +272,7 @@ Ubuntu 16.04 컨테이너를 기반으로 하는 최신 SQL Server 2017 버전(�
 | SLES RPM 패키지 | 14.0.3035.2-1 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3035.2-1.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3035.2-1.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3035.2-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 패키지 | 14.0.3035.2-1 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3035.2-1_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3035.2-1_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3035.2-1_amd64.deb)<br/> |
 
-## <a id="GDR2"></a> GDR2(2018년 8월)
+## <a name="gdr2-aug-2018"></a><a id="GDR2"></a> GDR2(2018년 8월)
 
 이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 GDR2 및 GDR1 보안 수정 사항만 포함된 보안 업데이트합니다.  이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.2002.14입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/help/4293803](https://support.microsoft.com/help/4293803) 항목을 참조하세요.
 
@@ -271,7 +286,7 @@ Ubuntu 16.04 컨테이너를 기반으로 하는 최신 SQL Server 2017 버전(�
 | SLES RPM 패키지 | 14.0.2002.14-1 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-14.0.2002.14-1.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-ha-14.0.2002.14-1.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-fts-14.0.2002.14-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 패키지 | 14.0.2002.14-1 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server/mssql-server_14.0.2002.14-1_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.2002.14-1_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.2002.14-1_amd64.deb) |
 
-## <a id="CU9"></a> CU9(2018년 7월)
+## <a name="cu9-jul-2018"></a><a id="CU9"></a> CU9(2018년 7월)
 
 이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU9(누적 업데이트 9) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3030.27입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/help/4341265](https://support.microsoft.com/help/4341265) 항목을 참조하세요.
 
@@ -285,7 +300,7 @@ Ubuntu 16.04 컨테이너를 기반으로 하는 최신 SQL Server 2017 버전(�
 | SLES RPM 패키지 | 14.0.3030.27-1 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3030.27-1.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3030.27-1.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3030.27-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 패키지 | 14.0.3030.27-1 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3030.27-1_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3030.27-1_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3030.27-1_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU8"></a> CU8(2018년 6월)
+## <a name="cu8-jun-2018"></a><a id="CU8"></a> CU8(2018년 6월)
 
 이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU8(누적 업데이트 8) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3029.16입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/help/4338363](https://support.microsoft.com/help/4338363) 항목을 참조하세요.
 
@@ -299,7 +314,7 @@ Ubuntu 16.04 컨테이너를 기반으로 하는 최신 SQL Server 2017 버전(�
 | SLES RPM 패키지 | 14.0.3029.16-1 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3029.16-1.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3029.16-1.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3029.16-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 패키지 | 14.0.3029.16-1 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3029.16-1_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3029.16-1_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3029.16-1_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU7"></a> CU7(2018년 5월)
+## <a name="cu7-may-2018"></a><a id="CU7"></a> CU7(2018년 5월)
 
 이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU7(누적 업데이트 7) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3026.27입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/help/4229789](https://support.microsoft.com/help/4229789) 항목을 참조하세요.
 
@@ -313,7 +328,7 @@ Ubuntu 16.04 컨테이너를 기반으로 하는 최신 SQL Server 2017 버전(�
 | SLES RPM 패키지 | 14.0.3026.27-2 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3026.27-2.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3026.27-2.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3026.27-2.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 패키지 | 14.0.3026.27-2 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3026.27-2_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3026.27-2_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3026.27-2_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU6"></a> CU6(2018년 4월)
+## <a name="cu6-apr-2018"></a><a id="CU6"></a> CU6(2018년 4월)
 
 이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU6(누적 업데이트 6) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3025.34입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/help/4101464](https://support.microsoft.com/help/4101464) 항목을 참조하세요.
 
@@ -327,7 +342,7 @@ Ubuntu 16.04 컨테이너를 기반으로 하는 최신 SQL Server 2017 버전(�
 | SLES RPM 패키지 | 14.0.3025.34-3 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 패키지 | 14.0.3025.34-3 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3025.34-3_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3025.34-3_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3025.34-3_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU5"></a> CU5(2018년 3월)
+## <a name="cu5-mar-2018"></a><a id="CU5"></a> CU5(2018년 3월)
 
 이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU5(누적 업데이트 5) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3023.8입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/help/4092643](https://support.microsoft.com/help/4092643) 항목을 참조하세요.
 
@@ -359,7 +374,7 @@ sudo systemctl start mssql-server
 | SLES RPM 패키지 | 14.0.3023.8-5 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3023.8-5.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3023.8-5.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3023.8-5.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 패키지 | 14.0.3023.8-5 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3023.8-5_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3023.8-5_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3023.8-5_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU4"></a> CU4(2018년 2월)
+## <a name="cu4-feb-2018"></a><a id="CU4"></a> CU4(2018년 2월)
 
 이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU4(누적 업데이트 4) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3022.28입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/help/4056498](https://support.microsoft.com/help/4056498) 항목을 참조하세요.
 
@@ -376,7 +391,7 @@ sudo systemctl start mssql-server
 | SLES RPM 패키지 | 14.0.3022.28-2 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3022.28-2.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3022.28-2.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3022.28-2.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 패키지 | 14.0.3022.28-2 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3022.28-2_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3022.28-2_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3022.28-2_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="GDR1"></a> GDR1(2018년 1월)
+## <a name="gdr1-jan-2018"></a><a id="GDR1"></a> GDR1(2018년 1월)
 
 이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 GDR1 보안 수정 사항만 포함된 보안 업데이트합니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.2000.63입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/help/4057122](https://support.microsoft.com/help/4057122) 항목을 참조하세요.
 
@@ -390,7 +405,7 @@ sudo systemctl start mssql-server
 | SLES RPM 패키지 | 14.0.2000.63-3 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-14.0.2000.63-3.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-ha-14.0.2000.63-3.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-fts-14.0.2000.63-3.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 패키지 | 14.0.2000.63-3 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server/mssql-server_14.0.2000.63-3_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.2000.63-3_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.2000.63-3_amd64.deb) |
 
-## <a id="CU3"></a> CU3(2018년 1월)
+## <a name="cu3-jan-2018"></a><a id="CU3"></a> CU3(2018년 1월)
 
 이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU3(누적 업데이트 3) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3015.40입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/help/4052987](https://support.microsoft.com/help/4052987) 항목을 참조하세요.
 
@@ -404,7 +419,7 @@ sudo systemctl start mssql-server
 | SLES RPM 패키지 | 14.0.3015.40-1 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3015.40-1.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3015.40-1.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3015.40-1.x86_64.rpm)</br>[SQL Server 에이전트 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3015.40-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 패키지 | 14.0.3015.40-1 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3015.40-1_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3015.40-1_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3015.40-1_amd64.deb)</br>[SQL Server 에이전트 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3015.40-1_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU2"></a> CU2(2017년 11월)
+## <a name="cu2-nov-2017"></a><a id="CU2"></a> CU2(2017년 11월)
 
 이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU2(누적 업데이트 2) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3008.27입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/help/4052574](https://support.microsoft.com/help/4052574) 항목을 참조하세요.
 
@@ -418,7 +433,7 @@ sudo systemctl start mssql-server
 | SLES RPM 패키지 | 14.0.3008.27-1 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3008.27-1.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3008.27-1.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3008.27-1.x86_64.rpm)</br>[SQL Server 에이전트 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3008.27-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 패키지 | 14.0.3008.27-1 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3008.27-1_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3008.27-1_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3008.27-1_amd64.deb)</br>[SQL Server 에이전트 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3008.27-1_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU1"></a> CU1(2017년 10월)
+## <a name="cu1-oct-2017"></a><a id="CU1"></a> CU1(2017년 10월)
 
 이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU1(누적 업데이트 1) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3006.16입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 [https://support.microsoft.com/help/KB4053439](https://support.microsoft.com/help/4038634) 항목을 참조하세요.
 
@@ -432,7 +447,7 @@ sudo systemctl start mssql-server
 | SLES RPM 패키지 | 14.0.3006.16-3 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3006.16-3.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3006.16-3.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3006.16-3.x86_64.rpm)</br>[SQL Server 에이전트 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3006.16-3.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 패키지 | 14.0.3006.16-3 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3006.16-3_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3006.16-3_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3006.16-3_amd64.deb)</br>[SQL Server 에이전트 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3006.16-3_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="GA"></a> GA(2017년 10월)
+## <a name="ga-oct-2017"></a><a id="GA"></a> GA(2017년 10월)
 
 이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 GA(일반 공급) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.1000.169입니다.
 
@@ -552,7 +567,7 @@ sudo systemctl start mssql-server
 
 - 이 릴리스에서는 Office 문서용 필터를 비롯한 일부 필터를 사용할 수 없습니다. 지원되는 필터 목록은 [Linux에서 SQL Server 전체 텍스트 검색 설치](sql-server-linux-setup-full-text-search.md#filters)를 참조하세요.
 
-#### <a id="ssis"></a> SSIS(SQL Server Integration Services)
+#### <a name="sql-server-integration-services-ssis"></a><a id="ssis"></a> SSIS(SQL Server Integration Services)
 
 - **mssql-server-is** 패키지는 이 릴리스의 SUSE에서 지원되지 않습니다. 현재 Ubuntu 및 RHEL(Red Hat Enterprise Linux)에서는 지원됩니다.
 
@@ -576,7 +591,7 @@ Linux SSIS에 대한 자세한 내용은 다음 문서를 참조하세요.
 -   [Linux에서 SSIS(SQL Server Integration Services) 설치](sql-server-linux-setup-ssis.md)
 -   [SSIS를 사용하여 Linux에서 데이터 추출, 변환 및 로드](sql-server-linux-migrate-ssis.md)
 
-#### <a id="ssms"></a> SSMS(SQL Server Management Studio)
+#### <a name="sql-server-management-studio-ssms"></a><a id="ssms"></a> SSMS(SQL Server Management Studio)
 
 다음 제한 사항은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux에 연결된 Windows의 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 적용됩니다.
 

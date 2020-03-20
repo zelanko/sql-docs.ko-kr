@@ -1,7 +1,7 @@
 ---
 title: 추적 플래그(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/12/2019
+ms.date: 03/11/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 058becae07f15857f0509cbbc90261b960bc4713
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.openlocfilehash: e19d4af33285f68033dbcead3f7bc275b2e029cb
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77705918"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288637"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 추적 플래그(Transact-SQL)
 
@@ -86,9 +86,9 @@ ms.locfileid: "77705918"
 |**902**|누적 업데이트 또는 서비스 팩을 설치할 때 데이터베이스 업그레이드 스크립트 실행을 건너뜁니다. 스크립트 업그레이드 모드에 있는 동안 오류가 발생하면 Microsoft SQL CSS(고객 서비스 및 지원)에 문의하여 추가 지침을 얻는 것이 좋습니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/2163980)를 참조하세요.<br /><br />**경고:** 이 추적 플래그는 스크립트 업그레이드 모드에서 실패한 업데이트 문제를 해결하기 위한 것이며, 프로덕션 환경에서 계속 실행하도록 지원되지 않습니다. 누적 업데이트 및 서비스 팩을 완전하게 설치하려면 데이터베이스 업그레이드 스크립트를 성공적으로 실행해야 합니다. 그렇지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 예기치 않은 문제가 발생할 수 있습니다.<br /><br />**범위**: 전역만|
 |**1117**|파일 그룹의 파일이 자동 증가 임계값을 충족하면 파일 그룹의 모든 파일이 커집니다. 이 추적 플래그는 모든 데이터베이스에 영향을 주며, 모든 데이터베이스가 동일한 양만큼 파일 그룹의 모든 파일을 늘릴 수 있는 경우에만 권장됩니다.<br /><br />**참고:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 이 동작은 ALTER DATABASE의 AUTOGROW_SINGLE_FILE 및 AUTOGROW_ALL_FILES 옵션으로 제어되며, 1117 추적 플래그는 아무 효과가 없습니다. 자세한 내용은 [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)을 참조하세요.<br /><br />**범위**: 전역만|
 |**1118**|혼합 익스텐트 대신 단일 익스텐트로 페이지 할당을 강제 적용하여 SGAM 페이지의 경합을 줄입니다. 새 개체가 만들어지면 기본적으로 처음 8개 페이지가 다른 익스텐트(혼합 익스텐트)에서 할당됩니다. 나중에 페이지가 더 필요할 때 처음 8장의 페이지가 같은 익스텐트(단일 익스텐트)에서 할당됩니다. SGAM 페이지는 이 혼합 익스텐트를 추적하는 데 사용되므로, 여러 혼합 페이지 할당이 발생할 때 빠르게 병목 상태가 될 수 있습니다. 이 추적 플래그는 새 개체를 만들 때 같은 익스텐트에서 8장의 페이지를 모두 할당하여 SGAM 페이지를 검색할 필요를 최소화합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/328551)를 참조하세요.<br /><br />**참고:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 이 동작은 ALTER DATABASE의 SET MIXED_PAGE_ALLOCATION 옵션으로 제어되며 1118 추적 플래그는 아무 효과가 없습니다. 자세한 내용은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.<br /><br />**범위**: 전역만|  
-|**1204**|교착 상태에 있는 잠금의 유형과 리소스 및 현재 영향을 받은 명령을 반환합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/832524)를 참조하세요.<br /><br />**범위**: 전역만|  
+|**1204**|교착 상태에 있는 잠금의 유형과 리소스 및 현재 영향을 받은 명령을 반환합니다. 교착 상태에 대한 자세한 내용은 [트랜잭션 잠금 및 행 버전 관리 지침](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#deadlocks)을 참조하세요.<br /><br />**참고:** 워크로드가 많고 교착 상태가 발생하는 시스템에서는 추적 플래그 1204를 사용하지 않는 것이 좋습니다. 교착 상태를 검색하는 다른 수단에 대한 자세한 내용은 [트랜잭션 잠금 및 행 버전 관리 지침](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#deadlock_detection)을 참조하세요.<br /><br />**범위**: 전역만|  
 |**1211**|메모리 가중이나 잠금 수를 기반으로 잠금 에스컬레이션을 해제합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 행 또는 페이지 잠금을 테이블 잠금으로 에스컬레이션하지 않습니다.<br /><br />이 추적 플래그를 사용하면 잠금이 지나치게 많이 생성될 수 있으며, 잠금 메모리가 충분히 커지면 쿼리에 대해 추가 잠금을 할당하지 못할 수 있습니다. 이로 인해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 성능이 저하되거나 메모리가 부족하게 되어 잠금 리소스를 할당할 수 없는 1204 오류가 발생할 수 있습니다.<br /><br />추적 플래그 1211과 1224를 모두 설정하면 1211이 1224보다 우선 적용됩니다. 그러나 추적 플래그 1211은 메모리 부족 등의 모든 경우에서 에스컬레이션을 차단하므로 1224를 대신 사용하는 것이 좋습니다. 이렇게 하면 많은 잠금을 사용할 때 "잠금 부족" 오류를 방지하는 데 도움이 됩니다.<br /><br />[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 잠금 에스컬레이션으로 인해 발생하는 차단 문제를 해결하는 방법에 대한 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/help/323630)를 참조하세요.<br /><br />**범위**: 전역 또는 세션|  
-|**1222**|교착 상태에 있는 잠금 유형과 리소스 및 현재 영향을 받은 명령을 XSD 스키마에 맞지 않는 XML 형식으로 반환합니다.<br /><br />**범위**: 전역만|  
+|**1222**|교착 상태에 있는 잠금 유형과 리소스 및 현재 영향을 받은 명령을 XSD 스키마에 맞지 않는 XML 형식으로 반환합니다. 교착 상태에 대한 자세한 내용은 [트랜잭션 잠금 및 행 버전 관리 지침](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#deadlocks)을 참조하세요.<br /><br />**참고:** 워크로드가 많고 교착 상태가 발생하는 시스템에서는 추적 플래그 1222를 사용하지 않는 것이 좋습니다. 교착 상태를 검색하는 다른 수단에 대한 자세한 내용은 [트랜잭션 잠금 및 행 버전 관리 지침](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#deadlock_detection)을 참조하세요.<br /><br />**범위**: 전역만|  
 |**1224**|잠금 수를 기반으로 잠금 에스컬레이션을 해제합니다. 그러나 메모리 가중으로 잠금 에스컬레이션이 활성화될 수 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 잠금 개체에 사용되는 메모리 양이 다음 조건 중 하나를 초과하면 행 또는 페이지 잠금을 테이블(또는 파티션) 잠금으로 에스컬레이션합니다.<br /><ul><li>[!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 사용하는 메모리의 40%입니다. sp_configure의 **locks** 매개 변수가 0으로 설정된 경우에만 적용됩니다. <li>\- sp_configure의 **locks** 매개 변수를 사용하여 구성된 메모리 잠금의 40%입니다. 자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.</li></ul><br />추적 플래그 1211과 1224를 모두 설정하면 1211이 1224보다 우선 적용됩니다. 그러나 추적 플래그 1211은 메모리 부족 등의 모든 경우에서 에스컬레이션을 차단하므로 1224를 사용하는 것이 좋습니다. 이렇게 하면 많은 잠금을 사용할 때 "잠금 부족" 오류를 방지하는 데 도움이 됩니다.<br /><br />**참고:** 테이블 수준 또는 HoBT 수준 세분성에 대한 잠금 에스컬레이션은 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 문의 LOCK_ESCALATION 옵션을 사용하여 제어할 수도 있습니다.<br /><br />[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 잠금 에스컬레이션으로 인해 발생하는 차단 문제를 해결하는 방법에 대한 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/help/323630)를 참조하세요.<br /><br />**범위:** 전역 또는 세션|
 |**1229**|CPU 수에 관계없이 모든 잠금 분할을 사용하지 않도록 설정합니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 서버에 16개 이상의 CPU가 있는 경우 대규모 시스템의 확장성 특성을 향상하기 위해 잠금 분할을 사용합니다. 잠금 분할에 대한 자세한 내용은 [트랜잭션 잠금 및 행 버전 관리 가이드](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#lock_partitioning)를 참조하세요.<br /><br />**경고:** 추적 플래그 1229를 사용하면 spinlock 경합이 발생하고 성능이 저하될 수 있습니다.<br /><br />**범위**: 전역만|  
 |**1236**|데이터베이스 잠금 분할을 사용하도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/2926217)를 참조하세요.<br /><br />**참고:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP3 및 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1부터 이 동작은 엔진에서 제어되며, 1236 추적 플래그는 아무 효과가 없습니다.<br /><br />**범위**: 전역만|
