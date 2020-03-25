@@ -132,6 +132,6 @@ ms.locfileid: "79286807"
 -   [분할된 테이블로 대량 로드](https://msdn.microsoft.com/library/cc966380.aspx)    
 -   [Project REAL: 데이터 수명 주기 -- 분할](https://technet.microsoft.com/library/cc966424.aspx)    
 -   [분할된 테이블 및 인덱스에서의 향상된 쿼리 처리](https://msdn.microsoft.com/library/ms345599.aspx)    
--   _SQLCAT의 가이드: 관계형 엔진_의 대규모 관계형 데이터 웨어하우스 빌드를 위한 상위 10가지 모범 사례
+-   [대규모 관계형 데이터 웨어하우스를 구축 하기 위한 상위 10 가지 모범 사례](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20Relational%20Engine.pdf) _SQLCAT의 가이드 관계형 엔지니어링_
   
   
