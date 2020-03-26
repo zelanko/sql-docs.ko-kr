@@ -44,7 +44,7 @@ ms.locfileid: "79286667"
 
  고유하게 컴파일된 모듈에서 지원되지 않는 구문에 대한 자세한 내용과 지원되지 않는 일부 기능을 해결하는 방법은 [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)를 참조하세요. 지원되지 않는 기능에 대한 자세한 내용은 [메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)을 참조하세요.  
 
-##  <a name="qsancsp"></a> 네이티브 모듈의 쿼리 노출 영역  
+##  <a name="query-surface-area-in-native-modules"></a><a name="qsancsp"></a> 네이티브 모듈의 쿼리 노출 영역  
 
 다음과 같은 쿼리 구문이 지원됩니다.  
 
@@ -142,7 +142,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 고유하게 컴파일된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에 대한 이러한 제한 사항은 메모리 최적화 테이블에 대한 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스에는 적용되지 않습니다.  
 
 
-##  <a name="dml"></a> 데이터 수정  
+##  <a name="data-modification"></a><a name="dml"></a> 데이터 수정  
 
 다음의 DML 문이 지원됩니다.  
 
@@ -154,7 +154,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   WHERE은 UPDATE 및 DELETE 문에서 지원됩니다.  
 
-##  <a name="cof"></a> 흐름 제어 언어  
+##  <a name="control-of-flow-language"></a><a name="cof"></a> 흐름 제어 언어  
  다음의 흐름 제어 언어 구문이 지원됩니다.  
 
 -   [IF...ELSE&#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
@@ -175,7 +175,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   BEGIN ATOMIC(저장 프로시저의 외부 수준). 자세한 내용은 [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md)을 참조하세요.  
 
-##  <a name="so"></a> 지원되는 연산자  
+##  <a name="supported-operators"></a><a name="so"></a> 지원되는 연산자  
  지원되는 연산자는 다음과 같습니다.  
 
 -   [비교 연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)(예: >, \<, >=, <=)  
@@ -194,7 +194,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
     - **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
       [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]부터 APPLY 연산자는 고유하게 컴파일된 모듈에서 지원됩니다.
 
-##  <a name="bfncsp"></a> 고유하게 컴파일된 모듈의 기본 제공 함수  
+##  <a name="built-in-functions-in-natively-compiled-modules"></a><a name="bfncsp"></a> 고유하게 컴파일된 모듈의 기본 제공 함수  
  다음 함수는 메모리 최적화 테이블에 대한 제약 조건과 고유하게 컴파일된 T-SQL 모듈에서 지원됩니다.  
 
 -   모든 [수치 연산 함수&#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
@@ -223,12 +223,12 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   네이티브 모듈의 실행을 중첩할 수 있습니다.
 
-##  <a name="auditing"></a> 감사  
+##  <a name="auditing"></a><a name="auditing"></a> 감사  
  프로시저 수준 감사는 고유하게 컴파일된 저장 프로시저에서 지원됩니다.  
 
- 감사에 대한 자세한 내용은 [Create a Server Audit and Database Audit Specification](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)를 참조하세요.  
+ 감사에 대한 자세한 내용은 [서버 감사 및 데이터베이스 감사 사양 만들기](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)를 참조하세요.  
 
-##  <a name="tqh"></a> 테이블 및 쿼리 힌트  
+##  <a name="table-and-query-hints"></a><a name="tqh"></a> 테이블 및 쿼리 힌트  
  다음 항목이 지원됩니다.  
 
 -   테이블 힌트 구문 또는 쿼리의 [OPTION 절&#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)에 있는 INDEX, FORCESCAN 및 FORCESEEK 힌트. 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)를 참조하세요.  
@@ -241,7 +241,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
  자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
 
-##  <a name="los"></a> 정렬의 제한 사항  
+##  <a name="limitations-on-sorting"></a><a name="los"></a> 정렬의 제한 사항  
  [TOP&#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 및 [ORDER BY 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)을 사용하는 쿼리에서는 8,000개 이상의 행을 정렬할 수 있습니다. 하지만 [ORDER BY 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)이 없을 경우, [TOP&#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)은 최대 8,000개까지만 행을 정렬할 수 있습니다. 조인이 있으면 이러한 행 수가 더 줄어듭니다.  
 
  쿼리에서 [TOP&#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 연산자와 [ORDER BY 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)을 모두 사용하는 경우 TOP 연산자에 대해 최대 8192행을 지정할 수 있습니다. 8192행보다 더 많이 지정하면 다음 오류 메시지가 나타납니다. **메시지 41398, 수준 16, 상태 1, 프로시저 *\<procedureName>* , 줄 *\<lineNumber>* TOP 연산자는 최대 8192개의 행을 반환할 수 있습니다. *\<number>* 개가 요청되었습니다.**  
