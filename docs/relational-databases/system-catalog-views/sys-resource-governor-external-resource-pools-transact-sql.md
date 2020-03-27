@@ -18,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 379dae51b913fc02a16a562037776620b1e0433c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 79c81cafe588fd827ece6184cab5470df8ec4c42
+ms.sourcegitcommit: eef5ab1966062e190dc1cd49409bc0429ba6d1e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67904470"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80290841"
 ---
 # <a name="sysresource_governor_external_resource_pools-transact-sql"></a>sys. resource_governor_external_resource_pools (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-**적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 및 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 및 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]저장 된 외부 리소스 풀 구성을 반환 합니다. 뷰의 각 행에 따라 풀의 구성이 결정됩니다.
   
 |열 이름|데이터 형식|Description|
 |-----------------|---------------|-----------------|
-|pool_id|**int**|리소스 풀의 고유한 ID입니다. Null을 허용하지 않습니다.<br /><br /> **참고:** 나중에 이름을 바꿀 수 있습니다.|
+|external_pool_id|**int**|리소스 풀의 고유한 ID입니다. Null을 허용하지 않습니다.|
 |name|**sysname**|리소스 풀의 이름입니다. Null을 허용하지 않습니다.|
 |max_cpu_percent|**int**|CPU 충돌이 있으면 리소스 풀의 모든 요청에 대해 허용된 최대 평균 CPU 대역폭입니다. Null을 허용하지 않습니다.|
 |max_memory_percent|**int**|이 리소스 풀의 요청에서 사용할 수 있는 총 서버 메모리의 비율입니다. Null을 허용하지 않습니다. 유효한 최대는 풀 최소에 따라 다릅니다. 예를 들어 max_memory_percent는 100으로 설정할 수 있지만 유효한 최대는 낮습니다.|
