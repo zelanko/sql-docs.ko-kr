@@ -16,10 +16,10 @@ ms.assetid: 67b2bb4b-9714-4ba5-8739-50c632830451
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c9b9a213b4863e068b0e9f5eb4115334d47e8e71
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67982680"
 ---
 # <a name="getjdbcmajorversion-method-sqlserverdatabasemetadata"></a>getJDBCMajorVersion 메서드(SQLServerDatabaseMetaData)

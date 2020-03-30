@@ -16,10 +16,10 @@ ms.assetid: 093f6c3b-49a6-4043-9993-bd0482de04dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 42045bee1dca5d2a9c5fc748f5d7a1c5ebbca9de
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67956011"
 ---
 # <a name="addbatch-method-javalangstring"></a>addBatch 메서드(java.lang.String)

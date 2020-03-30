@@ -11,10 +11,10 @@ ms.assetid: d612461d-4c3f-46db-b968-ff4c80b2aa7c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e32cbf975d156aae723dfbff105fe51e039dc1b5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977019"
 ---
 # <a name="iswrapperfor-method-sqlserverxadatasource"></a>isWrapperFor 메서드(SQLServerXADataSource)
@@ -45,7 +45,7 @@ public boolean isWrapperFor(Class iface)
   
  이 메서드가 true를 반환하는 경우 동일한 인수로 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)을 호출하는 데 성공합니다.  
   
- 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조하세요.  
+ 자세한 내용은 [래퍼와 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [unwrap 메서드&#40;SQLServerXADataSource&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)   

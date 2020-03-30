@@ -11,10 +11,10 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: “”
 ms.openlocfilehash: fbe44c84b2a1974981dff5173015ecf0fc5e74b5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256988"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>SQL Server Data Tools에 필요한 권한
@@ -35,7 +35,7 @@ Visual Studio에서 데이터베이스에 대한 작업을 수행하려면 먼�
   
 -   [SQL Server CLR(공용 언어 런타임) 프로젝트에 대한 사용 권한](#SQLCLRPermissions)  
   
-## <a name="DatabaseCreationAndDeploymentPermissions"></a>데이터베이스를 만들거나 배포할 수 있는 권한  
+## <a name="permissions-to-create-or-deploy-a-database"></a><a name="DatabaseCreationAndDeploymentPermissions"></a>데이터베이스를 만들거나 배포할 수 있는 권한  
 데이터베이스를 만들거나 배포하려면 다음과 같은 사용 권한이 있어야 합니다.  
   
 |||  
@@ -51,10 +51,10 @@ Visual Studio에서 데이터베이스에 대한 작업을 수행하려면 먼�
   
 자세한 내용은 SQL Server 온라인 설명서를 참조하십시오.  
   
-## <a name="DatabaseRefactoringPermissions"></a>데이터베이스를 리팩터링할 수 있는 권한  
+## <a name="permissions-to-refactor-a-database"></a><a name="DatabaseRefactoringPermissions"></a>데이터베이스를 리팩터링할 수 있는 권한  
 *데이터베이스 리팩터링*은 데이터베이스 프로젝트 내에서만 발생합니다. 데이터베이스 프로젝트를 사용할 수 있는 권한이 있어야 합니다. 대상 데이터베이스에 대한 변경 내용을 배포하기 전까지는 대상 데이터베이스에 대한 사용 권한이 필요하지 않습니다.  
   
-## <a name="DatabaseUnitTestingPermissions"></a>SQL Server 데이터베이스에 대한 단위 테스트를 수행할 수 있는 권한  
+## <a name="permissions-to-perform-unit-testing-on-a-sql-server-database"></a><a name="DatabaseUnitTestingPermissions"></a>SQL Server 데이터베이스에 대한 단위 테스트를 수행할 수 있는 권한  
 데이터베이스에 대한 단위 테스트를 수행하려면 다음과 같은 사용 권한이 있어야 합니다.  
   
 |||  
@@ -66,10 +66,10 @@ Visual Studio에서 데이터베이스에 대한 작업을 수행하려면 먼�
 |테스트를 실행하기 전에 데이터베이스 변경 내용 배포|권한 있는 컨텍스트 데이터베이스 연결을 사용해야 합니다. 자세한 내용은 [방법: SQL Server 단위 테스트 실행 구성](../ssdt/how-to-configure-sql-server-unit-test-execution.md)을 참조하세요.|  
 |테스트를 실행하기 전에 데이터 생성|권한 있는 컨텍스트 데이터베이스 연결을 사용해야 합니다. 자세한 내용은 [방법: SQL Server 단위 테스트 실행 구성](../ssdt/how-to-configure-sql-server-unit-test-execution.md)을 참조하세요.|  
   
-## <a name="DataGenerationPermissions"></a>데이터를 생성할 수 있는 권한  
+## <a name="permissions-to-generate-data"></a><a name="DataGenerationPermissions"></a>데이터를 생성할 수 있는 권한  
 데이터 생성기를 사용하여 테스트 데이터를 생성하려면 대상 데이터베이스의 개체에 대한 **INSERT** 및 **SELECT** 권한이 있어야 합니다. 데이터를 생성하기 전에 데이터를 제거하는 경우에는 대상 데이터베이스의 개체에 대한 **DELETE** 권한도 있어야 합니다. 테이블의 **IDENTITY** 열을 다시 설정하려면 테이블을 소유하고 있거나 db_owner 또는 db_ddladmin 역할의 멤버여야 합니다.  
   
-## <a name="SchemaAndDataComparePermissions"></a>스키마 및 데이터를 비교할 수 있는 권한  
+## <a name="permissions-to-compare-schemas-and-data"></a><a name="SchemaAndDataComparePermissions"></a>스키마 및 데이터를 비교할 수 있는 권한  
 스키마 또는 데이터를 비교하려면 다음과 같은 사용 권한이 있어야 합니다.  
   
 |||  
@@ -82,10 +82,10 @@ Visual Studio에서 데이터베이스에 대한 작업을 수행하려면 먼�
   
 자세한 내용은 SQL Server 온라인 설명서를 참조하십시오.  
   
-## <a name="Transact-SQLEditorPermissions"></a>Transact\-SQL 편집기를 실행할 수 있는 권한  
+## <a name="permissions-to-run-the-transact-sql-editor"></a><a name="Transact-SQLEditorPermissions"></a>Transact\-SQL 편집기를 실행할 수 있는 권한  
 Transact\-SQL 편집기 내에서 수행할 수 있는 작업은 대상 데이터베이스에 대한 실행 컨텍스트에 따라 결정됩니다.  
   
-## <a name="SQLCLRPermissions"></a>SQL Server 공용 언어 런타임 프로젝트에 대한 사용 권한  
+## <a name="permissions-for-sql-server-common-language-run-time-projects"></a><a name="SQLCLRPermissions"></a>SQL Server 공용 언어 런타임 프로젝트에 대한 사용 권한  
 다음 표에서는 CLR 프로젝트를 배포하거나 디버깅할 때 필요한 권한을 보여 줍니다.  
   
 |동작|필요한 권한|  

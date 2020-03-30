@@ -12,10 +12,10 @@ ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ddc1796b4b3638d91c94acafbce1377128dfe1cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081621"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>테이블 또는 행렬에 대화형 정렬 추가(보고서 작성기 및 SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "77081621"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="BackToTop"></a> 문서 내용  
+##  <a name="in-this-article"></a><a name="BackToTop"></a> 문서 내용  
  [그룹이 없는 테이블의 정보 행 정렬](#SortingDetailRows)  
   
  [테이블 또는 행렬의 최상위 부모 행 그룹 정렬](#SortingTopLevelParent)  
@@ -39,7 +39,7 @@ ms.locfileid: "77081621"
   
  [여러 데이터 영역에 대한 정렬 순서 동기화](#SynchronizingSortOrder)  
   
-##  <a name="SortingDetailRows"></a> 그룹이 없는 테이블의 정보 행 정렬  
+##  <a name="sorting-detail-rows-for-a-table-with-no-groups"></a><a name="SortingDetailRows"></a> 그룹이 없는 테이블의 정보 행 정렬  
  대화형 정렬 단추를 열 머리글에 추가하면 사용자가 열 머리글을 클릭하고 테이블의 해당 열에 표시된 값을 기준으로 정보 행을 정렬할 수 있습니다.  
   
 #### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-the-table-by-value"></a>대화형 정렬 단추를 열 머리글에 추가하여 값을 기준으로 테이블을 정렬하려면  
@@ -62,7 +62,7 @@ ms.locfileid: "77081621"
   
  ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
-##  <a name="SortingTopLevelParent"></a> 테이블 또는 행렬의 최상위 부모 행 그룹 정렬  
+##  <a name="sorting-a-top-level-parent-row-group-for-a-table-or-matrix"></a><a name="SortingTopLevelParent"></a> 테이블 또는 행렬의 최상위 부모 행 그룹 정렬  
  대화형 정렬 단추를 열 머리글에 추가하면 사용자가 열 머리글을 클릭하고 테이블 또는 행렬의 해당 열에 표시된 값을 기준으로 부모 그룹 행을 정렬할 수 있습니다. 자식 그룹의 순서는 변경되지 않고 그대로 유지됩니다.  
   
 #### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-groups"></a>대화형 정렬 단추를 열 머리글에 추가하여 그룹을 정렬하려면  
@@ -86,7 +86,7 @@ ms.locfileid: "77081621"
   
  ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
-##  <a name="SortingChildGroups"></a> 그룹의 자식 그룹 또는 정보 행 정렬  
+##  <a name="sorting-child-groups-or-detail-rows-for-a-group"></a><a name="SortingChildGroups"></a> 그룹의 자식 그룹 또는 정보 행 정렬  
  대화형 정렬 단추를 그룹 머리글 행에 추가하면 사용자가 부모 그룹의 자식 그룹 값을 정렬하거나 가장 안쪽에 있는 자식 그룹의 정보 행을 정렬할 수 있습니다.  
   
 #### <a name="to-add-an-interactive-sort-button-to-a-text-box-in-a-group-row-header-to-sort-child-groups-or-detail-rows"></a>대화형 정렬 단추를 그룹 행 머리글의 입력란에 추가하여 자식 그룹 또는 정보 행을 정렬하려면  
@@ -109,7 +109,7 @@ ms.locfileid: "77081621"
   
  ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
-##  <a name="SortingMultipleRowGroups"></a> 복잡한 그룹 식을 기준으로 행 정렬  
+##  <a name="sorting-rows-based-on-a-complex-group-expression"></a><a name="SortingMultipleRowGroups"></a> 복잡한 그룹 식을 기준으로 행 정렬  
  대화형 정렬 단추를 열 머리글에 추가하면 사용자가 열 머리글을 클릭하고 결합된 부모 및 자식 그룹을 정렬할 수 있습니다. 이러한 결과를 얻으려면 그룹 식을 두 그룹의 복합 형태로 변경해야 합니다. 예를 들어 상점에 대한 행렬에 색 및 크기로 그룹화된 품목의 총 재고량이 표시된다고 가정하겠습니다. 색 및 크기 각각에 대해 별도의 그룹을 만들지 않고 색 및 크기의 조합을 기준으로 행을 정렬하려면 색 및 크기의 조합을 기준으로 그룹을 정의할 수 있습니다. 그룹 식을 정의하는 방법에 대한 자세한 내용은 [그룹 식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)를 참조하세요.  
   
  다음 절차에서는 테이블릭스 데이터 영역을 지정하는 방법을 설명합니다. 자세한 내용은 [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)를 참조하세요.  
@@ -166,7 +166,7 @@ ms.locfileid: "77081621"
   
  ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
-##  <a name="SynchronizingSortOrder"></a> 여러 데이터 영역에 대한 정렬 순서 동기화  
+##  <a name="synchronizing-sort-order-for-multiple-data-regions"></a><a name="SynchronizingSortOrder"></a> 여러 데이터 영역에 대한 정렬 순서 동기화  
  대화형 정렬 단추를 추가하면 사용자가 한 개의 정렬 단추를 클릭하여 여러 데이터 영역을 정렬할 수 있습니다. 대화형 정렬 단추를 만들 때 동일한 보고서 데이터 세트를 기반으로 여러 데이터 영역에 대한 정렬을 동기화할지 여부를 지정할 수 있습니다. 예를 들어 보고서에는 행렬과 그래픽으로 데이터를 표시하는 차트가 포함될 수 있습니다. 사용자가 행렬에서 행의 정렬 순서를 변경하면 차트도 자동으로 동일한 정렬 순서로 표시됩니다.  
   
  정렬 순서를 동기화하려면 정렬할 데이터 영역 또는 그룹에 대해 같은 정렬 식을 사용해야 하며 두 데이터 영역에 대해 상위 항목이 되는 정렬 범위를 정의해야 합니다. 상위 항목은 두 데이터 영역이 연결된 데이터 세트 또는 두 데이터 영역이 들어 있는 포함 데이터 영역일 수 있습니다. 예를 들어 보고서에 같은 데이터 세트의 데이터를 표시하는 동시에 목록에 포함되어 있는 행렬과 차트가 모두 있다고 가정합니다. 정렬 동작을 동기화하려면 행렬의 열에 대화형 정렬을 지정하고 목록에 대한 범위를 설정해야 합니다. 사용자가 행렬을 정렬하면 차트도 함께 정렬됩니다.  

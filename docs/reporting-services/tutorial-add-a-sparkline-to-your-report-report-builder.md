@@ -9,10 +9,10 @@ ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63043181"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>자습서: 보고서에 스파크라인 추가(보고서 작성기)
@@ -28,7 +28,7 @@ ms.locfileid: "63043181"
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
   
-## <a name="CreateTable"></a>1. 테이블이 있는 보고서 만들기  
+## <a name="1-create-a-report-with-a-table"></a><a name="CreateTable"></a>1. 테이블이 있는 보고서 만들기  
   
 1.  컴퓨터,[웹 포털 또는 SharePoint 통합 모드에서](../reporting-services/report-builder/start-report-builder.md) 보고서 작성기를 시작 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 합니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63043181"
   
 13. **다음**을 클릭합니다.  
   
-## <a name="Query"></a>2. 테이블 마법사에서 쿼리 및 테이블 레이아웃 만들기  
+## <a name="2-create-a-query-and-table-layout-in-the-table-wizard"></a><a name="Query"></a>2. 테이블 마법사에서 쿼리 및 테이블 레이아웃 만들기  
 보고서에서는 미리 정의된 쿼리가 포함된 공유 데이터 세트를 사용하거나 해당 보고서에만 사용할 포함된 데이터 세트를 만들 수 있습니다. 이 자습서에서는 포함된 데이터 세트를 만듭니다.  
   
 > [!NOTE]  
@@ -160,7 +160,7 @@ ms.locfileid: "63043181"
   
 15. **실행** 을 클릭하여 보고서를 미리 봅니다.  
 
-### <a name="FormatCurrency"></a>2a. 데이터 형식을 통화로 지정  
+### <a name="2a-format-data-as-currency"></a><a name="FormatCurrency"></a>2a. 데이터 형식을 통화로 지정  
 기본적으로 **Sales** 필드의 요약 데이터에는 일반 숫자가 표시됩니다. 서식을 지정하여 숫자가 통화로 표시되도록 합니다. **자리 표시자 스타일** 을 설정/해제하여 서식 있는 입력란 및 자리 표시자 텍스트를 보기 값으로 표시합니다.  
   
 1.  **디자인** 을 클릭하여 디자인 뷰로 전환합니다.  
@@ -177,7 +177,7 @@ ms.locfileid: "63043181"
     
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
    
-### <a name="FormatDates"></a>2b. (선택 사항) 데이터 서식을 날짜로 지정  
+### <a name="2b-optional-format-data-as-dates"></a><a name="FormatDates"></a>2b. (선택 사항) 데이터 서식을 날짜로 지정  
 기본적으로 **SalesDate** 필드에는 날짜 및 시간 정보가 표시됩니다. 날짜만 표시되도록 서식을 지정할 수 있습니다.  
   
 1.  `[SalesDate]`가 들어 있는 셀을 클릭합니다.  
@@ -190,7 +190,7 @@ ms.locfileid: "63043181"
   
 **SalesDate** 값은 기본 날짜 형식으로 표시되고 **Sales** 의 요약 값은 통화로 표시됩니다.   
   
-## <a name="Sparkline"></a>3. 스파크라인 추가    
+## <a name="3-add-a-sparkline"></a><a name="Sparkline"></a>3. 스파크라인 추가    
   
 1.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
   
@@ -224,7 +224,7 @@ ms.locfileid: "63043181"
   
      ![report-builder-sparkline-misaligned](../reporting-services/media/report-builder-sparkline-misaligned.png)
   
-## <a name="AlignSparklines"></a>4. 세로 및 가로로 스파크라인 맞추기  
+## <a name="4-align-the-sparklines-vertically-and-horizontally"></a><a name="AlignSparklines"></a>4. 세로 및 가로로 스파크라인 맞추기  
 스파크라인은 모두 동일한 측정값을 사용하지 않는 경우 읽기가 어렵습니다. 각 스파크라인의 가로 축과 세로 축이 나머지와 일치해야 합니다.  
    
 1.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
@@ -251,7 +251,7 @@ ms.locfileid: "63043181"
   
 ![report-builder-sparkline-aligned](../reporting-services/media/report-builder-sparkline-aligned.png)
   
-## <a name="Width"></a>7. (선택 사항) 열 너비 변경  
+## <a name="7-optional-change-column-widths"></a><a name="Width"></a>7. (선택 사항) 열 너비 변경  
 기본적으로 테이블의 각 셀은 입력란을 포함합니다. 페이지를 렌더링하면 입력란은 텍스트를 수용하도록 세로로 확장됩니다. 렌더링된 보고서에서 각 행은 해당 행에서 가장 길게 렌더링된 입력란의 높이에 맞춰 확장됩니다. 디자인 화면에서 행의 높이는 렌더링된 보고서의 행 높이에 영향을 주지 않습니다.  
   
 각 행의 세로 크기를 줄이려면 열 입력란에 들어갈 예상 내용이 한 줄에 수용되는 범위에서 열 너비를 확장합니다.  
@@ -266,7 +266,7 @@ ms.locfileid: "63043181"
   
 4.  **실행** 을 클릭하여 보고서를 미리 보고 너비가 충분한지 확인합니다.  
   
-## <a name="Title"></a>8. (선택 사항) 보고서 제목 추가  
+## <a name="8-optional-add-a-report-title"></a><a name="Title"></a>8. (선택 사항) 보고서 제목 추가  
 보고서 제목은 보고서 맨 위에 나타납니다. 보고서 제목을 보고서 머리글에 배치하거나, 보고서 머리글이 사용되지 않을 경우 보고서 본문의 맨 위에 있는 입력란에 배치할 수 있습니다. 이 자습서에서는 보고서 본문의 맨 위에 자동으로 표시되는 입력란을 사용합니다.  
   
 글꼴 스타일, 크기 및 색을 텍스트의 각 문자나 구 단위로 다르게 적용하여 더 보기 좋게 꾸밀 수 있습니다. 자세한 내용은 [입력란의 텍스트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)을 참조하세요.  
@@ -285,7 +285,7 @@ ms.locfileid: "63043181"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Save"></a>9. 보고서 저장  
+## <a name="9-save-the-report"></a><a name="Save"></a>9. 보고서 저장  
 보고서 서버 또는 컴퓨터에 보고서를 저장합니다. 보고서를 보고서 서버에 저장하지 않을 경우 보고서 파트 및 하위 보고서와 같은 여러 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능을 사용할 수 없습니다.  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>보고서를 보고서 서버에 저장하려면  

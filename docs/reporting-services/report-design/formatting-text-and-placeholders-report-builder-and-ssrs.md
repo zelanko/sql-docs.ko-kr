@@ -16,10 +16,10 @@ ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5c97993b2cc2bd2585bfe6010e6aa4b1cfd59f78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77079520"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>텍스트 및 자리 표시자 서식 지정(보고서 작성기 및 SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "77079520"
   
  이 그림에서 입력란 자체에 테두리가 있으며 모든 텍스트는 동일한 입력란에 있지만 텍스트의 서식이 다양합니다.  
   
- 빠르게 시작하려면 [자습서: 텍스트 서식 지정&#40;보고서 작성기&#41;](../../reporting-services/tutorial-format-text-report-builder.md)를 참조하세요.  
+ 빠르게 시작하려면 [자습서: 텍스트 서식 지정&#40;보고서 작성기&#41;](../../reporting-services/tutorial-format-text-report-builder.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

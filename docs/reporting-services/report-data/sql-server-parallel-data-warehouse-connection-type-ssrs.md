@@ -9,10 +9,10 @@ ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d506c15c1cc0a9bf2e4d414210b769c02556a32a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081402"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server 병렬 데이터 웨어하우스 연결 형식(SSRS)
@@ -28,8 +28,8 @@ ms.locfileid: "77081402"
   
  이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)을 참조하세요.  
   
-##  <a name="Connection"></a> 연결 문자열  
- [!INCLUDE[ssDW](../../includes/ssdw-md.md)]에 연결할 때 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 어플라이언스 내의 데이터베이스 개체에 연결됩니다. 쿼리 디자이너에서 사용할 데이터베이스 개체를 지정합니다. 연결 문자열에 데이터베이스를 지정하지 않을 경우 관리자가 할당한 기본 데이터베이스에 연결됩니다. 데이터 원본 연결에 사용할 자격 증명 및 연결 정보는 데이터베이스 관리자에게 문의하십시오. 다음 연결 문자열 예에서는 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 어플라이언스에 있는 **CustomerSales** 예제 데이터베이스를 지정합니다.  
+##  <a name="connection-string"></a><a name="Connection"></a> 연결 문자열  
+ [!INCLUDE[ssDW](../../includes/ssdw-md.md)]에 연결할 때 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 어플라이언스 내의 데이터베이스 개체에 연결됩니다. 쿼리 디자이너에서 사용할 데이터베이스 개체를 지정합니다. 연결 문자열에 데이터베이스를 지정하지 않을 경우 관리자가 할당한 기본 데이터베이스에 연결됩니다. 데이터 원본 연결에 사용할 자격 증명 및 연결 정보는 데이터베이스 관리자에게 문의하십시오. 다음 연결 문자열 예에서는 **어플라이언스에 있는**CustomerSales[!INCLUDE[ssDW](../../includes/ssdw-md.md)] 예제 데이터베이스를 지정합니다.  
   
 ```  
 HOST=<IP address>; database= CustomerSales; port=<port>  
@@ -39,7 +39,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  연결 문자열 예제에 대한 자세한 내용은 [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)를 참조하십시오.  
   
-##  <a name="Credentials"></a> 자격 증명  
+##  <a name="credentials"></a><a name="Credentials"></a> 자격 증명  
  [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 는 사용자 이름과 암호를 구현 및 저장하기 위한 고유한 보안 기술을 제공합니다. Windows 인증은 사용할 수 없습니다. Windows 인증을 사용하여 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 에 연결하려고 하면 오류가 발생합니다.  
   
  자격 증명에는 데이터베이스에 액세스할 수 있는 권한이 있어야 합니다. 쿼리에 따라 테이블 및 뷰에 액세스할 수 있는 권한과 같은 다른 사용 권한이 필요할 수 있습니다. 외부 데이터 원본의 소유자는 사용자에게 필요한 데이터베이스 개체에 대한 읽기 전용 권한을 제공할 수 있는 자격 증명을 구성해야 합니다.  
@@ -53,7 +53,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
  자세한 내용은 [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 또는 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.  
   
   
-##  <a name="Query"></a> 쿼리  
+##  <a name="queries"></a><a name="Query"></a> 쿼리  
  쿼리는 보고서 데이터 세트에 대해 검색할 데이터를 지정합니다.  
   
  쿼리 결과 집합의 열은 데이터 세트의 필드 컬렉션을 채웁니다. 쿼리가 여러 결과 집합을 반환할 경우 보고서는 쿼리가 검색한 첫 번째 결과 집합만 처리합니다. 기본적으로 그래픽 쿼리 디자이너에 나타낼 수 있는 새 쿼리를 만들거나 기존 쿼리를 열 경우 관계형 쿼리 디자이너를 사용할 수 있습니다. 다음과 같은 방법으로 쿼리를 지정할 수 있습니다.  
@@ -80,7 +80,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)]에 대한 자세한 내용은 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](../../t-sql/transact-sql-reference-database-engine.md)을 참조하세요.  
   
-###  <a name="QueryText"></a> Text 쿼리 유형 사용  
+###  <a name="using-query-type-text"></a><a name="QueryText"></a> Text 쿼리 유형 사용  
  텍스트 기반 쿼리 디자이너에서는 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 명령을 입력하여 데이터 세트의 데이터를 정의합니다. [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 에서 데이터를 검색하기 위해 사용하는 쿼리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 애플리케이션 내에서 실행되지 않는 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 의 인스턴스에서 데이터를 검색하기 위해 사용하는 쿼리와 동일합니다. 예를 들어 다음 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 쿼리는 마케팅 지원을 담당하는 모든 직원의 이름을 선택합니다.  
   
 ```  
@@ -96,7 +96,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'   
 ```  
   
- 쿼리를 실행하고 결과 집합을 표시하려면 도구 모음에서 **실행** 단추(**!**)를 클릭합니다.  
+ 쿼리를 실행하고 결과 집합을 표시하려면 도구 모음에서 **실행** 단추( **!** )를 클릭합니다.  
   
  이 쿼리에서 매개 변수를 사용하려면 쿼리 매개 변수를 추가합니다. 예를 들어 WHERE 절을 다음과 같이 변경합니다.  
   
@@ -105,7 +105,7 @@ WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'
  쿼리를 실행하면 쿼리 매개 변수에 해당하는 보고서 매개 변수가 자동으로 만들어집니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [쿼리 매개 변수](#Parameters) 를 참조하십시오.  
   
   
-##  <a name="Parameters"></a> 매개 변수  
+##  <a name="parameters"></a><a name="Parameters"></a> 매개 변수  
  쿼리 텍스트에 입력 매개 변수가 있는 쿼리 변수 또는 저장 프로시저가 포함된 경우 데이터 세트에 대한 해당 쿼리 매개 변수와 보고서에 대한 해당 보고서 매개 변수가 자동으로 생성됩니다. 쿼리 텍스트는 각 쿼리 변수에 대한 DECLARE 문을 포함하지 않아야 합니다.  
   
  예를 들어 다음 SQL 쿼리는 **EmpID**라는 보고서 매개 변수를 만듭니다.  
@@ -119,13 +119,13 @@ WHERE EmployeeID = (@EmpID)
  기본적으로 각 보고서 매개 변수는 데이터 형식이 Text이며 사용 가능한 값의 드롭다운 목록을 제공하기 위해 자동으로 작성된 데이터 세트를 가집니다. 보고서 매개 변수가 만들어진 후에는 기본값을 변경해야 할 수 있습니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)에 대해 자세히 알아봅니다.  
   
   
-##  <a name="Remarks"></a> 주의  
+##  <a name="remarks"></a><a name="Remarks"></a> 주의  
   
 ###### <a name="platform-and-version-information"></a>플랫폼 및 버전 정보  
  플랫폼 및 버전 지원에 대한 자세한 내용은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)을 참조하세요.  
   
   
-##  <a name="HowTo"></a> 방법 도움말 항목  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 방법 도움말 항목  
  이 섹션에서는 데이터 연결, 데이터 원본 및 데이터 세트를 사용하는 방법을 단계별로 설명합니다.  
   
  [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -135,7 +135,7 @@ WHERE EmployeeID = (@EmpID)
  [데이터 세트에 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="Related"></a> 관련 단원  
+##  <a name="related-sections"></a><a name="Related"></a> 관련 단원  
  설명서의 다음 섹션에서는 보고서 데이터에 대한 깊이 있는 개념 정보를 제공하며, 데이터와 관련된 보고서 부분을 정의, 사용자 지정 및 사용하는 방법을 절차적인 측면에서 소개합니다.  
   
  [보고서 데이터 세트&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  

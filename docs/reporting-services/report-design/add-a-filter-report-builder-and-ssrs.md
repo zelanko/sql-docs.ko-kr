@@ -9,10 +9,10 @@ ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0eadf07ed347ce2b77eccab229ef6551a62d63d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080746"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>필터 추가(보고서 작성기 및 SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "77080746"
   
 1.  **디자인** 뷰에서 보고서를 엽니다.  
   
-2.  디자인 화면에서 데이터 영역을 선택한 다음 _\<data region>_**속성**을 마우스 오른쪽 단추로 클릭합니다. 계기의 경우 **계기 패널 속성**을 선택합니다. _\<data region>_**속성** 대화 상자가 열립니다.  
+2.  디자인 화면에서 데이터 영역을 선택한 다음 _\<data region>_ **속성**을 마우스 오른쪽 단추로 클릭합니다. 계기의 경우 **계기 패널 속성**을 선택합니다. _\<data region>_ **속성** 대화 상자가 열립니다.  
   
     > [!NOTE]  
     >  테이블릭스 데이터 영역에서 모퉁이 셀이나 행 또는 열 핸들을 마우스 오른쪽 단추로 클릭한 다음 **테이블릭스 속성**을 클릭합니다.  

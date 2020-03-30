@@ -13,10 +13,10 @@ ms.assetid: 465ef8d1-c503-407c-8afd-58d620e344ee
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e415d9498c624aa3dcea443f2cdc3641dd7c8491
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63193947"
 ---
 # <a name="implementing-a-command-class-for-a-data-processing-extension"></a>데이터 처리 확장 프로그램에 대한 Command 클래스 구현

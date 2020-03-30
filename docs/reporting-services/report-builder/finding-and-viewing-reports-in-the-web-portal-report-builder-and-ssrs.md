@@ -1,5 +1,6 @@
 ---
 title: 웹 포털에서 보고서 찾기 및 보기(보고서 작성기) | Microsoft Docs
+description: 보고서 관리자는 보고서 보기 및 관리 기능을 제공하는 웹 기반 도구입니다. 이 도구는 보고서 서버를 설치할 때 함께 설치됩니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b0041517770e7ffe961fa1df42afa56bfb161fc7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d3bd5691a31ebaaaf49bb5c2f8eb1357b60f6551
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079272"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342813"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>웹 포털에서 보고서 찾기 및 보기(보고서 작성기 및 SSRS)
   보고서 관리자는 보고서 보기 및 관리 기능을 제공하는 웹 기반 도구입니다. 이 도구는 보고서 서버를 설치할 때 함께 설치됩니다. 보고서 관리자를 열려면 브라우저 창에 보고서 관리자 URL을 입력하십시오. 브라우저 요구 사항에 대한 내용은 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조하세요. 보고서 서버에서 보고서 관리자 URL을 구성하는 방법에 대한 자세한 내용은 시스템 관리자에게 문의하십시오. 자세한 내용은 [보고서 관리자 구성&#40;기본 모드&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)을 참조하세요.  
@@ -46,7 +47,7 @@ ms.locfileid: "77079272"
   
 ## <a name="to-search-for-items"></a>항목을 검색하려면  
   
--   보고서 관리자에서 항목을 검색하려면 페이지 위쪽의 **검색** 입력란에 검색 문자열을 입력합니다. 위 이미지의 **(2)** 입니다. 검색은 폴더 계층의 최상위 노드에서 시작되어 모든 분기를 따라 진행됩니다. 특정 분기에 대한 액세스 권한이 없는 경우 해당 분기는 건너뜁니다. 다른 사용자에게 속한 내 보고서 폴더와 일반적으로 사용할 수 없는 다른 폴더도 같은 방식으로 검색을 진행합니다. 보기 권한이 있는 보고서와 항목만 검색 결과에 포함됩니다.  
+-   보고서 관리자에서 항목을 검색하려면 페이지 위쪽의 **Search** 입력란에 검색 문자열을 입력합니다. 위 이미지의 **(2)** 입니다. 검색은 폴더 계층의 최상위 노드에서 시작되어 모든 분기를 따라 진행됩니다. 특정 분기에 대한 액세스 권한이 없는 경우 해당 분기는 건너뜁니다. 다른 사용자에게 속한 내 보고서 폴더와 일반적으로 사용할 수 없는 다른 폴더도 같은 방식으로 검색을 진행합니다. 보기 권한이 있는 보고서와 항목만 검색 결과에 포함됩니다.  
   
 -   이름이나 설명을 기준으로 항목을 검색하려면 검색할 텍스트 전부 또는 일부를 지정합니다. 검색 문자열은 대/소문자를 구분하지 않습니다. 검색 조건을 포함하거나 제외하기 위해 더하기(+) 또는 빼기(-) 기호와 같은 검색 연산자를 사용할 수 없습니다.  
   

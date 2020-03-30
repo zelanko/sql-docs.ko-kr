@@ -16,10 +16,10 @@ ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2654fba3904788e1eefa2aaa17d4defbad4039a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082630"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)란?
@@ -63,7 +63,7 @@ Reporting Services는 PDF, Word 파일 등 인쇄용으로 최적화된 고정 �
 * 모든 기본 스타일 및 색상표를 업데이트하여 기본적으로 최소화된 새로운 현대적 스타일로 보고서를 만들 수 있습니다.
 * 매개 변수 창을 업데이트하여 원하는 방식대로 매개 변수를 정렬할 수 있습니다.
 * PowerPoint 같은 새로운 형식으로 내보낼 수 있습니다. PowerPoint의 Reporting Services 시각화는 단순히 스크린샷이 아니라 생동감이 있고 편집이 가능합니다.
-* 하이브리드 Power BI/Reporting Services 환경을 만들 수 있습니다.  Power BI에서 온-프레미스 Reporting Services 보고서를 다시 만들지 않고 해당 보고서의 시각적 개체를 Power BI 대시보드에 고정할 수 있습니다. 그런 다음 Power BI 대시보드의 한 곳에서 모든 항목을 모니터링할 수 있습니다.
+* 하이브리드 Power BI/Reporting Services 환경을 만들 수 있습니다. Power BI에서 온-프레미스 Reporting Services 보고서를 다시 만들지 않고 해당 보고서의 시각적 개체를 Power BI 대시보드에 고정할 수 있습니다. 그런 다음 Power BI 대시보드의 한 곳에서 모든 항목을 모니터링할 수 있습니다.
 
 ## <a name="mobile-reports"></a>모바일 보고서
 
@@ -83,7 +83,7 @@ Reporting Services는 PDF, Word 파일 등 인쇄용으로 최적화된 고정 �
 
 기본 모드 Reporting Services의 최종 사용자에게 현관은 대부분의 브라우저에서 볼 수 있는 최신 웹 포털입니다. 새 포털에서 모든 Reporting Services 모바일, 페이지를 매긴 보고서 및 KPI에 액세스할 수 있습니다. KPI는 보고서를 열지 않고도 주요 비즈니스 메트릭을 한번에 브라우저에 표시할 수 있습니다.
 
-새 웹 포털은 보고서 관리자를 완전히 다시 작성한 것입니다. 이제 이 웹 포털은 Microsoft Edge, Internet Explorer 10 및 11, Chrome, Firefox, Safari, 모든 주요 브라우저 등 최신 브라우저가 최적화된 단일 페이지의 표준 기반 HTML5 앱입니다.
+새 웹 포털은 보고서 관리자를 완전히 다시 작성한 것입니다. 이제 Microsoft Edge, Internet Explorer 10 및 11, Chrome, Firefox, Safari, 모든 주요 브라우저 등 최신 브라우저가 최적화된 단일 페이지의 표준 기반 HTML5 앱입니다.
 
 웹 포털의 콘텐츠는
 

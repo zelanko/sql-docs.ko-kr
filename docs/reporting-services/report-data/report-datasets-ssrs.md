@@ -9,10 +9,10 @@ ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 73de47423caed308e1a9ae433bdcc7b24b3e69d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081943"
 ---
 # <a name="report-datasets-ssrs"></a>보고서 데이터 세트(SSRS)
@@ -36,12 +36,12 @@ ms.locfileid: "77081943"
   
  종속되는 데이터 세트를 포함하는 보고서 파트를 추가하여 보고서에 데이터 세트를 추가할 수도 있습니다. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 데이터를 표시하는 보고서를 만드는 방법을 알아보려면 다음을 참조하세요. [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). 자체 데이터를 포함하는 보고서를 작성하려면 다음을 참조하세요. [자습서: 오프라인에서 빠른 차트 보고서 만들기&#40;보고서 작성기&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 데이터를 표시하는 보고서를 만드는 방법은 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)를 참조하세요. 자체 데이터를 포함하는 보고서를 작성하려면 [자습서: 오프라인에서 빠른 차트 보고서 만들기&#40;보고서 작성기&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)를 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Methods"></a> 보고서 데이터 추가  
+##  <a name="adding-report-data"></a><a name="Methods"></a> 보고서 데이터 추가  
  보고서 작성기에서 다음과 같은 방법으로 보고서 데이터를 추가할 수 있습니다.  
   
 -   보고서 서버의 보고서 파트를 보고서에 추가합니다. 각 보고서 파트에는 필요한 내용이 자체 포함되어 있으며 종속 데이터 세트도 포함됩니다. 데이터 세트는 미리 정의됩니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "77081943"
 -   [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
-##  <a name="QuickStart"></a> 보고서 파트와 함께 데이터 추가  
+##  <a name="adding-data-with-report-parts"></a><a name="QuickStart"></a> 보고서 파트와 함께 데이터 추가  
  보고서 파트에는 해당 보고서 파트가 종속되는 데이터 세트가 포함됩니다. 이러한 데이터 세트는 보고서 서버에서 사용 가능한 공유 데이터 원본을 기반으로 작성됩니다. 보고서 작성기에서 보고서에 보고서 파트를 추가하면 종속 데이터 세트도 수동으로 추가한 것처럼 보고서에 추가됩니다. 예를 들어 미리 정의된 차트에 데이터 세트가 포함되어 있을 수 있습니다. 해당 데이터를 보려면 보고서를 미리 보면 됩니다.  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ ms.locfileid: "77081943"
 -   자세한 내용은 [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md) 및 [보고서 디자이너의 보고서 파트&#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)를 참조하세요.  
   
   
-##  <a name="Queries"></a> 쿼리 및 쿼리 디자이너  
+##  <a name="queries-and-query-designers"></a><a name="Queries"></a> 쿼리 및 쿼리 디자이너  
  데이터 원본에서 가져올 데이터를 지정하려면 쿼리 명령을 작성합니다. 각 데이터 원본 유형에는 쿼리를 쉽게 작성할 수 있도록 관련된 *쿼리 디자이너* 가 제공됩니다. 쿼리 디자이너는 그래픽 기반이거나 텍스트 기반일 수 있습니다. 그래픽 쿼리 디자이너에서는 외부 데이터 원본의 데이터를 나타내는 메타데이터를 표시한 다음 필드나 엔터티를 쿼리 디자인 화면으로 끌어 대화형으로 쿼리를 작성합니다. 텍스트 기반 쿼리 디자이너에서는 외부 데이터 원본에서 지원하는 쿼리 구문으로 쿼리를 작성하거나 가져옵니다.  
   
  쿼리 디자이너에서는 쿼리를 실행해 예제 데이터를 보고 쿼리 명령 구문의 유효성을 검사할 수 있습니다. 결과 집합의 열 이름이 보고서 데이터 창에 표시되는 필드 이름이 됩니다. 결과 집합은 단일 행 및 열 집합이어야 하며 각 데이터 행에는 같은 수의 값이 있어야 합니다. 단일 쿼리에 여러 결과 집합이 있을 수는 없습니다. 열 수가 일정하지 않으며 각 행에 대해 생성되는 데이터 값 수가 다를 수 있는 비정형 계층은 지원되지 않습니다.  
@@ -97,7 +97,7 @@ ms.locfileid: "77081943"
  데이터 확장 프로그램과 외부 데이터 원본 간의 통신은 데이터 공급자가 처리합니다. 쿼리 명령 구문, 쿼리 매개 변수 및 결과 집합에 있는 값의 데이터 형식에 대한 지원 여부는 각 데이터 공급자가 결정합니다. 자세한 내용은 특정 데이터 확장 프로그램 유형에 대한 항목과 [쿼리 디자인 도구&#40;SSRS&#41;](query-design-tools-ssrs.md)를 참조하세요.  
   
   
-##  <a name="HowTo"></a> 방법 도움말 항목  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 방법 도움말 항목  
  [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [공유 데이터 세트 또는 포함된 데이터 세트 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
@@ -117,7 +117,7 @@ ms.locfileid: "77081943"
  [Analysis Services용 MDX 쿼리 디자이너에서 매개 변수 정의&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
   
   
-##  <a name="Section"></a> 섹션 내용  
+##  <a name="in-this-section"></a><a name="Section"></a> 섹션 내용  
  [보고서 작성기의 보고서 파트 및 데이터 세트](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)  
   
  [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  

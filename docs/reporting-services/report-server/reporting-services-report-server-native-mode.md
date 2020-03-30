@@ -13,10 +13,10 @@ ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4a0e3f521549bb309fcbd69fc7905746be09d84b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66826899"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services 보고서 서버(기본 모드)
@@ -36,7 +36,7 @@ ms.locfileid: "66826899"
   
 -   [보고서에서 이미지 리소스 참조](#bkmk_referenceimage)  
   
-##  <a name="bkmk_sum"></a> 기본 모드 요약  
+##  <a name="summary-of-native-mode"></a><a name="bkmk_sum"></a> 기본 모드 요약  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 설치는 관리 및 유지해야 하는 여러 서버 쪽 기능으로 구성됩니다. 서버 기능에는 다음이 포함됩니다.  
   
 -   보고서 서버 서비스 내에서 실행되는 보고서 서버 웹 서비스  
@@ -53,7 +53,7 @@ ms.locfileid: "66826899"
   
 -   도메인 컨트롤러에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치하려면 도메인 관리자여야 합니다.  
   
-##  <a name="bkmk_managecontent"></a> 내용 관리  
+##  <a name="managing-content"></a><a name="bkmk_managecontent"></a> 내용 관리  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 내용 관리는 보고서, 모델, 폴더, 리소스 및 공유 데이터 원본의 관리를 의미합니다. 이러한 모든 항목은 속성 및 보안 설정을 통해 개별적으로 관리할 수 있습니다. 모든 항목을 보고서 서버 폴더 네임스페이스의 다른 위치로 이동할 수 있습니다. 항목을 효과적으로 관리하려면 내용 관리자가 수행하는 태스크에 대한 지식이 필요합니다.  
   
 > [!NOTE]  
@@ -75,11 +75,11 @@ ms.locfileid: "66826899"
   
 -   보고서 처리를 예약하고 요청 시 실행될 수 있는 보고서 처리와 캐시에서 로드되는 보고서 처리를 지정하여 서버에 대한 보고서 처리 요청의 균형을 조정합니다.  
   
- 관리 작업을 수행할 권한은 **시스템 관리자** 및 **콘텐츠 관리자**의 두 가지 미리 정의된 역할을 통해 제공됩니다. 보고서 서버 내용을 효과적으로 관리하려면 두 역할을 모두 할당 받아야 합니다. 이러한 미리 정의된 역할에 대한 자세한 내용은 [역할 및 권한&#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)를 참조하세요.  
+ 관리 태스크 수행 권한은 미리 정의된 **시스템 관리자** 및 **내용 관리자**역할을 통해 제공합니다. 보고서 서버 내용을 효과적으로 관리하려면 두 역할을 모두 할당 받아야 합니다. 이러한 미리 정의된 역할에 대한 자세한 내용은 [역할 및 권한&#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)를 참조하세요.  
   
  보고서 서버 내용을 관리하기 위한 도구에는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 웹 포털이 있습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하면 기본값을 설정하고 기능을 활성화할 수 있습니다. 웹 포털은 사용자에게 보고서 서버 항목 및 작업 보기에 대한 액세스 권한을 부여하고, 보고서 및 기타 내용 유형을 확인 및 사용하고, 모든 공유 항목 및 보고서 배포 기능을 확인 및 사용하는 데 사용됩니다.  
   
-##  <a name="bkmk_manageresources"></a> 리소스 보안 설정 및 관리  
+##  <a name="securing-and-managing-a-resource"></a><a name="bkmk_manageresources"></a> 리소스 보안 설정 및 관리  
  리소스는 보고서 서버에 저장되지만 보고서 서버에서 처리되지는 않는 관리되는 항목입니다. 일반적으로 리소스는 보고서 사용자에게 외부 콘텐츠를 제공합니다. 보고서에 사용되는 비즈니스 규칙을 설명하는 HTML 파일 또는 .jpg 파일의 이미지를 예로 들 수 있습니다. JPG 또는 HTML 파일은 보고서 서버에 저장되지만 보고서 서버는 이러한 파일을 먼저 처리하지 않고 브라우저에 직접 전달합니다.  
   
  보고서 서버에 리소스를 추가하려면 다음과 같이 파일을 업로드하거나 게시합니다.  
@@ -95,7 +95,7 @@ ms.locfileid: "66826899"
   
  리소스는 보고서, 공유 데이터 원본, 공유 일정 및 폴더와 함께 명명된 항목으로 보고서 서버 폴더 계층 구조에 존재합니다. 보고서 서버에 저장되어 있는 여느 항목과 마찬가지로 리소스를 검색하고 확인하며 보안 및 속성을 설정할 수 있습니다. 리소스를 보거나 관리하려면 역할 할당에 리소스 보기 또는 리소스 관리 태스크가 있어야 합니다.  
   
-##  <a name="bkmk_referenceimage"></a> 보고서에서 이미지 리소스 참조  
+##  <a name="referencing-an-image-resource-from-a-report"></a><a name="bkmk_referenceimage"></a> 보고서에서 이미지 리소스 참조  
  리소스에는 보고서에서 참조하는 이미지가 포함될 수 있습니다. 보고서 요구 사항에 외부 이미지 사용이 포함된 경우 이미지를 리소스로 저장하면 다음과 같은 이점이 있습니다.  
   
 -   보고서 서버 데이터베이스의 중앙 집중식 스토리지. 보고서 서버 데이터베이스와 해당 내용을 다른 컴퓨터로 이동하는 경우 외부 이미지는 보고서와 함께 유지됩니다. 다른 컴퓨터의 디스크에 저장된 이미지 파일을 추적할 필요가 없습니다.  

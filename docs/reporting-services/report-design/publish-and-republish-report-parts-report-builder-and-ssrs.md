@@ -9,10 +9,10 @@ ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2ea76e42cb7230bc4195cc8c2dc1615308fa4058
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082353"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>보고서 파트 게시 및 다시 게시(보고서 작성기 및 SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "77082353"
   
      그렇지 않으면 **게시하기 전에 보고서 파트 검토 및 수정**을 클릭합니다.  
   
-3.  보고서 파트 이름 및 설명을 편집합니다. 이름을 두 번 클릭하여 편집하고 **설명** 필드를 클릭하여 설명을 추가합니다.  
+3.  보고서 파트 이름 및 설명을 편집하려면 이름을 두 번 클릭해 편집하고 **설명** 필드를 클릭해 설명을 추가합니다.  
   
     > [!NOTE]  
     >  다른 사람들이 검색할 때 쉽게 식별할 수 있도록 명확한 보고서 파트 이름과 설명을 지정하는 것이 좋습니다. 보고서 파트 이름의 최대 길이는 260자(전체 경로)입니다. 여기에는 서버의 폴더 이름 뒤에 보고서 파트의 실제 이름이 붙습니다.  

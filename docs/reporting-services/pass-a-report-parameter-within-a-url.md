@@ -12,10 +12,10 @@ ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 551fc19b3d39ef6cf12c5fdd4e77196b0abbb9fe
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580836"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>URL에 보고서 매개 변수 전달
@@ -81,7 +81,7 @@ SalesOrderNumber:isnull=true
 > [!NOTE]  
 >  보고서에 기본값을 가진 보고서 매개 변수가 포함되어 있고 **Prompt** 속성의 값이 **false** 이면(즉, 보고서 관리자에서 사용자에게 확인 속성이 선택되지 않음) URL 내에서 해당 보고서 매개 변수에 대한 값을 전달할 수 없습니다. 이러한 기능을 통해 관리자는 최종 사용자가 특정 보고서 매개 변수의 값을 추가하거나 수정하지 못하도록 설정할 수 있습니다.  
   
-##  <a name="bkmk_examples"></a> 추가 예  
+##  <a name="additional-examples"></a><a name="bkmk_examples"></a> 추가 예  
  다음 URL 예제에는 공백 및 여러 매개 변수가 포함됩니다.  
   
 -   "SQL Server 사용자 교육 팀" 폴더 이름에는 공백이 포함되므로 "+"가 공백을 각각 대체합니다.  

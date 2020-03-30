@@ -9,10 +9,10 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4679ed954ac7f422a0f3caa0c59c24e5012c927f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078176"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 개념(SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "77078176"
   
  **[!INCLUDE[applies](../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기본 모드 | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드   
   
-##  <a name="bkmk_ReportServerConcepts"></a> 보고서 서버 개념  
+##  <a name="report-server-concepts"></a><a name="bkmk_ReportServerConcepts"></a> 보고서 서버 개념  
  보고서 서버는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 인스턴스가 설치된 컴퓨터를 말하며 페이지 매김 처리한 보고서와 모바일 보고서, 보고서 관련 항목 및 리소스, 일정, 구독 등의 항목을 내부적으로 저장합니다. 보고서 서버는 독립 실행형 단일 서버로 구성하거나 확장형 팜으로 구성할 수 있으며 SharePoint Server와 통합할 수도 있습니다. 보고서 서버 항목과의 상호 작용은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 웹 서비스, WMI 공급자, URL 액세스를 통해서 수행하거나 프로그래밍 방식으로 스크립트를 통해 수행합니다. 보고서 서버와 상호 작용하는 방식은 배포 토폴로지 및 구성에 따라 다릅니다.  
   
 ### <a name="native-mode-report-servers"></a>기본 모드 보고서 서버
@@ -59,7 +59,7 @@ ms.locfileid: "77078176"
  보고서 서버와 상호 작용하는 데 사용하는 도구 목록은 [Reporting Services 도구](../reporting-services/tools/reporting-services-tools.md)를 참조하세요.  
   
   
-##  <a name="bkmk_ReportsandRelatedItemConcepts"></a> 보고서 및 관련 항목 개념  
+##  <a name="reports-and-related-item-concepts"></a><a name="bkmk_ReportsandRelatedItemConcepts"></a> 보고서 및 관련 항목 개념  
 ### <a name="reports-and-report-definitions"></a>보고서 및 보고서 정의
 
 
@@ -145,7 +145,7 @@ SQL Server 모바일 보고서 게시자에서 Reporting Services 모바일 보�
  데이터 경고는 경고 데이터베이스에 내부적으로 저장되는 항목입니다. 데이터 경고 정의에는 기존 보고서 데이터 피드에서 사용할 데이터, 충족해야 하는 조건, 일정, 경고를 받는 사람이 포함됩니다. 데이터 경고는 SharePoint Server 통합 보고서 서버에 게시된 보고서에 대해서만 사용할 수 있습니다. 기본 보고서 서버 설치에서는 데이터 경고를 사용할 수 없습니다. 자세한 내용은 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)를 참조하세요.  
   
   
-##  <a name="bkmk_TypesofReports"></a> Reporting Services에서 페이지 매김 처리한 보고서의 유형  
+##  <a name="types-of-reporting-services-paginated-reports"></a><a name="bkmk_TypesofReports"></a> Reporting Services에서 페이지 매김 처리한 보고서의 유형  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 *보고서* 라는 용어는 특정 유형의 보고서 서버 항목, 레이아웃 디자인 또는 솔루션 디자인에 적용할 수 있습니다. Reporting Services에서 페이지 매김 처리한 단일 보고서에는 여러 유형의 특징이 있을 수 있습니다. 예를 들어 하나의 보고서가 독립 실행형 보고서인 동시에 주 보고서에서 참조되는 하위 보고서, 다른 주 보고서의 드릴스루 보고서 대상, 링크된 보고서일 수도 있습니다.  
   
 ### <a name="drilldown-reports"></a>드릴다운 보고서 
@@ -183,7 +183,7 @@ SQL Server 모바일 보고서 게시자에서 Reporting Services 모바일 보�
  업그레이드된 보고서는 보고서 서버가 특정 버전의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 최신 버전으로 업그레이드되면 최신 스키마로 전환되는 게시된 보고서 정의입니다. 원래 보고서 정의는 유지됩니다. 보고서는 메모리가 업그레이드되고 컴파일되며 컴파일된 버전이 내부적으로 저장됩니다. 자세한 내용은 [Reporting Services 보고서 업그레이드](../reporting-services/install-windows/upgrade-reports.md)를 참조하세요.  
   
   
-##  <a name="bkmk_StagesofReports"></a> Reporting Services에서 보고서에 페이지 매김 처리하는 단계  
+##  <a name="stages-of-reporting-services-paginated-reports"></a><a name="bkmk_StagesofReports"></a> Reporting Services에서 보고서에 페이지 매김 처리하는 단계  
  보고서 정의를 만들고, 게시하거나 저장하고, 컴파일하고, 처리하고, 캐시하고, 렌더링하고, 보고, 내보내고, 기록으로 저장할 수 있습니다. 보고서를 실행할 때 보고서 서버는 보고서 처리, 데이터 처리 및 렌더링의 3단계에 따라 보고서를 처리합니다. 데이터 및 보고서 처리는 보고서 정의에서 수행되며 결과는 내부적인 중간 형식으로 만들어집니다. 중간 형식의 보고서는 이후에 특정 보기 형식으로 렌더링됩니다. 다음 다이어그램에서는 보고서 처리의 단계 및 요소를 보여 줍니다.  
   
  ![report processing diagram](../reporting-services/media/report-execution.gif "보고서 처리 다이어그램")  

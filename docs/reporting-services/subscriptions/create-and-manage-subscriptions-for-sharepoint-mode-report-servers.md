@@ -13,10 +13,10 @@ ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5d4ffc3930003a4035211a4a63a54bc4f8196948
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578344"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>SharePoint 모드 보고서 서버 구독 만들기 및 관리
@@ -48,7 +48,7 @@ ms.locfileid: "65578344"
   
 -   [구독을 삭제하려면](#bkmk_to_delete_subscription)  
   
-##  <a name="bkmk_subscription_requirements"></a> 구독에 대한 일반 요구 사항  
+##  <a name="general-requirements-for-subscriptions"></a><a name="bkmk_subscription_requirements"></a> 구독에 대한 일반 요구 사항  
  구독을 만들려면 보고서가 저장된 자격 증명을 사용해야 하며 사용자에게 보고서를 보고 경고를 만들 수 있는 권한이 있어야 합니다.  
   
  구독을 만들 때는 출력 파일 형식을 선택할 수 있습니다. 보고서가 모든 형식에서 다 잘 작동하는 것은 아닙니다. 구독 형식을 선택하기 전에 보고서를 열고 다른 형식으로 내보내 해당 보고서가 예상대로 표시되는지 확인하세요.  
@@ -64,7 +64,7 @@ ms.locfileid: "65578344"
   
  구독에 대해 선택할 수 있는 출력 형식은 보고서 서버에 설치된 렌더링 확장 프로그램에 따라 달라집니다. 즉, 보고서 서버의 렌더링 확장 프로그램에서 지원하는 출력 형식만 선택할 수 있습니다.  
   
-###  <a name="bkmk_tosharepoint_library"></a> SharePoint 라이브러리로 보고서를 배달할 구독을 만들려면  
+###  <a name="to-create-a-subscription-to-deliver-a-report-to-a-sharepoint-library"></a><a name="bkmk_tosharepoint_library"></a> SharePoint 라이브러리로 보고서를 배달할 구독을 만들려면  
   
 1.  보고서가 포함된 SharePoint 라이브러리를 찾습니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "65578344"
   
 10. 매개 변수가 있는 보고서에 대한 구독을 만드는 경우 **매개 변수**에서 구독 처리 시 보고서에 사용할 값을 지정합니다. 선택한 보고서에 매개 변수가 없는 경우 매개 변수 섹션이 이 페이지에 표시되지 않습니다. 매개 변수에 대한 자세한 내용은 [게시된 보고서에 매개 변수 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)을 참조하세요.  
   
-###  <a name="bkmk_subscription_for_sharedfolder"></a> 공유 폴더 배달을 위한 구독을 만들려면  
+###  <a name="to-create-a-subscription-for-shared-folder-delivery"></a><a name="bkmk_subscription_for_sharedfolder"></a> 공유 폴더 배달을 위한 구독을 만들려면  
   
 1.  보고서가 포함된 SharePoint 라이브러리를 찾습니다.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "65578344"
   
 12. 매개 변수가 있는 보고서에 대한 구독을 만드는 경우 **매개 변수**에서 구독 처리 시 보고서에 사용할 값을 지정합니다. 매개 변수에 대한 자세한 내용은 [게시된 보고서에 매개 변수 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)을 참조하세요.  
   
-###  <a name="bkmk_subscription_for_email"></a> 보고서 서버 전자 메일 배달을 위한 구독을 만들려면  
+###  <a name="to-create-a-subscription-for-report-server-e-mail-delivery"></a><a name="bkmk_subscription_for_email"></a> 보고서 서버 전자 메일 배달을 위한 구독을 만들려면  
   
 1.  보고서가 포함된 SharePoint 라이브러리를 찾습니다.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "65578344"
   
 10. 매개 변수가 있는 보고서에 대한 구독을 만드는 경우 **매개 변수**에서 구독 처리 시 보고서에 사용할 값을 지정합니다. 매개 변수에 대한 자세한 내용은 [게시된 보고서에 매개 변수 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)을 참조하세요.  
   
-###  <a name="bkmk_to_modify_subscription"></a> 구독을 보거나 수정하려면  
+###  <a name="to-view-or-modify-a-subscription"></a><a name="bkmk_to_modify_subscription"></a> 구독을 보거나 수정하려면  
   
 1.  보고서가 포함된 SharePoint 라이브러리를 찾습니다.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "65578344"
   
 3.  각 구독은 배달 유형으로 식별됩니다. 구독 유형을 클릭하여 기존 속성을 보고 변경합니다.  
   
-###  <a name="bkmk_to_delete_subscription"></a> 구독을 삭제하려면  
+###  <a name="to-delete-a-subscription"></a><a name="bkmk_to_delete_subscription"></a> 구독을 삭제하려면  
   
 1.  보고서가 포함된 SharePoint 라이브러리를 찾습니다.  
   

@@ -11,10 +11,10 @@ ms.assetid: eb8abe29-f3ec-4752-a590-1d5dc3e48f08
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f8cb254ba464b0e051c00c7ac6d410c5e6da1e36
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67997291"
 ---
 # <a name="unwrap-method-sqlserverdatasource"></a>unwrap 메서드(SQLServerDataSource)
@@ -47,7 +47,7 @@ public <T> T unwrap(Class<T> iface)
   
  이 메서드가 호출되면 개체가 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스로 래핑 해제됩니다.  
   
- 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조하세요.  
+ 자세한 내용은 [래퍼와 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [isWrapperFor 메서드(SQLServerDataSource)](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)   

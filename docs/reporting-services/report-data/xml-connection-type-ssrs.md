@@ -9,10 +9,10 @@ ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9355ac713c502acbbd319ec7bdc9cb035079ca34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081684"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML 연결 형식(SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "77081684"
   
  이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)을 참조하세요.  
   
-##  <a name="Connection"></a> 연결 문자열  
+##  <a name="connection-string"></a><a name="Connection"></a> 연결 문자열  
  연결 문자열은 HTTP를 통해 사용할 수 있는 웹 서비스, 웹 기반 애플리케이션 또는 XML 문서를 가리키는 URL이어야 합니다. XML 문서에는 XML 확장명을 사용해야 합니다. 데이터 세트 쿼리에 포함된 XML 데이터의 경우 빈 연결 문자열을 사용할 수도 있습니다.  
   
  다음 예에서는 웹 서비스 및 XML 문서에 대한 각각의 연결 문자열 구문을 보여 줍니다. `file://` 프로토콜은 지원되지 않습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "77081684"
   
  연결 문자열 예제는 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.  
   
-##  <a name="Credentials"></a> 자격 증명  
+##  <a name="credentials"></a><a name="Credentials"></a> 자격 증명  
  쿼리를 실행하거나 보고서를 로컬로 미리 보거나 보고서 서버의 보고서를 미리 보려면 자격 증명이 필요합니다.  
   
  보고서를 게시한 후 보고서를 보고서 서버에서 실행할 때 데이터를 검색할 수 있는 권한이 유효하도록 데이터 원본에 대한 자격 증명을 변경해야 할 수도 있습니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "77081684"
   
  자세한 내용은 [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 또는 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.  
   
-##  <a name="Query"></a> 쿼리  
+##  <a name="queries"></a><a name="Query"></a> 쿼리  
  쿼리는 보고서 데이터 세트에 대해 검색할 데이터를 지정합니다. 쿼리 결과 집합의 열은 데이터 세트의 필드 컬렉션을 채웁니다. 보고서는 쿼리에서 검색된 첫 번째 결과 집합만 처리합니다.  
   
  쿼리를 만들려면 텍스트 기반 쿼리 디자이너를 사용해야 합니다. 쿼리는 XML 데이터를 반환해야 합니다.  
@@ -93,7 +93,7 @@ ms.locfileid: "77081684"
   
     -   **XML 데이터 원본은 XML 문서입니다.**  
   
-         필수 XML 요소: None  
+         필수 XML 요소: 없음  
   
          선택적 XML 요소:  
   
@@ -115,7 +115,7 @@ ms.locfileid: "77081684"
   
  쿼리 구문에 대한 자세한 내용은 [XML 보고서 데이터를 위한 XML 쿼리 구문&#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md)을 참조하세요.  
   
- 예를 보려면 [Reporting Services: XML 및 웹 서비스 데이터 원본 사용](https://go.microsoft.com/fwlink/?LinkId=81654)을 참조하세요.  
+ 예를 보려면 [Reporting Services: XML 및 웹 서비스 데이터 원본 사용(Reporting Services: Using XML and Web Service Data Sources)](https://go.microsoft.com/fwlink/?LinkId=81654)을 참조하십시오.  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>XML 웹 서비스 데이터 검색을 위한 요구 사항  
  XML 데이터 처리 확장 프로그램은 스키마를 검색하지 않습니다. 따라서 다른 방법으로 원하는 데이터를 검색할 SOAP 메서드를 찾아야 합니다. 또한 웹 서비스에서 해당 데이터에 사용하는 주소 지정 스키마나 네임스페이스에 대해 이해하고 있어야 합니다.  
@@ -131,17 +131,17 @@ ms.locfileid: "77081684"
   
  자세한 내용은 [XML 보고서 데이터를 위한 구성 요서 경로 구문&#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md)를 참조하세요.  
   
-##  <a name="Parameters"></a> 매개 변수  
+##  <a name="parameters"></a><a name="Parameters"></a> 매개 변수  
  쿼리는 매개 변수 식별을 위해 분석되지 않습니다.  
   
  매개 변수를 추가하려면 **데이터 세트 속성** 대화 상자의 [매개 변수](https://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) 페이지를 통해 직접 만들어야 합니다.  
   
-##  <a name="Remarks"></a> 주의  
+##  <a name="remarks"></a><a name="Remarks"></a> 주의  
  XML 데이터 확장 프로그램은 계층 구조가 아닌 테이블 형식 XML 데이터의 보고를 지원합니다. 자세한 내용은 [외부 데이터 원본의 데이터 추가&#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)를 참조하세요.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 XML 문서를 검색하는 작업은 기본적으로 지원되지 않습니다.  
   
-##  <a name="HowTo"></a> 방법 도움말 항목  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 방법 도움말 항목  
  이 섹션에서는 데이터 연결, 데이터 원본 및 데이터 세트를 사용하는 방법을 단계별로 설명합니다.  
   
  [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -150,7 +150,7 @@ ms.locfileid: "77081684"
   
  [데이터 세트에 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
-##  <a name="Related"></a> 관련 단원  
+##  <a name="related-sections"></a><a name="Related"></a> 관련 단원  
  설명서의 다음 섹션에서는 보고서 데이터에 대한 깊이 있는 개념 정보를 제공하며, 데이터와 관련된 보고서 부분을 정의, 사용자 지정 및 사용하는 방법을 절차적인 측면에서 소개합니다.  
   
  [보고서 데이터 세트&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  

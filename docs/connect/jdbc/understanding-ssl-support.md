@@ -11,10 +11,10 @@ ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5ec3ad142e3dc5e2945afebeb2c9a6c97350672c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "71713304"
 ---
 # <a name="understanding-encryption-support"></a>암호화 지원 이해
@@ -36,11 +36,11 @@ ms.locfileid: "71713304"
   
  다음 표에는 가능한 TLS 연결 시나리오에 대해 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 버전이 어떻게 동작하는지 요약되어 있습니다. 각 시나리오는 서로 다른 TLS 연결 속성 집합을 사용합니다. 표에는 다음과 같은 값이 포함되어 있습니다.  
   
-- **blank**: “연결 문자열에 속성이 없습니다.”  
+- **blank**: "연결 문자열에 속성이 없습니다."  
   
-- **value**: “연결 문자열에 속성이 있으며 해당 값이 유효합니다.”  
+- **value**: "연결 문자열에 속성이 있으며 해당 값이 유효합니다."  
   
-- **any**: “연결 문자열에 속성이 있는지 여부나 해당 값이 유효한지 여부가 중요하지 않습니다.”  
+- **any**: "연결 문자열에 속성이 있는지 여부나 해당 값이 유효한지 여부가 중요하지 않습니다."  
   
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 인증 및 Windows 통합 인증에 대해서도 같은 동작이 적용됩니다.  

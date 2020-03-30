@@ -16,10 +16,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: 71b15d02b5f334b7a3c50cf3c16b939eba3c1f96
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75255395"
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>사후 저장 알림 대화 상자(Visual Database Tools)

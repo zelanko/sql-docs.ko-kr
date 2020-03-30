@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/06/2019
 ms.openlocfilehash: 724fac17abf7f5da45101a6ff22d3185a7ade93b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68255169"
 ---
 # <a name="configure-report-builder-access"></a>보고서 작성기 액세스 구성
@@ -101,7 +101,7 @@ ms.locfileid: "68255169"
 
     4. 웹 포털 사용자가 역할의 용도를 파악할 수 있도록 설명에 역할에 대한 설명을 입력합니다.  
 
-    5. 이 역할에 **보고서 사용**, **보고서 보기**, **모델 보기**, **리소스 보기**, **폴더 보기** 및 **개별 구독 관리** 작업을 추가합니다.  
+    5. 이 역할에 **보고서 사용**, **보고서 보기**, **모델 보기**, **리소스 보기**, **폴더 보기**및 **개별 구독 관리**태스크를 추가합니다.  
 
     6. **확인** 을 클릭하여 역할을 저장합니다.  
 

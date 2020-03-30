@@ -17,10 +17,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/28/2016
 ms.openlocfilehash: 2487dff89a32c4a5b62bcbb7a610e88f58ed2f78
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256278"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>연결된 서버 등록(SQL Server Management Studio)
@@ -35,7 +35,7 @@ ms.locfileid: "75256278"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-register-a-connected-server"></a>연결된 서버를 등록하려면  
   

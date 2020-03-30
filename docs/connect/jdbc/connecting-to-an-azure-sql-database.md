@@ -11,10 +11,10 @@ ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58a0b6f11fa28dca0e8aae98cb1794b12e3fc227
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "70155106"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Azure SQL 데이터베이스에 연결
@@ -32,7 +32,7 @@ ms.locfileid: "70155106"
 ## <a name="details"></a>세부 정보
 
 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]에 연결할 때 **SQLServerDatabaseMetaData.getCatalogs**를 호출하려면 master 데이터베이스에 연결해야 합니다.  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]는 사용자 데이터베이스에서 전체 카탈로그 집합을 반환하는 기능을 지원하지 않습니다. **SQLServerDatabaseMetaData.getCatalogs**는 sys.databases 보기를 사용하여 카탈로그를 가져옵니다. **SQLServerDatabaseMetaData**[(transact-sql)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 의 사용 권한에 대 한 설명을 참조 하 여의 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]동작을 이해 하십시오.  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]는 사용자 데이터베이스에서 전체 카탈로그 집합을 반환하는 기능을 지원하지 않습니다. **SQLServerDatabaseMetaData.getCatalogs**는 sys.databases 보기를 사용하여 카탈로그를 가져옵니다. [SQLServerDatabaseMetaData](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) **(transact-sql)** 의 사용 권한에 대 한 설명을 참조 하 여의 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]동작을 이해 하십시오.  
   
 ## <a name="connections-dropped"></a>연결이 삭제됨
 

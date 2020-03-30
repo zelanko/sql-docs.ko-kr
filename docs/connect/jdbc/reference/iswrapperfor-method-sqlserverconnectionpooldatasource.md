@@ -11,10 +11,10 @@ ms.assetid: 09ed10eb-6e46-437b-a7c0-3c55574aad38
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 45e7e2cd5e14392d5acc00601d05d3c7eb42f192
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977090"
 ---
 # <a name="iswrapperfor-method-sqlserverconnectionpooldatasource"></a>isWrapperFor 메서드(SQLServerConnectionPoolDataSource)
@@ -45,7 +45,7 @@ public boolean isWrapperFor(Class iface)
   
  이 메서드가 true를 반환하는 경우 동일한 인수로 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md)을 호출하는 데 성공합니다.  
   
- 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조하세요.  
+ 자세한 내용은 [래퍼와 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [unwrap 메서드 &#40;SQLServerConnectionPoolDataSource&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md)   

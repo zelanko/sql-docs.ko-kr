@@ -9,10 +9,10 @@ ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b59a3ba46aaf01ce67b7691f84a560ccd64410fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081126"
 ---
 # <a name="report-builder-functions---sum-function"></a>보고서 작성기 함수 - Sum 함수

@@ -7,10 +7,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 11/06/2018
 ms.openlocfilehash: 5db33f22ffd5143d88c5654c753f1b08811c0c8a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68262900"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Reporting Services 설치 마이그레이션(기본 모드)
@@ -50,7 +50,7 @@ ms.locfileid: "68262900"
   
 * 업그레이드를 막는 문제가 발생했습니다.
 
-## <a name="bkmk_nativemode_migration_overview"></a> 기본 모드 마이그레이션 개요
+## <a name="native-mode-migration-overview"></a><a name="bkmk_nativemode_migration_overview"></a> 기본 모드 마이그레이션 개요
 
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 마이그레이션 프로세스에는 수동 단계와 자동 단계가 포함됩니다. 다음은 보고서 서버 마이그레이션의 일부 태스크입니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68262900"
   
 * [보고서 서버 데이터베이스 만들기](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
   
-## <a name="bkmk_fixed_database_name"></a> 고정 데이터베이스 이름
+## <a name="fixed-database-name"></a><a name="bkmk_fixed_database_name"></a> 고정 데이터베이스 이름
 
  보고서 서버 데이터베이스의 이름은 바꿀 수 없습니다. 데이터베이스 ID는 데이터베이스를 만들 때 보고서 서버 저장 프로시저에 기록됩니다. 보고서 서버의 기본 또는 임시 데이터베이스의 이름을 바꾸면 프로시저를 실행할 때 오류가 발생하고 보고서 서버 설치가 무효화됩니다.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "68262900"
   
 * 항목 수가 적은 경우 보고서 디자이너, 모델 디자이너 및 보고서 작성기에서 새 보고서 서버로 보고서 및 공유 데이터 원본을 다시 게시할 수 있습니다. 이 경우 역할 할당, 구독, 공유 일정, 보고서 스냅샷 일정, 보고서 또는 기타 항목에서 설정한 사용자 지정 속성, 모델 항목 보안 및 보고서 서버에서 설정한 속성을 다시 만듭니다. 이 작업을 따르면 보고서 기록과 보고서 실행 로그 데이터 손실에 대비해야 합니다.
   
-## <a name="bkmk_before_you_start"></a> 시작하기 전에
+## <a name="before-you-start"></a><a name="bkmk_before_you_start"></a> 시작하기 전에
 
  설치를 업그레이드하는 것이 아니라 마이그레이션하는 경우에도 기존 설치에서 업그레이드 관리자를 실행하여 마이그레이션에 영향을 미칠 수 있는 모든 문제를 쉽게 파악할 수 있습니다. 이러한 단계는 특히 본인이 설치하거나 구성하지 않은 보고서 서버를 마이그레이션하는 경우에 유용합니다. 업그레이드 관리자를 실행하면 새 SQL Server 설치에서 지원되지 않는 사용자 지정 설정을 찾을 수 있습니다.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68262900"
   
 SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업그레이드 관리자 설명서 및 [Reporting Services의 새로운 기능 ](../../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)을 참조하세요.  
 
-## <a name="bkmk_backup"></a> 파일 및 데이터 백업
+## <a name="backup-files-and-data"></a><a name="bkmk_backup"></a> 파일 및 데이터 백업
 
  새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]인스턴스를 설치하기 전에 현재 설치의 모든 파일을 백업하십시오.  
   
@@ -141,7 +141,7 @@ SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업
   
     7. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 용 Machine.config(보고서 서버 작업을 위해 이 파일을 수정한 경우)  
 
-## <a name="bkmk_install_ssrs"></a> SQL Server Reporting Services 설치
+## <a name="install-sql-server-reporting-services"></a><a name="bkmk_install_ssrs"></a> SQL Server Reporting Services 설치
 
  새 보고서 서버 인스턴스를 기본값 이외의 값을 사용하여 구성할 수 있도록 파일만 모드로 설치합니다. 명령줄 설치의 경우에는 **FilesOnly** 인수를 사용합니다. 설치 마법사에서 **구성 없이 설치**옵션을 선택합니다.  
   
@@ -151,7 +151,7 @@ SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업
   
 * [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
 
-## <a name="bkmk_move_database"></a> 보고서 서버 데이터베이스 이동
+## <a name="move-the-report-server-database"></a><a name="bkmk_move_database"></a> 보고서 서버 데이터베이스 이동
 
  보고서 서버 데이터베이스에는 게시된 보고서, 모델, 공유 데이터 원본, 일정, 리소스, 구독 및 폴더가 포함됩니다. 또한 보고서 서버 내용에 대한 액세스 권한과 시스템 및 항목 속성도 포함됩니다.  
   
@@ -191,7 +191,7 @@ SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업
   
  보고서 서버 데이터베이스와 임시 데이터베이스는 상호 종속적이므로 함께 이동해야 합니다. 데이터베이스를 복사할 경우 모든 보안 설정이 새 설치로 옮겨지지 않으므로 데이터베이스를 복사하지 마십시오. 예약된 보고서 서버 작업에 해당하는 SQL Server 에이전트 작업은 이동하지 마십시오. 보고서 서버는 이러한 작업을 자동으로 다시 만듭니다.  
 
-## <a name="bkmk_move_custom"></a> 사용자 지정 어셈블리 또는 확장 프로그램 이동
+## <a name="move-custom-assemblies-or-extensions"></a><a name="bkmk_move_custom"></a> 사용자 지정 어셈블리 또는 확장 프로그램 이동
 
  설치에 사용자 지정 보고서 항목, 어셈블리 또는 확장 프로그램이 포함되어 있는 경우에는 이러한 사용자 지정 구성 요소를 다시 배포해야 합니다. 사용자 지정 구성 요소를 사용하고 있지 않은 경우에는 [보고서 서버 구성](#bkmk_configure_reportserver)섹션으로 건너뛰십시오.  
   
@@ -225,7 +225,7 @@ SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업
   
     6. [보안 확장 프로그램 구현](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
 
-## <a name="bkmk_configure_reportserver"></a> 보고서 서버 구성
+## <a name="configure-the-report-server"></a><a name="bkmk_configure_reportserver"></a> 보고서 서버 구성
 
  보고서 서버 웹 서비스 및 웹 포털의 URL을 구성하고 보고서 서버 데이터베이스에 대한 연결을 구성합니다.  
   
@@ -252,7 +252,7 @@ SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업
   
 6. 기본 모드 보고서 서버를 로컬로 관리하려는 경우 웹 포털에서 로컬 관리가 가능하도록 운영 체제를 구성해야 합니다. 자세한 내용은 [로컬 관리용으로 기본 모드 보고서 서버 구성](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)을 참조하세요.  
 
-## <a name="bkmk_copy_custom_config"></a> RSReportServer.config 파일에 사용자 지정 구성 설정 복사
+## <a name="copy-custom-configuration-settings-to-rsreportserverconfig-file"></a><a name="bkmk_copy_custom_config"></a> RSReportServer.config 파일에 사용자 지정 구성 설정 복사
 
 이전 설치에서 RSReportServer.config 파일 또는 RSWebApplication.config 파일을 수정한 경우 새 RSReportServer.config 파일도 동일하게 수정해야 합니다. 다음 목록에서는 이전 구성 파일을 수정하게 되는 이유를 간략히 설명하며, SQL Server 2016에서 동일한 설정을 구성하는 방법에 대한 추가 정보 링크도 제공합니다.  
   
@@ -261,17 +261,17 @@ SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업
 |사용자 지정 설정으로 보고서 서버 전자 메일 배달|[이메일 설정 - Reporting Services 기본 모드](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
 |디바이스 정보 설정|[RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)|
 
-## <a name="bkmk_windowsservice_group"></a> Windows 서비스 그룹 및 보안 ACL
+## <a name="windows-service-group-and-security-acls"></a><a name="bkmk_windowsservice_group"></a> Windows 서비스 그룹 및 보안 ACL
 
  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]에 있는 유일한 서비스 그룹인 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows 서비스 그룹은 SQL Server Reporting Services에 설치된 모든 레지스트리 키, 파일 및 폴더에 대한 보안 ACL을 만드는 데 사용됩니다. 이 Windows 그룹 이름은 SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*> 형식으로 표시됩니다.  
 
-## <a name="bkmk_verify"></a> 배포 확인
+## <a name="verify-your-deployment"></a><a name="bkmk_verify"></a> 배포 확인
 
 1. 브라우저를 열고 URL 주소를 입력하여 보고서 서버 및 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 가상 디렉터리를 테스트해 봅니다. 자세한 내용은 [Reporting Services 설치 확인](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)을 참조하세요.  
   
 2. 보고서를 테스트하고 해당 보고서에 원하는 데이터가 포함되어 있는지 확인합니다. 데이터 원본 정보를 검토하여 데이터 원본 연결 정보가 지정되어 있는지 확인합니다. 보고서 서버는 보고서 개체 모델을 사용하여 보고서를 처리하고 렌더링하지만 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 구문을 새 보고서 정의 언어 요소로 대체하지 않습니다. 기존 보고서가 새 버전의 보고서 서버에서 실행되는 방식에 대한 자세한 내용은 [보고서 업그레이드](../../reporting-services/install-windows/upgrade-reports.md)를 참조하세요.  
 
-## <a name="bkmk_remove_unused"></a> 사용하지 않는 프로그램 및 파일 제거
+## <a name="remove-unused-programs-and-files"></a><a name="bkmk_remove_unused"></a> 사용하지 않는 프로그램 및 파일 제거
 
 보고서 서버를 새로운 인스턴스로 마이그레이션하고 나면 다음 단계를 수행하여 더 이상 필요하지 않은 프로그램 및 파일을 제거할 수 있습니다.  
   

@@ -9,10 +9,10 @@ ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0b90397a154836f41659aba858f55e28502e2741
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082422"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>지도 보고서 계획(보고서 작성기 및 SSRS)
@@ -21,7 +21,7 @@ ms.locfileid: "77082422"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="MapPurpose"></a> 지도의 목적 지정  
+##  <a name="specify-the-purpose-of-the-map"></a><a name="MapPurpose"></a> 지도의 목적 지정  
  훌륭한 보고서 디자인은 사용자가 문제를 해결하기 위해 조치를 취하는 데 도움이 되는 정보를 제공합니다. 유용하고 이해하기 쉬운 지도 표시를 만들려면 지도에서 무엇을 알고 싶어하는지를 결정합니다. 예를 들어 지도에서 시장 기회를 나타내기 위해 다음과 같은 유형의 데이터를 시각화할 수 있습니다.  
   
 -   각 상점의 상대적 판매량  
@@ -34,7 +34,7 @@ ms.locfileid: "77082422"
   
  지도 표시의 목적을 파악한 후 필요한 데이터를 분석해야 합니다. 분석 데이터는 보고서 데이터 세트에서 제공됩니다. 위치 데이터는 지정해야 하는 공간 데이터 원본에서 제공됩니다.  
   
-##  <a name="Data"></a> 공간 및 분석 데이터 지정  
+##  <a name="specify-the-spatial-and-analytical-data"></a><a name="Data"></a> 공간 및 분석 데이터 지정  
  필요한 공간 및 분석 데이터를 지정해야 합니다.  
   
  분석 데이터는 보고서 데이터 세트, 지도 갤러리의 지도에 포함된 예제 데이터 또는 ESRI 셰이프 파일에서 공간 데이터와 함께 포함된 분석 데이터에서 제공됩니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "77082422"
   
  공간 데이터 원본, 공간 데이터, 분석 데이터 원본, 분석 데이터 및 일치 필드를 식별했으면 보고서에 추가할 지도 유형을 결정할 준비가 된 것입니다.  
   
-##  <a name="MapType"></a> 지도 유형 선택  
+##  <a name="choose-a-map-type"></a><a name="MapType"></a> 지도 유형 선택  
  지도 마법사를 실행할 때 보고서에 지도와 첫 번째 지도 계층을 추가합니다. 지도 마법사를 사용하여 다음 유형의 지도 중 하나를 보고서에 추가할 수 있습니다.  
   
 -   분석 데이터가 연결되지 않은 위치를 표시하는 기본 지도  
@@ -105,12 +105,12 @@ ms.locfileid: "77082422"
   
 |마법사 아이콘|계층 스타일|계층 유형|설명 및 옵션|  
 |-----------------|-----------------|----------------|-----------------------------|  
-|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|기본 지도|Polygon|영역만 표시하는 지도입니다(예: 판매 지역).<br /><br /> 옵션: 색상표에 따라 색을 변경하거나 한 가지 색을 사용합니다. 색상표는 미리 정의된 색 집합입니다. 색상표의 모든 색이 할당되었으면 색의 음영이 할당됩니다.|  
+|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|기본 지도|Polygon|영역만 표시하는 지도입니다(예: 판매 지역).<br /><br /> 옵션: 색상표에 따라 색을 변경하거나 한 색을 사용합니다. 색상표는 미리 정의된 색 집합입니다. 색상표의 모든 색이 할당되었으면 색의 음영이 할당됩니다.|  
 |![rs_MapType_Polygon_ColorAnalytical](../../reporting-services/report-design/media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|색 분석 지도|Polygon|색을 변경하여 분석 데이터를 표시하는 지도입니다(예: 지역별 판매량 데이터).|  
 |![rs_MapType_Polygon_Bubble](../../reporting-services/report-design/media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|거품형 지도|Polygon|지역 중심의 거품 크기를 변경하여 분석 데이터를 표시하는 지도입니다(예: 지역별 판매량 데이터).<br /><br /> 옵션: 두 번째 분석 필드에 따라 영역 색을 변경하고 색 규칙을 지정합니다.|  
-|![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|기본 선 지도|꺾은선형|선만 표시하는 지도입니다(예: 배달 경로).<br /><br /> 옵션: 색상표에 따라 색을 변경하거나 한 가지 색을 사용합니다.|  
+|![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|기본 선 지도|꺾은선형|선만 표시하는 지도입니다(예: 배달 경로).<br /><br /> 옵션: 색상표에 따라 색을 변경하거나 한 색을 사용합니다.|  
 |![rs_MapType_Line_Analytical](../../reporting-services/report-design/media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|분석 선 지도|꺾은선형|선 색 및 두께를 변경하는 지도입니다(예: 경로별 정기 메트릭 및 배달된 물품 수).<br /><br /> 옵션: 한 분석 필드에 따라 선 두께를 변경하고, 두 번째 분석 필드에 따라 선 색을 변경하고, 색 규칙을 지정합니다.|  
-|![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|기본 표식 지도|Point|도시와 같은 각 위치에 표식을 표시하는 지도입니다.<br /><br /> 옵션: 색상표에 따라 색을 변경하거나 한 가지 색을 사용하고 표식 스타일을 변경합니다.|  
+|![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|기본 표식 지도|Point|도시와 같은 각 위치에 표식을 표시하는 지도입니다.<br /><br /> 옵션: 색상표에 따라 색을 변경하거나 한 색을 사용하고 표식 스타일을 변경합니다.|  
 |![rs_MapType_Marker_Bubble](../../reporting-services/report-design/media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|거품형 표식 지도|Point|각 위치에 대한 거품을 표시하고 한 분석 데이터 필드에 따라 거품 크기를 변경하는 지도입니다(예: 도시별 판매량 데이터).<br /><br /> 옵션: 두 번째 분석 필드에 따라 거품 색을 변경하고 색 규칙을 지정합니다.|  
 |![rs_MapType_Marker_Analytical](../../reporting-services/report-design/media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|분석 표식 지도|Point|각 위치에 표식을 표시하고 분석 데이터에 따라 표식 색, 크기 및 유형을 변경하는 지도입니다(예: 가장 많이 판매된 제품, 수익 범위 및 할인 전략).<br /><br /> 옵션: 한 분석 필드에 따라 표식 유형을 변경하고, 두 번째 분석 필드에 따라 표식 크기를 변경하고, 세 번째 분석 필드에 따라 표식 색을 변경하고, 색 규칙을 지정합니다.|  
   
@@ -118,7 +118,7 @@ ms.locfileid: "77082422"
   
  각 계층의 표시 또는 데이터 옵션을 독립적으로 사용자 지정할 수 있습니다. 마법사 실행 후 지도 사용자 지정에 대한 자세한 내용은 [지도 또는 지도 계층의 데이터 및 표시 사용자 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)에서 “ESRI 셰이프 파일을 어떻게 구할 수 있나요?”를 참조하세요.  
   
-##  <a name="Legend"></a> 범례 계획  
+##  <a name="plan-for-legends"></a><a name="Legend"></a> 범례 계획  
  사용자가 지도를 해석하는 데 도움이 되도록 여러 지도 범례, 색 눈금 및 거리 눈금을 추가할 수 있습니다. 지도를 디자인할 때 범례를 표시할 위치를 계획해야 합니다. 각 범례에 대한 다음 정보를 지정할 수 있습니다.  
   
 -   **범례 위치.** 예를 들어 범례는 뷰포트 내부 또는 외부와 뷰포트와 상대적인 12곳의 별도 위치에 표시될 수 있습니다.  
@@ -135,7 +135,7 @@ ms.locfileid: "77082422"
   
  자세한 내용은 [규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md) 및 [지도 범례, 색 눈금 및 관련 규칙 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)을 참조하세요.  
   
-##  <a name="Embedding"></a> 보고서 정의 크기와 보고서 처리 시간의 균형 맞추기  
+##  <a name="balance-report-definition-size-and-report-processing-time"></a><a name="Embedding"></a> 보고서 정의 크기와 보고서 처리 시간의 균형 맞추기  
  지도를 사용하는 데 효과적으로 보고서를 디자인하려면 보고서 성능을 제어하는 옵션과 보고서 정의 크기를 제어하는 옵션의 균형을 맞춰야 합니다. 공간 데이터나 Bing Maps 타일 기반의 지도 요소는 정적이고 보고서 정의에 포함되거나 동적이고 보고서가 처리될 때마다 만들어질 수 있습니다. 정적 또는 동적 지도 데이터의 장단점을 평가하고 해당 환경에 적합한 균형점을 찾아야 합니다. 이 결정을 내리려면 다음 정보를 고려하십시오.  
   
 -   포함된 지도 요소를 사용하면 보고서 정의의 크기가 매우 증가할 수 있지만 보고서에서 지도를 보는 데 필요한 시간을 줄일 수 있습니다. 보고서 서버에는 작업하는 데 필요한 크기 제한이 있을 수 있습니다.  
@@ -150,8 +150,8 @@ ms.locfileid: "77082422"
   
 ## <a name="see-also"></a>참고 항목  
  [지도 또는 지도 계층의 데이터 및 표시 사용자 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [자습서: 맵 보고서&#40;보고서 작성기&#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
+ [자습서: 지도 보고서&#40;보고서 작성기&#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
  [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [보고서 문제 해결: 맵 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [보고서 문제해결: 지도 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

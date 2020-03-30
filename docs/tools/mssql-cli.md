@@ -11,12 +11,12 @@ ms.reviewer: alayu, sstein, maghan
 ms.custom: tools|mssql-cli
 ms.date: 02/22/2018
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 75f5f396d8d8e1a593967a304891c6158fbe4bc9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0363c91021baccb3ed8afd9d9dc41c23f807abac
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76516504"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216452"
 ---
 # <a name="mssql-cli-command-line-query-tool-for-sql-server-preview"></a>SQL Server를 위한 mssql-cli 명령줄 쿼리 도구(미리 보기)
 
@@ -26,7 +26,7 @@ mssql-cli는 SQL Server 쿼리를 위한 대화형 명령줄 쿼리 도구로서
 
 ## <a name="install-mssql-cli"></a>mssql-cli 설치
 
-자세한 설치 지침은 [설치 가이드](https://github.com/dbcli/mssql-cli/blob/master/doc/installation_guide.md)를 참조하세요. pip를 알고 있는 경우에는 다음 명령을 실행하여 설치합니다.
+자세한 설치 지침은 [설치 가이드](https://github.com/dbcli/mssql-cli/tree/master/doc/installation)를 참조하세요. pip를 알고 있는 경우에는 다음 명령을 실행하여 설치합니다.
 
 ```$ pip install mssql-cli```
 
@@ -35,7 +35,7 @@ mssql-cli는 SQL Server 쿼리를 위한 대화형 명령줄 쿼리 도구로서
 Mssql-cli 설명서는 [mssql-cli GitHub 리포지토리](https://github.com/dbcli/mssql-cli)에 있습니다.
 
 - [기본 페이지/추가 정보](https://github.com/dbcli/mssql-cli)
-- [설치 가이드](https://github.com/dbcli/mssql-cli/blob/master/doc/installation_guide.md)
+- [설치 가이드](https://github.com/dbcli/mssql-cli/tree/master/doc/installation)
 - [사용 가이드](https://github.com/dbcli/mssql-cli/blob/master/doc/usage_guide.md)
 
 추가 설명서는 [doc 폴더](https://github.com/dbcli/mssql-cli/tree/master/doc)에 있습니다.

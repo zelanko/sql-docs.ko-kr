@@ -9,10 +9,10 @@ ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 55cba07f738c9a7a6b87f656687f545b64fd14cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080624"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>보고서에 연계 매개 변수 추가(보고서 작성기 및 SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "77080624"
   
     2.  각 연계 매개 변수당 하나의 쿼리 매개 변수. 쿼리 매개 변수는 쿼리에서 포함하거나 제외할 값을 지정하여 데이터 원본에서 검색되는 데이터를 제한합니다. 일반적으로 쿼리 매개 변수는 쿼리의 제약 조건 절에 넣습니다. 예를 들어 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문에서는 WHERE 절에 쿼리 매개 변수를 넣습니다.  
   
-6.  **실행** (**!**)을 클릭합니다. 쿼리 매개 변수를 넣은 다음 쿼리를 실행하면 쿼리 매개 변수에 해당하는 보고서 매개 변수가 자동으로 생성됩니다.  
+6.  **실행** ( **!** )을 클릭합니다. 쿼리 매개 변수를 넣은 다음 쿼리를 실행하면 쿼리 매개 변수에 해당하는 보고서 매개 변수가 자동으로 생성됩니다.  
   
     > [!NOTE]  
     >  처음 쿼리를 실행할 때 쿼리 매개 변수의 순서에 따라 보고서에서 매개 변수가 생성되는 순서가 결정됩니다. 순서를 변경하려면 [보고서 매개 변수의 순서 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)을 참조하세요.  
@@ -70,7 +70,7 @@ ms.locfileid: "77080624"
   
      SELECT DISTINCT 명령은 지정된 테이블의 지정된 열에서 각각의 고유값을 가져올 수 있도록 결과 집합에서 중복 값을 제거합니다.  
   
-     **실행** (**!**)을 클릭합니다. 결과 집합은 이 첫 번째 매개 변수에 사용 가능한 값을 표시합니다.  
+     **실행** ( **!** )을 클릭합니다. 결과 집합은 이 첫 번째 매개 변수에 사용 가능한 값을 표시합니다.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

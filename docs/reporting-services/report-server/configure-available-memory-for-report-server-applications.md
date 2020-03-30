@@ -12,10 +12,10 @@ ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d7cbcb0b2cd0da8bd13d28620261c2e9894463db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67564030"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성
@@ -86,7 +86,7 @@ ms.locfileid: "67564030"
 ```  
   
 #### <a name="about-aspnet-memory-configuration-settings"></a>ASP.NET 메모리 구성 설정 정보  
- 2016 및 이후 보고서 서버 웹 서비스와 웹 포털은 HTML5 애플리케이션이며 이전 버전은 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 애플리케이션이지만 이 중 어떤 애플리케이션도 IIS 5.0 이상의 호환성 모드에서 실행되는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 애플리케이션의 machine.config **processModel** 섹션에서 지정하는 메모리 구성 설정에 응답하지 않습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 RSReportServer.config 파일에서만 메모리 구성 설정을 읽습니다.  
+ 2016 및 이후 보고서 서버 웹 서비스와 웹 포털은 HTML5 애플리케이션이며 이전 버전은 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 애플리케이션이지만 이 중 어떤 애플리케이션도 IIS 5.0 이상의 호환성 모드에서 실행되는 **애플리케이션의 machine.config**processModel[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 섹션에서 지정하는 메모리 구성 설정에 응답하지 않습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 RSReportServer.config 파일에서만 메모리 구성 설정을 읽습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [RSReportServer 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

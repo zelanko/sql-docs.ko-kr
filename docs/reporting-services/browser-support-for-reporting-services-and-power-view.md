@@ -18,10 +18,10 @@ ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 46176d786314284f4056b58ba351dacee37a06e4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574814"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services 및 파워 뷰 브라우저 지원
@@ -108,7 +108,7 @@ SQL Server Reporting Services, ReportViewer 컨트롤 및 파워 뷰 관리 및 
 
  스크립팅을 설정하지 않으면 보고서를 열 때 다음과 비슷한 오류 메시지가 나타납니다.
 
-- **브라우저가 스크립트를 지원하지 않거나 스크립트 실행을 허용하지 않도록 구성되어 있습니다. 스크립트 없이 이 보고서를 보려면 여기를 클릭하세요**.
+- **브라우저가 스크립트를 지원하지 않거나 스크립트를 허용하지 않도록 구성되어 있습니다. 스크립트 없이 이 보고서를 보려면 여기를 클릭하세요**.
 
  스크립트 지원 없이 보고서를 보도록 선택하면 보고서는 보고서 도구 모음과 문서 구조와 같은 보고서 뷰어 기능 없이 HTML로 렌더링됩니다.
 

@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 50a6e158f5678b30028337b70e1da6914038e64a
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896546"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server 데이터 형식 및 ADO.NET
@@ -29,7 +29,7 @@ SQL Server 2008에서는 날짜 및 시간, 구조화, 반구조화, 비구조�
   
 ## <a name="in-this-section"></a>섹션 내용  
 [SqlTypes 및 데이터 세트](sqltypes-dataset.md)  
-`DataSet`의 `SqlTypes`에 대한 형식 지원에 대해 설명합니다.  
+`SqlTypes`의 `DataSet`에 대한 형식 지원에 대해 설명합니다.  
   
 [NULL 값 처리](handle-null-values.md)  
 null 값과 값이 세 개인 논리로 작업하는 방법에 대해 설명합니다.  

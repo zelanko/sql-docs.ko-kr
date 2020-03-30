@@ -11,10 +11,10 @@ ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: efafaa709666620e7237f2481c392aba25dfd5f8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026829"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>출력 매개 변수가 있는 저장 프로시저 사용
@@ -23,7 +23,7 @@ ms.locfileid: "69026829"
 
 호출할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저는 OUT 매개 변수를 하나 이상 반환하는 저장 프로시저입니다. 여기서 매개 변수는 저장 프로시저에서 데이터를 호출 애플리케이션으로 다시 반환하는 데 사용됩니다. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 이러한 종류의 저장 프로시저를 호출하여 반환되는 데이터를 처리하는 데 사용할 수 있는 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스를 제공합니다.
 
-JDBC 드라이버를 사용하여 이러한 종류의 저장 프로시저를 호출하는 경우에는 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 메서드와 함께 `call` SQL 이스케이프 시퀀스를 사용해야 합니다. OUT 매개 변수가 있는 `call` 이스케이프 시퀀스의 구문은 다음과 같습니다.
+JDBC 드라이버를 사용하여 이러한 종류의 저장 프로시저를 호출하는 경우에는 `call`SQLServerConnection[ 클래스의 ](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)prepareCall[ 메서드와 함께 ](../../connect/jdbc/reference/sqlserverconnection-class.md) SQL 이스케이프 시퀀스를 사용해야 합니다. OUT 매개 변수가 있는 `call` 이스케이프 시퀀스의 구문은 다음과 같습니다.
 
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 

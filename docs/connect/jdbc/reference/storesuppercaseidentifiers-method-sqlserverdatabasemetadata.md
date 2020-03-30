@@ -16,10 +16,10 @@ ms.assetid: a622b748-d10b-4f02-afe3-fba4a5bca17b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 17b42f50fe28ba9d727ea6c897280dcd36034038
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67969881"
 ---
 # <a name="storesuppercaseidentifiers-method-sqlserverdatabasemetadata"></a>storesUpperCaseIdentifiers 메서드(SQLServerDatabaseMetaData)

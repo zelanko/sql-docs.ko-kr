@@ -11,10 +11,10 @@ ms.assetid: 36571f7c-b335-4249-8f83-51dcb6923aec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e26b8c0eb4595403e3370a2e56aabfce63f0c80
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981514"
 ---
 # <a name="getnclob-method-javalangstring-sqlserverresultset"></a>getNClob 메서드(java.lang.String)(SQLServerResultSet)

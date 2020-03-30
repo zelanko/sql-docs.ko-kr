@@ -16,10 +16,10 @@ ms.assetid: b3fb1a97-86ee-4977-adca-c35ae199dbb3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c4774dcda174d5260289409053a892cc4039b4f0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67980466"
 ---
 # <a name="getreference-method-sqlserverdatasource"></a>getReference 메서드(SQLServerDataSource)

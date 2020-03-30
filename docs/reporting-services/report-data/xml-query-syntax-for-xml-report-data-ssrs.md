@@ -14,10 +14,10 @@ ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dd1bccb6bff8f19e9abb779310033f4685b31f67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081353"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML 보고서 데이터를 위한 XML 쿼리 구문(SSRS)
@@ -38,7 +38,7 @@ ms.locfileid: "77081353"
  연결 문자열 URL이 가리키는 웹 서비스 엔드포인트의 경우 XML **Query** 는 웹 서비스 메서드나 SOAP 동작 또는 둘 모두를 정의합니다. XML 데이터 공급자는 보고서에 사용할 XML 데이터를 검색하는 웹 서비스 요청을 만듭니다.  
   
 > [!NOTE]  
->  웹 서비스 네임스페이스에 슬래시(**/)** 문자가 포함되어 있으면 XML 데이터 처리 확장 프로그램에서 해당 네임스페이스를 올바르게 가져올 수 있도록 웹 서비스 메서드와 SOAP 동작을 모두 포함하세요.  
+>  웹 서비스 네임스페이스에 슬래시( **/)** 문자가 포함되어 있으면 XML 데이터 처리 확장 프로그램에서 해당 네임스페이스를 올바르게 가져올 수 있도록 웹 서비스 메서드와 SOAP 동작을 모두 포함하세요.  
   
  포함 XML 문서의 경우 XML **Query** 는 사용할 포함 XML 데이터를 정의하고 선택적 네임스페이스와 선택적 XML **ElementPath**를 포함합니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "77081353"
 |기본값을 사용하는 XML 문서|*No query*입니다.<br /><br /> 요소 경로는 XML 문서 자체에서 파생되며 네임스페이스로부터 독립적입니다.|  
   
 > [!NOTE]  
->  첫 번째 웹 서비스 예에서는 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 메서드 사용) 이 쿼리를 실행하려면 새 데이터 원본을 만들고 연결 문자열을 `https://localhost/reportserver/reportservice2006.asmx`로 설정해야 합니다. <xref:ReportService2006.ReportingService2006.ListChildren%2A> 메서드는 **Item** 및 **Recursive**라는 두 개의 매개 변수를 사용합니다. **Item** 의 기본값을 **/** 로, **Recursive** 의 기본값을 **1**로 설정합니다.  
+>  첫 번째 웹 서비스 예에서는 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 메서드 사용) 이 쿼리를 실행하려면 새 데이터 원본을 만들고 연결 문자열을 `https://localhost/reportserver/reportservice2006.asmx`로 설정해야 합니다. <xref:ReportService2006.ReportingService2006.ListChildren%2A> 메서드는 두 개의 매개 변수( **Item** 및 **Recursive**)를 사용합니다. **Item** 의 기본값을 **/** 로, **Recursive** 의 기본값을 **1**로 설정합니다.  
   
 ## <a name="specifying-namespaces"></a>네임스페이스 지정  
  XML **Query** 요소를 사용하여 데이터 원본의 XML 데이터에 사용된 네임스페이스를 지정할 수 있습니다. 다음 XML 쿼리에서는 **sales**네임스페이스를 사용합니다. **및** 의 XML `sales:LineItems` ElementPath `sales:LineItem` 노드는 **sales**네임스페이스를 사용합니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "77081353"
 |`<xmldp:Query xmlns:xmldp="https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="https://schemas.microsoft.com/...">`<br /><br /> `<xmldp:ElementPath>Root {}/ns:Element2/Node</xmldp:ElementPath>`<br /><br /> `</xmldp:Query>`|Value D<br /><br /> Value E<br /><br /> Value F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>XML 문서: DPNamespace.xml  
- 이 XML을 복사한 후 보고서 디자이너에서 XML 데이터 원본으로 사용할 수 있는 URL에 저장할 수 있습니다(예: https://localhost/DPNamespace.xml).  
+ 이 XML을 복사한 후 보고서 디자이너에서 XML 데이터 원본으로 사용할 수 있는 URL에 저장할 수 있습니다(예: https://localhost/DPNamespace.xml ).  
   
 ```  
 <Root xmlns:ns="https://schemas.microsoft.com/...">  

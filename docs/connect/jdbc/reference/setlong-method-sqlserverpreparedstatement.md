@@ -16,10 +16,10 @@ ms.assetid: 08223a62-6489-44e4-85e8-b45bfbb11cfc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ed2fa6801b1d81c209abeadece0f463b489091f7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974012"
 ---
 # <a name="setlong-method-sqlserverpreparedstatement"></a>setLong 메서드(SQLServerPreparedStatement)

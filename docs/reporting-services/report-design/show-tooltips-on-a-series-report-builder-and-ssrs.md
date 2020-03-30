@@ -9,10 +9,10 @@ ms.assetid: 4c9606ff-e1c3-4cf7-a4e7-bb16f1a9e8ab
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 69804b41ccfafe3edf7be7aba719088d7212c2ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080981"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>계열에 도구 설명 표시(보고서 작성기 및 SSRS)

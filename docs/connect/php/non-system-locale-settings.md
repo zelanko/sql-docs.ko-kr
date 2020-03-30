@@ -12,10 +12,10 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: bd60bff3ab9ee19b1a1d2435e69651ea054689e7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76913326"
 ---
 # <a name="non-system-locale-settings"></a>비시스템 로캘 설정
@@ -58,7 +58,7 @@ pdo_sqlsrv.set_locale_info = <option>
 
 1. 옵션 0 -- 애플리케이션 로캘을 변경하지 않으려는 경우 이 옵션을 사용합니다.
 
-1. 옵션 1 -- 다른 `LC_xxx` 범주에 영향을 주지 않고 `LC_CTYPE`의 시스템 값만 설정하려면 이 옵션을 사용합니다.
+1. 옵션 1 -- 다른 `LC_CTYPE` 범주에 영향을 주지 않고 `LC_xxx`의 시스템 값만 설정하려면 이 옵션을 사용합니다.
 
 1. 옵션 2 -- `LC_ALL`을 사용하여 모든 `LC_xxx` 범주를 재정의합니다(php 애플리케이션 및 해당 확장에 영향을 미침).
 

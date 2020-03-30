@@ -16,10 +16,10 @@ ms.assetid: d07944b8-7001-49b5-b3b3-0676f71e17cf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 843cb16fab8b05ae72c502fecd171f9af2886779
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68213660"
 ---
 # <a name="updateasciistream-method-int-javaioinputstream-int"></a>updateAsciiStream 메서드(int, java.io.InputStream, int)

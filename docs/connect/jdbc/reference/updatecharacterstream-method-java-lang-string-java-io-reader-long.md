@@ -11,10 +11,10 @@ ms.assetid: 9e5e177c-7ed7-4d0c-8fa8-0e13daf46f4b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2f13992012a306d34063fed1f1447216df045f5d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67996741"
 ---
 # <a name="updatecharacterstream-method-javalangstring-javaioreader-long"></a>updateCharacterStream 메서드(java.lang.String, java.io.Reader, long)

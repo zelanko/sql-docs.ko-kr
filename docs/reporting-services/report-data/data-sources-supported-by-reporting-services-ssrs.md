@@ -19,10 +19,10 @@ ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e37b386b0dd8fd5a596096b8f56e87db1a0fa1e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078125"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services에서 지원하는 데이터 원본(SSRS)
@@ -81,23 +81,23 @@ ms.locfileid: "77078125"
 ## <a name="supported-data-sources"></a>지원되는 데이터 원본  
  다음 표에서는 보고서 데이터 세트 및 보고서 모델에 대해 데이터를 검색하는 데 사용할 수 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 데이터 처리 확장 프로그램 및 데이터 공급자를 보여 줍니다. 확장 프로그램이나 데이터 공급자에 대한 자세한 내용을 보려면 두 번째 열의 링크를 클릭하십시오. 표 열은 다음과 같습니다.  
   
--   보고서 데이터 원본: 액세스하는 데이터의 유형(예: 관계형 데이터베이스, 다차원 데이터베이스, 플랫 파일 또는 XML)입니다. 이 열을 통해 "[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 보고서에 사용할 수 있는 데이터 형식은 무엇인가?"라는 질문에 대한 답을 얻을 수 있습니다.  
+-   보고서 데이터 원본: 액세스하는 데이터의 유형(예: 관계형 데이터베이스, 다차원 데이터베이스, 플랫 파일 또는 XML)입니다. 이 열을 통해 " [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 보고서에 사용할 수 있는 데이터 형식은 무엇인가?"라는 질문에 대한 답을 얻을 수 있습니다.  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 원본 유형 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 데이터 원본을 정의할 때 드롭다운 목록에 표시되는 데이터 원본 유형 중 하나입니다. 이 목록은 설치 및 등록된 DPE와 데이터 공급자를 통해 채워집니다. 이 열을 통해 "보고서 데이터 원본을 만들 때 드롭다운 목록에서 어떤 데이터 원본 유형을 선택할 것인가?"라는 질문에 대한 답을 얻을 수 있습니다.  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 원본 유형: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 데이터 원본을 정의할 때 드롭다운 목록에 표시되는 데이터 원본 유형 중 하나입니다. 이 목록은 설치 및 등록된 DPE와 데이터 공급자를 통해 채워집니다. 이 열을 통해 "보고서 데이터 원본을 만들 때 드롭다운 목록에서 어떤 데이터 원본 유형을 선택할 것인가?"라는 질문에 대한 답을 얻을 수 있습니다.  
   
 -   데이터 처리 확장 프로그램/데이터 공급자의 이름: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램이나 선택한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 원본 유형에 해당하는 다른 데이터 공급자입니다. 이 열을 통해 "데이터 원본 유형을 선택할 때 사용되는 해당 데이터 처리 확장 프로그램이나 데이터 공급자는 무엇인가?"라는 질문에 대한 답을 얻을 수 있습니다.  
   
--   기본 데이터 공급자 버전(옵션): 일부 데이터 원본 유형은 여러 데이터 공급자를 지원합니다. 이는 같은 공급자의 다른 버전일 수도 있고 데이터 공급자 유형에 대한 타사의 다른 구현일 수도 있습니다. 공급자 이름은 데이터 원본을 구성한 후 연결 문자열에 자주 나타납니다. 이 열을 통해 "데이터 원본 유형을 선택한 후 **연결 속성** 대화 상자에서 어떤 데이터 공급자를 선택할 것인가?"라는 질문에 대한 답을 얻을 수 있습니다.  
+-   기본 데이터 공급자 버전(옵션): 일부 데이터 원본 유형은 두 개 이상의 데이터 공급자를 지원합니다. 이는 같은 공급자의 다른 버전일 수도 있고 데이터 공급자 유형에 대한 타사의 다른 구현일 수도 있습니다. 공급자 이름은 데이터 원본을 구성한 후 연결 문자열에 자주 나타납니다. 이 열을 통해 "데이터 원본 유형을 선택한 후 **연결 속성** 대화 상자에서 어떤 데이터 공급자를 선택할 것인가?"라는 질문에 대한 답을 얻을 수 있습니다.  
   
--   데이터 원본 *\<플랫폼>*: 데이터 처리 확장 프로그램이나 데이터 공급자가 대상 데이터 원본에 대해 지원하는 데이터 원본 플랫폼입니다. 이 열을 통해 "이 데이터 처리 확장 프로그램이나 데이터 공급자가 이 플랫폼 유형의 데이터 원본에서 데이터를 검색할 수 있는가?"라는 질문에 대한 답을 얻을 수 있습니다.  
+-   데이터 원본 *\<platform>* : 데이터 처리 확장 프로그램이나 데이터 공급자가 대상 데이터 원본에 대해 지원하는 데이터 원본 플랫폼입니다. 이 열을 통해 "이 데이터 처리 확장 프로그램이나 데이터 공급자가 이 플랫폼 유형의 데이터 원본에서 데이터를 검색할 수 있는가?"라는 질문에 대한 답을 얻을 수 있습니다.  
   
 -   데이터 원본 버전: DPE 또는 데이터 공급자가 지원하는 대상 데이터 원본의 버전입니다. 이 열을 통해 "이 데이터 처리 확장 프로그램이나 데이터 공급자가 이 버전의 데이터 원본에서 데이터를 검색할 수 있는가?"라는 질문에 대한 답을 얻을 수 있습니다.  
   
--   RS *\<플랫폼>*: 사용자 지정 DPE 또는 데이터 공급자를 설치할 수 있는 보고서 서버 및 보고서 제작 클라이언트의 플랫폼입니다. 기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램은 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]설치에 포함되어 있습니다. 사용자 지정 데이터 처리 확장 프로그램이나 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자는 특정 플랫폼에 대해 기본적으로 컴파일되어야 합니다. 이 열을 통해 "이 데이터 처리 확장 프로그램이나 데이터 공급자를 이 플랫폼 유형에 설치할 수 있는가?"라는 질문에 대한 답을 얻을 수 있습니다.  
+-   RS *\<platform>* : 사용자 지정 DPE 또는 데이터 공급자를 설치할 수 있는 보고서 서버 및 보고서 제작 클라이언트의 플랫폼입니다. 기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램은 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]설치에 포함되어 있습니다. 사용자 지정 데이터 처리 확장 프로그램이나 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자는 특정 플랫폼에 대해 기본적으로 컴파일되어야 합니다. 이 열을 통해 "이 데이터 처리 확장 프로그램이나 데이터 공급자를 이 플랫폼 유형에 설치할 수 있는가?"라는 질문에 대한 답을 얻을 수 있습니다.  
   
-###  <a name="DataSourcesTable"></a> 데이터 원본 유형  
+###  <a name="types-of-data-sources"></a><a name="DataSourcesTable"></a> 데이터 원본 유형  
   
-|보고서 데이터<br /><br /> 원본|Reporting Services 데이터 원본 유형|데이터 처리 확장 프로그램/데이터 공급자의 이름|기본 데이터 공급자 버전<br /><br /> (선택 사항)|데이터<br /><br /> 원본<br /><br /> 플랫폼 x86|데이터<br /><br /> 원본<br /><br /> 플랫폼 x64|데이터 원본 버전|RS<br /><br /> 플랫폼 x86|RS<br /><br /> 플랫폼 x64|  
+|보고서 데이터<br /><br /> 원본|Reporting Services 데이터 원본 유형|데이터 처리 확장 프로그램/데이터 공급자의 이름|기본 데이터 공급자 버전<br /><br /> (선택 사항)|data<br /><br /> 원본<br /><br /> 플랫폼 x86|data<br /><br /> 원본<br /><br /> 플랫폼 x64|데이터 원본 버전|RS<br /><br /> 플랫폼 x86|RS<br /><br /> 플랫폼 x64|  
 |-------------------------------|-----------------------------------------|------------------------------------------------------|-------------------------------------------------------|--------------------------------------|--------------------------------------|----------------------------|-------------------------|-------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스|[Microsoft SQL Server](#MicrosoftSQLServer)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|System.Data.SqlClient 확장|Y|Y|SQL Server 2008 이상|Y|Y|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스|OLEDB|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|System.Data.OledbClient 확장|Y|Y|SQL Server 2008 이상|Y|Y|  
@@ -134,7 +134,7 @@ ms.locfileid: "77078125"
   
  보고서 작성기에서 지원하는 데이터 처리 확장 프로그램에 대한 자세한 내용은 [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)를 참조하세요.
   
-###  <a name="MicrosoftSQLServer"></a> Microsoft SQL Server 데이터 처리 확장 프로그램  
+###  <a name="microsoft-sql-server-data-processing-extension"></a><a name="MicrosoftSQLServer"></a> Microsoft SQL Server 데이터 처리 확장 프로그램  
  데이터 원본 유형 **Microsoft SQL Server** 는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 래핑하고 확장합니다. 이 데이터 처리 확장 프로그램은 x86 및 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]기반 플랫폼에 대해 기본적으로 컴파일되고 실행됩니다.  
   
  [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]에서 이 데이터 확장 프로그램과 연결된 쿼리 디자이너는 Visual Database Tool 디자이너입니다. 그래픽 모드에서 이 쿼리 디자이너를 사용하면 쿼리가 분석되고 다시 작성될 수 있습니다. 쿼리에 사용되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문을 정확히 제어하려면 텍스트 기반 쿼리 디자이너를 사용합니다. 자세한 내용은 [Graphical Query Designer User Interface](../../reporting-services/report-data/graphical-query-designer-user-interface.md)을 참조하세요.  
@@ -145,7 +145,7 @@ ms.locfileid: "77078125"
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
-###  <a name="Azure"></a> Microsoft Azure SQL Database 처리 확장 프로그램  
+###  <a name="microsoft-azure-sql-database-processing-extension"></a><a name="Azure"></a> Microsoft Azure SQL Database 처리 확장 프로그램  
  데이터 원본 유형 **Microsoft Azure[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** 는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 래핑하고 확장합니다.  
   
  [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]에서 이 데이터 확장 프로그램과 연결된 그래픽 쿼리 디자이너는 **Microsoft SQL Server**데이터 원본 유형과 함께 사용하는 Visual Database Tool 디자이너가 아닌 관계형 쿼리 디자이너입니다.  
@@ -158,13 +158,13 @@ ms.locfileid: "77078125"
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
-###  <a name="PWD"></a> Microsoft SQL Server 병렬 데이터 웨어하우스 처리 확장 프로그램  
+###  <a name="microsoft-sql-server-parallel-data-warehouse-processing-extension"></a><a name="PWD"></a> Microsoft SQL Server 병렬 데이터 웨어하우스 처리 확장 프로그램  
 이 데이터 원본은 더 이상 사용되지 않습니다. SQL Server 데이터 원본 유형을 사용하여 Microsoft APS(분석 플랫폼)에 연결합니다.
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
-###  <a name="AnalysisServices"></a> Microsoft SQL Server Analysis Services 데이터 처리 확장 프로그램  
- 데이터 원본 유형 **Microsoft SQL Server Analysis Services**를 선택하면 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 확장하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램이 선택됩니다. 이 데이터 처리 확장 프로그램은 x86 및 x64 기반 플랫폼에 대해 기본적으로 컴파일되고 실행됩니다.  
+###  <a name="microsoft-sql-server-analysis-services-data-processing-extension"></a><a name="AnalysisServices"></a> Microsoft SQL Server Analysis Services 데이터 처리 확장 프로그램  
+ 데이터 원본 유형 **Microsoft SQL Server Analysis Services**를 선택하면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Data Provider for [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)]를 확장하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 처리 확장 프로그램이 선택됩니다. 이 데이터 처리 확장 프로그램은 x86 및 x64 기반 플랫폼에 대해 기본적으로 컴파일되고 실행됩니다.  
   
  이 데이터 공급자는 ADOMD.NET 개체 모델을 사용하여 XMLA(XML for Analysis) 버전 1.1을 사용하는 쿼리를 만듭니다. 결과는 일반 행 집합으로 반환됩니다. 자세한 내용은 [MDX용 Analysis Services 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md), [DMX용 Analysis Services 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md), [Analysis Services MDX 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md) 및 [Analysis Services DMX 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)를 참조하세요.  
   
@@ -172,14 +172,14 @@ ms.locfileid: "77078125"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본의 모델도 만들 수 있습니다.  
   
-###  <a name="OLEDBAll"></a> OLE DB Data Processing Extension  
+###  <a name="ole-db-data-processing-extension"></a><a name="OLEDBAll"></a> OLE DB Data Processing Extension  
  OLE DB 데이터 처리 확장 프로그램을 사용하려면 보고서에 사용할 데이터 원본의 버전을 기반으로 추가 데이터 공급자 계층을 선택해야 합니다. 특정 데이터 공급자를 선택하지 않으면 기본값이 제공됩니다. 데이터 원본 또는 공유 데이터 원본 대화 상자의 **편집** 단추를 통해 액세스하는 **연결 속성** 대화 상자를 사용하여 특정 데이터 공급자를 선택합니다.  
   
  OLE DB 연결된 쿼리 디자이너에 대한 자세한 내용은 [그래픽 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/graphical-query-designer-user-interface.md)를 참조하세요. 특정 OLE DB 공급자 지원에 대한 자세한 내용은 [기술 자료의](https://support.microsoft.com/default.aspx/kb/811241) 특정 OLE DB 공급자에 대한 Visual Studio .NET 디자이너 도구의 지원(Visual Studio .NET Designer Tool Supports Specific OLE DB Providers) [!INCLUDE[msCoName](../../includes/msconame-md.md)] 을 참조하십시오.  
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
-####  <a name="OLEDBSQL"></a> SQL Server용 OLE DB  
+####  <a name="ole-db-for-sql-server"></a><a name="OLEDBSQL"></a> SQL Server용 OLE DB  
  데이터 원본 유형 **OLE DB**를 선택하면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Data Provider for OLE DB를 확장하는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 처리 확장 프로그램이 선택됩니다. 이 데이터 처리 확장 프로그램은 x86 및 x64 플랫폼에 대해 기본적으로 컴파일되고 실행됩니다.  
   
  자세한 내용은 [OLE DB 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md)을 참조하세요.  
@@ -191,7 +191,7 @@ ms.locfileid: "77078125"
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
-####  <a name="OracleOLEDB"></a> Oracle용 OLE DB  
+####  <a name="ole-db-for-oracle"></a><a name="OracleOLEDB"></a> Oracle용 OLE DB  
  데이터 처리 확장 프로그램인 Oracle용 OLE DB는 Oracle 데이터 형식 중 BLOB, CLOB, NCLOB, BFILE, UROWID를 지원하지 않습니다.  
   
  이 확장 프로그램은 위치에 종속적인 명명되지 않은 매개 변수를 지원하지만 명명된 매개 변수는 지원하지 않습니다. 명명된 매개 변수를 사용하려면 [Oracle](#OracleClient) 데이터 처리 확장 프로그램을 사용합니다.  
@@ -200,7 +200,7 @@ ms.locfileid: "77078125"
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
-####  <a name="OLEDBStandard"></a> OLE DB 표준 .NET Framework 데이터 공급자  
+####  <a name="ole-db-standard-net-framework-data-provider"></a><a name="OLEDBStandard"></a> OLE DB 표준 .NET Framework 데이터 공급자  
  OLE DB [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 지원하는 데이터 원본에서 데이터를 검색하려면 **OLE DB** 데이터 원본 유형을 사용하고 기본 데이터 공급자를 선택하거나 **연결 문자열** 대화 상자의 설치된 데이터 공급자에서 선택합니다.  
   
 > [!NOTE]  
@@ -208,7 +208,7 @@ ms.locfileid: "77078125"
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
-###  <a name="ODBC"></a> ODBC Data Processing Extension  
+###  <a name="odbc-data-processing-extension"></a><a name="ODBC"></a> ODBC Data Processing Extension  
  데이터 원본 유형 **ODBC**를 선택하면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Data Provider for ODBC를 확장하는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 처리 확장 프로그램이 선택됩니다. 이 데이터 처리 확장 프로그램은 x86, 및 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)] 플랫폼에 대해 기본적으로 컴파일되고 실행됩니다. 이 확장 프로그램을 사용하여 ODBC 공급자가 있는 모든 데이터 원본에 연결하고 이 데이터 원본에서 데이터를 검색할 수 있습니다.  
   
 > [!NOTE]  
@@ -216,7 +216,7 @@ ms.locfileid: "77078125"
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
-####  <a name="ODBCGeneric"></a> ODBC 표준 .NET Framework 데이터 공급자  
+####  <a name="odbc-standard-net-framework-data-provider"></a><a name="ODBCGeneric"></a> ODBC 표준 .NET Framework 데이터 공급자  
  표준 ODBC [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 지원하는 데이터 원본에서 데이터를 검색하려면 **ODBC** 데이터 원본 유형을 사용하고 기본 데이터 공급자를 선택하거나 **연결 문자열** 대화 상자의 설치된 데이터 공급자에서 선택합니다.  
   
 > [!NOTE]  
@@ -224,7 +224,7 @@ ms.locfileid: "77078125"
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
-###  <a name="OracleClient"></a> Oracle 데이터 처리 확장 프로그램  
+###  <a name="oracle-data-processing-extension"></a><a name="OracleClient"></a> Oracle 데이터 처리 확장 프로그램  
  데이터 원본 형식 **Oracle**을 선택하는 경우 Oracle Data Provider를 직접 사용하고 System.Data.OracleClient를 통해 더 이상 가지 않는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램을 선택합니다. Oracle 데이터베이스에서 보고서 데이터를 검색하려면 관리자가 Oracle 클라이언트 도구를 설치해야 합니다. 클라이언트 애플리케이션 버전은 11g 이상이어야 합니다. 이러한 도구는 보고서를 미리 보려는 경우 보고서 제작 클라이언트에 설치되어 있어야 하고 게시된 보고서를 보려는 경우 보고서 서버에 설치되어 있어야 합니다.  
  
 Oracle 클라이언트 도구를 설치하기 위해 다음을 수행할 수 있습니다.
@@ -243,7 +243,7 @@ Oracle 클라이언트 도구를 설치하기 위해 다음을 수행할 수 있
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
-###  <a name="Teradata"></a> Teradata 데이터 처리 확장 프로그램  
+###  <a name="teradata-data-processing-extension"></a><a name="Teradata"></a> Teradata 데이터 처리 확장 프로그램  
  데이터 원본 유형 **Teradata**를 선택하면 .NET Framework Data Provider for Teradata를 확장하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램이 선택됩니다. Teradata에서 보고서 데이터를 검색하려면 시스템 관리자가 클라이언트에서 보고서를 편집하고 미리 볼 수 있는 보고서 작성 클라이언트와 게시된 보고서를 볼 수 있는 보고서 서버에 .NET Framework Data Provider for Teradata를 설치해야 합니다.  
   
  보고서 서버 프로젝트의 경우 이 확장 프로그램에 대해 그래픽 쿼리 디자이너를 사용할 수 없습니다. 쿼리를 만들려면 텍스트 기반 쿼리 디자이너를 사용해야 합니다.  
@@ -272,7 +272,7 @@ Oracle 클라이언트 도구를 설치하기 위해 다음을 수행할 수 있
  
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
-###  <a name="SharePointList"></a> SharePoint 목록 데이터 확장 프로그램  
+###  <a name="sharepoint-list-data-extension"></a><a name="SharePointList"></a> SharePoint 목록 데이터 확장 프로그램  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 목록 데이터 확장 프로그램이 포함되어 있으므로 보고서에서 SharePoint 목록을 데이터 원본으로 사용할 수 있습니다. 다음에서 목록 데이터를 검색할 수 있습니다.  
   
 -   SharePoint Server 2016  
@@ -285,21 +285,21 @@ Oracle 클라이언트 도구를 설치하기 위해 다음을 수행할 수 있
   
 2.  SharePoint 통합 모드에서 구성된 보고서 서버에서 목록 데이터는 해당하는 Lists.asmx 웹 서비스 또는 SharePoint API에 대한 프로그래밍 방식 호출에서 제공됩니다. 이 모드에서는 SharePoint 팜의 목록 데이터를 검색할 수 있습니다.  
   
-3.  [!INCLUDE[SPS2013](../../includes/sps2013-md.md)] 및 SharePoint Server 2016의 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 기술용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능을 사용하면 SharePoint 사이트의 Lists.asmx 웹 서비스 또는 SharePoint 팜의 일부분인 SharePoint 사이트에서 목록 데이터를 검색할 수 있습니다. 이 시나리오는 보고서 서버가 필요하지 않으므로 *로컬 모드* 라고도 합니다.  
+3.  [!INCLUDE[SPS2013](../../includes/sps2013-md.md)] 및 SharePoint Server 2016의 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 기술용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 추가 기능을 사용하면 SharePoint 사이트의 Lists.asmx 웹 서비스 또는 SharePoint 팜의 일부분인 SharePoint 사이트에서 목록 데이터를 검색할 수 있습니다. 이 시나리오는 보고서 서버가 필요하지 않으므로 *로컬 모드* 라고도 합니다.  
   
  지정할 수 있는 자격 증명은 클라이언트 애플리케이션에서 사용하는 구현에 따라 다릅니다. 자세한 내용은 [SharePoint 목록 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md)을 참조하세요.  
   
-###  <a name="XML"></a> XML 데이터 처리 확장 프로그램  
+###  <a name="xml-data-processing-extension"></a><a name="XML"></a> XML 데이터 처리 확장 프로그램  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 포함된 XML 데이터 처리 확장 프로그램을 사용하여 보고서에 XML 데이터를 사용할 수 있습니다. URL로 액세스할 수 있는 웹 기반의 애플리케이션, 웹 서비스 또는 XML 문서에서 데이터를 검색할 수 있습니다. 자세한 내용은 [XML 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)을 참조하세요. 연결된 쿼리 디자이너에 대한 자세한 내용은 [그래픽 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/graphical-query-designer-user-interface.md)의 텍스트 기반 쿼리 디자이너 섹션을 참조하세요.
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
-###  <a name="SAPBW"></a> SAP BW 데이터 처리 확장 프로그램  
+###  <a name="sap-bw-data-processing-extension"></a><a name="SAPBW"></a> SAP BW 데이터 처리 확장 프로그램  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 보고서의 SAP BW 데이터 원본에서 데이터를 사용할 수 있도록 하는 데이터 처리 확장 프로그램을 포함합니다.
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
-###  <a name="Hyperion"></a> Hyperion Essbase Business Intelligence 데이터 처리 확장 프로그램  
+###  <a name="hyperion-essbase-business-intelligence-data-processing-extension"></a><a name="Hyperion"></a> Hyperion Essbase Business Intelligence 데이터 처리 확장 프로그램  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서의 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 데이터 원본에서 데이터를 사용할 수 있도록 하는 데이터 처리 확장 프로그램을 포함합니다.  
   
  자세한 내용은 [Hyperion Essbase 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md)을 참조하세요. 연결된 쿼리 디자이너에 대한 자세한 내용은 [Hyperion Essbase Query Designer User Interface](../../reporting-services/report-data/hyperion-essbase-query-designer-user-interface.md)를 참조하십시오.  

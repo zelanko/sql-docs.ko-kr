@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 20ca1afc5261c2a03a10b2f146cb9aad9b67a315
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028476"
 ---
 # <a name="azure-key-vault-sample-version-600"></a>Azure Key Vault 샘플 버전 6.0.0

@@ -16,10 +16,10 @@ ms.assetid: bab5485d-4547-426c-adbe-44e2b5702d1d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be54aea70e712d2209c04196d3e450bca488578b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972187"
 ---
 # <a name="settruststore-method-sqlserverdatasource"></a>setTrustStore 메서드(SQLServerDataSource)

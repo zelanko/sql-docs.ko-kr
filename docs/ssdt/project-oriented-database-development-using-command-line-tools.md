@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
 ms.openlocfilehash: 321c0988603f7c31460d1c95791d57e5945c2b07
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243745"
 ---
 # <a name="project-oriented-database-development-using-command-line-tools"></a>명령줄 도구를 사용하여 프로젝트 기반 데이터베이스 개발

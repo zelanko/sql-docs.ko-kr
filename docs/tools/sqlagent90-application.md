@@ -16,10 +16,10 @@ ms.assetid: e8b80e8d-d0c9-4500-a868-0ce08233da08
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 5c75d932356d24bd5a268eb27d50deee91a6329f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307762"
 ---
 # <a name="sqlagent90-application"></a>sqlagent90 애플리케이션

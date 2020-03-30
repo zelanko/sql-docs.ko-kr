@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843797"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Stretch에 데이터베이스 사용 마법사를 실행하여 시작
@@ -45,7 +45,7 @@ ms.locfileid: "73843797"
   
 2.  마우스 오른쪽 단추를 클릭하고 **태스크**를 선택한 다음 **스트레치**를 선택하고 **사용** 을 선택하여 마법사를 시작합니다.  
   
-##  <a name="Intro"></a> 소개  
+##  <a name="introduction"></a><a name="Intro"></a> 소개  
  마법사의 용도 및 필수 구성 요소를 검토합니다.  
  
  중요 필수 구성 요소는 다음과 같습니다.
@@ -55,7 +55,7 @@ ms.locfileid: "73843797"
   
  ![Stretch Database 마법사의 소개 페이지](../../sql-server/stretch-database/media/stretch-wizard-1.png "Stretch Database 마법사의 소개 페이지")  
   
-##  <a name="Tables"></a> 테이블 선택  
+##  <a name="select-tables"></a><a name="Tables"></a> 테이블 선택  
  스트레치에 사용할 테이블을 선택합니다.  
  
 많은 행이 있는 테이블이 정렬된 목록 위쪽에 나타납니다. 마법사는 테이블 목록을 표시하기 전에 Stretch Database에서 현재 지원되지 않는 데이터 형식에 대해 분석합니다. 
@@ -102,7 +102,7 @@ ms.locfileid: "73843797"
   
 -   마법사를 종료한 후 ALTER TABLE 문을 실행하여 필터 함수를 지정합니다. 필수 단계는 [마법사를 실행한 후 필터 함수 추가](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz)를 참조하세요.  
   
-##  <a name="Configure"></a> Azure 구성  
+##  <a name="configure-azure"></a><a name="Configure"></a> Azure 구성  
   
 1.  Microsoft 계정을 사용하여 Microsoft Azure에 로그인합니다.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "73843797"
   
          ![기존 Azure 서버 선택 - Stretch Database 마법사](../../sql-server/stretch-database/media/stretch-wizard-5.png "기존 Azure 서버 선택 - Stretch Database 마법사")  
   
-##  <a name="Credentials"></a> 보안 자격 증명  
+##  <a name="secure-credentials"></a><a name="Credentials"></a> 보안 자격 증명  
  Stretch Database가 원격 데이터베이스에 연결하는 데 사용하는 자격 증명을 보호하려면 데이터베이스 마스터 키가 있어야 합니다.  
   
  데이터베이스 마스터 키가 이미 있는 경우 암호를 입력합니다.  
@@ -156,26 +156,26 @@ ms.locfileid: "73843797"
   
  데이터베이스 마스터 키에 대한 자세한 내용은 [CREATE MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md) 및 [데이터베이스 마스터 키 만들기](../../relational-databases/security/encryption/create-a-database-master-key.md)를 참조하세요. 마법사에서 생성하는 자격 증명에 대한 자세한 내용은 [CREATE DATABASE SCOPED CREDENTIAL&#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)을 참조하세요.  
   
-##  <a name="Network"></a> IP 주소 선택  
+##  <a name="select-ip-address"></a><a name="Network"></a> IP 주소 선택  
  서브넷 IP 주소 범위(권장)를 사용하거나, SQL Server가 원격 Azure 서버와 통신할 수 있도록 Azure에서 방화벽 규칙을 만들기 위해 SQL Server의 공용 IP 주소를 사용합니다.  
   
  이 페이지에서 제공하는 IP 주소 또는 주소는 SQL Server에서 시작된 들어오는 데이터, 쿼리 및 관리 작업을 허용하도록 Azure 서버에 지시하여 Azure Firewall을 통과합니다. 마법사는 SQL Server의 방화벽 설정에서 아무 것도 변경하지 않습니다.  
   
  ![Stretch Database 마법사의 IP 주소 선택 페이지](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database 마법사의 IP 주소 선택 페이지")  
   
-##  <a name="Summary"></a> 요약  
+##  <a name="summary"></a><a name="Summary"></a> 요약  
  마법사에서 입력한 값과 선택한 옵션, Azure에서 예상 비용을 검토합니다. 그런 다음 **마침** 을 선택하여 스트레치를 사용하도록 설정합니다.  
   
  ![Stretch Database 마법사의 요약 페이지](../../sql-server/stretch-database/media/stretch-wizard-8.png "Stretch Database 마법사의 요약 페이지")  
   
-##  <a name="Results"></a> 결과  
+##  <a name="results"></a><a name="Results"></a> 결과  
  결과를 검토합니다.  
   
  데이터 마이그레이션 상태를 모니터링하려면 [데이터 마이그레이션 모니터링 및 문제 해결&#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)을 참조하세요.  
   
  ![Stretch Database 마법사의 결과 페이지](../../sql-server/stretch-database/media/stretch-wizard-9.PNG "Stretch Database 마법사의 결과 페이지")  
   
-##  <a name="KnownIssues"></a> 마법사 문제 해결  
+##  <a name="troubleshooting-the-wizard"></a><a name="KnownIssues"></a> 마법사 문제 해결  
  **Stretch Database 마법사에 실패했습니다.**  
  Stretch Database가 아직 서버 수준에서 사용하도록 설정되지 않은 경우 이를 사용하도록 설정하기 위해 시스템 관리자 권한 없이 마법사를 실행하면 마법사에 실패합니다. 시스템 관리자에게 로컬 서버 인스턴스에서 스트레치 데이터베이스를 설정하도록 요청한 후 마법사를 다시 실행합니다. 자세한 내용은 [필수 구성 요소: 서버에서 Stretch Database를 활성화할 수 있는 권한](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)를 참조하십시오.  
   

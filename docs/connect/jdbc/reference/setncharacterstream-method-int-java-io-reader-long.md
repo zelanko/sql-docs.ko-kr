@@ -11,10 +11,10 @@ ms.assetid: 36396dc9-f109-4da0-bd64-726704046bbf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 76c59a5e367e3d3e8524a64f5ae7ac6dab85b529
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67973953"
 ---
 # <a name="setncharacterstream-method-int-javaioreader-long"></a>setNCharacterStream 메서드(int, java.io.Reader, long)

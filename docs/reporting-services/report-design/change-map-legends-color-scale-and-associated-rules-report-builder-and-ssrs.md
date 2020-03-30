@@ -32,10 +32,10 @@ ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d8df41eb7c0a0463648898c08091dd8f8c01f29
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581738"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>지도 범례, 색 눈금 및 관련 규칙 변경(보고서 작성기 및 SSRS)
@@ -51,7 +51,7 @@ ms.locfileid: "65581738"
   
  ![rs_MapElements](../../reporting-services/report-design/media/rs-mapelements.gif "rs_MapElements")  
   
-##  <a name="Viewport"></a> 뷰포트에 상대적인 범례의 위치를 변경하려면  
+##  <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a><a name="Viewport"></a> 뷰포트에 상대적인 범례의 위치를 변경하려면  
   
 #### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>뷰포트에 상대적인 범례의 위치를 변경하려면  
   
@@ -66,7 +66,7 @@ ms.locfileid: "65581738"
     > [!NOTE]  
     >  미리 보기에서 지도 범례와 색 눈금은 해당 범례와 관련된 규칙의 결과가 있는 경우에만 나타납니다. 표시할 항목이 없으면 범례가 렌더링된 보고서에 나타나지 않습니다.  
   
-##  <a name="MapLegend"></a> 지도 범례의 레이아웃을 변경하려면  
+##  <a name="to-change-the-layout-of-a-map-legend"></a><a name="MapLegend"></a> 지도 범례의 레이아웃을 변경하려면  
   
 #### <a name="to-change-the-layout-of-a-map-legend"></a>지도 범례의 레이아웃을 변경하려면  
   
@@ -76,19 +76,19 @@ ms.locfileid: "65581738"
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="MapLegendTitle"></a> 지도 범례 제목을 표시하거나 숨기려면  
+##  <a name="to-show-or-hide-a-map-legend-title"></a><a name="MapLegendTitle"></a> 지도 범례 제목을 표시하거나 숨기려면  
   
 #### <a name="to-show-or-hide-a-map-legend-title"></a>지도 범례 제목을 표시하거나 숨기려면  
   
 -   디자인 화면에서 지도 범례를 마우스 오른쪽 단추로 클릭한 다음 **범례 제목 표시**를 클릭합니다.  
   
-##  <a name="ColorScaleTitle"></a> 색 눈금 제목을 표시하거나 숨기려면  
+##  <a name="to-show-or-hide-a-color-scale-title"></a><a name="ColorScaleTitle"></a> 색 눈금 제목을 표시하거나 숨기려면  
   
 #### <a name="to-show-or-hide-a-color-scale-title"></a>색 눈금 제목을 표시하거나 숨기려면  
   
 -   디자인 화면에서 색 눈금을 마우스 오른쪽 단추로 클릭한 다음 **색 눈금 제목 표시**를 클릭합니다.  
   
-##  <a name="MoveItems"></a> 첫 번째 범례에서 항목을 제외하려면  
+##  <a name="to-move-items-out-of-the-first-legend"></a><a name="MoveItems"></a> 첫 번째 범례에서 항목을 제외하려면  
  필요한 만큼 범례를 추가로 만들고 규칙 결과를 표시할 범례를 지정하는 각 지도 계층에 대한 규칙을 업데이트합니다.  
   
 #### <a name="to-create-a-new-legend"></a>새 범례를 만들려면  
@@ -109,7 +109,7 @@ ms.locfileid: "65581738"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TemplateStyle"></a> 템플릿 스타일에 따라 지도 요소 색을 변경하려면  
+##  <a name="to-vary-map-element-colors-based-on-a-template-style"></a><a name="TemplateStyle"></a> 템플릿 스타일에 따라 지도 요소 색을 변경하려면  
   
 #### <a name="to-vary-map-element-colors-based-on-a-template-style"></a>템플릿 스타일에 따라 지도 요소 색을 변경하려면  
   
@@ -123,7 +123,7 @@ ms.locfileid: "65581738"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ColorPalette"></a> 색상표에 따라 지도 요소 색을 변경하려면  
+##  <a name="to-vary-map-element-colors-based-on-color-palette"></a><a name="ColorPalette"></a> 색상표에 따라 지도 요소 색을 변경하려면  
   
 #### <a name="to-vary-map-element-colors-based-on-color-palette"></a>색상표에 따라 지도 요소 색을 변경하려면  
   
@@ -141,7 +141,7 @@ ms.locfileid: "65581738"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ColorRanges"></a> 색 범위에 따라 지도 요소 색을 변경하려면  
+##  <a name="to-vary-map-element-colors-based-on-color-ranges"></a><a name="ColorRanges"></a> 색 범위에 따라 지도 요소 색을 변경하려면  
   
 #### <a name="to-vary-map-element-colors-based-on-color-ranges"></a>색 범위에 따라 지도 요소 색을 변경하려면  
   
@@ -163,7 +163,7 @@ ms.locfileid: "65581738"
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="CustomColors"></a> 사용자 지정 색에 따라 지도 요소 색을 변경하려면  
+##  <a name="to-vary-map-element-colors-based-on-custom-colors"></a><a name="CustomColors"></a> 사용자 지정 색에 따라 지도 요소 색을 변경하려면  
   
 #### <a name="to-vary-map-element-colors-based-on-custom-colors"></a>사용자 지정 색에 따라 지도 요소 색을 변경하려면  
   
@@ -181,7 +181,7 @@ ms.locfileid: "65581738"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="DistributionOptions"></a> 범례의 분포 옵션을 설정하려면  
+##  <a name="to-set-distribution-options-for-a-legend"></a><a name="DistributionOptions"></a> 범례의 분포 옵션을 설정하려면  
   
 #### <a name="to-set-distribution-options-for-a-legend"></a>범례의 분포 옵션을 설정하려면  
   
@@ -189,7 +189,7 @@ ms.locfileid: "65581738"
   
 2.  원하는 데이터가 있는 계층을 마우스 오른쪽 단추로 클릭한 다음 _\<맵 요소 유형>_ **색 규칙**을 클릭합니다.  
   
-3.  \<규칙 유형> **을 사용하여 데이터 시각화** 옵션을 선택합니다. 배포 옵션을 사용하려면 계층과 연결된 분석 데이터에 따라 **분포** 페이지에서 범위를 만들어야 합니다.  
+3.  **규칙 유형>** 을 사용하여 데이터 시각화\< 옵션을 선택합니다. 배포 옵션을 사용하려면 계층과 연결된 분석 데이터에 따라 **분포** 페이지에서 범위를 만들어야 합니다.  
   
 4.  **분포**를 클릭합니다.  
   
@@ -213,7 +213,7 @@ ms.locfileid: "65581738"
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="RuleLegend"></a> 규칙 범례의 내용을 변경하려면  
+##  <a name="to-change-the-contents-of-a-rule-legend"></a><a name="RuleLegend"></a> 규칙 범례의 내용을 변경하려면  
   
 #### <a name="to-change-the-contents-of-a-color-size-width-or-marker-type-legend"></a>색, 크기, 두께 또는 표식 유형 범례의 내용을 변경하려면  
   
@@ -221,7 +221,7 @@ ms.locfileid: "65581738"
   
 2.  원하는 데이터가 있는 계층을 마우스 오른쪽 단추로 클릭한 다음 _\<맵 요소 유형>_ **규칙**을 클릭합니다.  
   
-3.  \<‘규칙 유형’>**을 사용하여 데이터 시각화**가 선택되어 있는지 확인합니다.   
+3.  **‘규칙 유형’>** 을 사용하여 데이터 시각화\<가 선택되어 있는지 확인합니다.   
   
 4.  **데이터 필드**에서 계층에서 시각화할 분석 데이터가 선택되어 있는지 확인합니다.  
   
@@ -234,7 +234,7 @@ ms.locfileid: "65581738"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ColorScale"></a> 색 눈금의 내용을 변경하려면  
+##  <a name="to-change-the-contents-of-the-color-scale"></a><a name="ColorScale"></a> 색 눈금의 내용을 변경하려면  
   
 #### <a name="to-change-the-contents-of-the-color-scale-or-a-color-legend"></a>색 눈금 또는 색 범례의 내용을 변경하려면  
   
@@ -242,7 +242,7 @@ ms.locfileid: "65581738"
   
 2.  원하는 데이터가 있는 계층을 마우스 오른쪽 단추로 클릭한 다음 _\<맵 요소 유형>_ **색 규칙**을 클릭합니다.  
   
-3.  사용할 색 규칙 옵션을 선택합니다. 지도 범례나 색 눈금에 항목을 표시하려면 \<규칙 유형>**을 사용하여 데이터 시각화** 옵션 중 하나를 선택해야 합니다.  
+3.  사용할 색 규칙 옵션을 선택합니다. 지도 범례나 색 눈금에 항목을 표시하려면 **규칙 유형>** 을 사용하여 데이터 시각화\< 옵션 중 하나를 선택해야 합니다.  
   
 4.  **데이터 필드**에서 계층에서 시각화할 분석 데이터가 선택되어 있는지 확인합니다.  
   
@@ -255,7 +255,7 @@ ms.locfileid: "65581738"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="HideItems"></a> 범례에서 모든 항목을 제거하려면  
+##  <a name="to-remove-all-items-from-a-legend"></a><a name="HideItems"></a> 범례에서 모든 항목을 제거하려면  
   
 #### <a name="to-hide-items-based-on-a-rule"></a>규칙에 따라 항목을 숨기려면  
   
@@ -267,7 +267,7 @@ ms.locfileid: "65581738"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ChangeFormatItems"></a> 범례의 내용 형식을 변경하려면  
+##  <a name="to-change-the-format-of-content-in-a-legend"></a><a name="ChangeFormatItems"></a> 범례의 내용 형식을 변경하려면  
  지도 범례와 연결된 규칙의 범례 옵션을 설정합니다.  
   
 #### <a name="to-change-the-format-of-content-in-a-legend"></a>범례의 내용 형식을 변경하려면  
@@ -286,7 +286,7 @@ ms.locfileid: "65581738"
  [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [지도 또는 지도 계층 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [지도 또는 지도 계층의 데이터 및 표시 사용자 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [보고서 문제 해결: 맵 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [보고서 문제해결: 지도 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [지도 마법사 및 지도 계층 마법사&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
   

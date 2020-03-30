@@ -11,10 +11,10 @@ ms.assetid: 7d9d7b05-582a-41df-b2c4-ec4a64d49752
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a63f23ef4e9914dfe69c45882098654287c3c9e3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983812"
 ---
 # <a name="getdatetimeoffset-method-sqlservercallablestatement"></a>getDateTimeOffset 메서드(SQLServerCallableStatement)
@@ -24,7 +24,7 @@ ms.locfileid: "67983812"
   
  매개 변수 인덱스가 지정된 경우 지정된 매개 변수의 값을 Java 프로그래밍 언어의 [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) 개체로 검색합니다.  
   
- [SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)을 사용하여 [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) 매개 변수 값을 설정할 수 있습니다.  
+ [SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)을 사용하여 [DateTimeOffset Class](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md) 매개 변수 값을 설정할 수 있습니다.  
   
 ## <a name="overload-list"></a>오버로드 목록  
   

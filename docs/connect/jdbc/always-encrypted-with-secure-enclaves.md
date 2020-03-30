@@ -11,10 +11,10 @@ ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: reneye
 ms.author: v-reye
 ms.openlocfilehash: 441adf8e3623f06bfa98718ebc6c01c314c94828
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77004712"
 ---
 # <a name="using-always-encrypted-with-the-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted 사용
@@ -40,7 +40,7 @@ ms.locfileid: "77004712"
 
 **enclaveAttestationProtocol:** 증명 서비스의 프로토콜. 현재 유일하게 지원되는 값은 **HGS**(호스트 보호 서비스)입니다.
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서 보안 Enclave를 사용한 Always Encrypted를 사용하도록 설정하려면 사용자는 **columnEncryptionSetting**을 사용하도록 설정하고 위의 연결 문자열 속성 **모두**를 올바르게 설정해야 합니다.
+**에서 보안 Enclave를 사용한 Always Encrypted를 사용하도록 설정하려면 사용자는** columnEncryptionSetting**을 사용하도록 설정하고 위의 연결 문자열 속성** 모두[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]를 올바르게 설정해야 합니다.
 
 ## <a name="working-with-secure-enclaves"></a>보안 Enclave 작업
 Enclave 연결 속성이 제대로 설정되면 이 기능이 투명하게 작동합니다. 이 드라이버는 쿼리가 보안 Enclave의 사용을 자동으로 요구할지 여부를 결정합니다. Enclave 계산을 트리거하는 쿼리의 예는 다음과 같습니다. [Always Encrypted Enclave 시작하기](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md)에서 데이터베이스 및 테이블 설정을 찾을 수 있습니다.

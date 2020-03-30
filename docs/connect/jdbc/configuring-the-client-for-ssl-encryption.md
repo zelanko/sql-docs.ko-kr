@@ -11,10 +11,10 @@ ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 123e847e01c07ab04bf5be97593af838abfdc4bd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "71713283"
 ---
 # <a name="configuring-the-client-for-encryption"></a>암호화에 대한 클라이언트 구성
@@ -22,7 +22,7 @@ ms.locfileid: "71713283"
 
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 또는 클라이언트는 서버가 올바른 서버이며 서버 인증서가 클라이언트에서 신뢰하는 인증 기관에서 발행되었는지 유효성을 검사해야 합니다. 서버 인증서의 유효성을 검사하기 위해서는 연결 시 트러스트 자료를 제공해야 합니다. 또한 서버 인증서의 발급자가 클라이언트에서 신뢰하는 인증 기관이어야 합니다.  
   
- 이 문서에서는 먼저 클라이언트 컴퓨터에 트러스트 자료를 제공하는 방법에 대해 설명합니다. 그런 다음 SQL Server 인스턴스의 TLS(전송 계층 보안) 인증서가 프라이빗 인증 기관에서 발행된 경우 서버 인증서를 클라이언트 컴퓨터의 트러스트 저장소로 가져오는 방법에 대해 설명합니다.  
+ 이 항목에서는 먼저 클라이언트 컴퓨터에 트러스트 자료를 제공하는 방법에 대해 설명합니다. 그런 다음 SQL Server 인스턴스의 TLS(전송 계층 보안) 인증서가 프라이빗 인증 기관에서 발행된 경우 서버 인증서를 클라이언트 컴퓨터의 트러스트 저장소로 가져오는 방법에 대해 설명합니다.  
   
  서버 인증서의 유효성을 검사하는 방법은 [암호화 지원 이해](../../connect/jdbc/understanding-ssl-support.md)의 서버 TLS 인증서 유효성 검사 섹션을 참조하세요.  
   
@@ -48,7 +48,7 @@ java -Djavax.net.ssl.trustStore=C:\MyCertificates\storeName
 java -Djavax.net.ssl.trustStorePassword=storePassword  
 ```  
   
- 이 경우 이 JVM에서 실행 중인 모든 애플리케이션이 이러한 설정을 기본값으로 사용합니다. 애플리케이션에서 기본 설정을 재정의하려면 연결 문자열 또는 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스의 해당 setter 메서드에서 **trustStore** 및 **trustStorePassword** 연결 속성을 설정해야 합니다.  
+ 이 경우 이 JVM에서 실행 중인 모든 애플리케이션이 이러한 설정을 기본값으로 사용합니다. 애플리케이션에서 기본 설정을 재정의하려면 연결 문자열 또는 **SQLServerDataSource** 클래스의 해당 setter 메서드에서 **trustStore** 및 [trustStorePassword](../../connect/jdbc/reference/sqlserverdatasource-class.md) 연결 속성을 설정해야 합니다.  
   
  또한 “\<java-home>/lib/security/jssecacerts” 및 “\<java-home>/lib/security/cacerts”와 같은 기본 트러스트 저장소 파일을 구성하고 관리할 수도 있습니다. 이를 위해서는 JRE(Java Runtime Environment)와 함께 설치되는 JAVA "keytool" 유틸리티를 사용하십시오. "keytool" 유틸리티에 대한 자세한 내용은 Sun Microsystems 웹 사이트에서 keytool 설명서를 참조하십시오.  
   

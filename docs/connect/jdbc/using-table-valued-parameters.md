@@ -11,10 +11,10 @@ ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1dfa8438e7afb1763129748368a7f6e08fa892c3
-ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77575337"
 ---
 # <a name="using-table-valued-parameters"></a>테이블 반환 매개 변수 사용

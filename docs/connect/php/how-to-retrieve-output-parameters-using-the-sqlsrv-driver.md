@@ -12,10 +12,10 @@ ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db1216f513f353a6c703805c7aabe7b8dd468115
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993404"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 출력 매개 변수 검색
@@ -32,7 +32,7 @@ SQLSRV_SQLTYPE_VARCHAR('max') 같은 스트림 형식을 출력 매개 변수로
 다음 예제에서는 지정된 직원이 연간 누계 판매를 반환하는 저장 프로시저를 호출합니다. PHP 변수 *$lastName* 이 입력 매개 변수이고 *$salesYTD* 가 출력 매개 변수입니다.  
   
 > [!NOTE]  
-> *$salesYTD* 를 0.0으로 초기화하면 반환된 PHPTYPE을 **부동**으로 설정합니다. 데이터 형식 무결성을 보장하려면 저장 프로시저를 호출하기 전에 출력 매개 변수를 초기화하거나 원하는 PHPTYPE을 지정해야 합니다. PHPTYPE 지정에 대한 자세한 내용은 [방법: PHP 데이터 형식 지정](../../connect/php/how-to-specify-php-data-types.md)을 참조하세요.  
+> *$salesYTD* 를 0.0으로 초기화하면 반환된 PHPTYPE을 **부동**으로 설정합니다. 데이터 형식 무결성을 보장하려면 저장 프로시저를 호출하기 전에 출력 매개 변수를 초기화하거나 원하는 PHPTYPE을 지정해야 합니다. PHPTYPE 지정에 대한 자세한 내용은 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)을 참조하세요.  
   
 저장 프로시저에서 하나의 결과만 반환하기 때문에 *$salesYTD* 에는 저장 프로시저가 실행된 직후 반환되는 출력 매개 변수 값이 들어 있습니다.  
   

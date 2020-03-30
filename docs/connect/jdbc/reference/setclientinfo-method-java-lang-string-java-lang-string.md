@@ -11,10 +11,10 @@ ms.assetid: 8d050831-8305-48a8-bd22-207932111040
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b94f6a00e26934426ef1ece760ce1179c3c53046
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76941178"
 ---
 # <a name="setclientinfo-method-javalangstring-javalangstring"></a>setClientInfo 메서드(java.lang.String, java.lang.String)
@@ -45,7 +45,7 @@ public void setClientInfo (java.lang.String name,
 ## <a name="remarks"></a>설명  
  이 setClientInfo 메서드는 java.sql.Connection 인터페이스의 setClientInfo 메서드에 의해 지정됩니다.  
   
- [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에서는 클라이언트 정보 속성을 지원하지 않습니다. 2\.0 JDBC 드라이버에서 이 메서드는 속성에 대한 경고를 생성합니다. 애플리케이션에서는 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 [getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md) 메서드를 사용하여 경고를 검색해야 합니다.  
+ [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에서는 클라이언트 정보 속성을 지원하지 않습니다. 2\.0 JDBC 드라이버에서 이 메서드는 속성에 대한 경고를 생성합니다. 애플리케이션에서는 [SQLServerConnection](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md) 클래스의 [getWarnings](../../../connect/jdbc/reference/sqlserverconnection-class.md) 메서드를 사용하여 경고를 검색해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [setClientInfo 메서드(SQLServerConnection)](../../../connect/jdbc/reference/setclientinfo-method-sqlserverconnection.md)   

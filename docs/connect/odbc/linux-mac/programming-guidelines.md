@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: v-makouz
 ms.author: genemi
 ms.openlocfilehash: bf0961b8ef53060904ad797832e7c7467a859c2b
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285867"
 ---
 # <a name="programming-guidelines"></a>프로그래밍 지침
@@ -22,10 +22,10 @@ ms.locfileid: "79285867"
 
 macOS 및 Linux 기반 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 프로그래밍 기능은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client([SQL Server Native Client(ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151))를 기반으로 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 Windows Data Access Components의 ODBC를 기반으로 합니다([ODBC 프로그래머 참조](https://go.microsoft.com/fwlink/?LinkID=45250)).  
 
-ODBC 애플리케이션은 unixODBC 헤더(`sql.h`, `sqlext.h`, `sqltypes.h` 및 `sqlucode.h`)를 포함한 후 `/usr/local/include/msodbcsql.h`를 포함하여 MARS(Multiple Active Result Set) 및 다른 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 고유 기능을 사용할 수 있습니다. 그런 다음, Windows ODBC 애플리케이션에서 사용하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관련 항목에 대해 동일한 기호화된 이름을 사용합니다.
+ODBC 애플리케이션은 unixODBC 헤더([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], `/usr/local/include/msodbcsql.h`, `sql.h` 및 `sqlext.h`)를 포함한 후 `sqltypes.h`를 포함하여 MARS(Multiple Active Result Set) 및 다른 `sqlucode.h` 고유 기능을 사용할 수 있습니다. 그런 다음, Windows ODBC 애플리케이션에서 사용하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관련 항목에 대해 동일한 기호화된 이름을 사용합니다.
 
 ## <a name="available-features"></a>사용 가능한 기능  
-ODBC([SQL Server Native Client(ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151))에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 설명서의 다음 섹션은 macOS 및 Linux 기반 ODBC 드라이버를 사용할 때 유용합니다.  
+ODBC([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]SQL Server Native Client(ODBC)[)에 대한 ](https://go.microsoft.com/fwlink/?LinkID=134151) Native Client 설명서의 다음 섹션은 macOS 및 Linux 기반 ODBC 드라이버를 사용할 때 유용합니다.  
 
 -   [SQL Server와 통신(ODBC)](https://msdn.microsoft.com/library/ms131692.aspx)  
 -   [연결 및 쿼리 시간 제한 지원](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
@@ -75,7 +75,7 @@ ODBC 드라이버 13 및 13.1의 경우 SQLCHAR 데이터는 UTF-8이어야 합�
 ODBC 드라이버 17의 경우 다음 문자 세트/인코딩 중 하나의 SQLCHAR 데이터가 지원됩니다.
 
 > [!NOTE]  
-> `musl`과 `glibc`의 `iconv` 차이로 인해 이러한 로캘 대부분은 Alpine Linux에서 지원되지 않습니다.
+> `iconv`과 `musl`의 `glibc` 차이로 인해 이러한 로캘 대부분은 Alpine Linux에서 지원되지 않습니다.
 >
 > 자세한 내용은 [glibc의 기능 차이점](https://wiki.musl-libc.org/functional-differences-from-glibc.html)을 참조하세요.
 
@@ -106,7 +106,7 @@ ODBC 드라이버 17의 경우 다음 문자 세트/인코딩 중 하나의 SQLC
 |ISO-8859-13|라틴어-7|
 |ISO-8859-15|라틴어-9|
 
-연결 시 드라이버에서 로드된 프로세스의 현재 로캘을 검색합니다. 위의 인코딩 중 하나를 사용하는 경우 드라이버에서 SQLCHAR(반각 문자) 데이터에 해당 인코딩을 사용하며, 그렇지 않으면 기본적으로 UTF-8을 사용합니다. 모든 프로세스는 기본적으로 “C” 로캘로 시작하므로(그리고 따라서 드라이버에서 기본적으로 UTF-8을 사용하므로), 애플리케이션이 위의 인코딩 중 하나를 사용해야 하는 경우 연결하기 전에 원하는 로캘을 명시적으로 지정하거나 빈 문자열(예: `setlocale(LC_ALL, "")`)을 사용해 환경의 로캘 설정을 사용함으로써 **setlocale** 함수를 사용하여 로캘을 적합하게 설정해야 합니다.
+연결 시 드라이버에서 로드된 프로세스의 현재 로캘을 검색합니다. 위의 인코딩 중 하나를 사용하는 경우 드라이버에서 SQLCHAR(반각 문자) 데이터에 해당 인코딩을 사용하며, 그렇지 않으면 기본적으로 UTF-8을 사용합니다. 모든 프로세스는 기본적으로 “C” 로캘로 시작하므로(그리고 따라서 드라이버에서 기본적으로 UTF-8을 사용하므로), 애플리케이션이 위의 인코딩 중 하나를 사용해야 하는 경우 연결하기 전에 원하는 로캘을 명시적으로 지정하거나 빈 문자열(예: **)을 사용해 환경의 로캘 설정을 사용함으로써** setlocale`setlocale(LC_ALL, "")` 함수를 사용하여 로캘을 적합하게 설정해야 합니다.
 
 그러므로 인코딩이 UTF-8인 일반적인 Linux 또는 Mac 환경에서 ODBC 드라이버 13 또는 13.1에서 17로 업그레이드하는 사용자의 경우 해당 차이점이 발생하지 않습니다. 그러나 `setlocale()`을 통해 위 목록의 UTF-8이 아닌 인코딩을 사용하는 애플리케이션은 드라이버에 대한 데이터에 UTF-8 대신 해당 인코딩을 사용해야 합니다.
 
@@ -122,13 +122,13 @@ Windows와 Linux 및 macOS 기반 iconv 라이브러의 여러 버전 간에는 
 
 ODBC 드라이버 13 및 13.1에서 UTF-8 멀티바이트 문자 또는 UTF-16 서로게이트가 SQLPutData 버퍼로 분할되면 데이터 손상이 발생합니다. 버퍼를 부분 문자 인코딩으로 끝나지 않는 SQLPutData 스트리밍에 사용합니다. 이 제한 사항은 ODBC 드라이버 17에서 제거되었습니다.
 
-## <a name="bkmk-openssl"></a>OpenSSL
+## <a name="openssl"></a><a name="bkmk-openssl"></a>OpenSSL
 드라이버는 버전 17.4부터 OpenSSL을 동적으로 로드하므로 별도의 드라이버 파일 없이 버전 1.0 또는 1.1을 사용하는 시스템에서 실행할 수 있습니다. 여러 버전의 OpenSSL가 있는 경우에는 드라이버에서 최신 버전의 로드를 시도합니다. 드라이버는 현재 OpenSSL 1.0.x 및 1.1.x를 지원합니다.
 
 > [!NOTE]  
 > 드라이버나 그 구성 요소 중 하나를 사용하는 애플리케이션이 서로 다른 버전의 OpenSSL를 연결하거나 동적으로 로드하는 경우 잠재적 충돌 가능성이 있습니다. 여러 버전의 OpenSSL이 시스템에 있고 애플리케이션에서 이를 사용하는 경우, 오류로 인해 메모리가 손상되어 명확하거나 일관되게 표시되지 않을 수도 있으므로 애플리케이션과 드라이버에 의해 로드된 버전이 일치하지는 않는지 확인하는 것이 좋습니다.
 
-## <a name="bkmk-alpine"></a>Alpine Linux
+## <a name="alpine-linux"></a><a name="bkmk-alpine"></a>Alpine Linux
 이 문서를 작성한 시점을 기준으로 MUSL의 기본 스택 크기는 128K이어서 기본 ODBC 드라이버 기능에 충분하지만 애플리케이션이 무얼 하느냐에 따라 이 한도를 쉽게 초과할 수도 있으며, 특히 여러 스레드에서 드라이버를 호출하는 경우가 여기에 해당합니다. Alpine Linux상의 ODBC 애플리케이션이 `-Wl,-z,stack-size=<VALUE IN BYTES>`로 컴파일되어 스택 크기를 늘리는 것이 좋습니다. 참고로 대다수 GLIBC 시스템의 기본 스택 크기는 2MB입니다.
 
 ## <a name="additional-notes"></a>참고 사항  

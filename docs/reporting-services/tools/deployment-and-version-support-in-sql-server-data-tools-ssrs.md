@@ -9,10 +9,10 @@ ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5f055219476507f52894fe7d5b246710e6054a20
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571504"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools의 배포 및 버전 지원(SSDT)
@@ -26,7 +26,7 @@ ms.locfileid: "65571504"
   
 -   보고서 서버에 보고서 배포  
   
-##  <a name="bkmk_ConfigurationandDeploymentProperties"></a> 구성 및 배포 속성  
+##  <a name="configuration-and-deployment-properties"></a><a name="bkmk_ConfigurationandDeploymentProperties"></a> 구성 및 배포 속성  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서는 프로젝트 구성이 지원됩니다. 프로젝트 구성은 보고서를 미리 보거나 배포하는 단계로 프로젝트가 빌드될 때 위치와 동작을 지정하는 속성 집합으로 구성됩니다. 프로젝트 구성에 대한 자세한 내용은 Visual Studio 설명서를 참조하세요.  
   
  프로젝트 구성을 사용하면 보고서 정의를 대상 보고서 서버 호환 스키마 버전으로 업그레이드하는 작업을 제어할 수 있습니다. 프로젝트 구성으로 제어되는 속성에는 대상 보고서 서버, 오류 수준, 빌드 프로세스에서 미리 보기 및 배포용으로 보고서 정의를 임시 저장하는 폴더 등이 포함됩니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "65571504"
   
  둘 이상의 프로젝트 구성을 프로젝트에 추가할 수 있으며 각 구성은 다른 버전의 보고서 서버에 배포하는 것과 같은 다양한 시나리오에 사용됩니다. 자세한 내용은 [배포 속성 설정&#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md) 및 [프로젝트 속성 페이지 대화 상자](../../reporting-services/tools/project-property-pages-dialog-box.md)를 참조하세요.  
   
-##  <a name="bkmk_SupportedVersions"></a> Supported Versions  
+##  <a name="supported-versions"></a><a name="bkmk_SupportedVersions"></a> Supported Versions  
   
 > [!NOTE]  
 >  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 보고서 서버 프로젝트를 위한 32비트 개발 환경으로 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 기반 컴퓨터에서 실행되도록 디자인되지 않았으며 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 기반 서버에 설치되지 않습니다. x64 기반 컴퓨터에서는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 가 지원됩니다.  

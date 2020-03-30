@@ -9,18 +9,18 @@ ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 466415ebd4075afd5dda83e95a498a32b50af453
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62651740"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
-이 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 자습서 단원에서는 웹 포털을 사용하여 받는 사람에게 배달될 보고서를 선택합니다. 사용자가 정의하는 데이터 기반 구독은 **기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;** 자습서에서 만든 [기본 테이블 보고서 만들기&amp;#40;SSRS 자습서&amp;#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)보고서를 배포합니다.  다음 단계에서는 보고서에서 데이터를 가져오는 데 사용되는 데이터 원본 연결 정보를 수정합니다. **저장된 자격 증명** 을 사용하여 보고서 데이터 원본에 액세스하는 보고서만 데이터 기반 구독을 통해 배포할 수 있습니다. 저장된 자격 증명은 무인 보고서 처리에 필요합니다.  
+이 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 자습서 단원에서는 웹 포털을 사용하여 받는 사람에게 배달될 보고서를 선택합니다. 사용자가 정의하는 데이터 기반 구독은 **기본 테이블 보고서 만들기&amp;#40;SSRS 자습서&amp;#41;** 자습서에서 만든 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)보고서를 배포합니다.  다음 단계에서는 보고서에서 데이터를 가져오는 데 사용되는 데이터 원본 연결 정보를 수정합니다. **저장된 자격 증명** 을 사용하여 보고서 데이터 원본에 액세스하는 보고서만 데이터 기반 구독을 통해 배포할 수 있습니다. 저장된 자격 증명은 무인 보고서 처리에 필요합니다.  
   
 또한 구독이 특정 주문 및 렌더링 형식에 대해 보고서의 서로 다른 인스턴스를 출력할 수 있도록 `[Order]` 에 대해 보고서를 필터링하는 매개 변수를 사용하기 위해 데이터 세트 및 보고서를 수정합니다.  
   
-## <a name="bkmk_modify_datasource"></a>저장된 자격 증명을 사용하도록 데이터 원본을 수정하려면  
+## <a name="to-modify-the-data-source-to-use-stored-credentials"></a><a name="bkmk_modify_datasource"></a>저장된 자격 증명을 사용하도록 데이터 원본을 수정하려면  
   
 1.  관리자 권한으로 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 웹 포털로 이동합니다. 예를 들어 Internet Explorer 아이콘을 마우스 오른쪽 단추로 클릭하고 **관리자 권한으로 실행**을 클릭합니다.  
  
@@ -54,7 +54,7 @@ ms.locfileid: "62651740"
   
 11. 보고서를 확인하여 지정한 자격 증명으로 보고서가 실행되는지 확인합니다. .  
   
-## <a name="bkmk_modify_dataset"></a>AdventureWorksDataset을 수정하려면  
+## <a name="to-modify-the-adventureworksdataset"></a><a name="bkmk_modify_dataset"></a>AdventureWorksDataset을 수정하려면  
  다음 단계에서는 매개 변수를 사용하여 주문 번호에 따라 데이터 세트를 필터링하도록 데이터 세트를 수정합니다.
 1.  에서 **Sales Orders** 보고서를 엽니다.(!!) [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62651740"
   
 4.  **확인**을 클릭합니다.  
  다음 단계에서는 보고서에 매개 변수를 추가합니다.  보고서 매개 변수는 데이터 세트 매개 변수를 피드합니다. 
-## <a name="bkmk_add_reportparameter"></a>보고서 매개 변수를 추가하고 보고서를 다시 게시하려면  
+## <a name="to-add-a-report-parameter-and-republish-the-report"></a><a name="bkmk_add_reportparameter"></a>보고서 매개 변수를 추가하고 보고서를 다시 게시하려면  
   
 1.  **보고서 데이터** 창에서 매개 변수 폴더를 확장하고 **Ordernumber** 매개 변수를 두 번 클릭합니다.  이 매개 변수는 이전 단계에서 데이터 세트에 매개 변수를 추가할 때 자동으로 생성되었습니다. **새로 만들기** and then  **매개 변수...** 를 클릭합니다.  
  ![ssrs_tutorial_datadriven_parameter](../reporting-services/media/ssrs-tutorial-datadriven-parameter.png) 
@@ -103,7 +103,7 @@ ms.locfileid: "62651740"
     ![ssrs_tutorial_datadriven_reportviewer_parameter](../reporting-services/media/ssrs-tutorial-datadriven-reportviewer-parameter.png) 
  
   
-## <a name="bkmk_redeploy"></a>보고서 다시 배포  
+## <a name="re-deploy-the-report"></a><a name="bkmk_redeploy"></a>보고서 다시 배포  
   
 1.  다음 단원의 구독 구성에서 이 단원에 수행한 변경 내용을 활용할 수 있도록 보고서를 다시 배포합니다. 테이블 자습서에 사용된 프로젝트 속성에 대한 자세한 내용을 보려면 [6단원: 그룹화 및 합계 추가&#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)의 '보고서 서버에 보고서를 게시하려면(옵션)' 섹션을 참조하세요.  
   

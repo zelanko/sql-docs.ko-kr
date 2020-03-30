@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e0557030bdec7b566a69696a8fd50cb543a7fc1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027689"
 ---
 # <a name="spatial-data-types-sample"></a>공간 데이터 형식 샘플
@@ -39,7 +39,7 @@ ms.locfileid: "69027689"
 
 다음 예제에서는 샘플 코드로 'Geometry' 및 'Geography' 열이 포함된 SpatialDataTypesTable_JDBC_Sample이라는 테이블을 만듭니다.
 
-샘플은 POINT를 나타내는 WKT(Well-Known-Text)에서 먼저 'Geometry'와 'Geography' 개체를 만듭니다. 매개 변수가 있는 쿼리로 SQLServerPreparedStatement를 사용하여 데이터를 각 칼럼에 적절하게 매핑합니다.
+샘플은 POINT를 나타내는 WKT(Well-Known-Text)에서 먼저 'Geometry'와 'Geography' 개체를 만듭니다. 매개 변수가 있는 쿼리로 SQLServerPreparedStatement를 사용하여 데이터를 각 열에 적절하게 매핑합니다.
 
 마지막으로 샘플은 테이블에 데이터를 삽입한 다음 검색합니다. 데이터는 WKT 형식으로 표시됩니다.
 

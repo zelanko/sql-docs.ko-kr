@@ -9,10 +9,10 @@ ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f149ed74be35184e3364cbadece6d63635d22584
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77077104"
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>하위 보고서(보고서 작성기 및 SSRS)

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 16466f509383ec407dafcd5a9cf61b324a7c4b52
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "71951572"
 ---
 # <a name="uninstall-reporting-services"></a>Reporting Services 제거
@@ -35,9 +35,9 @@ ms.locfileid: "71951572"
   
  다음은 제거되지 않는 세 가지 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터베이스의 이름 예입니다.  
   
--   **보고서 서버 데이터베이스:** ReportingService_7f616e2d253040e8ab5653b3c09a065e  
+-   **보고서 서버 데이터베이스:** eportingService_7f616e2d253040e8ab5653b3c09a065e  
   
--   **보고서 서버 임시 데이터베이스:** ReportingService_7f616e2d253040e8ab5653b3c09a065eTempDB  
+-   **보고서 서버 임시 데이터베이스:** portingService_7f616e2d253040e8ab5653b3c09a065eTempDB  
   
 -   **보고서 서버 경고 데이터베이스:** ReportingService_7f616e2d253040e8ab5653b3c09a065e_Alerting  
   

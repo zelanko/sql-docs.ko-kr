@@ -10,10 +10,10 @@ ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 21e642feba6a2726aa4d5615f6ae508fa33c1694
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67934659"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>SQL Server 식별자 인코딩 및 디코딩
@@ -31,7 +31,7 @@ Windows PowerShell 경로 이름에 지원되지 않는 문자는 "%" 문자 뒤
   
  **Encode-SqlName** cmdlet은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 식별자를 입력으로 사용합니다. Windows PowerShell 언어에서 지원하지 않는 모든 문자를 "%xx"로 인코딩하여 문자열을 출력합니다. **Decode-SqlName** cmdlet은 인코딩된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 식별자를 입력으로 사용하고 원래 식별자를 반환합니다.  
   
-##  <a name="LimitationsRestrictions"></a> 제한 사항  
+##  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 제한 사항  
  **Encode-Sqlname** 및 **Decode-Sqlname** cmdlet은 SQL Server 구분 식별자에서 허용되지만 PowerShell 경로에서 지원되지 않는 문자만 인코딩하거나 디코딩합니다. 다음은 **Encode-SqlName**으로 인코딩되고 **Decode-SqlName**으로 디코딩된 문자입니다.  
   
 |||||||||||||  
@@ -39,7 +39,7 @@ Windows PowerShell 경로 이름에 지원되지 않는 문자는 "%" 문자 뒤
 |**문자**|\ |/|:|%|\<|>|*|?|[|]|&#124;|  
 |**16진수 인코딩**|%5C|%2F|%3A|%25|%3C|%3E|%2A|%3F|%5B|%5D|%7C|  
   
-##  <a name="EncodeIdent"></a> 식별자 인코딩  
+##  <a name="encoding-an-identifier"></a><a name="EncodeIdent"></a> 식별자 인코딩  
  **PowerShell 경로에서 SQL Server 식별자를 인코딩하려면**  
   
 -   두 방법 중 하나를 사용하여 SQL Server 식별자를 인코딩합니다.  
@@ -61,7 +61,7 @@ Set-Location Table%3ATest
 Set-Location (Encode-SqlName "Table:Test")  
 ```  
   
-##  <a name="DecodeIdent"></a> 식별자 디코딩  
+##  <a name="decoding-an-identifier"></a><a name="DecodeIdent"></a> 식별자 디코딩  
  **PowerShell 경로에서 SQL Server 식별자를 디코딩하려면**  
   
  **Decode-Sqlname** cmdlet을 사용하여 16진수 인코딩을 인코딩에 의해 표시되는 문자로 바꿀 수 있습니다.  

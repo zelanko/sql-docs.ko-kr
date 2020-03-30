@@ -16,10 +16,10 @@ ms.assetid: f74030d8-3789-463b-b414-2eb01cef8a30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 01eccd5aafe5b66ed93bebc320fa3f9d425350ff
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953941"
 ---
 # <a name="getbigdecimal-method-int"></a>getBigDecimal 메서드(int)

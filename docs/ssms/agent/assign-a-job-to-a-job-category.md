@@ -20,10 +20,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4f4efb07aaa9264a74eeebe4f432d4e4351cefe1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75252700"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>작업 범주에 작업 할당
@@ -33,16 +33,16 @@ ms.locfileid: "75252700"
 > [!IMPORTANT]  
 > 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
-이 문서에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 SQL Server 관리 개체를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 작업 범주에 할당하는 방법에 대해 설명합니다.  
+이 문서에서는 [!INCLUDE[msCoName](../../includes/msconame_md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Server 관리 개체를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 에이전트 작업을 작업 범주에 할당하는 방법에 대해 설명합니다.  
   
 작업 범주를 사용하면 작업을 쉽게 필터링하고 그룹화할 수 있게 구성할 수 있습니다. 예를 들어 데이터베이스 유지 관리 범주에 있는 모든 데이터베이스 백업 작업을 구성할 수 있습니다. 작업을 기본 제공 작업 범주에 할당하거나 사용자 정의 작업 범주를 만든 다음 여기에 작업을 할당할 수 있습니다.  
 
-## <a name="BeforeYouBegin"></a>시작하기 전 주의 사항  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>시작하기 전 주의 사항  
   
-### <a name="Security"></a>보안  
+### <a name="security"></a><a name="Security"></a>보안  
 자세한 내용은 [SQL Server 에이전트 보안 구현](../../ssms/agent/implement-sql-server-agent-security.md)을 참조하세요.  
   
-## <a name="SSMS"></a>SQL Server Management Studio 사용  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>SQL Server Management Studio 사용  
   
 #### <a name="to-assign-a-job-to-a-job-category"></a>작업 범주에 작업을 할당하려면  
   
@@ -58,7 +58,7 @@ ms.locfileid: "75252700"
   
 6.  **확인**을 클릭합니다.  
   
-## <a name="TSQL"></a>Transact-SQL 사용  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>Transact-SQL 사용  
   
 #### <a name="to-assign-a-job-to-a-job-category"></a>작업 범주에 작업을 할당하려면  
   
@@ -80,7 +80,7 @@ ms.locfileid: "75252700"
   
 자세한 내용은 [sp_update_job(Transact-SQL)](https://msdn.microsoft.com/cbdfea38-9e42-47f3-8fc8-5978b82e2623)을 참조하세요.  
   
-## <a name="SMO"></a>SQL Server 관리 개체 사용  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 관리 개체 사용  
 **작업 범주에 작업을 할당하려면**  
   
 Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 **JobCategory** 클래스를 사용합니다.  

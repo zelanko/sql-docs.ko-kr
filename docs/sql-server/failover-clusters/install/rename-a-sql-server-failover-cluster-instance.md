@@ -15,10 +15,10 @@ ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: af1ec295ef8567496da84819532342164cb269cb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75230716"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>SQL Server 장애 조치(Failover) 클러스터 인스턴스 이름 변경
@@ -63,7 +63,7 @@ ms.locfileid: "75230716"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>이름 바꾸기 작업 후 추가 고려 사항  
  장애 조치(Failover) 클러스터의 네트워크 이름을 바꾼 후에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 및 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 모든 시나리오를 지원하기 위해 다음 지침을 확인하고 수행해야 합니다.  
   
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스에 대한 아래의 추가 작업을 확인 및 수행합니다.  
+ **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스에 대한 아래의 추가 작업을 확인 및 수행합니다.  
   
 -   SQL 에이전트가 이벤트를 전달하도록 구성된 경우 레지스트리 설정을 수정합니다. 자세한 내용은 [이벤트 전달 서버 지정&#40;SQL Server Management Studio&#41;](https://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12)을 참조하세요.  
   

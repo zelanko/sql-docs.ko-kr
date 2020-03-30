@@ -9,10 +9,10 @@ ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e8819e97cbece0ab9682252c3afdedee7d671428
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081895"
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>기본 제공 컬렉션 - ReportItems 컬렉션 참조(보고서 작성기)
@@ -22,9 +22,9 @@ ms.locfileid: "77081895"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-reportitems-value-property"></a>ReportItems 값 속성 사용  
- **ReportItems** 컬렉션 내의 항목에는 Value 속성 하나만 포함됩니다. **ReportItems** 항목의 값을 사용하면 보고서에 있는 다른 필드의 데이터를 표시하거나 계산할 수 있습니다. 현재 입력란의 값에 액세스하려는 경우 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 기본 제공 전역 Me.Value를 사용하거나 그냥 Value만 사용할 수 있습니다. First와 같은 보고서 함수 및 집계 함수에서는 정규화된 구문을 사용해야 합니다.  
+ **ReportItems** 컬렉션 내의 항목에는 Value라는 하나의 속성만 있습니다. **ReportItems** 항목의 값을 사용하면 보고서에 있는 다른 필드의 데이터를 표시하거나 계산할 수 있습니다. 현재 입력란의 값에 액세스하려는 경우 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 기본 제공 전역 Me.Value를 사용하거나 그냥 Value만 사용할 수 있습니다. First와 같은 보고서 함수 및 집계 함수에서는 정규화된 구문을 사용해야 합니다.  
   
- 다음은 그 예입니다.   
+ 다음은 그 예입니다.  
   
 -   이 식을 입력란에 배치하면 **이라는** ReportItem `Textbox1`입력란의 값이 표시됩니다.  
   

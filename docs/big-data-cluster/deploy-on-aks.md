@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: d23ae15a277c866c62f3e9be9e2eab19c5255c10
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77173604"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>SQL Server 빅 데이터 클러스터 배포에 대해 Azure Kubernetes Service 구성
@@ -76,7 +76,7 @@ Azure 리소스 그룹은 Azure 리소스가 배포되고 관리되는 논리 �
    az account list-locations -o table
    ```
 
-1. **az group create** 명령을 사용하여 리소스 그룹을 만듭니다. 다음 예제에서는 `westus2` 위치에 `sqlbdcgroup`이라는 리소스 그룹을 만듭니다.
+1. **az group create** 명령을 사용하여 리소스 그룹을 만듭니다. 다음 예제에서는 `sqlbdcgroup` 위치에 `westus2`이라는 리소스 그룹을 만듭니다.
 
    ```azurecli
    az group create --name sqlbdcgroup --location westus2
@@ -110,7 +110,7 @@ Azure 리소스 그룹은 Azure 리소스가 배포되고 관리되는 논리 �
 
 ## <a name="create-a-kubernetes-cluster"></a>Kubernetes 클러스터 만들기
 
-1. [az aks create](https://docs.microsoft.com/cli/azure/aks) 명령을 사용하여 AKS에서 Kubernetes 클러스터를 만듭니다. 다음 예제에서는 크기가 **Standard_L8s**인 Linux 에이전트 노드 1개를 사용하여 *kubcluster*라는 Kubernetes 클러스터를 만듭니다.
+1. [az aks create](https://docs.microsoft.com/cli/azure/aks) 명령을 사용하여 AKS에서 Kubernetes 클러스터를 만듭니다. 다음 예제에서는 크기가 *Standard_L8s*인 Linux 에이전트 노드 1개를 사용하여 **kubcluster**라는 Kubernetes 클러스터를 만듭니다.
 
    스크립트를 실행하기 전에 `<version number>`를 이전 단계에서 확인한 버전 번호로 바꿉니다.
 
@@ -161,7 +161,7 @@ Azure 리소스 그룹은 Azure 리소스가 배포되고 관리되는 논리 �
    kubectl get nodes
    ```
 
-## <a id="troubleshoot"></a> 문제 해결
+## <a name="troubleshooting"></a><a id="troubleshoot"></a> 문제 해결
 
 위 명령을 사용하여 Azure Kubernetes Service를 만드는 데 문제가 있는 경우 다음 해결 방법을 사용해 보세요.
 

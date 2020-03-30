@@ -11,10 +11,10 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97224f53bb716abe3b79dd00df12d0eed4a63cec
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027840"
 ---
 # <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>JDBC 드라이버에 대한 준비된 명령문 메타데이터 캐싱
@@ -39,12 +39,12 @@ ms.locfileid: "69027840"
  
 |새 메서드|Description|  
 |-----------|-----------------|  
-|int getDiscardedServerPreparedStatementCount()|현재 해결되지 않은 준비 문의 준비 취소 작업 수를 반환합니다.|
+|int getDiscardedServerPreparedStatementCount()|현재 해결되지 않은 준비된 문의 준비 취소 작업 수를 반환합니다.|
 |void closeUnreferencedPreparedStatementHandles()|해결되지 않아 삭제된 준비 문에 대해 준비 취소 요청을 강제로 실행합니다.|
 |boolean getEnablePrepareOnFirstPreparedStatementCall()|특정 연결 인스턴스에 대한 동작을 반환합니다. false일 경우에는 첫 번째 실행에서 sp_executesql이 호출되고 문은 준비되지 않습니다. 두 번째 실행이 발생하면 sp_prepexec가 호출되고 준비된 문 핸들이 실제로 설정됩니다. 다음 실행은 sp_execute를 호출합니다. 이렇게 하면 문이 한 번만 실행될 때 준비된 문 닫기에서 sp_unprepare를 사용할 필요가 없습니다. 이 옵션의 기본값은 setDefaultEnablePrepareOnFirstPreparedStatementCall() 호출로 변경할 수 있습니다.|
-|void setEnablePrepareOnFirstPreparedStatementCall(boolean value)|특정 연결 인스턴스에 대한 동작을 지정합니다. 값이 false일 경우에는 첫 번째 실행에서 sp_executesql이 호출되고 문은 준비되지 않습니다. 두 번째 실행이 발생하면 sp_prepexec가 호출되고 준비된 문 핸들이 실제로 설정됩니다. 다음 실행은 sp_execute를 호출합니다. 이렇게 하면 문이 한 번만 실행될 때 준비된 문 닫기에서 sp_unprepare를 사용할 필요가 없습니다.|
+|void setEnablePrepareOnFirstPreparedStatementCall(boolean value)|특정 연결 인스턴스에 동작을 지정합니다. 값이 false일 경우에는 첫 번째 실행에서 sp_executesql이 호출되고 문은 준비되지 않습니다. 두 번째 실행이 발생하면 sp_prepexec가 호출되고 준비된 문 핸들이 실제로 설정됩니다. 다음 실행은 sp_execute를 호출합니다. 이렇게 하면 문이 한 번만 실행될 때 준비된 문 닫기에서 sp_unprepare를 사용할 필요가 없습니다.|
 |int getServerPreparedStatementDiscardThreshold()|특정 연결 인스턴스에 대한 동작을 반환합니다. 이 설정은 서버의 미처리 핸들을 정리하기 위한 호출 실행 전에 연결별로 처리되지 않을 수 있는 미처리 준비 문 삭제 작업(sp_unprepare)의 수를 제어합니다. 설정이 <= 1로 되어 있다면 준비된 문이 종료되자마자 준비 취소 작업이 곧바로 실행됩니다. 설정이 {@literal >} 1로 되어 있다면 이러한 호출은 sp_unprepare 호출이 너무 잦아지는 오버헤드를 방지하기 위해 모두 함께 일괄 처리됩니다. 이 옵션의 기본값은 getDefaultServerPreparedStatementDiscardThreshold() 호출로 변경할 수 있습니다.|
-|void setServerPreparedStatementDiscardThreshold(int value)|특정 연결 인스턴스에 대한 동작을 지정합니다. 이 설정은 서버의 미처리 핸들을 정리하기 위한 호출 실행 전에 연결별로 처리되지 않을 수 있는 미처리 준비 문 삭제 작업(sp_unprepare)의 수를 제어합니다. 설정이 <= 1로 되어 있다면 준비된 문이 종료되자마자 준비 취소 작업이 곧바로 실행됩니다. 설정이 > 1로 되어 있다면 이러한 호출은 sp_unprepare 호출이 너무 잦아지는 오버헤드를 방지하기 위해 모두 함께 일괄 처리됩니다.|
+|void setServerPreparedStatementDiscardThreshold(int value)|특정 연결 인스턴스에 동작을 지정합니다. 이 설정은 서버의 미처리 핸들을 정리하기 위한 호출 실행 전에 연결별로 처리되지 않을 수 있는 미처리 준비 문 삭제 작업(sp_unprepare)의 수를 제어합니다. 설정이 <= 1로 되어 있다면 준비된 문이 종료되자마자 준비 취소 작업이 곧바로 실행됩니다. 설정이 > 1로 되어 있다면 이러한 호출은 sp_unprepare 호출이 너무 잦아지는 오버헤드를 방지하기 위해 모두 함께 일괄 처리됩니다.|
 
  **SQLServerDataSource**
  
@@ -75,7 +75,7 @@ SQL Server용 Microsoft JDBC 드라이버는 버전 6.3.0(미리 보기)부터 �
 |boolean getDisableStatementPooling()|문 풀링이 사용 해제된 경우 true를 반환합니다.|
 |void setStatementPoolingCacheSize(int value)|이 연결에 대해 준비된 문 캐시의 크기를 지정합니다. 값이 1 미만이면 캐시가 없음을 뜻합니다.|
 |int getStatementPoolingCacheSize()|이 연결에 대해 준비된 문 캐시의 크기를 반환합니다. 값이 1 미만이면 캐시가 없음을 뜻합니다.|
-|int getStatementHandleCacheEntryCount()|현재 풀링된 준비 문 핸들의 수를 반환합니다.|
+|int getStatementHandleCacheEntryCount()|풀링된 준비된 문 핸들의 현재 수를 반환합니다.|
 |boolean isPreparedStatementCachingEnabled()|이 연결에 대한 문 풀링의 사용 설정 여부를 표시합니다.|
 
  **SQLServerDataSource**

@@ -9,10 +9,10 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63295891"
 ---
 # <a name="tutorial-introducing-expressions"></a>자습서: 식 소개
@@ -31,7 +31,7 @@ ms.locfileid: "63295891"
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
   
-## <a name="Setup"></a>1. 테이블 또는 행렬 마법사에서 테이블 보고서 및 데이터 세트 만들기  
+## <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Setup"></a>1. 테이블 또는 행렬 마법사에서 테이블 보고서 및 데이터 세트 만들기  
 이 섹션에서는 테이블 보고서, 데이터 원본 및 데이터 세트를 만듭니다. 테이블의 레이아웃을 지정할 때는 몇몇 필드만 포함하고, 마법사를 완료한 후 열을 수동으로 추가합니다. 마법사를 사용하면 손쉽게 테이블의 레이아웃을 지정할 수 있습니다.  
   
 > [!NOTE]  
@@ -122,7 +122,7 @@ ms.locfileid: "63295891"
   
 17. **Finish**를 클릭합니다.  
   
-## <a name="UpdateNames"></a>2. 데이터 원본 및 데이터 세트의 기본 이름 업데이트  
+## <a name="2-update-default-names-of-the-data-source-and-dataset"></a><a name="UpdateNames"></a>2. 데이터 원본 및 데이터 세트의 기본 이름 업데이트  
   
 ### <a name="to-update-the-default-name-of-the-data-source"></a>데이터 원본의 기본 이름을 업데이트하려면  
   
@@ -146,7 +146,7 @@ ms.locfileid: "63295891"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Concatenate"></a>3. 이름 및 성 표시  
+## <a name="3-display-first-initial-and-last-name"></a><a name="Concatenate"></a>3. 이름 및 성 표시  
 이 섹션에서는 이름과 성을 포함하는 이름으로 계산되는 식에서 **Left** 함수와 **Concatenate** ( **&** ) 연산자를 사용합니다. 단계별로 식을 작성하거나 절차에서 단계를 건너뛰고 자습서의 식을 복사하여 **식** 대화 상자에 붙여넣을 수 있습니다.   
   
 1.  **StateProvince** 열을 마우스 오른쪽 단추로 클릭하고 **열 삽입**을 가리킨 다음 **왼쪽**을 클릭합니다.  
@@ -191,7 +191,7 @@ ms.locfileid: "63295891"
   
 12. **실행** 을 클릭하여 보고서를 미리 봅니다.  
 
-## <a name="DateFormat"></a>(선택 사항) 날짜 및 통화 열과 머리글 행 서식 지정  
+## <a name="optional-format-the-date-and-currency-columns-and-header-row"></a><a name="DateFormat"></a>(선택 사항) 날짜 및 통화 열과 머리글 행 서식 지정  
 이 섹션에서는 날짜가 포함된 **Last Purchase** 열과 통화가 포함된 YTDPurchase 열의 서식을 지정합니다. 머리글 행의 서식도 지정합니다.  
   
 ### <a name="to-format-the-date-column"></a>날짜 열의 서식을 지정하려면  
@@ -227,7 +227,7 @@ ms.locfileid: "63295891"
 ![보고서-작성기-식-자습서-서식 지정-미리 보기](../reporting-services/media/report-builder-expression-tutorial-preview-formatted.png)
 
   
-## <a name="Gender"></a>4. 색을 사용하여 성별 표시  
+## <a name="4-use-color-to-display-gender"></a><a name="Gender"></a>4. 색을 사용하여 성별 표시  
 이 섹션에서는 색을 추가하여 사람의 성별을 표시합니다. 새 열을 추가하여 색을 표시한 다음 Gender 필드의 값에 따라 열에 나타나는 색을 결정합니다.  
   
 보고서를 줄무늬 보고서로 만들 때 해당 테이블 셀에 적용한 색을 유지하려면 사각형을 추가한 다음 사각형에 배경색을 추가합니다.  
@@ -309,7 +309,7 @@ ms.locfileid: "63295891"
 
     ![보고서-작성기-식-자습서-서식 지정-m-f-열-미리 보기](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
   
-## <a name="Lookup"></a>5. CountryRegion 이름 조회  
+## <a name="5-look-up-the-countryregion-name"></a><a name="Lookup"></a>5. CountryRegion 이름 조회  
 이 섹션에서는 CountryRegion 데이터 세트를 만들고 **Lookup** 함수를 사용하여 국가/지역의 식별자 대신 국가/지역의 이름을 표시합니다.  
   
 ### <a name="to-create-the-countryregion-dataset"></a>CountryRegion 데이터 세트를 만들려면  
@@ -379,7 +379,7 @@ ms.locfileid: "63295891"
   
 11. **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
-## <a name="Count"></a>6. 마지막 구입 이후 일수 계산  
+## <a name="6-count-days-since-last-purchase"></a><a name="Count"></a>6. 마지막 구입 이후 일수 계산  
 이 섹션에서는 열을 추가한 다음 **Now** 함수 또는 `ExecutionTime` 기본 제공 전역 변수를 사용하여 고객의 마지막 구매 이후 오늘까지의 일수를 계산합니다.  
   
 ### <a name="to-add-the-days-ago-column"></a>Days Ago 열을 추가하려면  
@@ -419,7 +419,7 @@ ms.locfileid: "63295891"
 
 11. **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
-## <a name="Indicator"></a>7. 표시기를 사용하여 판매량 비교 표시  
+## <a name="7-use-an-indicator-to-show-sales-comparison"></a><a name="Indicator"></a>7. 표시기를 사용하여 판매량 비교 표시  
 이 섹션에서는 새 열을 추가하고 표시기를 사용하여 사용자의 구매량 YTD(연간 누계)가 평균 구매량 YTD보다 크거나 작은지를 표시합니다. **Round** 함수는 값에서 소수를 제거합니다.  
   
 표시기와 해당 상태를 구성하려면 여러 단계를 수행해야 합니다. 원하는 경우 "표시기를 구성하려면" 절차에서 단계를 건너뛰고 이 자습서의 완성된 식을 복사하여 **식** 대화 상자에 붙여넣을 수 있습니다.  
@@ -514,7 +514,7 @@ ms.locfileid: "63295891"
 
     ![보고서-작성기-식-자습서-표시기-미리 보기](../reporting-services/media/report-builder-expression-tutorial-preview-indicator.png)
   
-## <a name="GreenBar"></a>8. 줄무늬 보고서 만들기  
+## <a name="8-make-a-banded-report"></a><a name="GreenBar"></a>8. 줄무늬 보고서 만들기  
 보고서 구독자가 보고서의 번갈아 표시되는 행에 적용할 색을 지정하여 줄무늬 보고서를 만들 수 있도록 매개 변수를 만듭니다.  
   
 ### <a name="to-add-a-parameter"></a>매개 변수를 추가하려면  
@@ -611,7 +611,7 @@ ms.locfileid: "63295891"
     
     ![보고서-작성기-식-자습서-줄무늬-미리 보기](../reporting-services/media/report-builder-expression-tutorial-preview-banded.png) 
   
-## <a name="Title"></a>(선택 사항) 보고서 제목 추가  
+## <a name="optional-add-a-report-title"></a><a name="Title"></a>(선택 사항) 보고서 제목 추가  
 보고서에 제목을 추가합니다.  
   
 ### <a name="to-add-a-report-title"></a>보고서 제목을 추가하려면  
@@ -630,7 +630,7 @@ ms.locfileid: "63295891"
   
 3.  보고서에 사용할 흰색이 아닌 줄무늬의 색을 선택한 다음 **보고서 보기**를 클릭합니다.  
   
-## <a name="Save"></a>(선택 사항) 보고서 저장  
+## <a name="optional-save-the-report"></a><a name="Save"></a>(선택 사항) 보고서 저장  
 보고서를 보고서 서버, SharePoint 라이브러리 또는 컴퓨터에 저장할 수 있습니다. 자세한 내용은 [보고서 저장&#40;보고서 작성기&#41;](../reporting-services/report-builder/saving-reports-report-builder.md)을 참조하세요.  
   
 이 자습서에서는 보고서를 보고서 서버에 저장합니다. 보고서 서버에 액세스할 수 없는 경우에는 보고서를 컴퓨터에 저장하십시오.  

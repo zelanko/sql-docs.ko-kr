@@ -9,10 +9,10 @@ ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fc38e22d7265384e8f16df56ffcab63018ecd4e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080533"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>식의 데이터 형식(보고서 작성기 및 SSRS)
@@ -28,12 +28,12 @@ ms.locfileid: "77080533"
   
 |RDL 형식|CLR 형식|  
 |--------------|---------------|  
-|String|Default: String<br /><br /> Chart, GUID, Timespan|  
-|부울|Default: 부울|  
-|정수|Default: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|DateTime|Default: DateTime<br /><br /> DateTimeOffset|  
-|Float|Default: Double<br /><br /> Single, Decimal|  
-|이진|Default: Byte[]|  
+|String|기본값: 문자열<br /><br /> Chart, GUID, Timespan|  
+|부울|기본값: 부울|  
+|정수|기본값: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
+|DateTime|기본값: 날짜/시간<br /><br /> DateTimeOffset|  
+|Float|기본값: Double<br /><br /> Single, Decimal|  
+|이진|기본값: Byte[]|  
 |Variant|Byte[]를 제외한 위의 모든 항목|  
 |VariantArray|Variant의 배열|  
 |직렬화 가능|Serializable로 표시되어 있거나 ISerializable을 구현하는 형식 또는 Variant|  
@@ -93,7 +93,7 @@ ms.locfileid: "77080533"
  데이터 원본의 모든 데이터 형식에 대한 변환을 지원하지 않는 데이터 공급자를 사용하여 데이터 원본에 연결하는 경우 지원되지 않는 데이터 원본 형식의 기본 데이터 형식은 String이 됩니다. 다음 예제에서는 문자열로 반환되는 특정 데이터 형식에 대한 솔루션을 제공합니다.  
   
 ### <a name="concatenating-a-string-and-a-clr-datetimeoffset-data-type"></a>String 및 CLR DateTimeOffset 데이터 형식 연결  
- 대부분의 데이터 형식에 대해 CLR에서는 사용자가 & 연산자를 사용하여 데이터 형식이 각기 다른 값을 하나의 문자열로 연결할 수 있도록 기본 변환을 제공합니다. 예를 들어 `="The date and time are: " & Fields!StartDate.Value` 식은 "The date and time are: "라는 텍스트와 <xref:System.DateTime> 값인 데이터 세트 필드 StartDate를 연결합니다.  
+ 대부분의 데이터 형식에 대해 CLR에서는 사용자가 & 연산자를 사용하여 데이터 형식이 각기 다른 값을 하나의 문자열로 연결할 수 있도록 기본 변환을 제공합니다. 예를 들어 <xref:System.DateTime> 식은 "The date and time are: "라는 텍스트와 `="The date and time are: " & Fields!StartDate.Value` 값인 데이터 세트 필드 StartDate를 연결합니다.  
   
  일부 데이터 형식의 경우에는 ToString 함수를 포함해야 할 수 있습니다. 예를 들어 <xref:System.DateTimeOffset>System.DateTimeOffset `="The time is: " & Fields!StartDate.Value.ToString()`을 참조하세요.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "77080533"
   
     -   다음 식은 문자열을 날짜 및 시간 값으로 변환합니다. `=DateTime.Parse(Fields!MyDateTime.Value)`  
   
-         `MyDateTime.Value` 문자열에 UTC 오프셋이 있는 경우 `DateTime.Parse` 함수는 먼저 UTC 오프셋(오전 7시: UTC 시간인 전날 밤 오후 11시 + [`+08:00`])에 맞게 조정합니다. 그런 다음 `DateTime.Parse` 함수는 로컬 보고서 서버의 UTC 오프셋을 적용하고, 필요한 경우 일광 절약 시간제에 맞게 시간을 다시 조정합니다. 예를 들어 워싱턴의 레드몬드에서 일광 절약 시간제에 맞게 조정된 현지 시간 오프셋은 `[-07:00]`이거나 오후 11시로부터 7시간 전입니다. 결과 **DateTime** 값은 `2007-07-06 04:07:07 PM`(2007년 7월 6일 오후 4:07)입니다.  
+         `MyDateTime.Value` 문자열에 UTC 오프셋이 있는 경우 `DateTime.Parse` 함수는 먼저 UTC 오프셋(오전 7시: UTC 시간인 전날 밤 오후 11시 + [`+08:00`])에 맞게 조정합니다. 그런 다음 `DateTime.Parse` 함수는 로컬 보고서 서버의 UTC 오프셋을 적용하고, 필요한 경우 일광 절약 시간제에 맞게 시간을 다시 조정합니다. 예를 들어 워싱턴의 레드몬드에서 일광 절약 시간제에 맞게 조정된 현지 시간 오프셋은 `[-07:00]`이거나 오후 11시로부터 7시간 전입니다. 결과 **DateTime** 값은 `2007-07-06 04:07:07 PM` (2007년 7월 6일 오후 4:07)입니다.  
   
  문자열을 **DateTime** 데이터 형식으로 변환하는 방법은 MSDN의 [날짜 및 시간 문자열 구문 분석](https://go.microsoft.com/fwlink/?LinkId=89703), [특정 Culture의 날짜 및 시간 형식 지정](https://go.microsoft.com/fwlink/?LinkId=89704)및 [Choosing Between DateTime, DateTimeOffset및 TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) 을 참조하세요.  
   

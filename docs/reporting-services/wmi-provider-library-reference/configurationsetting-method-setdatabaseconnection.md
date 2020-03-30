@@ -16,10 +16,10 @@ ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af40d79d876edb8f0448bd5abaef5c173a6edce9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65572595"
 ---
 # <a name="configurationsetting-method---setdatabaseconnection"></a>ConfigurationSetting 메서드 - SetDatabaseConnection
@@ -78,7 +78,7 @@ public void BackupEncryptionKey(string Server,
   
  SetDatabaseConnection 메서드는 보고서 서버에서 지정된 데이터를 사용하여 보고서 서버 데이터베이스에 연결할 수 있는지 확인하지 않습니다.  
   
- 처음 설정하는 경우 ConnectionPoolSize 속성은 다음 프로세서를 기반으로 설정됩니다. ConnectionPoolSize = #Processors * 75.  
+ 처음 설정하는 경우 ConnectionPoolSize 속성은 ConnectionPoolSize = #Processors * 75 프로세서를 기반으로 설정됩니다.  
   
  SetDatabaseConnection 메서드는 지정된 계정에 권한을 부여하지 않습니다. 보고서 서버 데이터베이스에 액세스하고 결과 스크립트를 실행해야 하는 각 계정에 대해 [GenerateDatabaseRightsScript](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md) 메서드를 호출해야 합니다.  
   

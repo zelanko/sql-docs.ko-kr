@@ -16,10 +16,10 @@ ms.assetid: 7fe25d90-693c-4d3b-9dd2-0f8351c5a9ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 33d21e8bfe8a774d8b5b21584ba9fd3f02246f4e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977678"
 ---
 # <a name="iscurrency-method-sqlserverresultsetmetadata"></a>isCurrency 메서드(SQLServerResultSetMetaData)
@@ -48,7 +48,7 @@ public boolean isCurrency(int column)
 ## <a name="remarks"></a>설명  
  이 isCurrency 메서드는 java.sql.ResultSetMetaData 인터페이스의 isCurrency 메서드에 의해 지정됩니다.  
   
- 이 메서드는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] money 및 smallmoney 데이터 형식에 대해서만 **true**를 반환합니다.  
+ 이 메서드는 **money 및 smallmoney 데이터 형식에 대해서만**true[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerResultSetMetaData 메서드](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

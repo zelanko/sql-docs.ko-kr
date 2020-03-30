@@ -9,10 +9,10 @@ ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b727fcffec668fbe854222eeabab6263b82e81cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081988"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>보고서를 스크롤할 때 머리글 계속 표시(보고서 작성기 및 SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "77081988"
   
  행과 열을 제어하는 방법은 테이블 또는 행렬이 있는지 여부에 따라 다릅니다. 테이블이 있는 경우 정적 멤버(행 및 열 머리글)가 계속 표시되도록 구성합니다. 행렬이 있는 경우 행 및 열 그룹 머리글이 계속 표시되도록 구성합니다.  
   
- Excel로 보고서를 내보내는 경우 머리글이 자동으로 고정되지 않습니다. Excel에서 창을 고정할 수 있습니다. 자세한 내용은 [Microsoft Excel로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)의 **페이지 머리글 및 바닥글** 섹션을 참조하세요.  
+ Excel로 보고서를 내보내는 경우 머리글이 자동으로 고정되지 않습니다. Excel에서 창을 고정할 수 있습니다. 자세한 내용은 **Microsoft Excel로 내보내기&#40;보고서 작성기 및 SSRS&#41;** 의 [페이지 머리글 및 바닥글](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md) 섹션을 참조하세요.  
   
 > [!NOTE]  
 >  테이블에 행 및 열 그룹이 있는 경우에도 스크롤하는 동안 이러한 그룹 머리글이 계속 표시되도록 할 수 없습니다.  

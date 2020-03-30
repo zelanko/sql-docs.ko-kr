@@ -26,10 +26,10 @@ ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: acd4bd2641296301449138322e0b4d4e15f7ffb4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080654"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>지도 또는 지도 계층 추가, 변경 또는 삭제(보고서 작성기 및 SSRS)
@@ -59,23 +59,23 @@ ms.locfileid: "77080654"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="AddLayer"></a> 지도 계층 마법사에서 계층을 추가하려면  
+##  <a name="to-add-a-layer-from-the-map-layer-wizard"></a><a name="AddLayer"></a> 지도 계층 마법사에서 계층을 추가하려면  
   
 -   리본의 **삽입** 메뉴에서 **지도**를 클릭한 다음 **지도 Wizard.** 를 클릭합니다. 이 마법사를 사용하여 기존 지도에 계층을 추가할 수 있습니다. 지도 마법사와 지도 계층 마법사의 마법사 페이지는 대부분 동일합니다.  
   
      자세한 내용은 [지도 마법사 및 지도 계층 마법사&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)를 참조하세요.  
   
-##  <a name="ChangeLayer"></a> 지도 계층 마법사를 사용하여 계층의 옵션을 변경하려면  
+##  <a name="to-change-options-for-a-layer-by-using-the-map-layer-wizard"></a><a name="ChangeLayer"></a> 지도 계층 마법사를 사용하여 계층의 옵션을 변경하려면  
   
 -   지도 계층 마법사를 실행합니다. 이 마법사를 통해 지도 계층 마법사를 사용하여 만든 계층의 옵션을 변경할 수 있습니다. 지도 창에서 계층을 마우스 오른쪽 단추로 클릭한 다음에 도구 모음에서 계층 마법사 단추(![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))를 클릭합니다.  
   
      자세한 내용은 [지도 마법사 및 지도 계층 마법사&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)를 참조하세요.  
   
-##  <a name="AddVectorLayer"></a> 지도 창 도구 모음에서 점, 선 또는 다각형 계층을 추가하려면  
+##  <a name="to-add-a-point-line-or-polygon-layer-from-the-map-pane-toolbar"></a><a name="AddVectorLayer"></a> 지도 창 도구 모음에서 점, 선 또는 다각형 계층을 추가하려면  
   
 1.  지도 창이 나타날 때까지 지도를 클릭합니다.  
   
-2.  도구 모음에서 **계층 추가** 단추를 클릭하고 드롭다운 목록의 **점**, **선** 또는 **다각형** 중에서 추가할 계층의 유형을 클릭합니다.  
+2.  도구 모음에서 **계층 추가** 단추를 클릭하고 드롭다운 목록의 **점**, **선**또는 **다각형**중에서 추가할 계층의 유형을 클릭합니다.  
   
     > [!NOTE]  
     >  지도 계층을 추가하고 수동으로 구성할 수 있지만 지도 계층 마법사를 사용하여 새 계층을 추가하는 것이 좋습니다. 지도 창 도구 모음에서 마법사를 실행하려면 계층 마법사 단추(![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))를 클릭합니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "77080654"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="FilterAnalyticalData"></a> 계층에 대한 분석 데이터를 필터링하려면  
+##  <a name="to-filter-analytical-data-for-the-layer"></a><a name="FilterAnalyticalData"></a> 계층에 대한 분석 데이터를 필터링하려면  
   
 1.  지도 창이 나타날 때까지 지도를 클릭합니다.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "77080654"
   
 4.  지도 표시에 사용되는 분석 데이터를 제한할 필터 수식을 정의합니다. 자세한 내용은 [필터 수식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)를 참조하세요.  
   
-##  <a name="PointProperties"></a> 점 계층 또는 다각형 중심점에 대한 점 속성을 제어하려면  
+##  <a name="to-control-point-properties-for-a-point-layer-or-for-polygon-center-points"></a><a name="PointProperties"></a> 점 계층 또는 다각형 중심점에 대한 점 속성을 제어하려면  
   
 1.  **지도 점 속성** 대화 상자에서 **일반** 을 선택하여 다음 지도 요소의 레이블, 도구 설명 및 표식 유형 옵션을 변경할 수 있습니다.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "77080654"
   
     -   다각형 계층의 모든 동적 또는 포함된 다각형에 대한 중심점. 중심점의 색 규칙, 크기 규칙 및 표식 유형 규칙은 이러한 옵션을 무시합니다. 특정 중심점에 대한 옵션을 무시하려면 [지도 포함 점 속성 대화 상자, 표식](https://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) 페이지를 사용합니다.  
   
-##  <a name="Embedded"></a> 포함된 데이터를 공간 데이터의 원본으로 지정하려면  
+##  <a name="to-specify-embedded-data-as-a-source-of-spatial-data"></a><a name="Embedded"></a> 포함된 데이터를 공간 데이터의 원본으로 지정하려면  
   
 1.  지도 창이 나타날 때까지 지도를 클릭합니다.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "77080654"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ESRI"></a> ESRI 셰이프 파일을 공간 데이터의 원본으로 지정하려면  
+##  <a name="to-specify-an-esri-shapefile-as-a-source-of-spatial-data"></a><a name="ESRI"></a> ESRI 셰이프 파일을 공간 데이터의 원본으로 지정하려면  
   
 1.  지도 창이 나타날 때까지 지도를 클릭합니다.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "77080654"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="DatasetField"></a> 보고서 데이터 세트 필드를 공간 데이터의 원본으로 지정하려면  
+##  <a name="to-specify-a-report-dataset-field-as-a-source-of-spatial-data"></a><a name="DatasetField"></a> 보고서 데이터 세트 필드를 공간 데이터의 원본으로 지정하려면  
   
 1.  지도 창이 나타날 때까지 지도를 클릭합니다.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "77080654"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TileLayer"></a> 타일 계층을 추가하려면  
+##  <a name="to-add-a-tile-layer"></a><a name="TileLayer"></a> 타일 계층을 추가하려면  
   
 1.  지도 창이 나타날 때까지 지도를 클릭합니다.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "77080654"
     > [!NOTE]  
     >  지도 또는 지도 계층 마법사에서 다각형, 선 또는 점 계층을 추가할 때 타일 계층도 추가할 수 있습니다. **공간 데이터 및 지도 보기 옵션 선택** 페이지에서 **이 지도 보기에 대해 Bing Maps 배경 추가**옵션을 선택합니다.  
   
-##  <a name="DrawingOrder"></a> 계층의 그리기 순서를 변경하려면  
+##  <a name="to-change-the-drawing-order-of-a-layer"></a><a name="DrawingOrder"></a> 계층의 그리기 순서를 변경하려면  
   
 1.  지도 창이 나타날 때까지 지도를 클릭합니다.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "77080654"
   
 3.  지도 창 도구 모음에서 위로 또는 아래로 화살표를 클릭하여 각 계층의 그리기 순서를 변경합니다.  
   
-##  <a name="Transparency"></a> 다각형, 선 또는 점 계층의 투명도를 변경하려면  
+##  <a name="to-change-the-transparency-of-a-polygon-line-or-point-layer"></a><a name="Transparency"></a> 다각형, 선 또는 점 계층의 투명도를 변경하려면  
   
 1.  지도 창이 나타날 때까지 지도를 클릭합니다.  
   
@@ -200,7 +200,7 @@ ms.locfileid: "77080654"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TileTransparency"></a> 타일 계층의 투명도를 변경하려면  
+##  <a name="to-change-the-transparency-of-a-tile-layer"></a><a name="TileTransparency"></a> 타일 계층의 투명도를 변경하려면  
   
 1.  지도 창이 나타날 때까지 지도를 클릭합니다.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "77080654"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="Secure"></a> 타일 계층에 대한 보안 연결을 지정하려면  
+##  <a name="to-specify-a-secure-connection-for-a-tile-layer"></a><a name="Secure"></a> 타일 계층에 대한 보안 연결을 지정하려면  
   
 1.  지도 창이 나타날 때까지 지도를 클릭합니다.  
   
@@ -222,7 +222,7 @@ ms.locfileid: "77080654"
   
  Bing Maps 웹 서비스의 연결에서는 HTTP SSL(Secure Sockets Layer) 서비스를 사용하여 해당 계층에 대한 Bing Maps 타일을 검색합니다.  
   
-##  <a name="Language"></a> 타일 레이블의 언어를 지정하려면  
+##  <a name="to-specify-the-language-for-tile-labels"></a><a name="Language"></a> 타일 레이블의 언어를 지정하려면  
   
 1.  기본적으로 레이블을 표시하는 타일 스타일의 경우 언어는 보고서 작성기에 대한 기본 로캘에서 결정됩니다. 다음과 같은 방법으로 타일 레이블에 대한 언어 설정을 사용자 지정할 수 있습니다.  
   
@@ -232,7 +232,7 @@ ms.locfileid: "77080654"
   
      타일 레이블 언어 설정의 우선 순위는 보고서 속성 Language, 보고서 작성기에 대한 기본 로캘 및 지도 속성 TileLanguage입니다.  
   
-##  <a name="ConditionalHide"></a> 뷰포트 확대/축소 수준을 기반으로 계층을 조건에 따라 숨기려면  
+##  <a name="to-conditionally-hide-a-layer-based-on-viewport-zoom-level"></a><a name="ConditionalHide"></a> 뷰포트 확대/축소 수준을 기반으로 계층을 조건에 따라 숨기려면  
   
 1.  **표시 유형** 옵션을 설정하여 지도 계층의 표시를 제어할 수 있습니다.  
   
@@ -250,6 +250,6 @@ ms.locfileid: "77080654"
   
 ## <a name="see-also"></a>참고 항목  
  [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [보고서 문제 해결: 맵 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [보고서 문제해결: 지도 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

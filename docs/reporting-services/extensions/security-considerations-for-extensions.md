@@ -13,10 +13,10 @@ ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 73da0b40d845e8e2a692b969a119adb3cfce6ef1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63193370"
 ---
 # <a name="security-considerations-for-extensions"></a>확장 프로그램에 대한 보안 고려 사항

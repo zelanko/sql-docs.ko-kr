@@ -18,10 +18,10 @@ ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cba52dccb916e7dc1400d36b17eb3fd884c9faee
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75230885"
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>SQL Server 장애 조치(Failover) 클러스터에서 노드 추가 또는 제거(설치)
@@ -43,7 +43,7 @@ ms.locfileid: "75230885"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 위치에 대한 운영 체제 드라이브 문자는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 추가된 모든 노드와 일치해야 합니다.  
   
-##  <a name="Add"></a> 노드 추가  
+##  <a name="add-node"></a><a name="Add"></a> 노드 추가  
   
 #### <a name="to-add-a-node-to-an-existing-ssnoversion-failover-cluster"></a>기존 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 노드를 추가하려면  
   
@@ -83,7 +83,7 @@ ms.locfileid: "75230885"
   
 15. 컴퓨터를 다시 시작합니다. 설치가 완료되면 설치 마법사에 표시되는 메시지를 꼭 읽으십시오. 설치 로그 파일에 대한 자세한 내용은 [SQL Server 설치 로그 파일 보기 및 읽기](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)를 참조하세요.  
   
-##  <a name="Remove"></a> 노드 제거  
+##  <a name="remove-node"></a><a name="Remove"></a> 노드 제거  
   
 #### <a name="to-remove-a-node-from-an-existing-ssnoversion-failover-cluster"></a>기존 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에서 노드를 제거하려면  
   

@@ -9,10 +9,10 @@ ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e97dff2a6d08207d95b28ce2f9a0cedafd9b6fff
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581124"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Reporting Services 구성 파일 수정(RSreportserver.config)
@@ -33,7 +33,7 @@ ms.locfileid: "65581124"
   
 -   [Reporting Services 구성 파일을 편집하려면](#bkmk_edit_configuation_file)  
   
-##  <a name="bkmk_read_values"></a> 구성 값 읽기 및 사용  
+##  <a name="reading-and-using-configuration-values"></a><a name="bkmk_read_values"></a> 구성 값 읽기 및 사용  
  보고서 서버는 서비스가 시작될 때 및 구성 파일이 저장될 때마다 구성 파일을 읽습니다. 새 값 및 수정된 값은 현재 애플리케이션 도메인이 만료된 후 새 애플리케이션 도메인에 적용됩니다. 가능하면 현재 애플리케이션 도메인에서 아직 처리 중인 요청이 완료되도록 허용됩니다. 그러나 일부 설정의 경우 애플리케이션 도메인 재활용 작업을 바로 수행해야 합니다. 이 경우 처리 중인 모든 요청이 새 애플리케이션 도메인에서 다시 시작됩니다.  
   
  잘못된 값이 감지되면 보고서 서버는 Windows 애플리케이션 로그에 오류를 기록하고 오류에 따라 시작되지 못하거나 기본값을 사용합니다.  
@@ -44,13 +44,13 @@ ms.locfileid: "65581124"
   
  성공적으로 적용된 변경 내용을 비롯하여 모든 구성 파일 변경 내용은 보고서 서버 추적 로그 파일에 기록됩니다. 오류만 애플리케이션 이벤트 로그에 기록됩니다.  
   
-##  <a name="bkmk_default_values"></a> 기본값 정보  
+##  <a name="about-default-values"></a><a name="bkmk_default_values"></a> 기본값 정보  
  대부분의 구성 설정에는 보고서 서버에서 내부적으로 지정된 기본값이 있습니다. 사용자 정의 값이 올바르지 않거나 지정되지 않은 경우 보고서 서버는 이러한 값을 사용합니다. 잘못된 구성 설정으로 인해 기본값을 사용해야 하는 경우 추적 로그 파일에 오류가 기록됩니다.  
   
-##  <a name="bkmk_delete_config_settings"></a> 구성 설정 삭제  
+##  <a name="deleting-configuration-settings"></a><a name="bkmk_delete_config_settings"></a> 구성 설정 삭제  
  기본값이 지정된 구성 설정의 경우 구성 파일에서 해당 설정을 제거해도 아무런 영향이 없습니다. 실제로 대부분의 구성 설정은 내부적으로 정의되고 구성됩니다. 구성 파일에서 항목을 삭제해도 내부 복사본은 계속 사용할 수 있으며 해당 항목에 대해 정의된 기본값이 사용됩니다.  
   
-##  <a name="bkmk_edit_configuation_file"></a> Reporting Services 구성 파일을 편집하려면  
+##  <a name="to-edit-a-reporting-services-configuration-file"></a><a name="bkmk_edit_configuation_file"></a> Reporting Services 구성 파일을 편집하려면  
   
 1.  편집할 구성 파일을 찾습니다.  
   

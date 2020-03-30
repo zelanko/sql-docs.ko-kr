@@ -16,10 +16,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: c0f168ee99ebaedebf2102363694b5ae6b33687f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67989345"
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버로 애플리케이션 빌드

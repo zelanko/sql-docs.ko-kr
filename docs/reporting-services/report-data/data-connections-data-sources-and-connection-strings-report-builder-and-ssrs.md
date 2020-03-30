@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 73bf9e24ffb42ef93547097c53b5838a22292fda
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190920"
 ---
 # <a name="create-data-connection-strings---report-builder--ssrs"></a>데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS
@@ -20,10 +20,10 @@ ms.locfileid: "74190920"
 
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지가 매겨진 보고서에 데이터를 포함하려면 먼저 *데이터 원본*에 *연결 문자열*을 만들어야 합니다. 이 문서에서는 데이터 연결 문자열을 만드는 방법 및 데이터 원본 자격 증명과 관련된 중요 정보를 설명합니다. 데이터 원본에는 데이터 원본 유형, 연결 정보 및 사용할 자격 증명의 유형이 포함됩니다. 자세한 배경 정보는 [SSRS(SQL Server Reporting Services)의 보고서 데이터 소개](report-data-ssrs.md)를 참조하세요.
   
-##  <a name="bkmk_DataConnections"></a> 기본 제공 데이터 확장  
+##  <a name="built-in-data-extensions"></a><a name="bkmk_DataConnections"></a> 기본 제공 데이터 확장  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 기본 데이터 확장에는 Microsoft SQL Server, Microsoft Azure SQL Database 및 Microsoft SQL Server Analysis Services가 포함됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 지원하는 데이터 원본 및 버전의 전체 목록은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)을 참조하세요.  
   
-##  <a name="bkmk_connection_examples"></a> 자주 사용하는 연결 문자열 예  
+##  <a name="common-connection-string-examples"></a><a name="bkmk_connection_examples"></a> 자주 사용하는 연결 문자열 예  
  연결 문자열은 데이터 공급자에 대한 연결 속성의 텍스트 표현입니다. 다음 표에서는 다양한 데이터 연결 형식에 대한 연결 문자열의 예를 보여 줍니다.  
  
  > [!NOTE]  
@@ -53,10 +53,10 @@ ms.locfileid: "74190920"
   
  각각의 데이터 원본 유형에 연결하는 데 필요한 구성에 대한 자세한 내용은 [외부 데이터 원본의 데이터 추가 &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) 또는 [Reporting Services에서 지원하는 데이터 원본 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)의 해당 데이터 연결 문서를 참조하세요.  
   
-##  <a name="bkmk_special_password_characters"></a> 암호의 특수 문자  
- 암호를 입력하라는 메시지를 표시하거나 연결 문자열에 암호를 포함하도록 ODBC 또는 SQL 데이터 원본을 구성한 경우 사용자가 문장 부호와 같은 특수 문자가 포함된 암호를 입력하면 일부 기본 데이터 원본 드라이버가 해당 특수 문자의 유효성을 검사할 수 없습니다. 보고서 처리 시 "올바른 암호가 아닙니다" 메시지가 나타나면 이 문제 때문일 수 있습니다. 암호를 변경하는 것이 불가능한 경우 데이터베이스 관리자와 협력하여 서버에서 해당 자격 증명을 시스템 ODBC DSN(데이터 원본 이름)의 일부로 저장합니다. 자세한 내용은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 설명서의 [OdbcConnection.ConnectionString](https://docs.microsoft.com/dotnet/api/system.data.odbc.odbcconnection.connectionstring)을 참조하세요.  
+##  <a name="special-characters-in-a-password"></a><a name="bkmk_special_password_characters"></a> 암호의 특수 문자  
+ 암호를 입력하라는 메시지를 표시하거나 연결 문자열에 암호를 포함하도록 ODBC 또는 SQL 데이터 원본을 구성한 경우 사용자가 문장 부호와 같은 특수 문자가 포함된 암호를 입력하면 일부 기본 데이터 원본 드라이버가 해당 특수 문자의 유효성을 검사할 수 없습니다. 보고서 처리 시 "올바른 암호가 아닙니다" 메시지가 나타나면 이 문제 때문일 수 있습니다. 암호를 변경하는 것이 불가능한 경우 데이터베이스 관리자와 협력하여 서버에서 해당 자격 증명을 시스템 ODBC DSN(데이터 원본 이름)의 일부로 저장합니다. 자세한 내용은 [ 설명서의 ](https://docs.microsoft.com/dotnet/api/system.data.odbc.odbcconnection.connectionstring)OdbcConnection.ConnectionString[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]을 참조하세요.  
   
-##  <a name="bkmk_Expressions_in_connection_strings"></a> 식 기반 연결 문자열  
+##  <a name="expression-based-connection-strings"></a><a name="bkmk_Expressions_in_connection_strings"></a> 식 기반 연결 문자열  
  식 기반 연결 문자열은 런타임에 평가됩니다. 예를 들어 데이터 원본을 매개 변수로 지정하고 연결 문자열에 매개 변수 참조를 포함하여 사용자가 보고서의 데이터 원본을 선택할 수 있도록 할 수 있습니다. 예를 들어 여러 국가에 데이터 서버를 보유하고 있는 다국적 기업의 경우 식 기반 연결 문자열을 사용하면 판매 보고서를 실행하는 사용자가 보고서를 실행하기 전에 특정 국가의 데이터 원본을 선택할 수 있습니다.  
   
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 문자열에 데이터 원본 식을 사용하는 작업을 보여 줍니다. 이 예에서는 `ServerName`이라는 보고서 매개 변수를 만들었다고 가정합니다.  

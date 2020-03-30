@@ -11,10 +11,10 @@ ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 67e20d8d0bdcfbb03d0188ac62b4d89bc12b704f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63194214"
 ---
 # <a name="data-processing-extensions-overview"></a>데이터 처리 확장 프로그램 개요
@@ -74,7 +74,7 @@ Reporting Services 데이터 처리 확장 프로그램 아키텍처
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 아키텍처, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 데이터 공급자, ADO.NET DataSet 개체 및 공통 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 인터페이스에 대해 자세히 알고 있어야 합니다.  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET과 같은 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 언어에 대한 개발 경험이 있어야 합니다.  
+-   [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Visual C# 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET과 같은 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 언어에 대한 개발 경험이 있어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services 확장 프로그램](../../../reporting-services/extensions/reporting-services-extensions.md)   

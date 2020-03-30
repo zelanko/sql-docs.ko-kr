@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 1d5d832d41f6bd087c6e9b334ebeac03728f97b1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485288"
 ---
 # <a name="use-revoscaler-to-install-r-packages"></a>RevoScaleR을 사용하여 R 패키지 설치
@@ -48,9 +48,9 @@ ms.locfileid: "74485288"
 
 + 서버와 데이터베이스에 연결하고 R 명령을 실행할 수 있는 권한이 있습니다. 지정된 인스턴스 및 데이터베이스에 패키지를 설치할 수 있도록 하는 데이터베이스 역할의 멤버여야 합니다.
 
-  + 지정된 데이터베이스에서 `rpkgs-shared` 역할에 속하는 사용자가 **공유 범위**의 패키지를 설치할 수 있습니다. 이 역할의 모든 사용자는 공유 패키지를 제거할 수 있습니다.
+  + 지정된 데이터베이스에서 **역할에 속하는 사용자가**공유 범위`rpkgs-shared`의 패키지를 설치할 수 있습니다. 이 역할의 모든 사용자는 공유 패키지를 제거할 수 있습니다.
 
-  + 데이터베이스에서 `rpkgs-private` 역할에 속하는 사용자가 **프라이빗 범위**의 패키지를 설치할 수 있습니다. 그러나 사용자는 자신의 패키지만 확인하고 제거할 수 있습니다.
+  + 데이터베이스에서 **역할에 속하는 사용자가**프라이빗 범위`rpkgs-private`의 패키지를 설치할 수 있습니다. 그러나 사용자는 자신의 패키지만 확인하고 제거할 수 있습니다.
 
   + 데이터베이스 소유자는 공유 또는 프라이빗 패키지를 사용할 수 있습니다.
 
@@ -111,7 +111,7 @@ connStr <- "Driver=SQL Server;Server=myserver.financeweb.contoso.com;Database=Fi
 
 ### <a name="get-package-path-on-a-remote-sql-server-compute-context"></a>원격 SQL Server 컴퓨팅 컨텍스트에 대한 패키지 경로 가져오기
 
-이 예에서는 컴퓨팅 컨텍스트 `sqlcc`에서 **RevoScaleR** 패키지의 경로를 가져옵니다.
+이 예에서는 컴퓨팅 컨텍스트 **에서** RevoScaleR`sqlcc` 패키지의 경로를 가져옵니다.
 
 ```R
 sqlPackagePaths <- rxFindPackage(package = "RevoScaleR", computeContext = sqlcc)
@@ -127,7 +127,7 @@ print(sqlPackagePaths)
 
 ### <a name="get-locations-for-multiple-packages"></a>여러 패키지의 위치 가져오기
 
-다음 예제에서는 컴퓨팅 컨텍스트 `sqlcc`에서 **RevoScaleR** 및 **lattice**패키지의 경로를 가져옵니다. 여러 패키지에 대한 정보를 가져오려면 패키지 이름을 포함하는 문자열 벡터를 전달합니다.
+다음 예제에서는 컴퓨팅 컨텍스트 **에서** RevoScaleR**및**lattice`sqlcc`패키지의 경로를 가져옵니다. 여러 패키지에 대한 정보를 가져오려면 패키지 이름을 포함하는 문자열 벡터를 전달합니다.
 
 ```R
 packagePaths <- rxFindPackage(package = c("RevoScaleR", "lattice"), computeContext = sqlcc)

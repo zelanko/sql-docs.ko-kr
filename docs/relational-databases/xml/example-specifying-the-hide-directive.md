@@ -13,10 +13,10 @@ ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22ee3e41d5792683dd73520bbeacb35fdc91d83e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68006705"
 ---
 # <a name="example-specifying-the-hide-directive"></a>예제: HIDE 지시어 지정

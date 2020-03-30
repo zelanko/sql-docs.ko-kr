@@ -16,10 +16,10 @@ ms.assetid: 13b51f77-cec9-45fc-862e-3d2bb2d718d7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b66a142789e855eaf0e4524554892ea85c7b9cbe
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979068"
 ---
 # <a name="gettime-method-javalangstring-javautilcalendar-sqlserverresultset"></a>getTime 메서드(java.lang.String, java.util.Calendar)(SQLServerResultSet)

@@ -14,10 +14,10 @@ ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d0a096fd9dcb292f1a71b74aaf853abcbd7c02ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082312"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>일반적으로 사용되는 필터(보고서 작성기 및 SSRS)
@@ -46,8 +46,8 @@ ms.locfileid: "77082312"
   
 |매개 변수 형식|(필터) 식|연산자|값|데이터 형식|  
 |--------------------|---------------------------|--------------|-----------|---------------|  
-|단일 값|`[EmployeeID]`|=|`[@EmployeeID]`|정수 |  
-|다중값|`[EmployeeID]`|IN|`[@EmployeeID]`|정수 |  
+|단일 값|`[EmployeeID]`|=|`[@EmployeeID]`|정수|  
+|다중값|`[EmployeeID]`|IN|`[@EmployeeID]`|정수|  
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   

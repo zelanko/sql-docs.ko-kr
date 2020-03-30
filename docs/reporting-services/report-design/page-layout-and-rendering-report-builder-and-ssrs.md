@@ -9,10 +9,10 @@ ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee04e2cef1f4f4681b42ff8ffb4ce549aeae624d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082452"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>페이지 레이아웃 및 렌더링(보고서 작성기 및 SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "77082452"
   
  내보낸 보고서에 대한 최상의 결과를 얻는 것은 일반적으로 반복적인 프로세스입니다. 즉, 보고서 작성기 또는 보고서 디자이너에서 보고서를 작성하고 미리 본 후 원하는 형식으로 보고서를 내보내고 내보낸 보고서를 검토한 다음 보고서를 변경합니다.  
     
-##  <a name="PageLayout"></a> 보고서 항목  
+##  <a name="report-items"></a><a name="PageLayout"></a> 보고서 항목  
  보고서 항목은 서로 다른 유형의 보고서 데이터와 관련된 레이아웃 요소입니다. 
  
 * 테이블, 행렬, 목록, 차트 및 계기는 각각 보고서 데이터 세트에 연결되는 데이터 영역 보고서 항목입니다. 보고서를 처리하면 데이터 영역이 보고서 페이지의 가로 및 아래쪽으로 확장되어 데이터를 표시합니다. 
@@ -44,14 +44,14 @@ ms.locfileid: "77082452"
   
  보고서는 각 페이지에서 반복되는 페이지 머리글 및 페이지 바닥글과 함께 여러 페이지를 확장할 수 있습니다. 보고서는 이미지 및 선과 같은 그래픽 요소를 포함할 수 있으며 식을 기반으로 할 수 있는 여러 글꼴, 색 및 스타일을 포함할 수 있습니다.  
   
-##  <a name="ReportSections"></a> 보고서 섹션  
+##  <a name="report-sections"></a><a name="ReportSections"></a> 보고서 섹션  
  보고서는 3개의 주요 구역인 선택적 *페이지* 머리글, 선택적 *페이지* 바닥글 및 보고서 본문으로 구성됩니다. *보고서* 머리글과 바닥글은 보고서의 개별 구역이 아니지만 오히려 보고서 본문의 맨 위 및 맨 아래에 배치되는 보고서 항목으로 구성됩니다. 보고서 각 페이지의 맨 위와 맨 아래에 배치되는 페이지 머리글과 페이지 바닥글에는 같은 내용이 반복되어 나타납니다. 머리글과 바닥글에 이미지, 입력란 및 선을 배치할 수 있습니다. 보고서 본문에 모든 유형의 보고서 항목을 배치할 수 있습니다.  
   
  보고서 항목의 속성을 설정하여 페이지에서 보고서 항목을 처음에 숨기거나 표시할 수 있습니다. 데이터 영역의 행이나 열 또는 그룹에 표시 유형 속성을 설정할 수 있으며 사용자가 보고서 데이터를 대화형으로 표시 또는 숨길 수 있도록 토글 단추를 제공할 수 있습니다. 보고서 매개 변수를 기반으로 하는 식을 비롯한 식을 사용하여 표시 유형 또는 초기 표시 유형을 설정할 수 있습니다.  
   
  보고서가 처리되면 보고서 데이터가 보고서 레이아웃 요소와 결합되고 결합된 데이터가 보고서 렌더러로 전송됩니다. 렌더러는 보고서 항목 확장에 대한 미리 정의된 규칙을 따르고 각 페이지에 들어가는 데이터의 양을 판단합니다. 사용할 렌더러에 대해 최적화된 쉽게 읽을 수 있는 보고서를 디자인하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 페이지 매김을 제어하는 데 사용되는 규칙을 이해해야 합니다. 자세한 내용은 [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)을 참조하세요.  
   
-##  <a name="RenderingExtensions"></a> 렌더러  
+##  <a name="renderers"></a><a name="RenderingExtensions"></a> 렌더러  
  Reporting Services에는 보고서를 다른 형식으로 내보내는 데 사용할 수 있는 렌더러의 집합이 포함되어 있습니다. 렌더러를 렌더링 확장 프로그램이라고도 합니다. 렌더러에는 세 가지 종류가 있습니다.  
   
 -   **데이터 렌더러** 데이터 렌더러는 보고서에서 서식 및 레이아웃 정보를 모두 제거하고 데이터만 표시합니다. 생성된 파일은 Excel 등의 다른 파일 형식, 다른 데이터베이스, XML 데이터 메시지 또는 사용자 지정 애플리케이션으로 원시 보고서 데이터를 가져오는 데 사용할 수 있습니다. 사용 가능한 데이터 렌더러는 CSV 및 XML입니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "77082452"
   
  보고서 작성기 또는 보고서 디자이너에서 보고서를 미리 보거나 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 보고서를 실행하면 보고서는 항상 먼저 HTML로 렌더링됩니다. 보고서를 실행한 후에는 다른 파일 형식으로 내보낼 수 있습니다. 자세한 내용은 [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)에서 페이지 매김을 제어하는 데 사용되는 규칙을 이해해야 합니다.  
   
-##  <a name="RenderingBehaviors"></a> 렌더링 동작  
+##  <a name="rendering-behaviors"></a><a name="RenderingBehaviors"></a> 렌더링 동작  
  선택한 렌더러에 따라 보고서를 렌더링할 때 특정 규칙이 적용됩니다. 여러 보고서 항목이 한 페이지에 함께 포함되는 방식은 다음과 같은 요소의 조합에 따라 결정됩니다.  
   
 -   렌더링 규칙  
@@ -78,7 +78,7 @@ ms.locfileid: "77082452"
   
  자세한 내용은 [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)을 참조하세요.  
    
-##  <a name="Pagination"></a> 페이지 매김  
+##  <a name="pagination"></a><a name="Pagination"></a> 페이지 매김  
  페이지 매김이란 보고서 내의 페이지 수와 이러한 페이지에 보고서 항목이 정렬되는 방식을 의미합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서의 페이지 매김은 보고서를 보거나 배달하는 데 사용하는 렌더링 확장 프로그램과 보고서에서 사용하도록 구성하는 페이지 나누기 및 한 페이지에 표시 옵션에 따라 다릅니다.  
   
  보고서를 배달하는 데 사용할 렌더러에 최적화되고 사용자가 쉽게 읽을 수 있는 보고서를 성공적으로 디자인하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 페이지 매김을 제어하는 데 사용되는 규칙을 이해할 필요가 있습니다. **데이터** 와 **소프트 페이지** 렌더링 확장 프로그램을 사용하여 내보낸 보고서는 일반적으로 페이지 매김의 영향을 받지 않습니다. 데이터 렌더링 확장 프로그램을 사용하는 경우 보고서가 XML 또는 CSV 형식의 테이블 형식 행 집합으로 렌더링됩니다. 내보낸 보고서 데이터를 사용할 수 있도록 하려면 보고서에서 평면화된 표 형식 행 집합을 렌더링하기 위해 규칙이 적용되는 방식을 이해해야 합니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "77082452"
   
  **하드 페이지** 렌더러는 보고서 레이아웃과 실제 페이지 크기에 가장 큰 영향을 미칩니다. 자세한 내용은 [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)을 참조하세요.  
    
-##  <a name="HowTo"></a> 방법 도움말 항목  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 방법 도움말 항목  
  이 섹션에는 보고서에서 페이지 매김을 사용하여 작업하는 방법을 단계별로 보여 주는 절차가 나열되어 있습니다.  
   
 -   [페이지 나누기 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md)  
@@ -102,7 +102,7 @@ ms.locfileid: "77082452"
   
 -   [첫 페이지 또는 마지막 페이지에서 페이지 머리글 또는 바닥글 숨기기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
   
-##  <a name="InThisSection"></a> 섹션 내용  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> 섹션 내용  
  다음 항목에서는 페이지 레이아웃 및 렌더링에 대한 추가 정보를 제공합니다.  
   
  [페이지 머리글 및 바닥글&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  

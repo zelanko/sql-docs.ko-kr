@@ -10,10 +10,10 @@ reviewer: ''
 ms.custom: ''
 ms.date: 03/17/2017
 ms.openlocfilehash: c6d5ebdcc4866c30b9fda3967304cda747a13a83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081841"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>외부 데이터 원본의 데이터 추가(SSRS)
@@ -21,7 +21,7 @@ ms.locfileid: "77081841"
   
  데이터 원본 유형에 대한 자세한 내용은 [섹션 내용](#InThisSection)을 참조하십시오.  
   
-##  <a name="DataAccess"></a> 데이터 액세스 기술 이해  
+##  <a name="understanding-data-access-technology"></a><a name="DataAccess"></a> 데이터 액세스 기술 이해  
  보고서 데이터 세트의 데이터를 검색하려면 여러 계층의 데이터 액세스 소프트웨어가 필요합니다. 다음 목록에서는 보고서에서 데이터 액세스 기술을 사용하는 방법을 간략하게 설명합니다.  
   
 -   **애플리케이션 및 사용자 인터페이스** 데이터 원본을 만들거나, 공유 데이터 원본에 대한 참조를 추가하거나, 공유 데이터 세트를 추가하거나, 자신이 종속된 데이터 원본과 데이터 세트를 포함하는 보고서 파트를 추가하는 데 사용되는 보고서 작성기 애플리케이션입니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "77081841"
 > [!NOTE]  
 >  보고서 서버에 연결되어 있지 않을 때는 보고서 작성기와 함께 설치되는 데이터 확장 프로그램에서 선택할 수 있습니다. 이 경우 컴퓨터의 자격 증명을 사용하여 단일 사용자로 데이터에 액세스합니다. 보고서 서버에 연결되어 있을 때는 보고서 서버에 설치되는 데이터 확장 프로그램에서 선택할 수 있습니다. 이 경우 보고서를 실행하는 여러 사용자 중 한 명으로 데이터에 액세스하고 보고서 서버의 자격 증명을 사용합니다. 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.  
   
-##  <a name="ReportData"></a> 보고서 데이터 이해  
+##  <a name="understanding-report-data"></a><a name="ReportData"></a> 보고서 데이터 이해  
  가장 단순한 형태의 보고서는 보고서 페이지의 데이터 영역(예: 단일 테이블, 차트, 행렬 등)에 보고서 데이터 세트의 데이터를 표시합니다. 보고서 데이터 세트의 데이터는 외부 데이터 원본에 대한 읽기 전용 액세스를 통해 실행되는 단일 쿼리 명령이 반환하는 첫 번째 결과 집합에서 제공됩니다. 각 데이터 영역은 데이터 세트의 모든 데이터가 표시되도록 확장됩니다.  
   
  기본적으로 데이터 세트의 데이터는 테이블 형식으로 되어 있습니다. 열은 데이터 세트 쿼리에서 가져온 필드입니다. 행은 결과 집합의 행에서 가져옵니다. 다음과 같은 일반화된 형식의 데이터를 보고서에서 사용할 수 있습니다.  
@@ -59,11 +59,11 @@ ms.locfileid: "77081841"
 -   재귀적 데이터. 재귀적 데이터 계층을 포함하는 결과 집합에는 사각형 결과 집합의 계층 구조에 대한 모든 정보가 포함됩니다. 예를 들어 직원과 관리자라는 두 개의 열이 있는 테이블로 회사의 보고 구조를 나타낼 수 있습니다. 각 관리자도 마찬가지로 관리자가 있는 직원입니다. 일반적으로 최고 관리자 열에는 null이나 관리자가 없는 직원임을 나타내는 다른 특별한 식별자가 포함됩니다.  
   
   
-##  <a name="DataTypes"></a> 데이터 형식 사용  
+##  <a name="working-with-data-types"></a><a name="DataTypes"></a> 데이터 형식 사용  
  데이터 세트를 만들 때 필드의 데이터 형식이 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]에서 CLR(공용 언어 런타임) 데이터 형식의 하위 세트로 매핑됩니다. 명확하게 매핑될 수 없는 데이터 형식은 문자열로 반환됩니다. 필드 데이터 형식 작업에 대한 자세한 내용은 [데이터 세트 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)을 참조하십시오. 매개 변수를 만들 때 데이터 형식은 지원되는 보고서 정의 데이터 형식이어야 합니다. 데이터 공급자에서 보고서 매개 변수로 데이터 형식을 매핑하는 방법은 [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)을 참조하세요.  
   
   
-##  <a name="HowTo"></a> 방법 도움말 항목  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 방법 도움말 항목  
  이 섹션에서는 데이터 연결, 데이터 원본 및 데이터 세트를 사용하는 방법을 단계별로 설명합니다.  
   
  [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -73,7 +73,7 @@ ms.locfileid: "77081841"
  [데이터 세트에 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="InThisSection"></a> 섹션 내용  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> 섹션 내용  
  다음 항목에서는 각 기본 제공 데이터 확장 프로그램에 대한 정보를 제공합니다.  
   
 |항목|데이터 원본 유형|  
@@ -90,7 +90,7 @@ ms.locfileid: "77081841"
 |[ODBC 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/odbc-connection-type-ssrs.md)|ODBC|  
 |[XML 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)|XML|  
   
-##  <a name="Related"></a> 관련 단원
+##  <a name="related-sections"></a><a name="Related"></a> 관련 단원
 
  설명서의 다음 섹션에서는 보고서 데이터에 대한 깊이 있는 개념 정보를 제공하며, 데이터와 관련된 보고서 부분을 정의, 사용자 지정 및 사용하는 방법을 절차적인 측면에서 소개합니다.  
   

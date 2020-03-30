@@ -9,16 +9,16 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: a5194f251b7ea47e0d9485446b8957e96037ded0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68714967"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>SQLRUserGroup에 대한 로그인 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-스크립트의 [루프백 연결](../../advanced-analytics/concepts/security.md#implied-authentication)이 *신뢰할 수 있는 연결*을 지정하고 코드를 포함하는 개체를 실행하는 데 사용되는 ID가 Windows 사용자 계정인 경우 [SQLRUserGroup](../concepts/security.md#sqlrusergroup)에 대한 [SQL Server 로그인](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login)을 만듭니다.
+스크립트의 [루프백 연결](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login)이 [신뢰할 수 있는 연결](../concepts/security.md#sqlrusergroup)을 지정하고 코드를 포함하는 개체를 실행하는 데 사용되는 ID가 Windows 사용자 계정인 경우 [SQLRUserGroup](../../advanced-analytics/concepts/security.md#implied-authentication)에 대한 *SQL Server 로그인*을 만듭니다.
 
 신뢰할 수 있는 연결은 연결 문자열에 `Trusted_Connection=True`가 있는 연결입니다. SQL Server에서 신뢰할 수 있는 연결을 지정하는 요청을 수신하는 경우 현재 Windows 사용자의 ID에 로그인이 있는지 여부를 확인합니다. 작업자 계정으로 실행되는 외부 프로세스(예: **SQLRUserGroup**의 MSSQLSERVER01)의 경우 해당 계정에는 기본적으로 로그인이 없기 때문에 요청이 실패합니다.
 

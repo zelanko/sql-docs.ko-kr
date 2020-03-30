@@ -9,10 +9,10 @@ ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cd0268916173f4e2b9d3f6c096fceb6787d18487
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078681"
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>행렬 만들기(보고서 작성기 및 SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "77078681"
 > [!NOTE]  
 >  목록을 보고서와는 별도로 보고서 파트로 게시할 수 있습니다. [보고서 파트(보고서 작성기 및 SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)에 대해 자세히 알아봅니다.  
   
-##  <a name="AddingMatrix"></a> 보고서에 행렬 추가  
+##  <a name="adding-a-matrix-to-your-report"></a><a name="AddingMatrix"></a> 보고서에 행렬 추가  
  리본 메뉴의 삽입 탭에서 디자인 화면에 행렬을 추가합니다. 테이블 또는 행렬 마법사를 사용하여 행렬을 추가할 수 있습니다. 이 마법사에서는 데이터 원본 연결 및 데이터 세트를 만들고 행렬을 구성하거나 행렬 템플릿을 기반으로 행렬을 추가할 수 있습니다.  
   
 > [!NOTE]  
@@ -50,7 +50,7 @@ ms.locfileid: "77078681"
  시작 행렬은 테이블릭스 데이터 영역을 기반으로 하는 템플릿입니다. 중첩/인접 행 그룹 또는 열 그룹, 심지어는 정보 행까지 추가하여 끊임없이 행렬 디자인을 개발할 수 있습니다. 자세한 내용은 [테이블릭스 데이터 영역의 유연성 살펴보기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)를 참조하세요.  
   
   
-##  <a name="AddingParentGroupChild"></a> 행렬에 부모 그룹 또는 자식 그룹 추가  
+##  <a name="adding-a-parent-group-or-child-group-to-a-matrix"></a><a name="AddingParentGroupChild"></a> 행렬에 부모 그룹 또는 자식 그룹 추가  
  단일 데이터 세트 필드를 기반으로 하는 그룹을 추가하려면 보고서 데이터 창의 필드를 그룹화 창의 해당 행 그룹 또는 열 그룹 영역으로 끌어옵니다. 그룹 계층에 필드를 놓아 기존 그룹과의 관계를 설정합니다. 기존 그룹 위에 놓으면 부모 그룹이 만들어지고 기존 그룹 아래에 놓으면 자식 그룹이 만들어집니다.  
   
  필드를 **그룹화** 창에 놓으면 다음과 같은 여러 가지 동작이 발생합니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "77078681"
  자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)를 나타냅니다.  
   
   
-##  <a name="AddingAdjacentGroup"></a> 행렬에 인접 그룹 추가  
+##  <a name="adding-an-adjacent-group-to-a-matrix"></a><a name="AddingAdjacentGroup"></a> 행렬에 인접 그룹 추가  
  단일 데이터 세트 필드를 기반으로 인접 그룹을 추가하려면 그룹화 창의 바로 가기 메뉴를 사용합니다. 자세한 내용은 [데이터 영역에서 그룹 추가 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)를 참조하세요. 다음 그림에서는 지리 기반의 그룹과 연도 기반의 인접 그룹을 보여 줍니다.  
   
  ![Geography 및 Year의 인접 열 그룹](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupsdesign.gif "Geography 및 Year의 인접 열 그룹")  

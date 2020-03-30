@@ -10,10 +10,10 @@ ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 894ba4f1b73cb482ab521e859d0472f7039bfabf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77077063"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL 구성(SSRS 구성 관리자)
@@ -162,7 +162,7 @@ ms.locfileid: "77077063"
 ## <a name="urls-for-multiple-report-server-instances-on-the-same-computer"></a>같은 컴퓨터에 있는 여러 보고서 서버 인스턴스에 대한 URL  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 여러 인스턴스에 대한 URL을 예약할 경우 이름이 충돌하지 않도록 다음 명명 규칙을 따라야 합니다. 자세한 내용은 [다중 인스턴스 보고서 서버 배포를 위한 URL 예약&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md)을 참조하세요.  
   
-##  <a name="URLExamples"></a> URL 구성 예  
+##  <a name="examples-of-url-configurations"></a><a name="URLExamples"></a> URL 구성 예  
  다음 목록에서는 보고서 서버 URL의 예를 보여 줍니다.  
   
 -   `https://localhost/reportserver`  

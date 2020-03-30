@@ -11,10 +11,10 @@ ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 ms.openlocfilehash: fe7518959f62328e038e7afb619b79cf2acbda86
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75247287"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>SQL Server Management Studio 구성 요소 및 구성
@@ -44,10 +44,10 @@ ms.locfileid: "75247287"
 
     ![보기 메뉴](media/ssms-configuration/viewmenu.png)
 
-* **개체 탐색기**(F8): 개체 탐색기는 서버에 있는 모든 데이터베이스 개체의 트리 뷰로, 이 보기에는 SQL Server 데이터베이스 엔진, SQL Server Analysis Services, SQL Server Reporting Services 및 SQL Server Integration Services의 데이터베이스가 포함됩니다. 개체 탐색기에는 연결된 모든 서버에 대한 정보가 포함되어 있습니다. 
+* **개체 탐색기**(F8): 개체 탐색기는 서버에 있는 모든 데이터베이스 개체의 트리 뷰입니다. 이 보기에는 SQL Server 데이터베이스 엔진, SQL Server Analysis Services, SQL Server Reporting Services 및 SQL Server Integration Services의 데이터베이스가 포함됩니다. 개체 탐색기에는 연결된 모든 서버에 대한 정보가 포함되어 있습니다. 
 
     ![개체 탐색기](media/ssms-configuration/objectexplorer.png)
-* **쿼리 창**(Ctrl+N): **새 쿼리**를 선택한 후에 이 창에 Transact-SQL(T-SQL) 쿼리를 입력합니다. 쿼리 결과도 여기에 나타납니다.
+* **쿼리 창**(Ctrl + N): **새 쿼리**를 선택한 후에 이 창에 Transact-SQL(T-SQL) 쿼리를 입력합니다. 쿼리 결과도 여기에 나타납니다.
 
     ![새 쿼리 창](media/ssms-configuration/newquery.png)
 
@@ -55,7 +55,7 @@ ms.locfileid: "75247287"
 
     ![속성](media/ssms-configuration/properties.png)
 
-* **템플릿 탐색기**(Ctrl+Alt+T): 템플릿 탐색기에는 다양한 미리 작성된 T-SQL 템플릿이 있습니다. 이러한 템플릿을 사용하여 데이터베이스 만들기 또는 백업과 같은 다양한 기능을 수행할 수 있습니다. 
+* **템플릿 브라우저**(Ctrl+Alt+T): 템플릿 브라우저에는 다양한 미리 작성된 T-SQL 템플릿이 있습니다. 이러한 템플릿을 사용하여 데이터베이스 만들기 또는 백업과 같은 다양한 기능을 수행할 수 있습니다. 
 
     ![템플릿 탐색기](media/ssms-configuration/templates.png)
 

@@ -16,10 +16,10 @@ ms.assetid: 105a5319-0f4c-4d08-964b-cc52f8e28ec1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0407ac8ec711d6d7ab8b1b2fb8afa245f53049d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67978324"
 ---
 # <a name="geturl-method-javalangstring-sqlserverresultset"></a>getURL 메서드(java.lang.String)(SQLServerResultSet)

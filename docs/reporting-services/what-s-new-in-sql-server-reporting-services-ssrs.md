@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
 ms.openlocfilehash: cb50ca237fb1b9fae87b73fd81a9e6f2426b4775
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77079612"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)의 새로운 기능
@@ -50,7 +50,7 @@ Azure Active Directory 애플리케이션 프록시를 사용하면 더 이상 �
 
 ### <a name="custom-headers"></a>사용자 지정 헤더
 
-지정된 regex 패턴과 일치하는 모든 URL에 대한 헤더 값을 설정합니다. 사용자는 유효한 XML로 사용자 지정 헤더 값을 업데이트하여 선택한 요청 URL에 대한 헤더 값을 설정할 수 있습니다. 관리자는 XML에 원하는 수의 헤더를 추가할 수 있습니다. 자세한 내용은 **서버 속성 고급 페이지** 문서의 [사용자 지정 헤더](tools/server-properties-advanced-page-reporting-services.md#customheaders)를 참조하세요.
+지정된 regex 패턴과 일치하는 모든 URL에 대한 헤더 값을 설정합니다. 사용자는 유효한 XML로 사용자 지정 헤더 값을 업데이트하여 선택한 요청 URL에 대한 헤더 값을 설정할 수 있습니다. 관리자는 XML에 원하는 수의 헤더를 추가할 수 있습니다. 자세한 내용은 [서버 속성 고급 페이지](tools/server-properties-advanced-page-reporting-services.md#customheaders) 문서의 **사용자 지정 헤더**를 참조하세요.
 
 ### <a name="transparent-database-encryption"></a>투명한 데이터베이스 암호화
 
@@ -179,11 +179,11 @@ Reporting Services 모바일 보고서는 다양한 폼 팩터에 최적화된 �
 
 브라우저 지원에 대한 자세한 내용은 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조하세요.  
 
-**페이지가 매겨진 세련된 보고서:** 차트, 계기, 지도 및 기타 데이터 시각화에 대한 새롭고 최신 스타일을 사용하여 페이지가 매겨진 세련된 보고서를 디자인할 수 있습니다.
+**페이지를 매긴 세련된 보고서:** 차트, 계기, 지도 및 기타 데이터 시각화에 대해 새롭고 현대적인 스타일을 사용하여 페이지를 매긴 세련된 보고서를 디자인할 수 있습니다.
 
-**트리 맵과 선버스트 차트:** 트리 맵 ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") 및 선버스트 ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") 차트를 사용하여 보고서를 개선합니다. 계층적 데이터를 표시하는 데 유용한 방법입니다. 자세한 내용은 [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md)를 참조하세요.  
+**트리 맵 및 선버스트 차트:** 트리 맵 ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") 및 선버스트 ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") 차트를 사용하여 보고서를 개선합니다. 계층적 데이터를 표시하는 데 유용한 방법입니다. 자세한 내용은 [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md)를 참조하세요.  
 
-**보고서 포함:** 이제 URL 매개 변수와 함께 iframe을 사용하여 다른 웹 페이지와 애플리케이션에 모바일 및 페이지가 매겨진 보고서를 포함할 수 있습니다.  
+**보고서 포함:** 이제 URL 매개 변수와 함께 iframe을 사용하여 다른 웹 페이지 및 애플리케이션에 모바일 및 페이지가 매겨진 보고서를 포함할 수 있습니다.  
 
 **Power BI 대시보드에 보고서 항목 고정:** [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]에서 보고서를 보는 동안 보고서 항목을 선택하여 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 대시보드에 고정할 수 있습니다.   고정할 수는 항목은 차트, 계기 패널, 지도 및 이미지입니다. 다음을 수행할 수 있습니다.
 
@@ -197,7 +197,7 @@ Reporting Services 모바일 보고서는 다양한 폼 팩터에 최적화된 �
 
 자세한 내용은 [Power BI 보고서 서버 통합&#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) 및 [Power BI 대시보드에 Reporting Services 항목 고정](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)을 참조하세요.  
 
-**PowerPoint 렌더링 및 내보내기:** Microsoft PowerPoint(PPTX) 형식은 새로운 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 렌더링 확장입니다. 일반적인 애플리케이션(보고서 작성기, 보고서 디자이너 (SSDT), [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)])에서 PPTX 형식으로 보고서를 내보낼 수 있습니다. 예를 들어 다음 이미지는 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]의 내보내기 메뉴를 보여 줍니다. 
+**PowerPoint 렌더링 및 내보내기:** Microsoft PowerPoint(PPTX) 형식은 새로운 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 렌더링 확장 프로그램입니다. 일반적인 애플리케이션(보고서 작성기, 보고서 디자이너 (SSDT), [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)])에서 PPTX 형식으로 보고서를 내보낼 수 있습니다. 예를 들어 다음 이미지는 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]의 내보내기 메뉴를 보여 줍니다. 
 
 ![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
 
@@ -209,7 +209,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 자세한 내용은 [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md)를 참조하세요.
 
-**원격 인쇄용 ActiveX를 대체하는 PDF:** 이제 보고서 뷰어 도구 모음이 ActiveX 컨트롤 대신 PDF를 통해 출력됩니다. 새 보고서 뷰어는 Microsoft Edge를 비롯한 대부분의 최신 브라우저에서 지원됩니다. 다운로드할 ActiveX 컨트롤이 없습니다! 사용하는 브라우저와 설치한 PDF 보기 애플리케이션 및 서비스에 따라 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 보고서를 인쇄할 인쇄 대화 상자를 열거나 .PDF 파일을 다운로드하라는 메시지가 표시됩니다. 관리자는 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]에서 클라이언트 쪽 인쇄를 사용하지 않도록 설정할 수 있습니다.
+**원격 인쇄용 ActiveX를 대체하는 PDF:** 이제 보고서 뷰어 도구 모음에서 ActiveX 컨트롤 대신 PDF를 통해 인쇄합니다. 새 보고서 뷰어는 Microsoft Edge를 비롯한 대부분의 최신 브라우저에서 지원됩니다. 다운로드할 ActiveX 컨트롤이 없습니다! 사용하는 브라우저와 설치한 PDF 보기 애플리케이션 및 서비스에 따라 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 보고서를 인쇄할 인쇄 대화 상자를 열거나 .PDF 파일을 다운로드하라는 메시지가 표시됩니다. 관리자는 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]에서 클라이언트 쪽 인쇄를 사용하지 않도록 설정할 수 있습니다.
 
 자세한 내용은 [Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)를 참조하세요.
 
@@ -226,7 +226,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 ### <a name="sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)
 
-SSDT의 새 릴리스에는 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]의 프로젝트 템플릿이 포함되어 있습니다. 보고서 서버 프로젝트 마법사 및 보고서 서버 프로젝트. SSDT를 다운로드하는 방법에 대한 자세한 내용은 [Visual Studio 2015용 SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkId=827542)를 참조하세요.  
+SSDT의 새 릴리스에는 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]용 프로젝트 템플릿(보고서 서버 프로젝트 마법사 및 보고서 서버 프로젝트)이 포함되어 있습니다. SSDT를 다운로드하는 방법에 대한 자세한 내용은 [Visual Studio 2015용 SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkId=827542)를 참조하세요.  
 
 ### <a name="report-builder-improvements"></a>보고서 작성기 고급 기능
 
@@ -237,7 +237,7 @@ SSDT의 새 릴리스에는 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md
 |새로 만들기|Previous|  
 |![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
-**사용자 지정 매개 변수 창:** 이제 매개 변수 창을 사용자 지정할 수 있습니다. 보고서 작성기의 디자인 화면을 사용하여 매개 변수 창의 특정 열과 행에 매개 변수를 끌어 넣을 수 있습니다. 열을 추가하거나 제거하여 창 레이아웃을 변경할 수 있습니다. 자세한 내용은 [보고서에서 매개 변수 창 사용자 지정&#40;보고서 작성기&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)에서 만드는 모바일 보고서에서 보고서 매개 변수를 사용할 수 있습니다.  
+**매개 변수 창 사용자 지정:** 이제 매개 변수 창을 사용자 지정할 수 있습니다. 보고서 작성기의 디자인 화면을 사용하여 매개 변수 창의 특정 열과 행에 매개 변수를 끌어 넣을 수 있습니다. 열을 추가하거나 제거하여 창 레이아웃을 변경할 수 있습니다. 자세한 내용은 [보고서에서 매개 변수 창 사용자 지정&#40;보고서 작성기&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)에서 만드는 모바일 보고서에서 보고서 매개 변수를 사용할 수 있습니다.  
 
 ![보고서 데이터 창 및 매개 변수 창의 매개 변수 목록](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "보고서 데이터 창 및 매개 변수 창의 매개 변수 목록")  
 

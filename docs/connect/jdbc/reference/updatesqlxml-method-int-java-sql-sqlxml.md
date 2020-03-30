@@ -11,10 +11,10 @@ ms.assetid: b5170751-fbe1-433b-96f5-4f237ba55f60
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee90c33b2b546a3eaf48d52b7577200b7c23306b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998273"
 ---
 # <a name="updatesqlxml-method-int-javasqlsqlxml"></a>updateSQLXML 메서드(int, java.sql.SQLXML)

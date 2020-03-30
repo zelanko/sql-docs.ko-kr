@@ -9,10 +9,10 @@ ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c822f0b6a3a17ccba2afbaf8bf0a9e4a4e2f7b12
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65579818"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>합계, 집계 및 기본 제공 컬렉션의 식 범위
@@ -41,7 +41,7 @@ ms.locfileid: "65579818"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DataScope"></a> 데이터 범위 및 데이터 계층 이해  
+##  <a name="understanding-data-scope-and-data-hierarchy"></a><a name="DataScope"></a> 데이터 범위 및 데이터 계층 이해  
  데이터 범위는 보고서 데이터 집합을 지정하며 기본 제약 관계가 지정된 자연 계층을 포함합니다. 계층에서 순위가 높은 범위가 낮은 범위를 포함합니다. 다음 데이터 범위 목록에서는 계층을 데이터가 많은 순서대로 설명합니다.  
   
 -   **데이터 세트 필터를 적용한 후의 데이터 세트** 보고서 본문의 보고서 항목 또는 데이터 영역에 연결된 보고서 데이터 세트를 지정합니다. 집계에 사용되는 데이터는 데이터 세트 필터 식을 적용한 후 보고서 데이터 세트에서 가져옵니다. 공유 데이터 세트의 경우에는 공유 데이터 세트 정의의 필터와 보고서의 공유 데이터 세트 인스턴스 필터가 모두 해당됩니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "65579818"
   
  집계 함수를 포함하는 식을 작성할 때는 포함하는 범위와 포함되는 범위를 이해해야 합니다.  
   
-##  <a name="Aggregates"></a> 셀 범위 및 식  
+##  <a name="cell-scope-and-expressions"></a><a name="Aggregates"></a> 셀 범위 및 식  
  범위를 지정할 때는 집계 계산에 사용할 데이터를 보고서 프로세서가 알 수 있도록 지정합니다. 식 및 식 위치에 따라 유효한 범위는 *포함하는 범위*(부모 범위라고도 함)일 수도 있고 *포함되는 범위*(자식 또는 중첩된 범위라고도 함)일 수도 있습니다. 일반적으로는 집계 계산에서 개별 그룹 인스턴스를 지정할 수 없으며 모든 그룹 인스턴스에 대해 집계를 지정할 수 있습니다.  
   
  보고서 프로세서는 보고서 데이터 세트의 데이터를 테이블릭스 데이터 영역에 결합할 때 그룹 식을 계산하여 그룹 인스턴스를 표시하는 데 필요한 행 및 열을 만듭니다. 각 테이블릭스 셀에 있는 입력란의 식 값은 셀 범위의 컨텍스트에서 계산됩니다. 테이블릭스 구조에 따라 한 셀이 여러 행 그룹 및 열 그룹에 속할 수 있습니다. 집계 함수의 경우에는 사용할 범위를 지정할 때 다음 범위 중 하나를 사용할 수 있습니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "65579818"
   
  각 집계 함수 항목에는 해당 함수가 사용할 수 있는 범위가 나와 있습니다. 자세한 내용은 [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)를 참조하세요.  
   
-##  <a name="Examples"></a> 테이블 데이터 영역의 예제 집계 식  
+##  <a name="example-aggregate-expressions-for-a-table-data-region"></a><a name="Examples"></a> 테이블 데이터 영역의 예제 집계 식  
  기본값이 아닌 범위를 지정하는 식을 작성할 때는 특정 방식을 사용합니다. 다음 그림과 표를 참조하면 서로 다른 각 범위를 이해하는 데 도움이 됩니다. 그림에는 상품 판매량을 연도/분기별 및 판매 지역별로 표시하는 판매 정보 테이블의 각 셀이 나와 있습니다. 행 및 열 그룹 구조를 표시하는 행 핸들 및 열 핸들에는 중첩된 그룹을 나타내는 시각 신호가 있습니다. 이 테이블의 구조는 다음과 같습니다.  
   
 -   모퉁이 셀 및 행 3개(열 그룹 머리글 포함)가 있는 테이블 머리글  
@@ -117,7 +117,7 @@ ms.locfileid: "65579818"
  테이블릭스 데이터 영역의 시각 신호 해석에 대한 자세한 내용은 [테이블릭스 데이터 영역 셀, 행 및 열&#40;보고서 작성기&#41; 및 SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)를 참조하세요. 테이블릭스 데이터 영역에 대한 자세한 내용은 [테이블릭스 데이터 영역 셀, 행 및 열&#40;보고서 작성기&#41; 및 SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)를 참조하세요. 식 및 집계에 대한 자세한 내용은 [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) 및 [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)를 참조하세요.  
   
   
-##  <a name="Sparklines"></a> 스파크라인의 눈금 동기화  
+##  <a name="synchronizing-scales-for-sparklines"></a><a name="Sparklines"></a> 스파크라인의 눈금 동기화  
  테이블 또는 행렬에 중첩된 스파크라인 차트에 대해 전체 시간에서 가로 축의 값을 비교하려면 범주 그룹 값을 동기화하면 됩니다. 이를 축 맞추기라고 합니다. 축 맞추기 옵션을 선택하면 보고서가 축의 최소값 및 최대값을 자동으로 설정하며 모든 범주에 없는 집계 값에 대한 자리 표시자를 제공합니다. 그러면 모든 범주에 걸쳐 스파크라인의 값이 정렬되므로 집계된 데이터의 각 행에 대해 값을 비교할 수 있습니다. 이 옵션을 선택하면 식 계산 범위가 *도메인 범위*로 변경됩니다. 중첩된 차트에 대해 도메인 범위를 설정하면 범례에 있는 각 범주에 대한 색 지정도 간접적으로 제어됩니다.  
   
  예를 들어 주별 추세를 표시하는 스파크라인에서 특정 도시의 판매 데이터는 3개월치인데 다른 도시의 판매 데이터는 12개월치라고 가정해 보겠습니다. 동기화된 눈금이 없으면 첫 번째 도시의 스파크라인에는 막대가 3개뿐이므로 12개월에 해당하는 막대 집합이 포함된 두 번째 도시의 스파크라인과 차지하는 공간은 같지만 막대의 폭이 훨씬 넓습니다.  
@@ -125,13 +125,13 @@ ms.locfileid: "65579818"
  자세한 내용은 [테이블 또는 행렬에서 차트의 데이터 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)을 참조하세요.  
   
   
-##  <a name="Indicators"></a> 표시기의 범위 동기화  
+##  <a name="synchronizing-ranges-for-indicators"></a><a name="Indicators"></a> 표시기의 범위 동기화  
  표시기 집합에 사용할 데이터 값을 지정하려면 범위를 지정해야 합니다. 표시기가 포함된 데이터 영역의 레이아웃에 따라 범위 또는 포함하는 범위를 지정합니다. 예를 들어 판매 범주와 연결된 그룹 머리글 행에서는 화살표 집합(위쪽, 아래쪽, 옆쪽)이 임계값을 기준으로 하는 판매 값을 나타낼 수 있습니다. 포함하는 범위는 표시기가 포함된 테이블 또는 행렬의 이름입니다.  
   
  자세한 내용은 [동기화 범위 설정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)를 참조하세요.  
   
   
-##  <a name="Page"></a> 페이지 머리글 또는 페이지 바닥글에서 범위 지정  
+##  <a name="specifying-scopes-from-the-page-header-or-page-footer"></a><a name="Page"></a> 페이지 머리글 또는 페이지 바닥글에서 범위 지정  
  보고서의 각 페이지마다 달라지는 데이터를 표시하려면 렌더링된 페이지에 있어야 하는 보고서 항목에 식을 추가합니다. 보고서는 렌더링될 때 페이지로 분할되므로 렌더링 중에만 페이지에 있는 항목을 확인할 수 있습니다. 예를 들어 정보 행의 셀에는 페이지의 여러 인스턴스가 포함된 입력란이 있습니다.  
   
  ReportItem이라는 전역 컬렉션을 이 작업에 사용할 수 있습니다. 이 컬렉션은 현재 페이지의 입력란 집합입니다.  
@@ -139,7 +139,7 @@ ms.locfileid: "65579818"
  자세한 내용은 [페이지 머리글 및 바닥글&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md) 및 [ReportItems 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md)를 참조하세요.  
   
   
-##  <a name="Toggles"></a> 드릴다운 및 조건부 표시 유형에 대해 토글 항목 지정  
+##  <a name="specifying-a-toggle-item-for-drilldown-and-conditional-visibility"></a><a name="Toggles"></a> 드릴다운 및 조건부 표시 유형에 대해 토글 항목 지정  
  토글은 사용자가 클릭하여 다른 보고서 항목을 숨기거나 표시할 수 있는 더하기 또는 빼기 기호 이미지로, 입력란에 추가됩니다. 대다수 보고서 항목 속성의 **표시 유형** 페이지에서 토글을 추가할 보고서 항목을 지정할 수 있습니다. 토글 항목은 표시하거나 숨길 항목보다 상위의 제약 범위에 있어야 합니다.  
   
  테이블릭스 데이터 영역에서 입력란을 클릭해 테이블을 확장하여 더 많은 데이터를 표시할 수 있는 드릴다운 효과를 만들려면 그룹에 대해 **표시 유형** 속성을 설정하고 포함하는 그룹과 연결된 그룹 머리글의 입력란을 토글로 선택해야 합니다.  
@@ -147,13 +147,13 @@ ms.locfileid: "65579818"
  자세한 내용은 [항목에 확장 또는 축소 동작 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)를 참조하세요.  
   
   
-##  <a name="Sort"></a> 정렬 순서를 동기화할 정렬 식 지정.  
+##  <a name="specifying-a-sort-expression-to-synchronize-sort-order"></a><a name="Sort"></a> 정렬 순서를 동기화할 정렬 식 지정.  
  대화형 정렬 단추를 테이블 열에 추가할 때 공통의 포함하는 범위를 가진 여러 항목에 대한 정렬을 동기화할 수 있습니다. 예를 들어 행렬의 열 머리글에 정렬 단추를 추가하고 포함하는 범위를 행렬에 바인딩되는 데이터 세트의 이름으로 지정할 수 있습니다. 사용자가 정렬 단추를 클릭하면 행렬 행도 정렬되고 동일 데이터 집합에 바인딩되는 차트의 차트 계열 그룹도 정렬됩니다. 이러한 방식으로 해당 데이터 세트를 사용하는 모든 데이터 영역을 동기화해 같은 정렬 순서를 표시할 수 있습니다.  
   
  자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)를 참조하세요.  
   
   
-##  <a name="Nulls"></a> 셀에 Null 또는 0 값 표시하지 않기  
+##  <a name="suppressing-null-or-zero-values-in-a-cell"></a><a name="Nulls"></a> 셀에 Null 또는 0 값 표시하지 않기  
  많은 보고서의 범위가 그룹인 계산에서 0 또는 Null 값이 있는 셀이 여러 개 생성됩니다. 이러한 경우 보고서를 좀 더 단순하게 하려면 집계 값이 0인 경우 공백을 반환하는 식을 추가할 수 있습니다. 자세한 내용은 [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md))을 지정해야 합니다.  
   
   

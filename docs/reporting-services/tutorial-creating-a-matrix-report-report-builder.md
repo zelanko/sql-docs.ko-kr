@@ -9,10 +9,10 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63294723"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>자습서: 행렬 보고서 만들기(보고서 작성기)
@@ -27,7 +27,7 @@ ms.locfileid: "63294723"
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요. 
   
-## <a name="CreateMatrix"></a>1. 새 테이블 또는 행렬 마법사에서 행렬 보고서 및 데이터 세트 만들기  
+## <a name="1-create-a-matrix-report-and-dataset-from-the-new-table-or-matrix-wizard"></a><a name="CreateMatrix"></a>1. 새 테이블 또는 행렬 마법사에서 행렬 보고서 및 데이터 세트 만들기  
 이 섹션에서는 공유 데이터 원본을 선택하고, 포함된 데이터 세트를 만들고, 행렬에 데이터를 표시합니다.  
   
 > [!NOTE]  
@@ -94,7 +94,7 @@ ms.locfileid: "63294723"
 
 11. **다음**을 클릭합니다.  
   
-## <a name="Groups"></a>2. 새 테이블 또는 행렬 마법사에서 데이터 구성 및 레이아웃 선택  
+## <a name="2-organize-data-and-choose-layout-from-the-new-table-or-matrix-wizard"></a><a name="Groups"></a>2. 새 테이블 또는 행렬 마법사에서 데이터 구성 및 레이아웃 선택  
 이 마법사를 사용하여 데이터를 표시할 시작 디자인을 제공할 수 있습니다. 이 마법사의 미리 보기 창에서는 행렬 디자인을 완료하기 전에 데이터 그룹화의 결과를 시각화할 수 있습니다.  
   
 1.  **필드 정렬** 페이지에서 **사용 가능한 필드** 의 Territory를 **행 그룹**으로 끌어옵니다.  
@@ -145,7 +145,7 @@ ms.locfileid: "63294723"
 
 ![report-builder-expand-matrix](../reporting-services/media/report-builder-expand-matrix.png)
   
-## <a name="FormatData"></a>3. 데이터 서식 지정  
+## <a name="3-format-data"></a><a name="FormatData"></a>3. 데이터 서식 지정  
 기본적으로 Sales 필드의 요약 데이터에는 일반 숫자가 표시되고, SalesDate 필드의 요약 데이터에는 날짜와 시간 정보가 모두 표시됩니다. 이 섹션에서는 숫자를 통화로 표시하도록 Sales 필드의 서식을 지정하고 날짜만 표시하도록 SalesDate 필드의 서식을 지정합니다. **자리 표시자 스타일** 을 설정/해제하여 서식 있는 입력란 및 자리 표시자 텍스트를 보기 값으로 표시합니다.  
   
 ### <a name="to-format-fields"></a>필드의 서식을 지정하려면  
@@ -170,7 +170,7 @@ ms.locfileid: "63294723"
   
 날짜 값은 날짜만 표시되고 판매 값은 통화로 표시됩니다.  
   
-## <a name="AdjacentGroup"></a>4. 인접 열 그룹 추가  
+## <a name="4-add-adjacent-column-group"></a><a name="AdjacentGroup"></a>4. 인접 열 그룹 추가  
 행 및 열 그룹을 부모-자식 관계로 중첩하거나 형제 관계로 인접하게 중첩할 수 있습니다.  
   
 이 섹션에서는 Subcategory 열 그룹에 인접한 열 그룹을 추가하고, 셀을 복사하여 새 열 그룹을 채운 다음, 식을 사용하여 열 그룹 머리글의 값을 만듭니다.  
@@ -216,7 +216,7 @@ ms.locfileid: "63294723"
 > [!NOTE]  
 > 데이터에 다른 요일이 포함된 경우 보고서에도 해당 요일에 대한 열이 포함됩니다. 각 열에는 **Sales**열 머리글과 지역별 판매 합계가 표시됩니다.  
   
-## <a name="Width"></a>5. 열 너비 변경  
+## <a name="5-change-column-widths"></a><a name="Width"></a>5. 열 너비 변경  
 행렬이 포함된 보고서를 실행하면 일반적으로 가로와 세로로 확장됩니다. 가로 확장을 제어하는 기능은 특히 보고서를 인쇄용 보고서에 사용되는 Microsoft Word 또는 Adobe PDF 등의 형식으로 내보내려고 할 때 중요합니다. 보고서가 여러 페이지에 걸쳐 가로로 확장될 경우에는 인쇄된 페이지를 이해하기 어렵습니다. 가로 확장을 최소화하려면 데이터를 자르지 않고 표시하는 데 필요한 너비로만 열 크기를 조정합니다. 제목이 데이터를 표시하는 데 필요한 너비에 맞도록 열의 이름을 변경해도 됩니다.  
   
 ### <a name="to-rename-and-resize-the-columns"></a>열의 이름을 바꾸고 크기를 조정하려면  
@@ -245,7 +245,7 @@ ms.locfileid: "63294723"
   
 이제 수량을 포함하는 열이 더 좁고 이름이 QTY로 표시됩니다.  
   
-## <a name="MergeCells"></a>6. 행렬 셀 병합  
+## <a name="6-merge-matrix-cells"></a><a name="MergeCells"></a>6. 행렬 셀 병합  
 모퉁이 영역은 행렬의 왼쪽 위 모퉁이에 있습니다. 행렬의 행 및 열 그룹 수에 따라 모퉁이 영역에 있는 셀 수가 달라집니다. 이 자습서에서 작성하는 행렬의 모퉁이 영역에는 네 개의 셀이 있습니다. 이러한 셀은 행 및 열 그룹 계층의 깊이를 반영하여 두 개의 행과 두 개의 열로 정렬됩니다. 이 네 개의 셀은 이 보고서에서 사용되지 않으므로 한 개의 셀로 병합합니다.  
   
 ### <a name="to-merge-matrix-cells"></a>행렬 셀을 병합하려면  
@@ -268,7 +268,7 @@ ms.locfileid: "63294723"
   
 행렬의 위쪽 모퉁이에 있는 셀이 더 이상 표시되지 않습니다. 
   
-## <a name="HeaderTitle"></a>7. 보고서 머리글 및 보고서 제목 추가  
+## <a name="7-add-a-report-header-and-report-title"></a><a name="HeaderTitle"></a>7. 보고서 머리글 및 보고서 제목 추가  
 보고서 제목은 보고서 맨 위에 나타납니다. 보고서 제목을 보고서 머리글에 배치하거나, 보고서 머리글이 사용되지 않을 경우 보고서 본문의 맨 위에 있는 입력란에 배치할 수 있습니다. 이 자습서에서는 보고서의 위쪽에 있는 입력란을 제거하고 머리글에 제목을 추가합니다.  
   
 ### <a name="to-add-a-report-header-and-report-title"></a>보고서 머리글 및 보고서 제목을 추가하려면  
@@ -293,7 +293,7 @@ ms.locfileid: "63294723"
   
 보고서의 보고서 머리글에 보고서 제목이 포함됩니다.  
   
-## <a name="Save"></a>8. 보고서 저장  
+## <a name="8-save-the-report"></a><a name="Save"></a>8. 보고서 저장  
 보고서를 보고서 서버, SharePoint 라이브러리 또는 컴퓨터에 저장할 수 있습니다.  
   
 이 자습서에서는 보고서를 보고서 서버에 저장합니다. 보고서 서버에 액세스할 수 없는 경우에는 보고서를 컴퓨터에 저장하십시오.  
@@ -324,7 +324,7 @@ ms.locfileid: "63294723"
   
 4.  **저장**을 클릭합니다.  
   
-## <a name="RotateTextBox"></a>9. (선택 사항) 입력란 270도 회전  
+## <a name="9-optional-rotate-text-box-270-degrees"></a><a name="RotateTextBox"></a>9. (선택 사항) 입력란 270도 회전  
 행렬이 있는 보고서는 실행 시 가로 및 세로로 확장될 수 있습니다. 입력란을 세로로 회전하거나 270도 회전하면 가로 공간을 절약할 수 있습니다. 그러면 렌더링된 보고서의 너비가 좁아지며, 보고서가 Microsoft Word 등의 형식으로 내보낼 경우 인쇄되는 페이지에 더 잘 맞게 됩니다.  
   
 입력란에서는 텍스트를 가로 및 세로(위에서 아래로)로 표시할 수도 있습니다. 자세한 내용은 [입력란&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)를 참조하세요.  

@@ -11,10 +11,10 @@ ms.author: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: 4679b1f2ca6de3a358528a7ef24af8f118aa5f45
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74992176"
 ---
 # <a name="install-distributed-replay"></a>Distributed Replay 설치
@@ -29,7 +29,7 @@ Distributed Replay는 다음 세 가지 방법 중 하나로 설치할 수 있�
   
 -   [구성 파일을 사용하여 Distributed Replay 설치](#bkmk_configuration_file)  
   
-##  <a name="bkmk_wizard"></a> 설치 마법사에서 Distributed Replay 설치  
+##  <a name="install-distributed-replay-from-the-installation-wizard"></a><a name="bkmk_wizard"></a> 설치 마법사에서 Distributed Replay 설치  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Distributed Replay 기능을 설치합니다. 기능 설치 위치를 계획할 때는 다음 사항을 고려하십시오.  
   
 -   관리 도구는 Distributed Replay Controller와 동일한 컴퓨터 또는 다른 컴퓨터에 설치할 수 있습니다.  
@@ -136,7 +136,7 @@ Distributed Replay는 다음 세 가지 방법 중 하나로 설치할 수 있�
 ### <a name="net-framework-security"></a>.NET Framework 보안  
  Distributed Replay 기능을 설치하려면 관리 권한이 있어야 합니다. sysadmin 권한을 가진 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인만 테스트 서버의 sysadmin 서버 역할에 클라이언트 서비스 계정을 추가할 수 있습니다. Distributed Replay 보안 고려 사항에 대한 자세한 내용은 [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md)을 참조하십시오.  
   
-##  <a name="bkmk_command_prompt"></a> 명령 프롬프트에서 Distributed Replay 설치  
+##  <a name="install-distributed-replay-from-the-command-prompt"></a><a name="bkmk_command_prompt"></a> 명령 프롬프트에서 Distributed Replay 설치  
  명령 프롬프트에서 Distributed Replay의 새 인스턴스를 설치할 경우 어떤 기능을 설치할지 지정하고 그 기능을 어떻게 구성할지 지정할 수 있습니다. 명령 프롬프트에서 설치하면 Distributed Replay 구성 요소를 설치, 복원, 업그레이드 및 제거할 수 있습니다. 명령 프롬프트에서 설치할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 /Q 매개 변수를 사용하는 완전 자동 모드를 지원합니다.  
   
 > [!NOTE]  
@@ -182,7 +182,7 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CTLR /IAcceptSQLServerLicenseTerms /C
 setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CLTSVCACCOUNT="domain\svcuser" /CLTSVCPASSWORD="password" /CLTSTARTUPTYPE=Automatic /CLTCTLRNAME=ControllerMachineName /CLTWORKINGDIR="C:\WorkingDir" /CLTRESULTDIR="C:\ResultDir  
 ```  
   
-##  <a name="bkmk_configuration_file"></a> 구성 파일을 사용하여 Distributed Replay 설치  
+##  <a name="install-distributed-replay-using-a-configuration-file"></a><a name="bkmk_configuration_file"></a> 구성 파일을 사용하여 Distributed Replay 설치  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 시 사용자 입력 및 시스템 기본값을 기반으로 구성 파일을 생성할 수 있습니다. 관리 도구를 설치하도록 지정한 경우 이 구성 파일을 사용하여 세 가지 Distributed Replay 구성 요소(관리 도구, Distributed Replay Controller 및 Distributed Replay Client)를 배포할 수 있습니다. 구성 파일을 사용하면 Distributed Replay 구성 요소를 설치, 복구 및 다시 설치할 수 있습니다.  
   
  구성 파일은 명령줄에서 설치할 경우에만 사용할 수 있습니다. 구성 파일을 사용할 때 매개 변수의 처리 순서는 다음과 같습니다.  

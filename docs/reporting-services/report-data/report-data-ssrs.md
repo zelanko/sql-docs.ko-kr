@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 11/18/2019
 ms.openlocfilehash: 6317e8161871d7094486ed8b6178847549d8ab96
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190730"
 ---
 # <a name="intro-to-report-data-in-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)의 보고서 데이터 소개
@@ -39,7 +39,7 @@ ms.locfileid: "74190730"
 6.  **외부 데이터 원본** 관계형 데이터베이스, SharePoint 목록 또는 웹 서비스에서 데이터를 검색합니다.  
 
 
-##  <a name="BkMk_ReportDataTerms"></a> 용어 정의  
+##  <a name="defining-terms"></a><a name="BkMk_ReportDataTerms"></a> 용어 정의  
   
 - **데이터 연결** *데이터 원본*이라고도 합니다. 데이터 연결에는 연결 형식에 따라 달라지는 이름 및 연결 속성이 포함되어 있습니다. 기본적으로 데이터 연결에는 자격 증명이 포함되지 않습니다. 데이터 연결은 외부 데이터 원본에서 어떤 데이터를 검색할 것인지 지정하지 않습니다. 이렇게 하려면 데이터 세트를 만들 때 쿼리를 지정합니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74190730"
   
 - **자격 증명.** 자격 증명은 외부 데이터 액세스를 위해 제공해야 하는 인증 정보입니다.  
   
-##  <a name="BkMk_ReportDataTips"></a> 보고서 데이터 지정 시 유용한 정보
+##  <a name="tips-for-specifying-report-data"></a><a name="BkMk_ReportDataTips"></a> 보고서 데이터 지정 시 유용한 정보
 
  다음 정보를 사용하여 보고서 데이터 전략을 설계하십시오.  
   

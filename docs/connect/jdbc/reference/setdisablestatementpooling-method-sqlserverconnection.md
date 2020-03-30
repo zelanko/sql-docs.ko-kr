@@ -16,10 +16,10 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 595ac0ed2e71092950486cf495ec9013bbd6f09d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974341"
 ---
 # <a name="setdisablestatementpooling-method-sqlserverconnection"></a>setDisableStatementPooling 메서드(SQLServerConnection)
@@ -37,13 +37,13 @@ public void setDisableStatementPooling(boolean disableStatementPooling)
 #### <a name="parameters"></a>매개 변수  
  *disableStatementPooling*  
   
- **disableStatementPooling** 연결 속성의 새로운 값입니다.  
+ **disableStatementPooling** 연결 속성의 새 값입니다.  
  
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>설명  
- 이 메서드는 JDBC 드라이버 버전 6.4 및 이후 버전에서 사용할 수 있습니다.
+ 이 메서드는 JDBC 드라이버 버전 6.4 이상 버전에서 사용할 수 있습니다.
  
 ## <a name="see-also"></a>참고 항목  
  [SQLServerConnection 멤버](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

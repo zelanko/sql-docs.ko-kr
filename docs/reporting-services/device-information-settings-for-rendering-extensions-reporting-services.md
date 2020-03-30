@@ -9,10 +9,10 @@ ms.assetid: 947b0ee1-bb35-4b4e-9527-dc501566e7d1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cd1fda200aae4a8d5bbc91191fe3b516a6109821
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65503986"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>렌더링 확장 프로그램에 대한 디바이스 정보 설정(Reporting Services)

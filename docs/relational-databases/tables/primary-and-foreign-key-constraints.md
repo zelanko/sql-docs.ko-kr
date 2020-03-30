@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b738bd06abe616adc846727dd5721b7204e340c8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67999439"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>PRIMARY KEY 및 FOREIGN KEY 제약 조건
@@ -36,7 +36,7 @@ ms.locfileid: "67999439"
   
  [관련 작업](../../relational-databases/tables/primary-and-foreign-key-constraints.md#Tasks)  
   
-##  <a name="PKeys"></a> 기본 키 제약 조건  
+##  <a name="primary-key-constraints"></a><a name="PKeys"></a> 기본 키 제약 조건  
  테이블에는 일반적으로 테이블의 각 행을 고유하게 식별하는 값을 가진 열 또는 열 조합이 포함되어 있습니다. 이러한 열이나 열 조합은 테이블의 PK(기본 키)라고 하며 테이블에 엔터티 무결성을 적용합니다. 기본 키 제약 조건은 데이터의 고유성을 보장하므로 자주 ID 열에 정의됩니다.  
   
  테이블에 대해 기본 키 제약 조건을 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 기본 키 열에 대해 고유 인덱스를 자동으로 만들어 데이터 고유성을 적용합니다. 또한 쿼리에서 기본 키가 사용되는 경우 이 인덱스를 사용하여 데이터에 빠르게 액세스할 수 있습니다. 기본 키 제약 조건이 두 개 이상의 열에 정의되는 경우 한 열에 중복된 값이 있을 수 있지만 기본 키 제약 조건 정의에 있는 모든 열의 값 조합은 각각 고유해야 합니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "67999439"
   
 -   CLR 사용자 정의 형식 열에 기본 키를 정의하는 경우 형식 구현이 이진 순서를 지원해야 합니다.  
   
-##  <a name="FKeys"></a> Foreign Key Constraints  
+##  <a name="foreign-key-constraints"></a><a name="FKeys"></a> Foreign Key Constraints  
  외래 키(FK)는 두 테이블의 데이터 간 연결을 설정하고 강제 적용하여 외래 키 테이블에 저장될 수 있는 데이터를 제어하는 데 사용되는 열입니다. 외래 키 참조에서는 한 테이블의 기본 키 값을 가지고 있는 열을 다른 테이블의 열이 참조할 때 두 테이블 간에 연결이 생성됩니다. 이때 두 번째 테이블에 추가되는 열이 외래 키가 됩니다.  
   
  예를 들어 **Sales.SalesOrderHeader** 테이블에는 **Sales.SalesPerson** 테이블에 대한 외래 키 연결이 생성되는데 이는 판매 주문과 영업 사원 간에 논리적 관계가 있기 때문입니다. **SalesOrderHeader** 테이블의 **SalesPersonID** 열은 **SalesPerson** 테이블의 기본 키 열과 일치합니다. **SalesOrderHeader** 테이블의 **SalesPersonID** 열은 **SalesPerson** 테이블에 대한 외래 키입니다. 이 외래 키 관계를 만들면 **SalesPerson** 테이블에 **SalesPersonID** 값이 없을 경우 **SalesOrderHeader** 테이블에 이 값을 삽입할 수 없습니다.  
@@ -118,7 +118,7 @@ ms.locfileid: "67999439"
   
 -   INSTEAD OF 트리거가 있는 테이블은 연계 동작을 지정하는 REFERENCES 절도 가질 수 없습니다. 그러나 연계 동작의 대상이 되는 테이블의 AFTER 트리거는 다른 테이블 또는 그 개체에 정의된 INSTEAD OF 트리거를 시작하는 뷰에서 INSERT, UPDATE 또는 DELETE 문을 실행할 수 있습니다.  
   
-##  <a name="Tasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="Tasks"></a> 관련 작업  
  다음 표에서는 기본 키 및 외래 키 제약 조건과 연관된 일반 태스크를 보여 줍니다.  
   
 |Task|항목|  

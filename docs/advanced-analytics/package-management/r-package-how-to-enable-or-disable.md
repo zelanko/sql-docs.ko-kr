@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 250be5c8a4207a43d2e4194c78377bd87880a99c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485238"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>SQL Server용 원격 패키지 관리 사용 또는 사용 안 함
@@ -31,7 +31,7 @@ SQL Server에서 패키지 관리를 사용하거나 사용하지 않도록 설�
 
 패키지 관리 기능을 [사용하지 않도록 설정](#bkmk_disable)하는 프로세스도 여러 단계가 필요합니다. 데이터베이스 수준 패키지 및 권한을 제거하고(데이터베이스당 한 번) 서버에서 역할을 제거합니다(인스턴스당 한 번).
 
-## <a name="bkmk_enable"></a> 패키지 관리를 사용하도록 설정
+## <a name="enable-package-management"></a><a name="bkmk_enable"></a> 패키지 관리를 사용하도록 설정
 
 1. SQL Server에서 관리자 권한 명령 프롬프트를 열고 RegisterRExt.exe 유틸리티가 포함된 폴더로 이동합니다. 기본 위치는 `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`입니다.
 
@@ -76,7 +76,7 @@ SQL Server에서 패키지 관리를 사용하거나 사용하지 않도록 설�
 
 이 기능을 사용하도록 설정한 후에는 RevoScaleR 함수를 사용하여 원격 R 클라이언트에서 패키지를 설치하거나 제거할 수 있습니다.
 
-## <a name="bkmk_disable"></a> 패키지 관리를 사용하지 않도록 설정
+## <a name="disable-package-management"></a><a name="bkmk_disable"></a> 패키지 관리를 사용하지 않도록 설정
 
 1. 관리자 권한 명령 프롬프트에서 RegisterRExt 유틸리티를 다시 실행하고 데이터베이스 수준에서 패키지 관리를 사용하지 않도록 설정합니다.
 

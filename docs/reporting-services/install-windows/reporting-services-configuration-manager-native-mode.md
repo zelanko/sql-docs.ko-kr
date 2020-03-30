@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3df5a4c27e5c916d5a2c803d7bd4d40110aabb27
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73593788"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 구성 관리자(기본 모드)
@@ -29,7 +29,7 @@ ms.locfileid: "73593788"
 > [!NOTE]
 > SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 릴리스부터는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자가 SharePoint 모드 보고서 서버를 관리하도록 디자인되지 않았습니다. SharePoint 모드는 SharePoint 중앙 관리 및 PowerShell 스크립트를 사용하여 관리 및 구성됩니다.  
   
-##  <a name="bkmk_scenarios"></a> Reporting Services 구성 관리자 사용 시나리오  
+##  <a name="scenarios-to-use-reporting-services-configuration-manager"></a><a name="bkmk_scenarios"></a> Reporting Services 구성 관리자 사용 시나리오  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 수행할 수 있는 태스크는 다음과 같습니다.  
   
 -   보고서 서버 서비스 계정 구성. 이 계정은 설치 중에 처음 구성되지만 암호를 업데이트하거나 다른 계정을 사용하려는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 수정할 수 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "73593788"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 보고서 서버 내용을 관리하거나 추가 기능을 활성화하거나 서버에 대한 액세스 권한을 부여할 수는 없습니다. 완전한 배포를 위해서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하여 추가 기능을 활성화하거나 기본값을 수정하고 웹 포털에서 서버에 대한 액세스 권한을 사용자에게 부여할 수 있도록 해야 합니다.
 
-##  <a name="bkmk_requirements"></a> 요구 사항
+##  <a name="requirements"></a><a name="bkmk_requirements"></a> 요구 사항
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 버전별로 다릅니다. 이 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 와 함께 설치되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 구성할 수 없습니다. 같은 컴퓨터에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 이전 버전과 최신 버전이 함께 실행되고 있는 경우 각 버전과 함께 제공되는 Reporting Services 구성 관리자를 사용하여 각 인스턴스를 구성해야 합니다.  
 
@@ -64,7 +64,7 @@ ms.locfileid: "73593788"
 
 Reporting Services 구성 관리자는 SQL Server Reporting Services를 설치할 때 자동으로 설치됩니다.
 
-##  <a name="bkmk_start_configuration_manager"></a> Reporting Services 구성 관리자를 시작하려면
+##  <a name="to-start-the-reporting-services-configuration-manager"></a><a name="bkmk_start_configuration_manager"></a> Reporting Services 구성 관리자를 시작하려면
 
 1.  사용자의 Microsoft Windows 버전에 적합한 방식으로 다음 단계를 사용합니다.
 

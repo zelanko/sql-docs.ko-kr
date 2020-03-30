@@ -12,12 +12,12 @@ manager: jroth
 ms.custom: seo-lt-2019
 ms.date: 09/05/2018
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 07504e19591b1f64aac77ebbc825bea58931b536
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7b22b71f3e5b9428e15a529917056565b874d55d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75688571"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271419"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>SQL Server Data Tools(SSDT 및 SSDT-BI)의 이전 릴리스
 
@@ -35,14 +35,7 @@ SSDT는 이전 버전과 호환되므로 항상 [최신 SSDT](download-sql-serve
 
 |SSDT 릴리스| Visual Studio 2017|
 |:---|:---|
-|15.9.2|[VS2017 15.9.2용 SSDT](https://go.microsoft.com/fwlink/?linkid=2095463)|
-|15.9.1|[VS2017 15.9.1용 SSDT](https://go.microsoft.com/fwlink/?linkid=2086373)|
-|15.9.0|[VS2017 15.9.0용 SSDT](https://go.microsoft.com/fwlink/?linkid=2052454)|
-|15.8.2|[VS2017 15.8.2용 SSDT](https://go.microsoft.com/fwlink/?linkid=2038031)|
-|15.8.0|[VS2017 15.8.0용 SSDT](https://go.microsoft.com/fwlink/?linkid=2014060)|
-|15.7.1|[VS2017 15.7.1용 SSDT](https://go.microsoft.com/fwlink/?LinkId=875613)|
-|15.7.0|[VS2017 15.7.0용 SSDT](https://go.microsoft.com/fwlink/?LinkId=874716)|
-|15.6.0|[VS2017 15.6.0용 SSDT](https://go.microsoft.com/fwlink/?LinkId=871368)|
+|15.8.0|[VS2017 15.8.0용 SSDT](https://go.microsoft.com/fwlink/?linkid=2124319)
 
 <br>
 
@@ -61,7 +54,7 @@ SSDT는 이전 버전과 호환되므로 항상 [최신 SSDT](download-sql-serve
 <br>
 
 
-\* SSDT는 두 가지 최신 버전의 Visual Studio를 지원합니다. Visual Studio 2017 릴리스에서는 VS2013용 SSDT가 더 이상 업데이트되지 않습니다. 자세한 내용은 [this SSDT team blog post](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/)(이 SSDT 팀 블로그 게시물)의 *FAQ* 섹션을 참조하세요.
+\* SSDT는 두 가지 최신 버전의 Visual Studio를 지원합니다. Visual Studio 2017 릴리스에서는 VS2013용 SSDT가 더 이상 업데이트되지 않습니다. 자세한 내용은 *this SSDT team blog post*(이 SSDT 팀 블로그 게시물)의 [FAQ](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/) 섹션을 참조하세요.
 
   
 ## <a name="links-to-download-pages"></a>다운로드 페이지에 대한 링크 
@@ -79,7 +72,7 @@ RDBMS 및 Azure SQL 데이터베이스에 대한 관계형 데이터베이스를
   
 Visual Studio 2013 고객은 SSDT의 미리 보기 버전을 다운로드하여 제품 릴리스 버전에 아직 없는 새 기능을 체험해 볼 수 있습니다.  
   
-**SQL BI: Analysis Services, Reporting Services, Integration Services**  
+**SQL BI: Analysis Services, Reporting Services, Integration services**  
   
 BI 템플릿은 SSAS 모델, SSRS 보고서 및 SSIS 패키지를 만드는 데 사용됩니다. BI Designer는 특정 버전의 SQL Server에 연결되어 있습니다. 최신 BI 기능을 사용하려면 최신 버전이 있는 BI Designer를 설치하세요.  
   

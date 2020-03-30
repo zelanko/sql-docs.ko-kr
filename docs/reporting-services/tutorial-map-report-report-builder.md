@@ -9,10 +9,10 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041668"
 ---
 # <a name="tutorial-map-report-report-builder"></a>자습서: 지도 보고서(보고서 작성기)
@@ -27,16 +27,16 @@ ms.locfileid: "63041668"
 이 자습서에서는 뉴욕 주의 군에 있는 상점 위치를 표시하는 지도 보고서를 작성합니다.  
    
 > [!NOTE]  
-> 이 자습서에서 마법사의 단계는 두 개의 절차로 통합됩니다. 하나는 데이터 세트를 만드는 절차이고 다른 하나는 테이블을 만드는 절차입니다. 보고서 서버를 찾고, 데이터 원본을 선택하고, 데이터 세트를 만들고, 마법사를 실행하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서를 참조하세요. [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> 이 자습서에서 마법사의 단계는 두 개의 절차로 통합됩니다. 하나는 데이터 세트를 만드는 절차이고 다른 하나는 테이블을 만드는 절차입니다. 보고서 서버를 찾고, 데이터 원본을 선택하고, 데이터 세트를 만들고, 마법사를 실행하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)을 참조하세요.  
   
-이 자습서에 소요되는 예상 시간: 30분.  
+이 자습서에 소요되는 예상 시간: 30분  
   
 ## <a name="requirements"></a>요구 사항  
 이 자습서에서는 Bing 지도를 배경으로 지원하도록 보고서 서버를 구성해야 합니다. 자세한 내용은 [지도 보고서 지원 계획](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)을 참조하세요. 
 
 기타 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
   
-## <a name="Map"></a>1. 지도 마법사에서 다각형 계층을 사용하여 지도 만들기  
+## <a name="1-create-a-map-with-a-polygon-layer-from-the-map-wizard"></a><a name="Map"></a>1. 지도 마법사에서 다각형 계층을 사용하여 지도 만들기  
 이 섹션에서는 지도 갤러리에서 보고서에 지도를 추가합니다. 뉴욕 주의 군을 표시하는 계층이 하나 있는 지도를 추가합니다. 각 군의 모양은 지도 갤러리의 지도에 포함된 공간 데이터를 기반으로 하는 다각형으로 되어 있습니다.  
   
 ### <a name="to-add-a-map-with-the-map-wizard-in-a-new-report"></a>새 보고서에서 지도 마법사를 사용하여 지도를 추가하려면  
@@ -108,7 +108,7 @@ ms.locfileid: "63041668"
   
 각 군과 연결된 분석 데이터가 없기 때문에 지도 범례와 색 눈금은 아직 표시되지 않습니다. 이 자습서의 뒷부분에서 분석 데이터를 추가합니다.  
   
-## <a name="PointLayer"></a>2. 지도 점 계층을 추가하여 상점 위치 표시  
+## <a name="2-add-a-map-point-layer-to-display-store-locations"></a><a name="PointLayer"></a>2. 지도 점 계층을 추가하여 상점 위치 표시  
 이 섹션에서는 지도 계층 마법사를 사용하여 상점의 위치를 표시하는 점 계층을 추가합니다.  
   
 > [!NOTE]  
@@ -174,7 +174,7 @@ ms.locfileid: "63041668"
     *   **SellingArea**: 455평방피트에서 1125평방피트 사이의 제품 전시 영역입니다.
     *   **City**.
     *   **County**.
-    *   **판매**: 총 판매량입니다. 
+    *   **Sales**: 총 판매량입니다. 
     *   **SpatialLocation**: 경도 및 위도 위치입니다. 
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
@@ -227,7 +227,7 @@ ms.locfileid: "63041668"
 
 
   
-## <a name="LineLayer"></a>3. 지도 선 계층을 추가하여 경로 표시  
+## <a name="3-add-a-map-line-layer-to-display-a-route"></a><a name="LineLayer"></a>3. 지도 선 계층을 추가하여 경로 표시  
 지도 계층 마법사를 사용하여 두 상점 간의 경로를 표시하는 지도 계층을 추가할 수 있습니다. 이 자습서에서는 세 개의 상점 위치를 연결하는 경로를 만듭니다. 비즈니스 애플리케이션에서 이 경로는 상점 간 최적 경로일 수 있습니다.  
   
 ### <a name="to-add-a-line-layer-to-map"></a>선 계층을 지도에 추가하려면  
@@ -284,7 +284,7 @@ ms.locfileid: "63041668"
 
       확대/축소 비율입니다. 125%에서는 전체 주가 표시됩니다.
   
-## <a name="TileLayer"></a>4. Bing Maps 타일 배경 추가  
+## <a name="4-add-a-bing-maps-tile-background"></a><a name="TileLayer"></a>4. Bing Maps 타일 배경 추가  
 이 섹션에서는 Bing 지도 타일 배경을 표시하는 지도 계층을 추가합니다.  
   
 1.  디자인 뷰로 전환합니다.  
@@ -306,7 +306,7 @@ ms.locfileid: "63041668"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Transparent"></a>5. 계층을 투명하게 만들기  
+## <a name="5-make-a-layer-transparent"></a><a name="Transparent"></a>5. 계층을 투명하게 만들기  
 이 섹션에서는 한 계층의 항목이 다른 계층을 통과하여 표시되도록 원하는 효과를 얻을 때까지 계층의 순서와 투명도를 조정합니다. 만든 첫 번째 계층인 PolygonLayer1부터 시작합니다. 
   
 1.  지도를 두 번 클릭하여 **지도 계층** 창을 표시합니다.  
@@ -321,12 +321,12 @@ ms.locfileid: "63041668"
 
     ![report-builder-map-transparency](../reporting-services/media/report-builder-map-transparency.png)
   
-## <a name="Vary"></a>6. 판매량을 기준으로 군 색 변경  
+## <a name="6-vary-county-color-based-on-sales"></a><a name="Vary"></a>6. 판매량을 기준으로 군 색 변경  
 보고서 처리기가 지도 마법사의 마지막 페이지에서 선택한 테마에 따라 색상표에서 색 값을 자동으로 할당하기 때문에 다각형 계층에 있는 각 군의 색은 서로 다릅니다.  
   
 다음 섹션에서는 특정 색을 각 군의 상점별 판매량 범위와 연결하는 색 규칙을 지정합니다. 빨강-노랑-녹색은 상대적인 높은-중간-낮은 판매량을 나타냅니다. 통화를 표시하도록 색 눈금의 형식을 지정합니다. 새 범례에서 연간 판매량 범위를 표시합니다. 상점이 없는 군의 경우 연결된 데이터가 없음을 표시하기 위해 색을 사용하지 않습니다.  
   
-### <a name="Relationship"></a>6a. 공간 데이터와 분석 데이터 간의 관계 만들기  
+### <a name="6a-build-a-relationship-between-spatial-and-analytical-data"></a><a name="Relationship"></a>6a. 공간 데이터와 분석 데이터 간의 관계 만들기  
 분석 데이터에 따른 색으로 군 모양을 변경하려면 먼저 분석 데이터를 공간 데이터와 연결해야 합니다. 이 자습서에서는 일치시킬 군 이름을 사용합니다. 
   
 1.  디자인 뷰로 전환합니다.  
@@ -355,7 +355,7 @@ ms.locfileid: "63041668"
   
 상점이 있는 각 군은 마법사에서 선택한 스타일의 색상표를 기반으로 하는 색으로 표시됩니다. 다른 군은 회색으로 표시됩니다.  
   
-### <a name="ColorRules"></a>6b. 다각형에 대한 색 규칙 지정  
+### <a name="6b-specify-color-rules-for-polygons"></a><a name="ColorRules"></a>6b. 다각형에 대한 색 규칙 지정  
 상점 판매량을 기반으로 각 군의 색을 변경하는 규칙을 만들려면 범위 값, 표시할 범위 내의 하위 범위 수 및 사용할 색을 지정해야 합니다.  
   
 #### <a name="to-specify-color-rules-for-all-polygons-that-have-associated-data"></a>연결된 데이터가 있는 모든 다각형에 대한 색 규칙을 지정하려면  
@@ -398,7 +398,7 @@ ms.locfileid: "63041668"
   
     색 눈금에 빨강, 주황, 노랑 및 녹색의 네 가지 색이 표시됩니다. 각 색은 군별 판매량에 따라 자동으로 계산되는 판매량 범위를 나타냅니다.  
   
-### <a name="ColorScale"></a>6c. 색 눈금의 데이터 형식을 통화로 지정  
+### <a name="6c-format-the-data-in-the-color-scale-as-currency"></a><a name="ColorScale"></a>6c. 색 눈금의 데이터 형식을 통화로 지정  
 기본적으로 데이터는 일반 형식을 사용하지만 이 섹션에서는 사용자 지정 형식을 적용합니다.  
   
 1. 디자인 뷰로 전환합니다.  
@@ -409,7 +409,7 @@ ms.locfileid: "63041668"
   
     색 눈금에 각 범위에 대한 통화 형식으로 연간 판매량이 표시됩니다.  
   
-### <a name="NewLegend"></a>6d. 범례 제목 추가   
+### <a name="6d-add-a-legend-title"></a><a name="NewLegend"></a>6d. 범례 제목 추가   
   
 1.  색 눈금을 선택한 상태로 속성 창에서 **MapColorScale**속성을 확인합니다. 
   
@@ -423,7 +423,7 @@ ms.locfileid: "63041668"
   
 연결된 상점과 판매량이 있는 군은 색 규칙에 따라 표시되고 판매량이 없는 군은 무색으로 표시됩니다.  
   
-### <a name="NoData"></a>6f. 데이터가 없는 군의 색 변경  
+### <a name="6f-change-color-for-counties-with-no-data"></a><a name="NoData"></a>6f. 데이터가 없는 군의 색 변경  
 계층에 있는 모든 지도 요소의 기본 표시 옵션을 설정할 수 있습니다. 색 규칙은 이러한 표시 옵션보다 우선합니다.  
   
 #### <a name="to-set-the-display-properties-for-all-elements-on-a-layer"></a>계층의 모든 요소에 대한 표시 속성을 설정하려면  
@@ -448,7 +448,7 @@ ms.locfileid: "63041668"
   
 연결된 데이터가 없는 군은 회색-파란색으로 표시됩니다. 연결된 분석 데이터가 있는 군만 지정한 색 규칙에 따라 **빨강** ~ **녹색** 으로 표시됩니다.  
   
-## <a name="CustomPoint"></a>7. 사용자 지정 점 추가  
+## <a name="7-add-a-custom-point"></a><a name="CustomPoint"></a>7. 사용자 지정 점 추가  
 아직 건설되지 않은 새 상점을 나타내기 위해 이 섹션에서는 **별 모양** 표식 유형으로 점을 지정합니다.  
   
 1.  디자인 뷰로 전환합니다.  
@@ -491,7 +491,7 @@ ms.locfileid: "63041668"
 
 ![report-builder-map-custom-point-new-store](../reporting-services/media/report-builder-map-custom-point-new-store.png)
   
-## <a name="CenterView"></a>8. 지도 중심 및 크기 조정   
+## <a name="8-center-and-resize-the-map"></a><a name="CenterView"></a>8. 지도 중심 및 크기 조정   
 이 섹션에서는 지도 중심을 변경하고 방법과 확대/축소 수준을 변경하는 또 다른 방법을 알아봅니다.  
  
 1.  디자인 뷰로 전환합니다.  
@@ -512,7 +512,7 @@ ms.locfileid: "63041668"
   
 디자인 뷰의 화면과 보기에 지도가 예제 데이터를 기반으로 표시됩니다. 렌더링된 보고서에서는 지도 보기가 지정한 보기의 가운데에 표시됩니다.  
   
-## <a name="Title"></a>9. 보고서 제목 추가  
+## <a name="9-add-a-report-title"></a><a name="Title"></a>9. 보고서 제목 추가  
   
 1.  디자인 뷰로 전환합니다.
   
@@ -522,7 +522,7 @@ ms.locfileid: "63041668"
   
 이 제목은 보고서 맨 위에 나타납니다. 페이지 머리글이 정의되지 않았을 때 보고서 본문의 맨 위에 있는 항목은 보고서 머리글에 해당합니다.  
   
-## <a name="Save"></a>10. 보고서 저장  
+## <a name="10-save-the-report"></a><a name="Save"></a>10. 보고서 저장  
   
 1.  디자인 뷰 또는 미리 보기에서 **파일** 메뉴 > **다른 이름으로 저장**을 선택합니다.
  

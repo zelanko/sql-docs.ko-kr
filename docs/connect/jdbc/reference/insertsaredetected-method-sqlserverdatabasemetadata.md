@@ -16,16 +16,16 @@ ms.assetid: f296cc42-9d26-48c3-a360-bcf51c31f7fb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d2889af814e7c7122c9784f5ac9a70421731c09
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977868"
 ---
 # <a name="insertsaredetected-method-sqlserverdatabasemetadata"></a>insertsAreDetected 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 [rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) 메서드를 호출하여 표시된 행 삽입을 검색할 수 있는지 여부를 검색합니다.  
+  [SQLServerResultSet](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) 클래스의 [rowInserted](../../../connect/jdbc/reference/sqlserverresultset-class.md) 메서드를 호출하여 표시된 행 삽입을 검색할 수 있는지 여부를 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   

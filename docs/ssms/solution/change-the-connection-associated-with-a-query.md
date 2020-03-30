@@ -16,10 +16,10 @@ ms.assetid: 7b8851b8-eccb-4e6c-944a-68fa90fc5870
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: bc8164e2c47c1224610183274c460ede9df00ad5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75251973"
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>쿼리와 연관된 연결 변경

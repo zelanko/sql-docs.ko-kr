@@ -11,20 +11,20 @@ ms.assetid: 13a95ebb-996c-4713-a1bd-5834fe22a334
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f59c7010875824b65d6b7d12129056f02537e908
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028419"
 ---
 # <a name="caching-result-set-data-sample"></a>결과 집합 데이터 캐싱 샘플
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-이 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 샘플 애플리케이션에서는 데이터베이스에서 대량의 데이터 집합을 검색한 후 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) 메서드를 사용하여 클라이언트에서 캐시할 데이터 행의 수를 제어하는 방법을 보여 줍니다.
+이 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 샘플 애플리케이션에서는 데이터베이스에서 대량의 데이터 집합을 검색한 후 [SQLServerResultSet](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) 개체의 [setFetchSize](../../connect/jdbc/reference/sqlserverresultset-class.md) 메서드를 사용하여 클라이언트에서 캐시할 데이터 행의 수를 제어하는 방법을 보여 줍니다.
 
 > [!NOTE]  
-> 클라이언트에서 캐시된 행의 수를 제한하는 것은 결과 집합에 포함된 전체 행 수를 제한한다는 의미가 아닙니다. 결과 집합에 포함된 전체 행 수를 제어하려면 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 개체와 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 개체에서 상속된 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 개체의 [setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) 메서드를 사용합니다.
+> 클라이언트에서 캐시된 행의 수를 제한하는 것은 결과 집합에 포함된 전체 행 수를 제한한다는 의미가 아닙니다. 결과 집합에 포함된 전체 행 수를 제어하려면 [SQLServerPreparedStatement](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) 개체와 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 개체에서 상속된 [SQLServerStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 개체의 [setMaxRows](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 메서드를 사용합니다.
 
 클라이언트에서 캐시되는 행 수에 제한을 설정하려면 우선 Statement 개체를 만들 때 사용할 커서 유형을 구체적으로 지정하여 Statement 개체 중 하나를 만들 때 서버측 커서를 제일 먼저 사용해야 합니다. 예를 들어 JDBC 드라이버에서 제공하는 커서 유형인 TYPE_SS_SERVER_CURSOR_FORWARD_ONLY는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 사용되는 빨리 감기 및 읽기 전용 서버측 커서입니다.
 

@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 206bd656c1300a6436298c426697f6c1d47a9e86
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028377"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 데이터 검색 및 분류
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-이 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 샘플 애플리케이션에서는 결과 집합 getter 메서드를 사용하여 해당 정보가 포함된 테이블에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 'SQL 데이터 검색 및 분류 정보'를 검색하는 방법을 보여 줍니다.
+이 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 샘플 애플리케이션에서는 결과 집합 getter 메서드를 사용하여 해당 정보가 포함된 테이블에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 'SQL 데이터 검색 및 분류 정보'를 검색하는 방법을 보여줍니다.
   
 이 샘플의 코드 파일 이름은 DataDiscoveryAndClassification.java이며 다음과 같은 위치에 있습니다.  
 

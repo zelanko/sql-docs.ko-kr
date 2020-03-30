@@ -13,10 +13,10 @@ ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e5fd12b1de0f2c1cb792d5d764d6fb5917cc837
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68006769"
 ---
 # <a name="example-retrieving-product-model-information-as-xml"></a>예제: 제품 모델 정보를 XML로 검색

@@ -15,10 +15,10 @@ ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a1630b872e3a445b082c6ceca98d45cf225cdaf7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75252394"
 ---
 # <a name="cells-rows--columns-in-a-tablix-data-region-report-builder-and-ssrs"></a>테이블릭스 데이터 영역의 셀, 행 및 열(보고서 작성기 및 SSRS)
@@ -88,7 +88,7 @@ ms.locfileid: "75252394"
   
  정보 데이터가 표시되는 테이블릭스 데이터 영역에서 세부 정보 그룹은 가장 안쪽에 있는 자식 그룹입니다. 세부 정보 그룹에 추가한 행은 이 테이블릭스 데이터 영역에 연결된 데이터 세트에 대한 쿼리 결과 집합에서 행마다 한 번씩 반복됩니다. 다음 그림에서는 렌더링된 보고서의 마지막 페이지를 보여 줍니다. 이 그림에서 최근 주문에 대한 마지막 정보 행과 부분합 행을 볼 수 있습니다.  
   
- ![미리 보기, 그룹 합계와 마지막 행이 있는 테이블](../../reporting-services/report-design/media/rs-basictablegroupstotalscolorpreviewbottom.gif "미리 보기, 그룹 합계와 마지막 행이 있는 테이블")  
+ ![미리 보기, 그룹 합계가 있는 테이블, 마지막 행](../../reporting-services/report-design/media/rs-basictablegroupstotalscolorpreviewbottom.gif "미리 보기, 그룹 합계가 있는 테이블, 마지막 행")  
   
  테이블릭스 데이터 영역의 각 열에 대해서도 동일한 원칙이 적용됩니다. 예를 들어 열은 각 열 그룹 내부 또는 외부에 있으며 합계를 표시하기 위해 그룹 외부에 열을 추가합니다.  
   

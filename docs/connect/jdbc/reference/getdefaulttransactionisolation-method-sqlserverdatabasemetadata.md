@@ -16,10 +16,10 @@ ms.assetid: 85b867ed-de5a-4879-b3f8-bce897879077
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e2349dbe193834385869f86f87fe4284a967284
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983694"
 ---
 # <a name="getdefaulttransactionisolation-method-sqlserverdatabasemetadata"></a>getDefaultTransactionIsolation 메서드(SQLServerDatabaseMetaData)
@@ -43,7 +43,7 @@ public int getDefaultTransactionIsolation()
 ## <a name="remarks"></a>설명  
  이 getDefaultTransactionIsolation 메서드는 java.sql.DatabaseMetaData 인터페이스의 getDefaultTransactionIsolation 메서드에 의해 지정됩니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스와 함께 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]를 사용할 경우 이 메서드는 TRANSACTION_READ_COMMITTED의 값이나 **int** 값 2를 반환합니다.  
+ [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 데이터베이스와 함께 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용할 경우 이 메서드는 TRANSACTION_READ_COMMITTED의 값이나 **int** 값 2를 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

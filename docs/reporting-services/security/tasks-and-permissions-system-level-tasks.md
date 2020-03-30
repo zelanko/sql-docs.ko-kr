@@ -11,10 +11,10 @@ ms.assetid: 7023b388-40b2-4590-b227-115cf380a1e7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0f7ca906c8689c1bf8f40e79875acff5b7ab7c70
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570295"
 ---
 # <a name="tasks-and-permissions---system-level-tasks"></a>작업 및 사용 권한 - 시스템 수준의 작업

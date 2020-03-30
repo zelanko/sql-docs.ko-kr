@@ -18,10 +18,10 @@ ms.assetid: 16c21dec-6b46-4497-9a0c-1b0f2b6ab8fc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6fb059d867a7a3448e5a842929df48ad009f2518
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198480"
 ---
 # <a name="report-server-web-service"></a>보고서 서버 웹 서비스
@@ -31,7 +31,7 @@ ms.locfileid: "79198480"
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK를 사용하여 애플리케이션을 개발합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]을(를) 사용하여 웹 서비스 애플리케이션 작성에 자세한 내용은 [웹 서비스 및 .NET Framework를 사용하여 애플리케이션 작성](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)을 참조하세요.  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스크립트 환경인 **rs** 유틸리티(RS.exe)를 사용하여 애플리케이션을 개발합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 스크립트를 사용하여 모든 보고서 서버 웹 서비스 작업을 실행할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 스크립팅에 대한 자세한 내용은 [rs.exe 유틸리티 및 웹 서비스를 사용한 스크립팅](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)을 참조하세요.  
+-   **스크립트 환경인**rs[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 유틸리티(RS.exe)를 사용하여 애플리케이션을 개발합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 스크립트를 사용하여 모든 보고서 서버 웹 서비스 작업을 실행할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 스크립팅에 대한 자세한 내용은 [rs.exe 유틸리티 및 웹 서비스를 사용한 스크립팅](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)을 참조하세요.  
   
 -   SOAP 사용 개발 도구를 사용하여 애플리케이션을 개발합니다. 자세한 내용은 [Reporting Services에서 SOAP의 역할](../../reporting-services/report-server-web-service/the-role-of-soap-in-reporting-services.md)을 참조하세요.  
   
@@ -63,7 +63,7 @@ Reporting Services 사용 가능한 웹 서비스 개발 옵션
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 5.5 이상이 설치되어 있고 인터넷으로 보고서 서버에 연결하여 액세스할 수 있어야 합니다.  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션을 개발하고 배포하려면 컴퓨터에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK가 설치되어 있어야 합니다.  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 애플리케이션을 개발하고 배포하려면 컴퓨터에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK가 설치되어 있어야 합니다.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 자세히 알고 있어야 합니다.  
   

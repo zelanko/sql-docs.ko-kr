@@ -11,10 +11,10 @@ ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a77d0b930b15d287a010e141c256c9bf311dc303
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081796"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>보고서 포함된 데이터 세트 및 공유 데이터 세트(보고서 작성기 및 SSRS)
@@ -51,7 +51,7 @@ ms.locfileid: "77081796"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Overview"></a> 보고서 데이터 세트 및 쿼리 이해  
+##  <a name="understanding-report-datasets-and-queries"></a><a name="Overview"></a> 보고서 데이터 세트 및 쿼리 이해  
  보고서 데이터 세트에는 외부 데이터 원본에 대해 실행되며 검색할 데이터를 지정하는 쿼리 명령이 들어 있습니다. 쿼리 명령을 작성하려면 외부 데이터 원본용 데이터 확장 프로그램에 연결된 쿼리 디자이너를 사용합니다. 쿼리 디자이너에서 쿼리 명령을 실행하고 결과 집합을 확인할 수 있습니다. 결과 집합은 열 이름이 있으며 각 행에 같은 수의 값이 포함된 사각형 행 집합입니다. *비정형 계층*이라고도 하는 계층적 데이터는 지원되지 않습니다. 열 이름은 데이터 세트 필드 목록으로 보고서 정의에 저장됩니다.  
   
  보고서에 데이터 세트를 추가한 후 보고서 데이터 창의 필드 컬렉션에 있는 필드를 끌어 보고서 레이아웃을 디자인하는 데 사용하는 테이블, 차트 및 기타 보고서 항목에 놓을 수 있습니다. 필드 작업에 대한 자세한 내용은 [데이터 세트 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)을 참조하세요.  
@@ -111,7 +111,7 @@ ms.locfileid: "77081796"
   
  .sql  및 .rdl  파일 유형만 지원됩니다. MDX(Multidimensional  Expression)  쿼리,  DMX(데이터 마이닝 예측)  쿼리 및 모델 쿼리(SMQL)는 연결된 쿼리 디자이너에서만 생성할 수 있습니다.  
   
-##  <a name="Compare"></a> 공유 데이터 세트와 포함된 데이터 세트 비교 및 만들기  
+##  <a name="comparing-and-creating-shared-datasets-and-embedded-datasets"></a><a name="Compare"></a> 공유 데이터 세트와 포함된 데이터 세트 비교 및 만들기  
  포함된 데이터 세트는 보고서 또는 게시된 보고서 파트에서 정의됩니다. 포함된 데이터 세트를 변경하면 해당 보고서 또는 보고서 파트에만 영향을 줍니다.  
   
  공유 데이터 세트는 보고서 서버 또는 SharePoint 사이트에서 정의되고, 공유 데이터 원본을 기반으로 하며, 여러 보고서 및 보고서 파트에서 사용할 수 있습니다. 공유 데이터 세트 정의를 변경하면 해당 데이터 세트를 사용하는 모든 보고서 및 보고서 파트에 영향을 줍니다.  
@@ -149,9 +149,9 @@ ms.locfileid: "77081796"
 |필드|쿼리 명령의 필드<br /><br /> 데이터 세트 정의의 일부가 아닌 계산 필드|필드를 볼 수 있지만 변경할 수는 없음<br /><br /> 필드 컬렉션은 보고서에 공유 데이터 세트를 추가할 때의 쿼리를 기반으로 정적입니다. 업데이트하려면 **데이터 세트 속성** 대화 상자에서 **필드 새로 고침**을 클릭합니다. 실제 필드 컬렉션은 정의의 현재 쿼리가 반환하는 필드 컬렉션입니다.<br /><br /> 계산 필드 추가|  
 |데이터 세트|대/소문자 구분과 같은 데이터 옵션|인스턴스의 데이터 옵션 무시|  
   
- 데이터 세트를 만드는 방법은 [Reporting Services 설명서](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)에서 [공유 데이터 세트 또는 포함된 데이터 세트 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) 및 [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)를 참조하세요.  
+ 데이터 세트를 만드는 방법은 [Reporting Services 설명서](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)에서 [공유 데이터 세트 또는 포함된 데이터 세트 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/tools/reporting-services-tools.md) 및 [Reporting Services 도구](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)를 참조하세요.  
   
-##  <a name="SortGroupFilter"></a> 데이터 세트의 데이터 필터링,  정렬 및 그룹화  
+##  <a name="filtering-sorting-and-grouping-data-in-a-dataset"></a><a name="SortGroupFilter"></a> 데이터 세트의 데이터 필터링,  정렬 및 그룹화  
  데이터 세트의 데이터는 외부 데이터 원본에 대해 쿼리 명령을 실행한 결과로 반환되는 생성됩니다. 데이터 확장 프로그램의 쿼리 명령 구문에 따라 데이터 정렬 또는 그룹화 가능 여부가 결정됩니다. 보고서에서 데이터를 검색하기 전에 쿼리에서 정렬 및 그룹화가 수행됩니다. 필터링은 보고서에서 데이터를 검색한 후에 수행됩니다.  
   
  자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)를 참조하세요.  
@@ -173,7 +173,7 @@ ms.locfileid: "77081796"
 ### <a name="grouping-data-in-a-dataset"></a>데이터 세트의 데이터 그룹화  
  데이터 세트의 데이터는 그룹화할 수 없습니다. 데이터 세트의 데이터를 집계하려면 데이터가 보고서에 대해 반환되기 전에 집계를 계산하도록 쿼리 명령을 편집할 수 있습니다. 이를 *서버 집계*라고 합니다. 식에서 이러한 값을 미리 계산된 집계로 식별하려면 Aggregate  함수를 사용합니다. 자세한 내용은 [집계 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)를 참조하세요.  
   
-##  <a name="Parameters"></a> 매개 변수 및 데이터 세트 사용  
+##  <a name="using-parameters-and-datasets"></a><a name="Parameters"></a> 매개 변수 및 데이터 세트 사용  
  쿼리 변수가 들어 있는 포함된 데이터 세트 쿼리의 경우 쿼리 매개 변수 및 그에 해당하는 보고서 매개 변수가 자동으로 만들어집니다. 보고서를 실행하면 보고서 매개 변수의 값이 데이터 세트 쿼리 매개 변수에 연결됩니다. 이러한 방식으로 외부 데이터 원본에 대해 실행되는 쿼리 명령은 보고서 매개 변수에 대해 지정되는 값을 포함합니다. 보고서 매개 변수를 사용하면 보고서에 표시할 데이터를 선택할 수 있습니다. 쿼리 매개 변수와 보고서 매개 변수를 연결하는 방법은 데이터 세트 속성 대화 상자, 매개 변수 페이지에서 볼 수 있습니다.  
   
  공유 데이터 세트의 경우 쿼리 매개 변수는 보고서 서버에서 보고서와 독립적으로 관리할 수 있는 공유 데이터 세트 정의의 일부분입니다. 다음 목록에서는 쿼리 매개 변수 값 지원에 대해 설명합니다.  
@@ -195,10 +195,10 @@ ms.locfileid: "77081796"
 ### <a name="displaying-hidden-datasets"></a>숨겨진 데이터 세트 표시  
  일부 다차원 데이터 원본에 대해 매개 변수가 있는 쿼리를 작성할 때 해당 매개 변수에 대해 올바른 값을 제공하는 데이터 세트가 자동으로 만들어집니다. 일부 쿼리 디자이너에서는 필터를 지정한 다음 매개 변수 만들기 옵션을 선택하여 이 작업을 수행합니다. 기본적으로 이러한 데이터 세트는 보고서 데이터 창에 나타나지 않지만 표시할 수는 있습니다. 자세한 내용은 [다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 세트 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)을 참조하세요.  
   
-##  <a name="Maps"></a> 지도 및 데이터 세트 사용  
+##  <a name="using-maps-and-datasets"></a><a name="Maps"></a> 지도 및 데이터 세트 사용  
  보고서에 지도를 포함하는 경우에는 공간 데이터를 제공해야 합니다. 공간 데이터는 보고서 데이터 세트, 지도 갤러리의 지도 또는 ESRI 셰이프 파일에서 가져올 수 있습니다. 보고서 또는 ESRI 셰이프 파일에서 가져온 공간 데이터는 보고서 데이터 창에 데이터 세트로 표시되지 않습니다. 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)를 참조하세요.  
   
-##  <a name="Multiple"></a> 여러 데이터 세트의 데이터 표시  
+##  <a name="displaying-data-from-multiple-datasets"></a><a name="Multiple"></a> 여러 데이터 세트의 데이터 표시  
  보고서에는 일반적으로 두 개 이상의 데이터 세트가 포함되어 있습니다. 다음 목록에서는 보고서에서 데이터 세트를 사용하는 방법을 설명합니다.  
   
 -   별도의 데이터 영역을 사용하여 각 데이터 세트의 데이터를 표시합니다. 자세한 내용은 [데이터 영역 및 지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)를 참조하세요.  
@@ -211,10 +211,10 @@ ms.locfileid: "77081796"
   
 -   여러 데이터 세트의 정보 데이터를 단일 데이터 영역에 표시할 수 없습니다. 그러나 여러 데이터 세트에 대한 집계 또는 기본 제공 함수 값은 데이터 영역 내에 표시할 수 있습니다. 자세한 내용은 [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)를 참조하세요. 여러 데이터 세트의 정보 데이터를 하나의 데이터 영역에 결합해야 하는 경우 데이터를 단일 데이터 세트로 검색하도록 쿼리를 다시 작성해야 합니다.  
   
-##  <a name="NoRows"></a> 데이터 행을 사용할 수 없을 때 메시지 표시  
+##  <a name="displaying-a-message-when-no-rows-of-data-are-available"></a><a name="NoRows"></a> 데이터 행을 사용할 수 없을 때 메시지 표시  
  보고서를 처리하는 동안 데이터 세트에 대한 쿼리를 실행하면 결과 집합에 행이 없을 수 있습니다. 렌더링된 보고서에서 빈 데이터 세트에 연결된 데이터 영역은 빈 데이터 영역으로 표시됩니다. 렌더링된 보고서에서 빈 데이터 영역을 표시하는 대신 텍스트를 지정하여 표시할 수 있습니다. 모든 데이터 세트에 대한 쿼리에서 런타임에 생성된 데이터가 없는 경우 하위 보고서에 사용할 메시지도 지정할 수 있습니다. 자세한 내용은 [데이터 영역에 대한 데이터 없음 메시지 설정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)을 참조하세요.  
   
-##  <a name="Options"></a> 데이터 세트 옵션 설정  
+##  <a name="setting-dataset-options"></a><a name="Options"></a> 데이터 세트 옵션 설정  
  국가별 데이터를 지원하는 데이터 원본의 경우 정렬 순서, 국가별 문자 속성 및 대/소문자 구분에 영향을 주는 데이터 세트의 속성을 조정해야 할 수 있습니다. 이러한 속성에는 대/소문자,  일본어 가나,  전자,  악센트,  데이터 정렬 등이 있습니다. 이러한 속성을 설정하는 방법은 [데이터 세트 속성 대화 상자, 옵션&#40;보고서 작성기&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

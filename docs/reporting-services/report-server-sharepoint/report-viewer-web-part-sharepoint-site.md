@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2ec6a87467f2ec69164827e0a1ce76ad95180377
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77256813"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site---reporting-services"></a>SharePoint 사이트의 보고서 뷰어 웹 파트 - Reporting Services
@@ -26,7 +26,7 @@ ms.locfileid: "77256813"
 
 보고서 뷰어 웹 파트는 SharePoint 제품용 Reporting Services 추가 기능의 일환으로 사용할 수 있었습니다. 웹 파트는 SharePoint 통합 모드의 보고서 서버에 대한 것이었습니다. SharePoint 통합 모드는 SQL Server 2016 이후 사용되지 않았습니다.
 
-SQL Server 2017부터 Reporting Services의 설치 모드는 **기본 모드** 하나뿐입니다. *rs:Embed=true* URL 매개 변수를 사용하는 페이지 뷰어 웹 파트를 사용하여 모든 보고서 형식을 포함할 수 있습니다. SharePoint 페이지에 보고서를 포함하는 것은 고객이 요청한 통합 스토리이며 업데이트된 보고서 뷰어 웹 파트를 통해 페이지가 매겨진 보고서에 대해 이 시나리오가 지원됩니다.
+SQL Server 2017을 시작으로 Reporting Services: **기본 모드**에 대해 하나의 설치 모드만이 있습니다. *rs:Embed=true* URL 매개 변수를 사용하는 페이지 뷰어 웹 파트를 사용하여 모든 보고서 형식을 포함할 수 있습니다. SharePoint 페이지에 보고서를 포함하는 것은 고객이 요청한 통합 스토리이며 업데이트된 보고서 뷰어 웹 파트를 통해 페이지가 매겨진 보고서에 대해 이 시나리오가 지원됩니다.
 
 페이지 뷰어 웹 파트가 페이지가 매겨진 보고서를 SharePoint 페이지에 포함하는 데 충분한 반면 업데이트된 보고서 뷰어 웹 파트는 추가 기능을 제공합니다.
 

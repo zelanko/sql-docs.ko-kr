@@ -9,10 +9,10 @@ ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cad68b0b99479b074e04760f419e12ec9837aac3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080911"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>외부 항목에 대한 경로 지정(보고서 작성기 및 SSRS)
@@ -37,9 +37,9 @@ ms.locfileid: "77080911"
   
 -   **항목에 대한 전체 경로.**  
   
-    -   **보고서 서버:** 경로는 홈 폴더인 **/** 에서 시작합니다. 예를 들면 /Reports/AllSubreports/Subreport1과 같은 형태입니다.  
+    -   **보고서 서버에서:** 경로는 홈 폴더인 **/** 부터 시작합니다. 예를 들면 /Reports/AllSubreports/Subreport1과 같은 형태입니다.  
   
-    -   **SharePoint 사이트:** 항목의 전체 URL 및 파일 확장명 .rdl과 함께 보고서 이름을 식에 지정해야 합니다. `="https://server/site/library/folder/Report1.rdl"`)을 입력합니다.  
+    -   **SharePoint 사이트에서:** 항목의 전체 URL 및 파일 확장명 .rdl과 함께 보고서 이름을 식에 지정해야 합니다. `="https://server/site/library/folder/Report1.rdl"`)을 입력합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [외부 이미지 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)   

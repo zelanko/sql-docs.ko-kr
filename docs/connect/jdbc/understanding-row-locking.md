@@ -11,10 +11,10 @@ ms.assetid: 63c76a2f-f2b9-461f-8904-acbda0169ac3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bcd18baf401378605abf0d53e203d0a3745ee887
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027331"
 ---
 # <a name="understanding-row-locking"></a>행 잠금 이해
@@ -29,7 +29,7 @@ ms.locfileid: "69027331"
 잠금은 트랜잭션 무결성 및 데이터베이스 동시성을 보장하는 데 사용됩니다. 잠금은 다른 사용자가 변경하고 있는 데이터를 렌더링할 수 없도록 하고 여러 사용자가 동일한 데이터를 동시에 변경하지 못하도록 합니다. 잠금 기능을 사용하지 않으면 데이터베이스 내의 데이터가 논리적으로 올바르지 않게 되고, 해당 데이터에 대해 실행한 쿼리에서 예상치 못한 결과가 발생할 수 있습니다.
 
 > [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 행 잠금에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "[!INCLUDE[ssDE](../../includes/ssde_md.md)]에서의 잠금"을 참조하세요.
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 행 잠금에 대한 자세한 내용은 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 온라인 설명서의 "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서의 잠금"을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -9,10 +9,10 @@ ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041889"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>자습서: 보고서에 KPI 추가(보고서 작성기)
@@ -32,7 +32,7 @@ KPI는 비즈니스 측면에서 중요한 측정 가능한 값입니다. 이 �
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
   
-## <a name="Table"></a>1. 테이블 또는 행렬 마법사에서 테이블 보고서 및 데이터 세트 만들기  
+## <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Table"></a>1. 테이블 또는 행렬 마법사에서 테이블 보고서 및 데이터 세트 만들기  
 이 섹션에서는 공유 데이터 원본을 선택하고, 포함된 데이터 세트를 만들고, 테이블에 데이터를 표시합니다.  
  
 ### <a name="to-create-a-table-with-an-embedded-dataset"></a>포함된 데이터 세트로 테이블을 만들려면  
@@ -99,7 +99,7 @@ KPI는 비즈니스 측면에서 중요한 측정 가능한 값입니다. 이 �
 
 11. **다음**을 클릭합니다.  
   
-## <a name="CompleteWizard"></a>2. 마법사에서 데이터 구성 및 레이아웃 선택  
+## <a name="2-organize-data-and-choose-layout-in-the-wizard"></a><a name="CompleteWizard"></a>2. 마법사에서 데이터 구성 및 레이아웃 선택  
 테이블 또는 행렬 마법사는 데이터를 표시할 시작 디자인을 제공합니다. 이 마법사의 미리 보기 창에서는 테이블 또는 행렬 디자인을 완료하기 전에 데이터 그룹화의 결과를 시각화할 수 있습니다.  
   
 ### <a name="to-organize-data-into-groups-and-choose-a-layout"></a>데이터를 그룹으로 구성하고 레이아웃을 선택하려면 
@@ -173,7 +173,7 @@ KPI는 비즈니스 측면에서 중요한 측정 가능한 값입니다. 이 �
  
 ![report-builder-kpi-format-numbers](../reporting-services/media/report-builder-kpi-format-numbers.png)
 
-## <a name="BackgroundColors"></a>3. 배경색을 사용하여 KPI 표시  
+## <a name="3-use-background-colors-to-display-a-kpi"></a><a name="BackgroundColors"></a>3. 배경색을 사용하여 KPI 표시  
 배경색을 보고서 실행 시 계산되는 식으로 설정할 수 있습니다.  
   
 ### <a name="to-display-the-present-state-of-a-kpi-by-using-background-colors"></a>배경색을 사용하여 KPI의 현재 상태를 표시하려면  
@@ -198,7 +198,7 @@ KPI는 비즈니스 측면에서 중요한 측정 가능한 값입니다. 이 �
 
 ![report-builder-kpi-colors](../reporting-services/media/report-builder-kpi-colors.png)
   
-## <a name="Gauge"></a>4. 계기를 사용하여 KPI 표시  
+## <a name="4-display-a-kpi-by-using-a-gauge"></a><a name="Gauge"></a>4. 계기를 사용하여 KPI 표시  
 계기는 데이터 세트의 단일 값을 표시합니다. 이 자습서에서는 가로 선형 계기를 사용하는데, 이 계기가 작고 테이블 셀 내에서 사용되는 경우에도 모양이 읽기 쉽고 단순하기 때문입니다. 자세한 내용은 [계기&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)를 참조하세요.  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-a-gauge"></a>계기를 사용하여 KPI의 현재 상태를 표시하려면  
@@ -253,7 +253,7 @@ KPI는 비즈니스 측면에서 중요한 측정 가능한 값입니다. 이 �
   
 ![report-builder-linear-kpi](../reporting-services/media/report-builder-linear-kpi.png) 
   
-## <a name="Indicator"></a>5. 표시기를 사용하여 KPI 표시  
+## <a name="5-display-a-kpi-by-using-an-indicator"></a><a name="Indicator"></a>5. 표시기를 사용하여 KPI 표시  
 표시기는 데이터 값을 한 눈에 파악할 수 있는 작고 간단한 계기입니다. 크기와 단순함으로 인해 표시기는 흔히 테이블과 행렬에 사용됩니다. 자세한 내용은 [표시기&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)를 참조하세요.  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-an-indicator"></a>표시기를 사용하여 KPI의 현재 상태를 표시하려면  
@@ -288,7 +288,7 @@ KPI는 비즈니스 측면에서 중요한 측정 가능한 값입니다. 이 �
 
 ![report-builder-kpi-stoplight](../reporting-services/media/report-builder-kpi-stoplight.png)
   
-## <a name="Title"></a>6. 보고서 제목 추가  
+## <a name="6-add-a-report-title"></a><a name="Title"></a>6. 보고서 제목 추가  
 보고서 제목은 보고서 맨 위에 나타납니다. 보고서 제목을 보고서 머리글에 배치하거나, 보고서 머리글이 사용되지 않을 경우 보고서 본문의 맨 위에 있는 입력란에 배치할 수 있습니다. 이 섹션에서는 보고서 본문의 맨 위에 자동으로 배치되는 입력란을 사용합니다.  
   
 글꼴 스타일, 크기 및 색을 텍스트의 각 문자나 구 단위로 다르게 적용하여 텍스트를 더 보기 좋게 꾸밀 수 있습니다. 자세한 내용은 [입력란의 텍스트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)을 참조하세요.  
@@ -303,7 +303,7 @@ KPI는 비즈니스 측면에서 중요한 측정 가능한 값입니다. 이 �
   
 4.  **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
-## <a name="Save"></a>7. 보고서 저장  
+## <a name="7-save-the-report"></a><a name="Save"></a>7. 보고서 저장  
 보고서 서버 또는 컴퓨터에 보고서를 저장합니다. 보고서를 보고서 서버에 저장하지 않을 경우 보고서 파트 및 하위 보고서와 같은 여러 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능을 사용할 수 없습니다.  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>보고서를 보고서 서버에 저장하려면  

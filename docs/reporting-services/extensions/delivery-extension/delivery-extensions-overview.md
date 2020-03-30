@@ -12,10 +12,10 @@ ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 69dce8309f96988a9d339aefbb684116c0df2eb4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63193771"
 ---
 # <a name="delivery-extensions-overview"></a>배달 확장 프로그램 개요
@@ -51,7 +51,7 @@ Reporting Services 배달 확장 프로그램 검토 및 업데이트 프로그�
   
 -   보고서 관리자에 대한 고유의 구독 사용자 인터페이스를 구현하려는 경우에는 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 및 웹 컨트롤에 대해 잘 알고 있어야 합니다.  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET과 같은 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 언어에 대한 개발 경험이 있어야 합니다.  
+-   [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Visual C# 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET과 같은 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 언어에 대한 개발 경험이 있어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [배달 확장 프로그램 구현](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   

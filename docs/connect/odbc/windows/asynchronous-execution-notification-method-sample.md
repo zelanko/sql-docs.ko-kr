@@ -11,10 +11,10 @@ ms.assetid: 55c51fff-119d-445f-8732-c1569966e559
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d256f65c191ff0f9ed8623a9ecf345eb707d6032
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68008505"
 ---
 # <a name="asynchronous-execution-notification-method-sample"></a>비동기 실행(알림 방법) 샘플

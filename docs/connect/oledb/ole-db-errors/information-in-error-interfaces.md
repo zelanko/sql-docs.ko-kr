@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4ff18864e37575f78d129abb1569b0ffe83d4685
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994936"
 ---
 # <a name="information-in-error-interfaces"></a>오류 인터페이스의 정보
@@ -56,7 +56,7 @@ ms.locfileid: "67994936"
 |매개 변수|Description|  
 |---------------|-----------------|  
 |*pbstrSQLState*|오류의 SQLSTATE 값을 반환합니다. SQLSTATE 값은 SQL-92, ODBC 및 ISO SQL, API 사양에서 정의됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 OLE DB Driver for SQL Server는 구현별 SQLSTATE 값을 정의하지 않았습니다.|  
-|*plNativeError*|사용 가능한 경우 **master.dbo.sysmessages**의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류 번호를 반환합니다. OLE DB Driver for SQL Server 데이터 원본을 성공적으로 초기화하면 원시 오류를 사용할 수 있습니다. 시도하기 전에 OLE DB Driver for SQL Server는 항상 0을 반환합니다.|  
+|*plNativeError*|사용 가능한 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]master.dbo.sysmessages**의**  오류 번호를 반환합니다. OLE DB Driver for SQL Server 데이터 원본을 성공적으로 초기화하면 원시 오류를 사용할 수 있습니다. 시도하기 전에 OLE DB Driver for SQL Server는 항상 0을 반환합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [Errors](../../oledb/ole-db-errors/errors.md)  

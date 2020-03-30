@@ -9,10 +9,10 @@ ms.assetid: 957e7091-e08f-48d2-9506-872227ae8b20
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 916bf1dc2bf861b46b01a069b6fbe15768e4bc1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081357"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>SQL Server 연결 형식(SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "77081357"
   
  이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)을 참조하세요.  
   
-##  <a name="Connection"></a> 연결 문자열  
+##  <a name="connection-string"></a><a name="Connection"></a> 연결 문자열  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결할 때는 서버에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 데이터베이스 개체에 연결하게 됩니다. 데이터베이스에는 여러 개의 테이블, 뷰 및 저장 프로시저가 있는 스키마가 여러 개 있을 수 있습니다. 쿼리 디자이너에서 사용할 데이터베이스 개체를 지정합니다. 연결 문자열에 데이터베이스를 지정하지 않을 경우 데이터베이스 관리자가 할당한 기본 데이터베이스에 연결됩니다.  
   
  데이터 원본 연결에 사용할 자격 증명 및 연결 정보는 데이터베이스 관리자에게 문의하십시오. 다음 연결 문자열 예에서는 로컬 클라이언트에 있는 예제 데이터베이스를 지정합니다.  
@@ -31,9 +31,9 @@ ms.locfileid: "77081357"
 Data Source=<server>;Initial Catalog=AdventureWorks  
 ```  
   
- 연결 문자열 예제에 대한 자세한 내용은 [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)를 참조하세요.  
+ 연결 문자열 예제에 대한 자세한 내용은 [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)를 참조하십시오.  
   
-##  <a name="Credentials"></a> 자격 증명  
+##  <a name="credentials"></a><a name="Credentials"></a> 자격 증명  
  쿼리를 실행하거나 보고서를 로컬로 미리 보거나 보고서 서버의 보고서를 미리 보려면 자격 증명이 필요합니다.  
   
  보고서를 게시한 후 보고서를 보고서 서버에서 실행할 때 데이터를 검색할 수 있는 권한이 유효하도록 데이터 원본에 대한 자격 증명을 변경해야 할 수도 있습니다.  
@@ -51,7 +51,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
  자세한 내용은 [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 또는 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.  
   
   
-##  <a name="Query"></a> 쿼리  
+##  <a name="queries"></a><a name="Query"></a> 쿼리  
  쿼리는 보고서 데이터 세트에 대해 검색할 데이터를 지정합니다. 쿼리 결과 집합의 열은 데이터 세트의 필드 컬렉션을 채웁니다. 보고서는 쿼리가 검색하는 첫 번째 결과 집합만 처리합니다.  
   
  기본적으로 그래픽 쿼리 디자이너에 나타낼 수 있는 새 쿼리를 만들거나 기존 쿼리를 열 경우 관계형 쿼리 디자이너를 사용할 수 있습니다. 다음과 같은 방법으로 쿼리를 지정할 수 있습니다.  
@@ -70,7 +70,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
   
 -   [Stored Procedure](#QueryStoredProcedure) 저장 프로시저 목록에서 선택합니다.  
   
-###  <a name="QueryText"></a> Text 쿼리 유형 사용  
+###  <a name="using-query-type-text"></a><a name="QueryText"></a> Text 쿼리 유형 사용  
  텍스트 기반 쿼리 디자이너에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 입력하여 데이터 세트의 데이터를 정의할 수 있습니다. 예를 들어 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리는 마케팅 지원을 담당하는 모든 직원의 이름을 선택합니다.  
   
 ```  
@@ -86,7 +86,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'   
 ```  
   
- 쿼리를 실행하고 결과 집합을 표시하려면 도구 모음에서 **실행** 단추(**!**)를 클릭합니다.  
+ 쿼리를 실행하고 결과 집합을 표시하려면 도구 모음에서 **실행** 단추( **!** )를 클릭합니다.  
   
  이 쿼리에서 매개 변수를 사용하려면 쿼리 매개 변수를 추가합니다. 예를 들어 WHERE 절을 다음과 같이 변경합니다.  
   
@@ -95,7 +95,7 @@ WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'
  쿼리를 실행하면 쿼리 매개 변수에 해당하는 보고서 매개 변수가 자동으로 만들어집니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [쿼리 매개 변수](#Parameters) 를 참조하십시오.  
   
   
-###  <a name="QueryStoredProcedure"></a> StoredProcedure 쿼리 유형 사용  
+###  <a name="using-query-type-storedprocedure"></a><a name="QueryStoredProcedure"></a> StoredProcedure 쿼리 유형 사용  
  다음 중 한 가지 방법으로 데이터 세트 쿼리에 대해 저장 프로시저를 지정할 수 있습니다.  
   
 -   **데이터 세트 속성** 대화 상자에서 **저장 프로시저** 옵션을 설정합니다. 저장 프로시저 및 테이블 반환 함수 드롭다운 목록에서 원하는 항목을 선택합니다.  
@@ -113,7 +113,7 @@ WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'
  자세한 내용은 [저장 프로시저(데이터베이스 엔진)](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)를 참조하세요.  
   
   
-##  <a name="Parameters"></a> 매개 변수  
+##  <a name="parameters"></a><a name="Parameters"></a> 매개 변수  
  쿼리 텍스트에 입력 매개 변수가 있는 쿼리 변수 또는 저장 프로시저가 포함된 경우 데이터 세트에 대한 해당 쿼리 매개 변수와 보고서에 대한 해당 보고서 매개 변수가 자동으로 생성됩니다. 쿼리 텍스트는 각 쿼리 변수에 대한 DECLARE 문을 포함하지 않아야 합니다.  
   
  예를 들어 다음 SQL 쿼리는 **EmpID**라는 보고서 매개 변수를 만듭니다.  
@@ -124,7 +124,7 @@ SELECT FirstName, LastName FROM HumanResources.Employee E INNER JOIN
 WHERE EmployeeID = (@EmpID)  
 ```  
   
- 보고서 매개 변수는 수정해야 할 수도 있는 기본 속성 값을 사용하여 만들어집니다. 다음은 그 예입니다.   
+ 보고서 매개 변수는 수정해야 할 수도 있는 기본 속성 값을 사용하여 만들어집니다. 다음은 그 예입니다.  
   
 -   기본적으로 각 보고서 매개 변수의 데이터 형식은 **Text**입니다. 기본 데이터의 데이터 형식이 다르면 매개 변수 데이터 형식을 변경해야 합니다.  
   
@@ -133,14 +133,14 @@ WHERE EmployeeID = (@EmpID)
  자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)에 대해 자세히 알아봅니다.  
   
   
-##  <a name="Remarks"></a> 주의  
+##  <a name="remarks"></a><a name="Remarks"></a> 주의  
  OLE DB 또는 ODBC 데이터 원본 유형을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 데이터를 검색할 수도 있습니다. 자세한 내용은 [OLE DB 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md) 또는 [ODBC 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/odbc-connection-type-ssrs.md)을 참조하세요.  
   
 ###### <a name="platform-and-version-information"></a>플랫폼 및 버전 정보  
  플랫폼 및 버전 지원에 대한 자세한 내용은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)을 참조하세요.  
   
   
-##  <a name="HowTo"></a> 방법 도움말 항목  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 방법 도움말 항목  
  이 섹션에서는 데이터 연결, 데이터 원본 및 데이터 세트를 사용하는 방법을 단계별로 설명합니다.  
   
  [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -150,7 +150,7 @@ WHERE EmployeeID = (@EmpID)
  [데이터 세트에 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="Related"></a> 관련 단원  
+##  <a name="related-sections"></a><a name="Related"></a> 관련 단원  
  설명서의 다음 섹션에서는 보고서 데이터에 대한 깊이 있는 개념 정보를 제공하며, 데이터와 관련된 보고서 부분을 정의, 사용자 지정 및 사용하는 방법을 절차적인 측면에서 소개합니다.  
   
  [보고서 데이터 세트&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  

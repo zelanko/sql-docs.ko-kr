@@ -10,17 +10,17 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: fd9ac9ccd0906ee34a66b7144fdd964d05e5f050
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68259361"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Reporting Services의 트리 맵 및 선버스트 차트 
 
 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 트리 맵 및 선버스트 시각화를 사용하면 계층 데이터를 시각적으로 잘 표현할 수 있습니다. 이 문서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서에 트리 맵 또는 선버스트 차트를 추가하는 방법에 대한 개요입니다. 문서에는 시작할 수 있도록 AdventureWorks 샘플 쿼리가 포함되어 있습니다.  
   
-##  <a name="bkmk_treemap_chart"></a> 트리 맵 차트  
+##  <a name="treemap-chart"></a><a name="bkmk_treemap_chart"></a> 트리 맵 차트  
 
 트리 맵 차트는 차트 영역을 데이터 계층의 서로 다른 수준과 상대적 크기를 나타내는 사각형으로 분할합니다. 이 맵은 트렁크로 시작하여 점점 더 작은 분기로 분할하는 트리의 분기와 유사합니다. 각 사각형은 계층의 다음 수준을 나타내는 더 작은 사각형으로 구분됩니다. 최상위 수준 트리 맵 사각형은 차트의 왼쪽 위에 가장 큰 사각형이 있고 가장 작은 사각형이 오른쪽 아래에 있도록 정렬됩니다.  사각형 내에서 더 높은 수준의 다음 수준도 사각형이 왼쪽 위에서 오른쪽 아래로 있도록 정렬됩니다.  
 
@@ -41,11 +41,11 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 트리 
   
 3. 샘플 데이터의 다음 필드를 추가합니다.  
   
-    * **값**: LineTotal
+    * **값:** LineTotal
     * **범주 그룹**(다음 순서로):
         1. CategoryName
         2. SubcategoryName
-    * **계열 그룹**: TerritoryName  
+    * **계열 그룹:** TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -67,7 +67,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 트리 
   
 7. 표시되는 레이블 값 수는 글꼴 크기, 전체 차트 영역의 크기 및 특정 사각형 크기에 의해 영향을 받습니다. 더 많은 레이블을 보려면 **LineTotal**의 **Label Font** 속성을 기본값 **8pt**가 아닌 **10pt**로 변경합니다.  
 
-##  <a name="bkmk_sunburst_chart"></a> 선버스트 차트  
+##  <a name="sunburst-chart"></a><a name="bkmk_sunburst_chart"></a> 선버스트 차트  
 
 선버스트 차트에서 계층은 일련의 원으로 표시됩니다. 가장 높은 수준의 계층은 가운데에 위치하며 낮은 수준의 계층은 그 외부에 표시된 링입니다.  계층의 최하위 수준이 외부 링입니다.  
   
@@ -86,12 +86,12 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 트리 
   
 3. 샘플 데이터의 다음 필드를 추가합니다.  
 
-    * **값**: LineTotal
+    * **값:** LineTotal
     * **범주 그룹**(다음 순서로):
         1. CategoryName
         2. SubcategoryName
         3. SalesReasonName
-    * **계열 그룹**: TerritoryName  
+    * **계열 그룹:** TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -107,7 +107,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 트리 
 
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
 
-##  <a name="bkmk_sample_data"></a> 샘플 AdventureWorks 데이터
+##  <a name="sample-adventureworks-data"></a><a name="bkmk_sample_data"></a> 샘플 AdventureWorks 데이터
 
 이 섹션은 데이터 원본 및 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 데이터 세트를 만들기 위한 샘플 쿼리 및 기본 단계를 포함하고 있습니다. 보고서가 이미 데이터 원본 및 데이터 세트를 포함하고 있는 경우 이 섹션을 건너뛸 수 있습니다.  
   
@@ -178,6 +178,6 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 트리 
 
 * [계열에 도구 설명 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
 
-* [자습서: Power BI의 트리맵](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
+* [자습서: Power BI의 트리 맵](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
 
-* [트리맵: Microsoft Research Data Visualization Apps for Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)
+* [트리 맵: Microsoft Research Data Visualization Apps for Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)

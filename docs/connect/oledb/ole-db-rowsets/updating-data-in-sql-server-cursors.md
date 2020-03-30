@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: e5ccf4831cf882eedd4b2b95894d44457402bb6e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994164"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>SQL Server 커서의 데이터 업데이트
@@ -38,7 +38,7 @@ ms.locfileid: "67994164"
 ## <a name="immediate-and-delayed-update-modes"></a>즉시 및 지연 업데이트 모드  
  즉시 업데이트 모드에서는 **IRowsetChange::SetData**를 호출할 때마다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]로 왕복이 발생합니다. 소비자가 단일 행을 여러 번 변경한 경우 **SetData**를 한 번 호출하여 모든 변경 내용을 전송하는 것이 효율적입니다.  
   
- 지연 업데이트 모드에서는 **IRowsetUpdate::Update**의 *cRows* 및 *rghRows* 매개 변수에 지정된 각 행에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]로의 왕복이 수행됩니다.  
+ 지연 업데이트 모드에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]IRowsetUpdate::Update*의* cRows*및*rghRows**매개 변수에 지정된 각 행에 대해**로의 왕복이 수행됩니다.  
   
  두 모드 모두 왕복은 행 집합에 대해 열려 있는 트랜잭션 개체가 없는 경우 고유한 트랜잭션을 나타냅니다.  
   

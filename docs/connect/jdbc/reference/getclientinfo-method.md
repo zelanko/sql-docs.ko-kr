@@ -11,10 +11,10 @@ ms.assetid: b06a5ced-b760-4c78-b17e-854ce95a1a5c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a6b68caa4abff00f113176791d06c6361c5da1e9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953110"
 ---
 # <a name="getclientinfo-method-"></a>getClientInfo 메서드()
@@ -40,7 +40,7 @@ public java.util.Properties getClientInfo()
   
  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에서는 클라이언트 정보 속성을 지원하지 않습니다. 결과적으로 이 메서드는 빈 Properties 개체를 반환합니다.  
   
- 마찬가지로 애플리케이션에서는 [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 클래스의 [getClientInfoProperties](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md) 메서드를 사용하여 드라이버에서 지원하는 클라이언트 정보 속성의 목록을 검색할 수 있습니다. [getClientInfoProperties](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md) 메서드는 빈 결과 집합을 반환합니다.  
+ 마찬가지로 애플리케이션에서는 [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md) 클래스의 [getClientInfoProperties](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 메서드를 사용하여 드라이버에서 지원하는 클라이언트 정보 속성의 목록을 검색할 수 있습니다. [getClientInfoProperties](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md) 메서드는 빈 결과 집합을 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [getClientInfo 메서드(SQLServerConnection)](../../../connect/jdbc/reference/getclientinfo-method-sqlserverconnection.md)   

@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: ef21cdb2a223aaa50b690f5b2b3c30696dd9e196
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67988852"
 ---
 # <a name="using-encryption-without-validation"></a>유효성 검사 없이 암호화 사용
@@ -32,7 +32,7 @@ ms.locfileid: "67988852"
 
 자체 서명된 인증서는 보안을 보장하지 않습니다. 암호화된 핸드셰이크는 NTLM(NT LAN Manager)을 기반으로 합니다. 보안 연결을 위해 SQL Server에 확인할 수 있는 인증서를 프로비전하는 것이 좋습니다. TLS(Transport Security Layer)는 인증서 유효성 검사를 통해서만 안전하게 만들 수 있습니다.
 
-애플리케이션에 따라 연결 문자열 키워드나 연결 속성을 사용하여 모든 네트워크 트래픽을 암호화해야 할 수도 있습니다. **IDbInitialize::Initialize**에 공급자 문자열을 사용하는 경우 OLE DB에 대한 키워드는 "Encrypt"이고, **IDataInitialize**에 초기화 문자열을 사용하는 경우 ADO 및 OLE DB에 대한 키워드는 "Use Encryption for Data"입니다. 이는 **강제 프로토콜 암호화** 옵션을 사용하고 클라이언트가 암호화된 연결을 요청하도록 구성하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자에서도 구성할 수 있습니다. 기본적으로 연결의 모든 네트워크 트래픽을 암호화하려면 서버에 인증서를 제공해야 합니다. 서버에서 인증서를 신뢰하도록 클라이언트를 설정하면 메시지 가로채기(man-in-the-middle) 공격에 취약해질 수 있습니다. 서버에 확인할 수 있는 인증서를 배포하는 경우 인증서를 신뢰하는 방법에 대한 클라이언트 설정을 FALSE로 변경해야 합니다.
+애플리케이션에 따라 연결 문자열 키워드나 연결 속성을 사용하여 모든 네트워크 트래픽을 암호화해야 할 수도 있습니다. **IDbInitialize::Initialize**에 공급자 문자열을 사용하는 경우 OLE DB에 대한 키워드는 "Encrypt"이고, **IDataInitialize**에 초기화 문자열을 사용하는 경우 ADO 및 OLE DB에 대한 키워드는 "Use Encryption for Data"입니다. 이는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]강제 프로토콜 암호화**옵션을 사용하고 클라이언트가 암호화된 연결을 요청하도록 구성하여** 구성 관리자에서도 구성할 수 있습니다. 기본적으로 연결의 모든 네트워크 트래픽을 암호화하려면 서버에 인증서를 제공해야 합니다. 서버에서 인증서를 신뢰하도록 클라이언트를 설정하면 메시지 가로채기(man-in-the-middle) 공격에 취약해질 수 있습니다. 서버에 확인할 수 있는 인증서를 배포하는 경우 인증서를 신뢰하는 방법에 대한 클라이언트 설정을 FALSE로 변경해야 합니다.
 
 연결 문자열 키워드에 대한 내용은 [SQL Server용 OLE DB 드라이버에서 연결 문자열 키워드 사용](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md )을 참조하세요.  
   

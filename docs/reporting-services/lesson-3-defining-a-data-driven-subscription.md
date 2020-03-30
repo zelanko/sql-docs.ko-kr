@@ -9,20 +9,20 @@ ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fafd591e4b29f9b8beb1639ff64f4e2d43b65c2d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66826860"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>3단원: 데이터 기반 구독 정의
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 이 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 자습서 단원에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 웹 포털 데이터 기반 구독 페이지를 사용하여 구독 데이터 원본에 연결하고 구독 데이터를 검색하는 쿼리를 작성하며 결과 세트를 보고서 및 전송 옵션에 매핑합니다.  
   
 > [!NOTE]  
 > 시작하기 전에 **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트** 서비스가 실행 중인지 확인합니다. 이 서비스를 실행하지 않으면 구독을 저장할 수 없습니다.  한 가지 확인 방법은 [SQL Server 구성 관리자](../relational-databases/sql-server-configuration-manager.md)를 여는 것입니다.
 이 단원에서는 1단원 및 2단원을 완료했고 보고서 데이터 원본에서 저장된 자격 증명을 사용한다고 가정합니다.  자세한 내용은 [2단원: 보고서 데이터 원본 속성 수정](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)을 참조하세요.  
   
-## <a name="bkmk_startwizard"></a>데이터 기반 구독 마법사 시작  
+## <a name="start-the-data-driven-subscription-wizard"></a><a name="bkmk_startwizard"></a>데이터 기반 구독 마법사 시작  
   
 1.  [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 웹 포털에서 **홈**을 클릭하고 **Sales Orders** 보고서가 있는 폴더로 이동합니다.  
   

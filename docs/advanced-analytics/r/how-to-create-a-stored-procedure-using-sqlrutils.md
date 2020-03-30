@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e0846442abce6dd598c6318e4ba7cf9e74685066
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727463"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>sqlrutils를 사용하여 저장 프로시저 만들기
@@ -21,7 +21,7 @@ ms.locfileid: "73727463"
 
 이 문서에서는 R 코드를 변환하여 T-SQL 저장 프로시저로 실행하는 단계에 대해 설명합니다. 최상의 결과를 얻으려면 모든 입력을 매개 변수화할 수 있도록 코드를 약간 수정해야 할 수 있습니다.
 
-## <a name="bkmk_rewrite"></a>1단계. R 스크립트 다시 작성
+## <a name="step-1-rewrite-r-script"></a><a name="bkmk_rewrite"></a>1단계. R 스크립트 다시 작성
 
 최상의 결과를 위해서는 단일 함수로 캡슐화하도록 R 코드를 다시 작성해야 합니다.
 
@@ -145,7 +145,7 @@ SQL Server가 아닌 R 코드에서 저장 프로시저를 실행하려면 몇 �
 2. 각 입력 매개 변수에 대해 `$query` 를 정의하거나 `$value` 를 설정합니다.
 3. `executeStoredProcedure` 를 사용하여 R 개발 환경에서 저장 프로시저를 실행하고 설정한 입력 매개 변수 개체 목록을 전달합니다.
 
-## <a name = "samples"></a>예제
+## <a name="example"></a><a name = "samples"></a>예제
 
 이 예제에서는 SQL Server 데이터베이스에서 데이터를 가져와서 데이터에 대해 일부 변환을 수행하고 다른 데이터베이스에 저장하는 R 스크립트의 전후 버전을 보여줍니다.
 

@@ -20,10 +20,10 @@ ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0ff71430707e210daf970e969d854e408d777e4e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258975"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>여러 버전 및 인스턴스의 SQL Server 작업
@@ -64,7 +64,7 @@ SQL Server를 여러 개 설치하거나 이전 SQL Server 버전이 이미 설�
 
  특정 구성 요소는 설치된 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전의 모든 인스턴스에서 공유합니다. 이러한 구성 요소는 버전이 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 같은 컴퓨터에 함께 설치하면 자동으로 최신 버전으로 업그레이드됩니다. 일반적으로 이러한 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 마지막 인스턴스가 제거되면 자동으로 제거됩니다.
   
- 예제: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 및 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS 기록기.
+ 예제: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 브라우저 및 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer
   
 ### <a name="components-shared-across-all-instances-of-the-same-major-version-of-ssnoversion"></a>주 버전이 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -76,7 +76,7 @@ SQL Server를 여러 개 설치하거나 이전 SQL Server 버전이 이미 설�
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 공유하는 구성 요소입니다.
   
-예제: 설치 지원 파일.
+예제: 설치 지원 파일
   
 ### <a name="components-specific-to-an-instance-of-ssnoversion"></a>다음의 특정 인스턴스에 고유한 구성 요소 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -88,7 +88,7 @@ SQL Server를 여러 개 설치하거나 이전 SQL Server 버전이 이미 설�
 
 특정 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치할 때 설치되지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전과 관계가 없습니다. 이러한 구성 요소는 주 버전 간에 공유될 수도 있고 모든 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 공유될 수도 있습니다.  
 
-예제: Microsoft Sync Framework, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
+예제: Microsoft Sync Framework, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 설치에 대한 자세한 내용은 [설치 마법사에서 SQL Server 2016 설치&#40;설치 프로그램&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)를 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact를 제거하는 방법은 [SQL Server의 기존 인스턴스 제거&#40;설치 프로그램&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)를 참조하세요.  
   

@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 12/04/2019
 ms.openlocfilehash: 49a5f8e19db65691fe8e521d7ca6a65e828fe6bd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866026"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>보고서 서버 서비스 계정 구성(SSRS 구성 관리자)
@@ -78,7 +78,7 @@ ms.locfileid: "74866026"
 |**로컬 서비스**|**로컬 서비스** 는 인증된 로컬 Windows 사용자 계정과 같은 기본 제공 계정입니다. **로컬 서비스** 계정으로 실행되는 서비스는 자격 증명이 없는 Null 세션으로 네트워크 리소스에 액세스합니다. 이 계정은 보고서 서버를 원격 보고서 서버 데이터베이스나 네트워크 도메인 컨트롤러에 연결하여 보고서를 열거나 구독을 처리하기 전에 사용자를 인증해야 하는 인트라넷 배포 시나리오에 적합하지 않습니다.|  
 |**로컬 시스템**|**로컬 시스템** 은 높은 권한이 있는 계정이므로 보고서 서버를 실행하는 데 필요하지 않습니다. 보고서 서버 설치에는 이 계정을 사용하지 마십시오. 대신 도메인 계정 또는 **네트워크 서비스** 를 선택합니다.|  
   
-## <a name="localaccounts"></a> 로컬 계정 사용 시 고려 사항
+## <a name="considerations-for-using-local-accounts"></a><a name="localaccounts"></a> 로컬 계정 사용 시 고려 사항
 
  로컬 계정 사용 시 기본적인 고려 사항은 보고서 서버가 원격 데이터베이스 서버, 메일 서버 및 도메인 컨트롤러에 액세스해야 하는지 여부입니다. 로컬 Windows 사용자 계정, 로컬 서비스 또는 로컬 시스템으로 보고서 서버를 실행하도록 구성할 경우 다른 구성 설정 방법과 구독 만들기 및 배달에 대해 검토해야 하는 고려 사항이 있습니다.  
   

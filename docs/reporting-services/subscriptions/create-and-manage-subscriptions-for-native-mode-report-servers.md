@@ -12,10 +12,10 @@ ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5bcfeabda2eda62a6a4118ac5542e83a4b0afd66
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76971311"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>기본 모드 보고서 서버 구독 만들기 및 관리
@@ -33,7 +33,7 @@ ms.locfileid: "76971311"
   
 -   [구독을 삭제하려면](#bkmk_delete_subscription)  
   
-##  <a name="bkmk_create_subscription"></a> 구독에 대한 일반 요구 사항  
+##  <a name="general-requirements-for-subscriptions"></a><a name="bkmk_create_subscription"></a> 구독에 대한 일반 요구 사항  
  이 문서에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 웹 포털을 사용하여 기본 모드 보고서 서버에서 구독을 만드는 방법에 대해 설명합니다. 구독을 정의한 후에는 웹 포털의 내 구독 페이지 또는 특정 보고서의 **구독** 탭을 통해 구독에 액세스할 수 있습니다.  
   
  [SharePoint 모드 보고서 서버 구독 만들기 및 관리](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) 에서는 SharePoint 사이트에서 애플리케이션 페이지를 사용하여 SharePoint 모드 보고서 서버의 보고서를 구독하는 방법을 설명합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "76971311"
   
  이 문서에서는 데이터 기반 구독을 만드는 방법에 대해 설명하지 않습니다. 데이터 기반 구독을 만드는 방법에 대한 지침은 [데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)를 참조하세요.  
   
-## <a name="bkmk_create_fileshare_subscription"></a> 파일 공유 구독을 만들려면  
+## <a name="to-create-a-file-share-subscription"></a><a name="bkmk_create_fileshare_subscription"></a> 파일 공유 구독을 만들려면  
   
 1. [보고서 서버의 웹 포털(SSRS 기본 모드)](../../reporting-services/web-portal-ssrs-native-mode.md)을 찾습니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "76971311"
   
 보고서는 정적 파일로 배달됩니다. 보고서에 대화형 기능(예: 추가 행과 열에 대한 링크)이 있는 경우 해당 기능은 사용할 수 없습니다.  
   
-##  <a name="bkmk_create_email_subscription"></a> 메일 구독을 만들려면  
+##  <a name="to-create-an-e-mail-subscription"></a><a name="bkmk_create_email_subscription"></a> 메일 구독을 만들려면  
   
 1. [보고서 서버의 웹 포털(SSRS 기본 모드)](../../reporting-services/web-portal-ssrs-native-mode.md)을 찾습니다.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "76971311"
      >[!NOTE]  
      > 사용 권한에 따라 보고서를 배달할 전자 메일 주소를 입력할 수 있습니다. 전자 메일 주소를 여러 개 지정하려면 세미콜론(;)으로 구분합니다. **참조**, **숨은 참조**및 **회신** 입력란에 메일 주소를 추가로 입력할 수도 있습니다. 이 작업을 수행하려면 모든 구독을 관리할 수 있는 권한이 있어야 합니다.  
   
-   - **주체**: "@ReportName은 @ExecutionTime에서 실행됩니다."가 기본값입니다. 제목을 편집할 수는 있지만 @ReportName 및 @ExecutionTime은 **주체** 필드에 지원되는 유일한 전역 변수입니다.  
+   - **제목**: "@ReportName은 @ExecutionTime에서 실행됩니다."가 기본값입니다. 제목을 편집할 수는 있지만 @ReportName 및 @ExecutionTime은 **주체** 필드에 지원되는 유일한 전역 변수입니다.  
   
      ![전자 메일 구독](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-e-mail-delivery-option.png "전자 메일 구독")  
 
@@ -132,7 +132,7 @@ ms.locfileid: "76971311"
   
 9. 매개 변수가 있는 보고서의 경우 이 구독에 대한 보고서에 사용할 매개 변수를 지정합니다. 사용자가 지정한 매개 변수는 요청 시 실행 보고서나 다른 일정이 예약된 보고서를 실행하는 데 사용하는 매개 변수와 다를 수 있습니다.  
   
-##  <a name="bkmk_modify_subscription"></a> 구독을 수정하려면  
+##  <a name="to-modify-a-subscription"></a><a name="bkmk_modify_subscription"></a> 구독을 수정하려면  
  언제든지 구독을 수정할 수 있습니다. 처리 중인 구독을 수정한 경우 배달 확장 프로그램에서 구독 데이터를 받기 전에 구독이 보고서 서버에 저장되면 업데이트된 설정이 사용됩니다. 그렇지 않으면 기존 설정이 사용됩니다.  
   
  구독을 만드는 사용자가 해당 구독을 소유합니다. 각 사용자는 자신이 소유한 구독을 수정하거나 삭제할 수 있습니다. 구독 속성 페이지에서 보고서 소유자를 변경하거나 소유권을 프로그래밍 방식으로 변경할 수 있습니다. 자세한 내용은  
@@ -148,7 +148,7 @@ ms.locfileid: "76971311"
 >[!NOTE]  
 > 보고서 서버 관리자라 하더라도 지정된 보고서 서버에서 사용 중인 각각의 구독을 한 장소에서 모두 관리할 수는 없습니다. 그러나 보고서 서버 관리자는 각 구독에 액세스하여 수정하거나 삭제할 수 있습니다.  
   
-##  <a name="bkmk_delete_subscription"></a> 구독을 삭제하려면  
+##  <a name="to-delete-a-subscription"></a><a name="bkmk_delete_subscription"></a> 구독을 삭제하려면  
 구독을 삭제하려면  
   
 1. [보고서 서버의 웹 포털(SSRS 기본 모드)](../../reporting-services/web-portal-ssrs-native-mode.md)을 찾습니다.  

@@ -16,10 +16,10 @@ ms.assetid: 2a43d1c8-ec8a-43de-b51e-b9108f4e3eae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c17e74c6844fa794dadb09e30f0be6822b66eb69
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953732"
 ---
 # <a name="getblob-method-sqlserverresultset"></a>getBlob 메서드(SQLServerResultSet)

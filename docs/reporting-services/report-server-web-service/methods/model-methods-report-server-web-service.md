@@ -10,10 +10,10 @@ ms.assetid: d3e658c9-bb22-480b-a3d5-bcde8f537ab2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 73d4a0ee4c5db4059dfe5ceac908b92d41ab8a45
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198240"
 ---
 # <a name="model-methods---report-server-web-service"></a>모델 메서드 - 보고서 서버 웹 서비스

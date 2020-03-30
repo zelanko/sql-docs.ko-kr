@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 5d7c610f887de137c44f97ca8809e70c548a51db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485318"
 ---
 # <a name="install-packages-with-r-tools"></a>R 도구를 사용하여 패키지 설치
@@ -75,7 +75,7 @@ SQL Server가 인터넷에 연결되어 있는 경우에는 표준 패키지 설
 
 SQL Server의 인스턴스가 병렬로 여럿이라면 패키지를 사용하려는 인스턴스별로 설치를 실행합니다. 인스턴스 간에 패키지를 공유할 수 없습니다.
 
-## <a name = "bkmk_offlineInstall"></a>오프라인 설치(인터넷에 연결되어 있지 않음)
+## <a name="offline-installation-no-internet-access"></a><a name = "bkmk_offlineInstall"></a>오프라인 설치(인터넷에 연결되어 있지 않음)
 
 프로덕션 데이터베이스를 호스트하는 서버는 인터넷에 연결되지 않는 경우가 많습니다. 이러한 환경에서 R 패키지를 설치하려면 패키지와 종속성을 압축된 파일로 미리 다운로드하여 준비한 후 서버상의 폴더에 파일을 복사합니다. 파일이 준비되면 오프라인으로 패키지를 설치할 수 있습니다.
 

@@ -14,16 +14,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13b0e3aea694b0cedb3594cb76650ca7c938eb55
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971097"
 ---
 # <a name="sqlserverexception-constructor-javalangstring-sqlstate-drivererror-javalangthrowable"></a>SQLServerException 생성자(java.lang.String, SQLState, DriverError, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  **문자열** 개체, **sqlstate** 개체, **drivererror** 및 **throwable** 개체가 지정된 경우, [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 클래스의 새 인스턴스를 초기화합니다.
+  [문자열](../../../connect/jdbc/reference/sqlserverexception-class.md) 개체, **sqlstate** 개체, **drivererror** 및 **throwable** 개체가 지정된 경우, **SQLServerException** 클래스의 새 인스턴스를 초기화합니다.
 
 ## <a name="syntax"></a>구문  
   

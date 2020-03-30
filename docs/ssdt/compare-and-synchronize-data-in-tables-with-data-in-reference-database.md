@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: e30ec27733885521f8d6e5b487fde40afafca4dd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241704"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>하나 이상의 테이블에 있는 데이터를 참조 데이터베이스에 있는 데이터와 비교 및 동기화
@@ -49,11 +49,11 @@ ms.locfileid: "75241704"
 ## <a name="common-tasks"></a>일반 태스크  
 이 섹션에서는 이 시나리오를 지원하는 일반적인 작업에 대한 설명을 찾을 수 있습니다.  
   
-**데이터 비교 방법을 제어하는 옵션을 설정합니다.** 데이터를 비교할 때는 ID 열을 안전하게 무시하고, 트리거 및 외래 키를 사용하지 않도록 설정할 수 있습니다. 또한 업데이트 스크립트에서 기본 키, 인덱스 및 고유 제약 조건을 삭제할 수도 있습니다.  
+**데이터 비교 방법을 제어하는 옵션 설정:** 데이터를 비교할 때는 ID 열을 안전하게 무시하고, 트리거 및 외래 키를 사용하지 않도록 설정할 수 있습니다. 또한 업데이트 스크립트에서 기본 키, 인덱스 및 고유 제약 조건을 삭제할 수도 있습니다.  
   
 **테이블의 데이터 비교 및 선택적으로 원본과 일치하도록 대상 업데이트:** 비교할 원본 및 대상 데이터베이스를 지정하고 비교를 실행한 후에는 **데이터 비교** 창에서 결과를 볼 수 있습니다. 차이점 세부 정보뿐만 아니라 데이터를 동기화하는 데 사용할 수 있는 업데이트 스크립트도 볼 수 있습니다. 두 데이터베이스 간의 차이점을 식별한 후에는 각 차이점에 대한 작업을 지정할 수 있습니다. 그런 후 대상을 업데이트하거나 업데이트 스크립트를 Transact\-SQL 편집기 또는 파일로 내보낼 수 있습니다. 변경 내용을 적용하기 전에 사용자 또는 다른 사용자가 검토할 수 있도록 스크립트를 내보낼 수도 있습니다.  
   
-## <a name="UnderstandingDataCompareResults"></a>비교 결과 이해  
+## <a name="understanding-comparison-results"></a><a name="UnderstandingDataCompareResults"></a>비교 결과 이해  
 다음 표에서는 **데이터 비교** 창의 5개 열에 대해 설명합니다.  
   
 |열|메모|  
