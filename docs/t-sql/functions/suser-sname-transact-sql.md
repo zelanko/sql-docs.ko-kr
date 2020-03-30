@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 293976660f66f60803e64c492ef868fd38e7c9dd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981782"
 ---
 # <a name="suser_sname-transact-sql"></a>SUSER_SNAME(Transact-SQL)
@@ -60,7 +60,7 @@ SUSER_SNAME ( [ server_user_sid ] )
   
  인수 없이 SUSER_SNAME이 호출되면 현재 보안 컨텍스트의 이름이 반환됩니다. EXECUTE AS를 사용하여 컨텍스트를 전환한 일괄 처리 내에서 인수 없이 SUSER_SNAME이 호출되면 가장된 컨텍스트의 이름이 반환됩니다. 가장된 컨텍스트에서 SUSER_SNAME이 호출된 경우 ORIGINAL_LOGIN은 원래 컨텍스트의 이름을 반환합니다.  
   
-## <a name="includesssdsfullincludessssdsfull-mdmd-remarks"></a>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 주의 사항  
+## <a name="sssdsfull-remarks"></a>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 주의 사항  
  SUSER_NAME은 항상 현재 보안 컨텍스트에 대한 로그인 이름을 반환합니다.  
   
  SUSER_SNAME 문은 EXECUTE AS를 통해 가장된 보안 컨텍스트를 사용하는 실행을 지원하지 않습니다.  
@@ -127,7 +127,7 @@ WanidaBenShoof
 sa
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-suser_sname"></a>E. SUSER_SNAME 사용  
  다음 예에서는 `0x01` 값을 갖는 SID에 대한 로그인 이름을 반환합니다.  

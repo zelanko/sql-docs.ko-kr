@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d9cd601d93666faad86fb8698bbc0b5ae8424454
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242383"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>Force a Target Server to Poll the Master Server
@@ -41,15 +41,15 @@ ms.locfileid: "75242383"
   
 -   **대상 서버가 마스터 서버를 폴링하도록 설정하려면 다음을 사용합니다.** [SQL Server Management Studio](#SSMS)  
   
-## <a name="BeforeYouBegin"></a>시작하기 전 주의 사항  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>시작하기 전 주의 사항  
   
-### <a name="Restrictions"></a>제한 사항  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>제한 사항  
 대상 서버는 마스터 서버에 등록된 서버여야 합니다. 마스터 서버에서 이 항목에 제공된 지침을 실행해야 합니다.  
   
-### <a name="Security"></a>보안  
+### <a name="security"></a><a name="Security"></a>보안  
 자세한 내용은 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md) 및 [Choose the Right SQL Server Agent Service Account for Multiserver Environments](../../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)을 참조하세요.  
   
-## <a name="SSMS"></a>SQL Server Management Studio 사용  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>SQL Server Management Studio 사용  
 **대상 서버가 마스터 서버를 폴링하도록 설정하려면**  
   
 1.  **개체 탐색기**에서 마스터 서버를 확장합니다.  

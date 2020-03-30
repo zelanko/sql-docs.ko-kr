@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
 ms.openlocfilehash: 416c22aa04e289e7959e41924344666e4329ecf1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957007"
 ---
-# <a name="enable-or-disable-usage-data-collection-for-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]의 사용량 현황 데이터 수집 사용 또는 사용 안 함
+# <a name="enable-or-disable-usage-data-collection-for-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]의 사용량 현황 데이터 수집 사용 또는 사용 안 함
 
 ## <a name="how-to-disable-telemetry-reporting"></a>원격 분석 보고를 사용하지 않도록 설정하는 방법
 

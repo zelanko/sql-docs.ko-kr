@@ -16,10 +16,10 @@ ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: be854d2002692611289d401b4ad98cb63cf4a27b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68731107"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>network packet size 서버 구성 옵션 구성
@@ -48,16 +48,16 @@ ms.locfileid: "68731107"
   
 -   **후속 작업:**  [네트워크 패킷 크기 옵션을 구성한 후](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   암호화된 연결의 최대 network packet size는 16,383바이트입니다.  
   
 > [!NOTE]  
 > MARS를 사용하는 경우 SMUX 공급자는 SSL 암호화 전에 패킷에 16바이트 헤더를 추가하여 최대 네트워크 패킷 크기를 16368바이트로 줄입니다.
    
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   이 옵션은 고급 옵션으로, 숙련된 데이터베이스 관리자나 공인된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전문가만이 변경해야 합니다.  
   
@@ -69,12 +69,12 @@ ms.locfileid: "68731107"
   
      `Native Error: 233, no process is on the other end of the pipe.`  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경하거나 RECONFIGURE 문을 실행하는 두 매개 변수를 사용하여 **sp_configure** 를 실행하려면 사용자에게 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-configure-the-network-packet-size-option"></a>네트워크 패킷 크기 옵션을 구성하려면  
   
@@ -84,7 +84,7 @@ ms.locfileid: "68731107"
   
 3.  **네트워크**에서 **네트워크 패킷 크기** 상자의 값을 선택합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-configure-the-network-packet-size-option"></a>네트워크 패킷 크기 옵션을 구성하려면  
   
@@ -110,7 +110,7 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 네트워크 패킷 크기 옵션을 구성한 후  
+##  <a name="follow-up-after-you-configure-the-network-packet-size-option"></a><a name="FollowUp"></a> 후속 작업: 네트워크 패킷 크기 옵션을 구성한 후  
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

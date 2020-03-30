@@ -16,10 +16,10 @@ ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bb28965af992a19864ccf2e6959decd778468403
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296497"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>스크립트 구성 요소를 사용하여 ODBC 대상 만들기

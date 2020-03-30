@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf9b8222453cea1bdaecad25256819aa7bcb1366
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67909552"
 ---
 # <a name="set-index-options"></a>인덱스 옵션 설정
@@ -52,20 +52,20 @@ ms.locfileid: "67909552"
 
    [Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> 시작하기 전에
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에
 
-### <a name="Restrictions"></a> 제한 사항
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항
 
 - ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, IGNORE_DUP_KEY 및 STATISTICS_NORECOMPUTE 옵션은 ALTER INDEX 문에서 SET 절을 사용하면 즉시 인덱스에 적용됩니다.(###)
 - PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP 및 DROP_EXISTING(CREATE INDEX의 경우에만) 옵션은 ALTER INDEX REBUILD 또는 CREATE INDEX WITH DROP_EXISTING 중 하나를 사용하여 인덱스를 다시 작성할 때 설정할 수 있습니다.
 
-### <a name="Security"></a> 보안
+### <a name="security"></a><a name="Security"></a> 보안
 
-#### <a name="Permissions"></a> 권한
+#### <a name="permissions"></a><a name="Permissions"></a> 권한
 
 테이블이나 뷰에 대한 ALTER 권한이 필요합니다.
 
-## <a name="SSMSProcedure"></a> SQL Server Management Studio 사용
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용
 
 ### <a name="to-modify-the-properties-of-an-index-in-table-designer"></a>테이블 디자이너에서 인덱스 속성을 수정하려면
 
@@ -89,7 +89,7 @@ ms.locfileid: "67909552"
 7. 속성의 설정을 변경하여 인덱스를 사용자 지정합니다.
 8. 인덱스 열을 추가 또는 제거하거나 그 위치를 변경하려면 **인덱스 속성 -** _index_name_ 대화 상자의 **일반** 페이지를 선택합니다. 자세한 내용은 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)를 참조하세요.
 
-## <a name="TsqlProcedure"></a> Transact-SQL 사용
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용
 
 ### <a name="to-see-the-properties-of-all-the-indexes-in-a-table"></a>테이블에 있는 모든 인덱스의 속성을 보려면
 

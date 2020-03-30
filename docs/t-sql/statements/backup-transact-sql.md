@@ -47,10 +47,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: c1065c56e3f07f1381e5056d1b2eca3a20ed0cd2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74249736"
 ---
 # <a name="backup-transact-sql"></a>BACKUP(Transact-SQL)
@@ -556,7 +556,7 @@ BACKUP LOG의 NO_TRUNCATE 옵션은 COPY_ONLY와 CONTINUE_AFTER_ERROR를 모두 
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 백업에 대한 소개는 [백업 개요](../../relational-databases/backup-restore/backup-overview-sql-server.md)를 참조하세요.
 
-### <a name="Backup_Types"></a> 백업 유형
+### <a name="backup-types"></a><a name="Backup_Types"></a> 백업 유형
 
 지원되는 백업 유형은 다음과 같이 데이터베이스의 복구 모델에 따라 달라집니다.
 
@@ -579,14 +579,14 @@ BACKUP LOG의 NO_TRUNCATE 옵션은 COPY_ONLY와 CONTINUE_AFTER_ERROR를 모두 
 
 - *복사 전용 백업*은 정상적인 기존 백업 시퀀스와 독립적인 특수 목적의 전체 백업 또는 로그 백업입니다. 복사 전용 백업을 만들려면 BACKUP 문에 COPY_ONLY 옵션을 지정합니다. 자세한 내용은 [복사 전용 백업](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)을 참조하세요.
 
-### <a name="Tlog_Truncation"></a> 트랜잭션 로그 잘림
+### <a name="transaction-log-truncation"></a><a name="Tlog_Truncation"></a> 트랜잭션 로그 잘림
 
 데이터베이스의 트랜잭션 로그가 채워지는 것을 방지하려면 정기적인 백업이 중요합니다. 로그 잘림은 데이터베이스를 백업한 후에는 단순 복구 모델에서, 트랜잭션 로그를 백업한 후에는 전체 복구 모델에서 자동으로 발생합니다. 그러나 잘림 처리가 지연될 수 있는 경우도 있습니다. 로그 잘림을 지연시킬 수 있는 요소에 대한 자세한 내용은 [트랜잭션 로그](../../relational-databases/logs/the-transaction-log-sql-server.md)를 참조하세요.
 
 > [!NOTE]
 > `BACKUP LOG WITH NO_LOG` 및 `WITH TRUNCATE_ONLY` 옵션은 더 이상 지원되지 않습니다. 전체 또는 대량 로그 복구 모델 복구 사용 시 데이터베이스에서 로그 백업 체인을 제거해야 할 경우 단순 복구 모델로 전환하십시오. 자세한 내용은 [데이터베이스 복구 모델 보기 또는 변경](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)을 참조하세요.
 
-### <a name="Formatting_Media"></a> 백업 미디어 포맷
+### <a name="formatting-backup-media"></a><a name="Formatting_Media"></a> 백업 미디어 포맷
 
 다음 조건이 충족되는 경우에만 BACKUP 문에 의해 백업 미디어가 포맷됩니다.
 
@@ -594,7 +594,7 @@ BACKUP LOG의 NO_TRUNCATE 옵션은 COPY_ONLY와 CONTINUE_AFTER_ERROR를 모두 
 - 미디어가 비어 있는 경우
 - 작업이 연속 테이프를 기록하는 경우
 
-### <a name="Backup_Devices_and_Media_Sets"></a> 백업 디바이스 및 미디어 세트 사용
+### <a name="working-with-backup-devices-and-media-sets"></a><a name="Backup_Devices_and_Media_Sets"></a> 백업 디바이스 및 미디어 세트 사용
 
 #### <a name="backup-devices-in-a-striped-media-set-a-stripe-set"></a>다중 미디어 세트(스트라이프 세트)의 백업 디바이스
 *스트라이프 세트*는 데이터가 블록으로 구분되고 고정 순서로 분산되는 디스크 파일 세트입니다. 스트라이프 세트에 사용된 백업 디바이스 수는 미디어가 `FORMAT`으로 다시 초기화하지 않는 한 동일하게 유지해야 합니다.
@@ -653,13 +653,13 @@ BACKUP 문의 `TO` 절에 지정된 각 백업 디바이스는 미디어 패밀�
 
 미러된 미디어 세트에 대한 자세한 내용은 [미러된 백업 미디어 세트](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)를 참조하세요. 일반적인 미디어 세트 및 미디어 패밀리에 대한 자세한 내용은 [미디어 세트, 미디어 패밀리 및 백업 세트](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)를 참조하세요.
 
-### <a name="Restoring_Backups"></a> SQL Server 백업 복원
+### <a name="restoring-sql-server-backups"></a><a name="Restoring_Backups"></a> SQL Server 백업 복원
 
 데이터베이스를 복원하고, 필요에 따라 복구하여 온라인 상태로 만들거나 파일 또는 파일 그룹을 복원하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)] [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 문 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **복원** 작업을 사용합니다. 자세한 내용은 [복원 및 복구 개요](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)를 참조하세요.
 
-## <a name="Additional_Considerations"></a> BACKUP 옵션에 대한 추가 고려 사항
+## <a name="additional-considerations-about-backup-options"></a><a name="Additional_Considerations"></a> BACKUP 옵션에 대한 추가 고려 사항
 
-### <a name="Interactions_SKIP_etc"></a> SKIP, NOSKIP, INIT, NOINIT의 상호 작용
+### <a name="interaction-of-skip-noskip-init-and-noinit"></a><a name="Interactions_SKIP_etc"></a> SKIP, NOSKIP, INIT, NOINIT의 상호 작용
 
 다음 표에서는 { **NOINIT** | INIT }와 { **NOSKIP** | SKIP } 옵션 간의 상호 작용을 보여 줍니다.
 
@@ -737,7 +737,7 @@ BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서
 
 백업 디바이스의 물리적 파일에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 디바이스를 읽고 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 있어야 합니다. 그러나 시스템 테이블의 백업 디바이스에 대한 항목을 추가하는 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)는 파일 액세스 권한을 확인하지 않습니다. 백업 디바이스의 물리적 파일에서 발생하는 이러한 문제는 백업 또는 복원을 시도할 때 실제 리소스를 액세스하기 전까지는 발생하지 않습니다.
 
-## <a name="examples"></a> 예
+## <a name="examples"></a><a name="examples"></a> 예
 
 이 섹션에는 다음 예제가 포함되어 있습니다.
 
@@ -755,7 +755,7 @@ BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서
 > [!NOTE]
 > 백업 방법 도움말 항목에 추가적인 예가 포함되어 있습니다. 자세한 내용은 [백업 개요](../../relational-databases/backup-restore/backup-overview-sql-server.md)를 참조하세요.
 
-### <a name="backing_up_db"></a> 1. 전체 데이터베이스 백업
+### <a name="a-backing-up-a-complete-database"></a><a name="backing_up_db"></a> 1. 전체 데이터베이스 백업
 
 다음 예에서는 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 데이터베이스를 디스크 파일에 백업합니다.
 
@@ -766,7 +766,7 @@ BACKUP DATABASE AdventureWorks2012
 GO
 ```
 
-### <a name="backing_up_db_and_log"></a> 2. 데이터베이스 및 로그 백업
+### <a name="b-backing-up-the-database-and-log"></a><a name="backing_up_db_and_log"></a> 2. 데이터베이스 및 로그 백업
 
 다음 예에서는 기본적으로 단순 복구 모델을 사용하는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스를 백업하고 로그 백업을 지원하기 위해 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 전체 복구 모델을 사용하도록 수정합니다.
 
@@ -804,7 +804,7 @@ GO
 > [!NOTE]
 > 프로덕션 데이터베이스의 경우에는 로그를 정기적으로 백업하십시오. 로그 백업은 데이터 손실을 충분히 방지할 수 있을 만큼 자주 수행해야 합니다.
 
-### <a name="full_file_backup"></a> 3. 보조 파일 그룹의 전체 파일 백업 만들기
+### <a name="c-creating-a-full-file-backup-of-the-secondary-filegroups"></a><a name="full_file_backup"></a> 3. 보조 파일 그룹의 전체 파일 백업 만들기
 
 다음 예에서는 두 보조 파일 그룹에 있는 모든 파일의 전체 파일 백업을 만듭니다.
 
@@ -817,7 +817,7 @@ BACKUP DATABASE Sales
 GO
 ```
 
-### <a name="differential_file_backup"></a> 4. 보조 파일 그룹의 차등 파일 백업 만들기
+### <a name="d-creating-a-differential-file-backup-of-the-secondary-filegroups"></a><a name="differential_file_backup"></a> 4. 보조 파일 그룹의 차등 파일 백업 만들기
 
 다음 예에서는 두 보조 파일 그룹에 있는 모든 파일의 차등 파일 백업을 만듭니다.
 
@@ -832,7 +832,7 @@ BACKUP DATABASE Sales
 GO
 ```
 
-### <a name="create_single_family_mirrored_media_set"></a> 5. 미러된 단일 패밀리 미디어 세트 만들기 및 백업
+### <a name="e-creating-and-backing-up-to-a-single-family-mirrored-media-set"></a><a name="create_single_family_mirrored_media_set"></a> 5. 미러된 단일 패밀리 미디어 세트 만들기 및 백업
 
 다음 예에서는 단일 미디어 패밀리와 4개의 미러를 포함하는 미러된 미디어 세트를 만들고 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 데이터베이스를 해당 미디어 세트에 백업합니다.
 
@@ -847,7 +847,7 @@ WITH
     MEDIANAME = 'AdventureWorksSet0';
 ```
 
-### <a name="create_multifamily_mirrored_media_set"></a> 6. 미러된 다중 패밀리 미디어 세트 만들기 및 백업
+### <a name="f-creating-and-backing-up-to-a-multifamily-mirrored-media-set"></a><a name="create_multifamily_mirrored_media_set"></a> 6. 미러된 다중 패밀리 미디어 세트 만들기 및 백업
 
 다음 예에서는 각 미러가 두 개의 미디어 패밀리로 구성되는 미러된 미디어 세트를 만듭니다. 그런 다음 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 데이터베이스를 두 미러에 백업합니다.
 
@@ -860,7 +860,7 @@ WITH
     MEDIANAME = 'AdventureWorksSet1';
 ```
 
-### <a name="existing_mirrored_media_set"></a> G. 기존 미러된 미디어 세트에 백업
+### <a name="g-backing-up-to-an-existing-mirrored-media-set"></a><a name="existing_mirrored_media_set"></a> G. 기존 미러된 미디어 세트에 백업
 
 다음 예에서는 앞부분에 나오는 예에서 만든 미디어 세트에 백업 세트를 추가합니다.
 
@@ -876,7 +876,7 @@ WITH
 > [!NOTE]
 > 기본값인 NOINIT는 쉽게 구분할 수 있도록 여기에 표시됩니다.
 
-### <a name="creating_compressed_backup_new_media_set"></a> H. 새 미디어 세트에 압축된 백업 만들기
+### <a name="h-creating-a-compressed-backup-in-a-new-media-set"></a><a name="creating_compressed_backup_new_media_set"></a> H. 새 미디어 세트에 압축된 백업 만들기
 
 다음 예에서는 미디어를 포맷하여 새 미디어 세트를 만들고 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 데이터베이스에 대해 압축된 전체 백업을 수행합니다.
 
@@ -887,7 +887,7 @@ WITH
     COMPRESSION;
 ```
 
-### <a name="url"></a> I. Microsoft Azure Blob Storage 서비스에 백업
+### <a name="i-backing-up-to-the-microsoft-azure-blob-storage-service"></a><a name="url"></a> I. Microsoft Azure Blob Storage 서비스에 백업
 
 이 예에서는 Microsoft Azure Blob Storage 서비스에 `Sales`의 전체 데이터베이스 백업을 수행합니다. 스토리지 계정 이름은 `mystorageaccount`입니다. 컨테이너는 `myfirstcontainer`입니다. 읽기, 쓰기, 삭제 및 나열 권한이 있는 저장된 액세스 정책을 만들었습니다. 저장된 액세스 정책에 연결된 공유 액세스 서명을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명인 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`를 만들었습니다. Microsoft Azure Blob Storage 서비스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업의 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 및 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.
 
@@ -897,7 +897,7 @@ TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_
 WITH STATS = 5;
 ```
 
-### <a name="backup_progress"></a> J. Backup 문의 진행률 추적
+### <a name="j-track-the-progress-of-backup-statement"></a><a name="backup_progress"></a> J. Backup 문의 진행률 추적
 
 다음 쿼리는 현재 실행 중인 backup 문에 대한 정보를 반환합니다.
 ```sql
@@ -1095,7 +1095,7 @@ BACKUP DATABASE 권한은 기본적으로 **sysadmin** 고정 서버 역할과 *
 
 URL에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 디바이스를 읽고 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 있어야 합니다.
 
-## <a name="examples"></a> 예
+## <a name="examples"></a><a name="examples"></a> 예
 
 이 예제에서는 Microsoft Azure Blob Storage 서비스에 `Sales`의 COPY_ONLY 백업을 수행합니다. 스토리지 계정 이름은 `mystorageaccount`입니다. 컨테이너는 `myfirstcontainer`입니다. 읽기, 쓰기, 삭제 및 나열 권한이 있는 저장된 액세스 정책을 만들었습니다. 저장된 액세스 정책에 연결된 공유 액세스 서명을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명인 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`를 만들었습니다. Microsoft Azure Blob Storage 서비스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업의 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 및 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.
 
@@ -1254,7 +1254,7 @@ BACKUP DATABASE 문을 사용한 백업은 데이터 또는 사용자 정보를 
 
 DATABASE 개체에서 ExclusiveUpdate 잠금을 얻습니다.
 
-## <a name="Security"></a> 보안
+## <a name="security"></a><a name="Security"></a> 보안
 
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 백업은 어플라이언스에 저장되지 않습니다. 따라서 IT 팀은 백업 보안의 모든 측면을 관리하는 일을 담당합니다. 예를 들어, 여기에는 백업 데이터의 보안, 백업을 저장하는데 사용되는 서버의 보안 및 백업 서버를 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 기기에 연결하는 네트워킹 인프라의 보안 관리가 포함됩니다.
 

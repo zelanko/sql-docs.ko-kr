@@ -18,10 +18,10 @@ ms.assetid: 05ede3b4-6abe-4442-abb7-9f5aee1d6bc0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c9d36b4818aa54a6f63b0b38a353cf69840519b9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244164"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션 일시 중지 또는 재개(SQL Server)
@@ -42,18 +42,18 @@ ms.locfileid: "75244164"
   
 -   **후속 작업:**  [데이터베이스 미러링을 일시 중지하거나 재개한 후](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
  언제든지 데이터베이스 미러링 세션을 일시 중지하여 병목 상태에서 성능을 향상시킬 수 있으며, 일시 중지된 세션을 언제든지 재개할 수 있습니다.  
   
 > [!CAUTION]  
 >  강제 서비스 이후에 원래 주 서버가 다시 연결되면 미러링이 일시 중지됩니다. 이 경우 미러링을 재개하면 원래 주 서버의 데이터가 손실될 수 있습니다. 데이터 손실 위험을 관리하는 방법은 [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)을 참조하세요.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  데이터베이스 미러링 세션을 일시 중지하거나 재개하려면 **데이터베이스 속성 미러링** 페이지를 사용하세요.  
   
 #### <a name="to-pause-or-resume-database-mirroring"></a>데이터베이스 미러링을 일시 중지 또는 재개하려면  
@@ -72,7 +72,7 @@ ms.locfileid: "75244164"
   
 5.  세션을 재개하려면 **재개**를 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-pause-database-mirroring"></a>데이터베이스 미러링을 일시 중지하려면  
   
@@ -110,7 +110,7 @@ ms.locfileid: "75244164"
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
     ```  
   
-##  <a name="FollowUp"></a> 후속 작업: 데이터베이스 미러링을 일시 중지하거나 재개한 후  
+##  <a name="follow-up-after-pausing-or-resuming-database-mirroring"></a><a name="FollowUp"></a> 후속 작업: 데이터베이스 미러링을 일시 중지하거나 재개한 후  
   
 -   **데이터베이스 미러링을 일시 중지한 후**  
   
@@ -120,7 +120,7 @@ ms.locfileid: "75244164"
   
      데이터베이스 미러링을 재개하면 미러 데이터베이스는 SYNCHRONIZING 상태가 됩니다. 보안 수준이 FULL인 경우 미러 데이터베이스는 주 데이터베이스와 동기화되고 SYNCHRONIZED 상태가 됩니다. 이 시점에서 장애 조치(Failover)가 가능합니다. 미러링 모니터가 있고 ON 상태인 경우 자동 장애 조치가 가능합니다. 미러링 모니터가 없는 경우 수동 장애 조치가 가능합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [데이터베이스 미러링 제거&#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   

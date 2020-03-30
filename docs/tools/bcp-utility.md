@@ -29,10 +29,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/23/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 4aad2c9bfbd79079e96339e40d5e36a9146f3ae0
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78280898"
 ---
 # <a name="bcp-utility"></a>bcp 유틸리티
@@ -441,7 +441,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-x**<a name="x"></a>  
  **format** 및 **-f** *format_file* 옵션과 함께 사용되며 기본 비 XML 서식 파일 대신 XML 기반 서식 파일을 생성합니다. 데이터를 가져오거나 내보낼 때 **-x** 는 작동하지 않습니다. **format** 및 **-f** *format_file*을 함께 사용하지 않으면 오류가 생성됩니다.  
 
-## 주의<a name="remarks"></a>
+## <a name="remarks"></a>주의<a name="remarks"></a>
 
 - 총 **bcp** 도구를 설치하면 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 13.0 클라이언트가 설치됩니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 와 이전 버전 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]둘 다에 대해 도구가 설치된 경우 PATH 환경 변수의 값에 따라 **bcp** 13.0 클라이언트 대신 이전 **bcp** 클라이언트를 사용하게 될 수 있습니다. 이 환경 변수는 실행 파일을 검색하기 위해 Windows에서 사용하는 디렉터리 집합을 정의합니다. 사용 중인 버전을 확인하려면 Windows 명령 프롬프트에서 **bcp /v** 또는 **bcp -v** 명령을 실행합니다. PATH 환경 변수에서 명령 경로를 설정하는 방법은 [환경 변수](https://docs.microsoft.com/windows/win32/shell/user-environment-variables)를 참조하거나 Windows 도움말에서 환경 변수를 검색하세요.
 

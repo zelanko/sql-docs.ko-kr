@@ -11,10 +11,10 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 ms.openlocfilehash: e97f535dedd2b6ee25abfc886d1f08272697c549
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287507"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker에서 SQL Server 컨테이너 이미지 구성
@@ -54,7 +54,7 @@ SQL Server 2017 및 SQL Server 2019용 Docker 컨테이너 이미지를 끌어�
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="rhel"></a> RHEL 기반 컨테이너 이미지 실행
+## <a name="run-rhel-based-container-images"></a><a id="rhel"></a> RHEL 기반 컨테이너 이미지 실행
 
 SQL Server Linux 컨테이너 이미지에 대한 문서는 Ubuntu 기반 컨테이너를 가리킵니다. SQL Server 2019부터 RHEL(Red Hat Enterprise Linux)를 기반으로 하는 컨테이너를 사용할 수 있습니다. 모든 docker 명령에서 컨테이너 리포지토리를 **mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04**에서 **mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8**로 변경합니다.
 
@@ -73,7 +73,7 @@ docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="production"></a> 프로덕션 컨테이너 이미지 실행
+## <a name="run-production-container-images"></a><a id="production"></a> 프로덕션 컨테이너 이미지 실행
 
 이전 섹션의 빠른 시작에서는 Docker Hub에서 체험용 SQL Server Developer Edition을 실행합니다. 하지만 대부분의 정보는 Enterprise, Standard 또는 Web Edition과 같은 프로덕션 컨테이너 이미지를 실행하려는 경우에도 적용됩니다. 그러나 여기서 설명하는 몇 가지 차이점이 있습니다.
 
@@ -210,7 +210,7 @@ sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourPassword>"
 sqlcmd -S 10.3.2.4,1402 -U SA -P "<YourPassword>"
 ```
 
-## <a id="customcontainer"></a> 사용자 지정 컨테이너 만들기
+## <a name="create-a-customized-container"></a><a id="customcontainer"></a> 사용자 지정 컨테이너 만들기
 
 사용자 고유의 [Dockerfile](https://docs.docker.com/engine/reference/builder/#usage)을 만들어 사용자 지정 SQL Server 컨테이너를 만들 수 있습니다. 자세한 내용은 [SQL Server와 노드 애플리케이션을 결합하는 데모](https://github.com/twright-msft/mssql-node-docker-demo-app)를 참조하세요. 사용자 고유의 Dockerfile을 만드는 경우 컨테이너의 수명을 제어하는 포그라운드 프로세스에 유의합니다. 프로세스가 종료되면 컨테이너도 종료됩니다. 예를 들어 스크립트를 실행하고 SQL Server를 시작하려면 SQL Server 프로세스가 맨 오른쪽 명령이어야 합니다. 다른 모든 명령은 백그라운드에서 실행됩니다. 다음 명령은 Dockerfile 내에서 이러한 동작을 보여 줍니다.
 
@@ -220,7 +220,7 @@ sqlcmd -S 10.3.2.4,1402 -U SA -P "<YourPassword>"
 
 위 예제의 명령을 역순으로 실행하면 do-my-sql-commands.sh 스크립트가 완료될 때 컨테이너가 종료됩니다.
 
-## <a id="persist"></a> 데이터 유지
+## <a name="persist-your-data"></a><a id="persist"></a> 데이터 유지
 
 `docker stop` 및 `docker start`를 사용하여 컨테이너를 다시 시작하는 경우에도 SQL Server 구성 변경 내용과 데이터베이스 파일이 컨테이너에 유지됩니다. 그러나 `docker rm`을 사용하여 컨테이너를 제거하면 SQL Server 및 데이터베이스를 포함하여 컨테이너의 모든 항목이 삭제됩니다. 다음 섹션에서는 연결된 컨테이너가 삭제된 경우에도 **데이터 볼륨**을 사용하여 데이터베이스 파일을 유지하는 방법을 설명합니다.
 
@@ -368,7 +368,7 @@ docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```PowerShell
 docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```
-## <a id="tz"></a> 표준 시간대 구성
+## <a name="configure-the-timezone"></a><a id="tz"></a> 표준 시간대 구성
 
 특정 표준 시간대의 Linux 컨테이너에서 SQL Server를 실행하려면 `TZ` 환경 변수를 구성합니다. 올바른 표준 시간대 값을 찾으려면 Linux bash 프롬프트에서 `tzselect` 명령을 실행합니다.
 
@@ -425,7 +425,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" 
 ```
 ::: moniker-end
 
-## <a id="tags"></a> 특정 SQL Server 컨테이너 이미지 실행
+## <a name="run-a-specific-sql-server-container-image"></a><a id="tags"></a> 특정 SQL Server 컨테이너 이미지 실행
 
 최신 SQL Server 컨테이너 이미지를 사용하지 않으려는 시나리오도 있습니다. 특정 SQL Server 컨테이너 이미지를 실행하려면 다음 단계를 사용합니다.
 
@@ -449,7 +449,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" 
 
 이러한 단계를 사용하여 기존 컨테이너를 다운그레이드할 수도 있습니다. 예를 들어 문제 해결이나 테스트를 위해 실행 중인 컨테이너를 롤백 또는 다운그레이드할 수 있습니다. 실행 중인 컨테이너를 다운그레이드하려면 데이터 폴더에 대해 지속성 방법을 사용해야 합니다. [업그레이드 섹션](#upgrade)에 간략하게 설명된 것과 동일한 단계를 수행하지만, 새 컨테이너를 실행할 때 이전 버전의 태그 이름을 지정합니다.
 
-## <a id="version"></a> 컨테이너 버전 확인
+## <a name="check-the-container-version"></a><a id="version"></a> 컨테이너 버전 확인
 
 실행 중인 docker 컨테이너의 SQL Server 버전을 확인하려면 다음 명령을 실행하여 버전을 표시합니다. `<Container ID or name>`을 대상 컨테이너 ID 또는 이름으로 바꿉니다. `<YourStrong!Passw0rd>`를 SA 로그인의 SQL Server 암호로 바꿉니다.
 
@@ -505,7 +505,7 @@ Packages
   sqlagent.sfp                  14.0.3029.16
 ```
 
-## <a id="upgrade"></a> 컨테이너의 SQL Server 업그레이드
+## <a name="upgrade-sql-server-in-containers"></a><a id="upgrade"></a> 컨테이너의 SQL Server 업그레이드
 
 Docker에서 컨테이너 이미지를 업그레이드하려면 먼저 업그레이드 릴리스의 태그를 확인합니다. `docker pull` 명령을 사용하여 레지스트리에서 이 버전을 끌어옵니다.
 
@@ -528,7 +528,7 @@ docker pull mcr.microsoft.com/mssql/server:<image_tag>
 
 1. 필요에 따라 `docker rm`을 사용하여 이전 컨테이너를 제거합니다.
 
-## <a id="buildnonrootcontainer"></a> 루트가 아닌 SQL Server 2017 컨테이너를 빌드하여 실행
+## <a name="build-and-run-non-root-sql-server-2017-containers"></a><a id="buildnonrootcontainer"></a> 루트가 아닌 SQL Server 2017 컨테이너를 빌드하여 실행
 
 `mssql`(루트가 아닌) 사용자 권한으로 시작되는 SQL Server 2017 컨테이너를 빌드하려면 다음 단계를 수행합니다.
 
@@ -566,7 +566,7 @@ docker exec -it sql1 bash
 whoami
 ```
 
-## <a id="nonrootuser"></a> 컨테이너를 호스트의 루트가 아닌 다른 사용자로 실행
+## <a name="run-container-as-a-different-non-root-user-on-the-host"></a><a id="nonrootuser"></a> 컨테이너를 호스트의 루트가 아닌 다른 사용자로 실행
 
 SQL Server 컨테이너를 루트가 아닌 다른 사용자로 실행하려면 docker run 명령에 -u 플래그를 추가합니다. 루트가 아닌 사용자가 액세스할 수 있는 '/var/opt/mssql'에 볼륨이 탑재되지 않은 경우 루트가 아닌 컨테이너를 루트 그룹의 일부로 실행해야 한다는 제한 사항이 있습니다. 루트 그룹은 루트가 아닌 사용자에게 추가 루트 사용 권한을 부여하지 않습니다.
 
@@ -603,7 +603,7 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PT
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u (id -u myusername):(id -g myusername) -v /path/to/mssql:/var/opt/mssql -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 
-## <a id="storagepermissions"></a> 루트가 아닌 컨테이너에 대한 영구 스토리지 권한 구성
+## <a name="configure-persistent-storage-permissions-for-non-root-containers"></a><a id="storagepermissions"></a> 루트가 아닌 컨테이너에 대한 영구 스토리지 권한 구성
 
 루트가 아닌 사용자가 탑재된 볼륨에 있는 DB 파일에 액세스할 수 있도록 하려면 컨테이너를 실행하는 사용자/그룹이 영구 파일 스토리지를 사용할 수 있는지 확인합니다.  
 
@@ -632,7 +632,7 @@ chmod -R g=u <database file dir>
 chown -R 10001:0 <database file dir>
 ```
 
-## <a id="changefilelocation"></a> 기본 파일 위치 변경
+## <a name="change-the-default-file-location"></a><a id="changefilelocation"></a> 기본 파일 위치 변경
 
 `MSSQL_DATA_DIR` 변수를 추가하여 `docker run` 명령에서 데이터 디렉터리를 변경한 다음, 컨테이너의 사용자가 액세스할 수 있는 위치에 볼륨을 탑재합니다.
 
@@ -640,7 +640,7 @@ chown -R 10001:0 <database file dir>
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 
-## <a id="troubleshooting"></a> 문제 해결
+## <a name="troubleshooting"></a><a id="troubleshooting"></a> 문제 해결
 
 다음 섹션에서는 컨테이너에서 SQL Server를 실행하기 위한 문제 해결 제안 사항을 제공합니다.
 
@@ -760,7 +760,7 @@ SQL Server 가용성 그룹과 함께 Docker를 사용하는 경우 두 가지 �
 
 - `docker run` 명령의 `-h YOURHOSTNAME` 매개 변수를 사용하여 컨테이너 호스트 이름을 명시적으로 설정합니다. 이 호스트 이름은 가용성 그룹을 구성할 때 사용됩니다. `-h`를 사용하여 지정하지 않으면 기본적으로 컨테이너 ID로 설정됩니다.
 
-### <a id="errorlogs"></a> SQL Server 설치 및 오류 로그
+### <a name="sql-server-setup-and-error-logs"></a><a id="errorlogs"></a> SQL Server 설치 및 오류 로그
 
 **/var/opt/mssql/log**에서 SQL Server 설치 및 오류 로그를 확인할 수 있습니다. 컨테이너가 실행되고 있지 않으면 먼저 컨테이너를 시작합니다. 그런 다음, 대화형 명령 프롬프트를 사용하여 로그를 검사합니다.
 

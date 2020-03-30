@@ -16,17 +16,17 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b11a263953e0b58c4b3dc7072662b291f3d215ab
-ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79375510"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  포함된 데이터베이스 사용자를 사용하여 데이터베이스 수준에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 연결을 인증합니다. 포함된 데이터베이스는 다른 데이터베이스 및 해당 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (및 master 데이터베이스) 인스턴스에서 격리된 데이터베이스입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 Windows 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 위해 포함된 데이터베이스 사용자를 지원합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]을(를) 사용하는 경우, 포함된 데이터베이스 사용자와 데이터베이스 수준 방화벽 규칙을 조합합니다. 이 문서에서는 포함된 데이터베이스 모델을 사용할 때와 기존의 로그인/사용자 모델 및 Windows 또는 서버 수준 방화벽 규칙을 사용할 때를 비교하여 그 차이점과 장점을 검토합니다. 특정 시나리오의 경우, 관리 효율성 또는 애플리케이션 비즈니스 논리는 여전히 기존의 로그인/사용자 모델 및 서버 수준 방화벽 규칙을 사용해야 할 수도 있습니다.  
+  포함된 데이터베이스 사용자를 사용하여 데이터베이스 수준에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 연결을 인증합니다. 포함된 데이터베이스는 다른 데이터베이스 및 해당 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (및 master 데이터베이스) 인스턴스에서 격리된 데이터베이스입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 Windows 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 위해 포함된 데이터베이스 사용자를 지원합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]을(를) 사용하는 경우, 포함된 데이터베이스 사용자와 데이터베이스 수준 방화벽 규칙을 조합합니다. 이 항목은 포함된 데이터베이스 모델을 사용할 때와 기존의 로그인/사용자 모델 및 Windows 또는 서버 수준 방화벽 규칙을 사용할 때를 비교하여 그 차이점과 장점을 검토합니다. 특정 시나리오의 경우, 관리 효율성 또는 애플리케이션 비즈니스 논리는 여전히 기존의 로그인/사용자 모델 및 서버 수준 방화벽 규칙을 사용해야 할 수도 있습니다.  
   
 > [!NOTE]  
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] 이(가) [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서비스를 발전시키고 보다 높게 보장된 SLA로 이동함에 따라, 지정된 데이터베이스에 대해 가용성 SLA와 최대 로그인 속도를 더 높이기 위하여 포함된 데이터베이스 사용자 모델 및 데이터베이스 범위 방화벽 규칙으로 전환이 필요할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 은(는) 지금 이러한 변경 사항을 고려할 것을 권장합니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "79375510"
 
 Azure SQL Database 관리되는 인스턴스는 포함된 데이터베이스의 컨텍스트에서 온-프레미스 SQL Server처럼 동작합니다. 포함된 사용자를 만드는 경우 데이터베이스 컨텍스트를 master 데이터베이스에서 사용자 데이터베이스로 변경해야 합니다. 또한 포함 옵션을 설정할 때 사용자 데이터베이스에 대한 활성 연결이 없어야 합니다. 
 
-다음은 그 예입니다.  
+다음은 그 예입니다. 
 
 ```sql
 Use MASTER;

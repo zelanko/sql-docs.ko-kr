@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 21e6d25305bd6abf4a3dc4555f2148a2fe385187
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68121593"
 ---
 # <a name="transactions-sql-data-warehouse"></a>트랜잭션(SQL Data Warehouse)
@@ -99,7 +99,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="locking-behavior"></a>잠금 동작  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서는 여러 사용자가 동시에 데이터를 액세스하는 경우 잠금을 사용하여 트랜잭션의 무결성을 확인하고 데이터베이스의 일관성을 유지합니다. 잠금은 암시적 및 명시적 트랜잭션 모두에서 사용됩니다. 각 트랜잭션은 해당 트랜잭션이 종속되는 테이블, 데이터베이스 등의 리소스에 대해 서로 다른 유형의 잠금을 요청합니다. 모든 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 잠금은 테이블 수준 이상입니다. 잠금은 다른 트랜잭션의 리소스 수정을 차단하여 잠금을 요청하는 트랜잭션에 문제가 발생하지 않도록 합니다. 각 트랜잭션은 더 이상 잠긴 리소스에 종속되지 않게 되면 잠금을 해제합니다. 명시적 트랜잭션은 커밋 또는 롤백되어 트랜잭션이 완료될 때까지 잠금을 유지합니다.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-an-explicit-transaction"></a>A. 명시적 트랜잭션 사용  
   

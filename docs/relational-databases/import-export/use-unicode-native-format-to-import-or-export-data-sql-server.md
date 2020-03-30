@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 473f9c37560ee4a63a296d2023a63ccc67aae779
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68091461"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>데이터를 가져오거나 내보내기 위해 유니코드 네이티브 형식 사용(SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "68091461"
 |[예](#examples)<br />&emsp;&#9679;&emsp;[bcp 및 유니코드 원시 형식을 사용하여 데이터 내보내기](#bcp_widenative_export)<br />&emsp;&#9679;&emsp;[bcp 및 유니코드 원시 형식을 사용하여 서식 파일 없이 데이터 가져오기](#bcp_widenative_import)<br />&emsp;&#9679;&emsp;[bcp 및 유니코드 원시 형식을 사용하여 XML 이외의 서식 파일과 함께 데이터 가져오기](#bcp_widenative_import_fmt)<br />&emsp;&#9679;&emsp;[서식 파일 없이 BULK INSERT 및 유니코드 원시 형식 사용](#bulk_widenative)<br />&emsp;&#9679;&emsp;[XML 이외의 서식 파일과 함께 BULK INSERT 및 유니코드 원시 형식 사용하기](#bulk_widenative_fmt)<br />&emsp;&#9679;&emsp;[XML 이외의 서식 파일과 함께 OPENROWSET 및 유니코드 원시 형식 사용하기](#openrowset_widenative_fmt)|
 |[관련 작업](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
   
-## 유니코드 네이티브 형식의 명령 옵션<a name="command_options"></a>  
+## <a name="command-options-for-unicode-native-format"></a>유니코드 네이티브 형식의 명령 옵션<a name="command_options"></a>  
 [bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 또는 [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)를 사용하여 테이블로 유니코드 문자 형식 데이터를 가져올 수 있습니다.  [bcp](../../tools/bcp-utility.md) 명령 또는 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 문의 경우 문에서 데이터 형식을 지정할 수 있습니다.  [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 문의 경우 서식 파일에서 데이터 형식을 지정해야 합니다.  
   
 유니코드 원시 형식에 대해 지원되는 명령 옵션은 다음과 같습니다.  
@@ -50,10 +50,10 @@ ms.locfileid: "68091461"
 > [!NOTE]
 >  서식 파일에서 필드 단위로 서식을 지정할 수도 있습니다. 자세한 내용은 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)를 참조하세요.
   
-## 예제 테스트 조건<a name="etc"></a>  
+## <a name="example-test-conditions"></a>예제 테스트 조건<a name="etc"></a>  
 이 항목의 예제는 아래에 정의된 테이블 및 서식 파일을 기반으로 합니다.
 
-### **샘플 테이블**<a name="sample_table"></a>
+### <a name="sample-table"></a>**샘플 테이블**<a name="sample_table"></a>
 아래 스크립트는 테스트 데이터베이스인 `myWidenative` 라는 테이블을 만들고 테이블을 몇 가지 초기 값으로 채웁니다.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```sql
 CREATE DATABASE TestDatabase;
@@ -79,7 +79,7 @@ VALUES
 SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
-### **샘플 비 XML 서식 파일**<a name="nonxml_format_file"></a>
+### <a name="sample-non-xml-format-file"></a>**샘플 비 XML 서식 파일**<a name="nonxml_format_file"></a>
 SQL Server는 두 유형의 서식 파일, 즉 비 XML 서식 파일과 XML 서식 파일을 지원합니다.  비 XML 서식 파일은 이전 버전의 SQL Server에서 원래 지원했던 서식 파일입니다.  자세한 내용은 [비 XML 서식 파일(SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 을 검토하세요.  다음 명령은 [bcp 유틸리티](../../tools/bcp-utility.md) 를 사용하여 `myWidenative.fmt`의 스키마를 기반으로 비 xml 서식 파일 `myWidenative`를 생성합니다.  [bcp](../../tools/bcp-utility.md) 명령을 사용하여 서식 파일을 만들려면 데이터 파일 경로 대신 **format** 인수를 지정하고 **NUL** 을 사용합니다.  format 옵션에는 **-f** 옵션도 필요합니다.  또한 이 예제에서 한정자 **c** 는 문자 데이터를 지정하는 데 사용되고 **T** 는 통합된 보안을 사용하여 신뢰할 수 있는 연결을 지정하는 데 사용됩니다.  명령 프롬프트에서 다음 명령을 입력합니다.
 
 ```
@@ -95,10 +95,10 @@ Notepad D:\BCP\myWidenative.fmt
 > `SQLState = S1000, NativeError = 0`  
 > `Error = [Microsoft][ODBC Driver 13 for SQL Server]I/O error while reading BCP format file`
 
-## 예<a name="examples"></a>
+## <a name="examples"></a>예<a name="examples"></a>
 아래 예제에서는 위에서 만든 데이터베이스와 서식 파일을 사용합니다.
 
-### **bcp 및 유니코드 원시 형식을 사용하여 데이터 내보내기**<a name="bcp_widenative_export"></a>
+### <a name="using-bcp-and-unicode-native-format-to-export-data"></a>**bcp 및 유니코드 원시 형식을 사용하여 데이터 내보내기**<a name="bcp_widenative_export"></a>
 **-N** 스위치 및 **OUT** 명령.  참고: 이 예제에서 만든 데이터 파일은 이후 나오는 모든 예제에서 사용됩니다.  명령 프롬프트에서 다음 명령을 입력합니다.
 ```
 bcp TestDatabase.dbo.myWidenative OUT D:\BCP\myWidenative.bcp -T -N
@@ -107,7 +107,7 @@ REM Review results
 NOTEPAD D:\BCP\myWidenative.bcp
 ```
 
-### **bcp 및 유니코드 원시 형식을 사용하여 서식 파일 없이 데이터 가져오기**<a name="bcp_widenative_import"></a>
+### <a name="using-bcp-and-unicode-native-format-to-import-data-without-a-format-file"></a>**bcp 및 유니코드 원시 형식을 사용하여 서식 파일 없이 데이터 가져오기**<a name="bcp_widenative_import"></a>
 **-N** 스위치 및 **IN** 명령.  명령 프롬프트에서 다음 명령을 입력합니다.
 ```
 REM Truncate table (for testing)
@@ -119,7 +119,7 @@ bcp TestDatabase.dbo.myWidenative IN D:\BCP\myWidenative.bcp -T -N
 REM Review results is SSMS
 ```
 
-### **bcp 및 유니코드 원시 형식을 사용하여 XML 이외의 서식 파일과 함께 데이터 가져오기**<a name="bcp_widenative_import_fmt"></a>
+### <a name="using-bcp-and-unicode-native-format-to-import-data-with-a-non-xml-format-file"></a>**bcp 및 유니코드 원시 형식을 사용하여 XML 이외의 서식 파일과 함께 데이터 가져오기**<a name="bcp_widenative_import_fmt"></a>
 **-N** 및 **-f** 스위치와 **IN** 명령.  명령 프롬프트에서 다음 명령을 입력합니다.
 ```
 REM Truncate table (for testing)
@@ -131,7 +131,7 @@ bcp TestDatabase.dbo.myWidenative IN D:\BCP\myWidenative.bcp -f D:\BCP\myWidenat
 REM Review results is SSMS
 ```
 
-### **서식 파일 없이 BULK INSERT 및 유니코드 원시 형식 사용**<a name="bulk_widenative"></a>
+### <a name="using-bulk-insert-and-unicode-native-format-without-a-format-file"></a>**서식 파일 없이 BULK INSERT 및 유니코드 원시 형식 사용**<a name="bulk_widenative"></a>
 **DATAFILETYPE** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative; -- for testing
@@ -145,7 +145,7 @@ BULK INSERT TestDatabase.dbo.myWidenative
 SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
-### **XML 이외의 서식 파일과 함께 BULK INSERT 및 유니코드 원시 형식 사용하기**<a name="bulk_widenative_fmt"></a>
+### <a name="using-bulk-insert-and-unicode-native-format-with-a-non-xml-format-file"></a>**XML 이외의 서식 파일과 함께 BULK INSERT 및 유니코드 원시 형식 사용하기**<a name="bulk_widenative_fmt"></a>
 **FORMATFILE** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative; -- for testing
@@ -159,7 +159,7 @@ BULK INSERT TestDatabase.dbo.myWidenative
 SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
-### **XML 이외의 서식 파일과 함께 OPENROWSET 및 유니코드 원시 형식 사용하기**<a name="openrowset_widenative_fmt"></a>
+### <a name="using-openrowset-and-unicode-native-format-with-a-non-xml-format-file"></a>**XML 이외의 서식 파일과 함께 OPENROWSET 및 유니코드 원시 형식 사용하기**<a name="openrowset_widenative_fmt"></a>
 **FORMATFILE** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative;  -- for testing
@@ -174,7 +174,7 @@ INSERT INTO TestDatabase.dbo.myWidenative
 SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
-## 관련 작업<a name="RelatedTasks"></a>
+## <a name="related-tasks"></a>관련 작업<a name="RelatedTasks"></a>
 대량 가져오기 또는 대량 내보내기를 위한 데이터 형식을 사용하려면  
 -   [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   

@@ -14,10 +14,10 @@ ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
 ms.openlocfilehash: afc420ffe62f31c5793f00f3acea12dedac7f509
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79198400"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>빠른 시작: Docker에서 SQL Server 컨테이너 이미지 실행

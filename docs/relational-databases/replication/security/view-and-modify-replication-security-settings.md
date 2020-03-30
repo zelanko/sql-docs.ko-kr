@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f74883ab152ca1552d1193f204fc0af3a72cdb8f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287248"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>복제 보안 설정 보기 및 수정
@@ -46,20 +46,20 @@ ms.locfileid: "76287248"
   
 -   **후속 작업:**  [복제 보안 설정 수정 후](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   사용되는 저장 프로시저는 에이전트의 유형과 서버 연결의 유형에 따라 다릅니다.  
   
 -   사용하는 RMO 클래스 및 속성은 에이전트 유형 및 서버 연결 유형에 따라 달라집니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
  보안을 위해 암호의 실제 값은 복제 저장 프로시저에 의해 반환된 결과 집합에서 마스킹됩니다.  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  다음 대화 상자에서 보안 설정을 확인하고 수정합니다.  
   
 1.  **의** 복제 **폴더에서 사용할 수 있는** 복제 암호 업데이트 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. 복제 토폴로지의 서버에서 Windows 계정이나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 계정의 암호를 변경할 경우 해당 계정을 사용하는 각 에이전트의 암호를 업데이트하지 말고 이 대화 상자를 사용하세요. 두 개 이상의 서버에 있는 에이전트에서 같은 계정을 사용할 경우 각 서버에 연결하고 암호를 변경해야 합니다. 해당 암호를 사용하는 복제가 있는 모든 위치에서 암호가 업데이트됩니다. 연결된 서버와 같은 다른 위치에서는 암호가 업데이트되지 않습니다.  
@@ -243,7 +243,7 @@ ms.locfileid: "76287248"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 > [!IMPORTANT]  
 >  가능한 경우 다음의 모든 절차에서 런타임에 사용자에게 보안 자격 증명을 입력하라는 메시지를 표시하세요. 스크립트 파일에 자격 증명을 저장하는 경우에는 무단으로 액세스하지 못하도록 파일에 보안을 설정해야 합니다.  
@@ -414,7 +414,7 @@ ms.locfileid: "76287248"
   
 2.  이 원격 배포자를 사용하는 모든 게시자에서 `@password`에 1단계의 암호를 지정하고 [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md)를 실행합니다.  
   
-##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
   
 > [!IMPORTANT]  
 >  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](https://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 를 사용합니다.  
@@ -561,14 +561,14 @@ ms.locfileid: "76287248"
   
     -   *PublisherSecurity* - A <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext> 개체  
   
-###  <a name="PShellExample"></a> 예(RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> 예(RMO)  
  이 예에서는 제공된 로그인 값을 확인하고 서버에서 복제로 저장된 SQL Server 로그인 또는 제공된 Windows 로그인의 모든 암호를 변경합니다.  
   
  [!code-cs[HowTo#rmo_ChangeServerPasswords](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_changeserverpasswords)]  
   
  [!code-vb[HowTo#rmo_vb_ChangeServerPasswords](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changeserverpasswords)]  
   
-##  <a name="FollowUp"></a> 후속 작업: 복제 보안 설정 수정 후  
+##  <a name="follow-up-after-you-modify-replication-security-settings"></a><a name="FollowUp"></a> 후속 작업: 복제 보안 설정 수정 후  
  에이전트 로그인 또는 암호를 변경한 후 에이전트를 중지하고 다시 시작해야 변경 내용이 적용됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

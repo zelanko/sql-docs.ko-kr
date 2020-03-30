@@ -14,10 +14,10 @@ ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1f42630e101a60c9d3265ab96a5b126551eeaff0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991595"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On 가용성 그룹: 상호 운용성(SQL Server)
@@ -25,7 +25,7 @@ ms.locfileid: "67991595"
 
 이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 다른 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]기능과의 상호 운용성에 대해 설명합니다.
 
-## <a name="Interop"></a> Always On 가용성 그룹과 상호 운용하는 기능
+## <a name="features-that-interoperate-with-always-on-availability-groups"></a><a name="Interop"></a> Always On 가용성 그룹과 상호 운용하는 기능
 
 다음 표에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 과 상호 운용하는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]기능이 나와 있습니다. **추가 정보** 열의 링크는 해당 기능에 대해 상호 운용성 고려 사항이 있음을 나타냅니다.
 
@@ -46,20 +46,20 @@ ms.locfileid: "67991595"
 |Service Broker|[Always On 가용성 그룹이 포함된 Service Broker&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/service-broker-with-always-on-availability-groups-sql-server.md)|
 |SQL Server 에이전트|&nbsp;|
 
-## <a name="restrictions"></a> 제한 사항이 있는 Always On 가용성 그룹과 상호 운용하는 기능
+## <a name="features-that-interoperate-with-always-on-availability-groups-with-restrictions"></a><a name="restrictions"></a> 제한 사항이 있는 Always On 가용성 그룹과 상호 운용하는 기능
 
 다음 기능은 특정 제한 사항이 있는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 와(과) 상호 운용합니다. 자세한 내용은 연결된 항목을 참조하세요.
 
 - 데이터베이스 간 트랜잭션/분산 트랜잭션([!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 및 Windows Server 2016) - 자세한 내용은 [Always On 가용성 그룹에 대한 데이터베이스 간 트랜잭션 및 분산 트랜잭션과 데이터베이스 미러링&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)을 참조하세요.
 - [쿼리 통계 시스템 데이터 수집기](../../../relational-databases/data-collection/system-data-collection-set-reports.md#Query)는 읽을 수 없는 보조 항목이 있는 환경에서 안정적으로 실행할 수 없습니다. 쿼리 통계 시스템 데이터 수집기를 사용하려면 모든 보조 가용성 그룹 복제본을 [읽기 액세스](configure-read-only-access-on-an-availability-replica-sql-server.md)로 설정합니다. 
 
-## <a name="NoInterop"></a> Always On 가용성 그룹과 상호 운용하는 기능
+## <a name="features-that-do-not-interoperate-with-always-on-availability-groups"></a><a name="NoInterop"></a> Always On 가용성 그룹과 상호 운용하는 기능
 
 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 다음 기능과 상호 운용되지 않습니다.
 
 - 데이터베이스 미러링. 자세한 내용은 [Always On 가용성 그룹 및 데이터베이스 미러링에 대한 데이터베이스 간 트랜잭션 및 분산 트랜잭션&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)를 참조하세요.
 
-## <a name="RelatedContent"></a> 관련 내용
+## <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용
 
 - **블로그:**
 

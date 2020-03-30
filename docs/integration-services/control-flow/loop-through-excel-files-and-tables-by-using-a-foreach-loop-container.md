@@ -15,10 +15,10 @@ ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c82f5f361bf04b7d3d4a4c7012cee92d2a85ebfd
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903764"
 ---
 # <a name="loop-through-excel-files-and-tables-with-a-foreach-loop-container"></a>Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 반복

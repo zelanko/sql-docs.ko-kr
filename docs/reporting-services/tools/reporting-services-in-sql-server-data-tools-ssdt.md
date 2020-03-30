@@ -11,28 +11,28 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c1f327b42dd3cdc18be769ef4b4b6fac571578e0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68889838"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools의 Reporting Services(SSDT)
 
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 비즈니스 인텔리전스 솔루션을 만들기 위한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 환경입니다. SSDT에서는 페이지를 매긴 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서 정의, 공유 데이터 원본, 공유 데이터 세트 및 보고서 파트를 열고 수정하고 미리 보고 저장하고 배포할 수 있는 보고서 디자이너 제작 환경을 사용할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 SQL Server에 포함되어 있지 않습니다. [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)를 다운로드합니다. 
   
- 이 문서에서는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 에 사용되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]솔루션, 프로젝트, 프로젝트 템플릿 및 구성과 보고서 디자이너에서 사용할 수 있는 뷰, 메뉴, 도구 모음 및 바로 가기에 대해 설명합니다.  
+ 이 항목에서는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 에 사용되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]솔루션, 프로젝트, 프로젝트 템플릿 및 구성과 보고서 디자이너에서 사용할 수 있는 뷰, 메뉴, 도구 모음 및 바로 가기에 대해 설명합니다.  
   
  보고서 디자인을 시작하려면 [보고서 디자이너로 보고서 디자인&#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)을 참조하세요.  
   
-##  <a name="bkmk_SolutionsandProjects"></a> 솔루션 및 프로젝트  
+##  <a name="solutions-and-projects"></a><a name="bkmk_SolutionsandProjects"></a> 솔루션 및 프로젝트  
  보고서 프로젝트는 보고서 정의 및 리소스에 대한 컨테이너 역할을 합니다. 보고서 프로젝트의 모든 파일은 프로젝트를 배포할 때 보고서 서버에 게시됩니다. 처음 프로젝트를 만들면 해당 프로젝트의 컨테이너 역할을 하는 솔루션도 만들어집니다. 하나의 솔루션에 여러 프로젝트를 추가할 수 있습니다.  
   
   
-##  <a name="bkmk_Configurations"></a> 구성  
+##  <a name="configurations"></a><a name="bkmk_Configurations"></a> 구성  
  엔터프라이즈 테스트 및 프로덕션 보고서 서버와 같은 배포 변형을 위한 여러 프로젝트 속성 집합을 만들려면 구성 관리자를 사용합니다. 자세한 내용은 [SQL Server Data Tools의 배포 및 버전 지원&#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)에 포함되지 않습니다.  
   
-##  <a name="bkmk_ReportServerProjects"></a> 보고서 서버 프로젝트  
+##  <a name="report-server-projects"></a><a name="bkmk_ReportServerProjects"></a> 보고서 서버 프로젝트  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 설치하면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 다음 프로젝트 템플릿을 사용할 수 있습니다.  
   
 -   **보고서 서버 프로젝트** 보고서 서버 프로젝트를 선택하면 보고서 디자이너가 열립니다. 보고서 서버 프로젝트는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 에 의해 설치되며 **새 프로젝트** 대화 상자에서 사용할 수 있는 비즈니스 인텔리전스 프로젝트 템플릿입니다. 자세한 내용은 [보고서 프로젝트에 새 보고서 또는 기존 보고서 추가&#40;SSRS&#41;](../../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md)를 참조하세요. 보고서 서버 프로젝트 속성은 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 프로젝트의 모든 보고서 및 모든 공유 데이터 원본에 적용됩니다. 이러한 속성에는 보고서 서버의 URL과 보고서 및 공유 데이터 원본의 폴더 이름이 포함됩니다. **프로젝트 속성 페이지** 대화 상자를 사용하여 현재 속성 값을 볼 수 있습니다. 이 대화 상자를 열려면 **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
@@ -42,10 +42,10 @@ ms.locfileid: "68889838"
  ![SSDT의 새 프로젝트 템플릿](https://docs.microsoft.com/analysis-services/analysis-services/media/ssdt-biprojects.png "SSDT의 새 프로젝트 템플릿")  
   
   
-##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> 보고서 디자이너 창 및 하위 창  
+##  <a name="report-designer-windows-and-panes"></a><a name="bkmk_ReportDesignerWindowsandPanes"></a> 보고서 디자이너 창 및 하위 창  
  보고서 디자이너는 두 가지 뷰를 지원합니다. **디자인**은 보고서 데이터 및 보고서 레이아웃을 정의하기 위한 뷰이고 **미리 보기**는 보고서의 렌더링된 뷰를 표시하기 위한 뷰입니다. 각 뷰에서 여러 창을 표시하면 렌더링된 보고서를 디자인하거나 보는 데 도움이 됩니다.  
   
-###  <a name="bkmk_ReportDataPane"></a> 보고서 데이터 창  
+###  <a name="report-data-pane"></a><a name="bkmk_ReportDataPane"></a> 보고서 데이터 창  
  보고서 데이터 창에는 기본 제공 필드, 데이터 원본, 데이터 세트, 필드 컬렉션, 보고서 매개 변수 및 이미지가 표시됩니다.  
   
  보고서 데이터 창을 사용하여 볼 수 있는 항목은 다음과 같습니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "68889838"
 >  보고서 데이터 창이 표시되지 않는 경우 디자인 영역을 클릭한 다음 **보기** 메뉴에서 **보고서 데이터**를 클릭합니다. 보고서 데이터 창이 부동 창인 경우 고정할 수 있습니다. 자세한 내용은 [보고서 디자이너에서 보고서 데이터 창 도킹&#40;SSRS&#41;](../../reporting-services/tools/dock-the-report-data-pane-in-report-designer-ssrs.md)을 참조하세요.  
   
   
-###  <a name="bkmk_GroupingPane"></a> 그룹화 창  
+###  <a name="grouping-pane"></a><a name="bkmk_GroupingPane"></a> 그룹화 창  
  그룹화 창을 사용하여 테이블릭스 데이터 영역에 대한 그룹을 정의할 수 있습니다. 테이블의 경우 행 그룹 및 세부 그룹을 정의하고 행렬의 경우 행 및 열 그룹을 정의할 수 있습니다. 그룹화 창을 사용하여 차트 또는 다른 데이터 영역에 대한 그룹을 정의할 수 없습니다. 자세한 내용은 [그룹 이해&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)를 참조하세요.  
   
  그룹화 창에는 다음과 같은 두 가지 모드가 있습니다.  
@@ -85,10 +85,10 @@ ms.locfileid: "68889838"
  자세한 내용은 [Grouping Pane](../../reporting-services/tools/grouping-pane.md)을 참조하세요.  
   
   
-###  <a name="bkmk_Toolbox"></a> 도구 상자  
+###  <a name="toolbox"></a><a name="bkmk_Toolbox"></a> 도구 상자  
  도구 상자는 디자인 화면으로 끌 수 있는 보고서 항목을 포함합니다. 데이터 영역은 보고서에서 데이터를 구성하는 데 사용하는 보고서 항목입니다. 테이블, 행렬, 목록, 차트, 계기, 데이터 막대, 스파크라인 및 표시기가 데이터 영역입니다. 다른 보고서 항목에는 지도, 입력란, 사각형, 선, 이미지 및 하위 보고서가 있습니다. 사용자 지정 보고서 항목은 시스템 관리자가 설치 및 등록한 경우 이 목록에도 나타날 수 있습니다.  
   
-###  <a name="bkmk_PropertiesPane"></a> 속성 창  
+###  <a name="properties-pane"></a><a name="bkmk_PropertiesPane"></a> 속성 창  
  속성 창은 속성 이름과 디자인 화면에서 현재 선택된 보고서 항목의 값을 보여 주는 표준 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 창입니다. 대부분의 경우 속성 이름은 RDL(Report Definition Language) 파일의 요소 및 특성에 해당합니다. 자주 사용하는 속성은 선택한 항목의 속성 대화 상자를 사용하여 설정할 수 있습니다. 해당 대화 상자를 열려면 속성 창 도구 모음에서 **속성 페이지** 단추를 클릭합니다. 고급 사용자는 속성 창에서 직접 속성 값을 설정할 수 있습니다.  
   
  속성 창을 사용하여 다음을 수행할 수 있습니다.  
@@ -102,25 +102,25 @@ ms.locfileid: "68889838"
  속성 창을 표시하려면 **보기** 메뉴에서 **속성 창**을 클릭합니다. 이 창의 도킹을 해제하여 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]창의 다른 영역으로 이동하거나 디자인 화면에서 해당 창을 탭 뷰로 표시할 수 있습니다.  
   
   
-###  <a name="bkmk_SolutionExplorer"></a> 솔루션 탐색기  
+###  <a name="solution-explorer"></a><a name="bkmk_SolutionExplorer"></a> 솔루션 탐색기  
  솔루션 탐색기는 프로젝트에 있는 모든 항목을 표시하는 표준 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 구성 요소입니다. 보고서 서버 프로젝트의 경우 이 구성 요소에는 공유 데이터 원본, 공유 데이터 세트, 보고서 및 리소스를 구성하는 폴더가 포함됩니다. 폴더 항목은 솔루션 파일을 열 때 사전순으로 자동 정렬됩니다. 속성 창에서 항목 속성을 보려면 해당 항목을 선택합니다.  
   
-###  <a name="bkmk_Output"></a> Output  
+###  <a name="output"></a><a name="bkmk_Output"></a> Output  
  출력 창은 보고서를 미리 볼 때에는 처리 오류를 표시하고 보고서 또는 공유 데이터 원본을 배포할 때에는 게시 오류를 표시합니다.  
   
  출력 및 문서 개요 창을 사용하여 식에서 오류를 디버그할 수 있습니다.  
   
   
-###  <a name="bkmk_DocumentOutline"></a> 문서 개요  
+###  <a name="document-outline"></a><a name="bkmk_DocumentOutline"></a> 문서 개요  
  문서 개요 창은 보고서 정의에 있는 모든 보고서 항목의 계층 목록을 표시합니다. 문서 개요 창을 열려면 **보기** 메뉴에서 **다른 창** 을 가리키고 **문서 창**을 클릭합니다.  
   
  문서 개요 창을 사용하여 입력란 및 기타 보고서 항목을 이름으로 식별할 수 있습니다. 문서 개요 창에서 항목을 선택하면 해당 항목은 디자인 화면에서도 선택됩니다.  
   
-###  <a name="bkmk_TaskList"></a> 작업 목록  
+###  <a name="task-list"></a><a name="bkmk_TaskList"></a> 작업 목록  
  태스크 목록 창은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access와 같은 다른 애플리케이션에서 보고서를 가져올 때 지원되지 않는 기능에 대한 빌드 오류를 표시합니다.  
   
   
-##  <a name="bkmk_ReportDesignerDesignView"></a> 보고서 디자이너 디자인 뷰  
+##  <a name="report-designer-design-view"></a><a name="bkmk_ReportDesignerDesignView"></a> 보고서 디자이너 디자인 뷰  
  기본적으로 보고서 서버 프로젝트를 만들면 보고서 디자이너가 디자인 뷰에서 열리고 디자인 화면을 표시합니다. 기본적으로 디자인 화면에는 보고서 본문 및 배경이 표시됩니다.  
   
  배경에 있는 바로 가기 메뉴는 페이지 머리글 및 페이지 바닥글을 추가하는 옵션을 제공하며 보기 메뉴를 통해 눈금자 및 그룹화 창을 표시하는 옵션을 제공합니다.  
@@ -130,7 +130,7 @@ ms.locfileid: "68889838"
  보고서를 디자인하려면 보고서 항목을 도구 상자에서 끌어 디자인 화면에 놓은 다음 보고서에서 해당 속성을 구성하고 정렬을 변경합니다.  
   
   
-##  <a name="bkmk_ReportDesignerPreview"></a> 보고서 디자이너 미리 보기  
+##  <a name="report-designer-preview"></a><a name="bkmk_ReportDesignerPreview"></a> 보고서 디자이너 미리 보기  
  미리 보기를 사용하여 보고서를 실행하고 렌더링된 보고서를 보고서 뷰어에서 볼 수 있습니다. 미리 보기는 보고서 데이터를 로컬로 캐시합니다. 구성 속성을 설정하여 브라우저를 통해 디버그 뷰로 보고서를 실행할 수도 있습니다.  
   
  보고서를 미리 보면 보고서 디자이너는 보고서 데이터 원본에 연결하고, 데이터 세트 쿼리를 실행하고, 로컬 컴퓨터에 데이터를 캐시하고, 보고서를 처리하여 데이터와 레이아웃을 결합하고, 보고서를 렌더링합니다. 보고서를 미리 보기 탭에서 보거나 보고서를 디버그 모드로 표시하는 프로젝트 속성을 설정하여 보고서를 브라우저에서 직접 볼 수 있습니다.  
@@ -144,10 +144,10 @@ ms.locfileid: "68889838"
 -   **출력 창에서 오류 메시지 모니터링** 보고서를 미리 보고 보고서 처리기가 문제를 검색하면 출력 창에 오류 메시지가 기록됩니다.  
   
   
-##  <a name="bkmk_ReportDesignerMenus"></a> 보고서 디자이너 메뉴  
+##  <a name="report-designer-menus"></a><a name="bkmk_ReportDesignerMenus"></a> 보고서 디자이너 메뉴  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 보고서 디자이너 프로젝트가 활성화되어 있으면 주 메뉴 모음에 다음 도구 모음이 추가됩니다. 보고서 디자이너 메뉴는 디자인 뷰에 있을 때만 표시됩니다.  
   
-###  <a name="FormatMenu"></a> 서식 메뉴  
+###  <a name="format-menu"></a><a name="FormatMenu"></a> 서식 메뉴  
  디자인 화면에서 항목을 선택하면 **서식** 메뉴에 다음 옵션이 포함됩니다.  
   
 -   **전경색** 텍스트 색을 선택합니다. 기본 텍스트 색은 검정입니다.  
@@ -170,7 +170,7 @@ ms.locfileid: "68889838"
   
 -   **순서** 선택한 개체를 배경이나 전경으로 이동합니다.  
   
-###  <a name="ReportMenu"></a> 보고서 메뉴  
+###  <a name="report-menu"></a><a name="ReportMenu"></a> 보고서 메뉴  
  보고서 디자인 화면에 포커스가 있으면 **보고서** 메뉴에 다음 옵션이 포함됩니다.  
   
 -   **보고서 속성** **보고서 속성** 대화 상자를 열려면 선택합니다. 이 대화 상자에서 작성자 이름, 눈금 간격 등의 일반 보고서 속성을 할당하고 열 개수 및 페이지 크기와 같은 보고서 레이아웃 속성을 지정할 수 있습니다. 또한 데이터 출력 요소, 데이터 변환 및 데이터 스키마의 이름과 사용자 지정 코드, 어셈블리와 클래스에 대한 참조를 포함할 수 있습니다.  
@@ -183,7 +183,7 @@ ms.locfileid: "68889838"
   
 -   **그룹화 창** 그룹화 창을 표시하거나 숨깁니다.  
   
-###  <a name="ViewMenu"></a> 보기 메뉴  
+###  <a name="view-menu"></a><a name="ViewMenu"></a> 보기 메뉴  
  **보기** 메뉴를 사용하여 보고서 디자이너 창 및 도구 모음을 표시할 수 있습니다.  
   
 -   **오류 목록** 보고서를 게시하거나 미리 볼 때 검색된 오류를 표시하려면 이 옵션을 사용합니다.  
@@ -202,7 +202,7 @@ ms.locfileid: "68889838"
   
 -   **보고서 데이터** 보고서 매개 변수, 데이터 원본, 데이터 세트, 이미지를 추가할 수 있는 보고서 데이터 창을 표시하려면 이 옵션을 사용합니다.  
   
-###  <a name="ProjectMenu"></a> 프로젝트 메뉴  
+###  <a name="project-menu"></a><a name="ProjectMenu"></a> 프로젝트 메뉴  
  **프로젝트** 메뉴를 사용하여 프로젝트에 있는 공유 데이터 원본 및 보고서를 관리할 수 있습니다. 프로젝트에서 항목을 추가하거나 제거하면 솔루션 탐색기에서 프로젝트 항목의 계층 표시가 자동으로 업데이트됩니다.  
   
 -   **새 항목 추가** 프로젝트에 새 공유 데이터 원본 또는 새 보고서를 추가합니다.  
@@ -220,7 +220,7 @@ ms.locfileid: "68889838"
 -   **속성** 이 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [프로젝트 속성 페이지 대화 상자](../../reporting-services/tools/project-property-pages-dialog-box.md)를 참조하세요.  
   
   
-##  <a name="bkmk_ReportDesignerToolbars"></a> 보고서 디자이너 도구 모음  
+##  <a name="report-designer-toolbars"></a><a name="bkmk_ReportDesignerToolbars"></a> 보고서 디자이너 도구 모음  
  보고서 디자이너는 보고서 디자인 시 사용할 수 있는 다음과 같은 특수화된 도구 모음을 제공합니다.  
   
 -   **보고서** 페이지 머리글 또는 페이지 바닥글을 추가하거나, 보고서 속성을 설정하거나, 눈금자 또는 그룹화 창을 토글하거나, 확대/축소를 사용하여 보고서 뷰를 변경합니다.  
@@ -236,16 +236,16 @@ ms.locfileid: "68889838"
  **보기** 메뉴를 사용하여 이러한 도구 모음을 표시할지 여부를 제어할 수 있습니다. 다른 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 도구 모음의 기능이 보고서 디자이너 기능에 적용되지 않을 경우 해당 도구 모음이 비활성화될 수 있습니다.  
   
 
-##  <a name="bkmk_SourceControl"></a> 원본 제어  
+##  <a name="source-control"></a><a name="bkmk_SourceControl"></a> 원본 제어  
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 원본 플러그 인과 통합할 수 있습니다. **옵션** 대화 상자의 프로젝트 및 솔루션 페이지를 사용하여 플러그 인 및 구성 속성을 지정할 수 있습니다.  
   
-##  <a name="bkmk_CustomReportTemplates"></a> 사용자 지정 보고서 템플릿  
+##  <a name="custom-report-templates"></a><a name="bkmk_CustomReportTemplates"></a> 사용자 지정 보고서 템플릿  
  사용자 지정 보고서를 새로운 보고서에 대한 템플릿으로 사용하려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 가 설치된 컴퓨터의 ReportProject 폴더에 이를 복사하기만 하면 됩니다. 기본적으로 이 폴더는 다음 위치에 있습니다. `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. 보고서 프로젝트에 새 항목을 추가하면 사용자 지정 보고서가 템플릿 창에 표시됩니다.  
   
  보고서 마법사에 사용자 지정 스타일을 추가할 수도 있습니다.  
   
   
-##  <a name="bkmk_CommandLineSupportForssdt"></a> SQL Server Data Tools에 대한 명령줄 지원  
+##  <a name="command-line-support-for-sql-server-data-tools"></a><a name="bkmk_CommandLineSupportForssdt"></a> SQL Server Data Tools에 대한 명령줄 지원  
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 및 기본 devenv.exe 애플리케이션을 기반으로 합니다. 이러한 옵션을 사용하려면 먼저 다음 두 항목에 대한 올바른 값을 설정해야 합니다.  
   
 -   OverwriteDataSources, TargetDataSourceFolder, TargetReportFolder 및 TargetServerURL의 프로젝트 속성  
@@ -274,7 +274,7 @@ ms.locfileid: "68889838"
     devenv.exe "C:\Users\MyUser\Documents\Visual Studio 2015\Projects\Reports\Reports.sln" /build "Debug" /out mybuildlog.txt  
     ```  
   
-##  <a name="bkmk_KeyboardShortcuts"></a> Reporting Services의 바로 가기 키  
+##  <a name="keyboard-shortcuts-in-reporting-services"></a><a name="bkmk_KeyboardShortcuts"></a> Reporting Services의 바로 가기 키  
  바로 가기 키를 사용하여 다음을 수행할 수 있습니다.  
   
 -   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 창 및 모드를 제어합니다.  

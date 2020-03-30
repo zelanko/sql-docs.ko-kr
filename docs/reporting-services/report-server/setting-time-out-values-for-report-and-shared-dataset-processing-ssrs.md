@@ -15,10 +15,10 @@ ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5996c21b09a722a3cbeac41917bf83ca132feed2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082327"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>보고서 및 공유 데이터 세트 처리에 대한 시간 제한 값 설정(SSRS)

@@ -22,10 +22,10 @@ ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 481cac0715f00c7d29a92b77101c4a09a28056a6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298042"
 ---
 # <a name="sql-server-destination"></a>SQL Server 대상
@@ -39,7 +39,7 @@ ms.locfileid: "71298042"
  SQL Server 대상이 포함된 패키지를 실행하는 사용자는 "전역 개체 만들기" 권한이 있어야 합니다. **관리 도구** 메뉴에서 연 로컬 보안 정책 도구를 사용하여 사용자에게 이 사용 권한을 부여할 수 있습니다. SQL Server 대상을 사용하는 패키지를 실행할 때 오류 메시지가 표시되면 패키지를 실행 중인 계정에 "전역 개체 만들기" 권한이 있는지 확인합니다.  
   
 ## <a name="bulk-inserts"></a>대량 삽입  
- SQL Server 대상을 사용하여 원격 SQL Server 데이터베이스에 데이터를 대량으로 로드하려고 하면 "OLE DB 레코드를 사용할 수 있습니다. 원본: "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult: 0x80040E14 설명: "SSIS 파일 매핑 개체 'Global\DTSQLIMPORT'를 열 수 없으므로 대량 로드할 수 없습니다. 운영 체제 오류 코드 2(시스템에서 지정한 파일을 찾을 수 없습니다.)입니다. Windows 보안을 통해 로컬 서버에 액세스하고 있는지 확인하십시오.""와 유사한 오류 메시지가 나타납니다.  
+ SQL Server 대상을 사용하여 원격 SQL Server 데이터베이스에 데이터를 대량으로 로드하려고 하면 "OLE DB 레코드를 사용할 수 있습니다. 원본: "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult: 0x80040E14 설명: "SSIS 파일 매핑 개체 'Global\DTSQLIMPORT'을(를) 열 수 없으므로 대량 로드할 수 없습니다. 운영 체제 오류 코드 2(시스템에서 지정한 파일을 찾을 수 없습니다.)입니다. Windows 보안을 통해 로컬 서버에 액세스하고 있는지 확인하십시오.""와 유사한 오류 메시지가 나타납니다.  
   
  SQL Server 대상은 대량 삽입 태스크가 제공하는 것과 동일하게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 고속 데이터 삽입 기능을 제공하지만 SQL Server 대상을 사용하면 데이터가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 로드되기 전에 패키지에서 열 데이터에 변환을 적용할 수 있습니다.  
   

@@ -16,10 +16,10 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fe0c9a950221317cb4a9088bae7629fc0c894165
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71710317"
 ---
 # <a name="create-a-full-database-backup"></a>전체 데이터베이스 백업 만들기
@@ -30,32 +30,32 @@ ms.locfileid: "71710317"
 
 Azure Blob Storage 서비스로의 SQL Server 백업 방법에 대한 자세한 내용은 [Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 및 [URL로 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.
 
-## <a name="Restrictions"></a> 제한 사항
+## <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항
 
 - 명시적 또는 암시적 트랜잭션에서는 `BACKUP` 문을 사용할 수 없습니다.
 - 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 만든 백업은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 복원할 수 없습니다.
 
 백업 개념과 태스크의 개요를 보고 자세히 살펴보려면 계속하기 전에 [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)를 참조하세요.
 
-## <a name="Recommendations"></a> 권장 사항
+## <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항
 
 - 데이터베이스가 커짐에 따라 전체 데이터베이스 백업은 마치는 데 시간이 오래 걸리고 스토리지 공간도 더 많이 필요하게 됩니다. 큰 데이터베이스의 경우 일련의 [차등 데이터베이스 백업](../../relational-databases/backup-restore/differential-backups-sql-server.md)으로 전체 데이터베이스 백업 보완을 고려합니다.
 - [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 시스템 저장 프로시저를 사용하여 전체 데이터베이스 백업의 크기를 예측합니다.
 - 기본적으로 백업 작업을 성공적으로 수행할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그와 시스템 이벤트 로그에 항목이 추가됩니다. 자주 백업하는 경우 이러한 성공 메시지는 바로 누적되므로 엄청난 오류 로그가 쌓여 다른 메시지를 찾기 힘들 수 있습니다. 이 경우 스크립트가 이러한 백업 로그 항목에 종속되지 않을 경우 추적 플래그 3226을 사용하여 이러한 항목을 표시하지 않을 수 있습니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.
 
-## <a name="Security"></a> 보안
+## <a name="security"></a><a name="Security"></a> 보안
 
 데이터베이스 백업에서 **TRUSTWORTHY**는 OFF로 설정되어 있습니다. **TRUSTWORTHY**를 ON으로 설정하는 방법에 대한 자세한 내용은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.
 
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터는 **PASSWORD** 및 **MEDIAPASSWORD** 옵션은 백업을 만드는 데 더 이상 사용되지 않습니다. 암호를 사용하여 만든 백업은 계속 복원할 수 있습니다.
 
-## <a name="Permissions"></a> 권한
+## <a name="permissions"></a><a name="Permissions"></a> 권한
 
 `BACKUP DATABASE` 및 `BACKUP LOG` 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버로 설정됩니다.
 
  백업 디바이스의 물리적 파일에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스는 디바이스를 읽고 쓸 수 있어야 하므로, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 실행에 사용되는 계정에 백업 디바이스에 대한 쓰기 권한이 있어야 합니다. 그러나 시스템 테이블의 백업 디바이스에 대한 항목을 추가하는 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)는 파일 액세스 권한을 확인하지 않습니다. 따라서 백업 디바이스의 물리적 파일에서 발생하는 이러한 문제는 백업 또는 복원을 시도할 때 물리적 리소스를 액세스하기 전까지는 발생하지 않습니다.
 
-## <a name="SSMSProcedure"></a> SQL Server Management Studio 사용
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 백업 작업을 지정할 때 **스크립트** 단추를 클릭하고 스크립트 대상을 선택하여 해당되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) 스크립트를 생성할 수 있습니다.
@@ -240,7 +240,7 @@ GO
 
 1. 백업이 성공적으로 완료되면, **확인**을 클릭하여 SQL Server Management Studio 대화 상자를 닫습니다.
 
-## <a name="TsqlProcedure"></a> Transact-SQL 사용
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용
 
 `BACKUP DATABASE` 문을 실행하여 전체 데이터베이스 백업을 만듭니다. 이때 다음을 지정합니다.
 
@@ -278,7 +278,7 @@ GO
  > [!IMPORTANT]
  > `BACKUP` 문의 **FORMAT** 절을 사용하는 경우 백업 미디어에 이전에 저장된 백업이 모두 삭제되므로 각별히 주의해야 합니다.
 
-### <a name="TsqlExample"></a> 예
+### <a name="examples"></a><a name="TsqlExample"></a> 예
 
 다음 예제에서는 다음 Transact-SQL 코드를 사용하여 테스트 데이터베이스를 만듭니다.
 
@@ -361,7 +361,7 @@ BACKUP DATABASE SQLTestDB
 GO
 ```
 
-## <a name="PowerShellProcedure"></a> PowerShell 사용
+## <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell 사용
 
 **Backup-SqlDatabase** cmdlet을 사용합니다. 전체 데이터베이스 백업임을 명시적으로 나타내기 위해 **-BackupAction** 매개 변수에 기본값인 **Database**를 지정합니다. 전체 데이터베이스 백업의 경우 이 매개 변수는 선택 사항입니다.
 
@@ -402,7 +402,7 @@ $backupFile = $container + '/' + $fileName
 Backup-SqlDatabase -ServerInstance $server -Database $database -BackupFile $backupFile -Credential $credential
 ```
 
-## <a name="RelatedTasks"></a> Related tasks
+## <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks
 
 - [데이터베이스 백업(SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
 - [차등 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)

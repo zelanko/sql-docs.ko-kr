@@ -14,10 +14,10 @@ ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e2be902c241403ec044b3d348f90dc85327b8ad
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909530"
 ---
 # <a name="unpack-a-dac-package"></a>DAC 패키지 압축 풀기
@@ -28,10 +28,10 @@ ms.locfileid: "72909530"
   
 2.  **DAC의 압축을 풀려면 다음을 사용합니다.**  [데이터 계층 애플리케이션 압축 풀기 대화 상자](#UnpackDACDial), [DAC 패키지의 내용 검사](#ExamDACPack)  
 
-##  <a name="Security"></a> 보안  
+##  <a name="security"></a><a name="Security"></a> 보안  
  출처를 알 수 없거나 신뢰할 수 없는 DAC 패키지는 배포하지 않는 것이 좋습니다. 이러한 DAC에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마를 수정하여 오류가 발생할 수 있습니다. 출처를 알 수 없거나 신뢰할 수 없는 DAC를 사용하려면 먼저 격리된 테스트 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 배포하고 DAC 압축을 푼 다음 저장 프로시저나 다른 사용자 정의 코드와 같은 코드를 검사하십시오.  
   
-##  <a name="UnpackDACDial"></a> 데이터 계층 애플리케이션 압축 풀기 대화 상자  
+##  <a name="unpack-data-tier-application-dialog"></a><a name="UnpackDACDial"></a> 데이터 계층 애플리케이션 압축 풀기 대화 상자  
  **DAC 패키지 파일을 압축을 풀려면**  
   
 -   **Windows 탐색기**에서 DAC 패키지(.dacpac) 파일의 위치로 이동합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "72909530"
   
     -   [폴더 찾아보기](#Browse)  
   
-###  <a name="Unpack"></a> Microsoft SQL Server DAC 패키지 파일 압축 풀기  
+###  <a name="unpack-microsoft-sql-server-dac-package-file"></a><a name="Unpack"></a> Microsoft SQL Server DAC 패키지 파일 압축 풀기  
  이 페이지를 사용하여 파일 압축을 풀 대상 폴더를 지정하고 압축 풀기 작업을 실행할 수 있습니다.  
   
  **다음 폴더에 파일 압축 풀기:** - 파일 압축을 풀 폴더의 전체 경로를 지정합니다. 폴더가 존재하고 전체 경로를 아는 경우 입력란에 경로를 입력합니다. 그렇지 않으면 **찾아보기** 단추를 클릭하여 폴더로 이동하거나 새 폴더를 만듭니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "72909530"
   
  **취소** - DAC 패키지 압축을 풀지 않고 대화 상자를 종료합니다.  
   
-###  <a name="Browse"></a> 폴더 찾아보기  
+###  <a name="browse-for-folder"></a><a name="Browse"></a> 폴더 찾아보기  
  이 페이지를 사용하여 압축 풀기 작업의 대상 폴더를 선택할 수 있습니다. 필요에 따라 새 폴더를 만들 수도 있습니다.  
   
  **폴더 목록** - 컴퓨터의 파일 계층을 표시합니다. 노드를 확장하여 DAC 패키지 압축을 풀 폴더로 이동합니다. 폴더를 클릭한 다음 **확인**을 클릭합니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "72909530"
   
  **취소** - 폴더를 선택하지 않고 대화 상자를 종료합니다.  
   
-##  <a name="ExamDACPack"></a> DAC 패키지의 내용 검사  
+##  <a name="examine-the-contents-of-a-dac-package"></a><a name="ExamDACPack"></a> DAC 패키지의 내용 검사  
  패키지의 압축을 푼 후에는 **데이터 계층 애플리케이션 압축 풀기** 대화 상자에서 생성한 파일을 검사할 수 있습니다. 대화 상자는 선택된 대상 폴더에 다음 파일을 작성합니다.  
   
 1.  DAC에 정의된 개체를 생성하는 문을 포함하는 Transact-SQL 스크립트. 파일 이름은 *DACName*.sql이며 *DACName* 은 DAC의 이름입니다.  

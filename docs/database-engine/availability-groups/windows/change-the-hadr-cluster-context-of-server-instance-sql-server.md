@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: c54c26c93d065f5b9d0beb741d9a7024ff8a2199
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75241814"
 ---
 # <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>Always On 가용성 그룹의 복제본에 대한 메타데이터를 관리하는 클러스터 변경
@@ -32,7 +32,7 @@ ms.locfileid: "75241814"
 > [!CAUTION]  
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 배포의 클러스터 간 마이그레이션 중에만 HADR 클러스터 컨텍스트를 전환합니다.  
   
-##  <a name="Restrictions"></a> 제한 사항  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   HADR 클러스터 컨텍스트는 로컬 WSFC 클러스터에서 원격 클러스터로 전환한 다음 다시 원격 클러스터에서 로컬 클러스터로만 전환할 수 있습니다. HADR 클러스터 컨텍스트를 원격 클러스터 간에 전환할 수는 없습니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "75241814"
   
 -   원격 HADR 클러스터 컨텍스트는 언제든지 로컬 클러스터로 다시 전환할 수 있습니다. 그러나 서버 인스턴스에서 가용성 복제본을 호스팅하는 동안에는 컨텍스트를 다시 전환할 수 없습니다.  
   
-##  <a name="Prerequisites"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
   
 -   HADR 클러스터 컨텍스트를 변경하는 서버 인스턴스에서는 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 이상(Enterprise Edition 이상)을 실행해야 합니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "75241814"
   
 -   원격 클러스터에서 로컬 클러스터로 전환하려면 먼저 모든 동기 커밋 복제본을 동기화해야 합니다.  
   
-##  <a name="Recommendations"></a> 권장 사항  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   전체 도메인 이름을 지정하는 것이 좋습니다. 이는 짧은 이름의 대상 IP 주소를 찾기 위해 ALTER SERVER CONFIGURATION에서 DNS 확인을 사용하기 때문입니다. 경우에 따라 짧은 이름을 사용하면 DNS 검색 순서로 인해 혼동이 생길 수도 있습니다. 예를 들어 `abc` 도메인의 노드(`node1.abc.com`)에서 다음 명령을 실행한다고 가정합니다. 의도한 대상 클러스터는 `CLUS01` 도메인의 `xyz` 클러스터(`clus01.xyz.com`)입니다. 그러나 로컬 도메인 호스트는 이름이 `CLUS01` 인 클러스터(`clus01.abc.com`)도 호스팅합니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "75241814"
     ```  
   
   
-##  <a name="Permissions"></a> 권한  
+##  <a name="permissions"></a><a name="Permissions"></a> 권한  
   
 -   **SQL Server 로그인(SQL Server login)**  
   
@@ -82,7 +82,7 @@ ms.locfileid: "75241814"
   
     -   원격 WSFC 읽기/쓰기 액세스  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **가용성 복제본의 WSFC 클러스터 컨텍스트를 변경하려면**  
   
 1.  가용성 그룹의 주 복제본 또는 보조 복제본을 호스팅하는 서버 인스턴스에 연결합니다.  
@@ -112,7 +112,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
 ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = LOCAL;  
 ```  
   
-##  <a name="FollowUp"></a> 후속 작업: 가용성 복제본의 클러스터 컨텍스트를 전환한 후  
+##  <a name="follow-up-after-switching-the-cluster-context-of-an-availability-replica"></a><a name="FollowUp"></a> 후속 작업: 가용성 복제본의 클러스터 컨텍스트를 전환한 후  
  새 HADR 클러스터 컨텍스트는 서버 인스턴스를 다시 시작하지 않아도 즉시 적용됩니다. HADR 클러스터 컨텍스트 설정은 서버 인스턴스를 다시 시작해도 변경되지 않은 영구 인스턴스 수준 설정입니다.  
   
  다음과 같이 [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md) 동적 관리 뷰를 쿼리하여 새 HADR 클러스터 컨텍스트를 확인합니다.  
@@ -129,7 +129,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   이전에 가용성 복제본에 속한 모든 데이터베이스가 RESTORING 상태가 됩니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [가용성 그룹 수신기 제거&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
   
@@ -143,7 +143,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   [가용성 그룹에 보조 데이터베이스 조인&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
-##  <a name="RelatedContent"></a> 관련 내용  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
   
 -   [SQL Server 2012 기술 문서](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   

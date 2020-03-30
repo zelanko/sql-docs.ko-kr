@@ -20,16 +20,16 @@ ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 228cb40e1c0f40d9525ca83129878d30b722b910
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68893420"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>보고서 및 구독 처리 해제 또는 일시 중지  
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 및 구독 처리를 해제하거나 일시 중지하는 데 사용할 수 있는 몇 가지 방법이 있습니다. 이 문서에는 구독을 해제하는 방법에서부터 데이터 원본 연결을 중단하는 방법이 포함되어 있습니다. 두 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버 모드 모두에 사용할 수 없는 접근 방식도 있습니다. 다음 표에는 메서드와 지원되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버 모드가 요약되어 있습니다.  
   
-##  <a name="bkmk_top"></a> 문서 내용  
+##  <a name="in-this-article"></a><a name="bkmk_top"></a> 문서 내용  
   
 ||지원되는 서버 모드|  
 |-|---------------------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "68893420"
 |[역할에서 구독 관리 권한 제거(기본 모드)](#bkmk_remove_manage_subscriptions_permission)|기본 모드|  
 |[배달 확장 프로그램 해제](#bkmk_disable_extensions)|기본 및 SharePoint 모드|  
   
-##  <a name="bkmk_disable_subscription"></a>구독 설정 및 해제  
+##  <a name="enable-and-disable-subscriptions"></a><a name="bkmk_disable_subscription"></a>구독 설정 및 해제  
   
 >[!TIP]  
 >*구독 설정 및 해제*는 SQL 2016 Reporting Services의 새로운 기능입니다. 새로운 사용자 인터페이스 옵션을 통해 신속하게 구독을 설정하고 해제할 수 있습니다. 해제된 구독에는 일정과 같은 다른 구성 속성이 유지되며 손쉽게 설정이 가능합니다. 프로그래밍 방식으로 구독을 설정하고 해제하거나 어떤 구독이 해제되었는지에 대한 감사를 수행할 수 있습니다.  
@@ -117,14 +117,14 @@ ForEach ($subscription in $subscriptions)
 }  
 ```  
   
-##  <a name="bkmk_pause_schedule"></a> 공유 일정 일시 중지  
+##  <a name="pause-a-shared-schedule"></a><a name="bkmk_pause_schedule"></a> 공유 일정 일시 중지  
  보고서나 구독을 공유 일정에 따라 실행하는 경우 일정을 일시 중지하여 처리를 중단할 수 있습니다. 일정에 따라 진행되는 모든 보고서와 구독 처리는 일정을 다시 시작할 때까지 중단됩니다.  
   
 -   **SharePoint 모드:** ![SharePoint 설정:](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정")**사이트 설정**에서 **공유 일정 관리**를 선택합니다. 일정을 선택하고 **선택한 일정 일시 중지**를 클릭합니다.  
   
 -   **기본 모드:** 웹 포털 화면 상단의 메뉴 모음에서 **설정** 단추 ![설정 단추](media/ssrs-portal-settings-gear.png)를 선택하고 드롭다운 메뉴에서 **사이트 설정**을 선택합니다. **일정** 탭을 선택하여 일정 페이지를 표시합니다. 사용하거나 사용하지 않도록 설정할 일정 옆의 확인란을 선택한 다음 **사용** 또는 **사용 안 함** 단추를 각각 선택하여 원하는 작업을 수행합니다. 상태 열이 그에 따라 "사용 안 함" 또는 "사용"으로 업데이트됩니다.  
   
-##  <a name="bkmk_disable_shared_datasource"></a> 공유 데이터 원본 해제  
+##  <a name="disable-a-shared-data-source"></a><a name="bkmk_disable_shared_datasource"></a> 공유 데이터 원본 해제  
  공유 데이터 원본 사용 시 이점은 보고서나 데이터 기반 구독이 실행되지 않도록 공유 데이터 원본을 해제할 수 있다는 점입니다. 공유 데이터 원본을 해제하면 보고서와 외부 원본의 연결이 끊어집니다. 해제되어 있는 동안에는 데이터 원본을 사용하는 모든 보고서와 구독에서 해당 데이터 원본을 사용할 수 없습니다.  
   
  데이터 원본을 사용할 수 없는 경우에도 보고서는 로드됩니다. 보고서에는 데이터가 포함되지 않지만 적절한 권한이 있는 사용자는 보고서에 연결된 속성 페이지, 보안 설정, 보고서 기록 및 구독 정보에 액세스할 수 있습니다.  
@@ -133,12 +133,12 @@ ForEach ($subscription in $subscriptions)
   
 -   **기본 모드:** 기본 모드 보고서 서버에서 공유 데이터 원본을 해제하려면 웹 포털에서 데이터 원본을 열고 **이 데이터 원본 사용** 확인란의 선택을 취소합니다.  
   
-##  <a name="bkmk_modify_role_assignment"></a> 역할 할당을 수정하여 보고서에 대한 액세스 금지(기본 모드)  
+##  <a name="modify-role-assignments-to-prevent-access-to-a-report-native-mode"></a><a name="bkmk_modify_role_assignment"></a> 역할 할당을 수정하여 보고서에 대한 액세스 금지(기본 모드)  
 보고서를 사용할 수 없도록 하는 한 가지 방법은 보고서에 액세스할 수 있는 권한을 제공하는 역할 할당을 일시적으로 제거하는 것입니다. 이 방법은 데이터 원본 연결이 생성되는 방법에 관계없이 모든 보고서에 사용될 수 있습니다. 이 방법은 다른 보고서나 항목의 작업에 영향을 주지 않고 해당 보고서에만 영향을 줍니다.  
   
  역할 할당을 제거하려면 웹 포털에서 보고서의 **보안** 페이지를 엽니다. 보고서가 부모 보고서에서 보안 설정을 상속받은 경우 **항목 보안** 대화 상자의 **보안 사용자 지정**과 **확인**을 선택하여 광범위한 액세스를 제공하는 역할 할당은 포함하지 않는 제한적인 보안 정책을 만들 수 있습니다. 예를 들어 Everyone에게 액세스를 제공하는 역할 할당은 제거하고 Administrators와 같은 일부 사용자에게만 액세스를 제공하는 역할 할당은 유지할 수 있습니다.  
   
-##  <a name="bkmk_remove_manage_subscriptions_permission"></a> 역할에서 구독 관리 권한 제거(기본 모드)  
+##  <a name="remove-manage-subscription-permissions-from-role-native-mode"></a><a name="bkmk_remove_manage_subscriptions_permission"></a> 역할에서 구독 관리 권한 제거(기본 모드)  
  구독을 만들지 못하게 하려면 역할에서 **개별 구독 관리** 태스크의 선택을 취소합니다. 이 태스크를 제거하면 구독 페이지를 사용할 수 없게 됩니다. 이 경우 웹 포털의 내 구독 페이지가 이전에는 구독을 포함했다고 해도 빈 상태로 나타나며, 이는 삭제되지 않습니다. 구독 관련 태스크를 제거하면 사용자는 구독을 생성 및 수정하지 못하지만 기존 구독은 삭제되지 않습니다. 기존 구독은 사용자가 삭제할 때까지 계속 실행됩니다. 권한을 제거하려면:  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 엽니다. 
@@ -156,7 +156,7 @@ ForEach ($subscription in $subscriptions)
 7.  **확인**을 클릭하여 변경 내용을 적용합니다.
 
   
-##  <a name="bkmk_disable_extensions"></a> 배달 확장 프로그램 해제  
+##  <a name="disable-delivery-extensions"></a><a name="bkmk_disable_extensions"></a> 배달 확장 프로그램 해제  
  지정된 보고서에 대한 구독을 만들 수 있는 권한이 있는 사용자는 누구나 보고서 서버에 설치된 모든 배달 확장 프로그램을 사용할 수 있습니다. 다음 배달 확장 프로그램은 사용할 수 있으며 자동으로 구성됩니다.  
   
 -   Windows 파일 공유  

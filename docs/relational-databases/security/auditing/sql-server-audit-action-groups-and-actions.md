@@ -22,10 +22,10 @@ ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 77f07412551fd94737a3200a103c16904771d962
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76315593"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 감사 동작 그룹 및 동작

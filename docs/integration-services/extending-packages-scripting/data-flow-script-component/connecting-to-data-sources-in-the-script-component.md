@@ -13,10 +13,10 @@ ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 82ec2ddf98780a7230ccc123e3de152ad643669a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296965"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>스크립트 구성 요소에서 데이터 원본에 연결

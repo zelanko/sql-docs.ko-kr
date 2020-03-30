@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: b263c3890ab9a03295212c723adad4a431fbf04f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76928007"
 ---
-# <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] 확장 시작
+# <a name="getting-started-with-name-sos-extensibility"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] 확장 시작
 
 [!INCLUDE[name-sos](../includes/name-sos.md)]에는 사용자 환경을 사용자 지정하고 해당 사용자 지정을 전체 사용자 커뮤니티에서 사용할 수 있도록 하는 여러 확장성 메커니즘이 있습니다. 핵심 [!INCLUDE[name-sos](../includes/name-sos.md)] 플랫폼은 Visual Studio Code를 토대로 구축되므로 대부분의 Visual Studio Code 확장성 API를 사용할 수 있습니다. 또한 데이터 관리 관련 활동에 대한 추가 확장 지점도 제공했습니다.
 

@@ -17,10 +17,10 @@ ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 17eccc8ce90743e49ced2db863bc85e9d297a1a5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822512"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>데이터베이스 미러링 구성 문제 해결(SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "74822512"
 |[Transact-SQL을 사용하여 미러링 시작](#StartDbm)|ALTER DATABASE *database_name* SET PARTNER **='** _partner_server_ **'** 문의 필요한 순서에 대해 설명합니다.|  
 |[데이터베이스 간 트랜잭션](#CrossDbTxns)|자동 장애 조치(Failover)를 사용할 경우 미결 트랜잭션이 자동으로 잘못 해결될 수 있습니다. 이러한 이유로 데이터베이스 미러링은 데이터베이스 간 트랜잭션을 지원하지 않습니다.|  
   
-##  <a name="Accounts"></a> 계정  
+##  <a name="accounts"></a><a name="Accounts"></a> 계정  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 실행하고 있는 계정이 올바르게 구성되어 있어야 합니다.  
   
 1.  계정에 올바른 권한이 있어야 합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "74822512"
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 로컬 시스템 계정을 사용하는 서비스로 실행되는 경우 인증서를 사용하여 인증해야 합니다. 자세한 내용은 [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)을 참조하세요.  
   
-##  <a name="Endpoints"></a> 엔드포인트  
+##  <a name="endpoints"></a><a name="Endpoints"></a> 엔드포인트  
  엔드포인트를 올바르게 구성해야 합니다.  
   
 1.  각 서버 인스턴스(주 서버, 미러 서버 및 미러링 모니터 서버)에는 데이터베이스 미러링 엔드포인트가 있어야 합니다. 자세한 내용은 [sys.database_mirroring_endpoints&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) 및 인증 형식에 따라 [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) 또는 [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)을 참조하세요.  
@@ -110,13 +110,13 @@ ms.locfileid: "74822512"
   
     ```  
   
-##  <a name="SystemAddress"></a> 시스템 주소  
+##  <a name="system-address"></a><a name="SystemAddress"></a> 시스템 주소  
  데이터베이스 미러링 구성에서 서버 인스턴스의 시스템 이름에는 시스템을 명확하게 식별하는 모든 이름을 사용할 수 있습니다. 서버 주소는 시스템 이름(시스템이 같은 도메인에 있는 경우), 정규화된 도메인 이름 또는 IP 주소(가급적 고정 IP 주소)일 수 있습니다. 정규화된 도메인 이름을 사용하는 것이 좋습니다. 자세햔 내용은 [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)을 사용합니다.  
   
-##  <a name="NetworkAccess"></a> Network Access  
+##  <a name="network-access"></a><a name="NetworkAccess"></a> Network Access  
  각 서버 인스턴스에서 TCP를 통해 다른 서버 인스턴스의 포트에 액세스할 수 있어야 합니다. 이는 서버 인스턴스가 서로 트러스트하지 않는 다른 도메인(트러스트되지 않은 도메인)에 있을 경우 특히 유용합니다. 이 경우 서버 인스턴스 간의 통신은 대부분 제한됩니다.  
   
-##  <a name="MirrorDbPrep"></a> Mirror Database Preparation  
+##  <a name="mirror-database-preparation"></a><a name="MirrorDbPrep"></a> Mirror Database Preparation  
  처음으로 미러링을 시작하는 것이든 미러링을 제거한 후 다시 시작하는 것이든 관계없이 미러 데이터베이스가 미러링을 위한 준비를 완료했는지 확인합니다.  
   
  미러 서버에 미러 데이터베이스를 만들 때는 WITH NORECOVERY로 동일한 데이터베이스 이름을 지정하여 주 데이터베이스의 백업을 복원하도록 해야 합니다. 백업 후에 생성된 모든 로그 백업도 WITH NORECOVERY를 사용하여 적용해야 합니다.  
@@ -130,7 +130,7 @@ ms.locfileid: "74822512"
   
  자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)을 사용합니다.  
   
-##  <a name="FailedCreateFileOp"></a> Failed Create-File Operation  
+##  <a name="failed-create-file-operation"></a><a name="FailedCreateFileOp"></a> Failed Create-File Operation  
  미러링 세션에 영향을 주지 않고 파일을 추가하려면 파일의 경로가 두 서버 모두에 있어야 합니다. 따라서 미러 데이터베이스를 만들 때 데이터베이스 파일을 이동하면 나중에 미러 데이터베이스에 파일을 추가할 수 없고 미러링이 일시 중지될 수 있습니다.  
   
  이 문제를 해결하려면  
@@ -143,7 +143,7 @@ ms.locfileid: "74822512"
   
  자세한 내용은 [데이터베이스 미러링 제거&#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md), [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md), [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md), [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md) 또는 [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)을 참조하세요.  
   
-##  <a name="StartDbm"></a> Transact-SQL을 사용하여 미러링 시작  
+##  <a name="starting-mirroring-by-using-transact-sql"></a><a name="StartDbm"></a> Transact-SQL을 사용하여 미러링 시작  
  ALTER DATABASE *database_name* SET PARTNER **='** _partner_server_ **'** 문을 실행하는 순서는 매우 중요합니다.  
   
 1.  미러 서버에서 첫 번째 문을 실행해야 합니다. 이 문을 실행할 때는 미러 서버에서 다른 서버 인스턴스에 연결하지 않고 대신 주 서버가 미러 서버에 접속할 때까지 기다리도록 해당 데이터베이스에 지시합니다.  
@@ -155,7 +155,7 @@ ms.locfileid: "74822512"
 > [!NOTE]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 미러링을 시작하는 방법은 [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)을 참조하세요.  
   
-##  <a name="CrossDbTxns"></a> 데이터베이스 간 트랜잭션  
+##  <a name="cross-database-transactions"></a><a name="CrossDbTxns"></a> 데이터베이스 간 트랜잭션  
  자동 장애 조치(Failover) 있는 보호 우선 모드로 데이터베이스를 미러링하는 경우 자동 장애 조치로 인해 미결 트랜잭션이 자동으로 잘못 해결될 수 있습니다. 데이터베이스 간 트랜잭션을 커밋하는 동안 두 데이터베이스 중 하나에서 자동 장애 조치가 수행되면 데이터베이스 간에 논리적 불일치가 발생할 수 있습니다.  
   
  자동 장애 조치의 영향을 받을 수 있는 데이터베이스 간 트랜잭션 유형은 다음과 같습니다.  

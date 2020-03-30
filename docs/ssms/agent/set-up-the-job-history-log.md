@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7d8ff3c1350bac2331ab6e895804e735318ba049
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245812"
 ---
 # <a name="set-up-the-job-history-log"></a>Set Up the Job History Log
@@ -36,12 +36,12 @@ ms.locfileid: "75245812"
   
 -   **작업 기록 로그를 설정하려면 다음을 사용합니다.** [SQL Server Management Studio](#SSMS)  
   
-## <a name="BeforeYouBegin"></a>시작하기 전 주의 사항  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>시작하기 전 주의 사항  
   
-### <a name="Security"></a>보안  
+### <a name="security"></a><a name="Security"></a>보안  
 자세한 내용은 [SQL Server 에이전트 보안 구현](../../ssms/agent/implement-sql-server-agent-security.md)을 참조하세요.  
   
-## <a name="SSMS"></a>SQL Server Management Studio 사용  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>SQL Server Management Studio 사용  
 **작업 기록 로그를 설정하려면**  
   
 1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  

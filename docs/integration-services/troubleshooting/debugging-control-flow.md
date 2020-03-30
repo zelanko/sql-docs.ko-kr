@@ -20,10 +20,10 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f762b5c7c5c4ce48c0c1bee660ed726b124e9c55
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295126"
 ---
 # <a name="debugging-control-flow"></a>제어 흐름 디버깅
@@ -118,7 +118,7 @@ ms.locfileid: "71295126"
 |출력|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 기능에 대한 상태 메시지를 표시합니다.|  
 |즉시|식을 디버깅 및 계산하고 변수 값을 출력하는 데 사용됩니다.|  
 
-## <a name="debug"></a> 태스크 또는 컨테이너에 중단점을 설정하여 패키지 디버깅
+## <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a><a name="debug"></a> 태스크 또는 컨테이너에 중단점을 설정하여 패키지 디버깅
   이 절차에서는 패키지, 태스크, For 루프 컨테이너, Foreach 루프 컨테이너 또는 시퀀스 컨테이너에 중단점을 설정하는 방법을 설명합니다.  
   
 ### <a name="to-set-breakpoints-in-a-package-a-task-or-a-container"></a>패키지, 태스크 또는 컨테이너에 중단점을 설정하려면  

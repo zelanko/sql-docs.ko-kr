@@ -14,17 +14,17 @@ ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 63995b32f91419ef59184251299b5238d553905a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822571"
 ---
 # <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 가용성 그룹 옵션 지정 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 **가용성 그룹 이름 지정** 페이지의 옵션에 대해 설명합니다. 이 항목은 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 의 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 및 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]모두에 사용됩니다.  
   
-##  <a name="PageOptions"></a> 가용성 그룹 옵션 지정  
+##  <a name="specify-availability-group-options"></a><a name="PageOptions"></a> 가용성 그룹 옵션 지정  
  **가용성 그룹 이름**  
  가용성 그룹의 이름을 지정합니다. 새 가용성 그룹의 경우 WSFC(Windows Server 장애 조치 클러스터)의 모든 가용성 그룹에서 고유하고 유효한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 식별자를 지정합니다. 가용성 그룹 이름의 최대 길이는 128자입니다.  
 
@@ -47,7 +47,7 @@ ms.locfileid: "74822571"
 
 Select Databases Page (New Availability Group Wizard and Add Database Wizard)  
   
-##  <a name="LaunchWiz"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> 관련 작업  
   
 -   [새 가용성 그룹 대화 상자 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

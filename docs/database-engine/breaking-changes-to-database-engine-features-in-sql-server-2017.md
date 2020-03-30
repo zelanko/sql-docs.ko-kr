@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 2140c54c8954006c4285eaccbb59f2f0c4964577
-ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77074501"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sssqlv14-md"></a>[!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] 데이터베이스 엔진 기능의 주요 변경 사항
@@ -35,7 +35,7 @@ ms.locfileid: "77074501"
   
 -  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]에서는 MD2, MD4, MD5, SHA 및 SHA1 알고리즘이 사용되지 않습니다. [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]까지는 자체 서명된 인증서가 SHA1을 사용하여 생성됩니다. [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]부터는 자체 서명된 인증서가 SHA2_256을 사용하여 생성됩니다.
 
-## <a name="previous-versions"></a> 이전 버전  
+## <a name="previous-versions"></a><a name="previous-versions"></a> 이전 버전  
 
 - [SQL Server 2016 데이터베이스 엔진 기능의 주요 변경](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)
 

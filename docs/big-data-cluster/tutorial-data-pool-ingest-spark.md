@@ -11,10 +11,10 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 1f3a8956120f16282cf0a3829f03bf5586c9d791
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75776545"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>자습서: Spark 작업을 사용하여 SQL Server 데이터 풀로 데이터 수집
@@ -33,7 +33,7 @@ ms.locfileid: "75776545"
 > [!TIP]
 > 원하는 경우 이 자습서의 명령을 위해 스크립트를 다운로드하여 실행할 수 있습니다. 자세한 내용은 GitHub에서 [데이터 풀 샘플](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool)을 참조하세요.
 
-## <a id="prereqs"></a> 필수 조건
+## <a name="prerequisites"></a><a id="prereqs"></a> 필수 조건
 
 - [빅 데이터 도구](deploy-big-data-tools.md)
    - **kubectl**

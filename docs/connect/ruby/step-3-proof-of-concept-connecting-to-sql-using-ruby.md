@@ -11,10 +11,10 @@ ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9724fb48f6ae896d9026bfec63056070e2180a8e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67992492"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>3단계: Ruby를 사용하여 SQL에 연결하는 개념 증명

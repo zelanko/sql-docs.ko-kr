@@ -17,10 +17,10 @@ ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7357e1508172e5b4debbdea99967314c45d53bf4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71299066"
 ---
 # <a name="adding-tasks-programmatically"></a>프로그래밍 방식으로 태스크 추가

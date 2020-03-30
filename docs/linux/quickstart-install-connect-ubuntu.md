@@ -10,10 +10,10 @@ ms.custom: seo-lt-2019
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.openlocfilehash: 69f1ac170d70c10d9a7061b3fc18f6c8a62db704
-ms.sourcegitcommit: efb2bb07700f645b3fbfcb400a0666de01388305
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79319853"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>빠른 시작: Ubuntu에 SQL Server 설치 및 데이터베이스 만들기

@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6e750070f51dc6cba1b035e9426d9814e4fd1b67
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558048"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted
@@ -139,7 +139,7 @@ SQL Server 인스턴스에서 오류가 발생하면 데이터베이스가 불�
 - 임의 암호화를 사용하는 열을 enclave 사용 CEK로 암호화하면 열 지원 범위 비교와 같은, 열에 저장된 데이터의 순서가 누출될 수 있습니다. 예를 들어 직원 급여를 포함하는 암호화된 열에 인덱스가 있는 경우, 악의적인 DBA가 인덱스를 검색하여 최대 암호화된 급여 값을 찾고 최대 급여를 받는 사람을 식별할 수 있습니다(사람 이름은 암호화되지 않았다고 가정). 
 - Always Encrypted를 사용하여 DBA의 무단 액세스로부터 중요한 데이터를 보호하는 경우 열 마스터 키 또는 열 암호화 키를 DBA와 공유하지 마세요. DBA는 enclave 내부의 열 암호화 키 캐시를 활용하여 키에 직접 액세스하지 않고도 암호화된 열의 인덱스를 관리할 수 있습니다.
 
-## <a name="anchorname-1-considerations-availability-groups-db-migration"></a> 가용성 그룹 및 데이터베이스 마이그레이션의 고려 사항
+## <a name="considerations-for-availability-groups-and-database-migration"></a><a name="anchorname-1-considerations-availability-groups-db-migration"></a> 가용성 그룹 및 데이터베이스 마이그레이션의 고려 사항
 
 enclave를 사용하여 쿼리를 지원하는 데 필요한 Always On 가용성 그룹을 구성하는 경우, 가용성 그룹의 데이터베이스를 호스팅하는 모든 SQL Server 인스턴스에서 보안 enclave를 사용한 Always Encrypted를 지원하며 enclave가 구성되어 있는지 확인해야 합니다. 주 데이터베이스는 enclave를 지원하지만 보조 복제본이 지원하지 않는 경우 보안 enclave를 사용한 Always Encrypted의 기능을 사용하려고 하면 실패합니다.
 

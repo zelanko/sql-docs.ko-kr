@@ -1,4 +1,4 @@
-## <a name="info_tipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) 도움말 보기
+## <a name="info_tip-get-help"></a>![info_tip](../media/info-tip.png) 도움말 보기
 
 - [UserVoice: SQL Server를 개선하기 위해 제안할 사항이 있나요?](https://feedback.azure.com/forums/908035-sql-server)
 - [설정 및 업그레이드: MSDN 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)

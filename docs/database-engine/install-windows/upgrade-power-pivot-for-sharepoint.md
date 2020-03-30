@@ -12,10 +12,10 @@ ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
 ms.openlocfilehash: 8d13d6df17cad82076813c5fee93ed794d3439f2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68892580"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>SharePoint용 Power Pivot 업그레이드
@@ -58,7 +58,7 @@ ms.locfileid: "68892580"
   
 -   SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 추가 기능(**spPowerPivot.msi**)은 이전 버전과 함께 설치됩니다. 예를 들어 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 추가 기능은 `c:\Program Files\Microsoft SQL Server\130\Tools\PowerPivotTools`폴더에 설치됩니다.  
   
-##  <a name="bkmk_prereq"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 필수 조건  
  **권한**  
   
 -   SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 설치를 업그레이드하려면 팜 관리자여야 합니다. SQL Server 설치 프로그램을 실행하려면 로컬 관리자여야 합니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "68892580"
   
 -   기존 설치가 SharePoint 2010을 실행 중인 경우 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. 자세한 내용은 [Microsoft SharePoint 2010용 서비스 팩 2](https://www.microsoft.com/download/details.aspx?id=39672)를 참조하세요. PowerShell 명령 `(Get-SPfarm).BuildVersion.ToString()` 을 사용하여 버전을 확인하십시오. 출시 날짜에 대한 빌드 버전을 참조하려면 [SharePoint 2010 빌드 번호](https://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224)를 참조하세요.  
   
-##  <a name="bkmk_uprgade_sharepoint2013"></a> 기존 SharePoint 2013 팜 업그레이드  
+##  <a name="upgrade-an-existing-sharepoint-2013-farm"></a><a name="bkmk_uprgade_sharepoint2013"></a> 기존 SharePoint 2013 팜 업그레이드  
  SharePoint 2013에 배포된 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 을 업그레이드하려면 다음을 수행하십시오.  
   
  ![SharePoint 2013용 PowerPivot 업그레이드](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2013.png "SharePoint 2013용 PowerPivot 업그레이드")  
@@ -139,7 +139,7 @@ ms.locfileid: "68892580"
   
 5.  업그레이드 후 단계를 수행하고 팜의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 버전을 확인하여 업그레이드에 성공했는지 확인합니다. 자세한 내용은 이 문서의 [업그레이드 후 확인 태스크](#verify) 및 다음 섹션을 참조하세요.  
   
-##  <a name="bkmk_uprgade_sharepoint2010"></a> 기존 SharePoint 2010 팜 업그레이드  
+##  <a name="upgrade-an-existing-sharepoint-2010-farm"></a><a name="bkmk_uprgade_sharepoint2010"></a> 기존 SharePoint 2010 팜 업그레이드  
  SharePoint 2013에 배포된 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 를 업그레이드하려면 다음을 수행하십시오.  
   
  ![SharePoint 2010용 PowerPivot 업그레이드](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2010.png "SharePoint 2010용 PowerPivot 업그레이드")  
@@ -231,13 +231,13 @@ ms.locfileid: "68892580"
   
      다른 모든 오류에 대해서는 ULS 로그를 확인합니다. 자세한 내용은 [SharePoint 로그 파일과 진단 로깅 구성 및 보기&#40;SharePoint용 파워 피벗&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging)를 참조하세요.  
   
-##  <a name="bkmk_workbooks"></a> 통합 문서  
+##  <a name="workbooks"></a><a name="bkmk_workbooks"></a> 통합 문서  
  서버를 업그레이드해도 해당 서버에서 실행되는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서는 업그레이드되지 않지만 이전 버전의 Excel용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서 만든 통합 문서는 해당 릴리스에 포함된 기능을 사용하여 전처럼 계속 작동합니다. 업그레이드된 서버에는 이전 설치의 일부인 Analysis Services OLE DB 공급자 버전이 포함되기 때문에 통합 문서가 계속 작동합니다.  
   
-##  <a name="bkmk_datarefresh"></a> 데이터 새로 고침  
+##  <a name="data-refresh"></a><a name="bkmk_datarefresh"></a> 데이터 새로 고침  
  업그레이드는 데이터 새로 고침 작업에 영향을 줍니다. 서버의 예약된 데이터 새로 고침은 서버 버전과 일치하는 통합 문서에만 사용 가능합니다. 이전 버전의 통합 문서를 호스팅하는 경우 해당 통합 문서에 대해 데이터 새로 고침이 더 이상 작동하지 않을 수 있습니다. 데이터 새로 고침을 다시 활성화하려면 통합 문서를 업그레이드해야 합니다. Excel용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서 각 통합 문서를 수동으로 업그레이드하거나 SharePoint 2010의 데이터 새로 고침 예약 기능에 대한 자동 업그레이드를 활성화할 수 있습니다. 자동 업그레이드를 사용하면 데이터 새로 고침을 실행하기 전에 통합 문서를 현재 버전으로 업그레이드하여 일정에 따라 데이터 새로 고침 작업이 수행되도록 합니다.  
   
-##  <a name="bkmk_verify_versions"></a> Power Pivot 구성 요소 및 서비스의 버전 확인  
+##  <a name="verify-the-versions-of-power-pivot-components-and-services"></a><a name="bkmk_verify_versions"></a> Power Pivot 구성 요소 및 서비스의 버전 확인  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스와 Analysis Services 인스턴스 버전은 모두 같아야 합니다. 모든 서버 구성 요소가 동일한 버전인지 확인하려면 다음에 대한 버전 정보를 확인합니다.  
   
 ### <a name="verify-the-version-of-power-pivot-solutions-and-the-power-pivot-system-service"></a>Power Pivot 솔루션 및 Power Pivot 시스템 서비스 버전 확인  
@@ -312,14 +312,14 @@ Get-PowerPivotSystemService
   
 3.  버전이 13.0.\<빌드 번호>인지 확인합니다.  
   
-##  <a name="geminifarm"></a> SharePoint 팜에 있는 여러 SharePoint용 Power Pivot 서버 업그레이드  
+##  <a name="upgrading-multiple-power-pivot-for-sharepoint-servers-in-a-sharepoint-farm"></a><a name="geminifarm"></a> SharePoint 팜에 있는 여러 SharePoint용 Power Pivot 서버 업그레이드  
  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 서버가 둘 이상 포함된 다중 서버 토폴로지에서는 모든 서버 인스턴스와 구성 요소의 버전이 같아야 합니다. 가장 높은 소프트웨어 버전을 실행하는 서버에 따라 팜의 모든 서버에 대한 수준이 설정됩니다. 서버 중 일부만 업그레이드하면 이전 버전 소프트웨어를 실행하는 서버의 경우 업그레이드하기 전까지 사용할 수 없게 됩니다.  
   
  첫 번째 서버를 업그레이드하면 아직 업그레이드되지 않은 다른 서버들을 **사용할 수 없게 됩니다**. 모든 서버가 동일한 수준에서 실행되어야 가용성이 복원됩니다.  
   
  SQL Server 설치 프로그램은 실제 컴퓨터에서 직접 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 솔루션 파일을 업그레이드하지만 팜에서 사용하는 솔루션을 업그레이드하려면 이 문서의 앞쪽 섹션에서 설명한 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 사용해야 합니다.  
   
-##  <a name="qfe"></a> 팜의 Power Pivot 인스턴스에 QFE 적용  
+##  <a name="applying-a-qfe-to-a-power-pivot-instance-in-the-farm"></a><a name="qfe"></a> 팜의 Power Pivot 인스턴스에 QFE 적용  
  SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버에 패치를 적용하면 기존 프로그램 파일이 특정 문제에 대한 수정 프로그램이 포함된 새 버전으로 업데이트됩니다. 다중 서버 토폴로지에 QFE를 적용하는 경우에는 먼저 시작해야 하는 주 서버가 없습니다. 팜의 다른 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버에 동일한 QFE를 적용하기만 한다면 원하는 서버 어디에서든지 시작할 수 있습니다.  
   
  QFE를 적용하는 경우 팜 구성 데이터베이스의 서버 버전 정보를 업데이트하는 구성 단계도 수행해야 합니다. 패치가 적용된 서버의 버전이 팜의 새 예상 버전이 됩니다. QFE를 모든 컴퓨터에 적용하고 구성할 때까지는 QFE가 있는 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 인스턴스를 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 요청 처리에 사용할 수 없습니다.  
@@ -343,7 +343,7 @@ Get-PowerPivotSystemService
   
  팜에 있는 서비스의 버전 정보를 확인하려면 중앙 관리의 업그레이드 및 패치 관리 섹션에서 **제품 및 패치 설치 상태 확인** 페이지를 사용합니다.  
   
-##  <a name="verify"></a> 업그레이드 후 확인 태스크  
+##  <a name="post-upgrade-verification-tasks"></a><a name="verify"></a> 업그레이드 후 확인 태스크  
  업그레이드가 완료된 후 다음 단계에 따라 서버가 작동하는지 확인합니다.  
   
 |Task|링크|  

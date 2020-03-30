@@ -13,10 +13,10 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02be70284a4a32c69618659f1271165677628845
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078572"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>지도 마법사 및 지도 계층 마법사(보고서 작성기 및 SSRS)
@@ -100,17 +100,17 @@ ms.locfileid: "77078572"
   
  지도에 대한 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)를 클릭합니다. 보고서에 맵을 추가하는 방법에 대한 단계별 지침은 [자습서: 맵 보고서&#40;보고서 작성기&#41;](../../reporting-services/tutorial-map-report-report-builder.md)를 참조하세요.  
   
-##  <a name="SpatialDataSource"></a> 공간 데이터의 원본 선택  
+##  <a name="choose-a-source-of-spatial-data"></a><a name="SpatialDataSource"></a> 공간 데이터의 원본 선택  
  이 페이지에서는 공간 데이터 원본과 포함할 공간 데이터를 지정합니다. 공간 데이터는 지도 갤러리, ESRI 셰이프 파일 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이상 버전 데이터베이스의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 공간 데이터를 지정하는 데이터 세트 쿼리에서 제공될 수 있습니다.  
   
  동일한 원본을 사용하거나 계층마다 다른 공간 데이터의 원본을 사용할 수 있지만 계층을 추가할 때마다 원본을 지정해야 합니다. 공간 데이터가 지도 갤러리 또는 ESRI 셰이프 파일에서 제공된 경우 공간 데이터 원본은 별도의 보고서 항목이 아니며 보고서 데이터 창에 나타나지 않습니다.  
   
-###  <a name="SpatialData"></a> 공간 데이터란?  
+###  <a name="what-is-spatial-data"></a><a name="SpatialData"></a> 공간 데이터란?  
  공간 데이터에는 지리적 또는 기하학적 요소를 정의하는 좌표가 포함됩니다. 지도에서 공간 데이터는 *지도 요소*를 정의합니다. 지도 요소에는 영역 또는 모양을 정의하는 다각형, 경로나 길을 정의하는 선 및 표식 또는 압정을 정의하는 점이 있습니다. 공간 데이터는 데이터 원본에 이진 형식으로 저장되며 좌표 집합으로 지정됩니다. 예를 들어 점은 X 및 Y 좌표(X Y)이고, 선은 두 개의 좌표 집합((X1 Y1), (X2 Y2))이며, 다각형은 첫 번째 좌표 집합과 마지막 좌표 집합이 동일한((X1 Y1), (X2 Y2), (X3 Y3), (X1 Y1)) 4개 이상의 좌표 집합입니다.  
   
  자세한 내용은 사용하는 공간 데이터 형식에 대한 설명서를 참조하십시오.  
   
-###  <a name="MapGallery"></a> What is the map gallery?  
+###  <a name="what-is-the-map-gallery"></a><a name="MapGallery"></a> What is the map gallery?  
  지도 갤러리에는 보고서 작성 환경에 대한 지도 갤러리 폴더에 있는 보고서의 지도가 포함되어 있습니다. 갤러리의 지도를 사용하면 보고서에 지도를 신속하게 추가할 수 있습니다. 갤러리의 미리 정의된 지도는 지도 공급자가 제공합니다.  
   
 > [!NOTE]  
@@ -118,8 +118,8 @@ ms.locfileid: "77078572"
   
  지도 갤러리를 확장하려면 지도 갤러리 디렉터리에서 보고서를 추가하거나 제거하고 폴더를 추가하여 지도를 구성할 수 있습니다. 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)를 참조하세요.  
   
-###  <a name="Shapefile"></a> What is an ESRI shapefile?  
- ESRI 셰이프 파일은 ESRI(Environmental Systems Research Institute, Inc.) 셰이프 파일 공간 데이터 형식을 따르는 데이터가 포함된 파일 집합입니다. 일반적으로 이 파일 집합에는 공간 데이터가 들어 있는 *\<filename>*.shp 파일과 지원 파일 *\<filename>*.dbf가 포함됩니다.  
+###  <a name="what-is-an-esri-shapefile"></a><a name="Shapefile"></a> What is an ESRI shapefile?  
+ ESRI 셰이프 파일은 ESRI(Environmental Systems Research Institute, Inc.) 셰이프 파일 공간 데이터 형식을 따르는 데이터가 포함된 파일 집합입니다. 일반적으로 이 파일 집합에는 공간 데이터가 들어 있는 *\<filename>* .shp 파일과 지원 파일 *\<filename>* .dbf가 포함됩니다.  
   
  셰이프 파일을 공간 데이터 원본으로 지정하는 경우 셰이프 파일이 로컬 컴퓨터에 있으면 공간 데이터가 자동으로 보고서에 포함됩니다. ESRI 파일에서 공간 데이터를 동적으로 사용하려면 다음을 수행해야 합니다.  
   
@@ -127,10 +127,10 @@ ms.locfileid: "77078572"
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에서 .shp 파일과 .dbf 파일을 보고서 프로젝트에 추가한 다음 공간 데이터 원본으로 .shp 파일의 이름을 지정합니다.  
   
-###  <a name="GetShapefiles"></a> ESRI 셰이프 파일은 어떻게 구할 수 있습니까?  
+###  <a name="where-can-i-get-esri-shapefiles"></a><a name="GetShapefiles"></a> ESRI 셰이프 파일은 어떻게 구할 수 있습니까?  
  ESRI 셰이프 파일은 웹에서 이용할 수 있습니다. 자세한 내용은 [Finding ESRI Shapefiles for a Map](https://go.microsoft.com/fwlink/?linkid=178814)을 참조하십시오.  
   
-###  <a name="SqlServerSpatial"></a> SQL Server 공간 쿼리란?  
+###  <a name="what-is-a-sql-server-spatial-query"></a><a name="SqlServerSpatial"></a> SQL Server 공간 쿼리란?  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공간 쿼리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스의 SQLGeometry 또는 SQLGeography 데이터 형식인 데이터를 지정하는 데이터 세트 쿼리입니다.  
   
 > [!NOTE]  
@@ -140,7 +140,7 @@ ms.locfileid: "77078572"
   
  자세한 내용은 [공간 데이터 형식](../../relational-databases/spatial/spatial-data-types-overview.md)을 참조하세요.  
   
-##  <a name="MapView"></a> 공간 데이터 및 지도 보기 옵션 선택  
+##  <a name="choose-spatial-data-and-map-view-options"></a><a name="MapView"></a> 공간 데이터 및 지도 보기 옵션 선택  
  이 페이지에서는 다음 옵션을 설정할 수 있습니다.  
   
 -   이전 마법사 페이지에서 선택한 공간 데이터의 보기 중심 및 확대/축소 수준을 설정합니다. 설정하는 보기는 전체 지도에 적용됩니다.  
@@ -153,12 +153,12 @@ ms.locfileid: "77078572"
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing 지도 타일 배경을 포함할지 여부를 지정합니다.  
   
-###  <a name="Viewport"></a> 지도 보기 또는 뷰포트란?  
+###  <a name="what-is-the-map-view-or-viewport"></a><a name="Viewport"></a> 지도 보기 또는 뷰포트란?  
  지도 뷰포트는 보고서의 모든 계층에 대해 표시할 지도 영역을 정의합니다.  
   
  기본적으로 색 눈금과 거리 눈금이 뷰포트 안에 나타나고 지도 범례는 뷰포트 밖에 나타납니다. 마법사를 완료한 후 뷰포트에 대한 이러한 옵션을 변경할 수 있습니다.  
   
-###  <a name="Resolution"></a> 지도 해상도 및 최적화란?  
+###  <a name="what-is-map-resolution-and-optimization"></a><a name="Resolution"></a> 지도 해상도 및 최적화란?  
  선이나 다각형을 나타내는 공간 데이터의 해상도를 변경하는 경우 얼마나 자세하게 지도를 그릴 것인지를 지정하게 됩니다. 예를 들어 지역에 대한 항공 보기의 경우 백 미터의 지표면으로 세분성을 낮춰야 합니까, 아니면 1마일 해상도로 충분합니까?  
   
  공간 데이터가 보고서에 포함되는 경우 해상도가 높을수록 해당 해상도에서 세부 항목을 그리는 데 필요한 요소의 수가 늘어납니다. 공간 데이터가 보고서에 포함되지 않는 경우에는 해상도가 높을수록 보고서를 볼 때마다 보고서 처리기가 해당 해상도에서 지도의 선을 계산하는 데 필요한 시간이 늘어납니다.  
@@ -167,14 +167,14 @@ ms.locfileid: "77078572"
   
  슬라이더를 조정하면 마법사 창의 미리 보기 데이터가 업데이트되어 효과를 나타냅니다. 보고서에 지도를 추가한 후 지도 뷰포트 옵션을 변경하여 이 값을 조정할 수 있습니다.  
   
-###  <a name="Embed"></a> 포함 공간 데이터는 어떤 역할을 합니까?  
+###  <a name="what-does-embedding-spatial-data-do"></a><a name="Embed"></a> 포함 공간 데이터는 어떤 역할을 합니까?  
  지도 요소나 Bing 지도 타일을 보고서에 포함하는 경우 공간 데이터가 보고서 정의에 저장됩니다.  
   
  지도가 포함된 보고서에서는 보고서가 처리될 때나 디자인 타임에 동적으로 검색된 다음 보고서 정의에 포함되는 공간 데이터나 Bing 지도 타일을 사용할 수 있습니다. 포함된 지도 요소를 사용하면 보고서 정의의 크기가 크게 증가할 수 있지만 보고서에서 지도를 보는 데 걸리는 시간이 줄어들 수 있습니다. 동적 지도 요소를 사용하면 보고서 정의 크기가 줄어들지만 지도를 처리하고 보는 데 걸리는 시간이 늘어납니다.  
   
  보고서를 효과적으로 디자인하려면 정적 또는 동적 지도 데이터의 장단점을 평가하고 해당 환경에 적합한 균형점을 찾아야 합니다. 일반적으로 데이터가 늘어나면 보고서 서버에서 보고서 정의와 컴파일된 보고서를 스토리지하는 데 필요한 공간이 커지고 처리 시간이 길어집니다. 보고서에 필요한 것만 포함하기 위해 다른 보고서 데이터를 제한하는 것뿐만 아니라 공간 데이터를 자르는 것이 항상 가장 좋은 방법입니다.  
   
-###  <a name="Tiles"></a> Bing 지도 타일 배경이란?  
+###  <a name="what-is-a-bing-map-tile-background"></a><a name="Tiles"></a> Bing 지도 타일 배경이란?  
  지리적 이미지 배경을 지도에 추가하려면 Bing 지도 타일 배경 옵션을 선택합니다. 보고서 처리기는 이 마법사 페이지에서 지정하는 지도 영역 및 해상도에 대한 타일을 Bing Maps 웹 서비스에서 다운로드합니다. 다음 타일 유형 중 하나를 지정할 수 있습니다.  
   
 -   **도로.** 흰색 배경으로 도로 지도 스타일을 표시합니다.  
@@ -189,12 +189,12 @@ ms.locfileid: "77078572"
   
  타일 계층을 사용자 지정하는 다른 방법에 대한 자세한 내용은 [지도 또는 지도 계층 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)를 참조하세요.  
   
-##  <a name="Visualization"></a> 지도 시각화 선택  
+##  <a name="choose-map-visualization"></a><a name="Visualization"></a> 지도 시각화 선택  
  이 페이지에서는 보고서에 추가할 지도 또는 지도 계층의 유형을 선택합니다. 마법사를 처음 실행할 때 지도와 첫 번째 지도 계층을 보고서에 추가하게 됩니다. 지도 하나에 지도 계층이 여러 개 있을 수 있습니다. 각 지도 계층에는 특정 형식의 공간 데이터(다각형, 선 또는 점)가 표시됩니다.  
   
  선택하는 지도의 유형은 지도의 용도와 사용할 수 있는 데이터에 따라 달라집니다.  
   
-###  <a name="MapType"></a> 기본 지도, 거품형 지도 및 분석 지도의 차이는?  
+###  <a name="what-is-the-difference-among-a-basic-map-a-bubble-map-and-an-analytical-map"></a><a name="MapType"></a> 기본 지도, 거품형 지도 및 분석 지도의 차이는?  
  **기본 지도** 에는 위치만 표시됩니다. 지도에서 영역의 색을 음영으로 변경할 수 있지만 색은 분석 데이터 값을 나타내지 않습니다.  
   
  **거품형 지도** 는 거품 크기로 단일 분석 데이터 집계의 상대적 값을 나타냅니다. 상점 판매량을 예로 들 수 있습니다. 다각형이나 점에 대한 거품형 지도를 만들 수 있습니다. 다각형의 경우 다각형 중심점 속성을 설정하고 점의 경우 표식 속성을 설정합니다.  
@@ -203,29 +203,29 @@ ms.locfileid: "77078572"
   
  자세한 내용은 [지도 보고서 계획&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)를 참조하세요.  
   
-##  <a name="AnalyticalData"></a> 분석 데이터 세트 선택  
+##  <a name="choose-the-analytical-dataset"></a><a name="AnalyticalData"></a> 분석 데이터 세트 선택  
  이 페이지에서는 이 지도 계층에 표시할 분석 데이터를 가져올 위치를 지정합니다.  
   
  지도 배경에 대해 보고서 데이터나 분석 데이터를 표시하려면 데이터 위치와 데이터와 공간 데이터의 관계를 지정해야 합니다. 데이터는 기존 보고서 데이터 세트나 쿼리를 작성하는 새 데이터 세트에서 제공될 수 있습니다. 기존 분석 데이터는 공간 데이터를 포함하는 ESRI 셰이프 파일에 포함될 수도 있습니다.  
   
-###  <a name="Diff"></a> 공간 데이터와 분석 데이터의 차이는?  
+###  <a name="what-is-the-difference-between-spatial-data-and-analytical-data"></a><a name="Diff"></a> 공간 데이터와 분석 데이터의 차이는?  
  공간 데이터는 점, 선 및 다각형을 지정하는 좌표 집합으로 구성됩니다. 지도 요소는 공간 데이터를 기반으로 합니다.  
   
  분석 데이터는 지도의 모양을 변경하는 데 사용할 숫자 또는 범주 데이터입니다. 분석은 보고서 데이터 세트에서 제공될 수 있으며 지도 갤러리 또는 ESRI 셰이프 파일에 있는 지도의 공간 데이터와 함께 포함될 수도 있습니다.  
   
-##  <a name="SpecifyMatchFields"></a> 일치 필드 지정  
+##  <a name="specify-the-match-fields"></a><a name="SpecifyMatchFields"></a> 일치 필드 지정  
  이 페이지에서는 공간 데이터와 분석 데이터 간의 관계를 만듭니다.  
   
-###  <a name="MatchFields"></a> 일치 필드란?  
+###  <a name="what-are-match-fields"></a><a name="MatchFields"></a> 일치 필드란?  
  보고서 처리기는 일치 필드를 사용하여 분석 데이터와 공간 데이터 간의 관계를 만들 수 있습니다. 일치 필드는 분석 데이터 내에서 고유 값을 지정합니다. 예를 들어 상점 이름은 데이터 내에서 고유하지 않을 수도 있으므로 도시 및 상점 이름을 모두 지정할 수 있습니다.  
   
-##  <a name="ThemeandVisualization"></a> 색 테마 및 데이터 시각화 선택  
+##  <a name="choose-color-theme-and-data-visualization"></a><a name="ThemeandVisualization"></a> 색 테마 및 데이터 시각화 선택  
  이 페이지에서는 지도 배경에 대해 데이터를 시각화하는 방법, 지도 테마 및 시각화할 필드를 지정하고 색, 크기 및/또는 표식 유형 중 변경할 항목을 지정합니다.  
   
-###  <a name="Theme"></a> 테마는 어떤 역할을 합니까?  
+###  <a name="what-does-the-theme-do"></a><a name="Theme"></a> 테마는 어떤 역할을 합니까?  
  선택하는 테마에 따라 색, 테두리 및 글꼴의 기본값이 설정됩니다. 마법사를 완료한 후 이러한 옵션을 변경할 수 있습니다.  
   
-###  <a name="Legends"></a> 지도 미리 보기의 범례와 눈금은 어디에 사용됩니까?  
+###  <a name="what-are-the-legends-and-scales-in-map-preview-for"></a><a name="Legends"></a> 지도 미리 보기의 범례와 눈금은 어디에 사용됩니까?  
  범례는 사용자가 지도에 표시되는 데이터를 해석하는 데 도움이 됩니다. 지도에서는 색 범위, 거리 눈금 및 범례가 제공됩니다.  
   
 -   **색 범위.** 색 범위에는 계층에 대해 지정하는 규칙에 따라 보고서 처리기가 결정하는 데이터 간격을 안내하는 눈금이 있는 색 막대가 표시됩니다.  
@@ -234,7 +234,7 @@ ms.locfileid: "77078572"
   
 -   **범례.** 범례는 지도에 있는 색, 크기 및 표식 유형의 의미를 해석하는 데 도움이 되도록 안내합니다. 기본적으로 모든 계층에 대한 모든 규칙은 첫 번째 범례의 데이터 간격을 표시합니다. 이 범례를 사용자 지정하고 보고서에 지도를 추가한 후 범례를 추가할 수 있습니다.  
   
-###  <a name="Rules"></a> 규칙이란?  
+###  <a name="what-are-rules"></a><a name="Rules"></a> 규칙이란?  
  규칙은 보고서 처리기가 분석 데이터를 범위로 나누는 데 사용하는 계산입니다. 계층마다 서로 다른 규칙을 지정할 수 있습니다. 지정할 수 있는 규칙의 유형은 계층의 공간 데이터 형식에 따라 달라집니다.  
   
 -   **다각형.** 색 규칙을 지정할 수 있습니다.  

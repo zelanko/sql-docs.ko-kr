@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 221c5c0fa216b8d5fba7f133b717a3d102aea963
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287137"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>SQL Server Management Studio로 Always Encrypted를 사용하는 열 쿼리
@@ -77,7 +77,7 @@ SSN이 `char(11)` 테이블의 암호화된 `Patients` 열이라고 가정할 �
 
 자세한 내용은 [열 마스터 키 만들기 및 저장(상시 암호화)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)를 참조하세요.
 
-## <a name="en-dis"></a> 데이터베이스 연결에 Always Encrypted 사용 및 사용 안 함   
+## <a name="enabling-and-disabling-always-encrypted-for-a-database-connection"></a><a name="en-dis"></a> 데이터베이스 연결에 Always Encrypted 사용 및 사용 안 함   
 SSMS에서 데이터베이스에 연결하는 경우 데이터베이스 연결에 Always Encrypted를 사용하거나 사용하지 않도록 설정할 수 있습니다. 기본적으로 Always Encrypted는 사용 안 함으로 설정됩니다. 
 
 데이터베이스 연결에 Always Encrypted를 사용하도록 설정하면 SQL Server Management Studio에서 사용하는 .NET Framework Data Provider for SQL Server가 다음 작업을 투명하게 시도합니다.   
@@ -106,7 +106,7 @@ Always Encrypted를 사용하거나 사용하지 않도록 설정하려면 다�
 > 2.    **연결** > **연결 변경...** 을 선택합니다. 그러면 쿼리 편집기 창의 현재 연결에 대한 **서버에 연결** 대화 상자가 열립니다. 
 > 2.    위의 단계에 따라 Always Encrypted를 사용하거나 사용하지 않도록 설정하고 **연결**을 클릭합니다.  
    
-## <a name="param"></a>Always Encrypted에 대한 매개 변수화   
+## <a name="parameterization-for-always-encrypted"></a><a name="param"></a>Always Encrypted에 대한 매개 변수화   
  
 Always Encrypted에 대한 매개 변수화는 Transact-SQL 변수를 쿼리 매개 변수( [SqlParameter 클래스](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)의 인스턴스)로 자동으로 변환하는 SQL Server Management Studio의 기능입니다. SSMS 버전 17.0 이상이 필요합니다. 이 기능을 사용하면 기본 .NET Framework Data Provider for SQL Server이 암호화된 열을 대상으로 하는 데이터를 검색하고, 이러한 데이터를 데이터베이스로 전송하기 전에 암호화합니다. 
   

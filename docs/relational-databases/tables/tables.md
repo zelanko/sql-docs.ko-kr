@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b59f204fafd7e1b912eea2673783290f67fa786
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287747"
 ---
 # <a name="tables"></a>테이블
@@ -44,7 +44,7 @@ ms.locfileid: "79287747"
 임시 테이블은 **tempdb**에 저장됩니다. 임시 테이블에는 로컬 및 전역의 두 가지 유형이 있습니다. 이 두 유형은 이름, 표시 여부 및 가용성 면에서 서로 다릅니다. 로컬 임시 테이블은 이름이 한 개의 숫자 기호(#)로 시작하며 사용자의 현재 연결에만 표시되고 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스와의 연결을 끊으면 삭제됩니다. 전역 임시 테이블은 이름이 두 개의 숫자 기호(##)로 시작하며 테이블 작성 후 모든 사용자에게 표시되고 테이블을 참조하는 모든 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스와의 연결을 끊으면 삭제됩니다. 
 
 
-#### <a name="ctp23"></a> 여러 범위에서 임시 테이블을 사용하여 워크로드에 대한 재컴파일 감소
+#### <a name="reduced-recompilations-for-workloads-using-temporary-tables-across-multiple-scopes"></a><a name="ctp23"></a> 여러 범위에서 임시 테이블을 사용하여 워크로드에 대한 재컴파일 감소
 
 모든 데이터베이스 호환성 수준의 [!INCLUDE[ss2019](../../includes/sssqlv15-md.md)]에서 여러 범위의 임시 테이블을 사용하여 워크로드의 재컴파일을 줄입니다. 이 기능은 데이터베이스 호환성 수준 150의 Azure SQL Database에서도 모든 배포 모델에 대해 사용할 수 있습니다.  이 기능을 사용하기 전에 DML(데이터 조작 언어) 문(`SELECT`, `INSERT`, `UPDATE`, `DELETE`)을 사용하여 임시 테이블을 참조할 때 임시 테이블이 외부 범위 일괄 처리에서 만들어지면 DML 문이 실행될 때마다 다시 컴파일됩니다. 이 향상된 기능을 사용하면 SQL Server에서 불필요한 재컴파일을 방지하기 위해 다음과 같은 간단한 검사를 추가로 수행합니다.
 

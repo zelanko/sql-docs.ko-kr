@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7b24d5499e618a09c4d80e8614b08219e6c6f788
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73706759"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR(SQL Server의 R 라이브러리)
@@ -126,7 +126,7 @@ RevoScaleR는 분산 데이터 과학을 위한 플랫폼 역할을 합니다. �
 |[rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm) <sup>*</sup> |일반화된 선형 모델을 데이터에 맞춥니다. | 
 |[rxCovCor](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcovcor) <sup>*</sup> |공변성(covariance), 상관 관계, 변수 집합에 대한 제곱합(교차곱) 행렬을 계산합니다. | 
 |[rxDTree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree) <sup>*</sup> |분류 또는 회귀 트리를 데이터에 맞춥니다. | 
-|[rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees) <sup>*</sup> |확률 그래디언트 부스팅 알고리즘을 사용하여 분류 또는 회귀 의사 결정 포리스트를 데이터에 맞춥니다. | 
+|[rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees) <sup>*</sup> |확률 경사 부스팅 알고리즘을 사용하여 분류 또는 회귀 의사 결정 포리스트를 데이터에 맞춥니다. | 
 |[rxDForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest) <sup>*</sup> |분류 또는 회귀 의사 결정 포리스트를 데이터에 맞춥니다. | 
 |[rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxPredict) <sup>*</sup> |맞춤 모델에 대한 예측을 계산합니다. 출력은 XDF 데이터 원본이어야 합니다. | 
 |[rxKmeans](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxkmeans) <sup>*</sup> |K-Means 클러스터링을 수행합니다. | 

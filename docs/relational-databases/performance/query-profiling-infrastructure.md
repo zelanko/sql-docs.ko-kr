@@ -18,10 +18,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: e4c2a2e56f9dab75bfe3873e721ccfca0bd16df3
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77705908"
 ---
 # <a name="query-profiling-infrastructure"></a>쿼리 프로파일링 인프라
@@ -50,7 +50,7 @@ ms.locfileid: "77705908"
 
 *query_post_execution_showplan* 이벤트를 사용하는 확장 이벤트 세션을 실행하면 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV도 채워지며, 따라서 [Activity Monitor](../../relational-databases/performance-monitor/activity-monitor.md)를 사용하여 또는 DMV를 직접 쿼리하여 모든 세션에 활성 쿼리 통계를 사용할 수 있습니다. 자세한 내용은 [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)를 참조하세요.
 
-## <a name="lwp"></a> 간단한 쿼리 실행 통계 프로파일링 인프라
+## <a name="the-lightweight-query-execution-statistics-profiling-infrastructure"></a><a name="lwp"></a> 간단한 쿼리 실행 통계 프로파일링 인프라
 
 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 새로운 *간단한 쿼리 실행 통계 프로파일링 인프라* 또는 **간단한 프로파일링**이 도입되었습니다. 
 

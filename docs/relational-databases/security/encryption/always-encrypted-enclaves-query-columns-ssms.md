@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6bee04f4a794a503b89b73d4ef4a6a1cef897b4b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73595598"
 ---
 # <a name="query-columns-using-always-encrypted-with-secure-enclaves-with-ssms"></a>SSMS로 보안 enclave를 사용한 Always Encrypted를 이용하는 열 쿼리

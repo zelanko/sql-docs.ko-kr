@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 8e577f50152eb5f86b81caa23cc493b92bbab270
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67959478"
 ---
-# <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>[!INCLUDE[name-sos](../includes/name-sos.md)]의 바로 가기 키
+# <a name="keyboard-shortcuts-in-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos.md)]의 바로 가기 키
 
 이 문서에서는 [!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 바로 가기 키를 빠르게 살펴보고 편집하고 만드는 단계를 제공합니다.
 

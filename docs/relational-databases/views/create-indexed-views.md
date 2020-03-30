@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75325515"
 ---
 # <a name="create-indexed-views"></a>인덱싱된 뷰 만들기
@@ -31,7 +31,7 @@ ms.locfileid: "75325515"
 
 이 문서에서는 뷰에서 인덱스를 만드는 방법을 설명합니다. 뷰에 만들어지는 첫 번째 인덱스는 고유 클러스터형 인덱스여야 합니다. 고유 클러스터형 인덱스가 만들어진 후에 비클러스터형 인덱스를 더 만들 수 있습니다. 뷰에 고유 클러스터형 인덱스를 만들면 클러스터형 인덱스가 있는 테이블의 저장 방식과 마찬가지로 데이터베이스에 뷰가 저장되므로 쿼리 성능이 향상됩니다. 쿼리 최적화 프로그램은 인덱싱된 뷰를 사용하여 쿼리 실행 속도를 높일 수 있습니다. 최적화 프로그램이 인덱싱된 뷰를 대신 사용하므로 쿼리에서 해당 뷰를 참조할 필요가 없습니다.
 
-## <a name="BeforeYouBegin"></a> 시작하기 전에
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에
 
 다음 단계는 인덱싱된 뷰를 만들고 성공적으로 구현하는 데 필요합니다.
 
@@ -47,7 +47,7 @@ ms.locfileid: "75325515"
 >
 > <sup>1</sup> UPDATE, DELETE 또는 INSERT 작업 등
 
-### <a name="Restrictions"></a> 인덱싱된 뷰에 필요한 SET 옵션
+### <a name="required-set-options-for-indexed-views"></a><a name="Restrictions"></a> 인덱싱된 뷰에 필요한 SET 옵션
 
 쿼리가 실행될 때 다른 SET 옵션이 활성화되어 있으면 같은 식을 계산해도 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 다른 결과가 나올 수 있습니다. 예를 들어 SET 옵션 `CONCAT_NULL_YIELDS_NULL`이 켜기로 설정된 후에는 `'abc' + NULL` 식이 `NULL` 값을 반환합니다. 그러나 `CONCAT_NULL_YIELDS_NULL`이 끄기로 설정된 후에는 같은 식이 `'abc'`를 생성합니다.
 
@@ -131,13 +131,13 @@ SET 옵션 및 결정적 함수 요구 사항 외에 다음 요구 사항을 충
 > [!IMPORTANT]
 > 인덱싱된 뷰는 임시 쿼리를 기반으로 사용할 수 없습니다(`FOR SYSTEM_TIME` 절을 사용하는 쿼리).
 
-### <a name="Recommendations"></a> 권장 사항
+### <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항
 
 인덱싱된 뷰의 **datetime** 및 **smalldatetime** 문자열 리터럴을 참조할 때 결정적 날짜 형식 스타일을 사용하여 리터럴을 원하는 날짜 유형으로 명시적으로 변환하는 것이 좋습니다. 결정적 날짜 형식 스타일 목록은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요. 결정적 및 비결정적 식에 대한 자세한 내용은 이 페이지에서 [고려 사항](#nondeterministic) 섹션을 참조하세요.
 
 많은 수의 인덱싱된 뷰 또는 더 적은 수의 매우 복잡한 인덱싱된 뷰에서 참조하는 테이블에서 DML(`UPDATE`, `DELETE` 또는 `INSERT`)을 실행할 때 DML 실행 도중 해당 인덱싱된 뷰도 업데이트되어야 합니다. 따라서 DML 쿼리 성능이 크게 저하되거나 경우에 따라 쿼리 계획도 생성될 수 없습니다. 이러한 시나리오에서는 프로덕션이 쿼리 계획을 사용하고 분석하거나 DML 문을 조정/간소화하기 전에 DML 쿼리를 테스트합니다.
 
-### <a name="Considerations"></a> 고려 사항
+### <a name="considerations"></a><a name="Considerations"></a> 고려 사항
 
 인덱싱된 뷰의 열에 대한 **large_value_types_out_of_row** 옵션의 설정은 기본 테이블의 해당 열에 대한 설정에서 상속됩니다. 이 값은 [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)을 통해 설정됩니다. 식으로부터 구성된 열의 기본 설정은 0으로서 큰 값 유형이 행 내부에 저장됨을 의미합니다.
 
@@ -151,13 +151,13 @@ SET 옵션 및 결정적 함수 요구 사항 외에 다음 요구 사항을 충
 
 <a name="nondeterministic"></a>문자열을 **datetime** 또는 **smalldatetime**으로 암시적으로 변환하는 작업과 관련된 식은 비결정적인 것으로 간주됩니다. 자세한 내용은 [날짜 값으로 리터럴 날짜 문자열의 비결정적 변환](../../t-sql/data-types/nondeterministic-convert-date-literals.md)을 참조하세요.
 
-### <a name="Security"></a> 보안
+### <a name="security"></a><a name="Security"></a> 보안
 
-#### <a name="Permissions"></a> 권한
+#### <a name="permissions"></a><a name="Permissions"></a> 권한
 
 데이터베이스에는 **CREATE VIEW** 권한이 필요하고 뷰를 만들 구성표에는 **ALTER** 권한이 필요합니다.
 
-## <a name="TsqlProcedure"></a> Transact-SQL 사용
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용
 
 ### <a name="to-create-an-indexed-view"></a>인덱싱된 뷰를 만들려면
 

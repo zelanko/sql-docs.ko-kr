@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 926822356c6e7f9f4d775ca0710ee2f815c0e7f5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74094492"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>데이터베이스 메일 메시지 및 이벤트 로그 보관을 처리하는 SQL Server 에이전트 작업 만들기
@@ -30,20 +30,20 @@ ms.locfileid: "74094492"
   
 -   **데이터베이스 메일 메시지 및 로그를 보관하려면 다음을 사용합니다.**  [SQL Server 에이전트](#Process_Overview)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 조건  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
  데이터를 저장하고 보관할 새 테이블은 특수한 보관 데이터베이스에 위치할 수 있습니다. 행을 텍스트 파일로 내보낼 수도 있습니다.  
    
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
  프로덕션 환경에서 오류 검사를 추가하고 작업이 실패할 경우 운영자에게 전자 메일 메시지를 보낼 수 있습니다.  
   
   
-###  <a name="Permissions"></a> 권한  
+###  <a name="permissions"></a><a name="Permissions"></a> 권한  
  이 항목에서 설명하는 저장 프로시저를 실행하려면 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
   
-###  <a name="Process_Overview"></a> 프로세스 개요  
+###  <a name="overview-of-the-process"></a><a name="Process_Overview"></a> 프로세스 개요  
   
 -   첫 번째 절차에서는 다음 단계를 사용하여 Archive Database Mail이라는 작업을 만듭니다.  
   

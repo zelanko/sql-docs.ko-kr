@@ -18,10 +18,10 @@ ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 48736a721cad475c6956e1715a3912481bc83c40
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012923"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>특정 TCP 포트에서 수신 대기하도록 서버 구성
@@ -40,7 +40,7 @@ ms.locfileid: "68012923"
 >  다시 시작할 때 데이터베이스 엔진은 새 포트에서 수신을 시작합니다. 그러나 데이터베이스 엔진이 사용하지 않을 수 있는 경우에도 구성을 변경하는 즉시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 브라우저 서비스가 레지스트리를 모니터링하고 새 포트 번호를 보고합니다. 데이터베이스 엔진을 다시 시작하여 일관성을 확인하고 연결 실패를 방지합니다.  
   
   
-##  <a name="SSMSProcedure"></a> SQL Server 구성 관리자 사용  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> SQL Server 구성 관리자 사용  
   
 #### <a name="to-assign-a-tcpip-port-number-to-the-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진에 TCP/IP 포트 번호를 할당하려면  
   

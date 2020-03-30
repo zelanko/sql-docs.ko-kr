@@ -14,10 +14,10 @@ ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c50eee13c4831bfb8d3830da6dbd20b9efc64298
-ms.sourcegitcommit: d876425e5c465ee659dd54e7359cda0d993cbe86
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/24/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77568086"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Integration Services에 대한 Azure 기능 팩(SSIS)

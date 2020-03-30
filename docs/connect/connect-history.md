@@ -9,10 +9,10 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0eb869cf19f128515951421efddc229aa785cdd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72451842"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Microsoft SQL Server용 드라이버 기록

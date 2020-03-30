@@ -85,10 +85,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ebf82ec10f01b52b606a1250266884bbcd0a4497
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288617"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>방법: 명령 프롬프트에서 SQL Server 2008 R2 설치
@@ -145,7 +145,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 > [!NOTE]
 > 로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 경우 원격 공유에 대한 읽기 및 실행 권한이 있는 도메인 계정을 사용해야 합니다. 장애 조치 클러스터를 설치하려면 서비스로 로그인할 수 있고 모든 장애 조치 클러스터 노드에서 운영 체제의 일부로 작동할 수 있는 권한을 갖고 있는 로컬 관리자여야 합니다.  
   
-##  <a name="ProperUse"></a> 적절한 설치 매개 변수 사용  
+##  <a name="proper-use-of-setup-parameters"></a><a name="ProperUse"></a> 적절한 설치 매개 변수 사용  
 올바른 구문으로 설치 명령을 작성하려면 다음 지침을 따르십시오.  
   
 -   /PARAMETER (예: `/INDICATEPROGRESS`)
@@ -168,7 +168,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소의 매개 변수 목록은 해당 구성 요소에만 적용됩니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 설치할 때 SQL Server 에이전트 및 SQL Server Browser 매개 변수가 적용됩니다.  
 
 
-##  <a name="Install"></a> 설치 매개 변수  
+##  <a name="installation-parameters"></a><a name="Install"></a> 설치 매개 변수  
  다음 표에 나와 있는 매개 변수를 사용하여 설치 명령줄 스크립트를 개발할 수 있습니다.  
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|Description|  
@@ -271,7 +271,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /SQLSVCINSTANTFILEINIT="True" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
-##  <a name="SysPrep"></a> SysPrep 매개 변수  
+##  <a name="sysprep-parameters"></a><a name="SysPrep"></a> SysPrep 매개 변수  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep에 대한 자세한 내용은 다음 항목을 참조  
   
  [SysPrep을 사용하여 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 설치](../../database-engine/install-windows/install-sql-server-using-sysprep.md). 
@@ -374,7 +374,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
-##  <a name="Upgrade"></a> 업그레이드 매개 변수  
+##  <a name="upgrade-parameters"></a><a name="Upgrade"></a> 업그레이드 매개 변수  
  다음 표에 나와 있는 매개 변수를 사용하여 업그레이드 명령줄 스크립트를 개발할 수 있습니다. 
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|Description|  
@@ -412,7 +412,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER /RSUPGRADEDATABASEACCOUNT="<Provide a SQL Server logon account that can connect to the report server during upgrade>" /RSUPGRADEPASSWORD="<Provide a password for the report server upgrade account>" /ISSVCAccount="NT Authority\Network Service" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
-##  <a name="Repair"></a> 복구 매개 변수  
+##  <a name="repair-parameters"></a><a name="Repair"></a> 복구 매개 변수  
  다음 표에 나와 있는 매개 변수를 사용하여 복구 명령줄 스크립트를 개발할 수 있습니다. 
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|Description|  
@@ -436,7 +436,7 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>  
 ```  
   
-##  <a name="Rebuild"></a> 시스템 데이터베이스 다시 작성 매개 변수  
+##  <a name="rebuild-system-database-parameters"></a><a name="Rebuild"></a> 시스템 데이터베이스 다시 작성 매개 변수  
  다음 표에 나와 있는 매개 변수를 사용하여 master, model, msdb 및 tempdb 시스템 데이터베이스를 다시 작성하는 명령줄 스크립트를 개발할 수 있습니다. 자세한 내용은 [시스템 데이터베이스 다시 작성](../../relational-databases/databases/rebuild-system-databases.md)을 참조하세요. 
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|Description|  
@@ -455,7 +455,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **선택 사항**|tempdb 로그 파일의 초기 크기를 MB 단위로 지정합니다. 설치에서는 최대 1,024MB의 크기를 허용합니다. 기본값:<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]의 경우 4<br /><br /> 기타 모든 버전의 경우 8<br /><br /> 허용 범위: 최소 = 기본값(4 또는 8), 최대 = 1024|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **선택 사항**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 도입되었습니다. 각 tempdb 로그 파일의 초기 크기를 지정합니다.<br/><br/>기본값 = [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]의 경우 4MB, 다른 모든 버전의 경우 8MB.<br/><br/>최소 = (4MB 또는 8MB).<br/><br/>최댓값 = 1,024MB([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]의 경우 262,144MB|  
   
-##  <a name="Uninstall"></a> 제거 매개 변수  
+##  <a name="uninstall-parameters"></a><a name="Uninstall"></a> 제거 매개 변수  
  다음 표에 나와 있는 매개 변수를 사용하여 제거 명령줄 스크립트를 개발할 수 있습니다. 
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|Description|  
@@ -478,7 +478,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
   
  명명된 인스턴스를 제거하려면 이 문서의 앞부분에서 설명한 예에서 "MSSQLSERVER" 대신 인스턴스 이름을 사용합니다. 
   
-##  <a name="ClusterInstall"></a> 장애 조치 클러스터 매개 변수  
+##  <a name="failover-cluster-parameters"></a><a name="ClusterInstall"></a> 장애 조치 클러스터 매개 변수  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 장애 조치 클러스터 인스턴스를 설치하기 전에 다음 문서를 검토합니다.  
   
 -   [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
@@ -743,7 +743,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEDATABASEACCOUNT<br /><br /> **선택 사항**|이 속성은 2008 R2 버전 이상의 SharePoint 모드 보고서 서버를 업그레이드할 때만 사용됩니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 변경된 이전 SharePoint 모드 아키텍처를 사용하는 보고서 서버에서는 추가 업그레이드 작업이 수행됩니다. 이 옵션이 명령줄 설치에 포함되지 않은 경우 이전 보고서 서버 인스턴스의 기본 서비스 계정이 사용됩니다. 이 속성이 사용된 경우에는 **/RSUPGRADEPASSWORD** 속성을 사용해서 계정 암호를 제공하십시오.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEPASSWORD<br /><br /> **선택 사항**|기존 보고서 서버 서비스 계정 암호입니다.|  
   
-####  <a name="AddNode"></a> 노드 추가 매개 변수  
+####  <a name="add-node-parameters"></a><a name="AddNode"></a> 노드 추가 매개 변수  
  다음 표에 나와 있는 매개 변수를 사용하여 노드 추가 명령줄 스크립트를 개발할 수 있습니다. 
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 요소|매개 변수|Description|  
@@ -810,7 +810,7 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
 setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICATEPROGRESS] /CONFIRMIPDEPENDENCYCHANGE=0  
 ```  
   
-##  <a name="Accounts"></a> 서비스 계정 매개 변수  
+##  <a name="service-account-parameters"></a><a name="Accounts"></a> 서비스 계정 매개 변수  
  기본 제공 계정, 로컬 계정 또는 도메인 계정을 사용하여 SQL Server 서비스를 구성할 수 있습니다. 
   
 > [!NOTE] 
@@ -830,7 +830,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   > 보고서 서비스 기능은 SQL Server 2017에서 제거되었습니다. SQL Server Reporting Services의 계정 매개 변수는 SQL Server 2017 이전 버전에만 적용됩니다. 
 
 
-##  <a name="Feature"></a> 기능 매개 변수  
+##  <a name="feature-parameters"></a><a name="Feature"></a> 기능 매개 변수  
  특정 기능을 설치하려면 /FEATURES 매개 변수를 사용하여 다음 표에 나와 있는 부모 기능 또는 기능 값을 지정하십시오. SQL Server 버전에서 지원되는 기능 목록은 [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 버전 및 지원되는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요. 
   
 |부모 기능 매개 변수|기능 매개 변수|Description|  
@@ -881,7 +881,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |/FEATURES=BOL|도움말 내용을 보고 관리할 수 있도록 SQL Server 온라인 설명서 구성 요소를 설치합니다.|  
 |/FEATURES=SQLEngine,PolyBase|PolyBase 엔진을 설치합니다.|  
   
-##  <a name="RoleParameters"></a> 역할 매개 변수  
+##  <a name="role-parameters"></a><a name="RoleParameters"></a> 역할 매개 변수  
  설치 역할 또는 /Role 매개 변수는 미리 구성된 기능 선택 항목을 설치하는 데 사용됩니다. SSAS 역할은 기존 SharePoint 팜이나 구성되지 않은 새 팜에 SSAS 인스턴스를 설치합니다. 각 시나리오를 지원하는 두 가지 설치 역할이 제공됩니다. 설치할 설치 역할은 한 번에 하나씩만 선택할 수 있습니다. 설치 역할을 선택하면 설치 프로그램에서 해당 역할에 속하는 기능 및 구성 요소를 설치합니다. 특정 역할에 지정된 기능과 구성 요소를 변경할 수는 없습니다. 기능 역할 매개 변수를 사용하는 방법에 대한 자세한 내용은 [명령 프롬프트에서 PowerPivot 설치](https://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)를 참조하세요. 
   
  AllFeatures_WithDefaults 역할은 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 버전의 기본 동작으로, 사용자에게 표시되는 대화 상자 수를 줄입니다. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]이외의 SQL Server 버전을 설치할 때는 이 역할을 명령줄에서 지정할 수 있습니다. 
@@ -892,7 +892,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |SPI_AS_NewFarm|구성되지 않은 새 Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 팜 또는 독립 실행형 서버에 명명된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 인스턴스로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssDE](../../includes/ssde-md.md)]를 설치합니다. SQL Server 설치 프로그램은 기능 역할 설치 중에 팜을 구성합니다.|메모리 내 데이터 스토리지 및 처리를 위해 미리 구성된[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 계산 엔진<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 솔루션 패키지<br /><br /> SQL Server 온라인 설명서<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> 구성 도구<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
 |AllFeatures_WithDefaults|현재 버전에서 사용할 수 있는 모든 기능을 설치합니다.<br /><br /> 현재 사용자를 SQL Server **sysadmin** 고정 서버 역할에 추가합니다.<br /><br /> [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 이상을 사용하고 운영 체제가 도메인 컨트롤러가 아닌 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 기본적으로 NTAUTHORITY\NETWORK SERVICE 계정을 사용하고, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 기본적으로 NTAUTHORITY\NETWORK SERVICE 계정을 사용합니다.<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 버전에서는 이러한 역할이 기본적으로 사용하도록 설정됩니다. 기타 모든 버전의 경우 이 역할은 사용하도록 설정되지 않지만 UI나 명령줄 매개 변수를 통해 지정할 수 있습니다.|[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 버전의 경우에는 해당 버전에서 사용 가능한 기능만 설치하세요. 기타 버전의 경우에는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 설치하십시오.<br /><br /> **AllFeatures_WithDefaults** 매개 변수는 **AllFeatures_WithDefaults** 매개 변수 설정을 재정의하는 다른 매개 변수와 결합해 사용할 수 있습니다. 예를 들어 **AllFeatures_WithDefaults** 매개 변수와 **/Features=RS** 매개 변수를 함께 사용하면 모든 기능을 설치하는 명령이 무시되고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]만 설치되지만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대해 기본 서비스 계정을 사용하는 **AllFeatures_WithDefaults** 매개 변수 설정은 그대로 적용됩니다.<br /><br /> **AllFeatures_WithDefaults** 매개 변수를 **/ADDCURRENTUSERASSQLADMIN=FALSE**와 함께 사용하는 경우에는 프로비전 대화 상자에 현재 사용자가 자동으로 채워지지 않습니다. SQL Server 에이전트에 대한 서비스 계정과 암호를 지정하려면 **/AGTSVCACCOUNT** 및 **/AGTSVCPASSWORD**를 추가하세요.|  
   
-##  <a name="RollOwnership"></a> /FAILOVERCLUSTERROLLOWNERSHIP 매개 변수를 사용하여 장애 조치 동작 제어  
+##  <a name="controlling-failover-behavior-using-the-failoverclusterrollownership-parameter"></a><a name="RollOwnership"></a> /FAILOVERCLUSTERROLLOWNERSHIP 매개 변수를 사용하여 장애 조치 동작 제어  
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 장애 조치(failover) 클러스터를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하려면 패시브 노드부터 시작하여 한 번에 하나의 장애 조치(failover) 클러스터 노드에서 설치 프로그램을 실행해야 합니다. 설치 프로그램에서는 장애 조치(Failover) 클러스터 인스턴스의 총 노드 수 및 이미 업그레이드된 노드 수에 따라 업그레이드된 노드로 장애 조치(Failover)를 실행할 시기를 결정합니다. 절반 이상의 노드가 이미 업그레이드된 경우 기본적으로 설치 프로그램에서는 업그레이드된 노드로 장애 조치(Failover)를 실행합니다. 
  
 업그레이드 프로세스를 진행하는 동안 클러스터 노드의 장애 조치(Failover) 동작을 제어하려면 명령 프롬프트에서 업그레이드 작업을 실행한 다음, 업그레이드 작업을 통해 노드가 오프라인으로 전환되기 전에 /FAILOVERCLUSTERROLLOWNERSHIP 매개 변수를 사용하여 장애 조치(Failover) 동작을 제어하십시오. 이 매개 변수의 사용 방법은 다음과 같습니다.  
@@ -903,7 +903,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
 -   /FAILOVERCLUSTERROLLOWNERSHIP=2는 기본 설정입니다. 매개 변수가 지정되지 않은 경우 이 값이 사용됩니다. 이 설정은 SQL Server 설치 프로그램이 필요에 따라 클러스터 소유권(그룹 이동)을 관리함을 나타냅니다. 
   
-##  <a name="InstanceID"></a> Instance ID 또는 InstanceID 구성  
+##  <a name="instance-id-or-instanceid-configuration"></a><a name="InstanceID"></a> Instance ID 또는 InstanceID 구성  
  Instance ID 또는 /InstanceID 매개 변수는 인스턴스 구성 요소를 설치할 수 있는 위치와 인스턴스의 레지스트리 경로를 지정하는 데 사용됩니다. INSTANCEID의 값은 고유한 문자열이어야 합니다. 
   
 -   SQL 인스턴스 ID: `MSSQLxx.<INSTANCEID>`  

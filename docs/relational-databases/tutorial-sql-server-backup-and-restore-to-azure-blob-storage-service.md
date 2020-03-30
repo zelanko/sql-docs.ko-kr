@@ -11,10 +11,10 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 24847d7b14341e9a1d5a4d874eb0046f53261fea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165518"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>빠른 시작: Azure Blob Storage 서비스로 SQL 백업 및 복원
@@ -122,7 +122,7 @@ GO
 ## <a name="back-up-database"></a>데이터베이스 백업
 이 단계에서는 SQL Server Management Studio의 GUI 또는 T-SQL(Transact-SQL)을 사용하여 Azure Blob Storage 계정에 `SQLTestDB` 데이터베이스를 백업합니다. 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. **데이터베이스 백업** 마법사가 아직 열려 있지 않은 경우 [SSMS(SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md)의 **개체 탐색기**에서 **데이터베이스** 노드를 확장합니다.
 1. 새 `SQLTestDB` 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **작업**을 가리킨 다음 **백업...** 을 선택하여 **데이터베이스 백업** 마법사를 시작합니다. 
@@ -141,7 +141,7 @@ GO
    > **데이터베이스 백업** 마법사의 상단에서 **스크립트**를 선택하여 이 명령의 Transact-SQL을 스크립팅할 수 있습니다. ![스크립트 명령](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/script-backup-command.png)
 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 다음 명령을 실행하여 Transact-SQL로 데이터베이스를 백업합니다. 
 
@@ -160,12 +160,12 @@ GO
 ## <a name="delete-database"></a>데이터베이스 삭제
 이 단계에서는 복원을 수행하기 전에 데이터베이스를 삭제합니다. 이 단계는 이 자습서의 목적으로만 필요하고 일반 데이터베이스 관리 절차에서 사용될 가능성은 낮습니다. 이 단계를 건너뛸 수는 있지만, 관리되는 인스턴스에서 복원하는 동안 데이터베이스 이름을 변경하거나, 데이터베이스를 온-프레미스로 성공적으로 복원하려면 복원 명령 `WITH REPLACE`를 실행해야 합니다. 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. **개체 탐색기**에서 **데이터베이스** 노드를 확장하고 `SQLTestDB` 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 삭제를 선택하여 **개체 삭제** 마법사를 시작합니다. 
 1. 관리되는 인스턴스의 경우, **확인**을 선택하여 데이터베이스를 삭제합니다. 온-프레미스의 경우, **기존 연결 닫기** 옆의 확인란을 선택하고 **확인**을 선택하여 데이터베이스를 삭제합니다. 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 다음 Transact-SQL 명령을 실행하여 데이터베이스를 삭제합니다.
 
@@ -192,7 +192,7 @@ GO
 ## <a name="restore-database"></a>대화 상자의 
 이 단계에서는 SQL Server Management Studio의 GUI 또는 Transact-SQL을 사용하여 데이터베이스를 복원합니다. 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. SQL Server Management Studio의 **개체 탐색기**에서 **데이터베이스** 노드를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원**을 선택합니다. 
 1. **디바이스**를 선택한 다음, 줄임표(...)를 선택하여 디바이스를 선택합니다. 
@@ -216,7 +216,7 @@ GO
 1. **확인**을 선택하여 **백업 디바이스 선택** 대화 상자를 닫습니다. 
 1. **확인**을 선택하여 데이터베이스를 복원합니다. 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 Azure Blob Storage에서 온-프레미스 데이터베이스를 복원하려면 다음 Transact-SQL 명령을 사용자 자체 스토리지 계정을 사용하도록 수정하고 새 쿼리 창에서 실행합니다. 
 

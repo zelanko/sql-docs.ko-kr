@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287947"
 ---
 # <a name="memory-management-architecture-guide"></a>메모리 관리 아키텍처 가이드
@@ -124,7 +124,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 |스레드 스택 메모리|예|예|
 |Windows에서 직접 할당|예|예|
 
-## <a name="dynamic-memory-management"></a> 동적 메모리 관리
+## <a name="dynamic-memory-management"></a><a name="dynamic-memory-management"></a> 동적 메모리 관리
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 기본 메모리 관리 동작은 시스템에 메모리가 부족해지지 않도록 필요한 만큼 메모리를 확보하는 것입니다. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 Microsoft Windows의 메모리 알림 API를 사용하여 이 작업을 수행합니다.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가 동적으로 메모리를 사용하면 주기적으로 시스템을 쿼리하여 사용할 수 있는 메모리 양을 확인합니다. 사용 가능한 메모리를 이 수준으로 유지 관리하면 OS(운영 체제)에서 페이징을 방지합니다. 사용 가능한 메모리가 이보다 적은 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 메모리를 OS로 해제합니다. 사용 가능한 메모리가 이보다 많은 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 더 많은 메모리를 할당할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 작업에 메모리가 더 필요한 경우에만 메모리를 추가합니다. 서버가 유휴 상태이면 가상 주소 공간 크기가 증가하지 않습니다.  
@@ -203,7 +203,7 @@ min server memory 및 max server memory 둘 모두에 같은 값이 지정된 �
 >    
 > 이 구성 사용에 대한 권장 사항은 [min memory per query 서버 구성 옵션 구성](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md#Recommendations)을 참조합니다.
 
-### <a name="memory-grant-considerations"></a>메모리 부여 고려 사항
+### <a name="memory-grant-considerations"></a><a name="memory-grant-considerations"></a>메모리 부여 고려 사항
 **행 모드 실행**의 경우 모든 조건에서 초기 메모리 부여를 초과할 수 없습니다. **해시** 또는 **정렬** 작업을 실행하는 데 초기 부여 보다 더 많은 메모리가 필요한 경우는 디스크에 분산되게 됩니다. 분산되는 해시 작업은 TempDB의 작업 파일에서 지원하지만 분산되는 정렬 작업은 [Worktable](../relational-databases/query-processing-architecture-guide.md#worktables)에서 지원합니다.   
 
 정렬 작업 중에 발생하는 분산은 [정렬 경고](../relational-databases/event-classes/sort-warnings-event-class.md)라고 합니다. 정렬 경고는 정렬 작업이 메모리에 적합하지 않음을 나타냅니다. 여기에는 인덱스 만들기와 관련된 정렬 작업이 포함되지 않으며 `SELECT` 문에 사용된 `ORDER BY` 절과 같은 쿼리 내의 정렬 작업만 포함됩니다.

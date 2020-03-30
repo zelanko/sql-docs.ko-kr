@@ -13,10 +13,10 @@ ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 07c1743107d3edce7012740a3f1600d2157bf001
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68136894"
 ---
 # <a name="create-a-resource-pool"></a>리소스 풀 만들기
@@ -28,17 +28,17 @@ ms.locfileid: "68136894"
   
 -   **리소스 풀을 만들려면 다음을 사용합니다.**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="LimitationsRestrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 제한 사항  
  최대 CPU 비율은 최소 CPU 비율보다 크거나 같아야 합니다. 최대 메모리 비율은 최소 메모리 비율보다 크거나 같아야 합니다.  
   
  모든 리소스 풀에 대한 최대 CPU 비율과 최소 CPU 비율의 합은 100을 초과할 수 없습니다.  
   
-###  <a name="Permissions"></a> 권한  
+###  <a name="permissions"></a><a name="Permissions"></a> 권한  
  리소스 풀을 만들려면 CONTROL SERVER 권한이 필요합니다.  
   
-##  <a name="CreRPProp"></a> SQL Server Management Studio를 사용하여 리소스 풀 만들기  
+##  <a name="create-a-resource-pool-using-sql-server-management-studio"></a><a name="CreRPProp"></a> SQL Server Management Studio를 사용하여 리소스 풀 만들기  
  **다음을 사용하여 리소스 풀 만들기: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체 탐색기를 열고 **리소스 관리자** 가 나타날 때까지 **관리**노드를 계속 확장합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "68136894"
   
 6.  **확인**을 클릭하여 변경 내용을 저장합니다.  
   
-##  <a name="CreRPTSQL"></a> Transact-SQL을 사용하여 리소스 풀 만들기  
+##  <a name="create-a-resource-pool-using-transact-sql"></a><a name="CreRPTSQL"></a> Transact-SQL을 사용하여 리소스 풀 만들기  
  **다음을 사용하여 리소스 풀 만들기: [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  설정할 속성 값을 지정하여 [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md) 또는 [CREATE EXTERNAL RESOURCE POOL](../../t-sql/statements/create-external-resource-pool-transact-sql.md) 문을 실행합니다.  

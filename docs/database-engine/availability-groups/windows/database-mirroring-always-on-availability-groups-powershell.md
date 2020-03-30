@@ -15,10 +15,10 @@ ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d8cc91d628c365d4f9092ca24a8b4df06f17adf2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252905"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-an-availability-group-using-powershell"></a>PowerShell을 사용하여 가용성 그룹에 대한 데이터베이스 미러링 엔드포인트 만들기
@@ -28,20 +28,20 @@ ms.locfileid: "75252905"
   
 
   
-##  <a name="Permissions"></a> 권한  
+##  <a name="permissions"></a><a name="Permissions"></a> 권한  
  CREATE ENDPOINT 권한 또는 sysadmin 고정 서버 역할의 멤버 자격이 필요합니다. 자세한 내용은 [GRANT 엔드포인트 사용 권한&#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)을 참조하세요.  
 
 > [!IMPORTANT]  
 >  RC4 알고리즘은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] AES를 사용하는 것이 좋습니다.  
   
-##  <a name="PowerShellProcedure"></a> PowerShell 사용  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell 사용  
  **데이터베이스 미러링 엔드포인트를 만들려면**  
   
 1.  데이터베이스 미러링 엔드포인트를 만들 서버 인스턴스로 디렉터리를 변경(**cd**)합니다.  
   
 2.  **New-SqlHadrEndpoint** cmdlet을 사용하여 엔드포인트를 만든 다음 **Set-SqlHadrEndpoint** 를 사용하여 엔드포인트를 시작합니다.  
   
-###  <a name="PShellExample"></a> 예제(PowerShell)  
+###  <a name="example-powershell"></a><a name="PShellExample"></a> 예제(PowerShell)  
  다음 PowerShell 명령은 SQL Server 인스턴스(*Machine*\\*Instance*)에 데이터베이스 미러링 엔드포인트를 만듭니다. 이 엔드포인트는 포트 5022를 사용합니다.  
   
 > [!IMPORTANT]  
@@ -56,7 +56,7 @@ Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
   
 ```  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **데이터베이스 미러링 엔드포인트를 구성하려면**  
   
 -   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  

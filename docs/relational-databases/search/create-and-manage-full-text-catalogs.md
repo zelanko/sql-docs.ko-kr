@@ -14,10 +14,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ed7e7f31da9cacaf4862c29ada9c98df9559f9c9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903858"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>전체 텍스트 카탈로그 만들기 및 관리
@@ -26,7 +26,7 @@ ms.locfileid: "72903858"
 
 전체 텍스트 카탈로그는 어떠한 파일 그룹에도 속하지 않는 가상 개체입니다.
   
-##  <a name="creating"></a> 전체 텍스트 카탈로그 만들기  
+##  <a name="create-a-full-text-catalog"></a><a name="creating"></a> 전체 텍스트 카탈로그 만들기  
 
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>Transact-SQL을 사용하여 전체 텍스트 카탈로그 만들기
 [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)를 사용합니다. 다음은 그 예입니다.
@@ -52,7 +52,7 @@ GO
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-##  <a name="props"></a> 전체 텍스트 카탈로그의 속성 가져오기  
+##  <a name="get-the-properties-of-a-full-text-catalog"></a><a name="props"></a> 전체 텍스트 카탈로그의 속성 가져오기  
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수인 **FULLTEXTCATALOGPROPERTY**를 사용하여 전체 텍스트 카탈로그와 관련된 다양한 속성 값을 가져올 수 있습니다. 자세한 내용은 [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)를 참조하세요.
 
 예를 들어 다음 쿼리를 실행하여 전체 텍스트 카탈로그 `Catalog1`의 인덱스 개수를 가져옵니다.
@@ -77,7 +77,7 @@ GO
 |**PopulateStatus**|채우기 상태입니다.<br /><br /> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |**UniqueKeyCount**|전체 텍스트 카탈로그에서 고유 키 번호입니다.| 
 
-##  <a name="rebuildone"></a> 전체 텍스트 카탈로그 다시 작성  
+##  <a name="rebuild-a-full-text-catalog"></a><a name="rebuildone"></a> 전체 텍스트 카탈로그 다시 작성  
 
 Transact-SQL 문 [ALTER FULLTEXT CATALOG ... REBUILD](
 ../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)를 실행하거나 SSMS(SQL Server Management Studio)에서 다음 작업을 수행합니다.
@@ -92,7 +92,7 @@ Transact-SQL 문 [ALTER FULLTEXT CATALOG ... REBUILD](
   
 5.  **전체 텍스트 카탈로그 다시 작성** 대화 상자에서 **닫기**를 클릭합니다.  
    
-##  <a name="rebuildall"></a> 데이터베이스의 전체 텍스트 카탈로그 모두 다시 작성  
+##  <a name="rebuild-all-full-text-catalogs-for-a-database"></a><a name="rebuildall"></a> 데이터베이스의 전체 텍스트 카탈로그 모두 다시 작성  
 
 1.  SSMS의 개체 탐색기에서 서버, **데이터베이스**를 차례로 확장한 다음 다시 작성할 전체 텍스트 카탈로그가 포함된 데이터베이스를 확장합니다.  
   
@@ -106,7 +106,7 @@ Transact-SQL 문 [ALTER FULLTEXT CATALOG ... REBUILD](
   
   
   
-##  <a name="removing"></a> 데이터베이스에서 전체 텍스트 카탈로그 제거  
+##  <a name="remove-a-full-text-catalog-from-a-database"></a><a name="removing"></a> 데이터베이스에서 전체 텍스트 카탈로그 제거  
 
 Transact-SQL 문 [DROP FULLTEXT CATALOG](
 ../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)를 실행하거나 SSMS(SQL Server Management Studio)에서 다음 작업을 수행합니다.

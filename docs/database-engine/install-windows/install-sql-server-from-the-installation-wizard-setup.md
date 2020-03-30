@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 9dc0d760bd7fd6a89d9829fa5e883ef1ad9b59b7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76934196"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>설치 마법사에서 SQL Server 설치(설치 프로그램)
@@ -50,7 +50,7 @@ ms.locfileid: "76934196"
 
 ::: monikerRange=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
 
-###  <a name="bkmk_ga_instalpatch"></a> 패치 설치 요구 사항
+###  <a name="install-patch-requirement"></a><a name="bkmk_ga_instalpatch"></a> 패치 설치 요구 사항
 
 Microsoft는 SQL Server 2016 및 2017에서 필수 구성 요소로 설치되는 Microsoft Visual C++ 2013 런타임 이진 파일의 문제를 확인했습니다. 업데이트로 이 문제를 해결할 수 있습니다. Visual C++ 런타임 이진 파일에 대한 이 업데이트가 없으면 SQL Server의 특정 시나리오에서 안정성 문제가 발생할 수 있습니다. SQL Server를 설치하기 전에 [SQL Server 릴리스 정보](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch)의 지침에 따라 해당 컴퓨터에 Visual C++ 런타임 이진 파일에 대한 패치가 필요한지 확인합니다. 
 

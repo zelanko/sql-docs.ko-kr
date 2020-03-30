@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 905c1dc08c2d2e766425b62d7e0a920730ae2b41
-ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78257001"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>변경 내용 추적 사용(SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "78257001"
 
   변경 내용 추적을 사용하는 애플리케이션은 추적된 변경 내용을 가져와서 다른 데이터 저장소에 적용하고 원본 데이터베이스를 업데이트할 수 있어야 합니다. 이 항목에서는 이러한 태스크를 수행하는 방법과 장애 조치(Failover)가 발생하여 백업에서 데이터베이스를 복원해야 할 때 변경 내용 추적이 수행하는 역할에 대해 설명합니다.  
   
-##  <a name="Obtain"></a> 변경 내용 추적 함수를 사용하여 변경 내용 가져오기  
+##  <a name="obtain-changes-by-using-change-tracking-functions"></a><a name="Obtain"></a> 변경 내용 추적 함수를 사용하여 변경 내용 가져오기  
  변경 내용 추적 함수를 사용하여 변경 내용과 데이터베이스에 수행된 변경에 대한 정보를 가져오는 방법에 대해 설명합니다.  
   
 ### <a name="about-the-change-tracking-functions"></a>변경 내용 추적 함수 정보  
@@ -295,7 +295,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  변경 내용 추적 또는 사용자 지정 추적 메커니즘을 사용할 때 애플리케이션에 적합한 접근 방식을 선택하려면 상당한 분석 작업이 필요합니다. 따라서 스냅샷 격리를 사용하는 것이 훨씬 간단합니다.  
   
-##  <a name="Handles"></a> 변경 내용 추적에서 데이터베이스에 대한 변경 내용을 처리하는 방법  
+##  <a name="how-change-tracking-handles-changes-to-a-database"></a><a name="Handles"></a> 변경 내용 추적에서 데이터베이스에 대한 변경 내용을 처리하는 방법  
  변경 내용 추적을 사용하는 일부 애플리케이션에서는 다른 데이터 저장소와 양방향 동기화를 수행합니다. 즉, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 적용된 변경 내용은 다른 데이터 저장소에서 업데이트되고 다른 저장소에서 적용된 변경 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 업데이트됩니다.  
   
  애플리케이션에서 다른 데이터 저장소의 변경 내용으로 로컬 데이터베이스를 업데이트하는 경우에는 다음 작업을 수행해야 합니다.  
@@ -414,7 +414,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  스냅샷 트랜잭션 내에서 업데이트되는 행이 스냅샷 트랜잭션이 시작된 후 다른 트랜잭션에서 업데이트되었을 수도 있습니다. 이런 경우에 스냅샷 격리 업데이트 충돌이 발생하고 해당 트랜잭션이 종료됩니다. 이러한 경우가 발생하면 업데이트를 다시 시도하세요. 그러면 변경 내용 추적 충돌이 검색되고 행이 변경되지 않습니다.  
   
-##  <a name="DataRestore"></a> 변경 내용 추적 및 데이터 복원  
+##  <a name="change-tracking-and-data-restore"></a><a name="DataRestore"></a> 변경 내용 추적 및 데이터 복원  
  동기화가 필요한 애플리케이션에서는 변경 내용 추적이 설정된 데이터베이스를 이전 버전의 데이터로 되돌리는 경우를 고려해야 합니다. 이런 경우는 백업에서 데이터베이스가 복원된 후, 비동기 데이터베이스 미러링에 장애 조치가 있는 경우 또는 로그 전달을 사용할 때 실패한 경우에 발생할 수 있습니다. 다음 시나리오에서는 이러한 문제를 보여 줍니다.  
   
 1.  테이블 T1는 변경 내용이 추적되고 테이블의 유효한 최소 버전 50입니다.  

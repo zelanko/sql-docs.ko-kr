@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d204c7acfbd8598a7cbb66a41dcf89915fc711ef
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843775"
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>데이터 마이그레이션 모니터링 및 문제 해결(스트레치 데이터베이스)
@@ -33,10 +33,10 @@ ms.locfileid: "73843775"
   
  ![Stretch Database 모니터](../../sql-server/stretch-database/media/stretch-monitor.PNG "Stretch Database 모니터")  
   
-##  <a name="Migration"></a> 동적 관리 뷰에서 데이터 마이그레이션 상태 확인  
+##  <a name="check-the-status-of-data-migration-in-a-dynamic-management-view"></a><a name="Migration"></a> 동적 관리 뷰에서 데이터 마이그레이션 상태 확인  
  마이그레이션된 데이터의 배치 및 행 수를 보려면 동적 관리 뷰 **sys.dm_db_rda_migration_status** 를 엽니다. 자세한 내용은 [sys.dm_db_rda_migration_status&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md)를 참조하세요.  
   
-##  <a name="Firewall"></a> 데이터 마이그레이션 문제 해결  
+##  <a name="troubleshoot-data-migration"></a><a name="Firewall"></a> 데이터 마이그레이션 문제 해결  
  **스트레치 사용 테이블의 행이 Azure로 마이그레이션되지 않습니다. 어떤 문제 때문인가요?**  
  여러 가지 문제가 마이그레이션에 영향을 줄 수 있습니다. 다음 사항을 확인하세요.  
   

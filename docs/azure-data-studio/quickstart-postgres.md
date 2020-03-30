@@ -11,13 +11,13 @@ ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
 ms.openlocfilehash: ac4d1a3ae93310475c284661e1b8dff1d9a9f523
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71127247"
 ---
-# <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>빠른 시작: [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 PostgreSQL 연결 및 쿼리
+# <a name="quickstart-connect-and-query-postgresql-using-name-sos"></a>빠른 시작: [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 PostgreSQL 연결 및 쿼리
 이 빠른 시작에서는 [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 Postgres에 연결한 다음 SQL 문을 사용하여 데이터베이스 *tutorialdb*를 만들고 쿼리하는 방법을 보여 줍니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항

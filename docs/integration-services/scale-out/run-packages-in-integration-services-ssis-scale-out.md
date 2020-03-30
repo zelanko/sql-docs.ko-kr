@@ -13,10 +13,10 @@ ms.author: haoqian
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.openlocfilehash: 68a24188a307dd84a28342d89559630efa9a9d80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72305076"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Integration Services(SSIS) Scale Out에서 패키지 실행
@@ -32,7 +32,7 @@ Integration Services 서버에 패키지를 배포한 후 다음 방법 중 하�
 
 -   [SQL Server 에이전트 작업](#sql_agent)
 
-## <a name="scale_out_dialog"></a> Scale Out에서 패키지 실행 대화 상자를 사용하여 패키지 실행
+## <a name="run-packages-with-the-execute-package-in-scale-out-dialog-box"></a><a name="scale_out_dialog"></a> Scale Out에서 패키지 실행 대화 상자를 사용하여 패키지 실행
 
 1. Scale Out에서 패키지 실행 대화 상자를 엽니다.
 
@@ -61,7 +61,7 @@ Integration Services 서버에 패키지를 배포한 후 다음 방법 중 하�
 
     **확인** 을 클릭하여 패키지 실행을 시작합니다. 패키지에 대한 실행 보고서를 보려면 개체 탐색기에서 패키지를 마우스 오른쪽 단추로 클릭하고 **보고서**, **모든 실행**을 차례로 클릭한 다음 실행을 찾습니다.
     
-## <a name="stored_proc"></a> 저장 프로시저를 사용하여 패키지 실행
+## <a name="run-packages-with-stored-procedures"></a><a name="stored_proc"></a> 저장 프로시저를 사용하여 패키지 실행
 
 1.  실행을 만듭니다.
 
@@ -124,7 +124,7 @@ Scale Out에서 패키지를 실행하려면 다음 권한 중 하나가 있어�
 
 패키지가 더 이상 Scale Out 모드에서 기본적으로 실행되지 않도록 기본 실행 모드를 다시 전환하려면 **서버 차원의 기본 실행 모드**를 **서버**로 설정합니다.
 
-## <a name="sql_agent"></a> SQL Server 에이전트 작업에서 패키지 실행
+## <a name="run-package-in-sql-server-agent-job"></a><a name="sql_agent"></a> SQL Server 에이전트 작업에서 패키지 실행
 SQL Server 작업에서 작업의 한 단계로 SSIS 패키지를 실행할 수 있습니다. Scale Out에서 패키지를 실행하려면 기본 실행 모드를 **Scale Out**으로 설정합니다. 기본 실행 모드를 **Scale Out**으로 설정하면 SQL Server 에이전트 작업의 패키지가 Scale Out 모드에서 실행됩니다.
 
 ## <a name="next-steps"></a>다음 단계

@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: fc4b442fc6d6afb7f5e913293733296cdaa4c2b9
-ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77074425"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
@@ -131,7 +131,7 @@ CURRENT **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이
 
 현재 사용 중인 데이터베이스를 변경하도록 지정합니다.
 
-MODIFY NAME **=**_new_database_name_ 데이터베이스의 이름을 지정된 이름 *new_database_name*으로 바꿉니다.
+MODIFY NAME **=** _new_database_name_ 데이터베이스의 이름을 지정된 이름 *new_database_name*으로 바꿉니다.
 
 COLLATE *collation_name* 데이터베이스에 대한 데이터 정렬을 지정합니다. *collation_name*으로는 Windows 데이터 정렬 이름 또는 SQL 데이터 정렬 이름을 사용할 수 있습니다. 이를 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 데이터 정렬이 지정됩니다.
 
@@ -142,7 +142,7 @@ COLLATE *collation_name* 데이터베이스에 대한 데이터 정렬을 지정
 
 Windows 데이터 정렬 이름 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [COLLATE](~/t-sql/statements/collations.md)를 참조하세요.
 
-**\<delayed_durability_option> ::=**
+**\<delayed_durability_option> ::=** 
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상
 
 자세한 내용은 [ALTER DATABASE SET 옵션](../../t-sql/statements/alter-database-transact-sql-set-options.md) 및 [트랜잭션 내구성 제어](../../relational-databases/logs/control-transaction-durability.md)를 참조하세요.
@@ -374,7 +374,7 @@ ALTER DATABASE { database_name | CURRENT }
 
 CURRENT 현재 사용 중인 데이터베이스를 변경하도록 지정합니다.
 
-MODIFY NAME **=**_new_database_name_ 데이터베이스의 이름을 지정된 이름 *new_database_name*으로 바꿉니다. 다음 예에서는 `db1` 데이터베이스의 이름을 `db2`로 변경합니다.
+MODIFY NAME **=** _new_database_name_ 데이터베이스의 이름을 지정된 이름 *new_database_name*으로 바꿉니다. 다음 예에서는 `db1` 데이터베이스의 이름을 `db2`로 변경합니다.
 
 ```sql
 ALTER DATABASE db1

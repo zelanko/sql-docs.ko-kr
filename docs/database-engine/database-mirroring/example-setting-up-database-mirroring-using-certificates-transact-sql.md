@@ -17,10 +17,10 @@ ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5e7c3a2fd690b7a19f7d94de7e8d4fbbd9cac355
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75253589"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>예제: 인증서를 사용하여 데이터베이스 미러링 설정(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "75253589"
   
  인증서를 다른 시스템으로 복사할 때는 안전한 복사 방법을 사용하세요. 모든 인증서를 안전하게 보관하는 데 많은 주의를 기울여야 합니다.  
   
-##  <a name="ExampleH2"></a> 예제  
+##  <a name="example"></a><a name="ExampleH2"></a> 예제  
  다음 예에서는 HOST_A에 있는 한 파트너에서 실행되어야 하는 단계를 보여 줍니다. 이 예에서 파트너 2개는 컴퓨터 시스템 3대의 기본 서버 인스턴스입니다. 이 중 두 서버 인스턴스는 트러스트되지 않은 Windows 도메인에서 실행되므로 인증서 기반 인증이 필요합니다.  
   
  HOST_A는 초기 주 역할을 맡고 HOST_B는 미러 역할을 맡습니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "75253589"
   
 4.  [미러링 파트너 구성](#ConfigureMirroringPartners)  
   
-###  <a name="ConfiguringOutboundConnections"></a> 아웃바운드 연결 구성  
+###  <a name="configuring-outbound-connections"></a><a name="ConfiguringOutboundConnections"></a> 아웃바운드 연결 구성  
  **아웃바운드 연결에 대한 Host_A를 구성하려면**  
   
 1.  필요한 경우 master 데이터베이스에 데이터베이스 마스터 키를 만듭니다.  
@@ -156,7 +156,7 @@ ms.locfileid: "75253589"
   
  [&#91;주요 예제&#93;](#ExampleH2)  
   
-###  <a name="ConfigureInboundConnections"></a> 인바운드 연결 구성  
+###  <a name="configuring-inbound-connections"></a><a name="ConfigureInboundConnections"></a> 인바운드 연결 구성  
  **인바운드 연결에 대한 Host_A를 구성하려면**  
   
 1.  HOST_A에서 HOST_B에 대한 로그인을 만듭니다.  
@@ -233,7 +233,7 @@ ms.locfileid: "75253589"
 ### <a name="creating-the-mirror-database"></a>미러 데이터베이스 만들기  
  미러 데이터베이스를 만드는 방법에 대한 자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)을 사용합니다.  
   
-###  <a name="ConfigureMirroringPartners"></a> 미러링 파트너 구성  
+###  <a name="configuring-the-mirroring-partners"></a><a name="ConfigureMirroringPartners"></a> 미러링 파트너 구성  
   
 1.  HOST_B의 미러 서버 인스턴스에서 HOST_A의 서버 인스턴스를 초기 주 서버 인스턴스로 만들어 파트너로 설정합니다. `TCP://HOST_A.Mydomain.Corp.Adventure-Works``.com:7024`를 유효한 네트워크 주소로 대체합니다. 자세햔 내용은 [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)을 사용합니다.  
   
@@ -267,7 +267,7 @@ ms.locfileid: "75253589"
   
  [&#91;주요 예제&#93;](#ExampleH2)  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

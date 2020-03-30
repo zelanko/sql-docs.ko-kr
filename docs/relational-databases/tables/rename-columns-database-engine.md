@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 92844b0a512129400e5f676f054fc68c68b26ccc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082577"
 ---
 # <a name="rename-columns-database-engine"></a>열 이름 바꾸기(데이터베이스 엔진)
@@ -42,19 +42,19 @@ ms.locfileid: "68082577"
 
    [Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> 시작하기 전에
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에
 
-### <a name="Restrictions"></a> 제한 사항
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항
 
 열 이름을 변경해도 해당 열에 대한 참조 이름은 자동으로 바뀌지 않습니다. 이름을 변경한 열을 참조하는 개체는 수동으로 수정해야 합니다. 예를 들어 테이블 열의 이름을 변경하고 이 열이 트리거에서 참조되는 경우 트리거를 수정하여 새로운 열 이름을 적용해야 합니다. [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 를 사용하여 이 개체에 종속된 개체를 나열한 다음 개체의 이름을 변경할 수 있습니다.
 
-### <a name="Security"></a> 보안
+### <a name="security"></a><a name="Security"></a> 보안
 
-#### <a name="Permissions"></a> 권한
+#### <a name="permissions"></a><a name="Permissions"></a> 권한
 
 개체에 대한 ALTER 사용 권한이 필요합니다.
 
-## <a name="SSMSProcedure"></a> SQL Server Management Studio 사용
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용
 
 ### <a name="to-rename-a-column-using-object-explorer"></a>개체 탐색기를 사용하여 열 이름을 바꾸려면
 
@@ -71,7 +71,7 @@ ms.locfileid: "68082577"
 > [!NOTE]
 > **열 속성** 탭에서 열 이름을 변경할 수도 있습니다. 이름을 변경하려는 열을 선택하고 **이름**에 새 이름을 입력합니다.
 
-## <a name="TsqlProcedure"></a> Transact-SQL 사용
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용
 
 **열 이름을 바꾸려면**
 

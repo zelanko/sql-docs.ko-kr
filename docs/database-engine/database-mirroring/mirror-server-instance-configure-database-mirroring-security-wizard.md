@@ -14,10 +14,10 @@ ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d52fa3912bffd084a8f95e79963abcd99158cdd4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822391"
 ---
 # <a name="configure-database-mirrroing-security-wizard-mirror-server-instance"></a>데이터베이스 미러링 보안 구성 마법사: 미러 서버 인스턴스

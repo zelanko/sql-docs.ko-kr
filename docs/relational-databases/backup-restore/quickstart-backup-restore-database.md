@@ -12,10 +12,10 @@ ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
 ms.openlocfilehash: 97993d621de9b10d930feb2fc54f53bc83f00293
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258640"
 ---
 # <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>빠른 시작: 온-프레미스 SQL Server 데이터베이스 백업 및 복원

@@ -47,10 +47,10 @@ author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 35ce03a8619eada5480d0cd656f20946bb11a11c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75924961"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX(Transact-SQL)
@@ -644,12 +644,12 @@ WAIT_AT_LOW_PRIORITY는 **RESUMABLE=ON** 및 **ONLINE = ON** 상태에서만 사
 > [!IMPORTANT]
 > 인덱스가 위치한 파일 그룹이 오프라인이거나 읽기 전용으로 설정되어 있으면 인덱스를 다시 구성할 수 없습니다. ALL 키워드를 지정하면 하나 이상의 인덱스가 오프라인 또는 읽기 전용 파일 그룹에 있을 경우 해당 문이 실패합니다.  
   
-## <a name="rebuilding-indexes"></a> 인덱스 다시 작성  
+## <a name="rebuilding-indexes"></a><a name="rebuilding-indexes"></a> 인덱스 다시 작성  
 인덱스를 다시 작성하면 이 인덱스가 삭제된 다음 다시 생성됩니다. 이렇게 하면 조각화를 제거하고, 지정된 채우기 비율 또는 기존 채우기 비율 설정을 기준으로 페이지를 압축하여 디스크 공간을 회수하고, 인덱스 행을 연속된 페이지로 다시 정렬할 수 있습니다. ALL을 지정하면 테이블의 모든 인덱스가 단일 트랜잭션으로 삭제되고 다시 작성됩니다. 외래 키 제약 조건은 미리 삭제하지 않아도 됩니다. 익스텐트가 128개 이상인 인덱스를 다시 작성하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 실제 페이지 할당 취소와 해당 관련 잠금이 트랜잭션 커밋 후까지 지연됩니다.  
  
 자세한 내용은 [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)을 참조하세요. 
   
-## <a name="reorganizing-indexes"></a> 인덱스 다시 구성
+## <a name="reorganizing-indexes"></a><a name="reorganizing-indexes"></a> 인덱스 다시 구성
 인덱스를 다시 구성할 때는 최소한의 시스템 리소스가 사용됩니다. 이때는 왼쪽에서 오른쪽으로 표시되는 리프 노드의 논리적 순서에 맞도록 리프 수준 페이지를 물리적으로 다시 정렬하여 테이블 및 뷰의 클러스터형 및 비클러스터형 인덱스의 리프 수준에 대한 조각 모음을 수행합니다. 다시 구성 작업을 수행하면 인덱스 페이지도 압축됩니다. 이때 압축은 기존 채우기 비율 값을 기준으로 수행됩니다. 
   
 `ALL`을 지정하면 테이블에서 관계형 인덱스, 클러스터형 및 비클러스터형 모두와 XML 인덱스가 다시 구성됩니다. ALL을 지정할 때는 몇 가지 제한 사항이 적용됩니다. 이 문서의 인수 섹션에서 ALL에 대한 정의를 참조하세요.  
@@ -659,7 +659,7 @@ WAIT_AT_LOW_PRIORITY는 **RESUMABLE=ON** 및 **ONLINE = ON** 상태에서만 사
 > [!IMPORTANT]
 > 순서가 지정된 클러스터형 columnstore 인덱스를 통한 Azure SQL Data Warehouse 테이블의 경우 `ALTER INDEX REORGANIZE`가 데이터를 다시 정렬하지 않습니다. 데이터를 다시 정렬하려면 `ALTER INDEX REBUILD`를 사용하세요.
   
-## <a name="disabling-indexes"></a> 인덱스 비활성화  
+## <a name="disabling-indexes"></a><a name="disabling-indexes"></a> 인덱스 비활성화  
 인덱스를 비활성화하면 사용자가 인덱스에 액세스할 수 없으며 클러스터형 인덱스의 경우 기본 테이블 데이터에도 액세스할 수 없습니다. 인덱스 정의는 시스템 카탈로그에 유지됩니다. 뷰의 비클러스터형 인덱스 또는 클러스터형 인덱스를 비활성화하면 인덱스 데이터가 물리적으로 삭제됩니다. 클러스터형 인덱스를 비활성화하면 데이터에 액세스할 수 없지만 인덱스가 삭제되거나 다시 작성될 때까지는 데이터가 B-트리에서 유지 관리되지 않는 상태로 남아 있습니다. 활성 또는 비활성 인덱스의 상태를 보려면 **sys.indexes** 카탈로그 뷰의 **is_disabled** 열을 쿼리합니다.  
   
 트랜잭션 복제 게시의 테이블에서는 기본 키 열과 연결된 인덱스를 해제할 수 없습니다. 이러한 인덱스는 복제에 필요합니다. 인덱스를 해제하려면 먼저 게시에서 테이블을 삭제해야 합니다. 자세한 내용은 [데이터 및 데이터베이스 개체 게시](../../relational-databases/replication/publish/publish-data-and-database-objects.md)를 참조하세요.  
@@ -682,7 +682,7 @@ WAIT_AT_LOW_PRIORITY는 **RESUMABLE=ON** 및 **ONLINE = ON** 상태에서만 사
 |ALLOW_PAGE_LOCKS  =  ON|힙 및 연결된 비클러스터형 인덱스|  
 |ALLOW_PAGE_LOCKS  =  OFF|비클러스터형 인덱스 전체. 즉, 비클러스터형 인덱스에는 모든 페이지 잠금이 허용되지 않습니다. 힙에서는 페이지에 대한 공유(S), 업데이트(U) 및 배타(X) 잠금만 허용되지 않습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 내부에서 사용하기 위해 의도 페이지 잠금(IS, IU 또는 IX)을 획득할 수 있습니다.|  
   
-## <a name="online-index-operations"></a> 온라인 인덱스 작업  
+## <a name="online-index-operations"></a><a name="online-index-operations"></a> 온라인 인덱스 작업  
 인덱스를 다시 작성할 때 ONLINE 옵션이 ON으로 설정되어 있으면 기본 개체, 테이블 및 연결된 인덱스를 쿼리와 데이터 수정에 사용할 수 있습니다. 단일 파티션에 있는 인덱스 부분을 온라인으로 다시 작성할 수도 있습니다. 변경 중에는 아주 잠시 동안만 배타적 테이블 잠금이 유지됩니다.  
   
 인덱스를 다시 구성하는 과정은 항상 온라인으로 수행됩니다. 이 프로세스는 잠금을 장기간 유지하지 않으므로 실행 중인 업데이트나 쿼리를 차단하지 않습니다.  
@@ -695,7 +695,7 @@ WAIT_AT_LOW_PRIORITY는 **RESUMABLE=ON** 및 **ONLINE = ON** 상태에서만 사
   
 동시에 수행된 다른 온라인 인덱스 작업이 모두 실패합니다. 예를 들어, 동일한 테이블에서 두 개 이상의 인덱스를 다시 작성할 수 없습니다. 또는 동일한 테이블에서 기존 인덱스를 다시 작성하면서 새 인덱스를 생성할 수 없습니다.  
 
-### <a name="resumable-indexes"></a> 다시 시작 가능한 인덱스 작업
+### <a name="resumable-index-operations"></a><a name="resumable-indexes"></a> 다시 시작 가능한 인덱스 작업
 
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 

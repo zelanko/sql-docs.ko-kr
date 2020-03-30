@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d2bea423a9ea039dbc9f0128c7d6b6f106ee03fe
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79198410"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>1단원: 데이터베이스 개체 만들기 및 쿼리
@@ -40,8 +40,8 @@ ms.locfileid: "79198410"
 - [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
 
 SQL Server 인스턴스가 없는 경우 새로 만듭니다. 새로 만들려면 다음 링크에서 플랫폼을 선택합니다. SQL 인증을 선택한 경우 SQL Server 로그인 자격 증명을 사용합니다.
-- **Windows**: [SQL Server 2017 Developer Edition 다운로드](https://www.microsoft.com/sql-server/sql-server-downloads).
-- **macOS**: [Docker에서 SQL Server 2017 다운로드](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
+- **Windows**: [SQL Server 2017 Developer Edition 다운로드](https://www.microsoft.com/sql-server/sql-server-downloads)
+- **macOS**: [Docker에서 SQL Server 2017 다운로드](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
 
 ## <a name="create-a-database"></a>데이터베이스 만들기
 대부분의 [!INCLUDE[tsql](../includes/tsql-md.md)] 문과 마찬가지로, [`CREATE DATABASE`](statements/create-database-transact-sql.md) 문에는 필수 매개 변수로 데이터베이스 이름이 포함됩니다.` CREATE DATABASE` 에는 데이터베이스 파일을 저장할 디스크 위치 등의 많은 선택적 매개 변수도 있습니다. 선택적 매개 변수 없이 `CREATE DATABASE`를 실행할 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 이러한 매개 변수에 기본값을 사용합니다.
@@ -108,7 +108,7 @@ SQL Server 인스턴스가 없는 경우 새로 만듭니다. 새로 만들려�
 |75|Tire Bar||Tool for changing tires.|  
 |3000|3 mm Bracket|0.52||  
   
-기본 구문은 다음과 같습니다. INSERT, 테이블 이름, 열 목록, VALUES, 삽입할 값 목록을 차례로 포함합니다. 줄의 맨 앞에 있는 두 개의 하이픈은 해당 줄이 주석이며 컴파일러에서 텍스트를 무시한다는 것을 나타냅니다. 이 경우에는 허용되는 구문 변형을 주석에서 설명합니다.  
+기본 구문은 INSERT, 테이블 이름, 열 목록, VALUES, 삽입할 값 목록을 차례로 포함합니다. 줄의 맨 앞에 있는 두 개의 하이픈은 해당 줄이 주석이며 컴파일러에서 텍스트를 무시한다는 것을 나타냅니다. 이 경우에는 허용되는 구문 변형을 주석에서 설명합니다.  
   
 ### <a name="insert-data-into-a-table"></a>데이터를 테이블에 삽입  
   

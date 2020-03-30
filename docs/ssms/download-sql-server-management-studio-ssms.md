@@ -24,10 +24,10 @@ ms.reviewer: sstein, maghan
 ms.custom: seo-lt-2019
 ms.date: 02/18/2020
 ms.openlocfilehash: 8045c054d05a1e92eaf18f9aba852d9301f7ef60
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77652932"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드

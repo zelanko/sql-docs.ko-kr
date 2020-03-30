@@ -11,10 +11,10 @@ ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a4e670cf37550734d672047f2d7cf4a9f8045473
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293491"
 ---
 # <a name="ado-net-custom-properties"></a>ADO.NET 사용자 지정 속성

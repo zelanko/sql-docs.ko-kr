@@ -21,10 +21,10 @@ ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 85ca560e24fac75897d0b65946121e3ca4251e20
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252745"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>전송 보안 - 데이터베이스 미러링 - Always On 가용성 그룹
@@ -40,7 +40,7 @@ ms.locfileid: "75252745"
   
 -   [관련 작업](#RelatedTasks)  
   
-##  <a name="Authentication"></a> 인증  
+##  <a name="authentication"></a><a name="Authentication"></a> 인증  
  인증은 사용자가 올바른지 여부를 확인하는 과정입니다. 데이터베이스 미러링 엔드포인트 간 연결에는 인증이 필요합니다. 파트너나 미러링 모니터 서버의 연결 요청은 반드시 인증되어야 합니다.  
   
  서버 인스턴스에서 데이터베이스 미러링 또는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]에 사용하는 인증 유형은 데이터베이스 미러링 엔드포인트의 속성입니다. 데이터베이스 미러링 엔드포인트에서 사용할 수 있는 두 가지 전송 보안 유형으로는 SSPI(보안 지원 공급자 인터페이스)인 Windows 인증 및 인증서 기반 인증이 있습니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "75252745"
   
  서버 인스턴스는 자체 인증서의 프라이빗 키를 사용하여 연결 설정 시 해당 ID를 설정합니다. 연결 요청을 수신하는 서버 인스턴스는 보낸 사람의 인증서 공개 키를 사용하여 보낸 사람의 ID를 인증합니다. 예를 들어 Server_A와 Server_B라는 서버 인스턴스가 있다고 가정합니다. Server_A가 자신의 프라이빗 키를 사용하여 연결 헤더를 암호화한 다음 Server_B에 연결 요청을 보내면 Server_B는 Server_A의 인증서 공개 키를 사용하여 연결 헤더의 암호를 해독합니다. 해독된 헤더가 정확한 경우 Server_B는 Server_A가 헤더를 암호화했음을 확인하고 연결을 인증합니다. 해독된 헤더가 잘못된 경우 Server_B는 연결 요청을 인증할 수 없음을 확인하고 연결을 거부합니다.  
   
-##  <a name="DataEncryption"></a> 데이터 암호화  
+##  <a name="data-encryption"></a><a name="DataEncryption"></a> 데이터 암호화  
  기본적으로 데이터베이스 미러링 엔드포인트에서는 미러링 연결을 통해 전송되는 데이터가 암호화되어야 합니다. 이 경우 엔드포인트는 암호화를 사용하는 엔드포인트에만 연결할 수 있습니다. 네트워크 보안을 보장할 수 없는 경우에는 데이터베이스 미러링 연결에 암호화를 사용하는 것이 좋습니다. 그러나 암호화를 해제할 수도 있고 암호화를 지원하지만 필수 사항은 아니도록 설정할 수도 있습니다. 암호화를 해제하면 데이터가 암호화되지 않으며 엔드포인트는 암호화를 요구하는 다른 엔드포인트에 연결할 수 없습니다. 암호화가 지원되면 반대쪽 엔드포인트가 암호화를 지원하거나 암호화를 요구하는 경우에만 데이터가 암호화됩니다.  
   
 > [!NOTE]  
@@ -88,7 +88,7 @@ ms.locfileid: "75252745"
   
  암호화를 지정하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문에 대한 자세한 내용은 [CREATE ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)를 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **데이터베이스 미러링 엔드포인트에 대한 전송 보안을 구성하려면**  
   
 -   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 02c3e6e217ea2918ab36829d6f0cceb4a6269e81
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190385"
 ---
 # <a name="get-started-with-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 시작
@@ -38,7 +38,7 @@ ms.locfileid: "74190385"
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Clusters-deployment-overview/player?WT.mc_id=dataexposed-c9-niner]
 
 
-## <a id="tools"></a> 클라이언트 도구
+## <a name="client-tools"></a><a id="tools"></a> 클라이언트 도구
 
 빅 데이터 클러스터를 사용하려면 특정 클라이언트 도구 세트가 필요합니다. Kubernetes에 빅 데이터 클러스터를 배포하기 전에 다음 도구를 설치해야 합니다.
 
@@ -70,7 +70,7 @@ Kubernetes를 구성한 후에 <`azdata bdc create` 명령을 사용하여 빅 �
 - 완전 무인 설치를 위해 환경 변수에 다른 모든 설정을 전달할 수 있습니다. 자세한 내용은 [무인 배포](deployment-guidance.md#unattended)를 참조하세요.
 
 
-## <a id="scripts"></a> 배포 스크립트
+## <a name="deployment-scripts"></a><a id="scripts"></a> 배포 스크립트
 
 배포 스크립트를 사용하면 한 단계로 Kubernetes 및 빅 데이터 클러스터를 배포할 수 있습니다. 또한 배포 스크립트는 빅 데이터 클러스터 설정의 기본값을 제공하는 경우가 많습니다. 빅 데이터 클러스터 배포를 다르게 구성하는 고유한 버전을 만들어 배포 스크립트를 사용자 지정할 수 있습니다.
 

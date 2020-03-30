@@ -14,10 +14,10 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5d27c61576c3af432acfa6c791d25b1bbe9a51de
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75776418"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>max worker threads 서버 구성 옵션 구성
@@ -43,13 +43,13 @@ ms.locfileid: "75776418"
   
 -   **후속 작업:**  [최대 작업자 스레드 수 옵션을 구성한 후](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   실제 쿼리 요청 수가 **max worker threads**에 설정된 값보다 적으면 각 쿼리 요청마다 스레드 하나가 사용됩니다. 그러나 실제 쿼리 요청 수가 **max worker threads**에 설정된 값보다 많아지면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 다음에 사용할 수 있는 작업자 스레드가 요청을 처리할 수 있도록 작업자 스레드를 풀링합니다.  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   이 옵션은 고급 옵션으로, 숙련된 데이터베이스 관리자나 공인된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전문가만이 변경해야 합니다. 성능 문제가 의심되는 경우 작업자 스레드 가용성 문제는 아닙니다. 원인은 작업자 스레드를 대기하게 하는 I/O 관련 문제일 가능성이 높습니다. 최대 작업자 스레드 설정이 변경하기 전에 성능 문제의 근본 원인을 찾는 것이 가장 좋습니다.  
   
@@ -100,12 +100,12 @@ ms.locfileid: "75776418"
  WHERE s.is_user_process = 0;  
  ```  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경하거나 `RECONFIGURE` 문을 실행하는 두 매개 변수를 사용하여 **sp_configure**를 실행하려면 사용자에게 `ALTER SETTINGS` 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 `ALTER SETTINGS` 권한을 암시적으로 보유하고 있습니다.  
   
-##  <a name="SSMSProcedure"></a> 사용 중 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+##  <a name="using-ssmanstudiofull"></a><a name="SSMSProcedure"></a> 사용 중 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 #### <a name="to-configure-the-max-worker-threads-option"></a>최대 작업자 스레드 수 옵션을 구성하려면  
   
@@ -119,7 +119,7 @@ ms.locfileid: "75776418"
 > **max worker threads** 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에 사용할 수 있는 작업자 스레드 수를 구성할 수 있습니다. 대부분의 시스템에는 **max worker threads** 의 기본 설정을 사용하는 것이 최상의 방법입니다. 그러나 시스템 구성에 따라 **max worker threads** 를 더 작은 값으로 설정하면 성능이 향상되기도 합니다.
 > 자세한 내용은 이 페이지의 [권장 사항](#Recommendations)을 참조하세요.
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-configure-the-max-worker-threads-option"></a>최대 작업자 스레드 수 옵션을 구성하려면  
   
@@ -142,7 +142,7 @@ RECONFIGURE;
 GO  
 ```  
   
-##  <a name="FollowUp"></a> 후속 작업: 최대 작업자 스레드 수 옵션을 구성한 후  
+##  <a name="follow-up-after-you-configure-the-max-worker-threads-option"></a><a name="FollowUp"></a> 후속 작업: 최대 작업자 스레드 수 옵션을 구성한 후  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]를 다시 시작할 필요 없이 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md)을 실행하면 변경 사항이 즉시 적용됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

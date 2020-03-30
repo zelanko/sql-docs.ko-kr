@@ -13,10 +13,10 @@ ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.openlocfilehash: 83337465d8f8a7c12c9a1d69d7e9e2186485f549
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79198390"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>자습서: SQL Server on Linux와 Active Directory 인증 사용

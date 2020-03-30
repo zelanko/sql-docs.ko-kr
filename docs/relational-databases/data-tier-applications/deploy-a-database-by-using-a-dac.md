@@ -20,25 +20,25 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1fae39a6cd0fcd61b18419f8e46786067a4a69dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68134808"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>DAC를 사용 하여 데이터베이스 배포
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **SQL Azure에 데이터베이스 배포** 마법사를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스와 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 서버 간에 또는 두 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]서버 간에 데이터베이스를 배포합니다.  
   
-##  <a name="BeforeBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeBegin"></a> 시작하기 전에  
  마법사는 DAC(데이터 계층 애플리케이션) BACPAC 아카이브 파일을 사용하여 데이터 및 데이터베이스 개체의 데이터 및 정의를 배포합니다. 원본 데이터베이스에서 DAC 내보내기 작업과 대상으로 DAC 가져오기 작업을 수행합니다.  
   
-###  <a name="DBOptSettings"></a> 데이터베이스 옵션 및 설정  
+###  <a name="database-options-and-settings"></a><a name="DBOptSettings"></a> 데이터베이스 옵션 및 설정  
  기본적으로 배포 중에 생성된 데이터베이스에는 CREATE DATABASE 문의 기본 설정이 적용됩니다. 예외는 데이터베이스 데이터 정렬 및 호환성 수준이 원본 데이터베이스의 값으로 설정된다는 점입니다.  
   
  TRUSTWORTHY, DB_CHAINING 및 HONOR_BROKER_PRIORITY와 같은 데이터베이스 옵션은 배포 프로세스 도중 조정할 수 없습니다. 파일 그룹의 수, 파일의 수 및 크기와 같은 물리적 속성은 배포 프로세스 도중 변경할 수 없습니다. 배포가 완료된 후 ALTER DATABASE 문, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell을 사용하여 데이터베이스를 맞춤 구성할 수 있습니다.  
   
-###  <a name="LimitationsRestrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 제한 사항  
  **데이터베이스 배포** 마법사는 다음과 같은 데이터베이스 배포를 지원합니다.  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에서 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]로 배포  
@@ -51,7 +51,7 @@ ms.locfileid: "68134808"
   
  마법사를 작동하려면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스가 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4(서비스 팩 4) 이상을 실행하고 있어야 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 데이터베이스에 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에서 지원되지 않는 개체가 포함되는 경우 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에 데이터베이스를 배포하는 데 마법사를 사용할 수 없습니다. [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 의 데이터베이스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원되지 않는 개체가 포함되는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 데이터베이스를 배포하는 데 마법사를 사용할 수 없습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
  보안을 개선하기 위해 SQL Server 인증 로그인은 암호 없이 DAC BACPAC 파일에 저장됩니다. BACPAC를 가져오면 생성된 암호와 함께 비활성 로그인이 생성됩니다. 로그인을 활성화하려면 ALTER ANY LOGIN 권한이 있는 로그인을 사용하여 로그인하고 ALTER LOGIN을 사용하여 로그인을 활성화하여 사용자에게 알려 줄 수 있는 새 암호를 할당합니다. Windows 인증 로그인의 경우 암호가 SQL Server에서 관리되지 않으므로 이 과정이 필요 없습니다.  
   
 #### <a name="permissions"></a>사용 권한  
@@ -59,7 +59,7 @@ ms.locfileid: "68134808"
   
  마법사에 대상 인스턴스 또는 서버에 대한 DAC 가져오기 권한이 필요합니다. 로그인은 **sysadmin** 또는 **serveradmin** 고정 서버 역할의 멤버이거나 **dbcreator** 고정 서버 역할에 포함되고 ALTER ANY LOGIN 권한이 있어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **라는 기본 제공** 시스템 관리자 계정도 DAC를 가져올 수 있습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 대한 로그인이 있는 DAC를 가져오려면 loginmanager 또는 serveradmin 역할의 멤버 자격이 필요합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 대한 로그인이 없는 DAC를 가져오려면 dbmanager 또는 serveradmin 역할의 멤버 자격이 필요합니다.  
   
-##  <a name="UsingDeployDACWizard"></a> 데이터베이스 배포 마법사 사용  
+##  <a name="using-the-deploy-database-wizard"></a><a name="UsingDeployDACWizard"></a> 데이터베이스 배포 마법사 사용  
  **데이터베이스 배포 마법사를 사용하여 데이터베이스를 마이그레이션하려면**  
   
 1.  배포하려는 데이터베이스의 위치에 연결합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 또는 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 서버를 지정할 수 있습니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "68134808"
     
     -   [결과](#Results)  
   
-##  <a name="Introduction"></a> 소개 페이지  
+##  <a name="introduction-page"></a><a name="Introduction"></a> 소개 페이지  
  이 페이지에서는 **데이터베이스 배포** 마법사의 단계를 설명합니다.  
   
  **옵션**  
@@ -93,7 +93,7 @@ ms.locfileid: "68134808"
   
 -   **취소** - 작업을 취소하고 마법사를 닫습니다.  
   
-##  <a name="Deployment_settings"></a> 배포 설정 페이지  
+##  <a name="deployment-settings-page"></a><a name="Deployment_settings"></a> 배포 설정 페이지  
  이 페이지에서는 대상 서버를 지정하고 새 데이터베이스에 대한 세부 정보를 제공할 수 있습니다.  
   
  **로컬 호스트:**  
@@ -112,13 +112,13 @@ ms.locfileid: "68134808"
   
 -   BACPAC 아카이브 파일인 임시 파일의 로컬 디렉터리를 지정합니다. 지정된 위치에 파일이 만들어지고 작업이 완료된 후에도 해당 위치에 유지됩니다.  
   
-##  <a name="Summary"></a> 요약 페이지  
+##  <a name="summary-page"></a><a name="Summary"></a> 요약 페이지  
  이 페이지에서 작업에 대해 지정한 원본 및 대상 설정을 검토할 수 있습니다. 지정한 설정을 사용하여 배포 작업을 완료하려면 **마침**을 클릭합니다. 배포 작업을 취소하고 마법사를 종료하려면 **취소**를 클릭합니다.  
   
-##  <a name="Progress"></a> 진행률 페이지  
+##  <a name="progress-page"></a><a name="Progress"></a> 진행률 페이지  
  이 페이지에는 작업 상태를 나타내는 진행률 표시줄이 표시됩니다. 자세한 상태를 보려면 **자세히 보기** 옵션을 클릭합니다.  
   
-##  <a name="Results"></a> 결과 페이지  
+##  <a name="results-page"></a><a name="Results"></a> 결과 페이지  
  이 페이지에서는 배포 작업의 성공 또는 실패를 보고하고 각 작업의 결과를 보여 줍니다. 오류가 발생한 동작에는 모두 **결과** 열에 링크가 있습니다. 링크를 클릭하면 해당 동작의 오류에 대한 보고서가 표시됩니다.  
   
  **마침** 을 클릭하여 마법사를 닫습니다.  
