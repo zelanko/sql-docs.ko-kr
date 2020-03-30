@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3fe903a0d071d835a527385d44dcc5265c5134ab
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056059"
 ---
 # <a name="audit-database-principal-impersonation-event-class"></a>Audit Database Principal Impersonation 이벤트 클래스
@@ -41,7 +41,7 @@ ms.locfileid: "74056059"
 |**NTUserName**|**nvarchar**|Windows 사용자 이름입니다.|6|yes|  
 |**ObjectName**|**nvarchar**|참조되는 개체의 이름입니다.|34|yes|  
 |**ObjectType**|**int**|이벤트와 관련된 개체 유형을 나타내는 값입니다. 이 값은 **sys.objects** 카탈로그 뷰의 유형 열과 일치합니다. 값은 [ObjectType 추적 이벤트 열](../../relational-databases/event-classes/objecttype-trace-event-column.md)을 참조하세요.|28|yes|  
-|**권한**|**bigint**|확인한 사용 권한의 유형을 나타내는 정수 값입니다.<br /><br /> 1 = SELECT ALL<br /><br /> 2 = UPDATE ALL<br /><br /> 4 = REFERENCES ALL<br /><br /> 8 = INSERT<br /><br /> 16 = DELETE<br /><br /> 32 = EXECUTE(프로시저에만 해당)|19|yes|  
+|**사용 권한**|**bigint**|확인한 사용 권한의 유형을 나타내는 정수 값입니다.<br /><br /> 1 = SELECT ALL<br /><br /> 2 = UPDATE ALL<br /><br /> 4 = REFERENCES ALL<br /><br /> 8 = INSERT<br /><br /> 16 = DELETE<br /><br /> 32 = EXECUTE(프로시저에만 해당)|19|yes|  
 |**RequestID**|**int**|문을 포함하는 요청의 ID입니다.|49|yes|  
 |**RoleName**|**nvarchar**|활성화된 애플리케이션 역할의 이름입니다.|38|yes|  
 |**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|예|  

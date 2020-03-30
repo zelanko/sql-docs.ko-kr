@@ -22,10 +22,10 @@ ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cede10b01e1300a1b354cdc5a0d1dd5f80d5a006
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68095452"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가

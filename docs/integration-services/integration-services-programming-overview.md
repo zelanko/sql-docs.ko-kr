@@ -21,10 +21,10 @@ ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f540278d8f27eb091d4818f838d069c82a61159c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296220"
 ---
 # <a name="integration-services-programming-overview"></a>Integration Services 프로그래밍 개요
@@ -51,7 +51,7 @@ ms.locfileid: "71296220"
 ## <a name="supported-languages"></a>지원되는 언어  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]를 완벽하게 지원합니다. 따라서 개발자는 선택한 .NET 호환 언어로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 프로그래밍할 수 있습니다. 런타임 엔진과 데이터 흐름 엔진은 모두 네이티브 코드로 작성되지만 두 엔진 모두 완전하게 관리되는 개체 모델을 통해 사용할 수 있습니다.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]나 다른 코드 또는 텍스트 편집기에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지, 사용자 지정 태스크 및 구성 요소를 프로그래밍할 수 있습니다. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]에서는 코딩, 디버깅 및 테스트 등의 반복되는 주기를 간소화하고 신속하게 처리하기 위한 여러 가지 도구와 기능을 제공합니다. 또한 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]를 사용하면 배포가 간편해집니다. 그러나 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 코드 프로젝트를 컴파일하고 빌드하는 데는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]가 필요하지 않습니다. [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK에는 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 및 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 컴파일러와 관련 도구가 포함되어 있습니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)]나 다른 코드 또는 텍스트 편집기에서 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 패키지, 사용자 지정 태스크 및 구성 요소를 프로그래밍할 수 있습니다. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]에서는 코딩, 디버깅 및 테스트 등의 반복되는 주기를 간소화하고 신속하게 처리하기 위한 여러 가지 도구와 기능을 제공합니다. 또한 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]를 사용하면 배포가 간편해집니다. 그러나 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 코드 프로젝트를 컴파일하고 빌드하는 데는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]가 필요하지 않습니다. [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK에는 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 및 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 컴파일러와 관련 도구가 포함되어 있습니다.  
   
 > [!IMPORTANT]  
 >  기본적으로 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]와 함께 설치되지만 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK는 설치되지 않습니다. 컴퓨터에 SDK가 설치되지 않아 SDK 설명서가 온라인 설명서 컬렉션에 포함되어 있지 않을 경우 이 섹션의 SDK 내용에 대한 링크가 작동하지 않습니다. [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK를 설치한 후 [SQL Server 제품 설명서 추가 또는 제거](https://msdn.microsoft.com/library/ef798cc8-87cf-4d60-a7bf-9e061bdd0052)의 지침에 따라 온라인 설명서 컬렉션과 목차에 SDK 설명서를 추가할 수 있습니다.  

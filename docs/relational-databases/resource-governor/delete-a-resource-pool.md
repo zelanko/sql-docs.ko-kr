@@ -13,10 +13,10 @@ ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: ecd20f084aa682e7440a4ce2ea426a19141cbd0c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903933"
 ---
 # <a name="delete-a-resource-pool"></a>리소스 풀 삭제
@@ -28,16 +28,16 @@ ms.locfileid: "72903933"
   
 -   **리소스 풀을 삭제하려면 다음을 사용합니다.** [SQL Server Management Studio](#DelRPSSMS), [Transact-SQL](#DelRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
  작업 그룹이 들어 있는 리소스 풀은 삭제할 수 없습니다.  
   
-###  <a name="LimitationsRestrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 제한 사항  
  리소스 관리자 기본 풀 또는 내부 리소스 풀을 삭제할 수 없습니다. 작업 그룹이 들어 있는 리소스 풀은 삭제할 수 없습니다. 자세한 내용은 [Delete a Workload Group](../../relational-databases/resource-governor/delete-a-workload-group.md)을 참조하세요.  
   
-###  <a name="Permissions"></a> 권한  
+###  <a name="permissions"></a><a name="Permissions"></a> 권한  
  리소스 풀을 삭제하려면 CONTROL SERVER 권한이 필요합니다.  
   
-##  <a name="DelRPSSMS"></a> 개체 탐색기를 사용하여 리소스 풀 삭제  
+##  <a name="delete-a-resource-pool-using-object-explorer"></a><a name="DelRPSSMS"></a> 개체 탐색기를 사용하여 리소스 풀 삭제  
  **SQL Server Management Studio를 사용하여 리소스 풀을 삭제하려면**  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체 탐색기를 열고 **리소스 관리자** 가 나타날 때까지 **관리**노드를 계속 확장합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "72903933"
     > [!NOTE]  
     >  삭제하려고 하는 리소스 풀에 작업 그룹이 들어 있으면 해당 리소스 풀을 삭제할 수 없습니다.  
   
-##  <a name="DelRPTSQL"></a> Transact-SQL을 사용하여 리소스 풀 삭제  
+##  <a name="delete-a-resource-pool-using-transact-sql"></a><a name="DelRPTSQL"></a> Transact-SQL을 사용하여 리소스 풀 삭제  
  **Transact-SQL을 사용하여 리소스 풀을 삭제하려면**  
   
 1.  삭제할 리소스의 이름을 지정하는 **DROP RESOURCE POOL** 또는 **DROP EXTERNAL RESOURCE POOL** 문을 실행합니다.  

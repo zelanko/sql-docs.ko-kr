@@ -13,10 +13,10 @@ ms.assetid: 45e2ba7d-b3aa-4643-9451-bcb991572314
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 216fb75c9dcdffc83e8f4f21469aaa9cfc1b11d8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67934411"
 ---
 # <a name="log-shipping-monitor-settings"></a>로그 전달 모니터 설정

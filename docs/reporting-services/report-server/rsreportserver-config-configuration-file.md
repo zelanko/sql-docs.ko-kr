@@ -9,21 +9,21 @@ ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 351ca36275fbd782e3bf3e8d098aaf6a49287430
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66500406"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config Configuration File
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** 파일은 보고서 서버 웹 서비스 및 백그라운드 처리에 사용되는 설정을 저장합니다. 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션은 RSReportServer.config 파일에 저장된 구성 설정을 읽는 단일 프로세스 내에서 실행됩니다. 기본 모드 및 SharePoint 모드 보고서 서버에는 모두 RSReportServer.config가 사용되지만 두 모드가 구성 파일에서 모두 동일한 설정을 사용하지는 않습니다. 이 파일의 SharePoint 모드 버전은 SharePoint 모드의 설정 대부분이 파일이 아니라 SharePoint 구성 데이터베이스에 저장되기 때문에 더 작습니다. 이 문서에서는 기본 모드 및 SharePoint 모드에서 설치되는 기본 구성 파일과 구성 파일을 통해 제어되는 일부 중요한 설정 및 동작에 대해 설명합니다.  
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** 파일은 보고서 서버 웹 서비스 및 백그라운드 처리에 사용되는 설정을 저장합니다. 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션은 RSReportServer.config 파일에 저장된 구성 설정을 읽는 단일 프로세스 내에서 실행됩니다. 기본 모드 및 SharePoint 모드 보고서 서버에는 모두 RSReportServer.config가 사용되지만 두 모드가 구성 파일에서 모두 동일한 설정을 사용하지는 않습니다. 이 파일의 SharePoint 모드 버전은 SharePoint 모드의 설정 대부분이 파일이 아니라 SharePoint 구성 데이터베이스에 저장되기 때문에 더 작습니다. 이 항목에서는 기본 모드 및 SharePoint 모드에서 설치되는 기본 구성 파일과 구성 파일을 통해 제어되는 일부 중요한 설정 및 동작에 대해 설명합니다.  
 
 SharePoint 모드의 구성 파일에는 해당 컴퓨터에서 실행되는 모든 서비스 애플리케이션 인스턴스에 적용되는 설정이 포함됩니다. SharePoint 구성 데이터베이스에는 특정 서비스 애플리케이션에 적용되는 구성 설정이 포함됩니다. 구성 데이터베이스에 저장되고 SharePoint 관리 페이지를 통해 관리되는 설정은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션별로 다를 수 있습니다.  
   
  설정은 기본값에 따라 설치된 구성 파일에 표시되는 순서대로 다음 콘텐츠에 표시됩니다. 이 파일을 편집하는 방법에 대한 지침은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요.  
   
  
-##  <a name="bkmk_file_location"></a> 파일 위치  
+##  <a name="file-location"></a><a name="bkmk_file_location"></a> 파일 위치  
 
 RSReportServer.config는 보고서 서버 모드에 따라 다음 폴더에 있습니다.  
 
@@ -55,7 +55,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
  
 파일 편집에 대한 자세한 내용은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요.  
   
-##  <a name="bkmk_generalconfiguration"></a> 일반 구성 설정(rsreportserver.config)  
+##  <a name="general-configuration-settings-rsreportserverconfig"></a><a name="bkmk_generalconfiguration"></a> 일반 구성 설정(rsreportserver.config)  
  다음 표에서는 파일의 첫 부분에 나타나는 일반 구성 설정에 대한 정보를 제공합니다. 설정은 구성 파일에 나타나는 순서로 표시됩니다. 표의 마지막 열은 해당 설정이 기본 모드 보고서 서버에 적용되는지 **(N)** , SharePoint 모드 보고서 서버에 적용되는지 **(S)** 또는 두 가지 서버 모두에 적용되는지를 나타냅니다.  
   
 > [!NOTE]  
@@ -88,7 +88,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**WatsonDumpOnExceptions**|오류 로그에 보고할 예외 목록을 지정합니다. 이 설정은 반복적으로 발생하는 문제가 있고 분석을 위해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에 보낼 정보가 포함된 덤프를 만드는 경우에 유용합니다. 덤프를 만들면 성능에 영향을 주므로 문제를 진단하는 경우에만 이 설정을 변경하세요.|N,S|  
 |**WatsonDumpExcludeIfContainsExceptions**|오류 로그에 보고하지 않을 예외 목록을 지정합니다. 이 설정은 문제를 진단할 때 서버에서 특정 예외에 대한 덤프를 만들지 않도록 할 경우에 유용합니다.|N,S|  
   
-##  <a name="bkmk_URLReservations"></a> URLReservations(RSReportServer.config 파일)  
+##  <a name="urlreservations-rsreportserverconfig-file"></a><a name="bkmk_URLReservations"></a> URLReservations(RSReportServer.config 파일)  
  **URLReservations** 는 현재 인스턴스의 보고서 서버 웹 서비스 및 웹 포털에 대한 HTTP 액세스를 정의합니다. URL은 보고서 서버를 구성할 때 예약되고 HTTP.SYS에 저장됩니다.  
   
 > [!WARNING]  
@@ -110,7 +110,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**AccountSid**|URL 예약을 만들 대상 계정의 SID(보안 식별자)를 지정합니다. 이 계정은 보고서 서버 서비스가 실행되는 계정이어야 합니다. SID가 서비스 계정과 일치하지 않으면 보고서 서버가 해당 URL에서 요청을 수신하지 못할 수 있습니다.|N|  
 |**AccountName**|**AccountSid**에 해당하는 읽을 수 있는 계정 이름을 지정합니다. 이 이름은 사용되지 않지만 URL 예약에 사용된 계정의 서비스 계정을 쉽게 확인할 수 있도록 파일에 나타납니다.|N|  
   
-##  <a name="bkmk_Authentication"></a> Authentication(RSReportServer.config 파일)  
+##  <a name="authentication-rsreportserverconfig-file"></a><a name="bkmk_Authentication"></a> Authentication(RSReportServer.config 파일)  
  **Authentication** 은 보고서 서버에서 허용되는 하나 이상의 인증 유형을 지정합니다. 기본 설정 및 값은 이 섹션에 사용할 수 있는 설정 및 값의 하위 집합입니다. 기본 설정만 자동으로 추가됩니다. 다른 설정을 추가하려면 텍스트 편집기를 사용하여 RSReportServer.config 파일에 요소 구조를 추가하고 값을 설정해야 합니다.  
   
  기본값은 **RSWindowsNegotiate** 가 **RSWindowsNTLM** 로 설정된 **EnableAuthPersistance** 및 **True**입니다.  
@@ -144,7 +144,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**RSWindowsExtendedProtectionScenario**|기본값은 **프록시**입니다.|N|  
 |**EnableAuthPersistence**|인증을 연결 시 수행할지, 아니면 요청마다 수행할지를 결정합니다.<br /><br /> 유효한 값은 **True** (기본값) 또는 **False**입니다. **True**로 설정하면 같은 연결의 이후 요청이 첫 번째 요청의 가장 컨텍스트를 가정합니다.<br /><br /> ISA 서버와 같은 프록시 서버 소프트웨어를 사용하여 보고서 서버에 액세스하는 경우에는 이 값을 **False** 로 설정해야 합니다. 프록시 서버를 사용하면 여러 사용자가 프록시 서버의 단일 연결을 사용할 수 있습니다. 이 시나리오에서는 각 사용자 요청이 별도로 인증되도록 인증 지속성을 사용하지 않아야 합니다. **EnableAuthPersistence** 를 **False**로 설정하지 않으면 모든 사용자가 첫 번째 요청의 가장 컨텍스트를 사용하여 연결합니다.|N,S|  
   
-##  <a name="bkmk_service"></a> Service(RSReportServer.config 파일)  
+##  <a name="service-rsreportserverconfig-file"></a><a name="bkmk_service"></a> Service(RSReportServer.config 파일)  
  **Service** 는 서비스 전체에 적용되는 애플리케이션 설정을 지정합니다.  
   
  다음 표의 마지막 열은 해당 설정이 기본 모드 보고서 서버에 적용되는지(N) 또는 SharePoint 모드 보고서 서버에 적용되는지(S) 또는 두 가지 서버 모두에 적용되는지를 나타냅니다.  
@@ -170,7 +170,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**FileShareStorageLocation**|파일 시스템에 임시 스냅샷을 저장할 단일 폴더를 지정합니다. 폴더 경로를 UNC 경로로 지정할 수 있지만 이 방법은 사용하지 않는 것이 좋습니다. 기본값은 비어 있습니다.<br /><br /> `<FileShareStorageLocation>`<br /><br /> `<Path>`<br /><br /> `</Path>`<br /><br /> `</FileShareStorageLocation>`|N,S|  
 |**IsRdceEnabled**|RDCE(Report Definition Customization Extension) 설정 여부를 지정합니다. 유효한 값은 **True** 및 **False**입니다.|N,S|  
   
-##  <a name="bkmk_UI"></a> UI(RSReportServer.config 파일)  
+##  <a name="ui-rsreportserverconfig-file"></a><a name="bkmk_UI"></a> UI(RSReportServer.config 파일)  
  **UI**는 웹 포털 애플리케이션에 적용되는 구성 설정을 지정합니다.  
   
  다음 표의 마지막 열은 해당 설정이 기본 모드 보고서 서버에 적용되는지(N) 또는 SharePoint 모드 보고서 서버에 적용되는지(S) 또는 두 가지 서버 모두에 적용되는지를 나타냅니다.  
@@ -181,7 +181,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**ReportBuilderTrustLevel**|이 값을 수정하지 마세요. 이 값은 구성할 수 없습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이상 버전에서 보고서 작성기는 **FullTrust**에서만 실행됩니다. 부분 신뢰 모드 중단에 대한 자세한 내용은 [SQL Server 2016의 SQL Server Reporting Services에서 중단된 기능](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)을 참조하세요.|N,S|  
 |**PageCountMode**|웹 포털에만 해당하는 이 설정은 보고서가 렌더링되기 전에 보고서 서버가 페이지 수 값을 계산하는지, 아니면 보고서를 볼 때 보고서 서버가 페이지 수 값을 계산하는지를 지정합니다. 유효한 값은 **Estimate** (기본값) 및 **Actual**입니다. 사용자가 보고서를 볼 때 페이지 수 정보를 계산하려면 **Estimate** 를 사용합니다. 처음에 페이지 수는 2(현재 페이지와 추가 한 페이지)로 설정되지만 사용자가 보고서 페이지를 이동할 때 상향 조정됩니다. 보고서가 표시되기 전에 미리 페이지 수를 계산하려면 **Actual** 을 사용합니다. **Actual** 은 이전 버전과의 호환성을 위해 제공됩니다. **PageCountMode** 를 **Actual**로 설정하면 올바른 페이지 수를 얻기 위해 전체 보고서를 처리해야 하므로 보고서가 표시될 때까지의 대기 시간이 증가합니다.|N,S|  
   
-##  <a name="bkmk_extensions"></a> 확장 프로그램(RSReportServer.config 파일) 기본 모드  
+##  <a name="extensions-rsreportserverconfig-file-native-mode"></a><a name="bkmk_extensions"></a> 확장 프로그램(RSReportServer.config 파일) 기본 모드  
  확장 프로그램 섹션은 **기본 모드** 보고서 서버의 경우에만 rsreportserver.config 파일에 표시됩니다. SharePoint 모드 보고서 서버의 확장 정보는 SharePoint 구성 데이터베이스에 저장되며 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 따라 구성됩니다.  
   
  **Extensions** 는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치의 다음 확장 가능 모듈에 대한 구성 설정을 지정합니다.  
@@ -208,7 +208,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  이러한 확장 프로그램 중 일부는 보고서 서버에서 내부 전용으로 사용됩니다. 내부 전용 확장 프로그램에 대한 구성 설정은 설명되지 않습니다. 다음 섹션에서는 기본 확장 프로그램에 대한 구성 설정에 대해 설명합니다. 사용자 지정 확장 프로그램이 있는 보고서 서버를 사용하는 경우 구성 파일에 여기에 설명되지 않은 설정이 포함되어 있을 수 있습니다. 이 섹션에서는 나타나는 순서로 확장 프로그램을 나열합니다. 같은 종류의 확장 프로그램 인스턴스에 대해 반복해서 발생하는 설정은 한 번만 설명합니다.  
   
-###  <a name="bkmk_extensionsgeneral"></a> 배달 확장 프로그램 일반 구성  
+###  <a name="delivery-extensions-general-configuration"></a><a name="bkmk_extensionsgeneral"></a> 배달 확장 프로그램 일반 구성  
  구독을 통해 보고서를 배달하는 데 사용되는 기본(또는 사용자 지정) 배달 확장 프로그램을 지정합니다. RSReportServer.config 파일에는 보고서 서버 전자 메일, 파일 공유 배달,  
   
 1.  보고서 서버 전자 메일  
@@ -230,14 +230,14 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**SecondsBeforeRetry**|각 다시 시도 간 간격(초)을 지정합니다. 기본값은 900입니다.|  
 |**Configuration**|각 배달 확장 프로그램에 고유한 구성 설정을 포함합니다.|  
   
-####  <a name="bkmk_fileshare_extension"></a> 파일 공유 배달 확장 프로그램 구성 설정  
+####  <a name="file-share-delivery-extension-configuration-settings"></a><a name="bkmk_fileshare_extension"></a> 파일 공유 배달 확장 프로그램 구성 설정  
  파일 공유 배달은 네트워크의 공유 폴더에 애플리케이션 파일 형식으로 내보내진 보고서를 보냅니다. 자세한 내용은 [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)을 참조하세요.  
   
 |설정|Description|  
 |-------------|-----------------|  
 |**ExcludedRenderFormats**, **RenderingExtension**|이러한 설정은 파일 공유 배달과 제대로 작동하지 않는 내보내기 형식을 의도적으로 제외하는 데 사용됩니다. 이러한 형식은 일반적으로 대화형 보고/미리 보기에 사용되거나 보고서 캐시를 미리 로드하는 데 사용됩니다. 이러한 형식은 데스크톱 애플리케이션에서 쉽게 볼 수 있는 애플리케이션 파일을 생성하지 않습니다.<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> Null|  
   
-####  <a name="bkmk_email_extension"></a> 보고서 서버 전자 메일 확장 프로그램 구성 설정  
+####  <a name="report-server-e-mail-extension-configuration-settings"></a><a name="bkmk_email_extension"></a> 보고서 서버 전자 메일 확장 프로그램 구성 설정  
  보고서 서버 전자 메일은 SMTP 네트워크 디바이스를 사용하여 보고서를 전자 메일 주소로 보냅니다. 이 배달 확장 프로그램을 사용하려면 먼저 구성해야 합니다. 자세한 내용은 [Reporting Services의 전자 메일 배달](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)을 참조하세요.  
   
 |설정|Description|  
@@ -258,17 +258,17 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**DefaultHostName**|이 값은 **SendEmailToUserAlias**와 함께 작동합니다.<br /><br /> **SendEmailToUserAlias** 를 true로 설정하면 사용자 별칭에 추가할 호스트 이름을 나타내는 문자열 값을 지정합니다. 이 값은 DNS(Domain Name System) 이름 또는 IP 주소일 수 있습니다.|  
 |**PermittedHosts**|전자 메일 배달을 받을 호스트를 명시적으로 지정하여 보고서 배포를 제한합니다. **PermittedHosts**내에서 각 호스트는 **HostName** 요소로 지정됩니다. 해당 값은 IP 주소 또는 DNS 이름이 됩니다.<br /><br /> 호스트에 정의된 전자 메일 계정만 받는 사람으로 유효합니다. **DefaultHostName**을 지정한 경우 해당 호스트를 **PermittedHosts** 의 **HostName**요소로 포함시켜야 합니다. 이 값은 하나 이상의 DNS 이름이거나 IP 주소입니다. 기본적으로 이 값은 설정되어 있지 않습니다. 이 값이 설정되어 있지 않으면 전자 메일로 보낸 보고서를 받을 수 있는 사용자에 제한이 없습니다.|  
   
-####  <a name="bkmk_documentlibrary_extension"></a> 보고서 서버 SharePoint 문서 라이브러리의 확장 구성  
+####  <a name="report-server-sharepoint-document-library-extension-configuration"></a><a name="bkmk_documentlibrary_extension"></a> 보고서 서버 SharePoint 문서 라이브러리의 확장 구성  
  보고서 서버 문서 라이브러리는 문서 라이브러리에 애플리케이션 파일 형식으로 내보내진 보고서를 보냅니다. 이 배달 확장 프로그램은 SharePoint 통합 모드에서 실행되도록 구성된 보고서 서버에서만 사용할 수 있습니다. 자세한 내용은 [SharePoint Library Delivery in Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)을 참조하세요.  
   
 |설정|Description|  
 |-------------|-----------------|  
 |**ExcludedRenderFormats, RenderingExtension**|이러한 설정은 문서 라이브러리 배달과 제대로 작동하지 않는 내보내기 형식을 의도적으로 제외하는 데 사용됩니다. HTMLOWC, RGDI 및 Null 배달 확장 프로그램이 제외됩니다. 이러한 형식은 일반적으로 대화형 보고/미리 보기에 사용되거나 보고서 캐시를 미리 로드하는 데 사용됩니다. 이러한 형식은 데스크톱 애플리케이션에서 쉽게 볼 수 있는 애플리케이션 파일을 생성하지 않습니다.|  
   
-####  <a name="bkmk_null_extension"></a> Null 배달 확장 프로그램 구성  
+####  <a name="null-delivery-extension-configuration"></a><a name="bkmk_null_extension"></a> Null 배달 확장 프로그램 구성  
  NULL 배달 공급자는 개별 사용자를 위해 미리 생성된 보고서와 함께 캐시를 미리 로드하는 데 사용됩니다. 이 배달 확장 프로그램에 대한 구성 설정은 없습니다. 자세한 내용은 [보고서 캐시&#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)버전에서 캐시를 미리 로드할 수 있는 유일한 방법이었습니다.  
   
-###  <a name="bkmk_ui"></a> 배달 UI 확장 프로그램 일반 구성  
+###  <a name="delivery-ui-extensions-general-configuration"></a><a name="bkmk_ui"></a> 배달 UI 확장 프로그램 일반 구성  
  웹 포털에서 개별 구독을 정의할 때 사용되는 구독 정의 페이지에 나타나는 사용자 인터페이스 구성 요소가 포함된 배달 확장 프로그램을 지정합니다. 사용자 정의 옵션이 있는 사용자 지정 배달 확장 프로그램을 만들고 배포하는 경우 웹 포털을 사용하려면 이 섹션의 배달 확장 프로그램을 등록해야 합니다. 기본적으로 보고서 서버 전자 메일 및 보고서 서버 파일 공유에 대한 구성 설정이 있습니다. 데이터 기반 구독 또는 SharePoint 애플리케이션 페이지에서만 사용되는 배달 확장 프로그램에는 이 섹션의 설정이 없습니다.  
   
 |설정|Description|  
@@ -277,7 +277,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**Configuration**|배달 확장 프로그램에 대한 구성 옵션을 지정합니다. 각 배달 확장 프로그램에 대한 기본 렌더링 형식을 설정할 수 있습니다. 유효한 값은 rsreportserver.config 파일의 render 섹션에 지정된 렌더링 확장 프로그램 이름입니다.|  
 |**DefaultRenderingExtension**|배달 확장 프로그램이 기본값인지 여부를 지정합니다. 보고서 서버 전자 메일이 기본 배달 확장 프로그램입니다. 유효한 값은 **True** 나 **False**입니다. 둘 이상의 확장 프로그램에 **True**값이 포함되어 있으면 첫 번째 확장 프로그램을 기본 확장 프로그램으로 간주합니다.|  
   
-###  <a name="bkmk_rendering"></a> 렌더링 확장 프로그램 일반 구성  
+###  <a name="rendering-extensions-general-configuration"></a><a name="bkmk_rendering"></a> 렌더링 확장 프로그램 일반 구성  
  보고서 프레젠테이션에 사용되는 (사용자 지정) 렌더링 확장 프로그램 및 기본 확장 프로그램을 지정합니다.  
   
  사용자 지정 렌더링 확장 프로그램을 배포하지 않는 한 이 섹션을 수정하지 마세요. 자세한 내용은 [Implementing a Rendering Extension](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)을 참조하세요.  
@@ -326,7 +326,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  사용자 지정 렌더링 확장 프로그램을 배포하지 않는 한 이 섹션을 수정하지 마세요. 자세한 내용은 [Implementing a Rendering Extension](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)을 참조하세요.  
   
-###  <a name="bkmk_data"></a> 데이터 확장 프로그램 일반 구성  
+###  <a name="data-extensions-general-configuration"></a><a name="bkmk_data"></a> 데이터 확장 프로그램 일반 구성  
  쿼리 처리에 사용되는 (사용자 지정) 데이터 처리 확장 프로그램 및 기본 확장 프로그램을 지정합니다. 기본 데이터 처리 확장 프로그램에는 다음이 포함됩니다.  
   
 -   SQL  
@@ -355,28 +355,28 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  사용자 지정 데이터 처리 확장 프로그램을 추가하지 않는 한 이 섹션을 수정하지 마세요. 자세한 내용은 [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)을 참조하세요.  
   
-###  <a name="bkmk_semantic"></a> 의미 체계 쿼리 확장 프로그램 일반 구성  
+###  <a name="semantic-query-extensions-general-configuration"></a><a name="bkmk_semantic"></a> 의미 체계 쿼리 확장 프로그램 일반 구성  
  보고서 모델 처리에 사용되는 의미 체계 쿼리 처리 확장 프로그램을 지정합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 포함된 의미 체계 쿼리 처리 확장 프로그램은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터, Oracle 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다차원 데이터에 대한 지원을 제공합니다. 이 섹션은 수정하지 마세요. 쿼리 처리는 확장 가능하지 않습니다.  
   
-###  <a name="bkmk_model"></a> 모델 생성 구성  
+###  <a name="model-generation-configuration"></a><a name="bkmk_model"></a> 모델 생성 구성  
  보고서 서버에 이미 게시된 공유 데이터 원본에서 보고서 모델을 만드는 데 사용되는 모델 생성 확장 프로그램을 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터, Oracle 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다차원 데이터 원본에 대한 모델을 생성할 수 있습니다. 이 섹션은 수정하지 마세요. 모델 생성은 확장 가능하지 않습니다.  
   
-###  <a name="bkmk_security"></a> 보안 확장 프로그램 구성  
+###  <a name="security-extension-configuration"></a><a name="bkmk_security"></a> 보안 확장 프로그램 구성  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 사용되는 권한 부여 구성 요소를 지정합니다. 이 구성 요소는 RSReportServer.config 파일의 **Authentication** 요소에 등록된 인증 확장 프로그램에 사용됩니다. 사용자 지정 인증 확장 프로그램을 구현하지 않는 한 이 섹션을 수정하지 마십시오. 사용자 지정 보안 기능을 추가하는 방법은 [Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)을 참조하세요. 권한 부여에 대한 자세한 내용은 [Authorization in Reporting Services](../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)를 참조하세요.  
   
-###  <a name="bkmk_authentication"></a> 인증 확장 프로그램 구성  
+###  <a name="authentication-extension-configuration"></a><a name="bkmk_authentication"></a> 인증 확장 프로그램 구성  
  보고서 서버에 사용되는 기본 인증 확장 프로그램 및 사용자 지정 인증 확장 프로그램을 지정합니다. 기본 확장 프로그램은 Windows 인증을 기반으로 합니다. 사용자 지정 인증 확장 프로그램을 구현하지 않는 한 이 섹션을 수정하지 마십시오. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 인증에 대한 자세한 내용은 [Reporting Services의 인증](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md) 및 [보고서 서버 인증](../../reporting-services/security/authentication-with-the-report-server.md)을 참조하세요. 사용자 지정 보안 기능을 추가하는 방법은 [Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)을 참조하세요.  
   
-###  <a name="bkmk_eventprocessing"></a> 이벤트 처리  
+###  <a name="event-processing"></a><a name="bkmk_eventprocessing"></a> 이벤트 처리  
  기본 이벤트 처리기를 지정합니다. 이 섹션은 수정하지 마세요. 이 섹션은 확장할 수 없습니다.  
   
-###  <a name="bkmk_reportdefinition"></a> 보고서 정의 사용자 지정  
+###  <a name="report-definition-customization"></a><a name="bkmk_reportdefinition"></a> 보고서 정의 사용자 지정  
  보고서 정의를 수정하는 사용자 지정 확장 프로그램의 이름과 유형을 지정합니다.  
   
-###  <a name="bkmk_rdlsandboxing"></a> RDLSandboxing  
+###  <a name="rdlsandboxing"></a><a name="bkmk_rdlsandboxing"></a> RDLSandboxing  
  보고서 서버의 단일 웹 팜을 여러 명이 공유하는 시나리오에서 개인별로 특정 유형의 보고서 리소스 사용을 검색하고 제한할 수 있는 RDL(Report Definition Language) 모드를 지정합니다. 자세한 내용은 [Enable and Disable RDL Sandboxing](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md)을 참조하세요.  
   
-##  <a name="bkmk_MapTileServer"></a> MapTileServerConfiguration(RSReportServer.config 파일)  
+##  <a name="maptileserverconfiguration-rsreportserverconfig-file"></a><a name="bkmk_MapTileServer"></a> MapTileServerConfiguration(RSReportServer.config 파일)  
  **MapTileServerConfiguration** 은 보고서 서버에 게시된 보고서에서 지도 보고서 항목에 대한 타일 배경을 제공하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing 지도 웹 서비스의 구성 설정을 정의합니다. 모든 자식 요소가 필요합니다.  
   
 |설정|Description|  
@@ -386,7 +386,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**AppID**|Bing Maps 웹 서비스에 사용할 애플리케이션 식별자(AppID)를 지정합니다. **(Default)** 는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 AppID를 지정합니다.<br /><br /> 보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](https://go.microsoft.com/fwlink/?LinkId=151371)을 참조하세요.<br /><br /> 고유한 Bing Maps 사용권 계약을 위해 사용자 지정 AppID를 지정해야 하는 경우가 아니라면 이 값을 변경하지 마세요. AppID를 변경한 경우 변경 내용을 적용하기 위해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 다시 시작할 필요는 없습니다.|  
 |**CacheLevel**|System.Net.Cache의 HttpRequestCacheLevel 열거형 값을 지정합니다. 기본값은 **Default**입니다. 자세한 내용은 [HttpRequestCacheLevel 열거형](https://go.microsoft.com/fwlink/?LinkId=153353)을 참조하십시오.|  
   
-##  <a name="bkmk_nativedefaultfile"></a> 기본 모드 보고서 서버에 대한 기본 구성 파일  
+##  <a name="default-configuration-file-for-a-native-mode-report-server"></a><a name="bkmk_nativedefaultfile"></a> 기본 모드 보고서 서버에 대한 기본 구성 파일  
  rsreportserver.config 파일은 기본적으로 다음 위치에 설치됩니다.  
   
  **C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer**  
@@ -720,7 +720,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
 </Configuration> 
 ```  
   
-##  <a name="bkmk_sharepointdefaultfile"></a> SharePoint 모드 보고서 서버에 대한 기본 구성 파일  
+##  <a name="default-configuration-file-for-a-sharepoint-mode-report-server"></a><a name="bkmk_sharepointdefaultfile"></a> SharePoint 모드 보고서 서버에 대한 기본 구성 파일  
  rsreportserver.config 파일은 기본적으로 다음 위치에 설치됩니다.  
   
  **C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting**  

@@ -17,10 +17,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71713276"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 분산 트랜잭션 구성
@@ -102,7 +102,7 @@ ALTER AVAILABILITY GROUP MyaAG
       );
 ```
 
-## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/> 분산 트랜잭션 - 기술 개념
+## <a name="distributed-transactions---technical-concepts"></a><a name="distTran"/> 분산 트랜잭션 - 기술 개념
 
 분산 트랜잭션은 둘 이상의 데이터베이스에 걸쳐 있습니다. 트랜잭션 관리자로서 DTC는 SQL Server 인스턴스와 다른 데이터 원본 간의 트랜잭션을 조정합니다. [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 데이터베이스 엔진의 각 인스턴스는 리소스 관리자로 작동할 수 있습니다. 가용성 그룹이 `DTC_SUPPORT = PER_DB`로 구성되면 데이터베이스가 리소스 관리자로 작동할 수 있습니다. 자세한 내용은 MS DTC 설명서를 참조하십시오.
 

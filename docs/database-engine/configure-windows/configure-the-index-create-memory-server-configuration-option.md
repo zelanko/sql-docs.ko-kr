@@ -13,10 +13,10 @@ ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 289610b05757a1b2e94f27164b8f43464d49c227
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012612"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>index create memory 서버 구성 옵션 구성
@@ -42,9 +42,9 @@ ms.locfileid: "68012612"
   
 -   **후속 작업:**  [인덱스 생성 메모리 옵션을 구성한 후](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   **[쿼리당 최소 메모리](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)** 옵션의 설정이 **인덱스 생성 메모리** 옵션보다 우선합니다. 두 옵션을 변경할 때 **인덱스 생성 메모리** 가 **쿼리당 최소 메모리**보다 적은 경우 경고 메시지가 나타나지만 값은 설정됩니다. 쿼리를 실행하는 동안 유사한 경고가 발생합니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "68012612"
   
 -   이 옵션의 실행 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 실행 중인 운영 체제와 하드웨어 플랫폼에 사용할 수 있는 실제 메모리 양을 초과하지 않습니다.  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   이 옵션은 고급 옵션으로, 숙련된 데이터베이스 관리자나 공인된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전문가만이 변경해야 합니다.  
   
@@ -60,12 +60,12 @@ ms.locfileid: "68012612"
 
 -   프로덕션 시스템에 인덱스를 만드는 작업은 자주 수행되지 않는 태스크이므로 사용량이 많지 않은 시간에 실행되도록 예약되는 경우가 많습니다. 따라서 인덱스 생성을 사용량이 많지 않은 시간에 가끔씩 수행하는 경우 이 **index create memory**를 늘리면 인덱스 만들기 성능이 향상될 수 있습니다. 그러나 요청된 모든 메모리를 사용할 수 없는 상황이라도 인덱스 생성 작업이 시작될 수 있게 하려면 **[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)** 구성 옵션을 낮은 수치로 유지해야 합니다.
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경하거나 RECONFIGURE 문을 실행하는 두 매개 변수를 사용하여 **sp_configure** 를 실행하려면 사용자에게 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-configure-the-index-create-memory-option"></a>index create memory 옵션을 구성하려면  
   
@@ -77,7 +77,7 @@ ms.locfileid: "68012612"
   
      **index create memory** 옵션을 사용하여 인덱스 생성 정렬에 사용하는 메모리 양을 제어할 수 있습니다. **index create memory** 옵션은 자체 구성이므로 대부분 조정이 필요하지 않습니다. 그러나 인덱스를 만드는 데 문제가 있으면 이 옵션의 값을 변경합니다. 쿼리 정렬은 **쿼리당 최소 메모리** 옵션을 통해 제어됩니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-configure-the-index-create-memory-option"></a>index create memory 옵션을 구성하려면  
   
@@ -101,7 +101,7 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 인덱스 생성 메모리 옵션을 구성한 후  
+##  <a name="follow-up-after-you-configure-the-index-create-memory-option"></a><a name="FollowUp"></a> 후속 작업: 인덱스 생성 메모리 옵션을 구성한 후  
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

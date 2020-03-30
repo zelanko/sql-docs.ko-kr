@@ -32,10 +32,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c305cf11073c6903c75a9ce8b987cc041aa9fa7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981951"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE(Transact-SQL)
@@ -361,7 +361,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ## <a name="context-switching"></a>컨텍스트 전환  
  `AS { LOGIN | USER } = ' name '` 절을 사용하여 동적 문의 실행 컨텍스트를 전환할 수 있습니다. 컨텍스트 전환이 `EXECUTE ('string') AS <context_specification>`으로 지정된 경우 컨텍스트 전환 기간은 실행될 쿼리의 범위로 제한됩니다.  
   
-###  <a name="_user"></a>사용자 또는 로그인 이름 지정  
+###  <a name="specifying-a-user-or-login-name"></a><a name="_user"></a>사용자 또는 로그인 이름 지정  
  `AS { LOGIN | USER } = ' name '`에 지정된 사용자 또는 로그인 이름은 각각 sys.database_principals 또는 sys.server_principals에서 보안 주체로 존재해야 합니다. 그렇지 않으면 문이 실행되지 않습니다. 또한 보안 주체에 IMPERSONATE 권한을 부여해야 합니다. 호출자가 데이터베이스 소유자가 아니거나 sysadmin 고정 서버 역할의 멤버가 아니라면 사용자가 Windows 그룹 멤버 자격을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터베이스 또는 인스턴스에 액세스하는 경우에도 반드시 보안 주체가 존재해야 합니다. 예를 들어 다음과 같은 조건을 가정해 보세요.  
   
 -   CompanyDomain\SQLUsers 그룹에 Sales 데이터베이스에 대한 액세스 권한이 있습니다.  
@@ -658,7 +658,7 @@ WITH RESULT SETS
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="example-o-basic-procedure-execution"></a>예제 O: 기본 프로시저 실행  
  저장 프로시저 실행:  
