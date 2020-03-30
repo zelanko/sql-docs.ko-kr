@@ -60,10 +60,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37cbb3621a1c9567a778fe58c4771e4336308647
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288307"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE(Transact-SQL)
@@ -1054,7 +1054,7 @@ ALTER TABLE 문의 열을 CLR(공용 언어 런타임) 사용자 정의 형식 �
 
 테이블의 행을 업데이트하는 열을 추가하려면 테이블에 대한 **UPDATE** 권한이 있어야 합니다. 예를 들어 테이블이 비어 있지 않은 경우 **NOT NULL** 열을 기본값으로 추가하거나 ID 열을 추가합니다.
 
-## <a name="Example_Top"></a> 예
+## <a name="examples"></a><a name="Example_Top"></a> 예
 
 |Category|중요한 구문 요소|
 |--------------|------------------------------|
@@ -1065,7 +1065,7 @@ ALTER TABLE 문의 열을 CLR(공용 언어 런타임) 사용자 정의 형식 �
 |[제약 조건 및 트리거 해제/설정](#disable_enable)|CHECK • NO CHECK • ENABLE TRIGGER • DISABLE TRIGGER|
 | &nbsp; | &nbsp; |
 
-### <a name="add"></a>열 및 제약 조건 추가
+### <a name="adding-columns-and-constraints"></a><a name="add"></a>열 및 제약 조건 추가
 
 이 섹션의 예에서는 테이블에 열 및 제약 조건을 추가하는 방법을 보여 줍니다.
 
@@ -1295,7 +1295,7 @@ ALTER TABLE Customers ADD
     ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') ;
 ```
 
-### <a name="Drop"></a>열 및 제약 조건 삭제
+### <a name="dropping-columns-and-constraints"></a><a name="Drop"></a>열 및 제약 조건 삭제
 
 이 섹션의 예에서는 열 및 제약 조건을 삭제하는 방법을 보여 줍니다.
 
@@ -1380,7 +1380,7 @@ DROP TABLE Person.ContactBackup ;
 
 ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [예제](#Example_Top)
 
-### <a name="alter_column"></a> 열 정의 변경
+### <a name="altering-a-column-definition"></a><a name="alter_column"></a> 열 정의 변경
 
 #### <a name="a-changing-the-data-type-of-a-column"></a>A. 열의 데이터 형식 변경
 
@@ -1474,7 +1474,7 @@ ALTER COLUMN C2 varchar(50) ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCR
 GO
 ```
 
-### <a name="alter_table"></a> 테이블 정의 변경
+### <a name="altering-a-table-definition"></a><a name="alter_table"></a> 테이블 정의 변경
 
 이 섹션의 예에서는 테이블 정의를 변경하는 방법을 보여 줍니다.
 
@@ -1592,7 +1592,7 @@ ALTER TABLE Person.Person
 DISABLE CHANGE_TRACKING;
 ```
 
-### <a name="disable_enable"></a>제약 조건 및 트리거 해제/설정
+### <a name="disabling-and-enabling-constraints-and-triggers"></a><a name="disable_enable"></a>제약 조건 및 트리거 해제/설정
 
 #### <a name="a-disabling-and-re-enabling-a-constraint"></a>A. 제약 조건 해제 및 다시 설정
 
@@ -1659,7 +1659,7 @@ INSERT INTO dbo.trig_example VALUES (3,'Mary Booth',100001) ;
 GO
 ```
 
-### <a name="online"></a>온라인 작업
+### <a name="online-operations"></a><a name="online"></a>온라인 작업
 
 #### <a name="a-online-index-rebuild-using-low-priority-wait-options"></a>A. 낮은 우선 순위 대기 옵션을 사용한 온라인 인덱스 다시 작성
 
@@ -1697,7 +1697,7 @@ DROP TABLE dbo.doc_exy ;
 GO
 ```
 
-### <a name="system_versioning"></a>행 버전 관리
+### <a name="system-versioning"></a><a name="system_versioning"></a>행 버전 관리
 
 다음 4개 예에서 시스템 버전 관리를 이용한 구문에 대해 잘 알아 볼 수 있습니다. 추가 지원을 받으려면 [시스템 버전 관리 Temporal 테이블 시작](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)을 참조하세요.
 

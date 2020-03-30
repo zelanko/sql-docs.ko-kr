@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67948243"
 ---
 # <a name="top-transact-sql"></a>TOP(Transact-SQL)
@@ -161,7 +161,7 @@ INSERT, UPDATE, MERGE 또는 DELETE에서 TOP을 사용하면 참조된 행이 �
 |[동률 값 포함](#tie)|WITH  TIES|  
 |[DELETE, INSERT 또는 UPDATE의 영향을 받는 행 제한](#DML)|DELETE • INSERT • UPDATE|  
   
-###  <a name="BasicSyntax"></a>기본 구문  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a>기본 구문  
 이 섹션의 예에서는 최소 필수 구문을 사용하여 ORDER BY 절의 기본 기능을 보여 줍니다.  
   
 #### <a name="a-using-top-with-a-constant-value"></a>A. TOP에 상수 값 사용  
@@ -206,7 +206,7 @@ ORDER BY HireDate DESC;
 GO    
 ```  
   
-###  <a name="tie"></a>동률 값 포함  
+###  <a name="including-tie-values"></a><a name="tie"></a>동률 값 포함  
   
 #### <a name="a-using-with-ties-to-include-rows-that-match-the-values-in-the-last-row"></a>A. WITH TIES를 사용하여 마지막 행의 값과 일치하는 행 포함  
 다음 예에서는 급여가 가장 많은 `10`%의 직원을 검색하여 급여에 따라 내림차순으로 반환합니다. `WITH TIES`를 지정하면 가장 급여가 낮은 직원(마지막 행)이 여러 명이어서 `10`%를 넘는 경우에도 해당하는 직원이 모두 결과 집합에 포함됩니다.  
@@ -225,7 +225,7 @@ ORDER BY Rate DESC;
 GO    
 ```  
   
-###  <a name="DML"></a>DELETE, INSERT 또는 UPDATE의 영향을 받는 행 제한  
+###  <a name="limiting-the-rows-affected-by-delete-insert-or-update"></a><a name="DML"></a>DELETE, INSERT 또는 UPDATE의 영향을 받는 행 제한  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. TOP를 사용하여 삭제되는 행 수 제한  
 DELETE와 함께 TOP (*n*) 절을 사용하면 임의로 선택된 *n*개의 행에 대해 삭제 작업이 수행됩니다. 즉, DELETE 문이 WHERE 절에 정의된 조건을 충족하는 행의 수(*n*)를 선택합니다. 다음 예에서는 `PurchaseOrderDetail` 테이블에서 기한이 2002년 7월 1일 이전인 행 중 `20`개의 행을 삭제합니다.  
@@ -315,7 +315,7 @@ WHERE HumanResources.Employee.BusinessEntityID = th.BusinessEntityID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 다음 예제에서는 쿼리 조건과 일치하는 상위 31개 행을 반환합니다. **ORDER BY** 절을 사용하면 31개의 반환된 행이 `LastName` 열의 알파벳 순서에 따라 처음 31개 행이 됩니다.  
   
 동률을 지정하지 않고 **TOP**을 사용합니다.  

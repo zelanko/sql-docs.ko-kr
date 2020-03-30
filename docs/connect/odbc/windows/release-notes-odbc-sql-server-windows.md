@@ -11,16 +11,14 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 95d3002ff9dd32bc4070cfb541ebd54edbc70b7c
-ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
+ms.openlocfilehash: e9210592e4c4e347662dc0ec534d511be4fa2e95
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79090505"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80345426"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows 기반 Microsoft ODBC Driver for SQL Server 릴리스 정보
-
-[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 이 릴리스 정보 문서에서는 Windows 기반 SQL Server에 대한 Microsoft ODBC 드라이버의 새로운 기능을 설명합니다.
 

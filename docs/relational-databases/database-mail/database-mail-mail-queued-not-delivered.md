@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 92ff867d98b83f1934972a576df8295c3f9ca79d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70228416"
 ---
 # <a name="database-mail-mail-queued-not-delivered"></a>데이터베이스 메일: 메일이 지연되고 배달되지 않음 
@@ -73,7 +73,7 @@ failed 상태는 데이터베이스 메일 외부 프로그램이 메시지를 S
 
 
 
-##  <a name="RelatedContent"></a> 참고 항목
+##  <a name="see-also"></a><a name="RelatedContent"></a> 참고 항목
   
 -  [데이터베이스 메일 개요](database-mail.md)
 

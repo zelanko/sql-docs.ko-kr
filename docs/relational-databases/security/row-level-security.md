@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78288971"
 ---
 # <a name="row-level-security"></a>행 수준 보안
@@ -43,7 +43,7 @@ RLS는 [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-tr
 > [!NOTE]
 > Azure SQL Data Warehouse는 필터 조건자만 지원합니다. 차단 조건자는 현재 Azure SQL Data Warehouse에서 지원되지 않습니다.
 
-## <a name="Description"></a> 설명
+## <a name="description"></a><a name="Description"></a> 설명
 
 RLS는 두 가지 유형의 보안 조건자를 지원합니다.  
   
@@ -89,7 +89,7 @@ RLS는 두 가지 유형의 보안 조건자를 지원합니다.
   
 - BULK INSERT를 포함하여 대량 API에 적용된 변경 내용은 없습니다. 따라서 일반적인 삽입 작업과 마찬가지로 차단 조건자 AFTER INSERT가 대량 삽입 작업에 적용됩니다.  
   
-## <a name="UseCases"></a> 사용 사례
+## <a name="use-cases"></a><a name="UseCases"></a> 사용 사례
 
  RLS 사용 방법에 대한 설계 예는 다음과 같습니다.  
   
@@ -103,7 +103,7 @@ RLS는 두 가지 유형의 보안 조건자를 지원합니다.
   
  더 공식적인 용어로는, RLS는 조건자 기반 액세스 제어를 말합니다. 유연하고 중앙 집중적인 조건자 기반 평가 기능을 갖추고 있습니다. 조건자는 메타데이터 또는 관리자가 적절한 것으로 판단한 기타 조건을 기준으로 할 수 있습니다. 조건자는 사용자 특성에 따라 데이터에 대한 적절한 액세스 권한이 사용자에게 있는지 여부를 결정하는 기준으로 사용됩니다. 레이블 기반 액세스 제어는 조건자 기준 액세스 제어를 사용하여 구현할 수 있습니다.  
   
-## <a name="Permissions"></a> 권한
+## <a name="permissions"></a><a name="Permissions"></a> 권한
 
  보안 정책을 만들거나, 변경하거나, 삭제하는 데에는 **ALTER ANY SECURITY POLICY** 권한이 필요합니다. 보안 정책을 만들거나 삭제하려면 스키마에 대한 **ALTER** 권한이 필요합니다.  
   
@@ -119,7 +119,7 @@ RLS는 두 가지 유형의 보안 조건자를 지원합니다.
   
  `SCHEMABINDING = OFF`를 사용하여 보안 정책을 만든 경우 대상 테이블을 쿼리하려면 조건자 함수에 대한  **SELECT** 또는 **EXECUTE** 권한과 조건자 함수 내에서 사용되는 추가 테이블, 뷰 또는 함수가 있어야 합니다. `SCHEMABINDING = ON` (기본값)을 사용하여 보안 정책을 만든 경우 사용자가 대상 테이블을 쿼리할 때 이러한 권한 검사는 무시됩니다.  
   
-## <a name="Best"></a> 최선의 구현 방법  
+## <a name="best-practices"></a><a name="Best"></a> 최선의 구현 방법  
   
 - RLS 개체, 조건자 함수 및 보안 정책에 대한 별도의 스키마를 만들 것을 적극 권장합니다. 이렇게 하면 이러한 특수 개체에 필요한 사용 권한을 대상 테이블에서 구분할 수 있습니다. 다중 테넌트 데이터베이스에서는 다른 정책 및 조건자 함수를 추가로 분리해야 할 수 있지만 모든 경우에 대한 표준은 아닙니다.
   
@@ -141,7 +141,7 @@ RLS는 두 가지 유형의 보안 조건자를 지원합니다.
   
 - 조건자 함수는 연결된 문자열을 **NULL**과 비교하지 않아야 합니다. 이 동작은 [SET CONCAT_NULL_YIELDS_NULL&#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md) 옵션의 영향을 받기 때문입니다.  
 
-## <a name="SecNote"></a> 보안 정보: 부채널 공격
+## <a name="security-note-side-channel-attacks"></a><a name="SecNote"></a> 보안 정보: 부채널 공격
 
 ### <a name="malicious-security-policy-manager"></a>악의적인 보안 정책 관리자
 
@@ -151,7 +151,7 @@ RLS는 두 가지 유형의 보안 조건자를 지원합니다.
 
 정교하게 만들어진 쿼리를 통해 정보가 누출될 수 있습니다. 예를 들어, 악의적인 사용자가 `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` 을(를) 통해 John Doe의 급료가 $100,000임을 알게 됩니다. 악의적인 사용자가 타인의 급여를 직접 쿼리하는 것을 방지하기 위해 보안 조건자가 있더라도, 해당 사용자는 쿼리가 0으로 나누기 예외를 반환할 때 알아낼 수 있습니다.  
 
-## <a name="Limitations"></a> 기능 간 호환성
+## <a name="cross-feature-compatibility"></a><a name="Limitations"></a> 기능 간 호환성
 
  일반적으로 행 수준 보안은 기능 간에 예상대로 작동합니다. 그러나 몇 가지 예외가 있습니다. 이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 특정 다른 기능과 함께 행 수준 보안을 사용할 대의 몇 가지 주의 사항을 설명합니다.  
   
@@ -177,9 +177,9 @@ RLS는 두 가지 유형의 보안 조건자를 지원합니다.
   
 - **temporal 테이블:** temporal 테이블은 RLS와 호환됩니다. 그러나 현재 테이블의 보안 조건자는 기록 테이블에 자동으로 복제되지 않습니다. 현재 및 기록 테이블 모두에 보안 정책을 적용하려면 각 테이블에서 개별적으로 보안 조건자를 추가해야 합니다.  
   
-## <a name="CodeExamples"></a> 예  
+## <a name="examples"></a><a name="CodeExamples"></a> 예  
   
-### <a name="Typical"></a> 1. 데이터베이스에 인증하는 사용자에 대한 시나리오
+### <a name="a-scenario-for-users-who-authenticate-to-the-database"></a><a name="Typical"></a> 1. 데이터베이스에 인증하는 사용자에 대한 시나리오
 
  이 예제에서는 3명의 사용자를 만들고 6개의 행이 있는 테이블을 만들어 채웁니다. 그런 다음 인라인 테이블 반환 함수와 테이블에 대한 보안 정책을 만듭니다. 그러고 나서 이 예제는 select 문이 다양한 사용자에 대해 필터링되는 방법을 보여줍니다.  
   
@@ -301,7 +301,7 @@ DROP FUNCTION Security.fn_securitypredicate;
 DROP SCHEMA Security;
 ```
 
-### <a name="external"></a> 2. Azure SQL Data Warehouse 외부 테이블에 행 수준 보안을 사용하는 시나리오
+### <a name="b-scenarios-for-using-row-level-security-on-an-azure-sql-data-warehouse-external-table"></a><a name="external"></a> 2. Azure SQL Data Warehouse 외부 테이블에 행 수준 보안을 사용하는 시나리오
 
 이 간단한 예제에서는 3명의 사용자와 6개의 행이 있는 외부 테이블을 만듭니다. 그런 다음 외부 테이블에 대한 인라인 테이블 반환 함수 및 보안 정책을 만듭니다. 예에서는 select 문이 다양한 사용자를 필터링하는 방법을 보여줍니다.
 
@@ -418,7 +418,7 @@ DROP LOGIN Sales2;
 DROP LOGIN Manager;
 ```
 
-### <a name="MidTier"></a> 3. 중간 계층 애플리케이션을 통해 데이터베이스에 연결하는 사용자에 대한 시나리오
+### <a name="c-scenario-for-users-who-connect-to-the-database-through-a-middle-tier-application"></a><a name="MidTier"></a> 3. 중간 계층 애플리케이션을 통해 데이터베이스에 연결하는 사용자에 대한 시나리오
 
 > [!NOTE]
 > 이 예제 블록에서는 조건자 기능은 현재 Azure SQL Data Warehouse에 대해 지원되지 않으므로 잘못된 사용자 ID의 행을 삽입하면 Azure SQL Data Warehouse에서 차단됩니다.

@@ -17,10 +17,10 @@ ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2200027e65978ea0af8cdcc100cda830e8a35881
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75240621"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services 역할-작업 vs. SharePoint 그룹-사용 권한
@@ -38,7 +38,7 @@ ms.locfileid: "75240621"
   
 -   [기본 모드 태스크 및 SharePoint 권한 비교](#bkmk_compare_tasks_permissions)  
   
-##  <a name="bkmk_compare_tools_terms"></a> 권한 도구 비교 및 용어  
+##  <a name="compare-permission-tools-and-terminology"></a><a name="bkmk_compare_tools_terms"></a> 권한 도구 비교 및 용어  
  **기본 모드:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 권한 개체(역할 및 작업)는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 생성되어 보고서 관리자에서 개별 사용자에 대해 구성됩니다.  
   
  **SharePoint 모드:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드에는 SharePoint 권한 기능이 사용됩니다. SharePoint 그룹 및 권한은 다음 **사이트 설정** 페이지에서 관리됩니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "75240621"
   
  SharePoint 권한에 대한 자세한 내용은 [권한 수준 및 권한](https://support.office.com/article/Understand-groups-and-permissions-on-a-SharePoint-site-258E5F33-1B5A-4766-A503-D86655CF950D) 및 [SharePoint 2013의 권한 수준 및 그룹 확인](https://technet.microsoft.com/library/cc262690.aspx)을 참조하세요.  
   
-##  <a name="bkmk_compare_roles_groups"></a> 기본 모드 역할 및 SharePoint 그룹 비교  
+##  <a name="compare-native-mode-roles-and-sharepoint-groups"></a><a name="bkmk_compare_roles_groups"></a> 기본 모드 역할 및 SharePoint 그룹 비교  
  다음 표에서는 기본 모드의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 미리 정의된 역할 정의를 표준 SharePoint 그룹과 비교합니다. SharePoint 그룹이 원하는 특정 역할과 일치하지 않는 경우 SharePoint에서 사용자 지정 그룹을 만들고 사용 권한 수준을 할당할 수 있습니다.  
   
  **참고**: 사용 가능한 기본 SharePoint 그룹은 SharePoint 사이트를 만드는 데 사용되는 사이트 템플릿에 따라 다릅니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "75240621"
 |-|**뷰어** 그룹을 사용하면 렌더링된 보고서를 볼 수 있는 권한을 부여할 수 있습니다. **뷰어** 그룹은 보고서 항목의 내용을 다운로드하거나 볼 수 없습니다.<br /><br /> **참고:** SQL Server 2012 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]부터는 **뷰어** 그룹에는 구독을 만들 수 있는 권한이 없습니다.|  
 |**시스템 사용자** 및 **시스템 관리자**|이러한 역할은 SharePoint 모드로 실행되는 보고서 서버에는 필요하지 않습니다. **시스템 사용자** 와 **시스템 관리자** 는 SharePoint 팜 또는 웹 애플리케이션 수준의 사용 권한에 해당합니다. 보고서 서버는 해당 수준의 권한 부여에 필요한 기능을 제공하지 않습니다.|  
   
-##  <a name="bkmk_compare_tasks_permissions"></a> 기본 모드 태스크 및 SharePoint 권한 비교  
+##  <a name="comparing-native-mode-tasks-and-sharepoint-permissions"></a><a name="bkmk_compare_tasks_permissions"></a> 기본 모드 태스크 및 SharePoint 권한 비교  
  다음 표에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 태스크를 SharePoint 권한과 비교해서 보여줍니다. **유형** 열은 기본 모드 태스크가 시스템 역할 또는 표준 역할과 항목에 관련되어 있는지 여부를 나타냅니다. 시스템 역할은 공유 일정과 같은 시스템 수준의 권한을 관리합니다.  
   
 |기본 모드 태스크|역할 유형|해당 SharePoint 권한|  

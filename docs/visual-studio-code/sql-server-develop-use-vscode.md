@@ -9,10 +9,10 @@ author: markingmyname
 ms.author: maghan
 ms.date: 10/28/2019
 ms.openlocfilehash: 615e205566ced2c1d0a66ab69b3e9eb80c7f82f3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75558458"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>Visual Studio Code를 사용하여 Transact-SQL 스크립트 만들기 및 실행

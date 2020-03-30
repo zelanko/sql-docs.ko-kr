@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 00ab2a45675b237e3e15e340cc3789b1b79cdafc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287557"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법 설정
@@ -42,11 +42,11 @@ ms.locfileid: "76287557"
   
 ## <a name="before-you-begin"></a>시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   복제에서 생성된 스냅샷 파일을 편집할 때는 주의해야 합니다. 사용자 지정 저장 프로시저의 사용자 지정 논리를 테스트하고 지원해야 합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 에서는 사용자 지정 논리에 대한 지원을 제공하지 않습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  새 게시 마법사와 **게시 속성 - \<게시>** 대화 상자에서 사용 가능한 **아티클 속성 - \<Article>** 대화 상자의 **속성** 탭에서 전파 방법을 지정합니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md) 및 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="to-specify-the-propagation-method"></a>전파 방법을 지정하려면  
@@ -77,7 +77,7 @@ ms.locfileid: "76287557"
   
      스냅샷이 생성된 후 이 아티클이 속해 있는 게시의 스냅샷 폴더로 이동하여 아티클과 동일한 이름을 가진 **.sch** 파일을 찾습니다. 메모장이나 다른 텍스트 편집기를 사용하여 이 파일을 열고 삽입, 업데이트 또는 삭제 저장 프로시저에 대한 CREATE PROCEDURE 명령을 찾은 후 프로시저 정의를 편집하여 데이터 변경 내용 전파에 대한 사용자 지정 논리를 제공합니다. 스냅샷이 다시 생성되면 사용자 지정 프로시저를 다시 만들어야 합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  트랜잭션 복제를 사용하면 게시자에서 구독자로 변경 내용을 전파하는 방법을 제어할 수 있습니다. 이 전파 방법은 아티클을 만들 때 프로그래밍 방식으로 설정될 수 있으며 나중에 복제 저장 프로시저에서 변경할 수도 있습니다.  
   
 > [!NOTE]  
@@ -121,7 +121,7 @@ ms.locfileid: "76287557"
   
     -   **\@ins_cmd** - *CALL sp_MSins_* article_name* ** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
   
-    -   **\@del_cmd** - **CALL sp_MSdel_*article_name* ** 또는 *XCALL sp_MSdel_* article_name* ** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
+    -   **\@del_cmd** - **CALL sp_MSdel_*article_name***  또는 *XCALL sp_MSdel_* article_name* ** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
   
     -   **\@upd_cmd** - **SCALL sp_MSupd_* article_name* **, **CALL sp_MSupd_* article_name* **, **XCALL sp_MSupd_* article_name* ** 또는 **MCALL sp_MSupd_* article_name* ** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "76287557"
   
     -   **\@ins_cmd** - *CALL sp_MSins_* article_name* ** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
   
-    -   **\@del_cmd** - **CALL sp_MSdel_*article_name* ** 또는 *XCALL sp_MSdel_* article_name* ** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
+    -   **\@del_cmd** - **CALL sp_MSdel_*article_name***  또는 *XCALL sp_MSdel_* article_name* ** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
   
     -   **\@upd_cmd** - **SCALL sp_MSupd_* article_name* **, **CALL sp_MSupd_* article_name* **, **XCALL sp_MSupd_* article_name* **, **MCALL sp_MSupd_* article_name* ** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
   

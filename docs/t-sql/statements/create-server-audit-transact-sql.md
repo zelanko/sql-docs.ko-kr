@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: cc6f7c3ad9dc10e46a7abd1b044bcf70ff86f92d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982995"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT(Transact-SQL)
@@ -174,7 +174,7 @@ CREATE SERVER AUDIT HIPAA_Audit
     WITH ( QUEUE_DELAY = 1000,  ON_FAILURE = SHUTDOWN);  
 ```  
   
-###  <a name="ExampleWhere"></a> 3. WHERE 절을 포함하는 서버 감사 만들기  
+###  <a name="c-creating-a-server-audit-containing-a-where-clause"></a><a name="ExampleWhere"></a> 3. WHERE 절을 포함하는 서버 감사 만들기  
  다음 예에서는 데이터베이스 하나, 스키마 하나 및 테이블 두 개를 만듭니다. `DataSchema.SensitiveData`라는 테이블은 기밀 데이터를 포함하며, 테이블에 대한 액세스가 감사에 기록되어야 합니다. `DataSchema.GeneralData`라는 테이블은 기밀 데이터를 포함하지 않습니다. 데이터베이스 감사 사양은 `DataSchema` 스키마의 모든 개체에 대한 액세스를 감사합니다. 서버 감사를 `SensitiveData` 테이블로만 제한하는 WHERE 절을 사용하여 서버 감사를 만듭니다. 서버 감사에서는 감사 폴더가 `C:\SQLAudit`에 있다고 가정합니다.  
   
 ```sql  

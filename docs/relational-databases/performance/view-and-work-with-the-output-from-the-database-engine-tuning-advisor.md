@@ -27,10 +27,10 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 26ed3efa0738579d9abfde909f161105d95f91a8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165486"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>DTA(데이터베이스 엔진 튜닝 관리자)의 출력 보기 및 작업
@@ -39,7 +39,7 @@ ms.locfileid: "74165486"
 
   데이터베이스 엔진 튜닝 관리자는 데이터베이스를 튜닝할 때 요약, 권장 구성, 보고서 및 튜닝 로그를 만듭니다. 튜닝 로그 출력을 사용하여 데이터베이스 엔진 튜닝 관리자 튜닝 세션의 문제를 해결할 수 있습니다. 요약, 권장 구성 및 보고서를 사용하여 튜닝 권장 구성을 구현하거나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 필요한 쿼리 성능이 향상될 때까지 튜닝을 계속합니다. 데이터베이스 튜닝 관리자를 사용하여 작업을 만들고 데이터베이스를 튜닝하는 방법은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요.  
   
-##  <a name="View"></a> 튜닝 출력 보기  
+##  <a name="view-tuning-output"></a><a name="View"></a> 튜닝 출력 보기  
  다음 프로시저에서는 데이터베이스 엔진 튜닝 관리자 GUI로 튜닝 권장 구성, 요약, 보고서 및 튜닝 로그를 보는 방법에 대해 설명합니다. 사용자 인터페이스 옵션에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 [사용자 인터페이스 설명](#UI) 을 참조하세요.  
   
  GUI를 사용하여 **dta** 명령줄 유틸리티로 생성된 튜닝 출력을 볼 수도 있습니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "74165486"
   
      데이터베이스 엔진 튜닝 관리자가 튜닝 세션의 모든 이벤트를 분석한 경우 세션에 대한 튜닝 로그가 비어 있다는 메시지가 표시됩니다. 처음에 튜닝 세션을 실행할 때 **일반** 탭의 **튜닝 로그 저장** 을 선택하지 않은 경우 이러한 내용을 나타내는 메시지가 표시됩니다.  
   
-##  <a name="Implement"></a> 튜닝 권장 구성 구현  
+##  <a name="implement-tuning-recommendations"></a><a name="Implement"></a> 튜닝 권장 구성 구현  
  튜닝 세션 도중 수동 또는 자동으로 데이터베이스 엔진 튜닝 관리자 권장 구성을 구현할 수 있습니다. 이 권장 구성을 구현하기 전에 먼저 튜닝 결과를 확인하려면 데이터베이스 엔진 튜닝 관리자 GUI를 사용하세요. 그러면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 데이터베이스 엔진 튜닝 관리자에서 권장 구성을 구현하기 위한 작업 분석 결과로서 생성되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 수동으로 실행할 수 있습니다. 스크립트를 구현하기 전에 결과를 조사할 필요가 없는 경우 **dta** 명령 프롬프트 유틸리티에 **-a** 옵션을 사용할 수 있습니다. 이렇게 하면 유틸리티가 해당 작업을 분석한 후 튜닝 권장 사항을 자동으로 구현합니다. 다음 절차에서는 두 가지 데이터베이스 엔진 튜닝 관리자 인터페이스를 사용하여 튜닝 권장 구성을 구현하는 방법을 설명합니다.  
   
 #### <a name="to-manually-implement-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>데이터베이스 엔진 튜닝 관리자 GUI를 사용하여 튜닝 권장 구성을 수동으로 구현하려면  
@@ -120,7 +120,7 @@ ms.locfileid: "74165486"
   
 3.  Enter 키를 누릅니다.  
   
-##  <a name="Analysis"></a> 탐구 분석 수행  
+##  <a name="perform-exploratory-analysis"></a><a name="Analysis"></a> 탐구 분석 수행  
  데이터베이스 관리자는 데이터베이스 엔진 튜닝 관리자의 사용자 지정 구성 기능을 통해 탐구 분석을 수행할 수 있습니다. 데이터베이스 관리자는 이 기능을 사용하여 원하는 물리적 데이터베이스 디자인을 데이터베이스 엔진 튜닝 관리자에 지정함으로써 해당 디자인을 구현하지 않고서도 성능 효과를 평가할 수 있습니다. 사용자 지정 구성은 데이터베이스 엔진 튜닝 관리자의 GUI(그래픽 사용자 인터페이스) 및 명령줄 유틸리티에서 모두 지원되지만 명령줄 유틸리티가 가장 높은 유연성을 제공합니다.  
   
  데이터베이스 엔진 튜닝 관리자 GUI를 사용하는 경우 데이터베이스 엔진 튜닝 관리자의 튜닝 권장 구성에 따른 하위 집합 구현의 효과를 평가할 수는 있지만 데이터베이스 엔진 튜닝 관리자에 대해 평가할 가상 물리적 디자인 구조를 추가할 수 없습니다.  
@@ -184,7 +184,7 @@ ms.locfileid: "74165486"
   
 7.  6단계와 7단계를 반복하여 쿼리 성능을 필요한 만큼 향상시키는 가상 구성을 만듭니다. 그런 다음 새 구성을 구현할 수 있습니다. 자세한 내용은 이 항목의 앞부분에 나오는 [튜닝 권장 구성 구현](#Implement) 을 참조하세요.  
   
-##  <a name="ReviewEvaluateClone"></a> 튜닝 세션 검토, 평가 및 복제  
+##  <a name="review-evaluate-and-clone-tuning-sessions"></a><a name="ReviewEvaluateClone"></a> 튜닝 세션 검토, 평가 및 복제  
  데이터베이스 엔진 튜닝 관리자에서는 데이터베이스에 대한 작업 영향 분석을 시작할 때마다 새 튜닝 세션을 만듭니다. 데이터베이스 엔진 튜닝 관리자 GUI의 **세션 모니터**를 사용하여 지정한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 실행된 모든 튜닝 세션을 보거나 다시 로드할 수 있습니다. 기존의 튜닝 세션을 모두 검토할 수 있으면 기존 세션에서 세션을 복제하거나, 기존의 튜닝 권장 구성을 편집한 다음 데이터베이스 엔진 튜닝 관리자를 사용하여 편집된 세션을 평가하거나, 정기적으로 튜닝을 수행하여 데이터베이스의 물리적 디자인을 모니터링하는 등의 작업을 쉽게 수행할 수 있습니다. 예를 들어 월별 일정으로 데이터베이스를 튜닝하도록 결정할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 튜닝 세션을 검토하려면 먼저 데이터베이스 엔진 튜닝 관리자를 사용하여 작업을 튜닝하여 서버 인스턴스에 튜닝 세션을 만들어야 합니다. 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요.  
@@ -242,7 +242,7 @@ ms.locfileid: "74165486"
   
 6.  도구 모음에서 **분석 시작** 단추를 클릭하여 다른 튜닝 세션처럼 작업의 영향을 분석할 수 있습니다. 데이터베이스 엔진 튜닝 관리자가 완료되면 다른 세션과 동일한 방법으로 이 세션의 결과를 확인할 수 있습니다.  
   
-##  <a name="UI"></a> 사용자 인터페이스 설명  
+##  <a name="user-interface-descriptions"></a><a name="UI"></a> 사용자 인터페이스 설명  
   
 ### <a name="sessions-monitor"></a>세션 모니터  
  **세션 모니터** 는 데이터베이스 엔진 튜닝 관리자에서 연 세션에 대한 정보를 표시합니다. 세션 정보를 속성 창에 표시하려면 **세션 모니터**에서 세션 이름을 선택합니다.  

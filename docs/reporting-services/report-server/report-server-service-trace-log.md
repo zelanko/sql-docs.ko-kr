@@ -10,17 +10,17 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/23/2019
 ms.openlocfilehash: 667f18f449a1f2564c04a03ca593c917a7b46005
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68254863"
 ---
 # <a name="report-server-service-trace-log"></a>보고서 서버 서비스 추적 로그
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 추적 로그는 보고서 서버 서비스 작업에 대한 세부 정보가 들어 있는 ASCII 텍스트 파일입니다.  파일의 정보에는 보고서 서버 웹 서비스, 웹 포털 및 백그라운드 처리가 수행하는 작업이 포함됩니다. 추적 로그 파일에는 다른 로그 파일에 기록되는 중복된 정보와 다른 방법으로는 사용할 수 없는 추가 정보가 들어 있습니다. 추적 로그 정보는 보고서 서버가 포함된 애플리케이션을 디버깅하거나 이벤트 로그 또는 실행 로그에 기록된 특정 문제를 조사하는 경우에 유용합니다. 예를 들어 구독 문제를 해결하는 경우 등입니다.  
 
-## <a name="bkmk_view_log"></a> 보고서 서버 로그 파일은 어디에 있나요?
+## <a name="where-are-the-report-server-log-files"></a><a name="bkmk_view_log"></a> 보고서 서버 로그 파일은 어디에 있나요?
 
 추적 로그 파일은 `ReportServerService_<timestamp>.log` 및 `Microsoft.ReportingServices.Portal.WebHost_<timestamp>.log`이며 다음 폴더에 있습니다.
 
@@ -28,7 +28,7 @@ ms.locfileid: "68254863"
 
 추적 로그는 현지 시간으로 자정 후와 서비스가 다시 시작될 때마다 발생하는 첫 번째 항목을 시작으로 매일 만들어집니다. 타임스탬프는 UTC(Coordinated Universal Time)를 기반으로 합니다. 파일은 EN-US 형식이며 기본적으로 추적 로그는 32MB로 제한되며 기본적으로 14일 후 삭제됩니다.  
 
-## <a name="bkmk_trace_configuration_settings"></a> 추적 구성 설정
+## <a name="trace-configuration-settings"></a><a name="bkmk_trace_configuration_settings"></a> 추적 구성 설정
 
 추적 로그 동작은 구성 파일 **ReportingServicesService.exe.config**에서 관리됩니다. 구성 파일은 다음 폴더 경로에 있습니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68254863"
 |**구성 요소 범주**|추적 로그 정보가 생성되는 구성 요소와 추적 수준을 다음 형식으로 지정합니다.<br /><br /> \<구성 요소 범주 >:\<tracelevel ><br /><br /> 구성 요소를 모두 또는 일부 지정할 수 있습니다(**all**, **RunningJobs**, **SemanticQueryEngine**, **SemanticModelGenerator**). 특정 구성 요소에 대해 정보를 생성하지 않으려면 "SemanticModelGenerator:0"과 같이 해당 구성 요소에 대해 추적을 해제합니다. **all**에 대한 추적은 해제하지 마세요.<br /><br /> 각 의미 체계 쿼리에 대해 생성되는 Transact-SQL 문을 보려면 "SemanticQueryEngine:4"를 설정합니다. Transact-SQL 문은 추적 로그에 기록됩니다. 다음 예에서는 로그에 Transact-SQL 문을 추가하는 구성 설정을 보여 줍니다.<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|구성 요소 범주는 다음과 같이 설정할 수 있습니다.<br /><br /> <br /><br /> 특정 범주로 나눌 수 없는 프로세스의 경우**All** 을 통해 모든 프로세스에 대한 일반적인 보고서 서버 작업이 추적됩니다.<br /><br /> **RunningJobs** 는 진행 중인 보고서나 구독 작업을 추적하는 데 사용됩니다.<br /><br /> **SemanticQueryEngine** 은 사용자가 모델 기반 보고서에서 임시 데이터 탐색을 수행할 때 처리되는 의미 체계 쿼리를 추적하는 데 사용됩니다.<br /><br /> 모델 생성의 경우**SemanticModelGenerator** 를 통해 추적됩니다.<br /><br /> 보고서 서버 HTTP 로그 파일의 경우**http** 를 통해 설정됩니다. 자세한 내용은 [Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md)을 참조하세요.|  
 |구성 요소 범주에 대한 **추적 수준** 값|\<구성 요소 범주 >:\<tracelevel ><br /><br /> <br /><br /> 구성 요소에 추적 수준을 추가하지 않으면 **DefaultTraceSwitch** 에 대해 지정된 값이 사용됩니다. 예를 들어 "all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator"를 지정하면 모든 구성 요소에서 기본 추적 수준을 사용합니다.|유효한 추적 수준 값은 다음과 같습니다.<br /><br /> <br /><br /> 0= 추적 해제<br /><br /> 1= 예외 및 다시 시작<br /><br /> 2= 예외, 다시 시작, 경고<br /><br /> 3= 예외, 다시 시작, 경고, 상태 메시지(기본값)<br /><br /> 4= 세부 정보 표시 모드<br /><br /> 보고서 서버의 기본값은 "all:3"입니다.|  
   
-## <a name="bkmk_add_custom"></a> 덤프 파일 위치 지정을 위한 사용자 지정 구성 설정 추가  
+## <a name="adding-custom-configuration-setting-to-specify-a-dump-file-location"></a><a name="bkmk_add_custom"></a> 덤프 파일 위치 지정을 위한 사용자 지정 구성 설정 추가  
 Windows용 Dr. Watson 도구에서 덤프 파일 저장에 사용하는 위치를 설정하기 위해 사용자 지정 설정을 추가할 수 있습니다. 사용자 지정 설정은 **Directory**입니다. 다음 예에서는 **RStrace** 섹션에 이 구성 설정을 지정하는 방법을 보여 줍니다.  
 
 ```
@@ -77,7 +77,7 @@ Windows용 Dr. Watson 도구에서 덤프 파일 저장에 사용하는 위치�
   
 자세한 내용은 [웹 사이트의](https://support.microsoft.com/?kbid=913046) 기술 자료 문서 913046 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 을 참조하세요.  
   
-##  <a name="bkmk_log_file_fields"></a> 로그 파일 필드
+##  <a name="log-file-fields"></a><a name="bkmk_log_file_fields"></a> 로그 파일 필드
 
 추적 로그에는 다음과 같은 필드가 있습니다.  
   

@@ -8,10 +8,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: da725efe691aae60bf9776bbe73f80227067d2e2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74200393"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 알려진 문제
@@ -125,7 +125,7 @@ R 패키지 문제를 방지하기 위해 [다음 섹션](#bkmk_sqlbindr)에 설
 
 **적용 대상:** SQL Server 2017 with Python
 
-### <a name="bkmk_sqlbindr"></a>[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]를 사용하여 클라이언트에서 이전 버전의 SQL Server R Services에 연결하는 경우 호환되지 않는 버전 경고
+### <a name="warning-of-incompatible-version-when-you-connect-to-an-older-version-of-sql-server-r-services-from-a-client-by-using-sssqlv14_md"></a><a name="bkmk_sqlbindr"></a>[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]를 사용하여 클라이언트에서 이전 버전의 SQL Server R Services에 연결하는 경우 호환되지 않는 버전 경고
 
 SQL Server 2016 컴퓨팅 컨텍스트에서 R 코드를 실행하면 다음과 같은 오류가 표시될 수 있습니다.
 
@@ -332,7 +332,7 @@ data <- RxSqlServerData(
 
     FileTable을 사용하도록 설정한 후 모델을 쓰려면 FileTable API를 사용하여 SQL에서 경로를 가져온 다음 코드에서 해당 위치에 모델을 씁니다. 모델을 읽어야 하는 경우에는 SQL에서 경로를 가져온 다음 스크립트에서 경로를 사용하여 모델을 호출합니다. 자세한 내용은 [파일 입출력 API를 사용하여 FileTable 액세스](../relational-databases/blob/access-filetables-with-file-input-output-apis.md)를 참조하세요.
 
-### <a name="7-avoid-clearing-workspaces-when-you-execute-r-code-in-a-includessnoversionincludesssnoversion-mdmd-compute-context"></a>7. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 컴퓨팅 컨텍스트에서 R 코드를 실행하는 경우에는 작업 영역을 지우지 마세요.
+### <a name="7-avoid-clearing-workspaces-when-you-execute-r-code-in-a-ssnoversion-compute-context"></a>7. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 컴퓨팅 컨텍스트에서 R 코드를 실행하는 경우에는 작업 영역을 지우지 마세요.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 컴퓨팅 컨텍스트에서 R 코드를 실행하는 동안 R 명령을 사용하여 작업 영역에서 개체를 지우거나 [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 사용하여 호출된 R 스크립트의 일부로 작업 영역을 지우는 경우 다음 오류가 발생할 수 있습니다. *작업 영역 개체 'revoScriptConnection'을 찾을 수 없습니다.*
 

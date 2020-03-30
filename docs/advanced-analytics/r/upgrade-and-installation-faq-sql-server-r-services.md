@@ -10,10 +10,10 @@ ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6357f98627842ab790b494cf1b4a1f9b2110ec9c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727350"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server Machine Learning 또는 R Server 업그레이드 및 설치에 대한 FAQ
@@ -92,7 +92,7 @@ SQL Server 2016 초기 릴리스 버전에서는 인터넷에 연결하지 않�
 
 SQL Server 기계 학습 구성 요소의 시험판 버전을 제거하는 작업은 복잡할 수 있으며 특수 스크립트를 실행해야 할 수도 있습니다. 기술 지원 서비스에 문의하십시오.
 
-###  <a name="bkmk_Uninstall"></a> 이전 버전의 Microsoft R Server에서 업그레이드하기 전에 설치 제거
+###  <a name="uninstall-prior-to-upgrading-from-an-older-version-of-microsoft-r-server"></a><a name="bkmk_Uninstall"></a> 이전 버전의 Microsoft R Server에서 업그레이드하기 전에 설치 제거
 
 Microsoft R Server 시험판 버전을 설치한 경우 먼저 제거해야 최신 버전으로 업그레이드할 수 있습니다.
 

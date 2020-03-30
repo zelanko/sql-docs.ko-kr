@@ -17,10 +17,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e69d3d2d73a53f6bdd8a3fe7282c1e9ad65b5773
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68095292"
 ---
 # <a name="upgrade-full-text-search"></a>전체 텍스트 검색 업그레이드
@@ -28,7 +28,7 @@ ms.locfileid: "68095292"
   설치 프로그램을 실행하거나 데이터베이스 복사 마법사를 사용하여 이전 버전의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 만든 데이터베이스 파일 및 전체 텍스트 카탈로그를 연결, 복원 또는 복사하면 전체 텍스트 검색이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 업그레이드됩니다.  
   
   
-##  <a name="Upgrade_Server"></a> 서버 인스턴스 업그레이드  
+##  <a name="upgrade-a-server-instance"></a><a name="Upgrade_Server"></a> 서버 인스턴스 업그레이드  
  전체 업그레이드를 수행할 수 있도록 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 인스턴스가 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 함께 설치되고 데이터가 마이그레이션됩니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 전체 텍스트 검색이 설치된 경우 새 버전의 전체 텍스트 검색이 자동으로 설치됩니다. 함께 설치되었다는 것은 다음과 같은 구성 요소가 각각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스 수준에 있음을 의미합니다.  
   
  단어 분리기, 형태소 분석기 및 필터  
@@ -43,7 +43,7 @@ ms.locfileid: "68095292"
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서는 각 전체 텍스트 인덱스가 파일 그룹에 속하는 전체 텍스트 카탈로그에 있고 실제 경로를 가지며 데이터베이스 파일로 처리됩니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 전체 텍스트 카탈로그는 전체 텍스트 인덱스의 그룹을 포함하는 논리적 개체 또는 가상 개체입니다. 따라서 새로운 전체 텍스트 카탈로그는 실제 경로가 있는 데이터베이스 파일로 취급되지 않습니다. 그러나 데이터 파일이 들어 있는 전체 텍스트 카탈로그를 업그레이드할 때는 같은 디스크에 새 파일 그룹이 만들어집니다. 따라서 업그레이드 후에도 이전의 디스크 I/O 동작이 유지됩니다. 루트 경로가 있으면 해당 카탈로그의 전체 텍스트 인덱스가 새 파일 그룹에 배치됩니다. 이전 전체 텍스트 카탈로그 경로가 유효하지 않으면 업그레이드 과정에서 전체 텍스트 인덱스가 기본 테이블과 같은 파일 그룹에 유지되며, 테이블이 분할된 경우에는 주 파일 그룹에 유지됩니다.  
   
   
-##  <a name="FT_Upgrade_Options"></a> 전체 텍스트 업그레이드 옵션  
+##  <a name="full-text-upgrade-options"></a><a name="FT_Upgrade_Options"></a> 전체 텍스트 업그레이드 옵션  
  서버 인스턴스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드할 때 사용자 인터페이스를 통해 다음과 같은 전체 텍스트 업그레이드 옵션 중 하나를 선택할 수 있습니다.  
   
 **가져오기**  
@@ -62,7 +62,7 @@ ms.locfileid: "68095292"
  **재설정**  
  전체 텍스트 카탈로그를 다시 설정합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 업그레이드할 때는 전체 텍스트 카탈로그 파일이 제거되지만 전체 텍스트 카탈로그 및 전체 텍스트 인덱스의 메타데이터는 유지됩니다. 업그레이드가 끝나면 모든 전체 텍스트 인덱스의 변경 내용 추적이 해제되고 탐색이 자동으로 시작되지 않습니다. 업그레이드가 완료된 후 전체 채우기를 수동으로 실행할 때까지 카탈로그가 비어 있습니다.  
   
-##  <a name="Choosing_Upgade_Option"></a> 전체 텍스트 업그레이드 옵션 선택 시 고려 사항  
+##  <a name="considerations-for-choosing-a-full-text-upgrade-option"></a><a name="Choosing_Upgade_Option"></a> 전체 텍스트 업그레이드 옵션 선택 시 고려 사항  
  업그레이드 옵션을 선택할 때는 다음 사항을 고려해야 합니다.  
   
 -   쿼리 결과의 일관성을 보장하는 것은 중요한 일입니다.  
@@ -114,7 +114,7 @@ ms.locfileid: "68095292"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 가져온 전체 텍스트 카탈로그는 여전히 자체 파일 그룹의 데이터베이스 파일입니다. 전체 텍스트 카탈로그에 대한 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 의 백업 프로세스가 여전히 적용되지만 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에는 MSFTESQL 서비스가 없습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 프로세스에 대한 자세한 내용은 SQL Server 2005 온라인 설명서에서 [전체 텍스트 카탈로그 백업 및 복원](https://go.microsoft.com/fwlink/?LinkId=209154) 을 참조하세요.  
   
-##  <a name="Upgrade_Db"></a> 데이터베이스를 다음으로 업그레이드할 때 전체 텍스트 인덱스 마이그레이션: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="migrating-full-text-indexes-when-upgrading-a-database-to-sscurrent"></a><a name="Upgrade_Db"></a> 데이터베이스를 다음으로 업그레이드할 때 전체 텍스트 인덱스 마이그레이션: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  데이터베이스 연결, 복원 또는 복사 마법사를 사용하여 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 만든 데이터베이스 파일 및 전체 텍스트 카탈로그를 기존 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 서버 인스턴스로 업그레이드할 수 있습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 전체 텍스트 인덱스(있는 경우)는 가져오거나 다시 설정하거나 다시 작성할 수 있습니다. **upgrade_option** 서버 속성은 이러한 데이터베이스 업그레이드 도중 서버 인스턴스에서 사용할 전체 텍스트 업그레이드 옵션을 제어합니다.  
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 연결, 복원 또는 복사하면 데이터베이스를 바로 사용할 수 있으며 해당 데이터베이스가 자동으로 업그레이드됩니다. 인덱싱되는 데이터 양에 따라 가져오기 작업은 몇 시간씩 걸릴 수 있으며 다시 작성 작업은 10배 정도 더 걸릴 수 있습니다. 업그레이드 옵션이 가져오기로 설정되어 있으면 전체 텍스트 카탈로그를 사용할 수 없는 경우 관련된 전체 텍스트 인덱스가 다시 작성됩니다.  
@@ -125,7 +125,7 @@ ms.locfileid: "68095292"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** **서버 속성** 대화 상자의 **전체 텍스트 업그레이드 옵션**을 사용합니다. 자세한 내용은 [서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)을 참조하세요.  
   
-##  <a name="Considerations_for_Restore"></a>[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 전체 텍스트 카탈로그를 다음으로 복원 시 고려 사항: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="considerations-for-restoring-a-ssversion2005-full-text-catalog-to-sscurrent"></a><a name="Considerations_for_Restore"></a>[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 전체 텍스트 카탈로그를 다음으로 복원 시 고려 사항: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스의 전체 텍스트 데이터를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 로 업그레이드하는 방법 중 하나는 전체 데이터베이스 백업을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 복원하는 것입니다.  
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 전체 텍스트 카탈로그를 가져올 때 데이터베이스와 카탈로그 파일을 백업 및 복원할 수 있습니다. 이 동작은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]와 같습니다.  
@@ -168,7 +168,7 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
     MOVE N'sysft_cat90' TO N'C:\temp';  
 ```  
   
-##  <a name="Attaching_2005_ft_catalogs"></a> SQL Server 2005 데이터베이스를 다음에 연결: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="attaching-a-sql-server-2005-database-to-sscurrent"></a><a name="Attaching_2005_ft_catalogs"></a> SQL Server 2005 데이터베이스를 다음에 연결: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 전체 텍스트 카탈로그는 전체 텍스트 인덱스의 그룹을 나타내는 논리적 개념입니다. 전체 텍스트 카탈로그는 어떠한 파일 그룹에도 속하지 않는 가상 개체입니다. 그러나 전체 텍스트 카탈로그 파일이 포함된 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 서버 인스턴스에 연결하면 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]의 경우와 같이 카탈로그 파일이 다른 데이터베이스 파일과 함께 이전 위치에서 연결됩니다.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 연결된 각 전체 텍스트 카탈로그의 상태는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 데이터베이스를 분리할 때의 상태와 같습니다. 분리 작업에 따라 전체 텍스트 인덱스 채우기가 일시 중지된 경우 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 채우기가 재개되고 전체 텍스트 인덱스를 전체 텍스트 검색에 사용할 수 있게 됩니다.  

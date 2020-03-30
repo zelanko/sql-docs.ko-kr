@@ -28,10 +28,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ac0817f4dcbcefd3fc783d2cf0d0ae35afc0c546
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75255812"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART(Transact-SQL)
@@ -156,12 +156,12 @@ ISO 8601에는 주 번호 매기기 시스템인 ISO 주-일 시스템이 포함
   
 |시작 요일|연도의 첫째 주에 포함되는 항목|주가 두 번 할당됨|사용|  
 |---|---|---|---|
-|일요일|1월 1일<br /><br /> 첫 번째 토요일<br /><br /> 한 해의 1-7일|yes|미국|  
-|월요일|1월 1일<br /><br /> 첫 번째 일요일<br /><br /> 한 해의 1-7일|yes|대부분의 유럽, 영국|  
+|일요일|1월 1일<br /><br /> 첫 번째 토요일<br /><br /> 한 해의 1-7일|예|미국|  
+|월요일|1월 1일<br /><br /> 첫 번째 일요일<br /><br /> 한 해의 1-7일|예|대부분의 유럽, 영국|  
 |월요일|1월 4일,<br /><br /> 첫 번째 목요일<br /><br /> 한 해의 4-7일|예|ISO 8601, 노르웨이 및 스웨덴|  
 |월요일|1월 7일,<br /><br /> 첫 번째 월요일<br /><br /> 한 해의 7일|예||  
-|수요일|1월 1일<br /><br /> 첫 번째 화요일<br /><br /> 한 해의 1-7일|yes||  
-|토요일|1월 1일<br /><br /> 첫 번째 금요일<br /><br /> 한 해의 1-7일|yes||  
+|수요일|1월 1일<br /><br /> 첫 번째 화요일<br /><br /> 한 해의 1-7일|예||  
+|토요일|1월 1일<br /><br /> 첫 번째 금요일<br /><br /> 한 해의 1-7일|예||  
   
 ## <a name="tzoffset"></a>tzoffset  
 `DATEPART`는 **tzoffset**(**tz**) 값을 분 수(부호 있음)로 반환합니다. 이 명령문은 310분의 표준 시간대 오프셋을 반환합니다.
