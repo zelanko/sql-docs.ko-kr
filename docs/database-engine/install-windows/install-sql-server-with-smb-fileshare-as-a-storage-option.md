@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0b1d78acdaee97c38536969481c79fc3a94d6c9e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67990932"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>SMB 파일 공유 스토리지를 사용하여 SQL Server 설치
@@ -80,7 +80,7 @@ ms.locfileid: "67990932"
   
      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 다양한 명령줄 매개 변수 옵션의 사용법에 대한 자세한 내용은 [명령 프롬프트에서 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요.  
   
-## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>운영 체제 고려 사항(SMB 프로토콜 대 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+## <a name="operating-system-considerations-smb-protocol-vs-ssnoversion"></a>운영 체제 고려 사항(SMB 프로토콜 대 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  Windows 운영 체제마다 포함되어 있는 SMB 프로토콜 버전이 다르며 SMB 프로토콜 버전은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 투명합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]와 관련하여 다른 SMB 프로토콜 버전의 이점을 찾을 수 있습니다.  
   
 |운영 체제|SMB2 프로토콜 버전|이점 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  

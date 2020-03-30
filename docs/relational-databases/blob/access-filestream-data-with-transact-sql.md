@@ -13,10 +13,10 @@ ms.assetid: a6bf0ce7-7e5e-4a07-8917-ee526c9d0a05
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8e2a9ede7817eb504a5926ee1a7bb6be2019f0b1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68041227"
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>Transact-SQL을 사용하여 FILESTREAM 데이터 액세스
@@ -26,7 +26,7 @@ ms.locfileid: "68041227"
 > [!NOTE]  
 >  이 항목의 예에서는 [FILESTREAM 사용 데이터베이스 만들기](../../relational-databases/blob/create-a-filestream-enabled-database.md) 및 [FILESTREAM 데이터 저장용 테이블 만들기](../../relational-databases/blob/create-a-table-for-storing-filestream-data.md)에서 만든 FILESTREAM 사용 데이터베이스 및 테이블이 필요합니다.  
   
-##  <a name="ins"></a> FILESTREAM 데이터가 들어 있는 행 삽입  
+##  <a name="inserting-a-row-that-contains-filestream-data"></a><a name="ins"></a> FILESTREAM 데이터가 들어 있는 행 삽입  
  FILESTREAM 데이터를 지원하는 테이블에 행을 추가하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 문을 사용합니다. FILESTREAM 열에 데이터를 삽입할 때 NULL 또는 **varbinary(max)** 값을 삽입할 수 있습니다.  
   
 ### <a name="inserting-null"></a>NULL 삽입  
@@ -53,7 +53,7 @@ ms.locfileid: "68041227"
 |`7F680840-B7A4-45D4-8CD5-527C44D35B3F`|`3`|`0x536569736D69632044617461`|  
   
   
-##  <a name="upd"></a> FILESTREAM 데이터 업데이트  
+##  <a name="updating-filestream-data"></a><a name="upd"></a> FILESTREAM 데이터 업데이트  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 파일 시스템 파일의 데이터를 업데이트할 수 있지만 많은 양의 데이터를 파일로 스트리밍해야 하는 경우에는 이렇게 하지 않는 것이 좋습니다.  
   
  다음 예에서는 파일 레코드에 있는 임의의 텍스트를 `Xray 1`로 바꿉니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "68041227"
  [!code-sql[FILESTREAM#FS_UpdateData](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_4.sql)]  
   
   
-##  <a name="del"></a> FILESTREAM 데이터 삭제  
+##  <a name="deleting-filestream-data"></a><a name="del"></a> FILESTREAM 데이터 삭제  
  FILESTREAM 필드가 들어 있는 행을 삭제하면 해당 내부 파일 시스템 파일도 삭제됩니다. 행과 그 안에 들어 있는 파일을 삭제하는 유일한 방법은 [!INCLUDE[tsql](../../includes/tsql-md.md)] DELETE 문을 사용하는 것입니다.  
   
  다음 예에서는 행과 관련 파일 시스템 파일을 삭제하는 방법을 보여 줍니다.  

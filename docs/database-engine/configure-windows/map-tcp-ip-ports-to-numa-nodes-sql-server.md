@@ -21,10 +21,10 @@ ms.assetid: 07727642-0266-4cbc-8c55-3c367e4458ca
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 48c645bd85034f226650cf5e98ddd18a6b8efa9e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67997980"
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>NUMA 노드에 TCP IP 포트 매핑(SQL Server)
@@ -45,11 +45,11 @@ ms.locfileid: "67997980"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 각 IP 주소에 대해 여러 TCP 포트에서 수신할 수 있게 하려면 [여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md)을 참조하세요.  
   
-##  <a name="SSMSProcedure"></a> SQL Server 구성 관리자 사용  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> SQL Server 구성 관리자 사용  
   
 #### <a name="to-map-a-tcpip-port-to-a-numa-node"></a>NUMA 노드에 TCP/IP 포트를 매핑하려면  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 **SQL Server 네트워크 구성**을 확장한 다음 ‘\<인스턴스 이름>’**에 대한 프로토콜**을 클릭합니다.   
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 **SQL Server 네트워크 구성**을 확장한 다음 ‘**인스턴스 이름>’** 에 대한 프로토콜*을 클릭합니다.\<*  
   
 2.  세부 정보 창에서 **TCP/IP**를 두 번 클릭합니다.  
   

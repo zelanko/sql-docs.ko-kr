@@ -13,10 +13,10 @@ ms.assetid: 428908b8-fb6a-4d0c-8339-ee133e23aad2
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f2b3ec4e0c7ec6a9335c9e37558123eca77995a3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056429"
 ---
 # <a name="view-collection-set-logs-sql-server-management-studio"></a>컬렉션 세트 로그 보기(SQL Server Management Studio)

@@ -21,10 +21,10 @@ ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b310083d3317c9099532b8d08f2482efe193d95c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252788"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션 중 역할 전환(SQL Server)
@@ -77,7 +77,7 @@ ms.locfileid: "75252788"
   
  역할 전환 중에 데이터베이스 미러링의 서비스가 중단되는 시간은 역할 전환의 유형 및 원인에 따라 달라집니다. 자세한 내용은 [역할 전환 중 서비스 중단 예측&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)프로세스를 통해 주 역할과 미러 역할을 서로 바꿀 수 있습니다.  
   
-##  <a name="ManualFailover"></a> Manual Failover  
+##  <a name="manual-failover"></a><a name="ManualFailover"></a> Manual Failover  
  수동 장애 조치(Failover)는 데이터베이스에서 클라이언트의 연결을 끊고 파트너의 역할을 반대로 바꿉니다. 이러한 수동 장애 조치는 보호 우선 모드에서만 지원됩니다.  
   
  **섹션 내용**  
@@ -88,7 +88,7 @@ ms.locfileid: "75252788"
   
 -   [수동 장애 조치 작동 방법](#HowManualFoWorks)  
   
-###  <a name="AvailabilityDuringUpgrades"></a> 업그레이드 중에 가용성 유지  
+###  <a name="maintaining-availability-during-upgrades"></a><a name="AvailabilityDuringUpgrades"></a> 업그레이드 중에 가용성 유지  
  데이터베이스 관리자는 수동 장애 조치를 사용하여 가용성에 영향을 주지 않고 하드웨어 또는 소프트웨어를 업그레이드할 수 있습니다. 소프트웨어 업그레이드 시 데이터베이스 미러링을 사용하려면 미러 서버 및/또는 시스템에 이미 해당 업그레이드가 있어야 합니다.  
   
 > [!NOTE]  
@@ -98,10 +98,10 @@ ms.locfileid: "75252788"
   
  ![계획된 수동 장애 조치(Failover)](../../database-engine/database-mirroring/media/dbm-failovmanuplanned.gif "계획된 수동 장애 조치(Failover)")  
   
-###  <a name="ConditionsForManualFo"></a> 수동 장애 조치에 필요한 조건  
+###  <a name="conditions-required-for-a-manual-failover"></a><a name="ConditionsForManualFo"></a> 수동 장애 조치에 필요한 조건  
  수동 장애 조치를 수행하려면 트랜잭션 보안이 FULL(보호 우선 모드)로 설정되어야 합니다. 파트너가 연결되어 있으며 데이터베이스가 이미 동기화된 경우 수동 장애 조치가 지원됩니다.  
   
-###  <a name="HowManualFoWorks"></a> 수동 장애 조치 작동 방법  
+###  <a name="how-manual-failover-works"></a><a name="HowManualFoWorks"></a> 수동 장애 조치 작동 방법  
  수동 장애 조치의 동작 순서는 다음과 같습니다.  
   
 1.  주 서버는 주 데이터베이스에서 클라이언트의 연결을 끊고 비상 로그를 미러 서버로 보낸 다음 미러 역할로 전환하기 위해 미러링 상태를 SYNCHRONIZING으로 설정합니다.  
@@ -133,7 +133,7 @@ ms.locfileid: "75252788"
   
 -   [데이터베이스 미러링 세션 수동 장애 조치(failover)&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md).  
   
-##  <a name="AutomaticFailover"></a> Automatic Failover  
+##  <a name="automatic-failover"></a><a name="AutomaticFailover"></a> Automatic Failover  
  자동 장애 조치(failover)는 미러링 모니터 서버에서 보호 우선 모드(*자동 장애 조치(failover)를 지원하는 보호 우선 모드*)로 실행되는 데이터베이스 미러링 세션에서만 지원됩니다. 자동 장애 조치를 지원하는 보호 우선 모드에서 데이터베이스가 동기화된 후 주 데이터베이스를 사용할 수 없게 되면 자동 장애 조치가 수행됩니다. 자동 장애 조치가 수행되면 미러 서버가 주 서버의 역할을 맡고 해당 데이터베이스의 복사본이 주 데이터베이스로 온라인 상태가 됩니다. 데이터베이스가 동기화되어야 한다는 점에서 주 데이터베이스에서 커밋된 모든 트랜잭션이 미러 데이터베이스에서도 커밋되기 때문에 장애 조치 중에 데이터 손실이 방지됩니다.  
   
 > [!IMPORTANT]  
@@ -149,7 +149,7 @@ ms.locfileid: "75252788"
   
 -   [자동 장애 조치를 해제하려면(Transact-SQL 사용)](#DisableAutoTsql)  
   
-###  <a name="ConditionsForAutoFo"></a> 자동 장애 조치(Failover)에 필요한 상태  
+###  <a name="conditions-required-for-an-automatic-failover"></a><a name="ConditionsForAutoFo"></a> 자동 장애 조치(Failover)에 필요한 상태  
  자동 장애 조치(Failover)에는 다음 조건이 필요합니다.  
   
 -   데이터베이스 미러링 세션이 보호 우선 모드로 실행되고 있어야 하고 미러링 모니터 서버가 있어야 합니다. 자세한 내용은 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)을 참조하세요.  
@@ -165,7 +165,7 @@ ms.locfileid: "75252788"
   
      미러 서버에서 주 서버의 오류를 감지하는 방법은 하드 오류인지 또는 소프트 오류인지에 따라 달라집니다. 자세한 내용은 [Possible Failures During Database Mirroring](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)을 참조하세요.  
   
-###  <a name="HowAutoFoWorks"></a> 자동 장애 조치 작동 방법  
+###  <a name="how-automatic-failover-works"></a><a name="HowAutoFoWorks"></a> 자동 장애 조치 작동 방법  
  위의 조건 하에서 자동 장애 조치는 다음과 같은 일련의 동작을 시작합니다.  
   
 1.  주 서버가 계속 실행되고 있으면 주 데이터베이스의 상태를 DISCONNECTED로 변경하고 주 데이터베이스로부터 모든 클라이언트의 연결을 끊습니다.  
@@ -192,7 +192,7 @@ ms.locfileid: "75252788"
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] DTC(Distributed Transaction Coordinator)를 사용하여 트랜잭션을 준비했지만 장애 조치가 발생했을 때 커밋되지 않은 트랜잭션은 데이터베이스에 장애 조치를 취한 다음 중단된 것으로 간주됩니다.  
   
-###  <a name="DisableAutoSSMS"></a> 자동 장애 조치(failover)를 해제하려면(SQL Server Management Studio)  
+###  <a name="to-disable-automatic-failover-sql-server-management-studio"></a><a name="DisableAutoSSMS"></a> 자동 장애 조치(failover)를 해제하려면(SQL Server Management Studio)  
  **데이터베이스 속성 미러링** 페이지를 열고 다음 옵션 중 하나를 선택하여 운영 모드를 변경합니다.  
   
 -   **자동 장애 조치(Failover)가 없는 보호 우선(동기)**  
@@ -203,7 +203,7 @@ ms.locfileid: "75252788"
   
      이 모드에서는 미러 데이터베이스가 주 데이터베이스보다 지연될 수 있으며 수동 장애 조치를 수행할 수 없습니다.  
   
-###  <a name="DisableAutoTsql"></a> 자동 장애 조치를 해제하려면(Transact-SQL 사용)  
+###  <a name="to-disable-automatic-failover-using-transact-sql"></a><a name="DisableAutoTsql"></a> 자동 장애 조치를 해제하려면(Transact-SQL 사용)  
  데이터베이스 미러링 세션의 특정 시점에서 데이터베이스 소유자는 미러링 모니터를 해제하여 자동 장애 조치를 해제할 수 있습니다.  
   
  **미러링 모니터 해제**  
@@ -213,7 +213,7 @@ ms.locfileid: "75252788"
     > [!NOTE]  
     >  전체 트랜잭션 보안은 유지하고 미러링 모니터를 해제하면 세션이 자동 장애 조치를 지원하지 않는 보호 우선 모드가 됩니다.  
   
-##  <a name="ForcedService"></a> Forced Service (with Possible Data Loss)  
+##  <a name="forced-service-with-possible-data-loss"></a><a name="ForcedService"></a> Forced Service (with Possible Data Loss)  
  데이터베이스 미러링은 미러 서버를 웜 대기 서버로 사용할 수 있는 강제 서비스(데이터 손실 가능)를 재해 복구 방법으로 제공합니다. 미러링 세션에서 주 서버가 미러 서버와 연결이 끊긴 경우에만 서비스를 강제 적용할 수 있습니다. 서비스를 강제 적용하면 데이터가 손실될 수 있으므로 반드시 필요한 경우에만 주의해서 사용해야 합니다.  
   
  강제 서비스 지원은 세션의 운영 모드와 상태에 따라 다음과 같이 달라집니다.  
@@ -239,7 +239,7 @@ ms.locfileid: "75252788"
   
 -   [강제 장애 조치(Failover) 관리를 위한 관련 태스크](#RelatedTasksForFS)  
   
-###  <a name="TypicalCaseFS"></a> 강제 서비스의 일반적인 사례  
+###  <a name="typical-case-of-forced-service"></a><a name="TypicalCaseFS"></a> 강제 서비스의 일반적인 사례  
  다음 그림에서는 강제 서비스(데이터 손실 가능)의 일반적인 사례를 보여 줍니다.  
   
  ![데이터가 손실될 수 있는 강제 서비스](../../database-engine/database-mirroring/media/dbm-forced-service.gif "데이터가 손실될 수 있는 강제 서비스")  
@@ -251,7 +251,7 @@ ms.locfileid: "75252788"
 > [!NOTE]  
 >  성능 우선 모드에서는 미러링 모니터 서버가 필요하지 않지만 미러링 모니터 서버가 구성된 경우 현재 미러 서버에 연결되어 있어야만 서비스를 강제 적용할 수 있습니다.  
   
-###  <a name="FSrisks"></a> 서비스 강제 적용 시의 위험  
+###  <a name="risks-of-forcing-service"></a><a name="FSrisks"></a> 서비스 강제 적용 시의 위험  
  서비스를 강제 적용하면 데이터가 손실될 수 있음을 이해하는 것이 중요합니다. 데이터 손실은 미러 서버가 주 서버와 통신할 수 없어 두 데이터베이스의 동기화를 보장할 수 없기 때문에 발생합니다. 서비스를 강제 적용하면 새 복구 분기가 시작됩니다. 원래 주 데이터베이스와 미러 데이터베이스가 서로 다른 복구 분기에 있으므로 이제 각 데이터베이스에는 다른 데이터베이스에 없는 데이터가 포함됩니다. 원래 주 데이터베이스에는 Send Queue에서 이전의 미러 데이터베이스로 아직 전송되지 않은 변경 내용(보내지 않은 로그)이 포함되고 이전의 미러 데이터베이스에는 서비스가 강제 적용된 후 발생한 변경 내용이 포함됩니다.  
   
  주 서버가 실패하여 서비스가 강제 적용된 경우 발생 가능한 데이터 손실은 실패 전에 미러 서버로 보내지 않은 트랜잭션 로그가 있는지 여부에 따라 달라집니다. 보호 우선 모드에서는 미러 데이터베이스가 동기화될 때까지만 보내지 않은 로그가 있을 수 있습니다. 성능 우선 모드에서는 보내지 않은 로그가 항상 누적되어 있을 수 있습니다.  
@@ -264,7 +264,7 @@ ms.locfileid: "75252788"
   
  자세한 내용은 이 항목의 뒷부분에 나오는 [잠재적 데이터 손실 관리](#ManageDataLoss)를 참조하십시오.  
   
-###  <a name="ManageDataLoss"></a> 잠재적 데이터 손실 관리  
+###  <a name="managing-the-potential-data-loss"></a><a name="ManageDataLoss"></a> 잠재적 데이터 손실 관리  
  서비스가 강제 적용된 후 이전 주 서버를 사용할 수 있게 되면 데이터베이스가 손상되지 않았다고 가정할 경우 잠재적 데이터 손실을 관리할 수 있습니다. 잠재적 데이터 손실을 관리하는 데 사용 가능한 방법은 원래 주 서버가 파트너에 다시 연결하여 미러링 세션에 다시 참여했는지 여부에 따라 달라집니다. 원래 주 서버가 새로운 주 인스턴스에 액세스할 수 있다고 가정하면 자동으로 투명하게 다시 연결할 수 있습니다.  
   
 #### <a name="the-original-principal-server-has-reconnected"></a>원래 주 서버가 다시 연결된 경우  
@@ -293,7 +293,7 @@ ms.locfileid: "75252788"
   
      업데이트된 데이터베이스를 초기 주 데이터베이스로 사용하여 미러링을 다시 설정하려면 이 백업과 하나 이상의 후속 로그 백업을 사용하여 새 미러 데이터베이스를 만듭니다. 미러링이 제거된 후에 수행된 모든 로그 백업을 적용해야 합니다. 따라서 새 미러링 세션이 시작될 때까지 주 데이터베이스의 추가 로그 백업을 지연하는 것이 좋습니다.  
   
-###  <a name="RelatedTasksForFS"></a> 강제 장애 조치(Failover) 관리를 위한 관련 태스크  
+###  <a name="related-tasks-for-managing-a-forced-failover"></a><a name="RelatedTasksForFS"></a> 강제 장애 조치(Failover) 관리를 위한 관련 태스크  
  **서비스를 강제로 수행하려면**  
   
 -   [데이터베이스 미러링 세션에 서비스 강제 수행&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/force-service-in-a-database-mirroring-session-transact-sql.md)  

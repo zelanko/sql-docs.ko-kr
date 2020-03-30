@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: d1b9131442160969e7511f42b91ed09a3b4001e1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67934822"
 ---
 # <a name="upgrade-master-data-services"></a>MDS(Master Data Services) 업그레이드
@@ -38,7 +38,7 @@ ms.locfileid: "67934822"
 > -   모델 배포 패키지는 해당 패키지를 만드는 데 사용한 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서만 사용할 수 있습니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서 만든 모델 배포 패키지는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 배포할 수 없습니다.  
 > -   Data Quality Services 및 MDS(Master Data Services)를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드한 후 이전 버전의 모든 Excel용 MDS(Master Data Services) 추가 기능은 더 이상 작동하지 않습니다. Excel용 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Master Data Services 추가 기능은 [Microsoft Excel용 Master Data Services 추가 기능](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md) 에서 다운로드할 수 있습니다.  
   
-##  <a name="fileLocation"></a> 파일 위치  
+##  <a name="file-location"></a><a name="fileLocation"></a> 파일 위치  
   
 -   [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)]의 경우 파일은 기본적으로 *드라이브*:\Program Files\Microsoft SQL Server\140\Master Data Services에 설치됩니다.  
 
@@ -50,7 +50,7 @@ ms.locfileid: "67934822"
   
 -   기본적으로 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]의 경우 파일은 *드라이브*:\Program Files\Microsoft SQL Server\Master Data Services에 설치됩니다.  
   
-##  <a name="noengine"></a> 데이터베이스 엔진 업그레이드 없이 업그레이드  
+##  <a name="upgrade-without-database-engine-upgrade"></a><a name="noengine"></a> 데이터베이스 엔진 업그레이드 없이 업그레이드  
  이 시나리오에서는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]를 계속 사용하여 MDS 데이터베이스를 호스팅합니다. 그러나 MDS 데이터베이스의 스키마를 업그레이드한 다음 현재 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] 웹 애플리케이션을 만들어 MDS 데이터베이스에 액세스해야 합니다. 업그레이드 후에는 이전 웹 애플리케이션에서 더 이상 MDS 데이터베이스에 액세스할 수 없습니다.  
   
  현재 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 및 이전 버전의 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]를 동일한 컴퓨터에 설치할 수 있습니다. [파일 위치](#fileLocation)에 표시된 대로 파일은 다른 위치에 설치됩니다.  
@@ -107,18 +107,18 @@ ms.locfileid: "67934822"
   
     3.  **적용**을 클릭합니다.  
   
-##  <a name="engine"></a> 데이터베이스 엔진 업그레이드를 사용해서 업그레이드  
+##  <a name="upgrade-with-database-engine-upgrade"></a><a name="engine"></a> 데이터베이스 엔진 업그레이드를 사용해서 업그레이드  
  이 시나리오에서는 데이터베이스 엔진과 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 애플리케이션을 모두 이전 버전에서 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 또는 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]로 업그레이드합니다.  
   
  **데이터베이스 엔진 업그레이드를 사용해서 업그레이드하려면**  
   
-1.  **[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]에만 해당**: **제어판** > **프로그램 및 기능**을 열고 Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]를 제거합니다.  
+1.  **[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]의 경우에만**: **제어판** > **프로그램 및 기능**을 열고 Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]를 제거합니다.  
   
 2.  데이터베이스 엔진을 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 또는 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]로 업그레이드합니다. 자세한 내용은 [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)을(를) 참조하세요.  
   
 3.  [데이터베이스 엔진 업그레이드 없이 업그레이드](#noengine) 에서 모든 단계를 완료합니다.  
   
-##  <a name="twocomputer"></a> 두 컴퓨터에서의 업그레이드 시나리오  
+##  <a name="upgrade-in-two-computer-scenario"></a><a name="twocomputer"></a> 두 컴퓨터에서의 업그레이드 시나리오  
  이 시나리오에서는 두 컴퓨터에 SQL Server, 즉 하나에는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 또는 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)], 다른 하나에는 이전 버전의 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]가 설치된 시스템을 업그레이드합니다.  
   
  이전 버전의 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]가 설치된 경우 이전 버전을 계속 사용하여 한 컴퓨터에서 MDS 데이터베이스를 호스팅합니다. 그러나 MDS 데이터베이스의 스키마를 업그레이드한 다음 각각 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 또는 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] 웹 애플리케이션을 사용하여 MDS 데이터베이스에 액세스해야 합니다. MDS 데이터베이스는 이전 버전의 웹 애플리케이션에서 더 이상 액세스할 수 없습니다.  
@@ -127,7 +127,7 @@ ms.locfileid: "67934822"
   
 -   [데이터베이스 엔진 업그레이드 없이 업그레이드](#noengine)에서 모든 단계를 완료합니다.  
   
-##  <a name="restore"></a> 백업에서 데이터베이스를 복원하여 업그레이드  
+##  <a name="upgrade-with-restoring-a-database-from-backup"></a><a name="restore"></a> 백업에서 데이터베이스를 복원하여 업그레이드  
  이 시나리오에서는 동일한 컴퓨터 또는 서로 다른 두 컴퓨터에 이전 버전과 함께 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 또는 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]이 설치됩니다. 데이터베이스는 업그레이드하기 전에 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 또는 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] 릴리스 이전의 버전에서 백업되었으며 이 데이터베이스를 복원해야 합니다.  
   
  **백업에서 데이터베이스를 복원하여 업그레이드하려면**  
@@ -149,7 +149,7 @@ ms.locfileid: "67934822"
 3.  MDS 데이터베이스 스키마를 업그레이드하고 웹 애플리케이션을 만들고 새 웹 애플리케이션을 업그레이드된 MDS 데이터베이스와 연결합니다. 지침은 [데이터베이스 엔진 업그레이드 없이 업그레이드](#noengine)의 2-4단계를 참조하세요.  
   
 ## <a name="troubleshooting"></a>문제 해결  
- **문제:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 웹 애플리케이션을 열 때 "클라이언트 버전이 데이터베이스 버전과 호환되지 않습니다."라는 오류 메시지가 나타납니다.  
+ **문제:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 웹 애플리케이션을 열면 "클라이언트 버전이 데이터베이스 버전과 호환되지 않습니다."라는 오류 메시지가 표시됩니다.  
   
  **해결 방법:** 이 문제는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 마스터 데이터 관리자 웹 애플리케이션이 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Master Data Services로 업그레이드된 데이터베이스에 액세스하려고 할 때 발생합니다. [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] 웹 애플리케이션을 대신 사용해야 합니다.  
   

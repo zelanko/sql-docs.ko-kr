@@ -14,10 +14,10 @@ ms.assetid: 6575e2a8-16bb-449c-bdca-4a4202d0972f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5caaa59fd28f3557a6ae7edf90c6a53497d24a1a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321603"
 ---
 # <a name="log-reader-agent-security-peer-to-peer-replication"></a>로그 판독기 에이전트 보안(피어 투 피어 복제)

@@ -12,10 +12,10 @@ ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4767267c1fc88eab6dafe646a0f61e3bd1992de8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71284974"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사 시작
@@ -44,7 +44,7 @@ ms.locfileid: "71284974"
 ## <a name="whats-next"></a>다음 단계  
  시작 페이지의 다음 페이지는 **데이터 원본 선택**입니다. 이 페이지에서는 데이터 원본 및 데이터 원본에 연결하는 방법에 대한 정보를 제공합니다. 자세한 내용은 [데이터 원본 선택](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)을 참조하세요.
 
-## <a name="related"></a> 관련 태스크 및 콘텐츠  
+## <a name="related-tasks-and-content"></a><a name="related"></a> 관련 태스크 및 콘텐츠  
  다음은 몇 가지 다른 기본 작업입니다.
 -   **마법사의 작동 원리에 대한 빠른 예제를 참조하세요.**
 

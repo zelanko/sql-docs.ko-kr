@@ -11,10 +11,10 @@ ms.assetid: a327fa18-58f4-4e69-bb87-44faf47e20ef
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f13e8eae235eb040e92baa15247b6094e9aa1075
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294695"
 ---
 # <a name="how-to-prepare-sql-server-for-cdc"></a>CDC를 위해 SQL Server를 준비하는 방법

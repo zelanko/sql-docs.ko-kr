@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8464f56274308694ada9e5721ae8e0ceb5ed85ed
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77558326"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>메모리 내 OLTP에 대해 지원되지 않는 SQL Server 기능
@@ -84,7 +84,7 @@ ms.locfileid: "77558326"
 
 최신 릴리스의 SQL Server에서 이전에 지원되지 않았던 기능의 지원을 추가하는 경우도 있습니다. 이 섹션에서는 메모리 내 OLTP에서 지원되지 않았지만 나중에 메모리 내 OLTP에서 지원된 기능을 나열합니다.
 
-다음 표에서 `(15.x)`와 같은 _버전_ 값은 Transact-SQL 문 `SELECT @@Version;`에서 반환되는 값을 참조합니다.
+다음 표에서 _와 같은_ 버전`(15.x)` 값은 Transact-SQL 문 `SELECT @@Version;`에서 반환되는 값을 참조합니다.
 
 | 기능 이름 | SQL Server 버전 | 주석 |
 | :----------- | :-------------------- | :------- |

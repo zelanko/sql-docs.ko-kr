@@ -11,10 +11,10 @@ ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1fb9be98dbbdf2935fe79c6f579be7ab0e357624
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293202"
 ---
 # <a name="create-infosource-for-master-data"></a>마스터 데이터용 InfoSource 만들기

@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7f31e3894448e5d6a044af75c7e86b704b993aa6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71682012"
 ---
 # <a name="float-and-real-transact-sql"></a>float 및 real(Transact-SQL)
@@ -48,7 +48,7 @@ ms.locfileid: "71682012"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 *n*을 가능한 두 값 중 하나로 처리합니다. **1**<=n<=**24**이면 *n*은 **24**로 처리됩니다. **25**<=n<=**53**이면 *n*은 **53**으로 처리됩니다.  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float**[ **(n)** ] 데이터 형식은 **1**부터 **53**까지 *n*의 모든 값에 대해 ISO 표준을 준수합니다. **double precision**의 동의어는 **float(53)** 입니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float**[ **(n)** ] 데이터 형식은 *1*부터 **53**까지 **n**의 모든 값에 대해 ISO 표준을 준수합니다. **double precision**의 동의어는 **float(53)** 입니다.
   
 ## <a name="remarks"></a>설명  
   

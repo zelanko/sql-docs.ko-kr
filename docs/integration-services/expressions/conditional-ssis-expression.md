@@ -14,10 +14,10 @@ ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 758cd90c3932d59e725f6a8a9bf829e59ecf5474
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71290168"
 ---
 # <a name="--conditional-ssis-expression"></a>? : (조건부)(SSIS 식)

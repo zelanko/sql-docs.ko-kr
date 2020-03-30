@@ -14,10 +14,10 @@ ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 31cf3fcc59ad9dbe694b7a11f6b90981f37fc78b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014674"
 ---
 # <a name="tools-to-monitor-always-on-availability-groups"></a>"Always On 가용성 그룹을 모니터링하는 도구"
@@ -33,7 +33,7 @@ ms.locfileid: "68014674"
 |시스템 모니터|**SQLServer:Availability Replica** 성능 개체에는 가용성 복제본에 대한 정보를 보고하는 성능 카운터가 포함됩니다.|[SQL Server, 가용성 복제본](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |시스템 모니터|**SQLServer:Database Replica** 성능 개체에는 지정된 보조 복제본의 보조 데이터베이스에 대한 정보를 보고하는 성능 카운터가 포함됩니다.<br /><br /> SQL Server의 **SQLServer:Databases** 개체에는 특히 트랜잭션 로그 작업을 모니터링하는 성능 카운터가 포함됩니다. 가용성 데이터베이스에서 트랜잭션 로그 작업 모니터링과 관련된 카운터는 **Log Flush Write Time (ms)** , **Log Flushes/sec**, **Log Pool Cache Misses/sec**, **Log Pool Disk Reads/sec**및 **Log Pool Requests/sec**입니다.|[SQL Server, 데이터베이스 복제본](../../../relational-databases/performance-monitor/sql-server-database-replica.md) 및 [SQL Server, Databases 개체](../../../relational-databases/performance-monitor/sql-server-databases-object.md)|  
   
-##  <a name="RelatedContent"></a> 관련 내용  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
   
 -   **블로그:**  
   

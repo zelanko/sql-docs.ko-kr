@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f8652f227c43354f54e8ec76f9c174f4551dcb2a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68047993"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>데이터베이스 미러링 엔드포인트(SQL Server)
@@ -39,7 +39,7 @@ ms.locfileid: "68047993"
 >  이후 버전의 Microsoft SQL Server에서는 데이터베이스 미러링 기능이 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 대신 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 을 사용하도록 수정하십시오.  
   
   
-##  <a name="ServerNetworkAddress"></a> 서버 네트워크 주소  
+##  <a name="server-network-address"></a><a name="ServerNetworkAddress"></a> 서버 네트워크 주소  
  서버 인스턴스의 네트워크 주소( *서버 네트워크 주소* 또는 *엔드포인트 URL*)에는 해당 엔드포인트의 포트 번호는 물론 호스트 컴퓨터의 시스템 이름과 도메인 이름도 포함됩니다. 포트 번호는 특정 서버 인스턴스를 고유하게 식별합니다.  
   
  다음 그림에서는 같은 서버의 두 서버 인스턴스가 고유하게 식별되는 방법을 보여 줍니다. 두 서버 인스턴스의 서버 네트워크 주소에는 모두 `MYSYSTEM`이라는 같은 시스템 이름과 `Adventure-Works.MyDomain.com`이라는 도메인 이름이 포함되어 있습니다. 시스템에서 서버 인스턴스로 연결을 라우팅할 수 있도록 서버 네트워크 주소에 특정 서버 인스턴스의 미러링 엔드포인트와 연결된 포트 번호가 포함되어 있습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "68047993"
 >  사용 중인 데이터베이스 미러링 엔드포인트는 다시 구성하지 마세요. 서버 인스턴스는 다른 서버 인스턴스의 엔드포인트를 사용하여 다른 시스템의 상태를 파악합니다. 엔드포인트를 다시 구성하면 인스턴스가 다시 시작되어 다른 서버 인스턴스에서 오류가 발생할 수 있습니다. 이는 특히 파트너에 엔드포인트를 다시 구성하면 장애 조치(Failover) 오류가 발생할 수 있는 자동 장애 조치(failover) 모드에서 중요한 사항입니다.  
   
   
-##  <a name="EndpointAuthenticationTypes"></a> 데이터베이스 미러링 엔드포인트에 대한 인증 유형 결정  
+##  <a name="determining-the-authentication-type-for-a-database-mirroring-endpoint"></a><a name="EndpointAuthenticationTypes"></a> 데이터베이스 미러링 엔드포인트에 대한 인증 유형 결정  
  서버 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정에 따라 데이터베이스 미러링 엔드포인트에 사용할 수 있는 인증 유형이 다음과 같이 결정됩니다.  
   
 -   모든 서버 인스턴스가 도메인 서비스 계정으로 실행 중인 경우 데이터베이스 미러링 엔드포인트에 Windows 인증을 사용할 수 있습니다. 모든 서버 인스턴스가 동일한 도메인 사용자 계정으로 실행되는 경우에는 두 **master** 데이터베이스 모두에 올바른 사용자 로그인이 자동으로 생성됩니다. 이 경우 가용성 데이터베이스에 대한 보안 구성이 단순해지므로 계정을 이와 같이 설정하는 것이 좋습니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "68047993"
      인증서를 통해 데이터베이스 미러링 보안을 구성하는 자동화된 방법은 없습니다. CREATE ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 **New-SqlHadrEndpoint** PowerShell cmdlet을 사용해야 합니다. 자세한 내용은 [CREATE ENDPOINT(TRANSACT-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)를 참조하세요. 서버 인스턴스에서 인증서 인증을 사용하도록 설정하는 방법은 [데이터베이스 미러링 엔드포인트에 대한 인증서 사용(TRANSACT-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)을 참조하세요.  
   
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **데이터베이스 미러링 엔드포인트를 구성하려면**  
   
 -   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기(Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  

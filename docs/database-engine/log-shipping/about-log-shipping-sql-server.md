@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a50c5344f8742a8483d952b8cab3b03d8d666b31
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68057916"
 ---
 # <a name="about-log-shipping-sql-server"></a>로그 전달 정보(SQL Server)
@@ -50,7 +50,7 @@ ms.locfileid: "68057916"
   
 -   [관련 작업](#RelatedTasks)  
   
-##  <a name="Benefits"></a> 이점  
+##  <a name="benefits"></a><a name="Benefits"></a> 이점  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 개별 인스턴스에서 각각 단일 주 데이터베이스와 하나 이상의 보조 데이터베이스에 대한 재해 복구 솔루션을 제공합니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68057916"
   
 -   주 서버가 주 데이터베이스의 로그를 백업하는 시점과 보조 서버가 로그 백업을 복원(적용)해야 할 시점 사이에 사용자 지정 지연을 설정할 수 있습니다. 예를 들어 주 데이터베이스에서 데이터가 실수로 변경된 경우 지연이 더 길면 도움이 될 수 있습니다. 실수로 변경된 내용을 빨리 발견하면 변경 내용이 반영되기 전에 보조 데이터베이스에서 아직 변경되지 않은 데이터를 지연 덕분에 검색할 수 있습니다.  
   
-##  <a name="TermsAndDefinitions"></a> 용어 및 정의  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> 용어 및 정의  
  주 데이터베이스  
  프로덕션 서버인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스입니다.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68057916"
 > [!TIP]  
 >  각 경고에 대해 경고 번호를 지정해야 합니다. 또한 경고가 발생할 때 운영자에게 알릴 경고를 구성해야 합니다.  
   
-##  <a name="ComponentsAndConcepts"></a> 로그 전달 개요  
+##  <a name="log-shipping-overview"></a><a name="ComponentsAndConcepts"></a> 로그 전달 개요  
  로그 전달은 다음 세 가지 작업으로 구성되어 있습니다.  
   
 1.  주 서버 인스턴스에서 트랜잭션 로그를 백업합니다.  
@@ -128,7 +128,7 @@ ms.locfileid: "68057916"
   
  ![백업, 복사 및 복원 작업을 보여 주는 구성](../../database-engine/log-shipping/media/ls-typical-configuration.gif "백업, 복사 및 복원 작업을 보여 주는 구성")  
   
-##  <a name="Interoperability"></a> 상호 운용성  
+##  <a name="interoperability"></a><a name="Interoperability"></a> 상호 운용성  
  로그 전달은 다음의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]기능 또는 구성 요소와 함께 사용할 수 있습니다.  
   
 -   [로그 전달에서 Always On 가용성 그룹으로 마이그레이션하기 위한 필수 조건&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
@@ -140,7 +140,7 @@ ms.locfileid: "68057916"
 > [!NOTE]  
 >  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 및 데이터베이스 미러링은 함께 사용할 수 없습니다. 이러한 기능 중 하나를 위해 구성된 데이터베이스는 다른 기능을 위해 구성할 수 없습니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [SQL Server 2016으로 로그 전달 업그레이드&#40;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   

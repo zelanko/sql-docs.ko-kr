@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3ee098b61c233bb3012ab1505553873c30edd5d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095874"
 ---
 # <a name="while-transact-sql"></a>WHILE(Transact-SQL)
@@ -115,7 +115,7 @@ DEALLOCATE Employee_Cursor;
 GO 
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-simple-while-loop"></a>C: 단순 While 루프  
  다음 예에서는 제품의 평균 정가가 `$300` 미만인 경우 `WHILE` 루프가 가격을 두 배로 한 다음 최대 가격을 선택합니다. 최대 가격이 `$500` 이하인 경우 `WHILE` 루프가 다시 시작되어 가격을 다시 두 배로 만듭니다. 최대 가격이 `$500`를 초과할 때까지 이 루프는 가격을 계속 두 배로 늘린 다음, `WHILE` 루프를 종료합니다.  

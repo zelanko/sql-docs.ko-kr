@@ -21,10 +21,10 @@ ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 26bda5e190f18469948f935302ee2cbf9ddd121c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67940401"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers  
@@ -87,7 +87,7 @@ Oracle 및 IBM DB2,에 구독을 만드는 방법은 [Oracle 구독자](../../..
   
 -   게시에서 아티클을 추가하거나 삭제하면[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에 대한 구독을 다시 초기화해야 합니다.  
   
--   모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에 대해 지원되는 유일한 제약 조건은 NULL 및 NOT NULL입니다. PRIMARY KEY 제약 조건은 고유 인덱스로 복제됩니다.  
+-   모든[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에 대해 지원되는 유일한 제약 조건은 NULL 및 NOT NULL입니다. PRIMARY KEY 제약 조건은 고유 인덱스로 복제됩니다.  
   
 -   빈 값, 빈 문자열 및 NULL이 표시되는 방법에 영향을 주는 NULL 값은 다른 데이터베이스와 다르게 처리됩니다. 이로 인해 UNIQUE 제약 조건이 정의된 열에 삽입된 값의 동작도 영향을 받게 됩니다. 예를 들어 Oracle에서는 고유하다고 판단되는 열에 여러 NULL 값을 사용할 수 있지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 고유 열에 NULL 값을 하나만 사용할 수 있습니다.  
   

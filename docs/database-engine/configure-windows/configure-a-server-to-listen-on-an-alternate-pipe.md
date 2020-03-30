@@ -16,10 +16,10 @@ ms.assetid: 914f7491-e2be-4b0d-b3aa-fe5409cdbafa
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fd7a0ebf16733109e59aac74652d90e0b63a1d9d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012913"
 ---
 # <a name="configure-a-server-to-listen-on-an-alternate-pipe"></a>대체 파이프에서 수신 대기하도록 서버 구성
@@ -34,11 +34,11 @@ ms.locfileid: "68012913"
   
 -   클라이언트가 사용자 지정 연결 문자열을 사용하여 연결하도록 프로그래밍합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server 구성 관리자 사용  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> SQL Server 구성 관리자 사용  
   
 #### <a name="to-configure-the-named-pipe-used-by-the-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진에서 사용하는 명명된 파이프를 구성하려면  
   
-1.  SQL Server 구성 관리자의 콘솔 창에서 **SQL Server 네트워크 구성**을 확장한 다음 ‘\<인스턴스 이름>’**에 대한 프로토콜**을 클릭하여 확장합니다.   
+1.  SQL Server 구성 관리자의 콘솔 창에서 **SQL Server 네트워크 구성**을 확장한 다음 ‘**인스턴스 이름>’** 에 대한 프로토콜*을 클릭하여 확장합니다.\<*  
   
 2.  세부 정보 창에서 **명명된 파이프**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   

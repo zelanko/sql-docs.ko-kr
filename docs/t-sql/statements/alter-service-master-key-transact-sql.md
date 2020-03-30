@@ -25,10 +25,10 @@ ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 29a30f6b8d65cf1b821c93de0f051925b3cb6626
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68112866"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY(Transact-SQL)
@@ -90,7 +90,7 @@ ALTER SERVICE MASTER KEY
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에서는 AES 암호화 알고리즘을 사용하여 SMK(서비스 마스터 키) 및 DMK(데이터베이스 마스터 키)를 보호합니다. AES는 이전 버전에서 사용하는 3DES보다 최신 암호화 알고리즘입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 로 업그레이드한 후 SMK와 DMK를 다시 생성해야 마스터 키가 AES로 업그레이드됩니다. DMK를 다시 생성하는 방법은 [ALTER MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)를 참조하세요.  
   
-##  <a name="_changing"></a> SQL Server 서비스 계정 변경  
+##  <a name="changing-the-sql-server-service-account"></a><a name="_changing"></a> SQL Server 서비스 계정 변경  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정을 변경하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용합니다. 서비스 계정 변경을 관리하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 그룹에 부여된 필요한 사용 권한이 있는 컴퓨터 계정으로 보호되는 중복 서비스 마스터 키 복사본을 저장합니다. 컴퓨터를 다시 빌드하면 이전에 서비스 계정에 사용되던 것과 동일한 도메인 사용자가 서비스 마스터 키를 복구할 수 있습니다. 로컬 계정이나 로컬 시스템, 로컬 서비스, 네트워크 서비스 계정에 대해서는 이 방법을 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다른 컴퓨터로 이동하는 경우 백업 및 복원을 사용하여 서비스 마스터 키를 마이그레이션하십시오.  
   
  REGENERATE 구는 서비스 마스터 키를 다시 생성합니다. 서비스 마스터 키가 다시 생성되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이 키로 암호화된 모든 키의 암호를 해독한 다음 새로운 서비스 마스터 키로 키를 암호화합니다. 이 작업은 리소스 소비가 많습니다. 키가 손상된 경우가 아니면 이 작업은 사용량이 낮은 기간 동안에만 수행하도록 예약해야 합니다. 암호 해독 중 하나가 실패하면 전체 문이 실패합니다.  

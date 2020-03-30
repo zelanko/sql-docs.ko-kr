@@ -16,10 +16,10 @@ ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 61e3395939b7faf059a5376674d4f85e3d5c6677
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251167"
 ---
 # <a name="specify-backup-or-restore-to-continue-or-stop-after-error"></a>오류 발생 후 계속 또는 중지하도록 백업 또는 복원 지정
@@ -39,11 +39,11 @@ ms.locfileid: "75251167"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  BACKUP  
  BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버로 설정됩니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "75251167"
   
  멤버 자격 정보를 서버에서 항상 사용할 수 있는 역할에 RESTORE 권한이 제공됩니다. 고정 데이터베이스 역할의 멤버 자격은 데이터베이스가 액세스 가능한 상태이며 손상되지 않은 경우에만 확인할 수 있는데, RESTORE 실행 시 데이터베이스가 항상 이러한 상태인 것은 아니므로 **db_owner** 고정 데이터베이스 역할의 멤버에게는 RESTORE 권한이 없습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-specify-whether-backup-continues-or-stops-after-an-error-is-encountered"></a>오류가 발생한 후 백업을 계속할지 중지할지를 지정하려면  
   
@@ -62,7 +62,7 @@ ms.locfileid: "75251167"
   
 2.  **옵션** 페이지의 **안정성** 섹션에서 **미디어에 쓰기 전에 체크섬 수행** 과 **오류 발생 시 계속**을 차례로 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-specify-whether-a-backup-operation-continues-or-stops-after-encountering-an-error"></a>오류가 발생한 후 백업 작업을 계속할지 중지할지를 지정하려면  
   

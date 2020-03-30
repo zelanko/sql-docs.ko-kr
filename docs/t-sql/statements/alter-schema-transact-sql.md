@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4bb0b9c6b9d6fe47b69678211122e5c8be7023c7
-ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78937660"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA(Transact-SQL)
@@ -97,7 +97,7 @@ ALTER SCHEMA schema_name
 ## <a name="examples"></a>예  
   
 ### <a name="a-transferring-ownership-of-a-table"></a>A. 테이블의 소유권 이전  
- 다음 예제에서는 `Address` 테이블을 `Person` 스키마에서 ‘HumanResources’ 스키마로 이동하여 `HumanResources` 스키마를 수정합니다.  
+ 다음 예제에서는 `HumanResources` 테이블을 `Address` 스키마에서 ‘HumanResources’ 스키마로 이동하여 `Person` 스키마를 수정합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -138,7 +138,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-transferring-ownership-of-a-table"></a>C. 테이블의 소유권 이전  
- 다음 예는 `dbo` 스키마에 `Region` 테이블을 만들고, `Sales` 스키마를 만든 다음, `Region` 스키마에서 `dbo` 스키마로 `Sales` 테이블을 이동합니다.  
+ 다음 예는 `Region` 스키마에 `dbo` 테이블을 만들고, `Sales` 스키마를 만든 다음, `Region` 스키마에서 `dbo` 스키마로 `Sales` 테이블을 이동합니다.  
   
 ```  
 CREATE TABLE dbo.Region   

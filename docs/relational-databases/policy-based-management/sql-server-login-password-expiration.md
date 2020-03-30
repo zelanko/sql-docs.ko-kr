@@ -13,10 +13,10 @@ ms.assetid: 7e3bf9da-a436-433d-847a-47c30428cad3
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 92a8452b586768e260c9bc378d06201cd2e67ed7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68021631"
 ---
 # <a name="sql-server-login-password-expiration"></a>SQL Server 로그인 암호 만료

@@ -17,10 +17,10 @@ ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 92e485372bca104ae7c34405f711ced3a6a60a44
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75242583"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>전체 데이터베이스 복원(단순 복구 모델)
@@ -42,7 +42,7 @@ ms.locfileid: "75242583"
 > [!NOTE]  
 >  이전 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 백업 지원에 대한 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)의 "호환성 지원" 섹션을 참조하세요.  
   
-##  <a name="Overview"></a> 단순 복구 모델에서의 데이터베이스 복원 개요  
+##  <a name="overview-of-database-restore-under-the-simple-recovery-model"></a><a name="Overview"></a> 단순 복구 모델에서의 데이터베이스 복원 개요  
  단순 복구 모델에서는 차등 데이터베이스 백업을 복원할지 여부에 따라 전체 데이터베이스 복원이 하나 또는 두 개의 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 문으로 이루어집니다. 전체 데이터베이스 백업만 사용하는 경우 다음 그림과 같이 최신 백업을 복원하면 됩니다.  
   
  ![전체 데이터베이스 백업만 복원](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.gif "전체 데이터베이스 백업만 복원")  
@@ -54,7 +54,7 @@ ms.locfileid: "75242583"
 > [!NOTE]  
 >  데이터베이스 백업을 다른 서버 인스턴스로 복원하려면 [백업 및 복원으로 데이터베이스 복사](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)를 참조하세요.  
   
-###  <a name="TsqlSyntax"></a> 기본 Transact-SQL RESTORE 구문  
+###  <a name="basic-transact-sql-restore-syntax"></a><a name="TsqlSyntax"></a> 기본 Transact-SQL RESTORE 구문  
  전체 데이터베이스 백업을 복원하는 기본 [!INCLUDE[tsql](../../includes/tsql-md.md)][RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 구문은 다음과 같습니다.  
   
  RESTORE DATABASE *database_name* FROM *backup_device* [ WITH NORECOVERY ]  
@@ -66,7 +66,7 @@ ms.locfileid: "75242583"
   
  RESTORE DATABASE *database_name* FROM *backup_device* WITH RECOVERY  
   
-###  <a name="Example"></a> 예(Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="Example"></a> 예(Transact-SQL)  
  다음 예에서는 먼저 [BACKUP](../../t-sql/statements/backup-transact-sql.md) 문을 사용하여 전체 데이터베이스 백업과 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 차등 데이터베이스 백업을 만드는 방법을 보여 줍니다. 그런 다음 이러한 백업을 차례로 복원합니다. 데이터베이스는 차등 데이터베이스 백업이 완료된 시점의 상태로 복원됩니다.  
   
  이 예에서는 전체 데이터베이스 복원 시나리오에 따른 복원 시퀀스의 중요 옵션을 보여 줍니다. *복원 순서* 는 하나 이상의 복원 단계를 통해 데이터를 이동시키는 하나 이상의 복원 작업으로 구성됩니다. 이 용도와 관련 없는 구문 및 세부 사항은 생략됩니다. 데이터베이스를 복구할 때 명확성을 위해 RECOVERY 옵션(기본값)을 명시적으로 지정하는 것이 좋습니다.  
@@ -100,7 +100,7 @@ FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak'
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **전체 데이터베이스 백업을 복원하려면**  
   
 -   [단순 복구 모델에서 데이터베이스 백업 복원&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  

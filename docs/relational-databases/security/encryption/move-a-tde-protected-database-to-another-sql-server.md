@@ -14,17 +14,17 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 21918147a6efdc750ecb56eb44c457fea9d962ac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558515"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>다른 SQL Server로 TDE 보호 데이터베이스 이동
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 TDE(투명한 데이터 암호화)를 사용하여 데이터베이스를 보호하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]을 사용하여 이 데이터베이스를 [!INCLUDE[tsql](../../../includes/tsql-md.md)]의 다른 인스턴스로 이동하는 방법을 설명합니다. TDE는 데이터 및 로그 파일에 대한 실시간 I/O 암호화 및 암호 해독을 수행합니다. 암호화에는 복구 중에 사용 가능하도록 데이터베이스 부트 레코드에 저장된 DEK(데이터베이스 암호화 키)가 사용됩니다. DEK는 서버의 **master** 데이터베이스에 저장된 인증서 또는 EKM 모듈로 보호되는 비대칭 키를 사용하여 보호되는 대칭 키입니다.   
    
-##  <a name="Restrictions"></a> 제한 사항  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   TDE로 보호되는 데이터베이스를 이동하려면 DEK를 여는 데 사용되는 인증서 또는 비대칭 키도 이동해야 합니다. 인증서 또는 비대칭 키는 **에서 데이터베이스 파일에 액세스할 수 있도록 대상 서버의** master [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 설치되어야 합니다. 자세한 내용은 [TDE&#40;투명한 데이터 암호화&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하세요.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "75558515"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 기본적으로 여기서 생성된 파일을 **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA** 에 저장합니다. 파일 이름 및 위치는 다를 수 있습니다.  
   
-##  <a name="Permissions"></a> 권한  
+##  <a name="permissions"></a><a name="Permissions"></a> 권한  
   
 -   데이터베이스 마스터 키를 만들려면 **master** 데이터베이스에 대한 **CONTROL DATABASE** 권한이 필요합니다.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "75558515"
   
 -   암호화된 데이터베이스에 대한 **CONTROL DATABASE** 권한과 데이터베이스 암호화 키를 암호화하는 데 사용되는 인증서 또는 비대칭 키에 대한 **VIEW DEFINITION** 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> 투명한 데이터 암호화로 보호되는 데이터베이스를 만들려면  
+##  <a name="to-create-a-database-protected-by-transparent-data-encryption"></a><a name="SSMSProcedure"></a> 투명한 데이터 암호화로 보호되는 데이터베이스를 만들려면  
 
 다음 절차에서는 SQL Server Management Studio를 사용하고 Transact-SQL을 사용하여 TDE로 보호되는 데이터베이스를 만들어야 함을 보여줍니다.
   
-###  <a name="SSMSCreate"></a> SQL Server Management Studio 사용  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSCreate"></a> SQL Server Management Studio 사용  
   
 1.  **master** 데이터베이스에서 데이터베이스 마스터 키 및 인증서를 만듭니다. 자세한 내용은 아래에서 **Transact-SQL 사용** 을 참조하세요.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "75558515"
   
 8.  완료되었으면 **확인**을 클릭합니다.  
 
-###  <a name="TsqlCreate"></a> Transact-SQL 사용  
+###  <a name="using-transact-sql"></a><a name="TsqlCreate"></a> Transact-SQL 사용  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -136,11 +136,11 @@ ms.locfileid: "75558515"
   
 -   [ALTER DATABASE&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)  
   
-##  <a name="TsqlProcedure"></a> 투명한 데이터 암호화로 보호되는 데이터베이스를 이동하려면 
+##  <a name="to-move-a-database-protected-by-transparent-data-encryption"></a><a name="TsqlProcedure"></a> 투명한 데이터 암호화로 보호되는 데이터베이스를 이동하려면 
 
 다음 절차에서는 SQL Server Management Studio를 사용하고 Transact-SQL을 사용하여 TDE로 보호되는 데이터베이스를 이동해야 함을 보여줍니다.
   
-###  <a name="SSMSMove"></a> SQL Server Management Studio 사용  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSMove"></a> SQL Server Management Studio 사용  
   
 1.  개체 탐색기에서 위에서 암호화한 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크** 를 가리킨 후, **분리...** 를 선택합니다.  
   
@@ -251,7 +251,7 @@ ms.locfileid: "75558515"
      **메시지**  
      빈 메시지 또는 "**파일을 찾을 수 없습니다**"라는 하이퍼링크를 표시합니다.  
   
-###  <a name="TsqlMove"></a> Transact-SQL 사용  
+###  <a name="using-transact-sql"></a><a name="TsqlMove"></a> Transact-SQL 사용  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

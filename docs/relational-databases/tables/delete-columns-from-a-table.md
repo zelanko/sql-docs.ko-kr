@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0db1834114a8bb2ea21d9fb566f2201dd933803c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68088462"
 ---
 # <a name="delete-columns-from-a-table"></a>테이블에서 열 삭제
@@ -46,21 +46,21 @@ ms.locfileid: "68088462"
 
    [Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> 시작하기 전에
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에
 
-### <a name="Restrictions"></a> 제한 사항
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항
 
 CHECK 제약 조건이 있는 열은 삭제할 수 없습니다. 먼저 제약 조건을 삭제해야 합니다.
 
 테이블 디자이너를 사용할 때를 제외하고는 PRIMARY KEY 또는 FOREIGN KEY 제약 조건이나 기타 종속성이 있는 열을 삭제할 수 없습니다. 개체 탐색기 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용할 때는 먼저 열에서 모든 종속성을 제거해야 합니다.
 
-### <a name="Security"></a> 보안
+### <a name="security"></a><a name="Security"></a> 보안
 
-#### <a name="Permissions"></a> 권한
+#### <a name="permissions"></a><a name="Permissions"></a> 권한
 
 테이블에 대한 ALTER 사용 권한이 필요합니다.
 
-## <a name="SSMSProcedure"></a> SQL Server Management Studio 사용
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용
 
 ### <a name="to-delete-columns-by-using-object-explorer"></a>개체 탐색기를 사용하여 열을 삭제하려면
 
@@ -77,7 +77,7 @@ CHECK 제약 조건이 있는 열은 삭제할 수 없습니다. 먼저 제약 �
 2. 삭제하려는 열을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 **열 삭제** 를 선택합니다.
 3. 관계에 참여하는 열(FOREIGN KEY 또는 PRIMARY KEY)인 경우에는 선택한 열과 해당 관계의 삭제를 확인하는 메시지가 표시됩니다. **예**를 선택합니다.
 
-## <a name="TsqlProcedure"></a> Transact-SQL 사용
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용
 
 ### <a name="to-delete-columns"></a>열을 삭제하려면
 

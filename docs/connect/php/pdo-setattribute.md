@@ -11,10 +11,10 @@ ms.assetid: 56f9ee96-e1d2-46cc-b137-38f06a251863
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 80a3f907e4606201255d0442d136f77c9b31dd40
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76940462"
 ---
 # <a name="pdosetattribute"></a>PDO::setAttribute

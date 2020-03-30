@@ -14,10 +14,10 @@ ms.assetid: def6bf26-c640-4caf-ad30-05d1e649541d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d1329f2b432727731565da796baf021328b9b606
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321790"
 ---
 # <a name="distribution-agent-security-peer-to-peer-replication"></a>배포 에이전트 보안(피어 투 피어 복제)

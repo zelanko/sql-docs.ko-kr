@@ -29,10 +29,10 @@ ms.assetid: 8cfea566-8f89-4581-b30d-c53f1f2c79eb
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: aa1521e40df7483c7a4dc336484d6ecf28e909cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75325461"
 ---
 # <a name="recovery-models-sql-server"></a>복구 모델(SQL Server)
@@ -45,7 +45,7 @@ ms.locfileid: "75325461"
   
 -   [관련 작업](#RelatedTasks)  
   
-##  <a name="RMov"></a> 복구 모델 개요  
+##  <a name="recovery-model-overview"></a><a name="RMov"></a> 복구 모델 개요  
  다음 표에서는 세 가지 복구 모델을 요약합니다.  
   
 |복구 모델|Description|작업 손실 가능성|정해진 시간에 복구 가능 여부|  
@@ -54,7 +54,7 @@ ms.locfileid: "75325461"
 |**전체**|로그 백업 필요<br /><br /> 데이터 파일의 손실 또는 손상으로 인한 작업의 손실이 없음<br /><br /> 임의의 지정 시간으로 복구 가능(예: 애플리케이션이나 사용자 오류가 발생하기 이전) 전체 복구 모델에서 데이터베이스 백업에 대한 자세한 내용은 [전체 데이터베이스 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md) 및 [전체 데이터베이스 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)을 참조하세요.|일반적으로는 없음<br /><br /> 비상 로그가 손상된 경우 가장 최근에 로그를 백업한 후에 변경된 사항을 다시 실행해야 함.|백업이 특정 시점까지 완료된 경우 해당 시점으로 복구 가능. 로그 백업을 사용하여 오류 지점으로 복원하는 방법은 [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)을 참조하세요.<br /><br /> 참고: 논리적으로 일치해야 하는 전체 복구 모델 데이터베이스가 둘 이상이면 이 데이터베이스의 복구 가능성을 확인하는 특수 절차를 구현해야 합니다. 자세한 내용은 [표시된 트랜잭션이 포함된 관련 데이터베이스 복구](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md)를 참조하세요.|  
 |**대량 로그**|로그 백업 필요<br /><br /> 성능 우선 대량 복사 작업을 허용하는 전체 복구 모델의 보충 모델<br /><br /> 대부분의 대량 작업에 대해 최소 로깅을 사용하여 로그 공간 사용량을 줄입니다. 최소 로깅이 가능한 작업에 대한 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)을 참조하세요.<br /><br /> 로그 백업에는 최소 로그 작업이 캡처되므로 로그 백업은 상당히 커질 수 있습니다. 대량 로그된 복구 모델에서 데이터베이스 백업에 대한 자세한 내용은 [전체 데이터베이스 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md) 및 [전체 데이터베이스 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)을 참조하세요.|로그가 손상되었거나 가장 최근의 로그 백업 이후 대량 로그 작업이 수행된 경우 마지막 백업 이후의 변경 내용을 다시 실행해야 함<br /><br /> 그 외에는 작업이 손실되지 않음|백업의 끝으로 복구 가능. 지정 시간 복구는 지원되지 않습니다.|  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [데이터베이스 복구 모델 보기 또는 변경&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)  
   

@@ -18,10 +18,10 @@ ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5eeda80431c403fd1178399b4c2c3500154acd48
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68050795"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT 서버 사용 권한(Transact-SQL)

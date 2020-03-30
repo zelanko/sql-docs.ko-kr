@@ -13,10 +13,10 @@ ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52e3d6ea8cff9d1984ee11a510a6c21833034c29
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68006681"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>예: XMLTEXT 지시어 지정

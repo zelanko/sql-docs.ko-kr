@@ -13,10 +13,10 @@ ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b27dda40294185f923d74b61dfd1b10ce7301ba9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055581"
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>사용자 지정 컬렉션 집합 만들기 - 일반 T-SQL 쿼리 수집기 형식

@@ -19,10 +19,10 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4af4e8b1d0dacb5e08cdd117a14691b909050b09
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75254049"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>데이터베이스 복구 모델 보기 또는 변경
@@ -35,7 +35,7 @@ ms.locfileid: "75254049"
   자세한 설명을 확인하려면 [복구 모델](recovery-models-sql-server.md)을 참조하세요.
   
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
 
 -   [전체 복구 모델 또는 대량 로그된 복구 모델](back-up-a-transaction-log-sql-server.md)에서 전환하기 **전에** [트랜잭션 로그를 백업](recovery-models-sql-server.md)합니다.  
@@ -50,10 +50,10 @@ ms.locfileid: "75254049"
   
 **참고!** 대량 작업 중에 전체 복구 모델로 전환하면 대량 작업 로깅이 최소 로깅에서 전체 로깅으로 바뀌며 그 반대의 경우도 마찬가지입니다.  
   
-###  <a name="Security"></a> 필요한 권한  
+###  <a name="required-permissions"></a><a name="Security"></a> 필요한 권한  
    데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-view-or-change-the-recovery-model"></a>복구 모델을 보거나 변경하려면  
   
@@ -71,7 +71,7 @@ ms.locfileid: "75254049"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-view-the-recovery-model"></a>복구 모델을 보려면  
   
@@ -102,7 +102,7 @@ USE [master] ;
 ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> 권장 사항: 복구 모델을 변경한 후  
+##  <a name="recommendations-after-you-change-the-recovery-model"></a><a name="FollowUp"></a> 권장 사항: 복구 모델을 변경한 후  
   
 -   **전체 및 대량 로그 복구 모델 간에 전환한 후**  
   
@@ -128,7 +128,7 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
     -   정기적 데이터베이스 백업이 예약 되어 있는지 확인합니다. 데이터베이스를 백업하는 것은 데이터를 보호하고 트랜잭션 로그의 비활성 부분을 자르는 데 필수적입니다.  
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
   
 -   [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
@@ -138,7 +138,7 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
 -   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
-##  <a name="RelatedContent"></a> 관련 내용  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
   
 -   [데이터베이스 유지 관리 계획](../maintenance-plans/maintenance-plans.md) ( [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 온라인 설명서)  
   

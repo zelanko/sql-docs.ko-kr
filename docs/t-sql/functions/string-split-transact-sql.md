@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 20580d1c746a678771ff3be0e67bab72e2b72be8
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77179274"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT(Transact-SQL)
@@ -48,10 +48,10 @@ STRING_SPLIT ( string , separator )
 ## <a name="arguments"></a>인수
 
  *string*  
- 모든 문자 형식(예: **nvarchar**, **varchar**, **nchar** 또는 **char**)의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
+ 모든 문자 형식(예: [nvarchar](../../t-sql/language-elements/expressions-transact-sql.md), **varchar**, **nchar** 또는 **char**)의 **식**입니다.  
   
  *separator*  
- 연결된 부분 문자열의 구분 기호로 사용되는 모든 문자 형식(예: **nvarchar(1)**, **varchar(1)**, **nchar(1)** 또는 **char(1)**)의 단일 문자 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
+ 연결된 부분 문자열의 구분 기호로 사용되는 모든 문자 형식(예: [nvarchar(1)](../../t-sql/language-elements/expressions-transact-sql.md), **varchar(1)** , **nchar(1)** 또는 **char(1)** )의 단일 문자 **식**입니다.  
   
 ## <a name="return-types"></a>반환 형식  
 
@@ -63,7 +63,7 @@ STRING_SPLIT ( string , separator )
 
 출력 행은 순서에 관계 없을 수 있습니다. 순서가 입력 문자열의 부분 문자열 순서와 일치하지 _않을 수_ 있습니다. SELECT 문(`ORDER BY value`)에서 ORDER BY 절을 사용하여 최종 정렬 순서를 재정의할 수 있습니다.
 
-0x0000(**char(0)**)은 Windows 데이터 정렬에서 정의되지 않은 문자이며 STRING_SPLIT에 포함할 수 없습니다.
+0x0000(**char(0)** )은 Windows 데이터 정렬에서 정의되지 않은 문자이며 STRING_SPLIT에 포함할 수 없습니다.
 
 0 길이의 빈 부분 문자열은 입력 문자열에서 구분 기호 문자 두 개 이상이 연속되는 경우 존재합니다. 빈 부분 문자열은 일반 부분 문자열과 동일한 방식으로 처리됩니다. WHERE 절(`WHERE value <> ''`)을 사용하여 빈 부분 문자열을 포함하는 모든 행을 필터링할 수 있습니다. 입력 문자열이 NULL인 경우 STRING_SPLIT 테이블 반환 함수는 빈 테이블을 반환합니다.  
 

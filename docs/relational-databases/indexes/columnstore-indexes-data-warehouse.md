@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1ef9084e8264caf6b14289d6d2674afca012cd15
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76761932"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Columnstore 인덱스 - 데이터 웨어하우스
@@ -40,7 +40,7 @@ ms.locfileid: "76761932"
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>비클러스터형과 columnstore 인덱스를 결합하여 성능 향상  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 클러스터형 columnstore 인덱스에 대해 비클러스터형 인덱스를 정의할 수 있습니다.   
   
-### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>예제: 비클러스터형 인덱스를 사용하여 테이블 검색의 효율성 향상  
+### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>예: 비클러스터형 인덱스를 사용하여 테이블 검색의 효율성 향상  
  데이터 웨어하우스에서 테이블 검색의 효율성을 개선하려면 테이블 검색을 사용할 때 가장 성능이 좋은 쿼리를 실행하도록 설계된 비클러스터형 인덱스를 만들 수 있습니다. 예를 들어, 일치하는 값을 찾고 작은 범위의 값을 반환하는 쿼리는 columnstore 인덱스보다 B-트리 인덱스에 대해 성능이 더 좋습니다. 왜냐하면 columnstore 인덱스를 통한 전체 테이블 검색이 필요하지 않으며 B-트리 인덱스를 통해 이진 검색을 수행하여 정확한 결과를 더 빠르게 반환하기 때문입니다.  
   
 ```sql  
@@ -63,7 +63,7 @@ GO
 CREATE UNIQUE INDEX taccount_nc1 ON t_account (AccountKey);  
 ```  
   
-### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>예제: 비클러스터형 인덱스를 사용하여 columnstore 테이블에 기본 키 제약 조건 적용  
+### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>예: 비클러스터형 인덱스를 사용하여 columnstore 테이블에 기본 키 제약 조건 적용  
  기본적으로 columnstore 테이블은 클러스터형 기본 키 제약 조건을 허용하지 않습니다. 이제 columnstore 테이블에 비클러스터형 인덱스를 사용하여 기본 키 제약 조건을 적용할 수 있습니다. 기본 키는 NULL이 아닌 열에 대한 UNIQUE 제약 조건에 해당하며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 UNIQUE 제약 조건을 비클러스터형 인덱스로 구현합니다. 이러한 사실을 결합하여 다음 예제에서는 NULL이 아닌 열 accountkey에 대해 UNIQUE 제약 조건을 정의합니다. 그 결과는 NULL이 아닌 열에 대한 UNIQUE 제약 조건으로 기본 키 제약 조건을 적용하는 비클러스터형 인덱스입니다.  
   
  다음으로, 테이블을 클러스터형 columnstore 인덱스로 변환합니다. 변환 중에 비클러스터형 인덱스는 유지됩니다. 그 결과는 기본 키 제약 조건을 적용하는 비클러스터형 인덱스를 포함한 클러스터형 columnstore 인덱스입니다. Columnstore 테이블에 대한 업데이트 또는 삽입은 비클러스터형 인덱스에도 영향을 미치므로 UNIQUE 제약 조건 및 비 NULL을 위반하는 모든 연산은 전체 연산을 실패하게 만듭니다.  

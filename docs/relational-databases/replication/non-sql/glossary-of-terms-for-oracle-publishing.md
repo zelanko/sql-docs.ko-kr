@@ -13,10 +13,10 @@ ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8ac643b3c0c095dee143c3feca878bd4072273bb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67901106"
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Oracle 게시를 위한 용어 설명
