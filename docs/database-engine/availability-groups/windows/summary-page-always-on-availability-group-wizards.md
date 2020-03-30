@@ -16,10 +16,10 @@ ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3d90d3339c34cd79111f498a4d854e19f9776209
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822549"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>요약 페이지(Always On 가용성 그룹 마법사)
@@ -29,7 +29,7 @@ ms.locfileid: "74822549"
   
   이 도움말 항목에서는 **요약** 페이지의 옵션에 대해 설명합니다. 이 항목은 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]의 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] , [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 및 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에 적용됩니다. 이 페이지의 표를 사용하여 새 가용성 그룹에 대한 선택 사항을 확인합니다. 하나 이상의 항목을 변경하려면 **이전** 을 클릭하여 관련 페이지로 돌아갑니다. 준비가 되면 **다음** 을 클릭하여 **요약** 페이지로 돌아갑니다. 선택 사항에 만족하면 **마침**을 클릭합니다.  
   
-##  <a name="PageOptions"></a> 요약 페이지 옵션  
+##  <a name="summary-page-options"></a><a name="PageOptions"></a> 요약 페이지 옵션  
  **스크립트**  
  요약 표에 나열된 작업에 대한 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트를 생성하려면 클릭합니다. 스크립트에 대한 대상을 지정하라는 메시지가 표시됩니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "74822549"
   
  ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [&#91;맨 위&#93;](#Top)  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [새 가용성 그룹 대화 상자 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

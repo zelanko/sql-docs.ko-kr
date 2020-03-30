@@ -12,16 +12,14 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: edc5d8122f1cb2c0fad747e480843c559f650434
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.openlocfilehash: 30b4b646beda19bb36eb4e046fce86379f9242df
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866513"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80345420"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 릴리스 정보
-
-[!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 이 페이지에서는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 각 버전에 추가된 기능에 대해 설명합니다.  
 

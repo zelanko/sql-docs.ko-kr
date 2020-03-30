@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8ddc5fb198a62374fc43ebacb5fa7423ac9fadd5
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287897"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>기본 함수를 사용하여 JSON 데이터 유효성 검사, 쿼리, 변경(SQL Server)
@@ -76,7 +76,7 @@ CREATE TABLE Families (
 )
 ``` 
 
-##  <a name="ISJSON"></a> ISJSON 함수를 사용하여 JSON 텍스트의 유효성을 검사합니다.  
+##  <a name="validate-json-text-by-using-the-isjson-function"></a><a name="ISJSON"></a> ISJSON 함수를 사용하여 JSON 텍스트의 유효성을 검사합니다.  
  **ISJSON** 함수는 문자열에 유효한 JSON이 포함되어 있는지 여부를 테스트합니다.  
   
 다음 예제는 JSON 열에 유효한 JSON 텍스트가 포함된 행을 반환합니다. 명시적 JSON 제약 조건이 없으면 NVARCHAR 열에 텍스트를 입력할 수 있습니다.  
@@ -89,7 +89,7 @@ WHERE ISJSON(doc) > 0
 
 자세한 내용은 [ISJSON&#40;Transact-SQL&#41;](../../t-sql/functions/isjson-transact-sql.md)을 참조하세요.  
   
-##  <a name="VALUE"></a> JSON_VALUE 함수를 사용하여 JSON 텍스트에서 값을 추출합니다.  
+##  <a name="extract-a-value-from-json-text-by-using-the-json_value-function"></a><a name="VALUE"></a> JSON_VALUE 함수를 사용하여 JSON 텍스트에서 값을 추출합니다.  
 **JSON_VALUE** 함수는 JSON 문자열에서 스칼라 값을 추출합니다. 다음 쿼리는 `id`JSON 필드가 `city` 및 `state` JSON 필드를 기준으로 정렬된 값 `AndersenFamily`과 일치하는 문서를 반환합니다.
 
 ```sql  
@@ -109,7 +109,7 @@ ORDER BY JSON_VALUE(f.doc, '$.address.city') DESC, JSON_VALUE(f.doc, '$.address.
 
 자세한 내용은 [JSON_VALUE&#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md)을 참조하세요.  
   
-##  <a name="QUERY"></a> JSON_QUERY 함수를 사용하여 JSON 텍스트에서 개체 또는 배열 추출  
+##  <a name="extract-an-object-or-an-array-from-json-text-by-using-the-json_query-function"></a><a name="QUERY"></a> JSON_QUERY 함수를 사용하여 JSON 텍스트에서 개체 또는 배열 추출  
 
 **JSON_QUERY** 함수는 JSON 문자열에서 개체 또는 배열을 추출합니다. 다음 예제는 쿼리 결과에 JSON 조각을 반환하는 방법을 보여줍니다.  
   
@@ -179,7 +179,7 @@ FROM Families f
 
 루트 문서는 첫 번째 `OPENJSON(children)` 호출로 반환된 두 `children` 행과 조인되어 두 개의 행(또는 튜플)을 만듭니다. 그런 다음, 각 행이 `OUTER APPLY` 연산자를 사용하여 `OPENJSON(pets)`에서 생성된 새 행과 조인됩니다. Jesse에는 두 마리의 애완 동물이 있으므로 `(AndersenFamily, Jesse, Merriam)`이 Goofy 및 Shadow에 대해 생성된 두 개의 행과 조인됩니다. Lisa에게는 애완 동물이 없으므로 이 튜플에 대해 `OPENJSON(pets)`에서 반환되는 행이 없습니다. 그러나 `OUTER APPLY`를 사용하고 있기 때문에 열에 `NULL`이 반환됩니다. `OUTER APPLY` 대신, `CROSS APPLY`를 사용하는 경우 이 튜플에 조인할 수 있는 애완 동물 행이 없기 때문에 Lisa는 결과에 반환되지 않습니다.
 
-##  <a name="JSONCompare"></a> JSON_VALUE 및 JSON_QUERY 비교  
+##  <a name="compare-json_value-and-json_query"></a><a name="JSONCompare"></a> JSON_VALUE 및 JSON_QUERY 비교  
 **JSON_VALUE** 와 **JSON_QUERY** 간의 주요 차이점은 **JSON_VALUE** 는 스칼라 값을 반환하고 **JSON_QUERY** 는 개체 또는 배열을 반환한다는 점입니다.  
   
 다음 예제의 JSON 쿼리를 살펴보십시오.  
@@ -242,7 +242,7 @@ GROUP BY JSON_VALUE(Info, '$.Customer.Name'), Status
 HAVING SUM(SubTotal)>1000
 ```  
   
-##  <a name="MODIFY"></a> JSON_MODIFY 함수를 사용하여 JSON 텍스트의 속성 값을 업데이트합니다.  
+##  <a name="update-property-values-in-json-text-by-using-the-json_modify-function"></a><a name="MODIFY"></a> JSON_MODIFY 함수를 사용하여 JSON 텍스트의 속성 값을 업데이트합니다.  
 **JSON_MODIFY** 함수는 JSON 문자열의 속성 값을 업데이트하고 업데이트된 JSON 문자열을 반환합니다.  
   
 다음 예제에서는 JSON이 포함된 변수에서 JSON 속성 값을 업데이트합니다.  

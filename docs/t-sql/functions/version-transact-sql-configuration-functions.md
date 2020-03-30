@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1894f0e4aa31e8b80255fb49f30c7cfe1c1a146b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67927538"
 ---
 # <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;버전 - Transact SQL 구성 함수
@@ -83,16 +83,16 @@ ms.locfileid: "67927538"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-return-the-current-version-of-includessnoversionincludesssnoversion-mdmd"></a>1\. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 현재 버전 반환  
+### <a name="a-return-the-current-version-of-ssnoversion"></a>1\. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 현재 버전 반환  
  다음 예에서는 현재 설치의 버전 정보를 반환합니다.  
   
 ```  
 SELECT @@VERSION AS 'SQL Server Version';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-return-the-current-version-of-includessdwincludesssdw-mdmd"></a>B. [!INCLUDE[ssDW](../../includes/ssdw-md.md)]의 현재 버전 반환  
+### <a name="b-return-the-current-version-of-ssdw"></a>B. [!INCLUDE[ssDW](../../includes/ssdw-md.md)]의 현재 버전 반환  
   
 ```  
 SELECT @@VERSION AS 'SQL Server PDW Version';  

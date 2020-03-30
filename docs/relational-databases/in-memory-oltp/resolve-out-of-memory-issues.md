@@ -11,10 +11,10 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 8171a91d18650285c7bcaf4eb780083e958a8789
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908446"
 ---
 # <a name="resolve-out-of-memory-issues"></a>OOM(메모리 부족) 문제 해결
@@ -31,7 +31,7 @@ ms.locfileid: "72908446"
 |[사용 가능한 메모리가 충분한 경우 메모리 부족으로 인한 페이지 할당 오류 해결](#bkmk_PageAllocFailure)|작업에 사용할 수 있는 메모리가 충분한데 “' *\<resourcePoolName>* ' 리소스 풀의 메모리 부족으로 인해 ' *\<databaseName>* ' 데이터베이스에 대해 페이지를 할당할 수 없습니다...”라는 오류 메시지가 나타나는 경우 수행할 작업입니다.|
 |[최선의 구현 방법: VM 환경에서 메모리 내 OLTP 사용](#bkmk_VMs)|가상화된 환경에서 메모리 내 OLTP를 사용할 때의 참고 사항입니다.|
   
-##  <a name="bkmk_resolveRecoveryFailures"></a> OOM으로 인한 데이터베이스 복원 실패 해결  
+##  <a name="resolve-database-restore-failures-due-to-oom"></a><a name="bkmk_resolveRecoveryFailures"></a> OOM으로 인한 데이터베이스 복원 실패 해결  
  데이터베이스를 복원하려고 할 때 "' *\<resourcePoolName>* ' 리소스 풀의 메모리 부족으로 ' *\<databaseName>* ' 데이터베이스에 대한 복원 작업이 실패했습니다."라는 오류 메시지가 나타납니다. 이 오류는 서버에 데이터베이스를 복원하는 데 충분히 사용 가능한 메모리가 없는 것을 나타냅니다. 
    
 데이터베이스를 복원할 서버에는 데이터베이스 백업 시 메모리 최적화 테이블에 대해 충분한 사용 가능한 메모리가 있어야 합니다. 그렇지 않으면 데이터베이스가 온라인 상태가 되지 않으며 주의 대상으로 표시됩니다.  
@@ -70,19 +70,19 @@ ms.locfileid: "72908446"
 -   **최대 서버 메모리**를 늘립니다.  
     **최대 서버 메모리** 구성에 대한 자세한 내용은 [서버 메모리 서버 구성 옵션](../../database-engine/configure-windows/server-memory-server-configuration-options.md) 항목을 참조하세요.  
   
-##  <a name="bkmk_recoverFromOOM"></a> 메모리 부족 또는 OOM 상황이 작업에 미치는 영향 해결  
+##  <a name="resolve-impact-of-low-memory-or-oom-conditions-on-the-workload"></a><a name="bkmk_recoverFromOOM"></a> 메모리 부족 또는 OOM 상황이 작업에 미치는 영향 해결  
  물론 OOM(메모리 부족) 상황에 빠지지 않는 것이 최선입니다. 적절한 계획과 모니터링을 통해 OOM 상황을 방지할 수 있습니다. 그렇지만 최상의 계획을 세우더라도 실제 발생하는 상황을 항상 예측할 수 있는 것은 아니며 결국 메모리 부족 또는 OOM 상황에 도달할 수 있습니다. 다음 두 가지 방법으로 OOM에서 복구할 수 있습니다.  
   
 1.  [DAC(관리자 전용 연결) 열기](#bkmk_openDAC)  
   
 2.  [수정 조치 수행](#bkmk_takeCorrectiveAction)  
 
-###  <a name="bkmk_openDAC"></a> DAC(관리자 전용 연결) 열기  
+###  <a name="open-a-dac-dedicated-administrator-connection"></a><a name="bkmk_openDAC"></a> DAC(관리자 전용 연결) 열기  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 DAC(관리자 전용 연결)를 제공합니다. DAC를 사용하면 관리자는 서버가 다른 클라이언트 연결에 응답하지 않는 경우에도 실행 중인 SQL Server 데이터베이스 엔진 인스턴스에 액세스하여 서버에서 문제를 해결할 수 있습니다. DAC는 `sqlcmd` 유틸리티 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 통해 사용할 수 있습니다.  
   
  SSMS 또는 `sqlcmd`를 통한 DAC 사용에 대한 지침은 [데이터베이스 관리자를 위한 진단 연결](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)을 참조하세요.  
   
-###  <a name="bkmk_takeCorrectiveAction"></a> 수정 조치 수행  
+###  <a name="take-corrective-action"></a><a name="bkmk_takeCorrectiveAction"></a> 수정 조치 수행  
  OOM 상태를 해결하려면 사용을 축소하여 기존 메모리를 확보하거나 더 많은 메모리를 메모리 내 테이블에 사용할 수 있게 만들어야 합니다.  
   
 #### <a name="free-up-existing-memory"></a>기존 메모리 확보  
@@ -135,14 +135,14 @@ GO
 >  서버가 VM에서 실행 중이고 전용 서버가 아니면 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 값을 동일한 값으로 설정합니다.   
 > 자세한 내용은 [최선의 구현 방법: VM 환경에서 메모리 내 OLTP 사용](#bkmk_VMs) 항목을 참조하세요.  
   
-##  <a name="bkmk_PageAllocFailure"></a> 사용 가능한 메모리가 충분한 경우 메모리 부족으로 인한 페이지 할당 오류 해결  
+##  <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a><a name="bkmk_PageAllocFailure"></a> 사용 가능한 메모리가 충분한 경우 메모리 부족으로 인한 페이지 할당 오류 해결  
  페이지를 할당하는 데 사용할 수 있는 물리적 메모리가 충분할 때 오류 로그에 오류 메시지 `Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'https://go.microsoft.com/fwlink/?LinkId=330673' for more information.`가 나타나는 경우 이는 리소스 관리자를 사용하지 않기 때문일 수 있습니다. 리소스 관리자를 사용하지 않으면 MEMORYBROKER_FOR_RESERVE가 인위적인 메모리 압력을 유발합니다.  
   
  이 오류를 해결하려면 리소스 관리자를 사용하도록 설정해야 합니다.  
   
  개체 탐색기, 리소스 관리자 속성 또는 Transact-SQL로 리소스 관리자를 사용하도록 설정하는 지침과 제한 사항에 대한 자세한 내용은 [리소스 관리자 사용](../../relational-databases/resource-governor/enable-resource-governor.md) 을 참조하세요.  
  
-## <a name="bkmk_VMs"></a> 최선의 구현 방법: VM 환경에서 메모리 내 OLTP 사용
+## <a name="best-practices-using-in-memory-oltp-in-a-vm-environment"></a><a name="bkmk_VMs"></a> 최선의 구현 방법: VM 환경에서 메모리 내 OLTP 사용
 서버 가상화 기술을 사용하면 IT 자본 및 운영 비용을 줄이고 향상된 애플리케이션 프로비전, 유지 관리, 가용성 및 백업/복구 프로세스를 통해 IT 효율성을 높일 수 있습니다. 최근의 기술적 진보에 따라 가상화를 사용하면 복잡한 데이터베이스 작업도 보다 쉽고 간단하게 통합할 수 있습니다. 이 항목에서는 가상화된 환경에서 SQL Server In-Memory OLTP를 사용하기 위한 모범 사례에 대해 설명합니다.
 
 ### <a name="memory-pre-allocation"></a>메모리 사전 할당

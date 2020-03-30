@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
 ms.openlocfilehash: f22aba3fd2f2d006355fdd30aef6f196f2795f6c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957017"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>자습서: [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 테이블 공간 사용량 샘플 인사이트 위젯 사용
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-name-sos"></a>자습서: [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 테이블 공간 사용량 샘플 인사이트 위젯 사용
 
 이 자습서에서는 데이터베이스 대시보드에서 인사이트 위젯을 사용하도록 설정하여 데이터베이스에 있는 모든 테이블의 공간 사용량을 한눈에 볼 수 있게 하는 방법을 보여 줍니다. 이 자습서에서는 다음 방법을 알아봅니다.
 
@@ -33,7 +33,7 @@ ms.locfileid: "74957017"
 * [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]를 사용하여 SQL Server 연결 및 쿼리](quickstart-sql-server.md)
 * [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]를 사용하여 Azure SQL Database 연결 및 쿼리](quickstart-sql-database.md)
 
-## <a name="turn-on-a-management-insight-on-includename-sosincludesname-sos-shortmds-database-dashboard"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]의 데이터베이스 대시보드에서 관리 인사이트 켜기
+## <a name="turn-on-a-management-insight-on-name-soss-database-dashboard"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]의 데이터베이스 대시보드에서 관리 인사이트 켜기
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]에는 데이터베이스 테이블에서 사용되는 공간을 모니터링하는 기본 제공 샘플 위젯이 있습니다.
 

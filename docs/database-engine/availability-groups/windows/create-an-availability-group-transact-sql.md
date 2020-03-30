@@ -13,10 +13,10 @@ ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1a9f888f651a7c5471014b151d60b0ad3844578b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252969"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>T-SQL(Transact-SQL)을 사용하여 Always On 가용성 그룹 만들기
@@ -30,17 +30,17 @@ ms.locfileid: "75252969"
 >  [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하는 대신 가용성 그룹 만들기 마법사나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell cmdlet을 사용할 수도 있습니다. 자세한 내용은 [가용성 그룹 마법사 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md), [새 가용성 그룹 대화 상자 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)또는 [가용성 그룹 만들기&#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md)를 참조하세요.  
 
   
-## <a name="PrerequisitesRestrictions"></a> 필수 구성 요소, 제한 사항 및 권장 사항  
+## <a name="prerequisites-restrictions-and-recommendations"></a><a name="PrerequisitesRestrictions"></a> 필수 구성 요소, 제한 사항 및 권장 사항  
   
 -   가용성 그룹을 만들기 전에 가용성 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 동일한 WSFC 장애 조치(Failover) 클러스터 내의 다른 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 노드에 있는지 확인합니다. 또한 각 서버 인스턴스가 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 의 기타 모든 필수 구성 요소를 충족하는지도 확인합니다. 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다.  
   
   
-##  <a name="Permissions"></a> 권한  
+##  <a name="permissions"></a><a name="Permissions"></a> 권한  
  CREATE AVAILABILITY GROUP 서버 권한, ALTER ANY AVAILABILITY GROUP 권한, CONTROL SERVER 권한 중 하나와 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL을 사용하여 가용성 그룹 만들기 및 구성 
+##  <a name="using-transact-sql-to-create-and-configure-an-availability-group"></a><a name="TsqlProcedure"></a> Transact-SQL을 사용하여 가용성 그룹 만들기 및 구성 
 
-###  <a name="SummaryTsqlStatements"></a> 태스크 및 해당 Transact-SQL 문 요약  
+###  <a name="summary-of-tasks-and-corresponding-transact-sql-statements"></a><a name="SummaryTsqlStatements"></a> 태스크 및 해당 Transact-SQL 문 요약  
  다음 표에서는 가용성 그룹을 만들고 구성하는 데 필요한 기본 태스크와 이러한 태스크에 사용할 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 보여 줍니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 태스크는 표에 나오는 순서대로 수행해야 합니다.  
   
 |Task|Transact-SQL 문|태스크를 수행할 위치 **&#42;**|  
@@ -67,7 +67,7 @@ ms.locfileid: "75252969"
   
 5.  모든 새 보조 데이터베이스를 가용성 그룹에 조인합니다. 자세한 내용은 [가용성 그룹에 보조 복제본 조인&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)또는 PowerShell을 사용하여 Always On 가용성 그룹에 보조 데이터베이스를 조인하는 방법에 대해 설명합니다.  
   
-##  <a name="ExampleConfigAGWinAuth"></a> 예제: Windows 인증을 사용하는 가용성 그룹 구성  
+##  <a name="example-configuring-an-availability-group-that-uses-windows-authentication"></a><a name="ExampleConfigAGWinAuth"></a> 예제: Windows 인증을 사용하는 가용성 그룹 구성  
  이 예에서 만드는 예제 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 구성 프로시저는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 Windows 인증을 사용하는 데이터베이스 미러링 엔드포인트를 설정하고, 가용성 그룹과 해당 보조 데이터베이스를 만들고 구성합니다.  
   
  이 예에는 다음과 같은 섹션이 포함되어 있습니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "75252969"
   
 -   [예제 구성 프로시저에 대한 전체 코드 예](#CompleteCodeExample)  
   
-###  <a name="PrerequisitesForExample"></a> 예제 구성 프로시저를 사용하기 위한 사전 요구 사항  
+###  <a name="prerequisites-for-using-the-sample-configuration-procedure"></a><a name="PrerequisitesForExample"></a> 예제 구성 프로시저를 사용하기 위한 사전 요구 사항  
  이 예제 프로시저에 대한 요구 사항은 다음과 같습니다.  
   
 -   서버 인스턴스에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 지원해야 합니다. 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)를 참조하세요.  
@@ -118,7 +118,7 @@ ms.locfileid: "75252969"
   
  [&#91;TopOfExample&#93;](#ExampleConfigAGWinAuth)  
   
-###  <a name="SampleProcedure"></a> 예제 구성 프로시저  
+###  <a name="sample-configuration-procedure"></a><a name="SampleProcedure"></a> 예제 구성 프로시저  
  이 예제 구성에서는 서비스 계정이 다르지만 트러스트된 도메인 계정(`DOMAIN1` 및 `DOMAIN2`)으로 실행되는 두 개의 독립 실행형 서버 인스턴스에 가용성 복제본이 만들어집니다.  
   
  다음 표에는 이 예제 구성에 사용된 값이 요약되어 있습니다.  
@@ -290,7 +290,7 @@ ms.locfileid: "75252969"
   
     ```  
   
-###  <a name="CompleteCodeExample"></a> 예제 구성 프로시저에 대한 전체 코드 예  
+###  <a name="complete-code-example-for-sample-configuration-procedure"></a><a name="CompleteCodeExample"></a> 예제 구성 프로시저에 대한 전체 코드 예  
  다음 예에서는 예제 구성 프로시저의 모든 단계에 포함된 코드 예를 병합합니다. 다음 표에는 이 코드 예에 사용된 자리 표시자 값이 요약되어 있습니다. 이 코드 예의 단계에 대한 자세한 내용은 이 항목 윗부분의 [예제 구성 프로시저를 사용하기 위한 사전 요구 사항](#PrerequisitesForExample) 및 [예제 구성 프로시저](#SampleProcedure)를 참조하세요.  
   
 |자리 표시자|Description|  
@@ -446,7 +446,7 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **가용성 그룹 및 복제본 속성을 구성하려면**  
   
 -   [가용성 복제본의 가용성 모드 변경&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)  
@@ -505,7 +505,7 @@ GO
   
 -   [실패한 파일 추가 작업 문제 해결&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> 관련 내용  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
   
 -   **블로그:**  
   

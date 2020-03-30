@@ -14,17 +14,17 @@ ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3fd1505bbbfc03308cbdbf6a5fc9fba122c4da24
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67995271"
 ---
 # <a name="retrieve-and-query-xml-data"></a>XML 데이터 검색 및 쿼리
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 XML 데이터를 쿼리할 때 지정해야 하는 쿼리 옵션에 대해 설명합니다. 또한 XML 인스턴스가 데이터베이스에 저장될 때 보존되지 않는 인스턴스의 일부분에 대해 설명합니다.  
   
-##  <a name="features"></a> 보존되지 않는 XML 인스턴스 기능  
+##  <a name="features-of-an-xml-instance-that-are-not-preserved"></a><a name="features"></a> 보존되지 않는 XML 인스턴스 기능  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 XML 인스턴스의 내용을 보존하지만 XML 데이터 모델에서 중요하다고 간주되지 않는 XML 인스턴스의 측면은 보존하지 않습니다. 즉, 검색된 XML 인스턴스는 서버에 저장된 인스턴스와 다를 수 있지만 동일한 정보를 포함한다는 의미입니다.  
   
 ### <a name="xml-declaration"></a>XML 선언  
@@ -87,7 +87,7 @@ GO
 ```  
   
   
-##  <a name="query"></a> 필수 쿼리 옵션 설정  
+##  <a name="setting-required-query-options"></a><a name="query"></a> 필수 쿼리 옵션 설정  
  **xml** 데이터 형식 메서드를 사용하여 **xml** 유형의 열 또는 변수를 쿼리할 때는 다음 옵션을 표시된 것과 같이 설정해야 합니다.  
   
 |SET 옵션|필요한 값|  

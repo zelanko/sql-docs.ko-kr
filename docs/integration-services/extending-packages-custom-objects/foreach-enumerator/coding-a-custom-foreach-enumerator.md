@@ -13,10 +13,10 @@ ms.assetid: 279cf6de-d06f-40e7-b8ca-569310449f36
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d4c0b06c7dda8b421ed7a68c1b7ec89b05c383d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297154"
 ---
 # <a name="coding-a-custom-foreach-enumerator"></a>사용자 지정 Foreach 열거자 코딩

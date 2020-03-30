@@ -19,10 +19,10 @@ ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 07a4d09e55999c9e6f85e059f576c1460baf750a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71823557"
 ---
 # <a name="delete-a-data-tier-application"></a>데이터 계층 애플리케이션 삭제
@@ -42,7 +42,7 @@ ms.locfileid: "71823557"
 |데이터베이스 분리|연결된 데이터베이스가 분리됩니다. 데이터베이스 엔진 인스턴스가 데이터베이스를 참조할 수는 없지만 데이터 및 로그 파일은 그대로 유지됩니다.|  
 |데이터베이스 삭제|연결된 데이터베이스가 삭제됩니다. 데이터 및 로그 파일이 삭제됩니다.|  
   
-###  <a name="LimitationsRestrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 제한 사항  
  DAC를 삭제한 후 DAC 정의 메타데이터나 데이터베이스를 복원하는 자동 메커니즘은 없습니다. DAC 인스턴스를 수동으로 다시 작성하는 방법은 삭제 옵션에 따라 다릅니다.  
   
 |옵션|DAC 인스턴스를 다시 작성하는 방법|  
@@ -54,10 +54,10 @@ ms.locfileid: "71823557"
 > [!WARNING]  
 >  복원하거나 다시 연결한 데이터베이스에서 DAC를 등록하여 DAC 인스턴스를 다시 작성하더라도 원래 DAC의 서버 선택 정책과 같은 일부 부분은 만들어지지 않습니다.  
   
-###  <a name="Permissions"></a> 권한  
+###  <a name="permissions"></a><a name="Permissions"></a> 권한  
  **sysadmin** 또는 **serveradmin** 고정 서버 역할의 멤버 또는 데이터베이스 소유자를 통해서만 DAC를 삭제할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **라는 기본 제공** 시스템 관리자 계정도 마법사를 시작할 수 있습니다.  
   
-##  <a name="UsingDeleteDACWizard"></a> 데이터 계층 애플리케이션 삭제 마법사 사용  
+##  <a name="using-the-delete-data-tier-application-wizard"></a><a name="UsingDeleteDACWizard"></a> 데이터 계층 애플리케이션 삭제 마법사 사용  
  **마법사를 사용하여 DAC를 삭제하려면**  
   
 1.  **개체 탐색기**에서 삭제할 DAC가 포함된 인스턴스에 대한 노드를 확장합니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "71823557"
   
     4.  [데이터 계층 애플리케이션 삭제](#Delete_datatier_application)  
   
-##  <a name="Introduction"></a> 소개 페이지  
+##  <a name="introduction-page"></a><a name="Introduction"></a> 소개 페이지  
  이 페이지에서는 데이터 계층 애플리케이션을 삭제하는 단계에 대해 설명합니다.  
   
  **이 페이지를 다시 표시 안 함** - 앞으로 이 페이지가 표시되지 않도록 하려면 이 확인란을 클릭합니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "71823557"
   
  [데이터 계층 애플리케이션 삭제 마법사 사용](#UsingDeleteDACWizard)  
   
-##  <a name="Choose_method"></a> 방법 선택 페이지  
+##  <a name="choose-method-page"></a><a name="Choose_method"></a> 방법 선택 페이지  
  이 페이지를 사용하여 삭제할 DAC와 연결된 데이터베이스를 처리하는 옵션을 지정할 수 있습니다.  
   
  **등록 삭제** - 데이터 계층 애플리케이션을 정의하는 메타데이터를 제거하되 연결된 데이터베이스는 그대로 유지합니다.  
@@ -110,7 +110,7 @@ ms.locfileid: "71823557"
   
  [데이터 계층 애플리케이션 삭제 마법사 사용](#UsingDeleteDACWizard)  
   
-##  <a name="Summary"></a> 요약 페이지  
+##  <a name="summary-page"></a><a name="Summary"></a> 요약 페이지  
  이 페이지를 사용하여 DAC 인스턴스를 삭제할 때 마법사가 수행할 동작을 검토합니다.  
   
  **선택 항목 요약 검토** - 상자에 표시된 DAC, 데이터베이스 및 삭제 방법을 검토합니다. 정보가 올바르면 **다음** 또는 **마침** 을 선택하여 DAC를 삭제합니다. DAC 및 데이터베이스 정보가 올바르지 않으면 **취소** 를 선택하고 올바른 DAC를 선택합니다. 삭제 방법이 올바르지 않으면 **이전** 을 선택하여 **방법 선택** 페이지로 돌아간 후 다른 방법을 선택합니다.  
@@ -123,7 +123,7 @@ ms.locfileid: "71823557"
   
  [데이터 계층 애플리케이션 삭제 마법사 사용](#UsingDeleteDACWizard)  
   
-##  <a name="Delete_datatier_application"></a> 데이터 계층 애플리케이션 삭제 페이지  
+##  <a name="delete-data-tier-application-page"></a><a name="Delete_datatier_application"></a> 데이터 계층 애플리케이션 삭제 페이지  
  이 페이지에서는 삭제 작업의 성공 또는 실패를 보고합니다.  
   
  **DAC 삭제** - DAC 인스턴스를 삭제하기 위해 수행한 각 동작의 성공 또는 실패를 보고합니다. 정보를 검토하여 각 동작의 성공 또는 실패를 확인합니다. 오류가 발생한 동작에는 모두 **결과** 열에 링크가 있습니다. 링크를 선택하면 해당 동작의 오류에 대한 보고서가 표시됩니다.  
@@ -134,7 +134,7 @@ ms.locfileid: "71823557"
   
  [데이터 계층 애플리케이션 삭제 마법사 사용](#UsingDeleteDACWizard)  
   
-##  <a name="DeleteDACPowerShell"></a> PowerShell 사용  
+##  <a name="using-powershell"></a><a name="DeleteDACPowerShell"></a> PowerShell 사용  
 
 1. SMO Server 개체를 만든 다음 삭제할 DAC를 포함하는 인스턴스로 설정합니다.  
   

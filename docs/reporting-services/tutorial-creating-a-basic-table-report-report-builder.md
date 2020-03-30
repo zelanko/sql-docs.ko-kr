@@ -9,10 +9,10 @@ ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041207"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>자습서: 기본 테이블 보고서 만들기(보고서 작성기)
@@ -26,7 +26,7 @@ ms.locfileid: "63041207"
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
   
-## <a name="CreateTable"></a>1. 마법사를 사용하여 보고서 만들기  
+## <a name="1-create-a-report-using-a-wizard"></a><a name="CreateTable"></a>1. 마법사를 사용하여 보고서 만들기  
 테이블 또는 행렬 마법사를 사용하여 테이블 보고서를 만듭니다. 보고서 디자인 모드와 공유 데이터 세트 디자인 모드라는 두 가지 모드가 있습니다. 보고서 디자인 모드에서는 보고서 데이터 창에서 데이터를 지정하고 디자인 화면에서 보고서 레이아웃을 지정합니다. 공유 데이터 세트 디자인 모드에서는 다른 사용자와 공유할 데이터 세트 쿼리를 만듭니다. 이 자습서에서는 보고서 디자인 모드를 사용합니다.  
   
 ### <a name="to-create-a-report"></a>보고서를 만들려면  
@@ -41,7 +41,7 @@ ms.locfileid: "63041207"
   
 3.  오른쪽 창에서 **테이블 또는 행렬 마법사**를 선택합니다.  
   
-## <a name="DataConnection"></a>1a. 테이블 마법사에서 데이터 연결 지정  
+## <a name="1a-specify-a-data-connection-in-the-table-wizard"></a><a name="DataConnection"></a>1a. 테이블 마법사에서 데이터 연결 지정  
 데이터 연결은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스와 같은 외부 데이터 원본에 연결하는 데 필요한 정보를 포함합니다. 일반적으로 데이터 원본 소유자로부터 사용할 자격 증명 유형과 연결 정보를 가져옵니다. 데이터 연결을 지정하기 위해 보고서 서버의 공유 데이터 원본을 사용하거나 이 보고서에만 사용되는 포함된 데이터 원본을 만들 수 있습니다.  
   
 이 자습서에서는 포함된 데이터 원본을 사용합니다. 공유 데이터 원본 사용 방법에 대한 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)을 참조하세요.  
@@ -76,7 +76,7 @@ ms.locfileid: "63041207"
   
 9. **다음**을 클릭합니다.  
   
-## <a name="Query"></a>1b. 테이블 마법사에서 쿼리 만들기  
+## <a name="1b-create-a-query-in-the-table-wizard"></a><a name="Query"></a>1b. 테이블 마법사에서 쿼리 만들기  
 보고서에서는 미리 정의된 쿼리가 포함된 공유 데이터 세트를 사용하거나 이 보고서 하나에만 사용할 포함된 데이터 세트를 만들 수 있습니다. 이 자습서에서는 포함된 데이터 세트를 만듭니다.  
   
 > [!NOTE]  
@@ -132,7 +132,7 @@ ms.locfileid: "63041207"
   
 4.  **다음**을 클릭합니다.  
   
-## <a name="Groups"></a>1c. 테이블 마법사에서 데이터를 그룹으로 구성  
+## <a name="1c-organize-data-into-groups-in-the-table-wizard"></a><a name="Groups"></a>1c. 테이블 마법사에서 데이터를 그룹으로 구성  
 그룹화할 필드를 선택할 때 세부 데이터와 집계 데이터가 표시되는 행과 열이 포함된 테이블을 디자인합니다.  
   
 ### <a name="to-organize-data-into-groups"></a>데이터를 그룹으로 구성하려면  
@@ -159,7 +159,7 @@ ms.locfileid: "63041207"
   
 6.  **다음**을 클릭합니다.  
   
-## <a name="Subtotals"></a>1d. 테이블 마법사에서 부분합 및 합계 행 추가  
+## <a name="1d-add-subtotal-and-total-rows-in-the-table-wizard"></a><a name="Subtotals"></a>1d. 테이블 마법사에서 부분합 및 합계 행 추가  
 그룹을 만든 후 필드에 대한 집계 값을 표시할 행을 추가하고 행 서식을 지정할 수 있습니다. 모든 데이터를 표시할지 또는 사용자가 그룹화된 데이터를 대화형으로 확장하거나 축소할 수 있도록 할지 여부를 선택할 수 있습니다.  
   
 ### <a name="to-add-subtotals-and-totals"></a>부분합 및 합계를 추가하려면  
@@ -186,7 +186,7 @@ ms.locfileid: "63041207"
   
 디자인 화면에 테이블이 추가됩니다. 이 테이블에는 열 5개와 행 5개가 있습니다. 행 그룹 창에는 SalesDate, Subcategory 및 Details라는 3개의 행 그룹이 표시됩니다. 세부 데이터는 모두 데이터 세트 쿼리로 검색된 데이터입니다.  
   
-## <a name="FormatCurrency"></a>2. 데이터 형식을 통화로 지정  
+## <a name="2-format-data-as-currency"></a><a name="FormatCurrency"></a>2. 데이터 형식을 통화로 지정  
 기본적으로 Sales 필드의 요약 데이터에는 일반 숫자가 표시됩니다. 서식을 지정하여 숫자가 통화로 표시되도록 합니다.   
   
 ### <a name="to-format-a-currency-field"></a>통화 필드의 서식을 지정하려면  
@@ -203,7 +203,7 @@ ms.locfileid: "63041207"
   
 Sales의 요약 값이 통화로 표시됩니다.  
   
-## <a name="FormatDate"></a>3. 데이터 형식을 날짜로 지정  
+## <a name="3-format-data-as-date"></a><a name="FormatDate"></a>3. 데이터 형식을 날짜로 지정  
 기본적으로 SalesDate 필드에는 날짜 및 시간이 표시됩니다. 날짜만 표시되도록 서식을 지정할 수 있습니다.  
   
 ### <a name="to-format-a-date-field-as-the-default-format"></a>날짜 필드를 기본 형식으로 지정하려면  
@@ -242,7 +242,7 @@ SalesDate 값이 기본 날짜 형식으로 표시됩니다.
   
 SalesDate 값이 월에 해당하는 숫자 대신 월 이름을 표시합니다.  
   
-## <a name="Width"></a>4. 열 너비 변경  
+## <a name="4-change-column-widths"></a><a name="Width"></a>4. 열 너비 변경  
 기본적으로 테이블의 각 셀은 입력란을 포함합니다. 페이지를 렌더링하면 입력란은 텍스트를 수용하도록 세로로 확장됩니다. 렌더링된 보고서에서 각 행은 해당 행에서 가장 길게 렌더링된 입력란의 높이에 맞춰 확장됩니다. 디자인 화면에서 행의 높이는 렌더링된 보고서의 행 높이에 영향을 주지 않습니다.  
   
 각 행의 세로 크기를 줄이려면 열 입력란에 들어갈 예상 내용이 한 줄에 수용되는 범위에서 열 너비를 확장합니다.  
@@ -259,7 +259,7 @@ SalesDate 값이 월에 해당하는 숫자 대신 월 이름을 표시합니다
   
 4.  **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
-## <a name="Title"></a>5. 보고서 제목 추가  
+## <a name="5-add-a-report-title"></a><a name="Title"></a>5. 보고서 제목 추가  
 보고서 제목은 보고서 맨 위에 나타납니다. 보고서 제목을 보고서 머리글에 배치하거나, 보고서 머리글이 사용되지 않을 경우 보고서 본문의 맨 위에 있는 입력란에 배치할 수 있습니다. 이 자습서에서는 보고서 본문의 맨 위에 자동으로 표시되는 입력란을 사용합니다.  
   
 글꼴 스타일, 크기 및 색을 텍스트의 각 문자나 구 단위로 다르게 적용하여 더 보기 좋게 꾸밀 수 있습니다. 자세한 내용은 [입력란의 텍스트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)을 참조하세요.  
@@ -282,7 +282,7 @@ SalesDate 값이 월에 해당하는 숫자 대신 월 이름을 표시합니다
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Save"></a>6. 보고서 저장  
+## <a name="6-save-the-report"></a><a name="Save"></a>6. 보고서 저장  
 보고서 서버 또는 컴퓨터에 보고서를 저장합니다. 보고서를 보고서 서버에 저장하지 않을 경우 보고서 파트 및 하위 보고서와 같은 여러 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능을 사용할 수 없습니다.  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>보고서를 보고서 서버에 저장하려면  
@@ -311,7 +311,7 @@ SalesDate 값이 월에 해당하는 숫자 대신 월 이름을 표시합니다
   
 4.  **저장**을 클릭합니다.  
   
-## <a name="Export"></a>7. 보고서 내보내기  
+## <a name="7-export-the-report"></a><a name="Export"></a>7. 보고서 내보내기  
 보고서는 Microsoft Excel 및 CSV(쉼표로 구분된 값) 파일과 같은 여러 형식으로 내보낼 수 있습니다. 자세한 내용은 [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)에서 페이지 매김을 제어하는 데 사용되는 규칙을 이해해야 합니다.  
   
 이 자습서에서는 보고서를 Excel로 내보내고 보고서에 속성을 설정하여 통합 문서 탭 이름을 사용자 지정합니다.  

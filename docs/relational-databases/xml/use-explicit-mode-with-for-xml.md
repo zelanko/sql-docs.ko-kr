@@ -15,10 +15,10 @@ ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63a80b7bebafdaf05c93a95b9ce5efd0dc89c316
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68001793"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>FOR XML에서 EXPLICIT 모드 사용
@@ -148,25 +148,25 @@ ElementName!TagNumber!AttributeName!Directive
 ## <a name="in-this-section"></a>섹션 내용  
  다음 예에서는 EXPLICIT 모드를 사용하는 방법을 보여 줍니다.  
   
--   [예: 직원 정보 검색](../../relational-databases/xml/example-retrieving-employee-information.md)  
+-   [예제: 직원 정보 검색](../../relational-databases/xml/example-retrieving-employee-information.md)  
   
--   [예: ELEMENT 지시어 지정](../../relational-databases/xml/example-specifying-the-element-directive.md)  
+-   [예제: ELEMENT 지시어 지정](../../relational-databases/xml/example-specifying-the-element-directive.md)  
   
--   [예: ELEMENTXSINIL 지시어 지정](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)  
+-   [예제: ELEMENTXSINIL 지시어 지정](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)  
   
--   [예: EXPLICIT 모드를 사용하여 형제 구성](../../relational-databases/xml/example-constructing-siblings-with-explicit-mode.md)  
+-   [예: EXPLICIT 모드를 사용하여 형제 생성](../../relational-databases/xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [예: ID 및 IDREF 지시어 지정](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
+-   [예제: ID 및 IDREF 지시어 지정](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
   
--   [예: ID 및 IDREFS 지시어 지정](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
+-   [예제: ID 및 IDREFS 지시어 지정](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
   
--   [예: HIDE 지시어 지정](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
+-   [예제: HIDE 지시어 지정](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
   
--   [예: ELEMENT 지시어 및 엔터티 인코딩 지정](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
+-   [예제: ELEMENT 지시어 및 엔터티 인코딩 지정](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   
--   [예: CDATA 지시어 지정](../../relational-databases/xml/example-specifying-the-cdata-directive.md)  
+-   [예제: CDATA 지시어 지정](../../relational-databases/xml/example-specifying-the-cdata-directive.md)  
   
--   [예: XMLTEXT 지시어 지정](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
+-   [예제: XMLTEXT 지시어 지정](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [FOR XML에서 RAW 모드 사용](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   

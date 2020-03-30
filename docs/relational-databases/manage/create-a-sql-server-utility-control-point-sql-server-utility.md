@@ -21,10 +21,10 @@ ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b342e77c542cd9f3357bccd4b97f3a876d1f5f1d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68115694"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>SQL Server 유틸리티 제어 지점 만들기(SQL Server 유틸리티)
@@ -122,14 +122,14 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
 -   [유틸리티 제어 지점 만들기](#Creating_UCP)  
   
-##  <a name="Welcome"></a> UCP 만들기 마법사 소개  
+##  <a name="introduction-to-create-ucp-wizard"></a><a name="Welcome"></a> UCP 만들기 마법사 소개  
  유틸리티 탐색기를 열 때 연결된 유틸리티 제어 지점이 없으면 기존 항목에 연결하거나 새 항목을 만들어야 합니다.  
   
  **기존 UCP에 연결** - 배포 환경에 기존 유틸리티 제어 지점이 있는 경우 유틸리티 탐색기 창의 맨 위에 있는 ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**유틸리티에 연결** 단추를 클릭하여 연결할 수 있습니다. 기존 UCP에 연결하려면 관리자 자격 증명이 있거나 유틸리티 읽기 역할의 멤버여야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티당 UCP는 하나만 있을 수 있으며 사용자는 SSMS 인스턴스에서 하나의 UCP에만 연결할 수 있습니다.  
   
  **새 UCP 만들기** - 새 유틸리티 제어 지점을 만들려면 유틸리티 탐색기 창의 맨 위에 있는 ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")**UCP 만들기** 단추를 클릭합니다. 새 UCP를 만들려면 연결 대화 상자에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 지정하고 관리자 자격 증명을 제공해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 한 개마다 UCP를 한 개만 사용할 수 있습니다.  
   
-##  <a name="Instance_name"></a> 인스턴스 지정  
+##  <a name="specify-instance"></a><a name="Instance_name"></a> 인스턴스 지정  
  만들려는 UCP에 대한 다음 정보를 지정합니다.  
   
 -   **인스턴스 이름** - 연결 대화 상자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 선택하려면 **연결...** 을 클릭합니다. 컴퓨터 이름과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 ComputerName\InstanceName 형식으로 입력합니다.  
@@ -138,7 +138,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  계속하려면 **다음**을 클릭합니다.  
   
-##  <a name="Connection_dialog"></a> 연결 대화 상자  
+##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> 연결 대화 상자  
  서버로 연결 대화 상자에서 서버 유형, 컴퓨터 이름 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름 정보를 확인합니다. 자세한 내용은 [서버에 연결&#40;데이터베이스 엔진&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)을 참조하세요.  
   
 > [!NOTE]  
@@ -146,7 +146,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  계속하려면 **연결...** 을 클릭합니다.  
   
-##  <a name="Agent_configuration"></a> 유틸리티 컬렉션 집합 계정  
+##  <a name="utility-collection-set-account"></a><a name="Agent_configuration"></a> 유틸리티 컬렉션 집합 계정  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 컬렉션 집합을 실행할 Windows 도메인 계정을 지정합니다. 이 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 컬렉션 집합에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정으로 사용됩니다. 또는 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정을 사용할 수 있습니다. 유효성 검사 요구 사항을 통과하려면 계정을 지정할 때 다음 지침을 따릅니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정 옵션을 지정하는 경우  
@@ -155,7 +155,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  계속하려면 **다음**을 클릭합니다.  
   
-##  <a name="Validation_rules"></a> 유효성 검사 규칙  
+##  <a name="validation-rules"></a><a name="Validation_rules"></a> 유효성 검사 규칙  
  이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]릴리스에서는 UCP를 만들려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 다음 조건이 충족되어야 합니다.  
   
 |유효성 검사 규칙|정정 작업|  
@@ -181,7 +181,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  계속하려면 **다음**을 클릭합니다.  
   
-##  <a name="Summary"></a> 요약  
+##  <a name="summary"></a><a name="Summary"></a> 요약  
  요약 페이지에는 UCP에 대해 제공한 정보가 표시됩니다.  
   
 -   UCP를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름  
@@ -192,7 +192,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  UCP 구성 설정을 변경하려면 **이전**을 클릭합니다. 계속하려면 **다음**을 클릭합니다.  
   
-##  <a name="Creating_UCP"></a> 유틸리티 제어 지점 만들기  
+##  <a name="creating-the-utility-control-point"></a><a name="Creating_UCP"></a> 유틸리티 제어 지점 만들기  
  마법사는 UCP를 만드는 작업 중에 단계를 표시하고 상태를 제공합니다.  
   
 -   UCP를 만들기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 준비하고 있습니다.  
@@ -217,7 +217,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 추가 인스턴스를 등록하는 방법에 대한 자세한 내용은 [SQL Server 인스턴스 등록&#40;SQL Server 유틸리티&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)를 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 관리되는 인스턴스인 UCP를 제거하려면 **유틸리티 탐색기** 창에서 **관리되는 인스턴스** 를 선택하여 목록 뷰에 관리되는 인스턴스를 표시한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 탐색기 내용 **목록 뷰에서** 인스턴스 이름을 마우스 오른쪽 단추로 클릭하고 **관리되지 않는 인스턴스로 설정**을 선택합니다.  
   
-##  <a name="PowerShell_create_UCP"></a> PowerShell을 사용하여 유틸리티 제어 지점 만들기  
+##  <a name="create-a-new-utility-control-point-using-powershell"></a><a name="PowerShell_create_UCP"></a> PowerShell을 사용하여 유틸리티 제어 지점 만들기  
  다음 예를 사용하여 새 유틸리티 제어 지점을 만들 수 있습니다.  
   
 ```  

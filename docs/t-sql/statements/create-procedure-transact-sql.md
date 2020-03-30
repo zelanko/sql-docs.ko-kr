@@ -47,10 +47,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9ae139dda1837a6d8698809f984060f0b341b758
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287927"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE(Transact-SQL)
@@ -331,7 +331,7 @@ DELAYED_DURABILITY = { OFF | ON }
   
  자세한 내용은 [트랜잭션 내구성 제어](../../relational-databases/logs/control-transaction-durability.md)를 참조하세요.  
 
-## <a name="Simple"></a> 간단한 예
+## <a name="simple-examples"></a><a name="Simple"></a> 간단한 예
 
 다음은 시작에 도움이 될만한 두 가지 간단한 예입니다.  
 `SELECT DB_NAME() AS ThisDB;`는 현재 데이터베이스의 이름을 반환합니다.  
@@ -464,7 +464,7 @@ GO
   
  CLR 저장 프로시저의 경우 EXTERNAL NAME 절에서 참조되는 어셈블리에 대한 소유권 또는 해당 어셈블리에 대한 **REFERENCES** 권한이 필요합니다.  
   
-##  <a name="mot"></a> CREATE PROCEDURE 및 메모리 최적화 테이블  
+##  <a name="create-procedure-and-memory-optimized-tables"></a><a name="mot"></a> CREATE PROCEDURE 및 메모리 최적화 테이블  
  메모리 최적화 테이블은 기존 및 고유하게 컴파일된 저장 프로시저를 통해 액세스할 수 있습니다. 네이티브 프로시저는 대부분의 경우에 효율적인 방법입니다.
 자세한 내용은 [고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)를 참조하세요.  
   
@@ -487,7 +487,7 @@ GO
   
  고유하게 컴파일된 저장 프로시저, 지원되는 쿼리 노출 영역 및 연산자의 프로그래밍 기능에 대한 자세한 내용은 [고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)을 참조하세요.  
   
-## <a name="Examples"></a> 예  
+## <a name="examples"></a><a name="Examples"></a> 예  
   
 |Category|중요한 구문 요소|  
 |--------------|------------------------------|  
@@ -499,7 +499,7 @@ GO
 |[프로시저의 다시 컴파일 강제 수행](#Recompile)|WITH RECOMPILE|  
 |[보안 컨텍스트 설정](#Security)|EXECUTE AS|  
   
-###  <a name="BasicSyntax"></a> 기본 구문  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> 기본 구문  
  이 섹션의 예에서는 최소 필수 구문을 사용하여 CREATE PROCEDURE 문의 기본 기능을 보여 줍니다.  
   
 #### <a name="a-creating-a-simple-transact-sql-procedure"></a>A. 단순 Transact-SQL 프로시저 만들기  
@@ -558,7 +558,7 @@ AS EXTERNAL NAME HandlingLOBUsingCLR.LargeObjectBinary.GetPhotoFromDB;
 GO  
 ```  
   
-###  <a name="Parameters"></a> 매개 변수 전달  
+###  <a name="passing-parameters"></a><a name="Parameters"></a> 매개 변수 전달  
  이 섹션의 예에서는 입력 및 출력 매개 변수를 통해 값을 저장 프로시저로 전달 및 저장 프로시저에서 값을 전달하는 방법을 보여 줍니다.  
   
 #### <a name="d-creating-a-procedure-with-input-parameters"></a>D. 입력 매개 변수가 있는 프로시저 만들기  
@@ -766,7 +766,7 @@ DEALLOCATE @MyCursor;
 GO  
 ```  
   
-###  <a name="Modify"></a> 저장 프로시저를 사용하여 데이터 수정  
+###  <a name="modifying-data-by-using-a-stored-procedure"></a><a name="Modify"></a> 저장 프로시저를 사용하여 데이터 수정  
  이 섹션의 예에서는 프로시저 정의에 DML(데이터 조작 언어) 문을 포함해 테이블 또는 뷰에 있는 데이터를 삽입하거나 수정하는 방법을 보여 줍니다.  
   
 #### <a name="i-using-update-in-a-stored-procedure"></a>9\. 저장 프로시저에 UPDATE 사용  
@@ -790,7 +790,7 @@ GO
 EXEC HumanResources.Update_VacationHours 40;  
 ```  
   
-###  <a name="Error"></a> 오류 처리  
+###  <a name="error-handling"></a><a name="Error"></a> 오류 처리  
  이 섹션의 예에서는 저장 프로시저가 실행될 때 발생할 수 있는 오류를 처리하는 방법을 보여 줍니다.  
   
 #### <a name="j-using-trycatch"></a>J. TRY...CATCH 사용  
@@ -865,7 +865,7 @@ EXEC Production.uspDeleteWorkOrder 15;
 DROP PROCEDURE Production.uspDeleteWorkOrder;  
 ```  
   
-###  <a name="Encrypt"></a> 프로시저 정의 난독 처리  
+###  <a name="obfuscating-the-procedure-definition"></a><a name="Encrypt"></a> 프로시저 정의 난독 처리  
  이 섹션의 예에서는 저장 프로시저 정의를 난독 처리하는 방법을 보여 줍니다.  
   
 #### <a name="k-using-the-with-encryption-option"></a>11. WITH ENCRYPTION 옵션 사용  
@@ -911,7 +911,7 @@ WHERE object_id = OBJECT_ID('HumanResources.uspEncryptThis');
  NULL  
  ```  
   
-###  <a name="Recompile"></a> 프로시저의 다시 컴파일 강제 수행  
+###  <a name="forcing-the-procedure-to-recompile"></a><a name="Recompile"></a> 프로시저의 다시 컴파일 강제 수행  
  이 섹션의 예에서는 WITH RECOMPILE 절을 사용하여 프로시저를 실행할 때마다 강제로 다시 컴파일되도록 합니다.  
   
 #### <a name="l-using-the-with-recompile-option"></a>12. WITH RECOMPILE 옵션 사용  
@@ -934,7 +934,7 @@ AS
     WHERE v.Name LIKE @Name;  
 ```  
   
-###  <a name="Security"></a> 보안 컨텍스트 설정  
+###  <a name="setting-the-security-context"></a><a name="Security"></a> 보안 컨텍스트 설정  
  이 섹션의 예에서는 EXECUTE AS 절을 사용하여 저장 프로시저가 실행되는 보안 컨텍스트를 설정합니다.  
   
 #### <a name="m-using-the-execute-as-clause"></a>13. EXECUTE AS 절 사용  
