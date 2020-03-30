@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: 2e234e0057db852b6b741a0103412bbacd108287
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558401"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Linux에서 고가용성을 위한 SQL Server Always On 가용성 그룹 구성

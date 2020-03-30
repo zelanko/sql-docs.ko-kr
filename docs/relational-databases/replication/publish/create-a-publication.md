@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 5bb28692ee8e4b9cc70554b2589025db57291fc7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76286538"
 ---
 # <a name="create-a-publication"></a>Create a Publication
@@ -43,16 +43,16 @@ ms.locfileid: "76286538"
   
      [RMO(복제 관리 개체)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   게시 및 아티클 이름에는 %, \*, [, ], |, :, ", ? 등의 문자를 포함할 수 없습니다. , ' , \ , / , < , >. 이러한 문자를 포함하는 데이터베이스 개체를 복제하려면 마법사의 **아티클** 페이지에서 사용할 수 있는 **아티클 속성 - \<아티클>** 대화 상자에서 개체 이름과 다른 아티클 이름을 지정해야 합니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](https://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 를 사용합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  새 게시 마법사를 사용하여 게시를 만들고 아티클을 정의할 수 있습니다. 게시를 만든 후 **게시 속성 - \<게시>** 대화 상자에서 게시 속성을 보고 수정합니다. Oracle 데이터베이스에서 게시를 만드는 방법에 대한 자세한 내용은 [Oracle 데이터베이스에서 게시 만들기](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)를 참조하세요.  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>게시를 만들고 아티클을 정의하려면  
@@ -97,7 +97,7 @@ ms.locfileid: "76286538"
   
     -   게시의 이름을 지정합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  복제 저장 프로시저를 사용하여 프로그래밍 방식으로 게시를 만들 수 있습니다. 사용되는 저장 프로시저는 만들려는 게시의 유형에 따라 달라집니다.  
   
 #### <a name="to-create-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시를 만들려면  
@@ -148,7 +148,7 @@ ms.locfileid: "76286538"
   
 5.  스냅샷 에이전트 작업을 시작하여 이 게시에 대한 초기 스냅샷을 생성합니다. 자세한 내용은 [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)을 참조하세요.  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 예에서는 트랜잭션 게시를 만듭니다. 스크립팅 변수는 스냅샷 에이전트 및 로그 판독기 에이전트에 대한 작업을 만드는 데 필요한 Windows 자격 증명을 전달하는 데 사용됩니다.  
   
  [!code-sql[HowTo#sp_AddTranPub](../../../relational-databases/replication/codesnippet/tsql/create-a-publication_1.sql)]  
@@ -157,7 +157,7 @@ ms.locfileid: "76286538"
   
  [!code-sql[HowTo#sp_AddMergePub](../../../relational-databases/replication/codesnippet/tsql/create-a-publication_2.sql)]  
   
-##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
  RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 게시를 만들 수 있습니다. 게시를 만드는 데 사용하는 RMO 클래스는 만드는 게시 유형에 따라 달라집니다.  
   
 #### <a name="to-create-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시를 만들려면  
@@ -237,7 +237,7 @@ ms.locfileid: "76286538"
   
 6.  <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> 메서드를 호출하여 게시에 대한 스냅샷 에이전트 작업을 만듭니다.  
   
-###  <a name="PShellExample"></a> 예(RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 예(RMO)  
  이 예에서는 AdventureWorks 데이터베이스에서 트랜잭션 게시를 사용할 수 있도록 설정하고 로그 판독기 에이전트 작업을 정의하며 AdvWorksProductTran 게시를 만듭니다. 이 게시에 대한 아티클을 정의해야 합니다. 로그 판독기 에이전트 작업 및 스냅샷 에이전트 작업을 만드는 데 필요한 Windows 계정 자격 증명은 런타임에 전달됩니다. RMO를 사용하여 스냅샷 및 트랜잭션 아티클을 정의하는 방법은 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)를 참조하세요.  
   
  [!code-cs[HowTo#rmo_CreateTranPub](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createtranpub)]  

@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 8d4d4812ccdc944411224094f3a9a29115845dc1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73632931"
 ---
 # <a name="compatibility-certification"></a>호환성 인증
@@ -57,7 +57,7 @@ ms.locfileid: "73632931"
 
 새로운 개발 작업을 수행하는 경우 또는 기존 애플리케이션에 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 및 새로운 [!INCLUDE[tsql](../../includes/tsql-md.md)]와 같은 새 기능을 사용해야 하는 경우 데이터베이스 호환성 수준을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용 가능한 최신 수준으로 업그레이드하고, 애플리케이션이 해당 호환성 수준과 함께 작동함을 인증하세요. 데이터베이스 호환성 수준을 업그레이드하는 방법에 대한 자세한 내용은 [데이터베이스 호환성 수준 업그레이드에 대한 모범 사례](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level)를 참조하세요.
    
-### <a name="queryplan_shape"></a> 쿼리 계획 셰이프를 사용하는 이유      
+### <a name="why-query-plan-shape"></a><a name="queryplan_shape"></a> 쿼리 계획 셰이프를 사용하는 이유      
 쿼리 계획 셰이프는 쿼리 계획을 구성하는 다양한 연산자의 시각적 표시를 나타냅니다. 여기에는 검색, 검사, 조인, 정렬 등의 연산자와 데이터 흐름을 나타내는 연산자 간 연결, 의도한 결과 세트를 생성하기 위해 실행해야 하는 연산 순서가 포함됩니다. 쿼리 계획 셰이프는 쿼리 최적화 프로그램에서 결정됩니다.
 
 업그레이드하는 동안 쿼리 성능을 예측 가능하게 유지하려면 기본적으로 동일한 쿼리 계획 셰이프를 사용해야 합니다. 이를 위해서는 기본 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]의 버전이 다르더라도 업그레이드 직후에 데이터베이스 호환성 수준을 변경하지 않아야 합니다. 사용 가능한 리소스 또는 기본 데이터의 데이터 분산 방식을 획기적으로 변경하는 경우처럼 쿼리 실행 에코시스템을 변경하지 않았다면 쿼리 성능이 변경되지 않은 상태로 유지됩니다. 
@@ -83,7 +83,7 @@ ms.locfileid: "73632931"
 >
 > 허용된 수준보다 낮은 호환성 수준으로 데이터베이스를 업그레이드하면(예: [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 기본값인 90) 데이터베이스를 허용된 가장 낮은 호환성 수준(100)으로 설정합니다.
 >
-> 현재 호환성 수준을 확인하려면 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)의 **compatibility_level** 열을 쿼리합니다.
+> 현재 호환성 수준을 확인하려면 **sys.databases**의 [compatibility_level](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 열을 쿼리합니다.
 
 ## <a name="compatibility-levels-and-database-engine-upgrades"></a>호환성 수준 및 업그레이드 데이터베이스 엔진
 업그레이드 이전의 데이터베이스 호환성 수준과 지원 가능성 상태를 유지하면서 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]을 최신 버전으로 업그레이드하려면 [DMA](https://www.microsoft.com/download/details.aspx?id=53595) 도구(Microsoft Data Migration Assistant)를 사용하여 데이터베이스(저장 프로시저, 함수, 트리거 등의 프로그래밍 기능 개체) 및 애플리케이션(애플리케이션에서 전송된 동적 코드를 캡처하는 워크로드 추적 사용)의 애플리케이션 코드에 대한 정적 기능 노출 영역 유효성 검사를 수행하는 것이 좋습니다. DMA 도구 출력에 누락되거나 호환되지 않는 기능에 대한 오류가 없는 경우 애플리케이션이 새로운 대상 버전의 기능 회귀로부터 보호됩니다. 자세한 내용은 [Data Migration Assistant 개요](../../dma/dma-overview.md)를 참조하세요.
@@ -98,7 +98,7 @@ ms.locfileid: "73632931"
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서는 다음과 같은 경우 쿼리 계획 셰이프 보호를 제공합니다.
 >
 > - 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전(대상)은 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전(원본)이 실행 중인 하드웨어와 유사한 하드웨어에서 실행됩니다.
-> - 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 모두에서 동일한 [지원 데이터베이스 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats)이 사용됩니다.
+> - 대상 [ 및 원본 ](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats) 모두에서 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]지원 데이터베이스 호환성 수준[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 사용됩니다.
 >
 > 위의 조건에서 발생하는 모든 쿼리 계획 셰이프 회귀(원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기준)는 해결될 예정입니다. 이 경우 Microsoft 고객 지원팀에 문의하세요.
   

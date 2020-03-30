@@ -18,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 03203f80f3b35fa961fb9faa4eae4099b4744217
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79190542"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017에서 사용되지 않는 데이터베이스 엔진 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-  이 문서에서는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 에서 계속 제공되지만 더 이상 사용되지 않는 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]기능에 대해 설명합니다. 새 애플리케이션에는 이러한 기능을 사용하면 안 됩니다.  
+  이 항목에서는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 에서 계속 제공되지만 더 이상 사용되지 않는 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]기능에 대해 설명합니다. 새 애플리케이션에는 이러한 기능을 사용하면 안 됩니다.  
   
 기능이 사용되지 않는 것으로 표시된 경우 이는 다음을 의미합니다.
 -  기능이 유지 관리 모드로만 유지됩니다. 새로운 기능과의 상호 운용성과 관련된 변경 사항을 비롯한 새로운 변경 사항이 적용되지 않습니다.

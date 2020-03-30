@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b01305a689f7dbe7937560350200d3e81a1785dd
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288457"
 ---
 # <a name="query-store-usage-scenarios"></a>쿼리 저장소 사용 시나리오
@@ -110,7 +110,7 @@ ms.locfileid: "79288457"
   
 분석에 따라, 쿼리 성능이 향상되었으므로 인덱스를 유지할 수 있습니다.  
   
-## <a name="CEUpgrade"></a> 최신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 업그레이드하는 동안 성능 안정성 유지  
+## <a name="keep-performance-stability-during-the-upgrade-to-newer-ssnoversion"></a><a name="CEUpgrade"></a> 최신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 업그레이드하는 동안 성능 안정성 유지  
 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]이전에는 사용자가 최신 플랫폼 버전으로 업그레이드하는 동안 성능 회귀 위험에 노출되었습니다. 이러한 이유로 새 비트가 설치되는 즉시 최신 버전의 쿼리 최적화 프로그램이 활성화되었습니다.  
   
 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터는 쿼리 최적화 프로그램의 모든 변경 내용이 최신 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)에 연결되므로 계획이 업그레이드 시점에 즉시 변경되지 않고 사용자가 `COMPATIBILITY_LEVEL`을 최신 상태로 변경할 때 변경됩니다. 이 기능은 쿼리 저장소와 함께 업그레이드 프로세스에서 쿼리 성능에 대한 뛰어난 제어 수준을 제공합니다. 아래 그림에 권장 업그레이드 워크플로가 표시되어 있습니다.  

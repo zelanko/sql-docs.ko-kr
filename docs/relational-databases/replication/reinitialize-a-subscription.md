@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 733e63f6dd01c09fd007a7176721533f7a1c57d3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70846511"
 ---
 # <a name="reinitialize-a-subscription"></a>구독 다시 초기화
@@ -30,7 +30,7 @@ ms.locfileid: "70846511"
 
 
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  구독을 다시 초기화하는 프로세스는 두 부분으로 구성되어 있습니다.  
   
 1.  게시에 대한 단일 구독이나 모든 구독을 다시 초기화하도록 *표시* 합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **로컬 게시** 폴더와 **로컬 구독** 폴더에서 사용할 수 있는 **구독 다시 초기화** 대화 상자에서 다시 초기화할 구독을 표시합니다. 또한 **모든 구독** 탭 및 복제 모니터의 게시 노드에서 구독을 표시할 수 있습니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](../../relational-databases/replication/monitor/start-the-replication-monitor.md)을 참조하세요. 구독을 다시 초기화하도록 표시할 때는 다음과 같은 옵션을 선택할 수 있습니다.  
@@ -98,7 +98,7 @@ ms.locfileid: "70846511"
   
 3.  **구독 다시 초기화** 대화 상자에서 옵션을 선택한 다음 **다시 초기화 표시**를 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  복제 저장 프로시저를 사용하여 프로그래밍 방식으로 게시를 다시 초기화할 수 있습니다. 사용되는 저장 프로시저는 구독의 유형(밀어넣기 또는 끌어오기) 및 구독이 속한 게시의 유형에 따라 다릅니다.  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대한 끌어오기 구독을 다시 초기화하려면  
@@ -157,7 +157,7 @@ ms.locfileid: "70846511"
   
      자세한 내용은 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
-##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
  각 게시를 다시 초기화하도록 표시하여 다음 동기화 중에 새 스냅샷을 적용할 수 있습니다. RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 구독을 다시 초기화할 수 있습니다. 사용되는 클래스는 구독이 속한 게시의 유형과 구독의 유형(밀어넣기 또는 끌어오기 구독)에 따라 다릅니다.  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대한 끌어오기 구독을 다시 초기화하려면  
@@ -226,7 +226,7 @@ ms.locfileid: "70846511"
   
 5.  밀어넣기 구독을 동기화합니다. 자세한 내용은 [밀어넣기 구독 동기화](../../relational-databases/replication/synchronize-a-push-subscription.md)을 참조하세요.  
   
-###  <a name="PShellExample"></a> 예(RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 예(RMO)  
  다음 예에서는 트랜잭션 게시에 대한 끌어오기 구독을 다시 초기합니다.  
   
  [!code-cs[HowTo#rmo_ReinitTranPullSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_reinittranpullsub)]  

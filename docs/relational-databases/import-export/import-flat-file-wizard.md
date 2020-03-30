@@ -13,10 +13,10 @@ ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 792cb1bcef1097c3eddaa325519b43a229bcccb4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74190797"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>SQL 마법사로 플랫 파일 가져오기
@@ -37,7 +37,7 @@ PROSE는 입력 파일의 데이터 패턴을 분석하여 열 이름, 형식, �
 ## <a name="prerequisites"></a>사전 요구 사항
 이 기능은 SSMS(SQL Server Management Studio) v17.3 이상에서만 사용할 수 있습니다. 최신 버전을 사용하고 있는지 확인하세요. 최신 버전은 [여기](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)에서 찾을 수 있습니다.
  
-## <a id="started"></a>시작
+## <a name="getting-started"></a><a id="started"></a>시작
 플랫 파일 가져오기 마법사에 액세스하려면 다음 단계를 수행합니다.
 
 1. **SQL Server Management Studio**를 엽니다.

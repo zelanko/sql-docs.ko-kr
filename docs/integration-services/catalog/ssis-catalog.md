@@ -15,10 +15,10 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e240a53d86d66fdf81b53cae1ba55d41820befd
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287727"
 ---
 # <a name="ssis-catalog"></a>SSIS 카탈로그
@@ -71,7 +71,7 @@ ms.locfileid: "79287727"
   
 -   [실행 및 유효성 검사](../../integration-services/catalog/ssis-catalog.md#Executions)  
 
-##  <a name="CatalogObjectIdentifiers"></a> 카탈로그 개체 식별자  
+##  <a name="catalog-object-identifiers"></a><a name="CatalogObjectIdentifiers"></a> 카탈로그 개체 식별자  
  카탈로그에서 새 개체를 만든 경우 해당 개체에 이름을 할당합니다. 개체 이름은 식별자입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 식별자에 사용할 수 있는 문자에 대한 규칙을 정의합니다. 다음 개체의 이름은 식별자 규칙을 따라야 합니다.  
   
 -   폴더  
@@ -84,7 +84,7 @@ ms.locfileid: "79287727"
   
 -   환경 변수  
   
-###  <a name="Folder"></a> 폴더, 프로젝트, 환경  
+###  <a name="folder-project-environment"></a><a name="Folder"></a> 폴더, 프로젝트, 환경  
  폴더, 프로젝트 또는 환경의 이름을 바꿀 때 고려할 규칙은 다음과 같습니다.  
   
 -   ASCII/유니코드 문자 1~31, 따옴표("), 보다 작음(\<), 보다 큼(>), 파이프(|), 백스페이스(\b), null(\0) 및 탭(\t)은 올바른 문자가 아닙니다.  
@@ -95,14 +95,14 @@ ms.locfileid: "79287727"
   
 -   이름의 길이는 1자에서 128자 사이여야 합니다.  
   
-###  <a name="Parameter"></a> 매개 변수  
+###  <a name="parameter"></a><a name="Parameter"></a> 매개 변수  
  매개 변수 이름을 지정할 때 고려할 규칙은 다음과 같습니다.  
   
 -   이름의 첫 글자는 Unicode Standard 2.0에서 정의한 문자이거나 밑줄(_)이어야 합니다.  
   
 -   후속 글자는 Unicode Standard 2.0에 정의된 문자 또는 숫자이거나 밑줄(_)일 수 있습니다.  
   
-###  <a name="EnvironmentVariable"></a> 환경 변수  
+###  <a name="environment-variable"></a><a name="EnvironmentVariable"></a> 환경 변수  
  환경 변수 이름을 지정할 때 고려할 규칙은 다음과 같습니다.  
   
 -   ASCII/유니코드 문자 1~31, 따옴표("), 보다 작음(\<), 보다 큼(>), 파이프(|), 백스페이스(\b), null(\0) 및 탭(\t)은 올바른 문자가 아닙니다.  
@@ -117,10 +117,10 @@ ms.locfileid: "79287727"
   
 -   후속 글자는 Unicode Standard 2.0에 정의된 문자 또는 숫자이거나 밑줄(_)일 수 있습니다.  
   
-##  <a name="Configuration"></a> 카탈로그 구성  
+##  <a name="catalog-configuration"></a><a name="Configuration"></a> 카탈로그 구성  
  카탈로그 속성을 조정하여 카탈로그가 동작하는 방식을 세밀하게 조정할 수 있습니다. 카탈로그 속성은 중요한 데이터가 암호화되는 방법과 작업 및 프로젝트 버전 관리 데이터가 보존되는 방법을 정의합니다. 카탈로그 속성을 설정하려면 **카탈로그 속성** 대화 상자를 사용하거나 [catalog.configure_catalog&#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md) 저장 프로시저를 호출합니다. 속성을 보려면 대화 상자를 사용하거나 [catalog.catalog_properties&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)를 쿼리합니다. 개체 탐색기에서 **SSISDB**를 마우스 오른쪽 단추로 클릭하여 대화 상자에 액세스할 수 있습니다.  
   
-###  <a name="Cleanup"></a> 작업 및 프로젝트 버전 정리  
+###  <a name="operations-and-project-version-cleanup"></a><a name="Cleanup"></a> 작업 및 프로젝트 버전 정리  
  카탈로그의 많은 작업에 대한 상태 데이터는 내부 데이터베이스 테이블에 저장됩니다. 예를 들어 카탈로그는 패키지 실행 및 프로젝트 배포 상태를 추적합니다. 작업 데이터의 크기를 유지 관리하기 위해 **의** SSIS 서버 유지 관리 작업 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 오래된 데이터를 제거합니다. 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 가 설치될 때 만들어집니다.  
   
  카탈로그의 같은 폴더에 동일한 이름으로 배포하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 업데이트하거나 다시 배포할 수 있습니다. 기본적으로 프로젝트를 다시 배포할 때마다 **SSISDB** 카탈로그에서 이전 버전의 프로젝트를 보존합니다. 작업 데이터의 크기를 유지 관리하기 위해 **SSIS 서버 유지 관리 작업** 을 사용하여 오래된 버전의 프로젝트를 제거합니다.  
@@ -143,7 +143,7 @@ ms.locfileid: "79287727"
  **프로젝트당 최대 버전 수**  
  카탈로그에 저장되는 프로젝트 버전 수를 정의합니다. 오래된 버전의 프로젝트는 제거됩니다.  
   
-###  <a name="Encryption"></a> 암호화 알고리즘  
+###  <a name="encryption-algorithm"></a><a name="Encryption"></a> 암호화 알고리즘  
  **암호화 알고리즘** 속성은 중요한 매개 변수 값을 암호화하는 데 사용되는 암호화 유형을 지정합니다. 다음 암호화 유형 중에서 선택할 수 있습니다.  
   
 -   AES_256(기본값)  
@@ -181,7 +181,7 @@ ms.locfileid: "79287727"
 |프로젝트당 최대 버전 수|MAX_PROJECT_VERSIONS|  
 |서버 차원의 기본 로깅 수준|SERVER_LOGGING_LEVEL|  
   
-##  <a name="Permissions"></a> 권한  
+##  <a name="permissions"></a><a name="Permissions"></a> 권한  
  프로젝트, 환경 및 패키지는 보안 개체인 폴더에 포함됩니다. MANAGE_OBJECT_PERMISSIONS 권한을 포함하여 폴더에 대한 사용 권한을 부여할 수 있습니다. MANAGE_OBJECT_PERMISSIONS는 ssis_admin 역할에 대한 사용자 멤버 자격을 부여하지 않고도 사용자에게 폴더 내용에 대한 관리를 위임할 수 있습니다. 프로젝트, 환경 및 작업에 사용 권한을 부여할 수도 있습니다. 작업에는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]초기화, 프로젝트 배포, 실행 만들기 및 시작, 프로젝트 및 패키지 유효성 검사, **SSISDB** 카탈로그 구성 등이 있습니다.  
   
  데이터베이스 역할에 대한 자세한 내용은 [데이터베이스 수준 역할](../../relational-databases/security/authentication-access/database-level-roles.md)을 참조하세요.  
@@ -203,7 +203,7 @@ ms.locfileid: "79287727"
 
  Transact-SQL을 사용하여 사용 권한을 관리하려면 [catalog.grant_permission&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md), [catalog.deny_permission&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md) 및 [catalog.revoke_permission&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md)을 참조하세요. 모든 개체의 현재 보안 주체에 대한 유효한 사용 권한을 보려면 [catalog.effective_object_permissions&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md)를 쿼리합니다. 이 항목에서는 여러 유형의 사용 권한에 대해 설명합니다. 사용자에게 명시적으로 할당된 사용 권한을 보려면 [catalog.explicit_object_permissions&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md)를 쿼리합니다.  
   
-##  <a name="Folders"></a> 폴더  
+##  <a name="folders"></a><a name="Folders"></a> 폴더  
  폴더에는 **SSISDB** 카탈로그의 프로젝트 및 환경이 하나 이상 포함됩니다. [catalog.folders&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-folders-ssisdb-database.md) 뷰를 사용하여 카탈로그의 폴더에 대한 정보에 액세스할 수 있습니다. 다음 저장 프로시저를 사용하여 폴더를 관리할 수 있습니다.  
   
 -   [catalog.create_folder&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database.md)  
@@ -214,7 +214,7 @@ ms.locfileid: "79287727"
   
 -   [catalog.set_folder_description&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-set-folder-description-ssisdb-database.md)  
   
-##  <a name="ProjectsAndPackages"></a> 프로젝트 및 패키지  
+##  <a name="projects-and-packages"></a><a name="ProjectsAndPackages"></a> 프로젝트 및 패키지  
  각 프로젝트에 여러 패키지를 포함할 수 있습니다. 프로젝트와 패키지 모두 매개 변수 및 환경 참조를 포함할 수 있습니다. [Configure Dialog Box](../../integration-services/catalog/configure-dialog-box.md)를 사용하여 매개 변수 및 환경 참조에 액세스할 수 있습니다.  
   
  다음 저장 프로시저를 호출하여 다른 프로젝트 태스크를 수행할 수 있습니다. 
@@ -237,7 +237,7 @@ ms.locfileid: "79287727"
   
 -   [catalog.object_versions &#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-object-versions-ssisdb-database.md)  
   
-##  <a name="Parameters"></a> 매개 변수  
+##  <a name="parameters"></a><a name="Parameters"></a> 매개 변수  
  매개 변수를 사용하여 패키지 실행 시 패키지 속성에 값을 할당할 수 있습니다. 패키지 또는 프로젝트 매개 변수의 값을 설정하고 값을 지우려면 [catalog.set_object_parameter_value&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md) 및 [catalog.clear_object_parameter_value&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md)를 호출합니다. 실행 인스턴스에 대한 매개 변수 값을 설정하려면 [catalog.set_execution_parameter_value&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)를 호출합니다. [catalog.get_parameter_values&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md)를 호출하여 기본 매개 변수 값을 검색할 수 있습니다.  
   
  이러한 뷰는 모든 패키지 및 프로젝트에 대한 매개 변수와 실행 인스턴스에 사용되는 매개 변수 값을 표시합니다.  
@@ -246,7 +246,7 @@ ms.locfileid: "79287727"
   
 -   [catalog.execution_parameter_values&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)  
   
-##  <a name="ServerEnvironments"></a> 서버 환경, 서버 변수 및 서버 환경 참조  
+##  <a name="server-environments-server-variables-and-server-environment-references"></a><a name="ServerEnvironments"></a> 서버 환경, 서버 변수 및 서버 환경 참조  
  서버 환경에는 서버 변수가 포함되어 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서 패키지를 실행하거나 유효성을 검사할 때 변수 값을 사용할 수 있습니다.  
   
  다음 저장 프로시저를 사용하여 환경 및 변수에 대한 다른 많은 관리 태스크를 수행할 수 있습니다.  
@@ -287,7 +287,7 @@ ms.locfileid: "79287727"
   
 -   [catalog.environment_references&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-environment-references-ssisdb-database.md)  
   
-##  <a name="Executions"></a> 실행 및 유효성 검사  
+##  <a name="executions-and-validations"></a><a name="Executions"></a> 실행 및 유효성 검사  
  실행은 패키지 실행의 인스턴스입니다. 실행을 만들고 시작하려면 [catalog.create_execution&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md) 및 [catalog.start_execution&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)을 호출합니다. 실행 또는 패키지/프로젝트 유효성 검사를 중지하려면 [catalog.stop_operation&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md)을 호출합니다.  
   
  실행 중인 패키지를 일시 중지하고 덤프 파일을 만들려면 catalog.create_execution_dump 저장 프로시저를 호출합니다. 덤프 파일은 실행 문제를 해결하는 데 도움이 될 수 있는 패키지 실행에 대한 정보를 제공합니다. 덤프 파일을 생성하고 구성하는 방법은 [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)을 참조하십시오.  
@@ -372,7 +372,7 @@ ms.locfileid: "79287727"
   
 -   [옵션 구성](#options)  
   
-###  <a name="open_dialog"></a> 카탈로그 속성 대화 상자 열기  
+###  <a name="open-the-catalog-properties-dialog-box"></a><a name="open_dialog"></a> 카탈로그 속성 대화 상자 열기  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]열기  
   
@@ -380,7 +380,7 @@ ms.locfileid: "79287727"
   
 3.  개체 탐색기에서 **Integration Services** 노드를 확장하고 **SSISDB**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-###  <a name="options"></a> 옵션 구성  
+###  <a name="configure-the-options"></a><a name="options"></a> 옵션 구성  
   
 #### <a name="options"></a>옵션  
  다음 표에서는 대화 상자의 특정 속성과 `catalog.catalog_properties` 보기의 해당 속성에 대해 설명합니다.  
@@ -399,7 +399,7 @@ ms.locfileid: "79287727"
   
  **SSISDB** 카탈로그는 사용자가 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포한 패키지를 저장합니다. 카탈로그에 대한 자세한 내용은 [SSIS 카탈로그](../../integration-services/catalog/ssis-catalog.md)를 참조하세요.  
   
-###  <a name="backup"></a> SSIS 데이터베이스를 백업하려면  
+###  <a name="to-back-up-the-ssis-database"></a><a name="backup"></a> SSIS 데이터베이스를 백업하려면  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 열고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결합니다.  
   
@@ -579,7 +579,7 @@ ms.locfileid: "79287727"
   
 3.  [가용성 그룹에서 SSISDB 업그레이드](#Upgrade)  
   
-###  <a name="prereq"></a> 필수 조건  
+###  <a name="prerequisites"></a><a name="prereq"></a> 필수 조건  
 SSISDB 데이터베이스에 대한 Always On 지원을 활성화하기 전에 다음 필수 구성 요소를 수행합니다.  
   
 1.  Windows 장애 조치(Failover) 클러스터를 설정합니다. 지침은 [Windows Server 2012용 장애 조치(Failover) 클러스터 기능 및 도구 설치](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) 블로그 게시물을 참조하세요. 모든 클러스터 노드에 기능 및 도구를 설치합니다.  
@@ -588,7 +588,7 @@ SSISDB 데이터베이스에 대한 Always On 지원을 활성화하기 전에 �
   
 3.  각 SQL Server 인스턴스에 대해 Always On 가용성 그룹을 사용하도록 설정합니다. 자세한 내용은 [Always On 가용성 그룹 활성화](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md) 를 참조하세요.  
   
-###  <a name="Firsttime"></a> Always On에 대한 SSIS 지원 구성  
+###  <a name="configure-ssis-support-for-always-on"></a><a name="Firsttime"></a> Always On에 대한 SSIS 지원 구성  
   
 -   [1단계: Integration Services 카탈로그 만들기](#Step1)  
   
@@ -603,7 +603,7 @@ SSISDB 데이터베이스에 대한 Always On 지원을 활성화하기 전에 �
 > [!NOTE]
 > 이 절차에 대한 자세한 내용은 데이터 플랫폼 MVP Marcos Freccia의 추가 스크린 샷이 포함된 다음 연습을 참조하세요. [SQL Server 2016용 AG에 SSISDB 추가](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
 
-####  <a name="Step1"></a> 1단계: Integration Services 카탈로그 만들기  
+####  <a name="step-1-create-integration-services-catalog"></a><a name="Step1"></a> 1단계: Integration Services 카탈로그 만들기  
   
 1.  **SQL Server Management Studio** 를 시작하고 SSISDB에 대한 Always On 고가용성 그룹의 **주 노드** 로 설정하려는 클러스터의 SQL Server 인스턴스에 연결합니다.  
   
@@ -615,14 +615,14 @@ SSISDB 데이터베이스에 대한 Always On 지원을 활성화하기 전에 �
   
 5.  **암호**를 입력하고 **확인**을 클릭합니다. 암호는 카탈로그 데이터를 암호화하는 데 사용되는 데이터베이스 마스터 키를 보호합니다. 암호를 안전한 위치에 저장하십시오. 데이터베이스 마스터 키도 백업하는 것이 좋습니다. 자세한 내용은 [Back Up a Database Master Key](../../relational-databases/security/encryption/back-up-a-database-master-key.md)을 참조하세요.  
   
-####  <a name="Step2"></a> 2단계: Always On 가용성 그룹에 SSISDB 추가  
+####  <a name="step-2-add-ssisdb-to-an-always-on-availability-group"></a><a name="Step2"></a> 2단계: Always On 가용성 그룹에 SSISDB 추가  
 Always On 가용성 그룹에 SSISDB 데이터베이스를 추가하는 것은 가용성 그룹에 다른 사용자 데이터베이스를 추가하는 것과 거의 동일합니다. [가용성 그룹 마법사 사용](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)을 참조하세요.  
   
 **새 가용성 그룹** 마법사의 **데이터베이스 선택** 페이지에서 SSIS 카탈로그를 만드는 동안 지정한 암호를 제공합니다.
 
 ![새 가용성 그룹](../../integration-services/service/media/ssis-newavailabilitygroup.png "데이터베이스 선택")  
   
-####  <a name="Step3"></a> 3단계: Always On에 대한 SSIS 지원 활성화  
+####  <a name="step-3-enable-ssis-support-for-always-on"></a><a name="Step3"></a> 3단계: Always On에 대한 SSIS 지원 활성화  
  통합 서비스 카탈로그를 만든 후 **통합 서비스 카탈로그** 노드를 마우스 오른쪽 단추로 클릭하고 **Always On 지원 활성화**를 클릭합니다. 다음 **Always On에 대한 지원 활성화** 대화 상자를 참조해야 합니다. 이 메뉴 항목이 비활성화된 경우 모든 필수 구성 요소를 설치했는지 확인하고 **새로 고침**을 클릭합니다.  
   
  ![Always On에 대한 지원 활성화](../../integration-services/service/media/ssis-enablesupportforalwayson.png)  
@@ -637,7 +637,7 @@ Always On 가용성 그룹에 SSISDB 데이터베이스를 추가하는 것은 �
 2.  주 노드에 연결되는지 확인합니다. 주 노드에서 Always On 지원을 사용하도록 설정해야 합니다.
 3.  SQL Server 버전이 13.0 이상인지 확인합니다. SSIS는 SQL Server 2016 이상 버전에 대해서만 Always On을 지원합니다.
 
-###  <a name="Upgrade"></a> 가용성 그룹에서 SSISDB 업그레이드  
+###  <a name="upgrading-ssisdb-in-an-availability-group"></a><a name="Upgrade"></a> 가용성 그룹에서 SSISDB 업그레이드  
  이전 버전에서 SQL Server를 업그레이드하고 SSISDB가 Always On 가용성 그룹에 있는 경우 업그레이드는 "Always On 가용성 그룹의 SSISDB 검사" 규칙에 따라 차단될 수 있습니다. 이 차단은 업그레이드는 단일 사용자 모드에서 실행되는 반면 가용성 데이터베이스는 다중 사용자 데이터베이스여야 하기 때문에 발생합니다. 따라서 업그레이드 또는 패치되는 동안 SSISDB를 포함하는 모든 가용성 데이터베이스는 오프라인으로 전환되고 업그레이드 또는 패치되지 않습니다. 업그레이드를 계속하려면 먼저 가용성 그룹에서 SSISDB를 제거한 다음 각 노드를 업그레이드 또는 패치하고 가용성 그룹에 SSISDB를 다시 추가합니다.  
   
  “Always On 가용성 그룹의 SSISDB 검사” 규칙에 따라 차단되는 경우 SQL Server를 업그레이드하려면 이러한 단계를 따릅니다.  
@@ -662,7 +662,7 @@ Always On 가용성 그룹에 SSISDB 데이터베이스를 추가하는 것은 �
   
 5.  [3단계: Always On에 대한 SSIS 지원 활성화](#Step3)의 지침을 따릅니다.  
   
-##  <a name="RelatedContent"></a> 관련 내용  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
   
 -   blogs.msdn.com의 블로그 항목 - [SQL Server 2012의 SSIS 및 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)  
   

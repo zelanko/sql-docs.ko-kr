@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 2c928db781c6e7d31f07e1cea37ed80481b8fed6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68136477"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 릴리스 정보

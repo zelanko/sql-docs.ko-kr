@@ -11,10 +11,10 @@ ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: f963d8d7fe186d889856c108de1541110beb16a3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165513"
 ---
 # <a name="sql-server-xtp-in-memory-oltp-performance-counters"></a>SQL Server XTP(메모리 내 OLTP) 성능 카운터
@@ -28,7 +28,7 @@ ms.locfileid: "74165513"
   
  *\<version>* 은 2016과 같은 값입니다.  
   
-##  <a name="SQLServerPOs"></a> SQL Server XTP 성능 개체  
+##  <a name="sql-server-xtp-performance-objects"></a><a name="SQLServerPOs"></a> SQL Server XTP 성능 개체  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능 개체에 대해 설명합니다.  
   
 |성능 개체|Description|  

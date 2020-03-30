@@ -16,10 +16,10 @@ ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8d4ecd428d8d9d76ff4e9a543321d461b3983708
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822526"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션에서 미러링 모니터 서버 제거(SQL Server)
@@ -40,14 +40,14 @@ ms.locfileid: "74822526"
   
 -   **후속 작업:**  [미러링 모니터 서버를 제거한 후](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-remove-the-witness"></a>미러링 모니터를 제거하려면  
   
@@ -62,7 +62,7 @@ ms.locfileid: "74822526"
     > [!NOTE]  
     >  자동 장애 조치(failover)가 있는 보호 우선 모드에서 성능 우선 모드로 전환하면 **미러링 모니터 서버** 필드가 자동으로 지워집니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-remove-the-witness"></a>미러링 모니터를 제거하려면  
   
@@ -82,7 +82,7 @@ ms.locfileid: "74822526"
     ALTER DATABASE AdventureWorks2012 SET WITNESS OFF ;  
     ```  
   
-##  <a name="FollowUp"></a> 후속 작업: 미러링 모니터 서버를 제거한 후  
+##  <a name="follow-up-after-removing-the-witness"></a><a name="FollowUp"></a> 후속 작업: 미러링 모니터 서버를 제거한 후  
  미러링 모니터 서버를 해제하면 트랜잭션 보안 설정에 따라 [운영 모드](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)가 변경됩니다.  
   
 -   트랜잭션 보안을 FULL(기본값)로 설정하면 해당 세션은 자동 장애 조치(Failover)가 없는 보호 우선 동기 모드를 사용합니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "74822526"
 > [!TIP]  
 >  각 파트너의 데이터베이스 트랜잭션 보안 설정은 [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) 카탈로그 뷰의 **mirroring_safety_level** 및 **mirroring_safety_level_desc** 열에 기록됩니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [Windows 인증을 사용하여 데이터베이스 미러링 모니터 추가&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   

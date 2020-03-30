@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ba6987367e72ed544df13216b31aebe85af500e2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866296"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>SharePoint 제품용 Reporting Services 추가 기능 검색 위치
@@ -26,7 +26,7 @@ SharePoint 제품 및 기술용 SSRS([!INCLUDE[msCoName](../../includes/msconame
 > [!IMPORTANT]  
 >  지원되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능, 보고서 서버 및 SharePoint 조합의 목록은 [지원되는 SharePoint와 Reporting Services 서버 및 추가 기능 조합&#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)을 참조하세요.  
   
-##  <a name="bkmk_sql16"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SharePoint 제품용 Reporting Services 추가 기능  
+##  <a name="sssql15-reporting-services-add-in-for-sharepoint-products"></a><a name="bkmk_sql16"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SharePoint 제품용 Reporting Services 추가 기능  
  추가 기능을 다운로드하고 설치하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 다운로드 센터를 참조하십시오.  
   
 -   [Microsoft SharePoint용 Microsoft® SQL Server 2016 Reporting Services 추가 기능](https://www.microsoft.com/download/details.aspx?id=52682)  
@@ -37,7 +37,7 @@ SharePoint 제품 및 기술용 SSRS([!INCLUDE[msCoName](../../includes/msconame
   
 -   명령 프롬프트 설치에서 **RS_SHPWFE** 옵션을 사용하여 추가 기능을 설치합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 명령 프롬프트 설치에 대한 자세한 내용은 [명령 프롬프트에 Reporting Services 설치](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md)를 참조하세요.  
   
-##  <a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SharePoint 제품용 Reporting Services 추가 기능  
+##  <a name="sssql14-reporting-services-add-in-for-sharepoint-products"></a><a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SharePoint 제품용 Reporting Services 추가 기능  
  추가 기능을 다운로드하고 설치하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 다운로드 센터를 참조하십시오.  
   
 -   [Microsoft SharePoint용 Microsoft® SQL Server 2014 Reporting Services 추가 기능](https://www.microsoft.com/download/details.aspx?id=42294)  
@@ -48,7 +48,7 @@ SharePoint 제품 및 기술용 SSRS([!INCLUDE[msCoName](../../includes/msconame
   
 -   명령 프롬프트 설치에서 **RS_SHPWFE** 옵션을 사용하여 추가 기능을 설치합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 명령 프롬프트 설치에 대한 자세한 내용은 [명령 프롬프트에 Reporting Services 설치](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md)를 참조하세요.  
   
-##  <a name="bkmk_sql11sp1"></a> [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] SharePoint 제품용 Reporting Services 추가 기능  
+##  <a name="sssql11sp1-reporting-services-add-in-for-sharepoint-products"></a><a name="bkmk_sql11sp1"></a> [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] SharePoint 제품용 Reporting Services 추가 기능  
  [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 버전의 추가 기능 및 보고서 서버, SharePoint Server 2013에 대한 지원을 추가합니다.  
   
  추가 기능을 다운로드하고 설치하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 다운로드 센터를 참조하십시오.  
@@ -57,7 +57,7 @@ SharePoint 제품 및 기술용 SSRS([!INCLUDE[msCoName](../../includes/msconame
   
 -   **SP1:**  [Microsoft® SQL Server® 2012 서비스 팩 1(SP1)](https://www.microsoft.com/download/details.aspx?id=35575)(https://www.microsoft.com/download/details.aspx?id=35575).  
 
-##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SharePoint 2010 제품용 Reporting Services 추가 기능
+##  <a name="sssql11-reporting-services-add-in-for-sharepoint-2010-products"></a><a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SharePoint 2010 제품용 Reporting Services 추가 기능
 
 SQL Server 2016 릴리스부터 SQL Server 설치 마법사 중에 기능 선택 페이지에서 이 추가 기능을 설치할 수 있습니다. 추가 기능을 개별적으로 다운로드하고 설치하려는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 다운로드 센터의 [Microsoft® SharePoint® 기술 2010용 Microsoft® SQL Server® 2012 Reporting Services 추가 기능](https://go.microsoft.com/fwlink/?LinkID=207242) 페이지에서 이 파일의 최신 버전을 얻을 수 있습니다.
 

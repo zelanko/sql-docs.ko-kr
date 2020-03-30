@@ -11,10 +11,10 @@ ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 75ee40e0b7ca753efd32e0ab057340f61824acef
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286507"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>JDBC 드라이버에서 대량 복사 사용

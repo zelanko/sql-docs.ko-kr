@@ -30,10 +30,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 0926264c25affe2f110227fad4c0fb2b113c9590
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287863"
 ---
 # <a name="programmatically-monitor-replication"></a>프로그래밍 방식으로 복제 모니터링
@@ -56,7 +56,7 @@ ms.locfileid: "76287863"
   
  [RMO(복제 관리 개체)](#RMO)  
   
-##  <a name="Tsql"></a> Transact-SQL  
+##  <a name="transact-sql"></a><a name="Tsql"></a> Transact-SQL  
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>배포자에서 게시자, 게시 및 구독을 모니터링하려면  
   
@@ -106,7 +106,7 @@ ms.locfileid: "76287863"
   
     -   모니터 임계값 메트릭을 사용하도록 설정하려면 **\@mode**에 값 **1**을 지정하고 모니터 임계값 메트릭을 사용하지 않도록 설정하려면 값 **2**를 지정합니다.  
   
-##  <a name="RMO"></a> RMO(복제 관리 개체)  
+##  <a name="replication-management-objects-rmo"></a><a name="RMO"></a> RMO(복제 관리 개체)  
   
 #### <a name="to-monitor-a-subscription-to-a-merge-publication-at-the-subscriber"></a>구독자에서 병합 게시에 대한 구독을 모니터링하려면  
   

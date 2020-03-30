@@ -21,10 +21,10 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b98f52d7c8e23530c13da6ad44d90090998ac09e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68212744"
 ---
 # <a name="certificate-management-sql-server-configuration-manager"></a>인증서 관리(SQL Server 구성 관리자)
@@ -41,7 +41,7 @@ SSL/TLS 인증서는 SQL Server에 대한 액세스를 보호하기 위해 널�
 > [!NOTE]
 > SQL Server 2008부터는 낮은 버전의 SQL Server를 사용하여 SQL Server 구성 관리자에서 인증서 관리를 사용할 수 있습니다.
 
-##  <a name="provision-single-server-cert"></a> 단일 SQL Server 인스턴스에 대한 인증서를 설치하려면  
+##  <a name="to-install-a-certificate-for-a-single-sql-server-instance"></a><a name="provision-single-server-cert"></a> 단일 SQL Server 인스턴스에 대한 인증서를 설치하려면  
   
 1. SQL Server 구성 관리자의 콘솔 창에서 **SQL Server 네트워크 구성**을 확장합니다.  
   
@@ -54,7 +54,7 @@ SSL/TLS 인증서는 SQL Server에 대한 액세스를 보호하기 위해 널�
 5. **다음**을 선택하여 인증서의 유효성을 검사합니다. 오류가 없는 경우 **다음**을 선택하여 로컬 인스턴스에 인증서를 가져옵니다.  
   
  
-##  <a name="provision-failover-cluster-cert"></a> 장애 조치 클러스터 구성에서 인증서를 설치하려면  
+##  <a name="to-install-a-certificate-in-a-failover-cluster-configuration"></a><a name="provision-failover-cluster-cert"></a> 장애 조치 클러스터 구성에서 인증서를 설치하려면  
   
 1. SQL Server 구성 관리자의 콘솔 창에서 **SQL Server 네트워크 구성**을 확장합니다.
   
@@ -77,7 +77,7 @@ SSL/TLS 인증서는 SQL Server에 대한 액세스를 보호하기 위해 널�
 > [!NOTE]
 > SQL Server 장애 조치 클러스터 인스턴스의 활성 노드에서 이러한 단계를 완료하세요. 사용자는 모든 클러스터 노드에서 관리자 권한이 있어야 합니다.
 
-##  <a name="provision-availability-group-cert"></a>가용성 그룹 구성에 인증서를 설치하려면  
+##  <a name="to-install-a-certificate-in-an-availability-group-configuration"></a><a name="provision-availability-group-cert"></a>가용성 그룹 구성에 인증서를 설치하려면  
   
 1. SQL Server 구성 관리자의 콘솔 창에서 **SQL Server 네트워크 구성**을 확장합니다.
   

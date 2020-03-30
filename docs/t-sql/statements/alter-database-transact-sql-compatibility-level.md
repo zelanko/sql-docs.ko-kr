@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1980e9c96e568352fe616b6de8a6c7320c3d6c86
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288667"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE(Transact-SQL) 호환성 수준
@@ -121,7 +121,7 @@ SELECT name, compatibility_level FROM sys.databases;
 ## <a name="compatibility-levels-and-stored-procedures"></a>호환성 수준 및 저장 프로시저
 저장 프로시저가 실행될 때 저장 프로시저는 정의된 데이터베이스의 현재 호환성 수준을 사용합니다. 데이터베이스의 호환성 설정이 변경되면 모든 저장 프로시저도 그에 맞게 자동으로 다시 컴파일됩니다.
 
-## <a name="backwardCompat"></a> 이전 버전과의 호환을 위해 호환성 수준 사용
+## <a name="using-compatibility-level-for-backward-compatibility"></a><a name="backwardCompat"></a> 이전 버전과의 호환을 위해 호환성 수준 사용
 [데이터베이스 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 설정은 전체 서버가 아닌 지정된 데이터베이스에 대해서만 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 쿼리 최적화 동작과 관련된 사항에서 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전과의 호환성을 제공합니다.  
 
 호환성 모드 130부터 수정 내용 및 기능에 영향을 주는 새로운 쿼리 계획이 새 호환성 수준에만 의도적으로 추가되었습니다. 새 쿼리 최적화 동작을 통해 도입된 잠재적 쿼리 계획 변경으로 인해 업그레이드 중에 성능 저하가 발생하는 위험을 최소화하기 위한 것입니다.      

@@ -15,10 +15,10 @@ ms.assetid: 0fc4aa01-65a3-4a33-9ef4-caca41add238
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bcba6def4229175c46a981dd03037006bfba2aa2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012374"
 ---
 # <a name="configure-the-query-wait-server-configuration-option"></a>query wait 서버 구성 옵션 구성
@@ -45,18 +45,18 @@ ms.locfileid: "68012374"
   
 -   **후속 작업:**  [쿼리 대기 옵션을 구성한 후](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   이 옵션은 고급 옵션으로, 숙련된 데이터베이스 관리자나 공인된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전문가만이 변경해야 합니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경하거나 RECONFIGURE 문을 실행하는 두 매개 변수를 사용하여 **sp_configure** 를 실행하려면 사용자에게 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-configure-the-query-wait-option"></a>쿼리 대기 옵션을 구성하려면  
   
@@ -66,7 +66,7 @@ ms.locfileid: "68012374"
   
 3.  **병렬 처리**에서 **쿼리 대기** 옵션에 알맞은 값을 입력합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-configure-the-query-wait-option"></a>쿼리 대기 옵션을 구성하려면  
   
@@ -92,7 +92,7 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 쿼리 대기 옵션을 구성한 후  
+##  <a name="follow-up-after-you-configure-the-query-wait-option"></a><a name="FollowUp"></a> 후속 작업: 쿼리 대기 옵션을 구성한 후  
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -26,10 +26,10 @@ ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 998504b936681c5e20d185ab17b787630a6ae2f1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68039154"
 ---
 # <a name="use-xml-data-in-applications"></a>애플리케이션에서 XML 데이터 사용

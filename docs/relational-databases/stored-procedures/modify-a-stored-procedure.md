@@ -15,41 +15,41 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 810dfbc7230171f59cb8f1df04ab1c7f4774e044
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72907251"
 ---
 # <a name="modify-a-stored-procedure"></a>저장 프로시저 수정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
     
-##  <a name="Top"></a>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 저장 프로시저를 수정하는 방법에 대해 설명합니다.  
+##  <a name="this-topic-describes-how-to-modify-a-stored-procedure-in-sscurrent-by-using-ssmanstudiofull-or-tsql"></a><a name="Top"></a>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 저장 프로시저를 수정하는 방법에 대해 설명합니다.  
   
 -   **시작하기 전 주의 사항:**  [제한 사항](#Restrictions), [보안](#Security)  
   
 -   **프로시저를 변경하려면 다음을 사용합니다.**   [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 CLR 저장 프로시저로 수정할 수 없으며 그 반대의 경우도 마찬가지입니다.  
   
  이전 프로시저 정의가 WITH ENCRYPTION 또는 WITH RECOMPILE을 사용하여 만들어진 경우 이러한 옵션은 ALTER PROCEDURE 문에 포함된 경우에만 활성화됩니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  프로시저에 대한 ALTER PROCEDURE 권한이 필요합니다.  
   
-##  <a name="Procedures"></a> 저장 프로시저 수정 방법  
+##  <a name="how-to-modify-a-stored-procedure"></a><a name="Procedures"></a> 저장 프로시저 수정 방법  
  다음 중 하나를 사용할 수 있습니다.  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **Management Studio의 프로시저를 수정하려면**  
   
 1.  개체 탐색기에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "72907251"
 > [!IMPORTANT]  
 >  모든 사용자 입력에 대해 유효성을 검사합니다. 유효성 검사를 수행하기 전에는 사용자 입력을 연결하지 마세요. 유효성 검사가 수행되지 않은 사용자 입력으로부터 생성된 명령은 실행하지 마세요.  
   
-###  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **쿼리 편집기에서 프로시저를 변경하려면**  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  

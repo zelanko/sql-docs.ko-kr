@@ -11,10 +11,10 @@ author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 06db927ec2d77f07e82a9647239f87bc46e8a953
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74320066"
 ---
 # <a name="register-computer-with-host-guardian-service"></a>호스트 보호 서비스에 컴퓨터 등록
@@ -80,7 +80,7 @@ Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name 
 
 레지스트리를 변경한 후 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 컴퓨터를 다시 시작하고 VBS가 다시 실행 중인지 확인합니다.
 
-컴퓨터가 회사에서 관리되는 경우 다시 부팅한 후 그룹 정책 또는 Microsoft 엔드포인트 관리자가 레지스트리 키 변경 내용을 재정의할 수 있습니다.
+컴퓨터가 회사에서 관리되는 경우 다시 부팅한 후 그룹 정책 또는 Microsoft Endpoint Manager가 레지스트리 키 변경 내용을 재정의할 수 있습니다.
 IT 지원 센터에 문의하여 VBS 구성을 관리하는 정책을 배포하는지 확인합니다.
 
 ## <a name="step-3-configure-the-attestation-url"></a>3단계: 증명 URL 구성

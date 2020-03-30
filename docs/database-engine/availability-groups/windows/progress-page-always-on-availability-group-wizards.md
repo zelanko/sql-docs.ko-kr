@@ -16,10 +16,10 @@ ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 87201ed5c3d2368f54e2ffb0c57391322066a30b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014479"
 ---
 # <a name="progress-page-always-on-availability-group-wizards"></a>진행률 페이지(Always On 가용성 그룹 마법사)
@@ -49,7 +49,7 @@ ms.locfileid: "68014479"
  **취소**  
  나머지 작업을 건너뛰고 마법사를 종료하려면 클릭합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [새 가용성 그룹 대화 상자 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

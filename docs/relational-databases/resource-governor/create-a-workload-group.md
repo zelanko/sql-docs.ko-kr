@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 237ec09347ab139aabcc9f475f5e3b64aba0f054
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73633008"
 ---
 # <a name="create-a-workload-group"></a>작업 그룹 만들기
@@ -28,9 +28,9 @@ ms.locfileid: "73633008"
   
 -   **작업 그룹을 만들려면 다음을 사용합니다.**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="LimitationsRestrictions"></a> 제한 사항
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 제한 사항
 
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
   
@@ -38,11 +38,11 @@ ms.locfileid: "73633008"
   
  인덱스를 만들 때 처음에 부여된 것 이상의 메모리 작업 영역을 사용하여 성능을 높일 수 있습니다. 이 특수 처리는 리소스 관리자에서 지원되지만 초기 부여 및 추가 메모리 부여는 작업 그룹 및 리소스 풀 설정에 따라 제한됩니다.  
   
-###  <a name="Permissions"></a> 권한
+###  <a name="permissions"></a><a name="Permissions"></a> 권한
 
  작업 그룹을 만들려면 CONTROL SERVER 권한이 필요합니다.  
   
-##  <a name="CreRPProp"></a> SQL Server Management Studio를 사용하여 작업 그룹 만들기
+##  <a name="create-a-workload-group-using-sql-server-management-studio"></a><a name="CreRPProp"></a> SQL Server Management Studio를 사용하여 작업 그룹 만들기
 
  **다음을 사용하여 작업 그룹을 만들기: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "73633008"
   
 7.  **확인**을 클릭하여 변경 내용을 저장합니다.  
 
-##  <a name="CreRPTSQL"></a> Transact-SQL을 사용하여 작업 그룹 만들기  
+##  <a name="create-a-workload-group-using-transact-sql"></a><a name="CreRPTSQL"></a> Transact-SQL을 사용하여 작업 그룹 만들기  
  **다음을 사용하여 작업 그룹을 만들기: [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  설정할 속성 값을 지정하여 CREATE WORKLOAD GROUP 문을 실행합니다.  

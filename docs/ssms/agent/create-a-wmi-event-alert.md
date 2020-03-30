@@ -15,10 +15,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 64f5c5956f69eb1127b8eb5f895476ca7e6cadb6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75252296"
 ---
 # <a name="create-a-wmi-event-alert"></a>WMI 이벤트 경고 만들기
@@ -30,9 +30,9 @@ ms.locfileid: "75252296"
 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 서버 이벤트용 WMI 공급자가 모니터링하여 특정 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 이벤트가 발생할 때 [!INCLUDE[tsql](../../includes/tsql-md.md)]에이전트 경고를 만드는 방법에 대해 설명합니다.  
   
 WMI 공급자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트를 모니터링하는 방법에 대한 자세한 내용은 [서버 이벤트용 WMI 공급자 클래스 및 속성](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)을 참조하세요. WMI 이벤트 경고 알림을 받는 데 필요한 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 서비스의 계정 선택](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)을 참조하세요. WQL에 대한 자세한 내용은 [서버 이벤트용 WMI 공급자에 WQL 사용](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)을 참조하세요.  
-## <a name="BeforeYouBegin"></a>시작하기 전 주의 사항  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>시작하기 전 주의 사항  
   
-### <a name="Restrictions"></a>제한 사항  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>제한 사항  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 전체 경고 시스템을 간편하게 그래픽 방식으로 관리할 수 있도록 해 줄 뿐만 아니라 경고 인프라를 구성하는 데 있어서도 권장되는 방법입니다.  
   
@@ -40,12 +40,12 @@ WMI 공급자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 실행하는 컴퓨터의 WMI 네임스페이스만 지원됩니다.  
   
-### <a name="Security"></a>보안  
+### <a name="security"></a><a name="Security"></a>보안  
   
-#### <a name="Permissions"></a>권한  
+#### <a name="permissions"></a><a name="Permissions"></a>권한  
 기본적으로 **sysadmin** 고정 서버 역할의 멤버만 **sp_add_alert**를 실행할 수 있습니다.  
   
-## <a name="SSMSProcedure"></a>SQL Server Management Studio 사용  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>SQL Server Management Studio 사용  
   
 #### <a name="to-create-a-wmi-event-alert"></a>WMI 이벤트 경고를 만들려면  
   
@@ -67,7 +67,7 @@ WMI 공급자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
   
 9. **확인**을 클릭합니다.  
   
-## <a name="TsqlProcedure"></a>Transact-SQL 사용  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Transact-SQL 사용  
   
 #### <a name="to-create-a-wmi-event-alert"></a>WMI 이벤트 경고를 만들려면  
   

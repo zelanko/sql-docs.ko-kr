@@ -19,17 +19,17 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 898c59cab6038b7025066906ea74ffd5b9222815
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73983266"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자 시작 및 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 데이터베이스 엔진 튜닝 관리자를 시작 및 사용하는 방법에 대해 설명합니다. 데이터베이스 튜닝 후 결과를 보고 작업하는 방법은 [데이터베이스 엔진 튜닝 관리자의 출력 보기 및 작업](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)을 참조하세요.  
   
-##  <a name="Initialize"></a> 데이터베이스 엔진 튜닝 관리자 초기화  
+##  <a name="initialize-the-database-engine-tuning-advisor"></a><a name="Initialize"></a> 데이터베이스 엔진 튜닝 관리자 초기화  
  처음 사용할 때는 **sysadmin** 고정 서버 역할의 멤버인 사용자가 데이터베이스 엔진 튜닝 관리자를 초기화해야 합니다. 튜닝 작업을 지원하려면 **msdb** 데이터베이스에서 여러 시스템 테이블을 만들어야 하기 때문입니다. **db_owner** 고정 데이터베이스 역할의 멤버인 사용자는 초기화를 통해 자신이 소유한 데이터베이스의 테이블에 대한 작업을 튜닝할 수 있습니다.  
   
  시스템 관리자 권한을 가진 사용자가 다음 동작 중 하나를 수행해야 합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "73983266"
   
 -   **dta** 유틸리티를 사용하여 첫 번째 작업을 튜닝합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [dta 유틸리티 사용](#dta) 을 참조하세요.  
   
-##  <a name="Start"></a> 데이터베이스 엔진 튜닝 관리자 시작  
+##  <a name="start-the-database-engine-tuning-advisor"></a><a name="Start"></a> 데이터베이스 엔진 튜닝 관리자 시작  
  여러 다른 방법으로 데이터베이스 엔진 튜닝 관리자 GUI(그래픽 사용자 인터페이스)를 시작하여 다양한 시나리오에서 데이터베이스 튜닝을 지원할 수 있습니다. 데이터베이스 엔진 튜닝 관리자는 **시작** 메뉴, **의** 도구 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]메뉴, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 편집기, **의** 도구 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]메뉴 등과 같은 다양한 방법으로 시작할 수 있습니다. 데이터베이스 엔진 튜닝 관리자를 처음 시작하면 연결할 **인스턴스를 지정할 수 있는** 서버에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대화 상자가 표시됩니다.  
   
 > [!WARNING]  
@@ -62,7 +62,7 @@ ms.locfileid: "73983266"
   
 1.  SQL Server Profiler **도구** 메뉴에서 **데이터베이스 엔진 튜닝 관리자**를 클릭합니다.  
   
-##  <a name="Create"></a> 작업 만들기  
+##  <a name="create-a-workload"></a><a name="Create"></a> 작업 만들기  
  작업은 튜닝하려는 데이터베이스에 대해 실행되는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. 데이터베이스 엔진 튜닝 관리자는 이러한 작업을 분석하여 서버의 쿼리 성능을 향상시키는 인덱스 또는 분할 전략을 권장합니다.  
   
  다음 방법 중 하나를 사용하여 작업을 만들 수 있습니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "73983266"
   
 -   작업은 각 이벤트에 대한 가중치를 지정할 수 있는 XML 입력 파일에도 포함될 수 있습니다. 포함된 작업을 지정하는 방법은 이 항목의 뒷부분에 나오는 [XML 입력 파일 만들기](#XMLInput) 를 참조하세요.  
   
-###  <a name="SSMS"></a> Transact-SQL 스크립트 작업을 만들려면  
+###  <a name="to-create-transact-sql-script-workloads"></a><a name="SSMS"></a> Transact-SQL 스크립트 작업을 만들려면  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 쿼리 편집기를 시작합니다. 자세한 내용은 [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)를 참조하세요.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "73983266"
   
 3.  파일을 **.sql** 확장명으로 저장합니다. 데이터베이스 엔진 튜닝 관리자 GUI 및 명령줄 **dta** 유틸리티에서 이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 작업으로 사용할 수 있습니다.  
   
-###  <a name="Profiler"></a> 추적 파일 및 추적 테이블 작업을 만들려면  
+###  <a name="to-create-trace-file-and-trace-table-workloads"></a><a name="Profiler"></a> 추적 파일 및 추적 테이블 작업을 만들려면  
   
 1.  다음 중 한 가지 방법을 사용하여 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 시작합니다.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "73983266"
   
  추적에 로그인 정보가 지정되어 있지 않으므로 데이터베이스 엔진 튜닝 관리자에서 새 작업을 튜닝합니다. 문에 대한 **LoginName** 이 없으면 데이터베이스 엔진 튜닝 관리자는 튜닝 세션을 시작한 사용자( **sysadmin** 고정 서버 역할이나 **db_owner** 고정 데이터베이스 역할의 멤버)를 가장하여 해당 문을 튜닝합니다.  
   
-##  <a name="Tune"></a> 데이터베이스 튜닝  
+##  <a name="tune-a-database"></a><a name="Tune"></a> 데이터베이스 튜닝  
  데이터베이스를 튜닝하기 위해서는 데이터베이스 엔진 튜닝 관리자 GUI 또는 **dta** 명령줄 유틸리티를 사용할 수 있습니다.  
   
 > [!NOTE]  
@@ -149,10 +149,10 @@ ms.locfileid: "73983266"
 ### <a name="use-the-database-engine-tuning-advisor-graphical-user-interface"></a>데이터베이스 엔진 튜닝 관리자 그래픽 사용자 인터페이스 사용  
  데이터베이스 엔진 튜닝 관리자 GUI에서 계획 캐시, 작업 파일 또는 작업 테이블을 사용하여 데이터베이스를 튜닝할 수 있습니다. 데이터베이스 엔진 튜닝 관리자 GUI를 사용하여 현재 튜닝 세션의 결과와 이전 튜닝 세션의 결과를 쉽게 확인할 수 있습니다. 사용자 인터페이스 옵션에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 [사용자 인터페이스 설명](#UI) 을 참조하세요. 데이터베이스 튜닝 후 출력 작업에 대한 자세한 내용은 [데이터베이스 엔진 튜닝 관리자의 출력 보기 및 작업](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)을 참조하세요.  
 
-####  <a name="PlanCache"></a> 쿼리 저장소를 사용하여 데이터베이스를 튜닝하려면
+####  <a name="to-tune-a-database-by-using-the-query-store"></a><a name="PlanCache"></a> 쿼리 저장소를 사용하여 데이터베이스를 튜닝하려면
 자세한 내용은 [쿼리 저장소의 작업을 사용하여 데이터베이스 튜닝](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)을 참조하세요.
   
-####  <a name="PlanCache"></a> 계획 캐시를 사용하여 데이터베이스를 튜닝하려면  
+####  <a name="to-tune-a-database-by-using-the-plan-cache"></a><a name="PlanCache"></a> 계획 캐시를 사용하여 데이터베이스를 튜닝하려면  
   
 1.  데이터베이스 엔진 튜닝 관리자를 실행한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 로그인합니다. 자세한 내용은 이 항목의 앞부분에 나오는 [데이터베이스 엔진 튜닝 관리자 시작](#Start) 을 참조하세요.  
   
@@ -221,7 +221,7 @@ ms.locfileid: "73983266"
 > [!NOTE]  
 >  데이터베이스 엔진 튜닝 관리자의 일시 중지 기능은 지원되지 않습니다. **분석 중지** 또는 **분석 중지(권장 구성)** 도구 모음 단추를 클릭한 후 **분석 시작** 도구 모음 단추를 클릭하면 데이터베이스 엔진 튜닝 관리자가 새 튜닝 세션을 시작합니다.  
   
-###  <a name="dta"></a> dta 유틸리티 사용  
+###  <a name="use-the-dta-utility"></a><a name="dta"></a> dta 유틸리티 사용  
  [dta 유틸리티](../../tools/dta/dta-utility.md) 는 데이터베이스를 튜닝하기 위해 사용할 수 있는 명령 프롬프트 실행 파일을 제공합니다. 이 유틸리티를 사용하면 일괄 처리 파일이나 스크립트에 데이터베이스 엔진 튜닝 관리자를 사용할 수 있습니다. **dta** 유틸리티는 계획 캐시 항목, 추적 파일, 추적 테이블 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 작업으로 가져옵니다. 또한 다음 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?linkid=43100)에서 사용 가능한 데이터베이스 엔진 튜닝 관리자 XML 스키마를 따르는 XML 입력을 가져옵니다.  
   
  **dta** 유틸리티에서 작업을 튜닝하기 전에 다음 사항을 고려하세요.  
@@ -305,7 +305,7 @@ ms.locfileid: "73983266"
   
 5.  유틸리티가 작업 튜닝을 마친 후에는 데이터베이스 엔진 튜닝 관리자 GUI를 사용하여 튜닝 세션의 결과를 볼 수 있습니다. 다른 방법으로 **-ox** 옵션을 사용하여 튜닝 권장 구성이 XML 파일에 기록되도록 지정할 수도 있습니다. 자세한 내용은 [dta Utility](../../tools/dta/dta-utility.md)을 참조하세요.  
   
-##  <a name="XMLInput"></a> XML 입력 파일 만들기  
+##  <a name="create-an-xml-input-file"></a><a name="XMLInput"></a> XML 입력 파일 만들기  
  숙련된 XML 개발자인 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자에서 작업을 튜닝할 때 사용하는 XML 형식의 파일을 만들 수 있습니다. 이러한 XML 파일을 만들려면 선호하는 XML 도구를 사용하여 예제 파일을 편집하거나 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 XML 스키마에서 인스턴스를 생성합니다.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 XML 스키마는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 다음 위치에 있습니다.  
@@ -331,7 +331,7 @@ ms.locfileid: "73983266"
 > [!NOTE]  
 >  XML 입력 파일에 직접 지정되는 작업인 인라인 작업을 사용하려면 [인라인 작업이 포함된 XML 입력 파일 예제&#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md) 샘플을 사용하세요.  
   
-##  <a name="UI"></a> 사용자 인터페이스 설명  
+##  <a name="user-interface-descriptions"></a><a name="UI"></a> 사용자 인터페이스 설명  
   
 ### <a name="tools-menuoptions-page"></a>도구 메뉴/옵션 페이지  
  이 대화 상자를 사용하여 데이터베이스 엔진 튜닝 관리자에 대한 일반 구성 매개 변수를 지정할 수 있습니다.  

@@ -27,10 +27,10 @@ ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1e8fa047a65663f918bfcce4a92692f1c443f77a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73064658"
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG(Transact-SQL)

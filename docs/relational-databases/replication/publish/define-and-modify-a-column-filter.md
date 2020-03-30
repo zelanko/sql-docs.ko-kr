@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: efda97d51b3cbbe5137c89405c3534f48027a633
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76286374"
 ---
 # <a name="define-and-modify-a-column-filter"></a>열 필터 정의 및 수정
@@ -39,13 +39,13 @@ ms.locfileid: "76286374"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   일부 열은 필터링할 수 없습니다. 자세한 내용은 [게시된 데이터 필터링](../../../relational-databases/replication/publish/filter-published-data.md)을 참조하세요. 구독을 초기화한 후 열 필터를 수정할 경우 새 스냅샷을 만들고 변경 내용을 적용한 후 모든 구독을 다시 초기화해야 합니다. 속성 변경 요구 사항에 대한 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  새 게시 마법사의 **아티클** 페이지에서 열 필터를 정의합니다. 새 게시 마법사 사용 방법에 대한 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
  **게시 속성 - \<게시>** 대화 상자의 **아티클** 페이지에서 열 필터를 정의하고 수정합니다. 게시 및 아티클 속성에 대한 자세한 내용은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
@@ -64,7 +64,7 @@ ms.locfileid: "76286374"
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  테이블 아티클을 만들 때 아티클에 포함할 열을 정의할 수 있으며 아티클이 정의된 후 이 열을 변경할 수 있습니다. 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 필터링된 열을 만들고 수정할 수 있습니다.  
   
 > [!NOTE]  
@@ -128,7 +128,7 @@ ms.locfileid: "76286374"
   
 3.  구독을 다시 초기화합니다. 자세한 내용은 [구독 다시 초기화](../../../relational-databases/replication/reinitialize-subscriptions.md)를 참조하세요.  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  이 트랜잭션 복제 예제에서는 `DaysToManufacture` 테이블에 기반한 아티클에서 `Product` 열이 제거되었습니다.  
   
  [!code-sql[HowTo#sp_AddTranArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-colu_1.sql)]  

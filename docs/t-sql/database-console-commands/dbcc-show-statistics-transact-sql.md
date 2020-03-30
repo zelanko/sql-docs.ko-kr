@@ -34,10 +34,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50587bc33f6fd37e4c114fa28a7171e6ea951b84
-ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77074451"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS(Transact-SQL)
@@ -86,7 +86,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  심각도가 0에서 10 사이인 모든 정보 메시지를 표시하지 않습니다.  
   
- STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,**_n_ ]  
+ STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,** _n_ ]  
  이 옵션 중 하나 이상을 지정하면 문에서 반환하는 결과 집합이 지정한 옵션으로 제한됩니다. 옵션을 지정하지 않으면 모든 통계 정보가 반환됩니다.  
   
  STATS_STREAM은 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]입니다.  
@@ -103,7 +103,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |단계|히스토그램의 총 단계 수입니다. 각 단계의 범위는 열 값에서 상한 열 값까지입니다. 히스토그램 단계는 통계의 첫 번째 키 열에 정의됩니다. 최대 단계 수는 200개입니다.|  
 |밀도|히스토그램 경계 값을 제외하고 통계 개체의 첫 번째 키 열에 있는 모든 값에 대해 1/ *고유 값* 으로 계산됩니다. 이 밀도 값은 쿼리 최적화 프로그램에서 사용되지 않으며 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전 버전과의 호환성을 위해 표시됩니다.|  
 |평균 키 길이|통계 개체의 키 열에 있는 모든 값에 대한 값당 평균 바이트 수입니다.|  
-|문자열 인덱스|'예'는 통계 개체에 LIKE 연산자를 사용하는 쿼리 조건자(예: `WHERE ProductName LIKE '%Bike'`)의 카디널리티 예상치 정확도를 높이기 위한 문자열 요약 통계가 있음을 나타냅니다. 문자열 요약 통계는 히스토그램과는 별도로 저장되며 통계 개체에서 **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text**또는 **ntext**형식인 첫 번째 키 열에 생성됩니다.|  
+|문자열 인덱스|'예'는 통계 개체에 LIKE 연산자를 사용하는 쿼리 조건자(예: `WHERE ProductName LIKE '%Bike'`)의 카디널리티 예상치 정확도를 높이기 위한 문자열 요약 통계가 있음을 나타냅니다. 문자열 요약 통계는 히스토그램과는 별도로 저장되며 통계 개체에서 **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text**또는 **ntext**형식인 첫 번째 키 열에 생성됩니다.|  
 |필터 식|통계 개체에 포함된 테이블 행의 하위 집합에 대한 조건자입니다. NULL = 필터링되지 않은 통계입니다. 필터링된 조건자에 대한 자세한 내용은 [필터링된 인덱스 만들기](../../relational-databases/indexes/create-filtered-indexes.md)를 참조하세요. 필터링된 통계에 대한 자세한 내용은 [통계](../../relational-databases/statistics/statistics.md)를 참조하세요.|  
 |필터링되지 않은 행|필터 식을 적용하기 전 테이블에 있는 전체 행 수입니다. 필터 식이 NULL이면 필터링되지 않은 행과 행이 동일합니다.|  
 |지속된 샘플 비율|샘플링 비율을 명시적으로 지정하지 않은 통계 업데이트에 사용되는 샘플 비율을 유지합니다. 값이 0이면 이 통계에 대해 지속 된 샘플 백분율이 설정되지 않습니다.<br /><br /> **적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4| 
@@ -126,11 +126,11 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |DISTINCT_RANGE_ROWS|상한을 제외한 히스토그램 단계 내에 고유한 열 값이 있는 예상 행 수입니다.|  
 |AVG_RANGE_ROWS|히스토그램 단계 내에 중복된 열 값이 있는 평균 행 수(상한 제외)입니다. DISTINCT_RANGE_ROWS가 0보다 크면 AVG_RANGE_ROWS는 RANGE_ROWS를 DISTINCT_RANGE_ROWS로 나누어 계산합니다. DISTINCT_RANGE_ROWS가 0이면 AVG_RANGE_ROWS는 히스토그램 단계에 대해 1을 반환합니다.| 
   
-## <a name="Remarks"></a> 주의 
+## <a name="remarks"></a><a name="Remarks"></a> 주의 
 
 통계 업데이트 날짜는 [히스토그램](#histogram) 및 [밀도 벡터](#density)와 함께 메타데이터가 아닌 [통계 BLOB 개체](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)에 저장됩니다. 통계 데이터를 생성하기 위해 읽은 데이터가 없으면 통계 BLOB이 만들어지지 않고 날짜를 사용할 수 없으며, *updated* 열은 NULL입니다. 이 경우는 조건자가 행을 반환하지 않는 필터링된 통계 또는 빈 테이블에 대해 필터링된 통계에 해당하는 경우입니다.
   
-## <a name="histogram"></a> 히스토그램  
+## <a name="histogram"></a><a name="histogram"></a> 히스토그램  
 히스토그램은 데이터 집합에서 각 고유 값의 발생 빈도를 측정합니다. 쿼리 최적화 프로그램은 행을 통계적으로 샘플링하거나 테이블 또는 뷰의 모든 행에 대해 전체 검색을 수행하는 방법으로 열 값을 선택하여 통계 개체의 첫 번째 키 열에 있는 열 값에 대한 히스토그램을 계산합니다. 샘플링된 행 집합으로 히스토그램을 만드는 경우 저장된 행 수의 합계와 고유 값의 수는 예상치이며 정수일 필요가 없습니다.
   
 쿼리 최적화 프로그램에서는 히스토그램을 만들기 위해 열 값을 정렬하고 고유한 각 열 값과 일치하는 값의 수를 계산한 다음 열 값을 최대 200개의 연속적인 히스토그램 단계로 집계합니다. 각 단계의 범위는 열 값에서 상한 열 값까지입니다. 범위는 경계 값 자체를 제외하고 경계 값 사이의 모든 가능한 열 값을 포함합니다. 정렬된 열 값 중 가장 낮은 값은 첫 번째 히스토그램 단계의 상한 값입니다.
@@ -146,7 +146,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 쿼리 최적화 프로그램은 통계적 중요성에 따라 히스토그램 단계를 정의합니다. 또한 히스토그램의 단계 수를 최소화하면서 경계 값 간의 차이를 최대화하기 위해 최대 차이 알고리즘을 사용합니다. 최대 단계 수는 200개입니다. 히스토그램 단계 수는 경계 지점이 200개 미만인 열에서도 고유 값의 개수보다 적을 수 있습니다. 예를 들어 100개의 고유 값을 가진 열의 히스토그램에 100개 미만의 경계 지점이 있을 수 있습니다.
   
-## <a name="density"></a> 밀도 벡터  
+## <a name="density-vector"></a><a name="density"></a> 밀도 벡터  
 쿼리 최적화 프로그램은 같은 테이블 또는 인덱싱된 뷰에서 여러 열을 반환하는 쿼리의 카디널리티 예상치 정확도를 높이기 위해 밀도를 사용합니다. 밀도 벡터는 통계 개체에 있는 각 열 접두사당 한 개의 밀도를 포함합니다. 예를 들어 통계 개체에 `CustomerId`, `ItemId`, `Price` 키 열이 있는 경우 다음의 각 열 접두사에 대해 밀도가 계산됩니다.
   
 |열 접두사|밀도 계산 기준|  

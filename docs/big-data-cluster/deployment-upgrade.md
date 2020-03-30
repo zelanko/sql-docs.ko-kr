@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 2f8ca3e42221387470ee4fc4cbd6873b526bc8b7
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77256877"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 업그레이드하는 방법
@@ -43,7 +43,7 @@ ms.locfileid: "77256877"
    azdata bdc hdfs cp --from-path <path> --to-path <path>
    ```
    
-   다음은 그 예입니다.  
+   다음은 그 예입니다. 
 
    ```
    azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
@@ -93,7 +93,7 @@ ms.locfileid: "77256877"
    Control plane upgrade failed. Failed to upgrade controller.
    ```
 
-업그레이드에 대한 시간 제한을 늘리려면 **--controller-timeout** 및 **--component-timeout** 매개 변수를 사용하여 업그레이드를 실행할 때 더 높은 값을 지정합니다. 이 옵션은 SQL Server 2019 CU2 릴리스부터 사용할 수 있습니다. 다음은 그 예입니다. 
+업그레이드에 대한 시간 제한을 늘리려면 **--controller-timeout** 및 **--component-timeout** 매개 변수를 사용하여 업그레이드를 실행할 때 더 높은 값을 지정합니다. 이 옵션은 SQL Server 2019 CU2 릴리스부터 사용할 수 있습니다. 다음은 그 예입니다.
 
    ```bash
    azdata bdc upgrade -t 2019-CU2-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
@@ -162,7 +162,7 @@ SQL Server 2019 GDR1 릴리스 이전에 배포된 빅 데이터 클러스터에
    > [!IMPORTANT]
    > 각 릴리스에 관해, `azdata`의 `n-1` 버전 경로가 변경됩니다. 이전에 `azdata`를 설치했더라도 새 클러스터를 만들기 전에 최신 경로에서 다시 설치해야 합니다.
 
-### <a id="azdataversion"></a> azdata 버전 확인
+### <a name="verify-the-azdata-version"></a><a id="azdataversion"></a> azdata 버전 확인
 
 새로운 빅 데이터 클러스터를 배포하기 전에 `--version` 매개 변수를 통해 최신 버전의 `azdata`를 사용하고 있는지 확인합니다.
 

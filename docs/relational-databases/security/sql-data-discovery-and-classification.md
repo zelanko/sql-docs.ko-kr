@@ -12,10 +12,10 @@ ms.date: 09/12/2019
 ms.author: mibar
 author: barmichal
 ms.openlocfilehash: 077a9a6be533ec05f9c062100d04bf02562f6066
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75548374"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 데이터 검색 및 분류
@@ -29,14 +29,14 @@ ms.locfileid: "75548374"
 > [!NOTE]
 > 데이터 검색 및 분류는 **SQL Server 2012 이상에 지원되며, [SSMS 17.5](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 이상에서 사용할 수 있습니다**. Azure SQL Database는 [Azure SQL Database 데이터 검색 및 분류](/azure/sql-database/sql-database-data-discovery-and-classification/)를 참조하세요.
 
-## <a id="subheading-1"></a>개요
+## <a name="overview"></a><a id="subheading-1"></a>개요
 데이터 검색 및 분류는 고급 서비스의 집합을 소개하고 데이터베이스뿐만 아니라 데이터를 보호 대상으로 지정하는 새로운 SQL Information Protection 패러다임을 형성합니다.
 
 * **검색 및 권장 사항** – 분류 엔진은 데이터베이스를 검사하고 잠재적으로 중요한 데이터가 포함된 열을 식별합니다. 그런 다음, 적절한 분류 권장 사항을 쉽게 검토하고 적용할 뿐만 아니라 수동으로 열을 분류하는 방법을 제공합니다.
 * **레이블 지정** – 민감도 분류 레이블은 열에서 영구적으로 태그가 지정될 수 있습니다.
 * **표시 유형** - 데이터베이스 분류 상태는 다른 요구 사항뿐만 아니라 규정 준수 및 감사 목적으로 사용할 인쇄/내보낼 수 있는 세부 보고서에서 볼 수 있습니다.
 
-## <a id="subheading-2"></a>중요한 열 검색, 분류 및 레이블 지정
+## <a name="discovering-classifying--labeling-sensitive-columns"></a><a id="subheading-2"></a>중요한 열 검색, 분류 및 레이블 지정
 다음 섹션에서는 데이터베이스에서 중요한 데이터를 포함하는 열을 검색, 분류, 및 레이블을 지정할 뿐만 아니라 데이터베이스 및 내보내는 보고서의 현재 분류 상태를 보는 단계를 설명합니다.
 
 분류에는 두 개의 메타데이터 특성이 포함됩니다.
@@ -91,7 +91,7 @@ ms.locfileid: "75548374"
 
     ![탐색 창][10]
 
-## <a id="subheading-3"></a>SSMS를 사용하여 정보 보호 정책 관리
+## <a name="manage-information-protection-policy-with-ssms"></a><a id="subheading-3"></a>SSMS를 사용하여 정보 보호 정책 관리
 
 [SSMS 18.4](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 이상을 사용하여 정보 보호 정책을 관리할 수 있습니다.
 
@@ -111,7 +111,7 @@ ms.locfileid: "75548374"
 > 정보 보호 정책 파일은 SQL Server에 저장되지 않습니다.
 > SSMS는 기본 정보 보호 정책을 사용합니다. 사용자 지정된 정보 보호 정책이 실패할 경우 SSMS는 기본 정책을 사용할 수 없습니다. 데이터 분류에 실패합니다. 문제를 해결하려면 **정보 보호 정책 다시 설정**을 클릭하여 기본 정책을 사용하고 데이터 분류를 다시 사용하도록 설정합니다.
 
-## <a id="subheading-4"></a>분류 메타데이터에 액세스
+## <a name="accessing-the-classification-metadata"></a><a id="subheading-4"></a>분류 메타데이터에 액세스
 
 SQL Server 2019에서는 [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md) 시스템 카탈로그 뷰가 도입되었습니다. 이 뷰는 정보 유형과 민감도 레이블을 반환합니다. 
 
@@ -183,15 +183,15 @@ FROM
     ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
 ```
 
-## <a id="subheading-5"></a>분류 관리
+## <a name="manage-classifications"></a><a id="subheading-5"></a>분류 관리
 
-# <a name="t-sqltabt-sql"></a>[T-SQL](#tab/t-sql)
+# <a name="t-sql"></a>[T-SQL](#tab/t-sql)
 T-SQL을 사용하여 열 분류를 추가/제거하고 전체 데이터베이스에 대한 모든 분류를 검색할 수 있습니다.
 
 - 하나 이상의 열 분류 추가/업데이트: [민감도 분류 추가](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)
 - 하나 이상의 열에서 분류 제거: [민감도 분류 삭제](https://docs.microsoft.com/sql/t-sql/statements/drop-sensitivity-classification-transact-sql)
 
-# <a name="powershell-cmdlettabsql-powelshell"></a>[PowerShell Cmdlet](#tab/sql-powelshell)
+# <a name="powershell-cmdlet"></a>[PowerShell Cmdlet](#tab/sql-powelshell)
 PowerShell Cmdlet을 사용하여 열 분류를 추가/제거하고 모든 분류를 검색하며 전체 데이터베이스의 권장 사항을 가져올 수 있습니다.
 
 - [Get-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps)
@@ -201,7 +201,7 @@ PowerShell Cmdlet을 사용하여 열 분류를 추가/제거하고 모든 분�
 
 ---
 
-## <a id="subheading-6"></a>다음 단계
+## <a name="next-steps"></a><a id="subheading-6"></a>다음 단계
 
 Azure SQL Database는 [Azure SQL Database 데이터 검색 및 분류](https://go.microsoft.com/fwlink/?linkid=866265)를 참조하세요.
 

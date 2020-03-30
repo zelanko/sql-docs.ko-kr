@@ -11,10 +11,10 @@ ms.assetid: b00e5a90-2af7-4d04-8ef8-256183777dcf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bb073be8ef92d44f8821078f60622341638a010d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971653"
 ---
 # <a name="sqlserverconnectionpooldatasource-class"></a>SQLServerConnectionPoolDataSource 클래스

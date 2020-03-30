@@ -11,10 +11,10 @@ ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5f744f0bb5d1ced6424fc8882a0a215042fbfc69
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76920340"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>URL에 대한 SQL Server 백업 모범 사례 및 문제 해결
@@ -29,7 +29,7 @@ ms.locfileid: "76920340"
   
 -   [자습서: Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## <a name="managing-backups-mb1"></a> 백업 관리  
+## <a name="managing-backups"></a><a name="managing-backups-mb1"></a> 백업 관리  
  다음은 백업 관리 시 일반적으로 권장되는 사항입니다.  
   
 -   blob을 실수로 덮어쓰지 않도록 모든 백업에 고유한 파일 이름을 사용하는 것이 좋습니다.  

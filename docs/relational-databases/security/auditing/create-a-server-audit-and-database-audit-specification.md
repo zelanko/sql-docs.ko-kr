@@ -17,10 +17,10 @@ ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d9ab1fa97653513d18c43b916ca5bfbc2105e8e7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557878"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>서버 감사 및 데이터베이스 감사 사양 만들기
@@ -43,24 +43,24 @@ ms.locfileid: "75557878"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
  데이터베이스 감사 사양은 지정된 데이터베이스에 있는 비보안 개체입니다. 데이터베이스 감사 사양을 처음 만들 때는 사용할 수 없는 상태입니다.  
   
  사용자 데이터베이스에 데이터베이스 감사 사양을 만들거나 사양을 수정할 때 시스템 뷰와 같은 서버 범위 개체에 대한 감사 동작은 포함하지 마세요. 서버 범위 개체를 포함하더라도 감사가 생성됩니다. 그러나 서버 범위 개체가 포함되지는 않으며 별도의 오류도 반환되지 않습니다. 서버 범위 개체를 감사하려면 master 데이터베이스의 데이터베이스 감사 사양을 사용합니다.  
   
  데이터베이스 감사 사양은 해당 사양이 생성된 데이터베이스 내에 있습니다( **tempdb** 시스템 데이터베이스 제외).  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
   
 -   ALTER ANY DATABASE AUDIT 권한이 있는 사용자는 데이터베이스 감사 사양을 만들어 모든 감사에 바인딩할 수 있습니다.  
   
 -   생성된 데이터베이스 감사 사양은 CONTROL SERVER, ALTER ANY DATABASE AUDIT 권한이 있는 보안 주체나 sysadmin 계정이 볼 수 있습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-create-a-server-audit"></a>서버 감사를 만들려면  
   
@@ -106,7 +106,7 @@ ms.locfileid: "75557878"
   
 4.  옵션 선택을 마쳤으면 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-create-a-server-audit"></a>서버 감사를 만들려면  
   

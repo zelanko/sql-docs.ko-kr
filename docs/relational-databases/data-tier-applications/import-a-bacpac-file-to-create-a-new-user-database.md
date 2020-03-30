@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 12226869eb78e53c072826ad0dc8e280104108e3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74094570"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기
@@ -84,7 +84,7 @@ ms.locfileid: "74094570"
   
     -   [결과 페이지](#Results)  
   
-###  <a name="Introduction"></a> 소개 페이지  
+###  <a name="introduction-page"></a><a name="Introduction"></a> 소개 페이지  
  이 페이지에서는 데이터 계층 애플리케이션 가져오기 마법사의 단계에 대해 설명합니다.  
   
  **옵션**  
@@ -95,7 +95,7 @@ ms.locfileid: "74094570"
   
 -   **취소** - 작업을 취소하고 마법사를 닫습니다.  
   
-###  <a name="Import_settings"></a> 가져오기 설정 페이지  
+###  <a name="import-settings-page"></a><a name="Import_settings"></a> 가져오기 설정 페이지  
  이 페이지에서 가져올 .bacpac 파일의 위치를 지정할 수 있습니다.  
   
 -   **로컬 디스크에서 가져오기** - **찾아보기...** 를 클릭하고 로컬 컴퓨터로 이동하거나 제공된 공간에서 경로를 지정합니다. 경로 이름에 파일 이름과 .bacpac 확장명을 모두 포함해야 합니다.  
@@ -106,7 +106,7 @@ ms.locfileid: "74094570"
   
      계속하려면 가져올 .bacpac 파일을 지정하고 **열기**를 클릭합니다.  
   
-###  <a name="Database_settings"></a> 데이터베이스 설정 페이지  
+###  <a name="database-settings-page"></a><a name="Database_settings"></a> 데이터베이스 설정 페이지  
  이 페이지에서 만들려는 데이터베이스의 세부 정보를 지정할 수 있습니다.  
   
  **로컬 SQL Server 인스턴스의 경우**  
@@ -129,15 +129,15 @@ ms.locfileid: "74094570"
   
  계속하려면 **다음**을 클릭합니다.  
   
-###  <a name="Summary"></a> 요약 페이지  
+###  <a name="summary-page"></a><a name="Summary"></a> 요약 페이지  
  이 페이지에서 작업에 대해 지정한 원본 및 대상 설정을 검토할 수 있습니다. 지정한 설정을 사용하여 가져오기 작업을 완료하려면 **마침**을 클릭합니다. 가져오기 작업을 취소하고 마법사를 종료하려면 **취소**를 클릭합니다.  
   
-###  <a name="Progress"></a> 진행률 페이지  
+###  <a name="progress-page"></a><a name="Progress"></a> 진행률 페이지  
  이 페이지에는 작업 상태를 나타내는 진행률 표시줄이 표시됩니다. 자세한 상태를 보려면 **자세히 보기** 옵션을 클릭합니다.  
   
  계속하려면 **다음**을 클릭합니다.  
   
-###  <a name="Results"></a> 결과 페이지  
+###  <a name="results-page"></a><a name="Results"></a> 결과 페이지  
  이 페이지에는 데이터베이스 가져오기 및 만들기 작업의 결과가 성공 또는 실패로 보고됩니다. 오류가 발생한 동작에는 모두 **결과** 열에 링크가 있습니다. 링크를 클릭하면 해당 동작의 오류에 대한 보고서가 표시됩니다.  
   
  **닫기** 를 클릭하여 마법사를 닫습니다.  

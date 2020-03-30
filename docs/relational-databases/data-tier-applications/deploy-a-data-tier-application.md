@@ -22,10 +22,10 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 842a6519c1493162d06c853f11a9494d8dc3ca5b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74190123"
 ---
 # <a name="deploy-a-data-tier-application"></a>데이터 계층 애플리케이션 배포
@@ -114,7 +114,7 @@ ms.locfileid: "74190123"
   
  **로그 파일 경로 및 이름:** - 로그 파일의 전체 경로와 파일 이름을 지정합니다. 입력란은 기본 경로와 파일 이름으로 채워집니다. 입력란의 문자열을 편집하여 기본값을 변경하거나 **찾아보기** 단추를 사용하여 로그 파일이 있는 폴더를 탐색할 수 있습니다.  
   
-###  <a name="Summary"></a> 요약 페이지  
+###  <a name="summary-page"></a><a name="Summary"></a> 요약 페이지  
  이 페이지를 사용하여 DAC를 배포할 때 마법사가 수행할 동작을 검토할 수 있습니다.  
   
  **DAC를 배포하는 데 사용되는 설정은 다음과 같습니다.** - 표시된 정보를 검토하여 수행할 동작이 올바른지 확인합니다. 창에는 선택한 DAC 패키지와 배포하도록 선택한 DAC 인스턴스 이름이 표시됩니다. 창에는 DAC와 연결된 데이터베이스를 만들 때 사용되는 설정도 표시됩니다.  

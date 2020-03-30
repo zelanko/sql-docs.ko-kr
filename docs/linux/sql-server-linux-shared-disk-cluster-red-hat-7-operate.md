@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.openlocfilehash: 76c59c6c7b821bfcc9eb76ca3a694a1c69095ce1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558528"
 ---
 # <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>SQL Server의 RHEL FCI(장애 조치 클러스터 인스턴스) 작동
@@ -39,7 +39,7 @@ ms.locfileid: "75558528"
 
 클러스터 구성, 리소스 에이전트 옵션 및 관리에 대한 자세한 내용은 [RHEL 참조 설명서](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)를 참조하세요.
 
-## <a name = "failManual"></a>수동으로 클러스터 장애 조치(failover)
+## <a name="failover-cluster-manually"></a><a name = "failManual"></a>수동으로 클러스터 장애 조치(failover)
 
 `resource move` 명령은 대상 노드에서 리소스를 강제로 시작하는 제약 조건을 만듭니다.  `move` 명령을 실행한 후 `clear` 리소스를 실행하면 제약 조건이 제거되므로 리소스를 다시 이동하거나 리소스를 자동으로 장애 조치(failover)할 수 있습니다. 
 

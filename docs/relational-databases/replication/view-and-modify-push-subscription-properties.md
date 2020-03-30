@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 84e3655fac042e213ad82ac02fb39969b4993026
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71174227"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>밀어넣기 구독 속성 보기 및 수정
@@ -32,7 +32,7 @@ ms.locfileid: "71174227"
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
 
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  다음 위치에서 게시자의 밀어넣기 구독 속성을 보고 수정합니다.  
   
 -   **구독 속성 - \<Publisher>: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 사용할 수 있는 \<PublicationDatabase>** 대화 상자.  
@@ -59,7 +59,7 @@ ms.locfileid: "71174227"
   
 4.  필요한 경우 속성을 수정한 다음 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  밀어넣기 구독은 수정할 수 있으며 해당 속성은 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 액세스할 수 있습니다. 사용되는 저장 프로시저는 구독이 속한 게시 유형에 따라 달라집니다.  
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 밀어넣기 구독의 속성을 보려면  
@@ -97,9 +97,9 @@ ms.locfileid: "71174227"
   
 1.  게시 데이터베이스의 게시자에서 [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)을 실행합니다. 이때 **\@publication**, **\@subscriber**, **\@subscriber_db**를 지정하고 **\@property**에 변경할 구독 속성을, **\@value**에 새 값을 지정합니다.  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
   
-##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
  밀어넣기 구독 속성을 보거나 수정하는 데 사용되는 RMO 클래스는 밀어넣기 구독이 구독하는 게시의 유형에 따라 다릅니다.  
   
 #### <a name="to-view-or-modify-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 밀어넣기 구독의 속성을 보거나 수정하려면  

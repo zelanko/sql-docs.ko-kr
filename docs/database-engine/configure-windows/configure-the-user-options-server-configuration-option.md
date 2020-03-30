@@ -15,10 +15,10 @@ ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d06cb92287537293739fa9bd7b1a86ea7ffd767a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012157"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>user options 서버 구성 옵션 구성
@@ -44,9 +44,9 @@ ms.locfileid: "68012157"
   
 -   **후속 작업:**  [user options 구성 옵션을 구성한 후](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   다음 표에서는 **user options**에 따른 구성 값을 나열하고 설명합니다. 모든 구성 값은 서로 호환 됩니다. 예를 들어 ANSI_NULL_DFLT_ON 및 ANSI_NULL_DFLT_OFF는 동시에 설정할 수 없습니다.  
   
@@ -70,12 +70,12 @@ ms.locfileid: "68012157"
   
 -   **user options**의 비트 위치는 @@OPTIONS의 비트 위치와 같습니다. 각 연결에는 구성 환경을 나타내는 @@OPTIONS 함수가 있습니다. \ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 로그인하면 현재 **user options** 값을 @@OPTIONS에 할당하는 기본 환경이 사용자에게 표시됩니다. **user options**에 대한 SET 문을 실행하면 세션의 @@OPTIONS 함수에 해당하는 값에 영향을 줍니다. 이 설정이 변경된 이후에 만들어진 모든 연결은 새 값을 받습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경하거나 RECONFIGURE 문을 실행하는 두 매개 변수를 사용하여 **sp_configure** 를 실행하려면 사용자에게 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-configure-the-user-options-configuration-option"></a>user options 구성 옵션을 구성하려면  
   
@@ -87,7 +87,7 @@ ms.locfileid: "68012157"
   
      기본적으로 사용자 옵션은 구성되어 있지 않습니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-configure-the-user-options-configuration-option"></a>user options 구성 옵션을 구성하려면  
   
@@ -107,7 +107,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> 후속 작업: user options 구성 옵션을 구성한 후  
+##  <a name="follow-up-after-you-configure-the-user-options-configuration-option"></a><a name="FollowUp"></a> 후속 작업: user options 구성 옵션을 구성한 후  
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

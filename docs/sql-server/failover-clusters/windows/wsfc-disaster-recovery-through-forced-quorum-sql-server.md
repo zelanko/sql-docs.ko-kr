@@ -15,10 +15,10 @@ ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 36eebd77371cf2cede1e36ab68873c080a752128
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74821986"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>강제 쿼럼을 통해 WSFC 재해 복구(SQL Server)
@@ -33,9 +33,9 @@ ms.locfileid: "74821986"
   
 -   [관련 내용](#RelatedContent)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-start"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 조건  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
  강제 쿼럼 절차는 쿼럼 실패 전에 정상 상태의 쿼럼이 있었다고 가정합니다.  
   
 > [!WARNING]  
@@ -43,10 +43,10 @@ ms.locfileid: "74821986"
 >   
 >  자세한 내용은 다음을 참조하세요.  [SQL Server의 WSFC(Windows Server 장애 조치(Failover) 클러스터링)](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC 쿼럼 모드 및 투표 구성(SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
  사용자는 WSFC 클러스터의 각 노드에 대한 로컬 Administrators 그룹의 멤버인 도메인 계정이어야 합니다.  
   
-##  <a name="Main"></a> 강제 쿼럼 절차를 통해 WSFC 재해 복구  
+##  <a name="wsfc-disaster-recovery-through-the-forced-quorum-procedure"></a><a name="Main"></a> 강제 쿼럼 절차를 통해 WSFC 재해 복구  
  클러스터는 그 구성에 따라 노드 수준의 내결함성을 보장할 수 없기 때문에 쿼럼 실패가 발생하면 WSFC 클러스터의 클러스터형 서비스, SQL Server 인스턴스 및 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]이 모두 오프라인 상태로 설정됩니다.  쿼럼 실패란 WSFC 클러스터의 정상적인 투표 노드가 더 이상 쿼럼 모델을 충족하지 않음을 의미합니다. 일부 노드는 완전히 실패했을 수 있고 나머지 일부 노드는 WSFC 서비스만 종료했으며 쿼럼과의 통신 기능이 손실되었다는 점을 제외하고는 정상일 수 있습니다.  
   
  WSFC 클러스터를 다시 온라인 상태로 전환하려면 기존 구성에서 쿼럼 실패의 근본 원인을 해결하고 필요한 경우 영향을 받은 데이터베이스를 복구해야 하며 실패에서 살아남은 클러스터 토폴로지를 반영하도록 WSFC 클러스터의 나머지 노드를 다시 구성해야 합니다.  
@@ -104,7 +104,7 @@ ms.locfileid: "74821986"
   
 8.  **RPO/RTO 분석 실시.** SQL Server 시스템 로그, 데이터베이스 타임스탬프 및 Windows 이벤트 로그를 분석하여 실패의 근본 원인을 파악하고 실제 복구 지점 및 복구 시간 방법을 문서화해야 합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [쿼럼 없이 WSFC 클러스터 강제 시작](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
@@ -116,7 +116,7 @@ ms.locfileid: "74821986"
   
 -   [AlwaysOn 대시보드 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)
   
-##  <a name="RelatedContent"></a> 관련 내용  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
   
 -   [장애 조치(Failover) 클러스터에 대한 이벤트 및 로그 보기](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   

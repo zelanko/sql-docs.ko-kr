@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c8ba02b1b459e3f1381138eaa708658b317cd9f8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015945"
 ---
 # <a name="persisted-data-source-objects"></a>지속형 데이터 원본 개체
@@ -232,6 +232,6 @@ HRESULT InitFromPersistedDS
  **IDBInitialize::Initialize**를 호출하기 전이나 호출한 후에 **IPersistFile::Save** 메서드를 호출할 수 있습니다. **IDBInitialize::Initialize**가 성공적으로 반환된 후에 이 메서드를 호출하면 유효한 데이터 원본 지정이 지속됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 원본 개체&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [데이터 원본 개체 &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

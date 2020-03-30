@@ -22,10 +22,10 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f9799b747883f876b413bf540516f5c2a1cbed11
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981812"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX(Transact-SQL)
@@ -205,7 +205,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  검색 속성 목록에 대한 자세한 내용은 [검색 속성 목록을 사용하여 문서 속성 검색](../../relational-databases/search/search-document-properties-with-search-property-lists.md)을 참조하세요.  
   
-## <a name="change-tracking-no-population"></a> 변경 내용 추적과 NO POPULATION 매개 변수 간의 상호 작용  
+## <a name="interactions-of-change-tracking-and-no-population-parameter"></a><a name="change-tracking-no-population"></a> 변경 내용 추적과 NO POPULATION 매개 변수 간의 상호 작용  
  전체 텍스트 인덱스가 채워지는지 여부는 변경 내용 추적이 설정되어 있는지 여부와 ALTER FULLTEXT INDEX 문에 WITH NO POPULATION이 지정되어 있는지 여부에 따라 달라집니다. 다음 표에서는 이러한 상호 작용의 결과를 요약합니다.  
   
 |변경 내용 추적|WITH NO POPULATION|결과|  
@@ -217,7 +217,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  전체 텍스트 인덱스에 대한 자세한 내용은 [전체 텍스트 인덱스 채우기](../../relational-databases/search/populate-full-text-indexes.md)를 참조하세요.  
   
-## <a name="change-search-property-rebuild-index"></a> 검색 속성 목록을 변경하여 인덱스 다시 작성  
+## <a name="changing-the-search-property-list-causes-rebuilding-the-index"></a><a name="change-search-property-rebuild-index"></a> 검색 속성 목록을 변경하여 인덱스 다시 작성  
  처음으로 전체 텍스트 인덱스를 검색 속성 목록과 연결할 때 인덱스가 다시 채워져야 속성별 검색 단어가 인덱싱됩니다. 기존의 인덱스 데이터는 잘리지 않습니다.  
   
  그러나 전체 텍스트 인덱스를 다른 속성 목록과 연결할 경우 인덱스가 다시 작성됩니다. 다시 작성할 경우 전체 텍스트 인덱스가 즉시 잘리고 기존 데이터가 모두 제거되며 인덱스를 다시 채워야 합니다. 채우기가 진행되는 동안 기본 테이블의 전체 텍스트 쿼리는 채우기를 통해 이미 인덱싱된 테이블 행만 검색합니다. 새로 추가한 검색 속성 목록의 등록된 속성에서 가져온 메타데이터가 다시 채운 인덱스 데이터에 포함됩니다.  

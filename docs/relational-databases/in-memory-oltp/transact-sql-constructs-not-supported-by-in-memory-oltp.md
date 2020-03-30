@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7e1052544d1243dea4e6c3da377de2dbbe36d5af
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412491"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문
@@ -170,7 +170,7 @@ ms.locfileid: "74412491"
 |기능|BEGIN TRANSACTION, COMMIT TRANSACTION 및 ROLLBACK TRANSACTION|ATOMIC 블록을 사용하여 트랜잭션과 오류 처리를 제어합니다. 자세한 내용은 [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md)을(를) 참조하십시오.|  
 |기능|인라인 테이블 변수 선언|테이블 변수는 명시적으로 정의된 메모리 최적화 테이블 형식을 참조해야 합니다. 메모리 최적화 테이블 형식을 만들고 이 형식을 인라인으로 지정하는 대신 변수 선언에 이 형식을 사용합니다.|  
 |기능|디스크 기반 테이블|디스크 기반 테이블은 고유하게 컴파일된 저장 프로시저에서 액세스할 수 없습니다. 고유하게 컴파일된 저장 프로시저에서 디스크 기반 테이블에 대한 참조를 제거합니다. 또는 디스크 기반 테이블을 메모리 액세스에 최적화된 테이블로 마이그레이션합니다.|  
-|기능|뷰|뷰는 고유하게 컴파일된 저장 프로시저에서 액세스할 수 없습니다. 뷰 대신 기본 테이블을 참조합니다.|  
+|기능|보기|뷰는 고유하게 컴파일된 저장 프로시저에서 액세스할 수 없습니다. 뷰 대신 기본 테이블을 참조합니다.|  
 |기능|테이블 반환 함수|**적용 대상:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 및 SQL Server [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)] 이상<br/>다중 문 테이블 반환 함수는 고유하게 컴파일된 T-SQL 모듈에서 액세스할 수 없습니다. 인라인 테이블 반환 함수를 지원하지만 WITH NATIVE_COMPILATION을 만들어야 합니다.<br/><br/>**적용 대상**: [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)]<br/>테이블 반환 함수는 고유하게 컴파일된 T-SQL 모듈에서 참조할 수 없습니다.|  
 |옵션|PRINT|참조 제거|  
 |기능|DDL|DDL이 고유하게 컴파일된 T-SQL 모듈에서 지원되지 않습니다.|  

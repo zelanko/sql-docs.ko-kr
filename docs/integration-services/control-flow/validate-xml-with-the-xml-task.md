@@ -14,10 +14,10 @@ ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7e15a268219a6b5d50c1de7e135b4c16bf999445
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293829"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
@@ -36,7 +36,7 @@ ms.locfileid: "71293829"
  대형 XML 문서 및 많은 수의 오류에 사용할 수 있도록 XML 유효성 검사 기능을 쉽게 확장할 수 있습니다. 출력 파일 자체가 XML 형식이므로 출력을 쿼리하고 분석할 수 있습니다. 예를 들어 출력에 오류가 많이 포함되어 있으면 이 항목에서 설명하는 대로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 사용하여 오류를 그룹화할 수 있습니다.  
   
 > [!NOTE]
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]([!INCLUDE[ssIS](../../includes/ssis-md.md)])는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 서비스 팩 2에서 **ValidationDetails** 속성을 도입했습니다. 이 속성은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서도 사용할 수 있습니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]([!INCLUDE[ssIS](../../includes/ssis-md.md)])는 **서비스 팩 2에서**ValidationDetails[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 속성을 도입했습니다. 이 속성은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서도 사용할 수 있습니다.  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>유효한 XML의 샘플 출력  
  아래에는 유효한 XML 파일의 유효성 결과가 포함된 샘플 출력 파일이 나와 있습니다.  

@@ -11,10 +11,10 @@ ms.author: pelopes
 manager: rothj
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095998"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Microsoft SQL Server 분산 쿼리: OLE DB 연결
@@ -610,7 +610,7 @@ SQL Server에서 사용하는 모든 OLE DB 인터페이스 목록은 [SQL Serve
 
 Microsoft SQL Server는 다른 유형의 데이터 원본에 있는 데이터에 액세스하기 위한 가장 강력한 도구 세트를 제공합니다. 개발자는 SQL Server에서 공개하는 OLE DB 인터페이스를 파악하여 분산 쿼리에서 높은 수준의 제어 및 복잡성을 구현할 수 있습니다.
 
-## <a name="appendixa"></a> SQL Server에서 사용하는 OLE DB 인터페이스
+## <a name="ole-db-interfaces-consumed-by-sql-server"></a><a name="appendixa"></a> SQL Server에서 사용하는 OLE DB 인터페이스
 
 다음 표에는 SQL Server에서 사용하는 OLE DB 인터페이스가 모두 나와 있습니다. 필수 열은 인터페이스가 SQL Server에 필요한 최소 OLE DB 기능에 속하는지 아니면 선택적 요소인지를 나타냅니다. 지정된 인터페이스가 필수로 표시되지 않은 경우에도 SQL Server에서 공급자에 액세스할 수 있지만, 특정 SQL Server 기능 또는 최적화를 공급자에 대해 사용할 수 없습니다.
 
@@ -618,43 +618,43 @@ Microsoft SQL Server는 다른 유형의 데이터 원본에 있는 데이터에
 
 |Object|인터페이스|필수|주석|시나리오|
 |:-----|:-----|:-----|:-----|:-----|
-|Data Source 개체|`IDBInitialize`|yes|데이터와 보안 컨텍스트를 초기화 및 설정합니다.| |
-| |`IDBCreateSession`|yes|DB 세션 개체를 만듭니다.| |
-| |`IDBProperties`|yes|공급자의 기능 정보를 가져오고 초기화 속성을 설정합니다. 필수 속성: DBPROP_INIT_TIMEOUT| |
+|Data Source 개체|`IDBInitialize`|예|데이터와 보안 컨텍스트를 초기화 및 설정합니다.| |
+| |`IDBCreateSession`|예|DB 세션 개체를 만듭니다.| |
+| |`IDBProperties`|예|공급자의 기능 정보를 가져오고 초기화 속성을 설정합니다. 필수 속성: DBPROP_INIT_TIMEOUT| |
 | |`IDBInfo`|예|따옴표 리터럴, 카탈로그, 이름, 부분, 구분 기호, 문자 등을 가져옵니다.|원격 쿼리|
 |DB Session 개체|`IDBSchemaRowset`|예|테이블/열 메타데이터를 가져옵니다. 필요한 행 집합: `TABLES`, `COLUMNS`, `PROVIDER_TYPES`. 사용 가능한 경우 사용되는 기타 행 집합: `INDEXES`, `TABLE_STATISTICS`|성능, 인덱싱된 액세스|
-| |`IOpenRowset`|yes|테이블, 인덱스 또는 히스토그램의 행 집합을 엽니다.| |
-| |`IGetDataSource`|yes|DB 세션 개체에서 DSO로 다시 가져오는 데 사용합니다.| |
+| |`IOpenRowset`|예|테이블, 인덱스 또는 히스토그램의 행 집합을 엽니다.| |
+| |`IGetDataSource`|예|DB 세션 개체에서 DSO로 다시 가져오는 데 사용합니다.| |
 | |`IDBCreateCommand`|예|쿼리를 지원하는 공급자에 대한 명령 개체(쿼리)를 만드는 데 사용합니다.|원격 쿼리, 통과 쿼리|
 | |`ITransactionLocal`|예|트랜잭션 업데이트에 사용합니다.|`UPDATE`, `DELETE`, `INSERT` 문|
 | |`ITransactionJoin`|예|분산 트랜잭션을 지원하는 데 사용합니다.|사용자 트랜잭션에 있는 경우 `UPDATE`, `DELETE`, `INSERT`|
-|Rowset 개체|IRowset|yes|행을 검색합니다.| |
-| |`IAccessor`|yes|행 집합의 열에 바인딩합니다.| |
-| |`IColumnsInfo`|yes|행 집합의 열에 대한 정보를 가져옵니다.| |
-| |`IRowsetInfo`|yes|행 집합 속성에 대한 정보를 가져옵니다.| |
+|Rowset 개체|IRowset|예|행을 검색합니다.| |
+| |`IAccessor`|예|행 집합의 열에 바인딩합니다.| |
+| |`IColumnsInfo`|예|행 집합의 열에 대한 정보를 가져옵니다.| |
+| |`IRowsetInfo`|예|행 집합 속성에 대한 정보를 가져옵니다.| |
 | |`IRowsetLocate`|예|`UPDATE`/`DELETE` 작업 및 인덱스 기반 조회를 수행하는 데 필요합니다. 책갈피를 기준으로 행을 조회하는 데 사용합니다.|인덱싱된 액세스, `UPDATE` 및 `DELETE` 문|
 | |`IRowsetChange`|예|행 집합의 `INSERTS`/`UPDATES`/ `DELETES`에 필요합니다. 기본 테이블의 행 집합은 `INSERT`, `UPDATE` 및 `DELETE` 문에 대해 이 인터페이스를 지원해야 합니다.|`UPDATE`, `DELETE`, `INSERT` 문|
-| |`IConvertType`|yes|행 집합이 해당 열에서 특정 데이터 형식 변환을 지원하는지 확인하는 데 사용합니다.| |
-|인덱스|`IRowset`|yes|행을 검색합니다.|인덱싱된 액세스, 성능|
-| |`IAccessor`|yes|행 집합의 열에 바인딩합니다.|인덱싱된 액세스, 성능|
-| |`IColumnsInfo`|yes|행 집합의 열에 대한 정보를 가져옵니다.|인덱싱된 액세스, 성능|
-| |`IRowsetInfo`|yes|행 집합 속성에 대한 정보를 가져옵니다.|인덱싱된 액세스, 성능|
-| |`IRowsetIndex`|yes|인덱스의 행 집합에만 필요합니다. 인덱싱 기능(범위 설정, 검색)에 사용합니다.|인덱싱된 액세스, 성능|
-|명령|`ICommand`|yes| |원격 쿼리, 통과 쿼리|
-| |`ICommandText`|yes|쿼리 텍스트 정의에 사용합니다.|원격 쿼리, 통과 쿼리|
-| |`IColumnsInfo`|yes|쿼리 결과의 열 메타데이터를 가져오는 데 사용합니다.|원격 쿼리, 통과 쿼리|
-| |`ICommandProperties`|yes|명령에서 반환된 행 집합의 필수 속성을 지정하는 데 사용합니다.|원격 쿼리, 통과 쿼리|
+| |`IConvertType`|예|행 집합이 해당 열에서 특정 데이터 형식 변환을 지원하는지 확인하는 데 사용합니다.| |
+|인덱스|`IRowset`|예|행을 검색합니다.|인덱싱된 액세스, 성능|
+| |`IAccessor`|예|행 집합의 열에 바인딩합니다.|인덱싱된 액세스, 성능|
+| |`IColumnsInfo`|예|행 집합의 열에 대한 정보를 가져옵니다.|인덱싱된 액세스, 성능|
+| |`IRowsetInfo`|예|행 집합 속성에 대한 정보를 가져옵니다.|인덱싱된 액세스, 성능|
+| |`IRowsetIndex`|예|인덱스의 행 집합에만 필요합니다. 인덱싱 기능(범위 설정, 검색)에 사용합니다.|인덱싱된 액세스, 성능|
+|명령|`ICommand`|예| |원격 쿼리, 통과 쿼리|
+| |`ICommandText`|예|쿼리 텍스트 정의에 사용합니다.|원격 쿼리, 통과 쿼리|
+| |`IColumnsInfo`|예|쿼리 결과의 열 메타데이터를 가져오는 데 사용합니다.|원격 쿼리, 통과 쿼리|
+| |`ICommandProperties`|예|명령에서 반환된 행 집합의 필수 속성을 지정하는 데 사용합니다.|원격 쿼리, 통과 쿼리|
 | |`ICommandWithParameters`|예|매개 변수가 있는 쿼리 실행에 사용합니다.|원격 쿼리, 성능|
 | |`ICommandPrepare`|예|메타데이터를 가져오는 명령을 준비하는 데 사용합니다(사용 가능한 경우 통과 쿼리에 사용됨).|원격 쿼리, 성능|
-|Error 개체|`IErrorRecords`|yes|단일 오류 레코드에 해당하는 `IErrorInfo` 인터페이스에 대한 포인터를 가져오는 데 사용합니다.| |
-| |`IErrorInfo`|yes|단일 오류 레코드에 해당하는 `IErrorInfo` 인터페이스에 대한 포인터를 가져오는 데 사용합니다.| |
+|Error 개체|`IErrorRecords`|예|단일 오류 레코드에 해당하는 `IErrorInfo` 인터페이스에 대한 포인터를 가져오는 데 사용합니다.| |
+| |`IErrorInfo`|예|단일 오류 레코드에 해당하는 `IErrorInfo` 인터페이스에 대한 포인터를 가져오는 데 사용합니다.| |
 |Any 개체|`ISupportErrorInfo`|예|지정된 인터페이스가 오류 개체를 지원하는지를 확인하는 데 사용합니다.| |
 |  |  |  |  |  |
 
 >[!NOTE]
 >`Index` 개체, `Command` 개체 및 `Error` 개체는 필수가 아닙니다. 그러나 지원되는 경우 나열된 인터페이스는 필수 열에 지정된 대로 필수입니다.
 
-## <a name="appendixb"></a>원격 쿼리 생성에 사용되는 SQL 하위 집합
+## <a name="sql-subset-used-for-generating-remote-queries"></a><a name="appendixb"></a>원격 쿼리 생성에 사용되는 SQL 하위 집합
 
 SQL Server 쿼리 프로세서가 SQL 명령 공급자에 대해 생성하는 SQL 하위 집합은 `DBPROP_SQLSUPPORT` 속성에 표시된 대로 공급자가 지원하는 구문 수준에 따라 달라집니다.
 
@@ -794,7 +794,7 @@ digit ::= 0 \| 1 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9
 
 period ::= . 
 
-## <a name="appendixc"></a>SQL Server 특정 속성
+## <a name="sql-server-specific-properties"></a><a name="appendixc"></a>SQL Server 특정 속성
 
 ```
 enum SQLPROPERTIES

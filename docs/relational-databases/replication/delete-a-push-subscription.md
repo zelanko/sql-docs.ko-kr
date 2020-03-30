@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 7fac24aec092ef65bb390d8df020999647f215c6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908266"
 ---
 # <a name="delete-a-push-subscription"></a>밀어넣기 구독 삭제
@@ -37,7 +37,7 @@ ms.locfileid: "72908266"
   
      [RMO(복제 관리 개체)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  게시자( **의** 로컬 게시 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]폴더 사용) 또는 구독자( **로컬 구독** 폴더 사용)에서 밀어넣기 구독을 삭제합니다. 구독을 삭제해도 구독에서 개체나 데이터가 제거되지는 않으며 개체나 데이터는 수동으로 제거해야 합니다.  
   
 #### <a name="to-delete-a-push-subscription-at-the-publisher"></a>게시자에서 밀어넣기 구독을 삭제하려면  
@@ -62,7 +62,7 @@ ms.locfileid: "72908266"
   
 4.  확인 대화 상자에서 구독 정보를 삭제할 게시자에 연결할지 여부를 선택합니다. **게시자에 연결** 확인란의 선택을 취소한 경우 나중에 게시자에 연결하여 해당 정보를 삭제해야 합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  밀어넣기 구독은 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 삭제할 수 있습니다. 사용되는 저장 프로시저는 구독이 속한 게시 유형에 따라 달라집니다.  
   
 #### <a name="to-delete-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 밀어넣기 구독을 삭제하려면  
@@ -77,7 +77,7 @@ ms.locfileid: "72908266"
   
 2.  구독 데이터베이스의 구독자에서 [sp_mergesubscription_cleanup&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)을 실행합니다. **\@publisher**, **\@publisher_db** 및 **\@publication**을 지정합니다. 이렇게 하면 구독 데이터베이스에서 병합 메타데이터가 제거됩니다.  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  이 예에서는 트랜잭션 게시에 대한 밀어넣기 구독을 삭제합니다.  
   
  [!code-sql[HowTo#sp_droptransubscription](../../relational-databases/replication/codesnippet/tsql/delete-a-push-subscription_1.sql)]  
@@ -86,7 +86,7 @@ ms.locfileid: "72908266"
   
  [!code-sql[HowTo#sp_dropmergesubscription](../../relational-databases/replication/codesnippet/tsql/delete-a-push-subscription_2.sql)]  
   
-##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
  밀어넣기 구독을 삭제하는 데 사용되는 RMO 클래스는 밀어넣기 구독이 구독하는 게시의 유형에 따라 달라집니다.  
   
 #### <a name="to-delete-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 밀어넣기 구독을 삭제하려면  
@@ -117,7 +117,7 @@ ms.locfileid: "72908266"
   
 6.  <xref:Microsoft.SqlServer.Replication.Subscription.Remove%2A> 메서드를 호출합니다.  
   
-###  <a name="PShellExample"></a> 예(RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 예(RMO)  
  RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 밀어넣기 구독을 삭제할 수 있습니다.  
   
  [!code-cs[HowTo#rmo_DropTranPushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_droptranpushsub)]  

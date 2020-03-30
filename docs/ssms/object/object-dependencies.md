@@ -13,10 +13,10 @@ ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 82aa0e5ae67d3dbbf4e2a897ba5e49976cfc09a6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257160"
 ---
 # <a name="object-dependencies"></a>개체 종속성

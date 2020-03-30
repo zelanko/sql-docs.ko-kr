@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68476296"
 ---
 # <a name="index-properties-f1-help"></a>인덱스 속성 F1 도움말
@@ -43,7 +43,7 @@ ms.locfileid: "68476296"
   
  [인덱스 속성 필터 페이지](#Filter)  
   
-##  <a name="General"></a> 인덱스 속성 일반 페이지  
+##  <a name="index-properties-general-page"></a><a name="General"></a> 인덱스 속성 일반 페이지  
  일반 페이지를 사용하여 선택한 테이블 또는 뷰의 인덱스 속성을 확인하거나 수정할 수 있습니다. 각 페이지의 옵션은 선택하는 인덱스의 유형에 따라 변경될 수 있습니다.  
   
  **테이블 이름**  
@@ -113,7 +113,7 @@ ms.locfileid: "68476296"
  **포괄 열**  
  비클러스터형 인덱스에 키가 아닌 열을 포함합니다. 이 옵션을 사용하면 비클러스터형 인덱스의 리프 수준에 열을 추가할 때 키가 아닌 열로 추가하여 인덱스 키의 전체 크기 및 인덱스 키에 포함되는 최대 열 수에 대한 제한을 무시할 수 있습니다. 자세한 내용은 [포괄 열을 사용하여 인덱스 만들기](../../relational-databases/indexes/create-indexes-with-included-columns.md)를 참조하세요.  
   
-##  <a name="Columns"></a> (인덱스) 열 선택 대화 상자  
+##  <a name="select-index-columns-dialog-box"></a><a name="Columns"></a> (인덱스) 열 선택 대화 상자  
  인덱스를 만들거나 수정할 때 이 페이지를 사용하여 **인덱스 속성 일반** 페이지에 열을 추가할 수 있습니다.  
   
  **확인란**  
@@ -134,7 +134,7 @@ ms.locfileid: "68476296"
  **Null 허용**  
  테이블 정의에 따라 열에 Null 값이 허용되는 경우 **예** 를 표시합니다. 테이블 정의에 따라 열에 Null 값이 허용되지 않는 경우 **아니요** 를 표시합니다.  
 
-##  <a name="Options"></a> 옵션 페이지 옵션
+##  <a name="options-page-options"></a><a name="Options"></a> 옵션 페이지 옵션
  이 페이지를 사용하여 다양한 인덱스 옵션을 보거나 수정할 수 있습니다.
 
 ### <a name="general-options"></a>일반 옵션
@@ -203,7 +203,7 @@ False 또는 fillfactor가 지정되지 않음<br>
 중간 수준 페이지는 중간 페이지의 키 집합을 고려하며 인덱스가 가질 수 있는 최대 크기의 한 행에 필요한 공간을 충분히 남기고 용량을 거의 채웁니다.
 
 
-##  <a name="Storage"></a> 스토리지 페이지 옵션  
+##  <a name="storage-page-options"></a><a name="Storage"></a> 스토리지 페이지 옵션  
  이 페이지를 사용하여 선택한 인덱스의 파일 그룹 또는 파티션 구성표 속성을 확인하거나 수정할 수 있습니다. 인덱스 유형과 관련된 옵션만 표시됩니다.  
   
  **파일 그룹**  
@@ -234,7 +234,7 @@ False 또는 fillfactor가 지정되지 않음<br>
 > [!NOTE]  
 >  테이블 열이 계산 열이면 **열 데이터 형식** 에 "계산 열"이 표시됩니다.  
   
-##  <a name="Spatial"></a> 공간 페이지 인덱스 옵션  
+##  <a name="spatial-page-index-options"></a><a name="Spatial"></a> 공간 페이지 인덱스 옵션  
  **공간** 페이지를 사용하여 공간 속성의 값을 확인하거나 지정할 수 있습니다. 자세한 내용은 [공간 데이터&#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)을 참조하세요.  
   
 ### <a name="bounding-box"></a>경계 상자  
@@ -292,7 +292,7 @@ False 또는 fillfactor가 지정되지 않음<br>
  **수준 4**  
  넷째 수준 표의 밀도입니다.  
   
-##  <a name="Filter"></a> 필터 페이지  
+##  <a name="filter-page"></a><a name="Filter"></a> 필터 페이지  
  이 페이지를 사용하여 필터링된 인덱스에 대한 필터 조건자를 입력할 수 있습니다. 자세한 내용은 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)을(를) 참조하세요.  
   
  **필터 식**  

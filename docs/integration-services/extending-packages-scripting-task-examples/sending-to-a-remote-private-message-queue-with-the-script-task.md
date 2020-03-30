@@ -17,10 +17,10 @@ ms.assetid: 636314fd-d099-45cd-8bb4-f730d0a06739
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 53fc016bc4657dd1dce7dd0eefcbea58a28ae14e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296993"
 ---
 # <a name="sending-to-a-remote-private-message-queue-with-the-script-task"></a>스크립트 태스크를 사용하여 원격 프라이빗 메시지 큐에 메시지 보내기
@@ -44,9 +44,9 @@ ms.locfileid: "71296993"
     FORMATNAME:DIRECT=OS:<computername>\private$\<queuename>  
     ```  
   
-2.  **MessageText**라는 **String** 형식의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 변수를 만들어 메시지 텍스트를 스크립트에 전달합니다. 변수의 값으로 기본 메시지를 입력합니다.  
+2.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]MessageText**라는** String**형식의** 변수를 만들어 메시지 텍스트를 스크립트에 전달합니다. 변수의 값으로 기본 메시지를 입력합니다.  
   
-3.  디자인 화면에 스크립트 태스크를 추가하고 편집합니다. **스크립트 태스크 편집기**의 **스크립트** 탭에서 **ReadOnlyVariables** 속성에 `MessageText` 변수를 추가하여 해당 변수를 스크립트 내에서 사용할 수 있게 합니다.  
+3.  디자인 화면에 스크립트 태스크를 추가하고 편집합니다. **스크립트 태스크 편집기**의 **스크립트** 탭에서 `MessageText`ReadOnlyVariables**속성에** 변수를 추가하여 해당 변수를 스크립트 내에서 사용할 수 있게 합니다.  
   
 4.  **스크립트 편집**을 클릭하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) 스크립트 편집기를 엽니다.  
   

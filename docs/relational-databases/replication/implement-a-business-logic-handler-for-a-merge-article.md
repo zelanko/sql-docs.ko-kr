@@ -20,10 +20,10 @@ ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8ba12a2dc53b845d52d2a3dcac574bed08865c12
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75322150"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>병합 아티클에 대한 비즈니스 논리 처리기 구현
@@ -52,7 +52,7 @@ ms.locfileid: "75322150"
   
      [RMO(복제 관리 개체)](#RMOProcedure)  
   
-##  <a name="ReplProg"></a> 복제 프로그래밍 사용  
+##  <a name="using-replication-programming"></a><a name="ReplProg"></a> 복제 프로그래밍 사용  
   
 #### <a name="to-create-and-deploy-a-business-logic-handler"></a>비즈니스 논리 처리기를 만들고 배포하려면  
   
@@ -114,7 +114,7 @@ ms.locfileid: "75322150"
   
 1.  **\@publication**, **\@article**을 지정하고 **\@property**에 **article_resolver** 값, **\@value**에 비즈니스 논리 처리기의 이름을 지정하여 [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행합니다.  
   
-###  <a name="TsqlExample"></a> 예(복제 프로그래밍)  
+###  <a name="examples-replication-programming"></a><a name="TsqlExample"></a> 예(복제 프로그래밍)  
  이 예에서는 감사 로그를 만드는 비즈니스 논리 처리기를 보여 줍니다.  
   
  [!code-cs[HowTo#rmo_BusinessLogicCode](../../relational-databases/replication/codesnippet/csharp/rmohowto/businesslogic.cs#rmo_businesslogiccode)]  
@@ -125,7 +125,7 @@ ms.locfileid: "75322150"
   
  [!code-sql[HowTo#sp_RegisterBLH_10](../../relational-databases/replication/codesnippet/tsql/implement-a-business-log_3.sql)]  
   
-##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
   
 #### <a name="to-create-a-business-logic-handler"></a>비즈니스 논리 처리기를 만들려면  
   
@@ -220,7 +220,7 @@ ms.locfileid: "75322150"
   
 6.  <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>에 대한 비즈니스 논리 처리기의 이름을 설정합니다. 이 이름은 비즈니스 논리 처리기를 등록할 때 지정된 <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> 속성의 값입니다.  
   
-###  <a name="PShellExample"></a> 예(RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 예(RMO)  
  다음 예는 구독자에서의 삽입, 업데이트, 삭제에 대한 정보를 기록하는 비즈니스 논리 처리기입니다.  
   
  [!code-cs[HowTo#rmo_BusinessLogicCode](../../relational-databases/replication/codesnippet/csharp/rmohowto/businesslogic.cs#rmo_businesslogiccode)]  

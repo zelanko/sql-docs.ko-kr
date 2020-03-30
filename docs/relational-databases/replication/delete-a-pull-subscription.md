@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: c97f69b69075a4ab60f8378344de139924dca788
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76284799"
 ---
 # <a name="delete-a-pull-subscription"></a>끌어오기 구독 삭제
@@ -37,7 +37,7 @@ ms.locfileid: "76284799"
   
      [RMO(복제 관리 개체)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  게시자( **의** 로컬 게시 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]폴더 사용) 또는 구독자( **로컬 구독** 폴더 사용)에서 끌어오기 구독을 삭제합니다. 구독을 삭제해도 구독에서 개체나 데이터가 제거되지는 않으며 개체나 데이터는 수동으로 제거해야 합니다.  
   
 #### <a name="to-delete-a-pull-subscription-at-the-publisher"></a>게시자에서 끌어오기 구독을 삭제하려면  
@@ -62,7 +62,7 @@ ms.locfileid: "76284799"
   
 4.  확인 대화 상자에서 구독 정보를 삭제할 게시자에 연결할지 여부를 선택합니다. **게시자에 연결** 확인란의 선택을 취소한 경우 나중에 게시자에 연결하여 해당 정보를 삭제해야 합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  끌어오기 구독은 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 삭제할 수 있습니다. 사용되는 저장 프로시저는 구독이 속한 게시 유형에 따라 달라집니다.  
   
 #### <a name="to-delete-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 끌어오기 구독을 삭제하려면  
@@ -77,7 +77,7 @@ ms.locfileid: "76284799"
   
 2.  게시 데이터베이스의 게시자에서 [sp_dropmergesubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)을 실행합니다. **\@publication**, **\@subscriber** 및 **\@subscriber_db**를 지정합니다. **\@subscription_type**의 값을 **pull**로 지정합니다. (옵션) 배포자에 액세스할 수 없으면 **\@ignore_distributor**에 대해 값 **1**을 지정하여 배포자에서 관련 개체를 제거하지 않고 구독을 삭제합니다.  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  다음은 트랜잭션 게시에 대한 끌어오기 구독을 삭제하는 예입니다. 첫 번째 일괄 처리는 구독자에서 실행되고 두 번째 일괄 처리는 게시자에서 실행됩니다.  
   
  [!code-sql[HowTo#sp_droptranpullsubscription](../../relational-databases/replication/codesnippet/tsql/delete-a-pull-subscription_1.sql)]  
@@ -90,7 +90,7 @@ ms.locfileid: "76284799"
   
  [!code-sql[HowTo#sp_dropmergesubscription](../../relational-databases/replication/codesnippet/tsql/delete-a-pull-subscription_4.sql)]  
   
-##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
  RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 끌어오기 구독을 삭제할 수 있습니다. 끌어오기 구독을 삭제하는 데 사용되는 RMO 클래스는 끌어오기 구독이 구독하는 게시의 유형에 따라 다릅니다.  
   
 #### <a name="to-delete-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 끌어오기 구독을 삭제하려면  
@@ -125,7 +125,7 @@ ms.locfileid: "76284799"
   
 7.  <xref:Microsoft.SqlServer.Replication.MergePublication.RemovePullSubscription%2A> 메서드를 호출합니다. *subscriber* 및 *subscriberDB* 매개 변수에 구독자의 이름과 구독 데이터베이스를 지정합니다.  
   
-###  <a name="PShellExample"></a> 예(RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 예(RMO)  
  이 예에서는 트랜잭션 게시에 대한 끌어오기 구독을 삭제하고 게시자에서 구독 등록을 제거합니다.  
   
  [!code-cs[HowTo#rmo_DropTranPullSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_droptranpullsub)]  

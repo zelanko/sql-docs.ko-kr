@@ -26,10 +26,10 @@ ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b6f3217854bf72f3c7300c87aefceab24220401a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71281933"
 ---
 # <a name="set-package-properties"></a>패키지 속성 설정
@@ -68,7 +68,7 @@ ms.locfileid: "71281933"
 ## <a name="properties-by-category"></a>항목별 속성  
  다음 표에서는 항목별 패키지 속성을 나열합니다.  
   
-###  <a name="Checkpoints"></a> 검사점  
+###  <a name="checkpoints"></a><a name="Checkpoints"></a> 검사점  
  이 항목의 속성을 사용하면 제어 흐름 시작부터 패키지를 다시 실행하는 대신 패키지 제어 흐름의 오류 발생 시점으로부터 패키지를 다시 시작할 수 있습니다. 자세한 내용은 [검사점을 사용하여 패키지 다시 시작](../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
   
 |속성|Description|  
@@ -80,7 +80,7 @@ ms.locfileid: "71281933"
 > [!NOTE]  
 >  dtexec의 **/CheckPointing on** 옵션은 패키지의 **SaveCheckpoints** 속성을 True로 설정하고 **CheckpointUsage** 속성을 Always로 설정하는 것과 같습니다. 자세한 내용은 [dtexec Utility](../integration-services/packages/dtexec-utility.md)를 참조하세요.  
   
-###  <a name="Execution"></a> 실행  
+###  <a name="execution"></a><a name="Execution"></a> 실행  
  이 항목의 속성은 패키지 개체의 런타임 동작을 구성합니다.  
   
 |속성|Description|  
@@ -94,7 +94,7 @@ ms.locfileid: "71281933"
 |**MaximumErrorCount**|패키지 실행이 중지될 때까지 발생할 수 있는 최대 오류 수입니다. 이 속성의 기본값은 **1**입니다.|  
 |**PackagePriorityClass**|패키지 스레드의 Win32 스레드 우선 순위 클래스입니다. 가능한 값은 **Default**, **AboveNormal**, **Normal**, **BelowNormal**및 **Idle**입니다. 이 속성의 기본값은 **Default**입니다. 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSPriorityClass>을 참조하세요.|  
   
-###  <a name="ForcedExecutionValue"></a> 강제 실행 값  
+###  <a name="forced-execution-value"></a><a name="ForcedExecutionValue"></a> 강제 실행 값  
  이 범주의 속성은 패키지의 선택적 실행 값을 구성합니다.  
   
 |속성|Description|  
@@ -103,7 +103,7 @@ ms.locfileid: "71281933"
 |**ForcedExecutionValueType**|ForcedExecutionValue의 데이터 형식입니다. 이 속성의 기본값은 **Int32**입니다.|  
 |**ForceExecutionValue**|컨테이너의 선택적 실행 값에 특정 값이 포함되도록 강제해야 하는지 여부를 나타내는 부울 값입니다. 이 속성의 기본값은 **False**입니다.|  
   
-###  <a name="Identification"></a> ID  
+###  <a name="identification"></a><a name="Identification"></a> ID  
  이 항목의 속성은 패키지의 고유 식별자 및 이름과 같은 정보를 제공합니다.  
   
 |속성|Description|  
@@ -116,7 +116,7 @@ ms.locfileid: "71281933"
 |**이름**|패키지의 이름입니다.|  
 |**PackageType**|패키지 유형입니다. 가능한 값은 **Default**, **DTSDesigner**, **DTSDesigner100**, **DTSWizard**, **SQLDBMaint**및 **SQLReplication**입니다. 이 속성의 기본값은 **Default**입니다. 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>을 참조하세요.|  
   
-###  <a name="Misc"></a> 기타  
+###  <a name="misc"></a><a name="Misc"></a> 기타  
  이 항목의 속성은 패키지에서 사용하는 구성 및 식에 액세스하고 패키지의 로캘 및 로깅 모드에 대한 정보를 제공하는 데 사용됩니다. 자세한 내용은 [패키지에서 속성 식 사용](../integration-services/expressions/use-property-expressions-in-packages.md)을 참조하세요.  
   
 |속성|Description|  
@@ -130,7 +130,7 @@ ms.locfileid: "71281933"
 |**SuppressConfigurationWarnings**|구성에 의해 생성된 경고가 표시되지 않는지 여부를 나타냅니다. 이 속성의 기본값은 **False**입니다.|  
 |**UpdateObjects**|새로운 버전을 사용할 수 있는 경우 패키지에 포함된 새로운 버전의 개체를 사용하도록 패키지가 업데이트되는지 여부를 나타냅니다. 예를 들어 이 속성이 **True**로 설정된 경우 대량 삽입 태스크를 포함하는 패키지는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 제공하는 새로운 버전의 대량 삽입 태스크를 사용하도록 업데이트됩니다. 이 속성의 기본값은 **False**입니다.|  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
  이 항목의 속성은 패키지의 보호 수준을 설정하는 데 사용됩니다. 자세한 내용은 [Access Control for Sensitive Data in Packages](../integration-services/security/access-control-for-sensitive-data-in-packages.md)을 참조하세요.  
   
 |속성|Description|  
@@ -138,7 +138,7 @@ ms.locfileid: "71281933"
 |**PackagePassword**|암호가 필요한 패키지 보호 수준(**EncryptSensitiveWithPassword** 및 **EncryptAllWithPassword**)에 대한 암호입니다.|  
 |**ProtectionLevel**|패키지의 보호 수준입니다. 가능한 값은 **DontSaveSensitive**, **EncryptSensitiveWithUserKey**, **EncryptSensitiveWithPassword**, **EncryptAllWithPassword**및 **ServerStorage**입니다. 이 속성의 기본값은 **EncryptSensitiveWithUserKey**입니다. 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel>을 참조하세요.|  
   
-###  <a name="Transactions"></a> 트랜잭션  
+###  <a name="transactions"></a><a name="Transactions"></a> 트랜잭션  
  이 항목의 속성은 격리 수준과 패키지의 트랜잭션 옵션을 구성합니다. 자세한 내용은 [Integration Services 트랜잭션](../integration-services/integration-services-transactions.md)을 참조하세요.  
   
 |속성|Description|  
@@ -146,7 +146,7 @@ ms.locfileid: "71281933"
 |**IsolationLevel**|패키지 트랜잭션의 격리 수준입니다. 가능한 값은 **Unspecified**, **Chaos**, **ReadUncommitted**, **ReadCommitted**, **RepeatableRead**, **Serializable**및 **Snapshot**입니다. 이 속성의 기본값은 **Serializable**입니다.<br /><br /> 참고: **IsolationLevel** 속성의 **Snapshot** 값은 패키지 트랜잭션에 사용할 수 없습니다. 따라서 **IsolationLevel** 속성으로는 패키지 트랜잭션의 격리 수준을 **Shapshot**으로 설정할 수 없습니다. 패키지 트랜잭션을 **Snapshot**으로 설정하려면 SQL 쿼리를 대신 사용해야 합니다. 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요.<br /><br /> **IsolationLevel** 속성 값을 **TransactionOption** 로 설정한 경우에만 **Required**속성이 패키지 트랜잭션에 적용됩니다.<br /><br /> 다음과 같은 경우 자식 컨테이너에서 요청하는 **IsolationLevel** 속성 값이 무시됩니다.<br />자식 컨테이너의 **TransactionOption** 속성 값이 **Supported**일 경우<br />자식 컨테이너가 부모 컨테이너의 트랜잭션에 참여하는 경우<br /><br /> 컨테이너에서 요청하는 **IsolationLevel** 속성 값은 컨테이너가 새 트랜잭션을 시작할 때만 적용됩니다. 다음과 같은 경우 컨테이너가 새 트랜잭션을 시작합니다.<br />컨테이너의 **TransactionOption** 속성 값이 **Required**일 경우<br />부모가 트랜잭션을 시작하지 않은 경우<br /><br /> <br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>을 참조하세요.|  
 |**TransactionOption**|패키지의 트랜잭션 참여 옵션입니다. 가능한 값은 **NotSupported**, **Supported**및 **Required**입니다. 이 속성의 기본값은 **Supported**입니다. 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>을 참조하세요.|  
   
-###  <a name="Version"></a> 버전  
+###  <a name="version"></a><a name="Version"></a> 버전  
  이 항목의 속성은 패키지 개체의 버전에 대한 정보를 제공합니다.  
   
 |속성|Description|  
