@@ -1,5 +1,5 @@
 ---
-title: SQL Server 복제 게시 속성-| Microsoft Docs
+title: SQL 서버 복제 게시 속성 - | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,30 +20,30 @@ ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 17b2e566be6bedbb032b7a4fc06c938075bd32e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 19fee33c63b1287e43077640f381d4b57f489535
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63022460"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80380724"
 ---
-# <a name="sql-server-replication-publication-properties"></a>SQL Server 복제 게시 속성 
-  이 섹션에서는 **게시 속성** 대화 상자의 모든 페이지에 대 한 정보를 제공 합니다. 
+# <a name="sql-server-replication-publication-properties"></a>SQL 서버 복제 게시 속성 
+  이 섹션에서는 **게시 속성** 대화 상자의 모든 페이지에 대한 정보를 제공합니다. 
 
 ## <a name="general"></a>일반
-  **게시 속성** 대화 상자의 **일반** 페이지에는 이름, 설명 및 구독 만료 정책을 포함 하 여 게시에 대 한 기본 정보가 포함 되어 있습니다.  
+  **게시 속성** 대화 상자의 **일반** 페이지에는 이름, 설명 및 구독 만료 정책을 포함하여 게시에 대한 기본 정보가 들어 있습니다.  
   
 ### <a name="options"></a>옵션  
  **이름**  
  게시의 이름입니다(읽기 전용).  
   
- **Database**  
+ **데이터베이스**  
  게시 데이터베이스의 이름입니다(읽기 전용).  
   
  **설명**  
  게시에 대한 설명입니다.  
   
- **형식**  
+ **유형**  
  게시의 유형입니다(읽기 전용).  
   
  **구독 만료**  
@@ -56,11 +56,11 @@ ms.locfileid: "63022460"
  자세한 내용은 [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md)을(를) 참조하세요.  
   
  **호환성 수준**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당 병합 게시에만 해당 합니다. 이 게시와 동기화하는 구독자에 필요한 가장 낮은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 선택합니다. 호환성 수준 결정과 관련된 여러 가지 규칙이 있습니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 및 이후 버전만; 발행물만 병합할 수 있습니다. 이 게시와 동기화하는 구독자에 필요한 가장 낮은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 선택합니다. 호환성 수준 결정과 관련된 여러 가지 규칙이 있습니다.  
 
 ## <a name="filter-rows"></a>행 필터링
 
-  **게시 속성** 대화 상자의 **행 필터** 페이지를 사용 하 여 추가, 편집 또는 삭제할 수 있습니다.  
+  **게시 속성** 대화 상자의 **행 필터** 페이지를 사용하여 추가, 편집 또는 삭제할 수 있습니다.  
   
 -   스냅샷, 트랜잭션 및 병합 게시의 테이블 아티클에 정적 행 필터를 적용합니다.    
 -   병합 게시의 테이블 아티클에 매개 변수가 있는 행 필터를 적용합니다.    
@@ -101,7 +101,7 @@ ms.locfileid: "63022460"
  **편집**  
  필터 창에서 행 필터 또는 조인 필터를 선택하고 **편집** 을 클릭하면 **필터 편집** 또는 **조인 편집** 대화 상자가 시작됩니다.  
   
- **Delete**  
+ **삭제**  
  필터 창에서 행 필터 또는 조인 필터를 선택하고 **삭제** 를 클릭하면 필터가 삭제됩니다.  
   
  **테이블 찾기**  
@@ -111,14 +111,14 @@ ms.locfileid: "63022460"
   
  창에서 바로 가기 노드를 선택하고 **테이블 찾기** 를 클릭하면 창이 확장되고 테이블이 강조 표시됩니다. 바로 가기 노드를 선택하지 않고 **테이블 찾기** 를 클릭하면 **테이블 찾기** 대화 상자가 시작됩니다.  
   
- **Filter**  
+ **필터**  
  필터 창에서 선택한 필터의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 정의를 포함합니다.  
 
 ## <a name="ftp-snapshot-and-internet"></a>FTP 스냅샷 및 인터넷
   
 이 페이지에서는 다음 작업을 수행할 수 있습니다.  
   
--   FTP(파일 전송 프로토콜)를 통해 스냅샷을 배달하는 속성을 설정합니다. 자세한 내용은 [FTP를 통해 스냅숏 전송](transfer-snapshots-through-ftp.md) Windows 설명서를 참조 하세요.  
+-   FTP(파일 전송 프로토콜)를 통해 스냅샷을 배달하는 속성을 설정합니다. 자세한 내용은 [FTP Windows를 통한 스냅샷 전송](transfer-snapshots-through-ftp.md) 설명서를 참조하십시오.  
   
     > [!NOTE]  
     >  FTP 설정을 변경하면 새 스냅샷을 생성해야 합니다.  
@@ -126,20 +126,17 @@ ms.locfileid: "63022460"
 -   HTTPS(Secure Hypertext Transfer Protocol)를 통해 구독을 동기화하도록 허용하는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전의 병합 복제에 대한 웹 동기화 속성을 설정합니다. 웹 동기화를 사용하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인터넷 정보 서비스(IIS) 서버를 구성해야 합니다. 자세한 내용은 [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)를 참조하세요.  
   
 ### <a name="options"></a>옵션  
- **FTP를 통해 스냅숏 파일 액세스**  
- 
-  **구독자가 FTP(파일 전송 프로토콜)를 사용하여 스냅샷 파일을 다운로드하도록 허용**을 선택하고 **FTP 서버 이름**, **포트 번호**, **FTP 루트 폴더에서의 경로**, **로그인**및 **암호**를 지정하여 구독자가 스냅샷 배달에 FTP를 사용할 수 있도록 허용합니다.  
+ **FTP를 통해 스냅샷 파일 액세스**  
+ **구독자가 FTP(파일 전송 프로토콜)를 사용하여 스냅샷 파일을 다운로드하도록 허용**을 선택하고 **FTP 서버 이름**, **포트 번호**, **FTP 루트 폴더에서의 경로**, **로그인**및 **암호**를 지정하여 구독자가 스냅샷 배달에 FTP를 사용할 수 있도록 허용합니다.  
   
- 이 옵션을 사용하면 구독자는 FTP를 사용하여 스냅샷 파일을 검색할 수 있지만 반드시 그럴 필요는 없습니다. 이 옵션을 선택하면 새 구독 마법사는 구독자가 FTP를 통해 스냅샷 파일을 검색하는 것을 기본값으로 설정합니다. 설정을 변경하려면 **구독 속성** 대화 상자를 사용합니다. 구독자가 FTP를 통해 스냅샷 파일에 액세스할 수 있도록 허용하는 경우 **게시 속성** 대화 상자의 **스냅샷** 페이지에서 FTP 폴더를 스냅샷 파일의 위치로 지정합니다. 이렇게 하면 새 스냅샷이 생성될 때 스냅샷 에이전트가 FTP 폴더의 파일을 자동으로 업데이트합니다. 위치가 FTP 폴더로 설정되어 있지 않으면 새 스냅샷을 생성할 때 파일을 수동으로 업데이트해야 합니다. 자세한 내용은 [FTP를 통해 스냅숏 배달](publish/deliver-a-snapshot-through-ftp.md)을 참조 하세요.  
+ 이 옵션을 사용하면 구독자는 FTP를 사용하여 스냅샷 파일을 검색할 수 있지만 반드시 그럴 필요는 없습니다. 이 옵션을 선택하면 새 구독 마법사는 구독자가 FTP를 통해 스냅샷 파일을 검색하는 것을 기본값으로 설정합니다. 설정을 변경하려면 **구독 속성** 대화 상자를 사용합니다. 구독자가 FTP를 통해 스냅샷 파일에 액세스할 수 있도록 허용하는 경우 **게시 속성** 대화 상자의 **스냅샷** 페이지에서 FTP 폴더를 스냅샷 파일의 위치로 지정합니다. 이렇게 하면 새 스냅샷이 생성될 때 스냅샷 에이전트가 FTP 폴더의 파일을 자동으로 업데이트합니다. 위치가 FTP 폴더로 설정되어 있지 않으면 새 스냅샷을 생성할 때 파일을 수동으로 업데이트해야 합니다. 자세한 내용은 [FTP를 통해 스냅샷 배달](publish/deliver-a-snapshot-through-ftp.md)을 참조하세요.  
   
  **웹 동기화**  
- 병합 복제에 대해서만 사용할 수 있습니다. 
-  **구독자가 웹 서버에 연결하여 동기화하도록 허용**을 선택하고 병합 구독자가 웹 동기화를 사용할 수 있는 웹 서버 주소를 지정합니다. 웹 서버는 SSL(Secure Sockets Layer)을 사용해야 하고 웹 주소는 https://server.domain.com/synchronize와 같이 정규화된 주소여야 합니다. 자세한 내용은 [Configure Web Synchronization](configure-web-synchronization.md)을 참조하세요.  
+ 병합 복제에 대해서만 사용할 수 있습니다. **구독자가 웹 서버에 연결하여 동기화하도록 허용**을 선택하고 병합 구독자가 웹 동기화를 사용할 수 있는 웹 서버 주소를 지정합니다. 웹 서버는 SSL(Secure Sockets Layer)을 사용해야 하고 웹 주소는 `https://server.domain.com/synchronize`와 같이 정규화된 주소여야 합니다. 자세한 내용은 [Configure Web Synchronization](configure-web-synchronization.md)을 참조하세요.  
 
 ## <a name="publication-access-list"></a>게시 액세스 목록
 
-  **게시 속성** 대화 상자의 **게시 액세스 목록** 페이지를 사용 하 여 PAL (게시 액세스 목록)에서 로그인, 계정 및 그룹을 추가 하 고 제거할 수 있습니다. PAL은 게시자의 보안을 유지하는 기본 메커니즘입니다. 게시를 만들면 복제에서 게시에 대한 PAL을 만듭니다. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 액세스 제어 목록과 기능이 비슷한 PAL에는 게시에 대한 액세스가 부여된 로그인, 계정 및 그룹이 있습니다.  
+  **게시 속성** 대화 상자의 **게시 액세스 목록** 페이지를 사용하여 PAL(게시 액세스 목록)에서 로그인, 계정 및 그룹을 추가 및 제거할 수 있습니다. PAL은 게시자의 보안을 유지하는 기본 메커니즘입니다. 게시를 만들면 복제에서 게시에 대한 PAL을 만듭니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 액세스 제어 목록과 기능이 비슷한 PAL에는 게시에 대한 액세스가 부여된 로그인, 계정 및 그룹이 있습니다.  
   
  구독자가 게시자 또는 배포자에 연결하여 게시에 대한 액세스를 요청하면 구독자의 로그인을 PAL의 인증 정보와 비교합니다. 이 방법은 클라이언트 도구가 게시자에서 직접 수정 작업을 수행하는 데 게시자 및 배포자 로그인을 사용하지 못하도록 하여 게시자에 대한 보안을 강화합니다. 자세한 내용은 [게시자 보안 설정](security/secure-the-publisher.md)을 참조하세요.  
   
@@ -156,7 +153,7 @@ ms.locfileid: "63022460"
 
   이 페이지에서는 다음 작업을 수행할 수 있습니다.  
   
--   FTP(파일 전송 프로토콜)를 통해 스냅샷을 배달하는 속성을 설정합니다. 자세한 내용은 [FTP를 통해 스냅숏 전송](transfer-snapshots-through-ftp.md) Windows 설명서를 참조 하세요.  
+-   FTP(파일 전송 프로토콜)를 통해 스냅샷을 배달하는 속성을 설정합니다. 자세한 내용은 [FTP Windows를 통한 스냅샷 전송](transfer-snapshots-through-ftp.md) 설명서를 참조하십시오.  
   
     > [!NOTE]  
     >  FTP 설정을 변경하면 새 스냅샷을 생성해야 합니다.  
@@ -164,18 +161,16 @@ ms.locfileid: "63022460"
 -   HTTPS(Secure Hypertext Transfer Protocol)를 통해 구독을 동기화하도록 허용하는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전의 병합 복제에 대한 웹 동기화 속성을 설정합니다. 웹 동기화를 사용하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인터넷 정보 서비스(IIS) 서버를 구성해야 합니다. 자세한 내용은 [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)를 참조하세요.  
   
 ### <a name="options"></a>옵션  
- **FTP를 통해 스냅숏 파일 액세스**  
- 
-  **구독자가 FTP(파일 전송 프로토콜)를 사용하여 스냅샷 파일을 다운로드하도록 허용**을 선택하고 **FTP 서버 이름**, **포트 번호**, **FTP 루트 폴더에서의 경로**, **로그인**및 **암호**를 지정하여 구독자가 스냅샷 배달에 FTP를 사용할 수 있도록 허용합니다.  
+ **FTP를 통해 스냅샷 파일 액세스**  
+ **구독자가 FTP(파일 전송 프로토콜)를 사용하여 스냅샷 파일을 다운로드하도록 허용**을 선택하고 **FTP 서버 이름**, **포트 번호**, **FTP 루트 폴더에서의 경로**, **로그인**및 **암호**를 지정하여 구독자가 스냅샷 배달에 FTP를 사용할 수 있도록 허용합니다.  
   
- 이 옵션을 사용하면 구독자는 FTP를 사용하여 스냅샷 파일을 검색할 수 있지만 반드시 그럴 필요는 없습니다. 이 옵션을 선택하면 새 구독 마법사는 구독자가 FTP를 통해 스냅샷 파일을 검색하는 것을 기본값으로 설정합니다. 설정을 변경하려면 **구독 속성** 대화 상자를 사용합니다. 구독자가 FTP를 통해 스냅샷 파일에 액세스할 수 있도록 허용하는 경우 **게시 속성** 대화 상자의 **스냅샷** 페이지에서 FTP 폴더를 스냅샷 파일의 위치로 지정합니다. 이렇게 하면 새 스냅샷이 생성될 때 스냅샷 에이전트가 FTP 폴더의 파일을 자동으로 업데이트합니다. 위치가 FTP 폴더로 설정되어 있지 않으면 새 스냅샷을 생성할 때 파일을 수동으로 업데이트해야 합니다. 자세한 내용은 [FTP를 통해 스냅숏 배달](publish/deliver-a-snapshot-through-ftp.md)을 참조 하세요.  
+ 이 옵션을 사용하면 구독자는 FTP를 사용하여 스냅샷 파일을 검색할 수 있지만 반드시 그럴 필요는 없습니다. 이 옵션을 선택하면 새 구독 마법사는 구독자가 FTP를 통해 스냅샷 파일을 검색하는 것을 기본값으로 설정합니다. 설정을 변경하려면 **구독 속성** 대화 상자를 사용합니다. 구독자가 FTP를 통해 스냅샷 파일에 액세스할 수 있도록 허용하는 경우 **게시 속성** 대화 상자의 **스냅샷** 페이지에서 FTP 폴더를 스냅샷 파일의 위치로 지정합니다. 이렇게 하면 새 스냅샷이 생성될 때 스냅샷 에이전트가 FTP 폴더의 파일을 자동으로 업데이트합니다. 위치가 FTP 폴더로 설정되어 있지 않으면 새 스냅샷을 생성할 때 파일을 수동으로 업데이트해야 합니다. 자세한 내용은 [FTP를 통해 스냅샷 배달](publish/deliver-a-snapshot-through-ftp.md)을 참조하세요.  
   
  **웹 동기화**  
- 병합 복제에 대해서만 사용할 수 있습니다. 
-  **구독자가 웹 서버에 연결하여 동기화하도록 허용**을 선택하고 병합 구독자가 웹 동기화를 사용할 수 있는 웹 서버 주소를 지정합니다. 웹 서버는 SSL(Secure Sockets Layer)을 사용해야 하고 웹 주소는 https://server.domain.com/synchronize와 같이 정규화된 주소여야 합니다. 자세한 내용은 [Configure Web Synchronization](configure-web-synchronization.md)을 참조하세요.  
+ 병합 복제에 대해서만 사용할 수 있습니다. **구독자가 웹 서버에 연결하여 동기화하도록 허용**을 선택하고 병합 구독자가 웹 동기화를 사용할 수 있는 웹 서버 주소를 지정합니다. 웹 서버는 SSL(Secure Sockets Layer)을 사용해야 하고 웹 주소는 `https://server.domain.com/synchronize`와 같이 정규화된 주소여야 합니다. 자세한 내용은 [Configure Web Synchronization](configure-web-synchronization.md)을 참조하세요.  
 
 ## <a name="agent-security"></a>에이전트 보안
-  **게시 속성** 대화 상자의 **에이전트 보안** 페이지를 사용 하 여 다음 에이전트를 실행 하 고 복제 토폴로지의 컴퓨터에 연결 하는 데 사용 되는 계정에 대 한 설정에 액세스할 수 있습니다.  
+  **게시 속성** 대화 상자의 **에이전트 보안** 페이지를 사용하여 다음 에이전트를 실행하고 복제 토폴로지의 컴퓨터에 연결할 때 사용되는 계정의 설정에 액세스할 수 있습니다.  
   
 -   모든 게시에 대한 스냅샷 에이전트입니다.    
 -   모든 트랜잭션 게시에 대한 로그 판독기 에이전트입니다. 트랜잭션 복제에 대해 게시된 각 데이터베이스에 하나의 로그 판독기 에이전트가 있습니다. 로그 판독기 에이전트 설정을 변경하면 데이터베이스의 모든 트랜잭션 게시에 영향을 줍니다.    
@@ -188,68 +183,63 @@ ms.locfileid: "63022460"
  에이전트 작업이 생성된 경우 **보안 설정** 을 클릭하여 에이전트 보안 설정을 변경할 수 있는 대화 상자에 액세스합니다. 에이전트 작업이 생성되지 않은 경우 **에이전트 만들기** 를 클릭하여 새 에이전트를 만들고 보안 설정을 지정합니다.  
 
 ## <a name="data-partitions"></a>데이터 파티션
-  **게시 속성** 대화 상자의 **데이터 파티션** 페이지를 사용 하 여 매개 변수가 있는 필터링을 사용 하는 병합 게시에 대 한 데이터 파티션을 정의할 수 있습니다. 파티션을 정의하고 나면 이들 파티션에 대한 스냅샷을 생성하여 구독자의 연결 속성(로그인 및/또는 컴퓨터 이름)을 기준으로 다양한 구독자에 대한 각기 다른 초기 데이터 집합을 제공할 수 있습니다. 또한 구독자가 처음 동기화할 때 파티션에 사용할 수 있는 스냅샷을 가지고 있지 않은 경우 스냅샷 배달 및 생성을 요청할 수 있도록 선택할 수 있습니다. 자세한 내용은 [매개 변수가 있는 필터로 병합 게시에 대한 스냅샷 만들기](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
+  **게시 속성** 대화 상자의 **데이터 파티션** 페이지를 사용하여 매개 변수가 있는 필터링을 사용하는 병합 게시를 위한 데이터 파티션을 정의할 수 있습니다. 파티션을 정의하고 나면 이들 파티션에 대한 스냅샷을 생성하여 구독자의 연결 속성(로그인 및/또는 컴퓨터 이름)을 기준으로 다양한 구독자에 대한 각기 다른 초기 데이터 집합을 제공할 수 있습니다. 또한 구독자가 처음 동기화할 때 파티션에 사용할 수 있는 스냅샷을 가지고 있지 않은 경우 스냅샷 배달 및 생성을 요청할 수 있도록 선택할 수 있습니다. 자세한 내용은 [매개 변수가 있는 필터로 병합 게시에 대한 스냅샷 만들기](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
   
 ### <a name="options"></a>옵션  
  **추가**  
- 파티션을 정의하려면 **추가** 를 클릭합니다. 
-  **데이터 파티션 추가** 대화 상자에서 **HOST_NAME()** 및/또는 **SUSER_SNAME()** 에 대한 값을 지정하고 스냅샷을 새로 고칠 일정을 정의합니다.  
+ 파티션을 정의하려면 **추가** 를 클릭합니다. **데이터 파티션 추가** 대화 상자에서 **HOST_NAME()** 및/또는 **SUSER_SNAME()** 에 대한 값을 지정하고 스냅샷을 새로 고칠 일정을 정의합니다.  
   
  **편집**  
  표에서 기존 파티션을 선택하고 **편집** 을 클릭하여 파티션을 편집합니다.  
   
- **Delete**  
+ **삭제**  
  표에서 기존 파티션을 선택하고 **삭제** 를 클릭하여 파티션을 삭제합니다.  
   
- **선택한 스냅숏 지금 생성**  
+ **선택한 스냅샷 지금 생성**  
  표에서 하나 이상의 파티션을 선택하고 **선택한 스냅샷 지금 생성** 을 클릭하여 이러한 파티션에 대한 스냅샷을 생성합니다.  
   
- **기존 스냅숏 정리**  
+ **기존 스냅샷 정리**  
  표에서 하나 이상의 파티션을 선택하고 **기존 스냅샷 정리** 를 클릭하여 이러한 파티션에 대한 스냅샷을 정리합니다.  
   
- **새 구독자가 동기화 할 때 필요한 경우 자동으로 파티션 정의 및 스냅숏 생성**  
+ **새 구독자가 동기화할 때 필요한 경우 자동으로 파티션 정의 및 스냅샷 생성**  
  구독자가 스냅샷 생성 및 적용을 요청할 수 있도록 할 경우 이 옵션을 선택합니다. 구독자가 처음 동기화할 때 파티션에 사용할 수 있는 스냅샷을 가지고 있지 않은 경우 이 옵션이 필요할 수 있습니다.  
 
 ## <a name="snapshot"></a>스냅샷
 
- 
-  **게시 속성** 대화 상자의 **스냅샷** 페이지를 사용하여 스냅샷 형식, 스냅샷 폴더 위치 및 스냅샷 적용 전후 실행할 스크립트를 설정할 수 있습니다. 스냅샷 폴더를 공유로 지정해야 하며 파일을 읽고 폴더에 쓰는 에이전트에 대한 충분한 권한이 있어야 합니다. 폴더의 적절한 보안 유지 방법에 대한 자세한 내용은 [스냅샷 폴더 보안 설정](security/secure-the-snapshot-folder.md)을 참조하세요.  
+ **게시 속성** 대화 상자의 **스냅샷** 페이지를 사용하여 스냅샷 형식, 스냅샷 폴더 위치 및 스냅샷 적용 전후 실행할 스크립트를 설정할 수 있습니다. 스냅샷 폴더를 공유로 지정해야 하며 파일을 읽고 폴더에 쓰는 에이전트에 대한 충분한 권한이 있어야 합니다. 폴더의 적절한 보안 유지 방법에 대한 자세한 내용은 [스냅샷 폴더 보안 설정](security/secure-the-snapshot-folder.md)을 참조하세요.  
   
 > [!NOTE]  
 >  게시 속성을 변경하려면 게시에 대한 새 스냅샷이 필요합니다. 자세한 내용은 [게시 및 아티클 속성 변경](publish/change-publication-and-article-properties.md)을 참조하세요.  
   
 ### <a name="options"></a>옵션  
- **스냅숏 형식**  
+ **스냅샷 형식**  
  스냅샷 형식에 대해 네이티브 모드 또는 문자 모드를 선택합니다.  
   
--   모든 구독자가 **** 인스턴스가 아닌 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스인 경우 네이티브 SQL Server - 모든 구독자는 SQL Server를 실행하는 서버여야 합니다[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] 를 선택합니다. 네이티브 스냅샷 형식을 사용할 때 최상의 성능을 제공합니다.    
+-   모든 구독자가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] 이외의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스인 경우 **네이티브 SQL Server - 모든 구독자는 SQL Server를 실행하는 서버여야 합니다.** 를 선택합니다. 네이티브 스냅샷 형식을 사용할 때 최상의 성능을 제공합니다.    
 -   구독자가 **에서 실행되고 있거나** 이외 구독자인 경우 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 문자 - 게시자 또는 구독자가 SQL Server를 실행하지 않는 경우 필요합니다[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 선택합니다.  
   
- **스냅숏 파일의 위치**  
+ **스냅샷 파일 위치**  
  스냅샷 파일을 저장할 위치를 선택합니다. 파일을 기본 위치에 저장할 수 있으며 기본 위치 대신 대체 위치에 저장할 수도 있습니다. 대체 위치에 저장된 파일을 압축할 수 있습니다.  
   
--   게시자에 대해 기본 스냅샷 폴더를 사용하려면 **기본 폴더에 파일 보관** 을 선택합니다. 스냅샷 폴더 위치는 **배포자 속성** 대화 상자에서 게시자에 대해서만 변경할 수 있으므로 이 대화 상자에서는 읽기 전용입니다. 자세한 내용은 [기본 스냅숏 위치 지정](snapshot-options.md#snapshot-folder-locations)을 참조 하세요.   
+-   게시자에 대해 기본 스냅샷 폴더를 사용하려면 **기본 폴더에 파일 보관** 을 선택합니다. 스냅샷 폴더 위치는 **배포자 속성** 대화 상자에서 게시자에 대해서만 변경할 수 있으므로 이 대화 상자에서는 읽기 전용입니다. 자세한 내용은 [기본 스냅숏 위치 지정](snapshot-options.md#snapshot-folder-locations)을 참조하십시오.   
 -   기본 위치 대신 대체 위치를 지정하려면 **다음 폴더에 파일 보관** 을 선택합니다. 입력란에 경로를 입력하거나 **찾아보기** 를 클릭하고 위치를 탐색합니다. 대체 스냅샷 위치의 파일을 압축하려면 **이 폴더에 있는 스냅샷 파일 압축** 을 선택합니다. 대체 위치는 다른 서버, 네트워크 드라이브 또는 이동식 미디어(CD-ROM 또는 이동식 디스크 등)가 될 수 있습니다. 자세한 내용은 [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md) 및 [Compressed Snapshots](compressed-snapshots.md)를 참조하세요.  
   
  **추가 스크립트 실행**  
- 구독자에 스냅샷 적용 전후에 실행할 스크립트를 지정합니다. 
-  **스냅샷 형식** 이 **문자**인 경우에는 스크립트를 지정할 수 없습니다.  
+ 구독자에 스냅샷 적용 전후에 실행할 스크립트를 지정합니다. **스냅샷 형식** 이 **문자**인 경우에는 스크립트를 지정할 수 없습니다.  
   
  스크립트는 선택 사항이지만 명령을 실행하고 구독자에 관리 변경 내용을 적용하는 편리한 방법을 제공합니다. 스크립트 실행에 대한 자세한 내용은 [스냅샷 적용 전후에 스크립트 실행](snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)을 참조하세요.  
   
--   
-  **스냅샷 적용 전 다음 스크립트 실행** 입력란에 경로를 입력하거나 **찾아보기** 를 클릭하여 스크립트의 위치를 지정합니다.   
--   
-  **스냅샷 적용 후 다음 스크립트 실행** 입력란에 경로를 입력하거나 **찾아보기** 를 클릭하여 스크립트의 위치를 지정합니다.  
+-   **스냅샷 적용 전 다음 스크립트 실행** 입력란에 경로를 입력하거나 **찾아보기** 를 클릭하여 스크립트의 위치를 지정합니다.   
+-   **스냅샷 적용 후 다음 스크립트 실행** 입력란에 경로를 입력하거나 **찾아보기** 를 클릭하여 스크립트의 위치를 지정합니다.  
 
 
 
-## <a name="see-also"></a>참고 항목  
- [Create a Publication](publish/create-a-publication.md)   
+## <a name="see-also"></a>관련 항목  
+ [발행물 만들기](publish/create-a-publication.md)   
  [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)   
  [데이터 및 데이터베이스 개체 게시](publish/publish-data-and-database-objects.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)   
- [SQL Server 복제 보안](security/view-and-modify-replication-security-settings.md)  
+ [복제 보안 모범 사례](security/replication-security-best-practices.md)   
+ [SQL 서버 복제 보안](security/view-and-modify-replication-security-settings.md)  
  [스냅샷으로 구독 초기화](initialize-a-subscription-with-a-snapshot.md)   
   
   
