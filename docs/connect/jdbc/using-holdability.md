@@ -11,10 +11,10 @@ ms.assetid: aa48306c-e7a0-4dcb-af21-9ebb6898e45a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1c126385955ce6e9fa9098ec5a09ba115b94ffb0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026204"
 ---
 # <a name="using-holdability"></a>유지 기능 사용
@@ -23,7 +23,7 @@ ms.locfileid: "69026204"
 
 기본적으로 트랜잭션 내에 만들어진 결과 집합은 트랜잭션이 데이터베이스에 커밋되거나 롤백된 후 열린 상태로 남아 있습니다. 그러나 트랜잭션이 커밋된 후 결과 집합을 닫으면 유용한 경우가 있습니다. 이를 위해 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 결과 집합 유지 기능을 사용할 수 있도록 지원합니다.
 
-결과 집합 유지 기능은 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 [setHoldability](../../connect/jdbc/reference/setholdability-method-sqlserverconnection.md) 메서드를 사용하여 설정할 수 있습니다. setHoldability 메서드를 사용하여 유지 기능을 설정하는 경우 `ResultSet.HOLD_CURSORS_OVER_COMMIT` 또는 `ResultSet.CLOSE_CURSORS_AT_COMMIT`이라는 결과 집합 유지 기능 상수를 사용할 수 있습니다.
+결과 집합 유지 기능은 [SQLServerConnection](../../connect/jdbc/reference/setholdability-method-sqlserverconnection.md) 클래스의 [setHoldability](../../connect/jdbc/reference/sqlserverconnection-class.md) 메서드를 사용하여 설정할 수 있습니다. setHoldability 메서드를 사용하여 유지 기능을 설정하는 경우 `ResultSet.HOLD_CURSORS_OVER_COMMIT` 또는 `ResultSet.CLOSE_CURSORS_AT_COMMIT`이라는 결과 집합 유지 기능 상수를 사용할 수 있습니다.
 
 또한 JDBC 드라이버는 Statement 개체를 만들 때 유지 기능을 설정할 수 있도록 지원합니다. 결과 집합 유지 기능 매개 변수의 오버로드가 있는 Statement 개체를 만들 때 statement 개체의 유지 기능은 연결의 유지 기능과 일치해야 합니다. 일치하지 않으면 예외가 발생합니다. SQL Server가 연결 수준에서만 유지 기능을 지원하기 때문입니다.
 

@@ -11,15 +11,15 @@ ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 66e45137b75eaa22e4945113101d0cc0d91901cd
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896780"
 ---
 # <a name="nodejs-driver-for-sql-server"></a>SQL Server용 Node.js 드라이버
 
-![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[Node.js SQL 드라이버 다운로드](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![다운로드-아래쪽 화살표-원](../../ssms/media/download-icon.png)[Node.js SQL 드라이버를 다운로드하려면](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 Tedious 모듈은 모든 최신 버전의 SQL Server에서 지원되는 TDS 프로토콜(JavaScript로 구현)입니다. 드라이버는 오픈 소스 프로젝트이며 GitHub에서 제공됩니다.  
   

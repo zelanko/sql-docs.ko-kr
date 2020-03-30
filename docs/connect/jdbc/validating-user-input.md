@@ -11,10 +11,10 @@ ms.assetid: 8aa867b0-e6f0-49eb-93d3-817ae2ed8f77
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3b732f1f09d4852f30d3b086ea5d88ea1a71eca9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69025587"
 ---
 # <a name="validating-user-input"></a>사용자 입력 유효성 검사
@@ -25,7 +25,7 @@ ms.locfileid: "69025587"
 
 서버로의 반복 이동으로 인한 시간을 절약할 수 있으므로 클라이언트 코드에서 사용자 입력의 유효성 검사는 중요합니다. 또한 유효하지 않고 클라이언트측 유효성을 무시하는 입력을 catch하기 위해 서버의 저장 프로시저에 대한 매개 변수의 유효성 검사도 중요합니다.
 
-SQL 삽입 및 방지 방법에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "SQL 삽입"을 참조하세요. 저장 프로시저 매개 변수의 유효성 검사에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "저장 프로시저([!INCLUDE[ssDE](../../includes/ssde_md.md)])"를 참조하세요.
+SQL 삽입 및 방지 방법에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "SQL 삽입"을 참조하세요. 저장 프로시저 매개 변수의 유효성 검사에 대한 자세한 내용은 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 온라인 설명서의 "저장 프로시저([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])"를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

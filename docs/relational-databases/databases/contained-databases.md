@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e42d7dbfe00ff957511d9853e39febd29b7aab66
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68137333"
 ---
 # <a name="contained-databases"></a>포함된 데이터베이스
@@ -38,7 +38,7 @@ ms.locfileid: "68137333"
   
  메타데이터를 데이터베이스에 저장하는 등의 부분적으로 포함된 데이터베이스의 일부 기능은 모든 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스에 적용됩니다. 데이터베이스 수준 인증 및 카탈로그 데이터 정렬 등의 부분적으로 포함된 데이터베이스의 일부 이점은 먼저 사용하도록 설정해야만 사용할 수 있습니다. **CREATE DATABASE** 및 **ALTER DATABASE** 문을 사용하거나 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 부분 포함을 사용하도록 설정할 수 있습니다. 부분 데이터베이스 포함을 사용하도록 설정하는 방법은 [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)을 참조하십시오.  
   
-##  <a name="Concepts"></a> 부분적으로 포함된 데이터베이스 개념  
+##  <a name="partially-contained-database-concepts"></a><a name="Concepts"></a> 부분적으로 포함된 데이터베이스 개념  
  전체적으로 포함된 데이터베이스는 데이터베이스를 정의하는 데 필요한 모든 설정과 메타데이터를 포함하며 데이터베이스가 설치된 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스와 어떠한 구성 종속 관계도 가지고 있지 않습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 분리하는 작업은 시간이 많이 걸릴 수 있으며 이 작업을 위해서는 데이터베이스와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 간 관계를 자세히 알고 있어야 합니다. 부분적으로 포함된 데이터베이스를 사용하면 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 및 다른 데이터베이스와 쉽게 분리할 수 있습니다.  
   
  포함된 데이터베이스는 포함과 관련된 기능을 고려합니다. 데이터베이스에 있는 기능에만 의존하는 사용자 정의 엔터티는 완전히 포함된 것으로 간주됩니다. 데이터베이스 외부의 기능에 의존하는 사용자 정의 엔터티는 포함되지 않은 것으로 간주됩니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [포함](#containment) 섹션을 참조하세요.  
@@ -83,7 +83,7 @@ ms.locfileid: "68137333"
   
  데이터베이스 경계의 외부에는 *관리 모델*이 있으며 이 모델은 인스턴스 수준 기능 및 관리와 관련되어 있습니다. 데이터베이스 경계 외부에 있는 엔터티에는 **sys.endpoints**와 같은 시스템 테이블, 로그인에 매핑된 사용자, 세 부분으로 구성된 이름으로 참조되는 다른 데이터베이스의 사용자 테이블 등이 있습니다.  
   
-##  <a name="containment"></a> 포함  
+##  <a name="containment"></a><a name="containment"></a> 포함  
  전적으로 데이터베이스 내부에 있는 사용자 엔터티는 *포함된*것으로 간주됩니다. 데이터베이스 외부에 있거나 데이터베이스 외부 기능과의 상호 작용에 의존하는 사용자 엔터티는 *포함되지 않은*것으로 간주됩니다.  
   
  일반적으로 사용자 엔터티는 다음과 같은 포함 범주로 분류됩니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "68137333"
   
 -   sys.server_principals 또는 서버 보안 주체(로그인)와 같이 데이터베이스 경계를 넘는, 포함되지 않은 사용자 엔터티. 이러한 엔터티를 사용하는 모든 코드 또는 이러한 엔터티를 참조하는 모든 기능은 포함되지 않은 것으로 간주됩니다.  
   
-###  <a name="partial"></a> Partially Contained Database  
+###  <a name="partially-contained-database"></a><a name="partial"></a> Partially Contained Database  
  포함된 데이터베이스 기능은 현재 부분적으로 포함된 상태에서만 사용할 수 있습니다. 부분적으로 포함된 데이터베이스는 포함되지 않은 기능을 사용하도록 허용하는 포함된 데이터베이스입니다.  
   
  포함되지 않은 개체 또는 기능에 대한 정보를 반환하려면 [sys.dm_db_uncontained_entities](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) 및 [sys.sql_modules&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 뷰를 사용하세요. 데이터베이스 요소의 포함 상태를 파악함으로써 포함 상태를 승격시키려면 어떤 개체 또는 기능을 바꾸거나 변경해야 하는지 확인할 수 있습니다.  
@@ -102,7 +102,7 @@ ms.locfileid: "68137333"
   
  부분적으로 포함된 데이터베이스의 동작은 포함되지 않은 데이터베이스의 동작과 데이터 정렬의 측면에서 가장 많이 다릅니다. 데이터 정렬 문제에 대한 자세한 내용은 [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)을 참조하십시오.  
   
-##  <a name="benefits"></a> 부분적으로 포함된 데이터베이스 사용의 이점  
+##  <a name="benefits-of-using-partially-contained-databases"></a><a name="benefits"></a> 부분적으로 포함된 데이터베이스 사용의 이점  
  부분적으로 포함된 데이터베이스를 사용하면 포함되지 않은 데이터베이스와 관련된 일부 문제 및 복잡성을 해결할 수 있습니다.  
   
 ### <a name="database-movement"></a>데이터베이스 이동  
@@ -124,7 +124,7 @@ ms.locfileid: "68137333"
 ### <a name="database-administration"></a>데이터베이스 관리  
  데이터베이스 설정을 master 데이터베이스 대신 데이터베이스에 유지하면 데이터베이스 소유자에게 **sysadmin** 권한을 제공할 필요 없이 각 데이터베이스 소유자가 해당 데이터베이스를 더 세밀하게 제어할 수 있습니다.  
   
-##  <a name="Limitations"></a> 제한 사항  
+##  <a name="limitations"></a><a name="Limitations"></a> 제한 사항  
  부분적으로 포함된 데이터베이스는 다음 기능을 허용하지 않습니다.  
   
 -   부분적으로 포함된 데이터베이스는 복제, 변경 데이터 캡처 또는 변경 내용 추적 기능을 사용할 수 없습니다.  
@@ -140,7 +140,7 @@ ms.locfileid: "68137333"
 > [!WARNING]  
 >  임시 저장 프로시저는 현재 허용되지만, 포함 조건을 위반하므로 이후 버전의 포함된 데이터베이스에서는 지원되지 않을 것입니다.  
   
-##  <a name="Identifying"></a> 데이터베이스 포함 식별  
+##  <a name="identifying-database-containment"></a><a name="Identifying"></a> 데이터베이스 포함 식별  
  데이터베이스의 포함 상태를 식별할 수 있는 도구가 두 가지 있습니다. [sys.dm_db_uncontained_entities&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)는 데이터베이스에서 포함되지 않은 엔터티일 가능성이 있는 엔터티를 모두 표시하는 뷰입니다. 런타임 시 실제로 포함되지 않은 엔터티가 식별될 때 database_uncontained_usage 이벤트가 발생합니다.  
   
 ### <a name="sysdm_db_uncontained_entities"></a>sys.dm_db_uncontained_entities  

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 45cf5461b9154d397ee5365fd275d2545a3cc376
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73531599"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>빅 데이터 클러스터의 상태를 보는 방법 
@@ -22,7 +22,7 @@ ms.locfileid: "73531599"
 
 이 문서에서는 서비스 엔드포인트에 액세스하고 SQL Server 빅 데이터 클러스터 구성 요소의 상태를 보는 방법을 설명합니다. Azure Data Studio 및 **azdata**를 모두 사용할 수 있으며, 이 문서에서는 두 가지 방법을 모두 설명합니다.
 
-## <a id="datastudio"></a> Azure Data Studio 사용
+## <a name="use-azure-data-studio"></a><a id="datastudio"></a> Azure Data Studio 사용
 
 **Azure Data Studio**의 최신 [참가자 빌드](https://aka.ms/getazuredatastudio)를 다운로드한 후에 SQL Server 빅 데이터 클러스터 대시보드를 사용하여 서비스 엔드포인트와 빅 데이터 클러스터 상태를 볼 수 있습니다. 아래 기능 중 일부는 Azure Data Studio 참가자 빌드에서만 처음으로 제공되는 것입니다.
 
@@ -55,7 +55,7 @@ ms.locfileid: "73531599"
 
 이러한 링크를 직접 클릭할 수 있습니다. 대시보드에 액세스하려면 인증해야 합니다. 메트릭 대시보드와 로그 대시보드의 경우, 환경 변수 **AZDATA_USERNAME** 및 **AZDATA_PASSWORD**를 사용하여 배포 시점에 설정한 컨트롤러 관리자 자격 증명을 제공하세요. Spark 대시보드는 게이트웨이(Knox) 자격 증명을 사용합니다. 즉, AD에 통합된 클러스터의 AD ID이거나 클러스터에서 기본 인증을 사용하고 있다면 사용자 **root**와 **AZDATA_PASSWORD**입니다. 
 
-### <a id="notebook"></a> 클러스터 상태 Notebook
+### <a name="cluster-status-notebook"></a><a id="notebook"></a> 클러스터 상태 Notebook
 
 1. 클러스터 상태 Notebook을 시작하여 빅 데이터 클러스터의 클러스터 상태를 볼 수도 있습니다. Notebook을 시작하려면 **클러스터 상태** 작업을 클릭합니다.
 

@@ -11,10 +11,10 @@ ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7b5e17a6b7a98101eac8e3ddbb29a8438bc10075
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75681704"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>JDBC 드라이버에 대해 Always Encrypted API 참조
@@ -156,7 +156,7 @@ ms.locfileid: "75681704"
 
 |속성|Description|  
 |----------|-----------------|  
-|DATETIME, SMALLDATETIME, MONEY, SMALLMONEY, GUID|`setObject()/updateObject()` API 메서드를 사용하여 **암호화된** datetime, smalldatetime, money, smallmoney, uniqueidentifier 열에 매개 변수 값을 보낼 때 이러한 형식을 대상 SQL 형식으로 사용합니다.|  
+|DATETIME, SMALLDATETIME, MONEY, SMALLMONEY, GUID|**API 메서드를 사용하여**암호화된`setObject()/updateObject()` datetime, smalldatetime, money, smallmoney, uniqueidentifier 열에 매개 변수 값을 보낼 때 이러한 형식을 대상 SQL 형식으로 사용합니다.|  
   
   
  **SQLServerStatementColumnEncryptionSetting 열거형**  

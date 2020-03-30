@@ -18,10 +18,10 @@ ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 08c4877b4fc3280826100cdfe7f0dfcad716ca22
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68115311"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server 유틸리티 기능 및 태스크
@@ -31,7 +31,7 @@ ms.locfileid: "68115311"
 ## <a name="benefits-of-the-sql-server-utility"></a>SQL Server 유틸리티의 이점  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티는 조직의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 엔터티를 통합 뷰로 모델링합니다. SSMS( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )의 유틸리티 탐색기와 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 유틸리티 뷰포인트는 UCP(유틸리티 제어 지점) 역할을 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 통해 관리자에게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 상태에 대한 전체적인 뷰를 제공합니다. UCP에 나오는 사용 미달 및 사용 과다 정책과 다양한 핵심 매개 변수에 대한 요약 및 상세 데이터를 통해 손쉽게 리소스 통합 기회와 리소스 사용 과다를 식별할 수 있습니다. 상태 정책은 구성할 수 있으며 상위 또는 하위 리소스 사용 임계값을 변경하도록 조정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 관리되는 엔터티의 전역 모니터링 정책을 변경하거나 각 엔터티의 개별 모니터링 정책을 구성할 수 있습니다.  
   
-##  <a name="typical_scenarios"></a> SQL Server 유틸리티 시작  
+##  <a name="getting-started-with-sql-server-utility"></a><a name="typical_scenarios"></a> SQL Server 유틸리티 시작  
  일반적인 사용자 시나리오는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 대한 중심 원리 지점인 유틸리티 제어 지점을 생성하는 것으로 시작됩니다. UCP는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 관리되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로부터 수집되는 리소스 상태를 한 눈에 볼 수 있는 통합 보기를 제공합니다. UCP가 생성된 다음에는 UCP로 관리할 수 있도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 등록합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 관리되는 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 및 데이터 계층 애플리케이션은 전역 정책 정의 또는 개별 정책 정의에 따라 모니터할 수 있습니다.  

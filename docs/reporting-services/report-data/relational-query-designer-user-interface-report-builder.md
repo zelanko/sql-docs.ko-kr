@@ -15,10 +15,10 @@ ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 59889ce4625b8c8748c83fada670551db8584ea6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73593385"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>관계형 쿼리 디자이너 사용자 인터페이스(보고서 작성기)
@@ -66,10 +66,10 @@ ms.locfileid: "73593385"
  [쿼리 결과](#QueryResults)  
  자동으로 생성된 쿼리의 결과 집합에 대한 예제 데이터를 표시합니다.  
   
-###  <a name="DatabaseView"></a> 데이터베이스 뷰 창  
+###  <a name="database-view-pane"></a><a name="DatabaseView"></a> 데이터베이스 뷰 창  
  데이터베이스 뷰 창에는 데이터 원본 연결 및 자격 증명에 따라 사용자가 볼 수 있는 권한이 있는 데이터베이스 개체에 대한 메타데이터가 표시됩니다. 데이터베이스 스키마별로 구성된 데이터베이스 개체가 계층 뷰에 표시됩니다. 각 스키마 노드를 확장하여 테이블,  뷰,  저장 프로시저 및 테이블 반환 함수를 볼 수 있습니다. 열을 표시하려면 테이블이나 뷰를 확장합니다.  
   
-###  <a name="SelectedFields"></a> 선택한 필드 창  
+###  <a name="selected-fields-pane"></a><a name="SelectedFields"></a> 선택한 필드 창  
  선택한 필드 창에는 보고서 데이터 세트의 필드 및 쿼리에 포함할 그룹화와 집계가 표시됩니다.  
   
  다음 옵션이 표시됩니다.  
@@ -114,14 +114,14 @@ ms.locfileid: "73593385"
 |Var  Distinct|고유 통계 분산을 반환합니다. VAR  집계와 DISTINCT  키워드의 조합을 구현합니다.|  
 |VarP  Distinct|고유 통계 분산을 반환합니다. VARP  집계와 DISTINCT  키워드의 조합을 구현합니다.|  
   
-###  <a name="FunctionParameters"></a> 함수 매개 변수 창  
+###  <a name="function-parameters-pane"></a><a name="FunctionParameters"></a> 함수 매개 변수 창  
  함수 매개 변수 창에는 저장 프로시저 또는 테이블 반환 함수에 대한 매개 변수가 표시됩니다. 표시되는 열은 다음과 같습니다.  
   
 -   **매개 변수 이름** 저장 프로시저 또는 테이블 반환 함수로 정의된 매개 변수 이름이 표시됩니다.  
   
 -   **값** 디자인 타임에 쿼리 결과 창에 표시할 데이터를 검색하기 위해 쿼리를 실행할 때 매개 변수에 사용할 값입니다. 보고서가 런타임에 실행될 때는 이 값이 사용되지 않습니다.  
   
-###  <a name="Relationships"></a> 관계 창  
+###  <a name="relationships-pane"></a><a name="Relationships"></a> 관계 창  
  관계 창에는 조인 관계가 표시됩니다. 관계는 데이터베이스 메타데이터에서 검색된 외래 키 관계에서 자동으로 검색하거나 수동으로 만들 수 있습니다.  
   
  다음 옵션이 표시됩니다.  
@@ -159,7 +159,7 @@ ms.locfileid: "73593385"
   
 -   **조인 필드** 조인된 필드 쌍이 나열됩니다. 관계에 여러 개의 조인 조건이 있는 경우 조인된 필드 쌍은 쉼표(,)로 구분됩니다.  
   
-###  <a name="AppliedFilters"></a> 적용된 필터 창  
+###  <a name="applied-filters-pane"></a><a name="AppliedFilters"></a> 적용된 필터 창  
  적용된 필터 창에는 런타임에 검색되는 데이터 행 수를 제한하는 데 사용되는 조건이 표시됩니다. 이 창에 지정한 조건을 사용하여 SQL  WHERE  절이 생성됩니다. 매개 변수 옵션을 선택하면 보고서 매개 변수가 자동으로 생성됩니다. 쿼리 매개 변수에 기반을 둔 보고서 매개 변수를 사용하면 사용자가 쿼리 값을 지정하여 보고서의 데이터를 제어할 수 있습니다.  
   
  표시되는 열은 다음과 같습니다.  
@@ -172,7 +172,7 @@ ms.locfileid: "73593385"
   
 -   **매개 변수** 쿼리 매개 변수를 쿼리에 추가하기 위한 옵션이 표시됩니다. 쿼리 매개 변수와 보고서 매개 변수 간의 관계를 보려면 데이터 세트 속성을 사용합니다.  
   
-###  <a name="QueryResults"></a> 쿼리 결과 창  
+###  <a name="query-results-pane"></a><a name="QueryResults"></a> 쿼리 결과 창  
  쿼리 결과 창에는 다른 창의 선택 내용에 따라 지정되어 자동으로 생성된 쿼리에 대한 결과가 표시됩니다. 결과 집합의 열은 선택한 필드 창에서 지정한 필드이며 행 데이터는 적용된 필터 창에서 지정한 필터에 따라 제한됩니다. 쿼리에 집계가 포함되어 있으면 결과 집합에 새 집계 열이 포함됩니다. 예를 들어 **Color** 열이 Count  집계를 사용하여 집계되어 있으면 쿼리 결과에 새 열이 포함됩니다. 이 열의 기본 이름은 **Count_Color**입니다.  
   
  이 데이터는 쿼리를 실행할 때의 데이터 원본의 값을 나타냅니다. 이 데이터는 보고서 정의에 저장되지 않습니다.  보고서의 실제 데이터는 보고서를 처리할 때 검색됩니다.  

@@ -11,10 +11,10 @@ ms.assetid: 329d9b5e-1c5d-40b0-9127-1051d0646fc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e88504bd68c9f61d0178423b8e57ecf6679e4e8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76918387"
 ---
 # <a name="pdostatementsetattribute"></a>PDOStatement::setAttribute

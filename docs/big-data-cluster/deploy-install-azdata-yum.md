@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: cf6e061b0ca4fca7c843575a87038a801ab8f758
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75728554"
 ---
 # <a name="install-azdata-with-yum"></a>yum을 사용하여 `azdata` 설치
@@ -65,7 +65,7 @@ azdata --version
 
 ## <a name="update"></a>업데이트
 
-`yum update` 명령을 사용하여 `azdata-cli`를 업데이트합니다.
+`azdata-cli` 명령을 사용하여 `yum update`를 업데이트합니다.
 
 ```bash
 sudo yum update azdata-cli

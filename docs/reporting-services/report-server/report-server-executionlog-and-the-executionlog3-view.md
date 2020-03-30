@@ -12,10 +12,10 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65619695"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>보고서 서버 ExecutionLog 및 ExecutionLog3 뷰
@@ -23,7 +23,7 @@ ms.locfileid: "65619695"
   
  SharePoint 모드용으로 구성된 보고서 서버는 또한 SharePoint ULS 로그를 활용할 수 있습니다. 자세한 내용은 [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
-##  <a name="bkmk_top"></a> 로그 정보 보기  
+##  <a name="viewing-log-information"></a><a name="bkmk_top"></a> 로그 정보 보기  
  보고서 서버 실행은 내부 데이터베이스 테이블에 보고서 실행에 대한 데이터를 기록합니다. 테이블의 정보는 SQL Server 뷰에서 확인할 수 있습니다.  
   
  보고서 실행 로그는 기본적으로 이름이 **ReportServer**로 지정되는 보고서 서버 데이터베이스에 저장됩니다. SQL 뷰는 실행 로그 정보를 제공합니다. 최신 릴리스에는 "2"번과 "3"번 뷰가 추가되었으며, 이러한 뷰에는 새로운 필드 또는 이전 릴리스보다 친숙한 이름의 필드가 포함됩니다. 이전 뷰도 제품에 그대로 유지되므로 이러한 뷰를 사용하는 사용자 지정 애플리케이션에는 영향을 주지 않습니다. 이전 뷰에 대한 종속성이 없는 경우(예: ExecutionLog) 최신 뷰인 ExecutionLog**3**를 사용하는 것이 좋습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "65619695"
   
 -   [로그 필드(ExecutionLog)](#bkmk_executionlog)  
   
-##  <a name="bkmk_sharepoint"></a> SharePoint 모드 보고서 서버에 대한 구성 설정  
+##  <a name="configuration-settings-for-a-sharepoint-mode-report-server"></a><a name="bkmk_sharepoint"></a> SharePoint 모드 보고서 서버에 대한 구성 설정  
  보고서 실행 로깅은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션의 시스템 설정에서 설정 또는 해제할 수 있습니다.  
   
  기본적으로 로그 항목은 60일 동안 보관됩니다. 이 날짜를 초과한 항목은 매일 오전 2시에 제거됩니다. 제대로 된 설치에서는 항상 60일 동안의 정보만 사용할 수 있게 됩니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "65619695"
   
 2.  **ExecutionLogLevel** 을 **자세히**로 변경합니다. 이 필드는 텍스트 입력 필드이며 **자세히** 및 **보통**중에서 값을 선택할 수 있습니다.  
   
-##  <a name="bkmk_native"></a> 기본 모드 보고서 서버에 대한 구성 설정  
+##  <a name="configuration-settings-for-a-native-mode-report-server"></a><a name="bkmk_native"></a> 기본 모드 보고서 서버에 대한 구성 설정  
  SQL Server Management Studio의 서버 속성 페이지에서 보고서 실행 로깅을 설정하거나 해제할 수 있습니다. **EnableExecutionLogging** 은 고급 속성입니다.  
   
  기본적으로 로그 항목은 60일 동안 보관됩니다. 이 날짜를 초과한 항목은 매일 오전 2시에 제거됩니다. 제대로 된 설치에서는 항상 60일 동안의 정보만 사용할 수 있게 됩니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "65619695"
   
 2.  **사용자 정의** 섹션에서 **ExecutionLogLevel** 을 **자세히**로 변경합니다. 이 필드는 텍스트 입력 필드이며 **자세히** 및 **보통**중에서 값을 선택할 수 있습니다.  
   
-##  <a name="bkmk_executionlog3"></a> 로그 필드(ExecutionLog3)  
+##  <a name="log-fields-executionlog3"></a><a name="bkmk_executionlog3"></a> 로그 필드(ExecutionLog3)  
  이 뷰에는 XML 기반 **AdditionalInfo** 열 안에 추가 성능 진단 노드가 추가되었습니다. AdditionalInfo 열에는 여러 추가 정보 필드에 대한 1의 XML 구조가 포함되어 있습니다. 다음은 ExecutionLog3 뷰에서 행을 검색하는 샘플 Transact SQL 문입니다. 이 샘플에서는 보고서 서버 데이터베이스 이름이 **ReportServer**라고 가정합니다.  
   
 ```  
@@ -127,7 +127,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |RowCount|쿼리에서 반환된 행 수|  
 |AdditionalInfo|실행에 대한 추가 정보가 포함된 XML 속성 모음 콘텐츠는 각 행마다 서로 다를 수 있습니다.|  
   
-##  <a name="bkmk_additionalinfo"></a> AdditionalInfo 필드  
+##  <a name="the-additionalinfo-field"></a><a name="bkmk_additionalinfo"></a> AdditionalInfo 필드  
  AdditionalInfo 필드는 실행에 대한 추가 정보가 포함된 XML 속성 모음 또는 구조입니다. 콘텐츠는 로그에서 각 행마다 서로 다를 수 있습니다.  
   
  다음은 표준 및 자세한 로깅에 대한 AddtionalInfo 필드 내용의 예입니다.  
@@ -307,7 +307,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
     ```  
   
-##  <a name="bkmk_executionlog2"></a> 로그 필드(ExecutionLog2)  
+##  <a name="log-fields-executionlog2"></a><a name="bkmk_executionlog2"></a> 로그 필드(ExecutionLog2)  
  이 뷰에는 몇 가지 새로운 필드가 추가되었으며, 다른 일부 필드는 이름이 바뀌었습니다. 다음은 ExecutionLog2 뷰에서 행을 검색하는 샘플 Transact SQL 문입니다. 이 샘플에서는 보고서 서버 데이터베이스 이름이 **ReportServer**라고 가정합니다.  
   
 ```  
@@ -338,7 +338,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |RowCount|쿼리에서 반환된 행 수|  
 |AdditionalInfo|실행에 대한 추가 정보가 포함된 XML 속성 모음|  
   
-##  <a name="bkmk_executionlog"></a> 로그 필드(ExecutionLog)  
+##  <a name="log-fields-executionlog"></a><a name="bkmk_executionlog"></a> 로그 필드(ExecutionLog)  
  다음은 ExecutionLog 뷰에서 행을 검색하는 샘플 Transact SQL 문입니다. 이 샘플에서는 보고서 서버 데이터베이스 이름이 **ReportServer**라고 가정합니다.  
   
 ```  

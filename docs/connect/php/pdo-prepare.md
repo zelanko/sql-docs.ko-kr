@@ -11,10 +11,10 @@ ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 902a1e986f79205dfd676c635ac54814382c2ec3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76941203"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
@@ -29,9 +29,9 @@ PDOStatement PDO::prepare ( $statement [, array(key_pair)] )
 ```
 
 #### <a name="parameters"></a>매개 변수
-$*문*: SQL 문이 포함된 문자열입니다.
+$*statement*: SQL 문이 포함된 문자열입니다.
 
-*key_pair*: 특성 이름 및 값이 들어 있는 배열입니다. 자세한 내용은 주의 섹션을 참조하십시오.
+*key_pair*: 특성 이름 및 값이 포함된 배열입니다. 자세한 내용은 주의 섹션을 참조하십시오.
 
 ## <a name="return-value"></a>Return Value
 성공하면 PDOStatement 개체를 반환합니다. 실패하면 `PDO::ATTR_ERRMODE` 값에 따라 PDOException 개체 또는 false를 반환합니다.
@@ -49,7 +49,7 @@ $*문*: SQL 문이 포함된 문자열입니다.
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|가져온 money 값의 서식을 지정할 때 사용할 소수 자릿수를 지정합니다. 이 옵션은 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS`가 true인 경우에만 실행됩니다. 자세한 내용은 [10진수 문자열 및 Money 값 서식 지정(PDO_SQLSRV 드라이버)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)을 참조하세요.|
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|True이면 직접 쿼리 실행을 지정합니다. False는 준비된 문을 실행합니다. `PDO::SQLSRV_ATTR_DIRECT_QUERY`에 대한 자세한 내용은 [PDO_SQLSRV 드라이버의 직접 문 실행 및 준비된 문 실행](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)을 참조하세요.|
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8(기본값)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|
-|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|날짜 및 시간 형식을 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 개체로 검색할지를 지정합니다. 자세한 내용은 [방법: PDO_SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 PHP 날짜/시간 개체로 검색](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)을 참조하세요.|  
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|날짜 및 시간 형식을 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 개체로 검색할지를 지정합니다. 자세한 내용은 [방법: PDO_SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 PHP DateTime 개체로 검색](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)을 참조하세요.|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|숫자 SQL 형식의 열에서 숫자 가져오기를 처리합니다. 자세한 내용은 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)을 참조하세요.|
 |PDO::SQLSRV_ATTR_FORMAT_DECIMALS|해당하는 경우 10진수 문자열에 앞에 오는 0을 추가할지를 지정합니다. 이 옵션을 설정하면 money 형식의 서식 지정을 위한 `PDO::SQLSRV_ATTR_DECIMAL_PLACES` 옵션을 사용할 수 있습니다. 자세한 내용은 [10진수 문자열 및 Money 값 서식 지정(PDO_SQLSRV 드라이버)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)을 참조하세요.| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|자세한 내용은 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)을 참조하세요.|
@@ -295,7 +295,7 @@ $stmt->execute([':value' => $p]);
 바인딩은 드라이버에서 내부적으로 수행됩니다. 매개 변수 없이 유효한 쿼리가 서버로 전송되어 실행됩니다. 매개 변수가 있는 쿼리 기능을 사용하지 않으면, 일반적인 경우에 비해 몇 가지 제한 사항이 발생합니다.
 
 - `PDO::PARAM_INPUT_OUTPUT`으로 바인딩된 매개 변수에 관해서는 실행되지 않습니다.
-    - 사용자가 `PDO::bindParam()`에 `PDO::PARAM_INPUT_OUTPUT`을 지정하면 PDO 예외가 throw됩니다.
+    - 사용자가 `PDO::PARAM_INPUT_OUTPUT`에 `PDO::bindParam()`을 지정하면 PDO 예외가 throw됩니다.
 - 출력 매개 변수로 바인딩된 매개 변수에 관해서는 실행되지 않습니다.
     - 사용자가 출력 매개 변수용 자리 표시자(즉, `SELECT ? = COUNT(*) FROM Table1`과 같이 자리 표시자 바로 뒤에 등호가 있음)를 사용하여 준비된 문을 만들면 PDO 예외가 throw됩니다.
     - 준비된 문이 자리 표시자를 출력 매개 변수의 인수로 사용하여 저장 프로시저를 호출하는 경우에는 드라이버에서 출력 매개 변수를 감지할 수 없으므로 예외가 throw되지 않습니다. 그러나 사용자가 출력 매개 변수에 대해 제공한 변수가 변경되지 않고 그대로 유지됩니다.

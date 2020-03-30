@@ -8,10 +8,10 @@ ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 281eeffa237a24e6da8794e99ff6d4fd3a716181
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68889693"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Reporting Services 설치 문제 해결
@@ -22,7 +22,7 @@ ms.locfileid: "68889693"
   
  릴리스 정보에 설명되어 있는 문제가 발생하는 경우 [온라인 릴리스 정보](https://go.microsoft.com/fwlink/?linkid=236893)를 검토하세요.  
   
-##  <a name="bkmk_setuplogs"></a> 설치 로그 확인  
+##  <a name="check-setup-logs"></a><a name="bkmk_setuplogs"></a> 설치 로그 확인  
  설치 오류는 **[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Setup Bootstrap\Log** 폴더의 로그 파일에 기록됩니다. 설치 프로그램을 실행할 때마다 하위 폴더가 만들어지는데 하위 폴더의 이름은 설치 프로그램을 실행한 시간과 날짜입니다. 설치 로그 파일을 확인하는 방법에 대한 지침은 [SQL Server 설치 로그 파일 보기 및 읽기](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)를 참조하세요.  
   
 -   로그 파일에는 파일 모음이 포함되어 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "68889693"
   
 -   \_\*설치 정보를 보려면 *_RS [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] _ComponentUpdateSetup.log를 엽니다.  
   
-##  <a name="bkmk_prereq"></a> 필수 구성 요소 확인  
+##  <a name="check-prerequisites"></a><a name="bkmk_prereq"></a> 필수 구성 요소 확인  
  필수 구성 요소는 설치 프로그램에서 자동으로 확인합니다. 그러나 설치 문제를 해결하는 경우 설치 프로그램에서 확인하는 요구 사항을 알고 있으면 도움이 됩니다.  
   
 -   설치 프로그램을 실행하기 위해서는 계정이 로컬 Administrators 그룹의 멤버여야 합니다. 설치 프로그램은 파일 및 레지스트리 설정 추가, 로컬 보안 그룹 만들기 및 사용 권한 설정 등을 수행할 수 있는 권한을 갖고 있어야 합니다. 기본 구성을 설치하는 경우 설치 프로그램은 사용자가 설치 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 보고서 서버 데이터베이스를 만들 권한을 갖고 있어야 합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "68889693"
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
-##  <a name="bkmk_tshoot_sharepoint"></a> SharePoint 모드 설치 관련 문제 해결  
+##  <a name="troubleshoot-problems-with-sharepoint-mode-installations"></a><a name="bkmk_tshoot_sharepoint"></a> SharePoint 모드 설치 관련 문제 해결  
   
 -   [Reporting Services 구성 관리자 시작 안 함](#bkmk_configmanager_notstart)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68889693"
   
 -   [PREPAREIMAGE에는 RS_SHP가 지원되지 않는다는 오류 메시지가 표시됩니다.](#bkmk_RS_SHP_notsupported)  
 
-### <a name="bkmk_configmanager_notstart"></a> Reporting Services 구성 관리자 시작 안 함
+### <a name="reporting-services-configuration-manager-does-not-start"></a><a name="bkmk_configmanager_notstart"></a> Reporting Services 구성 관리자 시작 안 함
 
  **설명:** 이 문제는 SQL Server 2012 이상에서 의도된 것입니다. Reporting Services는 SharePoint 서비스 아키텍처에 맞게 구축됐습니다. 구성 관리자는 더 이상 SharePoint 모드에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 구성 및 관리하지 않아도 됩니다.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68889693"
   
  ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
   
-###  <a name="bkmk_no_ssrs_service"></a> SharePoint 모드에서 SQL Server 2016 SSRS를 설치하면 SharePoint 중앙 관리에 SQL Server Reporting Services 서비스가 나타나지 않습니다.  
+###  <a name="you-do-not-see-the-sql-server-reporting-services-service-in-sharepoint-central-administration-after-installing-sql-server-2016-ssrs-in-sharepoint-mode"></a><a name="bkmk_no_ssrs_service"></a> SharePoint 모드에서 SQL Server 2016 SSRS를 설치하면 SharePoint 중앙 관리에 SQL Server Reporting Services 서비스가 나타나지 않습니다.  
  **설명:** SharePoint 모드에서 SQL Server 2016 Reporting Services 및 SharePoint 2013/2016용 SQL Server 2016 Reporting Services 추가 기능을 성공적으로 설치한 후 다음 두 메뉴에 "SQL Server Reporting Services"가 나타나지 않는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스가 등록되지 않은 것입니다.  
   
 -   SharePoint 2013/2016 중앙 관리 -&gt; "애플리케이션 관리" -&gt; "서버의 서비스 관리" 페이지  
@@ -101,16 +101,16 @@ ms.locfileid: "68889693"
         Get-SPServiceInstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
         ```  
   
-2.  다음 페이지에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 상태가 "**시작됨**"으로 표시되는지 확인합니다. SharePoint 2013/2016 중앙 관리 -> "**애플리케이션 관리**" -> "**서버의 서비스 관리**"  
+2.  SharePoint 2013/2016 중앙 관리 -> "[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]애플리케이션 관리 **" -> "** 서버의 서비스 관리 **" 페이지에서**  서비스 상태가 "**시작됨**"으로 표시되는지 확인합니다.  
   
  ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
   
-###  <a name="bkmk_cmdlets_not_recognized"></a> Reporting Services PowerShell cmdlet을 사용할 수 없으며 명령이 인식되지 않습니다.  
+###  <a name="reporting-services-powershell-cmdlets-are-not-available-and-commands-are-not-recognized"></a><a name="bkmk_cmdlets_not_recognized"></a> Reporting Services PowerShell cmdlet을 사용할 수 없으며 명령이 인식되지 않습니다.  
  **설명:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell cmdlet을 실행하려고 하면 다음과 비슷한 오류 메시지가 표시됩니다.  
   
--   'Install-SPRSServiceInstall-SPRSService' 용어는 cmdlet, 함수, 스크립트 파일 또는 실행 프로그램의 이름으로 **인식되지 않습니다** . 이름의 철자를 확인하거나 경로가 포함되어 있으면 경로가 올바른지 확인하고 다시 시도합니다. At line:1 char:39+ Install-SPRSServiceInstall-SPRSService <<<<    + CategoryInfo          : ObjectNotFound: (Install-SPRSServiceInstall-SPRSService:String) [], CommandNotFoundExcep  
+-   'Install-SPRSServiceInstall-SPRSService' 용어는 cmdlet, 함수, 스크립트 파일 또는 실행 프로그램의 이름으로 **인식되지 않습니다** . 이름의 철자를 확인하거나 경로가 포함되어 있으면 경로가 올바른지 확인하고 다시 시도합니다. 줄:1 char:39+ Install-SPRSServiceInstall-SPRSService <<<<    + CategoryInfo          : ObjectNotFound: (Install-SPRSServiceInstall-SPRSService:String) [], CommandNotFoundExcep  
   
- **해결 방법:** 다음 작업 중 하나를 완료합니다.  
+ **해결 방법:** 다음 작업 중 하나를 수행합니다.  
   
 -   SharePoint 제품의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능인 **rssharepoint.msi**를 실행합니다.  
   
@@ -126,8 +126,8 @@ ms.locfileid: "68889693"
   
  ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
   
-###  <a name="bkmk_URL_not_configured"></a> URL이 구성되지 않았음을 나타내는 오류 메시지가 표시됩니다.  
- **설명:** 다음과 비슷한 오류 메시지가 표시됩니다.  
+###  <a name="you-see-an-error-message-indicating-the-url-is-not-configured"></a><a name="bkmk_URL_not_configured"></a> URL이 구성되지 않았음을 나타내는 오류 메시지가 표시됩니다.  
+ **설명:** 다음과 유사한 오류 메시지가 표시됩니다.  
   
  이 SQL Server Reporting Services(SSRS) 기능은 지원되지 않습니다. 중앙 관리를 사용하여 하나 이상의 다음 문제를 확인하고 해결합니다.
  
@@ -149,31 +149,31 @@ ms.locfileid: "68889693"
   
  ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
   
-###  <a name="bkmk_sharepoint_not_confiugred"></a> 컴퓨터에 SharePoint가 설치됐지만 구성되지 않은 경우 설치 프로그램이 실패합니다.  
- **설명:** SharePoint가 설치되었지만 구성되지는 않은 컴퓨터에 Reporting Services SharePoint 모드를 설치하려고 선택한 경우 다음과 비슷한 오류 메시지가 표시되고 설치가 중단됩니다.  
+###  <a name="setup-fails-on-a-computer-with-sharepoint-installed-but-it-is-not-configured"></a><a name="bkmk_sharepoint_not_confiugred"></a> 컴퓨터에 SharePoint가 설치됐지만 구성되지 않은 경우 설치 프로그램이 실패합니다.  
+ **설명:** SharePoint가 설치됐지만 구성되지 않은 컴퓨터에 Reporting Services SharePoint 모드를 설치하려고 선택한 경우 다음과 비슷한 오류 메시지가 표시되고 설치가 중지됩니다.  
   
  SQL Server 설치 작업이 중단됐습니다.  
   
  **해결 방법:** SharePoint를 구성한 다음 SQL Server 설치를 실행합니다.  
   
- **추가 정보:** 기존 SharePoint 설치로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]을 설치할 때 설치 프로그램에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 서비스를 설치하고 시작합니다. SharePoint가 구성되지 않은 경우 서비스 설치가 실패하므로 설치 프로그램이 실패합니다.  
+ **추가 정보:** 기존 SharePoint 설치로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 을 설치할 때 설치 프로그램에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 서비스를 설치하고 시작합니다. SharePoint가 구성되지 않은 경우 서비스 설치가 실패하므로 설치 프로그램이 실패합니다.  
   
  ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
   
-###  <a name="bkmk_central_admin_blank"></a> SharePoint 중앙 관리 페이지 비어 있음  
+###  <a name="sharepoint-central-administration-page-is-blank"></a><a name="bkmk_central_admin_blank"></a> SharePoint 중앙 관리 페이지 비어 있음  
  **설명:** 설치 오류 없이 SharePoint 2013/2016을 성공적으로 설치했습니다. 그러나 중앙 관리를 탐색할 때 빈 페이지만 표시됩니다.  
   
- **해결 방법:** 이 문제는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에만 한정된 것이 아니라 전체 SharePoint 설치에서 권한의 구성에 관련되어 있습니다. 다음은 몇 가지 제안 사항입니다.  
+ **해결 방법:** 이 문제는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에만 한정된 것이 아니라 전체 SharePoint 설치에서 권한의 구성에 관련되어 있습니다. 다음은 몇 가지 제안 사항입니다.  
   
 -   개발 환경에서 SharePoint 문서를 검토합니다. [SharePoint에 대한 일반 개발 환경 설정](https://msdn.microsoft.com/library/ee554869)  
   
--   다음 포럼 게시물을 검토합니다. [Windows 7에 설치한 이후에 중앙 관리에서 빈 페이지 반환](https://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
+-   포럼 포스트 검토: [Windows 7에 설치한 이후에 중앙 관리에서 빈 페이지 반환](https://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
   
 -   SharePoint 2013/2016 중앙 관리 서비스와 같은 SharePoint 서비스를 위해 사용 중인 서비스 계정은 로컬 운영 체제에 관리 권한이 있어야 합니다.  
   
  ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
   
-###  <a name="bkmk_reportbuilder_newreport_error"></a> 새 보고서 작성기 보고서를 만들려고 할 때 오류 메시지가 표시됩니다.  
+###  <a name="you-see-an-error-message-when-you-try-to-create-a-new-report-builder-report"></a><a name="bkmk_reportbuilder_newreport_error"></a> 새 보고서 작성기 보고서를 만들려고 할 때 오류 메시지가 표시됩니다.  
  **설명:** 문서 라이브러리 내부에 보고서 작성기 보고서를 만들려고 하면 다음과 비슷한 오류 메시지가 표시됩니다.  
   
  이 기능은 SQL Server Reporting Services 서비스 애플리케이션이 없거나 보고서 서버 URL이 중앙 관리에 구성되지 않았기 때문에 지원되지 않습니다.  
@@ -182,7 +182,7 @@ ms.locfileid: "68889693"
   
  ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
   
-###  <a name="bkmk_RS_SHP_notsupported"></a> PREPAREIMAGE에는 RS_SHP가 지원되지 않는다는 오류 메시지가 표시됩니다.  
+###  <a name="you-see-an-error-message-that-rs_shp-is-not-supported-with-prepareimage"></a><a name="bkmk_RS_SHP_notsupported"></a> PREPAREIMAGE에는 RS_SHP가 지원되지 않는다는 오류 메시지가 표시됩니다.  
  **설명:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대한 PREPAREIMAGE를 실행하려고 하면 다음과 비슷한 오류 메시지가 표시됩니다.  
   
  "SysPrep이 지원되지 않으므로 PREPAREIMAGE 동작을 실행할 때 지정된 'RS_SHP' 기능이 지원되지 않습니다. SysPrep과 호환되지 않는 기능을 제거하고 설치 프로그램을 다시 실행합니다."  
@@ -193,9 +193,9 @@ ms.locfileid: "68889693"
 
 ::: moniker-end
   
-##  <a name="bkmk_tshoot_native"></a> 기본 모드 설치 관련 문제 해결  
+##  <a name="troubleshoot-problems-with-the-native-mode-installations"></a><a name="bkmk_tshoot_native"></a> 기본 모드 설치 관련 문제 해결  
   
-###  <a name="PerfCounters"></a> Windows Vista 또는 Windows Server 2008로 업그레이드한 후 성능 카운터가 표시되지 않는 경우  
+###  <a name="performance-counters-are-not-visible-after-upgrading-to-windows-vista-or-windows-server-2008"></a><a name="PerfCounters"></a> Windows Vista 또는 Windows Server 2008로 업그레이드한 후 성능 카운터가 표시되지 않는 경우  
  [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] 를 실행하는 컴퓨터에서 운영 체제를 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]로 업그레이드하면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 성능 카운터가 설정되지 않습니다.  
   
 #### <a name="to-reinstate-reporting-services-performance-counters"></a>Reporting Services 성능 카운터를 다시 시작하려면  
@@ -243,7 +243,7 @@ ms.locfileid: "68889693"
   
  64비트 인스턴스를 복구하거나 레지스트리 키를 수동으로 추가하면 성능 모니터를 사용하여 모니터링하려는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 성능 개체를 구성할 수 있습니다.  
   
-###  <a name="ConfigPropsMissing"></a> SQL Server 2005에서 업그레이드한 후 ReportServerExternalURL 및 PassThroughCookies 구성 속성이 구성되지 않는 경우  
+###  <a name="reportserverexternalurl-and-passthroughcookies-configuration-properties-are-not-configured-after-an-upgrade-from-sql-server-2005"></a><a name="ConfigPropsMissing"></a> SQL Server 2005에서 업그레이드한 후 ReportServerExternalURL 및 PassThroughCookies 구성 속성이 구성되지 않는 경우  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]로 업그레이드할 경우 **ReportServerExternalURL** 및 **PassThroughCookies** 구성 속성은 업그레이드 프로세스에 의해 구성되지 않습니다. **ReportServerExternalURL** 은 선택적 속성이며, SharePoint 2.0 웹 파트를 사용 중이고 사용자가 보고서를 검색하여 새 브라우저 창에서 열 수 있도록 하려는 경우에만 설정해야 합니다. **ReportServerExternalURL**에 대한 자세한 내용은 [구성 파일의 URL&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)을 참조하세요. **PassThroughCookies** 는 사용자 지정 인증 방법을 사용할 때만 필요합니다. **PassThroughCookies**에 대한 자세한 내용은 [웹 포털에서 사용자 지정 인증 쿠키를 전달하도록 구성](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)을 참조하세요.  
   
 > [!NOTE]  
@@ -251,13 +251,13 @@ ms.locfileid: "68889693"
   
  기본적으로 이러한 속성은 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 구성에 존재하지 않습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서 이러한 속성을 구성했고 해당 기능을 계속 사용해야 하는 경우 업그레이드 프로세스 후에 **RSReportServer.config** 파일에 이러한 속성을 수동으로 추가해야 합니다. 자세한 내용은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요.  
 
-### <a name="WindowsAuthBreaksAfterUpgrade"></a> SQL Server 2005에서 SQL Server 2016으로 업그레이드한 후 Windows 인증을 사용할 때 401-권한이 없음 오류가 발생하는 경우
+### <a name="401-unauthorized-error-when-using-windows-authentication-after-an-upgrade-from-sql-server-2005-to-sql-server-2016"></a><a name="WindowsAuthBreaksAfterUpgrade"></a> SQL Server 2005에서 SQL Server 2016으로 업그레이드한 후 Windows 인증을 사용할 때 401-권한이 없음 오류가 발생하는 경우
 
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]로 업그레이드할 때 NTLM 인증에 보고서 서버 서비스 계정에 대한 기본 제공 계정을 사용하는 경우 업그레이드 후에 보고서 서버 또는 웹 포털에 액세스할 때 401-권한이 없음 오류가 발생할 수 있습니다.  
   
  Windows 인증에 대한 기본 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 구성이 변경되었기 때문에 이 메시지가 표시됩니다. 보고서 서버 서비스 계정이 네트워크 서비스 또는 로컬 시스템인 경우 협상 인증이 구성됩니다. NTLM은 보고서 서버 서비스 계정이 이러한 기본 제공 계정 중 하나가 아닌 경우에 구성됩니다. 업그레이드 후에 이 문제를 해결하려면 RSReportServer.config 파일을 편집하여 **AuthenticationType** 을 **RSWindowsNTLM**으로 구성하면 됩니다. 자세한 내용은 [Configure Windows Authentication on the Report Server](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)을 참조하세요.  
 
-### <a name="Uninstall32BitBreaks64Bit"></a> 64비트 인스턴스와 함께 배포된 환경에서 SQL Server 2016 Reporting Services의 32비트 인스턴스를 제거하면 64비트 인스턴스가 중단되는 경우
+### <a name="uninstalling-32-bit-instance-of-sql-server-2016-reporting-services-in-side-by-side-deployment-with-a-64-bit-instance-breaks-the-64-bit-instance"></a><a name="Uninstall32BitBreaks64Bit"></a> 64비트 인스턴스와 함께 배포된 환경에서 SQL Server 2016 Reporting Services의 32비트 인스턴스를 제거하면 64비트 인스턴스가 중단되는 경우
 
  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]의 32비트 인스턴스 및 64비트 인스턴스를 컴퓨터에 함께 설치하는 경우 32비트 인스턴스를 제거하면 4개의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 레지스트리 키가 제거됩니다. 키를 제거하면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 64비트 인스턴스가 중단됩니다. 32비트 인스턴스를 제거할 때 제거되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 레지스트리 키는 다음과 같습니다.  
   
@@ -268,7 +268,7 @@ ms.locfileid: "68889693"
 > [!CAUTION]  
 >  레지스트리를 올바르게 편집하지 않으면 시스템을 심각하게 손상시킬 수 있습니다. 따라서 레지스트리를 변경하기 전에 컴퓨터의 중요한 데이터를 백업해 두어야 합니다.  
   
-##  <a name="bkmk_additional"></a> 추가 리소스  
+##  <a name="additional-resources"></a><a name="bkmk_additional"></a> 추가 리소스  
  다음은 문제 해결 지원을 검토할 수 있는 추가 리소스입니다.  
   
 -   TechNet Wiki: [SharePoint 2010 통합 모드에서 SSRS(SQL Server Reporting Services) 문제 해결](https://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  

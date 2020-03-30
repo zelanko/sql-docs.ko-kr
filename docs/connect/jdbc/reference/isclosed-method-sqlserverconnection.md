@@ -16,10 +16,10 @@ ms.assetid: 3560ab18-4350-4d02-9716-439f0c2f7142
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 45e56a0a5ddb7cf8aece6813d421b7ebb1685408
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977709"
 ---
 # <a name="isclosed-method-sqlserverconnection"></a>isClosed 메서드(SQLServerConnection)

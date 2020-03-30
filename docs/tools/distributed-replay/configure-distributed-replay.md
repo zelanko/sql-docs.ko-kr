@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: cbc59ea90a962b105d4ac4fd4aa0e6d10f3ba7d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307040"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
@@ -30,7 +30,7 @@ ms.locfileid: "75307040"
   
 -   [재생 구성 파일](#ReplayConfig)  
   
-##  <a name="DReplayController"></a> 컨트롤러 구성 파일: DReplayController.config  
+##  <a name="controller-configuration-file-dreplaycontrollerconfig"></a><a name="DReplayController"></a> 컨트롤러 구성 파일: DReplayController.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 컨트롤러 서비스가 시작되면 컨트롤러 구성 파일 `DReplayController.config`에서 로깅 수준을 로드합니다. 이 파일은 Distributed Replay 컨트롤러 서비스를 설치한 폴더에 있습니다.  
   
  **\<컨트롤러 설치 경로>\DReplayController.config**  
@@ -51,7 +51,7 @@ ms.locfileid: "75307040"
 </Options>  
 ```  
   
-##  <a name="DReplayClient"></a> 클라이언트 구성 파일: DReplayClient.config  
+##  <a name="client-configuration-file-dreplayclientconfig"></a><a name="DReplayClient"></a> 클라이언트 구성 파일: DReplayClient.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 클라이언트 서비스가 시작되면 클라이언트 구성 파일 `DReplayClient.config`에서 구성 설정을 로드합니다. 이 파일은 Distributed Replay 컨트롤러 서비스를 설치한 폴더에 있습니다.  
   
  **\<클라이언트 설치 경로>\DReplayClient.config**  
@@ -78,7 +78,7 @@ ms.locfileid: "75307040"
 </Options>  
 ```  
   
-##  <a name="PreprocessConfig"></a> 전처리 구성 파일: DReplay.exe.preprocess.config  
+##  <a name="preprocess-configuration-file-dreplayexepreprocessconfig"></a><a name="PreprocessConfig"></a> 전처리 구성 파일: DReplay.exe.preprocess.config  
  관리 도구를 사용하여 전처리 단계를 시작하면 관리 도구가 전처리 구성 파일 `DReplay.exe.preprocess.config`에서 전처리 설정을 로드합니다.  
   
  기본 구성 파일을 사용하거나 관리 도구 **-c** 매개 변수를 사용하여 수정한 전처리 구성 파일의 위치를 지정할 수 있습니다. 관리 도구의 전처리 옵션 사용에 대한 자세한 내용은 [전처리 옵션&#40;Distributed Replay Utility Administration Tool&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)을 참조하세요.  
@@ -107,7 +107,7 @@ ms.locfileid: "75307040"
 </Options>  
 ```  
   
-##  <a name="ReplayConfig"></a> 재생 구성 파일: DReplay.exe.replay.config  
+##  <a name="replay-configuration-file-dreplayexereplayconfig"></a><a name="ReplayConfig"></a> 재생 구성 파일: DReplay.exe.replay.config  
  관리 도구를 사용하여 이벤트 재생 단계를 시작하면 관리 도구가 재생 구성 파일 `DReplay.exe.replay.config`에서 재생 설정을 로드합니다.  
   
  기본 구성 파일을 사용하거나 관리 도구 **-c** 매개 변수를 사용하여 수정한 재생 구성 파일의 위치를 지정할 수 있습니다. 관리 도구의 재생 옵션 사용에 대한 자세한 내용은 [재생 옵션&#40;Distributed Replay Administration Tool&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)을 참조하세요.  

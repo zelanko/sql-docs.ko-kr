@@ -18,10 +18,10 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b0b4a72519a0fa20d0c4a7472760a8f06a9ced32
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79190619"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016의 새로운 기능
@@ -49,9 +49,9 @@ ms.locfileid: "79190619"
     - 최대 2TB 테이블을 지원합니다(256GB부터). 
     - 정렬 및 Always On 가용성 그룹 지원을 위한 향상된 열 저장 인덱스가 있습니다.
 - 새 보안 기능:
-    - **Always Encrypted:** 이 기능을 사용하면 암호화 키가 있는 애플리케이션에서만 SQL Server 2016 데이터베이스의 암호화된 중요 데이터에 액세스할 수 있습니다. 이 키는 SQL Server에 전달되지 않습니다.
+    - **Always Encrypted:** 이 기능을 사용하면 암호화 키가 있는 애플리케이션에서만 SQL Server 2016 데이터베이스의 암호화된 중요 데이터를 액세스할 수 있습니다. 이 키는 SQL Server에 전달되지 않습니다.
     - **동적 데이터 마스킹:** 테이블 정의에 지정된 경우, 마스킹된 데이터가 대부분의 사용자로부터 숨겨지고 UNMASK 권한이 있는 사용자만 완전한 데이터를 볼 수 있습니다.
-    - **행 수준 보안:** 데이터 액세스를 데이터베이스 엔진 수준에서 제한할 수 있으므로 사용자는 자신과 관련된 항목만 볼 수 있습니다. 
+    - **행 수준 보안:** 데이터 액세스를 데이터베이스 엔진 수준에서 제한할 수 있으므로 사용자가 관련된 항목만 것만 볼 수 있습니다. 
 
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SSAS(SQL Server 2016 Analysis Services)
 SQL Server 2016 Analysis Services는 **1200 호환성 수준**을 기준으로 테이블 형식 모델 데이터베이스에 대한 향상된 성능, 제작, 데이터베이스 관리, 필터링, 프로세싱 및 그 외 많은 기능을 제공합니다.

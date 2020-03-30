@@ -12,10 +12,10 @@ author: david-puglielli
 ms.author: v-dapugl
 manager: v-mabarw
 ms.openlocfilehash: 8712681a244e969d230b0b7099acd4aa56334f11
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68265185"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Azure Active Directory 인증을 사용하여 연결
@@ -31,7 +31,7 @@ Azure AD를 사용하려면 다음 표에 나와 있는 것처럼 **인증** 또
 ||바이트 문자열|OAuth JSON 응답에서 추출된 Azure AD 액세스 토큰입니다. 연결 문자열에는 사용자 ID, 암호 또는 인증 키워드가 포함되지 않아야 합니다(Linux 또는 macOS에서 ODBC 드라이버 버전 17 이상 필요). |
 |**인증**|미설정(기본값)|다른 키워드에 의해 결정되는 인증 모드입니다. 자세한 내용은 [Connection Options](../../connect/php/connection-options.md)을 참조하세요. |
 ||`SqlPassword`|사용자 이름과 암호로 SQL Server 인스턴스(Azure 인스턴스일 수 있음)에 직접 인증합니다. **UID** 및 **PWD** 키워드로 사용자 이름과 암호를 연결 문자열에 전달해야 합니다. |
-||`ActiveDirectoryPassword`|사용자 이름과 암호를 사용하는 Azure Active Directory ID로 인증합니다. **UID** 및 **PWD** 키워드로 사용자 이름과 암호를 연결 문자열에 전달해야 합니다. |
+||`ActiveDirectoryPassword`|Azure Active Directory ID로 사용자 이름 및 암호를 사용하여 인증합니다. **UID** 및 **PWD** 키워드로 사용자 이름과 암호를 연결 문자열에 전달해야 합니다. |
 ||`ActiveDirectoryMsi`|시스템 할당 관리 ID 또는 사용자 할당 관리 ID 중 하나로 인증합니다(ODBC 드라이버 버전 17.3.1.1 이상 필요). 개요와 자습서는 [Azure 리소스에 대한 관리 ID란?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)을 참조하세요.|
 
 **인증** 키워드는 연결 보안 설정에 영향을 줍니다. 연결 문자열에 설정된 경우 **암호화** 키워드는 기본적으로 true로 설정되며, 따라서 클라이언트가 암호화를 요청합니다. 또한 **TrustServerCertificate**의 설정이 true가 아니면(**false**로 기본 설정 시) 암호화 설정과 관계없이 서버 인증서의 유효성이 검사됩니다. 이 기능은 연결 문자열에서 암호화가 구체적으로 요청된 경우에만 서버 인증서의 유효성을 검사하는 방식 때문에 보안성이 비교적 떨어지던 이전의 로그인 방법과 구별됩니다.

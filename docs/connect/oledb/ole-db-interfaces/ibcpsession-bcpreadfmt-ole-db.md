@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 97274315275f11e77c458827740f44906a524ed9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015503"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt(OLE DB)
@@ -44,7 +44,7 @@ HRESULT BCPReadFmt(
   
  서식 파일을 저장하려면 [IBCPSession::BCPWriteFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) 메서드를 호출합니다. **BCPReadFmt** 메서드를 호출할 때 저장된 형식을 참조할 수 있습니다. 또한 대량 복사 유틸리티(**bcp**)로 사용자 정의 데이터 형식을 **BCPReadFmt** 메서드가 참조할 수 있는 파일에 저장할 수 있습니다.  
   
- [IBCPSession::BCPControl](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md)의 *eOption* 매개 변수에 대한 **BCP_OPTION_DELAYREADFMT** 값은 IBCPSession::BCPReadFmt 동작을 수정합니다.  
+ **IBCPSession::BCPControl**의 *eOption* 매개 변수에 대한 [BCP_OPTION_DELAYREADFMT](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) 값은 IBCPSession::BCPReadFmt 동작을 수정합니다.  
   
 ## <a name="arguments"></a>인수  
  *pwszFormatFile*[in]  

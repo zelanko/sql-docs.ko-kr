@@ -14,10 +14,10 @@ ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72517935"
 ---
 # <a name="before-installing-failover-clustering"></a>장애 조치(Failover) 클러스터링을 설치하기 전에
@@ -37,7 +37,7 @@ ms.locfileid: "72517935"
   
  
   
-##  <a name="BestPractices"></a> 최선의 구현 방법  
+##  <a name="best-practices"></a><a name="BestPractices"></a> 최선의 구현 방법  
   
 -   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [릴리스 정보](https://go.microsoft.com/fwlink/?LinkId=296445) 검토  
   
@@ -47,7 +47,7 @@ ms.locfileid: "72517935"
   
     -   .NET Framework 3.5 SP1은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램으로 더 이상 설치되지 않지만 이전 버전의 Windows 운영 체제에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치할 경우 필요할 수 있습니다. 자세한 내용은 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][릴리스 정보](https://go.microsoft.com/fwlink/?LinkId=296445)를 참조하십시오.  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 업데이트 패키지:** 설치 중 .NET Framework 4 설치로 인한 컴퓨터 다시 시작을 방지하려면 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 설치 전 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 업데이트가 컴퓨터에 설치되어 있어야 합니다.  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 를 Windows 7 SP1 또는 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2에 설치하는 경우 이 업데이트가 포함됩니다. 이전 버전의 Windows 운영 체제에 설치하는 경우 [Windows Vista 및 Windows Server 2008의 .NET Framework 4.0용 Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=198093)에서 다운로드하십시오.  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 업데이트 패키지:** 설치 중 .NET Framework 4 설치로 인한 컴퓨터 다시 시작이 발생하지 않도록 하려면 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 설치에 대한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update 항목이 컴퓨터에 설치되어 있어야 합니다.  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 를 Windows 7 SP1 또는 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2에 설치하는 경우 이 업데이트가 포함됩니다. 이전 버전의 Windows 운영 체제에 설치하는 경우 [Windows Vista 및 Windows Server 2008의 .NET Framework 4.0용 Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=198093)에서 다운로드하십시오.  
   
     -   .NET Framework 4: 설치 프로그램에서는 클러스터링된 운영 체제에 .NET Framework 4를 설치합니다. 설치 시간을 단축하려면 설치 프로그램을 실행하기 전에 .NET Framework 4를 설치하는 것이 좋습니다.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "72517935"
   
     -   스토리지 옵션으로 SMB 파일 공유를 사용 중인 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 계정에는 파일 서버에 대한 SeSecurityPrivilege가 있어야 합니다. 이렇게 하려면 파일 서버의 로컬 보안 정책 콘솔을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 계정을 **감사 및 보안 로그 관리** 권한에 추가합니다.  
   
-##  <a name="Hardware"></a> 하드웨어 솔루션 확인  
+##  <a name="verify-your-hardware-solution"></a><a name="Hardware"></a> 하드웨어 솔루션 확인  
   
 -   클러스터 솔루션에 지리적으로 분산된 클러스터 노드가 포함된 경우 네트워크 대기 시간 및 공유 디스크 지원과 같은 추가 항목을 확인해야 합니다.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "72517935"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 원본 설치 파일과 클러스터가 서로 다른 도메인에 있을 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 사용할 수 있는 현재 도메인으로 설치 파일을 복사합니다.  
   
-##  <a name="Security"></a> 보안 고려 사항 검토  
+##  <a name="review-security-considerations"></a><a name="Security"></a> 보안 고려 사항 검토  
   
 -   암호화를 사용하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터의 모든 노드에 WSFC 클러스터의 정규화된 DNS 이름을 가진 서버 인증서를 설치합니다. 예를 들어 "Test1.DomainName.com" 및 "Test2.DomainName.com"이라는 2개의 노드로 구성된 노드 클러스터와 "Virtsql"이라는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스가 있는 경우 "Virtsql.DomainName.com"에 대한 인증서를 구하여 test1 및 test2 노드에 인증서를 설치해야 합니다. 그런 다음 **구성 관리자의** 프로토콜 암호화 강제 사용 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 확인란을 선택하여 장애 조치(Failover) 클러스터에서 암호화를 사용하도록 구성할 수 있습니다.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "72517935"
     *   도메인 + 작업 그룹 클러스터에 대한 SQL FCI 
 
   
-##  <a name="Network"></a> 네트워크, 포트 및 방화벽 고려 사항 검토  
+##  <a name="review-network-port-and-firewall-considerations"></a><a name="Network"></a> 네트워크, 포트 및 방화벽 고려 사항 검토  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 시작하기 전에 모든 프라이빗 네트워크 카드에서 NetBIOS를 해제했는지 확인합니다.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "72517935"
   
     5.  설치가 완료되면 제어판의 네트워크 연결로 돌아가서 현재 사용하고 있지 않은 모든 네트워크 어댑터를 비활성화합니다.  
   
-##  <a name="OS_Support"></a> 운영 체제 확인  
+##  <a name="verify-your-operating-system"></a><a name="OS_Support"></a> 운영 체제 확인  
  운영 체제가 올바르게 설치되었으며 장애 조치(Failover) 클러스터링을 지원하도록 디자인되었는지 확인합니다. 다음 표에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전과 각 버전을 지원하는 운영 체제의 목록이 나와 있습니다.  
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
@@ -199,7 +199,7 @@ ms.locfileid: "72517935"
   
  ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다중 서브넷 장애 조치(failover) 클러스터링에 지원됩니다.  
   
-##  <a name="MultiSubnet"></a> 다중 서브넷 구성을 위한 추가 고려 사항  
+##  <a name="additional-considerations-for-multi-subnet-configurations"></a><a name="MultiSubnet"></a> 다중 서브넷 구성을 위한 추가 고려 사항  
  아래 섹션에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다중 서브넷 장애 조치(Failover) 클러스터를 설치할 때 고려해야 하는 요구 사항에 대해 설명합니다. 다중 서브넷 구성에는 여러 서브넷 간의 클러스터링이 포함됩니다. 따라서 IP 주소가 여러 개 사용되고 IP 주소 리소스 종속성이 변경될 수 있습니다.  
   
 ### <a name="ssnoversion-edition-and-operating-system-considerations"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전 및 운영 체제 고려 사항  
@@ -225,7 +225,7 @@ ms.locfileid: "72517935"
 #### <a name="related-content"></a>관련 내용  
  [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 다중 사이트 장애 조치(failover)에 대한 자세한 내용은 [Windows Server 2008 R2 장애 조치(failover) 클러스터링 사이트](https://technet.microsoft.com/library/ff182338\(v=WS.10\).aspx) 및 [다중 사이트 장애 조치(failover) 클러스터에서 클러스터형 서비스 또는 애플리케이션 디자인](https://go.microsoft.com/fwlink/?LinkId=177873)을 참조하세요.  
   
-##  <a name="WSFC"></a> Windows Server 장애 조치(Failover) 클러스터 구성  
+##  <a name="configure-windows-server-failover-cluster"></a><a name="WSFC"></a> Windows Server 장애 조치(Failover) 클러스터 구성  
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Cluster Service(WSFC)는 하나 이상의 서버 클러스터 노드에 구성되어야 합니다. 또한 WSFC와 함께 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard를 실행해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise는 최대 16개의 노드로 구성된 장애 조치(Failover) 클러스터를 지원합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard는 2 노드 장애 조치(failover) 클러스터를 지원합니다.  
   
@@ -235,7 +235,7 @@ ms.locfileid: "72517935"
   
 -   DNS(도메인 이름 서비스) 또는 WINS(Windows 인터넷 이름 서비스)를 구성합니다. DNS 서버 또는 WINS 서버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터가 설치될 환경에서 실행되어야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] IP 인터페이스 가상 참조의 동적 도메인 이름 서비스 등록이 필요합니다. DNS 서버 구성에서는 클러스터 노드가 네트워크 이름에 매핑된 온라인 IP 주소를 동적으로 등록할 수 있어야 합니다. 동적 등록을 완료할 수 없는 경우 설치 프로그램이 실패하고 설치가 롤백됩니다. 자세한 내용은 [기술 자료 문서](https://support.microsoft.com/kb/947048)를 참조하십시오.  
   
-##  <a name="MSDTC"></a>[!INCLUDE[msCoName](../../../includes/msconame-md.md)] DTC(Distributed Transaction Coordinator) 설치  
+##  <a name="install-msconame-distributed-transaction-coordinator"></a><a name="MSDTC"></a>[!INCLUDE[msCoName](../../../includes/msconame-md.md)] DTC(Distributed Transaction Coordinator) 설치  
  장애 조치(Failover) 클러스터에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치하기 전에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] MSDTC(Distributed Transaction Coordinator) 클러스터 리소스를 만들어야 하는지 여부를 결정해야 합니다. [!INCLUDE[ssDE](../../../includes/ssde-md.md)]만 설치하는 경우 MSDTC 클러스터 리소스는 필요하지 않습니다. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 과 SSIS 또는 워크스테이션 구성 요소를 설치하는 경우 또는 분산 트랜잭션을 사용하려는 경우에는 MSDTC를 설치해야 합니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]전용 인스턴스에는 MSDTC가 필요하지 않습니다.  
   
  [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 및 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]에서는 하나의 장애 조치(Failover) 클러스터에 여러 MSDTC 인스턴스를 설치할 수 있습니다. 설치된 MSDTC의 첫 번째 인스턴스는 MSDTC의 클러스터 기본 인스턴스가 됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 MSDTC 인스턴스를 자동으로 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로컬 클러스터 리소스 그룹에 설치된 MSDTC 인스턴스를 활용합니다. 그러나 개별 애플리케이션이 클러스터에 있는 임의의 MSDTC 인스턴스에 매핑될 수 있습니다.  

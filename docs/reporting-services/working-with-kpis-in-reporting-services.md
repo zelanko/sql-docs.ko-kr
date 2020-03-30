@@ -8,10 +8,10 @@ ms.technology: reporting-services
 ms.topic: conceptual
 ms.date: 07/02/2017
 ms.openlocfilehash: dd8dc50b9885bb33df66d152b432092b6ac9868d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68329366"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Reporting Services에서 KPI 사용
@@ -35,7 +35,7 @@ SQL Server Reporting Services에서 KPI를 사용하여 다음 질문에 대한 
 
 KPI는 공유된 데이터 세트에서 데이터의 첫 행만 사용합니다. 사용하려는 데이터가 첫 행에 있는지 확인합니다. 공유 데이터 세트를 만들기 위해 보고서 작성기 또는 SQL Server Data Tools를 사용할 수 있습니다.  
   
-> **참고**: 데이터 세트는 KPI와 같은 폴더에 있을 필요가 없습니다.  
+> **참고**: 데이터 세트는 KPI와 같은 폴더에 있이 필요가 없습니다.  
   
 ## <a name="placement-of-kpis"></a>KPI의 배치  
   
@@ -61,7 +61,7 @@ KPI의 위치를 확인한 후 해당 폴더로 이동하고 상단 메뉴에서
 | 추세 집합 | 차트 시각화에 사용되는 쉼표로 구분되는 숫자 값입니다. 또한, 추세를 나타내는 값으로 데이터 세트의 열에 설정할 수도 있습니다. |
 | 관련 콘텐츠 | 드릴스루 링크를 설정하는 기능입니다. 이 링크는 포털에 게시된 모바일 보고서 또는 사용자 지정 URL일 수 있습니다. |
   
-> **경고**: 디자인 타임에 **상태** 필드에 대한 단어 값을 사용할 수 있지만, 데이터 세트를 새로 고침하는 경우 숫자 값을 사용해야 합니다. 숫자 대신 단어 값으로 데이터 세트를 새로 고침할 경우 서버에서 KPI가 손상될 수 있습니다.  
+> **경고**: 설계 시간에 **상태** 필드에 대한 단어 값을 사용할 수 있지만, 데이터 세트를 새로 고침하는 경우 숫자 값을 사용해야 합니다. 숫자 대신 단어 값으로 데이터 세트를 새로 고침할 경우 서버에서 KPI가 손상될 수 있습니다.  
 >
 > **참고**: **값**, **목표** 및 **상태** 필드는 데이터 세트 결과의 첫 행에서만 값을 선택할 수 있습니다. 하지만, **집합 추세** 필드는 추세를 반영하는 열을 선택할 수 있습니다.  
   

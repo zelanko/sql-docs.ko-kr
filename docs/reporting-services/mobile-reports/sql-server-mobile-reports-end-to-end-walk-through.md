@@ -11,10 +11,10 @@ ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028890"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 모바일 보고서: 엔드투엔드 연습
@@ -63,7 +63,7 @@ Reporting Services에서 지원하는 모든 데이터 원본에서 모바일 �
   
 [Reporting Services의 공유 데이터 원본](../report-data/create-modify-and-delete-shared-data-sources-ssrs.md)에 대해 자세히 알아보세요.  
    
-## <a name="shared-dataset">공유 데이터 세트 만들기</a>  
+## <a name=""></a><a name="shared-dataset">공유 데이터 세트 만들기</a>  
   
 기존 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 클라이언트 도구(예: [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너)를 사용하여 공유 데이터 세트를 만듭니다.  이 연습에서는 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]를 사용합니다. [보고서 작성기를 설치](../install-windows/install-report-builder.md)하거나 웹 포털에서 시작합니다. 세 개의 데이터 세트, 즉 KPI 값에 대한 데이터 세트, KPI 추세에 데이터 세트 및 Reporting Services 모바일 보고서의 추가 필드가 포함된 데이터 세트를 만듭니다.     
   
@@ -93,7 +93,7 @@ Reporting Services에서 지원하는 모든 데이터 원본에서 모바일 �
    
 이제 이 데이터 세트를 KPI 및 모바일 보고서의 기초로 사용할 수 있습니다.  동일한 데이터 원본에 대해 여러 데이터 세트를 만들 수 있습니다. 또한 이러한 공유 데이터 세트에 대해 여러 KPI 및 모바일 보고서를 만들 수 있습니다.   
   
-## <a name="create-KPI">KPI 만들기</a>  
+## <a name=""></a><a name="create-KPI">KPI 만들기</a>  
 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에서 바로 KPI를 만듭니다.    
   
 1. 웹 포털 오른쪽 위에서 **새로 만들기** > **새 KPI**를 클릭합니다.   
@@ -133,7 +133,7 @@ Reporting Services에서 지원하는 모든 데이터 원본에서 모바일 �
    
     ![PBI_SSMRP_NewKPI](../../reporting-services/mobile-reports/media/pbi-ssmrp-newkpi.png)  
     
-## <a name="create-mobile-report">Reporting Services 모바일 보고서 만들기</a>  
+## <a name=""></a><a name="create-mobile-report">Reporting Services 모바일 보고서 만들기</a>  
    
 Reporting Services 모바일 보고서를 만들려면 [SQL Server Mobile 보고서 게시자를 설치](https://go.microsoft.com/fwlink/?LinkId=717766)하거나 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 웹 포털에서 시작합니다. 
 

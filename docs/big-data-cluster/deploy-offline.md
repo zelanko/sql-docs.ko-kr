@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 15af041e94ac0abfdae13635345de62262a4b086
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73531979"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터의 오프라인 배포 수행
@@ -55,7 +55,7 @@ ms.locfileid: "73531979"
    docker push <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
    ```
 
-### <a id="images"></a> 빅 데이터 클러스터 컨테이너 이미지
+### <a name="big-data-cluster-container-images"></a><a id="images"></a> 빅 데이터 클러스터 컨테이너 이미지
 
 오프라인 설치에는 다음과 같은 빅 데이터 클러스터 컨테이너 이미지가 필요합니다.
 - **mssql-app-service-proxy**
@@ -85,7 +85,7 @@ ms.locfileid: "73531979"
 - **mssql-ssis-app-runtime**
 
 
-## <a id="automated"></a> 자동화된 스크립트
+## <a name="automated-script"></a><a id="automated"></a> 자동화된 스크립트
 
 필요한 컨테이너 이미지를 자동으로 모두 끌어오고 프라이빗 리포지토리로 밀어넣는 자동화된 python 스크립트를 사용할 수 있습니다.
 
@@ -120,7 +120,7 @@ ms.locfileid: "73531979"
 
 빅 데이터 클러스터 배포를 사용하려면 **Python**, `azdata` 및 **kubectl**을 비롯한 여러 가지 도구가 필요합니다. 다음 단계를 사용하여 이러한 도구를 오프라인 서버에 설치합니다.
 
-### <a id="python"></a> python 오프라인 설치
+### <a name="install-python-offline"></a><a id="python"></a> python 오프라인 설치
 
 1. 인터넷에 액세스할 수 있는 머신에서 Python을 포함하는 다음 압축 파일 중 하나를 다운로드합니다.
 
@@ -138,7 +138,7 @@ ms.locfileid: "73531979"
    installLocalPythonPackages.bat "C:\python-3.6.6-win-x64-0.0.1-offline\0.0.1"
    ```
 
-### <a id="azdata"></a> azdata 오프라인 설치
+### <a name="install-azdata-offline"></a><a id="azdata"></a> azdata 오프라인 설치
 
 1. 인터넷에 액세스할 수 있고 [Python](https://wiki.python.org/moin/BeginnersGuide/Download)이 설치된 머신에서 다음 명령을 실행하여 `azdata` 패키지를 현재 폴더로 모두 다운로드합니다.
 
@@ -154,7 +154,7 @@ ms.locfileid: "73531979"
    pip install --no-index --find-links <path-to-packages> -r <path-to-requirements.txt>
    ```
 
-### <a id="kubectl"></a> kubectl 오프라인 설치
+### <a name="install-kubectl-offline"></a><a id="kubectl"></a> kubectl 오프라인 설치
 
 오프라인 머신에 **kubectl**을 설치하려면 다음 단계를 사용합니다.
 

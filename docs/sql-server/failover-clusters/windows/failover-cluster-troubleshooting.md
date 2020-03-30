@@ -14,10 +14,10 @@ ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e1cf8ea99cac00670bd96437e0a5484d2888cbe9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68044794"
 ---
 # <a name="failover-cluster-troubleshooting"></a>장애 조치(Failover) 클러스터 문제 해결
@@ -77,60 +77,60 @@ ms.locfileid: "68044794"
   
      이 방법으로 운영 체제 오류를 복구하면 시간이 걸릴 수 있습니다. 운영 체제 오류를 쉽게 복구할 수 있다면 이 방법을 사용하지 마십시오.  
   
-     자세한 내용은 [새 SQL Server 장애 조치(failover) 클러스터 만들기&#40;설치&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) 및 [방법: 시나리오 2의 장애 조치(failover) 클러스터 오류 복구](recover-from-failover-cluster-instance-failure.md)를 참조하세요.  
+     자세한 내용은 [새 SQL Server 장애 조치(failover) 클러스터 만들기&#40;설치 프로그램&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) 및 [방법: 시나리오 2의 장애 조치(failover) 클러스터 오류 복구](recover-from-failover-cluster-instance-failure.md)를 참조하세요.  
   
 ## <a name="resolving-common-problems"></a>일반적인 문제 해결  
  다음 목록에서는 일반적인 사용법 문제와 그 해결 방법에 대해 설명합니다.  
   
 ### <a name="problem-incorrect-use-of-command-prompt-syntax-to-install-sql-server"></a>문제: SQL Server를 설치하기 위한 명령 프롬프트 구문을 잘못 사용했습니다.  
- **문제 1:** **/qn** 스위치는 모든 설치 대화 상자와 오류 메시지를 표시하지 않도록 지정하는 스위치이므로 명령 프롬프트에서 **/qn** 스위치를 사용하면 설치 문제를 진단하기가 어렵습니다. **/qn** 스위치를 지정하면 오류 메시지를 비롯한 모든 설치 메시지가 설치 로그 파일에 기록됩니다. 로그 파일에 대한 자세한 내용은 [SQL Server 설치 로그 파일 보기 및 읽기](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)를 참조하세요.  
+ **문제점 1:** **/qn** 스위치는 모든 설치 대화 상자와 오류 메시지를 표시하지 않도록 지정하는 스위치이므로 명령 프롬프트에서 **/qn** 스위치를 사용하면 설치 문제를 진단하기가 어렵습니다. **/qn** 스위치를 지정하면 오류 메시지를 비롯한 모든 설치 메시지가 설치 로그 파일에 기록됩니다. 로그 파일에 대한 자세한 내용은 [SQL Server 설치 로그 파일 보기 및 읽기](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)를 참조하세요.  
   
  **해결 방법 1**: **/qn** 스위치 대신 **/qb** 스위치를 사용합니다. **/qb** 스위치를 사용하면 오류 메시지를 포함하여 각 단계의 기본 UI가 표시됩니다.  
   
-### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>문제: SQL Server에서 다른 노드로 마이그레이션한 다음에는 네트워크에 로그온할 수 없습니다.  
+### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>문제: SQL Server에서 다른 노드로 마이그레이션한 후 네트워크에 로그온할 수 없습니다.  
  **문제 1:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정이 도메인 컨트롤러에 연결할 수 없습니다.  
   
- **해결 방법 1**: 이벤트 로그에 어댑터 오류나 DNS 문제와 같은 네트워킹 문제가 있는지 검사합니다. 도메인 컨트롤러를 ping할 수 있는지 확인합니다.  
+ **해결 방법 1**: 어댑터 오류나 DNS 문제와 같은 네트워킹 문제가 있는지 이벤트 로그를 검사합니다. 도메인 컨트롤러를 ping할 수 있는지 확인합니다.  
   
  **문제 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정 암호가 모든 클러스터 노드에서 동일하지 않거나 실패한 노드로부터 마이그레이션한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스가 노드에서 다시 시작되지 않습니다.  
   
- **해결 방법 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정 암호를 변경합니다. 그렇지 않고 한 노드에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정 암호를 변경하면 다른 모든 노드의 암호도 변경해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자에서 이 작업을 자동으로 수행합니다.  
+ **해결 방법 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정 암호를 변경합니다. 그렇지 않고 한 노드에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정 암호를 변경하면 다른 모든 노드의 암호도 변경해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자에서 이 작업을 자동으로 수행합니다.  
   
 ### <a name="problem-sql-server-cannot-access-the-cluster-disks"></a>문제: SQL Server에서 클러스터 디스크에 액세스할 수 없습니다.  
- **문제 1:** 일부 노드에서 펌웨어나 드라이버가 업데이트되지 않았습니다.  
+ **문제점 1:** 일부 노드에서 펌웨어나 드라이버가 업데이트되지 않습니다.  
   
  **해결 방법 1:** 모든 노드에서 올바른 펌웨어 버전과 동일한 드라이버 버전을 사용하고 있는지 확인합니다.  
   
- **문제 2:** 공유 클러스터 디스크에서 다른 드라이브 문자를 사용할 경우 노드가 실패한 노드에서 마이그레이션된 클러스터 디스크를 복구할 수 없습니다.  
+ **문제점 2:** 공유 클러스터 디스크에서 다른 드라이브 문자를 사용할 경우 노드가 실패한 노드에서 마이그레이션된 클러스터 디스크를 복구할 수 없습니다.  
   
  **해결 방법 2:** 클러스터 디스크의 디스크 드라이브 문자는 두 서버에서 동일해야 합니다. 그렇지 않을 경우 운영 체제와 MSCS( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Cluster Service)의 원래 설치를 검토하십시오.  
   
-### <a name="problem-failure-of-a-sql-server-service-causes-failover"></a>문제: SQL Server 서비스 오류로 인해 장애 조치(failover)가 발생합니다.  
- **해결 방법:** 특정 서비스에서 오류가 발생할 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 그룹이 장애 조치(failover)되지 않도록 하려면 Windows의 클러스터 관리자를 사용하여 다음과 같이 해당 서비스를 구성합니다.  
+### <a name="problem-failure-of-a-sql-server-service-causes-failover"></a>문제: SQL Server 서비스의 오류로 인해 장애 조치(Failover)가 수행됩니다.  
+ **해결 방법:** 특정 서비스의 오류 때문에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 그룹에서 장애 조치(Failover)를 수행하지 않도록 하려면 Windows의 클러스터 관리자를 사용하여 다음과 같이 해당 서비스를 구성합니다.  
   
 -   **전체 텍스트 속성** 대화 상자의 **고급** 탭에서 **그룹에 영향을 줌** 확인란 선택을 취소합니다. 그러나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 장애 조치(Failover)를 일으키면 전체 텍스트 검색 서비스가 다시 시작됩니다.  
   
 ### <a name="problem-sql-server-does-not-start-automatically"></a>문제: SQL Server가 자동으로 시작되지 않습니다.  
- **해결 방법:** MSCS의 클러스터 관리자를 사용하여 자동으로 장애 조치(failover) 클러스터를 시작합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스가 수동으로 시작되도록 설정해야 합니다. MSCS에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스를 시작하도록 클러스터 관리자를 구성해야 합니다. 자세한 내용은 [서비스 관리](https://msdn.microsoft.com/library/ms178096\(v=sql.105\).aspx)를 참조하세요.  
+ **해결 방법:** MSCS의 클러스터 관리자를 사용하여 장애 조치(Failover) 클러스터가 자동으로 시작되도록 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스가 수동으로 시작되도록 설정해야 합니다. MSCS에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스를 시작하도록 클러스터 관리자를 구성해야 합니다. 자세한 내용은 [서비스 관리](https://msdn.microsoft.com/library/ms178096\(v=sql.105\).aspx)를 참조하세요.  
   
 ### <a name="problem-the-network-name-is-offline-and-you-cannot-connect-to-sql-server-using-tcpip"></a>문제: 네트워크 이름이 오프라인 상태이고 TCP/IP를 사용하여 SQL Server에 연결할 수 없습니다.  
- **문제 1:** 클러스터 리소스가 DNS를 요구하도록 설정된 상태에서 DNS가 실패합니다.  
+ **문제점 1:** 클러스터 리소스가 DNS를 요구하도록 설정된 상태에서 DNS에 문제가 발생합니다.  
   
  **해결 방법 1:** DNS 문제를 해결합니다.  
   
- **문제 2:** 네트워크에 중복된 이름이 있습니다.  
+ **문제점 2:** 네트워크에 중복된 이름이 있습니다.  
   
  **해결 방법 2:** NBTSTAT를 사용하여 중복된 이름을 찾은 다음 문제를 해결합니다.  
   
  **문제 3:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 명명된 파이프를 사용하여 연결하지 않습니다.  
   
- **해결 방법 3:** 명명된 파이프를 사용하여 연결하려면 SQL Server 구성 관리자를 사용하여 별칭을 만들고 적절한 컴퓨터에 연결합니다. 예를 들어 노드가 두 개(**노드 A** 및 **노드 B**)인 클러스터와 기본 인스턴스를 가진 장애 조치(failover) 클러스터 인스턴스(**Virtsql**)가 있으면 다음 단계를 수행하여 네트워크 이름 리소스가 오프라인 상태인 서버에 연결할 수 있습니다.  
+ **해결 방법 3:** 명명된 파이프를 사용하여 연결하려면 SQL Server 구성 관리자를 사용하여 별칭을 만들고 이를 통해 적절한 컴퓨터에 연결합니다. 예를 들어 노드가 두 개(**노드 A** 및 **노드 B**)인 클러스터와 기본 인스턴스를 가진 장애 조치(failover) 클러스터 인스턴스(**Virtsql**)가 있으면 다음 단계를 수행하여 네트워크 이름 리소스가 오프라인 상태인 서버에 연결할 수 있습니다.  
   
 1.  클러스터 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 인스턴스가 있는 그룹이 실행 중인 노드를 확인합니다. 이 예에서는 **노드 A**입니다.  
   
 2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] net start **를 사용하여 해당 컴퓨터에서**서비스를 시작합니다. **net start**를 사용하는 방법은 [SQL Server 수동 시작](https://msdn.microsoft.com/library/ms191193\(v=sql.105\).aspx)을 참조하세요.  
   
-3.  **노드 A**에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL Server 구성 관리자를 시작합니다. 서버가 수신하는 파이프 이름을 확인합니다. 파이프 이름은 \\\\.\\$$\VIRTSQL\pipe\sql\query와 비슷해야 합니다.  
+3.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 노드 A **에서**SQL Server 구성 관리자를 시작합니다. 서버가 수신하는 파이프 이름을 확인합니다. 파이프 이름은 \\\\.\\$$\VIRTSQL\pipe\sql\query와 비슷해야 합니다.  
   
 4.  클라이언트 컴퓨터에서 SQL Server 구성 관리자를 시작합니다.  
   
@@ -139,12 +139,12 @@ ms.locfileid: "68044794"
 6.  별칭 SQLTEST1을 서버 이름으로 사용하여 이 인스턴스에 연결합니다.  
   
 ### <a name="problem-sql-server-setup-fails-on-a-cluster-with-error-11001"></a>문제: 오류 11001이 발생하여 클러스터에 SQL Server를 설치하지 못했습니다.  
- **문제:** [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.X\Cluster]에 고아 레지스트리 키가 있습니다.  
+ **문제점:** [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.X\Cluster]에 고아 레지스트리 키가 있습니다.  
   
- **해결 방법:** MSSQL.X 레지스트리 하이브가 현재 사용되고 있지 않은지 확인한 다음, 클러스터 키를 삭제합니다.  
+ **해결 방법:** MSSQL.X 레지스트리 하이브가 현재 사용되고 있지 않은지 확인한 후 클러스터 키를 삭제합니다.  
   
-### <a name="problem-cluster-setup-error-the-installer-has-insufficient-privileges-to-access-this-directory-drivemicrosoft-sql-server-the-installation-cannot-continue-log-on-as-an-administrator-or-contact-your-system-administrator"></a>문제: 클러스터 설치 오류: “이 디렉터리에 액세스할 수 있는 권한이 없습니다. \<drive>\Microsoft SQL Server. 설치를 계속할 수 없습니다. Administrator로 로그온하거나 시스템 관리자에게 문의하십시오."  
- **문제:** 이 오류는 SCSI 공유 드라이브의 파티션 문제로 인해 발생합니다.  
+### <a name="problem-cluster-setup-error-the-installer-has-insufficient-privileges-to-access-this-directory-drivemicrosoft-sql-server-the-installation-cannot-continue-log-on-as-an-administrator-or-contact-your-system-administrator"></a>문제: 클러스터 설치 오류가 발생합니다. "다음 디렉터리에 액세스할 수 있는 권한이 없습니다: \<드라이브>\Microsoft SQL Server. 설치를 계속할 수 없습니다. Administrator로 로그온하거나 시스템 관리자에게 문의하십시오."  
+ **문제점:** 이 오류는 SCSI 공유 드라이브의 파티션 문제 때문에 발생합니다.  
   
  **해결 방법:** 다음 단계를 수행하여 공유 디스크에 파티션 하나를 다시 만듭니다.  
   
@@ -161,9 +161,9 @@ ms.locfileid: "68044794"
 6.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행합니다.  
   
 ### <a name="problem-applications-fail-to-enlist-sql-server-resources-in-a-distributed-transaction"></a>문제: 애플리케이션이 SQL Server 리소스를 분산 트랜잭션에 등록하지 못했습니다.  
- **문제:** Windows에서 MS DTC([!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator)가 완전히 구성되지 않아 애플리케이션에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스를 분산 트랜잭션에 등록하지 못할 수 있습니다. 이 문제는 연결된 서버, 분산 쿼리 및 분산 트랜잭션을 사용하는 원격 저장 프로시저에 영향을 미칠 수 있습니다. MS DTC를 구성하는 방법은 [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)를 참조하십시오.  
+ **문제점:** Windows에서 MS DTC( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator)가 완전하게 구성되지 않아서 애플리케이션에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스를 분산 트랜잭션에 등록하지 못할 수 있습니다. 이 문제는 연결된 서버, 분산 쿼리 및 분산 트랜잭션을 사용하는 원격 저장 프로시저에 영향을 미칠 수 있습니다. MS DTC를 구성하는 방법은 [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)를 참조하십시오.  
   
- **해결 방법:** 이러한 문제를 방지하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 설치되고 MS DTC가 구성된 서버에서 MS DTC 서비스를 완전히 활성화해야 합니다.  
+ **해결 방법:** 이러한 문제를 방지하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 설치된 서버에서 MS DTC 서비스를 완전히 활성화하고 MS DTC를 구성해야 합니다.  
   
  MS DTC를 완전히 활성화하려면 다음 단계를 따르십시오.  
   

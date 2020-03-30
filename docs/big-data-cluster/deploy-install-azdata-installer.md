@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 5b2e87cf96d6237521caeaae55802d2d72769603
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73594334"
 ---
-# <a name="install-azdata-to-manage-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-with-windows-installer"></a>Windows Installer를 사용하여 `azdata`를 설치하고 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 관리
+# <a name="install-azdata-to-manage-big-data-clusters-2019-with-windows-installer"></a>Windows Installer를 사용하여 `azdata`를 설치하고 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 관리
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -48,7 +48,7 @@ Microsoft Windows Installer를 사용하여 `azdata`를 설치하려면 다음�
 >[!NOTE]
 >이전에 MSI를 사용하여 설치한 경우, MSI 설치 프로그램을 사용하기 위해 먼저 현재 버전을 제거할 필요가 없습니다.
 
-### <a id="install-azdata-windows"></a>Windows Installer를 사용하여 설치
+### <a name="install-with-windows-installer"></a><a id="install-azdata-windows"></a>Windows Installer를 사용하여 설치
 
 Windows Installer를 사용하여 Windows에서 `azdata`를 설치 또는 업데이트합니다.
 

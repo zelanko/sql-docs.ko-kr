@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 653f9a48c03df18fc0591f7bd8060d951567c779
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69652303"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>빅 데이터 클러스터에 HDFS 계층화를 위한 S3를 탑재하는 방법
@@ -43,7 +43,7 @@ ms.locfileid: "69652303"
    > [!TIP]
    > S3 액세스 키를 만드는 방법에 대한 자세한 내용은 [S3 액세스 키](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys)를 참조하세요.
 
-## <a id="mount"></a> 원격 HDFS 스토리지 탑재
+## <a name="mount-the-remote-hdfs-storage"></a><a id="mount"></a> 원격 HDFS 스토리지 탑재
 
 이제 액세스 키를 사용하여 자격 증명 파일을 준비했으므로 탑재를 시작할 수 있습니다. 다음 단계에서는 빅 데이터 클러스터의 로컬 HDFS 스토리지에 S3의 원격 HDFS 스토리지를 탑재합니다.
 
@@ -72,7 +72,7 @@ ms.locfileid: "69652303"
 
 성공적으로 탑재된 경우 HDFS 데이터를 쿼리하고, 이 데이터에 대해 Spark 작업을 실행할 수 있어야 합니다. 빅 데이터 클러스터의 HDFS에서 `--mount-path`로 지정된 위치에 표시됩니다.
 
-## <a id="status"></a> 탑재 상태 가져오기
+## <a name="get-the-status-of-mounts"></a><a id="status"></a> 탑재 상태 가져오기
 
 빅 데이터 클러스터에 있는 모든 탑재 상태를 나열하려면 다음 명령을 사용합니다.
 
@@ -94,7 +94,7 @@ azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 ```
 
-## <a id="delete"></a> 탑재 삭제
+## <a name="delete-the-mount"></a><a id="delete"></a> 탑재 삭제
 
 탑재를 삭제하려면 **azdata bdc hdfs mount delete** 명령을 사용하고 HDFS의 탑재 경로를 지정합니다.
 

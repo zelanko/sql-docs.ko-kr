@@ -15,10 +15,10 @@ ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0628f715be90586e851fee55301e8c82032739c3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73593923"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Reporting Services 설치 확인
@@ -29,7 +29,7 @@ ms.locfileid: "73593923"
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
-##  <a name="bkmk_sharepointmode"></a> SharePoint 모드 설치 확인  
+##  <a name="verify-sharepoint-mode-installation"></a><a name="bkmk_sharepointmode"></a> SharePoint 모드 설치 확인  
   
 ### <a name="to-verify-the-reporting-services-service"></a>Reporting Services 서비스를 확인하려면  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73593923"
 
 ::: moniker-end
   
-##  <a name="bkmk_nativemode"></a> 기본 모드 설치 확인  
+##  <a name="verify-a-native-mode-installation"></a><a name="bkmk_nativemode"></a> 기본 모드 설치 확인  
  기본 구성을 사용하여 기본 모드 보고서 서버를 설치하는 경우 설치 프로그램은 서버를 설치하고 배포합니다. 몇 가지 간단한 테스트를 수행하여 보고서 서버의 배포 여부를 확인할 수 있습니다. 이러한 단계를 수행하기 위해서는 로컬 관리자여야 합니다. 다른 사용자가 테스트를 수행할 수 있도록 하려면 해당 사용자에 대한 보고서 서버 액세스 권한을 구성해야 합니다.  
   
 ### <a name="to-verify-that-the-report-server-is-installed-and-running"></a>보고서 서버가 설치되어 실행 중인지 확인하려면  
@@ -92,7 +92,7 @@ ms.locfileid: "73593923"
   
 4.  보고서를 실행하여 보고서 서버 작동을 테스트합니다. 이 단계에서는 자습서에서 샘플 보고서를 만들 수 있습니다. 자세한 내용은 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)를 참조하세요.  
   
-### <a name="to-verify-that-the-includessrswebportalincludesssrswebportalmd-is-installed-and-running"></a>[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 이 설치되어 실행 중인지 확인하려면  
+### <a name="to-verify-that-the-ssrswebportal-is-installed-and-running"></a>[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 이 설치되어 실행 중인지 확인하려면  
   
 1.  브라우저를 열고 주소 표시줄에 웹 포털 URL을 입력합니다. 주소는 설치 중에 또는 Reporting Services 구성 도구의 웹 포털 URL 페이지에서 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에 대해 지정한 서버 이름과 가상 디렉터리 이름으로 구성됩니다. 기본적으로 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 가상 디렉터리는 **Reports**입니다. 다음 URL을 사용하여 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 설치를 확인할 수 있습니다.  
   

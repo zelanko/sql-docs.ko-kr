@@ -13,10 +13,10 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 034df879dc79f920219a43e2faaaf0e3ac4fc17b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68008705"
 ---
 # <a name="using-integrated-authentication"></a>통합 인증 사용
@@ -32,9 +32,9 @@ Linux 및 macOS 기반 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] OD
 Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
 ```
   
-DSN과 연결하는 경우 `odbc.ini`의 DSN 항목에 **Trusted_Connection = yes**를 추가할 수도 있습니다.
+DSN과 연결하는 경우 **의 DSN 항목에** Trusted_Connection = yes`odbc.ini`를 추가할 수도 있습니다.
   
-또한 `sqlcmd`의 `-E` 옵션 및 `bcp`의 `-T`을 사용하여 통합 인증을 지정할 수 있습니다. 자세한 내용은 [**sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)를 사용하여 연결 및 [**bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)를 사용하여 연결을 참조하세요.
+또한 `-E`의 `sqlcmd` 옵션 및 `-T`의 `bcp`을 사용하여 통합 인증을 지정할 수 있습니다. 자세한 내용은 [**sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)를 사용하여 연결 및 [**bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)를 사용하여 연결을 참조하세요.
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결할 클라이언트 보안 주체가 이미 Kerberos KDC로 인증되었는지 확인합니다.
   
@@ -87,10 +87,10 @@ Kerberos 자격 증명이 설계에 따라 만료되므로 애플리케이션이
 통합된 인증을 구성한 후 자격 증명이 연결된 서버에 전달됩니다.  
   
 ## <a name="integrated-authentication-and-sqlcmd"></a>통합 인증 및 sqlcmd
-통합 인증을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 액세스하려면 `sqlcmd`의 `-E` 옵션을 사용합니다. `sqlcmd`를 실행하는 계정이 기본 Kerberos 클라이언트 보안 주체와 연결되었는지 확인합니다.
+통합 인증을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 액세스하려면 `-E`의 `sqlcmd` 옵션을 사용합니다. `sqlcmd`를 실행하는 계정이 기본 Kerberos 클라이언트 보안 주체와 연결되었는지 확인합니다.
 
 ## <a name="integrated-authentication-and-bcp"></a>통합 인증 및 bcp
-통합 인증을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 액세스하려면 `bcp`의 `-T` 옵션을 사용합니다. `bcp`를 실행하는 계정이 기본 Kerberos 클라이언트 보안 주체와 연결되었는지 확인합니다. 
+통합 인증을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 액세스하려면 `-T`의 `bcp` 옵션을 사용합니다. `bcp`를 실행하는 계정이 기본 Kerberos 클라이언트 보안 주체와 연결되었는지 확인합니다. 
   
 `-T`를 `-U` 또는 `-P` 옵션과 함께 사용하는 것은 오류입니다.
   

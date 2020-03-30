@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 4217acf163e8603c5993cfa8ade4207c9a79c6cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68054557"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Azure에 배포된 SSIS(SQL Server Integration Services) 실행 예약
@@ -36,13 +36,13 @@ ms.locfileid: "68054557"
 - [Azure Data Factory 파이프라인의 일부로 패키지를 간접적으로 예약](#activity)
 
 
-## <a name="ssms"></a> SSMS를 사용하여 패키지 예약
+## <a name="schedule-a-package-with-ssms"></a><a name="ssms"></a> SSMS를 사용하여 패키지 예약
 
 SSMS(SQL Server Management Studio)에서 SSIS 카탈로그 데이터베이스인 SSISDB에 배포된 패키지를 마우스 오른쪽 단추로 클릭하고, **일정**을 선택하여 **새 일정** 대화 상자를 열 수 있습니다. 자세한 내용은 [SSMS를 사용하여 Azure에서 SSIS 패키지 예약](ssis-azure-schedule-packages-ssms.md)을 참조합니다.
 
 이 기능을 사용하려면 SQL Server Management Studio 버전 17.7 이상이 필요합니다. SSMS의 최신 버전을 다운로드하려면 [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)(SSMS(SQL Server Management Studio) 다운로드)를 참조하세요.
 
-## <a name="elastic"></a> SQL Database 탄력적 작업을 사용하여 패키지 예약
+## <a name="schedule-a-package-with-sql-database-elastic-jobs"></a><a name="elastic"></a> SQL Database 탄력적 작업을 사용하여 패키지 예약
 
 SQL Database의 탄력적 작업에 대한 자세한 내용은 [규모가 확장된 클라우드 데이터베이스 관리](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview)를 참조하세요.
 
@@ -88,7 +88,7 @@ EXECÂ jobs.sp_update_jobÂ @job_name='ExecutePackageJob',Â @enabled=1,Â 
     @schedule_interval_type='Minutes',Â @schedule_interval_count=60Â 
 ```
 
-## <a name="agent"></a> 프레미스에서 SQL Server 에이전트를 사용하여 패키지 예약
+## <a name="schedule-a-package-with-sql-server-agent-on-premises"></a><a name="agent"></a> 프레미스에서 SQL Server 에이전트를 사용하여 패키지 예약
 
 SQL Server 에이전트에 대한 자세한 내용은 [패키지에 대한 SQL Server 에이전트 작업](../packages/sql-server-agent-jobs-for-packages.md)을 참조하세요.
 
@@ -160,7 +160,7 @@ SQL Server 에이전트에 대한 자세한 내용은 [패키지에 대한 SQL S
 
 6.  작업 구성 및 예약을 완료합니다.
 
-## <a name="activity"></a> Azure Data Factory 파이프라인의 일부로 패키지 예약
+## <a name="schedule-a-package-as-part-of-an-azure-data-factory-pipeline"></a><a name="activity"></a> Azure Data Factory 파이프라인의 일부로 패키지 예약
 
 SSIS 패키지를 실행하는 Azure Data Factory 파이프라인을 실행하려면 트리거를 사용하여 패키지를 간접적으로 예약할 수 있습니다.
 

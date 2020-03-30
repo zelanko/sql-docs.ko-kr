@@ -24,10 +24,10 @@ ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3f8ebb1119e84caa80c0faa03c5c1405992723b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68006347"
 ---
 # <a name="database-mirroring-sql-server"></a>데이터베이스 미러링(SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "68006347"
 >  데이터베이스 미러링 지원, 파트너 서버 구성을 위한 제한 사항, 사전 요구 사항 및 권장 사항, 데이터베이스 미러링 배포를 위한 권장 사항에 대한 자세한 내용은 [데이터베이스 미러링을 위한 필수 구성 요소, 제한 사항 및 권장 사항](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)을 참조하세요.  
   
   
-##  <a name="Benefits"></a> 데이터베이스 미러링의 이점  
+##  <a name="benefits-of-database-mirroring"></a><a name="Benefits"></a> 데이터베이스 미러링의 이점  
  데이터베이스 미러링은 다음과 같은 이점을 제공하는 간단한 전략입니다.  
   
 -   데이터베이스의 가용성이 커집니다.  
@@ -53,14 +53,14 @@ ms.locfileid: "68006347"
   
      데이터베이스 미러링은 운영 모드가 보호 우선 모드인지 성능 우선 모드인지에 따라 완벽하거나 거의 완벽한 데이터 중복을 제공합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [운영 모드](#OperatingModes)를 참조하세요.  
   
-     [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 이상 버전에서 실행 중인 데이터베이스 미러링 파트너는 데이터 페이지를 읽지 못하게 하는 특정 오류 유형을 자동으로 해결하려고 시도합니다. 페이지를 읽지 못하는 파트너는 다른 파트너로부터 새 복사본을 요청합니다. 이 요청이 성공하면 읽을 수 없는 페이지는 새 복사본으로 대체되고 일반적으로 오류가 해결됩니다. 자세한 내용은 [자동 페이지 복구&#40;가용성 그룹: 데이터베이스 미러링&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)을 참조하세요.  
+     [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 이상 버전에서 실행 중인 데이터베이스 미러링 파트너는 데이터 페이지를 읽지 못하게 하는 특정 오류 유형을 자동으로 해결하려고 시도합니다. 페이지를 읽지 못하는 파트너는 다른 파트너로부터 새 복사본을 요청합니다. 이 요청이 성공하면 읽을 수 없는 페이지는 새 복사본으로 대체되고 일반적으로 오류가 해결됩니다. 자세한 내용은 [자동 페이지 복구&#40;가용성 그룹: 데이터베이스 미러링&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)를 참조하세요.  
   
 -   업그레이드 중에 프로덕션 데이터베이스의 가용성이 증가합니다.  
   
      미러된 데이터베이스의 작동 중단을 최소화하려면 장애 조치(failover) 파트너를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 순차적으로 업그레이드하면 됩니다. 이렇게 하면 단일 장애 조치(failover)에 대해서만 가동 중단이 발생합니다. 이러한 형태의 업그레이드를 *롤링 업그레이드*라고 합니다. 자세한 내용은 [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)을 참조하세요.  
   
   
-##  <a name="TermsAndDefinitions"></a> 데이터베이스 미러링 용어 및 정의  
+##  <a name="database-mirroring-terms-and-definitions"></a><a name="TermsAndDefinitions"></a> 데이터베이스 미러링 용어 및 정의  
  자동 장애 조치(automatic failover)  
  주 서버를 사용할 수 없게 되면 미러 서버가 주 서버의 역할을 맡고 해당 데이터베이스의 복사본을 온라인으로 전환하여 주 데이터베이스로 사용하도록 하는 프로세스입니다.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "68006347"
  보호 우선 모드에서만 사용할 수 있으며, 자동 장애 조치(failover)가 시작될 경우 미러 서버에서 인식할 수 있도록 하는 SQL Server의 선택적 인스턴스입니다. 미러링 모니터 서버는 두 장애 조치(Failover) 파트너와는 달리 데이터베이스를 제공하지 않습니다. 미러링 모니터 서버는 자동 장애 조치(Failover)를 지원하는 역할만 수행합니다.  
   
   
-##  <a name="HowWorks"></a> 데이터베이스 미러링 개요  
+##  <a name="overview-of-database-mirroring"></a><a name="HowWorks"></a> 데이터베이스 미러링 개요  
  데이터베이스 미러링은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 서로 다른 서버 인스턴스에 있어야 하는 두 개의 단일 데이터베이스 복사본을 유지 관리합니다. 일반적으로 두 서버 인스턴스는 서로 다른 위치의 컴퓨터에 있습니다. 데이터베이스에서 데이터베이스 미러링을 시작하면 이러한 서버 인스턴스 간의 관계( *데이터베이스 미러링 세션*이라고 함)가 시작됩니다.  
   
  한 서버 인스턴스는 클라이언트에 데이터베이스를 제공하고( *주 서버*) 다른 서버 인스턴스는 미러링 세션의 구성 및 상태에 따라 상시 또는 웜 대기 서버( *미러 서버*) 역할을 합니다. 데이터베이스 미러링 세션을 동기화하면 데이터베이스 미러링은 커밋된 트랜잭션에서 데이터 손실 없이 신속한 장애 조치(Failover)를 지원하는 상시 대기 서버를 제공합니다. 세션이 동기화되지 않은 경우 미러 서버는 일반적으로 웜 대기 서버로 사용할 수 있으며 데이터가 손실될 수 있습니다.  
@@ -140,7 +140,7 @@ ms.locfileid: "68006347"
 -   [세션을 일시 중지할 경우 주 서버의 트랜잭션 로그에 미치는 영향](#ImpactOfPausing)  
   
   
-###  <a name="OperatingModes"></a> 운영 모드  
+###  <a name="operating-modes"></a><a name="OperatingModes"></a> 운영 모드  
  데이터베이스 미러링 세션이 동기 또는 비동기 작업으로 실행됩니다. 비동기 작업에서는 미러 서버가 로그를 디스크에 쓸 때까지 기다리지 않고 트랜잭션이 커밋되므로 성능이 극대화됩니다. 동기 작업에서는 트랜잭션이 두 파트너에서 모두 커밋되지만 트랜잭션 대기 시간이 길어집니다.  
   
  두 가지 미러링 운영 모드가 있습니다. 이 중에서 *보호 우선 모드* 는 동기 작업을 지원합니다. 보호 우선 모드에서 세션을 시작하면 미러 서버는 가능한 한 빨리 미러 데이터베이스를 주 데이터베이스와 동기화합니다. 데이터베이스가 동기화되면 트랜잭션이 두 파트너에서 모두 커밋되지만 트랜잭션 대기 시간이 길어집니다.  
@@ -165,7 +165,7 @@ ms.locfileid: "68006347"
 >  새 미러링 세션을 설정하거나 기존 미러링 구성에 미러링 모니터 서버를 추가하려면 관련된 모든 서버 인스턴스가 같은 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행해야 합니다. 그러나 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전으로 업그레이드하면 관련된 인스턴스의 버전이 다를 수 있습니다. 자세한 내용은 [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)을 참조하세요.  
   
   
-####  <a name="TxnSafety"></a> 트랜잭션 보안 및 운영 모드  
+####  <a name="transaction-safety-and-operating-modes"></a><a name="TxnSafety"></a> 트랜잭션 보안 및 운영 모드  
  트랜잭션 보안 설정에 따라 동기 또는 비동기 운영 모드가 결정됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 만 사용하여 데이터베이스 미러링을 구성하는 경우 운영 모드를 선택할 때 자동으로 트랜잭션 보안 설정이 구성됩니다.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 데이터베이스 미러링을 구성하는 경우 트랜잭션 보안 설정 방법을 알아야 합니다. 트랜잭션 보안은 ALTER DATABASE 문의 SAFETY 속성으로 조정합니다. 미러되는 데이터베이스에서 SAFETY는 FULL 또는 OFF 중 하나입니다.  
@@ -177,7 +177,7 @@ ms.locfileid: "68006347"
  자세한 내용은 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)을 참조하세요.  
   
   
-###  <a name="RoleSwitching"></a> 역할 전환  
+###  <a name="role-switching"></a><a name="RoleSwitching"></a> 역할 전환  
  데이터베이스 미러링 세션에서는 *역할 전환*프로세스를 통해 주 역할과 미러 역할을 서로 바꿀 수 있습니다. 역할 전환 시 주 역할을 미러 서버로 이전해야 합니다. 역할 전환에서 미러 서버는 주 서버의 *장애 조치(Failover) 파트너* 역할을 합니다. 역할이 전환되면 미러 서버가 주 역할을 맡고 해당 데이터베이스의 복사본을 새로운 주 데이터베이스로 사용할 수 있도록 온라인 상태로 만듭니다. 이전 주 서버(사용 가능한 경우)는 미러 역할을 맡고 해당 데이터베이스는 새로운 미러 데이터베이스가 됩니다. 역할은 상호 전환할 수 있습니다.  
   
  역할 전환에는 다음과 같은 세 가지 형식이 있습니다.  
@@ -202,7 +202,7 @@ ms.locfileid: "68006347"
  모든 역할 전환 시나리오에서 새로운 주 데이터베이스가 온라인 상태가 되면 클라이언트 애플리케이션에서 해당 데이터베이스에 다시 연결하여 신속하게 복구할 수 있습니다.  
   
   
-###  <a name="ConcurrentSessions"></a> 동시 세션  
+###  <a name="concurrent-sessions"></a><a name="ConcurrentSessions"></a> 동시 세션  
  지정된 서버 인스턴스는 같은 서버 인스턴스 또는 다른 서버 인스턴스에 있는 여러 개의 동시 데이터베이스 미러링 세션(미러된 데이터베이스당 한 번)에 참여할 수 있습니다. 모든 데이터베이스 미러링 세션에서 서버 인스턴스가 파트너나 미러링 모니터 서버로만 사용되는 경우가 많습니다. 그러나 각 세션은 다른 세션과 독립적이므로 서버 인스턴스가 일부 세션에서는 파트너 역할을 하고 다른 세션에서는 미러링 모니터 서버 역할을 할 수 있습니다. 예를 들어 3개 서버 인스턴스(`SSInstance_1`, `SSInstance_2`및 `SSInstance_3`)에서의 다음 4개 세션을 고려합니다. 각 서버 인스턴스가 일부 세션에서는 파트너 역할을 하고 다른 세션에서는 미러링 모니터 서버 역할을 합니다.  
   
 |서버 인스턴스|데이터베이스 A에 대한 세션|데이터베이스 B에 대한 세션|데이터베이스 C에 대한 세션|데이터베이스 D에 대한 세션|  
@@ -224,19 +224,19 @@ ms.locfileid: "68006347"
 > [!NOTE]  
 >  미러된 데이터베이스는 서로 독립적이므로 여러 데이터베이스에 대한 장애 조치를 하나의 그룹으로 처리할 수 없습니다.  
   
-###  <a name="ClientConnections"></a> 클라이언트 연결  
+###  <a name="client-connections"></a><a name="ClientConnections"></a> 클라이언트 연결  
  데이터베이스 미러링 세션에 대한 클라이언트 연결 지원은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].NET Data Provider에서 제공합니다. 자세한 내용은 [데이터베이스 미러링 세션에 클라이언트 연결&#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)프로세스를 통해 주 역할과 미러 역할을 서로 바꿀 수 있습니다.  
   
   
-###  <a name="ImpactOfPausing"></a> 세션을 일시 중지할 경우 주 서버의 트랜잭션 로그에 미치는 영향  
+###  <a name="impact-of-pausing-a-session-on-the-principal-transaction-log"></a><a name="ImpactOfPausing"></a> 세션을 일시 중지할 경우 주 서버의 트랜잭션 로그에 미치는 영향  
  데이터베이스 소유자는 언제든지 세션을 일시 중지할 수 있습니다. 일시 중지는 미러링을 제거하는 동안 세션 상태를 유지합니다. 세션이 일시 중지되면 주 서버에서 새 로그 레코드를 미러 서버로 보내지 않습니다. 이러한 레코드는 모두 활성 상태로 유지되며 주 데이터베이스의 트랜잭션 로그에 누적됩니다. 데이터베이스 미러링 세션이 일시 중지된 동안에는 트랜잭션 로그를 자를 수 없습니다. 따라서 데이터베이스 미러링 세션을 너무 오래 일시 중지하면 로그가 가득 찰 수 있습니다.  
   
  자세한 내용은 이 항목의 뒷부분에 나오는 [데이터베이스 미러링 일시 중지 및 재개&#40;SQL Server&#41;](../../database-engine/database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md)을 참조하세요.  
   
-##  <a name="SettingUpDbmSession"></a> 데이터베이스 미러링 세션 설정  
+##  <a name="setting-up-database-mirroring-session"></a><a name="SettingUpDbmSession"></a> 데이터베이스 미러링 세션 설정  
  미러링 세션을 시작하려면 먼저 데이터베이스 소유자 또는 시스템 관리자가 미러 데이터베이스를 만들고 엔드포인트와 로그인을 설정해야 하며 경우에 따라서는 인증서를 만들고 설정해야 합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [데이터베이스 미러링 설정&#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)을 참조하세요.  
   
-##  <a name="InterOp"></a> 다른 데이터베이스 엔진 기능과의 상호 운용성 및 공존성  
+##  <a name="interoperability-and-coexistence-with-other-database-engine-features"></a><a name="InterOp"></a> 다른 데이터베이스 엔진 기능과의 상호 운용성 및 공존성  
  데이터베이스 미러링은 다음의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]기능 또는 구성 요소와 함께 사용할 수 있습니다.  
   
 -   [로그 전달](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
@@ -247,7 +247,7 @@ ms.locfileid: "68006347"
   
 -   [복제](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  
   
-##  <a name="InThisSection"></a> 섹션 내용  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> 섹션 내용  
  [데이터베이스 미러링을 위한 필수 구성 요소, 제한 사항 및 권장 사항](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)  
  데이터베이스 미러링을 설정하기 위한 사전 요구 사항과 권장 사항에 대해 설명합니다.  
   
@@ -282,7 +282,7 @@ ms.locfileid: "68006347"
  데이터베이스 미러링 모니터 또는 **dbmmonitor** 저장 프로시저를 사용하여 데이터베이스 미러링이나 세션을 모니터링하는 방법에 대해 설명합니다.  
   
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 ### <a name="configuration-tasks"></a>구성 태스크  
  **SQL Server Management Studio 사용**  

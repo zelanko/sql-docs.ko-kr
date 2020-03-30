@@ -9,10 +9,10 @@ ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 07f8cd00781717511bbcaba6e76553cc17d0c5bf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68893246"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정(ULS)
@@ -35,7 +35,7 @@ ms.locfileid: "68893246"
   
 -   [추적 로그 위치](#bkmk_trace)  
   
-##  <a name="bkmk_general"></a> 일반 ULS 로그 권장 사항  
+##  <a name="general-uls-log-recommendations"></a><a name="bkmk_general"></a> 일반 ULS 로그 권장 사항  
  다음 표에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 환경을 모니터링하는 데 권장되는 이벤트 범주 및 수준을 나열합니다. 이벤트를 기록하면 각 항목에 이벤트 기록 시간, 프로세스 이름 및 스레드 ID가 포함됩니다.  
   
 |Category|Level|Description|  
@@ -46,7 +46,7 @@ ms.locfileid: "68893246"
 |토폴로지|자세히|현재 사용자 정보를 기록합니다.|  
 |웹 파트|자세히|보고서 뷰어 웹 파트에 대한 액세스를 포함하는 이벤트를 기록합니다.|  
   
-##  <a name="bkmk_turnon"></a> Reporting Services 범주에서 Reporting Services 이벤트를 설정 및 해제하려면  
+##  <a name="to-turn-on-and-off-reporting-services-events-in-the-reporting-services-category"></a><a name="bkmk_turnon"></a> Reporting Services 범주에서 Reporting Services 이벤트를 설정 및 해제하려면  
   
 1.  SharePoint 중앙 관리에서  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68893246"
 > [!NOTE]  
 >  **이벤트 로그에 보고할 최소 중요 이벤트** 옵션은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 지원되지 않으므로 무시됩니다.  
   
-##  <a name="bkmk_recommended"></a> 권장 구성  
+##  <a name="recommended-configuration"></a><a name="bkmk_recommended"></a> 권장 구성  
  다음 로깅 옵션을 표준 구성으로 사용하는 것이 좋습니다.  
   
 -   **HTTP 리디렉터**  
@@ -80,16 +80,16 @@ ms.locfileid: "68893246"
 Get-SPDiagnosticConfig  
 ```  
   
-##  <a name="bkmk_readentries"></a> 로그 항목 읽기  
+##  <a name="reading-the-logs-entries"></a><a name="bkmk_readentries"></a> 로그 항목 읽기  
  로그에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 항목의 서식은 다음과 같은 방법으로 지정됩니다.  
   
 1.  **제품: SQL Server Reporting Services**  
   
-2.  **범주:** 서버 관련 이벤트는 이름의 시작 부분에 “Report Server”라는 문자가 있습니다. 예: "Report Server Alerting Runtime" 이러한 이벤트는 보고서 서버 로그 파일에도 기록됩니다.  
+2.  **범주:** 서버 관련 이벤트는 이름의 시작 부분에 "Report Server"라는 문자가 있습니다. 예: "Report Server Alerting Runtime" 이러한 이벤트는 보고서 서버 로그 파일에도 기록됩니다.  
   
-3.  **범주:** 웹 프런트 엔드 구성 요소와 관련된 이벤트나 웹 프런트 엔드 구성 요소로부터 전달되는 이벤트에는 “Report Server”가 포함되지 않습니다. 예 "Service Application Proxy" Report Server Alerting Runtime" WFE 항목은 CorrelationID를 포함하지만 서버 항목은 CorrelationID를 포함하지 않습니다.  
+3.  **범주:** 웹 프런트 엔드 구성 요소와 관련된 이벤트나 웹 프런트 엔드 구성 요소로부터 전달되는 이벤트에는 "Report Server"가 포함되지 않습니다. 예 "Service Application Proxy" Report Server Alerting Runtime" WFE 항목은 CorrelationID를 포함하지만 서버 항목은 CorrelationID를 포함하지 않습니다.  
   
-##  <a name="bkmk_list"></a> SQL Server Reporting Services 이벤트 목록  
+##  <a name="list-of-sql-server-reporting-services-events"></a><a name="bkmk_list"></a> SQL Server Reporting Services 이벤트 목록  
  다음 표에는 SQL Server Reporting Services 범주의 이벤트 목록이 나와 있습니다.  
   
 |영역 이름|설명 또는 샘플 항목|  
@@ -137,7 +137,7 @@ Get-SPDiagnosticConfig
 |서비스 애플리케이션 프록시||  
 |공유 서비스|샘플 항목:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> 콘텐츠 데이터베이스에 대한 MediumGranting 액세스입니다.<br /><br /> ReportingWebServiceApplication의 MediumProvisioning 인스턴스<br /><br /> ReportingWebServiceApplication에 대한 MediumProcessing 서비스 계정 변경 내용<br /><br /> MediumSetting 데이터베이스 사용 권한입니다.|  
   
-##  <a name="bkmk_powershell"></a> PowerShell에서 로그 파일 보기  
+##  <a name="view-a-log-file-with-powershell"></a><a name="bkmk_powershell"></a> PowerShell에서 로그 파일 보기  
  ![PowerShell 관련 콘텐츠](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")PowerShell을 사용하여 ULS 로그 파일에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 관련 이벤트 목록을 반환할 수 있습니다. ULS 로그 파일 UESQL11SPOINT-20110606-1530.log 파일에서 "**sql server reporting services**"가 포함된 필터링된 행 목록을 반환하려면 SharePoint 2010 관리 셸에서 다음 명령을 입력합니다.  
   
 ```  
@@ -148,7 +148,7 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
   
  PowerShell을 사용하여 로그 데이터를 보는 방법에 대한 자세한 내용은 [진단 로그 보기(SharePoint Server 2010)](https://technet.microsoft.com/library/ff463595.aspx)를 참조하세요.  
   
-##  <a name="bkmk_trace"></a> 추적 로그 위치  
+##  <a name="trace-log-location"></a><a name="bkmk_trace"></a> 추적 로그 위치  
  추적 로그 파일은 일반적으로 **c:\Program Files\Common files\Microsoft Shared\Web Server Extensions\14\logs** 폴더에 있지만 SharePoint 중앙 관리의 **진단 로깅** 페이지에서 경로를 확인하거나 변경할 수 있습니다.  
   
  SharePoint 2010 중앙 관리에서 SharePoint 서버에 대해 진단 로깅을 구성하는 방법 및 단계는 [진단 로깅 설정 구성(Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkID=114423)을 참조하세요.  

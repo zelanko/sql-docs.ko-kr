@@ -17,14 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 954302809c01769f6d3869e7762917e91cfd8f98
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68892218"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>성능 카운터 MSRS 2011 SharePoint 모드 성능 개체
-  이 문서에서는 **SharePoint 모드 배포의 일부인** MSRS 2011 웹 서비스 SharePoint 모드 **및** MSRS 2011 Windows 서비스 SharePoint 모드 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 성능 개체에 대한 성능 카운터를 설명합니다.  
+  이 항목에서는 **SharePoint 모드 배포의 일부인** MSRS 2011 웹 서비스 SharePoint 모드 **및** MSRS 2011 Windows 서비스 SharePoint 모드 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 성능 개체에 대한 성능 카운터를 설명합니다.  
   
 > [!NOTE]  
 >  이 성능 개체는 로컬 보고서 서버의 이벤트를 모니터링합니다. 스케일 아웃 배포에서 보고서 서버를 실행 중이면 카운터는 현재 서버에만 적용되고 스케일 아웃 배포 전체에는 적용되지 않습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "68892218"
   
 -   [PowerShell Cmdlet을 사용하여 목록 반환](#bkmk_powershell)  
   
-##  <a name="bkmk_webservice"></a> MSRS 2011 웹 서비스 SharePoint 모드 성능 카운터  
+##  <a name="msrs-2011-web-service-sharepoint-mode-performance-counters"></a><a name="bkmk_webservice"></a> MSRS 2011 웹 서비스 SharePoint 모드 성능 카운터  
  **MSRS 2011 Web Service SharePoint Mode** 성능 개체는 보고서 서버 성능을 모니터링합니다. 이 성능 개체에는 일반적으로 대화형 보고서 보기 작업을 통해 시작된 보고서 서버 처리를 추적하는 데 사용되는 카운터 모음이 들어 있습니다. 이 카운터를 설정하면 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스에 카운터를 적용하거나 특정 인스턴스를 선택할 수 있습니다. 이러한 카운터는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 이 보고서 서버 웹 서비스를 중지할 때마다 다시 설정됩니다.  
   
  다음 표에서는 **MSRS 2011 Web Service SharePoint Mode** 성능 개체와 함께 제공되는 카운터를 나열합니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "68892218"
 |**Total Reports Executed**|서비스 시작 이후 성공적으로 실행된 총 보고서 수입니다. 이 카운터는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 이 보고서 서버 웹 서비스를 중지할 때마다 다시 설정됩니다.|  
 |**총 요청 수**|서비스 시작 이후 보고서 서버에 대한 총 요청 수입니다. 이 카운터는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 이 보고서 서버 웹 서비스를 중지할 때마다 다시 설정됩니다.|  
   
-##  <a name="bkmk_windowsservice"></a> MSRS 2011 Windows 서비스 SharePoint 모드 성능 카운터  
+##  <a name="msrs-2011-windows-service-sharepoint-mode-performance-counters"></a><a name="bkmk_windowsservice"></a> MSRS 2011 Windows 서비스 SharePoint 모드 성능 카운터  
  **MSRS 2011 Windows Service SharePoint Mode** 성능 개체는 보고서 서버 Windows 서비스를 모니터링하는 데 사용됩니다. 이 성능 개체에는 예약된 작업을 통해 시작된 보고서 처리를 추적하는 데 사용되는 카운터 모음이 들어 있습니다. 예약된 작업에는 구독 및 배달, 보고서 실행 스냅샷 및 보고서 기록이 포함될 수 있습니다. 이 카운터를 설정하면 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스에 카운터를 적용하거나 특정 인스턴스를 선택할 수 있습니다.  
   
  다음 표에서는 **MSRS 2011 Windows Service SharePoint mode** 성능 개체에 포함된 카운터를 나열합니다.  
@@ -118,7 +118,7 @@ ms.locfileid: "68892218"
 |**총 요청 수**|서비스 시작 이후 성공적으로 실행된 총 보고서 수입니다. 애플리케이션 도메인을 재활용하면 이 카운터가 다시 설정됩니다.|  
 |**Total Snapshot Updates**|총 보고서 실행 스냅샷 업데이트 수입니다.|  
   
-##  <a name="bkmk_powershell"></a> PowerShell Cmdlet을 사용하여 목록 반환  
+##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a> PowerShell Cmdlet을 사용하여 목록 반환  
  ![PowerShell 관련 콘텐츠](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")다음 Windows PowerShell 스크립트는 CounterSetName이 “msr”로 시작되는 카운터 집합 반환  
   
 ```  

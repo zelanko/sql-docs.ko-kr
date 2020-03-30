@@ -15,10 +15,10 @@ author: rene-ye
 ms.author: v-reye
 manager: kenvh
 ms.openlocfilehash: 6877a6421622ab52a92b89502c68f47c4c315d93
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69025501"
 ---
 # <a name="retrieving-parametermetadata-via-usefmtonly"></a>useFmtOnly를 통해 ParameterMetaData 검색
@@ -34,7 +34,7 @@ ms.locfileid: "69025501"
   
 -   보기 
   
-  이러한 사용 사례를 위해 제안된 솔루션은 사용자의 SQL 쿼리를 매개 변수 및 테이블 대상에 대해 구문 분석한 다음 `FMTONLY`를 사용하도록 설정하여 `SELECT` 쿼리를 실행하는 것입니다. 다음 코드 조각은 이 기능을 시각화하는 데 도움이 됩니다.
+  이러한 사용 사례를 위해 제안된 솔루션은 사용자의 SQL 쿼리를 매개 변수 및 테이블 대상에 대해 구문 분석한 다음 `SELECT`를 사용하도록 설정하여 `FMTONLY` 쿼리를 실행하는 것입니다. 다음 코드 조각은 이 기능을 시각화하는 데 도움이 됩니다.
   
 ```sql
 --create a normal table 'Foo' and a temporary table 'Bar'

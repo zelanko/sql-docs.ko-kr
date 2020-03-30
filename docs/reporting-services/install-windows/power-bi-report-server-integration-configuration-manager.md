@@ -7,10 +7,10 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
 ms.openlocfilehash: c2013e99f5e222c50d954e292cbc0b48b39cb7c9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68265639"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI 보고서 서버 통합(구성 관리자)
@@ -19,7 +19,7 @@ ms.locfileid: "68265639"
 
 **구성 관리자의** Power BI 통합 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지는 보고서 서버 사용자가 지원되는 보고서 항목을 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 대시보드에 고정할 수 있도록 보고서 서버를 원하는 Azure AD(Active Directory) 관리되는 테넌트에 등록하는 데 사용됩니다. 고정할 수 있는 지원되는 항목의 목록은 [Power BI 대시보드에 Reporting Services 항목 고정](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)을 참조하세요.
 
-## <a name="bkmk_requirements"></a> Power BI 통합에 대한 요구 사항
+## <a name="requirements-for-power-bi-integration"></a><a name="bkmk_requirements"></a> Power BI 통합에 대한 요구 사항
 
 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 서비스로 이동할 수 있는 활성 인터넷 연결 외에 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]통합을 완료하기 위한 다음 요구 사항이 있습니다.
 
@@ -33,17 +33,17 @@ ms.locfileid: "68265639"
 
 - 고정하려는 보고서는 저장된 자격 증명을 사용해야 합니다. 이는 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 통합 자체의 요구 사항이 아니라 고정된 항목에 대한 새로 고침 프로세스의 요구 사항입니다.  보고서 항목 고정 작업은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 만들어 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]에서 타일의 새로 고침 일정을 관리합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독에는 저장된 자격 증명이 필요합니다. 보고서에서 저장된 자격 증명을 사용하지 않는 경우 사용자는 보고서 항목을 고정할 수 있지만 연결된 구독에서 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]에 데이터를 새로 고치려고 경우 **내 구독** 페이지에 다음과 유사한 오류 메시지가 표시됩니다.
 
-    PowerBI 배달 오류: 대시보드: IT 지출 분석 샘플, 시각적 개체: Chart2, 오류: 현재 작업을 완료할 수 없습니다. 사용자 데이터 원본 자격 증명이 요구 사항을 준수하지 않아 이 보고서 또는 공유 데이터 세트를 실행할 수 없습니다. 뿐만 아니라 사용자 데이터 원본 자격 증명도 실행할 수 없습니다.
+    PowerBI 배달 오류: 대시보드: IT 지출 분석 샘플, visual: Chart2, 오류: 현재 작업을 완료할 수 없습니다. 사용자 데이터 원본 자격 증명이 요구 사항을 준수하지 않아 이 보고서 또는 공유 데이터 세트를 실행할 수 없습니다. 뿐만 아니라 사용자 데이터 원본 자격 증명도 실행할 수 없습니다.
 
 자격 증명을 저장하는 방법은 [Reporting Services 데이터 원본에 자격 증명 저장](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)에서 "보고서별 데이터 원본에 대한 저장된 자격 증명 구성" 섹션을 참조하세요.
 
 관리자는  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 로그 파일에서 자세한 내용을 검토할 수 있습니다.  다음과 유사한 메시지가 표시됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 로그 파일을 검토하고 모니터링하는 유용한 방법은 파일에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 파워 쿼리를 사용하는 것입니다.  자세한 내용 및 간단한 비디오는 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)를 참조하세요.
 
-- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e 오류: PowerBI 배달 오류: 대시보드: IT 지출 분석 샘플, 시각적 개체: Chart2, 오류: 현재 작업을 완료할 수 없습니다. 사용자 데이터 원본 자격 증명이 요구 사항을 준수하지 않아 이 보고서 또는 공유 데이터 세트를 실행할 수 없습니다. 사용자 데이터 원본 자격 증명이 보고서 서버 데이터베이스에 저장되어 있지 않거나, 사용자 데이터 원본이 자격 증명을 요구하지 않도록 구성되어 있지만 무인 실행 계정이 지정되어 있지 않습니다.
+- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI 배달 오류: 대시보드: IT 지출 분석 샘플, visual: Chart2, 오류: 현재 작업을 완료할 수 없습니다. 사용자 데이터 원본 자격 증명이 요구 사항을 준수하지 않아 이 보고서 또는 공유 데이터 세트를 실행할 수 없습니다. 사용자 데이터 원본 자격 증명이 보고서 서버 데이터베이스에 저장되어 있지 않거나, 사용자 데이터 원본이 자격 증명을 요구하지 않도록 구성되어 있지만 무인 실행 계정이 지정되어 있지 않습니다.
 
-- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e 오류: 구독 fcdb8581-d763-4b3b-ba3e-8572360df4f9을 처리하던 중에 발생한 오류: PowerBI 배달 오류: 대시보드: IT 지출 분석 샘플, 시각적 개체: Chart2, 오류: 현재 작업을 완료할 수 없습니다. 사용자 데이터 원본 자격 증명이 요구 사항을 준수하지 않아 이 보고서 또는 공유 데이터 집합을 실행할 수 없습니다. 사용자 데이터 원본 자격 증명이 보고서 서버 데이터베이스에 저장되어 있지 않거나, 사용자 데이터 원본이 자격 증명을 요구하지 않도록 구성되어 있지만 무인 실행 계정이 지정되어 있지 않습니다.
+- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI 배달 오류: 대시보드: IT 지출 분석 샘플, visual: Chart2, 오류: 현재 작업을 완료할 수 없습니다. 사용자 데이터 원본 자격 증명이 요구 사항을 준수하지 않아 이 보고서 또는 공유 데이터 집합을 실행할 수 없습니다. 사용자 데이터 원본 자격 증명이 보고서 서버 데이터베이스에 저장되어 있지 않거나, 사용자 데이터 원본이 자격 증명을 요구하지 않도록 구성되어 있지만 무인 실행 계정이 지정되어 있지 않습니다.
 
-## <a name="bkmk_steps2integrate"></a> 보고서 서버를 통합하고 등록하려면
+## <a name="to-integrate-and-register-the-report-server"></a><a name="bkmk_steps2integrate"></a> 보고서 서버를 통합하고 등록하려면
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자에서 다음 단계를 완료합니다. 자세한 내용은 [Reporting Services 구성 관리자](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)를 참조하세요.
 
@@ -60,7 +60,7 @@ ms.locfileid: "68265639"
 
 5. 향후 참조를 위해 저장할 수 있도록 **결과** 창에서 **복사** 단추를 선택하여 Windows 클립보드에 등록 정보를 복사합니다.
 
-## <a name="bkmk_unregister"></a> Power BI 등록 취소
+## <a name="unregister-with-power-bi"></a><a name="bkmk_unregister"></a> Power BI 등록 취소
 
 **등록 취소:** Azure Active Directory에서 보고서 서버의 등록을 취소하면 다음과 같은 상황이 발생합니다.
 
@@ -74,7 +74,7 @@ ms.locfileid: "68265639"
 
 구성 관리자의 **Power BI** 페이지에서 **Power BI 등록 취소** 단추를 선택합니다.
 
-##  <a name="bkmk_updateregistration"></a> 등록 업데이트
+##  <a name="update-registration"></a><a name="bkmk_updateregistration"></a> 등록 업데이트
 
 보고서 서버의 구성이 변경된 경우 **등록 업데이트** 를 사용합니다. 예를 들어 사용자가 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]로 이동하는 데 사용하는 URL을 추가하거나 제거하려는 경우가 여기에 해당합니다.
 
@@ -90,7 +90,7 @@ ms.locfileid: "68265639"
 
      Azure AD에 로그인하라는 메시지가 표시됩니다. 페이지가 새로 고쳐지고 **리디렉션 URL**에 새 URL이 나열됩니다.
 
-##  <a name="bkmk_integration_process"></a> Power BI 통합 및 고정 프로세스 요약
+##  <a name="summary-of-the-power-bi-integration-and-pin-process"></a><a name="bkmk_integration_process"></a> Power BI 통합 및 고정 프로세스 요약
 
 이 섹션에서는 보고서 서버를 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 와 통합하고 보고서 항목을 대시보드에 고정할 때의 관련 기술 및 기본 단계를 요약합니다.
 

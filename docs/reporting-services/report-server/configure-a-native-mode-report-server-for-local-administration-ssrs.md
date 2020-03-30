@@ -16,10 +16,10 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 535284c89f54fb39f448a71e5484e81c1a9d31af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080890"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>로컬 관리에 대해 기본 모드 보고서 서버 구성(SSRS)
@@ -57,19 +57,19 @@ ms.locfileid: "77080890"
   
 -   [추가 정보](#bkmk_addiitonal_informaiton)  
   
-##  <a name="bkmk_configuraiton_overview"></a>구성 변경 개요  
+##  <a name="overview-of-configuration-changes"></a><a name="bkmk_configuraiton_overview">구성 변경 개요</a>  
  다음 구성 변경은 표준 사용자 권한을 사용하여 보고서 서버 내용 및 작업을 관리할 수 있도록 서버를 구성합니다.  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL을 신뢰할 수 있는 사이트에 추가합니다. 기본적으로 위에 나와 있는 운영 체제에서 실행되는 Internet Explorer는 **보호 모드**로 실행됩니다. 이 모드는 같은 컴퓨터에서 실행되는 높은 수준의 프로세스에 브라우저 요청이 도달하지 못하도록 차단하는 기능입니다. 이 URL을 신뢰할 수 있는 사이트에 추가하면 보고서 서버 애플리케이션에 대한 보호 모드를 해제할 수 있습니다.  
   
 -   Internet Explorer에서 **관리자 권한으로 실행** 기능을 사용하지 않고도 보고서 서버 관리자에게 내용 및 작업을 관리하는 권한을 부여하는 역할 할당을 만듭니다. Windows 사용자 계정에 대한 역할 할당을 만들면 Reporting Services에서 만드는 미리 정의된 기본 제공 역할 할당을 대체하는 명시적인 역할 할당을 통해 내용 관리자 및 시스템 관리자 권한으로 보고서 서버에 액세스할 수 있습니다.  
   
-##  <a name="bkmk_configure_local_server"></a> 로컬 보고서 서버 및 웹 포털 관리를 구성하려면  
+##  <a name="to-configure-local-report-server-and-web-portal-administration"></a><a name="bkmk_configure_local_server"></a> 로컬 보고서 서버 및 웹 포털 관리를 구성하려면  
  로컬 보고서 서버로 이동하는 동안 다음과 유사한 오류가 나타나면 이 섹션의 구성 단계를 완료합니다.  
   
 -   사용자 `'Domain\[user name]`'에게 필요한 권한이 없습니다. 충분한 권한이 부여되고 Windows UAC(사용자 계정 컨트롤) 제한이 해결되었는지 확인하세요.  
   
-###  <a name="bkmk_site_settings"></a> 브라우저의 신뢰할 수 있는 사이트 설정  
+###  <a name="trusted-site-settings-in-the-browser"></a><a name="bkmk_site_settings"></a> 브라우저의 신뢰할 수 있는 사이트 설정  
   
 1.  관리자 권한으로 실행 권한을 사용하여 브라우저 창을 엽니다. **시작** 메뉴에서 **Internet Explorer**를 마우스 오른쪽 단추로 클릭한 다음, **관리자 권한으로 실행**을 선택합니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "77080890"
   
 12. **확인**을 선택합니다.  
   
-###  <a name="bkmk_configure_folder_settings"></a> 웹 포털 폴더 설정  
+###  <a name="web-portal-folder-settings"></a><a name="bkmk_configure_folder_settings"></a> 웹 포털 폴더 설정  
   
 1.  웹 포털의 홈페이지에서 **폴더 관리**를 클릭합니다.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "77080890"
   
 6.  **확인**을 선택합니다.  
   
-###  <a name="bkmk_configure_site_settings"></a> 웹 포털 사이트 설정  
+###  <a name="web-portal-site-settings"></a><a name="bkmk_configure_site_settings"></a> 웹 포털 사이트 설정  
   
 1.  관리자 권한으로 브라우저를 열고 웹 포털 `https://<server name>/reports`로 이동합니다.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "77080890"
   
 8. **관리자 권한으로 실행**을 사용하지 않고 Internet Explorer에서 웹 포털을 다시 엽니다.  
   
-##  <a name="bkmk_configure_ssms"></a> 로컬 보고서 서버 관리에 대해 SSMS(SQL Server Management Studio)를 구성하려면  
+##  <a name="to-configure-sql-server-management-studio-ssms-for-local-report-server-administration"></a><a name="bkmk_configure_ssms"></a> 로컬 보고서 서버 관리에 대해 SSMS(SQL Server Management Studio)를 구성하려면  
  기본적으로 관리자 권한으로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 시작해야 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 사용할 수 있는 모든 보고서 서버 속성에 액세스할 수 있습니다.  
   
  **매번 승격된 권한으로 SSDT를 시작할 필요가 없도록 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** 를 시작할 필요가 없도록 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 역할 속성 및 역할 할당을 구성하려면  
@@ -152,7 +152,7 @@ ms.locfileid: "77080890"
   
  이제 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 열 때 **관리자 권한으로 실행** 을 명시적으로 선택하지 않아도 보고서 서버 속성에 액세스할 수 있습니다.  
   
-##  <a name="bkmk_configure_ssdt"></a> 로컬 보고서 서버에 게시하도록 SSDT(SQL Server Data Tools)를 구성하려면  
+##  <a name="to-configure-sql-server-data-tools-ssdt-to-publish-to-a-local-report-server"></a><a name="bkmk_configure_ssdt"></a> 로컬 보고서 서버에 게시하도록 SSDT(SQL Server Data Tools)를 구성하려면  
  이 항목의 첫 번째 섹션에 나와 있는 운영 체제 중 하나에 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 를 설치했고 SSDT가 로컬 기본 모드 보고서 서버와 상호 작용하도록 하려는 경우 승격된 권한으로 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 열지 않거나 Reporting Services 역할을 구성하지 않으면 권한 오류가 발생합니다. 예를 들어 충분한 권한이 없으면 다음과 유사한 문제가 발생합니다.  
   
 -   보고서 항목을 로컬 보고서 서버에 배포하려고 하면 **오류 목록** 창에 다음과 유사한 오류 메시지가 표시됩니다.  
@@ -171,7 +171,7 @@ ms.locfileid: "77080890"
   
 -   이 항목 앞부분의 [웹 포털 폴더 설정](#bkmk_configure_folder_settings) 및 [웹 포털 사이트 설정](#bkmk_configure_site_settings) 섹션을 참조하세요.  
   
-##  <a name="bkmk_addiitonal_informaiton"></a> 추가 정보  
+##  <a name="additional-information"></a><a name="bkmk_addiitonal_informaiton"></a> 추가 정보  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 관리와 관련된 일반적인 추가 구성 단계는 보고서 서버 컴퓨터에 대한 액세스를 허용하도록 Windows 방화벽에서 포트 80을 여는 것입니다. 자세한 내용은 [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

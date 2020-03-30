@@ -16,10 +16,10 @@ ms.assetid: cd2418c9-e95d-4820-82bd-944287387b60
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a4359c68d2376d933e919a03dcd230a9df9ea307
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67968925"
 ---
 # <a name="supportssavepoints-method-sqlserverdatabasemetadata"></a>supportsSavepoints 메서드(SQLServerDatabaseMetaData)

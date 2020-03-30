@@ -17,10 +17,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
 ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70873887"
 ---
 # <a name="edge-constraints"></a>에지 제약 조건
@@ -29,7 +29,7 @@ ms.locfileid: "70873887"
 
 에지 제약 조건은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 그래프 데이터베이스의 에지 테이블에 데이터 무결성 및 특정 의미 체계를 적용하는 데 사용할 수 있습니다.
 
-## <a name="Connection"></a> 에지 제약 조건
+## <a name="edge-constraints"></a><a name="Connection"></a> 에지 제약 조건
 
 그래프 기능의 첫 번째 릴리스에서 에지 테이블은 에지 엔드포인트에 대해 어떤 작업도 적용하지 않습니다. 즉, 그래프 데이터베이스의 에지는 해당 형식에 관계없이 노드를 다른 노드에 연결할 수 있습니다.
 

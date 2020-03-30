@@ -10,10 +10,10 @@ ms.assetid: 20b99363-0490-4aa3-9a3d-262f827d81e8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4ab490b9c392f10abf4314dd70d760695d13a70f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68126157"
 ---
 # <a name="local-language-versions-in-sql-server"></a>SQL Server의 로컬 언어 버전
@@ -31,7 +31,7 @@ ms.locfileid: "68126157"
   
 -   지역화된 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 영어 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스와 함께 설치할 수도 있습니다.  
   
-##  <a name="BK_ConfigureOS"></a> Configure Operating System to Support Localized Versions  
+##  <a name="configure-operating-system-to-support-localized-versions"></a><a name="BK_ConfigureOS"></a> Configure Operating System to Support Localized Versions  
  Windows MUI(Multilingual User Interface Pack) 설정을 사용하면 지원되는 운영 체제의 영어 버전에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 해당 언어 버전을 사용할 수 있습니다.  
   
  그러나 영어 이외의 MUI 설정을 포함하는 영어 운영 체제가 실행되는 서버에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 해당 언어 버전을 설치하기 전에 특정 운영 체제 설정을 확인해야 합니다. 다음 운영 체제 설정이 설치할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 언어와 일치하는지 확인해야 합니다.  

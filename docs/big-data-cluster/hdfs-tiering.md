@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 008a62d3d36acf96b0c63559cd4d8ecbf27641c1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190399"
 ---
 # <a name="configure-hdfs-tiering-on-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에서 HDFS 계층화 구성
@@ -57,7 +57,7 @@ Azure Data Lake Storage Gen2 및 Amazon S3에 연결하도록 지원됩니다. �
 - [빅 데이터 클러스터에 HDFS 계층화를 위한 ADLS Gen2를 탑재하는 방법](hdfs-tiering-mount-adlsgen2.md)
 - [빅 데이터 클러스터에 HDFS 계층화를 위한 S3를 탑재하는 방법](hdfs-tiering-mount-s3.md)
 
-## <a id="issues"></a> 알려진 이슈 및 제한 사항
+## <a name="known-issues-and-limitations"></a><a id="issues"></a> 알려진 이슈 및 제한 사항
 
 다음 목록은 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에서 HDFS 계층화를 사용하는 경우의 알려진 이슈 및 현재 제한 사항을 제공합니다.
 

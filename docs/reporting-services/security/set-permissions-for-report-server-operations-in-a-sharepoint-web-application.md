@@ -16,10 +16,10 @@ ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ce5ddca1cb39d7d4f375232e3588900b5b1ebe6a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570592"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>SharePoint 웹 애플리케이션에서 보고서 서버 작업에 대한 사용 권한 설정
@@ -51,7 +51,7 @@ ms.locfileid: "65570592"
   
  "사용자 정보 찾아보기" 권한이 있는 경우 보고서 서버는 항목의 작성자 및 항목을 마지막으로 수정한 사용자에 대한 정보를 반환할 수 있습니다. 이 사용 권한이 없는 경우 보고서 서버는 다음 오류를 반환합니다. 찾아보기 작업의 경우 "보고서 서버에 SharePoint 오류가 발생했습니다. ---> System.UnauthorizedAccessException: 액세스가 거부되었습니다."라는 오류가 반환됩니다. 게시 작업의 경우 "사용자에게 부여된 권한인 '\<domain>\\<user\>'로는 이 작업을 수행할 수 없습니다."라는 오류가 발생합니다.  
   
-##  <a name="permissionReports"></a> 보고서 보기 및 관리 권한  
+##  <a name="permissions-for-viewing-and-managing-reports"></a><a name="permissionReports"></a> 보고서 보기 및 관리 권한  
  보고서 정의 권한은 보고서가 포함된 라이브러리의 목록 사용 권한을 통해 정의되지만 액세스를 제한하려는 경우 개별 보고서에 대해 사용 권한을 설정할 수 있습니다. 다음 표에서는 태스크 목록과 각 태스크를 지원하는 사용 권한을 설명합니다.  
   
 |Task|사용 권한|  
@@ -69,7 +69,7 @@ ms.locfileid: "65570592"
 |보고서 기록의 스냅샷 삭제, 시간에 따라 체크 아웃 및 수정된 보고서 정의의 특정 버전 삭제|보고서 기록을 삭제하려는 보고서가 포함된 라이브러리에 대한**버전 삭제** 권한|  
 |보고서 기록의 스냅샷 보기, 시간에 따라 체크 아웃 및 수정된 보고서 정의의 특정 버전 보기|보고서가 포함된 라이브러리에 대한**버전 보기** 권한|  
   
-##  <a name="permissionReportBuilder"></a> 보고서 생성 및 보고서 작성기 사용 권한  
+##  <a name="permissions-for-creating-reports-and-using-report-builder"></a><a name="permissionReportBuilder"></a> 보고서 생성 및 보고서 작성기 사용 권한  
  보고서 작성기는 임시 보고서를 만드는 데 사용할 수 있는 보고서 제작 도구입니다. 보고서 작성기는 보고서 모델을 데이터 원본으로 사용하여 임시 데이터 탐색 작업을 지원합니다. 보고서 작성기에서 모델을 로드하여 보고서를 생성 및 실행하고, 모델의 데이터를 클릭 광고하고, 필요에 따라 보고서를 라이브러리에 저장할 수 있습니다. 충분한 사용 권한이 있는 사용자는 이후에 동일한 보고서를 열고 임시 데이터 탐색 작업을 수행할 수도 있습니다.  
   
 > [!NOTE]  
@@ -90,7 +90,7 @@ ms.locfileid: "65570592"
   
  구독 및 보고서 기록을 만들고 사용할 권한과 보고서 작성기 보고서에 대해 보고서 또는 데이터 처리 옵션을 설정할 권한은 표준 보고서 정의 파일에 대해 동일한 동작을 수행하는 데 사용되는 권한과 같습니다.  
   
-##  <a name="permissionSharedSchedules"></a> 공유 일정 생성 및 관리 권한  
+##  <a name="permissions-for-creating-and-managing-shared-schedules"></a><a name="permissionSharedSchedules"></a> 공유 일정 생성 및 관리 권한  
  공유 일정은 라이브러리에 저장된 문서가 아닙니다. 따라서 이러한 일정을 만들고 관리하려면 사이트 사용 권한이 필요합니다. 특정 공유 일정에 대한 액세스 권한은 제한할 수 없습니다. 만드는 모든 공유 일정은 사이트 전반에서 열기 권한을 보유한 모든 사용자가 사용할 수 있습니다.  
   
  다음 표에서는 공유 일정을 만들고, 관리하고, 사용하기 위한 태스크 목록과 사용 권한을 설명합니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "65570592"
 |공유 일정 만들기, 편집 또는 삭제|사이트에 대한**웹 사이트 관리** 권한|  
 |구독 처리 또는 데이터 검색을 위해 공유 일정 선택|라이브러리가 포함된 사이트에 대한**열기** 권한|  
   
-##  <a name="permissionSubscriptions"></a> 구독 생성 및 관리 권한  
+##  <a name="permissions-for-creating-and-managing-subscriptions"></a><a name="permissionSubscriptions"></a> 구독 생성 및 관리 권한  
  SharePoint는 구독과 보기 권한 간에 종속성을 강제 적용합니다. 이에 따라 볼 권한이 없는 보고서는 구독할 수 없습니다. 보고서를 구독할 권한을 부여하면 자동으로 보기 권한이 부여됩니다.  
   
  다음 표에서는 구독을 만들고, 관리하고, 사용하기 위한 태스크 목록과 사용 권한을 설명합니다.  
@@ -111,7 +111,7 @@ ms.locfileid: "65570592"
 |구독에 사용할 공유 일정 선택|라이브러리가 포함된 사이트에 대한**열기** 권한|  
 |사이트 전반에서 구독 만들기, 편집 또는 삭제|사이트에 대한**알림 관리** 권한|  
   
-##  <a name="permissionDataSources"></a> 공유 데이터 원본/보고서 모델 생성 및 관리 권한  
+##  <a name="permissions-for-creating-and-managing-shared-data-sources-and-report-models"></a><a name="permissionDataSources"></a> 공유 데이터 원본/보고서 모델 생성 및 관리 권한  
  공유 데이터 원본 파일(.rsds)에는 여러 보고서 및 모델에서 사용할 수 있는 데이터 원본 연결 정보가 포함되어 있습니다. 표준 보고서의 경우 .rsds 파일을 사용하여 데이터 원본 연결 정보를 지정하는 작업은 선택 사항입니다. 그러나 모델 기반 보고서의 경우에는 .rsds 파일을 반드시 사용해야 합니다. 보고서 모델은 항상 .rsds 파일을 사용하여 외부 데이터 원본에 연결합니다.  
   
  개별 사용자가 공유 데이터 원본을 보거나 관리할 수 있는지 여부를 결정하는 공유 데이터 원본의 속성을 설정할 수 있습니다. 공유 데이터 원본을 보거나 관리할 권한은 보고서 보기 권한과 다릅니다. .rsds 파일 자체에 대한 보기 권한이 없어도 .rsds 파일을 사용하는 보고서를 볼 수 있습니다.  

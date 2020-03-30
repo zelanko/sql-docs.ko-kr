@@ -9,10 +9,10 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73637981"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>자습서: 드릴스루 보고서 및 주 보고서 만들기(보고서 작성기)
@@ -35,7 +35,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
     
 일반적인 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
   
-## <a name="DMatrixAndDataset"></a>1. 테이블 또는 행렬 마법사에서 드릴스루 보고서 만들기  
+## <a name="1-create-a-drillthrough-report-from-the-table-or-matrix-wizard"></a><a name="DMatrixAndDataset"></a>1. 테이블 또는 행렬 마법사에서 드릴스루 보고서 만들기  
 시작 대화 상자에서 **테이블 또는 행렬 마법사**를 사용하여 행렬 보고서를 만듭니다. 마법사에서는 두 가지 모드인 보고서 디자인 모드와 공유 데이터 세트 디자인 모드를 사용할 수 있습니다. 이 자습서에서는 보고서 디자인 모드를 사용합니다.  
   
 #### <a name="to-create-a-new-report"></a>새 보고서를 만들려면  
@@ -50,7 +50,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 3.  오른쪽 창에서 **테이블 또는 행렬 마법사** 가 선택되어 있는지 확인합니다.  
   
-## <a name="DConnection"></a>1a. 데이터 연결 지정  
+## <a name="1a-specify-a-data-connection"></a><a name="DConnection"></a>1a. 데이터 연결 지정  
 데이터 연결은 Analysis Services 큐브 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스와 같은 외부 데이터 원본에 연결하는 데 필요한 정보를 포함합니다. 데이터 연결을 지정하기 위해 보고서 서버의 공유 데이터 원본을 사용하거나 이 보고서에만 사용되는 포함된 데이터 원본을 만들 수 있습니다. 이 자습서에서는 포함된 데이터 원본을 사용합니다. 공유 데이터 원본 사용 방법에 대한 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)를 참조하세요.  
   
 #### <a name="to-create-an-embedded-data-source"></a>포함된 데이터 원본을 만들려면  
@@ -96,7 +96,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 14. **다음**을 클릭합니다.  
   
-## <a name="DMDXQuery"></a>1b. MDX 쿼리 만들기  
+## <a name="1b-create-an-mdx-query"></a><a name="DMDXQuery"></a>1b. MDX 쿼리 만들기  
 보고서에서는 미리 정의된 쿼리가 포함된 공유 데이터 세트를 사용하거나 해당 보고서에만 사용할 포함된 데이터 세트를 만들 수 있습니다. 이 자습서에서는 포함된 데이터 세트를 만듭니다.  
   
 #### <a name="to-create-query-filters"></a>쿼리 필터를 만들려면  
@@ -149,7 +149,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
     > [!NOTE]  
     > 매개 변수에는 제품 범주의 이름이 포함됩니다. 주 보고서에서 제품 범주 이름을 클릭하면 해당 이름이 이 매개 변수를 사용하여 드릴스루 보고서로 전달됩니다.  
   
-### <a name="DSkip"></a>데이터 세트를 만들려면  
+### <a name="to-create-the-dataset"></a><a name="DSkip"></a>데이터 세트를 만들려면  
   
 1.  Channel 차원에서 Channel Name을 데이터 창으로 끕니다.  
   
@@ -165,7 +165,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 7.  **다음**을 클릭합니다.  
   
-## <a name="DLayout"></a>1c. 데이터를 그룹으로 구성  
+## <a name="1c-organize-data-into-groups"></a><a name="DLayout"></a>1c. 데이터를 그룹으로 구성  
 데이터를 그룹화할 필드를 선택할 때 세부 데이터와 집계 데이터가 표시되는 행과 열이 포함된 행렬을 디자인합니다.  
   
 #### <a name="to-organize-data-into-groups"></a>데이터를 그룹으로 구성하려면  
@@ -191,7 +191,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 6.  **다음**을 클릭합니다.  
   
-## <a name="DTotals"></a>1d. 부분합 및 합계 추가  
+## <a name="1d-add-subtotals-and-totals"></a><a name="DTotals"></a>1d. 부분합 및 합계 추가  
 그룹을 만든 후 필드에 대한 집계 값을 표시할 행을 추가하고 행 서식을 지정할 수 있습니다. 또한 모든 데이터를 표시할지 또는 사용자가 그룹화된 데이터를 대화형으로 확장하거나 축소할 수 있도록 할지 여부를 선택할 수 있습니다.  
   
 #### <a name="to-add-subtotals-and-totals"></a>부분합 및 합계를 추가하려면  
@@ -208,7 +208,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 3.  보고서를 미리 보려면 **실행(!)** 을 클릭합니다.  
   
-## <a name="DFormat"></a>2. 데이터 서식을 통화로 지정  
+## <a name="2-format-data-as-currency"></a><a name="DFormat"></a>2. 데이터 서식을 통화로 지정  
 드릴스루 보고서의 판매량 필드에 통화 서식을 적용합니다.  
   
 #### <a name="to-format-data-as-currency"></a>데이터 서식을 통화로 지정하려면  
@@ -219,7 +219,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 3.  **홈** 탭의 **숫자** 그룹에서 **통화**를 클릭합니다.  
   
-## <a name="DSparkline"></a>3. 스파크라인에 판매 값을 표시하는 열 추가  
+## <a name="3-add-columns-to-show-sales-values-in-sparklines"></a><a name="DSparkline"></a>3. 스파크라인에 판매 값을 표시하는 열 추가  
 보고서는 판매량 및 판매 수익을 통화 값으로 표시하는 대신 스파크라인에서 값을 표시합니다.  
   
 #### <a name="to-add-sparklines-to-columns"></a>열에 스파크라인을 추가하려면  
@@ -252,7 +252,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 13. 보고서를 미리 보려면 **실행**을 클릭합니다.  
   
-## <a name="DReportTitle"></a>4. 제품 범주 이름의 보고서 제목 추가  
+## <a name="4-add-report-title-with-product-category-name"></a><a name="DReportTitle"></a>4. 제품 범주 이름의 보고서 제목 추가  
 보고서 제목은 보고서 맨 위에 나타납니다. 보고서 제목을 보고서 머리글에 배치하거나, 보고서 머리글이 사용되지 않을 경우 보고서 본문의 맨 위에 있는 입력란에 배치할 수 있습니다. 이 자습서에서는 보고서 본문의 맨 위에 자동으로 표시되는 입력란을 사용합니다.  
   
 #### <a name="to-add-a-report-title"></a>보고서 제목을 추가하려면  
@@ -279,7 +279,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 보고서 제목에 첫 번째 제품 범주의 이름이 포함됩니다. 나중에 이 보고서를 드릴스루 보고서로 실행하면 제품 범주 이름이 주 보고서에서 클릭된 제품 범주의 이름을 반영하도록 동적으로 변경됩니다.  
   
-## <a name="DParameter"></a>5. 매개 변수 속성 업데이트  
+## <a name="5-update-parameter-properties"></a><a name="DParameter"></a>5. 매개 변수 속성 업데이트  
 기본적으로 매개 변수가 표시되는데 이는 이 보고서의 경우 적합하지 않습니다. 따라서 드릴스루 보고서에 대한 매개 변수 속성을 업데이트할 것입니다.  
   
 #### <a name="to-hide-a-parameter"></a>매개 변수를 숨기려면  
@@ -302,7 +302,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="DSave"></a>6. SharePoint 라이브러리에 보고서 저장  
+## <a name="6-save-the-report-to-a-sharepoint-library"></a><a name="DSave"></a>6. SharePoint 라이브러리에 보고서 저장  
 보고서를 SharePoint 라이브러리, 보고서 서버 또는 컴퓨터에 저장할 수 있습니다. 보고서를 컴퓨터에 저장하면 보고서 파트 및 하위 보고서와 같은 여러 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능을 사용할 수 없습니다. 이 자습서에서는 이 보고서를 SharePoint 라이브러리에 저장합니다.  
   
 #### <a name="to-save-the-report"></a>보고서를 저장하려면  
@@ -335,7 +335,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 7.  **저장**을 클릭합니다.  
   
-## <a name="MMatrixAndDataset"></a>1. 테이블 또는 행렬 마법사에서 주 보고서 만들기  
+## <a name="1-create-the-main-report-from-the-table-or-matrix-wizard"></a><a name="MMatrixAndDataset"></a>1. 테이블 또는 행렬 마법사에서 주 보고서 만들기  
 **시작** 대화 상자에서 **테이블 또는 행렬 마법사**를 사용하여 행렬 보고서를 만듭니다.  
   
 #### <a name="to-create-the-main-report"></a>주 보고서를 만들려면  
@@ -348,7 +348,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
  
 2.  **시작** 대화 상자에서 **새 보고서** 가 선택되어 있는지 확인한 다음 **테이블 또는 행렬 마법사**를 클릭합니다.  
   
-## <a name="MConnection"></a>1a. 데이터 연결 지정  
+## <a name="1a-specify-a-data-connection"></a><a name="MConnection"></a>1a. 데이터 연결 지정  
 포함된 데이터 원본을 주 보고서에 추가합니다.  
   
 #### <a name="to-create-an-embedded-data-source"></a>포함된 데이터 원본을 만들려면  
@@ -387,7 +387,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 14. **다음**을 클릭합니다.  
   
-## <a name="MMDXQuery"></a>1b. MDX 쿼리 만들기  
+## <a name="1b-create-an-mdx-query"></a><a name="MMDXQuery"></a>1b. MDX 쿼리 만들기  
 다음으로, 포함된 데이터 세트를 만듭니다. 이렇게 하려면 쿼리 디자이너를 사용하여 필터, 매개 변수 및 계산 멤버는 물론 데이터 세트 자체를 만듭니다.  
   
 #### <a name="to-create-query-filters"></a>쿼리 필터를 만들려면  
@@ -469,7 +469,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 8.  **이름** 상자에  **Net Sales**를 입력한 다음 **확인**을 클릭합니다. 계산 멤버 창에 **Net Sales** 계산 멤버가 나열됩니다.  
   
-### <a name="MSkip"></a>데이터 세트를 만들려면  
+### <a name="to-create-the-dataset"></a><a name="MSkip"></a>데이터 세트를 만들려면  
   
 1.  Channel 차원에서 Channel Name을 데이터 창으로 끕니다.  
   
@@ -485,7 +485,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 6.  **다음**을 클릭합니다.  
   
-## <a name="MLayout"></a>1c. 데이터를 그룹으로 구성  
+## <a name="1c-organize-data-into-groups"></a><a name="MLayout"></a>1c. 데이터를 그룹으로 구성  
 데이터를 그룹화할 필드를 선택할 때 세부 데이터와 집계 데이터가 표시되는 행과 열이 포함된 행렬을 디자인합니다.  
   
 #### <a name="to-organize-data-into-groups"></a>데이터를 그룹으로 구성하려면  
@@ -504,7 +504,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
     3 ~ 4단계에서는 행렬에 표시할 데이터를 지정했습니다.  
   
-## <a name="MTotals"></a>1d. 부분합 및 합계 추가  
+## <a name="1d-add-subtotals-and-totals"></a><a name="MTotals"></a>1d. 부분합 및 합계 추가  
 보고서에서 부분합 및 총합계를 표시할 수 있습니다. 주 보고서의 데이터가 표시기로 표시됩니다. 사용자는 마법사를 완료한 후 총합계를 제거합니다.  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>부분합 및 총합계를 추가하려면  
@@ -519,7 +519,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 3.  보고서를 미리 보려면 **실행**을 클릭합니다.  
   
-## <a name="MGrandTotal"></a>2. 총합계 행 제거  
+## <a name="2-remove-the-grand-total-row"></a><a name="MGrandTotal"></a>2. 총합계 행 제거  
 데이터 값은 열 그룹 합계를 포함하여 표시기 상태로 표시됩니다. 총합계를 표시하는 행을 제거합니다.  
   
 #### <a name="to-remove-the-grand-total-row"></a>총합계 행을 제거하려면  
@@ -530,7 +530,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 3.  보고서를 미리 보려면 **실행**을 클릭합니다.  
   
-## <a name="MDrillthrough"></a>3. 드릴스루에 대한 입력란 동작 구성  
+## <a name="3-configure-text-box-action-for-drillthrough"></a><a name="MDrillthrough"></a>3. 드릴스루에 대한 입력란 동작 구성  
 드릴스루를 활성화하려면 주 보고서에서 입력란에 대한 동작을 지정합니다.  
   
 #### <a name="to-enable-an-action"></a>동작을 활성화하려면  
@@ -574,7 +574,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 제품 범주 이름은 파랑의 밑줄이 지정된 공통적인 링크 형식입니다.  
   
-## <a name="MIndicators"></a>4. 숫자 값을 표시기로 바꾸기  
+## <a name="4-replace-numeric-values-with-indicators"></a><a name="MIndicators"></a>4. 숫자 값을 표시기로 바꾸기  
 표시기를 사용하여 온라인 및 대리점 채널에 대한 수량 및 판매 상태를 표시합니다.  
   
 #### <a name="to-add-an-indicator-for-net-qty-values"></a>Net QTY 값에 대한 표시기를 추가하려면  
@@ -605,7 +605,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 6.  보고서를 미리 보려면 **실행**을 클릭합니다.  
   
-## <a name="MParameter"></a>5. 매개 변수 속성 업데이트  
+## <a name="5-update-parameter-properties"></a><a name="MParameter"></a>5. 매개 변수 속성 업데이트  
 기본적으로 매개 변수가 표시되는데 이는 이 보고서의 경우 적합하지 않습니다. 매개 변수를 내부 매개 변수로 만들도록 매개 변수 속성을 업데이트합니다.  
   
 #### <a name="to-make-the-parameter-internal"></a>매개 변수를 내부 매개 변수로 만들려면  
@@ -620,7 +620,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="MTitle"></a>6. 보고서 제목 추가  
+## <a name="6-add-a-report-title"></a><a name="MTitle"></a>6. 보고서 제목 추가  
 주 보고서에 제목을 추가합니다.  
   
 #### <a name="to-add-a-report-title"></a>보고서 제목을 추가하려면  
@@ -635,7 +635,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 5.  보고서를 미리 보려면 **실행**을 클릭합니다.  
   
-## <a name="MSave"></a>7. SharePoint 라이브러리에 주 보고서 저장  
+## <a name="7-save-the-main-report-to-a-sharepoint-library"></a><a name="MSave"></a>7. SharePoint 라이브러리에 주 보고서 저장  
 SharePoint 라이브러리에 주 보고서를 저장합니다.  
   
 #### <a name="to-save-the-report"></a>보고서를 저장하려면  
@@ -661,7 +661,7 @@ SharePoint 라이브러리에 주 보고서를 저장합니다.
   
 7.  **저장**을 클릭합니다.  
   
-## <a name="MRunReports"></a>8. 주 보고서 및 드릴스루 보고서 실행  
+## <a name="8-run-the-main-and-drillthrough-reports"></a><a name="MRunReports"></a>8. 주 보고서 및 드릴스루 보고서 실행  
 주 보고서를 실행한 다음 제품 범주 열의 값을 클릭하여 드릴스루 보고서를 실행합니다.  
   
 #### <a name="to-run-the-reports"></a>보고서를 실행하려면  

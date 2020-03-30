@@ -26,10 +26,10 @@ ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6eeec8517b9b55e30eb51abc25fefed0b36b2a79
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65579010"
 ---
 # <a name="manage-a-running-process"></a>실행 중인 프로세스 관리
@@ -64,7 +64,7 @@ ms.locfileid: "65579010"
   
 -   [프로그래밍 방식으로 작업 관리](#bkmk_programmatically)  
   
-##  <a name="bkmk_native"></a> 작업 보기 및 취소(기본 모드)  
+##  <a name="view-and-cancel-jobs-native-mode"></a><a name="bkmk_native"></a> 작업 보기 및 취소(기본 모드)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하여 보고서 서버에서 실행 중인 작업을 보거나 취소할 수 있습니다. 현재 실행 중인 작업 목록을 검색하거나 보고서 서버 데이터베이스에서 최신 작업 상태를 가져오려면 페이지를 새로 고쳐야 합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 보고서 서버에 연결하면 작업 폴더를 열어 보고서 서버 컴퓨터에서 현재 처리 중인 보고서 목록을 볼 수 있습니다. 각 작업에 대한 상태 정보는 작업 속성 페이지에 표시됩니다. 보고서 서버 작업 취소 대화 상자를 열어 모든 작업에 대한 상태 정보를 볼 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하여 보고서 서버에서 실행 중인 작업을 보거나 취소할 수 있습니다. 현재 실행 중인 작업 목록을 검색하거나 보고서 서버 데이터베이스에서 최신 작업 상태를 가져오려면 페이지를 새로 고쳐야 합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 보고서 서버에 연결하면 작업 폴더를 열어 보고서 서버 컴퓨터에서 현재 처리 중인 보고서 목록을 볼 수 있습니다. 각 작업에 대한 상태 정보는 작업 속성 페이지에 표시됩니다. 보고서 서버 작업 취소 대화 상자를 열어 모든 작업에 대한 상태 정보를 볼 수 있습니다.  
@@ -98,7 +98,7 @@ ms.locfileid: "65579010"
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>작업 상태 검색을 위한 빈도 설정 구성  
  실행 중인 작업은 보고서 서버 임시 데이터베이스에 저장됩니다. RSReportServer.config 파일에서 구성 설정을 수정하여 보고서 서버가 진행 중인 작업을 검색하는 빈도 및 실행 작업의 상태가 새 작업에서 실행 중인 작업으로 변경되는 간격을 제어할 수 있습니다. **RunningRequestsDbCycle** 설정은 보고서 서버가 실행 중인 프로세스를 검색하는 빈도를 지정합니다. 기본적으로 상태 정보는 60초마다 기록됩니다. **RunningRequestsAge** 설정은 작업이 새 작업에서 실행 중인 작업으로 전환되는 간격을 지정합니다.  
   
-##  <a name="bkmk_sharepoint"></a> 작업 보기 및 취소(SharePoint 모드)  
+##  <a name="view-and-cancel-jobs-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> 작업 보기 및 취소(SharePoint 모드)  
  SharePoint 모드 배포에서 작업 관리는 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대해 SharePoint 중앙 관리를 사용하여 완료됩니다.  
   
 #### <a name="to-manage-jobs-in-sharepoint-mode"></a>SharePoint 모드에서 작업을 관리하려면  
@@ -113,7 +113,7 @@ ms.locfileid: "65579010"
   
 5.  또는 작업에 대한 상자를 클릭하고 **삭제** 를 클릭하여 작업을 취소합니다. 작업을 삭제해도 구독은 삭제되지 않습니다.  
   
-##  <a name="bkmk_programmatically"></a> 프로그래밍 방식으로 작업 관리  
+##  <a name="managing-jobs-programmatically"></a><a name="bkmk_programmatically"></a> 프로그래밍 방식으로 작업 관리  
  프로그래밍 방식으로 또는 스크립트를 사용하여 작업을 관리할 수 있습니다. 자세한 내용은 <xref:ReportService2010.ReportingService2010.ListJobs%2A>, <xref:ReportService2010.ReportingService2010.CancelJob%2A>을 모두 관리할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

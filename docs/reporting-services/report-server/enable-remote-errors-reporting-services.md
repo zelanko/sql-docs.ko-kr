@@ -12,10 +12,10 @@ ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3b26db3656ee548e08f9e5d4737033bb3393a969
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73593878"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>원격 오류 활성화(Reporting Services)
@@ -31,7 +31,7 @@ ms.locfileid: "73593878"
   
 -   [ConfigurationInfo 테이블 수정(기본 모드)](#bkmk_ConfigurationInfo)  
   
-##  <a name="bkmk_sharepoint"></a> SharePoint 모드에 대한 원격 오류 사용  
+##  <a name="enable-remote-errors-for-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> SharePoint 모드에 대한 원격 오류 사용  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드에 대한 원격 오류 사용에는 두 가지 다른 프로시저가 있습니다. 서로 다른 두 보고서 서버 아키텍처에 따라 프로시저가 달라집니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 릴리스에서 도입된 새 SharePoint 서비스 기반 아키텍처는 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대해 구성될 수 있는 설정을 활용합니다. 이전 아키텍처는 단일 사이트 수준 설정을 활용합니다.  
   
 #### <a name="enable-remote-errors-for-a-reporting-services-service-application"></a>Reporting Services 서비스 애플리케이션에 대한 원격 오류 사용  
@@ -60,7 +60,7 @@ ms.locfileid: "73593878"
   
 5.  **확인**을 클릭합니다.  
   
-##  <a name="bkmk_mgtStudio"></a> SQL Server Management Studio를 통한 원격 오류 사용(기본 모드)  
+##  <a name="enable-remote-errors-through-sql-server-management-studio-native-mode"></a><a name="bkmk_mgtStudio"></a> SQL Server Management Studio를 통한 원격 오류 사용(기본 모드)  
   
 1.  Management Studio를 시작하여 보고서 서버 인스턴스에 연결합니다. 자세한 내용은 [Management Studio에서 보고서 서버에 연결](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)을 참조하세요.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "73593878"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="bkmk_script"></a> 스크립트를 통한 원격 오류 사용(기본 모드)  
+##  <a name="enable-remote-errors-through-script-native-mode"></a><a name="bkmk_script"></a> 스크립트를 통한 원격 오류 사용(기본 모드)  
   
 1.  텍스트 파일을 만들고 다음 스크립트를 파일에 복사합니다.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "73593878"
   
 6.  자세한 내용은 [RS.exe 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)를 참조하세요.  
   
-##  <a name="bkmk_ConfigurationInfo"></a> ConfigurationInfo 테이블 수정(기본 모드)  
+##  <a name="modifying-the-configurationinfo-table-native-mode"></a><a name="bkmk_ConfigurationInfo"></a> ConfigurationInfo 테이블 수정(기본 모드)  
   
 > [!NOTE]  
 >  보고서 서버 데이터베이스의 **ConfigurationInfo** 테이블을 편집하여 **EnableRemoteErrors** 를 **True**로 설정할 수 있지만 보고서 서버가 현재 사용 중인 경우 SQL Server Management Studio 또는 스크립트를 사용하여 설정을 수정해야 합니다. 데이터베이스에서 이 설정을 수정하는 경우 변경 내용을 적용하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 다시 시작해야 합니다.  

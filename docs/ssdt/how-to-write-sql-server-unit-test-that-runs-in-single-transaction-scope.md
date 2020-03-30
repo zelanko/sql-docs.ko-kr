@@ -11,17 +11,17 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 36bc1ac2a4a20dd0d05d90b8d12ff63b0a7a6b3e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246494"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>방법: 단일 트랜잭션 범위 내에서 실행되는 SQL Server 단위 테스트 작성
 
 단일 트랜잭션 범위 내에서 실행할 단위 테스트를 수정할 수 있습니다. 이 방법을 사용하는 경우 테스트가 종료된 후 테스트가 실행한 변경 내용을 롤백할 수 있습니다. 다음 절차에서는 아래 작업을 수행하는 방법에 대해 설명합니다.  
   
--   **BEGIN TRANSACTION** 및 **ROLLBACK TRANSACTION**을 사용하는 Transact\-SQL 테스트 스크립트에서 트랜잭션을 만듭니다.  
+-   \-BEGIN TRANSACTION**및**ROLLBACK TRANSACTION**을 사용하는 Transact**SQL 테스트 스크립트에서 트랜잭션을 만듭니다.  
   
 -   테스트 클래스의 단일 테스트 메서드에 대한 트랜잭션을 만듭니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "75246494"
     > [!NOTE]  
     > COMMIT TRANSACTION 문을 실행한 후에는 트랜잭션을 롤백할 수 없습니다.  
   
-    ROLLBACK TRANSACTION이 저장 프로시저 및 트리거와 함께 작동하는 방식에 대한 자세한 내용은 Microsoft 웹 사이트의 다음 페이지를 참조하세요. [ROLLBACK TRANSACTION(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkID=115927).  
+    ROLLBACK TRANSACTION이 저장 프로시저 및 트리거와 함께 작동하는 방식에 대한 자세한 내용은 Microsoft 웹 사이트의 [ROLLBACK TRANSACTION(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkID=115927) 페이지를 참조하세요.  
   
 ## <a name="to-create-a-transaction-for-a-single-test-method"></a>단일 테스트 메서드의 트랜잭션을 만들려면  
 이 예제에서는 [System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope) 형식을 사용할 때 앰비언트 트랜잭션을 사용합니다. 기본적으로 실행 연결 및 권한 있는 연결은 메서드가 실행되기 전에 만들어지므로 이 연결에서는 앰비언트 트랜잭션을 사용하지 않습니다. SqlConnection에는 활성 연결을 트랜잭션에 연결하는 [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction) 메서드가 있습니다. 앰비언트 트랜잭션이 만들어지면 현재 트랜잭션으로 등록되므로 [System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current) 속성을 통해 이 트랜잭션에 액세스할 수 있습니다. 이 예제에서는 앰비언트 트랜잭션이 삭제될 때 트랜잭션이 롤백됩니다. 단위 테스트를 실행할 때 변경된 내용을 커밋하려는 경우 [System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete) 메서드를 호출해야 합니다.  
@@ -108,7 +108,7 @@ ms.locfileid: "75246494"
     ```  
   
     > [!NOTE]  
-    > Visual Basic을 사용하고 있는 경우 `Imports Microsoft.VisualStudio.TestTools.UnitTesting`, `Imports Microsoft.VisualStudio.TeamSystem.Data.UnitTesting` 및 `Imports Microsoft.VisualStudio.TeamSystem.Data.UnitTest.Conditions`와 함께 `Imports System.Transactions`를 추가해야 합니다. Visual C#을 사용하고 있는 경우에는 Microsoft.VisualStudio.TestTools, Microsoft.VisualStudio.TeamSystem.Data.UnitTesting 및 Microsoft.VisualStudio.TeamSystem.Data.UnitTesting.Conditions에 대한 `using` 문과 함께 `using System.Transactions`를 추가해야 합니다. 또한 프로젝트에 대한 참조를 해당 어셈블리에 추가해야 합니다.  
+    > Visual Basic을 사용하고 있는 경우 `Imports System.Transactions`, `Imports Microsoft.VisualStudio.TestTools.UnitTesting` 및 `Imports Microsoft.VisualStudio.TeamSystem.Data.UnitTesting`와 함께 `Imports Microsoft.VisualStudio.TeamSystem.Data.UnitTest.Conditions`를 추가해야 합니다. Visual C#을 사용하고 있는 경우에는 Microsoft.VisualStudio.TestTools, Microsoft.VisualStudio.TeamSystem.Data.UnitTesting 및 Microsoft.VisualStudio.TeamSystem.Data.UnitTesting.Conditions에 대한 `using System.Transactions` 문과 함께 `using`를 추가해야 합니다. 또한 프로젝트에 대한 참조를 해당 어셈블리에 추가해야 합니다.  
   
 ## <a name="to-create-a-transaction-for-all-test-methods-in-a-test-class"></a>테스트 클래스의 모든 테스트 메서드에 대한 트랜잭션을 만들려면  
   
@@ -156,7 +156,7 @@ ms.locfileid: "75246494"
     ```  
   
 ## <a name="to-start-the-distributed-transaction-coordinator-service"></a>Distributed Transaction Coordinator 서비스를 시작하려면  
-이 항목의 일부 절차에서는 System.Transactions 어셈블리에 있는 형식을 사용합니다. 이 절차를 수행하기 전에 단위 테스트를 실행하는 컴퓨터에서 Distributed Transaction Coordinator 서비스가 실행되고 있는지 확인해야 합니다. 그렇지 않으면 테스트가 실패하고 다음과 같은 오류 메시지가 나타납니다. "테스트 메서드 *ProjectName*.*TestName*. *MethodName* 예외가 threw되었습니다. System.Data.SqlClient.SqlException: 서버 '*ComputerName*'의 MSDTC를 사용할 수 없습니다".  
+이 항목의 일부 절차에서는 System.Transactions 어셈블리에 있는 형식을 사용합니다. 이 절차를 수행하기 전에 단위 테스트를 실행하는 컴퓨터에서 Distributed Transaction Coordinator 서비스가 실행되고 있는지 확인해야 합니다. 그렇지 않으면 테스트가 실패하고 “테스트 메서드 *ProjectName*.*TestName*.*MethodName*에서 예외를 throw했습니다. System.Data.SqlClient.SqlException: 서버 ‘*ComputerName*’의 MSDTC를 사용할 수 없습니다.”라는 오류 메시지가 나타납니다.  
   
 #### <a name="to-start-the-distributed-transaction-coordinator-service"></a>Distributed Transaction Coordinator 서비스를 시작하려면  
   

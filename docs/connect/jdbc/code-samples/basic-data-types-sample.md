@@ -11,10 +11,10 @@ ms.assetid: 59ac80cf-fc66-4493-933d-38e479c5f54d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7936f33fd7a831d19e7978681cbb169f3b9aba7b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028388"
 ---
 # <a name="basic-data-types-sample"></a>기본 데이터 형식 샘플
@@ -38,7 +38,7 @@ ms.locfileid: "69028388"
   
 ## <a name="example"></a>예제
 
-다음 샘플 코드에서는 데이터베이스에 연결한 다음, DataTypesTable 테스트 테이블에서 단일 데이터 행을 검색합니다. 검색한 후 사용자 지정 displayRow 메서드를 호출하여 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 다양한 get\<Type> 메서드를 사용하여 결과 집합의 모든 데이터를 표시합니다.  
+다음 샘플 코드에서는 데이터베이스에 연결한 다음, DataTypesTable 테스트 테이블에서 단일 데이터 행을 검색합니다. 검색한 후 사용자 지정 displayRow 메서드를 호출하여 \<SQLServerResultSet[ 클래스의 다양한 get](../../../connect/jdbc/reference/sqlserverresultset-class.md)Type> 메서드를 사용하여 결과 집합의 모든 데이터를 표시합니다.  
   
 그런 다음, 샘플에서는 SQLServerResultSet 클래스의 다양한 update\<Type> 메서드를 사용하여 결과 집합의 데이터를 업데이트한 후, [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 메서드를 호출하여 해당 데이터를 데이터베이스에 다시 보관합니다.  
   
