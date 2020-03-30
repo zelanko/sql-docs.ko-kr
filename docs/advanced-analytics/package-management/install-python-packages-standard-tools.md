@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 4e55f9ba41036a5bd0ee806b8b45ee1fde8dc49f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76542128"
 ---
 # <a name="install-packages-with-python-tools-on-sql-server"></a>SQL Server에서 Python 도구를 사용하여 패키지 설치
@@ -58,7 +58,7 @@ SQL Server의 스크립트에서 사용할 수 있는 새 Python 패키지를 �
 
 인터넷에 액세스할 수 없는 서버에 Python 패키지를 설치하는 경우 인터넷에 액세스할 수 있는 컴퓨터에서 WHL 파일을 다운로드한 다음 파일을 서버에 복사해야 합니다.
 
-예를 들어 인터넷에 연결된 컴퓨터에서는 [https://cntk.ai/PythonWheel/CPU-Only](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl) 사이트에서 `cntk-2.1-cp35-cp35m-win_amd64.whl` 파일을 다운로드한 다음 파일을 SQL Server 컴퓨터의 로컬 폴더로 복사할 수 있습니다.
+예를 들어 인터넷에 연결된 컴퓨터에서는 `cntk-2.1-cp35-cp35m-win_amd64.whl`[https://cntk.ai/PythonWheel/CPU-Only 사이트에서 ](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl) 파일을 다운로드한 다음 파일을 SQL Server 컴퓨터의 로컬 폴더로 복사할 수 있습니다.
 
 > [!IMPORTANT]
 > 패키지의 Windows 버전이 있는지 확인합니다. 파일이 .gz로 끝나면 올바른 버전이 아닐 수 있습니다.
@@ -80,10 +80,10 @@ cd "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES"
 
 ### <a name="install-the-package-using-pip"></a>pip를 사용하여 패키지 설치
 
-**pip** 설치 프로그램을 사용하여 새 패키지를 설치합니다. `PYTHON_SERVICES` 폴더의 `Scripts` 하위 폴더에서 `pip.exe`를 찾을 수 있습니다. SQL Server 설치에서는 `Scripts` 하위 폴더를 시스템 경로에 추가하지 않으므로 전체 경로를 지정하거나 Windows의 PATH 변수에 Scripts 폴더를 추가할 수 있습니다.
+**pip** 설치 프로그램을 사용하여 새 패키지를 설치합니다. `pip.exe` 폴더의 `Scripts` 하위 폴더에서 `PYTHON_SERVICES`를 찾을 수 있습니다. SQL Server 설치에서는 `Scripts` 하위 폴더를 시스템 경로에 추가하지 않으므로 전체 경로를 지정하거나 Windows의 PATH 변수에 Scripts 폴더를 추가할 수 있습니다.
 
 > [!NOTE]
-> Visual Studio 2017 또는 Python 확장이 포함된 Visual Studio 2015를 사용하는 경우 **Python 환경** 창에서 `pip install`을 실행할 수 있습니다. **패키지**를 클릭하고 텍스트 상자에 설치할 패키지의 이름 또는 위치를 입력합니다. `pip install`은 입력할 필요가 없습니다. 자동으로 채워집니다.
+> Visual Studio 2017 또는 Python 확장이 포함된 Visual Studio 2015를 사용하는 경우 `pip install`Python 환경**창에서**을 실행할 수 있습니다. **패키지**를 클릭하고 텍스트 상자에 설치할 패키지의 이름 또는 위치를 입력합니다. `pip install`은 입력할 필요가 없습니다. 자동으로 채워집니다.
 
 + 컴퓨터가 인터넷에 연결되어 있는 경우 패키지 이름을 입력합니다.
 

@@ -11,10 +11,10 @@ ms.assetid: 327ba0bc-438a-494c-b119-1cd4a096bb58
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a250cac94cdba3c4f71ce359b964ed5ef50e895f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971553"
 ---
 # <a name="sqlserverdatabasemetadata-members"></a>SQLServerDatabaseMetaData 멤버
@@ -43,7 +43,7 @@ ms.locfileid: "67971553"
 |[autoCommitFailureClosesAllResultSets](../../../connect/jdbc/reference/autocommitfailureclosesallresultsets-method-sqlserverdatabasemetadata.md)|자동 커밋이 사용되며 예외가 발생할 때 JDBC 드라이버에서 유지 가능한 결과 집합을 포함하여 열려 있는 모든 결과 집합을 닫는지 여부를 나타냅니다.|  
 |[dataDefinitionCausesTransactionCommit](../../../connect/jdbc/reference/datadefinitioncausestransactioncommit-method-sqlserverdatabasemetadata.md)|트랜잭션 내의 데이터 정의 문이 트랜잭션을 강제로 커밋하는지 여부를 검색합니다.|  
 |[dataDefinitionIgnoredInTransactions](../../../connect/jdbc/reference/datadefinitionignoredintransactions-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 트랜잭션 내의 데이터 정의 문을 무시하는지 여부를 검색합니다.|  
-|[deletesAreDetected](../../../connect/jdbc/reference/deletesaredetected-method-sqlserverdatabasemetadata.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) 메서드를 호출하여 표시된 행 삭제를 검색할 수 있는지 여부를 검색합니다.|  
+|[deletesAreDetected](../../../connect/jdbc/reference/deletesaredetected-method-sqlserverdatabasemetadata.md)|[SQLServerResultSet](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) 클래스의 [rowDeleted](../../../connect/jdbc/reference/sqlserverresultset-class.md) 메서드를 호출하여 표시된 행 삭제를 검색할 수 있는지 여부를 검색합니다.|  
 |[doesMaxRowSizeIncludeBlobs](../../../connect/jdbc/reference/doesmaxrowsizeincludeblobs-method-sqlserverdatabasemetadata.md)|[getMaxRowSize](../../../connect/jdbc/reference/getmaxrowsize-method-sqlserverdatabasemetadata.md) 메서드의 반환 값에 SQL 데이터 형식 LONGVARCHAR 및 LONGVARBINARY가 포함되는지 여부를 검색합니다.|  
 |[getAttributes](../../../connect/jdbc/reference/getattributes-method-sqlserverdatabasemetadata.md)|지정된 스키마 및 카탈로그에서 사용할 수 있는 사용자 정의 형식에 대해 지정된 형식의 지정된 특성에 대한 설명을 검색합니다.|  
 |[getBestRowIdentifier](../../../connect/jdbc/reference/getbestrowidentifier-method-sqlserverdatabasemetadata.md)|테이블의 열 중 행을 고유하게 식별하는 최적의 열 집합에 대한 설명을 검색합니다.|  
@@ -118,7 +118,7 @@ ms.locfileid: "67971553"
 |[getURL](../../../connect/jdbc/reference/geturl-method-sqlserverdatabasemetadata.md)|이 데이터베이스의 URL을 검색합니다.|  
 |[getUserName](../../../connect/jdbc/reference/getusername-method-sqlserverdatabasemetadata.md)|이 데이터베이스에 알려진 사용자 이름을 검색합니다.|  
 |[getVersionColumns](../../../connect/jdbc/reference/getversioncolumns-method-sqlserverdatabasemetadata.md)|테이블에서 행 값이 업데이트될 때 자동으로 업데이트되는 열에 대한 설명을 검색합니다.|  
-|[insertsAreDetected](../../../connect/jdbc/reference/insertsaredetected-method-sqlserverdatabasemetadata.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 [rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) 메서드를 호출하여 표시된 행 삽입을 검색할 수 있는지 여부를 검색합니다.|  
+|[insertsAreDetected](../../../connect/jdbc/reference/insertsaredetected-method-sqlserverdatabasemetadata.md)|[SQLServerResultSet](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) 클래스의 [rowInserted](../../../connect/jdbc/reference/sqlserverresultset-class.md) 메서드를 호출하여 표시된 행 삽입을 검색할 수 있는지 여부를 검색합니다.|  
 |[isCatalogAtStart](../../../connect/jdbc/reference/iscatalogatstart-method-sqlserverdatabasemetadata.md)|카탈로그가 정규화된 테이블 이름의 처음에 나타나는지 여부를 검색합니다.|  
 |[isReadOnly](../../../connect/jdbc/reference/isreadonly-method-sqlserverdatabasemetadata.md)|이 데이터베이스가 읽기 전용 모드에 있는지 여부를 검색합니다.|  
 |[locatorsUpdateCopy](../../../connect/jdbc/reference/locatorsupdatecopy-method-sqlserverdatabasemetadata.md)|LOB에 대한 업데이트가 복사본에서 수행되는지 아니면 LOB에 직접 수행되는지를 나타냅니다.|  
@@ -170,8 +170,8 @@ ms.locfileid: "67971553"
 |[supportsMinimumSQLGrammar](../../../connect/jdbc/reference/supportsminimumsqlgrammar-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 ODBC 최소 SQL 문법을 지원하는지 여부를 검색합니다.|  
 |[supportsMixedCaseIdentifiers](../../../connect/jdbc/reference/supportsmixedcaseidentifiers-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 따옴표로 묶이지 않고 대/소문자가 혼합된 SQL 식별자를 대/소문자가 구분되지 않는 것으로 처리하고 대/소문자가 혼합된 형식으로 저장하는지 여부를 검색합니다.|  
 |[supportsMixedCaseQuotedIdentifiers](../../../connect/jdbc/reference/supportsmixedcasequotedidentifiers-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 따옴표로 묶이고 대/소문자가 혼합된 SQL 식별자를 대/소문자가 구분되지 않는 것으로 처리하고 대/소문자가 혼합된 형식으로 저장하는지 여부를 검색합니다.|  
-|[supportsMultipleOpenResults](../../../connect/jdbc/reference/supportsmultipleopenresults-method-sqlserverdatabasemetadata.md)|[SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 개체에서 동시에 여러 개의 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체가 반환될 수 있는지 여부를 검색합니다.|  
-|[supportsMultipleResultSets](../../../connect/jdbc/reference/supportsmultipleresultsets-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스의 [execute](../../../connect/jdbc/reference/execute-method.md) 메서드를 한 번 호출하여 여러 개의 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체를 가져올 수 있는지 여부를 검색합니다.|  
+|[supportsMultipleOpenResults](../../../connect/jdbc/reference/supportsmultipleopenresults-method-sqlserverdatabasemetadata.md)|[SQLServerCallableStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체에서 동시에 여러 개의 [SQLServerResultSet](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 개체가 반환될 수 있는지 여부를 검색합니다.|  
+|[supportsMultipleResultSets](../../../connect/jdbc/reference/supportsmultipleresultsets-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 [execute](../../../connect/jdbc/reference/execute-method.md) 메서드를 한 번 호출하여 여러 개의 [SQLServerResultSet](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 개체를 가져올 수 있는지 여부를 검색합니다.|  
 |[supportsMultipleTransactions](../../../connect/jdbc/reference/supportsmultipletransactions-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 여러 개의 트랜잭션이 서로 다른 연결에서 동시에 열려 있을 수 있는지 여부를 검색합니다.|  
 |[supportsNamedParameters](../../../connect/jdbc/reference/supportsnamedparameters-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 호출 가능한 문의 명명된 매개 변수를 지원하는지 여부를 검색합니다.|  
 |[supportsNonNullableColumns](../../../connect/jdbc/reference/supportsnonnullablecolumns-method-sqlserverdatabasemetadata.md)|이 데이터베이스의 열을 Null을 허용하지 않는 열로 정의할 수 있는지 여부를 검색합니다.|  
@@ -205,7 +205,7 @@ ms.locfileid: "67971553"
 |[supportsTransactions](../../../connect/jdbc/reference/supportstransactions-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 트랜잭션을 지원하는지 여부를 검색합니다.|  
 |[supportsUnion](../../../connect/jdbc/reference/supportsunion-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 SQL UNION을 지원하는지 여부를 검색합니다.|  
 |[supportsUnionAll](../../../connect/jdbc/reference/supportsunionall-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 SQL UNION ALL을 지원하는지 여부를 검색합니다.|  
-|[updatesAreDetected](../../../connect/jdbc/reference/updatesaredetected-method-sqlserverdatabasemetadata.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) 메서드를 호출하여 표시된 행 업데이트를 검색할 수 있는지 여부를 검색합니다.|  
+|[updatesAreDetected](../../../connect/jdbc/reference/updatesaredetected-method-sqlserverdatabasemetadata.md)|[SQLServerResultSet](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) 클래스의 [rowUpdated](../../../connect/jdbc/reference/sqlserverresultset-class.md) 메서드를 호출하여 표시된 행 업데이트를 검색할 수 있는지 여부를 검색합니다.|  
 |[usesLocalFilePerTable](../../../connect/jdbc/reference/useslocalfilepertable-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 각 테이블에 대해 개별 파일을 사용하는지 여부를 검색합니다.|  
 |[usesLocalFiles](../../../connect/jdbc/reference/useslocalfiles-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 테이블을 로컬 파일에 저장하는지 여부를 검색합니다.|  
   

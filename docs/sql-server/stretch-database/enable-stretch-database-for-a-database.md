@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: db08d84dd1619d8c9e2e4d8e796abdd0c9d202fc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73844586"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>데이터베이스에 대해 Stretch Database를 사용하도록 설정
@@ -41,7 +41,7 @@ ms.locfileid: "73844586"
   
 -   새 Azure 서버를 만들거나 기존 Azure 서버를 선택하는 데 필요한 연결 및 로그인 정보를 준비합니다.  
   
-##  <a name="EnableTSQLServer"></a> 필수 조건: 서버에서 스트레치 데이터베이스 사용  
+##  <a name="prerequisite-enable-stretch-database-on-the-server"></a><a name="EnableTSQLServer"></a> 필수 조건: 서버에서 스트레치 데이터베이스 사용  
  데이터베이스 또는 테이블에서 스트레치 데이터베이스를 활성화하기 전에 로컬 서버에서 스트레치 데이터베이스를 먼저 활성화해야 합니다. 이 작업에는 sysadmin 또는 serveradmin 권한이 필요합니다.  
   
 -   필요한 관리 권한이 있으면 **스트레치에 데이터베이스 사용** 마법사가 스트레치에 사용할 서버를 구성합니다.  
@@ -60,10 +60,10 @@ GO
   
  자세한 내용은 [원격 데이터 보관 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-remote-data-archive-server-configuration-option.md) 및 [sp_configure&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 참조하세요.  
   
-##  <a name="Wizard"></a> 마법사를 사용하여 데이터베이스에서 Stretch Database 활성화  
+##  <a name="use-the-wizard-to-enable-stretch-database-on-a-database"></a><a name="Wizard"></a> 마법사를 사용하여 데이터베이스에서 Stretch Database 활성화  
  입력해야 하는 정보와 선택해야 하는 항목을 포함하여 스트레치에 데이터베이스 사용 마법사에 대한 자세한 내용은 [스트레치에 데이터베이스 사용 마법사를 실행하여 시작](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)을 참조하세요.  
   
-##  <a name="EnableTSQLDatabase"></a> Transact-SQL을 사용하여 데이터베이스에서 스트레치 데이터베이스 활성화  
+##  <a name="use-transact-sql-to-enable-stretch-database-on-a-database"></a><a name="EnableTSQLDatabase"></a> Transact-SQL을 사용하여 데이터베이스에서 스트레치 데이터베이스 활성화  
  개별 테이블에서 스트레치 데이터베이스를 활성화할 수 있으려면 데이터베이스에서 스트레치 데이터베이스를 먼저 활성화해야 합니다.  
   
  데이터베이스 또는 테이블에서 스트레치 데이터베이스를 활성화하려면 db_owner 사용 권한이 필요합니다. 또한 데이터베이스에 대해 Stretch Database를 사용하도록 설정하려면 CONTROL DATABASE 권한이 필요합니다.  

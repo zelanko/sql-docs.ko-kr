@@ -22,10 +22,10 @@ ms.assetid: 54eac961-5c7a-4481-982d-f93a64b5c2f4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: db02b300e0f327a9186fb9b9af612d8f3f1ec452
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67915983"
 ---
 # <a name="run-sql-server-with-or-without-a-network"></a>네트워크에서 또는 네트워크 없이 SQL Server 실행
@@ -50,7 +50,7 @@ ms.locfileid: "67915983"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlcmd **와 같은 로컬 클라이언트에서 독립 실행형**인스턴스에 연결할 때는 네트워크를 사용하지 않고 로컬 파이프를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 직접 연결합니다. 로컬 파이프와 네트워크 파이프 간의 차이는 네트워크의 사용 여부에 있습니다. 달리 지정하지 않는 한, 표준 파이프( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .\pipe\sql\query)를 사용하여 로컬 파이프와 네트워크 파이프에서\\\\인스턴스에 연결합니다.  
   
- 서버 이름을 지정하지 않고 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하면 로컬 파이프를 사용하게 됩니다. 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하고 서버 이름을 정확하게 지정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 구성하여 다중 네트워크를 사용했을 경우 IPX/SPX와 같이 다른 네트워크 IPC 메커니즘이나 네트워크 파이프를 사용하게 됩니다. 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 네트워크 파이프를 지원하지 않으므로 클라이언트에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 때는 불필요한 **/** _<Server_name>_ 인수를 제외해야 합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] osql **에서 독립 실행형**인스턴스에 연결하려면 다음을 입력합니다.  
+ 서버 이름을 지정하지 않고 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하면 로컬 파이프를 사용하게 됩니다. 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하고 서버 이름을 정확하게 지정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 구성하여 다중 네트워크를 사용했을 경우 IPX/SPX와 같이 다른 네트워크 IPC 메커니즘이나 네트워크 파이프를 사용하게 됩니다. 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 네트워크 파이프를 지원하지 않으므로 클라이언트에서  **인스턴스에 연결할 때는 불필요한 /**  <Server_name>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인수를 제외해야 합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] osql **에서 독립 실행형**인스턴스에 연결하려면 다음을 입력합니다.  
   
  **osql /Usa /P** _\<saPassword>_  
   

@@ -16,17 +16,17 @@ ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aef2ebd78b1aed2d03ba56ef3371d7f0dbfade31
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955128"
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>deletesAreDetected 메서드(SQLServerDatabaseMetaData)
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) 메서드를 호출하여 표시된 행 삭제를 검색할 수 있는지 여부를 검색합니다.  
+  [SQLServerResultSet](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) 클래스의 [rowDeleted](../../../connect/jdbc/reference/sqlserverresultset-class.md) 메서드를 호출하여 표시된 행 삭제를 검색할 수 있는지 여부를 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,7 +60,7 @@ public boolean deletesAreDetected(int type)
 ## <a name="return-value"></a>Return Value  
  간격이 삭제된 행을 대체하면 **true**입니다. 삭제된 행이 제거되면 **false**입니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스와 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]를 함께 사용할 경우 이 메서드는 TYPE_SS_SCROLL_KEYSET 커서에 대해 **true**를 반환하고 다른 모든 결과 집합 유형에 대해서는 **false**를 반환합니다.  
+ [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 데이터베이스와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 함께 사용할 경우 이 메서드는 TYPE_SS_SCROLL_KEYSET 커서에 대해 **true**를 반환하고 다른 모든 결과 집합 유형에 대해서는 **false**를 반환합니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

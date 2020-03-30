@@ -11,10 +11,10 @@ author: rothja
 ms.author: v-jizho2
 manager: jroth
 ms.openlocfilehash: 7ad2b810092fae850a667a1611880f4b03b6a9a8
-ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79078956"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-macos"></a>Microsoft ODBC Driver for SQL Server 설치(macOS)
@@ -60,7 +60,7 @@ macOS 기반 ODBC 드라이버는 다음 구성 요소를 포함합니다.
 |---------------|-----------------|  
 |libmsodbcsql.17.dylib 또는 libmsodbcsql.13.dylib|드라이버 기능이 모두 포함된 동적 라이브러리(`dylib`) 파일입니다. 이 파일은 `/usr/local/lib/`에 설치됩니다.|  
 |`msodbcsqlr17.rll` 또는 `msodbcsqlr13.rll`|드라이버 라이브러리에 대한 해당 리소스 파일입니다. 이 파일은 드라이버 17의 경우 `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` 및 드라이버 13의 경우 `[driver .dylib directory]../share/msodbcsql/resources/en_US/`에 설치됩니다. | 
-|msodbcsql.h|드라이버를 사용하는 데 필요한 새 정의를 모두 포함하는 헤더 파일입니다.<br /><br /> **참고:**  동일한 프로그램에 msodbcsql.h 및 odbcss.h를 참조할 수 없습니다.<br /><br /> msodbcsql.h는 드라이버 17의 경우 `/usr/local/include/msodbcsql17/` 및 드라이버 13의 경우 `/usr/local/include/msodbcsql/`에 설치됩니다. |
+|msodbcsql.h|드라이버를 사용하는 데 필요한 새 정의를 모두 포함하는 헤더 파일입니다.<br /><br /> **참고:**  동일한 프로그램에서 msodbcsql.h 및 odbcss.h를 참조할 수 없습니다.<br /><br /> msodbcsql.h는 드라이버 17의 경우 `/usr/local/include/msodbcsql17/` 및 드라이버 13의 경우 `/usr/local/include/msodbcsql/`에 설치됩니다. |
 |LICENSE.txt|최종 사용자 사용권 계약의 사용 약관을 포함하는 텍스트 파일입니다. 이 파일은 드라이버 17의 경우 `/usr/local/share/doc/msodbcsql17/` 및 드라이버 13의 경우 `/usr/local/share/doc/msodbcsql/`에 저장됩니다. |
 |RELEASE_NOTES|릴리스 정보를 포함하는 텍스트 파일입니다. 이 파일은 드라이버 17의 경우 `/usr/local/share/doc/msodbcsql17/` 및 드라이버 13의 경우 `/usr/local/share/doc/msodbcsql/`에 저장됩니다. |
 

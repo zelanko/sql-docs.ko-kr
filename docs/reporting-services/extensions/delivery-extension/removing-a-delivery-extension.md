@@ -13,10 +13,10 @@ ms.assetid: dcb7caf2-d19a-4bc5-afb3-2b61ad11cac5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 49b36598d643bd88496117655f23f642e663d04c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63193727"
 ---
 # <a name="removing-a-delivery-extension"></a>배달 확장 프로그램 제거

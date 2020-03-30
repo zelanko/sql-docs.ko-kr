@@ -14,10 +14,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: ef475a7a0f5e2e8fdea510a0ee743f0d74d19dd2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241500"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>방법: 테이블 디자이너를 사용하여 데이터베이스 개체 만들기

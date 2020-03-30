@@ -16,16 +16,16 @@ ms.assetid: 04d36a25-7f95-4675-9690-4462671b3d67
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7b51cbe470169459469959448208b3aa53b18cce
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976249"
 ---
 # <a name="preparecall-method-javalangstring-int-int"></a>prepareCall 메서드(java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정된 형식 및 동시성을 사용하여 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체를 생성하는 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 개체를 만듭니다.  
+  지정된 형식 및 동시성을 사용하여 [SQLServerResultSet](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 개체를 생성하는 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체를 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   

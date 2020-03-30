@@ -9,10 +9,10 @@ ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 23a1561104273203a01c99a08e86ed301e55bbf3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578772"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>드릴스루, 드릴다운, 하위 보고서 및 중첩 데이터 영역
@@ -33,7 +33,7 @@ ms.locfileid: "65578772"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="SummaryCharacteristics"></a> 특징 요약  
+##  <a name="summary-of-characteristics"></a><a name="SummaryCharacteristics"></a> 특징 요약  
  다음은 이러한 여러 특징을 요약한 표입니다. 세부 정보는 이 항목 뒷부분의 다른 섹션에서 설명합니다. 모든 보고서 항목에 표시 및 숨기기 동작을 적용할 수 있으므로 드릴다운은 이러한 비교에 포함되지 않았습니다.  
   
 |특징|하위 보고서|드릴스루|중첩된|  
@@ -48,36 +48,36 @@ ms.locfileid: "65578772"
 |표시|주 보고서에|다른 보고서에|주 보고서에|  
   
   
-##  <a name="Details"></a> 특징 세부 정보  
+##  <a name="details-of-characteristics"></a><a name="Details"></a> 특징 세부 정보  
   
-###  <a name="Datasets"></a> 사용하는 데이터 세트  
+###  <a name="datasets-they-use"></a><a name="Datasets"></a> 사용하는 데이터 세트  
  하위 보고서 및 드릴스루 보고서에는 주 보고서에서 같은 데이터 세트나 다른 데이터 세트를 사용할 수 있습니다. 중첩된 데이터 영역에서는 같은 데이터 세트를 사용합니다.  
   
-###  <a name="RetrieveData"></a> 데이터 검색  
+###  <a name="retrieving-data"></a><a name="RetrieveData"></a> 데이터 검색  
  하위 보고서와 중첩된 데이터 영역은 주 보고서와 같은 시간에 데이터를 검색하지만 드릴스루 보고서는 그렇지 않습니다. 각 드릴스루 보고서는 사용자가 각 링크를 클릭할 때 데이터를 검색합니다. 이 기능은 주 보고서와 종속된 보고서의 데이터를 동시에 검색해야 하는 경우 중요합니다.  
   
-###  <a name="ProcessRender"></a> 처리 및 렌더링  
+###  <a name="processing-and-rendering"></a><a name="ProcessRender"></a> 처리 및 렌더링  
  하위 보고서는 주 보고서의 일부로 처리됩니다. 예를 들어 주문 세부 정보를 표시하는 하위 보고서가 정보 행의 테이블 셀에 추가되는 경우 하위 보고서는 테이블의 행당 한 번만 처리되면 주 보고서의 일부로 렌더링됩니다. 드릴스루 보고서는 사용자가 요약 주 보고서의 드릴스루 링크를 클릭할 때 한 번만 처리되고 렌더링됩니다.  
   
-###  <a name="Performance"></a> 성능  
+###  <a name="performance"></a><a name="Performance"></a> 성능  
  사용할 항목을 결정할 때 특히 하위 보고서가 여러 보고서에서 사용되지 않는 경우에는 하위 보고서 대신 데이터 영역을 사용하는 것이 좋습니다. 보고서 서버에서는 하위 보고서의 각 인스턴스를 개별 보고서로 처리하기 때문에 성능에 영향을 줄 수 있습니다. 데이터 영역은 하위 보고서와 같은 기능과 유연성을 제공하면서도 성능은 보다 우수합니다. 드릴스루 보고서는 주 보고서와 같은 시간에 모든 데이터를 검색하지 않으므로 하위 보고서보다 성능이 우수합니다.  
   
-###  <a name="Parameters"></a> 매개 변수 사용  
+###  <a name="use-of-parameters"></a><a name="Parameters"></a> 매개 변수 사용  
  일반적으로 드릴스루 보고서와 하위 보고서에는 표시할 보고서 데이터를 지정하는 보고서 매개 변수가 있습니다. 예를 들어 주 보고서에서 판매 주문 번호를 클릭하면 판매 주문 번호를 매개 변수로 사용한 다음 해당 판매 주문의 모든 데이터를 표시하는 드릴스루 보고서가 열립니다. 주 보고서에서 링크를 만들 때는 드릴스루 보고서에 매개 변수로 전달될 값을 지정합니다.  
   
  드릴스루 보고서나 하위 보고서를 만들려면 대상 드릴스루 보고서나 하위 보고서를 먼저 디자인한 다음 드릴스루 동작을 만들거나 주 보고서에 대한 참조를 추가해야 합니다.  
   
-###  <a name="Reusability"></a> 재사용 가능성  
+###  <a name="reusability"></a><a name="Reusability"></a> 재사용 가능성  
  하위 보고서 및 드릴스루 보고서는 별도의 보고서입니다. 따라서 이러한 보고서를 여러 보고서에서 사용하거나 독립 실행형 보고서로 표시할 수 있습니다. 중첩된 데이터 영역은 재사용할 수 없습니다. 중첩된 데이터 영역은 데이터 영역에 중첩되어 있으므로 보고서 파트로 저장할 수 없습니다. 중첩된 데이터 영역을 보고서 파트로 포함하는 데이터 영역은 저장할 수 있지만 중첩된 데이터 영역은 저장할 수 없습니다.  
   
-###  <a name="Location"></a> 위치  
+###  <a name="location"></a><a name="Location"></a> 위치  
  하위 보고서와 드릴스루 보고서는 모두 별도의 보고서이므로 주 보고서 외부에 저장됩니다. 하위 보고서는 같거나 다른 보고서 서버에 있을 수 있지만 드릴스루 보고서는 같은 보고서 서버에 있어야 합니다. 중첩된 데이터 영역은 주 보고서의 파트입니다.  
   
-###  <a name="Display"></a> 디스플레이  
+###  <a name="display"></a><a name="Display"></a> 디스플레이  
  하위 보고서 및 중첩된 데이터 영역은 주 보고서에 표시됩니다. 드릴스루 보고서는 자체적으로 표시됩니다.  
   
   
-##  <a name="InThisSection"></a> 섹션 내용  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> 섹션 내용  
  [드릴스루 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)  
  사용자가 주 보고서에서 링크를 클릭할 때 열리는 보고서를 설명합니다.  
   

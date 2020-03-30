@@ -10,10 +10,10 @@ ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c6d91ea5d1daf7d63c56ae84b2cf76d3ee82846c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243629"
 ---
 # <a name="troubleshoot-server--database-connection-problems-with-reporting-services"></a>Reporting Services의 서버 및 데이터베이스 연결 문제 해결
@@ -29,7 +29,7 @@ ms.locfileid: "75243629"
 이 오류는 자격 증명이 여러 컴퓨터 연결을 통해 전달되는 경우 발생합니다. Windows 인증을 사용 중이며 Kerberos 버전 5 프로토콜을 사용하지 않는 경우 두 대 이상의 컴퓨터 연결을 통해 자격 증명이 전달되면 이 오류가 발생합니다. 이 오류를 해결하려면 저장된 자격 증명 또는 입력 정보를 요청하는 자격 증명을 사용해 보십시오. 이 문제를 해결하는 방법에 대한 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하십시오.  
   
 ### <a name="an-error-has-occurred-while-establishing-a-connection-to-the-server"></a>서버에 대한 연결을 구성하는 동안 오류가 발생했습니다.  
-SQL Server에 연결할 때 기본 설정에서 SQL Server가 원격 연결을 허용하지 않기 때문에 이 오류가 발생할 수 있습니다. (공급자: 명명된 파이프 공급자, 오류: 40 - SQL Server에 연결할 수 없습니다.) 이 오류는 보고서 서버 데이터베이스를 호스팅하는 데이터베이스 엔진의 인스턴스에서 반환됩니다. 대부분의 경우 이 오류는 SQL Server 서비스가 중지되어 발생합니다. 또는 SQL Server Express with Advanced Services나 명명된 인스턴스를 사용하는 경우에는 보고서 서버 데이터베이스의 연결 문자열이나 보고서 서버 URL이 올바르지 않아 이 오류가 발생합니다. 이러한 문제를 해결하려면 다음을 수행하십시오.  
+SQL Server에 연결할 때 기본 설정에서 SQL Server가 원격 연결을 허용하지 않기 때문에 이 오류가 발생할 수 있습니다. (공급자: 명명된 파이프 공급자, 오류: 40 - SQL Server에 대한 연결을 열 수 없습니다). 이 오류는 보고서 서버 데이터베이스를 호스팅하는 데이터베이스 엔진의 인스턴스에서 반환됩니다. 대부분의 경우 이 오류는 SQL Server 서비스가 중지되어 발생합니다. 또는 SQL Server Express with Advanced Services나 명명된 인스턴스를 사용하는 경우에는 보고서 서버 데이터베이스의 연결 문자열이나 보고서 서버 URL이 올바르지 않아 이 오류가 발생합니다. 이러한 문제를 해결하려면 다음을 수행하십시오.  
   
 * SQL Server(**MSSQLSERVER**) 서비스가 시작되는지 확인합니다. 데이터베이스 엔진의 인스턴스를 호스팅하는 컴퓨터에서 시작, 관리 도구, 서비스를 차례로 클릭하고 SQL Server(**MSSQLSERVER**)로 스크롤합니다. 시작되지 않은 경우 이 서비스를 마우스 오른쪽 단추로 클릭하고 속성을 선택한 후 시작 유형에서 자동을 선택하고 적용, 시작을 차례로 클릭한 다음 확인을 클릭합니다.   
 * 보고서 서버 URL 및 보고서 서버 데이터베이스 연결 문자열이 올바른지 확인합니다. Reporting Services 또는 데이터베이스 엔진이 명명된 인스턴스로 설치된 경우 설치 중 만들어지는 기본 연결 문자열에 인스턴스 이름이 포함됩니다. 예를 들어 DEVSRV01이라는 이름의 서버에 SQL Server Express with Advanced Services의 기본 인스턴스를 설치한 경우 웹 포털 URL은 DEVSRV01\Reports$SQLEXPRESS가 됩니다. 또한 연결 문자열의 데이터베이스 서버 이름은 DEVSRV01\SQLEXPRESS와 유사하게 됩니다. SQL Server Express에 대한 URL 및 데이터 원본 연결 문자열에 대한 자세한 내용은 [SQL Server Express with Advanced Services의 Reporting Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx)를 참조하십시오. 보고서 서버 데이터베이스의 연결 문자열을 확인하려면 Reporting Services 구성 도구를 시작하고 데이터베이스 설치 페이지를 확인합니다.  
@@ -77,7 +77,7 @@ ADOMD.NET 공급자에 의해 이 오류가 반환됩니다. 이 오류가 발�
   
 또한 이 오류는 보고서 서버 데이터베이스를 호스팅하는 데이터베이스 엔진 인스턴스가 원격 연결에 대해 구성되지 않은 경우 발생할 수 있습니다. 일부 버전의 SQL Server에서는 원격 연결이 기본적으로 설정되어 있습니다. 사용 중인 SQL Server 데이터베이스 엔진 인스턴스에서 해당 연결이 설정되어 있는지 여부를 확인하려면 SQL Server 구성 관리자 도구를 실행합니다. TCP/IP와 명명된 파이프를 모두 설정해야 합니다. 원격 서버는 두 프로토콜을 모두 사용합니다. 원격 연결을 설정하는 방법은 [원격 관리를 위한 보고서 서버 구성](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)의 "보고서 서버 데이터베이스에 대한 원격 연결을 구성하는 방법" 섹션을 참조하십시오.  
   
-오류에 다음 추가 텍스트가 포함되어 있는 경우, 데이터베이스 엔진 인스턴스를 실행하는 데 사용되는 계정에 대해 암호가 만료된 것입니다. "서버에 대한 연결을 구성하는 동안 오류가 발생했습니다. SQL Server에 연결할 때 기본 설정에서 SQL Server가 원격 연결을 허용하지 않기 때문에 이 오류가 발생할 수 있습니다. (**공급자: SQL Server 네트워크 인터페이스, 오류: 26 - 지정된 서버/인스턴스를 찾는 중 오류가 발생했습니다)** ." 이 오류를 해결하려면 암호를 다시 설정하십시오.   
+오류에 다음 추가 텍스트가 포함되어 있는 경우 데이터베이스 엔진 인스턴스를 실행하는 데 사용되는 계정에 대해 암호가 만료된 것입니다. "서버에 대한 연결을 구성하는 동안 오류가 발생했습니다. SQL Server에 연결할 때 기본 설정에서 SQL Server가 원격 연결을 허용하지 않기 때문에 이 오류가 발생할 수 있습니다. (**공급자: SQL Server 네트워크 인터페이스, 오류: 26 - 지정된 서버/인스턴스 찾기 오류)** ." 이 오류를 해결하려면 암호를 다시 설정하십시오.   
   
 ## <a name="rpc-server-is-not-listening"></a>"RPC 서버가 수신 대기 중이 아닙니다."  
 보고서 서버 서비스는 일부 작업을 위해 RPC(원격 프로시저 호출) 서버를 사용합니다. "RPC 서버가 수신 대기 중이 아닙니다" 오류가 발생하면 보고서 서버 서비스가 실행 중인지 확인합니다.  

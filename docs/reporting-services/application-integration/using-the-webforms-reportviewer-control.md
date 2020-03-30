@@ -13,10 +13,10 @@ ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4339aca9735937e8747968b0060ce8eb2a24f486
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198460"
 ---
 # <a name="use-the-webforms-reportviewer-control"></a>WebForms ReportViewer 컨트롤 사용
@@ -24,7 +24,7 @@ ms.locfileid: "79198460"
   
 ## <a name="to-use-the-reportviewer-control-in-a-web-application"></a>웹 애플리케이션에서 ReportViewer 컨트롤을 사용하려면  
   
-1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]을 사용하여 새 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET 웹 사이트를 만듭니다.  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 또는 [!INCLUDE[csprcs](../../includes/csprcs-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)]을 사용하여 새 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ASP.NET 웹 사이트를 만듭니다.  
   
      \- 또는 -  
   
@@ -38,7 +38,7 @@ ms.locfileid: "79198460"
   
      이름이 reportViewer1인 **ReportViewer** 컨트롤이 폼에 추가됩니다.  
   
- 컨트롤이 폼에 추가되면 **ReportViewer 태스크** 스마트 태그가 나타나 보고서를 선택하도록 알립니다. 보려는 보고서가 보고서 서버에 배포된 경우 **보고서 선택** 드롭다운 목록에서 **\<서버 보고서>** 옵션을 선택합니다. **\<서버 보고서>** 옵션이 선택되면 **보고서 서버 URL** 및 **보고서 경로**의 두 가지 속성이 추가로 나타납니다. **보고서 서버 URL**은 보고서 서버에 대한 주소이고 **보고서 경로**는 렌더링하려는 보고서의 전체 경로입니다.  
+ 컨트롤이 폼에 추가되면 **ReportViewer 태스크** 스마트 태그가 나타나 보고서를 선택하도록 알립니다. 보려는 보고서가 보고서 서버에 배포된 경우 **보고서 선택\< 드롭다운 목록에서** **서버 보고서>** 옵션을 선택합니다. **\<서버 보고서>** 옵션이 선택되면 **보고서 서버 URL** 및 **보고서 경로**의 두 가지 속성이 추가로 나타납니다. **보고서 서버 URL**은 보고서 서버에 대한 주소이고 **보고서 경로**는 렌더링하려는 보고서의 전체 경로입니다.  
   
  로컬 모드로 보고서를 보려는 경우 **새 보고서 디자인** 옵션을 선택하여 보고서 디자이너를 시작하거나 기존 프로젝트에 속한 보고서를 선택합니다. 보고서를 선택한 후 ReportViewer 컨트롤의 **ReportPath** 속성에 보고서 RDLC 파일의 이름을 입력합니다. 이 속성이 **속성** 창의 **LocalReport** 노드 아래에 나타납니다.  
   

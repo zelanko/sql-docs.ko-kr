@@ -12,10 +12,10 @@ author: rothja
 ms.author: v-jizho2
 manager: jroth
 ms.openlocfilehash: 934bd563af82c5fb8ca1d08ae7dc1b17160e3284
-ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79058837"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-linux"></a>Microsoft ODBC Driver for SQL Server 설치(Linux)
@@ -428,13 +428,13 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 - Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SUSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-위의 각 패키지는 차례로 자체의 종속성이 있으며, 시스템에 해당 종속성이 있을 수도 있고 없는 경우도 있습니다. 이 문제에 대한 일반적인 해결 방법은 다음 배포의 패키지 관리자 설명서를 참조하세요. [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), [SUSE](https://en.opensuse.org/Portal:Zypper)
+위의 각 패키지는 차례로 자체의 종속성이 있으며, 시스템에 해당 종속성이 있을 수도 있고 없는 경우도 있습니다. 이 문제에 대한 일반적인 해결 방법은 [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian) 및 [SUSE](https://en.opensuse.org/Portal:Zypper) 등 사용하는 배포의 패키지 관리 설명서를 참조하세요.
 
 또한 수동으로 모든 종속성 패키지를 다운로드하고 설치 컴퓨터에 함께 저장한 다음, 수동으로 각 패키지를 차례로 설치하여 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 패키지를 완성하는 것이 일반적인 방법입니다.
 
 #### <a name="redhat-linux-enterprise-server-7"></a>Redhat Linux Enterprise Server 7
 
-- [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/)에서 최신 `msodbcsql` `.rpm` 을 다운로드합니다.
+- `msodbcsql``.rpm`[에서 최신 https://packages.microsoft.com/rhel/7/prod/ ](https://packages.microsoft.com/rhel/7/prod/)을 다운로드합니다.
 - 종속성 및 드라이버를 설치합니다.
   
 ```bash
@@ -444,7 +444,7 @@ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 
 #### <a name="ubuntu-1604"></a>Ubuntu 16.04
 
-- [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/)에서 최신 `msodbcsql` `.deb` 을 다운로드합니다.
+- `msodbcsql``.deb`[에서 최신 https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ ](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/)을 다운로드합니다.
 - 종속성 및 드라이버를 설치합니다.
 
 ```bash
@@ -454,7 +454,7 @@ sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
 
 #### <a name="suse-linux-enterprise-server-12"></a>SUSE Linux Enterprise Server 12
 
-- [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/)에서 최신 `msodbcsql` `.rpm` 을 다운로드합니다.
+- `msodbcsql``.rpm`[에서 최신 https://packages.microsoft.com/sles/12/prod/ ](https://packages.microsoft.com/sles/12/prod/)을 다운로드합니다.
 - 종속성 및 드라이버를 설치합니다.
 
 ```bash
@@ -519,7 +519,7 @@ Linux 기반 ODBC 드라이버는 다음 구성 요소를 포함합니다.
 |---------------|-----------------|  
 |libmsodbcsql-17.X.so.X.X 또는 libmsodbcsql-13.X.so.X.X|드라이버 기능이 모두 포함된 공유 개체(`so`) 동적 라이브러리 파일입니다. 이 파일은 드라이버 17의 경우 `/opt/microsoft/msodbcsql17/lib64/` 및 드라이버 13의 경우 `/opt/microsoft/msodbcsql/lib64/`에 설치됩니다.|  
 |`msodbcsqlr17.rll` 또는 `msodbcsqlr13.rll`|드라이버 라이브러리에 대한 해당 리소스 파일입니다. 이 파일은 `[driver .so directory]../share/resources/en_US/`에 설치됩니다.| 
-|msodbcsql.h|드라이버를 사용하는 데 필요한 새 정의를 모두 포함하는 헤더 파일입니다.<br /><br /> **참고:**  동일한 프로그램에 msodbcsql.h 및 odbcss.h를 참조할 수 없습니다.<br /><br /> msodbcsql.h는 드라이버 17의 경우 `/opt/microsoft/msodbcsql17/include/` 및 드라이버 13의 경우 `/opt/microsoft/msodbcsql/include/`에 설치됩니다. |
+|msodbcsql.h|드라이버를 사용하는 데 필요한 새 정의를 모두 포함하는 헤더 파일입니다.<br /><br /> **참고:**  동일한 프로그램에서 msodbcsql.h 및 odbcss.h를 참조할 수 없습니다.<br /><br /> msodbcsql.h는 드라이버 17의 경우 `/opt/microsoft/msodbcsql17/include/` 및 드라이버 13의 경우 `/opt/microsoft/msodbcsql/include/`에 설치됩니다. |
 |LICENSE.txt|최종 사용자 사용권 계약의 사용 약관을 포함하는 텍스트 파일입니다. 이 파일은 드라이버 17의 경우 `/usr/share/doc/msodbcsql17/` 및 드라이버 13의 경우 `/usr/share/doc/msodbcsql/`에 저장됩니다.|
 |RELEASE_NOTES|릴리스 정보를 포함하는 텍스트 파일입니다. 이 파일은 드라이버 17의 경우 `/usr/share/doc/msodbcsql17/` 및 드라이버 13의 경우 `/usr/share/doc/msodbcsql/`에 저장됩니다.|
 

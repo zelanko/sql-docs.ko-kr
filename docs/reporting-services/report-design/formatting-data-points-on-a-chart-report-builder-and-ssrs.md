@@ -12,10 +12,10 @@ ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5fbcae6cbbadb8665086c65088c32513a632c34a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77079931"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>차트의 데이터 요소에 서식 지정(보고서 작성기 및 SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "77079931"
 ## <a name="positioning-data-point-labels-on-a-chart"></a>차트에서 데이터 요소 레이블 위치 지정  
  모든 차트 종류에서 차트를 마우스 오른쪽 단추로 클릭하고 **데이터 레이블 표시**를 선택하면 데이터 요소 레이블을 표시할 수 있습니다. 데이터 요소 레이블의 위치는 다음과 같이 차트 종류에 따라 다른 방법으로 지정됩니다.  
   
--   가로 막대형 차트의 경우 **BarLabelStyle** 사용자 지정 특성을 사용하여 데이터 요소 레이블의 위치를 변경할 수 있습니다. 네 가지 가능한 위치는 바깥쪽, 왼쪽, 가운데 및 오른쪽입니다. 막대 레이블 스타일을 Outside로 설정하면 레이블이 차트 영역 내에서 막대의 바깥쪽으로 배치됩니다. 레이블의 위치를 막대의 바깥쪽 및 차트 영역의 안쪽으로 지정할 수 없으면 레이블이 막대 안쪽으로 배치됩니다.  
+-   가로 막대형 차트의 경우 **BarLabelStyle** 사용자 지정 특성을 사용하여 데이터 요소 레이블의 위치를 변경할 수 있습니다. 4가지 가능한 위치는 바깥쪽, 왼쪽, 가운데 및 오른쪽입니다. 막대 레이블 스타일을 Outside로 설정하면 레이블이 차트 영역 내에서 막대의 바깥쪽으로 배치됩니다. 레이블의 위치를 막대의 바깥쪽 및 차트 영역의 안쪽으로 지정할 수 없으면 레이블이 막대 안쪽으로 배치됩니다.  
   
 -   원형 차트의 경우 **PieLabelStyle** 사용자 지정 특성을 사용하여 데이터 요소 레이블의 위치를 변경할 수 있습니다. 데이터 요소 레이블의 위치를 지정할 때는 원형 차트의 크기, 원형 차트와 해당 범례 사이의 가용 공간 및 레이블의 크기 등 다양한 요소를 고려해야 합니다. 자세한 내용은 [원형 차트 외부에 데이터 요소 레이블 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)를 참조하세요.  
   

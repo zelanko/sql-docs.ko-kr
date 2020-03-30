@@ -11,10 +11,10 @@ ms.assetid: 6c32b904-c44b-472e-a084-38f008a742b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 483588eee0a5d1baaf7f2eda4a88372c45836d2e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67975313"
 ---
 # <a name="setbinarystream-method-int-javaioinputstream"></a>setBinaryStream 메서드(int, java.io.InputStream)

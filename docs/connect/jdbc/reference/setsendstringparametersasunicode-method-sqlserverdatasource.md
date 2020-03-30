@@ -16,10 +16,10 @@ ms.assetid: 49198d63-76cb-4843-8d04-e49b1fbb6916
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fe32325caccebd0e85204bbbc11b7a0cbe4eefca
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972987"
 ---
 # <a name="setsendstringparametersasunicode-method-sqlserverdatasource"></a>setSendStringParametersAsUnicode 메서드(SQLServerDataSource)

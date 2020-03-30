@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 0a892598e2d461d6c51e42292b00a367925f5f13
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244287"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>방법: Team Foundation Build에서 SQL Server 단위 테스트 실행
@@ -67,7 +67,7 @@ Team Foundation Build를 사용하여 BVT(빌드 확인 테스트)의 일부로 
   
 이러한 문제를 해결하기 위해서는 Team Foundation Build 환경과 관련된 구성 파일로 app.config를 재정의하는 재정의 섹션을 app.config에 지정해야 합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [테스트 프로젝트 수정](#ModifyTestProject)을 참조하세요.  
   
-## <a name="ConfigureX64"></a>x64 빌드 에이전트에서 SQL Server 단위 테스트를 실행하도록 테스트 설정 구성  
+## <a name="configure-test-settings-to-run-sql-server-unit-tests-on-an-x64-build-agent"></a><a name="ConfigureX64"></a>x64 빌드 에이전트에서 SQL Server 단위 테스트를 실행하도록 테스트 설정 구성  
 x64 빌드 에이전트에서 단위 테스트를 실행하려면 먼저 호스트 프로세스 플랫폼을 변경하도록 테스트 설정을 구성해야 합니다.  
   
 #### <a name="to-specify-the-host-process-platform"></a>호스트 프로세스 플랫폼을 지정하려면  
@@ -84,7 +84,7 @@ x64 빌드 에이전트에서 단위 테스트를 실행하려면 먼저 호스�
   
 5.  **적용**을 클릭합니다.  
   
-## <a name="CreateATestList"></a>테스트 범주에 테스트 지정(선택 사항)  
+## <a name="assign-tests-to-a-test-category-optional"></a><a name="CreateATestList"></a>테스트 범주에 테스트 지정(선택 사항)  
 일반적으로 단위 테스트를 실행할 빌드 정의를 만들 때는 하나 이상의 테스트 범주를 지정합니다. 빌드를 실행하면 지정된 범주의 모든 테스트가 실행됩니다.  
   
 #### <a name="to-assign-tests-to-a-test-category"></a>테스트 범주에 테스트를 지정하려면  
@@ -101,7 +101,7 @@ x64 빌드 에이전트에서 단위 테스트를 실행하려면 먼저 호스�
   
     새 테스트 범주가 테스트에 지정되고 해당 속성을 통해 다른 테스트에서도 사용할 수 있습니다.  
   
-## <a name="ModifyTestProject"></a>테스트 프로젝트 수정  
+## <a name="modify-the-test-project"></a><a name="ModifyTestProject"></a>테스트 프로젝트 수정  
 기본적으로 Team Foundation Build는 단위 테스트 프로젝트를 빌드할 때 프로젝트의 app.config 파일로부터 구성 파일을 만듭니다. 데이터베이스 프로젝트의 경로가 app.config 파일에 상대 경로로 저장됩니다. Team Foundation Build는 사용자가 단위 테스트를 실행할 때와 다른 위치에 빌드 파일을 저장하기 때문에 Visual Studio에서 작동하는 상대 경로가 작동하지 않습니다. 또한 app.config 파일에는 사용자가 테스트하려는 데이터베이스를 지정하는 연결 문자열이 포함됩니다. 또한 테스트 프로젝트를 만들 때 사용한 것과 다른 데이터베이스에 단위 테스트를 연결해야 할 경우 Team Foundation Build에 대해 별도의 app.config 파일이 필요합니다. 다음 절차에서 항목을 수정하여 Team Foundation Build가 다른 구성을 사용하도록 테스트 프로젝트 및 빌드 서버를 설정할 수 있습니다.  
   
 > [!IMPORTANT]  
@@ -205,7 +205,7 @@ x64 빌드 에이전트에서 단위 테스트를 실행하려면 먼저 호스�
   
     이제 솔루션을 버전 제어에 체크 인합니다.  
   
-## <a name="CheckInTheTestList"></a>솔루션 체크 인  
+## <a name="check-in-the-solution"></a><a name="CheckInTheTestList"></a>솔루션 체크 인  
 이 절차에서는 솔루션의 모든 파일을 체크 인합니다. 이러한 파일에는 테스트 범주 연결 및 테스트를 포함하는 솔루션의 테스트 메타데이터 파일이 포함됩니다. 테스트 콘텐츠를 추가, 삭제, 재구성 또는 변경할 때마다 테스트 메타데이터 파일이 해당 변경 사항을 반영하도록 자동으로 업데이트됩니다.  
   
 > [!NOTE]  
@@ -234,7 +234,7 @@ x64 빌드 에이전트에서 단위 테스트를 실행하려면 먼저 호스�
   
     Team Foundation Build에서 테스트를 사용할 수 있게 되었습니다. 이제 실행하려는 테스트가 포함된 빌드 정의를 만들 수 있습니다.  
   
-## <a name="CreateBuildDef"></a>빌드 정의 만들기  
+## <a name="create-a-build-definition"></a><a name="CreateBuildDef"></a>빌드 정의 만들기  
   
 #### <a name="to-create-a-build-definition"></a>빌드 정의를 만들려면  
   
@@ -264,11 +264,11 @@ x64 빌드 에이전트에서 단위 테스트를 실행하려면 먼저 호스�
   
 10. **기본** 그룹의 **자동화된 테스트**에서 실행하려는 테스트를 지정합니다. 기본적으로 솔루션에서 이름이 \*test\*.dll로 지정된 파일에 포함된 테스트가 실행됩니다.  
   
-11. **파일** 메뉴에서 *ProjectName* **저장**을 클릭합니다.  
+11. **파일** 메뉴에서 **ProjectName** *저장*을 클릭합니다.  
   
     빌드 정의를 만들었습니다. 이제 테스트 프로젝트를 수정합니다.  
   
-## <a name="RunBuild"></a>새 빌드 정의 실행  
+## <a name="run-the-new-build-definition"></a><a name="RunBuild"></a>새 빌드 정의 실행  
   
 #### <a name="to-run-the-new-build-type"></a>새 빌드 유형을 실행하려면  
   

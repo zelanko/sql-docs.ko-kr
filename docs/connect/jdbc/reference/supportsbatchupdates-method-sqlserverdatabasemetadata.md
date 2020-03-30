@@ -16,10 +16,10 @@ ms.assetid: 47b7b0da-e467-465a-aa19-bc702efcfaa0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd3027348673bfb85d9ab512a3f89f2e278edde9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67969786"
 ---
 # <a name="supportsbatchupdates-method-sqlserverdatabasemetadata"></a>supportsBatchUpdates 메서드(SQLServerDatabaseMetaData)

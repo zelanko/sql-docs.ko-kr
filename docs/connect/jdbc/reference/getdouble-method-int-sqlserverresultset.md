@@ -16,10 +16,10 @@ ms.assetid: 128df26a-9063-4bdf-a4fb-a077cbe7cfe1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3d9a02c6bf2fa6c9afa48c2192bfc9103c519174
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983655"
 ---
 # <a name="getdouble-method-int-sqlserverresultset"></a>getDouble 메서드(int)(SQLServerResultSet)

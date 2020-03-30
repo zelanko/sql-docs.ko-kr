@@ -24,10 +24,10 @@ ms.custom: seo-lt-2019
 ms.date: 03/03/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 685397689b390175bd15f6241fc7036004e1e97a
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198540"
 ---
 # <a name="ssms-query-editor"></a>SSMS 쿼리 편집기
@@ -86,7 +86,7 @@ ms.locfileid: "79198540"
 
 선택한 코드를 실행하거나, 코드를 선택하지 않은 경우 쿼리 편집기에 있는 모든 코드를 실행합니다.
 
-F5 키를 선택하거나 [상황에 맞는 메뉴](#execute-using-the-context-menu)에서 쿼리를 **실행**할 수도 있습니다.
+F5 키를 선택하거나 **상황에 맞는 메뉴**에서 쿼리를 [실행](#execute-using-the-context-menu)할 수도 있습니다.
 
 ### <a name="cancel-executing-query-using-the-editor-toolbar"></a>편집기 도구 모음을 사용하여 쿼리 실행 취소
 
@@ -110,31 +110,31 @@ Ctrl + L을 선택하거나 [상황에 맞는 메뉴](#display-estimated-executi
 
 **쿼리 옵션** 대화 상자를 엽니다. 이 대화 상자를 사용하여 쿼리 실행 및 쿼리 결과에 대한 기본 옵션을 구성합니다.
 
-[상황에 맞는 메뉴](#query-options-using-the-context-menu)에서 **쿼리 옵션**을 선택할 수도 있습니다.
+**상황에 맞는 메뉴**에서 [쿼리 옵션](#query-options-using-the-context-menu)을 선택할 수도 있습니다.
 
 ### <a name="intellisense-enabled-using-the-editor-toolbar"></a>편집기 도구 모음을 사용하여 IntelliSense 사용 설정
 
 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서 IntelliSense 기능을 사용할지를 지정합니다. 이 옵션은 기본적으로 설정되어 있습니다.
 
-Ctrl+B, Ctrl+I를 차례로 선택하거나 [상황에 맞는 메뉴](#intellisense-enabled-using-the-context-menu)에서 **IntelliSense 사용**을 선택할 수도 있습니다.
+Ctrl+B, Ctrl+I를 차례로 선택하거나 **상황에 맞는 메뉴**에서 [IntelliSense 사용](#intellisense-enabled-using-the-context-menu)을 선택할 수도 있습니다.
 
 ### <a name="include-actual-execution-plan-using-the-editor-toolbar"></a>편집기 도구 모음을 사용하여 실제 실행 계획 포함
 
 쿼리를 실행한 후 쿼리 결과와 쿼리에 사용된 실행 계획을 반환합니다. 이러한 결과는 **실행 계획** 창에 그래픽 쿼리 계획으로 표시됩니다.
 
-Ctrl + M을 선택하거나 [상황에 맞는 메뉴](#include-actual-execution-plan-using-the-context-menu)에서 **실제 실행 계획 포함**을 선택할 수도 있습니다.
+Ctrl + M을 선택하거나 **상황에 맞는 메뉴**에서 [실제 실행 계획 포함](#include-actual-execution-plan-using-the-context-menu)을 선택할 수도 있습니다.
 
 ### <a name="include-live-query-statistics-using-the-editor-toolbar"></a>편집기 도구 모음을 사용하여 활성 쿼리 통계 포함
 
 제어권이 한 쿼리 계획 연산자에서 다른 연산자로 흘러갈 때 쿼리 실행 프로세스를 실시간으로 파악할 수 있습니다.
 
-[상황에 맞는 메뉴](#include-live-query-statistics-using-the-context-menu)에서 **활성 쿼리 통계 포함**을 선택할 수도 있습니다.
+**상황에 맞는 메뉴**에서 [활성 쿼리 통계 포함](#include-live-query-statistics-using-the-context-menu)을 선택할 수도 있습니다.
 
 ### <a name="include-client-statistics-using-the-editor-toolbar"></a>편집기 도구 모음을 사용하여 클라이언트 통계 포함
 
 쿼리 통계와 네트워크 패킷 통계 및 쿼리 경과 시간이 표시된 **클라이언트 통계** 창을 포함합니다.
 
-Shift + Alt + S를 선택하거나 [상황에 맞는 메뉴](#include-client-statistics-using-the-context-menu)에서 **활성 쿼리 통계 포함**을 선택할 수 있습니다.
+Shift + Alt + S를 선택하거나 **상황에 맞는 메뉴**에서 [활성 쿼리 통계 포함](#include-client-statistics-using-the-context-menu)을 선택할 수 있습니다.
 
 ### <a name="results-to-text-using-the-editor-toolbar"></a>편집기 도구 모음을 사용하여 텍스트로 결과 표시
 

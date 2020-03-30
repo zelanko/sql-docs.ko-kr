@@ -9,10 +9,10 @@ ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041269"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>자습서: 보고서에 원형 차트 추가(보고서 작성기)
@@ -34,7 +34,7 @@ ms.locfileid: "63041269"
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
   
-## <a name="Chart"></a>1. 차트 마법사에서 원형 차트 만들기  
+## <a name="1-create-a-pie-chart-from-the-chart-wizard"></a><a name="Chart"></a>1. 차트 마법사에서 원형 차트 만들기  
 이 섹션에서는 차트 마법사를 사용하여 포함된 데이터 세트를 만들고, 공유 데이터 원본을 선택하고, 원형 차트를 만듭니다.  
 
   
@@ -77,7 +77,7 @@ ms.locfileid: "63041269"
   
 9. **다음**을 클릭합니다.  
   
-## <a name="ChartType"></a>2. 차트 종류 선택  
+## <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. 차트 종류 선택  
 미리 정의된 다양한 차트 종류 중에서 선택할 수 있습니다.  
 
   
@@ -103,7 +103,7 @@ ms.locfileid: "63041269"
 
 ![report-builder-pie-chart-first-preview](../reporting-services/media/report-builder-pie-chart-first-preview.png)
   
-## <a name="Percentages"></a>3. 각 조각에 백분율 표시  
+## <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3. 각 조각에 백분율 표시  
 원형 차트의 각 조각에 원형 전체에 대한 해당 조각의 백분율을 표시할 수 있습니다.  
 
   
@@ -130,7 +130,7 @@ ms.locfileid: "63041269"
 
 ![report-builder-pie-chart-preview-percents](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
   
-## <a name="CombineSlices"></a>4. 작은 조각들을 하나의 조각으로 결합  
+## <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4. 작은 조각들을 하나의 조각으로 결합  
 원형 차트의 조각 중 3개는 폭이 좁습니다. 여러 개의 작은 조각을 세 조각 모두를 나타내는 하나의 큰 "기타" 조각으로 결합할 수 있습니다.  
 
 1.  보고서 디자인 뷰로 전환합니다.  
@@ -155,7 +155,7 @@ ms.locfileid: "63041269"
 
 ![report-builder-pie-chart-start-at-90](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
  
-## <a name="DrawingEffect"></a>5. 원형 차트 값을 위쪽에서 시작하기 
+## <a name="5-start-pie-chart-values-at-the-top"></a><a name="DrawingEffect"></a>5. 원형 차트 값을 위쪽에서 시작하기 
 
 기본적으로 원형 차트에서는 데이터 세트의 첫 번째 값이 원형의 위쪽으로부터 90도가 되는 지점에서 시작됩니다. 이전 섹션의 원형 차트에서 이를 확인할 수 있습니다.
 
@@ -173,7 +173,7 @@ ms.locfileid: "63041269"
 
 ![report-builder-pie-chart-start-at-top](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
   
-## <a name="Title"></a>6. 보고서 제목 추가  
+## <a name="6-add-a-report-title"></a><a name="Title"></a>6. 보고서 제목 추가  
   
 원형 차트가 보고서의 유일한 시각화 요소이므로 차트에는 제목이 필요하지 않습니다. 보고서 제목만 있으면 됩니다.
   
@@ -197,7 +197,7 @@ ms.locfileid: "63041269"
   
 6.  **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
-## <a name="Save"></a>7. 보고서 저장  
+## <a name="7-save-the-report"></a><a name="Save"></a>7. 보고서 저장  
   
 ### <a name="to-save-the-report"></a>보고서를 저장하려면  
   

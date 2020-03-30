@@ -11,10 +11,10 @@ ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee38cc22ec2834060396b696acb900eb8c7f8831
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78866523"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server
@@ -27,7 +27,7 @@ Microsoft Drivers for PHP for SQL Server는 PHP 애플리케이션용 SQL Server
 * [1단계: PHP 개발을 위한 개발 환경 구성](step-1-configure-development-environment-for-php-development.md)  
 * [2단계: PHP 개발을 위한 데이터베이스 만들기](step-2-create-a-sql-database-for-php-development.md)  
 * [3단계: PHP를 사용하여 SQL에 연결하는 개념 증명](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
-* [4단계: PHP로 SQL에 탄력적으로 연결](step-4-connect-resiliently-to-sql-with-php.md)  
+* [4단계: PHP를 사용하여 탄력적으로 SQL에 연결](step-4-connect-resiliently-to-sql-with-php.md)  
   
 ## <a name="documentation"></a>문서화  
 * [시작](getting-started-with-the-php-sql-driver.md)

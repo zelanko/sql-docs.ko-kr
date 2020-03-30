@@ -16,10 +16,10 @@ ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e666496383b738b11f20cd9b3d7e3a76e8613416
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198314"
 ---
 # <a name="creating-the-web-service-proxy"></a>웹 서비스 프록시 만들기
@@ -117,7 +117,7 @@ rs.Credentials = System.Net.CredentialCache.DefaultCredentials;
   
 ```  
   
- **using**([!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]의 경우 **Import**) 지시문을 보고서 서버 웹 서비스 참조에 추가할 수도 있습니다. 이 지시문을 사용할 경우에는 네임스페이스에서 형식을 정규화하지 않아도 됩니다. 이렇게 하려면 다음 코드를 파일에 추가합니다.  
+ **using**(**의 경우** Import[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) 지시문을 보고서 서버 웹 서비스 참조에 추가할 수도 있습니다. 이 지시문을 사용할 경우에는 네임스페이스에서 형식을 정규화하지 않아도 됩니다. 이렇게 하려면 다음 코드를 파일에 추가합니다.  
   
 ```vb  
 Import myNamespace.myReferenceName  

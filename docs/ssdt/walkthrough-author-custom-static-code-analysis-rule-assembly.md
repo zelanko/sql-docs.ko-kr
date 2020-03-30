@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: d11446e3ef8fade0c4cfe6ec885c40754861fc26
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257035"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>SQL Server의 사용자 지정 정적 코드 분석 규칙 어셈블리 작성 연습
@@ -257,7 +257,7 @@ ms.locfileid: "75257035"
     |AvoidWaitForDelay_ProblemDescription|WAITFOR DELAY 문이 {0}에 있습니다.|  
     |AvoidWaitForDelay_RuleName|저장 프로시저, 함수 및 트리거에서 WaitFor Delay 문을 사용하지 마세요.|  
     |CategorySamples|SamplesCategory|  
-    |CannotCreateResourceManager|{1}에서 {0}에 대한 ResourceManager를 만들 수 없습니다.|  
+    |CannotCreateResourceManager|{0}에서 {1}에 대한 ResourceManager를 만들 수 없습니다.|  
   
 7. **파일** 메뉴에서 **RuleResources.resx 저장**을 클릭합니다.  
   
@@ -544,7 +544,7 @@ Visual Studio 2012의 경우 <Visual Studio Install Dir>은 일반적으로 C:\P
   
 3. **코드 분석**을 클릭합니다. RuleSamples.CategorySamples라는 새 범주가 표시됩니다.  
   
-4. RuleSamples .CategorySamples를 확장합니다. SR1004가 표시되어야 합니다. 저장 프로시저, 함수 및 트리거에서 WAITFOR DELAY 문을 사용하지 마세요.  
+4. RuleSamples .CategorySamples를 확장합니다. SR1004: 저장 프로시저, 함수 및 트리거에서 WaitFor Delay 문을 사용하지 마세요.가 표시됩니다.  
   
 ## <a name="see-also"></a>참고 항목
 

@@ -11,10 +11,10 @@ ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 38af92d3cb0354bc4b75131a349f6a1c26e90490
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67992465"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>1단계: Ruby 개발을 위한 개발 환경 구성
@@ -94,7 +94,7 @@ OS에 종속성이 있으므로 Mac OS X에 Ruby가 미리 설치되어 있습�
   
 1.  **터미널을 엽니다.**  
   
-2. **Homebrew 패키지 관리자를 설치합니다.**  
+2. **Homebrew 패키지 관리자 설치**  
 ```  
 > ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"  
 ```  

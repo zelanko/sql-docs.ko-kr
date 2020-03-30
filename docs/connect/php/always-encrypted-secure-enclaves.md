@@ -11,10 +11,10 @@ ms.author: v-dapugl
 author: david-puglielli
 manager: v-mabarw
 ms.openlocfilehash: 796a77f3be0e1d15609f91ee1c36c2769a541cc5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76941081"
 ---
 # <a name="using-always-encrypted-with-secure-enclaves-with-the-php-drivers-for-sql-server"></a>PHP Drivers for SQL Server와 함께 보안 Enclave를 사용한 Always Encrypted 사용
@@ -46,9 +46,9 @@ SQLSRV 및 PDO_SQLSRV에 대한 다음 예제는 일반 텍스트로 여러 데�
 
 - `ALTER TABLE`을 사용하여 테이블을 암호화하는 경우 `ALTER TABLE`을 호출할 때마다 하나의 열만 암호화할 수 있으므로 여러 열을 암호화하려면 여러 번 호출해야 합니다.
 - 비교 임계값을 char 및 nchar 형식 비교를 위한 매개 변수로 전달하는 경우 열 너비를 해당 `SQLSRV_SQLTYPE_*`에 지정해야 합니다. 그렇지 않으면 `HY104` 오류 `Invalid precision value`가 반환됩니다.
-- 패턴 일치의 경우 `COLLATE` 절을 사용하여 데이터 정렬을 `Latin1_General_BIN2`로 지정해야 합니다.
-- 일치하는 char 및 nchar 형식에 대한 매개 변수로 패턴 일치 문자열을 전달하는 경우 `sqlsrv_query` 또는 `sqlsrv_prepare`에 전달된 `SQLSRV_SQLTYPE_*`은 char 및 nchar 형식이 문자열의 끝에 공백을 패딩하기 때문에 일치시킬 열의 크기가 아닌 길이를 지정해야 합니다. 예를 들어 char(10) 열에 대해 문자열 `%abc%`를 일치시킬 때 `SQLSRV_SQLTYPE_CHAR(5)`를 지정합니다. 대신 `SQLSRV_SQLTYPE_CHAR(10)`를 지정할 경우 쿼리는 5개의 공백이 추가된 `%abc%     `와 일치하고, 5개 미만의 공백이 추가된 열의 데이터는 일치하지 않습니다. 따라서 `abcdef`는 패딩 공백이 4개 있으므로 `%abc%`와 일치하지 않습니다. 유니코드 문자열의 경우 `mb_strlen` 또는 `iconv_strlen` 함수를 사용하여 문자 수를 가져옵니다.
-- PDO 인터페이스에서는 매개 변수의 길이를 지정할 수 없습니다. 대신 `PDOStatement::bindParam`의 길이를 0 또는 `null`로 지정합니다. 길이를 명시적으로 다른 숫자로 설정한 경우 매개 변수는 출력 매개 변수로 처리됩니다.
+- 패턴 일치의 경우 `Latin1_General_BIN2` 절을 사용하여 데이터 정렬을 `COLLATE`로 지정해야 합니다.
+- 일치하는 char 및 nchar 형식에 대한 매개 변수로 패턴 일치 문자열을 전달하는 경우 `SQLSRV_SQLTYPE_*` 또는 `sqlsrv_query`에 전달된 `sqlsrv_prepare`은 char 및 nchar 형식이 문자열의 끝에 공백을 패딩하기 때문에 일치시킬 열의 크기가 아닌 길이를 지정해야 합니다. 예를 들어 char(10) 열에 대해 문자열 `%abc%`를 일치시킬 때 `SQLSRV_SQLTYPE_CHAR(5)`를 지정합니다. 대신 `SQLSRV_SQLTYPE_CHAR(10)`를 지정할 경우 쿼리는 5개의 공백이 추가된 `%abc%     `와 일치하고, 5개 미만의 공백이 추가된 열의 데이터는 일치하지 않습니다. 따라서 `abcdef`는 패딩 공백이 4개 있으므로 `%abc%`와 일치하지 않습니다. 유니코드 문자열의 경우 `mb_strlen` 또는 `iconv_strlen` 함수를 사용하여 문자 수를 가져옵니다.
+- PDO 인터페이스에서는 매개 변수의 길이를 지정할 수 없습니다. 대신 `null`의 길이를 0 또는 `PDOStatement::bindParam`로 지정합니다. 길이를 명시적으로 다른 숫자로 설정한 경우 매개 변수는 출력 매개 변수로 처리됩니다.
 - 패턴 일치는 Always Encrypted의 문자열이 아닌 형식에 대해 작동하지 않습니다.
 - 명확성을 위해 오류 검사는 제외했습니다. 
 

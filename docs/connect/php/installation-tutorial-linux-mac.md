@@ -10,10 +10,10 @@ author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
 ms.openlocfilehash: 913b6d95a7bb9a690f0a8cdd7d8c88b29782f876
-ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79058577"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server의 Linux 및 macOS 설치 자습서
@@ -123,7 +123,7 @@ sudo apt-get update
 sudo apt-get install nginx
 sudo systemctl status nginx
 ```
-nginx를 구성하려면 `/etc/nginx/sites-available/default` 파일을 편집해야 합니다. `# Add index.php to the list if you are using PHP`라고 표시되는 섹션 아래 목록에 `index.php`를 추가합니다.
+nginx를 구성하려면 `/etc/nginx/sites-available/default` 파일을 편집해야 합니다. `index.php`라고 표시되는 섹션 아래 목록에 `# Add index.php to the list if you are using PHP`를 추가합니다.
 ```
 # Add index.php to the list if you are using PHP
 index index.html index.htm index.nginx-debian.html index.php;
@@ -406,7 +406,7 @@ sudo apachectl restart
 
 ## <a name="testing-your-installation"></a>설치 테스트
 
-이 샘플 스크립트를 테스트하려면 시스템의 문서 루트에 testsql.php라는 파일을 만듭니다. Ubuntu, Debian 및 Redhat에서는 `/var/www/html/`, SUSE에서는 `/srv/www/htdocs`, Alpine에서는 `/var/www/localhost/htdocs`, macOS에서는 `/usr/local/var/www`입니다. 다음 스크립트를 파일에 복사하고 서버, 데이터베이스, 사용자 이름 및 암호를 적절하게 바꿉니다. Alpine 3.11에서는 `$connectionOptions` 배열에서 **CharacterSet**를 'UTF-8'로 지정해야 할 수도 있습니다.
+이 샘플 스크립트를 테스트하려면 시스템의 문서 루트에 testsql.php라는 파일을 만듭니다. Ubuntu, Debian 및 Redhat에서는 `/var/www/html/`, SUSE에서는 `/srv/www/htdocs`, Alpine에서는 `/var/www/localhost/htdocs`, macOS에서는 `/usr/local/var/www`입니다. 다음 스크립트를 파일에 복사하고 서버, 데이터베이스, 사용자 이름 및 암호를 적절하게 바꿉니다. Alpine 3.11에서는 **배열에서**CharacterSet`$connectionOptions`를 'UTF-8'로 지정해야 할 수도 있습니다.
 ```
 <?php
 $serverName = "yourServername";

@@ -44,10 +44,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 401e9a36e6ab93a9701508bc4b587a55b81642e1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253899"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>스크립트 생성 및 게시 마법사
@@ -61,17 +61,17 @@ ms.locfileid: "75253899"
 ## <a name="before-you-begin"></a>시작하기 전에  
  원본 및 대상 데이터베이스는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]또는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이상을 실행하는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 인스턴스에 있을 수 있습니다.  
   
-###  <a name="PubHostSvc"></a> 호스티드 서비스에 게시  
+###  <a name="publishing-to-a-hosted-service"></a><a name="PubHostSvc"></a> 호스티드 서비스에 게시  
  **스크립트 생성 및 게시 마법사** 는 스크립트 생성 외에도 데이터베이스를 특정 유형의 SQL Server 웹 서비스에 게시하는 데에도 사용됩니다. SQL Server Hosting Toolkit은 CodePlex의 공유 원본 프로젝트로서 데이터베이스 게시 서비스를 제공합니다. 웹 호스팅 공급자는 데이터베이스 게시 서비스 프로젝트를 사용하여 고객이 손쉽게 데이터베이스를 웹 서비스에 게시할 수 있는 웹 서비스 집합을 작성할 수 있습니다. SQL Server Hosting Toolkit을 다운로드하는 방법은 [SQL Server 데이터 게시 서비스(SQL Server Database Publishing Services)](https://go.microsoft.com/fwlink/?LinkId=142025)를 참조하세요.  
   
  데이터베이스를 웹 호스팅 서비스에 게시하려면 마법사의 **스크립팅 옵션 설정** 페이지에서 **웹 서비스에 게시** 옵션을 선택합니다.  
   
-###  <a name="Permissions"></a> 권한  
+###  <a name="permissions"></a><a name="Permissions"></a> 권한  
  데이터베이스를 게시하려면 최소한 원본 데이터베이스에 대해 db_ddladmin 고정 데이터베이스 역할의 멤버 자격이 필요하고, 호스팅 공급자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 데이터베이스 스크립트를 게시하려면 최소한 대상 데이터베이스에 대해 db_ddladmin 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
  또한 마법사를 사용하여 게시하려면 해당 호스팅 공급자 계정에 액세스하기 위한 사용자 이름과 암호를 제공해야 합니다. 원본 데이터베이스를 게시하려면 먼저 호스팅 공급자에서 대상 데이트베이스를 만들어야 합니다. 게시하면 기존 데이터베이스의 개체를 덮어씁니다.  
   
-##  <a name="GenPubScriptWiz"></a> 스크립트 생성 및 게시 마법사 사용  
+##  <a name="using-the-generate-and-publish-scripts-wizard"></a><a name="GenPubScriptWiz"></a> 스크립트 생성 및 게시 마법사 사용  
  **스크립트를 생성하거나 게시하려면**  
   
 1.  **개체 탐색기**에서 스크립팅할 데이터베이스가 포함된 인스턴스에 대한 노드를 확장합니다.  
@@ -92,14 +92,14 @@ ms.locfileid: "75253899"
     -   [요약 페이지](#Summary)   
     -   [스크립트 저장 또는 게시 페이지](#SavePubScripts)  
   
-###  <a name="Introduction"></a> 소개 페이지  
+###  <a name="introduction-page"></a><a name="Introduction"></a> 소개 페이지  
  이 페이지에서는 스크립트를 생성 또는 게시하기 위한 단계에 대해 설명합니다.  
   
  **이 페이지를 다시 표시 안 함** - 다음에 **스크립트 생성 및 게시 마법사**를 시작할 때 이 페이지를 표시하지 않습니다.  
   
   ![소개 페이지](media/generate-and-publish-scripts-wizard/intro.png)
   
-###  <a name="ChooseObjects"></a> 개체 선택 페이지  
+###  <a name="choose-objects-page"></a><a name="ChooseObjects"></a> 개체 선택 페이지  
  이 페이지를 사용하여 이 마법사에서 생성된 스크립트에 포함할 개체를 선택할 수 있습니다. 다음 마법사 페이지에서는 이러한 스크립트를 사용자가 선택한 위치에 저장하거나, 스크립트를 사용하여 데이터베이스 개체를 [SQL Server Database Publishing Services](https://go.microsoft.com/fwlink/?LinkId=142025)가 설치되어 있는 원격 웹 호스팅 공급자에 게시할 수 있습니다.  
   
  **전체 데이터베이스 스크립팅 옵션** - 데이터베이스의 모든 개체에 대한 스크립트를 생성하고 데이터베이스 자체에 대한 스크립트를 포함하려면 클릭합니다. 
@@ -116,7 +116,7 @@ ms.locfileid: "75253899"
 
    ![특정 스크립트](media/generate-and-publish-scripts-wizard/scriptspecificobjects.png)
   
-###  <a name="SetScriptOpt"></a> 스크립팅 옵션 설정 페이지  
+###  <a name="set-scripting-options-page"></a><a name="SetScriptOpt"></a> 스크립팅 옵션 설정 페이지  
  이 페이지를 사용하여 마법사에서 스크립트를 사용자가 선택한 위치에 저장할지, 아니면 스크립트를 사용하여 데이터베이스 개체를 원격 웹 호스팅 공급자에 게시할지를 지정할 수 있습니다. 게시하려면 Database Publishing Services 웹 서비스를 사용하여 설치된 웹 서비스에 액세스할 수 있어야 합니다.  
   
  **옵션** - 마법사에서 사용자가 선택한 위치에 스크립트를 저장하려면 **특정 위치에 스크립트 저장**을 선택합니다. 나중에 데이터베이스 엔진 인스턴스나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]를 대상으로 스크립트를 실행할 수 있습니다. 데이터베이스 개체를 원격 웹 호스팅 공급자에 게시하려면 **웹 서비스에 게시**를 선택합니다.  
@@ -141,7 +141,7 @@ ms.locfileid: "75253899"
   
 -   **대상 데이터베이스** - 선택한 개체를 게시할 대상 데이터베이스를 선택합니다. 대상 데이터베이스를 선택하기 전에 공급자를 선택해야 합니다.  
   
-###  <a name="AdvScriptOpt"></a> 고급 스크립팅 옵션 페이지  
+###  <a name="advanced-scripting-options-page"></a><a name="AdvScriptOpt"></a> 고급 스크립팅 옵션 페이지  
  이 페이지를 사용하여 이 마법사에서 스크립트를 생성하는 방법을 지정할 수 있습니다. 여기에서는 다양한 옵션을 사용할 수 있습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Database engine type **에 지정된 SQL Server 또는**버전에서 지원되지 않는 옵션은 회색으로 나타납니다.  
 
 ![고급 옵션](media/generate-and-publish-scripts-wizard/advanced.png)
@@ -214,7 +214,7 @@ ms.locfileid: "75253899"
   
 -   **고유 키 스크립팅** - 테이블에 대한 고유 키 생성을 스크립팅합니다. 고유 키는 중복 데이터를 입력하지 않도록 합니다. 기본값은 **True**입니다. 자세한 내용은 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)을 참조하세요.  
   
-###  <a name="MgProviders"></a> 공급자 관리 페이지  
+###  <a name="manage-providers-page"></a><a name="MgProviders"></a> 공급자 관리 페이지  
  이 대화 상자를 사용하여 호스팅 공급자 연결을 보고, 추가, 편집, 삭제 또는 테스트할 수 있습니다. 호스팅 공급자는 CodePlex의 SQL Server Hosting Toolkit에 포함된 Database Publishing Service 프로젝트를 사용하여 만든 웹 서비스를 위한 연결 정보를 지정합니다.  
   
  **구성된 공급자** - 저장된 각 호스팅 공급자의 이름과 **웹** 서비스 주소를 나열합니다.  
@@ -231,7 +231,7 @@ ms.locfileid: "75253899"
   
  **취소** - **호스팅 공급자** 대화 상자에서 변경한 내용을 모두 실행 취소합니다.  
   
-###  <a name="AdvPubOpts"></a> 고급 게시 옵션 페이지  
+###  <a name="advanced-publishing-options-page"></a><a name="AdvPubOpts"></a> 고급 게시 옵션 페이지  
  이 페이지를 사용하여 이 마법사에서 데이터베이스를 게시하는 방법을 지정할 수 있습니다. 여기에서는 다양한 옵션을 사용할 수 있습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Database engine type **에 지정된 SQL Server 또는**버전에서 지원되지 않는 옵션은 회색으로 나타납니다.  
 
   ![고급 게시](media/generate-and-publish-scripts-wizard/advancedpublish.png)
@@ -288,7 +288,7 @@ ms.locfileid: "75253899"
   
 9. **데이터 압축 옵션 게시** - 원본 데이터베이스 또는 원본 데이터베이스의 테이블에서 데이터 압축 옵션이 구성되어 있는 경우 게시 프로세스에 데이터 압축 옵션을 포함합니다. 기본값은 **True**입니다. 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요.  
   
-###  <a name="ProvConfig"></a> 공급자 구성 페이지  
+###  <a name="provider-configuration-page"></a><a name="ProvConfig"></a> 공급자 구성 페이지  
  이 대화 상자를 사용하여 호스팅 공급자 설정을 보거나 수정할 수 있습니다. 이 대화 상자를 사용하면 다음과 같은 작업을 수행할 수 있습니다.  
   
 -   호스팅 공급자에 대한 연결 정보 보기, 추가 또는 편집  
@@ -321,12 +321,12 @@ ms.locfileid: "75253899"
   
  **취소** - 이 대화 상자의 모든 변경 내용을 실행 취소하고 마법사로 돌아갑니다.  
   
-###  <a name="Summary"></a> 요약 페이지  
+###  <a name="summary-page"></a><a name="Summary"></a> 요약 페이지  
  이 페이지에서는 이 마법사에서 선택한 옵션을 요약합니다. 옵션을 변경하려면 **이전**을 클릭하고, 저장하거나 게시할 스크립트 생성을 시작하려면 **다음**을 클릭합니다.  
   
  **선택 항목 검토** - 마법사의 각 페이지에서 선택한 항목을 표시합니다. 해당 페이지에서 선택한 옵션을 보려면 노드를 확장하세요.  
   
-###  <a name="SavePubScripts"></a> 스크립트 저장 또는 게시 페이지  
+###  <a name="save-or-publish-scripts-page"></a><a name="SavePubScripts"></a> 스크립트 저장 또는 게시 페이지  
  이 페이지를 사용하여 마법사의 진행률을 모니터링할 수 있습니다.  
   
  **자세히** - 마법사 진행률을 보려면 **동작** 열을 확인합니다. 스크립트를 생성한 후 마법사는 사용자의 선택에 따라 스크립트를 파일로 저장하거나 스크립트를 사용하여 웹 서비스에 게시합니다. 이러한 각 단계가 모두 완료되면 **결과** 열의 값을 클릭하여 해당 단계의 결과를 확인할 수 있습니다.  

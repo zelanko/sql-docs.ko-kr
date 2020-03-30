@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 1025ea1de1e349e640b285174ffab694f791fd21
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68221641"
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application"></a>Reporting Services 서비스 애플리케이션에 대한 전자 메일 구성
@@ -50,7 +50,7 @@ ms.locfileid: "68221641"
   
 1.  해당 전자 메일 환경에서 NTLM 인증이 필요하고 익명 액세스가 허용되지 않는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대해 전자 메일 배달 확장 프로그램 구성을 수정해야 합니다. 예를 들어 **구독 관리** 페이지: 구독의 **마지막 결과** 에 다음과 같은 메시지가 표시되는 경우입니다.  
   
-    -   메일을 보내지 못했습니다. SMTP 서버에 보안 연결이 필요하거나 클라이언트가 인증되지 않았습니다. 서버 응답: 5.7.1 클라이언트가 인증되지 않았습니다. 메일이 다시 전송되지 않습니다.  
+    -   메일 전송 실패: SMTP 서버에 보안 연결이 필요하거나 클라이언트가 인증되지 않았습니다. 서버 응답: 5.7.1 클라이언트가 인증되지 않았습니다. 메일이 다시 전송되지 않습니다.  
   
      "2" 값을 사용하도록 **SMTP 인증**을 변경합니다. 이 값은 사용자 인터페이스에서 변경할 수 없습니다. 다음 PowerShell 스크립트 예에서 "SSRS_TESTAPPLICATION" 서비스 애플리케이션에 대해 보고서 서버 이메일 배달 확장 프로그램의 전체 구성을 업데이트합니다. 또한 예를 들어 "보낸 사람" 주소와 같이 스크립트에 나열된 일부 노드는 사용자 인터페이스에서 설정할 수 있습니다.  
   

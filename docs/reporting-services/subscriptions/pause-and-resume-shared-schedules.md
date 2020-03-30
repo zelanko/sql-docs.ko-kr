@@ -17,10 +17,10 @@ ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7ec4c97ad3627ae91fd01cf0d8d73a2569a0c41a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578175"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>공유 일정 일시 중지 및 다시 시작
@@ -36,7 +36,7 @@ ms.locfileid: "65578175"
   
 -   [공유 일정 일시 중지 및 다시 시작(SharePoint 모드)](#bkmk_sharepoint)  
   
-##  <a name="bkmk_native"></a> 공유 일정 일시 중지 및 다시 시작(기본 모드)  
+##  <a name="pause-and-resume-shared-schedules-native-mode"></a><a name="bkmk_native"></a> 공유 일정 일시 중지 및 다시 시작(기본 모드)  
  공유 일정을 일시 중지하고 다시 시작하려면 보고서 관리자에서 일정 페이지를 사용합니다. 여기에는 일정을 일시 중지하고 다시 시작하는 옵션이 없으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용할 수 없습니다. 자세한 내용은 [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)을 참조하세요.  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>공유 일정을 일시 중지 또는 다시 시작하려면  
@@ -47,7 +47,7 @@ ms.locfileid: "65578175"
   
 3.  일정을 선택하고 리본에서 **일시 중지** 를 클릭하거나 **재개** 를 클릭합니다. 일정이 현재 일시 중지된 경우 **상태** 열에 **일시 중지됨**이 포함됩니다.  
   
-##  <a name="bkmk_sharepoint"></a> 공유 일정 일시 중지 및 다시 시작(SharePoint 모드)  
+##  <a name="pause-and-resume-shared-schedules-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> 공유 일정 일시 중지 및 다시 시작(SharePoint 모드)  
  공유 일정을 일시 중지하고 재개하려면 사이트 설정 페이지 또는 PowerShell을 사용합니다. 일정은 SharePoint 사이트에 따라 관리됩니다.  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>공유 일정을 일시 중지 또는 다시 시작하려면  

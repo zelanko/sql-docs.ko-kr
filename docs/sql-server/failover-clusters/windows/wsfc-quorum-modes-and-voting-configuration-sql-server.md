@@ -15,10 +15,10 @@ ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 448d3679530c689befa59e2b8a70d409d93f6dd4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74822170"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC 쿼럼 모드 및 투표 구성(SQL Server)
@@ -26,7 +26,7 @@ ms.locfileid: "74822170"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 및 Always On FCI(장애 조치(failover) 클러스터 인스턴스)는 모두 WSFC(Windows Server 장애 조치(failover) 클러스터링)를 플랫폼 기술로 활용합니다.  WSFC는 쿼럼 기반 방식을 사용하여 전반적인 클러스터 상태를 모니터링하고 노드 수준의 내결함성을 극대화합니다. Always On 고가용성 및 재해 복구 솔루션을 디자인하고 운영하고 문제를 해결하기 위해서는 WSFC 쿼럼 모드 및 노드 투표 구성의 기초를 이해하는 것이 매우 중요합니다.  
   
   
-##  <a name="ClusterHealthDetectionbyQuorum"></a> 쿼럼을 기준으로 클러스터 상태 검색  
+##  <a name="cluster-health-detection-by-quorum"></a><a name="ClusterHealthDetectionbyQuorum"></a> 쿼럼을 기준으로 클러스터 상태 검색  
  WSFC 클러스터의 각 노드는 주기적 하트비트 통신에 참여하여 노드의 상태를 다른 노드와 공유합니다. 응답하지 않는 노드는 오류 상태에 있는 것으로 간주됩니다.  
   
  WSFC 클러스터에서 *쿼럼* 노드 집합은 대부분의 투표 노드 및 미러링 모니터입니다. WSFC 클러스터의 전반적인 상태는 주기적 *쿼럼 득표*에 의해 결정됩니다.  쿼럼이 있으면 클러스터가 양호한 상태이고 노드 수준의 내결함성을 제공할 수 있음을 의미합니다.  
@@ -36,9 +36,9 @@ ms.locfileid: "74822170"
 > [!IMPORTANT]  
 >  쿼럼 실패로 인해 WSFC 클러스터가 오프라인으로 설정된 경우 다시 온라인으로 설정하려면 수동으로 설정해야 합니다.  
 >   
->  자세한 내용은 다음을 참조하세요. [강제 쿼럼을 통해 WSFC 재해 복구&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)를 참조하세요.  
+>  자세한 내용은 [강제 쿼럼을 통해 WSFC 재해 복구&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)에 의해 결정됩니다.  
   
-##  <a name="QuorumModes"></a> 쿼럼 모드  
+##  <a name="quorum-modes"></a><a name="QuorumModes"></a> 쿼럼 모드  
  *쿼럼 모드* 는 쿼럼 투표에 사용되는 방법을 지시하는 WSFC 클러스터 수준에서 구성됩니다.  장애 조치(Failover) 클러스터 관리자 유틸리티는 클러스터의 노드 수에 따라 쿼럼 모드를 추천합니다.  
   
  다음 쿼럼 모드는 득표 쿼럼을 구성하는 요소를 결정하는 데 사용할 수 있습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "74822170"
 > [!TIP]  
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대해 비대칭 스토리지 구성을 사용할 때는 일반적으로 투표 노드의 수가 홀수인 경우 노드 과반수 쿼럼 모드를 사용하고 투표 노드의 수가 짝수인 경우 노드 및 파일 공유 과반수 쿼럼 모드를 사용해야 합니다.  
   
-##  <a name="VotingandNonVotingNodes"></a> 투표 및 비투표 노드  
+##  <a name="voting-and-non-voting-nodes"></a><a name="VotingandNonVotingNodes"></a> 투표 및 비투표 노드  
  기본적으로 WSFC 클러스터의 각 노드는 클러스터 쿼럼의 멤버로 포함됩니다. 각 노드는 전반적인 클러스터 상태를 결정하는 데 하나의 투표권이 있으며 지속적으로 쿼럼을 설정하려고 합니다.  이 시점까지 쿼럼 토론은 클러스터 상태에 대해 투표하는 WSFC 클러스터 노드 집합을 *투표 노드*로 간주합니다.  
   
  WSFC 클러스터에는 전체 클러스터가 정상 상태인지 아닌지를 명확하게 결정할 수 있는 개별 노드가 없습니다.  모든 지정된 시점에서 다른 일부 노드는 각 노드의 큐브 뷰에서 오프라인으로 표시되거나, 장애 조치(failover)가 진행 중인 것으로 표시되거나, 네트워크 통신 오류로 인해 응답하지 않는 것으로 표시될 수 있습니다.  쿼럼 투표의 주요 기능은 WSFC 클러스터의 각 노드 표시 상태가 해당 노드의 실제 상태인지 여부를 결정하는 것입니다.  
@@ -75,9 +75,9 @@ ms.locfileid: "74822170"
 > [!IMPORTANT]  
 >  NodeWeight 설정을 사용하려면 WSFC 클러스터의 모든 서버에 다음 핫픽스를 적용해야 합니다.  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036): [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 및 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]에서 쿼럼 투표가 없는 클러스터 노드를 구성하는 데 사용할 수 있는 핫픽스  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 및 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
-##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> 쿼럼 투표에 권장되는 조정  
+##  <a name="recommended-adjustments-to-quorum-voting"></a><a name="RecommendedAdjustmentstoQuorumVoting"></a> 쿼럼 투표에 권장되는 조정  
  지정된 WSFC 노드의 투표를 사용하거나 사용하지 않도록 설정하는 경우 다음 지침을 따르세요.  
   
 -   **기본적으로 투표가 없습니다.** 각 노드에서 명시적인 이유 없이 투표하지 않는 것으로 가정합니다.  
@@ -104,21 +104,21 @@ ms.locfileid: "74822170"
 > 
 >  자세한 내용은  [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md), [sys.dm_hadr_cluster_members](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md), [sys.dm_os_cluster_nodes](../../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md), [sys.dm_hadr_cluster_networks](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql.md)를 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [클러스터 쿼럼 NodeWeight 설정 보기](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
   
 -   [클러스터 쿼럼 NodeWeight 설정 구성](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
-##  <a name="RelatedContent"></a> 관련 내용  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
   
 -   [고가용성 및 재해 복구를 위한 Microsoft SQL Server Always On 솔루션 가이드](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Always On 가용성 그룹 마법사의 쿼럼 투표 구성 검사](https://blogs.msdn.microsoft.com/sqlalwayson/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing/)  
   
--   [Windows Server 기술:  장애 조치(failover) 클러스터](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Windows Server 기술: 장애 조치(failover) 클러스터](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
--   [장애 조치(failover) 클러스터 단계별 가이드: 장애 조치(failover) 클러스터에 쿼럼 구성](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
+-   [장애 조치(Failover) 클러스터 단계별 가이드: 장애 조치 클러스터에서 쿼럼 구성](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
 ## <a name="see-also"></a>참고 항목  
  [강제 쿼럼을 통해 WSFC 재해 복구&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   

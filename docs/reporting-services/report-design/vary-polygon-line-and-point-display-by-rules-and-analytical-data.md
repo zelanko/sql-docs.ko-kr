@@ -19,10 +19,10 @@ ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4c323a03752ea7b9e0c7450dc53446191f3c3315
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578449"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경
@@ -41,7 +41,7 @@ ms.locfileid: "65578449"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Rules"></a> 규칙 이해  
+##  <a name="understanding-rules"></a><a name="Rules"></a> 규칙 이해  
  보고서 처리기가 계층의 지도 요소에 대한 표시 속성을 자동으로 조정할 수 있도록 하는 4가지 규칙을 설정할 수 있습니다. 규칙은 다각형, 선 또는 점과 같은 지도 요소 유형에 따라 달라집니다.  
   
 -   **다각형.** 다각형 색을 변경합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "65578449"
   
 -   **점.** 각 점에 대해 표시되는 표식의 경우 표식 색, 표식 크기 및 표식 유형을 변경합니다.  
   
-##  <a name="Color"></a> 색 규칙 이해  
+##  <a name="understanding-color-rules"></a><a name="Color"></a> 색 규칙 이해  
  색 규칙은 점 또는 다각형 중심점을 나타내는 다각형, 선 및 표식의 채우기 색에 적용됩니다.  
   
  색 규칙은 다음 4가지 옵션을 지원합니다.  
@@ -74,28 +74,28 @@ ms.locfileid: "65578449"
   
  색 눈금에서 원하지 않는 값을 제거하려면 모든 계층의 모든 색 규칙에 대한 색 눈금 옵션의 선택을 취소합니다.  
   
-##  <a name="Width"></a> 선 두께 규칙 이해  
+##  <a name="understanding-line-width-rules"></a><a name="Width"></a> 선 두께 규칙 이해  
  선에 적용할 두께 규칙입니다. 두께 규칙은 두 가지 옵션을 지원합니다.  
   
 -   기본 선 두께 사용. 포인트 단위로 선 두께를 지정합니다.  
   
 -   선 두께를 사용하여 데이터 시각화. 선의 최소 두께와 최대 두께를 설정하고 두께를 변경하는 데 사용할 데이터 필드를 지정한 다음 해당 데이터에 적용할 분포 옵션을 지정합니다.  
   
-##  <a name="Size"></a> 표식 크기 규칙 이해  
+##  <a name="understanding-marker-size-rules"></a><a name="Size"></a> 표식 크기 규칙 이해  
  크기 규칙은 점 또는 다각형 중심점을 나타내는 표식에 적용됩니다. 크기 규칙은 두 가지 옵션을 지원합니다.  
   
 -   기본 표식 크기 사용. 포인트 단위로 크기를 지정합니다.  
   
 -   크기를 사용하여 데이터 시각화. 표식의 최소 크기와 최대 크기를 설정하고 크기를 변경하는 데 사용할 데이터 필드를 지정한 다음 해당 데이터에 적용할 분포 옵션을 지정합니다.  
   
-##  <a name="Marker"></a> 표식 유형 규칙 이해  
+##  <a name="understanding-marker-type-rules"></a><a name="Marker"></a> 표식 유형 규칙 이해  
  표식 유형 규칙은 점 또는 다각형 중심점을 나타내는 표식에 적용됩니다. 표식 유형 규칙은 두 가지 옵션을 지원합니다.  
   
 -   기본 표식 유형 사용. 사용할 수 있는 표식 유형 중 하나를 지정합니다.  
   
 -   표식을 사용하여 데이터 시각화. 표식 집합을 지정하고 표식이 사용되는 순서를 지정합니다. 표식 유형에는 **Circle**, **Diamond**, **Pentagon**, **PushPin**, **Rectangle**, **Star**, **Triangle**, **Trapezoid**및 **Wedge**가 포함됩니다.  
   
-##  <a name="Distribution"></a> 분포 옵션 이해  
+##  <a name="understanding-distribution-options"></a><a name="Distribution"></a> 분포 옵션 이해  
  값의 분포를 만들려면 데이터를 범위로 나눌 수 있습니다. 분포 유형, 하위 범위 수 및 최소 및 최대 범위 값을 지정합니다.  
   
  다음 목록에서는 세 가지 지도 요소와 범위가 1 ~ 9999이고 값이 1, 10, 200, 2000, 4777, 8999인 6가지 관련 분석 값이 있다고 가정합니다.  
@@ -110,7 +110,7 @@ ms.locfileid: "65578449"
   
  분포 값은 지도 요소 표시 값을 변경하기 위해 규칙에서 사용됩니다.  
   
-##  <a name="Legends"></a> 범례 및 범례 항목 이해  
+##  <a name="understanding-legends-and-legend-items"></a><a name="Legends"></a> 범례 및 범례 항목 이해  
  범례 항목은 각 계층에 대해 지정하는 규칙에서 자동으로 만들어집니다. 규칙 옵션은 만들어지는 항목 수와 항목이 나타나는 범례를 제어합니다. 기본적으로 모든 규칙의 모든 항목은 첫 번째 범례에 추가됩니다. 첫 번째 범례에서 항목을 제외하려면 필요한 만큼 범례를 추가로 만들고 각 규칙에 대해 규칙에서 생성되는 항목을 표시하는 데 사용할 범례를 지정합니다. 규칙에 따라 항목을 숨기려면 빈 범례 이름을 지정합니다.  
   
  범례가 나타나는 위치를 제어하려면 범례 속성 대화 상자를 사용하여 지도 뷰포트에 상대적인 위치를 지정합니다. 자세한 내용은 [지도 범례, 색 눈금 및 관련 규칙 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)를 참조하세요.  

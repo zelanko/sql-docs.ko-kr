@@ -9,17 +9,17 @@ ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a8bf8b6814f7989a904507cd89fbea397b8b6930
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65105933"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>5단원: 보고서 서식 지정(Reporting Services)
 
 이제 Sales Orders 보고서에 데이터 영역과 일부 필드를 추가했으므로 날짜 및 통화 필드와 열 머리글의 서식을 지정할 수 있습니다.
 
-## <a name="bkmk_format_date"></a>날짜 서식 지정
+## <a name="format-the-date"></a><a name="bkmk_format_date"></a>날짜 서식 지정
 
 Date 필드 식은 기본적으로 날짜 및 시간 정보를 표시합니다. 날짜만 표시되도록 서식을 지정할 수 있습니다.
 
@@ -30,7 +30,7 @@ Date 필드 식은 기본적으로 날짜 및 시간 정보를 표시합니다. 
 5. **확인**을 선택하여 서식을 적용합니다.
 6. 보고서를 미리 보기하여 `[Date]` 필드의 서식 변경 내용을 확인하고 디자인 뷰로 돌아갑니다.
 
-## <a name="bkmk_format_currency"></a>통화 서식 지정
+## <a name="format-the-currency"></a><a name="bkmk_format_currency"></a>통화 서식 지정
 
 LineTotal 필드 식은 일반 숫자를 표시합니다. 숫자에 서식을 지정하여 통화로 표시할 수 있습니다.
 
@@ -44,7 +44,7 @@ LineTotal 필드 식은 일반 숫자를 표시합니다. 숫자에 서식을 �
 5. **확인**을 선택하여 서식을 적용합니다.
 6. 보고서를 미리 보기하여 `[LineTotal]` 식 열의 변경 내용을 확인하고 디자인 뷰로 돌아갑니다.  
 
-## <a name="bkmk_change_textstyle"></a>텍스트 스타일 및 열 너비 변경
+## <a name="change-text-style-and-column-widths"></a><a name="bkmk_change_textstyle"></a>텍스트 스타일 및 열 너비 변경
 
 머리글 행을 강조 표시하고 데이터 열의 너비를 조정하여 보고서에 다른 서식 지정을 추가할 수 있습니다.
 
@@ -65,7 +65,7 @@ LineTotal 필드 식은 일반 숫자를 표시합니다. 숫자에 서식을 �
 
 ## <a name="next-steps"></a>다음 단계
 
-이 단원에서는 열 머리글과 필드 식에 성공적으로 서식을 지정했습니다. 다음으로, 보고서에 그룹화 및 합계를 추가해 보겠습니다. 다음으로 [6단원: 그룹화 및 합계 추가&#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)를 참조하세요.
+이 단원에서는 열 머리글과 필드 식에 성공적으로 서식을 지정했습니다. 다음으로, 보고서에 그룹화 및 합계를 추가해 보겠습니다. [6단원: 그룹화 및 합계 추가 &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)에서 계속 진행하세요.
 
 ## <a name="see-also"></a>참고 항목
 

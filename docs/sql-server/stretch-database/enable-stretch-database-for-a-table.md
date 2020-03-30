@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 49d3f7fa266be69c767b0fb0450cc6898351f39b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843814"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
@@ -35,7 +35,7 @@ ms.locfileid: "73843814"
  > [!NOTE]
  > 나중에 Stretch Database를 사용하지 않도록 설정하려는 경우 테이블 또는 데이터베이스에서 Stretch Database를 사용하지 않도록 설정하면 원격 개체가 삭제되지 않습니다. 원격 테이블 또는 원격 데이터베이스를 삭제하려면 Azure 관리 포털을 사용하여 삭제해야 합니다. 원격 개체는 수동으로 삭제할 때까지 Azure 비용이 계속해서 발생합니다.
  
-##  <a name="EnableWizardTable"></a> 마법사를 사용하여 테이블에서 스트레치 데이터베이스 활성화  
+##  <a name="use-the-wizard-to-enable-stretch-database-on-a-table"></a><a name="EnableWizardTable"></a> 마법사를 사용하여 테이블에서 스트레치 데이터베이스 활성화  
  **마법사 시작**  
  1.  SQL Server Management Studio의 개체 탐색기에서 스트레치를 사용하도록 설정하려는 테이블을 선택합니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "73843814"
  **결과**  
  결과를 검토합니다.  
   
-##  <a name="EnableTSQLTable"></a> Transact-SQL을 사용하여 테이블에서 스트레치 데이터베이스 활성화  
+##  <a name="use-transact-sql-to-enable-stretch-database-on-a-table"></a><a name="EnableTSQLTable"></a> Transact-SQL을 사용하여 테이블에서 스트레치 데이터베이스 활성화  
  또한 Transact-SQL을 사용하여 기존 테이블에 대해 Stretch Database를 사용하도록 설정하거나 Stretch Database를 사용하여 새 테이블을 만들 수도 있습니다.  
   
 ### <a name="options"></a>옵션  

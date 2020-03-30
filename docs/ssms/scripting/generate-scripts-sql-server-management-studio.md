@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: abdbbd7659221fb27df12ff03995b2d246241463
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253864"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>스크립트 생성(SQL Server Management Studio)
@@ -28,13 +28,13 @@ SQL Server Management Studio(SSMS)를 사용하여 다양한 개체를 스크립
 ## <a name="before-you-begin"></a>시작하기 전에  
  요구 사항에 가장 적합한 메커니즘을 선택합니다.  
   
-###  <a name="GenPubScriptWiz"></a> 스크립트 생성 및 게시 마법사  
+###  <a name="generate-and-publish-scripts-wizard"></a><a name="GenPubScriptWiz"></a> 스크립트 생성 및 게시 마법사  
  **스크립트 생성 및 게시 마법사** 를 사용하여 다양한 개체에 대한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 만들 수 있습니다. 이 마법사는 데이터베이스의 모든 개체 또는 사용자가 선택한 개체의 하위 집합에 대한 스크립트를 생성합니다. 이 마법사에는 사용 권한, 데이터 정렬, 제약 조건 등을 포함할지 여부와 같은 여러 스크립트 옵션이 있습니다. 마법사를 사용하는 방법은 [Generate and Publish Scripts Wizard](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md)를 참조하십시오.  
   
-###  <a name="OEScriptAsMenu"></a> 개체 탐색기 스크립팅 메뉴  
+###  <a name="object-explorer-script-as-menu"></a><a name="OEScriptAsMenu"></a> 개체 탐색기 스크립팅 메뉴  
  **개체 탐색기 스크립팅** 메뉴를 사용하여 단일 개체, 여러 개체 또는 단일 개체에 대한 여러 명령문을 스크립팅할 수 있습니다. 여러 스크립트 유형 중 하나를 선택할 수 있습니다. 예를 들어 개체를 만들거나 변경하거나 삭제할 수 있습니다. 쿼리 편집기 창의 스크립트를 파일이나 클립보드에 저장할 수 있습니다. 스크립트는 유니코드 형식으로 만들어집니다.  
   
-##  <a name="ScriptSingleObject"></a> 단일 개체의 스크립트를 생성하려면  
+##  <a name="to-generate-a-script-of-a-single-object"></a><a name="ScriptSingleObject"></a> 단일 개체의 스크립트를 생성하려면  
  **단일 개체를 스크립팅하려면**  
   
 1.  개체 탐색기에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  

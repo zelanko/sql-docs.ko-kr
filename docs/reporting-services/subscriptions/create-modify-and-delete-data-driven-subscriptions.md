@@ -14,10 +14,10 @@ ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b385e04cf2efa103dba4a66d4e794a7984814fb4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140265"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>데이터 기반 구독 만들기, 수정 및 삭제
@@ -35,14 +35,14 @@ ms.locfileid: "67140265"
   
 -   [구독 실행](#bkmk_run_subscription)  
   
-##  <a name="bkmk_manage_and_delete"></a> 데이터 기반 구독 관리 및 삭제  
+##  <a name="managing-and-deleting-a-data-driven-subscription"></a><a name="bkmk_manage_and_delete"></a> 데이터 기반 구독 관리 및 삭제  
  진행 중인 데이터 기반 구독은 웹 포털을 통해 중지하거나 삭제할 수 없습니다. 그러므로 공유 일정을 사용하여 데이터 기반 구독을 트리거하는 것이 좋습니다. 구독이 일시적으로 처리되지 않도록 하려는 경우 이 방법을 사용하면 구독을 트리거하는 일정을 일시 중지할 수 있습니다. 자세한 내용은 [기본 모드 보고서 서버 구독 만들기 및 관리](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)를 참조하세요.  
   
  데이터 기반 구독을 삭제하려면 **구독** 페이지에서 보고서 옆에 있는 확인란을 선택한 다음 **삭제**를 선택합니다.  
   
  데이터 기반 구독을 취소하는 방법에 대한 자세한 내용은 [실행 중인 프로세스 관리](../../reporting-services/subscriptions/manage-a-running-process.md)를 참조하세요.  
   
-##  <a name="bkmk_create_and_modify"></a> 데이터 기반 구독 만들기 및 수정  
+##  <a name="creating-and-modifying-a-data-driven-subscription"></a><a name="bkmk_create_and_modify"></a> 데이터 기반 구독 만들기 및 수정  
  데이터 기반 구독을 만들려면 저장된 자격 증명을 사용하거나 자격 증명을 사용하지 않는 보고서를 선택합니다. 데이터 기반 구독을 만들 때는 표준 구독과 데이터 기반 구독을 쉽게 구분할 수 있도록 설명 필드에 명명 규칙을 사용할 수도 있습니다.  
   
 ### <a name="to-create-a-data-driven-subscription-native-mode"></a>데이터 기반 구독을 만들려면(기본 모드)  
@@ -88,14 +88,14 @@ ms.locfileid: "67140265"
   
 -   **사용자 요구 사항**. 구독 작성자는 "보고서 관리" 및 "모든 구독 관리"의 권한을 갖고 있어야 합니다. 항목 수준의 태스크 사용 권한에 대한 자세한 내용은 [태스크 및 사용 권한](../../reporting-services/security/tasks-and-permissions.md)을 참조하세요. 또한 작성자는 구독자 데이터가 포함된 외부 데이터 원본 액세스를 위해 필요한 자격 증명도 갖고 있어야 합니다.  
   
-##  <a name="bkmk_define_query"></a> 구독 정보를 검색하는 쿼리 정의  
+##  <a name="defining-a-query-that-retrieves-subscription-information"></a><a name="bkmk_define_query"></a> 구독 정보를 검색하는 쿼리 정의  
  데이터 기반 구독은 구독자 데이터를 검색하는 쿼리나 명령을 지정해야 합니다. 쿼리는 구독자마다 하나의 행을 생성해야 합니다. 전자 메일 배달 확장 프로그램을 사용하는 경우 쿼리는 각 구독자에 대한 유효한 전자 메일 별칭을 반환해야 합니다. 생성되는 배달 수는 쿼리에서 반환하는 행 수에 따라 다릅니다. 행 집합이 10,000개의 행으로 구성되는 경우 구독은 10,000개의 보고서를 배달합니다.  
   
  쿼리를 실행하는 데 시간이 많이 걸리는 경우 추가 처리를 수행할 수 있도록 시간 제한 값을 늘릴 수 있습니다.  
   
  이 단계를 계속하려면 먼저 쿼리의 유효성을 검사해야 합니다. 유효성 검사에서는 쿼리를 처리하지 않지만 다음 선택에서 열을 참조할 수 있도록 행 집합에 있는 모든 열 목록을 반환합니다. 쿼리 유효성 검사에 실패하면 작업을 계속할 수 없습니다. 쿼리 구문이 올바르지 않거나 데이터 원본에 대한 연결이 유효하지 않으면 쿼리의 유효성을 검사하지 못합니다. 데이터 원본을 수정하려면 **뒤로** 단추를 사용합니다.  
   
-##  <a name="bkmk_run_subscription"></a> 구독 실행  
+##  <a name="running-the-subscription"></a><a name="bkmk_run_subscription"></a> 구독 실행  
  구독의 처리 조건을 지정해야 합니다. 일정을 지정하거나 보고서 실행 스냅샷 업데이트에 맞춰 구독을 실행할 수 있습니다. 데이터 기반 구독 처리 방법은 표준 구독 처리 방법과 동일합니다.  
   
 ## <a name="see-also"></a>참고 항목  

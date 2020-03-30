@@ -10,10 +10,10 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1352a7f469e72100f7a2e0573c87cbb8422fe413
-ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77608482"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>SQL Server 오프라인 도움말 및 도움말 뷰어
@@ -49,7 +49,7 @@ Microsoft 도움말 뷰어에는 두 가지 주요 버전이 있습니다.  버�
 
 ## <a name="use-help-viewer-v2x"></a>도움말 뷰어 v2.x 사용
 
-이 방법에서는 도움말 뷰어 2.3 이상이 권장됩니다. [최신 버전 SSMS.exe](../ssms/download-sql-server-management-studio-ssms.md)의 **도움말** 메뉴에서는 2.3 이상이 제공됩니다.
+이 방법에서는 도움말 뷰어 2.3 이상이 권장됩니다. **최신 버전 SSMS.exe**의 [도움말](../ssms/download-sql-server-management-studio-ssms.md) 메뉴에서는 2.3 이상이 제공됩니다.
 
 ### <a name="to-download-and-install-offline-help-content-with-help-viewer-v2x"></a>도움말 뷰어 v2.x를 사용하여 오프라인 도움말 콘텐츠를 다운로드하고 설치하려면
 

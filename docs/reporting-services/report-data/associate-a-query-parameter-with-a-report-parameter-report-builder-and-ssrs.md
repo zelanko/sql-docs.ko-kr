@@ -12,10 +12,10 @@ ms.assetid: 6d297e1a-ff71-472a-addc-349e863092b5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0e9752c14ef2ba03cdb95ad8fe4430c4d4fa23db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081430"
 ---
 # <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>보고서 매개 변수와 쿼리 매개 변수 연결(보고서 작성기 및 SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "77081430"
   
     -   **매개 변수 값**에서 쿼리 매개 변수에 전달할 값을 반환하는 식을 선택하거나 입력합니다. 이는 일반적으로 보고서 매개 변수의 이름입니다.  
   
-        > **참고:** 보고서 매개 변수는 쿼리 매개 변수에 대한 값으로 제한되지 않습니다. 값을 반환하는 식을 매개 변수 값으로 사용할 수 있습니다.  
+        > **참고:** 쿼리 매개 변수에 대한 값으로 보고서 매개 변수만 사용할 수 있는 것은 아닙니다. 값을 반환하는 식을 매개 변수 값으로 사용할 수 있습니다.  
   
 3.  쿼리 매개 변수를 추가하려면 2단계를 반복합니다.  
   

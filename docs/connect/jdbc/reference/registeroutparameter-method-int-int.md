@@ -16,10 +16,10 @@ ms.assetid: 169229c7-b75d-498b-a5ac-df300424c909
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 44c9ab796c6ac0bf0d3cd48429a22d9275c01bfa
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67975989"
 ---
 # <a name="registeroutparameter-method-int-int"></a>registerOutParameter 메서드(int, int)

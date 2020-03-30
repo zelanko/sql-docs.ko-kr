@@ -9,10 +9,10 @@ ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b33041f7debc2ad75268973867c72e073459f1de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77077785"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>데이터 세트 필드 컬렉션(보고서 작성기 및 SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "77077785"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Fields"></a> 데이터 세트 필드 및 쿼리  
+##  <a name="dataset-fields-and-queries"></a><a name="Fields"></a> 데이터 세트 필드 및 쿼리  
  데이터 세트 필드는 데이터 세트 쿼리 명령 및 사용자가 정의하는 계산 필드로 지정됩니다. 보고서에 표시되는 필드의 컬렉션은 사용하는 데이터 세트의 유형에 따라 다릅니다.  
   
 -   **공유 데이터 세트.** 필드 컬렉션은 보고서에 공유 데이터 세트를 직접 추가했을 때나 공유 데이터 세트가 포함된 보고서 파트를 추가했을 때 공유 데이터 세트 정의의 쿼리에 대한 필드의 목록입니다. 공유 데이터 세트 정의가 보고서 서버에서 변경될 때 로컬 필드 컬렉션은 변경되지 않습니다. 로컬 필드 컬렉션을 업데이트하려면 로컬 공유 데이터 세트의 목록을 새로 고쳐야 합니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "77077785"
 >  모든 데이터 원본에 대해 모든 **Field** 속성을 사용할 수 있는 것은 아닙니다. **Value** 및 **IsMissing** 속성은 모든 데이터 원본에 대해 정의됩니다. 미리 정의된 다른 속성(다차원 데이터 원본에 대한 **Key**, **UniqueName**및 **ParentUniqueName** )은 데이터 원본에서 제공하는 경우에만 지원됩니다. 일부 데이터 공급자는 사용자 지정 속성을 지원합니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)에서 데이터 원본 유형에 대한 확장 필드 속성에 대한 특정 항목을 참조하세요. 예를 들어, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에 대한 자세한 내용은 [Analysis Services 데이터베이스에 대한 확장 필드 속성&#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)을 참조하세요.  
   
   
-##  <a name="Defaults"></a> 필드에 대한 기본 식 이해  
+##  <a name="understanding-default-expressions-for-fields"></a><a name="Defaults"></a> 필드에 대한 기본 식 이해  
  입력란은 보고서 본문의 입력란 보고서 항목 또는 테이블릭스 데이터 영역에 있는 셀의 입력란일 수 있습니다. 입력란에 필드를 연결할 때 입력란 위치에서 필드 참조에 대한 기본 식을 결정합니다. 보고서 본문에서 입력란 값 식은 집계 및 데이터 세트를 지정해야 합니다. 보고서에 하나의 데이터 세트만 존재하는 경우 이 기본 식이 생성됩니다. 숫자 값을 나타내는 필드의 경우 기본 집계 함수는 Sum입니다. 숫자가 아닌 값을 나타내는 필드의 경우 기본 집계는 First입니다.  
   
  테이블릭스 데이터 영역에서 기본 필드 식은 필드를 추가하는 입력란의 행 및 그룹 멤버 자격에 따라 다릅니다. 테이블의 정보 행에 있는 입력란에 추가되는 Sales 필드에 대한 필드 식은 `[Sales]`입니다. 동일한 필드를 그룹 머리글의 입력란에 추가하는 경우 그룹 머리글에서 정보 값이 아닌 그룹에 대한 요약 값을 표시하므로 기본 식은 `(Sum[Sales])`입니다. 보고서가 실행되면 보고서 처리기에서 각 식을 계산하고 보고서의 결과를 대체합니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "77077785"
  식에 대한 자세한 내용은 [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)을 참조하세요.  
   
   
-##  <a name="DataTypes"></a> 필드 데이터 형식  
+##  <a name="field-data-types"></a><a name="DataTypes"></a> 필드 데이터 형식  
  데이터 세트를 만들 때 데이터 원본의 필드 데이터 형식이 보고서에서 사용하는 데이터 형식과 정확하게 일치하지 않을 수 있습니다. 데이터 형식이 하나 또는 두 개의 매핑 계층을 거칠 수 있습니다. 데이터 처리 확장 프로그램 또는 데이터 공급자는 데이터 원본의 데이터 형식을 CLR(공용 언어 런타임) 데이터 형식으로 매핑할 수 있습니다. 데이터 처리 확장 프로그램에서 반환하는 데이터 형식은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]에서 CLR(공용 언어 런타임) 데이터 형식의 하위 집합으로 매핑됩니다.  
   
  데이터 원본에서 데이터는 데이터 원본에서 지원하는 데이터 형식으로 저장됩니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nvarchar **또는** datetime **과 같이 지원되는**데이터 형식 중 하나여야 합니다. 데이터 원본에서 데이터를 검색하는 경우 데이터는 데이터 원본 유형과 연결된 데이터 처리 확장 프로그램 또는 데이터 공급자를 통과합니다. 데이터 처리 확장 프로그램에 따라 데이터가 데이터 원본에서 사용되는 데이터 형식에서 데이터 처리 확장 프로그램에서 지원하는 데이터 형식으로 변환될 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]와 함께 설치된 CLR(공용 언어 런타임)에서 지원하는 데이터 형식을 사용합니다. 데이터 공급자는 결과 집합의 각 열을 네이티브 데이터 형식에서 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR 데이터 형식으로 매핑합니다.  
@@ -101,7 +101,7 @@ ms.locfileid: "77077785"
  식에서 데이터 세트 필드에 대한 참조를 포함하는 방법은 [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)을 참조하세요.  
   
   
-##  <a name="MissingFields"></a> 런타임에 누락된 필드 검색  
+##  <a name="detecting-missing-fields-at-run-time"></a><a name="MissingFields"></a> 런타임에 누락된 필드 검색  
  보고서가 처리될 때 해당 열이 더 이상 데이터 원본에 존재하지 않아 데이터 세트에 대한 결과 집합에서 지정된 일부 열에 대한 값이 누락될 수 있습니다. 필드 속성 IsMissing을 사용하여 필드에 대한 값이 런타임에 반환되었는지를 검색할 수 있습니다. 자세한 내용은 [데이터 세트 필드 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)를 참조하세요.  
   
   

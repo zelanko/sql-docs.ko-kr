@@ -11,10 +11,10 @@ ms.assetid: a117f3a3-9c25-41e1-9adb-a40e90620dd6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6c2cd07b0420d8ca961c61c205c94cd19fe6666e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981641"
 ---
 # <a name="getncharacterstream-method-javalangstring-sqlserverresultset"></a>getNCharacterStream 메서드(java.lang.String)(SQLServerResultSet)
@@ -43,7 +43,7 @@ public java.io.Reader getNCharacterStream(java.lang.String columnLabel)
 ## <a name="remarks"></a>설명  
  이 getNCharacterStream 메서드는 java.sql.ResultSet 인터페이스의 getNCharacterStream 메서드에 의해 지정됩니다.  
   
- 이 메서드를 사용하여 이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 현재 행에서 **nvarchar**, **nchar**, **nvarchar(max)** , **ntext** 또는 **xml** 열의 값을 검색할 수 있습니다. 이 메서드를 사용하여 다른 데이터 형식의 값을 검색하려고 하면 예외가 발생합니다.  
+ 이 메서드를 사용하여 이 **SQLServerResultSet** 개체의 현재 행에서 **nvarchar**, **nchar**, **nvarchar(max)** , **ntext** 또는 [xml](../../../connect/jdbc/reference/sqlserverresultset-class.md) 열의 값을 검색할 수 있습니다. 이 메서드를 사용하여 다른 데이터 형식의 값을 검색하려고 하면 예외가 발생합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [getNCharacterStream 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getncharacterstream-method-sqlserverresultset.md)   

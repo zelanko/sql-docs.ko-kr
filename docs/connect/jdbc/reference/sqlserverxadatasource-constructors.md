@@ -11,10 +11,10 @@ ms.assetid: 8b734305-b007-41bd-819a-69792fac0781
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d9ecb8b8f74395d39ab04a15d21c1cfc854319c6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970189"
 ---
 # <a name="sqlserverxadatasource-constructors"></a>SQLServerXADataSource 생성자

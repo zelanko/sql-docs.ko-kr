@@ -10,10 +10,10 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: a124b3a82c75f3da5f7abbdec3b519c86ec7c1c5
-ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79090519"
 ---
 # <a name="configure-master-instance-of-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]의 마스터 인스턴스 구성
@@ -43,7 +43,7 @@ ms.locfileid: "79090519"
    traceflag0 = 1204
    ```
 
-1. `mssql-custom.conf` 파일을 `master-0` Pod의 `mssql-server` 컨테이너에 있는 `/var/opt/mssql`에 복사합니다. `<namespaceName>`을 빅 데이터 클러스터 이름으로 바꿉니다.
+1. `mssql-custom.conf` 파일을 `/var/opt/mssql` Pod의 `mssql-server` 컨테이너에 있는 `master-0`에 복사합니다. `<namespaceName>`을 빅 데이터 클러스터 이름으로 바꿉니다.
 
    ```bash
    kubectl cp mssql-custom.conf master-0:/var/opt/mssql/mssql-custom.conf -c mssql-server -n <namespaceName>
@@ -58,7 +58,7 @@ ms.locfileid: "79090519"
    ```
 
 > [!IMPORTANT]
-> SQL Server 마스터 인스턴스가 가용성 그룹 구성에 있는 경우 모든 `master` Pod의 `mssql-custom.conf` 파일을 복사합니다. 다시 시작할 때마다 장애 조치(failover)가 발생하므로, 가동 중지 시간 동안 이 작업의 타이밍을 지정해야 합니다.
+> SQL Server 마스터 인스턴스가 가용성 그룹 구성에 있는 경우 모든 `mssql-custom.conf` Pod의 `master` 파일을 복사합니다. 다시 시작할 때마다 장애 조치(failover)가 발생하므로, 가동 중지 시간 동안 이 작업의 타이밍을 지정해야 합니다.
 
 ## <a name="known-limitations"></a>알려진 제한 사항
 

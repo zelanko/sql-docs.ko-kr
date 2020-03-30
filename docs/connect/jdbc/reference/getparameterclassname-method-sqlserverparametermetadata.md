@@ -16,16 +16,16 @@ ms.assetid: 545634d8-f06b-429a-9293-0087d758f359
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0c5018dc2058af72028a4114dcc896d06d212d5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981015"
 ---
 # <a name="getparameterclassname-method-sqlserverparametermetadata"></a>getParameterClassName 메서드(SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 클래스의 [setObject](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) 메서드에 인스턴스가 전달되는 Java 클래스의 정규화된 이름을 검색합니다.  
+  [SQLServerPreparedStatement](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) 클래스의 [setObject](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 메서드에 인스턴스가 전달되는 Java 클래스의 정규화된 이름을 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   

@@ -11,10 +11,10 @@ ms.custom: seo-lt-2019
 ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: ed7bc77b48881351a144ed5d217454518abafcc2
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286207"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)의 Azure Active Directory 지원
@@ -29,7 +29,7 @@ Visual Studio에서 **보기** 메뉴에서 **SQL Server 개체 탐색기**를 �
 
 #### <a name="which-azure-sql-products"></a>Azure SQL 제품이란?
 
-이 문서에서는 [Azure 클라우드](https://azure.microsoft.com/)에서 다음 *Azure SQL 제품* 목록에 대해 Azure AD를 설명합니다.
+이 문서에서는 *Azure 클라우드*에서 다음 [Azure SQL 제품](https://azure.microsoft.com/) 목록에 대해 Azure AD를 설명합니다.
 
 - Azure SQL Database
 - Azure SQL Data Warehouse

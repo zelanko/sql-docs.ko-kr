@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 76dd26d42951a95c604b8d5b3bceaff21c355be2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994579"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt(OLE DB)
@@ -78,7 +78,7 @@ HRESULT BCPColFmt(
  사용자 데이터 파일에 포함된 필드의 인덱스입니다.  
   
  *eUserDataType*[in]  
- 사용자 데이터 파일에 포함된 필드의 데이터 형식입니다. 사용 가능한 데이터 형식은 OLE DB Driver for SQL Server 헤더 파일(msoledbsql.h)에 BCP_TYPE_XXX 형식으로 표시됩니다(예: BCP_TYPE_SQLINT4). BCP_TYPE_DEFAULT 값을 지정하면 공급자는 테이블 또는 뷰 열 유형과 동일한 유형을 사용합니다. **eUserDataType** 인수가 BCP_TYPE_SQLDECIMAL 또는 BCP_TYPE_SQLNUMERIC인 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 파일로 대량 복사 작업을 수행하는 경우 다음과 같이 동작합니다.  
+ 사용자 데이터 파일에 포함된 필드의 데이터 형식입니다. 사용 가능한 데이터 형식은 OLE DB Driver for SQL Server 헤더 파일(msoledbsql.h)에 BCP_TYPE_XXX 형식으로 표시됩니다(예: BCP_TYPE_SQLINT4). BCP_TYPE_DEFAULT 값을 지정하면 공급자는 테이블 또는 뷰 열 유형과 동일한 유형을 사용합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]eUserDataType**인수가 BCP_TYPE_SQLDECIMAL 또는 BCP_TYPE_SQLNUMERIC인 경우**에서 파일로 대량 복사 작업을 수행하는 경우 다음과 같이 동작합니다.  
   
 -   원본 열이 decimal 또는 numeric이 아니면 기본 전체 자릿수 및 소수 자릿수가 사용됩니다.  
   
@@ -130,7 +130,7 @@ HRESULT BCPColFmt(
  메모리 부족 오류가 발생했습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [IBCPSession&#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [대량 복사 작업 수행](../../oledb/features/performing-bulk-copy-operations.md)  
   
   

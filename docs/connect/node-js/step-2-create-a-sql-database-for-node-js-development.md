@@ -11,10 +11,10 @@ ms.assetid: 14be607f-f1dc-4201-a664-5fa4682cfaae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8428462a1b6c79636970d6383814349472b93ea1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67915999"
 ---
 # <a name="step-2-create-a-sql-database-for-nodejs-development"></a>2단계: Node.js 개발을 위한 SQL 데이터베이스 만들기

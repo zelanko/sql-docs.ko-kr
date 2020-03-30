@@ -15,10 +15,10 @@ ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d4bffc7742a9833d8715c9479e051cdd732d7596
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253646"
 ---
 # <a name="specify-a-breakpoint-action"></a>중단점 동작 지정
@@ -29,7 +29,7 @@ ms.locfileid: "75253646"
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
   
-##  <a name="BKMK_ActionConsiderations"></a> 동작 고려 사항
+##  <a name="action-considerations"></a><a name="BKMK_ActionConsiderations"></a> 동작 고려 사항
 
 중단점의 기본 동작은 적중 횟수와 중단점 조건을 모두 만족하면 실행을 중단하는 것입니다. **디버거에서** 적중될 때 [!INCLUDE[tsql](../../includes/tsql-md.md)] 동작은 주로 출력 메시지를 지정하여 대신 디버거 **출력** 창에 정보를 출력하는 데 사용됩니다.  
   

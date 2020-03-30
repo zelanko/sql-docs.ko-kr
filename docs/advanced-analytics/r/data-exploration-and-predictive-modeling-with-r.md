@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6b336404d3b69e31ffb6f1a2aa82ade04804eb9e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78172310"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>SQL Server에서 R을 사용한 데이터 탐색 및 예측 모델링
@@ -68,9 +68,9 @@ Microsoft Machine Learning에 포함된 독점 R 라이브러리 외에도 다�
 
 R 솔루션을 개발할 때는 Microsoft R Client를 다운로드해야 합니다. 이 무료 다운로드에는 원격 컴퓨팅 컨텍스트 및 확장 가능한 알고리즘을 지원하는 데 필요한 라이브러리가 포함되어 있습니다.
 
-+ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** 표준 R 작업의 성능을 향상시키는 R 런타임 및 패키지 세트(예: Intel 수학 커널 라이브러리) 배포입니다.  
++ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** 표준 R 작업 성능을 향상하는 패키지 집합(Intel 수학 커널 라이브러리 등) 및 R 런타임 배포입니다.  
   
-+ **RevoScaleR:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스로 계산을 푸시할 수 있게 해주는 R 패키지입니다. [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]입니다. 또한 향상된 성능 및 확장성을 제공하도록 다시 설계된 공통 R 함수 세트가 포함되어 있습니다. 이러한 향상된 함수의 이름에는 **rx** 라는 접두사가 사용됩니다. 다양한 원본의 향상된 데이터 공급자도 포함됩니다. 이러한 함수 앞에는 **Rx**가 추가됩니다.
++ **RevoScaleR:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 계산을 푸시할 수 있게 해주는 R 패키지입니다. [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]입니다. 또한 향상된 성능 및 확장성을 제공하도록 다시 설계된 공통 R 함수 세트가 포함되어 있습니다. 이러한 향상된 함수의 이름에는 **rx** 라는 접두사가 사용됩니다. 다양한 원본의 향상된 데이터 공급자도 포함됩니다. 이러한 함수 앞에는 **Rx**가 추가됩니다.
 
 [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)], RStudio와 같이 R을 지원하는 모든 Windows 기반 코드 편집기를 사용할 수 있습니다. [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] 다운로드에는 RGui.exe 등과 같은 R의 공통 명령줄 도구도 포함되어 있습니다.
 

@@ -16,10 +16,10 @@ ms.assetid: 4db67eb7-7ff2-4fb8-8052-39f699de53ff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bf300da4bf6425028552d5507737cf2495bb402f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977766"
 ---
 # <a name="iscasesensitive-method-sqlserverresultsetmetadata"></a>isCaseSensitive 메서드(SQLServerResultSetMetaData)

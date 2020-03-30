@@ -11,10 +11,10 @@ ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc76cee723c11d49a4d6149a7c3a1df4cedbc256
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015175"
 ---
 # <a name="about-code-examples-in-the-documentation"></a>설명서의 코드 예제 정보

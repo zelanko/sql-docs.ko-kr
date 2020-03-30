@@ -21,10 +21,10 @@ ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6d9f3675a2bbd2af5d33452c0dccbb46d0596d85
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75230194"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)
@@ -53,7 +53,7 @@ ms.locfileid: "75230194"
   
 -   [관련 항목](#RelatedTopics)  
   
-##  <a name="Benefits"></a> 장애 조치(Failover) 클러스터 인스턴스의 이점  
+##  <a name="benefits-of-a-failover-cluster-instance"></a><a name="Benefits"></a> 장애 조치(Failover) 클러스터 인스턴스의 이점  
  서버에 하드웨어 또는 소프트웨어 오류가 있을 경우 서버에 연결하는 애플리케이션이나 클라이언트에서 작동 중단이 발생합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 독립형 인스턴스가 아니라 FCI로 구성된 경우, 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 고가용성은 FCI에 있는 중복된 노드를 통해 보호됩니다. FCI에 있는 여러 노드 중에서 WSFC 리소스 그룹을 소유하는 노드는 한 번에 하나뿐입니다. 오류(하드웨어 오류, 운영 체제 오류, 애플리케이션 또는 서비스 오류)가 발생하거나 계획된 업그레이드가 수행될 경우에는 리소스 그룹의 소유권이 다른 WSFC 노드로 넘어갑니다. 이 프로세스는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 연결하는 클라이언트나 애플리케이션에 투명하게 수행되며, 오류 중 애플리케이션이나 클라이언트에 발생하는 작동 중단 시간을 최소화합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스가 제공하는 몇 가지 주요 이점은 다음과 같습니다.  
   
 -   중복을 통한 인스턴스 수준의 보호  
@@ -77,10 +77,10 @@ ms.locfileid: "75230194"
   
 -   장애 조치(failover) 중 리소스 사용 조절  
   
-##  <a name="Recommendations"></a> 권장 사항  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
  프로덕션 환경에서 장애 조치(Failover) 클러스터 인스턴스의 가상 IP 주소와 함께 고정 IP 주소를 사용하는 것이 좋습니다.  DHCP는 프로덕션 환경에서 사용하지 않는 것이 좋습니다. 작동이 중단하고 DHCP IP 임대가 만료된 경우 DNS 이름과 연결된 새 DHCP IP 주소를 다시 등록하는 데 시간이 추가로 소요됩니다.  
   
-##  <a name="Overview"></a> 장애 조치(Failover) 클러스터 인스턴스 개요  
+##  <a name="failover-cluster-instance-overview"></a><a name="Overview"></a> 장애 조치(Failover) 클러스터 인스턴스 개요  
  FCI는 WSFC 노드가 하나 이상 포함된 WSFC 리소스 그룹에서 실행됩니다. FCI가 시작되면 노드 중 하나가 리소스 그룹의 소유권을 갖고 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 온라인으로 설정합니다. 이 노드가 소유하는 리소스는 다음과 같습니다.  
   
 -   네트워크 이름  
@@ -125,7 +125,7 @@ ms.locfileid: "75230194"
   
  자세한 내용은 [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)를 참조하세요.  
   
-##  <a name="FCIelements"></a> 장애 조치(Failover) 클러스터 인스턴스의 요소  
+##  <a name="elements-of-a-failover-cluster-instance"></a><a name="FCIelements"></a> 장애 조치(Failover) 클러스터 인스턴스의 요소  
  FCI는 운영 체제 버전과 패치 수준 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전과 패치 수준, 구성 요소 및 인스턴스 이름을 포함하는 동일 소프트웨어 구성뿐만 아니라 비슷한 하드웨어 구성을 포함하는 물리적 서버(노드) 집합으로 구성됩니다. 노드간 장애 조치(failover)를 수행할 때 FCI가 완전히 작동할 수 있도록 하려면 소프트웨어 구성이 동일해야 합니다.  
   
  WSFC 리소스 그룹  
@@ -143,7 +143,7 @@ ms.locfileid: "75230194"
  가상 IP  
  다중 서브넷 FCI의 경우 FCI의 각 서브넷에 가상 IP 주소가 할당됩니다. 그리고 장애 조치(failover)가 발생하면 해당 서브넷의 가상 IP 주소를 가리키도록 DNS 서버에서 VNN이 업데이트됩니다. 그런 다음에는 다중 서브넷 장애 조치(failover) 후에도 애플리케이션 및 클라이언트가 동일한 VNN을 사용하여 FCI에 연결할 수 있습니다.  
   
-##  <a name="ConceptsAndTasks"></a> SQL Server 장애 조치(Failover) 개념 및 태스크  
+##  <a name="sql-server-failover-concepts-and-tasks"></a><a name="ConceptsAndTasks"></a> SQL Server 장애 조치(Failover) 개념 및 태스크  
   
 |개념 및 태스크|항목|  
 |------------------------|-----------|  
@@ -151,13 +151,13 @@ ms.locfileid: "75230194"
 |FCI 관리 및 유지 관리에 대한 개념을 설명합니다.|[장애 조치(failover) 클러스터 인스턴스 관리 및 유지 관리](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)|  
 |다중 서브넷 구성 및 개념 설명|[SQL Server 다중 서브넷 클러스터링&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)|  
   
-##  <a name="RelatedTopics"></a> 관련 항목  
+##  <a name="related-topics"></a><a name="RelatedTopics"></a> 관련 항목  
   
 |**항목 설명**|**항목**|  
 |----------------------------|---------------|  
 |새 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI를 설치하는 방법을 설명합니다.|[새 SQL Server 장애 조치(failover) 클러스터 만들기&#40;설치 프로그램&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 장애 조치(failover) 클러스터를 업그레이드하는 방법을 설명합니다.|[SQL Server 장애 조치(Failover) 클러스터 인스턴스 업그레이드](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
-|Windows 장애 조치(Failover) 클러스터링 개념을 설명하고 Windows 장애 조치(Failover) 클러스터링에 관련된 태스크의 링크를 제공합니다.|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [장애 조치(failover) 클러스터 개요](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [장애 조치(failover) 클러스터 개요](https://go.microsoft.com/fwlink/?LinkId=177879)|  
+|Windows 장애 조치(Failover) 클러스터링 개념을 설명하고 Windows 장애 조치(Failover) 클러스터링에 관련된 태스크의 링크를 제공합니다.|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [장애 조치(Failover) 클러스터 개요](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [장애 조치(Failover) 클러스터 개요](https://go.microsoft.com/fwlink/?LinkId=177879)|  
 |FCI의 노드와 가용성 그룹 내 복제본 간의 개념적인 차이를 설명하고 FCI를 사용하여 가용성 그룹을 위한 복제본을 호스팅할 때 고려해야 할 사항에 대해 설명합니다.|[장애 조치(failover) 클러스터링 및 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   
   

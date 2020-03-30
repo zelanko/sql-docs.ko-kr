@@ -19,10 +19,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 470573d1494e590077ad30cffc0d4134394354ee
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75251092"
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>기업 내 작업 관리
@@ -76,7 +76,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [SMO(SQL Server 관리 개체)](https://msdn.microsoft.com/4cde2b85-2a31-4cac-8d16-7a4196066193)  
   
-**대상 서버 클록을 동기화하려면**  
+**대상 서버 클럭을 동기화하려면**  
   
 -   [SQL Server Management Studio](../../ssms/agent/synchronize-target-server-clocks-sql-server-management-studio.md)  
   

@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: aada983ac80116cce2001b5027b89b8824bd151f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307011"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay 보안
@@ -74,7 +74,7 @@ ms.locfileid: "75307011"
   
  컨트롤러 DCOM 권한을 구성하려면 다음 단계에 따르십시오.  
   
-1.  **구성 요소 서비스 스냅인(dcomcnfg.exe) 열기**: 이 스냅인은 DCOM 권한을 구성하는 데 사용되는 도구입니다.  
+1.  **구성 요소 서비스 스냅인 dcomcnfg.exe 열기**: 이 도구는 DCOM 권한을 구성하는 데 사용됩니다.  
   
     1.  컨트롤러 컴퓨터에서 **시작**을 클릭합니다.  
   
@@ -82,9 +82,9 @@ ms.locfileid: "75307011"
   
     3.  Enter 키를 누릅니다.  
   
-2.  **컴퓨터 차원 DCOM 권한 구성**: 다음 표에 나열된 각 계정에 해당되는 컴퓨터 전체 DCOM 권한을 부여합니다. 컴퓨터 전체 권한을 설정하는 방법에 대한 자세한 내용은 [검사 목록: DCOM 애플리케이션 관리](https://go.microsoft.com/fwlink/?LinkId=185842)를 참조하세요.  
+2.  **컴퓨터 전체 DCOM 권한 구성**: 다음 표에 나열된 각 계정에 대해 해당하는 컴퓨터 전체 DCOM 권한을 부여합니다. 컴퓨터 전체 권한을 설정하는 방법은 [검사 목록: DCOM 애플리케이션 관리](https://go.microsoft.com/fwlink/?LinkId=185842)를 참조하세요.  
   
-3.  **애플리케이션별 DCOM 권한 구성**: 다음 표에 나열된 각 계정에 해당되는 애플리케이션별 DCOM 권한을 부여합니다. 컨트롤러 서비스에 대한 DCOM 애플리케이션 이름은 **DReplayController**입니다. 애플리케이션별 권한을 설정하는 방법에 대한 자세한 내용은 [검사 목록: DCOM 애플리케이션 관리](https://go.microsoft.com/fwlink/?LinkId=185842)를 참조하세요.  
+3.  **애플리케이션별 DCOM 권한 구성**: 다음 표에 나열된 각 계정에 대해 해당하는 애플리케이션별 DCOM 권한을 부여합니다. 컨트롤러 서비스에 대한 DCOM 애플리케이션 이름은 **DReplayController**입니다. 애플리케이션별 권한을 설정하는 방법은 [검사 목록: DCOM 애플리케이션 관리](https://go.microsoft.com/fwlink/?LinkId=185842)를 참조하세요.  
   
  다음 표에서는 관리 도구를 실행하는 데 사용되는 대화형 사용자 계정과 클라이언트 서비스 계정에 필요한 DCOM 권한에 대해 설명합니다.  
   

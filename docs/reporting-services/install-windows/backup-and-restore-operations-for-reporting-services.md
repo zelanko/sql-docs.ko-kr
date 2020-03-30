@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 ms.date: 05/08/2019
 ms.openlocfilehash: f5d2aad7b0a306dd4bd2c8e64b7a49581c8fb5d2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68264969"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Reporting Services 백업 및 복원 작업
@@ -39,7 +39,7 @@ ms.locfileid: "68264969"
     ::: moniker-end
   
 ## <a name="backing-up-the-report-server-databases"></a>보고서 서버 데이터베이스 백업  
- 보고서 서버는 상태 비저장 서버이므로 애플리케이션 데이터는 모두 **인스턴스에서 실행되는** reportserver **및** reportservertempdb [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 데이터베이스에 저장됩니다. 지원되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 백업 방법 중 하나를 사용하여 **reportserver** 및 **reportservertempdb** 데이터베이스를 백업할 수 있습니다. 보고서 서버 데이터베이스에 특정한 몇 가지 권장 사항이 있습니다.  
+ 보고서 서버는 상태 비저장 서버이므로 애플리케이션 데이터는 모두 **인스턴스에서 실행되는** reportserver **및** reportservertempdb [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 데이터베이스에 저장됩니다. 지원되는 **데이터베이스 백업 방법 중 하나를 사용하여**reportserver**및**reportservertempdb[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 백업할 수 있습니다. 보고서 서버 데이터베이스에 특정한 몇 가지 권장 사항이 있습니다.  
   
 -   **reportserver** 데이터베이스를 백업하려면 전체 복구 모델을 사용합니다.  
   

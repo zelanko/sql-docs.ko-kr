@@ -9,10 +9,10 @@ ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8cff1f3e79c383dbcbfe365ab36d9fa6912d6e28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080364"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>식(보고서 작성기 및 SSRS)
@@ -35,7 +35,7 @@ ms.locfileid: "77080364"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Types"></a> 간단한 식 및 복잡한 식 이해  
+##  <a name="understanding-simple-and-complex-expressions"></a><a name="Types"></a> 간단한 식 및 복잡한 식 이해  
  식은 등호(=)로 시작하며 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]으로 작성됩니다. 식에는 상수, 연산자, 기본 제공 값(필드, 컬렉션 및 함수)에 대한 참조, 외부 또는 사용자 지정 코드에 대한 참조의 조합이 포함될 수 있습니다.  
   
  식을 사용하여 여러 보고서 항목 속성 값을 지정할 수 있습니다. 가장 일반적인 속성은 입력란 및 자리 표시자 텍스트에 대한 값입니다. 일반적으로 입력란에 식이 하나만 포함되어 있는 경우 식은 입력란 속성 값입니다. 입력란에 여러 개의 식이 포함되어 있으면 각 식은 입력란의 자리 표시자 텍스트 값입니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "77080364"
   
  자세한 내용은 [텍스트 및 자리 표시자 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)에 대해 자세히 알아봅니다.  
   
-## <a name="DisplayText"></a> 간단한 식의 접두사 기호 이해  
+## <a name="understanding-prefix-symbols-in-simple-expressions"></a><a name="DisplayText"></a> 간단한 식의 접두사 기호 이해  
 
 간단한 식은 기호를 사용하여 참조가 필드, 매개 변수, 기본 제공 컬렉션 또는 ReportItems 컬렉션 중 어느 항목에 대한 것인지를 나타냅니다. 다음 표에서는 표시 텍스트 및 식 텍스트의 예를 보여 줍니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "77080364"
 |기본 제공 필드|`[&ReportName]`|`=Globals!ReportName.Value`|  
 |표시 텍스트에 사용되는 리터럴 문자|`\[Sales\]`|`[Sales]`|  
   
-##  <a name="References"></a> 복잡한 식 작성  
+##  <a name="writing-complex-expressions"></a><a name="References"></a> 복잡한 식 작성  
  식에는 함수, 연산자, 상수, 필드, 매개 변수, 기본 제공 컬렉션의 항목 및 포함된 사용자 지정 코드나 사용자 지정 어셈블리에 대한 참조가 포함될 수 있습니다.  
   
 > [!NOTE]
@@ -83,8 +83,8 @@ ms.locfileid: "77080364"
 |[기본 제공 보고서 및 집계 함수](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)|`Sum` 또는 `Previous`와 같이 식에서 액세스할 수 있는 기본 제공 함수에 대해 설명합니다.|`=Previous(Sum(Fields!Sales.Value))`|  
 |[보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|기본 제공 CLR 클래스 <xref:System.Math> 및 <xref:System.Convert>, 다른 CLR 클래스, [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 런타임 라이브러리 함수 또는 외부 어셈블리의 메서드에 액세스할 수 있는 방법에 대해 설명합니다.<br /><br /> 보고서에 포함된 사용자 지정 코드 또는 컴파일하여 사용자 지정 어셈블리로 보고서 클라이언트와 보고서 서버에 설치한 사용자 지정 코드에 액세스할 수 있는 방법에 대해 설명합니다.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
    
-##  <a name="Valid"></a> 식 유효성 검사  
- 특정 보고서 항목 속성에 대한 식을 만들 때 식에 포함할 수 있는 참조는 보고서 항목 속성에 허용될 수 있는 값 및 속성이 계산되는 범위에 따라 달라집니다. 다음은 그 예입니다.   
+##  <a name="validating-expressions"></a><a name="Valid"></a> 식 유효성 검사  
+ 특정 보고서 항목 속성에 대한 식을 만들 때 식에 포함할 수 있는 참조는 보고서 항목 속성에 허용될 수 있는 값 및 속성이 계산되는 범위에 따라 달라집니다. 다음은 그 예입니다.  
   
 -   기본적으로 [Sum] 식은 식이 계산될 때 범위 내에 있는 데이터의 합계를 계산합니다. 테이블 셀의 경우 범위는 행 및 열 그룹 멤버 자격에 따라 달라집니다. 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)를 나타냅니다.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "77080364"
   
  자세한 내용은 [식 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-reference-report-builder-and-ssrs.md)를 나타냅니다.  
   
-##  <a name="Section"></a> 섹션 내용  
+##  <a name="in-this-section"></a><a name="Section"></a> 섹션 내용  
  [식 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)  
   
  [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  

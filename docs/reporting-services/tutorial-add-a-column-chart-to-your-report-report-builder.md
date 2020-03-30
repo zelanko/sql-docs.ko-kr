@@ -9,10 +9,10 @@ ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041399"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기)
@@ -35,7 +35,7 @@ ms.locfileid: "63041399"
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
   
-## <a name="Chart"></a>1. 차트 마법사에서 차트 보고서 만들기  
+## <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1. 차트 마법사에서 차트 보고서 만들기  
 이 섹션에서는 차트 마법사를 진행하여 포함된 데이터 세트를 만들고, 공유 데이터 원본을 선택하고, 세로 막대형 차트를 만듭니다.  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ ms.locfileid: "63041399"
   
 9. **다음**을 클릭합니다.  
   
-## <a name="ChartType"></a>2. 차트 종류 선택  
+## <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. 차트 종류 선택  
 몇 가지 미리 정의된 차트 종류에서 선택한 다음 마법사를 완료한 후 차트를 수정할 수 있습니다.  
   
 ### <a name="to-add-a-column-chart"></a>세로 막대형 차트를 추가하려면  
@@ -114,7 +114,7 @@ ms.locfileid: "63041399"
 
 차트에서 가로 축의 범주 중 일부에는 레이블이 지정되지 않습니다. 기본적으로 축 옆에 맞는 레이블만 포함됩니다. 
   
-## <a name="Horizontal"></a>3. 가로 축의 날짜에 형식 지정  
+## <a name="3-format-a-date-on-the-horizontal-axis"></a><a name="Horizontal"></a>3. 가로 축의 날짜에 형식 지정  
 기본적으로 가로 축에는 차트 크기에 맞게 자동으로 늘어나는 일반 형식으로 값이 표시됩니다.  
   
 1.  보고서 디자인 뷰로 전환합니다.  
@@ -159,7 +159,7 @@ ms.locfileid: "63041399"
 
 ![report-builder-column-chart-rotate-x-axis-preview](../reporting-services/media/report-builder-column-chart-rotate-x-axis-preview.png)
   
-## <a name="Legend"></a>5. 범례 이동  
+## <a name="5-move-the-legend"></a><a name="Legend"></a>5. 범례 이동  
 범례는 범주와 계열 데이터에서 자동으로 만들어집니다. 세로 막대형 차트의 차트 영역 아래로 범례를 이동할 수 있습니다.  
   
 1.  보고서 디자인 뷰로 전환합니다.  
@@ -176,7 +176,7 @@ ms.locfileid: "63041399"
   
 6.  **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
-## <a name="ChartTitle"></a>6. 차트 제목 지정  
+## <a name="6-title-the-chart"></a><a name="ChartTitle"></a>6. 차트 제목 지정  
     
 1.  보고서 디자인 뷰로 전환합니다.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "63041399"
   
 3.  **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
-## <a name="Vertical"></a>7. 세로 축의 서식 및 레이블 지정  
+## <a name="7-format-and-label-the-vertical-axis"></a><a name="Vertical"></a>7. 세로 축의 서식 및 레이블 지정  
 기본적으로 세로 축에는 차트 크기에 맞게 자동으로 늘어나는 일반 형식으로 값이 표시됩니다.   
   
 1.  보고서 디자인 뷰로 전환합니다.  
@@ -235,7 +235,7 @@ x축의 레이블 중 일부만 표시되는 것을 확인할 수 있습니다. 
     
     이제 차트에 해당하는 모든 레이블이 표시됩니다.
   
-## <a name="Average"></a>9. 계산된 계열을 사용하여 이동 평균 추가  
+## <a name="9-add-a-moving-average-with-a-calculated-series"></a><a name="Average"></a>9. 계산된 계열을 사용하여 이동 평균 추가  
 
 이동 평균은 시간에 따라 계산된 계열 데이터의 평균입니다. 이동 평균은 추세를 식별할 수 있습니다.
   
@@ -261,7 +261,7 @@ x축의 레이블 중 일부만 표시되는 것을 확인할 수 있습니다. 
 
 ![report-builder-column-chart-moving-average](../reporting-services/media/report-builder-column-chart-moving-average.png)
   
-## <a name="Title"></a>10. 보고서 제목 추가  
+## <a name="10-add-a-report-title"></a><a name="Title"></a>10. 보고서 제목 추가  
   
 1.  보고서 디자인 뷰로 전환합니다.  
   
@@ -283,7 +283,7 @@ x축의 레이블 중 일부만 표시되는 것을 확인할 수 있습니다. 
   
 7.  **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
-## <a name="Save"></a>11. 보고서 저장  
+## <a name="11-save-the-report"></a><a name="Save"></a>11. 보고서 저장  
   
 ### <a name="to-save-the-report"></a>보고서를 저장하려면  
   

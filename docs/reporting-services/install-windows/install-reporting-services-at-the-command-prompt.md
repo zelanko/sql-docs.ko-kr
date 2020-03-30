@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7c4597a19b3fbcde0a5b4f6a82cb2398b6776128
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62513688"
 ---
 # <a name="install-reporting-services-2016-at-the-command-prompt"></a>명령 프롬프트에 Reporting Services 2016 설치
@@ -23,10 +23,10 @@ ms.locfileid: "62513688"
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 SQL Server 설치 프로그램에서 명령줄 설치를 지원합니다. 이 항목에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 관련된 몇 가지 명령줄 설치 예가 포함됩니다. 모든 SQL Server 구성 요소에 대해 사용 가능한 명령줄 옵션에 대한 자세한 설명은 [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요. 이 항목에서는 SharePoint 제품용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능에 대한 명령줄 옵션은 다루지 않습니다. 추가 기능 명령 설치에 자세한 내용은 [rsSharePoint.msi 설치 파일을 사용하여 추가 기능 설치](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md#bkmk_install_rssharepoint)를 참조하세요.
 
-##  <a name="bkmk_native_mode"></a> 기본 모드 Reporting Services
+##  <a name="native-mode-reporting-services"></a><a name="bkmk_native_mode"></a> 기본 모드 Reporting Services
 
 ### <a name="rsinstallmode-native-mode"></a>RSINSTALLMODE(기본 모드)
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 위한 기본 입력 설정은 **/RSINSTALLMODE** 입력 설정입니다. 설정에는 **DefaultNativeMode**와 **FilesOnlyMode**의 두 가지 옵션이 있습니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 위한 기본 입력 설정은 **/RSINSTALLMODE** 입력 설정입니다. 설정에는 **DefaultNativeMode** 와 **FilesOnlyMode**의 두 가지 옵션이 있습니다.  
   
  설치에 SQL Server 데이터베이스 엔진이 있는 경우 RSINSTALLMODE 기본값은 DefaultNativeMode입니다. 설치에 SQL Server 데이터베이스 엔진이 없는 경우 RSINSTALLMODE 기본값은 FilesOnlyMode입니다. DefaultNativeMode를 선택했지만 설치에 SQL Server 데이터베이스 엔진이 없는 경우 설치가 RSINSTALLMODE를 FilesOnlyMode로 자동으로 변경합니다. 입력 설정에 대한 자세한 내용은 [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)를 참조하세요.
 
@@ -46,7 +46,7 @@ ms.locfileid: "62513688"
 Setup.exe /q /IACCEPTSQLSERVERLICENSETERMS /ACTION="install" /ERRORREPORTING=1 /UPDATEENABLED="False" /INSTANCENAME="MSSQLSERVER" /FEATURES="SQLEngine,Adv_SSMS,RS" /RSINSTALLMODE="DefaultNativeMode" /SQLSVCACCOUNT="[DOMAIN\ACCOUNT]" /SQLSVCPASSWORD="[PASSWORD]" /AGTSVCACCOUNT="[DOMAIN\ACCOUNT]" /AGTSVCPASSWORD="[PASSWORD]" /SQLSYSADMINACCOUNTS="[DOMAIN\ACCOUNT]"  
 ```  
   
-##  <a name="bkmk_sharepoint_mode"></a> SharePoint 모드 Reporting Services  
+##  <a name="sharepoint-mode-reporting-services"></a><a name="bkmk_sharepoint_mode"></a> SharePoint 모드 Reporting Services  
   
 ### <a name="rsshpinstallmode-sharepoint-mode"></a>RSSHPINSTALLMODE(SharePoint 모드)  
  SharePoint 모드로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치하기 위한 입력 설정은 **/RSSHPINSTALLMODE**입니다. 입력 설정에는 SharePointFilesOnlyMode라는 한 옵션만 있습니다. 이 옵션은 SharePoint 모드에 필요한 모든 파일을 설치하지만 설치 후 구성이 필요합니다. SharePoint 중앙 관리를 사용하여 이 추가 구성 단계가 완료됩니다. 자세한 내용은 [SharePoint 모드에서 첫 번째 보고서 서버 설치](install-the-first-report-server-in-sharepoint-mode.md)를 참조하세요.  

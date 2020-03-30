@@ -12,10 +12,10 @@ ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a1be40ed580de1163c0e85e37e7b8ffc1bccc342
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581085"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>항목 이동 또는 삭제(보고서 관리자)
@@ -35,7 +35,7 @@ ms.locfileid: "65581085"
 |![Shared data source icon](../../reporting-services/report-data/media/hlp-16datasource.png "공유 데이터 원본 아이콘")|공유 데이터 원본|  
 ||공유 데이터 세트|  
   
- 작업하는 모든 항목을 이동할 수 있는 것은 아닙니다. 구독이나 보고서 기록과 같이 보고서와 연결된 항목은 이동할 수 없습니다. 이러한 항목은 연결된 보고서와 함께 이동됩니다. 마찬가지로 공유 일정과 같이 폴더 계층 밖에 있는 항목도 이동할 수 없습니다. 항목 이동 권한이 없으면 항목을 이동할 수 없습니다. 항목 이동 권한은 해당 항목에 대한 역할 할당에서 “보고서 관리”, “모델 관리”, “폴더 관리” 및 “데이터 원본 관리” 작업을 선택한 경우에만 부여됩니다.  
+ 작업하는 모든 항목을 이동할 수 있는 것은 아닙니다. 구독이나 보고서 기록과 같이 보고서와 연결된 항목은 이동할 수 없습니다. 이러한 항목은 연결된 보고서와 함께 이동됩니다. 마찬가지로 공유 일정과 같이 폴더 계층 밖에 있는 항목도 이동할 수 없습니다. 항목 이동 권한이 없으면 항목을 이동할 수 없습니다. 항목 이동 권한은 해당 항목에 대한 역할 할당에서 "보고서 관리," "모델 관리," "폴더 관리" 및 "데이터 원본 관리" 태스크를 선택한 경우에만 부여됩니다.  
   
 #### <a name="to-move-an-item-from-within-the-contents-page"></a>내용 페이지에서 항목을 이동하려면  
   

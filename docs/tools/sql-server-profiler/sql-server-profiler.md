@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 11/27/2018
 ms.openlocfilehash: 4b2130aad931b55e1644aedb36762ad3b94a1e1c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307828"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
@@ -27,7 +27,7 @@ ms.locfileid: "75307828"
 > [!IMPORTANT]
 > SQL 추적 및 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 사용되지 않습니다. Microsoft SQL Server 추적 및 재생 개체를 포함하는 *Microsoft.SqlServer.Management.Trace* 네임스페이스도 더 이상 사용되지 않습니다. 
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
-> 확장 이벤트를 대신 사용하세요. [확장 이벤트](../../relational-databases/extended-events/extended-events.md)에 대한 자세한 내용은 [빠른 시작: SQL Server의 확장 이벤트](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) 및 [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)를 참조하세요.
+> 확장 이벤트를 대신 사용하세요. [확장 이벤트](../../relational-databases/extended-events/extended-events.md)에 대한 자세한 내용은 [빠른 시작: SQL Server의 확장 이벤트](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) 및 [SSMS XEvent 프로파일러](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)를 참조하세요.
 
 > [!NOTE]
 > Analysis Services 워크로드에는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]가 계속 사용되며 지원됩니다.
@@ -42,7 +42,7 @@ ms.locfileid: "75307828"
 ||||  
 |-|-|-|  
 |**기능\대상 작업**|**관계형 엔진**|**Analysis Services**|  
-|**추적 캡처**|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 [확장 이벤트](../../relational-databases/extended-events/extended-events.md) 그래픽 사용자 인터페이스|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
+|**추적 캡처**|[의 ](../../relational-databases/extended-events/extended-events.md)확장 이벤트[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 그래픽 사용자 인터페이스|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
 |**추적 재생**|[Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
   
 ## <a name="sql-server-profiler"></a>SQL Server Profiler  

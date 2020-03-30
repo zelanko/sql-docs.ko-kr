@@ -22,10 +22,10 @@ ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 92153155be5761e804c6d62cece4d392b40a1412
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67894896"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE(Transact-SQL)
@@ -43,7 +43,7 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
   
 ## <a name="arguments"></a>인수  
  *cursor_name*  
- 이미 선언된 커서의 이름입니다. 글로벌 커서와 지역 커서에 모두 해당 이름으로 *cursor_name*이 있는 경우 `GLOBAL`이 지정되면 *cursor_name*이 글로벌 커서를 참조하고, `GLOBAL`이 지정되지 않으면 지역 커서를 참조합니다.  
+ 이미 선언된 커서의 이름입니다. 글로벌 커서와 지역 커서에 모두 해당 이름으로 *cursor_name*이 있는 경우 *이 지정되면* cursor_name`GLOBAL`이 글로벌 커서를 참조하고, `GLOBAL`이 지정되지 않으면 지역 커서를 참조합니다.  
   
  @*cursor_variable_name*  
  **cursor** 변수의 이름입니다. @*cursor_variable_name*은 **cursor** 형식이어야 합니다.  

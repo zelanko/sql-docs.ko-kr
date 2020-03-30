@@ -11,15 +11,15 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 60160fe3f36d61364b8bf4385fa53b744f9a3475
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286597"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>연습: 사용자 지정 테스트 조건을 사용하여 저장 프로시저 결과 확인
 
-이 기능 확장 연습에서는 테스트 조건을 만든 후 SQL Server 단위 테스트를 만들어 해당 기능을 확인합니다. 이 프로세스에는 테스트 조건에 대한 클래스 라이브러리 프로젝트를 만들고 이 프로젝트를 서명 및 설치하는 작업이 포함됩니다. 업데이트할 테스트 조건이 이미 있는 경우 [방법: 이전 릴리스의 Visual Studio 2010 사용자 지정 테스트 조건을 SQL Server Data Tools로 업그레이드](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)를 참조하세요.  
+이 기능 확장 연습에서는 테스트 조건을 만든 후 SQL Server 단위 테스트를 만들어 해당 기능을 확인합니다. 이 프로세스에는 테스트 조건에 대한 클래스 라이브러리 프로젝트를 만들고 이 프로젝트를 서명 및 설치하는 작업이 포함됩니다. 업데이트할 테스트 조건이 이미 있는 경우에는 [방법: 이전 릴리스의 Visual Studio 2010 사용자 지정 테스트 조건을 SQL Server Data Tools로 업그레이드](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)를 참조하세요.  
   
 이 연습에서는 다음 작업을 수행합니다.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "79286597"
     public class ResultSetColumnCountCondition : TestCondition  
     ```  
   
-5.  [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx)를 추가합니다. [방법: SQL Server 단위 테스트 디자이너용 테스트 조건 만들기](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)를 참조하세요.  
+5.  [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx)를 추가합니다. UnitTesting.Conditions.ExportTestConditionAttribute에 대한 자세한 내용은 [방법: SQL Server 단위 테스트 디자이너용 테스트 조건 만들기](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)를 참조하세요.  
   
     ```  
     [ExportTestCondition("ResultSet Column Count", typeof(ResultSetColumnCountCondition))]  
@@ -344,7 +344,7 @@ namespace ColumnCountCondition
   
 이제 프로젝트를 빌드합니다.  
   
-## <a name="xxx"></a>프로젝트 컴파일 및 테스트 조건 설치  
+## <a name="compiling-the-project-and-installing-your-test-condition"></a><a name="xxx"></a>프로젝트 컴파일 및 테스트 조건 설치  
 **빌드** 메뉴에서 **솔루션 빌드**를 클릭합니다.  
   
 이제 어셈블리 정보를 Extensions 디렉터리에 복사합니다. Visual Studio는 시작 시 %Program Files%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions 디렉터리 및 하위 디렉터리에 있는 모든 확장을 확인하고 이를 사용할 수 있도록 합니다.  

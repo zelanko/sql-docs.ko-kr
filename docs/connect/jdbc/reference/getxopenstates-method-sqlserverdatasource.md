@@ -16,10 +16,10 @@ ms.assetid: de6fdf6b-8345-4490-b35e-7115b61e782e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5c263a94b8df0337d05cc8f3ee41df4e2f30fc72
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977935"
 ---
 # <a name="getxopenstates-method-sqlserverdatasource"></a>getXopenStates 메서드(SQLServerDataSource)

@@ -15,10 +15,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.openlocfilehash: 5af6b442486a1c80a1b9ec9f8d870f167c67de35
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246035"
 ---
 # <a name="update-table-dialog-box-visual-database-tools"></a>테이블 업데이트 대화 상자(Visual Database Tools)

@@ -16,10 +16,10 @@ ms.assetid: 9c6db315-e614-4604-b020-41af6a214cc1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 37221f0f9c7cf87576f0014b855ed28740e4818e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67975705"
 ---
 # <a name="rowdeleted-method-sqlserverresultset"></a>rowDeleted 메서드(SQLServerResultSet)

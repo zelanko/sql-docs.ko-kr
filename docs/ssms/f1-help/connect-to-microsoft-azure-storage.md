@@ -14,10 +14,10 @@ ms.assetid: ''
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: eb943430136a1406ea18b9c387c98fbec6fd27cf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245020"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Microsoft Azure Storage에 연결

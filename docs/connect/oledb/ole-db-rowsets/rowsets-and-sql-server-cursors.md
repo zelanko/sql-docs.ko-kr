@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9ba062c9718203c52659dd0c35fa7bcb76b1a40c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994181"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>행 집합 및 SQL Server 커서
@@ -77,7 +77,7 @@ ms.locfileid: "67994181"
 |DBPROP_IMMOBILEROWS|VARIANT_FALSE|행 집합을 통해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터를 업데이트할 수 없습니다. 행 집합은 정방향 스크롤만 지원합니다. 상대적인 행 위치 지정은 지원됩니다. 참조된 열에 인덱스가 있으면 명령 텍스트에 ORDER BY 절이 포함될 수 있습니다.<br /><br /> DBPROP_IMMOBILEROWS는 다른 세션의 명령이나 다른 사용자에 의해 삽입된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 행을 표시할 수 있는 행 집합에서만 사용할 수 있습니다. DBPROP_OTHERINSERT가 VARIANT_TRUE일 수 없는 행 집합에서 속성이 VARIANT_FALSE로 설정된 행 집합을 열려고 하면 오류가 발생합니다.|  
 |DBPROP_REMOVEDELETED|VARIANT_TRUE|행 집합을 통해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터를 업데이트할 수 없습니다. 행 집합은 정방향 스크롤만 지원합니다. 상대적인 행 위치 지정은 지원됩니다. 다른 속성으로 제한되지 않은 경우 명령 텍스트에 ORDER BY 절이 포함될 수 있습니다.|  
   
- **IOpenRowset::OpenRowset** 메서드를 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본 테이블이나 뷰에서 서버 커서가 지원하는 SQL Server용 OLE DB 드라이버 행 집합을 쉽게 만들 수 있습니다. *rgPropertySets* 매개 변수에 필요한 행 집합 속성 세트를 전달하여 이름으로 테이블이나 뷰를 지정합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]IOpenRowset::OpenRowset**메서드를 사용하면** 기본 테이블이나 뷰에서 서버 커서가 지원하는 SQL Server용 OLE DB 드라이버 행 집합을 쉽게 만들 수 있습니다. *rgPropertySets* 매개 변수에 필요한 행 집합 속성 세트를 전달하여 이름으로 테이블이나 뷰를 지정합니다.  
   
  행 집합이 서버 커서에서 지원되도록 소비자가 요구하는 경우 행 집합을 만드는 명령 텍스트가 제한됩니다. 구체적으로, 명령 텍스트는 단일 행 집합 결과를 반환하는 단일 SELECT 문이나 단일 행 집합 결과를 반환하는 단일 SELECT 문을 구현하는 저장 프로시저로 제한됩니다.  
   

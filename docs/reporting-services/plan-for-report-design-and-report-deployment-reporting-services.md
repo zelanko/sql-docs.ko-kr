@@ -9,10 +9,10 @@ ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581242"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>보고서 디자인 및 보고서 배포 계획 | Reporting Services
@@ -22,7 +22,7 @@ ms.locfileid: "65581242"
   
  RDL 파일은 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 프로젝트의 보고서 디자이너 및 보고서 작성기에서 작성됩니다. RDLC 파일은 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]에 포함된 ReportViewer 컨트롤을 사용해서 작성됩니다.
   
-##  <a name="bkmk_rdl_schema_versions"></a> RDL 스키마 버전  
+##  <a name="rdl-schema-versions"></a><a name="bkmk_rdl_schema_versions"></a> RDL 스키마 버전  
  다음 표에서는 사용 가능한 스키마 버전과 이 항목의 나머지 부분에서 사용되는 약어를 나열합니다.  
   
 |약어|스키마 버전|  
@@ -43,7 +43,7 @@ ms.locfileid: "65581242"
   
  ReportViewer 컨트롤에 대한 자세한 내용은 [ReportViewer 컨트롤(Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx)을 참조하세요.  
   
-##  <a name="bkmk_report_server_rdl_schema_support"></a> 보고서 서버 및 RDL 스키마 지원  
+##  <a name="report-server-and-rdl-schema-support"></a><a name="bkmk_report_server_rdl_schema_support"></a> 보고서 서버 및 RDL 스키마 지원  
  다음과 같은 방법으로 보고서 정의 파일을 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 보고서 서버에 배포할 수 있습니다.  
   
 -   **보고서 디자이너:** [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]의 보고서 디자이너에서 보고서를 배포합니다.  
@@ -82,7 +82,7 @@ SharePoint 모드 배포에서는 문서 라이브러리로 이동해서 보고�
   
  보고서 업그레이드 및 지원되는 스키마 버전에 대한 자세한 내용은 [보고서 업그레이드](../reporting-services/install-windows/upgrade-reports.md)를 참조하세요.  
   
-##  <a name="bkmk_report_authoring_and_deployment"></a> 보고서 제작 및 배포 지원  
+##  <a name="report-authoring-and-deployment-support"></a><a name="bkmk_report_authoring_and_deployment"></a> 보고서 제작 및 배포 지원  
  보고서 작성 환경은 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 프로젝트의 보고서 디자이너 및 보고서 작성기입니다. 보고서 제작 환경에서는 보고서 업그레이드, 보고서 디자인, 로컬 모드로 보고서 미리 보기, 보고서 서버에서 보고서 미리 보기 및 보고서 배포를 위한 다양한 지원 기능을 제공합니다.  
   
  다음 표에는 다양한 스키마 버전을 위한 보고서 정의 제작 및 배포에 대한 지원 기능이 요약되어 있습니다.  
@@ -101,7 +101,7 @@ SharePoint 모드 배포에서는 문서 라이브러리로 이동해서 보고�
   
 -   [Visual Studio 2015용 SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md).  
   
-##  <a name="bkmk_reportviewer"></a> ReportViewer 컨트롤  
+##  <a name="reportviewer-controls"></a><a name="bkmk_reportviewer"></a> ReportViewer 컨트롤  
  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ReportViewer 컨트롤은 로컬 미리 보기 모드 또는 원격 미리 보기 모드로 .rdlc 보고서를 표시할 수 있으며, 이 컨트롤은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버에서 호스팅되는 .rdl 파일을 표시할 수 있습니다. 다음 표에서는 로컬 처리를 위한 ReportViewer 컨트롤(.rdlc)에서 지원되는 RDL 버전 목록을 보여 줍니다. 서버 쪽 RDL 지원은 [보고서 서버 및 RDL 스키마 지원](#bkmk_report_server_rdl_schema_support)섹션에 요약되어 있습니다.  
   
 |제품의 ReportViewer 컨트롤|로컬 미리 보기를 위한 RDL 버전|  

@@ -16,10 +16,10 @@ ms.assetid: 0aa5d372-16aa-4790-a8f6-f8b742798f8f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0c0c718524b8800df02625e6392de1f9d4600291
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953322"
 ---
 # <a name="getcatalogterm-method-sqlserverdatabasemetadata"></a>getCatalogTerm 메서드(SQLServerDatabaseMetaData)

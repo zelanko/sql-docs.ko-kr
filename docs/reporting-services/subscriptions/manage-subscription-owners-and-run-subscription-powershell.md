@@ -11,10 +11,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 01/16/2020
 ms.openlocfilehash: a5ec1524c7105c5a408aa11448984b9366e6d51d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76259341"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>구독 소유자 관리 및 구독 실행 - PowerShell
@@ -25,7 +25,7 @@ ms.locfileid: "76259341"
 
 ![PowerShell 관련 콘텐츠](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")
 
-##  <a name="bkmk_top"></a> 항목 내용
+##  <a name="in-this-topic"></a><a name="bkmk_top"></a> 항목 내용
   
 - [스크립트 사용 방법](#bkmk_how_to)  
   
@@ -33,7 +33,7 @@ ms.locfileid: "76259341"
   
 - [스크립트: 특정 사용자가 소유하는 모든 구독 나열](#bkmk_list_all_one_user)  
   
-- [스크립트: 특정 사용자가 소유하는 모든 구독의 소유권 변경](#bkmk_change_all)  
+- [스크립트: 특정 소유자가 소유하는 모든 구독의 소유권 변경](#bkmk_change_all)  
   
 - [스크립트: 특정 보고서와 연결된 모든 구독 나열](#bkmk_list_for_1_report)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "76259341"
   
 - [스크립트: 단일 구독 실행](#bkmk_run_1_subscription)  
   
-## <a name="bkmk_how_to"></a> 스크립트 사용 방법
+## <a name="how-to-use-the-scripts"></a><a name="bkmk_how_to"></a> 스크립트 사용 방법
   
 ### <a name="permissions"></a>사용 권한
 
@@ -57,17 +57,17 @@ ms.locfileid: "76259341"
   
 **기본 모드:**
   
-- 구독 나열: [보고서의 ReportOperation 열거형](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) + 사용자는 구독 소유자, 또는 ReadAnySubscription  
+- 구독 나열: [보고서의 ReportOperation 열거형](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) 및 사용자는 구독 소유자임) 또는 ReadAnySubscription  
   
-- 구독 변경: 사용자는 BUILTIN\Administrators 그룹의 구성원여야 합니다.  
+- 구독 변경: 사용자는 BUILTIN\Administrators 그룹의 구성원이어야 합니다.  
   
 - 자식 나열: 항목의 ReadProperties  
   
-- 이벤트 발생: GenerateEvents(System)  
+- 이벤트 발생: GenerateEvents (System)  
   
  **SharePoint 모드:**
   
-- 구독 나열: ManageAlerts, 또는 보고서의 [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) + 사용자는 구독 소유자이며 구독은 정기 구독  
+- 구독 나열: ManageAlerts 또는 [보고서의 CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) 및 사용자는 구독 소유자이며 구독은 정기 구독임)  
   
 - 구독 변경: ManageWeb  
   
@@ -99,7 +99,7 @@ ms.locfileid: "76259341"
   
 - [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
   
-## <a name="bkmk_list_ownership_all"></a> 스크립트: 모든 구독의 소유권 나열
+## <a name="script-list-the-ownership-of-all-subscriptions"></a><a name="bkmk_list_ownership_all"></a> 스크립트: 모든 구독의 소유권 나열
 
 이 스크립트는 사이트의 모든 구독을 나열합니다. 이 스크립트를 사용하여 연결을 테스트하거나 다른 스크립트에서 사용하는 보고서 경로 및 구독 ID를 확인할 수 있습니다. 또한 어떤 구독이 존재하며 누가 소유하는지 간단하게 감사할 수 있는 유용한 스크립트입니다.  
   
@@ -137,7 +137,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 > [!TIP]  
 > SharePoint 모드에서 사이트 URL을 확인하려면 SharePoint cmdlet **Get-SPSite**를 사용합니다. 자세한 내용은 [Get-SPSite](https://msdn.microsoft.com/library/ff607950\(v=office.15\).aspx)를 참조하세요.  
   
-##  <a name="bkmk_list_all_one_user"></a> 스크립트: 특정 사용자가 소유하는 모든 구독 나열
+##  <a name="script-list-all-subscriptions-owned-by-a-specific-user"></a><a name="bkmk_list_all_one_user"></a> 스크립트: 특정 사용자가 소유하는 모든 구독 나열
 
 이 스크립트는 특정 사용자가 소유하는 모든 구독을 나열합니다. 이 스크립트를 사용하여 연결을 테스트하거나 다른 스크립트에서 사용하는 보고서 경로 및 구독 ID를 확인할 수 있습니다. 이 스크립트는 조직의 누군가가 떠나고 이들이 소유하고 있던 구독을 확인하여 소유자를 변경하거나 구독을 삭제하려고 할 때 유용합니다.  
   
@@ -175,7 +175,7 @@ Write-Host "----- $currentOwner's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.owner -eq $currentOwner}  
 ```  
   
-## <a name="bkmk_change_all"></a> 스크립트: 특정 사용자가 소유하는 모든 구독의 소유권 변경
+## <a name="script-change-ownership-for-all-subscriptions-owned-by-a-specific-user"></a><a name="bkmk_change_all"></a> 스크립트: 특정 소유자가 소유하는 모든 구독의 소유권 변경
 
 이 스크립트는 특정 소유자가 소유하는 모든 구독의 소유권을 새 소유자 매개 변수로 변경합니다.  
   
@@ -246,7 +246,7 @@ ForEach ($item in $items)
 }  
 ```  
   
-## <a name="bkmk_list_for_1_report"></a> 스크립트: 특정 보고서와 연결된 모든 구독 나열  
+## <a name="script-list-all-subscriptions-associated-with-a-specific-report"></a><a name="bkmk_list_for_1_report"></a> 스크립트: 특정 보고서와 연결된 모든 구독 나열  
 
 이 스크립트는 특정 보고서와 연결된 모든 구독을 나열합니다. 보고서 경로 구문은 전체 URL이 필요한 다른 SharePoint 모드입니다. 구문 예제에서 사용된 보고서 이름은 "title only"이며 공백을 포함하고 있으므로 보고서 이름을 작은따옴표로 묶어야 합니다.  
   
@@ -285,7 +285,7 @@ Write-Host "----- $reportpath 's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.path -eq $reportpath}  
 ```  
   
-## <a name="bkmk_change_all_1_subscription"></a> 스크립트: 특정 구독의 소유권 변경  
+## <a name="script-change-ownership-of-a-specific-subscription"></a><a name="bkmk_change_all_1_subscription"></a> 스크립트: 특정 구독의 소유권 변경  
  이 스크립트는 특정 구독의 소유권을 변경합니다. 구독은 스크립트에 전달하는 SubscriptionID로 식별됩니다. 구독 나열 스크립트 중 하나를 사용하여 올바른 SubscriptionID를 확인할 수 있습니다.  
   
  **기본 모드 구문:**  
@@ -331,7 +331,7 @@ Write-Host "----- $subscriptionid's Subscription properties: "
 $subscription | select Path, report, Description, SubscriptionID, Owner, Status  
 ```  
   
-## <a name="bkmk_run_1_subscription"></a> 스크립트: 단일 구독 실행  
+## <a name="script-run-fire-a-single-subscription"></a><a name="bkmk_run_1_subscription"></a> 스크립트: 단일 구독 실행  
 
 이 스크립트는 FireEvent 메서드를 사용하여 특정 구독을 실행합니다. 이 스크립트는 구독에 구성된 일정에 상관없이 구독을 즉시 실행합니다. EventType은 보고서 서버 구성 파일 **rsreportserver.config** 에 정의된 알려진 이벤트 집합과 일치합니다. 이 스크립트는 표준 구독에 대해 다음 이벤트 유형을 사용합니다.  
   

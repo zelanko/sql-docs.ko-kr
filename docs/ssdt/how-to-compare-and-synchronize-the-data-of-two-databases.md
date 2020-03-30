@@ -15,10 +15,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: c53dc1e11d242d6864525aba677e78c67671277c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241577"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>방법: 두 데이터베이스의 데이터 비교 및 동기화
@@ -41,7 +41,7 @@ ms.locfileid: "75241577"
 > [!NOTE]  
 > 또한 두 데이터베이스 또는 동일 데이터베이스의 두 버전의 ‘스키마’를 비교할 수 있습니다.  자세한 내용은 [방법: 스키마 비교를 사용하여 서로 다른 데이터베이스 정의 비교](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)를 참조하세요.  
   
-## <a name="CompareDatabaseData"></a>데이터베이스 데이터 비교  
+## <a name="comparing-database-data"></a><a name="CompareDatabaseData"></a>데이터베이스 데이터 비교  
   
 #### <a name="to-compare-data-by-using-the-new-data-comparison-wizard"></a>새 데이터 비교 마법사를 사용해서 데이터를 비교하려면  
   
@@ -87,7 +87,7 @@ ms.locfileid: "75241577"
   
     지정된 원본 및 대상 데이터베이스의 데이터가 비교됩니다. 결과는 데이터 비교 세션에 표시됩니다. 결과를 보거나 데이터를 동기화하는 방법에 대한 자세한 내용은 [데이터 차이 보기](#ViewDifferences) 및 [데이터베이스 데이터 동기화](#Synchronize)를 참조하세요.  
   
-## <a name="ViewDifferences"></a>데이터 차이 보기  
+## <a name="viewing-data-differences"></a><a name="ViewDifferences"></a>데이터 차이 보기  
 두 데이터베이스의 데이터를 비교한 후에는 데이터 비교에 사용자가 비교한 각 ‘데이터베이스 개체’ 및 해당 상태가 나열됩니다.  또한 상태별로 그룹화된 각 개체 내에서 레코드에 대한 결과를 볼 수도 있습니다. 상태 지정에 대한 자세한 내용은 [하나 이상의 테이블에 있는 데이터를 참조 데이터베이스에 있는 데이터와 비교 및 동기화](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)를 참조하세요.  
   
 차이를 확인한 후에는 서로 다르거나, 누락되었거나, 새로 추가된 개체 또는 레코드의 일부 또는 전체가 원본과 일치하도록 대상을 업데이트할 수 있습니다. 자세한 내용은 [데이터베이스 데이터 동기화](#Synchronize)를 참조하세요.  
@@ -102,7 +102,7 @@ ms.locfileid: "75241577"
   
     -   특정 개체 내의 레코드에 대한 결과를 보려면 기본 결과 창에서 개체를 클릭한 후 레코드 보기 창에서 탭을 클릭합니다. 각 탭에는 특정 상태(서로 다름, 원본에만 있음, 대상에만 있음 및 동일함)의 개체 내에 있는 모든 레코드가 표시됩니다. 데이터는 레코드 및 열을 기준으로 표시됩니다.  
   
-## <a name="Synchronize"></a>데이터베이스 데이터 동기화  
+## <a name="synchronizing-database-data"></a><a name="Synchronize"></a>데이터베이스 데이터 동기화  
 두 데이터베이스의 데이터를 비교한 후에는 원본과 일치하도록 대상의 전체 또는 일부를 업데이트하여 서로 동기화할 수 있습니다. 두 가지 유형의 데이터베이스 개체(테이블 및 뷰)의 데이터를 비교할 수 있습니다.  
   
 #### <a name="to-update-target-data-by-using-the-write-updates-command"></a>업데이트 쓰기 명령을 사용해서 대상 데이터를 업데이트하려면  

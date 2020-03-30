@@ -10,10 +10,10 @@ ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ce25cfe5d8d84926cb9bc993d075372e3a81d336
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245358"
 ---
 # <a name="control-row--column-headings-report-builder--ssrs"></a>행 및 열 머리글 제어(보고서 작성기 및 SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "75245358"
   
  행 그룹이나 열 그룹 영역이 있는 테이블릭스 데이터 영역의 경우 테이블릭스 데이터 영역의 속성을 설정하여 연결된 행과 열을 제어합니다. 그 밖의 경우에는 선택한 테이블릭스 멤버의 속성 창에서 속성을 설정하여 행과 열을 제어합니다. 단계별 지침은 [여러 페이지에 행 및 열 머리글 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md) 및 [보고서를 스크롤할 때 머리글 계속 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)를 참조하세요.  
   
-##  <a name="Top"></a> 예  
+##  <a name="examples"></a><a name="Top"></a> 예  
  테이블릭스 데이터 영역의 가장 일반적인 예는 행렬, 그룹이 없는 테이블, 행 그룹과 행 그룹 머리글이 있는 테이블, 행 그룹만 있고 행 그룹 머리글이 없는 테이블에 대한 것입니다. 머리글을 반복 또는 고정하는 방법을 제어하려면 제어하려는 행이나 열이 행 그룹 또는 열 그룹 영역에 있는 그룹 머리글과 연결이 있는지 확인해야 합니다.  
   
  다음 섹션에서는 테이블릭스 데이터 영역에 대한 일반 레이아웃의 예를 제공합니다.  
@@ -58,14 +58,14 @@ ms.locfileid: "75245358"
   
 -   [행 그룹만 있고 행 그룹 영역은 없는 테이블](#TableRowGroupsNoGroupHeader)  
   
-###  <a name="Matrix"></a> 행렬  
+###  <a name="matrix"></a><a name="Matrix"></a> 행렬  
  기본적으로 간단한 행렬에는 하나의 행 그룹과 하나의 열 그룹이 있습니다. 다음 그림에서는 범주를 기반으로 한 행 그룹과 지리를 기반으로 한 열 그룹으로 구성된 행렬을 보여 줍니다.  
   
  ![행렬, Category 행 및 Geography 열 그룹](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "행렬, Category 행 및 Geography 열 그룹")  
   
  점선은 4개의 테이블릭스 영역을 보여 줍니다. 행 그룹 영역에는 첫 번째 열의 범주 레이블을 제어하는 행 그룹 머리글이 있습니다. 마찬가지로, 열 그룹 영역에는 첫 번째 행의 지리 레이블을 제어하는 열 그룹 머리글이 있습니다. 미리 보기에서 행렬이 여러 페이지에 걸쳐 있으면 다음 그림과 같이 첫 번째 행에 열 머리글이 나타납니다.  
   
- ![확장 그룹이 있는 렌더링된 행렬의 미리 보기](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "확장 그룹이 있는 렌더링된 행렬의 미리 보기")  
+ ![확장 그룹이 있는 렌더링된 행렬 미리 보기](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "확장 그룹이 있는 렌더링된 행렬 미리 보기")  
   
  첫 번째 행의 열 머리글을 반복하거나 고정하려면 테이블릭스 데이터 영역의 열 머리글 속성을 설정합니다. 중첩된 열 그룹의 열 머리글은 자동으로 포함됩니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "75245358"
   
  [맨 위로 이동](#Top)  
   
-###  <a name="TableNoGroups"></a> 행 그룹이 없는 테이블  
+###  <a name="table-with-no-row-groups"></a><a name="TableNoGroups"></a> 행 그룹이 없는 테이블  
  기본적으로 그룹이 없는 간단한 테이블에는 세부 정보 그룹이 포함되어 있습니다. 다음 그림에서는 범주, 주문 번호 및 판매 데이터를 표시하는 테이블을 보여 줍니다.  
   
  ![디자인, 1개의 정적 행과 1개의 동적 행이 있는 테이블](../../reporting-services/report-design/media/rs-tableheaderstaticdesign.gif "디자인, 1개의 정적 행과 1개의 동적 행이 있는 테이블")  
@@ -94,7 +94,7 @@ ms.locfileid: "75245358"
   
  [맨 위로 이동](#Top)  
   
-###  <a name="TableRowGroupsGroupHeader"></a> 행 그룹과 행 그룹 영역이 있는 테이블  
+###  <a name="table-with-row-groups-and-a-row-group-area"></a><a name="TableRowGroupsGroupHeader"></a> 행 그룹과 행 그룹 영역이 있는 테이블  
  간단한 테이블에 행 그룹을 추가하면 디자인 화면에서 행 그룹 영역이 테이블에 추가됩니다. 다음 그림에서는 범주 기반의 행 그룹이 있는 테이블을 보여 줍니다.  
   
  ![디자인, 1개의 행 그룹과 세부 정보가 있는 테이블](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "디자인, 1개의 행 그룹과 세부 정보가 있는 테이블")  
@@ -111,11 +111,11 @@ ms.locfileid: "75245358"
   
  ![행 그룹, 정적 멤버로 구성된 고급 모드](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "행 그룹, 정적 멤버로 구성된 고급 모드")  
   
- 테이블릭스의 경우 멤버는 다음과 같습니다. **정적**, (**정적**), 범주 및 (**세부 정보**)가 나열됩니다. 괄호()가 포함된 테이블릭스 멤버는 해당 그룹 머리글이 없음을 나타냅니다. 열 머리글을 반복 또는 고정하려면 정적 테이블릭스 멤버를 선택하고 속성 창에서 속성을 설정합니다.  
+ **정적**, (**정적**), 범주 및 (**세부 정보**) 테이블릭스 멤버가 나열됩니다. 괄호()가 포함된 테이블릭스 멤버는 해당 그룹 머리글이 없음을 나타냅니다. 열 머리글을 반복 또는 고정하려면 정적 테이블릭스 멤버를 선택하고 속성 창에서 속성을 설정합니다.  
   
  [맨 위로 이동](#Top)  
   
-###  <a name="TableRowGroupsNoGroupHeader"></a> 행 그룹만 있고 행 그룹 영역이 없는 테이블  
+###  <a name="table-with-row-groups-and-no-row-group-area"></a><a name="TableRowGroupsNoGroupHeader"></a> 행 그룹만 있고 행 그룹 영역이 없는 테이블  
  여러 가지 방법으로 행 그룹만 포함하고 행 그룹 영역은 포함하지 않은 테이블을 만들 수 있습니다. 여기서는 두 가지 방법을 소개합니다.  
   
 -   행 그룹과 행 그룹 영역을 포함하는 테이블을 만든 다음 행 그룹 영역에 해당하는 열을 삭제합니다. 열만 삭제하고 그룹은 그대로 둡니다. 예를 들어 테이블 서식을 간단한 모눈으로 변경할 수 있습니다.  

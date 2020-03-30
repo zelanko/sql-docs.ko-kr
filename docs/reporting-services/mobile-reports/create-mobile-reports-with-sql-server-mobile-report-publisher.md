@@ -11,10 +11,10 @@ ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 51708fc41bb154fcf67ac3a21bd6680c69e2f2c2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63200546"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기
@@ -31,7 +31,7 @@ ms.locfileid: "63200546"
 * 조정 가능한 표 행/열이 표시된 디자인 화면에서 유동적인 모바일 보고서 요소를 사용하여 어떤 화면 크기에나 적합하도록 효율적으로 확장되는 모바일 보고서를 만듭니다. 
 * 그런 다음 Reporting Service 서버에 이러한 모바일 보고서를 저장하고, 브라우저 또는 iPad, iPhone, Android 휴대폰 및 태블릿 및 Windows 10 디바이스의 Power BI 모바일 앱에서 이를 보고 조작합니다.
   
-## <a name="create-includessrsnoversion_mdincludesssrsnoversion-mdmd--mobile-reports"></a>[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  모바일 보고서 만들기  
+## <a name="create-ssrsnoversion_md--mobile-reports"></a>[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  모바일 보고서 만들기  
   
 다음 문서는 시작하는 데 도움이 됩니다.
 -  [SQL Server 모바일 보고서 게시자](https://go.microsoft.com/fwlink/?LinkID=733527)다운로드  

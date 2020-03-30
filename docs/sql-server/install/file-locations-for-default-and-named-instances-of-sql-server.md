@@ -10,10 +10,10 @@ ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: da7f187cc388e08f4d1f0307ba6fae78c58e6489
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253477"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>SQL Server 기본 인스턴스 및 명명된 인스턴스의 파일 위치
@@ -28,7 +28,7 @@ ms.locfileid: "75253477"
 > [!IMPORTANT]  
 >  프로그램 파일 및 데이터 파일은 이동식 디스크 드라이브, 압축을 사용하는 파일 시스템, 시스템 파일이 있는 디렉터리 및 장애 조치(Failover) 클러스터 인스턴스에 있는 공유 드라이브에 설치할 수 없습니다.  
 >  
->  SQL Server 폴더 및 파일 형식을 제외하도록 바이러스 백신 및 스파이웨어 방지 애플리케이션과 같은 검색 소프트웨어를 구성해야 할 수도 있습니다. 자세한 내용은 다음 지원 문서를 검토하세요. [SQL Server를 실행하는 컴퓨터의 바이러스 백신 소프트웨어](https://support.microsoft.com/kb/309422).
+>  SQL Server 폴더 및 파일 형식을 제외하도록 바이러스 백신 및 스파이웨어 방지 애플리케이션과 같은 검색 소프트웨어를 구성해야 할 수도 있습니다. 자세한 내용은 [SQL Server를 실행하는 컴퓨터에서 바이러스 백신 소프트웨어](https://support.microsoft.com/kb/309422) 지원 문서를 검토하세요.
 > 
 >  시스템 데이터베이스(master, model, MSDB 및 tempdb)와 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 사용자 데이터베이스는 SMB(서버 메시지 블록) 파일 서버에 스토리지 옵션으로 설치될 수 있습니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 독립 실행형 설치와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FCI(장애 조치(Failover) 클러스터 설치) 모두에 적용됩니다. 자세한 내용은 [SMB fileshare 기능이 있는 SQL Server를 스토리지 옵션으로 설치](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)를 참조하세요.  
 >   
@@ -58,11 +58,11 @@ ms.locfileid: "75253477"
   
  이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 릴리스에서 사용되는 기본 인스턴스 ID의 예는 다음과 같습니다.  
   
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 기본 인스턴스인 경우 MSSQL\{nn}.MSSQLSERVER  
+-   \{의 기본 인스턴스인 경우 MSSQL[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nn}.MSSQLSERVER  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services의 기본 인스턴스인 경우 MSAS\{nn}.MSSQLSERVER  
+-   \{ Analysis Services의 기본 인스턴스인 경우 MSAS[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nn}.MSSQLSERVER  
   
--   "MyInstance"로 명명된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스인 경우 MSSQL\{nn}.MyInstance  
+-   "MyInstance"로 명명된 \{ 인스턴스인 경우 MSSQL[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nn}.MyInstance  
   
 
  "MyInstance"로 명명된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 과 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 를 포함하고 기본 디렉터리에 설치된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 명명된 인스턴스에 대한 디렉터리 구조는 다음과 같습니다.  

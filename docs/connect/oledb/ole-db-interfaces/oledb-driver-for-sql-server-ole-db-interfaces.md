@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 6cbe0bf465460fe1464b47deed461d05217595f6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994349"
 ---
 # <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>SQL Server용 OLE DB 드라이버(OLE DB) 인터페이스
@@ -27,7 +27,7 @@ ms.locfileid: "67994349"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server용 OLE DB 드라이버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 실행하는 하나 이상의 컴퓨터의 데이터에 액세스하려는 소비자에게 인터페이스를 공개합니다. OLE DB Driver for SQL Server는 OLE DB 버전 2.0 규격 공급자입니다.  
+  SQL Server용 OLE DB 드라이버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 실행하는 하나 이상의 컴퓨터의 데이터에 액세스하려는 소비자에게 인터페이스를 공개합니다. OLE DB Driver for SQL Server는 OLE DB 버전 2.0 호환 공급자입니다.  
   
  이 SQL Server용 OLE DB 드라이버 프로그래밍 참조에는 모든 OLE DB 인터페이스 및 메서드가 포함되어 있지는 않으며 SQL Server용 OLE DB 드라이버를 사용할 때 공급자별 동작을 지원하는 인터페이스 및 메서드만 포함합니다.  
   

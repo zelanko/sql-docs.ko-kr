@@ -19,10 +19,10 @@ ms.assetid: 37836b49-258e-45ce-9549-b8bd85d6952d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11da2b4eca130eafe93a01315aaa1f6d9919632c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015044"
 ---
 # <a name="sqlsrv_connect"></a>sqlsrv_connect
@@ -42,15 +42,15 @@ sqlsrv_connect( string $serverName [, array $connectionInfo])
   
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 3.0부터는 `"(localdb)\instancename"`을 사용하여 LocalDB 인스턴스를 지정할 수도 있습니다. 자세한 내용은 [LocalDB 지원](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)을 참조하세요.  
   
-또한 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 3.0부터 AlwaysOn 가용성 그룹에 연결하기 위해 가상 네트워크 이름을 지정할 수 있습니다. [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]에 대한 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 지원에 대한 자세한 내용은 [고가용성, 재해 복구 지원](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)을 참조하세요.  
+또한 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 3.0부터 AlwaysOn 가용성 그룹에 연결하기 위해 가상 네트워크 이름을 지정할 수 있습니다. [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에 대한 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] 지원에 대한 자세한 내용은 [고가용성, 재해 복구 지원](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)을 참조하세요.  
   
-*$connectionInfo* [선택 사항]: 연결 특성을 포함하는 결합형 **배열**(예: **배열**("Database" => "AdventureWorks"))입니다. 배열에 대해 지원되는 키 목록은 [Connection Options](../../connect/php/connection-options.md) 을 참조하세요.  
+*$connectionInfo* [선택 사항]: 연결 특성을 포함하는 결합형 **배열**(예: **배열**("Database"=> "AdventureWorks"))입니다. 배열에 대해 지원되는 키 목록은 [Connection Options](../../connect/php/connection-options.md) 을 참조하세요.  
   
 ## <a name="return-value"></a>Return Value  
 PHP 연결 리소스입니다. 연결을 만들 수 없고 열 수 없으면 **false** 가 반환됩니다.  
   
 ## <a name="remarks"></a>설명  
-*UID* 및 *PWD* 키에 대한 값이 선택적 *$connectionInfo* 매개 변수에 지정되지 않은 경우 Windows 인증을 사용하여 연결을 시도합니다. 서버에 연결하는 방법에 대한 자세한 내용은 [방법: Windows 인증을 사용하여 연결](../../connect/php/how-to-connect-using-windows-authentication.md) 및 [방법: SQL Server 인증을 사용하여 연결](../../connect/php/how-to-connect-using-sql-server-authentication.md)을 참조하세요.  
+*UID* 및 *PWD* 키에 대한 값이 선택적 *$connectionInfo* 매개 변수에 지정되지 않은 경우 Windows 인증을 사용하여 연결을 시도합니다. 서버에 연결하는 방법에 대한 자세한 내용은 [How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md) 및 [How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
 다음 예제에서는 Windows 인증을 사용하여 연결을 만들고 엽니다. 이 예제에서는 SQL Server 및 [AdventureWorks](https://www.codeplex.com/SqlServerSamples) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  

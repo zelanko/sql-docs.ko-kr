@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7129c5feb6bc23a7e72dddfa70a10d4d2bc0811c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67898601"
 ---
 # <a name="create-unique-indexes"></a>고유 인덱스 만들기
@@ -53,9 +53,9 @@ ms.locfileid: "67898601"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Benefits"></a> 고유 인덱스의 이점  
+###  <a name="benefits-of-a-unique-index"></a><a name="Benefits"></a> 고유 인덱스의 이점  
   
 -   여러 열로 구성된 고유 인덱스를 사용하면 인덱스 키의 각 값 조합이 고유해집니다. 예를 들어 **LastName**, **FirstName**및 **MiddleName** 열의 조합에 대해 고유 인덱스를 만들면 테이블에 있는 각 행에서 이러한 열의 값 조합이 모두 서로 다릅니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "67898601"
   
 -   고유 인덱스가 제공하는 유용한 추가 정보를 통해 쿼리 최적화 프로그램은 더 효율적인 실행 계획을 생성할 수 있습니다.  
   
-###  <a name="Implementations"></a> 일반적인 구현 방법  
+###  <a name="typical-implementations"></a><a name="Implementations"></a> 일반적인 구현 방법  
  고유 인덱스는 다음과 같은 방법으로 구현됩니다.  
   
 -   **PRIMARY KEY 또는 UNIQUE 제약 조건**  
@@ -86,18 +86,18 @@ ms.locfileid: "67898601"
   
      인덱싱된 뷰를 만들기 위해 하나 이상의 뷰 열에 고유 클러스터형 인덱스가 정의됩니다. 뷰가 실행되고 클러스터형 인덱스에 테이블 데이터가 저장되는 것과 동일한 방법으로 결과 집합이 인덱스의 리프 수준에 저장됩니다. 자세한 내용은 [인덱싱된 뷰 만들기](../../relational-databases/views/create-indexed-views.md)를 참조하세요.  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   데이터에 중복된 키 값이 있으면 고유 인덱스, UNIQUE 제약 조건 또는 PRIMARY KEY 제약 조건을 만들 수 없습니다.  
   
 -   고유 비클러스터형 인덱스에는 키가 아닌 포괄 열이 포함될 수 있습니다. 자세한 내용은 [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md)을 참조하세요.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-create-a-unique-index-by-using-the-table-designer"></a>테이블 디자이너를 사용하여 고유 인덱스를 만들려면  
   
@@ -151,7 +151,7 @@ ms.locfileid: "67898601"
   
 10. **새 인덱스** 대화 상자에서 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-create-a-unique-index-on-a-table"></a>테이블에 고유 인덱스를 만들려면  
   

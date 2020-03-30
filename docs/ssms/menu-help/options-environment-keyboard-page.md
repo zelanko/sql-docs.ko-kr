@@ -14,10 +14,10 @@ ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: dbe6eaed0482642e8200b26561e3b2bb473bfa9e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75255877"
 ---
 # <a name="options-environment---keyboard-page"></a>옵션(환경 - 키보드 페이지)

@@ -9,13 +9,13 @@ ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041187"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>자습서: 보고서에 가로 막대형 차트 추가(보고서 작성기)
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>자습서: 보고서에 막대형 차트 추가(보고서 작성기)
 이 자습서에서는 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)]의 마법사를 사용하여 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 가로 막대형 차트를 만듭니다. 그런 다음 필터를 추가하고 차트를 향상시킵니다. 
 
 가로 막대형 차트는 범주 데이터를 가로로 표시합니다. 이렇게 하면 다음 작업에 도움이 됩니다.  
@@ -30,14 +30,14 @@ ms.locfileid: "63041187"
   
  
 > [!NOTE]  
-> 이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고 데이터 세트를 만들고 데이터 원본을 선택하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 다음 자습서를 참조하세요. [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> 이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고, 데이터 세트를 만들고, 데이터 원본을 선택하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)을 참조하세요.  
   
-이 자습서에 소요되는 예상 시간: 15분.  
+이 자습서에 소요되는 예상 시간: 15분  
   
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
   
-## <a name="Chart"></a>1. 차트 마법사에서 차트 보고서 만들기  
+## <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1. 차트 마법사에서 차트 보고서 만들기  
 차트 마법사를 사용하여 포함된 데이터 세트를 만들고 공유 데이터 원본을 선택하고 가로 막대형 차트를 만듭니다.  
   
 > [!NOTE]  
@@ -87,13 +87,13 @@ ms.locfileid: "63041187"
   
 9. **다음**을 클릭합니다.  
   
-## <a name="ChartType"></a>2. 가로 막대형 차트 만들기  
+## <a name="2-create-a-bar-chart"></a><a name="ChartType"></a>2. 가로 막대형 차트 만들기  
  
 1.  **차트 종류 선택** 페이지에서 기본 차트 종류는 세로 막대형 차트입니다.  
   
 2.  **가로 막대형**을 클릭하고 **다음**을 클릭합니다.  
   
-    **차트 필드 정렬** 페이지의 **사용 가능한 필드** 창에는 FirstName, LastName, SalesYear2015 및 SalesYear2014 필드가 있습니다.  
+    **차트 필드 정렬** 페이지의 **사용 가능한 필드** 창에는 FirstName, LastName, SalesYear2015 및 SalesYear2014의 4개 필드가 있습니다.  
   
 3.  LastName을 범주 창으로 끌어 옵니다.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "63041187"
   
 가로 막대형 차트에는 각 영업 사원의 2014년과 2015년 판매량이 표시됩니다. 막대 길이는 총 판매량에 해당합니다.  
   
-## <a name="AllValues"></a>3. 세로 축의 모든 이름 표시  
+## <a name="3-display-all-the-names-on-the-vertical-axis"></a><a name="AllValues"></a>3. 세로 축의 모든 이름 표시  
 기본적으로 세로 축의 값 중 일부만 표시됩니다. 모든 범주를 표시하도록 차트를 변경할 수 있습니다.  
   
 1.  보고서 디자인 뷰로 전환합니다.  
@@ -129,7 +129,7 @@ ms.locfileid: "63041187"
 > [!NOTE]  
 > 세로 축에서 영업 사원의 이름을 읽을 수 없는 경우에는 차트를 늘리거나 축 레이블의 서식 옵션을 변경합니다.  
   
-### <a name="CategoryExpression"></a>세로 축에 성 및 이름 표시  
+### <a name="display-last-name-and-first-name-on-vertical-axis"></a><a name="CategoryExpression"></a>세로 축에 성 및 이름 표시  
 각 영업 사원의 성 다음에 이름이 오도록 범주 식을 변경할 수 있습니다.  
   
 1.  보고서 디자인 뷰로 전환합니다.  
@@ -155,7 +155,7 @@ ms.locfileid: "63041187"
 > [!NOTE]  
 > 세로 축에서 영업 사원의 이름을 읽을 수 없는 경우에는 차트를 늘리거나 축 레이블의 서식 옵션을 변경합니다.  
   
-## <a name="Sort"></a>4. 세로 축의 정렬 순서 변경  
+## <a name="4-change-the-sort-order-on-the-vertical-axis"></a><a name="Sort"></a>4. 세로 축의 정렬 순서 변경  
 차트에서 데이터를 정렬하면 범주 축에서 값 순서를 변경하게 됩니다.  
   
 1.  보고서 디자인 뷰로 전환합니다.  
@@ -176,7 +176,7 @@ ms.locfileid: "63041187"
   
 가로 축의 이름은 2015년 판매량이 가장 큰 값부터 가장 작은 값 순서로 정렬되며 **Zeng** 이 맨 위에 있습니다.  
   
-## <a name="Legend"></a>5. 범례 이동  
+## <a name="5-move-the-legend"></a><a name="Legend"></a>5. 범례 이동  
 차트 값을 더 쉽게 읽을 수 있도록 차트 범례를 이동할 수 있습니다. 예를 들어 막대가 가로로 표시되는 가로 막대형 차트에서는 범례가 차트 영역의 위나 아래에 표시되도록 범례 위치를 변경할 수 있습니다. 이렇게 하면 막대의 가로 공간을 늘릴 수 있습니다.  
   
 #### <a name="to-display-the-legend-below-the-chart-area-of-a-bar-chart"></a>가로 막대형 차트의 차트 영역 아래쪽에 범례를 표시하려면  
@@ -195,17 +195,17 @@ ms.locfileid: "63041187"
   
 6.  **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
-## <a name="ChartTitle"></a>6. 차트 제목 지정  
+## <a name="6-title-the-chart"></a><a name="ChartTitle"></a>6. 차트 제목 지정  
   
 1.  보고서 디자인 뷰로 전환합니다.  
   
-2.  차트 맨 위의 **차트 제목** 단어를 선택한 다음, **Sales for 2014 and 2015**를 입력합니다.  
+2.  차트 맨 위의 **차트 제목** 단어를 선택하고 **Sales for 2014 and 2015**를 입력합니다.  
   
 3.  속성 창에서 제목이 선택된 상태로 **색** 을 **검정** 으로, **FontSize** 를 **12pt**로 설정합니다. 
   
 4.  **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
-## <a name="Horizontal"></a>7. 가로 축의 서식 및 레이블 지정  
+## <a name="7-format-and-label-the-horizontal-axis"></a><a name="Horizontal"></a>7. 가로 축의 서식 및 레이블 지정  
 기본적으로 가로 축에는 차트 크기에 맞게 자동으로 늘어나는 일반 형식으로 값이 표시됩니다. 통화 형식으로 변경할 수 있습니다.  
    
 1.  보고서 디자인 뷰로 전환합니다.  
@@ -232,7 +232,7 @@ ms.locfileid: "63041187"
   
 판매액은 보고서 가로 축에 천 단위로 표시되며 소수 자릿수가 없습니다.  
   
-## <a name="Filter"></a>8. 상위 5개 값을 표시하는 필터 추가  
+## <a name="8-add-a-filter-to-display-the-top-five-values"></a><a name="Filter"></a>8. 상위 5개 값을 표시하는 필터 추가  
 차트에 필터를 추가하여 차트에 포함하거나 제외할 데이터 세트의 데이터를 지정할 수 있습니다.   
   
 1.  보고서 디자인 뷰로 전환합니다.  
@@ -261,7 +261,7 @@ ms.locfileid: "63041187"
   
 2015년도 매출 데이터에서 상위 5명에 속하는 영업 사원의 이름이 차트에 표시됩니다.  
   
-## <a name="Title"></a>9. 보고서 제목 추가  
+## <a name="9-add-a-report-title"></a><a name="Title"></a>9. 보고서 제목 추가  
   
 1.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.** 를 클릭합니다.  
   
@@ -281,7 +281,7 @@ ms.locfileid: "63041187"
   
 6.  **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
-## <a name="Save"></a>10. 보고서 저장  
+## <a name="10-save-the-report"></a><a name="Save"></a>10. 보고서 저장  
   
 1.  보고서 디자인 뷰로 전환합니다.  
   

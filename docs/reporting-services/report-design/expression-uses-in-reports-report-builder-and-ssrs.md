@@ -11,10 +11,10 @@ ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e781df6f5ccbdbb427de7e8b68c9dbc06522be71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080272"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>보고서에 사용되는 식(보고서 작성기 및 SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "77080272"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Simple"></a> 단순 식 사용  
+##  <a name="using-simple-expressions"></a><a name="Simple"></a> 단순 식 사용  
  단순 식은 대괄호로 묶여 디자인 화면 및 대화 상자에 나타납니다. 예를 들어 데이터 세트 필드가 `[ProductID]`로 나타납니다. 데이터 세트의 필드를 입력란으로 끌어 놓으면 단순 식이 자동으로 생성됩니다. 자리 표시자가 생성되고 식에서 기본 값을 정의합니다. 또한 디자인 화면 또는 대화 상자 모두에서 데이터 영역 셀 또는 입력란에 식을 직접 입력할 수 있습니다(예: `[ProductID]`).  
   
  다음 표에서는 단순 식을 사용하는 방법의 예가 나열됩니다. 표에서는 기능, 설정할 속성, 속성을 설정하는 데 일반적으로 사용하는 대화 상자, 속성 값에 대해 설명합니다. 모든 식과 마찬가지로 디자인 화면, 대화 상자 또는 속성 창에 단순 식을 직접 입력하거나 식 대화 상자에서 단순 식을 편집할 수 있습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "77080272"
 |쿼리 매개 변수를 보고서 매개 변수에 연결합니다.|데이터 세트의 매개 변수 컬렉션입니다. **데이터 세트 속성 대화 상자, 매개 변수**를 사용합니다.|`[@Category]`<br /><br /> `[@Category]`|  
 |주 보고서의 매개 변수를 하위 보고서로 전달합니다.|하위 보고서의 매개 변수 컬렉션입니다. **하위 보고서 속성 대화 상자, 매개 변수**를 사용합니다.|`[@Category]`<br /><br /> `[@Category]`|  
   
-##  <a name="Complex"></a> 복잡한 식 사용  
+##  <a name="using-complex-expressions"></a><a name="Complex"></a> 복잡한 식 사용  
  복잡한 식은 여러 개의 기본 제공 참조, 연산자 및 함수 호출을 포함하고 디자인 화면에 `<<Expr>>`로 나타날 수 있습니다. 식 텍스트를 보거나 변경하려면 **식** 대화 상자를 열거나 속성 창에 직접 입력해야 합니다. 다음 표에서는 복잡한 식을 사용하여 설정할 속성, 속성을 설정하는 데 일반적으로 사용하는 대화 상자, 속성 값을 비롯하여 데이터를 표시 또는 구성하거나 보고서 모양을 변경하는 일반적인 방법을 나열합니다. 식을 대화 상자, 디자인 화면 또는 속성 창에 직접 입력할 수 있습니다.  
   
 |기능|속성, 컨텍스트 및 대화 상자|속성 값|  

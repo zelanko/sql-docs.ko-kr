@@ -13,10 +13,10 @@ ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 9238bced3c9e0afe81a6eaaf7c9747c27ab4b3a9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245780"
 ---
 # <a name="open-with-new-file"></a>연결 프로그램(새 파일)

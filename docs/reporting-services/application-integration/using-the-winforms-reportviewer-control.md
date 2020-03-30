@@ -13,10 +13,10 @@ ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8ae42ea326af05bd715b9380b794384d6690fdb7
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198446"
 ---
 # <a name="use-the-winforms-reportviewer-control"></a>WinForms ReportViewer 컨트롤 사용
@@ -40,7 +40,7 @@ ms.locfileid: "79198446"
   
  컨트롤이 폼에 추가되면 **ReportViewer 태스크** 스마트 태그가 나타나 보고서를 선택하도록 알립니다.  
   
- 보려는 보고서가 보고서 서버에 배포된 경우 **보고서 선택** 드롭다운 목록에서 **\<서버 보고서>** 옵션을 선택합니다. **\<서버 보고서>** 옵션을 선택한 후에는 다음과 같은 두 가지 추가 속성이 표시됩니다. **보고서 서버 URL** 및 **보고서 경로**의 두 가지 속성이 추가로 나타납니다. **보고서 서버 URL**은 보고서 서버에 대한 주소이고 **보고서 경로**는 렌더링할 보고서의 전체 경로입니다.  
+ 보려는 보고서가 보고서 서버에 배포된 경우 **보고서 선택\< 드롭다운 목록에서** **서버 보고서>** 옵션을 선택합니다. **\<서버 보고서>** 옵션이 선택되면 **보고서 서버 URL** 및 **보고서 경로**의 두 가지 속성이 추가로 나타납니다. **보고서 서버 URL**은 보고서 서버에 대한 주소이고 **보고서 경로**는 렌더링할 보고서의 전체 경로입니다.  
   
  ![서버 보고서 선택](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "서버 보고서 선택")  
   

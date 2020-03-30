@@ -13,10 +13,10 @@ ms.assetid: 0a992ea8-3ec6-4a4d-97b5-460ae7326247
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 74b4e43ba9b973f83263ad36aabc859211926ef6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68013317"
 ---
 # <a name="access-check-cache-server-configuration-options"></a>access check cache 서버 구성 옵션

@@ -16,10 +16,10 @@ ms.assetid: 553c0603-c07d-436a-86eb-3ba6b51bd696
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 78b4d49029c6a0f2696cc93348bff7b32767bc13
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974834"
 ---
 # <a name="setcatalog-method-sqlserverconnection"></a>setCatalog 메서드(SQLServerConnection)

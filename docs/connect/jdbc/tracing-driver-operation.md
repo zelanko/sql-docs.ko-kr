@@ -11,10 +11,10 @@ ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18bfd63a8cf3255a62b6aef5c4c31573c60e76b0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027590"
 ---
 # <a name="tracing-driver-operation"></a>드라이버 작업 추적
@@ -59,7 +59,7 @@ ms.locfileid: "69027590"
 |WARNING|잠재적인 문제를 의미합니다.|  
 |INFO|정보 메시지를 제공합니다.|  
 |FINE|기본 개체 생성 및 소멸을 포함한 추적 정보를 제공합니다. 또한 공용 메서드에서 발생한 모든 예외에 대한 정보도 제공합니다.|  
-|FINER|모든 공용 메서드 진입점 및 진출점과 관련 매개 변수 데이터 형식 및 공용 클래스의 모든 공용 속성을 포함하는 자세한 추적 정보를 제공합니다. 또한 입력 매개 변수, 출력 매개 변수 및 CLOB, BLOB, NCLOB, Reader, \<stream> 반환 값 형식을 제외한 메서드 반환 값을 제공합니다.<br /><br /> JDBC 드라이버 버전 1.2에 포함된 로깅 범주 중 로깅 수준이 FINE인 범주는 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md), [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), XA, [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)입니다. 이 범주들은 버전 2.0 릴리스에서부터 FINER 수준으로 업그레이드되었습니다.|  
+|FINER|모든 공용 메서드 진입점 및 진출점과 관련 매개 변수 데이터 형식 및 공용 클래스의 모든 공용 속성을 포함하는 자세한 추적 정보를 제공합니다. 또한 입력 매개 변수, 출력 매개 변수 및 CLOB, BLOB, NCLOB, Reader, \<stream> 반환 값 형식을 제외한 메서드 반환 값을 제공합니다.<br /><br /> JDBC 드라이버 버전 1.2에 포함된 로깅 범주 중 로깅 수준이 FINE인 범주는 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md), [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), XA 및 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)입니다. 이 범주들은 버전 2.0 릴리스에서부터 FINER 수준으로 업그레이드되었습니다.|  
 |FINEST|매우 자세한 추적 정보를 제공합니다. 이 수준은 가장 낮은 로깅 수준입니다.<br /><br /> JDBC 드라이버 버전 1.2에 포함된 로깅 범주 중 로깅 수준이 FINEST인 범주는 TDS.DATA 및 TDS.TOKEN입니다. 버전 2.0 릴리스에서부터 FINEST 로깅 수준이 유지됩니다.|  
 |OFF|로깅을 해제합니다.|  
 |ALL|모든 메시지의 로깅을 활성화합니다.|  
@@ -132,7 +132,7 @@ logger.setLevel(Level.OFF);
 ```  
   
 ## <a name="enabling-tracing-by-using-the-loggingproperties-file"></a>Logging.Properties 파일을 사용하여 추적 활성화  
- JRE(Java Runtime Environment) 설치의 `lib` 디렉터리에 있는 `logging.properties` 파일을 사용하여 추적을 활성화하는 방법도 있습니다. 이 파일은 추적 기능을 활성화할 때 사용할 로거 및 처리기의 기본 값을 설정하는 데 사용할 수 있습니다.  
+ JRE(Java Runtime Environment) 설치의 `logging.properties` 디렉터리에 있는 `lib` 파일을 사용하여 추적을 활성화하는 방법도 있습니다. 이 파일은 추적 기능을 활성화할 때 사용할 로거 및 처리기의 기본 값을 설정하는 데 사용할 수 있습니다.  
   
  다음은 `logging.properties` 파일에서 설정할 수 있는 예입니다.  
   

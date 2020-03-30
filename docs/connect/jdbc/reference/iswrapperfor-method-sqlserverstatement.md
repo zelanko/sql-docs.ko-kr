@@ -11,10 +11,10 @@ ms.assetid: 53f3291f-d43a-476b-a656-d86168dacf6c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c35cad678ce4f9b6008b656302d4767bad9b1244
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977063"
 ---
 # <a name="iswrapperfor-method-sqlserverstatement"></a>isWrapperFor 메서드(SQLServerStatement)
@@ -47,7 +47,7 @@ public boolean isWrapperFor(Class iface)
   
  예제 코드는 [대규모 데이터 업데이트 샘플](../../../connect/jdbc/updating-large-data-sample.md)을 참조하세요.  
   
- 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조하세요.  
+ 자세한 내용은 [래퍼와 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [unwrap 메서드&#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)   

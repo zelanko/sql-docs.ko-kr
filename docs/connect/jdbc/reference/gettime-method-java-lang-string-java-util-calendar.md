@@ -16,10 +16,10 @@ ms.assetid: 3d4c67c2-a3c8-4a26-a159-89c5d63fda0b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c6b8f6239fbc229af009fc9745b0f19ed27e7ee1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979056"
 ---
 # <a name="gettime-method-javalangstring-javautilcalendar"></a>getTime 메서드(java.lang.String, java.util.Calendar)
@@ -53,7 +53,7 @@ public java.sql.Time getTime(java.lang.String sCol,
 ## <a name="remarks"></a>설명  
  이 getTime 메서드는 java.sql.CallableStatement 인터페이스의 getTime 메서드에 의해 지정됩니다.  
   
- 이 메서드를 사용하여 검색할 수 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식을 보려면 [데이터 형식 변환 이해](../../../connect/jdbc/understanding-data-type-conversions.md)의 “Getter 메서드 변환”이라는 차트를 참조하세요.  
+ 이 메서드를 사용하여 검색할 수 있는 [ 데이터 형식을 보려면 ](../../../connect/jdbc/understanding-data-type-conversions.md)데이터 형식 변환 이해[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 “Getter 메서드 변환”이라는 차트를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [getTime 메서드&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

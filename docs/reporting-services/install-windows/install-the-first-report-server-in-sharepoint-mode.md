@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: af1ceea86c3e91cb11c393f585c2906f50f039c1
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286177"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>SharePoint 모드에서 첫 번째 보고서 서버 설치
@@ -31,7 +31,7 @@ ms.locfileid: "79286177"
   
  단일 서버 설치는 개발 및 테스트 시나리오에 유용하지만 프로덕션 환경에서는 권장되지 않습니다.  
   
-##  <a name="bkmk_singleserver"></a> 단일 서버 배포 예
+##  <a name="example-single-server-deployment"></a><a name="bkmk_singleserver"></a> 단일 서버 배포 예
 
  단일 서버 설치는 개발 및 테스트 시나리오에 유용하지만 프로덕션 환경에서 단일 서버는 권장되지 않습니다. 단일 서버 환경은 같은 컴퓨터에 SharePoint 및 Reporting Services 구성 요소가 설치된 단일 컴퓨터를 의미합니다. 이 항목에서는 Reporting Services 서버가 여러 대인 확장을 다루지 않습니다.  
   
@@ -52,13 +52,13 @@ ms.locfileid: "79286177"
 > [!TIP]  
 >  더 복잡한 배포 예제는 [SharePoint의 SQL Server BI 기능에 대한 배포 토폴로지](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)를 참조하세요.  
   
-##  <a name="bkmk_setupaccounts"></a> 설치 계정
+##  <a name="setup-accounts"></a><a name="bkmk_setupaccounts"></a> 설치 계정
 
  이 세션에서는 SharePoint 모드에서 Reporting Services의 기본 배포 단계에 사용된 계정 및 권한에 대해 설명합니다.  
   
  **Reporting Services 서비스의 설치 및 등록:**  
   
--   SharePoint 모드에서 Reporting Services를 설치하는 동안 현재 계정('설치' 계정이라고도 함)에는 로컬 컴퓨터에 대한 관리 권한이 필요합니다. SharePoint가 설치된 후 Reporting Services를 설치하고 '설치' 계정이 또한 SharePoint 팜 관리자 그룹의 멤버인 경우 Reporting Services 설치 시 Reporting Services 서비스를 등록합니다. SharePoint가 설치되기 전에 Reporting Services를 설치하거나 '설치' 계정이 팜 관리자 그룹의 멤버가 아닌 경우 수동으로 서비스를 등록해야 합니다. [2단계: Reporting Services SharePoint 서비스 등록 및 시작](#bkmk_install_SSRS_sharedservice)을 참조하세요.  
+-   SharePoint 모드에서 Reporting Services를 설치하는 동안 현재 계정('설치' 계정이라고도 함)에는 로컬 컴퓨터에 대한 관리 권한이 필요합니다. SharePoint가 설치된 후 Reporting Services를 설치하고 '설치' 계정이 또한 SharePoint 팜 관리자 그룹의 멤버인 경우 Reporting Services 설치 시 Reporting Services 서비스를 등록합니다. SharePoint가 설치되기 전에 Reporting Services를 설치하거나 '설치' 계정이 팜 관리자 그룹의 멤버가 아닌 경우 수동으로 서비스를 등록해야 합니다. [2단계: Reporting Services SharePoint 서비스 등록 및 시작](#bkmk_install_SSRS_sharedservice)섹션을 참조하세요.  
   
  **Reporting Services 서비스 애플리케이션 만들기**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "79286177"
   
      SharePoint 팜 관리자 계정이 또한 로컬 운영 체제 관리자 계정이 아닌 것이 가장 좋은 보안 방법입니다. 설치 프로세스의 일부로 로컬 관리자 그룹에 팜 관리자 계정을 추가하는 경우 설치가 완료된 후 로컬 관리자 그룹에서 계정을 제거하는 것이 좋습니다.  
   
-##  <a name="bkmk_install_SSRS"></a> 1단계: SharePoint 모드에서 Reporting Services 보고서 서버 설치
+##  <a name="step-1-install-reporting-services-report-server-in-sharepoint-mode"></a><a name="bkmk_install_SSRS"></a> 1단계: SharePoint 모드에서 Reporting Services 보고서 서버 설치
 
  이 단계는 SharePoint 모드의 Reporting Services 보고서 서버 및 SharePoint 제품용 Reporting Services 추가 기능을 설치합니다. 컴퓨터에 이미 설치된 기능에 따라 다음 단계에 설명된 설치 페이지 중 일부가 표시되지 않을 수 있습니다.  
  
@@ -163,7 +163,7 @@ ms.locfileid: "79286177"
   
 15. 설치하는 데 몇 분 정도 걸립니다. 기능 목록 및 각 기능의 상태가 표시된 **완료** 페이지가 나타납니다. 컴퓨터를 다시 시작해야 함을 나타내는 정보 대화 상자가 표시될 수 있습니다.  
   
-##  <a name="bkmk_install_SSRS_sharedservice"></a> 2단계: Reporting Services SharePoint 서비스 등록 및 시작  
+##  <a name="step-2-register-and-start-the-reporting-services-sharepoint-service"></a><a name="bkmk_install_SSRS_sharedservice"></a> 2단계: Reporting Services SharePoint 서비스 등록 및 시작  
  ![PowerShell 관련 콘텐츠](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")  
   
 > [!NOTE]
@@ -209,7 +209,7 @@ ms.locfileid: "79286177"
     > [!IMPORTANT]
     > 다음과 유사한 오류 메시지가 표시되는 경우  
     >   
-    >     Install-SPRSService: 'Install-SPRSService' 용어는 cmdlet, 함수, 스크립트 파일 또는 실행 프로그램의 이름으로 **인식되지 않습니다**. 이름의 철자를 확인하거나 경로가 포함되어 있으면 경로가 올바른지 확인하고 다시 시도합니다.  
+    >     Install-SPRSService : 'Install-SPRSService' 용어는 cmdlet, 함수, 스크립트 파일 또는 실행 프로그램의 이름으로 **인식되지 않습니다**. 이름의 철자를 확인하거나 경로가 포함되어 있으면 경로가 올바른지 확인하고 다시 시도합니다.  
     >
     > SharePoint 관리 셸 대신 Windows PowerShell에 있거나 Reporting Services SharePoint 모드가 설치되어 있지 않습니다. Reporting Services 및 PowerShell에 대한 자세한 내용은 [Reporting Services SharePoint 모드용 PowerShell cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)을 참조하세요.  
   
@@ -224,7 +224,7 @@ ms.locfileid: "79286177"
     > [!NOTE]  
     >  Reporting Services 서비스가 **시작 중** 상태를 유지하고 **시작됨**으로 변경되지 않을 경우 'SharePoint 2013 관리' 서비스가 Windows Server Manager에서 시작되었는지 확인합니다.  
   
-##  <a name="bkmk_create_serrviceapplication"></a> 3단계: Reporting Services 서비스 애플리케이션 만들기  
+##  <a name="step-3-create-a-reporting-services-service-application"></a><a name="bkmk_create_serrviceapplication"></a> 3단계: Reporting Services 서비스 애플리케이션 만들기  
  이 섹션에서는 서비스 애플리케이션을 만드는 단계와 속성에 대한 설명(기존 서비스 애플리케이션을 검토하려는 경우)을 제공합니다.  
   
 1.  SharePoint 중앙 관리의 **애플리케이션 관리** 그룹에서 **서비스 애플리케이션 관리**를 선택합니다.  
@@ -260,7 +260,7 @@ ms.locfileid: "79286177"
   
 -   항목 [PowerShell을 사용하여 Reporting Services 서비스 애플리케이션을 만들려면](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)  
 
-##  <a name="bkmk_powerview"></a> 4단계: 파워 뷰 사이트 모음 기능 활성화
+##  <a name="step-4-activate-the-power-view-site-collection-feature"></a><a name="bkmk_powerview"></a> 4단계: 파워 뷰 사이트 모음 기능 활성화
 
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 제품용 SQL Server 2016 Reporting Services 추가 기능으로, 사이트 모음 기능입니다. 이 기능은 루트 사이트 모음과 Reporting Services 추가 기능이 설치된 후에 생성된 사이트 모음에 대해 자동으로 활성화됩니다. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]를 사용하려면 기능이 활성화되어 있는지 확인합니다.  
   
@@ -284,7 +284,7 @@ ms.locfileid: "79286177"
   
  이 절차는 사이트 모음별로 완료됩니다. 자세한 내용은 [SharePoint에서 보고서 서버 및 파워 뷰 통합 사이트 모음 기능 활성화](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)를 참조하세요.  
   
-##  <a name="bkmk_full_script"></a> 1-4단계를 위한 Windows PowerShell 스크립트  
+##  <a name="windows-powershell-script-for-steps-1-4"></a><a name="bkmk_full_script"></a> 1-4단계를 위한 Windows PowerShell 스크립트  
  이 섹션의 PowerShells 스크립트는 이전 섹션의 1~4단계를 완료하는 것과 동일합니다. 이 스크립트는 다음 작업을 완료합니다.  
   
 -   Reporting Services 서비스 및 서비스 프록시를 설치하고 서비스를 시작합니다.  
@@ -383,10 +383,10 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
   
 ```  
   
-##  <a name="bkmk_additional_config"></a> 기타 고려 사항  
+##  <a name="additional-configuration"></a><a name="bkmk_additional_config"></a> 기타 고려 사항  
  이 섹션에서는 대부분의 SharePoint 배포에서 중요한 추가 구성 단계에 대해 설명합니다.  
   
-###  <a name="bkmk_configure_ECS"></a> Excel Services 및 Power Pivot 구성  
+###  <a name="configure-excel-services-and-power-pivot"></a><a name="bkmk_configure_ECS"></a> Excel Services 및 Power Pivot 구성  
  SharePoint의 Excel 2016 또는 Excel 2013 통합 문서에서 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 파워 뷰 보고서를 보려는 경우 Excel Services를 파워 피벗 모드의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버를 사용하도록 구성해야 합니다. 
  
  SharePoint 2016의 경우 Excel Services를 사용하려면 [Office Online Server](https://technet.microsoft.com/library/jj219456\(v=office.16\).aspx) 를 구성해야 합니다. 자세한 내용은 다음 백서를 참조하세요.
@@ -403,7 +403,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
 
 또한, Reporting Services 서비스 애플리케이션에서 사용하는 애플리케이션 풀 보안 계정은 Analysis Services 서버에서 관리자여야 합니다.
   
-###  <a name="bkmk_provision_agent"></a> 구독 및 경고 프로비전  
+###  <a name="provision-subscriptions-and-alerts"></a><a name="bkmk_provision_agent"></a> 구독 및 경고 프로비전  
  Reporting Services 구독 및 데이터 경고 기능을 사용하려면 SQL Server 에이전트 권한 구성이 필요할 수 있습니다. SQL Server 에이전트가 필요하고 SQL Server 에이전트 실행 확인을 나타내는 오류 메시지가 표시되는 경우 사용 권한을 업데이트합니다. 서비스 애플리케이션 만들기 성공 페이지에서 **구독 및 경고 프로비전** 링크를 클릭하여 SQL Server 에이전트를 프로비전할 다른 페이지로 이동할 수 있습니다. 예를 들어 SQL Server 데이터베이스 인스턴스가 다른 컴퓨터에 있는 경우와 같이 여러 컴퓨터 경계를 이동하며 배포하는 경우 프로비전 단계가 필요합니다. 자세한 내용은 [SSRS 서비스 애플리케이션에 대한 구독 및 경고 프로비전](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
   
 ### <a name="configure-e-mail-for-ssrs-service-applications"></a>SSRS 서비스 애플리케이션에 대한 전자 메일 구성  
@@ -415,7 +415,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
 ### <a name="activate-the-report-server-file-sync-feature"></a>보고서 서버 파일 동기화 기능 활성화  
  사용자가 게시된 보고서 항목을 SharePoint 문서 라이브러리에 직접 자주 업로드하는 경우 **보고서 서버 파일 동기화** 사이트 수준 기능이 유용합니다. 파일 동기화 기능은 보고서 서버 카탈로그를 문서 라이브러리의 항목과 자주 동기화합니다. 자세한 내용은 [SharePoint 중앙 관리에서 보고서 서버 파일 동기화 기능을 활성화](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)을 참조하세요.  
   
-##  <a name="bkmk_verify_installation"></a> 설치 확인  
+##  <a name="verify-the-installation"></a><a name="bkmk_verify_installation"></a> 설치 확인  
  다음은 Reporting Services SharePoint 모드 배포를 확인하기 위해 권장되는 단계 및 절차입니다.  
   
 -   확인 항목 [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)에서 SharePoint 섹션을 참조하세요.  

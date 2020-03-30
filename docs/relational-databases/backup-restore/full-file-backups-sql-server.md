@@ -20,10 +20,10 @@ ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1d70bf0d8e99d24ee0d7ea9e046090ba4ed32453
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67939619"
 ---
 # <a name="full-file-backups-sql-server"></a>전체 파일 백업(SQL Server)
@@ -49,7 +49,7 @@ ms.locfileid: "67939619"
   
 -   [관련 작업](#RelatedTasks)  
   
-##  <a name="Benefits"></a> 파일 백업의 이점  
+##  <a name="benefits-of-file-backups"></a><a name="Benefits"></a> 파일 백업의 이점  
  파일 백업은 데이터베이스 백업에 비해 다음과 같은 장점이 있습니다.  
   
 -   파일 백업을 사용하면 데이터베이스의 나머지 부분을 복원하지 않고 손상된 파일만 복원할 수 있으므로 복구 속도를 높일 수 있습니다.  
@@ -58,13 +58,13 @@ ms.locfileid: "67939619"
   
 -   파일 백업은 초대형 데이터베이스의 경우 관리가 힘든 전체 데이터베이스 백업에 비해 일정 예약 및 미디어 처리의 유연성이 뛰어납니다. 파일 또는 파일 그룹 백업의 뛰어난 유연성은 다양한 업데이트 특성을 가진 데이터가 포함된 대형 데이터베이스에도 유용합니다.  
   
-##  <a name="Disadvantages"></a> 파일 백업의 단점  
+##  <a name="disadvantages-of-file-backups"></a><a name="Disadvantages"></a> 파일 백업의 단점  
   
 -   전체 데이터베이스 백업과 비교하여 파일 백업의 주요 단점은 관리가 더 복잡하다는 점입니다. 이렇게 전체 백업을 유지 관리하고 추적하는 태스크는 많은 시간이 소모되므로 전체 데이터베이스 백업의 공간 요구 사항 문제보다 더욱 부담이 될 수 있습니다.  
   
 -   미디어 실패가 발생했을 때 손상된 파일이 백업되지 않은 경우 전체 데이터베이스를 복구하지 못할 수도 있습니다. 따라서 완전한 파일 백업 세트를 유지 관리해야 하며 전체 복구 모델 및 대량 로그 복구 모델의 경우 첫 번째 전체 파일 백업과 마지막 전체 파일 백업 사이의 최소 간격을 포함하는 하나 이상의 로그 백업을 유지 관리해야 합니다.  
   
-##  <a name="Overview"></a> 파일 백업 개요  
+##  <a name="overview-of-file-backups"></a><a name="Overview"></a> 파일 백업 개요  
  전체 파일 백업은 하나 이상의 파일 또는 파일 그룹에 있는 모든 데이터를 백업합니다. 기본적으로 파일 백업은 충분한 로그 레코드를 포함하여 백업 작업의 끝으로 파일을 롤포워드합니다.  
   
  읽기 전용 파일이나 파일 그룹 백업은 모든 복구 모델에 대해 동일합니다. 전체 복구 모델에서 완전한 전체 파일 백업 세트를 모든 파일 백업을 포함하기에 충분한 로그 백업과 함께 사용하는 것은 전체 데이터베이스 백업을 수행하는 것과 같습니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "67939619"
 > [!NOTE]  
 >  전체 복구 모델에서는 파일이 나머지 데이터베이스와 일치하도록 읽기/쓰기 파일 백업을 복원할 때 트랜잭션 로그를 롤포워드해야 합니다. 여러 트랜잭션 로그 백업을 롤포워드하지 않으려면 차등 파일 백업을 사용하세요. 자세한 내용은 [차등 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **파일 또는 파일 그룹 백업을 만들려면**  
   
 -   [파일 및 파일 그룹 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)  

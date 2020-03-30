@@ -11,10 +11,10 @@ ms.assetid: d70f502f-f60f-436a-83e6-797a0ed71bf3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a47b7ea56873b0b502ba39a91e4d1ba30044e993
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953250"
 ---
 # <a name="getcharacterstream-method-long-long"></a>getCharacterStream 메서드(long, long)

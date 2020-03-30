@@ -11,10 +11,10 @@ ms.assetid: 9373de68-fd43-45f2-b9a6-149c96610aeb
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: c884fc97632860bff36a05e3340e6925871ff7e8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75557932"
 ---
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>SQL Server PowerShell 공급자에 인스턴스 지정
@@ -45,14 +45,14 @@ SQLSERVER:\SQL\MyComputer\MyInstance
   
  각 컴퓨터는 기본 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스를 한 개 가질 수 있습니다. 기본 인스턴스는 설치할 때 이름을 지정하지 마세요. 연결 문자열에 컴퓨터 이름만 지정하면 해당 컴퓨터의 기본 인스턴스로 연결됩니다. 컴퓨터의 다른 모든 인스턴스는 명명된 인스턴스여야 합니다. 인스턴스 이름은 설치 시 지정하고, 연결 문자열에는 컴퓨터 이름과 인스턴스 이름을 모두 지정해야 합니다.  
   
-###  <a name="LimitationsRestrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 제한 사항  
  PowerShell 스크립트에서 마침표(.)를 사용하여 로컬 컴퓨터를 지정할 수 없습니다. 마침표는 PowerShell에서 명령으로 해석되기 때문에 지원되지 않습니다.  
   
  (local)의 괄호 문자는 일반적으로 Windows PowerShell에서 명령으로 처리됩니다. 따라서 경로에 사용할 수 있도록 괄호 문자를 인코딩 또는 이스케이프하거나, 경로를 큰따옴표로 묶어야 합니다. 자세한 내용은 SQL Server 식별자 인코딩 및 디코딩을 참조하세요.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자는 항상 인스턴스 이름을 지정하도록 요청합니다. 기본 인스턴스의 인스턴스 이름은 DEFAULT로 지정해야 합니다.  
   
-##  <a name="Examples"></a> 예: 컴퓨터 및 인스턴스 이름  
+##  <a name="examples-computer-and-instance-names"></a><a name="Examples"></a> 예: 컴퓨터 및 인스턴스 이름  
  이 예에서는 localhost 및 DEFAULT를 사용하여 로컬 컴퓨터의 기본 인스턴스를 지정합니다.  
   
 ```  

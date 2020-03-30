@@ -9,10 +9,10 @@ ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63043045"
 ---
 # <a name="tutorial-format-text-report-builder"></a>자습서: 텍스트 서식 지정(보고서 작성기)
@@ -30,7 +30,7 @@ ms.locfileid: "63043045"
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
   
-## <a name="CreateReport"></a>빈 보고서와 함께 데이터 원본 및 데이터 세트 만들기  
+## <a name="create-a-blank-report-with-a-data-source-and-dataset"></a><a name="CreateReport"></a>빈 보고서와 함께 데이터 원본 및 데이터 세트 만들기  
   
 ### <a name="to-create-a-blank-report"></a>빈 보고서를 만들려면  
   
@@ -119,7 +119,7 @@ ms.locfileid: "63043045"
 
 9.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="AddField"></a>보고서 디자인 화면에 필드 추가  
+## <a name="add-a-field-to-the-report-design-surface"></a><a name="AddField"></a>보고서 디자인 화면에 필드 추가  
 데이터 세트의 필드가 보고서에 나타나도록 하려는 경우 먼저 해당 필드를 디자인 화면으로 직접 끌 수 있습니다. 이 연습에서는 이러한 방법이 올바르지 않은 이유와 대신 사용할 수 있는 방법을 보여 줍니다.  
   
 ### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>보고서에 필드를 추가하려면(잘못된 결과)  
@@ -174,7 +174,7 @@ ms.locfileid: "63043045"
   
 7.  목록 상자를 선택하고 Delete 키를 누릅니다.  
   
-## <a name="AddTable"></a>보고서 디자인 화면에 테이블 추가  
+## <a name="add-a-table-to-the-report-design-surface"></a><a name="AddTable"></a>보고서 디자인 화면에 테이블 추가  
 하이퍼링크와 회전된 텍스트를 배치할 수 있도록 테이블을 만듭니다.   
   
 1.  **삽입** 탭 > **테이블** > **테이블 마법사**를 클릭합니다.  
@@ -209,7 +209,7 @@ ms.locfileid: "63043045"
     
     ![report-builder-format-one-total](../reporting-services/media/report-builder-format-one-total.png)
   
-## <a name="AddHyperlink"></a>보고서에 하이퍼링크 추가  
+## <a name="add-a-hyperlink-to-the-report"></a><a name="AddHyperlink"></a>보고서에 하이퍼링크 추가  
 이 섹션에서는 이전 섹션의 테이블에 있는 텍스트에 하이퍼링크를 추가합니다.  
   
 1.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
@@ -234,7 +234,7 @@ ms.locfileid: "63043045"
   
 10. 링크를 클릭합니다. 컴퓨터가 인터넷에 연결되어 있으면 보고서 작성기 도움말 항목이 브라우저에서 열립니다.  
   
-## <a name="RotateText"></a>보고서의 텍스트 회전  
+## <a name="rotate-text-in-the-report"></a><a name="RotateText"></a>보고서의 텍스트 회전  
 이 섹션에서는 이전 섹션의 테이블에 있는 텍스트 일부를 회전합니다.  
  
 1.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
@@ -260,7 +260,7 @@ ms.locfileid: "63043045"
 
 ![report-builder-format-rotate-270](../reporting-services/media/report-builder-format-rotate-270.png)
 
-## <a name="FormatCurrency"></a>통화 서식 지정  
+## <a name="format-currency"></a><a name="FormatCurrency"></a>통화 서식 지정  
   
 1.  **디자인** 을 클릭하여 디자인 뷰로 전환합니다.  
   
@@ -280,7 +280,7 @@ ms.locfileid: "63043045"
 
 ![report-build-format-report](../reporting-services/media/report-build-format-report.png)
     
-## <a name="FormatHTML"></a>HTML 서식을 사용하여 텍스트 표시  
+## <a name="displaying-text-with-html-formatting"></a><a name="FormatHTML"></a>HTML 서식을 사용하여 텍스트 표시  
   
 1.  **디자인** 을 클릭하여 디자인 뷰로 전환합니다.  
   
@@ -322,7 +322,7 @@ ms.locfileid: "63043045"
   
 ![report-builder-format-html](../reporting-services/media/report-builder-format-html.png)
 
-## <a name="Save"></a>보고서 저장  
+## <a name="save-the-report"></a><a name="Save"></a>보고서 저장  
 보고서를 보고서 서버, SharePoint 라이브러리 또는 컴퓨터에 저장할 수 있습니다.  
   
 이 자습서에서는 보고서를 보고서 서버에 저장합니다. 보고서 서버에 액세스할 수 없는 경우에는 보고서를 컴퓨터에 저장하십시오.  

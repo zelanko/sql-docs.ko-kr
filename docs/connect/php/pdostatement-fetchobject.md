@@ -11,10 +11,10 @@ ms.assetid: 71ad1932-cab3-4c29-8950-f5e82547d3b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 118a473e3e1675b81b732eb76f0271bbbe9d2e15
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936018"
 ---
 # <a name="pdostatementfetchobject"></a>PDOStatement::fetchObject

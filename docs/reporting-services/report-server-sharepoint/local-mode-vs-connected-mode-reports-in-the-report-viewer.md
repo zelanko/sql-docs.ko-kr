@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: be9653d66ef541ebf27cb31c8092b79c2e1bf612
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65579873"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>보고서 뷰어의 로컬 모드와 연결된 모드
@@ -21,7 +21,7 @@ ms.locfileid: "65579873"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서는 *로컬 모드* 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버를 사용하는 *연결된 모드*로 구성할 수 있습니다. 데이터 확장 프로그램에서 로컬 모드 보고를 지원하는 경우 이제 보고서 뷰어를 사용하여 SharePoint에서 직접 보고서를 렌더링할 수 있습니다. 이 방법을 *로컬 모드*라고 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 이전 버전에서는 보고서 뷰어 컨트롤로 보고서를 렌더링하려면 SharePoint 팜을 사용하여 SharePoint 모드로 구성된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 연결해야 했습니다. 이 방법을 *원격 모드* 또는 *연결된 모드*라고 합니다.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서는 *로컬 모드* 또는 *보고서 서버를 사용하는*연결된 모드[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]로 구성할 수 있습니다. 데이터 확장 프로그램에서 로컬 모드 보고를 지원하는 경우 이제 보고서 뷰어를 사용하여 SharePoint에서 직접 보고서를 렌더링할 수 있습니다. 이 방법을 *로컬 모드*라고 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 이전 버전에서는 보고서 뷰어 컨트롤로 보고서를 렌더링하려면 SharePoint 팜을 사용하여 SharePoint 모드로 구성된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 연결해야 했습니다. 이 방법을 *원격 모드* 또는 *연결된 모드*라고 합니다.  
 
 > [!NOTE]
 > SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.

@@ -14,10 +14,10 @@ ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bf355678b3219fb0bf32ecd1620c00b0e58f346f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75230219"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>역할 전환 후 로그인 및 작업 관리(SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "75230219"
   
  사용자가 분리된 경우 새 주 서버 인스턴스에서 로그인을 만들고 [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md)을 실행합니다. 자세한 내용은 [분리된 사용자 문제 해결&#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)을 실행합니다.  
   
-###  <a name="SSauthentication"></a> SQL Server 인증 또는 로컬 Windows 로그인을 사용하는 애플리케이션의 로그인  
+###  <a name="logins-of-applications-that-use-sql-server-authentication-or-a-local-windows-login"></a><a name="SSauthentication"></a> SQL Server 인증 또는 로컬 Windows 로그인을 사용하는 애플리케이션의 로그인  
  애플리케이션에서 SQL Server 인증 또는 로컬 Windows 로그인을 사용하는 경우 일치하지 않는 SID로 인해 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 애플리케이션의 로그인이 확인되지 않을 수 있습니다. 일치하지 않는 SID로 인해 해당 로그인이 원격 서버 인스턴스에서 분리된 사용자가 됩니다. 이 문제는 애플리케이션이 장애 조치(Failover) 후 미러링된 데이터베이스 또는 로그 전달 데이터베이스에 연결하거나 백업에서 초기화된 복제 구독자 데이터베이스에 연결하는 경우에 발생할 수 있습니다.  
   
  이 문제를 방지하려면 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 호스팅하는 데이터베이스를 사용하도록 애플리케이션을 설정할 때 예방 조치를 취하는 것이 좋습니다. 예방 조치에는 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 로그인 및 암호를 전송하는 것이 포함됩니다. 이 문제를 방지하는 방법에 대한 자세한 내용은 KB 문서 918992 [SQL Server 인스턴스 간에 로그인 및 암호를 전송하는 방법](https://support.microsoft.com/kb/918992/)을 참조하세요.  
@@ -39,7 +39,7 @@ ms.locfileid: "75230219"
   
  자세한 내용은 [데이터베이스 미러링 및 로그 전달에서의 분리된 사용자](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (데이터베이스 엔진 블로그)를 참조하세요.  
   
-## <a name="jobs"></a>작업  
+## <a name="jobs"></a>교육  
  백업과 같은 작업에는 특별한 주의가 필요합니다. 일반적으로 역할 전환 후 데이터베이스 소유자 또는 시스템 관리자는 새 주 데이터베이스의 작업을 다시 만들어야 합니다.  
   
  이전 주 서버 인스턴스를 사용할 수 있는 경우 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 원래 작업을 삭제해야 합니다. 현재 미러 데이터베이스가 RESTORING 상태에 있어서 사용할 수 없으므로 현재 미러 데이터베이스의 작업은 실패합니다.  

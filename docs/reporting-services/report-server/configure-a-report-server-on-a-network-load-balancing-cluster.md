@@ -8,10 +8,10 @@ ms.technology: report-server
 ms.topic: conceptual
 ms.date: 12/11/2019
 ms.openlocfilehash: 09ccccf33047bb59d3097ff1bb304d3874335ade
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244397"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>네트워크 부하 분산 클러스터에서 보고서 서버 구성
@@ -40,7 +40,7 @@ ms.locfileid: "75244397"
 |6|NLB 클러스터의 가상 서버 IP를 사용하도록 **Hostname** 및 **UrlRoot** 를 구성합니다.|이 항목의[Hostname 및 UrlRoot 구성 방법](#SpecifyingVirtualServerName) 을 참조하십시오.|  
 |7|지정한 호스트 이름을 통해 서버에 액세스할 수 있는지 확인합니다.|이 항목의[보고서 서버 액세스 권한 확인](#Verify) 을 참조하십시오.|  
   
-## <a name="ViewState"></a> 뷰 상태 유효성 검사 구성 방법
+## <a name="how-to-configure-view-state-validation"></a><a name="ViewState"></a> 뷰 상태 유효성 검사 구성 방법
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 NLB 클러스터에서 스케일 아웃 배포를 실행하려면 사용자가 대화형 HTML 보고서를 볼 수 있도록 뷰 상태 유효성 검사를 구성해야 합니다.  보고서 서버 웹 서비스에 대해 이를 수행해야 합니다.
@@ -92,7 +92,7 @@ NLB 클러스터에서 스케일 아웃 배포를 실행하려면 사용자가 �
 
 ::: moniker-end
 
-## <a name="SpecifyingVirtualServerName"></a> Hostname 및 UrlRoot 구성 방법
+## <a name="how-to-configure-hostname-and-urlroot"></a><a name="SpecifyingVirtualServerName"></a> Hostname 및 UrlRoot 구성 방법
 
  NLB 클러스터에서 보고서 서버 스케일 아웃 배포를 구성하려면 서버 클러스터에 대한 단일 액세스 지점을 제공하는 단일 가상 서버 이름을 정의해야 합니다. 그런 다음 가상 서버 이름을 사용자 환경의 DNS(Domain Name Server)에 등록합니다.  
   
@@ -122,7 +122,7 @@ NLB 클러스터에서 스케일 아웃 배포를 실행하려면 사용자가 �
   
 6. 스케일 아웃 배포의 각 보고서 서버에 대한 각 RSReportServer.config 파일에서 이 단계를 반복합니다.  
   
-## <a name="Verify"></a> 보고서 서버 액세스 권한 확인
+## <a name="verify-report-server-access"></a><a name="Verify"></a> 보고서 서버 액세스 권한 확인
 
  가상 서버 이름을 통해 스케일 아웃 배포에 액세스할 수 있는지 확인합니다(예: `https://MyVirtualServerName/reportserver` 및 `https://MyVirtualServerName/reports`).  
   

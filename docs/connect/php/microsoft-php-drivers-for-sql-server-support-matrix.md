@@ -11,10 +11,10 @@ author: David-Engel
 ms.author: genemi
 manager: ''
 ms.openlocfilehash: c542a77c3a7cfbbe9c54786116e3e9e800a3dda0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76917804"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Microsoft PHP Drivers for SQL Server 지원 매트릭스
@@ -55,7 +55,7 @@ MSL(Microsoft 지원 수명 주기) 정책은 Microsoft 제품 지원 수명 주
 ## <a name="sql-server-version-certified-compatibility"></a>SQL Server 버전 인증 호환성
  다음 매트릭스는 테스트를 통해 해당 드라이버 버전과 호환되는 것으로 인증된 SQL Server 버전을 나열합니다. 이전 드라이버 버전과의 호환성을 유지하기 위해 노력하고 있지만 SQL Server가 출시될 때 최신 지원 드라이버는 새 SQL Server 버전에서만 테스트하고 인증됩니다.
 
-|PHP for SQL Server 드라이버 버전 &#8594;<br />&#8595; SQL Server 버전|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|SQL Server 드라이버 버전용 PHP &#8594;<br />&#8595; SQL Server 버전|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Azure SQL Managed Instance|Y|Y|Y|Y|Y| | |
 |Azure SQL Data Warehouse|Y|Y|Y|Y|Y| | |
@@ -72,7 +72,7 @@ MSL(Microsoft 지원 수명 주기) 정책은 Microsoft 제품 지원 수명 주
 
 다음 버전의 PHP는 나열된 버전의 Microsoft PHP Drivers에서 지원됩니다.
 
-|PHP for SQL Server 드라이버 버전 &#8594;<br />&#8595; PHP 버전|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|SQL Server 드라이버 버전용 PHP &#8594;<br />&#8595; PHP 버전|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |:---:|---|---|---|---|---|---|---|
 |7.4|7.4.0+          |                |                |                |       |        |        |
 |7.3|7.3.0+          |7.3.0+          |                |                |       |        |        |
@@ -90,7 +90,7 @@ MSL(Microsoft 지원 수명 주기) 정책은 Microsoft 제품 지원 수명 주
 
 다음 Windows 운영 체제 버전이 나열된 버전의 Microsoft PHP Drivers에서 지원됩니다.
 
-|PHP for SQL Server 드라이버 버전 &#8594;<br />&#8595; 운영 체제|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|SQL Server 드라이버 버전용 PHP &#8594;<br />&#8595; 운영 체제|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Windows Server 2019                 |Y  |Y  |   |   |   |   |   |
 |Windows Server 2016                 |Y  |Y  |Y  |Y  |Y  |   |   |
@@ -108,7 +108,7 @@ MSL(Microsoft 지원 수명 주기) 정책은 Microsoft 제품 지원 수명 주
 
 다음 Linux 및 Mac 운영 체제 버전(64비트만 해당)이 나열된 버전의 Microsoft PHP Drivers에서 지원됩니다.
 
-|PHP for SQL Server 드라이버 버전 &#8594;<br />&#8595; 운영 체제|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|SQL Server 드라이버 버전용 PHP &#8594;<br />&#8595; 운영 체제|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Ubuntu 19.10(64비트)               |Y  |   |   |   |   |   |   |
 |Ubuntu 18.10(64비트)               |   |Y  |   |   |   |   |   |

@@ -9,10 +9,10 @@ ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5217684ab98bd70a996f0a8a0bb50170daf57bf0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65573874"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Reporting Services 보고서 문제 해결
@@ -34,7 +34,7 @@ ms.locfileid: "65573874"
   
 호출 스택을 보려면 로컬 관리자 자격 증명을 사용하여 보고서 서버에 로그온하고 보고서 관리자 페이지를 마우스 오른쪽 단추로 클릭한 다음 **소스 보기**를 선택합니다. 호출 스택은 오류 메시지에 대한 자세한 컨텍스트를 제공합니다.  
   
-## <a name="use-includessmanstudiofullincludesssmanstudiofullmd-to-verify-queries-and-credentials"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] 를 사용하여 쿼리 및 자격 증명 확인  
+## <a name="use-ssmanstudiofull-to-verify-queries-and-credentials"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] 를 사용하여 쿼리 및 자격 증명 확인  
 보고서에 복잡한 쿼리를 포함하기 전에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] 를 사용하여 이러한 쿼리의 유효성을 검사할 수 있습니다.   
   
 자세한 내용은 [데이터베이스 엔진 쿼리 편집기](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md) 및 [개체 탐색기를 사용하여 개체 관리](~/ssms/object/manage-objects-by-using-object-explorer.md)를 참조하세요.  

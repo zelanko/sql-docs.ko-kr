@@ -14,10 +14,10 @@ ms.assetid: 852b4947-a090-4e54-8555-5a503945ceab
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 34873835231c122f3d086c3490be2bab7a684925
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198535"
 ---
 # <a name="web-service-authentication"></a>웹 서비스 인증
@@ -53,7 +53,7 @@ ReportingService service = new ReportingService();
 service.Credentials = new System.Net.NetworkCredential("username", "password", "domain");  
 ```  
   
- 보고서 서버 웹 서비스의 메서드를 호출하기 전에 먼저 자격 증명을 설정해야 합니다. 자격 증명을 설정하지 않을 경우 오류 코드(HTTP 401 오류: 액세스가 거부되었습니다.)가 나타납니다. 서비스를 사용하기 전에 인증해야 하지만, 자격 증명을 설정한 후에는 동일한 서비스 변수(*rs* 등)를 계속 사용한다면 다시 설정할 필요가 없습니다.  
+ 보고서 서버 웹 서비스의 메서드를 호출하기 전에 먼저 자격 증명을 설정해야 합니다. 자격 증명을 설정하지 않을 경우 오류 코드(HTTP 401 오류:액세스가 거부되었습니다.)를 받습니다. 서비스를 사용하기 전에 인증해야 하지만, 자격 증명을 설정한 후에는 동일한 서비스 변수(*rs* 등)를 계속 사용한다면 다시 설정할 필요가 없습니다.  
   
 ## <a name="custom-authentication"></a>사용자 지정 인증  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에는 개발자가 보안 확장 프로그램이라고 하는 사용자 지정 인증 확장 프로그램을 디자인하고 개발할 수 있도록 프로그래밍 API가 포함되어 있습니다. 자세한 내용은 [Implementing a Security Extension](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)을 참조하세요.  

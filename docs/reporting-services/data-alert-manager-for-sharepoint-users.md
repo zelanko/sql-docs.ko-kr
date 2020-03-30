@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0c0e6085ec4e922619c4f2595c63751e82c5a50a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571485"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>SharePoint 사용자용 데이터 경고 관리자
@@ -41,7 +41,7 @@ SharePoint 사이트가 데이터 경고 기능을 사용하도록 설정된 경
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 경고 기능을 사용하려면 관리자가 먼저 권한을 부여해야 합니다. 필요한 사용 권한에 대한 자세한 내용은 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)를 참조하세요.  
   
-##  <a name="ViewingAlerts"></a> 데이터 경고 정보 보기  
+##  <a name="view-data-alert-information"></a><a name="ViewingAlerts"></a> 데이터 경고 정보 보기  
  데이터 경고 디자이너에서 자신이 만든 데이터 경고 목록을 볼 수 있습니다. 데이터 경고 관리자를 열려면 SharePoint 라이브러리에 게시된 보고서를 마우스 오른쪽 단추로 클릭합니다. 다음 그림에서는 보고서 오른쪽 클릭 메뉴의 **데이터 경고 관리** 옵션을 보여 줍니다.  
   
  ![보고서 상황에 맞는 메뉴에서 경고 관리자 열기](../reporting-services/media/rs-openalertmanager.gif "보고서 상황에 맞는 메뉴에서 경고 관리자 열기")  
@@ -57,24 +57,24 @@ SharePoint 사이트가 데이터 경고 기능을 사용하도록 설정된 경
 |TopPromotion|PromotionTracking|Lauren Johnson|0||5/23/2011|경고를 만들었습니다.|  
   
   
-##  <a name="DeleteAlerts"></a> 데이터 경고 삭제  
+##  <a name="delete-data-alerts"></a><a name="DeleteAlerts"></a> 데이터 경고 삭제  
  데이터 경고 관리자에서 경고 정의를 삭제합니다. 정보 근로자는 자신이 만든 경고 정의를 삭제할 수 있습니다. 다른 사용자가 만든 경고 정의는 삭제할 수 없습니다. 자세한 내용은 [데이터 경고 관리자에서 내 데이터 경고 관리](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)를 참조하세요.  
   
  경고 정의를 삭제하면 영구적으로 삭제됩니다. 경고 메시지를 일시 중지하려면 경고 정의에서 되풀이 패턴, 시작 날짜 또는 종료 날짜를 변경해야 합니다. 자세한 내용은 [경고 디자이너에서 데이터 경고 편집](../reporting-services/edit-a-data-alert-in-alert-designer.md)을 참조하세요.  
   
   
-##  <a name="EditAlerts"></a> 데이터 경고 편집  
+##  <a name="edit-data-alerts"></a><a name="EditAlerts"></a> 데이터 경고 편집  
  정보 근로자는 데이터 경고 관리자에서 편집할 경고 정의를 열 수 있습니다. 자신이 만든 경고 정의만 편집할 수 있고 다른 사용자가 만든 경고 정의는 편집할 수 없습니다. 경고 정의를 마우스 오른쪽 단추로 클릭하고 **편집** 을 클릭하면 경고 정의가 표시된 데이터 경고 디자이너가 열립니다. 자세한 내용은 [데이터 경고 디자이너](../reporting-services/data-alert-designer.md) 및 [경고 디자이너에서 데이터 경고 편집](../reporting-services/edit-a-data-alert-in-alert-designer.md)을 참조하세요.  
   
   
-##  <a name="RunAlerts"></a> 데이터 경고 실행  
+##  <a name="run-data-alerts"></a><a name="RunAlerts"></a> 데이터 경고 실행  
  데이터 경고 관리자에는 경고 서비스에서 데이터 경고 정의를 마지막으로 처리한 시간 및 데이터 경고 메시지를 보낸 횟수에 대한 정보가 포함되어 있습니다. 예약된 시간까지 기다리지 않고 경고 메시지를 즉시 실행하여 보낼 수 있습니다. 데이터 경고 관리자에서 경고를 실행하면 경고 일정을 덮어쓰며 보고서를 실행하는 데 필요한 시간과 경고를 실행하도록 선택한 시간의 보고서 서버 사용량에 따라 1-5분 이내에 경고 정의를 처리하기 시작합니다. 결과가 변경된 경우에만 메시지를 보내도록 지정했지만 결과가 변경되지 않은 경우에는 메시지를 만들거나 보내지 않습니다. 자세한 내용은 [데이터 경고 관리자에서 내 데이터 경고 관리](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)를 참조하세요.  
   
 > [!NOTE]  
 >  **실행**  옵션을 클릭하면 몇 초 후에 **상태** 열의 값이 업데이트되어 경고가 처리 중임을 나타냅니다. **실행**  옵션을 여러 번 클릭하면 경고가 여러 번 처리됩니다. 그러면 보고서 서버의 리소스가 불필요하게 소비되어 보고서 서버의 성능에 영향을 줄 수 있습니다. 경고에 대해 업데이트된 정보를 보려면 웹 브라우저의 새로 고침 단추를 클릭하여 상태 업데이트와 경고에 대한 다른 정보를 확인합니다.  
   
   
-##  <a name="HowTo"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="HowTo"></a> 관련 작업  
  이 섹션에는 경고를 관리하고 경고 정의를 편집하는 방법을 보여 주는 절차가 나열되어 있습니다.  
   
 -   [데이터 경고 관리자에서 내 데이터 경고 관리](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  

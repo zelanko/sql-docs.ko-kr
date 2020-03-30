@@ -9,10 +9,10 @@ ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 83b041ebde43c0208c3606fff6b0dcc33d7680c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081902"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>기본 제공 컬렉션 - 데이터 세트 필드 컬렉션 참조(보고서 작성기)
@@ -28,7 +28,7 @@ ms.locfileid: "77081902"
   
  필드의 요약된 값을 표시하려면 각 숫자 필드를 행렬의 데이터 영역으로 끕니다. 합계 행에 대한 기본 집계 함수는 Sum입니다. 예를 들어 `=Sum(Fields!Sales.Value)`입니다. 다른 합계를 계산하기 위해 기본 함수를 변경할 수 있습니다. 자세한 내용은 [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)를 참조하세요.  
   
- 입력란의 필드 컬렉션에 대한 요약된 값을 데이터 영역의 일부가 아닌 디자인 화면에 직접 표시하려면 데이터 세트 이름을 집계 함수에 대한 범위로 지정해야 합니다. 예를 들어 `SalesData`라는 데이터 세트에 대해 `=Sum(Fields!Sales,"SalesData")` 식은 `Sales` 필드에 대한 모든 값의 합계를 지정합니다.  
+ 입력란의 필드 컬렉션에 대한 요약된 값을 데이터 영역의 일부가 아닌 디자인 화면에 직접 표시하려면 데이터 세트 이름을 집계 함수에 대한 범위로 지정해야 합니다. 예를 들어 `SalesData`라는 데이터 세트에 대해 `Sales` 식은 `=Sum(Fields!Sales,"SalesData")` 필드에 대한 모든 값의 합계를 지정합니다.  
   
  **식** 대화 상자를 사용하여 단순 필드 참조를 정의하는 경우 범주 창에서 Fields 컬렉션을 선택하고 **필드** 창에서 사용 가능한 필드 목록을 볼 수 있습니다. 각 필드에는 Value 및 IsMissing을 비롯한 여러 속성이 포함됩니다. 나머지 속성은 데이터 원본 유형에 따라 데이터 세트에 사용할 수 있는 미리 정의된 확장 필드 속성입니다.  
   

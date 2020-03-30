@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 4d0c83e0b6adb5981adde576e06b0b74faf42eeb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256249"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>빌드 및 배포 참가자를 사용하여 데이터베이스 빌드 및 배포 사용자 지정
@@ -47,8 +47,8 @@ Visual Studio는 데이터베이스 프로젝트에 대한 빌드 및 배포 작
   
 |**일반 태스크**|**지원 콘텐츠**|  
 |--------------------|--------------------------|  
-|**확장성 지점에 대해 자세히 알아보기:** 빌드 및 배포 기여자 구현을 위해 사용할 수 있는 기본 클래스에 대해 자세히 알아볼 수 있습니다.|[BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
-|**샘플 기여자 만들기:** 빌드 또는 배포 기여자를 만드는 데 필요한 단계에 대해 알아봅니다. 이 연습에서는 다음을 수행할 수 있습니다.<br /><br />-   모델의 모든 요소를 나열하는 보고서를 생성하는 빌드 참가자를 만듭니다.<br />-   실행 전 배포 계획을 변경하는 배포 참가자를 만듭니다.<br />-   SQL 프로젝트를 배포할 때 배포 보고서를 생성하는 배포 참가자를 만듭니다.<br /><br />팀에 참가자를 분배하려는 방법에 따라 모든 참가자를 단일 어셈블리에 또는 여러 어셈블리 사이에 만들 수 있습니다.|[연습: 데이터베이스 프로젝트 빌드를 확장하여 모델 통계 생성](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[연습: 데이터베이스 프로젝트 배포를 확장하여 배포 계획 수정](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[연습: 데이터베이스 프로젝트 배포를 확장하여 배포 계획 분석](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
+|**확장성 지점에 대해 자세히 알아보기:** 빌드 및 배포 참가자 구현을 위해 사용할 수 있는 기본 클래스에 대해 자세히 알아볼 수 있습니다.|[BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
+|**샘플 참가자 만들기:** 빌드 또는 배포 참가자를 만드는 데 필요한 단계에 대해 알아봅니다. 이 연습에서는 다음을 수행할 수 있습니다.<br /><br />-   모델의 모든 요소를 나열하는 보고서를 생성하는 빌드 참가자를 만듭니다.<br />-   실행 전 배포 계획을 변경하는 배포 참가자를 만듭니다.<br />-   SQL 프로젝트를 배포할 때 배포 보고서를 생성하는 배포 참가자를 만듭니다.<br /><br />팀에 참가자를 분배하려는 방법에 따라 모든 참가자를 단일 어셈블리에 또는 여러 어셈블리 사이에 만들 수 있습니다.|[연습: 데이터베이스 프로젝트 빌드를 확장하여 모델 통계 생성](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[연습: 데이터베이스 프로젝트 배포를 확장하여 배포 계획 수정](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[연습: 데이터베이스 프로젝트 배포를 확장하여 배포 계획 분석](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
   
 ## <a name="see-also"></a>참고 항목  
 [SQL 단위 테스트에 대한 사용자 지정 조건 정의](https://msdn.microsoft.com/library/jj860449(v=vs.103).aspx)  

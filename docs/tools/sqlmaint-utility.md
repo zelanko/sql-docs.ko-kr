@@ -19,10 +19,10 @@ ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: c0f87bca3404505e82c903bd868e9b5c2da00bed
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75306966"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 유틸리티
@@ -81,7 +81,7 @@ number[minutes | hours | days | weeks | months]
  **sqlmaint** 에 대한 구문 다이어그램이 반환되도록 지정합니다. 이 매개 변수는 단독으로 사용해야 합니다.  
   
  **-S** _server_name_[ **\\** _instance\_name_]  
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 대상 인스턴스를 지정합니다. 해당 서버 컴퓨터에 있는 기본 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스에 연결하려면 _server\_name_을 지정합니다. 해당 서버에 있는 명명된 [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스에 연결하려면 _server\_name_ **\\** _instance\_name_을 지정합니다. 서버를 지정하지 않으면 **sqlmaint** 가 로컬 컴퓨터에 있는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 기본 인스턴스에 연결됩니다.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 대상 인스턴스를 지정합니다. 해당 서버 컴퓨터에 있는 기본  _인스턴스에 연결하려면 \_server_name[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]을 지정합니다. 해당 서버에 있는 명명된  _인스턴스에 연결하려면 \_server_name **\\** _\_instance_name[!INCLUDE[ssDE](../includes/ssde-md.md)]을 지정합니다. 서버를 지정하지 않으면 **sqlmaint** 가 로컬 컴퓨터에 있는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 기본 인스턴스에 연결됩니다.  
   
  **-U** _login_ID_  
  서버에 연결할 때 사용할 로그인 ID를 지정합니다. 이 인수를 제공하지 않으면 **sqlmaint** 에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 인증을 사용합니다. *login_ID* 에 특수 문자가 포함된 경우 큰따옴표(")로 묶어야 합니다. 그렇지 않은 경우 큰따옴표는 선택 사항입니다.  

@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2847838b37a9f5c233f649b6a712d4c0b2d150f4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67988861"
 ---
 # <a name="using-large-value-types"></a>큰 값 형식 사용
@@ -33,10 +33,10 @@ ms.locfileid: "67988861"
 > [!NOTE]  
 >  큰 값 데이터 형식은 1-8KB의 최대 크기를 가질 수 있거나 무제한으로 지정될 수 있습니다.  
   
- 이전에는 **text**, **ntext** 및 **image**와 같은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식만 이러한 길이에 도달할 수 있었습니다. **varchar**, **nvarchar** 및 **varbinary**에 대한 **max** 지정자로 인해 이러한 데이터 형식은 중복이 되었습니다. 그러나 긴 데이터 형식은 여전히 사용할 수 있으므로, OLE DB 데이터 액세스 구성 요소에 대한 대부분의 인터페이스는 동일하게 유지됩니다. 이전 릴리스와의 호환성을 위해 OLE DB Driver for SQL Server의 DBCOLUMNFLAGS_ISLONG 플래그가 계속 사용됩니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전 대해 작성된 공급자와 드라이버는 무제한 최대 길이로 설정된 경우 새 형식에 대해 계속 이러한 용어를 사용합니다.  
+ 이전에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]text **,** ntext**및**image**와 같은**  데이터 형식만 이러한 길이에 도달할 수 있었습니다. **varchar**, **nvarchar** 및 **varbinary**에 대한 **max** 지정자로 인해 이러한 데이터 형식은 중복이 되었습니다. 그러나 긴 데이터 형식은 여전히 사용할 수 있으므로, OLE DB 데이터 액세스 구성 요소에 대한 대부분의 인터페이스는 동일하게 유지됩니다. 이전 릴리스와의 호환성을 위해 OLE DB Driver for SQL Server의 DBCOLUMNFLAGS_ISLONG 플래그가 계속 사용됩니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전 대해 작성된 공급자와 드라이버는 무제한 최대 길이로 설정된 경우 새 형식에 대해 계속 이러한 용어를 사용합니다.  
   
 > [!NOTE]  
->  저장 프로시저, 함수 반환 형식 또는 [CAST 및 CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md) 함수의 입력 및 출력 매개 변수 형식으로 **varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 데이터 형식을 지정할 수도 있습니다.  
+>  저장 프로시저, 함수 반환 형식 또는 **CAST 및 CONVERT** 함수의 입력 및 출력 매개 변수 형식으로 **varchar(max)** , **nvarchar(max)** 및 [varbinary(max)](../../../t-sql/functions/cast-and-convert-transact-sql.md) 데이터 형식을 지정할 수도 있습니다.  
   
 > [!NOTE]  
 >  데이터를 복제할 경우 [최대 텍스트 복제 크기 서버 구성 옵션](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)을 -1로 구성해야 할 수 있습니다.  

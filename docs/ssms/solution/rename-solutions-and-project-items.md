@@ -16,10 +16,10 @@ ms.assetid: 2adca850-58a2-4ed5-bded-9dd091fc33f2
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 03f10d193373eff22c913598d3a67f281e1faa3d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241453"
 ---
 # <a name="rename-solutions-and-project-items"></a>솔루션 및 프로젝트 항목의 이름 바꾸기

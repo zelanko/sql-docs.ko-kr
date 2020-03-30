@@ -15,10 +15,10 @@ ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 574fcc9c8e180b75d5d3def6d97798708c40996c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140257"
 ---
 # <a name="process-large-reports"></a>큰 보고서 처리
@@ -58,7 +58,7 @@ ms.locfileid: "67140257"
   
  이러한 방법 대신 개인 사용자에게 보고서를 배포할 수도 있습니다. 배달 옵션을 주의해서 구성하면 구독을 통해 큰 보고서를 배포할 수 있습니다. 표준 구독 또는 데이터 기반 구독을 사용하여 보고서를 배달할 수 있습니다. 구독 및 배달 권장 사항은 다음과 같습니다.  
   
--   웹 보관(MHTML), PDF 또는 Excel을 사용하도록 구독을 구성합니다.  
+-   웹 보관 파일(MHTML), PDF 또는 Excel을 사용하도록 구독을 구성합니다.  
   
 -   PDF 또는 Excel을 사용할 경우 파일 공유 배달을 사용하도록 구독을 구성합니다. 배달된 보고서는 데스크톱 애플리케이션을 통해 사용할 수 있습니다. 파일 공유에 대한 사용 권한을 설정하여 보고서를 볼 수 있는 사용자를 결정해야 합니다.  
   
