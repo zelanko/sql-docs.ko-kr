@@ -22,10 +22,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b33e22b3d6575e7f83572eeca5692d538b58a16b
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77253328"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS(Transact-SQL)
@@ -114,7 +114,7 @@ UPDATE STATISTICS [ schema_name . ] table_name
 자세한 내용은 [CSS SQL 에스컬레이션 서비스 블로그](https://docs.microsoft.com/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed)를 참조하세요.  
   
  RESAMPLE  
- 최근의 샘플링 주기를 사용하여 각 통계를 업데이트합니다.  
+ 가장 최근의 샘플링 주기를 사용하여 각 통계를 업데이트합니다.  
   
  RESAMPLE을 사용하면 전체 테이블 검색이 수행될 수 있습니다. 예를 들어 인덱스에 대한 통계에서는 샘플링 주기에 전체 테이블 검색을 사용합니다. 샘플 옵션(SAMPLE, FULLSCAN, RESAMPLE)을 지정하지 않으면 기본적으로 쿼리 최적화 프로그램에서 데이터를 샘플링하여 샘플 크기를 계산합니다.  
 
@@ -166,7 +166,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상
 
 MAXDOP = *max_degree_of_parallelism*  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작).  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작)  
   
  통계 작업 기간 동안 **최대 병렬 처리 수준** 구성 옵션을 재정의합니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
   
@@ -284,14 +284,14 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-update-statistics-on-a-table"></a>E. 테이블에 대한 모든 통계 업데이트  
- 다음 예제에서는 `Customer` 테이블에서 `CustomerStats1` 통계를 업데이트합니다.  
+ 다음 예제에서는 `CustomerStats1` 테이블에서 `Customer` 통계를 업데이트합니다.  
   
 ```sql  
 UPDATE STATISTICS Customer ( CustomerStats1 );  
 ```  
   
 ### <a name="f-update-statistics-by-using-a-full-scan"></a>F. 전체 검사를 사용하여 통계 업데이트  
- 다음 예제에서는 `Customer` 테이블의 모든 행 검사를 기반으로 `CustomerStats1` 통계를 업데이트합니다.  
+ 다음 예제에서는 `CustomerStats1` 테이블의 모든 행 검사를 기반으로 `Customer` 통계를 업데이트합니다.  
   
 ```sql  
 UPDATE STATISTICS Customer (CustomerStats1) WITH FULLSCAN;  

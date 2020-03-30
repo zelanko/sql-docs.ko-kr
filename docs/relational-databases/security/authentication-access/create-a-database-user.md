@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3aa8e127c382d8f7915edbcb81e1272fe522251
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981932"
 ---
 # <a name="create-a-database-user"></a>데이터베이스 사용자 만들기
@@ -38,7 +38,7 @@ ms.locfileid: "73981932"
   
  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 데이터베이스 사용자를 만들 수 있습니다.  
   
-##  <a name="Understanding"></a> 사용자 유형 이해  
+##  <a name="understanding-the-types-of-users"></a><a name="Understanding"></a> 사용자 유형 이해  
  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 에서는 데이터베이스 사용자를 만들 때 6가지 옵션을 표시합니다. 다음 그래픽은 녹색 상자에 6가지 옵션을 보여 주고 나타내는 정보를 표시합니다.  
   
  ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
@@ -56,17 +56,17 @@ ms.locfileid: "73981932"
   
 > **팁** 조직에 속한 개인의 경우 추가 암호를 기억하지 않아도 되며 Windows 인증에서 Kerberos와 같은 추가 보안 기능을 제공하므로 Windows 인증이 보다 적합합니다.  
   
-##  <a name="Restrictions"></a> 배경  
+##  <a name="background"></a><a name="Restrictions"></a> 배경  
  사용자는 데이터베이스 수준의 보안 주체입니다. 데이터베이스에 연결하려면 로그인을 데이터베이스 사용자로 매핑해야 합니다. 로그인을 다른 데이터베이스에 다른 사용자로 매핑할 수 있지만 각 데이터베이스에서 한 명의 사용자로만 매핑할 수 있습니다. 부분적으로 포함된 데이터베이스에서는 로그인을 포함하지 않는 사용자를 만들 수 있습니다. 포함된 데이터베이스 사용자에 대한 자세한 내용은 [CREATE USER&#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)를 참조하세요. 데이터베이스에서 게스트 사용자가 설정된 경우 데이터베이스 사용자에 매핑되지 않은 로그인이 게스트 사용자로 데이터베이스에 진입할 수 있습니다.  
   
 > **중요!** 게스트 사용자는 보통 사용하지 않도록 설정됩니다. 반드시 필요한 경우가 아니면 게스트 사용자를 사용하도록 설정하지 마세요.  
   
  보안 주체는 사용 권한을 사용자에게 부여할 수 있습니다. 사용자의 범위는 데이터베이스입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에서 특정 데이터베이스에 연결하려면 로그인을 데이터베이스 사용자에 매핑해야 합니다. 이 경우 로그인이 아니라 데이터베이스 내의 사용 권한이 데이터베이스 사용자에게 부여되며 거부됩니다.  
   
-##  <a name="Permissions"></a> 권한  
+##  <a name="permissions"></a><a name="Permissions"></a> 권한  
  데이터베이스에 대한 **ALTER ANY USER** 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SSMS를 사용하여 사용자 만들기  
+##  <a name="create-a-user-with-ssms"></a><a name="SSMSProcedure"></a> SSMS를 사용하여 사용자 만들기  
   
  
 1.  개체 탐색기에서 **데이터베이스** 폴더를 확장합니다.  
@@ -140,7 +140,7 @@ ms.locfileid: "73981932"
      **Delete**  
      선택한 확장 속성을 제거합니다.  
   
-##  <a name="TsqlProcedure"></a> T-SQL을 사용하여 사용자 만들기  
+##  <a name="create-a-user-using-t-sql"></a><a name="TsqlProcedure"></a> T-SQL을 사용하여 사용자 만들기  
     
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

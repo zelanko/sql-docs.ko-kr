@@ -22,10 +22,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f3c261b2cc8a29af74adba6e32c646a11e940070
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982074"
 ---
 # <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition(Transact-SQL)
@@ -82,7 +82,7 @@ column_name <data_type>
   
 ## <a name="arguments"></a>인수  
  *column_name*  
- 변경, 추가 또는 삭제할 열의 이름입니다. *column_name*은 1~128자로 구성될 수 있습니다. 새 열의 경우 타임스탬프 데이터 형식으로 만들어진 *column_name*을 생략할 수 있습니다. **타임스탬프** 데이터 형식 열에 대해 *column_name*이 지정되지 않으면 **타임스탬프**가 이름으로 사용됩니다.  
+ 변경, 추가 또는 삭제할 열의 이름입니다. *column_name*은 1~128자로 구성될 수 있습니다. 새 열의 경우 타임스탬프 데이터 형식으로 만들어진 *column_name*을 생략할 수 있습니다. *타임스탬프* 데이터 형식 열에 대해 **column_name**이 지정되지 않으면 **타임스탬프**가 이름으로 사용됩니다.  
   
  [ _type_schema_name_ **.** ] *type_name*  
  추가된 열 및 해당 열이 속한 스키마의 데이터 형식입니다.  
@@ -113,10 +113,10 @@ column_name <data_type>
  **varchar**, **nvarchar** 및 **varbinary** 데이터 유형에만 적용됩니다. 2^31바이트의 문자 및 이진 데이터와 2^30바이트의 유니코드 데이터를 저장하는 데 사용됩니다.  
   
 **CONTENT**  
- *column_name*에 있는 **xml** 데이터 형식의 각 인스턴스가 여러 개의 최상위 요소를 포함할 수 있도록 지정합니다. CONTENT는 **xml** 데이터 형식에만 적용되며 *xml_schema_collection*도 지정한 경우에만 지정할 수 있습니다. 지정되지 않은 경우 기본 동작은 CONTENT입니다.  
+ **column_name**에 있는 *xml* 데이터 형식의 각 인스턴스가 여러 개의 최상위 요소를 포함할 수 있도록 지정합니다. CONTENT는 **xml** 데이터 형식에만 적용되며 *xml_schema_collection*도 지정한 경우에만 지정할 수 있습니다. 지정되지 않은 경우 기본 동작은 CONTENT입니다.  
   
 DOCUMENT  
- *column_name*에 있는 **xml** 데이터 형식의 각 인스턴스가 최상위 요소를 하나만 포함할 수 있도록 지정합니다. DOCUMENT는 **xml** 데이터 형식에만 적용되며 *xml_schema_collection*도 지정한 경우에만 지정할 수 있습니다.  
+ **column_name**에 있는 *xml* 데이터 형식의 각 인스턴스가 최상위 요소를 하나만 포함할 수 있도록 지정합니다. DOCUMENT는 **xml** 데이터 형식에만 적용되며 *xml_schema_collection*도 지정한 경우에만 지정할 수 있습니다.  
   
  *xml_schema_collection*  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
@@ -124,7 +124,7 @@ DOCUMENT
  XML 스키마 컬렉션과의 연결을 위해 **xml** 데이터 형식에만 적용됩니다. 스키마에 **xml** 열을 입력하기 전에 먼저 [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)을 사용하여 데이터베이스에 해당 스키마를 만들어야 합니다.  
   
 FILESTREAM  
- 선택적으로 **varbinary(max)** 의 *type_name*인 열에 대해 FILESTREAM 스토리지 특성을 지정합니다.  
+ 선택적으로 *varbinary(max)* 의 **type_name**인 열에 대해 FILESTREAM 스토리지 특성을 지정합니다.  
   
  열에 대해 FILESTREAM이 지정된 경우 ROWGUIDCOL 특성을 갖는 **uniqueidentifier** 데이터 형식의 열도 테이블에 있어야 합니다. 이 열은 Null 값을 허용하지 않으며 UNIQUE 또는 PRIMARY KEY 단일 열 제약 조건을 가져야 합니다. 열의 GUID 값은 애플리케이션(데이터가 삽입되는 경우)에 의해 또는 NEWID () 함수를 사용하는 DEFAULT 제약 조건에 의해 제공되어야 합니다.  
   

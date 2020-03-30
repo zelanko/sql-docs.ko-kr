@@ -23,10 +23,10 @@ ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 8cb409823bad1370c38b6dc99f04c7e49d58796a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982413"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF(Transact-SQL)
@@ -76,7 +76,7 @@ WITH NO_INFOMSGS
 |**Log Space Used (%)**|현재 트랜잭션 로그 정보를 저장하는 데 사용 중인 로그 파일의 비율입니다.|  
 |**상태**|로그 파일의 상태이며 항상 0입니다.|  
   
-## <a name="Remarks"></a> 주의  
+## <a name="remarks"></a><a name="Remarks"></a> 주의  
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작하여 [ 대신에 ](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)sys.dm_db_log_space_usage`DBCC SQLPERF(LOGSPACE)` DMV를 사용하여 데이터베이스 당 트랜잭션 로그의 공간 사용 정보를 반환합니다.    
  
 트랜잭션 로그는 데이터베이스에서 수행된 각 트랜잭션을 기록합니다. 자세한 내용은 [트랜잭션 로그 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) 및 [SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)을 참조하세요.

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: c56f702b6946662657f35fd7e0c8e6b9bc791c36
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287287"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM(SQL Server)
@@ -75,7 +75,7 @@ FILESTREAM이 **varbinary(max)** 열로 구현되어 [!INCLUDE[ssDE](../../inclu
 > [!NOTE]
 > SQL 로그인은 FILESTREAM 컨테이너에서 작동하지 않습니다. NTFS 또는 ReFS 인증만 FILESTREAM 컨테이너에서 작동합니다.
 
-## <a name="dual"></a> TRANSACT-SQL 및 파일 시스템 스트리밍 액세스를 사용하여 BLOB 데이터 액세스
+## <a name="accessing-blob-data-with-transact-sql-and-file-system-streaming-access"></a><a name="dual"></a> TRANSACT-SQL 및 파일 시스템 스트리밍 액세스를 사용하여 BLOB 데이터 액세스
 
 FILESTREAM 열에 데이터를 저장한 후 [!INCLUDE[tsql](../../includes/tsql-md.md)] 트랜잭션 또는 Win32 API를 사용하여 해당 파일에 액세스할 수 있습니다.  
   

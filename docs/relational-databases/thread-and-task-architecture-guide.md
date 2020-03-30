@@ -15,10 +15,10 @@ author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4c19e3ad3589cad6f7503ff9f0e92c090bef5035
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287357"
 ---
 # <a name="thread-and-task-architecture-guide"></a>스레드 및 태스크 아키텍처 가이드
@@ -46,7 +46,7 @@ ms.locfileid: "79287357"
 **스케줄러**(SOS 스케줄러라고도 함)는 태스크를 대신하여 작업을 수행하기 위해 처리 시간이 필요한 작업자 스레드를 관리합니다. 각 스케줄러는 개별 프로세서(CPU)에 매핑됩니다. 작업자가 스케줄러에서 활성 상태를 유지할 수 있는 시간을 OS 퀀텀이라고 하며 최대 4ms입니다. 퀀텀 시간이 만료된 후 작업자는 CPU 리소스에 액세스해야 하는 다른 작업자에게 시간을 양보하고 상태를 변경합니다. 이와 같이 CPU 리소스에 대한 액세스를 최대화하기 위한 작업자 간 협력을 **협조적 예약**(비선점형 예약)이라고 합니다. 작업자 상태 변경은 해당 작업자와 연결된 태스크, 그리고 해당 태스크와 연결된 요청에 전파됩니다. 작업자 상태에 대한 자세한 내용은 [sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)를 참조하세요. 스케줄러에 대한 자세한 내용은 [sys.dm_os_schedulers ](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)를 참조하세요. 
 
 ### <a name="allocating-threads-to-a-cpu"></a>CPU에 스레드 할당
-기본적으로 각각의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스는 각 스레드를 시작하며 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 스레드를 부하에 따라 컴퓨터의 프로세서(CPU)에 균일하게 분산합니다. affinity 프로세스가 운영 체제 수준에서 사용하도록 설정된 경우, 운영 체제에서 각 스레드를 특정 CPU에 할당합니다. 반대로 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]는 스레드를 CPU에 균일하게 분산하는 **스케줄러**에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **작업자 스레드**를 할당합니다.
+기본적으로 각각의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스는 각 스레드를 시작하며 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 스레드를 부하에 따라 컴퓨터의 프로세서(CPU)에 균일하게 분산합니다. affinity 프로세스가 운영 체제 수준에서 사용하도록 설정된 경우, 운영 체제에서 각 스레드를 특정 CPU에 할당합니다. 반대로 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]는 스레드를 CPU에 균일하게 분산하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]스케줄러**에**  **작업자 스레드**를 할당합니다.
     
 동일한 CPU 세트에 여러 애플리케이션이 액세스하는 등, 멀티태스킹을 수행하기 위해 운영 체제가 가끔 다른 CPU 간에 작업자 스레드를 이동하기도 합니다. 이는 운영 체제의 측면에서 볼 때는 효율적이지만 각 프로세서 캐시에 데이터를 반복적으로 다시 로드해야 하므로 시스템 부하가 큰 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 성능 저하를 초래할 수 있습니다. CPU를 특정 스레드에 할당하면 프로세서를 다시 로드할 필요가 없고 CPU 간에 스레드 마이그레이션이 감소되어 컨텍스트 전환이 줄게 되므로 성능이 향상될 수 있습니다. 스레드와 프로세서의 이러한 관계를 프로세서 선호도라고 합니다. affinity를 사용하는 경우에는 운영 체제에서 각 스레드를 특정 CPU에 할당합니다. 
 
@@ -58,7 +58,7 @@ ms.locfileid: "79287357"
 스레드 풀링을 사용하면 많은 클라이언트가 서버에 연결되어 있을 때 성능이 최적화됩니다. 보통 각 쿼리 요청마다 별도의 운영 체제 스레드가 생성됩니다. 그러나 서버에 대한 연결 수가 수백 개인 경우 쿼리 요청별로 스레드를 하나씩 사용하면 시스템 리소스를 상당히 많이 소비하게 될 수 있습니다. [max worker threads](../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) 옵션을 사용하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 작업자 스레드 풀을 만들어 많은 쿼리 요청을 처리할 수 있으므로 성능이 향상됩니다. 
 
 ### <a name="using-the-lightweight-pooling-option"></a>lightweight pooling 옵션 사용
-스레드 컨텍스트 전환과 관련된 오버헤드는 별로 크지 않을 수 있습니다. lightweight pooling 옵션을 0으로 설정할 때나 1로 설정할 때 대부분의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에는 성능상의 차이가 전혀 없습니다. [lightweight pooling](../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md)을 사용할 경우 성능이 향상될 수 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스는 다음 특성을 가진 컴퓨터에서 실행되는 인스턴스뿐입니다.    
+스레드 컨텍스트 전환과 관련된 오버헤드는 별로 크지 않을 수 있습니다. lightweight pooling 옵션을 0으로 설정할 때나 1로 설정할 때 대부분의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에는 성능상의 차이가 전혀 없습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]lightweight pooling[을 사용할 경우 성능이 향상될 수 있는 ](../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md) 인스턴스는 다음 특성을 가진 컴퓨터에서 실행되는 인스턴스뿐입니다.    
 * 대형 다중 CPU 서버
 * 모든 CPU가 거의 최대 용량에서 실행됩니다.
 * 높은 수준의 컨텍스트 전환이 있습니다.
@@ -94,7 +94,7 @@ hot add CPU 요구 사항
 ## <a name="best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus"></a>CPU가 64개를 초과하는 컴퓨터에서 SQL Server를 실행하기 위한 최선의 방법
 
 ### <a name="assigning-hardware-threads-with-cpus"></a>CPU와 함께 하드웨어 스레드 할당
-특정 스레드에 프로세서를 바인딩하는 데 선호도 마스크 및 affinity64 마스크 서버 구성 옵션을 사용하지 마세요. 이러한 옵션은 CPU가 최대 64개일 때만 사용할 수 있습니다. 대신 [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md)의 `SET PROCESS AFFINITY` 옵션을 사용하세요.
+특정 스레드에 프로세서를 바인딩하는 데 선호도 마스크 및 affinity64 마스크 서버 구성 옵션을 사용하지 마세요. 이러한 옵션은 CPU가 최대 64개일 때만 사용할 수 있습니다. 대신 `SET PROCESS AFFINITY`ALTER SERVER CONFIGURATION[의 ](../t-sql/statements/alter-server-configuration-transact-sql.md) 옵션을 사용하세요.
 
 ### <a name="managing-the-transaction-log-file-size"></a>트랜잭션 로그 파일 크기 관리
 트랜잭션 로그 파일의 크기를 늘리려면 자동 증가에 의존하지 마십시오. 트랜잭션 로그를 늘리는 작업은 직렬 프로세스로 수행되어야 합니다. 로그를 확장하면 로그 확장이 끝날 때까지 트랜잭션 쓰기 작업이 수행되지 않을 수 있습니다. 대신 환경의 일반적인 작업량을 지원할 수 있는 값으로 파일 크기를 설정하여 로그 파일에 충분한 공간을 미리 할당합니다.
@@ -115,7 +115,7 @@ CPU가 여러 개인 컴퓨터에서 데이터베이스의 복구 모델을 임�
 > [!IMPORTANT]
 > SQL 추적 및 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]는 사용되지 않습니다. Microsoft SQL Server 추적 및 재생 개체를 포함하는 *Microsoft.SqlServer.Management.Trace* 네임스페이스도 더 이상 사용되지 않습니다. 
 > [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] 
-> 확장 이벤트를 대신 사용하세요. [확장 이벤트](../relational-databases/extended-events/extended-events.md)에 대한 자세한 내용은 [빠른 시작: SQL Server의 확장 이벤트](../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) 및 [SSMS XEvent Profiler](../relational-databases/extended-events/use-the-ssms-xe-profiler.md)를 참조하세요.
+> 확장 이벤트를 대신 사용하세요. [확장 이벤트](../relational-databases/extended-events/extended-events.md)에 대한 자세한 내용은 [빠른 시작: SQL Server의 확장 이벤트](../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) 및 [SSMS XEvent 프로파일러](../relational-databases/extended-events/use-the-ssms-xe-profiler.md)를 참조하세요.
 
 > [!NOTE]
 > Analysis Services 워크로드에는 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]가 계속 사용되며 지원됩니다.
@@ -130,7 +130,7 @@ CPU가 여러 개인 컴퓨터에서 데이터베이스의 복구 모델을 임�
 
 |프로세스 이름   |실행 프로그램 |64개를 초과하는 CPU 사용 |  
 |----------|----------|----------|  
-|SQL Server 데이터베이스 엔진 |Sqlserver.exe  |예 |  
+|SQL Server 데이터베이스 엔진 |Sqlserver.exe  |yes |  
 |Reporting Services |Rs.exe |예 |  
 |Analysis Services  |As.exe |예 |  
 |Integration Services   |Is.exe |예 |  

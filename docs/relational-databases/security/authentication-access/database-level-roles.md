@@ -39,10 +39,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287337"
 ---
 # <a name="database-level-roles"></a>데이터베이스 수준 역할
@@ -114,7 +114,7 @@ ms.locfileid: "79287337"
 
 ## <a name="working-with-r-services"></a>R Services 작업  
 
-**적용 대상:** SQL Server([!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]부터)   
+**적용 대상:** [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)] 이상의 SQL Server   
 
 R Services가 설치된 경우 추가 데이터베이스 역할을 패키지 관리에 사용할 수 있습니다. 자세한 내용은 [SQL Server에 대한 R 패키지 관리](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md)를 참조하세요.
 

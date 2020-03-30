@@ -40,10 +40,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ccced8b93b5f657d8fd0afe96f95d7b9f8a98a6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981717"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 절(Transact-SQL)
@@ -209,7 +209,7 @@ ORDER BY SchemaName + ''; -- wrong
 |[반환되는 행 수 제한](#Offset)|OFFSET • FETCH|  
 |[UNION, EXCEPT 및 INTERSECT가 포함된 ORDER BY 사용](#Union)|UNION|  
   
-###  <a name="BasicSyntax"></a>기본 구문  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a>기본 구문  
  이 섹션의 예에서는 최소 필수 구문을 사용하여 ORDER BY 절의 기본 기능을 보여 줍니다.  
   
 #### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>A. SELECT 목록에 정의된 단일 열 지정  
@@ -260,7 +260,7 @@ ORDER BY DATEPART(year, HireDate);
   
 ```  
   
-###  <a name="SortOrder"></a> 오름차순 또는 내림차순 정렬 지정  
+###  <a name="specifying-ascending-and-descending-sort-order"></a><a name="SortOrder"></a> 오름차순 또는 내림차순 정렬 지정  
   
 #### <a name="a-specifying-a-descending-order"></a>A. 내림차순 지정  
  다음 예에서는 숫자 열 `ProductID`를 기준으로 내림차순으로 결과 집합을 정렬합니다.  
@@ -298,7 +298,7 @@ ORDER BY FirstName ASC, LastName DESC ;
   
 ```  
   
-###  <a name="Collation"></a> 데이터 정렬 지정  
+###  <a name="specifying-a-collation"></a><a name="Collation"></a> 데이터 정렬 지정  
  다음 예에서는 ORDER BY 절에서 데이터 정렬을 지정할 경우 쿼리 결과가 반환되는 순서가 어떻게 변경되는지를 보여 줍니다. 대/소문자 및 액센트를 구분하지 않는 데이터 정렬을 사용하여 정의된 열이 포함된 테이블이 만들어집니다. 다양한 대/소문자와 악센트가 있는 값을 삽입했습니다. ORDER BY 절에서 데이터 정렬을 지정하지 않았으므로 첫 번째 쿼리는 열의 데이터 정렬을 사용하여 값을 정렬합니다. 두 번째 쿼리에서는 ORDER BY 절에 대/소문자 구분 및 악센트 구분 데이터 정렬을 지정했으므로 행이 반환되는 순서가 변경됩니다.  
   
 ```sql
@@ -319,7 +319,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
   
 ```  
   
-###  <a name="Case"></a> 조건부 순서 지정  
+###  <a name="specifying-a-conditional-order"></a><a name="Case"></a> 조건부 순서 지정  
  다음 예제에서는 ORDER BY 절에 CASE 식을 사용하여 지정된 열 값에 따라 행의 정렬 순서를 조건부로 결정합니다. 첫 번째 예에서는 `SalariedFlag` 테이블의 `HumanResources.Employee` 열의 값이 계산됩니다. `SalariedFlag`가 1로 설정된 직원은 `BusinessEntityID` 순서에 따라 내림차순으로 반환됩니다. `SalariedFlag`가 0으로 설정된 직원은 `BusinessEntityID` 순서에 따라 오름차순으로 반환됩니다. 두 번째 예에서 결과 집합은 `TerritoryName` 열이 'United States'와 동일하면 `CountryRegionName` 열을 기준으로 정렬되고 그 외 다른 행에는 `CountryRegionName` 열을 기준으로 정렬됩니다.  
   
 ```sql
@@ -340,7 +340,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
   
 ```  
   
-###  <a name="Rank"></a> 순위 함수에 ORDER BY 사용  
+###  <a name="using-order-by-in-a-ranking-function"></a><a name="Rank"></a> 순위 함수에 ORDER BY 사용  
  다음 예에서는 순위 함수 ROW_NUMBER, RANK, DENSE_RANK 및 NTILE에 ORDER BY 절을 사용합니다.  
   
 ```sql
@@ -361,7 +361,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 ```  
   
-###  <a name="Offset"></a> 반환되는 행 수 제한  
+###  <a name="limiting-the-number-of-rows-returned"></a><a name="Offset"></a> 반환되는 행 수 제한  
  다음 예에서는 OFFSET 및 FETCH를 사용하여 쿼리에서 반환되는 행 수를 제한합니다.  
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
@@ -489,7 +489,7 @@ COMMIT TRANSACTION;
 GO  
 ```  
   
-###  <a name="Union"></a> UNION, EXCEPT 및 INTERSECT가 포함된 ORDER BY 사용  
+###  <a name="using-order-by-with-union-except-and-intersect"></a><a name="Union"></a> UNION, EXCEPT 및 INTERSECT가 포함된 ORDER BY 사용  
  쿼리에서 UNION, EXCEPT 또는 INTERSECT 연산자를 사용하는 경우 문의 끝 부분에 ORDER BY 절을 지정해야 하며 조합된 쿼리 결과가 정렬됩니다. 다음 예에서는 빨간색 또는 노란색 제품을 모두 반환하고 이 조합된 목록을 `ListPrice` 열을 기준으로 정렬합니다.  
   
 ```sql
@@ -506,7 +506,7 @@ WHERE Color = 'Yellow'
 ORDER BY ListPrice ASC;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예제에서는 결과 집합을 숫자 `EmployeeKey` 열을 기준으로 오름차순으로 정렬하는 방법을 보여 줍니다.  
   
 ```sql

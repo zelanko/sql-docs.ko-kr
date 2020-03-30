@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ee5e7fd6511a624b05b4d6c7d03c1f2dcd288054
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288027"
 ---
 # <a name="common-errors-with-database-mail"></a>일반적인 데이터베이스 메일 오류 
@@ -88,7 +88,7 @@ ALTER DATABASE msdb SET ENABLE_BROKER ;
 GO
 ``` 
 
-데이터베이스 메일은 많은 내부 저장 프로시저를 사용합니다. SQL Server를 새로 설치하면 노출 영역을 줄이기 위해 이러한 저장 프로시저가 사용하지 않도록 설정됩니다. 이러한 저장 프로시저를 설정하려면 다음 예제에서처럼 **sp_configure** 시스템 저장 프로시저의 [Database Mail XPs 옵션](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)을 사용합니다.
+데이터베이스 메일은 많은 내부 저장 프로시저를 사용합니다. SQL Server를 새로 설치하면 노출 영역을 줄이기 위해 이러한 저장 프로시저가 사용하지 않도록 설정됩니다. 이러한 저장 프로시저를 설정하려면 다음 예제에서처럼 [sp_configure](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 시스템 저장 프로시저의 **Database Mail XPs 옵션**을 사용합니다.
 
 ```sql
 EXEC sp_configure 'show advanced options', 1;  
@@ -113,7 +113,7 @@ Service Broker는 자신이 활성화될 때 메시지의 대화 수명을 검�
 
 
 
-##  <a name="RelatedContent"></a> 참고 항목
+##  <a name="see-also"></a><a name="RelatedContent"></a> 참고 항목
   
 -  [데이터베이스 메일 개요](database-mail.md)
 -  [데이터베이스 메일 프로필 만들기](create-a-database-mail-profile.md)

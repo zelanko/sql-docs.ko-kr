@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 327992369ca07d77eb349cb83fb74c4ecd4e622e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982220"
 ---
 # <a name="insert-transact-sql"></a>INSERT(Transact-SQL)
@@ -411,7 +411,7 @@ SELECT를 ORDER BY와 함께 사용하여 행을 채우는 INSERT 쿼리는 ID �
   
  OPENROWSET 함수에 BULK 옵션을 사용하여 INSERT를 실행하려면 **sysadmin** 고정 서버 역할 또는 **bulkadmin** 고정 서버 역할의 멤버여야 합니다.  
   
-##  <a name="InsertExamples"></a> 예  
+##  <a name="examples"></a><a name="InsertExamples"></a> 예  
   
 |Category|중요한 구문 요소|  
 |--------------|------------------------------|  
@@ -424,7 +424,7 @@ SELECT를 ORDER BY와 함께 사용하여 행을 채우는 INSERT 쿼리는 ID �
 |[힌트를 사용하여 쿼리 최적화 프로그램의 기본 동작 재정의](#TableHints)|테이블 힌트|  
 |[INSERT 문의 결과 캡처](#CaptureResults)|OUTPUT 절|  
   
-###  <a name="BasicSyntax"></a> 기본 구문  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> 기본 구문  
  이 섹션의 예에서는 최소 필수 구문을 사용하여 INSERT 문의 기본 기능을 보여 줍니다.  
   
 #### <a name="a-inserting-a-single-row-of-data"></a>A. 단일 데이터 행 삽입  
@@ -453,7 +453,7 @@ INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,
 VALUES (N'Square Yards', N'Y2', GETDATE());  
 ```  
   
-###  <a name="ColumnValues"></a> 열 값 처리  
+###  <a name="handling-column-values"></a><a name="ColumnValues"></a> 열 값 처리  
  이 섹션의 예에서는 IDENTITY 속성, DEFAULT 값으로 정의되거나 **uniqueidentifer** 또는 사용자 정의 형식 열과 같은 데이터 형식으로 정의된 열에 값을 삽입하는 방법을 보여줍니다.  
   
 #### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>D. 기본값을 갖는 열이 포함된 테이블에 데이터 삽입  
@@ -529,7 +529,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '1,5'));
 INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));  
 ```  
   
-###  <a name="OtherTables"></a> 다른 테이블의 데이터 삽입  
+###  <a name="inserting-data-from-other-tables"></a><a name="OtherTables"></a> 다른 테이블의 데이터 삽입  
  이 섹션의 예에서는 한 테이블의 행을 다른 테이블에 삽입하는 방법을 보여 줍니다.  
   
 #### <a name="h-using-the-select-and-execute-options-to-insert-data-from-other-tables"></a>H. SELECT 및 EXECUTE 옵션을 사용하여 다른 테이블의 데이터 삽입  
@@ -666,7 +666,7 @@ INSERT INTO dbo.EmployeeSales
     ORDER BY sp.SalesYTD DESC;  
 ```  
   
-###  <a name="TargetObjects"></a> 표준 테이블 이외의 대상 개체 지정  
+###  <a name="specifying-target-objects-other-than-standard-tables"></a><a name="TargetObjects"></a> 표준 테이블 이외의 대상 개체 지정  
  이 섹션의 예에서는 뷰 또는 테이블 변수를 지정하여 행을 삽입하는 방법을 보여 줍니다.  
   
 #### <a name="k-inserting-data-by-specifying-a-view"></a>11. 뷰를 지정하여 데이터 삽입  
@@ -712,7 +712,7 @@ SELECT * FROM @MyTableVar;
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> 원격 테이블에 행 삽입  
+###  <a name="inserting-rows-into-a-remote-table"></a><a name="RemoteTables"></a> 원격 테이블에 행 삽입  
  이 섹션의 예에서는 [연결된 서버](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 또는 [행 집합 함수](../../t-sql/functions/rowset-functions-transact-sql.md)를 사용하여 원격 테이블을 참조하여 원격 대상 테이블에 행을 삽입하는 방법을 보여줍니다.  
   
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>13. 연결된 서버를 사용하여 원격 테이블에 데이터 삽입  
@@ -804,7 +804,7 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
   
-###  <a name="BulkLoad"></a> 테이블 또는 데이터 파일에서 데이터 대량 로드  
+###  <a name="bulk-loading-data-from-tables-or-data-files"></a><a name="BulkLoad"></a> 테이블 또는 데이터 파일에서 데이터 대량 로드  
  이 섹션의 예에서는 INSERT 문을 사용하여 데이터를 테이블에 대량으로 로드하는 두 가지 방법을 보여 줍니다.  
   
 #### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>17. 최소 로깅으로 힙에 데이터 삽입  
@@ -864,7 +864,7 @@ FROM OPENROWSET (
     ROWS_PER_BATCH = 15000)AS b ;  
 ```  
   
-###  <a name="TableHints"></a> 힌트를 사용하여 쿼리 최적화 프로그램의 기본 동작 재정의  
+###  <a name="overriding-the-default-behavior-of-the-query-optimizer-by-using-hints"></a><a name="TableHints"></a> 힌트를 사용하여 쿼리 최적화 프로그램의 기본 동작 재정의  
  이 섹션의 예에서는 INSERT 문을 처리할 때 쿼리 최적화 프로그램의 기본 동작을 임시로 재정의하기 위해 [테이블 힌트](../../t-sql/queries/hints-transact-sql-table.md)를 사용하는 방법을 보여 줍니다.  
   
 > [!CAUTION]  
@@ -881,7 +881,7 @@ INSERT INTO Production.Location WITH (XLOCK)
 VALUES ( N'Final Inventory', 15.00, 80.00);  
 ```  
   
-###  <a name="CaptureResults"></a> INSERT 문의 결과 캡처  
+###  <a name="capturing-the-results-of-the-insert-statement"></a><a name="CaptureResults"></a> INSERT 문의 결과 캡처  
  이 섹션의 예에서는 [OUTPUT 절](../../t-sql/queries/output-clause-transact-sql.md)을 사용하여 INSERT 문의 영향을 받는 각 행의 정보 또는 각 행을 기반으로 하는 식을 반환하는 방법을 보여 줍니다. 이러한 결과를 처리 애플리케이션에 반환하여 확인 메시지, 보관 및 기타 애플리케이션 요구 사항을 충족시키는 데 사용할 수 있습니다.  
   
 #### <a name="t-using-output-with-an-insert-statement"></a>20. INSERT 문에 OUTPUT 사용  

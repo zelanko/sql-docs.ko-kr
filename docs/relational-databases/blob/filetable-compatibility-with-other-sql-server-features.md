@@ -14,17 +14,17 @@ ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d199ba6ad64f3b259d7b94ac6180d12e83a311e1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252708"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable과 기타 SQL Server 기능 간 호환성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   FileTable이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 기능과 함께 작동하는 방식에 대해 설명합니다.  
   
-##  <a name="alwayson"></a> AlwaysOn 가용성 그룹과 FileTable  
+##  <a name="alwayson-availability-groups-and-filetables"></a><a name="alwayson"></a> AlwaysOn 가용성 그룹과 FileTable  
  FILESTREAM 또는 FileTable 데이터가 포함된 데이터베이스가 AlwaysOn 가용성 그룹에 속하는 경우  
   
 -   FileTable 기능은 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]에서 부분적으로 지원됩니다. 장애 조치(Failover) 이후 FileTable 데이터는 주 복제본에서 액세스할 수 있지만 FileTable 데이터를 읽기 가능한 보조 복제본에서는 액세스할 수 없습니다.  
@@ -35,26 +35,26 @@ ms.locfileid: "75252708"
   
 -   파일 시스템 API를 통한 FILESTREAM 또는 FileTable 데이터에 대한 모든 액세스에는 컴퓨터 이름 대신 VNN이 사용되어야 합니다. 자세한 내용은 [Always On 가용성 그룹의 FILESTREAM 및 FileTable&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md)을 참조하세요.  
   
-##  <a name="OtherPartitioning"></a> 분할과 FileTable  
+##  <a name="partitioning-and-filetables"></a><a name="OtherPartitioning"></a> 분할과 FileTable  
  분할은 FileTable에서 지원되지 않습니다. 여러 FILESTREAM 파일 그룹에 대한 지원을 사용하면 SQL 2008 FILESTREAM과 달리 대부분의 시나리오에서 분할에 의존하지 않고도 순수한 확장 문제를 처리할 수 있습니다.  
   
-##  <a name="OtherRepl"></a> 복제와 FileTable  
+##  <a name="replication-and-filetables"></a><a name="OtherRepl"></a> 복제와 FileTable  
  복제 및 관련 기능(트랜잭션 복제, 병합 복제, 변경 데이터 캡처 및 변경 내용 추적 포함)은 FileTable에서 지원되지 않습니다.  
   
-##  <a name="OtherIsolation"></a> 트랜잭션 의미 체계와 FileTable  
+##  <a name="transaction-semantics-and-filetables"></a><a name="OtherIsolation"></a> 트랜잭션 의미 체계와 FileTable  
  **Windows 애플리케이션**  
  Windows 애플리케이션은 데이터베이스 트랜잭션을 인식하지 못하므로 Windows 쓰기 작업에서는 데이터베이스 트랜잭션의 ACID 속성을 제공하지 않습니다. 따라서 Windows 업데이트 작업에는 트랜잭션 롤백 및 복구를 수행할 수 없습니다.  
   
  **Transact-SQL 애플리케이션**  
  FileTable의 FILESTREAM(file_stream) 열에서 작동하는 TSQL 애플리케이션의 경우 격리 의미 체계는 일반적인 사용자 테이블의 FILESTREAM 데이터 형식을 사용할 때와 동일합니다.  
   
-##  <a name="OtherQueryNot"></a> 쿼리 알림과 FileTable  
+##  <a name="query-notifications-and-filetables"></a><a name="OtherQueryNot"></a> 쿼리 알림과 FileTable  
  쿼리의 WHERE 절이나 다른 부분에 FileTable의 FILESTREAM 열에 대한 참조를 포함할 수 없습니다.  
   
-##  <a name="OtherSelectInto"></a> SELECT INTO와 FileTable  
+##  <a name="select-into-and-filetables"></a><a name="OtherSelectInto"></a> SELECT INTO와 FileTable  
  FileTable에서 실행된 SELECT INTO 문은 일반적인 테이블의 FILESTREAM 열과 마찬가지로 만들어진 대상 테이블의 FileTable 의미 체계를 전파하지 않습니다. 모든 대상 테이블 열은 일반적인 열과 같이 동작하며 FileTable 의미 체계가 연결되지 않습니다.  
   
-##  <a name="OtherTriggers"></a> 트리거와 FileTable  
+##  <a name="triggers-and-filetables"></a><a name="OtherTriggers"></a> 트리거와 FileTable  
  **DDL(데이터 정의 언어) 트리거**  
  DDL 트리거의 경우 FileTable과 관련하여 특별히 고려해야 할 사항이 없습니다. 일반적인 DDL 트리거는 CREATE/ALTER DATABASE 작업과 FileTable에 대한 CREATE/ALTER TABLE 작업이 수행될 때 실행됩니다. 트리거는 EVENTDATA() 함수를 호출하여 DDL 명령 텍스트 및 기타 정보를 비롯한 실제 이벤트 데이터를 검색할 수 있습니다. 기존 Eventdata 스키마에 대한 새 이벤트나 변경 내용은 없습니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "75252708"
   
 -   관리 작업이나 데이터베이스 충돌로 인해 Win32 핸들이 명시적으로 중지된 경우와 같이 Win32 핸들이 비정상적으로 종료된 경우에는 이 비정상적으로 종료된 Win32 애플리케이션에서 FILESTREAM 내용을 변경했더라도 복구 작업 중 사용자 트리거가 실행되지 않습니다.  
   
-##  <a name="OtherViews"></a> 뷰와 FileTable  
+##  <a name="views-and-filetables"></a><a name="OtherViews"></a> 뷰와 FileTable  
  **뷰**  
  다른 테이블과 마찬가지로 FileTable에서도 뷰를 만들 수 있습니다. 그러나 FileTable에서 만든 뷰에는 다음 고려 사항이 적용됩니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "75252708"
  **인덱싱된 뷰**  
  현재 인덱싱된 뷰에는 FILESTREAM 열이나 FILESTREAM 열에 종속된 계산/지속형 계산 열이 포함될 수 없습니다. 이 동작은 FileTable에 정의된 뷰에도 그대로 적용됩니다.  
   
-##  <a name="OtherSnapshots"></a> 스냅샷 격리와 FileTable  
+##  <a name="snapshot-isolation-and-filetables"></a><a name="OtherSnapshots"></a> 스냅샷 격리와 FileTable  
  RCSI(커밋된 읽기 스냅샷 격리)와 SI(스냅샷 격리)는 데이터에 대한 업데이트 작업이 수행 중인 경우에도 판독기에서 데이터의 스냅샷을 사용할 수 있도록 하는 기능에 의존합니다. 그러나 FileTable을 사용하면 Filestream 데이터에 대한 비트랜잭션 쓰기 액세스가 허용됩니다. 따라서 FileTable이 포함된 데이터베이스에서 이러한 기능을 사용하는 경우에는 다음 제한 사항이 적용됩니다.  
   
 -   FileTable이 포함된 데이터베이스를 변경하여 RCSI/SI를 사용하도록 설정할 수 있습니다.  
@@ -112,10 +112,10 @@ ms.locfileid: "75252708"
   
     -   전체 텍스트 인덱싱은 데이터베이스 옵션이 READ_COMMITTED_SNAPSHOT이든 ALLOW_SNAPSHOT_ISOLATION이든 관계없이 항상 성공합니다.  
   
-##  <a name="readsec"></a> 읽기 가능한 보조 데이터베이스  
+##  <a name="readable-secondary-databases"></a><a name="readsec"></a> 읽기 가능한 보조 데이터베이스  
  읽기 가능한 보조 데이터베이스에는 이전 섹션인 [스냅샷 격리와 FileTable](#OtherSnapshots)에 설명된 것처럼 스냅샷과 동일한 고려 사항이 적용됩니다.  
   
-##  <a name="CDB"></a> 포함된 데이터베이스와 FileTable  
+##  <a name="contained-databases-and-filetables"></a><a name="CDB"></a> 포함된 데이터베이스와 FileTable  
  FileTable 기능이 종속되는 FILESTREAM 기능을 사용하려면 데이터베이스 외부에서의 몇 가지 구성이 필요합니다. 따라서 FILESTREAM 또는 FileTable을 사용하는 데이터베이스는 완전히 포함되지 않습니다.  
   
  포함된 사용자와 같은 포함된 데이터베이스의 특정 기능을 사용하려면 데이터베이스 포함 옵션을 PARTIAL로 설정하면 됩니다. 그러나 이 경우 일부 데이터베이스 설정은 데이터베이스에 포함되지 않으며 데이터베이스를 이동할 때 자동으로 이동되지 않는다는 것을 알고 있어야 합니다.  

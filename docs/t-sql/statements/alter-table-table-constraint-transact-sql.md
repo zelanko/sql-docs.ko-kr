@@ -17,10 +17,10 @@ ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 92e12a2991d03c125e3247d1dd681b0a5754e2f9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981997"
 ---
 # <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint(Transact-SQL)
@@ -130,7 +130,7 @@ ms.locfileid: "73981997"
   
  **Vendor** 테이블의 행에 대해 DELETE 문을 실행하고 **ProductVendor.VendorID**에 대해 ON DELETE CASCADE 동작을 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 **ProductVendor** 테이블에 하나 이상의 종속 행이 있는지 확인합니다. **ProductVendor** 테이블에 종속 행이 있는 경우 삭제되며 **Vendor** 테이블에서 참조된 행도 삭제됩니다.  
   
- 반대로 NO ACTION을 지정한 경우 **ProductVendor** 테이블에 **Vendor** 행을 참조하는 행이 하나 이상 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 오류가 발생하고 참조된 행의 삭제 동작이 롤백됩니다.  
+ 반대로 NO ACTION을 지정한 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]ProductVendor**테이블에**Vendor**행을 참조하는 행이 하나 이상 있으면**에서 오류가 발생하고 참조된 행의 삭제 동작이 롤백됩니다.  
   
  ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
  변경된 테이블의 행에 참조 관계가 있고 참조된 행이 부모 테이블에서 업데이트될 경우 해당 행에 대해 발생할 동작을 지정합니다. 기본값은 NO ACTION입니다.  
@@ -155,7 +155,7 @@ ms.locfileid: "73981997"
   
  **Vendor** 테이블의 행에 대해 UPDATE 문을 실행하고 **ProductVendor.VendorID**에 대해 ON UPDATE CASCADE 동작을 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]는 **ProductVendor** 테이블에 하나 이상의 종속 행이 있는지 확인합니다. **ProductVendor** 테이블에 종속 행이 있는 경우 업데이트되며 **Vendor** 테이블에 있는 참조된 행도 업데이트됩니다.  
   
- 반대로 NO ACTION을 지정한 경우 **ProductVendor** 테이블에 **Vendor** 행을 참조하는 행이 하나 이상 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 오류가 발생하고 참조된 행의 업데이트 동작이 롤백됩니다.  
+ 반대로 NO ACTION을 지정한 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]ProductVendor**테이블에**Vendor**행을 참조하는 행이 하나 이상 있으면**에서 오류가 발생하고 참조된 행의 업데이트 동작이 롤백됩니다.  
   
  NOT FOR REPLICATION  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  

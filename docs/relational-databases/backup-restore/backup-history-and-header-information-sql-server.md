@@ -34,10 +34,10 @@ ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: f2b04fb3c35f810e37e1646446f7ebdfb8915ee1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75242592"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>백업 기록 및 헤더 정보(SQL Server)
@@ -65,7 +65,7 @@ ms.locfileid: "75242592"
   
 -   [관련 작업](#RelatedTasks)  
   
-##  <a name="BnRHistoryTables"></a> 백업 및 복원 기록 테이블  
+##  <a name="backup-and-restore-history-tables"></a><a name="BnRHistoryTables"></a> 백업 및 복원 기록 테이블  
  이 섹션에서는 **msdb** 시스템 데이터베이스에 백업 및 복원 메타데이터를 저장하는 기록 테이블에 대해 설명합니다.  
   
 |기록 테이블|Description|  
@@ -82,7 +82,7 @@ ms.locfileid: "75242592"
 > [!NOTE]  
 >  복원을 수행하면 백업 기록 테이블 및 복원 기록 테이블이 수정됩니다.  
   
-##  <a name="TsqlStatementsForBackupHistory"></a> 백업 기록에 액세스하는 Transact-SQL 문  
+##  <a name="transact-sql-statements-for-accessing-backup-history"></a><a name="TsqlStatementsForBackupHistory"></a> 백업 기록에 액세스하는 Transact-SQL 문  
  복원 정보 문은 백업 기록 테이블에 저장된 정보와 같습니다.  
   
 > [!IMPORTANT]  
@@ -94,7 +94,7 @@ ms.locfileid: "75242592"
 |[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|특정 백업 디바이스의 모든 백업 세트에 대한 백업 헤더 정보를 모두 검색합니다. RESTORE HEADERONLY 실행 결과는 결과 집합입니다.<br /><br /> 자세한 내용은 이 항목의 뒷부분에 나오는 "백업 헤더 정보 보기"를 참조하세요.|  
 |[RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|[backupmediaset](../../relational-databases/system-tables/backupmediaset-transact-sql.md)|지정한 백업 디바이스의 백업 미디어에 대한 정보가 포함된 결과 집합을 반환합니다.<br /><br /> 자세한 내용은 이 항목의 뒷부분에 나오는 "미디어 헤더 정보 보기"를 참조하세요.|  
   
-##  <a name="ListDbTlogFiles"></a> 데이터베이스 및 트랜잭션 로그 파일  
+##  <a name="database-and-transaction-log-files"></a><a name="ListDbTlogFiles"></a> 데이터베이스 및 트랜잭션 로그 파일  
  백업에서 트랜잭션 로그 파일과 데이터베이스의 목록을 만들 때 표시되는 정보에는 논리적 이름, 물리적 이름, 파일 형식(데이터베이스나 로그), 파일 그룹 멤버, 파일 크기(바이트 단위), 최대 허용 파일 크기, 미리 정의된 파일 증가 크기(바이트 단위) 등이 있습니다. 이 정보는 다음의 경우, 데이터베이스 백업을 복원하기 전에 데이터베이스 백업에서 파일 이름을 결정하는 데 유용합니다.  
   
 -   데이터베이스에 대한 파일이 하나 이상 있는 디스크 드라이브를 손실했을 경우  
@@ -105,7 +105,7 @@ ms.locfileid: "75242592"
   
      백업에 파일 목록을 만들면 어느 파일이 영향을 받았는지 알 수 있습니다. 예를 들어 백업에 포함된 파일을 드라이브 E에 복원해야 하는데 대상 서버에는 드라이브 E가 없는 경우 파일을 복원할 때 드라이브 Z 등의 다른 위치로 파일 위치를 변경해야 합니다.  
   
-##  <a name="MediaHeader"></a> 미디어 헤더 정보  
+##  <a name="media-header-information"></a><a name="MediaHeader"></a> 미디어 헤더 정보  
  미디어 헤더를 보면 미디어의 백업이 아닌 미디어 자체에 대한 정보가 표시되어 있습니다. 표시된 미디어 헤더 정보에는 미디어 이름, 설명, 미디어 헤더를 만든 소프트웨어 이름, 미디어 헤더가 쓰여진 날짜 등이 포함됩니다.  
   
 > [!NOTE]  
@@ -113,7 +113,7 @@ ms.locfileid: "75242592"
   
  자세한 내용은 이 항목의 뒷부분에 나오는 [미디어 헤더 정보 및 백업 헤더 정보 비교](#CompareMediaHeaderBackupHeader)를 참조하세요.  
   
-##  <a name="BackupHeader"></a> 백업 헤더 정보  
+##  <a name="backup-header-information"></a><a name="BackupHeader"></a> 백업 헤더 정보  
  백업 헤더를 보면 미디어에 있는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 비[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 세트에 대한 정보가 표시됩니다. 표시된 정보에는 사용한 백업 디바이스의 유형, 백업 유형(예: 데이터베이스, 트랜잭션, 파일 또는 차등 데이터베이스), 백업 시작과 중지 시간/날짜 정보 등이 포함됩니다. 이 정보는 테이프에서 복원할 백업 세트나 미디어에 포함된 백업을 결정할 때 유용합니다.  
   
 > [!NOTE]  
@@ -128,7 +128,7 @@ ms.locfileid: "75242592"
   
  특정 백업 세트를 복원하려면 복원할 백업 세트의 위치 번호를 지정하세요. 예를 들어 두 번째 백업 세트를 복원하려면 2를 복원할 백업 세트로 지정하세요.  
   
-##  <a name="CompareMediaHeaderBackupHeader"></a> 미디어 헤더 정보 및 백업 헤더 정보 비교  
+##  <a name="comparison-of-media-header-and-backup-header-information"></a><a name="CompareMediaHeaderBackupHeader"></a> 미디어 헤더 정보 및 백업 헤더 정보 비교  
  다음 그림에서는 백업 헤더를 볼 때와 미디어 헤더 정보를 볼 때의 차이점을 예를 들어 보여 줍니다. 미디어 헤더를 얻으려면 테이프의 시작에서만 정보를 검색해야 하고 백업 헤더를 얻으려면 모든 백업 세트의 헤더를 볼 수 있도록 전체 테이프를 검색해야 합니다.  
   
  ![3개의 SQL Server 백업 세트를 포함하는 미디어 세트](../../relational-databases/backup-restore/media/bnr-media-label.gif "3개의 SQL Server 백업 세트를 포함하는 미디어 세트")  
@@ -140,10 +140,10 @@ ms.locfileid: "75242592"
   
  백업 디바이스에서 모든 백업 세트의 백업 헤더 정보를 보는 방법은 이 항목의 앞부분에 나오는 "백업 헤더 정보 보기"를 참조하십시오.  
   
-##  <a name="Verification"></a> 백업 확인  
+##  <a name="backup-verification"></a><a name="Verification"></a> 백업 확인  
  백업 확인은 필수는 아니지만 유용한 기능입니다. 백업 확인은 백업의 모든 파일을 읽을 수 있고 저장할 수 있으며 백업을 사용해야 할 때 복원할 수 있도록 백업이 물리적으로 손상되지 않고 그대로인지 확인합니다. 백업 확인은 백업의 데이터 구조를 확인하지 않는다는 점을 이해하는 것이 중요합니다. 그러나 WITH CHECKSUMS를 사용하여 백업을 만든 경우 WITH CHECKSUMS를 사용하여 백업을 확인하면 백업 데이터의 안정성을 정확히 확인할 수 있습니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **백업 및 복원 기록 테이블에서 오래된 행을 삭제하려면**  
   
 -   [sp_delete_backuphistory&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)  

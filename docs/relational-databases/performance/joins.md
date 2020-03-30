@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287477"
 ---
 # <a name="joins-sql-server"></a>조인(SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "79287477"
 -   해시 조인   
 -   적응 조인([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터)
 
-## <a name="fundamentals"></a> 조인 기본 사항
+## <a name="join-fundamentals"></a><a name="fundamentals"></a> 조인 기본 사항
 조인을 사용하면 테이블 간의 논리적 관계를 기준으로 둘 이상의 테이블에서 데이터를 검색할 수 있습니다. 조인은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 특정 테이블의 데이터를 사용하여 다른 테이블의 행을 선택하는 방법을 나타냅니다.    
 
 조인 조건은 다음과 같이 쿼리에서 두 테이블의 관계를 정의합니다.    
@@ -108,7 +108,7 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 > 예를 들어 `SELECT * FROM t1 JOIN t2 ON SUBSTRING(t1.textcolumn, 1, 20) = SUBSTRING(t2.textcolumn, 1, 20)`은 t1 및 t2 테이블에 있는 각 텍스트 열의 처음 20자에 두 개의 테이블 내부 조인을 수행합니다.   
 > 또한 두 테이블의 ntext 또는 text 열을 비교할 수 있는 다른 방법으로는 `WHERE` 절로 열의 길이를 비교하는 것입니다. 예:`WHERE DATALENGTH(p1.pr_info) = DATALENGTH(p2.pr_info)`
 
-## <a name="nested_loops"></a> 중첩 루프 조인 이해
+## <a name="understanding-nested-loops-joins"></a><a name="nested_loops"></a> 중첩 루프 조인 이해
 한 조인 입력은 작고(행이 10개 미만) 다른 조인 입력은 아주 크며 조인 열에 인덱스가 지정된 경우에는 I/O와 비교 작업이 가장 적은 인덱스 중첩 루프 조인이 가장 빠른 조인 연산입니다. 
 
 *중첩 반복*이라고도 하는 중첩 루프 조인은 조인 입력 한 개를 외부 입력 테이블(그래픽 실행 계획에서 최상위 입력으로 표시됨)로 사용하고 한 개는 내부(최하위) 입력 테이블로 사용합니다. 외부 루프는 외부 입력 테이블에서 한 번에 한 행씩 입력받아 처리합니다. 각 외부 행에 대해 실행되는 내부 루프는 외부 테이블의 행과 일치하는 내부 입력 테이블의 행을 검색합니다.   
@@ -119,7 +119,7 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 
 중첩 루프의 조인 연산자의 OPTIMIZED 특성이 **True**로 설정되면 최적화된 중첩 루프(또는 일괄 처리 정렬)가 내부 쪽 테이블이 클 때 평행화 여부에 상관없이 I/O를 최소화하는 데 사용됨을 의미합니다. 정렬 자체가 숨겨진 작업임을 고려하면, 지정된 계획에서 이 최적화의 존재는 실행 계획을 분석할 때 아주 명백하지 않을 수 있습니다. 그러나 OPTIMIZED 특성에 대한 계획 XML을 살펴보면, 이는 중첩 루프 조인이 I/O 성능을 향상시키기 위해 입력 행을 다시 정렬하려고 함을 나타냅니다.
 
-## <a name="merge"></a> 병합 조인 이해
+## <a name="understanding-merge-joins"></a><a name="merge"></a> 병합 조인 이해
 두 조인 입력이 작지는 않지만 해당 조인 열을 기준으로 정렬되는 경우(예: 정렬된 인덱스 검색으로 가져온 경우)에는 병합 조인이 가장 빠른 조인 연산입니다. 두 조인 입력이 모두 크고 비슷한 크기인 경우에는 사전 정렬이 포함된 병합 조인과 해시 조인이 비슷한 성능을 제공합니다. 그러나 두 입력의 크기가 서로 많이 다를 때는 해시 조인 연산이 더 빠른 경우가 많습니다.       
 
 병합 조인에서는 두 입력이 모두 조인 조건자의 등가(ON) 절로 정의되는 병합 열에서 정렬되어야 합니다. 쿼리 최적화 프로그램은 일반적으로 인덱스를 검색하거나(인덱스가 적절한 열 집합에 있는 경우) 병합 조인 아래에 정렬 연산자를 배치합니다. 간혹 여러 개의 등가 절이 있는 경우도 있지만 사용 가능한 등가 절에서만 병합 열을 가져옵니다.    
@@ -132,7 +132,7 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 
 병합 조인 자체는 매우 빠르지만 정렬 작업이 필요한 경우에는 비용이 많이 드는 방법이 될 수 있습니다. 그러나 데이터 볼륨이 크고 원하는 데이터를 기존의 B-트리 인덱스로부터 미리 정렬된 상태로 가져올 수 있는 경우에는 주로 병합 조인이 사용 가능한 조인 알고리즘 중 가장 빠른 조인이 됩니다.    
 
-## <a name="hash"></a> 해시 조인 이해
+## <a name="understanding-hash-joins"></a><a name="hash"></a> 해시 조인 이해
 해시 조인은 크고 정렬되지 않았으며 인덱싱되지 않은 입력을 효율적으로 처리할 수 있습니다. 해시 조인이 복잡한 쿼리의 중간 결과에 유용한 이유는 다음과 같습니다.
 -   디스크에 명시적으로 저장한 다음 인덱싱하지 않는 한 중간 결과는 인덱싱되지 않으며 쿼리 계획의 다음 작업을 위해 적절히 정렬되지 않는 경우가 많습니다.
 -   쿼리 최적화 프로그램은 중간 결과 크기만을 예상합니다. 복잡한 쿼리에서는 예상이 크게 잘못될 수 있으므로 중간 결과를 처리하기 위한 알고리즘은 효율적이어야 할 뿐 아니라 중간 결과가 예상보다 훨씬 큰 것으로 확인되는 경우 적절히 하향 조정되어야 합니다.   
@@ -145,13 +145,13 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 
 다음 섹션에서는 인-메모리 해시 조인, 유예 해시 조인 및 재귀 해시 조인 등 여러 해시 조인 유형을 설명합니다.    
 
-### <a name="inmem_hash"></a> 인-메모리 해시 조인
+### <a name="in-memory-hash-join"></a><a name="inmem_hash"></a> 인-메모리 해시 조인
 해시 조인은 먼저 전체 빌드 입력을 스캔하거나 계산한 다음 해시 테이블을 메모리에 작성합니다. 해시 키에 대해 계산된 해시 값에 따라 각 행이 해시 버킷에 삽입됩니다. 전체 빌드 입력이 사용 가능한 메모리보다 작으면 모든 행을 해시 테이블에 삽입할 수 있습니다. 이 빌드 단계 다음으로는 검색 단계가 이어집니다. 전체 검색 입력은 한 번에 한 행씩 스캔 또는 계산되며, 각 검색 행에 대해 해시 키 값이 계산되고 해당 해시 버킷이 스캔되며 일치하는 항목이 생성됩니다.    
 
-### <a name="grace_hash"></a> 유예 해시 조인
+### <a name="grace-hash-join"></a><a name="grace_hash"></a> 유예 해시 조인
 빌드 입력이 메모리 크기에 맞지 않으면 해시 조인은 몇 개의 단계로 진행됩니다. 이것을 유예 해시 조인이라고 합니다. 각 단계마다 빌드 단계와 검색 단계가 있습니다. 처음에는 전체 빌드 및 검색 입력이 사용되며 해시 키에 대한 해시 함수를 사용하여 여러 파일로 분할됩니다. 해시 키에 대한 해시 함수를 사용하면 2개의 조인 레코드가 모두 동일한 파일 쌍에 있는 것이 보장됩니다. 따라서 2개의 큰 입력을 조인하는 태스크가 동일한 작업의 여러 개의 작은 인스턴스로 축소되었습니다. 그런 다음 해시 조인은 분할된 파일의 각 쌍에 적용됩니다.    
 
-### <a name="recursive_hash"></a> 재귀 해시 조인
+### <a name="recursive-hash-join"></a><a name="recursive_hash"></a> 재귀 해시 조인
 빌드 입력이 너무 커서 표준 외부 병합에 대한 입력에 여러 개의 병합 수준이 필요한 경우에는 여러 개의 분할 단계와 여러 개의 분할 수준이 요구됩니다. 일부 파티션만 큰 경우에는 해당 파티션에서만 추가 분할 단계가 사용됩니다. 모든 분할 단계를 가능한 한 빠르게 유지하기 위해서는 단일 스레드가 여러 개의 디스크 드라이브를 사용 중인 상태로 유지할 수 있도록 대형의 비동기 I/O 작업이 사용됩니다.    
 
 > [!NOTE]
@@ -164,7 +164,7 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 > [!NOTE]
 > 역할 반전은 모든 쿼리 참고 또는 구조와 관계없이 발생합니다. 역할 반전은 쿼리 계획에 나타나지 않습니다. 역할 반전이 발생하면 사용자는 인식하지 못합니다.
 
-### <a name="hash_bailout"></a> 해시 재귀 한도 초과
+### <a name="hash-bailout"></a><a name="hash_bailout"></a> 해시 재귀 한도 초과
 해시 재귀 한도 초과라는 용어는 경우에 따라 유예 해시 조인 또는 재귀 해시 조인을 설명하는 데 사용됩니다.    
 
 > [!NOTE]
@@ -172,7 +172,7 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 
 해시 재귀 한도 초과에 대한 자세한 내용은 [해시 경고 이벤트 클래스](../../relational-databases/event-classes/hash-warning-event-class.md)를 참조하세요.    
 
-## <a name="adaptive"></a> 적응 조인 이해
+## <a name="understanding-adaptive-joins"></a><a name="adaptive"></a> 적응 조인 이해
 [일괄 처리 모드](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) 적응 조인을 사용하면 [해시 조인](#hash) 또는 [중첩 루프](#nested_loops) 조인 메서드 선택을 첫 번째 입력이 검사된 **후**까지 지연할 수 있습니다. 적응 조인 연산자는 중첩된 루프 계획으로 전환할 시기를 결정하는 데 사용되는 임계값을 정의합니다. 따라서 쿼리 계획을 다시 컴파일하지 않고도 실행 중에 더 나은 조인 전략으로 동적으로 전환할 수 있습니다. 
 
 > [!TIP]
@@ -291,7 +291,7 @@ OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS'));
 > [!NOTE]
 > USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래그 설정보다 우선합니다. 
 
-## <a name="nulls_joins"></a> Null 값 및 조인
+## <a name="null-values-and-joins"></a><a name="nulls_joins"></a> Null 값 및 조인
 조인되는 테이블의 열에 Null 값이 있을 경우 Null 값은 서로 일치하지 않습니다. 조인되는 테이블 중 한 테이블의 열에 있는 Null 값은 외부 조인을 사용해야만 반환됩니다(`WHERE` 절이 Null 값을 배제하지 않을 경우).     
 
 다음 두 테이블에는 조인에 포함되는 열에 모두 NULL이 있습니다.     

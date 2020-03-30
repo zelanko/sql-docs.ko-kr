@@ -31,10 +31,10 @@ ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 15aa957b25323337f3b76b4f54f89a7121567a24
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982182"
 ---
 # <a name="use-sql-server-objects"></a>SQL Server 개체 사용
@@ -68,7 +68,7 @@ ms.locfileid: "73982182"
   
 -   [필요한 권한](#RequiredPermissions)  
   
-##  <a name="SQLServerAgentPOs"></a> SQL Server 에이전트 성능 개체  
+##  <a name="sql-server-agent-performance-objects"></a><a name="SQLServerAgentPOs"></a> SQL Server 에이전트 성능 개체  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 사용하는 성능 개체를 나열합니다.  
   
 |성능 개체|Description|  
@@ -78,7 +78,7 @@ ms.locfileid: "73982182"
 |[SQLAgent:JobSteps](../../relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계에 대한 정보를 제공합니다.|  
 |[SQLAgent:Statistics](../../relational-databases/performance-monitor/sql-server-agent-statistics-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에 대한 일반적인 정보를 제공합니다.|  
   
-##  <a name="ServiceBrokerPOs"></a> Service Broker 성능 개체  
+##  <a name="service-broker-performance-objects"></a><a name="ServiceBrokerPOs"></a> Service Broker 성능 개체  
  다음 표에서는 [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서 사용하는 성능 개체를 나열합니다.  
   
 |성능 개체|Description|  
@@ -87,7 +87,7 @@ ms.locfileid: "73982182"
 |[SQLServer:Broker Statistics](../../relational-databases/performance-monitor/sql-server-broker-statistics-object.md)|일반적인 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 정보를 제공합니다.|  
 |[SQLServer:Broker Transport](../../relational-databases/performance-monitor/sql-server-broker-dbm-transport-object.md)|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 네트워킹에 대한 정보를 제공합니다.|  
   
-##  <a name="SQLServerPOs"></a> SQL Server 성능 개체  
+##  <a name="sql-server-performance-objects"></a><a name="SQLServerPOs"></a> SQL Server 성능 개체  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체에 대해 설명합니다.  
   
 |성능 개체|Description|  
@@ -127,17 +127,17 @@ ms.locfileid: "73982182"
 |[SQLServer:Wait Statistics](../../relational-databases/performance-monitor/sql-server-wait-statistics-object.md)|대기 정보를 제공합니다.|  
 |[SQLServer:Workload Group Stats](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)|리소스 관리자 작업 그룹 통계에 대한 정보를 제공합니다.|  
   
-##  <a name="SQLServerReplicationPOs"></a> SQL Server 복제 성능 개체  
+##  <a name="sql-server-replication-performance-objects"></a><a name="SQLServerReplicationPOs"></a> SQL Server 복제 성능 개체  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에서 사용되는 성능 개체를 나열합니다.  
   
 |성능 개체|Description|  
 |------------------------|-----------------|  
 |**SQLServer:Replication Agents**<br /><br /> **SQLServer:Replication Snapshot**<br /><br /> **SQLServer:Replication Logreader**<br /><br /> **SQLServer:Replication Dist.**<br /><br /> **SQLServer:Replication Merge**<br /><br /> 자세한 내용은 [Monitoring Replication with System Monitor](../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md)을 참조하세요.|복제 에이전트 작업에 대한 정보를 제공합니다.|  
   
-##  <a name="SsisPipelineCounters"></a> SSIS 파이프라인 카운터  
+##  <a name="ssis-pipeline-counters"></a><a name="SsisPipelineCounters"></a> SSIS 파이프라인 카운터  
  **SSIS Pipeline** 카운터는 [성능 카운터](../../integration-services/performance/performance-counters.md)를 참조하세요.  
   
-##  <a name="RequiredPermissions"></a> 필요한 권한  
+##  <a name="required-permissions"></a><a name="RequiredPermissions"></a> 필요한 권한  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgent:Alerts **를 제외한**개체의 사용은 Windows 권한에 따라 달라집니다. **SQLAgent:Alerts** 를 사용하려면 **sysadmin**고정 서버 역할의 멤버여야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

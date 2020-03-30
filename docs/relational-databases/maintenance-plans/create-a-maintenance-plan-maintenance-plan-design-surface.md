@@ -13,10 +13,10 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 892c1dd28eb482eac046016c5cb59b3d711387c8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055175"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>유지 관리 계획 만들기(유지 관리 계획 디자인 화면)
@@ -33,20 +33,20 @@ ms.locfileid: "74055175"
   
 -   [유지 관리 계획 디자인 화면을 사용하여 유지 관리 계획 만들기](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   다중 서버 유지 관리 계획을 만들려면 하나의 마스터 서버 및 하나 이상의 대상 서버가 있는 다중 서버 환경을 구성해야 합니다. 다중 서버 유지 관리 계획은 마스터 서버에서 만들고 유지 관리해야 합니다. 이러한 계획을 대상 서버에서 볼 수 있지만 유지 관리할 수는 없습니다.  
   
 -   **db_ssisadmin** 및 **dc_admin** 역할의 멤버는 해당 권한을 **sysadmin**으로 승격할 수 있습니다. 이러한 권한 승격이 발생할 수 있는 것은 이러한 역할이 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 수정할 수 있고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 **에이전트의** sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 컨텍스트를 사용하여 이러한 패키지를 실행할 수 있기 때문입니다. 유지 관리 계획, 데이터 컬렉션 집합 및 기타 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 때 이러한 권한 상승이 발생하지 않도록 하려면 패키지를 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업이 제한된 권한을 갖는 프록시 계정을 사용하도록 구성하거나 **db_ssisadmin** 및 **dc_admin** 역할에 **sysadmin** 멤버만 추가합니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  유지 관리 계획을 만들거나 관리하려면 **sysadmin** 고정 서버 역할의 멤버여야 합니다. 개체 탐색기에 **sysadmin** 고정 서버 역할의 멤버인 사용자에 대한 **유지 관리 계획** 노드만 표시됩니다.  
   
-##  <a name="SSMSProcedure"></a> 유지 관리 계획 디자인 화면 사용  
+##  <a name="using-maintenance-plan-design-surface"></a><a name="SSMSProcedure"></a> 유지 관리 계획 디자인 화면 사용  
   
 #### <a name="to-create-a-maintenance-plan"></a>유지 관리 계획을 만들려면  
   
@@ -56,7 +56,7 @@ ms.locfileid: "74055175"
   
 3.  **유지 관리 계획** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 유지 관리 계획**을 선택합니다.  
   
-4.  **새 유지 관리 계획** 대화 상자의 **이름** 상자에 계획의 이름을 입력하고 **확인**을 클릭합니다. 이렇게 하면 주 그리드에서 만든 **Subplan_1** 하위 계획이 있는 *maintenance_plan_name* **[Design]** 화면과 도구 상자가 열립니다.  
+4.  **새 유지 관리 계획** 대화 상자의 **이름** 상자에 계획의 이름을 입력하고 **확인**을 클릭합니다. 이렇게 하면 주 그리드에서 만든 *Subplan_1* 하위 계획이 있는 **maintenance_plan_name** **[Design]** 화면과 도구 상자가 열립니다.  
   
      다음 옵션은 디자인 화면의 헤더에서 사용할 수 있습니다.  
   
@@ -161,10 +161,10 @@ ms.locfileid: "74055175"
          두 태스크 사이에서 제약 조건이 작동하는 방식을 정의합니다.  
   
          **평가 작업**  목록  
-         선행 제약 조건에서 사용하는 평가 작업을 지정합니다. 사용할 수 있는 작업에는 **제약 조건**, **식**, **식 및 제약 조건**, **식 또는 제약 조건**이 있습니다.  
+         선행 제약 조건에서 사용하는 평가 작업을 지정합니다. 작업에는 **제약 조건**, **식**, **식 및 제약 조건**, **식 또는 제약 조건**이 있습니다.  
   
          **값** 목록  
-         제약 조건 값을 지정합니다. **성공**, **실패** 또는 **완료**와 같은 값을 사용할 수 있습니다. 기본값은**성공** 입니다.  
+         제약 조건 값을 **성공**, **실패**또는 **완료**로 지정합니다. 기본값은**성공** 입니다.  
   
         > [!NOTE]  
         >  선행 제약 조건 줄은 **성공**인 경우 녹색, **실패**인 경우 빨간색, **완료**인 경우 파란색으로 표시됩니다.  

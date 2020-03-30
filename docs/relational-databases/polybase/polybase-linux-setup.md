@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
 ms.openlocfilehash: 117620c170b183b12d06eb717cfc1bb4b2dc559c
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77173554"
 ---
 # <a name="install-polybase-on-linux"></a>Linux에 PolyBase 설치
@@ -36,7 +36,7 @@ ms.locfileid: "77173554"
 
 
 
-## <a name="RHEL">RHEL에 설치</a>
+## <a name=""></a><a name="RHEL">RHEL에 설치</a>
 
 다음 명령을 사용하여 Red Hat Enterprise Linux에 **mssql-server-polybase**를 설치합니다. 
 
@@ -55,7 +55,7 @@ sudo systemctl restart mssql-server
 
 오프라인 설치가 필요한 경우 [릴리스 정보](../../linux/sql-server-linux-release-notes.md)에서 PolyBase 패키지 다운로드를 찾습니다. 그런 다음, [SQL Server 설치](../../linux/sql-server-linux-setup.md#offline) 문서에 설명된 것과 동일한 오프라인 설치 단계를 사용합니다.
 
-## <a name="ubuntu">Ubuntu에 설치</a>
+## <a name=""></a><a name="ubuntu">Ubuntu에 설치</a>
 
 다음 명령을 사용하여 Ubuntu에 **mssql-server-polybase**를 설치합니다. 
 
@@ -74,7 +74,7 @@ sudo systemctl restart mssql-server
 
 오프라인 설치가 필요한 경우 [릴리스 정보](../../linux/sql-server-linux-release-notes.md)에서 PolyBase 패키지 다운로드를 찾습니다. 그런 다음, [SQL Server 설치](../../linux/sql-server-linux-setup.md#offline) 문서에 설명된 것과 동일한 오프라인 설치 단계를 사용합니다.
 
-## <a name="SLES">SLES에 설치</a>
+## <a name=""></a><a name="SLES">SLES에 설치</a>
 
 다음 명령을 사용하여 SUSE Linux Enterprise Server에 **mssql-server-polybase**를 설치합니다. 
 
@@ -95,7 +95,7 @@ sudo systemctl restart mssql-server
 오프라인 설치가 필요한 경우 [릴리스 정보](../../linux/sql-server-linux-release-notes.md)에서 PolyBase 패키지 다운로드를 찾습니다. 그런 다음, [SQL Server 설치](../../linux/sql-server-linux-setup.md#offline) 문서에 설명된 것과 동일한 오프라인 설치 단계를 사용합니다.
 
 
-## <a name="enable">PolyBase 사용</a> 
+## <a name=""></a><a name="enable">PolyBase 사용</a> 
 
 설치 후 PolyBase를 활성화하여 해당 기능에 액세스해야 합니다. 설치된 SQL Server 인스턴스에 연결하고 다음 Transact-SQL 명령을 사용하여 활성화합니다.
 
