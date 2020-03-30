@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: e81bf59912499310fc95afd29758d5be5f691118
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056361"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>서식 파일을 사용하여 데이터 대량 가져오기(SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "74056361"
 |---|
 |[시작하기 전에](#begin)<br />[예제 테스트 조건](#etc)<br />&emsp;&#9679;&emsp;[샘플 테이블](#sample_table)<br />&emsp;&#9679;&emsp;[샘플 데이터 파일](#sample_data_file)<br />[서식 파일 만들기](#create_format_file)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일 만들기](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[XML 서식 파일 만들기](#xml_format_file)<br />[서식 파일을 사용하여 데이터를 대량으로 가져오기](#import_data)<br />&emsp;&#9679;&emsp;[bcp 및 비 XML 서식 파일 사용](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[bcp 및 비 XML 서식 파일 사용](#bcp_xml)<br />&emsp;&#9679;&emsp;[BULK INSERT 및 비 XML 서식 파일 사용](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[BULK INSERT 및 XML 서식 파일 사용](#bulk_xml)<br />&emsp;&#9679;&emsp;[OPENROWSET(BULK...) 및 비 XML 서식 파일 사용](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[OPENROWSET(BULK...) 및 XML 서식 파일 사용](#openrowset_xml)<p>                                                                                                                                                                                                                  </p>|
   
-## 시작하기 전에<a name="begin"></a>
+## <a name="before-you-begin"></a>시작하기 전에<a name="begin"></a>
 * 유니코드 문자 데이터 파일에 서식 파일을 사용하려면 모든 입력 필드가 유니코드 텍스트 문자열(즉, 고정 크기 또는 문자 종료 유니코드 문자열)이어야 합니다.
 * [SQLXML](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md) 데이터를 대량으로 내보내거나 가져오려면 서식 파일에서 다음 데이터 형식 중 하나를 사용합니다.
   * SQLCHAR 또는 SQLVARYCHAR(데이터를 클라이언트 코드 페이지나 데이터 정렬에 포함된 코드 페이지로 보냅니다.)
@@ -41,10 +41,10 @@ ms.locfileid: "74056361"
   * [SQL Server에서 Azure SQL Data Warehouse로 데이터 로드(플랫 파일)](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-from-sql-server-with-bcp/)
   * [데이터 마이그레이션](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-migrate-data/)
 
-## 예제 테스트 조건<a name="etc"></a>  
+## <a name="example-test-conditions"></a>예제 테스트 조건<a name="etc"></a>  
 이 항목의 서식 파일 예제는 아래 정의된 테이블 및 데이터 파일을 기반으로 합니다.
 
-### **샘플 테이블**<a name="sample_table"></a>
+### <a name="sample-table"></a>**샘플 테이블**<a name="sample_table"></a>
 아래 스크립트에서는 테스트 데이터베이스와 `myFirstImport`라는 테이블을 만듭니다.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```sql
 CREATE DATABASE TestDatabase;
@@ -59,7 +59,7 @@ CREATE TABLE dbo.MyFirstImport (
    );
 ```
 
-### **샘플 데이터 파일**<a name="sample_data_file"></a>
+### <a name="sample-data-file"></a>**샘플 데이터 파일**<a name="sample_data_file"></a>
 메모장을 사용하여 빈 파일 `D:\BCP\myFirstImport.bcp` 을 만들고 다음 데이터를 삽입합니다.
 ```
 1,Anthony,Grosse,1980-02-23
@@ -95,10 +95,10 @@ Get-Content -Path $bcpFile;
 Notepad.exe $bcpfile;
 ```
 
-## 서식 파일 만들기<a name="create_format_file"></a>
+## <a name="creating-the-format-files"></a>서식 파일 만들기<a name="create_format_file"></a>
 SQL Server는 두 유형의 서식 파일, 즉 비 XML 서식 파일과 XML 서식 파일을 지원합니다.  비 XML 서식 파일은 이전 버전의 SQL Server에서 원래 지원했던 서식 파일입니다.
 
-### **비 XML 서식 파일 만들기**<a name="nonxml_format_file"></a>
+### <a name="creating-a-non-xml-format-file"></a>**비 XML 서식 파일 만들기**<a name="nonxml_format_file"></a>
 자세한 내용은 [비 XML 서식 파일(SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 을 검토하세요.  다음 명령은 [bcp 유틸리티](../../tools/bcp-utility.md) 를 사용하여 `myFirstImport.fmt`의 스키마를 기반으로 비 xml 서식 파일 `myFirstImport`를 생성합니다.  bcp 명령을 사용하여 서식 파일을 만들려면 데이터 파일 경로 대신 **format** 인수를 지정하고 **nul** 을 사용합니다.  format 옵션에는 **-f** 옵션도 필요합니다.  또한 이 예제에서 한정자 **c** 는 문자 데이터를 지정하는 데 사용되고, **t,** 는 쉼표를 [필드 종결자](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)로 지정하는 데 사용되며, **T** 는 통합된 보안을 사용하여 신뢰할 수 있는 연결을 지정하는 데 사용됩니다.  명령 프롬프트에서 다음 명령을 입력합니다.
 
 ```cmd
@@ -124,7 +124,7 @@ Notepad D:\BCP\myFirstImport.fmt
 > `SQLState = S1000, NativeError = 0`  
 > `Error = [Microsoft][ODBC Driver 13 for SQL Server]I/O error while reading BCP format file`
 
-### **XML 서식 파일 만들기**<a name="xml_format_file"></a>  
+### <a name="creating-an-xml-format-file"></a>**XML 서식 파일 만들기**<a name="xml_format_file"></a>  
 자세한 내용은 [XML 서식 파일(SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) 을 검토하세요.  다음 명령은 [bcp 유틸리티](../../tools/bcp-utility.md) 를 사용하여 `myFirstImport.xml`의 스키마를 기반으로 XML 서식 파일 `myFirstImport`을 생성합니다. bcp 명령을 사용하여 서식 파일을 만들려면 데이터 파일 경로 대신 **format** 인수를 지정하고 **nul** 을 사용합니다.  서식 옵션에는 항상 **-f** 옵션이 필요하며 XML 서식 파일을 만들려면 **-x** 옵션도 지정해야 합니다.  또한 이 예제에서 한정자 **c** 는 문자 데이터를 지정하는 데 사용되고, **t,** 는 쉼표를 [필드 종결자](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)로 지정하는 데 사용되며, **T** 는 통합된 보안을 사용하여 신뢰할 수 있는 연결을 지정하는 데 사용됩니다.  명령 프롬프트에서 다음 명령을 입력합니다.
 ```cmd
 bcp TestDatabase.dbo.myFirstImport format nul -c -x -f D:\BCP\myFirstImport.xml -t, -T
@@ -152,10 +152,10 @@ XML 서식 파일 `D:\BCP\myFirstImport.xml` 은 다음과 같이 표시됩니�
 </BCPFORMAT>
 ```
 
-## 서식 파일을 사용하여 데이터를 대량으로 가져오기<a name="import_data"></a>
+## <a name="using-a-format-file-to-bulk-import-data"></a>서식 파일을 사용하여 데이터를 대량으로 가져오기<a name="import_data"></a>
 아래 예제에서는 위에서 만든 데이터베이스, 데이터 파일 및 서식 파일을 사용합니다.
 
-### **[bcp](../../tools/bcp-utility.md) 및 [비 XML 서식 파일 사용](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_nonxml"></a>
+### <a name="using-bcp-and-non-xml-format-file"></a>**[bcp](../../tools/bcp-utility.md) 및 [비 XML 서식 파일 사용](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_nonxml"></a>
 명령 프롬프트에서 다음 명령을 입력합니다.
 ```cmd
 REM Truncate table (for testing)
@@ -169,7 +169,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.MyFirstImport"
 ```
 
 
-### **[bcp](../../tools/bcp-utility.md) 및 [XML 서식 파일 사용](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="bcp_xml"></a>
+### <a name="using-bcp-and-xml-format-file"></a>**[bcp](../../tools/bcp-utility.md) 및 [XML 서식 파일 사용](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="bcp_xml"></a>
 명령 프롬프트에서 다음 명령을 입력합니다.
 ```cmd
 REM Truncate table (for testing)
@@ -183,7 +183,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.MyFirstImport;"
 ```
 
 
-### **[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 [비 XML 서식 파일](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_nonxml"> 사용</a>
+### <a name="using-bulk-insert-and-non-xml-format-file"></a>**[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 [비 XML 서식 파일](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_nonxml"> 사용</a>
 Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```sql
 USE TestDatabase;  
@@ -199,7 +199,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
 
-### **[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 [XML 서식 파일](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="bulk_xml"> 사용</a>
+### <a name="using-bulk-insert-and-xml-format-file"></a>**[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 [XML 서식 파일](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="bulk_xml"> 사용</a>
 Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```sql
 USE TestDatabase;  
@@ -215,7 +215,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
 
-### **[OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 및 [비 XML 서식 파일](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset_nonxml"> 사용</a>    
+### <a name="using-openrowsetbulk-and-non-xml-format-file"></a>**[OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 및 [비 XML 서식 파일](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset_nonxml"> 사용</a>    
 Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```sql
 USE TestDatabase;
@@ -234,7 +234,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
 
-### **[OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 및 [XML 서식 파일](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="openrowset_xml"> 사용</a>
+### <a name="using-openrowsetbulk-and-xml-format-file"></a>**[OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 및 [XML 서식 파일](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="openrowset_xml"> 사용</a>
 Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```sql
 USE TestDatabase;  

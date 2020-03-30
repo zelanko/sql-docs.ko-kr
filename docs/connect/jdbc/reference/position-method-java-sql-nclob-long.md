@@ -11,10 +11,10 @@ ms.assetid: f2354278-d128-4cf4-a170-22c05fcb763b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ea868190b635a9471bfad424d6fc74572970799b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976366"
 ---
 # <a name="position-method-javasqlnclob-long"></a>position 메서드(java.sql.NClob, long)

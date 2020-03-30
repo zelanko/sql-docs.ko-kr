@@ -20,10 +20,10 @@ ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 24c4b8af65830f8cc3a4a4bb2c4084ed4718515b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73843675"
 ---
 # <a name="ident_incr-transact-sql"></a>IDENT_INCR(Transact-SQL)
@@ -54,7 +54,7 @@ IDENT_INCR ( 'table_or_view' )
 ## <a name="examples"></a>예  
   
 ### <a name="a-returning-the-increment-value-for-a-specified-table"></a>A. 지정된 테이블에서 증가값 반환  
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Person.Address` 테이블에 대한 증가값을 반환합니다.  
+ 다음 예에서는 `Person.Address` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에 대한 증가값을 반환합니다.  
   
 ```sql  
 USE AdventureWorks2012;  

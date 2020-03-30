@@ -13,10 +13,10 @@ ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eec72a0421576ed4c09d35cd19bb0d842bd08f78
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292369"
 ---
 # <a name="hdfs-file-destination"></a>HDFS 파일 대상
@@ -58,7 +58,7 @@ Java 빌드의 아키텍처(32/64비트)는 사용할 SSIS 런타임과 일치�
 2. 명령 프롬프트에서 `sysdm.cpl`을 실행합니다.
 3. **고급** 탭에서 **환경 변수**를 선택합니다.
 4. **시스템 변수** 섹션 아래에서 **새로 만들기**를 선택합니다.
-5. **변수 이름**에 대해 `JAVA_HOME`을 입력합니다.
+5. `JAVA_HOME`변수 이름**에 대해** 을 입력합니다.
 6. **디렉터리 찾아보기**를 선택하여 추출된 폴더로 이동하고, `jre` 하위 폴더를 선택합니다.
    그런 다음, **확인**을 선택하면 **변수 값**이 자동으로 채워집니다.
 7. **확인**을 선택하여 **새 시스템 변수** 대화 상자를 닫습니다.

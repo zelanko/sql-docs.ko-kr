@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: eed8020872b3d2a3babc0581054bef0dbed64a4d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055945"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>전체 텍스트 필터 데몬 시작 관리자 서비스 계정 설정
@@ -31,7 +31,7 @@ SQL Server 전체 텍스트 검색에서 전체 텍스트 검색 필터링 및 �
   
 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 특정 인스턴스에 연결되는 인스턴스 인식형 서비스입니다. SQL 전체 텍스트 필터 데몬 시작 관리자 서비스는 서비스 계정 정보를 시작하는 각 필터 데몬 호스트 프로세스에 전파합니다.  
 
-##  <a name="setting"></a> 서비스 계정 설정  
+##  <a name="set-the-service-account"></a><a name="setting"></a> 서비스 계정 설정  
   
 1.  **시작** 메뉴에서 **모든 프로그램**을 가리키고 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]를 확장한 다음 **SQL Server 2016 구성 관리자**를 클릭합니다.  
   
@@ -43,7 +43,7 @@ SQL 전체 텍스트 필터 데몬 시작 관리자 서비스는 [!INCLUDE[ssNoV
   
 ![SQL 전체 텍스트 필터 데몬 시작 프로세스 속성](../../relational-databases/search/media/sql-full-text-filter-daemon-launch-process-properties.png)
   
-##  <a name="error"></a> SQL 전체 텍스트 필터 데몬 시작 관리자 서비스가 시작되지 않은 경우 문제 해결  
+##  <a name="troubleshoot-the-sql-full-text-filter-daemon-launcher-service-if-it-doesnt-start"></a><a name="error"></a> SQL 전체 텍스트 필터 데몬 시작 관리자 서비스가 시작되지 않은 경우 문제 해결  
  SQL 전체 텍스트 필터 데몬 시작 관리자 서비스가 시작되지 않으면 다음과 같은 가능성 있는 원인을 검토합니다.  
   
 ### <a name="permissions-issues"></a>권한 이슈

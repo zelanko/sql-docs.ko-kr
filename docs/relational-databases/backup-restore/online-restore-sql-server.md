@@ -14,10 +14,10 @@ ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: e4f5817fe575422dddeedd525b077dbf643a29b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908876"
 ---
 # <a name="online-restore-sql-server"></a>온라인 복원(SQL Server)
@@ -63,7 +63,7 @@ ms.locfileid: "72908876"
     > [!NOTE]  
     >  복원 시퀀스 전에 파일을 수동으로 오프라인 상태로 만들 수도 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "데이터베이스 또는 파일을 오프라인 상태로 만들기"를 참조하세요.  
   
-##  <a name="taking_db_or_file_offline"></a> 데이터베이스 또는 파일을 오프라인 상태로 만들기  
+##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a> 데이터베이스 또는 파일을 오프라인 상태로 만들기  
  온라인 복원을 사용하지 않으려면 복원 시퀀스를 시작하기 전에 다음 방법 중 하나를 사용하여 데이터베이스를 오프라인 상태로 만들 수 있습니다.  
   
 -   복구 모델에서 다음 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용하여 데이터베이스를 오프라인 상태로 만들 수 있습니다.  
@@ -95,7 +95,7 @@ ms.locfileid: "72908876"
   
 -   [예제: 읽기 전용 파일 온라인 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [파일 및 파일 그룹 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   

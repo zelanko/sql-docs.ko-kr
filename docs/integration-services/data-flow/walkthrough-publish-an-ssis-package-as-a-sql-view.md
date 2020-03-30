@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 263f398e0c14c1b056185722a0662e031c9d7472
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 52c4f92994068e0c5de8afd7233bd53c1244e38d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71297735"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216902"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>연습: SSIS 패키지를 SQL 뷰로 게시
 
@@ -58,7 +58,7 @@ ms.locfileid: "71297735"
   
 5.  도구 상자에서 **데이터 흐름 디자이너** 로 **원본 구성 요소** 를 끌어 와 데이터 원본에서 데이터를 추출하도록 구성합니다.  
   
-    1.  연습을 위해 **TestDB** 테스트 데이터베이스 (**Employee** 포함)를 만듭니다. **ID**, **FirstName** 및 **LastName**의 세 열이 있는 테이블을 만듭니다.  
+    1.  연습을 위해 **Employee** 테이블이 포함된 **TestDB**라는 테스트 데이터베이스를 만듭니다. **ID**, **FirstName** 및 **LastName**의 세 열이 있는 테이블을 만듭니다.  
   
     2.  **ID** 를 기본 키로 설정합니다.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "71297735"
   
          ![데이터 피드 게시 마법사 - 패키지 설정 페이지](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "데이터 피드 게시 마법사 - 패키지 설정 페이지")  
   
-    2.  경로 필드 옆의 **찾아보기**를 클릭하고 SSIS 카탈로그로 이동하여 게시할 SSIS 패키지를 선택(예: **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**)한 다음, **확인**을 클릭합니다.  
+    2.  경로 필드 옆의 **찾아보기** 를 클릭하고 SSIS 카탈로그로 이동하여 게시할 SSIS 패키지를 선택(예: **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**)한 다음 **확인**을 클릭합니다.  
   
          ![데이터 피드 게시 마법사 - 패키지 찾아보기](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "데이터 피드 게시 마법사 - 패키지 찾아보기")  
   
@@ -266,8 +266,6 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
 -   왼쪽 및 오른쪽 대괄호([ 및 ]) – 이러한 문자는 선행/후행 공백을 나타내는 데 사용됩니다. 예를 들어 "[ 일부 공간 ]"은 선행 공백과 후행 공백이 하나씩 있는 "일부 공간" 문자열을 나타냅니다. 이러한 문자 자체가 쿼리 절에 사용되는 경우에는 이스케이프되어야 합니다. 예를 들어 \\[ 및 \\]입니다.  
   
 -   슬래시(\\) - 쿼리 절에 사용되는 모든 \는 이스케이프 문자를 사용해야 합니다. 예를 들어 \\\는 쿼리 절에서 \로 평가됩니다.  
-  
- 슬래시(\\) - 쿼리 절에 사용되는 모든 \는 이스케이프 문자를 사용해야 합니다. 예를 들어 \\\는 쿼리 절에서 \로 평가됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 스트리밍 대상](../../integration-services/data-flow/data-streaming-destination.md)   

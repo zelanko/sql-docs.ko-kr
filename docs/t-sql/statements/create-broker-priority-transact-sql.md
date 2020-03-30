@@ -26,10 +26,10 @@ ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 18e916c3f9a9d99ea177d0d266cb20bee44a3868
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73064681"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY(Transact-SQL)
@@ -60,7 +60,7 @@ FOR CONVERSATION
  이 대화 우선 순위의 이름을 지정합니다. 이름은 현재 데이터베이스에서 고유해야 하며 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다.  
   
  SET  
- 대화 우선 순위를 대화에 적용할지 여부를 결정하는 조건을 지정합니다. 지정된 경우 SET에 CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME 또는 PRIORITY_LEVEL 조건을 하나 이상 포함해야 합니다. SET이 지정되지 않은 경우 세 조건 모두에 대한 기본값이 설정됩니다.  
+ 대화 우선 순위를 대화에 적용할지 여부를 결정하는 조건을 지정합니다. 지정된 경우 SET이 CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME 또는 PRIORITY_LEVEL 조건을 하나 이상 포함해야 합니다. SET이 지정되지 않은 경우 세 조건 모두에 대한 기본값이 설정됩니다.  
   
  CONTRACT_NAME = {*ContractName* | **ANY**}  
  대화 우선 순위를 대화에 적용할지 여부를 결정하기 위한 조건으로 사용할 계약 이름을 지정합니다. *ContractName*은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 식별자이며 현재 데이터베이스의 계약 이름을 지정해야 합니다.  

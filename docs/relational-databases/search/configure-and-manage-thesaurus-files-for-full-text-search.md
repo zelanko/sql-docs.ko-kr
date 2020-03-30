@@ -15,10 +15,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: c54c1774622416adb213b31852941c934be7af24
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056198"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리
@@ -29,7 +29,7 @@ ms.locfileid: "74056198"
   
 전체 텍스트 검색 동의어 사전은 XML 텍스트 파일입니다.
   
-##  <a name="tasks"></a> 동의어 사전의 기능  
+##  <a name="whats-in-a-thesaurus"></a><a name="tasks"></a> 동의어 사전의 기능  
  전체 텍스트 검색 쿼리가 지정된 언어에서 동의어를 찾을 수 있도록 하려면 해당 언어에 대한 동의어 사전 매핑(즉, 동의어)을 정의해야 합니다. 각 동의어 사전은 다음을 정의하도록 수동으로 구성해야 합니다.  
   
 -   확장 집합  
@@ -46,10 +46,10 @@ ms.locfileid: "74056198"
   
      지정된 동의어 사전에 대해 모든 검색 패턴은 물결표( **~** ), 양음 악센트 표시( **&acute;** ) 또는 움라우트( **&uml;** ) 등의 분음 부호를 구분하거나 구분하지 않습니다(즉, *악센트 구분* 또는 *악센트 구분 안 함*). 예를 들어 전체 텍스트 쿼리에서 “caf&eacute;” 패턴을 다른 패턴으로 바꾸도록 지정한다고 가정해 보겠습니다. 동의어 사전이 악센트를 구분하지 않으면 전체 텍스트 검색 시 “caf&eacute;” 및 “cafe” 패턴이 바뀝니다. 동의어 사전이 악센트를 구분하면 전체 텍스트 검색 시 “caf&eacute;” 패턴만 바뀝니다. 기본적으로 동의어 사전은 악센트를 구분하지 않습니다.  
   
-##  <a name="initial_thesaurus_files"></a> 기본 동의어 사전 파일
+##  <a name="default-thesaurus-files"></a><a name="initial_thesaurus_files"></a> 기본 동의어 사전 파일
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 지원되는 각 언어당 하나의 XML 동의어 사전 파일을 제공합니다. 이러한 파일은 기본적으로 비어 있습니다. 파일에는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동의어 사전에 공통적인 최상위 XML 구조와 주석 처리된 예제 동의어 사전만 포함되어 있습니다.  
   
-##  <a name="location"></a> 동의어 사전 파일의 위치  
+##  <a name="location-of-thesaurus-files"></a><a name="location"></a> 동의어 사전 파일의 위치  
  동의어 사전 파일의 기본 위치는 다음과 같습니다.  
   
      <SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\  
@@ -79,12 +79,12 @@ ms.locfileid: "74056198"
   
  전역 동의어 사전 파일은 LCID 0의 중립 언어에 해당합니다. 이 값은 관리자만 변경할 수 있습니다.  
 
-##  <a name="how_queries_use_tf"></a> 전체 텍스트 쿼리에서 동의어 사전을 사용하는 방법  
+##  <a name="how-full-text-queries-use-the-thesaurus"></a><a name="how_queries_use_tf"></a> 전체 텍스트 쿼리에서 동의어 사전을 사용하는 방법  
 동의어 사전 쿼리는 언어별 동의어 사전과 전역 동의어 사전을 모두 사용합니다.
 1.  이 쿼리는 먼저 언어별 파일을 조회한 다음 이미 로드되지 않은 경우 처리를 위해 해당 파일을 로드합니다. 이 쿼리는 동의어 사전 파일의 확장 집합 규칙과 교체 집합 규칙으로 지정된 언어별 동의어를 포함하도록 확장됩니다. 
 2.  그런 다음 전역 동의어 사전에 대해 이러한 단계가 반복됩니다. 그러나 용어가 이미 언어별 동의어 사전 파일에서 일치 항목의 일부인 경우 해당 용어는 전역 동의어 사전에서 일치 항목으로 적합하지 않습니다.  
 
-##  <a name="structure"></a> 동의어 사전 파일의 구조  
+##  <a name="structure-of-a-thesaurus-file"></a><a name="structure"></a> 동의어 사전 파일의 구조  
  각 동의어 사전 파일은 ID가 `Microsoft Search Thesaurus`인 XML 컨테이너와, 예제 동의어 사전을 포함하는 주석(`<!--` ... `-->`)을 정의합니다. 동의어 사전은 분음 부호 설정, 확장 집합, 교체 집합을 정의하는 자식 요소의 샘플이 포함된 `<thesaurus>` 요소에 정의됩니다.
 
 일반적인 빈 동의어 사전 파일에는 다음과 같은 XML 텍스트가 포함되어 있습니다.  
@@ -115,7 +115,7 @@ ms.locfileid: "74056198"
 </XML>  
 ```
 
-### <a name="expansion"></a> XML structure of an expansion set  
+### <a name="xml-structure-of-an-expansion-set"></a><a name="expansion"></a> XML structure of an expansion set  
   
  각 확장 집합은 `<expansion>` 요소로 묶입니다. 이 요소 내에서 `<sub>` 요소에 하나 이상의 대체 단어를 지정합니다. 확장 집합에 서로의 동의어인 대체 그룹을 지정할 수 있습니다.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "74056198"
 </expansion>  
 ```  
   
-### <a name="replacement"></a> XML structure of a replacement set  
+### <a name="xml-structure-of-a-replacement-set"></a><a name="replacement"></a> XML structure of a replacement set  
   
 각 교체 집합은 `<replacement>` 요소로 묶입니다. 이 요소 내에서 동의어당 하나씩 1개 이상의 패턴을 `<pat>` 요소에 지정하고, 0개 이상의 대체 단어를 `<sub>` 요소에 지정할 수 있습니다. 대체 집합으로 바꿀 패턴을 지정할 수 있습니다. 패턴 및 대체 집합에는 단어 또는 일련의 단어를 포함할 수 있습니다. 패턴에 지정된 대체 단어가 없는 경우 사용자 쿼리에서 해당 패턴이 제거됩니다.  
   
@@ -178,7 +178,7 @@ and
 > [!NOTE]  
 >  이 설정은 파일에서 한 번만 적용될 수 있으며 해당 파일의 모든 검색 패턴에 적용됩니다. 개별 패턴에 대해서는 이 설정을 지정할 수 없습니다.  
 
-##  <a name="editing"></a> 동의어 사전 파일 편집  
+##  <a name="edit-a-thesaurus-file"></a><a name="editing"></a> 동의어 사전 파일 편집  
 지정된 언어에 대한 동의어 사전은 해당 동의어 사전 파일(XML 파일)을 편집하여 구성할 수 있습니다. 설치 중에 `<xml>` 컨테이너와 주석 처리된 샘플 `<thesaurus`> 요소만 포함된 빈 동의어 사전 파일이 설치됩니다. 동의어를 검색하는 전체 텍스트 검색 쿼리가 올바르게 작동하려면 동의어 집합을 정의하는 실제 `<thesaurus` 요소를 만들어야 하는데, 확장 집합과 교체 집합의 두 형식으로 정의할 수 있습니다.  
 
 ### <a name="edit-a-thesaurus-file"></a>동의어 사전 파일 편집  

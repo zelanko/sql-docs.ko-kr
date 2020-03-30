@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.openlocfilehash: 0b7fd8a71f2636893f157b18630e2773b2f01951
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68262788"
 ---
 # <a name="upgrade-integration-services"></a>Integration Services 업그레이드
@@ -69,7 +69,7 @@ ms.locfileid: "68262788"
   
  업그레이드할 때 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 와 [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 모두 업그레이드하거나 [!INCLUDE[ssDE](../../includes/ssde-md.md)]만 또는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]만 업그레이드할 수 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]만 업그레이드하는 경우 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 이상 버전은 계속 작동하지만 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]의 기능은 사용할 수 없습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]만 업그레이드하는 경우 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 의 모든 기능이 작동하지만 [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)] 인스턴스를 다른 컴퓨터에서 사용할 수 있는 경우가 아니면 패키지를 파일 시스템에만 저장할 수 있습니다.  
   
-## <a name="upgrading-both-integration-services-and-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>Integration Services와 데이터베이스 엔진 모두 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="upgrading-both-integration-services-and-the-database-engine-to-sscurrent"></a>Integration Services와 데이터베이스 엔진 모두 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  이 섹션에서는 다음 조건에 해당하는 업그레이드를 수행할 때 나타나는 결과에 대해 설명합니다.  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 모두 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하는 경우  
@@ -129,7 +129,7 @@ ms.locfileid: "68262788"
   
 -   기본적으로 업그레이드 설치의 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 패키지 실행과 관련된 이벤트를 애플리케이션 이벤트 로그에 로깅하도록 구성됩니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터 수집기 기능을 사용하는 경우 이 설정으로 인해 이벤트 로그 항목이 너무 많이 생성될 수 있습니다. 로깅되는 이벤트에는 EventID 12288, "패키지가 시작되었습니다" 및 EventID 12289, "패키지가 성공적으로 완료되었습니다"가 포함됩니다. 이러한 이벤트가 애플리케이션 이벤트 로그에 로깅되지 않도록 하려면 편집을 위해 레지스트리를 엽니다. 그런 다음 레지스트리에서 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS 노드를 찾고 LogPackageExecutionToEventLog 설정의 DWORD 값을 1에서 0으로 변경합니다.  
   
-## <a name="upgrading-only-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>데이터베이스 엔진만 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="upgrading-only-the-database-engine-to-sscurrent"></a>데이터베이스 엔진만 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  이 섹션에서는 다음 조건에 해당하는 업그레이드를 수행할 때 나타나는 결과에 대해 설명합니다.  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스만 업그레이드하는 경우. 즉, [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]인스턴스가 되지만 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 인스턴스 및 클라이언트 도구는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에 속하는 경우입니다.  

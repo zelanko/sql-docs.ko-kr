@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 88d9e3805891c62998afb131ddee7fb202f18b75
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056325"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>서식 파일을 사용하여 데이터 필드 건너뛰기(SQL Server)
@@ -32,10 +32,10 @@ ms.locfileid: "74056325"
 > [!NOTE]
 >  비 XML 서식 파일 또는 XML 서식 파일은 [bcp 유틸리티](../../tools/bcp-utility.md) 명령, [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 문 또는 INSERT... SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 문을 사용하여 데이터 파일을 테이블에 대량으로 가져오는데 사용될 수 있습니다. 자세한 내용은 [서식 파일을 사용하여 데이터 대량 가져오기&#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)를 참조하세요.
 
-## 예제 테스트 조건<a name="etc"></a>  
+## <a name="example-test-conditions"></a>예제 테스트 조건<a name="etc"></a>  
 이 항목의 수정된 서식 파일의 예는 아래 정의된 테이블 및 데이터 파일을 기준으로 합니다.
   
-### 샘플 테이블<a name="sample_table"></a>
+### <a name="sample-table"></a>샘플 테이블<a name="sample_table"></a>
 아래 스크립트에서는 테스트 데이터베이스와 `myTestSkipField`라는 테이블을 만듭니다.  Microsoft SSMS(SQL Server Management Studio)에서 다음 TRANSACT-SQL을 실행합니다.
  
 ```sql
@@ -51,7 +51,7 @@ CREATE TABLE myTestSkipField
    );
 ```
   
-### 샘플 데이터 파일<a name="sample_data_file"></a>
+### <a name="sample-data-file"></a>샘플 데이터 파일<a name="sample_data_file"></a>
 빈 파일 `D:\BCP\myTestSkipField.bcp` 을 만들고 다음 데이터를 삽입합니다. 
 ```
 1,SkipMe,Anthony,Grosse
@@ -59,7 +59,7 @@ CREATE TABLE myTestSkipField
 3,SkipMe,Stella,Rosenhain
 ```
   
-## 서식 파일 만들기<a name="create_format_file"></a>
+## <a name="creating-the-format-files"></a>서식 파일 만들기<a name="create_format_file"></a>
 `myTestSkipField.bcp` 의 데이터를 `myTestSkipField` 테이블로 대량으로 가져오려면 서식 파일에서 다음과 같은 작업을 수행해야 합니다.
 * 첫 번째 데이터 필드를 첫 번째 열인 `PersonID`에 매핑합니다.
 * 두 번째 데이터 필드를 건너뜁니다.
@@ -68,14 +68,14 @@ CREATE TABLE myTestSkipField
 
 서식 파일을 만드는 가장 간단한 방법은 [bcp 유틸리티](../../tools/bcp-utility.md)를 사용하는 것입니다.  먼저 기존 테이블에서 기본 서식 파일을 만듭니다.  그다음으로 실제 데이터 파일을 반영하도록 기본 서식 파일을 수정합니다.
   
-### <a name="nonxml_format_file"></a>비 XML 서식 파일 만들기 
+### <a name="creating-a-non-xml-format-file"></a><a name="nonxml_format_file"></a>비 XML 서식 파일 만들기 
 자세한 내용은 [비 XML 서식 파일(SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 을 검토하세요. 다음 명령은 [bcp 유틸리티](../../tools/bcp-utility.md) 를 사용하여 `myTestSkipField.fmt`의 스키마를 기반으로 비 xml 서식 파일 `myTestSkipField`를 생성합니다.  또한 한정자 `c` 는 문자 데이터를 지정하고, `t,` 는 쉼표를 필드 종결자로 지정하며, `T` 는 통합 보안을 사용하여 신뢰할 수 있는 연결을 지정합니다.  명령 프롬프트에서 다음 명령을 입력합니다.
 
 ```
 bcp TestDatabase.dbo.myTestSkipField format nul -c -f D:\BCP\myTestSkipField.fmt -t, -T
 ```
 
-### 비 XML 서식 파일 수정 <a name="modify_nonxml_format_file"></a>
+### <a name="modifying-the-non-xml-format-file"></a>비 XML 서식 파일 수정 <a name="modify_nonxml_format_file"></a>
 용어는 [비 XML 서식 파일의 구조](../../relational-databases/import-export/non-xml-format-files-sql-server.md#Structure) 를 참조하세요. 메모장에서 `D:\BCP\myTestSkipField.fmt` 를 열고 다음과 같이 수정합니다.
 1) `FirstName` 에 대한 전체 서식 파일 행을 복사하고 그다음 줄에 `FirstName` 뒤에 직접 붙여 넣습니다.
 2) 행이 새로 생기거나 모든 후속 행의 경우 호스트 파일 필드 순서 값을 하나씩 늘립니다.
@@ -109,14 +109,14 @@ bcp TestDatabase.dbo.myTestSkipField format nul -c -f D:\BCP\myTestSkipField.fmt
 * `myTestSkipField.bcp` 의 세 번째 데이터 필드가 다음 두 번째 열에 매핑됨: `myTestSkipField.. FirstName`
 * `myTestSkipField.bcp` 의 네 번째 데이터 필드가 다음 세 번째 열에 매핑됨: `myTestSkipField.. LastName`
 
-### XML 서식 파일 만들기 <a name="xml_format_file"></a>  
+### <a name="creating-an-xml-format-file"></a>XML 서식 파일 만들기 <a name="xml_format_file"></a>  
 자세한 내용은 [XML 서식 파일(SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) 을 검토하세요.  다음 명령은 [bcp 유틸리티](../../tools/bcp-utility.md) 를 사용하여 `myTestSkipField.xml`의 스키마를 기반으로 XML 서식 파일 `myTestSkipField`을 생성합니다.  또한 한정자 `c` 는 문자 데이터를 지정하고, `t,` 는 쉼표를 필드 종결자로 지정하며, `T` 는 통합 보안을 사용하여 신뢰할 수 있는 연결을 지정합니다.  `x` 한정자는 XML 기반 서식 파일을 생성하는 데 사용해야 합니다.  명령 프롬프트에서 다음 명령을 입력합니다.
 
 ```
 bcp TestDatabase.dbo.myTestSkipField format nul -c -x -f D:\BCP\myTestSkipField.xml -t, -T
 ```
 
-### XML 서식 파일 수정 <a name="modify_xml_format_file"></a>
+### <a name="modifying-the-xml-format-file"></a>XML 서식 파일 수정 <a name="modify_xml_format_file"></a>
 용어는 [XML 서식 파일의 스키마 구문](../../relational-databases/import-export/xml-format-files-sql-server.md#StructureOfXmlFFs) 을 참조하세요.  메모장에서 `D:\BCP\myTestSkipField.xml` 를 열고 다음과 같이 수정합니다.
 1) 전체 두 번째 필드를 복사하고 그다음 줄에서 두 번째 필드 뒤에 직접 붙여 넣습니다.
 2) 새 필드 및 각 후속 필드에 대해 "FIELD ID" 값을 하나씩 늘립니다.
@@ -165,22 +165,22 @@ bcp TestDatabase.dbo.myTestSkipField format nul -c -x -f D:\BCP\myTestSkipField.
 * 필드 3 - 열 3에 해당, 다음 두 번째 테이블 열에 매핑: `myTestSkipField.. FirstName`
 * 필드 4 - 열 4에 해당, 다음 세 번째 테이블 열에 매핑: `myTestSkipField.. LastName`
 
-## 서식 파일을 사용하여 데이터를 가져와 데이터 필드 건너뛰기<a name="import_data"></a>
+## <a name="importing-data-with-a-format-file-to-skip-a-data-field"></a>서식 파일을 사용하여 데이터를 가져와 데이터 필드 건너뛰기<a name="import_data"></a>
 아래 예제에서는 위에서 만든 데이터베이스, 데이터 파일 및 서식 파일을 사용합니다.
 
-### [bcp](../../tools/bcp-utility.md) 및 [비 XML 서식 파일](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bcp_nonxml"></a> 사용
+### <a name="using-bcp-and-non-xml-format-file"></a>[bcp](../../tools/bcp-utility.md) 및 [비 XML 서식 파일](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bcp_nonxml"></a> 사용
 명령 프롬프트에서 다음 명령을 입력합니다.
 ```
 bcp TestDatabase.dbo.myTestSkipField IN D:\BCP\myTestSkipField.bcp -f D:\BCP\myTestSkipField.fmt -T
 ```
 
-### [bcp](../../tools/bcp-utility.md) 및 [XML 서식 파일](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bcp_xml"></a> 사용
+### <a name="using-bcp-and-xml-format-file"></a>[bcp](../../tools/bcp-utility.md) 및 [XML 서식 파일](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bcp_xml"></a> 사용
 명령 프롬프트에서 다음 명령을 입력합니다.
 ```
 bcp TestDatabase.dbo.myTestSkipField IN D:\BCP\myTestSkipField.bcp -f D:\BCP\myTestSkipField.xml -T
 ```
 
-### [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 [비 XML 서식 파일](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bulk_nonxml"></a> 사용
+### <a name="using-bulk-insert-and-non-xml-format-file"></a>[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 [비 XML 서식 파일](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bulk_nonxml"></a> 사용
 Microsoft SSMS(SQL Server Management Studio)에서 다음 TRANSACT-SQL을 실행합니다.
 ```sql
 USE TestDatabase;  
@@ -196,7 +196,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myTestSkipField;
 ```
 
-### [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 [XML 서식 파일](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bulk_xml"></a> 사용
+### <a name="using-bulk-insert-and-xml-format-file"></a>[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 [XML 서식 파일](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bulk_xml"></a> 사용
 Microsoft SSMS(SQL Server Management Studio)에서 다음 TRANSACT-SQL을 실행합니다.
 ```sql
 USE TestDatabase;  
@@ -212,7 +212,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myTestSkipField;
 ```
 
-### [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 및 [비 XML 서식 파일](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a> 사용    
+### <a name="using-openrowsetbulk-and-non-xml-format-file"></a>[OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 및 [비 XML 서식 파일](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a> 사용    
 Microsoft SSMS(SQL Server Management Studio)에서 다음 TRANSACT-SQL을 실행합니다.
 ```sql
 USE TestDatabase;
@@ -231,7 +231,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myTestSkipField;
 ```
 
-### [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 및 [XML 서식 파일](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="openrowset_xml"></a> 사용
+### <a name="using-openrowsetbulk-and-xml-format-file"></a>[OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 및 [XML 서식 파일](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="openrowset_xml"></a> 사용
 Microsoft SSMS(SQL Server Management Studio)에서 다음 TRANSACT-SQL을 실행합니다.
 ```sql
 USE TestDatabase;  

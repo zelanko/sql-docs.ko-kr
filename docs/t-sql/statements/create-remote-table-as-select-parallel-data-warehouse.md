@@ -11,10 +11,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 1b6b024507d06149efc0bc2693b5bde2f67d482b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74401703"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT(병렬 데이터 웨어하우스)
@@ -132,7 +132,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
   
  연결 설정을 사용하면 SSL로 보호되는 사용자 이름 및 암호 데이터로(단, 일반 텍스트로 암호화되지 않고 전송되는 실제 데이터와 함께) SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 있습니다. 이 경우 악의적인 사용자가 SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 로그인하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 이름 및 암호가 포함된 CREATE REMOTE TABLE 문 텍스트를 가로챌 수 있습니다. 이러한 위험을 방지하려면 SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결에서 데이터 암호화를 사용합니다.  
   
-##  <a name="Examples"></a> 예  
+##  <a name="examples"></a><a name="Examples"></a> 예  
   
 ### <a name="a-creating-a-remote-table"></a>A. 원격 테이블 만들기  
  이 예제에서는 데이터베이스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 스키마 `MyOrdersTable`에 대해 `OrderReporting`라는 `Orders` SMP 원격 테이블을 만듭니다. `OrderReporting` 데이터베이스는 기본 포트 1433에서 수신하는 `SQLA`라는 서버에 있습니다. 서버에 대한 연결에는 암호가 `David`인 사용자 `e4n8@3`의 자격 증명을 사용합니다.  

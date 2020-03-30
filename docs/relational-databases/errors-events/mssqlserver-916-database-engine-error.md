@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 73eb6581-99fe-49a5-9b42-e239d7ffe27f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f93fb181547e10ef2bca3154e44515e3959683b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 8dc9f9575f9e385d177d7b37f3753facfb905d23
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68037571"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80271469"
 ---
 # <a name="mssqlserver_916"></a>MSSQLSERVER_916
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,22 +47,27 @@ msdb 데이터베이스에 대한 CONNECT 권한이 거부되거나 취소되면
 다음 방법 중 하나로 데이터베이스에 연결할 수 있습니다.  
   
 -   명명된 데이터베이스에 대한 특정 로그인 액세스 권한을 부여합니다. 다음 예에서는 `Adventure-Works\Larry` 데이터베이스에 대한 로그인 `msdb` 액세스 권한을 부여합니다.  
-  
-    USE msdb ;  
-  
-    이동  
-  
-    GRANT CONNECT TO [Adventure-Works\Larry] ;  
+
+    ```sql
+    USE msdb ;
+    
+    GO
+    
+    GRANT CONNECT TO [Adventure-Works\Larry] ;
+    ```
   
 -   게스트 사용자에 대해 오류 메시지에 명명된 데이터베이스에 대한 CONNECT 권한을 부여합니다. 다음 예에서는 사용자 `CONNECT`에 대해 `msdb` 데이터베이스에 대한 `guest` 권한을 부여합니다.  
-  
-    USE msdb ;  
-  
-    이동  
-  
-    GRANT CONNECT TO guest ;  
+
+    ```sql
+    USE msdb ;
+    
+    GO
+    
+    GRANT CONNECT TO guest ;
+    ```
   
 -   사용자를 인증한 데이터베이스에 TRUSTWORTHY 속성을 사용하도록 설정합니다.  
-  
-    `ALTER DATABASE AdventureWorks SET TRUSTWORTHY ON;`  
-  
+
+    ```sql
+    ALTER DATABASE AdventureWorks SET TRUSTWORTHY ON;
+    ```

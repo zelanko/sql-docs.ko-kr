@@ -22,10 +22,10 @@ ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5e8523831fd181c17bd8fcff1698d85f46c824e2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73983323"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER(Transact-SQL)
@@ -199,7 +199,7 @@ AS { sql_statement
  실행된 후에 DDL 트리거가 실행되도록 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 이벤트의 이름입니다. DDL 트리거에 유효한 이벤트는 [DDL 이벤트](../../relational-databases/triggers/ddl-events.md)에 나열되어 있습니다.  
   
  *event_group*  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 이벤트의 미리 정의된 그룹 이름입니다. *event_group*에 속한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 이벤트가 실행된 후에 DDL 트리거가 실행됩니다. DDL 트리거에 유효한 이벤트 그룹은 [DDL 이벤트 그룹](../../relational-databases/triggers/ddl-event-groups.md)에 나열되어 있습니다. ALTER TRIGGER 실행이 끝난 후, *event_group*은 처리할 이벤트 유형을 sys.trigger_events 카탈로그 뷰에 추가하여 매크로로 작동합니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 이벤트의 미리 정의된 그룹 이름입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]event_group*에 속한*  언어 이벤트가 실행된 후에 DDL 트리거가 실행됩니다. DDL 트리거에 유효한 이벤트 그룹은 [DDL 이벤트 그룹](../../relational-databases/triggers/ddl-event-groups.md)에 나열되어 있습니다. ALTER TRIGGER 실행이 끝난 후, *event_group*은 처리할 이벤트 유형을 sys.trigger_events 카탈로그 뷰에 추가하여 매크로로 작동합니다.  
   
  NOT FOR REPLICATION  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  

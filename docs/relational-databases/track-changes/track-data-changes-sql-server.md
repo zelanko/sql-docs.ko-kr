@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 94f5ccf6d7983a25bb8cafe084dbca103f966255
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095424"
 ---
 # <a name="track-data-changes-sql-server"></a>데이터 변경 내용 추적(SQL Server)
@@ -62,7 +62,7 @@ ms.locfileid: "74095424"
 |열 변경 여부|yes|yes|  
 |DML 유형|yes|yes|  
   
-##  <a name="Capture"></a> 변경 데이터 캡처  
+##  <a name="change-data-capture"></a><a name="Capture"></a> 변경 데이터 캡처  
  변경 데이터 캡처는 DML 변경이 적용되었다는 사실과 변경된 실제 데이터 모두를 캡처하여 사용자 테이블에 대한 기록 변경 정보를 제공합니다. 트랜잭션 로그를 읽고 시스템에 대한 영향이 적은 비동기 프로세스를 사용하여 변경을 캡처합니다.  
   
  다음 그림과 같이 사용자 테이블에 적용된 변경은 해당 변경 테이블에서 캡처됩니다. 이러한 변경 테이블은 시간에 따라 변경을 기록하여 보여 줍니다. [에서 제공하는 ](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)변경 데이터 캡처[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 함수를 사용하면 변경 데이터를 쉽고 체계적으로 사용할 수 있습니다.  
@@ -137,7 +137,7 @@ ms.locfileid: "74095424"
   
  [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) 를 사용하여 복원 또는 연결된 데이터베이스에서 변경 데이터 캡처를 제거할 수 있습니다.  
   
-##  <a name="Tracking"></a> 변경 내용 추적  
+##  <a name="change-tracking"></a><a name="Tracking"></a> 변경 내용 추적  
  변경 내용 추적은 테이블 행을 변경했다는 사실을 캡처하지만 변경된 데이터를 캡처하지는 않습니다. 따라서 사용자 테이블에서 직접 가져온 최신 행 데이터를 사용하여 변경한 행을 애플리케이션이 확인할 수 있습니다. 그러므로 변경 내용 추적은 시간에 따른 변경 기록을 표시하는 데 있어서는 변경 데이터 캡처와 비교해 볼 때 보다 제한적입니다. 그러나 기록 정보가 필요 없는 애플리케이션의 경우 변경된 데이터를 캡처하지 않아 스토리지 오버헤드가 훨씬 적습니다. 동기 추적 메커니즘을 사용하여 변경 내용을 추적합니다. 이 메커니즘은 DML 작업에 대한 오버헤드를 최소 수준으로 유지하도록 디자인되었습니다.  
   
  다음 그림에서는 변경 내용 추적을 사용하는 것이 좋은 동기화 시나리오를 보여 줍니다. 이 시나리오에서는 애플리케이션에 마지막으로 테이블이 동기화된 이후 변경된 테이블의 모든 행 및 현재 행 데이터만 포함하는 정보가 필요합니다. 동기화 메커니즘을 사용하여 변경 내용을 추적하기 때문에 애플리케이션에서는 양방향 동기화를 수행하고 발생할 수 있는 모든 충돌을 안정적으로 검색할 수 있습니다.  

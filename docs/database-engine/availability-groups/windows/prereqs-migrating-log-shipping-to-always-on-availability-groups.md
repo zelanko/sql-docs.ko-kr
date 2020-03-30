@@ -14,10 +14,10 @@ ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 73cd348f9cb1f22eca30c28cee97ce8e81a20b16
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014508"
 ---
 # <a name="prerequisites-to-convert-log-shipping-to-always-on-availability-groups"></a>로그 전달을 Always On 가용성 그룹으로 변환하기 위한 필수 구성 요소
@@ -29,7 +29,7 @@ ms.locfileid: "68014508"
 >  가용성 그룹에서 읽기 가능한 주 데이터베이스 또는 보조 데이터베이스를 로그 전달 주 데이터베이스로 구성할 수 있습니다.  
   
   
-##  <a name="AGPrereqsRealAddress"></a> 가용성 그룹 사전 요구 사항  
+##  <a name="availability-group-prerequisites"></a><a name="AGPrereqsRealAddress"></a> 가용성 그룹 사전 요구 사항  
  가용성 그룹의 주 복제본에서 백업 작업이 실행되도록 허용하려면 다음 Always On 가용성 그룹 백업 설정을 사용합니다.  
   
 |속성|설정|  
@@ -43,7 +43,7 @@ ms.locfileid: "68014508"
   
  [가용성 복제본에 백업 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
-##  <a name="LogShipPrereqs"></a> 로그 전달 사전 요구 사항  
+##  <a name="log-shipping-prerequisites"></a><a name="LogShipPrereqs"></a> 로그 전달 사전 요구 사항  
   
 -   로그 전달 주 데이터베이스가 가용성 그룹의 초기/현재 주 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 있어야 합니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68014508"
   
  [로그 전달 구성을 가용성 그룹으로 변환](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/)(SQL Server 블로그)  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **로그 전달**  
   
 -   [SQL Server 2016으로 로그 전달 업그레이드&#40;Transact-SQL&#41;](../../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
@@ -82,7 +82,7 @@ ms.locfileid: "68014508"
   
 -   [가용성 복제본에 백업 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
-##  <a name="RelatedContent"></a> 관련 내용  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
   
 -   **블로그:**  
   

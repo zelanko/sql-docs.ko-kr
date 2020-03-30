@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 10/03/2019
 ms.openlocfilehash: 6f0a2ab021873a2a9414bfbcdb7aed63c2d31056
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72166725"
 ---
-# <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]의 기능 확장
+# <a name="extend-the-functionality-of-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]의 기능 확장
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]의 확장을 사용하면 기본 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 설치에 더 많은 기능을 쉽게 추가할 수 있습니다. 
 

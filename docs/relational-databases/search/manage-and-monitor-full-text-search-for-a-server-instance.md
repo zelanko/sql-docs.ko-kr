@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 72b34355a11e87540bc8a298d0144988cdbeb17c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056179"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링
@@ -31,7 +31,7 @@ ms.locfileid: "74056179"
   
 -   전체 텍스트 검색에 대한 사용자 데이터베이스 구성. 여기에는 데이터베이스에 대해 하나 이상의 전체 텍스트 카탈로그를 만들고 전체 텍스트 쿼리를 실행할 각 테이블 또는 인덱싱된 뷰에 대한 전체 텍스트 인덱스를 정의하는 작업이 포함됩니다.  
   
-##  <a name="props"></a> 전체 텍스트 검색의 서버 속성 보기 또는 변경  
+##  <a name="viewing-or-changing-server-properties-for-full-text-search"></a><a name="props"></a> 전체 텍스트 검색의 서버 속성 보기 또는 변경  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]인스턴스의 전체 텍스트 속성을 볼 수 있습니다.  
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>전체 텍스트 검색의 서버 속성을 보고 변경하려면  
@@ -69,7 +69,7 @@ ms.locfileid: "74056179"
         > [!NOTE]  
         >  [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)**upgrade_option** 동작을 사용하여 전체 텍스트 업그레이드 옵션을 설정할 수도 있습니다.  
   
-##  <a name="metadata"></a> 추가 전체 텍스트 서버 속성 보기  
+##  <a name="viewing-additional-full-text-server-properties"></a><a name="metadata"></a> 추가 전체 텍스트 서버 속성 보기  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 사용하여 전체 텍스트 검색의 다양한 서버 수준 속성 값을 가져올 수 있습니다. 이 정보는 전체 텍스트 검색을 관리하고 이러한 검색에서 발생하는 문제를 해결하는 데 유용합니다.  
   
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버 인스턴스의 전체 텍스트 속성 및 관련 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 보여 줍니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "74056179"
 |**LoadOSResources**|운영 체제 단어 분리기 및 필터가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스와 함께 등록되고 사용되는지 여부를 나타냅니다.|FULLTEXTSERVICEPROPERTY|  
 |**VerifySignature**|전체 텍스트 엔진이 서명된 이진 파일만 로드할지 여부를 지정합니다.|FULLTEXTSERVICEPROPERTY|  
   
-##  <a name="monitor"></a> 전체 텍스트 검색 작업 모니터링  
+##  <a name="monitoring-full-text-search-activity"></a><a name="monitor"></a> 전체 텍스트 검색 작업 모니터링  
  일부 동적 관리 뷰 및 함수는 서버 인스턴스의 전체 텍스트 검색 작업을 모니터링하는 데 유용합니다.  
   
  **채우기 작업이 진행 중인 전체 텍스트 카탈로그에 대한 정보를 보려면**  

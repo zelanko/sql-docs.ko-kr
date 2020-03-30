@@ -16,10 +16,10 @@ ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ddc6240dbf0bf2ea0d6b8548763d25b6bc12126c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71287213"
 ---
 # <a name="creating-a-custom-foreach-enumerator"></a>사용자 지정 Foreach 열거자 만들기

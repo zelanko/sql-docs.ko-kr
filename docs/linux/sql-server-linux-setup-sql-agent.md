@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 ms.openlocfilehash: b281c60248d86daba36a2cf5628e1ae729d227fe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258396"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Linux에 SQL Server 에이전트 설치
@@ -41,7 +41,7 @@ Linux에서 SQL Server 에이전트를 사용하려면 먼저 다음 단계를 �
    | SQL Server 2017 CU4 이상</br>SQL Server 2019 | [SQL Server 에이전트 사용](#EnableAgentAfterCU4) |
    | SQL Server 2017 CU3 이하 | [SQL Server 에이전트 설치](#InstallAgentBelowCU4) |
 
-## <a id="EnableAgentAfterCU4"></a>SQL Server 에이전트 사용
+## <a name="enable-the-sql-server-agent"></a><a id="EnableAgentAfterCU4"></a>SQL Server 에이전트 사용
 
 SQL Server 2019 및 SQL Server 2017 CU4 이상에서는 SQL Server 에이전트를 사용하도록 설정하기만 하면 됩니다. 별도의 패키지를 설치할 필요가 없습니다.
 
@@ -55,7 +55,7 @@ sudo systemctl restart mssql-server
 > [!NOTE]
 > 에이전트가 설치된 2017 CU3 이하에서 업그레이드하는 경우 SQL Server 에이전트는 자동으로 사용하도록 설정되고 이전 에이전트 패키지가 제거됩니다.  
 
-## <a name="InstallAgentBelowCU4"></a>SQL Server 에이전트 설치
+## <a name="install-the-sql-server-agent"></a><a name="InstallAgentBelowCU4"></a>SQL Server 에이전트 설치
 
 SQL Server 2017 CU3 및 이전 버전에서는 SQL Server 에이전트 패키지를 설치해야 합니다.
 
@@ -67,7 +67,7 @@ SQL Server 2017 CU3 및 이전 버전에서는 SQL Server 에이전트 패키지
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
 
-### <a name="RHEL">RHEL에 설치</a>
+### <a name=""></a><a name="RHEL">RHEL에 설치</a>
 
 다음 단계를 사용하여 Red Hat Enterprise Linux에서 **mssql-server-agent**를 설치합니다. 
 
@@ -86,7 +86,7 @@ sudo systemctl restart mssql-server
 
 오프라인 설치가 필요한 경우 [릴리스 정보](sql-server-linux-release-notes.md)에서 SQL Server 에이전트 패키지 다운로드를 찾습니다. 그런 다음, [SQL Server 설치](sql-server-linux-setup.md#offline) 문서에 설명된 것과 동일한 오프라인 설치 단계를 사용합니다.
 
-### <a name="ubuntu">Ubuntu에 설치</a>
+### <a name=""></a><a name="ubuntu">Ubuntu에 설치</a>
 
 다음 단계에 따라 Ubuntu에 **mssql-server-agent**를 설치합니다. 
 
@@ -106,7 +106,7 @@ sudo systemctl restart mssql-server
 
 오프라인 설치가 필요한 경우 [릴리스 정보](sql-server-linux-release-notes.md)에서 SQL Server 에이전트 패키지 다운로드를 찾습니다. 그런 다음, [SQL Server 설치](sql-server-linux-setup.md#offline) 문서에 설명된 것과 동일한 오프라인 설치 단계를 사용합니다.
 
-### <a name="SLES">SLES에 설치</a>
+### <a name=""></a><a name="SLES">SLES에 설치</a>
 
 다음 단계를 사용하여 SUSE Linux Enterprise Server에서 **mssql-server-agent**를 설치합니다. 
 

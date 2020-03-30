@@ -18,10 +18,10 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38ba2374821505dc3541ea05e76fd8aaecdcb5fc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297633"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>속성 식의 열거 상수
@@ -47,7 +47,7 @@ ms.locfileid: "71297633"
   
  [Common Properties](#CommonProperties)  
   
-##  <a name="Package"></a> 패키지  
+##  <a name="package"></a><a name="Package"></a> 패키지  
  다음 표에서는 열거자의 값을 사용하여 설정한 패키지 속성에 해당하는 숫자 값 및 이름을 보여 줍니다.  
   
  **PackageType** 속성 - **DTSPackageType** 열거 값을 사용하여 설정합니다.  
@@ -90,7 +90,7 @@ ms.locfileid: "71297633"
 |EncryptAllWithUserKey|4|  
 |ServerStorage|5|  
   
-##  <a name="PrecedenceConstraints"></a> 선행 제약 조건  
+##  <a name="precedence-constraints"></a><a name="PrecedenceConstraints"></a> 선행 제약 조건  
  **EvalOp** 속성 - **DTSPrecedenceEvalOp** 열거 값을 사용하여 설정합니다.  
   
 |DTSPrecedenceEvalOp의 이름|숫자 값|  
@@ -109,7 +109,7 @@ ms.locfileid: "71297633"
 |Completion|2|  
 |취소됨|3|  
   
-##  <a name="Foreach"></a> Foreach 루프 열거자  
+##  <a name="foreach-loop-enumerators"></a><a name="Foreach"></a> Foreach 루프 열거자  
  Foreach 루프에는 속성 식으로 설정할 수 있는 속성을 가지는 열거자 집합이 포함되어 있습니다.  
   
 ### <a name="foreach-ado-enumerator"></a>Foreach ADO 열거자  
@@ -147,7 +147,7 @@ ms.locfileid: "71297633"
 |노드|1|  
 |NodeText|2|  
   
-##  <a name="Tasks"></a> 작업  
+##  <a name="tasks"></a><a name="Tasks"></a> 작업  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 속성 식으로 설정할 수 있는 속성을 가지는 여러 태스크가 포함되어 있습니다.  
   
 ### <a name="analysis-services-execute-ddl-task"></a>Analysis Services DDL 실행 태스크  
@@ -479,7 +479,7 @@ ms.locfileid: "71297633"
 |빠름|1|  
 |정확|2|  
   
-##  <a name="MaintenancePlanTasks"></a> 유지 관리 계획 태스크  
+##  <a name="maintenance-plan-tasks"></a><a name="MaintenancePlanTasks"></a> 유지 관리 계획 태스크  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 유지 관리 계획 및 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 사용할 SQL Server 태스크를 수행하는 태스크 집합이 포함되어 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이러한 태스크를 프로그래밍 방식으로 수행할 수 없으므로 프로그래밍 참조 설명서에 이러한 태스크 및 해당 열거자에 대한 API 설명서가 포함되지 않습니다.  
@@ -572,7 +572,7 @@ ms.locfileid: "71297633"
 |인덱스|2|  
 |모두|3|  
   
-##  <a name="CommonProperties"></a> 공용 속성  
+##  <a name="common-properties"></a><a name="CommonProperties"></a> 공용 속성  
  패키지, 태스크, Foreach 루프 컨테이너, For 루프 컨테이너, 시퀀스 컨테이너에서는 다음 열거를 사용하여 지정된 속성을 설정할 수 있습니다.  
   
  **ForceExecutionResult** 속성 - **DTSForcedExecResult** 열거 값을 사용하여 설정합니다.  

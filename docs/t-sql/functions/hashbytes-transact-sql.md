@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 29008af0f2584322b180a82b20268c452c603baa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982928"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES(Transact-SQL)
@@ -69,7 +69,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 
 ## <a name="examples"></a>예  
 ### <a name="return-the-hash-of-a-variable"></a>변수의 해시 반환  
- 다음 예에서는 변수 `@HashThis`에 저장된 **nvarchar** 데이터의 `SHA2_256` 해시를 반환합니다.  
+ 다음 예에서는 변수 `SHA2_256`에 저장된 **nvarchar** 데이터의 `@HashThis` 해시를 반환합니다.  
   
 ```sql  
 DECLARE @HashThis nvarchar(32);  

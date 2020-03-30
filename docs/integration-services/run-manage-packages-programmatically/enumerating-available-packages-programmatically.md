@@ -15,10 +15,10 @@ ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 80bf829afcbc93e397e8ea797f22905b3b55c0cd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295764"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>프로그래밍 방식으로 사용 가능 패키지 열거
@@ -28,7 +28,7 @@ ms.locfileid: "71295764"
 
   <a name="top"></a>[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 프로그래밍 방식으로 사용할 때 개별 패키지 또는 폴더의 존재 여부를 확인하거나 로드 및 실행할 수 있는 저장된 패키지를 열거할 수 있습니다. <xref:Microsoft.SqlServer.Dts.Runtime.Application> 네임스페이스의 <xref:Microsoft.SqlServer.Dts.Runtime> 클래스는 이 요구 사항을 충족하기 위한 다양한 메서드를 제공합니다.    
     
-##  <a name="exists"></a> 패키지 또는 폴더가 있는지 확인    
+##  <a name="determining-whether-a-package-or-folder-exists"></a><a name="exists"></a> 패키지 또는 폴더가 있는지 확인    
  저장된 패키지가 있는지 여부를 프로그래밍 방식으로 확인하려면 해당 패키지를 로드 및 실행하기 전에 다음 메서드 중 하나를 호출합니다.    
     
 |스토리지 위치|호출할 메서드|    
@@ -45,7 +45,7 @@ ms.locfileid: "71295764"
     
  [맨 위로 이동](#top)    
     
-##  <a name="listing"></a> 사용 가능한 패키지 열거    
+##  <a name="enumerating-available-packages"></a><a name="listing"></a> 사용 가능한 패키지 열거    
  저장된 패키지 목록을 프로그래밍 방식으로 가져오려면 다음 메서드 중 하나를 호출합니다.    
     
 |스토리지 위치|호출할 메서드|    
@@ -55,7 +55,7 @@ ms.locfileid: "71295764"
     
  다음 예제는 이러한 메서드의 사용 방법을 보여 주는 콘솔 애플리케이션입니다.    
     
-###  <a name="listing_store"></a> 예(SSIS 패키지 저장소)    
+###  <a name="example-ssis-package-store"></a><a name="listing_store"></a> 예(SSIS 패키지 저장소)    
  <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetDtsServerPackageInfos%2A> 메서드를 사용하면 SSIS 패키지 저장소에 저장된 패키지를 나열할 수 있습니다. SSIS 패키지 저장소에서 관리하는 기본 스토리지 위치는 파일 시스템과 MSDB입니다. 이러한 위치에 논리적 폴더를 추가로 만들 수 있습니다.    
     
 ```vb    
@@ -161,7 +161,7 @@ namespace EnumeratePackagesSSIS_CS
     
  [맨 위로 이동](#top)    
     
-###  <a name="listing_sql"></a> 예(SQL Server)    
+###  <a name="example-sql-server"></a><a name="listing_sql"></a> 예(SQL Server)    
  <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A> 메서드를 사용하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 인스턴스에 저장된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 패키지를 나열할 수 있습니다.    
     
 ```vb    

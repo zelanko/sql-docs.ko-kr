@@ -21,10 +21,10 @@ helpviewer_keywords:
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2fbf040bd24ce3da81497001213e953f7436d863
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296871"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
@@ -45,7 +45,7 @@ ms.locfileid: "71296871"
 
 SQL Server에 SQL Server Integration Services를 설치하는 방법과 추가 다운로드에 대한 자세한 내용은 [Integration Services 설치](install-windows/install-integration-services.md)를 참조하세요.
 
-##  <a name="info_tipsql-servermediainfo-tippng-resources"></a>![info_tip](../sql-server/media/info-tip.png) 리소스
+##  <a name="info_tip-resources"></a>![info_tip](../sql-server/media/info-tip.png) 리소스
 -   [SSIS 포럼에서 도움말 보기](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices)
 -   [Stack Overflow에서 도움말 보기](https://stackoverflow.com/questions/tagged/ssis)  
 -   [SSIS 팀 블로그 수행](https://blogs.msdn.microsoft.com/ssis/)

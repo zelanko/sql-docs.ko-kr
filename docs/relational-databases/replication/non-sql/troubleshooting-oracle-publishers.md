@@ -14,10 +14,10 @@ ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c0bb4dfc3a0ac9109b210cfe02fb6a2e743f0ce5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72907960"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Oracle 게시자 문제 해결
@@ -62,14 +62,14 @@ ms.locfileid: "72907960"
   
 -   올바른 Oracle 홈 및 경로를 사용해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에 하나의 Oracle 바이너리 집합만 설치한 경우에도 Oracle 홈과 관련된 환경 변수를 제대로 설정해야 합니다. 환경 변수 값을 변경한 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 중지하고 다시 시작하여 변경 내용을 적용해야 합니다.  
   
- 연결을 구성 및 테스트하는 방법은 [Oracle 게시자 구성](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)의 "[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에 Oracle 클라이언트 네트워킹 소프트웨어 설치 및 구성"을 참조하세요.  
+ 연결을 구성 및 테스트하는 방법은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Oracle 게시자 구성[의 "](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md) 배포자에 Oracle 클라이언트 네트워킹 소프트웨어 설치 및 구성"을 참조하세요.  
   
 ## <a name="the-oracle-publisher-is-associated-with-another-distributor"></a>Oracle 게시자가 다른 배포자와 연결되어 있습니다.  
  Oracle 게시자는 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에만 연결할 수 있습니다. Oracle 게시자에 배포자가 연결되어 있는 경우 다른 배포자를 사용하려면 먼저 기존 배포자를 삭제해야 합니다. 기존 배포자를 먼저 삭제하지 않으면 다음 오류 메시지 중 하나가 표시됩니다.  
   
 -   "Oracle 서버 인스턴스 '\<*OraclePublisherName*'은 '\<*SQLServerDistributorName*>'를 배포자로 사용하도록 이전에 구성되었습니다. '\<*NewSQLServerDistributorName*>'을 배포자로 사용하려면 Oracle 서버 인스턴스의 현재 복제 구성을 제거하여 해당 서버 인스턴스의 모든 게시를 삭제해야 합니다."  
   
--   "Oracle 서버 '\<*OracleServerName*>'는 배포자 '\<*SQLServerDistributorName*>. *\<DistributionDatabaseName>* '에 대한 게시자 '\<*OraclePublisherName*>'으로 이미 정의되었습니다. 게시자를 삭제하거나 공용 동의어 ' *\<SynonymName>* '을 삭제하고 다시 만드세요."  
+-   "Oracle 서버 '\<*OracleServerName*>'는 배포자 '\<*SQLServerDistributorName*>.\<*DistributionDatabaseName>* '에 대한 게시자 ' *\<OraclePublisherName*>'으로 이미 정의되었습니다. 게시자를 삭제하거나 공용 동의어 ' *\<SynonymName>* '을 삭제하고 다시 만드세요."  
   
  Oracle 게시자를 삭제하면 Oracle 데이터베이스의 복제 개체가 자동으로 정리됩니다. 그러나 어떤 경우에는 Oracle 복제 개체를 수동으로 정리해야 합니다. 복제에 의해 생성된 Oracle 복제 개체를 수동으로 정리하려면 다음을 수행하십시오.  
   
@@ -206,7 +206,7 @@ ms.locfileid: "72907960"
 ## <a name="oracle-error-ora-01555"></a>Oracle 오류 ORA-01555  
  다음 Oracle 데이터베이스 오류는 스냅샷 복제와는 관계가 없으며 Oracle에서 일관된 읽기를 수행할 수 있는 데이터 뷰를 생성하는 방식과 관련되어 있습니다.  
   
- "ORA-01555: Snapshot too old"  
+ "ORA-01555: 너무 오래된 스냅샷"  
   
  Oracle에서는 롤백 세그먼트라는 개체를 사용하여 SQL 문이 실행된 시점에서 일관된 읽기를 수행할 수 있는 데이터 뷰를 생성합니다. 다른 동시 세션에서 롤백 정보를 덮어쓰는 경우 "snapshot too old" 오류가 발생할 수 있습니다. Oracle 9i 이전에서는 이 오류의 발생 빈도를 줄이기 위해 롤백 세그먼트의 크기 및/또는 수를 늘리고 큰 트랜잭션을 특정 롤백 세그먼트에 할당하는 방법이 권장되었습니다.  
   

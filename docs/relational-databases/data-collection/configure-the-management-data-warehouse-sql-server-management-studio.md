@@ -23,10 +23,10 @@ ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 54badd0404ee5360aef4a7bc095c236e5b31f79d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056470"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>관리 데이터 웨어하우스 구성(SQL Server Management Studio)
@@ -36,7 +36,7 @@ ms.locfileid: "74056470"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 시스템 서비스 계정(로컬 시스템, 네트워크 서비스 또는 로컬 서비스) 중 하나를 사용하여 실행되도록 구성되고 관리 데이터 웨어하우스는 데이터 수집기와 다른 인스턴스에서 생성될 경우 관리 데이터 웨어하우스에 데이터를 업로드하는 데 프록시를 사용하도록 컬렉션 집합을 구성해야 합니다.  
   
-### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>다음 단일 인스턴스 또는 여러 인스턴스에서 관리 데이터 웨어하우스 구성: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-ssnoversion"></a>다음 단일 인스턴스 또는 여러 인스턴스에서 관리 데이터 웨어하우스 구성: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행 중인지 확인합니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "74056470"
   
 6.  데이터 수집기를 사용하는 데이터베이스 인스턴스가 모두 구성되어 공유 관리 데이터 웨어하우스에 데이터를 업로드할 때까지 5단계를 반복합니다.  
 
-####  <a name="Wizard"></a> 관리 데이터 웨어하우스 구성 마법사  
+####  <a name="configure-management-data-warehouse-wizard"></a><a name="Wizard"></a> 관리 데이터 웨어하우스 구성 마법사  
  **시작 페이지**  
   
  시작 페이지는 데이터 컬렉션 구성 마법사의 첫 페이지입니다. 이 페이지의 표시 여부는 선택 사항입니다.  
@@ -93,7 +93,7 @@ ms.locfileid: "74056470"
   
  로그인에 대한 **매핑** 확인란을 선택하여 로그인을 지정합니다.  
   
- **데이터베이스 역할 멤버 자격:** ‘\<데이터 웨어하우스 이름>’   
+ **데이터베이스 역할 멤버 자격:** ‘*데이터 웨어하우스 이름>’\<*  
  다음 중 하나 이상의 옵션 옆에 있는 확인란을 클릭하여 로그인이 매핑되는 관리 데이터 웨어하우스 역할을 선택합니다.  
   
 -   **mdw_admin**  

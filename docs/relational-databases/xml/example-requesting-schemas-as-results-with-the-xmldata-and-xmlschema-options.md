@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: a11e6a91c1fea9a0eb7b20124e0de8565540caf5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75243777"
 ---
 # <a name="request-schemas-as-results-with-xmldata--xmlschema"></a>XMLDATA 및 XMLSCHEMA를 사용하여 결과로 스키마 요청

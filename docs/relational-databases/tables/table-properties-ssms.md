@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1c0dea1eff86506021907b184c80b3f28f74ab5a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72905948"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
@@ -39,7 +39,7 @@ ms.locfileid: "72905948"
   
 4.  [ 페이지](#Storage)  
 
-##  <a name="GeneralPage"></a> 일반 페이지  
+##  <a name="general-page"></a><a name="GeneralPage"></a> 일반 페이지  
  **Database**  
  이 테이블이 포함된 데이터베이스의 이름입니다.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "72905948"
  **테이블 복제 여부**  
  테이블이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제를 사용하여 다른 데이터베이스에 복제된 경우를 나타냅니다. 가능한 값은 **True** 또는 **False**입니다.  
   
-##  <a name="ChangeTracking"></a> 변경 내용 추적 페이지  
+##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a> 변경 내용 추적 페이지  
  **변경 내용 추적**  
  테이블에 대해 변경 내용 추적이 설정되었는지 여부를 나타냅니다. 기본값은 **False**입니다.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "72905948"
   
  변경 내용 추적에 대한 자세한 내용은 [변경 내용 추적 정보&#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)를 참조하세요.  
   
-##  <a name="FileTable"></a> FileTable 페이지  
+##  <a name="filetable-page"></a><a name="FileTable"></a> FileTable 페이지  
  FileTable과 관련된 테이블의 속성을 표시합니다. 자세한 내용은 [FileTables&#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)를 참조하세요.  
   
  **FileTable 이름 열 데이터 정렬**  
@@ -110,7 +110,7 @@ ms.locfileid: "72905948"
  **FileTable 네임스페이스 사용**  
  **True**값은 해당 테이블이 FileTable임을 나타냅니다. 이 값을 **False**로 변경하면 FileTable이 일반적인 사용자 테이블로 변경됩니다. 나중에 테이블을 다시 FileTable로 변경할 경우 테이블이 FileTable 일관성 검사를 통과해야 변환이 성공합니다.  
   
-##  <a name="Storage"></a> 스토리지 페이지  
+##  <a name="storage-page"></a><a name="Storage"></a> 스토리지 페이지  
  선택한 테이블의 스토리지 관련 속성을 표시합니다.  
   
 ### <a name="compression"></a>압축  

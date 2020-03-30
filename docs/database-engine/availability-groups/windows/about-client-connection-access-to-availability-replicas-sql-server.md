@@ -18,10 +18,10 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a47e3c79bacbd75ca6761bdb250b05084caf2832
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991735"
 ---
 # <a name="types-of-client-connections-to-replicas-within-an-always-on-availability-group"></a>Always On 가용성 그룹 내의 복제본에 대한 클라이언트 연결 유형
@@ -35,7 +35,7 @@ ms.locfileid: "67991735"
 > [!NOTE]  
 >  클라이언트 연결 요청을 처리하는 가용성 그룹 수신기에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)을 참조하세요.  
   
-##  <a name="ConnectAccessForSecondary"></a> 보조 역할에서 지원되는 연결 액세스의 유형  
+##  <a name="types-of-connection-access-supported-by-the-secondary-role"></a><a name="ConnectAccessForSecondary"></a> 보조 역할에서 지원되는 연결 액세스의 유형  
  보조 역할은 클라이언트 연결에 대해 다음과 같은 세 가지 대체 방법을 지원합니다.  
   
  연결 없음  
@@ -51,7 +51,7 @@ ms.locfileid: "67991735"
   
  자세한 내용은 [가용성 복제본에 대한 읽기 전용 액세스 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)가 있어야 합니다.  
   
-##  <a name="ConnectAccessForPrimary"></a> 주 역할에서 지원되는 연결 액세스의 유형  
+##  <a name="types-of-connection-access-supported-by-the-primary-role"></a><a name="ConnectAccessForPrimary"></a> 주 역할에서 지원되는 연결 액세스의 유형  
  주 역할은 클라이언트 연결에 대해 다음과 같은 두 가지 대체 방법을 지원합니다.  
   
  모든 연결이 허용됩니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "67991735"
   
  자세한 내용은 [가용성 복제본에 대한 읽기 전용 액세스 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)가 있어야 합니다.  
   
-##  <a name="HowConnectionAccessAffectsConnectivity"></a> 연결 액세스 구성이 클라이언트 연결에 미치는 영향  
+##  <a name="how-the-connection-access-configuration-affects-client-connectivity"></a><a name="HowConnectionAccessAffectsConnectivity"></a> 연결 액세스 구성이 클라이언트 연결에 미치는 영향  
  복제본의 연결 액세스 설정에 따라 연결 시도가 실패하는지 또는 성공하는지가 결정됩니다. 다음 표에는 지정된 연결 시도의 각 연결 액세스 설정에 대한 성공 여부가 요약되어 있습니다.  
   
 |복제본 역할|복제본에서 지원되는 연결 액세스|연결 의도|연결 시도 결과|  
@@ -93,7 +93,7 @@ ms.locfileid: "67991735"
   
  일반적으로 이 시나리오 예에서는 동기-커밋 복제본 사이에서만 장애 조치(failover)가 수행되며 장애 조치(failover) 후 즉시 읽기 전용 애플리케이션이 비동기-커밋 보조 복제본 중 하나에 다시 연결할 수 있습니다. 그러나 메인 컴퓨팅 센터에 재해가 발생할 경우 동기-커밋 복제본은 모두 손실됩니다. 위성 사이트의 데이터베이스 관리자는 비동기-커밋 보조 복제본에 강제 수동 장애 조치(failover)를 수행하여 응답합니다. 나머지 보조 복제본의 보조 데이터베이스는 강제 장애 조치(failover)에 따라 일시 중지되므로 읽기 전용 작업 로드에 사용할 수 없습니다. 읽기/쓰기 연결용으로 구성된 새로운 주 복제본에서는 읽기 전용 작업 로드가 읽기/쓰기 작업 로드와 경쟁할 수 없습니다. 따라서 데이터베이스 관리자가 나머지 비동기-커밋 보조 복제본에서 보조 데이터베이스를 재개할 때까지 읽기 전용 클라이언트는 가용성 복제본에 연결할 수 없습니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [가용성 복제본에 대한 읽기 전용 액세스 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -105,7 +105,7 @@ ms.locfileid: "67991735"
   
 -   [새 가용성 그룹 대화 상자 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-##  <a name="RelatedContent"></a> 관련 내용  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
   
 -   [고가용성 및 재해 복구를 위한 Microsoft SQL Server Always On 솔루션 가이드](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

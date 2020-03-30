@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5c90ea22849dd1d0437cdf058f639bbe546ccab9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73594412"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>PowerShell을 사용하여 상시 암호화 구성
@@ -35,7 +35,7 @@ Always Encrypted의 주요 목표는 데이터베이스 시스템이 손상된 �
 SQL Server 인스턴스를 호스트하는 컴퓨터가 아닌 보안 컴퓨터에 [SqlServer 모듈](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/sqlserver) 을 설치합니다. PowerShell 갤러리에서 직접 모듈을 설치할 수 있습니다.  자세한 내용은 [다운로드](../../../ssms/download-sql-server-ps-module.md) 지침을 참조하세요.
 
 
-## <a name="importsqlservermodule"></a> SqlServer 모듈 가져오기 
+## <a name="importing-the-sqlserver-module"></a><a name="importsqlservermodule"></a> SqlServer 모듈 가져오기 
 
 SqlServer 모듈을 로드하려면
 
@@ -49,7 +49,7 @@ SqlServer 모듈을 로드하려면
 Import-Module "SqlServer" 
 ```
 
-## <a name="connectingtodatabase"></a> 데이터베이스에 연결
+## <a name="connecting-to-a-database"></a><a name="connectingtodatabase"></a> 데이터베이스에 연결
 
 상시 암호화 cmdlet 중 일부는 데이터베이스의 데이터 또는 메타데이터로 작업하므로 먼저 데이터베이스에 연결해야 합니다. SqlServer 모듈을 사용하여 상시 암호화를 구성할 때 데이터베이스에 연결하는 다음 두 가지 권장 방법이 있습니다. 
 1. **Get-SqlDatabase** cmdlet을 사용하여 연결
@@ -117,7 +117,7 @@ Get-SqlColumnMasterKey -Path SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\you
 - [PowerShell을 사용하여 Always Encrypted로 열 암호화, 다시 암호화 또는 암호 해독](configure-column-encryption-using-powershell.md)
 
 
-##  <a name="aecmdletreference"></a> 상시 암호화 Cmdlet 참조
+##  <a name="always-encrypted-cmdlet-reference"></a><a name="aecmdletreference"></a> 상시 암호화 Cmdlet 참조
 
 상시 암호화에 사용할 수 있는 PowerShell cmdlet은 다음과 같습니다.
 

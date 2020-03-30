@@ -11,18 +11,18 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: c278bcf6cff451396b3d677b203f207b68fd6dc5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67959285"
 ---
-#  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 원본 제어 사용
+#  <a name="using-source-control-in-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 원본 제어 사용
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]에서는 버전/원본 제어를 위해 Git을 지원합니다.
 
 
-## <a name="git-support-in-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]의 Git 지원
+## <a name="git-support-in-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]의 Git 지원
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]는 Git SCM(원본 제어 관리자)과 함께 제공되지만, 먼저 [Git(버전 2.0.0 이상)을 설치](https://git-scm.com/download)해야 이러한 기능을 사용할 수 있습니다. 
 

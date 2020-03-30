@@ -11,10 +11,10 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1bc950a7d0a576338bea9a614193ab3edaee7c96
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73033002"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>1단원: 데이터베이스 엔진에 연결
@@ -27,7 +27,7 @@ ms.locfileid: "73033002"
 - [Management Studio로 연결](#connect)  
 - [추가 연결 권한 부여](#additional) 
 
-## <a name="tools">시작 도구</a> 
+## <a name=""></a><a name="tools">시작 도구</a> 
 - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 은 다양한 도구와 함께 제공됩니다. 이 항목에서는 이 중 가장 필요한 도구를 설명하고 작업에 적합한 도구를 선택할 수 있도록 도움을 줍니다. 모든 도구는 **시작** 메뉴에서 액세스할 수 있습니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]와 같은 일부 도구는 기본적으로 설치되지 않으며 설치하는 동안 클라이언트 구성 요소의 일부로 해당 도구를 선택해야 합니다. 아래에서 설명하는 도구에 대한 전체 설명을 보려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서에서 검색하세요. [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 에는 이러한 도구의 일부만 포함되어 있습니다.  
 
 ### <a name="basic-tools"></a>기본 도구
@@ -46,7 +46,7 @@ ms.locfileid: "73033002"
 - 현재 버전의 Windows에서는 **시작** 페이지에 **구성 관리자**을 차례로 가리킨 다음 **SQL Server *version* 구성 관리자**에서 무료로 다운로드할 수 있습니다.   
 - 이전 버전의 Windows를 사용하는 경우 **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
 
-## <a name="connect"></a>Management Studio로 연결  
+## <a name="connecting-with-management-studio"></a><a name="connect"></a>Management Studio로 연결  
 - 인스턴스 이름을 알고 있으며 컴퓨터의 로컬 관리자 그룹 멤버로 연결하는 경우에는 동일한 컴퓨터에서 실행하는 도구의 [!INCLUDE[ssDE](../includes/ssde-md.md)] 에 쉽게 연결할 수 있습니다. 다음 절차는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 호스팅하는 컴퓨터에서 수행해야 합니다.  
 
 > [!NOTE]  
@@ -85,7 +85,7 @@ ms.locfileid: "73033002"
 > [!NOTE]
 > 이 자습서에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 처음 사용하며 특별한 연결 문제가 없다고 가정합니다. 그러면 대부분의 사용자를 수용하고 이 자습서를 단순하게 유지할 수 있습니다. 자세한 문제 해결 단계는 [SQL Server 데이터베이스 엔진에 대한 연결 문제 해결](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)을 참조하세요. 
 
-## <a name="additional"></a>추가 연결 권한 부여  
+## <a name="authorizing-additional-connections"></a><a name="additional"></a>추가 연결 권한 부여  
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 관리자로 연결한 다음 가장 먼저 수행해야 할 태스크 중 하나는 다른 사용자가 연결할 수 있도록 권한을 부여하는 것입니다. 로그인을 만들고 이 로그인이 사용자로서 데이터베이스에 액세스할 수 있도록 권한을 부여하여 이 작업을 수행합니다. 로그인은 Windows 자격 증명을 사용하는 Windows 인증 로그인이나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 인증 정보를 저장하며 Windows 자격 증명과는 독립적인 SQL Server 인증 로그인 중 하나일 수 있습니다. 가능하면 Windows 인증을 사용하십시오.
 
 > [!TIP]

@@ -11,10 +11,10 @@ ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ca651634947e730df4ae4dda70999c7839521659
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67942805"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 내구성
@@ -86,7 +86,7 @@ ms.locfileid: "67942805"
   
  백그라운드 스레드는 병합 정책에 따라 모든 닫힌 CFP를 평가한 다음 조건에 맞는 CFP에 대한 하나 이상의 병합 요청을 시작합니다. 이러한 병합 요청은 오프라인 검사점 스레드에서 처리됩니다. 병합 정책 평가는 주기적으로 수행되며 검사점을 닫을 때에도 수행됩니다.  
   
-### <a name="includessnoversionincludesssnoversion-mdmd-merge-policy"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 병합 정책  
+### <a name="ssnoversion-merge-policy"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 병합 정책  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 다음과 같은 병합 정책을 구현합니다.  
   
 -   두 개 이상의 연속하는 CFP를 통합할 수 있는 경우 삭제된 행을 고려한 후 대상 크기의 CFP 하나에 결과 행을 모두 넣을 수 있도록 병합을 예약합니다. 데이터 및 델타 파일의 대상 크기는 위에서 설명한 것처럼 원래 크기에 해당합니다.  

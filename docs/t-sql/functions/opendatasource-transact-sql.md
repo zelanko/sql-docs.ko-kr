@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 8aa3f690b79167df6de5b27f6dd78276c61e0b26
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71342063"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE(Transact-SQL)
@@ -80,7 +80,7 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
   
 각 공급자에 대한 연결 요구 사항은 연결된 서버를 만들 때의 매개 변수에 대한 요구 사항과 비슷합니다. 여러 일반적인 공급자에 대한 자세한 내용은 [sp_addlinkedserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 문서를 참조하세요.  
   
-`FROM` 절에서 `OPENDATASOURCE`, `OPENQUERY` 또는 `OPENROWSET`에 대한 모든 호출은 두 호출에 동일한 인수가 제공되는 경우에도 업데이트의 대상으로 사용되는 함수에 대한 호출과는 개별적이고 독립적으로 평가됩니다. 특히 이러한 호출 중 하나의 결과에 적용되는 필터 또는 조인 조건은 다른 호출의 결과에 영향을 미치지 않습니다.  
+`OPENDATASOURCE` 절에서 `OPENQUERY`, `OPENROWSET` 또는 `FROM`에 대한 모든 호출은 두 호출에 동일한 인수가 제공되는 경우에도 업데이트의 대상으로 사용되는 함수에 대한 호출과는 개별적이고 독립적으로 평가됩니다. 특히 이러한 호출 중 하나의 결과에 적용되는 필터 또는 조인 조건은 다른 호출의 결과에 영향을 미치지 않습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  모든 사용자가 OPENDATASOURCE를 실행할 수 있습니다. 원격 서버 연결에 사용되는 사용 권한은 연결 문자열에서 결정됩니다.  
@@ -88,7 +88,7 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
 ## <a name="examples"></a>예  
 
 ### <a name="a-using-opendatasource-with-select-and-the-sql-server-ole-db-driver"></a>A. SELECT 및 SQL Server OLE DB Driver로 OPENDATASOURCE 사용하기  
- 다음 예에서는 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md)를 사용하여 `Seattle1` 원격 서버에서 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `HumanResources.Department` 테이블에 액세스합니다. `SELECT` 문은 반환되는 행 집합을 정의하는 데 사용됩니다. 공급자 문자열에는 `Server` 및 `Trusted_Connection` 키워드가 포함됩니다. 이러한 키워드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB Driver가 인식합니다.  
+ 다음 예에서는 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md)를 사용하여 `HumanResources.Department` 원격 서버에서 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `Seattle1` 테이블에 액세스합니다. `SELECT` 문은 반환되는 행 집합을 정의하는 데 사용됩니다. 공급자 문자열에는 `Server` 및 `Trusted_Connection` 키워드가 포함됩니다. 이러한 키워드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB Driver가 인식합니다.  
   
 ```sql  
 SELECT GroupName, Name, DepartmentID  

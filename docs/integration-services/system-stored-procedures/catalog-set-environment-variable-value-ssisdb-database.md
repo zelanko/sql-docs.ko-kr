@@ -11,10 +11,10 @@ ms.assetid: 1d493dad-9d9c-4f0a-87e2-20a2d4a35f99
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cbd113daf80c680da1cdac6ea6135754b461737e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296741"
 ---
 # <a name="catalogset_environment_variable_value-ssisdb-database"></a>catalog.set_environment_variable_value(SSISDB 데이터베이스)

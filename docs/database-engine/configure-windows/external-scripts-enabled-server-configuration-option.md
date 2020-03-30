@@ -14,10 +14,10 @@ ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3f47352cc82ac831ebcd64548baa24423490094f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72006053"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>External Scripts Enabled 서버 구성 옵션
@@ -40,7 +40,7 @@ ms.locfileid: "72006053"
 
     [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]는 SQL Server 2016에서와 동일한 아키텍처를 사용하지만, Python 언어에 대한 지원을 제공합니다.
 
-    외부 스크립트를 실행할 수 있도록 설정하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 **고급 분석 확장** 기능을 설치합니다. 초기 설치 과정에서 R 또는 Python 중 하나, 또는 둘다를 선택하도록 합니다. 
+    외부 스크립트를 실행할 수 있도록 설정하려면 **설치 중에**고급 분석 확장[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 설치합니다. 초기 설치 과정에서 R 또는 Python 중 하나, 또는 둘다를 선택하도록 합니다. 
 
 ## <a name="additional-requirements"></a>추가 요구 사항
 

@@ -23,10 +23,10 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f865a560cb530060cf8f2f0a2f0a6208fcc924ed
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298600"
 ---
 # <a name="flat-file-connection-manager"></a>Flat File Connection Manager
@@ -255,7 +255,7 @@ ms.locfileid: "71298600"
 |**ColumnType**|열 유형이 구분 기호로 분리됨, 고정 폭 또는 왼쪽 정렬 중 어떤 것인지를 나타냅니다. 이 속성은 읽기 전용입니다. 왼쪽 정렬 파일은 마지막 열을 제외한 모든 열에 고정 폭이 지정된 파일입니다. 마지막 열은 행 구분 기호로 구분됩니다.|  
 |**OutputColumnWidth**|저장할 값을 바이트 수로 지정합니다. 유니코드 파일의 경우 이 값은 문자 수입니다. 데이터 흐름 태스크에서 이 값은 플랫 파일 원본의 출력 열 너비를 설정하는 데 사용됩니다. 개체 모델에서 이 속성의 이름은 MaximumWidth입니다.|  
 |**DataType**|사용 가능한 데이터 형식의 목록에서 선택합니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.|  
-|**TextQualified**|텍스트 데이터가 인용 문자 등의 텍스트 한정자로 묶였는지 여부를 나타냅니다.<br /><br /> True: 플랫 파일의 텍스트 데이터가 한정됩니다. False: 플랫 파일의 텍스트 데이터가 한정되지 않았습니다.|  
+|**TextQualified**|텍스트 데이터가 인용 문자 등의 텍스트 한정자로 묶였는지 여부를 나타냅니다.<br /><br /> True: 플랫 파일의 텍스트 데이터가 한정됩니다. False: 플랫 파일의 텍스트 데이터가 한정되지 않습니다.|  
 |**이름**|설명 열 이름을 지정합니다. 이름을 입력하지 않으면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 자동으로 열 0, 열 1 등과 같은 형식으로 이름을 만듭니다.|  
 |**DataScale**|숫자 데이터의 소수 자릿수를 지정합니다. 소수 자릿수란 소수점 이하 자릿수를 말합니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.|  
 |**ColumnDelimiter**|사용 가능한 열 구분 기호의 목록에서 선택합니다. 텍스트에 거의 사용되지 않는 구분 기호를 선택합니다. 고정 폭 열에 대해서는 이 값이 무시됩니다.<br /><br /> **{CR}{LF}** . 열이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.<br /><br /> **{CR}** . 열이 캐리지 리턴으로 구분됩니다.<br /><br /> **{LF}** . 열이 줄 바꿈으로 구분됩니다.<br /><br /> **세미콜론{;}** . 열이 세미콜론으로 구분됩니다.<br /><br /> **콜론{:}** . 열이 콜론으로 구분됩니다.<br /><br /> **쉼표 {,}** . 열이 쉼표로 구분됩니다.<br /><br /> **탭 {t}** . 열이 탭으로 구분됩니다.<br /><br /> **세로 막대{&#124;}** . 열이 세로 막대로 구분됩니다.|  

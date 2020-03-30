@@ -15,10 +15,10 @@ ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 64f427de0a2b2735671a885ca550c76386ce0177
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991497"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group"></a>Always On 가용성 그룹에 데이터베이스 추가
@@ -34,10 +34,10 @@ ms.locfileid: "67991497"
 -   데이터베이스는 주 복제본을 호스팅하는 서버 인스턴스에 있어야 하며 가용성 데이터베이스에 대한 사전 요구 사항과 제한 사항을 준수해야 합니다. 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)를 참조하세요.  
   
  
-##  <a name="Permissions"></a> 권한  
+##  <a name="permissions"></a><a name="Permissions"></a> 권한  
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="use-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
 
   
 1.  개체 탐색기에서 주 복제본을 호스팅하는 서버 인스턴스에 연결하고 서버 트리를 확장합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "67991497"
   
          **가용성 그룹 속성** 대화 상자를 사용하여 가용성 그룹에 데이터베이스를 추가한 후에는 보조 복제본을 호스팅하는 각 서버 인스턴스에서 해당 보조 데이터베이스를 구성해야 합니다. 자세한 내용은 [Always On 보조 데이터베이스에서 데이터 이동 시작&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)를 참조하세요.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="use-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
 
   
 1.  주 복제본을 호스팅하는 서버 인스턴스를 호스팅하는 서버 인스턴스에 연결합니다.    
@@ -79,7 +79,7 @@ ms.locfileid: "67991497"
   
 3.  가용성 그룹에 데이터베이스를 추가한 후에는 보조 복제본을 호스팅하는 각 서버 인스턴스에서 해당 보조 데이터베이스를 구성해야 합니다. 자세한 내용은 [Always On 보조 데이터베이스에서 데이터 이동 시작&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)를 참조하세요.  
   
-##  <a name="PowerShellProcedure"></a> PowerShell 사용  
+##  <a name="use-powershell"></a><a name="PowerShellProcedure"></a> PowerShell 사용  
 
   
 1.  주 복제본을 호스트하는 서버 인스턴스로 디렉터리(**cd**)를 변경합니다.  
@@ -106,7 +106,7 @@ ms.locfileid: "67991497"
   
  전체 예제를 보려면 아래의 [예제(PowerShell)](#PSExample)를 참조하세요.  
   
-###  <a name="PSExample"></a> 예제(PowerShell)  
+###  <a name="example-powershell"></a><a name="PSExample"></a> 예제(PowerShell)  
  다음 예는 가용성 그룹의 주 복제본을 호스팅하는 서버 인스턴스에 있는 데이터베이스에서 보조 데이터베이스를 준비하고, 이 데이터베이스를 가용성 그룹에 주 데이터베이스로 추가한 다음, 보조 데이터베이스를 가용성 그룹에 조인하는 전체 과정을 보여 줍니다. 가장 먼저, 이 예에서는 데이터베이스와 해당 트랜잭션 로그를 백업합니다. 그런 다음 보조 복제본을 호스팅하는 서버 인스턴스로 데이터베이스 및 로그 백업을 복원합니다.  
   
  이 예제에서는 **Add-SqlAvailabilityDatabase** 를 두 번 호출합니다. 먼저 주 복제본에서 호출해서 데이터베이스를 가용성 그룹에 추가한 다음 보조 복제본에서 호출해서 해당 복제본에 있는 보조 데이터베이스를 가용성 그룹에 조인합니다. 보조 복제본이 두 개 이상인 경우 각 보조 복제본에서 보조 데이터베이스를 복원 및 조인합니다.  

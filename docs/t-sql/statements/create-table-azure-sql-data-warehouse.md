@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: e32c215050b8ee7ec74bee51f7330dbb793814cd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73729867"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE(Azure SQL Data Warehouse)
@@ -106,7 +106,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  *column_name*  
  테이블 열의 이름입니다.
 
-### <a name="ColumnOptions"></a> 열 옵션
+### <a name="column-options"></a><a name="ColumnOptions"></a> 열 옵션
 
  `COLLATE` *Windows_collation_name*  
  식에 대한 데이터 정렬을 지정합니다. 데이터 정렬은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원하는 Windows 데이터 정렬 중 하나여야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원되는 Windows 데이터 정렬 목록의 경우 [Windows 데이터 정렬 이름(Transact-SQL)](windows-collation-name-transact-sql.md)을 참조하세요.  
@@ -122,7 +122,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  | *constraint_name* | 제약 조건에 대한 선택적 이름입니다. 제약 조건 이름은 데이터베이스 내에서 고유합니다. 이름은 다른 데이터베이스에서 다시 사용할 수 있습니다. |
  | *constant_expression* | 열의 기본값입니다. 식은 리터럴 값이거나 상수여야 합니다. 예를 들어 `'CA'`, `4`와 같은 상수 식이 허용됩니다. `2+3`, `CURRENT_TIMESTAMP`와 같은 상수 식은 허용되지 않습니다. |
   
-### <a name="TableOptions"></a> 테이블 구조 옵션
+### <a name="table-structure-options"></a><a name="TableOptions"></a> 테이블 구조 옵션
 
 테이블의 형식 선택에 대한 지침은 [Azure SQL Data Warehouse의 테이블 인덱싱](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-tables-index/)을 참조하세요.
   
@@ -137,7 +137,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  
  `LOCATION = USER_DB` 이 옵션은 더 이상 사용되지 않습니다. 구문적으로는 수락되지만 더 이상 필요하지 않으며 동작에 영향을 주지 않습니다.   
   
-### <a name="TableDistributionOptions"></a> 테이블 배포 옵션
+### <a name="table-distribution-options"></a><a name="TableDistributionOptions"></a> 테이블 배포 옵션
 
 최상의 배포 방법을 선택하고 분산된 테이블을 사용하는 방법을 알아보려면 [Azure SQL Data Warehouse에서 테이블 배포](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/)를 참조하세요.
 
@@ -147,7 +147,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 `DISTRIBUTION = REPLICATE`은 각 컴퓨팅 노드에 테이블의 복사본 하나를 저장합니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]의 경우 테이블은 각 컴퓨팅 노드에 있는 배포 데이터베이스에 저장됩니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]의 경우 테이블은 컴퓨팅 노드에 걸쳐 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일 그룹에 저장됩니다 이 동작은 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]의 기본값입니다.
   
-### <a name="TablePartitionOptions"></a> 테이블 파티션 옵션
+### <a name="table-partition-options"></a><a name="TablePartitionOptions"></a> 테이블 파티션 옵션
 테이블 파티션 사용에 대한 지침은 [SQL Data Warehouse의 테이블 분할](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)을 참조하세요.
 
  `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
@@ -155,7 +155,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 | 인수 | 설명 |
 | -------- | ----------- |
-|*partition_column_name*| [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]가 행을 분할하는 데 사용하는 열을 지정합니다. 이 열은 모든 데이터 형식일 수 있습니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 파티션 열 값을 오름차순으로 정렬합니다. 낮음-높은 순서는 `RANGE` 지정의 `LEFT`에서 `RIGHT`로 진행됩니다. |  
+|*partition_column_name*| [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]가 행을 분할하는 데 사용하는 열을 지정합니다. 이 열은 모든 데이터 형식일 수 있습니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 파티션 열 값을 오름차순으로 정렬합니다. 낮음-높은 순서는 `LEFT` 지정의 `RIGHT`에서 `RANGE`로 진행됩니다. |  
 | `RANGE LEFT` | 왼쪽(낮은 값)에서 파티션에 속하는 경계 값을 지정합니다. 기본값은 LEFT입니다. |
 | `RANGE RIGHT` | 오른쪽(높은 값)에서 파티션에 속하는 경계 값을 지정합니다. | 
 | `FOR VALUES` ( *boundary_value* [,...*n*] ) | 파티션에 대한 경계 값을 지정합니다. *boundary_value*는 상수 식입니다. NULL일 수 없습니다. *partition_column_name*의 데이터 형식과 일치하거나 암시적으로 변환할 수 있어야 합니다. 암시적으로 변환하는 동안에는 자를 수 없습니다. 그러면 값의 크기와 배율이 *partition_column_name*의 데이터 형식과 일치하지 않습니다.<br></br><br></br>`PARTITION` 절은 지정하되 경계 값을 지정하지 않으면 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 하나의 파티션으로 분할된 테이블을 만듭니다. 해당하는 경우 나중에 두 개의 파티션으로 테이블을 분할할 수 있습니다.<br></br><br></br>하나의 경계 값을 지정한 경우 결과 테이블은 경계 값보다 낮은 값에 대한 파티션 하나와 경계 값보다 높은 값에 대한 파티션 하나 이렇게 두 개의 파티션을 갖습니다. 분할되지 않은 테이블에 파티션을 이동하는 경우 분할되지 않은 테이블은 데이터를 받되 해당 메타데이터의 파티션 경계는 없습니다.| 
@@ -172,7 +172,7 @@ CCI(클러스터형 columnstore 인덱스)는 Azure SQL Data Warehouse에서 테
 
 자세한 내용은 [순서가 지정된 클러스터형 columnstore 인덱스를 사용한 성능 튜닝](https://docs.microsoft.com/azure/sql-data-warehouse/performance-tuning-ordered-cci)을 참조하세요.   
 
-### <a name="DataTypes"></a> 데이터 형식
+### <a name="data-type"></a><a name="DataTypes"></a> 데이터 형식
 
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 가장 일반적으로 사용되는 데이터 형식을 지원합니다. 다음은 세부 정보 및 스토리지 바이트가 포함된 지원되는 데이터 형식의 목록입니다. 데이터 형식 및 사용 방법을 더 잘 이해하려면 [SQL Data Warehouse의 테이블에 대한 데이터 형식](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types)을 참조하세요.
 
@@ -220,7 +220,7 @@ CCI(클러스터형 columnstore 인덱스)는 Azure SQL Data Warehouse에서 테
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서는 *n*을 가능한 두 값 중 하나로 처리합니다. `1`<= *n* <= `24`이면 *n*은 `24`으로 처리됩니다. `25` <= *n* <= `53`이면 *n*은 `53`으로 처리됩니다.  
   
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] `float` 데이터 형식은 `1`부터 `53`까지의 모든 *n* 값에 대해 ISO 표준을 준수합니다. 배정밀도의 동의어는 `float(53)`입니다.  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] `float` 데이터 형식은 *부터* 까지의 모든 `1`n`53` 값에 대해 ISO 표준을 준수합니다. 배정밀도의 동의어는 `float(53)`입니다.  
   
  `real` [ ( *n* ) ]  
  실제 정의는 float와 같습니다. `real`의 ISO 동의어는 `float(24)`입니다.  
@@ -356,7 +356,7 @@ CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION 
 <a name="ExamplesColumn"></a>   
 ## <a name="examples-for-columns"></a>열에 대한 예제
 
-### <a name="ColumnCollation"></a> 1. 열 데이터 정렬 지정 
+### <a name="a-specify-a-column-collation"></a><a name="ColumnCollation"></a> 1. 열 데이터 정렬 지정 
  다음 예제에서는 `MyTable` 테이블이 두 개의 서로 다른 열 데이터 정렬을 사용하여 만들어집니다. 기본적으로 `mycolumn1` 열에는 기본 데이터 정렬 Latin1_General_100_CI_AS_KS_WS가 있습니다. `mycolumn2` 열에는 Frisian_100_CS_AS 데이터 정렬이 있습니다.  
   
 ```sql
@@ -368,7 +368,7 @@ WITH ( CLUSTERED COLUMNSTORE INDEX )
 ;  
 ```  
   
-### <a name="DefaultConstraint"></a> 2. 열에 대해 DEFAULT 제약 조건 지정
+### <a name="b-specify-a-default-constraint-for-a-column"></a><a name="DefaultConstraint"></a> 2. 열에 대해 DEFAULT 제약 조건 지정
 
  다음 예제에서는 열에 대한 기본값을 지정하는 구문을 보여 줍니다. colA 열에는 기본값 0 및 constraint_colA라는 기본 제약 조건이 있습니다.  
   
@@ -385,7 +385,7 @@ WITH ( CLUSTERED COLUMNSTORE INDEX )
 <a name="ExamplesTemporaryTables"></a> 
 ## <a name="examples-for-temporary-tables"></a>임시 테이블에 대한 예제
 
-### <a name="TemporaryTable"></a> 3. 로컬 임시 테이블 만들기  
+### <a name="c-create-a-local-temporary-table"></a><a name="TemporaryTable"></a> 3. 로컬 임시 테이블 만들기  
  다음 예제에서는 #myTable이라는 로컬 임시 테이블을 만듭니다. 테이블은 #으로 시작하는 세 부분으로 된 이름으로 지정됩니다.
   
 ```sql
@@ -406,7 +406,7 @@ WITH
 <a name="ExTableStructure"></a>  
 ## <a name="examples-for-table-structure"></a>테이블 구조에 대한 예제
 
-### <a name="ClusteredColumnstoreIndex"></a> 4. 클러스터형 columnstore 인덱스로 테이블 만들기  
+### <a name="d-create-a-table-with-a-clustered-columnstore-index"></a><a name="ClusteredColumnstoreIndex"></a> 4. 클러스터형 columnstore 인덱스로 테이블 만들기  
  다음 예에서는 클러스터형 columnstore 인덱스가 포함된 분산된 테이블을 만듭니다. 각 배포는 columnstore로 저장됩니다.  
   
  클러스터형 columnstore 인덱스는 데이터가 분포되는 방식에는 영향을 주지 않으며 데이터는 항상 행별로 배포됩니다. 클러스터형 columnstore 인덱스는 각 배포 내에서 데이터가 저장되는 방식에 영향을 줍니다.  
@@ -425,7 +425,7 @@ WITH
 ;  
 ```  
 
-### <a name="OrderedClusteredColumnstoreIndex"></a> 5. 순서가 지정된 클러스터형 columnstore 인덱스 만들기
+### <a name="e-create-an-ordered-clustered-columnstore-index"></a><a name="OrderedClusteredColumnstoreIndex"></a> 5. 순서가 지정된 클러스터형 columnstore 인덱스 만들기
 
 다음 예는 순서가 지정된 클러스터형 columnstore 인덱스를 만드는 방법을 보여줍니다. 인덱스는 SHIPDATE에 정렬되어 있습니다.
 
@@ -439,7 +439,7 @@ SELECT * FROM ext_Lineitem
 <a name="ExTableDistribution"></a> 
 ## <a name="examples-for-table-distribution"></a>테이블 배포 예제
 
-### <a name="RoundRobin"></a> 6. ROUND_ROBIN 테이블 만들기  
+### <a name="f-create-a-round_robin-table"></a><a name="RoundRobin"></a> 6. ROUND_ROBIN 테이블 만들기  
  다음 예에서는 세 개의 열이 있고 파티션 없는 ROUND_ROBIN 테이블을 만듭니다. 데이터는 모든 배포에 걸쳐 분산됩니다. 힙 또는 rowstore 클러스터형 인덱스에 비해 더 나은 성능 및 데이터 압축을 제공하는 CLUSTERED COLUMNSTORE INDEX를 사용하여 테이블이 만들어집니다.  
   
 ```sql
@@ -452,7 +452,7 @@ CREATE TABLE myTable
 WITH ( CLUSTERED COLUMNSTORE INDEX );  
 ```  
   
-### <a name="HashDistributed"></a> G. 해시 배포된 테이블 만들기
+### <a name="g-create-a-hash-distributed-table"></a><a name="HashDistributed"></a> G. 해시 배포된 테이블 만들기
 
  다음 예에서는 이전 예와 동일한 테이블을 만듭니다. 그러나 이 테이블의 경우 행은 ROUND_ROBIN 테이블처럼 임의로 분산되는 대신 배포됩니다(`id` 열에서). 힙 또는 rowstore 클러스터형 인덱스에 비해 더 나은 성능 및 데이터 압축을 제공하는 CLUSTERED COLUMNSTORE INDEX를 사용하여 테이블이 만들어집니다.  
   
@@ -470,7 +470,7 @@ WITH
   );  
 ```  
   
-### <a name="Replicated"></a> H. 복제된 테이블 만들기  
+### <a name="h-create-a-replicated-table"></a><a name="Replicated"></a> H. 복제된 테이블 만들기  
  다음 예에서는 이전 예제와 비슷한 복제된 테이블을 만듭니다. 복제된 테이블은 각 컴퓨팅 노드에 전체가 복사됩니다. 각 컴퓨팅 노드에서 이 복사본을 사용하면 쿼리에 대한 데이터 이동이 줄어듭니다. 이 예제는 힙에 비해 더 나은 데이터 압축을 제공하는 클러스터형 인덱스를 사용하여 만들어집니다. CLUSTERED COLUMNSTORE INDEX 압축을 달성하는 데 충분한 행이 힙에 포함되지 않을 수 있습니다.  
   
 ```sql
@@ -490,7 +490,7 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>테이블 파티션에 대한 예제
 
-###  <a name="PartitionedTable"></a> I. 분할된 테이블 만들기
+###  <a name="i-create-a-partitioned-table"></a><a name="PartitionedTable"></a> I. 분할된 테이블 만들기
 
  다음 예에서는 RANGE LEFT 분할을 `id` 열에 추가하여 예 1과 동일한 테이블을 만듭니다. 4개의 파티션 경계 값을 지정하여 파티션이 5개가 됩니다.  
   
@@ -525,7 +525,7 @@ WITH
 - 파티션 4: 30 <= col < 40
 - 파티션 5: 40 <= col  
   
-### <a name="OnePartition"></a> J. 하나의 파티션으로 분할된 테이블 만들기
+### <a name="j-create-a-partitioned-table-with-one-partition"></a><a name="OnePartition"></a> J. 하나의 파티션으로 분할된 테이블 만들기
 
  다음 예제에서는 하나의 파티션으로 분할된 테이블을 만듭니다. 경계 값을 지정하지 않아 파티션이 하나가 됩니다.  
   
@@ -542,9 +542,9 @@ WITH
 ;  
 ```  
   
-### <a name="DatePartition"></a> K. 날짜 분할로 테이블 만들기
+### <a name="k-create-a-table-with-date-partitioning"></a><a name="DatePartition"></a> K. 날짜 분할로 테이블 만들기
 
- 다음 예제에서는 `date` 열에서 분할하여 `myTable`이라는 새 테이블을 만듭니다. 경계 값에 대해 RANGE RIGHT 및 날짜를 사용하면 각 파티션에 데이터의 월을 배치합니다.  
+ 다음 예제에서는 `myTable` 열에서 분할하여 `date`이라는 새 테이블을 만듭니다. 경계 값에 대해 RANGE RIGHT 및 날짜를 사용하면 각 파티션에 데이터의 월을 배치합니다.  
   
 ```sql
 CREATE TABLE myTable (  

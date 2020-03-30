@@ -17,10 +17,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 689206ce4462b4befeded788fc6e679af6215a59
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056376"
 ---
 # <a name="specify-prefix-length-in-data-files-using-bcp-sql-server"></a>bcp를 사용하여 데이터 파일에 접두사 길이 지정(SQL Server)
@@ -43,7 +43,7 @@ ms.locfileid: "74056376"
 > [!IMPORTANT]  
 >  네이티브 형식을 사용할 때는 필드 종결자 대신 길이 접두사를 사용하십시오. 네이티브 형식 데이터 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부 이진 데이터 형식에 저장되므로 종결자와 충돌할 수 있습니다.  
   
-##  <a name="PrefixLengthsExport"></a> 대량 내보내기의 접두사 길이  
+##  <a name="prefix-lengths-for-bulk-export"></a><a name="PrefixLengthsExport"></a> 대량 내보내기의 접두사 길이  
   
 > [!NOTE]  
 >  필드를 내보낼 때 접두사 길이 프롬프트에 제공되는 기본값은 해당 필드에 가장 효과적인 접두사 길이를 나타냅니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "74056376"
   
  \***ntext**, **text**및 **image** 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이후 버전에서 제거됩니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하세요. 대신 **nvarchar(max)** , **varchar(max)** 및 **varbinary(max)** 를 사용합니다.  
   
-##  <a name="PrefixLengthsImport"></a> 대량 가져오기의 접두사 길이  
+##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> 대량 가져오기의 접두사 길이  
  데이터를 대량 가져올 때 접두사 길이는 해당 데이터 파일이 원래 작성될 때 지정된 값입니다. **bcp** 을 사용하여 데이터 파일을 만들지 않은 경우에는 길이 접두사 문자가 없을 수도 있습니다. 이 경우에는 접두사 길이에 0을 지정합니다.  
   
 > [!NOTE]  

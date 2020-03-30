@@ -11,10 +11,10 @@ ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 91524408998df8be0df4ee5d4ede0b641dbaa2a4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71287222"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>사용자 지정 구성 요소에서 멀티 타기팅 지원
@@ -97,7 +97,7 @@ public override void PerformDowngrade(int pipelineVersion, DTSTargetServerVersio
 
 ### <a name="invalidcastexception"></a>InvalidCastException
 
-**오류 메시지** 'System.__ComObject' 형식의 COM 개체를 'Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100' 인터페이스 유형으로 캐스트할 수 없습니다. 이 작업은 IID ‘{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}’로 인터페이스에 대한 COM 구성 요소에 대한 QueryInterface 호출이 다음 오류: 지원되는 인터페이스 없음(HRESULT: 0x80004002(E_NOINTERFACE)에서 예외가 발생했습니다.)으로 인해 실패했습니다. (Microsoft.SqlServer.DTSPipelineWrap).
+**오류 메시지** 'System.__ComObject' 형식의 COM 개체를 'Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100' 인터페이스 유형으로 캐스트할 수 없습니다. 이 작업은 IID '{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}'로 인터페이스에 대한 COM 구성 요소에 대한 QueryInterface 호출이 다음 오류: 지원되는 인터페이스 없음(HRESULT: 0x80004002(E_NOINTERFACE)에서 예외가 발생했습니다.)으로 인해 실패했으므로 실패했습니다. (Microsoft.SqlServer.DTSPipelineWrap).
 
 **해결 방법** 사용자 지정 확장이 Microsoft.SqlServer.DTSPipelineWrap 또는 Microsoft.SqlServer.DTSRuntimeWrap와 같은 SSIS interop 어셈블리를 참조하는 경우 **Embed Interop Types** 속성의 값을 **False**로 설정합니다.
 

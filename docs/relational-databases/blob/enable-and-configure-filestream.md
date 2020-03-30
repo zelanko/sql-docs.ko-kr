@@ -12,10 +12,10 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7abba927f12f4f6ae8b9c45dc4695eb64b7d5621
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908766"
 ---
 # <a name="enable-and-configure-filestream"></a>FILESTREAM 사용 및 구성
@@ -23,7 +23,7 @@ ms.locfileid: "72908766"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   FILESTREAM을 사용하려면 먼저 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스에서 FILESTREAM을 사용하도록 설정해야 합니다. 이 항목에서는 SQL Server 구성 관리자를 사용하여 FILESTREAM을 사용하도록 설정하는 방법에 대해 설명합니다.  
   
-##  <a name="enabling"></a> FILESTREAM 설정  
+##  <a name="enabling-filestream"></a><a name="enabling"></a> FILESTREAM 설정  
   
 #### <a name="to-enable-and-change-filestream-settings"></a>FILESTREAM을 사용하도록 설정하고 해당 설정을 변경하려면  
   
@@ -58,9 +58,9 @@ ms.locfileid: "72908766"
   
 13. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 다시 시작합니다.  
 
-##  <a name="best"></a> 모범 사례  
+##  <a name="best-practices"></a><a name="best"></a> 모범 사례  
   
-###  <a name="config"></a> 물리적 구성 및 유지 관리  
+###  <a name="physical-configuration-and-maintenance"></a><a name="config"></a> 물리적 구성 및 유지 관리  
  FILESTREAM 스토리지 볼륨을 설정할 때 다음 지침을 고려하십시오.  
   
 -   FILESTREAM 컴퓨터 시스템에서 약식 파일 이름을 해제합니다. 약식 파일 이름은 생성하는 데 시간이 많이 소요됩니다. 약식 파일 이름을 비활성화하려면 Windows **fsutil** 유틸리티를 사용합니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "72908766"
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
   
-###  <a name="database"></a> 물리적 데이터베이스 디자인  
+###  <a name="physical-database-design"></a><a name="database"></a> 물리적 데이터베이스 디자인  
  FILESTREAM 데이터베이스를 디자인할 때 다음 같은 지침을 고려하십시오.  
   
 -   FILESTREAM 열에는 해당하는 **uniqueidentifier**ROWGUID 열이 수반되어야 합니다. 이러한 종류의 테이블에는 고유한 인덱스도 함께 나타나야 합니다. 일반적으로 이러한 인덱스는 클러스터형 인덱스가 아닙니다. 데이터베이스 비즈니스 논리에 클러스터형 인덱스가 필요한 경우, 인덱스에 저장된 값이 임의의 값이 아니어야 합니다. 임의의 값인 경우에는 테이블에서 행이 추가되거나 제거될 때마다 인덱스가 다시 정렬됩니다.  

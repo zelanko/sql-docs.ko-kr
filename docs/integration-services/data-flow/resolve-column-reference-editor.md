@@ -14,10 +14,10 @@ ms.assetid: bb3ee33c-79c4-4c76-a82f-71581b4a60f1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4340dfcaa7807616ccd8c3cdf4e504d0e33423c0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298113"
 ---
 # <a name="resolve-column-reference-editor"></a>열 참조 확인 편집기

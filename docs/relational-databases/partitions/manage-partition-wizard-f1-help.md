@@ -24,10 +24,10 @@ ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: dc76237530ba47a513aba164260061ec6b20e7c3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68892416"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>파티션 관리 마법사 F1 도움말
@@ -38,13 +38,13 @@ ms.locfileid: "68892416"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 데이터베이스를 선택하고 파티션을 만들려는 테이블을 마우스 오른쪽 단추로 클릭하고 **스토리지**를 가리킨 후 **파티션 관리**를 클릭합니다.  
   
-     **Note** **파티션 관리** 를 사용할 수 없으면 선택한 테이블에 파티션이 포함되어 있지 않은 것입니다. 테이블에 파티션을 만들려면 **스토리지** 하위 메뉴에서 **파티션 만들기** 를 클릭하고 **파티션 작성 마법사** 를 사용합니다.  
+     **Note** **파티션 관리** 를 사용할 수 없으면 선택한 테이블에 파티션이 포함되어 있지 않은 것입니다. 테이블에 파티션을 만들려면 **스토리지** 하위 메뉴에서 **파티션 만들기**를 클릭하고 **파티션 작성 마법사**를 사용합니다.  
   
  파티션과 인덱스에 대한 자세한 내용은 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)를 참조하십시오.  
   
  이 섹션에서는 **파티션 관리 마법사**를 사용하여 파티션을 관리, 수정 및 구현하는 데 필요한 정보를 제공합니다.  
   
-##  <a name="Top"></a> 섹션 내용  
+##  <a name="in-this-section"></a><a name="Top"></a> 섹션 내용  
  다음 섹션에서는 **파티션 관리 마법사**페이지에 대한 도움말을 제공합니다.  
   
  [파티션 관리 마법사(파티션 동작 선택 페이지)](#SelectPartitionAction)  
@@ -63,7 +63,7 @@ ms.locfileid: "68892416"
   
  [파티션 관리 마법사(진행률 페이지)](#Progress)  
   
-##  <a name="SelectPartitionAction"></a> 파티션 작업 페이지 선택  
+##  <a name="select-partition-action-page"></a><a name="SelectPartitionAction"></a> 파티션 작업 페이지 선택  
  **파티션 동작 선택** 페이지를 사용하여 파티션에서 수행할 동작을 선택할 수 있습니다.  
   
 ### <a name="create-a-staging-table"></a>준비 테이블 만들기  
@@ -91,7 +91,7 @@ ms.locfileid: "68892416"
   
  ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [섹션 내용](#Top)  
   
-##  <a name="SwitchIn"></a> 파티션 내부 전환 옵션 선택 페이지  
+##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> 파티션 내부 전환 옵션 선택 페이지  
  **파티션 내부 전환 옵션 선택** 페이지를 사용하여 분할된 테이블로 내부 전환할 준비 테이블을 선택할 수 있습니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
@@ -106,7 +106,7 @@ ms.locfileid: "68892416"
   
  ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [섹션 내용](#Top)  
   
-##  <a name="SwitchOut"></a> 파티션 외부 전환 옵션 선택 페이지  
+##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> 파티션 외부 전환 옵션 선택 페이지  
  **파티션 외부 전환 옵션 선택** 페이지를 사용하여 분할된 테이블에서 외부 전환할 분할된 데이터를 저장하기 위한 파티션 및 준비 테이블을 선택할 수 있습니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
@@ -124,7 +124,7 @@ ms.locfileid: "68892416"
   
  ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [섹션 내용](#Top)  
   
-##  <a name="StagingTableOptions"></a> 준비 테이블 옵션 선택 페이지  
+##  <a name="select-the-staging-table-options-page"></a><a name="StagingTableOptions"></a> 준비 테이블 옵션 선택 페이지  
  **준비 테이블 옵션 선택** 페이지를 사용하여 분할된 데이터를 전환하는 데 사용할 준비 테이블을 만들 수 있습니다.  
   
  준비 테이블은 선택한 파티션에서 원본 테이블이 위치하는 파일 그룹과 같은 파일 그룹에 있어야 합니다. 준비 테이블은 원본 테이블과 대상 테이블의 디자인을 모두 반영해야 합니다.  
@@ -146,7 +146,7 @@ ms.locfileid: "68892416"
   
  ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [섹션 내용](#Top)  
   
-##  <a name="OutputOption"></a> 출력 옵션 선택 페이지  
+##  <a name="select-output-option-page"></a><a name="OutputOption"></a> 출력 옵션 선택 페이지  
  **출력 옵션 선택** 페이지를 사용하여 파티션에 대한 수정을 완료하는 방법을 지정할 수 있습니다.  
   
 ### <a name="create-script"></a>스크립트 만들기  
@@ -173,7 +173,7 @@ ms.locfileid: "68892416"
   
  ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [섹션 내용](#Top)  
   
-##  <a name="NewJob"></a> 새 작업 일정 페이지  
+##  <a name="new-job-schedule-page"></a><a name="NewJob"></a> 새 작업 일정 페이지  
  **새 작업 일정** 페이지를 사용하여 일정 속성을 확인하고 변경할 수 있습니다.  
   
 ### <a name="options"></a>옵션  
@@ -256,7 +256,7 @@ ms.locfileid: "68892416"
   
  ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [섹션 내용](#Top)  
   
-##  <a name="Summary"></a> 요약 페이지  
+##  <a name="summary-page"></a><a name="Summary"></a> 요약 페이지  
  **요약** 페이지를 사용하여 이전 페이지에서 선택한 옵션을 검토할 수 있습니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
@@ -265,7 +265,7 @@ ms.locfileid: "68892416"
   
  ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [섹션 내용](#Top)  
   
-##  <a name="Progress"></a> 진행률 페이지  
+##  <a name="progress-page"></a><a name="Progress"></a> 진행률 페이지  
  **진행률** 페이지를 사용하여 **파티션 관리 마법사**의 동작에 대한 상태 정보를 모니터링할 수 있습니다. 마법사에서 선택한 옵션에 따라 **진행률** 페이지에 하나 이상의 동작이 포함될 수 있습니다. 맨 위에 있는 상자에는 전반적인 마법사 상태와 수신된 상태, 오류 및 경고 메시지의 수가 표시됩니다.  
   
 ### <a name="options"></a>옵션  

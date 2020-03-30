@@ -13,10 +13,10 @@ ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6674cb5f457b634682da90a2b7a2dff27a171da7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908085"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
@@ -33,7 +33,7 @@ ms.locfileid: "72908085"
   
 -   [포함된 데이터베이스 사용자로 사용자 마이그레이션](#users)  
   
-##  <a name="prepare"></a> 데이터베이스 마이그레이션 준비  
+##  <a name="preparing-to-migrate-a-database"></a><a name="prepare"></a> 데이터베이스 마이그레이션 준비  
  데이터베이스를 부분적으로 포함된 데이터베이스 모델로 마이그레이션하려고 할 때 다음 항목을 검토합니다.  
   
 -   부분적으로 포함된 데이터베이스 모델을 이해해야 합니다. 자세한 내용은 [Contained Databases](../../relational-databases/databases/contained-databases.md)을 참조하세요.  
@@ -48,7 +48,7 @@ ms.locfileid: "72908085"
   
 -   **database_uncontained_usage** XEvent를 모니터링하여 포함되지 않은 기능이 사용되는 경우를 확인합니다.  
   
-##  <a name="enable"></a> 포함된 데이터베이스 사용  
+##  <a name="enable-contained-databases"></a><a name="enable"></a> 포함된 데이터베이스 사용  
  포함된 데이터베이스를 만들려면 먼저 포함된 데이터베이스가 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스에서 사용 가능하도록 설정되어야 합니다.  
   
 ### <a name="enabling-contained-databases-using-transact-sql"></a>Transact-SQL을 사용하여 포함된 데이터베이스 설정  
@@ -70,7 +70,7 @@ GO
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-##  <a name="convert"></a> 데이터베이스를 부분적으로 포함된 데이터베이스로 변환  
+##  <a name="converting-a-database-to-partially-contained"></a><a name="convert"></a> 데이터베이스를 부분적으로 포함된 데이터베이스로 변환  
  **CONTAINMENT** 옵션을 변경하여 데이터베이스를 포함된 데이터베이스로 변환합니다.  
   
 ### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>Transact-SQL을 사용하여 데이터베이스를 부분적으로 포함된 데이터베이스로 변환  
@@ -92,7 +92,7 @@ GO
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="users"></a> 포함된 데이터베이스 사용자로 사용자 마이그레이션  
+##  <a name="migrating-users-to-contained-database-users"></a><a name="users"></a> 포함된 데이터베이스 사용자로 사용자 마이그레이션  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 기반으로 하는 모든 사용자를 암호를 가진 포함된 데이터베이스 사용자로 마이그레이션합니다. 이 예에서는 활성화되지 않은 로그인을 제외합니다. 이 예는 포함된 데이터베이스에서 실행해야 합니다.  
   
 ```sql  

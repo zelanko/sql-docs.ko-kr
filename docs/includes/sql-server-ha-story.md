@@ -157,7 +157,7 @@ FCI는 재해 복구에 사용될 수 있습니다. 일반 가용성 그룹과 �
 ### <a name="log-shipping"></a>로그 전달
 로그 전달은 SQL Server 데이터베이스에 재해 복구를 제공하는 가장 오래된 방법 중 하나입니다. 로그 전달은 가용성 그룹 및 FCI와 함께 사용되어 비용 효율적이고 간단한 재해 복구를 제공합니다. 다른 옵션은 환경, 관리 기술 또는 예산으로 인해 어려울 수 있습니다. 로그 전달에 대한 고가용성 시나리오와 마찬가지로, 많은 환경에서 사람의 실수를 처리하기 위해 트랜잭션 로그의 로드를 지연시킵니다.
 
-## <a name = "Migrations"></a> 마이그레이션 및 업그레이드
+## <a name="migrations-and-upgrades"></a><a name = "Migrations"></a> 마이그레이션 및 업그레이드
 
 새 인스턴스를 배포하거나 기존 인스턴스를 업그레이드할 때 업무를 오래 중단하는 것이 여의치 않습니다. 이 섹션에서는 SQL Server의 가용성 기능을 사용하여 계획된 아키텍처 변경, 서버 전환, 플랫폼 변경(예: Windows Server에서 Linux로 또는 그 반대로) 또는 패치 적용으로 인한 가동 중지 시간을 최소화하는 방법에 대해 설명합니다.
 
@@ -224,7 +224,7 @@ Azure를 사용하여 SQL Server를 설치하면 Linux IaaS 가상 컴퓨터를 
 
 로그 전달은 백업 및 복원만을 기반으로 하기 때문에 Windows Server의 SQL Server와 Linux의 SQL Server에 대한 데이터베이스, 파일 구조 등에 차이가 없습니다. 즉, 로그 전달은 Windows Server 기반 SQL Server 설치와 Linux 배포 사이 및 Linux 배포간에 구성될 수 있습니다. 나머지는 모두 동일하게 유지됩니다. 유일한 주의 사항은 가용성 그룹과 마찬가지로 로그 전달은 대상이 SQL Server 하위 버전에 있고 원본이 SQL Server 상위 버전에 있는 경우에 작동할 수 없다는 점입니다. 
 
-## <a name = "ReadScaleOut"></a> 읽기 확장
+## <a name="read-scale"></a><a name = "ReadScaleOut"></a> 읽기 확장
 
 SQL Server 2012에서 도입된 이후, 보조 복제본은 읽기 전용 쿼리에 사용될 수 있습니다. 가용성 그룹으로 작업을 수행할 수 있는 방법은 두 가지 입니다. 보조 복제본에 직접 액세스를 허용하는 방법과 [읽기 전용 라우팅을 구성](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server)하는 방법입니다. 후자 경우 수신기를 사용해야 합니다.  SQL Server 2016에는 읽기 가능한 모든 복제본에 읽기 전용 요청을 분산할 수 있는 라운드 로빈 알고리즘을 사용하여 수신기를 통해 읽기 전용 연결의 부하를 분산할 수 있는 기능이 도입되었습니다. 
 

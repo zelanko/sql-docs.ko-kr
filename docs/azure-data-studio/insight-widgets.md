@@ -11,13 +11,13 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4edf4003d40da35dcd54b3938e0f318ef8b9440a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957057"
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 인사이트 위젯을 사용하여 서버 및 데이터베이스 관리
+# <a name="manage-servers-and-databases-with-insight-widgets-in-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 인사이트 위젯을 사용하여 서버 및 데이터베이스 관리
 
 인사이트 위젯은 서버 및 데이터베이스를 모니터링하는 데 T-SQL(Transact-SQL) 쿼리를 사용하며 이 쿼리를 인사이트를 제공하는 시각화로 변환합니다.
 

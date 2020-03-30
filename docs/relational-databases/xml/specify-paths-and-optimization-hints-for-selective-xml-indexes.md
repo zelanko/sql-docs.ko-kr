@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: e4ffb1cc9a2b63047c6ade58d82001a2e0ebea4c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75257609"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>선택적 XML 인덱스에 대한 경로 및 최적화 힌트 지정
@@ -29,7 +29,7 @@ ms.locfileid: "75257609"
   
  선택적 XML 인덱스에 대한 자세한 내용은 [SXI&#40;선택적 XML 인덱스&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)를 참조하세요.  
   
-##  <a name="untyped"></a> 형식화된 XML의 XQuery 및 SQL Server 유형 이해  
+##  <a name="understanding-xquery-and-sql-server-types-in-untyped-xml"></a><a name="untyped"></a> 형식화된 XML의 XQuery 및 SQL Server 유형 이해  
  선택적 XML 인덱스는 XQuery 유형 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유형의 두 가지 유형 시스템을 지원합니다. 인덱싱된 경로는 XQuery 식을 일치시키거나 XML 데이터 형식의 value() 메서드에 대한 반환 형식을 일치시키는 데 사용할 수 있습니다.  
   
 -   인덱싱할 경로에 주석이 지정되어 있지 않거나 XQUERY 키워드로 주석이 지정된 경우 해당 경로는 XQuery 식과 일치합니다. XQUERY로 주석이 지정된 노드 경로에는 다음과 같은 두 가지 변형이 있습니다.  
@@ -135,7 +135,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
 ```  
   
   
-##  <a name="typed"></a> 형식화된 XML에 대한 선택적 XML 인덱스 지원 이해  
+##  <a name="understanding-selective-xml-index-support-for-typed-xml"></a><a name="typed"></a> 형식화된 XML에 대한 선택적 XML 인덱스 지원 이해  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 형식화된 XML은 지정된 XML 문서와 연결된 스키마입니다. 스키마는 전체 문서 구조와 노드 유형을 정의합니다. 스키마가 있으면 사용자가 경로를 승격시킬 때 선택적 XML 인덱스가 해당 스키마 구조를 적용하기 때문에 경로에 대한 XQUERY 유형을 지정할 필요가 없습니다.  
   
  선택적 XML 인덱스는 다음 XSD 유형을 지원합니다.  
@@ -209,7 +209,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
  최적화 힌트에 대한 자세한 내용은 [최적화 힌트 지정](#hints)을 참조하십시오.  
   
-##  <a name="paths"></a> 경로 지정  
+##  <a name="specifying-paths"></a><a name="paths"></a> 경로 지정  
  선택적 XML 인덱스를 사용하면 저장된 XML 데이터에서 실행할 쿼리와 관련 있는 노드의 하위 집합만 인덱싱할 수 있습니다. 관련 노드의 하위 집합이 XML 문서에 있는 총 노드 수보다 훨씬 적을 경우 선택적 XML 인덱스는 관련 노드만 저장합니다. 선택적 XML 인덱스를 사용하려면 인덱싱할 노드의 올바른 하위 집합을 식별해야 합니다.  
   
 ### <a name="choosing-the-nodes-to-index"></a>인덱싱할 노드 선택  
@@ -345,7 +345,7 @@ WHERE T.xmldata.exist('
 |**/a/b/c/d/e/g**|`g` 노드의 존재 여부가 exist() 메서드에 의해 평가됩니다.|  
   
   
-##  <a name="hints"></a> 최적화 힌트 지정  
+##  <a name="specifying-optimization-hints"></a><a name="hints"></a> 최적화 힌트 지정  
  선택적 최적화 힌트를 사용하여 선택적 XML 인덱스에 의해 인덱싱되는 노드에 대한 추가 매핑 정보를 지정할 수 있습니다. 예를 들어 노드의 데이터 형식과 카디널리티, 그리고 데이터의 구조에 대한 특정 정보를 지정할 수 있습니다. 이 추가 정보를 사용하면 매핑이 향상될 뿐 아니라 성능과 스토리지의 저장 능력도 향상됩니다.  
   
  최적화 힌트의 사용은 선택 사항입니다. 언제든지 기본 매핑을 그대로 사용할 수 있습니다. 그러나 기본 매핑을 사용하면 안정적이기는 하지만 최적의 성능과 스토리지를 사용하지 못할 수도 있습니다.  
@@ -416,7 +416,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  기존 문자열이 지정된 MAXLENGTH보다 길면 인덱스에 값을 삽입하는 작업이 실패합니다.  
   
   
-##  <a name="sample"></a> 예제용 샘플 XML 문서  
+##  <a name="sample-xml-document-for-examples"></a><a name="sample"></a> 예제용 샘플 XML 문서  
  다음 샘플 XML 문서는 이 항목의 예에서 참조됩니다.  
   
 ```xml  

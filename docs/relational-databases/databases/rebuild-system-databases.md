@@ -16,10 +16,10 @@ ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e31a24a949968e3d17b50c32b42e92cdd0997483
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76516554"
 ---
 # <a name="rebuild-system-databases"></a>시스템 데이터베이스 다시 작성
@@ -46,12 +46,12 @@ ms.locfileid: "76516554"
   
      [다시 작성 오류 문제 해결](#Troubleshoot)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
  master, model, msdb 및 tempdb 시스템 데이터베이스를 다시 작성하면 해당 데이터베이스가 삭제된 후 원래 위치에 다시 만들어집니다. REBUILD 문에 새로운 데이터 정렬이 지정되면 해당 데이터 정렬 설정을 사용하여 시스템 데이터베이스가 만들어집니다. 이러한 데이터베이스에 사용자들이 변경한 내용은 손실됩니다. 예를 들어, master 데이터베이스에 사용자 정의 개체가 있거나, msdb에 예약된 작업이 있거나 model 데이터베이스에서 기본 데이터베이스 설정을 변경했을 수 있습니다.  
   
-###  <a name="Prerequisites"></a> 필수 조건  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
  시스템 데이터베이스를 다시 작성하기 전에 다음 태스크를 수행하면 시스템 데이터베이스를 현재 설정으로 복원할 수 있습니다.  
   
 1.  서버 차원의 모든 구성 값을 기록합니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "76516554"
   
 7.  master, model, msdb 데이터와 로그 템플릿 파일의 복사본이 로컬 서버에 있는지 확인합니다. 템플릿 파일의 기본 위치는 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Templates입니다. 이러한 파일은 다시 작성 프로세스 중에 사용되므로 성공적으로 설치를 수행하려면 반드시 있어야 합니다. 이러한 파일이 없으면 설치 시 복구 기능을 실행하거나 설치 미디어에서 해당 파일을 직접 복사하세요. 설치 미디어에서 이러한 파일을 찾으려면 해당 플랫폼 디렉터리(x86 또는 x64)로 이동한 후 setup\sql_engine_core_inst_msi\Pfiles\SqlServr\MSSQL.X\MSSQL\Binn\Templates로 이동합니다.  
   
-##  <a name="RebuildProcedure"></a> 시스템 데이터베이스 다시 작성  
+##  <a name="rebuild-system-databases"></a><a name="RebuildProcedure"></a> 시스템 데이터베이스 다시 작성  
  다음은 master, model, msdb 및 tempdb 시스템 데이터베이스를 다시 작성하는 절차입니다. 다시 작성할 시스템 데이터베이스를 지정할 수 없습니다. 클러스터형 인스턴스의 경우 액티브 노드에서 이 절차를 수행해야 하고, 이 절차를 수행하기 전에 해당 클러스터 애플리케이션 그룹의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스를 오프라인으로 설정해야 합니다.  
   
  리소스 데이터베이스는 이 절차를 통해 다시 작성할 수 없습니다. 이 항목 뒷부분에 나오는 "리소스 데이터베이스 다시 작성 절차" 섹션을 참조하세요.  
@@ -108,13 +108,13 @@ ms.locfileid: "76516554"
     |/SQLSYSADMINACCOUNTS=*accounts*|**sysadmin** 고정 서버 역할에 추가할 Windows 그룹이나 개별 계정을 지정합니다. 둘 이상의 계정을 지정할 경우 각 계정 이름을 공백으로 구분합니다. 예를 들면 **BUILTIN\Administrators MyDomain\MyUser**와 같이 입력합니다. 계정 이름에 공백이 포함되어 있는 계정을 지정할 때는 계정을 큰따옴표로 묶습니다. 예를 들면 **NT AUTHORITY\SYSTEM**과 같이 입력합니다.|  
     |[ /SAPWD=*StrongPassword* ]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** 계정의 암호를 지정합니다. 해당 인스턴스에서 혼합 인증([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 인증) 모드를 사용할 경우 이 매개 변수가 필요합니다.<br /><br /> **&#42;&#42;보안 정보&#42;&#42;** **sa** 계정은 잘 알려진 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정이므로 악의적인 사용자의 공격 대상이 되는 경우가 많습니다. **sa** 로그인에 대해 강력한 암호를 사용하도록 합니다.<br /><br /> Windows 인증 모드에 이 매개 변수를 지정하지 마세요.|  
     |[ /SQLCOLLATION=*CollationName* ]|서버 수준 데이터 정렬을 새로 지정합니다. 이 매개 변수는 선택 사항입니다. 지정하지 않으면 서버의 현재 데이터 정렬이 사용됩니다.<br /><br /> **\*\* 중요 \*\*** 서버 수준 데이터 정렬을 변경해도 기존 사용자 데이터베이스의 데이터 정렬은 변경되지 않습니다. 새로 만드는 모든 사용자 데이터베이스는 기본적으로 새로운 데이터 정렬을 사용하게 됩니다.<br /><br /> 자세한 내용은 [서버 데이터 정렬 설정 또는 변경](../../relational-databases/collations/set-or-change-the-server-collation.md)을 참조하세요.|  
-    |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|tempdb 데이터 파일 수를 지정합니다. 이 값은 최대 8 또는 코어 수 중에서 더 높은 값까지 높일 수 있습니다.<br /><br /> 기본값: 8 또는 코어 수 중 낮은 값.|  
+    |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|tempdb 데이터 파일 수를 지정합니다. 이 값은 최대 8 또는 코어 수 중에서 더 높은 값까지 높일 수 있습니다.<br /><br /> 기본값: 8 또는 코어 수 중 낮은 값|  
     |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|각 tempdb 데이터 파일의 초기 크기를 MB 단위로 지정합니다. 설치에서는 최대 1024MB의 크기를 지원합니다.<br /><br /> 기본값: 8|  
     |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|각 tempdb 데이터 파일의 파일 증가 증분을 MB 단위로 지정합니다. 값이 0이면 자동 증가가 해제되어 있고 추가 공간이 허용되지 않음을 나타냅니다. 설치에서는 최대 1024MB의 크기를 지원합니다.<br /><br /> 기본값: 64|  
-    |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|tempdb 로그 파일의 초기 크기를 MB 단위로 지정합니다. 설치에서는 최대 1024MB의 크기를 지원합니다.<br /><br /> 기본값: 8.<br /><br /> 허용 범위: 최소 = 8, 최대 = 1024.|  
-    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|tempdb 로그 파일의 파일 증가 증분을 MB 단위로 지정합니다. 값이 0이면 자동 증가가 해제되어 있고 추가 공간이 허용되지 않음을 나타냅니다. 설치에서는 최대 1024MB의 크기를 지원합니다.<br /><br /> 기본값: 64<br /><br /> 허용 범위: 최소 = 8, 최대 = 1024.|  
-    |[ /SQLTEMPDBDIR=Directories ]|tempdb 데이터 파일에 대한 디렉터리를 지정합니다. 둘 이상의 디렉터리를 지정할 경우 각 계정 이름을 공백으로 구분합니다. 여러 디렉터리가 지정된 경우 tempdb 데이터 파일은 라운드 로빈 방식으로 여러 디렉터리에 분배됩니다.<br /><br /> 기본값: 시스템 데이터 디렉터리|  
-    |[ /SQLTEMPDBLOGDIR=Directory ]|tempdb 로그 파일의 디렉터리를 지정합니다.<br /><br /> 기본값: 시스템 데이터 디렉터리|  
+    |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|tempdb 로그 파일의 초기 크기를 MB 단위로 지정합니다. 설치에서는 최대 1024MB의 크기를 지원합니다.<br /><br /> 기본값: 8<br /><br /> 허용되는 범위: Min = 8, Max = 1024|  
+    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|tempdb 로그 파일의 파일 증가 증분을 MB 단위로 지정합니다. 값이 0이면 자동 증가가 해제되어 있고 추가 공간이 허용되지 않음을 나타냅니다. 설치에서는 최대 1024MB의 크기를 지원합니다.<br /><br /> 기본값: 64<br /><br /> 허용되는 범위: Min = 8, Max = 1024|  
+    |[ /SQLTEMPDBDIR=Directories ]|tempdb 데이터 파일에 대한 디렉터리를 지정합니다. 둘 이상의 디렉터리를 지정할 경우 각 계정 이름을 공백으로 구분합니다. 여러 디렉터리가 지정된 경우 tempdb 데이터 파일은 라운드 로빈 방식으로 여러 디렉터리에 분배됩니다.<br /><br /> 기본 값: 시스템 데이터 디렉터리|  
+    |[ /SQLTEMPDBLOGDIR=Directory ]|tempdb 로그 파일의 디렉터리를 지정합니다.<br /><br /> 기본 값: 시스템 데이터 디렉터리|  
   
 3.  시스템 데이터베이스를 다시 작성하는 작업이 완료되면 아무런 메시지 없이 명령 프롬프트로 돌아갑니다. Summary.txt 로그 파일을 검토하여 프로세스가 성공적으로 완료되었는지 확인합니다. 이 파일은 C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Logs에 있습니다.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "76516554"
   
 -   서버 차원의 구성 값이 앞에서 기록해 둔 값과 일치하는지 확인합니다.  
   
-##  <a name="Resource"></a> 리소스 데이터베이스 다시 작성  
+##  <a name="rebuild-the-resource-database"></a><a name="Resource"></a> 리소스 데이터베이스 다시 작성  
  다음은 리소스 시스템 데이터베이스를 다시 작성하는 절차입니다. 리소스 데이터베이스를 다시 빌드하면 모든 핫픽스가 손실되므로 다시 적용해야 합니다.  
   
 #### <a name="to-rebuild-the-resource-system-database"></a>리소스 시스템 데이터베이스를 다시 작성하려면  
@@ -156,7 +156,7 @@ ms.locfileid: "76516554"
   
 6.  **복구 준비** 페이지에서 **복구**를 클릭합니다. 완료 페이지에서 작업이 완료되었음을 알려 줍니다.  
   
-##  <a name="CreateMSDB"></a> 새 msdb 데이터베이스 만들기  
+##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a> 새 msdb 데이터베이스 만들기  
  **msdb** 데이터베이스가 손상되고 **msdb** 데이터베이스 백업이 없는 경우 **instmsdb** 스크립트를 사용하여 새 **msdb** 를 만들 수 있습니다.  
   
 > [!WARNING]  
@@ -186,7 +186,7 @@ ms.locfileid: "76516554"
   
 10. **msdb** 데이터베이스를 백업합니다.  
   
-##  <a name="Troubleshoot"></a> 다시 작성 오류 문제 해결  
+##  <a name="troubleshoot-rebuild-errors"></a><a name="Troubleshoot"></a> 다시 작성 오류 문제 해결  
  구문 및 기타 런타임 오류는 명령 프롬프트 창에 표시됩니다. 설치 문에 다음과 같은 구문 오류가 없는지 확인합니다.  
   
 -   각 매개 변수 이름 앞에 슬래시(/)가 있어야 합니다.  

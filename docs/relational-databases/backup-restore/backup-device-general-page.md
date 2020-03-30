@@ -13,10 +13,10 @@ ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0d37918c0ca2be62c2e620faa8034548df2b4592
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67940820"
 ---
 # <a name="backup-device-general-page"></a>백업 디바이스(일반 페이지)
@@ -58,7 +58,7 @@ ms.locfileid: "67940820"
   
  미디어 세트의 첫 번째 백업이 논리적 백업 디바이스에 기록되면 논리적 백업 디바이스에 해당하는 물리적 백업 디바이스가 초기화됩니다. 물리적 백업 디바이스가 아직 존재하지 않는 파일인 경우 이 시점에 만들어집니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [디스크 파일에 대한 논리적 백업 디바이스 정의&#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   

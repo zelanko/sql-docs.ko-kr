@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 95e9d1139619f64aa9ff1be53711019fdbdf6637
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909297"
 ---
 # <a name="spatial-indexes-overview"></a>공간 인덱스 개요
@@ -26,9 +26,9 @@ ms.locfileid: "72909297"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입된 공간 기능에 대한 자세한 설명 및 예와 공간 인덱스에 영향을 주는 기능에 대한 정보를 보려면 [SQL Server 2012의 새로운 공간 기능](https://go.microsoft.com/fwlink/?LinkId=226407)백서를 다운로드하세요.  
   
-##  <a name="about"></a> 공간 인덱스 정보  
+##  <a name="about-spatial-indexes"></a><a name="about"></a> 공간 인덱스 정보  
   
-###  <a name="decompose"></a> 인덱싱된 공간을 표 계층 구조로 분해  
+###  <a name="decomposing-indexed-space-into-a-grid-hierarchy"></a><a name="decompose"></a> 인덱싱된 공간을 표 계층 구조로 분해  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 공간 인덱스는 B-트리를 사용하여 구성됩니다. 즉, 인덱스가 2차원 공간 데이터를 B-트리의 선형 순서로 나타내야 한다는 뜻입니다. 따라서 데이터를 공간 인덱스로 읽기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 공간을 계층적으로 균일하게 분해하는 작업을 구현해야 합니다. 인덱스 생성 프로세스에서는 공간을 4-수준 *표 계층 구조* 로 *분해*합니다. 이러한 수준은 *수준 1* (최상위 수준), *수준 2*, *수준 3*및 *수준 4*라고 합니다.  
   
  각각의 연속되는 수준이 이전 수준을 더 분해하므로 각 상위 수준의 셀은 다음 수준에서 완전한 표를 포함하게 됩니다. 지정된 수준에서 모든 표에는 양쪽 축(예: 4x4 또는 8x8)을 따라 동일한 셀 개수가 있으며 셀의 크기는 모두 같습니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "72909297"
 > [!NOTE]  
 >  공간 인덱스의 표 밀도는 데이터베이스 호환성 수준이 100 이하로 설정된 경우 [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) 카탈로그 뷰의 level_1_grid, level_2_grid, level_3_grid 및 level_4_grid 열에서 볼 수 있습니다. **GEOMETRY_AUTO_GRID**/**GEOGRAPHY_AUTO_GRID** 공간 분할 구성표 옵션은 이러한 열을 채우지 않습니다. 자동 표 옵션이 사용된 경우 sys.spatial_index_tessellations 카탈로그 뷰에서 이러한 열에 대한 값은 **NULL** 입니다.  
   
-###  <a name="tessellation"></a> 공간 분할  
+###  <a name="tessellation"></a><a name="tessellation"></a> 공간 분할  
  인덱싱된 공간을 표 계층 구조로 분해한 후 공간 인덱스는 공간 열에서 데이터를 한 번에 한 행씩 읽습니다. 공간 개체나 인스턴스의 데이터를 읽은 후 공간 인덱스는 해당 개체에 대해 *공간 분할 프로세스* 를 수행합니다. 공간 분할 프로세스는 개체를 표 형태 셀의 집합과 연결하여(*연결된 셀*) 개체를 표 계층 구조에 맞게 조정합니다. 표 계층 구조의 수준 1에서 시작하면 공간 분할 프로세스는 전체 수준에서 *너비 우선* 으로 진행됩니다. 이 프로세스는 한 번에 한 수준씩 4-수준 전체에서 계속 진행될 수도 있습니다.  
   
  공간 분할 프로세스의 출력은 개체의 공간 인덱스에 기록된 연결된 셀의 집합입니다. 이러한 기록된 셀을 참조함으로써 공간 인덱스는 인덱스에도 저장된 공간 열의 다른 개체와 연관된 공간에 개체를 배치할 수 있습니다.  
@@ -112,7 +112,7 @@ ms.locfileid: "72909297"
   
  ![최하위 셀 최적화](../../relational-databases/spatial/media/spndx-opt-deepest-cell.gif "최하위 셀 최적화")  
   
-###  <a name="schemes"></a> 공간 분할(Tessellation) 구성표  
+###  <a name="tessellation-schemes"></a><a name="schemes"></a> 공간 분할(Tessellation) 구성표  
  공간 인덱스의 동작은 부분적으로 해당 *공간 분할(tessellation) 구성표*의 영향을 받습니다. 공간 분할(tessellation) 구성표는 데이터 형식에 따라 달라집니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 공간 인덱스는 두 가지 공간 분할(tessellation) 구성표를 지원합니다.  
   
 -   *기하 도형 표 공간 분할*은 **geometry** 데이터 형식에 대한 구성표입니다.  
@@ -178,10 +178,10 @@ ms.locfileid: "72909297"
   
  ![수준 1 지리 표](../../relational-databases/spatial/media/spndx-geodetic-level1grid.gif "수준 1 지리 표")  
   
-##  <a name="methods"></a> 공간 인덱스에서 지원되는 메서드  
+##  <a name="methods-supported-by-spatial-indexes"></a><a name="methods"></a> 공간 인덱스에서 지원되는 메서드  
   
-###  <a name="geometry"></a> 공간 인덱스에서 지원되는 기하 도형 메서드  
- 공간 인덱스는 특정 조건에서 다음과 같은 집합 지향 geometry 메서드를 지원합니다. STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() 및 STWithin(). 공간 인덱스의 지원을 받기 위해 이러한 메서드는 쿼리의 WHERE 또는 JOIN ON 절 내에 사용해야 하며 다음 일반 형식의 조건자 내에서 발생해야 합니다.  
+###  <a name="geometry-methods-supported-by-spatial-indexes"></a><a name="geometry"></a> 공간 인덱스에서 지원되는 기하 도형 메서드  
+ 공간 인덱스는 특정 조건에서 STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() 및 STWithin()과 같은 집합 지향 geometry 메서드를 지원합니다. 공간 인덱스의 지원을 받기 위해 이러한 메서드는 쿼리의 WHERE 또는 JOIN ON 절 내에 사용해야 하며 다음 일반 형식의 조건자 내에서 발생해야 합니다.  
   
  *geometry1*.*method_name*(*geometry2*)*comparison_operator**valid_number*  
   
@@ -205,8 +205,8 @@ ms.locfileid: "72909297"
   
 -   *geometry1*.[STWithin](../../t-sql/spatial-geometry/stwithin-geometry-data-type.md)(*geometry2*)= 1  
   
-###  <a name="geography"></a> 공간 인덱스에서 지원되는 지리 메서드  
- 특정 조건에서 공간 인덱스는 다음과 같은 집합 지향 지리 메서드를 지원합니다. STIntersects(),STEquals() 및 STDistance(). 공간 인덱스의 지원을 받기 위해 이러한 메서드는 쿼리의 WHERE 절 내에 사용해야 하며 다음 일반 형식의 조건자 내에서 발생해야 합니다.  
+###  <a name="geography-methods-supported-by-spatial-indexes"></a><a name="geography"></a> 공간 인덱스에서 지원되는 지리 메서드  
+ 특정 조건에서 공간 인덱스는 STIntersects(),STEquals() 및 STDistance()와 같은 집합 지향 지리 메서드를 지원합니다. 공간 인덱스의 지원을 받기 위해 이러한 메서드는 쿼리의 WHERE 절 내에 사용해야 하며 다음 일반 형식의 조건자 내에서 발생해야 합니다.  
   
  *geography1*.*method_name*(*geography2*)*comparison_operator**valid_number*  
   

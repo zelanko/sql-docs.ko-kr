@@ -22,10 +22,10 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1a437704946f379f38aa590ccbf53f240fad94cc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296912"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>스크립트 태스크 코딩 및 디버깅
@@ -210,9 +210,9 @@ To open Help, press F1.
 >  프로젝트 참조는 VSTA IDE의 **클래스 뷰** 또는 **프로젝트 탐색기**에서 볼 수 있습니다. **보기** 메뉴에서 이러한 창 중 하나를 엽니다. **프로젝트** 메뉴, **프로젝트 탐색기** 또는 **클래스 뷰**에서 새 참조를 추가할 수 있습니다.  
   
 ## <a name="interacting-with-the-package-in-the-script-task"></a>스크립트 태스크에서 패키지와 상호 작용  
- 스크립트 태스크는 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 클래스의 인스턴스인 전역 **Dts** 개체 및 해당 멤버를 사용하여 이를 포함한 패키지 및 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임과 상호 작용합니다.  
+ 스크립트 태스크는 **클래스의 인스턴스인 전역**Dts<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 개체 및 해당 멤버를 사용하여 이를 포함한 패키지 및 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임과 상호 작용합니다.  
   
- 다음 표에는 전역 **Dts** 개체를 통해 스크립트 태스크 코드에 노출되는 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 클래스의 주요 공용 멤버가 나와 있습니다. 이 섹션의 항목에서는 이러한 멤버의 사용 방법을 보다 자세히 설명합니다.  
+ 다음 표에는 전역 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>Dts**개체를 통해 스크립트 태스크 코드에 노출되는** 클래스의 주요 공용 멤버가 나와 있습니다. 이 섹션의 항목에서는 이러한 멤버의 사용 방법을 보다 자세히 설명합니다.  
   
 |멤버|목적|  
 |------------|-------------|  
