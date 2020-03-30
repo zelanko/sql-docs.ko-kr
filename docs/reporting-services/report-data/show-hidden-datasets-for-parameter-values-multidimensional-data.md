@@ -9,10 +9,10 @@ ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3b7298d9d761342afbfee33c62f4eda3aa7f3b59
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66499913"
 ---
 # <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 세트 표시

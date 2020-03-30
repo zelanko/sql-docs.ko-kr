@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: ac50d0c20f76e78aaa5016f62cefb8c7cc7f075a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75728584"
 ---
 # <a name="install-azdata-with-apt"></a>apt를 사용하여 `azdata` 설치
@@ -24,11 +24,11 @@ ms.locfileid: "75728584"
 
 [!INCLUDE [azdata-package-installation-remove-pip-install](../includes/azdata-package-installation-remove-pip-install.md)]
 
-## <a id="linux"></a>Linux용 `azdata` 설치
+## <a name="install-azdata-for-linux"></a><a id="linux"></a>Linux용 `azdata` 설치
 
 `azdata` 설치 패키지는 `apt`를 사용하여 Ubuntu에 사용할 수 있습니다.
 
-### <a id="azdata-apt"></a>apt를 사용하여 `azdata` 설치(Ubuntu)
+### <a name="install-azdata-with-apt-ubuntu"></a><a id="azdata-apt"></a>apt를 사용하여 `azdata` 설치(Ubuntu)
 
 >[!NOTE]
 >`azdata` 패키지는 시스템 Python을 사용하지 않고 자체 Python 인터프리터를 설치합니다.

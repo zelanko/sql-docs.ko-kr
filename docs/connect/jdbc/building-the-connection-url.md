@@ -11,10 +11,10 @@ ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2461413e6f41c82404ac11cc5769b74993f13ed8
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77004538"
 ---
 # <a name="building-the-connection-url"></a>연결 URL 작성
@@ -26,7 +26,7 @@ ms.locfileid: "77004538"
   
  각 항목이 나타내는 의미는 다음과 같습니다.  
   
--   **jdbc:sqlserver://**(필수)는 하위 프로토콜이라고 하며 일정한 형태를 나타냅니다.  
+-   **jdbc:sqlserver://** (필수)는 하위 프로토콜이라고 하며 일정한 형태를 나타냅니다.  
   
 -   **serverName**(옵션)은 연결할 서버의 주소입니다. 이는 DNS나 IP 주소일 수도 있고 로컬 컴퓨터인 경우 localhost나 127.0.0.1일 수도 있습니다. 연결 URL에 지정하지 않은 경우 속성 컬렉션에 서버 이름을 지정해야 합니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "77004538"
 > [!NOTE]  
 >  이전 예제에서는 연결 문자열에 사용자 이름과 암호를 사용했지만 보다 안전한 통합 보안을 사용해야 합니다. 자세한 내용은 이 항목 후반에 있는 [통합 인증으로 연결](#Connectingintegrated) 섹션을 참조하십시오.  
   
- 다음 연결 문자열에서는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서 지원되는 운영 체제에서 실행 중인 애플리케이션에서 통합 인증 및 Kerberos를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 방법의 예를 보여 줍니다.  
+ 다음 연결 문자열에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원되는 운영 체제에서 실행 중인 애플리케이션에서 통합 인증 및 Kerberos를 사용하는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 데이터베이스에 연결하는 방법의 예를 보여 줍니다.  
   
 ```java
 jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos  
@@ -91,7 +91,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 > [!NOTE]  
 >  중괄호 안의 공백은 리터럴이며 잘리지 않습니다.  
   
-##  <a name="Connectingintegrated"></a> Windows에서 통합 인증으로 연결  
+##  <a name="connecting-with-integrated-authentication-on-windows"></a><a name="Connectingintegrated"></a> Windows에서 통합 인증으로 연결  
  JDBC 드라이버는 integratedSecurity 연결 문자열 속성을 통해 Windows 운영 체제에서 형식 2 통합 인증을 사용할 수 있습니다. 통합 인증을 사용하려면 mssql-jdbc_auth-\<버전\<arch>.dll 파일을 JDBC 드라이버가 설치된 컴퓨터의 Windows 시스템 경로에 있는 디렉터리에 복사합니다.  
   
  mssql-jdbc_auth-\<버전>-\<arch>.dll 파일은 다음 위치에 설치됩니다.  

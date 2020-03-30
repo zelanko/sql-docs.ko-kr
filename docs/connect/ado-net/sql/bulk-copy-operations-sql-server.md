@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: c827ae70d9aa344f52de1d76c482beaef90c09aa
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78897030"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>SQL Server에서 대량 복사 작업
@@ -32,7 +32,7 @@ Microsoft SQL Server에는 **bcp**라는 많이 사용되는 명령줄 유틸리
 - 트랜잭션 내의 대량 복사 작업  
   
 > [!NOTE]
->  <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 클래스를 지원하지 않는 .NET Framework 버전 1.1 이하를 사용하는 경우 <xref:Microsoft.Data.SqlClient.SqlCommand> 개체를 사용하여 SQL Server Transact-SQL **BULK INSERT** 문을 실행할 수 있습니다.  
+>  <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 클래스를 지원하지 않는 .NET Framework 버전 1.1 이하를 사용하는 경우 **개체를 사용하여 SQL Server Transact-SQL**BULK INSERT<xref:Microsoft.Data.SqlClient.SqlCommand> 문을 실행할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 [대량 복사 예제 설정](bulk-copy-example-setup.md)  

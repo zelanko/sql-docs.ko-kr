@@ -17,10 +17,10 @@ ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ef4bd58d352216cd4c64fe6c18a9ffd6dd3b13a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76939570"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
@@ -128,11 +128,11 @@ sqlsrv_close($conn);
 
 ## <a name="sensitivity-data-classification-metadata"></a>민감도 데이터 분류 메타데이터
 
-사용자가 `sqlsrv_field_metadata`를 사용하여(Microsoft ODBC Driver 17.4.2 이상이 필요함) Microsoft SQL Server 2019에서 [민감도 데이터 분류 메타데이터](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)에 액세스할 수 있도록 새 옵션인 `DataClassification`이 버전 5.8.0에 도입되었습니다.
+사용자가 `DataClassification`를 사용하여(Microsoft ODBC Driver 17.4.2 이상이 필요함) Microsoft SQL Server 2019에서 [민감도 데이터 분류 메타데이터](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)에 액세스할 수 있도록 새 옵션인 `sqlsrv_field_metadata`이 버전 5.8.0에 도입되었습니다.
 
 기본적으로 `DataClassification`이라는 옵션은 `false`이지만 `true`로 설정하면 `sqlsrv_field_metadata`에서 반환하는 배열이 민감도 데이터 분류 메타데이터(있는 경우)로 채워집니다. 
 
-환자 테이블을 예로 들어 보겠습니다.
+Patients 테이블을 예로 들어 보겠습니다.
 
 ```
 CREATE TABLE Patients 
@@ -213,7 +213,7 @@ Array
 )
 ```
 
-`sqlsrv_prepare` 대신 `sqlsrv_query`를 사용 중인 경우 위 코드 조각을 다음과 같이 수정할 수 있습니다.
+`sqlsrv_query` 대신 `sqlsrv_prepare`를 사용 중인 경우 위 코드 조각을 다음과 같이 수정할 수 있습니다.
 
 ```
 $tableName = 'Patients';

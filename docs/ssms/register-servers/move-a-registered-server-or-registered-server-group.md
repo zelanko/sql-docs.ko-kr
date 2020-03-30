@@ -17,17 +17,17 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.openlocfilehash: 74f521a83f63d1604e96deda8313fd11f07235c4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256219"
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>등록된 서버 또는 등록된 서버 그룹 이동
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-이 문서에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 등록된 서버 또는 서버 그룹을 이동하여 등록된 서버에서 서버를 구성하는 방법에 대해 설명합니다. 서버 그룹에는 등록된 서버나 다른 서버 그룹이 포함될 수 있습니다. 서버 및 서버 그룹은 한 서버 그룹에서 다른 서버 그룹으로 이동할 수 있습니다.  
+이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 등록된 서버 또는 서버 그룹을 이동하여 등록된 서버에서 서버를 구성하는 방법에 대해 설명합니다. 서버 그룹에는 등록된 서버나 다른 서버 그룹이 포함될 수 있습니다. 서버 및 서버 그룹은 한 서버 그룹에서 다른 서버 그룹으로 이동할 수 있습니다.  
 
 ## <a name="SSMSProcedure"></a>  
 

@@ -14,10 +14,10 @@ ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c1092674266b518ec051dd20c51d4b05184ff4f0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63193854"
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services의 인증
@@ -106,7 +106,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 1.  클라이언트 애플리케이션에서 사용자를 인증하도록 웹 서비스 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 메서드를 호출합니다.  
   
-2.  웹 서비스에서 보안 확장 프로그램, 특히 **IAuthenticationExtension2**를 구현하는 클래스의 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 메서드를 호출합니다.  
+2.  웹 서비스에서 보안 확장 프로그램, 특히 <xref:ReportService2010.ReportingService2010.LogonUser%2A>IAuthenticationExtension2**를 구현하는 클래스의**  메서드를 호출합니다.  
   
 3.  <xref:ReportService2010.ReportingService2010.LogonUser%2A> 구현에서 사용자 저장소 또는 보안 기관에 있는 사용자 이름과 암호를 검사합니다.  
   
