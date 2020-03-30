@@ -22,10 +22,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 7120efd623905f05e1f02c6c02856b793ad15cea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055961"
 ---
 # <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>대량 가져오기 수행 중 null 유지 또는 기본값 사용(SQL Server)
@@ -33,36 +33,36 @@ ms.locfileid: "74055961"
 
 기본적으로 데이터를 테이블로 가져올 때 [bcp](../../tools/bcp-utility.md) 명령 및 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 문은 해당 테이블의 열에 대해 정의된 기본값을 유지합니다.  예를 들어 데이터 파일에 null 필드가 있으면 열의 기본값이 대신 로드됩니다.  [bcp](../../tools/bcp-utility.md) 명령 및 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 문을 사용하면 Null 값을 유지하도록 지정할 수 있습니다.
 
-반대로 일반 INSERT 문은 기본값을 삽입하는 대신 Null 값을 유지합니다. INSERT ... SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 문은 일반 INSERT와 같은 기본 동작을 제공하지만 기본값 삽입에 대한 [테이블 힌트](../../t-sql/queries/hints-transact-sql-table.md)를 추가로 지원합니다.
+반대로 일반 INSERT 문은 기본값을 삽입하는 대신 Null 값을 유지합니다. INSERT ... SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 문은 일반 INSERT와 같은 기본 동작을 제공하지만 기본값 삽입에 대한 [테이블 힌트](../../t-sql/queries/hints-transact-sql-table.md) 를 추가로 지원합니다.
 
 |윤곽선|
 |---|
-|[Null 값 유지](#keep_nulls)<br />[INSERT ... SELECT * FROM OPENROWSET(BULK...)에서 기본값 사용](#keep_default)<br />[예제 테스트 조건](#etc)<br />&emsp;&#9679;&emsp;[샘플 테이블](#sample_table)<br />&emsp;&#9679;&emsp;[샘플 데이터 파일](#sample_data_file)<br />&emsp;&#9679;&emsp;[샘플 비 XML 서식 파일](#nonxml_format_file)<br />[대량 가져오기 수행 중 Null 유지 또는 기본값 사용](#import_data)<br />&emsp;&#9679;&emsp;[서식 파일 없이 bcp 사용 및 Null 값 유지](#bcp_null)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 bcp 사용 및 Null 값 유지](#bcp_null_fmt)<br />&emsp;&#9679;&emsp;[서식 파일 없이 bcp 사용 및 기본값 사용](#bcp_default)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 bcp 사용 및 기본값 사용](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[서식 파일 없이 BULK INSERT 사용 및 Null 값 유지](#bulk_null)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 BULK INSERT 사용 및 Null 값 유지](#bulk_null_fmt)<br />&emsp;&#9679;&emsp;[서식 파일 없이 BULK INSERT 사용 및 기본값 사용](#bulk_default)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 BULK INSERT 사용 및 기본값 사용](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 OPENROWSET(BULK...) 사용 및 Null 값 유지](#openrowset__null_fmt)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 OPENROWSET(BULK...) 사용 및 기본값 사용](#openrowset__default_fmt)
+|[Null 값 유지](#keep_nulls)<br />[INSERT ... SELECT * FROM OPENROWSET(BULK...) 로 기본 값 사용](#keep_default)<br />[예제 테스트 조건](#etc)<br />&emsp;&#9679;&emsp;[샘플 테이블](#sample_table)<br />&emsp;&#9679;&emsp;[샘플 데이터 파일](#sample_data_file)<br />&emsp;&#9679;&emsp;[샘플 비 XML 서식 파일](#nonxml_format_file)<br />[대량 가져오기 수행 중 Null 유지 또는 기본값 사용](#import_data)<br />&emsp;&#9679;&emsp;[서식 파일 없이 bcp 사용 및 Null 값 유지](#bcp_null)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 bcp 사용 및 Null 값 유지](#bcp_null_fmt)<br />&emsp;&#9679;&emsp;[서식 파일 없이 bcp 사용 및 기본값 사용](#bcp_default)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 bcp 사용 및 기본값 사용](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[서식 파일 없이 BULK INSERT 사용 및 Null 값 유지](#bulk_null)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 BULK INSERT 사용 및 Null 값 유지](#bulk_null_fmt)<br />&emsp;&#9679;&emsp;[서식 파일 없이 BULK INSERT 사용 및 기본값 사용](#bulk_default)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 BULK INSERT 사용 및 기본값 사용](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 OPENROWSET(BULK...) 사용 및 Null 값 유지](#openrowset__null_fmt)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 OPENROWSET(BULK...) 사용 및 기본값 사용](#openrowset__default_fmt)
 
-## Null 값 유지<a name="keep_nulls"></a>  
+## <a name="keeping-null-values"></a>Null 값 유지<a name="keep_nulls"></a>  
 다음 한정자는 대량 가져오기 작업 중 테이블 열에 대한 기본값(있는 경우)을 상속하기보다는 데이터 파일의 빈 필드에 Null 값을 유지하도록 지정합니다.  [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)의 경우 기본적으로 대량 로드 작업에 지정되지 않은 열은 NULL로 설정됩니다.
   
 |명령|한정자|한정자 유형|  
 |-------------|---------------|--------------------|  
 |bcp|-k|스위치|  
 |BULK INSERT|KEEPNULLS\*|인수|  
-|INSERT ... 선택 * OPENROWSET (BULK)에서|해당 없음|해당 없음|  
+|INSERT ... SELECT * FROM OPENROWSET(BULK...)|해당 없음|해당 없음|  
   
 \*[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)의 경우 기본값을 사용할 수 없으면 null 값을 허용하도록 테이블 열을 정의해야 합니다. 
   
 > [!NOTE]
 > 이러한 한정자는 대량 가져오기 명령을 통해 테이블에서 DEFAULT 정의 확인을 비활성화합니다.  그러나 동시 INSERT 문의 경우 DEFAULT 정의가 있어야 합니다.
  
-## INSERT ... SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)<a name="keep_default"></a>에 기본값 사용  
+## <a name="using-default-values-with-insert--select--from-openrowsetbulk"></a>INSERT ... SELECT * FROM OPENROWSET(BULK...) SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)<a name="keep_default"></a>  
 데이터 파일의 빈 필드의 경우 해당 테이블 열에서 기본값(있는 경우)을 사용하도록 지정할 수 있습니다.  기본값을 사용하려면 테이블 힌트 [KEEPDEFAULTS](../../t-sql/queries/hints-transact-sql-table.md)를 사용하세요.
  
 > [!NOTE]
 >  자세한 내용은 [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md), [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md), [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md) 및 [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)를 참조하세요.
 
-## 예제 테스트 조건<a name="etc"></a>  
+## <a name="example-test-conditions"></a>예제 테스트 조건<a name="etc"></a>  
 이 항목의 예제는 아래에 정의된 테이블, 데이터 파일 및 서식 파일을 기반으로 합니다.
 
-### **샘플 테이블**<a name="sample_table"></a>
+### <a name="sample-table"></a>**샘플 테이블**<a name="sample_table"></a>
 아래 스크립트에서는 테스트 데이터베이스와 `myNulls`라는 테이블을 만듭니다.  네 번째 테이블 열 `Kids`는 기본값을 갖습니다.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 
 ```sql
@@ -79,7 +79,7 @@ CREATE TABLE dbo.myNulls (
    );
 ```
 
-### **샘플 데이터 파일**<a name="sample_data_file"></a>
+### <a name="sample-data-file"></a>**샘플 데이터 파일**<a name="sample_data_file"></a>
 메모장을 사용하여 빈 파일 `D:\BCP\myNulls.bcp` 를 만들고 아래 데이터를 삽입합니다.  세 번째 레코드, 네 번째 열에는 값이 없습니다.
 
 ```
@@ -117,7 +117,7 @@ Get-Content -Path $bcpFile;
 Invoke-Item $bcpFile;
 ```
   
-### **샘플 비 XML 서식 파일**<a name="nonxml_format_file"></a>
+### <a name="sample-non-xml-format-file"></a>**샘플 비 XML 서식 파일**<a name="nonxml_format_file"></a>
 SQL Server는 두 유형의 서식 파일, 즉 비 XML 서식 파일과 XML 서식 파일을 지원합니다.  비 XML 서식 파일은 이전 버전의 SQL Server에서 원래 지원했던 서식 파일입니다.  자세한 내용은 [비 XML 서식 파일(SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 을 검토하세요.  다음 명령은 [bcp 유틸리티](../../tools/bcp-utility.md) 를 사용하여 `myNulls.fmt`의 스키마를 기반으로 비 xml 서식 파일 `myNulls`를 생성합니다.  [bcp](../../tools/bcp-utility.md) 명령을 사용하여 서식 파일을 만들려면 데이터 파일 경로 대신 **format** 인수를 지정하고 **NUL** 을 사용합니다.  format 옵션에는 **-f** 옵션도 필요합니다.  또한 이 예제에서 한정자 **c** 는 문자 데이터를 지정하는 데 사용되고, **t,** 는 쉼표를 [필드 종결자](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)로 지정하는 데 사용되며, **T** 는 통합된 보안을 사용하여 신뢰할 수 있는 연결을 지정하는 데 사용됩니다.  명령 프롬프트에서 다음 명령을 입력합니다.
 
 ```cmd
@@ -135,10 +135,10 @@ Notepad D:\BCP\myNulls.fmt
 
  서식 파일을 만드는 방법은 [서식 파일 만들기&#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)를 사용하세요.  
   
-## 대량 가져오기 수행 중 Null 유지 또는 기본값 사용<a name="import_data"></a>
+## <a name="keep-nulls-or-use-default-values-during-bulk-import"></a>대량 가져오기 수행 중 Null 유지 또는 기본값 사용<a name="import_data"></a>
 아래 예제에서는 위에서 만든 데이터베이스, 데이터 파일 및 서식 파일을 사용합니다.
 
-### **서식 파일 없이 [bcp](../../tools/bcp-utility.md) 사용 및 Null 값 유지**<a name="bcp_null"></a>
+### <a name="using-bcp-and-keeping-null-values-without-a-format-file"></a>**서식 파일 없이 [bcp](../../tools/bcp-utility.md) 사용 및 Null 값 유지**<a name="bcp_null"></a>
 
 **-k** 스위치.  명령 프롬프트에서 다음 명령을 입력합니다.
 
@@ -153,7 +153,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
   
-### **서식 파일 없이 [bcp](../../tools/bcp-utility.md) 함께 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_null_fmt"></a>
+### <a name="using-bcp-and-keeping-null-values-with-a-non-xml-format-file"></a>**서식 파일 없이 [bcp](../../tools/bcp-utility.md) 함께 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_null_fmt"></a>
 **-k** 및 **-f** 스위치. 명령 프롬프트에서 다음 명령을 입력합니다.
 
 ```cmd
@@ -167,7 +167,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
 
-### **서식 파일 없이 [bcp](../../tools/bcp-utility.md) 사용 및 기본값 사용**<a name="bcp_default"></a>
+### <a name="using-bcp-and-using-default-values-without-a-format-file"></a>**서식 파일 없이 [bcp](../../tools/bcp-utility.md) 사용 및 기본값 사용**<a name="bcp_default"></a>
 명령 프롬프트에서 다음 명령을 입력합니다.
 
 ```cmd
@@ -181,7 +181,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
   
-### **서식 파일 없이 [bcp](../../tools/bcp-utility.md) 과 함께 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_default_fmt"></a>
+### <a name="using-bcp-and-using-default-values-with-a-non-xml-format-file"></a>**서식 파일 없이 [bcp](../../tools/bcp-utility.md) 과 함께 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_default_fmt"></a>
 **-f** 스위치.  명령 프롬프트에서 다음 명령을 입력합니다.
 
 ```cmd
@@ -195,7 +195,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
 
-### **서식 파일 없이 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 사용 및 Null 값 유지**<a name="bulk_null"></a>
+### <a name="using-bulk-insert-and-keeping-null-values-without-a-format-file"></a>**서식 파일 없이 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 사용 및 Null 값 유지**<a name="bulk_null"></a>
 **KEEPNULLS** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 
 ```sql
@@ -214,7 +214,7 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **서식 파일 없이 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 함께 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_null_fmt"></a>
+### <a name="using-bulk-insert-and-keeping-null-values-with-a-non-xml-format-file"></a>**서식 파일 없이 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 함께 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_null_fmt"></a>
 **KEEPNULLS** 및 **FORMATFILE** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 
 ```sql
@@ -233,7 +233,7 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **서식 파일 없이 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 사용 및 기본값 사용**<a name="bulk_default"></a>
+### <a name="using-bulk-insert-and-using-default-values-without-a-format-file"></a>**서식 파일 없이 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 사용 및 기본값 사용**<a name="bulk_default"></a>
 Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 
 ```sql
@@ -252,7 +252,7 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **서식 파일 없이 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 과 함께 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_default_fmt"></a>
+### <a name="using-bulk-insert-and-using-default-values-with-a-non-xml-format-file"></a>**서식 파일 없이 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 과 함께 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_default_fmt"></a>
 **FORMATFILE** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 
 ```sql
@@ -270,7 +270,7 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **서식 파일 없이 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 함께 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset__null_fmt"></a>
+### <a name="using-openrowsetbulk-and-keeping-null-values-with-a-non-xml-format-file"></a>**서식 파일 없이 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 함께 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset__null_fmt"></a>
 **FORMATFILE** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 
 ```sql
@@ -289,7 +289,7 @@ INSERT INTO dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **서식 파일 없이 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 과 함께 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset__default_fmt"></a>
+### <a name="using-openrowsetbulk-and-using-default-values-with-a-non-xml-format-file"></a>**서식 파일 없이 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 과 함께 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset__default_fmt"></a>
 **KEEPDEFAULTS** 테이블 힌트 및 **FORMATFILE** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 
 ```sql
@@ -310,7 +310,7 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [데이터 대량 가져오기 중 ID 값 유지&#40;SQL Server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)  
   

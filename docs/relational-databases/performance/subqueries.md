@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c2d4bb708142d4471381a1579baa943d11357823
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68113280"
 ---
 # <a name="subqueries-sql-server"></a>하위 쿼리(SQL Server)
@@ -39,7 +39,7 @@ FROM Sales.SalesOrderHeader AS Ord;
 GO
 ```
 
-## <a name="fundamentals"></a> 하위 쿼리 기본 사항
+## <a name="subquery-fundamentals"></a><a name="fundamentals"></a> 하위 쿼리 기본 사항
 하위 쿼리는 내부 쿼리 또는 내부 선택이라고도 하며 하위 쿼리가 포함된 문을 외부 쿼리 또는 외부 선택이라고 합니다.   
 
 하위 쿼리가 포함된 대부분의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 조인으로 나타낼 수 있습니다. 다른 문제는 하위 쿼리에만 해당됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 하위 쿼리가 포함된 문과 하위 쿼리가 포함되지 않았으나 이와 의미상으로 동일한 문 사이에는 성능상의 차이가 없습니다. 하지만 존재 테스트를 해야 할 경우 조인을 사용하면 성능이 향상될 수 있습니다. 그렇지 않으면 중복 값을 제거하기 위해 각 외부 쿼리 결과에 대해 중첩 쿼리를 처리해야 합니다. 이런 경우 조인을 사용하면 결과를 더 쉽게 얻을 수 있습니다. 다음 예는 동일한 결과 집합을 반환하는 하위 쿼리 `SELECT`와 조인 `SELECT`를 보여 줍니다.
@@ -92,7 +92,7 @@ GO
 -   수정되지 않은 비교 연산자로 시작하고 단일 값을 반환
 -   `EXISTS`로 시작하는 존재 테스트
 
-## <a name="rules"></a> 하위 쿼리 규칙
+## <a name="subquery-rules"></a><a name="rules"></a> 하위 쿼리 규칙
 하위 쿼리에는 다음과 같은 제한 사항이 있습니다. 
 -   비교 연산자로 시작하는 하위 쿼리의 선택 목록에는 식이나 열 이름이 한 개만 포함될 수 있습니다(`EXISTS` 및 `IN`이 `SELECT *`나 목록에서 실행될 경우는 제외).   
 -   외부 쿼리의 `WHERE` 절에 열 이름이 포함되면 하위 쿼리 선택 목록의 열과 조인이 호환 가능해야 합니다.   
@@ -104,7 +104,7 @@ GO
 -   하위 쿼리를 사용하여 만든 뷰는 업데이트할 수 없습니다.   
 -   `EXISTS`로 시작하는 하위 쿼리의 선택 목록은 규칙에 따라 단일 열 이름 대신 별표(\*)로 구성됩니다. `EXISTS`로 시작하는 하위 쿼리는 존재 테스트를 만들며 데이터 대신 TRUE 또는 FALSE를 반환하므로 `EXISTS`로 시작하는 하위 쿼리에 대한 규칙은 표준 선택 목록의 규칙과 동일합니다.   
 
-## <a name="qualifying"></a> 하위 쿼리의 열 이름 한정
+## <a name="qualifying-column-names-in-subqueries"></a><a name="qualifying"></a> 하위 쿼리의 열 이름 한정
 다음 예제에서는 외부 쿼리의 *절에 있는*BusinessEntityID`WHERE` 열이 외부 쿼리의 `FROM` 절에 있는 테이블 이름(*Sales.Store*)으로 암시적으로 한정됩니다. 하위 쿼리의 SELECT 목록에서 *CustomerID*에 대한 참조는 하위 쿼리의 `FROM` 절, 즉 *Sales.Customer* 테이블로 한정됩니다.
 
 ```sql
@@ -140,7 +140,7 @@ GO
 > [!IMPORTANT]
 > 하위 쿼리에서 참조하는 열이 하위 쿼리의 `FROM` 절에서 참조하는 테이블에는 없지만 외부 쿼리의 `FROM` 절에서 참조하는 테이블에는 있는 경우 쿼리가 오류 없이 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 외부 쿼리의 테이블 이름으로 하위 쿼리의 열을 암시적으로 한정합니다.   
 
-## <a name="nesting"></a> 다중 중첩 수준
+## <a name="multiple-levels-of-nesting"></a><a name="nesting"></a> 다중 중첩 수준
 하위 쿼리에는 하나 이상의 하위 쿼리가 포함될 수 있습니다. 또한 문에 원하는 수만큼 하위 쿼리를 중첩시킬 수 있습니다.   
 
 다음 쿼리는 영업 사원이기도 한 직원의 이름을 찾습니다.   
@@ -202,7 +202,7 @@ ON e.BusinessEntityID = s.BusinessEntityID;
 GO
 ```
 
-## <a name="correlated"></a> 상관 하위 쿼리
+## <a name="correlated-subqueries"></a><a name="correlated"></a> 상관 하위 쿼리
 대부분의 쿼리는 하위 쿼리를 한 번 실행하고 그 결과 값을 외부 쿼리의 `WHERE` 절에 대체함으로써 평가됩니다. 상관 하위 쿼리(반복 하위 쿼리라고도 함)가 포함된 쿼리에서 하위 쿼리는 외부 쿼리에 따라 값이 달라집니다. 즉, 하위 쿼리는 외부 쿼리에서 선택될 수 있는 각 행에 대해 한 번씩 반복적으로 실행됩니다.
 다음 쿼리는 *SalesPerson* 테이블에서 보너스가 5000이고 *Employee* 및 *SalesPerson* 테이블에서 직원 ID 번호가 일치하는 각 직원의 성과 이름을 찾습니다.
 
@@ -259,7 +259,7 @@ GO
 
 상관 하위 쿼리는 외부 쿼리의 테이블에 있는 열을 테이블 반환 함수의 인수로 참조함으로써 `FROM` 절에 테이블 반환 함수를 포함할 수 있습니다. 이 경우 외부 쿼리의 각 행에 대해 테이블 반환 함수가 하위 쿼리에 따라 평가됩니다.    
   
-## <a name="types"></a> 하위 쿼리 유형
+## <a name="subquery-types"></a><a name="types"></a> 하위 쿼리 유형
 하위 쿼리는 다음과 같이 여러 위치에서 지정할 수 있습니다. 
 -   별칭과 함께 사용. 자세한 내용은 [별칭이 있는 하위 쿼리](#aliases)를 참조하세요.
 -   `IN` 또는 `NOT IN` 있음. 자세한 내용은 [IN이 있는 하위 쿼리](#in) 및 [NOT IN이 있는 하위 쿼리](#notin)를 참조하세요.
@@ -269,7 +269,7 @@ GO
 -   `EXISTS` 또는 `NOT EXISTS` 있음. 자세한 내용은 [EXISTS가 있는 하위 쿼리](#exists) 및 [NOT EXISTS가 있는 하위 쿼리](#notexists)를 참조하세요.
 -   식 대신 사용. 자세한 내용은 [식 대신 하위 쿼리 사용](#expression)을 참조하세요.
 
-### <a name="aliases"></a> 별칭이 있는 하위 쿼리
+### <a name="subqueries-with-aliases"></a><a name="aliases"></a> 별칭이 있는 하위 쿼리
 하위 쿼리와 외부 쿼리가 동일한 테이블을 참조(테이블을 자기 자신에게 조인)하는 문을 대부분 자체 조인이라고 합니다. 예를 들어 다음과 같은 하위 쿼리를 사용하여 특정 주에 있는 직원의 주소를 찾을 수 있습니다.   
 
 ```sql
@@ -326,7 +326,7 @@ GO
 
 명시적 별칭은 하위 쿼리에서 *Person.Address*에 대한 참조가 외부 쿼리에서의 참조와 동일하지 않음을 분명하게 해 줍니다.   
 
-### <a name="in"></a> IN이 있는 하위 쿼리
+### <a name="subqueries-with-in"></a><a name="in"></a> IN이 있는 하위 쿼리
 `IN`(또는 `NOT IN`)으로 시작하는 하위 쿼리의 결과는 값이 0 이상인 목록입니다. 하위 쿼리에서 결과를 반환하면 외부 쿼리에서 이 값을 사용합니다.    
 다음 쿼리는 Adventure Works Cycles에서 만드는 모든 탈 것 제품의 이름을 검색합니다.     
 
@@ -468,7 +468,7 @@ GO
 
 조인은 항상 하위 쿼리로 표시할 수 있지만 하위 쿼리를 항상 조인으로 표시할 수는 없습니다. 그 이유는 조인이 대칭적이기 때문입니다. 즉, 어떤 순서로 테이블 A를 테이블 B에 조인해도 같은 결과를 얻습니다. 그러나 하위 쿼리가 있는 경우는 이에 해당되지 않습니다.    
 
-### <a name="notin"></a> NOT IN이 있는 하위 쿼리
+### <a name="subqueries-with-not-in"></a><a name="notin"></a> NOT IN이 있는 하위 쿼리
 NOT IN 키워드로 시작하는 하위 쿼리도 0개 이상의 값 목록을 반환합니다.   
 다음은 완성된 자전거가 아닌 제품의 이름을 찾는 쿼리입니다.   
 
@@ -488,7 +488,7 @@ GO
 
 이 문은 조인으로 변환할 수 없습니다. 이와 유사한 같지 않음 조인은 의미가 다릅니다. 즉 이 조인은 완성된 자전거 이외의 하위 범주에 있는 제품 이름을 찾습니다.      
 
-### <a name="upsert"></a> UPDATE, DELETE 및 INSERT 문의 하위 쿼리
+### <a name="subqueries-in-update-delete-and-insert-statements"></a><a name="upsert"></a> UPDATE, DELETE 및 INSERT 문의 하위 쿼리
 `UPDATE`, `DELETE`, `INSERT` 및 `SELECT` DML(데이터 조작 언어) 문에 하위 쿼리가 중첩될 수 있습니다.    
 
 다음 예에서는 *Production.Product* 테이블의 *ListPrice* 열 값을 두 배로 만듭니다. `WHERE` 절의 하위 쿼리는 *Product* 테이블에서 업데이트되는 행을 *BusinessEntity* 1540이 제공하는 행으로만 제한하여 *Purchasing.ProductVendor* 테이블을 참조합니다.
@@ -518,7 +518,7 @@ INNER JOIN Purchasing.ProductVendor AS pv
 GO   
 ```
 
-### <a name="comparison"></a> 비교 연산자가 있는 하위 쿼리
+### <a name="subqueries-with-comparison-operators"></a><a name="comparison"></a> 비교 연산자가 있는 하위 쿼리
 하위 쿼리는 다음 비교 연산자 중 하나로 시작할 수 있습니다. (=, < >, >, > =, <, ! >, ! < 또는 < =).   
 
 수정되지 않은 비교 연산자(뒤에 `ANY` 또는 `ALL`이 나오지 않는 비교 연산자)로 시작하는 하위 쿼리는 `IN`으로 시작하는 하위 쿼리처럼 값 목록이 아닌 단일 값을 반환해야 합니다. 이러한 하위 쿼리가 둘 이상의 값을 반환하면 SQL Server는 오류 메시지를 표시합니다.    
@@ -569,7 +569,7 @@ WHERE ListPrice >
 GO
 ```
 
-### <a name="comparison_modified"></a> ANY, SOME 또는 ALL에 의해 수정된 비교 연산자
+### <a name="comparison-operators-modified-by-any-some-or-all"></a><a name="comparison_modified"></a> ANY, SOME 또는 ALL에 의해 수정된 비교 연산자
 하위 쿼리를 시작하는 비교 연산자는 ALL 또는 ANY 키워드에 의해 수정될 수 있습니다. SOME은 `ANY`의 ISO 표준 동의어입니다.     
 
 수정된 비교 연산자로 시작하는 하위 쿼리는 0개 이상의 값 목록을 반환하고 `GROUP BY` 또는 `HAVING` 절을 포함할 수 있습니다. 이러한 하위 쿼리는 `EXISTS`를 사용하여 다시 작성할 수 있습니다.     
@@ -667,7 +667,7 @@ GO
 
 `<>ALL`에 해당하는 `NOT IN` 연산자를 사용해도 동일한 결과를 얻을 수 있습니다.   
 
-### <a name="exists"></a> EXISTS로 시작하는 하위 쿼리
+### <a name="subqueries-with-exists"></a><a name="exists"></a> EXISTS로 시작하는 하위 쿼리
 하위 쿼리가 `EXISTS` 키워드로 시작하면 존재 여부를 테스트할 수 있습니다. 외부 쿼리의 `WHERE` 절은 하위 쿼리에서 반환된 행이 있는지 여부를 테스트합니다. 하위 쿼리는 실제로 데이터를 생성하지 않고 TRUE 또는 FALSE 값을 반환합니다.   
 
 EXISTS로 시작하는 하위 쿼리는 다음 구문을 사용합니다.   
@@ -735,7 +735,7 @@ WHERE ProductSubcategoryID IN
 GO
 ```   
 
-### <a name="notexists"></a> NOT EXISTS가 있는 하위 쿼리
+### <a name="subqueries-with-not-exists"></a><a name="notexists"></a> NOT EXISTS가 있는 하위 쿼리
 `NOT EXISTS`는 하위 쿼리에서 반환되는 행이 없을 때 이것이 사용되는 `EXISTS` 절이 만족되는 경우를 제외하면 `WHERE`와 비슷합니다.    
 
 예를 들어 Wheels 하위 범주에 없는 제품 이름을 찾으려면 다음 코드를 사용합니다.   
@@ -754,7 +754,7 @@ WHERE NOT EXISTS
 GO
 ```   
 
-### <a name="expression"></a> 식 대신 하위 쿼리 사용
+### <a name="subqueries-used-in-place-of-an-expression"></a><a name="expression"></a> 식 대신 하위 쿼리 사용
 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 하위 쿼리는 `SELECT` 목록을 제외하고 `UPDATE`, `INSERT`, `DELETE` 및 `ORDER BY` 문에서 식 대신 사용할 수 있습니다.    
 
 다음은 이러한 향상된 기능을 사용하는 방법을 보여 주는 예입니다. 다음 쿼리는 모든 산악용 자전거의 가격, 평균 가격 및 각 산악용 자전거의 가격과 평균 가격 간의 차이를 검색합니다.    

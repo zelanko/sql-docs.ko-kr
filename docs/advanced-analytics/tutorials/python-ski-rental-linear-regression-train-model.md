@@ -10,16 +10,16 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: c564ac26c5706e67d9a633a05f81cb48d00fb771
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75681764"
 ---
 # <a name="python-tutorial-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Python 자습서: SQL Server Machine Learning Services에서 선형 회귀 모델 학습
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-4부로 구성된 이 자습서 시리즈의 3부에서는 Python에서 선형 회귀 모델을 학습시킵니다. 이 시리즈의 다음 부분에서는 Machine Learning Services가 있는 SQL Server 데이터베이스에 이 모델을 배포합니다.
+이 4부 자습서 시리즈의 3부에서는 Python에서 선형 회귀 모델을 학습합니다. 이 시리즈의 다음 부분에서는 Machine Learning Services가 있는 SQL Server 데이터베이스에 이 모델을 배포합니다.
 
 이 문서에서는 다음을 수행하는 방법을 알아봅니다.
 

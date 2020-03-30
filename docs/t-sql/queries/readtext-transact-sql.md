@@ -20,10 +20,10 @@ ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dd8ad58e96956e1ab0f7b542bab4168272b3f968
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68141288"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT(Transact-SQL)
@@ -59,7 +59,7 @@ HOLDLOCK
 트랜잭션이 끝날 때까지 텍스트 값을 읽을 수 없게 잠급니다. 다른 사용자는 값을 읽을 수 있지만 수정할 수는 없습니다.  
   
 ## <a name="remarks"></a>설명  
-유효한 _text\_ptr_ 값을 얻으려면 [TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md) 함수를 사용합니다. TEXTPTR은 지정된 행에 **text**, **ntext** 또는 **image** 열에 대한 포인터를 반환합니다. TEXTPTR은 쿼리에서 둘 이상의 행을 반환하는 경우 반환되는 마지막 행에 **text**, **ntext** 또는 **image** 열에 대한 포인터를 반환할 수도 있습니다. TEXTPTR은 16바이트 이진 문자열을 반환하므로 지역 변수를 선언하여 텍스트 포인터를 보유한 다음 READTEXT로 해당 변수를 사용하는 것이 좋습니다. 지역 변수 선언 방법에 대한 자세한 내용은 [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)을 참조하십시오.  
+유효한 [text](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)ptr _값을 얻으려면 \_TEXTPTR_ 함수를 사용합니다. TEXTPTR은 지정된 행에 **text**, **ntext** 또는 **image** 열에 대한 포인터를 반환합니다. TEXTPTR은 쿼리에서 둘 이상의 행을 반환하는 경우 반환되는 마지막 행에 **text**, **ntext** 또는 **image** 열에 대한 포인터를 반환할 수도 있습니다. TEXTPTR은 16바이트 이진 문자열을 반환하므로 지역 변수를 선언하여 텍스트 포인터를 보유한 다음 READTEXT로 해당 변수를 사용하는 것이 좋습니다. 지역 변수 선언 방법에 대한 자세한 내용은 [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)을 참조하십시오.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 행 내부 텍스트 포인터가 있을 수 있지만 유효하지 않습니다. **text in row** 옵션에 대한 자세한 내용은 [sp_tableoption&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)을 참조하십시오. 텍스트 포인터를 무효화하는 방법은 [sp_invalidate_textptr&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md)를 참조하십시오.  
   

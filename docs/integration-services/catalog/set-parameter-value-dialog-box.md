@@ -11,10 +11,10 @@ ms.assetid: ce9c2201-4e9a-4495-948f-b68deeaa7955
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9a3e056e60eeab6dfdb79a448b4fc95bf1c01f50
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298933"
 ---
 # <a name="set-parameter-value-dialog-box"></a>매개 변수 값 설정 대화 상자
@@ -30,7 +30,7 @@ ms.locfileid: "71298933"
   
 -   [옵션 구성](#option)  
   
-##  <a name="open_dialog"></a> 매개 변수 값 설정 대화 상자 열기  
+##  <a name="open-the-set-parameter-value-dialog-box"></a><a name="open_dialog"></a> 매개 변수 값 설정 대화 상자 열기  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 연결합니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "71298933"
   
 4.  패키지 또는 프로젝트를 마우스 오른쪽 단추로 클릭하고 **구성**을 클릭한 다음 **매개 변수** 탭 또는 **연결 관리자** 탭에서 줄임표 단추를 클릭합니다.  
   
-##  <a name="option"></a> 옵션 구성  
+##  <a name="configure-the-options"></a><a name="option"></a> 옵션 구성  
  **매개 변수**  
  매개 변수 이름을 나열합니다.  
   

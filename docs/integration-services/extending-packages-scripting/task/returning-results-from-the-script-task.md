@@ -19,10 +19,10 @@ ms.assetid: ac06805b-c2db-44bd-af5c-5a0debe36dd7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0c5fa5e546f566362b76691ffc2e316d0ff6a485
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296390"
 ---
 # <a name="returning-results-from-the-script-task"></a>스크립트 태스크에서 결과 반환

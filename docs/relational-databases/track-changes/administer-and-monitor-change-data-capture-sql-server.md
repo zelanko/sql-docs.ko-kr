@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 00fd02afb8cfd140124a9f476aa4ae0bfb4e1514
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095312"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>변경 데이터 캡처 관리 및 모니터링(SQL Server)
@@ -26,7 +26,7 @@ ms.locfileid: "74095312"
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   이 항목에서는 변경 데이터 캡처를 관리 및 모니터링하는 방법에 대해 설명합니다.  
   
-## <a name="Capture"></a> 캡처 작업
+## <a name="capture-job"></a><a name="Capture"></a> 캡처 작업
 
 캡처 작업은 매개 변수가 없는 저장 프로시저인 `sp_MScdc_capture_job`을 실행하여 시작됩니다. 이 저장 프로시저는 먼저 msdb.dbo.cdc_jobs의 캡처 작업을 위해 `maxtrans`, `maxscans`, `continuous` 및 `pollinginterval`의 구성 값을 추출합니다. 그런 다음 이러한 구성 값은 `sp_cdc_scan` 저장 프로시저에 매개 변수로 전달되고 로그 검색을 수행하기 위해 `sp_replcmds`를 호출하는 데 사용됩니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "74095312"
 
 캡처 작업에서 새 검색을 즉시 시작할지, 아니면 고정된 폴링 간격을 사용하지 않고 새 검색을 시작하기 전에 대기 시간을 사용할지를 결정하는 추가 논리를 적용할 수 있습니다. 이러한 옵션을 사용하면 단순히 하루 일과를 기준으로 업무량이 많을 때는 대기 시간을 매우 길게 적용하고, 주간 업무를 완료하고 야간 업무를 준비해야 하는 마감 시간에는 폴링 간격을 0으로 설정할 수도 있습니다. 캡처 프로세스 진행 상황을 모니터링하여 자정에 커밋된 모든 트랜잭션이 검색되고 변경 테이블에 보관된 시간을 확인할 수도 있습니다. 이렇게 하면 캡처 작업이 종료된 후 예약된 일일 재시작 시간에 다시 시작되도록 할 수 있습니다. `sp_cdc_scan`을 호출하는 배달된 작업 단계를 사용자가 작성한 `sp_cdc_scan`용 래퍼 호출로 바꾸면 최소한의 노력으로도 고도로 사용자 지정된 동작을 얻을 수 있습니다.  
 
-## <a name="Cleanup"></a> 정리 작업
+## <a name="cleanup-job"></a><a name="Cleanup"></a> 정리 작업
 
 이 섹션에서는 변경 데이터 캡처 정리 작업의 작동 방식에 대한 정보를 제공합니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "74095312"
 
 변경 데이터 캡처는 보존 기반 정리 전략을 사용하여 변경 테이블 크기를 관리합니다. 정리 메커니즘은 첫 번째 데이터베이스 테이블이 설정될 때 생성되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업으로 구성됩니다. 단일 정리 작업은 모든 데이터베이스 변경 테이블의 정리를 처리하며 정의된 모든 캡처 인스턴스에 대해 동일한 보존 값을 적용합니다.
   
-정리 작업은 매개 변수가 없는 저장 프로시저인 `sp_MScdc_cleanup_job`을 실행하여 시작됩니다. 이 저장 프로시저는 먼저 `msdb.dbo.cdc_jobs`에서 정리 작업에 대해 구성된 보존 값 및 임계값을 추출합니다. 보존 값은 변경 테이블의 새로운 하위 워터마크를 컴퓨팅하는 데 사용됩니다. 저장 프로시저는 `cdc.lsn_time_mapping` 테이블의 최대 `tran_end_time` 값에서 지정된 시간 값(분)을 빼 datetime 값으로 표현된 새로운 하위 워터마크를 얻습니다. 그런 다음 CDC.lsn_time_mapping 테이블을 사용하여 이 datetime 값을 해당 `lsn` 값으로 변환합니다. 테이블의 여러 항목에서 동일한 커밋 시간을 공유하는 경우에는 최소 `lsn`이 있는 항목에 해당하는 `lsn`을 새로운 하위 워터마크로 선택합니다. 이 `lsn` 값을 `sp_cdc_cleanup_change_tables`로 전달하여 데이터베이스 변경 테이블에서 변경 테이블 항목을 제거합니다.  
+정리 작업은 매개 변수가 없는 저장 프로시저인 `sp_MScdc_cleanup_job`을 실행하여 시작됩니다. 이 저장 프로시저는 먼저 `msdb.dbo.cdc_jobs`에서 정리 작업에 대해 구성된 보존 값 및 임계값을 추출합니다. 보존 값은 변경 테이블의 새로운 하위 워터마크를 컴퓨팅하는 데 사용됩니다. 저장 프로시저는 `tran_end_time` 테이블의 최대 `cdc.lsn_time_mapping` 값에서 지정된 시간 값(분)을 빼 datetime 값으로 표현된 새로운 하위 워터마크를 얻습니다. 그런 다음 CDC.lsn_time_mapping 테이블을 사용하여 이 datetime 값을 해당 `lsn` 값으로 변환합니다. 테이블의 여러 항목에서 동일한 커밋 시간을 공유하는 경우에는 최소 `lsn`이 있는 항목에 해당하는 `lsn`을 새로운 하위 워터마크로 선택합니다. 이 `lsn` 값을 `sp_cdc_cleanup_change_tables`로 전달하여 데이터베이스 변경 테이블에서 변경 테이블 항목을 제거합니다.  
   
 > [!NOTE]  
 > 최근 트랜잭션의 커밋 시간을 기반으로 새로운 하위 워터마크를 계산하는 방법은 지정된 시간 동안 변경 테이블에 변경 내용을 보관할 수 있는 이점이 있습니다. 이는 캡처 프로세스가 실행 중인 경우에도 마찬가지입니다. 실제 하위 워터마크와 커밋 시간을 공유하는 최소 `lsn`을 선택하면 현재 하위 워터마크와 커밋 시간이 동일한 모든 항목이 변경 테이블 내에 계속 표시됩니다.  
@@ -90,7 +90,7 @@ ms.locfileid: "74095312"
 
  정리 작업에서 삭제할 변경 테이블 항목을 결정하는 데 사용되는 전략을 사용자 지정할 수 있습니다. 배달된 정리 작업에서 지원되는 유일한 전략은 시간 기반 전략입니다. 이 경우 마지막으로 처리된 트랜잭션의 커밋 시간에서 허용되는 보존 기간을 빼는 방식으로 새로운 하위 워터마크가 계산됩니다. 기본 정리 프로시저는 시간 대신 `lsn`에 기반을 두므로 원하는 만큼의 전략을 사용하여 변경 테이블에 보관할 최소 `lsn`을 결정할 수 있습니다. 이들 중 일부만 엄격히 시간에 기반을 둡니다. 예를 들어 변경 테이블에 액세스해야 하는 다운스트림 프로세스를 실행할 수 없는 경우 클라이언트에 대한 지식을 사용하여 장애 조치를 제공할 수 있습니다. 또한 기본 전략은 동일한 `lsn`을 사용하여 데이터베이스의 모든 변경 테이블을 정리하지만 기본 정리 프로시저를 호출하여 캡처 인스턴스 수준에서 정리를 수행할 수도 있습니다.  
 
-## <a name="Monitor"></a> 변경 데이터 캡처 프로세스 모니터링
+## <a name="monitor-the-change-data-capture-process"></a><a name="Monitor"></a> 변경 데이터 캡처 프로세스 모니터링
 
 변경 데이터 캡처 프로세스 모니터링을 통해 변경 내용이 올바르게 기록되고 있고 변경 테이블에 대한 대기 시간이 적절한지 확인할 수 있습니다. 모니터링을 사용하면 발생할 수 있는 오류를 확인할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 변경 데이터 캡처를 모니터링하는 데 도움이 되는 두 가지 동적 관리 뷰인 [sys.dm_cdc_log_scan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md) 및 [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)가 포함되어 있습니다.  
   
@@ -176,7 +176,7 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
   
 4. 1단계에서 구성한 데이터 웨어하우스에서 custom_snapshots.cdc_log_scan_data 테이블을 찾습니다. 이 테이블은 로그 검색 세션의 데이터 스냅샷 기록을 제공합니다. 이 데이터를 사용하여 시간에 따른 대기 시간, 처리량 및 기타 성능 측정값을 분석할 수 있습니다.  
 
-## <a name="ScriptUpgrade"></a> 스크립트 업그레이드 모드
+## <a name="script-upgrade-mode"></a><a name="ScriptUpgrade"></a> 스크립트 업그레이드 모드
 
 누적 업데이트 또는 서비스 팩을 인스턴스에 적용하면 다시 시작할 때 인스턴스가 스크립트 업그레이드 모드로 입력할 수 있습니다. 이 모드에서 SQL Server는 내부 CDC 테이블을 분석하고 업그레이드하는 단계를 실행할 수 있으며, 이로 인해 캡처 테이블에 인덱스와 같은 개체를 다시 만들 수 있습니다. 관련된 데이터의 양에 따라 이 단계는 시간이 다소 소요되거나 사용 가능한 CDC 데이터베이스에 대한 높은 트랜색션 로그 사용을 유발할 수 있습니다.
 

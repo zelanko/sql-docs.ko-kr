@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef40223423b1645ce2acd7944db2ba32f85d01db
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258779"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 예제 데이터베이스
@@ -43,13 +43,13 @@ ms.locfileid: "75258779"
   
 -   [샘플의 메모리 및 디스크 공간 사용률](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
 -   성능 테스트에 사용할, 프로덕션 환경과 유사한 사양을 가진 서버 이 특정 샘플의 경우 SQL Server에 사용할 수 있는 메모리가 16GB 이상 있어야 합니다. 메모리 내 OLTP용 하드웨어에 대한 일반적인 지침은 다음 블로그 게시물을 참조하세요. [SQL Server 2014의 메모리 내 OLTP에 대한 하드웨어 고려 사항](blog-hardware-in-memory-oltp.md)
 
-##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> AdventureWorks 기반의 메모리 내 OLTP 샘플 설치  
+##  <a name="installing-the-in-memory-oltp-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> AdventureWorks 기반의 메모리 내 OLTP 샘플 설치  
  다음 단계를 수행하여 예제를 설치합니다.  
   
 1.  [https://www.microsoft.com/download/details.aspx?id=49502](https://www.microsoft.com/download/details.aspx?id=49502)에서 로컬 폴더(예: 'c:\temp')에 AdventureWorks2016CTP3.bak 및 SQLServer2016CTP3Samples.zip을 다운로드합니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "75258779"
   
 3.  샘플 스크립트와 워크로드를 보려면 로컬 폴더에 SQLServer2016CTP3Samples.zip 파일의 압축을 풉니다. 워크로드 실행에 대한 지침은 In-Memory OLTP\readme.txt 파일을 참조하세요.  
   
-##  <a name="Descriptionofthesampletablesandprocedures"></a> 예제 테이블 및 프로시저에 대한 설명  
+##  <a name="description-of-the-sample-tables-and-procedures"></a><a name="Descriptionofthesampletablesandprocedures"></a> 예제 테이블 및 프로시저에 대한 설명  
  예제에서는 AdventureWorks의 기존 테이블을 기반으로 제품과 판매 주문에 대한 새 테이블을 만듭니다. 새 테이블의 스키마는 아래에 설명된 대로 몇 가지 차이점이 있지만 기존 테이블과 유사합니다.  
   
  새로운 메모리 최적화 테이블에는 ‘_inmem’ 접미사가 붙습니다. 예제에는 '_ondisk' 접미사가 붙는 해당 테이블도 포함되어 있습니다. 이러한 테이블을 사용하여 시스템에서 메모리 최적화 테이블과 디스크 기반 테이블의 성능을 일 대 일로 비교할 수 있습니다.  
@@ -309,7 +309,7 @@ ms.locfileid: "75258779"
   
     -   이 프로시저는 도우미 프로시저 dbo.usp_GenerateCKCheck, dbo.usp_GenerateFKCheck 및 dbo.GenerateUQCheck에 의존하여 무결성 검사를 수행하는 데 필요한 T-SQL을 생성합니다.  
   
-##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> 데모 작업을 사용한 성능 측정  
+##  <a name="performance-measurements-using-the-demo-workload"></a><a name="PerformanceMeasurementsusingtheDemoWorkload"></a> 데모 작업을 사용한 성능 측정  
  Ostress는 Microsoft CSS SQL Server 지원 팀에서 개발한 명령줄 도구입니다. 이 도구는 쿼리를 실행하거나 저장 프로시저를 병렬로 실행하는 데 사용할 수 있습니다. 지정된 T-SQL 문을 병렬로 실행할 스레드 수를 구성할 수 있으며 해당 스레드에서 문이 실행될 횟수를 지정할 수 있습니다. ostress는 스레드를 시작하고 모든 스레드에서 문을 병렬로 실행합니다. 모든 스레드의 실행이 완료된 후 ostress는 모든 스레드의 실행이 완료되는 데 걸린 시간을 보고합니다.  
   
 ### <a name="installing-ostress"></a>ostress 설치  
@@ -434,7 +434,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
  데모 실행이 끝날 때마다 다시 설정하는 것이 좋습니다. 이 작업이 삽입만 수행하기 때문에 각 실행에서 더 많은 메모리가 사용되므로 메모리 부족을 방지하려면 다시 설정해야 합니다. 실행 후 사용되는 메모리 양은 [작업 실행 후 메모리 사용률](#Memoryutilizationafterrunningtheworkload)섹션에 설명되어 있습니다.  
   
-###  <a name="Troubleshootingslow-runningtests"></a> 느리게 실행되는 테스트 문제 해결  
+###  <a name="troubleshooting-slow-running-tests"></a><a name="Troubleshootingslow-runningtests"></a> 느리게 실행되는 테스트 문제 해결  
  테스트 결과는 일반적으로 하드웨어와 테스트 실행에서 사용되는 동시성 수준에 따라 달라집니다. 결과가 예상과 다른 경우 확인할 몇 가지 사항은 다음과 같습니다.  
   
 -   동시 트랜잭션 수: 단일 스레드에서 작업을 실행할 때 메모리 내 OLTP를 사용한 성능 이점은 2배보다 적을 수 있습니다. 래치 경합은 동시성 수준이 높은 경우에만 큰 문제가 됩니다.  
@@ -447,10 +447,10 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
     -   증상: 메모리 최적화 테이블에서 작업을 실행할 때 CPU 사용률이 100%에 가깝지 않거나 변동이 심한 경우 로그 IO 병목 상태가 있을 수 있습니다. 이는 리소스 모니터를 열고 로그 드라이브의 큐 길이를 살펴보고 확인할 수 있습니다.  
   
-##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> 샘플의 메모리 및 디스크 공간 사용률  
+##  <a name="memory-and-disk-space-utilization-in-the-sample"></a><a name="MemoryandDiskSpaceUtilizationintheSample"></a> 샘플의 메모리 및 디스크 공간 사용률  
  아래에서는 예제 데이터베이스의 메모리 및 디스크 공간 사용률 측면에서 기대하는 것에 대해 설명합니다. 또한 논리적 코어가 16개인 테스트 서버에서 관찰한 결과도 보여 줍니다.  
   
-###  <a name="Memoryutilizationforthememory-optimizedtables"></a> 메모리 최적화 테이블의 메모리 사용률  
+###  <a name="memory-utilization-for-the-memory-optimized-tables"></a><a name="Memoryutilizationforthememory-optimizedtables"></a> 메모리 최적화 테이블의 메모리 사용률  
   
 #### <a name="overall-utilization-of-the-database"></a>데이터베이스의 전체 사용률  
  다음 쿼리를 사용하여 시스템에서 메모리 내 OLTP의 총 메모리 사용률을 얻을 수 있습니다.  
@@ -505,7 +505,7 @@ WHERE t.type='U'
   
  여기에서 눈에 띄는 것은 테이블 데이터의 크기와 비교할 때 인덱스에 할당된 메모리의 크기입니다. 이는 예제에서 해시 인덱스의 크기가 더 큰 데이터 크기에 대해 설정되었기 때문입니다. 해시 인덱스의 크기는 고정되어 있으므로 테이블의 데이터 크기에 따라 커지지 않습니다.  
   
-####  <a name="Memoryutilizationafterrunningtheworkload"></a> 작업 실행 후 메모리 사용률  
+####  <a name="memory-utilization-after-running-the-workload"></a><a name="Memoryutilizationafterrunningtheworkload"></a> 작업 실행 후 메모리 사용률  
  1,000만 개의 판매 주문을 삽입한 후 총 메모리 사용률은 다음과 유사합니다.  
   
 ```sql

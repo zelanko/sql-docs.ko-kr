@@ -24,23 +24,23 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 371ef48f968bbc6cfd6a99d225dd8edf81cff6ca
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286737"
 ---
 # <a name="statistics"></a>통계
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   쿼리 최적화 프로그램에서는 통계를 사용하여 쿼리 성능을 향상하는 쿼리 계획을 만듭니다. 대부분의 쿼리에서 쿼리 최적화 프로그램은 고품질의 쿼리 계획에 필요한 통계를 이미 생성하므로 경우에 따라서 최상의 결과를 위해 추가 통계를 만들거나 쿼리 설계를 수정해야 합니다. 이 항목에서는 통계 개념에 대해 설명하고 쿼리 최적화 통계를 효율적으로 사용하기 위한 지침을 제공합니다.  
   
-##  <a name="DefinitionQOStatistics"></a> 구성 요소 및 개념  
+##  <a name="components-and-concepts"></a><a name="DefinitionQOStatistics"></a> 구성 요소 및 개념  
 ### <a name="statistics"></a>통계  
  쿼리 최적화 통계는 테이블이나 인덱싱된 뷰에서 하나 이상의 열에 있는 값의 분포에 대한 통계 정보를 포함하는 BLOB(Binary Large Object) 개체입니다. 쿼리 최적화 프로그램은 이러한 통계를 사용하여 쿼리 결과에서 *카디널리티* 또는 행 수를 계산합니다. 쿼리 최적화 프로그램은 이러한 *카디널리티 예상치*를 통해 고품질의 쿼리 계획을 만듭니다. 예를 들어 쿼리 최적화 프로그램은 조건자에 따라 카디널리티 추정을 사용하여 리소스 집약적 Index Scan 연산자 대신 Index Seek 연산자를 선택할 수 있습니다. 이렇게 하면 쿼리 성능이 향상됩니다.  
   
  각 통계 개체는 하나 이상의 테이블 열 목록에 대해 작성되며 첫 번째 열의 값 분포를 나타내는 *히스토그램*을 포함합니다. 여러 열에 대한 통계 개체는 또한 열 사이의 값의 상관 관계에 대한 통계 정보도 저장합니다. 이러한 상관 관계 통계 또는 *밀도*는 열 값의 개별 행 수에서 생성됩니다. 
 
-#### <a name="histogram"></a> 히스토그램  
+#### <a name="histogram"></a><a name="histogram"></a> 히스토그램  
 **히스토그램**은 데이터 집합에서 각 고유 값의 발생 빈도를 측정합니다. 쿼리 최적화 프로그램은 행을 통계적으로 샘플링하거나 테이블 또는 뷰의 모든 행에 대해 전체 검색을 수행하는 방법으로 열 값을 선택하여 통계 개체의 첫 번째 키 열에 있는 열 값에 대한 히스토그램을 계산합니다. 샘플링된 행 집합으로 히스토그램을 만드는 경우 저장된 행 수의 합계와 고유 값의 수는 예상치이며 정수일 필요가 없습니다.
 
 > [!NOTE]
@@ -68,7 +68,7 @@ ms.locfileid: "79286737"
   
 -   점선은 범위 내 고유 값의 총 개수(*distinct_range_rows*) 및 범위 내 값의 총 개수(*range_rows*)를 예상하는 데 사용되는 샘플링된 값을 나타냅니다. 쿼리 최적화 프로그램은 *range_rows* 및 *distinct_range_rows*를 사용하여 *average_range_rows*를 컴퓨팅하며 샘플링된 값은 저장하지 않습니다.   
   
-#### <a name="density"></a>밀도 벡터  
+#### <a name="density-vector"></a><a name="density"></a>밀도 벡터  
 **밀도**는 주어진 열 또는 열의 조합에서 중복 수에 대한 정보이며 1/(고유 값 수)로 계산됩니다. 쿼리 최적화 프로그램은 같은 테이블 또는 인덱싱된 뷰에서 여러 열을 반환하는 쿼리의 카디널리티 예상치 정확도를 높이기 위해 밀도를 사용합니다. 밀도가 감소하면 값의 선택도가 증가합니다. 예를 들어 자동차를 나타내는 테이블에서 많은 차가 동일한 제조업체의 것이지만 각 차는 고유의 차량 등록 번호(VIN)를 갖습니다. VIN의 밀도가 제조업체보다 낮으므로 VIN의 인덱스가 제조업체의 인덱스보다 더 선택적입니다. 
 
 > [!NOTE]
@@ -88,7 +88,7 @@ ms.locfileid: "79286737"
 ### <a name="statistics-options"></a>통계 옵션  
  통계가 작성되고 업데이트되는 시기 및 방법에 영향을 주는 다음 세 가지 옵션을 설정할 수 있습니다. 이러한 옵션은 데이터베이스 수준에서만 설정됩니다.  
   
-#### <a name="AutoUpdateStats"></a>AUTO_CREATE_STATISTICS 옵션  
+#### <a name="auto_create_statistics-option"></a><a name="AutoUpdateStats"></a>AUTO_CREATE_STATISTICS 옵션  
  자동 통계 작성 옵션 [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics)가 ON으로 설정된 경우 쿼리 최적화 프로그램은 필요에 따라 쿼리 조건자의 개별 열에 대한 통계를 작성하므로 쿼리 계획에 대한 카디널리티 예상치의 정확도가 높아집니다. 이러한 단일 열 통계는 기존 통계 개체에 [히스토그램](#histogram)이 없는 열에 대해 작성됩니다. AUTO_CREATE_STATISTICS 옵션에서는 인덱스에 대해 통계가 작성되는지 확인하지 않습니다. 이 옵션은 또한 필터링된 통계도 생성하지 않으며 전체 테이블에 대한 단일 열 통계에 엄격하게 적용됩니다.  
   
  쿼리 최적화 프로그램이 AUTO_CREATE_STATISTICS 옵션 사용 결과로 통계를 작성하면 통계 이름이 `_WA`로 시작합니다. 다음 쿼리를 사용하여 쿼리 최적화 프로그램이 쿼리 조건자 열에 대한 통계를 작성했는지 확인할 수 있습니다.  
@@ -114,7 +114,7 @@ ORDER BY s.name;
 * [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)이 130 미만인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 테이블의 행 수에 따라 조정되는, 감소하는 동적 통계 업데이트 임계값을 사용합니다. 이 값은 1,000 곱의 제곱근과 현재 테이블 카디널리티로 계산됩니다. 예를 들어 테이블에 2백만 개 행이 포함되어 있으면 sqrt (1000 * 2000000) = 44721.359와 같이 계산됩니다. 이러한 변경으로 인해 큰 테이블의 통계 업데이트 빈도가 높아집니다. 그러나 데이터베이스의 호환성 수준이 130 미만이면 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 임계값이 적용됩니다. ?
 
 > [!IMPORTANT]
-> [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]부터 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 또는 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)이 130 미만인 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상에서는 [2371 추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 사용하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 테이블의 행 수에 따라 조정되는, 감소하는 동적 통계 업데이트 임계값을 사용합니다.
+> [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]부터 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]데이터베이스 호환성 수준[이 130 미만인 ](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 이상에서는 [2371 추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 사용하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 테이블의 행 수에 따라 조정되는, 감소하는 동적 통계 업데이트 임계값을 사용합니다.
   
 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전과 캐시된 쿼리 계획을 실행하기 전에 최신이 아닌 통계가 있는지를 확인합니다. 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전에 쿼리 조건자의 열, 테이블 및 인덱싱된 뷰를 사용하여 어떤 통계가 최신이 아닌지 결정합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 캐시된 쿼리 계획을 실행하기 전에 쿼리 계획에서 최신 통계가 참조되는지 확인합니다.  
   
@@ -155,13 +155,13 @@ AUTO_UPDATE_STATISTICS 제어 방법에 대한 자세한 내용은 [SQL Server�
   
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 
   
-## <a name="CreateStatistics"></a> 통계 작성 시기  
+## <a name="when-to-create-statistics"></a><a name="CreateStatistics"></a> 통계 작성 시기  
  쿼리 최적화 프로그램은 다음과 같은 방법으로 통계를 작성합니다.  
   
 1.  인덱스가 만들어진 경우 쿼리 최적화 프로그램에서 테이블 또는 뷰의 인덱스에 대한 통계를 작성합니다. 이러한 통계는 인덱스의 키 열에 대해 만들어집니다. 인덱스가 필터링된 인덱스인 경우 쿼리 최적화 프로그램은 필터링된 인덱스로 지정된 행의 동일한 하위 집합에 대해 필터링된 통계를 작성합니다. 필터링된 인덱스에 대한 자세한 내용은 [필터링된 인덱스 만들기](../../relational-databases/indexes/create-filtered-indexes.md) 및 [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)를 참조하세요.  
 
     > [!NOTE]
-    > [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 분할된 인덱스를 만들거나 다시 작성할 때 테이블의 모든 행을 검사하여 통계를 작성하지 않습니다. 대신, 쿼리 최적화 프로그램에서 기본 샘플링 알고리즘을 사용하여 통계를 생성합니다. 분할된 인덱스로 데이터베이스를 업그레이드한 후 인덱스에 대한 히스토그램 데이터가 달라집니다. 이 동작 변경이 쿼리 성능에는 영향을 주지 않을 수 있습니다. 테이블의 모든 행을 검사하여 분할된 인덱스에 대한 통계를 얻으려면 `FULLSCAN` 절에서 `CREATE STATISTICS` 또는 `UPDATE STATISTICS`를 사용합니다. 
+    > [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 분할된 인덱스를 만들거나 다시 작성할 때 테이블의 모든 행을 검사하여 통계를 작성하지 않습니다. 대신, 쿼리 최적화 프로그램에서 기본 샘플링 알고리즘을 사용하여 통계를 생성합니다. 분할된 인덱스로 데이터베이스를 업그레이드한 후 인덱스에 대한 히스토그램 데이터가 달라집니다. 이 동작 변경이 쿼리 성능에는 영향을 주지 않을 수 있습니다. 테이블의 모든 행을 검사하여 분할된 인덱스에 대한 통계를 얻으려면 `CREATE STATISTICS` 절에서 `UPDATE STATISTICS` 또는 `FULLSCAN`를 사용합니다. 
   
 2.  [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics)가 ON이면 쿼리 최적화 프로그램은 쿼리 조건자의 단일 열에 대한 통계를 작성합니다.  
 
@@ -202,7 +202,7 @@ GO
 ### <a name="query-selects-from-a-subset-of-data"></a>쿼리가 데이터 하위 집합에서 선택하는 경우  
 쿼리 최적화 프로그램에서 단일 열 및 인덱스에 대한 통계를 만들 때 모든 행의 값에 대해 통계를 작성합니다. 쿼리가 행의 하위 집합에서 선택하고 행의 해당 하위 집합에서 데이터 분포가 고유한 경우 필터링된 통계는 쿼리 계획을 향상시킬 수 있습니다. [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 문을 [WHERE](../../t-sql/queries/where-transact-sql.md) 절과 함께 사용하여 필터링된 통계를 만들어 필터 조건자 식을 정의할 수 있습니다.  
   
-예를 들어 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]를 사용하면 `Production.Product` 테이블의 각 제품이 `Production.ProductCategory` 테이블의 4가지 범주인 자전거, 구성 요소, 의류 및 액세서리 중 하나에 포함됩니다. 각 범주의 데이터 배포는 서로 다른 가중치를 가집니다. 자전거 가중치는 13.77에서 30.0이고 구성 요소 가중치는 2.12에서 1050.00이면서 일부 NULL 값을 가지며 의류 가중치는 모두 NULL이고 액세서리 가중치 또한 NULL입니다.  
+예를 들어 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]를 사용하면 `Production.Product` 테이블의 각 제품이 `Production.ProductCategory` 테이블의 4가지 범주인 Bikes, Components, Clothing 및 Accessories 중 하나에 속하게 됩니다. 각 범주의 데이터 배포는 서로 다른 가중치를 가집니다. 자전거 가중치는 13.77에서 30.0이고 구성 요소 가중치는 2.12에서 1050.00이면서 일부 NULL 값을 가지며 의류 가중치는 모두 NULL이고 액세서리 가중치 또한 NULL입니다.  
   
 자전거를 예로 사용할 때 모든 자전거 가중치에 대한 필터링된 통계는 쿼리 최적화 프로그램에 더욱 정확한 통계를 제공하므로 전체 테이블 통계 또는 Weight 열에 대한 존재하지 않는 통계에 비해 쿼리 계획의 품질을 향상할 수 있습니다. 자전거 가중치 열은 필터링된 통계의 경우에는 좋지만 가중치 조회 수가 상대적으로 적을 때 필터링된 인덱스의 경우에는 반드시 좋은 것은 아닙니다. 필터링된 인덱스에서 제공하는 조회 성능의 향상은 장점이지만 필터링된 인덱스를 데이터베이스에 추가하는 것으로 인한 추가 유지 관리 및 스토리지 비용은 부담이 될 수 있습니다.  
   
@@ -242,7 +242,7 @@ GO
   
  임시 통계는 **tempdb**에 저장되므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 다시 시작하면 모든 임시 통계가 사라집니다.  
     
-## <a name="UpdateStatistics"></a> 통계 업데이트 시기  
+## <a name="when-to-update-statistics"></a><a name="UpdateStatistics"></a> 통계 업데이트 시기  
  쿼리 최적화 프로그램은 통계가 최신이 아닌 통계가 되는 시점을 확인한 다음, 쿼리 계획에 필요할 때 통계를 업데이트합니다. 경우에 따라 [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics)를 ON으로 설정할 때보다 더 자주 통계를 업데이트하여 쿼리 계획을 향상시키고 쿼리 성능을 높일 수 있습니다. UPDATE STATISTICS 문 또는 저장 프로시저 sp_updatestats를 사용하여 통계를 업데이트할 수 있습니다.  
   
  통계를 업데이트하면 쿼리가 최신 통계로 컴파일되지만 쿼리도 다시 컴파일됩니다. 쿼리 계획 향상과 쿼리 재컴파일 소요 시간 간의 성능 균형을 유지해야 하므로 통계를 너무 자주 업데이트하지 않는 것이 좋습니다. 구체적인 성능 균형 유지의 정도는 애플리케이션에 따라 달라집니다.  
@@ -277,7 +277,7 @@ GO
 
 [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)와 같은 솔루션을 사용하여 하나 이상의 데이터베이스에 대한 인덱스 조각 모음 및 통계 업데이트를 자동으로 관리합니다. 이 절차는 다른 매개 변수 사이에서 조각화 수준에 따라 인덱스를 다시 작성하거나 다시 구성할지 여부를 자동으로 선택하고 통계를 선형 임계값으로 업데이트합니다.
   
-##  <a name="DesignStatistics"></a> 통계를 효율적으로 사용하는 쿼리  
+##  <a name="queries-that-use-statistics-effectively"></a><a name="DesignStatistics"></a> 통계를 효율적으로 사용하는 쿼리  
  쿼리 조건자에서 지역 변수, 복잡한 식 등의 일부 쿼리 구현은 만족스럽지 못한 쿼리 계획을 만들 수 있습니다. 이를 방지하려면 효율적인 통계 사용을 위한 쿼리 설계 지침을 따르는 것이 좋습니다. 쿼리 조건자에 대한 자세한 내용은 [검색 조건&#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)을 참조하세요.  
   
  쿼리 조건자에 사용된 식, 변수 및 함수에 대한 *카디널리티 예상치* 정확도를 높이기 위해 효율적으로 통계를 사용하는 쿼리 설계 지침을 적용하여 쿼리 계획을 향상시킬 수 있습니다. 쿼리 최적화 프로그램에서 식, 변수 또는 함수 값을 알지 못하는 경우 히스토그램에서 조회할 값을 알 수 없으므로, 히스토그램에서 최상의 카디널리티 예상치를 검색할 수 없습니다. 대신 쿼리 최적화 프로그램은 히스토그램에서 샘플링된 모든 행에 대한 고유한 값마다 평균 행 수에 대한 카디널리티 예상치를 예측합니다. 이로 인해 카디널리티 예상치가 만족스럽지 못하고 쿼리 성능이 저하될 수 있습니다. 히스토그램에 대한 자세한 내용은 이 페이지의 [히스토그램](#histogram) 섹션이나 [sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)을 참조하세요.
@@ -302,7 +302,7 @@ GO
   
 * 이미 전달된 매개 변수를 사용하는 쿼리가 저장 프로시저에 포함되어 있는 경우 쿼리에서 매개 변수 값을 사용하기 전에 저장 프로시저 내의 매개 변수 값을 변경하지 마십시오. 쿼리에 대한 카디널리티 예상치는 업데이트된 값이 아닌 이미 전달된 매개 변수 값을 기준으로 합니다. 매개 변수 값이 변경되지 않도록 두 개의 저장 프로시저를 사용하여 쿼리를 다시 작성할 수 있습니다.  
   
-     예를 들어 `@date`가 NULL인 경우 다음 `Sales.GetRecentSales` 저장 프로시저에서는 `@date` 매개 변수의 값을 변경합니다.  
+     예를 들어 `Sales.GetRecentSales`가 NULL인 경우 다음 `@date` 저장 프로시저에서는 `@date` 매개 변수의 값을 변경합니다.  
   
     ```sql  
     USE AdventureWorks2012;  
@@ -351,7 +351,7 @@ GO
 ### <a name="improving-cardinality-estimates-with-query-hints"></a>쿼리 힌트를 사용하여 카디널리티 예상치 정확도 향상  
  지역 변수에 대한 카디널리티 예상치 정확도를 높이기 위해 RECOMPILE과 함께 `OPTIMIZE FOR <value>` 또는 `OPTIMIZE FOR UNKNOWN` 쿼리 힌트를 사용할 수 있습니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
- 일부 애플리케이션의 경우 쿼리를 실행할 때마다 다시 컴파일하는 데 너무 많은 시간이 걸릴 수 있습니다. `RECOMPILE` 옵션을 사용하지 않는 경우에도 `OPTIMIZE FOR` 쿼리 힌트가 도움이 될 수 있습니다. 예를 들어 특정 날짜를 지정하기 위해 `OPTIMIZE FOR` 옵션을 Sales.GetRecentSales 저장 프로시저에 추가할 수 있습니다. 다음 예에서는 `OPTIMIZE FOR` 옵션을 Sales.GetRecentSales 프로시저에 추가합니다.  
+ 일부 애플리케이션의 경우 쿼리를 실행할 때마다 다시 컴파일하는 데 너무 많은 시간이 걸릴 수 있습니다. `OPTIMIZE FOR` 옵션을 사용하지 않는 경우에도 `RECOMPILE` 쿼리 힌트가 도움이 될 수 있습니다. 예를 들어 특정 날짜를 지정하기 위해 `OPTIMIZE FOR` 옵션을 Sales.GetRecentSales 저장 프로시저에 추가할 수 있습니다. 다음 예에서는 `OPTIMIZE FOR` 옵션을 Sales.GetRecentSales 프로시저에 추가합니다.  
   
 ```sql  
 USE AdventureWorks2012;  

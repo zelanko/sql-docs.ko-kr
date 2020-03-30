@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 971848a9feddd9cff64bafb5cadf36ab8bdc01e3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288277"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>페이지 및 익스텐트 아키텍처 가이드
@@ -42,7 +42,7 @@ ms.locfileid: "79288277"
 
 |페이지 유형 | 콘텐츠 |
 |-------|-------|
-|데이터 |text in row를 ON으로 설정한 경우 온갖 데이터를 포함한 데이터 행. 단, 텍스트, ntext, 이미지, nvarchar(max), varchar(max), varbinary(max), xml 데이터 제외. |
+|data |text in row를 ON으로 설정한 경우 온갖 데이터를 포함한 데이터 행. 단, 텍스트, ntext, 이미지, nvarchar(max), varchar(max), varbinary(max), xml 데이터 제외. |
 |인덱스 |인덱스 항목 |
 |텍스트/이미지 |LOB(Large Object) 데이터 유형: (텍스트, ntext, 이미지, nvarchar(max), varchar(max), varbinary(max), xml 데이터) <br> 데이터 행이 8KB를 초과하는 경우 가변 길이 열: (varchar, nvarchar, varbinary, and sql_variant) |
 |전역 할당 맵, 공유 전역 할당 맵 |익스텐트가 할당되었는지 여부에 대한 정보 |
@@ -94,7 +94,7 @@ ms.locfileid: "79288277"
 > [!NOTE]
 > [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]까지, 추적 플래그 1118을 사용하여 항상 균일 익스텐트를 사용하도록 기본 할당을 변경할 수 있습니다. 이 추적 플래그에 대한 자세한 내용은 [DBCC TRACEON - 추적 플래그](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.   
 >   
-> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]부터 TF 1118에서 제공하는 기능이 TempDB에서 자동으로 사용됩니다. 사용자 데이터베이스의 경우 이 동작은 기본값이 OFF로 설정된 `ALTER DATABASE`의 `SET MIXED_PAGE_ALLOCATION` 옵션에 의해 제어되며, 추적 플래그 1118은 영향을 미치지 않습니다. 자세한 내용은 [ALTER DATABASE SET 옵션(Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.
+> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]부터 TF 1118에서 제공하는 기능이 TempDB에서 자동으로 사용됩니다. 사용자 데이터베이스의 경우 이 동작은 기본값이 OFF로 설정된 `SET MIXED_PAGE_ALLOCATION`의 `ALTER DATABASE` 옵션에 의해 제어되며, 추적 플래그 1118은 영향을 미치지 않습니다. 자세한 내용은 [ALTER DATABASE SET 옵션(Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.
 
 ## <a name="managing-extent-allocations-and-free-space"></a>익스텐트 할당 및 빈 공간 관리 
 

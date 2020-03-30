@@ -11,10 +11,10 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ebe6152ea59de28c9df7f3bb3abfa149900c826f
-ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77146300"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Always On 분산 가용성 그룹 구성  
@@ -217,14 +217,14 @@ ALTER AVAILABILITY GROUP [distributedag]
 GO  
 ```  
 
-## <a name="failover"></a> 두 번째 가용성 그룹의 보조에 있는 데이터베이스 조인
+## <a name="join-the-database-on-the-secondary-of-the-second-availability-group"></a><a name="failover"></a> 두 번째 가용성 그룹의 보조에 있는 데이터베이스 조인
 두 번째 가용성 그룹의 보조 복제본에 있는 데이터베이스가 복원 상태로 전환된 후 해당 데이터베이스를 가용성 그룹에 수동으로 조인해야 합니다.
 
 ```sql  
 ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
 ```
   
-## <a name="failover"></a> 보조 가용성 그룹에 대한 장애 조치(failover)  
+## <a name="fail-over-to-a-secondary-availability-group"></a><a name="failover"></a> 보조 가용성 그룹에 대한 장애 조치(failover)  
 
 이 경우에는 수동 장애 조치(failover)만 지원됩니다. 분산 가용성 그룹을 수동으로 장애 조치(failover)하려면 다음을 수행합니다.
 
@@ -236,7 +236,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
 다음 Transact-SQL 예제에서는 `distributedag`라는 분산 가용성 그룹을 장애 조치(failover)하는 자세한 단계를 보여줍니다.
 
-1. 데이터가 손실되지 않도록 하려면 전역 주 데이터베이스(주 가용성 그룹의 데이터베이스)에서 모든 트랜잭션을 중지합니다. 그런 다음, 전역 기본 및 전달자 ‘모두’에서 다음 코드를 실행하여 분산 가용성 그룹을 동기 커밋으로 설정합니다.   
+1. 데이터가 손실되지 않도록 하려면 전역 주 데이터베이스(주 가용성 그룹의 데이터베이스)에서 모든 트랜잭션을 중지합니다. 그런 다음, 전역 기본 및 전달자 ‘모두’에서 다음 코드를 실행하여 분산 가용성 그룹을 동기 커밋으로 설정합니다.    
     
       ```sql  
       -- sets the distributed availability group to synchronous commit 

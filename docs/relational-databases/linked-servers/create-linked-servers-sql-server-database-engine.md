@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ddcead69006fdee32598590192e777984ea3fcd7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76761897"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>연결된 서버 만들기(SQL Server 데이터베이스 엔진)
@@ -29,24 +29,24 @@ ms.locfileid: "76761897"
 
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 연결된 서버를 만들고 다른 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 데이터에 액세스하는 방법을 보여 줍니다. 연결된 서버를 만들면 여러 원본의 데이터로 작업할 수 있습니다. 연결된 서버는 반드시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 인스턴스일 필요는 없지만 이것이 일반적인 시나리오입니다.  
   
-##  <a name="Background"></a> 배경  
+##  <a name="background"></a><a name="Background"></a> 배경  
  연결된 서버를 만들면 OLE DB 데이터 원본과 유형이 다른 분산 쿼리에 액세스할 수 있습니다. 연결된 서버를 만든 후 이 서버에 대해 분산 쿼리를 실행할 수 있으며 쿼리로 둘 이상의 데이터 원본의 테이블을 조인할 수 있습니다. 연결된 서버를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 정의한 경우에는 원격 저장 프로시저를 실행할 수 있습니다.  
   
  연결된 서버의 기능 및 필수 인수는 크게 다를 수 있습니다. 이 항목의 예에서는 일반적인 예제를 제공하지만 모든 옵션에 대해 설명하지는 않습니다. 자세한 내용은 [sp_addlinkedserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)의 데이터에 액세스하는 방법을 보여 줍니다.  
   
-##  <a name="Security"></a> 보안  
+##  <a name="security"></a><a name="Security"></a> 보안  
   
 ### <a name="permissions"></a>사용 권한  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용할 때는 서버에 대한 **ALTER ANY LINKED SERVER** 권한 또는 **setupadmin** 고정 서버 역할의 멤버 자격이 필요합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용할 때는 **CONTROL SERVER** 권한 또는 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-##  <a name="Procedures"></a> 방법: 연결된 서버 만들기  
+##  <a name="how-to-create-a-linked-server"></a><a name="Procedures"></a> 방법: 연결된 서버 만들기  
  다음 중 하나를 사용할 수 있습니다.  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 SQL Server의 다른 인스턴스에 연결된 서버를 만들려면  
   
@@ -197,7 +197,7 @@ ms.locfileid: "76761897"
      **'LIKE' 연산자를 지원합니다.**  
      공급자가 LIKE 키워드를 사용하는 쿼리를 지원한다는 것을 나타냅니다.  
   
-###  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 연결된 서버를 만들려면 [sp_addlinkedserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)[CREATE LOGIN&#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md) 및 [sp_addlinkedsrvlogin&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md) 문을 사용합니다.  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-transact-sql"></a>Transact-SQL을 사용하여 SQL Server의 다른 인스턴스에 연결된 서버 만들기  
@@ -225,7 +225,7 @@ ms.locfileid: "76761897"
   
     ```  
   
-##  <a name="FollowUp"></a> 후속 작업: 연결된 서버를 만든 후 수행할 단계  
+##  <a name="follow-up-steps-to-take-after-you-create-a-linked-server"></a><a name="FollowUp"></a> 추가 작업: 연결된 서버를 만든 후 수행할 단계  
   
 #### <a name="to-test-the-linked-server"></a>연결된 서버 테스트  
   

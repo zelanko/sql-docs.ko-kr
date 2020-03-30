@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.openlocfilehash: 8e36eb9bccd183c8c38ebbfeafcc4ace7e025960
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286917"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>mssql-conf 도구를 사용하여 SQL Server on Linux 구성
@@ -90,7 +90,7 @@ ms.locfileid: "79286917"
 
 * 이 예제에서는 전체 경로: **/opt/mssql/bin/mssql-conf**를 지정하여 mssql-conf를 실행합니다. 해당 경로로 이동하려면 현재 디렉터리 **./mssql-conf**의 컨텍스트에서 mssql-conf를 실행합니다.
 
-## <a id="agent"></a> SQL Server 에이전트 사용
+## <a name="enable-sql-server-agent"></a><a id="agent"></a> SQL Server 에이전트 사용
 
 **sqlagent.enabled** 설정은 [SQL Server 에이전트](sql-server-linux-run-sql-server-agent-job.md)를 사용하도록 설정합니다. 기본적으로 SQL Server 에이전트는 사용하지 않도록 설정됩니다. **sqlagent.enabled**가 mssql.conf 설정 파일에 있는 경우 SQL Server는 내부적으로 SQL Server 에이전트가 사용하지 않도록 설정되었다고 간주합니다.
 
@@ -108,7 +108,7 @@ ms.locfileid: "79286917"
    sudo systemctl restart mssql-server
    ```
 
-## <a id="collation"></a> SQL Server 데이터 정렬 변경
+## <a name="change-the-sql-server-collation"></a><a id="collation"></a> SQL Server 데이터 정렬 변경
 
 **set-collation** 옵션은 데이터 정렬 값을 지원되는 데이터 정렬로 변경합니다.
 
@@ -128,7 +128,7 @@ ms.locfileid: "79286917"
 
 지원되는 데이터 정렬 목록을 보려면 [sys.fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) 함수를 다음과 같이 실행합니다. `SELECT Name from sys.fn_helpcollations()`.
 
-## <a id="customerfeedback"></a> 고객 의견 구성
+## <a name="configure-customer-feedback"></a><a id="customerfeedback"></a> 고객 의견 구성
 
 **telemetry.customerfeedback** 설정은 SQL Server에서 사용자 의견을 Microsoft에 보낼지 여부를 변경합니다. 기본적으로 이 값은 모든 버전에 대해 **true**로 설정됩니다. 값을 변경하려면 다음 명령을 실행합니다.
 
@@ -149,7 +149,7 @@ ms.locfileid: "79286917"
 
 자세한 내용은 [SQL Server on Linux에 대한 고객 의견](sql-server-linux-customer-feedback.md) 및 [SQL Server 개인정보처리방침](https://go.microsoft.com/fwlink/?LinkID=868444)을 참조하세요.
 
-## <a id="datadir"></a> 기본 데이터 또는 로그 디렉터리 위치 변경
+## <a name="change-the-default-data-or-log-directory-location"></a><a id="datadir"></a> 기본 데이터 또는 로그 디렉터리 위치 변경
 
 **filelocation.defaultdatadir** 및 **filelocation.defaultlogdir** 설정은 새 데이터베이스 및 로그 파일이 생성되는 위치를 변경합니다. 기본적으로 이 위치는 /var/opt/mssql/data입니다. 이 설정을 변경하려면 다음 단계를 사용합니다.
 
@@ -187,7 +187,7 @@ ms.locfileid: "79286917"
 1. 또한 이 명령은 /tmp/log 디렉터리가 존재하고 사용자 및 그룹 **mssql**이 사용하고 있다고 간주합니다.
 
 
-## <a id="masterdatabasedir"></a> 기본 master 데이터베이스 파일 디렉터리 위치 변경
+## <a name="change-the-default-master-database-file-directory-location"></a><a id="masterdatabasedir"></a> 기본 master 데이터베이스 파일 디렉터리 위치 변경
 
 **filelocation.masterdatafile** 및 **filelocation.masterlogfile** 설정은 SQL Server 엔진이 master 데이터베이스 파일을 검색하는 위치를 변경합니다. 기본적으로 이 위치는 /var/opt/mssql/data입니다.
 
@@ -238,7 +238,7 @@ ms.locfileid: "79286917"
    > [!NOTE]
    > SQL Server가 지정된 디렉터리에서 master.mdf 및 mastlog.ldf 파일을 찾을 수 없으면 시스템 데이터베이스의 템플릿 기반 복사본이 지정된 디렉터리에 자동으로 생성되고 SQL Server가 시작됩니다. 그러나 사용자 데이터베이스, 서버 로그인, 서버 인증서, 암호화 키, SQL 에이전트 작업 또는 이전 SA 로그인 암호와 같은 메타데이터는 새 master 데이터베이스에서 업데이트되지 않습니다. SQL Server를 중지하고, 이전 master.mdf 및 mastlog.ldf를 지정된 새 위치로 이동하고, SQL Server를 시작하여 기존 메타데이터를 계속 사용해야 합니다.
  
-## <a id="masterdatabasename"></a> master 데이터베이스 파일의 이름 변경
+## <a name="change-the-name-of-master-database-files"></a><a id="masterdatabasename"></a> master 데이터베이스 파일의 이름 변경
 
 **filelocation.masterdatafile** 및 **filelocation.masterlogfile** 설정은 SQL Server 엔진이 master 데이터베이스 파일을 검색하는 위치를 변경합니다. 또한 master 데이터베이스 및 로그 파일의 이름을 변경하는 데 이 설정을 사용할 수 있습니다. 
 
@@ -273,7 +273,7 @@ ms.locfileid: "79286917"
    sudo systemctl start mssql-server
    ```
 
-## <a id="dumpdir"></a> 기본 덤프 디렉터리 위치 변경
+## <a name="change-the-default-dump-directory-location"></a><a id="dumpdir"></a> 기본 덤프 디렉터리 위치 변경
 
 **filelocation.defaultdumpdir** 설정은 크래시가 발생할 때마다 메모리 및 SQL 덤프가 생성되는 기본 위치를 변경합니다. 기본적으로 이 파일은 /var/opt/mssql/log에 생성됩니다.
 
@@ -304,7 +304,7 @@ ms.locfileid: "79286917"
    sudo systemctl restart mssql-server
    ```
 
-## <a id="errorlogdir"></a> 기본 오류 로그 파일 디렉터리 위치 변경
+## <a name="change-the-default-error-log-file-directory-location"></a><a id="errorlogdir"></a> 기본 오류 로그 파일 디렉터리 위치 변경
 
 **filelocation.errorlogfile** 설정은 새 오류 로그, 기본 프로파일러 추적, 시스템 상태 세션 XE 및 Hekaton 세션 XE 파일이 생성되는 위치를 변경합니다. 기본적으로 이 위치는 /var/opt/mssql/log입니다. SQL 오류 로그 파일이 설정된 디렉터리는 다른 로그의 기본 로그 디렉터리가 됩니다.
 
@@ -336,7 +336,7 @@ ms.locfileid: "79286917"
    ```
 
 
-## <a id="backupdir"></a> 기본 백업 디렉터리 위치 변경
+## <a name="change-the-default-backup-directory-location"></a><a id="backupdir"></a> 기본 백업 디렉터리 위치 변경
 
 **filelocation.defaultbackupdir** 설정은 백업 파일이 생성되는 기본 위치를 변경합니다. 기본적으로 이 파일은 /var/opt/mssql/data에 생성됩니다.
 
@@ -367,7 +367,7 @@ ms.locfileid: "79286917"
    sudo systemctl restart mssql-server
    ```
 
-## <a id="coredump"></a> 코어 덤프 설정 지정
+## <a name="specify-core-dump-settings"></a><a id="coredump"></a> 코어 덤프 설정 지정
 
 SQL Server 프로세스 중 하나에서 예외가 발생하면 SQL Server는 메모리 덤프를 만듭니다.
 
@@ -400,14 +400,14 @@ SQL Server가 수집하는 메모리 덤프 유형을 제어하는 두 가지 �
     | **filtered** | Filtered는 별도로 제외하는 경우가 아니면 프로세스의 모든 메모리가 포함되는 빼기 기반 디자인을 사용합니다. 이 디자인은 덤프에서 특정 영역을 제외하고 SQLPAL 및 호스트 환경의 내부를 이해합니다.
     | **full** | Full은 **/proc/$pid/maps**에 있는 모든 영역을 포함하는 전체 프로세스 덤프입니다. **coredump.captureminiandfull** 설정을 통해 제어되지 않습니다. |
 
-## <a id="dbmail"></a> SQL Server on Linux의 기본 데이터베이스 메일 프로필 설정
+## <a name="set-the-default-database-mail-profile-for-sql-server-on-linux"></a><a id="dbmail"></a> SQL Server on Linux의 기본 데이터베이스 메일 프로필 설정
 
 **sqlpagent.databasemailprofile**을 사용하여 메일 경고의 기본 DB 메일 프로필을 설정할 수 있습니다.
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
 ```
-## <a id="hadr"></a> 고가용성
+## <a name="high-availability"></a><a id="hadr"></a> 고가용성
 
 **hadr.hadrenabled** 옵션은 SQL Server 인스턴스에서 가용성 그룹을 사용하도록 설정합니다. 다음 명령은 **hadr.hadrenabled**를 1로 설정하여 가용성 그룹을 사용하도록 설정합니다. 설정을 적용하려면 SQL Server를 다시 시작해야 합니다.
 
@@ -422,7 +422,7 @@ sudo systemctl restart mssql-server
 - [SQL Server on Linux에 대해 읽기 확장 가용성 그룹 구성](sql-server-linux-availability-group-configure-rs.md)
 
 
-## <a id="localaudit"></a> 로컬 감사 디렉터리 설정
+## <a name="set-local-audit-directory"></a><a id="localaudit"></a> 로컬 감사 디렉터리 설정
 
 **telemetry.userrequestedlocalauditdirectory** 설정은 로컬 감사를 사용하도록 설정하며 이를 통해 로컬 감사 로그가 생성되는 디렉터리를 설정할 수 있습니다.
 
@@ -453,7 +453,7 @@ sudo systemctl restart mssql-server
 
 자세한 내용은 [SQL Server on Linux에 대한 고객 의견](sql-server-linux-customer-feedback.md)을 참조하세요.
 
-## <a id="lcid"></a> SQL Server 로캘 변경
+## <a name="change-the-sql-server-locale"></a><a id="lcid"></a> SQL Server 로캘 변경
 
 **language.lcid** 설정은 SQL Server 로캘을 지원되는 언어 식별자(LCID)로 변경합니다. 
 
@@ -469,7 +469,7 @@ sudo systemctl restart mssql-server
    sudo systemctl restart mssql-server
    ```
 
-## <a id="memorylimit"></a> 메모리 제한 설정
+## <a name="set-the-memory-limit"></a><a id="memorylimit"></a> 메모리 제한 설정
 
 **memory.memorylimitmb** 설정은 SQL Server에 사용 가능한 실제 메모리 크기(MB)를 제어합니다. 기본값은 실제 메모리의 80%입니다.
 
@@ -487,7 +487,7 @@ sudo systemctl restart mssql-server
 
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="msdtc"></a> MSDTC 구성
+## <a name="configure-msdtc"></a><a id="msdtc"></a> MSDTC 구성
 
 **network.rpcport** 및 **distributedtransaction.servertcpport** 설정은 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성하는 데 사용됩니다. 이 설정을 변경하려면 다음 명령을 실행합니다.
 
@@ -530,7 +530,7 @@ MSDTC를 모니터링하고 문제 해결하는 데 사용할 수 있는 mssql-c
 ::: moniker-end
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="mlservices-eula"></a> MLServices EULA 동의
+## <a name="accept-mlservices-eulas"></a><a id="mlservices-eula"></a> MLServices EULA 동의
 
 데이터베이스 엔진에 [기계 학습 R 또는 Python 패키지](sql-server-linux-setup-machine-learning.md)를 추가하려면 R 및 Python의 오픈 소스 배포에 대한 사용 조건에 동의해야 합니다. 다음 표에서는 mlservices EULA에 관련된 사용 가능한 모든 명령 또는 옵션을 열거합니다. 동일한 EULA 매개 변수는 설치된 항목에 따라 R 및 Python에 사용됩니다.
 
@@ -560,7 +560,7 @@ accepteulaml = Y
 :::moniker-end
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="mlservices-outbound-access"></a> 아웃바운드 네트워크 액세스 사용
+## <a name="enable-outbound-network-access"></a><a id="mlservices-outbound-access"></a> 아웃바운드 네트워크 액세스 사용
 
 [SQL Server Machine Learning Services](sql-server-linux-setup-machine-learning.md) 기능에서 R, Python 및 Java 확장에 대한 아웃바운드 네트워크 액세스는 기본적으로 사용하지 않도록 설정됩니다. 아웃바운드 요청을 사용하도록 설정하려면 mssql-conf를 사용하여 “outboundnetworkaccess” 부울 속성을 설정합니다.
 
@@ -587,7 +587,7 @@ outboundnetworkaccess = 1
 ```
 :::moniker-end
 
-## <a id="tcpport"></a> TCP 포트 변경
+## <a name="change-the-tcp-port"></a><a id="tcpport"></a> TCP 포트 변경
 
 **network.tcpport** 설정은 SQL Server가 연결을 수신 대기하는 TCP 포트를 변경합니다. 기본적으로 이 포트는 1433으로 설정됩니다. 포트를 변경하려면 다음 명령을 실행합니다.
 
@@ -609,7 +609,7 @@ outboundnetworkaccess = 1
    sqlcmd -S localhost,<new_tcp_port> -U test -P test
    ```
 
-## <a id="tls"></a> TLS 설정 지정
+## <a name="specify-tls-settings"></a><a id="tls"></a> TLS 설정 지정
 
 다음 옵션은 Linux에서 실행되는 SQL Server 인스턴스에 대해 TLS를 구성합니다.
 
@@ -624,7 +624,7 @@ outboundnetworkaccess = 1
 
 TLS 설정 사용에 대한 예제는 [SQL Server on Linux에 대한 연결 암호화](sql-server-linux-encrypted-connections.md)를 참조하세요.
 
-## <a id="traceflags"></a> 추적 플래그 사용/사용 안 함
+## <a name="enabledisable-traceflags"></a><a id="traceflags"></a> 추적 플래그 사용/사용 안 함
 
 이 **추적 플래그** 옵션은 SQL Server 서비스를 시작하기 위해 추적 플래그를 사용하거나 사용하지 않도록 설정합니다. 추적 플래그를 사용하거나 사용하지 않도록 설정하려면 다음 명령을 사용합니다.
 
@@ -679,7 +679,7 @@ sudo cat /var/opt/mssql/mssql.conf
 이 파일에 표시되지 않는 모든 설정은 해당 기본값을 사용합니다. 다음 섹션에서는 샘플 **mssql.conf** 파일을 제공합니다.
 
 
-## <a id="mssql-conf-format"></a> mssql.conf 형식
+## <a name="mssqlconf-format"></a><a id="mssql-conf-format"></a> mssql.conf 형식
 
 다음 **/var/opt/mssql/mssql.conf** 파일은 각 설정에 대한 예제를 제공합니다. 이 형식을 사용하여 필요에 따라 **mssql.conf** 파일을 수동으로 변경할 수 있습니다. 수동으로 파일을 변경하는 경우 변경 내용이 적용되기 전에 SQL Server를 다시 시작해야 합니다. Docker와 함께 **mssql.conf** 파일을 사용하려면 Docker가 [데이터를 유지](sql-server-linux-configure-docker.md)하도록 해야 합니다. 먼저 호스트 디렉터리에 전체 **mssql.conf** 파일을 추가한 후 컨테이너를 실행합니다. [고객 의견](sql-server-linux-customer-feedback.md)에 이에 대한 예제가 있습니다.
 

@@ -9,12 +9,11 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-feedback_product_url: https://feedback.azure.com/forums/927307-sql-server-big-data-clusters/
-ms.openlocfilehash: 69281b0708b2603f232481a5661da111d1b0aae9
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: c751992e666151752783e9813efa2f696fcdcb6e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77903780"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]란 무엇인가요?
@@ -78,7 +77,7 @@ SQL Server 빅 데이터 클러스터에는 확장 가능한 HDFS *스토리지 
 - Jupyter 호환 Notebook을 만들고 열고 실행하는 기능
 - 외부 데이터 원본 만들기를 간소화하기 위한 데이터 가상화 마법사(**데이터 가상화 확장**에 의해 사용하도록 설정됨).
 
-## <a id="architecture"></a> 아키텍처
+## <a name="architecture"></a><a id="architecture"></a> 아키텍처
 
 SQL Server 빅 데이터 클러스터는 [Kubernetes](https://kubernetes.io/docs/concepts/)에서 오케스트레이션되는 Linux 컨테이너의 클러스터입니다.
 
@@ -101,15 +100,15 @@ Kubernetes는 컨테이너 배포를 필요에 따라 확장할 수 있는 오�
 
 ![아키텍처 개요](media/big-data-cluster-overview/architecture-diagram-overview.png)
 
-### <a id="controlplane"></a> 컨트롤러
+### <a name="controller"></a><a id="controlplane"></a> 컨트롤러
 
 컨트롤러는 클러스터에 대한 관리 및 보안을 제공합니다. 여기에는 컨트롤 서비스, 구성 저장소 및 기타 클러스터 수준 서비스(예: Kibana, Grafana, 탄력적 검색)가 포함됩니다.
 
-### <a id="computeplane"></a> 컴퓨팅 풀
+### <a name="compute-pool"></a><a id="computeplane"></a> 컴퓨팅 풀
 
 컴퓨팅 풀은 클러스터에 컴퓨팅 리소스를 제공합니다. 여기에는 SQL Server on Linux pod를 실행하는 노드가 포함됩니다. 컴퓨팅 풀의 pod는 특정 처리 작업을 위한 *SQL 컴퓨팅 인스턴스*로 나뉩니다. 
 
-### <a id="dataplane"></a> 데이터 풀
+### <a name="data-pool"></a><a id="dataplane"></a> 데이터 풀
 
 데이터 풀은 데이터 지속성 및 캐싱에 사용됩니다. 데이터 풀은 Linux에서 SQL Server를 실행하는 하나 이상의 pod로 구성됩니다. SQL 쿼리 또는 Spark 작업에서 데이터를 수집하는 데 사용됩니다. SQL Server 빅 데이터 클러스터 데이터 마트는 데이터 풀에 유지됩니다. 
 

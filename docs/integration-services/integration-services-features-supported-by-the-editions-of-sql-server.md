@@ -11,10 +11,10 @@ ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9963f137470c7e252bc00be189c37ac98e6374e4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71284355"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server 버전에서 지원하는 Integration Services 기능
@@ -37,7 +37,7 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
     
 > [![평가 센터에서 다운로드](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[평가 센터에서 SQL Server 2016 다운로드](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
     
-## <a name="ISNew"></a>SQL Server 2017의 새로운 Integration Services 기능
+## <a name="new-integration-services-features-in-sql-server-2017"></a><a name="ISNew"></a>SQL Server 2017의 새로운 Integration Services 기능
   
 |기능|Enterprise|Standard|웹|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -49,13 +49,13 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
 
 <sup>2</sup> 이 기능은 SQL Server 2016 서비스 팩 1에서도 지원됩니다.
 
-## <a name="IEWiz"></a> SQL Server 가져오기 및 내보내기 마법사
+## <a name="sql-server-import-and-export-wizard"></a><a name="IEWiz"></a> SQL Server 가져오기 및 내보내기 마법사
 
 |기능|Enterprise|Standard|웹|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |SQL Server 가져오기 및 내보내기 마법사|yes|yes|yes|yes|yes|  
 
-## <a name="IS"></a> Integration Services  
+## <a name="integration-services"></a><a name="IS"></a> Integration Services  
   
 |기능|Enterprise|Standard|웹|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -66,7 +66,7 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
 |Hadoop/HDFS 커넥터 및 태스크|yes|yes||||  
 |기본 데이터 프로파일링 도구|yes|yes|||| 
 
-## <a name="ISAA"></a> Integration Services - 고급 원본 및 대상  
+## <a name="integration-services---advanced-sources-and-destinations"></a><a name="ISAA"></a> Integration Services - 고급 원본 및 대상  
   
 |기능|Enterprise|Standard|웹|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -77,7 +77,7 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
 |차원 처리 대상|yes|||||  
 |파티션 처리 대상|yes|||||  
   
-## <a name="ISAT"></a> Integration Services - 고급 작업 및 변환  
+## <a name="integration-services---advanced-tasks-and-transformations"></a><a name="ISAT"></a> Integration Services - 고급 작업 및 변환  
   
 |기능|Enterprise|Standard|웹|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  

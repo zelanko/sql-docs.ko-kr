@@ -10,10 +10,10 @@ ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 24afa6ec8daa26730ad202d1aad612ba01213bb4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082513"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>보고서 서버의 웹 포털(SSRS 기본 모드)

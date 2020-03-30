@@ -9,10 +9,10 @@ ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4822b70912e847a2cc03a951468171d76ae63597
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081393"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 목록 연결 형식(SSRS)
@@ -23,14 +23,14 @@ Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microso
 
 이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)을 참조하세요.  
 
-##  <a name="Connection"></a> 연결 문자열  
+##  <a name="connection-string"></a><a name="Connection"></a> 연결 문자열  
  SharePoint 목록에 대한 연결 문자열은 SharePoint 사이트 또는 하위 사이트에 대한 URL입니다(예: `https://MySharePointWeb/MySharePointSite` 또는 `https://MySharePointWeb/MySharePointSite/Subsite`).  
   
  쿼리 디자이너는 사용자가 액세스할 수 있는 권한이 있는 SharePoint 목록을 자동으로 표시합니다.  
   
  연결 문자열 예제는 [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)를 참조하세요.  
   
-##  <a name="Credentials"></a> 자격 증명  
+##  <a name="credentials"></a><a name="Credentials"></a> 자격 증명  
  쿼리를 실행하거나 보고서를 로컬로 미리 보거나 보고서 서버의 보고서를 미리 보려면 자격 증명이 필요합니다. 보고서를 게시한 후 보고서를 보고서 서버에서 실행할 때 데이터를 검색할 수 있는 권한이 유효하도록 데이터 원본에 대한 자격 증명을 변경해야 할 수도 있습니다. 이 데이터 확장 프로그램과 함께 사용할 수 있는 자격 증명의 유형은 데이터 원본으로 사용 중인 SharePoint 목록에 대한 SharePoint 기술 구성에 따라 다릅니다.  
   
  다음 표에서는 로컬 팜 SharePoint 목록 및 원격 SharePoint 목록에 연결할 때 SharePoint 목록 확장에 대한 자격 증명 검색 동작을 보여 줍니다.  
@@ -41,10 +41,10 @@ Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microso
   
 ||지원되는 자격 증명|클래식 모드 Windows 인증|*클레임 인증|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
-|로컬 팜 SharePoint 팜 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|yes|yes|  
-||저장됨, 프롬프트, 없음(Windows 자격 증명 사용)<br /><br /> Windows 자격 증명이 아닌 다른 자격 증명이 포함된 저장된 자격 증명 및 프롬프트 자격 증명은 지원되지 않습니다.|yes|예|  
-|원격 SharePoint 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|yes|예<br /><br /> 폼 기반 인증 및 클레임 인증은 원격 SharePoint 목록에 지원되지 않습니다.|  
-||저장됨, 프롬프트, 없음(Windows 자격 증명 사용)<br /><br /> Windows 자격 증명이 아닌 다른 자격 증명이 포함된 저장된 자격 증명 및 프롬프트 자격 증명은 지원되지 않습니다.|yes|예<br /><br /> 폼 기반 인증 및 클레임 인증은 원격 SharePoint 목록에 지원되지 않습니다.|  
+|로컬 팜 SharePoint 팜 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|예|예|  
+||저장됨, 프롬프트, 없음(Windows 자격 증명 사용)<br /><br /> Windows 자격 증명이 아닌 다른 자격 증명이 포함된 저장된 자격 증명 및 프롬프트 자격 증명은 지원되지 않습니다.|예|예|  
+|원격 SharePoint 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|예|예<br /><br /> 폼 기반 인증 및 클레임 인증은 원격 SharePoint 목록에 지원되지 않습니다.|  
+||저장됨, 프롬프트, 없음(Windows 자격 증명 사용)<br /><br /> Windows 자격 증명이 아닌 다른 자격 증명이 포함된 저장된 자격 증명 및 프롬프트 자격 증명은 지원되지 않습니다.|예|예<br /><br /> 폼 기반 인증 및 클레임 인증은 원격 SharePoint 목록에 지원되지 않습니다.|  
   
  *Windows 인증, FBA(폼 기반 인증), SAML(Secure Application Markup Language) 토큰, 기타 ID 공급자 또는 위에 명시된 인증 공급자 중 둘 이상의 조합입니다.  
   
@@ -52,9 +52,9 @@ Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microso
   
 ||지원되는 자격 증명|클래식 모드 Windows 인증|*클레임 인증|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
-|로컬 팜 SharePoint 팜 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|yes|yes|  
+|로컬 팜 SharePoint 팜 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|예|예|  
 ||저장됨, 프롬프트, 없음(Windows 자격 증명 사용)<br /><br /> Windows 자격 증명이 아닌 다른 자격 증명이 포함된 저장된 자격 증명 및 프롬프트 자격 증명은 지원되지 않습니다.|예|예|  
-|원격 SharePoint 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|yes|예<br /><br /> 폼 기반 인증 및 클레임 인증은 원격 SharePoint 목록에 지원되지 않습니다.|  
+|원격 SharePoint 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|예|예<br /><br /> 폼 기반 인증 및 클레임 인증은 원격 SharePoint 목록에 지원되지 않습니다.|  
 ||저장됨, 프롬프트, 없음(Windows 자격 증명 사용)<br /><br /> Windows 자격 증명이 아닌 다른 자격 증명이 포함된 저장된 자격 증명 및 프롬프트 자격 증명은 지원되지 않습니다.|예|예<br /><br /> 폼 기반 인증 및 클레임 인증은 원격 SharePoint 목록에 지원되지 않습니다.|  
   
  *Windows 인증, FBA(폼 기반 인증), SAML(Secure Application Markup Language) 토큰, 기타 ID 공급자 또는 위에 명시된 인증 공급자 중 둘 이상의 조합입니다.  
@@ -73,7 +73,7 @@ Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microso
   
  자세한 내용은 [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](specify-credential-and-connection-information-for-report-data-sources.md) 및 [Reporting Services에서 지원되는 데이터 원본&#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)을 참조하세요.  
   
-##  <a name="Query"></a> 쿼리  
+##  <a name="queries"></a><a name="Query"></a> 쿼리  
  쿼리를 디자인하려면 데이터 원본을 기준으로 새 데이터 세트를 만든 다음, 연결된 쿼리 디자이너를 엽니다. 자세한 내용은 [공유 데이터 세트 또는 포함된 데이터 세트 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)을 참조하세요.  
   
  SharePoint 목록 그래픽 쿼리 디자이너에는 4개의 창이 표시됩니다.  
@@ -151,10 +151,10 @@ Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microso
   
  Tasks 목록의 모든 필드가 쿼리 결과에 반환됩니다.  
   
-##  <a name="Parameters"></a> 매개 변수  
+##  <a name="parameters"></a><a name="Parameters"></a> 매개 변수  
  이 데이터 확장 프로그램은 매개 변수를 지원하지 않습니다.  
   
-##  <a name="HowTo"></a> 방법 도움말 항목  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 방법 도움말 항목  
  이 섹션에서는 데이터 연결, 데이터 원본 및 데이터 세트를 사용하는 방법을 단계별로 설명합니다.  
   
  [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -163,7 +163,7 @@ Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microso
   
  [데이터 세트에 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
-##  <a name="Related"></a> 관련 단원  
+##  <a name="related-sections"></a><a name="Related"></a> 관련 단원  
  설명서의 다음 섹션에서는 보고서 데이터에 대한 깊이 있는 개념 정보를 제공하며, 데이터와 관련된 보고서 부분을 정의, 사용자 지정 및 사용하는 방법을 절차적인 측면에서 소개합니다.  
   
  [보고서 데이터 세트&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  

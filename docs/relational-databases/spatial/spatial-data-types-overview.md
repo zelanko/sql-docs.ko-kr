@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048525"
 ---
 # <a name="spatial-data-types-overview"></a>공간 데이터 형식 개요
@@ -28,7 +28,7 @@ ms.locfileid: "68048525"
 공간 데이터 형식은 두 가지가 있습니다. **geometry** 데이터 형식은 평면, 즉 유클리드(평평한 표면) 데이터를 지원합니다. **geometry** 데이터 형식은 OGC(Open Geospatial Consortium)의 Simple Features for SQL Specification 버전 1.1.0을 따르며 SQL MM(ISO 표준) 규격을 준수합니다.
 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 GPS 위도 및 경도 좌표 등의 타원(둥근 표면) 데이터를 저장하는 **geography** 데이터 형식을 지원합니다.
 
-##  <a name="objects"></a> 공간 데이터 개체  
+##  <a name="spatial-data-objects"></a><a name="objects"></a> 공간 데이터 개체  
 **geometry** 및 **geography** 데이터 형식은 16개의 공간 데이터 개체 또는 인스턴스 유형을 지원합니다. 그러나 이러한 인스턴스 유형 중 11개만 *인스턴스화할 수 있고*데이터베이스에서 이러한 인스턴스를 만들고 작업(인스턴스화)할 수 있습니다. 이러한 인스턴스는 **Points**에서 이들을 **LineStrings, CircularStrings**, **CompoundCurves**, **Polygons**, **CurvePolygons** , **geometry** 로 구분하거나 여러 **geography** 또는 **GeometryCollection**인스턴스로 구분하는 부모 데이터 형식에서 특정 속성을 파생시킵니다. **Geography** 형식에는 **FullGlobe**라는 추가 인스턴스 유형이 있습니다.  
 
 아래 그림에서는 **geometry** 및 **geometry** 데이터 형식의 기반인 **geography** 계층을 보여 줍니다. **geometry** 및 **geography** 의 인스턴스화할 수 있는 형식은 파란색으로 표시되어 있습니다.  
@@ -53,7 +53,7 @@ geometry 및 geography 형식의 하위 형식은 단순 형식과 컬렉션 형
 -   [MultiPolygon](../../relational-databases/spatial/multipolygon.md)  
 -   [GeometryCollection](../../relational-databases/spatial/geometrycollection.md)  
 
-##  <a name="differences"></a> geometry 데이터 형식과 geography 데이터 형식의 차이점  
+##  <a name="differences-between-the-geometry-and-geography-data-types"></a><a name="differences"></a> geometry 데이터 형식과 geography 데이터 형식의 차이점  
 공간 데이터의 두 가지 형식은 종종 매우 비슷하게 작동하지만 데이터가 저장되고 조작되는 방식에서 몇 가지 주요 차이점이 있습니다.  
 
 ### <a name="how-connecting-edges-are-defined"></a>연결 가장자리가 정의되는 방식  
@@ -86,7 +86,7 @@ OGC 사양에 대한 자세한 내용은 다음을 참조하십시오.
 -   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
 -   [OGC Specifications, Simple Feature Access Part 2 - SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
-##  <a name="circular"></a> 원호 세그먼트  
+##  <a name="circular-arc-segments"></a><a name="circular"></a> 원호 세그먼트  
 인스턴스화할 수 있는 세 가지 형식인 **CircularString**, **CompoundCurve** 및 **CurvePolygon**을 사용할 수 있습니다.  원호 세그먼트는 2차원 평면에서 3개의 점으로 정의되며 세 번째 점은 첫 번째 점과 같을 수 없습니다.  
 
 그림 A와 B에서는 일반적인 원호 세그먼트를 보여 줍니다. 세 개의 각 점이 원의 둘레에 어떻게 놓이는지 확인하십시오.  
