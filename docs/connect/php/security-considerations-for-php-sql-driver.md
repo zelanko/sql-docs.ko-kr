@@ -13,10 +13,10 @@ ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1fecf1add70a7b3bd96484cbd3634db2cfda01cb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67992891"
 ---
 # <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server에 대한 보안 고려 사항
@@ -31,7 +31,7 @@ ms.locfileid: "67992891"
   
 -   **사용자가 중앙 집중식 계정 관리를 받습니다.** 암호 만료 기간, 최소 암호 길이 및 잘못된 로그온 요청이 여러 번 있을 경우 계정 잠금 등의 보안 정책을 강제로 적용합니다.  
   
-Windows 인증을 사용하여 서버에 연결하는 방법에 대한 자세한 내용은 [방법: Windows 인증을 사용하여 연결](../../connect/php/how-to-connect-using-windows-authentication.md)을 참조하세요.  
+Windows 인증을 사용하여 서버에 연결하는 방법에 대한 정보는 [방법: Windows 인증을 사용하여 연결](../../connect/php/how-to-connect-using-windows-authentication.md)을 참조하세요.  
   
 Windows 인증을 사용하여 연결할 때 SQL Server가 Kerberos 인증 프로토콜을 사용할 수 있도록 환경을 구성하는 것이 좋습니다. 자세한 내용은 [SQL Server 2005의 인스턴스에 대한 원격 연결을 만들 때 Kerberos 인증을 사용하고 있는지 확인하는 방법](https://support.microsoft.com/en-ca/help/909801/how-to-make-sure-that-you-are-using-kerberos-authentication-when-you-c) 또는 [Kerberos 인증 및 SQL Server](https://msdn.microsoft.com/library/cc280744.aspx)를 참조하세요.  
   
@@ -39,7 +39,7 @@ Windows 인증을 사용하여 연결할 때 SQL Server가 Kerberos 인증 프�
 중요한 데이터가 전송되거나 SQL Server에서 검색될 때마다 암호화된 연결을 사용해야 합니다. 암호화된 연결을 사용하도록 설정하는 방법에 대한 자세한 내용은 [데이터베이스 엔진에 암호화 연결을 사용하도록 설정하는 방법(SQL Server 구성 관리자)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요. [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 사용하여 보안 연결을 설정하려면 서버에 연결할 때 연결 암호화 특성을 사용합니다. 연결 특성에 대한 자세한 내용은 [Connection Options](../../connect/php/connection-options.md)을 참조하세요.  
   
 ## <a name="use-parameterized-queries"></a>매개 변수가 있는 쿼리 사용  
-매개 변수가 있는 쿼리를 사용하여 SQL 주입 공격의 위험을 줄일 수 있습니다. 매개 변수가 있는 쿼리 실행에 관한 예제를 보려면 [방법: 매개 변수가 있는 쿼리 수행](../../connect/php/how-to-perform-parameterized-queries.md)을 참조하세요.  
+매개 변수가 있는 쿼리를 사용하여 SQL 주입 공격의 위험을 줄일 수 있습니다. 매개 변수가 있는 쿼리를 실행하는 예제를 보려면 [How to: Perform Parameterized Queries](../../connect/php/how-to-perform-parameterized-queries.md)을 참조하세요.  
   
 SQL 삽입 공격 및 관련된 보안 고려 사항에 대한 자세한 내용은 [SQL 삽입](https://msdn.microsoft.com/library/ms161953.aspx)을 참조하세요.  
   

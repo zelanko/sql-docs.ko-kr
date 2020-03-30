@@ -1,5 +1,5 @@
 ---
-title: '1단계:  Node.js 개발을 위한 개발 환경 구성 | Microsoft Docs'
+title: '1단계: Node.js 개발을 위한 개발 환경 구성 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bce89cc12c7493522de55adffb69fcbe3307cbdf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68003763"
 ---
-# <a name="step-1--configure-development-environment-for-nodejs-development"></a>1단계:  Node.js 개발을 위한 개발 환경 구성
+# <a name="step-1--configure-development-environment-for-nodejs-development"></a>1단계: Node.js 개발을 위한 개발 환경 구성
 SQL Server의 Node.js 드라이버로 애플리케이션을 개발하려면 개발 환경을 필수 구성 요소로 구성해야 합니다.  가장 일반적인 방법은 npm(노드 패키지 관리자)으로 Tedious 모듈을 설치하는 것이지만, 원한다면 [Github](https://github.com/pekim/tedious)에서 Tedious 모듈을 직접 다운로드할 수도 있습니다.  
   
 Node.js 드라이버는 SQL Server와 Azure SQL Database에서 기본적으로 사용 설정되는 TDS 프로토콜을 사용합니다.  추가적인 서버 구성은 필요하지 않습니다.  

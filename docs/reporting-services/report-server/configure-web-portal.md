@@ -11,10 +11,10 @@ ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 962ab17170c69b6225f852f0b625a6cd50fa20d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63308397"
 ---
 # <a name="configure-the-web-portal"></a>웹 포털 구성
@@ -35,7 +35,7 @@ ms.locfileid: "63308397"
 
 웹 포털은 웹 브라우저에서 사용자가 액세스하는 웹 애플리케이션입니다. 적어도 브라우저 창에서 이 애플리케이션을 여는 데 사용되는 URL은 정의해야 합니다. URL은 호스트 이름, 포트 및 가상 디렉터리로 구성됩니다. 이 URL에 대한 기본값에는 보고서 서버 웹 서비스 URL에 대해 정의된 호스트 이름 및 포트 값과 **reports** 가상 디렉터리 이름이 포함됩니다. 명명된 인스턴스가 있을 경우 가상 디렉터리는 **reports_instance**입니다. 여기서 **instance** 는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스의 이름입니다.
 
-기본적으로 웹 포털 URL은 고유한 가상 디렉터리 이름과 동일 인스턴스에서 실행되는 보고서 서버 웹 서비스에 대해 정의된 포트 및 호스트 이름으로 구성됩니다. 대부분의 경우 호스트 이름은 보고서 서버 컴퓨터의 네트워크 이름이지만 이 컴퓨터를 식별하는 IP 주소나 호스트 헤더가 될 수도 있습니다. 웹 포털이 기본 URL을 사용하도록 구성하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구의 **웹 포털 URL** 페이지를 사용합니다.
+기본적으로 웹 포털 URL은 고유한 가상 디렉터리 이름과 동일 인스턴스에서 실행되는 보고서 서버 웹 서비스에 대해 정의된 포트 및 호스트 이름으로 구성됩니다. 대부분의 경우 호스트 이름은 보고서 서버 컴퓨터의 네트워크 이름이지만 이 컴퓨터를 식별하는 IP 주소나 호스트 헤더가 될 수도 있습니다. 웹 포털이 기본 URL을 사용하도록 구성하려면 **구성 도구의**웹 포털 URL[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 사용합니다.
 
 > [!TIP]
 > 원격 컴퓨터에서 웹 포털에 액세스할 때 브라우저에 연결 오류 메시지가 표시되는 경우 일반적으로 방화벽 설정이 원인입니다. 자세한 내용은 [보고서 서버 액세스를 위한 방화벽 구성](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)을 참조하세요.

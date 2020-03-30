@@ -16,10 +16,10 @@ ms.assetid: 8115ca58-8ae9-46ce-8515-7905d7bb25fe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22ba06688fb402fdbcd5e9afd951a668ef9c440d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983222"
 ---
 # <a name="getfetchsize-method-sqlserverstatement"></a>getFetchSize 메서드(SQLServerStatement)
@@ -35,7 +35,7 @@ public final int getFetchSize()
 ```  
   
 ## <a name="return-value"></a>Return Value  
- [setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverstatement.md) 메서드로 지정된 가져오기 크기를 나타내는 **int**입니다.  
+ **setFetchSize** 메서드로 지정된 가져오기 크기를 나타내는 [int](../../../connect/jdbc/reference/setfetchsize-method-sqlserverstatement.md)입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

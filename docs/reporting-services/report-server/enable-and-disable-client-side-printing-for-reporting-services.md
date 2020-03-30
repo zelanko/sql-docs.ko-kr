@@ -14,10 +14,10 @@ ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ae8d963b599191970497d841a6caa1f73fd920b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580348"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제
@@ -26,7 +26,7 @@ ms.locfileid: "65580348"
   
  이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 보고서 서버에서 클라이언트 컴퓨터에 다운로드해야 하는 ActiveX 컨트롤을 사용했습니다. 보고서 서버를 SQL Server 2016 이상으로 업그레이드하는 경우 인쇄 컨트롤이 보고서 서버 또는 클라이언트 컴퓨터에서 제거되지 않습니다.  
 
-##  <a name="bkmk_clientside_printexpereince"></a> 인쇄 환경  
+##  <a name="the-print-experience"></a><a name="bkmk_clientside_printexpereince"></a> 인쇄 환경  
  보고서 뷰어 도구 모음에서 인쇄 ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") 단추를 클릭할 때 환경은 클라이언트 컴퓨터에 설치된 .PDF 보기 애플리케이션 및 사용 중인 브라우저에 따라 달라집니다.   클라이언트 컴퓨터에 따라 PDF 파일을 다운로드하거나 대화 상자에서 인쇄 옵션을 구성하거나 두 가지를 모두 수행할 수 있습니다.  
   
  ![보고서 도구 모음](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "보고서 도구 모음")  
@@ -36,9 +36,9 @@ ms.locfileid: "65580348"
 |첫 번째 대화 상자는 모든 브라우저에 대해 동일하며 방향과 같은 기본적인 레이아웃 속성을 변경할 수 있습니다. **인쇄**를 클릭할 때 환경은 사용 중인 브라우저에 따라 약간 다릅니다.|![ssrs_pdfprint_chrome1](../../reporting-services/report-server/media/ssrs-pdfprint-chrome1.png "ssrs_pdfprint_chrome1")|  
 |Chrome에서는 자세한 브라우저 인쇄 대화 상자가 열립니다.   인쇄 구성을 변경하고, 인쇄하고, 운영 체제 인쇄 대화 상자를 열 수 있습니다.|![ssrs_pdfprint_chrome2](../../reporting-services/report-server/media/ssrs-pdfprint-chrome2.png "ssrs_pdfprint_chrome2") ![ssrs_pdfprint_chrome3.png](../../reporting-services/report-server/media/ssrs-pdfprint-chrome3-png.png "ssrs_pdfprint_chrome3.png")|  
 |PDF 판독기 애플리케이션이 설치된 경우 인쇄 버튼을 클릭하면 PDF 파일의 미리 보기 창이 열리며 해당 파일을 저장하거나 인쇄할 수 있습니다.||  
-|PDF 판독기 애플리케이션이 설치되지 않은 경우 두 가지 사용자 환경이 있습니다.<br /><br /> 보고서가 자동으로 렌더링되며 브라우저 다운로드 프로세스를 사용하여 PDF 파일을 다운로드합니다.   **참고:** 보고서가 복잡할수록 **인쇄**를 클릭한 후 브라우저 다운로드 알림이 표시될 때까지 지연 시간이 더 길어집니다. 또한 **보고서의 PDF를 보려면 여기를 클릭하세요.** 를 클릭하여 다운로드를 강제로 다시 실행할 수 있습니다.<br /><br /> **보고서의 PDF를 보려면 여기를 클릭하세요.** 를 클릭하여 PDF 다운로드를 강제로 다시 실행합니다.|![ssrs_pdfprint_firefox2](../../reporting-services/report-server/media/ssrs-pdfprint-firefox2.png "ssrs_pdfprint_firefox2")|  
+|PDF 판독기 애플리케이션이 설치되지 않은 경우 두 가지 사용자 환경이 있습니다.<br /><br /> 보고서가 자동으로 렌더링되며 브라우저 다운로드 프로세스를 사용하여 PDF 파일을 다운로드합니다.   **참고:** 보고서가 복잡할수록 **인쇄** 를 클릭한 후 브라우저 다운로드 알림이 표시될 때까지 지연 시간이 더 길어집니다. 또한 **보고서의 PDF를 보려면 여기를 클릭하세요.** 를 클릭하여 다운로드를 강제로 다시 실행할 수 있습니다.<br /><br /> **보고서의 PDF를 보려면 여기를 클릭하세요.** 를 클릭하여 PDF 다운로드를 강제로 다시 실행합니다.|![ssrs_pdfprint_firefox2](../../reporting-services/report-server/media/ssrs-pdfprint-firefox2.png "ssrs_pdfprint_firefox2")|  
   
-##  <a name="bkmk_troubleshoot_clientsideprinting"></a> 클라이언트 쪽 인쇄 문제 해결  
+##  <a name="troubleshoot-client-side-printing"></a><a name="bkmk_troubleshoot_clientsideprinting"></a> 클라이언트 쪽 인쇄 문제 해결  
  보고서 뷰어 도구 모음의 인쇄 버튼이 비활성화된 경우 다음을 확인합니다.  
   
 -   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 보고서 서버에 대한 클라이언트 쪽 인쇄 기능이 비활성화되었습니다. 이 항목에서  [클라이언트 쪽 인쇄 사용 및 사용 안 함](#bkmk_enable) 섹션을 참조하세요.  
@@ -49,7 +49,7 @@ ms.locfileid: "65580348"
   
      ![ssrs_html5_switch2html5](../../reporting-services/report-server/media/ssrs-html5-switch2html5.png "ssrs_html5_switch2html5")  
   
-##  <a name="bkmk_enable"></a> 클라이언트 쪽 인쇄 사용 및 사용 안 함  
+##  <a name="enable-and-disable-client-side-printing"></a><a name="bkmk_enable"></a> 클라이언트 쪽 인쇄 사용 및 사용 안 함  
  보고서 서버 관리자는 보고서 서버 시스템 속성인 **EnableClientPrinting** 을 **false**로 설정하여 원격 인쇄 기능을 해제할 수 있습니다. 이렇게 하면 해당 서버에서 관리하는 모든 보고서에 대한 클라이언트 쪽 인쇄 기능이 해제됩니다. 기본적으로 **EnableClientPrinting** 은 **true**로 설정되어 있습니다. 다음과 같은 방법으로 클라이언트 쪽 인쇄 기능을 해제할 수 있습니다.  
   
 -   **기본 모드 보고서 서버**:  

@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 72ce7fa29adfb349fab8c9e60872740c94484108
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994388"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort(OLE DB)
@@ -46,7 +46,7 @@ HRESULT Abort(void);
  **ISSAbort::Abort**가 S_OK를 반환한 후에는 연결된 **IMultipleResults** 인터페이스가 사용할 수 없는 상태로 전환되어 해제될 때까지 모든 메서드 호출(**IUnknown** 인터페이스로 정의된 메서드는 제외)에 대해 DB_E_CANCELED를 반환합니다. **Abort**를 호출하기 전에 **IMultipleResults**에서 **IRowset**을 가져온 경우에도 **ISSAbort::Abort** 호출 후 인터페이스가 사용할 수 없는 상태로 전환되어 해제될 때까지 모든 메서드 호출(**IUnknown** 인터페이스 및 **IRowset::ReleaseRows**로 정의된 메서드는 제외)에 대해 DB_E_CANCELED를 반환합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터는 서버 XACT_ABORT 상태가 ON일 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결되어 있을 때 **ISSAbort::Abort**를 실행하면 현재의 암시적 또는 명시적 트랜잭션이 종료되고 롤백됩니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 현재 트랜잭션이 중단되지 않습니다.  
+>  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터는 서버 XACT_ABORT 상태가 ON일 경우 **에 연결되어 있을 때** ISSAbort::Abort[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 실행하면 현재의 암시적 또는 명시적 트랜잭션이 종료되고 롤백됩니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 현재 트랜잭션이 중단되지 않습니다.  
   
 ## <a name="arguments"></a>인수  
  없음  

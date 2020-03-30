@@ -18,10 +18,10 @@ ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ff907d83a4d793169872d5abaa059e8b6a1d91b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65572744"
 ---
 # <a name="graphical-query-designer-user-interface"></a>그래픽 쿼리 디자이너 사용자 인터페이스
@@ -30,11 +30,11 @@ ms.locfileid: "65572744"
  .  
   
 ## <a name="graphical-query-designer"></a>그래픽 쿼리 디자이너  
- 이 그래픽 쿼리 디자이너는 3가지 유형의 쿼리 명령인 **Text**, **StoredProcedure** 또는 **TableDirect**를 지원합니다. 데이터 세트에 대한 쿼리를 만들기 전에 [데이터 세트 속성](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) 대화 상자의 쿼리 페이지에서 명령 유형 옵션을 선택해야 합니다.  
+ 이 그래픽 쿼리 디자이너에서 지원하는 쿼리 명령에는 **Text**, **StoredProcedure**또는 **TableDirect**의 세 가지 유형이 있습니다. 데이터 세트에 대한 쿼리를 만들기 전에 [데이터 세트 속성](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) 대화 상자의 쿼리 페이지에서 명령 유형 옵션을 선택해야 합니다.  
   
  쿼리 유형에 사용할 수 있는 옵션은 다음과 같습니다.  
   
--   **Text**에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Oracle용 데이터 처리 확장 프로그램을 비롯한 관계형 데이터베이스 데이터 원본의 표준 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 텍스트를 지원합니다.  
+-   **Text**에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 및 Oracle용 데이터 처리 확장 프로그램을 비롯한 관계형 데이터베이스 데이터 원본의 표준 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 텍스트를 지원합니다.  
   
 -   **TableDirect** 지정한 테이블에서 모든 열을 선택합니다. 예를 들어 Customers라는 테이블에 대해 이는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 `SELECT * FROM Customers`와 같습니다.  
   

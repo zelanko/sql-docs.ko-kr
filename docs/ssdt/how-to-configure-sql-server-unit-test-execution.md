@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: d01703ff133fb8bac0425fc283190042d8dfcd1f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241574"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>방법: SQL Server 단위 테스트 실행 구성
@@ -32,7 +32,7 @@ ms.locfileid: "75241574"
     > [!NOTE]  
     > 테스트는 솔루션 폴더에서 실행되지 않고 로컬 하드 디스크에 있는 별도의 폴더에서 실행됩니다. 테스트 배포의 여러 측면을 구성할 수 있지만 일반적으로 단위 테스트에 대해서는 이를 구성할 필요가 없습니다. 테스트 배포에 대한 자세한 내용은 [테스트 실행](https://msdn.microsoft.com/library/dd286680(VS.100).aspx)을 참조하세요.  
   
-## <a name="SpecifyConnectionStrings"></a>연결 문자열 지정  
+## <a name="specify-connection-strings"></a><a name="SpecifyConnectionStrings"></a>연결 문자열 지정  
   
 #### <a name="to-specify-database-connection-strings"></a>데이터베이스 연결 문자열 지정하려면  
   
@@ -54,7 +54,7 @@ ms.locfileid: "75241574"
   
 4.  테스트 프로젝트를 다시 빌드하여 구성 변경 내용을 적용합니다.  
   
-## <a name="DeployingDBSchema"></a>데이터베이스 스키마 배포  
+## <a name="deploy-a-database-schema"></a><a name="DeployingDBSchema"></a>데이터베이스 스키마 배포  
   
 #### <a name="to-deploy-to-a-database-the-schema-of-a-database-project"></a>데이터베이스 프로젝트의 스키마를 데이터베이스에 배포하려면  
   

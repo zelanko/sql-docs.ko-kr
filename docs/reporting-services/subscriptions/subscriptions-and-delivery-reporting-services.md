@@ -20,10 +20,10 @@ ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fd9288a630dd24dd8d79deef184cfc4c4fabcd9f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578041"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>구독 및 배달(Reporting Services)
@@ -71,7 +71,7 @@ ms.locfileid: "65578041"
   
 -   [PowerShell을 사용하여 Reporting Services 구독 소유자 변경, 나열 및 구독 실행](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   
-##  <a name="bkmk_subscription_scenarios"></a> 구독 및 배달 시나리오  
+##  <a name="subscription-and-delivery-scenarios"></a><a name="bkmk_subscription_scenarios"></a> 구독 및 배달 시나리오  
  각 구독에 대해 배달 옵션을 구성하고, 사용 가능한 옵션은 선택한 배달 확장 프로그램에 의해 결정됩니다. 배달 확장 프로그램은 여러 방식의 배포를 지원하는 모듈입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 여러 가지 배달 확장 프로그램이 포함되며 배달 확장 프로그램은 타사에서 제공할 수 있습니다.  
   
  개발자인 경우 추가 시나리오를 지원하기 위해 사용자 지정 배달 확장 프로그램을 만들 수 있습니다. 자세한 내용은 [Implementing a Delivery Extension](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)을 참조하세요.  
@@ -85,7 +85,7 @@ ms.locfileid: "65578041"
 |캐시 미리 로드|매개 변수가 있는 보고서 인스턴스가 여러 개 있거나 보고서를 볼 사람이 많은 경우 캐시에서 보고서를 미리 로드하여 보고서를 표시하기 위해 걸리는 처리 시간을 줄일 수 있습니다.|  
 |데이터 기반 보고서|데이터 기반 구독을 사용하여 런타임에 보고서 출력, 배달 옵션 및 보고서 매개 변수 설정을 사용자 지정합니다. 구독에서는 쿼리를 사용하여 런타임에 데이터 원본의 입력된 값을 가져옵니다. 데이터 기반 구독을 사용하여 구독 처리 시 결정되는 구독자 목록으로 보고서를 보낼 메일 병합 작업을 수행할 수 있습니다.|  
   
-##  <a name="bkmk_standard_and_datadriven"></a> 표준 및 데이터 기반 구독  
+##  <a name="standard-and-data-driven-subscriptions"></a><a name="bkmk_standard_and_datadriven"></a> 표준 및 데이터 기반 구독  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 두 가지 구독인 **표준** 과 **데이터 기반**구독을 지원합니다. 표준 구독은 개별 사용자가 만들어 관리합니다. 표준 구독은 구독 처리 시에 변경되지 않는 정적 값으로 구성됩니다. 각 표준 구독에는 보고서 표시 옵션, 배달 옵션 및 보고서 매개 변수 세트가 하나씩 있습니다.  
   
  데이터 기반 구독은 받는 사람, 보고서 매개 변수 또는 애플리케이션 형식을 지정하는 데 사용되는 값을 제공하는 외부 데이터 원본을 쿼리하여 런타임에 구독 정보를 가져옵니다. 받는 사람 목록이 아주 크거나 받는 사람마다 보고서 출력을 다르게 나타내려는 경우 데이터 기반 구독을 사용할 수 있습니다. 데이터 기반 구독을 사용하려면 쿼리 작성에 대한 전문 지식이 필요하며 매개 변수 사용 방법을 잘 알고 있어야 합니다. 일반적으로 보고서 서버 관리자가 이러한 구독을 만들고 관리합니다. 자세한 내용은  
@@ -94,7 +94,7 @@ ms.locfileid: "65578041"
   
 -   [데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
   
-##  <a name="bkmk_subscription_requirements"></a> 구독 요구 사항  
+##  <a name="subscription-requirements"></a><a name="bkmk_subscription_requirements"></a> 구독 요구 사항  
  보고서에 대한 구독을 만들려면 다음과 같은 사전 요구 사항을 충족해야 합니다.  
   
 |요구 사항|Description|  
@@ -105,7 +105,7 @@ ms.locfileid: "65578041"
 |모델 항목 보안 불가|모델에 모델 항목 보안 설정이 포함된 경우 모델을 데이터 원본으로 사용하는 보고서 작성기 보고서를 구독할 수 없습니다. 모델 항목 보안을 사용하는 보고서만 이러한 제한을 받습니다.|  
 |매개 변수 값|보고서에서 매개 변수를 사용하는 경우 보고서 자체 또는 정의된 구독에 매개 변수 값을 지정해야 합니다. 보고서에 기본값이 정의된 경우 기본값을 사용하도록 매개 변수 값을 설정할 수 있습니다.|  
   
-##  <a name="bkmk_delivery_extensions"></a> 배달 확장 프로그램  
+##  <a name="delivery-extensions"></a><a name="bkmk_delivery_extensions"></a> 배달 확장 프로그램  
  구독은 보고서 서버에서 처리되고 서버에 배포된 배달 확장 프로그램을 통해 배포됩니다. 기본적으로 공유 폴더 또는 전자 메일 주소로 보고서를 보내는 구독을 만들 수 있습니다. 보고서 서버가 SharePoint 통합 모드로 구성되어 있는 경우 보고서를 SharePoint 라이브러리로 보낼 수도 있습니다.  
   
  사용자는 구독을 만들 때 사용 가능한 배달 확장 프로그램 중 하나를 선택하여 보고서를 배달하는 방법을 결정할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 다음과 같은 배달 확장 프로그램이 포함되어 있습니다.  
@@ -120,7 +120,7 @@ ms.locfileid: "65578041"
 > [!NOTE]  
 >  보고서 배달은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 아키텍처의 확장 가능한 부분입니다. 타사 공급업체는 보고서를 다른 위치나 디바이스로 라우팅하는 사용자 지정 배달 확장 프로그램을 만들 수 있습니다. 사용자 지정 배달 확장 프로그램에 대한 자세한 내용은 [Implementing a Delivery Extension](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)을 참조하세요.  
   
-##  <a name="bkmk_parts_of_subscription"></a> 구독 요소  
+##  <a name="parts-of-a-subscription"></a><a name="bkmk_parts_of_subscription"></a> 구독 요소  
  구독 정의는 다음과 같은 요소로 구성됩니다.  
   
 -   무인 모드로 실행할 수 있는 보고서(저장된 자격 증명을 사용하거나 자격 증명을 사용하지 않는 보고서)에 대한 포인터  
@@ -139,7 +139,7 @@ ms.locfileid: "65578041"
   
  구독 정보는 보고서 서버 데이터베이스에 개별 보고서와 함께 저장됩니다. 구독을 연결된 보고서와 별도로 관리할 수는 없습니다. 설명, 다른 사용자 지정 텍스트 또는 기타 요소를 포함하도록 구독을 확장할 수 없습니다. 구독은 초기에 나열한 항목만 포함할 수 있습니다.  
   
-##  <a name="bkmk_subscription_processing"></a> 구독 처리 방법  
+##  <a name="how-subscriptions-are-processed"></a><a name="bkmk_subscription_processing"></a> 구독 처리 방법  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 보고서의 일정을 예약하고 보고서를 사용자에게 배달하는 기능을 제공하는 일정 예약 및 배달 프로세서가 포함되어 있습니다. 보고서 서버는 계속해서 이벤트를 모니터링하며 여기에 응답합니다. 구독에 대해 정의된 조건과 일치하는 이벤트가 발생하면 보고서 서버는 해당 구독을 읽고 보고서 처리 및 배달 방법을 결정합니다. 보고서 서버는 구독에 지정된 배달 확장 프로그램을 요청합니다. 배달 확장 프로그램이 실행되면 보고서 서버는 구독으로부터 배달 정보를 추출한 후 처리를 위해 배달 확장 프로그램에 전달합니다.  
   
  배달 확장 프로그램은 보고서를 구독에 정의된 형식으로 렌더링한 다음 보고서 또는 알림을 지정된 대상에 배달합니다. 보고서를 배달할 수 없으면 보고서 서버 로그 파일에 해당 항목이 기록됩니다. 다시 시도 작업을 지원하려면 첫 번째 시도가 실패할 경우 배달을 다시 시도하도록 보고서 서버를 구성할 수 있습니다.  
@@ -167,7 +167,7 @@ ms.locfileid: "65578041"
   
  스냅샷 업데이트 이벤트는 보고서 스냅샷의 예약된 업데이트를 사용하여 구독을 트리거합니다. 보고서에 설정된 보고서 실행 속성에 따라, 보고서가 새 데이터로 업데이트될 때마다 트리거되는 구독을 정의할 수 있습니다.  
   
-##  <a name="bkmk_code"></a> 구독의 프로그래밍 방식 제어  
+##  <a name="programmatic-control-of-subscriptions"></a><a name="bkmk_code"></a> 구독의 프로그래밍 방식 제어  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 개체 모델을 사용하면 프로그래밍 방식으로 구독 및 구독 처리를 감사하고 제어할 수 있습니다.  예를 들어 다음을 참조하고 시작하세요.  
   
 -   [PowerShell을 사용하여 Reporting Services 구독 소유자 변경, 나열 및 구독 실행](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
@@ -176,7 +176,7 @@ ms.locfileid: "65578041"
   
 -   <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
--   **파일 공유 계정**을 사용하도록 구성된 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 나열하는 예제 PowerShell 스크립트는 [구독 설정 및 파일 공유 계정&#40;구성 관리자&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)을 참조하세요.  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]파일 공유 계정**을 사용하도록 구성된 모든**  구독을 나열하는 예제 PowerShell 스크립트는 [구독 설정 및 파일 공유 계정&#40;구성 관리자&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   

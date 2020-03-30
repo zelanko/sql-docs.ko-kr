@@ -10,10 +10,10 @@ ms.reviewer: v-chojas
 ms.author: v-jizho2
 author: karinazhou
 ms.openlocfilehash: bf9b755176913ad144781c5be0ad53150aedcd1b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76911247"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN 및 연결 문자열 키워드 및 특성
@@ -22,7 +22,7 @@ ms.locfileid: "76911247"
 
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>지원되는 DSN/연결 문자열 키워드 및 연결 특성
 
-다음 표에는 각 플랫폼(L: Linux, M: Mac, W: Windows)에 사용할 수 있는 키워드 및 특성이 나열되어 있습니다. 자세한 내용을 보려면 키워드 또는 특성을 클릭하세요.
+다음 표에 각 플랫폼(L: Linux, M: Mac, W: Windows)에 사용할 수 있는 키워드 및 특성을 나열합니다. 자세한 내용을 보려면 키워드 또는 특성을 클릭하세요.
 
 | DSN/연결 문자열 키워드 | 연결 특성 | 플랫폼 |
 |-|-|-|
@@ -246,7 +246,7 @@ Always Encrypted용 키 저장소 공급자 라이브러리를 로드하거나 �
 
 ### <a name="sql_copt_ss_enlist_in_xa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
-XA 규정 준수 TP(트랜잭션 프로세서)에서 XA 트랜잭션을 사용하도록 설정하려면 애플리케이션에서 SQL_COPT_SS_ENLIST_IN_XA 및 `XACALLPARAM` 개체 포인터를 사용하여 **SQLSetConnectAttr**을 호출해야 합니다. 이 옵션은 Windows, Linux(17.3 이상) 및 Mac에서 지원됩니다.
+XA 규정 준수 TP(트랜잭션 프로세서)에서 XA 트랜잭션을 사용하도록 설정하려면 애플리케이션에서 SQL_COPT_SS_ENLIST_IN_XA 및 **개체 포인터를 사용하여**SQLSetConnectAttr`XACALLPARAM`을 호출해야 합니다. 이 옵션은 Windows, Linux(17.3 이상) 및 Mac에서 지원됩니다.
 ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
 ``` 

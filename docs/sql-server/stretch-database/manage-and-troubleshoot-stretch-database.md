@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 786ebc0529d9af47c34840e0e2cb11bf2a448fec
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285777"
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Stretch Database 관리 및 문제 해결
@@ -27,7 +27,7 @@ ms.locfileid: "79285777"
   Stretch Database를 관리하고 문제를 해결하려면 이 문서에서 설명하는 도구와 방법을 사용하세요.  
 ## <a name="manage-local-data"></a>로컬 데이터 관리  
   
-###  <a name="LocalInfo"></a> 스트레치 데이터베이스에 활성화된 로컬 데이터베이스 및 테이블에 대한 정보 얻기  
+###  <a name="get-info-about-local-databases-and-tables-enabled-for-stretch-database"></a><a name="LocalInfo"></a> 스트레치 데이터베이스에 활성화된 로컬 데이터베이스 및 테이블에 대한 정보 얻기  
  카탈로그 뷰 **sys.databases** 및 **sys.tables** 를 열어 스트레치가 활성화된 SQL Server 데이터베이스 및 테이블에 대한 정보를 참조하세요. 자세한 내용은 [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 및 [sys.tables&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)를 참조하세요.  
  
  SQL Server에서 스트레치가 활성화된 테이블을 사용하는 공간을 확인하려면 다음 문을 실행합니다.
@@ -44,17 +44,17 @@ GO
 ### <a name="check-the-filter-function-applied-to-a-table"></a>테이블에 적용된 필터 함수 확인  
  스트레치 데이터베이스에서 마이그레이션할 행을 선택하는 데 사용하는 함수를 식별하려면 **sys.remote_data_archive_tables** 카탈로그 뷰를 열고 **filter_predicate** 열의 값을 확인합니다. 값이 null이면 전체 테이블을 마이그레이션할 수 있습니다. 자세한 내용은 [sys.remote_data_archive_tables&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md) 및 [필터 함수를 사용하여 마이그레이션할 행 선택](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)을 참조하세요.  
   
-###  <a name="Migration"></a> 데이터 마이그레이션 상태를 확인합니다.  
- Stretch Database 모니터에서 데이터 마이그레이션을 모니터링하려면 SQL Server Management Studio에서 데이터베이스에 대한 **작업 | 스트레치 | 모니터**를 선택합니다. 자세한 내용은 [데이터 마이그레이션 모니터링 및 문제 해결&#40;스트레치 데이터베이스&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)를 참조하세요.  
+###  <a name="check-the-status-of-data-migration"></a><a name="Migration"></a> 데이터 마이그레이션 상태를 확인합니다.  
+ Stretch Database 모니터에서 데이터 마이그레이션을 모니터링하려면 SQL Server Management Studio 데이터베이스에 대해 **작업 | 스트레치 | 모니터**를 선택합니다. 자세한 내용은 [데이터 마이그레이션 모니터링 및 문제 해결&#40;스트레치 데이터베이스&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)를 참조하세요.  
   
  또는 마이그레이션된 데이터의 배치 및 행 수를 보려면 동적 관리 뷰 **sys.dm_db_rda_migration_status** 를 엽니다.  
   
-###  <a name="Firewall"></a> 데이터 마이그레이션 문제 해결  
+###  <a name="troubleshoot-data-migration"></a><a name="Firewall"></a> 데이터 마이그레이션 문제 해결  
  문제 해결 제안 사항에 대해서는 [데이터 마이그레이션 모니터링 및 문제 해결&#40;스트레치 데이터베이스&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)를 참조하세요.  
   
 ## <a name="manage-remote-data"></a>원격 데이터 관리  
   
-###  <a name="RemoteInfo"></a> 스트레치 데이터베이스에서 사용하는 원격 데이터베이스와 테이블에 대한 정보 얻기  
+###  <a name="get-info-about-remote-databases-and-tables-used-by-stretch-database"></a><a name="RemoteInfo"></a> 스트레치 데이터베이스에서 사용하는 원격 데이터베이스와 테이블에 대한 정보 얻기  
  마이그레이션된 데이터가 저장되는 원격 데이터베이스 및 테이블에 대한 정보를 보려면 카탈로그 뷰 **sys.remote_data_archive_databases** 및 **sys.remote_data_archive_tables** 를 엽니다. 자세한 내용은 [sys.remote_data_archive_databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md) 및 [sys.remote_data_archive_tables&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md)를 참조하세요.  
  
 Azure에서 스트레치가 활성화된 테이블을 사용하는 공간을 확인하려면 다음 문을 실행합니다.
@@ -103,7 +103,7 @@ Azure에 이미 마이그레이션된 데이터를 삭제하려는 경우 [sys.s
  ### <a name="change-the-scope-of-queries-for-all-queries-by-all-users"></a>모든 사용자의 모든 쿼리에 대한 쿼리 범위 변경  
  모든 사용자의 모든 쿼리의 범위를 변경하려면 저장 프로시저 **sys.sp_rda_set_query_mode**를 실행합니다. 로컬 데이터만 쿼리하는 범위를 줄이거나 모든 쿼리를 사용하지 않도록 설정하거나 기본 설정을 복원할 수 있습니다. 자세한 내용은 [sys.sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)를 참조하세요.  
    
- ### <a name="queryHints"></a>관리자의 단일 쿼리에 대한 쿼리 범위 변경  
+ ### <a name="change-the-scope-of-queries-for-a-single-query-by-an-administrator"></a><a name="queryHints"></a>관리자의 단일 쿼리에 대한 쿼리 범위 변경  
  db_owner 역할 멤버의 단일 쿼리 범위를 변경하려면 ***WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE =* value** ) 쿼리 힌트를 SELECT 문에 추가합니다. REMOTE_DATA_ARCHIVE_OVERRIDE 쿼리 힌트는 다음 값을 가질 수 있습니다.  
  -   **LOCAL_ONLY** 로컬 데이터만 쿼리합니다.  
    
@@ -120,7 +120,7 @@ SELECT * FROM <Stretch_enabled table name> WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = 
 GO
 ```  
    
- ## <a name="adminHints"></a>관리 업데이트 및 삭제 만들기  
+ ## <a name="make-administrative-updates-and-deletes"></a><a name="adminHints"></a>관리 업데이트 및 삭제 만들기  
  기본적으로 스트레치 사용 테이블에서 마이그레이션에 적합한 행 또는 이미 마이그레이션된 행을 업데이트 또는 삭제할 수 없습니다. 문제를 해결해야 할 경우 db_owner 역할의 멤버가 ***WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE =* value** ) 쿼리 힌트를 문에 추가하여 UPDATE 또는 DELETE 작업을 실행할 수 있습니다. REMOTE_DATA_ARCHIVE_OVERRIDE 쿼리 힌트는 다음 값을 가질 수 있습니다.  
  -   **LOCAL_ONLY** 로컬 데이터만 업데이트하거나 삭제합니다.  
    

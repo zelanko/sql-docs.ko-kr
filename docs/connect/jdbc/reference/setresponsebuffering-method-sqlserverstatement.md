@@ -16,10 +16,10 @@ ms.assetid: 9f489835-6cda-4c8c-b139-079639a169cf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a55f1d5695c2595b5ea721680fc77f88d13494ed
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67973114"
 ---
 # <a name="setresponsebuffering-method-sqlserverstatement"></a>setResponseBuffering 메서드(SQLServerStatement)
@@ -49,7 +49,7 @@ public final void setResponseBuffering(java.lang.String value)
   
  JDBC 드라이버 버전 2.0과 3.0에서는 adaptive가 기본값입니다. JDBC 드라이버 버전 2.0 이전에는 full이 기본값이었습니다.  
   
- [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 메서드를 사용하면 현재 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체에 대한 **responseBuffering** 연결 **String** 속성을 재정의할 수 있습니다. 응답 버퍼링 모드 사용에 대한 자세한 내용은 [적응 버퍼링 사용](../../../connect/jdbc/using-adaptive-buffering.md)을 참조하세요.  
+ [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 메서드를 사용하면 현재 **SQLServerStatement** 개체에 대한 **responseBuffering** 연결 [String](../../../connect/jdbc/reference/sqlserverstatement-class.md) 속성을 재정의할 수 있습니다. 응답 버퍼링 모드 사용에 대한 자세한 내용은 [적응 버퍼링 사용](../../../connect/jdbc/using-adaptive-buffering.md)을 참조하세요.  
   
  애플리케이션에서 [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 메서드에 잘못된 매개 변수 값을 지정할 경우 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)이 발생합니다.  
   

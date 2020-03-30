@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 12/16/2019
 ms.openlocfilehash: 96fe1480deed7dad420687b5b3b08a3ea8da2ffd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76516604"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-editions"></a>버전별로 지원되는 SQL Server Reporting Services 기능
@@ -27,7 +27,7 @@ ms.locfileid: "76516604"
  - [SQL Server Reporting Services(SSRS)의 새로운 기능](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
  - [SQL Server 버전에서 지원하는 기능](~/sql-server/editions-and-components-of-sql-server-version-15.md)
 
-##  <a name="SSRS"></a> SQL Server Reporting Services  
+##  <a name="sql-server-reporting-services"></a><a name="SSRS"></a> SQL Server Reporting Services  
 
 Evaluation 및 Developer 버전에서 지원하는 기능은 다음 표의 SQL Server Enterprise Edition 열을 참조하세요.
 
@@ -83,12 +83,12 @@ Evaluation 및 Developer 버전에서 지원하는 기능은 다음 표의 SQL S
 |Express with Advanced Services|Express with Advanced Services(로컬 전용)|  
 |평가|평가|  
   
-##  <a name="BIC"></a> 비즈니스 인텔리전스 클라이언트  
+##  <a name="business-intelligence-clients"></a><a name="BIC"></a> 비즈니스 인텔리전스 클라이언트  
 Microsoft 다운로드 센터에서 다음 소프트웨어 클라이언트 애플리케이션을 사용할 수 있습니다. 다음 애플리케이션을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 실행되는 비즈니스 인텔리전스 문서를 만들 수 있습니다. 이러한 문서를 서버 환경에서 호스트하려는 경우 해당 문서 유형을 지원하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 사용하세요. 다음 표에서는 이러한 클라이언트 애플리케이션에서 만든 문서를 호스팅하는 데 필요한 서버 기능이 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 보여 줍니다.  
   
 |도구 이름|Enterprise|Standard|웹|Express with Advanced Services|Developer|  
 |---------------|----------------|--------------|------------------------|-------------|---------------| 
-| Power BI Report Server에 최적화된 Power BI Desktop, **.pbix** | Yes, Software Assurance | | | | yes |
+| Power BI Report Server에 최적화된 Power BI Desktop, **.pbix** | yes, Software Assurance | | | | yes |
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], **.rdl** 및 **.rds**|yes|yes|yes|yes|yes|  
 |[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)], **.rsmobile**|yes||||yes|  
 |모바일 디바이스용 Power BI 앱(iOS, Windows 10, Android), **.rsmobile**|yes||||yes|  

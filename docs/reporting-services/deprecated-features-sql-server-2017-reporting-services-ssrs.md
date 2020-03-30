@@ -16,17 +16,17 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: d8fe51ce9d86688669e84ad866ad9f5e6da075e8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74320317"
 ---
 # <a name="deprecated-features-in-sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services에서 사용되지 않는 기능
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2017](../includes/ssrs-appliesto-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-특정 기능을 더 이상 사용되지 않는 것으로 표시한다는 것은 다음을 의미합니다.
+특정 기능이 사용되지 않는 기능으로 표시되면 이는 곧 다음을 의미합니다.
 
 - 기능이 유지 관리 모드로만 유지됩니다. 새 기능과의 상호 운용성과 관련된 변경 작업을 포함하여 새로운 변경 작업을 수행하지 않습니다.
 - 업그레이드를 더욱 용이하게 할 수 있도록 사용되지 않는 기능을 되도록이면 향후 릴리스에서 제거하지 않으려고 합니다. 드문 경우지만 이로 인해 향후 혁신에 제한이 있다면 Reporting Services에서 해당 기능이 영구적으로 제거될 수도 있습니다.

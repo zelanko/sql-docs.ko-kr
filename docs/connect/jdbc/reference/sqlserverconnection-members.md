@@ -11,10 +11,10 @@ ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3e3ba3d7da52f10b9bd51934b25f44a38a16be0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971725"
 ---
 # <a name="sqlserverconnection-members"></a>SQLServerConnection 멤버
@@ -55,12 +55,12 @@ ms.locfileid: "67971725"
 |[getClientConnectionID 메서드 &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/getclientconnectionid-method-sqlserverconnection.md)|연결 시도가 성공 또는 실패했는지 여부에 관계 없이 최근 연결 시도의 연결 ID를 가져옵니다.|  
 |[getClientInfo](../../../connect/jdbc/reference/getclientinfo-method-sqlserverconnection.md)|JDBC 드라이버에서 지원되는 클라이언트 정보 속성에 대한 정보를 검색합니다.|  
 |[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverconnection.md)|**disableStatementPooling** 연결 속성의 값을 반환합니다. 이 설정은 이 연결에 대한 문 풀링의 사용 설정 여부를 제어합니다.|
-|[getDiscardedServerPreparedStatementCount](../../../connect/jdbc/reference/getdiscardedserverpreparedstatementcount-method-sqlserverconnection.md)|현재 해결되지 않은 준비 문의 준비 취소 작업 수를 반환합니다.|
+|[getDiscardedServerPreparedStatementCount](../../../connect/jdbc/reference/getdiscardedserverpreparedstatementcount-method-sqlserverconnection.md)|현재 해결되지 않은 준비된 문의 준비 취소 작업 수를 반환합니다.|
 |[getEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/getenableprepareonfirstpreparedstatementcall-method-sqlserverconnection.md)|**enablePrepareOnFirstPreparedStatementCall** 연결 속성의 값을 반환합니다.|
-|[getHoldability](../../../connect/jdbc/reference/getholdability-method-sqlserverconnection.md)|이 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체를 사용하여 만든 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 현재 유지 기능을 검색합니다.|  
-|[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md)|이 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체가 나타내는 연결의 대상 데이터베이스에 대한 메타데이터가 들어 있는 [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 개체를 검색합니다.|  
+|[getHoldability](../../../connect/jdbc/reference/getholdability-method-sqlserverconnection.md)|이 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체를 사용하여 만든 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체의 현재 유지 기능을 검색합니다.|  
+|[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md)|이 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 개체가 나타내는 연결의 대상 데이터베이스에 대한 메타데이터가 들어 있는 [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체를 검색합니다.|  
 |[getServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/getserverpreparedstatementdiscardthreshold-method-sqlserverconnection.md)|**serverPreparedStatementDiscardThreshold** 연결 속성의 값을 반환합니다.|  
-|[getStatementHandleCacheEntryCount](../../../connect/jdbc/reference/getstatementhandlecacheentrycount-method-sqlserverconnection.md)|현재 풀링된 준비 문 핸들의 수를 반환합니다.|  
+|[getStatementHandleCacheEntryCount](../../../connect/jdbc/reference/getstatementhandlecacheentrycount-method-sqlserverconnection.md)|풀링된 준비된 문 핸들의 현재 수를 반환합니다.|  
 |[getStatementPoolingCacheSize](../../../connect/jdbc/reference/getstatementpoolingcachesize-method-sqlserverconnection.md)|이 연결에 대해 준비된 문 캐시의 크기를 반환합니다.|  
 |[getTransactionIsolation](../../../connect/jdbc/reference/gettransactionisolation-method-sqlserverconnection.md)|이 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체에 대한 현재 트랜잭션 격리 수준을 검색합니다.|  
 |[getTypeMap](../../../connect/jdbc/reference/gettypemap-method-sqlserverconnection.md)|이 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체와 연결된 Map 개체를 검색합니다.|  
@@ -79,7 +79,7 @@ ms.locfileid: "67971725"
 |[setClientInfo](../../../connect/jdbc/reference/setclientinfo-method-sqlserverconnection.md)|클라이언트 정보 속성의 값을 설정합니다.|  
 |[setDisableStatementPooling](../../../connect/jdbc/reference/setdisablestatementpooling-method-sqlserverconnection.md)|문 풀링을 true 또는 false로 설정합니다.|  
 |[setEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/setenableprepareonfirstpreparedstatementcall-method-sqlserverconnection.md)|**enablePrepareOnFirstPreparedStatementCall** 연결 속성의 새 값을 지정합니다.|  
-|[setHoldability](../../../connect/jdbc/reference/setholdability-method-sqlserverconnection.md)|이 [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) 개체를 사용하여 만든 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 유지 기능을 변경합니다.|  
+|[setHoldability](../../../connect/jdbc/reference/setholdability-method-sqlserverconnection.md)|이 [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체를 사용하여 만든 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserversavepoint-class.md) 개체의 유지 기능을 변경합니다.|  
 |[setReadOnly](../../../connect/jdbc/reference/setreadonly-method-sqlserverconnection.md)|JDBC 드라이버에서 데이터베이스 최적화를 수행하기 위한 힌트로 사용할 수 있도록 이 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체를 읽기 전용 모드로 설정합니다.|  
 |[setSavepoint](../../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md)|현재 트랜잭션에 명명되지 않은 저장점을 만들고 이 저장점을 나타내는 새 [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) 개체를 반환합니다.|  
 |[setServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/setserverpreparedstatementdiscardthreshold-method-sqlserverconnection.md)|**serverPreparedStatementDiscardThreshold** 연결 속성의 새 값을 설정합니다.|  

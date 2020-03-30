@@ -16,16 +16,16 @@ ms.assetid: 053549ee-2018-47ab-9538-789dac2b150a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 153da54f0b70d94b4428e2152db6b159230fa38c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67980320"
 ---
 # <a name="getresultsetholdability-method-sqlserverstatement"></a>getResultSetHoldability 메서드(SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체에 의해 생성된 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 결과 집합 유지 기능을 검색합니다.  
+  이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체에 의해 생성된 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체의 결과 집합 유지 기능을 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   

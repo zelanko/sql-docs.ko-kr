@@ -17,10 +17,10 @@ ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7d66a12e545374196a2fa6a8833bcbf159c1c9c6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75230484"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>새 SQL Server 장애 조치(Failover) 클러스터 만들기(설치)
@@ -227,9 +227,9 @@ ms.locfileid: "75230484"
     >   
     >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터의 모든 노드에서 설치하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전이 동일해야 합니다. 기존 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 새 노드를 추가할 때는 기존의 장애 조치(Failover) 클러스터 버전에 일치하는 버전을 지정해야 합니다.  
   
-##  <a name="prepare"></a> 준비  
+##  <a name="prepare"></a><a name="prepare"></a> 준비  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>고급/엔터프라이즈 장애 조치(failover) 클러스터 설치 1단계: 준비  
+#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>고급/엔터프라이즈 장애 조치(Failover) 클러스터 설치 1단계: 준비  
   
 1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 미디어를 넣고 루트 폴더에서 Setup.exe를 두 번 클릭합니다. 네트워크 공유 위치에서 설치하려면 공유 위치의 루트 폴더로 이동한 다음 Setup.exe를 두 번 클릭합니다. 필수 구성 요소를 설치하는 방법에 대한 자세한 내용은 [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)를 참조하십시오. 필수 구성 요소가 설치되어 있지 않은 경우 해당 구성 요소를 설치하라는 메시지가 나타날 수 있습니다.  
   
@@ -321,7 +321,7 @@ ms.locfileid: "75230484"
   
 ## <a name="complete"></a>완료  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>고급/엔터프라이즈 장애 조치(failover) 클러스터 설치 2단계: 완료  
+#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>고급/엔터프라이즈 장애 조치(Failover) 클러스터 설치 2단계: 완료  
   
 1.  [준비 단계](#prepare)에서 설명하는 대로 모든 노드를 준비했으면 준비된 노드 중 하나에서 설치를 실행합니다. 대부분의 경우 공유 디스크를 소유한 노드에서 설치를 실행합니다. **설치 센터의** 고급 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 페이지에서 **고급 클러스터 완료**를 클릭합니다.  
   

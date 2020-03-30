@@ -12,10 +12,10 @@ ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 47cba9b26c56a41b6741211f1f9d228884b32b5b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66499942"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>보고서 서버의 Windows 인증 구성
@@ -113,7 +113,7 @@ ms.locfileid: "66499942"
   
 8.  보고서 서버를 다시 시작하여 현재 열려 있는 모든 세션을 지웁니다.  
   
-##  <a name="proxyfirewallRSWindowsNegotiate"></a> 보고서 서버에 연결할 때 Kerberos 인증 오류 해결  
+##  <a name="resolving-kerberos-authentication-errors-when-connecting-to-a-report-server"></a><a name="proxyfirewallRSWindowsNegotiate"></a> 보고서 서버에 연결할 때 Kerberos 인증 오류 해결  
  Negotiate 또는 Kerberos 인증용으로 구성된 보고서 서버에서 Kerberos 인증 오류가 발생하면 보고서 서버에 대한 클라이언트 연결이 실패합니다. Kerberos 인증 오류는 다음과 같은 경우 발생합니다.  
   
 -   보고서 서버 서비스가 Windows 도메인 사용자 계정으로 실행되는데 해당 계정의 SPN(서비스 사용자 이름)을 등록하지 않은 경우  

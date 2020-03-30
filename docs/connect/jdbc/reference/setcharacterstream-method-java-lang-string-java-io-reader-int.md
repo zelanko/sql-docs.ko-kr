@@ -16,10 +16,10 @@ ms.assetid: 88a8e89e-8817-4161-85b1-9a9a2fd01cdb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27e19162aca466235c9242d2ea4a2f65d7b33630
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974691"
 ---
 # <a name="setcharacterstream-method-javalangstring-javaioreader-int"></a>setCharacterStream 메서드(java.lang.String, java.io.Reader, int)

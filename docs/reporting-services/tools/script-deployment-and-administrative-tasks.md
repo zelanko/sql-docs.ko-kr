@@ -21,10 +21,10 @@ ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 694a2c4c14564a1d3d57322e1300beddd8bfab98
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66500574"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>배포 및 관리 태스크 스크립팅
@@ -37,7 +37,7 @@ ms.locfileid: "66500574"
   
  보고서 서버를 구성하는 스크립트를 실행하려면 구성하는 컴퓨터의 로컬 관리자여야 합니다. 자세한 내용은 [원격 관리를 위한 보고서 서버 구성](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)을 참조하세요.  
   
- 이 문서에서는 특정 단계를 자동화하는 권장 방법에 대해 설명합니다. 많은 프로그램 및 프로그래밍 인터페이스가 소개되어 있으며 이 항목의 뒷부분에서는 각 프로그램 및 인터페이스에 대해 설명합니다.  
+ 이 항목에서는 특정 단계를 자동화하는 권장 방법에 대해 설명합니다. 많은 프로그램 및 프로그래밍 인터페이스가 소개되어 있으며 이 항목의 뒷부분에서는 각 프로그램 및 인터페이스에 대해 설명합니다.  
   
 ## <a name="deployment-tasks-and-how-to-automate-them"></a>배포 태스크와 배포 태스크 자동화 방법  
  다음 표에서는 보고서 서버를 배포하는 데 필요한 설치 및 구성 태스크를 요약하여 보여 줍니다. 이 표에서 특정 태스크를 자동화하거나 무인 모드로 수행하는 데 사용할 수 있는 방법을 찾아 볼 수 있습니다.  

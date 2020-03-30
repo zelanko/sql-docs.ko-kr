@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 9c2275e94d30560ae1173a12bfdcc6bfdc1eecb4
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78895881"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>SQL Server에서 보안 동적 SQL 작성
@@ -46,7 +46,7 @@ SQL Server는 구문상 유효한 모든 수신 쿼리를 실행하므로 SQL �
   
 - 다중 계층 환경에서는 신뢰할 수 있는 영역으로 들어가기 전에 모든 데이터의 유효성을 검사해야 합니다.  
   
-- 파일 이름을 생성하는 데 사용될 수 있는 필드에는 AUX, CLOCK$, COM1~COM8, CON, CONFIG$, LPT1~LPT8, NUL, PRN과 같은 문자열을 허용하지 않습니다.  
+- 파일 이름이 생성될 수도 있는 필드에는 AUX, CLOCK$, COM1~COM8, CON, CONFIG$, LPT1~LPT8, NUL, PRN과 같은 문자열을 허용하지 않습니다.  
   
 - 저장 프로시저 및 명령과 함께 <xref:Microsoft.Data.SqlClient.SqlParameter> 개체를 사용하여 형식 검사 및 길이 유효성 검사를 제공합니다.  
   

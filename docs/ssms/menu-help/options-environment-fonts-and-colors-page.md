@@ -11,10 +11,10 @@ ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 97d8667e7c6972331471622685d8a0bb97303dcd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245733"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>옵션(환경 - 글꼴 및 색 페이지)
@@ -58,7 +58,7 @@ ms.locfileid: "75245733"
   
 -   표시기 여백: 코드 편집기 왼쪽에 중단점 아이콘과 책갈피 아이콘이 표시되는 여백입니다.  
   
--   축소 가능 텍스트: CodeEditor 내에서 보기로 또는 보기에서 전환할 수 있는 텍스트 또는 코드 블록입니다(XML만 해당).  
+-   축소 가능 텍스트: 코드 편집기에서 보기로 또는 보기에서 전환할 수 있는 텍스트 또는 코드 블록입니다(XML만 해당).  
   
 **항목 전경**  
 **표시 항목**에서 선택한 항목의 전경색으로 사용할 수 있는 색을 나열합니다. 일부 항목은 서로 관련이 있기 때문에 표시 구성표의 일관성을 유지해야 합니다. 예를 들어 텍스트의 전경색을 변경하면 문자열과 같은 요소의 전경색도 변경됩니다.  

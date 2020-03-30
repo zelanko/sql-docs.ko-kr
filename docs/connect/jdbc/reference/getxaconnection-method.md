@@ -16,10 +16,10 @@ ms.assetid: b2710613-78b1-438f-b996-c7ae6f34381a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c53cbcc5abcb9fb08999b1d171645b45097eb34
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977977"
 ---
 # <a name="getxaconnection-method-"></a>getXAConnection 메서드()

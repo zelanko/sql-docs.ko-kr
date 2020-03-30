@@ -9,10 +9,10 @@ ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 567abd4423f546f853abea4caa5c944ce9d8ccdb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66499559"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>자습서: 자유 형식 보고서 만들기(보고서 작성기)
@@ -22,12 +22,12 @@ ms.locfileid: "66499559"
 
 이 보고서에서는 정보가 지역별로 그룹화되고 지역의 판매 관리자 이름과 세부 및 요약 판매 정보가 표시됩니다. 자유 형식 보고서의 기초로 목록 데이터 영역에서 시작한 다음 이미지가 있는 장식 패널, 데이터가 삽입된 정적 텍스트, 세부 정보를 표시할 테이블, 요약 정보를 표시할 원형 및 세로 막대형 차트(옵션) 등을 추가합니다.  
   
-이 자습서에 소요되는 예상 시간: 20분.  
+이 자습서에 소요되는 예상 시간: 20분  
   
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
   
-## <a name="BlankReport"></a>1. 빈 보고서, 데이터 원본 및 데이터 세트 만들기  
+## <a name="1-create-a-blank-report-data-source-and-dataset"></a><a name="BlankReport"></a>1. 빈 보고서, 데이터 원본 및 데이터 세트 만들기  
   
 > [!NOTE]  
 > 이 자습서의 쿼리에는 데이터 값이 포함되어 있으므로 외부 데이터 원본이 필요하지 않습니다. 따라서 쿼리가 상당히 길어집니다. 비즈니스 환경에서는 쿼리에 데이터가 포함되지 않을 것입니다. 이 자습서의 쿼리는 학습용으로만 제공됩니다.  
@@ -48,11 +48,11 @@ ms.locfileid: "66499559"
   
 1.  보고서 데이터 창에서 **새로 만들기** > **데이터 원본**을 클릭합니다.  
   
-2.  **이름** 상자에 다음을 입력합니다. **ListDataSource**  
+2.  **이름** 상자에 **ListDataSource**를 입력합니다.  
   
 3.  **내 보고서에 포함된 연결 사용**을 클릭합니다.  
   
-4.  연결 형식이 Microsoft SQL Server인지 확인한 다음 **연결 문자열** 상자에 다음을 입력합니다. **데이터 원본 = \<servername>**  
+4.  연결 형식이 Microsoft SQL Server인지 확인한 다음 **연결 문자열** 상자에 **Data Source = \<servername>** 을 입력합니다.  
   
     **\<servername>** (예: Report001)은 SQL Server 데이터베이스 엔진의 인스턴스가 설치된 컴퓨터를 지정합니다. 이 보고서의 데이터는 SQL Server 데이터베이스에서 추출된 것이 아니므로 데이터베이스 이름을 포함하면 안 됩니다. 지정된 서버의 기본 데이터베이스는 쿼리를 구문 분석하는 데만 사용됩니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66499559"
   
 1.  보고서 데이터 창에서 **새로 만들기** > **데이터 세트**을 클릭합니다.  
   
-2.  **이름** 상자에 다음을 입력합니다. **ListDataset**.  
+2.  **이름** 상자에 **ListDataset**을 입력합니다.  
   
 3.  **내 보고서에 포함된 데이터 세트 사용**을 클릭하고 데이터 원본이 **ListDataSource**인지 확인합니다.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66499559"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="List"></a>2. 목록 추가 및 구성  
+## <a name="2-add-and-configure-a-list"></a><a name="List"></a>2. 목록 추가 및 구성  
 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 목록 데이터 영역은 자유 형식 보고서를 만드는 데 적합합니다. 테이블 및 행렬과 마찬가지로 *테이블릭스* 데이터 영역을 기반으로 합니다. 자세한 내용은 [목록을 사용하여 송장 및 양식 만들기](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)를 참조하세요.  
   
 목록을 사용하여 뉴스레터와 유사한 형식의 보고서에 판매 지역에 대한 판매 정보를 표시합니다. 이 정보는 지역별로 그룹화됩니다. 데이터를 지역별로 그룹화하는 새 행 그룹을 추가한 다음 기본 제공된 세부 정보 행 그룹을 삭제합니다.  
@@ -167,7 +167,7 @@ ms.locfileid: "66499559"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Graphics"></a>3. 그래픽 요소 추가  
+## <a name="3-add-graphic-elements"></a><a name="Graphics"></a>3. 그래픽 요소 추가  
 목록 데이터 영역의 장점 중 하나는 테이블 형식 레이아웃으로 제한하지 않고 사각형 및 입력란과 같은 보고서 항목을 어느 곳에나 추가할 수 있다는 점입니다. 색으로 채워진 사각형과 같은 그래픽을 추가하여 보고서의 모양을 돋보이게 할 수 있습니다.  
   
 ### <a name="to-add-graphic-elements-to-the-report"></a>보고서에 그래픽 요소를 추가하려면  
@@ -190,7 +190,7 @@ ms.locfileid: "66499559"
   
 ![report-builder-free-form-gray-rectangle](../reporting-services/media/report-builder-free-form-gray-rectangle.png)
  
-## <a name="Text"></a>4. 자유 형식 텍스트 추가  
+## <a name="4-add-free-form-text"></a><a name="Text"></a>4. 자유 형식 텍스트 추가  
 입력란을 추가하여 각 보고서 페이지와 데이터 필드에서 반복되는 정적 텍스트를 표시할 수 있습니다.  
   
 ### <a name="to-add-text-to-the-report"></a>보고서에 텍스트를 추가하려면  
@@ -199,7 +199,7 @@ ms.locfileid: "66499559"
   
 2.  **삽입** 탭 > **텍스트 상자**로 이동합니다. 이전에 추가한 사각형 안에 있는 목록의 왼쪽 위를 클릭하고 마우스를 끌어 입력란의 너비와 높이를 각각 3.45인치와 5인치로 조정합니다.  
   
-3.  텍스트 상자에 커서를 놓고 다음을 입력합니다. **Newsletter for**. 다음 단계에서 추가할 필드의 텍스트를 구분하기 위해 "for" 단어 뒤에 공백을 포함합니다.   
+3.  입력란에 커서를 놓고 **Newsletter for** 를 입력합니다. 다음 단계에서 추가할 필드의 텍스트를 구분하기 위해 "for" 단어 뒤에 공백을 포함합니다.   
   
     ![뉴스레터 제목 텍스트 추가](../reporting-services/media/tutorial-newsletterfor.png "뉴스레터 제목 텍스트 추가")  
   
@@ -215,7 +215,7 @@ ms.locfileid: "66499559"
     *  **20pt**.
     *  **토마토**.  
   
-9. 3단계에서 입력한 텍스트 아래에 커서를 놓고 **Hello**를 입력하고 단어 뒤에 공백을 추가하여 다음 단계에서 추가할 텍스트와 필드를 구분합니다.  
+9. 3단계에서 입력한 텍스트 아래에 커서를 놓고 **Hello** 를 입력한 후 단어 뒤에 공백을 추가하여 텍스트와 다음 단계에서 추가할 필드를 구분합니다.  
  
 10. 보고서 데이터 창의 ListDataSet에서 `[FullName]` 필드를 입력란으로 끌어 "Hello" 뒤에 놓은 다음 쉼표(,)를 입력합니다.  
    
@@ -244,7 +244,7 @@ ms.locfileid: "66499559"
       *  **10pt**.
       *  **검정**.  
  
-20. 의미 없는 텍스트 아래에 있는 텍스트 상자 내에 커서를 놓고 **Congratulations on your total sales of**를 입력하고 단어 뒤에 공백을 추가하여 다음 단계에서 추가할 필드와 텍스트를 구분합니다. 
+20. 입력란에 커서를 놓고 의미 없는 텍스트 아래에 **Congratulations on your total sales of**를 입력한 후 단어 뒤에 공백을 추가하여 텍스트와 다음 단계에서 추가할 필드를 구분합니다. 
   
 21. Sales 필드를 입력란으로 끌어 이전 단계에서 입력한 텍스트 뒤에 배치한 다음 느낌표(!)를 입력합니다.  
 
@@ -282,7 +282,7 @@ ms.locfileid: "66499559"
   
 ![report-builder-newsletter-page-preview](../reporting-services/media/report-builder-newsletter-page-preview.png)
   
-## <a name="Table"></a>5. 테이블을 추가하여 Sales 세부 정보 표시  
+## <a name="5-add-a-table-to-show-sales-details"></a><a name="Table"></a>5. 테이블을 추가하여 Sales 세부 정보 표시  
 새 테이블 및 행렬 마법사를 사용하여 자유 형식 보고서에 테이블을 추가합니다. 마법사를 완료한 후에는 합계를 표시할 행을 수동으로 추가합니다.  
   
 ### <a name="to-add-a-table"></a>테이블을 추가하려면  
@@ -328,7 +328,7 @@ ms.locfileid: "66499559"
   
 ![report-builder-free-form-with-table](../reporting-services/media/report-builder-free-form-with-table.png)
    
-## <a name="Save"></a>6. 보고서 저장  
+## <a name="6-save-the-report"></a><a name="Save"></a>6. 보고서 저장  
 보고서를 보고서 서버, SharePoint 라이브러리 또는 컴퓨터에 저장할 수 있습니다.  
   
 이 자습서에서는 보고서를 보고서 서버에 저장합니다. 보고서 서버에 액세스할 수 없는 경우에는 보고서를 컴퓨터에 저장하십시오.  
@@ -359,7 +359,7 @@ ms.locfileid: "66499559"
   
 4.  **저장**을 클릭합니다.  
   
-## <a name="Line"></a>7. (선택 사항) 선을 추가하여 보고서 영역 구분  
+## <a name="7-optional-add-a-line-to-separate-areas-of-the-report"></a><a name="Line"></a>7. (선택 사항) 선을 추가하여 보고서 영역 구분  
 선을 추가하여 보고서의 편집 영역과 세부 정보 영역을 구분합니다.  
   
 ### <a name="to-add-a-line"></a>선을 추가하려면  
@@ -374,7 +374,7 @@ ms.locfileid: "66499559"
      * **너비** 를 선택한 다음 **3** pt를 선택합니다.
      * **색** 을 선택한 다음 **토마토**를 선택합니다.  
   
-## <a name="Visualization"></a>8. (옵션) 요약 데이터 시각화 추가  
+## <a name="8-optional-add-summary-data-visualizations"></a><a name="Visualization"></a>8. (옵션) 요약 데이터 시각화 추가  
 사각형은 보고서가 렌더링되는 방식을 제어하는 데 유용합니다. 원형 및 세로 막대형 차트를 사각형 내에 배치하여 보고서가 원하는 방식으로 렌더링되도록 합니다.  
   
 ### <a name="to-add-a-rectangle"></a>사각형을 추가하려면  
@@ -405,7 +405,7 @@ ms.locfileid: "66499559"
   
 9. 차트를 사각형 안으로 끌어옵니다.  
    
-10. 차트 제목을 선택하고 다음을 입력합니다. **Product Quantities Sold**.  
+10. 차트 제목을 선택하고 **Product Quantities Sold**를 입력합니다.  
   
 12. **홈** 탭 > **글꼴**에서 제목을 다음과 같이 조정합니다.
     * **글꼴** **맑은 고딕 Semibold**.
@@ -444,7 +444,7 @@ ms.locfileid: "66499559"
   
 9. 차트를 원형 차트 아래의 사각형 안으로 끌어옵니다.  
    
-10. 차트 제목을 선택하고 다음을 입력합니다. **Product Sales**.  
+10. 차트 제목을 선택하고 **Product Sales**를 입력합니다.  
   
 12. **홈** 탭 > **글꼴**에서 제목을 다음과 같이 조정합니다.
     * **글꼴** **맑은 고딕 Semibold**.

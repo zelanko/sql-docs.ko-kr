@@ -11,10 +11,10 @@ ms.assetid: ce680176-ef04-4e44-bb6c-ec50bd06e7e6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d9b57c0d984198a40e04c1dfe6eeb6ce946d2d13
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67985610"
 ---
 # <a name="unwrap-method-sqlserverstatement"></a>unwrap 메서드(SQLServerStatement)
@@ -49,7 +49,7 @@ public <T> T unwrap(Class<T> iface)
   
  예제 코드는 [대규모 데이터 업데이트 샘플](../../../connect/jdbc/updating-large-data-sample.md) 또는 [unwrap 메서드&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)를 참조하세요.  
   
- 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조하세요.  
+ 자세한 내용은 [래퍼와 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [isWrapperFor 메서드 &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)   

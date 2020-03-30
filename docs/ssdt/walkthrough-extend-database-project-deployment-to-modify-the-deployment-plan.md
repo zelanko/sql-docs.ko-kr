@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 1f4c73d02d131a0399fd8dde7698592629ef2726
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242669"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>연습: 데이터베이스 프로젝트 배포를 확장하여 배포 계획 수정
@@ -41,7 +41,7 @@ ms.locfileid: "75242669"
 > [!NOTE]  
 > 이 연습은 SQL Server Data Tools의 SQL 기능에 익숙한 사용자를 대상으로 합니다. 또한 코드 클래스를 만드는 방법 및 코드 편집기를 사용해서 클래스에 코드를 추가하는 방법과 같은 기본적인 Visual Studio 개념에 대해서도 익숙해야 합니다.  
   
-## <a name="CreateDeploymentContributor"></a>배포 참가자 만들기  
+## <a name="create-a-deployment-contributor"></a><a name="CreateDeploymentContributor"></a>배포 참가자 만들기  
 배포 참가자를 만들려면 다음 작업을 수행해야 합니다.  
   
 -   클래스 라이브러리 프로젝트를 만들고 필요한 참조를 추가합니다.  
@@ -639,7 +639,7 @@ ms.locfileid: "75242669"
   
     그런 다음 SQL 프로젝트를 배포할 때 로드되도록 어셈블리를 설치해야 합니다.  
   
-## <a name="InstallDeploymentContributor"></a>배포 참가자 설치  
+## <a name="install-a-deployment-contributor"></a><a name="InstallDeploymentContributor"></a>배포 참가자 설치  
 배포 참가자를 설치하려면 어셈블리 및 연관된 .pdb 파일을 Extensions 폴더에 복사해야 합니다.  
   
 #### <a name="to-install-the-myotherdeploymentcontributor-assembly"></a>MyOtherDeploymentContributor 어셈블리를 설치하려면  
@@ -648,7 +648,7 @@ ms.locfileid: "75242669"
   
 2.  출력 디렉터리에서 %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions 디렉터리로 **MyOtherDeploymentContributor.dll** 어셈블리를 복사합니다. 기본적으로 컴파일된 .dll 파일의 경로는 YourSolutionPath\YourProjectPath\bin\Debug 또는 YourSolutionPath\YourProjectPath\bin\Release입니다.  
   
-## <a name="TestDeploymentContributor"></a>배포 참가자 실행 또는 테스트  
+## <a name="run-or-test-your-deployment-contributor"></a><a name="TestDeploymentContributor"></a>배포 참가자 실행 또는 테스트  
 배포 참가자를 실행 또는 테스트하려면 다음 작업을 수행해야 합니다.  
   
 -   빌드하려는 .sqlproj 파일에 속성을 추가합니다.  

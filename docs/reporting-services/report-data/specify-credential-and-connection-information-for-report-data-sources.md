@@ -28,10 +28,10 @@ ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ab7f9d0717cac0dae86eb2b5202fd02de254c5e0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244560"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정
@@ -147,7 +147,7 @@ ms.locfileid: "75244560"
 ## <a name="user-name-and-password-login"></a>사용자 이름 및 암호 로그인  
  **이 사용자 이름 및 암호 사용**을 선택할 경우 사용자 이름과 암호를 제공해야 데이터 원본에 액세스할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 경우 데이터베이스 로그인에 대해 자격 증명을 사용할 수 있습니다. 자격 증명은 인증을 위해 데이터 원본으로 전달됩니다.  
   
-##  <a name="DataSourceConfigurationConnections"></a> 데이터 원본 구성 및 네트워크 연결  
+##  <a name="data-source-configuration-and-network-connections"></a><a name="DataSourceConfigurationConnections"></a> 데이터 원본 구성 및 네트워크 연결  
  다음 표에서는 자격 증명 유형과 데이터 처리 확장 프로그램의 특정 조합에 따른 연결 방법을 보여 줍니다. 사용자 지정 데이터 처리 확장 프로그램을 사용하는 경우 [사용자 지정 데이터 처리 확장 프로그램에 대한 연결 지정](../../reporting-services/report-data/specify-connections-for-custom-data-processing-extensions.md)을 참조하세요.  
   
 |**형식**|**네트워크 연결에 대한 컨텍스트**|**데이터 원본 유형**<br /><br /> **(SQL Server, Oracle, ODBC, OLE DB, Analysis Services, XML, SAP NetWeaver BI, Hyperion Essbase)**|  

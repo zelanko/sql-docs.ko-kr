@@ -15,10 +15,10 @@ ms.assetid: 3f87f82d-0e61-4492-9c4b-f5238c39e8cd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2caf9def46440aa87f8b4e143cc9e3163e408ba5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580802"
 ---
 # <a name="render-a-report-history-snapshot-using-url-access"></a>URL 액세스를 사용하여 보고서 기록 스냅샷 렌더링

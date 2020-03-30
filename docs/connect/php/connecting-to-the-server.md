@@ -11,16 +11,16 @@ ms.assetid: c251a239-e0bd-4f45-9207-b76651072dd0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 789fec0bd9299f4d436c664306d380bb9a7da153
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015137"
 ---
 # <a name="connecting-to-the-server"></a>서버에 연결
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-이 섹션의 항목에서는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하기 위한 옵션 및 절차를 설명합니다.  
+이 섹션의 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에 연결하기 위한 옵션 및 절차를 설명합니다.  
 
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]는 Windows 인증 또는 SQL Server 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 수 있습니다. 기본적으로 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 는 Windows 인증을 사용하여 서버에 연결합니다.  
 

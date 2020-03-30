@@ -11,10 +11,10 @@ ms.assetid: bbdcea53-d23d-4769-89a0-95c7cf4d5390
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4b159e57f6f2335e894490f7e34d159bd95b2b6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993137"
 ---
 # <a name="pdostatementbindcolumn"></a>PDOStatement::bindColumn
@@ -38,7 +38,7 @@ $*type*: PDO::PARAM_* 상수로 표현된 매개 변수의 선택적 데이터 �
   
 $*maxLen*: Microsoft Drivers for PHP for SQL Server에서 사용되지 않는 선택적 정수입니다.  
   
-$*driverdata*: 드라이버용 선택적 혼합 매개 변수입니다. 예를 들어 PDO::SQLSRV_ENCODING_UTF8을 지정하여 UTF-8로 인코드된 문자열로 변수에 열을 바인딩할 수 있습니다.  
+$*driverdata*: 드라이버의 선택적 혼합 매개 변수입니다. 예를 들어 PDO::SQLSRV_ENCODING_UTF8을 지정하여 UTF-8로 인코드된 문자열로 변수에 열을 바인딩할 수 있습니다.  
   
 ## <a name="return-value"></a>Return Value  
 성공하면 TRUE이고, 그렇지 않으면 FALSE입니다.  

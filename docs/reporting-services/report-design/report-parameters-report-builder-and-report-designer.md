@@ -1,6 +1,6 @@
 ---
 title: 보고서 매개 변수(보고서 작성기 및 보고서 디자이너) | Microsoft Docs
-description: 이 문서에서는 Reporting Services 보고서 매개 변수의 일반적인 용도와 설정할 수 있는 속성 등에 대해 설명합니다.
+description: 이 항목에서는 Reporting Services 보고서 매개 변수의 일반적인 용도와 설정할 수 있는 속성 등에 대해 설명합니다.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -11,10 +11,10 @@ ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
 ms.openlocfilehash: 494b682853425b40699ff698117d2941805ab7da
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68941145"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>보고서 매개 변수(보고서 작성기 및 보고서 디자이너)
@@ -31,11 +31,11 @@ ms.locfileid: "68941145"
 
 ::: moniker-end
 
-이 문서에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 매개 변수의 일반적인 용도와 설정할 수 있는 속성 등에 대해 설명합니다. 보고서 매개 변수를 사용하면 보고서 데이터를 제어하고, 관련된 보고서를 서로 연결하고, 다양하게 보고서를 표현할 수 있습니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 및 보고서 디자이너에서 생성한 페이지를 매긴 보고서와 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]에서 생성한 모바일 보고서에서도 보고서 매개 변수를 사용할 수 있습니다. 자세한 내용은 [보고서 매개 변수 개념](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)을 참조하세요.  
+이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 매개 변수의 일반적인 용도와 설정할 수 있는 속성 등에 대해 설명합니다. 보고서 매개 변수를 사용하면 보고서 데이터를 제어하고, 관련된 보고서를 서로 연결하고, 다양하게 보고서를 표현할 수 있습니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 및 보고서 디자이너에서 생성한 페이지를 매긴 보고서와 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]에서 생성한 모바일 보고서에서도 보고서 매개 변수를 사용할 수 있습니다. 자세한 내용은 [보고서 매개 변수 개념](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)을 참조하세요.  
 
-보고서에 매개 변수를 직접 추가하려면 [자습서: 보고서에 매개 변수 추가&#40;보고서 작성기&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)를 참조하세요.  
+직접 보고서에 매개 변수를 추가하려면 [자습서: 보고서에 매개 변수 추가&#40;보고서 작성기&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)에서 만드는 모바일 보고서에서 보고서 매개 변수를 사용할 수 있습니다.  
 
-## <a name="bkmk_Common_Uses_for_Parameters"></a> 매개 변수의 일반적인 용도
+## <a name="common-uses-for-parameters"></a><a name="bkmk_Common_Uses_for_Parameters"></a> 매개 변수의 일반적인 용도
 
  다음은 매개 변수를 사용하는 가장 일반적인 몇 가지 방법입니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68941145"
   
     자세한 내용은 [매개 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)를 참조하세요.  
   
-## <a name="UserInterface"></a> 매개 변수가 있는 보고서 보기
+## <a name="viewing-a-report-with-parameters"></a><a name="UserInterface"></a> 매개 변수가 있는 보고서 보기
 
 매개 변수가 있는 보고서를 보는 경우 보고서 뷰어 도구 모음에 각 매개 변수가 표시되므로 대화형으로 값을 지정할 수 있습니다. 다음 그림에서는 @ReportMonth, @ReportYear, @EmployeeID, @ShowAll, @ExpandTableRows, @CategoryQuota 및 @SalesDate 매개 변수를 포함하는 매개 변수 영역을 보여줍니다.  
 
@@ -85,7 +85,7 @@ ms.locfileid: "68941145"
   
 6. **보고서 보기**  매개 변수 값을 입력한 후 **보고서 보기** 를 클릭하여 보고서를 실행합니다. 모든 매개 변수에 기본값이 있는 경우 보고서를 처음으로 볼 때 보고서가 자동으로 실행됩니다.  
   
-## <a name="bkmk_Create_Parameters"></a> 매개 변수 만들기
+## <a name="creating-parameters"></a><a name="bkmk_Create_Parameters"></a> 매개 변수 만들기
 
 몇 가지 다른 방법으로 보고서 매개 변수를 만들 수 있습니다.
   
@@ -142,7 +142,7 @@ ms.locfileid: "68941145"
   
 - 매개 변수의 기본값이 생성되었으므로 먼저 매개 변수 값을 선택하지 않고 보고서를 실행합니다.  
   
-## <a name="bkmk_Report_Parameters"></a> 보고서 매개 변수 속성
+## <a name="report-parameter-properties"></a><a name="bkmk_Report_Parameters"></a> 보고서 매개 변수 속성
 
  보고서 속성 대화 상자를 사용하여 보고서 매개 변수 속성을 변경할 수 있습니다. 다음 표에는 각 매개 변수에 대해 설정할 수 있는 속성이 요약되어 있습니다.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "68941145"
 |기본값|쿼리 또는 정적 목록에서 기본값을 설정합니다.<br /><br /> 매개 변수마다 기본값이 있을 경우에는 보고서를 처음으로 볼 때 보고서가 자동으로 실행됩니다.|  
 |고급|이 매개 변수가 보고서의 데이터에 직접 또는 간접으로 영향을 주는지를 나타내는 값인 보고서 정의 특성 **UsedInQuery**를 설정합니다.<br /><br /> **새로 고칠 시기 자동으로 결정**<br /> 보고서 프로세서가 이 값에 대한 설정을 결정하도록 하려면 이 옵션을 선택합니다. 보고서 프로세서가 이 매개 변수에 대한 직접 또는 간접 참조가 있는 데이터 세트 쿼리를 검색하거나 보고서에 하위 보고서가 있으면 **True**입니다.<br /><br /> **항상 새로 고침**<br /> 보고서 매개 변수가 데이터 세트 쿼리 또는 매개 변수 식에 직접 또는 간접으로 사용되는 경우 이 옵션을 선택합니다. 이 옵션은 **UsedInQuery** 를 True로 설정합니다.<br /><br /> **새로 고침 안 함**<br /> 보고서 매개 변수가 데이터 세트 쿼리 또는 매개 변수 식에 직접 또는 간접으로 사용되지 않는 경우 이 옵션을 선택합니다. 이 옵션은 **UsedInQuery** 를 False로 설정합니다.<br /><br /> **주의** **새로 고침 안 함**은 주의해서 사용하세요. 보고서 서버에서 **UsedInQuery** 는 보고서 데이터와 렌더링된 보고서의 캐시 옵션 및 스냅샷 보고서의 매개 변수 옵션을 제어하는 데 사용됩니다. **새로 고침 안 함** 을 잘못 설정하면 잘못된 보고서 데이터 또는 보고서가 캐시되거나 스냅샷 보고서에 일치하지 않는 데이터가 포함될 수 있습니다. 자세한 내용은 [RDL(Report Definition Language)&#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)을 참조하세요.|  
   
-##  <a name="bkmk_Dataset_Parameters"></a> 데이터 세트 쿼리  
+##  <a name="dataset-query"></a><a name="bkmk_Dataset_Parameters"></a> 데이터 세트 쿼리  
  데이터 세트 쿼리에서 데이터를 필터링하려면 결과 집합에서 포함하거나 제외할 값을 지정하여 검색된 데이터를 제한하는 제한 절을 포함합니다.  
   
  데이터 원본에 쿼리 디자이너를 사용하여 매개 변수가 있는 쿼리를 작성할 수 있습니다.  
@@ -170,7 +170,7 @@ ms.locfileid: "68941145"
   
 -   Microsoft SQL Server Analysis Services, SAP NetWeaver BI 또는 Hyperion Essbase처럼 다차원 데이터 원본을 기반으로 하는 쿼리에서는 쿼리 디자이너에서 지정한 필터를 기반으로 하는 매개 변수를 만들 것인지 여부를 지정할 수 있습니다. 자세한 내용은 [쿼리 디자인 도구&#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)에서 데이터 확장 프로그램에 해당하는 쿼리 디자이너 항목을 참조하세요.  
   
-##  <a name="bkmk_Manage_Parameters"></a> 게시된 보고서에 대한 매개 변수 관리  
+##  <a name="parameter-management-for-a-published-report"></a><a name="bkmk_Manage_Parameters"></a> 게시된 보고서에 대한 매개 변수 관리  
  보고서를 디자인할 때는 보고서 매개 변수가 보고서 정의에 저장되고, 보고서를 게시할 때는 보고서 매개 변수가 보고서 정의와 별개로 저장되고 관리됩니다.  
   
  게시된 보고서의 경우 다음을 사용할 수 있습니다.  
@@ -193,7 +193,7 @@ ms.locfileid: "68941145"
   
  보고서 실행 옵션이 매개 변수 처리 방법에 영향을 줄 수 있습니다. 스냅샷으로 실행되는 보고서는 쿼리에 매개 변수의 기본값이 포함되지 않는 한 쿼리에서 파생된 매개 변수를 사용할 수 없습니다.  
   
-##  <a name="bkmk_Parameters_Subscription"></a> 구독 매개 변수  
+##  <a name="parameters-for-a-subscription"></a><a name="bkmk_Parameters_Subscription"></a> 구독 매개 변수  
  요청 시 또는 스냅샷에 대한 구독을 정의하고 구독을 처리하는 중에 사용할 매개 변수 값을 지정할 수 있습니다.  
   
 -   **요청 시 실행 보고서.**  요청 시 실행 보고서의 경우 보고서에 대해 나열된 각 매개 변수의 게시된 값과는 다른 매개 변수 값을 지정할 수 있습니다. 예를 들어 *Time Period* 매개 변수를 사용하여 현재 날짜, 주 또는 월에 해당하는 고객 서비스 요청을 반환하는 서비스 호출 보고서가 있다고 가정합니다. 보고서의 기본 매개 변수 값이 **today**로 설정된 경우 구독에서는 다른 매개 변수 값(예: **week** 또는 **month**)을 사용하여 주 또는 월을 나타내는 숫자가 포함된 보고서를 생성할 수 있습니다.  
@@ -209,7 +209,7 @@ ms.locfileid: "68941145"
   
  자세한 내용은 [구독 및 배달&#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)을 참조하세요.  
   
-##  <a name="bkmk_Parameters_Security"></a> 매개 변수 및 데이터 보안  
+##  <a name="parameters-and-securing-data"></a><a name="bkmk_Parameters_Security"></a> 매개 변수 및 데이터 보안  
  자격 증명이나 중요한 정보가 포함된 매개 변수가 있는 보고서를 배포할 때는 주의해야 합니다. 사용자가 보고서 매개 변수를 다른 값으로 쉽게 바꿀 수 있으므로 원치 않는 정보가 공개될 수 있기 때문입니다.  
   
  직원 또는 개인 데이터에 대해 매개 변수를 사용하는 대신 안전하게 사용자 컬렉션의 **UserID** 필드가 포함된 식을 기반으로 데이터를 선택할 수 있습니다. 사용자 컬렉션은 보고서를 실행하는 사용자의 ID를 가져온 다음 이 ID를 사용하여 사용자별 데이터를 검색하는 방법을 제공합니다.  
@@ -221,7 +221,7 @@ ms.locfileid: "68941145"
 >   
 >  악의적인 스크립트를 실수로 실행하는 위험을 줄이기 위해 신뢰할 수 있는 원본의 렌더링된 보고서만 여세요. 보고서를 안전하게 보호하는 방법에 대한 자세한 내용은 [보고서 및 리소스 보안](../../reporting-services/security/secure-reports-and-resources.md)을 참조하세요.  
 
-##  <a name="bkmk_Related_Topics"></a> 관련 단원  
+##  <a name="related-sections"></a><a name="bkmk_Related_Topics"></a> 관련 단원  
 
  [자습서: 보고서에 매개 변수 추가&#40;보고서 작성기&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   

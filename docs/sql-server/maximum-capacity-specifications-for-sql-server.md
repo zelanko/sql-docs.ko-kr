@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3436ac152de56d06d5e928d271f8b143b695ba70
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.openlocfilehash: 36f66c64cb3055aad20dee7a87d429065ca54cc6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79126006"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510224"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server의 최대 용량 사양
 
@@ -36,7 +36,7 @@ ms.locfileid: "79126006"
 >[!NOTE]
 >이 문서의 정보 외에도 다음 링크가 도움이 될 수 있습니다.
 >
->* [SQL Server 다운로드](https://www.microsoft.com/sql-server/sql-server-downloads_)
+>* [SQL Server 다운로드](https://www.microsoft.com/sql-server/sql-server-downloads)
 >* [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 >* [시스템 구성 검사기의 검사 매개 변수](../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)
 >
@@ -91,7 +91,7 @@ ms.locfileid: "79126006"
 |중첩 트랜잭션||4,294,967,296|| 
 |중첩 트리거 수준 수||32||
 |테이블당 비클러스터형 인덱스 수||999||
-|`CUBE`, `ROLLUP`, `GROUPING SETS`, `WITH CUBE`, `WITH ROLLUP` 중 하나가 있는 경우 `GROUP BY` 절의 개별 식 수||32||
+|`GROUP BY`, `CUBE`, `ROLLUP`, `GROUPING SETS`, `WITH CUBE` 중 하나가 있는 경우 `WITH ROLLUP` 절의 개별 식 수||32||
 |`GROUP BY` 절에서 연산자를 통해 생성되는 그룹화 집합 수||4,096||
 |저장 프로시저당 매개 변수 개수||2,100||
 |사용자 정의 함수당 매개 변수 개수||2,100||

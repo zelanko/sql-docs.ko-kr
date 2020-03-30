@@ -12,10 +12,10 @@ ms.author: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: fade888b904b6be436e78cc38f9fc77bc8ee734d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307069"
 ---
 # <a name="complete-the-post-installation-steps"></a>설치 후 단계 완료
@@ -36,7 +36,7 @@ Distributed Replay를 설치한 후에는 Distributed Replay Controller 및 Clie
   
          `netsh advfirewall firewall add rule name="allow dreplay client" dir=in program="%InstallPath%\DReplayClient\DReplayClient.exe" action=allow`  
   
-2. **대상 서버에서 각 클라이언트 권한 부여**: 클라이언트 컴퓨터에 클라이언트 서비스를 설치하는 작업을 완료하면 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 sysadmin 역할에 클라이언트 서비스 계정을 수동으로 추가해야 합니다.  
+2. **대상 서버에서 각 클라이언트 사용 권한 부여**: 클라이언트 컴퓨터에 클라이언트 서비스를 설치하는 작업을 완료하면 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 sysadmin 역할에 클라이언트 서비스 계정을 수동으로 추가해야 합니다.  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안
 

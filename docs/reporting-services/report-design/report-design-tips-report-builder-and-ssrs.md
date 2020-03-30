@@ -9,10 +9,10 @@ ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e527b4059e225b012a2fa39cf21033b8af5ab9e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081093"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>보고서 디자인 팁(보고서 작성기 및 SSRS)
@@ -21,7 +21,7 @@ ms.locfileid: "77081093"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DesigningReports"></a> 보고서 디자인  
+##  <a name="designing-reports"></a><a name="DesigningReports"></a> 보고서 디자인  
   
 -   잘 디자인된 보고서는 조치를 취할 수 있는 정보를 제공합니다. 보고서가 답을 찾는 데 도움이 되는 질문을 식별합니다. 보고서를 디자인할 때에는 이러한 질문을 유념하십시오.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "77081093"
   
  보고서를 디자인할 때 고려해야 할 사항에 대한 자세한 내용은 [보고서 계획&#40;보고서 작성기&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)을 참조하세요.  
   
-##  <a name="NamingConventions"></a> 보고서, 데이터 원본 및 데이터 세트의 명명 규칙  
+##  <a name="naming-conventions-for-reports-data-sources-and-datasets"></a><a name="NamingConventions"></a> 보고서, 데이터 원본 및 데이터 세트의 명명 규칙  
   
 -   데이터 원본 및 데이터 원본을 문서화하는 데이터 세트에 대한 명명 규칙을 사용합니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "77081093"
   
 -   보고서 이름에는 공백 대신 밑줄을 사용합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털에서 보고서를 다운로드하면 공백이 밑줄로 바뀝니다. 다운로드 기능을 사용하여 보고서를 로컬로 저장한 다음 해당 보고서를 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 포함하는 경우 밑줄을 사용하면 하위 보고서 및 드릴스루 링크에 대한 보고서 종속성이 정확하게 유지됩니다.  
   
-##  <a name="Data"></a> 데이터 작업  
+##  <a name="working-with-data"></a><a name="Data"></a> 데이터 작업  
   
 -   먼저 보고서 데이터 창에 표시할 모든 데이터를 가져옵니다. 보고서가 답해야 할 질문을 구체화할 때 보고서 데이터 세트의 데이터를 필요한 데이터만으로 제한하는 방법을 고려해 보세요.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "77081093"
   
 -   요구 사항에 따라 보고서에 보고서 데이터 원본의 이름과 위치, 데이터 세트 쿼리 명령 텍스트 및 매개 변수 값을 표시할 수 있습니다. 새로운 사용자가 가장 많이 궁금해 하는 질문은 데이터의 출처에 관한 내용입니다. 보고서를 좀 더 단순하게 하기 위해 이러한 유형의 정보가 있는 입력란을 조건부로 숨기고 사용자가 해당 정보를 볼지 여부를 선택하게 할 수 있습니다. 보고서의 마지막 페이지에 이 정보를 추가해 보십시오. 사용자가 변경할 수 있는 매개 변수를 기준으로 입력란의 표시 여부를 설정합니다.  
   
-##  <a name="DesignSurface"></a> 보고서 디자인 화면과 상호 작용  
+##  <a name="interacting-with-the-report-design-surface"></a><a name="DesignSurface"></a> 보고서 디자인 화면과 상호 작용  
  보고서 디자인 화면은 WYSIWIG가 아닙니다. 디자인 화면에 보고서 항목을 배치할 때 이러한 항목의 상대 위치는 렌더링된 보고서 페이지에 항목이 표시되는 방식에 영향을 줍니다. 공백이 유지됩니다.  
   
 -   맞춤선 및 레이아웃 단추를 사용하여 보고서 디자인 화면에서 항목을 정렬합니다. 예를 들어 선택한 항목의 위쪽 또는 가장자리를 정렬하거나, 다른 항목의 크기에 맞도록 항목을 확장하거나, 항목 사이의 간격을 조정할 수 있습니다.  
@@ -88,7 +88,7 @@ ms.locfileid: "77081093"
   
 -   보고서 데이터 창에서 그룹화 창으로 필드를 끌려면 이는 다른 항목을 선택하고 테이블릭스 데이터 영역의 선택을 취소할 수 있으므로 디자인 화면의 다른 보고서 항목 위로 필드를 끌지 마십시오. 필드를 보고서 데이터 창 아래로 끈 다음 그룹화 창 위로 끕니다.  
   
-###  <a name="Selecting"></a> 항목 선택  
+###  <a name="selecting-items"></a><a name="Selecting"></a> 항목 선택  
  보고서 디자인 화면에서 원하는 개체를 선택하려면 Esc 키, 마우스 오른쪽 단추를 클릭하여 사용하는 상황에 맞는 메뉴, 속성 창 및 그룹화 창을 사용합니다.  
   
 -   -   Esc 키를 눌러 디자인 화면에서 동일한 공간을 차지하는 보고서 항목 스택 간을 전환합니다.  
@@ -101,31 +101,31 @@ ms.locfileid: "77081093"
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 보고서 디자이너에서는 속성 창 도구 모음의 개체 드롭다운 목록 또는 문서 개요 창의 보고서 항목 계층 구조 보기에서 선택할 수 있습니다. 이 창에서 항목을 선택하고 디자인 화면에서 선택한 항목을 볼 수 있습니다. 문서 개요 창을 열려면 **보기** 메뉴에서 **다른 창**을 가리킨 다음 **문서 개요**를 클릭합니다.  
   
-##  <a name="ReportItems"></a> 특정 유형의 보고서 항목 작업  
+##  <a name="working-with-specific-types-of-report-items"></a><a name="ReportItems"></a> 특정 유형의 보고서 항목 작업  
   
-###  <a name="Parameters"></a> 매개 변수 작업  
+###  <a name="working-with-parameters"></a><a name="Parameters"></a> 매개 변수 작업  
   
 -   보고서 매개 변수의 주 목적은 데이터 원본의 데이터를 필터링하고 보고서 용도에 필요한 데이터만 검색하는 것입니다.  
   
 -   보고서 매개 변수의 경우 대화형 작업을 수행하면서도 사용자가 원하는 결과를 얻을 수 있도록 잘 조화된 환경을 찾습니다. 예를 들어 매개 변수에 대한 기본값을 일반적으로 많이 사용된다고 생각되는 값으로 설정할 수 있습니다.  
   
-###  <a name="Text"></a> 텍스트 작업  
+###  <a name="working-with-text"></a><a name="Text"></a> 텍스트 작업  
   
 -   입력란에 여러 줄을 붙여넣을 때 텍스트는 한 줄의 텍스트로 추가됩니다. 각 텍스트 줄은 하나의 단위로만 서식 지정될 수 있습니다. 각 줄을 개별적으로 서식 지정하려면 필요한 대로 텍스트 줄에서 Enter 키를 눌러 새 줄을 삽입합니다. 이렇게 한 후 입력란의 각 독립적인 줄에 서식 지정 및 스타일을 적용할 수 있습니다.  
   
 -   입력란 또는 입력란의 자리 표시자 텍스트의 서식 속성 및 동작을 설정할 수 있습니다. 한 줄의 텍스트만 있는 경우에는 텍스트가 아닌 입력란의 속성을 설정하는 것이 더 효과적입니다.  
   
-###  <a name="Expressions"></a> 식 작업  
+###  <a name="working-with-expressions"></a><a name="Expressions"></a> 식 작업  
   
 -   간단한 식 및 복잡한 식 서식 이해 식이 적용되는 입력란, 속성 창의 속성 또는 대화 상자의 위치에 단순 식 서식을 바로 입력할 수 있습니다. 자세한 내용은 [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)을 참조하세요.  
   
 -   식을 만들 때 각 부분을 독립적으로 만든 후 해당 값을 확인하는 것이 좋습니다. 그런 다음 모든 부분을 결합하여 최종 식을 만들 수 있습니다. 행렬 셀에 입력란을 추가하고 식의 각 부분을 표시한 후 입력란에 대해 조건부 표시 유형을 설정하면 유용합니다. 입력란이 숨겨진 경우 테두리 스타일 및 색을 제어하려면 먼저 입력란을 사각형 안에 배치한 다음 이 사각형의 테두리 스타일 및 색이 행렬과 일치하도록 설정합니다.  
   
-###  <a name="Indicators"></a> 표시기 작업  
+###  <a name="working-with-indicators"></a><a name="Indicators"></a> 표시기 작업  
   
 -   기본적으로 표시기는 세 가지 이상의 상태를 표시합니다. 보고서에 표시기를 추가한 후 상태를 추가하거나 제거하여 표시기를 구성할 수 있습니다. 사용자가 쉽게 볼 수 있도록 하기 위해 색과 모양에 따라 다른 표시기를 선택합니다.  
   
-##  <a name="Rendering"></a> 보고서 페이지의 보고서 항목 렌더링 제어  
+##  <a name="controlling-the-rendering-of-report-items-on-the-report-page"></a><a name="Rendering"></a> 보고서 페이지의 보고서 항목 렌더링 제어  
   
 -   보고서 디자인 화면에서 보고서 항목은 연결된 데이터 세트, 식, 하위 보고서 또는 텍스트의 내용에 맞게 늘어납니다.  
   

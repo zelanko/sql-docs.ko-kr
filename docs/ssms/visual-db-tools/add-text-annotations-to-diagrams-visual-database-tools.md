@@ -15,10 +15,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.openlocfilehash: 18c94e1ba7ec3be03494f8163d07a2b884f774a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245349"
 ---
 # <a name="add-text-annotations-to-diagrams-visual-database-tools"></a>다이어그램에 텍스트 주석 추가(Visual Database Tools)

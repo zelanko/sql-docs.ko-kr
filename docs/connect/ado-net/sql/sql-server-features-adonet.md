@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: ed7fa07959715ac6c08b8799c5579e90939f87c2
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896265"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server 기능 및 ADO.NET
@@ -48,7 +48,7 @@ SQL Server Express 사용자 인스턴스에 대한 지원을 설명합니다.
 트랜잭션 애플리케이션에서 차단을 줄이도록 설계된 행 버전 관리 메커니즘인 스냅샷 격리에 대한 지원을 설명합니다.  
   
 [고가용성 재해 복구를 위한 SqlClient 지원](sqlclient-support-high-availability-disaster-recovery.md)  
-고가용성 재해 복구(AlwaysOn)를 위한 SqlClient 지원에 대해 설명합니다.  
+고가용성 재해 복구(AlwaysOn) 가용성 그룹을 위한 SqlClient 지원에 대해 설명합니다.  
   
 [LocalDB에 대한 SqlClient 지원](sqlclient-support-localdb.md)  
 LocalDB 데이터베이스를 위한 SqlClient 지원에 대해 설명합니다.

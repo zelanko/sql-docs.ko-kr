@@ -14,10 +14,10 @@ ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 38c050f8b41a8ff6e1bb9601abc562002caa4a27
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74317947"
 ---
 # <a name="deprecated-features-in-sql-server-2016-reporting-services"></a>SQL Server 2016 Reporting Services에서 사용되지 않는 기능

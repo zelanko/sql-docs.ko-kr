@@ -17,10 +17,10 @@ ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f133f6cf53123ed7c05f7a7181d5c829b45a258d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74796907"
 ---
 # <a name="integrating-reporting-services-using-url-access---windows-application"></a>URL 액세스를 사용하여 Reporting Services 통합 - Windows 애플리케이션
@@ -89,7 +89,7 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 새 Windows 애플리케이션을 만듭니다.  
   
-2.  **도구 상자** 대화 상자에서 <xref:System.Windows.Forms.WebBrowser> 컨트롤을 찾습니다.  
+2.  <xref:System.Windows.Forms.WebBrowser>도구 상자**대화 상자에서** 컨트롤을 찾습니다.  
   
      **도구 상자**가 보이지 않을 경우 **보기** 메뉴 항목을 클릭하고 **도구 상자**를 선택하여 액세스할 수 있습니다.  
   
@@ -97,7 +97,7 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
      이름이 webBrowser1인 <xref:System.Windows.Forms.WebBrowser> 컨트롤이 폼에 추가됩니다.  
   
- **Navigate** 메서드를 호출하여 <xref:System.Windows.Forms.WebBrowser> 컨트롤을 URL에 지정합니다. 다음 예에서 볼 수 있는 것처럼 런타임에 특정 URL 액세스 문자열을 <xref:System.Windows.Forms.WebBrowser> 컨트롤에 할당할 수 있습니다.  
+ <xref:System.Windows.Forms.WebBrowser>Navigate**메서드를 호출하여** 컨트롤을 URL에 지정합니다. 다음 예에서 볼 수 있는 것처럼 런타임에 특정 URL 액세스 문자열을 <xref:System.Windows.Forms.WebBrowser> 컨트롤에 할당할 수 있습니다.  
   
 ```vb  
 Dim url As String = "https://localhost/reportserver?/" & _  

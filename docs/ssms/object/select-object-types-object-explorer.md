@@ -13,10 +13,10 @@ ms.assetid: 6d27ab0b-a016-4fb3-9391-74c6a9c1991c
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: ccd192c99a68d531aa70f81da18fde5c9564acd7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243554"
 ---
 # <a name="select-object-types-object-explorer"></a>개체 유형 선택(개체 탐색기)

@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f744dbde25bf5f7b307ccb44e03de70c1b60cc66
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73844545"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>필터 함수를 사용하여 마이그레이션할 행 선택(Stretch Database)
@@ -197,7 +197,7 @@ ALTER TABLE SensorTelemetry
   )
 ```
   
-## <a name="addafterwiz"></a>마법사를 실행한 후 필터 함수 추가  
+## <a name="add-a-filter-function-after-running-the-wizard"></a><a name="addafterwiz"></a>마법사를 실행한 후 필터 함수 추가  
   
 **스트레치에 데이터베이스 사용** 마법사에서 만들 수 없는 함수를 사용하려는 경우 마법사를 종료한 후 **ALTER TABLE** 문을 실행하여 함수를 지정할 수 있습니다. 그러나 함수를 적용하려면 이미 진행 중인 데이터 마이그레이션을 중지하고 마이그레이션된 데이터를 다시 가져와야 합니다. 이 작업이 필요한 이유에 대한 자세한 내용은 [기존 필터 함수 바꾸기](#replacePredicate)를 참조하세요.
   
@@ -492,7 +492,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
   
  함수에서 행에 대해 비어 있지 않은 결과가 반환되는 경우 해당 행은 마이그레이션에 적합합니다.  
   
-## <a name="replacePredicate"></a>기존 필터 함수 바꾸기  
+## <a name="replace-an-existing-filter-function"></a><a name="replacePredicate"></a>기존 필터 함수 바꾸기  
  **ALTER TABLE** 문을 다시 실행하고 **FILTER_PREDICATE** 매개 변수에 대한 새 값을 지정하여 이전에 지정된 필터 함수를 바꿀 수 있습니다. 다음은 그 예입니다.  
   
 ```sql  

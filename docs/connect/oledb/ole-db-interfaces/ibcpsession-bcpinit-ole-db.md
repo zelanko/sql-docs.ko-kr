@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 02a05f99919bbd35b1064d14c82dec9fba6cee78
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994571"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit(OLE DB)
@@ -58,7 +58,7 @@ HRESULT BCPInit(
 > [!NOTE]  
 >  데이터 파일에 대해 지정된 데이터 형식 값을 변경하려면 [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) 및 [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 메서드를 사용합니다.  
   
- 데이터베이스 옵션 **select into/bulkcopy**를 설정하면 인덱스가 없는 테이블에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]로의 대량 복사를 최적화할 수 있습니다.  
+ 데이터베이스 옵션 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]select into/bulkcopy**를 설정하면 인덱스가 없는 테이블에 대해** 로의 대량 복사를 최적화할 수 있습니다.  
   
 ## <a name="arguments"></a>인수  
  *pwszTable*[in]  
@@ -91,7 +91,7 @@ HRESULT BCPInit(
  하나 이상의 인수가 잘못 지정되었습니다. 예를 들어 잘못된 파일 이름이 제공되었습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [IBCPSession&#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [대량 복사 작업 수행](../../oledb/features/performing-bulk-copy-operations.md)  
   
   

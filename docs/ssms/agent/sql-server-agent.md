@@ -16,10 +16,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e62d4502feb6985717e9aad1bf2f6da63100e60c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257929"
 ---
 # <a name="sql-server-agent"></a>SQL Server 에이전트
@@ -31,7 +31,7 @@ ms.locfileid: "75257929"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 *에서* 작업 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]이라고 하는 일정이 지정된 관리 태스크를 실행하는 Microsoft Windows 서비스입니다.  
 
-## <a name="Benefits"></a>SQL Server 에이전트의 이점 
+## <a name="benefits-of-sql-server-agent"></a><a name="Benefits"></a>SQL Server 에이전트의 이점 
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 작업 정보를 저장합니다. 작업에는 하나 이상의 작업 단계가 포함됩니다. 각 단계에는 자체 태스크(예: 데이터베이스 백업)가 포함됩니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "75257929"
 > [!NOTE]  
 > 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는 자동으로 시작되도록 사용자가 명시적으로 선택하지 않으면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 시 해제됩니다.  
   
-## <a name="Components"></a>SQL Server 에이전트 구성 요소  
+## <a name="sql-server-agent-components"></a><a name="Components"></a>SQL Server 에이전트 구성 요소  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서는 다음 구성 요소를 사용하여 수행될 태스크, 태스크를 수행할 시기 및 태스크의 성공 또는 실패를 보고하는 방법을 정의합니다.  
   
 ### <a name="jobs"></a>교육  
@@ -114,7 +114,7 @@ ms.locfileid: "75257929"
   
 개인으로 구성된 그룹의 별칭으로 운영자를 정의할 수 있습니다. 이런 방법으로 해당 별칭에 속하는 모든 멤버는 동시에 알림을 받습니다. 자세한 내용은 [운영자](../../ssms/agent/operators.md)를 참조하세요.  
   
-## <a name="Security"></a>SQL Server 에이전트 관리 보안  
+## <a name="security-for-sql-server-agent-administration"></a><a name="Security"></a>SQL Server 에이전트 관리 보안  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 **msdb**데이터베이스에서 **sysadmin**고정 서버 역할의 멤버가 아닌 사용자의 **에이전트에 대한 액세스를 제어하는** SQLAgentUserRole **,** SQLAgentReaderRole [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **SQLAgentOperatorRole** 고정 데이터베이스 역할을 사용합니다. 이러한 고정 데이터베이스 역할 외에도 데이터베이스 관리자는 하위 시스템과 프록시를 사용하여 각 작업 단계가 태스크 수행에 필요한 최소 권한으로 실행되도록 합니다.  
   
 ### <a name="roles"></a>역할  

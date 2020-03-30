@@ -11,10 +11,10 @@ ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: abbd2aa3c277ad36f419de849b02433f17d27403
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026508"
 ---
 # <a name="using-basic-data-types"></a>기본 데이터 형식 사용
@@ -68,13 +68,13 @@ ms.locfileid: "69026508"
   
 (1) time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식과 함께 java.sql.Time을 사용하려면 **sendTimeAsDatetime** 연결 속성을 false로 설정해야 합니다.  
   
-(2) [DateTimeOffset 클래스](../../connect/jdbc/reference/datetimeoffset-class.md)를 사용하여 **datetimeoffset** 값에 프로그래밍 방식으로 액세스할 수 있습니다.  
+(2) **DateTimeOffset 클래스**를 사용하여 [datetimeoffset](../../connect/jdbc/reference/datetimeoffset-class.md) 값에 프로그래밍 방식으로 액세스할 수 있습니다.  
   
 다음 섹션에서는 JDBC 드라이버와 기본 데이터 형식을 사용하는 방법의 예를 보여 줍니다. Java 애플리케이션에서 기본 데이터 형식을 사용하는 방법에 대한 자세한 예는 [기본 데이터 형식 샘플](../../connect/jdbc/basic-data-types-sample.md)을 참조하세요.  
   
 ## <a name="retrieving-data-as-a-string"></a>데이터를 문자열로 검색
 
-JDBC 기본 데이터 형식에 매핑되는 데이터 원본에서 데이터를 검색하여 문자열로 봐야 하거나 강력한 형식의 데이터가 필요하지 않은 경우 다음과 같이 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) 메서드를 사용합니다.  
+JDBC 기본 데이터 형식에 매핑되는 데이터 원본에서 데이터를 검색하여 문자열로 봐야 하거나 강력한 형식의 데이터가 필요하지 않은 경우 다음과 같이 [SQLServerResultSet](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) 클래스의 [getString](../../connect/jdbc/reference/sqlserverresultset-class.md) 메서드를 사용합니다.  
   
 [!code[JDBC#UsingBasicDataTypes1](../../connect/jdbc/codesnippet/Java/using-basic-data-types_1.java)]  
   
@@ -98,7 +98,7 @@ JDBC 기본 데이터 형식에 매핑되는 데이터 원본에서 데이터를
   
 ## <a name="updating-data-by-parameterized-query"></a>매개 변수가 있는 쿼리로 데이터 업데이트
 
-매개 변수가 있는 쿼리를 사용하여 데이터 원본의 데이터를 업데이트해야 하는 경우 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 클래스의 set\<Type> 메서드*setter 메서드*라고도 함 중 하나를 사용하여 매개 변수의 데이터 형식을 설정합니다. 다음 예제에서는 [prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) 메서드를 사용하여 매개 변수가 있는 쿼리를 미리 컴파일한 다음, [setString](../../connect/jdbc/reference/setstring-method-sqlserverpreparedstatement.md) 메서드로 매개 변수의 문자열 값을 설정한 후 [executeUpdate](../../connect/jdbc/reference/executeupdate-method.md) 메서드를 호출합니다.  
+매개 변수가 있는 쿼리를 사용하여 데이터 원본의 데이터를 업데이트해야 하는 경우 \<SQLServerPreparedStatement[ 클래스의 set](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)Type> 메서드*setter 메서드*라고도 함 중 하나를 사용하여 매개 변수의 데이터 형식을 설정합니다. 다음 예제에서는 [prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) 메서드를 사용하여 매개 변수가 있는 쿼리를 미리 컴파일한 다음, [setString](../../connect/jdbc/reference/setstring-method-sqlserverpreparedstatement.md) 메서드로 매개 변수의 문자열 값을 설정한 후 [executeUpdate](../../connect/jdbc/reference/executeupdate-method.md) 메서드를 호출합니다.  
   
 [!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
   
@@ -106,7 +106,7 @@ JDBC 기본 데이터 형식에 매핑되는 데이터 원본에서 데이터를
 
 ## <a name="passing-parameters-to-a-stored-procedure"></a>저장 프로시저에 매개 변수 전달
 
-형식화된 매개 변수를 저장 프로시저에 전달하려면 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스의 \<Type> 메서드 중 하나를 사용하여 인덱스 또는 이름으로 매개 변수를 설정합니다. 다음 예제에서는 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 메서드를 사용하여 저장 프로시저 호출을 설정한 다음, [setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) 메서드로 호출에 필요한 매개 변수를 설정한 후 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 메서드를 호출합니다.  
+형식화된 매개 변수를 저장 프로시저에 전달하려면 \<SQLServerCallableStatement[ 클래스의 ](../../connect/jdbc/reference/sqlservercallablestatement-class.md)Type> 메서드 중 하나를 사용하여 인덱스 또는 이름으로 매개 변수를 설정합니다. 다음 예제에서는 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 메서드를 사용하여 저장 프로시저 호출을 설정한 다음, [setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) 메서드로 호출에 필요한 매개 변수를 설정한 후 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 메서드를 호출합니다.  
   
 [!code[JDBC#UsingBasicDataTypes5](../../connect/jdbc/codesnippet/Java/using-basic-data-types_5.java)]  
   

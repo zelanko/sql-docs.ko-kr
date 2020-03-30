@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 12b3fae80a7bf2c46c8d1d10ad5c45d74212eef0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843791"
 ---
 # <a name="limitations-for-stretch-database"></a>Stretch Database에 대한 제한 사항
@@ -26,7 +26,7 @@ ms.locfileid: "73843791"
 
   스트레치 사용 데이터베이스와 관련된 제한 사항 및 현재 테이블에 스트레치를 사용할 수 없게 하는 제한 사항에 대해 알아봅니다.  
   
-##  <a name="Caveats"></a> 스트레치 사용 테이블에 대한 제한 사항  
+##  <a name="limitations-for-stretch-enabled-tables"></a><a name="Caveats"></a> 스트레치 사용 테이블에 대한 제한 사항  
   
 스트레치 사용 테이블에는 다음과 같은 제한 사항이 적용됩니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "73843791"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인덱스의 필터는 원격 테이블로 전파되지 않습니다.  
   
-##  <a name="Limitations"></a> 현재 테이블에 스트레치를 사용할 수 없게 하는 제한 사항  
+##  <a name="limitations-that-currently-prevent-you-from-enabling-stretch-for-a-table"></a><a name="Limitations"></a> 현재 테이블에 스트레치를 사용할 수 없게 하는 제한 사항  
    
  현재 테이블에 스트레치를 사용할 수 없게 하는 항목은 다음과 같습니다.  
   

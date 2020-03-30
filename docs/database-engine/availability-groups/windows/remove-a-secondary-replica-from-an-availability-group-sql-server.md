@@ -16,10 +16,10 @@ ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f0b73bf44f4990b94ad44e450214099760901134
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014378"
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>가용성 그룹에서 보조 복제본 제거(SQL Server)
@@ -27,19 +27,19 @@ ms.locfileid: "68014378"
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]또는 PowerShell을 사용하여 Always On 가용성 그룹에서 보조 복제본을 제거하는 방법을 설명합니다.  
  
    
-##  <a name="Restrictions"></a> 제한 사항  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   이 태스크는 주 복제본에서만 지원됩니다.    
 -   가용성 그룹에서는 보조 복제본만 제거할 수 있습니다.  
   
-## <a name="Prerequisites"></a> 필수 조건  
+## <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
   
 -   가용성 그룹의 주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
   
-##  <a name="Permissions"></a> 권한  
+##  <a name="permissions"></a><a name="Permissions"></a> 권한  
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **보조 복제본을 제거하려면**  
   
 1.  개체 탐색기에서 주 복제본을 호스팅하는 서버 인스턴스에 연결하고 서버 트리를 확장합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "68014378"
   
 6.  **가용성 그룹에서 보조 복제본 제거** 대화 상자에서 나열된 보조 복제본을 모두 제거하려면 **확인**을 클릭합니다. 나열된 모든 복제본을 제거하지 않으려면 **취소**를 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **보조 복제본을 제거하려면**  
   
 1.  주 복제본을 호스팅하는 서버 인스턴스에 연결합니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "68014378"
     ALTER AVAILABILITY GROUP MyAG REMOVE REPLICA ON 'COMPUTER02\HADR_INSTANCE';  
     ```  
   
-##  <a name="PowerShellProcedure"></a> PowerShell 사용  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell 사용  
  **보조 복제본을 제거하려면**  
   
 1.  주 복제본을 호스트하는 서버 인스턴스로 디렉터리(**cd**)를 변경합니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "68014378"
   
 -   [SQL Server PowerShell 공급자](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="PostBestPractices"></a> 후속 작업: 보조 복제본을 제거한 후  
+##  <a name="follow-up-after-removing-a-secondary-replica"></a><a name="PostBestPractices"></a> 후속 작업: 보조 복제본을 제거한 후  
  현재 사용할 수 없는 복제본을 지정할 경우 복제본이 온라인 상태가 될 때 제거되었음을 확인할 수 있습니다.  
   
  복제본을 제거하면 데이터 수신이 중지됩니다. 보조 복제본이 글로벌 상점에서 제거되었음을 확인한 후 이 복제본은 RECOVERING 상태에서 로컬 서버 인스턴스에 남아 있는 가용성 그룹 설정을 데이터베이스에서 제거합니다.  

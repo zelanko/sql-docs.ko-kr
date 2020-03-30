@@ -11,10 +11,10 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eecf4868791a9dcd963a31963f742f90a2cf3843
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68008428"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC 드라이버에서 연결 복원
@@ -35,7 +35,7 @@ ms.locfileid: "68008428"
   
      다음과 같이 하면 연결 다시 시도 횟수를 수정할 수 있습니다.  
   
-    -   **연결 다시 시도 횟수** 컨트롤을 사용하여 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용하는 데이터 원본을 정의하거나 수정합니다.  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]연결 다시 시도 횟수**컨트롤을 사용하여 ODBC Driver for**를 사용하는 데이터 원본을 정의하거나 수정합니다.  
   
     -   **ConnectRetryCount** 연결 문자열 키워드를 사용합니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68008428"
   
      다음과 같이 하면 연결 다시 시도 간격을 수정할 수 있습니다.  
   
-    -   **연결 다시 시도 간격** 컨트롤을 사용하여 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용하는 데이터 원본을 정의하거나 수정합니다.  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]연결 다시 시도 간격**컨트롤을 사용하여 ODBC Driver for**를 사용하는 데이터 원본을 정의하거나 수정합니다.  
   
     -   **ConnectRetryInterval** 연결 문자열 키워드를 사용합니다.  
   

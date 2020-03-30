@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: fbbedff0adbe0302465344d437f9646bf68d997f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242686"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>연습: 데이터베이스 프로젝트 빌드를 확장하여 모델 통계 생성
@@ -70,7 +70,7 @@ ms.locfileid: "75242686"
   
 이 경우 특성의 첫 번째 매개 변수는 고유 식별자여야 하며, 이 식별자는 프로젝트 파일에서 기여자를 식별하는 데 사용됩니다. 식별자를 생성하려면 라이브러리의 네임스페이스(이 연습에서는 "ExampleContributors")를 클래스 이름(이 연습에서는 "ModelStatistics")과 결합하는 것이 가장 좋습니다. 이 연습의 뒷부분에서는 이 네임스페이스를 사용해서 실행할 참가자를 지정하는 방법을 볼 수 있습니다.  
   
-## <a name="CreateBuildContributor"></a>빌드 참가자 만들기  
+## <a name="create-a-build-contributor"></a><a name="CreateBuildContributor"></a>빌드 참가자 만들기  
 빌드 참가자를 만들려면 다음 작업을 수행해야 합니다.  
   
 -   클래스 라이브러리 프로젝트를 만들고 필요한 참조를 추가합니다.  
@@ -452,7 +452,7 @@ ms.locfileid: "75242686"
   
     그런 다음 SQL 프로젝트를 빌드할 때 로드되도록 어셈블리를 설치해야 합니다.  
   
-## <a name="InstallBuildContributor"></a>빌드 참가자 설치  
+## <a name="install-a-build-contributor"></a><a name="InstallBuildContributor"></a>빌드 참가자 설치  
 빌드 참가자를 설치하려면 어셈블리 및 연관된 .pdb 파일을 Extensions 폴더에 복사해야 합니다.  
   
 #### <a name="to-install-the-mybuildcontributor-assembly"></a>MyBuildContributor 어셈블리를 설치하려면  
@@ -464,7 +464,7 @@ ms.locfileid: "75242686"
     > [!NOTE]  
     > 기본적으로 컴파일된 .dll 파일의 경로는 YourSolutionPath\YourProjectPath\bin\Debug 또는 YourSolutionPath\YourProjectPath\bin\Release입니다.  
   
-## <a name="TestBuildContributor"></a>빌드 참가자 실행 또는 테스트  
+## <a name="run-or-test-your-build-contributor"></a><a name="TestBuildContributor"></a>빌드 참가자 실행 또는 테스트  
 빌드 참가자를 실행 또는 테스트하려면 다음 작업을 수행해야 합니다.  
   
 -   빌드하려는 .sqlproj 파일에 속성을 추가합니다.  

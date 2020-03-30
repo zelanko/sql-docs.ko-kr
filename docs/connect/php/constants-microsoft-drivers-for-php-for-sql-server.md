@@ -13,10 +13,10 @@ ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4081e9db30e3607d783de40a71d9d7b2e7599c76
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993696"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>상수(Microsoft Drivers for PHP for SQL Server)
@@ -71,7 +71,7 @@ PDO::SQLSRV_ATTR_FORMAT_DECIMALS 및 PDO::SQLSRV_ATTR_DECIMAL_PLACES 특성을 �
 
 ### <a name="handling-date-and-time-fetches"></a>날짜 및 시간 페치 처리
 
-PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE는 날짜 및 시간 형식을 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 개체로 검색할지 여부를 지정합니다. false로 유지하면 기본적으로 문자열로 반환됩니다. 이러한 특성은 [PDO::setAttribute](../../connect/php/pdo-setattribute.md) 또는 [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md)를 사용하여 연결 또는 문 수준에서 설정할 수 있지만 문 특성은 해당 연결 특성을 재정의합니다. 자세한 내용은 [방법: PDO_SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 PHP 날짜/시간 개체로 검색](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)을 참조하세요.
+PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE는 날짜 및 시간 형식을 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 개체로 검색할지 여부를 지정합니다. false로 유지하면 기본적으로 문자열로 반환됩니다. 이러한 특성은 [PDO::setAttribute](../../connect/php/pdo-setattribute.md) 또는 [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md)를 사용하여 연결 또는 문 수준에서 설정할 수 있지만 문 특성은 해당 연결 특성을 재정의합니다. 자세한 내용은 [방법: PDO_SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 PHP DateTime 개체로 검색](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)을 참조하세요.
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV 드라이버 상수  
 다음 섹션에서는 SQLSRV 드라이버에서 사용되는 상수를 나열합니다.  
@@ -152,12 +152,12 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE는 날짜 및 시간 형식을 [PHP DateT
 |-------------------|---------------|  
 |SQLSRV_ENC_BINARY|데이터는 인코딩 또는 변환을 수행하지 않은 원시 바이트 스트림으로 서버에서 반환됩니다.|  
 |SQLSRV_ENC_CHAR|데이터는 시스템에 설정된 Windows 로캘의 코드 페이지에 지정된 8비트 문자로 반환됩니다. 모든 멀티바이트 문자 또는 이 코드 페이지에 매핑되지 않는 문자는 싱글바이트 물음표(?) 문자로 대체됩니다.<br /><br />이는 기본 인코딩입니다.|  
-|"UTF-8"|데이터는 UTF-8 인코딩으로 반환됩니다. 이 상수가 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 1.1에 추가되었습니다. UTF-8 지원에 대한 자세한 내용은 [방법: 기본 제공 UTF-8 지원을 사용하여 UTF-8 데이터 보내기 및 검색](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)을 참조하세요.|  
+|"UTF-8"|데이터는 UTF-8 인코딩으로 반환됩니다. 이 상수가 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 1.1에 추가되었습니다. UTF-8 지원에 대한 자세한 내용은 [방법: 기본 제공 UTF-8 지원을 사용하여 UTF-8 데이터를 보내기 및 검색](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)을 참조하세요.|  
   
 > [!NOTE]  
 > **SQLSRV_PHPTYPE_STREAM** 또는 **SQLSRV_PHPTYPE_STRING**을 사용하는 경우 인코딩이 지정되어야 합니다. 매개 변수가 제공되지 않으면 오류가 반환됩니다.  
   
-이러한 상수에 대한 자세한 내용은 [방법: PHP 데이터 형식 지정](../../connect/php/how-to-specify-php-data-types.md), [방법: SQLSRV 드라이버를 사용하여 스트림으로 문자 데이터 검색](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)을 참조하세요.  
+이러한 상수에 대한 자세한 내용은 [방법: PHP 데이터 형식 지정](../../connect/php/how-to-specify-php-data-types.md), [방법: SQLSRV 드라이버를 사용하여 스트림으로 문자 데이터 가져오기](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)를 참조하세요.  
   
 ### <a name="sqltype-constants"></a>SQLTYPE 상수  
 다음 표는 SQL Server 데이터 형식을 설명하는 데 사용되는 상수를 나열합니다. 일부 상수는 함수와 유사하며 전체 자릿수, 소수 자릿수 및/또는 길이에 해당하는 매개 변수를 사용할 수 있습니다.  매개 변수를 바인딩하는 경우 함수 형태 상수를 사용해야 합니다. 형식 비교의 경우 표준(비함수 형식) 상수가 필요합니다. SQL Server 데이터 형식에 대한 자세한 내용은 [데이터 형식(Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요. 전체 자릿수, 소수 자릿수 및 길이에 대한 자세한 내용은 [전체 자릿수, 소수 자릿수 및 길이(Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)를 참조하세요.  

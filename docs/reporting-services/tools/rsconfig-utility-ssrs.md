@@ -15,10 +15,10 @@ ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7ad41870ac9bcb162e792dc6abd8ca21ceeeb3f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082184"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 유틸리티(SSRS)
@@ -46,7 +46,7 @@ rsconfig {-?}
 |용어|선택/필수|정의|  
 |----------|------------------------|----------------|  
 |**-?**|(선택 사항)|Rsconfig.exe 인수의 구문을 표시합니다.|  
-|**-c**|**-e** 인수를 사용하지 않는 경우 필요합니다.|보고서 서버에서 보고서 서버 데이터베이스에 연결하는 데 사용되는 연결 문자열, 자격 증명 및 데이터 원본 값을 지정합니다.<br /><br /> 이 인수는 값을 가지지 않습니다. 그러나 모든 필수 연결 값을 제공하려면 이 인수와 함께 추가 인수를 지정해야 합니다.<br /><br /> **-c** 를 사용하여 지정할 수 있는 인수에는 **-m**, **-s**, **-i**,**-d**,**-a**,**-u**,**-p**및 **-t**가 있습니다.|  
+|**-c**|**-e** 인수를 사용하지 않는 경우 필요합니다.|보고서 서버에서 보고서 서버 데이터베이스에 연결하는 데 사용되는 연결 문자열, 자격 증명 및 데이터 원본 값을 지정합니다.<br /><br /> 이 인수는 값을 가지지 않습니다. 그러나 모든 필수 연결 값을 제공하려면 이 인수와 함께 추가 인수를 지정해야 합니다.<br /><br /> **-c** 를 사용하여 지정할 수 있는 인수에는 **-m**, **-s**, **-i**, **-d**, **-a**, **-u**, **-p**및 **-t**가 있습니다.|  
 |**-e**|**-c** 인수를 사용하지 않는 경우 필요합니다.|무인 보고서 실행 계정을 지정합니다.<br /><br /> 이 인수는 값을 가지지 않습니다. 그러나 구성 파일에 암호화된 값을 지정하려면 명령줄에 추가 인수를 포함해야 합니다.<br /><br /> **-e** 를 사용하여 지정할 수 있는 인수에는 **-u** 및 **-p**가 있습니다. **-t**도 설정할 수 있습니다.|  
 |**-m**  *computername*|원격 보고서 서버 인스턴스를 구성하는 경우 필요합니다.|보고서 서버를 호스팅하는 컴퓨터의 이름입니다. 이 인수를 생략할 경우 기본값은 **localhost**입니다.|  
 |**-s**  *servername*|필수 사항입니다.|보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정합니다.|  
@@ -70,7 +70,7 @@ rsconfig {-?}
   
 -   다른 자격 증명을 사용할 수 없을 때 보고서 서버에서 원격 데이터베이스 서버에 로그온하는 데 사용하는 특수 계정을 구성하려는 경우  
   
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 로컬 또는 원격 인스턴스에서 **rsconfig** 유틸리티를 실행할 수 있습니다. 이미 설정된 값을 해독하고 보는 데 **rsconfig** 유틸리티를 사용할 수 없습니다.  
+**의 로컬 또는 원격 인스턴스에서** rsconfig[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 유틸리티를 실행할 수 있습니다. 이미 설정된 값을 해독하고 보는 데 **rsconfig** 유틸리티를 사용할 수 없습니다.  
   
 이 유틸리티를 실행하려면 구성 중인 컴퓨터에 WMI(Windows Management Instrumentation)가 설치되어 있어야 합니다.  
   

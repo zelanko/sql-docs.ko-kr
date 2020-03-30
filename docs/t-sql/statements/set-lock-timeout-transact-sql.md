@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 97bdfbe485c129e7040235db7fffe296bb16897a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67928905"
 ---
 # <a name="set-lock_timeout-transact-sql"></a>SET LOCK_TIMEOUT(Transact-SQL)
@@ -65,7 +65,7 @@ SET LOCK_TIMEOUT timeout_period
   
 ## <a name="examples"></a>예  
   
-### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>A: 잠금 시간 제한을 1800 밀리초로 설정  
+### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>1\. 잠금 시간 제한을 1800 밀리초로 설정  
  다음 예에서는 잠금 제한 시간을 `1800`밀리초로 설정합니다.  
   
 ```sql  
@@ -73,7 +73,7 @@ SET LOCK_TIMEOUT 1800;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-set-the-lock-timeout-to-wait-forever-for-a-lock-to-be-released"></a>B. 잠금이 해제될 때까지 계속 대기하도록 잠금 제한 시간을 설정합니다.  
  다음 예제에서는 잠금 대기 시간을 무기한 대기하고 만료되지 않도록 설정합니다. 이는 각 연결이 시작될 때 이미 설정된 기본 동작입니다.  

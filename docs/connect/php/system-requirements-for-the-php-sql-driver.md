@@ -13,10 +13,10 @@ author: MightyPen
 ms.reviewer: carlrab
 ms.author: genemi
 ms.openlocfilehash: f384e121d3b4ce0aa7ebcb380ebe5eaaa0ee3d45
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76917819"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server에 대한 시스템 요구 사항
@@ -53,7 +53,7 @@ PHP가 실행되는 컴퓨터에 Microsoft ODBC Driver for SQL Server의 올바�
 |ODBC 드라이버 13  | | | | | |Y| |
 |ODBC 드라이버 11  |Y|Y|Y|Y|Y|Y|Y|
 
-SQLSRV 드라이버를 사용하는 경우 [sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md)는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에서 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC Driver for SQL Server 버전에 대한 정보를 반환합니다. PDO_SQLSRV 드라이버를 사용하는 경우 [PDO::getAttribute](../../connect/php/pdo-getattribute.md)를 사용하여 버전을 검색할 수 있습니다.
+SQLSRV 드라이버를 사용하는 경우 [sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용되는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Microsoft ODBC Driver for SQL Server 버전에 대한 정보를 반환합니다. PDO_SQLSRV 드라이버를 사용하는 경우 [PDO::getAttribute](../../connect/php/pdo-getattribute.md)를 사용하여 버전을 검색할 수 있습니다.
 
 ## <a name="sql-server"></a>SQL Server
 

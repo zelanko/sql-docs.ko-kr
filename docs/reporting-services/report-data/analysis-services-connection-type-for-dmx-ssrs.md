@@ -17,10 +17,10 @@ ms.assetid: 2de825e9-6d8a-4128-add0-da15dc6cea3e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 96aa224d6eb9dac6e6f2959010631007ba41a8cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081441"
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>DMX용 Analysis Services 연결 형식(SSRS)
@@ -35,7 +35,7 @@ ms.locfileid: "77081441"
  DMX 쿼리 디자이너의 모드를 변경하려면 쿼리 디자인 화면을 마우스 오른쪽 단추로 클릭하고 **디자인**, **쿼리**또는 **결과**를 선택합니다. 자세한 내용은 [Analysis Services DMX 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md) 및 [데이터 마이닝 모델에서 데이터 검색&#40;DMX&#41;&#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)을 참조하세요.  
   
 ## <a name="designing-a-prediction-query"></a>예측 쿼리 디자인  
- 디자인 모드의 쿼리 디자인 창에는 **마이닝 모델 창**과 **입력 테이블 선택 창**이 있습니다. **마이닝 모델** 창을 사용하여 쿼리에 사용할 마이닝 모델을 선택하고 **입력 테이블 선택** 창을 사용하여 예측의 기반이 될 테이블을 선택할 수 있습니다. 입력 테이블 대신 단일 쿼리를 사용하려면 쿼리 디자인 창을 마우스 오른쪽 단추로 클릭하고 **단일 쿼리**를 선택합니다. **입력 테이블 선택** 창이 **단일 쿼리 입력** 창으로 바뀝니다.  
+ 디자인 모드의 쿼리 디자인 창에는 **마이닝 모델** 창과 **입력 테이블 선택**창이 있습니다. **마이닝 모델** 창을 사용하여 쿼리에 사용할 마이닝 모델을 선택하고 **입력 테이블 선택** 창을 사용하여 예측의 기반이 될 테이블을 선택할 수 있습니다. 입력 테이블 대신 단일 쿼리를 사용하려면 쿼리 디자인 창을 마우스 오른쪽 단추로 클릭하고 **단일 쿼리**를 선택합니다. **입력 테이블 선택** 창이 **단일 쿼리 입력** 창으로 바뀝니다.  
   
  디자인 모드에서 **마이닝 모델** 및 **입력 테이블 선택** 창의 필드를 표 형태 창의 **필드** 열로 끕니다. 나머지 열을 채워 별칭을 지정하고, 결과에 해당 필드를 표시하고, 여러 필드를 그룹화하고, 연산자를 지정하여 필드 값을 지정한 기준 또는 인수로 제한할 수도 있습니다. 쿼리 모드에 있는 경우 필드를 쿼리 창으로 끌어 DMX 쿼리를 작성합니다.  
   

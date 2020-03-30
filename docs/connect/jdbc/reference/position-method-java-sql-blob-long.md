@@ -16,10 +16,10 @@ ms.assetid: ebd005e5-f6c5-4789-87f9-d2fdacd35060
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cedfe53b8b30152ed4ca2dd3d1c68d6ff885b6bc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976436"
 ---
 # <a name="position-method-javasqlblob-long"></a>position 메서드(java.sql.Blob, long)

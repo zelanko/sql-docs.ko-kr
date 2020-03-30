@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: cb12cc164490e249dae13ef22cdd5279a0427102
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75304802"
 ---
 # <a name="tablediff-utility"></a>tablediff 유틸리티
@@ -173,7 +173,7 @@ tablediff
 |**2**|테이블 차이|  
   
 ## <a name="remarks"></a>설명  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이외 서버에서는 **tablediff** 유틸리티를 사용할 수 없습니다.  
+ **이외 서버에서는**tablediff[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티를 사용할 수 없습니다.  
   
  데이터 형식이 **sql_variant** 인 열이 있는 테이블은 지원되지 않습니다.  
   

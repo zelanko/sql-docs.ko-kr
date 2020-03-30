@@ -16,10 +16,10 @@ ms.assetid: c9e7b904-2e98-459f-9173-382919d741e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 189b35b98c6b604563d056f286b9640ee47637a8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67980455"
 ---
 # <a name="getreference-method-sqlserverxadatasource"></a>getReference 메서드(SQLServerXADataSource)

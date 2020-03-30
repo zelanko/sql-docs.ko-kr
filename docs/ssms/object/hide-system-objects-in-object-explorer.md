@@ -16,17 +16,17 @@ ms.assetid: c01d8804-838c-4f75-b78c-80e41e4fffdc
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: a6220224834743ec356e8e67ecc89f13afc02e1e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257195"
 ---
 # <a name="hide-system-objects-in-object-explorer"></a>개체 탐색기에서 시스템 개체 숨기기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 시스템 개체를 숨기는 방법에 대해 설명합니다. 개체 탐색기의 **데이터베이스** 노드에는 시스템 데이터베이스와 같은 시스템 개체가 있습니다. **도구**/**옵션** 페이지를 사용하여 시스템 개체를 숨길 수 있습니다. 시스템 함수 및 시스템 데이터 형식과 같은 일부 시스템 개체는 이 설정의 영향을 받지 않습니다.  
   
-## <a name="SSMSProcedure"></a>SQL Server Management Studio 사용  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>SQL Server Management Studio 사용  
   
 #### <a name="to-hide-system-objects-in-object-explorer"></a>개체 탐색기에서 시스템 개체를 숨기려면  
   

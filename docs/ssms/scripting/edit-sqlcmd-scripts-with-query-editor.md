@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 637de4e8168b97e27da707f3f189d3608786d973
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253911"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>쿼리 편집기로 SQLCMD 스크립트 편집
@@ -51,7 +51,7 @@ ms.locfileid: "75253911"
   
 #### <a name="to-switch-a-database-engine-query-editor-window-to-sqlcmd-mode"></a>데이터베이스 엔진 쿼리 편집기 창을 SQLCMD 모드로 전환하려면  
   
-1.  개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭한 다음 **새 쿼리[!INCLUDE[ssDE](../../includes/ssde-md.md)]를 클릭하여 새** 쿼리 편집기 창을 엽니다.  
+1.  개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭한 다음 **새 쿼리**를 클릭하여 새[!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창을 엽니다.  
   
 2.  **쿼리** 메뉴에서 **SQLCMD 모드**를 클릭합니다.  
   

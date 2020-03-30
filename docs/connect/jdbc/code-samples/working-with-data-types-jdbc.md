@@ -11,10 +11,10 @@ ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee1e64794480346b1742b441437db95b8ae41456
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028291"
 ---
 # <a name="working-with-data-types-jdbc"></a>데이터 형식 사용(JDBC)
@@ -26,7 +26,7 @@ ms.locfileid: "69028291"
 > [!NOTE]  
 > 형식 간 차이점 및 Java 언어 데이터 형식으로 변환하는 방법에 대한 내용을 포함한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 JDBC 드라이버 데이터 형식에 대한 자세한 내용은 [JDBC 드라이버 데이터 형식 이해](../../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)를 참조하세요.  
   
-SQL Server 데이터 형식 작업을 위해 JDBC 드라이버에서는 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 및 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스에 대해 get\<Type> 및 set\<Type> 메서드를 제공하며, [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스에 대해 get\<Type> 및 update\<Type> 메서드를 제공합니다. 어떤 메서드를 사용할지는 작업하는 데이터 형식 및 결과 집합이나 쿼리 사용 여부에 따라 달라집니다.  
+SQL Server 데이터 형식 작업을 위해 JDBC 드라이버에서는 \<SQLServerPreparedStatement\< 및 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 클래스에 대해 get[Type> 및 set](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)Type> 메서드를 제공하며, \<SQLServerResultSet\< 클래스에 대해 get[Type> 및 update](../../../connect/jdbc/reference/sqlserverresultset-class.md)Type> 메서드를 제공합니다. 어떤 메서드를 사용할지는 작업하는 데이터 형식 및 결과 집합이나 쿼리 사용 여부에 따라 달라집니다.  
   
 이 섹션의 항목에서는 JDBC 드라이버 데이터 형식을 사용하여 Java 애플리케이션의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터에 액세스하는 방법을 설명합니다.  
   

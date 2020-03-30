@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 64799766b8b9d69a5577fd589c8f610be75ebb8f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74479398"
 ---
 # <a name="tips-for-using-r-packages"></a>R 패키지 사용 팁
@@ -34,7 +34,7 @@ R 패키지는 여러 다른 패키지에 종속되는 경우가 많으며, 그�
 
 ### <a name="package-sources-versions-and-formats"></a>패키지 원본, 버전 및 형식
 
-R 패키지에 대해 [CRAN](https://cran.r-project.org/) 및 [Bioconductor](https://www.bioconductor.org/)와 같은 여러 출처가 있습니다. R 언어 공식 사이트(<https://www.r-project.org/>)에 다양한 리소스가 나와 있습니다. Microsoft는 오픈 소스 R([MRAN](https://mran.microsoft.com/open)) 및 기타 패키지의 배포판에 대해 [MRAN](https://mran.microsoft.com/)을 제공합니다. 많은 패키지는 개발자가 소스 코드를 볼 수 있는 GitHub에도 게시됩니다.
+R 패키지에 대해 [CRAN](https://cran.r-project.org/) 및 [Bioconductor](https://www.bioconductor.org/)와 같은 여러 출처가 있습니다. R 언어 공식 사이트(<https://www.r-project.org/>)에 다양한 리소스가 나와 있습니다. Microsoft는 오픈 소스 R([MRAN](https://mran.microsoft.com/)) 및 기타 패키지의 배포판에 대해 [MRAN](https://mran.microsoft.com/open)을 제공합니다. 많은 패키지는 개발자가 소스 코드를 볼 수 있는 GitHub에도 게시됩니다.
 
 ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 R 패키지는 여러 컴퓨팅 플랫폼에서 실행됩니다. 설치한 버전은 Windows 이진 파일이어야 합니다.

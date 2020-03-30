@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ef70b3430cc1028b7486bf663280cfcf740d9290
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62651959"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>SSRS 서비스 애플리케이션에 대한 구독 및 경고 프로비전
@@ -57,7 +57,7 @@ ms.locfileid: "62651959"
   
 5.  **확인** 단추를 클릭합니다.  
   
-##  <a name="bkmk_download"></a> Transact-SQL 스크립트를 다운로드하려면  
+##  <a name="to-download-the-transact-sql-script"></a><a name="bkmk_download"></a> Transact-SQL 스크립트를 다운로드하려면  
   
 1.  SharePoint 중앙 관리의 **애플리케이션 관리** 그룹에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   

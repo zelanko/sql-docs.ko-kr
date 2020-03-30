@@ -18,10 +18,10 @@ ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e08a4a43897c1497c81a9e01f010fa99a252130e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080173"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>데이터 필터링, 그룹화 및 정렬(보고서 작성기 및 SSRS)
@@ -52,7 +52,7 @@ ms.locfileid: "77080173"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Filtering"></a> 보고서 데이터 필터링  
+##  <a name="filtering-data-in-the-report"></a><a name="Filtering"></a> 보고서 데이터 필터링  
  필터는 데이터 연결에서 검색된 보고서 데이터를 제어하는 데 사용되는 보고서의 일부입니다. 필터는 데이터를 외부 데이터 원본에서 검색하기 전에 필터링하기 위해 데이터 세트 쿼리를 변경할 수 없는 경우에 사용합니다.  
   
  가능한 경우 보고서에 표시하기 위해 필요한 데이터만 반환하는 데이터 세트 쿼리를 작성합니다. 검색 및 처리해야 하는 데이터의 양을 줄이면 보고서 성능을 향상시키는 데 도움이 됩니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
@@ -66,7 +66,7 @@ ms.locfileid: "77080173"
  각 사용자에 대한 뷰를 사용자 지정하려면 필터에 기본 제공 필드 UserID에 대한 참조를 포함합니다. 자세한 내용은 [기본 제공 Globals 및 Users 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)를 참조하세요.  
   
   
-##  <a name="Grouping"></a> 보고서 데이터 그룹화  
+##  <a name="grouping-data-in-the-report"></a><a name="Grouping"></a> 보고서 데이터 그룹화  
  그룹은 표시하거나 집계 값을 계산하기 위한 보고서 데이터를 구성합니다. 그룹을 정의하고 그룹 기능을 사용하는 방법을 이해하면 보고서를 더욱 간결하게 디자인할 수 있습니다.  
   
  그룹 식은 다음을 수행할 때 자동으로 만들어집니다.  
@@ -102,7 +102,7 @@ ms.locfileid: "77080173"
  테이블, 행렬 또는 목록의 셀에 있는 데이터 영역을 중첩시킬 경우 자동으로 데이터의 범위가 셀의 가장 안쪽 그룹 멤버 자격으로 지정됩니다. 예를 들어 행 그룹 및 열 그룹 모두에 있는 셀에 차트를 추가하면 런타임에 이 차트에서 데이터 사용 범위는 가장 안쪽 행 그룹 인스턴스와 가장 안쪽 열 그룹 인스턴스입니다. 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)를 나타냅니다.  
   
   
-##  <a name="Sorting"></a> 보고서 데이터 정렬  
+##  <a name="sorting-data-in-the-report"></a><a name="Sorting"></a> 보고서 데이터 정렬  
  보고서에서 데이터의 정렬 순서를 제어하려면 데이터 세트 쿼리에서 데이터를 정렬하거나 데이터 영역 또는 그룹에 대한 정렬 식을 정의할 수 있습니다. 테이블 및 행렬에 대화형 정렬 단추를 추가하면 사용자가 행 정렬 순서를 변경할 수 있습니다.  
   
  동일한 보고서에서 세 가지 정렬 유형을 모두 사용할 수 있습니다. 기본적으로 정렬 순서는 데이터 세트 쿼리에서 반환되는 데이터의 순서에 따라 결정됩니다. 정렬 식은 데이터 영역과 데이터 영역 그룹에 적용됩니다. 대화형 정렬은 정렬 식 다음에 적용됩니다.  
@@ -159,13 +159,13 @@ FROM Production.Product
   
  자세한 내용은 [데이터 영역의 데이터 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md) 및 [Lookup 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md)를 참조하세요.  
   
-###  <a name="Interactive"></a> 사용자를 위해 대화형 정렬 추가  
+###  <a name="adding-interactive-sorting-for-the-user"></a><a name="Interactive"></a> 사용자를 위해 대화형 정렬 추가  
  사용자가 테이블 또는 행렬에 있는 보고서 데이터의 정렬 순서를 변경할 수 있도록 하려면 열 머리글 또는 그룹 머리글에 대화형 정렬 단추를 추가합니다. 사용자는 이 단추를 클릭하여 정렬 순서를 토글할 수 있습니다. 대화형 정렬은 HTML과 같이 사용자 상호 작용을 허용하는 렌더링 형식에서 지원됩니다.  
   
  테이블릭스 데이터 영역 셀의 입력란에 대화형 정렬 단추를 추가합니다. 기본적으로 모든 테이블릭스 셀은 입력란을 포함합니다. 입력란 속성에서, 테이블 또는 행렬 데이터 영역에서 정렬할 부분(부모 그룹 값, 자식 그룹 값 또는 정보 행), 정렬 기준 및 피어 관계에 있는 다른 보고서 항목에 정렬 식을 적용할지 여부를 지정합니다. 예를 들어 같은 데이터 세트에 대한 테이블과 차트가 사각형 안에 포함된 경우 이 둘은 피어 데이터 영역입니다. 사용자가 테이블에서 정렬 순서를 전환하면 차트의 정렬 순서도 전환됩니다. 자세한 내용은 [대화형 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)을 참조하세요.  
   
   
-##  <a name="HowTo"></a> 방법 도움말 항목  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 방법 도움말 항목  
  [보고서를 스크롤할 때 머리글 계속 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
  [그룹과 함께 머리글 및 바닥글 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
@@ -184,14 +184,14 @@ FROM Production.Product
   
  [그룹 또는 테이블릭스 데이터 영역에 합계 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
-##  <a name="Section"></a> 섹션 내용  
+##  <a name="in-this-section"></a><a name="Section"></a> 섹션 내용  
  [그룹 식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
   
  [필터 수식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)  
   
  [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)  
   
-##  <a name="Related"></a> 관련 단원  
+##  <a name="related-sections"></a><a name="Related"></a> 관련 단원  
  [그룹 이해&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)  
   
  [재귀 계층 구조 그룹 생성&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  

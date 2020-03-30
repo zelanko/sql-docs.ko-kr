@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: a7aa6a28a64e35c13c135e509b758a1636b3f896
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896282"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>고가용성 재해 복구를 위한 SqlClient 지원
@@ -59,7 +59,7 @@ SqlClient의 연결 문자열 키워드에 대한 자세한 내용은 <xref:Micr
   
 - IP 주소가 64개 이상으로 구성된 SQL Server 인스턴스에 연결하면 연결 오류가 발생합니다.  
   
-- `MultiSubnetFailover` 연결 속성을 사용하는 애플리케이션의 동작은 인증 형식, 즉 SQL Server 인증, Kerberos 인증 또는 Windows 인증에 따른 영향을 받지 않습니다.  
+- `MultiSubnetFailover` 연결 속성을 사용하는 애플리케이션 동작은 SQL Server 인증, Kerberos 인증, Windows 인증 등의 인증 유형에 영향을 받지 않습니다.  
   
 - 장애 조치 시간을 수용하도록 `Connect Timeout` 값을 늘리고 애플리케이션 연결 재시도 횟수를 줄입니다.  
   
@@ -76,7 +76,7 @@ SqlClient의 연결 문자열 키워드에 대한 자세한 내용은 <xref:Micr
 주 복제본이 읽기 전용 작업을 거부하도록 구성되어 있고 연결 문자열에 `ApplicationIntent=ReadOnly`가 포함되어 있으면 연결이 실패합니다.  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>데이터베이스 미러링에서 다중 서브넷 클러스터를 사용하도록 업그레이드  
-연결 문자열에 `MultiSubnetFailover` 및 `Failover Partner` 연결 키워드가 있거나 `MultiSubnetFailover=True`와 TCP가 아닌 프로토콜이 사용되면 연결 오류(<xref:System.ArgumentException>)가 발생합니다. `MultiSubnetFailover`가 사용되고 SQL Server에서 데이터베이스 미러링 쌍의 일부임을 나타내는 장애 조치(Failover) 파트너 응답을 반환하는 경우에도 오류(<xref:Microsoft.Data.SqlClient.SqlException>)가 발생합니다.  
+연결 문자열에 <xref:System.ArgumentException> 및 `MultiSubnetFailover` 연결 키워드가 있거나 `Failover Partner`와 TCP가 아닌 프로토콜이 사용되면 연결 오류(`MultiSubnetFailover=True`)가 발생합니다. <xref:Microsoft.Data.SqlClient.SqlException>가 사용되고 SQL Server에서 데이터베이스 미러링 쌍의 일부임을 나타내는 장애 조치(Failover) 파트너 응답을 반환하는 경우에도 오류(`MultiSubnetFailover`)가 발생합니다.  
   
 현재 데이터베이스 미러링을 사용 중인 SqlClient 애플리케이션을 다중 서브넷 시나리오로 업그레이드할 경우에는 `Failover Partner` 연결 속성을 제거하고 이를 `MultiSubnetFailover`로 설정된 `True`로 바꾸고, 연결 문자열에서 서버 이름을 가용성 그룹 수신기로 바꿔야 합니다. 연결 문자열에 `Failover Partner` 및 `MultiSubnetFailover=True`가 사용될 경우 드라이버에서 오류가 발생합니다. 하지만 연결 문자열에 `Failover Partner` 및 `MultiSubnetFailover=False`(또는 `ApplicationIntent=ReadWrite`)가 사용될 경우 애플리케이션에 데이터베이스 미러링이 사용됩니다.  
   
@@ -87,7 +87,7 @@ AG의 기본 데이터베이스에서 데이터베이스 미러링이 사용되�
   
 `ApplicationIntent` 키워드는 레거시 읽기 전용 데이터베이스에 적용되지 않습니다.  
   
-데이터베이스는 대상 AlwaysOn 데이터베이스에 대한 읽기 작업을 허용하거나 허용하지 않을 수 있습니다. (이 설정은 `PRIMARY_ROLE` 및 `SECONDARY_ROLE`Transact-SQL 문의 `ALLOW_CONNECTIONS` 절로 수행됩니다.)  
+데이터베이스는 대상 AlwaysOn 데이터베이스에 대한 읽기 작업을 허용하거나 허용하지 않을 수 있습니다. (이 설정은 `ALLOW_CONNECTIONS` 및 `PRIMARY_ROLE`Transact-SQL 문의 `SECONDARY_ROLE` 절로 수행됩니다.)  
   
 `ApplicationIntent` 키워드는 읽기 전용 라우팅을 설정하는 데 사용됩니다.  
   

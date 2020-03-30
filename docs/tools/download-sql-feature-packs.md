@@ -12,10 +12,10 @@ ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 ms.openlocfilehash: 3a9c24e046c9fa6dfeba338a28b0aa4ff3a86782
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75251341"
 ---
 # <a name="download-sql-server-extended-features-and-tools"></a>SQL Server 확장 기능 및 도구 다운로드
@@ -49,7 +49,7 @@ ms.locfileid: "75251341"
 | [SQL Server 데이터 계층 애플리케이션 프레임워크](https://www.microsoft.com/download/details.aspx?id=56508) | SQL Server DAC(데이터 계층 애플리케이션) 프레임워크는 데이터베이스 개발 및 관리를 위한 애플리케이션 수명 주기 서비스를 제공하는 .NET Framework 기반의 구성 요소입니다. |
 | [SQL Server 의미 체계 언어 통계](https://docs.microsoft.com/sql/relational-databases/search/install-and-configure-semantic-search) | 의미 체계 언어 통계 데이터베이스는 Microsoft SQL Server의 통계 의미 체계 검색 기능에 필요한 구성 요소입니다. |
 | [SQL Server 공유 관리 개체](https://docs.microsoft.com/sql/relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide) | SMO(SQL Server 관리 개체)는 .NET Framework 개체 모델로, 소프트웨어 개발자는 이를 사용하여 SQL Server 개체 및 서비스를 관리하는 클라이언트 쪽 애플리케이션을 만들 수 있습니다. |
-| [시스템 CLR 유형](https://go.microsoft.com/fwlink/?linkid=2108808) | SQL Server System CLR Types 패키지에는 SQL Server에 새로 추가된 geometry, geography 및 hierarchy ID 형식을 구현하는 구성 요소가 포함되어 있습니다. **참고: 이 구성 요소에는 [Windows Installer 4.5](https://go.microsoft.com/fwlink/?LinkId=123373)** 가 필요합니다. |
+| [시스템 CLR 유형](https://go.microsoft.com/fwlink/?linkid=2108808) | SQL Server System CLR Types 패키지에는 SQL Server에 새로 추가된 geometry, geography 및 hierarchy ID 형식을 구현하는 구성 요소가 포함되어 있습니다. **참고: 이 구성 요소는 [Windows Installer 4.5](https://go.microsoft.com/fwlink/?LinkId=123373)** 도 필요로 합니다. |
 | [Microsoft SQL Server용 Windows PowerShell 확장](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-powershell?view=sql-server-2017) | SQL Server용 Microsoft Windows PowerShell 확장에는 관리자 및 개발자가 SQL Server의 인스턴스를 관리하는 데 필요한 PowerShell 스크립트를 작성할 수 있게 하는 cmdlet 집합 및 공급자가 포함되어 있습니다. |
 |||
 

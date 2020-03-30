@@ -15,10 +15,10 @@ ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 24607a6372ba733165aa12fd159baea10f80ebd4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74822019"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance"></a>SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드
@@ -46,13 +46,13 @@ ms.locfileid: "74822019"
 ## <a name="prerequisites"></a>사전 요구 사항  
  시작하기 전에 다음과 같은 중요한 정보를 검토하십시오.  
   
--   [지원되는 버전 및 에디션 업그레이드](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): 사용 중인 Windows 운영 체제 버전 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]으로 업그레이드할 수 있는지 확인합니다. 예를 들어 SQL Server 2005 장애 조치(failover) 클러스터링 인스턴스에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]로 직접 업그레이드하거나 [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)]에서 실행 중인 장애 조치(failover) 클러스터를 업그레이드할 수는 없습니다.  
+-   [지원되는 버전 및 버전 업그레이드](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): 사용자의 Windows 운영 체제 버전 및 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 버전에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]로 업그레이드할 수 있는지 확인합니다. 예를 들어 SQL Server 2005 장애 조치(failover) 클러스터링 인스턴스에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]로 직접 업그레이드하거나 [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)]에서 실행 중인 장애 조치(failover) 클러스터를 업그레이드할 수는 없습니다.  
   
--   [데이터베이스 엔진 업그레이드 방법 선택](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): 지원되는 버전 및 에디션 업그레이드에 대한 검토 결과와 환경에 설치된 기타 구성 요소를 바탕으로 적합한 업그레이드 방법 및 단계를 선택하여 올바른 순서로 구성 요소를 업그레이드합니다.  
+-   [Choose a Database Engine Upgrade Method](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): 지원되는 버전 및 버전 업그레이드에 대한 검토와 사용자 환경에 설치된 기타 구성 요소를 바탕으로 적절한 업그레이드 방법 및 단계를 선택하여 올바른 순서로 구성 요소를 업그레이드합니다.  
   
 -   [데이터베이스 엔진 업그레이드 계획 및 테스트](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): 릴리스 정보 및 알려진 업그레이드 문제, 업그레이드 전 검사 목록을 검토한 후 업그레이드 계획을 개발하고 테스트합니다.  
   
--   [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 설치를 위한 소프트웨어 요구 사항을 검토합니다. 추가 소프트웨어가 필요한 경우 가동 중지 시간을 최소화하기 위해 업그레이드 프로세스를 시작하기 전에 각 노드에 설치하십시오.  
+-   [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 설치하기 위한 소프트웨어 요구 사항을 검토합니다. 추가 소프트웨어가 필요한 경우 가동 중지 시간을 최소화하기 위해 업그레이드 프로세스를 시작하기 전에 각 노드에 설치하십시오.  
   
 ## <a name="perform-a-rolling-upgrade-or-update"></a>롤링 업그레이드 또는 업데이트 수행  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터를 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]로 업그레이드하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 사용해 패시브 노드부터 시작하여 한 번에 하나의 장애 조치(failover) 클러스터 노드를 업그레이드합니다. 업그레이드된 각 노드는 장애 조치 클러스터의 가능한 소유자 노드에서 제외됩니다. 예기치 않은 장애 조치(failover)가 수행되면 클러스터 리소스 그룹 소유권이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램에 의해 업그레이드된 노드로 이동하기 전까지는 업그레이드된 노드가 장애 조치(failover)에 참여하지 않습니다.  

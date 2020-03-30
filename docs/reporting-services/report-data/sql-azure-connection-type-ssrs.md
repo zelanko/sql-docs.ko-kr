@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0d81923ba623765e8929cf0c1cb4da2e73ac6e8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081758"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure 연결 형식(SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "77081758"
   
 이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)을 참조하세요.  
   
-## <a name="Connection"></a> 연결 문자열
+## <a name="connection-string"></a><a name="Connection"></a> 연결 문자열
 
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 연결하면 클라우드의 데이터베이스 개체에 연결하게 됩니다. 온사이트 데이터베이스와 마찬가지로 호스팅되는 데이터베이스에는 여러 테이블, 뷰 및 저장 프로시저가 있는 스키마가 여러 개 있을 수 있으므로 쿼리 디자이너에서 사용할 데이터베이스 개체를 지정합니다. 연결 문자열에 데이터베이스를 지정하지 않을 경우 관리자가 할당한 기본 데이터베이스에 연결됩니다.  
   
@@ -45,7 +45,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 연결 문자열 예제 및 자세한 내용은 [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)를 참조하세요.  
   
-## <a name="Credentials"></a> 자격 증명
+## <a name="credentials"></a><a name="Credentials"></a> 자격 증명
 
 Windows 인증(통합 보안)이 지원되지 않기 때문에 Windows 인증을 사용하여 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 연결하려고 하면 오류가 발생합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에서는 SQL Server 인증(사용자 이름 및 암호)만 지원하므로 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 연결할 때마다 자격 증명(로그인 및 암호)을 제공해야 합니다.  
   
@@ -59,7 +59,7 @@ Windows 인증(통합 보안)이 지원되지 않기 때문에 Windows 인증을
   
 자세한 내용은 [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 또는 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.  
   
-## <a name="Query"></a> 쿼리
+## <a name="queries"></a><a name="Query"></a> 쿼리
 
 쿼리는 보고서 데이터 세트에 대해 검색할 데이터를 지정합니다. 쿼리 결과 집합의 열은 데이터 세트의 필드 컬렉션을 채웁니다. 쿼리가 여러 결과 집합을 반환할 경우 보고서는 쿼리가 검색한 첫 번째 결과 집합만 처리합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 과(와) [!INCLUDE[ssSDS](../../includes/sssds-md.md)]은(는) 지원되는 데이터베이스 크기 등이 다를 수 있지만 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 대한 쿼리를 작성하는 방법과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 쿼리를 작성하는 방법은 비슷합니다. BACKUP과 같은 일부 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 지원되지 않지만 이러한 문은 보고서 쿼리에 사용하는 문이 아닙니다. 자세한 내용은 [SQL Server 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)을 참조하세요.  
   
@@ -81,7 +81,7 @@ Windows 인증(통합 보안)이 지원되지 않기 때문에 Windows 인증을
   
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에서 사용하는 그래픽 쿼리 디자이너는 요약 데이터만 검색하는 쿼리를 작성하는 데 도움이 되는 그룹화 및 집계를 기본적으로 지원합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 기능은 GROUP BY 절, DISTINCT 키워드 및 SUM, COUNT 등과 같은 집계입니다. 텍스트 기반 쿼리 디자이너는 그룹화 및 집계를 비롯한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어를 완벽하게 지원합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]에 대한 자세한 내용은 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](../../t-sql/transact-sql-reference-database-engine.md)을 참조하세요.  
   
-### <a name="QueryText"></a> Text 쿼리 유형 사용
+### <a name="using-query-type-text"></a><a name="QueryText"></a> Text 쿼리 유형 사용
 
 텍스트 기반 쿼리 디자이너에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 입력하여 데이터 세트의 데이터를 정의합니다. 예를 들어 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리는 마케팅 지원을 담당하는 모든 직원의 이름을 선택합니다.
 
@@ -98,7 +98,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'   
 ```
 
-쿼리를 실행하고 결과 집합을 표시하려면 도구 모음에서 **실행** 단추(**!**)를 클릭합니다.  
+쿼리를 실행하고 결과 집합을 표시하려면 도구 모음에서 **실행** 단추( **!** )를 클릭합니다.  
   
 이 쿼리에서 매개 변수를 사용하려면 쿼리 매개 변수를 추가합니다. 예를 들어 WHERE 절을 다음과 같이 변경합니다.  
 
@@ -108,7 +108,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
 
 쿼리를 실행하면 쿼리 매개 변수에 해당하는 보고서 매개 변수가 자동으로 만들어집니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [쿼리 매개 변수](#Parameters) 를 참조하십시오.  
   
-### <a name="QueryStoredProcedure"></a> StoredProcedure 쿼리 유형 사용
+### <a name="using-query-type-storedprocedure"></a><a name="QueryStoredProcedure"></a> StoredProcedure 쿼리 유형 사용
 
 다음 중 한 가지 방법으로 데이터 세트 쿼리에 대해 저장 프로시저를 지정할 수 있습니다.  
   
@@ -126,7 +126,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
   
 저장 프로시저에 대한 자세한 내용은 [저장 프로시저(데이터베이스 엔진)](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)를 참조하세요.  
   
-## <a name="Parameters"></a> 매개 변수
+## <a name="parameters"></a><a name="Parameters"></a> 매개 변수
 
 쿼리 텍스트에 입력 매개 변수가 있는 쿼리 변수 또는 저장 프로시저가 포함된 경우 데이터 세트에 대한 해당 쿼리 매개 변수와 보고서에 대한 해당 보고서 매개 변수가 자동으로 생성됩니다. 쿼리 텍스트는 각 쿼리 변수에 대한 DECLARE 문을 포함하지 않아야 합니다.  
   
@@ -140,7 +140,7 @@ WHERE EmployeeID = (@EmpID)
 
 기본적으로 각 보고서 매개 변수는 데이터 형식이 Text이며 사용 가능한 값의 드롭다운 목록을 제공하기 위해 자동으로 작성된 데이터 세트를 가집니다. 보고서 매개 변수가 만들어진 후에는 기본값을 변경해야 할 수 있습니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)에 대해 자세히 알아봅니다.  
 
-## <a name="Remarks"></a> 주의
+## <a name="remarks"></a><a name="Remarks"></a> 주의
   
 ###### <a name="alternate-data-extensions"></a>대체 데이터 확장 프로그램
 
@@ -167,7 +167,7 @@ AAD(Azure Active Directory) 통과 인증을 통해 Azure SQL Database를 사용
 
 ::: moniker-end
 
-## <a name="HowTo"></a> 방법 도움말 항목
+## <a name="how-to-topics"></a><a name="HowTo"></a> 방법 도움말 항목
 
 이 섹션에서는 데이터 연결, 데이터 원본 및 데이터 세트를 사용하는 방법을 단계별로 설명합니다.  
   
@@ -177,7 +177,7 @@ AAD(Azure Active Directory) 통과 인증을 통해 Azure SQL Database를 사용
   
 [데이터 세트에 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
-## <a name="Related"></a> 관련 단원
+## <a name="related-sections"></a><a name="Related"></a> 관련 단원
 
 설명서의 다음 섹션에서는 보고서 데이터에 대한 깊이 있는 개념 정보를 제공하며, 데이터와 관련된 보고서 부분을 정의, 사용자 지정 및 사용하는 방법을 절차적인 측면에서 소개합니다.  
   

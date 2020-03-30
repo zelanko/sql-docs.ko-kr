@@ -11,10 +11,10 @@ ms.assetid: 839f9c67-4cd4-4e07-a0ef-ba62591e9e5a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4f1f7dbbd782f9ef1544c01d7fa7175b4416992
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971752"
 ---
 # <a name="sqlserverclob-methods"></a>SQLServerClob 메서드

@@ -12,10 +12,10 @@ ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 67945db1fd131b27b37a7e34853987c38fad8d84
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140376"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Reporting Services 기능 설정 또는 해제
@@ -31,7 +31,7 @@ ms.locfileid: "67140376"
   
 -   [보고서 데이터 원본의 Windows 통합 보안](#WinIntSec)  
   
-##  <a name="RSWebSvc"></a> 보고서 서버 웹 서비스  
+##  <a name="report-server-web-service"></a><a name="RSWebSvc"></a> 보고서 서버 웹 서비스  
   
 ### <a name="to-turn-on-or-off-the-report-server-web-service-by-editing-configuration"></a>구성을 편집하여 보고서 서버 웹 서비스를 설정하거나 해제하려면  
   
@@ -67,7 +67,7 @@ ms.locfileid: "67140376"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="Sched"></a> 예약된 이벤트 및 배달  
+##  <a name="scheduled-events-and-delivery"></a><a name="Sched"></a> 예약된 이벤트 및 배달  
   
 #### <a name="to-turn-on-or-off-scheduled-events-and-delivery-by-editing-configuration"></a>구성을 편집하여 예약된 이벤트 및 배달을 설정하거나 해제하려면  
   
@@ -94,11 +94,11 @@ ms.locfileid: "67140376"
 > [!NOTE]  
 >  백그라운드 처리는 서버 작업에 필요한 유지 관리 기능을 제공하므로 완전히 해제할 수는 없습니다.  
   
-##  <a name="WebPortal"></a> 웹 포털
+##  <a name="web-portal"></a><a name="WebPortal"></a> 웹 포털
   
 SQL Server 2016 Reporting Services 누적 업데이트 2부터 웹 포털은 항상 사용됩니다.
   
-##  <a name="WinIntSec"></a> Windows 통합 보안  
+##  <a name="windows-integrated-security"></a><a name="WinIntSec"></a> Windows 통합 보안  
   
 ### <a name="to-turn-on-or-off-windows-integrated-security-by-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 Windows 통합 보안을 설정하거나 해제하려면  
   

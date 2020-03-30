@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f259c5a8a9b32d723c62d73f2b0563093851ef5c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571601"
 ---
 # <a name="data-alert-designer"></a>데이터 경고 디자이너
@@ -54,7 +54,7 @@ ms.locfileid: "65571601"
   
  데이터 경고 디자이너를 열려면 보고서 도구 모음의 **동작** 메뉴에서 **새 데이터 경고** 옵션을 클릭합니다. **새 데이터 경고** 옵션이 표시되지 않을 경우 보고서가 저장된 자격 증명을 사용하도록 구성되지 않은 것입니다. SharePoint 라이브러리에서 보고서 데이터 원본을 업데이트하여 자격 증명 유형을 업데이트할 수 있습니다.  
   
-##  <a name="AlertDesigner"></a> 데이터 경고 디자이너 사용자 인터페이스  
+##  <a name="data-alert-designer-user-interface"></a><a name="AlertDesigner"></a> 데이터 경고 디자이너 사용자 인터페이스  
  데이터 경고 디자이너는 각 영역으로 구분됩니다. 이러한 영역에는 보고서 데이터 피드를 선택하는 영역, 조건에 규칙을 추가하여 단순하거나 복잡한 조건을 만드는 영역 등이 있습니다. 다음 그림은 데이터 경고 디자이너의 영역을 보여 줍니다.  
   
  ![경고 디자이너 사용자 인터페이스 내부 영역](../reporting-services/media/rs-alertdesigner.gif "경고 디자이너 사용자 인터페이스 내부 영역")  
@@ -176,7 +176,7 @@ ms.locfileid: "65571601"
   
  메일 생성 방법은 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)를 참조하세요.  
   
-##  <a name="CreateAlert"></a> 데이터 경고 정의 만들기  
+##  <a name="create-a-data-alert-definition"></a><a name="CreateAlert"></a> 데이터 경고 정의 만들기  
  SharePoint 항목 보기 및 경고 만들기 권한이 부여된 경우 보기 권한이 있는 모든 보고서에 대해 데이터 경고 정의를 만들 수 있습니다. 단, 해당 보고서에 저장된 자격 증명이 사용되거나 자격 증명이 아예 사용되지 않아야 합니다. SharePoint 라이브러리에서 보고서를 실행합니다. 데이터 경고 디자이너에서 사용할 수 있는 데이터는 보고서에서 제공됩니다. 보고서에 매개 변수가 있는 경우 관심이 있는 데이터가 보고서에 표시될 수 있도록 다른 매개 변수 값을 사용하여 보고서를 실행해야 할 수 있습니다. 보고서를 연 후 보고서 도구 모음의 **동작** 메뉴에서 **새 데이터 경고** 옵션을 클릭하여 데이터 경고 디자이너를 엽니다. 다음 그림은 데이터 경고 디자이너를 여는 방법을 보여 줍니다.  
   
  ![SharePoint 라이브러리에서 경고 디자이너 열기](../reporting-services/media/rs-openalertdesigneriw.gif "SharePoint 라이브러리에서 경고 디자이너 열기")  
@@ -184,7 +184,7 @@ ms.locfileid: "65571601"
  자세한 내용은 [데이터 경고 디자이너에서 데이터 경고 만들기](../reporting-services/create-a-data-alert-in-data-alert-designer.md)를 참조하세요.  
   
   
-##  <a name="SaveAlert"></a> 데이터 경고 정의 저장  
+##  <a name="save-a-data-alert-definition"></a><a name="SaveAlert"></a> 데이터 경고 정의 저장  
  데이터 경고 디자이너에는 데이터 경고 정의가 저장되는 사이트의 URL이 표시됩니다. 데이터 경고 정의는 항상 보고서와 같은 사이트에 저장됩니다.  
   
 > [!NOTE]  
@@ -193,7 +193,7 @@ ms.locfileid: "65571601"
  경고 정의는 유효성 검사 후에 저장됩니다. 경고 정의를 저장하려면 먼저 오류를 수정해야 합니다. 자세한 내용은 [데이터 경고 디자이너에서 데이터 경고 만들기](../reporting-services/create-a-data-alert-in-data-alert-designer.md)를 참조하세요.  
   
   
-##  <a name="EditAlert"></a> 데이터 경고 정의 편집  
+##  <a name="edit-a-data-alert-definition"></a><a name="EditAlert"></a> 데이터 경고 정의 편집  
  데이터 경고 정의를 저장한 후 다시 데이터 경고 디자이너에서 열어 편집할 수 있습니다. 규칙 및 절을 추가, 변경 또는 삭제하고 일정 및 전자 메일 설정을 변경할 수 있습니다. 경고에 사용되는 보고서 데이터 피드가 변경되어 경고 규칙이 참조하는 필드가 더 이상 제공되지 않거나 필드의 데이터 형식 또는 다른 메타데이터가 변경된 경우 경고 정의가 더 이상 유효하지 않으며 다시 저장하기 위해서는 경고 정의를 수정해야 합니다. 다른 데이터 피드를 사용하려면 새 경고 정의를 만들어야 합니다.  
   
  데이터 경고 정의를 편집하려면 데이터 경고 관리자에서 해당 정의를 마우스 오른쪽 단추로 클릭하고 **편집**을 클릭합니다. 다음 그림은 데이터 경고 관리자에 있는 데이터 경고의 상황에 맞는 메뉴를 보여 줍니다.  
@@ -203,7 +203,7 @@ ms.locfileid: "65571601"
  자세한 내용은 [경고 디자이너에서 데이터 경고 편집](../reporting-services/edit-a-data-alert-in-alert-designer.md)을 참조하세요.  
   
   
-##  <a name="HowTo"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="HowTo"></a> 관련 작업  
  이 섹션에는 경고를 만들고 편집하는 방법을 보여 주는 절차가 나와 있습니다.  
   
 -   [경고 디자이너에서 데이터 경고 편집](../reporting-services/edit-a-data-alert-in-alert-designer.md)  

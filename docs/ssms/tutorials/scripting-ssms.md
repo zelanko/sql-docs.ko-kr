@@ -20,10 +20,10 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
 ms.openlocfilehash: f1709114c064e6d46ab69ba7a15143bab24ea280
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75247304"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>SQL Server Management Studio에서 개체 스크립팅
@@ -47,7 +47,7 @@ ms.locfileid: "75247304"
 * [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
 * [AdventureWorks2016 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)를 다운로드합니다.
 
-SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)을 참조하세요. 
+SSMS에서 데이터베이스를 복원하기 위한 지침은 여기: [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)에 있습니다. 
 
 ## <a name="script-queries-from-the-gui"></a>GUI에서 쿼리 스크립팅
 
@@ -139,14 +139,14 @@ SSMS에서 GUI를 사용하여 작업을 완료할 때마다 작업에 연결된
 
     b. **고급**을 선택하여 다음 옵션의 설정을 확인합니다.
 
-      * *통계 스크립팅*으로 설정된 **통계 스크립팅**입니다.
-      * *스키마 전용*으로 설정된 **스크립팅할 데이터 형식**입니다.
-      * *True*로 설정된 **인덱스 스크립팅**입니다.
+      * **통계 스크립팅**으로 설정된 *통계 스크립팅*입니다.
+      * **스키마 전용**으로 설정된 *스크립팅할 데이터 형식*입니다.
+      * **True**로 설정된 *인덱스 스크립팅*입니다.
 
    ![스크립트 개체](media/scripting-ssms/advancedscripts.png)
 
    > [!NOTE]
-   > **스크립팅할 데이터 형식** 옵션에 *스키마 및 데이터*를 선택하면 데이터베이스에 대한 데이터를 스크립팅할 수 있습니다. 그러나 대용량 데이터베이스는 이상적이 아닙니다. SSMS에서 할당할 수 있는 것보다 많은 메모리가 필요할 수 있습니다. 이 제한은 작은 데이터베이스의 경우 괜찮습니다. 대형 데이터베이스용 데이터를 이동하려는 경우 [가져오기 및 내보내기 마법사](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)를 사용합니다.
+   > *스크립팅할 데이터 형식* 옵션에 **스키마 및 데이터**를 선택하면 데이터베이스에 대한 데이터를 스크립팅할 수 있습니다. 그러나 대용량 데이터베이스는 이상적이 아닙니다. SSMS에서 할당할 수 있는 것보다 많은 메모리가 필요할 수 있습니다. 이 제한은 작은 데이터베이스의 경우 괜찮습니다. 대형 데이터베이스용 데이터를 이동하려는 경우 [가져오기 및 내보내기 마법사](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)를 사용합니다.
 
 6. **확인**선택하고 **다음**을 선택합니다.
 
