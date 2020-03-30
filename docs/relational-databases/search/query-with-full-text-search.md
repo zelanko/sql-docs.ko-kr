@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9fbc89d21deb7fab0662623634fb965a2f88640f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68053567"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
@@ -31,7 +31,7 @@ ms.locfileid: "68053567"
 -   단어 및 구를 일치시키려면 **CONTAINS** 및 **CONTAINSTABLE**을 사용합니다.
 -   정확한 단어가 아닌 의미를 일치시키려면 **FREETEXT** 및 **FREETEXTTABLE**을 사용합니다.
 
-## <a name="examples_simple"></a> 각 조건자 및 함수의 예제
+## <a name="examples-of-each-predicate-and-function"></a><a name="examples_simple"></a> 각 조건자 및 함수의 예제
 
 다음 예제에서는 AdventureWorks 샘플 데이터베이스를 사용합니다. AdventureWorks의 최종 릴리스는 [SQL Server 2016 CTP3용 AdventureWorks 데이터베이스 및 스크립트](https://www.microsoft.com/download/details.aspx?id=49502)를 참조하세요. 예제 쿼리를 실행하기 위해 전체 텍스트 검색을 설정할 수도 있습니다. 자세한 내용은 [전체 텍스트 검색 시작](get-started-with-full-text-search.md)을 참조하세요. 
 
@@ -172,9 +172,9 @@ CONTAINS 또는 FREETEXT 조건자에 네 부분으로 된 이름을 사용하�
 
 **추가 정보** 이러한 함수의 구문 및 인수에 대한 자세한 내용은 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 및 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)을 참조하세요.
 
-## <a name="examples_specific"></a> 특정 형식의 검색
+## <a name="specific-types-of-searches"></a><a name="examples_specific"></a> 특정 형식의 검색
 
-###  <a name="Simple_Term"></a> 특정 단어 또는 구(단순 단어) 검색  
+###  <a name="search-for-a-specific-word-or-phrase-simple-term"></a><a name="Simple_Term"></a> 특정 단어 또는 구(단순 단어) 검색  
  [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)또는 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)을 사용하여 테이블에서 특정 단어 또는 구를 검색할 수 있습니다. 예를 들어 **데이터베이스의**ProductReview[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 테이블을 검색하여 "학습 곡선"이라는 구가 포함된 제품 설명을 모두 찾으려면 CONTAINS 조건자를 다음과 같이 사용할 수 있습니다.  
   
 ```sql
@@ -197,7 +197,7 @@ GO
 
 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 및 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 은 정확히 일치하는 구를 검색합니다. [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 및 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 은 구를 여러 개의 단어로 나눕니다.
 
-###  <a name="Prefix_Term"></a> 접두사(접두사 용어)가 포함된 단어 검색  
+###  <a name="search-for-a-word-with-a-prefix-prefix-term"></a><a name="Prefix_Term"></a> 접두사(접두사 용어)가 포함된 단어 검색  
  [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 또는 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 을 사용하여 지정된 접두사가 포함된 단어나 구를 검색할 수 있습니다. 열에서 지정된 접두사로 시작하는 텍스트가 포함된 모든 항목이 반환됩니다. 예를 들어 `top`, `top``ple`및 `top``ping`에서와 같이 `top`- 접두사가 포함된 모든 행을 검색하려면 쿼리는 다음 예제와 같습니다.  
   
 ```sql  
@@ -224,7 +224,7 @@ GO
 
 접두사 검색은 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 및 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)에서 지원됩니다.
   
-###  <a name="Inflectional_Generation_Term"></a> 특정 단어의 굴절형(생성 단어) 검색  
+###  <a name="search-for-inflectional-forms-of-a-specific-word-generation-term"></a><a name="Inflectional_Generation_Term"></a> 특정 단어의 굴절형(생성 단어) 검색  
 [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)또는 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 을 사용하여 동사의 여러 시제나 변화 또는 명사의 단수형과 복수형을 모두 검색(굴절형 검색)하거나, 특정 단어의 동의어 형태를 모두 검색(동의어 검색)할 수 있습니다.  
   
 다음 예제에서는 `Comments` 데이터베이스의 `ProductReview` 테이블에 있는 `AdventureWorks` 열에서 "foot"의 모든 형태("foot", "feet" 등)를 검색합니다. 
@@ -267,7 +267,7 @@ GO
 
 근접 검색에 대한 자세한 내용은 [NEAR를 사용하여 근접 단어 검색](search-for-words-close-to-another-word-with-near.md)을 참조하세요.
 
-###  <a name="Weighted_Term"></a> 가중치를 사용하는 단어 또는 구(가중치 단어) 검색  
+###  <a name="search-for-words-or-phrases-using-weighted-values-weighted-term"></a><a name="Weighted_Term"></a> 가중치를 사용하는 단어 또는 구(가중치 단어) 검색  
 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 을 사용하여 단어나 구를 검색하고 가중치를 지정할 수 있습니다. 가중치는 0.0에서 1.0 사이의 숫자로 측정되며 단어와 구 집합에서 각 단어와 구의 중요도를 나타냅니다. 가중치 0.0이 가장 낮고 1.0이 가장 높습니다.  
   
 다음 예에서는 가중치를 사용하여 문자열 "Bay"로 시작하는 텍스트에 "Street" 또는 "View"가 있는 모든 고객 주소를 검색하는 쿼리를 보여줍니다. 지정한 단어가 많이 포함된 행일수록 높은 가중치가 지정됩니다.  
@@ -297,7 +297,7 @@ GO
 
 가중된 검색은 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)에서 지원됩니다.
 
-##  <a name="Using_Boolean_Operators"></a> AND, OR 및 NOT(부울 연산자) 사용
+##  <a name="use-and-or-and-not-boolean-operators"></a><a name="Using_Boolean_Operators"></a> AND, OR 및 NOT(부울 연산자) 사용
  
 CONTAINS 조건자와 CONTAINSTABLE 함수는 동일한 검색 조건을 사용하며, 둘 다 논리적 연산을 수행하는 부울 연산자 AND, OR, NOT을 사용하여 여러 검색 단어를 결합할 수 있습니다. 예를 들어 AND를 사용하여 "latte"와 "New York-style bagel"이 둘 다 포함된 행을 찾거나 AND NOT을 사용하여 "bagel"은 포함되지만 "cream cheese"는 포함되지 않은 행을 찾을 수 있습니다.  
   
@@ -319,7 +319,7 @@ WHERE ProductDescriptionID <> 5 AND
 GO  
 ```  
   
-##  <a name="Additional_Considerations"></a> 대/소문자, 중지 단어, 언어 및 동의어 사전
+##  <a name="case-stopwords-language-and-thesaurus"></a><a name="Additional_Considerations"></a> 대/소문자, 중지 단어, 언어 및 동의어 사전
 
  전체 텍스트 쿼리를 작성할 때 다음 옵션도 지정할 수 있습니다.
   
@@ -331,7 +331,7 @@ GO
   
 -   **동의어 사전**. FREETEXT 및 FREETEXTTABLE 쿼리에는 기본적으로 동의어 사전이 사용됩니다. CONTAINS 및 CONTAINSTABLE은 선택적 THESAURUS 인수를 지원합니다. 자세한 내용은 [전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리](configure-and-manage-thesaurus-files-for-full-text-search.md)를 참조하세요.
   
-##  <a name="tokens"></a> 토큰화 결과 확인
+##  <a name="check-the-tokenization-results"></a><a name="tokens"></a> 토큰화 결과 확인
 
 쿼리에 특정 단어 분리기, 동의어 사전 및 중지 목록 조합을 적용하면 **sys.dm_fts_parser** 동적 관리 뷰를 사용하여 전체 텍스트 검색이 결과를 토큰화하는 방법을 확인할 수 있습니다. 자세한 내용은 [sys.dm_fts_parser&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md)를 참조하세요.  
   

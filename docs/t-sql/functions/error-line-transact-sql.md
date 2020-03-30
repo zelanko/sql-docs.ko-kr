@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 569486f5806ac6f0d62f32fa9ac17efc1d43a85a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ce725d492c0f777f27198a3c686de7a80307e2ee
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67904361"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216214"
 ---
 # <a name="error_line-transact-sql"></a>ERROR_LINE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,20 +74,6 @@ BEGIN CATCH
 END CATCH;  
 GO  
 ```  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-   
-```  
-Result 
------------
-
-(0 row(s) affected)
-
-ErrorLine
------------
-4
-
-(1 row(s) affected)
-```  
   
 ### <a name="b-using-error_line-in-a-catch-block-with-a-stored-procedure"></a>B. 저장 프로시저의 오류 줄 번호 반환을 위해 CATCH 블록에서 ERROR_LINE 사용  
 이 예에서는 0으로 나누기 오류를 생성하는 저장 프로시저를 보여 줍니다. `ERROR_LINE`은 오류가 발생한 줄 번호를 반환합니다.  
@@ -114,20 +100,7 @@ BEGIN CATCH
 END CATCH;  
 GO  
 ``` 
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-   
-```  
------------
 
-(0 row(s) affected)
-
-ErrorLine
------------
-7
-
-(1 row(s) affected)  
-   
-```
 
 ### <a name="c-using-error_line-in-a-catch-block-with-other-error-handling-tools"></a>C. CATCH 블록에서 다른 오류 처리 도구와 함께 ERROR_LINE 사용  
 이 코드 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. `ERROR_LINE`은 오류가 발생한 줄 번호 및 오류 자체와 관련된 정보를 반환합니다.  
@@ -148,20 +121,6 @@ BEGIN CATCH
 END CATCH;  
 GO  
 ``` 
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-   
-```  
------------
-
-(0 row(s) affected)
-
-ErrorNumber ErrorSeverity ErrorState ErrorProcedure ErrorLine ErrorMessage
------------ ------------- ---------- -------------- --------- ---------------------------------
-8134        16            1          NULL           3         Divide by zero error encountered.
-
-(1 row(s) affected)
-  
-```
   
 ## <a name="see-also"></a>참고 항목  
  [TRY...CATCH&#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   

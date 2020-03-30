@@ -30,10 +30,10 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: baad15da62c4452361fe8ff3cdf46582dd3727ea
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287887"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services(SSIS) 로깅
@@ -214,7 +214,7 @@ ms.locfileid: "79287887"
   
 -   "Sum Quantity and LineItemTotalCost"라는 집계 변환이 데이터를 계산하고 다음 변환에 전달하는 데 PrimeOutput과 ProcessInput에서 각각 141밀리초와 79밀리초씩 총 220밀리초가 소요되었습니다.  
 
-## <a name="ssdt"></a> SQL Server Data Tools에서 패키지 로깅 사용
+## <a name="enable-package-logging-in-sql-server-data-tools"></a><a name="ssdt"></a> SQL Server Data Tools에서 패키지 로깅 사용
   이 절차에서는 패키지에 로그를 추가하는 방법, 패키지 수준 로깅을 구성하는 방법 및 로깅 구성을 XML 파일에 저장하는 방법을 설명합니다. 로그는 패키지 수준에서만 추가할 수 있지만 패키지에 포함되는 컨테이너에서 로깅을 활성화하기 위해 패키지가 로깅을 수행할 필요는 없습니다.  
   
 > [!IMPORTANT]  
@@ -262,7 +262,7 @@ ms.locfileid: "79287887"
   
 11. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
 
-## <a name="configure_logs"></a> SSIS 로그 구성 대화 상자
+## <a name="configure-ssis-logs-dialog-box"></a><a name="configure_logs"></a> SSIS 로그 구성 대화 상자
   **SSIS 로그 구성** 대화 상자를 사용하여 패키지에 대한 로깅 옵션을 정의할 수 있습니다.  
   
  **수행 작업**  
@@ -275,12 +275,12 @@ ms.locfileid: "79287887"
   
 4.  [자세히 탭의 옵션 구성](#detail)  
   
-###  <a name="open_dialog"></a> SSIS 로그 구성 대화 상자 열기  
+###  <a name="open-the-configure-ssis-logs-dialog-box"></a><a name="open_dialog"></a> SSIS 로그 구성 대화 상자 열기  
  **SSIS 로그 구성 대화 상자를 열려면**  
   
 -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 **SSIS** 메뉴에서 **로깅** 을 클릭합니다.  
   
-###  <a name="container"></a> 컨테이너 창의 옵션 구성  
+###  <a name="configure-the-options-in-the-containers-pane"></a><a name="container"></a> 컨테이너 창의 옵션 구성  
  **SSIS 로그 구성** 대화 상자의 **컨테이너** 창을 사용하여 패키지 및 해당 컨테이너에 대해 로깅을 활성화할 수 있습니다.  
   
 #### <a name="options"></a>옵션  
@@ -295,7 +295,7 @@ ms.locfileid: "79287887"
   
  컨테이너가 흐리게 표시되어 있는 경우 해당 컨테이너에 대해 로깅 옵션을 설정하려면 확인란을 두 번 클릭합니다. 첫 번째 클릭은 확인란의 선택을 취소하고 두 번째 클릭은 확인란을 선택하여 사용할 로그 공급자 및 기록할 정보를 선택할 수 있습니다.  
   
-###  <a name="provider"></a> 공급자 및 로그 탭의 옵션 구성  
+###  <a name="configure-the-options-on-the-providers-and-logs-tab"></a><a name="provider"></a> 공급자 및 로그 탭의 옵션 구성  
  **SSIS 로그 구성** 대화 상자의 **공급자 및 로그** 탭을 사용하여 런타임 이벤트를 캡처하기 위한 로그를 생성 및 구성할 수 있습니다.  
   
 #### <a name="options"></a>옵션  
@@ -314,12 +314,12 @@ ms.locfileid: "79287887"
  **Configuration**  
  목록에서 기존 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다. 로그 공급자의 유형에 따라 OLE DB 연결 관리자 또는 파일 연결 관리자를 구성할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 이벤트 로그의 로그 공급자에는 연결이 필요하지 않습니다.  
   
- 관련 항목: [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md), [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
+ 관련 항목: [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) , [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
  **Delete**  
  로그 공급자를 선택한 다음 **삭제**를 클릭합니다.  
   
-###  <a name="detail"></a> 자세히 탭의 옵션 구성  
+###  <a name="configure-the-options-on-the-details-tab"></a><a name="detail"></a> 자세히 탭의 옵션 구성  
  **SSIS 로그 구성** 대화 상자의 **자세히** 탭을 사용하여 로깅에 사용할 이벤트와 로깅할 세부 정보를 지정할 수 있습니다. 선택한 정보는 패키지의 모든 로그 공급자에 적용됩니다. 예를 들어 일부 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 쓰고 다른 정보는 텍스트 파일에 쓰는 것은 불가능합니다.  
   
 #### <a name="options"></a>옵션  
@@ -351,7 +351,7 @@ ms.locfileid: "79287887"
  **저장**  
  구성 세부 정보를 XML 파일에 템플릿으로 저장합니다.  
 
-## <a name="saved_config"></a> 저장된 구성 파일을 사용하여 로깅 구성
+## <a name="configure-logging-by-using-a-saved-configuration-file"></a><a name="saved_config"></a> 저장된 구성 파일을 사용하여 로깅 구성
   이 절차에서는 이전에 저장된 로깅 구성 파일을 로드하여 패키지 내의 새 컨테이너를 위한 로깅을 구성하는 방법을 설명합니다.  
   
  기본적으로 패키지의 모든 컨테이너는 부모 컨테이너와 동일한 로깅 구성을 사용합니다. 예를 들어 Foreach 루프 내의 태스크는 Foreach 루프와 동일한 로깅 구성을 사용합니다.  
@@ -382,7 +382,7 @@ ms.locfileid: "79287887"
   
 9. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
 
-## <a name="server_logging"></a> SSIS 서버에서 패키지 실행에 대한 로깅 설정
+## <a name="enable-logging-for-package-execution-on-the-ssis-server"></a><a name="server_logging"></a> SSIS 서버에서 패키지 실행에 대한 로깅 설정
   이 항목에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포한 패키지를 실행할 때 패키지의 로깅 수준을 설정하거나 변경하는 방법에 대해 설명합니다. 패키지를 실행할 때 설정하는 로깅 수준에 따라 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 디자인 타임 시 구성하는 패키지 로깅이 재정의됩니다. 자세한 내용은 [SQL Server Data Tools에서 패키지 로깅 사용](#ssdt) 을 참조하세요.  
   
  SQL Server **서버 속성**의 **서버 로깅 수준** 속성에서 기본 서버 차원의 로깅 수준을 선택할 수 있습니다. 이 항목에서 설명하는 기본 제공 로깅 수준 중 하나에서 선택하거나 기존 사용자 지정된 로깅 수준을 선택할 수 있습니다. 선택한 로깅 수준은 기본적으로 SSIS 카탈로그에 배포되는 모든 패키지에 적용됩니다. 또한 SSIS 패키지를 실행하는 SQL 에이전트 작업 단계에 기본적으로 적용됩니다.  
@@ -438,7 +438,7 @@ ms.locfileid: "79287887"
   
 -   ssis_admin 또는 sysadmin 역할의 사용자만 사용자 지정된 로깅 수준을 만들고 업데이트 또는 삭제할 수 있습니다.  
 
-## <a name="custom_messages"></a> Custom Messages for Logging
+## <a name="custom-messages-for-logging"></a><a name="custom_messages"></a> Custom Messages for Logging
 SQL Server Integration Services는 패키지 및 여러 태스크에 대한 로그 항목 기록을 위해 다양한 사용자 지정 이벤트 집합을 제공합니다. 이러한 항목을 사용하면 나중에 분석할 수 있도록 미리 정의된 이벤트나 사용자가 정의한 메시지를 기록하여 실행 진행률, 결과 및 문제에 대한 세부 정보를 저장할 수 있습니다. 예를 들면 대량 삽입이 시작되고 끝나는 시간을 기록하여 패키지 실행 시 성능 문제를 식별할 수 있습니다.  
   
  사용자 지정 로그 항목은 패키지 및 모든 컨테이너와 태스크에 사용할 수 있는 표준 로깅 이벤트 집합과는 다른 항목 집합입니다. 사용자 지정 로그 항목은 패키지의 특정 태스크에 대한 유용한 정보를 캡처하도록 조정되어 있습니다. 예를 들어 SQL 실행 태스크에 대한 사용자 지정 로그 항목 중 하나는 해당 태스크에서 실행한 SQL 문을 로그에 기록합니다.  
@@ -491,7 +491,7 @@ SQL Server Integration Services는 패키지 및 여러 태스크에 대한 로�
   
 ### <a name="log-entries"></a>로그 항목  
   
-####  <a name="Package"></a> 패키지  
+####  <a name="package"></a><a name="Package"></a> 패키지  
  다음 표에서는 패키지에 대한 사용자 지정 로그 항목을 나열합니다.  
   
 |로그 항목|Description|  
@@ -500,7 +500,7 @@ SQL Server Integration Services는 패키지 및 여러 태스크에 대한 로�
 |**PackageEnd**|패키지가 완료되었음을 나타냅니다. 이 로그 항목은 로그에 자동으로 기록되며 제외할 수 없습니다.|  
 |**진단**|동시에 실행될 수 있는 실행 파일 수처럼 패키지 실행에 영향을 주는 시스템 구성에 대한 정보를 제공합니다.<br /><br /> **Diagnostic** 로그 항목에는 외부 데이터 공급자에 대한 호출 전후 항목도 포함됩니다.|  
   
-####  <a name="BulkInsert"></a> 대량 삽입 태스크  
+####  <a name="bulk-insert-task"></a><a name="BulkInsert"></a> 대량 삽입 태스크  
  다음 표에서는 대량 삽입 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
 |로그 항목|Description|  
@@ -509,7 +509,7 @@ SQL Server Integration Services는 패키지 및 여러 태스크에 대한 로�
 |**DTSBulkInsertTaskEnd**|대량 삽입이 완료되었음을 나타냅니다.|  
 |**DTSBulkInsertTaskInfos**|태스크에 대한 설명 정보를 제공합니다.|  
   
-####  <a name="DataFlow"></a> Data Flow Task  
+####  <a name="data-flow-task"></a><a name="DataFlow"></a> Data Flow Task  
  다음 표에서는 데이터 흐름 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
 |로그 항목|Description|  
@@ -525,7 +525,7 @@ SQL Server Integration Services는 패키지 및 여러 태스크에 대한 로�
 |**PipelineExecutionTrees**|데이터 흐름에서 레이아웃 실행 트리를 보고합니다. 데이터 흐름 엔진 스케줄러는 이 트리를 사용하여 데이터 흐름의 실행 계획을 작성합니다.|  
 |**PipelineInitialization**|태스크에 대한 초기화 정보를 제공합니다. 이 정보에 BLOB 데이터의 임시 스토리지에 사용할 디렉터리, 기본 버퍼 크기 및 버퍼의 행 수가 포함됩니다. 데이터 흐름 태스크의 구성에 따라 여러 로그 항목이 기록될 수 있습니다.|  
   
-####  <a name="ExecuteDTS200"></a> DTS 2000 실행 태스크  
+####  <a name="execute-dts-2000-task"></a><a name="ExecuteDTS200"></a> DTS 2000 실행 태스크  
  다음 표에서는 DTS 2000 실행 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
 |로그 항목|Description|  
@@ -535,7 +535,7 @@ SQL Server Integration Services는 패키지 및 여러 태스크에 대한 로�
 |**ExecuteDTS80PackageTaskTaskInfo**|태스크에 대한 설명 정보를 제공합니다.|  
 |**ExecuteDTS80PackageTaskTaskResult**|태스크에서 실행한 DTS 2000 패키지의 실행 결과를 보고합니다.|  
   
-####  <a name="ExecuteProcess"></a> 프로세스 실행 태스크  
+####  <a name="execute-process-task"></a><a name="ExecuteProcess"></a> 프로세스 실행 태스크  
  다음 표에서는 프로세스 실행 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
 |로그 항목|Description|  
@@ -543,21 +543,21 @@ SQL Server Integration Services는 패키지 및 여러 태스크에 대한 로�
 |**ExecuteProcessExecutingProcess**|태스크에서 실행하도록 구성된 실행 파일의 실행 프로세스에 대한 정보를 제공합니다.<br /><br /> 두 개의 로그 항목이 기록됩니다. 한 항목에는 태스크가 실행하는 실행 파일의 이름과 위치에 대한 정보가 들어 있고 다른 항목은 실행 파일의 종료를 기록합니다.|  
 |**ExecuteProcessVariableRouting**|실행 파일의 입력 및 출력으로 라우팅되는 변수에 대한 정보를 제공합니다. stdin(입력), stdout(출력) 및 stderr(오류 출력)에 대한 로그 항목이 기록됩니다.|  
   
-####  <a name="ExecuteSQL"></a> SQL 실행 태스크  
+####  <a name="execute-sql-task"></a><a name="ExecuteSQL"></a> SQL 실행 태스크  
  다음 표에서는 SQL 실행 태스크에 대한 사용자 지정 로그 항목을 설명합니다.  
   
 |로그 항목|Description|  
 |---------------|-----------------|  
 |**ExecuteSQLExecutingQuery**|SQL 문의 실행 단계에 대한 정보를 제공합니다. 로그 항목은 태스크에서 데이터베이스에 대한 연결을 설정할 때, 태스크에서 SQL 문 준비를 시작할 때 또는 SQL 문 실행이 완료된 후에 기록됩니다. 준비 단계에 대한 로그 항목은 태스크에서 사용하는 SQL 문을 포함합니다.|  
   
-####  <a name="FileSystem"></a> 파일 시스템 태스크  
+####  <a name="file-system-task"></a><a name="FileSystem"></a> 파일 시스템 태스크  
  다음 표에서는 파일 시스템 태스크에 대한 사용자 지정 로그 항목을 설명합니다.  
   
 |로그 항목|Description|  
 |---------------|-----------------|  
 |**FileSystemOperation**|태스크에서 수행하는 작업을 보고합니다. 이 로그 항목은 파일 시스템 작업이 시작될 때 기록되며 원본 및 대상에 대한 정보를 포함합니다.|  
   
-####  <a name="FTP"></a> FTP 태스크  
+####  <a name="ftp-task"></a><a name="FTP"></a> FTP 태스크  
  다음 표에서는 FTP 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
 |로그 항목|Description|  
@@ -565,7 +565,7 @@ SQL Server Integration Services는 패키지 및 여러 태스크에 대한 로�
 |**FTPConnectingToServer**|태스크에서 FTP 서버에 대한 연결을 시작했음을 나타냅니다.|  
 |**FTPOperation**|태스크에서 수행하는 FTP 작업의 시작 부분과 유형을 보고합니다.|  
   
-####  <a name="MessageQueue"></a> 메시지 큐 태스크  
+####  <a name="message-queue-task"></a><a name="MessageQueue"></a> 메시지 큐 태스크  
  다음 표에서는 메시지 큐 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
 |로그 항목|Description|  
@@ -579,14 +579,14 @@ SQL Server Integration Services는 패키지 및 여러 태스크에 대한 로�
 |**MSMQTaskInfo**|태스크에 대한 설명 정보를 제공합니다.|  
 |**MSMQTaskTimeOut**|태스크 시간이 초과되었음을 나타냅니다.|  
   
-####  <a name="Script"></a> 스크립트 태스크  
+####  <a name="script-task"></a><a name="Script"></a> 스크립트 태스크  
  다음 표에서는 스크립트 태스크에 대한 사용자 지정 로그 항목을 설명합니다.  
   
 |로그 항목|Description|  
 |---------------|-----------------|  
 |**ScriptTaskLogEntry**|스크립트에서 로깅을 구현한 결과를 보고합니다. **Log** 개체의 **Dts** 메서드 호출에 대해 각각 로그 항목이 기록됩니다. 이 항목은 코드가 실행되면 기록됩니다. 자세한 내용은 [Logging in the Script Task](../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md)을 참조하세요.|  
   
-####  <a name="SendMail"></a> 메일 보내기 태스크  
+####  <a name="send-mail-task"></a><a name="SendMail"></a> 메일 보내기 태스크  
  다음 표에서는 메일 보내기 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
 |로그 항목|Description|  
@@ -595,7 +595,7 @@ SQL Server Integration Services는 패키지 및 여러 태스크에 대한 로�
 |**SendMailTaskEnd**|태스크에서 전자 메일 메시지 보내기를 완료했음을 나타냅니다.|  
 |**SendMailTaskInfo**|태스크에 대한 설명 정보를 제공합니다.|  
   
-####  <a name="TransferDatabase"></a> 데이터베이스 전송 태스크  
+####  <a name="transfer-database-task"></a><a name="TransferDatabase"></a> 데이터베이스 전송 태스크  
  다음 표에서는 데이터베이스 전송 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
 |로그 항목|Description|  
@@ -603,7 +603,7 @@ SQL Server Integration Services는 패키지 및 여러 태스크에 대한 로�
 |**SourceDB**|태스크에서 복사한 데이터베이스를 지정합니다.|  
 |**SourceSQLServer**|데이터베이스를 복사한 컴퓨터를 지정합니다.|  
   
-####  <a name="TransferErrorMessages"></a> 오류 메시지 전송 태스크  
+####  <a name="transfer-error-messages-task"></a><a name="TransferErrorMessages"></a> 오류 메시지 전송 태스크  
  다음 표에서는 오류 메시지 전송 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
 |로그 항목|Description|  
@@ -611,7 +611,7 @@ SQL Server Integration Services는 패키지 및 여러 태스크에 대한 로�
 |**TransferErrorMessagesTaskFinishedTransferringObjects**|태스크에서 오류 메시지 전송을 완료했음을 나타냅니다.|  
 |**TransferErrorMessagesTaskStartTransferringObjects**|태스크에서 오류 메시지 전송을 시작했음을 나타냅니다.|  
   
-####  <a name="TransferJobs"></a> 작업 전송 태스크  
+####  <a name="transfer-jobs-task"></a><a name="TransferJobs"></a> 작업 전송 태스크  
  다음 표에서는 작업 전송 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
 |로그 항목|Description|  
@@ -619,7 +619,7 @@ SQL Server Integration Services는 패키지 및 여러 태스크에 대한 로�
 |**TransferJobsTaskFinishedTransferringObjects**|태스크에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 전송을 완료했음을 나타냅니다.|  
 |**TransferJobsTaskStartTransferringObjects**|태스크에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 전송을 시작했음을 나타냅니다.|  
   
-####  <a name="TransferLogins"></a> 로그인 전송 태스크  
+####  <a name="transfer-logins-task"></a><a name="TransferLogins"></a> 로그인 전송 태스크  
  다음 표에서는 로그인 전송 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
 |로그 항목|Description|  
@@ -627,7 +627,7 @@ SQL Server Integration Services는 패키지 및 여러 태스크에 대한 로�
 |**TransferLoginsTaskFinishedTransferringObjects**|태스크에서 로그인 전송을 완료했음을 나타냅니다.|  
 |**TransferLoginsTaskStartTransferringObjects**|태스크에서 로그인 전송을 시작했음을 나타냅니다.|  
   
-####  <a name="TransferMasterStoredProcedures"></a> Master 저장 프로시저 전송 태스크  
+####  <a name="transfer-master-stored-procedures-task"></a><a name="TransferMasterStoredProcedures"></a> Master 저장 프로시저 전송 태스크  
  다음 표에서는 Master 저장 프로시저 전송 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
 |로그 항목|Description|  
@@ -635,7 +635,7 @@ SQL Server Integration Services는 패키지 및 여러 태스크에 대한 로�
 |**TransferStoredProceduresTaskFinishedTransferringObjects**|태스크에서 **master** 데이터베이스에 저장된 사용자 정의 저장 프로시저 전송을 완료했음을 나타냅니다.|  
 |**TransferStoredProceduresTaskStartTransferringObjects**|태스크에서 **master** 데이터베이스에 저장된 사용자 정의 저장 프로시저 전송을 시작했음을 나타냅니다.|  
   
-####  <a name="TransferSQLServerObjects"></a> SQL Server 개체 전송 태스크  
+####  <a name="transfer-sql-server-objects-task"></a><a name="TransferSQLServerObjects"></a> SQL Server 개체 전송 태스크  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 전송 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
 |로그 항목|Description|  
@@ -643,7 +643,7 @@ SQL Server Integration Services는 패키지 및 여러 태스크에 대한 로�
 |**TransferSqlServerObjectsTaskFinishedTransferringObjects**|태스크에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 개체 전송을 완료했음을 나타냅니다.|  
 |**TransferSqlServerObjectsTaskStartTransferringObjects**|태스크에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 개체 전송을 시작했음을 나타냅니다.|  
   
-####  <a name="WebServices"></a> 웹 서비스 태스크  
+####  <a name="web-services-task"></a><a name="WebServices"></a> 웹 서비스 태스크  
  다음 표에서는 웹 서비스 태스크에 사용할 수 있는 사용자 지정 로그 항목을 나열합니다.  
   
 |로그 항목|Description|  
@@ -652,7 +652,7 @@ SQL Server Integration Services는 패키지 및 여러 태스크에 대한 로�
 |**WSTaskEnd**|태스크에서 웹 서비스 메서드를 완료했습니다.|  
 |**WSTaskInfo**|태스크에 대한 설명 정보입니다.|  
   
-####  <a name="WMIDataReader"></a> WMI 데이터 판독기 태스크  
+####  <a name="wmi-data-reader-task"></a><a name="WMIDataReader"></a> WMI 데이터 판독기 태스크  
  다음 표에서는 WMI 데이터 판독기 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
 |로그 항목|Description|  
@@ -660,7 +660,7 @@ SQL Server Integration Services는 패키지 및 여러 태스크에 대한 로�
 |**WMIDataReaderGettingWMIData**|태스크에서 WMI 데이터 읽기를 시작했음을 나타냅니다.|  
 |**WMIDataReaderOperation**|태스크에서 실행한 WQL 쿼리를 보고합니다.|  
   
-####  <a name="WMIEventWatcher"></a> WMI 이벤트 감시자 태스크  
+####  <a name="wmi-event-watcher-task"></a><a name="WMIEventWatcher"></a> WMI 이벤트 감시자 태스크  
  다음 표에서는 WMI 이벤트 감시자 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
 |로그 항목|Description|  
@@ -669,7 +669,7 @@ SQL Server Integration Services는 패키지 및 여러 태스크에 대한 로�
 |**WMIEventWatcherTimedout**|태스크 시간이 초과되었음을 나타냅니다.|  
 |**WMIEventWatcherWatchingForWMIEvents**|태스크에서 WQL 쿼리 실행을 시작했음을 나타냅니다. 이 항목은 해당 쿼리를 포함합니다.|  
   
-####  <a name="XML"></a> XML 태스크  
+####  <a name="xml-task"></a><a name="XML"></a> XML 태스크  
  다음 표에서는 XML 태스크에 대한 사용자 지정 로그 항목을 설명합니다.  
   
 |로그 항목|Description|  

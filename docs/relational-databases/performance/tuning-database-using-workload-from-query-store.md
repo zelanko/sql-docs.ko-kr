@@ -12,17 +12,17 @@ ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 4abca73a7d1ac259034987a494f5d7395b507a3a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68113172"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>쿼리 저장소의 작업을 사용하여 데이터베이스 튜닝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [쿼리 저장소](../../relational-databases/performance/how-query-store-collects-data.md) 기능은 쿼리, 계획 및 런타임 통계의 기록을 자동으로 캡처하고 이 정보를 데이터베이스에 저장합니다. [DTA(데이터베이스 엔진 튜닝 관리자)](../../relational-databases/performance/database-engine-tuning-advisor.md)는 쿼리 저장소를 사용하여 튜닝하기에 적합한 작업을 자동으로 선택하는 새로운 옵션을 지원합니다. 따라서 많은 사용자가 튜닝을 위한 작업을 명시적으로 수집하지 않아도 됩니다. 이 기능은 데이터베이스에서 쿼리 저장소 기능이 설정된 경우에만 사용할 수 있습니다. 
+[의 ](../../relational-databases/performance/how-query-store-collects-data.md)쿼리 저장소[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능은 쿼리, 계획 및 런타임 통계의 기록을 자동으로 캡처하고 이 정보를 데이터베이스에 저장합니다. [DTA(데이터베이스 엔진 튜닝 관리자)](../../relational-databases/performance/database-engine-tuning-advisor.md)는 쿼리 저장소를 사용하여 튜닝하기에 적합한 작업을 자동으로 선택하는 새로운 옵션을 지원합니다. 따라서 많은 사용자가 튜닝을 위한 작업을 명시적으로 수집하지 않아도 됩니다. 이 기능은 데이터베이스에서 쿼리 저장소 기능이 설정된 경우에만 사용할 수 있습니다. 
   
 이 기능은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **v16.4** 이상에서 사용할 수 있습니다. 
   

@@ -11,10 +11,10 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 49016b1b4ff391c1b1f533a2bf716f39a40b4dbe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245425"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure로의 SQL Server 관리형 백업
@@ -34,7 +34,7 @@ ms.locfileid: "75245425"
   
  또한, 추가 보안에 대한 백업을 암호화하고, 사용자 지정 일정을 설정하여 백업 실행 시기를 관리할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 위한 Microsoft Azure Blob Storage 서비스의 이점에 대한 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.  
   
-##  <a name="Prereqs"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="Prereqs"></a> 필수 조건  
  Microsoft Azure Storage는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에서 백업 파일을 저장하는 데 사용합니다. 필요한 필수 구성 요소는 다음과 같습니다.  
   
 |필수 요소|Description|  
@@ -112,7 +112,7 @@ ms.locfileid: "75245425"
 > 프록시 서버에서는 SQL Server 관리형 백업이 지원되지 않습니다.
 >
   
-##  <a name="support_limits"></a> 지원 가능성  
+##  <a name="supportability"></a><a name="support_limits"></a> 지원 가능성  
  다음 지원 제한 사항 및 고려 사항은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 특정한 것입니다.  
   
 -   **마스터**, **모델**및 **msdb** 시스템 데이터베이스는 백업할 수 있습니다. **tempdb** 는 백업할 수 없습니다. 

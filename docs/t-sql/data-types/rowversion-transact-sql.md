@@ -27,10 +27,10 @@ ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6c79f2e87ccb6706eab6621cc72bb2fa45b7e9e6
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77179284"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion(Transact-SQL)
@@ -81,7 +81,7 @@ INSERT INTO MyTest (myKey, myValue) VALUES (2, 0);
 GO  
 ```  
   
-그런 후 다음 예제 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 업데이트 중에 `MyTest` 테이블에 대한 낙관적 동시성 제어를 구현할 수 있습니다. 이 스크립트는 행을 마지막으로 읽을 때의 **rowversion** 값을 나타내기 위해 `<myRv>`를 사용합니다. 값을 실제 **rowversion** 값으로 바꿉니다. 실제 **rowversion** 값의 예는 `0x00000000000007D3`입니다.
+그런 후 다음 예제 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 업데이트 중에 `MyTest` 테이블에 대한 낙관적 동시성 제어를 구현할 수 있습니다. 이 스크립트는 행을 마지막으로 읽을 때의 `<myRv>`rowversion**값을 나타내기 위해**를 사용합니다. 값을 실제 **rowversion** 값으로 바꿉니다. 실제 **rowversion** 값의 예는 `0x00000000000007D3`입니다.
   
 ```sql
 DECLARE @t TABLE (myKey int);  

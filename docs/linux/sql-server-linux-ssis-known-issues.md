@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 45e5d9b36b6fd75db7bbc3c5ea397ee9226e2771
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288067"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Linux SSIS의 제한 사항 및 알려진 문제
@@ -36,7 +36,7 @@ Linux 기본 SSIS의 이번 릴리스에서는 다음 기능이 지원되지 않
 
 Linux의 SSIS에 대한 다른 제한 사항과 알려진 문제는 [릴리스 정보](sql-server-linux-release-notes.md#ssis)를 참조하세요.
 
-## <a name="components"></a> 지원되는/지원되지 않는 구성 요소
+## <a name="supported-and-unsupported-components"></a><a name="components"></a> 지원되는/지원되지 않는 구성 요소
 
 Linux에서 지원되는 기본 제공 Integration Services 구성 요소는 다음과 같습니다. 구성 요소 중 일부에는 Linux 플랫폼에 대한 제한이 있습니다. 여기에 나열되지 않은 기본 제공 구성 요소는 Linux에서 지원되지 않습니다.
 

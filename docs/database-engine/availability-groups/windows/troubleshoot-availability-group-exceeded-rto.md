@@ -10,10 +10,10 @@ ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9b62bcc1eebe8371bc45ae7f565d9aa712f1b1d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68013755"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>문제 해결: 가용성 그룹 초과 RTO
@@ -28,7 +28,7 @@ ms.locfileid: "68013755"
   
 2.  [리소스 경합으로 인한 다시 실행 스레드 뒤처짐](#BKMK_CONTENTION)  
   
-##  <a name="BKMK_REDOBLOCK"></a> 다시 실행 스레드의 실행을 차단하는 워크로드 보고  
+##  <a name="reporting-workload-blocks-the-redo-thread-from-running"></a><a name="BKMK_REDOBLOCK"></a> 다시 실행 스레드의 실행을 차단하는 워크로드 보고  
  보조 복제본의 다시 실행 스레드가 오래 실행 중인 읽기 전용 쿼리에 의해 DDL(데이터 정의 언어) 변경이 차단됩니다.  
   
 ### <a name="explanation"></a>설명  
@@ -44,7 +44,7 @@ from sys.dm_exec_requests where command = 'DB STARTUP'
   
  다시 실행 스레드가 차단 해제된 보고 워크로드를 완료하도록 하거나 차단 세션 ID에 대해 [KILL&#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md) 명령을 실행하여 다시 실행 스레드를 즉시 차단 해제할 수 있습니다.  
   
-##  <a name="BKMK_CONTENTION"></a> 리소스 경합으로 인한 다시 실행 스레드 뒤처짐  
+##  <a name="redo-thread-falls-behind-due-to-resource-contention"></a><a name="BKMK_CONTENTION"></a> 리소스 경합으로 인한 다시 실행 스레드 뒤처짐  
  보조 복제본에 대한 큰 보고 워크로드 때문에 보조 복제본의 성능이 느려졌고 다시 실행 스레드가 뒤처졌습니다.  
   
 ### <a name="explanation"></a>설명  

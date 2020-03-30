@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f6c4cbb43048e9dff683b510d958e3e25d87e823
-ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77507508"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL(Transact-SQL)
@@ -101,7 +101,7 @@ CREATE DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'Mary5',
 
 ### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. 공유 액세스 서명을 위한 데이터베이스 범위 자격 증명 만들기
 
-다음 예에서는 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)과 같은 대량 작업을 수행할 수 있는 [외부 데이터 원본](../../t-sql/statements/create-external-data-source-transact-sql.md)을 만드는 데 사용할 수 있는 데이터베이스 범위 자격 증명을 만듭니다. 공유 액세스 서명은 SQL Server, APS 또는 SQL DW에서 PolyBase에 사용할 수 없습니다.
+다음 예에서는 [BULK INSERT](../../t-sql/statements/create-external-data-source-transact-sql.md) 및 [OPENROWSET](../../t-sql/statements/bulk-insert-transact-sql.md)과 같은 대량 작업을 수행할 수 있는 [외부 데이터 원본](../../t-sql/functions/openrowset-transact-sql.md)을 만드는 데 사용할 수 있는 데이터베이스 범위 자격 증명을 만듭니다. 공유 액세스 서명은 SQL Server, APS 또는 SQL DW에서 PolyBase에 사용할 수 없습니다.
 
 ```sql
 -- Create a db master key if one does not already exist, using your own password.

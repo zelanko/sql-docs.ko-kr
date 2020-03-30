@@ -13,10 +13,10 @@ ms.assetid: 7101d77a-84ca-4c00-af1c-17679234e9fb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6ab246e886e4f439fbf1dca600372a6816bc198b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67940454"
 ---
 # <a name="device-driver-control-error"></a>디바이스 드라이버 컨트롤 오류

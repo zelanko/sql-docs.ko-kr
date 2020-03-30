@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9a26c03eaef6eecf0cee442d2b5b55f599c58065
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68123754"
 ---
 # <a name="create-foreign-key-relationships"></a>외래 키 관계 만들기
@@ -26,7 +26,7 @@ ms.locfileid: "68123754"
 
 이 문서에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 외래 키 관계를 만드는 방법에 대해 설명합니다. 한 테이블의 행을 다른 테이블의 행과 연결하려면 두 테이블 사이에 관계를 만듭니다.
 
-## <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항 제한 사항
+## <a name="before-you-begin-limits-and-restrictions"></a><a name="BeforeYouBegin"></a> 시작하기 전 주의 사항 제한 사항
 
 - 외래 키 제약 조건은 다른 테이블의 기본 키 제약 조건으로 연결될 수도 있고 다른 테이블에 있는 UNIQUE 제약 조건의 열을 참조하도록 정의할 수도 있습니다.
 - FOREIGN KEY 제약 조건의 열에 NULL 외의 다른 값을 입력한 경우에는 그 값이 참조되는 열에 있어야 합니다. 그렇지 않은 경우에는 외래 키 위반 오류 메시지가 반환됩니다. 복합 외래 키 제약 조건의 모든 값에 대해 유효성을 검사하려면 관련된 모든 열에 NOT NULL을 지정합니다.

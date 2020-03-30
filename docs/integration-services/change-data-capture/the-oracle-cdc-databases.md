@@ -11,10 +11,10 @@ ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6cce219b5e5d5d324e5e116bb9f55a931d7caaf8
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287707"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 데이터베이스
@@ -77,7 +77,7 @@ ms.locfileid: "79287707"
   
 -   [cdc.xdbcdc_staged_transactions](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions)  
   
-###  <a name="BKMK_Change_Tables_CT"></a> 변경 테이블(_CT)  
+###  <a name="change-tables-_ct"></a><a name="BKMK_Change_Tables_CT"></a> 변경 테이블(_CT)  
  변경 테이블은 미러 테이블에서 만들어집니다. 변경 테이블은 Oracle 데이터베이스에서 캡처되는 변경 데이터를 포함합니다. 테이블은 다음 규칙에 따라 이름이 지정됩니다.  
   
  **[cdc].[\<capture-instance>_CT]**  
@@ -86,14 +86,14 @@ ms.locfileid: "79287707"
   
  캡처 테이블은 Oracle CDC 인스턴스에 의해 기록됩니다. 캡처 인스턴스를 만들 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 의해 생성되는 특수 테이블 반환 함수를 사용하여 캡처 테이블을 읽습니다. `fn_cdc_get_all_changes_HR_EMPLOYEES`)을 입력합니다. 이러한 CDC 함수에 대한 자세한 내용은 [변경 데이터 캡처 함수(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152)를 참조하세요.  
   
-###  <a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
+###  <a name="cdclsn_time_mapping"></a><a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  **[cdc].[lsn_time_mapping]** 테이블은 SQL Server CDC 구성 요소에 의해 생성됩니다. Oracle CDC에서의 캡처 테이블 사용은 일반적인 사용과는 다릅니다.  
   
  Oracle CDC의 경우 이 테이블에 저장되는 LSN 값은 변경과 연결된 Oracle SCN(System Change Number) 값을 기반으로 합니다. LSN 값의 처음 6바이트는 원본 Oracle SCN 수입니다.  
   
  또한 Oracle CDC를 사용하는 경우 시간 열(`tran_begin_time` 및 `tran_end_time`)에는 일반 SQL Server CDC에서와 달리 현지 시간이 아닌 변경의 UTC 시간이 저장됩니다. 따라서 일광 절약 시간 변경은 lsn_time_mapping에 저장된 데이터에 영향을 주지 않습니다.  
   
-###  <a name="BKMK_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
+###  <a name="cdcxdbcdc_config"></a><a name="BKMK_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
  이 테이블에는 Oracle CDC 인스턴스에 대한 구성 데이터가 포함되어 있습니다. 이 테이블은 CDC Designer 콘솔을 사용하여 업데이트합니다. 이 테이블에는 행이 하나만 있습니다.  
   
  다음 표에서는 **cdc.xdbcdc_config** 테이블 열에 대해 설명합니다.  
@@ -136,7 +136,7 @@ ms.locfileid: "79287707"
 |CDC_stop_on_breaking_schema_changes|False|-|-|False|Boolean입니다. **True** 이면 주요 스키마 변경이 감지되는 경우에 중지합니다.<br /><br /> **False** 이면 미러 테이블과 캡처 인스턴스를 삭제합니다.|  
 |source_oracle_home||-|-|False|CDC 인스턴스가 Oracle에 연결하는 데 사용할 특정 Oracle 홈 경로 또는 Oracle 홈 이름으로 설정할 수 있습니다.|  
   
-###  <a name="BKMK_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
+###  <a name="cdcxdbcdc_state"></a><a name="BKMK_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
  이 테이블에는 Oracle CDC 인스턴스의 지속된 상태에 대한 정보가 포함되어 있습니다. 캡처 상태는 복구 및 장애 조치 시나리오에서 상태 모니터링에 대해 사용됩니다.  
   
  다음 표에서는 **cdc.xdbcdc_state** 테이블 열에 대해 설명합니다.  
@@ -161,7 +161,7 @@ ms.locfileid: "79287707"
 |read_changes|원본 Oracle 트랜잭션 로그에서 읽은 변경 레코드의 수입니다.|  
 |staged_transactions|**cdc.xdbcdc_staged_transactions** 테이블에서 준비된 현재 활성 트랜잭션 수입니다.|  
   
-###  <a name="BKMK_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
+###  <a name="cdcxdbcdc_trace"></a><a name="BKMK_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
  이 테이블에는 CDC 인스턴스 작업에 대한 정보가 포함되어 있습니다. 이 테이블에 저장되는 정보에는 오류 레코드, 주목할 만한 상태 변경 및 추적 레코드가 포함됩니다. **cdc.xcbcdc_trace** 테이블을 사용할 수 없는 경우에도 정보를 사용할 수 있도록 오류 정보는 Windows 이벤트 로그에도 기록됩니다.  
   
  다음 표에서는 cdc.xdbcdc_trace 테이블 열에 대해 설명합니다.  
@@ -176,7 +176,7 @@ ms.locfileid: "79287707"
 |status_message|상태 테이블에서 사용되는 상태 메시지입니다.|  
 |데이터|오류 또는 추적 레코드에 페이로드가 포함되는 사례에 대한 추가 데이터입니다(예: 손상된 로그 레코드).|  
   
-###  <a name="BKMK_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
+###  <a name="cdcxdbcdc_staged_transactions"></a><a name="BKMK_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
  이 테이블에는 큰 트랜잭션 또는 장기 실행 트랜잭션에 대한 변경 레코드가 트랜잭션 커밋 또는 롤백 이벤트가 캡처될 때까지 저장됩니다. Oracle CDC Service는 캡처된 로그 레코드를 트랜잭션 커밋 시간을 기준으로 정렬한 다음 각 트랜잭션에 대한 시간순으로 정렬합니다. 동일한 트랜잭션에 대한 로그 레코드는 트랜잭션이 종료될 때까지 메모리에 저장되었다가 대상 변경 테이블에 기록되거나 삭제(롤백의 경우)됩니다. 사용 가능한 메모리 양이 제한되므로 대형 트랜잭션은 트랜잭션이 완료될 때까지 **cdc.xdbcdc_staged_transactions** 테이블에 기록됩니다. 트랜잭션은 오래 동안 실행될 경우 준비 테이블에도 기록됩니다. 따라서 Oracle CDC 인스턴스를 다시 시작할 때 Oracle 트랜잭션 로그에서 이전 변경 사항을 다시 읽을 필요가 없습니다.  
   
  다음 표에서는 **cdc.xdbcdc_staged_transactions** 테이블 열에 대해 설명합니다.  

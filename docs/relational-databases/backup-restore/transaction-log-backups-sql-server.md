@@ -16,10 +16,10 @@ ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 491016d02dfdb890914633333e19a3138c01779d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68041347"
 ---
 # <a name="transaction-log-backups-sql-server"></a>트랜잭션 로그 백업(SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "68041347"
  
 데이터베이스 관리자는 보통 주기적(예: 매주)으로 전체 데이터베이스 백업을 만들고, 상황에 따라 더 짧은 간격(예: 매일)으로 차등 데이터베이스 백업을 만듭니다. 또한 데이터베이스 백업과 상관없이 더 자주 트랜잭션 로그를 백업합니다. 지정된 백업 유형의 최적 간격은 데이터의 중요도, 데이터베이스의 크기 및 서버의 작업과 같은 요소에 따라 달라집니다. 좋은 전략을 구현하는 방법에 대한 자세한 내용은 이 항목의 [권장 사항](#Recommendations)을 참조하세요. 
    
-##  <a name="LogBackupSequence"></a> 로그 백업 시퀀스의 작동 방법  
+##  <a name="how-a-sequence-of-log-backups-works"></a><a name="LogBackupSequence"></a> 로그 백업 시퀀스의 작동 방법  
  트랜잭션 로그 백업 *로그 체인* 시퀀스는 데이터 백업과 독립되어 있습니다. 예를 들어 이벤트가 다음과 같은 순서로 발생한다고 가정합니다.  
   
 |Time|행사|  
@@ -45,7 +45,7 @@ ms.locfileid: "68041347"
   
  8:00 PM에 생성된 트랜잭션 로그 백업에는 4:00 PM부터 전체 데이터베이스 백업이 생성된 6:00 PM을 거쳐 8:00 PM까지의 트랜잭션 로그 레코드가 포함됩니다. 트랜잭션 로그 백업 순서는 8:00 AM에 생성된 초기 전체 데이터베이스 백업부터 8:00 PM에 생성된 마지막 트랜잭션 로그 백업에 이르기까지 연속적입니다. 이러한 로그 백업을 적용하는 방법은 [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)의 예제를 참조하세요.  
   
-##  <a name="Recommendations"></a> 권장 사항  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   트랜잭션 로그가 손상되면 최근의 유효 백업 이후에 수행한 작업이 손실됩니다. 따라서 내결함성이 있는 스토리지에 로그 파일을 보관하는 것이 좋습니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68041347"
 > 복원해야 하는 로그 백업의 수를 제한하려면 데이터를 정기적으로 백업해야 합니다. 예를 들어 주별 전체 데이터베이스 백업과 일별 차등 데이터베이스 백업을 예약할 수 있습니다.  
 > 또 복구 전략을 구현할 때 필요한 [RTO](https://wikipedia.org/wiki/Recovery_time_objective) 및 [RPO](https://wikipedia.org/wiki/Recovery_point_objective), 특히 전체 및 차등 데이터베이스 백업 케이던스에 대해 생각해보세요.
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **트랜잭션 로그 백업을 만들려면**  
   
 -   [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  

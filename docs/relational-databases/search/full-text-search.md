@@ -13,10 +13,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 81a3e6268b74c6aeb4a3fc7ea7c492133abf372d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72930268"
 ---
 # <a name="full-text-search"></a>전체 텍스트 검색
@@ -40,7 +40,7 @@ ms.locfileid: "72930268"
   
  전체 텍스트 쿼리는 영어와 일본어 같은 특정 언어의 규칙을 기준으로 단어와 구에 적용되어 전체 텍스트 인덱스의 텍스트 데이터에 대해 언어 검색을 수행합니다. 전체 텍스트 쿼리에는 간단한 단어와 구 또는 여러 형식의 단어나 구가 포함될 수 있습니다. 전체 텍스트 쿼리는 일치 항목( *적중*이라고도 함)이 하나 이상 있는 문서를 모두 반환합니다. 대상 문서가 전체 텍스트 쿼리에 지정된 모든 용어를 포함하며 일치하는 용어 사이의 거리와 같이 다른 모든 검색 조건과 일치할 때 일치 항목이 발생합니다.    
   
-##  <a name="queries"></a> 전체 텍스트 검색 쿼리  
+##  <a name="full-text-search-queries"></a><a name="queries"></a> 전체 텍스트 검색 쿼리  
  전체 텍스트 인덱스에 열을 추가한 후에는 사용자와 애플리케이션이 해당 열의 텍스트에 대해 전체 텍스트 쿼리를 실행할 수 있습니다. 이러한 쿼리는 다음 중 하나를 검색할 수 있습니다.  
   
 -   하나 이상의 특정 단어 또는 구(*단순 단어*)  
@@ -78,10 +78,10 @@ ms.locfileid: "72930268"
   
  자세한 내용은 [전체 텍스트 검색을 사용한 쿼리](../../relational-databases/search/query-with-full-text-search.md)를 참조하세요.  
   
-##  <a name="like"></a> LIKE 조건자와 전체 텍스트 검색 쿼리 비교
+##  <a name="compare-full-text-search-queries-to-the-like-predicate"></a><a name="like"></a> LIKE 조건자와 전체 텍스트 검색 쿼리 비교
  전체 텍스트 검색과 달리 [LIKE](../../t-sql/language-elements/like-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 조건자는 문자 패턴에 대해서만 적용됩니다. 또한 LIKE 조건자는 서식 있는 이진 데이터를 쿼리하는 데 사용할 수도 없습니다. 특히 구조화되지 않은 많은 텍스트 데이터에 대한 LIKE 쿼리는 동일한 데이터에 대한 전체 텍스트 쿼리보다 훨씬 느립니다. 수백만 개의 텍스트 데이터 행에 대해 LIKE 쿼리를 실행하면 결과가 반환되기까지 몇 분이 걸릴 수 있지만 같은 데이터에 대해 전체 텍스트 쿼리를 실행하면 반환되는 행 수에 따라 몇 초 내에 완료됩니다.  
   
-##  <a name="architecture"></a> 전체 텍스트 검색 아키텍처
+##  <a name="full-text-search-architecture"></a><a name="architecture"></a> 전체 텍스트 검색 아키텍처
  전체 텍스트 검색 아키텍처는 다음과 같은 프로세스로 구성됩니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스(sqlservr.exe).  
@@ -94,7 +94,7 @@ ms.locfileid: "72930268"
   
  ![전체 텍스트 검색 아키텍처](../../relational-databases/search/media/ifts-arch.gif "전체 텍스트 검색 아키텍처")  
 
-###  <a name="sqlprocess"></a> SQL Server 프로세스  
+###  <a name="sql-server-process"></a><a name="sqlprocess"></a> SQL Server 프로세스  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스는 전체 텍스트 검색에 다음 구성 요소를 사용합니다.  
   
 -   **사용자 테이블.** 이 테이블은 전체 텍스트 인덱싱할 데이터를 포함합니다.  
@@ -116,7 +116,7 @@ ms.locfileid: "72930268"
   
 -   **필터 데몬 관리자.** 필터 데몬 관리자는 전체 텍스트 엔진 필터 데몬 호스트의 상태를 모니터링합니다.  
   
-###  <a name="fdhostprocess"></a> Filter Daemon Host process  
+###  <a name="filter-daemon-host-process"></a><a name="fdhostprocess"></a> Filter Daemon Host process  
  필터 데몬 호스트는 전체 텍스트 엔진에 의해 시작되는 프로세스로, 테이블 데이터의 액세스, 필터링 및 단어 분리, 그리고 쿼리 입력의 단어 분리 및 형태소 분석을 담당하는 다음과 같은 전체 텍스트 검색 구성 요소를 실행합니다.  
   
  필터 데몬 호스트의 구성 요소는 다음과 같습니다.  
@@ -127,10 +127,10 @@ ms.locfileid: "72930268"
   
 -   **단어 분리기 및 형태소 분석기.** 단어 분리기는 지정된 언어의 어휘 규칙을 기준으로 단어 경계(*단어 분리*)를 찾는 언어별 구성 요소입니다. 각 단어 분리기는 동사를 변화시키고 활용 형태상의 확장을 수행하는 언어별 형태소 분석기 구성 요소와 연결됩니다. 인덱싱할 때 필터 데몬 호스트는 단어 분리기와 형태소 분석기를 사용하여 지정된 테이블 열의 텍스트 데이터에 대해 언어 분석을 수행합니다. 전체 텍스트 인덱스의 테이블 열과 연결된 언어에 따라 열을 인덱싱하는 데 사용되는 단어 분리기와 형태소 분석기가 결정됩니다. 자세한 내용은 [검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)를 참조하세요.  
   
-##  <a name="processing"></a> 전체 텍스트 검색 처리  
+##  <a name="full-text-search-processing"></a><a name="processing"></a> 전체 텍스트 검색 처리  
  전체 텍스트 검색은 전체 텍스트 엔진을 통해 수행됩니다. 전체 텍스트 엔진은 인덱싱 지원과 쿼리 지원의 두 가지 역할을 수행합니다.  
   
-###  <a name="indexing"></a> 전체 텍스트 인덱싱 프로세스  
+###  <a name="full-text-indexing-process"></a><a name="indexing"></a> 전체 텍스트 인덱싱 프로세스  
  탐색이라고도 하는 전체 텍스트 채우기가 시작되면 전체 텍스트 엔진은 대용량 데이터 일괄 처리를 메모리에 밀어 넣고 필터 데몬 호스트에 알립니다. 호스트가 데이터를 필터링하고 데이터의 단어를 분리하며 변환된 데이터를 반전된 단어 목록으로 변환합니다. 그런 다음 전체 텍스트 검색은 변환된 데이터를 단어 목록에서 끌어오고 데이터를 처리하여 중지 단어를 제거하며 하나의 일괄 처리에 대한 단어 목록을 하나 이상의 반전된 인덱스를 통해 유지합니다.  
   
  인덱싱 데이터가 **varbinary(max)** 또는 **image** 열에 저장되어 있으면 **IFilter** 인터페이스를 구현하는 필터는 해당 데이터에 지정된 파일 형식(예: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word)을 기준으로 텍스트를 추출합니다. 필터 구성 요소에서 **varbinary(max)** 또는 **image** 데이터를 메모리에 밀어넣는 대신 filterdata 폴더에 기록해야 하는 경우도 있습니다.  
@@ -141,7 +141,7 @@ ms.locfileid: "72930268"
   
  채우기가 완료되면 인덱스 조각을 하나의 마스터 전체 텍스트 인덱스로 병합하는 최종 병합 프로세스가 실행됩니다. 이렇게 하면 많은 인덱스 조각 대신 마스터 인덱스만 쿼리하면 되기 때문에 쿼리 성능이 향상되며 개선된 평가 통계를 사용하여 관련성 등급을 지정할 수 있습니다.  
   
-###  <a name="querying"></a> 전체 텍스트 쿼리 프로세스  
+###  <a name="full-text-querying-process"></a><a name="querying"></a> 전체 텍스트 쿼리 프로세스  
  쿼리 프로세서는 쿼리의 전체 텍스트 부분을 처리하기 위해 전체 텍스트 엔진에 전달합니다. 전체 텍스트 엔진은 단어 분리를 수행하고 필요에 따라 동의어 사전 확장, 형태소 분석 및 중지 단어(의미 없는 단어) 처리도 수행합니다. 그러면 쿼리의 전체 텍스트 부분은 SQL 연산자 형식, 주로 STVF(스트리밍 테이블 반환 함수)로 표시됩니다. 쿼리를 실행하는 동안 이러한 STVF는 반전된 인덱스에 액세스하여 올바른 결과를 검색합니다. 결과는 이 시점에서 클라이언트에 반환되거나 추가로 처리된 후 클라이언트에 반환됩니다.  
 
 ## <a name="full-text-index-architecture"></a>전체 텍스트 인덱스 아키텍처
@@ -151,7 +151,7 @@ ms.locfileid: "72930268"
   
 테이블당 한 개의 전체 텍스트 인덱스만 허용합니다. 테이블에 대한 전체 텍스트 인덱스를 만들려면 해당 테이블에 Null이 아닌 고유한 단일 열이 있어야 합니다. **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary**형식의 열에 대해 전체 텍스트 인덱스를 만들 수 있으며 **varbinary(max)** 를 전체 텍스트 검색의 인덱스로 사용할 수도 있습니다. 데이터 형식이  **varbinary**, **varbinary(max)** , **image**또는 **xml** 인 열에 대한 전체 텍스트 인덱스를 만들려면 유형 열을 지정해야 합니다. *유형 열* 은 각 행에 있는 문서의 파일 확장명(.doc, .pdf, .xls 등)이 저장되는 테이블 열입니다.  
 
-###  <a name="structure"></a> 전체 텍스트 인덱스 구조  
+###  <a name="full-text-index-structure"></a><a name="structure"></a> 전체 텍스트 인덱스 구조  
  전체 텍스트 인덱스의 구조를 잘 알게 되면 전체 텍스트 엔진의 작동 원리를 이해하는 데 도움이 됩니다. 이 항목에서 예제 테이블로 사용하는 테이블은 **의** Document [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 테이블에서 발췌한 것입니다. 이 테이블에는 **DocumentID** 열 및 **Title** 열의 2개 열과 테이블의 3개 행만 표시됩니다.  
   
  이 예에서는 **Title** 열에 대해 전체 텍스트 인덱스를 만들었다고 가정합니다.  
@@ -195,7 +195,7 @@ ms.locfileid: "72930268"
   
  **Occurrence** 열에는 정수 값이 포함됩니다. 각 DocId 값에는 해당 DocId 내의 특정 키워드에 대한 상대적 단어 오프셋에 해당하는 발생 빈도 값의 목록이 있습니다. 발행 빈도 값은 구 또는 근접 단어 일치를 확인하는 데 유용합니다. 예를 들어 구는 발생 빈도 값의 숫자가 서로 인접해 있습니다. 발생 빈도 값은 관련성을 평가하는 데에도 유용합니다. 예를 들어 DocId의 키워드 발생 빈도를 평가 시 사용할 수 있습니다.   
   
-###  <a name="fragments"></a> 전체 텍스트 인덱스 조각  
+###  <a name="full-text-index-fragments"></a><a name="fragments"></a> 전체 텍스트 인덱스 조각  
  논리적 전체 텍스트 인덱스는 일반적으로 여러 개의 내부 테이블로 분할됩니다. 이러한 각 내부 테이블을 전체 텍스트 인덱스 조각이라고 부릅니다. 이러한 조각 중 일부는 비교적 최신의 데이터를 포함할 수도 있습니다. 예를 들어 사용자가 DocId가 3인 다음 행을 업데이트하고 테이블에서 자동으로 변경 내용이 추적되는 경우 새로운 조각이 만들어집니다.  
   
 |DocumentID|제목|  
@@ -238,7 +238,7 @@ ms.locfileid: "72930268"
 |전체 텍스트 인덱스에 데이터를 추가하는 *채우기*는 일정 예약 또는 특정 요청을 통해 수행할 수 있으며 새 데이터를 추가하면 자동으로 수행됩니다.|인덱스의 기초가 되는 데이터가 삽입, 업데이트 또는 삭제되면 인덱스도 자동으로 업데이트됩니다.|  
 |같은 데이터베이스 내에서 하나 이상의 전체 텍스트 카탈로그로 그룹화됩니다.|그룹화되지 않습니다.|  
 
-##  <a name="components"></a> 전체 텍스트 검색의 언어 구성 요소 및 언어 지원
+##  <a name="full-text-search-linguistic-components-and-language-support"></a><a name="components"></a> 전체 텍스트 검색의 언어 구성 요소 및 언어 지원
  전체 텍스트 검색에서 영어, 스페인어, 중국어, 일본어, 아랍어, 벵골어 및 힌디어를 포함하여 거의 50개의 언어를 지원합니다. 지원되는 전체 텍스트 언어의 전체 목록은 [sys.fulltext_languages&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)를 참조하세요. 전체 텍스트 인덱스에 있는 각 열은 전체 텍스트 검색에서 지원하는 언어에 해당하는 Windows LCID(로캘 ID)와 연결됩니다. 예를 들어 LCID 1033은 영어(미국)에 해당하고 LCID 2057은 영어(영국)에 해당합니다. 지원되는 각 전체 텍스트 언어에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 해당 언어로 저장되는 전체 텍스트 데이터의 인덱싱 및 쿼리를 지원하는 언어 구성 요소를 제공합니다.  
   
  다음과 같은 언어별 구성 요소가 있습니다.  

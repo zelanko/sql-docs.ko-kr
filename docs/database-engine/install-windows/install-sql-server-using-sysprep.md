@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 8e8b9a36fac2e90719d3f8a8dbeee5d4c4a0e662
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67990955"
 ---
 # <a name="install-sql-server-with-sysprep"></a>SysPrep을 사용하여 SQL Server 설치
@@ -34,10 +34,10 @@ ms.locfileid: "67990955"
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전과 하드웨어 및 소프트웨어 요구 사항에 대한 자세한 내용은 [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)을 참조하세요. 
     
-##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 클러스터 지원  
+##  <a name="ssnoversion-sysprep-cluster-support"></a><a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 클러스터 지원  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 SysPrep은 명령줄에서 클러스터형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 설치를 지원합니다. 자세한 내용은 [Sysprep이란?](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx)을 참조하십시오. 
   
-### <a name="to-prepare-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 준비하려면  
+### <a name="to-prepare-a-ssnoversion-failover-cluster-unattended"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 준비하려면  
   
 1. 이미지를 준비하고( [SysPrep을 사용하여 SQL Server 설치 시 고려 사항](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)참조) SysPrep Generalization을 통해 Windows 이미지를 캡처합니다. 다음 예에서는 이미지를 준비합니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "67990955"
     setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-### <a name="complete-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 완료(무인)  
+### <a name="complete-a-ssnoversion-failover-cluster-unattended"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 완료(무인)  
   
 1. 사용 가능한 스토리지 그룹을 소유한 노드에서 **/ACTION=CompleteFailoverCluster** 를 사용하여 setup.exe를 실행합니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "67990955"
     setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName=<InstanceName>  /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'>:" /FAILOVERCLUSTERNETWORKNAME="<Insert FOI Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /INSTALLSQLDATADIR="<Drive>:\<Path>\MSSQLSERVER" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSYSADMINACCOUNTS="<DomainName\UserName>"  
     ```  
   
-### <a name="adding-a-node-to-an-existing-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 노드 추가(무인)  
+### <a name="adding-a-node-to-an-existing-ssnoversion-failover-cluster-unattended"></a>기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 노드 추가(무인)  
   
 1. Windows SysPrep Specialize를 실행하여 이미지를 배포합니다. 
   
@@ -77,13 +77,13 @@ ms.locfileid: "67990955"
     setup.exe /q /ACTION=AddNode /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-##  <a name="prepare"></a> 이미지 준비  
+##  <a name="prepare-image"></a><a name="prepare"></a> 이미지 준비  
   
-### <a name="prepare-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 준비 
+### <a name="prepare-a-stand-alone-instance-of-ssnoversion"></a>독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 준비 
   
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 미디어를 넣고 루트 폴더에서 Setup.exe를 두 번 클릭합니다. 네트워크 공유에서 설치하려면 공유에서 루트 폴더를 찾은 다음 Setup.exe를 두 번 클릭합니다. 
   
-2. 설치 마법사가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 센터를 실행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 준비하려면 **고급** 페이지에서 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이미지 준비**를 클릭합니다. 
+2. 설치 마법사가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 센터를 실행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 준비하려면 **고급[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지에서** 독립 실행형  **인스턴스의 이미지 준비**를 클릭합니다. 
   
 3. 시스템 구성 검사기가 컴퓨터에서 검색 작업을 실행합니다. 계속하려면 **확인**을 클릭합니다. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다. 
   
@@ -95,7 +95,7 @@ ms.locfileid: "67990955"
   
 7. **이미지 유형 준비** 페이지에서 **새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 준비**를 선택합니다. 
   
-     컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 구성되지 않은 기존 준비 인스턴스가 있는 경우에만 **이미지 유형 준비** 페이지가 표시됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 새 인스턴스를 준비하거나, 컴퓨터에 이미 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스에 sys prep 지원 기능을 추가하도록 선택할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스에 기능을 추가하는 방법은 [준비 인스턴스에 기능 추가](#AddFeatures)를 참조하십시오. 
+     컴퓨터에 **의 구성되지 않은 기존 준비 인스턴스가 있는 경우에만** 이미지 유형 준비[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지가 표시됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 새 인스턴스를 준비하거나, 컴퓨터에 이미 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스에 sys prep 지원 기능을 추가하도록 선택할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스에 기능을 추가하는 방법은 [준비 인스턴스에 기능 추가](#AddFeatures)를 참조하십시오. 
   
 8. **사용 조건** 페이지에서 사용권 계약을 읽은 다음 사용 조건과 계약 조건에 동의하면 해당 확인란을 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 개선을 돕기 위해 기능 사용 옵션을 사용하도록 설정하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)]로 보고서를 보낼 수도 있습니다. 
   
@@ -135,9 +135,9 @@ ms.locfileid: "67990955"
   
 18. 준비 단계가 끝났습니다. [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)에 설명한 대로 이미지를 완료하거나 준비 이미지를 배포할 수 있습니다. 
   
-##  <a name="complete"></a> 이미지 완료  
+##  <a name="complete-image"></a><a name="complete"></a> 이미지 완료  
   
-### <a name="complete-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>다음 준비 인스턴스 완료: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="complete-a-prepared-instance-of-ssnoversion"></a>다음 준비 인스턴스 완료: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스가 컴퓨터의 이미지에 포함되어 있으면 시작 메뉴에 바로 가기가 나타납니다. 설치 센터를 시작하고 **고급** 페이지에서 **독립 실행형 준비 인스턴스의 이미지 완료** 를 클릭할 수도 있습니다. 
   
@@ -153,7 +153,7 @@ ms.locfileid: "67990955"
   
 7. **준비 인스턴스 선택** 페이지의 드롭다운 상자에서 완료할 준비 인스턴스를 선택합니다. **인스턴스 ID** 목록에서 구성되지 않은 인스턴스를 선택합니다. 
   
-     **설치된 인스턴스:** 준비 인스턴스를 포함하여 이 머신에 설치되어 있는 모든 인스턴스가 표시됩니다. 
+     **설치된 인스턴스:** 준비 인스턴스를 포함하여 이 컴퓨터에 설치되어 있는 모든 인스턴스가 표시됩니다. 
   
 8. 준비 단계에서 설치에 포함하도록 선택한 기능 및 구성 요소가 **기능 검토** 페이지에 표시됩니다. 준비 인스턴스에 포함되지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 다른 기능을 더 추가하려면 먼저 이 단계를 완료하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 완료한 다음, **설치 센터** 의 **기능 추가**에서 기능을 추가해야 합니다. 
   
@@ -219,13 +219,13 @@ ms.locfileid: "67990955"
   
 23. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스 구성이 끝나고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치를 완료했습니다. 
   
-##  <a name="AddFeatures"></a> Add Features to a Prepared Instance  
+##  <a name="add-features-to-a-prepared-instance"></a><a name="AddFeatures"></a> Add Features to a Prepared Instance  
   
-### <a name="add-features-to-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>다음 준비 인스턴스에 기능 추가: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="add-features-to-a-prepared-instance-of-ssnoversion"></a>다음 준비 인스턴스에 기능 추가: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 미디어를 넣고 루트 폴더에서 Setup.exe를 두 번 클릭합니다. 네트워크 공유에서 설치하려면 공유에서 루트 폴더를 찾은 다음 Setup.exe를 두 번 클릭합니다. 
   
-2. 설치 마법사가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 센터를 실행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스에 기능을 추가하려면 **고급** 페이지에서 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이미지 준비**를 클릭합니다. 
+2. 설치 마법사가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 센터를 실행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스에 기능을 추가하려면 **고급[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지에서** 독립 실행형  **인스턴스의 이미지 준비**를 클릭합니다. 
   
 3. 시스템 구성 검사기가 컴퓨터에서 검색 작업을 실행합니다. 계속하려면 **확인**을 클릭합니다. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다. 
   
@@ -251,9 +251,9 @@ ms.locfileid: "67990955"
   
 13. 컴퓨터를 다시 시작합니다. 설치가 끝나면 설치 마법사에 표시되는 메시지를 읽어야 합니다. 자세한 내용은 [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)을 참조하세요. 
   
-##  <a name="RemoveFeatures"></a> 준비 인스턴스에서 기능 제거  
+##  <a name="remove-features-from-a-prepare-instance"></a><a name="RemoveFeatures"></a> 준비 인스턴스에서 기능 제거  
   
-### <a name="removing-features-from-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>다음 준비 인스턴스에서 기능 제거: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="removing-features-from-a-prepared-instance-of-ssnoversion"></a>다음 준비 인스턴스에서 기능 제거: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1. 제거 프로세스를 시작하려면 **시작** 메뉴에서 **제어판** 을 클릭하고 **프로그램 및 기능**을 두 번 클릭합니다. 
   
@@ -273,9 +273,9 @@ ms.locfileid: "67990955"
   
 9. **완료** 페이지에서 작업 완료 상태를 검토할 수 있습니다. 설치 마법사를 끝내려면 **닫기** 를 클릭합니다. 
   
-##  <a name="Uninstall"></a> 준비 인스턴스 제거  
+##  <a name="uninstalling-a-prepared-instance"></a><a name="Uninstall"></a> 준비 인스턴스 제거  
   
-### <a name="uninstall-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>다음 준비 인스턴스 제거: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="uninstall-a-prepared-instance-of-ssnoversion"></a>다음 준비 인스턴스 제거: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1. 제거 프로세스를 시작하려면 **시작** 메뉴에서 **제어판** 을 클릭하고 **프로그램 및 기능**을 두 번 클릭합니다. 
   
@@ -297,7 +297,7 @@ ms.locfileid: "67990955"
   
 10. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 모든 구성 요소가 제거될 때까지 1-9단계를 반복합니다. 
   
-##  <a name="bk_Modifying_Uninstalling"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 완료된 인스턴스 수정 또는 제거 
+##  <a name="modifying-or-uninstalling-a-completed-instance-of-ssnoversion"></a><a name="bk_Modifying_Uninstalling"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 완료된 인스턴스 수정 또는 제거 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 완료된 인스턴스를 제거하거나 기능을 추가 또는 제거하는 작업은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 설치된 인스턴스에 대한 작업과 프로세스가 비슷합니다. 자세한 내용은 다음 문서를 참조하세요.  
   
 - [SQL Server 인스턴스에 기능 추가&#40;설치 프로그램&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)  

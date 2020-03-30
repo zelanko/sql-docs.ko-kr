@@ -22,10 +22,10 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 9b034e43f918a0f6c198c29cf2f6618ba38638f8
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288577"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>복원 및 복구 개요(SQL Server)
@@ -47,7 +47,7 @@ ms.locfileid: "79288577"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원은 지원되는 모든 운영 체제에서 작동합니다. 지원되는 운영 체제에 대한 자세한 내용은 [SQL Server 2016 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)을 참조하세요. 이전 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 백업 지원에 대한 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)의 "호환성 지원" 섹션을 참조하세요.  
   
-##  <a name="RestoreScenariosOv"></a> 복원 시나리오 개요  
+##  <a name="overview-of-restore-scenarios"></a><a name="RestoreScenariosOv"></a> 복원 시나리오 개요  
  *의* 복원 시나리오 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 하나 이상의 백업에서 데이터를 복원한 다음 데이터베이스를 복구하는 프로세스입니다. 지원되는 복원 시나리오는 데이터베이스의 복구 모델 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에 따라 달라집니다.  
   
  다음 표에서는 복구 모델별로 지원되는 복원 시나리오에 대해 설명합니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "79288577"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 파일 또는 페이지를 복원하면 복원 작업을 수행하는 동안 데이터베이스에 있는 다른 데이터가 온라인 상태를 유지할 수 있습니다.  
 
-## <a name="TlogAndRecovery"></a> 복구 및 트랜잭션 로그
+## <a name="recovery-and-the-transaction-log"></a><a name="TlogAndRecovery"></a> 복구 및 트랜잭션 로그
 대부분의 복원 시나리오에서는 트랜잭션 로그 백업을 적용하고 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 **복구 프로세스**를 실행하여 데이터베이스를 온라인 상태로 만들도록 해야 합니다. 복구는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 각 데이터베이스에 대해 트랜잭션 측면에서 일관되거나 깨끗한 상태에서 시작하는 데 사용하는 프로세스입니다.
 
 장애 조치(failover) 또는 기타 완전하지 않은 종료가 발생하면 데이터베이스에서 일부 수정 내용이 버퍼 캐시에서 데이터 파일로 옮겨지지 않을 수 있으며 데이터 파일에 불완전한 트랜잭션으로 인한 일부 수정 내용이 그대로 남아 있을 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 시작되면 각 데이터베이스에 대해 마지막 [데이터베이스 검사점](../../relational-databases/logs/database-checkpoints-sql-server.md)을 기반으로 세 단계로 구성되는 복구를 실행합니다.
@@ -105,7 +105,7 @@ ms.locfileid: "79288577"
 > [!NOTE]
 > 엔터프라이즈 환경에서 데이터베이스의 가용성을 최대화하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition은 실행 취소 단계가 여전히 실행되는 동안 다시 실행 단계 후 데이터베이스를 온라인 상태로 만들 수 있습니다. 이를 빠른 복구라고 합니다.
 
-##  <a name="RMsAndSupportedRestoreOps"></a> 복구 모델 및 지원되는 복원 작업  
+##  <a name="recovery-models-and-supported-restore-operations"></a><a name="RMsAndSupportedRestoreOps"></a> 복구 모델 및 지원되는 복원 작업  
  데이터베이스에서 사용할 수 있는 복원 작업은 복구 모델에 따라 다릅니다. 다음 표에서는 각 복구 모델이 지정된 복원 시나리오를 지원하는지, 또 지원하면 어느 범위까지 지원하는지 요약합니다.  
   
 |복원 작업|전체 복구 모델|대량 로그 복구 모델|단순 복구 모델|  
@@ -123,7 +123,7 @@ ms.locfileid: "79288577"
 > [!IMPORTANT]  
 > 데이터베이스 복구 모델에 관계없이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업은 해당 백업을 만든 버전보다 오래된 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 버전으로 복원될 수는 없습니다.  
   
-## <a name="RMsimpleScenarios"></a> 단순 복구 모델에서의 증분 시나리오  
+## <a name="restore-scenarios-under-the-simple-recovery-model"></a><a name="RMsimpleScenarios"></a> 단순 복구 모델에서의 증분 시나리오  
  단순 복구 모델의 경우 복원 작업 시 다음과 같은 제한 사항이 있습니다.  
   
 -   파일 복원과 증분 복원은 읽기 전용 보조 파일 그룹에만 사용할 수 있습니다. 이러한 복원 시나리오에 대한 자세한 내용은 [파일 복원&#40;단순 복구 모델&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md) 및 [증분 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)을 참조하세요.  
@@ -137,7 +137,7 @@ ms.locfileid: "79288577"
 > [!IMPORTANT]  
 > 데이터베이스 복구 모델에 관계없이, 백업을 만든 버전보다 오래된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 복원할 수는 없습니다.  
   
-##  <a name="RMblogRestore"></a> 대량 로그 복구 모델에서 복원  
+##  <a name="restore-under-the-bulk-logged-recovery-model"></a><a name="RMblogRestore"></a> 대량 로그 복구 모델에서 복원  
  이 섹션에서는 전체 복구 모델을 보완하기 위한 용도로만 사용되는 대량 로그 복구 모델에 관련된 복원 고려 사항에 대해 설명합니다.  
   
 > [!NOTE]  
@@ -164,7 +164,7 @@ ms.locfileid: "79288577"
   
  온라인 복원을 수행하는 방법은 [온라인 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)을 참조하세요.  
   
-##  <a name="DRA"></a> 데이터베이스 복구 관리자(SQL Server Management Studio)  
+##  <a name="database-recovery-advisor-sql-server-management-studio"></a><a name="DRA"></a> 데이터베이스 복구 관리자(SQL Server Management Studio)  
 데이터베이스 복구 관리자는 올바른 최적의 복원 시퀀스를 구현하는 복원 계획 생성을 용이하게 합니다. 알려진 데이터베이스 복원 문제와 고객이 요청한 개선 사항이 해결되었습니다. 데이터베이스 복구 관리자에 의해 도입되는 주요 개선 사항은 다음과 같습니다.  
   
 -   **복원 계획 알고리즘:**  복원 계획 생성에 사용되는 알고리즘, 특히 복잡한 복원 시나리오가 크게 향상되었습니다. 지정 시간 복원의 분기 시나리오를 비롯한 여러 경계 사례가 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서보다 효율적으로 처리됩니다.  
@@ -177,7 +177,7 @@ ms.locfileid: "79288577"
   
 -   [복구 관리자: SSMS를 사용하여 분할 백업 만들기/복원](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
 
-## <a name="adr"></a> 가속 데이터베이스 복구
+## <a name="accelerated-database-recovery"></a><a name="adr"></a> 가속 데이터베이스 복구
 [가속 데이터베이스 복구](/azure/sql-database/sql-database-accelerated-database-recovery/)는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 사용할 수 있습니다. 가속 데이터베이스 복구는 특히 장기 실행 트랜잭션이 있는 경우 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [복구 프로세스](#TlogAndRecovery)를 다시 설계하여 데이터베이스 가용성을 크게 향상합니다. 가속 데이터베이스 복구가 사용하도록 설정된 데이터베이스는 장애 조치(failover) 또는 다른 완전하지 않은 종료 후에 훨씬 빠르게 복구 프로세스를 완료합니다. 가속 데이터베이스 복구를 사용하도록 설정하면 취소된 장기 실행 트랜잭션의 롤백이 훨씬 빨리 완료됩니다.
 
 다음 구문을 사용하여 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 데이터베이스별로 가속 데이터베이스 복구를 사용하도록 설정할 수 있습니다.
@@ -189,7 +189,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;
 > [!NOTE]
 > 가속 데이터베이스 복구는 기본적으로 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 사용하도록 설정됩니다.
 
-## <a name="RelatedContent"></a> 참고 항목  
+## <a name="see-also"></a><a name="RelatedContent"></a> 참고 항목  
  [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)      
  [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
  [SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)     

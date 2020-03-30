@@ -18,10 +18,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: cc42584c6b3f07961e83e53b8b5165243060256f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76910246"
 ---
 # <a name="compare-execution-plans"></a>실행 계획 비교
@@ -42,7 +42,7 @@ ms.locfileid: "76910246"
 - [쿼리 저장소](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)에서 선택된 두 개의 쿼리 계획
 
 > [!TIP]
-> 계획 비교는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서도 모든 *.sqlplan* 파일과 함께 작동합니다. 또한 이 옵션은 오프라인 비교를 활성화하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 필요가 없습니다. 
+> 계획 비교는 이전 버전의 *에서도 모든* .sqlplan[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일과 함께 작동합니다. 또한 이 옵션은 오프라인 비교를 활성화하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 필요가 없습니다. 
 
 두 실행 계획을 비교할 때 **기본적으로 동일하게 실행하는** 계획의 지역은 동일한 색과 패턴으로 강조 표시됩니다. 하나의 계획에서 색이 지정된 영역을 클릭하면 해당 계획의 일치하는 노드에서 다른 계획이 중앙에 위치합니다. 여전히 실행 계획의 일치하지 않는 연산자 및 노드를 비교할 수 있지만 이 경우 비교할 연산자를 수동으로 선택해야 합니다.
 
@@ -69,7 +69,7 @@ ms.locfileid: "76910246"
      > [!TIP]
      > 실행 계획에 사용 가능한 모든 확대/축소 및 탐색 옵션은 계획 비교 모드에서 작동합니다. 자세한 내용은 [실제 실행 계획 표시](../../relational-databases/performance/display-an-actual-execution-plan.md)를 참조하세요.
 
-5.  기본 선택 사항의 범위에서 오른쪽에 이중 속성 창도 열립니다. 비교된 연산자에 모두 있지만 차이점이 있는 속성의 경우 확인하기 쉽도록 ‘같지 않음’ 기호(&ne;)가 앞에 옵니다. 
+5.  기본 선택 사항의 범위에서 오른쪽에 이중 속성 창도 열립니다. 비교된 연산자에 모두 있지만 차이점이 있는 속성의 경우 확인하기 쉽도록 ‘같지 않음’ 기호( *)가 앞에 옵니다.* &ne;
 
     ![이중 속성 창](../../relational-databases/performance/media/plancomparison-properties.png "이중 속성 창")  
 

@@ -16,10 +16,10 @@ ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bb4a661110d91f73f45152b84dcfb63f8763d018
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75235453"
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>결과 페이지(Always On 가용성 그룹 마법사)
@@ -27,7 +27,7 @@ ms.locfileid: "75235453"
 
   이 도움말 항목에서는 **결과** 페이지의 옵션에 대해 설명합니다. 이 항목은 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]의 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)], [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 및 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에 적용됩니다. 이 페이지를 사용하여 마법사의 결과를 확인할 수 있습니다.  
   
-##  <a name="PageOptions"></a> 결과 페이지 옵션  
+##  <a name="results-page-options"></a><a name="PageOptions"></a> 결과 페이지 옵션  
  **요약** 표에는 다음과 같은 열이 있습니다.  
   
  **이름**  
@@ -41,7 +41,7 @@ ms.locfileid: "75235453"
 |**오류**|유효성 검사 단계가 실패했음을 나타냅니다. 오류 메시지를 보려면 링크를 클릭합니다.|  
 |**Success**|유효성 검사 단계가 성공적으로 완료되었음을 나타냅니다.|  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [새 가용성 그룹 대화 상자 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

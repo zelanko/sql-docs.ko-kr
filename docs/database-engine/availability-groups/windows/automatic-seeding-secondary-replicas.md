@@ -13,10 +13,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288547"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>자동 시드를 사용하여 Always On 가용성 그룹의 보조 복제본을 초기화합니다.
@@ -46,7 +46,7 @@ SQL Server 2012 및 2014에서 SQL Server Always On 가용성 그룹의 보조 �
 
 압축은 자동 시드에 사용할 수 있지만 기본적으로 사용되지 않습니다. 압축을 사용하면 네트워크 대역폭을 줄이고 프로세스 속도를 높이지만 추가적인 프로세서 오버헤드가 있습니다. 자동 시드 중에 압축을 사용하려면 9567 추적 플래그를 사용하도록 설정합니다([가용성 그룹에 대한 압축 성능 조정](tune-compression-for-availability-group.md) 참조).
 
-## <a name = "disklayout"></a> 디스크 레이아웃
+## <a name="disk-layout"></a><a name = "disklayout"></a> 디스크 레이아웃
 
 SQL Server 2016 및 이전 버전에서 자동 시드로 데이터베이스가 만들어진 폴더는 이미 존재해야 하며 주 복제본의 경로와 동일해야 합니다. 
 
@@ -103,13 +103,13 @@ WITH (
  GO
 ```
 
-`CREATE AVAILABILITY GROUP` 문에서 주 복제본에 대해 `SEEDING_MODE`를 설정하는 경우 주 복제본에 이미 데이터베이스의 주 읽기/쓰기 복사본이 있으므로 아무런 영향을 주지 않습니다. `SEEDING_MODE`는 다른 복제본이 주 복제본이 되고 데이터베이스가 추가된 경우에만 적용됩니다. 시드 모드는 나중에 변경할 수 있습니다([복제본의 시드 모드 변경](#change-the-seeding-mode-of-a-replica) 참조).
+`SEEDING_MODE` 문에서 주 복제본에 대해 `CREATE AVAILABILITY GROUP`를 설정하는 경우 주 복제본에 이미 데이터베이스의 주 읽기/쓰기 복사본이 있으므로 아무런 영향을 주지 않습니다. `SEEDING_MODE`는 다른 복제본이 주 복제본이 되고 데이터베이스가 추가된 경우에만 적용됩니다. 시드 모드는 나중에 변경할 수 있습니다([복제본의 시드 모드 변경](#change-the-seeding-mode-of-a-replica) 참조).
 
 보조 복제본이 되는 인스턴스에서 인스턴스가 조인되면 다음 메시지가 SQL Server 로그에 추가됩니다.
 
->가용성 그룹 'AGName'에 대해 로컬 가용성 복제본에 데이터베이스를 만드는 권한이 부여되지 않았지만 `AUTOMATIC`의 `SEEDING_MODE`가 있습니다. `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE` 명령을 사용하여 주 가용성 복제본에서 시드된 데이터베이스를 만들도록 허용하세요.
+>가용성 그룹 'AGName'에 대해 로컬 가용성 복제본에 데이터베이스를 만드는 권한이 부여되지 않았지만 `SEEDING_MODE`의 `AUTOMATIC`가 있습니다. `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE` 명령을 사용하여 주 가용성 복제본에서 시드된 데이터베이스를 만들도록 허용하세요.
 
-### <a name = "grantCreate"></a> 보조 복제본에서 가용성 그룹에 데이터베이스 만들기 권한 부여
+### <a name="grant-create-database-permission-on-secondary-replica-to-availability-group"></a><a name = "grantCreate"></a> 보조 복제본에서 가용성 그룹에 데이터베이스 만들기 권한 부여
 
 조인한 후 SQL Server의 보조 복제본 인스턴스에서 가용성 그룹 권한을 부여하여 데이터베이스를 만드세요. 자동 시드를 실행하려면 가용성 그룹에 데이터베이스를 만들 수 있는 권한이 있어야 합니다. 
 

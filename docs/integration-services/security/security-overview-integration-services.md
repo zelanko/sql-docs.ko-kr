@@ -21,10 +21,10 @@ ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0bc268c2baea6e0e661fac123df9fe19ec60252c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287647"
 ---
 # <a name="security-overview-integration-services"></a>보안 개요(Integration Services)
@@ -106,7 +106,7 @@ ms.locfileid: "79287647"
   
  자세한 내용은 [Integration Services 서비스 액세스](#service)를 참조하세요.  
 
-## <a name="files"></a> 패키지에서 사용되는 파일 액세스
+## <a name="access-to-files-used-by-packages"></a><a name="files"></a> 패키지에서 사용되는 파일 액세스
   패키지 보호 수준은 패키지 외부에 저장된 파일을 보호하지 않습니다. 이러한 파일은 다음과 같습니다.  
   
 -   구성 파일  
@@ -128,7 +128,7 @@ ms.locfileid: "79287647"
 ### <a name="log-files"></a>로그 파일  
  파일 시스템에 기록된 로그 항목도 ACL(액세스 제어 목록)을 사용하여 보호되어야 합니다. 로그 항목을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 저장하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안으로 보호할 수도 있습니다. 로그 항목에는 중요한 정보가 포함될 수 있습니다. 예를 들어 패키지에 전화 번호를 참조하는 SQL 문을 구성하는 SQL 실행 태스크가 포함되는 경우 SQL 문에 대한 로그 항목에는 전화 번호가 포함됩니다. SQL 문은 또한 데이터베이스에 있는 테이블 및 열 이름에 대한 개인 정보를 제공합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
 
-## <a name="service"></a> Integration Services 서비스 액세스
+## <a name="access-to-the-integration-services-service"></a><a name="service"></a> Integration Services 서비스 액세스
   패키지 보호 수준으로 패키지를 편집 및 실행할 수 있는 사용자를 제한할 수 있지만, 현재 서버에서 실행 중인 패키지 목록을 볼 수 있는 사용자 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 현재 실행 중인 패키지를 중지할 수 있는 사용자를 제한하려면 보다 높은 수준의 보호가 필요합니다.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 사용하여 실행 중인 패키지를 나열합니다. Windows Administrators 그룹의 멤버는 현재 실행 중인 모든 패키지를 보고 중지할 수 있습니다. Administrators 그룹의 멤버가 아닌 사용자는 자신이 시작한 패키지만 보고 중지할 수 있습니다.  

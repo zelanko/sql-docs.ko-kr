@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 089de803bee02d241e1d7b56578c7e8bf8b15649
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288367"
 ---
 # <a name="hierarchical-data-sql-server"></a>계층적 데이터(SQL Server)
@@ -45,7 +45,7 @@ ms.locfileid: "79288367"
   
  [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) 를 데이터 형식으로 사용하여 계층 구조가 있는 테이블을 만들거나 다른 위치에 저장된 데이터의 계층 구조를 설명할 수 있습니다. [의](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) hierarchyid 함수 [!INCLUDE[tsql](../includes/tsql-md.md)] 를 사용하면 계층적 데이터를 쿼리하고 관리할 수 있습니다.  
   
-##  <a name="keyprops"></a> hierarchyid의 주요 속성  
+##  <a name="key-properties-of-hierarchyid"></a><a name="keyprops"></a> hierarchyid의 주요 속성  
  **hierarchyid** 데이터 형식의 값은 트리 계층에서의 위치를 나타냅니다. **hierarchyid** 값의 속성은 다음과 같습니다.  
   
 -   높은 압축성  
@@ -61,7 +61,7 @@ ms.locfileid: "79288367"
      [GetDescendant](../t-sql/data-types/getdescendant-database-engine.md) 메서드를 사용하면 지정한 노드의 오른쪽, 지정한 노드의 왼쪽 또는 두 형제 사이에 형제를 생성할 수 있습니다. 임의 개수의 노드를 계층에서 삽입하거나 삭제할 때 비교 속성이 유지됩니다. 대부분의 삽입 및 삭제 시 압축성 속성이 유지됩니다. 그러나 두 노드 간 삽입 시에는 약간 덜 압축된 표현으로 hierarchyid 값이 생성됩니다.  
   
   
-##  <a name="limits"></a> hierarchyid의 제한 사항  
+##  <a name="limitations-of-hierarchyid"></a><a name="limits"></a> hierarchyid의 제한 사항  
  **hierarchyid** 데이터 형식의 제한 사항은 다음과 같습니다.  
   
 -   **hierarchyid** 형식의 열은 자동으로 트리를 나타내지 않습니다. 애플리케이션에 따라 원하는 행 간 관계가 값에 반영되도록 **hierarchyid** 값이 생성되어 할당됩니다. 일부 애플리케이션에는 다른 테이블에 정의된 계층에서의 위치를 나타내는 **hierarchyid** 형식의 열이 있을 수 있습니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "79288367"
 -   **hierarchyid** 값이 나타내는 계층 관계는 외래 키 관계와 같은 방식으로 적용되지 않습니다. A에 자식 B가 있는 상태에서 A를 삭제하여 B에 존재하지 않는 레코드에 대한 관계가 남게 되는 계층 관계를 만들 수 있으며 이러한 관계가 적절한 경우도 있습니다. 이 동작이 허용되지 않는 경우에는 애플리케이션에서 부모를 삭제하기 전에 하위 항목에 대해 쿼리해야 합니다.  
   
   
-##  <a name="alternatives"></a> hierarchyid에 대한 대체 방법을 사용하는 경우  
+##  <a name="when-to-use-alternatives-to-hierarchyid"></a><a name="alternatives"></a> hierarchyid에 대한 대체 방법을 사용하는 경우  
  계층적 데이터를 나타내는 데 **hierarchyid** 외에 다음 두 가지 방법을 사용할 수 있습니다.  
   
 -   부모/자식  
@@ -148,7 +148,7 @@ GO
 ```  
   
   
-##  <a name="indexing"></a> 계층적 데이터의 인덱싱 전략  
+##  <a name="indexing-strategies-for-hierarchical-data"></a><a name="indexing"></a> 계층적 데이터의 인덱싱 전략  
  계층적 데이터의 인덱싱 방법에는 두 가지가 있습니다.  
   
 -   **깊이 우선**  
@@ -163,7 +163,7 @@ GO
   
      너비 우선 인덱스에서는 노드의 모든 직계 자식이 같은 위치에 배치됩니다. 따라서 "이 관리자에게 직접 보고하는 모든 직원 찾기"와 같은 인접한 자식에 대한 쿼리에 답하는 데에는 너비 우선 인덱스가 효율적입니다.  
   
- 깊이 우선을 사용할 것인지, 너비 우선을 사용할 것인지 또는 둘 다를 사용할 것인지 여부와 클러스터링 키(있는 경우)를 만들 인덱스는 위의 쿼리 형식에 대한 상대적 중요도와 SELECT 및 DML 작업의 상대적 중요도에 따라 달라집니다. 인덱싱 방법에 대한 자세한 예는 [자습서: hierarchyid 데이터 형식 사용](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)의 1단원을 참조하세요.  
+ 깊이 우선을 사용할 것인지, 너비 우선을 사용할 것인지 또는 둘 다를 사용할 것인지 여부와 클러스터링 키(있는 경우)를 만들 인덱스는 위의 쿼리 형식에 대한 상대적 중요도와 SELECT 및 DML 작업의 상대적 중요도에 따라 달라집니다. 인덱싱 방법에 대한 자세한 예는 [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)을 참조하십시오.  
   
   
 ### <a name="creating-indexes"></a>인덱스 만들기  
@@ -268,13 +268,13 @@ INSERT SimpleDemo
     VALUES ('/', 'Earth', 'Planet');  
 ```  
   
-##  <a name="tasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="tasks"></a> 관련 작업  
   
-###  <a name="migrating"></a> 부모/자식에서 hierarchyid로 마이그레이션  
- 대부분의 트리는 부모/자식을 사용하여 표현됩니다. 부모/자식 구조를 **hierarchyid** 를 사용하는 테이블로 마이그레이션하는 가장 쉬운 방법은 임시 열이나 임시 테이블을 사용하여 계층의 각 수준에서 노드 수를 추적하는 것입니다. 부모/자식 테이블 마이그레이션의 예는 [자습서: hierarchyid 데이터 형식 사용](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)의 1단원을 참조하세요.  
+###  <a name="migrating-from-parentchild-to-hierarchyid"></a><a name="migrating"></a> 부모/자식에서 hierarchyid로 마이그레이션  
+ 대부분의 트리는 부모/자식을 사용하여 표현됩니다. 부모/자식 구조를 **hierarchyid** 를 사용하는 테이블로 마이그레이션하는 가장 쉬운 방법은 임시 열이나 임시 테이블을 사용하여 계층의 각 수준에서 노드 수를 추적하는 것입니다. 부모/자식 테이블 마이그레이션의 예제는 [자습서: hierarchyid 데이터 형식 사용](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)의 1단원을 참조하세요.  
   
   
-###  <a name="BKMK_ManagingTrees"></a> hierarchyid를 사용하여 트리 관리  
+###  <a name="managing-a-tree-using-hierarchyid"></a><a name="BKMK_ManagingTrees"></a> hierarchyid를 사용하여 트리 관리  
  **hierarchyid** 열이 반드시 트리를 나타내는 것은 아니지만 애플리케이션에서 손쉽게 해당 열이 트리를 나타내도록 만들 수 있습니다.  
   
 -   새 값을 생성할 때 다음 중 하나를 수행합니다.  
@@ -379,7 +379,7 @@ EmployeeId LastChild EmployeeName
 ```  
   
   
-###  <a name="BKMK_EnforcingTrees"></a> 트리 강제 적용  
+###  <a name="enforcing-a-tree"></a><a name="BKMK_EnforcingTrees"></a> 트리 강제 적용  
  위 예에서는 애플리케이션에서 트리가 유지되도록 하는 방법을 보여 줍니다. 제약 조건을 사용하여 트리를 강제 적용하려면 기본 키 ID에 FOREIGN KEY 제약 조건을 다시 적용하여 각 노드의 부모를 정의하는 계산 열을 만듭니다.  
   
 ```sql
@@ -397,7 +397,7 @@ GO
  계층적 트리를 유지하도록 트러스트되지 않은 코드에 해당 테이블에 대한 직접 DML 액세스가 있는 경우 관계를 이러한 방법으로 강제 적용하는 것이 좋습니다. 하지만 모든 DML 작업에서 제약 조건을 확인해야 하므로 이 방법은 성능을 저하시킬 수 있습니다.  
   
   
-###  <a name="findclr"></a> CLR을 사용하여 상위 항목 찾기  
+###  <a name="finding-ancestors-by-using-the-clr"></a><a name="findclr"></a> CLR을 사용하여 상위 항목 찾기  
  한 계층의 두 노드를 사용하는 일반적인 작업에는 수준이 가장 낮은 공통 상위 항목을 찾는 작업이 있습니다. [!INCLUDE[tsql](../includes/tsql-md.md)] hierarchyid **형식을** 또는 CLR에서 모두 사용할 수 있으므로 두 방법을 모두 사용하여 이러한 작업을 코드로 작성할 수 있습니다. 그러나 성능이 향상되는 CLR을 사용하는 것이 좋습니다.  
   
  다음 CLR 코드를 사용하여 상위 항목을 나열하고 수준이 가장 낮은 공통 상위 항목을 찾을 수 있습니다.  
@@ -450,7 +450,7 @@ GO
 ```  
   
   
-###  <a name="ancestors"></a> 상위 항목 나열  
+###  <a name="listing-ancestors"></a><a name="ancestors"></a> 상위 항목 나열  
  노드의 상위 항목 목록을 만드는 것은 조직에서의 위치 표시와 같은 일반적인 작업입니다. 이를 수행할 수 있는 한 가지 방법은 위에 정의된 **HierarchyId_Operations** 클래스를 사용하는 테이블 반환 함수를 사용하는 것입니다.  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)]사용:  
@@ -479,7 +479,7 @@ GO
 ```  
   
   
-###  <a name="lowestcommon"></a> 수준이 가장 낮은 공통 상위 항목 찾기  
+###  <a name="finding-the-lowest-common-ancestor"></a><a name="lowestcommon"></a> 수준이 가장 낮은 공통 상위 항목 찾기  
  위에 정의된 **HierarchyId_Operations** 클래스를 통해 다음 [!INCLUDE[tsql](../includes/tsql-md.md)] 함수를 만들어 한 계층의 두 노드를 사용하는 수준이 가장 낮은 공통 상위 항목을 찾습니다.  
   
 ```sql
@@ -511,7 +511,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
  결과 노드는 /1/1/입니다.  
   
   
-###  <a name="BKMK_MovingSubtrees"></a> 하위 트리 이동  
+###  <a name="moving-subtrees"></a><a name="BKMK_MovingSubtrees"></a> 하위 트리 이동  
  다른 일반적인 작업은 하위 트리를 이동하는 것입니다. 아래 절차에서는 **\@oldMgr**의 하위 트리를 사용하여 이 하위 트리( **\@oldMgr** 포함)를 **\@newMgr**의 하위 트리로 만듭니다.  
   
 ```sql
@@ -540,7 +540,7 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [hierarchyid 데이터 형식 메서드 참조](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
- [자습서: hierarchyid 데이터 형식 사용](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid&#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

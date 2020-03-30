@@ -27,10 +27,10 @@ ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
 ms.openlocfilehash: d662eb333ae932370c09847319cb69a5deb4773e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67950334"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT(Transact-SQL)
@@ -59,7 +59,7 @@ CHECKPOINT [ checkpoint_duration ]
   
  *checkpoint_duration*을 사용하는 경우 성능에 미치는 영향은 더티 페이지 수, 시스템 작업 및 지정한 실제 기간에 따라 다릅니다. 예를 들어 검사점이 120초 내에 정상적으로 완료되는 경우 *checkpoint_duration*을 45초로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 기본적으로 할당된 리소스보다 더 많은 리소스를 검사점에 할당하게 됩니다. 이와 반대로, *checkpoint_duration*을 180초로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 기본적으로 할당된 리소스보다 더 적은 리소스를 검사점에 할당하게 됩니다. 일반적으로 *checkpoint_duration*을 짧게 설정하면 검사점에 할당되는 리소스가 증가하고, *checkpoint_duration*을 길게 설정하면 검사점에 할당되는 리소스가 감소합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 가능하면 항상 검사점을 완료하며 CHECKPOINT 문은 검사점이 완료되는 즉시 반환됩니다. 그러므로 지정한 기간보다 빨리 검사점이 완료되거나 지정한 기간보다 오래 실행될 수 있습니다.  
   
-##  <a name="Security"></a> 보안  
+##  <a name="security"></a><a name="Security"></a> 보안  
   
 ### <a name="permissions"></a>사용 권한  
  CHECKPOINT 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버에게 부여되며, 양도할 수 없습니다.  

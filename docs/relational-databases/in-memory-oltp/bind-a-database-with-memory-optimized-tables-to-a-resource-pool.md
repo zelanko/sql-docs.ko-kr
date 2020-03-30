@@ -11,10 +11,10 @@ ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 8bc12c4ef792fe1df3d9855df72e025a2dafa6ac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412756"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩
@@ -50,10 +50,10 @@ ms.locfileid: "74412756"
   
 -   [메모리 최적화 테이블 및 인덱스에 사용 가능한 메모리 비율](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)  
   
-##  <a name="bkmk_CreatePool"></a> 데이터베이스 및 리소스 풀 만들기  
+##  <a name="create-the-database-and-resource-pool"></a><a name="bkmk_CreatePool"></a> 데이터베이스 및 리소스 풀 만들기  
  어떤 순서로든 데이터베이스와 리소스 풀을 만들 수 있습니다. 중요한 점은 데이터베이스를 리소스 풀에 바인딩하기 전에 데이터베이스와 리소스 풀이 모두 있는 것입니다.  
   
-###  <a name="bkmk_CreateDatabase"></a> 데이터베이스 만들기  
+###  <a name="create-the-database"></a><a name="bkmk_CreateDatabase"></a> 데이터베이스 만들기  
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)]은 하나 이상의 메모리 최적화 테이블이 포함되는 IMOLTP_DB라는 데이터베이스를 만듭니다. 이 명령을 실행하기 전에 \<driveAndPath> 경로가 있어야 합니다.  
   
 ```sql  
@@ -64,7 +64,7 @@ ALTER DATABASE IMOLTP_DB ADD FILE( NAME = 'IMOLTP_DB_fg' , FILENAME = 'c:\data\I
 GO  
 ```  
   
-###  <a name="bkmk_DeterminePercent"></a> MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT의 최소값 결정  
+###  <a name="determine-the-minimum-value-for-min_memory_percent-and-max_memory_percent"></a><a name="bkmk_DeterminePercent"></a> MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT의 최소값 결정  
  메모리 최적화 테이블에 필요한 메모리를 결정한 후에는 필요한 사용 가능 메모리 비율을 결정하고 해당 값 이상으로 메모리 비율을 설정합니다.  
   
  **예제:**    
@@ -83,7 +83,7 @@ GO
   
  따라서 메모리 최적화 테이블 및 인덱스의 16GB 요구 사항을 충족하려면 사용 가능한 메모리의 62.5% 이상이 필요합니다.  MIN_MEMORY_PERCENT 맟 MAX_MEMORY_PERCENT 값은 정수여야 하므로 63% 이상으로 설정합니다.  
   
-###  <a name="bkmk_CreateResourcePool"></a> 리소스 풀 만들기 및 메모리 구성  
+###  <a name="create-a-resource-pool-and-configure-memory"></a><a name="bkmk_CreateResourcePool"></a> 리소스 풀 만들기 및 메모리 구성  
  메모리 최적화 테이블의 메모리를 구성할 때 용량 계획은 MAX_MEMORY_PERCENT가 아니라 MIN_MEMORY_PERCENT를 기준으로 해야 합니다.  MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT에 대한 자세한 내용은 [ALTER RESOURCE POOL&#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)을 참조하세요. 이렇게 하면 MIN_MEMORY_PERCENT로 인해 다른 리소스 풀에 대한 메모리 압력이 발생하여 메모리가 확실히 적용되므로 메모리 최적화 테이블의 메모리 가용성을 보다 효율적으로 예측할 수 있습니다. 메모리를 사용할 수 있고 OOM(메모리 부족) 조건을 방지할 수 있도록 하려면 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 값이 동일해야 합니다. 커밋된 메모리의 양에 따라 메모리 최적화 테이블에 사용 가능한 메모리의 비율은 아래 [메모리 최적화 테이블 및 인덱스에 사용 가능한 메모리 비율](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable) 을 참조하세요.  
   
  VM 환경에서 작업할 때 자세한 내용은 [최선의 구현 방법: VM 환경에서 메모리 내 OLTP 사용](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) 을 참조하세요.  
@@ -102,7 +102,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-##  <a name="bkmk_DefineBinding"></a> 풀에 데이터베이스 바인딩  
+##  <a name="bind-the-database-to-the-pool"></a><a name="bkmk_DefineBinding"></a> 풀에 데이터베이스 바인딩  
  시스템 함수 `sp_xtp_bind_db_resource_pool` 을 사용하여 리소스 풀에 데이터베이스를 바인딩합니다. 이 함수는 데이터베이스 이름과 리소스 풀 이름의 2개의 매개 변수를 사용합니다.  
   
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서는 리소스 풀 Pool_IMOLTP와 데이터베이스 IMOLTP_DB의 바인딩을 정의합니다. 데이터베이스를 온라인 상태로 전환할 때까지 바인딩이 적용되지 않습니다.  
@@ -114,7 +114,7 @@ GO
   
  시스템 함수 sp_xtp_bind_db_resourece_pool은 database_name과 pool_name이라는 두 개의 문자열 매개 변수를 사용합니다.  
   
-##  <a name="bkmk_ConfirmBinding"></a> 바인딩 확인  
+##  <a name="confirm-the-binding"></a><a name="bkmk_ConfirmBinding"></a> 바인딩 확인  
  IMOLTP_DB의 리소스 풀 ID에 주의하여 바인딩을 확인합니다. 값이 NULL이면 안 됩니다.  
   
 ```sql  
@@ -123,7 +123,7 @@ FROM sys.databases d
 GO  
 ```  
   
-##  <a name="bkmk_MakeBindingEffective"></a> 바인딩 적용  
+##  <a name="make-the-binding-effective"></a><a name="bkmk_MakeBindingEffective"></a> 바인딩 적용  
  바인딩을 리소스 풀에 바인딩한 후 바인딩을 적용하려면 데이터베이스를 오프라인 상태로 만들었다가 다시 온라인 상태로 만들어야 합니다. 데이터베이스가 다른 풀에 바인딩된 경우 이전 리소스 풀에서 할당된 메모리가 제거되고 이제 데이터베이스로 새로 바인딩된 리소스 풀에서 메모리 최적화 테이블과 인덱스에 대한 메모리 할당이 수행됩니다.  
   
 ```sql  
@@ -141,7 +141,7 @@ GO
   
  이제 데이터베이스가 리소스 풀에 바인딩됩니다.  
   
-##  <a name="bkmk_ChangeAllocation"></a> 기존 풀에서 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 변경  
+##  <a name="change-min_memory_percent-and-max_memory_percent-on-an-existing-pool"></a><a name="bkmk_ChangeAllocation"></a> 기존 풀에서 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 변경  
  서버에 메모리를 더 추가하거나 메모리 최적화 테이블에 필요한 메모리 양이 변경되면 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 값을 수정해야 합니다. 다음 단계에서는 리소스 풀에서 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT의 값을 변경하는 방법을 보여 줍니다. MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT에 사용할 값에 대한 지침은 아래 섹션을 참조하십시오.  자세한 내용은 [최선의 구현 방법: VM 환경에서 메모리 내 OLTP 사용](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) 항목을 참조하세요.  
   
 1.  `ALTER RESOURCE POOL` 을 사용해서 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 값을 모두 변경합니다.  
@@ -162,7 +162,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE
 GO  
 ```  
   
-##  <a name="bkmk_PercentAvailable"></a> 메모리 최적화 테이블 및 인덱스에 사용 가능한 메모리 비율  
+##  <a name="percent-of-memory-available-for-memory-optimized-tables-and-indexes"></a><a name="bkmk_PercentAvailable"></a> 메모리 최적화 테이블 및 인덱스에 사용 가능한 메모리 비율  
  메모리 최적화 테이블과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업을 동일한 리소스 풀에 매핑하면 리소스 관리자는 풀 사용자가 풀 사용에서 충돌을 일으키지 않도록 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 사용에 대한 내부 임계값을 설정합니다. 일반적으로 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 사용에 대한 임계값은 풀의 약 80%입니다. 다음 표에서는 다양한 메모리 크기에 대한 실제 임계값을 보여 줍니다.  
   
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 데이터베이스의 전용 리소스 풀을 만드는 경우 행 버전과 데이터 증가율을 고려한 후 메모리 내 테이블에 필요한 물리적 메모리 양을 추정해야 합니다. 필요한 메모리를 추정했으면 DMV `sys.dm_os_sys_info`에서 ‘committed_target_kb’ 열에 반영된 대로 SQL 인스턴스의 커밋 대상 메모리 비율을 사용하여 리소스 풀을 만듭니다([sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) 참조). 예를 들어, 인스턴스에 사용할 수 있는 총 메모리의 40%로 리소스 풀 P1을 만들 수 있습니다. 이 40%에서 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 엔진은 더 적은 비율을 사용하여 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 데이터를 저장합니다.  이는 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 에서 이 풀의 메모리를 모두 사용하지 않도록 하기 위한 것입니다.  이 비율 값은 대상에 커밋된 메모리에 따라 다릅니다. 다음 테이블은 OOM 오류가 발생하기 전 리소스 풀(명명된 또는 기본값)의 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 데이터베이스에서 사용할 수 있는 메모리에 대해 설명합니다.  

@@ -18,10 +18,10 @@ ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 46807e551052ca6da38fde744d9a1e9dd7c794b0
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288497"
 ---
 # <a name="tempdb-database"></a>TempDB 데이터베이스
@@ -46,7 +46,7 @@ ms.locfileid: "79288497"
   - 행 버전 관리 격리를 사용하여 커밋된 읽기 또는 스냅샷 격리 트랜잭션을 사용하는 데이터베이스의 데이터 수정 트랜잭션에서 생성된 행 버전  
   - 온라인 인덱스 작업, MARS(Multiple Active Result Sets) 및 AFTER 트리거 같은 기능에 대한 데이터 수정 트랜잭션에서 생성된 행 버전  
   
-트랜잭션을 롤백할 수 있도록 **TempDB** 내의 작업은 최소한으로 로깅됩니다. 시스템이 항상 깨끗한 데이터베이스 복사본으로 시작되도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 시작할 때마다 **TempDB**가 다시 생성됩니다. 연결이 끊길 때 임시 테이블 및 저장 프로시저는 자동으로 제거되고 시스템이 종료될 때 활성 상태인 연결이 없습니다. 따라서 **TempDB**에 있는 어떠한 내용도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 한 세션에서 다른 세션으로 저장되지 않습니다. **TempDB**에서는 백업 및 복원 작업이 허용되지 않습니다.  
+트랜잭션을 롤백할 수 있도록 **TempDB** 내의 작업은 최소한으로 로깅됩니다. 시스템이 항상 깨끗한 데이터베이스 복사본으로 시작되도록 **를 시작할 때마다** TempDB[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 다시 생성됩니다. 연결이 끊길 때 임시 테이블 및 저장 프로시저는 자동으로 제거되고 시스템이 종료될 때 활성 상태인 연결이 없습니다. 따라서 **TempDB**에 있는 어떠한 내용도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 한 세션에서 다른 세션으로 저장되지 않습니다. **TempDB**에서는 백업 및 복원 작업이 허용되지 않습니다.  
 
 ## <a name="physical-properties-of-tempdb-in-sql-server"></a>SQL Server에서 TempDB의 물리적 속성
 
@@ -73,34 +73,34 @@ ms.locfileid: "79288497"
   
 |데이터베이스 옵션|기본값|수정 가능|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|예|  
-|ANSI_NULL_DEFAULT|OFF|예|  
-|ANSI_NULLS|OFF|예|  
-|ANSI_PADDING|OFF|예|  
-|ANSI_WARNINGS|OFF|예|  
-|ARITHABORT|OFF|예|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|yes|  
+|ANSI_NULL_DEFAULT|OFF|yes|  
+|ANSI_NULLS|OFF|yes|  
+|ANSI_PADDING|OFF|yes|  
+|ANSI_WARNINGS|OFF|yes|  
+|ARITHABORT|OFF|yes|  
 |AUTO_CLOSE|OFF|예|  
-|AUTO_CREATE_STATISTICS|켜기|예|  
+|AUTO_CREATE_STATISTICS|켜기|yes|  
 |AUTO_SHRINK|OFF|예|  
-|AUTO_UPDATE_STATISTICS|켜기|예|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|예|  
+|AUTO_UPDATE_STATISTICS|켜기|yes|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|yes|  
 |CHANGE_TRACKING|OFF|예|  
-|CONCAT_NULL_YIELDS_NULL|OFF|예|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|예|  
-|CURSOR_DEFAULT|GLOBAL|예|  
+|CONCAT_NULL_YIELDS_NULL|OFF|yes|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|yes|  
+|CURSOR_DEFAULT|GLOBAL|yes|  
 |데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|예<br /><br /> 예<br /><br /> 예|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|예|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|yes|  
 |DB_CHAINING|켜기|예|  
 |ENCRYPTION|OFF|예|  
 |MIXED_PAGE_ALLOCATION|OFF|예|  
-|NUMERIC_ROUNDABORT|OFF|예|  
-|PAGE_VERIFY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]새 설치의 경우 CHECKSUM입니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]업그레이드의 경우 NONE입니다.|예|  
-|PARAMETERIZATION|SIMPLE|예|  
-|QUOTED_IDENTIFIER|OFF|예|  
+|NUMERIC_ROUNDABORT|OFF|yes|  
+|PAGE_VERIFY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]새 설치의 경우 CHECKSUM입니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]업그레이드의 경우 NONE입니다.|yes|  
+|PARAMETERIZATION|SIMPLE|yes|  
+|QUOTED_IDENTIFIER|OFF|yes|  
 |READ_COMMITTED_SNAPSHOT|OFF|예|  
 |RECOVERY|SIMPLE|예|  
-|RECURSIVE_TRIGGERS|OFF|예|  
-|Service Broker 옵션|ENABLE_BROKER|예|  
+|RECURSIVE_TRIGGERS|OFF|yes|  
+|Service Broker 옵션|ENABLE_BROKER|yes|  
 |TRUSTWORTHY|OFF|예|  
   
 이러한 데이터베이스 옵션에 대한 자세한 내용은 [ALTER DATABASE SET 옵션(Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.  
@@ -168,7 +168,7 @@ TempDB 데이터베이스의 크기와 물리적인 배치는 시스템 성능�
 
 환경의 일반적인 작업량을 수용할 수 있는 값으로 파일 크기를 설정하여 모든 TempDB 파일에 충분한 공간을 미리 할당합니다. 미리 할당하면 TempDB가 너무 자주 확장되어 성능에 영향을 주는 것을 방지할 수 있습니다. TempDB 데이터베이스가 자동 증가하도록 설정해야 하지만 이 기능은 예기치 않은 예외 발생 시 디스크 공간을 늘리기 위해 사용해야 합니다.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 여유 공간이 더 많은 파일에서 할당을 선호하는 비례 채우기 알고리즘을 사용하기 때문에 데이터 파일은 각 [파일 그룹](../../relational-databases/databases/database-files-and-filegroups.md#filegroups) 내에서 동일한 크기여야 합니다. TempDB를 동일한 크기의 여러 데이터 파일로 나누면 TempDB를 사용하는 작업에서 높은 수준의 병렬 효율성을 얻을 수 있습니다.
+[에서는 여유 공간이 더 많은 파일에서 할당을 선호하는 비례 채우기 알고리즘을 사용하기 때문에 데이터 파일은 각 ](../../relational-databases/databases/database-files-and-filegroups.md#filegroups)파일 그룹[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내에서 동일한 크기여야 합니다. TempDB를 동일한 크기의 여러 데이터 파일로 나누면 TempDB를 사용하는 작업에서 높은 수준의 병렬 효율성을 얻을 수 있습니다.
 
 파일 증가분을 적정 크기로 설정하여 TempDB 데이터베이스 파일 증가 단위가 너무 작지 않게 합니다. TempDB에 기록되는 데이터 양에 비해 파일 증가 단위가 너무 작으면 TempDB가 지속적으로 확장되어야 하므로 성능에 영향을 줄 수 있습니다.
 
@@ -264,7 +264,7 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
 SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
 ```
 
-메모리 최적화 TempDB 메타데이터를 사용하도록 설정한 후 어떤 이유로든 서버를 시작할 수 없는 경우 **-f** 시작 옵션을 사용하여 [minimal 구성](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)으로 SQL Server를 시작하여 기능을 무시할 수 있습니다. 이렇게 하면 기능을 사용하지 않도록 설정한 다음 표준 모드로 SQL Server를 다시 시작할 수 있습니다.
+메모리 최적화 TempDB 메타데이터를 사용하도록 설정한 후 어떤 이유로든 서버를 시작할 수 없는 경우 [-f](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) 시작 옵션을 사용하여 **minimal 구성**으로 SQL Server를 시작하여 기능을 무시할 수 있습니다. 이렇게 하면 기능을 사용하지 않도록 설정한 다음 표준 모드로 SQL Server를 다시 시작할 수 있습니다.
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>SQL Server의 TempDB 용량 계획
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로덕션 환경에서 TempDB의 적절한 크기는 많은 요인에 따라 결정됩니다. 이 문서의 앞부분에서 설명한 것처럼 기존 작업, 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능 등이 이러한 요인에 포함됩니다. SQL Server 테스트 환경에서 다음 태스크를 수행하여 기존 작업을 분석하는 것이 좋습니다.

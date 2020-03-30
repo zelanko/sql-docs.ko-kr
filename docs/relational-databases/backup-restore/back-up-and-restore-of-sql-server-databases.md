@@ -23,10 +23,10 @@ ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6e88e6cf9cb4101f22d3a30f5ca53fdf15b754fa
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77256746"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 데이터베이스 백업 및 복원
@@ -53,7 +53,7 @@ ms.locfileid: "77256746"
   
 ##  <a name="glossary-of-backup-terms"></a>백업 용어 설명
  **백업** [동사]  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 데이터 레코드를 복사하거나 트랜잭션 로그에서 로그 레코드를 복사하여 **백업[명사]** 을 만드는 프로세스입니다.  
+ **데이터베이스에서 데이터 레코드를 복사하거나 트랜잭션 로그에서 로그 레코드를 복사하여**백업[명사][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 만드는 프로세스입니다.  
   
  **백업** [명사]  
  오류가 발생한 이후에 데이터를 복원 및 복구하는 데 사용할 수 있는 데이터 복사본입니다. 데이터베이스 백업을 사용하여 데이터베이스 복사본을 새 위치에 복원할 수도 있습니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "77256746"
  전체 데이터베이스(데이터베이스 백업), 부분 데이터베이스(부분 백업) 또는 데이터 파일 집합이나 파일 그룹(파일 백업)의 데이터 백업입니다.  
   
 **데이터베이스 백업(database backup)**  
- 데이터베이스 백업입니다. 전체 데이터베이스 백업은 백업이 완료된 시점의 전체 데이터베이스를 나타냅니다. 차등 데이터베이스 백업은 최근의 전체 데이터베이스 백업 이후에 데이터베이스에 수행된 변경 내용만 포함합니다.  
+ 데이터베이스 백업입니다. 전체 데이터베이스 백업은 백업이 완료된 시점의 전체 데이터베이스를 나타냅니다. 차등 데이터베이스 백업은 가장 최근의 전체 데이터베이스 백업 이후에 데이터베이스에 수행된 변경 내용만 포함합니다.  
   
 **차등 백업(differential backup)**  
  전체 또는 부분 데이터베이스, 데이터 파일 집합 또는 파일 그룹(차등 기반)에 대한 최신 전체 백업을 기반으로 하고, 해당 기준 이후에 변경된 데이터만 포함하는 데이터 백업입니다.  

@@ -33,10 +33,10 @@ ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 782536e79336c0224638707538e8a12a31f5af84
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287987"
 ---
 # <a name="database-files-and-filegroups"></a>데이터베이스 파일 및 파일 그룹
@@ -59,9 +59,9 @@ ms.locfileid: "79287987"
 ### <a name="logical-and-physical-file-names"></a>논리적 파일 이름과 물리적 파일 이름
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일은 다음과 같이 두 가지 파일 이름 형식을 가집니다. 
 
-**logical_file_name:**  logical_file_name은 모든 Transact-SQL 문에서 물리적 파일을 참조하는 데 사용되는 이름입니다. 논리적 파일 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자 규칙을 따라야 하고 데이터베이스의 논리적 파일 이름 사이에서 고유해야 합니다. 이것은 `ALTER DATABASE`의 `NAME` 인수에 의해 설정됩니다. 자세한 내용은 [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)을 참조하세요.
+**logical_file_name:**  logical_file_name은 모든 Transact-SQL 문에서 물리적 파일을 참조하는 데 사용되는 이름입니다. 논리적 파일 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자 규칙을 따라야 하고 데이터베이스의 논리적 파일 이름 사이에서 고유해야 합니다. 이것은 `NAME`의 `ALTER DATABASE` 인수에 의해 설정됩니다. 자세한 내용은 [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)을 참조하세요.
 
-**os_file_name:** os_file_name은 디렉터리 경로를 포함하는 물리적 파일의 이름입니다. 이 이름은 운영 체제 파일 이름의 규칙을 따라야 합니다. 이것은 `ALTER DATABASE`의 `FILENAME` 인수에 의해 설정됩니다. 자세한 내용은 [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)을 참조하세요.
+**os_file_name:** os_file_name은 디렉터리 경로를 포함하는 물리적 파일의 이름입니다. 이 이름은 운영 체제 파일 이름의 규칙을 따라야 합니다. 이것은 `FILENAME`의 `ALTER DATABASE` 인수에 의해 설정됩니다. 자세한 내용은 [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)을 참조하세요.
 
 > [!IMPORTANT]
 > FAT 또는 NTFS 파일 시스템에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 파일과 로그 파일을 배치할 수 있습니다. Windows 시스템에서는 보안상 NTFS 파일 시스템을 사용하는 것이 좋습니다. 
@@ -84,7 +84,7 @@ ms.locfileid: "79287987"
 
 각 파일의 최대 크기를 지정할 수도 있습니다. 최대 크기를 지정하지 않으면 파일은 디스크에서 사용 가능한 공간을 모두 사용할 때까지 계속 증가할 수 있습니다. 이 기능은 사용자가 시스템 관리자에 편리하게 액세스할 수 없는 애플리케이션에 포함된 데이터베이스로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용할 때 특히 유용합니다. 사용자는 필요에 따라 파일이 자동으로 증가하게 하여 데이터베이스의 사용 가능한 공간을 모니터링하고 추가 공간을 수동으로 할당하는 관리 작업을 줄일 수 있습니다.  
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 [인스턴트 파일 초기화(IFI)](../../relational-databases/databases/database-instant-file-initialization.md)를 사용하는 경우 데이터 파일에 새 공간을 할당할 때 최소한의 오버헤드가 있습니다.
+[에 대해 ](../../relational-databases/databases/database-instant-file-initialization.md)인스턴트 파일 초기화(IFI)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하는 경우 데이터 파일에 새 공간을 할당할 때 최소한의 오버헤드가 있습니다.
 
 트랜잭션 로그 파일 관리에 대한 자세한 내용은 [트랜잭션 로그 파일의 크기 관리](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations)를 참조하세요.   
 
@@ -199,7 +199,7 @@ GO
 - 파일은 한 파일 그룹의 멤버만 될 수 있습니다.
 - 트랜잭션 로그 파일은 파일 그룹의 일부가 될 수 없습니다.
 
-## <a name="Recommendations"></a> 권장 사항
+## <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항
 다음은 파일 및 파일 그룹 작업 시 일반적으로 권장되는 사항입니다. 
 - 대부분의 데이터베이스에는 하나의 데이터 파일과 하나의 트랜잭션 로그 파일만 있으면 됩니다.
 - 여러 데이터 파일을 사용하는 경우 추가 파일에 대한 두 번째 파일 그룹을 만들고 해당 파일 그룹을 기본 파일 그룹으로 만듭니다. 이렇게 하면 주 파일에는 시스템 테이블과 개체만 있게 됩니다.
