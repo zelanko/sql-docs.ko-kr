@@ -15,10 +15,10 @@ ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 45cc5e8c2ca3e311704ffd4eb6577d2e934d484a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68140717"
 ---
 # <a name="merge-agent-security"></a>병합 에이전트 보안
@@ -27,7 +27,7 @@ ms.locfileid: "68140717"
   
 -   새 구독 마법사에서 이 대화 상자에 액세스하는 경우에는 구독자(밀어넣기 구독의 경우) 또는 게시자 및 배포자(끌어오기 구독의 경우)에 병합 에이전트를 연결하는 컨텍스트도 지정할 수 있습니다. Windows 계정을 사용하거나 지정한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정의 컨텍스트에서 연결을 설정할 수 있습니다.  
   
--   **구독 속성** 대화 상자에서 이 대화 상자에 액세스하는 경우에는 해당 대화 상자의**구독자 연결**또는 **게시자 연결** 행의 속성 단추 ( **...** )를 클릭하여 병합 에이전트를 연결하는 컨텍스트를 지정합니다. **구독 속성** 대화 상자에 액세스하는 방법에 대한 자세한 내용은 [밀어넣기 구독 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) 및 방법: [끌어오기 구독 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)을 참조하세요.  
+-   **구독 속성** 대화 상자에서 이 대화 상자에 액세스하는 경우에는 해당 대화 상자의**구독자 연결**또는 **게시자 연결** 행의 속성 단추 ( **...** )를 클릭하여 병합 에이전트를 연결하는 컨텍스트를 지정합니다. **구독 속성** 대화 상자에 액세스하는 방법은 [밀어넣기 구독 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) 및 방법: [끌어오기 구독 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)을 참조하세요.  
   
  모든 계정이 유효해야 하며 각 계정에 대해 올바른 암호를 지정해야 합니다. 계정 및 암호의 유효성은 에이전트를 실행할 때 검사합니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68140717"
   
  연결을 설정할 때 프로세스 계정을 가장하면 추가 사용 권한이 필요합니다. 아래의 **게시자 및 배포자에 연결** 섹션과 **구독자에 연결** 섹션을 참조하십시오.  
   
- 병합 에이전트가 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 인스턴스에서 실행되지 않기 때문에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]에 대한 끌어오기 구독에 **프로세스 계정**을 지정할 수 없습니다.  
+ 병합 에이전트가 **인스턴스에서 실행되지 않기 때문에** [!INCLUDE[msCoName](../../includes/msconame-md.md)]에 대한 끌어오기 구독에 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]프로세스 계정[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]을 지정할 수 없습니다.  
   
  **암호** 및 **암호 확인**  
  Windows 계정의 암호를 입력합니다.  

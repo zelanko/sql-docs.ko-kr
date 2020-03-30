@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 6398c949f5cccbd6c437eaddba04ab5bb32aae12
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68008414"
 ---
 # <a name="use-filestream-and-filetable-with-always-on-availability-groups"></a>Always On 가용성 그룹과 함께 FILESTREAM 및 FileTable 사용
@@ -32,11 +32,11 @@ ms.locfileid: "68008414"
   
  FileTable 기능은 부분적으로 지원됩니다. 장애 조치(Failover) 이후 FileTable 데이터는 주 복제본에서 액세스할 수 있지만 FileTable 데이터를 읽기 가능한 보조 복제본에서는 액세스할 수 없습니다.  
   
-##  <a name="Prerequisites"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
   
 -   FileTable을 포함하거나 포함하지 않고 FILESTREAM을 사용하는 데이터베이스를 가용성 그룹에 추가하려면 먼저 가용성 그룹에 대한 가용성 복제본을 호스팅하는 모든 서버 인스턴스에 FILESTREAM이 설정되었는지 확인합니다. 자세한 내용은 [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)을 참조하세요.  
   
-##  <a name="vnn"></a> FILESTREAM 및 FileTable 액세스를 위한 VNN(가상 네트워크 이름) 사용  
+##  <a name="using-virtual-network-names-vnns-for-filestream-and-filetable-access"></a><a name="vnn"></a> FILESTREAM 및 FileTable 액세스를 위한 VNN(가상 네트워크 이름) 사용  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 FILESTREAM을 설정하면 FILESTREAM 데이터에 대한 액세스를 제공하도록 인스턴스 수준의 공유가 만들어집니다. 이 공유에는 다음 형식의 컴퓨터 이름을 사용하여 액세스합니다.  
   
  `\\<computer_name>\<filestream_share_name>`  
@@ -69,13 +69,13 @@ ms.locfileid: "68008414"
   
  데이터베이스가 가용성 그룹에 속하지 않을 때 애플리케이션이 VNN 범위의 경로를 사용하여 공유에 액세스하려고 시도하면 요청이 성공할 수 있습니다. 이 경우 가상 네트워크 이름은 컴퓨터 이름으로 확인됩니다. 하지만 이러한 사용 방식은 가용성 그룹이 삭제될 경우 VNN 범위의 경로가 작동을 중지할 수 있기 때문에 사용하지 않는 것이 좋습니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
   
 -   [FileTable의 필수 구성 요소를 사용하도록 설정](../../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
   
-##  <a name="RelatedContent"></a> 관련 내용  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
  없음  
   
 ## <a name="see-also"></a>참고 항목  

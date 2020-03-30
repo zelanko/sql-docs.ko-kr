@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: c7199f12ac00d58f629096aa435c05eb862c4c51
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287180"
 ---
 # <a name="snapshot-replication"></a>Snapshot Replication
@@ -50,7 +50,7 @@ ms.locfileid: "76287180"
   
  [배포 및 병합 에이전트](#DistAgent)  
   
-##  <a name="HowWorks"></a> 스냅샷 복제 작동 방법  
+##  <a name="how-snapshot-replication-works"></a><a name="HowWorks"></a> 스냅샷 복제 작동 방법  
  기본적으로 3가지 복제 유형은 모두 스냅샷을 사용하여 구독자를 초기화합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스냅샷 에이전트는 항상 스냅샷 파일을 생성하지만 이 파일을 배달하는 에이전트는 사용하는 복제 유형에 따라 다릅니다. 스냅샷 복제 및 트랜잭션 복제는 배포 에이전트를 사용하여 파일을 배달하지만 병합 복제는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 병합 에이전트를 사용합니다. 배포자에서 스냅샷 에이전트를 실행합니다. 배포 에이전트와 병합 에이전트는 밀어넣기 구독을 위한 배포자에서 실행되거나 끌어오기 구독을 위한 구독자에서 실행됩니다.  
   
  구독을 만든 즉시 또는 게시를 만들 때 설정한 일정에 따라 스냅샷을 생성하고 적용할 수 있습니다. 스냅샷 에이전트는 게시된 테이블 및 데이터베이스 개체의 스키마 및 데이터를 포함하는 스냅샷 파일을 준비하여 게시자의 스냅샷 폴더에 저장하고 배포자의 배포 데이터베이스에 추적 정보를 기록합니다. 배포자를 구성할 때 기본 스냅샷 폴더를 지정하지만 기본 위치 대신 또는 기본 위치에 추가로 게시에 대한 대체 위치를 지정할 수 있습니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "76287180"
   
  ![스냅샷 복제 구성 요소 및 데이터 흐름](../../relational-databases/replication/media/snapshot.gif "스냅샷 복제 구성 요소 및 데이터 흐름")  
   
-##  <a name="SnapshotAgent"></a> 스냅샷 에이전트  
+##  <a name="snapshot-agent"></a><a name="SnapshotAgent"></a> 스냅샷 에이전트  
  병합 복제의 경우 스냅샷 에이전트가 실행될 때마다 스냅샷이 생성됩니다. 트랜잭션 복제의 경우 게시 속성 **immediate_sync**의 설정에 따라 스냅샷 생성이 달라집니다. 이 속성을 TRUE(새 게시 마법사 사용 시 기본 설정)로 설정하면 스냅샷 에이전트가 실행될 때마다 스냅샷이 생성되고 언제든지 스냅샷을 구독자에 적용할 수 있습니다. 이 속성을 FALSE( **sp_addpublication**사용 시 기본 설정)로 설정하면 스냅샷 에이전트가 마지막으로 실행된 후에 새 구독이 추가된 경우에만 스냅샷이 생성됩니다. 구독자는 동기화하기 위해 스냅샷 에이전트가 완료될 때까지 기다려야 합니다.  
   
  스냅샷 에이전트는 다음 단계를 수행하세요.  
@@ -86,7 +86,7 @@ ms.locfileid: "76287180"
   
  스냅샷을 생성하는 동안에는 게시된 테이블에서 스키마를 변경할 수 없습니다. 스냅샷 파일을 생성한 후에는 Windows 탐색기를 사용하여 스냅샷 폴더에서 해당 파일을 볼 수 있습니다.  
   
-##  <a name="DistAgent"></a> 배포 에이전트 및 병합 에이전트  
+##  <a name="distribution-agent-and-merge-agent"></a><a name="DistAgent"></a> 배포 에이전트 및 병합 에이전트  
  스냅샷 게시의 경우 배포 에이전트가 게시에 대해 실행될 때마다 아직 동기화되지 않았거나, 다시 초기화로 표시되었거나, 새 아티클을 포함하는 각 구독자로 새 스냅샷을 이동합니다.  
   
  스냅샷 및 트랜잭션 복제의 경우 배포 에이전트는 다음 단계를 수행하세요.  

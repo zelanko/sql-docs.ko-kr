@@ -12,10 +12,10 @@ ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4900f90f4044b32aea673106ad0a7a2a14a8f5cb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296282"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>데이터베이스 만들기(SQL Server 가져오기 및 내보내기 마법사)
@@ -28,7 +28,7 @@ ms.locfileid: "71296282"
 마법사의 **데이터베이스 만들기** 대화 상자에는 새 SQL Server 데이터베이스를 만드는 데 사용할 수 있는 기본 옵션만 제공됩니다. 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 모든 옵션을 보고 구성하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 데이터베이스를 만들거나, 마법사가 생성한 후에 데이터베이스를 구성하세요. 
 
 > [!NOTE]
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사의 **데이터베이스 만들기** 대화 상자가 아니라 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE DATABASE 문에 대한 정보를 찾으려면 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.  
+> [!INCLUDE[tsql](../../includes/tsql-md.md)] 가져오기 및 내보내기 마법사의 **데이터베이스 만들기** 대화 상자가 아니라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CREATE DATABASE 문에 대한 정보를 찾으려면 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.  
 
 ## <a name="screen-shot-of-the-create-database-page"></a>데이터베이스 만들기 페이지의 스크린샷  
 다음 스크린샷에서는 마법사의 **데이터베이스 만들기** 대화 상자를 보여 줍니다.  

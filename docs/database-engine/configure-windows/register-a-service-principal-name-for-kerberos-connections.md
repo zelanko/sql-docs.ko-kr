@@ -17,10 +17,10 @@ ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0248af282581019ebedc28656852ec5c78fd00b5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75257515"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Kerberos 연결의 서비스 사용자 이름 등록
@@ -43,7 +43,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 > [!TIP]  
 >  **[!INCLUDE[msCoName](../../includes/msconame-md.md)]용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Kerberos 구성 관리자**는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]과의 Kerberos 관련 연결 문제를 해결하는 진단 도구입니다. 자세한 내용은 [SQL Server용 Microsoft Kerberos 구성 관리자](https://www.microsoft.com/download/details.aspx?id=39046)를 참조하십시오.  
   
-##  <a name="Role"></a> 인증에서 SPN의 역할  
+##  <a name="the-role-of-the-spn-in-authentication"></a><a name="Role"></a> 인증에서 SPN의 역할  
  애플리케이션에서 연결을 열고 Windows 인증을 사용할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터 이름, 인스턴스 이름 및 필요에 따라 SPN을 전달합니다. 연결이 SPN을 전달하면 변경 사항 없이 사용됩니다.  
   
  연결이 SPN을 전달하지 않으면 기본 SPN이 사용된 프로토콜, 서버 이름 및 인스턴스 이름에 따라 구성됩니다.  
@@ -57,7 +57,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  Windows 인증은 사용자를 SQL Server에 인증하는 데 사용하는 기본 인증 방법입니다. Windows 인증을 사용하는 클라이언트는 NTLM이나 Kerberos를 사용하여 인증됩니다. Active Directory 환경에서는 항상 Kerberos 인증이 먼저 시도됩니다. 명명된 파이프를 사용하는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 클라이언트에는 Kerberos 인증을 사용할 수 없습니다.  
   
-##  <a name="Permissions"></a> 권한  
+##  <a name="permissions"></a><a name="Permissions"></a> 권한  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스를 시작하면 서비스가 SPN(서비스 사용자 이름)을 등록하려고 합니다. SQL Server를 시작하는 계정에 Active Directory Domain Services에 SPN을 등록할 권한이 없으면 이 호출이 실패하고 애플리케이션 이벤트 로그와 SQL Server 오류 로그에 경고 메시지가 기록됩니다. SPN을 등록하려면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 로컬 시스템(권장되지 않음) 또는 NETWORK SERVICE와 같은 기본 제공 계정이나 도메인 관리자 계정과 같은 SPN 등록 권한이 있는 계정으로 실행되고 있어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가  [!INCLUDE[win7](../../includes/win7-md.md)] 또는  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 운영 체제에서 실행 중인 경우 가상 계정이나 MSA(관리 서비스 계정)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 실행할 수 있습니다. 가상 계정 및 MSA 모두 SPN을 등록할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 이러한 계정 중 하나로 실행되고 있지 않으면 시작할 때 SPN이 등록되지 않으므로 도메인 관리자가 SPN을 수동으로 등록해야 합니다.  
   
 > [!NOTE]  
@@ -65,7 +65,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  추가 정보는 [SQL Server 2008에서 Kerberos 제한된 위임을 구현하는 방법(How to Implement Kerberos Constrained Delegation with SQL Server 2008)](https://technet.microsoft.com/library/ee191523.aspx)에서 이용할 수 있습니다.  
   
-##  <a name="Formats"></a> SPN 형식  
+##  <a name="spn-formats"></a><a name="Formats"></a> SPN 형식  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 SPN 형식이 TCP/IP, 명명된 파이프 및 공유 메모리에서 Kerberos 인증을 지원하도록 변경됩니다. 명명된 인스턴스 및 기본 인스턴스에 대해 지원되는 SPN 형식은 다음과 같습니다.  
   
 **명명된 인스턴스**  
@@ -102,14 +102,14 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 > [!NOTE]  
 > SPN에 TCP 포트가 포함되는 TCP/IP 연결의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 Kerberos 인증을 사용하여 연결하는 사용자를 위해 TCP 프로토콜을 사용하도록 설정해야 합니다. 
 
-##  <a name="Auto"></a> SPN 자동 등록  
+##  <a name="automatic-spn-registration"></a><a name="Auto"></a> SPN 자동 등록  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 시작되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 SPN을 등록하려고 하고, 인스턴스가 중지되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 SPN의 등록을 취소하려고 합니다. TCP/IP 연결의 경우 SPN은 *MSSQLSvc/\<FQDN>* : *\<tcpport>* 형식으로 등록됩니다. 명명된 인스턴스와 기본 인스턴스는 모두 *MSSQLSvc*로 등록되며, *\<tcpport>* 값을 사용하여 구분합니다.  
   
  Kerberos를 지원하는 다른 연결의 경우 SPN은 명명된 인스턴스에 대해 *MSSQLSvc/\<FQDN>* / *\<instancename>* 형식으로 등록됩니다. 기본 인스턴스는 *MSSQLSvc/\<FQDN>* 형식으로 등록됩니다.  
   
  서비스 계정에 이러한 동작을 수행하는 데 필요한 권한이 없는 경우에는 수동으로 SPN을 등록하거나 등록 취소해야 합니다.  
   
-##  <a name="Manual"></a> 수동 SPN 등록  
+##  <a name="manual-spn-registration"></a><a name="Manual"></a> 수동 SPN 등록  
 SPN을 수동으로 등록하려면 관리자가 Microsoft [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 지원 도구와 함께 제공되는 Setspn.exe 도구를 사용해야 합니다. 자세한 내용은 [Windows Server 2003 서비스 팩 1 지원 도구](https://support.microsoft.com/kb/892777) 기술 자료 문서를 참조하십시오.  
   
 Setspn.exe는 SPN 디렉터리 속성을 읽고 수정하고 삭제하는 데 사용할 수 있는 명령줄 도구입니다. 또한 이 도구를 통해 현재 SPN을 보고 계정의 기본 SPN을 다시 설정하고 보조 SPN을 추가 또는 삭제할 수도 있습니다.  
@@ -133,7 +133,7 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com redmond\accountname
 setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename redmond\accountname  
 ```  
   
-##  <a name="Client"></a> 클라이언트 연결  
+##  <a name="client-connections"></a><a name="Client"></a> 클라이언트 연결  
  사용자 지정 SPN은 클라이언트 드라이버에서 지원됩니다. 하지만 SPN이 제공되지 않은 경우 클라이언트 연결 유형을 기준으로 SPN이 자동 생성됩니다. TCP 연결의 경우 명명된 인스턴스와 기본 인스턴스 모두에 대해 *MSSQLSvc*/*FQDN*:[*port*] 형식의 SPN이 사용됩니다.  
   
 명명된 파이프와 공유 메모리 연결에서 명명된 인스턴스에는 *MSSQLSvc/\<FQDN>:\<instancename>* 형식의 SPN이 사용되고 기본 인스턴스에는 *MSSQLSvc/\<FQDN>* 형식의 SPN이 사용됩니다.  
@@ -154,7 +154,7 @@ FROM sys.dm_exec_connections
 WHERE session_id = @@SPID;  
 ```  
   
-##  <a name="Defaults"></a> 인증 기본값  
+##  <a name="authentication-defaults"></a><a name="Defaults"></a> 인증 기본값  
  다음 표에서는 SPN 등록 시나리오에 따라 다르게 사용되는 인증 기본값에 대해 설명합니다.  
   
 |시나리오|인증 방법|  
@@ -167,7 +167,7 @@ WHERE session_id = @@SPID;
 > [!NOTE]  
 > 여기서 '올바르다'는 것은 등록된 SPN에 의해 매핑되는 계정이 SQL Server 서비스를 실행하고 있는 계정과 일치함을 의미합니다.  
   
-##  <a name="Comments"></a> 설명  
+##  <a name="comments"></a><a name="Comments"></a> 설명  
  DAC(관리자 전용 연결)는 인스턴스 이름 기반 SPN을 사용합니다. 해당 SPN이 성공적으로 등록되었으면 DAC에 Kerberos 인증을 사용할 수 있습니다. 또는 사용자가 계정 이름을 SPN으로 지정할 수 있습니다.  
   
  시작 시 SPN 등록에 실패하면 해당 내용이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 기록되고 시작이 계속됩니다.  

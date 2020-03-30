@@ -11,10 +11,10 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cdc58884e65fb243bbb75f257e19ccef3faa2b9f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908941"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>활성 임대가 있는 백업 Blob 파일 삭제
@@ -42,7 +42,7 @@ Microsoft Azure Storage로 백업하거나 Microsoft Azure Storage에서 복원�
   
 1. **Blob 삭제:** 활성 임대가 있는 Blob을 삭제하려면 먼저 임대를 중단해야 합니다.  
 
-###  <a name="Code_Example"></a> PowerShell 스크립트 예  
+###  <a name="powershell-script-example"></a><a name="Code_Example"></a> PowerShell 스크립트 예  
   
 > [!IMPORTANT]
 > PowerShell 2.0을 실행하는 경우 Microsoft WindowsAzure.Storage.dll 어셈블리를 로드하는 데 문제가 있을 수 있습니다. 문제 해결을 위해 [PowerShell](https://docs.microsoft.com/powershell/)을 업그레이드하는 것이 좋습니다. 다음 해결 방법을 사용하여 다음과 같이 powershell.exe.config 파일을 만들거나 수정하여 런타임에 .NET 2.0 및 .NET 4.0 어셈블리를 로드할 수도 있습니다.  

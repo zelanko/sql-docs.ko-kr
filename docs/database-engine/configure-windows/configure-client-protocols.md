@@ -22,10 +22,10 @@ ms.assetid: 3dfa2702-ba65-43b4-a777-6727846e133a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2fa898451638503b2f91c97026158e7331a25e90
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012816"
 ---
 # <a name="configure-client-protocols"></a>클라이언트 프로토콜 구성
@@ -38,9 +38,9 @@ ms.locfileid: "68012816"
   
 -   sqlcmd.exe 같은 일부 클라이언트 애플리케이션은 연결 문자열의 일부로 프로토콜을 지정할 수 있습니다. 자세한 내용은 [sqlcmd를 사용하여 데이터베이스 엔진에 연결](../../relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)을 참조하세요.  
   
-##  <a name="SSMSProcedure"></a> SQL Server 구성 관리자 사용  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> SQL Server 구성 관리자 사용  
   
-###  <a name="EnableDisable"></a> 클라이언트 프로토콜을 사용하거나 사용하지 않으려면  
+###  <a name="to-enable-or-disable-a-client-protocol"></a><a name="EnableDisable"></a> 클라이언트 프로토콜을 사용하거나 사용하지 않으려면  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 **SQL Server Native Client 구성**을 확장하고 **클라이언트 프로토콜**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68012816"
   
 3.  **사용할 수 있는 프로토콜** 상자에서 프로토콜을 클릭한 다음 **사용 안 함**을 클릭하여 프로토콜을 사용할 수 없게 합니다.  
   
-###  <a name="ChangeDefault"></a> 클라이언트 컴퓨터의 기본 프로토콜이나 프로토콜 순서를 변경하려면  
+###  <a name="to-change-the-default-protocol-or-the-protocol-order-for-client-computers"></a><a name="ChangeDefault"></a> 클라이언트 컴퓨터의 기본 프로토콜이나 프로토콜 순서를 변경하려면  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 **SQL Server Native Client 구성**을 확장하고 **클라이언트 프로토콜**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68012816"
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 서버 별칭 구성과 기본 클라이언트 네트워크 라이브러리에 대한 레지스트리 항목을 만듭니다. 하지만 애플리케이션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 네트워크 라이브러리 또는 네트워크 프로토콜을 설치하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 Network 라이브러리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 함께 설치되며 Network 프로토콜은 Microsoft Windows 설치 프로그램의 일부로 설치되거나 **제어판**의 **네트워크**를 통해 설치됩니다. 특정 네트워크 프로토콜은 Windows 설치 프로그램의 일부로 제공되지 않을 수 있습니다. 이러한 네트워크 프로토콜을 설치하는 방법은 공급업체 설명서를 참조하십시오.  
   
-###  <a name="Configure"></a> 클라이언트에서 TCP/IP를 사용하도록 구성하려면  
+###  <a name="to-configure-a-client-to-use-tcpip"></a><a name="Configure"></a> 클라이언트에서 TCP/IP를 사용하도록 구성하려면  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 **SQL Server Native Client 구성**을 확장하고 **클라이언트 프로토콜**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   

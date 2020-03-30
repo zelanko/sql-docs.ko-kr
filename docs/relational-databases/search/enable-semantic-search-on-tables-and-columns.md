@@ -13,10 +13,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 849cd64d336cf9289e04cd770eb51175c5cbebbc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082906"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>테이블 및 열에 대한 의미 체계 검색 사용
@@ -25,9 +25,9 @@ ms.locfileid: "68082906"
   
  통계 의미 체계 검색에서는 전체 텍스트 검색을 통해 생성되는 인덱스를 사용하고 추가 인덱스를 만듭니다. 전체 텍스트 검색에 대한 이 종속성의 결과로 새 전체 텍스트 인덱스를 정의하거나 기존 전체 텍스트 인덱스를 변경할 때는 새 의미 체계 인덱스를 만듭니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하거나 이 항목에서 설명하는 대로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 전체 텍스트 인덱싱 마법사와 다른 대화 상자를 사용하여 새 의미 체계 인덱스를 만들 수 있습니다.  
   
-##  <a name="BasicEnabling"></a> 의미 체계 인덱스 만들기  
+##  <a name="create-a-semantic-index"></a><a name="BasicEnabling"></a> 의미 체계 인덱스 만들기  
   
-###  <a name="reqenable"></a> 의미 체계 인덱스를 만들기 위한 요구 사항 및 제한 사항  
+###  <a name="requirements-and-restrictions-for-creating-a-semantic-index"></a><a name="reqenable"></a> 의미 체계 인덱스를 만들기 위한 요구 사항 및 제한 사항  
   
 -   전체 텍스트 인덱싱이 지원되는 데이터베이스 개체(테이블 및 인덱싱된 뷰 포함)에 대한 인덱스를 만들 수 있습니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "68082906"
   
 -   언어 모델을 사용할 수 없는 열에 대해 언어를 지정하면 인덱스 만들기가 실패하고 오류 메시지가 반환됩니다.  
   
-##  <a name="HowToEnableCreate"></a> 전체 텍스트 인덱스가 없을 때 의미 체계 인덱스 만들기  
+##  <a name="create-a-semantic-index-when-there-is-no-full-text-index"></a><a name="HowToEnableCreate"></a> 전체 텍스트 인덱스가 없을 때 의미 체계 인덱스 만들기  
  **CREATE FULLTEXT INDEX** 문을 사용하여 새 전체 텍스트 인덱스를 만들 때 열 정의의 일부로 **STATISTICAL_SEMANTICS** 키워드를 지정하여 열 수준에서 의미 체계 인덱싱을 사용하도록 설정할 수 있습니다. 전체 텍스트 인덱싱 마법사를 사용하여 새 전체 텍스트 인덱스를 만들 때 의미 체계 인덱싱을 사용하도록 설정할 수도 있습니다.  
   
  ### <a name="create-a-new-semantic-index-by-using-transact-sql"></a>Transact-SQL을 사용하여 새 의미 체계 인덱스 만들기  
@@ -117,7 +117,7 @@ GO
 ### <a name="create-a-new-semantic-index-by-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 새 의미 체계 인덱스 만들기  
  전체 텍스트 인덱싱 마법사를 실행하고 **테이블 열 선택** 페이지에서 의미 체계 인덱스를 만들 각 열에 대해 **통계 의미 체계** 를 사용하도록 설정합니다. 전체 텍스트 인덱싱 마법사를 시작하는 방법을 비롯한 자세한 내용은 [전체 텍스트 인덱싱 마법사 사용](../../relational-databases/search/use-the-full-text-indexing-wizard.md)을 참조하세요.  
   
-##  <a name="HowToEnableAlter"></a> 기존 전체 텍스트 인덱스가 있을 때 의미 체계 인덱스 만들기  
+##  <a name="create-a-semantic-index-when-there-is-an-existing-full-text-index"></a><a name="HowToEnableAlter"></a> 기존 전체 텍스트 인덱스가 있을 때 의미 체계 인덱스 만들기  
  **ALTER FULLTEXT INDEX** 문을 사용하여 기존 전체 텍스트 인덱스를 변경할 때 의미 체계 인덱싱을 추가할 수 있습니다. 또한 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 다양한 대화 상자를 사용하여 의미 체계 인덱싱을 추가할 수 있습니다.  
   
 ### <a name="add-a-semantic-index-by-using-transact-sql"></a>Transact-SQL을 사용하여 의미 체계 인덱스 추가  
@@ -148,13 +148,13 @@ GO
 
 ## <a name="alter-a-semantic-index"></a>의미 체계 인덱스 변경
   
-###  <a name="addreq"></a> 기존 인덱스 변경을 위한 요구 사항 및 제한 사항  
+###  <a name="requirements-and-restrictions-for-altering-an-existing-index"></a><a name="addreq"></a> 기존 인덱스 변경을 위한 요구 사항 및 제한 사항  
   
 -   인덱스 채우기가 진행 중인 동안에는 기존 인덱스를 변경할 수 없습니다. 인덱스 채우기의 진행률을 모니터링하는 방법은 [의미 체계 검색 관리 및 모니터링](../../relational-databases/search/manage-and-monitor-semantic-search.md)을 참조하세요.  
   
 -   **ALTER FULLTEXT INDEX** 문을 한 번 호출하는 것으로 열에 인덱싱을 추가하고 동일한 열의 인덱싱을 변경하거나 삭제할 수는 없습니다.  
   
-##  <a name="dropping"></a> 의미 체계 인덱스 삭제  
+##  <a name="drop-a-semantic-index"></a><a name="dropping"></a> 의미 체계 인덱스 삭제  
 **ALTER FULLTEXT INDEX** 문을 사용하여 기존 전체 텍스트 인덱스를 변경할 때 의미 체계 인덱싱을 삭제할 수 있습니다. 또한 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 다양한 대화 상자를 사용하여 의미 체계 인덱싱을 삭제할 수 있습니다.  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>Transact-SQL을 사용하여 의미 체계 인덱스 삭제  
@@ -185,7 +185,7 @@ GO
  ### <a name="drop-a-semantic-index-by-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 의미 체계 인덱스 삭제  
  **전체 텍스트 인덱스 속성** 대화 상자의 **전체 텍스트 인덱스 열** 페이지에서 의미 체계 및 전체 텍스트 인덱싱을 사용하도록 설정된 열을 변경할 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 관리](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)를 참조하세요.  
   
-###  <a name="dropreq"></a> 의미 체계 인덱스 삭제를 위한 요구 사항 및 제한 사항  
+###  <a name="requirements-and-restrictions-for-dropping-a-semantic-index"></a><a name="dropreq"></a> 의미 체계 인덱스 삭제를 위한 요구 사항 및 제한 사항  
   
 -   의미 체계 인덱싱을 유지하는 동안에는 열에서 전체 텍스트 인덱싱을 삭제할 수 없습니다. 의미 체계 인덱싱에서는 전체 텍스트 인덱싱에 의존하여 문서 유사성 결과를 얻습니다.  
   
@@ -242,7 +242,7 @@ GO
   
 ## <a name="determine-what-can-be-indexed-for-semantic-search"></a>의미 체계 검색을 위해 인덱싱할 수 있는 항목 결정  
   
-###  <a name="HowToCheckLanguages"></a> 의미 체계 검색에 지원되는 언어 확인  
+###  <a name="check-which-languages-are-supported-for-semantic-search"></a><a name="HowToCheckLanguages"></a> 의미 체계 검색에 지원되는 언어 확인  
   
 > [!IMPORTANT]  
 >  의미 체계 인덱싱에 지원되는 언어는 전체 텍스트 인덱싱에 지원되는 언어보다 적습니다. 따라서 전체 텍스트 검색을 위해 인덱싱할 수 있지만 의미 체계 검색을 위해서는 인덱싱할 수 없는 열이 있을 수 있습니다.  
@@ -269,15 +269,15 @@ GO
 |포르투갈어(포르투갈)|2070|  
 |스페인어|3082|  
   
-###  <a name="doctypes"></a> 인덱싱할 수 있는 문서 유형 결정  
+###  <a name="determine-which-document-types-can-be-indexed"></a><a name="doctypes"></a> 인덱싱할 수 있는 문서 유형 결정  
  카탈로그 뷰 [sys.fulltext_document_types&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md)를 쿼리합니다.  
   
  인덱싱할 문서 형식이 지원되는 형식 목록에 없는 경우 추가 필터를 찾은 다음 다운로드하여 설치해야 할 수 있습니다. 자세한 내용은 [등록된 필터와 단어 분리기 보기 및 변경](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)을 참조하세요.  
   
-##  <a name="BestPracticeFilegroup"></a> 모범 사례: 전체 텍스트 및 의미 체계 인덱스에 대한 개별 파일 그룹을 만들 때의 고려 사항  
+##  <a name="best-practice-consider-creating-a-separate-filegroup-for-the-full-text-and-semantic-indexes"></a><a name="BestPracticeFilegroup"></a> 모범 사례: 전체 텍스트 및 의미 체계 인덱스에 대한 개별 파일 그룹을 만들 때의 고려 사항  
  디스크 공간 할당이 중요한 경우 전체 텍스트 및 의미 체계 인덱스에 대한 별도의 파일 그룹을 만드는 것이 좋습니다. 의미 체계 인덱스는 전체 텍스트 인덱스와 동일한 파일 그룹에 만들어집니다. 완전히 채워진 의미 체계 인덱스에는 많은 양의 데이터가 포함될 수 있습니다.  
  
-##  <a name="IssueNoResults"></a> 문제: 특정 열에 대해 검색할 때 결과가 반환되지 않음  
+##  <a name="issue-searching-on-specific-column-returns-no-results"></a><a name="IssueNoResults"></a> 문제: 특정 열에 대해 검색할 때 결과가 반환되지 않음  
  **유니코드 언어에 대해 비유니코드 LCID가 지정되었습니까?**  
  비유니코드 열에 대해 의미 체계 인덱싱을 사용하도록 설정할 때 러시아어의 LCID 1049와 같이 유니코드 단어만 있는 언어의 LCID를 사용할 수 있습니다. 그러나 이 경우에는 이 열에 대한 의미 체계 인덱스에서 결과가 반환되지 않습니다.  
   

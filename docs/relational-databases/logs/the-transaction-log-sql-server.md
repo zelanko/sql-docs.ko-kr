@@ -15,10 +15,10 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287807"
 ---
 # <a name="the-transaction-log-sql-server"></a>트랜잭션 로그(SQL Server)
@@ -67,7 +67,7 @@ ms.locfileid: "79287807"
 
 **데이터베이스 미러링 시나리오**에서는 주 데이터베이스에 대한 모든 업데이트 내용이 미러 데이터베이스인 데이터베이스의 전체 복사본에 즉시 재생성됩니다. 주 서버 인스턴스에서 로그 레코드를 미러 서버 인스턴스로 즉시 보내면 미러 서버 인스턴스에서는 들어오는 로그 레코드를 미러 데이터베이스에 적용하여 계속 롤포워드합니다. 자세한 내용은 [데이터베이스 미러링](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.
 
-##  <a name="Characteristics"></a>트랜잭션 로그 특성
+##  <a name="transaction-log-characteristics"></a><a name="Characteristics"></a>트랜잭션 로그 특성
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 트랜잭션 로그의 특성은 다음과 같습니다. 
 -  트랜잭션 로그는 데이터베이스에서 별도의 파일 또는 파일 집합으로 구현됩니다. 로그 캐시는 데이터 페이지의 버퍼 캐시와는 별도로 관리되므로 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 단순하고, 빠르고, 강력한 코드를 구현할 수 있습니다. 자세한 내용은 [트랜잭션 로그 물리적 아키텍처](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)를 참조하세요.
 
@@ -79,10 +79,10 @@ ms.locfileid: "79287807"
 
 트랜잭션 로그 아키텍처 및 내부에 대한 자세한 내용은 [SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)를 참조하세요.
 
-##  <a name="Truncation"></a> 트랜잭션 로그 잘림  
+##  <a name="transaction-log-truncation"></a><a name="Truncation"></a> 트랜잭션 로그 잘림  
 로그 잘림은 트랜잭션 로그에서 다시 사용할 수 있도록 로그 파일의 공간을 확보하는 것입니다. 할당된 공간이 가득 차지 않도록 트랜잭션 로그를 주기적으로 줄여야 합니다. 몇몇 요소로 인해 로그 잘림이 지연될 수 있으므로 로그 크기를 모니터링하는 것이 중요합니다. 일부 작업을 최소로 기록하여 트랜잭션 로그 크기에 주는 영향을 줄일 수 있습니다.  
  
-로그 잘림은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 논리 트랜잭션 로그에서 비활성 [가상 로그 파일(VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)을 삭제하여 물리적 트랜잭션 로그에서 다시 사용할 수 있도록 논리 로그의 공간을 확보합니다. 트랜잭션 로그가 잘리지 않으면 물리적 로그 파일에 할당된 디스크 공간이 모두 채워집니다.  
+로그 잘림은 [ 데이터베이스의 논리 트랜잭션 로그에서 비활성 ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)가상 로그 파일(VLF)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 삭제하여 물리적 트랜잭션 로그에서 다시 사용할 수 있도록 논리 로그의 공간을 확보합니다. 트랜잭션 로그가 잘리지 않으면 물리적 로그 파일에 할당된 디스크 공간이 모두 채워집니다.  
   
 공간 부족 문제를 방지하기 위해 어떤 이유로 로그 잘림이 지연되지 않는 한 다음과 같은 경우에 잘림이 자동으로 수행됩니다.  
   
@@ -95,13 +95,13 @@ ms.locfileid: "79287807"
 > 로그 잘림을 수행해도 물리적 로그 파일의 크기는 줄어들지 않습니다. 실제 로그 파일의 크기를 줄이려면 로그 파일을 축소해야 합니다. 물리적 로그 파일의 크기를 축소하는 방법은 [트랜잭션 로그 파일의 크기 관리](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)를 참조하십시오.  
 > 하지만 [로그 잘림을 지연시킬 수 있는 요소](#FactorsThatDelayTruncation)를 염두에 두세요. 로그 축소 후 스토리지 공간이 다시 필요하면 트랜잭션 로그가 다시 커지고 로그 확장 작업 중에 성능 오버헤드가 발생합니다.
   
-##  <a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
+##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
  지금까지 설명했듯이 오랜 시간 동안 로그 레코드가 활성 상태로 유지되는 경우 트랜잭션 로그 잘림이 지연되고 트랜잭션 로그가 가득 찰 수 있습니다.  
   
 > [!IMPORTANT]
 > 가득 찬 트랜잭션 로그에 응답하는 방법에 대한 자세한 내용은 [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)을 참조하세요.  
   
- 실제로 여러 이유로 인해 로그 잘림이 지연될 수 있습니다. 로그 잘림이 발생하지 않는 이유는 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 **log_reuse_wait** 및 **log_reuse_wait_desc** 열을 쿼리하여 확인할 수 있습니다. 다음 표에서는 이러한 열의 값에 대해 설명합니다.  
+ 실제로 여러 이유로 인해 로그 잘림이 지연될 수 있습니다. 로그 잘림이 발생하지 않는 이유는 **sys.databases** 카탈로그 뷰의 **log_reuse_wait** 및 [log_reuse_wait_desc](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 열을 쿼리하여 확인할 수 있습니다. 다음 표에서는 이러한 열의 값에 대해 설명합니다.  
   
 |log_reuse_wait 값|log_reuse_wait_desc 값|Description|  
 |----------------------------|----------------------------------|-----------------|  
@@ -122,7 +122,7 @@ ms.locfileid: "79287807"
 |14|OTHER_TRANSIENT|이 값은 현재 사용되지 않습니다.|  
 |16|XTP_CHECKPOINT|메모리 내 OLTP 검사점을 수행해야 합니다. 메모리 최적화 테이블의 경우 마지막 검사점 이후 트랜잭션 로그 파일이 1.5GB보다 커질 때 자동 검사점이 수행됩니다(디스크 기반 테이블과 메모리 최적화 테이블 모두 포함).<br /> 자세한 내용은 [메모리 최적화 테이블의 검사점 작업](../../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md) 및 [메모리 내 최적화 테이블의 로깅 및 검사점 프로세스](https://blogs.msdn.microsoft.com/sqlcat/2016/05/20/logging-and-checkpoint-process-for-memory-optimized-tables-2/) )를 참조하세요.
   
-##  <a name="MinimallyLogged"></a> 최소 로깅 가능한 작업  
+##  <a name="operations-that-can-be-minimally-logged"></a><a name="MinimallyLogged"></a> 최소 로깅 가능한 작업  
 *최소 로깅* 은 지정 시간 복구를 지원하지 않고 트랜잭션을 복구하는 데 필요한 정보만 기록합니다. 이 항목에서는 대량 로그 [복구 모델](../backup-restore/recovery-models-sql-server.md) 및 단순 복구 모델(백업이 실행 중인 경우 제외)에서 최소 로깅되는 작업을 식별합니다.  
   
 > [!NOTE]
@@ -133,7 +133,7 @@ ms.locfileid: "79287807"
   
  전체 복구 모델에서 전체 로깅되는 다음 작업은 단순 및 대량 로그 복구 모델에서 최소 로깅됩니다.  
   
--   대량 가져오기 작업([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)) 테이블로 대량 가져오기 작업이 최소한으로 기록되는 경우에 대한 자세한 내용은 [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)을 참조하십시오.  
+-   대량 가져오기 작업([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)및 [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)) 테이블로 대량 가져오기 작업이 최소한으로 기록되는 경우에 대한 자세한 내용은 [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)을 참조하십시오.  
   
 트랜잭션 복제를 사용하는 경우 대량 로그 복구 모델에서도 `BULK INSERT` 작업이 모두 기록됩니다.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "79287807"
   
 트랜잭션 복제를 사용하는 경우 대량 로그 복구 모델에서도 `SELECT INTO` 작업이 모두 기록됩니다.  
   
--   새 데이터를 삽입 또는 추가할 때 [UPDATE](../../t-sql/queries/update-transact-sql.md) 문의 `.WRITE` 절을 사용하여 큰 값 데이터 형식을 부분적으로 업데이트하는 작업. 기존 값이 업데이트되는 경우 최소 로깅이 사용되지 않습니다. 큰 값 데이터 형식에 대한 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.  
+-   새 데이터를 삽입 또는 추가할 때 `.WRITE`UPDATE[ 문의 ](../../t-sql/queries/update-transact-sql.md) 절을 사용하여 큰 값 데이터 형식을 부분적으로 업데이트하는 작업. 기존 값이 업데이트되는 경우 최소 로깅이 사용되지 않습니다. 큰 값 데이터 형식에 대한 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.  
   
 -   [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) 및 [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 삽입 또는 새 데이터를 추가할 때 문은 **텍스트**, **ntext**, 및 **이미지** 데이터 형식 열입니다. 기존 값이 업데이트되는 경우 최소 로깅이 사용되지 않습니다.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "79287807"
   
     -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 새 힙 다시 빌드(해당 사항이 있을 경우) `DROP INDEX` 작업 중의 인덱스 페이지 할당 취소는 **항상** 모두 로깅됩니다.
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
 **트랜잭션 로그 관리**  
   
 -   [트랜잭션 로그 파일의 크기 관리](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  

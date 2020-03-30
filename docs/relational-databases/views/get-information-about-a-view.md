@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f5e660301620a98e7ea6b93b4242da1a0d852ce9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909887"
 ---
 # <a name="get-information-about-a-view"></a>뷰 정보 보기
@@ -48,14 +48,14 @@ ms.locfileid: "72909887"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  `sp_helptext` 를 사용하여 뷰의 정의를 반환하려면 **공용** 역할의 멤버여야 합니다. `sys.sql_expression_dependencies` 를 사용하여 뷰의 모든 종속성을 찾으려면 데이터베이스에 대한 VIEW DEFINITION 권한과 데이터베이스의 `sys.sql_expression_dependencies` 에 대한 SELECT 권한이 있어야 합니다. SELECT OBJECT_DEFINITION에 반환되는 정의와 같은 시스템 개체 정의는 모두에게 표시됩니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="get-view-properties-by-using-object-explorer"></a>개체 탐색기를 사용하여 뷰 속성 가져오기  
   
@@ -177,7 +177,7 @@ ms.locfileid: "72909887"
   
 4.  **[뷰 이름]이(가) 종속된 개체** 를 선택하여 뷰가 참조하는 개체를 표시합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>뷰의 정의 및 속성을 가져오려면  
   

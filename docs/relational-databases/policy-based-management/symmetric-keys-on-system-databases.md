@@ -13,10 +13,10 @@ ms.assetid: 28e25ae3-d3dc-45ec-b316-f219512a1a47
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7c04aaae1d9feccb8c032921535ebe9d5fc61305
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68021537"
 ---
 # <a name="symmetric-keys-on-system-databases"></a>시스템 데이터베이스의 대칭 키

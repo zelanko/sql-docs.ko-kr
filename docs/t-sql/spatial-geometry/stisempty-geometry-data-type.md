@@ -18,10 +18,10 @@ ms.assetid: dcbd6ae1-5d63-485f-9d58-28bfd504524e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 4583fd37837c9703325fd577b6bd984505fbd98e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68106098"
 ---
 # <a name="stisempty-geometry-data-type"></a>STIsEmpty(geometry 데이터 형식)

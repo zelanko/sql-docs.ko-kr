@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f240938196d50b76b182e994000727c4f3e30d58
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287132"
 ---
 # <a name="specify-synchronization-schedules"></a>동기화 일정 지정
@@ -39,7 +39,7 @@ ms.locfileid: "76287132"
   
      [RMO(복제 관리 개체)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  새 구독 마법사의 **동기화 일정** 페이지에서 동기화 일정을 지정합니다. 이 마법사의 액세스 방법은 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md) 및 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
   
  **작업 일정 속성** 대화 상자에서 동기화 일정을 수정합니다. 이 대화 상자는 **의** 작업 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 폴더와 복제 모니터의 에이전트 세부 정보 창에서 사용할 수 있습니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](../../relational-databases/replication/monitor/start-the-replication-monitor.md)을 참조하세요.  
@@ -82,7 +82,7 @@ ms.locfileid: "76287132"
   
 4.  **구독 <SubscriptionName>** 창에서 **작업**을 클릭하고 **\<AgentName> 작업 속성**을 클릭합니다.  
   
-5.  **작업 속성 - \<JobName>** 대화 상자의 **일정** 페이지에서 **편집**을 클릭합니다.  
+5.  **작업 속성 -** JobName> **대화 상자의 \<일정** 페이지에서 **편집**을 클릭합니다.  
   
 6.  **작업 일정 속성** 대화 상자의 **일정 유형** 드롭다운 목록에서 값을 선택합니다.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "76287132"
   
 3.  구독과 연결된 배포 에이전트 또는 병합 에이전트의 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  **작업 속성 - \<JobName>** 대화 상자의 **일정** 페이지에서 **편집**을 클릭합니다.  
+4.  **작업 속성 -** JobName> **대화 상자의 \<일정** 페이지에서 **편집**을 클릭합니다.  
   
 5.  **작업 일정 속성** 대화 상자의 **일정 유형** 드롭다운 목록에서 값을 선택합니다.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "76287132"
   
 3.  구독과 연결된 배포 에이전트 또는 병합 에이전트의 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  **작업 속성 - \<JobName>** 대화 상자의 **일정** 페이지에서 **편집**을 클릭합니다.  
+4.  **작업 속성 -** JobName> **대화 상자의 \<일정** 페이지에서 **편집**을 클릭합니다.  
   
 5.  **작업 일정 속성** 대화 상자의 **일정 유형** 드롭다운 목록에서 값을 선택합니다.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "76287132"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  복제 저장 프로시저를 사용하여 프로그래밍 방식으로 동기화 일정을 정의할 수 있습니다. 사용되는 저장 프로시저는 복제 유형 및 구독 유형(끌어오기 또는 밀어넣기)에 따라 달라집니다.  
   
  일정은 다음 일정 매개 변수로 정의되며 해당 동작은 [sp_add_schedule&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)에서 상속됩니다.  
@@ -169,7 +169,7 @@ ms.locfileid: "76287132"
   
 1.  트랜잭션 게시에 대한 새 끌어오기 구독을 만듭니다. 자세한 내용은 [끌어오기 구독 만들기](../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
   
-2.  구독자에서 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 실행합니다. **\@publisher**, **\@publisher_db**, **\@publication**을 지정하고 **\@job_name** 및 **\@password**에 구독자에서 배포 에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 자격 증명을 지정합니다. 구독을 동기화하는 배포 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
+2.  구독자에서 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 실행합니다. **\@publisher**, **\@publisher_db**, **\@publication**을 지정하고 [!INCLUDE[msCoName](../../includes/msconame-md.md)]**job_name\@ 및** **password\@에 구독자에서 배포 에이전트가 실행되는**  Windows 자격 증명을 지정합니다. 구독을 동기화하는 배포 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대한 밀어넣기 구독의 동기화 일정을 정의하려면  
   
@@ -189,7 +189,7 @@ ms.locfileid: "76287132"
   
 2.  구독자에서 [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)를 실행합니다. **\@subscriber**, **\@subscriber_db**, **\@publication**을 지정하고 **\@job_name** 및 **\@password**에 구독자에서 병합 에이전트가 실행되는 Windows 자격 증명을 지정합니다. 구독을 동기화하는 병합 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
   
-##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
  복제에서는 SQL Server 에이전트를 사용하여 스냅샷 생성이나 구독 동기화와 같이 정기적으로 수행하는 작업의 일정을 지정합니다. RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 복제 에이전트 작업의 일정을 지정할 수 있습니다.  
   
 > [!NOTE]  
@@ -319,7 +319,7 @@ ms.locfileid: "76287132"
   
 3.  <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 메서드를 호출하여 구독을 만듭니다.  
   
-###  <a name="PShellExample"></a> 예(RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> 예(RMO)  
  이 예에서는 병합 계시에 대한 밀어넣기 구독을 만들고 구독의 동기화 일정을 지정합니다.  
   
  [!code-cs[HowTo#rmo_CreateMergePushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createmergepushsub)]  

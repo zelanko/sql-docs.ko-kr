@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 47d4cb0991bde851fbc6c6f3273a673dfdecf919
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082561"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>테이블에서 계산 열 지정
@@ -40,22 +40,22 @@ ms.locfileid: "68082561"
 
    [Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> 시작하기 전에
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에
 
-### <a name="Limitations"></a> 제한 사항
+### <a name="limitations-and-restrictions"></a><a name="Limitations"></a> 제한 사항
 
 - 계산 열은 DEFAULT 또는 FOREIGN KEY 제약 조건 정의로 사용하거나 NOT NULL 제약 조건 정의와 함께 사용할 수 없습니다. 그러나 계산 열 값이 명확한 식에 의해 정의되고 결과의 데이터 형식이 인덱스 열에 허용되는 경우에는 계산 열을 인덱스의 키 열이나 PRIMARY KEY 또는 UNIQUE 제약 조건의 일부로 사용할 수 있습니다. 예를 들어 테이블에 a와 b라는 정수 열이 있을 때 계산 열 a + b에는 인덱스를 작성할 수 있지만 계산 열 a+DATEPART(dd, GETDATE())는 다음 호출 시 값이 바뀌므로 인덱스를 작성할 수 없습니다.
 - 계산 열은 INSERT 또는 UPDATE 문의 대상이 될 수 없습니다.
 
-### <a name="Security"></a> 보안
+### <a name="security"></a><a name="Security"></a> 보안
 
-#### <a name="Permissions"></a> 권한
+#### <a name="permissions"></a><a name="Permissions"></a> 권한
 
 테이블에 대한 ALTER 사용 권한이 필요합니다.
 
-## <a name="SSMSProcedure"></a> SQL Server Management Studio 사용
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용
 
-### <a name="NewColumn"></a> 새 계산 열을 추가하려면
+### <a name="to-add-a-new-computed-column"></a><a name="NewColumn"></a> 새 계산 열을 추가하려면
 
 1. **개체 탐색기**에서 새 계산 열을 추가할 테이블을 확장합니다. **열** 을 마우스 오른쪽 단추로 클릭하고 **새 열**을 선택합니다.
 2. 열 이름을 입력하고 기본 데이터 형식(**nchar**(10))을 적용합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 수식에 지정된 식에 데이터 형식 우선 순위 규칙을 적용하여 계산 열의 데이터 형식을 결정합니다. 예를 들어 수식에서 **money** 형식 열과 **int**형식 열을 참조하는 경우 데이터 형식의 우선 순위가 더 높으므로 계산 열은 **money** 형식입니다. 자세한 내용은 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)를 참조하세요.
@@ -75,7 +75,7 @@ ms.locfileid: "68082561"
 2. 계산 열 수식을 지정할 열을 마우스 오른쪽 단추로 클릭하고 **삭제**를 클릭합니다. **확인**을 클릭합니다.
 3. 새 열을 추가하고 이전 절차에 따라 새 계산 열을 추가하여 계산 열 수식을 지정합니다.
 
-## <a name="TsqlProcedure"></a> Transact-SQL 사용
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용
 
 ### <a name="to-add-a-computed-column-when-creating-a-table"></a>테이블을 만들 때 계산 열을 추가하려면
 

@@ -15,10 +15,10 @@ ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8aac669c8e7b2f43666a43c26a8040c3658c560c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75236094"
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 PowerShell Cmdlet 개요
@@ -32,7 +32,7 @@ ms.locfileid: "75236094"
 > [!NOTE]  
 >  cmdlet을 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 태스크를 수행하는 방법을 설명하는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 온라인 설명서의 항목 목록은 [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)의 "관련 태스크" 섹션을 참조하세요.  
   
-##  <a name="ConfiguringServerInstance"></a> Configuring a Server Instance for Always On Availability Groups  
+##  <a name="configuring-a-server-instance-for-always-on-availability-groups"></a><a name="ConfiguringServerInstance"></a> Configuring a Server Instance for Always On Availability Groups  
   
 |Cmdlet|Description|지원되는 위치|  
 |-------------|-----------------|------------------|
@@ -42,7 +42,7 @@ ms.locfileid: "75236094"
 |[**Set-SqlHadrEndpoint**](/powershell/module/sqlserver/set-sqlhadrendpoint)|기존 데이터베이스 미러링 엔드포인트의 속성(예: 이름, 상태 또는 인증 속성)을 변경합니다.|[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 지원하고 데이터베이스 미러링 엔드포인트가 부족한 서버 인스턴스|  
 
   
-##  <a name="BnRcmdlets"></a> Backing Up and Restoring Databases and Transaction Logs  
+##  <a name="backing-up-and-restoring-databases-and-transaction-logs"></a><a name="BnRcmdlets"></a> Backing Up and Restoring Databases and Transaction Logs  
   
 |Cmdlet|Description|지원되는 위치|  
 |-------------|-----------------|------------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "75236094"
   
  cmdlet을 사용하여 보조 데이터베이스를 준비하는 방법은 [가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)를 참조하세요.  
   
-##  <a name="DeployManageAGs"></a> Creating and Managing an Availability Group  
+##  <a name="creating-and-managing-an-availability-group"></a><a name="DeployManageAGs"></a> Creating and Managing an Availability Group  
   
 |Cmdlet|Description|지원되는 위치|  
 |-------------|-----------------|------------------|  
@@ -63,7 +63,7 @@ ms.locfileid: "75236094"
 |[**Set-SqlAvailabilityGroup**](/powershell/module/sqlserver/set-sqlavailabilitygroup)|가용성 그룹의 속성을 설정하고 가용성 그룹을 온라인/오프라인으로 전환합니다.|주 복제본을 호스팅하는 서버 인스턴스|  
 |[**Switch-SqlAvailabilityGroup**](/powershell/module/sqlserver/switch-sqlavailabilitygroup)|다음 형식의 장애 조치 중 하나를 시작합니다.<br /><br /> 가용성 그룹의 강제 장애 조치(failover)(데이터가 손실될 수 있음)<br /><br /> 가용성 그룹 수동 장애 조치(failover)|대상 보조 복제본을 호스팅하는 서버 인스턴스|  
   
-##  <a name="AGlisteners"></a> Creating and Managing an Availability Group Listener  
+##  <a name="creating-and-managing-an-availability-group-listener"></a><a name="AGlisteners"></a> Creating and Managing an Availability Group Listener  
   
 |Cmdlet|Description|지원되는 위치|  
 |------------|-----------------|------------------|  
@@ -71,7 +71,7 @@ ms.locfileid: "75236094"
 |[**Set-SqlAvailabilityGroupListener**](/powershell/module/sqlserver/set-sqlavailabilitygrouplistener)|기존 가용성 수신기에서 포트 설정을 수정합니다.|주 복제본을 호스팅하는 서버 인스턴스|  
 |[**Add-SqlAvailabilityGroupListenerStaticIp**](/powershell/module/sqlserver/add-sqlavailabilitygrouplistenerstaticip)|기존 가용성 그룹 수신기 구성에 고정 IP 주소를 추가합니다. IP 주소는 서브넷이 있는 IPv4 주소이거나 IPv6 주소일 수 있습니다.|주 복제본을 호스팅하는 서버 인스턴스|  
   
-##  <a name="DeployManageARs"></a> Creating and Managing an Availability Replica  
+##  <a name="creating-and-managing-an-availability-replica"></a><a name="DeployManageARs"></a> Creating and Managing an Availability Replica  
   
 |Cmdlet|Description|지원되는 위치|  
 |-------------|-----------------|------------------|  
@@ -80,7 +80,7 @@ ms.locfileid: "75236094"
 |[**Remove-SqlAvailabilityReplica**](/powershell/module/sqlserver/remove-sqlavailabilityreplica)|가용성 복제본을 삭제합니다.|주 복제본을 호스팅하는 서버 인스턴스|  
 |[**Set-SqlAvailabilityReplica**](/powershell/module/sqlserver/set-sqlavailabilityreplica)|가용성 복제본의 속성을 설정합니다.|주 복제본을 호스팅하는 서버 인스턴스|  
   
-##  <a name="DeployManageDbs"></a> Adding and Managing an Availability Database  
+##  <a name="adding-and-managing-an-availability-database"></a><a name="DeployManageDbs"></a> Adding and Managing an Availability Database  
   
 |Cmdlet|Description|지원되는 위치|  
 |-------------|-----------------|------------------|  
@@ -89,7 +89,7 @@ ms.locfileid: "75236094"
 |[**Resume-SqlAvailabilityDatabase**](/powershell/module/sqlserver/resume-sqlavailabilitydatabase)|일시 중지된 가용성 데이터베이스에 대한 데이터 이동을 재개합니다.|데이터베이스가 일시 중지된 서버 인스턴스|  
 |[**Suspend-SqlAvailabilityDatabase**](/powershell/module/sqlserver/suspend-sqlavailabilitydatabase)|가용성 데이터베이스에 대한 데이터 이동을 일시 중지합니다.|가용성 복제본을 호스팅하는 서버 인스턴스|  
   
-##  <a name="MonitorTblshtAGs"></a> Monitoring Availability Group Health  
+##  <a name="monitoring-availability-group-health"></a><a name="MonitorTblshtAGs"></a> Monitoring Availability Group Health  
  다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet을 사용하면 가용성 그룹과 가용성 그룹의 복제본 및 데이터베이스의 상태를 모니터링할 수 있습니다.  
   
 > [!IMPORTANT]  

@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e8f345576db61768d9afe8243dfe41801f68b2ac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095738"
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON 경로 식(SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "74095738"
   
 2.  [PATH](#PATH) 자체.  
 
-##  <a name="PATHMODE"></a> Path mode  
+##  <a name="path-mode"></a><a name="PATHMODE"></a> Path mode  
  경로 식의 시작 부분에서 키워드 **lax** 또는 **strict**을(를) 지정하여 PATH 모드를 선택적으로 선언합니다. 기본값은 **lax**입니다.  
   
 -   **lax** 모드에서 경로 식에 오류가 포함되어 있으면 함수는 빈 값을 반환합니다. 예를 들어 **$.name** 값을 요청했는데 JSON 텍스트에 **name** 키가 포함되어 있지 않으면 함수는 null을 반환하지만 오류를 발생시키지 않습니다.  
@@ -58,7 +58,7 @@ SET @json=N'{ ... }'
 SELECT * FROM OPENJSON(@json, N'lax $.info')
 ```  
   
-##  <a name="PATH"></a> Path  
+##  <a name="path"></a><a name="PATH"></a> Path  
  선택적인 PATH 모드 선언 후, PATH를 지정합니다.  
   
 -   달러 기호(`$`)는 컨텍스트 항목을 나타냅니다.  

@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 770ef448094e764bcc1ca970354941c0d1d03d4c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68072277"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable(Transact-SQL)
@@ -122,7 +122,7 @@ CURSOR
 SET 문에 커서 선언이 포함되도록 지정합니다.  
   
 SCROLL  
-커서가 인출 옵션 FIRST, LAST, NEXT, PRIOR, RELATIVE 및 ABSOLUTE를 모두 지원하도록 지정합니다. FAST_FORWARD도 지정한 경우에는 SCROLL을 지정할 수 없습니다.  
+커서가 모든 인출 옵션(FIRST, LAST, NEXT, PRIOR, RELATIVE 및 ABSOLUTE)을 지원하도록 지정합니다. FAST_FORWARD도 지정한 경우에는 SCROLL을 지정할 수 없습니다.  
   
 FORWARD_ONLY  
 커서가 FETCH NEXT 옵션만 지원하도록 지정합니다. 첫 번째 행에서 마지막 행까지 커서를 한 방향으로만 검색합니다. STATIC, KEYSET 또는 DYNAMIC 키워드를 사용하지 않고 FORWARD_ONLY를 지정하면 커서가 DYNAMIC으로 구현됩니다. STATIC, KEYSET 또는 DYNAMIC 키워드가 지정된 경우를 제외하고 FORWARD_ONLY 또는 SCROLL을 지정하지 않으면 FORWARD_ONLY가 기본값입니다. STATIC, KEYSET 및 DYNAMIC 커서의 경우 SCROLL이 기본값입니다.  
@@ -288,7 +288,7 @@ GO
 ```  
   
 ### <a name="h-assigning-a-value-to-a-user-defined-type-variable-by-invoking-a-method-of-the-type"></a>H. 사용자 정의 형식의 메서드를 호출하여 사용자 정의 형식 변수에 값 할당  
-다음 예제에서는 형식의 `SetXY` 메서드를 호출하여 **point** 사용자 정의 형식의 값을 설정합니다.  
+다음 예제에서는 형식의 **메서드를 호출하여**point`SetXY` 사용자 정의 형식의 값을 설정합니다.  
   
 ```  
 DECLARE @p Point;  
@@ -306,7 +306,7 @@ DECLARE @p Point = CONVERT(Point, '')
 SET @p.SetXY(22, 23);  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="j-printing-the-value-of-a-variable-initialized-by-using-set"></a>J. SET을 사용하여 초기화된 변수 값 인쇄  
 다음 예제에서는 `@myvar` 변수를 만들고, 문자열 값을 변수에 넣고, `@myvar` 변수 값을 출력합니다.  

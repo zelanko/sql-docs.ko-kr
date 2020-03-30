@@ -28,10 +28,10 @@ ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b6ee22299c854193d15e5fe4d1e2daabf7250bb
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287877"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>데이터베이스 분리 및 연결(SQL Server)
@@ -39,14 +39,14 @@ ms.locfileid: "79287877"
 데이터베이스의 데이터 및 트랜잭션 로그 파일은 분리할 수 있으며 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스나 다른 인스턴스에 다시 연결할 수 있습니다. 데이터베이스 분리 및 연결은 데이터베이스를 같은 컴퓨터의 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 변경하거나 데이터베이스를 이동하는 경우 유용합니다.  
   
   
-##  <a name="Security"></a> 보안  
+##  <a name="security"></a><a name="Security"></a> 보안  
 파일 액세스 권한은 데이터베이스 분리, 연결 등의 여러 데이터베이스 작업 중에 설정됩니다.  
   
 > [!IMPORTANT]  
 > 알 수 없거나 신뢰할 수 없는 출처의 데이터베이스는 연결 또는 복원하지 않는 것이 좋습니다. 이러한 데이터베이스에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마 또는 물리적 데이터베이스 구조를 수정하여 오류가 발생할 수 있습니다.   
 > 알 수 없거나 신뢰할 수 없는 소스의 데이터베이스를 사용하기 전에 비프로덕션 서버의 데이터베이스에서 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 를 실행하여 데이터베이스에서 코드(예: 저장 프로시저 또는 다른 사용자 정의 코드)를 시험해 보세요.  
   
-##  <a name="DetachDb"></a> 데이터베이스 분리  
+##  <a name="detaching-a-database"></a><a name="DetachDb"></a> 데이터베이스 분리  
 데이터베이스를 분리하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 해당 데이터베이스가 제거되지만 데이터베이스의 데이터 파일 및 트랜잭션 로그 파일은 그대로 유지됩니다. 이 파일은 데이터베이스가 분리된 해당 서버뿐 아니라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스가 실행되는 모든 컴퓨터에 데이터베이스를 연결하는 데 사용할 수 있습니다.  
   
 다음 중 하나라도 해당하는 경우 데이터베이스를 분리할 수 없습니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "79287877"
   
 3.  데이터베이스를 다시 분리합니다.  
   
-##  <a name="AttachDb"></a> 데이터베이스 연결  
+##  <a name="attaching-a-database"></a><a name="AttachDb"></a> 데이터베이스 연결  
 복사 또는 분리한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 연결할 수 있습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서버 인스턴스에 전체 텍스트 카탈로그 파일이 포함된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스를 연결할 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서와 같이 다른 데이터베이스 파일과 함께 이전 위치에서 카탈로그 파일이 연결됩니다. 자세한 내용은 [전체 텍스트 검색 업그레이드](../../relational-databases/search/upgrade-full-text-search.md)를 참조하세요.  
   
 데이터베이스를 연결할 경우 모든 데이터 파일(MDF 및 NDF 파일)이 사용 가능해야 합니다. 데이터베이스가 처음 생성되었을 때 또는 마지막으로 연결되었을 때와 경로가 다른 데이터 파일이 있으면 해당 파일의 현재 경로를 지정해야 합니다.  
@@ -101,7 +101,7 @@ ms.locfileid: "79287877"
   
 -   연결되는 주 데이터 파일이 읽기 전용일 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 해당 데이터베이스를 읽기 전용으로 가정합니다. 읽기 전용 데이터베이스에서 로그 파일 또는 파일은 데이터베이스의 주 파일에 지정된 위치에 있어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 주 파일에 저장된 로그 위치를 업데이트할 수 없으므로 새 로그 파일을 작성할 수 없기 때문입니다.  
  
-###  <a name="Metadata"></a> 데이터베이스 연결 시 메타데이터 변경  
+###  <a name="metadata-changes-on-attaching-a-database"></a><a name="Metadata"></a> 데이터베이스 연결 시 메타데이터 변경  
 읽기 전용 데이터베이스를 분리한 다음 다시 연결하는 경우 현재 차등 기반에 대한 백업 정보는 손실됩니다. *차등 기반* 은 데이터베이스나 데이터베이스에 있는 파일 또는 파일 그룹의 하위 집합에 있는 모든 데이터에 대한 최신 전체 백업입니다. 기반 백업 정보가 없는 경우 **master** 데이터베이스는 읽기 전용 데이터베이스와 동기화되지 않으므로 이후에 수행되는 차등 백업에서 예기치 않은 결과가 발생할 수 있습니다. 그러므로 읽기 전용 데이터베이스를 차등 백업하는 경우에는 데이터베이스를 다시 연결한 다음 전체 백업을 수행하여 새로운 차등 기반을 만들어야 합니다. 차등 백업에 대한 자세한 내용은 [차등 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)을 참조하세요.  
   
 연결 시 데이터베이스가 시작됩니다. 일반적으로 데이터베이스를 연결하면 데이터베이스를 분리 또는 복사한 시점과 동일한 상태가 됩니다. 그러나 연결 및 분리 작업을 수행하면 해당 데이터베이스의 데이터베이스 간 소유권 체인을 사용할 수 없게 됩니다. 체인을 사용하도록 설정하는 방법은 [cross db ownership chaining 서버 구성 옵션](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)을 참조하세요. 
@@ -112,14 +112,14 @@ ms.locfileid: "79287877"
 ### <a name="backup-and-restore-and-attach"></a>백업, 복원 및 연결  
 완전히 또는 부분적으로 오프라인 상태인 데이터베이스와 마찬가지로 파일을 복원 중인 데이터베이스에는 연결될 수 없습니다. 이때 복원 시퀀스를 중지하면 데이터베이스를 연결할 수 있습니다. 그런 다음 복원 시퀀스를 다시 시작할 수 있습니다.  
   
-###  <a name="OtherServerInstance"></a> 다른 서버 인스턴스에 데이터베이스 연결  
+###  <a name="attaching-a-database-to-another-server-instance"></a><a name="OtherServerInstance"></a> 다른 서버 인스턴스에 데이터베이스 연결  
   
 > [!IMPORTANT]  
 > 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 만든 데이터베이스를 이전 버전에서 연결할 수 없습니다. 데이터베이스가 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]의 이전 버전으로 실제로 사용되지 않도록 합니다. 그러나 이는 메타데이터 상태와 관련되어 있으며 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)에 영향을 주지 않습니다. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.   
   
 데이터베이스를 다른 서버 인스턴스에 연결하는 경우 사용자와 애플리케이션에 일관된 환경을 제공하려면 로그인, 작업 등 데이터베이스의 일부 또는 모든 메타데이터를 다른 서버 인스턴스에서 다시 만들어야 할 수도 있습니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)를 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
 **데이터베이스를 분리하려면**  
   
 -   [sp_detach_db&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  

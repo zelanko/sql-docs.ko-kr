@@ -19,10 +19,10 @@ ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68300433"
 ---
 # <a name="database-snapshots-sql-server"></a>데이터베이스 스냅샷(SQL Server)
@@ -48,14 +48,14 @@ ms.locfileid: "68300433"
   
 -   [관련 작업](#RelatedTasks)  
   
-##  <a name="FeatureOverview"></a> 기능 개요  
+##  <a name="feature-overview"></a><a name="FeatureOverview"></a> 기능 개요  
  데이터베이스 스냅샷은 데이터 페이지 수준에서 작동합니다. 원본 데이터베이스의 페이지를 처음 수정하기 전에 원본 페이지는 원본 데이터베이스에서 스냅샷으로 복사됩니다. 스냅샷은 원본 페이지를 저장하여 스냅샷이 만들어질 때 상태 그대로 데이터 레코드를 유지합니다. 처음 수정하는 모든 페이지에 같은 프로세스가 반복됩니다. 사용자에게 데이터베이스 스냅샷은 변경되지 않는 것으로 보입니다. 데이터베이스 스냅샷의 읽기 작업은 원본 데이터 페이지의 위치에 관계없이 항상 원본 데이터 페이지에 액세스하기 때문입니다.  
   
  복사된 원본 페이지를 저장하기 위해 스냅샷은 하나 이상의 *스파스 파일*을 사용합니다. 처음에 스파스 파일은 기본적으로 사용자 데이터가 없는 빈 파일이며 사용자 데이터에 대한 디스크 공간이 할당되어 있지 않습니다. 원본 데이터베이스에서 페이지를 업데이트할수록 파일 크기가 증가합니다. 다음 그림은 스냅샷 크기에 대한 두 가지 상반된 업데이트 패턴의 효과를 보여 줍니다. 업데이트 패턴 A는 스냅샷 수명 동안 원본 페이지의 30%가 업데이트되는 환경을 반영합니다. 업데이트 패턴 B는 스냅샷 수명 동안 원본 페이지의 80%가 업데이트되는 환경을 반영합니다.  
   
  ![대체 업데이트 패턴 및 스냅샷 크기](../../relational-databases/databases/media/dbview-04.gif "대체 업데이트 패턴 및 스냅샷 크기")  
   
-##  <a name="Benefits"></a> 데이터베이스 스냅샷의 이점  
+##  <a name="benefits-of-database-snapshots"></a><a name="Benefits"></a> 데이터베이스 스냅샷의 이점  
   
 -   스냅샷은 보고 용도로 사용할 수 있습니다.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "68300433"
   
      테스트 환경에서 테스트 프로토콜을 반복 실행하는 경우 각 테스트 시작 시 데이터베이스에 동일한 데이터가 있는 것이 유용할 수 있습니다. 첫 번째 테스트를 실행하기 전에 애플리케이션 개발자나 테스터는 테스트 데이터베이스에서 데이터베이스 스냅샷을 만들 수 있습니다. 각 테스트를 실행한 후 데이터베이스 스냅샷을 되돌리면 신속하게 데이터베이스를 이전 상태로 되돌릴 수 있습니다.  
   
-##  <a name="TermsAndDefinitions"></a> 용어 및 정의  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> 용어 및 정의  
  database snapshot  
  데이터베이스(원본 데이터베이스)의 트랜잭션이 일치하는 읽기 전용 정적 뷰입니다.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "68300433"
  스파스 파일(sparse file)  
  NTFS 파일 시스템에서 제공하는 파일로, 다른 경우보다 훨씬 더 적은 디스크 공간만 사용합니다. 스파스 파일은 데이터베이스 스냅샷에 복사된 페이지를 저장하는 데 사용됩니다. 스파스 파일은 처음 만들어질 때 디스크 공간을 거의 차지하지 않습니다. 데이터베이스 스냅샷에 데이터를 쓸수록 NTFS는 해당하는 스파스 파일에 점진적으로 디스크 공간을 할당합니다.  
   
-##  <a name="LimitationsRequirements"></a> 데이터베이스 스냅샷 사전 요구 사항 및 제한 사항  
+##  <a name="prerequisites-for-and-limitations-on-database-snapshots"></a><a name="LimitationsRequirements"></a> 데이터베이스 스냅샷 사전 요구 사항 및 제한 사항  
  **섹션 내용**  
   
 -   [필수 구성 요소](#Prerequisites)  
@@ -119,7 +119,7 @@ ms.locfileid: "68300433"
   
 -   [오프라인 파일 그룹의 데이터베이스 스냅샷](#OfflineFGs)  
   
-###  <a name="Prerequisites"></a> 필수 조건  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
  복구 모델을 사용할 수 있는 원본 데이터베이스는 다음 사전 요구 사항을 충족해야 합니다.  
   
 -   서버 인스턴스는 데이터베이스 스냅샷을 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 실행해야 합니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
@@ -141,7 +141,7 @@ ms.locfileid: "68300433"
 > [!NOTE]  
 >  모든 복구 모델에서 데이터베이스 스냅샷을 지원합니다.  
   
-###  <a name="LimitsOnSourceDb"></a> 원본 데이터베이스에 대한 제한 사항  
+###  <a name="limitations-on-the-source-database"></a><a name="LimitsOnSourceDb"></a> 원본 데이터베이스에 대한 제한 사항  
  데이터베이스 스냅샷이 있는 경우 스냅샷의 원본 데이터베이스에 다음 제한 사항이 적용됩니다.  
   
 -   데이터베이스를 삭제, 분리 또는 복원할 수 없습니다.  
@@ -153,7 +153,7 @@ ms.locfileid: "68300433"
   
 -   원본 데이터베이스 또는 모든 스냅샷에서 파일을 삭제할 수 없습니다.  
   
-###  <a name="LimitsOnDbSS"></a> 데이터베이스 스냅샷에 대한 제한 사항  
+###  <a name="limitations-on-database-snapshots"></a><a name="LimitsOnDbSS"></a> 데이터베이스 스냅샷에 대한 제한 사항  
  데이터베이스 스냅샷에 다음 제한 사항이 적용됩니다.  
   
 -   데이터베이스 스냅샷은 원본 데이터베이스와 같은 서버 인스턴스에서 생성 및 유지되어야 합니다.  
@@ -199,7 +199,7 @@ ms.locfileid: "68300433"
   
 -   읽기 전용 스냅샷에 대한 통계가 없거나 유효하지 않을 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 tempdb에서 임시 통계를 만들어 유지 관리합니다. 자세한 내용은 [통계](../../relational-databases/statistics/statistics.md)를 참조하세요.  
   
-###  <a name="DiskSpace"></a> 디스크 공간 요구 사항  
+###  <a name="disk-space-requirements"></a><a name="DiskSpace"></a> 디스크 공간 요구 사항  
  데이터베이스 스냅샷은 디스크 공간을 사용합니다. 데이터베이스 스냅샷이 디스크 공간을 모두 소모하면 스냅샷이 주의 대상으로 표시되어 삭제해야 합니다. 그러나 원본 데이터베이스는 영향을 받지 않으며 정상적으로 동작이 계속됩니다. 그러나 데이터베이스의 전체 복사본과 비교할 때 스냅샷은 공간을 매우 효율적으로 사용합니다. 스냅샷은 사용 기간 동안 변경되는 페이지를 스토리지할 수 있는 공간만 필요로 합니다. 일반적으로 스냅샷은 제한된 시간 동안 보관되므로 크기는 중요한 문제가 아닙니다.  
   
  그러나 스냅샷을 오래 보관할수록 사용 가능한 공간을 모두 소모할 가능성이 높습니다. 스파스 파일이 커질 수 있는 최대 크기는 스냅샷을 만든 시점의 해당 원본 데이터베이스 파일의 크기입니다. 데이터베이스 스냅샷이 디스크 공간을 모두 소모한 경우 스냅샷을 삭제해야 합니다.  
@@ -207,7 +207,7 @@ ms.locfileid: "68300433"
 > [!NOTE]  
 >  파일 공간을 제외하고 데이터베이스 스냅샷은 대략 데이터베이스와 같은 양의 리소스를 사용합니다.  
   
-###  <a name="OfflineFGs"></a> 오프라인 파일 그룹의 데이터베이스 스냅샷  
+###  <a name="database-snapshots-with-offline-filegroups"></a><a name="OfflineFGs"></a> 오프라인 파일 그룹의 데이터베이스 스냅샷  
  원본 데이터베이스의 오프라인 파일 그룹은 다음 작업을 수행하려 할 때 데이터베이스 스냅샷에 영향을 줍니다.  
   
 -   스냅샷 만들기  
@@ -226,7 +226,7 @@ ms.locfileid: "68300433"
   
      원본 데이터베이스를 데이터베이스 스냅샷으로 되돌리려면 스냅샷을 만들 때 오프라인 상태였던 파일 그룹을 제외하고 모든 파일 그룹이 온라인 상태여야 합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [데이터베이스 스냅샷 만들기&#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   

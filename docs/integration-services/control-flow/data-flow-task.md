@@ -19,10 +19,10 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6683cec953daf6146371d62e8db2e4add2bd42df
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298343"
 ---
 # <a name="data-flow-task"></a>데이터 흐름 태스크
@@ -90,7 +90,7 @@ ms.locfileid: "71298343"
   
  로그 이벤트는 대부분 여러 개의 항목을 기록하며 다양한 로그 항목의 메시지에는 복잡한 데이터가 들어 있습니다. 복잡한 메시지 내용을 보다 쉽게 이해하고 전달할 수 있도록 메시지 텍스트를 구문 분석할 수 있습니다. 로그의 위치에 따라 Transact-SQL 문이나 스크립트 구성 요소를 사용하여 복잡한 텍스트를 열이나 보다 유용한 그 밖의 형식으로 구분할 수 있습니다.  
   
- 예를 들어 다음 표에서는 "행이 데이터 흐름 구성 요소에 입력으로 제공되었습니다. :  : 1185 : OLE DB 원본 출력 : 1180 : 정렬 : 1181 : 정렬 입력 : 76"이라는 메시지가 여러 개의 열로 구문 분석된 결과를 보여 줍니다. 이 메시지는 OLE DB 원본의 행이 정렬 변환으로 보내질 때 **OnPipelineRowsSent** 이벤트에 의해 기록된 것입니다.  
+ 예를 들어 다음 표에서는 "행이 데이터 흐름 구성 요소에 입력으로 제공되었습니다. :  : 1185 : OLE DB 원본 출력 : 1180 : Sort : 1181 : 정렬 입력 : 76"이라는 메시지가 여러 개의 열로 구문 분석된 결과를 보여 줍니다. 이 메시지는 OLE DB 원본의 행이 정렬 변환으로 보내질 때 **OnPipelineRowsSent** 이벤트에 의해 기록된 것입니다.  
   
 |열|Description|값|  
 |------------|-----------------|-----------|  

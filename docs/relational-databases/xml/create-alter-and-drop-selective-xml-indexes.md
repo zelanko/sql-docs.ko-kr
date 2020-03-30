@@ -11,10 +11,10 @@ ms.assetid: c398f396-f630-4a2d-a264-f243c5346de1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dbfeb117d22e468bdae8b9e2ebe598b099588bfc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68112934"
 ---
 # <a name="create-alter-and-drop-selective-xml-indexes"></a>선택적 XML 인덱스 만들기, 변경 및 삭제
@@ -23,7 +23,7 @@ ms.locfileid: "68112934"
   
  선택적 XML 인덱스에 대한 자세한 내용은 [SXI&#40;선택적 XML 인덱스&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)를 참조하세요.  
   
-##  <a name="create"></a> 선택적 XML 인덱스 만들기  
+##  <a name="creating-a-selective-xml-index"></a><a name="create"></a> 선택적 XML 인덱스 만들기  
   
 ### <a name="how-to-create-a-selective-xml-index"></a>방법: 선택적 XML 인덱스 만들기  
  **Transact-SQL을 사용하여 선택적 XML 인덱스 만들기**  
@@ -46,7 +46,7 @@ FOR(
 ```  
   
   
-##  <a name="alter"></a> 선택적 XML 인덱스 변경  
+##  <a name="altering-a-selective-xml-index"></a><a name="alter"></a> 선택적 XML 인덱스 변경  
   
 ### <a name="how-to-alter-a-selective-xml-index"></a>방법: 선택적 XML 인덱스 변경  
  **Transact-SQL을 사용하여 선택적 XML 인덱스 변경**  
@@ -67,7 +67,7 @@ FOR
 ```  
   
   
-##  <a name="drop"></a> 선택적 XML 인덱스 삭제  
+##  <a name="dropping-a-selective-xml-index"></a><a name="drop"></a> 선택적 XML 인덱스 삭제  
   
 ### <a name="how-to-drop-a-selective-xml-index"></a>방법: 선택적 XML 인덱스 삭제  
  **Transact-SQL을 사용하여 선택적 XML 인덱스 삭제**  

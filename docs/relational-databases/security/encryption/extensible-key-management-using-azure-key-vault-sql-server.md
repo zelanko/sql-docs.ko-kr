@@ -18,10 +18,10 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: df42a2d0f7dea2e32df61670aff88374a6fcff54
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558074"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Azure 키 자격 증명 모음(SQL Server)을 사용한 확장 가능 키 관리
@@ -31,7 +31,7 @@ ms.locfileid: "75558074"
   
  이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터를 설명합니다. 추가 정보는 [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 설정 단계](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md), [SQL 암호화 기능을 통해 SQL Server 커넥터 사용](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)및 [SQL Server 커넥터 유지 관리 및 문제 해결](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)에서 확인할 수 있습니다.  
   
-##  <a name="Uses"></a> EKM(확장 가능 키 관리)의 정의 및 사용하는 이유  
+##  <a name="what-is-extensible-key-management-ekm-and-why-use-it"></a><a name="Uses"></a> EKM(확장 가능 키 관리)의 정의 및 사용하는 이유  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 [TDE&#40;투명한 데이터 암호화&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md), [CLE](../../../t-sql/functions/cryptographic-functions-transact-sql.md)(열 수준 암호화) 및 [백업 암호화](../../../relational-databases/backup-restore/backup-encryption.md) 등 중요한 데이터를 보호하는 데 도움이 되는 여러 유형의 암호화를 제공합니다. 이러한 모든 암호화에서는 이 기존의 키 계층에서 데이터가 DEK(대칭 데이터 암호화 키)를 사용하여 암호화됩니다. 이 대칭 데이터 암호화 키는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 저장된 키의 계층 구조로 암호화하여 추가적으로 보호하게 됩니다. 이 모델 대신, 다른 모델로 EKM 공급자 모델이 있습니다. EKM 공급자 아키텍처를 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 외부 암호화 공급자에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 외부에 저장된 비대칭 키를 사용하여 데이터 암호화 키를 보호합니다. 이 모델은 추가 보안 계층을 추가하고 키와 데이터의 관리를 구분합니다.  
    
  다음 이미지는 기존 서비스 관리 키 계층과 Azure 주요 자격 증명 모음 시스템을 비교합니다.  

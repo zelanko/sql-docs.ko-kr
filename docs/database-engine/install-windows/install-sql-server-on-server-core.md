@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 19437198d7f65d640ea4501e97e149670a0a95fa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75325465"
 ---
 # <a name="install-sql-server-on-server-core"></a>Server Core에 SQL Server 설치
@@ -36,7 +36,7 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
 |Windows PowerShell|Server Core 설치와 함께 제공됩니다.|  
 |Java Runtime |PolyBase를 사용하려면 적절한 Java Runtime을 설치해야 합니다. 자세한 내용은 [PolyBase 설치](../../relational-databases/polybase/polybase-installation.md)를 참조하세요.|
   
-##  <a name="BK_SupportedFeatures"></a> 지원되는 기능  
+##  <a name="supported-features"></a><a name="BK_SupportedFeatures"></a> 지원되는 기능  
  다음 표를 사용하여 Server Core 설치 시 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]에서 지원되는 기능을 찾습니다.  
   
 |기능|지원됨|추가 정보|  
@@ -258,10 +258,10 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
   
          DefaultSetup.ini 파일이 없는 경우 파일을 생성하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원본 미디어의 루트 레벨에서 \x86 및 \x64 폴더에 복사합니다.  
   
-## <a name="configure-remote-access-of-includessnoversionincludesssnoversion-mdmd-on-server-core"></a>Server Core에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 원격 액세스 구성  
+## <a name="configure-remote-access-of-ssnoversion-on-server-core"></a>Server Core에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 원격 액세스 구성  
  아래 설명된 작업을 수행하여 Server Core에서 실행하는 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 인스턴스의 원격 액세스를 구성합니다.  
   
-### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>다음 인스턴스에서 원격 연결 설정: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-remote-connections-on-the-instance-of-ssnoversion"></a>다음 인스턴스에서 원격 연결 설정: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
 원격 연결을 설정하려면 SQLCMD.exe를 로컬로 사용하고 Server Core 인스턴스에 대해 다음 문을 실행합니다.  
 
@@ -272,7 +272,7 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
    GO
    ```  
   
-### <a name="enable-and-start-the-includessnoversionincludesssnoversion-mdmd-browser-service"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] browser service  
+### <a name="enable-and-start-the-ssnoversion-browser-service"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] browser service  
  Browser 서비스는 기본적으로 해제되어 있습니다.  Server Core에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 해제된 경우 명령 프롬프트에서 다음 명령을 실행하여 설정합니다.  
   
  `sc config SQLBROWSER start= auto`  
@@ -284,7 +284,7 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
 ### <a name="create-exceptions-in-windows-firewall"></a>Windows 방화벽에서 예외 생성  
  Windows 방화벽에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 액세스 관련 예외를 만들려면 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)에 지정된 단계를 참조하세요.  
   
-### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-tcpip-on-the-instance-of-ssnoversion"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  TCP/IP 프로토콜은 Server Core에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 Windows PowerShell을 통해 설정할 수 있습니다. 다음 단계를 수행하세요.  
   
 1.  서버에서 작업 관리자를 시작합니다.  

@@ -13,10 +13,10 @@ ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 71ad8a6d52367cf4b3288fa8bdd4bdbaa6863cf5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71299020"
 ---
 # <a name="browse-all-principals-dialog-box"></a>모든 보안 주체 찾아보기 대화 상자
@@ -32,7 +32,7 @@ ms.locfileid: "71299020"
   
 -   [옵션 구성](#options)  
   
-##  <a name="open_dialog"></a> 모든 보안 주체 찾아보기 대화 상자 열기  
+##  <a name="open-the-browse-all-principals-dialog-box"></a><a name="open_dialog"></a> 모든 보안 주체 찾아보기 대화 상자 열기  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 연결합니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "71299020"
   
 5.  **사용 권한** 페이지를 선택한 다음 **찾아보기**를 클릭합니다.  
   
-##  <a name="options"></a> 옵션 구성  
+##  <a name="configure-the-options"></a><a name="options"></a> 옵션 구성  
  이 페이지에는 SSISDB 데이터베이스의 sys.database_principals 카탈로그 뷰에 있는 보안 주체가 표시됩니다.  
   
  보안 주체를 선택한 후 **확인** 을 클릭하고 **모든 보안 주체 찾아보기** 대화 상자를 닫으면 선택한 보안 주체가 상위 대화 상자의 **사용 권한** 페이지에 있는 **로그인 또는 역할** 목록에 추가됩니다. **로그인 또는 역할** 목록에 보안 주체를 추가한 후에는 선택한 프로젝트에 대한 해당 보안 주체의 사용 권한을 변경할 수 있습니다.  

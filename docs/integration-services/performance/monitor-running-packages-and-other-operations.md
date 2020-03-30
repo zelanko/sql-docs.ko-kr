@@ -14,10 +14,10 @@ ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d7fd62f4f2f82e6dcc3921db7099b4f052db27b3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287847"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>실행 중인 패키지 및 기타 작업 모니터링
@@ -35,7 +35,7 @@ ms.locfileid: "79287847"
   
      자세한 내용은 [Reports for the Integration Services Server](#reports)을(를) 참조하세요.  
   
--   보기  
+-   뷰  
   
      자세한 내용은 [뷰&#40;Integration Services 카탈로그&#41;](../../integration-services/system-views/views-integration-services-catalog.md)를 참조하세요.  
   
@@ -55,12 +55,12 @@ ms.locfileid: "79287847"
   
  한 작업의 상태를 나타내기 위해 9가지 상태 유형이 사용됩니다. 상태 유형에 대한 전체 목록은 [catalog.operations&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 뷰를 참조하세요.  
 
-## <a name="active_ops"></a> 활성 작업 대화 상자
+## <a name="active-operations-dialog-box"></a><a name="active_ops"></a> 활성 작업 대화 상자
   **활성 작업** 대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서 현재 실행 중인 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 작업(예: 배포, 유효성 검사 및 패키지 실행)의 상태를 볼 수 있습니다. 이 데이터는 SSISDB 카탈로그에 저장됩니다.  
   
  관련된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 뷰에 대한 자세한 내용은 [catalog.operations&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md), [catalog.validations&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-validations-ssisdb-database.md) 및 [catalog.executions&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md)를 참조하세요.  
   
-###  <a name="open_dialog"></a> 활성 작업 대화 상자 열기  
+###  <a name="open-the-active-operations-dialog-box"></a><a name="open_dialog"></a> 활성 작업 대화 상자 열기  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]열기  
   
@@ -127,7 +127,7 @@ ms.locfileid: "79287847"
  관리되는 API를 통해 프로그래밍 방식으로 액세스  
  <xref:Microsoft.SqlServer.Management.IntegrationServices> 네임스페이스 및 해당 클래스를 참조하세요.  
 
-## <a name="reports"></a> Reports for the Integration Services Server
+## <a name="reports-for-the-integration-services-server"></a><a name="reports"></a> Reports for the Integration Services Server
   현재 릴리스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 서버에 배포된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 모니터링하는 데 도움이 되는 표준 보고서를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 사용할 수 있습니다. 이러한 보고서는 패키지 상태 및 기록을 보고 필요한 경우 패키지 실행 실패 원인을 파악하는 데 도움이 됩니다.  
   
  각 보고서 페이지의 위쪽에서 뒤로 아이콘을 클릭하면 확인한 이전 페이지로 이동하고, 새로 고침 아이콘을 클릭하면 페이지에 표시된 정보가 새로 고쳐지며, 인쇄 아이콘을 사용하면 현재 페이지를 인쇄할 수 있습니다.  

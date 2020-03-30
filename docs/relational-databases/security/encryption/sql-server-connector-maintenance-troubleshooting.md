@@ -13,10 +13,10 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557938"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>SQL Server 커넥터, 부록
@@ -25,7 +25,7 @@ ms.locfileid: "75557938"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터에 대한 추가 정보는 이 항목에서 제공됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터에 대한 자세한 내용은 [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md), [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 설정 단계](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md) 및 [SQL 암호화 기능을 통해 SQL Server 커넥터 사용](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)을 참조하세요.  
   
   
-##  <a name="AppendixA"></a> 1. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터에 대한 유지 관리 지침  
+##  <a name="a-maintenance-instructions-for-ssnoversion-connector"></a><a name="AppendixA"></a> 1. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터에 대한 유지 관리 지침  
   
 ### <a name="key-rollover"></a>키 롤오버  
   
@@ -94,7 +94,7 @@ ms.locfileid: "75557938"
     GO  
     ```  
   
-### <a name="upgrade-of-includessnoversionincludesssnoversion-mdmd-connector"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터 업그레이드  
+### <a name="upgrade-of-ssnoversion-connector"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터 업그레이드  
 
 1\.0.0.440 및 이전 버전은 대체되었으며 프로덕션 환경에서 더 이상 지원되지 않습니다. 버전 1.0.1.0 이상이 프로덕션 환경에서 지원됩니다. 다음 지침을 사용하여 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=45344)에서 제공하는 최신 버전으로 업그레이드하세요.
 
@@ -138,7 +138,7 @@ ms.locfileid: "75557938"
   
 8.  업데이트가 작동하는지 확인한 후, 3단계에서 제거하는 대신 이름을 변경하기로 선택한 경우 이전 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터 폴더를 삭제할 수 있습니다.  
   
-### <a name="rolling-the-includessnoversionincludesssnoversion-mdmd-service-principal"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 사용자 롤링  
+### <a name="rolling-the-ssnoversion-service-principal"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 사용자 롤링  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure Active Directory에서 만든 서비스 사용자를 자격 증명으로 사용하여 주요 자격 증명 모음에 액세스합니다.  서비스 사용자에게는 클라이언트 ID 및 인증 키가 있습니다.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 자격 증명은 **VaultName**, **클라이언트 ID**및 **인증 키**를 사용하여 설정됩니다.  **인증 키**는 특정 기간(1년 또는 2년) 동안 유효합니다.   기간이 만료되기 전에 서비스 사용자에 대해 Azure AD에서 새 키를 생성해야 합니다.  그런 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 자격 증명을 변경해야 합니다.    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 현재 세션에서 자격 증명에 대한 캐시를 유지 관리하므로 자격 증명이 변경되면 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 을(를) 다시 시작해야 합니다.  
   
 ### <a name="key-backup-and-recovery"></a>키 백업 및 복구  
@@ -156,7 +156,7 @@ ms.locfileid: "75557938"
 키 백업은 동일한 지역 또는 국가(미국, 캐나다, 일본, 오스트레일리아, 인도, APAC, 유럽, 브라질, 중국, 미국 정부 또는 독일) 클라우드에 있는 경우 Azure 지역에서 복원할 수 있습니다.  
   
   
-##  <a name="AppendixB"></a> 2. 질문과 대답  
+##  <a name="b-frequently-asked-questions"></a><a name="AppendixB"></a> 2. 질문과 대답  
 ### <a name="on-azure-key-vault"></a>Azure 주요 자격 증명 모음에서  
   
 **Azure 주요 자격 증명 모음에서 키 작업은 어떻게 작동하나요?**  
@@ -165,7 +165,7 @@ ms.locfileid: "75557938"
  **키 URI는 무엇인가요?**  
  Azure 주요 자격 증명 모음의 모든 키에는 애플리케이션에서 키를 참조하는 데 사용할 수 있는 URI(Uniform Resource Identifier)가 있습니다. 현재 버전을 가져오려면 `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` 형식을 사용하고, 특정 버전을 가져오려면 `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` 형식을 사용합니다.  
   
-### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>구성에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+### <a name="on-configuring-ssnoversion"></a>구성에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
 **SQL Server 커넥터에서 액세스해야 하는 엔드포인트는 무엇인가요?** 커넥터는 허용 목록에 포함되어야 하는 두 개의 엔드포인트와 통신합니다. Https의 경우 이러한 다른 서비스에 대한 아웃바운드 통신에 필요한 유일한 포트는 443입니다.
 -  login.microsoftonline.com/*:443
@@ -203,7 +203,7 @@ ms.locfileid: "75557938"
 
 Active Directory에 대한 자세한 내용을 보려면 [Azure Active Directory와 관련된 Azure 구독](https://azure.microsoft.com/documentation/articles/active-directory-how-subscriptions-associated-directory/)을 참조하세요.
   
-##  <a name="AppendixC"></a> 3. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터에 대한 오류 코드 설명  
+##  <a name="c-error-code-explanations-for-ssnoversion-connector"></a><a name="AppendixC"></a> 3. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터에 대한 오류 코드 설명  
  **공급자 오류 코드**  
   
 오류 코드  |기호  |Description    

@@ -12,16 +12,16 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9314afbfa0cdcb917edd8942157c87e7db605b9d
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.openlocfilehash: 58c31d9b5e0e8858cc1953a2961107caea08d381
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544949"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80342523"
 ---
 # <a name="accelerated-database-recovery"></a>가속 데이터베이스 복구
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 ADR(가속 데이터베이스 복구)은 특히 장기 실행 트랜잭션이 있는 경우 SQL 데이터베이스 엔진 복구 프로세스를 다시 설계하여 데이터베이스 가용성을 향상시킵니다. ADR은 SQL Server 2019의 새로운 기능이며 Azure SQL Database의 단일 데이터베이스 및 풀링된 데이터베이스와 Azure SQL Data Warehouse의 데이터베이스에서도 사용할 수 있습니다(현재 공개 미리 보기에 있음). ADR의 주요 이점은 다음과 같습니다.
 

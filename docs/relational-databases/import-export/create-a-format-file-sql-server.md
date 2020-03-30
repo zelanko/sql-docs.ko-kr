@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fb0199e5ec3bc083d7a6e2087ec86c04c233436b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68035822"
 ---
 # <a name="create-a-format-file-sql-server"></a>서식 파일 만들기
@@ -151,7 +151,7 @@ bcp 명령을 사용하여 서식 파일을 만들 경우(즉, `bcp format` 사�
   
 ```  
   
- `bcp in -c -C65001 -f format_file` ..." 또는 "`BULK INSERT`/`OPENROWSET` ... `FORMATFILE='format_file' CODEPAGE=65001` ..."을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 데이터를 가져오려는 경우 데이터 정렬/코드 페이지에 대한 정보가 65001 옵션보다 우선됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ..." 또는 "`bcp in -c -C65001 -f format_file``BULK INSERT`/ ... `OPENROWSET` ..."을 사용하여 `FORMATFILE='format_file' CODEPAGE=65001`로 데이터를 가져오려는 경우 데이터 정렬/코드 페이지에 대한 정보가 65001 옵션보다 우선됩니다.  
 따라서 서식 파일을 생성하는 경우 생성된 서식 파일에서 데이터 정렬 정보를 수동으로 삭제한 후 데이터 가져오기를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](으)로 다시 가져와야 합니다.  
 다음은 데이터 정렬 정보가 없는 서식 파일의 예입니다.  
   

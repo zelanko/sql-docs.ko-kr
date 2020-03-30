@@ -15,10 +15,10 @@ ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9d25c3d7cf2c58af5b7daceeadb1daf3a9122a6d
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903907"
 ---
 # <a name="convert-data-type-with-data-conversion-transformation"></a>데이터 변환을 사용하여 데이터 형식 변환

@@ -28,10 +28,10 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68100457"
 ---
 # <a name="move-system-databases"></a>시스템 데이터베이스 이동
@@ -56,7 +56,7 @@ ms.locfileid: "68100457"
 >  파일을 이동하고 나면 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 서비스 계정에 새 파일 폴더 위치에서 파일에 액세스할 수 있는 권한이 있어야 합니다.
     
   
-##  <a name="Planned"></a> 계획된 재배치 및 예약된 디스크 유지 관리 절차  
+##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a> 계획된 재배치 및 예약된 디스크 유지 관리 절차  
  계획된 재배치 또는 예약된 유지 관리 작업의 일부로 시스템 데이터베이스 데이터나 로그 파일을 이동하려면 다음 단계를 따릅니다. 이 절차는 master 및 리소스 데이터베이스를 제외한 모든 시스템 데이터베이스에 적용됩니다.  
   
 1.  이동할 각 파일에 대해 다음 문을 실행합니다.  
@@ -93,7 +93,7 @@ ms.locfileid: "68100457"
   
 2.  테스트 메일을 보내 데이터베이스 메일이 작동하는지 확인합니다.  
   
-##  <a name="Failure"></a> 오류 복구 절차  
+##  <a name="failure-recovery-procedure"></a><a name="Failure"></a> 오류 복구 절차  
  하드웨어 오류로 인해 파일을 이동해야 하는 경우 다음 단계에 따라 파일을 새 위치에 재배치합니다. 이 절차는 master 및 리소스 데이터베이스를 제외한 모든 시스템 데이터베이스에 적용됩니다.  
   
 > [!IMPORTANT]  
@@ -141,7 +141,7 @@ ms.locfileid: "68100457"
     WHERE database_id = DB_ID(N'<database_name>');  
     ```  
   
-##  <a name="master"></a> master 데이터베이스 이동  
+##  <a name="moving-the-master-database"></a><a name="master"></a> master 데이터베이스 이동  
  master 데이터베이스를 이동하려면 다음 단계를 수행합니다.  
   
 1.  **시작** 메뉴에서 **모든 프로그램**, **Microsoft SQL Server**, **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
@@ -188,10 +188,10 @@ ms.locfileid: "68100457"
 10. 이 시점에서 SQL Server는 정상적으로 실행되어야 합니다. 그러나 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup`에서 레지스트리 항목을 조정하는 것이 좋습니다. 여기서 *instance_ID* 는 `MSSQL13.MSSQLSERVER`와 비슷합니다. 해당 Hive에서 `SQLDataRoot` 값을 새 경로로 변경합니다. 레지스트리 업데이트에 실패하면 패치 및 업그레이드도 실패할 수 있습니다.
 
   
-##  <a name="Resource"></a> 리소스 데이터베이스 이동  
+##  <a name="moving-the-resource-database"></a><a name="Resource"></a> 리소스 데이터베이스 이동  
  Resource 데이터베이스의 위치는 \<*드라이브*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\입니다. 데이터베이스는 이동할 수 없습니다.  
   
-##  <a name="Follow"></a> 후속 작업: 모든 시스템 데이터베이스를 이동한 후  
+##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> 후속 작업: 모든 시스템 데이터베이스를 이동한 후  
  모든 시스템 데이터베이스를 새 드라이브 또는 볼륨으로 이동했거나 다른 드라이브 문자를 사용하는 다른 서버에 이동한 경우 다음과 같이 업데이트하세요.  
   
 -   SQL Server 에이전트 로그 경로를 변경합니다. 이 경로를 업데이트하지 않으면 SQL Server 에이전트가 시작되지 않습니다.  
@@ -216,7 +216,7 @@ ms.locfileid: "68100457"
   
 4.  변경을 완료하려면 SQL Server 서비스를 중지한 후 시작합니다.  
   
-##  <a name="Examples"></a> 예  
+##  <a name="examples"></a><a name="Examples"></a> 예  
   
 ### <a name="a-moving-the-tempdb-database"></a>A. tempdb 데이터베이스 이동  
  다음 예에서는 계획된 재배치의 일부로 `tempdb` 데이터와 로그 파일을 새 위치로 이동합니다.  

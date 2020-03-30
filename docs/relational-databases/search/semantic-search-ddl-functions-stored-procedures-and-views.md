@@ -13,10 +13,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: fd69090db106894bd686ee74a801afeff2d79649
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056108"
 ---
 # <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>의미 체계 검색 DDL, 함수, 저장 프로시저 및 뷰
@@ -25,14 +25,14 @@ ms.locfileid: "74056108"
   
  전체 텍스트 검색을 지원하는 문과 데이터베이스 개체의 목록은 [전체 텍스트 검색 DDL, 함수, 저장 프로시저 및 뷰](../../relational-databases/search/full-text-search-ddl-functions-stored-procedures-and-views.md)를 참조하세요.  
   
-##  <a name="ddl"></a> DDL(데이터 정의 언어) 문:  
+##  <a name="data-definition-language-ddl-statements"></a><a name="ddl"></a> DDL(데이터 정의 언어) 문:  
   
 |Object|추가 정보|  
 |------------|----------------------|  
 |[ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)|[테이블 및 열에 대한 의미 체계 검색 사용](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
 |[CREATE FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)|[테이블 및 열에 대한 의미 체계 검색 사용](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
   
-##  <a name="func"></a> 시스템 함수  
+##  <a name="system-functions"></a><a name="func"></a> 시스템 함수  
   
 |Object|추가 정보|  
 |------------|----------------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "74056108"
 |[semanticsimilaritydetailstable&#40;Transact-SQL&#41;](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md)|[의미 체계 검색을 사용하여 유사하거나 관련된 문서 찾기](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)|  
 |[semanticsimilaritytable&#40;Transact-SQL&#41;](../../relational-databases/system-functions/semanticsimilaritytable-transact-sql.md)|[의미 체계 검색을 사용하여 유사하거나 관련된 문서 찾기](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)|  
   
-##  <a name="meta"></a> 시스템 메타데이터 함수  
+##  <a name="system-metadata-functions"></a><a name="meta"></a> 시스템 메타데이터 함수  
   
 |Object|추가 정보|  
 |------------|----------------------|  
@@ -51,14 +51,14 @@ ms.locfileid: "74056108"
 |[OBJECTPROPERTYEX&#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)|[테이블 및 열에 대한 의미 체계 검색 사용](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
 |[SERVERPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)|[의미 체계 검색 설치 및 구성](../../relational-databases/search/install-and-configure-semantic-search.md)|  
   
-##  <a name="sproc"></a> 시스템 저장 프로시저  
+##  <a name="system-stored-procedures"></a><a name="sproc"></a> 시스템 저장 프로시저  
   
 |Object|추가 정보|  
 |------------|----------------------|  
 |[sp_fulltext_semantic_register_language_statistics_db&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql.md)|[의미 체계 검색 설치 및 구성](../../relational-databases/search/install-and-configure-semantic-search.md)|  
 |[sp_fulltext_semantic_unregister_language_statistics_db&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql.md)|[의미 체계 검색 설치 및 구성](../../relational-databases/search/install-and-configure-semantic-search.md)|  
   
-##  <a name="cv"></a> 카탈로그 뷰  
+##  <a name="catalog-views"></a><a name="cv"></a> 카탈로그 뷰  
   
 |Object|추가 정보|  
 |------------|----------------------|  
@@ -66,7 +66,7 @@ ms.locfileid: "74056108"
 |[sys.fulltext_semantic_language_statistics_database&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)|[의미 체계 검색 설치 및 구성](../../relational-databases/search/install-and-configure-semantic-search.md)|  
 |[sys.fulltext_semantic_languages&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)|[의미 체계 검색 설치 및 구성](../../relational-databases/search/install-and-configure-semantic-search.md)|  
   
-##  <a name="dmv"></a> 동적 관리 뷰  
+##  <a name="dynamic-management-views"></a><a name="dmv"></a> 동적 관리 뷰  
   
 |Object|추가 정보|  
 |------------|----------------------|  

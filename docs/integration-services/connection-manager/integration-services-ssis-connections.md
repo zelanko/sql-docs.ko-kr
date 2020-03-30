@@ -24,10 +24,10 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7a09cef6ce1e90fe9fce7b7bd4b025598a387c1f
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79112275"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services(SSIS) 연결
@@ -144,13 +144,13 @@ ms.locfileid: "79112275"
   두 버전의 공급자는 동일한 ID를 갖습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임에서 사용 가능한 64비트 버전의 공급자를 사용하도록 할지 여부를 지정하려면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트의 Run64BitRuntime 속성을 설정합니다. Run64BitRuntime 속성이 **true**로 설정되면 런타임에 64비트 공급자를 찾아 사용합니다. Run64BitRuntime 속성이 **false**로 설정되면 런타임에 32비트 공급자를 찾아 사용합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에서 설정할 수 있는 속성에 대한 자세한 내용은 [SSIS(Integration Services) 및 Studio 환경](https://msdn.microsoft.com/library/ms140028.aspx)을 참조하세요.   
 
 ## <a name="add-a-connection-manager"></a>연결 관리자 추가
-###  <a name="wizard"></a> 패키지를 만들 때 연결 관리자 추가  
+###  <a name="add-a-connection-manager-when-you-create-a-package"></a><a name="wizard"></a> 패키지를 만들 때 연결 관리자 추가  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사를 사용합니다.  
   
      이 마법사는 연결 관리자를 만들고 구성하는 것 외에도 연결 관리자를 사용하는 원본과 대상을 만들고 구성하는 것을 도와줍니다. 자세한 내용은 [Create Packages in SQL Server Data Tools](../../integration-services/create-packages-in-sql-server-data-tools.md)을 참조하세요.  
   
-###  <a name="package"></a> 기존 패키지에 연결 관리자 추가  
+###  <a name="add-a-connection-manager-to-an-existing-package"></a><a name="package"></a> 기존 패키지에 연결 관리자 추가  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "79112275"
   
 6.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-###  <a name="project"></a> 프로젝트 수준에서 연결 관리자 추가  
+###  <a name="add-a-connection-manager-at-the-project-level"></a><a name="project"></a> 프로젝트 수준에서 연결 관리자 추가  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
@@ -243,14 +243,14 @@ ms.locfileid: "79112275"
  **추가**  
  각 연결 형식에 대해 편집기를 사용하여 연결 속성을 지정합니다.  
    
-##  <a name="parameter"></a> 연결 관리자 속성에 대한 매개 변수 만들기  
+##  <a name="create-a-parameter-for-a-connection-manager-property"></a><a name="parameter"></a> 연결 관리자 속성에 대한 매개 변수 만들기  
   
 1.  **연결 관리자** 영역에서 매개 변수를 만들려는 연결 관리자를 마우스 오른쪽 단추로 클릭한 후 **매개 변수화**를 클릭합니다.  
   
 2.  **매개 변수화** 대화 상자에서 매개 변수 설정을 구성합니다. 자세한 내용은 [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350)을 참조하세요.  
 
 ## <a name="delete-a-connection-manager"></a>연결 관리자 삭제 
-###  <a name="DeletePackageLevel"></a> 패키지에서 연결 관리자 삭제  
+###  <a name="delete-a-connection-manager-from-a-package"></a><a name="DeletePackageLevel"></a> 패키지에서 연결 관리자 삭제  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
@@ -270,7 +270,7 @@ ms.locfileid: "79112275"
   
 5.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-###  <a name="DeleteProjectLevel"></a> 공유 연결 관리자(프로젝트 수준 연결 관리자) 삭제  
+###  <a name="delete-a-shared-connection-manager-project-level-connection-manager"></a><a name="DeleteProjectLevel"></a> 공유 연결 관리자(프로젝트 수준 연결 관리자) 삭제  
   
 1.  프로젝트 수준 연결 관리자를 삭제하려면 **솔루션 탐색기** 창의 **연결 관리자** 노드 아래에 있는 연결 관리자를 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에 다음과 같은 경고 메시지가 표시됩니다.  
   

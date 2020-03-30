@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 2f99310a1eaa240db15b4db5f686a4d6cc49c186
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70874758"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux에서 SQL Server 전체 텍스트 검색 설치
@@ -30,7 +30,7 @@ ms.locfileid: "70874758"
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
 
-## <a name="RHEL">RHEL에 설치</a>
+## <a name=""></a><a name="RHEL">RHEL에 설치</a>
 
 Red Hat Enterprise Linux에서 **mssql-server-fts**를 설치하려면 다음 명령을 사용합니다. 
 
@@ -47,7 +47,7 @@ sudo yum update mssql-server-fts
 
 오프라인 설치가 필요한 경우 [릴리스 정보](sql-server-linux-release-notes.md)에서 전체 텍스트 검색 패키지 다운로드를 찾습니다. 그런 다음, [SQL Server 설치](sql-server-linux-setup.md#offline) 문서에 설명된 것과 동일한 오프라인 설치 단계를 사용합니다.
 
-## <a name="ubuntu">Ubuntu에 설치</a>
+## <a name=""></a><a name="ubuntu">Ubuntu에 설치</a>
 
 Ubuntu에서 **mssql-server-fts**를 설치하려면 다음 명령을 사용합니다. 
 
@@ -65,7 +65,7 @@ sudo apt-get install -y mssql-server-fts
 
 오프라인 설치가 필요한 경우 [릴리스 정보](sql-server-linux-release-notes.md)에서 전체 텍스트 검색 패키지 다운로드를 찾습니다. 그런 다음, [SQL Server 설치](sql-server-linux-setup.md#offline) 문서에 설명된 것과 동일한 오프라인 설치 단계를 사용합니다.
 
-## <a name="SLES">SLES에 설치</a>
+## <a name=""></a><a name="SLES">SLES에 설치</a>
 
 SUSE Linux Enterprise Server에서 **mssql-server-fts**를 설치하려면 다음 명령을 사용합니다. 
 
@@ -142,7 +142,7 @@ sudo zypper update mssql-server-fts
 | 우르두어 | 1056 |
 | 베트남어 | 1066 |
 
-## <a id="filters"></a> 필터
+## <a name="filters"></a><a id="filters"></a> 필터
 
 전체 텍스트 검색은 이진 파일에 저장된 텍스트에서도 작동합니다. 그러나 이 경우에는 파일을 처리할 필터가 설치되어 있어야 합니다. 필터에 대한 자세한 내용은 [검색 필터 구성 및 관리](../relational-databases/search/configure-and-manage-filters-for-search.md)를 참조하세요.
 

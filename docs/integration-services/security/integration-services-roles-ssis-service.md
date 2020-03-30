@@ -21,10 +21,10 @@ ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3290aa2297ca849ed175b7db109f6b200debc789
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295681"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services 역할(SSIS 서비스)
@@ -93,7 +93,7 @@ ms.locfileid: "71295681"
   
      각 패키지에 읽기 및 쓰기 역할을 할당할 수 있습니다.  
 
-## <a name="assign"></a> 패키지에 읽기 및 쓰기 역할 할당
+## <a name="assign-a-reader-and-writer-role-to-a-package"></a><a name="assign"></a> 패키지에 읽기 및 쓰기 역할 할당
   각 패키지에 읽기 및 쓰기 역할을 할당할 수 있습니다.  
   
 ### <a name="assign-a-reader-and-writer-role-to-a-package"></a>패키지에 읽기 및 쓰기 역할 할당  
@@ -108,7 +108,7 @@ ms.locfileid: "71295681"
   
 5.  **확인**을 클릭합니다.
 
-## <a name="create"></a> 사용자 정의 역할 만들기
+## <a name="create-a-user-defined-role"></a><a name="create"></a> 사용자 정의 역할 만들기
     
 ### <a name="to-create-a-user-defined-role"></a>사용자 정의 역할을 만들려면  
   
@@ -134,7 +134,7 @@ ms.locfileid: "71295681"
   
 11. **확인**을 클릭합니다.
 
-## <a name="roles_dialog"></a> 패키지 역할 대화 상자 UI 참조
+## <a name="package-roles-dialog-box-ui-reference"></a><a name="roles_dialog"></a> 패키지 역할 대화 상자 UI 참조
   **에서 사용할 수 있는** 패키지 역할 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]대화 상자를 통해 패키지에 대한 읽기 권한이 있는 데이터베이스 수준 역할 및 패키지에 대한 쓰기 권한이 있는 데이터베이스 수준 역할을 지정할 수 있습니다. 데이터베이스 수준 역할은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** 데이터베이스에 저장된 패키지에만 적용됩니다.  
   
  대화 상자에 나열된 역할은 **msdb** 시스템 데이터베이스의 현재 데이터베이스 역할입니다. 역할을 선택하지 않으면 기본 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 역할이 적용됩니다. 기본적으로 읽기 역할에는 **db_ssisadmin**, **db_ssisoperator**및 패키지를 만든 사용자가 포함됩니다. 이러한 역할 중 하나의 멤버이거나 패키지를 만든 사용자는 패키지를 열거, 확인, 내보내기 및 실행할 수 있습니다. 기본적으로 쓰기 역할에는 **db_ssisadmin** 과 패키지를 만든 사용자가 포함됩니다. 이 역할의 멤버인 사용자와 패키지를 만든 사용자는 패키지를 가져오거나 삭제 및 변경할 수 있습니다.  

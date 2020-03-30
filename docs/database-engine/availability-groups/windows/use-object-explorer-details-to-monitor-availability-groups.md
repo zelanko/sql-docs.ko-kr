@@ -16,10 +16,10 @@ ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9d0296e1427d4af206e101513bd54b0d67f7ff46
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68013635"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>개체 탐색기 정보를 사용하여 가용성 그룹 모니터링
@@ -30,10 +30,10 @@ ms.locfileid: "68013635"
 >  개체 탐색기 정보 창을 사용하는 방법은 [개체 탐색기 정보 창](../../../ssms/object/object-explorer-details-pane.md)을 참조하세요.  
   
   
-##  <a name="Prerequisites"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
  주 복제본 또는 보조 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스(서버 인스턴스)에 연결해야 합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **가용성 그룹, 가용성 복제본 및 가용성 데이터베이스를 모니터링하려면**  
   
 1.  보기 메뉴에서 **개체 탐색기 정보**를 클릭하거나 **F7** 키를 누릅니다.  
@@ -54,13 +54,13 @@ ms.locfileid: "68013635"
   
          여러 가용성 데이터베이스에 대해 작업을 수행하려면 원하는 가용성 데이터베이스를 선택한 후 마우스 오른쪽 단추로 클릭하여 사용 가능한 명령을 나열하는 상황에 맞는 메뉴를 엽니다.  
   
-##  <a name="AvGroupsDetails"></a> 가용성 그룹 정보  
+##  <a name="availability-groups-details"></a><a name="AvGroupsDetails"></a> 가용성 그룹 정보  
  **가용성 그룹** 정보 화면에 다음 열이 표시됩니다.  
   
  **이름**  
  선택한 가용성 그룹의 **가용성 복제본**, **가용성 데이터베이스**및 **가용성 그룹** 수신기 폴더를 나열합니다.  
   
-##  <a name="AvReplicaDetails"></a> 가용성 복제본 정보  
+##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> 가용성 복제본 정보  
  **가용성 복제본** 정보 화면에 다음 열이 표시됩니다.  
   
  **서버 인스턴스**  
@@ -101,7 +101,7 @@ ms.locfileid: "68013635"
 > [!NOTE]  
 >  가용성 복제본의 성능 카운터에 대한 자세한 내용은 [SQL Server, 가용성 복제본](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)을 참조하세요.  
   
-##  <a name="AvDbDetails"></a> 가용성 데이터베이스 정보  
+##  <a name="availability-database-details"></a><a name="AvDbDetails"></a> 가용성 데이터베이스 정보  
  **가용성 데이터베이스** 정보 화면에는 지정된 가용성 그룹의 다음 가용성 데이터베이스 속성이 표시됩니다.  
   
  **이름**  

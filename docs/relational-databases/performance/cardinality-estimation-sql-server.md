@@ -16,10 +16,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0f9e7ef2d1503088cba081b931e09f1fb3536b56
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67946992"
 ---
 # <a name="cardinality-estimation-sql-server"></a>카디널리티 추정(SQL Server)
@@ -60,7 +60,7 @@ ms.locfileid: "67946992"
 1998년 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0에서 호환성 수준 70으로 CE가 크게 업데이트되었습니다. 이 버전의 CE 모델은 다음과 같은 4개의 기본 가정 하에 설정됩니다.
 
 -  **독립성:** 상관 관계 정보가 지원되고 사용되지 않으면 다른 열의 데이터 배포는 서로 독립적이라고 간주됩니다.
--  **일관성:** 고유 값은 간격이 일정하고 빈도가 동일합니다. 보다 정확하게 [히스토그램](../../relational-databases/statistics/statistics.md#histogram) 단계 내에서 고유 값은 고르게 분산되고 각 값의 빈도가 동일합니다. 
+-  **균일성:** 고유 값은 간격이 일정하고 빈도가 동일합니다. 보다 정확하게 [히스토그램](../../relational-databases/statistics/statistics.md#histogram) 단계 내에서 고유 값은 고르게 분산되고 각 값의 빈도가 동일합니다. 
 -  **포함(단순):** 존재하는 데이터의 사용자 쿼리입니다. 예를 들어 두 테이블 간의 동등 조인의 경우 히스토그램을 조인하여 조인 선택도를 예측하기 전에 각 입력 히스토그램에서 조건자 선택도 <sup>1</sup>의 요소를 예측합니다. 
 -  **포함:** `Column = Constant`인 필터 조건자의 경우 상수가 연결된 열에 대해 실제로 존재한다고 가정됩니다. 해당하는 히스토그램 단계가 비어 있지 않은 경우 단계의 고유 값 중 하나는 조건자의 값과 일치한다고 가정합니다.
 
@@ -68,10 +68,10 @@ ms.locfileid: "67946992"
 
 이후 업데이트는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 시작되었으며 호환성 수준 120 이상을 의미합니다. 수준 120 이상의 CE 업데이트는 최신 데이터 웨어하우징 및 OLTP 워크로드에서 잘 작동하는 업데이트된 가정 및 알고리즘을 통합합니다. CE 70 가정에서 다음과 같은 모델 가정은 CE 120부터 변경되었습니다.
 
--  **독립성**은 **상관 관계임:** 다른 열 값의 조합이 반드시 독립적이지는 않습니다. 더 많은 실제 데이터 쿼리와 비슷할 수 있습니다.
--  **간단한 포함**은 **기본 포함임:** 사용자는 존재하지 않는 데이터를 쿼리할 수 있습니다. 예를 들어 두 테이블 간의 동등 조인의 경우 기본 테이블 히스토그램을 사용하여 조인 선택도를 예측한 다음, 조건자 선택도의 요소를 예측합니다.
+-  **독립성**은 **상관 관계**임: 다른 열 값의 조합이 반드시 독립적이지는 않습니다. 더 많은 실제 데이터 쿼리와 비슷할 수 있습니다.
+-  **간단한 포함**은 **자료 포함**임: 사용자는 존재하지 않는 데이터를 쿼리할 수 있습니다. 예를 들어 두 테이블 간의 동등 조인의 경우 기본 테이블 히스토그램을 사용하여 조인 선택도를 예측한 다음, 조건자 선택도의 요소를 예측합니다.
   
-**호환성 수준:** [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)에 대해 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 사용하여 데이터베이스가 특정 수준에 있는지 확인할 수 있습니다.  
+**호환성 수준:** [!INCLUDE[tsql](../../includes/tsql-md.md)]COMPATIBILITY_LEVEL[에 대해 다음 ](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 코드를 사용하여 데이터베이스가 특정 수준에 있는지 확인할 수 있습니다.  
 
 ```sql  
 SELECT ServerProperty('ProductVersion');  
@@ -256,7 +256,7 @@ CE 120 이상인 경우 쿼리에 대해 더 느린 쿼리 계획이 생성된�
   
 ### <a name="example-a-ce-understands-maximum-value-might-be-higher-than-when-statistics-were-last-gathered"></a>예제 A. CE는 통계가 마지막으로 수집되었을 때보다 최대값이 더 높을 수 있다는 것을 인식합니다.  
   
-최대 `OrderAddedDate`가 `2016-04-30`일 경우 `2016-04-30`에서 `OrderTable`에 대해 마지막으로 통계를 수집했다고 가정합니다. CE 120(이상 버전)에서는 *오름차순* 데이터를 가진 `OrderTable`의 열에 통계에 의해 기록된 최대값보다 더 큰 값이 있을 수 있다는 것을 이해합니다. 이러한 인식은 다음과 같은 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문에 대한 쿼리 계획을 향상시킵니다.  
+최대 `OrderTable`가 `2016-04-30`일 경우 `OrderAddedDate`에서 `2016-04-30`에 대해 마지막으로 통계를 수집했다고 가정합니다. CE 120(이상 버전)에서는 `OrderTable`오름차순*데이터를 가진*의 열에 통계에 의해 기록된 최대값보다 더 큰 값이 있을 수 있다는 것을 이해합니다. 이러한 인식은 다음과 같은 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문에 대한 쿼리 계획을 향상시킵니다.  
   
 ```sql  
 SELECT CustomerId, OrderAddedDate  

@@ -13,10 +13,10 @@ ms.assetid: d0294d43-4852-46dc-9afa-d0c19ea9aa03
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6e1f54ee39981785f17c4883ec5dd191ecf7ccbc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295152"
 ---
 # <a name="views-integration-services-catalog"></a>뷰 (Integration Services 카탈로그)
