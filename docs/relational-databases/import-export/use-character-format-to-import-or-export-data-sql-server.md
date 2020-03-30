@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 4d380954be720a6cb839b0c4259a408733f8e176
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056330"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>문자 형식을 사용하여 데이터 가져오기 또는 내보내기(SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "74056330"
 
 
   
-## 문자 형식 사용 시 고려 사항<a name="considerations"></a>
+## <a name="considerations-for-using-character-format"></a>문자 형식 사용 시 고려 사항<a name="considerations"></a>
 문자 형식을 사용할 때 다음 사항을 고려하십시오.  
   
 -   기본적으로 [bcp 유틸리티](../../tools/bcp-utility.md) 는 탭 문자로 문자 데이터 필드를 구분하며 줄 바꿈 문자로 레코드를 종료합니다.  다른 종결자를 지정하는 방법에 대한 자세한 내용은 [필드 및 행 종결자 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)을 참조하세요.  
@@ -58,7 +58,7 @@ ms.locfileid: "74056330"
   
 -   [bcp 유틸리티](../../tools/bcp-utility.md) 가 문자 형식 데이터 파일로서 [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 값을 내보낼 때는 소수점 이하 4자리만 표시하며 쉼표 구분자 등 숫자 구분 기호는 사용하지 않습니다. 예를 들어 1,234,567.123456이라는 값을 포함하는 [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 열을 데이터 파일로 대량 내보내면 1234567.1235라는 문자열이 됩니다.  
   
-## 문자 형식의 명령 옵션<a name="command_options"></a>  
+## <a name="command-options-for-character-format"></a>문자 형식의 명령 옵션<a name="command_options"></a>  
 [bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 또는 [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)를 사용하여 테이블로 유니코드 문자 형식 데이터를 가져올 수 있습니다. [bcp](../../tools/bcp-utility.md) 명령 또는 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 문의 경우 문에서 데이터 형식을 지정할 수 있습니다.  [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 문의 경우 서식 파일에서 데이터 형식을 지정해야 합니다.  
   
 문자 형식에 대해 지원되는 명령 옵션은 다음과 같습니다.  
@@ -74,10 +74,10 @@ ms.locfileid: "74056330"
 > [!NOTE]
 >  서식 파일에서 필드 단위로 서식을 지정할 수도 있습니다. 자세한 내용은 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)를 참조하세요.
 
-## 예제 테스트 조건<a name="etc"></a>  
+## <a name="example-test-conditions"></a>예제 테스트 조건<a name="etc"></a>  
 이 항목의 예제는 아래에 정의된 테이블 및 서식 파일을 기반으로 합니다.
 
-### **샘플 테이블**<a name="sample_table"></a>
+### <a name="sample-table"></a>**샘플 테이블**<a name="sample_table"></a>
 아래 스크립트는 테스트 데이터베이스인 `myChar` 라는 테이블을 만들고 테이블을 몇 가지 초기 값으로 채웁니다.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 
 ```sql
@@ -104,7 +104,7 @@ VALUES
 SELECT * FROM TestDatabase.dbo.myChar;
 ```
 
-### **샘플 비 XML 서식 파일**<a name="nonxml_format_file"></a>
+### <a name="sample-non-xml-format-file"></a>**샘플 비 XML 서식 파일**<a name="nonxml_format_file"></a>
 SQL Server는 두 유형의 서식 파일, 즉 비 XML 서식 파일과 XML 서식 파일을 지원합니다.  비 XML 서식 파일은 이전 버전의 SQL Server에서 원래 지원했던 서식 파일입니다.  자세한 내용은 [비 XML 서식 파일(SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 을 검토하세요.  다음 명령은 [bcp 유틸리티](../../tools/bcp-utility.md) 를 사용하여 `myChar.fmt`의 스키마를 기반으로 비 xml 서식 파일 `myChar`를 생성합니다.  [bcp](../../tools/bcp-utility.md) 명령을 사용하여 서식 파일을 만들려면 데이터 파일 경로 대신 **format** 인수를 지정하고 **NUL** 을 사용합니다.  format 옵션에는 **-f** 옵션도 필요합니다.  또한 이 예제에서 한정자 **c** 는 문자 데이터를 지정하는 데 사용되고 **T** 는 통합된 보안을 사용하여 신뢰할 수 있는 연결을 지정하는 데 사용됩니다.  명령 프롬프트에서 다음 명령을 입력합니다.
 
 ```cmd
@@ -120,10 +120,10 @@ Notepad D:\BCP\myChar.fmt
 > `SQLState = S1000, NativeError = 0`  
 > `Error = [Microsoft][ODBC Driver 13 for SQL Server]I/O error while reading BCP format file`
 
-## 예<a name="examples"></a>
+## <a name="examples"></a>예<a name="examples"></a>
 아래 예제에서는 위에서 만든 데이터베이스와 서식 파일을 사용합니다.
 
-### **bcp 및 문자 형식을 사용하여 데이터 내보내기**<a name="bcp_char_export"></a>
+### <a name="using-bcp-and-character-format-to-export-data"></a>**bcp 및 문자 형식을 사용하여 데이터 내보내기**<a name="bcp_char_export"></a>
 **-c** 스위치 및 **OUT** 명령.  참고: 이 예제에서 만든 데이터 파일은 이후 나오는 모든 예제에서 사용됩니다.  명령 프롬프트에서 다음 명령을 입력합니다.
 
 ```cmd
@@ -133,7 +133,7 @@ REM Review results
 NOTEPAD D:\BCP\myChar.bcp
 ```
 
-### **bcp 및 문자 형식을 사용하여 서식 파일 없이 데이터 가져오기**<a name="bcp_char_import"></a>
+### <a name="using-bcp-and-character-format-to-import-data-without-a-format-file"></a>**bcp 및 문자 형식을 사용하여 서식 파일 없이 데이터 가져오기**<a name="bcp_char_import"></a>
 **-c** 스위치 및 **IN** 명령.  명령 프롬프트에서 다음 명령을 입력합니다.
 
 ```cmd
@@ -147,7 +147,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 ```
 
-### **bcp 및 문자 형식을 사용하여 XML 이외의 서식 파일과 함께 데이터 가져오기**<a name="bcp_char_import_fmt"></a>
+### <a name="using-bcp-and-character-format-to-import-data-with-a-non-xml-format-file"></a>**bcp 및 문자 형식을 사용하여 XML 이외의 서식 파일과 함께 데이터 가져오기**<a name="bcp_char_import_fmt"></a>
 **-c** 및 **-f** 스위치와 **IN** 명령.  명령 프롬프트에서 다음 명령을 입력합니다.
 
 ```cmd
@@ -161,7 +161,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 ```
 
-### **서식 파일 없이 BULK INSERT 및 문자 형식 사용**<a name="bulk_char"></a>
+### <a name="using-bulk-insert-and-character-format-without-a-format-file"></a>**서식 파일 없이 BULK INSERT 및 문자 형식 사용**<a name="bulk_char"></a>
 **DATAFILETYPE** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 
 ```sql
@@ -176,7 +176,7 @@ BULK INSERT TestDatabase.dbo.myChar
 SELECT * FROM TestDatabase.dbo.myChar;
 ```
 
-### **XML 이외의 서식 파일과 함께 BULK INSERT 및 문자 형식 사용하기**<a name="bulk_char_fmt"></a>
+### <a name="using-bulk-insert-and-character-format-with-a-non-xml-format-file"></a>**XML 이외의 서식 파일과 함께 BULK INSERT 및 문자 형식 사용하기**<a name="bulk_char_fmt"></a>
 **FORMATFILE** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 
 ```sql
@@ -191,7 +191,7 @@ BULK INSERT TestDatabase.dbo.myChar
 SELECT * FROM TestDatabase.dbo.myChar;
 ```
 
-### **XML 이외의 서식 파일과 함께 OPENROWSET 및 문자 형식 사용하기**<a name="openrowset_char_fmt"></a>
+### <a name="using-openrowset-and-character-format-with-a-non-xml-format-file"></a>**XML 이외의 서식 파일과 함께 OPENROWSET 및 문자 형식 사용하기**<a name="openrowset_char_fmt"></a>
 **FORMATFILE** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 
 ```sql
@@ -207,7 +207,7 @@ INSERT INTO TestDatabase.dbo.myChar
 SELECT * FROM TestDatabase.dbo.myChar;
 ```
   
-## 관련 작업<a name="RelatedTasks"></a>  
+## <a name="related-tasks"></a>관련 작업<a name="RelatedTasks"></a>  
 대량 가져오기 또는 대량 내보내기를 위한 데이터 형식을 사용하려면 
   
 -   [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  

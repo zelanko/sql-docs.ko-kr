@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7de5bc19cd49959663bf4ead3f8ebff62b3b982b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982857"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION(Transact-SQL)
@@ -222,7 +222,7 @@ RETURNS return_data_type
 >  저장 프로시저 또는 사용자 정의 함수에 매개 변수를 전달할 때 또는 일괄 처리 문에서 변수를 선언하고 설정할 때 ANSI_WARNINGS는 인식되지 않습니다. 예를 들어 변수가 **char(3)** 로 정의된 경우 3자보다 큰 값으로 설정하면 해당 데이터가 정의된 크기로 잘리고 INSERT 또는 UPDATE 문은 성공합니다.  
   
  [ *type_schema_name.* ] *parameter_data_type*  
- 매개 변수 데이터 형식이며 매개 변수 데이터 형식이 속한 스키마가 될 수도 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수의 경우 **timestamp** 데이터 형식을 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. CLR 함수의 경우 **text**, **ntext**, **image** 및 **timestamp** 데이터 형식을 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CLR 함수에는 비스칼라 형식 **cursor** 및 **table**을 매개 변수 데이터 형식으로 지정할 수 없습니다.  
+ 매개 변수 데이터 형식이며 매개 변수 데이터 형식이 속한 스키마가 될 수도 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수의 경우 **timestamp** 데이터 형식을 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. CLR 함수의 경우 **text**, **ntext**, **image** 및 **timestamp** 데이터 형식을 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. **또는 CLR 함수에는 비스칼라 형식**cursor**및**table[!INCLUDE[tsql](../../includes/tsql-md.md)]을 매개 변수 데이터 형식으로 지정할 수 없습니다.  
   
  *type_schema_name*을 지정하지 않으면 [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)]에서는 다음 순서로 *parameter_data_type*을 참조합니다.  
   
@@ -241,7 +241,7 @@ RETURNS return_data_type
  함수의 매개 변수에 기본값이 지정되면 기본값을 가져오는 함수를 호출할 때 DEFAULT 키워드를 지정해야 합니다. 이 동작은 매개 변수를 생략할 경우 자동으로 기본값이 사용되는 저장 프로시저에서 기본값이 있는 매개 변수를 사용하는 것과는 다릅니다.  
   
  *return_data_type*  
- 스칼라 사용자 정의 함수의 반환 값입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수의 경우 **timestamp** 데이터 형식을 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. CLR 함수의 경우 **text**, **ntext**, **image** 및 **timestamp** 데이터 형식을 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CLR 함수에는 비스칼라 형식 **cursor** 및 **table**을 반환 데이터 형식으로 지정할 수 없습니다.  
+ 스칼라 사용자 정의 함수의 반환 값입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수의 경우 **timestamp** 데이터 형식을 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. CLR 함수의 경우 **text**, **ntext**, **image** 및 **timestamp** 데이터 형식을 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. **또는 CLR 함수에는 비스칼라 형식**cursor**및**table[!INCLUDE[tsql](../../includes/tsql-md.md)]을 반환 데이터 형식으로 지정할 수 없습니다.  
   
  *function_body*  
  테이블을 수정하는 경우처럼 함께 사용해도 부작용이 나타나지 않으며 함수의 값을 정의하는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 지정합니다. *function_body*는 스칼라 함수와 다중 문 테이블 반환 함수에서만 사용됩니다.  
@@ -269,7 +269,7 @@ RETURNS return_data_type
  함수와 바인딩할 어셈블리의 메서드를 지정합니다. *assembly_name*은 표시 유형이 지정되어 있는 현재 데이터베이스에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기존 어셈블리와 일치해야 합니다. *class_name*은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 하며 어셈블리에서 클래스로 존재해야 합니다. 클래스가 마침표( **.** )를 사용하여 네임스페이스 부분을 구분하는 네임스페이스로 한정된 이름을 가질 경우 클래스 이름은 대괄호( **[]** ) 또는 큰따옴표( **""** )를 사용하여 구분되어야 합니다. *method_name*은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 하며 지정된 클래스에서 정적 메서드로 존재해야 합니다.  
   
 > [!NOTE]  
->  기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CLR 코드를 실행할 수 없습니다. 공용 언어 런타임 모듈을 참조하는 데이터베이스 개체를 생성, 수정 및 삭제할 수 있지만 [clr enabled 옵션](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)을 설정할 때까지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이러한 참조를 실행할 수 없습니다. 이 옵션을 설정하려면 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용합니다.  
+>  기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CLR 코드를 실행할 수 없습니다. 공용 언어 런타임 모듈을 참조하는 데이터베이스 개체를 생성, 수정 및 삭제할 수 있지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]clr enabled 옵션[을 설정할 때까지 ](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)에서 이러한 참조를 실행할 수 없습니다. 이 옵션을 설정하려면 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용합니다.  
   
 > [!NOTE]  
 >  포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
@@ -336,7 +336,7 @@ RETURNS return_data_type
  테이블에 있는 열 이름입니다. 열 이름은 식별자에 대한 규칙을 따라야 하며 테이블에서 고유해야 합니다. *column_name*은 1~128자로 구성될 수 있습니다.  
   
  *data_type*  
- 열 데이터 형식을 지정합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수의 경우 **timestamp**를 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. CLR 함수의 경우 **text**, **ntext**, **image**, **char**, **varchar**, **varchar(max)** 및 **timestamp**를 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CLR 함수에는 비스칼라 형식의 **cursor**를 열 데이터 형식으로 지정할 수 없습니다.  
+ 열 데이터 형식을 지정합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수의 경우 **timestamp**를 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. CLR 함수의 경우 **text**, **ntext**, **image**, **char**, **varchar**, **varchar(max)** 및 **timestamp**를 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. **또는 CLR 함수에는 비스칼라 형식의**cursor[!INCLUDE[tsql](../../includes/tsql-md.md)]를 열 데이터 형식으로 지정할 수 없습니다.  
   
  DEFAULT *constant_expression*  
  삽입 중에 값이 명시적으로 지정되지 않은 경우에 열에 대해 제공되는 값을 지정합니다. *constant_expression*은 상수, NULL 또는 시스템 함수 값입니다. DEFAULT 정의는 IDENTITY 속성을 갖는 열을 제외한 모든 열에 적용할 수 있습니다. CLR 테이블 반환 함수에는 DEFAULT를 지정할 수 없습니다.  

@@ -13,10 +13,10 @@ ms.assetid: b08df7be-d8be-4184-a661-38ec0ac85cd1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c029883591c49c1be52d23a025ff522b4095a6f5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68069149"
 ---
 # <a name="use-database-mail-instead-of-sql-mail"></a>SQL 메일 대신 데이터베이스 메일 사용

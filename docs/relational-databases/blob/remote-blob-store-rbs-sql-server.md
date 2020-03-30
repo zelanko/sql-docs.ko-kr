@@ -14,10 +14,10 @@ ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fc6bb3164b54f0799073e8b959f68b0dd625c47e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258179"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>RBS(Remote Blob Store)(SQL Server)
@@ -82,7 +82,7 @@ ms.locfileid: "75258179"
  RBS를 사용하는 경우, 자격 증명 저장소 대칭 키를 정기적으로 회전해야 합니다. 이것은 조직의 보안 정책을 충족하기 위한 일반적인 보안 모범 사례입니다.  RBS 자격 증명 저장소 대칭 키를 회전하는 한 가지 방법은 RBS 데이터베이스에 [아래 스크립트](#Key_rotation) 를 사용하는 것입니다.  이 스크립트를 사용하여 알고리즘 또는 키 길이와 같은 보다 강력한 암호화 강도 속성으로 마이그레이션할 수 있습니다. 키를 회전하기 전에 데이터베이스를 백업합니다.  스크립트의 결론에 몇 가지 확인 단계가 있습니다.  
 보안 정책에 의해 제공된 것과 다른 키 속성(예: 알고리즘 또는 키 길이)이 요구되면 스크립트가 템플릿으로 사용될 수 있습니다. 두 곳(1) 임시 키 생성 2) 영구적인 키 생성)에서 키 속성을 수정합니다.  
   
-##  <a name="rbsresources"></a> RBS 리소스  
+##  <a name="rbs-resources"></a><a name="rbsresources"></a> RBS 리소스  
   
  **RBS 예제**  
  [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) 에서 제공하는 RBS 샘플은 RBS 애플리케이션을 개발하는 방법과 사용자 지정 RBS 공급자를 설치하고 사용자 지정하는 방법을 보여 줍니다.  
@@ -90,7 +90,7 @@ ms.locfileid: "75258179"
  **RBS 블로그**  
  [RBS 블로그](https://go.microsoft.com/fwlink/?LinkId=210315) 는 RBS를 이해하고 배포하고 유지하는 데 도움이 되는 추가 정보를 제공합니다.  
   
-##  <a name="Key_rotation"></a> 키 회전 스크립트  
+##  <a name="key-rotation-script"></a><a name="Key_rotation"></a> 키 회전 스크립트  
  이 예제는 현재 사용된 RBS 자격 증명 저장소 대칭 키를 선택한 키로 바꾸기 위해 `sp_rotate_rbs_symmetric_credential_key` 라는 이름의  
 저장 프로시저를 만듭니다.  정기적인 키 순환이 요구되는 보안 정책이 있거나   
 특정 알고리즘 요구 사항이 있는 경우에 이 작업을 수행할 수 있습니다.  

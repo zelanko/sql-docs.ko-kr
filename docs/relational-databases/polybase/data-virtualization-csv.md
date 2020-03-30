@@ -11,10 +11,10 @@ ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
 ms.openlocfilehash: b1bb5f2e807731e1020729e045c017b6f1524ae1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75256175"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>CSV 파일과 함께 외부 테이블 마법사 사용

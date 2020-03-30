@@ -13,10 +13,10 @@ ms.assetid: 42965c09-1782-4cdb-9ce1-216af4c23e0a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eb82df6839e15c3b710d40c52899d661fe9e55ca
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297087"
 ---
 # <a name="creating-a-custom-task"></a>사용자 지정 태스크 만들기

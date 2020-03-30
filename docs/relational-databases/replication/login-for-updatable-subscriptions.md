@@ -13,10 +13,10 @@ ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3bdb3585647e64ad1a175900263628b607eb0041
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71710364"
 ---
 # <a name="login-for-updatable-subscriptions"></a>업데이트할 수 있는 구독에 대한 로그인
@@ -35,7 +35,7 @@ ms.locfileid: "71710364"
   
 -   복제가 만드는 연결된 서버 - 구독자에서 변경 내용을 적용하는 사용자의 자격 증명으로 연결합니다.  
   
- 처음 두 가지 옵션은 이 마법사에서 지정할 수 있습니다. 마지막 옵션은 [sp_link_publication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md)을 사용해서만 지정할 수 있습니다. `@security_mode` 매개 변수에 **1** 값을 지정합니다.  
+ 처음 두 가지 옵션은 이 마법사에서 지정할 수 있습니다. 마지막 옵션은 [sp_link_publication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md)을 사용해서만 지정할 수 있습니다. **매개 변수에**1`@security_mode` 값을 지정합니다.  
   
 ## <a name="options"></a>옵션  
  **다음 SQL Server 인증을 사용하여 연결되는 연결된 서버 만들기**  

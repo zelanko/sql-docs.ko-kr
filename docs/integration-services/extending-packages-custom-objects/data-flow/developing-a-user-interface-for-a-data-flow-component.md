@@ -23,10 +23,10 @@ ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 21bc28f99768c7b31d6ba5b18170140a23400853
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71287773"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>데이터 흐름 구성 요소의 사용자 인터페이스 개발
@@ -91,7 +91,7 @@ End Class
  <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> 메서드의 반환 값은 구성 요소의 변경 내용이 지속되는지 삭제되는지를 결정합니다. 이 메서드가 **false**를 반환하면 모든 변경 내용이 삭제되고, **true**를 반환하면 구성 요소의 변경 내용이 유지되고 패키지가 저장되어야 하는 것으로 표시됩니다.  
   
 ### <a name="using-the-services-of-the-ssis-designer"></a>SSIS 디자이너의 서비스 사용  
- <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 메서드의 **IServiceProvider** 매개 변수는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너의 다음 서비스에 액세스할 수 있도록 합니다.  
+ **메서드의**IServiceProvider<xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 매개 변수는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너의 다음 서비스에 액세스할 수 있도록 합니다.  
   
 |서비스|Description|  
 |-------------|-----------------|  

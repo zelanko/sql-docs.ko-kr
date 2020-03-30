@@ -10,10 +10,10 @@ author: chugugrace
 ms.author: chugu
 ms.reviewer: ''
 ms.openlocfilehash: ac10ace82a38110d2038f95c3514aa8271d5b88c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71283742"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>1-6단원: 조회 변환 추가 및 구성

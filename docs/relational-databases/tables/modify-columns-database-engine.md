@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 822b98221139c9d67dde57cb78f3d969072f96bb
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288227"
 ---
 # <a name="modify-columns-database-engine"></a>열 수정(데이터베이스 엔진)
@@ -42,14 +42,14 @@ ms.locfileid: "79288227"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-modify-the-data-type-of-a-column"></a>열의 데이터 형식을 수정하려면  
   
@@ -59,7 +59,7 @@ ms.locfileid: "79288227"
   
 3.  **열 속성** 탭에서 **데이터 형식** 속성의 표 형태 셀을 클릭하고 드롭다운 목록에서 새 데이터 형식을 선택합니다.  
   
-4.  **파일** 메뉴에서 _테이블 이름_**저장**을 클릭합니다.  
+4.  **파일** 메뉴에서 **테이블 이름**_저장_을 클릭합니다.  
   
 > [!NOTE]  
 >  열의 데이터 형식을 수정하면 선택한 데이터 형식에 대해 이미 다른 길이를 지정했더라도 테이블 디자이너에서 해당 형식의 기본 길이가 적용됩니다. 데이터 형식을 지정한 후에 항상 데이터 형식 길이를 원하는 값으로 설정해야 합니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "79288227"
 > [!WARNING]  
 >  다른 테이블과 연관된 열의 데이터 형식을 수정하려고 시도하면 해당 변경 내용을 다른 테이블에도 적용할지 묻는 확인 메시지가 테이블 디자이너에 표시됩니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-modify-the-data-type-of-a-column"></a>열의 데이터 형식을 수정하려면  
   

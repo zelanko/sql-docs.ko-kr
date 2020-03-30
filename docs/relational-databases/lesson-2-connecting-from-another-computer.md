@@ -11,10 +11,10 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8389d11868108725a676e9196861c7302241a407
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75546555"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>2단원: 다른 컴퓨터에서 연결
@@ -33,7 +33,7 @@ ms.locfileid: "75546555"
   
 -   [SQL Server Browser 서비스를 사용하여 연결](#browser)  
   
-## <a name="protocols"></a>프로토콜 설정  
+## <a name="enabling-protocols"></a><a name="protocols"></a>프로토콜 설정  
 보안을 강화하기 위해 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], Developer 및 Evaluation에는 제한된 네트워크 연결만 설치됩니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 에는 동일한 컴퓨터에서 실행하는 도구를 사용하여 연결할 수 있지만 다른 컴퓨터에서는 연결할 수 없습니다. [!INCLUDE[ssDE](../includes/ssde-md.md)]과 동일한 컴퓨터에서 개발 작업을 수행하려는 경우 추가 프로토콜을 사용할 필요가 없습니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 는 공유 메모리 프로토콜을 사용하여 [!INCLUDE[ssDE](../includes/ssde-md.md)] 에 연결합니다. 연결합니다.  
   
 다른 컴퓨터에서 [!INCLUDE[ssDE](../includes/ssde-md.md)] 에 연결하려는 경우에는 TCP/IP와 같은 프로토콜을 설정해야 합니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "75546555"
     > [!NOTE]  
     > 네트워크 프로토콜을 변경한 후에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스를 다시 시작해야 합니다. 이 부분은 다음 태스크에서 완료됩니다.  
 
-## <a name="port"></a>고정 포트 구성  
+## <a name="configuring-a-fixed-port"></a><a name="port"></a>고정 포트 구성  
 보안을 강화하기 위해 Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]및 Windows 7에서는 모두 Windows 방화벽을 설정합니다. 다른 컴퓨터에서 이 인스턴스에 연결하려면 방화벽에서 통신 포트를 열어야 합니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 기본 인스턴스는 포트 1433에서 수신하므로 고정 포트를 구성하지 않아도 됩니다. 그러나 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 을 포함한 명명된 인스턴스는 동적 포트에서 수신합니다. 방화벽에서 포트를 열려면 먼저 고정 포트 또는 정적 포트로 지정된 특정 포트에서 수신하도록 [!INCLUDE[ssDE](../includes/ssde-md.md)] 을 구성해야 합니다. 이렇게 하지 않으면 [!INCLUDE[ssDE](../includes/ssde-md.md)] 이 시작할 때마다 다른 포트에서 수신할 수 있습니다. 방화벽 및 기본 Windows 방화벽 설정에 대한 자세한 내용과 데이터베이스 엔진, Analysis Services, Reporting Services 및 Integration Services에 영향을 주는 TCP 포트에 대한 설명은 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)을 참조하세요.  
   
 > [!NOTE]  
@@ -86,7 +86,7 @@ ms.locfileid: "75546555"
   
 7.  오른쪽 창에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭합니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 이 다시 시작되면 포트 **49172**에서 수신합니다.  
   
-## <a name="firewall"></a>방화벽에서 포트 열기  
+## <a name="opening-ports-in-the-firewall"></a><a name="firewall"></a>방화벽에서 포트 열기  
 방화벽 시스템은 컴퓨터 리소스에 대한 무단 액세스를 방지합니다. 방화벽이 설정된 경우 다른 컴퓨터에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 연결하려면 방화벽에서 포트를 열어야 합니다.  
   
 > [!IMPORTANT]  
@@ -112,7 +112,7 @@ ms.locfileid: "75546555"
   
 [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]에 대한 지침을 포함하여 방화벽 구성 방법에 대한 자세한 내용은 [데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성](../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)을 참조하세요. 기본 Windows 방화벽 설정 방법과 데이터베이스 엔진, Analysis Services, Reporting Services 및 Integration Services에 영향을 주는 TCP 포트에 대한 설명은 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)을 참조하세요.  
   
-## <a name="otherComp"></a>다른 컴퓨터에서 데이터베이스 엔진에 연결  
+## <a name="connecting-to-the-database-engine-from-another-computer"></a><a name="otherComp"></a>다른 컴퓨터에서 데이터베이스 엔진에 연결  
 [!INCLUDE[ssDE](../includes/ssde-md.md)] 에서 고정된 포트를 사용하여 수신하도록 구성하고 방화벽에서 해당 포트를 열었으므로 이제 다른 컴퓨터에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 연결할 수 있습니다.  
   
 서버 컴퓨터에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser 서비스를 실행 중인 상태에서 방화벽이 UDP 포트 1434를 열면 컴퓨터 이름과 인스턴스 이름을 사용하여 연결을 설정할 수 있습니다. 보안을 강화하기 위해 이 예에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser 서비스를 사용하지 않습니다.  
@@ -130,7 +130,7 @@ ms.locfileid: "75546555"
   
 4.  **인증** 상자에서 **Windows 인증**을 확인한 다음 **연결**을 클릭합니다.  
   
-## <a name="browser"></a>SQL Server Browser 서비스를 사용하여 연결  
+## <a name="connecting-using-the-sql-server-browser-service"></a><a name="browser"></a>SQL Server Browser 서비스를 사용하여 연결  
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser 서비스에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 리소스에 대해 들어오는 요청을 수신하고 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 대한 정보를 제공합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser 서비스가 실행 중인 경우 사용자는 컴퓨터 이름과 포트 번호 대신 컴퓨터 이름과 인스턴스 이름을 제공하여 명명된 인스턴스에 연결할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser에서는 인증되지 않은 UDP 요청도 수신하므로 설치 중에 설정되지 않는 경우도 있습니다. SQL Server Browser 서비스 및 이 서비스가 설정되는 경우에 대한 설명은 [SQL Server Browser 서비스&#40;데이터베이스 엔진 및 SSAS&#41;](../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)를 참조하세요.  
   
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser를 사용하려면 이전과 동일한 단계를 따르고 방화벽에서 UDP 포트 1434를 열어야 합니다.  

@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.reviewer: v-daveng
 ms.author: genemi
 ms.openlocfilehash: 145ca5c64223e4d16b327e4caf23458a479b87a9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74491917"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Microsoft SQL Server로의 클라이언트 프로그래밍 홈페이지

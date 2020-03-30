@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a3d52368ac0eaeba118d0ba6e7abc88ef5e69db9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68063141"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 테이블 및 행 크기
@@ -42,7 +42,7 @@ ms.locfileid: "68063141"
 ![메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "메모리 최적화 테이블")  
 인덱스와 행으로 구성된 메모리 액세스에 최적화된 테이블  
 
-##  <a name="bkmk_TableSize"></a> 테이블 크기 계산
+##  <a name="computing-table-size"></a><a name="bkmk_TableSize"></a> 테이블 크기 계산
 테이블의 메모리 내 크기(바이트)는 다음과 같이 계산됩니다.  
   
 ```  
@@ -63,7 +63,7 @@ ms.locfileid: "68063141"
 [row size] = [row header size] + [actual row body size]  
 [row header size] = 24 + 8 * [number of indexes]  
 ```  
-##  <a name="bkmk_RowBodySize"></a> 행 본문 크기 계산
+##  <a name="computing-row-body-size"></a><a name="bkmk_RowBodySize"></a> 행 본문 크기 계산
 
 **행 구조** 메모리 최적화 테이블의 행에는 다음과 같은 구성 요소가 있습니다.  
   
@@ -126,17 +126,17 @@ ms.locfileid: "68063141"
   
 |섹션|크기|주석|  
 |-------------|----------|--------------|  
-|단순 형식 열|SUM([단순 형식의 크기]) 개별 형식의 바이트 크기는 다음과 같습니다.<br /><br /> **Bit**: 1<br /><br /> **Tinyint**: 1<br /><br /> **Smallint**: 2<br /><br /> **Int**: 4<br /><br /> **Real**: 4<br /><br /> **Smalldatetime**: 4<br /><br /> **Smallmoney**: 4<br /><br /> **Bigint**: 8<br /><br /> **Datetime**: 8<br /><br /> **Datetime2**: 8<br /><br /> **Float**: 8<br /><br /> **Money**: 8<br /><br /> **Numeric**(전체 자릿수 <=18): 8<br /><br /> **Time**: 8<br /><br /> **Numeric**(전체 자릿수 >18): 16<br /><br /> **Uniqueidentifier**: 16||  
+|단순 형식 열|SUM([단순 형식의 크기]) 개별 형식의 바이트 크기는 다음과 같습니다.<br /><br /> **Bit**: 1<br /><br /> **Tinyint**: 1<br /><br /> **Smallint**: 2<br /><br /> **Int**: 4<br /><br /> **Real**: 4<br /><br /> **Smalldatetime**: 4<br /><br /> **Smallmoney**: 4<br /><br /> **Bigint**: 8<br /><br /> **Datetime**: 8<br /><br /> **Datetime2**: 8<br /><br /> **Float**: 8<br /><br /> **Money**: 8<br /><br /> **숫자**(전체 자릿수<=18): 8<br /><br /> **Time**: 8<br /><br /> **숫자**(전체 자릿수>18): 16<br /><br /> **Uniqueidentifier**: 16||  
 |단순 열 패딩|가능한 값은 다음과 같습니다.<br /><br /> 전체 형식 열이 있고 단순 열의 총 데이터 크기가 홀수인 경우 1입니다.<br /><br /> 그렇지 않으면 0입니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
 |전체 형식 열의 오프셋 배열|가능한 값은 다음과 같습니다.<br /><br /> 전체 형식 열이 없으면 0입니다.<br /><br /> 그렇지 않으면 2 + 2 * [number of deep type columns]입니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
 |NULL 배열|[number of nullable columns]/8, 전체 바이트로 반올림|null 허용 열당 1비트가 배열에 포함됩니다. 전체 바이트로 반올림됩니다.|  
 |NULL 배열 패딩|가능한 값은 다음과 같습니다.<br /><br /> 전체 형식 열이 있고 NULL 배열의 크기가 홀수 바이트인 경우 1입니다.<br /><br /> 그렇지 않으면 0입니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
-|안쪽 여백|전체 형식 열이 없으면 0<br /><br /> 전체 형식 열이 있는 경우, 단순 열에 필요한 최대 맞춤에 따라 0-7바이트의 패딩이 추가됩니다. 각 단순 열에는 위에 설명한 대로 해당 크기와 동일한 맞춤이 필요하지만, GUID 열은 16바이트가 아니라 1바이트의 맞춤이 필요하고, 숫자 열에는 항상 16이 아닌 8바이트의 맞춤이 필요합니다. 모든 단순 열 사이에 가장 높은 맞춤 요구 사항이 사용되며, 지금까지의 총 크기(전체 형식 열 없음)가 필요한 맞춤의 배수가 되도록 0-7바이트의 패딩이 추가됩니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
+|안쪽 여백|전체 형식 열이 없으면 0입니다.<br /><br /> 전체 형식 열이 있는 경우, 단순 열에 필요한 최대 맞춤에 따라 0-7바이트의 패딩이 추가됩니다. 각 단순 열에는 위에 설명한 대로 해당 크기와 동일한 맞춤이 필요하지만, GUID 열은 16바이트가 아니라 1바이트의 맞춤이 필요하고, 숫자 열에는 항상 16이 아닌 8바이트의 맞춤이 필요합니다. 모든 단순 열 사이에 가장 높은 맞춤 요구 사항이 사용되며, 지금까지의 총 크기(전체 형식 열 없음)가 필요한 맞춤의 배수가 되도록 0-7바이트의 패딩이 추가됩니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
 |고정 길이 전체 형식 열|SUM(*size of fixed length deep type columns*)<br /><br /> 각 열의 크기는 다음과 같습니다.<br /><br /> char(i) 및 binary(i)의 경우 i<br /><br /> nchar(i)의 경우 2 * i|고정 길이 전체 형식 열은 char(i), nchar(i) 또는 binary(i) 유형의 열입니다.|  
 |가변 길이 전체 형식 열 *computed size*|SUM(*computed size of variable length deep type columns*)<br /><br /> 각 열에 대해 계산된 크기는 다음과 같습니다.<br /><br /> varchar(i) 및 varbinary(i)의 경우 i<br /><br /> nvarchar(i)의 경우 2 * i|이 행은 *computed row body size*에만 적용되었습니다.<br /><br /> 가변 길이 전체 형식 열은 varchar(i), nvarchar(i) 또는 varbinary(i) 유형의 열입니다. 계산된 크기는 열의 최대 길이(i)에 의해 결정됩니다.|  
 |가변 길이 전체 형식 열 *actual size*|SUM(*actual size of variable length deep type columns*)<br /><br /> 각 열의 실제 크기는 다음과 같습니다.<br /><br /> n, 여기서 n은 varchar(i)에 대해 열에 저장된 문자 수입니다.<br /><br /> 2 * n, 여기서 n은 nvarchar(i)에 대해 열에 저장된 문자 수입니다.<br /><br /> n, 여기서 n은 varbinary(i)에 대해 열에 저장된 바이트 수입니다.|이 행은 *actual row body size*에만 적용되었습니다.<br /><br /> 실제 크기는 행의 열에 저장된 데이터에 의해 결정됩니다.|   
   
-##  <a name="bkmk_ExampleComputation"></a> 예제: 테이블 및 행 크기 계산  
+##  <a name="example-table-and-row-size-computation"></a><a name="bkmk_ExampleComputation"></a> 예제: 테이블 및 행 크기 계산  
  해시 인덱스의 경우 실제 버킷 수는 가장 가까운 2의 제곱으로 반올림됩니다. 예를 들어 지정된 `bucket_count`가 100000인 경우 인덱스의 실제 버킷 수는 131072입니다.  
   
 다음 정의의 Orders 테이블을 살펴보십시오.  
@@ -155,7 +155,7 @@ GO
   
 이 테이블에는 1개의 해시 인덱스와 1개의 비클러스터형 인덱스(기본 키)가 있습니다. 또한 3개의 고정 길이 열과 1개의 가변 길이 열이 포함되며, 이러한 열 중 하나는 Null 허용으로 구성됩니다(`OrderDescription`). 이제 `Orders` 테이블에 8379 행이 있고 `OrderDescription` 열의 평균 값 길이가 78자라고 가정해보십시오.  
   
-테이블 크기를 결정하려면 먼저 인덱스 크기를 결정해야 합니다. 두 인덱스의 bucket_count는 10000으로 지정되었습니다. 가장 가까운 2의 제곱인 16384로 반올림됩니다. 따라서 Orders 테이블에서 인덱스의 총 크기는 다음과 같습니다.  
+테이블 크기를 결정하려면 먼저 인덱스 크기를 결정해야 합니다. 두 인덱스의 bucket_count는 10000으로 지정되었습니다. 이 숫자는 가장 가까운 2의 제곱인 16384입니다. 따라서 Orders 테이블에서 인덱스의 총 크기는 다음과 같습니다.  
   
 ```  
 8 * 16384 = 131072 bytes  
@@ -228,7 +228,7 @@ select * from sys.dm_db_xtp_table_memory_stats
 where object_id = object_id('dbo.Orders')  
 ```  
 
-##  <a name="bkmk_OffRowLimitations"></a> 행 외부 열 제한 사항
+##  <a name="off-row-column-limitations"></a><a name="bkmk_OffRowLimitations"></a> 행 외부 열 제한 사항
   메모리 최적화 테이블에 행 외부 열을 사용할 경우의 특정 제한 사항 및 유의 사항은 다음과 같습니다.
   
 -   메모리 최적화 테이블에 대한 columnstore 인덱스가 있는 경우 모든 열이 행 내부에 맞아야 합니다. 

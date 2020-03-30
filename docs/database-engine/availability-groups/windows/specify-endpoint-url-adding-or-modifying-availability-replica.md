@@ -16,10 +16,10 @@ ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 28954a81cac3a5adacd037dbccb2e7584e060e79
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251281"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>엔드포인트 URL 지정 - 가용성 복제본 추가 또는 수정
@@ -30,7 +30,7 @@ ms.locfileid: "75251281"
 >  "엔드포인트 URL"이라는 용어는 데이터베이스 미러링 사용자 인터페이스 및 설명서에서 사용하는 "서버 네트워크 주소"라는 용어와 동의어입니다.  
   
   
-##  <a name="SyntaxOfURL"></a> 엔드포인트 URL의 구문  
+##  <a name="syntax-for-an-endpoint-url"></a><a name="SyntaxOfURL"></a> 엔드포인트 URL의 구문  
  엔드포인트 URL의 구문은 다음 형식을 사용합니다.  
   
  TCP<strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>*  
@@ -91,7 +91,7 @@ ms.locfileid: "75251281"
   
  `TCP://[2001:4898:23:1002:20f:1fff:feff:b3a3]:7022`  
   
-##  <a name="Finding_FQDN"></a> 시스템의 정규화된 도메인 이름 찾기  
+##  <a name="finding-the-fully-qualified-domain-name-of-a-system"></a><a name="Finding_FQDN"></a> 시스템의 정규화된 도메인 이름 찾기  
  시스템의 정규화된 도메인 이름을 찾으려면 해당 시스템의 Windows 명령 프롬프트에서 다음을 입력합니다.  
   
  **IPCONFIG /ALL**  
@@ -113,7 +113,7 @@ ms.locfileid: "75251281"
 > [!NOTE]  
 >  정규화된 도메인 이름에 대한 자세한 내용은 시스템 관리자에게 문의하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **데이터베이스 미러링 엔드포인트를 구성하려면**  
   
 -   [Always On 가용성 그룹에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
@@ -142,7 +142,7 @@ ms.locfileid: "75251281"
   
 -   [가용성 그룹에 보조 복제본 조인&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
-##  <a name="RelatedContent"></a> 관련 내용  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
   
 -   [고가용성 및 재해 복구를 위한 Microsoft SQL Server Always On 솔루션 가이드](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

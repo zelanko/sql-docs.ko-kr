@@ -11,10 +11,10 @@ ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3bc559bce60b4b179cd6e5a69846e1caa9b4668b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75257961"
 ---
 # <a name="filestream-functions-stored-procedures-and-views"></a>FILESTREAM, 함수, 저장 프로시저, 뷰
@@ -23,7 +23,7 @@ ms.locfileid: "75257961"
   
  FileTable 기능을 지원하는 데이터베이스 개체 목록은 [FileTable DDL, Functions, Stored Procedures, and Views](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)를 참조하세요.  
   
-##  <a name="ddl"></a> Transact-SQL DDL(데이터 정의 언어) 문  
+##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Transact-SQL DDL(데이터 정의 언어) 문  
   
 -   [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
@@ -37,29 +37,29 @@ ms.locfileid: "75257961"
   
 -   [DROP INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)
   
-##  <a name="func"></a> 시스템 함수  
+##  <a name="system-functions"></a><a name="func"></a> 시스템 함수  
   
 -   [GET_FILESTREAM_TRANSACTION_CONTEXT&#40;Transact-SQL&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)  
   
 -   [PathName&#40;Transact-SQL&#41;](../../relational-databases/system-functions/pathname-transact-sql.md)  
   
-##  <a name="proc"></a> 시스템 저장 프로시저  
+##  <a name="system-stored-procedures"></a><a name="proc"></a> 시스템 저장 프로시저  
   
 -   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
 -   [sp_filestream_force_garbage_collection&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)  
   
-##  <a name="cat"></a> 시스템 뷰 - 카탈로그 뷰  
+##  <a name="system-views---catalog-views"></a><a name="cat"></a> 시스템 뷰 - 카탈로그 뷰  
   
 -   [sys.database_filestream_options&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md)  
   
-##  <a name="dmv"></a> 시스템 뷰 - 동적 관리 뷰  
+##  <a name="system-views---dynamic-management-views"></a><a name="dmv"></a> 시스템 뷰 - 동적 관리 뷰  
   
 -   [sys.dm_filestream_file_io_handles&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-file-io-handles-transact-sql.md)  
   
 -   [sys.dm_filestream_file_io_requests&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-file-io-requests-transact-sql.md)  
   
-##  <a name="api"></a> 프로그래밍 API  
+##  <a name="programming-apis"></a><a name="api"></a> 프로그래밍 API  
   
 -   [OpenSqlFilestream을 사용하여 FILESTREAM 데이터 액세스](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   

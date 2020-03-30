@@ -11,10 +11,10 @@ ms.technology: linux
 helpviewer_keywords:
 - Linux, encrypted connections
 ms.openlocfilehash: 975a312988a7df4bdb4fb2858d7b0fcbe95cea33
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71016858"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>SQL Server on Linux에 대한 연결 암호화

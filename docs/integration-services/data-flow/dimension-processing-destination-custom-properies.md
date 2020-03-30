@@ -11,10 +11,10 @@ ms.assetid: 9700f663-53f2-49b6-b1ef-92c7b752d6a1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2f46acb401bf04e9b0445c452e26d69de42a2d94
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292832"
 ---
 # <a name="dimension-processing-destination-custom-properies"></a>차원 처리 대상 사용자 지정 속성

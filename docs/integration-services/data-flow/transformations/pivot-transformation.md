@@ -19,10 +19,10 @@ ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 68f0f1ea718d867b2fb26f08bb5b6c30e49dd739
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291220"
 ---
 # <a name="pivot-transformation"></a>피벗 변환
@@ -49,7 +49,7 @@ ms.locfileid: "71291220"
   
  입력 데이터에는 중복 행이 포함될 수 있는데 이 경우 피벗 변환이 실패합니다. "중복 행"은 집합 키 열과 피벗 열에 동일한 값이 있는 행을 의미합니다. 오류를 방지하려면 오류 행이 오류 출력으로 리디렉션되도록 변환을 구성하거나 중복 행이 없도록 값을 미리 집계합니다.  
   
-##  <a name="options"></a> 피벗 대화 상자의 옵션  
+##  <a name="options-in-the-pivot-dialog-box"></a><a name="options"></a> 피벗 대화 상자의 옵션  
  **피벗** 대화 상자에서 옵션을 설정하여 피벗 작업을 구성합니다. **피벗** 대화 상자를 열려면 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 피벗 변환을 패키지에 추가한 후 구성 요소를 마우스 오른쪽 단추로 클릭하고 **편집**을 클릭합니다.  
   
  다음 목록에서는 **피벗** 대화 상자의 옵션에 대해 설명합니다.  

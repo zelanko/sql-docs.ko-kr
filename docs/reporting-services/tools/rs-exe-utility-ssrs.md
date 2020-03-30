@@ -17,10 +17,10 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ebd9d811c39247822d2200327fefe02026c067e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081692"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe 유틸리티(SSRS)
@@ -45,10 +45,10 @@ rs {-?}
 {-t trace}  
 ```  
   
-##  <a name="bkmk_filelocation"></a> 파일 위치  
+##  <a name="file-location"></a><a name="bkmk_filelocation"></a> 파일 위치  
  **RS.exe** 는 **\Program Files\Microsoft SQL Server\110\Tools\Binn**에 있습니다. 파일 시스템의 모든 폴더에서 유틸리티를 실행할 수 있습니다.  
   
-##  <a name="bkmk_arguments"></a> 인수  
+##  <a name="arguments"></a><a name="bkmk_arguments"></a> 인수  
  **-?**  
  (옵션) **rs** 인수의 구문을 표시합니다.  
   
@@ -90,17 +90,17 @@ rs {-?}
   
  `rs.exe -i myScriptFile.rss -s https://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- 전역 변수가 지정한 이름으로 생성된 다음 제공된 값으로 설정됩니다. 예를 들어 **-v a=**"**1**" **-v b=**"**2**"를 지정하면 **a** 수에는 "**1**" 값이 지정되고 **b** 변수에는 "**2**" 값이 지정됩니다.  
+ 전역 변수가 지정한 이름으로 생성된 다음 제공된 값으로 설정됩니다. 예를 들어 **-v a=** "**1**" **-v b=** "**2**"를 지정하면 **a** 수에는 "**1**" 값이 지정되고 **b** 변수에는 "**2**" 값이 지정됩니다.  
   
- 전역 변수는 스크립트의 모든 함수에서 사용할 수 있습니다. 백슬래시와 인용 부호(**\\"**)는 큰따옴표로 해석됩니다. 인용 부호는 문자열에 공백이 포함되어 있는 경우에만 필요합니다. 변수 이름은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에 유효해야 하며 알파벳 문자 또는 밑줄로 시작하고 알파벳 문자, 숫자 또는 밑줄이 포함되어야 합니다. 예약어는 변수 이름으로 사용할 수 없습니다. 전역 변수 사용에 대한 자세한 내용은 [식의 기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)을 참조하세요.  
+ 전역 변수는 스크립트의 모든 함수에서 사용할 수 있습니다. 백슬래시와 인용 부호( **\\"** )는 큰따옴표로 해석됩니다. 인용 부호는 문자열에 공백이 포함되어 있는 경우에만 필요합니다. 변수 이름은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에 유효해야 하며 알파벳 문자 또는 밑줄로 시작하고 알파벳 문자, 숫자 또는 밑줄이 포함되어야 합니다. 예약어는 변수 이름으로 사용할 수 없습니다. 전역 변수 사용에 대한 자세한 내용은 [식의 기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)을 참조하세요.  
   
  **-t**  
  추적 로그에 오류 메시지를 출력합니다(옵션). 이 인수는 값을 가지지 않습니다. 자세한 내용은 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)을 참조하세요.  
   
-##  <a name="bkmk_permissions"></a> 권한  
+##  <a name="permissions"></a><a name="bkmk_permissions"></a> 권한  
  이 도구를 사용하려면 스크립트를 실행하는 보고서 서버 인스턴스에 연결할 수 있는 사용 권한이 필요합니다. 스크립트를 실행하여 로컬 컴퓨터나 원격 컴퓨터를 변경할 수 있습니다. 원격 컴퓨터에 설치된 보고서 서버를 변경하려면 **-s** 인수에 원격 컴퓨터를 지정합니다.  
   
-##  <a name="bkmk_examples"></a> 예  
+##  <a name="examples"></a><a name="bkmk_examples"></a> 예  
  다음 예에서는 실행할 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 스크립트 및 웹 서비스 메서드가 포함된 스크립트 파일을 지정하는 방법을 보여 줍니다.  
   
 ```  

@@ -16,31 +16,31 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8081b4b4b4c8a9d19af0c558d162974d98e16878
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68094739"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>테이블에 열 추가(데이터베이스 엔진)
 
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-이 문서에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 테이블에 새 열을 추가하는 방법에 대해 설명합니다.
+이 문서에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용하여[!INCLUDE[tsql](../../includes/tsql-md.md)]에서 테이블에 새 열을 추가하는 방법에 대해 설명합니다.
 
-## <a name="BeforeYouBegin"></a> 시작하기 전에
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에
 
-### <a name="Restrictions"></a> 제한 사항
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항
 
  ALTER TABLE 문을 사용하여 테이블에 열을 추가하면 해당 열이 자동으로 테이블 끝에 추가됩니다. 테이블에서 특정 순서로 열을 지정하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용합니다. 하지만 이러한 방식은 데이터베이스 설계상 최선의 방법이 아닙니다. 가장 좋은 방법은 애플리케이션 및 쿼리 수준에서 반환된 열에서 순서를 지정하는 것입니다. SELECT *를 사용해도 테이블에 정의된 순서에 따라 모든 열이 순서대로 반환된다고 가정해서는 안됩니다. 항상 열을 표시하려는 순서에 따라 쿼리 및 애플리케이션에서 이름으로 열을 지정하세요.
 
-### <a name="Security"></a> 보안
+### <a name="security"></a><a name="Security"></a> 보안
 
-#### <a name="Permissions"></a> 권한
+#### <a name="permissions"></a><a name="Permissions"></a> 권한
 
 테이블에 대한 ALTER 사용 권한이 필요합니다.
 
-## <a name="SSMSProcedure"></a> SQL Server Management Studio 사용
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용
 
 ### <a name="to-insert-columns-into-a-table-with-table-designer"></a>테이블 디자이너에서 테이블에 열을 삽입하려면
 
@@ -61,7 +61,7 @@ ms.locfileid: "68094739"
 
 6. 열을 모두 추가했으면 **파일** 메뉴에서 ‘테이블 이름’ **저장**을 선택합니다. 
   
-## <a name="TsqlProcedure"></a> Transact-SQL 사용
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용
   
 ### <a name="to-insert-columns-into-a-table"></a>테이블에 열을 삽입하려면  
   
@@ -71,4 +71,4 @@ ms.locfileid: "68094739"
 ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL, column_c INT NULL ;
 ```
 
-#### <a name="FollowUp"></a> 자세한 내용은 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.
+#### <a name="for-more-information-see-alter-table-40transact-sql41"></a><a name="FollowUp"></a> 자세한 내용은 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: d966094277f47d3ef12239c32a75c9a3ecbf88c9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727427"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services 성능 - 데이터 최적화
@@ -153,7 +153,7 @@ RevoScaleR 최적화에 대한 추가 지침은 다음 문서를 참조하세요
 
 + 지원 문서: [Performance Tuning Options for rxDForest and rxDTree](https://support.microsoft.com/kb/3104235)(rxDForest 및 rxDTree에 대한 성능 조정 옵션)
 
-+ 모델 제어 방법이 승격된 트리 모델에 맞게 조정됩니다. [Estimating Models Using Stochastic Gradient Boosting](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)(예측 모델이 확률적 그래디언트 부스팅을 사용하고 있음)
++ 모델 제어 방법이 승격된 트리 모델에 맞게 조정됩니다. [Estimating Models Using Stochastic Gradient Boosting](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)(예측 모델이 확률적 경사 부스팅을 사용하고 있음)
 
 + RevoScaleR이 데이터를 이동 및 처리하는 방법에 대한 개요: [Write custom chunking algorithms in ScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)(ScaleR에서 사용자 지정 청크 알고리즘 작성)
 
