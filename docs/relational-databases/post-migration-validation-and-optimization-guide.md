@@ -13,10 +13,10 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 ms.openlocfilehash: 915dde0b6b2083c45b5bfe4196e7578537a91379
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909157"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>마이그레이션 후 유효성 검사 및 최적화 가이드
@@ -29,7 +29,7 @@ ms.locfileid: "72909157"
 
 다음은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 플랫폼으로 마이그레션한 후 발생하는 몇 가지 일반적인 성능 시나리오와 해결 방법입니다. 여기에는 이전 버전 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 새 버전 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션 및 Oracle, DB2, MySQL, Sybase 등의 외래 플랫폼에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션에 특정한 시나리오가 포함됩니다.
 
-## <a name="CEUpgrade"></a>CE 버전 변경으로 인한 쿼리 성능 저하
+## <a name="query-regressions-due-to-change-in-ce-version"></a><a name="CEUpgrade"></a>CE 버전 변경으로 인한 쿼리 성능 저하
 
 **적용 대상:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 마이그레이션.
 
@@ -47,9 +47,9 @@ ms.locfileid: "72909157"
 
 이 항목에 대한 자세한 내용은 [Keep performance stability during the upgrade to newer SQL Server](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)(최신 SQL Server로 업그레이드하는 동안 성능 안정성 유지)를 참조하세요.
 
-## <a name="ParameterSniffing"></a> 매개 변수 검색의 민감도
+## <a name="sensitivity-to-parameter-sniffing"></a><a name="ParameterSniffing"></a> 매개 변수 검색의 민감도
 
-**적용 대상:** 외래 플랫폼(예: Oracle, DB2, MySQL 및 Sybase)을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]으로 마이그레이션합니다.
+**적용 대상:** 외래 플랫폼(예: Oracle, DB2, MySQL 및 Sybase)에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션
 
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션은 이 문제가 원본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 있는 경우 최신 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로 그대로 마이그레이션해도 이 시나리오가 해결되지 않습니다. 
@@ -68,9 +68,9 @@ ms.locfileid: "72909157"
 > [!TIP] 
 > [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 계획 분석 기능을 활용하면 이로 인해 문제가 발생하는지 빠르게 식별할 수 있습니다. 자세한 내용은 [여기](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/)를 참조하세요.
 
-## <a name="MissingIndexes"></a> 누락된 인덱스
+## <a name="missing-indexes"></a><a name="MissingIndexes"></a> 누락된 인덱스
 
-**적용 대상:** 외래 플랫폼(예: Oracle, DB2, MySQL 및 Sybase) 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]으로 마이그레이션합니다.
+**적용 대상:** 외래 플랫폼(예: Oracle, DB2, MySQL 및 Sybase) 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션
 
 인덱스가 잘못되거나 누락되면 추가 I/O가 발생하여 메모리와 CPU가 불필요하게 사용됩니다. 다른 조건자 사용, 기존 인덱스 디자인 무효화 등과 같이 작업 프로필이 변경되기 때문일 수 있습니다. 잘못된 인덱싱 전략이나 작업 프로필의 변경을 알 수 있는 방법은 다음과 같습니다.
 -   중복되는 인덱스, 거의 사용되지 않거나 완전히 사용되지 않는 인덱스를 찾습니다.
@@ -80,15 +80,15 @@ ms.locfileid: "72909157"
 
 1.  모든 누락된 인덱스 참조에 대해 그래픽 실행 계획을 활용합니다.
 2.  [데이터베이스 엔진 튜닝 관리자](../tools/dta/tutorial-database-engine-tuning-advisor.md)에서 생성한 인덱싱 제안 사항을 검토합니다.
-3.  [SQL Server 성능 대시보드](https://www.microsoft.com/download/details.aspx?id=29063)를 통해 [누락된 인덱스 DMV](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)를 활용합니다.
+3.  [SQL Server 성능 대시보드](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)를 통해 [누락된 인덱스 DMV](https://www.microsoft.com/download/details.aspx?id=29063)를 활용합니다.
 4.  기존 DMV를 사용하여 누락되거나 중복되거나 거의 사용되지 않거나 전혀 사용되지 않는 인덱스에 대한 정보를 제공할 수 있는 기존 스크립트를 활용하고 인덱스 참조가 힌트로 제공되거나 데이터베이스의 기존 프로시저 및 함수에 하드 코딩되었는지 확인합니다. 
 
 > [!TIP] 
 > 이러한 기존 스크립트의 예로 [Index Creation](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Creation) 및 [Index Information](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Information)을 들 수 있습니다. 
 
-## <a name="InabilityPredicates"></a> 조건자를 사용하여 데이터를 필터링할 수 없음
+## <a name="inability-to-use-predicates-to-filter-data"></a><a name="InabilityPredicates"></a> 조건자를 사용하여 데이터를 필터링할 수 없음
 
-**적용 대상:** 외래 플랫폼(예: Oracle, DB2, MySQL 및 Sybase) 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]으로 마이그레이션합니다.
+**적용 대상:** 외래 플랫폼(예: Oracle, DB2, MySQL 및 Sybase) 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션
 
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션은 이 문제가 원본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 있는 경우 최신 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로 그대로 마이그레이션해도 이 시나리오가 해결되지 않습니다.
@@ -115,9 +115,9 @@ SARGable이 아닌 조건자의 몇 가지 예:
 > [!NOTE] 
 > 위의 모든 작업을 프로그래밍 방식으로 수행할 수 있습니다.
 
-## <a name="TableValuedFunctions"></a> 테이블 반환 함수(다중 문 및 인라인) 사용
+## <a name="use-of-table-valued-functions-multi-statement-vs-inline"></a><a name="TableValuedFunctions"></a> 테이블 반환 함수(다중 문 및 인라인) 사용
 
-**적용 대상:** 외래 플랫폼(예: Oracle, DB2, MySQL 및 Sybase) 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]으로 마이그레이션합니다.
+**적용 대상:** 외래 플랫폼(예: Oracle, DB2, MySQL 및 Sybase) 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션
 
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션은 이 문제가 원본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 있는 경우 최신 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로 그대로 마이그레이션해도 이 시나리오가 해결되지 않습니다.
@@ -162,7 +162,7 @@ SARGable이 아닌 조건자의 몇 가지 예:
 
 2.  더 복잡한 경우 메모리 액세스에 최적화된 테이블 또는 임시 테이블에 저장된 중간 결과를 사용합니다.
 
-##  <a name="Additional_Reading"></a> 더 보기
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> 더 보기
 
  [쿼리 저장소에 대한 모범 사례](../relational-databases/performance/best-practice-with-the-query-store.md)  
 [메모리 최적화 테이블](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  

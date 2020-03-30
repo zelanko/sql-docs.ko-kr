@@ -11,10 +11,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a2b02d5b987958abc8dd97e48f86e7b44636efad
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74096076"
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>메모리 내 OLTP를 통해 JSON 처리 최적화
@@ -46,7 +46,7 @@ SQL Server 및 Azure SQL Database에서 사용할 수 있는 기능을 통해 �
  - 메모리 최적화 인덱스를 사용하여 JSON 문서의 [값을 인덱싱](#index)합니다.
  - JSON 문서의 값을 사용하거나 JSON 텍스트로 결과의 서식을 지정하는 [SQL 쿼리를 고유하게 컴파일](#compile)합니다.
 
-## <a name="validate"></a> JSON 열의 유효성 검사
+## <a name="validate-json-columns"></a><a name="validate"></a> JSON 열의 유효성 검사
 SQL Server 및 Azure SQL Database를 사용하면 문자열 열에 저장된 JSON 문서 내용의 유효성을 검사하는 고유하게 컴파일된 CHECK 제약 조건을 추가할 수 있습니다. 고유하게 컴파일된 JSON CHECK 제약 조건을 사용하여 메모리 최적화 테이블에 저장된 JSON 텍스트의 서식이 올바르게 지정되었는지 확인할 수 있습니다.
 
 다음 예제에서는 JSON 열 `Product`가 있는 `Tags` 테이블을 만듭니다. `Tags` 열에는 `ISJSON` 함수를 사용하여 열에 있는 JSON 텍스트의 유효성을 검사하는 CHECK 제약 조건이 있습니다.
@@ -75,7 +75,7 @@ ALTER TABLE xtp.Product
         CHECK (ISJSON(Data)=1)
 ```
 
-## <a name="computedcol"></a> 계산 열을 사용하여 JSON 값 노출
+## <a name="expose-json-values-using-computed-columns"></a><a name="computedcol"></a> 계산 열을 사용하여 JSON 값 노출
 계산 열을 사용하면 JSON 텍스트에서 값을 노출할 수 있으며 JSON 텍스트에서 값을 가져오거나 JSON 구조를 다시 구문 분석하지 않고도 해당 값에 액세스할 수 있습니다. 이 방식으로 노출된 값은 강력한 형식이며 실제로 계산 열에 유지됩니다. 지속형 계산 열을 사용하여 JSON 값에 액세스하면 JSON 문서의 값에 직접 액세스하는 것보다 더 빠릅니다.
 
 다음 예제에서는 JSON `Data` 열에서 다음과 같은 두 값을 노출하는 방법을 보여 줍니다.
@@ -100,7 +100,7 @@ CREATE TABLE xtp.Product(
 ) WITH (MEMORY_OPTIMIZED=ON);
 ```
 
-## <a name="index"></a> JSON 열의 값 인덱싱
+## <a name="index-values-in-json-columns"></a><a name="index"></a> JSON 열의 값 인덱싱
 SQL Server 및 Azure SQL Database를 사용하면 메모리 최적화 인덱스를 사용하여 JSON 열의 값을 인덱싱할 수 있습니다. 이전 예제에서 설명한 대로 인덱싱되는 JSON 값은 계산 열을 사용하여 노출되고 강력하게 형식화되어야 합니다.
 
 JSON 열의 값은 표준 NONCLUSTERED 및 HASH 인덱스를 사용하여 인덱싱할 수 있습니다.
@@ -131,7 +131,7 @@ ALTER TABLE Product
         WITH (BUCKET_COUNT=20000)
 ```
 
-## <a name="compile"></a> JSON 쿼리의 네이티브 컴파일
+## <a name="native-compilation-of-json-queries"></a><a name="compile"></a> JSON 쿼리의 네이티브 컴파일
 프로시저, 함수 및 트리거에 기본 제공 JSON 함수를 사용하는 쿼리가 포함되어 있는 경우 네이티브 컴파일은 이러한 쿼리의 성능을 향상하고 쿼리를 실행하는 데 필요한 CPU 주기를 줄입니다.
 
 다음 예제에서는 **JSON_VALUE**, **OPENJSON** 및 **JSON_MODIFY**라는 여러 가지 JSON 함수를 사용하는 고유하게 컴파일된 프로시저를 보여 줍니다.

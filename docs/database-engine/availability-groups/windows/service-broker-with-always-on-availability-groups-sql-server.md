@@ -14,10 +14,10 @@ ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8845f69e619c8cd2cc7a194b6f03a4dec5f592c1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822615"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹이 포함된 Service Broker(SQL Server)
@@ -26,7 +26,7 @@ ms.locfileid: "74822615"
   이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다.  
   
   
-##  <a name="ReceiveRemoteMessages"></a> 가용성 그룹의 서비스가 원격 메시지를 받기 위한 요구 사항  
+##  <a name="requirements-for-a-service-in-an-availability-group-to-receive-remote-messages"></a><a name="ReceiveRemoteMessages"></a> 가용성 그룹의 서비스가 원격 메시지를 받기 위한 요구 사항  
   
 1.  **가용성 그룹에 수신기가 있는지 확인합니다.**  
   
@@ -76,7 +76,7 @@ ms.locfileid: "74822615"
   
      경로를 만드는 방법은 [버전의 온라인 설명서에 있는](https://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) Service Broker 라우팅 예 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 및 [CREATE ROUTE&#40;Transact-SQL&#41;](../../../t-sql/statements/create-route-transact-sql.md)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다.  
   
-##  <a name="SendRemoteMessages"></a> 가용성 그룹의 원격 서비스에 메시지를 보내기 위한 요구 사항  
+##  <a name="requirements-for-sending-messages-to-a-remote-service-in-an-availability-group"></a><a name="SendRemoteMessages"></a> 가용성 그룹의 원격 서비스에 메시지를 보내기 위한 요구 사항  
   
 1.  **대상 서비스에 대한 경로를 만듭니다.**  
   
@@ -99,7 +99,7 @@ ms.locfileid: "74822615"
   
 2.  **msdb에 AutoCreatedLocal 경로 또는 특정 서비스에 대한 경로가 포함되어 있는지 확인합니다.** 자세한 내용은 이 항목의 앞부분에 나오는 [가용성 그룹의 서비스가 원격 메시지를 받기 위한 요구 사항](#ReceiveRemoteMessages)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [CREATE ENDPOINT&#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)  
   

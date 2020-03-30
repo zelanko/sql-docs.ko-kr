@@ -17,10 +17,10 @@ ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b2bc4cf6348180e52dea28698e90cafda4f32f79
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67895486"
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>업데이트할 수 있는 구독 - 지연 업데이트 충돌 해결

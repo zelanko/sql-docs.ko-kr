@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 2b0f576365ef8e6221196eef4a9fca92f54f6318
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287351"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>메모리 액세스에 최적화된 테이블 구독자로 복제
@@ -84,7 +84,7 @@ ms.locfileid: "76287351"
   
 -   모든 Transact-SQL 기능이 메모리 최적화 테이블에서 지원되는 것은 아닙니다. 자세한 내용은 [메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)을 참조하세요.  
   
-##  <a name="Schema"></a> 스키마 파일 수정  
+##  <a name="modifying-a-schema-file"></a><a name="Schema"></a> 스키마 파일 수정  
   
 -   메모리 최적화 테이블 옵션 `DURABILITY = SCHEMA_AND_DATA`를 사용할 경우 테이블은 비클러스터형 기본 키 인덱스를 포함해야 합니다.  
   

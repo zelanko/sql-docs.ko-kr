@@ -14,10 +14,10 @@ ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 218389eaf76336e33d866f16c6b79ef54661be0b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68011953"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>기본 SQL Server 네트워크 프로토콜 구성
@@ -57,7 +57,7 @@ ms.locfileid: "68011953"
 
 
 
-## <a name="includessnoversion_mdincludesssnoversion-mdmd-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 브라우저 설정
+## <a name="ssnoversion_md-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 브라우저 설정
 
 설정 중에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser 서비스가 자동으로 시작되도록 구성할 수 있습니다. 기본적으로 다음 조건에서만 자동으로 시작됩니다.
 

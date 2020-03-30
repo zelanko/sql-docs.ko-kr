@@ -15,10 +15,10 @@ ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8b2f033557c566050dffbd82bc64df84feabb7b6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296925"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Integration Services 서비스에서 기록하는 이벤트

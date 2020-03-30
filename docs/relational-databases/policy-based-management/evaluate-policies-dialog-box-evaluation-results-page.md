@@ -14,10 +14,10 @@ ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 36ff10e317259547c03e6ee9e939229d68569b2e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558260"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>정책 평가 대화 상자, 평가 결과 페이지

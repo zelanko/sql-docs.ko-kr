@@ -17,10 +17,10 @@ ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1fbb4df1ef746c885bb2bec9d4fe815bef8a693d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252759"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>서버 네트워크 주소 지정(데이터베이스 미러링)
@@ -30,7 +30,7 @@ ms.locfileid: "75252759"
  서버 인스턴스에 데이터베이스 미러링 엔드포인트가 있어야만 서버 네트워크 주소에 포트를 지정할 수 있습니다. 자세한 내용은 [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)를 참조하세요.  
   
   
-##  <a name="Syntax"></a> 서버 네트워크 주소 구문  
+##  <a name="syntax-for-a-server-network-address"></a><a name="Syntax"></a> 서버 네트워크 주소 구문  
  서버 네트워크 주소 구문은 다음 형식을 사용합니다.  
   
  TCP<strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>*  
@@ -121,7 +121,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `MYSERVER.mydomain.Adventure-Works.com`  
   
-##  <a name="Examples"></a> 예  
+##  <a name="examples"></a><a name="Examples"></a> 예  
  다음 예에서는 다른 도메인에 있는 `REMOTESYSTEM3` 이라는 컴퓨터 시스템의 서버 인스턴스에 대한 서버 네트워크 주소를 보여 줍니다. 도메인 정보는 `NORTHWEST.ADVENTURE-WORKS.COM`이고 데이터베이스 미러링 엔드포인트의 포트는 `7025`입니다. 이러한 예제 구성 요소가 지정되면 서버 네트워크 주소는 다음과 같습니다.  
   
  `TCP://REMOTESYSTEM3.NORTHWEST.ADVENTURE-WORKS.COM:7025`  
@@ -130,7 +130,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `TCP://DBSERVER1:7022`  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   

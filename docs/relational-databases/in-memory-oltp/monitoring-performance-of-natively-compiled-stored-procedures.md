@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b1970c5953373c500f85e82281a69be1d46f1be0
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78180068"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저의 성능 모니터링
@@ -38,7 +38,7 @@ SELECT [definition]
 ## <a name="using-data-management-views-and-query-store"></a>데이터 관리 뷰 및 쿼리 저장소 사용
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서는 프로시저 수준 및 쿼리 수준 모두에서 고유하게 컴파일된 저장 프로시저에 대한 실행 통계 수집을 지원합니다. 실행 통계 수집은 성능에 미치는 영향 때문에 기본적으로 설정되지 않습니다.  
 
-실행 통계는 [쿼리 저장소](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)에서와 마찬가지로 시스템 뷰 [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) 및 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)에 반영됩니다.
+실행 통계는 [쿼리 저장소](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)에서와 마찬가지로 시스템 뷰 [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 및 [sys.dm_exec_query_stats](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)에 반영됩니다.
 
 ## <a name="procedure-level-execution-statistics"></a>프로시저 수준 실행 통계
 

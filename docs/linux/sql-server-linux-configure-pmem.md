@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5d98b728a1966861532a30a4b5dd92824d25f1d5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76831966"
 ---
 # <a name="configure-persistent-memory-pmem-for-sql-server-on-linux"></a>SQL Server on Linux의 PMEM(영구적 메모리) 구성

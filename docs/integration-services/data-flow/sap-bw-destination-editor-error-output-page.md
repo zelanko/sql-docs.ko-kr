@@ -13,10 +13,10 @@ ms.assetid: a543d811-0bd2-4890-a0d3-f5fdcd4524b8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9016a943848247ce7c9ba81d70cf542b470b6e2a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291972"
 ---
 # <a name="sap-bw-destination-editor-error-output-page"></a>SAP BW 대상 편집기(오류 출력 페이지)

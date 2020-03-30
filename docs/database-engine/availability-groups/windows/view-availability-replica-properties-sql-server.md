@@ -13,10 +13,10 @@ ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9bcebebf2f426aec660b77699461bdce110f628c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74821765"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>가용성 복제본 속성 보기(SQL Server)
@@ -24,7 +24,7 @@ ms.locfileid: "74821765"
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 의 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 사용하여 Always On 가용성 그룹에 대한 가용성 복제본 속성을 보는 방법에 대해 설명합니다.  
   
  
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **가용성 복제본의 속성을 보고 변경하려면**  
   
 1.  개체 탐색기에서 주 복제본을 호스팅하는 서버 인스턴스에 연결하고 서버 트리를 확장합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "74821765"
    >클러스터 유형이 none이면 장애 조치 모드를 변경할 수 없습니다.
   
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **가용성 복제본의 속성 및 상태를 보려면**  
   
  가용성 복제본의 속성 및 상태를 보려면 다음 뷰와 시스템 함수를 사용합니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "74821765"
 >  가용성 복제본의 성능 카운터( **SQLServer:가용성 복제본**  성능 개체)에 대한 자세한 내용은 [SQL Server, 가용성 복제본](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)을 참조하세요.  
   
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **가용성 그룹에 대한 자세한 내용을 보려면**  
   
 -   [가용성 그룹 속성 보기&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)  

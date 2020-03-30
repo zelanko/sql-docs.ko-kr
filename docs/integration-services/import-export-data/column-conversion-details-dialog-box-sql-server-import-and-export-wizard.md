@@ -12,10 +12,10 @@ ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 531d7e5a0f945a8d0dd5570d95843164fbc98734
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296347"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>열 변환 정보 대화 상자(SQL Server 가져오기 및 내보내기 마법사)

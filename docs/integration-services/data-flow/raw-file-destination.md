@@ -21,10 +21,10 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4919a5df6c7036cce13a2d0218af1727f3ec9d0b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292184"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
@@ -149,13 +149,13 @@ ms.locfileid: "71292184"
   
 -   [열 탭에서 옵션 설정](#mapping)  
   
-###  <a name="open"></a> 원시 파일 대상 편집기 열기  
+###  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> 원시 파일 대상 편집기 열기  
   
 1.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 원시 파일 대상을 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]패키지에 추가합니다.  
   
 2.  구성 요소를 마우스 오른쪽 단추로 클릭한 다음 **편집**을 클릭합니다.  
   
-###  <a name="connection"></a> 연결 관리자 탭에서 옵션 설정  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> 연결 관리자 탭에서 옵션 설정  
  **액세스 모드**  
  파일 이름 지정 방법을 선택합니다. **파일 이름** 을 선택하여 파일 이름 및 경로를 직접 입력하고 **변수를 사용한 파일 이름** 을 선택하여 파일 이름이 포함된 변수를 지정합니다.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "71292184"
   
  **초기 원시 파일 생성**을 누르면 메시지 상자가 표시됩니다. **확인** 을 클릭하여 파일 만들기를 계속합니다. **열** 페이지의 서로 다른 열 목록을 선택하려면 **취소** 를 클릭합니다.  
   
-###  <a name="mapping"></a> 열 탭에서 옵션 설정  
+###  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a> 열 탭에서 옵션 설정  
  **사용 가능한 입력 열**  
  원시 파일에 쓸 하나 이상의 입력 열을 선택합니다.  
   
@@ -191,13 +191,13 @@ ms.locfileid: "71292184"
   
 -   [열 탭에서 옵션 설정](#mapping)  
   
-###  <a name="open"></a> 원시 파일 대상 편집기 열기  
+###  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> 원시 파일 대상 편집기 열기  
   
 1.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 원시 파일 대상을 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]패키지에 추가합니다.  
   
 2.  구성 요소를 마우스 오른쪽 단추로 클릭한 다음 **편집**을 클릭합니다.  
   
-###  <a name="connection"></a> 연결 관리자 탭에서 옵션 설정  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> 연결 관리자 탭에서 옵션 설정  
  **액세스 모드**  
  파일 이름 지정 방법을 선택합니다. **파일 이름** 을 선택하여 파일 이름 및 경로를 직접 입력하고 **변수를 사용한 파일 이름** 을 선택하여 파일 이름이 포함된 변수를 지정합니다.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "71292184"
   
  단추를 클릭하면 열 목록이 나타납니다. 취소를 클릭하고 열을 수정하거나 확인을 클릭하여 파일 만들기를 계속할 수 있습니다.  
   
-###  <a name="mapping"></a> 열 탭에서 옵션 설정  
+###  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a> 열 탭에서 옵션 설정  
  **사용 가능한 입력 열**  
  원시 파일에 쓸 하나 이상의 입력 열을 선택합니다.  
   

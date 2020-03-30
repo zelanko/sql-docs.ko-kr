@@ -12,10 +12,10 @@ ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 095852eb02ba78c261b19a0a96fb639075ee5eab
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71285121"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>원본 쿼리 지정(SQL Server 가져오기 및 내보내기 마법사)
@@ -59,7 +59,7 @@ SELECT 쿼리의 추가 예는 [SELECT 예&#40;Transact-SQL&#41;](../../t-sql/qu
  **찾아보기**  
  **열기** 대화 상자를 사용하여 SQL 쿼리의 텍스트가 포함된 저장된 파일을 선택합니다. 파일을 선택하면 해당 파일의 텍스트가 **SQL 문** 의 입력란으로 복사됩니다.  
  
-## <a name="excelQueries"></a> Excel에 대한 원본 쿼리 입력
+## <a name="provide-a-source-query-for-excel"></a><a name="excelQueries"></a> Excel에 대한 원본 쿼리 입력
 
 > [!IMPORTANT]
 > Excel 파일 연결 및 Excel 파일에서 데이터를 로드할 때 제한 사항 및 알려진 문제에 대한 자세한 내용은 [SSIS(SQL Server Integration Services)를 통해 Excel로 데이터 로드](../load-data-to-from-excel-with-ssis.md)를 참조하세요.

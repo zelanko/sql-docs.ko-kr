@@ -11,10 +11,10 @@ ms.assetid: 06fb3549-e970-4ca2-a61f-59affb9c6dcc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d2533c09f530b0fc3fcebdfbd4a50a460534a42f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295513"
 ---
 # <a name="catalogcreate_folder-ssisdb-database"></a>catalog.create_folder(SSISDB 데이터베이스)

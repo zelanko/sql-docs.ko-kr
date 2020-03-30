@@ -11,13 +11,13 @@ ms.author: meetb
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 8aa4502fca51ef8dc15fceb119297915a64bc682
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957067"
 ---
-# <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Windows 인증을 사용하여 SQL Server에 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 연결 - Kerberos 
+# <a name="connect-name-sos-to-your-sql-server-using-windows-authentication---kerberos"></a>Windows 인증을 사용하여 SQL Server에 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 연결 - Kerberos 
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]에서는 Kerberos를 사용하여 SQL Server에 연결할 수 있도록 지원합니다.
 
@@ -167,7 +167,7 @@ klist
 krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 ```
 
-## <a name="connect-using-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 연결
+## <a name="connect-using-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 연결
 
 * 새 연결 프로필을 만듭니다.
 

@@ -16,10 +16,10 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b64985281c98d15399e7cd561a05746e0634f057
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75322021"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>SQL Server 이외 구독자에 대한 구독 만들기
@@ -34,7 +34,7 @@ ms.locfileid: "75322021"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자에 대한 구독을 만들려면 다음을 수행하세요.  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 배포자에 적절한 클라이언트 소프트웨어 및 OLE DB 공급자를 설치하고 구성합니다. 자세한 내용은 [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md) 및 [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)를 참조하세요.  
@@ -143,7 +143,7 @@ ms.locfileid: "75322021"
   
  스냅샷 에이전트에서 스냅샷 생성을 마치면 "[100%] 17개 아티클의 스냅샷이 생성되었습니다"라는 메시지가 표시됩니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  복제 저장 프로시저를 사용하여 프로그래밍 방식으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자로의 밀어넣기 구독을 만들 수 있습니다.  
   
 > [!IMPORTANT]  

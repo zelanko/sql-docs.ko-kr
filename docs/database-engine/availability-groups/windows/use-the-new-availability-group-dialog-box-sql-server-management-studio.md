@@ -13,10 +13,10 @@ ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2c53998ea56c02e43a62573b31767c1beea78a8d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74821958"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>새 가용성 그룹 대화 상자 사용(SQL Server Management Studio)
@@ -30,7 +30,7 @@ ms.locfileid: "74821958"
 >  가용성 그룹을 만드는 다른 방법에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [관련 작업](#RelatedTasks)을 참조하세요.  
   
   
-##  <a name="PrerequisitesRestrictions"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="PrerequisitesRestrictions"></a> 필수 조건  
   
 -   가용성 그룹을 만들기 전에 가용성 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 동일한 WSFC 장애 조치(Failover) 클러스터 내의 다른 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 노드에 있는지 확인합니다. 또한 각 서버 인스턴스가 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하도록 설정되어 있고 다른 모든 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 사전 요구 사항을 충족하는지 확인합니다. 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "74821958"
   
 -   **새 가용성 그룹** 대화 상자를 사용하려면 가용성 복제본을 호스팅하는 서버 인스턴스의 이름을 알고 있어야 합니다. 또한 새 가용성 그룹에 추가할 모든 데이터베이스의 이름을 알고 있어야 하며 이러한 데이터베이스는 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다. 잘못된 값을 입력하면 새 가용성 그룹이 작동하지 않습니다.  
   
-## <a name="Limitations"></a> 제한 사항  
+## <a name="limitations"></a><a name="Limitations"></a> 제한 사항  
  **새 가용성 그룹** 대화 상자에서는 다음과 같은 작업을 수행할 수 없습니다.  
   
 -   가용성 그룹 수신기를 만듭니다.    
@@ -47,10 +47,10 @@ ms.locfileid: "74821958"
   
  이러한 구성 작업에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 [후속 작업: 가용성 그룹을 만든 후](#FollowUp)를 참조하세요.  
   
-##  <a name="Permissions"></a> 권한  
+##  <a name="permissions"></a><a name="Permissions"></a> 권한  
  CREATE AVAILABILITY GROUP 서버 권한, ALTER ANY AVAILABILITY GROUP 권한, CONTROL SERVER 권한 중 하나와 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> 새 가용성 그룹 대화 상자(SQL Server Management Studio) 사용  
+##  <a name="using-the-new-availability-group-dialog-box-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 새 가용성 그룹 대화 상자(SQL Server Management Studio) 사용  
  **가용성 그룹을 만들려면**  
   
 1.  개체 탐색기에서 주 복제본을 호스팅하는 서버 인스턴스에 연결하고 서버 이름을 클릭합니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "74821958"
   
      가용성 그룹을 만들지 않고 대화 상자를 종료하려면 **취소**를 클릭합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 새 가용성 그룹 대화 상자를 사용하여 가용성 그룹을 만든 후  
+##  <a name="follow-up-after-using-the-new-availability-group-dialog-box-to-create-an-availability-group"></a><a name="FollowUp"></a> 후속 작업: 새 가용성 그룹 대화 상자를 사용하여 가용성 그룹을 만든 후  
   
 -   가용성 그룹의 보조 복제본을 호스팅하는 각 서버 인스턴스에 차례로 연결하여 다음 단계를 완료해야 합니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "74821958"
   
 -   새 가용성 그룹에 대해 가용성 그룹 수신기를 만드는 것이 좋습니다. 이렇게 하려면 현재 주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다. 자세한 내용은 [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)가 있어야 합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **가용성 그룹 및 복제본 속성을 구성하려면**  
   
 -   [가용성 복제본의 가용성 모드 변경&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)  
@@ -147,7 +147,7 @@ ms.locfileid: "74821958"
   
 -   [실패한 파일 추가 작업 문제 해결&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> 관련 내용  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
   
 -   [고가용성 및 재해 복구를 위한 Microsoft SQL Server Always On 솔루션 가이드](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

@@ -10,10 +10,10 @@ ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0a6fb370c80af6221812b88d3694a230dc206f7b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296203"
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사의 단계
@@ -43,7 +43,7 @@ ms.locfileid: "71296203"
 > [!TIP]
 > 마법사의 모든 페이지 또는 대화 상자에서 F1 키를 누르면 현재 페이지에 대한 설명서를 볼 수 있습니다.
 
-## <a name="related"></a> 관련 태스크 및 콘텐츠  
+## <a name="related-tasks-and-content"></a><a name="related"></a> 관련 태스크 및 콘텐츠  
 다음은 몇 가지 다른 기본 작업입니다.
 -   **마법사의 작동 원리에 대한 빠른 예제를 참조하세요.**
 

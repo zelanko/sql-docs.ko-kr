@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: e577144d9c259d097e28b435b0d0eedc4252e82a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76286940"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>게시자 및 배포자 속성 보기 및 수정
@@ -44,16 +44,16 @@ ms.locfileid: "76286940"
   
      [RMO(복제 관리 개체)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전 버전을 실행하는 게시자의 경우, **sysadmin** 고정 서버 역할의 사용자가 **구독자** 페이지에서 구독자를 등록할 수 있습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터는 더 이상 복제에 대해 구독자를 명시적으로 등록하지 않아도 됩니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-view-and-modify-distributor-properties"></a>배포자 속성을 보고 수정하려면  
   
@@ -85,7 +85,7 @@ ms.locfileid: "76286940"
   
 4.  필요한 경우 속성을 수정한 다음 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  복제 저장 프로시저를 사용하여 프로그래밍 방식으로 게시자와 배포자 속성을 볼 수 있습니다.  
   
 #### <a name="to-view-distributor-and-distribution-database-properties"></a>배포자 및 배포 데이터베이스 속성을 보려면  
@@ -107,7 +107,7 @@ ms.locfileid: "76286940"
   
 4.  배포자를 사용하는 게시자의 속성을 변경하려면 배포자에서 [sp_changedistpublisher](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md) 를 실행합니다.  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 예에서는 배포자와 배포자 데이터베이스에 대한 정보를 반환합니다.  
   
  [!code-sql[HowTo#sp_helpdistributor](../../relational-databases/replication/codesnippet/tsql/view-and-modify-distribu_1.sql)]  
@@ -125,7 +125,7 @@ ms.locfileid: "76286940"
   
  [!code-sql[HowTo#sp_changedistributor_password](../../relational-databases/replication/codesnippet/tsql/view-and-modify-distribu_5.sql)]  
   
-##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
   
 #### <a name="to-view-and-modify-distributor-properties"></a>배포자 속성을 보고 수정하려면  
   
@@ -190,7 +190,7 @@ ms.locfileid: "76286940"
   
     5.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> 메서드를 호출합니다. *password* 매개 변수에 대해 5단계에서 만든 새 암호 값을 전달합니다.  
   
-###  <a name="PShellExample"></a> 예(RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> 예(RMO)  
  이 예에서는 배포 및 배포 데이터베이스 속성을 변경하는 방법을 보여 줍니다.  
   
 > [!IMPORTANT]  

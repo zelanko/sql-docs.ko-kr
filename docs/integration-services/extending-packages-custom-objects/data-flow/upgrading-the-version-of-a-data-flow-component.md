@@ -16,10 +16,10 @@ ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 728308339d062c855a50372fd2cb001245dd6091
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71287410"
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>데이터 흐름 구성 요소의 버전 업그레이드

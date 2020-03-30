@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 472a654a0bee8b386c6573c8ab1ed8fdb0b4cf8d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286667"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능
@@ -219,14 +219,14 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   시스템 함수: @@rowcount 고유하게 컴파일된 저장 프로시저 내의 문은 @@rowcount를 업데이트합니다. 고유하게 컴파일된 저장 프로시저에서 @@rowcount를 사용하여 고유하게 컴파일된 저장 프로시저 내에서 실행된 마지막 문의 영향을 받는 행의 수를 확인할 수 있습니다. 그러나 @@rowcount는 고유하게 컴파일된 저장 프로시저의 실행이 시작될 때와 끝날 때 0으로 다시 설정됩니다.  
 
--   보안 함수: IS_MEMBER({'group' | 'role'}), IS_ROLEMEMBER ('role' [, 'database_principal']), IS_SRVROLEMEMBER ('role' [, 'login']), ORIGINAL_LOGIN(), SESSION_USER, CURRENT_USER, SUSER_ID(['login']), SUSER_SID(['login'] [, Param2]), SUSER_SNAME([server_user_sid]), SYSTEM_USER, SUSER_NAME, USER, USER_ID(['user']), USER_NAME([id]), CONTEXT_INFO()
+-   보안 기능: IS_MEMBER({'group' | 'role'}), IS_ROLEMEMBER ('role' [, 'database_principal']), IS_SRVROLEMEMBER ('role' [, 'login']), ORIGINAL_LOGIN(), SESSION_USER, CURRENT_USER, SUSER_ID(['login']), SUSER_SID(['login'] [, Param2]), SUSER_SNAME([server_user_sid]), SYSTEM_USER, SUSER_NAME, USER, USER_ID(['user']), USER_NAME([id]), CONTEXT_INFO()
 
 -   네이티브 모듈의 실행을 중첩할 수 있습니다.
 
 ##  <a name="auditing"></a><a name="auditing"></a> 감사  
  프로시저 수준 감사는 고유하게 컴파일된 저장 프로시저에서 지원됩니다.  
 
- 감사에 대한 자세한 내용은 [서버 감사 및 데이터베이스 감사 사양 만들기](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)를 참조하세요.  
+ 감사에 대한 자세한 내용은 [Create a Server Audit and Database Audit Specification](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)를 참조하세요.  
 
 ##  <a name="table-and-query-hints"></a><a name="tqh"></a> 테이블 및 쿼리 힌트  
  다음 항목이 지원됩니다.  
@@ -250,7 +250,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
  ORDER BY 절을 사용하지 않는 경우 TOP 연산자와 함께 어떤 정수 값이든 사용할 수 있습니다.  
 
- TOP N = 8192의 예: 컴파일  
+ TOP N = 8192인 경우의 예: 컴파일  
 
 ```sql  
 CREATE PROCEDURE testTop  
@@ -263,7 +263,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- TOP N > 8192의 예: 컴파일이 실패합니다.  
+ TOP N > 8192인 경우의 예: 컴파일 실패  
 
 ```sql  
 CREATE PROCEDURE testTop  
@@ -278,7 +278,7 @@ GO
 
  8192 행 제한은 `TOP N` 에만 적용됩니다. 여기서 `N` 은 앞의 예와 같이 상수입니다.  8192보다 큰 `N` 이 필요한 경우 값을 변수에 할당하고 이 변수를 `TOP`과 함께 사용할 수 있습니다.  
 
- 변수 사용 예: 컴파일  
+ 변수 사용의 예: 컴파일  
 
 ```sql  
 CREATE PROCEDURE testTop  
@@ -292,7 +292,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- **반환되는 행에 대한 제한:** 다음 두 경우에는 TOP 연산자가 반환할 수 있는 행 수를 잠재적으로 줄일 수 있습니다.  
+ **반환된 행에 대한 제한:** TOP 연산자에서 반환할 수 있는 행 수를 잠재적으로 줄일 수 있는 두 가지 경우는 다음과 같습니다.  
 
 -   쿼리에서 JOIN 사용.  JOIN이 제한에 미치는 영향은 쿼리 계획에 따라 다릅니다.  
 

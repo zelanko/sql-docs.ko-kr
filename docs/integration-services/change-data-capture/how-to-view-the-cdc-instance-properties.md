@@ -11,10 +11,10 @@ ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eaf4308f05b7a7fb1f450947754736d0cf565b61
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294669"
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>CDC 인스턴스 속성을 보는 방법

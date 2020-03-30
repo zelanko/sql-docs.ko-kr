@@ -13,10 +13,10 @@ ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2eb45257f2641b1e4e9f94865784f8910ebf27fd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822665"
 ---
 # <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>가용성 그룹에서 Azure VM을 보조 복제본으로 구성
@@ -24,10 +24,10 @@ ms.locfileid: "74822665"
   Azure 복제본 추가 마법사를 사용하여 하이브리드 IT에서 새 Azure VM을 만들고 새로운 또는 기존 Always On 가용성 그룹에 대한 보조 복제본으로 구성할 수 있습니다.  
   
 
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
  가용성 그룹에 가용성 복제본을 추가한 적이 없는 경우 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)의 "서버 인스턴스" 섹션과 "가용성 그룹 및 복제본" 섹션을 참조하세요.  
   
-##  <a name="Prerequisites"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
   
 -   현재 주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
   
@@ -41,12 +41,12 @@ ms.locfileid: "74822665"
   
      마법사를 사용하여 전체 초기 데이터 동기화를 수행할 수 없는 경우에는 보조 데이터베이스를 수동으로 준비해야 합니다. 마법사를 실행하기 전이나 후에 이 작업을 수행할 수 있습니다. 자세한 내용은 [가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)또는 PowerShell을 사용하여 Always On 가용성 그룹에 보조 데이터베이스를 조인하는 방법에 대해 설명합니다.  
   
-##  <a name="Permissions"></a> 권한  
+##  <a name="permissions"></a><a name="Permissions"></a> 권한  
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.  
   
  가용성 그룹에 복제본 추가 마법사에서 데이터베이스 미러링 엔드포인트를 관리할 수 있도록 하려면 CONTROL ON ENDPOINT 권한도 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> Azure 복제본 추가 마법사 사용(SQL Server Management Studio)  
+##  <a name="using-the-add-azure-replica-wizard-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Azure 복제본 추가 마법사 사용(SQL Server Management Studio)  
  [복제본 페이지 지정](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)에서 Azure 복제본 추가 마법사를 시작할 수 있습니다. 다음 두 가지 방법으로 이 페이지에 도달할 수 있습니다.  
   
 -   [가용성 그룹 마법사 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
@@ -99,7 +99,7 @@ ms.locfileid: "74822665"
   
      가용성 그룹 마법사 또는 가용성 그룹에 복제본 추가 마법사를 마치면 구성 프로세스를 통해 Azure에서 새 VM 만들기, AD 도메인에 VM 조인, Windows 클러스터에 VM 추가, Always On 고가용성 사용 설정, 가용성 그룹에 새 복제본 추가 등의 모든 작업이 수행됩니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [가용성 그룹에 보조 복제본 추가&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   

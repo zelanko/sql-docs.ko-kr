@@ -13,17 +13,17 @@ ms.assetid: 61243c87-bd62-4510-863f-2a8f347caf1f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 44328d275c962c1f6315e56e763c3a8550318ffb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74821816"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>가용성 그룹 속성 보기(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 사용하여 Always On 가용성 그룹에 대한 가용성 그룹 속성을 보는 방법에 대해 설명합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **가용성 그룹의 속성을 보고 변경하려면**  
   
 1.  개체 탐색기에서 주 복제본을 호스팅하는 서버 인스턴스에 연결하고 서버 트리를 확장합니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "74821816"
   
      **사용 권한** 페이지를 사용하여 가용성 그룹과 연결된 현재 로그인, 역할 및 명시적 권한을 확인할 수 있습니다. 자세한 내용은 [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md)을 참조하세요.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **가용성 그룹의 속성 및 상태를 보려면**  
   
  서버 인스턴스가 가용성 복제본을 호스팅하는 가용성 그룹의 속성 및 상태를 쿼리하려면 다음 뷰를 사용합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "74821816"
   
  **열 이름:** group_id, primary_replica, primary_recovery_health, primary_recovery_health_desc, secondary_recovery_health, secondary_recovery_health_desc, synchronization_health, synchronization_health_desc  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **가용성 그룹에 대한 자세한 내용을 보려면**  
   
 -   [가용성 복제본 속성 보기&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md)  

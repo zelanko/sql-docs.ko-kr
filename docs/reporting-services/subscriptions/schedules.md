@@ -16,10 +16,10 @@ ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e73ce189b38f3610468993999df172d778f30026
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578099"
 ---
 # <a name="schedules"></a>일정
@@ -34,7 +34,7 @@ ms.locfileid: "65578099"
  공유 일정은 관리하기가 더 쉬우므로 예약된 작업을 보다 유연하게 관리할 수 있습니다. 예를 들어 공유 일정을 일시 중지하고 재개할 수 있습니다. 또한 예약된 작업이 동시에 너무 많이 실행되는 경우에는 서로 다른 시간에 실행되는 공유 일정을 여러 개 만든 다음 처리 부하가 보고서 서버에서 균등하게 분포될 때까지 일정 정보를 조정할 수 있습니다.  
   
   
-##  <a name="bkmk_whatyoucando"></a> 예약으로 수행할 수 있는 작업  
+##  <a name="what-you-can-do-with-schedules"></a><a name="bkmk_whatyoucando"></a> 예약으로 수행할 수 있는 작업  
  기본 모드의 경우 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 웹 포털 및 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] , SharePoint 모드의 경우 SharePoint 사이트 관리 페이지를 사용하여 예약을 만들고 관리할 수 있습니다. 다음을 수행할 수 있습니다.  
   
 -   표준 또는 데이터 기반 구독에서 보고서 배달 예약  
@@ -56,7 +56,7 @@ ms.locfileid: "65578099"
 > [!NOTE]  
 >  일정 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2017의 버전과 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요.  
   
-##  <a name="bkmk_compare"></a> 공유 일정과 보고서별 일정 비교  
+##  <a name="comparing-shared-and-report-specific-schedules"></a><a name="bkmk_compare"></a> 공유 일정과 보고서별 일정 비교  
  두 가지 유형의 일정 모두 출력 내용이 같습니다.  
   
 -   **공유 일정** 은 미리 만들어 놓은 일정 정보가 들어 있는 이식 가능한 다목적 항목입니다. 공유 일정은 시스템 수준 항목이므로 공유 일정을 만들려면 시스템 수준의 사용 권한이 있어야 합니다. 따라서 일반적으로 보고서 서버 관리자나 내용 관리자는 보고서 서버에서 사용할 수 있는 공유 일정을 만듭니다. 공유 일정은 웹 포털 또는 SharePoint 사이트 설정을 사용하여 보고서 서버에서 저장되고 관리됩니다.  
@@ -71,14 +71,14 @@ ms.locfileid: "65578099"
   
 -   **보고서별 일정** 은 개별 보고서, 구독 또는 보고서 실행 작업 컨텍스트에서 정의되어 캐시 만료나 스냅샷 업데이트를 결정합니다. 구독을 정의하거나 보고서 실행 속성을 설정할 때 보고서별 일정이 인라인으로 생성됩니다. 공유 일정에서 원하는 빈도나 반복 패턴을 제공하지 않으면 보고서별 일정을 만들 수 있습니다. 보고서 실행을 중지하려면 보고서별 일정을 수동으로 편집해야 합니다. 보고서별 일정은 개별 사용자가 만들 수 있습니다.  
   
-##  <a name="bkmk_configuredatasources"></a> 데이터 원본 구성  
+##  <a name="configure-the-data-sources"></a><a name="bkmk_configuredatasources"></a> 데이터 원본 구성  
  보고서에 대해 데이터 또는 구독 처리를 예약하려면 먼저 저장된 자격 증명이나 무인 모드로 실행되는 보고서 처리 계정을 사용하도록 보고서 데이터 원본을 구성해야 합니다. 저장된 자격 증명을 사용하는 경우 하나의 자격 증명 집합만 저장할 수 있으며 이 자격 증명 집합은 보고서를 실행하는 모든 사용자가 사용합니다. 자격 증명은 Windows 사용자 계정이거나 데이터베이스 사용자 계정일 수 있습니다.  
   
  무인 모드로 실행되는 보고서 처리 계정은 보고서 서버에서 구성되는 특수한 용도의 계정입니다. 이 계정은 예약된 작업에 외부 파일 검색이나 처리가 필요한 경우 보고서 서버가 원격 컴퓨터에 연결하는 데 사용됩니다. 구성할 경우 이 계정을 통해 보고서에 데이터를 제공하는 외부 데이터 원본에 연결할 수 있습니다.  
   
  저장된 자격 증명이나 무인 모드로 실행되는 보고서 처리 계정을 지정하려면 보고서의 데이터 원본 속성을 편집합니다. 보고서에서 공유 데이터 원본을 사용하는 경우에는 대신 공유 데이터 원본을 편집합니다.  
   
-##  <a name="bkmk_credentials"></a> 자격 증명 및 처리 계정 저장  
+##  <a name="store-credentials-and-processing-accounts"></a><a name="bkmk_credentials"></a> 자격 증명 및 처리 계정 저장  
  일정 작업 방법은 역할 할당에 속하는 태스크에 따라 다릅니다. 미리 정의된 역할을 사용하는 경우 내용 관리자 및 시스템 관리자인 사용자가 일정을 만들고 관리할 수 있습니다. 사용자 지정 역할 할당을 사용하는 경우 예약된 작업을 지원하는 태스크가 역할 할당에 포함되어 있어야 합니다.  
   
 |원하는 작업|포함되는 태스크|기본 모드의 미리 정의된 역할|SharePoint 모드 그룹|  
@@ -90,7 +90,7 @@ ms.locfileid: "65578099"
   
  기본 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 보안에 대한 자세한 내용은 [미리 정의된 역할](../../reporting-services/security/role-definitions-predefined-roles.md), [기본 모드 보고서 서버에 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) 및 [태스크 및 권한](../../reporting-services/security/tasks-and-permissions.md)을 참조하세요. SharePoint 모드의 경우 [Reporting Services의 역할 및 태스크와 SharePoint 그룹 및 사용 권한 비교](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)를 참조하세요.  
   
-##  <a name="bkmk_how_scheduling_works"></a> 일정 예약 및 배달 프로세스 작동 방식  
+##  <a name="how-scheduling-and-delivery-processing-works"></a><a name="bkmk_how_scheduling_works"></a> 일정 예약 및 배달 프로세스 작동 방식  
  일정 예약 및 배달 프로세서는 다음 기능을 제공합니다.  
   
 -   보고서 서버 데이터베이스의 이벤트 및 알림 큐를 유지 관리합니다. 스케일 아웃 배포에서는 배포의 모든 보고서 서버에서 큐가 공유됩니다.  
@@ -115,19 +115,19 @@ ms.locfileid: "65578099"
   
  Reporting Services는 모든 예약된 작업에 대해 이벤트 큐를 관리합니다. 또한 새 이벤트를 확인하기 위해 정기적으로 큐를 폴링합니다. 기본적으로 큐는 10초 간격으로 검색됩니다. RSReportServer.config 파일에서 **PollingInterval**, **IsNotificationService**및 **IsEventService** 구성 설정을 수정하여 간격을 변경할 수 있습니다. SharePoint 모드에서도 이러한 설정에 대해 Rsreporserver.config를 사용하며 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 값이 적용됩니다. 자세한 내용은 [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)을 참조하세요.  
   
-##  <a name="bkmk_serverdependencies"></a> 서버 종속성  
+##  <a name="server-dependencies"></a><a name="bkmk_serverdependencies"></a> 서버 종속성  
  일정 예약 및 배달 프로세서를 사용하려면 보고서 서버 서비스와 SQL Server 에이전트를 시작해야 합니다. 일정 예약 및 배달 처리 기능은 정책 기반 관리에 있는 **Reporting Services에 대한 노출 영역 구성** 패싯의 **ScheduleEventsAndReportDeliveryEnabled** 속성을 통해 설정해야 합니다. 예약된 작업이 수행되려면 SQL Server 에이전트와 보고서 서버 서비스가 모두 실행 중이어야 합니다.  
   
 > [!NOTE]  
 >  **Reporting Services에 대한 노출 영역 구성** 패싯을 사용하여 일시적 또는 영구적으로 예약된 작업을 중지할 수 있습니다. 사용자 지정 배달 확장 프로그램을 만들어 배포할 수는 있지만 일정 예약 및 배달 프로세서만 단독으로 확장할 수는 없습니다. 따라서 이벤트 및 알림이 관리되는 방식을 변경할 수 없습니다. 기능 해제에 대한 자세한 내용은 **의 예약된 이벤트 및 배달**[Turn Reporting Services Features On or Off](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)섹션을 참조하세요.  
   
-###  <a name="bkmk_stoppingagent"></a> SQL Server 에이전트를 중지할 때의 결과  
+###  <a name="effects-of-stopping-the-sql-server-agent"></a><a name="bkmk_stoppingagent"></a> SQL Server 에이전트를 중지할 때의 결과  
  예약된 보고서 처리는 기본적으로 SQL Server 에이전트를 사용합니다. 이 서비스를 중지하면 <xref:ReportService2010.ReportingService2010.FireEvent%2A> 메서드를 통해 프로그래밍 방식으로 큐에 처리 요청을 추가할 때까지 큐에 새로운 처리 요청이 추가되지 않습니다. 서비스를 다시 시작하면 보고서 처리 요청을 만드는 작업이 다시 시작됩니다. SQL Server 에이전트가 오프라인 상태일 때 보고서 서버는 과거에 발생했을 수 있는 보고서 처리 작업을 다시 만들려고 하지 않습니다. 따라서 1주일 동안 SQL Server 에이전트를 중지하면 해당 주간에 예약된 모든 작업이 손실됩니다.  
   
 > [!NOTE]  
 >  SQL Server 에이전트가 Reporting Services에 제공하는 기능은 <xref:ReportService2010.ReportingService2010.FireEvent%2A> 메서드를 사용하여 큐에 일정 이벤트를 추가하는 사용자 지정 코드로 대체될 수 있습니다.  
   
-###  <a name="bkmk_stoppingservice"></a> 보고서 서버 서비스를 중지할 때의 결과  
+###  <a name="effects-of-stopping-the-report-server-service"></a><a name="bkmk_stoppingservice"></a> 보고서 서버 서비스를 중지할 때의 결과  
  보고서 서버 서비스가 중지되더라도 SQL Server 에이전트는 보고서 처리 요청을 큐에 계속 추가합니다. SQL Server 에이전트의 상태 정보는 작업이 성공적으로 수행되었음을 나타냅니다. 그러나 보고서 서버 서비스가 중지되었으므로 실제로 보고서 처리는 발생하지 않습니다. 요청은 보고서 서버 서비스를 다시 시작할 때까지 큐에 계속 누적됩니다. 보고서 서버 서비스를 다시 시작하면 큐에 있는 모든 보고서 처리 요청이 순서대로 처리됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

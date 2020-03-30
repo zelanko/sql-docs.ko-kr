@@ -13,10 +13,10 @@ ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dc7e5d4deb17335dfc1910b44306f611092e0984
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294684"
 ---
 # <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
@@ -42,7 +42,7 @@ ms.locfileid: "71294684"
   
      작업할 CDC Service를 마우스 오른쪽 단추로 클릭하고 원하는 동작을 선택할 수도 있습니다. [CDC Service에서 수행할 수 있는 작업](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService)을 참조하세요.  
   
-##  <a name="BKMK_WhatcandowithCDCService"></a> CDC Service에서 수행할 수 있는 작업  
+##  <a name="what-can-you-do-with-a-cdc-service"></a><a name="BKMK_WhatcandowithCDCService"></a> CDC Service에서 수행할 수 있는 작업  
  CDC서비스에서 작업할 때 다음과 같은 동작을 수행할 수 있습니다.  
   
 ### <a name="delete-the-service"></a>서비스 삭제  

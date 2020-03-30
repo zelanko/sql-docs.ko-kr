@@ -13,10 +13,10 @@ ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: e27516fb2b0931c2df8f4a76a4153ee8c38616b9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957391"
 ---
 # <a name="restore-the-service-master-key"></a>서비스 마스터 키 복원

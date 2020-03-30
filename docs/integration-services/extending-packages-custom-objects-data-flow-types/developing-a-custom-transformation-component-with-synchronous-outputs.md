@@ -22,10 +22,10 @@ ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 973b20bbe86e0aaff8cf4732efd95e1f3b10c423
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297298"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>동기 출력을 사용하여 사용자 지정 변환 구성 요소 개발

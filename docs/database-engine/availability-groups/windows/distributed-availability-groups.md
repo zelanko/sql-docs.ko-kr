@@ -13,10 +13,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5499bb5106deddcd073c52453a477190e3150bb9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76941112"
 ---
 # <a name="distributed-availability-groups"></a>분산 가용성 그룹
@@ -140,7 +140,7 @@ SQL Server 2012 또는 2014에는 분산 가용성 그룹 기능이 없으므로
 
 ![분산 가용성 그룹을 사용한 읽기 복제본 확장](./media/distributed-availability-group/dag-05-scaling-out-reads-with-distributed-ags.png)
 
-다음 그림은 AG 1을 서로 다른 두 개의 분산 가용성 그룹에 대한 주 복제본으로 보여줍니다. 분산 AG 1(AG 1 및 AG 2로 구성) 및 분산 AG 2(AG 1 및 AG 3으로 구성).
+다음 그림에서는 서로 다른 두 가지 분산 가용성 그룹, 즉 분산 AG 1(AG 1과 AG 2로 구성)과 분산 AG 2(AG 1과 AG 3으로 구성)에 대한 주 복제본인 AG 1을 보여 줍니다.
 
 
 ![분산 가용성 그룹 예제를 사용한 또 다른 읽기 복제본 확장]( ./media/distributed-availability-group/dag-06-another-scaling-out-reads-using-distributed-ags-example.png)
@@ -231,7 +231,7 @@ INNER JOIN sys.availability_replicas AS ar
 GO
 ```
 
-분산 가용성 그룹에 참여하는 두 번째 WSFC 클러스터의 출력 예제가 다음 그림에 표시됩니다. SPAG1은 다음 두 개의 복제본으로 구성됩니다. DENNIS 및 JY. 그러나 SPDistAG라는 이름의 분산 가용성 그룹에는 기존 가용성 그룹과 마찬가지로 인스턴스의 이름이 아닌 참여하는 가용성 그룹의 이름 2개(SPAG1 및 SPAG2)가 표시됩니다. 
+분산 가용성 그룹에 참여하는 두 번째 WSFC 클러스터의 출력 예제가 다음 그림에 표시됩니다. SPAG1은 DENNIS와 JY라는 두 개의 복제본으로 구성되어 있습니다. 그러나 SPDistAG라는 이름의 분산 가용성 그룹에는 기존 가용성 그룹과 마찬가지로 인스턴스의 이름이 아닌 참여하는 가용성 그룹의 이름 2개(SPAG1 및 SPAG2)가 표시됩니다. 
 
 ![이전 쿼리의 예제 출력](./media/distributed-availability-group/dag-11-example-output-of-query-above.png)
 

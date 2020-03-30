@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75548278"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
@@ -226,7 +226,7 @@ DELETE
 |[원격 테이블에서 행 삭제](#RemoteTables)|연결된 서버 • OPENQUERY 행 집합 함수 • OPENDATASOURCE 행 집합 함수|  
 |[DELETE 문의 결과 캡처](#CaptureResults)|OUTPUT 절|  
   
-###  <a name="BasicSyntax"></a> 기본 구문  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> 기본 구문  
  이 섹션의 예에서는 최소 필수 구문을 사용하여 DELETE 문의 기본 기능을 보여 줍니다.  
   
 #### <a name="a-using-delete-with-no-where-clause"></a>A. WHERE 절 없이 DELETE 사용  
@@ -237,7 +237,7 @@ DELETE FROM Sales.SalesPersonQuotaHistory;
 GO  
 ```  
   
-###  <a name="LimitRows"></a>삭제되는 행 제한  
+###  <a name="limiting-the-rows-deleted"></a><a name="LimitRows"></a>삭제되는 행 제한  
  이 섹션의 예에서는 삭제되는 행 수를 제한하는 방법을 보여 줍니다.  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. WHERE 절을 사용하여 행 집합 삭제  
@@ -335,7 +335,7 @@ WHERE PurchaseOrderDetailID IN
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> 원격 테이블에서 행 삭제  
+###  <a name="deleting-rows-from-a-remote-table"></a><a name="RemoteTables"></a> 원격 테이블에서 행 삭제  
  이 섹션의 예에서는 원격 테이블을 참조하는 [연결된 서버](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 또는 [행 집합 함수](../../t-sql/functions/rowset-functions-transact-sql.md) 를 사용하여 원격 테이블에서 행을 삭제하는 방법을 보여 줍니다. 원격 테이블은 SQL Server의 다른 서버 또는 인스턴스에 있습니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
@@ -386,7 +386,7 @@ DELETE FROM OPENDATASOURCE('SQLNCLI',
 WHERE DepartmentID = 17;'  
 ```  
   
-###  <a name="CaptureResults"></a> DELETE 문의 결과 캡처  
+###  <a name="capturing-the-results-of-the-delete-statement"></a><a name="CaptureResults"></a> DELETE 문의 결과 캡처  
   
 #### <a name="i-using-delete-with-the-output-clause"></a>9\. DELETE에 OUTPUT 절 사용  
  다음 예에서는 `DELETE` 문의 결과를 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 테이블 변수로 저장하는 방법을 보여 줍니다.  
@@ -431,7 +431,7 @@ ORDER BY ProductModelID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="k-delete-all-rows-from-a-table"></a>11. 테이블에서 행을 삭제합니다.  
  다음 예에서는 삭제될 행 수를 제한하는 WHERE 절을 사용하지 않았기 때문에 `Table1` 테이블에서 모든 행을 삭제합니다.  

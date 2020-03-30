@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a18b99d8e4700a840fa3cdc98af492bc0193bbaa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67914725"
 ---
 # <a name="object_name-transact-sql"></a>OBJECT_NAME(Transact-SQL)
@@ -132,7 +132,7 @@ FROM sys.dm_db_index_operational_stats(null, null, null, null);
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-object_name-in-a-where-clause"></a>D. WHERE 절에서 OBJECT_NAME 사용  
  다음 예에서는 `sys.objects` 문의 `OBJECT_NAME` 절에서 `WHERE`으로 지정한 개체에 대한 열을 `SELECT` 카탈로그 뷰에서 반환합니다. (개체 번호(아래 예에서 274100017)는 달라집니다.  이 예를 테스트하려면 각자의데이터베이스에서 `SELECT name, object_id FROM sys.objects;`를 실행하여 유효한 개체 번호를 조회하세요.)  

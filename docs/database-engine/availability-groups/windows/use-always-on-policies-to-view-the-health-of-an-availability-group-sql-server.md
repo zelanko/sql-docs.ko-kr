@@ -13,10 +13,10 @@ ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 13f43e5f66ca7700e9dd4732e9cf45ee1921548d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244739"
 ---
 # <a name="use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server"></a>Always On 정책을 사용하여 가용성 그룹의 상태 보기(SQL Server)
@@ -29,10 +29,10 @@ ms.locfileid: "75244739"
   
   
   
-##  <a name="Permissions"></a> 권한  
+##  <a name="permissions"></a><a name="Permissions"></a> 권한  
  연결, 서버 상태 보기 및 모든 정의 보기 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> Always On 대시보드 사용  
+##  <a name="using-the-always-on-dashboard"></a><a name="SSMSProcedure"></a> Always On 대시보드 사용  
  **Always On 대시보드를 열려면**  
   
 1.  개체 탐색기에서 가용성 복제본 중 하나를 호스팅하는 서버 인스턴스에 연결합니다. 가용성 그룹의 모든 가용성 복제본에 대한 정보를 보려면 주 복제본을 호스팅하는 서버 인스턴스를 사용합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "75244739"
   
  Always On 대시보드를 사용하는 방법은 [Always On 대시보드 사용&#40;SQL Server Management Studio&#41;](~/database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)을 참조하세요.  
   
-##  <a name="PowerShellProcedure"></a> PowerShell 사용  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell 사용  
  **Use Always On policies to view the health of an availability group**  
   
 1.  가용성 복제본 중 하나를 호스트하는 서버 인스턴스로 기본값을 설정(**cd**)합니다. 가용성 그룹의 모든 가용성 복제본에 대한 정보를 보려면 주 복제본을 호스팅하는 서버 인스턴스를 사용합니다.  
@@ -112,7 +112,7 @@ ms.locfileid: "75244739"
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
-##  <a name="RelatedContent"></a> 관련 내용  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
  **SQL Server Always On 팀 블로그 - PowerShell을 사용하여 Always On 상태 모니터링:**  
   
 -   [1부: 기본 Cmdlet 개요](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview/)  

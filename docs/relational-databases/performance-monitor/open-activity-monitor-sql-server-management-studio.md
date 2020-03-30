@@ -17,10 +17,10 @@ ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 0af1ae6d145836a313df8ba6e77f965aa17e0e9a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165532"
 ---
 # <a name="open-activity-monitor-in-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)에서 작업 모니터 열기
@@ -29,7 +29,7 @@ ms.locfileid: "74165532"
  작업 모니터에서는 모니터링 대상 인스턴스에 대해 쿼리를 실행하여 작업 모니터 표시 창에 대한 정보를 가져옵니다. 자동 새로 고침 간격을 10초보다 작게 설정하면 이러한 쿼리를 실행하는 데 사용되는 시간이 서버 성능에 영향을 줄 수 있습니다.  
   
   
-##  <a name="Permissions"></a> 사용 권한 확인  
+##  <a name="check-your-permissions"></a><a name="Permissions"></a> 사용 권한 확인  
  실제 동작을 보려면 VIEW SERVER STATE 권한이 있어야합니다. 작업 모니터의 데이터 파일 I/O 섹션을 보려면 CREATE DATABASE, ALTER ANY DATABASE 또는 VIEW ANY DEFINITION 권한과 VIEW SERVER STATE 권한이 있어야 합니다.  
   
  프로세스를 중단하려면 사용자가 sysadmin 또는 processadmin 고정 서버 역할의 멤버여야 합니다.  

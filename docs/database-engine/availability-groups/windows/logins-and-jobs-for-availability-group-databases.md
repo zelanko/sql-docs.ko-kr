@@ -15,10 +15,10 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 840e34dcad069ccd6dc2c4102c6a2a85b7e4fbf5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822238"
 ---
 # <a name="manage-logins-for-jobs-using-databases-in-an-always-on-availability-group"></a>Always On 가용성 그룹의 데이터베이스를 사용하여 작업에 대한 로그인 관리
@@ -46,7 +46,7 @@ ms.locfileid: "74822238"
   
      로그인과 작업 외에도 지정된 가용성 그룹의 보조 복제본을 호스팅하는 각 서버 인스턴스에서 다시 만들어야 하는 정보가 있습니다. 예를 들어 서버 구성 설정, 자격 증명, 암호화된 데이터, 사용 권한, 복제 설정, Service Broker 애플리케이션, 트리거(서버 수준) 등을 다시 만들어야 할 수 있습니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)을 참조하세요.  
   
-##  <a name="SSauthentication"></a> SQL Server 인증 또는 로컬 Windows 로그인을 사용하는 애플리케이션의 로그인  
+##  <a name="logins-of-applications-that-use-sql-server-authentication-or-a-local-windows-login"></a><a name="SSauthentication"></a> SQL Server 인증 또는 로컬 Windows 로그인을 사용하는 애플리케이션의 로그인  
  애플리케이션에서 SQL Server 인증 또는 로컬 Windows 로그인을 사용하는 경우 일치하지 않는 SID로 인해 원격 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에서 애플리케이션의 로그인이 확인되지 않을 수 있습니다. 일치하지 않는 SID로 인해 해당 로그인이 원격 서버 인스턴스에서 분리된 사용자가 됩니다. 이 문제는 애플리케이션이 장애 조치(Failover) 후 미러링된 데이터베이스 또는 로그 전달 데이터베이스에 연결하거나 백업에서 초기화된 복제 구독자 데이터베이스에 연결하는 경우에 발생할 수 있습니다.  
   
  이 문제를 방지하려면 원격 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에서 호스팅하는 데이터베이스를 사용하도록 애플리케이션을 설정할 때 예방 조치를 취하는 것이 좋습니다. 예방 조치에는 로컬 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 원격 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스로 로그인 및 암호를 전송하는 것이 포함됩니다. 이 문제를 방지하는 방법에 대한 자세한 내용은 KB 문서 918992([SQL Server 인스턴스 간에 로그인 및 암호를 전송하는 방법](https://support.microsoft.com/kb/918992/))를 참조하세요.  
@@ -56,7 +56,7 @@ ms.locfileid: "74822238"
   
  자세한 내용은 [데이터베이스 미러링 및 로그 전달에서의 분리된 사용자](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (데이터베이스 엔진 블로그)를 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [로그인 만들기](../../../relational-databases/security/authentication-access/create-a-login.md)  
   

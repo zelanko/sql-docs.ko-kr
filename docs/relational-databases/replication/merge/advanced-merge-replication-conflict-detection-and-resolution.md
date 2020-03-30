@@ -21,10 +21,10 @@ ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f90625c1aa123cf72b93ce815b02cccd7cedc78a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321608"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>고급 병합 복제 - 충돌 감지 및 해결

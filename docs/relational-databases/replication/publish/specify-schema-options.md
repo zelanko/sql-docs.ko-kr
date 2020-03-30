@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 1ce8df82856f7a6a495fdd026dec0d46eaba4c89
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287530"
 ---
 # <a name="specify-schema-options-for-sql-server-replication"></a>SQL Server 복제의 스키마 옵션 지정
@@ -44,17 +44,17 @@ ms.locfileid: "76287530"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   게시가 만들어진 후 스키마 옵션을 변경하면 새 스냅샷을 생성해야 합니다.  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   스키마 옵션의 전체 목록은 `@schema_option`sp_addarticle&#40;Transact-SQL&#41;[ 및 ](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)sp_addmergearticle&#40;Transact-SQL&#41;[의 ](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 매개 변수를 참조하세요.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  제약 조건 및 트리거를 구독자에 복사할지 여부 등의 스키마 옵션을 **아티클 속성-** Article> **대화 상자의 \<속성** 탭에 지정합니다. 이 탭은 새 게시 마법사 및 **게시 속성 - \<게시>** 대화 상자에서 사용할 수 있습니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md) 및 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="to-specify-schema-options"></a>스키마 옵션을 지정하려면  
@@ -76,7 +76,7 @@ ms.locfileid: "76287530"
   
 5.  **게시 속성 - \<게시>** 대화 상자에 있는 경우 **확인**을 클릭하여 대화 상자를 저장하고 닫습니다.  
 
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  스키마 옵션은 하나 이상의 옵션에 대한 [|(비트 OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) 결과인 16진수 값으로 지정됩니다. 자세한 내용은 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 및 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 참조하세요.  
   
 > [!NOTE]  

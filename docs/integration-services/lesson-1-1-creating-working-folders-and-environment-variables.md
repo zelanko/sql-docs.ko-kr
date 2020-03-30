@@ -11,10 +11,10 @@ ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 08de88d45b31e4c00c9ce5a7790405c6da1542a2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71284141"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>1-1단원 - 작업 폴더 및 환경 변수 만들기

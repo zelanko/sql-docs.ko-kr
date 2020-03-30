@@ -11,10 +11,10 @@ ms.assetid: 4320a4a4-6183-462b-8bda-e7424e7cb706
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0389f613d9b7a26aa14c5a8388ee8cd34036ddf8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822336"
 ---
 # <a name="dynamic-management-views-and-system-catalog-views-always-on-availability-groups"></a>동적 관리 뷰 및 시스템 카탈로그 뷰(Always On 가용성 그룹)

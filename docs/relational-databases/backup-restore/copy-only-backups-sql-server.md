@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 1d95c1982d5809288b64f34cd1f6328b4ee00e4c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76941038"
 ---
 # <a name="copy-only-backups"></a>복사 전용 백업
@@ -37,7 +37,7 @@ ms.locfileid: "76941038"
   
 - 복사 전용 로그 백업(전체 복구 모델 및 대량 로그 복구 모델 전용)  
 
-     복사 전용 로그 백업은 기존 로그 보관 지점을 유지하므로 정기적인 로그 백업 시퀀스에 영향을 주지 않습니다. 복사 전용 로그 백업은 일반적으로 불필요한 백업입니다. 대신 WITH NORECOVERY를 사용하여 새 정기 로그 백업을 만든 다음 해당 백업을 복원 시퀀스에 필요한 모든 이전 로그 백업과 함께 사용할 수 있습니다. 하지만 복사 전용 로그 백업은 온라인 복원에도 유용할 수 있습니다. 이에 대한 예제는 [예제: 읽기-쓰기 파일의 온라인 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)을 참조하세요.  
+     복사 전용 로그 백업은 기존 로그 보관 지점을 유지하므로 정기적인 로그 백업 시퀀스에 영향을 주지 않습니다. 복사 전용 로그 백업은 일반적으로 불필요한 백업입니다. 대신 WITH NORECOVERY를 사용하여 새 정기 로그 백업을 만든 다음 해당 백업을 복원 시퀀스에 필요한 모든 이전 로그 백업과 함께 사용할 수 있습니다. 하지만 복사 전용 로그 백업은 온라인 복원에도 유용할 수 있습니다. 해당 예제를 보려면 [예제: 읽기-쓰기 파일의 온라인 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)을 참조하세요.  
 
      복사 전용 백업 이후에는 트랜잭션 로그를 자를 수 없습니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "76941038"
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]또는 PowerShell을 사용하여 복사 전용 백업을 만들 수 있습니다.  
 
 ### <a name="examples"></a>예  
-###  <a name="SSMSProcedure"></a> 1. SQL Server Management Studio 사용  
+###  <a name="a-using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 1. SQL Server Management Studio 사용  
 이 예제에서는 `Sales` 데이터베이스의 복사 전용 백업이 기본 백업 위치에서 디스크에 백업됩니다.
 
 1. **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
@@ -61,7 +61,7 @@ ms.locfileid: "76941038"
 
 1. **확인**을 클릭합니다.
 
-###  <a name="TsqlProcedure"></a>2. Transact-SQL 사용  
+###  <a name="b-using-transact-sql"></a><a name="TsqlProcedure"></a>2. Transact-SQL 사용  
 이 예에서는 COPY_ONLY 매개 변수를 활용하여 `Sales` 데이터베이스에 대한 복사 전용 백업을 만듭니다.  트랜잭션 로그의 복사 전용 백업도 만듭니다.
 
 ```sql
@@ -78,13 +78,13 @@ WITH COPY_ONLY;
 > DIFFERENTIAL 옵션과 함께 지정하면 COPY_ONLY가 적용되지 않습니다.  
 
   
-###  <a name="PowerShellProcedure"></a>3. PowerShell 사용  
+###  <a name="c-using-powershell"></a><a name="PowerShellProcedure"></a>3. PowerShell 사용  
 이 예에서는 CopyOnly 매개 변수를 활용하여 `Sales` 데이터베이스에 대한 복사 전용 백업을 만듭니다.  
 ```powershell
 Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile 'E:\BAK\Sales_Copy.bak' -CopyOnly
 ```  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **전체 또는 로그 백업을 만들려면**  
   
 - [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  

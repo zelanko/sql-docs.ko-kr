@@ -20,32 +20,32 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ed3026ae450e50bcb2d9debf93c4b90eab3afad0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72905541"
 ---
 # <a name="create-dml-triggers"></a>DML 트리거 만들기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE TRIGGER 문을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거를 만드는 방법에 대해 설명합니다.  
   
-##  <a name="Top"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="Top"></a> 시작하기 전에  
   
 ### <a name="limitations-and-restrictions"></a>제한 사항  
  DML 트리거 생성과 관련한 제한 사항 목록은 [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)를 참조하세요.  
   
-###  <a name="Permissions"></a> 권한  
+###  <a name="permissions"></a><a name="Permissions"></a> 권한  
  트리거를 생성할 테이블 또는 뷰에 대한 ALTER 권한이 필요합니다.  
   
-##  <a name="Procedures"></a> DML 트리거를 만드는 방법  
+##  <a name="how-to-create-a-dml-trigger"></a><a name="Procedures"></a> DML 트리거를 만드는 방법  
  다음 중 하나를 사용할 수 있습니다.  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "72905541"
 
  [시작하기 전에](#Top)  
   
-###  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   

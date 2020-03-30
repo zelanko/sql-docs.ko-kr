@@ -17,10 +17,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ae89c263008c035dc7cd8e0050b50a5cdd9cc705
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055993"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기
@@ -64,7 +64,7 @@ ms.locfileid: "74055993"
 > [!IMPORTANT]  
 >  **bcp** 를 사용하여 **smalldatetime**필드로 데이터를 가져올 때 초 값이 00.000인지 확인하세요. 그렇지 않으면 작업이 실패합니다. **smalldatetime** 데이터 형식은 가장 근접한 분 값만 갖습니다. 이 경우 BULK INSERT 및 INSERT ... SELECT * FROM OPENROWSET(BULK...)는 이 경우 실패하지 않지만 초 값이 잘립니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **대량 가져오기 또는 대량 내보내기를 위한 데이터 형식을 사용하려면**  
   
 -   [문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)  

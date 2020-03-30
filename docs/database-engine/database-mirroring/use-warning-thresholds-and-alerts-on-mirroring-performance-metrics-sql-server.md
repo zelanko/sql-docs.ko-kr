@@ -19,10 +19,10 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ad44ae43a33a132fc2b5170a8ff4d3e6b3572ded
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74820907"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>미러링 성능 메트릭에 대해 경고 임계값 및 경고 사용(SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "74820907"
  미러된 데이터베이스에 대해 모니터링을 설정하면 시스템 관리자가 여러 개의 주요 성능 메트릭에 대해 경고 임계값을 구성할 수 있습니다. 또한 관리자는 이러한 데이터베이스 미러링 이벤트 및 기타 이벤트에 대해 경고를 구성할 수 있습니다.  
   
   
-##  <a name="PerfMetricsAndWarningThresholds"></a> 성능 메트릭 및 경고 임계값  
+##  <a name="performance-metrics-and-warning-thresholds"></a><a name="PerfMetricsAndWarningThresholds"></a> 성능 메트릭 및 경고 임계값  
  다음 표에서는 경고를 구성할 수 있는 성능 메트릭을 보여 주고 해당 경고 임계값과 데이터베이스 미러링 모니터 레이블에 대해 나열합니다.  
   
 |성능 메트릭|경고 임계값|데이터베이스 미러링 모니터 레이블|  
@@ -44,7 +44,7 @@ ms.locfileid: "74820907"
   
  이러한 성능 메트릭 중 하나에 대해 시스템 관리자는 미러된 데이터베이스에서 임계값을 지정할 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [경고 임계값 설정 및 관리](#SetUpManageWarningThresholds)를 참조하세요.  
   
-##  <a name="SetUpManageWarningThresholds"></a> 경고 임계값 설정 및 관리  
+##  <a name="setting-up-and-managing-warning-thresholds"></a><a name="SetUpManageWarningThresholds"></a> 경고 임계값 설정 및 관리  
  시스템 관리자는 주요 미러링 성능 메트릭에 대해 하나 이상의 경고 임계값을 구성할 수 있습니다. 데이터베이스가 장애 조치되는 경우에도 경고가 지속되도록 두 파트너에서 모두 지정된 경고에 대해 임계값을 설정하는 것이 좋습니다. 각 파트너에 적합한 임계값은 해당 파트너 시스템의 성능 기능에 따라 달라집니다.  
   
  다음 중 하나를 사용하여 경고 임계값을 구성하고 관리할 수 있습니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "74820907"
 >   
 >  참조하세요.  
   
-##  <a name="UseAlerts"></a> 미러된 데이터베이스에 대해 경고 사용  
+##  <a name="using-alerts-for-a-mirrored-database"></a><a name="UseAlerts"></a> 미러된 데이터베이스에 대해 경고 사용  
  미러된 데이터베이스 모니터링의 핵심은 중요한 데이터베이스 미러링 이벤트에 대해 경고를 구성하는 것입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 다음 유형의 데이터베이스 미러링 이벤트를 생성합니다.  
   
 -   성능 임계값 이벤트  
@@ -101,7 +101,7 @@ ms.locfileid: "74820907"
 > [!IMPORTANT]  
 >  모든 미러링 세션에서 상태 변경 이벤트에 대해 경고를 보내도록 데이터베이스를 구성하는 것이 좋습니다. 수동 구성 변경의 결과로 상태 변경이 예상되는 경우가 아니면 문제가 발생한 것이므로 데이터가 손상될 수 있습니다. 데이터를 보호하려면 예기치 않은 상태 변경의 원인을 확인하고 해결합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **SQL Server Management Studio를 사용하여 경고를 만들려면**  
   
 -   [오류 번호를 사용하여 경고 만들기](../../ssms/agent/create-an-alert-using-an-error-number.md)  

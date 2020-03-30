@@ -17,10 +17,10 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c6076e4c02ccb4c91c88a22df7cd7c4a50b0f877
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295124"
 ---
 # <a name="debugging-data-flow"></a>데이터 흐름 디버깅
@@ -183,7 +183,7 @@ order by source_component_name desc
   
 8.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장**을 클릭합니다.  
 
-## <a name="add_viewer"></a> 데이터 흐름에 데이터 뷰어 추가
+## <a name="add-a-data-viewer-to-a-data-flow"></a><a name="add_viewer"></a> 데이터 흐름에 데이터 뷰어 추가
   이 항목에서는 데이터 흐름에 데이터 뷰어를 추가 및 구성하는 방법에 대해 설명합니다. 데이터 뷰어는 두 데이터 흐름 구성 요소 간에 이동하는 데이터를 표시합니다. 예를 들어 데이터 뷰어는 데이터 흐름 변환으로 데이터가 수정되기 전의 데이터 원본에서 추출한 데이터를 표시할 수 있습니다.  
   
  경로는 하나의 데이터 흐름 구성 요소의 출력을 다른 구성 요소의 입력에 연결함으로써 데이터 흐름의 구성 요소를 연결합니다.  

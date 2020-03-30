@@ -13,10 +13,10 @@ ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2de7acdd60a4d88c6523929615541cbed7674d12
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294582"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>보완 로깅 스크립트 검토 및 생성

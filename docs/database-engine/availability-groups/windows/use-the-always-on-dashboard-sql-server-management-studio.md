@@ -16,10 +16,10 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e2083d5f8602c28028da90cf4ecd1ed809115c7f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822671"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Always On 가용성 그룹 대시보드 사용(SQL Server Management Studio)
@@ -85,7 +85,7 @@ ms.locfileid: "74822671"
 > [!TIP]  
 >  열 머리글을 클릭하여 가용성 그룹, 주 인스턴스, 장애 조치(failover) 모드 또는 문제의 이름을 기준으로 가용성 그룹 정보를 정렬할 수 있습니다.  
   
-##  <a name="AvGroupDetails"></a> 가용성 그룹 정보  
+##  <a name="availability-group-details"></a><a name="AvGroupDetails"></a> 가용성 그룹 정보  
  요약 화면에서 선택하는 가용성 그룹에 대한 다음 정보가 표시됩니다.  
   
  **가용성 그룹 상태**  
@@ -104,7 +104,7 @@ ms.locfileid: "74822671"
  **클러스터 상태**  
  연결된 서버의 인스턴스와 가용성 그룹이 구성원 노드인 클러스터의 이름과 상태입니다.  
   
-##  <a name="AvReplicaDetails"></a> 가용성 복제본 정보  
+##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> 가용성 복제본 정보  
 
 주 복제본에 연결하는 경우 **가용성 복제본 정보**는 가용성 그룹에 있는 모든 복제본의 정보를 보여 줍니다. 보조 복제본에 연결되면 화면에는 연결된 복제본의 정보만 표시됩니다.  
 

@@ -17,10 +17,10 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 660ac899b1cf649bcc431bf10e2f9b18ca12cbc4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73637948"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>패키지 실행 문제 해결 도구

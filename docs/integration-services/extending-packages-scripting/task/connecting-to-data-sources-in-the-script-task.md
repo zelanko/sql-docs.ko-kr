@@ -24,10 +24,10 @@ ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bda11bd7e4a3cdb90dde0cba5992c91f6fffd7f9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296906"
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>스크립트 태스크에서 데이터 원본에 연결

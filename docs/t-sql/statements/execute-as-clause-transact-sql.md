@@ -26,10 +26,10 @@ ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2dfba9eef86ab77ec114bc74712d9573fb5e4c48
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70155056"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS 절(Transact-SQL)
@@ -101,7 +101,7 @@ DDL Triggers with Database Scope
  실행 컨텍스트의 사용자 ID는 메타데이터에 저장되고 **sys.sql_modules** 또는 **sys.assembly_modules** 카탈로그 뷰의 **execute_as_principal_id** 열에 표시될 수 있습니다.  
   
  **'** *login_name* **'**  
- 모듈 내부의 문이 *login_name*에 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 컨텍스트에서 실행되도록 지정합니다. 모듈 내의 모든 개체에 대한 사용 권한은 *login_name*과 비교 검증됩니다. *login_name*은 서버 범위의 DDL 트리거 또는 로그온 트리거에만 지정할 수 있습니다.  
+ 모듈 내부의 문이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]login_name*에 지정된*  로그인의 컨텍스트에서 실행되도록 지정합니다. 모듈 내의 모든 개체에 대한 사용 권한은 *login_name*과 비교 검증됩니다. *login_name*은 서버 범위의 DDL 트리거 또는 로그온 트리거에만 지정할 수 있습니다.  
   
  *login_name*은 그룹, 역할, 인증서 또는 키이거나 NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService 또는 NT AUTHORITY\LocalSystem과 같은 기본 제공 계정이 될 수 없습니다.  
   
@@ -110,7 +110,7 @@ DDL Triggers with Database Scope
   
  소유권 체인에는 다음과 같은 제한 사항이 있습니다.  
   
--   DML 문인 SELECT, INSERT, UPDATE 및 DELETE에만 적용됩니다.  
+-   SELECT, INSERT, UPDATE 및 DELETE와 같은 DML 문에만 적용됩니다.  
   
 -   호출 개체의 소유자와 호출된 개체의 소유자가 동일해야 합니다.  
   

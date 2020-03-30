@@ -19,12 +19,12 @@ ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f088c526666dcd81d269bc68479914202969a2e0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 55acdb31113dde48aeda980e3823f194f66d15c0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67934044"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80243423"
 ---
 # <a name="execute-a-stored-procedure"></a>저장 프로시저 실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,9 +49,9 @@ ms.locfileid: "67934044"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   시스템 프로시저 이름을 일치시킬 때 호출 데이터베이스 데이터 정렬이 사용됩니다. 따라서 프로시저 호출에서 대/소문자를 구분하여 시스템 프로시저 이름을 항상 정확하게 지정해야 합니다. 예를 들어 다음 코드는 대/소문자를 구분하는 데이터 정렬을 사용하는 데이터베이스 컨텍스트에서 실행할 경우 실패합니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "67934044"
   
 -   사용자 정의 프로시저의 이름이 시스템 프로시저의 이름과 같으면 사용자 정의 프로시저가 실행되지 않을 수도 있습니다.  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   시스템 저장 프로시저 실행  
   
@@ -121,13 +121,13 @@ ms.locfileid: "67934044"
   
     2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작할 때 프로시저가 실행되지 않도록 합니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
  자세한 내용은 [EXECUTE AS&#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md) 및 [EXECUTE AS 절&#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)을 참조하세요.  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  자세한 내용은 [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)을 사용하여 저장 프로시저를 실행하는 방법에 대해 설명합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-execute-a-stored-procedure"></a>저장 프로시저를 실행하려면  
   
@@ -156,7 +156,7 @@ ms.locfileid: "67934044"
   
 5.  저장 프로시저를 실행하려면 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-execute-a-stored-procedure"></a>저장 프로시저를 실행하려면  
   
@@ -185,7 +185,7 @@ GO
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   
-    , @OptionName = ] 'startup'   
+    , @OptionName = 'startup'   
     , @OptionValue = 'on';  
 ```  
   
@@ -204,7 +204,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
     , @OptionValue = 'off';  
 ```  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
   
 ## <a name="see-also"></a>참고 항목  
  [매개 변수 지정](../../relational-databases/stored-procedures/specify-parameters.md)   

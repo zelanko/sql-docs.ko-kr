@@ -16,10 +16,10 @@ ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ac82c951c3e65c1d26891f802d19b8522f22a6e9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321226"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>병합 게시에 대한 호환성 수준 설정
@@ -34,7 +34,7 @@ ms.locfileid: "75321226"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  새 게시 마법사의 **구독자 유형** 페이지에서 호환성 수준을 설정합니다. 이 마법사에 액세스하는 방법은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)에서 병합 게시의 호환성 수준을 설정하는 방법에 대해 설명합니다. 게시 스냅샷이 생성된 후 호환성 수준을 증가시킬 수는 있지만 감소시킬 수는 없습니다. **게시 속성 -** Publication> **대화 상자의 \<일반** 페이지에서 호환성 수준을 늘립니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요. 게시 호환성 수준을 증가시키면 이전 버전의 호환성 수준을 실행하는 서버에 있는 기존 구독은 더 이상 동기화할 수 없게 됩니다.  
   
 > [!NOTE]  
@@ -48,7 +48,7 @@ ms.locfileid: "75321226"
   
 -   **게시 속성 -** 게시> **대화 상자의 \<일반** 페이지에서 **호환성 수준**을 선택합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  병합 게시의 호환성 수준은 게시를 만들 때 설정하거나 이후에 프로그래밍 방식으로 수정할 수 있습니다. 병합 저장 프로시저를 사용하여 이 게시 속성을 설정 또는 변경할 수 있습니다.  
   
 #### <a name="to-set-the-publication-compatibility-level-for-a-merge-publication"></a>병합 게시에 대한 게시 호환성 수준을 설정하려면  
@@ -65,7 +65,7 @@ ms.locfileid: "75321226"
   
 2.  결과 집합의 **backward_comp_level** 열에서 게시 호환성 수준을 찾습니다.  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 예에서는 병합 게시를 만들고 게시 호환성 수준을 설정합니다.  
   
 ```sql  

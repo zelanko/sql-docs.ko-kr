@@ -14,10 +14,10 @@ ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 54fdfe36da0d590fa2225ab7cc99af640727b000
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557701"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>정책 기반 관리를 사용하여 최선의 방법 모니터링 및 적용

@@ -14,17 +14,17 @@ ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5483c2b6d344d72eb161b303abf1bf7e56825987
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76922897"
 ---
 # <a name="create-alter-and-drop-filetables"></a>FileTable 만들기, 변경 및 삭제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   새 FileTable을 만들거나 기존 FileTable을 변경 또는 삭제하는 방법에 대해 설명합니다.  
   
-##  <a name="BasicsCreate"></a> FileTable 만들기  
+##  <a name="creating-a-filetable"></a><a name="BasicsCreate"></a> FileTable 만들기  
  FileTable은 미리 정의된 고정 스키마가 있는 특수한 사용자 테이블입니다. 이 스키마는 FILESTREAM 데이터, 파일/디렉터리 정보 및 파일 특성을 저장합니다. FileTable 스키마에 대한 자세한 내용은 [FileTable Schema](../../relational-databases/blob/filetable-schema.md)를 참조하세요.  
   
  Transact-SQL 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 새 FileTable을 만들 수 있습니다. FileTable에는 고정 스키마가 있으므로 열 목록을 지정할 필요가 없습니다. FileTable을 만드는 간단한 구문에서 다음을 지정할 수 있습니다.  
@@ -35,9 +35,9 @@ ms.locfileid: "76922897"
   
 -   자동으로 만들어지는 UNIQUE 제약 조건 및 세 가지 기본 키에 사용할 이름  
   
-###  <a name="HowToCreate"></a> 방법: FileTable 만들기  
+###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> 방법: FileTable 만들기  
  **Transact-SQL을 사용하여 FileTable 만들기**  
- **AS FileTable** 옵션이 포함된 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 문을 호출하여 FileTable을 만듭니다. FileTable에는 고정 스키마가 있으므로 열 목록을 지정할 필요가 없습니다. 새 FileTable에 대해 다음 설정을 지정할 수 있습니다.  
+ [AS FileTable](../../t-sql/statements/create-table-transact-sql.md) 옵션이 포함된 **CREATE TABLE&#40;Transact-SQL&#41;** 문을 호출하여 FileTable을 만듭니다. FileTable에는 고정 스키마가 있으므로 열 목록을 지정할 필요가 없습니다. 새 FileTable에 대해 다음 설정을 지정할 수 있습니다.  
   
 1.  **FILETABLE_DIRECTORY**. FileTable에 저장된 모든 파일 및 디렉터리에 대한 루트 디렉터리 역할을 하는 디렉터리를 지정합니다. 이 이름은 데이터베이스의 모든 FileTable 디렉터리 이름 중에서 고유해야 합니다. 고유성 비교는 현재 데이터 정렬 설정과 관계없이 대/소문자를 구분하지 않습니다.  
   
@@ -88,7 +88,7 @@ GO
   
  이 옵션은 Transact-SQL 스크립트 템플릿이 포함된 새 스크립트 창을 엽니다. 이 템플릿을 사용자 지정하여 FileTable을 만드는 데 사용할 수 있습니다. **쿼리** 메뉴에서 **템플릿 매개 변수 값 지정** 옵션을 사용하여 스크립트를 쉽게 사용자 지정할 수 있습니다.  
   
-###  <a name="ReqCreate"></a> FileTable 만들기에 대한 요구 사항 및 제한 사항  
+###  <a name="requirements-and-restrictions-for-creating-a-filetable"></a><a name="ReqCreate"></a> FileTable 만들기에 대한 요구 사항 및 제한 사항  
   
 -   기존 테이블을 변경하여 FileTable로 변환할 수 없습니다.  
   
@@ -102,12 +102,12 @@ GO
   
 -   FileTable을 임시 테이블로 만들 수 없습니다.  
   
-##  <a name="BasicsAlter"></a> FileTable 변경  
+##  <a name="altering-a-filetable"></a><a name="BasicsAlter"></a> FileTable 변경  
  FileTable에는 미리 정의된 고정 스키마가 있으므로 해당 열을 추가하거나 변경할 수 없습니다. 그러나 FileTable에 사용자 지정 인덱스, 트리거, 제약 조건 및 다른 옵션을 추가할 수 있습니다.  
   
  시스템 정의 제약 조건을 포함하여 ALTER TABLE 문을 사용하여 FileTable 네임스페이스를 사용하거나 사용하지 않도록 설정하는 방법은 [FileTable 관리](../../relational-databases/blob/manage-filetables.md)를 참조하세요.  
   
-###  <a name="HowToChange"></a> 방법: FileTable의 디렉터리 변경  
+###  <a name="how-to-change-the-directory-for-a-filetable"></a><a name="HowToChange"></a> 방법: FileTable의 디렉터리 변경  
  **Transact-SQL을 사용하여 FileTable의 디렉터리 변경**  
  ALTER TABLE 문을 호출하고 **FILETABLE_DIRECTORY** SET 옵션에 유효한 새 값을 제공합니다.  
   
@@ -122,7 +122,7 @@ GO
  **SQL Server Management Studio를 사용하여 FileTable의 디렉터리 변경**  
  개체 탐색기에서 FileTable을 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택하여 **테이블 속성** 대화 상자를 엽니다. **FileTable** 페이지에서 **FileTable 디렉터리 이름**의 새 값을 입력합니다.  
   
-###  <a name="ReqAlter"></a> FileTable 변경에 대한 요구 사항 및 제한 사항  
+###  <a name="requirements-and-restrictions-for-altering-a-filetable"></a><a name="ReqAlter"></a> FileTable 변경에 대한 요구 사항 및 제한 사항  
   
 -   **FILETABLE_COLLATE_FILENAME**값은 변경할 수 없습니다.  
   
@@ -130,7 +130,7 @@ GO
   
 -   FileTable에 새 사용자 열, 계산 열 또는 지속형 계산 열을 추가할 수 없습니다.  
   
-##  <a name="BasicsDrop"></a> FileTable 삭제  
+##  <a name="dropping-a-filetable"></a><a name="BasicsDrop"></a> FileTable 삭제  
  [DROP TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md) 문의 일반 구문을 사용하여 FileTable을 삭제할 수 있습니다.  
   
  Filetable를 삭제하면 다음 개체도 삭제됩니다.  
@@ -141,7 +141,7 @@ GO
   
  FileTable의 파일 네임스페이스에 열려 있는 파일 핸들이 있는 경우 DROP TABLE 명령이 실패합니다. 열려 있는 핸들을 닫는 방법에 대한 자세한 내용은 [FileTable 관리](../../relational-databases/blob/manage-filetables.md)를 참조하세요.  
   
-##  <a name="BasicsOtherObjects"></a> FileTable을 만들 때 생성되는 다른 데이터베이스 개체  
+##  <a name="other-database-objects-are-created-when-you-create-a-filetable"></a><a name="BasicsOtherObjects"></a> FileTable을 만들 때 생성되는 다른 데이터베이스 개체  
  새 FileTable을 만들면 일부 시스템 정의 인덱스 및 제약 조건도 만들어집니다. 이러한 개체는 변경하거나 삭제할 수 없으며, FileTable 자체가 삭제된 경우에만 사라집니다. 이러한 개체의 목록을 보려면 카탈로그 뷰 [sys.filetable_system_defined_objects&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md)를 쿼리합니다.  
   
 ```sql  

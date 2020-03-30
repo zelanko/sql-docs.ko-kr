@@ -28,10 +28,10 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 33ce0a748381e425371b6f36c1ceeaaba4b62501
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296875"
 ---
 # <a name="package-management-ssis-service"></a>패키지 관리(SSIS 서비스)
@@ -58,7 +58,7 @@ ms.locfileid: "71296875"
   
  **실행 중인 패키지** 폴더에는 하위 폴더가 없으므로 확장할 수 없습니다.  
   
- 기본적으로 **저장된 패키지** 폴더에는 **파일 시스템** 및 **MSDB**라는 두 개의 폴더가 있습니다. **파일 시스템** 폴더에는 파일 시스템에 저장된 패키지가 나열됩니다. 이러한 파일의 위치는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스의 구성 파일에서 지정합니다. 기본 폴더는 %Program Files%\Microsoft SQL Server\100\DTS에 있는 Packages입니다. **MSDB** 폴더에는 서버의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb 데이터베이스에 저장된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 패키지가 나열됩니다. sysssispackages 테이블에는 msdb에 저장된 패키지가 포함됩니다.  
+ 기본적으로 **저장된 패키지** 폴더에는 **파일 시스템** 및 **MSDB**라는 두 개의 하위 폴더가 있습니다. **파일 시스템** 폴더에는 파일 시스템에 저장된 패키지가 나열됩니다. 이러한 파일의 위치는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스의 구성 파일에서 지정합니다. 기본 폴더는 %Program Files%\Microsoft SQL Server\100\DTS에 있는 Packages입니다. **MSDB** 폴더에는 서버의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb 데이터베이스에 저장된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 패키지가 나열됩니다. sysssispackages 테이블에는 msdb에 저장된 패키지가 포함됩니다.  
   
  패키지 저장소의 패키지 목록을 보려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 열고 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 연결해야 합니다.  
   

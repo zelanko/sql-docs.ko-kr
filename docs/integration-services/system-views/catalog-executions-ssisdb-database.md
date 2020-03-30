@@ -14,10 +14,10 @@ ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9daa6cf4c788c4ca63a9cc394c9a814a8c27cb5b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295205"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions(SSISDB 데이터베이스)

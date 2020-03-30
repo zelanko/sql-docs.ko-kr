@@ -12,10 +12,10 @@ ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b1275f5cbb718f34ba1386d6d6313dd662901900
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71284947"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>패키지 저장 및 실행(SQL Server 가져오기 및 내보내기 마법사)

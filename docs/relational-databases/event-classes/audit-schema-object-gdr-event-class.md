@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c59785c6ba0fb20949721070008246a3a6bc49e3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67897425"
 ---
 # <a name="audit-schema-object-gdr-event-class"></a>Audit Schema Object GDR 이벤트 클래스
@@ -46,7 +46,7 @@ ms.locfileid: "67897425"
 |**ObjectType**|**int**|이벤트와 관련된 개체 유형을 나타내는 값입니다. 이 값은 **sys.objects** 카탈로그 뷰의 유형 열과 일치합니다. 값은 [ObjectType 추적 이벤트 열](../../relational-databases/event-classes/objecttype-trace-event-column.md)을 참조하세요.|28|yes|  
 |**OwnerName**|**nvarchar**|허용/취소/거부의 대상이 된 개체 소유자의 데이터베이스 사용자 이름입니다.|37|yes|  
 |**ParentName**|**nvarchar**|개체가 포함된 스키마의 이름입니다.|59|yes|  
-|**권한**|**bigint**|확인한 사용 권한의 유형을 나타내는 정수 값입니다.<br /><br /> 1=SELECT ALL<br /><br /> 2=UPDATE ALL<br /><br /> 4=REFERENCES ALL<br /><br /> 8=INSERT<br /><br /> 16=DELETE<br /><br /> 32=EXECUTE(프로시저에만 해당)<br /><br /> 4096=SELECT ANY(하나 이상의 열)<br /><br /> 8192=UPDATE ANY<br /><br /> 16384=REFERENCES ANY|19|yes|  
+|**사용 권한**|**bigint**|확인한 사용 권한의 유형을 나타내는 정수 값입니다.<br /><br /> 1=SELECT ALL<br /><br /> 2=UPDATE ALL<br /><br /> 4=REFERENCES ALL<br /><br /> 8=INSERT<br /><br /> 16=DELETE<br /><br /> 32=EXECUTE(프로시저에만 해당)<br /><br /> 4096=SELECT ANY(하나 이상의 열)<br /><br /> 8192=UPDATE ANY<br /><br /> 16384=REFERENCES ANY|19|yes|  
 |**RequestID**|**int**|문을 포함하는 요청의 ID입니다.|49|yes|  
 |**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|예|  
 |**SessionLoginName**|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 **SessionLoginName** 은 Login1을 표시하고 **LoginName** 은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|yes|  

@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 51b18437976a9ecb192a69602ecbdc97054b9b47
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76831832"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX(Transact-SQL)
@@ -53,7 +53,7 @@ PATINDEX ( '%pattern%' , expression )
  일반적으로 지정된 패턴이 검색되는 열을 나타내는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *식*은 문자열 데이터 형식 범주입니다.  
   
 ## <a name="return-types"></a>반환 형식  
-*식*의 데이터 형식이 **varchar(max)** 또는 **nvarchar(max)** 이면 **bigint**, 그렇지 않으면 **int**입니다.  
+**식**의 데이터 형식이 *varchar(max)* 또는 **nvarchar(max)** 이면 **bigint**, 그렇지 않으면 **int**입니다.  
   
 ## <a name="remarks"></a>설명  
 *패턴* 또는 *식*이 NULL인 경우 PATINDEX에서 NULL을 반환합니다.  
@@ -85,7 +85,7 @@ position
 ```
   
 ### <a name="b-using-a-pattern-with-patindex"></a>B. PATINDEX와 함께 패턴 사용  
-다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `ensure` 테이블에 있는 `DocumentSummary` 열의 특정 행에서 `Document` 패턴이 시작하는 위치를 찾습니다.  
+다음 예에서는 `ensure` 데이터베이스에서 `DocumentSummary` 테이블에 있는 `Document` 열의 특정 행에서 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 패턴이 시작하는 위치를 찾습니다.  
   
 ```sql  
 SELECT position = PATINDEX('%ensure%',DocumentSummary)  

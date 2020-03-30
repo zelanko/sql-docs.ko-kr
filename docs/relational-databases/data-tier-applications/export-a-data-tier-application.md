@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 61d240262d491976eaa9e591fa15e4ffd1f1258e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72904177"
 ---
 # <a name="export-a-data-tier-application"></a>데이터 계층 애플리케이션 내보내기
@@ -44,18 +44,18 @@ ms.locfileid: "72904177"
  내보내기 프로세스에서는 DAC 버전을 1.0.0.0으로 설정하고 내보내기 파일의 DAC 설명을 빈 문자열로 설정합니다. 데이터베이스가 DAC에서 배포된 경우에는 내보내기 파일의 DAC 정의에 원본 DAC에 지정된 것과 동일한 이름이 포함되고, 그렇지 않은 경우에는 DAC 이름이 데이터베이스 이름으로 설정됩니다.  
   
 
-###  <a name="LimitationsRestrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 제한 사항  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4(서비스 팩 4) 이상의 데이터베이스에서만 DAC 또는 데이터베이스를 내보낼 수 있습니다.  
   
  DAC 또는 포함된 사용자가 지원하지 않는 개체가 있는 데이터베이스를 내보낼 수 없습니다. DAC에서 지원되는 개체 유형에 대한 자세한 내용은 [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)을 참조하세요.  
   
-###  <a name="Permissions"></a> 권한  
+###  <a name="permissions"></a><a name="Permissions"></a> 권한  
  DAC를 내보내려면 **sys.sql_expression_dependencies**에 대한 SELECT 권한뿐만 아니라 최소한 ALTER ANY LOGIN 및 데이터베이스 범위 VIEW DEFINITION 권한이 있어야 합니다. DAC를 내보내려면 securityadmin 고정 서버 역할의 멤버이면서 DAC를 내보내는 데이터베이스의 database_owner 고정 데이터베이스 역할의 멤버여야 합니다. sysadmin 고정 서버 역할의 멤버 또는 기본 제공 SQL Server 시스템 관리자 계정인 **sa** 는 DAC를 내보낼 수 있습니다.
  
 Azure SQL DB에서는 **각 데이터베이스에서** 모든 테이블 또는 특정 테이블에 대해 VIEW DEFINITION 및 SELECT 권한을 부여해야 합니다.
 
   
-##  <a name="UsingDeployDACWizard"></a> 데이터 계층 애플리케이션 내보내기 마법사 사용  
+##  <a name="using-the-export-data-tier-application-wizard"></a><a name="UsingDeployDACWizard"></a> 데이터 계층 애플리케이션 내보내기 마법사 사용  
  **마법사를 사용하여 DAC를 내보내려면**  
   
 1.  온-프레미스 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]인스턴스에 연결합니다.  
@@ -80,7 +80,7 @@ Azure SQL DB에서는 **각 데이터베이스에서** 모든 테이블 또는 �
   
     -   [결과 페이지](#Results)  
   
-##  <a name="Introduction"></a> 소개 페이지  
+##  <a name="introduction-page"></a><a name="Introduction"></a> 소개 페이지  
  이 페이지에서는 데이터 계층 애플리케이션 내보내기 마법사의 단계에 대해 설명합니다.  
   
  **옵션**  
@@ -91,7 +91,7 @@ Azure SQL DB에서는 **각 데이터베이스에서** 모든 테이블 또는 �
   
  **취소** - 작업을 취소하고 마법사를 닫습니다.  
   
-##  <a name="Export_settings"></a> 내보내기 설정 페이지  
+##  <a name="export-settings-page"></a><a name="Export_settings"></a> 내보내기 설정 페이지  
  이 페이지에서는 BACPAC 파일을 만들려는 위치를 지정할 수 있습니다.  
   
 -   **로컬 디스크에 저장** - 로컬 컴퓨터의 디렉터리에 BACPAC 파일을 만듭니다. **찾아보기...** 를 클릭하여 로컬 컴퓨터로 이동하거나 제공된 공간에 경로를 지정합니다. 경로 이름에 파일 이름과 .bacpac 확장명을 모두 포함해야 합니다.  
@@ -100,23 +100,23 @@ Azure SQL DB에서는 **각 데이터베이스에서** 모든 테이블 또는 �
   
  내보낼 테이블 하위 집합을 지정하려면 **고급** 옵션을 사용합니다.  
   
-##  <a name="Validation"></a> 유효성 검사 페이지  
+##  <a name="validation-page"></a><a name="Validation"></a> 유효성 검사 페이지  
  유효성 검사 페이지에서 작업을 차단한 문제를 검토할 수 있습니다. 계속하려면 차단 문제를 해결하고 **유효성 검사 다시 실행** 을 클릭하여 유효성 검사에 성공했는지 확인합니다.  
   
  계속하려면 **다음**을 클릭합니다.  
   
-##  <a name="Summary"></a> 요약 페이지  
+##  <a name="summary-page"></a><a name="Summary"></a> 요약 페이지  
  이 페이지에서 작업에 대해 지정한 원본 및 대상 설정을 검토할 수 있습니다. 지정한 설정을 사용하여 내보내기 작업을 완료하려면 **마침**을 클릭합니다. 내보내기 작업을 취소하고 마법사를 종료하려면 **취소**를 클릭합니다.  
   
-##  <a name="Progress"></a> 진행률 페이지  
+##  <a name="progress-page"></a><a name="Progress"></a> 진행률 페이지  
  이 페이지에는 작업 상태를 나타내는 진행률 표시줄이 표시됩니다. 자세한 상태를 보려면 **자세히 보기** 옵션을 클릭합니다.  
   
-##  <a name="Results"></a> 결과 페이지  
+##  <a name="results-page"></a><a name="Results"></a> 결과 페이지  
  이 페이지에서는 내보내기 작업의 성공 또는 실패를 보고하고 각 작업의 결과를 보여 줍니다. 오류가 발생한 동작에는 모두 **결과** 열에 링크가 있습니다. 링크를 클릭하면 해당 동작의 오류에 대한 보고서가 표시됩니다.  
   
  **마침** 을 클릭하여 마법사를 닫습니다.  
   
-##  <a name="NetApp"></a> .Net Framework 애플리케이션 사용  
+##  <a name="using-a-net-framework-application"></a><a name="NetApp"></a> .Net Framework 애플리케이션 사용  
  **.Net Framework 애플리케이션에서 Export() 메서드를 사용하여 DAC를 내보냅니다.**  
   
  코드 예제를 보려면 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)에서 DAC 샘플 애플리케이션을 다운로드합니다.  

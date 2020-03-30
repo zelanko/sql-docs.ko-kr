@@ -13,10 +13,10 @@ ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 639322e277bddc8a7d71c994600c32cfbcd78449
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251241"
 ---
 # <a name="start-data-movement-on-an-always-on-secondary-database-sql-server"></a>Always On 보조 데이터베이스에서 데이터 이동 시작(SQL Server)
@@ -54,7 +54,7 @@ ms.locfileid: "75251241"
   
      [가용성 그룹에 보조 데이터베이스 조인&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
-##  <a name="LaunchWiz"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> 관련 작업  
   
 -   [새 가용성 그룹 대화 상자 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

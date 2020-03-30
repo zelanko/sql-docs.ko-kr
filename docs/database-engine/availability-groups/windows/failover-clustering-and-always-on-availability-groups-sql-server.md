@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 62b5f1d23608ce6337befa1e4888ad2cda543dc9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822257"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>장애 조치(failover) 클러스터링 및 Always On 가용성 그룹(SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "74822257"
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 개념에 대한 자세한 내용은 [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)를 참조하세요.  
   
   
-##  <a name="WSFC"></a> Windows Server 장애 조치(Failover) 클러스터링 및 가용성 그룹  
+##  <a name="windows-server-failover-clustering-and-availability-groups"></a><a name="WSFC"></a> Windows Server 장애 조치(Failover) 클러스터링 및 가용성 그룹  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]를 배포하려면 WSFC(Windows Server Failover 클러스터)가 필요합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]를 활성화하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 WSFC 노드에 있고 WSFC 및 노드가 온라인 상태여야 합니다. 또한 지정된 가용성 그룹의 각 가용성 복제본은 동일한 WSFC의 서로 다른 노드에 있어야 합니다. 유일한 예외는 다른 WSFC로 마이그레이션되는 동안 가용성 그룹이 일시적으로 두 클러스터에 걸쳐 있는 경우입니다.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]는 WSFC(Windows Server 장애 조치(failover) 클러스터)를 사용하여 지정된 가용성 그룹에 속해 있는 가용성 복제본의 현재 역할을 모니터링 및 관리하고 장애 조치(failover) 이벤트가 가용성 복제본에 미치는 영향을 확인합니다. WSFC 리소스 그룹은 생성하는 모든 가용성 그룹에 대해 만들어집니다. WSFC는 이 리소스 그룹을 모니터링하여 주 복제본의 상태를 평가합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "74822257"
   
  WSFC 노드에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 실행하는 방법과 WSFC 쿼럼에 대한 자세한 내용은 [SQL Server의 WSFC&#40;Windows Server 장애 조치(failover) 클러스터링&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)을 참조하세요.  
   
-##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI(장애 조치(failover) 클러스터 인스턴스) 및 가용성 그룹  
+##  <a name="ssnoversion-failover-cluster-instances-fcis-and-availability-groups"></a><a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI(장애 조치(failover) 클러스터 인스턴스) 및 가용성 그룹  
  WSFC와 함께 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI를 구현하여 서버 인스턴스 수준에서 장애 조치(failover)의 두 번째 계층을 설정할 수 있습니다. 가용성 복제본은 독립 실행형 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 또는 FCI 인스턴스에서 호스팅할 수 있습니다. 지정된 가용성 그룹의 복제본은 하나의 FCI 파트너에서만 호스팅할 수 있습니다. 가용성 복제본이 FCI에서 실행 중인 경우 가용성 그룹에 대한 가능한 소유자 목록에는 활성 FCI 노드만 포함됩니다.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 어떤 형태의 공유 스토리지에도 종속되지 않습니다. 하지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI(장애 조치(Failover) 클러스터 인스턴스)를 사용하여 하나 이상의 가용성 복제본을 호스팅하는 경우 각 FCI에는 표준 SQL Server 장애 조치(Failover) 클러스터 인스턴스 설치와 같이 공유 스토리지가 있어야 합니다.  
@@ -97,7 +97,7 @@ ms.locfileid: "74822257"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI에 대한 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
   
-##  <a name="FCMrestrictions"></a> 가용성 그룹과 WSFC 장애 조치(Failover) 클러스터 관리자 사용에 대한 제한 사항  
+##  <a name="restrictions-on-using-the-wsfc-failover-cluster-manager-with-availability-groups"></a><a name="FCMrestrictions"></a> 가용성 그룹과 WSFC 장애 조치(Failover) 클러스터 관리자 사용에 대한 제한 사항  
  다음의 예처럼 장애 조치(Failover) 클러스터 관리자를 사용하여 가용성 그룹을 조작하지 마세요.  
   
 -   가용성 그룹에 대한 클러스터형 서비스(리소스 그룹)에 리소스를 추가하거나 제거하지 마세요.  
@@ -109,7 +109,7 @@ ms.locfileid: "74822257"
   >[!WARNING]
   > 장애 조치(Failover) 클러스터 관리자를 사용하여 가용성 그룹을 호스트하는 *장애 조치(Failover) 클러스터 인스턴스*를 동일한 가용성 그룹의 복제본을 *이미* 호스트하는 노드로 이동하면 가용성 그룹의 복제본이 손실되어 대상 노드에서 온라인 상태가 될 수 없습니다. 장애 조치(Failover) 클러스터의 단일 노드는 동일한 가용성 그룹의 복제본 2개 이상을 호스트할 수 없습니다. 이러한 결과가 나타나는 방식 및 복구 방법에 대한 자세한 내용은 블로그 [Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/)(복제본이 가용성 그룹에서 예기치 않게 손실되는 경우)를 참조하세요. 
   
-##  <a name="RelatedContent"></a> 관련 내용  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
   
 -   **블로그:**  
   

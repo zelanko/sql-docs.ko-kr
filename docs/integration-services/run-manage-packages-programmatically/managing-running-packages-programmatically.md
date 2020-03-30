@@ -14,10 +14,10 @@ ms.assetid: 0e91f4ac-6f29-40d7-8c28-9b82e4802c35
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ae990092e930bb1f017e10c0b6e1f07917e3a446
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71281967"
 ---
 # <a name="managing-running-packages-programmatically"></a>프로그래밍 방식으로 실행 중인 패키지 관리

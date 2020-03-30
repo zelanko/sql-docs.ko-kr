@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 ms.openlocfilehash: 09a19680d9fff6a8d907dd17f3399ff632cba19b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75243616"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹이 포함된 Reporting Services(SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "75243616"
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 일반적인 내용은 [SQL Server 2012 Always On FAQ(https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768)를 참조하세요.  
 
-##  <a name="bkmk_requirements"></a> Reporting Services 및 Always On 가용성 그룹 사용을 위한 요구 사항  
+##  <a name="requirements-for-using-reporting-services-and-always-on-availability-groups"></a><a name="bkmk_requirements"></a> Reporting Services 및 Always On 가용성 그룹 사용을 위한 요구 사항  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 및 Power BI Report Server에서는 .NET Framework 4.0을 사용하며 데이터 원본과 함께 사용할 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 연결 문자열 속성을 지원합니다.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 2014 이전 버전에  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 사용하려면 .Net 3.5 SP1에 대한 핫픽스를 다운로드하고 설치해야 합니다. 이 핫픽스는 AG 기능을 위한 SQL 클라이언트에 대한 지원과 **ApplicationIntent** 및 **MultiSubnetFailover**연결 문자열 속성 지원을 추가합니다. 보고서 서버를 호스팅하는 각 컴퓨터에 이 핫픽스가 설치되어 있지 않으면 사용자가 보고서를 미리 보려고 시도할 때 다음과 비슷한 오류 메시지가 표시되고 오류 메시지가 보고서 서버의 추적 로그에 기록됩니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "75243616"
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]RSreportserver.config**와 같은**  구성 파일은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능의 일부로 지원되지 않습니다. 보고서 서버 중 하나에서 구성 파일을 수동으로 변경할 경우 복제본을 수동으로 업데이트해야 합니다.  
   
-##  <a name="bkmk_reportdatasources"></a> 보고서 데이터 원본 및 가용성 그룹  
+##  <a name="report-data-sources-and-availability-groups"></a><a name="bkmk_reportdatasources"></a> 보고서 데이터 원본 및 가용성 그룹  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 기반으로 하는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 데이터 원본의 동작은 관리자가 AG 환경을 구성한 방법에 따라 다를 수 있습니다.  
   
  보고서 데이터 원본 연결 문자열을 구성하는 데 필요한 보고서 데이터 원본에 대해 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 활용하려면 가용성 그룹 *리스너 DNS 이름*을 사용합니다. 지원되는 데이터 원본은 다음과 같습니다.  
@@ -91,7 +91,7 @@ ms.locfileid: "75243616"
   
  읽기 전용 보조 복제본을 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 원본으로 사용할 경우 데이터 업데이트 지연 시간이 보고서 사용자의 요구를 충족시킬 수 있는지 확인해야 합니다.  
   
-##  <a name="bkmk_reportdesign"></a> 보고서 디자인 및 가용성 그룹  
+##  <a name="report-design-and-availability-groups"></a><a name="bkmk_reportdesign"></a> 보고서 디자인 및 가용성 그룹  
  [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 에서 보고서를 디자인하거나 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 보고서 프로젝트를 디자인할 때 사용자는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 제공되는 새로운 연결 속성을 포함하도록 보고서 데이터 원본 연결 문자열을 구성할 수 있습니다. 새 연결 속성에 대한 지원은 사용자가 보고서를 미리 보는 위치에 따라 달라집니다.  
   
 -   **로컬 미리 보기:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]는 .NET Framework 4.0을 사용하고 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 연결 문자열 속성을 지원합니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "75243616"
   
 > **오류 메시지:** "키워드가 지원되는 'applicationintent'가 아닙니다."  
   
-##  <a name="bkmk_reportserverdatabases"></a> 보고서 서버 데이터베이스 및 가용성 그룹  
+##  <a name="report-server-databases-and-availability-groups"></a><a name="bkmk_reportserverdatabases"></a> 보고서 서버 데이터베이스 및 가용성 그룹  
  Reporting Services 및 Power BI Report Server는 보고서 서버 데이터베이스에 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 사용하는 데 있어서 제한적인 지원을 제공합니다. 보고서 서버 데이터베이스를 AG에서 복제본의 일부로 구성할 수 있지만 장애 조치(Failover)가 발생했을 때 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 가 보고서 서버 데이터베이스에 대해 다른 복제본을 자동으로 사용하지는 않습니다. 보고서 서버 데이터베이스와 함께 MultiSubnetFailover 사용은 지원되지 않습니다.  
   
  장애 조치(Failover) 및 복구를 완료하기 위해서는 작업을 수동으로 수행하거나 사용자 지정 자동화 스크립트를 사용해야 합니다. 이러한 작업을 완료할 때까지는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 장애 조치(Failover) 후 보고서 서버의 일부 기능이 올바르게 작동하지 않을 수 있습니다.  
@@ -108,7 +108,7 @@ ms.locfileid: "75243616"
 > [!NOTE]  
 >  보고서 서버 데이터베이스에 대해 장애 조치(Failover) 및 재해 복구를 계획할 때는 항상 보고서 서버 암호화 키의 복사본을 백업하는 것이 좋습니다.  
   
-###  <a name="bkmk_differences_in_server_mode"></a> SharePoint 기본 모드 간 차이점  
+###  <a name="differences-between-sharepoint-native-mode"></a><a name="bkmk_differences_in_server_mode"></a> SharePoint 기본 모드 간 차이점  
  이 단원에서는 SharePoint 모드와 기본 모드의 보고서 서버가 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]과 상호 작용하는 방법상의 차이점에 대해 요약해서 보여 줍니다.  
   
  SharePoint 보고서 서버는 사용자가 만드는 각 **서비스 애플리케이션에 대해** 3 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 개의 데이터베이스를 만듭니다. SharePoint 모드에서 보고서 서버 데이터베이스에 대한 연결은 서비스 애플리케이션을 만들 때 SharePoint 중앙 관리에 구성됩니다. 데이터베이스의 기본 이름에는 서비스 애플리케이션과 연결된 GUID가 포함됩니다. 다음은 SharePoint 모드 보고서 서버에 대한 데이터베이스의 이름 예입니다.  
@@ -134,7 +134,7 @@ ms.locfileid: "75243616"
 > -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 동기화 프로세스에서 콘텐츠 데이터베이스 및 보고서 서버 데이터베이스에 있는 항목 목록 간에 불일치가 발견된 경우  
 > -   동기화 프로세스로 콘텐츠 데이터베이스에 있는 항목이 삭제되거나 업데이트되는 경우  
   
-###  <a name="bkmk_prepare_databases"></a> 가용성 그룹에 대한 보고서 서버 데이터베이스 준비  
+###  <a name="prepare-report-server-databases-for-availability-groups"></a><a name="bkmk_prepare_databases"></a> 가용성 그룹에 대한 보고서 서버 데이터베이스 준비  
  보고서 서버 데이터베이스를 준비하고 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 추가하는 기본 단계는 다음과 같습니다.  
   
 -   가용성 그룹을 만들고 *리스너 DNS 이름*을 구성합니다.  
@@ -147,7 +147,7 @@ ms.locfileid: "75243616"
   
 -   리스너 DNS 이름을 사용하도록 데이터베이스 연결을 업데이트합니다. 기본 모드 보고서 서버의 경우 **구성 관리자에서** 보고서 서버 데이터베이스 이름 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 변경합니다. SharePoint 모드의 경우에는 **서비스 애플리케이션에 대해** 데이터베이스 서버 이름 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 변경합니다.  
   
-###  <a name="bkmk_steps_to_complete_failover"></a> 보고서 서버 데이터베이스의 재해 복구 완료 단계  
+###  <a name="steps-to-complete-disaster-recovery-of-report-server-databases"></a><a name="bkmk_steps_to_complete_failover"></a> 보고서 서버 데이터베이스의 재해 복구 완료 단계  
  보조 복제본으로 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 장애 조치(Failover)한 후에는 다음과 같은 단계를 완료해야 합니다.  
   
 1.  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터베이스를 호스팅하는 주 데이터베이스 엔진에서 사용 중이던 SQL 에이전트 서비스의 인스턴스를 중지합니다.  
@@ -164,7 +164,7 @@ ms.locfileid: "75243616"
   
 5.  새 주 복제본에 대해 보고서를 실행할 수 있는지 확인합니다.  
   
-###  <a name="bkmk_failover_behavior"></a> 장애 조치(Failover) 발생 시 보고서 서버 동작  
+###  <a name="report-server-behavior-when-a-failover-occurs"></a><a name="bkmk_failover_behavior"></a> 장애 조치(Failover) 발생 시 보고서 서버 동작  
  보고서 서버 데이터베이스가 장애 조치(Failover)될 때 그리고 새 주 복제본을 사용하도록 보고서 서버 환경을 업데이트한 경우 장애 조치(Failover) 및 복구 프로세스로 인해 몇 가지 운영상의 문제가 발생할 수 있습니다. 이러한 문제로 인한 영향은 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 이 보조 복제본으로 장애 조치(Failover)를 수행하고 보고서 서버 관리자가 새 주 복제본을 사용하도록 보고 환경을 업데이트하는 데 걸리는 시간뿐만 아니라 장애 조치(Failover) 발생 시의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 부하에 따라 달라집니다.  
   
 -   재시도 논리로 인해 그리고 장애 조치(Failover) 기간 중 보고서 서버가 예약된 작업을 완료로 표시할 수 없어서 백그라운드 처리에 대한 실행이 두 번 이상 수행될 수도 있습니다.  

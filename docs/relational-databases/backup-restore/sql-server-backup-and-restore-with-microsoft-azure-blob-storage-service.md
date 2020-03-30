@@ -11,10 +11,10 @@ ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ba2574b4468742414d60c1f4e7db4a93380fba0e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251131"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원
@@ -35,7 +35,7 @@ ms.locfileid: "75251131"
   
 -   **SQL Server에서 Microsoft Azure에 대한 백업 관리:** SQL Server를 구성하여 단일 또는 여러 데이터베이스에 대한 백업 전략과 예약 백업을 관리하거나 인스턴스 수준에서 기본값을 설정할 수 있습니다. 이 기능을 **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** 이라고 합니다. 자세한 내용은 [Microsoft Azure에 대한 SQL Server Managed Backup](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)을 참조하세요. 이 기능은 SQL Server 2014 이상에서 사용할 수 있습니다.  
   
-## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에 Microsoft Azure Blob 서비스를 사용할 경우의 이점  
+## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-ssnoversion-backups"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에 Microsoft Azure Blob 서비스를 사용할 경우의 이점  
   
 -   유연하고 안정적이며 제한 없는 오프사이트 스토리지: Microsoft Azure Blob service에 백업을 저장하는 방법은 편리하고 유연하며 쉽게 액세스할 수 있는 오프사이트 옵션입니다. 기존 스크립트/작업을 수정하는 것처럼 쉽게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에 사용할 오프사이트 스토리지를 만들 수 있습니다. 오프사이트와 프로덕션 데이터베이스 위치 둘 다에 영향을 줄 수 있는 단일 재해를 방지하려면 오프사이트 스토리지는 일반적으로 프로덕션 데이터베이스 위치와 충분히 멀리 떨어져 있어야 합니다. Blob 스토리지 지리적 복제를 선택하여 전체 지역에 영향을 줄 수 있는 재해 발생에 대비한 추가 보호막을 만듭니다. 또한 언제 어디서나 백업을 사용할 수 있으며 복원을 위해 백업에 쉽게 액세스할 수 있습니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "75251131"
   
 -   비용 이점: 사용한 서비스에 대한 비용만 지불합니다. 오프사이트 및 백업 보관 옵션만큼 비용 효율적일 수 있습니다. 자세한 내용과 링크는 [Microsoft Azure 청구 고려 사항](#Billing) 섹션을 참조하십시오.  
   
-##  <a name="Billing"></a> Microsoft Azure 청구 고려 사항:  
+##  <a name="microsoft-azure-billing-considerations"></a><a name="Billing"></a> Microsoft Azure 청구 고려 사항:  
  Microsoft Azure Storage 비용을 이해하면 Microsoft Azure에서 백업을 만들고 스토리지하는 데 드는 비용을 예측할 수 있습니다.  
   
  [Microsoft Azure 가격 계산기](https://go.microsoft.com/fwlink/?LinkId=277060) 로 예상 비용을 계산할 수 있습니다.  

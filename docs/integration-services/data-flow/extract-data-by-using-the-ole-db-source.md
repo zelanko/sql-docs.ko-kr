@@ -15,10 +15,10 @@ ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 82bebe29ff6fe9eb385a078aa762d5b8f171783a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292603"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>OLE DB 원본을 사용하여 데이터 추출

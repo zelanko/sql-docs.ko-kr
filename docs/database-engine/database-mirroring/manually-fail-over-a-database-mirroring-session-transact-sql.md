@@ -16,10 +16,10 @@ ms.assetid: 36218d61-b5f5-4194-905a-608e0e903db4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 92f9040cdc8181b1546d7a04e9b0eaf265fc7012
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822101"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-transact-sql"></a>데이터베이스 미러링 세션 수동 장애 조치(Transact-SQL)

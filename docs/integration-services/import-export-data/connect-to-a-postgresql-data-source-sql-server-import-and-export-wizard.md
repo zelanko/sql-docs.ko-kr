@@ -10,10 +10,10 @@ ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: da1688881523723206b03d7f7dec3abc2e518370
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296306"
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>PostgreSQL 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)

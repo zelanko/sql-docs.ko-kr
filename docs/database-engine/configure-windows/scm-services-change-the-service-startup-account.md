@@ -15,10 +15,10 @@ ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2b0b681ffb0b045ab5ba59c1a9fd28b3b295431f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70212315"
 ---
 # <a name="scm-services---change-the-service-startup-account"></a>SCM 서비스 - 서비스 시작 계정 변경
@@ -28,9 +28,9 @@ ms.locfileid: "70212315"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 서비스 시작 계정을 변경한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스( [!INCLUDE[ssDE](../../includes/ssde-md.md)])를 다시 시작해야만 변경 내용이 적용됩니다. 서비스를 다시 시작하면 서비스가 성공적으로 다시 시작될 때까지 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 연결된 모든 데이터베이스를 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 서비스 시작 계정을 변경해야 하는 경우 정기적으로 예약된 유지 관리 중 또는 일상적인 작업을 방해하지 않고 데이터베이스를 오프라인 상태로 만들 수 있을 때 이 작업을 수행해야 합니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   클러스터형 서버  
   
@@ -42,7 +42,7 @@ ms.locfileid: "70212315"
   
      [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 설치 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는 네트워크 서비스를 사용하도록 구성되지만 이는 비활성화됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스에 할당된 계정을 변경할 수 있지만 서비스를 설정하거나 시작할 수는 없습니다. SKU를 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 에서 Express 이외 버전으로 업그레이드하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 자동으로 활성화되지 않지만 필요한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 서비스 시작 모드를 수동 또는 자동으로 변경하면 활성화할 수 있습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server 구성 관리자 사용  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> SQL Server 구성 관리자 사용  
   
 #### <a name="to-change-the-sql-server-service-startup-account"></a>SQL Server 서비스 시작 계정을 변경하려면  
   

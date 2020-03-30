@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288737"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted를 위한 키 관리 개요
@@ -46,7 +46,7 @@ ms.locfileid: "79288737"
 - **키 순환** - 정기적으로 기존 키를 새 키로 교체 키가 손상된 경우 또는 암호화 키를 순환하도록 요구하는 조직의 정책이나 규정 준수 규칙을 준수하려면 키를 순환해야 할 수 있습니다. 
 
 
-## <a name="KeyManagementRoles"></a> 키 관리 역할
+## <a name="key-management-roles"></a><a name="KeyManagementRoles"></a> 키 관리 역할
 
 상시 암호화 키를 관리하는 두 가지 사용자 역할이 있으며, 보안 관리자와 DBA(데이터베이스 관리자)입니다.
 
@@ -58,7 +58,7 @@ ms.locfileid: "79288737"
 ## <a name="managing-keys-with-role-separation"></a>역할 구분을 사용하여 키 관리
 상시 암호화 키가 역할 구분을 사용하여 관리되는 경우 조직 내의 서로 다른 사용자가 보안 관리자 및 DBA 역할을 맡습니다. 역할 구분을 사용하는 키 관리 프로세스에서는 DBA가 키 또는 실제 키를 포함하는 키 저장소에 액세스할 수 없고, 보안 관리자가 중요한 데이터를 포함하는 데이터베이스에 액세스할 수 없습니다. 역할 구분을 사용하는 키 관리는 조직의 DBA가 중요한 데이터에 액세스할 수 없도록 하려는 경우에 권장됩니다. 
 
-**참고:** 보안 관리자는 일반 텍스트 키를 생성하고 사용하므로, 데이터베이스 시스템을 호스팅하는 컴퓨터나 DBA 또는 악의적 사용자가 될 수 있는 다른 사용자가 액세스할 수 있는 컴퓨터에서 작업을 수행하면 안 됩니다. 
+**참고:** 보안 관리자는 일반 텍스트 키를 생성하고 사용하므로 데이터베이스 시스템을 호스트하는 컴퓨터나 DBA 또는 악의적 사용자가 될 수 있는 다른 사용자가 액세스할 수 있는 컴퓨터에서 해당 태스크를 수행하면 안 됩니다. 
 
 ## <a name="managing-keys-without-role-separation"></a>역할 구분을 사용하지 않고 키 관리
 상시 암호화 키가 역할 구분을 사용하지 않고 관리되는 경우 한 사람이 보안 관리자 및 DBA 역할을 모두 맡을 수 있으므로 해당 사용자가 키/키 저장소와 키 메타데이터를 둘 다 액세스하고 관리할 수 있어야 합니다. 역할 구분을 사용하지 않는 키 관리는 DevOps 모델을 사용하는 조직이나 데이터베이스가 클라우드에서 호스트되고 클라우드 관리자(온-프레미스 DBA 아님)가 중요한 데이터에 액세스할 수 없도록 제한하는 것이 주요 목표인 경우에 권장됩니다.

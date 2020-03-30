@@ -14,10 +14,10 @@ ms.assetid: 10817e5e-75fa-42dd-baa2-359bea3ad051
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0fa4abf575c847bae10342a3870fc2c3785d16a0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014236"
 ---
 # <a name="secondary-database-is-not-joined"></a>보조 데이터베이스에 조인되어 있지 않음

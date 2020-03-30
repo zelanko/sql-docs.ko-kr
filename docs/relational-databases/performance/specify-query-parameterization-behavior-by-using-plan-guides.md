@@ -19,10 +19,10 @@ ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 8c4c252de5a9d23ecfbaee06ca6322f3b08b275f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76761889"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>계획 지침을 사용하여 쿼리 매개 변수화 동작 지정
@@ -53,7 +53,7 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
 2.  PARAMETERIZATION FORCED 쿼리 힌트를 지정하여 매개 변수가 있는 쿼리 형식에 대한 계획 지침을 만듭니다.  
 
     > [!IMPORTANT]  
-    >  쿼리를 매개 변수화하는 과정의 일부로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 리터럴 값 및 크기에 따라 리터럴 값을 바꾸는 매개 변수에 데이터 유형을 할당합니다. 같은 프로세스가 **sp_get_query_template** 의 **\@stmt** 출력 매개 변수에 전달된 상수 리터럴 값에서 발생합니다. **sp_create_plan_guide\@ 의** **params** 인수에 지정된 데이터 유형이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 매개 변수화된 쿼리의 데이터 유형과 일치해야 하므로 쿼리에 사용할 수 있는 매개 변수 값의 전체 범위를 포함하는 계획 지침을 두 개 이상 만들어야 할 수 있습니다.  
+    >  쿼리를 매개 변수화하는 과정의 일부로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 리터럴 값 및 크기에 따라 리터럴 값을 바꾸는 매개 변수에 데이터 유형을 할당합니다. 같은 프로세스가 **sp_get_query_template\@ 의** **stmt** 출력 매개 변수에 전달된 상수 리터럴 값에서 발생합니다. **sp_create_plan_guide\@ 의** **params** 인수에 지정된 데이터 유형이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 매개 변수화된 쿼리의 데이터 유형과 일치해야 하므로 쿼리에 사용할 수 있는 매개 변수 값의 전체 범위를 포함하는 계획 지침을 두 개 이상 만들어야 할 수 있습니다.  
 
 다음 스크립트는 매개 변수가 있는 쿼리를 얻고 이에 대한 계획 지침을 만들기 위해 사용할 수 있습니다.  
   

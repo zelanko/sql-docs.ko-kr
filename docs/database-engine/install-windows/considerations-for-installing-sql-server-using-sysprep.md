@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 448906ca9a9dcb1a29b4cfab323e610909546171
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251574"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>SysPrep을 사용하여 SQL Server 설치 시 고려 사항
@@ -33,7 +33,7 @@ ms.locfileid: "75251574"
   
 SysPrep을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 방법은 [SysPrep을 사용하여 SQL Server 설치](../../database-engine/install-windows/install-sql-server-using-sysprep.md)를 참조하세요.  
   
-## <a name="common-uses-for-includessnoversionincludesssnoversion-mdmd-sysprep"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep의 일반적인 용도  
+## <a name="common-uses-for-ssnoversion-sysprep"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep의 일반적인 용도  
 다음과 같은 방법으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 기능을 사용할 수 있습니다.  
   
 - 이미지 준비 단계를 사용하면 구성되지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 같은 컴퓨터에서 하나 이상 준비할 수 있습니다. 이러한 준비 인스턴스는 같은 컴퓨터에서 이미지 완료 단계를 통해 구성할 수 있습니다.  
@@ -59,7 +59,7 @@ SysPrep을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
   
     - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition의 준비 인스턴스에 대해서는 제품 ID를 지정할 수 없습니다.  
   
-## <a name="supported-includessnoversionincludesssnoversion-mdmd-installations"></a>지원되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치  
+## <a name="supported-ssnoversion-installations"></a>지원되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치  
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 SysPrep은 도구를 비롯하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 모든 기능을 지원합니다.  
   
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 이전 버전을 함께 설치하기 위해 여러 인스턴스를 준비할 수 있습니다. 이러한 인스턴스의 기능은 SysPrep을 지원해야 합니다.  
@@ -74,10 +74,10 @@ SysPrep을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
   
 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep은 명령줄에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 설치를 지원합니다.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-sysprep-limitations"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 제한 사항  
+## <a name="ssnoversion-sysprep-limitations"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 제한 사항  
 준비 인스턴스 복구는 지원되지 않습니다. 이미지 준비 또는 이미지 완료 단계에서 설치가 실패하면 제거를 실행해야 합니다.  
   
-##  <a name="BKMK_PrepareImage"></a> 이미지 준비  
+##  <a name="prepare-image"></a><a name="BKMK_PrepareImage"></a> 이미지 준비  
 이미지 준비 단계에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품 및 기능을 설치하지만 설치를 구성하지는 않습니다.  
   
 이 단계에서는 설치할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품 설치 파일의 설치 위치를 지정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 센터 **의** 고급 **페이지에서** SysPrep 배포를 위한 독립 실행형 인스턴스의 이미지 준비 **를 사용하거나 명령 프롬프트를 통해** 인스턴스를 준비할 수 있습니다.  
@@ -88,7 +88,7 @@ SysPrep을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
   
  인스턴스가 준비된 후에는 **준비 인스턴스의 구성을 완료할 수 있도록** 시작 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]메뉴의 바로 가기를 사용할 수 있습니다.  
   
-##  <a name="BKMK_CompleteImage"></a> 이미지 완료  
+##  <a name="complete-image"></a><a name="BKMK_CompleteImage"></a> 이미지 완료  
 다음 방법 중 하나를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스를 완료할 수 있습니다.  
   
 - 시작 메뉴의 바로 가기를 사용합니다.  

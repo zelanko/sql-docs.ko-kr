@@ -21,10 +21,10 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b873c611c0e997c5033c2efed341f93e0ec5aa5e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71290734"
 ---
 # <a name="deploy-packages-with-ssis"></a>SSIS를 사용하여 패키지 배포
@@ -62,7 +62,7 @@ ms.locfileid: "71290734"
 
 - 샘플 데이터, 완성된 패키지, 구성 및 추가 정보. 샘플 데이터와 강의 패키지를 Zip 파일로 다운로드하려면 [SQL Server Integration Services 자습서 파일](https://www.microsoft.com/download/details.aspx?id=56827)을 참조하세요. Zip 파일에 있는 대부분 파일은 의도하지 않은 변경을 방지하기 위해 읽기 전용입니다. 출력을 파일에 쓰거나 변경하려면 파일 속성에서 읽기 전용 특성을 꺼야 할 수 있습니다.
 
--   **AdventureWorks2014** 샘플 데이터베이스. **AdventureWorks2014** 데이터베이스를 다운로드하려면 [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)에서 `AdventureWorks2014.bak`를 다운로드하고 백업을 복원하세요.  
+-   **AdventureWorks2014** 샘플 데이터베이스. **AdventureWorks2014** 데이터베이스를 다운로드하려면 `AdventureWorks2014.bak`AdventureWorks 샘플 데이터베이스[에서 ](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)를 다운로드하고 백업을 복원하세요.  
 
 -   AdventureWorks 데이터베이스에서 테이블을 만들고 삭제할 수 있는 권한이 있어야 합니다.
     
@@ -76,7 +76,7 @@ ms.locfileid: "71290734"
 
 - 샘플 데이터, 완성된 패키지, 구성 및 추가 정보. 샘플 데이터와 강의 패키지를 Zip 파일로 다운로드하려면 [SQL Server Integration Services 자습서 파일](https://www.microsoft.com/download/details.aspx?id=56827)을 참조하세요. Zip 파일에 있는 대부분 파일은 의도하지 않은 변경을 방지하기 위해 읽기 전용입니다. 출력을 파일에 쓰거나 변경하려면 파일 속성에서 읽기 전용 특성을 꺼야 할 수 있습니다.
 
--   **AdventureWorks2014** 샘플 데이터베이스. **AdventureWorks2014** 데이터베이스를 다운로드하려면 [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)에서 `AdventureWorks2014.bak`를 다운로드하고 백업을 복원하세요.  
+-   **AdventureWorks2014** 샘플 데이터베이스. **AdventureWorks2014** 데이터베이스를 다운로드하려면 `AdventureWorks2014.bak`AdventureWorks 샘플 데이터베이스[에서 ](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)를 다운로드하고 백업을 복원하세요.  
     
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).    
     
@@ -84,7 +84,7 @@ ms.locfileid: "71290734"
     
 -   AdventureWorks 데이터베이스에서 테이블을 만들고 삭제할 권한과 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 SSIS 패키지를 실행할 권한이 있어야 합니다.    
     
--   `msdb` [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 시스템 데이터베이스의 `sysssispackages` 테이블에 대한 읽기/쓰기 권한    
+-   `sysssispackages` `msdb` 시스템 데이터베이스의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블에 대한 읽기/쓰기 권한    
     
 배포 번들을 만든 컴퓨터에 패키지를 배포하려면 해당 컴퓨터는 원본 및 대상 컴퓨터에 대한 요구 사항을 모두 충족해야 합니다.    
         

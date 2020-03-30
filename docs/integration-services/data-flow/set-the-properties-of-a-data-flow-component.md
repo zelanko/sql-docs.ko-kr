@@ -13,10 +13,10 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 10b397e4fdabefe333854fe04ab37c4bdd92cf38
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291840"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>데이터 흐름 구성 요소의 속성 설정
@@ -122,7 +122,7 @@ ms.locfileid: "71291840"
 -   [출력 열](#outputcolumns)  
   
  
-###  <a name="components"></a> Component properties  
+###  <a name="component-properties"></a><a name="components"></a> Component properties  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체 모델에서 데이터 흐름의 구성 요소는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스를 구현합니다.  
   
  다음 표에서는 데이터 흐름 구성 요소의 속성에 대해 설명합니다. 일부 속성에는 데이터 흐름 엔진이 런타임에 할당한 읽기 전용 값이 있습니다.  
@@ -142,7 +142,7 @@ ms.locfileid: "71291840"
 |ValidateExternalMetadata|부울|외부 열 메타데이터의 유효성이 검사되었는지 여부를 나타냅니다. 이 속성의 기본값은 **True**입니다.|  
 |버전|정수|구성 요소의 버전입니다.|  
   
-###  <a name="inputs"></a> 입력 속성  
+###  <a name="input-properties"></a><a name="inputs"></a> 입력 속성  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체 모델에서 변환 및 대상은 입력을 포함합니다. 데이터 흐름 구성 요소의 입력은 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> 인터페이스를 구현합니다.  
   
  다음 표에서는 데이터 흐름 구성 요소의 입력 속성에 대해 설명합니다. 일부 속성에는 데이터 흐름 엔진이 런타임에 할당한 읽기 전용 값이 있습니다.  
@@ -162,7 +162,7 @@ ms.locfileid: "71291840"
   
  대상 및 일부 변환은 오류 출력을 지원하지 않으므로 이러한 구성 요소의 ErrorRowDisposition 및 TruncationRowDisposition 속성은 읽기 전용입니다.  
   
-###  <a name="inputcolumns"></a> 입력 열 속성  
+###  <a name="input-column-properties"></a><a name="inputcolumns"></a> 입력 열 속성  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체 모델에서 입력은 입력 열 모음을 포함합니다. 데이터 흐름 구성 요소의 입력 열은 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100> 인터페이스를 구현합니다.  
   
  다음 표에서는 데이터 흐름 구성 요소의 입력 열 속성에 대해 설명합니다. 일부 속성에는 데이터 흐름 엔진이 런타임에 할당한 읽기 전용 값이 있습니다.  
@@ -186,7 +186,7 @@ ms.locfileid: "71291840"
   
  입력 열은 "데이터 형식 속성"에 설명된 데이터 형식 속성도 포함합니다.  
   
-###  <a name="outputs"></a> 출력 속성  
+###  <a name="output-properties"></a><a name="outputs"></a> 출력 속성  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체 모델에서 원본 및 변환은 출력을 포함합니다. 데이터 흐름 구성 요소의 출력은 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> 인터페이스를 구현합니다.  
   
  다음 표에서는 데이터 흐름 구성 요소의 출력 속성에 대해 설명합니다. 일부 속성에는 데이터 흐름 엔진이 런타임에 할당한 읽기 전용 값이 있습니다.  
@@ -207,7 +207,7 @@ ms.locfileid: "71291840"
 |SynchronousInputID|정수|출력과 동시에 수행되는 입력의 ID입니다.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|행을 처리할 때 발생하는 잘림을 구성 요소가 처리하는 방법을 결정하는 값입니다. 가능한 값은 **Fail component**, **Ignore failure**및 **Redirect row**입니다.|  
   
-###  <a name="outputcolumns"></a> 출력 열 속성  
+###  <a name="output-column-properties"></a><a name="outputcolumns"></a> 출력 열 속성  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체 모델에서 출력은 출력 열 모음을 포함합니다. 데이터 흐름 구성 요소의 출력 열은 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100> 인터페이스를 구현합니다.  
   
  다음 표에서는 데이터 흐름 구성 요소의 출력 열 속성에 대해 설명합니다. 일부 속성에는 데이터 흐름 엔진이 런타임에 할당한 읽기 전용 값이 있습니다.  

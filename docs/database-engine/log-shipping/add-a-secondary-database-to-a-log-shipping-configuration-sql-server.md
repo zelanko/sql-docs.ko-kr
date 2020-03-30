@@ -16,10 +16,10 @@ ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 66a194a26529834a3d77229a21b7556b03da635e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822155"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>로그 전달 구성에 보조 데이터베이스 추가(SQL Server)
@@ -27,14 +27,14 @@ ms.locfileid: "74822155"
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 기존의 로그 전달 구성에 보조 데이터베이스를 추가하는 방법에 대해 설명합니다.  
   
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  로그 전달 저장 프로시저를 사용하려면 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-add-a-log-shipping-secondary-database"></a>로그 전달 보조 데이터베이스를 추가하려면  
   
@@ -68,7 +68,7 @@ ms.locfileid: "74822155"
   
 15. 데이터베이스 속성 대화 상자에서 **확인** 을 클릭하여 구성 프로세스를 시작합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-add-a-log-shipping-secondary-database"></a>로그 전달 보조 데이터베이스를 추가하려면  
   
@@ -82,7 +82,7 @@ ms.locfileid: "74822155"
   
 5.  보조 서버에서 복사 및 복원 작업을 활성화합니다. 자세한 내용은 [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [SQL Server 2016으로 로그 전달 업그레이드&#40;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   

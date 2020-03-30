@@ -13,10 +13,10 @@ ms.assetid: 6721f780-20b7-4109-8ddb-ac327310699e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3ef524c6ee823b80b25fa5cf5ee4584ba8b8d00c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67912191"
 ---
 # <a name="set-up-filestream-on-a-failover-cluster"></a>장애 조치(Failover) 클러스터에서 FILESTREAM 설정

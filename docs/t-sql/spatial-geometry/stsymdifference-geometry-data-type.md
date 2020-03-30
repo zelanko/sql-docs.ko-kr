@@ -18,10 +18,10 @@ ms.assetid: 1d4cf35a-ca89-4aa4-ae30-e61a0ff18b53
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 2845ecc6189b113bc31ae85b869985cf2ddfdb16
-ms.sourcegitcommit: cf8db6330be0d89bbec362e4c7e187b5461026f0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77051683"
 ---
 # <a name="stsymdifference-geometry-data-type"></a>STSymDifference(geometry 데이터 형식)
@@ -38,7 +38,7 @@ ms.locfileid: "77051683"
   
 ## <a name="arguments"></a>인수  
  *other_geometry*  
- `STSymDifference()`를 호출할 인스턴스 외의 다른 **geometry** 인스턴스입니다.  
+ **를 호출할 인스턴스 외의 다른** geometry`STSymDifference()` 인스턴스입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  

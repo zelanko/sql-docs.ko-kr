@@ -19,10 +19,10 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f5aa9a2373d622e74b2964c7a6dc967a82ab4e36
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78177383"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>Always On 가용성 그룹의 보조 복제본에서 백업 구성
@@ -30,23 +30,23 @@ ms.locfileid: "78177383"
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]또는 PowerShell을 사용하여 Always On 가용성 그룹의 보조 복제본에 백업을 구성하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
->  보조 복제본에 백업에 대한 소개는 [활성 보조 복제본: 보조 복제본에 백업&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
+>  보조 복제본에 백업에 대한 개요를 보려면 [활성 보조: 보조 복제본에 백업&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)또는 PowerShell을 사용하여 Always On 가용성 그룹의 보조 복제본에 백업을 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="Prerequisites"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
  주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
  
    > [!NOTE]
    > 보조 복제본에 백업을 오프로드하기 위해 보조 복제본을 읽을 필요는 없습니다. `Readable Secondary`가 `no`로 설정된 경우에도 보조 복제본에서 백업이 성공적으로 수행됩니다. 
   
   
-##  <a name="Permissions"></a> 권한  
+##  <a name="permissions"></a><a name="Permissions"></a> 권한  
   
 |Task|사용 권한|  
 |----------|-----------------|  
 |가용성 그룹을 만들 때 보조 복제본에 백업을 구성하려면|CREATE AVAILABILITY GROUP 서버 권한, ALTER ANY AVAILABILITY GROUP 권한, CONTROL SERVER 권한 중 하나와 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.|  
 |가용성 그룹 또는 가용성 복제본을 수정하려면|가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.|  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **보조 복제본에 백업을 구성하려면**  
   
 1.  개체 탐색기에서 주 복제본을 호스팅하는 서버 인스턴스에 연결하고 서버 트리를 확장할 서버 이름을 클릭합니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "78177383"
      백업을 수행할 복제본을 선택할 때 백업 작업에서 가용성 복제본의 역할을 무시하도록 지정합니다. 백업 작업에서는 각 가용성 복제본의 작동 상태 및 연결 상태와 함께 백업 우선 순위 등의 기타 요인을 평가할 수 있습니다.  
   
     > [!IMPORTANT]  
-    >  자동화된 백업 기본 설정은 적용되지 않습니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 자동화된 백업 기본 설정은 임시 백업에는 영향을 미치지 않습니다. 자세한 내용은 이 항목 뒷부분에 있는 [후속 작업: 보조 복제본에 백업을 구성한 후의 작업](#FollowUp)을 참조하세요.  
+    >  자동화된 백업 기본 설정은 적용되지 않습니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 자동화된 백업 기본 설정은 임시 백업에는 영향을 미치지 않습니다. 자세한 내용은 이 항목 뒷부분에 있는 [후속 작업: 보조 복제본에 백업을 구성한 후](#FollowUp) 을 참조하세요.  
   
 6.  **복제본 백업 우선 순위** 표를 사용하여 가용성 복제본의 백업 우선 순위를 변경할 수 있습니다. 이 표는 가용성 그룹에 대한 복제본을 호스팅하는 각 서버 인스턴스의 현재 백업 우선 순위를 표시합니다. 표 열은 다음과 같습니다.  
   
@@ -98,14 +98,14 @@ ms.locfileid: "78177383"
   
 -   [새 가용성 그룹 대화 상자 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **보조 복제본에 백업을 구성하려면**  
   
 1.  주 복제본을 호스팅하는 서버 인스턴스에 연결합니다.  
   
 2.  새 가용성 그룹을 만들려는 경우 [CREATE AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)을 사용하세요. 기존 가용성 그룹을 수정하려는 경우 [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md) 문을 사용합니다.  
   
-##  <a name="PowerShellProcedure"></a> PowerShell 사용  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell 사용  
  **보조 복제본에 백업을 구성하려면**  
   
 1.  기본값(**cd**)을 주 복제본을 호스트하는 서버 인스턴스로 설정합니다.  
@@ -143,7 +143,7 @@ ms.locfileid: "78177383"
      백업을 수행할 복제본을 선택할 때 백업 작업에서 가용성 복제본의 역할을 무시하도록 지정합니다. 백업 작업에서는 각 가용성 복제본의 작동 상태 및 연결 상태와 함께 백업 우선 순위 등의 기타 요인을 평가할 수 있습니다.  
   
     > [!IMPORTANT]  
-    >  **AutomatedBackupPreference**는 적용되지 않습니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 자동화된 백업 기본 설정은 임시 백업에는 영향을 미치지 않습니다. 자세한 내용은 이 항목 뒷부분에 있는 [후속 작업: 보조 복제본에 백업을 구성한 후의 작업](#FollowUp)을 참조하세요.  
+    >  **AutomatedBackupPreference**는 적용되지 않습니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 자동화된 백업 기본 설정은 임시 백업에는 영향을 미치지 않습니다. 자세한 내용은 이 항목 뒷부분에 있는 [후속 작업: 보조 복제본에 백업을 구성한 후](#FollowUp) 을 참조하세요.  
   
      예를 들어 다음 명령은 가용성 그룹 **의** AutomatedBackupPreference `MyAg` 속성을 **SecondaryOnly**로 설정합니다. 주 복제본에서는 이 가용성 그룹의 데이터베이스 자동 백업이 절대 발생하지 않으며 대신 백업 우선 순위 설정 값이 가장 높은 보조 복제본으로 백업이 리디렉션됩니다.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "78177383"
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
-##  <a name="FollowUp"></a> 후속 작업: 보조 복제본에 백업을 구성한 후의 작업  
+##  <a name="follow-up-after-configuring-backup-on-secondary-replicas"></a><a name="FollowUp"></a> 후속 작업: 보조 복제본에 백업을 구성한 후  
  지정된 가용성 그룹에 대해 자동화된 백업 기본 설정을 고려하도록 하려면 백업 우선 순위가 0보다 큰(>0) 가용성 복제본을 호스팅하는 각 서버 인스턴스에서 가용성 그룹의 데이터베이스에 대한 백업 작업을 스크립팅해야 합니다. 현재 복제본이 기본 백업 복제본인지 여부를 확인하려면 백업 스크립트에서 [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) 함수를 사용합니다. 현재 서버 인스턴스가 호스팅하는 가용성 복제본이 백업에 대한 선호 복제본인 경우 이 함수가 1을 반환합니다. 그렇지 않으면 함수가 0을 반환합니다. 각 가용성 복제본에서 이 함수를 쿼리하는 간단한 스크립트를 실행하여 지정된 백업 작업을 실행할 복제본을 확인할 수 있습니다. 예를 들어 백업 작업 스크립트의 일반적인 코드 조각은 다음과 같습니다.  
   
 ```sql  
@@ -180,7 +180,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
 > [!TIP]  
 >  [유지 관리 계획 마법사](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)를 사용하여 지정된 백업 작업을 만드는 경우 해당 작업에는 **sys.fn_hadr_backup_is_preferred_replica** 함수를 호출하고 확인하는 스크립팅 논리가 자동으로 포함됩니다. 그러나 백업 작업은 “선호 복제본이 아닙니다...”라는 메시지를 반환하지 않습니다. 가용성 그룹의 가용성 복제본을 호스트하는 각 서버 인스턴스에서 각 가용성 데이터베이스에 대한 작업을 만들어야 합니다.  
   
-##  <a name="ForInfoAboutBuPref"></a> 백업 기본 설정에 대한 정보를 가져오려면  
+##  <a name="to-obtain-information-about-backup-preference-settings"></a><a name="ForInfoAboutBuPref"></a> 백업 기본 설정에 대한 정보를 가져오려면  
  다음은 보조 복제본에서의 백업과 관련된 정보를 가져오는 데 유용합니다.  
   
 |보기|정보|관련 열|  
@@ -190,7 +190,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
 |[sys.availability_replicas](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)|지정된 가용성 복제본의 백업 우선 순위|**backup_priority**|  
 |[sys.dm_hadr_availability_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)|복제본이 서버 인스턴스의 로컬 복제본인지 여부<br /><br /> 현재 역할<br /><br /> 작동 상태<br /><br /> 연결 상태<br /><br /> 가용성 복제본의 동기화 상태|**is_local**<br /><br /> **role**, **role_desc**<br /><br /> **operational_state**, **operational_state_desc**<br /><br /> **connected_state**, **connected_state_desc**<br /><br /> **synchronization_health**, **synchronization_health_desc**|  
   
-##  <a name="RelatedContent"></a> 관련 내용  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
   
 -   [고가용성 및 재해 복구를 위한 Microsoft SQL Server Always On 솔루션 가이드](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
@@ -198,6 +198,6 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 ## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [활성 보조 복제본: 보조 복제본에 백업&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [활성 보조: 보조 복제본에 백업&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

@@ -22,10 +22,10 @@ ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e12088669f56dce1b6dee69202284f3cc044e274
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71286952"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>사용자 지정 태스크의 사용자 인터페이스 개발

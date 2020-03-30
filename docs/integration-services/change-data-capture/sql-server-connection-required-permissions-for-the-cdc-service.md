@@ -11,10 +11,10 @@ ms.assetid: d9e968f9-180c-4fa0-a849-98f2b1942330
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e7528545f2b7cd50e4b612372dc35e65dcc2324a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298644"
 ---
 # <a name="sql-server-connection-required-permissions-for-the-cdc-service"></a>SQL Server 연결 CDC Service에 필요한 권한

@@ -14,10 +14,10 @@ ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5c773ae8db0b9942e23e40fb5f72b989b97ccfcc
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903860"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services(SSIS) 패키지 및 프로젝트 매개 변수
@@ -27,7 +27,7 @@ ms.locfileid: "77903860"
 
   SSIS([!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 매개 변수를 사용하여 패키지 실행 시 패키지 내의 속성에 값을 할당할 수 있습니다. 프로젝트 수준에서 *프로젝트 매개 변수* 를 만들고 패키지 수준에서 *패키지 매개 변수* 를 만들 수 있습니다. 프로젝트 매개 변수는 프로젝트가 수신하는 외부 입력을 프로젝트 내 하나 이상의 패키지에 제공하기 위해 사용됩니다. 패키지 매개 변수를 사용하면 패키지를 편집하여 다시 배포할 필요 없이 패키지 실행을 수정할 수 있습니다.  
   
- [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 에서 **Project.params** 창을 사용하여 프로젝트 매개 변수를 만들거나, 수정하거나, 삭제합니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너의 **매개 변수** 탭을 사용하여 패키지 매개 변수를 만들고, 수정하고, 삭제합니다. **매개 변수화** 대화 상자를 사용하여 새 매개 변수나 기존 매개 변수를 태스크 속성과 연결합니다. **Project.params** 창 및 **매개 변수** 탭을 사용하는 방법은 [Create Parameters](https://msdn.microsoft.com/library/cd5d675b-dd5d-49cc-8b1f-dc717a973f99)를 참조하십시오. **매개 변수화** 대화 상자에 대한 자세한 내용은 [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350)를 참조하십시오.  
+ [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 에서 **Project.params** 창을 사용하여 프로젝트 매개 변수를 만들거나, 수정하거나, 삭제합니다. **디자이너의**매개 변수[!INCLUDE[ssIS](../includes/ssis-md.md)] 탭을 사용하여 패키지 매개 변수를 만들고, 수정하고, 삭제합니다. **매개 변수화** 대화 상자를 사용하여 새 매개 변수나 기존 매개 변수를 태스크 속성과 연결합니다. **Project.params** 창 및 **매개 변수** 탭을 사용하는 방법은 [Create Parameters](https://msdn.microsoft.com/library/cd5d675b-dd5d-49cc-8b1f-dc717a973f99)를 참조하십시오. **매개 변수화** 대화 상자에 대한 자세한 내용은 [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350)를 참조하십시오.  
   
 ## <a name="parameters-and-package-deployment-model"></a>매개 변수 및 패키지 배포 모델  
  일반적으로 패키지 배포 모델을 사용하여 패키지를 배포하려면 매개 변수 대신 구성을 사용해야 합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "77903860"
   
  단일 매개 변수를 사용하여 여러 패키지 속성에 값을 지정할 수 있습니다. 단일 패키지 속성은 단일 매개 변수로부터의 값만 지정할 수 있습니다.  
   
-###  <a name="executions"></a> 실행 및 매개 변수 값  
+###  <a name="executions-and-parameter-values"></a><a name="executions"></a> 실행 및 매개 변수 값  
  *실행* 은 단일 패키지 실행 인스턴스를 나타내는 개체입니다. 실행을 만들 때는 실행 매개 변수 값과 같이 패키지를 실행하는 데 필요한 모든 세부 정보를 지정합니다. 기존 실행에 대한 매개 변수 값을 수정할 수도 있습니다.  
   
  실행 매개 변수 값을 명시적으로 설정할 때는 해당 실행 인스턴스에만 값을 적용할 수 있습니다. 실행 값은 서버 값 또는 디자인 값 대신 사용됩니다. 실행 값을 명시적으로 설정하지 않고 서버 값이 지정된 경우 서버 값이 사용됩니다.  
@@ -87,12 +87,12 @@ ms.locfileid: "77903860"
  [catalog.set_execution_parameter_value&#40;SSISDB 데이터베이스&#41;](../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 카탈로그의 실행 인스턴스에 대한 매개 변수 값을 설정합니다.  
   
- 또한 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 의 **패키지 실행** 대화 상자를 사용하여 매개 변수 값을 수정할 수 있습니다. 자세한 내용은 [Execute Package Dialog Box](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)을 참조하세요.  
+ 또한 **의**패키지 실행[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 매개 변수 값을 수정할 수 있습니다. 자세한 내용은 [Execute Package Dialog Box](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)을 참조하세요.  
   
  dtexec **/Parameter** 옵션을 사용하여 매개 변수 값을 수정할 수도 있습니다. 자세한 내용은 [dtexec Utility](../integration-services/packages/dtexec-utility.md)를 참조하세요.  
   
 ### <a name="parameter-validation"></a>매개 변수 유효성 검사  
- 매개 변수 값을 확인할 수 없는 경우 해당 패키지 실행이 실패합니다. 오류를 방지하려면 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 의 **유효성 검사** 대화 상자를 사용하여 프로젝트 및 패키지의 유효성을 검사합니다. 유효성 검사를 통해 모든 매개 변수가 필요한 값을 가지고 있는지 확인하거나 특정 환경 참조에 필요한 값을 확인할 수 있습니다. 유효성 검사는 또한 다른 일반적인 패키지 문제도 확인합니다.  
+ 매개 변수 값을 확인할 수 없는 경우 해당 패키지 실행이 실패합니다. 오류를 방지하려면 **의**유효성 검사[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 프로젝트 및 패키지의 유효성을 검사합니다. 유효성 검사를 통해 모든 매개 변수가 필요한 값을 가지고 있는지 확인하거나 특정 환경 참조에 필요한 값을 확인할 수 있습니다. 유효성 검사는 또한 다른 일반적인 패키지 문제도 확인합니다.  
   
  자세한 내용은 [Validate Dialog Box](../integration-services/service/validate-dialog-box.md)을 참조하세요.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "77903860"
 ## <a name="create-parameters"></a>매개 변수 만들기
 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 를 사용하여 프로젝트 매개 변수 및 패키지 매개 변수를 만들 수 있습니다. 다음 절차에서는 패키지/프로젝트 매개 변수를 만드는 단계별 지침을 제공합니다.  
   
-> **참고:** 이전 버전의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 를 사용하여 만든 프로젝트를 프로젝트 배포 모델로 변환하는 경우 **Integration Services 프로젝트 변환 마법사** 를 사용하여 구성에 따라 매개 변수를 만들 수 있습니다. 자세한 내용은 [Integration Services(SSIS) 프로젝트 및 패키지 배포](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하세요.  
+> **참고:** 이전 버전의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 사용하여 만든 프로젝트를 프로젝트 배포 모델로 변환하는 경우 **Integration Services 프로젝트 변환 마법사**를 사용하여 구성에 따라 매개 변수를 만들 수 있습니다. 자세한 내용은 [Integration Services(SSIS) 프로젝트 및 패키지 배포](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하세요.  
   
 ### <a name="create-package-parameters"></a>패키지 매개 변수 만들기  
   
@@ -217,6 +217,6 @@ ms.locfileid: "77903860"
  Transact-SQL로 서버 기본값을 설정하려면 [catalog.set_object_parameter_value&#40;SSISDB 데이터베이스&#41;](../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md) 저장 프로시저를 사용합니다. 현재 서버 기본값을 보려면 [catalog.object_parameters&#40;SSISDB 데이터베이스&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) 뷰를 쿼리합니다. 서버 기본값을 지우려면 [catalog.clear_object_parameter_value&#40;SSISDB 데이터베이스&#41;](../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md) 저장 프로시저를 사용합니다.  
   
 ## <a name="related-content"></a>관련 내용  
- mattmasson.com의 블로그 항목 - [SSIS 빠른 팁: 필수 매개 변수](https://go.microsoft.com/fwlink/?LinkId=239781).  
+ mattmasson.com의 블로그 항목, [SSIS 빠른 팁: 필수 매개 변수](https://go.microsoft.com/fwlink/?LinkId=239781).  
   
   

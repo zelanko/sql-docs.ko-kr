@@ -14,10 +14,10 @@ ms.assetid: 7d475d33-a776-4776-a174-2c8a4acd476f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ebb0be56f5d4401ba296733d6430bb82d602d3da
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67997933"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>ODBC 데이터 원본 관리자 열기

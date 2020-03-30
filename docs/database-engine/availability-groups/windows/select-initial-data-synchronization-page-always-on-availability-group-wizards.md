@@ -15,10 +15,10 @@ ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e8a6a14a6efc6a9d5f96144364f1532c14b0c1c0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75235338"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>초기 데이터 동기화 페이지 선택(Always On 가용성 그룹 마법사)
@@ -28,7 +28,7 @@ ms.locfileid: "75235338"
   
  가능한 선택에는 **자동 시드**, **전체 데이터베이스 및 로그 백업**, **조인만** 또는 **초기 데이터 동기화 건너뛰기**가 있습니다. **자동 시드**, **전체** 또는 **조인만**을 선택하기 전에 환경이 필수 조건을 충족하는지 확인합니다.  
     
-##  <a name="Recommendations"></a> 권장 사항  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   초기 데이터 동기화 동안 주 데이터베이스에 대한 로그 백업 태스크를 일시 중지합니다.  
   
@@ -38,11 +38,11 @@ ms.locfileid: "75235338"
   
      백업 및 복원 작업에 대해 엄격히 보안을 유지해야 하는 경우 **조인만** 또는 **초기 데이터 동기화 건너뛰기** 옵션을 선택하는 것이 좋습니다.  
   
-## <a name="Auto"></a> 자동 시드
+## <a name="automatic-seeding"></a><a name="Auto"></a> 자동 시드
  
  SQL Server는 자동으로 그룹의 모든 데이터베이스에 대한 보조 복제본을 만듭니다. 자동 시드를 사용하려면 데이터 및 로그 파일 경로가 그룹에 참여하는 모든 SQL Server 인스턴스에서 동일해야 합니다. [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] 이상에서 사용할 수 있습니다. [Always On 가용성 그룹 자동 초기화](automatically-initialize-always-on-availability-group.md)를 참조하세요.
 
-##  <a name="Full"></a> 전체 데이터베이스 및 로그 백업 
+##  <a name="full-database-and-log-backup"></a><a name="Full"></a> 전체 데이터베이스 및 로그 백업 
  각각의 주 데이터베이스에 대해 **전체 데이터베이스 및 로그 백업** 옵션은 하나의 워크플로에서 여러 작업을 수행합니다. 즉, 주 데이터베이스의 전체 및 로그 백업을 만들고, 보조 복제본을 호스팅하는 모든 서버 인스턴스에서 이러한 백업을 복원하여 해당 보조 데이터베이스를 만들고, 가용성 그룹에 각 보조 데이터베이스를 조인합니다.  
   
  현재 환경이 전체 초기 데이터 동기화를 사용하기 위한 다음 사전 요구 사항을 충족하고 마법사를 사용하여 데이터 동기화를 자동으로 시작하려는 경우에만 이 옵션을 선택합니다.  
@@ -75,18 +75,18 @@ ms.locfileid: "75235338"
 > [!IMPORTANT]  
 >  로그 백업이 로그 백업 체인의 일부입니다. 백업 파일을 적절히 저장합니다.  
   
-##  <a name="Joinonly"></a> 조인만  
+##  <a name="join-only"></a><a name="Joinonly"></a> 조인만  
  가용성 그룹의 보조 복제본을 호스팅하는 각 서버 인스턴스에 새 보조 데이터베이스가 이미 있는 경우에만 이 옵션을 선택합니다. 보조 데이터베이스 준비에 대한 자세한 내용은 이 섹션의 뒷부분에 나오는 [수동으로 보조 데이터베이스를 준비하려면](#PrepareSecondaryDbs)을 참조하세요.  
   
  **조인만**을 선택하면 마법사는 각 기존 보조 데이터베이스를 가용성 그룹에 조인하려고 시도합니다.  
   
-## <a name="Skip"></a> 초기 데이터 동기화 건너뛰기  
+## <a name="skip-initial-data-synchronization"></a><a name="Skip"></a> 초기 데이터 동기화 건너뛰기  
  모든 주 데이터베이스의 데이터베이스 및 로그 백업을 직접 수행하고 보조 복제본을 호스팅하는 모든 서버 인스턴스로 복원하려는 경우에만 이 옵션을 선택합니다. 마법사를 종료한 후 모든 보조 복제본에서 모든 보조 데이터베이스를 조인해야 합니다.  
   
 > [!NOTE]  
 >  자세한 내용은 [Always On 보조 데이터베이스에서 데이터 이동 시작&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)를 참조하세요.  
   
-##  <a name="PrepareSecondaryDbs"></a> 수동으로 보조 데이터베이스를 준비하려면  
+##  <a name="to-prepare-secondary-databases-manually"></a><a name="PrepareSecondaryDbs"></a> 수동으로 보조 데이터베이스를 준비하려면  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 마법사와 독립적으로 보조 데이터베이스를 준비하려면 다음 방법 중 하나를 사용합니다.  
   
 -   RESTORE WITH NORECOVERY를 사용하여 주 데이터베이스의 최신 데이터베이스 백업을 수동으로 복원한 다음 RESTORE WITH NORECOVERY를 사용하여 각 후속 로그 백업을 복원합니다. 주 데이터베이스와 보조 데이터베이스의 파일 경로가 다른 경우에는 WITH MOVE 옵션을 사용해야 합니다. 가용성 그룹의 보조 복제본을 호스팅하는 모든 서버 인스턴스에서 이 복원 시퀀스를 수행합니다.  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 및 PowerShell을 사용하여 이러한 백업 및 복원 작업을 수행할 수 있습니다.  
@@ -110,7 +110,7 @@ ms.locfileid: "75235338"
   
  필요에 따라 마법사를 실행하기 전에 모든 보조 데이터베이스를 준비할 수 있습니다. 그런 다음 마법사의 **초기 데이터 동기화 지정** 페이지에서 **조인만** 을 선택하여 새 보조 데이터베이스를 가용성 그룹에 자동으로 조인합니다.  
   
-##  <a name="LaunchWiz"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> 관련 작업  
   
 -   [새 가용성 그룹 대화 상자 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

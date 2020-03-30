@@ -14,10 +14,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c5e7595b421627266c7f08ca76588f481a19554f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75257665"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>전체 텍스트 인덱스 만들기 및 관리
@@ -27,7 +27,7 @@ ms.locfileid: "75257665"
 ## <a name="prerequisite---create-a-full-text-catalog"></a>필수 조건 - 전체 텍스트 카탈로그 만들기
 전체 텍스트 인덱스를 만들려면 먼저 전체 텍스트 카탈로그가 있어야 합니다. 카탈로그는 하나 이상의 전체 텍스트 인덱스에 대한 가상 컨테이너입니다. 자세한 내용은 [전체 텍스트 카탈로그 만들기 및 관리](../../relational-databases/search/create-and-manage-full-text-catalogs.md)를 참조하세요.
   
-##  <a name="tasks"></a> 전체 텍스트 인덱스 만들기, 변경 또는 삭제  
+##  <a name="create-alter-or-drop-a-full-text-index"></a><a name="tasks"></a> 전체 텍스트 인덱스 만들기, 변경 또는 삭제  
 ### <a name="create-a-full-text-index"></a>전체 텍스트 인덱스 만들기  
   
 -   [CREATE FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)  
@@ -48,7 +48,7 @@ ms.locfileid: "75257665"
 
 자세한 내용은 [전체 텍스트 인덱스 채우기](../../relational-databases/search/populate-full-text-indexes.md)를 참조하세요.
 
-##  <a name="view"></a> 전체 텍스트 인덱스의 속성 보기
+##  <a name="view-the-properties-of-a-full-text-index"></a><a name="view"></a> 전체 텍스트 인덱스의 속성 보기
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>Transact-SQL을 사용하여 전체 텍스트 인덱스의 속성 보기
 
 |카탈로그 뷰 또는 동적 관리 뷰|Description|  
@@ -80,7 +80,7 @@ ms.locfileid: "75257665"
   
 6.  변경 내용을 저장하고 [!INCLUDE[clickOK](../../includes/clickok-md.md)]전체 텍스트 인덱스 속성**대화 상자를 닫으려면**  
   
-##  <a name="props"></a> 인덱싱된 테이블 및 열 속성 보기  
+##  <a name="view-the-properties-of-indexed-tables-and-columns"></a><a name="props"></a> 인덱싱된 테이블 및 열 속성 보기  
  OBJECTPROPERTYEX와 같은 여러 가지 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 사용하여 다양한 전체 텍스트 인덱싱 속성 값을 얻을 수 있습니다. 이 정보는 전체 텍스트 검색을 관리하고 이러한 검색에서 발생하는 문제를 해결하는 데 유용합니다.  
   
  다음 표에서는 인덱싱된 테이블 및 열과 관련한 전체 텍스트 속성과 관련 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 보여 줍니다.  
@@ -102,7 +102,7 @@ ms.locfileid: "75257665"
 |**TableFulltextPopulateStatus**|전체 텍스트 테이블의 채우기 상태입니다.|OBJECTPROPERTYEX|  
 |**TableHasActiveFulltextIndex**|테이블에 활성화된 전체 텍스트 인덱스가 있는지를 나타냅니다.|OBJECTPROPERTYEX|  
   
-##  <a name="key"></a> 전체 텍스트 키 열에 대한 정보 얻기  
+##  <a name="get-info-about-the-full-text-key-column"></a><a name="key"></a> 전체 텍스트 키 열에 대한 정보 얻기  
  일반적으로 CONTAINSTABLE 또는 FREETEXTTABLE 행 집합 반환 함수의 결과는 기본 테이블과 조인되어야 합니다. 이러한 경우 고유 키 열 이름을 알아야 합니다. 그러면 지정된 고유 인덱스가 전체 텍스트 키로 사용되는지 여부를 확인하고 전체 텍스트 키 열의 식별자를 가져올 수 있습니다.  
   
 ### <a name="determine-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>지정된 고유 인덱스가 전체 텍스트 키 열로 사용되는지 여부 확인  
@@ -183,7 +183,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
  **xml** 열을 인덱싱 및 쿼리하는 방법에 대한 자세한 내용은 [XML 열에 전체 텍스트 검색 사용](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)을 참조하세요.  
   
-##  <a name="disable"></a> 테이블에 대해 전체 텍스트 인덱싱 사용 안 함 또는 다시 사용   
+##  <a name="disable-or-re-enable-full-text-indexing-for-a-table"></a><a name="disable"></a> 테이블에 대해 전체 텍스트 인덱싱 사용 안 함 또는 다시 사용   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 사용자가 만든 모든 데이터베이스에서 기본적으로 전체 텍스트를 사용할 수 있습니다. 또한 개별 테이블에 전체 텍스트 인덱스를 만들고 이 인덱스에 열을 추가하는 즉시 자동으로 개별 테이블에서 전체 텍스트 인덱싱을 사용할 수 있게 됩니다. 해당 전체 텍스트 인덱스에서 마지막 열을 삭제하면 자동으로 테이블에서 전체 텍스트 인덱싱을 사용할 수 없게 됩니다.  
   
  전체 텍스트 인덱스가 있는 테이블에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 테이블에서의 전체 텍스트 인덱싱을 수동으로 해제하거나 다시 설정할 수 있습니다.  
@@ -194,7 +194,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
 3.  **전체 텍스트 인덱스**를 선택한 다음 **전체 텍스트 인덱스 사용 안 함** 또는 **전체 텍스트 인덱스 사용**을 클릭합니다.  
   
-##  <a name="remove"></a> 테이블에서 전체 텍스트 인덱스 제거  
+##  <a name="remove-a-full-text-index-from-a-table"></a><a name="remove"></a> 테이블에서 전체 텍스트 인덱스 제거  
   
 1.  개체 탐색기에서 삭제할 전체 텍스트 인덱스가 포함된 테이블을 마우스 오른쪽 단추로 클릭합니다.  
   

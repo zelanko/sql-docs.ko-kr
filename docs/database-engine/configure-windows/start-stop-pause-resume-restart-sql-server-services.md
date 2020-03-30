@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 ms.openlocfilehash: 6fee83f5560891e6160c3e885ca0a0ed4e5e8058
-ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78946728"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>SQL Server 서비스 시작, 중지, 일시 중지, 계속 및 다시 시작
@@ -71,7 +71,7 @@ SQL Server 리소스에 관한 들어오는 요청을 수신 대기하고 컴퓨
 
 ### <a name="additional-information"></a>추가 정보
 
-- 데이터베이스 엔진 서비스를 일시 중지하면 새 사용자는 데이터베이스 엔진에 연결할 수 없지만, 이미 연결된 사용자는 연결이 끊어질 때까지 계속해서 작업할 수 있습니다. 사용자가 작업을 완료할 때까지 기다렸다가 서비스를 중지하려면 일시 중지를 사용합니다. 이렇게 하면 사용자가 진행 중인 트랜잭션을 완료할 수 있습니다. ‘계속’을 사용하면 데이터베이스 엔진에서 새 연결을 다시 허용할 수 있습니다. SQL Server 에이전트 서비스는 일시 중지하거나 계속할 수 없습니다.  
+- 데이터베이스 엔진 서비스를 일시 중지하면 새 사용자는 데이터베이스 엔진에 연결할 수 없지만, 이미 연결된 사용자는 연결이 끊어질 때까지 계속해서 작업할 수 있습니다. 사용자가 작업을 완료할 때까지 기다렸다가 서비스를 중지하려면 일시 중지를 사용합니다. 이렇게 하면 사용자가 진행 중인 트랜잭션을 완료할 수 있습니다. ‘계속’을 사용하면 데이터베이스 엔진에서 새 연결을 다시 허용할 수 있습니다.  SQL Server 에이전트 서비스는 일시 중지하거나 계속할 수 없습니다.  
 
 - SQL Server 구성 관리자와 SSMS에서는 다음 아이콘을 사용하여 서비스의 현재 상태를 표시합니다.  
 

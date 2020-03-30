@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9c8334573b66b5c227a5033a63b5aedf06909c78
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68316965"
 ---
 # <a name="modify-an-index"></a>인덱스 수정
@@ -38,7 +38,7 @@ ms.locfileid: "68316965"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-modify-an-index"></a>인덱스를 수정하려면  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68316965"
   
 1.  인덱스 열을 추가 또는 제거하거나 그 위치를 변경하려면 **인덱스 속성** 대화 상자에서 **일반** 페이지를 선택합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-modify-an-index"></a>인덱스를 수정하려면  
   
