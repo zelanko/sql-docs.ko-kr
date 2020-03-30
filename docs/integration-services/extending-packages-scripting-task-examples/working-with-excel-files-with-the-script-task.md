@@ -17,10 +17,10 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9386f146aee229eb4547ad54b4dd576fda1c0bfc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71286570"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>스크립트 태스크를 사용한 Excel 파일 작업
@@ -36,7 +36,7 @@ ms.locfileid: "71286570"
 > [!TIP]  
 >  여러 패키지에서 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
 
-##  <a name="configuring"></a> 예제를 테스트하기 위한 패키지 구성  
+##  <a name="configuring-a-package-to-test-the-samples"></a><a name="configuring"></a> 예제를 테스트하기 위한 패키지 구성  
  단일 패키지에서 이 항목의 모든 예제를 테스트할 수 있도록 구성할 수 있습니다. 이 항목의 예제에서는 대개 동일한 여러 패키지 변수와 동일한 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 클래스를 사용합니다.  
   
 ### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>패키지를 이 항목의 예에 사용할 수 있도록 구성하려면  
@@ -69,7 +69,7 @@ ms.locfileid: "71286570"
   
 5.  **옵션** 대화 상자의 **일반** 페이지에 있는 **스크립트 언어** 옵션을 사용하여 스크립트 구성 요소에 대한 기본 스크립트 언어를 설정합니다. 자세한 내용은 [General Page](../general-page-of-integration-services-designers-options.md)을 참조하세요.  
   
-##  <a name="example1"></a> 예 1 설명: Excel 파일의 존재 여부 확인  
+##  <a name="example-1-description-check-whether-an-excel-file-exists"></a><a name="example1"></a> 예 1 설명: Excel 파일의 존재 여부 확인  
  이 예에서는 `ExcelFile` 변수에 지정된 Excel 통합 문서 파일이 존재하는지 확인한 다음 `ExcelFileExists` 변수의 부울 값을 이 결과로 설정합니다. 이 부울 값은 패키지의 워크플로에서 분기하는 데 사용할 수 있습니다.  
   
 ### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
@@ -139,7 +139,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example2"></a> 예 2 설명: Excel 테이블의 존재 여부 확인  
+##  <a name="example-2-description-check-whether-an-excel-table-exists"></a><a name="example2"></a> 예 2 설명: Excel 테이블의 존재 여부 확인  
  이 예에서는 `ExcelTable` 변수에 지정된 Excel 워크시트 또는 명명된 범위가 `ExcelFile` 변수에 지정된 Excel 통합 문서 파일에 있는지 여부를 확인한 다음 `ExcelTableExists` 변수의 부울 값을 이 결과로 설정합니다. 이 부울 값은 패키지의 워크플로에서 분기하는 데 사용할 수 있습니다.  
   
 ### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
@@ -246,7 +246,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example3"></a> 예 3 설명: 폴더의 Excel 파일 목록 가져오기  
+##  <a name="example-3-description-get-a-list-of-excel-files-in-a-folder"></a><a name="example3"></a> 예 3 설명: 폴더의 Excel 파일 목록 가져오기  
  이 예에서는 `ExcelFolder` 변수 값에 지정된 폴더에 있는 Excel 파일의 목록으로 배열을 채운 다음 이 배열을 `ExcelFiles` 변수에 복사합니다. Foreach from Variable 열거자를 사용하여 배열의 파일을 반복할 수 있습니다.  
   
 ### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
@@ -318,7 +318,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>대체 솔루션  
  스크립트 태스크를 사용하여 Excel 파일의 목록을 배열로 수집하는 대신 ForEach File 열거자를 사용하여 폴더의 모든 Excel 파일을 반복할 수도 있습니다. 자세한 내용은 [Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)을 참조하세요.  
   
-##  <a name="example4"></a> 예 4 설명: Excel 파일의 테이블 목록 가져오기  
+##  <a name="example-4-description-get-a-list-of-tables-in-an-excel-file"></a><a name="example4"></a> 예 4 설명: Excel 파일의 테이블 목록 가져오기  
  이 예에서는 `ExcelFile` 변수 값으로 지정된 Excel 통합 문서 파일에 있는 워크시트 및 명명된 범위의 목록으로 배열을 채운 다음 이 배열을 `ExcelTables`에 복사합니다. Foreach from Variable 열거자를 사용하여 배열의 테이블을 반복할 수 있습니다.  
   
 > [!NOTE]  
@@ -430,7 +430,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>대체 솔루션  
  스크립트 태스크를 사용하여 Excel 테이블의 목록을 배열로 수집하는 대신 ForEach ADO.NET 스키마 행 집합 열거자를 사용하여 Excel 통합 문서 파일의 모든 테이블, 즉 워크시트와 명명된 범위를 반복할 수도 있습니다. 자세한 내용은 [Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)을 참조하세요.  
   
-##  <a name="testing"></a> 예제 결과 표시  
+##  <a name="displaying-the-results-of-the-samples"></a><a name="testing"></a> 예제 결과 표시  
  이 항목의 각 예를 동일한 패키지에서 구성한 경우 모든 스크립트 태스크를 모든 예의 출력을 표시하는 추가 스크립트 태스크에 연결할 수 있습니다.  
   
 ### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>이 항목의 예 출력을 표시하도록 스크립트 태스크를 구성하려면  

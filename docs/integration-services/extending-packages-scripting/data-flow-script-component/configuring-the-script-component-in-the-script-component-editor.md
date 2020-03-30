@@ -18,10 +18,10 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 98333f81a1e7c50434936c2df958da21366c6e9d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296987"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성
@@ -53,7 +53,7 @@ ms.locfileid: "71296987"
 ### <a name="inputs-columns-page-of-the-script-transformation-editor"></a>스크립트 변환 편집기의 입력 열 페이지  
  변환과 대상에 대해서는 **스크립트 변환 편집기**의 **입력 열** 페이지가 표시되지만, 원본에 대해서는 표시되지 않습니다. 이 페이지에서 사용자 지정 스크립트에서 사용할 사용 가능한 입력 열을 선택하고 해당 열에 대한 읽기 전용 또는 읽기/쓰기 권한을 지정합니다.  
   
- 이 메타데이터를 기반으로 생성되는 코드 프로젝트에서 BufferWrapper 프로젝트 항목에는 각 입력에 대한 클래스가 포함되며 이 클래스에는 선택한 각 입력 열에 대한 형식화된 접근자 속성이 포함됩니다. 예를 들어 **CustomerInput**이라는 입력에서 정수 **CustomerID** 열과 문자열 **CustomerName** 열을 선택하는 경우, BufferWrapper 프로젝트 항목에는 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>에서 파생된 **CustomerInput** 클래스가 포함되며, 이 **CustomerInput** 클래스는 **CustomerID**라는 정수 속성과 **CustomerName**이라는 문자열 속성을 노출합니다. 이 규칙을 통해 다음과 같이 형식 검사를 사용하는 코드를 작성할 수 있습니다.  
+ 이 메타데이터를 기반으로 생성되는 코드 프로젝트에서 BufferWrapper 프로젝트 항목에는 각 입력에 대한 클래스가 포함되며 이 클래스에는 선택한 각 입력 열에 대한 형식화된 접근자 속성이 포함됩니다. 예를 들어 **CustomerInput**이라는 입력에서 정수 **CustomerID** 열과 문자열 **CustomerName** 열을 선택하는 경우, BufferWrapper 프로젝트 항목에는 **에서 파생된** CustomerInput<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 클래스가 포함되며, 이 **CustomerInput** 클래스는 **CustomerID**라는 정수 속성과 **CustomerName**이라는 문자열 속성을 노출합니다. 이 규칙을 통해 다음과 같이 형식 검사를 사용하는 코드를 작성할 수 있습니다.  
   
 ```vb  
 Dim currentCustomerID as Integer = CustomerInput.CustomerID  
@@ -71,7 +71,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
   
 -   대상으로 사용되는 스크립트 구성 요소는 하나의 입력을 지원하며 출력은 사용하지 않습니다.  
   
- 이 메타데이터를 기반으로 생성되는 코드 프로젝트에서 BufferWrapper 프로젝트 항목에는 각 입력 및 출력에 대한 클래스가 포함됩니다. 예를 들어 **CustomerOutput**이라는 출력을 만드는 경우 BufferWrapper 프로젝트 항목에는 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>에서 파생된 **CustomerOutput** 클래스가 포함되며, 이 **CustomerOutput** 클래스는 만든 각 출력 열에 대해 형식화된 접근자 속성을 포함합니다.  
+ 이 메타데이터를 기반으로 생성되는 코드 프로젝트에서 BufferWrapper 프로젝트 항목에는 각 입력 및 출력에 대한 클래스가 포함됩니다. 예를 들어 **CustomerOutput**이라는 출력을 만드는 경우 BufferWrapper 프로젝트 항목에는 **에서 파생된** CustomerOutput<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 클래스가 포함되며, 이 **CustomerOutput** 클래스는 만든 각 출력 열에 대해 형식화된 접근자 속성을 포함합니다.  
   
  **입/출력** 페이지에서만 출력 열을 구성할 수 있습니다. **입력 열** 페이지에서 변환 및 대상에 대한 입력 열을 선택할 수 있습니다. BufferWrapper 프로젝트 항목에 만들어진 형식화된 접근자 속성은 출력 열에 대한 쓰기 전용 속성이 됩니다. 입력 열의 접근자 속성은 **입력 열** 페이지에서 각 열에 대해 선택한 사용 유형에 따라 읽기 전용 또는 읽기/쓰기가 됩니다.  
   
@@ -121,7 +121,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 ### <a name="connection-managers-page-of-the-script-transformation-editor"></a>스크립트 변환 편집기의 연결 관리자 페이지  
  **스크립트 변환 편집기**의 **연결 관리자** 페이지에서는 사용자 지정 스크립트에 사용할 연결 관리자를 추가하거나 제거합니다. 일반적으로 원본 또는 대상 구성 요소를 만들 때는 연결 관리자를 참조해야 합니다.  
   
- 이 메타데이터를 기반으로 생성되는 코드 프로젝트에서 **ComponentWrapper** 프로젝트 항목에는 선택한 각 연결 관리자에 대한 형식화된 접근자 속성이 있는 **Connections** 컬렉션 클래스가 포함됩니다. 형식화된 각 접근자 속성은 연결 관리자와 동일한 이름을 가지며 연결 관리자에 대한 참조를 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100>의 인스턴스로 반환합니다. 예를 들어 편집기의 **연결 관리자** 페이지에서 `MyADONETConnection`이라는 연결 관리자를 추가한 경우 다음 코드를 사용하여 스크립트에서 해당 연결 관리자에 대한 참조를 가져올 수 있습니다.  
+ 이 메타데이터를 기반으로 생성되는 코드 프로젝트에서 **ComponentWrapper** 프로젝트 항목에는 선택한 각 연결 관리자에 대한 형식화된 접근자 속성이 있는 **Connections** 컬렉션 클래스가 포함됩니다. 형식화된 각 접근자 속성은 연결 관리자와 동일한 이름을 가지며 연결 관리자에 대한 참조를 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100>의 인스턴스로 반환합니다. 예를 들어 편집기의 `MyADONETConnection`연결 관리자**페이지에서**이라는 연결 관리자를 추가한 경우 다음 코드를 사용하여 스크립트에서 해당 연결 관리자에 대한 참조를 가져올 수 있습니다.  
   
 ```vb  
 Dim myADONETConnectionManager As IDTSConnectionManager100 = _  

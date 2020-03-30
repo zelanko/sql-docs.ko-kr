@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: eb553ecf259e6733da143428cd6474debd8215f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412693"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 필요한 메모리 예측
@@ -52,7 +52,7 @@ ms.locfileid: "74412693"
   
 - [증가에 대한 메모리](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForGrowth)  
   
-###  <a name="bkmk_ExampleTable"></a> 메모리 최적화 테이블의 예  
+###  <a name="example-memory-optimized-table"></a><a name="bkmk_ExampleTable"></a> 메모리 최적화 테이블의 예  
 
 다음 메모리 최적화 테이블 스키마를 살펴봅니다.
   
@@ -83,7 +83,7 @@ GO
 
 위의 스키마를 사용하여 이 메모리 최적화 테이블에 필요한 최소 메모리를 결정할 것입니다.  
   
-###  <a name="bkmk_MemoryForTable"></a> 테이블에 대한 메모리  
+###  <a name="memory-for-the-table"></a><a name="bkmk_MemoryForTable"></a> 테이블에 대한 메모리  
 
 메모리 최적화 테이블 행은 다음 세 부분으로 구성되어 있습니다.
   
@@ -102,7 +102,7 @@ GO
   
 위의 계산에서 메모리 최적화 테이블의 각 행 크기는 24 + 32 + 200 또는 256바이트입니다.  행이 500만 개이므로 테이블은 5,000,000 * 256바이트 또는 1,280,000,000바이트, 즉 1.28GB 정도를 사용합니다.  
   
-###  <a name="bkmk_IndexMeemory"></a> 인덱스에 대한 메모리  
+###  <a name="memory-for-indexes"></a><a name="bkmk_IndexMeemory"></a> 인덱스에 대한 메모리  
 
 #### <a name="memory-for-each-hash-index"></a>각 해시 인덱스에 대한 메모리  
   
@@ -165,7 +165,7 @@ SELECT * FRON t_hk
    WHERE c2 > 5;  
 ```  
   
-###  <a name="bkmk_MemoryForRowVersions"></a> 행 버전 관리에 대한 메모리
+###  <a name="memory-for-row-versioning"></a><a name="bkmk_MemoryForRowVersions"></a> 행 버전 관리에 대한 메모리
 
 잠금을 방지하기 위해 메모리 내 OLTP는 행을 업데이트하거나 삭제할 때 낙관적 동시성을 사용합니다. 즉, 행이 업데이트될 때 행의 추가 버전이 만들어집니다. 또한 삭제가 논리적으로 수행되어 기존 행이 삭제된 상태로 표시되지만 바로 제거되지는 않습니다. 시스템에서는 해당 버전을 사용할 수 있는 모든 트랜잭션 실행이 완료될 때까지 이전 행 버전(삭제된 행 포함)을 사용할 수 있는 상태로 보관합니다. 
   
@@ -181,13 +181,13 @@ SELECT * FRON t_hk
   
 `memoryForRowVersions = rowVersions * rowSize`  
   
-###  <a name="bkmk_TableVariables"></a> 테이블 변수에 대한 메모리
+###  <a name="memory-for-table-variables"></a><a name="bkmk_TableVariables"></a> 테이블 변수에 대한 메모리
   
 테이블 변수에 사용되는 메모리는 테이블 변수가 범위를 벗어날 때만 해제됩니다. 업데이트의 일부로 삭제된 행을 포함하여 테이블 변수에서 삭제된 행은 가비지 수집의 대상이 아닙니다. 테이블 변수가 범위를 벗어날 때까지는 메모리가 해제되지 않습니다.  
   
 프로시저 범위와 반대로 많은 트랜잭션에서 사용되는 큰 SQL 일괄 처리에서 정의된 테이블 변수는 다량의 메모리를 사용할 수 있습니다. 테이블 변수는 가비지 수집되지 않기 때문에 테이블 변수의 삭제된 행은 다량의 메모리를 사용할 수 있으며 읽기 작업이 삭제된 행을 통과하여 검색해야 하므로 성능이 저하될 수 있습니다.  
   
-###  <a name="bkmk_MemoryForGrowth"></a> 증가에 대한 메모리
+###  <a name="memory-for-growth"></a><a name="bkmk_MemoryForGrowth"></a> 증가에 대한 메모리
 
 위의 계산에서는 현재 상태의 테이블에 필요한 메모리를 예측합니다. 이 메모리 외에도 테이블의 증가를 예측하고 이러한 증가를 수용하는 데 충분한 메모리를 제공해야 합니다.  예를 들어 10% 증가를 예상하는 경우 위의 결과에 1.1을 곱하여 테이블에 필요한 총 메모리를 얻어야 합니다.  
   

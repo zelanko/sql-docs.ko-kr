@@ -15,10 +15,10 @@ ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a14ae64026443324f7a5dc3f47dcea15f9907f5f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295728"
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>프로그래밍 방식으로 패키지 및 폴더 관리
@@ -28,7 +28,7 @@ ms.locfileid: "71295728"
 
 <a name="top"></a> 프로그래밍 방식으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에 대한 작업을 수행할 때 개별 패키지 또는 폴더가 있는지 여부를 확인하거나 패키지가 저장된 폴더를 관리할 수 있습니다. <xref:Microsoft.SqlServer.Dts.Runtime.Application> 네임스페이스의 <xref:Microsoft.SqlServer.Dts.Runtime> 클래스는 이 요구 사항을 충족하기 위한 다양한 메서드를 제공합니다.    
     
-##  <a name="exists"></a> 패키지 또는 폴더가 있는지 확인    
+##  <a name="determining-whether-a-package-or-folder-exists"></a><a name="exists"></a> 패키지 또는 폴더가 있는지 확인    
  저장된 패키지가 있는지 여부를 프로그래밍 방식으로 확인하려면 해당 패키지를 로드 및 실행하기 전에 다음 메서드 중 하나를 호출합니다.    
     
 |스토리지 위치|호출할 메서드|    
@@ -45,10 +45,10 @@ ms.locfileid: "71295728"
     
  [맨 위로 이동](#top)    
     
-##  <a name="managing"></a> 패키지 및 폴더 관리    
+##  <a name="managing-packages-and-folders"></a><a name="managing"></a> 패키지 및 폴더 관리    
  <xref:Microsoft.SqlServer.Dts.Runtime.Application> 네임스페이스의 <xref:Microsoft.SqlServer.Dts.Runtime> 클래스에서는 패키지와 패키지가 저장된 폴더를 관리하기 위한 추가 메서드를 제공합니다.    
     
-###  <a name="managing_rempkg"></a> 패키지 제거    
+###  <a name="removing-a-package"></a><a name="managing_rempkg"></a> 패키지 제거    
  저장된 패키지를 프로그래밍 방식으로 제거하려면 다음 메서드 중 하나를 호출합니다.    
     
 |스토리지 위치|호출할 메서드|    
@@ -58,7 +58,7 @@ ms.locfileid: "71295728"
     
  [맨 위로 이동](#top)    
     
-###  <a name="managing_create"></a> 폴더 만들기    
+###  <a name="creating-a-folder"></a><a name="managing_create"></a> 폴더 만들기    
  프로그래밍 방식으로 스토리지 폴더를 만들려면 다음 메서드 중 하나를 호출합니다.    
     
 |스토리지 위치|호출할 메서드|    
@@ -68,7 +68,7 @@ ms.locfileid: "71295728"
     
  [맨 위로 이동](#top)    
     
-###  <a name="managing_remfldr"></a> 폴더 제거    
+###  <a name="removing-a-folder"></a><a name="managing_remfldr"></a> 폴더 제거    
  프로그래밍 방식으로 스토리지 폴더를 제거하려면 다음 메서드 중 하나를 호출합니다.    
     
 |스토리지 위치|호출할 메서드|    
@@ -78,7 +78,7 @@ ms.locfileid: "71295728"
     
  [맨 위로 이동](#top)    
     
-###  <a name="managing_rename"></a> 폴더 이름 바꾸기    
+###  <a name="renaming-a-folder"></a><a name="managing_rename"></a> 폴더 이름 바꾸기    
  프로그래밍 방식으로 스토리지 폴더의 이름을 바꾸려면 다음 메서드 중 하나를 호출합니다.    
     
 |스토리지 위치|호출할 메서드|    

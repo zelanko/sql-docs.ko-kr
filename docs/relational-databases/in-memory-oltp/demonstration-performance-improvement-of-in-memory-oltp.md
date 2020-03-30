@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 68cb4e95046ca2fb071ecf2ba7c713cf57646690
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412734"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>데모: 메모리 내 OLTP 성능 향상
@@ -32,7 +32,7 @@ ms.locfileid: "74412734"
 ## <a name="code-example"></a>코드 예  
  다음 하위 섹션에서는 각 단계에 대해 설명합니다.  
   
-### <a name="step-1a-prerequisite-if-using-includessnoversionincludesssnoversion-mdmd"></a>1a 단계: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="step-1a-prerequisite-if-using-ssnoversion"></a>1a 단계: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  첫 번째 하위 섹션의 단계는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행 중인 경우에 적용되고 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에서 실행 중인 경우에는 적용되지 않습니다. 다음을 수행합니다.  
   
 1.  SQL Server Management Studio(SSMS.exe)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하세요. 또는 SSMS.exe와 유사한 도구를 사용해도 됩니다.  
@@ -58,7 +58,7 @@ USE imoltp;
 go  
 ```  
   
-### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>1b 단계: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
+### <a name="step-1b-prerequisite-if-using-sssdsfull"></a>1b 단계: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
  이 하위 섹션은 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]를 사용하는 경우에만 적용됩니다. 다음을 수행합니다.  
   
 1.  코드 예제로 사용할 기존 테스트 데이터베이스를 결정합니다.  

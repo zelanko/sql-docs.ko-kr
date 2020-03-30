@@ -19,10 +19,10 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fd8b17acb904ae0d33b06e85531e531792f1d60e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295699"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>디지털 서명을 사용하여 패키지 원본 확인
@@ -47,7 +47,7 @@ ms.locfileid: "71295699"
   
 > **참고:** 선택적 **BlockedSignatureStates** 레지스트리 값은 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 또는 **dtexec** 명령줄에서 설정한 디지털 서명 옵션보다 더 제한적인 설정을 지정할 수 있습니다. 이 경우 더 제한적인 설정이 다른 설정보다 우선합니다.  
 
-## <a name="registry"></a> 레지스트리 값을 설정하여 서명 정책 구현
+## <a name="implement-a-signing-policy-by-setting-a-registry-value"></a><a name="registry"></a> 레지스트리 값을 설정하여 서명 정책 구현
   선택적 레지스트리 값을 사용하여 서명된 패키지나 서명되지 않은 패키지를 로드하기 위한 조직의 정책을 관리할 수 있습니다. 이 레지스트리 값을 사용하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행하고 정책을 적용할 각 컴퓨터에 이 레지스트리 값을 만들어야 합니다. 레지스트리 값이 설정된 후 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 패키지를 로드하기 전에 서명을 확인합니다.  
   
  이 항목의 절차에서는 선택적 **BlockedSignatureStates** DWORD 값을 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS 레지스트리 키에 추가하는 방법을 설명합니다. **BlockedSignatureStates** 의 데이터 값은 패키지에 신뢰할 수 없는 서명이나 잘못된 서명이 있거나 패키지가 서명되지 않은 경우에 패키지를 차단해야 하는지 여부를 결정합니다. 패키지 서명에 사용되는 서명 상태와 관련해서 **BlockedSignatureStates** 레지스트리 값은 다음 정의를 사용합니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "71295699"
   
 9. **파일** 메뉴에서 **끝내기**를 클릭합니다.    
 
-## <a name="cert"></a> 디지털 인증서를 사용하여 패키지 서명
+## <a name="sign-a-package-by-using-a-digital-certificate"></a><a name="cert"></a> 디지털 인증서를 사용하여 패키지 서명
   이 항목에서는 디지털 인증서를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에 서명하는 방법을 설명합니다. 디지털 서명을 다른 설정과 함께 사용하여 잘못된 패키지를 로드하거나 실행하지 못하게 할 수 있습니다.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에 서명하려면 먼저 다음 태스크를 수행해야 합니다.  
@@ -137,7 +137,7 @@ ms.locfileid: "71295699"
   
      패키지에 서명했더라도 패키지를 로드하기 전에 디지털 서명을 확인하도록 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 구성해야 합니다.  
 
-## <a name="signing_dialog"></a> 디지털 서명 대화 상자 UI 참조
+## <a name="digital-signing-dialog-box-ui-reference"></a><a name="signing_dialog"></a> 디지털 서명 대화 상자 UI 참조
   **디지털 서명** 대화 상자를 사용하여 패키지를 디지털 서명으로 서명하거나 서명을 제거할 수 있습니다. **디지털 서명** 대화 상자는 **의** SSIS **메뉴에 있는** 디지털 서명 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]옵션에서 사용할 수 있습니다.  
   
  자세한 내용은 [디지털 인증서를 사용하여 패키지 서명](#cert)을 참조하세요.  

@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 1e05ad220147e7f46bfaa66127fcc492aaeae6a2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67927180"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE(Transact-SQL)
@@ -89,7 +89,7 @@ WHERE database_id = DB_ID();
   
  **TCP://** { *dns_name* | *netbios_name* |*ip_address* } **:** *port_number*  
   
- 지정된 *port_number*는 지정된 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 엔드포인트의 포트 번호와 일치해야 합니다. 선택한 데이터베이스에서 다음 쿼리를 실행하여 얻을 수 있습니다.  
+ 지정된 *port_number*는 지정된 컴퓨터에서 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔드포인트의 포트 번호와 일치해야 합니다. 선택한 데이터베이스에서 다음 쿼리를 실행하여 얻을 수 있습니다.  
   
 ```  
 SELECT tcpe.port  
@@ -99,9 +99,9 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- 경로에 *next_hop_address*가 **‘LOCAL’** 로 지정되어 있으면 메시지는 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내의 서비스로 배달됩니다.  
+ 경로에 **next_hop_address**가 *‘LOCAL’* 로 지정되어 있으면 메시지는 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내의 서비스로 배달됩니다.  
   
- 경로에 *next_hop_address*가 **‘TRANSPORT’** 로 지정되어 있으면 네트워크 주소는 서비스 이름의 네트워크 주소를 기준으로 결정됩니다. **'TRANSPORT'** 를 지정하는 경로는 서비스 이름이나 broker 인스턴스를 지정할 수 있습니다.  
+ 경로에 **next_hop_address**가 *‘TRANSPORT’* 로 지정되어 있으면 네트워크 주소는 서비스 이름의 네트워크 주소를 기준으로 결정됩니다. **'TRANSPORT'** 를 지정하는 경로는 서비스 이름이나 broker 인스턴스를 지정할 수 있습니다.  
   
  *next_hop_address*가 데이터베이스 미러의 주 서버인 경우에는 미러 서버에 대해 MIRROR_ADDRESS도 지정해야 합니다. 그렇지 않으면 이 경로는 미러 서버에 대해 자동으로 장애 조치(Failover)하지 않습니다.  
   
@@ -113,7 +113,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
- 지정된 *port_number*는 지정된 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 엔드포인트의 포트 번호와 일치해야 합니다. 선택한 데이터베이스에서 다음 쿼리를 실행하여 얻을 수 있습니다.  
+ 지정된 *port_number*는 지정된 컴퓨터에서 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔드포인트의 포트 번호와 일치해야 합니다. 선택한 데이터베이스에서 다음 쿼리를 실행하여 얻을 수 있습니다.  
   
 ```  
 SELECT tcpe.port  
@@ -123,7 +123,7 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- MIRROR_ADDRESS가 지정된 경로에는 SERVICE_NAME 절 및 BROKER_INSTANCE 절을 지정해야 합니다. *next_hop_address*가 **‘LOCAL’** 또는 **‘TRANSPORT’** 로 지정된 경로에는 미러 주소가 지정되지 않을 수 있습니다.  
+ MIRROR_ADDRESS가 지정된 경로에는 SERVICE_NAME 절 및 BROKER_INSTANCE 절을 지정해야 합니다. **next_hop_address**가 **‘LOCAL’** 또는 *‘TRANSPORT’* 로 지정된 경로에는 미러 주소가 지정되지 않을 수 있습니다.  
   
 > [!NOTE]  
 >  포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
@@ -133,7 +133,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  ALTER ROUTE 명령에서 지정하지 않은 절은 변경되지 않은 상태로 유지됩니다. 따라서 경로를 변경하여 경로의 제한 시간이 초과되지 않거나, 경로가 서비스 이름과 일치하거나, 경로가 모든 broker 인스턴스와 일치하도록 지정할 수는 없습니다. 이러한 경로의 특성을 변경하려면 기존 경로를 삭제하고 새 정보로 새 경로를 만들어야 합니다.  
   
- 경로에 *next_hop_address*가 **‘TRANSPORT’** 로 지정되어 있으면 네트워크 주소는 서비스 이름의 네트워크 주소를 기준으로 결정됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 *next_hop_address*에 유효한 형식의 네트워크 주소로 시작하는 서비스 이름을 처리할 수 있습니다. 유효한 네트워크 경로를 포함하는 이름의 서비스는 서비스 이름에 있는 네트워크 경로로 라우팅됩니다.  
+ 경로에 **next_hop_address**가 *‘TRANSPORT’* 로 지정되어 있으면 네트워크 주소는 서비스 이름의 네트워크 주소를 기준으로 결정됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 *next_hop_address*에 유효한 형식의 네트워크 주소로 시작하는 서비스 이름을 처리할 수 있습니다. 유효한 네트워크 경로를 포함하는 이름의 서비스는 서비스 이름에 있는 네트워크 경로로 라우팅됩니다.  
   
  라우팅 테이블에는 동일한 서비스, 네트워크 주소 및 broker 인스턴스 식별자를 지정하는 경로가 여러 개일 수 있습니다. 이 경우 [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 라우팅 테이블의 정보 중 대화에 지정된 정보와 가장 정확하게 일치하는 정보를 찾을 수 있도록 개발된 프로시저를 사용하여 경로를 선택합니다.  
   

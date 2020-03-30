@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 4d763ccf2799ea72a1882a576e4b17ef839e3f1e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68742956"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>RESTORE Statements - LABELONLY(Transact-SQL)
@@ -91,7 +91,7 @@ FROM <backup_device>
 |**SoftwareName**|**nvarchar(128)**|미디어 레이블을 기록하는 백업 소프트웨어의 이름입니다.|  
 |**SoftwareVendorId**|**int**|백업을 기록하는 소프트웨어 공급업체의 고유 공급업체 ID입니다.|  
 |**MediaDate**|**datetime**|레이블을 작성한 날짜와 시간입니다.|  
-|**Mirror_Count**|**int**|세트에 있는 미러 수(1-4)입니다.<br /><br /> 참고: 한 집합에 있는 다른 미러에 대해 기록된 레이블은 모두 동일합니다.|  
+|**Mirror_Count**|**int**|세트에 있는 미러 수(1-4)입니다.<br /><br /> 참고: 한 세트에 있는 다른 미러에 대해 기록된 레이블은 모두 동일합니다.|  
 |**IsCompressed**|**bit**|백업의 압축 여부:<br /><br /> 0 = 압축되지 않음<br /><br /> 1 = 압축됨|  
   
 > [!NOTE]  

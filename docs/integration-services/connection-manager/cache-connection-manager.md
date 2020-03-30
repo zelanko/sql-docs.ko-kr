@@ -15,10 +15,10 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ac44546e0f74e8cdee7e004f33a515b94e16aeb2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294450"
 ---
 # <a name="cache-connection-manager"></a>캐시 연결 관리자
@@ -67,7 +67,7 @@ ms.locfileid: "71294450"
   
  **캐시 연결 관리자 편집기** 대화 상자에는 다음과 같은 탭이 있습니다.  
   
-###  <a name="generaltab"></a> 일반 탭  
+###  <a name="general-tab"></a><a name="generaltab"></a> 일반 탭  
  **캐시 연결 관리자 편집기** 대화 상자의 **일반** 탭을 사용하여 파일에서 캐시를 읽을지 아니면 파일에 캐시를 저장할지 여부를 나타낼 수 있습니다.  
   
 #### <a name="options"></a>옵션  
@@ -98,7 +98,7 @@ ms.locfileid: "71294450"
  **메타데이터 새로 고침**  
  캐시 연결 관리자에서 열 메타데이터를 삭제하고 선택한 캐시 파일의 열 메타데이터로 캐시 연결 관리자를 채웁니다.  
   
-###  <a name="columnstab"></a> 열 탭  
+###  <a name="columns-tab"></a><a name="columnstab"></a> 열 탭  
  **캐시 연결 관리자 편집기** 대화 상자의 **열** 탭을 사용하여 캐시에 있는 각 열의 속성을 구성할 수 있습니다.  
   
 #### <a name="options"></a>옵션  

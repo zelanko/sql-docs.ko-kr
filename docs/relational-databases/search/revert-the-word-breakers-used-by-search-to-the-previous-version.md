@@ -12,10 +12,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 67c1241906a83aeb1776d7fa5e1ecb584bc2c723
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055192"
 ---
 # <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>검색에 사용된 단어 분리기를 이전 버전으로 되돌리기(SQL Server 검색)
@@ -34,7 +34,7 @@ ms.locfileid: "74055192"
   
  단어 분리기 및 형태소 분석기에 대한 일반적인 내용은 [검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)를 참조하세요.  
   
-##  <a name="overview"></a> 단어 분리기 및 형태소 분석기 되돌리기 및 복원 개요  
+##  <a name="overview-of-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="overview"></a> 단어 분리기 및 형태소 분석기 되돌리기 및 복원 개요  
  단어 분리기 및 형태소 분석기를 되돌리고 복원하는 방법은 언어에 따라 다릅니다. 다음 표에서는 이전 버전의 구성 요소로 되돌리는 데 필요한 세 작업 집합에 대해 요약합니다.  
   
 |현재 파일|이전 파일|영향 받는 언어 수|파일 작업|레지스트리 항목 작업|  
@@ -50,7 +50,7 @@ ms.locfileid: "74055192"
   
  `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`  
   
-##  <a name="nl6nl6"></a> 현재 단어 분리기와 이전 단어 분리기의 파일 이름에 대한 언어는 NaturalLanguage6.dll입니다.  
+##  <a name="languages-for-which-the-file-name-of-both-the-current-and-previous-word-breaker-is-naturallanguage6dll"></a><a name="nl6nl6"></a> 현재 단어 분리기와 이전 단어 분리기의 파일 이름에 대한 언어는 NaturalLanguage6.dll입니다.  
  다음 표에 나오는 언어의 경우 현재 단어 분리기와 이전 단어 분리기의 파일 이름은 모두 NaturalLanguage6.dll입니다. 이 구성 요소를 되돌리거나 복원하려면 NaturalLanguage6.dll을 동일한 파일의 다른 버전으로 덮어써야 합니다. 레지스트리 항목은 이 릴리스에서 변경되지 않았으므로 레지스트리 항목을 변경할 필요는 없습니다.  
   
 > [!WARNING]  
@@ -97,7 +97,7 @@ ms.locfileid: "74055192"
   
  이전 표는 약어 열을 기준으로 사전순으로 정렬됩니다.  
   
-###  <a name="nl6nl6revert"></a> 이전 구성 요소로 되돌리려면  
+###  <a name="to-revert-to-the-previous-components"></a><a name="nl6nl6revert"></a> 이전 구성 요소로 되돌리려면  
   
 1.  위에서 설명한 Binn 폴더로 이동합니다.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "74055192"
   
 4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작합니다.  
 
-###  <a name="nl6nl6restore"></a> 현재 구성 요소를 복원하려면  
+###  <a name="to-restore-the-current-components"></a><a name="nl6nl6restore"></a> 현재 구성 요소를 복원하려면  
   
 1.  NaturalLanguage6.dll의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전을 백업한 위치로 이동합니다.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "74055192"
   
 3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작합니다.  
   
-##  <a name="newnl6"></a> 이전 단어 분리기의 파일 이름에 대한 언어만 NaturalLanguage6.dll입니다.  
+##  <a name="languages-for-which-the-file-name-of-the-previous-word-breaker-only-is-naturallanguage6dll"></a><a name="newnl6"></a> 이전 단어 분리기의 파일 이름에 대한 언어만 NaturalLanguage6.dll입니다.  
  다음 표에 나오는 언어의 경우 이전 단어 분리기의 파일 이름이 새 버전의 파일 이름과 다릅니다. 이전 파일 이름은 NaturalLanguage6.dll입니다. 이전 버전으로 되돌리려면 현재 버전의 NaturalLanguage6.dll을 동일 파일의 이전 버전으로 덮어써야 합니다. 또한 레지스트리 항목 집합을 변경하여 구성 요소의 이전 버전 또는 현재 버전을 지정해야 합니다.  
   
 > [!WARNING]  
@@ -141,7 +141,7 @@ ms.locfileid: "74055192"
   
  다음 지침을 [단어 분리기 및 형태소 분석기를 되돌리고 복원하기 위한 파일 이름 및 레지스트리 값](#newnl6values)섹션의 값 목록과 함께 사용하세요.  
   
-###  <a name="newnl6revert"></a> 이전 구성 요소로 되돌리려면  
+###  <a name="to-revert-to-the-previous-components"></a><a name="newnl6revert"></a> 이전 구성 요소로 되돌리려면  
   
 1.  위에서 설명한 Binn 폴더로 이동합니다.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "74055192"
   
 10. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작합니다.  
   
-###  <a name="newnl6restore"></a> 현재 구성 요소를 복원하려면  
+###  <a name="to-restore-the-current-components"></a><a name="newnl6restore"></a> 현재 구성 요소를 복원하려면  
   
 1.  NaturalLanguage6.dll의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전을 백업한 위치로 이동합니다.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "74055192"
   
 8.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작합니다.  
   
-###  <a name="newnl6values"></a> 단어 분리기 및 형태소 분석기를 되돌리고 복원하기 위한 파일 이름 및 레지스트리 값  
+###  <a name="file-names-and-registry-values-for-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="newnl6values"></a> 단어 분리기 및 형태소 분석기를 되돌리고 복원하기 위한 파일 이름 및 레지스트리 값  
  다음 파일 이름 및 레지스트리 항목 목록을 이전 섹션의 지침과 함께 사용하세요. 이전 값을 사용하여 이전 버전으로 되돌리거나, 현재 값을 사용하여 현재 버전의 구성 요소를 복원합니다.  
   
  다음 목록은 각 언어에 사용되는 약어를 기준으로 사전순으로 정렬됩니다.  
@@ -253,7 +253,7 @@ ms.locfileid: "74055192"
 |현재 CLSID|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
 |현재 파일 이름|MSWB7.dll|MSWB7.dll|  
   
-##  <a name="newnew"></a> 이전 파일 이름과 현재 파일 이름에 대한 언어는 모두 NaturalLanguage6.dll이 아닙니다.  
+##  <a name="languages-for-which-neither-the-previous-nor-the-current-file-name-is-naturallanguage6dll"></a><a name="newnew"></a> 이전 파일 이름과 현재 파일 이름에 대한 언어는 모두 NaturalLanguage6.dll이 아닙니다.  
  다음 표에 나오는 언어의 경우 이전 단어 분리기 및 형태소 분석기의 파일 이름이 새 버전의 파일 이름과 다릅니다. 이전 파일 이름과 현재 파일 이름이 모두 NaturalLanguage6.dll이 아닙니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 프로그램이 구성 요소의 현재 버전과 이전 버전을 모두 Binn 폴더에 복사하므로 파일을 대체할 필요는 없습니다. 하지만 레지스트리 항목 집합을 변경하여 구성 요소의 이전 버전 또는 현재 버전을 지정해야 합니다.  
   
  **영향을 받는 언어 목록**  
@@ -271,7 +271,7 @@ ms.locfileid: "74055192"
   
  다음 지침을 [단어 분리기 및 형태소 분석기를 되돌리고 복원하기 위한 파일 이름 및 레지스트리 값](#newnewvalues)섹션의 값 목록과 함께 사용하세요.  
   
-###  <a name="newnewrevert"></a> 이전 구성 요소로 되돌리려면  
+###  <a name="to-revert-to-the-previous-components"></a><a name="newnewrevert"></a> 이전 구성 요소로 되돌리려면  
   
 1.  현재 버전의 구성 요소에 대한 파일을 Binn 폴더에서 제거하지 마세요.  
   
@@ -295,7 +295,7 @@ ms.locfileid: "74055192"
   
 7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작합니다.  
   
-###  <a name="newnewrestore"></a> 이전 구성 요소를 복원하려면  
+###  <a name="to-restore-the-previous-components"></a><a name="newnewrestore"></a> 이전 구성 요소를 복원하려면  
   
 1.  이전 버전의 구성 요소에 대한 파일을 Binn 폴더에서 제거하지 마세요.  
   
@@ -319,7 +319,7 @@ ms.locfileid: "74055192"
   
 7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작합니다.  
   
-###  <a name="newnewvalues"></a> 단어 분리기 및 형태소 분석기를 되돌리고 복원하기 위한 파일 이름 및 레지스트리 값  
+###  <a name="file-names-and-registry-values-for-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="newnewvalues"></a> 단어 분리기 및 형태소 분석기를 되돌리고 복원하기 위한 파일 이름 및 레지스트리 값  
  다음 파일 이름 및 레지스트리 항목 목록을 이전 섹션의 지침과 함께 사용하세요. 이전 값을 사용하여 이전 버전으로 되돌리거나, 현재 값을 사용하여 현재 버전의 구성 요소를 복원합니다.  
   
  다음 목록은 각 언어에 사용되는 약어를 기준으로 사전순으로 정렬됩니다.  

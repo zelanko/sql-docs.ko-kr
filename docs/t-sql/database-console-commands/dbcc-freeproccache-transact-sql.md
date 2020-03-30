@@ -26,10 +26,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 48eaf7f49976ed8784973c950887dc92252b08e5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68101897"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE(Transact-SQL)
@@ -121,21 +121,21 @@ WITH NO_INFOMSGS 절이 지정되지 않으면 DBCC FREEPROCCACHE에서 "DBCC �
 적용 대상: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
 - DB_OWNER 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
 
-## <a name="general-remarks-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대한 일반적인 주의 사항  
+## <a name="general-remarks-for-sssdw-and-sspdw"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대한 일반적인 주의 사항  
 여러 DBCC FREEPROCCACHE 명령을 동시에 실행할 수 있습니다.
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 계획 캐시를 지우면 들어오는 쿼리에서 이전에 캐시된 계획을 다시 사용하지 않고 새 계획을 컴파일하므로 쿼리 성능이 일시적으로 저하될 수 있습니다. 
 
 DBCC FREEPROCCACHE (COMPUTE)만 사용하면 컴퓨팅 노드에서 쿼리를 실행할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 해당 쿼리를 다시 컴파일합니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서는 제어 노드에 생성된 병렬 쿼리 계획을 다시 컴파일하지 않습니다.
 DBCC FREEPROCCACHE는 실행 중에 취소할 수 있습니다.
   
-## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대한 제한 사항  
+## <a name="limitations-and-restrictions-for-sssdw-and-sspdw"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대한 제한 사항  
 DBCC FREEPROCCACHE는 트랜잭션 내에서 실행할 수 없습니다.
 DBCC FREEPROCCACHE는 EXPLAIN 문에서 지원되지 않습니다.
   
-## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대한 메타데이터  
+## <a name="metadata-for-sssdw-and-sspdw"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대한 메타데이터  
 DBCC FREEPROCCACHE가 실행되면 새 행이 sys.pdw_exec_requests 시스템 뷰에 추가됩니다.
 
-## <a name="examples-includessnoversionincludesssnoversion-mdmd"></a>예제: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="examples-ssnoversion"></a>예제: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>A. 계획 캐시에서 쿼리 계획 만들기  
 다음 예에서는 쿼리 계획 핸들을 지정하여 계획 캐시에서 계획 지침을 삭제합니다. 예제 쿼리가 계획 캐시에 놓이도록 쿼리가 먼저 실행됩니다. `sys.dm_exec_cached_plans` 및 `sys.dm_exec_sql_text` 동적 관리 뷰를 쿼리하여 쿼리에 대한 계획 핸들을 반환합니다. 
@@ -187,7 +187,7 @@ DBCC FREEPROCCACHE ('default');
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>예: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-dbcc-freeproccache-basic-syntax-examples"></a>D. DBCC FREEPROCCACHE 기본 구문 예제  
 다음 예제에서는 컴퓨팅 노드에서 기존 쿼리 계획 캐시를 모두 제거합니다. 컨텍스트가 UserDbSales로 설정되어 있지만 모든 데이터베이스에 대한 컴퓨팅 노드 쿼리 계획 캐시가 제거됩니다. WITH NO_INFOMSGS 절은 정보 메시지가 결과에 표시되지 않도록 합니다.  

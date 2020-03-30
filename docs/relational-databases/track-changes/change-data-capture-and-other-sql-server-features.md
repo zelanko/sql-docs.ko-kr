@@ -13,10 +13,10 @@ ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e29ad6de65172b08bb3f35aa89820ca817a9e1d3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095292"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>변경 데이터 캡처 및 기타 SQL Server 기능
@@ -33,10 +33,10 @@ ms.locfileid: "74095292"
 
 -   [포함된 데이터베이스](#Contained)
   
-##  <a name="ChangeTracking"></a> 변경 내용 추적  
+##  <a name="change-tracking"></a><a name="ChangeTracking"></a> 변경 내용 추적  
  동일한 데이터베이스에서 변경 데이터 캡처 및 [변경 내용 추적](../../relational-databases/track-changes/about-change-tracking-sql-server.md) 을 설정할 수 있습니다. 특별한 고려 사항은 필요하지 않습니다. 자세한 내용은 [변경 내용 추적 사용&#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)을 참조하세요.  
   
-##  <a name="DatabaseMirroring"></a> 데이터베이스 미러링  
+##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a> 데이터베이스 미러링  
  변경 데이터 캡처가 설정된 데이터베이스를 미러링할 수 있습니다. 장애 조치(Failover) 후 캡처 및 정리가 자동으로 발생하도록 하려면 다음 단계를 따릅니다.  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 새 주 서버 인스턴스에서 실행 중인지 확인합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "74095292"
   
  데이터베이스 미러링에 대한 자세한 내용은 [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.  
   
-##  <a name="TransReplication"></a> Transactional Replication  
+##  <a name="transactional-replication"></a><a name="TransReplication"></a> Transactional Replication  
  변경 데이터 캡처 및 트랜잭션 복제는 동일한 데이터베이스에 함께 존재할 수 있지만 두 기능이 모두 설정된 경우 변경 테이블 채우기가 다르게 처리됩니다. 변경 데이터 캡처 및 트랜잭션 복제는 항상 동일한 [sp_replcmds](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)프로시저를 사용하여 트랜잭션 로그에서 변경 내용을 읽습니다. 변경 데이터 캡처가 자체적으로 설정된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업은 **sp_replcmds**를 호출합니다. 동일한 데이터베이스에 두 기능이 모두 설정된 경우 로그 판독기 에이전트는 **sp_replcmds**를 호출합니다. 이 에이전트는 변경 테이블과 배포 데이터베이스 테이블을 모두 채웁니다. 자세한 내용은 [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)을 참조하세요.  
   
  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 변경 데이터 캡처가 설정되어 있고 두 테이블에 캡처가 설정된 시나리오를 생각해 보십시오. 변경 테이블을 채우기 위해 캡처 작업은 **sp_replcmds**를 호출합니다. 데이터베이스에 트랜잭션 복제가 설정되고 게시가 만들어집니다. 그런 다음 데이터베이스에 로그 판독기 에이전트가 만들어지고 캡처 작업이 삭제됩니다. 로그 판독기 에이전트는 변경 테이블에 커밋된 마지막 로그 시퀀스 번호에서 로그를 계속 검색합니다. 이렇게 하면 변경 테이블의 데이터 일관성이 보장됩니다. 이 데이터베이스에서 트랜잭션 복제가 해제되면 로그 판독기 에이전트가 제거되고 캡처 작업이 다시 만들어집니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "74095292"
   
  변경 데이터 캡처를 사용하면 트랜잭션 복제의 **proc exec** 옵션을 사용할 수 없습니다.  
   
-##  <a name="RestoreOrAttach"></a> 변경 데이터 캡처가 설정된 데이터베이스 복원 또는 연결  
+##  <a name="restoring-or-attaching-a-database-enabled-for-change-data-capture"></a><a name="RestoreOrAttach"></a> 변경 데이터 캡처가 설정된 데이터베이스 복원 또는 연결  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 다음과 같은 논리에 따라 데이터베이스가 복원 또는 연결된 후 변경 데이터 캡처가 설정된 상태를 유지하는지 확인합니다.  
   
 -   데이터베이스가 동일한 서버에 동일한 데이터베이스 이름으로 복원되는 경우 변경 데이터 캡처는 설정된 상태를 유지합니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "74095292"
   
  [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) 를 사용하여 복원 또는 연결된 데이터베이스에서 변경 데이터 캡처를 제거할 수 있습니다.  
   
-##  <a name="Contained"></a> 포함된 데이터베이스  
+##  <a name="contained-databases"></a><a name="Contained"></a> 포함된 데이터베이스  
  변경 데이터 캡처는 [포함된 데이터베이스](../../relational-databases/databases/contained-databases.md)에서 지원되지 않습니다.
   
 ## <a name="change-data-capture-and-always-on"></a>변경 데이터 캡처 및 Always On  

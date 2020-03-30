@@ -20,10 +20,10 @@ ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 86482b666c2ecfc5e9fcc09c1d06df14640386d0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68134788"
 ---
 # <a name="extract-a-dac-from-a-database"></a>데이터베이스에서 DAC 추출
@@ -34,13 +34,13 @@ ms.locfileid: "68134788"
 ## <a name="before-you-begin"></a>시작하기 전에  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]또는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서비스 팩 4 이상의 인스턴스에 있는 데이터베이스에서 DAC를 추출할 수 있습니다. DAC에서 배포된 데이터베이스에 대해 추출 프로세스를 실행하는 경우 데이터베이스에서 개체 정의만 추출됩니다. 프로세스에서는 **msdb** (**의** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)])에 등록된 DAC를 참조하지 않습니다. 추출 프로세스에서는 데이터베이스 엔진의 현재 인스턴스에 DAC 정의를 등록하지 않습니다. DAC를 등록하는 방법은 [Register a Database As a DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md)을 참조하세요.  
   
-##  <a name="LimitationsRestrictions"></a> 제한 사항  
+##  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 제한 사항  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4(서비스 팩 4) 이상에서만 데이터베이스에서 DAC를 추출할 수 있습니다. DAC 또는 포함된 사용자가 지원하지 않는 개체가 데이터베이스에 있는 경우 DAC를 추출할 수 없습니다. DAC에서 지원되는 개체 유형에 대한 자세한 내용은 [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)을 참조하세요.  
   
-##  <a name="Permissions"></a> 권한  
+##  <a name="permissions"></a><a name="Permissions"></a> 권한  
  DAC를 추출하려면 **sys.sql_expression_dependencies**에 대한 SELECT 권한뿐만 아니라 최소한 ALTER ANY LOGIN 및 데이터베이스 범위 VIEW DEFINITION 권한이 있어야 합니다. DAC를 추출하려면 securityadmin 고정 서버 역할의 멤버이면서 DAC를 추출하는 데이터베이스의 database_owner 고정 데이터베이스 역할의 멤버여야 합니다. sysadmin 고정 서버 역할의 멤버 또는 기본 제공 SQL Server 시스템 관리자 계정인 **sa** 도 DAC를 추출할 수 있습니다.  
   
-##  <a name="UsingDACExtractWizard"></a> 데이터 계층 애플리케이션 추출 마법사 사용  
+##  <a name="using-the-extract-data-tier-application-wizard"></a><a name="UsingDACExtractWizard"></a> 데이터 계층 애플리케이션 추출 마법사 사용  
  **마법사를 사용하여 DAC를 추출하려면**  
   
 1.  **개체 탐색기**에서 DAC를 추출할 데이터베이스가 포함된 인스턴스에 대한 노드를 확장합니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "68134788"
   
     5.  [패키지 빌드 페이지](#BuildPackage)  
   
-###  <a name="Introduction"></a> 마법사 소개 페이지  
+###  <a name="wizard-introduction-page"></a><a name="Introduction"></a> 마법사 소개 페이지  
  이 페이지에서는 데이터 계층 애플리케이션을 추출하는 단계에 대해 설명합니다.  
   
  **이 페이지를 다시 표시 안 함** - 앞으로 이 페이지가 표시되지 않도록 하려면 이 확인란을 클릭합니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "68134788"
   
  [&#91;추출 마법사&#93;](#UsingDACExtractWizard)  
   
-###  <a name="SelectData"></a> Select data page  
+###  <a name="select-data-page"></a><a name="SelectData"></a> Select data page  
 DAC(데이터 계층 애플리케이션) 패키지 파일에 포함할 참조 데이터를 선택합니다. DAC 패키지에 데이터를 포함하는 것은 선택 사항입니다. 지원되는 모든 데이터베이스 개체 및 데이터베이스와 관련된 인스턴스 개체의 스키마는 DAC 패키지에 미리 포함됩니다.  
   
  최대 10MB의 참조 데이터를 DAC 패키지 파일에 포함할 수 있습니다. 그러나 DAC에 테이블을 포함하려는 경우 테이블에 **image** 또는 **varchar(max)** 와 같은 BLOB(Binary Large Object) 데이터 형식을 포함할 수 없습니다. 다른 데이터베이스로 전송하기 위해 많은 양의 데이터를 추출하려는 경우 SQL Server Integration Services, 대량 복사 유틸리티 또는 다른 여러 데이터 마이그레이션 방법 중 하나를 사용하세요.  
@@ -81,7 +81,7 @@ DAC(데이터 계층 애플리케이션) 패키지 파일에 포함할 참조 �
   
  [&#91;추출 마법사&#93;](#UsingDACExtractWizard)  
   
-###  <a name="SetProperties"></a> Set properties page  
+###  <a name="set-properties-page"></a><a name="SetProperties"></a> Set properties page  
  이 마법사 페이지를 사용하여 DAC(데이터 계층 애플리케이션)를 기술할 수 있습니다. 이러한 속성은 DAC를 식별하는 데 사용되고 다른 DAC와 구별하는 데 도움이 됩니다.  
   
  **이름** - 이 이름은 DAC를 식별합니다. DAC 이름은 DAC 패키지 파일의 이름과 다를 수 있으며 애플리케이션 특징을 기술해야 합니다. 예를 들어 데이터베이스가 재무 애플리케이션에 사용되는 경우 DAC Finance라는 이름을 지정할 수 있습니다.  
@@ -94,7 +94,7 @@ DAC(데이터 계층 애플리케이션) 패키지 파일에 포함할 참조 �
   
  **기존 파일 덮어쓰기** - 이름이 같은 파일이 이미 있을 경우 DAC 패키지 파일을 바꾸려면 이 확인란을 선택합니다.  
   
-###  <a name="ValidateSummary"></a> Validation and summary page  
+###  <a name="validation-and-summary-page"></a><a name="ValidateSummary"></a> Validation and summary page  
  이 페이지에서 마법사는 모든 데이터베이스 개체가 DAC(데이터 계층 애플리케이션)에 의해 지원되는지 확인합니다. 또한 데이터베이스 개체 간의 종속성도 검사하여 DAC에 성공적으로 포함될 수 있는 개체 집합을 확인합니다. 그런 다음 유효성 검사 보고서를 표시하고 이 마법사에서 선택한 옵션을 요약합니다. 옵션을 변경하려면 **이전**을 클릭하고, DAC 추출을 시작하려면 **다음**을 클릭합니다.  
   
 > **참고!** DAC에서 지원하지 않는 개체가 하나 이상 있으면 **다음** 단추가 비활성화되고 추출 프로세스를 계속할 수 없습니다. 이 경우에는 지원되지 않는 개체를 제거하고 이 마법사를 다시 실행하는 것이 좋습니다.  
@@ -113,7 +113,7 @@ DAC(데이터 계층 애플리케이션) 패키지 파일에 포함할 참조 �
   
  **보고서 저장** - 요약에서 **DAC 개체** 노드 아래의 모든 개체를 나열하는 HTML 기반 파일을 저장할 수 있습니다. 이 보고서는 DAC에서 일부 데이터베이스 개체가 지원되지 않는 경우 유용합니다. DAC를 다시 추출하기 전에 이 보고서를 사용하여 지원되지 않는 개체를 변경하거나 제거할 수 있습니다.  
   
- ###  <a name="BuildPackage"></a> Build package page  
+ ###  <a name="build-package-page"></a><a name="BuildPackage"></a> Build package page  
  이 페이지를 사용하여 마법사에서 DAC(데이터 계층 애플리케이션)를 추출할 때 진행률을 모니터링할 수 있습니다.  
   
  **동작** - **DAC 패키지 파일 만들기 및 저장** 동작을 수행하는 동안 마법사는 SQL Server 데이터베이스에서 DAC를 추출합니다. 그런 다음 메모리에 DAC 패키지가 만들어지고 사용자가 지정한 위치에 저장됩니다. 해당 단계의 결과를 확인하려면 **결과** 열의 링크를 클릭합니다.  
@@ -122,7 +122,7 @@ DAC(데이터 계층 애플리케이션) 패키지 파일에 포함할 참조 �
   
  **마침** - 처리가 완료된 후에나 오류가 발생한 경우 마법사를 닫으려면 클릭합니다.  
    
-##  <a name="ExtractDACPowerShell"></a> PowerShell을 사용하여 DAC 추출  
+##  <a name="extract-a-dac-using-powershell"></a><a name="ExtractDACPowerShell"></a> PowerShell을 사용하여 DAC 추출  
  **PowerShell 스크립트에서 Extract() 메서드를 사용하여 데이터베이스에서 DAC를 추출하려면**  
   
 1.  SMO Server 개체를 만든 후 이 개체를 DAC를 추출할 데이터베이스를 포함하는 인스턴스로 설정합니다.  

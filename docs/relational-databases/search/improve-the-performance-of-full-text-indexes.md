@@ -18,17 +18,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a755ba9aa8915734768c56c096ea917a6e0c5564
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68021224"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>전체 텍스트 인덱스 성능 향상
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 이 항목에서는 전체 텍스트 인덱스 및 쿼리 성능 저하의 몇 가지 일반적인 원인에 대해 설명합니다. 또한 이러한 문제를 완화하고 성능을 향상시킬 수 있는 몇 가지 제안 사항도 제공합니다.
   
-##  <a name="causes"></a> Common causes of performance issues
+##  <a name="common-causes-of-performance-issues"></a><a name="causes"></a> Common causes of performance issues
 ### <a name="hardware-resource-issues"></a>하드웨어 리소스 문제
 전체 텍스트 인덱싱 및 전체 텍스트 쿼리의 성능은 메모리, 디스크 속도, CPU 속도 및 컴퓨터 아키텍처와 같은 하드웨어 리소스의 영향을 받습니다.  
 
@@ -57,7 +57,7 @@ ms.locfileid: "68021224"
   
     많은 양의 데이터를 마스터 병합하면 장기 실행 트랜잭션이 생성될 수 있으며 이로 인해 검사점이 사용되는 동안 트랜잭션 로그의 잘림이 지연될 수 있습니다. 이 경우 전체 복구 모델에서 트랜잭션 로그의 크기가 대폭 증가할 수 있습니다. 전체 복구 모델이 사용되는 데이터베이스에서 큰 전체 텍스트 인덱스를 다시 구성하기 전에 장기 실행 트랜잭션에 대비하여 트랜잭션 로그에 충분한 공간을 확보하는 것이 가장 좋은 방법입니다. 자세한 내용은 [트랜잭션 로그 파일의 크기 관리](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)를 참조하세요.  
   
-##  <a name="tuning"></a> 전체 텍스트 인덱스 성능 향상  
+##  <a name="tune-the-performance-of-full-text-indexes"></a><a name="tuning"></a> 전체 텍스트 인덱스 성능 향상  
 전체 텍스트 인덱스의 성능을 극대화하려면 다음과 같은 방법을 구현하는 것이 가장 좋습니다.  
   
 -   모든 CPU 프로세서 또는 코어를 최대로 활용하려면 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) '**max full-text crawl range**'를 시스템의 CPU 개수로 설정합니다. 이 구성 옵션에 대한 자세한 내용은 [max full-text crawl range 서버 구성 옵션](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)을 참조하세요.  
@@ -70,7 +70,7 @@ ms.locfileid: "68021224"
 
 -   타임스탬프 열 기반의 증분 채우기를 사용할 경우 증분 채우기의 성능을 향상시키려면 **timestamp** 열에 보조 인덱스를 빌드합니다.  
   
-##  <a name="full"></a> 전체 채우기 성능 문제 해결  
+##  <a name="troubleshoot-the-performance-of-full-populations"></a><a name="full"></a> 전체 채우기 성능 문제 해결  
 ### <a name="review-the-full-text-crawl-logs"></a>전체 텍스트 크롤링 로그 검토
  성능 문제를 진단하려면 전체 텍스트 탐색 로그를 검토합니다.
  
@@ -132,8 +132,8 @@ ms.locfileid: "68021224"
   
 |플랫폼|fdhost.exe에 필요한 예상 메모리(MB) - *F*^1|max server memory 계산 수식 - *M*^2|  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
-|x86|*F* = ‘크롤링 범위 수’ \* 50 |*M* =minimum(*T*, 2000) - F - 500|  
-|x64|*F* = ‘크롤링 범위 수’ \* 10 \* 8 |*M* = *T* - *F* - 500|  
+|x86|*F* = ‘크롤링 범위 수’  *50*\*|*M* =minimum(*T*, 2000) - F - 500|  
+|x64|*F* = ‘크롤링 범위 수’ *10* 8\*\*|*M* = *T* - *F* - 500|  
 
 **수식 관련 참고 사항**
 1.  여러 전체 채우기가 진행 중인 경우 *F1*, *F2*와 같이 각 채우기 작업에 대한 fdhost.exe 메모리 요구 사항을 개별적으로 계산합니다. 그런 다음, *M*을 _T_ **-** sigma **(** _F_i **)** 로 계산합니다.  
@@ -150,9 +150,9 @@ ms.locfileid: "68021224"
   
  `M = 8192-640-500=7052`  
   
- #### <a name="example-setting-max-server-memory"></a>예제: 최대 서버 메모리 설정  
+ #### <a name="example-setting-max-server-memory"></a>예: 최대 서버 메모리 설정  
   
- 이 예제에서는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 및 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 위 예제 `7052`에서 계산된 *M* 값으로 **max server memory**를 설정합니다.  
+ 이 예제에서는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 및 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 위 예제 **에서 계산된** M*값으로*max server memory`7052`를 설정합니다.  
   
 ```  
 USE master;  
@@ -195,7 +195,7 @@ GO
   
          조각화를 완화하기 위해 클러스터형 인덱스를 다시 구성하거나 다시 작성할 수 있습니다. 자세한 내용은 [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)을 참조하세요.  
   
-##  <a name="filters"></a> 문서의 느린 인덱싱 문제 해결
+##  <a name="troubleshoot-slow-indexing-of-documents"></a><a name="filters"></a> 문서의 느린 인덱싱 문제 해결
 
 > [!NOTE]
 > 이 섹션에서는 다른 문서 유형이 포함된 문서(예: Microsoft Word 문서)를 인덱싱하는 고객에게만 적용되는 문제에 대해 설명합니다.

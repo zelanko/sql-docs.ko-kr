@@ -32,10 +32,10 @@ author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f13bbee1fdde92c55c98a0c2478d0dec4db5e96a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75884001"
 ---
 # <a name="like-transact-sql"></a>LIKE(Transact-SQL)
@@ -164,7 +164,7 @@ WHERE RTRIM(col1) LIKE '% King';   -- returns 1 row
 ## <a name="using-the--wildcard-character"></a>% 와일드카드 문자 사용  
  LIKE '5%' 기호를 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 숫자 5 다음 0개 이상의 문자가 이어지는 문자열을 검색합니다.  
   
- 예를 들어 다음 쿼리는 모두 `dm` 문자로 시작하므로 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 모든 동적 관리 뷰를 보여 줍니다.  
+ 예를 들어 다음 쿼리는 모두 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 문자로 시작하므로 `dm` 데이터베이스에서 모든 동적 관리 뷰를 보여 줍니다.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -185,7 +185,7 @@ GO
 |기호|의미|  
 |------------|-------------|  
 |LIKE '5[%]'|5%|  
-|LIKE '[\_]n'|_n|  
+|LIKE '[_]n'|_n|  
 |LIKE '[a-cdf]'|a, b, c, d 또는 f|  
 |LIKE '[-acdf]'|-, a, c, d 또는 f|  
 |LIKE '[ [ ]'|[|  
@@ -268,7 +268,7 @@ Gail                  Westover             305-555-0100
 ```
 
 ### <a name="c-using-the-escape-clause"></a>C. ESCAPE 절 사용  
- 다음 예에서는 `ESCAPE` 절과 이스케이프 문자를 사용하여 `mytbl2` 테이블의 `c1` 열에서 `10-15%`와 정확히 일치하는 문자열을 찾는 방법을 보여 줍니다.  
+ 다음 예에서는 `ESCAPE` 절과 이스케이프 문자를 사용하여 `10-15%` 테이블의 `c1` 열에서 `mytbl2`와 정확히 일치하는 문자열을 찾는 방법을 보여 줍니다.  
   
 ```sql
 USE tempdb;  
@@ -343,7 +343,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="g-using-like-with-the-_-wildcard-character"></a>G. LIKE와 _ 와일드 카드 문자 사용  
- 다음 예제에서는 `DimEmployee` 테이블에서 지역 코드가 `6`으로 시작해 `2`로 끝나는 모든 전화 번호를 찾습니다. 전화 열 값의 모든 후속 문자와 일치하도록 검색 패턴 끝에 % 와일드카드 문자가 포함됩니다.  
+ 다음 예제에서는 `6` 테이블에서 지역 코드가 `2`으로 시작해 `DimEmployee`로 끝나는 모든 전화 번호를 찾습니다. 전화 열 값의 모든 후속 문자와 일치하도록 검색 패턴 끝에 % 와일드카드 문자가 포함됩니다.  
   
 ```sql  
 -- Uses AdventureWorks  

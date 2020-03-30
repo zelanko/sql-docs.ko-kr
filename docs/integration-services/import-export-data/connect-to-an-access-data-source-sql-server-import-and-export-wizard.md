@@ -10,10 +10,10 @@ ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 67a361446c69425f6b05bef913ded568a7dcfd75
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296301"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Access 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
@@ -71,7 +71,7 @@ Access 파일의 경로와 파일 이름을 지정합니다. 예를 들어 로�
 > [!NOTE]
 > 64비트 버전의 SQL Server 가져오기 및 내보내기 마법사를 사용하려면 SQL Server를 설치해야 합니다. SSDT(SQL Server Data Tools) 및 SSMS(SQL Server Management Studio)는 32비트 애플리케이션이며, 32비트 버전의 마법사를 포함하여 32비트 파일만 설치합니다.
 
-## <a name="officeDownloads"></a> Access에 연결하는 데 필요한 파일 가져오기  
+## <a name="get-the-files-you-need-to-connect-to-access"></a><a name="officeDownloads"></a> Access에 연결하는 데 필요한 파일 가져오기  
 Excel 및 Access를 포함하여 Microsoft Office 데이터 원본용 연결 구성 요소가 아직 설치되지 않은 경우 해당 구성 요소를 다운로드해야 할 수 있습니다. [Microsoft Access 데이터베이스 엔진 2016 재배포 가능 구성 요소](https://www.microsoft.com/download/details.aspx?id=54920)에서 최신 버전의 Access 및 Excel 파일용 연결 구성 요소를 다운로드합니다.
   
 최신 버전의 구성 요소는 이전 버전의 Access에서 만든 파일을 열 수 있습니다.
@@ -82,7 +82,7 @@ Office 365 구독이 있는 경우 Microsoft Access 2016 런타임이 아닌 Acc
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-## <a name="database_password"></a> 암호로 보호된 데이터베이스 파일인가요?
+## <a name="is-the-database-file-password-protected"></a><a name="database_password"></a> 암호로 보호된 데이터베이스 파일인가요?
 Access 데이터베이스가 암호로 보호되지만 작업 그룹 정보 파일이 사용되지 않는 경우도 있습니다. 모든 사용자가 동일한 암호를 제공해야 하지만, 사용자 이름은 입력할 필요가 없습니다. 데이터베이스 암호를 제공하려면 다음을 수행합니다.
 
 1.  **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **고급** 단추를 클릭하여 **데이터 연결 속성** 대화 상자를 엽니다.  

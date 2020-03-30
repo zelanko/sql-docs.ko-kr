@@ -12,10 +12,10 @@ ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bc7255cdcb9758f2bdd55b043e70669affadabd8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71285226"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>테이블 생성 SQL 문(SQL Server 가져오기 및 내보내기 마법사)
@@ -26,7 +26,7 @@ ms.locfileid: "71285226"
 **열 매핑** 대화 상자에서 **대상 테이블 만들기** 를 선택한 다음 **SQL 편집** 을 선택하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서 **테이블 생성 SQL 문** 대화 상자를 표시합니다. 이 페이지에서 마법사가 새 대상 테이블을 만들기 위해 실행하는 **CREATE TABLE** 명령을 검토하고 필요에 따라 사용자 지정합니다.
   
 > [!NOTE]
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사의 **테이블 생성 SQL 문** 대화 상자가 아니라 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE 문에 대한 정보를 찾으려는 경우 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)을 참조하세요. 
+> [!INCLUDE[tsql](../../includes/tsql-md.md)] 가져오기 및 내보내기 마법사의 **테이블 생성 SQL 문** 대화 상자가 아니라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CREATE TABLE 문에 대한 정보를 찾으려는 경우 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)을 참조하세요. 
   
 ## <a name="screen-shot-of-the-create-table-sql-statement-page"></a>테이블 생성 SQL 문 페이지의 스크린샷  
  다음 스크린샷은 마법사의 **테이블 생성 SQL 문** 대화 상자를 보여 줍니다.

@@ -25,10 +25,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: ee3854c45678cb29989849a6ee8b28e821b6d830
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287840"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS(Transact-SQL)
@@ -109,14 +109,14 @@ ms.locfileid: "76287840"
   
 여러 보안 주체에서 EXECUTE AS 문을 여러 번 호출하여 실행 컨텍스트 스택을 만들 수 있습니다. 호출 시 REVERT 문은 컨텍스트를 컨텍스트 스택의 다음 수준에 있는 로그인 또는 사용자로 전환합니다. 이 동작을 보려면 [예 1](#_exampleA)을 참조하세요.  
   
-##  <a name="_user"></a>사용자 또는 로그인 이름 지정  
+##  <a name="specifying-a-user-or-login-name"></a><a name="_user"></a>사용자 또는 로그인 이름 지정  
  EXECUTE AS \<context_specification>에 지정된 사용자 또는 로그인 이름은 **sys.database_principals** 또는 **sys.server_principals**에서 각각 보안 주체여야 합니다. 그렇지 않으면 EXECUTE AS 문이 실패합니다. 또한 보안 주체에 IMPERSONATE 권한을 부여해야 합니다. 호출자가 데이터베이스 소유자 또는 **sysadmin** 고정 서버 역할의 멤버가 아닌 경우에는 사용자가 Windows 그룹 멤버 자격을 통해 데이터베이스 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 액세스할 때도 보안 주체가 있어야 합니다. 예를 들어 다음과 같은 조건을 가정해 보세요. 
   
 -   **CompanyDomain\SQLUsers** 그룹에 **Sales** 데이터베이스에 대한 액세스 권한이 있습니다.  
   
 -   **CompanyDomain\SqlUser1**은 **SQLUsers**의 멤버이므로 그룹에 **Sales** 데이터베이스에 대한 암시적 액세스 권한이 있습니다.  
   
- **CompanyDomain\SqlUser1**이 **SQLUsers** 그룹의 멤버 자격을 통해 데이터베이스에 대한 액세스 권한을 가지더라도 `CompanyDomain\SqlUser1`이 데이터베이스에서 보안 주체가 아니므로 `EXECUTE AS USER = 'CompanyDomain\SqlUser1'` 문이 실패합니다.  
+ **CompanyDomain\SqlUser1**이 **SQLUsers** 그룹의 멤버 자격을 통해 데이터베이스에 대한 액세스 권한을 가지더라도 `EXECUTE AS USER = 'CompanyDomain\SqlUser1'`이 데이터베이스에서 보안 주체가 아니므로 `CompanyDomain\SqlUser1` 문이 실패합니다.  
   
 사용자가 분리되었고(연결된 로그인이 더 이상 존재하지 않음) **WITHOUT LOGIN**으로 생성되지 않은 경우 해당 사용자에 대한 **EXECUTE AS**는 실패하게 됩니다.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "76287840"
   
 ## <a name="examples"></a>예  
   
-###  <a name="_exampleA"></a> 1. EXECUTE AS 및 REVERT를 사용하여 컨텍스트 전환  
+###  <a name="a-using-execute-as-and-revert-to-switch-context"></a><a name="_exampleA"></a> 1. EXECUTE AS 및 REVERT를 사용하여 컨텍스트 전환  
  다음 예에서는 여러 보안 주체를 사용하여 컨텍스트 실행 스택을 만듭니다. 그런 다음 `REVERT` 문을 사용하여 실행 컨텍스트를 이전 호출자로 다시 설정합니다. `REVERT` 문은 실행 컨텍스트가 원래 호출자로 설정될 때까지 스택 위로 이동하면서 여러 번 실행됩니다.  
   
 ```  

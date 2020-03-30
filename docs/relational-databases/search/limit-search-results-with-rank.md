@@ -19,10 +19,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7740c95e40b4902e88d1ae5f632b34c7f759f441
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68132282"
 ---
 # <a name="limit-search-results-with-rank"></a>RANK를 사용하여 검색 결과 제한
@@ -36,7 +36,7 @@ ms.locfileid: "68132282"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 일치하는 항목을 순위별로 정렬하고 지정한 개수만 반환합니다. 이 방법을 사용하면 성능이 크게 향상됩니다. 예를 들어 백만 개의 행이 있는 테이블에서 100,000개의 행을 반환하는 쿼리에 대해 상위 100개의 행만 요청하면 쿼리가 훨씬 빨리 처리됩니다.  
   
-##  <a name="examples"></a> 순위를 사용하여 검색 결과를 제한하는 예  
+##  <a name="examples-of-using-rank-to-limit-search-results"></a><a name="examples"></a> 순위를 사용하여 검색 결과를 제한하는 예  
   
 ### <a name="example-a-searching-for-only-the-top-three-matches"></a>예 A: 상위 3개의 일치하는 항목만 검색  
  다음 예제에서는 CONTAINSTABLE을 사용하여 상위 3개의 일치하는 항목만 반환합니다.  
@@ -91,7 +91,7 @@ GO
 ```  
   
   
-##  <a name="how"></a> 검색 쿼리 결과의 순위를 지정하는 방법  
+##  <a name="how-search-query-results-are-ranked"></a><a name="how"></a> 검색 쿼리 결과의 순위를 지정하는 방법  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 전체 텍스트 검색은 전체 텍스트 쿼리가 반환하는 데이터의 관련성을 나타내는 선택적 점수(또는 순위 값)를 생성할 수 있습니다. 이 순위 값은 모든 행에 대해 계산되고 지정된 쿼리의 결과 집합을 관련 순으로 정렬하는 정렬 조건으로 사용될 수 있습니다. 순위 값은 결과 집합에 포함된 행의 관련성을 나타내는 상대적 순서일 뿐입니다. 실제 값은 중요하지 않으며 일반적으로 쿼리가 실행될 때마다 달라집니다. 순위 값은 전체 쿼리에서 아무 의미도 갖지 않습니다.  
   
 ### <a name="statistics-for-ranking"></a>순위용 통계  
