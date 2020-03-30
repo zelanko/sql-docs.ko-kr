@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7db6dbdbe45102c2a1bc2533d156e55060869b58
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286337"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 릴리스 정보
@@ -28,7 +28,7 @@ ms.locfileid: "79286337"
 - [![Azure 가상 컴퓨터 소형](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016) Azure 계정이 있습니까?  계정이 있는 경우 **[여기](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016)** 로 이동하여 SQL Server 2016 SP1이 이미 설치된 가상 머신을 실행해 보세요.
 - [![SSMS 다운로드](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) SQL Server Management Studio의 최신 버전을 얻으려면 **[SSMS(SQL Server Management Studio) 다운로드](../ssms/download-sql-server-management-studio-ssms.md)** 를 참조하세요.
 
-## <a name="bkmk_2016sp2"></a>SQL Server 2016 서비스 팩 2(SP2)
+## <a name="sql-server-2016-service-pack-2-sp2"></a><a name="bkmk_2016sp2"></a>SQL Server 2016 서비스 팩 2(SP2)
 
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP2에는 2016 SP1 이후부터 CU8까지 모든 누적 업데이트가 포함되어 있습니다.
 
@@ -87,7 +87,7 @@ SQL Server 2016 SP2에는 지원 가능성 및 진단 관련 개선 사항이 �
 
 ![horizontal-bar.png](media/horizontal-bar.png)
 
-## <a name="bkmk_2016sp1"></a>SQL Server 2016 서비스 팩 1(SP1)
+## <a name="sql-server-2016-service-pack-1-sp1"></a><a name="bkmk_2016sp1"></a>SQL Server 2016 서비스 팩 1(SP1)
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1은 보안 업데이트 MS16-136을 포함하여 SQL Server 2016 RTM CU3에 대한 모든 누적 업데이트를 포함합니다. SQL Server 2016 최신 누적 업데이트에서 제공하는 솔루션의 롤업을 포함하며 최신 누적 업데이트(CU3 및 2016년 11월 8일에 릴리스된 보안 업데이트 MS16-136)를 포함합니다.
 
 다음 기능은 SQL Server SP1의 Standard, Web, Express 및 Local DB 버전에서 사용할 수 있습니다(언급한 것과 같이).
@@ -135,13 +135,13 @@ SQL Server 2016 SP1 설치는 설치 후에 다시 부팅해야 합니다. 모�
 
 ![horizontal-bar.png](media/horizontal-bar.png)
 
-##  <a name="bkmk_2016_ga"></a> SQL Server 2016 릴리스 - GA (일반 공급)
+##  <a name="sql-server-2016-release---general-availability-ga"></a><a name="bkmk_2016_ga"></a> SQL Server 2016 릴리스 - GA (일반 공급)
 -   [데이터베이스 엔진(GA)](#bkmk_ga_instalpatch)
 -   [Stretch Database(GA)](#bkmk_ga_stretch)
 -   [쿼리 저장소(GA)](#bkmk_ga_query_store)
 -   [제품 설명서(GA)](#bkmk_ga_docs)
 
-### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> 패치 설치 요구 사항(GA)
+### <a name="repl_icon_warn--install-patch-requirement-ga"></a>![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> 패치 설치 요구 사항(GA)
 **문제 및 고객에게 미치는 영향:** Microsoft는 SQL Server 2016에서 필수 구성 요소로 설치되는 Microsoft VC++ 2013 런타임 이진 파일에 영향을 주는 문제를 확인했습니다. 업데이트로 이 문제를 해결할 수 있습니다. VC 런타임 이진 파일에 대한 이 업데이트가 없으면 SQL Server 2016의 특정 시나리오에서 안정성 문제를 발생할 수 있습니다. SQL Server 2016을 설치하기 전에 컴퓨터에 [KB 3164398](https://support.microsoft.com/kb/3164398)에서 설명한 패치가 필요한지 확인합니다. 패치는 [SQL Server 2016 RTM용 누적 업데이트 패키지 1(CU1)](https://www.microsoft.com/download/details.aspx?id=53338)에도 포함되어 있습니다.
 
 **해결 방법:** 다음 솔루션 중 하나를 사용하세요.
@@ -167,7 +167,7 @@ SQL Server 2016 SP1 설치는 설치 후에 다시 부팅해야 합니다. 모�
     - **다운로드 센터:** 마지막으로, 업데이트는 Microsoft 다운로드 센터에서 제공합니다. SQL Server 2016을 설치한 후 업데이트 소프트웨어를 다운로드하고 서버에 설치할 수 있습니다.
 
 
-### <a name="bkmk_ga_stretch"></a>Stretch Database
+### <a name="stretch-database"></a><a name="bkmk_ga_stretch"></a>Stretch Database
 
 #### <a name="problem-with-a-specific-character-in-a-database-or-table-name"></a>데이터베이스 또는 테이블 이름의 특정 문자 문제
 
@@ -181,7 +181,7 @@ SQL Server 2016 SP1 설치는 설치 후에 다시 부팅해야 합니다. 모�
 
 **해결 방법:** INCLUDE 키워드를 사용하는 인덱스를 삭제하고, 테이블에서 Stretch Database를 사용하도록 설정한 다음, 인덱스를 다시 만듭니다. 이 작업을 수행하는 경우 영향을 받는 테이블의 사용자에게 영향을 주지 않거나 최소화하기 위해 조직의 유지 관리 방법 및 정책을 따라야 합니다.
 
-### <a name="bkmk_ga_query_store"></a>Query Store
+### <a name="query-store"></a><a name="bkmk_ga_query_store"></a>Query Store
 
 #### <a name="problem-with-automatic-data-cleanup-on-editions-other-than-enterprise-and-developer"></a>Enterprise 및 Developer 이외 버전의 자동 데이터 정리 문제
 
@@ -205,7 +205,7 @@ SQL Server 2016 SP1 설치는 설치 후에 다시 부팅해야 합니다. 모�
 - `sp_query_store_remove_query`
 
 
-###  <a name="bkmk_ga_docs"></a> 제품 설명서(GA)
+###  <a name="product-documentation-ga"></a><a name="bkmk_ga_docs"></a> 제품 설명서(GA)
  **문제 및 고객에게 미치는 영향:** SQL Server 2016 설명서의 다운로드 가능한 버전은 아직 제공되지 않습니다. 도움말 라이브러리 관리자를 사용하여 **온라인에서 콘텐츠를 설치**하려고 하면 SQL Server 2012 및 SQL Sever 2014 설명서가 표시되지만 SQL Server 2016 설명서에 대한 옵션은 없습니다.
 
  **해결 방법:** 다음 해결 방법 중 하나를 사용하세요.

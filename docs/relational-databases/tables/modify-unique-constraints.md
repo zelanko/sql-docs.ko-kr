@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 61747c9b7e445990bd285061f63c5497b0f51f85
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68811331"
 ---
 # <a name="modify-unique-constraints"></a>UNIQUE 제약 조건 수정
@@ -40,14 +40,14 @@ ms.locfileid: "68811331"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-modify-a-unique-constraint"></a>UNIQUE 제약 조건을 수정하려면  
   
@@ -66,9 +66,9 @@ ms.locfileid: "68811331"
     |클러스터형 옵션 설정|**테이블 디자이너** 아래의 표에서 **클러스터형으로 만들기**를 선택한 다음 클러스터형 인덱스를 만들려면 드롭다운에서 예를 선택하고 비클러스터형 인덱스를 만들려면 아니요를 선택합니다. 클러스터형 인덱스는 테이블마다 하나씩만 만들 수 있습니다. 클러스터형 인덱스가 이미 이 테이블에 있는 경우 원본 인덱스에 대해 이 설정을 먼저 해제해야 합니다.|  
     |채우기 비율 정의|**테이블 디자이너**아래의 표에서 **파일 사양** 범주를 확장하고 0에서 100 사이의 정수를 **채우기 비율** 상자에 입력합니다.|  
   
-5.  **파일** 메뉴에서 _테이블 이름_**저장**을 클릭합니다.  
+5.  **파일** 메뉴에서 **테이블 이름**_저장_을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> **UNIQUE 제약 조건을 수정하려면 다음을 수행합니다.**  
+##  <a name="to-modify-a-unique-constraint"></a><a name="TsqlProcedure"></a> **UNIQUE 제약 조건을 수정하려면 다음을 수행합니다.**  
   
  Transact-SQL을 사용하여 UNIQUE 제약 조건을 수정하려면 먼저 기존 UNIQUE 제약 조건을 삭제하고 새로운 정의를 사용하여 다시 만들어야 합니다. 자세한 내용은 [Delete Unique Constraints](../../relational-databases/tables/delete-unique-constraints.md) 및 [Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md)를 참조하세요.  
   

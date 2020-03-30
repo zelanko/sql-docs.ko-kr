@@ -16,10 +16,10 @@ ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0f9435584579e36e46d55aa6723e0ade60b6642b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081952"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>표준 .NET Framework 데이터 공급자 등록(SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "77081952"
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-server"></a>보고서 서버에 데이터 공급자 어셈블리를 설치하려면  
   
-1.  보고서 서버에서 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 사용할 bin 디렉터리의 기본 위치로 이동합니다. 보고서 서버 bin 디렉터리의 기본 위치는 *\<드라이브>*:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin입니다.  
+1.  보고서 서버에서 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 사용할 bin 디렉터리의 기본 위치로 이동합니다. 보고서 서버 bin 디렉터리의 기본 위치는 *\<드라이브>* :\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin입니다.  
   
 2.  준비 위치에서 보고서 서버의 bin 디렉터리로 어셈블리를 복사합니다. 또는 GAC(전역 어셈블리 캐시)에 어셈블리를 로드할 수 있습니다. 자세한 내용은 MSDN에 있는 [SDK 설명서의](https://go.microsoft.com/fwlink/?linkid=63912) 어셈블리 및 전역 어셈블리 캐시 작업(Working with Assemblies and the Global Assembly Cache) [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 을 참조하십시오.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "77081952"
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     GAC(전역 어셈블리 캐시)에 어셈블리를 로드하는 경우 강력한 이름 속성을 제공해야 합니다. 다음은 그 예입니다.   
+     GAC(전역 어셈블리 캐시)에 어셈블리를 로드하는 경우 강력한 이름 속성을 제공해야 합니다. 다음은 그 예입니다.  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly,Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  
@@ -107,7 +107,7 @@ ms.locfileid: "77081952"
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-designer-client"></a>보고서 디자이너 클라이언트에 데이터 공급자 어셈블리를 설치하려면  
   
-1.  보고서 디자이너 클라이언트에서 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 사용할 PrivateAssemblies 디렉터리의 기본 위치로 이동합니다. PrivateAssemblies 디렉터리의 기본 위치는 *\<드라이브>*:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies입니다.  
+1.  보고서 디자이너 클라이언트에서 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 사용할 PrivateAssemblies 디렉터리의 기본 위치로 이동합니다. PrivateAssemblies 디렉터리의 기본 위치는 *\<드라이브>* :\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies입니다.  
   
 2.  준비 위치에서 보고서 디자이너 클라이언트의 PrivateAssemblies 디렉터리로 어셈블리를 복사합니다. 또는 GAC(전역 어셈블리 캐시)에 어셈블리를 로드할 수 있습니다. 자세한 내용은 MSDN에 있는 [SDK 설명서의](https://go.microsoft.com/fwlink/?linkid=63912) 어셈블리 및 전역 어셈블리 캐시 작업(Working with Assemblies and the Global Assembly Cache) [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 을 참조하십시오.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "77081952"
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     GAC에 어셈블리를 로드하는 경우 강력한 이름 속성을 제공해야 합니다. 다음은 그 예입니다.   
+     GAC에 어셈블리를 로드하는 경우 강력한 이름 속성을 제공해야 합니다. 다음은 그 예입니다.  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly, Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  

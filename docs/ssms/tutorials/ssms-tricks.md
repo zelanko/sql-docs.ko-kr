@@ -20,10 +20,10 @@ helpviewer_keywords:
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
 ms.openlocfilehash: 7a07e4cd77d02e4c62c34e55eedbd3dbf01c8322
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245506"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)를 사용하기 위한 팁과 요령
@@ -231,7 +231,7 @@ SQL Server 오류 로그에 대한 경로는 구성 설정에 따라 다를 수 
 
 6. 메모장에서 errorlog.log 파일을 엽니다. 
 
-## <a name="determine-sql-server-name"></a>SQL Server 인스턴스 이름 찾기
+## <a name="find-sql-server-instance-name"></a><a name="determine-sql-server-name"></a>SQL Server 인스턴스 이름 찾기
 
 SQL Server에 연결한 전후에 SQL Server의 이름을 찾는 몇 가지 옵션이 있습니다.  
 

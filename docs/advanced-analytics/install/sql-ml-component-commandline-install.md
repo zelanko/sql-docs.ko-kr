@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2bc231a064862c5e2a16f60d85a5166fd4765566
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727584"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>명령줄에서 SQL Server 기계 학습 R 및 Python 구성 요소 설치
@@ -89,7 +89,7 @@ FEATURES 인수는 사용 약관과 마찬가지로 필수입니다.
 | /MPYCACHEDIRECTORY | 다음에 사용하도록 예약됩니다. %TEMP%를 사용하여 인터넷이 연결되지 않은 컴퓨터에 설치할 Python 구성 요소 CAB 파일을 저장합니다. |
 ::: moniker-end
 
-## <a name="indb"></a> 데이터베이스 내 인스턴스 설치
+## <a name="in-database-instance-installations"></a><a name="indb"></a> 데이터베이스 내 인스턴스 설치
 
 데이터베이스 내 분석은 데이터베이스 엔진 인스턴스에 사용할 수 있으며, 설치에 **AdvancedAnalytics** 기능을 추가하는 데 필요합니다. 고급 분석이 포함된 데이터베이스 엔진 인스턴스를 설치하거나 [기존 인스턴스에 추가](#add-existing)할 수 있습니다. 
 
@@ -138,7 +138,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 ```
 ::: moniker-end
 
-## <a name="post-install"></a> 설치 후 구성(필수)
+## <a name="post-install-configuration-required"></a><a name="post-install"></a> 설치 후 구성(필수)
 
 데이터베이스 내 설치에만 적용됩니다.
 
@@ -159,7 +159,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 1. SQL Server R Services: 기능을 사용하려면 외부 스크립트를 사용하도록 설정합니다. 다음 단계로 [SQL Server R Services(데이터베이스 내) 설치](sql-r-services-windows-install.md)의 지침을 수행합니다. 
 ::: moniker-end
 
-## <a name="add-existing"></a> 기존 데이터베이스 엔진 인스턴스에 고급 분석 추가
+## <a name="add-advanced-analytics-to-an-existing-database-engine-instance"></a><a name="add-existing"></a> 기존 데이터베이스 엔진 인스턴스에 고급 분석 추가
 
 기존 데이터베이스 엔진 인스턴스에 데이터베이스 내 고급 분석을 추가할 때 인스턴스 이름을 제공합니다. 예를 들어 이전에 SQL Server 2017 이상 데이터베이스 엔진과 Python을 설치한 경우 이 명령을 사용하여 R을 추가할 수 있습니다.
 
@@ -168,7 +168,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER
 /IACCEPTSQLSERVERLICENSETERMS  /IACCEPTROPENLICENSETERMS
 ```
 
-## <a name="silent"></a> 자동 설치
+## <a name="silent-install"></a><a name="silent"></a> 자동 설치
 
 자동 설치는 .cab 파일 위치 확인을 표시하지 않습니다. 따라서 .cab 파일의 압축을 풀 위치를 지정해야 합니다. Python의 경우 CAB 파일은 %TEMP*에 위치해야 합니다. R의 경우 이를 위한 임시 디렉터리를 사용하여 폴더 경로를 설정할 수 있습니다.
  
@@ -179,7 +179,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 /MRCACHEDIRECTORY=%temp% 
 ```
 
-## <a name="shared-feature"></a> 독립 실행형 서버 설치
+## <a name="standalone-server-installations"></a><a name="shared-feature"></a> 독립 실행형 서버 설치
 
 독립 실행형 서버는 데이터베이스 엔진 인스턴스에 바인딩되지 않은 "공유 기능"입니다. 다음 예제에서는 독립 실행형 서버를 설치하기 위한 올바른 구문을 보여 줍니다.
 

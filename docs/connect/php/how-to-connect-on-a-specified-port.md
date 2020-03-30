@@ -13,16 +13,16 @@ ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: af055a73904bb8feec92fb2afe93df064a09ab23
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015054"
 ---
 # <a name="how-to-connect-on-a-specified-port"></a>방법: 지정된 포트에서 연결
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-이 문서에서는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 사용하여 지정된 포트에서 SQL Server에 연결하는 방법을 설명합니다.  
+이 항목은 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 사용하여 지정된 포트에서 SQL Server에 연결하는 방법을 설명합니다.  
   
 ### <a name="to-connect-on-a-specified-port"></a>지정된 포트에서 연결하려면  
   

@@ -11,10 +11,10 @@ ms.author: mathoma
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ac74f1af3d570863bafae7185d6d4ce653f1f036
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77256734"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>SQL Server의 연장 보안 업데이트란 무엇입니까?
@@ -238,7 +238,7 @@ MSRC가 중요로 평가하지 않아 새 [!INCLUDE[ssNoVersion](../../includes/
 
 **연장 보안 업데이트에 적격한 라이선스 프로그램은 무엇인가요?**
 
-소프트웨어 보증 고객은 EA(기업계약), EAS(기업 정기가입 계약), SCE(서버 및 클라우드 등록) 또는 EES(교육 솔루션 등록)에서 온-프레미스로 연장 보안 업데이트를 구매할 수 있습니다. 소프트웨어 보증이 동일한 등록에 있지 않아도 됩니다.
+소프트웨어 보증 고객은 EA(기업계약), EAS(기업계약 구독), SCE(서버 및 클라우드 등록) 또는 EES(교육 솔루션 등록)에서 온-프레미스로 연장 보안 업데이트를 구매할 수 있습니다. 소프트웨어 보증이 동일한 등록에 있지 않아도 됩니다.
 
 **연장 보안 업데이트를 활용하려면 SQL Server 고객이 최신 서비스 팩을 실행해야 합니까?**
 

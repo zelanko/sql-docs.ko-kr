@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 9f9cca7e761b8f8ec3f5b87e9a195a0eb8b5da6d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76259461"
 ---
 # <a name="manage-big-data-cluster-access-in-active-directory-mode"></a>Active Directory 모드에서 빅 데이터 클러스터 액세스 관리
@@ -67,7 +67,7 @@ ms.locfileid: "76259461"
    kubectl get secret controller-sa-secret -n <cluster name> -o yaml | grep password
    ```
 
-   b. Base64는 암호를 디코드합니다.
+   b. 암호를 Base64 디코드합니다.
 
    ```bash
    echo <password from kubectl command>  | base64 --decode && echo
