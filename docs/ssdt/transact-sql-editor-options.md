@@ -28,10 +28,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 0b91be419419d7dab1904068b1600def88106023
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256317"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL 편집기 옵션
@@ -42,7 +42,7 @@ ms.locfileid: "75256317"
   
 [쿼리 결과](#QueryResults)  
   
-## <a name="QueryExecution"></a>쿼리 실행  
+## <a name="query-execution"></a><a name="QueryExecution"></a>쿼리 실행  
   
 |속성|Description|  
 |------------|---------------|  
@@ -70,7 +70,7 @@ ms.locfileid: "75256317"
 |**SET ANSI_WARNINGS**|여러 오류 조건에 대한 SQL-92 표준 동작을 지정합니다. 자세한 내용은 [SET ANSI_WARNINGS](https://go.microsoft.com/fwlink/?LinkId=238758)를 참조하세요.|  
 |**SET ANSI_NULLS**|Null 값과 함께 사용될 경우 Equals( **=** )와 Not Equal To( **<>** ) 비교 연산자의 SQL-92 호환 동작을 지정합니다. 자세한 내용은 [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759)를 참조하세요.|  
   
-## <a name="QueryResults"></a>쿼리 결과  
+## <a name="query-results"></a><a name="QueryResults"></a>쿼리 결과  
   
 |속성|Description|  
 |------------|---------------|  

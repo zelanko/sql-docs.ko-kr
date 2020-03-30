@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: ddc9a1b1a242f9a92b1e854520d16abeb7baf809
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015654"
 ---
 # <a name="sql-server-error-detail"></a>SQL Server 오류 세부 정보
@@ -53,7 +53,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
 |*pwszMessage*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류 메시지입니다. **IErrorInfo::GetDescription**에 반환된 문자열과 같습니다.|  
 |*pwszServer*|세션에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|  
 |*pwszProcedure*|해당되는 경우 오류가 발생한 프로시저의 이름입니다. 그렇지 않으면 빈 문자열입니다.|  
-|*lNative*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]원시 오류 번호입니다. **ISQLErrorInfo::GetSQLInfo**의 *plNativeError* 매개 변수에 반환된 값과 같습니다.|  
+|*lNative*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]원시 오류 번호입니다. *ISQLErrorInfo::GetSQLInfo*의 **plNativeError** 매개 변수에 반환된 값과 같습니다.|  
 |*bState*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류 메시지의 상태입니다.|  
 |*bClass*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류 메시지의 심각도입니다.|  
 |*wLineNumber*|해당되는 경우 오류가 발생한 저장 프로시저의 줄 번호입니다.|  

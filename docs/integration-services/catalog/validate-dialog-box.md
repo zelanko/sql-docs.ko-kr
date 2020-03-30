@@ -14,10 +14,10 @@ ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 049bb90dddf4bbfb03b222a675bd4008eb83cc14
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294868"
 ---
 # <a name="validate-dialog-box"></a>유효성 검사 대화 상자
@@ -35,7 +35,7 @@ ms.locfileid: "71294868"
   
 -   [일반 페이지의 옵션 설정](#general)  
   
-##  <a name="open_dialog"></a> 유효성 검사 대화 상자 열기  
+##  <a name="open-the-validate-dialog-box"></a><a name="open_dialog"></a> 유효성 검사 대화 상자 열기  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 연결합니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71294868"
   
 5.  프로젝트 또는 패키지를 마우스 오른쪽 단추로 클릭하고 **유효성 검사**를 클릭합니다.  
   
-##  <a name="general"></a> 일반 페이지의 옵션 설정  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> 일반 페이지의 옵션 설정  
  **환경**  
  프로젝트 또는 패키지의 유효성을 검사하기 위해 사용하려는 환경을 선택합니다.  
   

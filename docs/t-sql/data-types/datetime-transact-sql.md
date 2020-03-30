@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6567861c2150362e0d5b5cf386512daec6d758f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68113720"
 ---
 # <a name="datetime-transact-sql"></a>datetime(Transact-SQL)
@@ -93,7 +93,7 @@ ms.locfileid: "68113720"
 ## <a name="ansi-and-iso-8601-compliance"></a>ANSI 및 ISO 8601 호환성  
 **datetime**은 ANSI 또는 ISO 8601 규격이 아닙니다.
   
-##  <a name="_datetime"></a> Date 및 Time 데이터 변환  
+##  <a name="converting-date-and-time-data"></a><a name="_datetime"></a> Date 및 Time 데이터 변환  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 날짜 및 시간 데이터 형식을 변환할 때 날짜나 시간으로 인식되지 않는 값은 모두 무시됩니다. 날짜 및 시간 데이터에 CAST 및 CONVERT 함수를 사용하는 방법은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.
   
 ### <a name="converting-other-date-and-time-types-to-the-datetime-data-type"></a>다른 날짜 및 시간 형식을 datetime 데이터 형식으로 변환 

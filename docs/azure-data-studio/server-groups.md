@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: a1edfb7566d47b8c02dbd53fcccbd7441239a949
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67959305"
 ---
-# <a name="server-groups-in-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]의 서버 그룹
+# <a name="server-groups-in-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]의 서버 그룹
 
 서버 그룹은 사용하는 서버 및 데이터베이스에 대한 연결을 구성하는 방법을 제공합니다. 서버 그룹을 만들면 구성 세부 정보가 *사용자 설정* 에 저장됩니다.
 

@@ -22,10 +22,10 @@ ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c1bee651b2dd74564ebaff47add5acd4b62c5018
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68121677"
 ---
 # <a name="slash-star-block-comment-transact-sql"></a>슬래시 별(주석 블록)(Transact-SQL)

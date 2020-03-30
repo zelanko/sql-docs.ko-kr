@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6c3ec437ccaaf3280be800ea6f80ac6ad38a0a1d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68024911"
 ---
 # <a name="create-indexes-with-included-columns"></a>포괄 열을 사용하여 인덱스 만들기
@@ -41,15 +41,15 @@ ms.locfileid: "68024911"
 > [!NOTE]  
 > 인덱스에 쿼리가 참조하는 모든 열이 들어 있으면 일반적으로 이 인덱스는 *쿼리를 포함*한다고 합니다.  
    
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="DesignRecs"></a> 디자인 권장 구성  
+###  <a name="design-recommendations"></a><a name="DesignRecs"></a> 디자인 권장 구성  
   
 -   검색 및 조회에 사용된 열만 키 열이 되도록 인덱스 키 크기가 큰 비클러스터형 인덱스를 다시 디자인합니다. 쿼리를 포함한 다른 모든 열을 키가 아닌 열로 만듭니다. 이 방법을 통해 쿼리를 포함하는 데 필요한 모든 열을 가지게 되지만 인덱스 키 자체는 작으며 효과적입니다.  
   
 -   비클러스터형 인덱스에 키가 아닌 열을 포함하여 현재 인덱스 크기 제한인 최대 32개의 키 열 및 최대 1,700바이트([!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 이전에는 16개의 키 열 및 900바이트)의 인덱스 키 크기를 초과하지 않도록 할 수 있습니다. 인덱스 키 열의 수 또는 인덱스 키 크기를 계산할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 키가 아닌 열은 계산하지 않습니다.  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   키가 아닌 열은 비클러스터형 인덱스에 대해서만 정의할 수 있습니다.  
   
@@ -67,12 +67,12 @@ ms.locfileid: "68024911"
   
     -   **varchar**, **nvarchar**또는 **varbinary** 열의 길이를 늘립니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>키가 아닌 열이 있는 인덱스를 만들려면  
   
@@ -100,7 +100,7 @@ ms.locfileid: "68024911"
   
 12. **새 인덱스** 대화 상자에서 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>키가 아닌 열이 있는 인덱스를 만들려면  
   

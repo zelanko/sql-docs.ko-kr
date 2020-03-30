@@ -20,16 +20,16 @@ ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8e5a060e58019d79b44d42feeb396854807c19f8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66826921"
 ---
 # <a name="reporting-services-tools"></a>Reporting Services 도구
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에는 관리 환경에서 다양한 보고서의 개발 및 사용을 지원하는 그래픽 및 스크립팅 도구 집합이 포함되어 있습니다. 이 도구 집합에는 개발 도구, 구성 및 관리 도구, 보고서 보기 도구가 포함되어 있습니다. 이 문서에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 개별 툴 및 툴 액세스 방법의 개요를 간략하게 제공합니다.  
   
- 도구를 바로 찾으려면 [자습서: Reporting Services 도구&#40;SSRS&#41; 찾기 및 시작 방법](../../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md)을 참조하세요.  
+ 도구를 바로 찾으려면 [자습서: Reporting Services 도구 찾기 및 시작 방법&#40;SSRS&#41;](../../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md)를 참조하세요.  
   
 ## <a name="tools-for-report-authoring"></a>보고서 작성 도구  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 보고서 작성에 사용할 수 있는 도구를 보여줍니다.  

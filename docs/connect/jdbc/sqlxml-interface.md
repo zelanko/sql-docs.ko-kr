@@ -11,10 +11,10 @@ ms.assetid: 7c67be98-efb5-446c-a0e3-ee67c43cb170
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72cccce89d5e30a92f38b956c8b7996949d3bb46
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027697"
 ---
 # <a name="sqlxml-interface"></a>SQLXML 인터페이스
@@ -34,7 +34,7 @@ SQLXML 인터페이스는 **String**, **Reader** 또는 **Writer** 또는 **Stre
 |[void free()](https://go.microsoft.com/fwlink/?LinkId=131685)|이 메서드는 SQLXML 개체 및 이 개체가 보유한 리소스를 해제합니다.|  
 |[InputStream getBinaryStream()](https://go.microsoft.com/fwlink/?LinkId=131754)|SQLXML에서 데이터를 읽기 위한 입력 스트림을 반환합니다.|  
 |[Reader getCharacterStream()](https://go.microsoft.com/fwlink/?LinkId=131755)|**XML** 데이터를 java.io.Reader 개체 또는 문자 스트림으로 반환합니다.|  
-|[T extends Source T getSource(Class\<T> sourceClass)](https://go.microsoft.com/fwlink/?LinkId=131756)|이 **SQLXML** 개체에서 지정한 **XML** 값을 읽기 위한 **소스**를 반환 합니다.<br /><br /> **참고:**  getSource 메서드는 원본 javax.xml.transform.dom.DOMSource, javax.xml.transform.sax.SAXSource, javax.xml.transform.stax.StAXSource 및 java.io.InputStream을 지원합니다.|  
+|[T extends Source T getSource(Class\<T> sourceClass)](https://go.microsoft.com/fwlink/?LinkId=131756)|이 **SQLXML** 개체에서 지정한 **XML** 값을 읽기 위한 **소스**를 반환 합니다.<br /><br /> **참고:** getSource 메서드는 원본 javax.xml.transform.dom.DOMSource, javax.xml.transform.sax.SAXSource, javax.xml.transform.stax.StAXSource 및 java.io.InputStream을 지원합니다.|  
 |[String getString()](https://go.microsoft.com/fwlink/?LinkId=131757)|이 SQLXML 개체가 지정하는 **XML** 값의 문자열 표현을 반환합니다.|  
 |[OutputStream setBinaryStream()](https://go.microsoft.com/fwlink/?LinkId=131758)|이 SQLXML 개체가 나타내는 **XML** 값을 쓰는 데 사용할 수 있는 스트림을 검색합니다.|  
 |[Writer setCharacterStream()](https://go.microsoft.com/fwlink/?LinkId=131759)|이 SQLXML 개체가 나타내는 **XML** 값을 쓰는 데 사용할 스트림을 반환합니다.|  

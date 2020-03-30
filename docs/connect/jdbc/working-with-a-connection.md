@@ -11,17 +11,17 @@ ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 267605b6a89f323570cfacfc66517b028ef716a2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69025467"
 ---
 # <a name="working-with-a-connection"></a>연결 사용
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-다음 섹션에서는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]의 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 다양한 방법의 예를 보여 줍니다.
+다음 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스를 사용하여 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 데이터베이스에 연결하는 다양한 방법의 예를 보여 줍니다.
 
 > [!NOTE]  
 > JDBC 드라이버를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하는 데 문제가 있으면 [연결 문제 해결](../../connect/jdbc/troubleshooting-connectivity.md)에서 문제 해결을 위한 제안 사항을 참조하세요.
@@ -43,7 +43,7 @@ Connection con = DriverManager.getConnection(connectionUrl);
 
 ## <a name="creating-a-connection-by-using-the-sqlserverdriver-class"></a>SQLServerDriver 클래스를 사용한 연결 만들기
 
-DriverManager에 대해 드라이버 목록에서 특정 드라이버를 지정하려면 다음과 같이 [SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md) 클래스의 [connect](../../connect/jdbc/reference/connect-method-sqlserverdriver.md) 메서드를 사용하여 데이터베이스에 연결합니다.
+DriverManager에 대해 드라이버 목록에서 특정 드라이버를 지정하려면 다음과 같이 [SQLServerDriver](../../connect/jdbc/reference/connect-method-sqlserverdriver.md) 클래스의 [connect](../../connect/jdbc/reference/sqlserverdriver-class.md) 메서드를 사용하여 데이터베이스에 연결합니다.
 
 ```java
 Driver d = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();  

@@ -11,10 +11,10 @@ ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7908655954c0f93bd697599ed0d6c809e97d080f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76916368"
 ---
 # <a name="pdoquote"></a>PDO::quote
@@ -30,9 +30,9 @@ string PDO::quote( $string[, $parameter_type ] )
 ```  
   
 #### <a name="parameters"></a>매개 변수  
-$*문자열*: 따옴표로 묶을 문자열입니다.  
+$*string*: 따옴표로 묶을 문자열입니다.  
   
-$*parameter_type*: 데이터 형식을 나타내는 선택적 (정수) 기호입니다.  기본값은 PDO::PARAM_STR입니다.  
+$parameter*type*: 데이터 형식을 나타내는 선택적 (정수) 기호입니다.  기본값은 PDO::PARAM_STR입니다.  
 
 [유니코드 및 비유니코드 문자열 바인딩](https://wiki.php.net/rfc/extended-string-types-for-pdo)에 대한 지원을 추가하기 위해 새 PDO 상수를 PHP 7.2에 도입하였습니다. 유니코드 문자열은 N을 접두사로 하여 따옴표로 묶을 수 있습니다(예: ‘문자열’ 대신 N‘문자열’).
 

@@ -12,17 +12,17 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.openlocfilehash: 9c4ba5002eab9fd0c495d19aa662c1252824a445
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307721"
 ---
 # <a name="specify-events-and-data-columns-for-a-trace-file-sql-server-profiler"></a>추적 파일에 대해 이벤트 및 데이터 열 지정(SQL Server Profiler)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 문서에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적에 대해 이벤트 클래스 및 데이터 열을 지정하는 방법에 대해 설명합니다.  
+이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적에 대해 이벤트 클래스 및 데이터 열을 지정하는 방법에 대해 설명합니다.  
   
 ### <a name="to-specify-events-and-data-columns-for-a-trace"></a>추적에 대해 이벤트 및 데이터 열을 지정하려면  
   

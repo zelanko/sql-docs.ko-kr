@@ -16,10 +16,10 @@ ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 59f183a3a5063b894bfa8a52a5334bb377119794
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078942"
 ---
 # <a name="url-access-ssrs"></a>URL 액세스(SSRS)
@@ -56,14 +56,14 @@ reportpath
   
 ### <a name="syntax-description"></a>구문 설명  
  *rswebserviceurl*  
- 보고서 서버의 웹 서비스 URL입니다. 기본 모드의 경우 Reporting Services 구성 관리자에 구성된 보고서 서버 인스턴스의 웹 서비스 URL입니다([보고서 서버 URL 구성&#40;SSRS Configuration Manager&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) 참조). 다음은 그 예입니다.   
+ 보고서 서버의 웹 서비스 URL입니다. 기본 모드의 경우 Reporting Services 구성 관리자에 구성된 보고서 서버 인스턴스의 웹 서비스 URL입니다([보고서 서버 URL 구성&#40;SSRS Configuration Manager&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) 참조). 다음은 그 예입니다.  
   
 ```  
 https://myrshost/reportserver  
 https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE  
 ```  
   
- SharePoint 통합 모드의 경우 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 와 통합된 SharePoint 사이트의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]프록시 URL입니다. 다음은 그 예입니다.   
+ SharePoint 통합 모드의 경우 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 와 통합된 SharePoint 사이트의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]프록시 URL입니다. 다음은 그 예입니다.  
   
 ```  
 https://myspsite/subsite/_vti_bin/reportserver  
@@ -75,13 +75,13 @@ https://myspsite/subsite/_vti_bin/reportserver
  *pathinfo*  
  기본 모드 보고서 서버 데이터베이스 항목의 상대 경로 이름 또는 SharePoint 카탈로그 항목의 정규화된 URL입니다.  
   
- 카탈로그 항목의 경로입니다. 기본 모드의 경우 보고서 서버 데이터베이스 항목의 상대 경로(슬래시(**/** 로 시작)입니다. 다음은 그 예입니다.   
+ 카탈로그 항목의 경로입니다. 기본 모드의 경우 보고서 서버 데이터베이스 항목의 상대 경로(슬래시( **/** 로 시작)입니다. 다음은 그 예입니다.  
   
 ```  
 /AdventureWorks 2008R2/Employee_Sales_Summary_2008R2  
 ```  
   
- SharePoint 통합 모드의 경우 SharePoint 라이브러리 항목의 정규화된 URL(항목 확장명 포함)입니다. 다음은 그 예입니다.   
+ SharePoint 통합 모드의 경우 SharePoint 라이브러리 항목의 정규화된 URL(항목 확장명 포함)입니다. 다음은 그 예입니다.  
   
 ```  
 https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl  
@@ -102,7 +102,7 @@ https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  *value*  
  사용 중인 매개 변수의 값에 해당하는 URL 텍스트입니다.  
   
- **참고:** 사용 가능한 URL 액세스 매개 변수의 목록은 [URL 액세스 매개 변수 참조](../reporting-services/url-access-parameter-reference.md)를 참조하세요. URL에 보고서 매개 변수를 전달하는 예제는 [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)을 참조하십시오.  
+ **참고:** 사용 가능한 URL 액세스 매개 변수의 목록은 [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md)을(를) 참조하십시오. URL에 보고서 매개 변수를 전달하는 예제는 [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)을 참조하십시오.  
   
 ## <a name="related-tasks"></a>관련 작업  
   

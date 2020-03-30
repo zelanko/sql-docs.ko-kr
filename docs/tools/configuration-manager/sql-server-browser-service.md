@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ba9a8f2af9b703b64ffadb597d9eda2edb28a0b8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307086"
 ---
 # <a name="sql-server-browser-service"></a>SQL Server Browser 서비스
@@ -130,7 +130,7 @@ ms.locfileid: "75307086"
  숨겨진 인스턴스는 공유 메모리 연결만 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 `HideInstance` 플래그를 설정하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser에서 이 서버 인스턴스에 대한 정보를 사용하여 응답할 수 없음을 나타내십시오.  
   
 ### <a name="using-a-firewall"></a>방화벽 사용  
- 방화벽이 설치된 서버의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스와 통신하려면 UDP 포트 1434 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 사용되는 1433 등의 TCP 포트를 여십시오. 방화벽 작업 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "방법: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 액세스를 허용하도록 방화벽 구성"을 참조하세요.  
+ 방화벽이 설치된 서버의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스와 통신하려면 UDP 포트 1434 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 사용되는 1433 등의 TCP 포트를 여십시오. 방화벽 작업 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 “방법: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 액세스를 허용하도록 방화벽 구성”을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [네트워크 프로토콜 및 네트워크 라이브러리](../../sql-server/install/network-protocols-and-network-libraries.md)  

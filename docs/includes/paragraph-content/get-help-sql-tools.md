@@ -5,13 +5,13 @@ ms.prod: sql
 author: craigg-msft
 ms.author: craigg
 ms.openlocfilehash: 991261683a84b3afc200308bd82d8fce8e95e96d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68161799"
 ---
-## <a name="info_tipmediainfo-tippng-get-help-for-sql-tools"></a>![info_tip](../media/info-tip.png) SQL 도구 도움말 보기
+## <a name="info_tip-get-help-for-sql-tools"></a>![info_tip](../media/info-tip.png) SQL 도구 도움말 보기
 
 - [Azure Data Studio Git 문제 제출](https://github.com/Microsoft/azuredatastudio/issues)
 - [Azure Data Studio에 참여](https://github.com/Microsoft/azuredatastudio)

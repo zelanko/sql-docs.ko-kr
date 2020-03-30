@@ -18,10 +18,10 @@ ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: bd439e528cc30c0971d1b4c824ab2375856d26e3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68114786"
 ---
 # <a name="deny-schema-permissions-transact-sql"></a>DENY 스키마 권한(Transact-SQL)

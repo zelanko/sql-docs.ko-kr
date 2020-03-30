@@ -18,10 +18,10 @@ ms.assetid: 049917db-3f76-4053-8cd2-bc54158e89bc
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ede5ca7a0037eabee9c1588057fd18c45460e812
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68066289"
 ---
 # <a name="ststartpoint-geometry-data-type"></a>STStartPoint(geometry 데이터 형식)

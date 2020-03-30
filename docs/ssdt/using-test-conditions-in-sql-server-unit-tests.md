@@ -13,10 +13,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 85dfbf5b8843325f445a73b7e470c54cf3c91d58
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243515"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>SQL Server 단위 테스트에서 테스트 조건 사용
@@ -75,7 +75,7 @@ SQL Server 단위 테스트 메서드를 예상된 예외로 표시하려면 다
   
 예상된 예외와 부정 SQL Server 단위 테스트를 사용하는 방법에 대한 예를 보려면 [연습: SQL Server 단위 테스트 만들기 및 실행](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)을 참조하세요.  
   
-## <a name="SpecifyDataChecksum"></a>데이터 체크섬 지정  
+## <a name="specifying-a-data-checksum"></a><a name="SpecifyDataChecksum"></a>데이터 체크섬 지정  
 SQL Server 단위 테스트 디자이너를 표시하려면 **솔루션 탐색기**에서 SQL Server 단위 테스트 소스 코드 파일을 두 번 클릭합니다.  
   
 데이터베이스 단위 테스트에 데이터 체크섬 테스트 조건을 추가한 후에는 다음 절차를 사용하여 필요한 체크섬을 구성해야 합니다.  
@@ -107,7 +107,7 @@ SQL Server 단위 테스트 디자이너를 표시하려면 **솔루션 탐색�
   
     테스트 조건의 **값** 열에 필요한 체크섬 값이 표시됩니다.  
   
-## <a name="SpecifyExpectedSchema"></a>필요한 스키마 지정  
+## <a name="specifying-an-expected-schema"></a><a name="SpecifyExpectedSchema"></a>필요한 스키마 지정  
 SQL Server 단위 테스트에 필요한 스키마 테스트 조건을 추가한 후에는 다음 절차를 따라 필요한 스키마를 구성해야 합니다.  
   
 #### <a name="to-specify-an-expected-schema"></a>필요한 스키마를 지정하려면  

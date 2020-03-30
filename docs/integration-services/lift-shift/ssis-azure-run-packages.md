@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 3469a162645816a3b90657b0c2a3b81b37e6cade
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68054629"
 ---
 # <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Azure에 배포된 SSIS(SQL Server Integration Services) 실행
@@ -42,11 +42,11 @@ ms.locfileid: "68054629"
 > [!NOTE]
 > `dtexec.exe`을 사용한 패키지 실행은 Azure에 배포된 패키지를 사용하여 테스트되지 않았습니다.
 
-## <a name="ssms"></a> SSMS를 사용하여 패키지 실행
+## <a name="run-a-package-with-ssms"></a><a name="ssms"></a> SSMS를 사용하여 패키지 실행
 
 SSMS(SQL Server Management Studio)에서 SSIS 카탈로그 데이터베이스인 SSISDB에 배포된 패키지를 마우스 오른쪽 단추로 클릭하고, **실행**을 선택하여 **패키지 실행** 대화 상자를 열 수 있습니다. 자세한 내용은 [SSMS(SQL Server Management Studio)를 사용하여 SSIS 패키지 실행](../ssis-quickstart-run-ssms.md)을 참조하세요.
 
-## <a name="sproc"></a> 저장 프로시저를 사용하여 패키지 실행
+## <a name="run-a-package-with-stored-procedures"></a><a name="sproc"></a> 저장 프로시저를 사용하여 패키지 실행
 
 Azure SQL Database에 연결하고 Transact SQL 코드를 실행할 수 있는 모든 환경에서 다음의 저장 프로시저를 호출하여 패키지를 실행할 수 있습니다.
 
@@ -62,7 +62,7 @@ Azure SQL Database에 연결하고 Transact SQL 코드를 실행할 수 있는 �
 
 - [Transact-SQL을 사용하여 Visual Studio Code에서 SSIS 패키지 실행](../ssis-quickstart-run-tsql-vscode.md)
 
-## <a name="script"></a> 스크립트 또는 코드를 사용하여 패키지 실행
+## <a name="run-a-package-with-script-or-code"></a><a name="script"></a> 스크립트 또는 코드를 사용하여 패키지 실행
 
 `Execute` 네임 스페이스에서 `Package` 개체의 `Microsoft.SQLServer.Management.IntegrationServices` 메서드를 호출하여 관리되는 API를 호출할 수 있는 모든 개발 환경에서 패키지를 실행할 수 있습니다.
 
@@ -72,11 +72,11 @@ Azure SQL Database에 연결하고 Transact SQL 코드를 실행할 수 있는 �
 
 - [.NET 앱에서 C# 코드가 있는 SSIS 패키지 실행](../ssis-quickstart-run-dotnet.md)
 
-## <a name="exec_activity"></a> SSIS 패키지 실행 작업을 사용하여 패키지 실행
+## <a name="run-a-package-with-the-execute-ssis-package-activity"></a><a name="exec_activity"></a> SSIS 패키지 실행 작업을 사용하여 패키지 실행
 
 자세한 내용은 [Azure Data Factory에서 SSIS 패키지 실행 작업을 사용하여 SSIS 패키지 실행](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)을 참조하십시오.
 
-## <a name="sproc_activity"></a> 저장 프로시저 작업을 사용하여 패키지 실행
+## <a name="run-a-package-with-the-stored-procedure-activity"></a><a name="sproc_activity"></a> 저장 프로시저 작업을 사용하여 패키지 실행
 
 자세한 내용은 [Azure Data Factory에서 저장 프로시저 작업을 사용하여 SSIS 패키지 실행](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)을 참조하십시오.
 

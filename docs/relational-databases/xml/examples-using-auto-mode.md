@@ -13,10 +13,10 @@ ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1a280477dbc8a41292ff3ee3519ec74df4d5c7ea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67943410"
 ---
 # <a name="examples-using-auto-mode"></a>예제: AUTO 모드 사용

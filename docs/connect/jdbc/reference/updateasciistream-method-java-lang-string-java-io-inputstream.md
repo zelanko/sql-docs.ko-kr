@@ -11,10 +11,10 @@ ms.assetid: 747b0308-1ce6-4eba-bdfc-af29c21c18cf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d800d385d1df3b9cea8c8c0f4eccb29b90f64147
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67985452"
 ---
 # <a name="updateasciistream-method-javalangstring-javaioinputstream"></a>updateAsciiStream 메서드(java.lang.String, java.io.InputStream)

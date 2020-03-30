@@ -20,10 +20,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0fc8aeed348f64c17894fa3432a7a81274ffbea4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015243"
 ---
 # <a name="tables-and-indexes"></a>테이블 및 인덱스
@@ -31,7 +31,7 @@ ms.locfileid: "68015243"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server용 OLE DB 드라이버는 소비자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블과 인덱스를 생성, 변경 및 삭제할 수 있도록 **IIndexDefinition** 및 **ITableDefinition** 인터페이스를 노출합니다. 올바른 테이블 및 인덱스 정의는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전에 따라 달라집니다.  
+  SQL Server용 OLE DB 드라이버는 소비자가 **테이블과 인덱스를 생성, 변경 및 삭제할 수 있도록**IIndexDefinition**및**ITableDefinition[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인터페이스를 노출합니다. 올바른 테이블 및 인덱스 정의는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전에 따라 달라집니다.  
   
  테이블과 인덱스를 만들거나 삭제하는 기능은 소비자 애플리케이션 사용자의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 액세스 권한에 따라 달라집니다. 테이블 삭제는 선언적 참조 무결성 제약 조건이나 다른 요인이 있는지 여부에 따라 더욱 제한할 수 있습니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68015243"
   
 |속성 ID|Description|  
 |-----------------|-----------------|  
-|SSPROP_COL_COLLATIONNAME|유형: VT_BSTR<br /><br /> R/W: 쓰기<br /><br /> Default: Null<br /><br /> 설명: 이 속성은 **ITableDefinition**에서만 사용됩니다. 이 속성에 지정된 문자열은 [CREATE TABLE](../../../t-sql/statements/create-table-transact-sql.md)을 생성할 때 사용됨<br /><br /> 문을 만들 때 사용됩니다.|  
+|SSPROP_COL_COLLATIONNAME|유형: VT_BSTR<br /><br /> R/W: 쓰기<br /><br /> 기본값: Null<br /><br /> 설명: 이 속성은 **ITableDefinition**에서만 사용됩니다. 이 속성에 지정된 문자열은 [CREATE TABLE](../../../t-sql/statements/create-table-transact-sql.md)을 생성할 때 사용됨<br /><br /> 문을 만들 때 사용됩니다.|  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: bd0dbbedcb2fa33af80e0a1a1d593bf7df27edb6
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896953"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>SQL Server의 인스턴스 열거(ADO.NET)
@@ -36,7 +36,7 @@ System.Data.Sql.SqlDataSourceEnumerator instance =
    System.Data.Sql.SqlDataSourceEnumerator.Instance  
 ```  
   
-정적 인스턴스를 검색한 후에는 사용 가능한 서버에 대한 정보가 포함된 <xref:System.Data.DataTable>을 반환하는 <xref:System.Data.Sql.SqlDataSourceEnumerator.GetDataSources%2A> 메서드를 호출할 수 있습니다.  
+정적 인스턴스를 검색한 후에는 사용 가능한 서버에 대한 정보가 포함된 <xref:System.Data.Sql.SqlDataSourceEnumerator.GetDataSources%2A>을 반환하는 <xref:System.Data.DataTable> 메서드를 호출할 수 있습니다.  
   
 ```csharp  
 System.Data.DataTable dataTable = instance.GetDataSources();  

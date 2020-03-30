@@ -11,10 +11,10 @@ ms.assetid: a1b32d3a-d7c9-4086-ae2b-fc1da96949b1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 957def695287bbd63d21e02859a441f07e3583be
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979689"
 ---
 # <a name="getsqlxml-method-int"></a>getSQLXML 메서드(int)

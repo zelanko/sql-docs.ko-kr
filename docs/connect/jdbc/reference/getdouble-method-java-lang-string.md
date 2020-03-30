@@ -16,10 +16,10 @@ ms.assetid: 8eab6a8e-91f3-47b1-8707-5e57368ad0c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81faa132ccdba32537615aeed4a34aa39e1b7c76
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983537"
 ---
 # <a name="getdouble-method-javalangstring"></a>getDouble 메서드(java.lang.String)

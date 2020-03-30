@@ -15,10 +15,10 @@ ms.assetid: 74960d25-83c2-4ad6-9318-098c348ea977
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 48f8b8a53f22c4f4e102606ca4e5133b95536be2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68101076"
 ---
 # <a name="ogc-static-geometry-methods"></a>OGC 정적 기하 도형 메서드

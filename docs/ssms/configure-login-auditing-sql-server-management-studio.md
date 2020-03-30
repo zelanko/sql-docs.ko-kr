@@ -15,10 +15,10 @@ ms.assetid: 16961116-57ac-4eef-8037-791b26ade548
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: b9f82ea8f779d7347f436c8a696940db039b5191
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243946"
 ---
 # <a name="configure-login-auditing-sql-server-management-studio"></a>로그인 감사 구성(SQL Server Management Studio)
@@ -33,7 +33,7 @@ ms.locfileid: "75243946"
   
 이 옵션을 적용하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 다시 시작해야 합니다.  
   
-## <a name="SSMSProcedure"></a>SQL Server Management Studio 사용  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>SQL Server Management Studio 사용  
   
 #### <a name="to-configure-login-auditing"></a>로그인 감사를 구성하려면  
   

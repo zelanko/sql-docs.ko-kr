@@ -11,10 +11,10 @@ ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fed1b515d6e003f00cebbaf3f3a9306572e2ad2b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970567"
 ---
 # <a name="sqlserverresultset-members"></a>SQLServerResultSet 멤버

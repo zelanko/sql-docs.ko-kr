@@ -14,10 +14,10 @@ ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 16cb419ef7cc893575e91c695158e9d7b66ce2c0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67984871"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>XML 데이터 형식 변수 및 열 만들기

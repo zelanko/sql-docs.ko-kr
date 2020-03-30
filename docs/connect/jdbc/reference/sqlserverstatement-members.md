@@ -11,10 +11,10 @@ ms.assetid: 828cbaa9-ea7a-4986-95c3-5ba0d7d01d83
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72eededd01cd61d6845cc92bbdfbfd073668dd76
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970356"
 ---
 # <a name="sqlserverstatement-members"></a>SQLServerStatement 멤버
@@ -47,19 +47,19 @@ ms.locfileid: "67970356"
 |[executeBatch](../../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md)|실행할 명령 일괄 처리를 데이터베이스로 전송합니다. 모든 명령이 성공적으로 실행되면 업데이트 횟수의 배열을 반환합니다.|  
 |[executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)|지정된 SQL 문을 실행하고 단일 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체를 반환합니다.|  
 |[executeUpdate](../../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)|INSERT, UPDATE, MERGE 또는 DELETE 문과 같은 지정된 SQL 문이나 SQL DDL 문 같이 아무 것도 반환하지 않는 SQL 문을 실행합니다.|  
-|[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverstatement.md)|이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체를 생성한 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체를 검색합니다.|  
+|[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverstatement.md)|이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체를 생성한 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체를 검색합니다.|  
 |[getFetchDirection](../../../connect/jdbc/reference/getfetchdirection-method-sqlserverstatement.md)|이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체에서 생성된 결과 집합에 기본값으로 사용되는 데이터베이스 테이블에서의 행 인출 방향을 검색합니다.|  
 |[getFetchSize](../../../connect/jdbc/reference/getfetchsize-method-sqlserverstatement.md)|이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체에서 생성된 결과 집합 개체의 기본 인출 크기로 사용되는 결과 집합 행 수를 검색합니다.|  
 |[getGeneratedKeys](../../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md)|이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체를 실행한 결과로 만들어진 자동 생성 키를 검색합니다.|  
-|[getMaxFieldSize](../../../connect/jdbc/reference/getmaxfieldsize-method-sqlserverstatement.md)|이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체에 의해 생성된 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 문자 및 이진 열 값에 대해 반환될 수 있는 최대 바이트 수를 검색합니다.|  
-|[getMaxRows](../../../connect/jdbc/reference/getmaxrows-method-sqlserverstatement.md)|이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체에 의해 생성된 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체에 포함될 수 있는 최대 행 수를 검색합니다.|  
+|[getMaxFieldSize](../../../connect/jdbc/reference/getmaxfieldsize-method-sqlserverstatement.md)|이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체에 의해 생성된 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체의 문자 및 이진 열 값에 대해 반환될 수 있는 최대 바이트 수를 검색합니다.|  
+|[getMaxRows](../../../connect/jdbc/reference/getmaxrows-method-sqlserverstatement.md)|이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체에 의해 생성된 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체에 포함될 수 있는 최대 행 수를 검색합니다.|  
 |[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체의 다음 결과로 이동합니다.|  
 |[getQueryTimeout](../../../connect/jdbc/reference/getquerytimeout-method-sqlserverstatement.md)|[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에서 이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체가 실행될 때까지 대기하는 시간(초)을 검색합니다.|  
 |[getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md)|이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체에 대한 응답 버퍼링 모드를 검색합니다.|  
 |[getResultSet](../../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md)|현재 결과를 검색하여 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체로 반환합니다.|  
 |[getResultSetConcurrency](../../../connect/jdbc/reference/getresultsetconcurrency-method-sqlserverstatement.md)|이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체에 의해 생성된 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체의 결과 집합 동시성을 검색합니다.|  
-|[getResultSetHoldability](../../../connect/jdbc/reference/getresultsetholdability-method-sqlserverstatement.md)|이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체에 의해 생성된 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 결과 집합 유지 기능을 검색합니다.|  
-|[getResultSetType](../../../connect/jdbc/reference/getresultsettype-method-sqlserverstatement.md)|이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체에 의해 생성된 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 결과 집합 유형을 검색합니다.|  
+|[getResultSetHoldability](../../../connect/jdbc/reference/getresultsetholdability-method-sqlserverstatement.md)|이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체에 의해 생성된 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체의 결과 집합 유지 기능을 검색합니다.|  
+|[getResultSetType](../../../connect/jdbc/reference/getresultsettype-method-sqlserverstatement.md)|이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체에 의해 생성된 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체의 결과 집합 유형을 검색합니다.|  
 |[getUpdateCount](../../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md)|현재 결과를 검색하여 업데이트 횟수로 반환합니다.|  
 |[getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverstatement.md)|이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체에 대한 호출에서 보고된 첫 번째 경고를 검색합니다.|  
 |[isClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverstatement.md)|이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체가 닫혔는지 여부를 나타냅니다.|  
