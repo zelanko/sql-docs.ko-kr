@@ -19,10 +19,10 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 19d9171278bac69eb8b092d6bc7ec69dcbcb71ff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68023713"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 보조 데이터베이스 준비
@@ -35,7 +35,7 @@ ms.locfileid: "68023713"
 > [!TIP]  
 >  기존 로그 전달 구성이 있는 경우 하나 이상의 보조 데이터베이스와 함께 로그 전달 주 데이터베이스를 가용성 그룹 주 복제본과 하나 이상의 보조 복제본으로 변환할 수 있습니다. 자세한 내용은 [로그 전달에서 Always On 가용성 그룹으로 마이그레이션하기 위한 필수 조건&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)을 참조하세요.  
 
-##  <a name="Prerequisites"></a> 필수 조건 및 제한 사항  
+##  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a> 필수 조건 및 제한 사항  
   
 -   데이터베이스를 배치할 시스템에 보조 데이터베이스를 위한 충분한 공간을 가진 디스크 드라이브가 있는지 확인합니다.  
   
@@ -49,21 +49,21 @@ ms.locfileid: "68023713"
   
 -   데이터베이스를 복원한 후 마지막으로 복원한 데이터 백업 이후에 만든 모든 로그 백업을 복원(WITH NORECOVERY)해야 합니다.  
   
-##  <a name="Recommendations"></a> 권장 사항  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 독립 실행형 인스턴스의 경우 지정된 보조 데이터베이스의 드라이브 문자를 포함한 파일 경로는 가급적 해당 주 데이터베이스의 경로와 동일한 것이 좋습니다. 보조 데이터베이스를 만들 때 데이터베이스 파일을 이동하면 이후의 파일 추가 작업이 보조 데이터베이스에서 실패하고 보조 데이터베이스가 일시 중지될 수 있기 때문입니다.  
   
 -   보조 데이터베이스를 준비하기 전에 보조 복제본의 초기화가 완료될 때까지 가용성 그룹에서 데이터베이스에 대한 예약된 로그 백업을 일시 중지하는 것이 좋습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
  데이터베이스를 백업하면 [TRUSTWORTHY 데이터베이스 속성](../../../relational-databases/security/trustworthy-database-property.md) 이 OFF로 설정됩니다. 따라서 새로 복원된 데이터베이스의 TRUSTWORTHY는 항상 OFF입니다.  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버로 설정됩니다. 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](../../../t-sql/statements/backup-transact-sql.md)을 참조하세요.  
   
  복원할 데이터베이스가 서버 인스턴스에 없으면 RESTORE 문에 CREATE DATABASE 권한이 있어야 합니다. 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](../../../t-sql/statements/restore-statements-transact-sql.md)를 통해 복원할 수 없습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="use-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 > [!NOTE]  
 >  주 복제본을 호스트하는 서버 인스턴스와 보조 복제본을 호스트하는 모든 인스턴스 간에 백업 및 복원 파일 경로가 동일한 경우, [새 가용성 그룹 마법사](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md), [가용성 그룹에 복제본 추가 마법사](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md) 또는 [가용성 그룹에 데이터베이스 추가 마법사](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)를 사용하여 보조 복제본 데이터베이스를 만들 수 있어야 합니다.  
@@ -88,7 +88,7 @@ ms.locfileid: "68023713"
 > [!NOTE]  
 >  이러한 백업 및 복원 작업 수행 방법은 이 섹션의 뒷부분에 나오는 [관련 백업 및 복원 태스크](#RelatedTasks)를 참조하세요.  
   
-###  <a name="RelatedTasks"></a> 관련된 백업 및 복원 태스크  
+###  <a name="related-backup-and-restore-tasks"></a><a name="RelatedTasks"></a> 관련된 백업 및 복원 태스크  
  **데이터베이스 백업을 만들려면**  
   
 -   [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
@@ -109,7 +109,7 @@ ms.locfileid: "68023713"
   
 -   [데이터베이스를 새 위치로 복원&#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **보조 데이터베이스를 준비하려면**  
   
 > [!NOTE]  
@@ -131,7 +131,7 @@ ms.locfileid: "68023713"
 > [!NOTE]  
 >  이러한 백업 및 복원 작업 수행 방법은 이 항목의 뒷부분에 나오는 [관련 백업 및 복원 태스크](#RelatedTasks)를 참조하세요.  
   
-###  <a name="ExampleTsql"></a> Transact-SQL 예  
+###  <a name="transact-sql-example"></a><a name="ExampleTsql"></a> Transact-SQL 예  
  다음 예에서는 보조 데이터베이스를 준비합니다. 이 예에서는 기본적으로 단순 복구 모델을 사용하는 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 예제 데이터베이스를 사용합니다.  
   
 1.  [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 데이터베이스를 사용하려면 전체 복구 모델을 사용하도록 수정합니다.  
@@ -227,7 +227,7 @@ ms.locfileid: "68023713"
     GO  
     ```  
   
-##  <a name="PowerShellProcedure"></a> PowerShell 사용  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell 사용  
  **보조 데이터베이스를 준비하려면**  
   
 1.  주 데이터베이스의 최근 백업을 만들어야 하는 경우 주 복제본을 호스트하는 서버 인스턴스로 디렉터리를 변경(**cd**)합니다.  
@@ -247,7 +247,7 @@ ms.locfileid: "68023713"
   
 -   [SQL Server PowerShell 공급자](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-###  <a name="ExamplePSscript"></a> 예제 백업 및 복원 스크립트와 명령  
+###  <a name="sample-backup-and-restore-script-and-command"></a><a name="ExamplePSscript"></a> 예제 백업 및 복원 스크립트와 명령  
  다음 PowerShell 명령은 전체 데이터베이스 백업과 트랜잭션 로그를 네트워크 공유에 백업하고 해당 공유에서 백업을 복원합니다. 이 예에서는 데이터베이스를 복원할 파일 경로가 데이터베이스를 백업한 파일 경로와 동일한 것으로 가정합니다.  
   
 ```  
@@ -262,7 +262,7 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
   
 ```  
   
-##  <a name="FollowUp"></a> 다음 단계  
+##  <a name="next-steps"></a><a name="FollowUp"></a> 다음 단계  
  보조 데이터베이스 구성을 완료하려면 새로 복원한 데이터베이스를 가용성 그룹에 조인합니다. 자세한 내용은 [가용성 그룹에 보조 데이터베이스 조인&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  

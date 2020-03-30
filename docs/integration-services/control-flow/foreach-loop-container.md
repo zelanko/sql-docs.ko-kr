@@ -31,10 +31,10 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2266b837ce7822a6b03b3f6a26d4d1d818aade72
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298296"
 ---
 # <a name="foreach-loop-container"></a>Foreach 루프 컨테이너
@@ -433,7 +433,7 @@ ms.locfileid: "71298296"
   
  **관련 항목:** [SMO 열거 선택 대화 상자](https://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0)  
   
-####  <a name="ForeachHDFSFile"></a> 열거자 = Foreach HDFS File 열거자  
+####  <a name="enumerator--foreach-hdfs-file-enumerator"></a><a name="ForeachHDFSFile"></a> 열거자 = Foreach HDFS File 열거자  
  SSIS 패키지는 **Foreach HDFS 파일 열거자** 를 사용하여 지정된 HDFS 위치에 있는 HDFS 파일을 열거할 수 있습니다. 각 HDFS 파일의 이름을 변수에 저장하여 Foreach 루프 컨테이너 내의 태스크에서 사용할 수 있습니다.  
   
  **Hadoop 연결 관리자**  
@@ -457,7 +457,7 @@ ms.locfileid: "71298296"
   
  편집기의 **변수 매핑** 페이지에서 열거된 HDFS 파일의 이름을 저장할 변수를 선택하거나 만듭니다.  
   
-####  <a name="ForeachAzureBlob"></a> 열거자 = Foreach Azure Blob 열거자  
+####  <a name="enumerator--foreach-azure-blob-enumerator"></a><a name="ForeachAzureBlob"></a> 열거자 = Foreach Azure Blob 열거자  
  SSIS 패키지는  **Azure Blob 열거자** 를 사용하여 지정된 Blob 위치에 있는 Blob 파일을 열거할 수 있습니다. 열거된 Blob 파일의 이름을 변수에 저장하고 Foreach 루프 컨테이너 내의 작업에서 사용할 수 있습니다.  
   
  **Azure Blob 열거자** 는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 대해 제공되는 Azure용 SSIS(SQL Server Integration Services) 기능 팩의 구성 요소입니다. [여기](https://go.microsoft.com/fwlink/?LinkID=626967)서 기능 팩을 다운로드하세요.  
@@ -482,7 +482,7 @@ ms.locfileid: "71298296"
  **Blob 시간 범위 시작/끝 필터**  
  시간 범위 필터를 지정합니다. **TimeRangeFrom** 에서 **TimeRangeTo** 사이에 수정된 파일이 열거됩니다. 
 
-####  <a name="ForeachAdlsFile"></a> 열거자 = Foreach ADLS File 열거자 
+####  <a name="enumerator--foreach-adls-file-enumerator"></a><a name="ForeachAdlsFile"></a> 열거자 = Foreach ADLS File 열거자 
 **ADLS File 열거자**를 통해 SSIS 패키지는 Azure Data Lake Store의 파일을 열거할 수 있습니다. 변수에 열거된 파일(슬래시 접두사로 시작 - `/`)의 전체 경로를 저장하고 Foreach 루프 컨테이너 내에서 작업의 파일 경로를 사용합니다.
   
 **AzureDataLakeConnection**  
@@ -497,7 +497,7 @@ Azure Data Lake 연결 관리자를 지정하거나 ADLS 계정을 참조하는 
 **SearchRecursively**  
 지정된 디렉터리 내에서 재귀적으로 검색할 것인지 지정합니다.  
 
-####  <a name="ForeachBlobFsFile"></a> 열거자 = Foreach Data Lake Storage Gen2 파일 열거자 
+####  <a name="enumerator--foreach-data-lake-storage-gen2-file-enumerator"></a><a name="ForeachBlobFsFile"></a> 열거자 = Foreach Data Lake Storage Gen2 파일 열거자 
 **Foreach Data Lake Storage Gen2 파일 열거자**를 사용하면 SSIS 패키지가 Azure Data Lake Store Gen2에 파일을 열거할 수 있습니다.
 
 **AzureStorageConnection**  

@@ -11,10 +11,10 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014683"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 성능 모니터링
@@ -436,7 +436,7 @@ DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-d
   
  작업 기록을 보고 평가 결과를 검사할 수 있습니다. 또한 평가 오류는 이벤트 ID 34052로 Windows 애플리케이션(이벤트 뷰어)에 기록됩니다. 또한 정책이 실패할 경우 SQL Server 에이전트가 경고를 보내도록 구성할 수 있습니다. 자세한 내용은 [정책 관리자에게 정책 실패를 알리도록 경고 구성](~/relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)을 참조하세요.  
   
-##  <a name="BKMK_SCENARIOS"></a> 성능 문제 해결 시나리오  
+##  <a name="performance-troubleshooting-scenarios"></a><a name="BKMK_SCENARIOS"></a> 성능 문제 해결 시나리오  
  다음 표는 일반적인 성능 관련 문제 해결 시나리오를 나열합니다.  
   
 |시나리오|Description|  
@@ -445,7 +445,7 @@ DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-d
 |[문제 해결: 가용성 그룹 초과 RPO](troubleshoot-availability-group-exceeded-rpo.md)|강제 수동 장애 조치(failover)를 수행한 후 데이터 손실이 RPO보다 많습니다. 또는 비동기 커밋 보조 복제본의 잠재적 데이터 손실을 계산할 때 RPO 초과를 발견합니다.|  
 |[문제 해결: 보조 복제본에 반영되지 않은 주 복제본의 변경 내용](troubleshoot-primary-changes-not-reflected-on-secondary.md)|클라이언트 애플리케이션에서 주 복제본에 대한 업데이트를 성공적으로 완료하지만 보조 복제본 쿼리는 변경 내용이 반영되지 않았음을 보여줍니다.|  
   
-##  <a name="BKMK_XEVENTS"></a> 유용한 확장 이벤트  
+##  <a name="useful-extended-events"></a><a name="BKMK_XEVENTS"></a> 유용한 확장 이벤트  
  다음 확장 이벤트는 **동기화** 상태에 있는 복제본을 문제 해결할 때 유용합니다.  
   
 |이벤트 이름|Category|채널|가용성 복제본|  

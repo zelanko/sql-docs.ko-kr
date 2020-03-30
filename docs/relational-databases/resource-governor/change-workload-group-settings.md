@@ -13,10 +13,10 @@ ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 5389413091f57a5a0dfdad887edad675ee68ff64
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68136928"
 ---
 # <a name="change-workload-group-settings"></a>작업 그룹 설정 변경
@@ -29,7 +29,7 @@ ms.locfileid: "68136928"
   
 ## <a name="before-you-begin"></a>시작하기 전에  
   
-###  <a name="LimitationsRestrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 제한 사항  
  기본 작업 그룹 및 사용자 정의 작업 그룹의 설정을 변경할 수 있습니다.  
   
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
@@ -38,10 +38,10 @@ ms.locfileid: "68136928"
   
  인덱스를 만들 때 처음에 부여된 것 이상의 메모리 작업 영역을 사용하여 성능을 높일 수 있습니다. 이 특수 처리는 리소스 관리자에서 지원되지만 초기 부여 및 추가 메모리 부여는 작업 그룹 및 리소스 풀 설정에 따라 제한됩니다.  
   
-###  <a name="Permissions"></a> 권한  
+###  <a name="permissions"></a><a name="Permissions"></a> 권한  
  작업 그룹 설정을 변경하려면 CONTROL SERVER 권한이 필요합니다.  
   
-##  <a name="ChgWGProp"></a> SQL Server Management Studio를 사용하여 작업 그룹 설정 변경  
+##  <a name="change-workload-group-settings-using-sql-server-management-studio"></a><a name="ChgWGProp"></a> SQL Server Management Studio를 사용하여 작업 그룹 설정 변경  
  **다음을 사용하여 작업 그룹 설정을 변경하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  개체 탐색기에서 수정할 작업 그룹이 포함된 **작업 그룹** 폴더가 나타날 때까지 **관리** 노드를 계속 확장합니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "68136928"
   
 5.  **확인**을 클릭하여 변경 내용을 저장합니다.  
   
-##  <a name="ChgWGTSQL"></a> Transact-SQL을 사용하여 작업 그룹 설정 변경  
+##  <a name="change-workload-group-settings-using-transact-sql"></a><a name="ChgWGTSQL"></a> Transact-SQL을 사용하여 작업 그룹 설정 변경  
  **Transact-SQL을 사용하여 작업 그룹 설정을 변경하려면**  
   
 1.  변경할 속성 값을 지정하여 ALTER WORKLOAD GROUP 문을 실행합니다.  

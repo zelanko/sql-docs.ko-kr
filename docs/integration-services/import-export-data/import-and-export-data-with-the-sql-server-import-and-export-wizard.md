@@ -23,10 +23,10 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2e8838c92e2af7ca79ad1aa69972e46be0a1f64c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287437"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기
@@ -45,7 +45,7 @@ ms.locfileid: "79287437"
     \- 또는 \-
 -   **예제를 참조하세요.** 일반적인 세션에서 볼 수 있는 몇 가지 화면을 간략히 보려면 [가져오기 및 내보내기 마법사의 간단한 예제 시작](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md) 단일 페이지에 있는 간단한 예제를 살펴봅니다.  
 
-##  <a name="wizardSources"></a> 어떤 원본 및 대상을 사용할 수 있나요?  
+##  <a name="what-sources-and-destinations-can-i-use"></a><a name="wizardSources"></a> 어떤 원본 및 대상을 사용할 수 있나요?  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사는 다음 표에 나와 있는 데이터 원본 간에 데이터를 복사할 수 있습니다. 이러한 데이터 원본 중 일부에 연결하려면 추가 파일을 다운로드하여 설치해야 합니다.
  
 | 데이터 원본 | 추가 파일을 다운로드해야 하나요? |
@@ -87,7 +87,7 @@ ms.locfileid: "79287437"
 > [!TIP]
 > 마법사의 모든 페이지 또는 대화 상자에서 F1 키를 누르면 현재 페이지에 대한 설명서를 볼 수 있습니다.   
   
-##  <a name="wizardSSIS"></a> 마법사에서 SSIS(SQL Server Integration Services) 사용  
+##  <a name="the-wizard-uses-sql-server-integration-services-ssis"></a><a name="wizardSSIS"></a> 마법사에서 SSIS(SQL Server Integration Services) 사용  
  마법사에서는 SSIS(SQL Server Integration Services)를 사용하여 데이터를 복사합니다. SSIS는 데이터를 ETL(추출, 변환 및 로드)하는 도구입니다. 마법사 페이지에서는 SSIS 언어 일부를 사용합니다.
   
  SSIS에서 기본 단위는 **패키지**입니다. 마법사는 사용자가 마법사 페이지를 진행하고 옵션을 지정하면 메모리 내에 SSIS 패키지를 만듭니다.    

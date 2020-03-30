@@ -42,10 +42,10 @@ ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d4046228f4b0d37e72949f9bc87eac13786e6bba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291130"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
@@ -76,7 +76,7 @@ ms.locfileid: "71291130"
 ### <a name="transformations-without-custom-properties"></a>사용자 지정 속성이 없는 변환  
  구성 요소, 입력 또는 출력 수준에서 [병합 변환](../../../integration-services/data-flow/transformations/merge-transformation.md), [멀티캐스트 변환](../../../integration-services/data-flow/transformations/multicast-transformation.md) 및 [Union All 변환](../../../integration-services/data-flow/transformations/union-all-transformation.md) 변환은 사용자 지정 속성을 포함하지 않습니다. 이러한 변환은 모든 데이터 흐름 구성 요소에 공통된 속성만 사용합니다.  
   
-##  <a name="aggregate"></a> 집계 변환 사용자 지정 속성  
+##  <a name="aggregate-transformation-custom-properties"></a><a name="aggregate"></a> 집계 변환 사용자 지정 속성  
  집계 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 집계 변환의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -111,7 +111,7 @@ ms.locfileid: "71291130"
   
  자세한 내용은 [Aggregate Transformation](../../../integration-services/data-flow/transformations/aggregate-transformation.md)을 참조하세요.  
   
-##  <a name="audit"></a> 감사 변환 사용자 지정 속성  
+##  <a name="audit-transformation-custom-properties"></a><a name="audit"></a> 감사 변환 사용자 지정 속성  
  감사 변환에는 구성 요소 수준의 모든 데이터 흐름 구성 요소에 공통된 속성만 있습니다.  
   
  다음 표에서는 감사 변환 출력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -124,7 +124,7 @@ ms.locfileid: "71291130"
   
  자세한 내용은 [감사 변환](../../../integration-services/data-flow/transformations/audit-transformation.md)을 참조하세요.  
   
-##  <a name="cachetransform"></a> 캐시 변환 사용자 지정 속성  
+##  <a name="cache-transform-transformation-custom-properties"></a><a name="cachetransform"></a> 캐시 변환 사용자 지정 속성  
  캐시 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 캐시 변환의 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -137,7 +137,7 @@ ms.locfileid: "71291130"
 |InputColumns|String|선택된 입력 열 목록입니다.|  
 |CacheColumnName|String|선택된 입력 열에 매핑된 열의 이름을 지정합니다.<br /><br /> CacheColumnName 속성의 열 이름은 **캐시 연결 관리자 편집기** 의 **열**페이지에 나열된 해당 열 이름과 일치해야 합니다.<br /><br /> 자세한 내용은 [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md)를 참조하세요.|  
   
-##  <a name="charmap"></a> 문자표 변환 사용자 지정 속성  
+##  <a name="character-map-transformation-custom-properties"></a><a name="charmap"></a> 문자표 변환 사용자 지정 속성  
  문자표 변환에는 구성 요소 수준의 모든 데이터 흐름 구성 요소에 공통된 속성만 있습니다.  
   
  다음 표에서는 문자표 변환 출력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -151,7 +151,7 @@ ms.locfileid: "71291130"
   
  자세한 내용은 [Character Map Transformation](../../../integration-services/data-flow/transformations/character-map-transformation.md)을 참조하세요.  
   
-##  <a name="condsplit"></a> 조건부 분할 변환 사용자 지정 속성  
+##  <a name="conditional-split-transformation-custom-properties"></a><a name="condsplit"></a> 조건부 분할 변환 사용자 지정 속성  
  조건부 분할 변환에는 구성 요소 수준의 모든 데이터 흐름 구성 요소에 공통된 속성만 있습니다.  
   
  다음 표에서는 조건부 분할 변환 출력의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -167,7 +167,7 @@ ms.locfileid: "71291130"
   
  자세한 내용은 [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)을 참조하세요.  
   
-##  <a name="copymap"></a> 열 복사 변환 사용자 지정 속성  
+##  <a name="copy-column-transformation-custom-properties"></a><a name="copymap"></a> 열 복사 변환 사용자 지정 속성  
  열 복사 변환에는 구성 요소 수준의 모든 데이터 흐름 구성 요소에 공통된 속성만 있습니다.  
   
  다음 표에서는 열 복사 변환 출력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -180,7 +180,7 @@ ms.locfileid: "71291130"
   
  자세한 내용은 [Copy Column Transformation](../../../integration-services/data-flow/transformations/copy-column-transformation.md)을 참조하세요.  
   
-##  <a name="dataconv"></a> 데이터 변환 사용자 지정 속성  
+##  <a name="data-conversion-transformation-custom-properties"></a><a name="dataconv"></a> 데이터 변환 사용자 지정 속성  
  데이터 변환에는 구성 요소 수준의 모든 데이터 흐름 구성 요소에 공통된 속성만 있습니다.  
   
  다음 표에서는 데이터 변환 출력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -194,7 +194,7 @@ ms.locfileid: "71291130"
   
  자세한 내용은 [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)을 참조하세요.  
   
-##  <a name="dmquery"></a> 데이터 마이닝 쿼리 변환 사용자 지정 속성  
+##  <a name="data-mining-query-transformation-custom-properties"></a><a name="dmquery"></a> 데이터 마이닝 쿼리 변환 사용자 지정 속성  
  데이터 마이닝 쿼리 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 데이터 마이닝 쿼리 변환의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -213,7 +213,7 @@ ms.locfileid: "71291130"
   
  자세한 내용은 [Data Mining Query Transformation](../../../integration-services/data-flow/transformations/data-mining-query-transformation.md)을 참조하세요.  
   
-##  <a name="derived"></a> 파생 열 변환 사용자 지정 속성  
+##  <a name="derived-column-transformation-custom-properties"></a><a name="derived"></a> 파생 열 변환 사용자 지정 속성  
  파생 열 변환에는 구성 요소 수준의 모든 데이터 흐름 구성 요소에 공통된 속성만 있습니다.  
   
  다음 표에서는 파생 열 변환 입력 열 및 출력 열의 사용자 지정 속성을 설명합니다. 파생 열을 새 열로 추가하는 경우 이러한 사용자 지정 속성이 새 출력 열에 적용됩니다. 기존 입력 열의 내용을 파생 결과로 바꾸는 경우에는 이러한 사용자 지정 속성이 기존 입력 열에 적용됩니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -227,7 +227,7 @@ ms.locfileid: "71291130"
   
  자세한 내용은 [파생 열 변환](../../../integration-services/data-flow/transformations/derived-column-transformation.md)을 참조하세요.  
   
-##  <a name="extract"></a> 열 내보내기 변환 사용자 지정 속성  
+##  <a name="export-column-transformation-custom-properties"></a><a name="extract"></a> 열 내보내기 변환 사용자 지정 속성  
  열 내보내기 변환에는 구성 요소 수준의 모든 데이터 흐름 구성 요소에 공통된 속성만 있습니다.  
   
  다음 표에서는 열 내보내기 변환 입력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -243,7 +243,7 @@ ms.locfileid: "71291130"
   
  자세한 내용은 [Export Column Transformation](../../../integration-services/data-flow/transformations/export-column-transformation.md)을 참조하세요.  
   
-##  <a name="insert"></a> 열 가져오기 변환 사용자 지정 속성  
+##  <a name="import-column-transformation-custom-properties"></a><a name="insert"></a> 열 가져오기 변환 사용자 지정 속성  
  열 가져오기 변환에는 구성 요소 수준의 모든 데이터 흐름 구성 요소에 공통된 속성만 있습니다.  
   
  다음 표에서는 열 가져오기 변환 입력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -257,7 +257,7 @@ ms.locfileid: "71291130"
   
  자세한 내용은 [Import Column Transformation](../../../integration-services/data-flow/transformations/import-column-transformation.md)을 참조하세요.  
   
-##  <a name="fgroup"></a> 유사 항목 그룹화 변환 사용자 지정 속성  
+##  <a name="fuzzy-grouping-transformation-custom-properties"></a><a name="fgroup"></a> 유사 항목 그룹화 변환 사용자 지정 속성  
  유사 항목 그룹화 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 유사 항목 그룹화 변환의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -290,7 +290,7 @@ ms.locfileid: "71291130"
   
  자세한 내용은 [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)을 참조하세요.  
   
-##  <a name="flookup"></a> 유사 항목 조회 변환 사용자 지정 속성  
+##  <a name="fuzzy-lookup-transformation-custom-properties"></a><a name="flookup"></a> 유사 항목 조회 변환 사용자 지정 속성  
  유사 항목 조회 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 유사 항목 조회 변환의 사용자 지정 속성을 설명합니다. **ReferenceMetadataXML** 을 제외한 모든 속성이 읽기/쓰기가 가능합니다.  
@@ -335,7 +335,7 @@ ms.locfileid: "71291130"
   
  자세한 내용은 [Fuzzy Lookup Transformation](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)을 참조하세요.  
   
-##  <a name="lookup"></a> 조회 변환 사용자 지정 속성  
+##  <a name="lookup-transformation-custom-properties"></a><a name="lookup"></a> 조회 변환 사용자 지정 속성  
  조회 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 조회 변환의 사용자 지정 속성을 설명합니다. **ReferenceMetadataXML** 을 제외한 모든 속성이 읽기/쓰기가 가능합니다.  
@@ -369,7 +369,7 @@ ms.locfileid: "71291130"
   
  자세한 내용은 [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)을(를) 참조하세요.  
   
-##  <a name="mjoin"></a> 병합 조인 변환 사용자 지정 속성  
+##  <a name="merge-join-transformation-custom-properties"></a><a name="mjoin"></a> 병합 조인 변환 사용자 지정 속성  
  병합 조인 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 병합 조인 변환의 사용자 지정 속성을 설명합니다.  
@@ -391,7 +391,7 @@ ms.locfileid: "71291130"
   
  자세한 내용은 [Merge Join Transformation](../../../integration-services/data-flow/transformations/merge-join-transformation.md)을 참조하세요.  
   
-##  <a name="oledbcmd"></a> OLE DB 명령 변환 사용자 지정 속성  
+##  <a name="ole-db-command-transformation-custom-properties"></a><a name="oledbcmd"></a> OLE DB 명령 변환 사용자 지정 속성  
  OLE DB 명령 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 OLE DB 명령 변환의 사용자 지정 속성을 설명합니다.  
@@ -412,7 +412,7 @@ ms.locfileid: "71291130"
   
  자세한 내용은 [OLE DB Command Transformation](../../../integration-services/data-flow/transformations/ole-db-command-transformation.md)을 참조하세요.  
   
-##  <a name="percent"></a> 비율 샘플링 변환 사용자 지정 속성  
+##  <a name="percentage-sampling-transformation-custom-properties"></a><a name="percent"></a> 비율 샘플링 변환 사용자 지정 속성  
  비율 샘플링 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 비율 샘플링 변환의 사용자 지정 속성을 설명합니다.  
@@ -432,7 +432,7 @@ ms.locfileid: "71291130"
   
  자세한 내용은 [Percentage Sampling Transformation](../../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)을 참조하세요.  
   
-##  <a name="pivot"></a> 피벗 변환 사용자 지정 속성  
+##  <a name="pivot-transformation-custom-properties"></a><a name="pivot"></a> 피벗 변환 사용자 지정 속성  
  다음 표에서는 피벗 변환을 위한 사용자 지정 구성 요소 속성을 설명합니다.  
   
 |속성|데이터 형식|Description|  
@@ -454,7 +454,7 @@ ms.locfileid: "71291130"
   
  자세한 내용은 [Pivot Transformation](../../../integration-services/data-flow/transformations/pivot-transformation.md)을 참조하세요.  
   
-##  <a name="rowcount"></a> 행 개수 변환 사용자 지정 속성  
+##  <a name="row-count-transformation-custom-properties"></a><a name="rowcount"></a> 행 개수 변환 사용자 지정 속성  
  행 개수 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 행 개수 변환의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -467,7 +467,7 @@ ms.locfileid: "71291130"
   
  자세한 내용은 [Row Count Transformation](../../../integration-services/data-flow/transformations/row-count-transformation.md)을 참조하세요.  
   
-##  <a name="rowsamp"></a> 행 샘플링 변환 사용자 지정 속성  
+##  <a name="row-sampling-transformation-custom-properties"></a><a name="rowsamp"></a> 행 샘플링 변환 사용자 지정 속성  
  행 샘플링 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 행 샘플링 변환의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -493,7 +493,7 @@ ms.locfileid: "71291130"
   
  자세한 내용은 [Row Sampling Transformation](../../../integration-services/data-flow/transformations/row-sampling-transformation.md)을(를) 참조하세요.  
   
-##  <a name="script"></a> 스크립트 구성 요소 사용자 지정 속성  
+##  <a name="script-component-custom-properties"></a><a name="script"></a> 스크립트 구성 요소 사용자 지정 속성  
  스크립트 구성 요소에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다. 스크립트 구성 요소가 원본, 변환, 대상 중 어느 것으로 사용되는지 여부에 관계없이 같은 사용자 지정 속성을 사용할 수 있습니다.  
   
  다음 표에서는 스크립트 구성 요소의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -507,7 +507,7 @@ ms.locfileid: "71291130"
   
  자세한 내용은 [Script Component](../../../integration-services/data-flow/transformations/script-component.md)를 참조하세요.  
   
-##  <a name="scd"></a> 느린 변경 차원 변환 사용자 지정 속성  
+##  <a name="slowly-changing-dimension-transformation-custom-properties"></a><a name="scd"></a> 느린 변경 차원 변환 사용자 지정 속성  
  느린 변경 차원 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 느린 변경 차원 변환의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -533,7 +533,7 @@ ms.locfileid: "71291130"
   
  자세한 내용은 [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)을 참조하세요.  
   
-##  <a name="sort"></a> 정렬 변환 사용자 지정 속성  
+##  <a name="sort-transformation-custom-properties"></a><a name="sort"></a> 정렬 변환 사용자 지정 속성  
  정렬 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 정렬 변환의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -560,7 +560,7 @@ ms.locfileid: "71291130"
   
  자세한 내용은 [Sort Transformation](../../../integration-services/data-flow/transformations/sort-transformation.md)을 참조하세요.  
   
-##  <a name="textract"></a> 용어 추출 변환 사용자 지정 속성  
+##  <a name="term-extraction-transformation-custom-properties"></a><a name="textract"></a> 용어 추출 변환 사용자 지정 속성  
  용어 추출 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 용어 추출 변환의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -580,7 +580,7 @@ ms.locfileid: "71291130"
   
  자세한 내용은 [Term Extraction Transformation](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)을 참조하세요.  
   
-##  <a name="tlookup"></a> 용어 조회 변환 사용자 지정 속성  
+##  <a name="term-lookup-transformation-custom-properties"></a><a name="tlookup"></a> 용어 조회 변환 사용자 지정 속성  
  용어 조회 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 용어 조회 변환의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -607,7 +607,7 @@ ms.locfileid: "71291130"
   
  자세한 내용은 [Term Lookup Transformation](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)을 참조하세요.  
   
-##  <a name="unpivot"></a> 피벗 해제 변환 사용자 지정 속성  
+##  <a name="unpivot-transformation-custom-properties"></a><a name="unpivot"></a> 피벗 해제 변환 사용자 지정 속성  
  피벗 해제 변환에는 구성 요소 수준의 모든 데이터 흐름 구성 요소에 공통된 속성만 있습니다.  
   
 > [!NOTE]  

@@ -15,10 +15,10 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3bf32d532c2bf10adb1348352c472cd87f0b8413
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822566"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>복제본 페이지 지정(새 가용성 그룹 마법사: 복제본 추가 마법사)
@@ -32,7 +32,7 @@ ms.locfileid: "74822566"
 |[백업 기본 설정](#BackupPreferencesTab)|가용성 그룹 전체에 대한 백업 기본 설정과 개별 가용성 복제본에 대한 백업 우선 순위를 지정하려면 이 탭을 사용합니다.|  
 |[수신기](#Listener)|가능한 경우 가용성 그룹 수신기를 만들려면 이 탭을 사용합니다. 기본적으로 수신기는 만들어지지 않습니다.<br /><br /> 이 탭은 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]를 실행하는 경우에만 사용할 수 있습니다.<br/><br/>클러스터 유형이 '외부' 또는 '없음'인 경우 DHCP가 사용되지 않습니다. |  
   
-##  <a name="ReplicasTab"></a> 복제본 탭  
+##  <a name="replicas-tab"></a><a name="ReplicasTab"></a> 복제본 탭  
  **서버 인스턴스**  
  가용성 복제본을 호스팅할 서버 인스턴스의 이름을 표시합니다.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "74822566"
  **복제본 제거**  
  선택한 보조 복제본을 가용성 그룹에서 제거하려면 클릭합니다.  
   
-##  <a name="EndpointsTab"></a> 엔드포인트 탭  
+##  <a name="endpoints-tab"></a><a name="EndpointsTab"></a> 엔드포인트 탭  
  **엔드포인트** 탭에는 가용성 복제본을 호스팅할 각 서버 인스턴스에 대한 기존 데이터베이스 미러링 엔드포인트의 실제 값(있는 경우)이나 Windows 인증을 사용할 잠재적인 새 엔드포인트의 제안된 값이 표시됩니다. 엔드포인트 값 표에는 기존 엔드포인트와 잠재적인 엔드포인트 모두에 대한 다음 정보가 표시됩니다.  
   
  **서버 이름**  
@@ -107,7 +107,7 @@ ms.locfileid: "74822566"
   
      엔드포인트를 구성하는 동안 **가용성 복제본 지정** 페이지를 열어 둔 경우 **엔드포인트** 탭으로 돌아와서 **새로 고침** 을 클릭하여 **엔드포인트 값** 표를 업데이트합니다.  
   
-##  <a name="BackupPreferencesTab"></a> 백업 기본 설정 탭  
+##  <a name="backup-preferences-tab"></a><a name="BackupPreferencesTab"></a> 백업 기본 설정 탭  
  백업이 수행되는 위치를 지정하려면 다음 옵션 중 하나를 선택합니다.  
   
  **보조 사용**  
@@ -137,7 +137,7 @@ ms.locfileid: "74822566"
  **복제본 제외**  
  백업 수행을 위해 이 가용성 복제를 선택할 수 없도록 합니다. 이 값은 예를 들어 백업을 장애 조치할 대상으로 사용하지 않을 원격 가용성 복제본의 경우에 유용합니다.  
   
-##  <a name="Listener"></a> 수신기 탭  
+##  <a name="listener-tab"></a><a name="Listener"></a> 수신기 탭  
  클라이언트 연결 지점을 제공하는[가용성 그룹 수신기](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)에 대한 기본 설정을 지정합니다.  
   
  **가용성 그룹 수신기를 지금 만들지 않습니다.**  
@@ -195,7 +195,7 @@ ms.locfileid: "74822566"
 >  -   네트워크 관리자에게 요청하여 수신기의 IP 주소를 배타적으로 사용할 수 있도록 예약합니다. 이 가용성 그룹에 대한 클라이언트 연결을 요청할 때 연결 문자열에 사용할 수신기의 DNS 호스트 이름을 애플리케이션 개발자에게 제공합니다.  
 > -   이 가용성 그룹에 대한 클라이언트 연결을 요청할 때 연결 문자열에 사용할 수신기의 DNS 호스트 이름을 애플리케이션 개발자에게 제공합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [가용성 그룹 마법사 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   

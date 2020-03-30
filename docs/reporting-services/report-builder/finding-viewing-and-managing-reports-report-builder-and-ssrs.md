@@ -10,10 +10,10 @@ ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 74c4591122fa45d4e050718e78296ed672a4c210
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258099"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>보고서 찾기, 보기 및 관리(보고서 작성기 및 SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "75258099"
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FindingAndViewingReportsRB30"></a> 보고서 작성기에서 보고서 찾기 및 보기  
+##  <a name="finding-and-viewing-reports-in-report-builder"></a><a name="FindingAndViewingReportsRB30"></a> 보고서 작성기에서 보고서 찾기 및 보기  
  작업할 보고서를 찾거나 보고서에 사용할 공유 데이터 원본, 이미지 또는 하위 보고서를 선택하려면 컴퓨터, 보고서 서버의 폴더 또는 Reporting Services와 통합된 SharePoint 사이트를 찾아봅니다.  
   
  보고서 서버의 보고서를 찾으려면 보고서 서버의 URL을 지정해야 하고 보고서 항목을 읽고 저장하려면 해당 폴더에 대한 적절한 권한이 있어야 합니다. 시스템 관리자에게 보고서 서버의 URL 및 적절한 권한을 요청하십시오.  
@@ -49,7 +49,7 @@ ms.locfileid: "75258099"
 -   **보고서 보기** 보고서를 만들거나 업데이트할 때 보고서 작성기에서 보고서를 미리 볼 수 있습니다. 보고서 작성기가 보고서 서버에 연결되어 있으면 보고서 서버가 보고서를 로드하여 처리하고, 그렇지 않으면 보고서가 로컬로 처리됩니다. 보고서 작성기의 보고서 뷰어가 렌더링된 보고서를 표시합니다.  
   
  
-##  <a name="ViewingAndManagingReportServer"></a> 보고서 서버에서 보고서 보기 및 관리  
+##  <a name="viewing-and-managing-reports-on-a-report-server"></a><a name="ViewingAndManagingReportServer"></a> 보고서 서버에서 보고서 보기 및 관리  
  웹 포털을 사용하여 보고서 서버의 보고서를 보고 관리합니다. 서버의 폴더에서 보고서를 찾아 실행하여 브라우저에 표시한 다음 관리 태스크를 수행합니다.  
   
  웹 포털을 사용하면 다음 관리 태스크를 수행할 수 있습니다.  
@@ -90,7 +90,7 @@ ms.locfileid: "75258099"
 |Ctrl+F5 키 조합|보고서 도구 모음의 **새로 고침** 단추를 클릭할 때와 동일한 결과를 나타냅니다.|  
   
   
-##  <a name="ViewingAndManagingSharePointSite"></a> SharePoint 사이트에서 보고서 서버 항목 보기 및 관리  
+##  <a name="viewing-and-managing-report-server-items-from-a-sharepoint-site"></a><a name="ViewingAndManagingSharePointSite"></a> SharePoint 사이트에서 보고서 서버 항목 보기 및 관리  
  시스템 관리자가 SharePoint 통합 모드에서 실행되도록 보고서 서버를 구성하면 SharePoint 사이트에서 보고서 및 기타 보고서 서버 항목을 보고 관리할 수 있습니다.  
   
  SharePoint 사이트에는 데이터 원본 속성, 보고서 기록, 보고서 처리 옵션, 일정, 구독 및 보고서 매개 변수를 설정하고 공유 일정을 만들 수 있는 페이지가 포함되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 도구에서와 같은 방식으로 SharePoint 사이트에서 보고서 서버 항목을 관리할 수 있습니다.  
@@ -119,11 +119,11 @@ ms.locfileid: "75258099"
  ![보고서 서버 항목에 대한 메뉴 명령](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "보고서 서버 항목에 대한 메뉴 명령")  
   
   
-##  <a name="DeskTop"></a> 데스크톱 애플리케이션에서 보고서 보기  
+##  <a name="viewing-reports-in-a-desktop-application"></a><a name="DeskTop"></a> 데스크톱 애플리케이션에서 보고서 보기  
  브라우저 대신 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel과 같은 데스크톱 애플리케이션을 보고서 뷰어로 사용할 수 있습니다. 이렇게 하려면 데스크톱 애플리케이션 형식과 공유 폴더 대상을 지정하는 구독을 정의합니다. 그러면 보고서 서버에서 보고서를 애플리케이션 파일로 생성하고 파일 이름 확장명을 추가한 후 하드 디스크에 파일로 저장합니다. 그런 다음 브라우저 대신 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 또는 다른 애플리케이션을 사용하여 보고서를 볼 수 있습니다.  
   
   
-##  <a name="AboutUserSessions"></a> 사용자 세션 정보  
+##  <a name="about-user-sessions"></a><a name="AboutUserSessions"></a> 사용자 세션 정보  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 브라우저 세션을 사용하여 보고서를 보는 동안 일관성을 유지합니다. 세션은 인증된 사용자가 아니라 브라우저 연결을 기반으로 합니다. 사용자가 새 브라우저 창에서 보고서를 열 때마다 세션이 새로 만들어집니다. 브라우저 세션이 구성되면 나중에 보고서가 보고서 서버에서 수정되더라도 세션이 시작될 때 열었던 보고서 버전으로 계속 작업하게 됩니다. 예를 들어 보고서를 오후 11시에 열면 보고서 작성자가 같은 보고서를 오후 11시 1분에 다시 게시하더라도 세션에는 오후 11시에 열었던 버전이 유지됩니다.  
   
  브라우저의 **새로 고침** 단추를 사용하여 같은 세션 내에서 보고서를 새로 고치면 원래 세션 버전의 보고서가 표시됩니다. 보고서 도구 모음의 **새로 고침** 단추를 사용하여 요청 시 실행 보고서를 새로 고치면 보고서가 다시 실행되고 새 데이터가 있는 경우 해당 데이터가 표시됩니다.  
@@ -131,7 +131,7 @@ ms.locfileid: "75258099"
  세션 정보는 보고서 서버 임시 데이터베이스에 저장됩니다. 보고서 서버는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 세션 관리 기능을 사용하지 않습니다. 서버를 다시 시작하거나 데이터베이스 복구 작업을 수행하면 세션 상태가 복원되지 않습니다. 세션 관리에 대한 자세한 내용은 [실행 상태 식별](../../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)을 참조하세요.  
   
  
-##  <a name="InThisSection"></a> 섹션 내용  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> 섹션 내용  
  다음 항목에서는 보고서 보기 및 관리에 대한 추가 정보를 제공합니다.  
   
  [보고서 찾기, 보기 및 관리](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)

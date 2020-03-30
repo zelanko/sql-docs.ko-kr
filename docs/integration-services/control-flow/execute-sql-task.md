@@ -21,10 +21,10 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e331b974bee3017e17e75dbf8c3ecb8506349b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298309"
 ---
 # <a name="execute-sql-task"></a>SQL 실행 태스크
@@ -272,7 +272,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
   
 -   [반환 코드 값 가져오기](#Return_codes)    
   
-###  <a name="Parameter_names_and_markers"></a> 매개 변수 이름 및 표식  
+###  <a name="parameter-names-and-markers"></a><a name="Parameter_names_and_markers"></a> 매개 변수 이름 및 표식  
  SQL 실행 태스크가 사용하는 연결 형식에 따라 SQL 명령 구문이 사용하는 매개 변수 표식이 달라집니다. 예를 들어 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자 유형을 사용하려면 SQL 명령에서 **\@varParameter** 형식의 매개 변수 표식을 사용해야 하지만 OLE DB 연결 형식에는 물음표(?) 매개 변수 표식을 사용해야 합니다.  
   
  변수와 매개 변수 간 매핑에 매개 변수 이름으로 사용할 수 있는 이름도 연결 관리자 유형에 따라 달라집니다. 예를 들어 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자 유형에는 \@ 접두사가 있는 사용자 정의 이름을 사용하지만 OLE DB 연결 관리자 유형에는 0부터 시작하는 서수의 숫자 값을 매개 변수 이름으로 사용해야 합니다.  
@@ -307,7 +307,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
   
  OLE DB 연결 관리자를 사용하는 경우 SQL 실행 태스크에서 OLE DB Provider를 통해 매개 변수 정보를 파생할 수 없으므로 매개 변수가 있는 하위 쿼리를 사용할 수 없습니다. 그러나 식을 사용하여 매개 변수 값을 쿼리 문자열로 연결하고 태스크의 SqlStatementSource 속성을 설정할 수 있습니다.  
   
-###  <a name="Date_and_time_data_types"></a> 날짜 및 시간 데이터 형식의 매개 변수 사용  
+###  <a name="use-parameters-with-date-and-time-data-types"></a><a name="Date_and_time_data_types"></a> 날짜 및 시간 데이터 형식의 매개 변수 사용  
   
 #### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>ADO.NET 및 ADO 연결 관리자의 날짜 및 시간 매개 변수 사용  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식인 **time** 및 **datetimeoffset**데이터를 읽을 때는 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 또는 ADO 연결 관리자를 사용하는 SQL 실행 태스크에 다음과 같은 요구 사항이 추가로 적용됩니다.  
@@ -356,7 +356,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
   
  적절한 입력 또는 출력 매개 변수에 데이터가 저장되지 않으면 패키지가 실패합니다.  
   
-###  <a name="WHERE_clauses"></a> WHERE 절에 매개 변수 사용  
+###  <a name="use-parameters-in-where-clauses"></a><a name="WHERE_clauses"></a> WHERE 절에 매개 변수 사용  
  원본 테이블의 각 행이 SQL 명령에 적합하도록 만들기 위해 만족시켜야 할 조건을 정의하는 필터를 지정하기 위해 SELECT, INSERT, UPDATE 및 DELETE 명령에 WHERE 절을 포함하는 경우가 많습니다. 매개 변수는 WHERE 절에 필터 값을 제공합니다.  
   
  매개 변수 표식을 사용하여 매개 변수 값을 동적으로 제공할 수 있습니다. SQL 문에 사용할 수 있는 매개 변수 표식 및 매개 변수 이름에 대한 규칙은 SQL 실행이 사용하는 연결 관리자 유형에 따라 달라집니다.  
@@ -377,7 +377,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
   
 -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 형식에서는 매개 변수 이름 \@parmMinProductID 및 \@parmMaxProductID를 사용합니다.  
   
-###  <a name="Stored_procedures"></a> 저장 프로시저에 매개 변수 사용  
+###  <a name="use-parameters-with-stored-procedures"></a><a name="Stored_procedures"></a> 저장 프로시저에 매개 변수 사용  
  저장 프로시저를 실행하는 SQL 명령도 매개 변수 매핑을 사용할 수 있습니다. 매개 변수 표식 및 매개 변수 이름 사용 방법에 대한 규칙은 매개 변수가 있는 쿼리에 대한 규칙에서와 마찬가지로 SQL 실행이 사용하는 연결 관리자 유형에 따라 달라집니다.  
   
  다음 표에서는 연결 관리자 유형별 EXEC 명령의 예를 나열합니다. 이 예에서는 **의** uspGetBillOfMaterials [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]저장 프로시저를 실행합니다. 이 저장 프로시저는 `@StartProductID` 및 `@CheckDate` **input** 매개 변수를 사용합니다.  
@@ -464,7 +464,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
   
 14. **확인**을 클릭합니다.  
 
-##  <a name="Return_codes"></a> 반환 코드 값 가져오기  
+##  <a name="get-the-values-of-return-codes"></a><a name="Return_codes"></a> 반환 코드 값 가져오기  
  저장 프로시저는 반환 코드라고 하는 정수 값을 반환하여 프로시저의 실행 상태를 나타낼 수 있습니다. SQL 실행 태스크에 반환 코드를 구현하려면 **ReturnValue** 유형의 매개 변수를 사용합니다.  
   
  다음 표에서는 반환 코드를 구현하는 EXEC 명령의 몇 가지 예를 연결 형식별로 나열합니다. 모든 예에서는 **input** 매개 변수를 사용합니다. 매개 변수 표식과 매개 변수 이름을 사용하는 방법에 대한 규칙은**Input**, **Output**, **ReturnValue** 등의 모든 매개 변수 유형에 대해 동일합니다.  
@@ -493,7 +493,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
   
 -   [결과 집합으로 변수 채우기](#Populate_variable_with_result_set)  
   
-###  <a name="Result_set_type"></a> 결과 집합 유형 지정  
+###  <a name="specify-a-result-set-type"></a><a name="Result_set_type"></a> 결과 집합 유형 지정  
  SQL 실행 태스크는 다음 유형의 결과 집합을 지원합니다.  
   
 -   **없음** 결과 집합은 쿼리에서 결과가 반환되지 않을 때 사용합니다. 예를 들어 이 결과 집합은 테이블에서 레코드를 추가, 변경 및 삭제하는 쿼리에 사용됩니다.  
@@ -506,7 +506,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
   
  SQL 실행 태스크가 **전체 결과 집합** 결과 집합을 사용하고 쿼리가 여러 행 집합을 반환하는 경우 작업은 첫 번째 행 집합만 반환합니다. 이 행 집합에서 오류가 발생하는 경우 태스크에서 오류를 보고합니다. 다른 행 집합에서 오류가 발생하는 경우 태스크에서 오류를 보고하지 않습니다.  
   
-###  <a name="Populate_variable_with_result_set"></a> 결과 집합으로 변수 채우기  
+###  <a name="populate-a-variable-with-a-result-set"></a><a name="Populate_variable_with_result_set"></a> 결과 집합으로 변수 채우기  
  결과 집합 유형이 단일 행, 행 집합 또는 XML일 경우 쿼리에서 반환된 결과 집합을 사용자 정의 변수에 바인딩할 수 있습니다.  
   
  결과 집합 유형이 **단일 행**인 경우 열 이름을 결과 집합 이름으로 사용하여 반환 결과의 열을 변수에 바인딩하거나 열 목록의 열의 서수 위치를 결과 집합 이름으로 사용할 수 있습니다. 예를 들어 `SELECT Color FROM Production.Product WHERE ProductID = ?` 쿼리에 대한 결과 집합 이름은 **Color** 또는 **0**일 수 있습니다. 쿼리에서 여러 열을 반환하고 모든 열의 값에 액세스하려는 경우 각 열을 다른 변수에 바인딩해야 합니다. 번호를 결과 집합 이름으로 사용하여 열을 변수에 매핑하면 열이 쿼리의 열 목록에 표시되는 순서가 번호로 적용됩니다. 예를 들어 `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`쿼리에서 **Color** 열에 대해 0을 사용하고 **ListPrice** 열에 대해 1을 사용할 수 있습니다. 열 이름을 결과 집합 이름으로 사용하는 기능은 태스크에서 사용하도록 구성된 공급자에 따라 달라집니다. 일부 공급자만 열 이름을 사용할 수 있습니다.  

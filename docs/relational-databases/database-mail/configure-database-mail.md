@@ -40,10 +40,10 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fb7ea877ba1a3beaabb6cbab8854b4f37a5f6558
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095710"
 ---
 # <a name="configure-database-mail"></a>데이터베이스 메일 구성
@@ -54,16 +54,16 @@ ms.locfileid: "74095710"
   
 -   **데이터베이스 메일을 구성하려면 다음을 사용합니다.**  [데이터베이스 메일 구성 마법사](#DBWizard), [템플릿 사용](#Template)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
  **DatabaseMail XPs** 옵션을 사용하여 서버에서 데이터베이스 메일을 활성화할 수 있습니다. 자세한 내용은 [Database Mail XPs 서버 구성 옵션](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 을 참조하세요.  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
  어느 데이터베이스에서든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker를 활성화하려면 데이터베이스 잠금이 필요합니다. **msdb**에서 Service Broker가 비활성화되어 있는 경우 데이터베이스 메일을 활성화하려면 Service Broker가 필요한 잠금을 얻을 수 있도록 먼저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 중지합니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
  데이터베이스 메일을 구성하려면 **sysadmin** 고정 서버 역할의 멤버여야 합니다. 데이터베이스 메일을 보내려면 **msdb** 데이터베이스에서 **DatabaseMailUserRole** 데이터베이스 역할의 멤버여야 합니다.  
   
-##  <a name="DBWizard"></a> 데이터베이스 메일 구성 마법사 사용  
+##  <a name="using-database-mail-configuration-wizard"></a><a name="DBWizard"></a> 데이터베이스 메일 구성 마법사 사용  
  **마법사를 사용하여 데이터베이스 메일을 구성하려면**  
   
 1.  개체 탐색기에서 데이터베이스 메일을 구성할 인스턴스에 대한 노드를 확장합니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "74095710"
   
     -   [테스트 전자 메일 보내기 페이지](#TestEmail)  
   
-###  <a name="Welcome"></a> 시작 페이지  
+###  <a name="welcome-page"></a><a name="Welcome"></a> 시작 페이지  
  이 페이지에서는 데이터베이스 메일을 구성하는 단계를 설명합니다.  
   
  **이 페이지를 다시 표시 안 함** - 이후에 이 시작 페이지가 표시되지 않도록 하려면 이 옵션을 선택합니다.  
@@ -111,7 +111,7 @@ ms.locfileid: "74095710"
   
  [데이터베이스 메일 구성 마법사](#DBWizard)  
   
-###  <a name="ConfigTask"></a> 구성 태스크 선택  
+###  <a name="select-configuration-task"></a><a name="ConfigTask"></a> 구성 태스크 선택  
  마법사를 사용할 때마다 **구성 태스크 선택** 페이지를 사용하여 수행할 작업을 지정할 수 있습니다. 마법사를 완료하기 전에 태스크를 취소하고 다른 태스크를 수행하려면 **뒤로** 단추를 눌러 이 페이지로 다시 돌아와 다른 태스크를 선택합니다.  
   
 > [!NOTE]  
@@ -131,7 +131,7 @@ ms.locfileid: "74095710"
   
  [데이터베이스 메일 구성 마법사](#DBWizard)  
   
-###  <a name="NewAccount"></a> 새 계정 페이지  
+###  <a name="new-account-page"></a><a name="NewAccount"></a> 새 계정 페이지  
  이 페이지를 사용하여 새 데이터베이스 메일 계정을 만들 수 있습니다. 데이터베이스 메일 계정에는 전자 메일을 SMTP 서버로 보내기 위한 정보가 포함되어 있습니다.  
   
  데이터베이스 메일 계정에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 전자 메일 메시지를 SMTP 서버로 보내기 위해 사용하는 정보가 포함되어 있습니다. 각 계정에는 하나의 전자 메일 서버에 대한 정보가 포함되어 있습니다.  
@@ -182,7 +182,7 @@ ms.locfileid: "74095710"
   
  [데이터베이스 메일 구성 마법사](#DBWizard)  
   
-###  <a name="ExistingAccount"></a> 기존 계정 관리 페이지  
+###  <a name="manage-existing-account-page"></a><a name="ExistingAccount"></a> 기존 계정 관리 페이지  
  이 페이지를 사용하여 기존 데이터베이스 메일 계정을 관리할 수 있습니다.  
   
  **계정 이름**  
@@ -232,7 +232,7 @@ ms.locfileid: "74095710"
   
  [데이터베이스 메일 구성 마법사](#DBWizard)  
   
-###  <a name="NewProfile"></a> 새 프로필 페이지  
+###  <a name="new-profile-page"></a><a name="NewProfile"></a> 새 프로필 페이지  
  이 페이지를 사용하여 데이터베이스 메일 프로필을 만들 수 있습니다. 데이터베이스 메일 프로필은 데이터베이스 메일 계정의 모음입니다. 프로필은 대체 데이터베이스 메일 계정을 제공하여 전자 메일 서버에 접근할 수 없는 경우에 안정성을 향상시킵니다. 데이터베이스 메일 계정이 적어도 하나 이상 필요합니다. 프로필에서 데이터베이스 메일 계정의 우선 순위를 설정하는 방법은 [Create a Database Mail Profile](../../relational-databases/database-mail/create-a-database-mail-profile.md)을 참조하십시오.  
   
  **위로 이동** 및 **아래로 이동** 단추를 사용하여 데이터베이스 메일 계정이 사용되는 순서를 변경할 수 있습니다. 이 순서는 시퀀스 번호라고 하는 값에 의해 결정됩니다. **위로 이동** 을 클릭하면 시퀀스 번호가 낮아지고 **아래로 이동** 을 클릭하면 시퀀스 번호가 높아집니다. 시퀀스 번호는 데이터베이스 메일에서 프로필의 계정을 사용하는 순서를 결정합니다. 새 전자 메일 메시지의 경우 데이터베이스 메일은 시퀀스 번호가 가장 낮은 계정에서 시작합니다. 해당 계정이 실패하면 데이터베이스 메일에서는 시퀀스 번호가 다음으로 높은 계정을 사용하여 메시지가 성공적으로 전송될 때까지 또는 시퀀스 번호가 가장 높은 계정이 실패할 때까지 작업을 계속합니다. 시퀀스 번호가 가장 높은 계정이 실패하면 데이터베이스 메일은 데이터베이스 메일 **AccountRetryDelay** 매개 변수에서 구성한 기간 동안 메일을 보내려는 시도를 일시 중지했다가 가장 낮은 시퀀스 번호에서 시작하여 다시 메일 보내기를 시도합니다. 데이터베이스 메일 **AccountRetryAttempts** 매개 변수를 사용하여 외부 메일 프로세스가 지정한 프로필의 각 계정을 사용하여 메일 메시지 보내기를 시도하는 시간을 구성할 수 있습니다. 데이터베이스 메일 구성 마법사의 **시스템 매개 변수 구성** 페이지에서 **AccountRetryDelay** 및 **AccountRetryAttempts** 매개 변수를 구성할 수 있습니다.  
@@ -260,7 +260,7 @@ ms.locfileid: "74095710"
   
  [데이터베이스 메일 구성 마법사](#DBWizard)  
   
-###  <a name="ExistingProfile"></a> 기존 프로필 관리 페이지  
+###  <a name="manage-existing-profile-page"></a><a name="ExistingProfile"></a> 기존 프로필 관리 페이지  
  이 페이지를 사용하여 기존 데이터베이스 메일 프로필을 관리할 수 있습니다. 데이터베이스 메일 프로필은 데이터베이스 메일 계정의 모음입니다. 프로필은 대체 데이터베이스 메일 계정을 제공하여 전자 메일 서버에 접근할 수 없는 경우에 안정성을 향상시킵니다. 데이터베이스 메일 계정이 적어도 하나 이상 필요합니다. 프로필에서 데이터베이스 메일 계정의 우선 순위를 설정하는 방법은 [Create a Database Mail Profile](../../relational-databases/database-mail/create-a-database-mail-profile.md)을 참조하십시오.  
   
  **위로 이동** 및 **아래로 이동** 단추를 사용하여 데이터베이스 메일 계정이 사용되는 순서를 변경할 수 있습니다. 이 순서는 시퀀스 번호라고 하는 값에 의해 결정됩니다. **위로 이동** 을 클릭하면 시퀀스 번호가 낮아지고 **아래로 이동** 을 클릭하면 시퀀스 번호가 높아집니다. 시퀀스 번호는 데이터베이스 메일에서 프로필의 계정을 사용하는 순서를 결정합니다. 새 전자 메일 메시지의 경우 데이터베이스 메일은 시퀀스 번호가 가장 낮은 계정에서 시작합니다. 해당 계정이 실패하면 데이터베이스 메일에서는 시퀀스 번호가 다음으로 높은 계정을 사용하여 메시지가 성공적으로 전송될 때까지 또는 시퀀스 번호가 가장 높은 계정이 실패할 때까지 작업을 계속합니다. 시퀀스 번호가 가장 높은 계정이 실패하면 데이터베이스 메일은 데이터베이스 메일 **AccountRetryDelay** 매개 변수에서 구성한 기간 동안 메일을 보내려는 시도를 일시 중지했다가 가장 낮은 시퀀스 번호에서 시작하여 다시 메일 보내기를 시도합니다. 데이터베이스 메일 **AccountRetryAttempts** 매개 변수를 사용하여 외부 메일 프로세스가 지정한 프로필의 각 계정을 사용하여 메일 메시지 보내기를 시도하는 시간을 구성할 수 있습니다. 데이터베이스 메일 구성 마법사의 **시스템 매개 변수 구성** 페이지에서 **AccountRetryDelay** 및 **AccountRetryAttempts** 매개 변수를 구성할 수 있습니다.  
@@ -300,7 +300,7 @@ ms.locfileid: "74095710"
   
  [데이터베이스 메일 구성 마법사](#DBWizard)  
   
-###  <a name="AddAccount"></a> Add Account to Profile Page  
+###  <a name="add-account-to-profile-page"></a><a name="AddAccount"></a> Add Account to Profile Page  
  이 페이지를 사용하여 프로필에 추가할 계정을 선택할 수 있습니다. **계정 이름** 상자에서 기존 계정을 선택하거나 **새 계정**을 클릭합니다.  
   
  **계정 이름**  
@@ -317,7 +317,7 @@ ms.locfileid: "74095710"
   
  [데이터베이스 메일 구성 마법사](#DBWizard)  
   
-###  <a name="AccountsProfiles"></a> 프로필 및 계정 관리 페이지  
+###  <a name="manage-accounts-and-profiles-page"></a><a name="AccountsProfiles"></a> 프로필 및 계정 관리 페이지  
  이 페이지를 사용하여 프로필 또는 계정을 관리하는 태스크를 선택할 수 있습니다.  
   
  **새 계정 만들기**  
@@ -334,7 +334,7 @@ ms.locfileid: "74095710"
   
  [데이터베이스 메일 구성 마법사](#DBWizard)  
   
-###  <a name="ProfileSecurityPublic"></a> 프로필 보안 관리, 공개 탭  
+###  <a name="manage-profile-security-public-tab"></a><a name="ProfileSecurityPublic"></a> 프로필 보안 관리, 공개 탭  
  이 페이지를 사용하여 공개 프로필을 구성할 수 있습니다.  
   
  프로필에는 퍼블릭 프로필과 프라이빗 프로필이 있습니다. 프라이빗 프로필은 특정 사용자나 역할만 액세스할 수 있습니다. 공개 프로필은 메일 호스트 데이터베이스(**msdb**)에 액세스할 수 있는 모든 사용자나 역할이 사용할 수 있으며 해당 프로필을 사용하여 메일을 보낼 수 있습니다.  
@@ -355,7 +355,7 @@ ms.locfileid: "74095710"
   
  [데이터베이스 메일 구성 마법사](#DBWizard)  
   
-###  <a name="ProfileSecurityPrivate"></a> 프로필 보안 관리, 프라이빗 탭  
+###  <a name="manage-profile-security-private-tab"></a><a name="ProfileSecurityPrivate"></a> 프로필 보안 관리, 프라이빗 탭  
  이 페이지를 사용하여 프라이빗 프로필을 구성할 수 있습니다.  
   
  프로필에는 퍼블릭 프로필과 프라이빗 프로필이 있습니다. 프라이빗 프로필은 특정 사용자나 역할만 액세스할 수 있습니다. 공개 프로필은 메일 호스트 데이터베이스(**msdb**)에 액세스할 수 있는 모든 사용자나 역할이 사용할 수 있으며 해당 프로필을 사용하여 메일을 보낼 수 있습니다.  
@@ -379,7 +379,7 @@ ms.locfileid: "74095710"
   
  [데이터베이스 메일 구성 마법사](#DBWizard)  
   
-###  <a name="SystemParameters"></a> AccountRetryAttempts  
+###  <a name="configure-system-parameters"></a><a name="SystemParameters"></a> AccountRetryAttempts  
  이 페이지를 사용하여 데이터베이스 메일 시스템 매개 변수를 지정할 수 있습니다. 이 페이지에서 시스템 매개 변수와 각 매개 변수의 현재 값을 볼 수 있으며 매개 변수를 선택하면 정보 창에 표시되는 짧은 설명도 볼 수 있습니다.  
   
  **계정 다시 시도 횟수**  
@@ -413,12 +413,12 @@ ms.locfileid: "74095710"
   
  [데이터베이스 메일 구성 마법사](#DBWizard)  
   
-###  <a name="CompleteWizard"></a> 마법사 완료 페이지  
+###  <a name="complete-the-wizard-page"></a><a name="CompleteWizard"></a> 마법사 완료 페이지  
  이 페이지를 사용하여 **데이터베이스 메일 구성 마법사** 가 수행할 동작을 검토할 수 있습니다. 마법사를 끝내기 전까지는 변경 내용이 적용되지 않습니다.  
   
  [데이터베이스 메일 구성 마법사](#DBWizard)  
   
-###  <a name="TestEmail"></a> Send Test E-Mail Page  
+###  <a name="send-test-e-mail-page"></a><a name="TestEmail"></a> Send Test E-Mail Page  
  _<instance_name>_ 에서 **테스트 메일 보내기** 페이지를 사용하여 지정된 데이터베이스 메일 프로필을 통해 메일 메시지를 보낼 수 있습니다. **sysadmin** 고정 서버 역할의 멤버만 이 페이지를 사용하여 테스트 메일을 보낼 수 있습니다.  
   
  **데이터베이스 메일 프로필**  
@@ -443,7 +443,7 @@ ms.locfileid: "74095710"
   
  [데이터베이스 메일 구성 마법사](#DBWizard)  
   
-##  <a name="Template"></a> 템플릿 사용  
+##  <a name="using-templates"></a><a name="Template"></a> 템플릿 사용  
  **데이터베이스 메일 구성 스크립트를 만들려면**  
   
 1.  **보기** 메뉴에서 **템플릿 탐색기**를 선택합니다.  

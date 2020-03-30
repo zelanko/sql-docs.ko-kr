@@ -13,10 +13,10 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c73ee7914d0d9ac560d57a204458e5cd4ba57a0d
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76971442"
 ---
 # <a name="connecting-with-sqlcmd"></a>sqlcmd를 사용하여 연결
@@ -100,7 +100,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 - -s *column_separator_char* 열 구분 기호를 지정합니다.  
 
-- -S [*protocol*:] *server*[**,**_port_]  
+- -S [*protocol*:] *server*[ **,** _port_]  
 연결할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정하거나 -D가 사용된 경우 DSN을 지정합니다. Linux 및 macOS 기반 ODBC 드라이버에는 -S가 필요합니다. **tcp**만 유효한 프로토콜입니다.  
   
 - -t *query_timeout* 명령(또는 SQL 문)이 시간 초과까지의 시간(초)을 지정합니다.  
@@ -210,19 +210,19 @@ Linux 또는 macOS의 DSN에서 다음 항목이 지원됩니다.
 
 -   **ApplicationIntent=ReadOnly**  
 
--   **Database=**_database\_name_  
+-   **Database=** _database\_name_  
   
 -   **Driver=ODBC Driver 11 for SQL Server** 또는 **Driver=ODBC Driver 13 for SQL Server**
   
 -   **MultiSubnetFailover=Yes**  
   
--   **Server=**_server\_name\_or\_IP\_address_  
+-   **Server=** _server\_name\_or\_IP\_address_  
   
 -   **Trusted_Connection=yes**|**no**  
   
 DSN에서는 DRIVER 항목만 필요하지만 서버에 연결하려면 `sqlcmd` 또는 `bcp`에서 SERVER 항목의 값이 필요합니다.  
 
-동일한 옵션이 DSN 및 `sqlcmd` 또는 `bcp` 명령줄에서 지정된 경우 명령줄 옵션이 DSN에서 사용되는 값을 재정의합니다. 예를 들어 DSN에 DATABASE 항목이 있고 `sqlcmd` 명령줄이 **-d**를 포함하는 경우 **-d**에 전달된 값이 사용됩니다. **Trusted_Connection=yes**가 DSN에서 지정된 경우 Kerberos 인증이 사용되고 사용자 이름(**–U**) 및 암호(**–P**)(제공된 경우)가 무시됩니다.
+동일한 옵션이 DSN 및 `sqlcmd` 또는 `bcp` 명령줄에서 지정된 경우 명령줄 옵션이 DSN에서 사용되는 값을 재정의합니다. 예를 들어 DSN에 DATABASE 항목이 있고 `sqlcmd` 명령줄이 **-d**를 포함하는 경우 **-d**에 전달된 값이 사용됩니다. **Trusted_Connection=yes**가 DSN에서 지정된 경우 Kerberos 인증이 사용되고 사용자 이름( **–U**) 및 암호( **–P**)(제공된 경우)가 무시됩니다.
 
 다음 별칭을 정의하여 `isql`을 호출하는 기존 스크립트는 `sqlcmd`를 사용하도록 수정할 수 있습니다. `alias isql="sqlcmd -D"`  
 

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 354afb535abb1efab76e005d88b3bdfd464a299c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71710760"
 ---
 # <a name="validate-replicated-data"></a>복제된 데이터의 유효성 검사
@@ -259,7 +259,7 @@ ms.locfileid: "71710760"
   
      자세한 내용은 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) 또는 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)를 참조하세요.  
   
-##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
  복제를 사용하면 RMO(복제 관리 개체)를 통해 구독자의 데이터가 게시자의 데이터와 일치하는지를 프로그래밍 방식으로 확인할 수 있습니다. 사용하는 개체는 복제 토폴로지의 유형에 따라 달라집니다. 트랜잭션 복제에는 게시에 대한 모든 구독의 유효성 검사가 필요합니다.  
   
 > [!NOTE]  
@@ -309,7 +309,7 @@ ms.locfileid: "71710760"
   
 5.  유효성 검사를 시작할 구독에 대해 병합 에이전트를 실행하거나 예약된 다음 에이전트가 실행될 때까지 기다립니다. 자세한 내용은 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) 및 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)를 참조하세요. 유효성 검사 작업의 결과는 에이전트 기록에 추가되며, 복제 모니터를 사용하여 해당 결과를 볼 수 있습니다. 자세한 내용은 [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)을 참조하세요.  
   
-###  <a name="RMOExample"></a> 예(RMO)  
+###  <a name="example-rmo"></a><a name="RMOExample"></a> 예(RMO)  
  이 예제에서는 트랜잭션 게시에 대한 모든 구독을 대상으로 행 개수를 확인하도록 표시합니다.  
   
  [!code-cs[HowTo#rmo_ValidateTranPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_validatetranpub)]  

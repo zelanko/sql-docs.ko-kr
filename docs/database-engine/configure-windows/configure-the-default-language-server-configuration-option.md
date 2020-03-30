@@ -13,10 +13,10 @@ ms.assetid: c08c26d8-5a62-487e-a4ee-4c529e4f9287
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2634dc520ef73065202588a6537ddd9fed120ce3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012684"
 ---
 # <a name="configure-the-default-language-server-configuration-option"></a>default language 서버 구성 옵션 구성
@@ -40,18 +40,18 @@ ms.locfileid: "68012684"
   
 -   **후속 작업:**  [기본 언어 옵션을 구성한 후](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   로그인의 기본 언어는 CREATE LOGIN 또는 ALTER LOGIN를 사용하여 재정의할 수 있습니다. 세션의 기본 언어는 ODBC(Open Database Connectivity) 또는 OLE DB API를 사용하여 각 세션 단위로 덮어쓰지 않는 한 해당 세션의 로그인 언어입니다. **sys.syslanguages** 에서 정의한 언어 ID(0-32)에만 [기본 언어](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 옵션을 설정할 수 있습니다. 포함된 데이터베이스를 사용할 때는 CREATE DATABASE 또는 ALTER DATABASE를 사용하여 데이터베이스에 대해, 그리고 CREATE USER 또는 ALTER USER를 사용하여 포함된 데이터베이스 사용자에 대해 기본 언어를 설정할 수 있습니다. 포함된 데이터베이스에서 기본 언어를 설정하면 **langid** 값, 언어 이름 또는 **sys.syslanguages**에 나열된 언어 별칭이 허용됩니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경하거나 RECONFIGURE 문을 실행하는 두 매개 변수를 사용하여 **sp_configure** 를 실행하려면 사용자에게 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-configure-the-default-language-option"></a>기본 언어 옵션을 구성하려면  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68012684"
   
      기본 언어는 한국어(Korean)입니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-configure-the-default-language-option"></a>기본 언어 옵션을 구성하려면  
   
@@ -84,7 +84,7 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 기본 언어 옵션을 구성한 후  
+##  <a name="follow-up-after-you-configure-the-default-language-option"></a><a name="FollowUp"></a> 후속 작업: 기본 언어 옵션을 구성한 후  
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

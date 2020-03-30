@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 87ad093d5be6f4fa394e934e6c0d88796a22e196
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74401650"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>메모리 내 OLTP 및 메모리 최적화
@@ -84,7 +84,7 @@ SQL Server의 메모리 내 OLTP를 설명하고 성능상의 이점을 보여 �
   
 -   [메모리 내 OLTP 블로그](https://go.microsoft.com/fwlink/?LinkId=311696)  
 
-## <a name="anchorname-17minute-video"></a>인덱싱된 17분 분량의 비디오
+## <a name="17-minute-video-indexed"></a><a name="anchorname-17minute-video"></a>인덱싱된 17분 분량의 비디오
 
 - _비디오 제목:_ &nbsp; **SQL Server 2016의 메모리 내 OLTP**
 - _게시 날짜:_ &nbsp; 2019-03-10, `YouTube.com`.
@@ -103,7 +103,7 @@ SQL Server의 메모리 내 OLTP를 설명하고 성능상의 이점을 보여 �
 2. 그 다음 SQL Server Management Studio(SSMS.exe)에서 몇 번의 클릭으로 생성하여 채울 수 있는 메모리 최적화 테이블 버전을 확인할 수 있습니다.
 3. 그런 다음 메모리 최적화 테이블을 사용하여 데모를 다시 실행합니다. 속도가 크게 향상되었음을 확인할 수 있습니다.
 
-### <a name="anchorname-index-17minute-video"></a>비디오의 각 섹션에 대한 인덱스
+### <a name="index-to-each-section-in-the-video"></a><a name="anchorname-index-17minute-video"></a>비디오의 각 섹션에 대한 인덱스
 
 | 시간 표시 링크 | 섹션 제목 |
 | :------------- | :------------ |

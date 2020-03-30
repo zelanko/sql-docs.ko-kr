@@ -15,10 +15,10 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 63d4507a2ad81a1167444acca111865460662904
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71299002"
 ---
 # <a name="configure-dialog-box"></a>구성 대화 상자
@@ -36,7 +36,7 @@ ms.locfileid: "71299002"
   
 -   [참조 페이지에서 옵션 설정](#references)  
   
-##  <a name="open_dialog"></a> 구성 대화 상자 열기  
+##  <a name="open-the-configure-dialog-box"></a><a name="open_dialog"></a> 구성 대화 상자 열기  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 연결합니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "71299002"
   
 5.  패키지 또는 프로젝트를 다시 마우스 오른쪽 단추로 클릭한 다음 **구성**을 클릭합니다.  
   
-##  <a name="parameter"></a> 매개 변수 페이지에서 옵션 설정  
+##  <a name="set-the-options-on-the-parameters-page"></a><a name="parameter"></a> 매개 변수 페이지에서 옵션 설정  
  **매개 변수** 페이지를 사용하여 매개 변수 이름 및 값을 확인한 후 값을 수정합니다.  
   
  **범위** 드롭다운 목록에서 **매개 변수** 및 **연결 관리자** 탭에 표시된 매개 변수의 범위를 선택합니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "71299002"
  **값**  
  연결 관리자 속성에 할당된 값을 나열합니다. 줄임표 단추를 클릭하여 **매개 변수 값 설정** 대화 상자의 값을 변경합니다. 리터럴 값을 입력하거나 사용하려는 값이 포함된 환경 변수를 매핑하거나, 패키지의 기본값을 사용할 수 있습니다.  
   
-##  <a name="references"></a> 참조 페이지에서 옵션 설정  
+##  <a name="set-the-options-on-the-references-page"></a><a name="references"></a> 참조 페이지에서 옵션 설정  
  **참조** 페이지를 사용하여 환경에 대한 참조를 추가 및 제거하고 환경 속성에 액세스합니다.  
   
  환경에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포한 프로젝트에 포함된 패키지의 런타임 값을 지정합니다.  

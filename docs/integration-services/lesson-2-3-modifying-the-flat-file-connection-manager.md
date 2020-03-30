@@ -11,10 +11,10 @@ ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5f09ac0b6b7a1d0536205596a553eddb06765b93
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296025"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>2-3단원: 플랫 파일 연결 관리자 수정

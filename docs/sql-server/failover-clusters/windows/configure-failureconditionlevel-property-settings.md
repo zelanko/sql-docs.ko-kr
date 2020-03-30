@@ -11,10 +11,10 @@ ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4b14cbe214eee4122a60ba2984bc480dcdf44573
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74822016"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>FailureConditionLevel 속성 설정 구성
@@ -25,17 +25,17 @@ ms.locfileid: "74822016"
   
 -   **FailureConditionLevel 속성 설정에 사용되는 도구:** [PowerShell](#PowerShellProcedure), [장애 조치(Failover) 클러스터 관리자](#WSFC), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> FailureConditionLevel 속성 설정  
+###  <a name="failureconditionlevel-property-settings"></a><a name="Restrictions"></a> FailureConditionLevel 속성 설정  
  실패 조건은 증가하는 범위로 설정됩니다. 수준 1-5의 경우 각 수준에는 자체 조건과 함께 이전 수준의 모든 조건이 포함됩니다. 이는 수준이 높을수록 장애 조치(Failover) 또는 다시 시작 확률이 증가함을 의미합니다.  자세한 내용은 [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md) 항목의 "실패 확정" 섹션을 참조하세요.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  ALTER SETTINGS 및 VIEW SERVER STATE 사용 권한이 필요합니다.  
   
-##  <a name="PowerShellProcedure"></a> PowerShell 사용  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell 사용  
   
 ##### <a name="to-configure-failureconditionlevel-settings"></a>FailureConditionLevel 설정을 구성하려면  
   
@@ -67,7 +67,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 -   [클러스터 리소스 명령 및 해당 Windows PowerShell Cmdlet](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
-##  <a name="WSFC"></a> 장애 조치(Failover) 클러스터 관리자 스냅인 사용  
+##  <a name="using-the-failover-cluster-manager-snap-in"></a><a name="WSFC"></a> 장애 조치(Failover) 클러스터 관리자 스냅인 사용  
  **FailureConditionLevel 속성 설정을 구성하려면**  
   
 1.  장애 조치(failover) 클러스터 관리자 스냅인을 엽니다.  
@@ -78,12 +78,12 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 4.  **속성** 탭을 선택하고 **FaliureConditionLevel** 속성에 대해 원하는 값을 입력한 다음 **확인** 을 클릭하여 변경 내용을 적용합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **FailureConditionLevel 속성 설정을 구성하려면**  
   
  [ALTER SERVER CONFIGURATION](../../../t-sql/statements/alter-server-configuration-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용하여 FailureConditionLevel 속성 값을 지정할 수 있습니다.  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 예에서는 FailureConditionLevel 속성을 0으로 설정하여 어떤 실패 조건에서도 장애 조치(failover) 또는 다시 시작이 자동으로 트리거되지 않음을 나타냅니다.  
   
 ```  

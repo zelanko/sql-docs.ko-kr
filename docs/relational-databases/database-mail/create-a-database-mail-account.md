@@ -14,10 +14,10 @@ ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 640a24917c1bcb8b7b707308693f658de8dd33e6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70211364"
 ---
 # <a name="create-a-database-mail-account"></a>데이터베이스 메일 계정 만들기
@@ -30,15 +30,15 @@ ms.locfileid: "70211364"
   
 -   **후속 작업:**  [데이터베이스 메일을 구성하기 위한 다음 단계](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 조건  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
   
 -   전자 메일을 보내는 데 사용할 SMTP(Simple Mail Transfer Protocol) 서버의 이름과 포트 번호를 결정합니다. SMTP 서버에 인증이 필요한 경우 SMTP 서버의 사용자 이름과 암호를 결정합니다.  
   
 -   필요에 따라 서버의 유형과 포트 번호도 지정할 수 있습니다. 보내는 메일의 서버 유형은 항상 'SMTP'입니다. 대부분의 SMTP 서버에서는 기본값인 포트 25를 사용합니다.  
   
-##  <a name="SSMSProcedure"></a> 데이터베이스 메일 구성 마법사 사용  
+##  <a name="using-database-mail-configuration-wizard"></a><a name="SSMSProcedure"></a> 데이터베이스 메일 구성 마법사 사용  
  **마법사를 사용하여 데이터베이스 메일 계정을 만들려면**  
   
 -   개체 탐색기에서 데이터베이스 메일을 구성할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결한 다음 서버 트리를 확장합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "70211364"
   
 -   **마법사 완료** 페이지에서 수행할 동작을 검토하고 **마침** 을 클릭하여 새 계정 만들기를 완료합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **Transact-SQL을 사용하여 데이터베이스 메일 계정을 만들려면**  
   
  **msdb.dbo.sysmail_add_account_sp** 저장 프로시저를 실행하여 계정을 만들고 다음 정보를 지정합니다.  
@@ -85,7 +85,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="FollowUp"></a> 후속 작업: 데이터베이스 메일을 구성하기 위한 다음 단계  
+##  <a name="follow-up-next-steps-to-configuring-the-database-mail"></a><a name="FollowUp"></a> 후속 작업: 데이터베이스 메일을 구성하기 위한 다음 단계  
   
 -   [데이터베이스 메일 프로필 만들기](../../relational-databases/database-mail/create-a-database-mail-profile.md)  
   

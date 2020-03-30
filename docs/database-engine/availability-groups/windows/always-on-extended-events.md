@@ -11,10 +11,10 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d6fdf58703d448e07c9be063b616f90c72f2411d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991561"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 확장 이벤트 구성
@@ -25,7 +25,7 @@ ms.locfileid: "67991561"
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  
 ```  
    
-##  <a name="BKMK_alwayson_health"></a> Alwayson_health 세션  
+##  <a name="alwayson_health-session"></a><a name="BKMK_alwayson_health"></a> Alwayson_health 세션  
  Alwayson_health 확장 이벤트 세션은 가용성 그룹을 만들 때 자동으로 만들어지며 가용성 그룹 관련 이벤트의 하위 집합을 캡처합니다. 이 세션은 가용성 그룹 문제를 해결하는 동안 빨리 시작하도록 도와 주는 유용하고 편리한 도구로 미리 구성됩니다. 가용성 그룹 만들기 마법사가 해당 마법사에 구성된 모든 참여 가용성 복제본에 대해 세션을 자동으로 시작합니다.  
   
 > [!IMPORTANT]  
@@ -40,7 +40,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
 Alwayson_health에서 다루는 몇몇 이벤트에 대한 자세한 내용은 [확장 이벤트 참조](always-on-extended-events.md#BKMK_Reference)를 참조하세요.  
 
 
-##  <a name="BKMK_Debugging"></a> 디버깅용 확장 이벤트  
+##  <a name="extended-events-for-debugging"></a><a name="BKMK_Debugging"></a> 디버깅용 확장 이벤트  
  Alwayson_health 세션에서 다루는 확장 이벤트 외에도 SQL Server는 가용성 그룹에 대한 다양한 디버그 이벤트 집합을 정의합니다. 세션에서 이러한 추가 확장 이벤트를 활용하려면 아래 절차를 따르십시오.  
   
 1.  **개체 탐색기**에서 **관리**, **확장 이벤트**, **세션**을 차례로 확장합니다.  
@@ -57,7 +57,7 @@ Alwayson_health에서 다루는 몇몇 이벤트에 대한 자세한 내용은 [
   
 7.  세션이 완료되면 **확인**을 클릭하여 닫습니다. 세션이 선택한 이벤트를 캡처하도록 시작되는지 확인합니다.  
   
-##  <a name="BKMK_Reference"></a> Always On 가용성 그룹 확장 이벤트 참조  
+##  <a name="always-on-availability-groups-extended-events-reference"></a><a name="BKMK_Reference"></a> Always On 가용성 그룹 확장 이벤트 참조  
  이 섹션에서는 가용성 그룹을 모니터링하는 데 사용되는 몇몇 확장 이벤트를 설명합니다.  
   
  [availability_replica_state_change](#BKMK_availability_replica_state_change)  
@@ -76,7 +76,7 @@ Alwayson_health에서 다루는 몇몇 이벤트에 대한 자세한 내용은 [
   
  [error_reported(1480): 데이터베이스 복제본 역할 변경](#BKMK_error_reported_1480)  
   
-###  <a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
+###  <a name="availability_replica_state_change"></a><a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
  가용성 복제본의 상태가 변경되었을 때 발생합니다. 가용성 그룹을 만들거나 가용성 복제본을 조인하면 이 이벤트를 트리거할 수 있습니다. 실패한 자동 장애 조치(failover)의 진단에 유용합니다. 장애 조치 단계를 추적하는 데에도 사용할 수 있습니다.  
   
 #### <a name="event-information"></a>이벤트 정보  
@@ -107,7 +107,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_availability_group_lease_expired"></a> availability_group_lease_expired  
+###  <a name="availability_group_lease_expired"></a><a name="BKMK_availability_group_lease_expired"></a> availability_group_lease_expired  
  클러스터 및 가용성 그룹에 연결 문제가 있고 임대가 만료된 경우 발생합니다. 이 이벤트는 가용성 그룹과 기본 WSFC 클러스터 간의 연결이 끊어졌음을 나타냅니다. 주 복제본에 연결 문제가 발생한 경우 이 이벤트가 자동 장애 조치(failover)를 실행하게 하거나 가용성 그룹을 오프라인 상태로 만들 수 있습니다.  
   
 #### <a name="event-information"></a>이벤트 정보  
@@ -135,7 +135,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_availability_replica_automatic_failover_validation"></a> availability_replica_automatic_failover_validation  
+###  <a name="availability_replica_automatic_failover_validation"></a><a name="BKMK_availability_replica_automatic_failover_validation"></a> availability_replica_automatic_failover_validation  
  자동 장애 조치(failover)에서 가용성 복제본의 준비 상태에 대한 유효성을 검사하여 주 복제본으로 확인할 때 발생하며 대상 가용성 복제본이 새로운 주 복제본이 될 준비가 되었는지 여부를 나타냅니다. 예를 들어 일부 데이터베이스가 동기화되지 않았거나 조인되지 않은 경우 장애 조치(failover) 유효성 검사에서 False를 반환합니다. 이 이벤트는 장애 조치(failover) 중에 실패 지점을 제공하기 위한 설계입니다. 자동 장애 조치(failover)는 무인 작업이므로 이 정보는 특히 자동 장애 조치의 경우 데이터베이스 관리자에게 관심이 있습니다. 데이터베이스 관리자는 이벤트를 검토하여 자동 장애 조치(failover)가 실패한 이유를 알 수 있습니다.  
   
 #### <a name="event-information"></a>이벤트 정보  
@@ -174,7 +174,7 @@ GO
   
 ```  
   
-###  <a name="BKMK_error_reported"></a> error_reported(여러 오류 번호): 전송 또는 연결 문제의 경우  
+###  <a name="error_reported-multiple-error-numbers-for-transport-or-connection-issues"></a><a name="BKMK_error_reported"></a> error_reported(여러 오류 번호): 전송 또는 연결 문제의 경우  
  각 실패한 이벤트는 가용성 그룹이 의존하는 전송 또는 데이터베이스 미러링 엔드포인트에서 연결 문제가 발생했음을 나타냅니다.  
   
 |열|Description|  
@@ -235,7 +235,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_data_movement_suspend_resume"></a> data_movement_suspend_resume  
+###  <a name="data_movement_suspend_resume"></a><a name="BKMK_data_movement_suspend_resume"></a> data_movement_suspend_resume  
  데이터베이스 복제본의 데이터베이스 이동이 일시 중단되거나 다시 시작되었습니다.  
   
 #### <a name="event-information"></a>이벤트 정보  
@@ -278,7 +278,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_alwayson_ddl_executed"></a> alwayson_ddl_executed  
+###  <a name="alwayson_ddl_executed"></a><a name="BKMK_alwayson_ddl_executed"></a> alwayson_ddl_executed  
  CREATE, ALTER 또는 DROP을 포함한 가용성 그룹 DDL(데이터 정의 언어) 문이 실행될 때 발생합니다. 이 이벤트의 주 목적은 가용성 복제본에 대한 사용자 작업이 있는 문제를 나타내거나 운영 작업의 시작점을 나타내는 것입니다. 이 이벤트가 발생한 다음, 수동 장애 조치(failover), 강제 장애 조치(failover), 일시 중단된 데이터 이동 또는 다시 시작된 데이터 이동 등과 같은 런타임 문제가 이어집니다.  
   
 #### <a name="event-information"></a>이벤트 정보  
@@ -311,7 +311,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_availability_replica_manager_state"></a> availability_replica_manager_state  
+###  <a name="availability_replica_manager_state"></a><a name="BKMK_availability_replica_manager_state"></a> availability_replica_manager_state  
  가용성 복제본 관리자의 상태가 변경되었을 때 발생합니다. 이 이벤트는 가용성 복제본 관리자의 하트비트를 나타냅니다. 가용성 복제본 관리자가 정상 상태에 있지 않은 경우 SQL Server 인스턴스의 모든 가용성 복제본이 다운됩니다.  
   
 #### <a name="event-information"></a>이벤트 정보  
@@ -342,7 +342,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_error_reported_1480"></a> error_reported(1480): 데이터베이스 복제본 역할 변경  
+###  <a name="error_reported-1480-database-replica-role-change"></a><a name="BKMK_error_reported_1480"></a> error_reported(1480): 데이터베이스 복제본 역할 변경  
  이 필터링된 error_reported 이벤트는 가용성 복제본 역할이 변경된 후 비동기로 발생합니다. 이 이벤트는 장애 조치(failover) 프로세스 중에 예상된 역할의 변경에 실패함을 나타냅니다.  
   
 #### <a name="event-information"></a>이벤트 정보  

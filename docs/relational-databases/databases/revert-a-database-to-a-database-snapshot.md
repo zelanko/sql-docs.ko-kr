@@ -14,10 +14,10 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c636db77ffdf8249cf03814abca031b0897fb4c9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909505"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>데이터베이스를 데이터베이스 스냅샷으로 되돌리기
@@ -34,9 +34,9 @@ ms.locfileid: "72909505"
   
 -   **데이터베이스를 데이터베이스 스냅샷으로 되돌리려면 다음을 사용합니다.**  [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
  다음과 같은 경우에는 되돌리기가 지원되지 않습니다.  
   
 -   데이터베이스에 대한 여러 스냅샷이 있습니다. 되돌리기의 경우 되돌리려는 데이터베이스에 대한 하나의 스냅샷만 있어야 합니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "72909505"
   
 -   되돌리면 전체 텍스트 카탈로그가 모두 삭제됩니다.  
   
-###  <a name="Prerequisites"></a> 필수 조건  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
  원본 데이터베이스 및 데이터베이스 스냅샷은 다음 사전 요구 사항을 충족해야 합니다.  
   
 -   데이터베이스가 손상되지 않았어야 합니다.  
@@ -79,18 +79,18 @@ ms.locfileid: "72909505"
   
 -   데이터베이스에 현재 있는 다른 모든 스냅샷을 삭제합니다. 자세한 내용은 [Drop a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  원본 데이터베이스에 대한 RESTORE DATABASE 권한을 가진 사용자는 해당 데이터베이스를 데이터베이스 스냅샷을 만들었을 때의 상태로 되돌릴 수 있습니다.  
   
-##  <a name="TsqlProcedure"></a> 데이터베이스를 데이터베이스 스냅샷으로 되돌리는 방법(Transact-SQL 사용)  
+##  <a name="how-to-revert-a-database-to-a-database-snapshot-using-transact-sql"></a><a name="TsqlProcedure"></a> 데이터베이스를 데이터베이스 스냅샷으로 되돌리는 방법(Transact-SQL 사용)  
  **데이터베이스를 데이터베이스 스냅샷으로 되돌리려면**  
   
 > [!NOTE]  
 >  이 프로시저의 예는 이 섹션의 뒷부분에 나오는 [예제(Transact-SQL)](#TsqlExample)을 참조하세요.  
   
-1.  데이터베이스를 되돌릴 데이터베이스 스냅샷을 식별합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 데이터베이스의 스냅샷을 확인할 수 있습니다([데이터베이스 스냅샷 보기&#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md) 참조). 또한 **sys.databases&#40;Transact-SQL&#41;** 카탈로그 뷰의 [sys.databases&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 열에서 뷰의 원본 데이터베이스를 식별할 수 있습니다.  
+1.  데이터베이스를 되돌릴 데이터베이스 스냅샷을 식별합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 데이터베이스의 스냅샷을 확인할 수 있습니다([데이터베이스 스냅샷 보기&#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md) 참조). 또한 **sys.databases&amp;#40;Transact-SQL&amp;#41;** 카탈로그 뷰의 [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 열에서 뷰의 원본 데이터베이스를 식별할 수 있습니다.  
   
 2.  다른 모든 데이터베이스 스냅샷을 삭제합니다.  
   
@@ -118,14 +118,14 @@ ms.locfileid: "72909505"
   
 6.  필요에 따라, 특히 전체 또는 대량 로그 복구 모델을 사용하는 경우 되돌린 데이터베이스를 백업합니다. 데이터베이스를 백업하려면 [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)를 참조하세요.  
 
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  이 섹션에는 데이터베이스를 데이터베이스 스냅샷으로 되돌리는 다음 예가 포함되어 있습니다.  
   
 -   A. [AdventureWorks 데이터베이스에 대한 스냅샷 되돌리기](#Reverting_AW)  
   
 -   B. [Sales 데이터베이스에 대한 스냅샷 되돌리기](#Reverting_Sales)  
   
-####  <a name="Reverting_AW"></a> 1. AdventureWorks 데이터베이스에 대한 스냅샷 되돌리기  
+####  <a name="a-reverting-a-snapshot-on-the-adventureworks-database"></a><a name="Reverting_AW"></a> 1. AdventureWorks 데이터베이스에 대한 스냅샷 되돌리기  
  이 예에서는 현재 하나의 스냅샷만 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 있는 것으로 가정합니다. 여기서 데이터베이스가 되돌려지는 스냅샷을 만드는 예는 [Create a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 ```  
@@ -136,7 +136,7 @@ DATABASE_SNAPSHOT = 'AdventureWorks_dbss1800';
 GO  
 ```  
   
-####  <a name="Reverting_Sales"></a> 2. Sales 데이터베이스에 대한 스냅샷 되돌리기  
+####  <a name="b-reverting-a-snapshot-on-the-sales-database"></a><a name="Reverting_Sales"></a> 2. Sales 데이터베이스에 대한 스냅샷 되돌리기  
  이 예에서는 **Sales** 데이터베이스에 현재 두 개의 스냅샷인 **sales_snapshot0600** 및 **sales_snapshot1200**이 있다고 가정합니다. 스냅샷 중 오래된 항목을 삭제하고 데이터베이스를 가장 최근의 스냅샷으로 되돌립니다.  
   
  이 예에 사용되는 예제 데이터베이스와 스냅샷을 만드는 코드는 다음을 참조하세요.  
@@ -158,7 +158,7 @@ RESTORE DATABASE Sales FROM DATABASE_SNAPSHOT = 'sales_snapshot1200';
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [데이터베이스 스냅샷 만들기&#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   

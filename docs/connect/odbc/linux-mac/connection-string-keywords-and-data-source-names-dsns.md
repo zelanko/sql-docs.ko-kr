@@ -15,16 +15,16 @@ ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 159aedf0665df441a31c93760c26523b843921bb
-ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79058718"
 ---
 # <a name="connecting-to-sql-server"></a>SQL Server에 연결
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-이 문서에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스와의 연결을 만들 수 있는 방법을 설명합니다.  
+이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스와의 연결을 만들 수 있는 방법을 설명합니다.  
   
 ## <a name="connection-properties"></a>연결 속성  
 
@@ -52,7 +52,7 @@ Server = [protocol:]server[,port]
 #  
 ```  
 
-필요에 따라 서버에 연결할 프로토콜 및 포트를 지정할 수 있습니다. 예를 들어 **Server=tcp:**_servername_**,12345**입니다. Linux 및 macOS 드라이버에서 지원되는 유일한 프로토콜은 `tcp`입니다.
+필요에 따라 서버에 연결할 프로토콜 및 포트를 지정할 수 있습니다. 예를 들어 **Server=tcp:** _servername_ **,12345**입니다. Linux 및 macOS 드라이버에서 지원되는 유일한 프로토콜은 `tcp`입니다.
 
 고정 포트의 명명된 인스턴스에 연결하려면 <b>Server =</b>*servername*,**port_number**를 사용합니다. 버전 17.4 이전에서 동적 포트에 연결하는 것은 지원되지 않습니다.
 

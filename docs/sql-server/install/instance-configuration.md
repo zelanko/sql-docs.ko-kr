@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 robots: noindex,nofollow
 ms.openlocfilehash: b32ad209651c30f810f239b0c14689be497c4378
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286567"
 ---
 # <a name="installation-wizard-help"></a>설치 마법사 도움말
@@ -192,7 +192,7 @@ ms.locfileid: "79286567"
 * 디렉터리, 파일 위치 및 인스턴스 ID 명명에 대한 자세한 내용은 [SQL Server 기본 인스턴스 및 명명된 인스턴스의 파일 위치](file-locations-for-default-and-named-instances-of-sql-server.md)를 참조하세요.  
 * [파일 서버의 공유 및 NTFS 권한](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)
 
-## <a name="serverconfig"></a> 데이터베이스 엔진 구성 - 서버 구성 페이지
+## <a name="database-engine-configuration---server-configuration-page"></a><a name="serverconfig"></a> 데이터베이스 엔진 구성 - 서버 구성 페이지
 
 이 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 모드를 설정하고 Windows 사용자 또는 그룹을 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 관리자로 추가할 수 있습니다.  
   
@@ -271,7 +271,7 @@ Windows 인증과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인�
 
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 실행할 계정을 선택하는 방법에 대한 자세한 내용은 [Windows 서비스 계정 및 사용 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)을 참조하세요.
 
-## <a name ="datadir"></a> 데이터베이스 엔진 구성 - 데이터 디렉터리 페이지
+## <a name="database-engine-configuration---data-directories-page"></a><a name ="datadir"></a> 데이터베이스 엔진 구성 - 데이터 디렉터리 페이지
 
 이 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 프로그램과 데이터 파일의 설치 위치를 지정할 수 있습니다. 설치 유형에 따라 지원되는 스토리지에 로컬 디스크, 공유 스토리지 또는 SMB 파일 서버가 포함될 수 있습니다.  
   
@@ -330,7 +330,7 @@ SMB 파일 서버에는 다음과 같은 권장 사항이 적용됩니다.
   * 시스템 파일이 있는 디렉터리
   * 장애 조치(failover) 클러스터 인스턴스의 매핑된 네트워크 드라이브  
   
-## <a name="a-nametempdba-database-engine-configuration---tempdb-page"></a><a name="tempdb"><a/> 데이터베이스 엔진 구성 - TempDB 페이지
+## <a name="a-nametempdb-database-engine-configuration---tempdb-page"></a><a name="tempdb"><a/> 데이터베이스 엔진 구성 - TempDB 페이지
 
 이 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 **tempdb** 데이터 및 로그 파일 위치, 크기, 증가 설정, 파일 수를 지정할 수 있습니다. 설치 유형에 따라 지원되는 스토리지에 로컬 디스크, 공유 스토리지 또는 SMB 파일 서버가 포함될 수 있습니다.  
   
@@ -417,7 +417,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## <a name="a-namemaxdopa-database-engine-configuration---maxdop-page"></a><a name="maxdop"><a/> 데이터베이스 엔진 구성 - MaxDOP 페이지
+## <a name="a-namemaxdop-database-engine-configuration---maxdop-page"></a><a name="maxdop"><a/> 데이터베이스 엔진 구성 - MaxDOP 페이지
 
 **MaxDOP(최대 병렬 처리 수준)** 는 단일 문이 사용할 수 있는 최대 프로세서 수를 결정합니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서는 설치 중에 이 옵션을 구성하는 기능이 도입되었습니다. 또한 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서는 코어 수에 따라 서버에 권장되는 MaxDOP 설정을 자동으로 검색합니다.  
 
@@ -427,7 +427,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 * **MaxDOP(최대 병렬 처리 수준)** 는 단일 문을 병렬로 실행하는 동안 사용할 최대 프로세서 수에 대 한 값입니다. 기본값은 [최대 병렬 처리 수준 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)의 최대 병렬 처리 수준 지침에 따라 정렬됩니다.
 
-## <a name="a-namememorya-database-engine-configuration---memory-page"></a><a name="memory"><a/> 데이터베이스 엔진 구성 - 메모리 페이지
+## <a name="a-namememory-database-engine-configuration---memory-page"></a><a name="memory"><a/> 데이터베이스 엔진 구성 - 메모리 페이지
 
 **최소 서버 메모리**는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]가 버퍼 풀 및 기타 캐시에 대해 사용할 낮은 메모리 제한을 결정합니다. 기본값과 및 권장되는 값은 모두 0입니다. **최소 서버 메모리**의 효과에 대한 자세한 내용은 [메모리 관리 아키텍처 가이드](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory)를 참조하세요.
 

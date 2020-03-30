@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.openlocfilehash: c1f2a7670913f2df948201b29f26e0283f27f698
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288747"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>연습: Integration Services(SSIS) Scale Out 설정
@@ -43,7 +43,7 @@ ms.locfileid: "79288747"
 
 * [규모 확장 작업자를 사용하도록 설정](#EnableWorker)
 
-## <a name="InstallMaster"></a> 규모 확장 마스터 설치
+## <a name="install-scale-out-master"></a><a name="InstallMaster"></a> 규모 확장 마스터 설치
 
 Scale Out 마스터를 설정하려면 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]를 설정할 때 SSIS의 데이터베이스 엔진 서비스, [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 및 해당 Scale Out 마스터 기능을 설치해야 합니다. 
 
@@ -91,7 +91,7 @@ Scale Out 마스터 기능을 설치하려면 [!INCLUDE[ssNoVersion_md](../../in
     > [!NOTE]
     > Scale Out 마스터가 데이터베이스 엔진과 함께 설치되지 않고 데이터베이스 엔진 인스턴스가 명명된 인스턴스인 경우, 설치한 후에 `SqlServerName`을 Scale Out 마스터 서비스 구성 파일에 구성해야 합니다. 자세한 내용은 [Scale Out 마스터](integration-services-ssis-scale-out-master.md)를 참조하세요.
 
-## <a name="InstallWorker"></a> 규모 확장 작업자 설치
+## <a name="install-scale-out-worker"></a><a name="InstallWorker"></a> 규모 확장 작업자 설치
  
 Scale Out 작업자를 설정하려면 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 설정 시 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 및 해당 Scale Out 작업자 기능을 설치해야 합니다.
 
@@ -142,20 +142,20 @@ Scale Out 작업자 기능을 설치하려면 [!INCLUDE[ssNoVersion_md](../../in
     -   `/ISWORKERSVCMASTER`(선택 사항)
     -   `/ISWORKERSVCCERT`(선택 사항)
  
-## <a name="InstallCert"></a> 규모 확장 작업자 클라이언트 인증서 설치
+## <a name="install-scale-out-worker-client-certificate"></a><a name="InstallCert"></a> 규모 확장 작업자 클라이언트 인증서 설치
 
 Scale Out 작업자를 설치하는 동안 작업자 인증서가 자동으로 생성되어 컴퓨터에 설치됩니다. 또한 해당 클라이언트 인증서 SSISScaleOutWorker.cer은 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` 아래에 설치됩니다. Scale Out 마스터가 Scale Out 작업자를 인증하려면 이 클라이언트 인증서를 Scale Out 마스터가 있는 로컬 컴퓨터의 루트 저장소에 추가해야 합니다.
   
 루트 저장소에 클라이언트 인증서를 추가하려면 .cer 파일을 두 번 클릭한 다음 인증서 대화 상자에서 **인증서 설치**를 클릭합니다. **인증서 가져오기 마법사**가 열립니다.  
 
-## <a name="Firewall"></a> 방화벽 포트 열기
+## <a name="open-firewall-port"></a><a name="Firewall"></a> 방화벽 포트 열기
 
 Scale Out 마스터 컴퓨터의 Windows 방화벽에서 Scale Out 마스터 설치 중에 지정한 포트와 SQL Server 포트(기본적으로 1433)를 엽니다.
 
 > [!Note]
 > 방화벽 포트를 연 후에도 Scale Out 작업자 서비스를 다시 시작해야 합니다.
     
-## <a name="Start"></a> SQL Server 규모 확장 마스터 및 작업자 서비스 시작
+## <a name="start-sql-server-scale-out-master-and-worker-services"></a><a name="Start"></a> SQL Server 규모 확장 마스터 및 작업자 서비스 시작
 
 설치하는 동안 서비스의 시작 유형을 **자동**으로 설정하지 않은 경우 다음과 같은 서비스를 시작합니다.
 
@@ -163,18 +163,18 @@ Scale Out 마스터 컴퓨터의 Windows 방화벽에서 Scale Out 마스터 설
 
 -   SQL Server Integration Services Scale Out 작업자 14.0(SSISScaleOutWorker140) 구성
 
-## <a name="EnableMaster"></a> 규모 확장 마스터를 사용하도록 설정
+## <a name="enable-scale-out-master"></a><a name="EnableMaster"></a> 규모 확장 마스터를 사용하도록 설정
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio_md](../../includes/ssmanstudio-md.md)]에서 SSISDB 카탈로그를 만들 때 **카탈로그 만들기** 대화 상자에서 **이 서버를 SSIS Scale Out 마스터로 사용**을 클릭합니다.
 
 카탈로그를 만든 후에 [Scale Out 관리자](integration-services-ssis-scale-out-manager.md)를 사용하여 Scale Out 마스터를 사용하도록 설정할 수 있습니다.
 
-## <a name="EnableAuth"></a> SQL Server 인증 모드를 사용하도록 설정
+## <a name="enable-sql-server-authentication-mode"></a><a name="EnableAuth"></a> SQL Server 인증 모드를 사용하도록 설정
 데이터베이스 엔진을 설치하는 동안 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 인증을 사용하도록 설정하지 않은 경우 SSISDB 카탈로그를 호스팅하는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 인스턴스에서 SQL Server 인증 모드를 사용하도록 설정합니다. 
 
 SQL Server 인증을 사용하지 않는 경우 패키지 실행이 차단되지 않습니다. 하지만 실행 로그는 SSISDB 데이터베이스에 쓸 수 없습니다.
 
-## <a name="EnableWorker"></a> 규모 확장 작업자를 사용하도록 설정
+## <a name="enable-scale-out-worker"></a><a name="EnableWorker"></a> 규모 확장 작업자를 사용하도록 설정
 
 그래픽 사용자 인터페이스를 제공하는 [Scale Out 관리자](integration-services-ssis-scale-out-manager.md) 또는 저장 프로시저를 사용하여 Scale Out 작업자를 사용하도록 설정할 수 있습니다.
 

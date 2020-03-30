@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6934d3ae816df23d68843eb49d5eca8c95d83d57
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727461"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>R에서 olapR을 사용하여 MDX 쿼리를 만드는 방법
@@ -32,7 +32,7 @@ ms.locfileid: "73727461"
 + 새 OLAP 개체 만들기
 + 측정값 또는 합계를 포함한 파티션에 대한 쓰기 저장
 
-## <a name="buildMDX"></a> R에서 MDX 쿼리 빌드
+## <a name="build-an-mdx-query-from-r"></a><a name="buildMDX"></a> R에서 MDX 쿼리 빌드
 
 1. OLAP 데이터 원본(SSAS 인스턴스) 및 MSOLAP 공급자를 지정하는 연결 문자열을 정의합니다.
 
@@ -58,7 +58,7 @@ ms.locfileid: "73727461"
   + `executeMD` 다차원 배열을 반환합니다.
   + `execute2D` 2차원(테이블 형식) 데이터 프레임을 반환합니다.
 
-## <a name="executeMDX"></a> R에서 유효한 MDX 쿼리 실행
+## <a name="execute-a-valid-mdx-query-from-r"></a><a name="executeMDX"></a> R에서 유효한 MDX 쿼리 실행
 
 1. OLAP 데이터 원본(SSAS 인스턴스) 및 MSOLAP 공급자를 지정하는 연결 문자열을 정의합니다.
 

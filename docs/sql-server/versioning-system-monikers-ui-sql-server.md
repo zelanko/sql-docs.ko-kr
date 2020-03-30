@@ -10,10 +10,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f175e9639b07c945b92b6fd715fa8b34ebea60c3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73049913"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>SQL 설명서용 버전 관리 시스템
@@ -130,13 +130,13 @@ SQL의 경우 에디션 간에는 버전 관리 모니커가 다르지 않지만
 | `sql-server-2019` | 매개 변수와 컨트롤이 2019로 설정된 경우를 제외하고 `sql-server-2017` 값의 경우도 동일합니다. |
 | &nbsp; | &nbsp; |
 
-### <a name="anchor-allsql-hidenothing"></a> 모든 SQL - 모두 표시, 특수 모니커
+### <a name="all-sql---hide-nothing-special-moniker"></a><a name="anchor-allsql-hidenothing"></a> 모든 SQL - 모두 표시, 특수 모니커
 
 **모든 SQL**의 특별한 모니커 제품 이름은 하나이며 유일한 버전은 **모두 표시**입니다. 이 모니커는 특정 변경 내용을 내부적으로 테스트하기 위한 것입니다. 고객이 이 모니커를 사용할 경우 유익하기보다 오해를 일으킬 가능성이 높습니다.
 
 일부 아티클에는 여러 버전의 SQL Server 관련 정보가 포함되어 있습니다. 모든 일반 모니커는 모니커 버전에 대해 부정확하거나, 혼동을 일으키거나, 모순되는 정보를 표시할 수 있는 버전 관련 섹션을 숨깁니다. 특별한 **모든 SQL** 모니커는 모든 버전 섹션을 표시하며, 부정확한 정보가 표시되고 있음을 명확하게 나타내지 않을 수 있습니다.
 
-## <a name="anchor-message-unavailable-for-moniker"></a> 메시지: 요청된 페이지를 \<모니커\>에 사용할 수 없습니다.
+## <a name="message-the-requested-page-is-not-available-for-moniker"></a><a name="anchor-message-unavailable-for-moniker"></a> 메시지: 요청된 페이지를 \<모니커\>에 사용할 수 없습니다.
 
 다음 시나리오에서는 :::no-loc text="Docs"::: 웹 페이지 맨 위에 있는 정보 메시지를 표시합니다.
 

@@ -11,10 +11,10 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bcf543438e3d1490f74df7a92a12545f29eeb5f2
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903835"
 ---
 # <a name="microsoft-connectors-for-oracle-and-teradata-by-attunity-for-integration-services-ssis"></a>Integration Services(SSIS)에 대한 Attunity의 Oracle 및 Teradata용 Microsoft Connectors

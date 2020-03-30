@@ -11,10 +11,10 @@ ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dd60d40c612df33b46ea7394d3bf9b1e53e24df6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291773"
 ---
 # <a name="sql-server-destination-custom-properties"></a>SQL Server 대상 사용자 지정 속성

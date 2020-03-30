@@ -23,10 +23,10 @@ ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bfda79efac4e64fbb735e424cad4b8bb9ba93851
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70176268"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
@@ -96,10 +96,10 @@ ms.locfileid: "70176268"
  **[미러링된 미디어 세트(mirrored media set)](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)**  
  미디어 세트의 여러 복사본(미러)입니다.  
   
-##  <a name="BackupCompression"></a> 백업 압축  
+##  <a name="backup-compression"></a><a name="BackupCompression"></a> 백업 압축  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 이상 버전에서 압축 백업을 지원하며, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 압축된 백업을 복원할 수 있습니다. 자세한 내용은 [백업 압축&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md)을 참조하세요.  
   
-##  <a name="Restrictions"></a>  백업 작업 제한 사항 
+##  <a name="backup-operations-restrictions"></a><a name="Restrictions"></a>  백업 작업 제한 사항 
  백업은 데이터베이스가 온라인 상태이며 사용 중인 경우 발생할 수 있습니다. 그러나 다음과 같은 제한 사항이 있습니다.  
   
 ### <a name="cannot-back-up-offline-data"></a>오프라인 데이터를 백업할 수 없습니다.  
@@ -128,7 +128,7 @@ ms.locfileid: "70176268"
   
  백업 작업이 파일 관리 작업 또는 축소 작업과 겹치면 충돌이 발생합니다. 충돌하는 작업 중 어떤 작업이 먼저 시작되었는지에 관계없이 두 번째 작업은 첫 번째 작업에서 설정한 잠금 제한 시간이 초과될 때까지 대기합니다. 제한 시간은 세션 제한 시간 설정에서 제어합니다. 제한 시간 동안에 잠금이 해제되면 두 번째 작업이 계속됩니다. 잠금 제한 시간이 초과되면 두 번째 작업이 실패합니다.  
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
  **백업 디바이스 및 백업 미디어**  
   
 -   [디스크 파일에 대한 논리적 백업 디바이스 정의&#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  

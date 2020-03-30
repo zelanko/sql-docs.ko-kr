@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 00f139a5fa608f40f7979f74b187efcb68bcf2ff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75776396"
 ---
 # <a name="create-a-login"></a>로그인 만들기
@@ -35,7 +35,7 @@ ms.locfileid: "75776396"
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 을 사용하여 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 로그인을 만드는 방법에 대해 설명합니다. 로그인은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 연결하는 사용자 또는 프로세스의 ID입니다.  
   
-##  <a name="Background"></a> 배경  
+##  <a name="background"></a><a name="Background"></a> 배경  
  로그인은 보안 시스템에서 인증을 수행할 수 있는 보안 주체 또는 엔터티입니다. 사용자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결하려면 로그인이 필요합니다. 도메인 사용자 또는 Windows 도메인 그룹 등의 Windows 주체에 기반한 로그인을 만들거나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인과 같은 Windows 주체에 기반한 로그인을 만들 수 있습니다.  
   
 > **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하려면 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]에서 혼합 모드 인증을 사용해야 합니다. 자세한 내용은 [인증 모드 선택](../../../relational-databases/security/choose-an-authentication-mode.md)을 참조하세요.  
@@ -44,13 +44,13 @@ ms.locfileid: "75776396"
   
 > **참고:** 로그인이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결되면 ID는 마스터 데이터베이스에서 유효성을 검사합니다. 포함된 데이터베이스 사용자를 사용하여 데이터베이스 수준에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 연결을 인증합니다. 포함된 데이터베이스 사용자를 사용할 때는 로그인이 필요하지 않습니다. 포함된 데이터베이스는 다른 데이터베이스 및 해당 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (및 master 데이터베이스) 인스턴스에서 격리된 데이터베이스입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 Windows 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 위해 포함된 데이터베이스 사용자를 지원합니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]을(를) 사용하는 경우, 포함된 데이터베이스 사용자와 데이터베이스 수준 방화벽 규칙을 조합합니다. 자세한 내용은 [포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)를 참조하세요.  
   
-##  <a name="Security"></a> 보안  
+##  <a name="security"></a><a name="Security"></a> 보안  
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서버에 대한 **ALTER ANY LOGIN** 또는 **ALTER LOGIN** 권한이 필요합니다.  
   
  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 에는 **loginmanager** 역할의 멤버 자격이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SSMS를 사용하여 로그인 만들기  
+##  <a name="create-a-login-using-ssms"></a><a name="SSMSProcedure"></a> SSMS를 사용하여 로그인 만들기  
   
   
 1.  개체 탐색기에서 새 로그인을 만들려는 서버 인스턴스의 폴더를 확장합니다.  
@@ -226,7 +226,7 @@ ms.locfileid: "75776396"
  **SQL Server 인증**  
  **로그인 잠겨 있음** 확인란은 선택한 로그인을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하여 연결하고 로그인이 잠겨 있는 경우에만 사용할 수 있습니다. 이 설정은 읽기 전용입니다. 잠긴 로그인을 잠금 해제하려면 UNLOCK 옵션을 사용하여 ALTER LOGIN을 실행합니다.  
   
-##  <a name="TsqlProcedure"></a> T-SQL에서 Windows 인증을 사용하여 로그인 만들기  
+##  <a name="create-a-login-using-windows-authentication-using-t-sql"></a><a name="TsqlProcedure"></a> T-SQL에서 Windows 인증을 사용하여 로그인 만들기  
   
  
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
@@ -263,7 +263,7 @@ ms.locfileid: "75776396"
   
  자세한 내용은 [CREATE LOGIN&#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)을 참조하세요.  
   
-##  <a name="FollowUp"></a> 후속 작업: 로그인을 만든 후 수행할 단계  
+##  <a name="follow-up-steps-to-take-after-you-create-a-login"></a><a name="FollowUp"></a> 후속 작업: 로그인을 만든 후 수행할 단계  
  이와 같이 작성한 로그인은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결할 수 있지만 유용한 작업을 수행하는 데 필요한 사용 권한은 가지고 있지 않습니다. 다음 목록에서는 일반적인 로그인 동작 관련 내용이 포함된 링크를 제공합니다.  
   
 -   로그인이 역할에 조인하도록 하려면 [역할 조인](../../../relational-databases/security/authentication-access/join-a-role.md)을 참조하세요.  

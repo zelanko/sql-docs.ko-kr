@@ -19,10 +19,10 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0c755208a5443e4606bdb41a0cbdfdf26a1fa1c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286827"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Integration Services(SSIS) 프로젝트 및 패키지 배포
@@ -131,7 +131,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 4.  (선택 사항) 배포한 프로젝트에 대한 환경을 만듭니다. 
   
-###  <a name="convert"></a> 프로젝트 배포 모델로 프로젝트를 변환하려면  
+###  <a name="to-convert-a-project-to-the-project-deployment-model"></a><a name="convert"></a> 프로젝트 배포 모델로 프로젝트를 변환하려면  
   
 1.  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 프로젝트를 열고 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **프로젝트 배포 모델로 변환**을 클릭합니다.  
   
@@ -141,7 +141,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 2.  마법사를 완료합니다.
   
-###  <a name="deploy"></a> Integration Services 서버에 프로젝트를 배포하려면  
+###  <a name="to-deploy-a-project-to-the-integration-services-server"></a><a name="deploy"></a> Integration Services 서버에 프로젝트를 배포하려면  
   
 1.  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 프로젝트를 연 다음 **프로젝트** 메뉴에서 **배포** 를 선택하여 **Integration Services 배포 마법사**를 시작합니다.  
   
@@ -164,7 +164,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
 ## <a name="deploy-packages-to-integration-services-server"></a>Integration Services 서버에 패키지 배포
   [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] 에 도입된 증분 패키지 배포 기능을 사용하면 전체 프로젝트를 배포하지 않고 기존 프로젝트나 새 프로젝트에 하나 이상의 패키지를 배포할 수 있습니다.  
   
-###  <a name="DeployWizard"></a> Integration Services 배포 마법사를 사용하여 패키지 배포  
+###  <a name="deploy-packages-by-using-the-integration-services-deployment-wizard"></a><a name="DeployWizard"></a> Integration Services 배포 마법사를 사용하여 패키지 배포  
   
 1.  명령 프롬프트의 **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** 에서 **isdeploymentwizard.exe**를 실행합니다. 64비트 컴퓨터의 **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**에는 도구의 32비트 버전도 있습니다.  
   
@@ -172,7 +172,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 3.  마법사를 완료합니다. [Package Deployment Model](#PackageModel)에서 설명하는 나머지 단계를 수행합니다.  
   
-###  <a name="SSMS"></a> SQL Server Management Studio를 사용하여 패키지 배포  
+###  <a name="deploy-packages-by-using-sql-server-management-studio"></a><a name="SSMS"></a> SQL Server Management Studio를 사용하여 패키지 배포  
   
 1.  SQL Server Management Studio의 개체 탐색기에서 **Integration Services 카탈로그** > **SSISDB** 노드를 확장합니다.  
   
@@ -184,7 +184,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 5.  마법사를 완료합니다. [Package Deployment Model](#PackageModel)에서 설명하는 나머지 단계를 수행합니다.  
   
-###  <a name="SSDT"></a> SQL Server Data Tools(Visual Studio)를 사용하여 패키지 배포  
+###  <a name="deploy-packages-by-using-sql-server-data-tools-visual-studio"></a><a name="SSDT"></a> SQL Server Data Tools(Visual Studio)를 사용하여 패키지 배포  
   
 1.  Visual Studio에서 Integration Services 프로젝트를 연 상태로 배포할 패키지를 하나 이상 선택합니다.  
   
@@ -192,7 +192,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 3.  마법사를 완료합니다. [Package Deployment Model](#PackageModel)에서 설명하는 나머지 단계를 수행합니다.  
   
-###  <a name="StoredProcedure"></a> deploy_packages 저장 프로시저를 사용하여 패키지 배포  
+###  <a name="deploy-packages-by-using-the-deploy_packages-stored-procedure"></a><a name="StoredProcedure"></a> deploy_packages 저장 프로시저를 사용하여 패키지 배포  
  **[catalog].[deploy_packages]** 저장 프로시저를 사용하여 SSIS 카탈로그에 SSIS 패키지를 하나 이상 배포할 수 있습니다. 다음 코드 예제에서는 이 저장 프로시저를 사용하여 SSIS 서버에 패키지를 배포하는 방법을 보여 줍니다. 자세한 내용은 [catalog.deploy_packages](../../integration-services/system-stored-procedures/catalog-deploy-packages.md)를 참조하세요.  
   
 ```cs
@@ -235,7 +235,7 @@ private static void Main(string[] args)
   
 ```  
   
-###  <a name="MOMApi"></a> 관리 개체 모델 API를 사용하여 패키지 배포  
+###  <a name="deploy-packages-using-the-management-object-model-api"></a><a name="MOMApi"></a> 관리 개체 모델 API를 사용하여 패키지 배포  
  다음 코드 예제에서는 관리 개체 모델 API를 사용하여 서버에 패키지를 배포하는 방법을 보여 줍니다.  
   
 ```cs 
@@ -304,7 +304,7 @@ static void Main()
  
  이 페이지의 설정은 각 배포 모델에서 서로 다릅니다. 이 페이지에서 선택한 모델에 따라 [Project Deployment Model](#ProjectModel) 섹션의 단계 또는 [Package Deployment Model](#PackageModel) 섹션의 단계를 따릅니다.  
   
-###  <a name="ProjectModel"></a> Project Deployment Model  
+###  <a name="project-deployment-model"></a><a name="ProjectModel"></a> Project Deployment Model  
   
 #### <a name="select-source"></a>원본 선택
 
@@ -322,7 +322,7 @@ static void Main()
 
  배포 프로세스가 완료되면 **결과** 페이지가 표시되어야 합니다. 이 페이지는 각 동작의 성공 또는 실패 여부를 표시합니다. 작업이 실패하면 **결과** 열에서 **실패** 를 클릭하여 해당 오류에 대한 설명을 표시합니다. 결과를 XML 파일로 저장하려면 **보고서 저장...** 을 클릭하거나 **닫기**를 클릭해 마법사를 종료합니다.
   
-###  <a name="PackageModel"></a> Package Deployment Model  
+###  <a name="package-deployment-model"></a><a name="PackageModel"></a> Package Deployment Model  
   
 #### <a name="select-source"></a>원본 선택
 
@@ -555,7 +555,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
 -   [변환 수행에서 옵션 설정](#conversion)  
   
-###  <a name="open_dialog"></a> Integration Services 프로젝트 변환 마법사 열기  
+###  <a name="open-the-integration-services-project-conversion-wizard"></a><a name="open_dialog"></a> Integration Services 프로젝트 변환 마법사 열기  
  다음 중 하나를 수행하여 **Integration Services 프로젝트 변환** 마법사를 엽니다.  
   
 -   [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 프로젝트를 열고 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **프로젝트 배포 모델로 변환**을 클릭합니다.  
@@ -564,7 +564,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  **Integration Services 프로젝트 변환 마법사** 를 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 에서 실행하는지 아니면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 실행하는지에 따라 수행되는 변환 태스크가 다릅니다.   
   
-###  <a name="locate"></a> 패키지 찾기 페이지에서 옵션 설정  
+###  <a name="set-options-on-the-locate-packages-page"></a><a name="locate"></a> 패키지 찾기 페이지에서 옵션 설정  
   
 > [!NOTE]  
 >  **패키지 찾기** 페이지는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 마법사를 실행할 때만 사용할 수 있습니다.  
@@ -602,7 +602,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **폴더**  
  패키지 경로를 입력하거나 **찾아보기**를 클릭하여 패키지로 이동합니다.  
   
-###  <a name="selectPackages"></a> 패키지 선택 페이지에서 옵션 설정  
+###  <a name="set-options-on-the-select-packages-page"></a><a name="selectPackages"></a> 패키지 선택 페이지에서 옵션 설정  
  **패키지 이름**  
  패키지 파일을 나열합니다.  
   
@@ -621,7 +621,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **새로 고침**  
  패키지 목록을 새로 고칩니다.  
   
-###  <a name="destination"></a> 대상 선택 페이지에서 옵션 설정  
+###  <a name="set-options-on-the-select-destination-page"></a><a name="destination"></a> 대상 선택 페이지에서 옵션 설정  
  이 페이지에서 새 프로젝트 배포 파일(.ispac)의 이름과 경로를 지정하거나 기존 파일을 선택합니다.  
   
 > [!NOTE]  
@@ -639,7 +639,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **프로젝트 설명**  
  프로젝트에 대한 선택적 설명을 입력합니다.  
   
-###  <a name="projectProperties"></a> 프로젝트 속성 지정 페이지에서 옵션 설정  
+###  <a name="set-options-on-the-specify-project-properties-page"></a><a name="projectProperties"></a> 프로젝트 속성 지정 페이지에서 옵션 설정  
   
 > [!NOTE]  
 >  **프로젝트 속성 지정** 페이지는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 마법사를 실행할 때만 사용할 수 있습니다.  
@@ -653,7 +653,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **프로젝트 설명**  
  선택적인 프로젝트 설명을 입력합니다.  
   
-###  <a name="executePackage"></a> 패키지 실행 태스크 업데이트 페이지에서 옵션 설정  
+###  <a name="set-options-on-the-update-execute-package-task-page"></a><a name="executePackage"></a> 패키지 실행 태스크 업데이트 페이지에서 옵션 설정  
  프로젝트 기반 참조를 사용할 수 있도록 패키지 실행 태스크 업데이트가 패키지에 포함되었습니다. 자세한 내용은 [Execute Package Task Editor](../../integration-services/control-flow/execute-package-task-editor.md)을 참조하세요.  
   
  **부모 패키지**  
@@ -668,7 +668,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **참조 할당**  
  프로젝트에 저장된 자식 패키지를 선택합니다.  
   
-###  <a name="configurations"></a> 구성 선택 페이지에서 옵션 설정  
+###  <a name="set-options-on-the-select-configurations-page"></a><a name="configurations"></a> 구성 선택 페이지에서 옵션 설정  
  매개 변수로 대체하려고 하는 패키지 구성을 선택합니다.  
   
  **패키지**  
@@ -694,7 +694,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  이 옵션을 선택하지 않으면 매개 변수로 바꾸려고 선택한 구성만 제거됩니다.  
   
-###  <a name="createParameters"></a> 매개 변수 만들기 페이지에서 옵션 설정  
+###  <a name="set-options-on-the-create-parameters-page"></a><a name="createParameters"></a> 매개 변수 만들기 페이지에서 옵션 설정  
  각 구성 속성에 대한 매개 변수 이름과 범위를 선택합니다.  
   
  **패키지**  
@@ -706,7 +706,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **범위**  
  패키지 또는 프로젝트 중에서 매개 변수 범위를 선택합니다.  
   
-###  <a name="configureParameters"></a> 매개 변수 구성 페이지에서 옵션 설정  
+###  <a name="set-options-on-the-configure-parameters-page"></a><a name="configureParameters"></a> 매개 변수 구성 페이지에서 옵션 설정  
  **이름**  
  매개 변수 이름을 나열합니다.  
   
@@ -724,7 +724,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  **매개 변수 정보 설정** 대화 상자에는 매개 변수 값의 데이터 형식 및 매개 변수의 원본도 나열됩니다.  
   
-###  <a name="review"></a> 검토 페이지에서 옵션 설정  
+###  <a name="set-the-options-on-the-review-page"></a><a name="review"></a> 검토 페이지에서 옵션 설정  
  **검토** 페이지를 사용하여 프로젝트 변환을 위해 선택한 옵션을 확인합니다.  
   
  **이전**  
@@ -733,7 +733,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **변환**  
  프로젝트를 프로젝트 배포 모델로 변환하려면 클릭합니다.  
   
-###  <a name="conversion"></a> 변환 수행에서 옵션 설정  
+###  <a name="set-the-options-on-the-perform-conversion"></a><a name="conversion"></a> 변환 수행에서 옵션 설정  
  변환 수행 페이지에는 프로젝트 변환 상태가 표시됩니다.  
   
  **동작**  

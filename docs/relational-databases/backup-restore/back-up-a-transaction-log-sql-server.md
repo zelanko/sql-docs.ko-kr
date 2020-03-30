@@ -15,10 +15,10 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 965b6957f9428a2c1d12b307db0a0f2b77ea16e8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71708731"
 ---
 # <a name="back-up-a-transaction-log"></a>트랜잭션 로그 백업
@@ -26,17 +26,17 @@ ms.locfileid: "71708731"
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 트랜잭션 로그를 백업하는 방법에 대해 설명합니다.  
 
 ## <a name="before-you-begin"></a>시작하기 전에
-### <a name="Restrictions"></a> 제한 사항  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 명시적 또는 [암시적](../../t-sql/statements/set-implicit-transactions-transact-sql.md) 트랜잭션에서는 `BACKUP` 문을 사용할 수 없습니다. 명시적 트랜잭션은 트랜잭션 시작 및 완료를 모두 명시적으로 정의하는 트랜잭션입니다.
 
-### <a name="Recommendations"></a> 권장 사항  
+### <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 - 데이터베이스에서 전체 또는 대량 로그 [복구 모델](recovery-models-sql-server.md)을 사용하는 경우 데이터를 보호하고 [트랜잭션 로그가 채워지지 않도록](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md) 트랜잭션 로그를 정기적으로 백업해야 합니다. 그러면 로그가 잘리고 특정 시점에 데이터베이스를 복원할 수 있습니다. 
   
 - 기본적으로 백업 작업을 성공적으로 수행할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그와 시스템 이벤트 로그에 항목이 추가됩니다. 로그를 자주 백업하는 경우 이러한 성공 메시지는 빠르게 누적되므로 엄청난 오류 로그가 쌓여 다른 메시지를 찾기 힘들 수 있습니다. 이 경우 추적 플래그 3226을 사용하여 스크립트가 종속되지 않은 로그 항목을 표시하지 않을 수 있습니다. [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.  
   
-### <a name="Permissions"></a> 권한
+### <a name="permissions"></a><a name="Permissions"></a> 권한
 
 필요한 `BACKUP DATABASE` 및 `BACKUP LOG` 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버에게 부여됩니다. 시작하기 전에 올바른 사용 권한을 확인합니다.
   
@@ -150,7 +150,7 @@ BACKUP LOG AdventureWorks2012
 GO  
 ```  
   
-##  <a name="PowerShellProcedure"></a> PowerShell 사용
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell 사용
 
 [SQL Server PowerShell 공급자](../../relational-databases/scripting/sql-server-powershell-provider.md)를 설정 및 사용합니다. **Backup-SqlDatabase** cmdlet을 사용하고 **-BackupAction** 매개 변수의 값으로 **로그** 를 지정합니다.  
   
@@ -160,7 +160,7 @@ GO
 Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -BackupAction Log  
 ```
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
   
 - [트랜잭션 로그 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

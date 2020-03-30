@@ -15,10 +15,10 @@ ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 11ca900d4a6f0f820379b0446bcca85e97462177
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67945689"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>원격 서버 연결 옵션 보기 또는 구성(SQL Server)
@@ -39,14 +39,14 @@ ms.locfileid: "67945689"
   
 -   **후속 작업:**  [원격 서버 연결 옵션을 구성한 후](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  **sp_serveroption** 을 실행하려면 서버에 대한 ALTER ANY LINKED SERVER 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-view-or-configure-remote-server-connection-options"></a>원격 서버 연결 옵션을 보거나 구성하려면  
   
@@ -58,7 +58,7 @@ ms.locfileid: "67945689"
   
 4.  원격 서버 쌍의 다른 서버에 대해 1단계에서 3단계까지 반복합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-view-remote-server-connection-options"></a>원격 서버 연결 옵션을 보려면  
   
@@ -87,7 +87,7 @@ USE master;
 EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';  
 ```  
   
-##  <a name="FollowUp"></a> 후속 작업: 원격 서버 연결 옵션을 구성한 후  
+##  <a name="follow-up-after-you-configure-remote-server-connection-options"></a><a name="FollowUp"></a> 후속 작업: 원격 서버 연결 옵션을 구성한 후  
  설정을 적용하려면 원격 서버를 중지한 후 다시 시작해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

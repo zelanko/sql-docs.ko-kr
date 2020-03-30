@@ -14,15 +14,15 @@ ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 078b7087669547b183f8bd34daa6c6fe0cf98cc4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258139"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>쿼럼 없이 WSFC 클러스터 강제 시작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 문서에서는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 클러스터 노드를 쿼럼 없이 강제로 시작하는 방법에 대해 설명합니다.  이 기능은 재해 복구 및 다중 서브넷 시나리오에서 데이터를 복구하고 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스의 고가용성을 완전히 다시 설정하는 데 필요할 수 있습니다.  
+  이 항목에서는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 클러스터 노드를 쿼럼 없이 강제로 시작하는 방법에 대해 설명합니다.  이 기능은 재해 복구 및 다중 서브넷 시나리오에서 데이터를 복구하고 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스의 고가용성을 완전히 다시 설정하는 데 필요할 수 있습니다.  
   
 -   **시작하기 전에:**  [권장 사항](#Recommendations), [보안](#Security)  
   
@@ -30,15 +30,15 @@ ms.locfileid: "75258139"
   
 -   **후속 작업:**  [후속 작업: 쿼럼 없이 클러스터를 강제로 시작한 후의 작업](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-start"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
  명시적으로 지정된 경우를 제외하고 이 항목의 절차는 WSFC 클러스터의 노드에서 실행할 경우에 유효합니다.  그러나 쿼럼 없이 강제로 시작할 노드에서 이러한 단계를 실행하면 보다 나은 결과를 얻고 네트워킹 문제를 방지할 수 있습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
  사용자는 WSFC 클러스터의 각 노드에 대한 로컬 Administrators 그룹의 멤버인 도메인 계정이어야 합니다.  
   
-##  <a name="FailoverClusterManagerProcedure"></a> 장애 조치(Failover) 클러스터 관리자 사용  
+##  <a name="using-failover-cluster-manager"></a><a name="FailoverClusterManagerProcedure"></a> 장애 조치(Failover) 클러스터 관리자 사용  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>쿼럼 없이 클러스터를 강제로 시작하려면  
   
@@ -50,7 +50,7 @@ ms.locfileid: "75258139"
   
 4.  요약 창에서 현재 **쿼럼 구성** 값이  **경고: 클러스터가 ForceQuorum 상태에서 실행 중입니다.** 인지 확인합니다.  
   
-##  <a name="PowerShellProcedure"></a> Powershell 사용  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Powershell 사용  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>쿼럼 없이 클러스터를 강제로 시작하려면  
   
@@ -83,7 +83,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
   
 ```  
   
-##  <a name="CommandPromptProcedure"></a> Net.exe 사용  
+##  <a name="using-netexe"></a><a name="CommandPromptProcedure"></a> Net.exe 사용  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>쿼럼 없이 클러스터를 강제로 시작하려면  
   
@@ -103,7 +103,7 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a> 후속 작업: 쿼럼 없이 클러스터를 강제로 시작한 후의 작업  
+##  <a name="follow-up-after-forcing-cluster-to-start-without-a-quorum"></a><a name="FollowUp"></a> 후속 작업: 쿼럼 없이 클러스터를 강제로 시작한 후의 작업  
   
 -   다른 노드를 다시 온라인으로 전환하려면 먼저 NodeWeight 값을 다시 계산하고 다시 구성하여 새 쿼럼을 올바르게 생성해야 합니다. 그러지 않으면 클러스터가 다시 오프라인으로 전환될 수 있습니다.  
   
@@ -121,7 +121,7 @@ net.exe start clussvc /forcequorum
   
      [로그 전달 보조 데이터베이스로 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-##  <a name="RelatedContent"></a> 관련 내용  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
   
 -   [장애 조치(Failover) 클러스터에 대한 이벤트 및 로그 보기](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   

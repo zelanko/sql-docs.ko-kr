@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: b8f767a5ae8bfe691ec5cb8e4128679a6e02ec8b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75306383"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>MSSQLSERVER 속성에 대한 프로토콜(고급 탭)
@@ -43,7 +43,7 @@ ms.locfileid: "75306383"
 
 - **허용됨**: **확장된 보호**를 지원하는 운영 체제로부터의 연결에 대해 **확장된 보호**를 사용해야 합니다. 보호된 클라이언트 운영 체제에서 실행되는 보호되지 않는 클라이언트 애플리케이션으로부터의 연결은 거부됩니다. 보호되지 않는 운영 체제로부터의 연결에 대한**확장된 보호** 는 무시됩니다. 이 설정은 **해제**보다는 안전하지만 가장 안전한 설정은 아닙니다. **확장된 보호** 를 지원하는 운영 체제 또는 애플리케이션과 지원하지 않은 운영 체제 또는 애플리케이션이 혼합되어 있는 환경에서는 이 설정을 사용하십시오.
 
-- **필수**:  연결을 허용하려면 보호된 운영 체제의 보호된 애플리케이션에서 가져와야 함을 의미합니다. 이 설정은 세 가지 옵션 중에서 가장 안전합니다. 그러나 **확장된 보호** 를 지원하지 않는 운영 체제로부터의 연결은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 수 없습니다.
+- **필수**:  연결을 허용하려면 보호된 운영 체제의 보호된 애플리케이션에서 가져와야 함을 의미합니다. 이 설정은 세 가지 옵션 중에서 가장 안전합니다. 그러나 **확장된 보호**를 지원하지 않는 운영 체제로부터의 연결은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 수 없습니다.
 
 ### <a name="accepted-ntlm-spns"></a>허용되는 NTLM SPN
 

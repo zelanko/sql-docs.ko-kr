@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 96c706d58e0f90f4f10b89a724f7d87fa94e41f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72586770"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 클러스터형 DTC 리소스 만들기
@@ -332,7 +332,7 @@ GO
 > 
 > 가용성 그룹에 DTC 지원을 사용하도록 설정하는 유일한 방법은 Transact-SQL을 사용하여 가용성 그룹을 만드는 것입니다.
  
-## <a name="ClusterDTC"></a>8.  클러스터 리소스 준비
+## <a name="8--prepare-cluster-resources"></a><a name="ClusterDTC"></a>8.  클러스터 리소스 준비
 
 이 스크립트는 다음 DTC 종속 리소스를 준비합니다. 디스크 및 IP.  공유 스토리지는 Windows 클러스터에 추가됩니다.  네트워크 리소스가 만들어지고 DTC 생성되어 가용성 그룹에 리소스로 적용됩니다.  `SQLNODE1`에서 다음 PowerShell 스크립트를 실행합니다. 스크립트에 대해 [Allan Hirt](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)에게 감사드립니다.
 
@@ -479,7 +479,7 @@ $nodes = (Get-ClusterNode).Name;
 }
 ```  
 
-## <a name="11--cycle-the-includessnoversionincludesssnoversion-mdmd-service-for-each-instance"></a>11.  각 인스턴스에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 순환
+## <a name="11--cycle-the-ssnoversion-service-for-each-instance"></a>11.  각 인스턴스에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 순환
 
 클러스터된 DTC 서비스가 완전히 구성되면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 이 DTC 서비스를 사용하도록 등록되기 위해 가용성 그룹의 각 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 중지하고 다시 시작해야 합니다.
 

@@ -14,10 +14,10 @@ ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a7e0e50e22fc257b3a8429e556fe7fd2cec2c97d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68017505"
 ---
 # <a name="getting-started-with-always-on-availability-groups"></a>Always On 가용성 그룹 시작
@@ -26,21 +26,21 @@ ms.locfileid: "68017505"
 이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 을 지원하도록 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 인스턴스를 구성하고, 가용성 그룹을 만들고 관리하고 모니터링하기 위한 단계를 소개합니다.  
   
   
-##  <a name="RecommendedReading"></a> 권장 참조 항목  
+##  <a name="recommended-reading"></a><a name="RecommendedReading"></a> 권장 참조 항목  
  가용성 그룹을 처음 만드는 경우 다음 항목을 먼저 읽는 것이 좋습니다.  
   
 -   [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
 -   [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
-##  <a name="ConfigSI"></a> Configuring an Instance of SQL Server to Support Always On Availability Groups  
+##  <a name="configuring-an-instance-of-sql-server-to-support-always-on-availability-groups"></a><a name="ConfigSI"></a> Configuring an Instance of SQL Server to Support Always On Availability Groups  
   
 ||단계|링크|  
 |------|----------|-----------|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|**[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 사용하도록 설정합니다.** 가용성 그룹에 참여할 모든 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 인스턴스에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 기능을 사용하도록 설정해야 합니다.<br /><br /> **사전 요구 사항:**  호스트 컴퓨터는 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 노드여야 합니다.<br /><br /> 다른 필수 조건에 대한 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)을 사용하도록 설정합니다.|[Always On 가용성 그룹 활성화 및 비활성화](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|**데이터베이스 미러링 엔드포인트를 만듭니다(없는 경우).** 각 서버 인스턴스에 [데이터베이스 미러링 엔드포인트](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)가 있는지 확인합니다. 서버 인스턴스는 이 엔드포인트를 사용하여 다른 서버 인스턴스에서의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 연결을 수신합니다.|데이터베이스 미러링 엔드포인트가 있는지 여부를 확인하려면 <br />                    [sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)<br /><br /> **Windows 인증의 경우**  데이터베이스 미러링 엔드포인트를 만들려면 다음을 사용합니다.<br /><br /> [새 가용성 그룹 마법사](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)<br /><br /> [Transact-SQL](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [SQL Server PowerShell](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)<br /><br /> **인증서 인증의 경우** 데이터베이스 미러링 엔드포인트를 만드는 데 사용되는 도구:[Transact-SQL](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
   
-##  <a name="ConfigAG"></a> Creating and Configuring a New Availability Group  
+##  <a name="creating-and-configuring-a-new-availability-group"></a><a name="ConfigAG"></a> Creating and Configuring a New Availability Group  
   
 ||단계|링크|  
 |------|----------|-----------|  
@@ -52,7 +52,7 @@ ms.locfileid: "68017505"
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|**애플리케이션 개발자에 수신기의 DNS 이름을 제공합니다.**  개발자가 연결 요청을 가용성 그룹 수신기에 연결하기 위해서는 연결 문자열에 이 DNS 이름을 지정해야 합니다. 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)를 참조하세요.|"후속 작업: 가용성 그룹 수신기를 만든 후"([가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)에서)|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|**백업 작업 위치를 구성합니다.**  보조 데이터베이스에서 백업을 수행하려면 자동화된 백업 기본 설정을 고려하는 백업 작업 스크립트를 만들어야 합니다. 가용성 그룹의 가용성 복제본을 호스팅하는 각 서버 인스턴스에서 가용성 그룹의 각 데이터베이스에 대해 스크립트를 만듭니다.|"후속 작업: 보조 복제본에 백업을 구성한 후"([가용성 복제본에 백업 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)에서)|  
   
-##  <a name="ManageAGsEtc"></a> Managing Availability Groups, Replicas, and Databases  
+##  <a name="managing-availability-groups-replicas-and-databases"></a><a name="ManageAGsEtc"></a> Managing Availability Groups, Replicas, and Databases  
   
 > [!NOTE]  
 >  가용성 그룹 및 복제본 속성에 대한 자세한 내용은 [CREATE AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)을 참조하세요.  
@@ -72,7 +72,7 @@ ms.locfileid: "68017505"
 |파일 추가 작업의 문제를 해결합니다. 이 단계는 주 데이터베이스와 보조 데이터베이스의 파일 경로가 다른 경우에 필요합니다.|[실패한 파일 추가 작업 문제 해결](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|  
 |가용성 복제본 속성을 변경합니다.|[가용성 모드 변경](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)<br /><br /> [장애 조치(failover) 모드 변경](../../../database-engine/availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server.md)<br /><br /> [백업 우선 순위(및 자동화된 백업 기본 설정) 구성](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)<br /><br /> [읽기 전용 액세스 구성](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)<br /><br /> [읽기 전용 라우팅 구성](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)<br /><br /> [세션 제한 시간 변경](../../../database-engine/availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server.md)|  
   
-##  <a name="MonitorAGsEtc"></a> Monitoring Availability Groups  
+##  <a name="monitoring-availability-groups"></a><a name="MonitorAGsEtc"></a> Monitoring Availability Groups  
  Always On 가용성 그룹의 속성 및 상태를 모니터링하려면 다음 도구를 사용할 수 있습니다.  
   
 |도구|간략한 설명|링크|  
@@ -84,7 +84,7 @@ ms.locfileid: "68017505"
 |시스템 모니터|**SQLServer:Availability Replica** 성능 개체에는 가용성 복제본에 대한 정보를 보고하는 성능 카운터가 포함됩니다.|[SQL Server, 가용성 복제본](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |시스템 모니터|**SQLServer:Database Replica** 성능 개체에는 지정된 보조 복제본의 보조 데이터베이스에 대한 정보를 보고하는 성능 카운터가 포함됩니다.<br /><br /> SQL Server의 **SQLServer:Databases** 개체에는 특히 트랜잭션 로그 작업을 모니터링하는 성능 카운터가 포함됩니다. 가용성 데이터베이스에서 트랜잭션 로그 작업 모니터링과 관련된 카운터는 **Log Flush Write Time (ms)** , **Log Flushes/sec**, **Log Pool Cache Misses/sec**, **Log Pool Disk Reads/sec** 및 **Log Pool Requests/sec** 카운터를 사용합니다.|[SQL Server, 데이터베이스 복제본](../../../relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [SQL Server, Databases 개체](../../../relational-databases/performance-monitor/sql-server-databases-object.md)|  
   
-##  <a name="RelatedContent"></a> 관련 내용  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
   
 -   **동영상-Always On 소개:**  [Microsoft SQL Server 코드 이름 "Denali" Always On 시리즈, 1부: 차세대 고가용성 솔루션 소개](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   

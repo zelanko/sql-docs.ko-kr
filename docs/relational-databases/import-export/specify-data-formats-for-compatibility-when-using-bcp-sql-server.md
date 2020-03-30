@@ -18,10 +18,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d16b152bed2a0ed774ea443ada13201e4416f173
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055932"
 ---
 # <a name="specify-compatibility-data-formats-when-using-bcp-sql-server"></a>bcp를 사용하는 경우 호환 데이터 형식 지정(SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "74055932"
 >  데이터를 가져오거나 내보내기 위한 데이터 형식에 익숙하지 않은 경우 [대량 가져오기 또는 대량 내보내기를 위한 데이터 형식&#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)을 참조하세요.  
   
   
-##  <a name="bcpDataFormatAttr"></a> bcp 데이터 형식 특성  
+##  <a name="bcp-data-format-attributes"></a><a name="bcpDataFormatAttr"></a> bcp 데이터 형식 특성  
  **bcp** 명령을 사용하면 데이터 파일 내 각 필드의 구조를 다음 데이터 형식 특성에 따라 지정할 수 있습니다.  
   
 -   파일 스토리지 유형  
@@ -52,7 +52,7 @@ ms.locfileid: "74055932"
      문자 데이터 필드에서 필요에 따라 종료 문자를 사용하면 데이터 파일 내 각 필드( *필드 종결자*사용)와 행( *행 종결자*사용)의 끝을 표시할 수 있습니다. 종결 문자는 한 필드나 행이 끝나고 다른 필드나 행이 시작하는 부분을 표시하여 데이터 파일을 읽는 프로그램에 전달하는 한 방법입니다. 자세한 내용은 [필드 및 행 종결자 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)을 참조하세요.  
   
   
-##  <a name="FieldSpecificPrompts"></a> 필드별 프롬프트 개요  
+##  <a name="overview-of-the-field-specific-prompts"></a><a name="FieldSpecificPrompts"></a> 필드별 프롬프트 개요  
  대화형 **bcp** 명령에 **in** 또는 **out** 옵션은 있으나 서식 파일 스위치( **-f**)나 데이터 형식 스위치( **-n**, **-c**, **-w**또는 **-N**)는 없는 경우 원본 또는 대상 테이블의 각 열에 대해 명령에서 각 이전 특성을 지정하라는 메시지가 차례로 표시됩니다. **bcp** 명령은 각 메시지에서 테이블 열의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 따라 기본값을 제공합니다. 모든 메시지에서 기본값을 그대로 사용하면 명령줄에서 네이티브 형식( **-n**)을 지정한 것과 동일한 결과가 생성됩니다. 각 프롬프트에서 기본값은 [*default*]와 같이 대괄호에 묶여 표시됩니다. 표시된 기본값을 적용하려면 Enter 키를 누릅니다. 기본값 이외의 값을 지정하려면 프롬프트에서 새 값을 입력합니다.  
   
 ### <a name="example"></a>예제  
@@ -87,7 +87,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
  각 테이블 열에 대한 프롬프트(필요한 경우에만)가 순서대로 표시됩니다.  
   
   
-##  <a name="FieldByFieldNonXmlFF"></a> 비 XML 서식 파일에 필드 단위 데이터 저장  
+##  <a name="storing-field-by-field-data-in-a-non-xml-format-file"></a><a name="FieldByFieldNonXmlFF"></a> 비 XML 서식 파일에 필드 단위 데이터 저장  
  테이블 열이 모두 지정된 후 **bcp** 명령은 방금 입력한 필드 단위 정보를 저장할 비 XML 서식 파일을 필요에 따라 생성할지를 묻는 메시지를 표시합니다(이전 예 참조). 서식 파일 생성하도록 선택하면 해당 테이블에서 데이터를 내보내거나 구조가 비슷한 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 가져올 때마다 서식 파일을 생성할 수 있습니다.  
   
 > [!NOTE]  

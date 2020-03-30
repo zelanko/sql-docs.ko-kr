@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: d6f17b46cb396ee34133e67a528e22cab571cceb
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 57cd755c29262d64d7e5215c0ef053a28c5f3507
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288387"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79510204"
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ GO
 4. 관계형 엔진이 실행 계획을 실행하기 시작합니다. 기본 테이블의 데이터를 필요로 하는 단계가 처리될 때 관계형 엔진은 스토리지 엔진이 관계형 엔진에서 요청된 행 집합의 데이터를 무시하도록 요청합니다.
 5. 관계형 엔진은 스토리지 엔진에서 반환된 데이터를 결과 집합에 대해 정의된 서식으로 처리하고 클라이언트에 결과 집합을 반환합니다.
 
-### <a name="ConstantFolding"></a> 상수 폴딩 및 식 평가 
+### <a name="constant-folding-and-expression-evaluation"></a><a name="ConstantFolding"></a> 상수 폴딩 및 식 평가 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 일부 상수 식을 초기에 평가하여 쿼리 성능을 향상시킵니다. 이를 상수 폴딩이라고 합니다. 상수는 `3`, `'ABC'`, `'2005-12-31'`, `1.0e3` 또는 `0x12345678` 같은 [!INCLUDE[tsql](../includes/tsql-md.md)] 리터럴입니다.
 
 #### <a name="foldable-expressions"></a>폴딩 가능 식
@@ -181,7 +181,7 @@ WHERE TotalDue > 117.00 + 1000.00;
 
 반면 `dbo.f`가 스칼라 사용자 정의 함수인 경우에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용자 정의 함수가 포함된 식을 계산하지 않으므로 `dbo.f(100)` 식이 폴딩되지 않습니다. 사용자 정의 함수가 결정적 함수인 경우에도 마찬가지입니다. 매개 변수화에 대한 자세한 내용은 이 문서의 뒷부분에서 [강제 매개 변수화](#ForcedParam)를 참조하세요.
 
-#### <a name="ExpressionEval"></a>식 평가 
+#### <a name="expression-evaluation"></a><a name="ExpressionEval"></a>식 평가 
 뿐만 아니라 상수 폴딩 가능 식이 아니지만 해당 인수를 컴파일 시간에 알 수 없는 일부 식은 최적화 중 최적화 프로그램의 구성 요소인 결과 집합 크기(카디널리티) 평가자에 의해 평가됩니다. 이때 인수가 매개 변수인지 또는 상수인지 여부는 고려하지 않습니다.
 
 특히 기본 제공 함수 `UPPER`, `LOWER`, `RTRIM`, `DATEPART( YY only )`, `GETDATE`, `CAST` 및 `CONVERT`와 특수 연산자는 해당 입력을 모두 알 수 있는 경우 컴파일 시간에 평가됩니다. 다음 연산자도 해당 입력을 모두 알 수 있는 경우 컴파일 시간에 평가됩니다.
@@ -550,9 +550,9 @@ GO
 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------   -------   ---------   ---------   ------------------ ------------------ 
-0x000001CC6C534060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060        Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -573,9 +573,9 @@ GO
 계획 캐시에서 찾을 수 있는 항목을 다시 확인합니다. [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------   -------   ---------   ---------   ------------------ ------------------ 
-0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060        Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -599,10 +599,10 @@ GO
 계획 캐시에서 찾을 수 있는 항목을 다시 확인합니다. [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------   -------   ---------   ---------   ------------------ ------------------ 
-0x000001CD01DEC060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
-0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CD01DEC060        Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+0x000001CC6C534060        Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -690,7 +690,7 @@ sql_handle
 > [!NOTE]
 > `AUTO_UPDATE_STATISTICS` 데이터베이스 옵션을 `ON`으로 설정하면 마지막 실행 이후 통계가 업데이트되거나 카디널리티가 크게 변경된 테이블이나 인덱싱된 뷰를 대상으로 하는 쿼리가 모두 다시 컴파일됩니다. 이러한 동작은 일반 사용자 정의 테이블, 임시 테이블 및 DML 트리거로 생성된 삽입 테이블과 삭제 테이블에 적용됩니다. 과도한 재컴파일로 인해 쿼리 성능이 저하되면 이 설정을 `OFF`로 변경하세요. `AUTO_UPDATE_STATISTICS` 데이터베이스 옵션을 `OFF`로 설정하면 통계나 카디널리티 변경 내용에 따른 재컴파일은 발생하지 않습니다. 단, DML `INSTEAD OF` 트리거에 의해 생성되는 삽입 테이블과 삭제 테이블은 예외입니다. 두 테이블은 tempdb에 생성되므로 두 테이블에 액세스하는 쿼리의 다시 컴파일은 tempdb의 `AUTO_UPDATE_STATISTICS` 설정에 따라 결정됩니다. 2005 이전 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 이 설정이 `OFF`인 경우에도 DML 트리거에 의한 삽입 테이블과 삭제 테이블의 카디널리티 변경 내용에 따라 계속하여 쿼리가 다시 컴파일됩니다.
 
-### <a name="PlanReuse"></a> 매개 변수 및 실행 계획 재사용
+### <a name="parameters-and-execution-plan-reuse"></a><a name="PlanReuse"></a> 매개 변수 및 실행 계획 재사용
 ADO, OLE DB 및 ODBC 애플리케이션의 매개 변수 표식을 포함하여 매개 변수를 사용하면 실행 계획을 좀 더 많이 재사용할 수 있습니다. 
 
 > [!WARNING] 
@@ -758,7 +758,7 @@ WHERE AddressID = 1 + 2;
 
 그러나 단순 매개 변수화 규칙에 따르면 매개 변수화할 수 있습니다. 강제 매개 변수화를 시도한 후 실패하면 그 다음으로는 단순 매개 변수화를 시도합니다.
 
-### <a name="SimpleParam"></a> 단순 매개 변수화
+### <a name="simple-parameterization"></a><a name="SimpleParam"></a> 단순 매개 변수화
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 Transact-SQL 문에 매개 변수 또는 매개 변수 표식을 사용하여 새 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 이전에 컴파일된 기존의 실행 계획과 일치시키는 관계형 엔진의 성능을 향상시킵니다.
 
 > [!WARNING] 
@@ -793,7 +793,7 @@ WHERE ProductSubcategoryID = 4;
 
 또는 구문은 동일하고 매개 변수 값만 다른 쿼리 및 단일 쿼리를 매개 변수화하도록 지정할 수 있습니다. 
 
-### <a name="ForcedParam"></a> 강제 매개 변수화
+### <a name="forced-parameterization"></a><a name="ForcedParam"></a> 강제 매개 변수화
 데이터베이스의 모든 `SELECT`, `INSERT`, `UPDATE` 및 `DELETE` 문이 특정 제한에 따라 매개 변수화되도록 지정하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기본 단순 매개 변수화 동작을 재정의할 수 있습니다. 강제 매개 변수화는 `PARAMETERIZATION` 문에서 `FORCED` 옵션을 `ALTER DATABASE` 로 설정하면 적용됩니다. 강제 매개 변수화를 사용하여 쿼리 컴파일 및 재컴파일 빈도를 줄여 특정 데이터베이스의 성능을 향상시킬 수 있습니다. 일반적으로 POS(Point of Sale) 애플리케이션과 같은 원본으로부터 대량의 동시 쿼리를 처리하는 데이터베이스에서 강제 매개 변수화를 사용하면 도움이 될 수 있습니다.
 
 `PARAMETERIZATION` 옵션을 `FORCED`로 설정하면 임의의 형식으로 전송된 `SELECT`, `INSERT`, `UPDATE`또는 `DELETE` 문에 표시되는 리터럴 값이 쿼리 컴파일 중에 매개 변수로 변환됩니다. 그러나 다음 쿼리 구문에 나타나는 리터럴은 예외입니다. 
@@ -842,7 +842,7 @@ WHERE ProductSubcategoryID = 4;
 * 이진 리터럴은 리터럴 크기가 8,000바이트 내일 때는 varbinary(8000)로 매개 변수화되고 8,000바이트보다 클 때는 varbinary(max)로 변환됩니다.
 * 통화 유형 리터럴은 money로 매개 변수화됩니다.
 
-#### <a name="ForcedParamGuide"></a> 강제 매개 변수화 사용 지침
+#### <a name="guidelines-for-using-forced-parameterization"></a><a name="ForcedParamGuide"></a> 강제 매개 변수화 사용 지침
 `PARAMETERIZATION` 옵션을 FORCED로 설정할 때는 다음 사항을 고려해야 합니다.
 
 * 강제 매개 변수화를 적용하면 쿼리 컴파일 시 쿼리의 리터럴 상수가 매개 변수로 변경됩니다. 따라서 쿼리 최적화 프로그램에서는 만족스럽지 못한 쿼리 계획을 선택할 수 있습니다. 특히 쿼리 최적화 프로그램에서는 인덱싱된 뷰 또는 계산 열의 인덱스에 쿼리를 대응시키지 못할 수 있습니다. 또한 분할된 테이블 및 분산형 분할 뷰에 대해 만족스럽지 못한 쿼리 계획을 선택할 수도 있습니다. 계산 열의 인덱스 및 인덱싱된 뷰를 많이 사용하는 환경에서는 강제 매개 변수화를 사용하면 안 됩니다. 일반적으로 `PARAMETERIZATION FORCED` 옵션은 숙련된 데이터베이스 관리자가 성능에 영향을 주지 않는다는 것을 확인한 후에만 사용해야 합니다.
@@ -894,7 +894,7 @@ WHERE ProductID = 63;
 * 애플리케이션이 실행 계획이 만들어지고 재사용되는 시기를 제어할 수 있습니다.
 * 준비/실행 모델은 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 비롯한 다른 데이터베이스로 이식 가능합니다.
 
-### <a name="ParamSniffing"></a> 매개 변수 검색
+### <a name="parameter-sniffing"></a><a name="ParamSniffing"></a> 매개 변수 검색
 “매개 변수 검사”는 컴파일 또는 재컴파일을 수행하는 동안 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 현재 매개 변수 값을 “검사”하고 쿼리 최적화 프로그램에 전달하여 해당 값이 더욱 효율적인 쿼리 실행 계획을 생성하는 데 사용될 수 있도록 하는 프로세스를 나타냅니다.
 
 컴파일 또는 재컴파일을 수행하는 동안 다음 유형의 일괄 처리에 대해 매개 변수 값을 검사합니다.
@@ -903,7 +903,7 @@ WHERE ProductID = 63;
 -  sp_executesql을 통해 제출된 쿼리 
 -  준비된 쿼리
 
-잘못된 매개 변수 스니핑 문제 해결에 대한 자세한 내용은 [매개 변수가 중요한 쿼리 실행 계획 문제로 쿼리 문제 해결](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-problems)을 참조하세요.
+잘못된 매개 변수 스니핑 문제 해결에 대한 자세한 내용은 [매개 변수가 중요한 쿼리 실행 계획 문제로 쿼리 문제 해결](/azure/sql-database/sql-database-monitor-tune-overview)을 참조하세요.
 
 > [!NOTE]
 > `RECOMPILE` 힌트를 사용하는 쿼리는 매개 변수 값과 지역 변수의 현재 값을 모두 검사합니다. 검사되는 매개 변수 및 지역 변수 값은 `RECOMPILE` 힌트가 포함된 문 바로 앞에 있는 일괄 처리 위치의 값입니다. 특히 매개 변수의 경우 일괄 처리 호출과 함께 사용된 값은 검사하지 않습니다.
@@ -945,7 +945,7 @@ DOP(병렬 처리 수준)에 따라 사용되는 최대 CPU 수가 결정됩니�
 * 직렬 실행 계획이 특정 쿼리에 사용 가능한 병렬 실행 계획보다 더 빠릅니다.
 * 쿼리에 병렬로 실행할 수 없는 스칼라 또는 관계형 연산자가 포함되어 있습니다. 특정 연산자는 쿼리 계획의 한 섹션이 직렬 모드로 실행되도록 하거나 전체 계획이 직렬 모드로 실행되도록 할 수 있습니다.
 
-### <a name="DOP"></a> 병렬 처리 수준
+### <a name="degree-of-parallelism"></a><a name="DOP"></a> 병렬 처리 수준
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 병렬 쿼리 실행 또는 인덱스 DDL(데이터 정의 언어) 작업 각각의 인스턴스에 대해 가장 적합한 병렬 처리 수준이 자동으로 검색됩니다. 이것은 다음과 조건을 기준으로 수행됩니다. 
 
 1. SMP(대칭적 다중 처리) 컴퓨터와 같이 **둘 이상의 마이크로프로세서 또는 CPU가 있는 컴퓨터**에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 실행 중인지 여부. 두 개 이상의 CPU가 있는 컴퓨터에서만 병렬 쿼리를 사용할 수 있습니다. 
@@ -1285,12 +1285,12 @@ XML 실행 계획 출력에서`Partitions Accessed`는 새 `RuntimePartitionSumm
 
 또 다른 예로, 경계 포인트(10, 20, 30)가 있는 열 A에는 파티션 4개가 있고 열 B에는 인덱스가 있는 테이블과 조건자 절 `WHERE B IN (50, 100, 150)`을 갖는 쿼리가 있다고 가정합니다. 테이블 파티션은 A 값이 기준이기 때문에 B 값은 어느 테이블 파티션에서도 나타날 수 있습니다. 따라서 쿼리 프로세서는 4개의 각 테이블 파티션에서 3개의 B 값(50, 100, 150)을 각각 검색합니다. 쿼리 프로세서는 이러한 12개의 각 쿼리 검색을 병렬로 실행할 수 있도록 작업자 스레드를 균형 있게 할당합니다.
 
-|A 열을 기반으로 하는 테이블 파티션 |각 테이블 파티션에서 B 열 검색 |
+|A 열을 기반으로 하는 테이블 파티션    |각 테이블 파티션에서 B 열 검색 |
 |----|----|
-|테이블 파티션 1: A < 10   |B=50, B=100, B=150 |
-|테이블 파티션 2: A >= 10 및 A < 20   |B=50, B=100, B=150 |
-|테이블 파티션 3: A >= 20 및 A < 30   |B=50, B=100, B=150 |
-|테이블 파티션 4: A >= 30  |B=50, B=100, B=150 |
+|테이블 파티션 1: A < 10     |B=50, B=100, B=150 |
+|테이블 파티션 2: A >= 10 및 A < 20     |B=50, B=100, B=150 |
+|테이블 파티션 3: A >= 20 및 A < 30     |B=50, B=100, B=150 |
+|테이블 파티션 4: A >= 30     |B=50, B=100, B=150 |
 
 ### <a name="best-practices"></a>모범 사례
 
@@ -1374,7 +1374,7 @@ SET STATISTICS XML OFF;
 GO
 ```
 
-##  <a name="Additional_Reading"></a> 더 보기  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> 더 보기  
  [실행 계획 논리 및 물리 연산자 참조](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
  [확장 이벤트](../relational-databases/extended-events/extended-events.md)  
  [쿼리 저장소에 대한 모범 사례](../relational-databases/performance/best-practice-with-the-query-store.md)  

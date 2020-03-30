@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 0fc816325d4008d1913f0e07e3032677a0eddb4d
-ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77074431"
 ---
 # <a name="security-concepts-for-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]의 보안 개념
@@ -68,7 +68,7 @@ ms.locfileid: "77074431"
 데이터 풀과 통신하는 SQL 마스터 인스턴스처럼 모든 SQL Server-SQL Server 간 통신은 SQL 로그인을 사용하여 보호됩니다.
 
 > [!IMPORTANT]
->  빅 데이터 클러스터는 etcd를 사용하여 자격 증명을 저장합니다. 모범 사례로서, Kubernetes 클러스터가 etcd 암호화를 사용하도록 구성되어 있는지 확인해야 합니다. 기본적으로 etcd에 저장된 비밀은 암호화되지 않습니다. Kubernetes 설명서에서는 이 관리 작업 https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ 및 https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/에 대한 세부 정보를 제공합니다.
+>  빅 데이터 클러스터는 etcd를 사용하여 자격 증명을 저장합니다. 모범 사례로서, Kubernetes 클러스터가 etcd 암호화를 사용하도록 구성되어 있는지 확인해야 합니다. 기본적으로 etcd에 저장된 비밀은 암호화되지 않습니다. Kubernetes 설명서에서는 이 관리 작업 https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ 및 https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/ 에 대한 세부 정보를 제공합니다.
 
 
 ## <a name="basic-administrator-login"></a>기본 관리자 로그인

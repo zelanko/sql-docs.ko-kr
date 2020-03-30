@@ -35,10 +35,10 @@ ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8f7a42e7885e2c985cd8d0b65e336b912014c40f
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287567"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>유지 관리 계획 마법사 사용
@@ -46,7 +46,7 @@ ms.locfileid: "79287567"
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 유지 관리 계획 마법사를 사용하여 단일 서버 또는 다중 서버 유지 관리 계획을 만드는 방법에 대해 설명합니다. 유지 관리 계획 마법사는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 정기적으로 실행할 수 있는 유지 관리 계획을 만듭니다. 이를 통해 백업, 데이터베이스 무결성 확인 또는 지정된 간격으로 데이터베이스 통계 업데이트와 같은 다양한 데이터베이스 관리 태스크를 수행할 수 있습니다.  
     
  
-##  <a name="Restrictions"></a> 제한 사항  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   다중 서버 유지 관리 계획을 만들려면 하나의 마스터 서버 및 하나 이상의 대상 서버가 있는 다중 서버 환경을 구성해야 합니다. 다중 서버 유지 관리 계획은 마스터 서버에서 만들고 유지 관리해야 합니다. 대상 서버에서는 계획을 볼 수 있습니다.   
 
@@ -54,14 +54,14 @@ ms.locfileid: "79287567"
 
 유지 관리 계획, 데이터 컬렉션 집합 및 기타 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 때 이러한 권한 상승이 발생하지 않도록 하려면 패키지를 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업이 제한된 권한을 갖는 프록시 계정을 사용하도록 구성하거나 **db_ssisadmin** 및 **dc_admin** 역할에 **sysadmin** 멤버만 추가합니다.  
 
-##  <a name="Prerequisite"></a> 필수 조건 
+##  <a name="prerequisites"></a><a name="Prerequisite"></a> 필수 조건 
 [에이전트 XPs 서버 구성 옵션](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)을 사용하도록 설정해야 합니다.
   
   
-##  <a name="Permissions"></a> 권한  
+##  <a name="permissions"></a><a name="Permissions"></a> 권한  
  유지 관리 계획을 만들거나 관리하려면 **sysadmin** 고정 서버 역할의 멤버여야 합니다. 개체 탐색기에 **sysadmin** 고정 서버 역할의 멤버인 사용자에 대한 **유지 관리 계획** 노드만 표시됩니다.  
   
-##  <a name="SSMSProcedure"></a> 유지 관리 계획 마법사 사용  
+##  <a name="use-the-maintenance-plan-wizard"></a><a name="SSMSProcedure"></a> 유지 관리 계획 마법사 사용  
   
 **마법사 시작** 
 

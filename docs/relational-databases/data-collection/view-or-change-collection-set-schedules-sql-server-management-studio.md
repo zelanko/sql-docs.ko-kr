@@ -19,10 +19,10 @@ ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e38b03a9e903666593567bf34eaa50c578de6825
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055326"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>컬렉션 집합 일정 보기 또는 변경(SQL Server Management Studio)
@@ -99,7 +99,7 @@ ms.locfileid: "74055326"
   
 6.  **확인** 을 클릭하면 변경 내용이 저장되고 **데이터 컬렉션 집합 속성** 대화 상자가 닫힙니다.  
   
-####  <a name="CollectionSet"></a> 데이터 컬렉션 집합 속성 대화 상자  
+####  <a name="data-collection-set-properties-dialog-box"></a><a name="CollectionSet"></a> 데이터 컬렉션 집합 속성 대화 상자  
  **일반 페이지**  
   
  이 페이지를 사용하여 관리 데이터 웨어하우스에서 데이터를 수집하고 업로드하는 방법, 일정 및 데이터 보존 기간을 구성할 수 있습니다. 또한 이 페이지를 사용하면 수집기 유형과 컬렉션 빈도 같은 컬렉션 집합에 대한 정보뿐 아니라 컬렉션 집합에 사용되는 입력 매개 변수도 확인할 수 있습니다.  

@@ -13,10 +13,10 @@ ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0ac67de4831d1785f17029bc6c68fa6f7d8aeb16
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77147381"
 ---
 # <a name="url-access-parameter-reference"></a>URL 액세스 매개 변수 참조
@@ -29,7 +29,7 @@ ms.locfileid: "77147381"
 > SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
   
 
-##  <a name="bkmk_htmlviewer"></a> HTML 뷰어 명령(rc:)
+##  <a name="html-viewer-commands-rc"></a><a name="bkmk_htmlviewer"></a> HTML 뷰어 명령(rc:)
  - HTML 뷰어 명령은 HTML 뷰어를 대상 지정하는 데 사용되며 *rc:* 접두사가 붙음:
   
 -   **Toolbar**: 도구 모음을 표시하거나 숨깁니다. 이 매개 변수 값이 **false**이면 모든 나머지 옵션이 무시됩니다. 이 매개 변수를 생략하면 도구 모음이 지원하는 렌더링 형식에 맞게 자동으로 표시됩니다. 이 매개 변수의 기본값은 **true**입니다.
@@ -113,7 +113,7 @@ ms.locfileid: "77147381"
   
 -   **디바이스 정보 설정**: `rc:tag=value` 형식으로 디바이스 정보 설정을 지정합니다. 여기에서 *tag*는 현재 사용되는 렌더링 확장 프로그램별 디바이스 정보 설정의 이름입니다. *Format* 매개 변수에 대한 설명을 참조하세요. 예를 들어 URL 액세스 문자열에 다음 매개 변수를 사용하여 IMAGE 렌더링 확장 프로그램이 보고서를 JPEG 이미지로 렌더링할 수 있도록 *OutputFormat* 디바이스 정보 설정을 사용할 수 있습니다. `...&rs:Format=IMAGE&rc:OutputFormat=JPEG` 모든 확장 프로그램별 디바이스 정보 설정에 대한 자세한 내용은 [렌더링 확장 프로그램에 대한 디바이스 정보 설정&#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)을 참조하세요.
   
-##  <a name="bkmk_reportserver"></a> 보고서 서버 명령(rs:)
+##  <a name="report-server-commands-rs"></a><a name="bkmk_reportserver"></a> 보고서 서버 명령(rs:)
  보고서 서버 명령은 *rs:* 접두사가 추가되며 보고서 서버를 대상 지정하는 데 사용:
   
 -   **명령**: 해당 항목 유형에 따라 카탈로그 항목에 동작을 수행합니다. 기본값은 URL 액세스 문자열에 참조된 카탈로그 항목의 유형에 의해 결정됩니다. 유효한 값은 다음과 같습니다.
@@ -264,7 +264,7 @@ ms.locfileid: "77147381"
   
 -   **ShowHideToggle**: 보고서의 섹션의 표시/숨기기 상태를 토글합니다. 토글할 섹션을 나타내는 양의 정수를 지정합니다.
   
-##  <a name="bkmk_webpart"></a> 보고서 뷰어 웹 파트 명령(rv:)
+##  <a name="report-viewer-web-part-commands-rv"></a><a name="bkmk_webpart"></a> 보고서 뷰어 웹 파트 명령(rv:)
  다음 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 예약된 보고서 매개 변수 이름은 SharePoint와 통합된 보고서 뷰어 웹 파트를 대상 지정하는 데 사용됩니다. 이러한 매개 변수 이름은 접두사 *rv:* 로 시작합니다. 보고서 뷰어 웹 파트에는 *rs:ParameterLanguage* 매개 변수도 사용할 수 있습니다.
   
 -   **Toolbar**: 보고서 뷰어 웹 파트의 도구 모음 표시를 제어합니다. 기본값은 **Full**입니다. 값은
@@ -331,27 +331,27 @@ ms.locfileid: "77147381"
   
 -   **ToolBarItemsDisplayMode**: 도구 모음 항목 표시 여부를 제어합니다. 비트 열거 값입니다. 도구 모음 항목을 포함시키려면 합계 값에 항목의 값을 추가합니다. 예를 들어 **동작** 없음 메뉴의 경우 *rv:ToolBarItemsDisplayMode=63*(또는 0x3F)(1+2+4+8+16+32)을 사용하며, **동작** 메뉴 항목의 경우에만 *rv:ToolBarItemsDisplayMode=960*(또는 0x3C0)을 사용합니다. 기본값은 **-1**이며, 모든 도구 모음 항목을 포함합니다. 유효한 값은 다음과 같습니다.
   
-    -   **1 (0x1)**: **뒤로** 단추  
+    -   **1 (0x1)** : **뒤로** 단추  
   
-    -   **2 (0x2)**: 텍스트 검색 컨트롤  
+    -   **2 (0x2)** : 텍스트 검색 컨트롤  
   
-    -   **4 (0x4)**: 페이지 탐색 컨트롤  
+    -   **4 (0x4)** : 페이지 탐색 컨트롤  
   
-    -   **8 (0x8)**: **새로 고침** 단추  
+    -   **8 (0x8)** : **새로 고침** 단추  
   
-    -   **16 (0x10)**: **확대/축소** 목록 상자  
+    -   **16 (0x10)** : **확대/축소** 목록 상자  
   
-    -   **32 (0x20)**: **Atom 피드** 단추  
+    -   **32 (0x20)** : **Atom 피드** 단추  
   
-    -   **64 (0x40)**: **동작**의 **인쇄** 메뉴 옵션  
+    -   **64 (0x40)** : **동작**의 **인쇄** 메뉴 옵션  
   
-    -   **128 (0x80)**: **동작**의 **내보내기** 하위 메뉴  
+    -   **128 (0x80)** : **동작**의 **내보내기** 하위 메뉴  
   
-    -   **256 (0x100)**: **동작**의 **보고서 작성기로 열기** 메뉴 옵션  
+    -   **256 (0x100)** : **동작**의 **보고서 작성기로 열기** 메뉴 옵션  
   
-    -   **512 (0x200)**: **동작**의 **구독** 메뉴 옵션  
+    -   **512 (0x200)** : **동작**의 **구독** 메뉴 옵션  
   
-    -   **1024 (0x400)**: **동작**의 **새 데이터 경고** 메뉴 옵션  
+    -   **1024 (0x400)** : **동작**의 **새 데이터 경고** 메뉴 옵션  
   
      예를 들어 SharePoint 모드에서는 **뒤로** 단추, 텍스트 검색 컨트롤, 페이지 탐색 컨트롤 및 **새로 고침** 단추만 표시합니다.
   

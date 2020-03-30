@@ -14,10 +14,10 @@ ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b0bd7ad95fcda039c6fd5a9299f4339d35b8a619
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67564128"
 ---
 # <a name="reporting-services-configuration-files"></a>Reporting Services 구성 파일
@@ -34,7 +34,7 @@ ms.locfileid: "67564128"
   
 -   [구성 파일의 요약(SharePoint 모드)](#bkmk_config_file_Summary_sharepoint_mode)  
   
-##  <a name="bkmk_config_file_Summary_native_mode"></a> 구성 파일의 요약(기본 모드)  
+##  <a name="summary-of-configuration-files-native-mode"></a><a name="bkmk_config_file_Summary_native_mode"></a> 구성 파일의 요약(기본 모드)  
  다음 표에서는 구성 설정이 저장되는 위치에 대한 설명을 제공합니다. 대부분의 구성 설정은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 포함된 구성 파일에 저장됩니다. 기본적으로 설치 디렉터리는 다음과 같습니다.  
   
 ```
@@ -57,7 +57,7 @@ C:\Program Files\Microsoft SQL Server Reporting Services\SSRS
 |RSReportDesigner.config|보고서 디자이너에 대한 구성 설정을 저장합니다. 자세한 내용은 [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)을 참조하세요.|\<drive>:\Program Files \Microsoft Visual Studio 10 \Common7 \IDE \PrivateAssemblies.|  
 |RSPreviewPolicy.config|보고서 미리 보기 중에 사용되는 서버 확장 프로그램에 대한 코드 액세스 보안 정책을 저장합니다. 이 파일에 대한 자세한 내용은 [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)을 참조하세요.|C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssembliesr|  
   
-##  <a name="bkmk_config_file_Summary_sharepoint_mode"></a> 구성 파일의 요약(SharePoint 모드)  
+##  <a name="summary-of-configuration-files-sharepoint-mode"></a><a name="bkmk_config_file_Summary_sharepoint_mode"></a> 구성 파일의 요약(SharePoint 모드)  
  다음 표에서는 SharePoint 모드 보고서 서버에 사용되는 구성 파일에 대한 설명을 제공합니다. 대부분의 구성 설정은 SharePoint 서비스 애플리케이션 데이터베이스에 저장됩니다. 자세한 내용은 [Reporting Services SharePoint Service 및 서비스 애플리케이션](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)을 참조하세요.  
   
  기본적으로 SharePoint 모드의 설치 디렉터리는 다음과 같습니다.  
