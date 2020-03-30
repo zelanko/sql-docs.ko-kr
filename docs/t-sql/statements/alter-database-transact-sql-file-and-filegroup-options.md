@@ -44,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 0eae7e7f1a0a673138b58440ee9c5c8d0b6f20bc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: fe0605cdfd2d2cf341ff6ab51939fee2c78ae797
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75244434"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216280"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE(Transact-SQL) 파일 및 파일 그룹 옵션
 
@@ -78,7 +78,6 @@ ALTER DATABASE database_name
     <add_or_modify_files>
   | <add_or_modify_filegroups>
 }
-[;
 
 <add_or_modify_files>::=
 {
@@ -363,7 +362,7 @@ FILENAME에 새 위치를 지정하여 시스템 또는 사용자 정의 데이�
 
 데이터 파일을 즉시 초기화할 수 있습니다. 이를 통해 이와 같은 파일 작업을 신속히 실행할 수 있습니다. 자세한 내용은 [데이터베이스 파일 초기화](../../relational-databases/databases/database-instant-file-initialization.md)를 참조하세요.
 
-## <a name="removing-a-filestream-container"></a> FILESTREAM 컨테이너 제거
+## <a name="removing-a-filestream-container"></a><a name="removing-a-filestream-container"></a> FILESTREAM 컨테이너 제거
 
 "DBCC SHRINKFILE" 작업을 사용하여 FILESTREAM 컨테이너를 비웠어도 데이터베이스에서 여러 가지 시스템 유지 관리상의 이유로 삭제된 파일에 대한 참조를 보존해야 하는 경우가 있습니다. [sp_filestream_force_garbage_collection](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)은 안전하다고 판단되면 FILESTREAM 가비지 수집기를 실행하여 이러한 파일을 제거합니다. FILESTREAM 가비지 수집기가 FILESTREAM 컨테이너에서 모든 파일을 제거하지 않은 경우 FILESTREAM 컨테이너를 제거하기 위한 ALTER DATABASE REMOVE FILE 작업이 실패하고 오류를 반환합니다. 다음 프로세스를 사용하여 FILESTREAM 컨테이너를 제거하는 것이 좋습니다.
 

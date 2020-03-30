@@ -15,10 +15,10 @@ ms.assetid: 610ee7d9-4fea-4aba-9395-57add826923b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9280f92233909077afd0507c5c2de7b93467ccb1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71282053"
 ---
 # <a name="understanding-the-differences-between-local-and-remote-execution"></a>로컬 실행과 원격 실행의 차이점 이해

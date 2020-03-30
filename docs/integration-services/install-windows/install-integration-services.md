@@ -20,10 +20,10 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4f3dbfa81e52d050b3e5df46ea2ea5911a8b1254
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903690"
 ---
 # <a name="install-integration-services-ssis"></a>Integration Services(SSIS) 설치
@@ -48,9 +48,9 @@ ms.locfileid: "77903690"
 
 다음과 같은 구성으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 설치할 수 있습니다.
 
-- 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 없는 컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 설치할 수 있습니다.
+- 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 없는 컴퓨터에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치할 수 있습니다.
 
-- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 기존 인스턴스와 함께 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치할 수 있습니다.
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기존 인스턴스와 함께 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 설치할 수 있습니다.
 
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 이전 버전이 이미 설치되어 있는 컴퓨터에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 최신 버전으로 업그레이드하면 현재 버전이 이전 버전과 함께 설치됩니다.
 
@@ -73,11 +73,11 @@ Microsoft SQL Server가 아직 없는 경우 [SQL Server 다운로드](https://w
 - [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로그래밍에 대한 관리 어셈블리를 설치하려면 마찬가지로 **공유 기능** 아래에서 **클라이언트 도구 SDK**를 선택합니다.
 
 > [!NOTE]
-> 설치 마법사의 **기능 선택** 페이지에서 선택하여 설치할 수 있는 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 구성 요소의 일부분만 설치합니다. 이러한 구성 요소는 특정 태스크에 유용하지만 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 기능은 제한됩니다. 예를 들어 **데이터베이스 엔진 서비스** 옵션을 선택하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 가져오기 및 내보내기 마법사에 필요한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소가 설치됩니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 전체 설치하려면 **기능 선택** 페이지에서 **Integration Services** 를 선택해야 합니다.
+> 설치 마법사의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]기능 선택**페이지에서 선택하여 설치할 수 있는 일부** 구성 요소는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 구성 요소의 일부분만 설치합니다. 이러한 구성 요소는 특정 태스크에 유용하지만 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 기능은 제한됩니다. 예를 들어 **데이터베이스 엔진 서비스** 옵션을 선택하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 가져오기 및 내보내기 마법사에 필요한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소가 설치됩니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 전체 설치하려면 **기능 선택** 페이지에서 **Integration Services** 를 선택해야 합니다.
 
 ### <a name="installing-a-dedicated-server-for-etl-processes"></a>ETL 프로세스용 전용 서버 설치
 
-ETL(추출, 변환 및 로드) 프로세스에 전용 서버를 사용하려면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 설치할 때 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 로컬 인스턴스를 설치합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 일반적으로 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 패키지를 저장하며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 패키지를 예약합니다. ETL 서버에 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스가 없는 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스가 있는 서버에서 패키지를 예약 또는 실행해야 합니다. 결과적으로 패키지가 ETL 서버에서 실행되지 않고 해당 패키지가 시작된 서버에서 실행됩니다. 따라서 전용 ETL 서버의 리소스는 의도대로 사용되지 않습니다. 또한 다른 서버의 리소스가 실행 중인 ETL 프로세스에 의해 소모될 수 있습니다.
+ETL(추출, 변환 및 로드) 프로세스에 전용 서버를 사용하려면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]를 설치할 때 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 로컬 인스턴스를 설치합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 일반적으로 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 패키지를 저장하며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 패키지를 예약합니다. ETL 서버에 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스가 없는 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스가 있는 서버에서 패키지를 예약 또는 실행해야 합니다. 결과적으로 패키지가 ETL 서버에서 실행되지 않고 해당 패키지가 시작된 서버에서 실행됩니다. 따라서 전용 ETL 서버의 리소스는 의도대로 사용되지 않습니다. 또한 다른 서버의 리소스가 실행 중인 ETL 프로세스에 의해 소모될 수 있습니다.
 
 ### <a name="configuring-ssis-event-logging"></a>SSIS 이벤트 로깅 구성
 

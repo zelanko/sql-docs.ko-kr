@@ -17,10 +17,10 @@ ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 407e477be98f386adc27fc965b1d099d1dec4dfa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251230"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>트랜잭션 - Always On 가용성 그룹 및 데이터베이스 미러링
@@ -51,7 +51,7 @@ SQL Server 2016 SP1 이전 버전에서는 가용성 그룹에 대해 동일한 
   
 데이터베이스 미러링에는 데이터베이스 간 트랜잭션도 지원되지 않습니다.  
   
-##  <a name="dtcsupport"></a> SQL Server 2016 SP1 이전 버전: 분산 트랜잭션 지원  
+##  <a name="sql-server-2016-sp1-and-before-support-for-distributed-transactions"></a><a name="dtcsupport"></a> SQL Server 2016 SP1 이전 버전: 분산 트랜잭션 지원  
 데이터베이스가 다른 SQL Server 인스턴스에서 호스팅되는 경우 가용성 그룹에서 분산 트랜잭션이 지원됩니다. SQL Server 인스턴스와 다른 DTC 호환 서버 간의 분산 트랜잭션에도 적용됩니다.  
  
 MSDTC 또는 DTC(Microsoft Distributed Transaction Coordinator)는 분산 시스템에 대한 트랜잭션 인프라를 제공하는 Windows 서비스입니다. MSDTC는 클라이언트 애플리케이션이 한 트랜잭션에 여러 데이터 원본을 포함한 다음, 트랜잭션에 포함된 모든 서버에서 커밋할 수 있게 합니다. 예를 들어 MSDTC를 사용하여 서로 다른 서버의 여러 데이터베이스에 걸쳐 있는 트랜잭션을 조정할 수 있습니다.

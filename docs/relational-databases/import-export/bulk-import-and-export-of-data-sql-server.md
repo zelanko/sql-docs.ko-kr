@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 462df4c5acf09d5de57a237c8fd68e5a394fb0dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71680812"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>데이터 대량 가져오기 및 내보내기(SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "71680812"
 - *대량 내보내기* 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 데이터를 데이터 파일로 복사하는 것입니다.
 - *대량 가져오기* 는 데이터 파일에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로 데이터를 로드하는 것입니다. 예를 들어 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 애플리케이션의 데이터를 데이터 파일로 내보낸 다음 해당 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 대량으로 가져올 수 있습니다.
 
-## <a name="MethodsForBuliIE"></a> 데이터 대량 가져오기 및 내보내기 방법
+## <a name="methods-for-bulk-importing-and-exporting-data"></a><a name="MethodsForBuliIE"></a> 데이터 대량 가져오기 및 내보내기 방법
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 대량의 데이터를 내보내고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블이나 분할되지 않은 뷰로 대량의 데이터를 가져올 수 있습니다. 다음과 같은 기본 방법을 사용할 수 있습니다.
 
@@ -58,7 +58,7 @@ ms.locfileid: "71680812"
 > [!NOTE]
 > 구분된 파일을 내보내고 가져오는 경우 Azure SQL DW에서는 bcp 유틸리티만 지원됩니다.
 
-## <a name="FFs"></a> 서식 파일
+## <a name="format-files"></a><a name="FFs"></a> 서식 파일
 
 [bcp 유틸리티](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)및 [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 은 모두 데이터 파일의 각 필드에 대한 서식 정보를 저장하는 *서식 파일* 이라는 특수 파일 사용을 지원합니다. 또한 서식 파일에는 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 대한 정보가 포함되어 있습니다. 서식 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 데이터를 대량으로 내보내거나 SQL Server 인스턴스에서 데이터를 대량으로 가져올 때 필요한 모든 서식 정보를 제공할 수 있습니다.
 

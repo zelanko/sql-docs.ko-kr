@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0563510242e38e817c7fb01e4185241062feedf3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70978594"
 ---
 # <a name="expressions-transact-sql"></a>식(Transact-SQL)
@@ -98,7 +98,7 @@ ms.locfileid: "70978594"
 ## <a name="expression-results"></a>식 결과  
  단일 상수, 변수, 스칼라 함수, 열 이름, 데이터 정렬, 전체 자릿수, 소수 자릿수 및 식의 값으로 이루어진 단순 식은 데이터 형식, 데이터 정렬, 전체 자릿수, 소수 자릿수 및 참조된 요소의 값입니다.  
   
- 비교 연산자나 논리 연산자를 사용하여 두 식을 결합하면 결과 데이터 형식은 부울이 되며 값은 TRUE, FALSE 또는 UNKNOWN 중 하나가 됩니다. 부울 데이터 형식에 대한 자세한 내용은 [비교 연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)를 참조하세요.  
+ 두 식이 비교 연산자 또는 논리 연산자를 사용하여 결합되면, 결과 데이터 형식은 부울이고 값은 TRUE, FALSE 또는 UNKNOWN 중 하나입니다. 부울 데이터 형식에 대한 자세한 내용은 [비교 연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)를 참조하세요.  
   
  산술, 비트 또는 문자열 연산자를 사용하여 두 식을 결합하면 연산자에 따라 결과 데이터 형식이 결정됩니다.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "70978594"
   
  문자열로 평가되는 모든 식의 데이터 정렬은 선행 정렬 규칙에 따라 설정됩니다. 자세한 내용은 [데이터 정렬 선행 규칙&#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)을 참조하세요.  
   
- C 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]과 같은 프로그래밍 언어에서 식은 항상 단일 결과로 평가됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 선택 목록의 식은 이 규칙의 변형을 따릅니다. 식은 결과 집합의 각 행에 대해 개별적으로 평가됩니다. 단일 식은 결과 집합의 각 행에 서로 다른 값을 가질 수 있습니다. 그러나 각 행은 식에 대해 단 하나의 값만을 가집니다. 예를 들어 다음 `SELECT` 문에서 `ProductID`에 대한 참조와 선택 목록의 `1+2` 항목은 모두 식입니다.  
+ C 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]과 같은 프로그래밍 언어에서 식은 항상 단일 결과로 평가됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 목록의 식은 이 규칙의 변형을 따릅니다. 즉 식은 결과 집합의 각 행에 대해 개별적으로 평가됩니다. 단일 식은 결과 집합의 각 행에 서로 다른 값을 가질 수 있습니다. 그러나 각 행은 식에 대해 단 하나의 값만을 가집니다. 예를 들어 다음 `SELECT` 문에서 `ProductID`에 대한 참조와 선택 목록의 `1+2` 항목은 모두 식입니다.  
   
 ```  
 USE AdventureWorks2012;  

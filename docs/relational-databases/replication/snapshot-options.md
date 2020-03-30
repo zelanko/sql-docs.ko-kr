@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 9d44a77a95b8b6a46fbc37a21a8abbd5ee75dfce
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288827"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>SQL 복제에 대한 스냅샷 초기화 옵션 수정 
@@ -28,11 +28,11 @@ ms.locfileid: "79288827"
 [스냅샷으로 구독을 초기화](initialize-a-subscription-with-a-snapshot.md)할 때 지정할 수 있는 여러 옵션이 있습니다.
 
 ## <a name="specify-snapshot-format-sql-server-management-studio"></a>스냅샷 형식 지정(SQL Server Management Studio)
-  **게시 속성 - \<게시&gt;** 대화 상자의 **스냅샷** 페이지에서 스냅샷 형식을 지정합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
+  **게시 속성 -** 게시&gt; **대화 상자의 \<스냅샷** 페이지에서 스냅샷 형식을 지정합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 ### <a name="to-specify-snapshot-format"></a>스냅샷 형식을 지정하려면  
   
-1.  **게시 속성 - \<게시&gt;** 대화 상자의 **스냅샷** 페이지에서 **네이티브 SQL Server - 모든 구독자는 SQL Server를 실행하는 서버여야 합니다** 또는 **문자 - 게시자 또는 구독자가 SQL Server를 실행하지 않는 경우 필요합니다**를 선택합니다.  
+1.  **게시 속성 -** 게시&gt; **대화 상자의 \<스냅샷** 페이지에서 **네이티브 SQL Server - 모든 구독자는 SQL Server를 실행하는 서버여야 합니다** 또는 **문자 - 게시자 또는 구독자가 SQL Server를 실행하지 않는 경우 필요합니다**를 선택합니다.  
   
     > [!NOTE]  
     >  이 게시가 SQL Server Compact 데이터베이스 또는 SQL Server 이외의 데이터베이스에 대한 구독을 지원해야 하는 경우가 아니면 네이티브 형식을 선택하는 것이 좋습니다.  
@@ -44,11 +44,11 @@ ms.locfileid: "79288827"
 ### <a name="default-snapshot-location"></a>기본 스냅샷 위치
 배포 구성 마법사의 **스냅샷 폴더** 페이지에서 기본 스냅샷 위치를 지정합니다. 이 마법사 사용에 대한 자세한 내용은 [게시 및 배포 구성](../../relational-databases/replication/configure-publishing-and-distribution.md)을 참조하세요. 배포자로 구성되어 있지 않은 서버에서 게시를 만드는 경우 새 게시 마법사의 **스냅샷 폴더** 페이지에서 기본 스냅샷 위치를 지정합니다. 이 마법사를 사용하는 방법에 대한 자세한 내용은 [게시 만들기](../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
- **배포자 속성 - \<Distributor&gt;** 대화 상자의 **게시자** 페이지에서 기본 스냅샷 위치를 수정합니다. 자세한 내용은 [배포자 및 게시자 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)을 참조하세요. **게시 속성 - \<게시&gt;** 대화 상자에서 각 게시에 대한 스냅샷 폴더를 설정합니다. 자세한 내용은 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
+ **배포자 속성 -** Distributor&gt; **대화 상자의 \<게시자** 페이지에서 기본 스냅샷 위치를 수정합니다. 자세한 내용은 [배포자 및 게시자 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)을 참조하세요. **게시 속성 - \<게시&gt;** 대화 상자에서 각 게시에 대한 스냅샷 폴더를 설정합니다. 자세한 내용은 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 ### <a name="to-modify-the-default-snapshot-location"></a>기본 스냅샷 위치를 수정하려면  
   
-1.  **배포자 속성 - \<Distributor&gt;** 대화 상자의 **게시자** 페이지에서 기본 스냅샷 위치를 변경하려는 게시자의 속성 단추( **...** )를 클릭합니다.    
+1.  **배포자 속성 -** Distributor&gt; **대화 상자의 \<게시자** 페이지에서 기본 스냅샷 위치를 변경하려는 게시자의 속성 단추( **...** )를 클릭합니다.    
 2.  **게시자 속성 - \<Publisher&gt;** 대화 상자에서 **기본 스냅샷 폴더** 속성에 대한 값을 입력합니다.  
   
     > [!NOTE]  
@@ -70,7 +70,7 @@ ms.locfileid: "79288827"
 >  WebSync 및 대체 스냅샷 폴더 위치를 동시에 사용하지 마십시오.  
   
 #### <a name="use-sql-server-management-studio"></a>SQL Server Management Studio 사용
-1.  **게시 속성 - \<게시&gt;** 대화 상자의 **스냅샷** 페이지에서 다음을 수행합니다.  
+1.  **게시 속성 -** 게시&gt; **대화 상자의 \<스냅샷** 페이지에서 다음을 수행합니다.  
   
     1.  **다음 폴더에 파일 보관**을 선택한 다음 **찾아보기** 를 클릭하여 디렉터리로 이동하거나 스냅샷 파일을 저장할 디렉터리 경로를 입력합니다.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "79288827"
 >  스냅샷을 압축하면 네트워크에서의 스냅샷 파일 전송 성능이 향상되는 경우도 있습니다. 그러나 스냅샷 에이전트에서 스냅샷 파일을 생성하는 경우와 배포 에이전트 또는 병합 에이전트에서 스냅샷 파일을 적용하는 경우에 스냅샷 파일을 압축하려면 추가 처리 작업이 필요합니다. 이 경우 스냅샷 생성 속도가 느려지거나 스냅샷 적용 시간이 늘어날 수 있습니다. 또한 네트워크 오류가 발생하면 압축 스냅샷은 재개할 수 없으므로 불안정한 네트워크에서는 압축 스냅샷이 적합하지 않습니다. 네트워크에서 압축 스냅샷을 사용하는 경우 이러한 장단점을 신중하게 고려하여 균형을 맞추는 것이 좋습니다.  
   
 ### <a name="use-sql-server-management-studio"></a>SQL Server Management Studio 사용
-1.  **게시 속성 - \<게시&gt;** 대화 상자의 **스냅샷** 페이지에서 다음을 수행합니다.  
+1.  **게시 속성 -** 게시&gt; **대화 상자의 \<스냅샷** 페이지에서 다음을 수행합니다.  
   
     1.  **다음 폴더에 파일 보관**을 선택한 다음 **찾아보기** 를 클릭하여 디렉터리로 이동하거나 스냅샷 파일을 저장할 디렉터리 경로를 입력합니다.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "79288827"
 
 ### <a name="execute-a-script"></a>스크립트 실행 
 
-1.  **게시 속성 - \<게시&gt;** 대화 상자의 **스냅샷** 페이지에서 다음을 수행합니다.    
+1.  **게시 속성 -** 게시&gt; **대화 상자의 \<스냅샷** 페이지에서 다음을 수행합니다.    
     -   스냅샷이 적용되기 전에 실행할 스크립트를 지정하려면 **찾아보기** 를 클릭하여 스크립트로 이동하거나 **스냅샷 적용 전 다음 스크립트 실행** 입력란에 스크립트의 경로를 입력합니다.  
   
         > [!NOTE]  

@@ -15,10 +15,10 @@ ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 851b2aa7dfb7a3c492182840d7d57045a5a72e8a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252774"
 ---
 # <a name="set-up-login-accounts---database-mirroring-always-on-availability"></a>로그인 계정 설정 - 데이터베이스 미러링 또는 Always On 가용성 그룹
@@ -35,7 +35,7 @@ ms.locfileid: "75252774"
     > [!IMPORTANT]  
     >  보다 안전한 환경을 만들려면 각 서버 인스턴스에 대해 별도의 도메인 계정을 사용해 보십시오.  
   
-##  <a name="CreateLogin"></a> 다른 계정에 대해 로그인 만들기  
+##  <a name="create-a-login-for-a-different-account"></a><a name="CreateLogin"></a> 다른 계정에 대해 로그인 만들기  
  두 서버 인스턴스가 다른 계정으로 실행되는 경우 시스템 관리자는 CREATE LOGIN [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 서버 인스턴스마다 원격 인스턴스의 시작 서비스 계정에 대한 로그인을 만들 수 있습니다. 자세한 내용은 [CREATE LOGIN&#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)을 참조하세요.  
   
 > [!IMPORTANT]  
@@ -52,10 +52,10 @@ ms.locfileid: "75252774"
 > [!NOTE]  
 >  도메인 사용자 대신 컴퓨터 계정을 사용하여 네트워크 서비스 계정과 연결할 수 있습니다. 컴퓨터 계정을 사용하는 경우 다른 서버 인스턴스의 사용자로 추가해야 합니다.  
   
-##  <a name="GrantConnect"></a> 현재 권한 부여  
+##  <a name="grant-connect-permission"></a><a name="GrantConnect"></a> 현재 권한 부여  
  서버 인스턴스에 로그인을 만든 후에는 해당 로그인에 서버 인스턴스의 데이터베이스 미러링 엔드포인트에 연결할 권한을 부여해야 합니다. 시스템 관리자는 GRANT [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 CONNECT 권한을 부여합니다. 자세한 내용은 [GRANT&#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [로그인 만들기](../../relational-databases/security/authentication-access/create-a-login.md)  
   

@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9acdbdba5aec458640b61935bd4eb9d28497b4a7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74096053"
 ---
 # <a name="use-openjson-with-an-explicit-schema-sql-server"></a>명시적 스키마와 함께 JSON 사용(SQL Server)
@@ -62,7 +62,7 @@ WITH ( k1 int,
 |31|"32"|*NULL*|*NULL*|*NULL*|{"k1": 31, "k2": 32 }|  
 |41|*NULL*|*NULL*|false|{ "data": false }|{"k1": 41, "k2": null,       "k4": { "data": false }    }|  
   
-## <a name="example---load-json-into-a-includessnoversionincludesssnoversion-mdmd-table"></a>예 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 JSON 로드  
+## <a name="example---load-json-into-a-ssnoversion-table"></a>예 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 JSON 로드  
  다음 예에는 전체 JSON 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 로드합니다.  
   
 ```sql  

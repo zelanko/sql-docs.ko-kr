@@ -10,10 +10,10 @@ author: garyericson
 ms.author: garye
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 41e5f384878dfb284c31d6ba2886c9e223d03ca3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74479419"
 ---
 # <a name="get-r-package-information"></a>R 패키지 정보 가져오기
@@ -134,7 +134,7 @@ SQL Server Machine Learning Services 설치 프로그램을 사용할 때 MRO에
 
 ## <a name="list-all-installed-r-packages"></a>설치된 모든 R 패키지 나열
 
-다음 예제에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저의 R 함수 `installed.packages()`를 사용하여 현재 SQL 인스턴스에 대한 R_SERVICES 라이브러리에 설치된 R 패키지 목록을 표시합니다. 이 스크립트는 설명 파일에 패키지 이름 및 버전 필드를 반환합니다.
+다음 예제에서는 `installed.packages()` 저장 프로시저의 R 함수 [!INCLUDE[tsql](../../includes/tsql-md.md)]를 사용하여 현재 SQL 인스턴스에 대한 R_SERVICES 라이브러리에 설치된 R 패키지 목록을 표시합니다. 이 스크립트는 설명 파일에 패키지 이름 및 버전 필드를 반환합니다.
 
 ```sql
 EXECUTE sp_execute_external_script

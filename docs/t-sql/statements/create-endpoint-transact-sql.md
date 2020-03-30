@@ -32,10 +32,10 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0a320b01433ad95f4bd695a3f700b7e7bb9ba653
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67902829"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT(Transact-SQL)
@@ -53,7 +53,7 @@ ms.locfileid: "67902829"
   
      이 부분에서는 엔드포인트에서 지원되는 페이로드를 정의합니다. 지원되는 페이로드 유형인 [!INCLUDE[tsql](../../includes/tsql-md.md)], Service Broker, 데이터베이스 미러링 중에서 하나를 정의할 수 있습니다. 또한 이 부분에는 언어별 정보도 포함됩니다.  
   
-> **참고:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서는 네이티브 XML 웹 서비스(SOAP/HTTP 엔드포인트)가 제거되었습니다.  
+> **참고:** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서는 네이티브 XML 웹 서비스(SOAP/HTTP 엔드포인트)가 제거되었습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -138,7 +138,7 @@ FOR DATABASE_MIRRORING (
  FOR { TSQL | SERVICE_BROKER | DATABASE_MIRRORING }  
  페이로드 유형을 지정합니다.  
   
- 현재 `<language_specific_arguments>` 매개 변수에 전달할 [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 관련 인수는 없습니다.  
+ 현재 [!INCLUDE[tsql](../../includes/tsql-md.md)] 매개 변수에 전달할 `<language_specific_arguments>` 언어 관련 인수는 없습니다.  
   
  **TCP 프로토콜 옵션**  
   

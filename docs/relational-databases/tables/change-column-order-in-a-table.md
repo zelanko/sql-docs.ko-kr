@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d59f36bc315f6adf62d2ce8f09be4a1bb57bf428
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72452894"
 ---
 # <a name="change-column-order-in-a-table"></a>테이블에서 열 순서 변경
@@ -37,7 +37,7 @@ ms.locfileid: "72452894"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-change-the-column-order"></a>열 순서를 변경하려면  
   
@@ -47,7 +47,7 @@ ms.locfileid: "72452894"
   
 3.  테이블 내에 다른 위치로 열을 끌어 놓습니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **열 순서를 변경하려면**  
   
  Transact-SQL 문을 사용하여 이 작업을 지원하지 않습니다.  

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: fd44673ce62d74349e83b09b020c9e20ab6957de
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70155803"
 ---
 # <a name="format-transact-sql"></a>FORMAT(Transact-SQL)
@@ -199,7 +199,7 @@ CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format
  (5 row(s) affected)  
 ```  
   
-### <a name="ExampleD"></a> 4. 시간 데이터 형식이 포함된 FORMAT
+### <a name="d-format-with-time-data-types"></a><a name="ExampleD"></a> 4. 시간 데이터 형식이 포함된 FORMAT
 
  이러한 경우 `.` 및 `:`가 이스케이프되지 않으므로 FORMAT에서 NULL을 반환합니다.  
   
