@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf54565115df53dc7d502f48aad68f9974adebd0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67909695"
 ---
 # <a name="indexes-on-computed-columns"></a>계산 열의 인덱스
@@ -115,7 +115,7 @@ COLUMNPROPERTY 함수의 **IsPrecise** 속성은 *computed_column_expression* �
 > [!NOTE]
 > 데이터베이스 호환성 수준이 90 이상으로 설정된 경우 ANSI_WARNINGS를 ON으로 설정하면 암시적으로 ARITHABORT가 ON으로 설정됩니다.  
   
-## <a name="BKMK_persisted"></a> 지속형 계산 열에 인덱스 만들기  
+## <a name="creating-indexes-on-persisted-computed-columns"></a><a name="BKMK_persisted"></a> 지속형 계산 열에 인덱스 만들기  
 
 경우에 따라 아직 결정적이지만 정확하지 않은 식으로 정의된 계산된 열을 만들 수 있습니다. 열이 CREATE TABLE 또는 ALTER TABLE 문에서 PERSISTED로 표시되는 경우 이를 수행할 수 있습니다.
 

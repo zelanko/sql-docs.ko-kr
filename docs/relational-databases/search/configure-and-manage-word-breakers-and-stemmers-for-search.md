@@ -22,10 +22,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 393b6e248962fa496dcdac9fe5def556b766a2bd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056257"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리(SQL Server)
@@ -53,7 +53,7 @@ SQL Server에서 지원하는 모든 언어에 대해 제공되는 단어 분리
 SELECT * FROM sys.fulltext_languages
 ```
 
-##  <a name="register"></a> 등록된 단어 분리기 목록 가져오기
+##  <a name="get-the-list-of-registered-word-breakers"></a><a name="register"></a> 등록된 단어 분리기 목록 가져오기
 
 전체 텍스트 검색에서 언어에 대한 단어 분리기를 사용하려면 단어 분리기가 등록되어 있어야 합니다. 단어 분리기가 등록되면 형태소 분석기, 의미 없는 단어(중지 단어) 및 동의어 사전 파일과 같은 관련 언어의 리소스도 전체 텍스트 인덱싱 및 쿼리 작업에 사용할 수 있습니다.
 
@@ -69,7 +69,7 @@ GO
 ## <a name="if-you-add-or-remove-a-word-breaker"></a>단어 분리기를 추가 또는 제거하는 경우  
 단어 분리기를 추가, 제거 또는 변경한 경우에는 전체 텍스트 인덱싱 및 쿼리에서 지원되는 Microsoft Windows LCID(로캘 ID) 목록을 새로 고쳐야 합니다. 자세한 내용은 [등록된 필터와 단어 분리기 보기 및 변경](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)을 참조하세요.  
   
-##  <a name="default"></a> 기본 전체 텍스트 언어 옵션 설정  
+##  <a name="set-the-default-full-text-language-option"></a><a name="default"></a> 기본 전체 텍스트 언어 옵션 설정  
  지역화된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전의 경우 일치하는 언어가 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 **default full-text language** 옵션을 서버 언어로 설정합니다. 지역화되지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전의 경우 **default full-text language** 옵션이 영어입니다.  
   
  전체 텍스트 인덱스를 만들거나 변경할 때는 각 전체 텍스트 인덱싱된 열마다 다른 언어를 지정할 수 있습니다. 열에 언어를 지정하지 않으면 기본적으로 구성 옵션 **default full-text language**의 값이 사용됩니다.  
@@ -77,7 +77,7 @@ GO
 > [!NOTE]  
 >  쿼리에 LANGUAGE 옵션을 지정하지 않은 경우 하나의 전체 텍스트 쿼리 함수 절에 있는 모든 열은 동일한 언어를 사용해야 합니다. 쿼리 중인 전체 텍스트 인덱싱된 열의 언어에 따라 전체 텍스트 쿼리 조건자([CONTAINS](../../t-sql/queries/contains-transact-sql.md) 및 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)) 및 함수([CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 및 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md))의 인수에 대해 수행되는 언어 분석이 결정됩니다.  
   
-##  <a name="lang"></a> 인덱싱된 열에 대한 언어 선택  
+##  <a name="choose-the-language-for-an-indexed-column"></a><a name="lang"></a> 인덱싱된 열에 대한 언어 선택  
  전체 텍스트 인덱스를 만들 때는 각 인덱싱된 열에 대해 언어를 지정하는 것이 좋습니다. 열에 언어를 지정하지 않으면 시스템 기본 언어가 사용됩니다. 열의 언어에 따라 해당 열을 인덱싱하는 데 사용되는 단어 분리기와 형태소 분석기가 결정됩니다. 또한 지정된 언어의 동의어 사전 파일이 해당 열에 대한 전체 텍스트 쿼리에 사용됩니다.  
   
  전체 텍스트 인덱스를 만들기 위해 열 언어를 선택할 때 고려할 몇 가지 사항이 있습니다. 이러한 고려 사항은 전체 텍스트 엔진으로 텍스트를 토큰화한 다음 인덱싱하는 방법과 관련이 있습니다. 자세한 내용은 [전체 텍스트 인덱스 생성 시 언어 선택](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)을 참조하세요.  
@@ -90,7 +90,7 @@ SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
 
 추가 옵션 및 추가 정보는 [sys.fulltext_index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)를 참조하세요.
 
-##  <a name="tshoot"></a> 단어 분리 시간 초과 오류 해결  
+##  <a name="troubleshoot-word-breaking-time-out-errors"></a><a name="tshoot"></a> 단어 분리 시간 초과 오류 해결  
  단어 분리 시간 초과 오류는 다양한 상황에서 발생할 수 있습니다. 이러한 상황과 각 상황에서의 대처 방법에 대한 자세한 내용은 [MSSQLSERVER_30053](../errors-events/mssqlserver-30053-database-engine-error.md)을 참조하세요.
 
 ### <a name="info-about-the-mssqlserver_30053-error"></a>MSSQLSERVER_30053 오류에 대한 정보
@@ -130,7 +130,7 @@ SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
 |필터 데몬 프로세스 구성이 올바르지 않은 경우|현재 암호를 사용 중이고 도메인 정책에서 필터 데몬 계정 로그온을 차단하고 있는지 확인하십시오.|  
 |서버에서 실행되는 쿼리 작업의 양이 너무 많은 경우|부하를 줄여 쿼리를 다시 실행하십시오.|  
 
-##  <a name="impact"></a> 업데이트된 단어 분리기의 영향 이해  
+##  <a name="understand-the-impact-of-updated-word-breakers"></a><a name="impact"></a> 업데이트된 단어 분리기의 영향 이해  
  각 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 일반적으로 더욱 효과적인 언어 규칙이 있고 이전 단어 분리기보다 정확한 차세대 단어 분리기가 포함되어 있습니다. 경우에 따라 새로운 단어 분리기가 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 가져온 전체 텍스트 인덱스의 단어 분리기와 약간 다르게 동작할 수도 있습니다.
  
 이는 데이터베이스를 현재 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 업그레이드한 상태에서 전체 텍스트 카탈로그를 가져온 경우에 중요합니다. 이제 전체 텍스트 카탈로그의 전체 텍스트 인덱스에서 사용되는 하나 이상의 언어를 새로운 단어 분리기와 연결할 수 있습니다. 자세한 내용은 [전체 텍스트 검색 업그레이드](../../relational-databases/search/upgrade-full-text-search.md)를 참조하세요.  

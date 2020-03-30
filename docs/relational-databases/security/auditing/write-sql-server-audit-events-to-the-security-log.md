@@ -16,10 +16,10 @@ ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0c998b4d5ed5988d5a5e2a01bf0cbd611157f665
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68095098"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>보안 로그에 SQL Server Audit 이벤트 쓰기  
@@ -41,17 +41,17 @@ Windows 감사 정책은 Windows 보안 로그에 기록하도록 구성된 경�
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 시스템이 보안 로그에 이벤트를 기록할 수 없다는 것을 감지하지 못하고 따라서 감사 이벤트가 손실될 수 있습니다.  
 -   시스템 관리자가 보안 로그를 수정하면 로깅 동작이 정상으로 돌아옵니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 컴퓨터 관리자는 도메인 정책이 보안 로그에 대한 로컬 설정을 덮어쓸 수 있다는 점을 유의해야 합니다. 이 경우에 도메인 정책은 하위 범주 설정을 덮어쓸 수 있습니다(**auditpol /get /subcategory:"application generated"** ). 이는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 감사하려는 이벤트가 기록되지 않는다는 점을 감지할 필요 없이 이벤트를 로깅할 수 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 기능에 영향을 미칠 수 있습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  이러한 설정을 구성하려면 Windows 관리자여야 합니다.  
   
-##  <a name="auditpolAccess"></a> Windows에서 auditpol을 사용하여 감사 개체 액세스 설정을 구성하려면  
+##  <a name="to-configure-the-audit-object-access-setting-in-windows-using-auditpol"></a><a name="auditpolAccess"></a> Windows에서 auditpol을 사용하여 감사 개체 액세스 설정을 구성하려면  
   
 1.  관리자 권한으로 명령 프롬프트를 엽니다.  
   
@@ -67,7 +67,7 @@ Windows 감사 정책은 Windows 보안 로그에 기록하도록 구성된 경�
   
 3.  명령 프롬프트 창을 닫습니다.  
   
-##  <a name="secpolAccess"></a> secpol을 사용하여 계정에 보안 감사 생성 권한을 부여하려면  
+##  <a name="to-grant-the-generate-security-audits-permission-to-an-account-using-secpol"></a><a name="secpolAccess"></a> secpol을 사용하여 계정에 보안 감사 생성 권한을 부여하려면  
   
 1.  Windows 운영 체제의 **시작** 메뉴에서 **실행**을 클릭합니다.  
   
@@ -87,7 +87,7 @@ Windows 감사 정책은 Windows 보안 로그에 기록하도록 구성된 경�
   
 9. 이 설정을 사용하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 다시 시작합니다.  
   
-##  <a name="secpolPermission"></a> Windows에서 secpol을 사용하여 감사 개체 액세스 설정을 구성하려면  
+##  <a name="to-configure-the-audit-object-access-setting-in-windows-using-secpol"></a><a name="secpolPermission"></a> Windows에서 secpol을 사용하여 감사 개체 액세스 설정을 구성하려면  
   
 1.  운영 체제가 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 또는 Windows Server 2008 이전 버전인 경우 **시작** 메뉴에서 **실행**을 클릭합니다.  
   

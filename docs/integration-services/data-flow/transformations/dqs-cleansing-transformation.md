@@ -17,10 +17,10 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1c3ccadbe443ca555e5386ea3d3434405ae97461
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291475"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS 정리 변환
@@ -74,13 +74,13 @@ ms.locfileid: "71291475"
   
 -   [DQS 정리 연결 관리자 대화 상자에서 옵션 설정](#manager)  
   
-###  <a name="open"></a> DQS 정리 변환 편집기 열기  
+###  <a name="open-the-dqs-cleansing-transformation-editor"></a><a name="open"></a> DQS 정리 변환 편집기 열기  
   
 1.  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에서 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]패키지에 DQS 정리 변환을 추가합니다.  
   
 2.  구성 요소를 마우스 오른쪽 단추로 클릭한 다음 **편집**을 클릭합니다.  
   
-###  <a name="connection"></a> 연결 관리자 탭에서 옵션 설정  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> 연결 관리자 탭에서 옵션 설정  
  **데이터 품질 연결 관리자**  
  목록에서 기존 DQS 연결 관리자를 선택하거나 **새로 만들기**를 클릭하여 새 연결을 만듭니다.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "71291475"
   
 -   **행 리디렉션**- 입력 데이터가 Data Quality Services 데이터베이스에 삽입되지 않고 오류 출력으로 리디렉션되었음을 나타냅니다.  
   
-###  <a name="mapping"></a> 매핑 탭에서 옵션 설정  
+###  <a name="set-options-on-the-mapping-tab"></a><a name="mapping"></a> 매핑 탭에서 옵션 설정  
  복합 도메인에 열을 매핑하는 방법은 [Map Columns to Composite Domains](../../../integration-services/data-flow/transformations/map-columns-to-composite-domains.md)을 참조하십시오.  
   
  **사용 가능한 입력 열**  
@@ -134,7 +134,7 @@ ms.locfileid: "71291475"
  **상태 별칭**  
  수정된 데이터에 대한 상태 정보가 들어 있는 열을 나열합니다. 열 이름을 수정할 필드를 클릭합니다.  
   
-###  <a name="advanced"></a> 고급 탭에서 옵션 설정  
+###  <a name="set-options-on-the-advanced-tab"></a><a name="advanced"></a> 고급 탭에서 옵션 설정  
  **출력 표준화**  
  도메인에 대해 정의된 출력 형식을 기반으로 표준화된 형식으로 데이터를 출력할지 여부를 나타냅니다. 표준화된 형식에 대한 자세한 내용은 [데이터 정리](../../../data-quality-services/data-cleansing.md)를 참조하세요.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "71291475"
  **추가된 데이터 스키마**  
  데이터 스키마를 출력할지 여부를 나타냅니다. 자세한 내용은 [참조 데이터에 도메인 또는 복합 도메인 연결](../../../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)을 참조하세요.  
   
-###  <a name="manager"></a> DQS 정리 연결 관리자 대화 상자에서 옵션 설정  
+###  <a name="set-the-options-in-the-dqs-cleansing-connection-manager-dialog-box"></a><a name="manager"></a> DQS 정리 연결 관리자 대화 상자에서 옵션 설정  
  **서버 이름**  
  연결할 DQS 서버의 이름을 선택하거나 입력합니다. 서버에 대한 자세한 내용은 [DQS Administration](../../../data-quality-services/dqs-administration.md)를 참조하십시오.  
   

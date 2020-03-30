@@ -14,10 +14,10 @@ ms.assetid: 52ad504d-2f54-44de-b5e2-620577c0e289
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c312bd28a56dd3a22596e61b0612591a0a1a2712
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71289899"
 ---
 # <a name="gt-greater-than-or-equal-to-ssis-expression"></a>&gt;=(크거나 같음)(SSIS 식)
