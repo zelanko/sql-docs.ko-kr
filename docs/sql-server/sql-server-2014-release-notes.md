@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 94175594fe2539320941b5a83c1a7aa4b127783f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "70155684"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
@@ -115,7 +115,7 @@ SQL Server 2014 SP1은 CU 5를 포함하여 SQL Server 2014 CU 1에서 제공하
   
 **해결 방법:** [SQL Server 2014 기능 팩 다운로드 페이지](https://go.microsoft.com/fwlink/?LinkID=306709)에서 올바른 버전을 다운로드하고 설치합니다.  
   
-### <a name="ProdDoc"></a>제품 설명서 RTM
+### <a name="product-documentation-rtm"></a><a name="ProdDoc"></a>제품 설명서 RTM
   
 일부 언어에서 보고서 작성기 및 PowerPivot 콘텐츠를 사용할 수 없습니다. 
 
@@ -148,7 +148,7 @@ SQL Server 2014 SP1은 CU 5를 포함하여 SQL Server 2014 CU 1에서 제공하
   
 **해결 방법:** 없음  
   
-### <a name="DBEngine"></a>데이터베이스 엔진(RTM)
+### <a name="database-engine-rtm"></a><a name="DBEngine"></a>데이터베이스 엔진(RTM)
   
 #### <a name="changes-made-for-standard-edition-in-sql-server-2014-rtm"></a>SQL Server 2014 RTM의 Standard Edition에 대한 변경 사항  
 SQL Server 2014 Standard의 변경 사항은 다음과 같습니다.  
@@ -288,7 +288,7 @@ DATEPART(weekday, @d)
   
     `update` sysdac_history_internal `set` instance_id = '\<3단계의 값\>' `where` \<업데이트할 행과 일치하는 식\>  
   
-### <a name="SSRS"></a>Reporting Services(RTM)
+### <a name="reporting-services-rtm"></a><a name="SSRS"></a>Reporting Services(RTM)
   
 #### <a name="the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>SQL Server 2012 Reporting Services 기본 모드 보고서 서버가 SQL Server 2014 Reporting Services SharePoint 구성 요소와 함께 실행될 수 없음  
 **문제:** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 구성 요소가 동일한 서버에 설치되어 있으면 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기본 모드 Windows 서비스 ‘SQL Server Reporting Services’(ReportingServicesService.exe)가 시작되지 않습니다.  
@@ -334,7 +334,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 자세한 내용은 [SQL Server 2014 Reporting Services 팁, 요령 및 문제 해결](https://go.microsoft.com/fwlink/?LinkID=391254)을 참조하십시오.  
   
-### <a name="AzureVM"></a>Azure Virtual Machines의 SQL Server 2014 RTM  
+### <a name="sql-server-2014-rtm-on-azure-virtual-machines"></a><a name="AzureVM"></a>Azure Virtual Machines의 SQL Server 2014 RTM  
   
 #### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-azure"></a>Azure에서 가용성 그룹 수신기를 구성하면 Azure 복제본 추가 마법사에서 오류를 반환함  
 **문제:** 가용성 그룹에 수신기가 있는 경우 Azure에서 수신기를 구성하려고 하면 Azure 복제본 추가 마법사에서 오류를 반환합니다.  
@@ -349,7 +349,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 2.  마법사가 완료된 후 [Azure에서 AlwaysOn 가용성 그룹을 위한 수신기 구성](https://msdn.microsoft.com/library/dn376546.aspx)에 설명된 대로 Azure에서 수신기의 구성을 완료해야 합니다.  
   
-### <a name="SSAS"></a>Analysis Services(RTM)
+### <a name="analysis-services-rtm"></a><a name="SSAS"></a>Analysis Services(RTM)
   
 #### <a name="msolap5-must-be-downloaded-installed-and-registered-for-a-sharepoint-2010-new-farm-configured-with-sql-server-2014"></a>SQL Server 2014에서 구성된 새로운 SharePoint 2010 팜에 대해 MSOLAP.5를 다운로드 및 설치하고 등록해야 함  
 **문제:**  
@@ -394,7 +394,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 -    통합 문서에 대한 데이터 새로 고침 일정을 업데이트할 때 새로 고침 일정의 직렬화된 길이가 원래 일정의 직렬화된 길이보다 짧은 경우 버퍼 크기가 제대로 업데이트되지 않고 새 일정 정보가 이전 일정 정보와 병합되어 일정이 손상됩니다.  
   
-### <a name="DQS"></a>Data Quality Services(RTM)
+### <a name="data-quality-services-rtm"></a><a name="DQS"></a>Data Quality Services(RTM)
   
 #### <a name="no-cross-version-support-for-data-quality-services-in-master-data-services"></a>MDS(Master Data Services)의 Data Quality Services에 대한 버전 간 지원 없음  
 **문제:** 다음과 같은 시나리오는 지원되지 않습니다.  
@@ -405,7 +405,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **해결 방법:** 데이터베이스 엔진 데이터베이스 및 Data Quality Services와 동일한 버전의 MDS(Master Data Services)를 사용합니다.  
   
-### <a name="UA"></a>업그레이드 관리자 문제(RTM)
+### <a name="upgrade-advisor-issues-rtm"></a><a name="UA"></a>업그레이드 관리자 문제(RTM)
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>SQL Server 2014 업그레이드 관리자가 SQL Server Reporting Services에 대해 관련이 없는 업그레이드 문제를 보고함  
 **문제:** SQL Server 2014 미디어에 포함된 SSUA(SQL Server 업그레이드 관리자)가 SQL Server Reporting Services 서버를 분석할 때 여러 오류를 잘못 보고합니다.  

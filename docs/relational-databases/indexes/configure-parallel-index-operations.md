@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 627fa6a19c88507034bfbd8a7236b94e17242851
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908123"
 ---
 # <a name="configure-parallel-index-operations"></a>병렬 인덱스 작업 구성
@@ -48,9 +48,9 @@ ms.locfileid: "72908123"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   쿼리 최적화 프로그램에서 사용하는 프로세서 수는 대개 최적의 성능을 제공합니다. 그러나 매우 큰 인덱스를 생성, 다시 작성 및 삭제하는 작업에서는 리소스가 많이 소모되므로 인덱스 작업 중 다른 애플리케이션 및 데이터베이스 작업에 사용할 리소스가 부족할 수 있습니다. 이 문제가 발생하면 인덱스 작업에 사용할 프로세서 수를 제한하여 인덱스 문 실행에 사용되는 최대 프로세서 수를 직접 구성할 수 있습니다.  
   
@@ -78,10 +78,10 @@ ms.locfileid: "72908123"
   
 -   쿼리 최적화 프로그램에서 작성 작업에 병렬 처리 수준을 적용할 경우 정렬이 필요한 분할 인덱스 작업의 메모리 요구 사항이 늘어날 수 있습니다. 병렬 처리 수준이 높을수록 메모리 요구 사항이 늘어납니다. 자세한 내용은 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)을 참조하세요.  
   
-###  <a name="Security"></a> <a name="Permissions"></a> 권한  
+###  <a name="permissions"></a><a name="Security"></a> <a name="Permissions"></a> 권한  
  테이블 또는 보기에 대한 `ALTER` 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-index"></a>인덱스에 대한 최대 병렬 처리 수준을 설정하려면  
   
@@ -101,7 +101,7 @@ ms.locfileid: "72908123"
   
 8.  **확인**을 클릭합니다.  
 
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-existing-index"></a>기존 인덱스에 대한 최대 병렬 처리 수준을 설정하려면  
   

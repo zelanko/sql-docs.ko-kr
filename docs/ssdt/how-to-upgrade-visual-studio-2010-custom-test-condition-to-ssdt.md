@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 333ef282fe4e1f9d7af53cd3569371e88018a03f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75251069"
 ---
 # <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>방법: 이전 릴리스의 Visual Studio 2010 사용자 지정 테스트 조건을 SQL Server Data Tools로 업그레이드
@@ -27,7 +27,7 @@ SQL Server Data Tools 이전 버전에서 만든 단위 테스트 조건을 사�
   
 -   [업그레이드한 테스트 조건 설치](#ApplytheNewRegistrationProcess)  
   
-## <a name="UpdateReferences"></a>참조 업데이트  
+## <a name="update-references"></a><a name="UpdateReferences"></a>참조 업데이트  
 프로젝트 참조를 업데이트하려면  
   
 1.  Visual Basic에서만 **솔루션 탐색기**의 **모든 파일 표시**를 클릭합니다.  
@@ -81,7 +81,7 @@ SQL Server Data Tools 이전 버전에서 만든 단위 테스트 조건을 사�
   
 이제 해당 테스트 조건에서는 SQL Server 단위 테스트 어셈블리 참조를 사용합니다.  
   
-## <a name="UpdateClassAttributesandTypeReference"></a>클래스 특성 및 형식 참조 업데이트  
+## <a name="update-class-attributes-and-type-references"></a><a name="UpdateClassAttributesandTypeReference"></a>클래스 특성 및 형식 참조 업데이트  
 이전 단위 테스트 클래스 특성을 새 특성으로 바꿉니다. SQL Server 단위 테스트 확장성은 이제 MEF(Managed Extensibility Framework)를 기반으로 합니다. 일부 형식 참조도 업데이트해야 합니다.  
   
 ### <a name="update-class-attributes"></a>클래스 특성 업데이트  
@@ -128,7 +128,7 @@ SQL Server 단위 테스트 프레임워크에서는 일부 형식 이름이 변
 |-----------------|-----------------|  
 |`ExecutionResult`|`SqlExecutionResult`|  
   
-## <a name="ApplytheNewRegistrationProcess"></a>업그레이드한 테스트 조건 설치  
+## <a name="install-the-upgraded-test-condition"></a><a name="ApplytheNewRegistrationProcess"></a>업그레이드한 테스트 조건 설치  
 이전 버전의 데이터베이스 단위 테스트에서는 테스트 조건을 전역 어셈블리 캐시에 설치하거나 어셈블리 정보를 포함하는 XML 파일을 만들어야 했습니다. SQL Server 단위 테스트를 사용할 경우 이 추가 프로세스가 더 이상 필요하지 않습니다. 자세한 내용은 [프로젝트 컴파일 및 테스트 조건 설치](../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md#xxx)를 참조하세요.  
   
 참조를 업데이트한 후에는 어셈블리가 서명되고 컴파일되었는지 확인합니다.  

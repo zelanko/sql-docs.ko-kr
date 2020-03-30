@@ -11,10 +11,10 @@ ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2b9979f7d82ef153ed3c447b5d47bf7424ca9443
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75608032"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>ODBC 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
@@ -65,7 +65,7 @@ ms.locfileid: "75608032"
 
 연결 문자열을 제공하면 마법사에서 데이터 원본에 연결하는 데 사용할 모든 연결 정보(예: 서버 및 데이터베이스 이름 및 인증 방법)가 **데이터 원본 선택** 또는 **대상 선택** 페이지에 표시됩니다. DSN을 제공하면 이 정보가 표시되지 않습니다.
 
-## <a name="odbc_dsn"></a> 옵션 1 - DSN 제공
+## <a name="option-1---provide-a-dsn"></a><a name="odbc_dsn"></a> 옵션 1 - DSN 제공
 연결 정보에 DSN(데이터 원본 이름)을 제공하려면 **ODBC 데이터 원본 관리자** 애플릿을 사용하여 기존 DSN의 이름을 찾거나 새 DSN을 만듭니다.
 1.  시작 메뉴 또는 제어판에서 **ODBC 데이터 원본(64비트)** 애플릿을 검색하거나 찾습니다. 32비트 드라이버만 있거나 32비트 드라이버를 사용해야 하는 경우 **ODBC 데이터 원본(32비트)** 을 대신 검색하거나 찾아봅니다.
 2.  애플릿을 시작합니다. **ODBC 데이터 원본 관리자** 창이 열립니다. 애플릿의 모양은 다음과 같습니다.
@@ -88,7 +88,7 @@ ms.locfileid: "75608032"
     
 8.  마법사로 돌아가서 **데이터 원본 선택** 또는 **대상 선택** 페이지의 **Dsn** 필드에서 DSN 이름을 입력합니다. 마법사의 다음 단계를 계속 진행합니다.
 
-## <a name="odbc_connstring"></a> 옵션 2 - 연결 문자열 제공
+## <a name="option-2---provide-a-connection-string"></a><a name="odbc_connstring"></a> 옵션 2 - 연결 문자열 제공
 연결 정보를 연결 문자열에 제공하려면 이 항목의 나머지 부분이 필요한 연결 문자열을 가져오는 데 도움이 됩니다.
 
 이 예에서는 Microsoft SQL Server에 연결하는 다음 연결 문자열을 사용합니다. 사용되는 데이터베이스 예제는 **WideWorldImporters**이며, 로컬 머신의 SQL Server에 연결합니다.

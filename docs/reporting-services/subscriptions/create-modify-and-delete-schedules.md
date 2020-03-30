@@ -21,10 +21,10 @@ ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 29b453914dce3d371ded8f401fd4af0380a115b8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140220"
 ---
 # <a name="create-modify-and-delete-schedules"></a>일정 만들기, 수정 및 삭제
@@ -52,7 +52,7 @@ ms.locfileid: "67140220"
 
 만료된 보고서별 일정은 보고서에 연결된 상태로 남아 있습니다. 종료 날짜를 확인하면 일정이 만료되었는지 알 수 있습니다. 만료된 공유 일정은 공유 일정 목록에 남아 있습니다. 상태 필드는 일정이 만료되었는지 여부를 나타냅니다. 종료 날짜를 연장하여 일정을 복원할 수 있으며 더 이상 필요 없는 경우 일정 참조를 제거할 수 있습니다.
 
-## <a name="bkmk_native"></a> 공유 일정 만들기, 삭제 또는 수정(웹 포털)
+## <a name="create-delete-or-modify-a-shared-schedule-web-portal"></a><a name="bkmk_native"></a> 공유 일정 만들기, 삭제 또는 수정(웹 포털)
  일정을 만들고 수정할 때는 일정 실행 시기를 결정하는 빈도 옵션을 설정해야 합니다.
 
  일정은 언제든지 만들거나 수정할 수 있습니다. 그러나 수정을 마치기 전에 일정이 실행되기 시작하면 이전 버전의 일정이 사용됩니다. 수정된 일정을 저장해야 변경 내용이 적용됩니다.
@@ -114,7 +114,7 @@ ms.locfileid: "67140220"
 
  여러 보고서 및 구독에 사용되는 공유 일정을 삭제하면 보고서 서버는 공유 일정을 사용하던 각 보고서 및 구독에 대해 개별적인 일정을 만듭니다. 각 개별 일정에는 공유 일정에 지정되었던 날짜, 시간 및 되풀이 패턴이 포함됩니다.
 
-##  <a name="bkmk_sharepoint"></a>공유 일정 만들기 및 관리(SharePoint 모드)
+##  <a name="create-and-manage-shared-schedules-sharepoint-mode"></a><a name="bkmk_sharepoint"></a>공유 일정 만들기 및 관리(SharePoint 모드)
  SharePoint 사이트에서 공유 일정을 만들거나, 수정하거나, 삭제하려면 사이트 관리자여야 합니다.
 
  설명이 포함된 이름으로 특정 일정을 식별할 수 있습니다. 이름이 지정되어 있지 않으면 되풀이 패턴이나 실행 날짜 및 시간과 같은 일정 정보를 기반으로 기본 이름이 생성됩니다.

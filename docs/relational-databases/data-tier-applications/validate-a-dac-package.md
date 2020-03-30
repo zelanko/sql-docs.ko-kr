@@ -16,10 +16,10 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7df5bb3b2ef677e597d12dad8b8d92ddbb22fcba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908243"
 ---
 # <a name="validate-a-dac-package"></a>DAC 패키지 유효성 검사
@@ -30,10 +30,10 @@ ms.locfileid: "72908243"
   
 2.  **DAC를 업그레이드하려면 다음을 사용합니다.**  [DAC 내용 보기](#ViewDACContents), [데이터베이스 변경 내용 보기](#ViewDBChanges), [업그레이드 동작 보기](#ViewUpgradeActions), [DAC 비교](#CompareDACs)  
 
-##  <a name="Prerequisites"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
  출처를 알 수 없거나 신뢰할 수 없는 DAC 패키지는 배포하지 않는 것이 좋습니다. 이러한 DAC에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마를 수정하여 오류가 발생할 수 있습니다. 출처를 알 수 없거나 신뢰할 수 없는 DAC를 사용하기 전에 격리된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 테스트 인스턴스에 이를 배포하고, 해당 데이터베이스에 대해 [DBCC CHECKDB&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)를 실행하며, 저장 프로시저 또는 다른 사용자 정의 코드 같은 데이터베이스의 코드도 검사하세요.  
   
-##  <a name="ViewDACContents"></a> DAC 내용 보기  
+##  <a name="view-the-contents-of-a-dac"></a><a name="ViewDACContents"></a> DAC 내용 보기  
  데이터 계층 애플리케이션(DAC) 패키지의 내용을 볼 수 있는 두 가지 메커니즘이 있습니다. SQL Server Developer Tools의 DAC 프로젝트로 DAC 패키지를 가져올 수 있습니다. 두 번째는 패키지 내용을 폴더에 압축을 푸는 것입니다.  
   
  **SQL Server Developer Tools에서 DAC 보기**  
@@ -60,7 +60,7 @@ ms.locfileid: "72908243"
   
 -   메모장 같은 도구에서 텍스트 파일의 내용 보기  
   
-##  <a name="ViewDBChanges"></a> 데이터베이스 변경 내용 보기  
+##  <a name="view-database-changes"></a><a name="ViewDBChanges"></a> 데이터베이스 변경 내용 보기  
  현재 버전의 DAC를 프로덕션 환경에 배포한 이후에 연결된 데이터베이스를 직접 변경하여 새 버전의 DAC에 정의된 스키마와 충돌할 수 있습니다. 따라서 새 버전의 DAC로 업그레이드하기 전에 데이터베이스가 그런 식으로 변경되었는지 확인하세요.  
   
  **마법사를 사용하여 데이터베이스 변경 내용 보기**  
@@ -105,7 +105,7 @@ $dacName  = "MyApplication"
 $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DACScripts\MyApplicationChanges.txt  
 ```  
   
-##  <a name="ViewUpgradeActions"></a> 업그레이드 동작 보기  
+##  <a name="view-upgrade-actions"></a><a name="ViewUpgradeActions"></a> 업그레이드 동작 보기  
  새 버전의 DAC 패키지를 사용하여 이전 DAC 패키지에서 배포된 DAC를 업그레이드하기 전에 업그레이드 동안 실행할 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 포함된 보고서를 생성한 다음 문을 검토할 수 있습니다.  
   
  **마법사를 사용하여 업그레이드 동작 보고**  
@@ -162,7 +162,7 @@ $dacstore.GetIncrementalUpgradeScript($dacName, $dacType) | Out-File -Filepath C
 $fileStream.Close()  
 ```  
   
-##  <a name="CompareDACs"></a> Compare DACs  
+##  <a name="compare-dacs"></a><a name="CompareDACs"></a> Compare DACs  
  DAC를 업그레이드하기 전에 데이터베이스와 인스턴스 수준 개체에서 현재와 새 DAC의 차이를 검토하는 것이 좋습니다. 현재 DAC의 패키지 복사본이 없는 경우에는 현재 데이터베이스에서 패키지를 추출할 수 있습니다.  
   
  두 DAC 프로젝트를 SQL Server Developer Tools의 DAC 프로젝트로 가져오면 스키마 비교 도구를 사용하여 두 DAC 간의 차이점을 분석할 수 있습니다.  

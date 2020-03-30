@@ -21,17 +21,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0e94bdcf4770190d3d84986b511996213fac17f9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68702829"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>NEAR를 사용하여 근접 단어 검색
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 조건자 또는 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 함수에서 ‘근접 단어’ **NEAR**를 사용하여 단어나 구를 검색할 수 있습니다.  
   
-##  <a name="Custom_NEAR"></a> NEAR 개요  
+##  <a name="overview-of-near"></a><a name="Custom_NEAR"></a> NEAR 개요  
 **NEAR**에는 다음과 같은 기능이 포함되어 있습니다.  
 -   첫 번째 검색 단어와 마지막 검색 단어를 분리하는 검색 대상이 아닌 단어의 최대 수를 지정할 수 있습니다.
 
@@ -129,7 +129,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
   
  NEAR와 생성 용어(ISABOUT ...) 또는 가중치 용어(FORMSOF ...)를 결합할 수 없습니다.  
   
-##  <a name="Additional_Considerations"></a> 근접 검색에 대한 추가 정보  
+##  <a name="more-info-about-proximity-searches"></a><a name="Additional_Considerations"></a> 근접 검색에 대한 추가 정보  
    
 -   검색 단어가 겹쳐서 나타남  
   

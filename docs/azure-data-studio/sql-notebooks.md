@@ -4,18 +4,18 @@ titleSuffix: Azure Data Studio
 description: Azure Data Studio에서 SQL Notebook을 사용하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: achatter; alayu; maghan; sstein
+ms.reviewer: achatter; alayu; maghan; mikeray
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.custom: seodec18
 ms.date: 06/28/2019
-ms.openlocfilehash: b2651dd2d95f0fb8b5aba37b1d755bc26a781dde
-ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
+ms.openlocfilehash: 0cefd49b539c967a77faaa566fce9958182cc5df
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77575413"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448446"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Azure Data Studio에서 Notebook을 사용하는 방법
 
@@ -32,14 +32,14 @@ Azure Data Studio에서 F1 키를 누른 다음, **새 연결**을 클릭하여 
 
 새 Notebook을 시작하는 방법에는 여러 가지가 있습니다.
 
-1. Azure Data Studio에서 **파일 메뉴**로 이동한 다음, **새 Notebook**을 클릭합니다.
+* Azure Data Studio에서 **파일 메뉴**로 이동한 다음, **새 Notebook**을 클릭합니다.
 
     ![image3](media/sql-notebooks/file-new-notebook.png)
 
-2. **SQL Server** 연결을 마우스 오른쪽 단추로 클릭하고 **새 Notebook**을 시작합니다. 
+* **SQL Server** 연결을 마우스 오른쪽 단추로 클릭하고 **새 Notebook**을 시작합니다.
     ![image3](media/sql-notebooks/server-new-notebook.png)
 
-3. 명령 팔레트(**Ctrl+Shift+P**)를 열고 **새 Notebook**을 입력합니다. `Notebook-1.ipynb`라는 새 파일이 열립니다.
+* 명령 팔레트(**Ctrl+Shift+P**)를 열고 **새 Notebook**을 입력합니다. `Notebook-1.ipynb`라는 새 파일이 열립니다.
 
 ## <a name="supported-kernels-and-attach-to-context"></a>지원되는 커널 및 컨텍스트에 연결
 

@@ -15,10 +15,10 @@ ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 7f4d77bba168f84b42aab0884369cf834af3779d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68099236"
 ---
 # <a name="move-a-workload-group"></a>작업 그룹 이동
@@ -29,16 +29,16 @@ ms.locfileid: "68099236"
   
 -   **작업 그룹을 이동하려면 다음을 사용합니다.**  [SQL Server Management Studio](#MoveWGSSMS), [Transact-SQL](#MoveWGTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
  보류 중인 리소스 관리자 구성 작업이 있으면 작업 그룹을 이동할 수 없습니다.  
   
-###  <a name="LimitationsRestrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 제한 사항  
  보류 중인 리소스 관리자 구성 작업이 있으면 작업 그룹을 이동할 수 없습니다. [sys.dm_resource_governor_configuration&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) 동적 관리 뷰를 쿼리해 is_configuration_pending의 현재 상태를 가져와서 보류 중인 구성이 있는지 여부를 확인할 수 있습니다.  
   
-###  <a name="Permissions"></a> 권한  
+###  <a name="permissions"></a><a name="Permissions"></a> 권한  
  작업 그룹을 이동하려면 CONTROL SERVER 권한이 필요합니다.  
   
-##  <a name="MoveWGSSMS"></a> SQL Server Management Studio를 사용하여 작업 그룹 이동  
+##  <a name="move-a-workload-group-using-sql-server-management-studio"></a><a name="MoveWGSSMS"></a> SQL Server Management Studio를 사용하여 작업 그룹 이동  
  **다음을 사용하여 작업 그룹을 이동하려면 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**  
   
 1.  개체 탐색기에서 **리소스 관리자** 까지 **관리**노드를 계속 확장합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "68099236"
   
 7.  리소스 풀이나 작업 그룹의 생성 또는 재구성 작업이 실패하면 속성 페이지의 제목 아래에 요약 오류 메시지가 표시됩니다. 자세한 오류 메시지를 보려면 오류 메시지에 있는 아래쪽 화살표를 클릭하세요.  
   
-##  <a name="MoveWGTSQL"></a> Transact-SQL을 사용하여 작업 그룹 이동  
+##  <a name="move-a-workload-group-using-transact-sql"></a><a name="MoveWGTSQL"></a> Transact-SQL을 사용하여 작업 그룹 이동  
  **Transact-SQL을 사용하여 작업 그룹을 이동하려면**  
   
 1.  이동할 작업 그룹 및 이동 대상 리소스 풀의 이름을 지정하여 **ALTER WORKLOAD GROUP** 문을 실행합니다.  

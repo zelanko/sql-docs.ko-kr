@@ -22,10 +22,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 86702d159d3cc658a3c2e9e31477cca80f1eb6cc
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79112450"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE(Transact-SQL)
@@ -418,7 +418,7 @@ WITH
      );
 ```
 
-### <a name="i-create-an-external-table-for-oracle"></a>9. Oracle용 외부 테이블 만들기
+### <a name="i-create-an-external-table-for-oracle"></a>9\. Oracle용 외부 테이블 만들기
 
 ```sql
   -- Create a Master Key

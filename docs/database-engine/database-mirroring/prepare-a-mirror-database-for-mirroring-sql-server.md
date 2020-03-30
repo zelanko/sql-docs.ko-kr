@@ -16,10 +16,10 @@ ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f93ea5a9b37abcfac0310619b971e3ec5f1e625f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75255976"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>미러 데이터베이스의 미러링 준비(SQL Server)
@@ -46,9 +46,9 @@ ms.locfileid: "75255976"
   
 -   [관련 작업](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Requirements"></a> 요구 사항  
+###  <a name="requirements"></a><a name="Requirements"></a> 요구 사항  
   
 -   주 서버와 미러 서버 인스턴스가 같은 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행되고 있어야 합니다. 미러 서버에 상위 버전의 SQL Server가 있을 수 있지만 이 구성은 세심하게 계획된 업그레이드 프로세스 중에만 권장됩니다. 이 구성에서 자동 장애 조치(failover)가 발생할 수 있습니다. 이 경우 데이터를 하위 버전의 SQL Server로 옮길 수 없으므로 데이터 이동이 자동으로 중지됩니다. 자세한 내용은 [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)을 참조하세요.  
   
@@ -64,13 +64,13 @@ ms.locfileid: "75255976"
   
 -   미러 데이터베이스를 만들려는 시스템에 미러 데이터베이스를 저장할 공간이 충분한 디스크 드라이브가 있어야 합니다.  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   **master**, **msdb**, **temp**또는 **model** 시스템 데이터베이스는 미러링할 수 없습니다.  
   
 -   [Always On 가용성 그룹](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)에 속한 데이터베이스는 미러링할 수 없습니다.  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   주 데이터베이스의 아주 최근 전체 데이터베이스 백업 또는 최근 차등 데이터베이스 백업을 사용합니다.  
   
@@ -87,22 +87,22 @@ ms.locfileid: "75255976"
   
 -   프로덕션 데이터베이스의 경우에는 항상 별도의 디바이스에 백업해야 합니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
  데이터베이스를 백업하면 TRUSTWORTHY가 OFF로 설정됩니다. 따라서 새 미러 데이터베이스의 TRUSTWORTHY는 항상 OFF입니다. 장애 조치(Failover) 후 데이터베이스를 신뢰할 수 있어야 하는 경우에는 추가 설정 단계가 필요합니다. 자세한 내용은 [Trustworthy 속성을 사용하도록 미러 데이터베이스 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)에 미러 데이터베이스를 준비하는 방법에 대해 설명합니다.  
   
  미러 데이터베이스의 데이터베이스 마스터 키 자동 암호 해독을 설정하는 방법은 [암호화된 미러 데이터베이스 설정](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)을 참조하세요.  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  데이터베이스 소유자 또는 시스템 관리자입니다.  
   
-##  <a name="PrepareToRestartMirroring"></a> 미러링을 다시 시작하기 위해 기존 미러 데이터베이스를 준비하려면  
+##  <a name="to-prepare-an-existing-mirror-database-to-restart-mirroring"></a><a name="PrepareToRestartMirroring"></a> 미러링을 다시 시작하기 위해 기존 미러 데이터베이스를 준비하려면  
  미러링이 제거되었고 미러 데이터베이스가 아직 RECOVERING 상태인 경우 미러링을 다시 시작할 수 있습니다.  
   
 1.  주 데이터베이스에서 하나 이상의 로그 백업을 수행합니다. 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)데이터베이스를 새 위치로 복원하고 선택적으로 데이터베이스 이름을 바꾸는 방법을 설명합니다.  
   
 2.  미러 데이터베이스에서 RESTORE WITH NORECOVERY를 사용하여, 미러링이 제거된 후에 주 데이터베이스에서 수행한 모든 로그 백업을 복원합니다. 자세한 내용은 [트랜잭션 로그 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)에 미러 데이터베이스를 준비하는 방법에 대해 설명합니다.  
   
-##  <a name="CombinedProcedure"></a> 새 미러 데이터베이스를 준비하려면  
+##  <a name="to-prepare-a-new-mirror-database"></a><a name="CombinedProcedure"></a> 새 미러 데이터베이스를 준비하려면  
  **미러 데이터베이스를 준비하려면**  
   
 > [!NOTE]  
@@ -137,7 +137,7 @@ ms.locfileid: "75255976"
   
     -   [트랜잭션 로그 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  데이터베이스 미러링 세션이 시작되기 전에 미러 데이터베이스를 만들어야 합니다. 이 작업은 미러링 세션을 시작하기 직전에 수행해야 합니다.  
   
  이 예에서는 기본적으로 단순 복구 모델을 사용하는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스를 사용합니다.  
@@ -237,7 +237,7 @@ ms.locfileid: "75255976"
   
  보안 설정 표시, 미러 데이터베이스 준비, 파트너 설정 및 미러링 모니터 서버 추가 등의 작업을 수행하는 전체 예제는 [데이터베이스 미러링 설정&#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)에 미러 데이터베이스를 준비하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 미러 데이터베이스를 준비한 후  
+##  <a name="follow-up-after-preparing-a-mirror-database"></a><a name="FollowUp"></a> 후속 작업: 미러 데이터베이스를 준비한 후  
   
 1.  대부분의 최근 RESTORE LOG 작업을 수행한 이후 추가 로그 백업이 수행된 경우 RESTORE WITH NORECOVERY를 사용하여 모든 추가 로그 백업을 수동으로 적용해야 합니다.  
   
@@ -247,7 +247,7 @@ ms.locfileid: "75255976"
   
 4.  장애 조치(Failover) 후 데이터베이스를 신뢰할 수 있어야 하는 경우에는 미러링이 시작된 다음 추가 설정 단계가 필요합니다. 자세한 내용은 [Trustworthy 속성을 사용하도록 미러 데이터베이스 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)에 미러 데이터베이스를 준비하는 방법에 대해 설명합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   

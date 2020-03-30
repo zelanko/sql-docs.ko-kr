@@ -11,10 +11,10 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ba61e7cc35d9cd0a0f63e3e2f89980b12c6904d5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74833576"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure의 SQL Server 데이터 파일
@@ -109,7 +109,7 @@ ON
 - Azure 가상 머신에서 실행 중인 SQL Server: [Azure Virtual Machine에 SQL Server](https://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1)를 설치하는 경우 SQL Server 2016을 설치하거나 기존 인스턴스를 업데이트합니다. 이와 마찬가지로 SQL Server 2016 플랫폼 이미지를 사용하여 Azure에서 새 가상 머신을 만들 수도 있습니다.
 
   
-###  <a name="bkmk_Limitations"></a> 제한 사항  
+###  <a name="limitations"></a><a name="bkmk_Limitations"></a> 제한 사항  
   
 - 이 기능의 현재 릴리스에서는 Azure Storage에 **FileStream** 데이터를 저장할 수 없습니다. Azure Storage에 저장된 데이터 파일도 포함하는 데이터베이스에 **FileStream**을 저장할 수 있지만, 모든 FileStream 데이터 파일은 로컬 스토리지에 저장해야 합니다.  FileStream 데이터는 로컬 스토리지에 있어야 하므로 Azure Storage를 통해 머신 간에 이동할 없습니다. 따라서 여러 머신 간에 FileStream와 연결된 데이터를 이동하는 데는 [기존 기술](../../relational-databases/blob/move-a-filestream-enabled-database.md)을 사용하는 것이 좋습니다.  
   
@@ -154,7 +154,7 @@ ON
 
 - **sys.master_files** 시스템 뷰의 새로운 **int**열 **credential_id** . **credential_id** 열은 Azure Storage 데이터 파일이 생성된 자격 증명에 대한 `sys.credentials`를 다시 상호 참조할 수 있도록 설정하는 데 사용됩니다. 이 열을 문제 해결에 사용할 수 있습니다. 예를 들어 이 열을 사용하는 데이터베이스 파일이 있는 경우 자격 증명을 삭제할 수 없습니다.  
   
-##  <a name="bkmk_Troubleshooting"></a> Microsoft Azure의 SQL Server 데이터 파일 문제 해결  
+##  <a name="troubleshooting-for-sql-server-data-files-in-microsoft-azure"></a><a name="bkmk_Troubleshooting"></a> Microsoft Azure의 SQL Server 데이터 파일 문제 해결  
  지원되지 않는 기능 또는 제한 때문에 발생하는 오류를 방지하려면 먼저 [Limitations](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md#bkmk_Limitations)을 검토하세요.  
   
  Azure Storage의 SQL Server 데이터 파일 기능을 사용할 때 발생할 수 있는 오류 목록은 다음과 같습니다.  

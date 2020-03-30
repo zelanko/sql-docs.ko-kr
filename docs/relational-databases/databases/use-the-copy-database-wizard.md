@@ -26,10 +26,10 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 67488a92a14a2533c9ba6ef14941b11b8bcbb8c2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68127122"
 ---
 # <a name="use-the-copy-database-wizard"></a>데이터베이스 복사 마법사 사용
@@ -49,7 +49,7 @@ ms.locfileid: "68127122"
 -   데이터베이스 이동 또는 복사 일정 예약  
   
 
-##  <a name="Restrictions"></a> 제한 사항  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   Express Edition에서는 데이터베이스 복사 마법사를 사용할 수 없습니다.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68127122"
 > **중요!!** **분리 및 연결** 방법은 원본 및 대상 데이터베이스 소유권을 **데이터베이스 복사 마법사**를 실행 중인 로그인으로 설정합니다.  데이터베이스 소유권을 변경하려면 [ALTER AUTHORIZATION(Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md) 을 참조하세요.
   
   
-##  <a name="Prerequisites"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
 -   대상 서버에서 SQL Server 에이전트가 시작되었는지 확인합니다.  
 
 -   대상 서버에서 원본 서버의 데이터 및 로그 파일 디렉터리에 연결할 수 있는지 확인합니다.
@@ -90,7 +90,7 @@ ms.locfileid: "68127122"
 
 > **중요!!** **분리 및 연결** 방법을 사용할 경우 Integration Services 프록시 계정을 사용하지 않으면 복사 또는 이동 프로세스가 실패합니다.  특정 상황에서는 원본 데이터베이스가 원본 서버에 다시 연결되지 않고 모든 NTFS 보안 권한이 데이터 및 로그 파일에서 제거됩니다.  이 경우 파일로 이동하여 관련 사용 권한을 다시 적용하고 SQL Server의 인스턴스에 데이터베이스를 다시 연결합니다.
   
-##  <a name="Recommendations"></a> 권장 사항  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   업그레이드한 데이터베이스가 최적의 성능을 낼 수 있도록 업그레이드한 데이터베이스에 대해 [sp_updatestats(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) (통계 업데이트)를 실행하세요.  
   
@@ -98,10 +98,10 @@ ms.locfileid: "68127122"
   
 
   
-###  <a name="Permissions"></a> 권한  
+###  <a name="permissions"></a><a name="Permissions"></a> 권한  
  원본 서버와 대상 서버 모두에서 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
-##  <a name="Overview"></a> 데이터베이스 복사 마법사 페이지 
+##  <a name="the-copy-database-wizard-pages"></a><a name="Overview"></a> 데이터베이스 복사 마법사 페이지 
 SQL Server Management Studio의 **데이터베이스 복사 마법사** 를 시작합니다. **개체 탐색기** 에서 **데이터베이스**를 확장합니다.  그런 다음 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 선택하고 **데이터베이스 복사**를 클릭합니다.  **데이터베이스 복사 마법사 시작** 페이지가 표시되면 **다음**을 클릭합니다.
 
 
@@ -295,7 +295,7 @@ SSIS 패키지의 기본 이름이 생성됩니다. 원하는 대로 수정합�
 -    **메시지**  
 각 단계에서 반환된 메시지를 제공합니다.
 
-##  <a name="Examples"></a> 예
+##  <a name="examples"></a><a name="Examples"></a> 예
 ### <a name="common-steps"></a>**공통 단계** 
 **이동** 또는 **복사**, **분리 및 연결** 또는 **SMO**등 선택 여부에 관계없이 아래 나열된 5단계는 동일합니다.  간단히 말해 이 단계들은 여기에 한 번 나열되며 모든 예제는 **6단계**에서 시작됩니다.
 
@@ -384,12 +384,12 @@ SSIS 패키지의 기본 이름이 생성됩니다. 원하는 대로 수정합�
 14. 새로 만든 SQL Server 에이전트 작업 `SalesCopy weekly refresh`를 수동으로 시작합니다.  작업 기록을 검토하고 이제 인스턴스에 `SalesCopy` 가 있는지 확인합니다.
 
   
-##  <a name="FollowUp"></a> 후속 작업: 데이터베이스를 업그레이드한 후  
+##  <a name="follow-up-after-upgrading-a-database"></a><a name="FollowUp"></a> 후속 작업: 데이터베이스를 업그레이드한 후  
  데이터베이스 복사 마법사를 사용하여 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]버전으로 데이터베이스를 업그레이드하면 데이터베이스를 바로 사용할 수 있으며 데이터베이스가 자동으로 업그레이드됩니다. 데이터베이스에 전체 텍스트 인덱스가 있는 경우 업그레이드 프로세스는 **전체 텍스트 업그레이드 옵션** 서버 속성의 설정에 따라 인덱스를 가져오거나, 다시 설정하거나, 다시 작성합니다. 업그레이드 옵션이 **가져오기** 또는 **다시 작성**으로 설정되어 있는 경우 업그레이드하는 동안 전체 텍스트 인덱스를 사용할 수 없습니다. 인덱싱되는 데이터 양에 따라 가져오기 작업은 몇 시간씩 걸릴 수 있으며 다시 작성 작업은 10배 정도 더 걸릴 수 있습니다. 업그레이드 옵션이 **가져오기**로 설정되어 있으면 전체 텍스트 카탈로그를 사용할 수 없는 경우 관련된 전체 텍스트 인덱스가 다시 작성됩니다. **전체 텍스트 업그레이드 옵션** 속성 설정을 보거나 변경하는 방법은 [서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)을 참조하세요.  
   
  사용자 데이터베이스의 호환성 수준이 업그레이드 이전에 100 이상이었다면 업그레이드 후에도 동일하게 유지됩니다. 업그레이드한 데이터베이스의 호환성 수준이 이전에 90이었다면 업그레이드 후에는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 지원되는 가장 낮은 호환성 수준인 100으로 설정됩니다. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.  
  
- ## <a name="Post"></a> 사후 복사 하거나 이동 고려 사항
+ ## <a name="post-copy-or-move-considerations"></a><a name="Post"></a> 사후 복사 하거나 이동 고려 사항
  **복사** 또는 **이동**후 다음 단계를 수행할지 여부를 고려합니다.
 -    분리 및 연결 방법을 사용할 경우 데이터베이스 소유권 변경
 -    **이동**후 원본 서버에서 서버 개체 삭제

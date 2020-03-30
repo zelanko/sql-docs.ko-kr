@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6d87fbbb60f70292075d4f24080798d017ee5288
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74947284"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>데이터 과학 시나리오 및 솔루션 템플릿
@@ -96,7 +96,7 @@ ms.locfileid: "74947284"
 **방법:** 이 템플릿에서는 SQL Server R Services를 사용하여 전기 수요를 예측합니다. 예측에 사용되는 모델은 Microsoft R Server에 포함된 고성능 기계 학습 알고리즘인 **rxDForest**를 기반으로 하는 임의 포리스트 회귀 모델입니다. 솔루션에는 수요 시뮬레이터, 모델 학습에 필요한 모든 R 및 T-SQL 코드, 예측 생성 및 보고에 사용할 수 있는 저장 프로시저가 포함되어 있습니다. 
 
 
-## <a name="bkmk_HowTo"></a>템플릿 사용 방법
+## <a name="how-to-use-the-templates"></a><a name="bkmk_HowTo"></a>템플릿 사용 방법
 
 각 템플릿에 포함된 파일을 다운로드하려면 GitHub 명령을 사용하거나, 링크를 열고 **Zip 다운로드** 를 클릭하여 모든 파일을 컴퓨터에 저장합니다.  다운로드한 경우 일반적으로 솔루션에 다음 폴더가 포함되어 있습니다.
   

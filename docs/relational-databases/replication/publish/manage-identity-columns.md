@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: ee2425a5b2ff846e37dfe6acb06d8b26b54fd7da
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287630"
 ---
 # <a name="manage-identity-columns"></a>ID 열 관리
@@ -40,15 +40,15 @@ ms.locfileid: "76287630"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   둘 이상의 게시에 테이블을 게시하는 경우 두 게시에 대해 동일한 ID 범위 관리 옵션을 지정해야 합니다. 자세한 내용은 [데이터 및 데이터베이스 개체 게시](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)에서 "둘 이상의 게시에 테이블 게시"를 참조하세요.  
   
 -   여러 테이블에서 사용할 수 있거나 테이블을 참조하지 않고 애플리케이션에서 호출할 수 있는 자동으로 증가하는 번호를 만들려면 [시퀀스 번호](../../../relational-databases/sequence-numbers/sequence-numbers.md)를 참조하세요.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  새 게시 마법사의 **아티클 속성 -\<Article>** 대화 상자에 있는 **속성** 탭에서 ID 열 관리 옵션을 지정합니다. 이 마법사를 사용하는 방법에 대한 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요. 새 게시 마법사에서의 속성 설정은 다음과 같습니다.  
   
 -   **게시 유형** 페이지에서 **병합 게시** 또는 **업데이트할 수 있는 구독이 있는 트랜잭션 게시** 를 선택한 경우에는 자동 또는 ID 범위 수동 관리를 선택할 수 있습니다. 기본값인 ID 범위 자동 관리를 권장합니다. 테이블을 게시한 후에 이 속성은 수정할 수 없지만 다른 관련 속성은 수정할 수 있습니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "76287630"
   
 5.  **게시 속성 - \<게시>** 대화 상자에서 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  복제 저장 프로시저를 사용하여 아티클이 작성될 때 ID 범위 관리 옵션을 지정할 수 있습니다.  
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>트랜잭션 게시에 대한 아티클을 정의할 때 자동 ID 범위 관리를 설정하려면  

@@ -10,10 +10,10 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 52285164928e1a4811abc17e931a1af1921c6d07
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76831416"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에 샘플 데이터 로드
@@ -34,11 +34,11 @@ ms.locfileid: "76831416"
    - **sqlcmd**
    - **curl**
  
-## <a id="sampledata"></a> 샘플 데이터 로드
+## <a name="load-sample-data"></a><a id="sampledata"></a> 샘플 데이터 로드
 
 다음 단계에서는 부트스트랩 스크립트를 사용하여 SQL Server 데이터베이스 백업을 다운로드하고 빅 데이터 클러스터에 데이터를 로드합니다. 이러한 단계는 간편하게 [Windows](#windows) 및 [Linux](#linux) 섹션으로 구분되어 있습니다. 기본 사용자 이름/암호를 인증 메커니즘으로 사용하려면 스크립트를 실행하기 전에 AZDATA_USERNAME 및 AZDATA_PASSWORD 환경 변수를 설정합니다. 그러지 않으면 스크립트는 통합 인증을 사용하여 SQL Server 마스터 인스턴스 및 Knox 게이트웨이에 연결합니다. 또한 통합 인증을 사용하기 위해 엔드포인트에 DNS 이름을 지정해야 합니다.
 
-## <a id="windows"></a> Windows
+## <a name="windows"></a><a id="windows"></a> Windows
 
 다음 단계에서는 Windows 클라이언트를 사용하여 빅 데이터 클러스터에 샘플 데이터를 로드하는 방법을 설명합니다.
 
@@ -76,7 +76,7 @@ ms.locfileid: "76831416"
    .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_ENDPOINT> <KNOX_ENDPOINT>
    ```
 
-## <a id="linux"></a> Linux
+## <a name="linux"></a><a id="linux"></a> Linux
 
 다음 단계에서는 Linux 클라이언트를 사용하여 빅 데이터 클러스터에 샘플 데이터를 로드하는 방법을 설명합니다.
 

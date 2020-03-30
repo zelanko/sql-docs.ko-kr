@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 883f554c214809260f69392ad072b1971a34f2da
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287828"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>복제 모니터에 임계값 및 경고 설정
@@ -58,7 +58,7 @@ ms.locfileid: "76287828"
   
 -   [스냅샷 게시에 대한 임계값 및 경고 설정](#Snapshot)  
   
-##  <a name="Transactional"></a> 트랜잭션 게시에 대한 임계값 및 경고를 설정하려면  
+##  <a name="to-set-thresholds-and-warnings-for-a-transactional-publication"></a><a name="Transactional"></a> 트랜잭션 게시에 대한 임계값 및 경고를 설정하려면  
   
 1.  왼쪽 창에서 게시자 그룹을 확장하고 해당 게시자를 확장한 다음 해당 게시를 클릭합니다.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "76287828"
   
 5.  **닫기**를 클릭합니다.  
   
-##  <a name="Merge"></a> 병합 게시에 대한 임계값 및 경고 설정  
+##  <a name="set-thresholds-and-warnings-for-a-merge-publication"></a><a name="Merge"></a> 병합 게시에 대한 임계값 및 경고 설정  
   
 1.  왼쪽 창에서 게시자 그룹을 확장하고 해당 게시자를 확장한 다음 해당 게시를 클릭합니다.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "76287828"
   
 5.  **닫기**를 클릭합니다.  
   
-##  <a name="Snapshot"></a> 스냅샷 게시에 대한 임계값 및 경고 설정  
+##  <a name="set-thresholds-and-warnings-for-a-snapshot-publication"></a><a name="Snapshot"></a> 스냅샷 게시에 대한 임계값 및 경고 설정  
   
 1.  왼쪽 창에서 게시자 그룹을 확장하고 해당 게시자를 확장한 다음 해당 게시를 클릭합니다.  
   

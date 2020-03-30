@@ -13,10 +13,10 @@ ms.assetid: 6bf9d252-e766-458d-9dcd-23d895f032a2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ecccde508e3b83a8c0f6995aeb0d142785766976
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012283"
 ---
 # <a name="configure-the-scan-for-startup-procs-server-configuration-option"></a>scan for startup procs 서버 구성 옵션 구성
@@ -40,20 +40,20 @@ ms.locfileid: "68012283"
   
 -   **후속 작업:**  [시작 프로시저 검색 옵션을 구성한 후](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   이 옵션은 고급 옵션으로, 숙련된 데이터베이스 관리자나 공인된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전문가만이 변경해야 합니다.  
   
 -   이 옵션의 값은 **sp_configure**를 사용하여 설정할 수 있지만 자동 실행 저장 프로시저를 설정하거나 설정을 해제하는 데 사용되는 **sp_procoption**을 사용하면 자동으로 설정됩니다. **sp_procoption** 을 사용하여 첫 번째 저장 프로시저를 autoproc로 설정하면 이 옵션의 값이 자동으로 1로 설정됩니다. **sp_procoption** 을 사용하여 마지막 저장 프로시저의 autoproc 설정을 해제하면 이 옵션의 값이 자동으로 0으로 설정됩니다. **sp_procoption** 을 사용하여 autoprocs를 설정하거나 해제하고 autoprocs를 삭제하기 전에 항상 해제하면 이 옵션을 수동으로 설정할 필요가 없습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경하거나 RECONFIGURE 문을 실행하는 두 매개 변수를 사용하여 **sp_configure** 를 실행하려면 사용자에게 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-configure-the-scan-for-startup-procs-option"></a>scan for startup procs 옵션을 구성하려면  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68012283"
   
 3.  **기타**아래의 드롭다운 목록 상자에서 원하는 값을 선택하여 **시작 프로시저 검색** 옵션을 True 또는 False로 변경합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-configure-the-scan-for-startup-procs-option"></a>scan for startup procs 옵션을 구성하려면  
   
@@ -87,7 +87,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> 후속 작업: 시작 프로시저 검색 옵션을 구성한 후  
+##  <a name="follow-up-after-you-configure-the-scan-for-startup-procs-option"></a><a name="FollowUp"></a> 후속 작업: 시작 프로시저 검색 옵션을 구성한 후  
  설정을 적용하려면 서버를 다시 시작해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

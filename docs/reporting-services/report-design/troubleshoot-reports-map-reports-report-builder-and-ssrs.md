@@ -9,10 +9,10 @@ ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 87c034202eb5a4c17fd73e75f881361c04b3b636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080844"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>보고서 문제 해결: 지도 보고서(보고서 작성기 및 SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "77080844"
  * [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server)에서 문제 또는 제안 기록  
 
   
-##  <a name="Embedded"></a> 보고서 정의 크기 문제  
+##  <a name="report-definition-size-issues"></a><a name="Embedded"></a> 보고서 정의 크기 문제  
  이 섹션에서는 보고서 정의 크기와 관련된 문제를 해결하는 데 유용한 정보를 제공합니다.  
   
 ## <a name="how-do-i-reduce-the-report-definition-size"></a>보고서 정의 크기를 줄이는 방법  
@@ -49,7 +49,7 @@ ms.locfileid: "77080844"
   
  지도 갤러리에 있는 보고서의 지도 요소는 항상 지도 계층에 포함됩니다.  
   
-##  <a name="Spatial"></a> 공간 데이터 문제  
+##  <a name="spatial-data-issues"></a><a name="Spatial"></a> 공간 데이터 문제  
  이 섹션에서는 공간 데이터와 관련된 문제를 해결하는 데 유용한 정보를 제공합니다.  
   
 ## <a name="on-the-design-surface-i-see-sample-spatial-data"></a>디자인 화면에서 예제 공간 데이터가 표시됨  
@@ -100,7 +100,7 @@ ms.locfileid: "77080844"
   
 -   공간 데이터가 SQL Server 데이터베이스에서 제공되는 경우 공간 함수를 사용하여 데이터를 더 작은 영역으로 제한하도록 쿼리를 변경합니다.  
   
-##  <a name="Viewport"></a> 뷰포트 중심 및 보기 문제  
+##  <a name="viewport-center-and-view-issues"></a><a name="Viewport"></a> 뷰포트 중심 및 보기 문제  
  이 섹션에서는 뷰포트 옵션과 관련된 문제를 해결하는 데 유용한 정보를 제공합니다.  
   
 ## <a name="i-cannot-set-the-center-and-view-on-an-embedded-map-element"></a>포함된 지도 요소에 대한 중심 및 보기를 설정할 수 없음  
@@ -122,7 +122,7 @@ ms.locfileid: "77080844"
   
 -   공간 데이터를 보고서에 포함하고 포함하지 않을 위치를 삭제합니다.  
   
-##  <a name="Layers"></a> 계층 문제  
+##  <a name="layer-issues"></a><a name="Layers"></a> 계층 문제  
  이 섹션에서는 계층 옵션과 관련된 문제를 해결하는 데 유용한 정보를 제공합니다.  
   
 ## <a name="i-do-not-see-one-or-more-layers-in-my-map"></a>지도에 하나 이상의 계층이 표시되지 않음  
@@ -144,7 +144,7 @@ ms.locfileid: "77080844"
 ## <a name="i-set-a-filter-on-the-map-layer-and-it-has-no-effect"></a>지도 계층에 필터를 설정했지만 효과가 없음  
  계층의 데이터를 필터링하려면 필터 식에서 데이터 형식을 지정해야 합니다. 필터 식이 지정된 조건을 제대로 평가하도록 올바른 기본 데이터 형식을 지정했는지 확인합니다. 자세한 내용은 [필터 수식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)를 참조하세요.  
   
-##  <a name="Legend"></a> 범례, 색 눈금 및 규칙 문제  
+##  <a name="legend-color-scale-and-rule-issues"></a><a name="Legend"></a> 범례, 색 눈금 및 규칙 문제  
  이 섹션에서는 규칙, 범례 및 색 눈금 옵션과 관련된 문제를 해결하는 데 유용한 정보를 제공합니다.  
   
 ## <a name="how-do-i-control-the-values-in-the-map-legend"></a>지도 범례의 값을 제어하는 방법  
@@ -175,7 +175,7 @@ ms.locfileid: "77080844"
   
  색 눈금을 표시하려면 계층이나 포함된 지도 요소에 대한 색 규칙을 지정합니다. 자세한 내용은 [지도 범례, 색 눈금 및 관련 규칙 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)를 참조하세요.  
   
-##  <a name="Tile"></a> 타일 문제  
+##  <a name="tile-issues"></a><a name="Tile"></a> 타일 문제  
  이 섹션에서는 타일 배경 옵션과 관련된 문제를 해결하는 데 유용한 정보를 제공합니다.  
   
 ## <a name="i-cannot-see-the-bing-maps-tile-background"></a>Bing Maps 타일 배경이 표시되지 않음  
@@ -196,7 +196,7 @@ ms.locfileid: "77080844"
   
  텍스트 없이 타일 계층을 포함하려면 **항공** 보기를 선택합니다.  
   
-##  <a name="Tooltip"></a> 도구 설명 및 레이블 문제  
+##  <a name="tooltip-and-label-issues"></a><a name="Tooltip"></a> 도구 설명 및 레이블 문제  
  이 섹션에서는 레이블 또는 도구 설명 옵션과 관련된 문제를 해결하는 데 유용한 정보를 제공합니다.  
   
 ## <a name="i-get-an-expression-error-about-dataset-scope-when-i-set-a-label-or-tooltip-to-an-expression"></a>레이블 또는 도구 설명을 식으로 설정하는 경우 데이터 세트 범위에 대한 식 오류가 발생합니다.  

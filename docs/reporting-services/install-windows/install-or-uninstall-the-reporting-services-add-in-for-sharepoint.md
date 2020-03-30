@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 1f401a51defd84d9ed6a3160c4961b3087847b2d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286247"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-ssrs"></a>SharePoint용 Reporting Services 추가 기능(SSRS) 설치 또는 제거
@@ -26,7 +26,7 @@ ms.locfileid: "79286247"
 > [!NOTE]
 > SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
   
-##  <a name="bkmk_prereq"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 필수 조건  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능 설치 작업은 보고서 서버를 SharePoint 제품 인스턴스와 통합하는 데 필요한 몇 가지 단계 중 하나입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치 및 구성에 대한 자세한 내용은 [SharePoint 모드에서 첫 번째 보고서 서버 설치](install-the-first-report-server-in-sharepoint-mode.md)를 참조하세요.  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 웹 프런트 엔드 애플리케이션이 여러 개 있는 SharePoint 팜과 통합하는 경우 웹 서버 프런트 엔드가 있는 팜의 각 컴퓨터에 추가 기능을 설치합니다. 이 작업은 보고서 서버 내용에 액세스하는 데 사용될 웹 프런트 엔드에 대해서만 수행합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "79286247"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 통합 기능을 활성화하려면 사이트 모음 관리자여야 합니다.   
   
-##  <a name="bkmk_whatinstalled"></a> 추가 기능과 함께 설치되는 항목  
+##  <a name="what-does-the-add-in-install"></a><a name="bkmk_whatinstalled"></a> 추가 기능과 함께 설치되는 항목  
  추가 기능 설치 과정은 두 단계로 구성되며, 표준 설치를 완료하면 두 단계 모두 자동으로 완료됩니다.  
   
 -   첫 번째 단계에서는 파일을 적합한 폴더에 설치합니다. 폴더는 SharePoint 배포를 위한 표준 폴더입니다. 이렇게 설치되는 파일 중 하나는 rsCustomAction.exe입니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "79286247"
 > [!NOTE]  
 >  SharePoint 제품보다 추가 기능을 먼저 설치하면 팜에 새 서버를 추가할 경우 SharePoint 팜에서 Reporting Services 추가 기능을 구성하고 활성화한다는 이점이 있습니다.  
   
-##  <a name="bkmk_3ways_to_install"></a> 설치 방법 개요  
+##  <a name="overview-of-the-installation-methods"></a><a name="bkmk_3ways_to_install"></a> 설치 방법 개요  
  SharePoint 제품용 SQL Server 2016 Reporting Services 추가 기능은 다음 두 가지 방법 중 하나를 사용하여 설치할 수 있습니다.  
   
 -   **설치 마법사:** ![참고](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "참고") SQL Server 2016에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 사용하여 이 추가 기능을 설치할 수 있습니다. 마법사의 **기능 선택** 페이지에서 **SharePoint 제품용 Reporting Services 추가 기능** 을 선택합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "79286247"
     > [!NOTE]  
     >  자동 명령줄 설치를 위해 **/q** 스위치를 사용할 경우 최종 사용자 사용권 계약이 표시되지 않습니다. 설치 방법에 관계없이 본 소프트웨어의 설치는 사용권 계약에 의해 제한되며 사용자는 사용권 계약을 준수해야 합니다.  
   
-##  <a name="bkmk_install_rssharepoint"></a> rsSharePoint.msi 설치 파일을 사용하여 추가 기능 설치  
+##  <a name="install-the-add-in-using-the-installation-file-rssharepointmsi"></a><a name="bkmk_install_rssharepoint"></a> rsSharePoint.msi 설치 파일을 사용하여 추가 기능 설치  
  이 섹션은 .msi 설치 마법사를 실행하거나 명령줄 설치를 실행하여 rssharepoint.msi를 직접 설치하는 방법과 관련이 있습니다. SQL Server 설치 마법사를 사용하여 추가 기능을 설치한 경우 이 단계를 수행할 필요가 없습니다.  
   
  명령줄 스위치의 전체 목록은 다음 명령을 실행하여 확인할 수 있습니다.  
@@ -81,7 +81,7 @@ Rssharepoint.msi /?
   
 3.  SharePoint 중앙 관리에서 보고서 서버 설정 및 기능 활성화를 구성합니다. . [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 설치 및 구성에 대한 자세한 내용은 [SharePoint 모드에서 첫 번째 보고서 서버 설치](install-the-first-report-server-in-sharepoint-mode.md)를 참조하세요.  
   
-###  <a name="bkmk_files_only_installation"></a> 파일만 설치  
+###  <a name="files-only-installation"></a><a name="bkmk_files_only_installation"></a> 파일만 설치  
  파일을 설치하고 설치 중 사용자 지정 동작 단계를 건너뛰려면 SKIPCA 옵션을 사용하여 명령줄에서 rssharepoint.msi를 실행합니다.  
   
 1.  **관리자 권한으로**명령 프롬프트를 엽니다.  
@@ -131,7 +131,7 @@ Rssharepoint.msi /?
     Msiexec.exe /i rsSharePoint.msi /q  
     ```  
   
-##  <a name="bkmk_remove_addin"></a> Reporting Services 추가 기능을 제거하는 방법  
+##  <a name="how-to-remove-the-reporting-services-add-in"></a><a name="bkmk_remove_addin"></a> Reporting Services 추가 기능을 제거하는 방법  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows 제어판이나 명령줄에서 SharePoint 제품용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 추가 기능을 제거할 수 있습니다.  
   
 1.  제어판을 사용하면 현재 컴퓨터에서 파일 전체 제거가 실행되며 **또한** SharePoint 팜에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 개체 및 기능이 제거됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 개체 및 기능이 제거되면 더 이상 보고서를 검토하고 업데이트할 수 없습니다.  
@@ -201,7 +201,7 @@ Rssharepoint.msi /?
   
  SkipCA=1을 사용하여 .msi를 설치하고 rscusstomaction.exe를 사용할 수 있다는 가정 하에 위의 단계가 진행됩니다. 자세한 내용은 파일만 설치 설명 섹션을 참조하세요.  
   
-##  <a name="bkmk_repair"></a> 명령줄에서 rssharepoint.msi를 복구하는 방법  
+##  <a name="how-to-repair-rssharepointmsi-from-the-command-line"></a><a name="bkmk_repair"></a> 명령줄에서 rssharepoint.msi를 복구하는 방법  
  명령줄을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능을 복구하거나 제거하려면 다음 단계를 완료합니다.  
   
 1.  **관리자 권한으로**명령 프롬프트를 엽니다.  
@@ -212,7 +212,7 @@ Rssharepoint.msi /?
     msiexec.exe /f rssharepoint.msi  
     ```  
   
-##  <a name="bkmk_logfiles"></a> 설치 로그 파일  
+##  <a name="setup-log-files"></a><a name="bkmk_logfiles"></a> 설치 로그 파일  
  설치 프로그램을 실행하면 **%temp%** 폴더의 로그 파일에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능을 설치한 사용자에 대한 정보가 기록됩니다. 예: **c:\Users\\<username\>\AppData\Local\Temp**. 파일 이름은 **RS_SP_\<number>.log**, 형식으로 지정됩니다(예: **RS_SP_0.log**). 로그의 각 오류는 문자열 "SSRSCustomActionError"로 시작합니다.  
   
 > [!NOTE]  
@@ -246,7 +246,7 @@ Rssharepoint.msi /?
   
      `2011-05-23 12:40:12: SSRSCustomActionError: SharePoint is installed, but not configured`입니다.  
   
-##  <a name="bkmk_upgrade"></a> 업그레이드  
+##  <a name="upgrade"></a><a name="bkmk_upgrade"></a> 업그레이드  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능이 이미 설치되어 있으면 현재 버전으로 업그레이드할 수 있습니다. 추가 기능 설치 프로그램이 기존 버전을 감지하여 업데이트할 것인지 확인하는 메시지를 표시합니다. 메시지는 다음과 유사합니다.  
   
  **시스템에서 이 제품의 하위 버전이 검색되었습니다. 기존 설치를 업그레이드하시겠습니까?**  
@@ -255,7 +255,7 @@ Rssharepoint.msi /?
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능은 인스턴스를 인식하지 못하므로 컴퓨터에서 하나의 추가 기능 인스턴스만 실행할 수 있습니다. 따라서 다른 버전을 현재 버전과 함께 실행할 수 없습니다.  
   
-##  <a name="bkmk_rscustomaction"></a> RsCustomAction.exe  
+##  <a name="rscustomactionexe"></a><a name="bkmk_rscustomaction"></a> RsCustomAction.exe  
  다음 표에서는 rscustomaction.exe 스위치를 요약해서 보여 줍니다.  
   
 |스위치|Description|  

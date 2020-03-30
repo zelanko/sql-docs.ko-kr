@@ -11,10 +11,10 @@ ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 92c78d36559a8cb08a7f3368012a94ce3048c93c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822186"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>문제 해결: 가용성 그룹 초과 RPO
@@ -29,7 +29,7 @@ ms.locfileid: "74822186"
   
 2.  [디스크 I/O 병목 상태로 보조 복제본에 확정된 로그 속도 저하](#BKMK_IO_BOTTLENECK)  
   
-##  <a name="BKMK_LATENCY"></a> 높은 네트워크 대기 시간 또는 낮은 네트워크 처리량이 주 복제본에 로그 축적 유발  
+##  <a name="high-network-latency-or-low-network-throughput-causes-log-build-up-on-the-primary-replica"></a><a name="BKMK_LATENCY"></a> 높은 네트워크 대기 시간 또는 낮은 네트워크 처리량이 주 복제본에 로그 축적 유발  
  자체의 RPO를 초과하는 데이터베이스의 가장 일반적인 원인은 보조 복제본으로 충분히 빠르게 전송될 수 없기 때문입니다.  
   
 ### <a name="explanation"></a>설명  
@@ -63,7 +63,7 @@ ms.locfileid: "74822186"
 이 문제를 해결하려면 네트워크 대역폭을 업그레이드하거나 불필요한 네트워크 트래픽을 제거하거나 줄여 보십시오.  
 
 
-##  <a name="BKMK_IO_BOTTLENECK"></a> 디스크 I/O 병목 상태로 보조 복제본에 확정된 로그 속도 저하  
+##  <a name="disk-io-bottleneck-slows-down-log-hardening-on-the-secondary-replica"></a><a name="BKMK_IO_BOTTLENECK"></a> 디스크 I/O 병목 상태로 보조 복제본에 확정된 로그 속도 저하  
  데이터베이스 파일 배포에 따라 로그 확정은 보고 워크로드와의 I/O 경합 때문에 느려질 수 있습니다.  
   
 ### <a name="explanation"></a>설명  

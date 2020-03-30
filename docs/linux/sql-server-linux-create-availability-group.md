@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68077441"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Linux의 SQL Server에 대해 가용성 그룹 만들기 및 구성
@@ -59,7 +59,7 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
 hadr.hadrenabled = 1
 ```
 
-### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 다시 시작
+### <a name="restart-ssnoversion-md"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 다시 시작
 Windows에서와 같이 가용성 그룹을 사용하도록 설정한 후 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]를 다시 시작해야 합니다. 이러한 작업은 다음을 통해 수행할 수 있습니다.
 
 ```bash
@@ -316,7 +316,7 @@ sudo systemctl restart mssql-server
 
 이 섹션에서는 SSMS([!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]) 또는 Transact-SQL을 사용하여 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]에 대한 가용성 그룹을 만드는 방법을 설명합니다.
 
-### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] 사용
+### <a name="use-ssmanstudiofull-md"></a>[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] 사용
 
 이 섹션에서는 새 가용성 그룹 마법사에서 SSMS를 사용하여 외부 클러스터 유형의 AG를 만드는 방법을 보여 줍니다.
 
@@ -533,7 +533,7 @@ sudo systemctl restart mssql-server
     GO
     ```
 
-## <a name="create-the-includessnoversion-mdincludesssnoversion-mdmd-login-and-permissions-for-pacemaker"></a>Pacemaker에 대한 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 로그인 및 사용 권한 만들기
+## <a name="create-the-ssnoversion-md-login-and-permissions-for-pacemaker"></a>Pacemaker에 대한 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 로그인 및 사용 권한 만들기
 
 Linux의 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]를 기준으로 하는 Pacemaker 고가용성 클러스터는 가용성 그룹 자체에 대한 권한 뿐만 아니라 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 인스턴스에 대한 액세스 권한이 필요합니다. 이러한 단계를 수행하면 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]에 로그인하는 방법을 Pacemaker에 알려주는 파일과 함께 로그인 및 관련 사용 권한이 만들어집니다.
 

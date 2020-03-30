@@ -11,10 +11,10 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e249bb515ca0a8b579e923e7d289fccd80ce6ef
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286517"
 ---
 # <a name="understanding-xa-transactions"></a>XA 트랜잭션 이해
@@ -116,7 +116,7 @@ Windows Vista 이상:
   
 3. 다음 섹션의 코드 예제에서와 같이 로깅 기능을 설정합니다. 출력 로그 파일에서 "Server XA DLL version:..." 구를 검색합니다.  
 
-### <a name="BKMK_ServerSide"></a> 준비되지 않은 트랜잭션의 자동 롤백에 대해 서버 쪽 제한 시간 설정을 구성합니다.  
+### <a name="configuring-server-side-timeout-settings-for-automatic-rollback-of-unprepared-transactions"></a><a name="BKMK_ServerSide"></a> 준비되지 않은 트랜잭션의 자동 롤백에 대해 서버 쪽 제한 시간 설정을 구성합니다.  
 
 > [!WARNING]  
 > 이 서버 쪽 옵션은 SQL Server용 Microsoft JDBC Driver 4.2 이상의 새로운 기능입니다. 업데이트된 동작을 가져오려면 서버의 sqljdbc_xa.dll이 업데이트되어야 합니다. 클라이언트 쪽 시간 제한 설정에 대한 자세한 내용은 [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)을 참조하세요.  

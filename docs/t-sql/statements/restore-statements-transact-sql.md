@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73530923"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문(Transact-SQL)
@@ -382,7 +382,7 @@ RESTORE는 명시적 또는 암시적 트랜잭션에서 사용할 수 없습니
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 각 서버 인스턴스의 백업 및 복원 작업을 추적하는 백업 및 복원 기록 테이블이 있습니다. 복원을 수행하면 백업 기록 테이블도 수정됩니다. 이 테이블에 대한 자세한 내용은 [백업 기록 및 헤더 정보](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)를 참조하세요.
 
-## <a name="REPLACEoption"></a> REPLACE 옵션의 영향
+## <a name="replace-option-impact"></a><a name="REPLACEoption"></a> REPLACE 옵션의 영향
 REPLACE는 신중한 검토 후에만 사용해야 하며 되도록 사용하지 않아야 합니다. 복원은 보통 실수로 복원 중 다른 데이터베이스로 현재 데이터베이스를 덮어쓰는 일을 방지합니다. RESTORE 문에서 지정된 데이터베이스가 현재 서버에 이미 존재하고 지정된 데이터베이스 패밀리 GUID가 백업 세트에 기록된 데이터베이스 패밀리 GUID와 다르면 해당 데이터베이스는 복원되지 않습니다. 이것은 중요한 보호 수단입니다.
 
 REPLACE 옵션은 복원 작업 중 일반적으로 수행하는 몇 가지 중요한 안전성 검사를 무시합니다. 무시되는 검사는 다음과 같습니다.
@@ -434,7 +434,7 @@ DATABASE_SNAPSHOT 옵션을 사용하여 지정한 *데이터베이스 되돌리
 
 멤버 자격 정보를 서버에서 항상 사용할 수 있는 역할에 RESTORE 권한이 제공됩니다. 고정 데이터베이스 역할의 멤버 자격은 데이터베이스가 액세스 가능한 상태이며 손상되지 않은 경우에만 확인할 수 있는데, RESTORE 실행 시 데이터베이스가 항상 이러한 상태인 것은 아니므로 `db_owner` 고정 데이터베이스 역할의 멤버에게는 RESTORE 권한이 없습니다.
 
-## <a name="examples"></a> 예
+## <a name="examples"></a><a name="examples"></a> 예
 
 모든 예에서는 전체 데이터베이스 백업을 수행한 것으로 가정합니다.
 
@@ -455,7 +455,7 @@ RESTORE 예에는 다음이 포함됩니다.
 > [!NOTE]
 > 추가 예제는 [복원 및 복구 개요](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)에 나열된 복원 방법 항목을 참조하세요.
 
-### <a name="restoring_full_db"></a> 1. 전체 데이터베이스 복원
+### <a name="a-restoring-a-full-database"></a><a name="restoring_full_db"></a> 1. 전체 데이터베이스 복원
 
 다음 예에서는 `AdventureWorksBackups` 논리적 백업 디바이스에서 전체 데이터베이스 백업을 복원합니다. 이 디바이스를 만드는 예는 [백업 디바이스](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.
 
@@ -469,7 +469,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;주요 예제&#93;](#examples)
 
-### <a name="restoring_full_n_differential_db_backups"></a> 2. 전체 및 차등 데이터베이스 백업 복원
+### <a name="b-restoring-full-and-differential-database-backups"></a><a name="restoring_full_n_differential_db_backups"></a> 2. 전체 및 차등 데이터베이스 백업 복원
 
 다음 예에서는 `Z:\SQLServerBackups\AdventureWorks2012.bak` 백업 디바이스에서 전체 데이터베이스 백업을 복원한 다음 차등 백업을 복원합니다. 이 백업 디바이스에는 전체 데이터베이스 백업 및 차등 백업이 모두 포함되어 있습니다. 이 백업 디바이스에는 전체 데이터베이스 백업 및 차등 백업이 모두 포함되어 있습니다. 복원할 전체 데이터베이스 백업은 디바이스의 6번째 백업 세트(`FILE = 6`)이고 차등 데이터베이스 백업은 디바이스의 9번째 백업 세트(`FILE = 9`)입니다. 차등 백업이 복구되면 바로 데이터베이스가 복구됩니다.
 
@@ -486,7 +486,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;주요 예제&#93;](#examples)
 
-### <a name="restoring_db_using_RESTART"></a> 3. RESTART 구문을 사용하여 데이터베이스 복원
+### <a name="c-restoring-a-database-using-restart-syntax"></a><a name="restoring_db_using_RESTART"></a> 3. RESTART 구문을 사용하여 데이터베이스 복원
 
 다음 예에서는 `RESTART` 옵션을 사용하여 서버 전원 고장으로 중단된 `RESTORE` 작업을 다시 시작합니다.
 
@@ -501,7 +501,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;주요 예제&#93;](#examples)
 
-### <a name="restoring_db_n_move_files"></a> 4. 데이터베이스 복원 및 파일 이동
+### <a name="d-restoring-a-database-and-move-files"></a><a name="restoring_db_n_move_files"></a> 4. 데이터베이스 복원 및 파일 이동
 
 다음 예에서는 전체 데이터베이스와 트랜잭션 로그를 복원하고 복원된 데이터베이스를 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` 디렉터리로 이동합니다.
 
@@ -520,7 +520,7 @@ RESTORE LOG AdventureWorks2012
 
 [&#91;주요 예제&#93;](#examples)
 
-### <a name="copying_db_using_bnr"></a> 5. BACKUP 및 RESTORE를 사용하여 데이터베이스 복사
+### <a name="e-copying-a-database-using-backup-and-restore"></a><a name="copying_db_using_bnr"></a> 5. BACKUP 및 RESTORE를 사용하여 데이터베이스 복사
 
 다음 예에서는 `BACKUP` 및 `RESTORE` 문을 사용하여 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 복사본을 만듭니다. `MOVE` 문을 사용하면 데이터와 로그 파일이 지정한 위치로 복원됩니다. `RESTORE FILELISTONLY` 문은 복원할 데이터베이스에 있는 파일의 수와 이름을 확인하는 데 사용합니다. 데이터베이스의 새 복사본 이름은 `TestDB`입니다. 자세한 내용은 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)를 참조하세요.
 
@@ -540,7 +540,7 @@ GO
 
 [&#91;주요 예제&#93;](#examples)
 
-### <a name="restoring_to_pit_using_STOPAT"></a> 6. STOPAT를 사용하여 지정 시간으로 복원
+### <a name="f-restoring-to-a-point-in-time-using-stopat"></a><a name="restoring_to_pit_using_STOPAT"></a> 6. STOPAT를 사용하여 지정 시간으로 복원
 
 다음 예에서는 `12:00 AM` , `April 15, 2020` 상태로 데이터베이스를 복원하고 여러 로그 백업이 연관된 복원 작업을 보여 줍니다. 백업 디바이스 `AdventureWorksBackups`에서 복원할 전체 데이터베이스 백업은 해당 디바이스의 세 번째 백업 세트(`FILE = 3`)이고, 첫 번째 로그 백업은 네 번째 백업 세트(`FILE = 4`)이고, 두 번째 로그 백업은 다섯 번째 백업 세트(`FILE = 5`)입니다.
 
@@ -562,7 +562,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 
 [&#91;주요 예제&#93;](#examples)
 
-### <a name="restoring_transaction_log_to_mark"></a> G. 트랜잭션 로그를 표시까지 복원
+### <a name="g-restoring-the-transaction-log-to-a-mark"></a><a name="restoring_transaction_log_to_mark"></a> G. 트랜잭션 로그를 표시까지 복원
 
 다음 예에서는 트랜잭션 로그를 복원하여 `ListPriceUpdate`라는 표시된 트랜잭션에 나타냅니다.
 
@@ -601,7 +601,7 @@ RESTORE LOG AdventureWorks2012
 
 [&#91;주요 예제&#93;](#examples)
 
-### <a name="restoring_using_TAPE"></a> H. TAPE 구문을 사용하여 복원
+### <a name="h-restoring-using-tape-syntax"></a><a name="restoring_using_TAPE"></a> H. TAPE 구문을 사용하여 복원
 
 다음 예에서는 `TAPE` 백업 디바이스에서 전체 데이터베이스 백업을 복원합니다.
 
@@ -612,7 +612,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;주요 예제&#93;](#examples)
 
-### <a name="restoring_using_FILE_n_FG"></a> I. FILE 및 FILEGROUP 구문을 사용하여 복원
+### <a name="i-restoring-using-file-and-filegroup-syntax"></a><a name="restoring_using_FILE_n_FG"></a> I. FILE 및 FILEGROUP 구문을 사용하여 복원
 
 다음 예에서는 하나의 보조 파일 그룹과 하나의 트랜잭션 로그인 두 파일이 있는 `MyDatabase`라는 데이터베이스를 복원합니다. 이 데이터베이스는 전체 복구 모델을 사용합니다.
 
@@ -656,7 +656,7 @@ GO
 
 [&#91;주요 예제&#93;](#examples)
 
-### <a name="reverting_from_db_snapshot"></a> J. 데이터베이스 스냅샷으로 되돌리기
+### <a name="j-reverting-from-a-database-snapshot"></a><a name="reverting_from_db_snapshot"></a> J. 데이터베이스 스냅샷으로 되돌리기
 
 다음 예에서는 데이터베이스를 데이터베이스 스냅샷으로 되돌립니다. 이 예에서는 현재 하나의 스냅샷만 데이터베이스에 있는 것으로 가정합니다. 이 데이터베이스 스냅샷을 만드는 방법의 예는 [데이터베이스 스냅샷 만들기](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)를 참조하세요.
 
@@ -673,7 +673,7 @@ GO
 
 [&#91;주요 예제&#93;](#examples)
 
-### <a name="Azure_Blob"></a> K. Microsoft Azure Blob Storage 서비스에서 복원
+### <a name="k-restoring-from-the-microsoft-azure-blob-storage-service"></a><a name="Azure_Blob"></a> K. Microsoft Azure Blob Storage 서비스에서 복원
 
 아래의 세 예제에서는 Microsoft Azure Storage 서비스를 사용하게 됩니다. 스토리지 계정 이름은 `mystorageaccount`입니다. 데이터 파일의 컨테이너는 `myfirstcontainer`입니다. 백업 파일의 컨테이너는 `mysecondcontainer`입니다. 각 컨테이너에 대한 읽기, 쓰기, 삭제 및 나열 권한이 있는 저장된 액세스 정책을 만들었습니다. 저장된 액세스 정책에 연결된 공유 액세스 서명을 사용하여 SQL Server 자격 증명을 만들었습니다. Microsoft Azure Blob Storage로 SQL Server 백업 및 복원 관련 정보는 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.
 
@@ -814,11 +814,11 @@ GRANT CREATE ANY DATABASE TO [mylogin];
 
 멤버 자격 정보를 서버에서 항상 사용할 수 있는 역할에 RESTORE 권한이 제공됩니다. 고정 데이터베이스 역할의 멤버 자격은 데이터베이스가 액세스 가능한 상태이며 손상되지 않은 경우에만 확인할 수 있는데, RESTORE 실행 시 데이터베이스가 항상 이러한 상태인 것은 아니므로 `db_owner` 고정 데이터베이스 역할의 멤버에게는 RESTORE 권한이 없습니다.
 
-## <a name="examples"></a> 예
+## <a name="examples"></a><a name="examples"></a> 예
 
 다음 예제에서는 URL에서 자격 증명 생성을 비롯한 복사 전용 데이터베이스 백업을 복원합니다.
 
-### <a name="restore-mi-database"></a> 1. 네 개의 백업 디바이스에서 데이터베이스를 복원합니다.
+### <a name="a-restore-database-from-four-backup-devices"></a><a name="restore-mi-database"></a> 1. 네 개의 백업 디바이스에서 데이터베이스를 복원합니다.
 
 ```sql
 
@@ -842,7 +842,7 @@ Msg 1801, Level 16, State 1, Line 9
 Database 'WideWorldImportersStandard' already exists. Choose a different database name.
 ```
 
-### <a name="restore-mi-database-variables"></a> 2. 변수를 통해 지정된 데이터베이스를 복원합니다.
+### <a name="b-restore-database-specified-via-variable"></a><a name="restore-mi-database-variables"></a> 2. 변수를 통해 지정된 데이터베이스를 복원합니다.
 
 ```sql
 DECLARE @db_name sysname = 'WideWorldImportersStandard';
@@ -852,7 +852,7 @@ RESTORE DATABASE @db_name
 FROM URL = @url
 ```
 
-### <a name="restore-mi-database-progress"></a> 3. RESTORE 문의 진행 상태를 추적합니다.
+### <a name="c-track-progress-of-restore-statement"></a><a name="restore-mi-database-progress"></a> 3. RESTORE 문의 진행 상태를 추적합니다.
 
 ```sql
 SELECT query = a.text, start_time, percent_complete,

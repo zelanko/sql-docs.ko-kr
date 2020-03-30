@@ -11,10 +11,10 @@ ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97ddd5aa4abf926ecd4e68e89bef63b8f25ce323
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68009976"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>ODBC Driver for SQL Server에서 드라이버 인식 연결 풀링
@@ -44,50 +44,50 @@ ms.locfileid: "68009976"
   
     |키워드|ODBC 드라이버 13|ODBC 드라이버 11|
     |-|-|-|
-    |`Address`|yes|yes|
-    |`AnsiNPW`|yes|yes|
-    |`App`|yes|yes|
-    |`ApplicationIntent`|yes|yes|  
-    |`Authentication`|yes|예|
-    |`ColumnEncryption`|yes|예|
-    |`Database`|yes|yes|
-    |`Encrypt`|yes|yes|  
-    |`Failover_Partner`|yes|yes|
-    |`FailoverPartnerSPN`|yes|yes|
-    |`MARS_Connection`|yes|yes|
-    |`Network`|yes|yes|
-    |`PWD`|yes|yes|
-    |`Server`|yes|yes|
-    |`ServerSPN`|yes|yes|
-    |`TransparentNetworkIPResolution`|yes|yes|
-    |`Trusted_Connection`|yes|yes|
-    |`TrustServerCertificate`|yes|yes|
-    |`UID`|yes|yes|
-    |`WSID`|yes|yes|
+    |`Address`|예|예|
+    |`AnsiNPW`|예|예|
+    |`App`|예|예|
+    |`ApplicationIntent`|예|예|  
+    |`Authentication`|예|예|
+    |`ColumnEncryption`|예|예|
+    |`Database`|예|예|
+    |`Encrypt`|예|예|  
+    |`Failover_Partner`|예|예|
+    |`FailoverPartnerSPN`|예|예|
+    |`MARS_Connection`|예|예|
+    |`Network`|예|예|
+    |`PWD`|예|예|
+    |`Server`|예|예|
+    |`ServerSPN`|예|예|
+    |`TransparentNetworkIPResolution`|예|예|
+    |`Trusted_Connection`|예|예|
+    |`TrustServerCertificate`|예|예|
+    |`UID`|예|예|
+    |`WSID`|예|예|
     
 - 다음 연결 특성에서 연결 문자열과 풀링된 연결 문자열 사이에 차이가 있는 경우 풀링된 연결이 사용되지 않습니다.  
   
     |attribute|ODBC 드라이버 13|ODBC 드라이버 11|  
     |-|-|-|  
-    |`SQL_ATTR_CURRENT_CATALOG`|yes|yes|
-    |`SQL_ATTR_PACKET_SIZE`|yes|yes|
-    |`SQL_COPT_SS_ANSI_NPW`|yes|yes|
-    |`SQL_COPT_SS_ACCESS_TOKEN`|yes|예|
-    |`SQL_COPT_SS_AUTHENTICATION`|yes|예|
-    |`SQL_COPT_SS_ATTACHDBFILENAME`|yes|yes|
-    |`SQL_COPT_SS_BCP`|yes|yes|
-    |`SQL_COPT_SS_COLUMN_ENCRYPTION`|yes|예|
-    |`SQL_COPT_SS_CONCAT_NULL`|yes|yes|
-    |`SQL_COPT_SS_ENCRYPT`|yes|yes|
-    |`SQL_COPT_SS_FAILOVER_PARTNER`|yes|yes|
-    |`SQL_COPT_SS_FAILOVER_PARTNER_SPN`|yes|yes|
-    |`SQL_COPT_SS_INTEGRATED_SECURITY`|yes|yes|
-    |`SQL_COPT_SS_MARS_ENABLED`|yes|yes|
-    |`SQL_COPT_SS_OLDPWD`|yes|yes|
-    |`SQL_COPT_SS_SERVER_SPN`|yes|yes|
-    |`SQL_COPT_SS_TRUST_SERVER_CERTIFICATE`|yes|yes|
-    |`SSPROP_AUTH_REPL_SERVER_NAME`|yes|yes|
-    |`SQL_COPT_SS_TNIR`|yes|예|
+    |`SQL_ATTR_CURRENT_CATALOG`|예|예|
+    |`SQL_ATTR_PACKET_SIZE`|예|예|
+    |`SQL_COPT_SS_ANSI_NPW`|예|예|
+    |`SQL_COPT_SS_ACCESS_TOKEN`|예|예|
+    |`SQL_COPT_SS_AUTHENTICATION`|예|예|
+    |`SQL_COPT_SS_ATTACHDBFILENAME`|예|예|
+    |`SQL_COPT_SS_BCP`|예|예|
+    |`SQL_COPT_SS_COLUMN_ENCRYPTION`|예|예|
+    |`SQL_COPT_SS_CONCAT_NULL`|예|예|
+    |`SQL_COPT_SS_ENCRYPT`|예|예|
+    |`SQL_COPT_SS_FAILOVER_PARTNER`|예|예|
+    |`SQL_COPT_SS_FAILOVER_PARTNER_SPN`|예|예|
+    |`SQL_COPT_SS_INTEGRATED_SECURITY`|예|예|
+    |`SQL_COPT_SS_MARS_ENABLED`|예|예|
+    |`SQL_COPT_SS_OLDPWD`|예|예|
+    |`SQL_COPT_SS_SERVER_SPN`|예|예|
+    |`SQL_COPT_SS_TRUST_SERVER_CERTIFICATE`|예|예|
+    |`SSPROP_AUTH_REPL_SERVER_NAME`|예|예|
+    |`SQL_COPT_SS_TNIR`|예|예|
  
 -   추가 네트워크를 호출하지 않고 드라이버가 다음 연결 키워드 및 특성을 재설정하고 조정할 수 있습니다. 드라이버는 연결에 잘못된 정보가 포함되지 않도록 이러한 매개 변수를 다시 설정합니다.  
   
@@ -95,36 +95,36 @@ ms.locfileid: "68009976"
   
     |키워드|ODBC 드라이버 13|ODBC 드라이버 11|  
     |-|-|-|  
-    |`AutoTranslate`|yes|yes|
-    |`Description`|yes|yes|
-    |`MultisubnetFailover`|yes|yes|  
-    |`QueryLog_On`|yes|yes|
-    |`QueryLogFile`|yes|yes|
-    |`QueryLogTime`|yes|yes|
-    |`Regional`|yes|yes|
-    |`StatsLog_On`|yes|yes|
-    |`StatsLogFile`|  yes|yes|
+    |`AutoTranslate`|예|예|
+    |`Description`|예|예|
+    |`MultisubnetFailover`|예|예|  
+    |`QueryLog_On`|예|예|
+    |`QueryLogFile`|예|예|
+    |`QueryLogTime`|예|예|
+    |`Regional`|예|예|
+    |`StatsLog_On`|예|예|
+    |`StatsLogFile`|  예|예|
   
      다음 연결 특성 중 하나를 변경하는 경우 기존 연결을 재사용할 수 있습니다.  필요에 따라 드라이버가 값을 재설정합니다. 드라이버가 추가로 네트워크를 호출하지 않고 클라이언트에서 이러한 특성을 재설정할 수 있습니다.  
   
     |attribute|ODBC 드라이버 13|ODBC 드라이버 11|  
     |-|-|-|  
-    |모든 문 특성|yes|yes|
-    |`SQL_ATTR_AUTOCOMMIT`|yes|yes|
-    |`SQL_ATTR_CONNECTION_TIMEOUT`|  yes|yes|
-    |`SQL_ATTR_DISCONNECT_BEHAVIOR SQL_ATTR_CONNECTION_TIMEOUT`|yes|yes|
-    |`SQL_ATTR_LOGIN_TIMEOUT`|yes|yes|
-    |`SQL_ATTR_ODBC_CURSORS`|  yes|yes|
-    |`SQL_COPT_SS_PERF_DATA`|yes|yes|
-    |`SQL_COPT_SS_PERF_DATA_LOG`|yes|yes|
-    |`SQL_COPT_SS_PERF_DATA_LOG_NOW`| yes|yes| 
-    |`SQL_COPT_SS_PERF_QUERY`|yes|yes|
-    |`SQL_COPT_SS_PERF_QUERY_INTERVAL`|yes|yes|
-    |`SQL_COPT_SS_PERF_QUERY_LOG`|  yes|yes|
-    |`SQL_COPT_SS_PRESERVE_CURSORS`|yes|yes|
-    |`SQL_COPT_SS_TRANSLATE`|yes|yes|
-    |`SQL_COPT_SS_USER_DATA`|  yes|yes|
-    |`SQL_COPT_SS_WARN_ON_CP_ERROR`|yes|yes|  
+    |모든 문 특성|예|예|
+    |`SQL_ATTR_AUTOCOMMIT`|예|예|
+    |`SQL_ATTR_CONNECTION_TIMEOUT`|  예|예|
+    |`SQL_ATTR_DISCONNECT_BEHAVIOR SQL_ATTR_CONNECTION_TIMEOUT`|예|예|
+    |`SQL_ATTR_LOGIN_TIMEOUT`|예|예|
+    |`SQL_ATTR_ODBC_CURSORS`|  예|예|
+    |`SQL_COPT_SS_PERF_DATA`|예|예|
+    |`SQL_COPT_SS_PERF_DATA_LOG`|예|예|
+    |`SQL_COPT_SS_PERF_DATA_LOG_NOW`| 예|예| 
+    |`SQL_COPT_SS_PERF_QUERY`|예|예|
+    |`SQL_COPT_SS_PERF_QUERY_INTERVAL`|예|예|
+    |`SQL_COPT_SS_PERF_QUERY_LOG`|  예|예|
+    |`SQL_COPT_SS_PRESERVE_CURSORS`|예|예|
+    |`SQL_COPT_SS_TRANSLATE`|예|예|
+    |`SQL_COPT_SS_USER_DATA`|  예|예|
+    |`SQL_COPT_SS_WARN_ON_CP_ERROR`|예|예|  
   
 ## <a name="see-also"></a>참고 항목  
  [Windows의 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  

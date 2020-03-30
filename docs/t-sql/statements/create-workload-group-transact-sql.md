@@ -21,10 +21,10 @@ ms.author: jrasnick
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
 ms.openlocfilehash: b217787d0cba0a1d62ab8393ef7fac76d7665bb0
-ms.sourcegitcommit: d876425e5c465ee659dd54e7359cda0d993cbe86
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/24/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77568066"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP(Transact-SQL)
@@ -84,7 +84,7 @@ IMPORTANCE = { LOW | **MEDIUM** | HIGH }</br>
 IMPORTANCE는 리소스 풀에 대해 로컬입니다. 같은 리소스 풀 내에 있는 다른 중요도의 작업 그룹은 서로 영향을 주지만 다른 리소스 풀의 작업 그룹에는 영향을 주지 않습니다.
 
 REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*</br>
-단일 요청이 풀에서 사용할 수 있는 최대 메모리 양을 지정합니다. *value*는 MAX_MEMORY_PERCENT에서 지정한 리소스 풀 크기와 관련된 백분율입니다.
+단일 요청이 풀에서 사용할 수 있는 최대 메모리 양을 지정합니다. *값*은 MAX_MEMORY_PERCENT에서 지정한 리소스 풀 크기와 관련된 백분율입니다.
 
 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]까지는 *value*가 정수이고, [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 관리되는 인스턴스에서는 float입니다. 기본값은 25입니다. 허용되는 *value*의 범위는 1에서 100까지입니다.
 
@@ -93,7 +93,7 @@ REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*</br>
 >
 > *value*를 0으로 설정하면 사용자 정의 작업 그룹에 SORT 및 HASH JOIN 작업이 있는 쿼리가 실행되지 않습니다.
 >
-> 다른 동시 쿼리를 실행 중인 경우 서버가 사용 가능한 메모리를 충분히 따로 설정해 놓지 못할 수 있으므로 *value*를 70을 초과하는 값으로 설정하지 않는 것이 좋습니다. 71 이상의 값으로 설정하면 쿼리 시간 초과 오류 8645가 발생할 수 있습니다.
+> 다른 동시 쿼리를 실행 중인 경우 서버가 사용 가능한 메모리를 충분히 따로 설정해 놓지 못할 수 있으므로 ‘값’을 70을 초과하는 값으로 설정하지 않는 것이 좋습니다.  71 이상의 값으로 설정하면 쿼리 시간 초과 오류 8645가 발생할 수 있습니다.
 >
 > 쿼리 메모리 요구 사항이 이 매개 변수에 지정된 제한을 초과하는 경우 서버는 다음을 수행합니다.
 >
@@ -131,7 +131,7 @@ MAX_DOP = *value*</br>
 > 서버 수준에서 이 작업을 수행하려면 **MAXDOP(최대 병렬 처리 수준)** [서버 구성 옵션](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 사용합니다.
 
 GROUP_MAX_REQUESTS = *value*</br>
-작업 그룹에서 실행할 수 있는 최대 동시 요청 수를 지정합니다. *value*는 0이거나 양의 정수여야 합니다. *value*의 기본 설정은 0이며, 무제한 요청을 허용합니다. 최대 동시 요청에 도달한 경우 해당 그룹의 사용자가 로그인할 수 있지만 지정된 값 아래로 동시 요청 수가 떨어질 때까지 사용자가 대기 상태에 배치됩니다.
+작업 그룹에서 실행할 수 있는 최대 동시 요청 수를 지정합니다. *value*는 0이거나 양의 정수여야 합니다. *값*의 기본 설정은 0이며, 무제한 요청을 허용합니다. 최대 동시 요청에 도달한 경우 해당 그룹의 사용자가 로그인할 수 있지만 지정된 값 아래로 동시 요청 수가 떨어질 때까지 사용자가 대기 상태에 배치됩니다.
 
 USING { *pool_name* |  **“default”** }</br>
 *pool_name*으로 식별된 사용자 정의 리소스 풀에 작업 그룹을 연결합니다. 그러면 실제로 리소스 풀에 작업 그룹을 넣습니다. *pool_name*이 제공되지 않거나 USING 인수가 사용되지 않으면 작업 그룹은 미리 정의된 Resource Governor 기본 풀에 배치됩니다.

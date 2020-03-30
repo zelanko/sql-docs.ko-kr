@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 732db8e12b2923dfdd74727c5e9e0a5a56483fc4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75255925"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>Visual Studio Code에서 SQL Server 빅 데이터 클러스터에 대한 Spark 작업 제출
@@ -176,7 +176,7 @@ Visual Studio Code에서 클러스터로 스크립트를 제출하려면 먼저 
 
 [Apache Livy](https://livy.incubator.apache.org/) 구성이 지원되며, 작업 영역 폴더에 있는 **.VSCode\settings.json**에서 설정할 수 있습니다. 현재, Livy 구성은 Python 스크립트만 지원합니다. 자세한 내용은 [Livy 추가 정보](https://github.com/cloudera/livy/blob/master/README.rst )를 참조하세요.
 
-### <a id="triggerlivyconf"></a>**Livy 구성을 트리거하는 방법**
+### <a name="how-to-trigger-livy-configuration"></a><a id="triggerlivyconf"></a>**Livy 구성을 트리거하는 방법**
 
 #### <a name="method-1"></a>방법 1
 

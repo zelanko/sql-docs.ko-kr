@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286327"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>SQL Server 설명서에 기여하는 방법
@@ -30,7 +30,7 @@ ms.locfileid: "79286327"
 
 모든 공용 기여의 기술적 정확성 및 일관성에 대해 SQL 콘텐츠 팀에서 유효성을 검사합니다. 
 
-## <a id="githubui"></a> 브라우저에서 편집
+## <a name="edit-in-your-browser"></a><a id="githubui"></a> 브라우저에서 편집
 
 브라우저에서 SQL Server 콘텐츠를 간단하게 편집한 다음, Microsoft에 제출할 수 있습니다. 자세한 내용은 [Microsoft Docs 참여자 가이드 개요](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents)에서 확인할 수 있습니다. 
 
@@ -51,7 +51,7 @@ ms.locfileid: "79286327"
 
 ![SQL 설명서 편집](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
 
-## <a id="tools"></a> 도구를 사용하여 로컬로 편집
+## <a name="edit-locally-with-tools"></a><a id="tools"></a> 도구를 사용하여 로컬로 편집
 
 또 다른 편집 옵션은 **sql-docs** 또는 **azure-docs** 리포지토리를 포크하고 컴퓨터에 로컬로 복제하는 것입니다. 그런 다음, Markdown 편집기 및 git 클라이언트를 사용하여 변경 내용을 전송할 수 있습니다. 이 워크플로는 더 복잡하거나 여러 파일을 포함하는 편집에 적합합니다. docs.microsoft.com에 대한 빈번한 참가자에게도 적합합니다.
 

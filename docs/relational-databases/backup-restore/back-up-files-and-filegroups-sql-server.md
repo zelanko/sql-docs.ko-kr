@@ -17,10 +17,10 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cf87d09eed5b955c1773c46270f25cb0a2d57eaa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71708680"
 ---
 # <a name="back-up-files-and-filegroups"></a>파일 및 파일 그룹 백업
@@ -29,9 +29,9 @@ ms.locfileid: "71708680"
   
 파일 백업에 대한 자세한 내용은 [전체 파일 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) 및 [차등 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)을 참조하세요.  
 
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 - 명시적 또는 암시적 트랜잭션에서는 BACKUP 문을 사용할 수 없습니다.  
   
@@ -39,11 +39,11 @@ ms.locfileid: "71708680"
   
 제한 사항에 대한 자세한 내용은 [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)을 참조하세요.  
   
-###  <a name="Recommendations"></a> 권장 사항
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항
   
 기본적으로 백업 작업을 성공적으로 수행할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그와 시스템 이벤트 로그에 항목이 추가됩니다. 로그를 자주 백업하는 경우 이러한 성공 메시지는 바로 누적되므로 엄청난 오류 로그가 쌓여 다른 메시지를 찾기 힘들 수 있습니다. 이 경우 스크립트가 이러한 로그 항목에 종속되지 않을 경우 추적 플래그 3226을 사용하여 이러한 항목을 표시하지 않을 수 있습니다. [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.  
 
-###  <a name="Permissions"></a> 권한
+###  <a name="permissions"></a><a name="Permissions"></a> 권한
 
 `BACKUP DATABASE` 및 `BACKUP LOG` 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버로 설정됩니다.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "71708680"
 
 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)데이터베이스를 새 위치로 복원하고 선택적으로 데이터베이스 이름을 바꾸는 방법을 설명합니다.  
   
-###  <a name="TsqlExample"></a> 예
+###  <a name="examples"></a><a name="TsqlExample"></a> 예
 다음 예에서는 `Sales` 데이터베이스의 보조 파일 그룹에 있는 하나 이상의 파일을 백업합니다. 이 데이터베이스는 전체 복구 모델을 사용하고 다음과 같은 보조 파일 그룹을 포함합니다.  
   
 - `SalesGroup1` 및 `SGrp1Fi1` 파일을 포함하는 `SGrp1Fi2`파일 그룹  
@@ -199,7 +199,7 @@ BACKUP DATABASE Sales
 GO  
 ```  
   
-## <a name="PowerShellProcedure"></a> PowerShell 사용
+## <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell 사용
 
 [SQL Server PowerShell 공급자](../../relational-databases/scripting/sql-server-powershell-provider.md)를 설정 및 사용합니다.
   

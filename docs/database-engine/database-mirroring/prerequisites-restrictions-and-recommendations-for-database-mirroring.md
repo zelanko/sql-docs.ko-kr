@@ -20,10 +20,10 @@ ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1f6a1c47cf5672cdf0f9a22be6a252cfc8cdbe87
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244373"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>데이터베이스 미러링을 위한 필수 구성 요소, 제한 사항 및 권장 사항
@@ -35,13 +35,13 @@ ms.locfileid: "75244373"
  이 항목에서는 데이터베이스 미러링을 설정하기 위한 사전 요구 사항 및 권장 사항에 대해 설명합니다. 데이터베이스 미러링에 대한 소개는 [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.  
   
   
-##  <a name="DbmSupport"></a> 데이터베이스 미러링 지원  
+##  <a name="support-for-database-mirroring"></a><a name="DbmSupport"></a> 데이터베이스 미러링 지원  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터베이스 미러링 지원에 대한 자세한 내용은 [SQL Server 2016의 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.
   
  데이터베이스 미러링은 지원되는 모든 데이터베이스 호환성 수준에서 작동합니다. 지원되는 호환성 수준에 대한 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.  
   
   
-##  <a name="Prerequisites"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
   
 -   미러링 세션을 설정하려면 파트너 및 미러링 모니터 서버(있는 경우)가 같은 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행되어야 합니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "75244373"
     >  데이터베이스 미러링이 중지된 경우 주 데이터베이스에서 수행된 모든 후속 로그 백업을 미러 데이터베이스에 적용해야만 미러링을 다시 시작할 수 있습니다.  
   
   
-##  <a name="Restrictions"></a> 제한 사항  
+##  <a name="restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   사용자 데이터베이스만 미러링할 수 있습니다. **master**, **msdb**, **tempdb**또는 **model** 데이터베이스는 미러링할 수 없습니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "75244373"
 -   데이터베이스 미러링은 데이터베이스 간 트랜잭션 또는 분산 트랜잭션에서 지원되지 않습니다. 자세한 내용은 [Always On 가용성 그룹 및 데이터베이스 미러링에 대한 데이터베이스 간 트랜잭션 및 분산 트랜잭션&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)를 참조하세요.  
   
   
-##  <a name="RecommendationsForPartners"></a> 파트너 서버 구성에 대한 권장 사항  
+##  <a name="recommendations-for-configuring-partner-servers"></a><a name="RecommendationsForPartners"></a> 파트너 서버 구성에 대한 권장 사항  
   
 -   동일한 작업을 처리할 수 있는 동등한 시스템에서 파트너를 실행해야 합니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "75244373"
 -   보호 우선 모드 사용 시 WAN(광역 통신망)은 데이터베이스 미러링에 대해 안정적이지 않을 수 있습니다. WAN에서 보호 우선 모드를 사용할 경우 필요 없는 자동 장애 조치가 발생할 수 있으므로 세션에 미러링 모니터 서버를 추가하는 방식에 대해 주의해야 합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [데이터베이스 미러링 배포 시의 권장 구성](#RecommendationsForDeploying)을 참조하십시오.  
   
   
-##  <a name="RecommendationsForDeploying"></a> 데이터베이스 미러링 배포 시의 권장 구성  
+##  <a name="recommendations-for-deploying-database-mirroring"></a><a name="RecommendationsForDeploying"></a> 데이터베이스 미러링 배포 시의 권장 구성  
  비동기 작업을 사용하면 데이터베이스 미러링 성능이 최적화됩니다. 동기 작업을 사용하는 미러링 세션의 경우 작업에서 대량의 트랜잭션 로그 데이터가 생성될 때 성능이 저하될 수 있습니다.  
   
  테스트 환경에서 모든 운영 모드를 시험하여 데이터베이스 미러링 성능을 평가하는 것도 좋지만 프로덕션 환경에 미러링을 배포하기 전에 실제 네트워크 작동 방식을 이해하는 것이 중요합니다.  

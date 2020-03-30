@@ -24,10 +24,10 @@ ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 12933c259fa02e77a76b8c31edf61db916dcde49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080343"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>식 예(보고서 작성기 및 SSRS)
@@ -68,7 +68,7 @@ ms.locfileid: "77080343"
 ## <a name="functions"></a>Functions  
  보고서의 여러 식에는 함수가 포함됩니다. 이러한 함수를 사용하여 데이터의 형식을 지정하고, 논리를 적용하고, 보고서 메타데이터에 액세스할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 런타임 라이브러리와 <xref:System.Convert> 및 <xref:System.Math> 네임스페이스의 함수를 사용하는 식을 작성할 수 있습니다. 다른 어셈블리 또는 사용자 지정 코드에서 함수에 대한 참조를 추가할 수 있습니다. 또한 <xref:System.Text.RegularExpressions>를 포함하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 클래스도 사용할 수 있습니다.  
   
-##  <a name="VisualBasicFunctions"></a> Visual Basic 함수  
+##  <a name="visual-basic-functions"></a><a name="VisualBasicFunctions"></a> Visual Basic 함수  
  [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 함수를 사용하여 입력란에 표시되는 데이터나 매개 변수, 속성 또는 보고서의 다른 영역에 사용되는 데이터를 조작할 수 있습니다. 이 섹션에서는 이러한 함수 중 몇 가지를 보여 주는 예를 제공합니다. 자세한 내용은 MSDN의 [Visual Basic 런타임 라이브러리 멤버](https://go.microsoft.com/fwlink/?LinkId=198941) 를 참조하세요.  
   
  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 에서는 특정 데이터 형식 등에 대한 다양한 사용자 지정 형식 옵션을 제공합니다. 자세한 내용은 MSDN의 [형식 지정](https://go.microsoft.com/fwlink/?LinkId=112024) 을 참조하십시오.  
@@ -87,7 +87,7 @@ ms.locfileid: "77080343"
     = Round(1.3*5)/5  
     ```  
   
-###  <a name="DateFunctions"></a> 날짜 함수  
+###  <a name="date-functions"></a><a name="DateFunctions"></a> 날짜 함수  
   
 -   **Today** 함수는 현재 날짜를 제공합니다. 이 식은 보고서에 날짜를 표시할 경우 입력란에 사용하거나 현재 날짜를 기반으로 데이터를 필터링할 경우 매개 변수에 사용할 수 있습니다.  
   
@@ -192,7 +192,7 @@ ms.locfileid: "77080343"
 |1년 전|`=DateSerial(Year(Parameters!TodaysDate.Value)-1,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
 |2년 전|`=DateSerial(Year(Parameters!TodaysDate.Value)-2,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
   
-###  <a name="StringFunctions"></a> 문자열 함수  
+###  <a name="string-functions"></a><a name="StringFunctions"></a> 문자열 함수  
   
 -   연결 연산자와 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 상수를 사용하여 둘 이상의 필드를 결합합니다. 다음 식에서는 두 필드를 같은 입력란에서 별도의 줄에 반환합니다.  
   
@@ -208,7 +208,7 @@ ms.locfileid: "77080343"
   
      입력란에 날짜 또는 숫자만 있는 경우 입력란 내에서 **Format** 함수 대신 서식을 적용하려면 입력란의 Format 속성을 사용해야 합니다.  
   
--   **Right**, **Len**및 **InStr** 함수는 하위 문자열을 반환하는 데 유용합니다. 예를 들어 *DOMAIN*\\*username* 에서 사용자 이름만 잘라서 반환할 수 있습니다. 다음 식에서는\\User *라는 매개 변수에서 백슬래시(*) 문자의 오른쪽에 있는 문자열 부분을 반환합니다.  
+-   **Right**, **Len**및 **InStr** 함수는 하위 문자열을 반환하는 데 유용합니다. 예를 들어 *DOMAIN*\\*username* 에서 사용자 이름만 잘라서 반환할 수 있습니다. 다음 식에서는\\User *라는 매개 변수에서 백슬래시(* ) 문자의 오른쪽에 있는 문자열 부분을 반환합니다.  
   
     ```  
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
@@ -258,7 +258,7 @@ ms.locfileid: "77080343"
     =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
     ```  
   
-###  <a name="ConversionFunctions"></a> 변환 함수  
+###  <a name="conversion-functions"></a><a name="ConversionFunctions"></a> 변환 함수  
  [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 함수를 사용하여 필드를 한 데이터 형식에서 다른 데이터 형식으로 변환할 수 있습니다. 필드의 기본 데이터 형식을 계산이나 텍스트 결합에 필요한 다른 데이터 형식으로 변환하는 데에 변환 함수를 사용할 수 있습니다.  
   
 -   다음 식에서는 상수 500을 필터 식의 값 필드에 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] money 데이터 형식과 비교하기 위해 10진수 형식으로 변환합니다.  
@@ -273,7 +273,7 @@ ms.locfileid: "77080343"
     =CStr(Parameters!MySelection.Count)  
     ```  
   
-###  <a name="DecisionFunctions"></a> 의사 결정 함수  
+###  <a name="decision-functions"></a><a name="DecisionFunctions"></a> 의사 결정 함수  
   
 -   **Iif** 함수는 식이 True인지 여부에 따라 두 값 중 하나를 반환합니다. 다음 식에서는 **Iif** 함수를 사용하여 **의 값이 100을 초과하면 부울 값** True `LineTotal` 를 반환하고, 그렇지 않으면 **False**를 반환합니다.  
   
@@ -328,10 +328,10 @@ ms.locfileid: "77080343"
   
     ```  
   
-##  <a name="ReportFunctions"></a> 보고서 함수  
+##  <a name="report-functions"></a><a name="ReportFunctions"></a> 보고서 함수  
  식에서 보고서의 데이터를 조작하는 데 사용할 수 있는 추가 보고서 함수에 대한 참조를 추가할 수 있습니다. 이 섹션에서는 이러한 함수 중 두 가지 예를 제공합니다. 집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;보고서 함수 및 예제에 대한 자세한 내용은 [집계 함수 참조 & #40; 보고서 작성기 및 SSRS & #41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)를 참조하세요.  
   
-###  <a name="Sum"></a> 합계  
+###  <a name="sum"></a><a name="Sum"></a> 합계  
   
 -   **Sum** 함수는 그룹 또는 데이터 영역에서 값의 합계를 구합니다. 이 함수는 그룹의 머리글 또는 바닥글에서 유용하게 사용됩니다. 다음 식에서는 Order 그룹 또는 데이터 영역에 데이터의 합계를 표시합니다.  
   
@@ -345,7 +345,7 @@ ms.locfileid: "77080343"
     =Sum(IIF(Fields!State.Value = "Finished", 1, 0))  
     ```  
   
-###  <a name="RowNumber"></a> RowNumber  
+###  <a name="rownumber"></a><a name="RowNumber"></a> RowNumber  
   
 -   **RowNumber** 함수는 데이터 영역의 입력란에 사용될 경우 식이 나타나는 입력란의 각 인스턴스에 대한 행 번호를 표시합니다. 이 함수는 테이블에서 행 번호를 지정하는 데 유용합니다. 또한 행 수에 따라 페이지를 나누는 등 더욱 복잡한 태스크에 유용합니다. 자세한 내용은 이 항목에서 [페이지 나누기](#PageBreaks) 를 참조하십시오.  
   
@@ -355,10 +355,10 @@ ms.locfileid: "77080343"
     =RowNumber(Nothing)  
     ```  
   
-##  <a name="AppearanceofReportData"></a> 보고서 데이터 모양  
+##  <a name="appearance-of-report-data"></a><a name="AppearanceofReportData"></a> 보고서 데이터 모양  
  식을 사용하여 데이터가 보고서에 나타나는 모양을 조작할 수 있습니다. 예를 들어 단일 입력란에서 두 필드의 값을 표시하거나, 보고서에 대한 정보를 표시하거나, 페이지 나누기가 보고서에 삽입되는 모양에 영향을 줄 수 있습니다.  
   
-###  <a name="PageHeadersandFooters"></a> 페이지 머리글 및 바닥글  
+###  <a name="page-headers-and-footers"></a><a name="PageHeadersandFooters"></a> 페이지 머리글 및 바닥글  
  보고서를 디자인할 때 보고서 이름 및 보고서 바닥글에 페이지 번호를 표시할 수 있습니다. 이렇게 하려면 다음 식을 사용합니다.  
   
 -   다음 식에서는 보고서 이름과 보고서가 실행된 시간을 제공합니다. 식은 보고서 바닥글이나 보고서 본문의 입력란에 배치할 수 있습니다. 시간 형식은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 형식 문자열(간단한 날짜)로 지정됩니다.  
@@ -398,7 +398,7 @@ ms.locfileid: "77080343"
 > [!NOTE]  
 >  페이지 머리글 또는 바닥글에서 식마다 보고서 항목을 하나만 참조할 수 있습니다. 또한 페이지 머리글과 바닥글 식에서 입력란 이름을 참조할 수 있지만 입력란 내의 실제 데이터 식은 참조할 수 없습니다.  
   
-###  <a name="PageBreaks"></a> 페이지 나누기  
+###  <a name="page-breaks"></a><a name="PageBreaks"></a> 페이지 나누기  
  일부 보고서에서는 페이지 나누기를 그룹 또는 보고서 항목 외에도 지정된 행 수의 끝에 배치할 수 있습니다. 이렇게 하려면 그룹이나 원하는 세부 레코드를 포함하는 그룹을 만들고, 페이지 나누기를 그룹에 추가한 다음 그룹 식을 지정된 행 수에 따라 그룹에 추가합니다.  
   
 -   다음 식을 그룹 식에 사용하면 25행마다 번호를 할당합니다. 그룹에 페이지 나누기가 정의되어 있는 경우 이 식을 사용하면 25행마다 페이지가 나눠집니다.  
@@ -415,10 +415,10 @@ ms.locfileid: "77080343"
   
      그룹의 페이지 나누기 설정에 대한 자세한 내용은 [페이지 나누기 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md)를 참조하세요.  
   
-##  <a name="Properties"></a> 속성  
+##  <a name="properties"></a><a name="Properties"></a> 속성  
  식은 입력란에서 데이터를 표시하는 데 사용될 뿐만 아니라 속성이 보고서 항목에 적용되는 방식을 변경하는 데에도 사용됩니다. 보고서 항목에 대한 스타일 정보를 변경하거나 보고서 항목의 표시 유형을 변경할 수 있습니다.  
   
-###  <a name="Formatting"></a> 서식  
+###  <a name="formatting"></a><a name="Formatting"></a> 서식  
   
 -   다음 식을 입력란의 Color 속성에 사용하면 `Profit` 필드의 값에 따라 텍스트 색이 달라집니다.  
   
@@ -448,7 +448,7 @@ ms.locfileid: "77080343"
 ### <a name="chart-colors"></a>차트 색  
  셰이프 차트의 색을 지정하려면 사용자 지정 코드를 사용하여 색이 데이터 요소 값에 매핑되는 순서를 제어할 수 있습니다. 이렇게 하면 범주 그룹이 동일한 여러 차트에 일관된 색을 사용할 수 있습니다. 자세한 내용은 [여러 셰이프 차트에 일관된 색 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)을 참조하세요.  
   
-###  <a name="Visibility"></a> 표시 유형  
+###  <a name="visibility"></a><a name="Visibility"></a> 표시 유형  
  보고서 항목에 대해 표시 유형 속성을 사용하여 보고서에서 항목을 표시하거나 숨길 수 있습니다. 테이블과 같은 데이터 영역에서 처음에 식의 값을 기반으로 정보 행을 숨길 수 있습니다.  
   
 -   다음 식을 그룹에서 정보 행의 초기 표시 유형에 사용하면 `PctQuota` 필드에서 90%를 초과하는 모든 판매액에 대해 정보 행을 표시합니다.  
@@ -469,7 +469,7 @@ ms.locfileid: "77080343"
     =IIF(Fields!Column_1.IsMissing, true, false)  
     ```  
   
-###  <a name="Hyperlinks"></a> URL  
+###  <a name="urls"></a><a name="Hyperlinks"></a> URL  
  보고서 데이터를 사용하여 URL을 사용자 지정할 수 있으며 입력란에 대한 동작으로 URL을 추가할지 여부를 조건부로 제어할 수도 있습니다.  
   
 -   다음 식을 입력란에서 동작으로 사용하면 데이터 세트 필드 `EmployeeID`를 URL 매개 변수로 지정하는 사용자 지정 URL이 생성됩니다.  
@@ -486,10 +486,10 @@ ms.locfileid: "77080343"
     =IIF(Parameters!IncludeURLs.Value,"https://adventure-works.com/productcatalog",Nothing)  
     ```  
   
-##  <a name="ReportData"></a> 보고서 데이터  
+##  <a name="report-data"></a><a name="ReportData"></a> 보고서 데이터  
  식을 사용하여 보고서에 사용되는 데이터를 조작할 수 있습니다. 매개 변수 및 다른 보고서 정보를 참조할 수 있습니다. 보고서 데이터 검색에 사용하는 쿼리를 변경할 수도 있습니다.  
   
-###  <a name="Parameters"></a> 매개 변수  
+###  <a name="parameters"></a><a name="Parameters"></a> 매개 변수  
  매개 변수의 식을 사용하여 매개 변수에 대한 기본값을 다양화할 수 있습니다. 예를 들어 매개 변수를 사용하여 보고서 실행에 사용하는 사용자 ID에 따라 특정 사용자에 대한 데이터를 필터링할 수 있습니다.  
   
 -   다음 식을 매개 변수에 대한 기본값으로 사용하면 보고서를 실행하는 사람의 사용자 ID를 수집합니다.  
@@ -510,7 +510,7 @@ ms.locfileid: "77080343"
     =Fields(Parameters!ParameterField.Value).Value  
     ```  
   
-##  <a name="CustomCode"></a> 사용자 지정 코드  
+##  <a name="custom-code"></a><a name="CustomCode"></a> 사용자 지정 코드  
  보고서에 사용자 지정 코드를 사용할 수 있습니다. 사용자 지정 코드는 보고서에 포함되거나 보고서에서 사용되는 사용자 지정 어셈블리에 저장됩니다. 사용자 지정 코드에 대한 자세한 내용은 [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)를 참조하세요.  
   
 ### <a name="using-group-variables-for-custom-aggregation"></a>사용자 지정 집계를 위해 그룹 변수 사용  

@@ -11,10 +11,10 @@ ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 55dc6787960fbb4979bbe0d21f27f0fa43437662
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75243010"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>주 복제본의 변경 내용이 Always On 가용성 그룹의 보조 복제본에 반영되지 않은 이유 확인
@@ -50,7 +50,7 @@ ms.locfileid: "75243010"
 다음 섹션에서는 주 본제본의 변경 내용이 읽기 전용 쿼리에 대한 보조 복제본에 반영되지 않는 일반적인 원인을 설명합니다.  
 
 
-##  <a name="BKMK_OLDTRANS"></a> 장기 실행 활성 트랜잭션  
+##  <a name="long-running-active-transactions"></a><a name="BKMK_OLDTRANS"></a> 장기 실행 활성 트랜잭션  
  주 복제본에서 장기 실행 트랜잭션은 보조 복제본에서 업데이트를 읽지 못하도록 합니다.  
   
 ### <a name="explanation"></a>설명  
@@ -59,7 +59,7 @@ ms.locfileid: "75243010"
 ### <a name="diagnosis-and-resolution"></a>진단 및 해결  
  주 복제본에서 [DBCC OPENTRAN&#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-opentran-transact-sql.md)을 사용하여 가장 오래된 활성 트랜잭션을 보고 롤백할 수 있는지 확인합니다. 가장 오래된 활성 트랜잭션이 롤백되고 보조 복제본에 동기화되면 보조 복제본에서 읽기 작업은 가장 오래된 활성 트랜잭션의 시작 부분까지 가용성 데이터베이스의 업데이트를 확인할 수 있습니다.  
   
-##  <a name="BKMK_LATENCY"></a> 높은 네트워크 대기 시간 또는 낮은 네트워크 처리량이 주 복제본에 로그 축적 유발  
+##  <a name="high-network-latency-or-low-network-throughput-causes-log-build-up-on-the-primary-replica"></a><a name="BKMK_LATENCY"></a> 높은 네트워크 대기 시간 또는 낮은 네트워크 처리량이 주 복제본에 로그 축적 유발  
  높은 네트워크 대기 시간 또는 낮은 처리량은 보조 복제본으로 로그가 충분히 빠르게 전송되는 것을 방지할 수 있습니다.  
   
 ### <a name="explanation"></a>설명  
@@ -92,7 +92,7 @@ ms.locfileid: "75243010"
   
  이 문제를 해결하려면 네트워크 대역폭을 업그레이드하거나 불필요한 네트워크 트래픽을 제거하거나 줄여 보십시오.  
   
-##  <a name="BKMK_REDOBLOCK"></a> 다시 실행 스레드의 실행을 차단하는 다른 워크로드 보고  
+##  <a name="another-reporting-workload-blocks-the-redo-thread-from-running"></a><a name="BKMK_REDOBLOCK"></a> 다시 실행 스레드의 실행을 차단하는 다른 워크로드 보고  
  보조 복제본의 다시 실행 스레드가 오래 실행 중인 읽기 전용 쿼리에 의해 DDL(데이터 정의 언어) 변경이 차단됩니다. 추가 업데이트를 읽기 작업에 사용할 수 있도록 다시 실행 스레드의 잠금을 해제해야 합니다.  
   
 ### <a name="explanation"></a>설명  
@@ -108,7 +108,7 @@ from sys.dm_exec_requests where command = 'DB STARTUP'
   
  다시 실행 스레드가 차단 해제된 보고 워크로드를 완료하도록 하거나 차단 세션 ID에 대해 [KILL&#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md) 명령을 실행하여 다시 실행 스레드를 즉시 차단 해제할 수 있습니다.  
   
-##  <a name="BKMK_REDOBEHIND"></a> 리소스 경합으로 인한 다시 실행 스레드 뒤처짐  
+##  <a name="redo-thread-falls-behind-due-to-resource-contention"></a><a name="BKMK_REDOBEHIND"></a> 리소스 경합으로 인한 다시 실행 스레드 뒤처짐  
  보조 복제본에 대한 큰 보고 워크로드 때문에 보조 복제본의 성능이 느려졌고 다시 실행 스레드가 뒤처졌습니다.  
   
 ### <a name="explanation"></a>설명  

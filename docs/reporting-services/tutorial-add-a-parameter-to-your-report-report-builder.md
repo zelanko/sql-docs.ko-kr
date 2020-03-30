@@ -9,10 +9,10 @@ ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a50e32eb3d13e2b78705a3f2ba4fd63e9ccd442
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72252132"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>자습서: 보고서에 매개 변수 추가(보고서 작성기)
@@ -30,7 +30,7 @@ ms.locfileid: "72252132"
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
   
-## <a name="Setup"></a>1. 테이블 또는 행렬 마법사에서 행렬 보고서 및 데이터 세트 만들기  
+## <a name="1-create-a-matrix-report-and-dataset-in-the-table-or-matrix-wizard"></a><a name="Setup"></a>1. 테이블 또는 행렬 마법사에서 행렬 보고서 및 데이터 세트 만들기  
 행렬 보고서, 데이터 원본 및 데이터 세트를 만듭니다.  
   
 > [!NOTE]  
@@ -88,7 +88,7 @@ ms.locfileid: "72252132"
   
 12. **다음**을 클릭합니다.  
   
-## <a name="CompleteWizard"></a>2. 마법사에서 데이터 구성 및 레이아웃 선택  
+## <a name="2-organize-data-and-choose-layout-in-the-wizard"></a><a name="CompleteWizard"></a>2. 마법사에서 데이터 구성 및 레이아웃 선택  
 마법사는 데이터를 표시하기 위한 시작 디자인을 제공합니다. 이 마법사의 미리 보기 창에서는 테이블 또는 행렬 디자인을 완료하기 전에 데이터 그룹화의 결과를 시각화할 수 있습니다.  
   
 ### <a name="to-organize-data-into-groups"></a>데이터를 그룹으로 구성하려면  
@@ -127,7 +127,7 @@ ms.locfileid: "72252132"
   
 지금은 열 제목에 상점 이름이 아닌 상점 식별자가 표시됩니다. 나중에 상점 식별자/상점 이름 쌍이 포함된 데이터 세트에서 상점 이름을 조회하는 식을 추가합니다.  
   
-## <a name="Query"></a>3. 쿼리 매개 변수를 추가하여 보고서 매개 변수 만들기  
+## <a name="3-add-a-query-parameter-to-create-a-report-parameter"></a><a name="Query"></a>3. 쿼리 매개 변수를 추가하여 보고서 매개 변수 만들기  
 쿼리 매개 변수를 쿼리에 추가하면 보고서 작성기가 이름, 프롬프트 및 데이터 형식에 대한 기본 속성을 사용하여 단일 값 보고서 매개 변수를 자동으로 만듭니다.  
   
 ### <a name="to-add-a-query-parameter"></a>쿼리 매개 변수를 추가하려면  
@@ -162,7 +162,7 @@ ms.locfileid: "72252132"
   
 매개 변수 창이 표시되지 않는 경우 **보기** 메뉴에서 **매개 변수**를 선택합니다.  
   
-## <a name="ChangeDefaultProperties"></a>4. 보고서 매개 변수의 기본 데이터 형식 및 기타 속성 변경  
+## <a name="4-change-default-data-type-and-other-properties-for-a-report-parameter"></a><a name="ChangeDefaultProperties"></a>4. 보고서 매개 변수의 기본 데이터 형식 및 기타 속성 변경  
 보고서 매개 변수를 만든 후 속성의 기본값을 조정할 수 있습니다.  
   
 ### <a name="to-change-the-default-data-type-for-a-report-parameter"></a>보고서 매개 변수의 기본 데이터 형식을 변경하려면  
@@ -185,7 +185,7 @@ ms.locfileid: "72252132"
   
 ![SSRB_ParamTutStoreID](../reporting-services/media/ssrb-paramtutstoreid.png)  
   
-## <a name="AddDataset"></a>4a. 사용 가능한 값과 표시 이름을 제공하는 데이터 세트 추가  
+## <a name="4a-add-a-dataset-to-provide-available-values-and-display-names"></a><a name="AddDataset"></a>4a. 사용 가능한 값과 표시 이름을 제공하는 데이터 세트 추가  
 보고서를 읽는 사람이 매개 변수에 대해 유효한 값만 입력하도록 선택할 값의 드롭다운 목록을 만들 수 있습니다. 지정한 목록이나 데이터 세트의 값을 사용할 수 있습니다. 매개 변수에 대한 참조가 포함되지 않은 쿼리를 사용하여 데이터 세트에서 사용 가능한 값을 제공해야 합니다.  
   
 ### <a name="to-create-a-dataset-for-valid-values-for-a-parameter"></a>매개 변수에 대한 유효한 값의 데이터 세트를 만들려면  
@@ -215,7 +215,7 @@ ms.locfileid: "72252132"
   
     보고서 데이터 창의 **Stores** 데이터 세트 노드 아래에 StoreID 및 StoreName 필드가 표시됩니다.  
   
-## <a name="AvailableValues"></a>4b. 목록에 표시할 사용 가능한 값 지정 
+## <a name="4b-specify-available-values-to-show-in-a-list"></a><a name="AvailableValues"></a>4b. 목록에 표시할 사용 가능한 값 지정 
 사용 가능한 값을 제공하는 데이터 세트를 만든 후 보고서 속성을 변경하여 보고서 뷰어 도구 모음의 유효한 값 드롭다운 목록을 채우는 데 사용할 데이터 세트와 필드를 지정합니다.  
   
 ### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>데이터 세트의 매개 변수에 사용 가능한 값을 제공하려면  
@@ -246,7 +246,7 @@ ms.locfileid: "72252132"
   
 보고서에는 상점 식별자 **200**에 대한 Accessories, Camcorders 및 Digital SLR Cameras의 판매 수량이 표시됩니다.  
   
-## <a name="DefaultValues"></a>4c. 기본값 지정 
+## <a name="4c-specify-a-default-value"></a><a name="DefaultValues"></a>4c. 기본값 지정 
 보고서가 자동으로 실행되도록 각 매개 변수의 기본값을 지정할 수 있습니다.  
   
 ### <a name="to-specify-a-default-value-from-a-dataset"></a>데이터 세트에서 기본값을 지정하려면  
@@ -283,7 +283,7 @@ ms.locfileid: "72252132"
   
 *\@StoreID*의 경우 보고서 뷰어에 상점 식별자 **200**의 표시 이름인 "Contoso Catalog Store"가 표시됩니다. 보고서에는 상점 식별자 **200**에 대한 Accessories, Camcorders 및 Digital SLR Cameras의 판매 수량이 표시됩니다.  
   
-## <a name="NameValue"></a>4d. 이름/값 쌍 조회  
+## <a name="4d-look-up-a-namevalue-pair"></a><a name="NameValue"></a>4d. 이름/값 쌍 조회  
 데이터 세트에는 식별자 및 해당 이름 필드가 포함되어 있을 수 있습니다. 식별자만 있는 경우 이름/값 쌍이 포함된 만든 데이터 세트에서 해당 이름을 조회할 수 있습니다.  
   
 ### <a name="to-look-up-a-value-from-a-dataset"></a>데이터 세트에서 값을 조회하려면  
@@ -314,7 +314,7 @@ ms.locfileid: "72252132"
   
 각 열의 맨 위 열 머리글에 상점 식별자 대신 상점 이름이 표시됩니다.  
   
-## <a name="Expression"></a>5. 보고서에 선택한 매개 변수 값 표시  
+## <a name="5-display-the-selected-parameter-value-in-the-report"></a><a name="Expression"></a>5. 보고서에 선택한 매개 변수 값 표시  
 보고서를 읽는 사람이 보고서에 대해 궁금한 사항이 있을 경우 선택한 매개 변수 값을 알면 도움이 됩니다. 각 매개 변수에 대해 사용자가 선택한 값을 보고서에 유지할 수 있습니다. 입력란의 매개 변수를 페이지 바닥글에 표시하는 것이 한 가지 방법입니다.  
   
 ### <a name="to-display-the-selected-parameter-value-and-label-on-a-page-footer"></a>선택한 매개 변수 값 및 레이블을 페이지 바닥글에 표시하려면  
@@ -335,7 +335,7 @@ ms.locfileid: "72252132"
   
 7.  보고서를 미리 봅니다.  
   
-## <a name="Filter"></a>6. 필터에서 보고서 매개 변수 사용  
+## <a name="6-use-the-report-parameter-in-a-filter"></a><a name="Filter"></a>6. 필터에서 보고서 매개 변수 사용  
 필터를 사용하면 외부 데이터 원본에서 검색된 데이터 중 보고서에 사용할 데이터를 제어할 수 있습니다. 보고서를 읽는 사람이 표시할 데이터를 제어할 수 있도록 행렬에 대한 필터에 보고서 매개 변수를 포함할 수 있습니다.  
   
 ### <a name="to-specify-a-parameter-in-a-matrix-filter"></a>행렬 필터에서 매개 변수를 지정하려면  
@@ -364,7 +364,7 @@ ms.locfileid: "72252132"
   
 행렬에 선택한 상점에 해당하는 데이터가 표시됩니다.  
   
-## <a name="Multivalued"></a>7. 여러 값을 허용하도록 보고서 매개 변수 변경  
+## <a name="7-change-the-report-parameter-to-accept-multiple-values"></a><a name="Multivalued"></a>7. 여러 값을 허용하도록 보고서 매개 변수 변경  
 매개 변수를 단일 값 매개 변수에서 다중값 매개 변수로 변경하려면 필터를 비롯해 매개 변수에 대한 참조가 포함된 모든 식과 쿼리를 변경해야 합니다. 다중값 매개 변수는 값 배열입니다. 데이터 세트 쿼리에서 쿼리 구문을 통해 한 값의 값 집합 포함 여부를 테스트해야 합니다. 보고서 식에서 식 구문은 개별 값이 아닌 값 배열에 액세스해야 합니다.  
   
 ### <a name="to-change-a-parameter-from-single-to-multivalued"></a>매개 변수를 단일 값 매개 변수에서 다중값 매개 변수로 변경하려면  
@@ -424,7 +424,7 @@ ms.locfileid: "72252132"
     ![report-builder-parameter-multiselect](../reporting-services/media/report-builder-parameter-multiselect.png)
   
  
-## <a name="Boolean"></a>8. 조건부 표시에 대한 부울 매개 변수 추가  
+## <a name="8-add-a-boolean-parameter-for-conditional-visibility"></a><a name="Boolean"></a>8. 조건부 표시에 대한 부울 매개 변수 추가  
   
 ### <a name="to-add-a-boolean-parameter"></a>부울 매개 변수를 추가하려면  
   
@@ -468,7 +468,7 @@ ms.locfileid: "72252132"
   
     선택한 모든 상점 이름을 표시하는 페이지 바닥글의 입력란이 나타납니다.  
   
-## <a name="Title"></a>9. 보고서 제목 추가  
+## <a name="9-add-a-report-title"></a><a name="Title"></a>9. 보고서 제목 추가  
   
 ### <a name="to-add-a-report-title"></a>보고서 제목을 추가하려면  
 
@@ -478,7 +478,7 @@ ms.locfileid: "72252132"
   
 2.  Parameterized Product Sales를 입력한 다음 입력란 바깥쪽을 클릭합니다.  
   
-## <a name="Save"></a>10. 보고서 저장  
+## <a name="10-save-the-report"></a><a name="Save"></a>10. 보고서 저장  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>보고서를 보고서 서버에 저장하려면  
   

@@ -11,10 +11,10 @@ ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 44b631bb1c453ebc09e8a38a57b1a3160084b09d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242877"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>장애 조치(failover) 클러스터 인스턴스 진단 로그 보기 및 읽기
@@ -27,21 +27,21 @@ ms.locfileid: "75242877"
   
 -   **다음을 사용하여 진단 로그 설정 구성:** [Transact-SQL](#TsqlConfigure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
  기본적으로 SQLDIAG는 SQL Server 인스턴스 디렉터리의 로컬 LOG 폴더(예: Always On FCI(장애 조치(failover) 클러스터 인스턴스) 소유 노드의 'C\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\LOG')에 저장됩니다. 각 SQLDIAG 로그 파일의 크기는 100MB로 고정됩니다. 새 로그에 재활용하기 전에 이러한 로그 파일이 컴퓨터에 10개 저장됩니다.  
   
  로그는 확장 이벤트 파일 형식을 사용합니다. **sys.fn_xe_file_target_read_file** 시스템 함수를 사용하여 확장 이벤트에서 만든 파일을 읽을 수 있습니다. 행당 하나의 이벤트가 XML 형식으로 반환됩니다. XML 데이터를 결과 집합으로 구문 분석하려면 시스템 뷰를 쿼리합니다. 자세한 내용은 [sys.fn_xe_file_target_read_file&#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)을 참조하세요.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  **fn_xe_file_target_read_file**을 실행하려면 VIEW SERVER STATE 권한이 필요합니다.  
   
  SQL Server Management Studio를 관리자로 열기  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **진단 로그 파일을 보려면:**  
   
 1.  **파일** 메뉴에서 **열기**, **파일**을 선택한 다음 보려는 진단 로그 파일을 선택합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "75242877"
   
 4.  **ExtendedEvents** 메뉴를 사용하고 **필터** 옵션을 선택하여 이벤트 데이터를 필터링하고 정렬할 수 있습니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **진단 로그 파일을 보려면:**  
   
  SQLDIAG 로그 파일의 모든 로그 항목을 보려면 다음 쿼리를 사용합니다.  
@@ -88,7 +88,7 @@ ORDER BY Time;
 > [!NOTE]  
 >  WHERE 절을 사용하여 특정 구성 요소 또는 상태에 대한 결과를 필터링할 수 있습니다.  
   
-##  <a name="TsqlConfigure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlConfigure"></a> Transact-SQL 사용  
  **진단 로그 속성을 구성하려면**  
   
 > [!NOTE]  
@@ -96,9 +96,9 @@ ORDER BY Time;
   
  DDL(데이터 정의 언어) 문, **ALTER SERVER CONFIGURATION**을 사용하여 [sp_server_diagnostics&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 프로시저에서 캡처된 진단 데이터의 로깅을 시작하거나 중지하고 로그 파일 롤오버 수, 로그 파일 크기 및 파일 위치와 같은 SQLDIAG 로그 구성 매개 변수를 설정할 수 있습니다. 구문에 대한 자세한 내용은 [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic)을 참조하세요.  
   
-###  <a name="ConfigTsqlExample"></a> 예(Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="ConfigTsqlExample"></a> 예(Transact-SQL)  
   
-####  <a name="TsqlExample"></a> Setting diagnostic log options  
+####  <a name="setting-diagnostic-log-options"></a><a name="TsqlExample"></a> Setting diagnostic log options  
  이 섹션의 예에서는 진단 로그 옵션 값을 설정하는 방법을 보여 줍니다.  
   
 ##### <a name="a-starting-diagnostic-logging"></a>A. 진단 로깅 시작  

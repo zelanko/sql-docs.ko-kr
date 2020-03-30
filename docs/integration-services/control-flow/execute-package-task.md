@@ -20,10 +20,10 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294188"
 ---
 # <a name="execute-package-task"></a>패키지 실행 태스크
@@ -137,13 +137,13 @@ ms.locfileid: "71294188"
   
 -   [매개 변수 바인딩 페이지에서 옵션 설정](#parameter)  
   
-###  <a name="open"></a> 패키지 실행 태스크 편집기 열기  
+###  <a name="open-the-execute-package-task-editor"></a><a name="open"></a> 패키지 실행 태스크 편집기 열기  
   
 1.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 패키지 실행 태스크가 들어 있는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 프로젝트를 엽니다.  
   
 2.  SSIS 디자이너에서 태스크를 마우스 오른쪽 단추로 클릭한 다음 **편집**을 클릭합니다.  
   
-###  <a name="general"></a> 일반 페이지에서 옵션 설정  
+###  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> 일반 페이지에서 옵션 설정  
  **이름**  
  패키지 실행 태스크에 사용할 고유 이름을 제공합니다. 이 이름은 태스크 아이콘에서 레이블로 사용됩니다.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "71294188"
  **설명**  
  패키지 실행 태스크에 대한 설명을 입력합니다.  
   
-###  <a name="package"></a> 패키지 페이지에서 옵션 설정  
+###  <a name="set-the-options-on-the-package-page"></a><a name="package"></a> 패키지 페이지에서 옵션 설정  
  **ReferenceType**  
  자식 패키지가 프로젝트 내부에 있는 경우 **프로젝트 참조** 를 선택합니다. 자식 패키지가 프로젝트 외부에 있는 경우 **외부 참조** 를 선택합니다.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "71294188"
  **PackageNameReadOnly**  
  패키지 이름을 표시합니다.  
   
-###  <a name="parameter"></a> 매개 변수 바인딩 페이지에서 옵션 설정  
+###  <a name="set-the-options-on-the-parameter-bindings-page"></a><a name="parameter"></a> 매개 변수 바인딩 페이지에서 옵션 설정  
  부모 패키지나 프로젝트의 값을 자식 패키지에 전달할 수 있습니다. 프로젝트에서 프로젝트 배포 모델을 사용해야 하며 자식 패키지는 부모 패키지와 동일한 프로젝트에 포함되어 있어야 합니다.  
   
  프로젝트를 프로젝트 배포 모델로 변환하는 방법은 [Integration Services(SSIS) 프로젝트 및 패키지 배포](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하세요.  

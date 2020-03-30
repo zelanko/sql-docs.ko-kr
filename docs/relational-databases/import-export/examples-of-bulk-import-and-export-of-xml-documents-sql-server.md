@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 9a665f51aa6fd6bc9b87ac354a26856049004d7e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74401582"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML 문서 대량 가져오기 및 내보내기 예(SQL Server)
@@ -61,7 +61,7 @@ ms.locfileid: "74401582"
   
 -  [E. XML 데이터 대량 내보내기](#bulk_export_xml_data)  
   
-## <a name="binary_byte_stream"></a>XML 데이터를 이진 바이트 스트림으로 대량 가져오기  
+## <a name="bulk-importing-xml-data-as-a-binary-byte-stream"></a><a name="binary_byte_stream"></a>XML 데이터를 이진 바이트 스트림으로 대량 가져오기  
  적용할 인코딩 선언이 있는 파일에서 XML 데이터를 대량으로 가져오는 경우 OPENROWSET(BULK…) 절에 SINGLE_BLOB 옵션을 지정합니다. SINGLE_BLOB 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 XML 파서가 XML 선언에 지정된 인코딩 체계에 따라 데이터를 가져오도록 합니다.  
   
 #### <a name="sample-table"></a>예제 테이블  
@@ -108,7 +108,7 @@ SELECT * FROM OPENROWSET(
   
  [&#91;맨 위로 이동&#93;](#top)  
   
-##  <a name="existing_row"></a> 기존 행에 XML 데이터 대량 가져오기  
+##  <a name="bulk-importing-xml-data-in-an-existing-row"></a><a name="existing_row"></a> 기존 행에 XML 데이터 대량 가져오기  
  이 예에서는 `OPENROWSET` 대량 행 집합 공급자를 사용하여 `T`예제 테이블의 기존 행에 XML 인스턴스를 추가합니다.  
   
 > [!NOTE]  
@@ -143,7 +143,7 @@ GO
   
  [&#91;맨 위로 이동&#93;](#top)  
   
-## <a name="file_contains_dtd"></a> DTD가 포함된 파일에 있는 XML 데이터 대량 가져오기  
+## <a name="bulk-importing-xml-data-from-a-file-that-contains-a-dtd"></a><a name="file_contains_dtd"></a> DTD가 포함된 파일에 있는 XML 데이터 대량 가져오기  
   
 > [!IMPORTANT]  
 >  XML 환경에서 반드시 필요한 경우가 아니면 DTD(문서 유형 정의)에 대한 지원을 설정하지 않는 것이 좋습니다. DTD 지원을 설정하면 서버가 공격 받을 수 있는 노출 영역이 증가하며 서비스 거부 공격에 노출될 수 있습니다. DTD 지원을 설정해야 할 경우에는 신뢰할 수 있는 XML 문서만 처리하여 이러한 보안 위험을 줄일 수 있습니다.  
@@ -189,7 +189,7 @@ INSERT T1
   
  [&#91;맨 위로 이동&#93;](#top)  
   
-## <a name="field_terminator_in_format_file"></a> 서식 파일을 사용하여 명시적으로 필드 종결자 지정  
+## <a name="specifying-the-field-terminator-explicitly-using-a-format-file"></a><a name="field_terminator_in_format_file"></a> 서식 파일을 사용하여 명시적으로 필드 종결자 지정  
  다음 예에서는 XML 문서 `Xmltable.dat`를 대량으로 가져오는 방법을 보여 줍니다.  
   
 #### <a name="sample-data-file"></a>예제 데이터 파일  
@@ -252,7 +252,7 @@ GO
   
  [&#91;맨 위로 이동&#93;](#top)  
   
-## <a name="bulk_export_xml_data"></a> XML 데이터 대량 내보내기  
+## <a name="bulk-exporting-xml-data"></a><a name="bulk_export_xml_data"></a> XML 데이터 대량 내보내기  
  다음 예에서는 [bcp](../../tools/bcp-utility.md)를 사용하여 동일한 XML 서식 파일로 앞의 예에서 만든 테이블에서 XML 데이터를 대량으로 내보냅니다. 다음 `bcp` 명령에서 `<server_name>` 및 `<instance_name>` 은 적절한 값으로 바꿔야 하는 자리 표시자를 나타냅니다.  
   
 ```cmd

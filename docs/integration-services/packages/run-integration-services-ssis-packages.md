@@ -22,10 +22,10 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fe82e7d6746f3a5fc76fda3f960f069ef4345525
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287387"
 ---
 # <a name="run-integration-services-ssis-packages"></a>Integration Services(SSIS) 패키지 실행
@@ -111,7 +111,7 @@ ms.locfileid: "79287387"
   
      저장 프로시저를 사용하여 패키지를 실행합니다. **스크립트** 를 클릭하여 실행 인스턴스를 만들고 실행 인스턴스를 시작하는 Transact-SQL 문을 생성합니다. 문에는 catalog.create_execution, catalog.set_execution_parameter_value에 대한 호출과 catalog.start_execution 저장 프로시저가 포함되어 있습니다. 이러한 저장 프로시저에 대한 자세한 내용은 [catalog.create_execution&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md), [catalog.set_execution_parameter_value&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) 및 [catalog.start_execution&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)을 참조하세요.  
 
-## <a name="execute_package_dialog"></a> Execute Package Dialog Box
+## <a name="execute-package-dialog-box"></a><a name="execute_package_dialog"></a> Execute Package Dialog Box
   **패키지 실행** 대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 저장된 패키지를 실행할 수 있습니다.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 환경 변수에 값이 저장된 매개 변수를 포함할 수 있습니다. 이러한 패키지를 실행하려면 먼저 환경 변수 값을 제공하는 데 사용할 환경을 지정해야 합니다. 프로젝트에 여러 환경을 포함할 수는 있지만 실행할 때는 하나의 환경만 사용하여 환경 변수 값을 바인딩할 수 있습니다. 패키지에 사용되는 환경 변수가 없는 경우에는 환경이 필요하지 않습니다.  
@@ -130,7 +130,7 @@ ms.locfileid: "79287387"
   
 -   [패키지 실행 대화 상자의 옵션 스크립팅](#script)  
   
-###  <a name="open_dialog"></a> 패키지 실행 대화 상자 열기  
+###  <a name="open-the-execute-package-dialog-box"></a><a name="open_dialog"></a> 패키지 실행 대화 상자 열기  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 연결합니다.  
   
@@ -144,16 +144,16 @@ ms.locfileid: "79287387"
   
 5.  패키지를 마우스 오른쪽 단추로 클릭하고 **실행**을 클릭합니다.  
   
-###  <a name="general"></a> 일반 페이지에서 옵션 설정  
+###  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> 일반 페이지에서 옵션 설정  
  **환경** 을 선택하여 패키지 실행 시 적용할 환경을 지정합니다.  
   
-###  <a name="parameters"></a> 매개 변수 탭에서 옵션 설정  
+###  <a name="set-the-options-on-the-parameters-tab"></a><a name="parameters"></a> 매개 변수 탭에서 옵션 설정  
  **매개 변수** 탭에서 패키지 실행 시 사용되는 매개 변수 값을 수정합니다.  
   
-###  <a name="connection"></a> 연결 관리자 탭에서 옵션 설정  
+###  <a name="set-the-options-on-the-connection-managers-tab"></a><a name="connection"></a> 연결 관리자 탭에서 옵션 설정  
  연결 관리자 탭에서 패키지 연결 관리자 속성을 설정합니다.  
   
-###  <a name="advanced"></a> 고급 탭에서 옵션 설정  
+###  <a name="set-the-options-on-the-advanced-tab"></a><a name="advanced"></a> 고급 탭에서 옵션 설정  
  고급 탭에서 속성 및 기타 패키지 설정을 관리합니다.  
   
  **추가**, **편집**, **제거**  
@@ -168,7 +168,7 @@ ms.locfileid: "79287387"
  **32비트 런타임**  
  패키지가 32비트 시스템에서 실행되도록 지정합니다.  
   
-###  <a name="script"></a> 패키지 실행 대화 상자의 옵션 스크립팅  
+###  <a name="scripting-the-options-in-the-execute-package-dialog-box"></a><a name="script"></a> 패키지 실행 대화 상자의 옵션 스크립팅  
  **패키지 실행** 대화 상자에 있는 동안 도구 모음의 **스크립트** 단추를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 작성할 수도 있습니다. 생성된 스크립트는 **패키지 실행** 대화 상자에서 선택한 것과 동일한 옵션으로 [catalog.start_execution&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) 저장 프로시저를 호출합니다. 이 스크립트는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 새 스크립트 창에 표시됩니다.  
 
 ## <a name="see-also"></a>참고 항목  

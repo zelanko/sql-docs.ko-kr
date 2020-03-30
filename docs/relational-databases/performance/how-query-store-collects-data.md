@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f60ded18e88d57c5a2975b567fa246923ece7ebe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71974356"
 ---
 # <a name="how-query-store-collects-data"></a>쿼리 저장소에서 데이터를 수집하는 방법
@@ -25,7 +25,7 @@ ms.locfileid: "71974356"
 
 SQL Server 쿼리 저장소는 플라이트 데이터 레코더처럼 작동하여, 쿼리 및 계획과 관련된 컴파일 및 런타임 정보를 지속적으로 수집합니다. 쿼리와 관련된 데이터는 내부 테이블에 유지되고 뷰 집합을 통해 사용자에게 표시됩니다.
   
-## <a name="views"></a>뷰 
+## <a name="views"></a>보기 
  다음 다이어그램은 파란색 엔터티로 표시된 컴파일 시간 정보와 함께 쿼리 저장소 뷰와 논리적 관계를 보여 줍니다.
   
  ![쿼리 저장소 프로세스 뷰](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  

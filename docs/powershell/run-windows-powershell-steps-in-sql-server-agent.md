@@ -11,10 +11,10 @@ ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 700aa5adb410c7718667bf05313f18636be01a69
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75557948"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>SQL Server 에이전트에서 Windows PowerShell 작업 단계 실행
@@ -37,13 +37,13 @@ SQL Server 에이전트를 사용하여 일정에 따라 SQL Server PowerShell �
 
 - 명령 프롬프트 작업 단계를 사용하여 PowerShell.exe를 실행하고, **sqlps** 모듈을 가져오는 스크립트를 지정합니다.
 
-### <a name="LimitationsRestrictions"></a> 메모리 사용에 대한 주의 사항
+### <a name="caution-about-memory-consumption"></a><a name="LimitationsRestrictions"></a> 메모리 사용에 대한 주의 사항
 
 PowerShell과 **sqlps** 모듈을 함께 실행하는 각 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 작업 단계에서는 약 **20MB**의 메모리를 사용하는 프로세스를 시작합니다. 따라서 많은 수의 Windows PowerShell 작업 단계를 동시에 실행하면 성능이 저하될 수 있습니다.  
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-##  <a name="PShellJob"></a> PowerShell 작업 단계 만들기  
+##  <a name="create-a-powershell-job-step"></a><a name="PShellJob"></a> PowerShell 작업 단계 만들기  
  **PowerShell 작업 단계를 만들려면**  
   
 1.  **SQL Server 에이전트**를 확장하고 새 작업을 만들거나 기존 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 작업을 만드는 방법은 [작업 만들기](../ssms/agent/create-jobs.md)를 참조하세요.  
@@ -60,7 +60,7 @@ PowerShell과 **sqlps** 모듈을 함께 실행하는 각 [!INCLUDE[ssNoVersion]
   
 7.  **고급** 페이지를 클릭하여 작업 단계가 성공 또는 실패할 경우에 수행할 동작, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트의 작업 단계 실행 시도 횟수, 그리고 다시 시도 간격 등 작업 단계 옵션을 설정합니다.  
   
-##  <a name="CmdExecJob"></a> 명령 프롬프트 작업 단계 만들기  
+##  <a name="create-a-command-prompt-job-step"></a><a name="CmdExecJob"></a> 명령 프롬프트 작업 단계 만들기  
  **CmdExec 작업 단계를 만들려면**  
   
 1.  **SQL Server 에이전트**를 확장하고 새 작업을 만들거나 기존 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 작업을 만드는 방법은 [작업 만들기](../ssms/agent/create-jobs.md)를 참조하세요.  

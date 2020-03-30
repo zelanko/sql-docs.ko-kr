@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 239d7ee532f4052caa067be7a20022720740ff3d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68000459"
 ---
 # <a name="time-transact-sql"></a>time(Transact-SQL)
@@ -52,7 +52,7 @@ ms.locfileid: "68000459"
 |스토리지 크기|초 소수 부분 자릿수 기본값 100ns를 기준으로 5바이트(고정)가 기본값입니다. Informatica의 경우 기본값은 초 소수 부분 자릿수 기본값 1ms를 기준으로 4바이트(고정)입니다.|  
 |정확도|100나노초(Informatica의 경우 1밀리초)|  
 |기본값|00:00:00<br /><br /> 이 값은 **date**에서 **datetime2** 또는 **datetimeoffset**으로의 암시적 변환을 위해 추가되는 날짜 부분에 사용됩니다.|  
-|사용자 정의 초 소수 부분 자릿수|yes|  
+|사용자 정의 초 소수 부분 자릿수|예|  
 |표준 시간대 오프셋 인식 및 유지|예|  
 |일광 절약 시간제 인식|예|  
   
@@ -88,7 +88,7 @@ ms.locfileid: "68000459"
   
  하위 클라이언트에 대해 사용되는 기본 문자열 리터럴 형식은 hh:mm:ss[.nnnnnnn]로 정의되는 SQL 표준 형식에 부합됩니다. 이러한 형식은 초 소수 부분 자릿수를 제외하고 TIME에 대한 ISO 8601의 정의와 유사합니다.  
   
-##  <a name="BackwardCompatibilityforDownlevelClients"></a> 하위 클라이언트에 대한 이전 버전과의 호환성  
+##  <a name="backward-compatibility-for-down-level-clients"></a><a name="BackwardCompatibilityforDownlevelClients"></a> 하위 클라이언트에 대한 이전 버전과의 호환성  
  일부 하위 클라이언트는 **time**, **date**, **datetime2** 및 **datetimeoffset** 데이터 형식을 지원하지 않습니다. 다음 표에서는 상위 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 하위 클라이언트 간 형식 매핑을 보여 줍니다.  
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식|하위 클라이언트에 전달된 기본 문자열 리터럴 형식|하위 수준 ODBC|하위 수준 OLEDB|하위 수준 JDBC|하위 수준 SQLCLIENT|  
@@ -241,7 +241,7 @@ SELECT
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
-###  <a name="ExampleB"></a> 2. time(7) 열에 유효한 시간 문자열 리터럴 삽입  
+###  <a name="b-inserting-valid-time-string-literals-into-a-time7-column"></a><a name="ExampleB"></a> 2. time(7) 열에 유효한 시간 문자열 리터럴 삽입  
  다음 표에서는 **time(7)** 데이터 형식의 열에 삽입할 수 있는 여러 문자열 리터럴과 해당 열에 저장되는 값을 보여 줍니다.  
   
 |문자열 리터럴 형식 유형|삽입되는 문자열 리터럴|저장되는 time(7) 값|Description|  

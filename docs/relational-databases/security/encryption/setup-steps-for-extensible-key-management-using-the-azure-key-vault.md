@@ -15,10 +15,10 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 1ccffc653225645de94355707ae2116982d2deb4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557548"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Azure Key Vault를 사용한 SQL Server TDE 확장 가능 키 관리 - 설정 단계
@@ -238,7 +238,7 @@ SQL Server 버전  |재배포 가능 설치 링크
  > 주요 자격 증명 모음은 동일한 이름이 지정된 키의 여러 버전을 지원하지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터에서 사용할 키는 버전이 지정되거나 여기저기 사용해서는 안 됩니다. 관리자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화에 사용된 키를 다른 곳에 사용하려는 경우, 자격 증명 모음에서 다른 이름으로 새 키를 만들어 DEK를 암호화하는 데 사용해야 합니다.  
    
   
-## <a name="part-iii-install-the-includessnoversionincludesssnoversion-mdmd-connector"></a>3부: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터 설치  
+## <a name="part-iii-install-the-ssnoversion-connector"></a>3부: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터 설치  
  [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/p/?LinkId=521700)에서 SQL Server 커넥터를 다운로드합니다. 이 작업은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 컴퓨터의 관리자가 수행해야 합니다.  
 
 > [!NOTE]  
@@ -262,7 +262,7 @@ SQL Server 버전  |재배포 가능 설치 링크
 -   [C. SQL Server 커넥터에 대한 오류 코드 설명](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixC)  
   
   
-## <a name="part-iv-configure-includessnoversionincludesssnoversion-mdmd"></a>4부: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성  
+## <a name="part-iv-configure-ssnoversion"></a>4부: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성  
  이 섹션의 각 작업에 필요한 최소 권한 수준에 대한 정보를 보려면 [B. 질문과 대답](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB)을 참조하세요.  
   
 1.  **sqlcmd.exe 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio 실행**  

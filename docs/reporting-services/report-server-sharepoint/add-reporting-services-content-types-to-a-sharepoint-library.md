@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: d50d7e273be27f6b03d98db40c2da1dc70b23306
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68887745"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>SharePoint 라이브러리에 Reporting Services 콘텐츠 형식 추가
@@ -54,7 +54,7 @@ ms.locfileid: "68887745"
   
 -   [여러 BI 사이트에 대해 콘텐츠 형식 및 콘텐츠 관리를 설정하려면](#bkmk_enable_multiple_sites)  
   
-##  <a name="bkmk_enable_all"></a> 기존 BI 센터에서 모든 문서 라이브러리의 콘텐츠 형식 설정  
+##  <a name="enable-content-types-in-all-document-libraries-in-an-existing-bi-center"></a><a name="bkmk_enable_all"></a> 기존 BI 센터에서 모든 문서 라이브러리의 콘텐츠 형식 설정  
   
 1.  기존 **비즈니스 인텔리전스 센터** 사이트의 모든 문서 라이브러리에서 콘텐츠 형식 및 콘텐츠 관리를 설정하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 통합 기능을 설정/해제하면 됩니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68887745"
   
      ![](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif)  
   
-##  <a name="bkmk_enable_content_management"></a> 단일 문서 라이브러리에 대해 콘텐츠 형식 관리를 설정하려면(SharePoint 2013)  
+##  <a name="to-enable-content-type-management-for-a-single-document-library-sharepoint-2013"></a><a name="bkmk_enable_content_management"></a> 단일 문서 라이브러리에 대해 콘텐츠 형식 관리를 설정하려면(SharePoint 2013)  
   
 1.  여러 개의 콘텐츠 형식을 설정할 라이브러리를 엽니다.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "68887745"
   
 6.  **확인**을 클릭합니다.  
   
-##  <a name="bkmk_add_single"></a> Reporting Services 콘텐츠 형식을 추가하려면(SharePoint 2013)  
+##  <a name="to-add-reporting-services-content-types-sharepoint-2013"></a><a name="bkmk_add_single"></a> Reporting Services 콘텐츠 형식을 추가하려면(SharePoint 2013)  
   
 1.  Reporting Services 콘텐츠 형식을 추가할 라이브러리를 엽니다.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "68887745"
   
     -   모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 콘텐츠 형식이 라이브러리에 이미 추가되었습니다. 모든 콘텐츠 유형이 라이브러리의 일부인 경우 그룹이 **콘텐츠 형식 추가** 페이지에서 제거됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 콘텐츠 형식 중 하나 이상을 제거하는 경우 **SQL Server Reporting Services 콘텐츠 형식** 그룹이 **콘텐츠 형식 추가** 페이지에 표시됩니다.  
   
-##  <a name="bkmk_enable_content_management_2010"></a> 단일 문서 라이브러리에 대해 콘텐츠 형식 관리를 설정하려면(SharePoint 2010)  
+##  <a name="to-enable-content-type-management-for-a-single-document-library-sharepoint-2010"></a><a name="bkmk_enable_content_management_2010"></a> 단일 문서 라이브러리에 대해 콘텐츠 형식 관리를 설정하려면(SharePoint 2010)  
   
 1.  여러 개의 콘텐츠 형식을 설정할 라이브러리를 엽니다. 라이브러리 메뉴 모음에 **새로 만들기**, **업로드**, **동작** 및 **설정** 메뉴가 표시됩니다. **설정**이 표시되지 않는 경우 콘텐츠 형식을 추가할 권한이 없습니다.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "68887745"
   
 6.  **확인**을 클릭합니다.  
   
-##  <a name="bkmk_add_single_2010"></a> 보고서 서버 콘텐츠 형식을 추가하려면(SharePoint 2010)  
+##  <a name="to-add-report-server-content-types-sharepoint-2010"></a><a name="bkmk_add_single_2010"></a> 보고서 서버 콘텐츠 형식을 추가하려면(SharePoint 2010)  
   
 1.  Reporting Services 콘텐츠 형식을 추가할 라이브러리를 엽니다.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "68887745"
   
 8.  콘텐츠 형식 추가를 완료하면 **확인**을 클릭합니다.  
   
-##  <a name="bkmk_enable_multiple_sites"></a> 여러 BI 사이트에 대해 콘텐츠 형식 및 콘텐츠 관리를 설정하려면  
+##  <a name="to-enable-content-types-and-content-management-for-multiple-bi-sites"></a><a name="bkmk_enable_multiple_sites"></a> 여러 BI 사이트에 대해 콘텐츠 형식 및 콘텐츠 관리를 설정하려면  
   
 1.  SQL Server Reporting Services 2008 및 2008 R2 보고서 서버의 경우 여러 비즈니스 인텔리전스 센터 사이트에 대한 콘텐츠 형식 및 콘텐츠 관리를 설정할 수 있습니다.  
   

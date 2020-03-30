@@ -36,10 +36,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f8eecd6d0a1d54d56fd93eacf96154f57e4afec6
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286947"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 및 CONVERT(Transact-SQL)
@@ -338,7 +338,7 @@ SC 데이터 정렬을 사용할 경우 `CONVERT`의 동작은 `CAST`의 동작�
 
 데이터베이스를 호환성 수준 110 이상으로 업그레이드할 경우 디스크에 저장된 사용자 데이터는 변경되지 않습니다. 수동으로 이 데이터를 적절하게 수정해야 합니다. 예를 들어 SELECT INTO를 사용하여 위에서 설명한 계산 열 식이 포함된 원본에서 테이블을 만든 경우 계산 열 정의 자체가 아니라 스타일 0을 사용하는 데이터가 저장됩니다. 스타일 121과 일치하도록 이 데이터를 수동으로 업데이트해야 합니다.
   
-## <a name="BKMK_examples"></a> 예  
+## <a name="examples"></a><a name="BKMK_examples"></a> 예  
   
 ### <a name="a-using-both-cast-and-convert"></a>A. CAST 및 CONVERT 모두 사용  
 각 예에서는 제품 가격 첫 자리에 `3`이 있는 제품의 이름을 검색하고 `ListPrice` 값을 `int`로 변환합니다.
@@ -714,7 +714,7 @@ SELECT @dt1 AS [datetime], CAST (@dt1 AS date) AS [datetime as date],
 |130|`SELECT CONVERT(nvarchar, GETDATE(), 130)`|22 ذو الحجة 1440  1:39:17.090P|
 |131|`SELECT CONVERT(nvarchar, GETDATE(), 131)`|22/12/1440  1:39:17.090PM|
 
-### <a name="precedence-example"></a> K. 허용되는 변환에서 데이터 형식 우선 순위의 효과  
+### <a name="k-effects-of-data-type-precedence-in-allowed-conversions"></a><a name="precedence-example"></a> K. 허용되는 변환에서 데이터 형식 우선 순위의 효과  
 다음의 예는 형식 VARCHAR 변수를 정의하고 변수에 정수 값을 할당한 다음 문자열과 변수의 연결을 선택합니다.
 
 ```sql

@@ -13,10 +13,10 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c0e0f85e21898ccf61d7c205305fc9179edc2af4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68810582"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server 개체 및 버전에 대한 DAC 지원
@@ -42,7 +42,7 @@ ms.locfileid: "68810582"
   
 -   [배포 작업에 대한 추가 고려 사항](#Considerations)  
   
-##  <a name="SupportedObjects"></a> 지원되는 SQL Server 개체  
+##  <a name="supported-sql-server-objects"></a><a name="SupportedObjects"></a> 지원되는 SQL Server 개체  
  작성 또는 편집 중인 데이터 계층 애플리케이션에서는 지원되는 개체만 지정할 수 있습니다. DAC를 지원하지 않는 개체가 포함된 기존 데이터베이스에서 DAC를 추출하거나 등록하거나 가져올 수 없습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 DAC에서 다음 개체를 지원합니다.  
   
 |||  
@@ -63,7 +63,7 @@ ms.locfileid: "68810582"
 |TYPE: 사용자 정의 테이블 형식|USER|  
 |VIEW||  
   
-##  <a name="SupportByVersion"></a> 각 SQL Server 버전에서 지원되는 데이터 계층 애플리케이션  
+##  <a name="data-tier-application-support-by-the-versions-of-sql-server"></a><a name="SupportByVersion"></a> 각 SQL Server 버전에서 지원되는 데이터 계층 애플리케이션  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전마다 DAC 작업에 대해 지원되는 수준이 다릅니다. 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 모든 DAC 작업은 해당 제품의 모든 버전에서 지원됩니다.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에서 지원하는 DAC 작업은 다음과 같습니다.  
@@ -88,7 +88,7 @@ ms.locfileid: "68810582"
   
  하위 버전의 DAC Framework에서 작성한 DAC 패키지 또는 내보내기 파일은 상위 버전의 DAC Framework에서 처리할 수 없습니다. 예를 들어 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 클라이언트 도구를 사용하여 추출한 DAC 패키지는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP1 이상의 클라이언트 도구를 사용하여 배포할 수 없습니다.  
   
-##  <a name="DeploymentLimitations"></a> 데이터 배포 제한 사항  
+##  <a name="data-deployment-limitations"></a><a name="DeploymentLimitations"></a> 데이터 배포 제한 사항  
  SQL Server 2012 SP1에서 DAC Framework 데이터 배포 엔진의 정확도 제한 사항에 유의하세요. 제한 사항은 .dacpac 파일 배포 또는 게시, .bacpac 파일 가져오기 등의 DAC Framework 작업에 적용됩니다.  
   
 1.  sql_variant 열 내에서 특정 조건 및 기본 형식의 메타데이터 손실 영향을 받는 경우 다음 메시지와 함께 경고가 나타납니다.  **DAC Framework에서 배포될 때 sql_variant 열 내에 사용된 특정 데이터 형식의 특정 속성은 유지되지 않습니다.**  
@@ -113,7 +113,7 @@ ms.locfileid: "68810582"
   
     -   DECIMAL, NUMERIC 기본 형식: 값의 전체 자릿수가 28보다 큰 경우  
   
-##  <a name="Considerations"></a> 배포 작업에 대한 추가 고려 사항  
+##  <a name="additional-considerations-for-deployment-actions"></a><a name="Considerations"></a> 배포 작업에 대한 추가 고려 사항  
  DAC Framework 데이터 배포 작업에 대한 다음 고려 사항에 유의하세요.  
   
 -   **추출/내보내기** - DAC Framework를 사용하여 데이터베이스에서 패키지를 만드는 작업(예: .dacpac 파일 추출, .bacpac 파일 내보내기 등)에서는 이러한 제한이 적용되지 않습니다. 패키지의 데이터는 원본 데이터베이스에서 데이터의 전체 정확도 표현입니다. 패키지에 이러한 조건 중 하나라도 있는 경우 추출/내보내기 로그에는 위에서 설명한 메시지를 통한 문제 요약이 포함됩니다. 이것은 그들이 만든 패키지의 잠재적인 데이터 배포 문제에 대해 사용자에게 경고하기 위한 것입니다. 사용자는 로그에서 다음과 같은 요약 메시지를 확인할 수도 있습니다.  **이러한 제한은 데이터 형식 및 DAC Framework에서 만든 DAC 패키지에 저장된 값의 정확도에 영향을 미치지 않고, DAC 패키지를 데이터베이스에 배포한 결과로 생성된 데이터 형식 및 값에만 적용됩니다. 영향 받는 데이터 및 이 제한을 해결하는 방법은** [다음 항목](https://go.microsoft.com/fwlink/?LinkId=267086)을 참조하세요.  

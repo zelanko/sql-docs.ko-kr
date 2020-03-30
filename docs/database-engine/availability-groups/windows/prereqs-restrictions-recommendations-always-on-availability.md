@@ -20,10 +20,10 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 31a443e7a3a1e7dedf9efb0742cfad5862804945
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76831930"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항
@@ -34,7 +34,7 @@ ms.locfileid: "76831930"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 배포하기 전에 이 항목의 모든 섹션을 읽어 보십시오.  
     
-##  <a name="DotNetHotfixes"></a> 가용성 그룹을 지원하는 .Net 핫픽스  
+##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> 가용성 그룹을 지원하는 .Net 핫픽스  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에 사용할 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]구성 요소 및 기능에 따라 다음 표에서 확인할 수 있는 추가 .Net 핫픽스를 설치해야 할 수 있습니다. 이러한 핫픽스는 순서에 관계없이 설치할 수 있습니다.  
   
 ||종속 기능|핫픽스|링크|  
@@ -42,7 +42,7 @@ ms.locfileid: "76831930"
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.Net 3.5 SP1 핫픽스는 읽기 전용 및 multisubnetFailover의 Always On 기능을 위한 SQL 클라이언트에 대한 지원을 추가합니다. 각 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 서버에 핫픽스를 설치해야 합니다.|KB 2654347: [Always On 기능 지원을 추가하기 위한 .Net 3.5 SP1 핫픽스](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
-###  <a name="SystemRequirements"></a> 검사 목록: 요구 사항(Windows 시스템)  
+###  <a name="checklist-requirements-windows-system"></a><a name="SystemRequirements"></a> 검사 목록: 요구 사항(Windows 시스템)  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능을 지원하려면 하나 이상의 가용성 그룹에 참여할 모든 컴퓨터가 다음 기본 요구 사항을 충족해야 합니다.  
   
 ||요구 사항|링크|  
@@ -56,7 +56,7 @@ ms.locfileid: "76831930"
 > [!IMPORTANT]  
 >  또한 시스템이 가용성 그룹에 연결되도록 올바르게 구성되었는지 확인합니다. 자세한 내용은 [Always On 클라이언트 연결&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)을 참조하세요.  
   
-##  <a name="ComputerRecommendations"></a> 가용성 복제본을 호스팅하는 컴퓨터에 대한 권장 사항(Windows 시스템)  
+##  <a name="recommendations-for-computers-that-host-availability-replicas-windows-system"></a><a name="ComputerRecommendations"></a> 가용성 복제본을 호스팅하는 컴퓨터에 대한 권장 사항(Windows 시스템)  
   
 -   **동등한 시스템:**  지정된 가용성 그룹의 경우 모든 가용성 복제본은 동일한 작업을 처리할 수 있는 동등한 시스템에서 실행해야 합니다.  
   
@@ -64,18 +64,18 @@ ms.locfileid: "76831930"
   
 -   **충분한 디스크 공간:**  가용성 복제본을 호스팅하는 서버 인스턴스가 있는 모든 컴퓨터에는 가용성 그룹의 모든 데이터베이스를 저장하기에 충분한 디스크 공간이 있어야 합니다. 주 데이터베이스의 크기가 늘어나면 해당하는 보조 데이터베이스도 같은 크기만큼 늘어난다는 것에 유의해야 합니다.  
   
-###  <a name="PermissionsWindows"></a> 사용 권한(Windows 시스템)  
+###  <a name="permissions-windows-system"></a><a name="PermissionsWindows"></a> 사용 권한(Windows 시스템)  
  WSFC를 관리하려면 사용자가 모든 클러스터 노드의 시스템 관리자여야 합니다.  
   
  클러스터 관리를 위한 계정에 대한 자세한 내용은 [부록 A: 장애 조치(failover) 클러스터 요구 사항](https://technet.microsoft.com/library/dd197454.aspx)을 참조하세요.  
   
-###  <a name="RelatedTasksWindows"></a> 관련 태스크(Windows 시스템)  
+###  <a name="related-tasks-windows-system"></a><a name="RelatedTasksWindows"></a> 관련 태스크(Windows 시스템)  
   
 |Task|링크|  
 |----------|----------|  
 |HostRecordTTL 값을 설정합니다.|[HostRecordTTL 변경(Windows PowerShell 사용)](#ChangeHostRecordTTLps)|  
   
-####  <a name="ChangeHostRecordTTLps"></a> HostRecordTTL 변경(Windows PowerShell 사용)  
+####  <a name="change-the-hostrecordttl-using-windows-powershell"></a><a name="ChangeHostRecordTTLps"></a> HostRecordTTL 변경(Windows PowerShell 사용)  
   
 1.  **관리자 권한으로 실행**을 통해 PowerShell 창을 엽니다.  
   
@@ -105,14 +105,14 @@ ms.locfileid: "76831930"
   
 -   [클러스터 리소스 명령 및 해당 Windows PowerShell Cmdlet](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
-###  <a name="RelatedContentWS"></a> 관련 콘텐츠(Windows 시스템)  
+###  <a name="related-content-windows-system"></a><a name="RelatedContentWS"></a> 관련 콘텐츠(Windows 시스템)  
   
 -   [다중 사이트 장애 조치(Failover) 클러스터에서 DNS 설정 구성](https://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
   
 -   [네트워크 이름 리소스에 DNS 등록](https://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
   
 
-##  <a name="ServerInstance"></a> SQL Server 인스턴스 필수 구성 요소 및 제한 사항  
+##  <a name="sql-server-instance-prerequisites-and-restrictions"></a><a name="ServerInstance"></a> SQL Server 인스턴스 필수 구성 요소 및 제한 사항  
  각 가용성 그룹에는 *인스턴스에서 호스팅되는*가용성 복제본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]이라는 일련의 장애 조치(Failover) 파트너가 필요합니다. 특정 서버 인스턴스는 *독립 실행형 인스턴스* 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]*장애 조치(failover) 클러스터 인스턴스* 일 수 있습니다.  
   
  **섹션 내용**  
@@ -127,7 +127,7 @@ ms.locfileid: "76831930"
   
 -   [관련 내용](#RelatedContentSI)  
   
-###  <a name="PrerequisitesSI"></a> 검사 목록: 필수 구성 요소(서버 인스턴스)  
+###  <a name="checklist-prerequisites-server-instance"></a><a name="PrerequisitesSI"></a> 검사 목록: 필수 구성 요소(서버 인스턴스)  
   
 ||필수 요소|링크|  
 |-|------------------|-----------|  
@@ -141,7 +141,7 @@ ms.locfileid: "76831930"
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|FILESTREAM을 사용하는 데이터베이스를 가용성 그룹에 추가하려는 경우 가용성 그룹의 가용성 복제본을 호스팅할 모든 서버 인스턴스에 FILESTREAM이 설정되었는지 확인합니다.|[Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|포함된 데이터베이스를 가용성 그룹에 추가하려는 경우 가용성 그룹의 가용성 복제본을 호스팅할 모든 서버 인스턴스에서 **contained database authentication** 서버 옵션이 **1** 로 설정되어 있는지 확인합니다.|[contained database authentication 서버 구성 옵션](../../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [서버 구성 옵션&#40;SQL Server&#41;](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)|  
   
-###  <a name="ThreadUsage"></a> 가용성 그룹의 스레드 사용량  
+###  <a name="thread-usage-by-availability-groups"></a><a name="ThreadUsage"></a> 가용성 그룹의 스레드 사용량  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 작업자 스레드에 대해 다음 요구 사항을 충족해야 합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 유휴 인스턴스에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 0개의 스레드를 사용합니다.  
@@ -166,14 +166,14 @@ ms.locfileid: "76831930"
   
  자세한 내용은 [Always On - HADRON 학습 시리즈: HADRON 사용 데이터베이스의 작업자 풀 사용](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)(CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 엔지니어 블로그)을 참조하세요.  
   
-###  <a name="PermissionsSI"></a> 사용 권한(서버 인스턴스)  
+###  <a name="permissions-server-instance"></a><a name="PermissionsSI"></a> 사용 권한(서버 인스턴스)  
   
 |Task|필요한 권한|  
 |----------|--------------------------|  
 |데이터베이스 미러링 엔드포인트 만들기|CREATE ENDPOINT 권한 또는 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  CONTROL ON ENDPOINT 권한도 필요합니다. 자세한 내용은 [GRANT 엔드포인트 사용 권한&#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)을 참조하세요.|  
 |다음 사용 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]|로컬 컴퓨터의 **관리자** 그룹 멤버 자격과 WSFC에 대한 모든 권한이 필요합니다.|  
   
-###  <a name="RelatedTasksSI"></a> 관련 태스크(서버 인스턴스)  
+###  <a name="related-tasks-server-instance"></a><a name="RelatedTasksSI"></a> 관련 태스크(서버 인스턴스)  
   
 |Task|아티클|  
 |----------|-----------|  
@@ -181,19 +181,19 @@ ms.locfileid: "76831930"
 |데이터베이스 미러링 엔드포인트 만들기(없는 경우)|[Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)<br /><br /> [Always On 가용성 그룹에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)|  
 |가용성 그룹 활성화|[Always On 가용성 그룹 활성화 및 비활성화&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)|  
   
-###  <a name="RelatedContentSI"></a> 관련 내용(서버 인스턴스)  
+###  <a name="related-content-server-instance"></a><a name="RelatedContentSI"></a> 관련 내용(서버 인스턴스)  
   
 -   [Always On - HADRON 학습 시리즈: HADRON 사용 데이터베이스의 작업자 풀 사용](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
   
-##  <a name="NetworkConnect"></a> 네트워크 연결 권장 사항  
+##  <a name="network-connectivity-recommendations"></a><a name="NetworkConnect"></a> 네트워크 연결 권장 사항  
  WSFC 노드 간의 통신 및 가용성 복제본 간의 통신에는 동일한 네트워크 링크를 사용하는 것이 좋습니다.  개별 네트워크 링크를 사용하면 가끔씩이라도 일부 링크에 문제가 발생할 경우 예기치 않은 동작이 발생할 수 있습니다.  
   
  예를 들어, 가용성 그룹으로 자동 장애 조치(Failover)를 지원하기 위해서는 자동 장애 조치(Failover) 파트너인 두 번째 복제본이 SYNCHRONIZED 상태여야 합니다. 이 보조 복제본에 대한 네트워크 링크가 가끔씩이라도 실패할 경우 복제본이 UNSYNCHRONIZED 상태가 되고 링크가 복원될 때까지 다시 동기화를 시작할 수 없습니다. 보조 복제본이 동기화되지 않은 상태에서 WSFC가 자동 장애 조치를 요청하는 경우 자동 장애 조치가 수행되지 않습니다.  
   
-##  <a name="ClientConnSupport"></a> 클라이언트 연결 지원  
+##  <a name="client-connectivity-support"></a><a name="ClientConnSupport"></a> 클라이언트 연결 지원  
  클라이언트 연결의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 지원에 대한 자세한 내용은 [Always On 클라이언트 연결&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)을 참조하세요.  
   
-##  <a name="FciArLimitations"></a> SQL Server FCI(장애 조치(Failover) 클러스터 인스턴스)를 사용하여 가용성 복제본을 호스팅하기 위한 필수 구성 요소 및 제한 사항  
+##  <a name="prerequisites-and-restrictions-for-using-a-sql-server-failover-cluster-instance-fci-to-host-an-availability-replica"></a><a name="FciArLimitations"></a> SQL Server FCI(장애 조치(Failover) 클러스터 인스턴스)를 사용하여 가용성 복제본을 호스팅하기 위한 필수 구성 요소 및 제한 사항  
  **섹션 내용**  
   
 -   [제한 사항](#RestrictionsFCI)  
@@ -204,7 +204,7 @@ ms.locfileid: "76831930"
   
 -   [관련 내용](#RelatedContentFCIs)  
   
-###  <a name="RestrictionsFCI"></a> 제한 사항(FCI)  
+###  <a name="restrictions-fcis"></a><a name="RestrictionsFCI"></a> 제한 사항(FCI)  
   
 > [!NOTE]  
 > 장애 조치(failover) 클러스터 인스턴스는 CSV(클러스터 공유 볼륨)를 지원합니다. CSV에 대한 자세한 내용은 [장애 조치(Failover) 클러스터에서 클러스터 공유 볼륨 이해](https://technet.microsoft.com/library/dd759255.aspx)를 참조하세요.  
@@ -221,13 +221,13 @@ ms.locfileid: "76831930"
   
 -   **FCI 네트워크 이름 변경:**  가용성 복제본을 호스트하는 FCI의 네트워크 이름을 변경해야 하는 경우 복제본을 해당 가용성 그룹에서 제거한 다음, 다시 가용성 그룹에 추가해야 합니다. 주 복제본은 제거할 수 없으므로 주 복제본을 호스팅하는 FCI의 이름을 바꾸려는 경우 보조 복제본으로 장애 조치한 다음 이전 주 복제본을 제거하고 다시 추가해야 합니다. FCI 이름을 바꾸면 해당 데이터베이스 미러링 엔드포인트의 URL이 변경될 수 있습니다. 복제본을 추가할 때 현재 엔드포인트 URL을 지정해야 합니다.  
   
-###  <a name="PrerequisitesFCI"></a> 검사 목록: 필수 구성 요소(FCI)  
+###  <a name="checklist-prerequisites-fcis"></a><a name="PrerequisitesFCI"></a> 검사 목록: 필수 구성 요소(FCI)  
   
 ||필수 요소|링크|  
 |-|------------------|----------|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|각 SQL Server FCI(장애 조치(Failover) 클러스터 인스턴스)에 SQL Server FCI(장애 조치(Failover) 클러스터 인스턴스 설치별로 필요한 공유 스토리지가 있는지 확인합니다.||  
   
-###  <a name="RelatedTasksFCIs"></a> 관련 태스크(FCI)  
+###  <a name="related-tasks-fcis"></a><a name="RelatedTasksFCIs"></a> 관련 태스크(FCI)  
   
 |Task|아티클|  
 |----------|-----------|  
@@ -235,13 +235,13 @@ ms.locfileid: "76831930"
 |SQL Server 장애 조치(Failover) 클러스터의 전체 업그레이드|[SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드&#40;설치 프로그램&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
 |기존 SQL Server 장애 조치(Failover) 클러스터 유지 관리|[SQL Server 장애 조치(Failover) 클러스터에서 노드 추가 또는 제거&#40;설치&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
   
-###  <a name="RelatedContentFCIs"></a> 관련 내용(FCI)  
+###  <a name="related-content-fcis"></a><a name="RelatedContentFCIs"></a> 관련 내용(FCI)  
   
 -   [장애 조치(failover) 클러스터링 및 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
 -   [Always On 아키텍처 가이드: 장애 조치(failover) 클러스터 인스턴스 및 가용성 그룹을 사용하여 고가용성 및 재해 복구 솔루션 빌드](https://technet.microsoft.com/library/jj215886.aspx)  
   
-##  <a name="PrerequisitesForAGs"></a> 가용성 그룹 필수 구성 요소 및 제한 사항  
+##  <a name="availability-group-prerequisites-and-restrictions"></a><a name="PrerequisitesForAGs"></a> 가용성 그룹 필수 구성 요소 및 제한 사항  
  **섹션 내용**  
   
 -   [제한 사항](#RestrictionsAG)  
@@ -252,7 +252,7 @@ ms.locfileid: "76831930"
   
 -   [관련 작업](#RelatedTasksAGs)  
   
-###  <a name="RestrictionsAG"></a> 제한 사항(가용성 그룹)  
+###  <a name="restrictions-availability-groups"></a><a name="RestrictionsAG"></a> 제한 사항(가용성 그룹)  
   
 -   **가용성 복제본은 하나의 WSFC의 다른 노드에서 호스팅해야 합니다.**  지정된 가용성 그룹의 경우 가용성 복제본은 동일한 WSFC의 다른 노드에서 실행되는 서버 인스턴스에서 호스팅해야 합니다. 유일한 예외는 다른 클러스터로 마이그레이션되는 동안 가용성 그룹이 일시적으로 두 클러스터에 걸쳐 있을 수 있는 경우입니다.  
   
@@ -273,14 +273,14 @@ ms.locfileid: "76831930"
   
     -   장애 조치(Failover) 클러스터 관리자를 사용하여 가용성 그룹을 장애 조치하지 마세요. [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]를 사용해야 합니다.  
   
-###  <a name="RequirementsAG"></a> 필수 구성 요소(가용성 그룹)  
+###  <a name="prerequisites-availability-groups"></a><a name="RequirementsAG"></a> 필수 구성 요소(가용성 그룹)  
  가용성 그룹 구성을 구성하거나 다시 구성할 때 다음 요구 사항을 따라야 합니다.  
   
 ||필수 요소|Description|  
 |-|------------------|-----------------|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI(장애 조치(Failover) 클러스터 인스턴스)를 사용하여 가용성 복제본을 호스팅하려는 경우 FCI 제한 사항을 이해하고 FCI 요구 사항을 충족해야 합니다.|[SQL Server FCI(장애 조치(Failover) 클러스터 인스턴스)를 사용하여 가용성 복제본을 호스트하기 위한 필수 구성 요소 및 제한 사항](#FciArLimitations)(이 문서 앞부분)|  
   
-###  <a name="SecurityAG"></a> 보안(가용성 그룹)  
+###  <a name="security-availability-groups"></a><a name="SecurityAG"></a> 보안(가용성 그룹)  
   
 -   보안은 WSFC에서 상속됩니다. Windows Server 장애 조치 클러스터링은 전체 클러스터의 세분성에서 두 가지 수준의 사용자 보안을 제공합니다.  
   
@@ -304,7 +304,7 @@ ms.locfileid: "76831930"
 |가용성 그룹 변경|가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.<br /><br /> 또한 데이터베이스를 가용성 그룹에 조인하려면 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.|  
 |가용성 그룹 삭제|가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다. 로컬 복제본 위치에서 호스팅되지 않는 가용성 그룹을 삭제하려면 해당 가용성 그룹에 대한 CONTROL SERVER 권한이나 CONTROL 권한이 필요합니다.|  
   
-###  <a name="RelatedTasksAGs"></a> 관련 태스크(가용성 그룹)  
+###  <a name="related-tasks-availability-groups"></a><a name="RelatedTasksAGs"></a> 관련 태스크(가용성 그룹)  
   
 |Task|아티클|  
 |----------|-----------|  
@@ -313,7 +313,7 @@ ms.locfileid: "76831930"
 |가용성 그룹 수신기 만들기|[가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
 |가용성 그룹 삭제|[가용성 그룹 제거&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)|  
   
-##  <a name="PrerequisitesForDbs"></a> 가용성 데이터베이스 필수 구성 요소 및 제한 사항  
+##  <a name="availability-database-prerequisites-and-restrictions"></a><a name="PrerequisitesForDbs"></a> 가용성 데이터베이스 필수 구성 요소 및 제한 사항  
  가용성 그룹에 추가하기에 적합한 데이터베이스는 다음 필수 구성 요소 및 제한 사항을 충족해야 합니다.  
   
  **섹션 내용**  
@@ -328,7 +328,7 @@ ms.locfileid: "76831930"
   
 -   [관련 작업](#RelatedTasksADb)  
   
-###  <a name="RequirementsDb"></a> 검사 목록: 요구 사항(가용성 데이터베이스)  
+###  <a name="checklist-requirements-availability-databases"></a><a name="RequirementsDb"></a> 검사 목록: 요구 사항(가용성 데이터베이스)  
  가용성 그룹에 추가하기에 적합한 데이터베이스는 다음 조건을 충족해야 합니다.  
   
 ||요구 사항|링크|  
@@ -348,7 +348,7 @@ ms.locfileid: "76831930"
 > [!NOTE]  
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]은 지원되는 모든 데이터베이스 호환성 수준에서 작동합니다.  
   
-###  <a name="RestrictionsDb"></a> 제한 사항(가용성 데이터베이스)  
+###  <a name="restrictions-availability-databases"></a><a name="RestrictionsDb"></a> 제한 사항(가용성 데이터베이스)  
   
 -   보조 데이터베이스의 파일 경로(드라이브 문자 포함)와 해당하는 주 데이터베이스의 경로가 다를 경우 다음 제한 사항이 적용됩니다.  
   
@@ -363,13 +363,13 @@ ms.locfileid: "76831930"
   
 -   현재 가용성 그룹에 속한 데이터베이스는 삭제할 수 없습니다.  
   
-###  <a name="TDEdbs"></a> TDE 데이터베이스 보호를 위한 후속 작업  
+###  <a name="follow-up-for-tde-protected-databases"></a><a name="TDEdbs"></a> TDE 데이터베이스 보호를 위한 후속 작업  
  TDE(투명한 데이터 암호화)를 사용하는 경우 다른 키를 만들고 해독하기 위한 인증서 또는 비대칭 키가 가용성 그룹의 가용성 복제본을 호스팅하는 모든 서버 인스턴스에서 동일해야 합니다. 자세한 내용은 [다른 SQL Server로 TDE 보호 데이터베이스 이동](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)을 참조하세요.  
   
-###  <a name="PermissionsDbs"></a> 사용 권한(가용성 데이터베이스)  
+###  <a name="permissions-availability-databases"></a><a name="PermissionsDbs"></a> 사용 권한(가용성 데이터베이스)  
  데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
-###  <a name="RelatedTasksADb"></a> 관련 태스크(가용성 데이터베이스)  
+###  <a name="related-tasks-availability-databases"></a><a name="RelatedTasksADb"></a> 관련 태스크(가용성 데이터베이스)  
   
 |Task|아티클|  
 |----------|-----------|  
@@ -377,7 +377,7 @@ ms.locfileid: "76831930"
 |가용성 그룹에 보조 데이터베이스 조인(수동)|[가용성 그룹에 보조 데이터베이스 조인&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)|  
 |가용성 데이터베이스 개수 수정|[가용성 그룹에 데이터베이스 추가&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md)<br /><br /> [가용성 그룹에서 보조 데이터베이스 제거&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md)<br /><br /> [가용성 그룹에서 주 데이터베이스 제거&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)|  
   
-##  <a name="RelatedContent"></a> 관련 내용  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
   
 -   [고가용성 및 재해 복구를 위한 Microsoft SQL Server Always On 솔루션 가이드](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

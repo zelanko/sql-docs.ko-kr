@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: abc14f78a969abd4adbbb2dcf12b4ee316614d23
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69634545"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>SQL Server 인스턴스에서 Machine Learning(R 및 Python) 구성 요소 업그레이드
@@ -106,7 +106,7 @@ R 및 Python 라이브러리와 실행 파일은 사용자가 R 및 Python의 �
 
 사용자 환경 측면에서 바인딩을 통한 작업 방식 및 기술은 바뀌지 않습니다. 유일한 차이점은 새로운 버전의 패키지를 사용할 수 있고 원래 SQL Server에서 제공되지 않는 추가 패키지를 이용할 수 있다는 점입니다.
 
-## <a name="bkmk_BindWizard"></a>설치 프로그램을 사용하여 MLS에 바인딩
+## <a name="bind-to-mls-using-setup"></a><a name="bkmk_BindWizard"></a>설치 프로그램을 사용하여 MLS에 바인딩
 
 Microsoft Machine Learning 설치 프로그램은 기존 기능 및 SQL Server 버전을 검색하고 SqlBindR.exe라는 유틸리티를 호출하여 바인딩을 변경합니다. 내부적으로 SqlBindR은 설치 프로그램에 연결되며, 간접적으로 사용됩니다. 나중에 명령줄에서 SqlBindR을 직접 호출하여 특정 옵션을 실행할 수 있습니다.
 
@@ -210,7 +210,7 @@ Machine Learning Server 9.3에 바인딩된 SQL Server 2016 R Services의 경우
 
 1. ServerSetup.exe를 실행하고 화면 안내에 따라 설치를 완료합니다.
 
-## <a name="bkmk_BindCmd"></a>명령줄 작업
+## <a name="command-line-operations"></a><a name="bkmk_BindCmd"></a>명령줄 작업
 
 Microsoft Machine Learning Server를 실행한 후에는 SqlBindR.exe라는 명령줄 유틸리티를 사용해서 추가 바인딩 작업을 수행할 수 있습니다. 예를 들어 바인딩을 되돌려야 할 경우, 설치 프로그램을 다시 실행하거나 명령줄 유틸리티를 사용하면 됩니다. 또한 이 도구를 사용하여 인스턴스 호환성과 가용성을 확인할 수 있습니다.
 
@@ -229,7 +229,7 @@ Microsoft Machine Learning Server를 실행한 후에는 SqlBindR.exe라는 명�
 
 4. 업그레이드가 완료되면 수정된 인스턴스와 연관된 실행 패드 서비스를 다시 시작합니다.
 
-## <a name="bkmk_Unbind"></a>인스턴스 되돌리기 또는 언바인딩
+## <a name="revert-or-unbind-an-instance"></a><a name="bkmk_Unbind"></a>인스턴스 되돌리기 또는 언바인딩
 
 바인딩된 인스턴스를 SQL Server 설치 프로그램으로 설정되는 R 및 Python 구성 요소의 초기 설치로 복원할 수 있습니다. SQL Server 서비스로 되돌리기 위해서는 세 단계를 수행해야 합니다.
 
@@ -243,7 +243,7 @@ Microsoft Machine Learning Server를 실행한 후에는 SqlBindR.exe라는 명�
 
 바인딩 롤백에는 설치 프로그램을 다시 실행하거나 SqlBindR 명령줄 유틸리티를 사용하는 두 가지 옵션이 있습니다.
 
-#### <a name="bkmk_wizunbind"></a> 설치 프로그램을 사용하여 언바인딩
+#### <a name="unbind-using-setup"></a><a name="bkmk_wizunbind"></a> 설치 프로그램을 사용하여 언바인딩
 
 1. Machine Learning Server 설치 프로그램을 찾습니다. 설치 프로그램을 제거한 경우에는 이를 다시 다운로드하거나 다른 컴퓨터에서 복사해야 할 수 있습니다.
 2. 언바인딩하려는 인스턴스가 포함된 컴퓨터에서 설치 프로그램을 실행해야 합니다.
@@ -252,7 +252,7 @@ Microsoft Machine Learning Server를 실행한 후에는 SqlBindR.exe라는 명�
 4. 라이선스 계약에 동의합니다. 설치하는 경우에도 라이선스 조건에 동의해야 합니다.
 5. **Finish**를 클릭합니다. 이 프로세스는 시간이 오래 걸립니다.
 
-#### <a name="bkmk_cmdunbind"></a> 명령줄을 사용하여 언바인딩
+#### <a name="unbind-using-the-command-line"></a><a name="bkmk_cmdunbind"></a> 명령줄을 사용하여 언바인딩
 
 1. 이전 섹션에 설명된 대로 명령 프롬프트를 열고 **sqlbindr.exe**가 포함된 폴더로 이동합니다.
 

@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: ca06e65c1794416cbc6a33fee1b7508a44c289a9
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78897139"
 ---
 # <a name="download-microsoft-sqlclient-data-provider-for-sql-server"></a>Microsoft SqlClient Data Provider for SQL Server 다운로드

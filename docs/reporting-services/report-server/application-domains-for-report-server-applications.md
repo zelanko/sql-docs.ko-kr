@@ -12,10 +12,10 @@ ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d39f1b9b081d50e5d64a6d5f948255f3a4d6e53b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574792"
 ---
 # <a name="application-domains-for-report-server-applications"></a>보고서 서버 애플리케이션의 애플리케이션 도메인
@@ -36,7 +36,7 @@ ms.locfileid: "65574792"
   
  다음 표에서는 이러한 이벤트에 대한 응답으로 발생하는 애플리케이션 도메인 재활용 동작을 요약하여 설명합니다.  
   
-|행사|이벤트 설명|적용 대상|구성 가능 여부|재활용 작업 설명|  
+|이벤트|이벤트 설명|적용 대상|구성 가능 여부|재활용 작업 설명|  
 |-----------|-----------------------|----------------|------------------|-----------------------------------|  
 |미리 정의된 간격에 따라 발생하는 예약된 재활용 작업|기본적으로 애플리케이션 도메인은 12시간 간격으로 재활용됩니다.<br /><br /> 예약된 재활용 작업은 전반적인 프로세스 상태를 개선하는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 애플리케이션에 일반적입니다.|보고서 서버 웹 서비스<br /><br /> 보고서 관리자<br /><br /> 백그라운드 처리 애플리케이션|예. RSReportServer.config 파일의**RecycleTime** 구성 설정에 따라 재활용 간격이 결정됩니다.<br /><br /> **MaxAppDomainUnloadTime** 은 백그라운드 처리가 완료되도록 허용되는 대기 시간을 설정합니다.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 은 웹 서비스 및 보고서 관리자에 대한 재활용 작업을 관리합니다.<br /><br /> 백그라운드 처리 애플리케이션의 경우 보고서 서버는 일정에서 시작되는 새 작업에 대해 새 애플리케이션 도메인을 만듭니다. 이미 진행 중인 작업은 대기 시간이 만료될 때까지 현재 애플리케이션 도메인에서 완료되도록 허용됩니다.|  
 |보고서 서버의 구성 변경|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 RSReportServer.config 파일 변경에 대한 응답으로 애플리케이션 도메인을 재활용합니다.|보고서 서버 웹 서비스<br /><br /> 보고서 관리자<br /><br /> 백그라운드 처리 애플리케이션|아니요.|재활용 작업이 발생하지 않도록 할 수는 없습니다. 그러나 구성 변경에 대한 응답으로 발생하는 재활용 작업은 예약된 재활용 작업과 같은 방식으로 처리됩니다. 현재 요청 및 작업이 현재 애플리케이션 도메인에서 완료되는 동안 새 요청에 대해 새 애플리케이션 도메인이 만들어집니다.|  

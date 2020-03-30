@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 7975474859081eb5567c2ee12adf26f9e6501556
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72689656"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Always On 가용성 그룹을 사용하여 복제 구성
@@ -27,7 +27,7 @@ ms.locfileid: "72689656"
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 및 Always On 가용성 그룹을 구성하는 과정은 7단계로 구성됩니다. 각 단계에 대해서는 다음 섹션에서 자세하게 설명합니다.  
   
-##  <a name="step1"></a> 1. 데이터베이스 게시 및 구독 구성  
+##  <a name="1-configure-the-database-publications-and-subscriptions"></a><a name="step1"></a> 1. 데이터베이스 게시 및 구독 구성  
  **배포자 구성**  
   
  배포 데이터베이스는 SQL Server 2012 및 SQL Server 2014를 사용하여 가용성 그룹에 배치할 수 없습니다. 배포 데이터베이스를 가용성 그룹에 배치하는 것은 SQL 2016 이상에서 지원됩니다. 자세한 내용은 [가용성 그룹에서 배포 데이터베이스 구성](../../../relational-databases/replication/configure-distribution-availability-group.md)을 참조하세요.
@@ -98,7 +98,7 @@ ms.locfileid: "72689656"
   
 3.  복제 게시, 아티클 및 구독을 만듭니다. 복제 구성 방법은 데이터 및 데이터베이스 개체 게시를 참조하세요.  
   
-##  <a name="step2"></a> 2. Always On 가용성 그룹 구성  
+##  <a name="2-configure-the-always-on-availability-group"></a><a name="step2"></a> 2. Always On 가용성 그룹 구성  
  의도한 주 복제본에서 게시되거나 게시할 데이터베이스를 멤버 데이터베이스로 추가하여 가용성 그룹을 만듭니다. 가용성 그룹 마법사를 사용하는 경우 마법사가 초기에 보조 복제본 데이터베이스를 동기화하도록 할 수 있습니다. 또는 백업 및 복원을 사용하여 직접 초기화를 수행할 수 있습니다.  
   
  가용성 그룹에 대해 복제 에이전트가 현재 주 복제본에 연결할 때 사용할 DNS 수신기를 만듭니다. 지정한 수신기 이름은 원래 게시자/게시된 데이터베이스 쌍의 리디렉션 대상으로 사용됩니다. 예를 들어 DDL을 사용하여 가용성 그룹을 구성하는 경우 다음 코드 예제를 사용하여 `MyAG`라는 기존 가용성 그룹에 대한 가용성 그룹 수신기를 지정할 수 있습니다.  
@@ -111,7 +111,7 @@ ALTER AVAILABILITY GROUP 'MyAG'
  자세한 내용은 [가용성 그룹의 생성 및 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)을 참조하세요.  
 
   
-##  <a name="step3"></a> 3. 복제에 대해 모든 보조 복제본 호스트가 구성되었는지 확인  
+##  <a name="3-ensure-that-all-of-the-secondary-replica-hosts-are-configured-for-replication"></a><a name="step3"></a> 3. 복제에 대해 모든 보조 복제본 호스트가 구성되었는지 확인  
  각 보조 복제본 호스트에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 복제를 지원하도록 구성되어 있는지 확인합니다. 각 보조 복제본 호스트에서 다음 쿼리를 실행하여 복제가 설치되었는지 확인할 수 있습니다.  
   
 ```  
@@ -124,7 +124,7 @@ SELECT @installed;
   
  *\@installed*가 0이면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치에 복제를 추가해야 합니다.  
   
-##  <a name="step4"></a> 4. 보조 복제본 호스트를 복제 게시자로 구성  
+##  <a name="4-configure-the-secondary-replica-hosts-as-replication-publishers"></a><a name="step4"></a> 4. 보조 복제본 호스트를 복제 게시자로 구성  
  보조 복제본은 복제 게시자나 재게시자로 작동할 수 없지만 복제가 구성되어 있어야만 장애 조치(failover) 후 보조 복제본이 작업을 넘겨 받을 수 있습니다. 배포자에서 각 보조 복제본 호스트에 대해 배포를 구성합니다. 원래 게시자를 배포자에 추가할 때 지정한 것과 동일한 배포 데이터베이스 및 작업 디렉터리를 지정합니다. 배포 구성에 저장 프로시저를 사용하는 경우 **sp_adddistpublisher** 를 사용하여 원격 게시자를 배포자에 연결합니다. 원래 게시자에 *\@login* 및 *\@password*를 사용한 경우 보조 복제본 호스트를 게시자로 추가할 때 각각에 대해 동일한 값을 지정합니다.  
   
 ```  
@@ -151,7 +151,7 @@ EXEC sys.sp_addlinkedserver
     @server = 'MySubscriber';  
 ```  
   
-##  <a name="step5"></a> 5. 원래 게시자를 AG 수신기 이름으로 리디렉션  
+##  <a name="5-redirect-the-original-publisher-to-the-ag-listener-name"></a><a name="step5"></a> 5. 원래 게시자를 AG 수신기 이름으로 리디렉션  
  배포자의 배포 데이터베이스에서 **sp_redirect_publisher** 저장 프로시저를 실행하여 원래 게시자와 게시된 데이터베이스를 가용성 그룹의 가용성 그룹 수신기 이름에 연결합니다.  
   
 ```  
@@ -163,7 +163,7 @@ EXEC sys.sp_redirect_publisher
     @redirected_publisher = 'MyAGListenerName';  
 ```  
   
-##  <a name="step6"></a> 6. 복제 유효성 검사 저장 프로시저를 실행하여 구성 확인  
+##  <a name="6-run-the-replication-validation-stored-procedure-to-verify-the-configuration"></a><a name="step6"></a> 6. 복제 유효성 검사 저장 프로시저를 실행하여 구성 확인  
  배포자의 배포 데이터베이스에서 **sp_validate_replica_hosts_as_publishers** 저장 프로시저를 실행하여 이제 모든 복제본 호스트가 게시된 데이터베이스의 게시자로 작동하도록 구성되었는지 확인합니다.  
   
 ```  
@@ -189,10 +189,10 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
  이는 정상적인 동작입니다. 이러한 보조 복제본 호스트에서 직접 sysserver 항목을 쿼리하여 구독자 서버 항목이 있는지 확인해야 합니다.  
   
-##  <a name="step7"></a> 7. 원래 게시자를 복제 모니터에 추가  
+##  <a name="7-add-the-original-publisher-to-replication-monitor"></a><a name="step7"></a> 7. 원래 게시자를 복제 모니터에 추가  
  각 가용성 그룹 복제본에서 원래 게시자를 복제 모니터에 추가합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **복제**  
   
 -   [Always On 게시 데이터베이스 유지 관리&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  

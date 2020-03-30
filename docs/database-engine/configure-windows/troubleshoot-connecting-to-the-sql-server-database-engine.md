@@ -14,10 +14,10 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 562fda7c79681fa70e36bf19221ceb44b2dc87ec
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78866381"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진 연결 문제 해결
@@ -78,7 +78,7 @@ Configuration Manager는 SQL Server를 설치할 때 컴퓨터에 자동으로 �
 
 인스턴스가 중지된 경우 인스턴스를 마우스 오른쪽 단추로 클릭한 다음 **시작**을 클릭합니다. 서버 인스턴스가 시작되면 표시기가 녹색 화살표로 바뀝니다.
 
-## <a name = "startbrowser"></a> 확인 - SQL Server Browser 서비스가 실행 중임
+## <a name="verify---sql-server-browser-service-is-running"></a><a name = "startbrowser"></a> 확인 - SQL Server Browser 서비스가 실행 중임
 
 명명된 인스턴스에 연결하려면 SQL Server Browser 서비스를 실행하고 있어야 합니다. Configuration Manager에서 **SQL Server Browser** 서비스를 찾고 해당 서비스가 실행 중인지 확인합니다. 서비스가 실행되고 있지 않은 경우 서비스를 시작합니다. SQL Server Browser 서비스는 기본 인스턴스의 필수 요소가 아닙니다.
 
@@ -129,7 +129,7 @@ SQL Server 인스턴스를 호스팅하는 컴퓨터의 IP 주소를 가져옵�
 
   >SQL Server는 IP 버전 4 프로토콜 또는 IP 버전 6 프로토콜을 사용하여 연결할 수 있습니다. 네트워크에서 둘 중 하나 또는 둘 다를 허용할 수 있습니다. 대부분의 사용자는 먼저 **IPv4** 주소의 문제를 해결합니다. 이것이 더 간결하고 입력하기 쉽습니다.
 
-## <a name = "getTCP"></a>SQL Server 인스턴스 TCP 포트 가져오기
+## <a name="get-the-sql-server-instance-tcp-port"></a><a name = "getTCP"></a>SQL Server 인스턴스 TCP 포트 가져오기
 
 대부분의 경우 TCP 프로토콜을 사용하여 다른 컴퓨터에서 데이터베이스 엔진에 연결할 수 있습니다.
 
@@ -142,7 +142,7 @@ SQL Server 인스턴스를 호스팅하는 컴퓨터의 IP 주소를 가져옵�
   > [!NOTE]
   > `IP address 127.0.0.1`이 표시될 가능성이 높습니다. 루프백 어댑터 주소라고 합니다. 동일한 컴퓨터의 프로세스만 이 주소를 사용하여 연결할 수 있습니다. 문제 해결에 유용할 수 있지만 다른 컴퓨터에서 연결하는 데 사용할 수 없습니다.
 
-## <a name = "enableprotocols"></a>프로토콜 사용
+## <a name="enable-protocols"></a><a name = "enableprotocols"></a>프로토콜 사용
 
 일부 SQL Server 설치에서는 관리자가 구성 관리자를 통해 사용하도록 설정하지 않을 경우 다른 컴퓨터에서 데이터베이스 엔진에 연결할 수 없습니다. 다른 컴퓨터에서 연결할 수 있게 하려면
 
@@ -150,7 +150,7 @@ SQL Server 인스턴스를 호스팅하는 컴퓨터의 IP 주소를 가져옵�
 1. 구성 관리자의 왼쪽 창에서 **SQL Server 네트워크 구성**을 확장하고 연결할 SQL Server 인스턴스를 선택합니다. 오른쪽 창에는 사용할 수 있는 연결 프로토콜이 표시됩니다. 공유 메모리는 일반적으로 사용할 수 있습니다. 동일한 컴퓨터에서만 사용할 수 있으므로 대부분의 설치에서 공유 메모리를 사용할 수 있도록 유지됩니다. 다른 컴퓨터에서 SQL Server에 연결하려면 일반적으로 TCP/IP를 사용합니다. TCP/IP를 사용할 수 없는 경우 **TCP/IP**를 마우스 오른쪽 단추로 클릭한 다음 **사용**을 클릭합니다.
 1. 모든 프로토콜에 대해 사용 설정을 변경한 경우 데이터베이스 엔진을 다시 시작해야 합니다. 왼쪽 창에서 **SQL Server 서비스**를 선택합니다. 오른쪽 창에서 데이터베이스 엔진 인스턴스를 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭합니다.
 
-## <a name="testTCPIP"></a>TCP/IP 연결 테스트
+## <a name="testing-tcpip-connectivity"></a><a name="testTCPIP"></a>TCP/IP 연결 테스트
 
 TCP/IP를 사용하여 SQL Server에 연결하려면 Windows에서 연결을 설정할 수 있어야 합니다. `ping` 도구를 사용하여 TCP를 테스트합니다.
 

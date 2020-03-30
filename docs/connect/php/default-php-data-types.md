@@ -14,10 +14,10 @@ ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11026bcb372759f62aa0b0d5f406a6721b65c135
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993672"
 ---
 # <a name="default-php-data-types"></a>기본 PHP 데이터 형식
@@ -99,10 +99,10 @@ SQL Server 2008에 새로 추가되었지만 열에 포함되지 않은 데이�
 |-----------|---------------|  
 |테이블 반환 매개 변수|예|  
 |스파스 열|부분|  
-|Null 비트 압축|yes|  
-|큰 CLR UDT(사용자 정의 형식)|yes|  
+|Null 비트 압축|예|  
+|큰 CLR UDT(사용자 정의 형식)|예|  
 |서비스 사용자 이름|예|  
-|MERGE|yes|  
+|MERGE|예|  
 |FILESTREAM|부분|  
   
 부분 형식 지원이란 열 형식에 대해 프로그래밍 방식으로 쿼리할 수 없다는 의미입니다.  

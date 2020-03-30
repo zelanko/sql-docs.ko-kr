@@ -23,10 +23,10 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5e88b1543490bd0c44abbbdea12bf361ddf43419
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253469"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
@@ -45,7 +45,7 @@ ms.locfileid: "75253469"
 -   [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)    
 -   [보고서 서버 액세스를 위한 방화벽 구성](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   
-##  <a name="BKMK_basic"></a> 기본 방화벽 정보  
+##  <a name="basic-firewall-information"></a><a name="BKMK_basic"></a> 기본 방화벽 정보  
  방화벽은 들어오는 패킷을 검사하고 규칙 집합과 이 패킷을 비교합니다. 패킷이 규칙에서 요구하는 표준에 부합하면 방화벽은 추가 처리를 위한 TCP/IP 프로토콜로 이 패킷을 전달합니다. 패킷이 규칙에서 지정한 표준에 부합하지 않는 경우 방화벽은 이 패킷을 삭제하고 로깅이 설정된 경우 방화벽 로깅 파일에 항목을 작성합니다.  
   
  허용된 트래픽 목록은 다음 방식 중 하나로 채워집니다.  
@@ -60,13 +60,13 @@ ms.locfileid: "75253469"
  [Windows 방화벽 디자인 가이드 ](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-design-guide)    
  [서버 및 도메인 격리 소개(Introduction to Server and Domain Isolation)](/windows/security/threat-protection/windows-firewall/domain-isolation-policy-design)  
   
-##  <a name="BKMK_default"></a> 기본 방화벽 설정  
+##  <a name="default-firewall-settings"></a><a name="BKMK_default"></a> 기본 방화벽 설정  
  방화벽 구성을 계획하는 첫째 단계는 운영 체제의 현재 방화벽 상태를 확인하는 것입니다. 운영 체제를 이전 버전에서 업그레이드한 경우 이전 버전의 방화벽 설정이 그대로 남아 있을 수 있습니다. 또한 다른 관리자나 도메인의 그룹 정책에 의해 방화벽 설정이 변경되었을 수도 있습니다.  
   
 > [!NOTE]  
 >  방화벽을 켜면 파일 및 인쇄 공유와 같이 이 컴퓨터에 액세스하는 다른 프로그램과 원격 데스크톱 연결이 영향을 받습니다. 관리자는 방화벽 설정을 조정하기 전에 컴퓨터에서 실행 중인 모든 애플리케이션을 고려해야 합니다.  
   
-##  <a name="BKMK_programs"></a> 방화벽 구성 프로그램  
+##  <a name="programs-to-configure-the-firewall"></a><a name="BKMK_programs"></a> 방화벽 구성 프로그램  
 **Microsoft Management Console** 또는 **netsh**를 사용하여 Windows 방화벽 설정을 구성합니다.  
 
 -  **MMC(Microsoft Management Console)**  
@@ -95,10 +95,10 @@ ms.locfileid: "75253469"
     
 - **Linux**: Linux에서는 액세스 권한이 필요한 서비스와 연결된 포트도 열어야 합니다. 서로 다른 Linux 배포와 다양한 방화벽에는 고유한 프로시저가 있습니다. 두 가지 예를 [SQL Server on Red Hat](../../linux/quickstart-install-connect-red-hat.md)(Red Hat의 SQL Server) 및 [SQL Server on SUSE](../../linux/quickstart-install-connect-suse.md)(SUSE의 SQL Server)에서 참조하세요. 
   
-## <a name="ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>다음에서 사용하는 포트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="ports-used-by-ssnoversion"></a>다음에서 사용하는 포트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  다음 표를 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 포트를 확인할 수 있습니다.  
   
-###  <a name="BKMK_ssde"></a> Ports Used By the Database Engine  
+###  <a name="ports-used-by-the-database-engine"></a><a name="BKMK_ssde"></a> Ports Used By the Database Engine  
  
 
 기본적으로 SQL Server 및 관련 데이터베이스 엔진 서비스에서 사용되는 일반적인 포트는 다음과 같습니다. TCP **1433**, **4022**, **135**, **1434**, UDP **1434**. 아래 표에는 이러한 포트가 자세히 설명되어 있습니다. 명명된 인스턴스는 [동적 포트](#BKMK_dynamic_ports)를 사용합니다.
@@ -121,7 +121,7 @@ ms.locfileid: "75253469"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 대해 Windows 방화벽을 구성하는 단계별 지침은 [데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)을 참조하세요.  
   
-####  <a name="BKMK_dynamic_ports"></a> 동적 포트  
+####  <a name="dynamic-ports"></a><a name="BKMK_dynamic_ports"></a> 동적 포트  
  기본적으로 명명된 인스턴스( [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]포함)는 동적 포트를 사용합니다. 즉, [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 시작될 때마다 사용 가능한 포트를 식별하고 해당 포트 번호를 사용합니다. 명명된 인스턴스가 설치된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 유일한 인스턴스인 경우 보통 TCP 포트 1433을 사용합니다. 다른 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스가 설치된 경우 이 인스턴스는 다른 TCP 포트를 사용합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 시작될 때마다 선택되는 포트가 변경될 수 있기 때문에 올바른 포트 번호에 대한 액세스가 가능하도록 방화벽을 구성하기가 어렵습니다. 따라서 방화벽을 사용하는 경우 매번 동일한 포트 번호를 사용하도록 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 다시 구성하는 것이 좋습니다. 이러한 방식을 고정 포트 또는 정적 포트라고 합니다. 자세한 내용은 [특정 TCP 포트로 수신하도록 서버 구성&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)을 참조하세요.  
   
  고정 포트에서 수신하도록 명명된 인스턴스를 구성하는 또 다른 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlservr.exe **와 같은** 프로그램에 대한 예외를 방화벽에서 만드는 것입니다( [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 경우). 이 방법은 편리하지만 고급 보안이 설정된 Windows 방화벽 MMC 스냅인을 사용할 경우 **인바운드 규칙** 페이지의 **로컬 포트** 열에 포트 번호가 표시되지 않습니다. 따라서 어떤 포트가 열려 있는지 감사하기가 더 어려워집니다. 또 다른 고려 사항은 서비스 팩 또는 누적 업데이트로 인해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 파일에 대한 경로가 변경되어 방화벽 규칙이 무효화될 수 있다는 점입니다.  
@@ -144,7 +144,7 @@ ms.locfileid: "75253469"
 
 엔드포인트에 대한 자세한 내용은 [여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) 및 [엔드포인트 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)를 참조하세요. 
   
-###  <a name="BKMK_ssas"></a> Analysis Services에서 사용하는 포트  
+###  <a name="ports-used-by-analysis-services"></a><a name="BKMK_ssas"></a> Analysis Services에서 사용하는 포트  
  
 기본적으로 SQL Server Analysis Services 및 관련 서비스에서 사용되는 일반적인 포트는 다음과 같습니다. TCP **2382**, **2383**, **80**, **443**. 아래 표에는 이러한 포트가 자세히 설명되어 있습니다.  
  
@@ -161,7 +161,7 @@ ms.locfileid: "75253469"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 Windows 방화벽을 구성하는 단계별 지침은 [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)을 참조하세요.  
   
-###  <a name="BKMK_ssrs"></a> Reporting Services에서 사용하는 포트  
+###  <a name="ports-used-by-reporting-services"></a><a name="BKMK_ssrs"></a> Reporting Services에서 사용하는 포트  
 
 기본적으로 SQL Server Reporting SErvices 및 관련 서비스에서 사용되는 일반적인 포트는 다음과 같습니다. TCP **80**, **443**. 아래 표에는 이러한 포트가 자세히 설명되어 있습니다. 
 
@@ -175,7 +175,7 @@ ms.locfileid: "75253469"
   
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결되는 경우 이러한 서비스에 대해 적절한 포트를 열어야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대해 Windows 방화벽을 구성하는 단계별 지침은 [보고서 서버 액세스를 위한 방화벽 구성](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)을 참조하세요.  
   
-###  <a name="BKMK_ssis"></a> Integration Services에서 사용하는 포트  
+###  <a name="ports-used-by-integration-services"></a><a name="BKMK_ssis"></a> Integration Services에서 사용하는 포트  
  다음 표에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에서 사용하는 포트를 보여 줍니다.  
   
 |기능|포트|주석|  
@@ -184,7 +184,7 @@ ms.locfileid: "75253469"
   
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 대해 Windows 방화벽을 구성하는 단계별 지침은 [Integration Services 서비스&#40;SSIS 서비스&#41;](../../integration-services/service/configure-a-windows-firewall-for-access-to-the-ssis-service.md?view=sql-server-2014)를 참조하세요.  
   
-###  <a name="BKMK_additional_ports"></a> 추가 포트 및 서비스  
+###  <a name="additional-ports-and-services"></a><a name="BKMK_additional_ports"></a> 추가 포트 및 서비스  
 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용할 수 있는 포트 및 서비스를 보여 줍니다.  
   
 |시나리오|포트|주석|  
@@ -197,7 +197,7 @@ ms.locfileid: "75253469"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 클러스터링|클러스터링을 위해서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 직접 관련되지 않은 추가 포트가 필요합니다.|자세한 내용은 [클러스터 사용을 위한 네트워크 설정(Enable a network for cluster use)](https://go.microsoft.com/fwlink/?LinkId=118372)을 참조하세요.|  
 |HTTP 서버 API(HTTP.SYS)에 예약된 URL 네임스페이스|일반적으로 TCP 포트 80이지만 다른 포트로 구성할 수 있습니다. 자세한 내용은 [HTTP 및 HTTPS 구성(Configuring HTTP and HTTPS)](https://go.microsoft.com/fwlink/?LinkId=118373)을 참조하세요.|HttpCfg.exe를 사용한 HTTP.SYS 엔드포인트 예약에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 정보는 [URL 예약 및 등록 정보&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)를 참조하세요.|  
   
-##  <a name="BKMK_port_135"></a> 포트 135에 대한 특별 고려 사항  
+##  <a name="special-considerations-for-port-135"></a><a name="BKMK_port_135"></a> 포트 135에 대한 특별 고려 사항  
  TCP/IP 또는 UDP/IP를 전송 수단으로 하여 RPC를 사용하는 경우 인바운드 포트는 필요에 따라 시스템 서비스에 동적으로 할당되는 경우가 많습니다. 포트 1024보다 큰 TCP/IP 및 UDP/IP 포트가 사용됩니다. 이러한 포트를 비공식적으로 "임의 RPC 포트"라고 합니다. 이 경우 RPC 클라이언트는 RPC 엔드포인트 매퍼를 사용하여 서버에 할당된 동적 포트를 알려 줍니다. 일부 RPC 기반 서비스의 경우 RPC가 포트를 동적으로 할당하도록 하는 대신 사용자가 직접 특정 포트를 구성할 수 있습니다. 또한 서비스에 관계없이 RPC가 동적으로 할당하는 포트의 범위를 좁은 범위로 제한할 수도 있습니다. 포트 135는 많은 서비스에서 사용되기 때문에 악의적인 사용자로부터 자주 공격을 받습니다. 포트 135를 열 때는 방화벽 규칙의 범위를 제한하는 것이 좋습니다.  
   
  포트 135에 대한 자세한 내용은 다음을 참조하세요.  
@@ -207,12 +207,12 @@ ms.locfileid: "75253469"
 -   [RPC(원격 프로시저 호출)(Remote procedure call (RPC))](https://go.microsoft.com/fwlink/?LinkId=118375)    
 -   [방화벽에 사용할 RPC 동적 포트 할당을 구성하는 방법](https://support.microsoft.com/kb/154596/)  
   
-##  <a name="BKMK_other_rules"></a> 다른 방화벽 규칙과의 상호 작용  
+##  <a name="interaction-with-other-firewall-rules"></a><a name="BKMK_other_rules"></a> 다른 방화벽 규칙과의 상호 작용  
  Windows 방화벽은 규칙 및 규칙 그룹을 사용하여 구성을 설정합니다. 각 규칙 또는 규칙 그룹은 일반적으로 특정 프로그램이나 서비스와 연결되며, 이 프로그램 또는 서비스는 사용자 모르게 규칙을 수정하거나 삭제할 수 있습니다. 예를 들어 **World Wide Web 서비스(HTTP)** 및 **World Wide Web 서비스(HTTPS)** 규칙 그룹은 IIS와 연결됩니다. 이러한 규칙을 사용하도록 설정하면 포트 80 및 443이 열리고 포트 80 및 443을 이용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능이 작동합니다. 그러나 IIS를 구성 중인 관리자가 이러한 규칙을 수정하거나 해제할 수 있습니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포트 80 또는 포트 443을 사용하는 경우 다른 IIS 규칙에 관계없이 자신이 원하는 포트 구성을 유지하는 고유한 규칙 또는 규칙 그룹을 만들어야 합니다.  
   
  고급 보안이 설정된 Windows 방화벽 MMC 스냅인은 적용 가능한 모든 허용 규칙에 일치하는 모든 트래픽을 허용합니다. 따라서 포트 80에 두 개의 규칙이 서로 다른 매개 변수를 사용하여 적용되는 경우 트래픽은 어느 한쪽의 규칙에만 일치하면 허용됩니다. 즉, 한 규칙은 로컬 서브넷에서 포트 80을 통한 트래픽을 허용하고 다른 규칙은 모든 주소의 트래픽을 허용한다면 결과적으로 트래픽의 출처에 관계없이 포트 80에 대한 모든 트래픽이 허용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 액세스를 효율적으로 관리하려면 관리자는 서버에 설정된 모든 방화벽 규칙을 정기적으로 검토해야 합니다.  
   
-##  <a name="BKMK_profiles"></a> 방화벽 프로필 개요  
+##  <a name="overview-of-firewall-profiles"></a><a name="BKMK_profiles"></a> 방화벽 프로필 개요  
  방화벽 프로필은 운영 체제가 연결된 각 네트워크를 연결 상태, 연결 방식 및 범주에 따라 식별하고 기억하기 위해 사용합니다.  
   
  고급 보안이 설정된 Windows 방화벽에는 3개의 네트워크 위치 유형이 있습니다.  
@@ -229,7 +229,7 @@ ms.locfileid: "75253469"
   
  고급 보안이 설정된 Windows 방화벽 MMC 스냅인을 사용하여 모든 방화벽 프로필을 보고 구성할 수 있습니다. 제어판의 **Windows 방화벽** 항목에서는 현재 프로필만 구성할 수 있습니다.  
   
-##  <a name="BKMK_additional_settings"></a> 제어판의 Windows 방화벽을 사용한 추가 방화벽 설정  
+##  <a name="additional-firewall-settings-using-the-windows-firewall-item-in-control-panel"></a><a name="BKMK_additional_settings"></a> 제어판의 Windows 방화벽을 사용한 추가 방화벽 설정  
  방화벽에 예외를 추가하여 특정 컴퓨터나 로컬 서브넷에서 들어오는 연결에 대해 포트 열기를 제한할 수 있습니다. 포트 열기 범위에 대한 이러한 제한은 컴퓨터가 악의적인 사용자에게 노출되는 정도를 줄여줄 수 있는 권장되는 방법입니다.  
   
 > [!NOTE]  
@@ -249,7 +249,7 @@ ms.locfileid: "75253469"
   
     -   **사용자 지정 목록**: 목록에 있는 IP 주소의 컴퓨터만 연결할 수 있습니다. 이 옵션은 **내 네트워크(서브넷)만**보다 안전할 수 있지만 DHCP를 사용하는 클라이언트 컴퓨터의 IP 주소는 가끔 변경될 수 있습니다. 이 경우 연결이 허용된 컴퓨터가 연결하지 못하게 됩니다. 또한 권한을 부여하지 않은 다른 컴퓨터가 목록에 있는 IP 주소를 획득하여 연결할 수 있습니다. **사용자 지정 목록** 옵션은 고정 IP 주소를 사용하도록 구성된 다른 서버를 나열하는 데는 적합하지만 IP 주소는 침입자의 스푸핑 공격을 받을 수 있습니다. 방화벽 제한 규칙은 네트워크 인프라 자체의 보안 수준 내에서 보호 기능을 제공할 뿐입니다.  
   
-##  <a name="BKMK_WF_msc"></a> 고급 보안이 설정된 Windows 방화벽 스냅인 사용  
+##  <a name="using-the-windows-firewall-with-advanced-security-snap-in"></a><a name="BKMK_WF_msc"></a> 고급 보안이 설정된 Windows 방화벽 스냅인 사용  
  고급 보안이 포함된 Windows 방화벽 MMC 스냅인을 사용하여 추가 고급 방화벽 설정을 구성할 수 있습니다. 이 스냅인은 규칙 마법사를 포함하며 제어판의 **Windows 방화벽** 항목에는 제공되지 않는 추가 설정을 제공합니다. 이 설정은 다음을 포함합니다.  
   
 -   암호화 설정  
@@ -267,7 +267,7 @@ ms.locfileid: "75253469"
 2.  **고급 보안이 포함된 Windows 방화벽**의 왼쪽 창에서 **인바운드 규칙**을 마우스 오른쪽 단추로 클릭한 다음, **새 규칙**을 선택합니다.   
 3.  원하는 설정을 사용하여 **새 인바운드 규칙 마법사** 를 완료합니다.  
   
-##  <a name="BKMK_troubleshooting"></a> 방화벽 설정 문제 해결  
+##  <a name="troubleshooting-firewall-settings"></a><a name="BKMK_troubleshooting"></a> 방화벽 설정 문제 해결  
  다음 도구 및 기술은 방화벽 문제를 해결하는 데 유용합니다.  
   
 -   유효 포트 상태는 포트와 관련된 모든 규칙의 합집합입니다. 포트를 통한 액세스를 차단하려는 경우 해당 포트 번호가 포함된 모든 규칙을 검토하는 것이 좋습니다. 이렇게 하려면 고급 보안이 설정된 Windows 방화벽 MMC 스냅인을 사용하여 포트 번호별로 인바운드 및 아웃바운드 규칙을 정렬합니다.  

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 13c20f7fb8cd282251c734df1a4bb7b3adab3712
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909620"
 ---
 # <a name="shrink-a-database"></a>데이터베이스 축소
@@ -50,9 +50,9 @@ ms.locfileid: "72909620"
   
 -   **후속 작업:**  [데이터베이스 축소](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   데이터베이스를 최소 데이터베이스 크기보다 작게 축소할 수는 없습니다. 최소 크기는 데이터베이스를 처음 만들 때 지정된 크기나 DBCC SHRINKFILE과 같은 파일 크기 변경 작업을 사용하여 명시적으로 설정한 최종 크기입니다. 예를 들어 원래 10MB로 생성된 데이터베이스가 100MB까지 증가한 경우 포함된 모든 데이터를 삭제하더라도 데이터베이스를 10MB 이하로는 축소할 수 없습니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "72909620"
   
 -   xVelocity 메모리 최적화 Columnstore 인덱스가 발생할 경우 DBCC SHRINKDATABASE는 실패합니다. Columnstore 인덱스가 발생하기 전에 완료된 작업은 성공하므로 데이터베이스 크기가 작아질 수 있습니다. DBCC SHRINKDATABASE를 완료하려면 DBCC SHRINKDATABASE를 실행하기 전에 모든 columnstore 인덱스를 사용하지 않도록 설정한 다음 columnstore 인덱스를 다시 작성합니다.  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   현재 데이터베이스에 있는 여유(할당되지 않은) 공간의 양을 보려면 자세한 내용은 [데이터베이스의 데이터 및 로그 공간 정보 표시](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)를 참조하세요.  
   
@@ -74,12 +74,12 @@ ms.locfileid: "72909620"
   
     -   특정 요구 사항이 없을 경우 AUTO_SHRINK 데이터베이스 옵션을 ON으로 설정하지 마세요.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-shrink-a-database"></a>데이터베이스를 축소하려면  
   
@@ -106,7 +106,7 @@ ms.locfileid: "72909620"
   
 4.  **확인**을 클릭합니다.  
 
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-shrink-a-database"></a>데이터베이스를 축소하려면  
   
@@ -118,7 +118,7 @@ ms.locfileid: "72909620"
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../relational-databases/databases/codesnippet/tsql/shrink-a-database_1.sql)]  
   
-##  <a name="FollowUp"></a> 후속 작업: 데이터베이스를 축소한 후  
+##  <a name="follow-up-after-you-shrink-a-database"></a><a name="FollowUp"></a> 후속 작업: 데이터베이스를 축소한 후  
  파일 축소를 위해 이동되는 데이터는 파일 내의 모든 사용 가능한 위치로 분산될 수 있습니다. 이로 인해 인덱스 조각화가 발생하여 인덱스 범위를 검색하는 쿼리 성능이 저하될 수 있습니다. 조각화를 방지하려면 축소 후 파일에 대한 인덱스를 다시 작성하는 것이 좋습니다.  
   
 ## <a name="see-also"></a>참고 항목  

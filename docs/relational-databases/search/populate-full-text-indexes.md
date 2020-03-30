@@ -25,17 +25,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 52fc7d3d43c1f0adcf7ab94d78cf301254a9a18d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903874"
 ---
 # <a name="populate-full-text-indexes"></a>전체 텍스트 인덱스 채우기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   전체 텍스트 인덱스를 만들고 유지 관리하려면 *채우기* ( *탐색*이라고도 함)라는 프로세스를 사용하여 인덱스를 채워야 합니다.  
   
-##  <a name="types"></a> Types of population  
+##  <a name="types-of-population"></a><a name="types"></a> Types of population  
 전체 텍스트 인덱스는 다음 유형의 채우기를 지원합니다.
 -   **전체** 채우기
 -   **변경 내용 추적** 기반 자동 또는 수동 채우기
@@ -171,7 +171,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
  증분 채우기를 실행하려면 `START INCREMENTAL POPULATION` 절을 사용하는 `ALTER FULLTEXT INDEX` 문을 실행합니다.  
   
-###  <a name="create"></a> 증분 채우기 일정 만들기 또는 변경   
+###  <a name="create-or-change-a-schedule-for-incremental-population"></a><a name="create"></a> 증분 채우기 일정 만들기 또는 변경   
   
 1.  Management Studio의 개체 탐색기에서 서버를 확장합니다.  
   
@@ -208,7 +208,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
 
-##  <a name="crawl"></a> 전체 텍스트 채우기의 오류 문제 해결(탐색)  
+##  <a name="troubleshoot-errors-in-a-full-text-population-crawl"></a><a name="crawl"></a> 전체 텍스트 채우기의 오류 문제 해결(탐색)  
 탐색 중에 오류가 발생하면 전체 텍스트 검색 탐색 로깅 기능은 일반 텍스트 파일인 탐색 로그를 만들고 유지 관리합니다. 각 탐색 로그는 특정 전체 텍스트 카탈로그에 해당합니다. 기본적으로 지정된 인스턴스(이 예제에서는 기본 인스턴스)에 대한 크롤링 로그는 `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG` 폴더에 있습니다.
  
 탐색 로그 파일은 다음 명명 구성표를 따릅니다.  

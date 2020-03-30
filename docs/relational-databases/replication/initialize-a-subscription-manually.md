@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 85d4d245ae71adbd6b1c534381c7683b676d7fbe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76288221"
 ---
 # <a name="initialize-a-subscription-manually"></a>수동 구독 초기화
@@ -27,13 +27,13 @@ ms.locfileid: "76288221"
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다. 구독을 초기화하는 데는 일반적으로 초기 스냅샷이 사용되지만 스키마 및 초기 데이터가 이미 구독자에 있는 경우에는 스냅샷을 사용하지 않고 게시에 대한 구독을 초기화할 수 있습니다.  
   
 
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   데이터와 스키마가 구독자로 복사된 시점과 구독이 수동으로 초기화된 시점 간에 트랜잭션 복제를 사용하여 게시된 데이터베이스에서 작업이 수행된 경우에는 이러한 작업으로 인한 변경 내용은 구독자로 복제되지 않을 수 있습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  스키마를 구독 데이터베이스에 복사(일반적으로 데이터도 복사)하여 게시에 대한 구독을 초기화합니다. 해당 스키마와 데이터는 게시 데이터베이스와 일치해야 합니다. 그런 다음 새 구독 마법사의 **구독 초기화** 페이지에서 구독에 스키마와 데이터가 필요하지 않도록 지정합니다. 이 마법사의 액세스 방법은 [스냅샷 없이 트랜잭션 구독 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) 및 [끌어오기 구독 만들기](../../relational-databases/replication/create-a-pull-subscription.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
   
  처음 구독을 동기화하는 경우 복제에 필요한 개체와 메타데이터가 구독 데이터베이스에 복사됩니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "76288221"
   
 2.  새 구독 마법사의 **구독 초기화** 페이지에 있는 **초기화** 확인란의 선택을 취소합니다. 복제 개체와 메타데이터만 복사해야 하는 각 구독에 대해서 이 작업을 수행합니다.  
 
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  복제 저장 프로시저를 사용하여 수동으로 게시를 초기화할 수 있습니다.  
   
 #### <a name="to-manually-initialize-a-pull-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대한 끌어오기 구독을 수동으로 초기화하려면  

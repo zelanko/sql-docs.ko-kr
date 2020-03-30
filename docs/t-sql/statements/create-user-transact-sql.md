@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6fbcdfc0142d448c8ef02898dd8d5610954423c3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056810"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER(Transact-SQL)
@@ -277,7 +277,7 @@ Azure SQL Database 관리되는 인스턴스 데이터베이스에서 사용자�
 
 `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
   
-##  <a name="SyntaxSummary"></a> 구문 요약  
+##  <a name="syntax-summary"></a><a name="SyntaxSummary"></a> 구문 요약  
  **마스터의 로그인 기반 사용자**  
   
  다음 목록에서는 로그인 기반 사용자에 대해 사용할 수 있는 구문을 보여 줍니다. 기본 스키마 옵션은 나열되지 않습니다.  
@@ -388,7 +388,7 @@ CREATE USER JinghaoLiu FOR CERTIFICATE CarnationProduction50;
 GO   
 ```  
   
-###  <a name="withoutLogin"></a> 4. 로그인이 없는 사용자 만들기 및 사용  
+###  <a name="d-creating-and-using-a-user-without-a-login"></a><a name="withoutLogin"></a> 4. 로그인이 없는 사용자 만들기 및 사용  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 매핑되지 않는 데이터베이스 사용자 `CustomApp`를 만듭니다. 그런 다음 `adventure-works\tengiz0` 사용자를 가장하도록 사용자에게 `CustomApp` 권한을 부여합니다.  
   
 ```  

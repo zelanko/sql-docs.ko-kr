@@ -16,10 +16,10 @@ ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b59d2545358c2536bcbd0dc6d4e5e211e0c76caa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082613"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>지도(보고서 작성기 및 SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "77082613"
 > [!NOTE]  
 >  보고서와는 별도로 지도를 보고서 파트로 저장할 수 있습니다. [보고서 파트](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)에 대해 자세히 알아봅니다.  
   
-##  <a name="Process"></a> 보고서에 지도 추가  
+##  <a name="adding-a-map-to-your-report"></a><a name="Process"></a> 보고서에 지도 추가  
  보고서에 지도를 추가하기 위해 수행할 일반 단계의 목록은 다음과 같습니다.  
   
 -   표시할 분석 데이터와 필요한 공간 데이터 형식을 결정합니다. 예를 들어 거품형 지도에서 상대적 연간 상점 판매량을 표시하려면 분석 데이터에 상점 이름과 상점 판매량이 필요하고 공간 데이터에 위도와 경도로 상점 위치와 상점 이름이 필요합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "77082613"
   
  자세한 내용은 [지도 보고서 계획&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)를 참조하세요.  
   
-##  <a name="AddingData"></a> 지도에 데이터 추가  
+##  <a name="adding-data-to-a-map"></a><a name="AddingData"></a> 지도에 데이터 추가  
  지도에서는 공간 데이터와 분석 데이터라는 두 가지 데이터 형식을 사용합니다. 공간 데이터는 지도의 모양을 정의하는 반면 분석 데이터는 지도와 연결된 값을 제공합니다. 예를 들어 공간 데이터는 한 지역의 도시 위치를 정의하는 반면 분석 데이터는 각 도시의 인구를 제공합니다.  
   
  지도에는 공간 데이터가 반드시 있어야 하며 분석 데이터는 없어도 됩니다. 예를 들어 도시에 있는 상점 위치만 표시되는 지도를 추가할 수 있습니다.  
@@ -136,12 +136,12 @@ ms.locfileid: "77082613"
   
  이 예에서 도시 이름만으로는 인구를 고유하게 식별할 수 없습니다. 예를 들어 미국에는 올버니라는 도시가 많습니다. 특정 도시의 이름을 지정하려면 도시 이름뿐만 아니라 지역을 지정해야 합니다.  
   
-##  <a name="Viewport"></a> 지도 뷰포트 이해  
+##  <a name="understanding-the-map-viewport"></a><a name="Viewport"></a> 지도 뷰포트 이해  
  보고서의 지도 데이터를 지정한 후 지도 *뷰포트*를 지정하여 지도의 표시 영역을 제한할 수 있습니다. 기본적으로 뷰포트는 전체 지도와 동일한 영역입니다. 지도를 자르려면 보고서에 포함할 지역을 정의하는 최대 및 최소 좌표, 확대/축소 수준 및 중심을 지정하면 됩니다. 보고서에서 지도의 표시를 향상시키기 위해 범례, 거리 눈금 및 색 눈금을 뷰포트 밖으로 이동할 수 있습니다. 다음 그림에서는 뷰포트를 보여 줍니다.  
   
  ![rs_MapViewport](../../reporting-services/report-design/media/rs-mapviewport.gif "rs_MapViewport")  
   
-##  <a name="TileLayer"></a> Bing Maps 타일 계층 추가  
+##  <a name="adding-a-bing-map-tiles-layer"></a><a name="TileLayer"></a> Bing Maps 타일 계층 추가  
  뷰포트에서 정의하는 대로 현재 지도 보기의 지리적 배경을 제공하는 Bing Maps 타일의 계층을 추가할 수 있습니다. 타일 계층을 추가하려면 좌표계에 **지리** , 도법 종류에 **메르카토르**를 지정해야 합니다. 선택한 뷰포트 중심 및 확대/축소 수준과 일치하는 타일이 Bing Maps 웹 서비스에서 자동으로 검색됩니다.  
   
  다음 옵션을 지정하여 계층을 사용자 지정할 수 있습니다.  
@@ -162,7 +162,7 @@ ms.locfileid: "77082613"
   
  타일에 대한 자세한 내용은 [Bing 지도 타일 시스템(Bing Maps Tiles System)](https://go.microsoft.com/fwlink/?linkid=147315)을 참조하십시오. 보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](https://go.microsoft.com/fwlink/?LinkId=151371)을 참조하세요.  
   
-##  <a name="MapLayers"></a> 지도 계층 및 지도 요소 이해  
+##  <a name="understanding-map-layers-and-map-elements"></a><a name="MapLayers"></a> 지도 계층 및 지도 요소 이해  
  지도 하나에 계층이 여러 개 있을 수 있습니다. 세 가지 계층 유형이 있으며, 각 계층에는 한 가지 공간 데이터 형식이 표시됩니다.  
   
 -   **다각형 계층.** 각 다각형에 대해 자동으로 계산되는 다각형 중심점의 표식이나 영역의 윤곽선을 표시합니다.  
@@ -208,7 +208,7 @@ ms.locfileid: "77082613"
   
  자세한 내용은 [대화형 정렬, 문서 구조 및 링크&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)를 참조하세요.  
   
-##  <a name="Legends"></a> 지도 범례, 색 눈금 및 거리 눈금 이해  
+##  <a name="understanding-map-legends-color-scale-and-distance-scale"></a><a name="Legends"></a> 지도 범례, 색 눈금 및 거리 눈금 이해  
  사용자가 지도를 해석하는 데 도움이 되도록 다양한 범례를 보고서에 추가할 수 있습니다. 지도에는 다음 항목이 포함될 수 있습니다.  
   
 -   **범례.** 여러 범례를 만들 수 있습니다. 범례에 나열되는 항목은 각 계층의 지도 요소에 대해 지정하는 규칙에 따라 자동으로 생성됩니다. 각 규칙의 경우 관련 항목을 표시하는 데 사용할 범례를 지정할 수 있습니다. 이런 식으로 여러 계층의 항목을 동일한 범례나 서로 다른 범례에 할당할 수 있습니다.  
@@ -219,14 +219,14 @@ ms.locfileid: "77082613"
   
  범례, 색 눈금 및 거리 눈금을 뷰포트 내부나 외부의 서로 다른 위치에 배치할 수 있습니다. 자세한 내용은 [지도 범례, 색 눈금 및 관련 규칙 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)를 참조하세요.  
   
-##  <a name="Troubleshooting"></a> 지도 문제 해결  
+##  <a name="troubleshooting-maps"></a><a name="Troubleshooting"></a> 지도 문제 해결  
  지도 보고서에서는 다양한 데이터 원본에서 공간 데이터와 분석 데이터를 사용합니다. 각 지도 계층에서 서로 다른 데이터 원본을 사용할 수 있습니다. 각 계층의 표시 속성은 계층 속성, 규칙, 지도 요소 속성에 따라 특정 우선 순위를 따릅니다.  
   
  지도 보고서를 볼 때 원하는 결과가 표시되지 않으면 근본 원인은 다양한 문제에서 비롯될 수 있습니다. 각 문제를 확인하고 이해하려면 한 번에 한 계층에서 작업하는 것이 유용합니다. 지도 창을 사용하여 계층을 선택하고 계층의 표시 유형을 쉽게 설정/해제할 수 있습니다.  
   
  맵 보고서 문제에 대한 자세한 내용은 [보고서 문제 해결: 맵 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
-##  <a name="HowTo"></a> 방법 도움말 항목  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 방법 도움말 항목  
  이 섹션에는 보고서에서 지도와 지도 계층을 사용하여 작업하는 방법을 단계별로 보여 주는 절차가 나열되어 있습니다.  
   
 -   [지도 또는 지도 계층 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
@@ -235,7 +235,7 @@ ms.locfileid: "77082613"
   
 -   [지도에 사용자 지정 위치 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
-##  <a name="Section"></a> 섹션 내용  
+##  <a name="in-this-section"></a><a name="Section"></a> 섹션 내용  
  [지도 보고서 계획&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)  
   
  [지도 마법사 및 지도 계층 마법사&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  

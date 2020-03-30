@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 450091bba39cf10e551b8da5e62993ca676c64af
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73707919"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML(SQL Server의 R 라이브러리)
@@ -57,7 +57,7 @@ ms.locfileid: "73707919"
 
 | 함수 이름 | Description |
 |---------------|-------------|
-|[rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees) | FastRank의 구현으로, MART 그래디언트 부스팅 알고리즘의 유효 구현을 나타냅니다.  |
+|[rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees) | FastRank의 구현으로, MART 경사 부스팅 알고리즘의 유효 구현을 나타냅니다.  |
 |[rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest) | [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)를 사용하는 임의 포리스트 및 분위 회귀 포리스트 구현입니다.  |
 |[rxLogisticRegression](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/logisticregression) | L-BFGS를 사용하는 로지스틱 회귀입니다.  |
 |[rxOneClassSvm](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxoneclasssvm) | 1 클래스 지원 벡터 컴퓨터입니다.  

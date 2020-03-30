@@ -16,10 +16,10 @@ ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: da984efa4e0b4d964cf947929094ee7b392063f2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75952475"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Power BI의 대시보드에 Reporting Services 페이지를 매긴 보고서 항목 고정
@@ -28,7 +28,7 @@ ms.locfileid: "75952475"
 
 온-프레미스 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서 항목을 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 서비스의 대시보드에 새 타일로 고정할 수 있습니다.   고정하려면 먼저 관리자가 보고서 서버를 Azure Active Directory 및 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]과 통합해야 합니다.  
   
-##  <a name="bkmk_requirements_to_pin"></a> 고정하기 위한 요구 사항  
+##  <a name="requirements-to-pin"></a><a name="bkmk_requirements_to_pin"></a> 고정하기 위한 요구 사항  
   
 -   보고서 서버는 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 통합에 대해 구성됩니다. 자세한 내용은 [Power BI 보고서 서버 통합&#40;구성 관리자&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)과 통합해야 합니다. 보고서 서버가 구성되지 않은 경우 보고서 뷰어 도구 모음에 **Power BI 대시보드에 고정** 단추가 표시되지 않습니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "75952475"
  
     [Reporting Services 데이터 원본에 자격 증명 저장](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)에서 "보고서별 데이터 원본에 대한 저장된 자격 증명 구성(기본 모드)" 섹션을 참조하세요.  
   
-##  <a name="bkmk_supported_items"></a> 고정할 수 있는 항목  
+##  <a name="items-you-can-pin"></a><a name="bkmk_supported_items"></a> 고정할 수 있는 항목  
  다음과 같은 보고서 항목을 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 대시보드에 고정할 수 있습니다.  데이터 영역 내에 중첩된 항목을 고정할 수 없습니다. 예를 들어 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 테이블 또는 목록 내에 중첩된 항목을 고정할 수 없습니다.  
   
 -   차트  
@@ -54,7 +54,7 @@ ms.locfileid: "75952475"
 -   항목이 보고서 본문에 있어야 합니다.  페이지 머리글 또는 페이지 바닥글에 있는 항목을 고정할 수 없습니다.  
 -   최상위 수준 사각형 내에 있는 개별 항목을 고정할 수 있지만 해당 항목을 모두 단일 그룹으로 고정할 수 없습니다.  
   
-##  <a name="bkmk_to_pin"></a> 보고서 항목을 고정하려면  
+##  <a name="to-pin-a-report-item"></a><a name="bkmk_to_pin"></a> 보고서 항목을 고정하려면  
   
 1. [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)](으)로 로그인되었는지 확인합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]에서 **내 설정** 메뉴 항목을 선택하고 로그인합니다. 자세한 내용은 [My Settings for Power BI Integration &#40;web portal&#41;](my-settings-for-power-bi-integration-web-portal.md)(Power BI 통합을 위한 내 설정&#40;웹 포털&#41;)을 참조하세요.
 
@@ -78,7 +78,7 @@ ms.locfileid: "75952475"
   
 6. 보고서를 기본 보기로 되돌리려면 **닫기** 를 선택합니다.  
   
-##  <a name="bkmk_in_the_dashboard"></a> 대시보드에서
+##  <a name="in-the-dashboard"></a><a name="bkmk_in_the_dashboard"></a> 대시보드에서
 
 보고서 항목이 대시보드에 고정된 후 타일은 다른 대시보드 타일과 같으며 타일이 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 나왔다는 시각적인 표시는 없습니다. 다음 목록은 보고서 항목에서 타일 속성이 채워지는 방법을 요약합니다.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "75952475"
 
 ![ssrs_pinned_tile_details](../reporting-services/media/ssrs-pinned-tile-details.png "ssrs_pinned_tile_details")  
   
-##  <a name="bkmk-troubleshoot"></a> 문제 해결  
+##  <a name="troubleshoot-issues"></a><a name="bkmk-troubleshoot"></a> 문제 해결  
   
 -   **보고서 뷰어 도구 모음의 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 단추 없음:**  이 메시지는 보고서 서버가 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]와 통합되지 않았음을 나타냅니다. 자세한 내용은 [Power BI 보고서 서버 통합&#40;구성 관리자&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)과 통합해야 합니다.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "75952475"
 
 -   **Power BI 앱의 타일에 부실 데이터 표시:** 대시보드에 Reporting Services 보고서 항목을 고정한 다음 앱에서 해당 대시보드를 배포한 경우 해당 대시보드에 고정된 보고서는 업데이트되지 않습니다. 
 
-##  <a name="bkmk_subscription_management"></a> 구독 관리  
+##  <a name="subscription-management"></a><a name="bkmk_subscription_management"></a> 구독 관리  
  문제 해결 섹션에서 설명한 구독 관련 문제 외에도 다음 정보는 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 관련 구독을 유지 관리하는 데 도움이 됩니다.
   
 -   **항목 이름이 변경됨:** 고정된 보고서 항목이 이름 변경되거나 삭제된 경우 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 타일이 더 이상 업데이트되지 않으며 다음과 유사한 오류 메시지가 표시됩니다.  항목 이름을 원래 이름으로 다시 바꾸면 구독이 다시 작동하기 시작하며 구독 일정에서 타일이 새로 고쳐집니다.  

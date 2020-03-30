@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 9ce47719415c97f7e9e6cecb27768717710537d4
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: ee706d160ac94c80fc826ce6d199fd66bc37d1fa
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286117"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216492"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Windows에 SQL Server Machine Learning Services(Python 및 R) 설치
 
@@ -22,7 +22,7 @@ ms.locfileid: "79286117"
 
 Windows에서 SQL Server Machine Learning Services를 설치하는 방법을 알아봅니다. Machine Learning Services를 사용하여 데이터베이스에서 R 또는 Python 스크립트를 실행할 수 있습니다.
 
-## <a name="bkmk_prereqs"> </a> 설치 전 검사 목록
+## <a name="pre-install-checklist"></a><a name="bkmk_prereqs"> </a> 설치 전 검사 목록
 
 + 데이터베이스 엔진 인스턴스가 필요합니다. Python 또는 R 기능은 기존 인스턴스에 증분식으로 추가할 수는 있지만 설치할 수는 없습니다.
 
