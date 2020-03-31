@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "70153629"
 ---
 # <a name="monitoring-and-troubleshoot-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 모니터링 및 문제 해결
@@ -98,7 +98,7 @@ Pod에서 실행되는 컨테이너의 로그를 검색할 수 있습니다. 다
 kubectl logs master-0 --all-containers=true -n mssql-cluster > master-0-pod-logs.txt
 ```
 
-## <a id="services"></a> 서비스 상태 가져오기
+## <a name="get-status-of-services"></a><a id="services"></a> 서비스 상태 가져오기
 
 다음 명령을 실행하여 빅 데이터 클러스터 서비스의 세부 정보를 가져옵니다. 이러한 세부 정보에는 각 서비스 및 포트와 연결된 유형 및 ID가 포함됩니다. SQL Server 빅 데이터 클러스터 서비스는 배포 구성 파일에 지정된 클러스터 이름을 기준으로 클러스터 부트스트랩 시 생성된 새 네임스페이스에 생성됩니다.
 
@@ -138,7 +138,7 @@ kubectl describe service <service_name> -n <namespace_name>
 kubectl describe service master-svc-external -n mssql-cluster
 ```
 
-## <a id="copy"></a> 파일 복사
+## <a name="copy-files"></a><a id="copy"></a> 파일 복사
 
 컨테이너에서 로컬 머신으로 파일을 복사해야 하는 경우 다음 구문으로 `kubectl cp` 명령을 사용합니다.
 
@@ -152,7 +152,7 @@ kubectl cp <pod_name>:<source_file_path> -c <container_name> -n <namespace_name>
 kubectl cp <source_local_file_path> <pod_name>:<target_container_path> -c <container_name>  -n <namespace_name>
 ```
 
-### <a id="copyfrom"></a> 컨테이너에서 파일 복사
+### <a name="copy-files-from-a-container"></a><a id="copyfrom"></a> 컨테이너에서 파일 복사
 
 다음 예제에서는 컨테이너에서 로컬 머신(이 예제에서 로컬 머신은 Linux 클라이언트임)의 `~/temp/sqlserverlogs` 경로로 SQL Server 로그 파일을 복사합니다.
 
@@ -160,7 +160,7 @@ kubectl cp <source_local_file_path> <pod_name>:<target_container_path> -c <conta
 kubectl cp master-0:/var/opt/mssql/log -c mssql-server -n mssql-cluster ~/tmp/sqlserverlogs
 ```
 
-### <a id="copyinto"></a> 컨테이너에 파일 복사
+### <a name="copy-files-into-container"></a><a id="copyinto"></a> 컨테이너에 파일 복사
 
 다음 예제에서는 로컬 머신에서 `master-0` Pod의 SQL Server 마스터 인스턴스 컨테이너(`mssql-server`)로 **AdventureWorks2016CTP3** 파일을 복사합니다. 파일은 컨테이너의 `/tmp` 디렉터리에 복사됩니다. 
 
@@ -168,7 +168,7 @@ kubectl cp master-0:/var/opt/mssql/log -c mssql-server -n mssql-cluster ~/tmp/sq
 kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/tmp -c mssql-server -n mssql-cluster
 ```
 
-## <a id="forcedelete"></a> Pod 강제 삭제
+## <a name="force-delete-a-pod"></a><a id="forcedelete"></a> Pod 강제 삭제
  
 Pod를 강제로 삭제하는 것은 권장되지 않습니다. 그러나 가용성, 복원력 또는 데이터 지속성을 테스트하기 위해 `kubectl delete pods` 명령을 통해 Pod를 삭제하여 Pod 오류를 시뮬레이트할 수 있습니다.
 
@@ -182,7 +182,7 @@ kubectl delete pods <pod_name> -n <namespace_name> --grace-period=0 --force
 kubectl delete pods storage-0-0 -n mssql-cluster --grace-period=0 --force
 ```
 
-## <a id="getip"></a> Pod IP 가져오기
+## <a name="get-pod-ip"></a><a id="getip"></a> Pod IP 가져오기
  
 문제 해결을 위해 Pod가 현재 실행되고 있는 노드의 IP를 가져와야 할 수도 있습니다. IP 주소를 가져오려면 다음 구문으로 `kubectl get pods` 명령을 사용합니다.
 

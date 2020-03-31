@@ -18,10 +18,10 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a79b8399a6b435d4ed8b391b040e4800f1f50405
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286687"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 읽기 전용 라우팅 구성
@@ -34,7 +34,7 @@ ms.locfileid: "79286687"
 >  읽기 가능한 보조 복제본을 구성하는 방법은 [가용성 복제본에 대한 읽기 전용 액세스 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)가 있어야 합니다.  
 
   
-##  <a name="Prerequisites"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
   
 -   가용성 그룹에 가용성 그룹 수신기가 있어야 합니다. 자세한 내용은 [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)가 있어야 합니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "79286687"
 
 -   SQL 로그인을 사용하는 경우에 계정이 올바르게 구성되어 있는지 확인합니다. 자세한 내용은 [가용성 그룹의 데이터베이스에 대한 로그인 및 작업 관리(SQL Server)](logins-and-jobs-for-availability-group-databases.md)라는 프로세스에서 서로 바꿀 수 있습니다.
   
-##  <a name="RORReplicaProperties"></a> 읽기 전용 라우팅을 지원하도록 구성하는 데 필요한 복제본 속성  
+##  <a name="what-replica-properties-do-you-need-to-configure-to-support-read-only-routing"></a><a name="RORReplicaProperties"></a> 읽기 전용 라우팅을 지원하도록 구성하는 데 필요한 복제본 속성  
   
 -   읽기 전용 라우팅을 지원할 읽기 가능한 보조 복제본 각각에 대해 *읽기 전용 라우팅 URL*을 지정해야 합니다. 이 URL은 로컬 복제본이 보조 역할로 실행되는 경우에만 적용됩니다. 필요에 따라 복제본별로 읽기 전용 라우팅 URL을 지정해야 합니다. 각 읽기 전용 라우팅 URL은 읽기 전용 연결 요청을 지정된 읽기 가능한 보조 복제본으로 라우팅하는 데 사용됩니다. 일반적으로 모든 읽기 가능한 보조 복제본에는 읽기 전용 라우팅 URL이 할당됩니다.  
   
@@ -58,14 +58,14 @@ ms.locfileid: "79286687"
 > [!NOTE]  
 >  가용성 그룹 수신기 및 읽기 전용 라우팅에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)가 있어야 합니다.  
   
-##  <a name="Permissions"></a> 권한  
+##  <a name="permissions"></a><a name="Permissions"></a> 권한  
   
 |Task|사용 권한|  
 |----------|-----------------|  
 |가용성 그룹을 만들 때 복제본을 구성하려면|CREATE AVAILABILITY GROUP 서버 권한, ALTER ANY AVAILABILITY GROUP 권한, CONTROL SERVER 권한 중 하나와 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.|  
 |가용성 복제본을 수정하려면|가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.|  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 ### <a name="configure-a-read-only-routing-list"></a>읽기 전용 라우팅 목록 구성  
  Transact-SQL을 사용하여 읽기 전용 라우팅을 구성하려면 다음 단계를 수행합니다. 코드 예제를 보려면 이 섹션의 뒷부분에 나오는 [예(Transact-SQL)](#TsqlExample)를 참조하세요.  
@@ -103,7 +103,7 @@ ms.locfileid: "79286687"
         > [!NOTE]  
         >  읽기 전용 라우팅 목록을 구성하기 전에 읽기 전용 라우팅 URL을 설정해야 합니다.  
   
-###  <a name="loadbalancing"></a> 읽기 전용 복제본에 대한 부하 분산 구성  
+###  <a name="configure-load-balancing-across-read-only-replicas"></a><a name="loadbalancing"></a> 읽기 전용 복제본에 대한 부하 분산 구성  
  [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]부터는 읽기 전용 복제본 집합에서 부하 분산을 구성할 수 있습니다. 이전에는 읽기 전용 라우팅에서 항상 라우팅 목록에서 사용 가능한 첫 번째 복제본으로 트래픽을 전송했습니다. 이 기능을 사용하려면 **CREATE AVAILABILITY GROUP** 또는 **ALTER AVAILABILITY GROUP** 명령에서 **READ_ONLY_ROUTING_LIST** 서버 인스턴스 주위에 한 수준의 중첩 괄호를 사용합니다.  
   
  예를 들어 다음 라우팅 목록은 두 읽기 전용 복제본 `Server1` 및 `Server2`에 대해 읽기 전용 연결 요청을 부하 분산합니다. 이 두 서버를 묶는 중첩 괄호는 부하 분산되는 집합을 식별합니다. 해당 집합에서 두 복제본을 모두 사용할 수 없으면 읽기 전용 라우팅 목록의 다른 복제본인 `Server3` 및 `Server4`에 순서대로 계속 연결을 시도합니다.  
@@ -120,7 +120,7 @@ READ_ONLY_ROUTING_LIST = (('Server1','Server2'), ('Server3', 'Server4', 'Server5
   
  하나의 중첩 괄호 수준만 사용할 수 있습니다.  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 예에서는 기존 가용성 그룹 `AG1` 의 두 가용성 복제본 중 하나가 현재 주 역할을 소유하고 있는 경우 가용성 복제본이 읽기 전용 라우팅을 지원하도록 수정합니다. 가용성 복제본을 호스팅하는 서버 인스턴스를 식별하려면 이 예제에서는 `COMPUTER01` 및 `COMPUTER02` 인스턴스 이름을 지정합니다.  
   
 ```  
@@ -155,7 +155,7 @@ GO
   
 ```  
   
-##  <a name="PowerShellProcedure"></a> PowerShell 사용  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell 사용  
   
 ### <a name="configure-a-read-only-routing-list"></a>읽기 전용 라우팅 목록 구성  
  PowerShell을 사용하여 읽기 전용 라우팅을 구성하려면 다음 단계를 수행합니다. 코드 예제를 보려면 이 섹션의 뒷부분에 나오는 [예제(PowerShell)](#PSExample)을 참조하세요.  
@@ -184,7 +184,7 @@ GO
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
-###  <a name="PSExample"></a> 예제(PowerShell)  
+###  <a name="example-powershell"></a><a name="PSExample"></a> 예제(PowerShell)  
  다음 예에서는 읽기 전용 라우팅을 위해 가용성 그룹에 주 복제본과 보조 복제본 하나를 구성합니다. 먼저, 이 예에서는 각 복제본에 읽기 전용 라우팅 URL을 할당합니다. 그런 다음 주 복제본에 읽기 전용 라우팅 목록을 설정합니다. 연결 문자열에 "ReadOnly" 속성이 설정된 연결은 보조 복제본으로 리디렉션됩니다. 이 보조 복제본을 읽을 수 없는 경우( **ConnectionModeInSecondaryRole** 설정으로 확인) 연결이 주 복제본으로 다시 디렉션됩니다.  
   
 ```  
@@ -197,13 +197,13 @@ Set-SqlAvailabilityReplica -ReadOnlyRoutingConnectionUrl "TCP://SecondaryServer.
 Set-SqlAvailabilityReplica -ReadOnlyRoutingList "SecondaryServer","PrimaryServer" -InputObject $primaryReplica  
 ```  
   
-##  <a name="FollowUp"></a> 후속 작업: 읽기 전용 라우팅을 구성한 후의 작업  
+##  <a name="follow-up-after-configuring-read-only-routing"></a><a name="FollowUp"></a> 후속 작업: 읽기 전용 라우팅을 구성한 후의 작업  
  현재 주 복제본과 읽기 가능한 보조 복제본 두 역할 모두가 읽기 전용 라우팅을 지원하도록 구성되고 나면 읽기 가능한 보조 복제본은 가용성 그룹 수신기를 통해 연결한 클라이언트로부터 읽기 전용 연결 요청을 받을 수 있습니다.  
   
 > [!TIP]  
 >  [bcp 유틸리티](../../../tools/bcp-utility.md) 또는 [sqlcmd 유틸리티](../../../tools/sqlcmd-utility.md)를 사용하는 경우 **-K ReadOnly** 스위치를 지정하여 읽기 전용 액세스를 사용하도록 설정된 보조 복제본에 대한 읽기 전용 액세스를 지정할 수 있습니다.  
   
-###  <a name="ConnStringReqsRecs"></a> 클라이언트 연결 문자열에 대한 요구 사항 및 권장 사항  
+###  <a name="requirements-and-recommendations-for-client-connection-strings"></a><a name="ConnStringReqsRecs"></a> 클라이언트 연결 문자열에 대한 요구 사항 및 권장 사항  
  클라이언트 애플리케이션에서 읽기 전용 라우팅을 사용하려면 해당 연결 문자열이 다음 요구 사항을 충족해야 합니다.  
   
 -   TCP 프로토콜을 사용합니다.  
@@ -227,7 +227,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
 ### <a name="if-read-only-routing-is-not-working-correctly"></a>읽기 전용 라우팅이 올바르게 작동하지 않는 경우  
  읽기 전용 라우팅 구성 문제를 해결하는 방법은 [읽기 전용 라우팅이 올바르게 작동하지 않음](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md#ROR)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 다음 단계 
+##  <a name="next-steps"></a><a name="RelatedTasks"></a> 다음 단계 
 **읽기 전용 라우팅 구성을 보려면**  
   
 -   [sys.availability_read_only_routing_lists&#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)  

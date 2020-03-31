@@ -13,10 +13,10 @@ ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5149f7e470720a2efc99c522bd905a4a1a13f2c6
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903790"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 연결 관리자
@@ -69,7 +69,7 @@ Hadoop 연결 관리자에 Kerberos 인증을 사용할 수 있도록 온-프레
 -   옵션 1: [Kerberos 영역에 SSIS 컴퓨터 조인](#kerberos-join-realm)
 -   옵션 2: [Windows 도메인과 Kerberos 영역 간의 상호 신뢰 사용](#kerberos-mutual-trust)
 
-### <a name="kerberos-join-realm"></a>옵션 1: Kerberos 영역에 SSIS 컴퓨터 조인
+### <a name="option-1-join-the-ssis-computer-to-the-kerberos-realm"></a><a name="kerberos-join-realm"></a>옵션 1: Kerberos 영역에 SSIS 컴퓨터 조인
 
 #### <a name="requirements"></a>요구 사항:
 
@@ -99,7 +99,7 @@ SSIS 컴퓨터에서 다음을 수행합니다.
         kdc = <your_kdc_server_address>
     ```
 
-### <a name="kerberos-mutual-trust"></a>옵션 2: Windows 도메인과 Kerberos 영역 간의 상호 신뢰 사용
+### <a name="option-2-enable-mutual-trust-between-the-windows-domain-and-the-kerberos-realm"></a><a name="kerberos-mutual-trust"></a>옵션 2: Windows 도메인과 Kerberos 영역 간의 상호 신뢰 사용
 
 #### <a name="requirements"></a>요구 사항:
 -   게이트웨이 컴퓨터가 Windows 도메인을 조인해야 합니다.
