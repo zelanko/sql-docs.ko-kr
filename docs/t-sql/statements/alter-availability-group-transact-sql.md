@@ -23,10 +23,10 @@ ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1d3caeed2e7c57dfd4a3e993872034b066f56737
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70874523"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP(Transact-SQL)
@@ -575,7 +575,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  예: `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
- MODIFY LISTENER **** _dns\_name_ **’(** \<modify\_listener\_option\> **)**  
+ MODIFY LISTENER **’** _dns\_name_ **’(** \<modify\_listener\_option\> **)**  
  이 가용성 그룹의 기존 가용성 수신기를 수정합니다. 주 복제본에서만 지원되며,  
   
  \<modify\_listener\_option\>  
@@ -612,7 +612,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
 ## <a name="examples"></a>예  
   
-###  <a name="Join_Secondary_Replica"></a> 1. 가용성 그룹에 보조 복제본 조인  
+###  <a name="a-joining-a-secondary-replica-to-an-availability-group"></a><a name="Join_Secondary_Replica"></a> 1. 가용성 그룹에 보조 복제본 조인  
  다음 예에서는 현재 연결된 보조 복제본을 `AccountsAG` 가용성 그룹에 조인합니다.  
   
 ```SQL  
@@ -620,7 +620,7 @@ ALTER AVAILABILITY GROUP AccountsAG JOIN;
 GO  
 ```  
   
-###  <a name="Force_Failover"></a> 2. 가용성 그룹 강제 장애 조치(failover)  
+###  <a name="b-forcing-failover-of-an-availability-group"></a><a name="Force_Failover"></a> 2. 가용성 그룹 강제 장애 조치(failover)  
  다음 예에서는 `AccountsAG` 가용성 그룹을 연결된 보조 복제본으로 강제로 장애 조치(Failover)합니다.  
   
 ```SQL

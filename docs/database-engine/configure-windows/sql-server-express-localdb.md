@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 355cb8b80e4a27a7f58bb42dd37ca9b91059fa25
-ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
+ms.openlocfilehash: 3eedcac9715dec28d3a0ee785effa450d7309c89
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77479720"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80342918"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -29,12 +29,11 @@ ms.locfileid: "77479720"
 
 Microsoft SQL Server Express LocalDB는 개발자를 대상으로 하는 [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-2016.md) 기능입니다. SQL Server Express with Advanced Services에서 사용할 수 있습니다.
 
-LocalDB를 설치하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 시작하는 데 필요한 최소한의 파일 집합이 복사됩니다. LocalDB가 설치되면 특수 연결 문자열을 사용하여 연결을 시작할 수 있습니다. 연결할 때, 필요한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인프라가 자동으로 생성되고 시작되므로 복잡한 구성 태스크 없이 애플리케이션에서 데이터베이스를 사용하도록 할 수 있습니다. 개발자 도구는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 전체 서버 인스턴스를 관리할 필요 없이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 작성하고 테스트할 수 있게 해주는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 엔진을 개발자에게 제공합니다.
- 
+LocalDB를 설치하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 시작하는 데 필요한 최소한의 파일 집합이 복사됩니다. LocalDB가 설치되면 특수 연결 문자열을 사용하여 연결을 시작할 수 있습니다. 연결할 때, 필요한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인프라가 자동으로 생성되고 시작되므로 복잡한 구성 태스크 없이 애플리케이션에서 데이터베이스를 사용하도록 할 수 있습니다. 개발자 도구는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 전체 서버 인스턴스를 관리할 필요 없이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 작성하고 테스트할 수 있게 해주는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 엔진을 개발자에게 제공합니다. 
 
 ## <a name="try-it-out"></a>사용해 보세요! 
 
-- SQL Server Express LocalDB를 다운로드하고 설치하려면 **[SQL Server 다운로드](https://www.microsoft.com/sql-server/sql-server-editions-express)** 로 이동하세요. LocalDB는 설치 중에 선택하는 기능이며, 미디어를 다운로드할 때 사용할 수 있습니다. 미디어를 다운로드하려면 **Express Advanced** 또는 LocalDB 패키지를 선택합니다. **Visual Studio 설치 관리자**에서 **.NET 데스크톱 개발** 워크로드의 일부로 또는 개별 구성 요소로서 SQL Server Express LocalDB를 설치할 수 있습니다.
+- SQL Server Express LocalDB를 다운로드하고 설치하려면 **[SQL Server 다운로드](https://www.microsoft.com/sql-server/sql-server-downloads)** 로 이동하세요. LocalDB는 설치 중에 선택하는 기능이며, 미디어를 다운로드할 때 사용할 수 있습니다. 미디어를 다운로드하려면 **Express Advanced** 또는 LocalDB 패키지를 선택합니다. **Visual Studio 설치 관리자**에서 **.NET 데스크톱 개발** 워크로드의 일부로 또는 개별 구성 요소로서 SQL Server Express LocalDB를 설치할 수 있습니다.
 
  >[!TIP]
  > 또한 LocalDB를 Visual Studio의 일부로 설치할 수도 있습니다. Visual Studio 설치 중에 SQL Server Express LocalDB를 포함하는 **.NET 데스크톱 개발** 워크로드를 선택합니다.
@@ -123,7 +122,7 @@ REM Gather information about the instance of LocalDB
 |인스턴스 파이프 이름|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|
 
 >[!NOTE]
->애플리케이션에 .NET 4.0.2 버전이 사용될 경우 LocalDB의 명명된 파이프에 직접 연결해야 합니다. 인스턴스 파이프 이름 값은 LocalDB 인스턴스가 수신 대기 중인 명명된 파이프입니다. LOCALDB# 다음의 인스턴스 파이프 이름 부분은 LocalDB 인스턴스가 시작될 때마다 변경됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 LocalDB 인스턴스에 연결하려면 데이터베이스 엔진에 연결 대화 상자의 **서버 이름**[!INCLUDE[ssDE](../../includes/ssde-md.md)] 상자에 인스턴스 파이프 이름을 **입력합니다**. 사용자 지정 프로그램에서 `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");`와 비슷한 연결 문자열을 사용하여 LocalDB 인스턴스에 연결할 수 있습니다.
+>애플리케이션에 .NET 4.0.2 버전이 사용될 경우 LocalDB의 명명된 파이프에 직접 연결해야 합니다. 인스턴스 파이프 이름 값은 LocalDB 인스턴스가 수신 대기 중인 명명된 파이프입니다. LOCALDB# 다음의 인스턴스 파이프 이름 부분은 LocalDB 인스턴스가 시작될 때마다 변경됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 LocalDB 인스턴스에 연결하려면 **[!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결** 대화 상자의 **서버 이름** 상자에 인스턴스 파이프 이름을 입력합니다. 사용자 지정 프로그램에서 `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");`와 비슷한 연결 문자열을 사용하여 LocalDB 인스턴스에 연결할 수 있습니다.
 
 ### <a name="connect-to-a-shared-instance-of-localdb"></a>LocalDB의 공유 인스턴스에 연결
 
