@@ -707,7 +707,7 @@
                   href: database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md
                 - name: 수신기 속성 보기
                   href: database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md
-            - name: 작업(Operation)
+            - name: 운영
               items:
                 - name: 데이터베이스 추가
                   items:
@@ -751,6 +751,8 @@
                   href: database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md
                 - name: 정책을 사용하여 상태 보기
                   href: database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md
+                - name: 수신기에 연결
+                  href: database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md
         - name: 개념
           items:
             - name: 구성
@@ -789,12 +791,12 @@
                   href: database-engine/availability-groups/windows/possible-failures-during-sessions-between-availability-replicas-sql-server.md
             - name: 연결
               items:
-                - name: 클라이언트 연결
+                - name: 수신기
+                  href: database-engine/availability-groups/windows/availability-group-listener-overview.md
+                - name: 클라이언트 연결 형식
                   href: database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md
-                - name: 클라이언트 연결
+                - name: 드라이버 및 클라이언트 지원
                   href: database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md
-                - name: '수신기, 클라이언트 및 장애 조치(Failover)'
-                  href: database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md
             - name: 상호 운용성
               items:
                 - name: '복제, CT 및 CDC'
@@ -4196,7 +4198,7 @@
           items:
             - name: SQL Server 2019
               href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md
-            - name: SQL Server 2017 및 이전
+            - name: SQL Server 2016 및 2017
               href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
         - name: 보안 고려 사항
           href: sql-server/install/security-considerations-for-a-sql-server-installation.md
@@ -6166,15 +6168,6 @@
                       href: relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md
         - name: 트랜잭션 로그 관리
           items:
-            - name: 로그 파일 뷰어
-              href: relational-databases/logs/log-file-viewer.md
-              items:
-                - name: 열기
-                  href: relational-databases/logs/open-log-file-viewer.md
-                - name: 오프라인으로 보기
-                  href: relational-databases/logs/view-offline-log-files.md
-                - name: F1 도움말
-                  href: relational-databases/logs/log-file-viewer-f1-help.md
             - name: 트랜잭션 로그
               href: relational-databases/logs/the-transaction-log-sql-server.md
               items:
@@ -8401,6 +8394,15 @@
               href: ssms/ssms-utility.md
             - name: SSMS 바로 가기 키
               href: ssms/sql-server-management-studio-keyboard-shortcuts.md
+            - name: 로그 파일 뷰어
+              href: relational-databases/logs/log-file-viewer.md
+              items:
+                - name: F1 도움말
+                  href: relational-databases/logs/log-file-viewer-f1-help.md
+                - name: 열기
+                  href: relational-databases/logs/open-log-file-viewer.md
+                - name: 오프라인으로 보기
+                  href: relational-databases/logs/view-offline-log-files.md
             - name: SQL Server 에이전트
               items:
                 - name: SQL Server 에이전트
@@ -9842,7 +9844,7 @@
             - name: SQL Server Machine Learning Services 설치
               href: linux/sql-server-linux-setup-machine-learning.md
             - name: Docker에 SQL Server Machine Learning Services 설치
-              href: linux/sql-server-setup-machine-learning-docker.md
+              href: linux/sql-server-linux-setup-machine-learning-docker.md
             - name: SQL Server 언어 확장 설치
               href: linux/sql-server-linux-setup-language-extensions.md
             - name: 리포지토리 구성
@@ -17068,5 +17070,3 @@
               href: xquery/string-search-in-xquery.md
             - name: XQuery의 네임스페이스 처리
               href: xquery/handling-namespaces-in-xquery.md
-- name: 기술 자료 지원
-  href: kb-support/toc.yml
