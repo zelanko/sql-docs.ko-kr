@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67959534"
 ---
 # <a name="integrated-terminal"></a>통합 터미널
@@ -87,7 +87,7 @@ Windows에서 셸을 올바르게 구성하려면 올바른 실행 파일을 찾
 * `terminal.integrated.fontSize`
 * `terminal.integrated.lineHeight`
 
-## <a id="key-bindings"></a>터미널 키 바인딩
+## <a name="terminal-key-bindings"></a><a id="key-bindings"></a>터미널 키 바인딩
 
 **보기: 통합 터미널 토글** 명령은 통합 터미널 패널을 빠르게 표시하고 숨기기 위해 **Ctrl+`** 에 바인딩되어 있습니다.
 
