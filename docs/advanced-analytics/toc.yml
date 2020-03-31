@@ -15,18 +15,16 @@
       href: ../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md
 - name: 설치
   items:
-    - name: SQL Server 2019의 격리 변경 내용
-      href: ../advanced-analytics/install/sql-server-machine-learning-services-2019.md
     - name: Windows에 ML Services 설치
       href: ../advanced-analytics/install/sql-machine-learning-services-windows-install.md
     - name: Linux에 ML Services 설치
       href: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
+    - name: Docker에 ML Services 설치
+      href: ../linux/sql-server-linux-setup-machine-learning-docker.md?toc=/sql/advanced-analytics/toc.json
+    - name: SQL Server 2019의 격리 변경 내용
+      href: ../advanced-analytics/install/sql-server-machine-learning-services-2019.md
     - name: R Services 설치
       href: ../advanced-analytics/install/sql-r-services-windows-install.md
-    - name: 독립 실행형 서버 설치
-      href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
-    - name: 미리 학습된 모델 설치
-      href: ../advanced-analytics/install/sql-pretrained-models-install.md
     - name: 오프라인 설치(인터넷 없음)
       items:
         - name: 인터넷 액세스 권한 없이 설치
@@ -35,6 +33,8 @@
           href: ../advanced-analytics/install/sql-ml-cab-downloads.md
     - name: 명령 프롬프트 설정
       href: ../advanced-analytics/install/sql-ml-component-commandline-install.md
+    - name: 미리 학습된 모델 설치
+      href: ../advanced-analytics/install/sql-pretrained-models-install.md
     - name: Python 및 R 업그레이드
       href: ../advanced-analytics/install/upgrade-r-and-python.md
     - name: Azure Data Studio Notebook
@@ -45,6 +45,8 @@
       href: ../advanced-analytics/r/set-up-a-data-science-client.md
     - name: Azure VM에 설치
       href: ../advanced-analytics/install/sql-machine-learning-azure-virtual-machine.md
+    - name: 독립 실행형 서버 설치
+      href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
 - name: 빠른 시작
   items:
     - name: Python

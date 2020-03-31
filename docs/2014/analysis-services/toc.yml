@@ -307,7 +307,7 @@
 - name: 오류 및 이벤트 참조(SharePoint용 PowerPivot)
   href: power-pivot-sharepoint/errors-and-events-reference-power-pivot-for-sharepoint.md
   items:
-    - name: 외부 데이터 원본에 대한 연결을 설정하는 동안 오류가 발생했습니다. PowerPivot 데이터 연결을 새로 고치지 못했습니다.
+    - name: '외부 데이터 원본에 대한 연결을 설정하는 동안 오류가 발생했습니다. PowerPivot 데이터 연결을: PowerPivot 데이터'
       href: power-pivot-sharepoint/an-error-occurred-during-an-attempt-to-establish-a-connection.md
     - name: '''Microsoft.Data.Services'' 파일 또는 어셈블리를 로드할 수 없습니다.'
       href: power-pivot-sharepoint/could-not-load-file-or-assembly-microsoft-data-services.md
@@ -315,9 +315,9 @@
       href: power-pivot-sharepoint/could-not-load-microsoft-analysisservices-sharepoint-integration.md
     - name: 통합 문서의 데이터 연결 경로가 로컬 드라이브의 파일을 가리키거나 잘못된 URI입니다.
       href: power-pivot-sharepoint/the-data-connection-path-is-invalid.md
-    - name: 데이터 연결은 Windows 인증을 사용하지만 사용자 자격 증명을 위임할 수 없습니다. PowerPivot 데이터 연결을 새로 고치지 못했습니다.
+    - name: '데이터 연결은 Windows 인증을 사용하지만 사용자 자격 증명을 위임할 수 없습니다. PowerPivot 데이터 연결을: PowerPivot 데이터'
       href: power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md
-    - name: '메모, 도형 또는 기타 개체 기능은 브라우저에서 지원되지 않으며 표시되지 않거나 부분적으로만 표시될 수 있습니다.'
+    - name: '다음 기능은 브라우저에서 지원되지 않으며 표시되지 않거나 부분적으로만 표시될 수 있습니다. 메모, 도형 또는 기타 개체'
       href: power-pivot-sharepoint/comments-shapes-other-objects-not-supported-by-excel-services.md
     - name: 통합 문서가 저장된 신뢰할 수 있는 위치에서 외부 데이터 연결을 허용하지 않습니다.
       href: power-pivot-sharepoint/trusted-location-does-not-allow-external-data-connections.md
@@ -344,7 +344,7 @@
     - name: 테이블 형식 모델링(Adventure Works 자습서)
       href: tabular-modeling-adventure-works-tutorial.md
       items:
-        - name: '1단원: 새 테이블 형식 모델 프로젝트를 만들기'
+        - name: '1단원: 새 테이블 형식 모델 프로젝트 만들기'
           href: lesson-1-create-a-new-tabular-model-project.md
         - name: '2단원: 데이터 추가'
           href: lesson-2-add-data.md
@@ -368,7 +368,7 @@
           href: lesson-10-create-partitions.md
         - name: '12단원: 역할 만들기'
           href: lesson-11-create-roles.md
-        - name: '13단원: Excel에서 분석'
+        - name: '13단원: 도구 모음'
           href: lesson-12-analyze-in-excel.md
         - name: '14단원: 배포'
           href: lesson-13-deploy.md
@@ -465,7 +465,7 @@
           items:
             - name: KPI 정의 및 찾아보기
               href: lesson-7-1-defining-and-browsing-kpis.md
-        - name: '8단원: 동작 정의'
+        - name: '8단원: 작업 정의'
           href: lesson-8-defining-actions.md
           items:
             - name: 드릴스루 동작 정의 및 사용

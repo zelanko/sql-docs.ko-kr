@@ -1,4 +1,4 @@
-- name: 뷰
+- name: 보기
   href: views.md
   items:
     - name: 뷰 만들기

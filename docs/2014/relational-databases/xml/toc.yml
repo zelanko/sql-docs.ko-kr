@@ -98,7 +98,7 @@
       href: example-retrieving-product-model-information-as-xml.md
     - name: '예제: ELEMENTS 지시어를 사용하여 XSINIL 지정'
       href: example-specifying-xsinil-with-the-elements-directive.md
-    - name: '예: XMLDATA 및 XMLSCHEMA 옵션을 사용하여 결과로 스키마 요청'
+    - name: '예제: XMLDATA 및 XMLSCHEMA 옵션을 사용하여 결과로 스키마 요청'
       href: example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md
     - name: '예제: 이진 데이터 검색'
       href: example-retrieving-binary-data.md
@@ -106,7 +106,7 @@
       href: example-renaming-the-row-element.md
     - name: '예제: FOR XML로 생성된 XML에 대한 루트 요소 지정'
       href: example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md
-    - name: '예: XMLType 열 쿼리'
+    - name: '예제: XMLType 열 쿼리'
       href: example-querying-xmltype-columns.md
     - name: FOR XML에서 AUTO 모드 사용
       href: use-auto-mode-with-for-xml.md
@@ -124,7 +124,7 @@
       href: example-specifying-the-element-directive.md
     - name: '예제: ELEMENTXSINIL 지시어 지정'
       href: example-specifying-the-elementxsinil-directive.md
-    - name: '예: EXPLICIT 모드를 사용하여 형제 생성'
+    - name: '예제: EXPLICIT 모드를 사용하여 형제 생성'
       href: example-constructing-siblings-with-explicit-mode.md
     - name: '예제: ID 및 IDREF 지시어 지정'
       href: example-specifying-the-id-and-idref-directives.md
@@ -136,7 +136,7 @@
       href: example-specifying-the-element-directive-and-entity-encoding.md
     - name: '예제: CDATA 지시어 지정'
       href: example-specifying-the-cdata-directive.md
-    - name: '예: XMLTEXT 지시어 지정'
+    - name: '예제: XMLTEXT 지시어 지정'
       href: example-specifying-the-xmltext-directive.md
     - name: FOR XML에서 PATH 모드 사용
       href: use-path-mode-with-for-xml.md

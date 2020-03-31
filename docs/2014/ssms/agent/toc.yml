@@ -307,7 +307,7 @@
       href: operators-node-sql-server-agent-f1-help.md
     - name: 운영자 속성 및 새 운영자(일반 페이지)
       href: operator-properties-new-operator-general-page.md
-    - name: '운영자 속성: 새 운영자(알림 페이지)'
+    - name: '연산자 속성: 새 연산자(알림 페이지)'
       href: operator-properties-new-operator-notifications-page.md
     - name: 운영자 속성(기록 페이지)
       href: operator-properties-history-page.md

@@ -221,7 +221,7 @@
       items:
         - name: 가용성 복제본 속성(일반 페이지)
           href: availability-replica-properties-general-page.md
-        - name: 'Availability Group Properties: New Availability Group (Backup Preferences Page)'
+        - name: '가용성 그룹 속성: 새 가용성 그룹(백업 기본 설정 페이지)'
           href: availability-group-properties-new-availability-group-backup-preferences-page.md
     - name: 가용성 그룹 마법사
       items:

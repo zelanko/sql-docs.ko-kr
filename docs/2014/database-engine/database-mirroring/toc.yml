@@ -93,7 +93,7 @@
       items:
         - name: 데이터베이스 미러링 모니터링
           href: monitoring-database-mirroring-sql-server.md
-        - name: '쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향'
+        - name: '쿼럼: 미러링 모니터가 데이터베이스 가용성에 미치는 영향'
           href: quorum-how-a-witness-affects-database-availability-database-mirroring.md
         - name: 데이터베이스 미러링 세션 중 역할 전환
           href: role-switching-during-a-database-mirroring-session-sql-server.md

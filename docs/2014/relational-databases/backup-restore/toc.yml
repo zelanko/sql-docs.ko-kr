@@ -18,7 +18,7 @@
   items:
     - name: Azure에 SQL Server 관리 백업 설정
       href: enable-sql-server-managed-backup-to-microsoft-azure.md
-    - name: 'Azure에 대한 SQL Server 관리형 백업: 상호 운용성 및 공존성'
+    - name: 'Azure에 SQL Server 관리 백업: 상호 운용성 및 공존성'
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md
     - name: Azure에 SQL Server 관리 백업 - 보존 및 스토리지 설정
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md
@@ -202,9 +202,9 @@
       href: deferred-transactions-sql-server.md
     - name: 존재하지 않는 파일 그룹 제거(SQL Server)
       href: remove-defunct-filegroups-sql-server.md
-    - name: '예: 읽기-쓰기 파일의 온라인 복원(전체 복구 모델)'
+    - name: '예제: 읽기/쓰기 파일의 온라인 복원(전체 복구 모델)'
       href: example-online-restore-of-a-read-write-file-full-recovery-model.md
-    - name: '예제: 읽기 전용 파일 온라인 복원(전체 복구 모델)'
+    - name: '예제: 읽기 전용 파일의 온라인 복원(전체 복구 모델)'
       href: example-online-restore-of-a-read-only-file-full-recovery-model.md
     - name: '예제: 읽기 전용 파일의 온라인 복원(단순 복구 모델)'
       href: example-online-restore-of-a-read-only-file-simple-recovery-model.md
@@ -224,7 +224,7 @@
       href: example-piecemeal-restore-of-database-simple-recovery-model.md
     - name: '예제: 일부 파일 그룹만 증분 복원(전체 복구 모델)'
       href: example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md
-    - name: '예: 일부 파일 그룹만 증분 복원(단순 복구 모델)'
+    - name: '예제: 일부 파일 그룹만 증분 복원(단순 복구 모델)'
       href: example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md
 - name: 데이터를 복원하지 않고 데이터베이스 복구(Transact-SQL)
   href: recover-a-database-without-restoring-data-transact-sql.md

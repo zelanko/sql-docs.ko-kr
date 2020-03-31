@@ -19,7 +19,7 @@
       href: formatting/server-side-xml-formatting-sqlxml-4-0.md
     - name: 클라이언트 쪽 XML 서식 지정(SQLXML 4.0)
       href: formatting/client-side-xml-formatting-sqlxml-4-0.md
-    - name: 클라이언트 쪽 XML 서식과 서버 쪽 XML 서식(SQLXML 4.0)
+    - name: 클라이언트 쪽 vs. 서버 쪽 XML 서식 지정(SQLXML 4.0)
       href: formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md
 - name: SQLXML 4.0의 주석이 추가된 XSD 스키마
   href: annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md

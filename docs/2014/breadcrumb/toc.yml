@@ -239,7 +239,7 @@
                 - name: 파티션
                   tocHref: /sql/relational-databases/partitions/
                   topicHref: /sql/relational-databases/partitions/partitioned-tables-and-indexes
-                - name: 뷰
+                - name: 보기
                   tocHref: /sql/relational-databases/views/
                   topicHref: /sql/relational-databases/views/views
                 - name: 저장 프로시저 및 OLE
