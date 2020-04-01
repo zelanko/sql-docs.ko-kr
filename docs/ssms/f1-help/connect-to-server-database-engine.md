@@ -1,7 +1,7 @@
 ---
 title: 서버에 연결(데이터베이스 엔진)
 ms.custom: seo-lt-2019
-ms.date: 08/14/2017
+ms.date: 03/27/2020
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c29717713a6b2e41456288f026b46e220be8b229
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9fdaf17118649543fe95ba60c7f6c0148d52d0e5
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261708"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80402541"
 ---
 # <a name="connect-to-server-database-engine"></a>서버에 연결(데이터베이스 엔진)
 
@@ -63,7 +63,10 @@ SSMS의 현재 버전은 [!INCLUDE[ssDE](../../includes/ssde_md.md)]의 인스�
 > Azure Active Directory 인증은 Azure AD(Azure Active Directory)에서 ID를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 에 연결하는 메커니즘입니다.  Azure로 페더레이션되지 않은 도메인에서 자격 증명을 사용하여 Windows에 로그인하는 경우 또는 초기 도메인이나 클라이언트 도메인에 따라 Azure AD를 사용하는 Azure AD 인증을 사용하는 경우 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 연결하는 데 이 방법을 사용합니다. 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)을 참조하세요.  
 > 
 > **Active Directory - 통합**  
-> Azure Active Directory 인증은 Azure AD(Azure Active Directory)에서 ID를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 에 연결하는 메커니즘입니다. 페더레이션된 도메인에서 Azure Active Directory 자격 증명을 사용하여 Windows에 로그인하는 경우 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 연결하는 데 이 방법을 사용합니다. 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)을 참조하세요.  
+> Azure Active Directory 인증은 Azure AD(Azure Active Directory)에서 ID를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)]  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 연결하는 메커니즘입니다. 페더레이션 도메인 또는 통과 및 암호 해시 인증의 원활한 Single Sign-On을 위해 구성된 관리되는 도메인의 Azure Active Directory 자격 증명을 사용하여 Windows에 로그인한 경우 SQL Database, 관리형 인스턴스 또는 Azure Synapse Analytics에 연결하는 데 이 방법을 사용합니다. 자세한 내용은 [Azure Active Directory 원활한 Single Sign-On](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso) 및 [Azure Active Directory 인증을 사용하여 SQL Database에 연결](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)을 참조하세요.
+>
+  > [!NOTE]
+  > 통과 및 암호 해시 인증의 원활한 Single Sign-On에 대해 통합 Windows 인증용 [MSAL.NET(Microsoft.Identity.Client)](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki#roadmap)이 지원되지 않습니다.  
   
 **사용자 이름**  
 연결에 사용할 Windows 사용자 이름입니다. 이 옵션은 **Active Directory 암호 인증**을 사용하여 연결하도록 선택한 경우에만 사용할 수 있습니다. **Windows 인증** 또는 **Active Directory - 통합** 인증을 선택하는 경우 읽기 전용입니다.  

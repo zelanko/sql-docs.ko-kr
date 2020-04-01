@@ -4,12 +4,12 @@ ms.service: sql
 ms.topic: include
 ms.date: 01/13/2020
 ms.author: mikeray
-ms.openlocfilehash: 562f5be7d96cfdff219b3ca32a9c4f81aceec51e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 76e064a37c0906388479a69ed7fca2ec47be605b
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76038070"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80501374"
 ---
-<Token>**적용 대상:** ![예](media/yes.png) ![SQL Server 2019 이상 예](media/yes.png)Azure SQL Database ![](media/no.png)Azure Synapse Analytics (SQL DW) ![아니요](media/no.png)병렬 데이터 웨어하우스</Token>
+<Token>**적용 대상:** ![](media/yes-icon.png)예 SQL Server 2019 ![이상](media/no-icon.png) ![예](media/yes-icon.png)Azure SQL 데이터베이스 없음 ![Azure](media/no-icon.png)시냅스 분석(SQL DW) 병렬 데이터 웨어하우스 없음</Token>
 
