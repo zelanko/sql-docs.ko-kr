@@ -1,6 +1,6 @@
 ---
 title: sp_rxPredict | 마이크로 소프트 문서
-ms.date: 03/30/2020
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - sp_rxPredict procedure
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 752d9655096bc929ea9175577c7705dc58955652
-ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
+monikerRange: '>=sql-server-2016||>= sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 86b9cd8a9327eb8afaf9945ca09629362062011f
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80471842"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517450"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ R 또는 Python을 사용하여 모델을 만들어야 하지만 대상 데이�
 
 ## <a name="syntax"></a>구문
 
-```syntaxsql
+```
 sp_rxPredict  ( @model, @input )
 ```
 
@@ -64,7 +64,7 @@ sp_rxPredict  ( @model, @input )
 
 ### <a name="supported-algorithms"></a>지원되는 알고리즘
 
-모델을 만들고 학습하려면 [SQL Server 2016 R 서비스,](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services?view=sql-server-2017) [SQL Server 2016 R 서버(독립 실행형)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016)또는 [SQL Server 2017 기계 학습 서비스(R 또는 파이썬)](../../advanced-analytics/what-is-sql-server-machine-learning.md?view=sql-server-2017)또는 [SQL Server 2017 서버(독립 실행형) (R 또는 파이썬)에서](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2017)제공하는 R 또는 파이썬에 대한 지원되는 알고리즘 중 하나를 사용합니다.
+모델을 만들고 학습하려면 [SQL Server 2Machine 학습 서비스(R 또는 파이썬)](https://docs.microsoft.com/sql/advanced-analytics/what-is-sql-server-machine-learning)및 SQL Server [2016 R 서비스,](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services) [SQL Server 기계 학습 서버(독립 실행형) 또는](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone)SQL Server [2016 R 서버(독립 실행형)에서](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016)제공하는 R 또는 파이썬에 대한 지원되는 알고리즘 중 하나를 사용합니다.
 
 #### <a name="r-revoscaler-models"></a>R: 반란 스케일R 모델
 
@@ -132,7 +132,7 @@ FROM model_table
 WHERE model_name = 'rxLogit trained';
 
 EXEC sp_rxPredict @model = @model,
-  @inputData = N'SELECT * FROM data';
+@inputData = N'SELECT * FROM data';
 ```
 
 유효한 SQL 쿼리이 될 뿐만 아니라 * \@inputData의* 입력 데이터에저장된 모델의 열과 호환되는 열이 포함되어야 합니다.
