@@ -1,5 +1,6 @@
 ---
 title: 권한 부여 메서드 | Microsoft Docs
+description: Reporting Services에서 다음 권한 부여 메서드를 사용하여 보고서 서버의 작업, 역할 및 정책을 관리할 수 있습니다.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 45e9cf2c-facf-4801-9482-c855403f42a8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 119b795eacb217aff6b5a4aeca2fffa12519c752
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5a8c9ba25c3f9dfd03aa528b4d02f9e02e197546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63025945"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509834"
 ---
 # <a name="authorization-methods"></a>권한 부여 메서드
   다음 메서드를 사용하여 보고서 서버에서 태스크, 역할 및 정책을 관리할 수 있습니다.  

@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4ff8da4a1076d8ade4d54e5d44c51d3263480c1c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 7b1c32e3e569b8c29dd75df1fafb98bb7c0c979f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73983025"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79486584"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 문 - HEADERONLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -97,7 +97,7 @@ FROM <backup_device>
 |**BackupDescription**|**nvarchar(255)**|백업 세트 설명입니다.|  
 |**BackupType**|**smallint**|백업 유형:<br /><br /> **1** = 데이터베이스<br /><br /> **2** = 트랜잭션 로그<br /><br /> **4** = 파일<br /><br /> **5** = 차등 데이터베이스<br /><br /> **6** = 차등 파일<br /><br /> **7** = 부분<br /><br /> **8** = 차등 부분|  
 |**ExpirationDate**|**datetime**|백업 세트에 대한 만료 일자|  
-|**Compressed**|**BYTE(1)**|소프트웨어 기반 압축을 사용하여 백업 세트를 압축했는지 여부<br /><br /> **0** = 아니요<br /><br /> **1** = 예|  
+|**Compressed**|**BIT(1)**|소프트웨어 기반 압축을 사용하여 백업 세트를 압축했는지 여부<br /><br /> **0** = 아니요<br /><br /> **1** = 예|  
 |**위치**|**smallint**|볼륨에 있는 백업 세트의 위치(FILE = 옵션과 함께 사용)|  
 |**DeviceType**|**tinyint**|백업 작업에 사용된 디바이스 번호<br /><br /> 디스크:<br /><br /> **2** = 논리적<br /><br /> **102** = 물리적<br /><br /> 테이프<br /><br /> **5** = 논리적<br /><br /> **105** = 물리적<br /><br /> 가상 디바이스<br /><br /> **7** = 논리적<br /><br /> **107** = 물리적<br /><br /> 논리적 디바이스 이름과 디바이스 번호는 **sys.backup_devices**에 있습니다. 자세한 내용은 [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)을 참조하세요.|  
 |**UserName**|**nvarchar(128)**|백업 작업을 수행한 사용자 이름|  

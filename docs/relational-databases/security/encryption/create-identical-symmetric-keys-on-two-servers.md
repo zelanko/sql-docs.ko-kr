@@ -12,12 +12,12 @@ ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a64aac5fa64a7ace7c55f7fb3c7b70b8cf9e44c9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 77707d460262864cafa8884281c69fb957945f20
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74957471"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80243393"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>두 서버에서 동일한 대칭 키 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ SQL Server 2016에서는 암호화 작업에 SHA1 해시 알고리즘을 사용�
 - SQL Server 2017이 최소 누적 업데이트 2(CU2)로 업데이트되었는지 확인합니다.
   - 중요한 세부 정보는 [SQL Server 2017용 누적 업데이트 2(CU2)](https://support.microsoft.com/help/4052574)를 참조하세요.
 - CU2를 설치한 후 SQL Server 2017에서 추적 플래그 4631을 켭니다. `DBCC TRACEON(4631, -1);`
-  - 추적 플래그 4631은 SQL Sewrver 2017의 새로운 기능입니다. SQL Server 2017에서 마스터 키, 인증서 또는 대칭 키를 만들려면 먼저 추적 플래그 4631이 전역적으로 `ON`이어야 합니다. 이를 통해 만들어진 항목이 SQL Server 2016 및 그 이전 버전과 상호 운용할 수 있게 됩니다.
+  - 추적 플래그 4631은 SQL Server 2017의 새로운 기능입니다. SQL Server 2017에서 마스터 키, 인증서 또는 대칭 키를 만들려면 먼저 추적 플래그 4631이 전역적으로 `ON`이어야 합니다. 이를 통해 만들어진 항목이 SQL Server 2016 및 그 이전 버전과 상호 운용할 수 있게 됩니다.
 
 자세한 지침은 다음을 참조하세요.
 

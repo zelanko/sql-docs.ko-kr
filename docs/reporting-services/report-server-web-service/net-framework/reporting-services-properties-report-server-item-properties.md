@@ -1,5 +1,6 @@
 ---
 title: 보고서 서버 항목 속성 | Microsoft Docs
+description: 항목 속성은 보고서 서버 데이터베이스의 항목과 관련이 있습니다. 항목에는 보고서, 링크된 보고서, 폴더, 리소스, 모델 및 데이터 원본이 포함됩니다.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 645382a105edd65248d82c0f325d88c37857d0e2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c1cd71f267fb6e249116cda4ba9c54069e8ee570
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63128820"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509645"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Reporting Services 속성 - 보고서 서버 항목 속성
   항목 속성은 보고서 서버 데이터베이스의 항목에 대한 특정 속성입니다. 이러한 항목에는 보고서, 링크된 보고서, 폴더, 리소스, 모델 및 데이터 원본이 포함됩니다.  

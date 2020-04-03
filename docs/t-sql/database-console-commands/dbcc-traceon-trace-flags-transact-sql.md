@@ -1,7 +1,7 @@
 ---
 title: 추적 플래그(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/11/2020
+ms.date: 03/27/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e19d4af33285f68033dbcead3f7bc275b2e029cb
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 3296dad876dc0f3ce95a29dc1b9f21f38db7b0a5
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288637"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80402587"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 추적 플래그(Transact-SQL)
 
@@ -184,10 +184,11 @@ ms.locfileid: "79288637"
 |**9939**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 DML 작업의 대상이 아닌 한 메모리 최적화 테이블 또는 테이블 변수를 참조하는 DML 작업에서 메모리 최적화 테이블 및 테이블 변수의 병렬 계획 및 병렬 검색을 사용하도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/4013877)를 참조하세요.<br /><br />**참고:** 4199 추적 플래그를 명시적으로 사용할 수 있는 경우 9939 추적 플래그는 필요하지 않습니다.<br /><br />**범위**: 전역, 세션 또는 쿼리(QUERYTRACEON)|   
 |**10204**|columnstore 인덱스 재구성 중에 병합/재압축을 사용하지 않도록 설정합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 columnstore 인덱스가 다시 구성되면, 압축된 작은 행 그룹을 압축된 큰 행 그룹으로 자동으로 병합하고 삭제된 행 수가 많은 행 그룹을 다시 압축할 수 있는 새 기능이 있습니다.<br /><br />**참고:** 10204 추적 플래그는 메모리 최적화 테이블에서 만든 columnstore 인덱스에 적용되지 않습니다.<br /><br />**범위**: 전역 또는 세션|   
 |**10316**|[내부 메모리 최적화 준비 임시 테이블](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)의 기본 인덱스 옆에 추가 인덱스를 만들 수 있도록 합니다. 기본 인덱스에서 다루지 않는 항목이 포함된 특정 쿼리 패턴이 있는 경우 추가 인덱스를 추가하는 것이 좋습니다.<br /><br />**참고:** 메모리 최적화 테이블에 대한 시스템 버전 관리 임시 테이블은 높은 트랜잭션 처리량을 제공하도록 설계되었습니다. 추가 인덱스를 작성하면 현재 테이블의 행을 업데이트하거나 삭제하는 DML 작업에 대한 오버헤드가 발생할 수 있습니다. 추가 인덱스를 사용하면 임시 쿼리 성능과 추가 DML 오버헤드 간에 적절한 찾아야 합니다.<br /><br />**범위**: 전역 또는 세션|
-|**11023**|샘플 속도가 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 문의 일부로 명시적으로 지정되지 않은 모든 후속 통계 업데이트에 마지막 지속형 샘플 속도를 사용하지 않도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/4039284)를 참조하세요.<br /><br />**범위**: 전역 또는 세션|    
-|**11024**|모든 파티션의 수정 횟수가 로컬 [임계값](../../relational-databases/statistics/statistics.md#AutoUpdateStats)을 초과하는 경우 통계의 자동 업데이트를 트리거할 수 있도록 합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/4041811)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 이상의 빌드에 적용됩니다.<br /><br />**범위**: 전역 또는 세션| 
-|**11047**|`query wait (s)` 또는 Resource Governor `REQUEST_MEMORY_GRANT_TIMEOUT_SEC` 구성으로 설정된 기본 시간 제한을 Columnstore 인덱스 빌드 작업에 적용합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/4480641)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU5, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU14 이상 빌드에 적용됩니다.<br /><br />**범위**: 전역 또는 세션|  
-
+|**11023**|샘플 속도가 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 문의 일부로 명시적으로 지정되지 않은 모든 후속 통계 업데이트에 마지막 지속형 샘플 속도를 사용하지 않도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/4039284)를 참조하세요.<br /><br />**범위**: 전역만|    
+|**11024**|모든 파티션의 수정 횟수가 로컬 [임계값](../../relational-databases/statistics/statistics.md#AutoUpdateStats)을 초과하는 경우 통계의 자동 업데이트를 트리거할 수 있도록 합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/4041811)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 이상의 빌드에 적용됩니다.<br /><br />**범위**: 전역만| 
+|**11047**|`query wait (s)` 또는 Resource Governor `REQUEST_MEMORY_GRANT_TIMEOUT_SEC` 구성으로 설정된 기본 시간 제한을 columnstore 인덱스 빌드 작업에 적용합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/4480641)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU5, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU14 이상 빌드에 적용됩니다.<br /><br />**범위**: 전역만| 
+|**11064**|`SELECT` 문과 `INSERT` 문 간의 메모리 분산을 최적화하여 columnstore 인덱스로 데이터를 로드하는 작업의 확장성을 개선합니다. columnstore 인덱스로의 데이터 로드에 대한 자세한 내용은 [Columnstore 인덱스 - 데이터 로드 지침](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)을 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상의 빌드에 적용됩니다.<br /><br />**범위**: 전역만| 
+|**11068**|columnstore 인덱스 삽입 작업에 구성된 최대 병렬 처리 수준(MAXDOP) 값을 사용합니다. 병렬 처리 수준 재정의에 대한 자세한 내용은 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md#overriding-degrees-of-parallelism)를 참조하세요.<br /><br />**중요:** 이 추적 플래그는 추적 플래그 11064도 사용하도록 설정된 경우에만 적용됩니다.<br /><br />**중요:** [columnstore 세그먼트](../../relational-databases/indexes/columnstore-indexes-overview.md#column-segment) 품질을 유지하는 것보다 더 빠른 데이터 로드 속도가 선호되는 경우 이 추적 플래그를 사용합니다. 예를 들어, columnstore에 1,048,577개의 행을 로드할 때 이 추적 플래그를 사용할 경우, 삽입 작업이 병렬 모드로 실행된다면 압축된 행 그룹이 2개 이상 생성될 수 있습니다. 이 추적 플래그를 사용하지 않을 경우, 삽입 작업의 결과 압축된 행 그룹이 1개 생성됩니다.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상의 빌드에 적용됩니다.<br /><br />**범위**: 전역만| 
   
 ## <a name="examples"></a>예  
  다음 예제에서는 DBCC TRACEON을 사용하여 서버 수준의 모든 세션에 대해 3205 추적 플래그를 설정합니다.  

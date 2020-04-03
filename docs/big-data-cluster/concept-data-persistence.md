@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 34599160e206d89eaee04074ddbaee2bac7c5f89
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.openlocfilehash: a138a8451211436d55da537b9d8a45d26c534e48
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "77173565"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215749"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 사용한 데이터 지속성
 
@@ -33,6 +33,8 @@ SQL Server 빅 데이터 클러스터는 [스토리지 클래스](https://kubern
 - 구성에서 제공하려는 스토리지 클래스의 스토리지 프로비저닝 프로그램이 동적 프로비저닝을 지원하지 않는 경우 영구적 볼륨을 미리 만들어야 합니다. 예를 들어 `local-storage` 프로비저닝 프로그램은 동적 프로비저닝을 지원하지 않습니다. `kubeadm`을 사용하여 배포된 Kubernetes 클러스터에서 진행하는 방법에 대한 지침은 이 [샘플 스크립트](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu)를 참조하세요.
 
 - 빅 데이터 클러스터를 배포할 때 클러스터의 모든 구성 요소에서 동일한 스토리지 클래스를 사용하도록 구성할 수 있습니다. 하지만 프로덕션 배포의 모범 사례에 따라, 다양한 구성 요소에는 크기 또는 처리량의 측면에서 다양한 워크로드를 수용할 수 있는 다양한 스토리지 구성이 필요합니다. 각 SQL Server 마스터 인스턴스, 데이터 세트 및 스토리지 풀의 컨트롤러에 지정된 기본 스토리지 구성을 덮어쓸 수 있습니다. 이 문서에서는 이 작업을 수행하는 방법을 보여 줍니다.
+
+- 스토리지 풀 크기 조정 요구 사항을 계산할 때는 HDFS가 어떤 복제 계수로 구성되었는지를 고려해야 합니다.  복제 계수는 클러스터 배포 구성 파일에서 배포 시점에 구성할 수 있습니다. 개발-테스트 프로필(`aks-dev-test` 또는 `kubeadm-dev-test`)의 기본값은 2이고, 프로덕션 배포용으로 권장되는 프로필(`kubeadm-prod`)의 기본값은 3입니다. 가장 좋은 방법은 빅 데이터 클러스터의 프로덕션 배포를 3 이상의 HDFS용 복제 계수로 구성하는 것입니다. 복제 계수의 값은 스토리지 풀에 있는 인스턴스의 개수에 영향을 줍니다. 따라서 적어도 복제 계수의 값보다 크거나 같은 스토리지 풀 인스턴스를 배포해야 합니다. 이에 더해, HDFS에서 복제 계수 값의 배수만큼 복제되는 데이터를 고려하여 스토리지의 크기를 정해야 합니다. HDFS에서의 데이터 복제에 대한 자세한 내용은 [여기](https://hadoop.apache.org/docs/r3.2.1/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html#Data_Replication)에서 확인할 수 있습니다. 
 
 - SQL Server 2019 CU1 릴리스부터는 배포 후에 스토리지 구성 설정을 수정할 수 없습니다. 이 제약 조건 때문에 각 인스턴스에 대한 영구적 볼륨 클레임의 크기를 수정할 수도 없고 배포 후 크기 조정 작업도 수행할 수 없습니다. 따라서 빅 데이터 클러스터를 배포하기 전에 스토리지 레이아웃을 계획하는 것이 중요합니다.
 
@@ -101,7 +103,7 @@ azdata bdc config init --source aks-dev-test --target custom
 이 프로세스에서 두 개의 파일, 즉 `bdc.json` 및 `control.json`이 만들어집니다. 이들 파일은 수동으로 편집하거나 `azdata bdc config` 명령을 사용하여 사용자 지정할 수 있습니다. jsonpath 및 jsonpatch 라이브러리의 조합을 사용하여 구성 파일을 편집하는 방법을 제공할 수 있습니다.
 
 
-### <a id="config-samples"></a> 스토리지 클래스 이름 및/또는 클레임 크기 구성
+### <a name="configure-storage-class-name-andor-claims-size"></a><a id="config-samples"></a> 스토리지 클래스 이름 및/또는 클레임 크기 구성
 
 기본적으로 클러스터에 프로비저닝된 각 Pod에 대해 프로비저닝되는 영구적 볼륨 클레임 크기는 10GB입니다. 클러스터를 배포하기 전에 사용자 지정 구성 파일에서 실행 중인 워크로드에 맞게 이 값을 업데이트할 수 있습니다.
 

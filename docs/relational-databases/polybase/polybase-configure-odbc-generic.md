@@ -1,5 +1,6 @@
 ---
 title: '외부 데이터 액세스: ODBC 제네릭 형식 - PolyBase'
+description: SQL Server의 PolyBase를 사용하면 ODBC 커넥터를 통해 호환 데이터 원본에 연결할 수 있습니다. ODBC 드라이버를 설치하고 외부 테이블을 만듭니다.
 ms.date: 02/19/2020
 ms.custom: seo-lt-2019
 ms.prod: sql
@@ -9,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: ddee333a437ca7250252fb3938ee248bb28269f3
-ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
+ms.openlocfilehash: de3d0489acfca3363824b45ce87ba7ac4b63bf7a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77507587"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215841"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>SQL Server의 외부 데이터에 액세스하도록 PolyBase 구성
 

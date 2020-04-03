@@ -1,5 +1,6 @@
 ---
 title: PolyBase의 질문과 대답 | Microsoft Docs
+description: PolyBase와 연결된 서버를 비교하고, 빅 데이터 클러스터에 있는 PolyBase와 독립 실행형 인스턴스에 있는 PolyBase를 비교합니다. PolyBase 2019의 새로운 기능을 알아봅니다.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.openlocfilehash: 9d4cda6dd0fdade80521a801799e5ee53a80c140
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 0df90e30d88941d431da486fc7790b072a3eba77
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71710549"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216063"
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
 

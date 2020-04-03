@@ -1,5 +1,6 @@
 ---
 title: 보고서 실행 속성 구성 - Reporting Services | Microsoft Docs
+description: 보고서가 요청될 때마다 동일한 데이터를 검색하는 오버헤드를 방지하기 위해 보고서 처리 옵션을 설정하여 보고서 데이터 검색 시기를 지정하는 방법을 알아봅니다.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6dfb24b6314529b19fb7bb5edb81534f30dc018a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5f30c3e123c80b9a16fd020e3126a3c40f366834
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67492745"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510174"
 ---
 # <a name="configure-execution-properties-for-a-report"></a>보고서 실행 속성 구성
   보고서에 대한 데이터를 검색할 시기를 지정하도록 보고서 처리 옵션을 설정할 수 있습니다. 외부 데이터 원본이 특정 시간에 새로 고쳐지고(예: 매일 또는 매주 새로 고쳐지는 데이터 웨어하우스) 보고서가 요청될 때마다 같은 데이터를 검색하는 오버헤드가 발생하지 않도록 하려는 경우에 보고서에 대한 데이터 처리를 예약하는 것이 유용합니다. 외부 데이터베이스 서버의 처리 로드를 제어하거나 동일한 데이터 집합을 사용해야 하는 여러 사용자에게 일관된 결과를 제공하려는 경우에도 데이터 처리를 예약하는 것이 유용합니다. 일시적인 데이터로 요청 시 실행 보고서를 사용하면 매 시간마다 다른 결과를 생성할 수 있습니다. 하지만 보고서 스냅샷을 사용하면 같은 시점의 데이터가 들어 있는 다른 보고서나 분석 도구와 비교하여 유효한 결과를 생성할 수 있습니다.  

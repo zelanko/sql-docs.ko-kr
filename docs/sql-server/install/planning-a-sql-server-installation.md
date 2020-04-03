@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 94cdaba9319ed683dafcf3e8e29903b1d1957100
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 56adbb10af74ef8e0e71012378b4aa13a2d818d2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68019832"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79428184"
 ---
 # <a name="planning-a-sql-server-installation"></a>SQL Server 설치 계획
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,8 +40,7 @@ ms.locfileid: "68019832"
  [SQL Server 설치의 새로운 기능](../../sql-server/install/what-s-new-in-sql-server-installation.md)  
  이 문서에서는 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 새로운 기능 및 향상된 기능에 대해 자세히 설명합니다.  
   
- [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
- 이 문서에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스를 설치 및 실행하기 위한 최소 하드웨어 및 소프트웨어 요구 사항을 나열합니다.  
+ [SQL Server 2016 및 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), [SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) 또는 [SQL Server on Linux](../../linux/sql-server-linux-setup.md)를 설치하기 위한 하드웨어 및 소프트웨어 요구 사항 이 문서에는 SQL Server 인스턴스를 설치 및 실행하기 위한 최소 하드웨어 및 소프트웨어 요구 사항이 나와 있습니다. .  
   
  [SQL Server 설치에 대한 보안 고려 사항](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  이 문서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하기 전과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치한 후에 고려해야 하는 보안 권장 사항에 대해 설명합니다.  

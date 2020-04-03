@@ -1,5 +1,6 @@
 ---
 title: 특정 쿼리 문자열 매개 변수가 있는 모바일 보고서 열기 | Microsoft Docs
+description: 매개 변수 및 데이터 원본을 포함하는 Reporting Services 모바일 보고서의 경우, 보고서 URL에 쿼리 매개 변수를 사용하여 지정된 값으로 보고서를 열 수 있습니다.
 ms.date: 10/25/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4eeb3204-e207-4ac0-aff3-bfc4926e5754
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7204574d10b674c7cea4e08fb570c3550fe33e03
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f953a8ee9371f3e8919d53f017f27a7e863a52ca
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62500011"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448397"
 ---
 # <a name="open-a-mobile-report-with-specific-query-string-parameters--reporting-services"></a>특정 쿼리 문자열 매개 변수가 있는 모바일 보고서 열기 | Reporting Services
 매개 변수가 포함된 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 모바일 보고서와 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 데이터 원본이 있는 경우 매개 변수가 지정한 값으로 자동으로 열리도록 보고서 URL에 쿼리 문자열 매개 변수를 포함할 수 있습니다. 

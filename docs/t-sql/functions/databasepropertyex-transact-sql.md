@@ -20,12 +20,12 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91301fcfb0376e1bd256ac60c59c1c0b65dfbbe4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9384317f0e58e77a6bb51fe066458dcf956882ed
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75256104"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448302"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +85,7 @@ DATABASEPROPERTYEX ( database , property )
 |IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 정전이나 기타 시스템 중단으로 인해 완료되지 않은 I/O 작업을 검색합니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**| 
 |IsVerifiedClone|데이터베이스는 DBCC CLONEDATABASE의 WITH VERIFY_CLONEDB 옵션을 사용하여 만든 사용자 데이터베이스의 스키마 및 통계 전용 복사본입니다. 자세한 내용은 이 [Microsoft 지원 아티클](https://support.microsoft.com/help/3177838)을 참조하세요.|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2부터 시작<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**| 
 |IsXTPSupported|데이터베이스가 In-Memory OLTP, 즉, 메모리 최적화 테이블과 고유하게 컴파일된 모듈을 만들고 사용하는 것을 지원하는지 여부를 나타냅니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에만 해당 :<br /><br /> IsXTPSupported는 In-Memory OLTP 개체를 만드는 데 필요한 MEMORY_OPTIMIZED_DATA 파일 그룹의 존재 여부와 관계가 없습니다.|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않음<br /><br /> 기본 데이터 형식: **int**|  
-|LastGoodCheckDbTime|지정된 데이터베이스에서 성공적으로 실행된 마지막 DBCC CHECKDB의 시간 및 날짜입니다.<sup>1</sup> DBCC CHECKDB가 데이터베이스에서 실행되지 않은 경우 1900-01-01 00:00:00.000이 반환됩니다.|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2부터 시작<br /><br /> datetime 값<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **datetime**| 
+|LastGoodCheckDbTime|지정된 데이터베이스에서 성공적으로 실행된 마지막 DBCC CHECKDB의 시간 및 날짜입니다.<sup>1</sup> DBCC CHECKDB가 데이터베이스에서 실행되지 않은 경우 1900-01-01 00:00:00.000이 반환됩니다.|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2부터</br>[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] CU9부터</br>[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 이상</br>Azure SQL Database.<br/><br/>datetime 값<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **datetime**| 
 |LCID|데이터 정렬의 Windows LCID(로캘 ID)입니다.|LCID 값(10진수 형식)입니다.<br /><br /> 기본 데이터 형식: **int**|  
 |MaxSizeInBytes|최대 데이터베이스 크기(바이트)입니다.|**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL: 데이터베이스가 시작되지 않음<br /><br /> 기본 데이터 형식: **bigint**|  
 |복구|데이터베이스 복구 모델|FULL: 전체 복구 모델<br /><br /> BULK_LOGGED: 대량 로그 모델<br /><br /> SIMPLE: 단순 복구 모델<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  

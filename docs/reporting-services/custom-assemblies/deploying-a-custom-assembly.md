@@ -1,5 +1,6 @@
 ---
 title: 사용자 지정 어셈블리 배포 | Microsoft Docs
+description: SQL Server Reporting Services에서 사용자 지정 어셈블리를 배포하는 방법을 알아봅니다. 실행 권한 이상의 사용자 지정 어셈블리 권한을 부여하는 방법도 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c6674cd8-0de7-4a5a-9e7c-12ffa49f6fd2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc0b052bd2d932a54a1a857c7aebfe770395c556
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1e89eb61a545cf16fccfae10dfdc735e4845cb47
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194934"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217082"
 ---
 # <a name="deploying-a-custom-assembly"></a>사용자 지정 어셈블리 배포
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 사용자 지정 어셈블리를 배포하려면 어셈블리를 보고서 디자이너 및 보고서 서버의 애플리케이션 폴더에 둡니다. 기본적으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 사용자 지정 어셈블리에는 **Execution** 권한이 부여됩니다. 사용자 지정 어셈블리에 실행 권한 이상의 권한을 부여하려면 보고서 서버에 대한 rssrvpolicy.config 구성 파일 및 보고서 디자이너 미리 보기 창에 대한 rspreviewpolicy.config 구성 파일을 편집해야 합니다. 또는 GAC(전역 어셈블리 캐시)에 사용자 지정 어셈블리를 설치할 수도 있습니다.  

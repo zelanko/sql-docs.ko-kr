@@ -1,5 +1,6 @@
 ---
 title: '방법: 사용자 지정 보고서 항목 배포 | Microsoft Docs'
+description: 사용자 지정 보고서 항목을 배포하는 방법을 알아봅니다. 보고서 서버 구성 파일을 수정하고, 구성 요소 어셈블리를 적절한 폴더로 복사합니다.
 ms.date: 03/18/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b28d1b2f29dca3ab23ba658c8718173fe5d09779
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 31347efeda4805d4faffc993c164441cba1697c4
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194129"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216925"
 ---
 # <a name="how-to-deploy-a-custom-report-item"></a>방법: 사용자 지정 보고서 항목 배포
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 사용자 지정 보고서 항목을 배포하려면 보고서 서버 구성 파일을 수정하고 디자인 타임 및 런타임 구성 요소 어셈블리를 보고서 디자이너와 보고서 서버 양쪽의 적절한 애플리케이션 폴더로 복사해야 합니다.  

@@ -1,5 +1,6 @@
 ---
 title: SQL Server 확장 이벤트 엔진
+description: SQL Server 확장 이벤트 엔진은 이벤트 정의 및 이벤트 데이터 처리를 지원하고, 확장 이벤트를 관리하며, 세션 목록을 유지 관리합니다.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,12 +13,12 @@ ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eeaa1cbae803e3f4eedef3231f9ab9bbbe31deba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d551ef60869dd7a645cf507a5126c6a0ab786325
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75242959"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487641"
 ---
 # <a name="sql-server-extended-events-engine"></a>SQL Server 확장 이벤트 엔진
 

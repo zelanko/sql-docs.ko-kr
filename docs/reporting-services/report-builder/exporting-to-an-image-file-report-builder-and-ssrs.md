@@ -1,5 +1,6 @@
 ---
 title: 이미지 파일로 내보내기(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기의 이미지 렌더링 확장 프로그램은 페이지를 매긴 보고서를 비트맵 또는 메타 파일로 렌더링합니다. 기본값은 여러 페이지에 표시되는 TIFF 파일입니다.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 020d8ea2-de07-4212-a2bb-2ed0df2c8db8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2393769b4d6ca1676833b4e208e7f09dfcd444df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d5a3bd0cd2dfdba8b34ff6dc97f56fb3eaf53306
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77081383"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342847"
 ---
 # <a name="exporting-to-an-image-file-report-builder-and-ssrs"></a>이미지 파일로 내보내기(보고서 작성기 및 SSRS)
   이미지 렌더링 확장 프로그램은 페이지가 매겨진 보고서를 비트맵이나 메타 파일로 렌더링합니다. 기본적으로 이미지 렌더링 확장 프로그램은 보고서를 여러 페이지로 볼 수 있도록 TIFF 파일로 만듭니다. 클라이언트가 이미지를 수신하면 이미지 뷰어에서 확인하거나 인쇄할 수 있습니다. 이 항목에서는 이미지 렌더러 관련 정보를 제공하고 렌더링 규칙의 예외를 설명합니다.  
@@ -23,7 +24,7 @@ ms.locfileid: "77081383"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="SupportedImageFormats"></a> 지원되는 이미지 형식  
+##  <a name="supported-image-formats"></a><a name="SupportedImageFormats"></a> 지원되는 이미지 형식  
  다음 표에는 각 이미지 렌더러 형식에 대한 파일 확장명과 MIMEType이 나와 있습니다.  
   
 |**형식**|**확장명**|**MIMEType**|  
@@ -37,11 +38,11 @@ ms.locfileid: "77081383"
 |EMFPlus|EMF|image/emf|  
   
   
-##  <a name="RenderingMultiplePages"></a> 여러 페이지 렌더링  
+##  <a name="rendering-multiple-pages"></a><a name="RenderingMultiplePages"></a> 여러 페이지 렌더링  
  TIFF는 파일 하나에 여러 페이지 문서를 포함할 수 있는 유일한 형식입니다. JPG나 PNG 같은 다른 형식은 한 번에 한 페이지만 출력하며 매번 각 페이지에 대한 렌더링 확장 프로그램을 호출해야 합니다.  
   
   
-##  <a name="Interactivity"></a> 상호 작용  
+##  <a name="interactivity"></a><a name="Interactivity"></a> 상호 작용  
  상호 작용은 이 렌더러를 통해 생성되는 어떤 이미지 형식에서도 지원되지 않습니다. 다음 대화형 요소는 렌더링되지 않습니다.  
   
 -   하이퍼링크  
@@ -59,7 +60,7 @@ ms.locfileid: "77081383"
 -   책갈피  
   
   
-##  <a name="DeviceInfo"></a> 디바이스 정보 설정  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> 디바이스 정보 설정  
  디바이스 정보 설정을 변경하여 이 렌더러의 기본 설정을 일부 변경할 수 있습니다. 자세한 내용은 [Image Device Information Settings](../../reporting-services/image-device-information-settings.md)을(를) 참조하세요.  
   
   

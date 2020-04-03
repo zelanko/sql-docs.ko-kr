@@ -1,5 +1,6 @@
 ---
 title: 렌더링 및 실행 메서드 | Microsoft Docs
+description: Reporting Services에서 다음 메서드를 사용하여 항목 실행 및 캐싱과 보고서 렌더링을 관리할 수 있습니다.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 12626aad-f0be-4653-87d0-60eb3a3fff78
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 244541348f583ab5384a0ebfe7321509a421fe1b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9ba766cf528de14e93ba9af1943a29c045b34563
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284536"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509794"
 ---
 # <a name="rendering-and-execution-methods"></a>렌더링 및 실행 메서드
   다음 메서드를 사용하여 항목 실행 및 캐싱과 보고서 렌더링을 관리할 수 있습니다.  

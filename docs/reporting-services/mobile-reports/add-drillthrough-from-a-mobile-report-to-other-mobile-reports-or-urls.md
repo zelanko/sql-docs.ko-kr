@@ -1,5 +1,6 @@
 ---
 title: 모바일 보고서에서 다른 모바일 보고서나 URL로 드릴스루 추가 | Microsoft Docs
+description: Reporting Services 모바일 보고서의 계기, 차트 또는 데이터 표에서 다른 모바일 보고서 또는 사용자 지정 URL로의 드릴스루를 추가할 수 있습니다.
 ms.date: 09/20/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b702c79ad5c80254595ef5c4ff440919a8482e1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b42c68daa49145ba4703c8cd141dc433aa7d64df
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63280714"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448324"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>모바일 보고서에서 다른 모바일 보고서나 URL로 드릴스루 추가
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 모바일 보고서의 계기, 차트 또는 데이터 표에서 다른 모바일 보고서 또는 사용자 지정 URL로의 드릴스루를 추가할 수 있습니다. 

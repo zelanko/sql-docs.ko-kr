@@ -1,5 +1,6 @@
 ---
 title: 강력한 이름의 사용자 지정 어셈블리 사용 | Microsoft Docs
+description: 강력한 이름의 사용자 지정 어셈블리를 사용하여 CLR(공용 언어 런타임)에 대해 어셈블리를 고유하게 식별하고 이진 무결성을 보장하는 방법을 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ca9f19d7-6e86-46f2-b9ad-9bf807eaa52e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 31479ae9b460b6a660ec865e68e46afd912f49b6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bdee8daafe68742dce4c91f1dffb61f849445998
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194082"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216998"
 ---
 # <a name="using-strong-named-custom-assemblies"></a>강력한 이름의 사용자 지정 어셈블리 사용
   강력한 이름은 어셈블리를 식별하며 어셈블리의 텍스트 이름, 네 부분으로 구성된 버전 번호, 문화권 정보(제공된 경우), 공개 키, 어셈블리의 매니페스트에 저장된 디지털 서명 등을 포함합니다. 강력한 이름은 CLR(공용 언어 런타임)에 대해 어셈블리를 고유하게 식별하고 이진 무결성을 보장합니다.  

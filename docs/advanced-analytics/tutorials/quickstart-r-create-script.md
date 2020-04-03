@@ -1,6 +1,6 @@
 ---
-title: 'Quickstart: Run R scripts'
-description: Run a set of simple R scripts using SQL Server Machine Learning Services. Learn how to use the stored procedure sp_execute_external_script to execute the script in a SQL Server instance.
+title: '빠른 시작: R 스크립트 실행'
+description: SQL Server Machine Learning Services를 사용하여 간단한 R 스크립트 세트를 실행합니다. 저장 프로시저 sp_execute_external_script를 사용하여 SQL Server 인터페이스에서 스크립트를 실행하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/27/2020
@@ -11,16 +11,16 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 495bb56cf76391c8baa1734665d5064b586d4be8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76831788"
 ---
-# <a name="quickstart-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>Quickstart: Run simple R scripts with SQL Server Machine Learning Services
+# <a name="quickstart-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services로 간단한 R 스크립트 실행
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In this quickstart, you'll run a set of simple R scripts using [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md). You'll learn how to use the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute the script in a SQL Server instance.
+이 빠른 시작에서는 [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)를 사용하여 간단한 R 스크립트 세트를 실행합니다. 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 사용하여 SQL Server 인터페이스에서 스크립트를 실행하는 방법을 알아봅니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -104,7 +104,7 @@ GO
 
 기본적으로 `sp_execute_external_script`는 일반적으로 사용자가 유효한 SQL 쿼리의 형식으로 제공하는 단일 데이터 세트를 입력으로 사용합니다. 그런 후 단일 R 데이터 프레임을 출력으로 반환합니다.
 
-For now, let's use the default input and output variables of `sp_execute_external_script`: **InputDataSet** and **OutputDataSet**.
+지금은 `sp_execute_external_script`의 기본 입력 및 출력을 사용합니다. **InputDataSet** 및 **OutputDataSet**.
 
 1. 테스트 데이터의 작은 테이블을 만듭니다.
 

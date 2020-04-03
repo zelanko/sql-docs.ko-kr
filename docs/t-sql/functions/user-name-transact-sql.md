@@ -24,12 +24,12 @@ ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2f8a3f4dbdbaa9cbd2cf1c99a86ad6f3573ab11
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 21c085bd942b368259444698cabf5dfa44d0fbe1
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73844343"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79526788"
 ---
 # <a name="user_name-transact-sql"></a>USER_NAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,6 +53,9 @@ USER_NAME ( [ id ] )
   
 ## <a name="remarks"></a>설명  
  *id*를 생략하면 현재 컨텍스트의 현재 사용자로 가정하여 지정됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다. EXECUTE AS 문 다음에 *id*를 지정하지 않고 USER_NAME을 호출하면 USER_NAME은 가장된 사용자의 이름을 반환합니다. Windows 보안 주체가 그룹 멤버 자격으로 데이터베이스에 액세스하는 경우 USER_NAME은 그룹 이름 대신 Windows 보안 주체의 이름을 반환합니다.  
+ 
+> [!NOTE]
+> USER_NAME 함수는 Azure SQL Database에서 지원되지만, Azure SQL Database에서 USER_NAME과 함께 *Execute as*를 사용할 수는 없습니다. 
   
 ## <a name="examples"></a>예  
   
@@ -123,7 +126,7 @@ Zelig
 DBO
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-user_name-without-an-id"></a>E. ID 없이 USER_NAME 사용  
  다음 예에서는 ID를 지정하지 않고 현재 사용자의 이름을 찾습니다.  

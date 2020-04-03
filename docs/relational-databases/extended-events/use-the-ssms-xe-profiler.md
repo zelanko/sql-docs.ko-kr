@@ -1,5 +1,6 @@
 ---
 title: SSMS XEvent Profiler 사용
+description: XEvent Profiler는 확장 이벤트의 라이브 뷰어를 표시합니다. 이 프로파일러를 사용해야 하는 이유, 주요 기능 및 확장 이벤트 보기를 시작하는 방법을 알아봅니다.
 ms.date: 10/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: yualan
 ms.author: alayu
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b500713053e8ea65722a10e2bf93ec566d9fbdd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: fe9f63f1ae9b007da18f1b81ed23cd1c49bbfcbd
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75251403"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487551"
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>SSMS XEvent Profiler 사용
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 XEvent Profiler는 확장 이벤트의 라이브 뷰어 창이 표시되는 SSMS(SQL Server Management Studio) 기능입니다. 이 개요에서는 이 프로파일러를 사용하는 이유, 주요 기능 및 확장 이벤트를 보기 시작하기 위한 지침을 설명합니다.
 
 ## <a name="why-would-i-use-the-xevent-profiler"></a>XEvent Profiler를 왜 사용해야 합니까?
@@ -33,7 +34,7 @@ SQL Profiler와 달리, XEvent Profiler는 SSMS에 직접 통합되고 SQL 엔�
 ## <a name="prerequisites"></a>사전 요구 사항
 이 기능은 SSMS(SQL Server Management Studio) v17.3 이상에서만 사용할 수 있습니다. 최신 버전을 사용하고 있는지 확인하세요. 최신 버전은 [여기](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)에서 찾을 수 있습니다.
 
-## <a id="getting-started"></a>시작
+## <a name="getting-started"></a><a id="getting-started"></a>시작
 XEvent Profiler에 액세스하려면 다음 단계를 수행합니다.
 
 1. **SQL Server Management Studio**를 엽니다.

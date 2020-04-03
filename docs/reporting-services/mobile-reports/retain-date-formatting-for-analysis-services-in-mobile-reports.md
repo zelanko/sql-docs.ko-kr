@@ -1,5 +1,6 @@
 ---
 title: 모바일 보고서에서 Analysis Services에 대한 날짜 형식 지정 유지 | Reporting Services | Microsoft Docs
+description: 모바일 보고서 게시자에서 보고서 작성기의 공유 데이터 세트에 측정값을 추가하여 Analysis Services 데이터 원본의 날짜 데이터 형식을 유지합니다.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e9a9a199-40e3-4381-b250-1b99fb83aa62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4e12b16ecf8df3452d327152638b794c58e2ec67
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 17294f4e7f26b3402655e0033cddedeb7bc69a3c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62503026"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448451"
 ---
 # <a name="retain-date-formatting-for-analysis-services-in-mobile-reports"></a>모바일 보고서에서 Analysis Services에 대한 날짜 형식 지정 유지
 보고서 작성기의 공유 데이터 세트에 측정값을 추가하므로 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 데이터 원본의 날짜가 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)]의 데이터 형식을 유지합니다.

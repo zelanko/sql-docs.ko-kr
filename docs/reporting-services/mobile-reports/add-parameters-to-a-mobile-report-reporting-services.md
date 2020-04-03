@@ -1,5 +1,6 @@
 ---
 title: 모바일 보고서에 매개 변수 추가 | Reporting Services | Microsoft Docs
+description: Reporting Services 모바일 보고서는 매개 변수를 포함할 수 있으므로 보고서 독자가 보고서를 필터링할 수 있습니다. 해당 보고서는 드릴스루의 대상으로 사용할 수도 있습니다.
 ms.date: 07/30/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 113cb057-deec-40eb-abc8-f35d3900eaa6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 348a8c1fa8ccdb4ade5b2ee3d39d6ecacf6e5a03
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 41895890a5528a1ddac90a4c9f9eea05d80fac93
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63317099"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448299"
 ---
 # <a name="add-parameters-to-a-mobile-report--reporting-services"></a>모바일 보고서에 매개 변수 추가 | Reporting Services
 작성자와 보고서를 읽는 사람이 보고서를 필터링할 수 있도록 매개 변수가 있는 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 모바일 보고서를 작성할 수 있습니다. 매개 변수가 있는 보고서는 [원본 보고서에서 드릴스루](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)의 대상이 될 수도 있습니다. 

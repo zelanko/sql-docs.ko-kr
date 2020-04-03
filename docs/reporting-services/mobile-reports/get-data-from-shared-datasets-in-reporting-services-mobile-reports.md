@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 모바일 보고서의 공유 데이터 세트에서 데이터 가져오기 | Microsoft Docs
+description: SQL Server 모바일 보고서 게시자는 Reporting Services 웹 포털에서 구성된 공유 데이터 원본을 사용하여 거의 모든 원본의 데이터에 액세스할 수 있습니다.
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cac1a32b49fde5b41c0a8ef21706d873ce037cd3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b4cc5e1538d1575e05e1eecd3959c98404cdbf5d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63061151"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448240"
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Reporting Services 모바일 보고서에서 공유 데이터 세트의 데이터 가져오기
 SQL Server 모바일 보고서 게시자는 [Excel 파일의 데이터 로드](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)할 수 있을 뿐 아니라 거의 모든 원본의 데이터에 액세스할 수 있습니다. 데이터에 액세스하려면 Reporting Services 웹 포털에 구성되어 있는 공유 데이터 원본이 필요합니다. [공유 데이터 원본 만들기](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 및 [공유 데이터 세트 만들기](../../reporting-services/report-data/manage-shared-datasets.md)에 대한 자세한 내용을 확인해 보세요.  

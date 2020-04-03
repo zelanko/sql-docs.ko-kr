@@ -1,5 +1,6 @@
 ---
-title: 지원되는 버전 및 에디션 업그레이드 | Microsoft Docs
+title: 지원되는 버전 업그레이드(SQL Server 2016)
+description: SQL Server 2016에 대해 지원되는 버전 업그레이드입니다.
 ms.custom: ''
 ms.date: 06/27/2016
 ms.prod: sql
@@ -15,14 +16,14 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 99b6522316928fcd7397d27c1a5c85d927a8e0b9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 70486130ebdd5b8fd0f8481f3c94558036b4dbac
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67934867"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434150"
 ---
-# <a name="supported-version-and-edition-upgrades"></a>지원되는 버전 및 에디션 업그레이드
+# <a name="supported-version--edition-upgrades-sql-server-2016"></a>지원되는 버전 업그레이드(SQL Server 2016)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -54,7 +55,7 @@ ms.locfileid: "67934867"
 
 -   RC1 또는 SQL Server 2016 이전 버전을 RC3 이상 버전으로 업그레이드하는 경우, 업그레이드하기 전에 PolyBase를 제거한 다음 업그레이드한 후에 다시 설치해야 합니다.
   
-## <a name="upgrades-from-earlier-versions-to-includesssql15-mdincludessssql15-mdmd"></a>이전 버전에서 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]로 업그레이드  
+## <a name="upgrades-from-earlier-versions-to-sssql15-md"></a>이전 버전에서 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]로 업그레이드  
  
 SQL Server 2016은 다음 버전의 SQL Server에서 업그레이드할 수 있습니다.
  
@@ -104,7 +105,7 @@ SQL Server 2016은 다음 버전의 SQL Server에서 업그레이드할 수 있�
 
  \* Microsoft는 특별히 TAP(기술 채택 프로그램)에 참여하는 고객들을 위해 릴리스 후보 소프트웨어에서의 업그레이드를 지원합니다. 
    
-###  <a name="SupportFor2005"></a> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 지원  
+###  <a name="sssql15-md-support-for-ssversion2005"></a><a name="SupportFor2005"></a> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]의 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 지원  
 이 섹션에서는 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 에 대한 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]지원에 대해 설명합니다. [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]에서는 다음을 수행할 수 있습니다.  
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스(mdf/ldf 파일)를 데이터베이스 엔진의 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 인스턴스에 연결합니다.  
@@ -138,7 +139,7 @@ SQL Server 2016은 다음 버전의 SQL Server에서 업그레이드할 수 있�
   
 -   실행 및 업그레이드와 같은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 타사 사용자 지정 Integration Services 구성 요소에 대한 지원  
   
-## <a name="includesssql15-mdincludessssql15-mdmd-edition-upgrade"></a>[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Edition Upgrade  
+## <a name="sssql15-md-edition-upgrade"></a>[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Edition Upgrade  
 다음 표에는 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]에서 지원되는 버전 업그레이드 시나리오가 나열되어 있습니다.  
   
 버전 업그레이드를 수행하는 방법에 대한 단계별 지침은 [다른 SQL Server 2016 버전으로 업그레이드&#40;설치 프로그램&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)를 참조하세요.  
@@ -146,7 +147,7 @@ SQL Server 2016은 다음 버전의 SQL Server에서 업그레이드할 수 있�
 |업그레이드할 버전|업그레이드 버전|  
 |------------------|----------------|  
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise(Server+CAL 및 코어)**|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise |  
-|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation Enterprise**|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise(Server+CAL 또는 코어 라이선스) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> Evaluation(무료 버전)에서 유료 버전으로 업그레이드할 경우 독립 실행형 설치는 지원되지만 클러스터형 설치는 지원되지 않습니다.|  
+|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation Enterprise**|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise(Server+CAL 또는 코어 라이선스) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> Evaluation(무료 버전)에서 유료 버전으로 업그레이드할 경우 독립 실행형 설치는 지원되지만 클러스터형 설치는 지원되지 않습니다. 가용성 그룹에 참여하는 Windows 장애 조치(failover) 클러스터에 설치된 독립 실행형 인스턴스에는 이 제한이 적용되지 않습니다.|  
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard**|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise(Server+CAL 또는 코어 라이선스)|  
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer**|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise(Server+CAL 또는 코어 라이선스) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise(Server+CAL 또는 코어 라이선스) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  

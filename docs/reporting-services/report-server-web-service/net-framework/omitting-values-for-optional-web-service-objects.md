@@ -1,5 +1,6 @@
 ---
 title: 선택적 웹 서비스 개체에 대한 값 생략 | Microsoft Docs
+description: 보고서 서버 웹 서비스 복합 형식의 일부 속성에서 지원하는 Specified 속성을 사용하면 일부 쓰기 가능 속성의 값을 생략할 수 있습니다.
 ms.date: 03/04/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ceb68b8b-9214-4745-abc9-f47f33ecd6f7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a963fcad77a6c916b4726cf62b0dd09b49d6152f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3a7ea9c535092201eaa2c901ef11975bf1461d52
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63128860"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509674"
 ---
 # <a name="omitting-values-for-optional-web-service-objects"></a>선택적 웹 서비스 개체에 대한 값 생략
   보고서 서버 웹 서비스 복합 유형의 속성은 대부분 Specified 속성으로 알려진 동반 속성을 갖습니다. 속성 이름은 원래 속성 이름에 "Specified"라는 단어를 붙여 만듭니다. 이 속성이 있다면 원래 속성의 값을 가끔씩 생략할 수 있다는 의미입니다. 이는 WSDL(Web Service Description Language)에서 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 프록시 클래스로 변환하는 데 따른 직접적인 결과입니다. 예를 들어, 복합 유형 <xref:ReportService2010.DataSourceDefinition.Enabled%2A>의 웹 서비스 속성 <xref:ReportService2010.DataSourceDefinition>에 <xref:ReportService2010.DataSourceDefinition.EnabledSpecified%2A>라는 동반 속성이 있습니다. 애플리케이션을 구축하는 중 <xref:ReportService2010.DataSourceDefinition.Enabled%2A> 속성의 값을 설정하지 않으려면 <xref:ReportService2010.DataSourceDefinition.Enabled%2A>의 값을 제공할 필요가 없습니다. 그러면 기본값 **true**가 사용됩니다. 그러나 <xref:ReportService2010.DataSourceDefinition.EnabledSpecified%2A>를 **false**로 설정해야 합니다. <xref:ReportService2010.DataSourceDefinition.Enabled%2A> 속성에 값을 제공하려면 <xref:ReportService2010.DataSourceDefinition.EnabledSpecified%2A>를 **true**에 해당하는 값으로 설정해야 합니다. 이는 쓰기 가능한 속성의 경우입니다. 읽기 전용 속성의 경우에는 별다른 조치를 하지 않아도 됩니다.  

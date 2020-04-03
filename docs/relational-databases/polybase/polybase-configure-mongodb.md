@@ -1,5 +1,6 @@
 ---
 title: '외부 데이터 액세스: MongoDB - PolyBase'
+description: 이 문서에서는 SQL Server 인스턴스에서 PolyBase를 사용하여 MongoDB에서 외부 데이터를 쿼리하는 방법을 설명합니다. 외부 데이터를 참조하는 외부 테이블을 만듭니다.
 ms.date: 12/13/2019
 ms.metadata: seo-lt-2019
 ms.prod: sql
@@ -9,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: aed736096918d121835149f8cbc9ba32399a3e80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5d74fd03a75b9b583eb92d34c45e7e0004ff9912
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75255428"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215882"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>MongoDB의 외부 데이터에 액세스하도록 PolyBase 구성
 

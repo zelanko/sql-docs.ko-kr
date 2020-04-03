@@ -1,5 +1,6 @@
 ---
 title: 예외를 발생하지 않는 경고 및 사례 처리 | Microsoft Docs
+description: 예외를 발생하지 않는 경고 및 사례를 적절한 조치를 취할 수 있도록 처리하는 방법을 알아봅니다.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 475c0713-6265-44e7-9ebc-ebdd1b89e0af
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5939d2ea37a36af991ce6dd8edab33036ed24b02
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5dd1c9335db348aeb3cb979079d3f1bd929f008a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63162300"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216392"
 ---
 # <a name="handling-warnings-and-cases-that-do-not-cause-exceptions"></a>예외를 발생하지 않는 경고 및 사례 처리
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 경고 및 특정 오류에 대해 예외를 throw하지 않습니다. 예를 들어 <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> 메서드를 사용하여 새 보고서를 보고서 서버에 게시하는 경우 발생하는 경고는 <xref:ReportService2010.Warning> 개체의 배열의 형태로 반환됩니다. 이러한 경고는 적절한 조치를 취할 수 있도록 처리되고 표시되어야 합니다.  

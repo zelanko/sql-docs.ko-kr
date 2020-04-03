@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 11b3c1d06c74f8d5c19aa95ba8de20fbce67d3dd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e67682a25768e80469aa13a027099bacc515f8a7
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75259039"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448108"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,18 +37,18 @@ ms.locfileid: "75259039"
   
 -   **데이터베이스 미러링 엔드포인트를 만들려면 다음을 사용합니다.**  [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
  서버 인스턴스의 인증 및 암호화 방법은 시스템 관리자가 설정합니다.  
   
 > [!IMPORTANT]  
 >  RC4 알고리즘은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES를 사용하는 것이 좋습니다.  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  CREATE ENDPOINT 권한 또는 sysadmin 고정 서버 역할의 멤버 자격이 필요합니다. 자세한 내용은 [GRANT 엔드포인트 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)을 참조하세요.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-create-a-database-mirroring-endpoint-that-uses-windows-authentication"></a>Windows 인증을 사용하는 데이터베이스 미러링 엔드포인트를 만들려면  
   
@@ -122,7 +122,7 @@ ms.locfileid: "75259039"
   
     -   *\<알고리즘&gt;* 은 엔드포인트의 암호화 표준을 지정하는 옵션을 제공합니다. *\<algorithm>* 의 값은 RC4, AES, AES RC4 또는 RC4 AES 중 하나이거나 이들 알고리즘의 조합일 수 있습니다.  
   
-         AES RC4는 엔드포인트가 AES 알고리즘에 우선 순위를 두어 암호화 알고리즘을 협상하도록 지정합니다. RC4 AES는 엔드포인트가 RC4 알고리즘에 우선 순위를 두어 암호화 알고리즘을 협상하도록 지정합니다. 양쪽 엔드포인트가 두 알고리즘을 모두 지정하지만 순서가 다른 경우 연결을 수락하는 엔드포인트의 알고리즘이 적용됩니다.  
+         AES RC4는 엔드포인트가 AES 알고리즘에 우선 순위를 두어 암호화 알고리즘을 협상하도록 지정합니다. RC4 AES는 엔드포인트가 RC4 알고리즘에 우선 순위를 두어 암호화 알고리즘을 협상하도록 지정합니다. 양쪽 엔드포인트가 두 알고리즘을 모두 지정하지만 순서가 다른 경우 연결을 수락하는 엔드포인트의 알고리즘이 적용됩니다. 동일한 알고리즘을 명시적으로 제공하여 서로 다른 서버 간의 연결 오류를 방지합니다.
   
         > [!NOTE]  
         >  RC4 알고리즘은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES를 사용하는 것이 좋습니다.  
@@ -139,7 +139,7 @@ ms.locfileid: "75259039"
     > [!NOTE]  
     >  기존 엔드포인트를 변경하려면 [ALTER ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)를 사용합니다.  
   
-###  <a name="TsqlExample"></a> 예제: 데이터베이스 미러링 지원을 위한 엔드포인트 만들기(Transact-SQL)  
+###  <a name="example-creating-endpoints-to-support-for-database-mirroring-transact-sql"></a><a name="TsqlExample"></a> 예제: 데이터베이스 미러링 지원을 위한 엔드포인트 만들기(Transact-SQL)  
  다음 예에서는 세 대의 다른 컴퓨터 시스템에 있는 기본 서버 인스턴스에 대한 데이터베이스 미러링 엔드포인트를 만듭니다.  
   
 |서버 인스턴스의 역할|호스트 컴퓨터 이름|  
@@ -179,7 +179,7 @@ CREATE ENDPOINT endpoint_mirroring
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **데이터베이스 미러링 엔드포인트를 구성하려면**  
   
 -   [Always On 가용성 그룹에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;SQL Server PowerShell&#41;](../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  

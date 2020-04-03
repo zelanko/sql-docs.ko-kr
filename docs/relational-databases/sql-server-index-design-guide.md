@@ -22,12 +22,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cf6e85cef8d95e2b1bb167d482f36ec540196f6
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 68b29bd0497598909914cb71f9f180ccf57191c0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287317"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79486523"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 인덱스 아키텍처 및 디자인 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ XML 인덱스에 대한 자세한 내용은 [XML 인덱스 개요](../relational
 
 전체 텍스트 인덱스에 대한 자세한 내용은 [전체 텍스트 인덱스 채우기](../relational-databases/search/populate-full-text-indexes.md)를 참조하세요.
   
-##  <a name="Basics"></a> 인덱스 디자인 기본 사항  
+##  <a name="index-design-basics"></a><a name="Basics"></a> 인덱스 디자인 기본 사항  
  일반적인 책을 생각해 보세요. 책의 끝에는 책에서 정보를 신속하게 찾는 데 도움이 되는 인덱스가 있습니다. 인덱스는 키워드의 정렬된 목록이며, 각 키워드 옆에는 각 키워드를 찾을 수 있는 페이지를 가리키는 페이지 번호 세트가 있습니다. SQL Server 인덱스도 다르지 않습니다. 값의 정렬된 목록이며, 각 값에는 해당 값이 있는 데이터 [페이지](../relational-databases/pages-and-extents-architecture-guide.md)의 포인터가 있습니다. 인덱스 자체는 페이지에 저장되어 SQL Server의 인덱스 페이지를 구성합니다. 일반적인 책에서 인덱스가 여러 페이지에 걸쳐 있고, “SQL” 등의 단어가 포함된 모든 페이지의 포인터를 찾아야 하는 경우 “SQL” 키워드가 포함된 인덱스 페이지를 찾을 때까지 살펴봐야 합니다. 여기서 모든 책 페이지의 포인터를 따릅니다.  인덱스의 시작 부분에 각 문자를 찾을 수 있는 위치의 사전순 목록이 포함된 단일 페이지를 만들면 이 기능을 더욱 최적화할 수 있습니다. 다음은 그 예입니다.  “A~D - 121페이지”, “E~G - 122페이지” 등입니다. 이 추가 페이지가 있으면 시작 위치를 찾기 위해 인덱스를 살펴보는 단계를 제거할 수 있습니다. 일반적인 책에는 이러한 페이지가 없지만 SQL Server 인덱스에는 있습니다. 이 단일 페이지를 인덱스의 루트 페이지라고 합니다. 루트 페이지는 SQL Server 인덱스에서 사용되는 트리 구조의 시작 페이지입니다. 트리 비유를 따라 실제 데이터의 포인터가 포함된 끝 페이지는 트리의 “리프 페이지”라고 합니다. 
 
  SQL Server 인덱스는 테이블이나 뷰와 연결된 디스크상 또는 메모리 내 구조로, 테이블이나 뷰의 행 검색 속도를 높입니다. 인덱스에는 테이블이나 뷰에 있는 하나 이상의 열로 작성되는 키가 포함됩니다. 디스크상 인덱스에서 이러한 키는 SQL Server가 키 값과 연결된 행을 빠르고 효율적으로 찾을 수 있는 트리 구조(B-트리)에 저장됩니다.  
@@ -83,7 +83,7 @@ XML 인덱스에 대한 자세한 내용은 [XML 인덱스 개요](../relational
 5.  인덱스에 가장 적합한 스토리지 위치를 파악합니다. 비클러스터형 인덱스는 기본 테이블과 같은 파일 그룹이나 다른 파일 그룹에 저장할 수 있습니다. 인덱스의 스토리지 위치는 디스크 I/O 성능을 높여 쿼리 성능을 향상시킬 수 있습니다. 예를 들어 테이블 파일 그룹과 다른 디스크에 있는 파일 그룹에 비클러스터형 인덱스를 저장하면 동시에 여러 디스크를 읽을 수 있으므로 성능이 향상될 수 있습니다.  
      또는 클러스터형 인덱스와 비클러스터형 인덱스가 여러 파일 그룹에 하나의 파티션 구성표를 사용할 수 있습니다. 분할을 사용하면 데이터 하위 집합을 빠르고 효율적으로 액세스하고 관리하는 동시에 전체 컬렉션의 무결성을 유지할 수 있으므로 큰 테이블이나 인덱스를 보다 쉽게 관리할 수 있습니다. 자세한 내용은 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)을 참조하세요. 분할을 고려할 때 인덱스를 맞춰야 하는지, 즉 본질적으로 테이블과 같은 방식으로 분할해야 하는지 또는 독립적으로 분할해야 하는지 파악합니다.   
 
-##  <a name="General_Design"></a> 일반 인덱스 디자인 지침  
+##  <a name="general-index-design-guidelines"></a><a name="General_Design"></a> 일반 인덱스 디자인 지침  
  경험이 많은 데이터베이스 관리자는 인덱스를 잘 디자인할 수 있습니다. 그러나 데이터베이스와 작업이 조금만 복잡해져도 이 태스크는 복잡하고 시간이 많이 걸리며 오류가 쉽게 발생할 수 있습니다. 데이터베이스, 쿼리 및 데이터 열의 특성을 이해하면 최적의 인덱스를 디자인할 수 있습니다.  
   
 ### <a name="database-considerations"></a>데이터베이스 고려 사항  
@@ -153,7 +153,7 @@ XML 인덱스에 대한 자세한 내용은 [XML 인덱스 개요](../relational
   
 FILLFACTOR 같은 옵션을 설정하면 인덱스의 초기 스토리지 특성을 사용자 지정하여 성능이나 유지 관리를 최적화할 수도 있습니다. 또한 파일 그룹이나 파티션 구성표를 사용하면 인덱스 스토리지 위치를 확인하여 성능을 최적화할 수 있습니다.  
   
-###  <a name="Index_placement"></a> 파일 그룹의 인덱스 배치 또는 파티션 구성표  
+###  <a name="index-placement-on-filegroups-or-partitions-schemes"></a><a name="Index_placement"></a> 파일 그룹의 인덱스 배치 또는 파티션 구성표  
  인덱스 디자인 전략을 개발할 때는 데이터베이스와 관련된 파일 그룹에 인덱스를 배치해야 합니다. 파일 그룹이나 파티션 구성표를 주의 깊게 선택하면 쿼리 성능을 향상시킬 수 있습니다.  
   
  기본적으로 인덱스는 인덱스가 생성된 기본 테이블과 동일한 파일 그룹에 저장됩니다. 분할되지 않은 클러스터형 인덱스와 기본 테이블은 항상 동일한 파일 그룹 내에 위치합니다. 그러나 다음과 같은 작업도 가능합니다.  
@@ -177,7 +177,7 @@ FILLFACTOR 같은 옵션을 설정하면 인덱스의 초기 스토리지 특성
   
 자세한 내용은 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)을 참조하세요.  
   
-###  <a name="Sort_Order"></a> 인덱스 정렬 순서 디자인 지침  
+###  <a name="index-sort-order-design-guidelines"></a><a name="Sort_Order"></a> 인덱스 정렬 순서 디자인 지침  
  인덱스를 정의할 때 인덱스 키 열의 데이터를 오름차순으로 저장할지 또는 내림차순으로 저장할지 고려해야 합니다. 오름차순이 기본값이며 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]와의 호환성을 유지합니다. CREATE INDEX, CREATE TABLE 및 ALTER TABLE 문의 구문은 인덱스와 제약 조건의 개별 열에서 ASC(오름차순) 및 DESC(내림차순) 키워드를 지원합니다.  
   
  인덱스의 키 값 저장 순서를 지정하는 기능은 테이블을 참조하는 쿼리에 해당 인덱스에서 키 열의 다른 방향을 지정하는 ORDER BY 절이 포함된 경우에 유용합니다. 이러한 경우 쿼리 계획에서 SORT 연산자를 사용할 필요가 없어지므로 쿼리의 효율성이 향상됩니다. 예를 들어 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 구매 부서의 구매자가 공급업체로부터 구입하는 제품 품질을 평가해야 합니다. 구매자는 대부분 해당 공급업체에서 보낸 제품 중 거부율이 높은 제품을 찾으려고 합니다. 다음 쿼리와 같이 이 조건에 맞는 데이터를 검색하려면 `RejectedQty` 테이블의 `Purchasing.PurchaseOrderDetail` 열을 내림차순(큰 데이터부터 작은 데이터 순서)으로 정렬하고 `ProductID` 열은 오름차순(작은 데이터부터 큰 데이터 순서)으로 정렬해야 합니다.  
@@ -207,7 +207,7 @@ ON Purchasing.PurchaseOrderDetail
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)] 은 어느 방향으로든 동일하게 효율적으로 이동할 수 있습니다. ORDER BY 절에 있는 열의 정렬 방향이 반대가 되는 쿼리에도 `(RejectedQty DESC, ProductID ASC)` 로 정의된 인덱스를 사용할 수 있습니다. 예를 들어 ORDER BY 절 `ORDER BY RejectedQty ASC, ProductID DESC` 를 포함하는 쿼리에 인덱스를 사용할 수 있습니다.  
   
- 정렬 순서는 키 열에 대해서만 지정할 수 있습니다. [sys.index_columns](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) 카탈로그 뷰와 INDEXKEY_PROPERTY 함수는 인덱스 열이 오름차순으로 저장되는지 또는 내림차순으로 저장되는지 보고합니다.  
+ 정렬 순서는 인덱스의 키 열에 대해서만 지정할 수 있습니다. [sys.index_columns](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) 카탈로그 뷰와 INDEXKEY_PROPERTY 함수는 인덱스 열이 오름차순으로 저장되는지 또는 내림차순으로 저장되는지 보고합니다.  
 
 ## <a name="metadata"></a>메타데이터  
 이러한 메타데이터 보기를 사용하여 인덱스의 특성을 볼 수 있습니다. 자세한 아키텍처 정보는 이러한 뷰 중 일부에 포함됩니다.
@@ -228,7 +228,7 @@ ON Purchasing.PurchaseOrderDetail
 |[sys.dm_db_xtp_nonclustered_index_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-nonclustered-index-stats-transact-sql.md)|[sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)|
 |[sys.hash_indexes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)|[sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)|  
 
-##  <a name="Clustered"></a> 클러스터형 인덱스 디자인 지침  
+##  <a name="clustered-index-design-guidelines"></a><a name="Clustered"></a> 클러스터형 인덱스 디자인 지침  
  클러스터형 인덱스는 그 키 값에 기반하여 테이블에 데이터 행을 정렬하고 저장합니다. 데이터 행은 자체적으로 하나의 순서로만 정렬될 수 있으므로 테이블당 클러스터형 인덱스가 하나만 있을 수 있습니다. 일부 예외를 제외하고는 각 테이블에서 클러스터형 인덱스가 정의된 열은 다음과 같은 특성을 가져야 합니다.  
   
 -   자주 사용하는 쿼리에 대해 사용할 수 있습니다.  
@@ -302,7 +302,7 @@ ON Purchasing.PurchaseOrderDetail
   
     다양한 키는 여러 열 또는 크기가 큰 여러 열이 합쳐진 것입니다. 클러스터형 인덱스로 구한 키 값은 모든 비클러스터형 인덱스에 의해 조회 키로 사용됩니다. 비클러스터형 인덱스 항목에는 클러스터링 키와 함께 해당 비클러스터형 인덱스에 대해 정의된 키 열도 포함되기 때문에 동일한 테이블에 정의된 비클러스터형 인덱스가 훨씬 큽니다.  
   
-##  <a name="Nonclustered"></a> 비클러스터형 인덱스 디자인 지침  
+##  <a name="nonclustered-index-design-guidelines"></a><a name="Nonclustered"></a> 비클러스터형 인덱스 디자인 지침  
  비클러스터형 인덱스에는 테이블 데이터의 스토리지 위치를 가리키는 행 로케이터와 인덱스 키 값이 있습니다. 테이블 또는 인덱싱된 뷰에 비클러스터형 인덱스를 여러 개 만들 수 있습니다. 일반적으로 클러스터형 인덱스를 적용할 수 없고 자주 사용되는 쿼리의 성능을 개선하도록 비클러스터형 인덱스를 디자인해야 합니다.  
   
  책에서 색인을 사용하는 것처럼 쿼리 최적화 프로그램은 비클러스터형 인덱스를 검색하여 테이블에서 데이터 값의 위치를 찾고 해당 위치에서 데이터를 직접 검색하는 방식으로 데이터 값을 검색합니다. 비클러스터형 인덱스에는 쿼리에서 검색하는 데이터 값에 대한 테이블의 정확한 위치를 설명하는 항목이 있기 때문에 정확히 일치하는 값을 찾는 쿼리에는 비클러스터형 인덱스가 가장 적합합니다. 예를 들어 `HumanResources. Employee` 테이블에서 특정 관리자에게 보고하는 모든 직원을 쿼리하면 쿼리 최적화 프로그램은 `IX_Employee_ManagerID`가 키 열인 비클러스터형 인덱스 `ManagerID` 를 사용할 수 있습니다. 쿼리 최적화 프로그램은 인덱스에서 지정된 `ManagerID`와 일치하는 모든 항목을 빠르게 찾을 수 있습니다. 각 인덱스 항목은 해당 데이터를 찾을 수 있는 클러스터형 인덱스나 테이블의 정확한 페이지와 행을 가리킵니다. 쿼리 최적화 프로그램은 인덱스에서 모든 항목을 찾은 후 정확한 페이지와 행으로 직접 이동하여 데이터를 검색할 수 있습니다.  
@@ -371,7 +371,7 @@ ON Purchasing.PurchaseOrderDetail
   
      1과 0만으로 구성되는 경우와 같이 고유 값이 매우 적으면 대개 테이블 검색이 더 효율적이므로 대부분의 쿼리에서 인덱스를 사용하지 않습니다. 이 데이터 형식의 경우 적은 수의 행에서만 발생하는 고유 값에 필터링된 인덱스를 만듭니다. 예를 들어 대부분의 값이 0인 경우 쿼리 최적화 프로그램에서는 1을 포함하는 데이터 행에 대해 필터링된 인덱스를 사용합니다.  
   
-####  <a name="Included_Columns"></a> 포괄 열을 사용하여 비클러스터형 인덱스 확장  
+####  <a name="use-included-columns-to-extend-nonclustered-indexes"></a><a name="Included_Columns"></a> 포괄 열을 사용하여 비클러스터형 인덱스 확장  
  비클러스터형 인덱스의 리프 수준에 키가 아닌 열을 추가하여 비클러스터형 인덱스의 기능을 확장할 수 있습니다. 키가 아닌 열을 포함하여 여러 쿼리를 처리하는 비클러스터형 인덱스를 만들 수 있습니다. 이는 키가 아닌 열에 다음과 같은 장점이 있기 때문입니다.  
   
 -   키가 아닌 열은 인덱스 키 열로 사용할 수 없는 데이터 형식입니다.  
@@ -471,7 +471,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  데이터를 수정해야 할지, 디스크 공간을 추가할지 결정할 때 성능에 미치는 영향과 쿼리 성능 향상 중 어느 것이 더 중요한지를 결정해야 합니다.  
   
-##  <a name="Unique"></a> 고유 인덱스 디자인 지침  
+##  <a name="unique-index-design-guidelines"></a><a name="Unique"></a> 고유 인덱스 디자인 지침  
  고유 인덱스는 인덱스 키에 중복 값을 포함할 수 없으므로 테이블의 모든 행이 고유합니다. 고유 인덱스를 지정하는 것은 데이터 자체가 고유하다는 특성이 있을 때만 의미가 있습니다. 예를 들어 기본 키가 `NationalIDNumber` 인 경우 `HumanResources.Employee` 테이블의 `EmployeeID`열 값이 고유하도록 하려면 `NationalIDNumber` 열에 대해 UNIQUE 제약 조건을 만듭니다. 사용자가 이 열에서 두 명 이상의 직원에 대해 동일한 값을 입력하면 오류 메시지가 표시되고 중복된 값이 입력되지 않습니다.  
   
  여러 열로 구성된 고유 인덱스를 사용하면 인덱스 키의 각 값 조합이 고유합니다. 예를 들어 `LastName`, `FirstName`및 `MiddleName` 열의 조합에 대해 고유 인덱스를 만들면 테이블에 있는 각 행에서 이러한 열의 값 조합이 모두 서로 다릅니다.  
@@ -495,7 +495,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
 -   고유 비클러스터형 인덱스에는 키가 아닌 포괄 열이 포함될 수 있습니다. 자세한 내용은 [포괄 열이 있는 인덱스](#Included_Columns)를 참조하십시오.  
   
   
-##  <a name="Filtered"></a> 필터링된 인덱스 디자인 지침  
+##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a> 필터링된 인덱스 디자인 지침  
  필터링된 인덱스는 특히 데이터의 잘 정의된 하위 집합에서 선택하는 쿼리를 처리하는 데 적합한 최적화된 비클러스터형 인덱스입니다. 이 인덱스에서는 필터 조건자를 사용하여 테이블의 일부 행을 인덱싱합니다. 잘 디자인된 필터링된 인덱스는 전체 테이블 인덱스에 비해 쿼리 성능을 개선하고 인덱스 유지 관리 비용과 인덱스 스토리지 비용을 줄일 수 있습니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]까지  
@@ -635,7 +635,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  데이터 변환을 비교 연산자의 왼쪽에서 오른쪽으로 이동하면 변환 방법이 변경될 수 있습니다. 위의 예에서 CONVERT 연산자가 오른쪽에 추가될 때 정수 비교에서 **varbinary** 비교로 비교가 변경되었습니다.  
   
-## <a name="columnstore_index"></a> Columnstore 인덱스 디자인 지침
+## <a name="columnstore-index-design-guidelines"></a><a name="columnstore_index"></a> Columnstore 인덱스 디자인 지침
 
 *columnstore index* 는 columnstore라는 칼럼 데이터 형식을 사용하여 데이터를 저장, 검색 및 관리하는 기술입니다. 자세한 내용은 [Columnstore 인덱스 개요](../relational-databases/indexes/columnstore-indexes-overview.md)를 참조하세요. 
 
@@ -725,7 +725,7 @@ deltastore는 삭제된 것으로 표시되었지만 columnstore에서 물리적
  
 자세한 내용은 [Columnstore 인덱스 - 디자인 지침](../relational-databases/indexes/columnstore-indexes-design-guidance.md)을 참조하세요.
 
-##  <a name="hash_index"></a> 해시 인덱스 디자인 지침 
+##  <a name="hash-index-design-guidelines"></a><a name="hash_index"></a> 해시 인덱스 디자인 지침 
 
 행을 함께 연결하는 인덱스이므로 모든 메모리 최적화 테이블에는 하나 이상의 인덱스가 있어야 합니다. 메모리 최적화 테이블에서는 모든 인덱스 또한 메모리 최적화되어 있습니다. 해시 인덱스는 메모리 최적화 테이블에 사용할 수 있는 인덱스 유형 중 하나입니다. 자세한 내용은 [메모리 최적화 테이블에 대한 인덱스](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)를 참조하세요.
 
@@ -759,7 +759,7 @@ deltastore는 삭제된 것으로 표시되었지만 columnstore에서 물리적
   
 ![hekaton_tables_23d](../relational-databases/in-memory-oltp/media/hekaton-tables-23d.png "인덱스 키, 해시 함수에 입력, 체인의 헤드를 가리키는 해시 버킷의 주소인 출력")  
 
-### <a name="configuring_bucket_count"></a> 해시 인덱스 버킷 수 구성
+### <a name="configuring-the-hash-index-bucket-count"></a><a name="configuring_bucket_count"></a> 해시 인덱스 버킷 수 구성
 해시 인덱스 버킷 수는 인덱스를 만들 때 지정되며, `ALTER TABLE...ALTER INDEX REBUILD` 구문을 사용하여 변경할 수 있습니다.  
   
 대부분의 경우 버킷 수는 인덱스 키에 있는 고유한 값 수의 1~2배 사이여야 합니다.   
@@ -794,7 +794,7 @@ deltastore는 삭제된 것으로 표시되었지만 columnstore에서 물리적
 
 해시 인덱스가 사용되고 고유한 인덱스 키의 수가 행 수보다 100배 이상 많은 경우 행 체인이 커지지 않도록 버킷 수를 늘리거나 [비클러스터형 인덱스](#inmem_nonclustered_index)를 사용하는 방법을 고려해 봅니다.
 
-### <a name="h3-b2-declaration-limitations"></a> 선언 시 고려 사항  
+### <a name="declaration-considerations"></a><a name="h3-b2-declaration-limitations"></a> 선언 시 고려 사항  
 해시 인덱스는 메모리 최적화 테이블에 대해서만 존재할 수 있습니다. 디스크 기반 테이블에는 있을 수 없습니다.  
   
 해시 인덱스를 다음으로 선언할 수 있습니다.  
@@ -817,7 +817,7 @@ HASH (Column2) WITH (BUCKET_COUNT = 64);
   
 나중에 이전 버전이 더 이상 필요 없게 되면 GC(가비지 수집) 스레드가 버킷과 링크 목록을 트래버스하여 이전 항목을 정리합니다. 링크 목록 체인 길이가 짧은 경우 GC 스레드 성능은 향상됩니다. 자세한 내용은 [메모리 내 OLTP 가비지 수집](../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md)을 참조하세요. 
 
-##  <a name="inmem_nonclustered_index"></a> 메모리 최적화 비클러스터형 인덱스 디자인 지침 
+##  <a name="memory-optimized-nonclustered-index-design-guidelines"></a><a name="inmem_nonclustered_index"></a> 메모리 최적화 비클러스터형 인덱스 디자인 지침 
 
 비클러스터형 인덱스는 메모리 최적화 테이블에 사용할 수 있는 인덱스 유형 중 하나입니다. 자세한 내용은 [메모리 최적화 테이블에 대한 인덱스](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)를 참조하세요.
 
@@ -886,7 +886,7 @@ Bw-트리의 인덱스 페이지는 단일 행부터 최대 8KB까지 저장하�
 > [!TIP]
 > 비클러스터형 인덱스 키 열에 중복 값이 여러 개 있는 경우 업데이트, 삽입 및 삭제 성능이 저하될 수 있습니다. 이 상황에서 성능을 향상시키는 한 가지 방법은 비클러스터형 인덱스에 다른 열을 추가하는 것입니다.
 
-##  <a name="Additional_Reading"></a> 더 보기  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> 더 보기  
 [CREATE INDEX&#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md)    
 [ALTER INDEX&#40;Transact-SQL&#41;](../t-sql/statements/alter-index-transact-sql.md)   
 [CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  

@@ -1,5 +1,6 @@
 ---
 title: HTML로 렌더링(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기의 HTML 렌더링 확장 프로그램은 페이지를 매긴 보고서를 HTML 형식으로 렌더링합니다. 전체 HTML 페이지를 생성할 수도 있고, 다른 페이지에 포함할 HTML 조각을 생성할 수도 있습니다.
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b6b8a27924bcceefe54d4a4663e3d55888920dbf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5862081622d9d5c1a42fa8806ae482f02919a7b3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082476"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290875"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>HTML로 렌더링(보고서 작성기 및 SSRS)
   HTML 렌더링 확장 프로그램은 페이지를 매긴 보고서를 HTML 형식으로 렌더링합니다. 완전한 형식의 HTML 페이지 또는 HTML 조각을 만들어 다른 HTML 페이지에 포함시킬 수도 있습니다. 모든 HTML은 UTF-8 인코딩을 사용하여 만들어집니다.  
@@ -27,11 +28,11 @@ ms.locfileid: "77082476"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RenderingMHTML"></a> MHTML로 렌더링  
+##  <a name="rendering-in-mhtml"></a><a name="RenderingMHTML"></a> MHTML로 렌더링  
  HTML 렌더링 확장 프로그램은 보고서를 MHTML(MIME Encapsulation of Aggregate HTML Documents)로도 렌더링할 수 있습니다. MHTML은 HTML을 확장하여 이미지와 같이 인코딩된 개체를 HTML에 포함합니다. MHTML 렌더링 확장 프로그램을 사용하여 이미지, 문서 또는 다른 이진 파일과 같은 리소스를 보고서 HTML 내의 MIME 구조로 단일 파일에 포함할 수 있습니다. MHTML 보고서에는 모든 리소스가 포함되어 있으므로 MHTML 보고서는 전자 메일 메시지 내에 포함하는 데에도 유용합니다. 이 기능은 실제로는 MHTML을 렌더링하는 HTML 렌더링 확장 프로그램이지만, MHTML 렌더링 확장 프로그램이라고 부릅니다.  
   
   
-##  <a name="BrowserSupport"></a> 브라우저 지원  
+##  <a name="browser-support"></a><a name="BrowserSupport"></a> 브라우저 지원  
  이 렌더링 확장 프로그램은 다음 브라우저 버전을 지원합니다.  
   
 -   Internet Explorer 5.5 이상  
@@ -43,7 +44,7 @@ ms.locfileid: "77082476"
  브라우저 간 고려 사항으로 인해 렌더링된 보고서는 브라우저마다 조금씩 다를 수 있습니다. 예를 들어 입력란에는 WritingMode라는 속성이 들어 있습니다. 이 속성은 Firefox에서 지원되지 않습니다.  
   
   
-##  <a name="HTMLSpecificRenderingRules"></a> HTML 관련 렌더링 규칙  
+##  <a name="html-specific-rendering-rules"></a><a name="HTMLSpecificRenderingRules"></a> HTML 관련 렌더링 규칙  
  렌더링할 때에는 다음과 같은 HTML 관련 규칙이 적용됩니다.  
   
 -   렌더러는 항목이 여러 개인 경우 각 **ReportItems** 컬렉션의 모든 항목을 포함하기 위한 HTML 테이블 구조를 작성합니다.  
@@ -61,7 +62,7 @@ ms.locfileid: "77082476"
 -   모든 좌표 및 보고서 항목 크기는 밀리미터로 변환됩니다. 스타일 속성을 비롯한 다른 모든 크기에는 원래의 단위가 유지됩니다. 0\.2mm보다 작은 크기 및 위치 차이는 0mm로 처리됩니다.  
   
   
-##  <a name="Interactivity"></a> 상호 작용  
+##  <a name="interactivity"></a><a name="Interactivity"></a> 상호 작용  
  HTML에서는 일부 대화형 요소가 지원됩니다. 다음은 특정 동작에 대한 설명입니다.  
   
 ### <a name="show-and-hide"></a>표시 및 숨기기  
@@ -84,10 +85,10 @@ ms.locfileid: "77082476"
   
  ReportViewer Web Forms 컨트롤을 통해 추가 검색 및 찾기 기능이 제공됩니다.  
   
-##  <a name="FontsOnClient"></a> 클라이언트 컴퓨터의 글꼴
+##  <a name="fonts-on-the-client-computer"></a><a name="FontsOnClient"></a> 클라이언트 컴퓨터의 글꼴
  보고서 내에 사용되면 사용자 지정 글꼴이 보고서를 보는 데 사용되는 컴퓨터(클라이언트 컴퓨터)에도 해당 글꼴이 설치되어 있어야 보고서가 제대로 표시됩니다. 클라이언트 컴퓨터에 글꼴이 설치되어 있지 않으면 보고서는 사용자 지정 글꼴이 아닌 시스템 기본 글꼴로 표시됩니다.
   
-##  <a name="DeviceInfo"></a> 디바이스 정보 설정  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> 디바이스 정보 설정  
  디바이스 정보 설정을 변경하여 렌더링할 모드를 비롯한 이 렌더러의 일부 기본 설정을 변경할 수 있습니다. 자세한 내용은 [HTML Device Information Settings](../../reporting-services/html-device-information-settings.md)을 참조하세요.  
   
   

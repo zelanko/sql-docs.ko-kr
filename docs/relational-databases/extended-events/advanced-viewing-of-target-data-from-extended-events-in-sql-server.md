@@ -1,5 +1,6 @@
 ---
 title: 확장 이벤트의 대상 데이터에 대한 고급 보기
+description: SQL Server Management Studio의 고급 기능을 사용하여 확장 이벤트의 대상 데이터를 자세히 살펴볼 수 있습니다. 데이터를 보고, 내보내고, 조작할 수 있습니다.
 ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5bf55c020e773e8d724a3c84bcee4dd78307a4f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 298cebbde96d9de3eadcb6c11ae59b43f2e973d5
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75255756"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434040"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>SQL Server 확장 이벤트의 대상 데이터 고급 보기
 

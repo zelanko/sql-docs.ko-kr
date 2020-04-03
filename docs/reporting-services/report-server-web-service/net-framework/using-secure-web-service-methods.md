@@ -1,5 +1,6 @@
 ---
 title: 보안 웹 서비스 메서드 사용 | Microsoft Docs
+description: RSReportServer 구성 파일의 SecureConnectionLevel 설정을 사용하여 보고서 서버 웹 서비스 메서드에 대해 보안 연결을 요구합니다.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 87329299-c2ea-4517-9148-d855726768a9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 84c0b693df2906d4ab3245df20c3b9a979cf07f6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ddbc92de40fa15840e9c12cd482b1488bd54f7b9
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63128809"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509604"
 ---
 # <a name="using-secure-web-service-methods"></a>보안 웹 서비스 메서드 사용
   특정 보고서 서버 웹 서비스 메서드를 호출할 때 보안 연결이 필요할 수 있습니다. 보안 연결이 필요한 메서드는 RSReportServer.config 파일의 **SecureConnectionLevel** 설정에서 결정됩니다. 이 설정의 값은 0 이상의 유효 범위를 가진 정수 값입니다. 다음 표에서는 이러한 값에 대해 설명합니다.  

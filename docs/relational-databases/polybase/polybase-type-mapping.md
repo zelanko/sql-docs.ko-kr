@@ -1,5 +1,6 @@
 ---
 title: PolyBase를 사용한 형식 매핑 | Microsoft Docs
+description: 여기에 나와 있는 표에서 PolyBase 외부 데이터 원본과 SQL Server 사이의 매핑을 참조하세요. Transact-SQL CREATE EXTERNAL TABLE을 사용하여 외부 테이블 정의
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 34f6b61160b687fa6864a2660b632524188b922c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9d4dd55daf26c9f927e23c0f269a084c711d0481
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71710461"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215750"
 ---
 # <a name="type-mapping-with-polybase"></a>PolyBase를 사용한 형식 매핑
 

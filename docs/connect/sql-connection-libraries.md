@@ -1,6 +1,6 @@
 ---
 title: Microsoft SQL Database용 연결 라이브러리 | Microsoft Docs
-description: 다양한 클라이언트 프로그래밍 언어에서 Microsoft SQL Server 및 Azure SQL Database에 연결할 수 있도록 돕는 모듈의 다운로드 링크를 제공합니다.
+description: 다양한 클라이언트 프로그래밍 언어로 Microsoft SQL Server 및 Azure SQL Database에 연결하도록 지원하는 모듈의 다운로드 링크를 제공합니다.
 author: RothJa
 ms.prod: sql
 ms.technology: ''
@@ -8,19 +8,19 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/05/2020
 ms.author: JRoth
-ms.openlocfilehash: eb842769490b521b248ed4114953b8d828fa80d3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 88fbd0e3fd01492b8e7d920eb132196f8a005478
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286407"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79434120"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL Database용 연결 모듈
 
 이 문서에서는 클라이언트 프로그램이 [Microsoft SQL Server](../relational-databases/database-features.md) 및 클라우드 [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/) 내 해당 쌍과의 상호 작용에 사용할 수 있는 연결 모듈 또는 *드라이버*의 다운로드 링크를 제공합니다. 드라이버는 다음의 운영 체제에서 실행되는 다양한 프로그래밍 언어에 사용할 수 있습니다.
 
 - Linux
-- MacOS
+- macOS
 - Windows
 
 **OOP-관계형 불일치:**
@@ -34,17 +34,6 @@ ms.locfileid: "79286407"
 <a name="anchor-20-drivers-relational-access" />
 
 ## <a name="drivers-for-relational-access"></a>관계형 액세스용 드라이버
-
-<!--
-Each given Microsoft Download Center page should be enhanced
-with a link to the next NEWER version page, on the day that the
-original page is no longer the latest because the newer page is being added.
-But this policy is not agreed on or observed,
-putting the links in the following table at risk for being outdated.
-
-PHP driver in Github.com also uses this FWLink:  https://go.microsoft.com/fwlink/?LinkID=518036 ,
-although the FWLink is less precise than is https://github.com/Microsoft/msphpsql/tree/dev#install-unix .
--->
 
 | 언어 | SQL 드라이버 다운로드 |
 | :------- | :---------------------- |
@@ -76,14 +65,15 @@ although the FWLink is less precise than is https://github.com/Microsoft/msphpsq
 <a name="anchor-60-build-an-app-webpages" />
 
 ## <a name="build-an-app-webpages"></a>앱 빌드 웹 페이지
+
 **[https://aka.ms/sqldev](https://aka.ms/sqldev)** 를 클릭하면 일단의 *애플리케이션 빌드* 웹 페이지로 이동하실 수 있습니다. 해당 웹 페이지에서는 프로그래밍 언어, 운영 체제, SQL 연결 드라이버를 어떻게 다양한 방법으로 조합할 수 있을지 소개합니다. 애플리케이션 빌드 웹 페이지에서 제공되는 정보에는 다음 사항도 포함됩니다.
 
 - 각각의 언어, 운영 체제, 드라이버 조합과 관련해 작업을 시작하는 방법을 처음부터 자세히 설명합니다.
-    - 최신 SQL 연결 드라이버의 설치 방법에 대한 지침
+  - 최신 SQL 연결 드라이버의 설치 방법에 대한 지침
 - 다음 각 항목에 대해 코드 예제를 제공합니다.
-    - 개체 관계형 코드 예제
-    - ORM 코드 예제
-    - 더욱 빠른 성능 실현을 위한 Columnstore 인덱스 데모
+  - 개체 관계형 코드 예제
+  - ORM 코드 예제
+  - 더욱 빠른 성능 실현을 위한 Columnstore 인덱스 데모
 
 **애플리케이션 빌드 웹 페이지의 첫 페이지:**  
 ![애플리케이션 빌드 웹 페이지의 첫 페이지 스크린샷](media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png)
@@ -94,6 +84,7 @@ although the FWLink is less precise than is https://github.com/Microsoft/msphpsq
 &nbsp;
 
 ## <a name="related-links"></a>관련 링크
+
 - [클라우드에서 Java와 기타 언어로 Azure SQL Database에 연결하기 위한 코드의 예제](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)
 
 <!--

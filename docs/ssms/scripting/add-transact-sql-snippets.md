@@ -11,12 +11,12 @@ ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f2878a93f241235bb725cd40afd169f4c7d31aa
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 52ce47c3402e75ae14fdd9c90abb83481c62e297
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75246468"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80243383"
 ---
 # <a name="add-transact-sql-snippets"></a>Transact-SQL 코드 조각 추가
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -110,9 +110,8 @@ ms.locfileid: "75246468"
   
 4.  **가져오기** 단추를 클릭합니다.  
   
-5.  TryCatch.snippet이 들어 있는 폴더로 이동하고 TryCatch.snippet 파일을 클릭한 다음 **열기** 단추를 클릭합니다. **내 코드 조각** 폴더에 TryCatch 코드 조각이 없어야 합니다.  
+5.  TryCatch.snippet이 들어 있는 폴더로 이동하고 TryCatch.snippet 파일을 클릭한 다음 **열기** 단추를 클릭합니다. **내 코드 조각** 폴더에 TryCatch 코드 조각이 있을 것입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [코드 감싸기 Transact-SQL 조각 삽입](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
-  
-  
+    

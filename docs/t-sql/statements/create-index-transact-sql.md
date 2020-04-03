@@ -1,7 +1,7 @@
 ---
 title: CREATE INDEX(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/12/2019
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -54,12 +54,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80f3fba621cbfe4f8411f618ca60025685c2da34
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: d3695dcb6f322f2b0509bca2bb98b1c592c13a1f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287257"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448357"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX(Transact-SQL)
 
@@ -750,7 +750,7 @@ DROP_EXISTING 절을 사용하여 인덱스 다시 작성, 열 추가 또는 삭
 
 자세한 내용은 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)을 참조하세요.
 
-### <a name="resumable-indexes"></a> 다시 시작 가능한 인덱스 작업
+### <a name="resumable-index-operations"></a><a name="resumable-indexes"></a> 다시 시작 가능한 인덱스 작업
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 다음 지침은 다시 시작 가능한 인덱스 작업에 적용됩니다.
@@ -820,7 +820,7 @@ OPTIMIZE_FOR_SEQUENTIAL_KEY 인덱스 옵션을 켜면 데이터베이스 엔진
 압축 상태를 변경할 경우 테이블, 인덱스 또는 파티션에 어떤 영향을 주는지 확인하려면 [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 저장 프로시저를 사용합니다.
 
 ## <a name="permissions"></a>사용 권한
-테이블 또는 보기에 대한 `ALTER` 권한이 필요합니다. 사용자는 `sysadmin` 고정 서버 역할의 멤버 또는 `db_ddladmin` 및 `db_owner` 고정 데이터베이스 역할의 멤버여야 합니다.
+테이블 또는 보기에 대한 `ALTER` 권한이 필요합니다. 사용자는 `sysadmin` 고정 서버 역할의 멤버이거나 `db_ddladmin` 또는 `db_owner` 고정 데이터베이스 역할의 멤버여야 합니다.
 
 ## <a name="limitations-and-restrictions"></a>제한 사항
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서는 다음을 만들 수 없습니다.

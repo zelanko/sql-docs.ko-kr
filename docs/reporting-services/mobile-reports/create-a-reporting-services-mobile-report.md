@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 모바일 보고서 만들기 | Microsoft Docs
+description: SQL Server 모바일 보고서 게시자를 사용하여, 유연한 모바일 보고서 요소로 모든 화면 크기에 맞는 SQL Server Reporting Services 모바일 보고서를 만듭니다.
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3fd0fc3530ec35da61e2314ef7a80a58d9bdd7d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 08076ebf437841f5d60d957df934fc7de6406ded
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63316449"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448210"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Reporting Services 모바일 보고서 만들기
 SQL Server 모바일 보고서 게시자를 사용하면 조정 가능한 표 행/열이 표시된 디자인 화면에서 유동적인 모바일 보고서 요소를 사용하여 어떤 화면 크기에나 적합하도록 효율적으로 확장되는 SQL Server Reporting Services 모바일 보고서를 빠르게 만들 수 있습니다.  

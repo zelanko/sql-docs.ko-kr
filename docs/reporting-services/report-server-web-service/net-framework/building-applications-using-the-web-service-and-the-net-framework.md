@@ -1,5 +1,6 @@
 ---
 title: 웹 서비스 및 .NET Framework를 사용하여 애플리케이션 작성 | Microsoft Docs
+description: 보고서 서버 웹 서비스 클라이언트는 SOAP를 통해 보고서 서버와 통신합니다. 모든 웹 서비스에서 작동하는 웹 서비스 클라이언트를 만들려면 .NET Framework를 사용합니다.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 92a9678c-bc4f-4d7a-ba44-85989bfe27ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f22f1b32318f5f6440b4506adcbb4926224908e3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 37d6552c328daff4793ea65d9670752378e1ab3b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284652"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509764"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>웹 서비스 및 .NET Framework를 사용하여 애플리케이션 작성
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 메서드, 기본 유형, 사용자 정의 복합 형식 등과 같은 친숙한 프로그래밍 구문을 사용하여 웹 서비스 작업을 수행할 수 있습니다. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에는 모든 W3C(World Wide Web 컨소시엄) 표준 호환 웹 서비스를 호출할 수 있는 웹 서비스 클라이언트를 만드는 데 사용할 수 있는 인프라와 도구가 포함되어 있습니다.  

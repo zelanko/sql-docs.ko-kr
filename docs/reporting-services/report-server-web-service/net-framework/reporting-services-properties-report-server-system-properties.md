@@ -1,5 +1,6 @@
 ---
 title: 보고서 서버 시스템 속성 | Microsoft Docs
+description: 시스템 속성은 보고서 서버 데이터베이스의 전역 속성입니다. 이러한 속성 중 상당수는 웹 서비스 메서드를 사용하여 읽거나 수정할 수 있습니다.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 30455d77efff3c9a9e4f48b9cbeccfa983001220
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ecb90d65a011e5bb00c66f5f6ccd32ab4be663ee
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63128814"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509635"
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Reporting Services 속성 - 보고서 서버 시스템 속성
   다음 시스템 속성 이름은 예약되어 있습니다. 동일한 이름의 사용자 정의 속성을 만들 수 없습니다. 이러한 속성 중 상당수는 웹 서비스 메서드를 사용하여 읽거나 수정할 수 있습니다.  

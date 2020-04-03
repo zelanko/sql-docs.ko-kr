@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 50b9e158fe828271cc4e96c6175895cc858ac962
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8b4503c55545867639a3a437371d6265a85706af
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75254327"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271479"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>테이블 만들기 쿼리 만들기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,18 +73,18 @@ WHERE country = 'UK'
   
 5.  행을 특정 순서에 따라 복사하려면 정렬 순서를 지정합니다. 자세한 내용은 **쿼리 결과 정렬 및 그룹화**를 참조하세요.  
   
-6.  검색 조건을 입력하여 복사할 행을 지정합니다. 자세한 내용은 [검색 조건 지정]\(../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md\)을 참조하세요.  
+6.  검색 조건을 입력하여 복사할 행을 지정합니다. 자세한 내용은 [검색 조건 지정](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)을 참조하세요.  
   
     검색 조건을 지정하지 않으면 원본 테이블의 행 전체가 대상 테이블에 복사됩니다.  
   
     > [!NOTE]  
     > 검색할 열을 조건 창에 추가하면 쿼리 및 뷰 디자이너의 복사할 열 목록에도 이 열이 추가됩니다. 열을 검색만 하고 복사는 하지 않으려면 테이블 또는 테이블 구조 개체를 나타내는 사각형에서 열 이름 옆에 있는 확인란의 선택을 취소합니다.  
   
-7.  요약 정보를 복사하려면 그룹화 방법 옵션을 지정합니다. 자세한 내용은 [쿼리 결과 요약]\(../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md\)을 참조하세요.  
+7.  요약 정보를 복사하려면 그룹화 방법 옵션을 지정합니다. 자세한 내용은 [Summarize Query Results](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)(쿼리 결과 요약)를 참조하세요.  
   
 테이블 만들기 쿼리를 실행해도 [결과 창](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)에는 결과가 보고되지 않습니다. 대신, 복사한 행의 수를 나타내는 메시지가 표시됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
-쿼리 및 뷰 디자인 방법 도움말 항목(../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[쿼리 및 뷰 디자인 방법 도움말 항목](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 쿼리 형식(. /.. /ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   

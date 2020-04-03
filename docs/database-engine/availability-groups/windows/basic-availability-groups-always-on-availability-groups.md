@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 71b949178269c2777f5cacd32997d872d36cfc32
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 18d02267ee7093e4e79deb5985abb236898dbe84
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74685650"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80342860"
 ---
 # <a name="basic-always-on-availability-groups-for-a-single-database"></a>단일 데이터베이스에 대한 기본 Always On 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,6 +50,23 @@ ms.locfileid: "74685650"
  Always On 기본 가용성 그룹은 두 개의 SQL Server 2016 Standard Edition 서버에서 만들 수 있습니다. 기본 가용성 그룹을 만드는 경우에는, 만드는 동안 두 개의 복제본을 모두 지정해야 합니다.  
   
  기본 가용성 그룹을 만들려면 **CREATE AVAILABILITY GROUP** transact-SQL 명령을 사용하고 **WITH BASIC** 옵션을 지정합니다(기본값: **ADVANCED**). 17.8 버전부터 SQL Server Management Studio에서 UI를 사용하여 기본 가용성 그룹을 만들 수도 있습니다. 자세한 내용은 [CREATE AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)을 참조하세요. 
+
+T-SQL(Transact-SQL)을 사용하여 기본 가용성 그룹을 만드는 방법은 다음 예제를 참조하세요. 
+
+```sql
+CREATE AVAILABILITY GROUP [BasicAG]
+WITH (AUTOMATED_BACKUP_PREFERENCE = PRIMARY,
+BASIC,
+DB_FAILOVER = OFF,
+DTC_SUPPORT = NONE,
+REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = 0)
+FOR DATABASE [AdventureWorks]
+REPLICA ON N'SQLVM1\MSSQLSERVER' WITH (ENDPOINT_URL = N'TCP://SQLVM1.Contoso.com:5022', FAILOVER_MODE = AUTOMATIC, AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, SEEDING_MODE = AUTOMATIC, SECONDARY_ROLE(ALLOW_CONNECTIONS = NO)),
+    N'SQLVM2\MSSQLSERVER' WITH (ENDPOINT_URL = N'TCP://SQLVM2.Contoso.com:5022', FAILOVER_MODE = AUTOMATIC, AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, SEEDING_MODE = AUTOMATIC, SECONDARY_ROLE(ALLOW_CONNECTIONS = NO));
+
+GO
+```
+
   
 > [!NOTE]  
 >  기본 가용성 그룹에 대한 제한 사항은 **WITH BASIC** 가 지정된 경우 **CREATE AVAILABILITY GROUP** 명령에 적용됩니다. 예를 들어, 읽기 액세스를 허용하는 기본 가용성 그룹을 만들려고 하면 오류가 발생합니다. 그 밖의 제한 사항이 동일한 방식으로 적용됩니다. 자세한 내용은 이 문서의 제한 사항 섹션을 참조하십시오.  

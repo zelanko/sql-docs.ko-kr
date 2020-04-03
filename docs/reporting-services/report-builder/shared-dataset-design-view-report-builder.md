@@ -1,5 +1,6 @@
 ---
 title: 공유 데이터 세트 디자인 뷰 (보고서 작성기) | Microsoft Docs
+description: 보고서 작성기에서 공유 데이터 세트 디자인 창을 사용하여 공유할 데이터 세트를 만듭니다. 공유 데이터 세트를 여러 보고서에서 사용할 수 있도록 보고서 서버에 게시합니다.
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: be5689ab2d098fab41bc8e73acb6e945991c4e6f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ece66b7fbe027f8119bb8703df58ca94098ed515
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190034"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290781"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>공유 데이터 세트 디자인 뷰(보고서 작성기)
   보고서에서 데이터 세트는 외부 데이터 원본에 대해 쿼리를 실행할 때 반환되는 보고서 데이터를 나타냅니다. 공유 데이터 세트는 보고서 서버에 게시되며 여러 보고서에서 사용할 수 있습니다. 다른 사용자와 공유할 데이터 세트를 만들 수 있습니다. 공유 데이터 세트 디자인 창에서 공유 데이터 원본을 선택하고, 공유 데이터 세트에 대한 속성을 지정하고, 쿼리 디자이너를 통해 쿼리를 만듭니다.  
@@ -22,7 +23,7 @@ ms.locfileid: "74190034"
   
  보고서에서 데이터 작업에 대한 자세한 내용은 [보고서 데이터 세트&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)을 참조하세요.  
   
-##  <a name="Ribbon"></a> 리본  
+##  <a name="the-ribbon"></a><a name="Ribbon"></a> 리본  
  리본은 태스크를 완료하는 데 필요한 명령을 빠르게 찾을 수 있도록 도와줍니다. 명령은 연결, 데이터 세트, 쿼리 디자이너 같은 논리 그룹에 구성됩니다.  
   
 ### <a name="connection"></a>연결  
@@ -58,7 +59,7 @@ ms.locfileid: "74190034"
  자세한 내용은 [외부 데이터 원본의 데이터 추가&#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)에서 데이터 원본 유형에 해당하는 항목을 참조하세요.  
   
   
-##  <a name="DesignSurface"></a> 쿼리 디자이너 화면  
+##  <a name="the-query-designer-surface"></a><a name="DesignSurface"></a> 쿼리 디자이너 화면  
  쿼리 디자이너를 사용하면 외부 데이터 원본에 필요한 구문으로 쿼리를 작성할 수 있습니다.  
   
  일부 데이터 원본 유형은 외부 데이터 원본의 메타데이터를 탐색하는 데 사용할 수 있는 그래픽 쿼리 디자이너를 제공합니다. 메타데이터 창에서 이름을 쿼리 디자인 화면으로 대화형으로 끌어 오거나 사용할 이름을 대화형으로 선택할 수 있습니다.  
@@ -68,7 +69,7 @@ ms.locfileid: "74190034"
  각 데이터 원본 유형은 외부 데이터 원본에서 작동하는 쿼리에 대한 특정 요구 사항이 있습니다. 자세한 내용은 [외부 데이터 원본의 데이터 추가&#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) 및 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)에서 데이터 원본 유형에 해당하는 항목을 참조하세요.  
   
   
-##  <a name="Results"></a> 쿼리 결과 보기  
+##  <a name="viewing-query-results"></a><a name="Results"></a> 쿼리 결과 보기  
  보고서가 처리될 때 데이터 연결에서 데이터를 검색하는 쿼리를 공유 데이터 세트 디자인 뷰에서 작성합니다.  
   
  쿼리를 실행하여 데이터 연결의 예제 데이터를 검토하여 쿼리가 예상되는 데이터 형식을 반환하는지 확인합니다. 결과 집합의 열은 데이터 연결의 데이터 스키마에 대한 메타데이터에서 가져온 것입니다. 열 이름은 데이터 세트 필드 컬렉션이 됩니다. 쿼리 결과 집합에 표시되는 데이터 값은 디자인 타임 데이터입니다. 공유 데이터 세트를 보고서 서버에 공유 데이터 세트 정의로 저장하면 쿼리 텍스트만 저장됩니다. 쿼리 결과 집합의 데이터는 저장되지 않습니다.  
@@ -85,7 +86,7 @@ ms.locfileid: "74190034"
  자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)에 대해 자세히 알아봅니다.  
   
   
-##  <a name="Save"></a> 공유 데이터 세트 저장  
+##  <a name="saving-the-shared-dataset"></a><a name="Save"></a> 공유 데이터 세트 저장  
  작성한 쿼리를 저장하려면 **보고서 작성기** 단추에서 **저장** 또는 **다른 이름으로 저장**을 클릭합니다. 보고서 서버에서 해당 폴더로 이동하고 공유 데이터 세트 정의를 저장합니다. 공유 데이터 세트는 보고서 서버에 저장할 때까지 다른 사용자가 사용할 수 없습니다.  
   
   

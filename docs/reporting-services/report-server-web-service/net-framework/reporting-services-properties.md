@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 속성 | Microsoft Docs
+description: 보고서 서버는 전역 시스템 속성과 개별 항목 속성을 정의합니다. 애플리케이션은 시스템 및 항목 속성에 사용자 정의 속성을 추가할 수 있습니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8c855194-4c20-4ecc-a328-5137d54b560c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 36a105d3220755dd03ff05a50dd403d4bac25d3a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7240bf3e987c5817489035d94879817f5f39569b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62703841"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509714"
 ---
 # <a name="reporting-services-properties"></a>Reporting Services 속성
   보고서 서버에서는 보고서 서버의 전역 시스템 속성 집합 및 보고서 서버 데이터베이스에 저장된 개별 항목과 연결된 항목 속성 집합을 정의합니다. 보고서 서버에서 정의된 속성은 삭제할 수 없으며 읽기 전용인 경우도 있습니다. 애플리케이션에서 추가 사용자 정의 속성을 시스템 및 항목 속성에 추가하여 시스템 속성 및 항목 속성을 확장할 수 있습니다.  

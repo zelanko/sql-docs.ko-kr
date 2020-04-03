@@ -1,25 +1,40 @@
 ---
 title: 릴리스 정보
-titleSuffix: Azure Data Studio
 description: Azure Data Studio 릴리스 정보
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: alayu; sstein
+author: yualan
+ms.author: alayu
+ms.reviewer: maghan, sstein
 ms.custom: seodec18
-ms.date: 02/19/2020
-ms.openlocfilehash: 3b37609f6db3e9dc8fa0d6622574054686552350
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.date: 03/18/2020
+ms.openlocfilehash: 7a510500d16c29971d1a5263c5138ad1981c9401
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78408864"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215482"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio의 릴리스 정보
 
 **[최신 릴리스 다운로드 및 설치](download.md)**
+
+## <a name="march-2020"></a>2020년 3월
+
+2020년 3월 18일 &nbsp; / &nbsp; 버전: 1.16.0 
+
+&nbsp;
+
+| 변경 | 세부 정보 |
+| :----- | :------ |
+| SQL Notebooks에 차트 지원이 추가됨 | 이제 코드 셀에서 SQL 쿼리를 실행할 때 차트를 만들고 저장할 수 있습니다. |
+| Jupyter Book 만들기 환경이 추가됨 | 이제 Notebook을 사용하여 자체 Jupyter Book을 만들 수 있습니다. |
+| Postgres 확장을 위한 AAD 지원이 추가됨 | |
+| 여러 접근성 버그가 수정됨 | [접근성 버그 목록](https://github.com/microsoft/azuredatastudio/issues?page=1&q=is%3Aissue+is%3Aclosed+milestone%3A%22S360+-+Accessibility%22+label%3AA11y_AzureDataStudio) |
+| 1\.42로 VS Code 병합 | 이 릴리스에는 이전 VS Code 릴리스 3개의 VS Code에 대한 업데이트가 포함되어 있습니다. 자세한 내용은 [릴리스 정보](https://code.visualstudio.com/updates/v1_42)를 참조하세요. |
+| 버그 및 이슈 해결 | 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22March+2020%22+is%3Aclosed)를 참조하세요. |
+| &nbsp; | &nbsp; |
 
 ## <a name="february-hotfix"></a>2월(핫픽스)
 
@@ -49,6 +64,7 @@ ms.locfileid: "78408864"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issue"></a>알려진 문제
+
 - macOS Catalina의 사용자는 Azure Data Studio를 마우스 오른쪽 단추로 클릭한 다음, 열기를 클릭해야 합니다.
 
 ## <a name="december-2019-hotfix"></a>2019년 12월(핫픽스)
@@ -98,7 +114,7 @@ ms.locfileid: "78408864"
 | 변경 | 세부 정보 |
 | :----- | :------ |
 | 새로운 SQL Server 2019 지원 | &bull; &nbsp; BDC 배포 마법사를 사용하여 SQL Server 2019 빅 데이터 클러스터 배포 <br/>&bull; &nbsp; 컨트롤러 대시보드를 사용하여 클러스터 상태 관리 <br/>&bull; &nbsp; 보안 ACL 대화 상자를 사용하여 HDFS 액세스 제어 목록 관리 <br/> &bull; &nbsp; HDFS 계층화 대화 상자를 사용하여 탑재 추가 <br/> &bull; &nbsp; 기본 제공 Jupyter Book인 SQL Server 2019 가이드를 사용하여 문제 해결 <br/> &bull; &nbsp; SQL vNext 확장 데이터 가상화 확장으로 이름 변경됨 <br/> &bull; &nbsp; 외부 테이블 마법사에 Teradata 및 Mongo 지원 추가됨|
-| 새로운 Notebook 기능 | &bull; &nbsp; Powershell Notebooks 발표 <br/> &bull; &nbsp; 접을 수 있는 코드 셀 발표 <br/>&bull; &nbsp; Notebooks의 성능 개선 <br/> &bull; &nbsp; 전체 개선 사항 목록은 [여기](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed+label%3A%22Area+-+Notebooks%22)에서 확인할 수 있음 |
+| 새로운 Notebook 기능 | &bull; &nbsp; PowerShell Notebooks 발표 <br/> &bull; &nbsp; 접을 수 있는 코드 셀 발표 <br/>&bull; &nbsp; Notebooks의 성능 개선 <br/> &bull; &nbsp; 전체 개선 사항 목록은 [여기](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed+label%3A%22Area+-+Notebooks%22)에서 확인할 수 있음 |
 | Jupyter Book 발표  | Jupyter Book는 목차에 구성된 전자 필기장 및 markdown 파일의 컬렉션입니다. |
 | 새 SQL Server 배포 마법사  | 이제 다음과 같은 배포에 대한 지원이 포함됩니다. <br/> &bull; &nbsp; Windows의 SQL Server 2019 <br/> &bull; &nbsp; Windows의 SQL Server 2017 <br/> &bull; &nbsp; Docker의 SQL Server 2019 <br/> &bull; &nbsp; Docker의 SQL Server 2017 |
 | 스키마 비교 확장 GA 발표| &bull; &nbsp; SQLCMD 모드 <br/> &bull; &nbsp; 지역화 지원 <br/> &bull; &nbsp; 접근성 수정 <br/> &bull; &nbsp; 보안 버그  |
@@ -144,6 +160,7 @@ ms.locfileid: "78408864"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>알려진 문제
+
 - Notebooks
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Notebook을 잘못 직렬화할 때 드물게 발생
 
@@ -163,6 +180,7 @@ ms.locfileid: "78408864"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>알려진 문제
+
 - Notebooks
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Notebook을 잘못 직렬화할 때 드물게 발생
 
@@ -201,10 +219,9 @@ ms.locfileid: "78408864"
 | 버그 및 이슈 해결 | 이전 Azure Data Studio 릴리스에서는 연결 대화 상자에서 연결할 때 사용자 데이터베이스를 선택하면 결과 개체 탐색기 항목의 범위가 해당 단일 데이터베이스로만 지정되었습니다. 이 릴리스부터 서버 수준 속성도 개체 탐색기에 표시되도록 동작이 변경됩니다. <br/> 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1)를 참조하세요. |
 | &nbsp; | &nbsp; |
 
-
 ## <a name="june-2019"></a>2019년 6월
 
-2019년 6월 6일 &nbsp; / &nbsp; 버전: 1.8.0 
+2019년 6월 6일 &nbsp; / &nbsp; 버전: 1.8.0
 
 &nbsp;
 
@@ -220,6 +237,7 @@ ms.locfileid: "78408864"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>알려진 문제
+
 - Windows용 데이터베이스 관리 도구 확장
     - 연결되지 않은 서버 노드의 속성을 시작할 수 없습니다.
     - Azure 서버의 속성을 시작할 수 없습니다.

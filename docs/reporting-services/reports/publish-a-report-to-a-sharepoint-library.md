@@ -1,5 +1,6 @@
 ---
 title: SharePoint 라이브러리에 보고서 게시 | Microsoft Docs
+description: 보고서 디자이너에서 프로젝트 속성을 설정하여 SharePoint 라이브러리에 보고서를 게시하는 방법을 알아봅니다.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1b10c9dbfa67a632ce007c1406f8b806a03475b4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 093837d7d7d2c6833b4c7dce8fabbf554d634290
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65571044"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510114"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>SharePoint 라이브러리에 보고서 게시
   SharePoint 통합용으로 구성된 SharePoint 사이트에 보고서를 게시하려면 보고서 디자이너에서 프로젝트 속성을 설정해야 합니다. 프로젝트 속성에서 서버, 보고서 및 공유 데이터 원본에 대한 모든 참조는 정규화된 URL이어야 합니다. 보고서 정의에서 하위 보고서, 드릴스루 보고서 및 리소스(예: 웹 기반 이미지)에 대한 모든 참조는 정규화된 URL이어야 합니다.  

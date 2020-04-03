@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 6b00c445f75c4cdc36e34d471b01d4fa56f81f9e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 90c7c7863228ce210e56e76ab3e12c77e7ccc902
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/30/2020
-ms.locfileid: "70963584"
+ms.locfileid: "80407934"
 ---
 각 가용성 그룹에는 하나의 주 복제본만 있습니다. 주 복제본은 읽기 및 쓰기를 허용합니다. 주 복제본을 변경하기 위해 장애 조치(failover)를 수행할 수 있습니다. 고가용성을 위한 가용성 그룹에서 클러스터 관리자는 장애 조치 프로세스를 자동화합니다. 클러스터 형식이 NONE인 가용성 그룹에서 장애 조치(failover) 프로세스는 수동입니다. 
 
@@ -68,7 +68,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
 
 3. `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`을 1로 업데이트합니다.
 
-   다음 스크립트에서는 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 가용성 그룹에서 `ag1`을 1로 설정합니다. 다음 스크립트를 실행하기 전에 `ag1`을 가용성 그룹의 이름으로 바꿉니다.
+   다음 스크립트에서는 `ag1` 가용성 그룹에서 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`을 1로 설정합니다. 다음 스크립트를 실행하기 전에 `ag1`을 가용성 그룹의 이름으로 바꿉니다.
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -76,19 +76,26 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
    ```
 
    이 설정은 모든 활성 트랜잭션이 주 복제본과 적어도 하나의 동기 보조 복제본에 커밋되었는지 확인합니다. 
-
-4. 주 복제본을 보조 복제본으로 강등합니다. 주 복제본이 강등되면 읽기 전용입니다. 역할을 `SECONDARY`로 업데이트하려면 주 복제본을 호스팅하는 SQL Server 인스턴스에서 이 명령을 실행합니다.
-
+   >[!NOTE]
+   >이 설정은 장애 조치에만 적용되는 것이 아니며, 환경 요구 사항에 따라 설정해야 합니다.
+   
+4. 역할 변경에 작업에 대한 준비로, 주 복제본을 오프라인으로 전환합니다.
    ```SQL
-   ALTER AVAILABILITY GROUP [ag1] 
-        SET (ROLE = SECONDARY); 
+   ALTER AVAILABILITY GROUP [ag1] OFFLINE
    ```
 
 5. 대상 보조 복제본을 주 복제본으로 승격합니다. 
 
    ```SQL
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
-   ```  
+   ``` 
+
+6. 주 복제본을 호스팅하는 SQL Server 인스턴스에서 다음 명령을 실행하여 기존 주 복제본의 역할을 `SECONDARY`로 업데이트합니다.
+
+   ```SQL
+   ALTER AVAILABILITY GROUP [ag1] 
+        SET (ROLE = SECONDARY); 
+   ```
 
    > [!NOTE] 
    > 가용성 그룹 사용을 삭제하려면 [DROP AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/drop-availability-group-transact-sql)을 사용합니다. NONE 또는 EXTERNAL 클러스터 형식을 사용하여 만든 가용성 그룹의 경우 가용성 그룹의 일부인 모든 복제본에서 명령을 실행합니다.

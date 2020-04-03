@@ -1,5 +1,6 @@
 ---
 title: 일괄 처리 메서드 | Microsoft Docs
+description: Reporting Services에서 SOAP 헤더를 사용하여 단일 작업에 여러 웹 서비스 메서드를 포함시키는 방법을 알아봅니다.
 ms.date: 03/04/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 86435534-c9fe-4b49-b88c-7fb6d21976b0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bcafb334e32a1b98d10c57d8f31fe321d0b7f182
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: dcc18839d2e10a35a35289a5950cab566afea23a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62991484"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215593"
 ---
 # <a name="batching-methods"></a>일괄 처리 메서드
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 SOAP 헤더를 사용하면 단일 작업에 여러 웹 서비스 메서드를 포함시킬 수 있습니다. 메서드는 호출된 순서대로 단일 데이터베이스 트랜잭션의 범위 내에서 실행됩니다.  

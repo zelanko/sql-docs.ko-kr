@@ -1,6 +1,6 @@
 ---
 title: 장애 조치(failover) 클러스터 인스턴스 - SQL Server on Linux
-description: ''
+description: Linux의 SQL Server 장애 조치(failover) 클러스터 인스턴스와 관련된 개념에는 클러스터링 레이어, 인스턴스 개수, IP 주소와 이름, 공유 스토리지 등이 있습니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +8,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 81d283ba02ec62a2de8d3c8f0e56be8c55d58190
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 59cc941e9ea278bc0e6e679c0691fcf7b65bce2b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68032395"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216227"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>장애 조치(failover) 클러스터 인스턴스 - SQL Server on Linux
 

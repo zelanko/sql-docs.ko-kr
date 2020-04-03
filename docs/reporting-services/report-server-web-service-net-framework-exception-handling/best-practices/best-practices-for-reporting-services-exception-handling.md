@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 예외 처리에 관한 모범 사례 | Microsoft Docs
+description: 예외를 throw하지 않는 오류 사례를 처리하는 방법을 비롯해 Reporting Services 예외 처리 모범 사례를 알아봅니다.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 72fecf28-f02e-4338-b50f-0b21f520302d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c6e59ea3edb968182091b1b6496d47e9adb4d4be
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 06337dde035804436989c392724c85a7b72b78dc
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63151112"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216402"
 ---
 # <a name="best-practices-for-reporting-services-exception-handling"></a>Reporting Services 예외 처리를 위한 최상의 방법
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 애플리케이션을 개발할 때 예외 발생을 없애거나 줄이기 위해 사용할 수 있는 방법이 다수 있습니다. 예외가 발생하면 사용자에게 간단 명료한 오류 메시지를 제공하고 적절한 예외 처리를 추가하여 애플리케이션이 갑자기 종료되지 않도록 합니다.  

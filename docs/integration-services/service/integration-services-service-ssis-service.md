@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 15da54550dd314a50d4c3235a77394292d23f1d9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c2350410fe4aa70a9091314034a849a2ed8c4e18
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71296943"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216912"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 서비스(SSIS 서비스)
 
@@ -85,7 +85,7 @@ ms.locfileid: "71296943"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스를 중지한 후에도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사, [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너, 패키지 실행 유틸리티 및 **dtexec** 명령 프롬프트 유틸리티(dtexec.exe)를 사용하여 패키지를 계속 실행할 수 있습니다. 그러나 실행 중인 패키지는 모니터링할 수 없습니다.  
   
- 기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 NETWORK SERVICE 계정의 컨텍스트에서 실행됩니다.  
+ 기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 NETWORK SERVICE 계정의 컨텍스트에서 실행됩니다. NETWORK SERVICE 계정과 같이 제한적인 권한을 갖는 계정으로 SQL Server Integration Services 서비스를 실행하는 것이 좋습니다. 높은 권한을 갖는 계정으로 SQL Server Integration Services 서비스를 실행하면 보안 위험이 발생할 수 있습니다. 
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 이벤트를 Windows 이벤트 로그에 기록합니다. 서비스 이벤트는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 볼 수 있습니다. 또한 Windows 이벤트 뷰어를 사용하여 서비스 이벤트를 볼 수도 있습니다.  
   

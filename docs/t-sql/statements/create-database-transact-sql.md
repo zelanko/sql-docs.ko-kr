@@ -2,7 +2,7 @@
 title: CREATE DATABASE(Transact-SQL) | Microsoft Docs
 description: SQL Server, Azure SQL Database, Azure Synapse Analytics 및 Analytics Platform System의 데이터베이스 구문 만들기
 ms.custom: ''
-ms.date: 02/07/2020
+ms.date: 03/16/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b809d3512c16a366f8f4add88cf8a0b091156d2
-ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
+ms.openlocfilehash: 1e20a18a405bc0bf2bf8fe94926d5bf4a6cb30ec
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77074484"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448417"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -75,7 +75,7 @@ SQL Server에서 이 문은 새 데이터베이스 및 사용되는 파일과 �
 
 데이터베이스 만들기
 
-```sql
+```syntaxsql
 CREATE DATABASE database_name
 [ CONTAINMENT = { NONE | PARTIAL } ]
 [ ON
@@ -134,7 +134,7 @@ FILEGROUP filegroup name [ [ CONTAINS FILESTREAM ] [ DEFAULT ] | CONTAINS MEMORY
 
 데이터베이스 연결
 
-```sql
+```syntaxsql
 CREATE DATABASE database_name
     ON <filespec> [ ,...n ]
     FOR { { ATTACH [ WITH <attach_database_option> [ , ...n ] ] }
@@ -151,7 +151,7 @@ CREATE DATABASE database_name
 
 데이터베이스 스냅샷 만들기
 
-```sql
+```syntaxsql
 CREATE DATABASE database_snapshot_name
     ON
     (
@@ -432,7 +432,7 @@ AS SNAPSHOT OF *source_database_name* 만들고 있는 데이터베이스를 *so
 
 하나의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스당 최대 32,767개의 데이터베이스를 지정할 수 있습니다.
 
-각 데이터베이스에는 해당 데이터베이스에서 특수한 작업을 수행할 수 있는 소유자가 있습니다. 소유자는 데이터베이스를 만든 사용자입니다. [sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)를 사용하여 데이터베이스 소유자를 변경할 수 있습니다.
+각 데이터베이스에는 해당 데이터베이스에서 특수한 작업을 수행할 수 있는 소유자가 있습니다. 소유자는 데이터베이스를 만든 사용자입니다. [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)를 사용하여 데이터베이스 소유자를 변경할 수 있습니다.
 
 일부 데이터베이스 기능은 파일 시스템의 기능이 있어야 데이터베이스의 모든 기능을 사용할 수 있습니다. 파일 시스템 기능 집합이 필요한 일부 기능의 예를 들면 다음과 같습니다.
 
@@ -837,7 +837,7 @@ GO
 - [데이터베이스 분리 및 연결](../../relational-databases/databases/database-detach-and-attach-sql-server.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)
-- [sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)
+- [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)
 - [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)
 - [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)
 - [데이터베이스 스냅샷](../../relational-databases/databases/database-snapshots-sql-server.md)
@@ -864,7 +864,7 @@ GO
 
 ### <a name="create-a-database"></a>데이터베이스 만들기
 
-```sql
+```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 {
   (<edition_options> [, ...n])
@@ -900,7 +900,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 ### <a name="copy-a-database"></a>데이터베이스 복사
 
-```
+```stntaxsql
 CREATE DATABASE database_name
     AS COPY OF [source_server_name.] source_database_name
     [ ( SERVICE_OBJECTIVE =
@@ -1230,7 +1230,7 @@ Azure SQL Database Managed Instance에서 이 문은 데이터베이스를 만�
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 [;]
 ```
@@ -1300,7 +1300,7 @@ Azure Synapse에서 이 문을 Azure SQL Database 서버와 함께 사용하여 
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 (
     [ MAXSIZE = {
@@ -1411,7 +1411,7 @@ Analytics Platform System에서 이 문은 Analytics Platform System 어플라�
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 CREATE DATABASE database_name
 WITH (
     [ AUTOGROW = ON | OFF , ]

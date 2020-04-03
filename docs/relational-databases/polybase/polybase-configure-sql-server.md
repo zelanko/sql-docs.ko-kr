@@ -1,5 +1,6 @@
 ---
 title: '외부 데이터 액세스: SQL Server - PolyBase'
+description: SQL Server 인스턴스에서 PolyBase를 사용하여 다른 SQL Server 인스턴스에 있는 외부 데이터를 쿼리하는 방법을 알아봅니다. 외부 데이터를 참조하는 외부 테이블을 만듭니다.
 ms.date: 12/13/2019
 ms.custom: seo-lt-2019
 ms.prod: sql
@@ -9,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: fa0a133e7a2c966798c168a74841350702b54295
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 17fd981feb92e75bb875a2b40bfd8fe5831f02c8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75252321"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215805"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>SQL Server의 외부 데이터에 액세스하도록 PolyBase 구성
 

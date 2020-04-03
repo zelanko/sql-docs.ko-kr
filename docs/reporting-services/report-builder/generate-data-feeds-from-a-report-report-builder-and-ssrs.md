@@ -1,5 +1,6 @@
 ---
 title: 보고서에서 데이터 피드 생성(보고서 작성기) | Microsoft Docs
+description: 페이지를 매긴 보고서에서 Atom 규격 데이터 피드를 생성할 수 있습니다. 피드는 데이터 피드를 사용할 수 있는 애플리케이션(파워 피벗, Power BI 등)에서 사용할 수 있습니다.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 177dbefd38e00d70a58b283bdeb52d2aa80abf97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6eedf7ae96f41a75a8690162de01473d7e2e5664
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079196"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342798"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>보고서에서 데이터 피드 생성(보고서 작성기 및 SSRS)
 

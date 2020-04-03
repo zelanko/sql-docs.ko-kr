@@ -1,5 +1,6 @@
 ---
 title: Reporting Services의 예외 처리 | Microsoft Docs
+description: 애플리케이션에서 수행할 적절한 다음 동작을 결정할 수 있도록, Reporting Services에서 발생하는 예외를 처리하는 방법을 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1a443432-2db5-48c5-bc29-433b4688082f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7fbf4c9d89d35f4fbb437a41c691f7f8c6578b9b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2e29de3a0c6b622de2abb411f36a815d7071f16d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63028570"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216332"
 ---
 # <a name="handling-exceptions-in-reporting-services"></a>Reporting Services의 예외 처리
   Reporting Services SOAP API 클라이언트 요청을 완료할 수 없는 경우 보고서 서버에서는 호출에 대해 예상된 결과가 아니라 오류를 반환합니다. 호출을 완료할 수 없는 경우 보고서 서버 웹 서비스에 대한 오류가 SOAP **Fault** XML 요소로 반환됩니다. 오류의 주요 설명 요소는 보고서 서버에서 제공하는 모든 오류 정보와 추가 웹 서비스 오류 정보를 포함하는 **detail** 요소입니다. **detail** 요소의 주요 정보는 보고서 서버 오류 코드입니다. 메시지 및 오류 코드를 기준으로 애플리케이션에서 수행할 적절한 다음 동작을 결정할 수 있습니다. SOAP 오류에 대한 자세한 내용은 W3C(World Wide Web 컨소시엄) 웹 사이트 http://www.w3.org/TR/SOAP 을 참조하십시오.  

@@ -1,6 +1,6 @@
 ---
-title: 지원되는 버전 및 버전 업그레이드
-titleSuffix: SQL Server 2017
+title: 지원되는 버전 업그레이드(SQL Server 2017)
+description: SQL Server 2017에 대해 지원되는 버전 업그레이드입니다.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4dba820ec4e353fff15b0695b97f940441caf802
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d3f5721cbbd6d56d4fc5f2510775b050c210c981
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75258830"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434170"
 ---
-# <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>SQL Server 2017에서 지원되는 버전 및 버전 업그레이드
+# <a name="supported-version--edition-upgrades-sql-server-2017"></a>지원되는 버전 업그레이드(SQL Server 2017)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -51,7 +51,7 @@ ms.locfileid: "75258830"
  
 -   WOW 모드에서는 장애 조치(Failover) 클러스터가 지원되지 않습니다.  
     
-## <a name="upgrades-from-earlier-versions-to-includesssqlv14-mdincludessssqlv14-mdmd"></a>이전 버전에서 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]로 업그레이드  
+## <a name="upgrades-from-earlier-versions-to-sssqlv14-md"></a>이전 버전에서 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]로 업그레이드  
  
 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]은 다음 버전의 SQL Server에서 업그레이드할 수 있습니다.
  
@@ -112,7 +112,7 @@ ms.locfileid: "75258830"
  \* Microsoft는 특별히 TAP(기술 채택 프로그램)에 참여하는 고객들을 위해 릴리스 후보 소프트웨어에서의 업그레이드를 지원합니다. 
 
    
-###  <a name="SupportFor2005"></a> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]의 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 지원  
+###  <a name="sssqlv14-md-support-for-ssversion2005"></a><a name="SupportFor2005"></a> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]의 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 지원  
  이 섹션에서는 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 에 대한 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]지원에 대해 설명합니다. [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]에서는 다음을 수행할 수 있습니다.  
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스(mdf/ldf 파일)를 데이터베이스 엔진의 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 인스턴스에 연결합니다.  
@@ -145,7 +145,7 @@ ms.locfileid: "75258830"
   
 - 실행 및 업그레이드와 같은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 타사 사용자 지정 Integration Services 구성 요소에 대한 지원  
   
-## <a name="includesssqlv14-mdincludessssqlv14-mdmd-edition-upgrade"></a>[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Edition Upgrade  
+## <a name="sssqlv14-md-edition-upgrade"></a>[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Edition Upgrade  
 다음 표에는 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]에서 지원되는 버전 업그레이드 시나리오가 나열되어 있습니다.  
   
 버전 업그레이드를 수행하는 방법에 대한 단계별 지침은 [다른 SQL Server 버전으로 업그레이드&#40;설치 프로그램&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)를 참조하세요.  
@@ -153,7 +153,7 @@ ms.locfileid: "75258830"
 |업그레이드할 버전|업그레이드 버전|  
 |------------------|----------------|  
 |[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise(Server+CAL 및 코어)**|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise |  
-|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Evaluation Enterprise**|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise(Server+CAL 또는 코어 라이선스) <br/><br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Developer <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Web <br/> <br/> Evaluation(무료 버전)에서 유료 버전으로 업그레이드할 경우 독립 실행형 설치는 지원되지만 클러스터형 설치는 지원되지 않습니다.|  
+|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Evaluation Enterprise**|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise(Server+CAL 또는 코어 라이선스) <br/><br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Developer <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Web <br/> <br/> Evaluation(무료 버전)에서 유료 버전으로 업그레이드할 경우 독립 실행형 설치는 지원되지만 클러스터형 설치는 지원되지 않습니다. 가용성 그룹에 참여하는 Windows 장애 조치(failover) 클러스터에 설치된 독립 실행형 인스턴스에는 이 제한이 적용되지 않습니다.|  
 |[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard**|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise(Server+CAL 또는 코어 라이선스)|  
 |[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Developer**|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise(Server+CAL 또는 코어 라이선스) <br/><br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Web <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard|  
 |[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Web|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise(Server+CAL 또는 코어 라이선스) <br/><br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard|  

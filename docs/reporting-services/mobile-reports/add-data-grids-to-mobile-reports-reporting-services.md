@@ -1,5 +1,6 @@
 ---
 title: 모바일 보고서에 데이터 표 추가 | Reporting Services | Microsoft Docs
+description: SQL Server 모바일 보고서 게시자의 표에 데이터를 표시할 수 있습니다. 간단한 데이터 표, 표시기 데이터 표 또는 차트 데이터 표를 선택합니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2658eb0eec1bd99c4e4503e8d8ae8894638e8c23
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 403e6b3873b93dace3f124eb5931143e8dd4b322
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63280446"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448313"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>모바일 보고서에 데이터 표 추가 | Reporting Services
 경우에 따라 가장 적합한 시각화는 데이터 자체입니다. *에 데이터를 표시하기 위해 다음 세 가지*데이터 표 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]또는 테이블에 대해 알아봅니다.

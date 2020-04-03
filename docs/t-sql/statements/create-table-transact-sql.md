@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7e90aea4fc05a01f67527e33cac4ba90913405c7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 5c95568167d1a783ed8d605bc64bc60a135046f0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287667"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80380674"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE(Transact-SQL)
 
@@ -69,7 +69,7 @@ ms.locfileid: "79287667"
 ```
 -- Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
-    { database_name.schema_name.table_name. | schema_name.table_name | table_name }
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition> } [ ,...n ] )
 [ ; ]
 ```
@@ -956,7 +956,7 @@ CREATE TABLE을 사용하여 분할된 테이블을 만들기 전에 테이블�
 - FOREIGN KEY 제약 조건은 같은 서버의 같은 데이터베이스 내에 있는 테이블만 참조할 수 있습니다. 상호 데이터베이스 참조 무결성은 트리거를 통해 구현해야 합니다. 자세한 내용은 [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)를 참조하세요.
 - FOREIGN KEY 제약 조건은 같은 테이블에 있는 다른 열을 참조할 수 있습니다. 이것을 자체 참조라고 합니다.
 - 열 수준 FOREIGN KEY 제약 조건의 REFERENCES 절은 참조 열을 하나만 나열할 수 있습니다. 이 열의 데이터 형식은 제약 조건이 정의된 열의 데이터 형식과 같아야 합니다.
-- 테이블 수준 FOREIGN KEY 제약 조건의 REFERENCES 절에는 제약 조건 열 목록의 열 개수와 같은 수의 참조 열이 있어야 합니다. 각 참조 열의 데이터 형식도 열 목록의 해당 열과 같아야 합니다.
+- 테이블 수준 FOREIGN KEY 제약 조건의 REFERENCES 절에는 제약 조건 열 목록의 열 개수와 같은 수의 참조 열이 있어야 합니다. 각 참조 열의 데이터 형식도 열 목록의 해당 열과 같아야 합니다. 참조 열은 기본 키의 열을 지정할 때 또는 참조 테이블에서 고유 제약 조건을 지정할 때 사용된 순서와 동일한 순서로 지정해야 합니다.
 - **timestamp** 유형의 열이 외래 키 또는 참조 키의 일부인 경우에는 CASCADE, SET NULL 또는 SET DEFAULT를 지정할 수 없습니다.
 - CASCADE, SET NULL, SET DEFAULT 및 NO ACTION은 서로 참조 관계를 가진 테이블에서 결합될 수 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 NO ACTION을 발견하면 관련된 CASCADE, SET NULL 및 SET DEFAULT 동작을 멈추고 롤백합니다. DELETE 문으로 CASCADE, SET NULL, SET DEFAULT 및 NO ACTION 동작을 결합하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 NO ACTION을 확인하기 전에 모든 CASCADE, SET NULL 및 SET DEFAULT 동작을 적용합니다.
 - [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 테이블에 포함하여 다른 테이블을 참조하는 FOREIGN KEY 제약 조건의 수나 특정 테이블을 참조하는 다른 테이블 소유의 FOREIGN KEY 제약 조건의 수에 미리 한계를 정의하지 않습니다.

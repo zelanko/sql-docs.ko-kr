@@ -1,5 +1,6 @@
 ---
 title: 사용자 지정 보고서 항목 구현 요구 사항 | Microsoft Docs
+description: 사용자 지정 보고서 항목 구현에 필요한 개발 및 배포 요구 사항에 대해 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cfacd816-00d6-4a3d-be72-1bba6f7f6886
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e25938d690d6e1046d1d0e75ae5a4952b05d4615
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 245164c763cf25ba22389f180acda9535147c721
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73594519"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216975"
 ---
 # <a name="custom-report-item-implementation-requirements"></a>사용자 지정 보고서 항목 구현 요구 사항
   이 항목에서는 사용자 지정 보고서 항목을 개발하고 배포하기 위한 선행 조건에 대해 설명합니다.  

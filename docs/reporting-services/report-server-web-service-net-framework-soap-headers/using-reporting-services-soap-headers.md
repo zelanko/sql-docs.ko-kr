@@ -1,5 +1,6 @@
 ---
 title: Reporting Services SOAP 헤더 사용 | Microsoft Docs
+description: Reporting Services SOAP 헤더를 사용하여 작업을 단일 트랜잭션으로 일괄 처리하고, 세션 상태를 관리하고, 항목의 경로 또는 ID를 기준으로 속성을 검색합니다.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 306d2c06-a25a-40f8-8a35-13dd32e8841e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 99a4ac18003defd2a6b3cffdd4bc1d2955c44816
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7f0cb5dc846e8f1f7e292366c7f938366b53de2d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63026009"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216199"
 ---
 # <a name="using-reporting-services-soap-headers"></a>Reporting Services SOAP 헤더 사용
   SOAP를 사용한 웹 서비스 메서드와의 통신은 표준 형식을 따릅니다. 이 형식의 일부는 XML 문서로 인코딩되는 데이터입니다. XML 문서는 루트 **Envelope** 요소로 구성되고, 이것은 다시 필수 **Body** 요소와 선택적 **Header** 요소로 구성됩니다. **Body** 요소는 메시지 관련 데이터를 포함합니다. 선택적 **Header** 요소는 특정 메시지와 직접 관련되지 않은 추가 정보를 포함할 수 있습니다. **Header** 요소의 각 자식 요소를 SOAP 헤더라고 합니다.  
@@ -33,7 +34,7 @@ ms.locfileid: "63026009"
 |항목|Description|  
 |-----------|-----------------|  
 |[일괄 처리 메서드](../../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md)|<xref:ReportService2005.BatchHeader>를 사용하여 여러 작업을 단일 트랜잭션으로 일괄 처리하는 방법을 설명합니다.|  
-|[실행 상태 식별](../../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SessionHeader**를 사용하여** 에서 세션 상태를 관리하는 방법을 설명합니다.|  
+|[실행 상태 식별](../../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)|**SessionHeader**를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 세션 상태를 관리하는 방법을 설명합니다.|  
 |[GetProperties 메서드에 대한 항목 네임스페이스 설정](../../reporting-services/report-server-web-service-net-framework-soap-headers/setting-the-item-namespace-for-the-getproperties-method.md)|<xref:ReportService2010.ReportingService2010.GetProperties%2A> 메서드 및 <xref:ReportService2010.ItemNamespaceHeader> SOAP 헤더를 사용하여 항목의 경로나 ID를 기반으로 속성을 검색하는 방법을 설명합니다.|  
   
 ## <a name="see-also"></a>참고 항목  

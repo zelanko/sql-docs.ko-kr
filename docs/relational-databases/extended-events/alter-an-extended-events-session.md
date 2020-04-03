@@ -1,5 +1,6 @@
 ---
 title: 확장 이벤트 세션 변경
+description: SQL Server 확장 이벤트 마법사를 사용하여 확장 이벤트 세션을 변경할 수 있습니다. 세션이 활성 및 비활성 상태인지에 따라 적용할 수 있는 변경 내용이 다릅니다.
 ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32a57c46cebb17df257f2002c25ab5f1d7107379
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 1bb15ced32815913f8de0b20a7ce9bf174cbdc68
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75255766"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434020"
 ---
 # <a name="alter-an-extended-events-session"></a>확장 이벤트 세션 변경
 

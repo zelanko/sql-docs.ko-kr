@@ -1,5 +1,6 @@
 ---
 title: PolyBase 모니터링 및 문제 해결 | Microsoft Docs
+description: PolyBase 문제를 해결하려면 여기에서 설명하는 뷰와 DMV를 사용합니다. PolyBase 쿼리 계획을 보고, PolyBase 그룹의 노드를 모니터링하고, Hadoop 이름 노드 고가용성을 설정합니다.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -14,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: edd716b36e8dc7339ab9661a2213afae5ac35379
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 171527b02674a5a02420f5cb002fddd7e7f31ac6
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76909633"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216055"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>PolyBase 모니터링 및 문제 해결
 

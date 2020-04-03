@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2017의 버전 및 지원되는 기능 ~ Linux
+description: 이 문서에서는 SQL Server 2017 on Linux의 다양한 버전에서 지원하는 기능에 대해 설명합니다. 사용 가능한 여러 버전과 구성 요소 중에서 선택하는 데 도움이 됩니다.
 ms.date: 01/14/2020
 ms.prod: sql
 ms.technology: linux
@@ -24,12 +25,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: a652bc56a826469017ba4de643c9d3e1822d4c22
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: c7394bf48f6bc32664e7d0a96af96ac0f3d1116f
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288447"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80402676"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux의 SQL Server 2017 버전 및 지원되는 기능
 
@@ -77,7 +78,7 @@ Developer, Enterprise Core 및 Evaluation Edition에서 지원하는 기능의 �
 
 디벨로퍼 버전은 [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)에 대해 클라이언트 1개만 계속 지원합니다. 
   
-##  <a name="Cross-BoxScaleLimits"></a> 확장 한도  
+##  <a name="scale-limits"></a><a name="Cross-BoxScaleLimits"></a> 확장 한도  
   
 |기능|Enterprise|Standard|웹|Express| 
 |-------------|----------------|--------------|---------|------------------------|
@@ -90,7 +91,7 @@ Developer, Enterprise Core 및 Evaluation Edition에서 지원하는 기능의 �
   
 <sup>1</sup> Server + CAL(클라이언트 액세스 라이선스) 기반 라이선스가 포함된 Enterprise 버전(새 계약에 사용할 수 없음)은 SQL Server 인스턴스마다 최대 20개의 코어로 제한됩니다. 코어 기반 서버 라이선스 모델에서는 제한이 없습니다. 자세한 내용은 [SQL Server의 버전별 컴퓨팅 용량 제한](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)을 참조하세요.  
  
-##  <a name="RDBMSHA"></a> RDBMS 고가용성  
+##  <a name="rdbms-high-availability"></a><a name="RDBMSHA"></a> RDBMS 고가용성  
   
 |기능|Enterprise|Standard|웹|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
@@ -118,7 +119,7 @@ Developer, Enterprise Core 및 Evaluation Edition에서 지원하는 기능의 �
 
 <sup>3</sup> Standard Edition은 기본 가용성 그룹을 지원합니다. 기본 가용성 그룹은 데이터베이스가 하나인 두 개의 복제본을 지원합니다. 기본 가용성 그룹에 대한 자세한 내용은 [기본 가용성 그룹](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)을 참조하세요.    
 
-##  <a name="RDBMSSP"></a> RDBMS 확장성 및 성능  
+##  <a name="rdbms-scalability-and-performance"></a><a name="RDBMSSP"></a> RDBMS 확장성 및 성능  
   
 |기능|Enterprise|Standard|웹|Express|  
 |-------------|----------------|--------------|---------|------------------------| 
@@ -143,7 +144,7 @@ Developer, Enterprise Core 및 Evaluation Edition에서 지원하는 기능의 �
 
 <sup>1</sup> 메모리 내 OLTP 데이터 크기 및 Columnstore 세그먼트 캐시는 크기 조정 제한 섹션에서 버전별로 지정된 메모리 양으로 제한됩니다. 최대 병렬 처리 수준도 제한됩니다. 인덱스 작성의 DOP(프로세스 병렬도)는 Standard Edition의 경우 2DOP, Web, Express Edition의 경우 1DOP로 제한됩니다. 디스크 기반 테이블과 메모리 최적화 테이블에서 생성된 columnstore 인덱스가 해당합니다.
 
-##  <a name="RDBMSS"></a> RDBMS 보안  
+##  <a name="rdbms-security"></a><a name="RDBMSS"></a> RDBMS 보안  
   
 |기능|Enterprise|Standard|웹|Express|
 |-------------|----------------|--------------|---------|------------------------------------| 
@@ -157,7 +158,7 @@ Developer, Enterprise Core 및 Evaluation Edition에서 지원하는 기능의 �
 |포함된 데이터베이스|예|예|예|예| 
 |백업을 위한 암호화|예|예|예|예|  
 
-##  <a name="RDBMSM"></a> RDBMS 관리성  
+##  <a name="rdbms-manageability"></a><a name="RDBMSM"></a> RDBMS 관리성  
   
 |기능|Enterprise|Standard|웹|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
@@ -176,7 +177,7 @@ Developer, Enterprise Core 및 Evaluation Edition에서 지원하는 기능의 �
 |병렬 일관성 검사|예|예|예|예| 
 |SQL Server 유틸리티 제어 지점|예|예|예|예|    
 
-##  <a name="Programmability"></a> Programmability  
+##  <a name="programmability"></a><a name="Programmability"></a> Programmability  
   
 |기능|Enterprise|Standard|웹|Express 
 |-------------|----------------|--------------|---------|------------------------|  
@@ -197,11 +198,11 @@ Developer, Enterprise Core 및 Evaluation Edition에서 지원하는 기능의 �
 
 <sup>1</sup> 여러 컴퓨팅 노드를 사용하는 확장에는 헤드 노드가 필요합니다.
 
-## <a name="IS"></a> Integration Services
+## <a name="integration-services"></a><a name="IS"></a> Integration Services
 
 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 버전에서 지원되는 SSIS(Integration Services) 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Integration Services 기능](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md)을 참조하세요.
 
-##  <a name="SLS"></a> 공간 및 위치 서비스  
+##  <a name="spatial-and-location-services"></a><a name="SLS"></a> 공간 및 위치 서비스  
   
 |기능 이름|Enterprise|Standard|웹|Express|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|
@@ -209,7 +210,7 @@ Developer, Enterprise Core 및 Evaluation Edition에서 지원하는 기능의 �
 |평면 및 측지 데이터 형식|예|예|예|예| 
 |고급 공간 라이브러리|예|예|예|예|   
 |산업 표준 공간 데이터 형식 가져오기/내보내기|예|예|예|예|   
-## <a name="Unsupported"></a> 지원되지 않는 기능 및 서비스
+## <a name="unsupported-features--services"></a><a name="Unsupported"></a> 지원되지 않는 기능 및 서비스
 
 다음 기능 및 서비스는 SQL Server 2017 on Linux에서 사용할 수 없습니다. 이 기능에 대한 지원은 시간이 지나면서 점점 더 활성화됩니다.
 
@@ -228,6 +229,7 @@ Developer, Enterprise Core 및 Evaluation Edition에서 지원하는 기능의 �
 | &nbsp; | 경고 |
 | &nbsp; | 로그 판독기 에이전트 |
 | &nbsp; | 관리되는 백업 |
+| &nbsp; | MSX/TSX를 사용하는 다중 서버 관리 |
 | **고가용성** | 데이터베이스 미러링  |
 | **보안** | 확장 가능 키 관리 |
 | &nbsp; | 연결된 서버의 AD 인증 | 

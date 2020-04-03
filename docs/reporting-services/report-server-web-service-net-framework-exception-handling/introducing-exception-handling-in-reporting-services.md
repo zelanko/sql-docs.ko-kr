@@ -1,5 +1,6 @@
 ---
 title: Reporting Services의 예외 처리 소개 | Microsoft Docs
+description: 오류가 발생한 경우 사용자에게 유용한 정보를 반환할 수 있도록, 보고서 서버 웹 서비스에서 throw하는 예외를 처리하는 방법을 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 54381870-ce67-482b-aa83-6a838cdbf9b9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee084e9d85a1bee21db3994be8b9473daefc7c0f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: edaacc97dae131afbc0a9b9f3651877e4952754d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62992234"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215729"
 ---
 # <a name="introducing-exception-handling-in-reporting-services"></a>Reporting Services의 예외 처리 소개
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션이 보고서 서버 웹 서비스에서 처리할 수 없는 요청을 보낼 경우 이 서비스는 SOAP 예외를 클라이언트에 반환합니다. 보고서 서버 웹 서비스에서 throw된 예외에 대한 처리는 개발하는 애플리케이션에서 중요한 부분입니다. 이러한 처리를 통해 오류 발생 시 사용자에게 유용한 정보를 반환할 수 있기 때문입니다.  

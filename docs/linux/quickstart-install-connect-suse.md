@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 811438987106a5eb73a914e5d7bbceb139cd5c37
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: bb7a6689d2cf6638f2d4e2de078e4e4412225595
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75558637"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487611"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>빠른 시작: SQL Server 설치 및 SUSE Linux Enterprise Server에 데이터베이스 만들기
 
@@ -31,7 +31,7 @@ ms.locfileid: "75558637"
 이 빠른 시작에서는 SLES(SUSE Linux Enterprise Server) v12에 SQL Server 2019를 설치합니다. 그런 다음, **sqlcmd**를 통해 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
 
 > [!IMPORTANT]
-> SQL Server 2019는 SUSE Enterprise Linux Server v12 SP2, SP3 또는 SP4에서 지원됩니다.
+> SQL Server 2019는 SUSE Enterprise Linux Server v12 SP2, SP3, SP4 또는 SP5에서 지원됩니다.
 
 ::: moniker-end
 
@@ -50,7 +50,7 @@ ms.locfileid: "75558637"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-**최소 2GB**의 메모리를 사용하는 SLES v12 SP2, SP3 또는 SP4 머신이 있어야 합니다. 파일 시스템은 **XFS** 또는 **EXT4**여야 합니다. **BTRFS** 등의 다른 파일 시스템은 지원되지 않습니다.
+**최소 2GB**의 메모리를 사용하는 SLES v12 SP2, SP3, SP4 또는 SP5 머신이 있어야 합니다. 파일 시스템은 **XFS** 또는 **EXT4**여야 합니다. **BTRFS** 등의 다른 파일 시스템은 지원되지 않습니다.
 
 ::: moniker-end
 
@@ -66,7 +66,7 @@ ms.locfileid: "75558637"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="install"></a>SQL Server 설치
+## <a name="install-sql-server"></a><a id="install"></a>SQL Server 설치
 
 SLES에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실행하여 **mssql-server** 패키지를 설치합니다.
 
@@ -125,7 +125,7 @@ SLES에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실행
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="install"></a>SQL Server 설치
+## <a name="install-sql-server"></a><a id="install"></a>SQL Server 설치
 
 SLES에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실행하여 **mssql-server** 패키지를 설치합니다.
 
@@ -173,7 +173,7 @@ SLES에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실행
 ::: moniker-end
 
 
-## <a id="tools"></a>SQL Server 명령줄 도구 설치
+## <a name="install-the-sql-server-command-line-tools"></a><a id="tools"></a>SQL Server 명령줄 도구 설치
 
 데이터베이스를 만들려면 SQL Server에서 Transact-SQL 문을 실행할 수 있는 도구와 연결해야 합니다. 다음 단계에서는 SQL Server 명령줄 도구인 [sqlcmd](../tools/sqlcmd-utility.md) 및 [bcp](../tools/bcp-utility.md)를 설치합니다.
 

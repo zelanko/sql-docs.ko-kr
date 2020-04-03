@@ -1,5 +1,6 @@
 ---
 title: Detail 속성 | Microsoft Docs
+description: Reporting Services SoapException 클래스의 Detail 속성에 대해 알아봅니다. 구체적으로, 이 속성을 정의하는 XML 요소에 대해 알아봅니다.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 087f7f6da8882f181c55a187438d4493ec5b1a9b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 929c597fda9b97c5ffdb24a0aed236f68727a3fd
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62991572"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215622"
 ---
 # <a name="detail-property"></a>Detail 속성
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException**클래스의 **Detail** 속성은 다음 XML 구조를 가집니다.  

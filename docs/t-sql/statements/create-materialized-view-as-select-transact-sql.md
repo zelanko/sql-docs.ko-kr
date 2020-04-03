@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: f0f244c15f4183f3214ae28efc2bf3300c571f0e
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.openlocfilehash: 8575a966dba903b17a6c5dcb015eb4471faf28a8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335757"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80290753"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT(Transact-SQL)  
 
@@ -104,7 +104,7 @@ MIN/MAX 집계가 구체화된 뷰 정의의 SELECT 목록에 사용될 경우 �
   GROUP BY i.i_item_sk, i.i_item_id, i.i_category_id
   ```
 
-- 참조되는 기본 테이블에서 UPDATE 또는 DELETE가 나올 경우 구체화된 뷰가 사용하지 않도록 설정됩니다.  INSERT에는 이 제한이 적용되지 않습니다.  구체화된 뷰를 다시 사용하도록 설정하려면 REBUILD를 사용하여 ALTER MATERIALIZED INDEX를 실행합니다.
+- 참조되는 기본 테이블에서 UPDATE 또는 DELETE가 나올 경우 구체화된 뷰가 사용하지 않도록 설정됩니다.  INSERT에는 이 제한이 적용되지 않습니다.  구체화된 뷰를 다시 사용하도록 설정하려면 REBUILD를 사용하여 ALTER MATERIALIZED VIEW를 실행합니다.
   
 ## <a name="remarks"></a>설명
 
@@ -125,7 +125,7 @@ ALTER TABLE SWITCH는 구체화된 뷰에서 참조되는 테이블에서 지원
 |시나리오|구체화된 뷰에 추가할 새 열|주석|  
 |-----------------|---------------|-----------------|
 |COUNT_BIG()이 구체화된 뷰 정의의 SELECT 목록에 없습니다.| COUNT_BIG (*) |구체화된 뷰를 만들면 자동으로 추가됩니다.  추가적인 조치가 필요하지 않습니다.|
-|사용자가 구체화된 뷰 정의의 SELECT 목록에서 SUM(a)을 지정하며, ‘a’는 null 허용 식입니다. |COUNT_BIG (a) |사용자가 구체화된 뷰 정의에서 수동으로 식 'a'를 추가해야 합니다.|
+|사용자가 구체화된 뷰 정의의 SELECT 목록에서 SUM(a)을 지정하며, ‘a’는 null 허용 식입니다. |COUNT_BIG (a) |사용자가 구체화된 뷰 정의에서 수동으로 식 ‘a’를 추가해야 합니다.|
 |사용자가 구체화된 뷰 정의의 SELECT 목록에서 AVG(a)를 지정합니다. 여기서 ‘a’는 식입니다.|SUM(a), COUNT_BIG(a)|구체화된 뷰를 만들면 자동으로 추가됩니다.  추가적인 조치가 필요하지 않습니다.|
 |사용자가 구체화된 뷰 정의의 SELECT 목록에서 STDEV(a)를 지정합니다. 여기서 ‘a’는 식입니다.|SUM(a), COUNT_BIG(a), SUM(square(a))|구체화된 뷰를 만들면 자동으로 추가됩니다.  추가적인 조치가 필요하지 않습니다. |
 | | | |

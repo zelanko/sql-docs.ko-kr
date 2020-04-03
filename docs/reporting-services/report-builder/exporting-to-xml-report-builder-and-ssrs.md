@@ -1,5 +1,6 @@
 ---
 title: XML로 내보내기(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기의 XML 렌더링 확장 프로그램은 페이지를 매긴 보고서를 XML 형식으로 렌더링합니다. XML을 데이터베이스로 가져오거나 메시지로 사용하거나 애플리케이션으로 보낼 수 있습니다.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4ac6d962838191365048b3c41d5a8efd367d8355
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 71e3b5102fa1ff37e7cea22562919b202889ecc3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079312"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342833"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>XML로 내보내기(보고서 작성기 및 SSRS)
   XML 렌더링 확장 프로그램은 페이지가 매겨진 보고서를 XML 형식으로 반환합니다. 보고서의 XML 스키마는 보고서마다 고유하며 데이터만 포함합니다. 레이아웃 정보는 렌더링되지 않으며 페이지 번호는 XML 렌더링 확장 프로그램을 통해 유지되지 않습니다. 이 확장 프로그램에서 생성된 XML은 데이터베이스로 가져오거나 XML 데이터 메시지로 사용하거나 사용자 지정 애플리케이션으로 전송할 수 있습니다.  
@@ -21,7 +22,7 @@ ms.locfileid: "77079312"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportItems"></a> 보고서 항목  
+##  <a name="report-items"></a><a name="ReportItems"></a> 보고서 항목  
  다음 표는 보고서 항목을 렌더링하는 방법을 설명합니다.  
   
 |항목|렌더링 동작|  
@@ -52,7 +53,7 @@ ms.locfileid: "77079312"
 -   이미지, 줄 및 사용자 지정 보고서 항목**Images, lines, and custom report items** 은 무시됩니다.  
   
   
-##  <a name="DataTypes"></a> 데이터 형식  
+##  <a name="data-types"></a><a name="DataTypes"></a> 데이터 형식  
  입력란 요소 또는 특성은 입력란에 표시되는 값에 따라 XSD 데이터 형식이 지정됩니다.  
   
 |입력란 값|지정되는 데이터 형식|  
@@ -68,7 +69,7 @@ ms.locfileid: "77079312"
 |기타|**xsd:string**|  
   
   
-##  <a name="XMLSpecificRenderingRules"></a> XML 관련 렌더링 규칙  
+##  <a name="xml-specific-rendering-rules"></a><a name="XMLSpecificRenderingRules"></a> XML 관련 렌더링 규칙  
  다음 섹션에서는 XML 렌더링 확장 프로그램을 통해 보고서 내의 항목이 어떻게 해석되는지 설명합니다.  
   
 ### <a name="report-body"></a>보고서 본문  
@@ -150,15 +151,15 @@ ms.locfileid: "77079312"
  DataElementOutput 속성 값이 Output이면 반복되는 항목의 머리글이 세부 정보 요소의 자식으로 렌더링됩니다.  
   
   
-##  <a name="CustomFormatsXSLTransformations"></a> 사용자 지정 형식 및 XSL 변환  
+##  <a name="custom-formats-and-xsl-transformations"></a><a name="CustomFormatsXSLTransformations"></a> 사용자 지정 형식 및 XSL 변환  
  XML 렌더링 확장 프로그램에서 만든 XML 파일은 XSLT(XSL 변환)를 사용하여 거의 모든 형식으로 변환할 수 있습니다. 이 기능을 사용하면 기존 렌더링 확장 프로그램에서 지원하지 않는 형식으로도 데이터를 만들 수 있습니다. 사용자 고유의 렌더링 확장 프로그램을 만들기 전에 XML 렌더링 확장 프로그램과 XSLT 사용을 고려해 보십시오.  
   
   
-##  <a name="DuplicateName"></a> 중복 이름  
+##  <a name="duplicate-names"></a><a name="DuplicateName"></a> 중복 이름  
  동일한 범위 내에 데이터 요소 이름이 중복되어 있으면 렌더러를 실행할 때 오류 메시지가 나타납니다.  
   
   
-##  <a name="XSLTTransformations"></a> XSLT 변환  
+##  <a name="xslt-transformations"></a><a name="XSLTTransformations"></a> XSLT 변환  
  XML 렌더러로 서버 쪽 XSLT 변환을 원래 XML 데이터에 적용할 수 있습니다. XSLT를 적용하는 경우 렌더러에서는 원래 XML 데이터 대신 변환된 내용을 출력합니다. 변환은 클라이언트가 아니라 서버 쪽에서 진행됩니다.  
   
  출력에 적용할 XSLT는 보고서의 DataTransform 속성을 사용하여 보고서 정의 파일에 정의하거나 XSLT *DeviceInfo* 매개 변수를 사용하여 정의합니다. 이러한 값 중 하나를 설정하면 XML 렌더러를 사용할 때마다 변환이 일어납니다. 구독을 사용하는 경우에는 RDL DataTransform 속성에 XSLT를 정의해야 합니다.  
@@ -166,7 +167,7 @@ ms.locfileid: "77079312"
  DataTransform 정의 속성과 디바이스 정보 설정을 모두 사용하여 XSLT 파일을 지정한 경우에는 DataTransform에 지정한 XSLT가 먼저 진행된 다음 디바이스 정보 설정을 통해 설정한 XSLT가 적용됩니다.  
   
   
-###  <a name="DeviceInfo"></a> 디바이스 정보 설정  
+###  <a name="device-information-settings"></a><a name="DeviceInfo"></a> 디바이스 정보 설정  
  디바이스 정보 설정을 변경하여 이 렌더러의 다음과 같은 일부 기본 설정을 변경할 수 있습니다.  
   
 -   XML에 적용할 변환(XSLT)  

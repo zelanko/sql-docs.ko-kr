@@ -1,5 +1,6 @@
 ---
 title: 보고서 미리 보기
+description: 프로덕션 환경에 게시하기 전에 SQL Server Reporting Services에서 보고서를 미리 보는 방법을 알아봅니다.
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.technology: reports
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 82559832d11d9461665e89963026a267d9f0554c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: fe2d8ff228978270867780e14053c950690f1f22
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68267494"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510134"
 ---
 # <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)의 보고서 미리 보기
 

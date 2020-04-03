@@ -1,6 +1,6 @@
 ---
 title: Linux에서 데이터베이스 내보내기 및 가져오기
-description: ''
+description: 이 문서에서는 SQL Server Management Studio 및 SqlPackage.exe를 사용하여 SQL Server on Linux에서 데이터베이스를 내보내고 가져오는 방법을 보여 줍니다.
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-ms.openlocfilehash: f99ff799ec91ea455cc37bd994c8555330a8ff0f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 8602f17b88400f7b0dbac6b4015dbfaf6f85fd65
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68105549"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216653"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Windows에서 SSMS 또는 SqlPackage를 사용하여 Linux에서 데이터베이스 내보내기 및 가져오기
 
@@ -62,7 +62,7 @@ ms.locfileid: "68105549"
 
 *.BACPAC 파일을 가져와 지정한 대상 서버에 새 데이터베이스를 만듭니다.
 
-## <a id="sqlpackage"></a> SqlPackage 명령줄 옵션
+## <a name="sqlpackage-command-line-option"></a><a id="sqlpackage"></a> SqlPackage 명령줄 옵션
 
 또한 SSDT(SQL Server Data Tools) 명령줄 도구인 [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx)를 사용하여 BACPAC 파일을 내보내고 가져올 수도 있습니다.
 

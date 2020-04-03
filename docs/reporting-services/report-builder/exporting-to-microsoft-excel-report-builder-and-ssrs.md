@@ -1,5 +1,6 @@
 ---
 title: Microsoft Excel로 내보내기(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기의 Excel 렌더링 확장 프로그램은 페이지를 매긴 보고서를 Microsoft Excel에서 사용할 수 있는 Office Open XML 형식으로 렌더링합니다.
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b067dea118592a58b87a9da50ba31d4ee2897cfe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 865caa0938aa89feacbb5e330eb38f292039446c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079582"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342899"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Microsoft Excel로 내보내기(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel 렌더링 확장 프로그램은 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 형식(.xlsx)으로 렌더링합니다. Excel 렌더링 확장 프로그램에서는 Excel의 열 너비는 보고서의 열 너비를 보다 정확하게 반영합니다.  
@@ -29,7 +30,7 @@ ms.locfileid: "77079582"
 >   
 >  악의적인 스크립트를 실수로 실행하는 위험을 줄이기 위해 신뢰할 수 있는 원본의 렌더링된 보고서만 여세요. 보고서를 안전하게 보호하는 방법에 대한 자세한 내용은 [보고서 및 리소스 보안](../../reporting-services/security/secure-reports-and-resources.md)을 참조하세요.  
   
-##  <a name="ExcelLimitations"></a> Excel 제한 사항  
+##  <a name="excel-limitations"></a><a name="ExcelLimitations"></a> Excel 제한 사항  
  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 은 Excel의 기능 및 해당 파일 형식으로 인해 내보낸 보고서에 대해 제한을 둡니다. 가장 중요한 제한 사항은 다음과 같습니다.  
   
 -   최대 열 너비는 255자 또는 1726.5포인트로 제한됩니다. 렌더러에서는 열 너비가 이 제한값을 초과하지 않는지 여부를 확인하지 않습니다.  
@@ -178,7 +179,7 @@ ms.locfileid: "77079582"
   
  보고서는 행 높이를 명시적으로 설정하기 때문에 기본 행 높이는 Excel로 내보낼 때 자동으로 크기가 조정되는 행에만 영향을 줍니다.  
   
-##  <a name="ReportItemsExcel"></a> Excel에서의 보고서 항목  
+##  <a name="report-items-in-excel"></a><a name="ReportItemsExcel"></a> Excel에서의 보고서 항목  
  사각형, 하위 보고서, 보고서 본문 및 데이터 영역은 Excel 셀의 범위로 렌더링됩니다. 입력란, 이미지, 차트, 데이터 막대, 스파크라인, 지도, 계기 및 표시기는 Excel 셀 하나 안에 렌더링해야 합니다. 보고서의 나머지 부분의 레이아웃에 따라 해당 항목이 병합될 수도 있습니다.  
   
  이미지, 차트, 스파크라인, 데이터 막대, 지도, 계기, 표시기 및 선은 한 개의 Excel 셀 안에 배치되지만 실제로 놓이는 위치는 셀의 모눈 위입니다. 선은 셀 테두리로 렌더링됩니다.  
@@ -192,7 +193,7 @@ ms.locfileid: "77079582"
   
  일치하는 크기를 찾지 못하면 Excel에서는 프린터의 기본 페이지 크기를 사용합니다. 페이지 너비가 페이지 높이보다 작으면 방향이 세로로 설정되고, 그렇지 않으면 방향이 가로로 설정됩니다.  
   
-##  <a name="WorksheetTabNames"></a> 워크시트 탭 이름  
+##  <a name="worksheet-tab-names"></a><a name="WorksheetTabNames"></a> 워크시트 탭 이름  
  보고서를 Excel로 내보낼 때 페이지 나누기로 만들어진 보고서 페이지는 서로 다른 워크시트로 내보내집니다. 보고서에 초기 페이지 이름을 제공한 경우 Excel 통합 문서의 각 워크시트에는 기본적으로 이 이름이 지정됩니다. 이 이름은 워크시트 탭에 나타납니다. 그러나 통합 문서의 각 워크시트에는 고유한 이름이 있어야 하므로 1에서 시작하고 1씩 증가하는 정수는 각 추가 워크시트의 초기 페이지 이름에 추가됩니다. 예를 들어 초기 페이지 이름이 **Sales Report by Fiscal Year**인 경우 두 번째 워크시트의 이름은 **Sales Report by Fiscal Year1**로 지정되고 세 번째 워크시트의 이름은 **Sales Report by Fiscal Year2**로 지정되는 식으로 이름이 지정됩니다.  
   
  페이지 나누기로 만들어진 모든 보고서 페이지에서 새로운 페이지 이름을 제공하는 경우 각 워크시트에는 연결된 페이지 이름이 지정됩니다. 그러나 이러한 페이지 이름은 고유하지 않을 수 있습니다. 페이지 이름이 고유하지 않은 경우 초기 페이지 이름과 동일한 방식으로 워크시트에 이름이 지정됩니다. 예를 들어 두 그룹의 페이지 이름이 **Sales for NW**인 경우 한 워크시트 탭에는 **Sales for NW**라는 이름이 지정되고 다른 워크시트 탭에는 **Sales for NW1**이라는 이름이 지정됩니다.  
@@ -201,7 +202,7 @@ ms.locfileid: "77079582"
   
  Reporting Services에서는 원하는 방식으로 Excel로 내보낼 수 있는 보고서를 만드는 데 도움이 되도록 보고서, 데이터 영역, 그룹 및 사각형에 대해 설정할 속성을 제공합니다. 자세한 내용은 [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)을 참조하세요.  
   
-##  <a name="DocumentProperties"></a> 문서 속성  
+##  <a name="document-properties"></a><a name="DocumentProperties"></a> 문서 속성  
  Excel 렌더러는 Excel 파일에 다음과 같은 메타데이터를 기록합니다.  
   
 |보고서 요소 속성|Description|  
@@ -211,7 +212,7 @@ ms.locfileid: "77079582"
 |Description|Report.Description|  
 |LastSaved|보고서 실행 날짜와 시간을 나타내는 ISO 날짜/시간 값입니다.|  
   
-##  <a name="PageHeadersFooters"></a> 페이지 머리글 및 바닥글  
+##  <a name="page-headers-and-footers"></a><a name="PageHeadersFooters"></a> 페이지 머리글 및 바닥글  
  페이지 머리글은 디바이스 정보 SimplePageHeaders 설정에 따라 각 워크시트 셀 눈금선 위에서 렌더링할 수도 있고, 실제 Excel 워크시트 머리글 섹션에서 렌더링할 수도 있습니다. 기본적으로 머리글은 Excel 워크시트에서 셀 눈금선으로 렌더링됩니다.  
   
  페이지 바닥글은 SimplePageHeaders 설정 값과 상관없이 항상 실제 Excel 워크시트 바닥글 섹션으로 렌더링됩니다.  
@@ -227,7 +228,7 @@ ms.locfileid: "77079582"
   
  Excel에 적용되는 제한 사항 때문에 Excel 머리글/바닥글 섹션에서 렌더링할 수 있는 보고서 항목 유형은 입력란으로만 한정됩니다.  
   
-##  <a name="Interactivity"></a> 상호 작용  
+##  <a name="interactivity"></a><a name="Interactivity"></a> 상호 작용  
  Excel에서는 일부 대화형 요소가 지원됩니다. 다음은 특정 동작에 대한 설명입니다.  
   
 ### <a name="show-and-hide"></a>표시 및 숨기기  
@@ -262,7 +263,7 @@ ms.locfileid: "77079582"
 ### <a name="bookmarks"></a>책갈피  
  입력란의 책갈피 링크는 텍스트를 렌더링하는 셀에서 Excel 하이퍼링크로 렌더링됩니다. 이미지와 차트의 책갈피 링크는 보고서를 렌더링할 때 이미지에 대한 Excel 하이퍼링크로 렌더링됩니다. 책갈피를 클릭하면 책갈피가 설정된 보고서 항목을 렌더링한 위치의 Excel 셀로 이동합니다.  
   
-##  <a name="ConditionalFormat"></a> 런타임에 보고서 변경  
+##  <a name="changing-reports-at-run-time"></a><a name="ConditionalFormat"></a> 런타임에 보고서 변경  
  보고서를 여러 형식으로 렌더링해야 하는데 원하는 방식과 필요한 모든 형식으로 렌더링하는 보고서 레이아웃을 만들 수 없는 경우에는 기본 제공 전역 변수인 RenderFormat의 값을 사용하여 런타임에 보고서 모양을 조건부로 변경하는 것이 좋습니다. 이렇게 하면 사용되는 렌더러에 따라 보고서 항목을 숨기거나 표시할 수 있어 각 형식에서 최상의 결과를 얻을 수 있습니다. 자세한 내용은 [기본 제공 Globals 및 Users 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

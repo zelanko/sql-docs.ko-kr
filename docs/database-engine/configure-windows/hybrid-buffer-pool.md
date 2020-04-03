@@ -11,12 +11,12 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: 1d1e595918b33ae4fcc11cd59bf0964b2e6d919c
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.openlocfilehash: e2aafb77145fbe22a980ef158cfa7c78db6288d2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79112284"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216262"
 ---
 # <a name="hybrid-buffer-pool"></a>하이브리드 버퍼 풀
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,9 +96,7 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 Windows에서 PMEM 디바이스를 포맷할 때 NTFS에 가능한 가장 큰 할당 단위 크기(Windows Server 2019에서 2MB)를 사용하고 디바이스에서 DAX(Direct Access)에 적합하게 포맷되었는지 확인합니다.
 
-[추적 플래그 834](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 통해 사용하도록 설정할 수 있는 큰 페이지 메모리 할당 모델을 사용합니다. 추적 플래그 834는 시작 추적 플래그입니다.
-
-큰 페이지 메모리 할당 모델을 사용하려면 Windows에서 [메모리의 잠긴 페이지](./enable-the-lock-pages-in-memory-option-windows.md)를 사용해야 합니다.
+Windows에서 [메모리의 잠긴 페이지](./enable-the-lock-pages-in-memory-option-windows.md)를 사용합니다.
 
 파일 크기가 2MB의 배수여야 합니다(modulo 2MB가 0이어야 함).
 

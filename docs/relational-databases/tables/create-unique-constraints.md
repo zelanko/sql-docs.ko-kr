@@ -1,7 +1,7 @@
 ---
 title: UNIQUE 제약 조건 만들기 | Microsoft 문서
 ms.custom: ''
-ms.date: 10/12/2016
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,17 +17,20 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4a35a937411a83b9dd27f4ab1673c9a892cf615b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d66d2e0f2ddacb06e5313c6f5a5ee11fefaf2640
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72907918"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448191"
 ---
 # <a name="create-unique-constraints"></a>UNIQUE 제약 조건 만들기
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 UNIQUE 제약 조건을 만들어서 기본 키에 참여하지 않는 특정 열에 입력하는 값이 중복되지 않도록 할 수 있습니다. UNIQUE 제약 조건을 만들면 해당하는 고유 인덱스가 자동으로 만들어집니다.  
+  
+> [!NOTE]    
+> Azure Synapse Analytics의 UNIQUE 제약 조건에 대한 자세한 내용은 [Azure Synapse Analytics의 기본 키, 외래 키 및 고유 키](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-table-constraints)를 참조하세요.
   
  **항목 내용**  
   
@@ -41,14 +44,14 @@ ms.locfileid: "72907918"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-create-a-unique-constraint"></a>UNIQUE 제약 조건을 만들려면  
   
@@ -60,9 +63,9 @@ ms.locfileid: "72907918"
   
 4.  **일반**아래의 표에서 **형식** 을 선택하고 속성 오른쪽에 있는 드롭다운 목록 상자에서 **고유 키** 를 선택합니다.  
   
-5.  **파일** 메뉴에서 **테이블 이름**_저장_을 클릭합니다.  
+5.  **파일** 메뉴에서 _테이블 이름_**저장**을 클릭합니다.  
 
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-create-a-unique-constraint"></a>UNIQUE 제약 조건을 만들려면  
   

@@ -9,12 +9,12 @@ ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2afc9fce446d277422c564330c5cc7db254f2d00
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 481e0170e14b978f9fa26689a71383d981313a57
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75252003"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215383"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>빅 데이터 클러스터에 HDFS 계층화를 위한 ADLS Gen2를 탑재하는 방법
 
@@ -27,13 +27,13 @@ ms.locfileid: "75252003"
   - **azdata**
   - **kubectl**
 
-## <a id="load"></a> Azure Data Lake Storage에 데이터 로드
+## <a name="load-data-into-azure-data-lake-storage"></a><a id="load"></a> Azure Data Lake Storage에 데이터 로드
 
 다음 섹션에서는 HDFS 계층화 테스트를 위해 Azure Data Lake Storage Gen2를 설정하는 방법을 설명합니다. Azure Data Lake Storage에 데이터가 이미 저장되어 있는 경우, 이 섹션을 건너뛰고 해당 데이터를 사용할 수 있습니다.
 
-1. [Data Lake Storage Gen2 기능을 사용하여 스토리지 계정을 만듭니다](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account).
+1. [Data Lake Storage Gen2 기능을 사용하여 스토리지 계정을 만듭니다](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
-1. 이 스토리지 계정에서 외부 데이터에 사용할 [Blob 컨테이너/파일 시스템을 만듭니다](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal).
+1. 이 스토리지 계정에 데이터에 사용할 [파일 시스템을 만듭니다](/azure/storage/blobs/data-lake-storage-explorer).
 
 1. CSV 또는 Parquet 파일을 컨테이너에 업로드합니다. 이 파일이 빅 데이터 클러스터의 HDFS에 탑재되는 외부 HDFS 데이터입니다.
 
@@ -48,7 +48,7 @@ OAuth 자격 증명을 사용하여 탑재하려면 아래 단계를 수행해�
 1. 오른쪽 탐색 모음에서 “앱 등록”을 선택하고 새 등록을 만듭니다.
 1. “웹 애플리케이션”을 만들고 마법사를 따릅니다. **여기서 만든 앱의 이름을 기억해 두세요**. 이 이름을 권한 있는 사용자로 ADLS 계정에 추가해야 합니다. 앱을 선택할 때 개요에 표시되는 애플리케이션 클라이언트 ID도 기억해 두세요.
 1. 웹 애플리케이션이 생성되면 “인증서 및 암호”로 이동해서 **새 클라이언트 암호**를 만들고 키 지속 기간을 선택합니다. 암호를 **추가**합니다.
-1.  앱 등록 페이지로 돌아가서 맨 위의 “엔드포인트”를 클릭합니다. **“OAuth 토큰 엔드포인트(v2)** URL을 기록해 둡니다.
+1.     앱 등록 페이지로 돌아가서 맨 위의 “엔드포인트”를 클릭합니다. **“OAuth 토큰 엔드포인트(v2)”** URL을 기록해 둡니다.
 1. 이제 OAuth에 대해 적어 둔 다음 정보를 보유하고 있습니다.
 
     - 웹 애플리케이션의 “애플리케이션 클라이언트 ID”
@@ -99,7 +99,7 @@ Azure Portal에서 ADLS 계정에 대해 얻을 수 있는 액세스 키를 사�
    fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
    ```
 
-## <a id="mount"></a> 원격 HDFS 스토리지 탑재
+## <a name="mount-the-remote-hdfs-storage"></a><a id="mount"></a> 원격 HDFS 스토리지 탑재
 
 이제 액세스 키 또는 OAuth를 사용하여 MOUNT_CREDENTIALS 환경 변수를 설정했으므로 탑재를 시작할 수 있습니다. 다음 단계에서는 빅 데이터 클러스터의 로컬 HDFS 스토리지에 Azure Data Lake의 원격 HDFS 스토리지를 탑재합니다.
 
@@ -127,7 +127,7 @@ Azure Portal에서 ADLS 계정에 대해 얻을 수 있는 액세스 키를 사�
 
 성공적으로 탑재된 경우 HDFS 데이터를 쿼리하고, 이 데이터에 대해 Spark 작업을 실행할 수 있어야 합니다. 빅 데이터 클러스터의 HDFS에서 `--mount-path`로 지정된 위치에 표시됩니다.
 
-## <a id="status"></a> 탑재 상태 가져오기
+## <a name="get-the-status-of-mounts"></a><a id="status"></a> 탑재 상태 가져오기
 
 빅 데이터 클러스터에 있는 모든 탑재 상태를 나열하려면 다음 명령을 사용합니다.
 
@@ -149,7 +149,7 @@ azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 ```
 
-## <a id="delete"></a> 탑재 삭제
+## <a name="delete-the-mount"></a><a id="delete"></a> 탑재 삭제
 
 탑재를 삭제하려면 **azdata bdc hdfs mount delete** 명령을 사용하고 HDFS의 탑재 경로를 지정합니다.
 

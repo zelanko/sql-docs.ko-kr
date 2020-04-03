@@ -1,5 +1,6 @@
 ---
 title: 보고서 서버에 보고서 저장(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기에서 보고서 서버로 보고서를 게시할 수 있습니다. 게시된 보고서는 다른 사용자가 볼 수 있습니다. 게시된 보고서를 실행할 때마다 최신 데이터가 표시됩니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4e5a622aaca18bed1cda8c4ad8a1a1dec8f91849
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6f16f6e58a227c25a2c631a949a96e73e5aaf8a1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580668"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290805"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>보고서 서버에 보고서 저장(보고서 작성기)
   보고서 작성기에서는 보고서 정의를 보고서 서버에 저장할 수 있습니다(보고서 게시라고도 함). 보고서를 보고서 서버에 저장하면 다른 사용자가 보고서를 볼 수 있습니다. 게시된 보고서를 실행할 때마다 최신 데이터를 검색하게 됩니다. 렌더링된 보고서의 정적 복사본을 저장하려면 보고서를 다른 파일 형식으로 내보내고 저장하거나, 보고서 기록 기능을 사용하여 렌더링된 보고서의 여러 버전을 저장합니다.  

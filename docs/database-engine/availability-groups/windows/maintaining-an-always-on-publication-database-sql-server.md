@@ -2,7 +2,7 @@
 title: 가용성 그룹의 일부로 복제된 게시자 데이터베이스 관리
 description: SQL 복제에서 게시자 역할을 하고 Always On 가용성 그룹에 참여하는 데이터베이스를 관리하고 유지하는 방법에 대한 설명입니다.
 ms.custom: seodec18
-ms.date: 05/17/2016
+ms.date: 05/18/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -13,33 +13,33 @@ helpviewer_keywords:
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7371acd7c96dbf4baa6edf31ca88d1994141663f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 4a9bf2731cf91c18a1c8dfa7ce015b0b7c21d0d3
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75228186"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448421"
 ---
 # <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>Always On 가용성 그룹의 일부로 복제된 게시자 데이터베이스 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 Always On 가용성 그룹을 사용할 경우 게시 데이터베이스 유지 관리와 관련하여 특별히 고려해야 할 사항에 대해 설명합니다.  
   
-##  <a name="MaintainPublDb"></a> 가용성 그룹에서 게시된 데이터베이스 유지 관리  
+##  <a name="maintaining-a-published-database-in-an-availability-group"></a><a name="MaintainPublDb"></a> 가용성 그룹에서 게시된 데이터베이스 유지 관리  
  Always On 게시 데이터베이스를 유지 관리하는 작업은 표준 게시 데이터베이스를 유지 관리하는 작업과 기본적으로 동일하지만 다음 사항을 고려해야 합니다.  
   
 -   관리는 주 복제본 호스트에서 수행되어야 합니다. [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 게시는 **로컬 게시** 폴더 아래에 주 복제본 호스트 및 읽을 수 있는 보조 복제본을 표시됩니다. 읽을 수 없는 보조 복제본이 주 복제본으로 승격된 경우 장애 조치(failover) 후 수동으로 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 를 새로 고쳐 변경 내용을 반영해야 합니다.  
   
 -   복제 모니터는 항상 원래 게시자에서 게시 정보를 표시합니다. 그러나 원래 게시자를 서버로 추가하면 어떤 복제본에서든지 복제 모니터에서 이 정보를 볼 수 있습니다.  
   
--   게시자 이름 지정 등을 위해 저장 프로시저나 RMO(복제 관리 개체)를 사용하여 현재 주 복제본에서 복제를 관리할 때는 복제용으로 설정된 데이터베이스(원래 게시자)에서 인스턴스 이름을 지정해야 합니다. 올바른 이름을 확인하려면 **PUBLISHINGSERVERNAME** 함수를 사용하십시오. 게시 데이터베이스를 가용성 그룹에 조인하면 보조 데이터베이스 복제본에 저장된 복제 메타데이터가 주 데이터베이스 복제본의 복제 메타데이터와 동일해집니다. 따라서 주 서버에서 복제용으로 설정된 게시 데이터베이스의 경우 보조 서버에서 시스템 테이블에 저장된 게시자 인스턴스 이름은 보조 서버가 아닌 주 서버의 이름입니다. 이러한 방식은 게시 데이터베이스가 보조로 장애 조치되는 경우 복제 구성 및 유지 관리에 영향을 줍니다. 예를 들어 장애 조치 후에 보조 서버에서 저장 프로시저를 사용하여 복제를 구성할 때 다른 복제본에서 설정된 게시 데이터베이스에 끌어오기 구독을 추가하려면 **sp_addpullsubscription** 또는 **sp_addmergepulllsubscription**의 *\@publisher* 매개 변수로 현재 게시자 이름이 아닌 원래 게시자 이름을 지정해야 합니다. 그러나 장애 조치 후 게시 데이터베이스를 활성화하면 시스템 테이블에 저장된 게시자 인스턴스 이름이 현재 주 호스트의 이름이 됩니다. 이 경우 *\@publisher* 매개 변수에 대해 현재 주 복제본의 호스트 이름을 사용합니다.  
+-   게시자 이름 지정 등을 위해 저장 프로시저나 RMO(복제 관리 개체)를 사용하여 현재 주 복제본에서 복제를 관리할 때는 복제용으로 설정된 데이터베이스(원래 게시자)에서 인스턴스 이름을 지정해야 합니다. 올바른 이름을 확인하려면 **PUBLISHINGSERVERNAME** 함수를 사용하십시오. 게시 데이터베이스를 가용성 그룹에 조인하면 보조 데이터베이스 복제본에 저장된 복제 메타데이터가 주 데이터베이스 복제본의 복제 메타데이터와 동일해집니다. 따라서 주 서버에서 복제용으로 설정된 게시 데이터베이스의 경우 보조 서버에서 시스템 테이블에 저장된 게시자 인스턴스 이름은 보조 서버가 아닌 주 서버의 이름입니다. 이러한 방식은 게시 데이터베이스가 보조로 장애 조치되는 경우 복제 구성 및 유지 관리에 영향을 줍니다. 예를 들어 장애 조치(failover) 후에 보조 서버에서 저장 프로시저를 사용하여 복제를 구성하는 경우, 다른 복제본에서 사용하도록 설정된 게시 데이터베이스에 대한 끌어오기 구독을 설정하려면 현재 게시자가 아닌 원래 게시자의 이름을 **sp_addpullsubscription** 또는 **sp_addmergepullsubscription**의 *\@publisher* 매개 변수로 지정해야 합니다. 그러나 장애 조치 후 게시 데이터베이스를 활성화하면 시스템 테이블에 저장된 게시자 인스턴스 이름이 현재 주 호스트의 이름이 됩니다. 이 경우 *\@publisher* 매개 변수에 대해 현재 주 복제본의 호스트 이름을 사용합니다.  
   
     > [!NOTE]  
     >  **sp_addpublication** 같은 일부 프로시저의 경우 *\@publisher* 매개 변수는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 이외 게시자에 대해서만 지원되며, 이 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On과는 관련이 없습니다.  
   
 -   장애 조치 후 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 에서 구독을 동기화하려면 구독자에서 끌어오기 구독을 동기화하고 활성 게시자에서 밀어넣기 구독을 동기화합니다.  
   
-##  <a name="RemovePublDb"></a> 가용성 그룹에서 게시된 데이터베이스 제거  
+##  <a name="removing-a-published-database-from-an-availability-group"></a><a name="RemovePublDb"></a> 가용성 그룹에서 게시된 데이터베이스 제거  
  게시된 데이터베이스를 가용성 그룹에서 제거하거나 게시된 멤버 데이터베이스가 있는 가용성 그룹을 삭제할 경우 다음 문제를 고려하세요.  
   
 -   원래 게시자의 게시 데이터베이스를 가용성 그룹 주 복제본에서 제거할 경우 *\@redirected_publisher* 매개 변수 값을 지정하지 않고 **sp_redirect_publisher**를 실행하여 게시자/데이터베이스 쌍에 대한 리디렉션을 제거해야 합니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "75228186"
   
      이때 게시된 데이터베이스의 복사본을 유지하거나 삭제할 수 있습니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [Always On 가용성 그룹에 대한 복제 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  
   

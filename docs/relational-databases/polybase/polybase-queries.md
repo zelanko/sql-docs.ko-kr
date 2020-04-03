@@ -1,5 +1,6 @@
 ---
 title: PolyBase 쿼리 시나리오 | Microsoft Docs
+description: SELECT, 로컬 테이블과 외부 테이블의 JOIN, 데이터 가져오기/내보내기, 새 카탈로그 뷰와 같은 SQL Server의 PolyBase 기능을 사용하는 쿼리 예제를 살펴봅니다.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -17,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: a8912a290723e3f0e1d0a0b951a6a5d1ce04b725
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: aeac57c5ae6facfeb092592c2f3dca851bb9b87b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71710514"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80217103"
 ---
 # <a name="polybase-query-scenarios"></a>PolyBase 쿼리 시나리오
 

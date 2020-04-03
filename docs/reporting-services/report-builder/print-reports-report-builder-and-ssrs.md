@@ -1,5 +1,6 @@
 ---
 title: 보고서 인쇄 | Microsoft Docs
+description: 보고서는 웹 포털에서 또는 내보낸 보고서를 보는 데 사용하는 애플리케이션에서 보고 인쇄할 수 있습니다. 클라이언트 컴퓨터가 요청 시 인쇄를 처리합니다.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4dd9fc438ba1ec30a85119ceef6d5e1503a5ea1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f81be70bf4de9d9f15a3c35d3a3dc4b5c81f2609
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082486"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290887"
 ---
 # <a name="print-reports---reporting-services-ssrs"></a>보고서 인쇄 - Reporting Services(SSRS)
   보고서 서버에 보고서를 저장한 후에는 내보낸 보고서를 보는 데 사용되는 애플리케이션 또는 웹 포털에서 보고서를 보고 인쇄할 수 있습니다. 보고서를 저장하기 전 미리 볼 때 해당 보고서를 인쇄할 수 있습니다.  

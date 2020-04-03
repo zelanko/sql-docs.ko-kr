@@ -1,5 +1,6 @@
 ---
 title: '자습서: 오프라인에서 빠른 차트 보고서 만들기(보고서 작성기) | Microsoft Docs'
+description: 이 자습서에서는 보고서 작성기에서 Reporting Services의 페이지를 매긴 보고서에 원형 차트를 만듭니다. 그런 다음, 백분율을 추가하고 원형 차트를 수정합니다.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 72e6846ef10bc86c1711958e144601d8bff5caac
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 41e26cbdeaa794ebae01371207d7ff7847619dc2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67037965"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290743"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>자습서: 오프라인에서 빠른 차트 보고서 만들기(보고서 작성기)
 
@@ -30,7 +31,7 @@ ms.locfileid: "67037965"
 ## <a name="prerequisites"></a>사전 요구 사항  
  XML 데이터나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 사용하려면 보고서 작성기에 대한 액세스 권한이 있어야 합니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 보고서 서버에서 기본 모드 또는 SharePoint 통합 모드로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 시작하거나 Microsoft 다운로드 센터에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 를 다운로드할 수 있습니다. 자세한 내용은 [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)를 참조하세요.  
   
-##  <a name="TwoWays"></a> 이 자습서에서 수행하는 두 가지 방법  
+##  <a name="two-ways-to-do-this-tutorial"></a><a name="TwoWays"></a> 이 자습서에서 수행하는 두 가지 방법  
   
 -   [XML 데이터로 원형 차트 만들기](#CreatePieChartXML)  
   
@@ -50,7 +51,7 @@ ms.locfileid: "67037965"
   
  [데이터를 포함하는 Transact-SQL 쿼리로 원형 차트 만들기](#CreatePieQueryData)  
   
-##  <a name="CreatePieChartXML"></a> XML 데이터로 원형 차트 만들기  
+##  <a name="creating-the-pie-chart-with-xml-data"></a><a name="CreatePieChartXML"></a> XML 데이터로 원형 차트 만들기  
   
 1.  [웹 포털 또는 SharePoint 통합 모드의 보고서 서버 또는 컴퓨터에서](../../reporting-services/report-builder/start-report-builder.md) 보고서 작성기를 시작 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 합니다.  
   
@@ -137,7 +138,7 @@ ms.locfileid: "67037965"
   
 18. 원형 차트를 계속 수정하려면 이 문서의 [마법사 실행 후 작업](#AfterWizard) 으로 이동하십시오.  
   
-##  <a name="CreatePieQueryData"></a>[!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리로 원형 차트 만들기  
+##  <a name="creating-the-pie-chart-with-a-tsql-query"></a><a name="CreatePieQueryData"></a>[!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리로 원형 차트 만들기  
   
 1.  [웹 포털, SharePoint 통합 모드의 보고서 서버 또는 컴퓨터에서](../../reporting-services/report-builder/start-report-builder.md) 보고서 작성기를 시작 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 합니다.  
   
@@ -187,7 +188,7 @@ ms.locfileid: "67037965"
   
 15. 실제 원형 차트를 보려면 리본 메뉴의 **홈** 탭에서 **실행** 을 클릭합니다.  
  
-##  <a name="AfterWizard"></a> 마법사 실행 후 작업  
+##  <a name="after-you-run-the-wizard"></a><a name="AfterWizard"></a> 마법사 실행 후 작업  
  원형 차트 보고서를 만들었으므로 이제 보고서를 사용할 수 있습니다. 리본 메뉴의 **실행** 탭에서 **디자인**을 클릭하면 계속해서 보고서를 수정할 수 있습니다.  
   
 ## <a name="make-the-chart-bigger"></a>차트를 크게 만들기  
@@ -219,7 +220,7 @@ ms.locfileid: "67037965"
   
  차트 레이블 및 범례를 사용자 지정하는 방법에 대한 자세한 내용은 [원형 차트에서 백분율 값 표시 &#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) 및 [범례 항목의 텍스트 변경 #40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)를 참조하세요.  
   
-##  <a name="WhatsNext"></a> 다음 단계  
+##  <a name="whats-next"></a><a name="WhatsNext"></a> 다음 단계  
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]에서 첫 번째 보고서를 만들었으므로 이제 다른 자습서를 수행하고 고유의 데이터로 보고서를 만들 수 있습니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]를 실행하려면 데이터 원본에 실제로 연결되는 *연결 문자열*을 사용하여 데이터베이스와 같은 데이터 원본에 액세스할 수 있는 권한이 있어야 합니다. 시스템 관리자가 연결 문자열 정보를 가지고 있으며 사용자에 대해 데이터 원본 연결을 설정할 수 있습니다.  
   
  다른 자습서를 진행하려면 SQL Server의 인스턴스 이름과 모든 데이터베이스에 대한 읽기 전용 액세스 권한이 있는 자격 증명만 있으면 됩니다. 데이터베이스 액세스 권한은 시스템 관리자가 대신 설정할 수 있습니다.  

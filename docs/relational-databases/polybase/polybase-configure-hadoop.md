@@ -1,5 +1,6 @@
 ---
 title: '외부 데이터 액세스: Hadoop - PolyBase'
+description: 이 문서에서는 SQL Server 인스턴스에 있는 PolyBase와 Hadoop을 사용합니다. PolyBase는 외부 테이블의 임시 쿼리와 데이터 가져오기/내보내기에 적합합니다.
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
@@ -9,12 +10,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 979d0f5d57c7d761e5c9c3f1b302046312396554
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 27fa4b36df7248ceee2a484d57ab77d28ca50247
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286907"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215874"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Hadoop의 외부 데이터에 액세스하도록 PolyBase 구성
 
@@ -66,7 +67,7 @@ ms.locfileid: "79286907"
   
    ![services.msc에서 PolyBase 서비스 중지 및 시작](../../relational-databases/polybase/media/polybase-stop-start.png "services.msc에서 PolyBase 서비스 중지 및 시작")  
   
-## <a id="pushdown"></a> 푸시다운 계산 사용  
+## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> 푸시다운 계산 사용  
 
 쿼리 성능을 향상하려면 Hadoop 클러스터에 대한 푸시다운 계산을 사용하도록 설정합니다.  
   

@@ -1,6 +1,6 @@
 ---
 title: Linux용 SQL Server 데이터베이스 개발 및 배포 | Microsoft Docs
-description: ''
+description: SQL Server Data Tools가 포함된 Visual Studio는 SQL Server on Linux를 위한 강력한 개발 및 데이터베이스 수명 주기 관리 환경입니다.
 author: VanMSFT
 ms.author: vanto
 ms.date: 03/17/2017
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: 0a7c16f508621297e39df5cd47bde891b7d8a140
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 50f6e9a2b3292cb94f335092ef590ba6fb9ea422
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73033017"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216818"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio를 사용하여 SQL Server on Linux 데이터베이스 만들기
 

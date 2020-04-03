@@ -1,5 +1,6 @@
 ---
-title: 지원되는 버전 및 에디션 업그레이드 - SQL Server 2019| Microsoft Docs
+title: 지원되는 버전 업그레이드(SQL Server 2019)
+description: SQL Server 2019에 대해 지원되는 버전 업그레이드입니다.
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -15,14 +16,14 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 6cff48da9e251fedd56d676349480e350c88bcae
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c1f38c4563c01d756a7b81c0bdc34ecc429d5dbf
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73531552"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434140"
 ---
-# <a name="supported-version-and-edition-upgrades-for-sql-server-2019"></a>SQL Server 2019에 지원되는 버전 및 에디션 업그레이드
+# <a name="supported-version--edition-upgrades-sql-server-2019"></a>지원되는 버전 업그레이드(SQL Server 2019)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -45,7 +46,7 @@ ms.locfileid: "73531552"
   
 - 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 업그레이드하는 동안에는 새 기능을 추가할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]로 업그레이드한 후 [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] 설치 프로그램을 사용하여 기능을 추가할 수 있습니다. 자세한 내용은 [SQL Server 인스턴스에 기능 추가&#40;설치 프로그램&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)를 참조하세요.  
  
-## <a name="upgrades-from-earlier-versions-to-includesssqlv15-mdincludessssqlv15-mdmd"></a>이전 버전에서 [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]로 업그레이드  
+## <a name="upgrades-from-earlier-versions-to-sssqlv15-md"></a>이전 버전에서 [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]로 업그레이드  
  
 [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]은 다음 버전의 SQL Server에서 업그레이드할 수 있습니다.
 
@@ -108,7 +109,7 @@ ms.locfileid: "73531552"
 
 - 대량 로드: 테이블을 SQL Server 2008 또는 SQL Server 2008 R2에서 SQL Server 2019로 대량 복사할 수 있습니다.
 
-## <a name="includesssqlv15-mdincludessssqlv15-mdmd-edition-upgrade"></a>[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Edition Upgrade 
+## <a name="sssqlv15-md-edition-upgrade"></a>[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Edition Upgrade 
 
 다음 표에는 [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]에서 지원되는 버전 업그레이드 시나리오가 나열되어 있습니다.  
 
@@ -117,7 +118,7 @@ ms.locfileid: "73531552"
 |업그레이드할 버전|업그레이드 버전|  
 |------------------|----------------|  
 |[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise(Server+CAL 및 코어)**|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise |  
-|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Evaluation Enterprise**|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise(Server+CAL 또는 코어 라이선스) <br/><br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Developer <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Web <br/> <br/> Evaluation(무료 버전)에서 유료 버전으로 업그레이드할 경우 독립 실행형 설치는 지원되지만 클러스터형 설치는 지원되지 않습니다.|  
+|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Evaluation Enterprise**|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise(Server+CAL 또는 코어 라이선스) <br/><br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Developer <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Web <br/> <br/> Evaluation(무료 버전)에서 유료 버전으로 업그레이드할 경우 독립 실행형 설치는 지원되지만 클러스터형 설치는 지원되지 않습니다. 가용성 그룹에 참여하는 Windows 장애 조치(failover) 클러스터에 설치된 독립 실행형 인스턴스에는 이 제한이 적용되지 않습니다. |  
 |[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard**|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise(Server+CAL 또는 코어 라이선스)|  
 |[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Developer**|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise(Server+CAL 또는 코어 라이선스) <br/><br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Web <br/> <br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard|  
 |[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Web|[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Enterprise(Server+CAL 또는 코어 라이선스) <br/><br/> [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard|  

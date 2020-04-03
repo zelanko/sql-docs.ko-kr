@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 모바일 보고서의 지도 | Microsoft Docs
+description: SQL Server 모바일 보고서 게시자는 세 가지 유형의 지도 시각화를 제공할 뿐 아니라 대륙 및 많은 국가의 지도를 기본 제공합니다.
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b09c8aec100d877256f0d8d9b4b97530ecdf5c6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6b7635b0af96f0009ef6220fc8360a1373d2f998
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62683740"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448431"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Reporting Services 모바일 보고서의 지도
 지도는 지리 데이터를 시각화하는 유용한 방법입니다. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 은(는) 다양한 유형의 지도 시각화를 제공하며, 대륙 및 많은 국가의 지도를 기본으로 제공합니다. [사용자 지정 지도를 업로드하여 사용](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)할 수도 있습니다.   
@@ -58,7 +59,7 @@ SQL Server 모바일 보고서는 다양한 상황에 유용한 세 가지 다�
   
 2. **데이터 추가**를 선택한 후 **로컬 Excel** 또는 **SSRS 서버**중 하나를 선택합니다.  
   
-   > **팁**: 데이터는 [모바일 보고서에 적합한 형식](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)이어야 합니다.  
+   > **팁**: [데이터는 모바일 보고서에 적합한 형식](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)이어야 합니다.  
   
 3. 원하는 워크시트를 선택하고 **가져오기**를 선택합니다.  
    [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]에 데이터가 표시됩니다.  

@@ -1,5 +1,6 @@
 ---
 title: 보고서 작성기에 대한 기본 옵션 설정 | Microsoft Docs
+description: 이 문서에서는 보고서 작성기에서 설정할 수 있는 유용한 기본값에 대해 설명합니다. 기본값을 사용하면 보고서를 더욱 쉽고 빠르게 작성할 수 있습니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f6c77bc80b31eb34beea99d0634b17934ea01db4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cad43cd9b4a842cd022e9139b7b303b15134af6f
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577913"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290771"
 ---
 # <a name="set-default-options-for-report-builder"></a>보고서 작성기에 대한 기본 옵션 설정
   보고서 작성기에서 다양한 유용한 기본값을 설정하여 보고서 작성을 쉽고 빠르게 할 수 있습니다.  예를 들어 기본 보고서 서버를 설정하거나 변경할 수 있는 경우 보고서 작성기는 별도로 지정하지 않는 한 보고서를 동일한 보고서 서버에 자동으로 저장합니다.  

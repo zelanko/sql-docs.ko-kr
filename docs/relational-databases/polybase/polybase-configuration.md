@@ -1,5 +1,6 @@
 ---
 title: Hadoop에 대한 PolyBase 구성 및 보안 | Microsoft Docs
+description: Hadoop으로의 PolyBase 연결에 Hadoop.RPC.Protection, CDH 5.X 클러스터를 위한 예제 XML 파일 및 Kerberos 구성을 비롯해 여기에 나와 있는 설정을 사용합니다.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -8,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: ef4222b866be7979410f6a3f97dce8a4fc24ecd7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 59d268e0af326a92693cb09cb8e786364cd1f874
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72909427"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215902"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Hadoop에 대한 PolyBase 구성 및 보안
 
@@ -21,7 +22,7 @@ ms.locfileid: "72909427"
 
 이 문서에서는 PolyBase-Hadoop 연결에 영향을 주는 다양한 구성 설정의 참조를 제공합니다. Hadoop에서 PolyBase를 사용하는 방법에 대한 연습 과정은 [Hadoop의 외부 데이터에 액세스하도록 PolyBase 구성](polybase-configure-hadoop.md)을 참조하세요.
 
-## <a id="rpcprotection"></a> Hadoop.RPC.Protection 설정
+## <a name="hadooprpcprotection-setting"></a><a id="rpcprotection"></a> Hadoop.RPC.Protection 설정
 
 Hadoop 클러스터에서 통신을 보호하는 일반적인 방법은 '개인 정보' 또는 '무결성' hadoop.rpc.protection 구성을 변경하는 것입니다. 기본적으로 PolyBase는 구성이 '인증'으로 설정되었다고 가정합니다. 이 기본값을 재정의하려면 core-site.xml 파일에 다음 속성을 추가합니다. 이 구성을 변경하면 SQL Server에 대한 SSL 연결 및 Hadoop 노드 간에 안전한 데이터 전송을 활성화합니다.
 
@@ -160,11 +161,11 @@ MIT KDC를 사용하여 Kerberos로 보호되는 Hadoop 클러스터에 연결�
    |**#**|**구성 파일**|**구성 키**|**동작**|  
    |------------|----------------|---------------------|----------|   
    |1|core-site.xml|polybase.kerberos.kdchost|KDC 호스트 이름을 지정합니다. 예를 들면 kerberos.your-realm.com과 같습니다.|  
-   |2|core-site.xml|polybase.kerberos.realm|Kerberos 영역을 지정합니다. 예를 들면 YOUR REALM.COM과 같습니다.|  
-   |3|core-site.xml|hadoop.security.authentication|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 예를 들면 KERBEROS와 같습니다.<br></br>**보안 정보:** KERBEROS는 대문자로 작성해야 합니다. 소문자로 작성되면 실행되지 않을 수 있습니다.|   
+   |2|core-site.xml|polybase.kerberos.realm|Kerberos 영역을 지정합니다. 다음은 그 예입니다.  YOUR-REALM.COM|  
+   |3|core-site.xml|hadoop.security.authentication|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 다음은 그 예입니다.  KERBEROS<br></br>**보안 정보:** KERBEROS는 대문자로 작성해야 합니다. 소문자로 작성되면 실행되지 않을 수 있습니다.|   
    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 예: hdfs/_HOST@YOUR-REALM.COM|  
    |5|mapred-site.xml|mapreduce.jobhistory.principal|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 예: mapred/_HOST@YOUR-REALM.COM|  
-   |6|mapred-site.xml|mapreduce.jobhistory.address|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 예를 들면 10.193.26.174:10020과 같습니다.|  
+   |6|mapred-site.xml|mapreduce.jobhistory.address|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 다음은 그 예입니다.  10.193.26.174:10020|  
    |7|yarn-site.xml yarn|yarn.resourcemanager.principal|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 예: yarn/_HOST@YOUR-REALM.COM|  
 
 4. 데이터베이스 범위 자격 증명 개체를 만들어 각 Hadoop 사용자에 대해 인증 정보를 지정합니다. [PolyBase T-SQL 개체](../../relational-databases/polybase/polybase-t-sql-objects.md)를 참조하세요.  

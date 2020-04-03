@@ -1,6 +1,7 @@
 ---
 title: 사용자 지정 어셈블리 개체 초기화 | Microsoft Docs
 ms.date: 03/03/2017
+description: 보고서의 전역 개체 컬렉션에서 제공되는 값으로 사용자 지정 클래스를 초기화하는 방법을 알아봅니다.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: custom-assemblies
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8bef8bcf36629b0cb31afef31f4d9a199313f015
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c2f0f85904b4541ed478664f5f39e19cc309cf9a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63193960"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217032"
 ---
 # <a name="initializing-custom-assembly-objects"></a>사용자 지정 어셈블리 개체 초기화
-  사용자 지정 어셈블리 클래스를 인스턴스화할 때 속성 및 필드 값을 초기화해야 하는 경우가 있습니다. 대개 보고서의 전역 개체 컬렉션에서 제공되는 값으로 사용자 지정 클래스를 초기화해야 합니다. 이 작업은 보고서 **Code** 개체의 **OnInit** 메서드를 다시 정의하여 수행합니다. **OnInit**에 액세스하려면 보고서 정의의 **Code** 요소를 사용합니다. 보고서에서 사용하려는 사용자 지정 어셈블리에 있는 클래스의 속성이나 필드 값을 초기화하는 데는 두 가지 방법이 있습니다. **OnInit**를 사용하여 클래스의 새 인스턴스를 선언 및 만들거나 **OnInit**를 사용하여 공개적으로 사용 가능한 메서드를 호출하는 방법입니다.  
+  사용자 지정 어셈블리 클래스를 인스턴스화할 때 속성 및 필드 값을 초기화해야 하는 경우가 있습니다. 대개 보고서의 전역 개체 컬렉션에서 제공되는 값으로 사용자 지정 클래스를 초기화해야 합니다. 이 작업은 보고서 **Code** 개체의 **OnInit** 메서드를 다시 정의하여 수행합니다. **OnInit**에 액세스하려면 보고서 정의의 **Code** 요소를 사용합니다. 보고서에서 사용하려는 사용자 지정 어셈블리에 있는 클래스의 속성이나 필드 값을 초기화하는 데는 두 가지 방법이 있습니다. **OnInit**를 사용하여 클래스의 새 인스턴스를 선언하고 만들 수도 있고, **OnInit**를 사용하여 공용으로 사용 가능한 메서드를 호출할 수도 있습니다.  
   
 ## <a name="global-object-collections-and-initialization"></a>전역 개체 컬렉션 및 초기화  
  사용자 지정 클래스 변수를 초기화하는 데 사용할 수 있는 컬렉션이 다수 있으며, **Globals** 및 **User** 컬렉션을 사용할 수 있습니다. **Parameters**, **Fields** 및 **ReportItems** 컬렉션은 **OnInit** 메서드가 호출될 때 보고서 수명 주기의 시점에서 사용할 수 없습니다. 공유 컬렉션인 **Globals** 또는 **User**를 사용하려면 **Report** 개체 참조를 포함시켜야 합니다. 예를 들어, 보고서에 액세스하는 사용자의 현재 언어를 기반으로 사용자 지정 클래스를 초기화하려면 **Code** 요소가 다음과 같을 수 있습니다.  

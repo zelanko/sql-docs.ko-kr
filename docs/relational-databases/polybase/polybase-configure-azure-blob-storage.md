@@ -1,5 +1,6 @@
 ---
 title: '외부 데이터 액세스: Azure Blob Storage - PolyBase'
+description: 이 문서에서는 SQL Server 인스턴스에 있는 PolyBase와 Azure Blob Storage를 사용합니다. PolyBase는 외부 테이블의 임시 쿼리와 데이터 가져오기/내보내기에 적합합니다.
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
@@ -9,12 +10,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019, seo-lt-2019
-ms.openlocfilehash: 680a8e28e807505f4824524a686f244621cb3dd0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: eb9e04b48a6eb6894e3ef8f8227d573443934ab4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75258688"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215876"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Azure Blob Storage의 외부 데이터에 액세스하도록 PolyBase 구성
 

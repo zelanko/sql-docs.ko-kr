@@ -1,5 +1,6 @@
 ---
 title: PDF 파일로 내보내기(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기의 PDF 렌더링 확장 프로그램은 페이지를 매긴 보고서를 Adobe Acrobat 및 타사 PDF 뷰어에서 열 수 있는 파일로 렌더링합니다.
 ms.date: 10/21/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 134cf6f645a3e120b1949e8a2dcc175748e1a042
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e9c00901c1a409ec2a8a52476b201f2bf7992017
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078275"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342851"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>PDF 파일로 내보내기(보고서 작성기 및 SSRS)
   PDF 렌더링 확장 프로그램은 Adobe Acrobat 및 PDF 1.3을 지원하는 타사 PDF 뷰어에서 열 수 있는 파일로 페이지 매김 처리한 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서를 렌더링합니다. PDF 1.3은 Adobe Acrobat 4.0 이상 버전과 호환되지만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 Adobe Acrobat 11.0 이상 버전을 지원합니다. 이 렌더링 확장 프로그램으로 보고서를 렌더링하기 위해 Adobe 소프트웨어가 필요한 것은 아닙니다. 그러나 PDF 형식으로 보고서를 보거나 인쇄하기 위해서는 Adobe Acrobat과 같은 PDF 뷰어가 필요합니다.  
@@ -25,7 +26,7 @@ ms.locfileid: "77078275"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FontRequirements"></a> 글꼴 포함  
+##  <a name="font-embedding"></a><a name="FontRequirements"></a> 글꼴 포함  
  가능한 경우 PDF 렌더링 확장 프로그램에는 보고서를 PDF 파일로 표시하는 데 필요한 각 하위 집합이 포함되어 있습니다. 보고서에 사용된 글꼴이 보고서 서버에 설치되어 있어야 합니다. 보고서 서버는 PDF 형식으로 보고서를 생성할 때 보고서에서 참조하는 글꼴로 저장된 정보를 사용하여 PDF 파일 내에 문자 매핑을 만듭니다. 렌더링된 글꼴이 보고서 서버에 설치되어 있지 않으면 결과 PDF 파일이 올바른 매핑을 포함하지 않을 수 있으며 화면에 올바르게 표시되지 않을 수 있습니다.  
   
  다음 조건을 만족할 경우 PDF 파일에 글꼴이 포함됩니다.  
@@ -54,7 +55,7 @@ ms.locfileid: "77078275"
   
  PDF 파일에 포함된 글꼴은 파일에 저장된 Fonts 속성에 메타데이터로 포함됩니다.  
   
-##  <a name="Metadata"></a> 메타데이터  
+##  <a name="metadata"></a><a name="Metadata"></a> 메타데이터  
  PDF 렌더링 확장 프로그램에서는 보고서 레이아웃 이외에 다음과 같은 메타데이터를 PDF 문서 정보 사전에 기록합니다.  
   
 |PDF 속성|정보 출처|  
@@ -67,7 +68,7 @@ ms.locfileid: "77078275"
 |**CreationDate**|PDF **datetime** 형식의 보고서 실행 시간|  
   
   
-##  <a name="Interactivity"></a> 상호 작용  
+##  <a name="interactivity"></a><a name="Interactivity"></a> 상호 작용  
  PDF에서는 일부 대화형 요소가 지원됩니다. 다음은 특정 동작에 대한 설명입니다.  
   
 ### <a name="show-and-hide"></a>표시 및 숨기기  
@@ -88,7 +89,7 @@ ms.locfileid: "77078275"
  보고서의 하이퍼링크는 PDF 파일에서 클릭하여 연결할 수 있는 링크로 렌더링됩니다. 이를 클릭하면 Acrobat에서 클라이언트의 기본 브라우저가 열리고 하이퍼링크 URL로 이동합니다.  
   
   
-##  <a name="Compression"></a> 압축  
+##  <a name="compression"></a><a name="Compression"></a> 압축  
  이미지 압축은 이미지의 원래 파일 형식을 기준으로 합니다. PDF 렌더링 확장 프로그램에서는 기본적으로 PDF 파일을 압축합니다.  
   
  PDF 파일에 포함된 이미지의 모든 압축을 가능한 한 계속 유지하기 위해 JPEG 이미지는 JPEG로 저장되고 다른 모든 이미지 형식은 BMP로 저장됩니다.  
@@ -97,7 +98,7 @@ ms.locfileid: "77078275"
 >  PDF 파일은 PNG 포함 이미지를 지원하지 않습니다.  
   
   
-##  <a name="DeviceInfo"></a> 디바이스 정보 설정  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> 디바이스 정보 설정  
  디바이스 정보 설정을 변경하여 이 렌더러의 기본 설정을 일부 변경할 수 있습니다. 자세한 내용은 [PDF Device Information Settings](../../reporting-services/pdf-device-information-settings.md)을 참조하세요.  
   
   

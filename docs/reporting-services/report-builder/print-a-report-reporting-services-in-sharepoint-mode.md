@@ -1,5 +1,6 @@
 ---
 title: 보고서 인쇄(SharePoint 모드의 Reporting Services) | Microsoft Docs
+description: 보고서 서버가 SharePoint 모드에서 실행되는 경우 SharePoint 사이트, 브라우저 또는 대상 애플리케이션에서 SharePoint 웹 애플리케이션에 있는 보고서를 인쇄할 수 있습니다.
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 407d20b06c6dccdb63f5455ffe24a3505d8bd823
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: eb3511714f893e4513c8a5ba1c215807003e6534
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65875199"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290813"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>보고서 인쇄(SharePoint 모드의 Reporting Services)
   SharePoint 모드에서 실행되는 보고서 서버의 경우 다음 세 가지 방법으로 SharePoint 웹 애플리케이션에서 보고서를 인쇄할 수 있습니다.  

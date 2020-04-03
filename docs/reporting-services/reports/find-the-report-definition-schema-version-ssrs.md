@@ -1,5 +1,6 @@
 ---
 title: 보고서 정의 스키마 버전 찾기 | Microsoft Docs
+description: 보고서 정의 파일의 RDL(Report Definition Language) 스키마 버전을 확인하는 방법을 알아봅니다.
 ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b44c417fa6cdf5caf3dcaf61b36a3242284c602a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fd43fb3dba83ab3821b1b670468e7849faac2044
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77080335"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510144"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>보고서 정의 스키마 버전 찾기(SSRS)
 
@@ -33,7 +34,7 @@ ms.locfileid: "77080335"
     <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily" MustUnderstand="df">  
     ```  
   
-     최근의 보고서 정의 네임스페이스는 2016입니다. 그러나 최근에 게시된 보고서 정의 네임스페이스는 다음 URL로 지정된 2010입니다. `https://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition`.
+     가장 최근의 보고서 정의 네임스페이스는 2016입니다. 그러나 가장 최근에 게시된 보고서 정의 네임스페이스는 다음 URL로 지정된 2010입니다. `https://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition`.
   
 ### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>방법: 보고서 디자이너의 RDL 스키마 버전 확인  
   

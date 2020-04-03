@@ -12,18 +12,22 @@ author: tmichael-ms
 ms.author: tmichael
 ms.reviewer: hristins
 mtps_version: v=MSDN.10
-ms.openlocfilehash: 975ea7d96e50dbdb375580919a5cac5503e831c2
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.openlocfilehash: 6d81ddb24d11e9357819b43338341b818fb35583
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79198274"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434100"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Microsoft SQL Server에 대한 최신 업데이트
 
-SQL Server 제품에 대해 한 곳에서 업데이트를 찾고 관리합니다. 업데이트에 대한 정보를 받고 업데이트를 다운로드하려면 [SQL Server 릴리스 블로그](https://aka.ms/sqlreleases)를 팔로우합니다.
+SQL Server 제품에 대해 한 곳에서 업데이트를 찾고 관리합니다. 업데이트 정보를 받고 업데이트를 다운로드하려면 [SQL Server 릴리스 블로그](https://aka.ms/sqlreleases)를 팔로우합니다.
 
-이 페이지에서는 지원되는 모든 버전의 SQL Server에 대한 최신 업데이트를 추적합니다. 지원되는 제품에 대한 자세한 정보는 [Microsoft 제품 수명 주기 페이지](https://support.microsoft.com/lifecycle/)를 참조하세요.
+이 페이지에서는 지원되는 모든 버전의 SQL Server에 대한 최신 업데이트를 추적합니다. 
+
+이전 업데이트에 대한 자세한 내용은 [SQL Server 빌드 블로그](https://sqlserverbuilds.blogspot.com/)를 참조하세요. 
+
+지원되는 제품에 대한 자세한 정보는 [Microsoft 제품 수명 주기 페이지](https://support.microsoft.com/lifecycle/)를 참조하세요. 
 
 ## <a name="latest-updates"></a>최신 업데이트
 
@@ -66,3 +70,5 @@ SQL Server 제품에 대해 한 곳에서 업데이트를 찾고 관리합니다
   - [SQL Server DevCenter](https://msdn.microsoft.com/sqlserver/default.aspx)
   - [SQL Server TechCenter](https://technet.microsoft.com/sqlserver/default.aspx)
   - [SQL Server 제품 정보 센터](https://www.microsoft.com/sqlserver/default.aspx)
+  - [SQL Server 빌드 블로그](https://sqlserverbuilds.blogspot.com/)
+  - [SQL Server 릴리스 블로그](https://aka.ms/sqlreleases)

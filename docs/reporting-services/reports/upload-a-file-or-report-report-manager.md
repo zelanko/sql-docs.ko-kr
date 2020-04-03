@@ -1,5 +1,6 @@
 ---
 title: 보고서 서버에서 파일 또는 보고서 업로드 | Microsoft Docs
+description: 클라이언트 애플리케이션에서 보고서 및 기타 파일을 게시하지 않고도 해당 항목을 보고서 서버에 추가하는 방법을 알아봅니다.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b54290c582dab62b7e0f5b8a1cb7ca4dd2eb642c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6d5d70a2147ea5cb9846ed37ea8963cc8c3f98e3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65573305"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510054"
 ---
 # <a name="upload-a-file-or-report-in-the-report-server"></a>보고서 서버에서 파일 또는 보고서 업로드
 보고서 서버의 웹 포털에서는 업로드 기능을 제공하므로 클라이언트 애플리케이션에서 보고서 및 기타 파일을 게시하지 않고도 이러한 항목을 보고서 서버에 추가할 수 있습니다. 파일 시스템에서 업로드한 파일은 보고서 서버에 항목으로 저장됩니다. 업로드한 파일 형식은 저장되는 방식에 따라 결정됩니다.  

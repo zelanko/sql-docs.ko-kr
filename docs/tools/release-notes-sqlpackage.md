@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 9dfbb1192c160fb032afa6dbb56ee7b24b80bcd6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f0c3fe15a46333fad43b72ba3c8040153b9b51a2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75241224"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80386192"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe에 대한 릴리스 정보
 
@@ -49,6 +49,12 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | ScriptDom |  ScriptDom 구문 분석 회귀는 'RENAME'이 최상위 토큰으로 잘못 처리되어 구문 분석이 실패하는 18.3.1에서 도입되었습니다.
 | &nbsp; | &nbsp; |
 
+### <a name="known-issues"></a>알려진 문제 
+
+| 기능 | 세부 정보 |
+| :------ | :------ |
+| 배포 |  18.4.1에서 외부 로그인을 사용하는 사용자가 있는 dacpac을 배포하거나 bacpac을 가져올 때 “개체 참조가 개체의 인스턴스로 설정되지 않았습니다” 오류를 발생시키는 회귀가 발생했습니다. 해결 방법은 sqlpackage 18.4를 사용하는 것입니다. 이 문제는 다음 sqlpackage 릴리스에서 수정될 예정입니다. | 
+| &nbsp; | &nbsp; |
 
 ## <a name="184-sqlpackage"></a>18.4 sqlpackage
 

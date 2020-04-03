@@ -1,5 +1,6 @@
 ---
 title: Excel 2003 행 제한 해결 | Microsoft Docs
+description: 특정 행 수 뒤에 페이지 나누기를 강제로 적용하면 페이지를 매긴 보고서를 Excel로 내보낼 때 Excel 2003 행 제한을 해결할 수 있습니다.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3898e4202d958c1d20d5436a143e80bb45c7490f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 940f5fd22d35ac0a90106c7a325e435e1d479bc4
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577787"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290722"
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>Work Around the Excel 2003 Row Limitation
   이 항목에서는 페이지를 매긴 보고서를 Excel로 내보낼 때 Excel 2003 행 제한을 해결하는 방법을 설명합니다. 테이블만 포함하는 보고서에 대한 해결 방법입니다.  

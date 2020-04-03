@@ -1,5 +1,6 @@
 ---
 title: Report Definition Language | Microsoft Docs
+description: RDL(Report Definition Language)에 대해 자세히 알아봅니다. RDL이 SQL Server Reporting Services 보고서 정의의 XML 표현임을 알게 될 것입니다.
 ms.date: 01/24/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd2d8f74169c8adcbf2862b9dcf5a442d5691c81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 04c220383ef14fe6bd05b690e5c27ae73b4289a4
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078022"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510084"
 ---
 # <a name="report-definition-language-ssrs"></a>SSRS(Report Definition Language)
   RDL(Report Definition Language)은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 정의의 XML 표현입니다. 보고서 정의에는 보고서에 대한 데이터 검색 및 레이아웃 정보가 포함됩니다. RDL은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]용으로 만들어진 XML 문법과 일치하는 XML 요소로 구성됩니다. 보고서 정의 파일 내에서 코드 어셈블리에 액세스하여 보고서 항목 값, 스타일, 서식 등을 제어하는 사용자 지정 함수를 추가할 수 있습니다.  
@@ -35,17 +36,17 @@ ms.locfileid: "77078022"
   
 -   추가 네임스페이스 및 사용자 지정 요소를 지원하는 개방형의 확장 가능한 스키마  
   
-##  <a name="bkmk_RDL_Specifications"></a> RDL 사양  
+##  <a name="rdl-specifications"></a><a name="bkmk_RDL_Specifications"></a> RDL 사양  
  특정 스키마 버전에 대한 사양을 다운로드하려면 [Report Definition Language 사양(Report Definition Language Specification)](https://go.microsoft.com/fwlink/?linkid=116865)을 참조하십시오.  
   
-##  <a name="bkmk_RDL_XML_Schema_Definition"></a> RDL XML 스키마 정의  
+##  <a name="rdl-xml-schema-definition"></a><a name="bkmk_RDL_XML_Schema_Definition"></a> RDL XML 스키마 정의  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RDL(Report Definition Language) 파일은 XSD(XML 스키마 정의) 파일을 사용하여 유효성이 검사됩니다. 스키마는 .rdl 파일에 RDL 요소의 발생 규칙을 정의합니다. 요소는 데이터 형식과 카디널리티, 즉 허용되는 발생 횟수를 포함합니다. 요소에는 단순 요소와 복합 요소가 있습니다. 단순 요소에는 자식 요소 또는 특성이 없습니다. 복합 요소에는 자식이 있고 선택적으로 특성도 보유합니다.  
   
  예를 들어 스키마가 복합 유형 **ReportParameters**인 RDL 요소 **ReportParametersType**를 포함합니다. 규칙에 따라 요소의 복합 유형 이름은 요소 이름 뒤에 **Type**이라는 단어를 붙여 만듭니다. **ReportParameters** 요소는 **Report** 요소(복합 형식)에 포함될 수 있고 **ReportParameter** 요소를 포함할 수 있습니다. **ReportParameterType**은 단순 형식으로 다음 값 중 하나일 수 있습니다. **Boolean**, **DateTime**, **Integer**, **Float** 또는 **String** XML 스키마 데이터 형식에 대한 자세한 내용은 [XML 스키마 2부: Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871)을 참조하세요.  
   
  RDL XSD는 제품 CD-ROM의 Extras 폴더에 있는 ReportDefinition.xsd 파일에서 사용할 수 있습니다. 다음 URL을 통해 보고서 서버에서도 사용할 수 있습니다.`https://servername/reportserver/reportdefinition.xsd`  
   
-##  <a name="bkmk_Creating_RDL"></a> RDL 만들기  
+##  <a name="creating-rdl"></a><a name="bkmk_Creating_RDL"></a> RDL 만들기  
  개방형이고 확장 가능한 RDL의 특성 덕분에 XML 스키마를 기반으로 RDL을 생성하는 다양한 도구와 애플리케이션을 작성할 수 있습니다.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 RDL 파일을 빌드하는 여러 도구를 제공합니다. 자세한 내용은 [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)를 참조하세요.  
@@ -54,7 +55,7 @@ ms.locfileid: "77078022"
   
  보고서 정의 파일의 표준 파일 확장명은 .rdl입니다. 확장명이 .rdlc인 클라이언트 보고서 정의 파일을 개발할 수도 있습니다. 두 확장명 모두 MIME 형식은 텍스트/xml입니다. 보고서에 대한 자세한 내용은 [Reporting Services 보고서&#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)를 참조하세요.  
   
-##  <a name="bkmk_RDL_Types"></a> RDL 형식  
+##  <a name="rdl-types"></a><a name="bkmk_RDL_Types"></a> RDL 형식  
  다음 표에서는 RDL 요소 및 특성에 사용되는 유형을 보여 줍니다.  
   
 |Type|Description|  
@@ -73,14 +74,14 @@ ms.locfileid: "77078022"
 |**UnsignedInt**|서명되지 않은 정수(int32) 값을 갖는 속성입니다.|  
 |**Variant**|단순 XML 유형을 갖는 속성입니다.|  
   
-##  <a name="bkmk_RDL_Data_Types"></a> RDL 데이터 형식  
+##  <a name="rdl-data-types"></a><a name="bkmk_RDL_Data_Types"></a> RDL 데이터 형식  
  DataType 열거형은 특성, 식 또는 매개 변수의 데이터 형식을 RDL로 정의합니다. 다음 표에서는 CLR(공용 언어 런타임) 데이터 형식과 RDL 데이터 형식의 관련을 보여 줍니다.  
   
 |**CLR 유형**|**해당 데이터 형식**|  
 |-----------------------|---------------------------------|  
 |부울|부울|  
 |DateTime, DateTimeOffset|DateTime|  
-|Int16, Int32, UInt16, Byte, SByte|정수 |  
+|Int16, Int32, UInt16, Byte, SByte|정수|  
 |Single, Double|Float|  
 |String, Char, GUID, Timespan|String|  
   

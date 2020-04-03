@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e2024af63b1a033b2dcb5afbde461cff02b9462b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d4cd11ea250637c172a9d8343af934c326089add
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082222"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80380774"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>구성 파일의 URL(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 RSReportServer.config 파일에 애플리케이션 설정을 저장합니다. 이 파일에는 URL과 URL 예약, 두 가지에 대한 구성 설정이 포함됩니다. 이 두 구성 설정의 용도와 수정 규칙은 완전히 다릅니다. 구성 파일을 수정한 배포 튜닝에 익숙하다면 이 항목을 통해 각 URL 설정을 사용하는 방법을 보다 쉽게 이해할 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "77082222"
   
  **UrlRoot** 는 애플리케이션 액세스를 위한 URL을 구성하면 RSReportServer.config 파일에 자동으로 지정됩니다. 구성 파일에서 이 값을 수정하려면 배달하려는 보고서가 하위 보고서 서버 데이터베이스에 연결된 보고서 서버 웹 서비스에 대한 올바른 URL 주소를 지정해야 합니다. 보고서 서버 인스턴스당 하나의 **UrlRoot** 만 지정할 수 있습니다. 따라서 지정된 보고서 서버 인스턴스의 RSReportServer.config 파일에는 하나의 **UrlRoot** 항목만 존재할 수 있습니다. 보고서 서버 웹 서비스에 여러 개의 URL이 예약된 경우 **UrlRoot**에 사용할 하나를 선택해야 합니다.  
   
- 대부분의 경우 **UrlRoot**를 수정할 필요는 없습니다. 그러나 보고서 서버가 정규화된 URL을 통해 액세스되는 경우에는 앞서 정규화된 사이트 이름에 대한 호스트 헤더를 사용하는 URL을 구성하지 않았다면 RSReportServer.config를 수동으로 편집하여 **UrlRoot** 를 보고서 렌더링에 사용되는 정규화된 보고서 서버 URL로 설정해야 합니다(예: https://www.adventure-works.com/mywebapp/reportserver)).  
+ 대부분의 경우 **UrlRoot**를 수정할 필요는 없습니다. 그러나 보고서 서버가 정규화된 URL을 통해 액세스되는 경우에는 앞서 정규화된 사이트 이름에 대한 호스트 헤더를 사용하는 URL을 구성하지 않았다면 RSReportServer.config를 수동으로 편집하여 **UrlRoot** 를 보고서 렌더링에 사용되는 정규화된 보고서 서버 URL로 설정해야 합니다(예: `https://www.adventure-works.com/mywebapp/reportserver`).  
   
 #### <a name="urls-connecting-the-ssrswebportal-and-web-parts-to-the-report-server-web-service"></a>[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 및 웹 파트를 보고서 서버 웹 서비스에 연결하는 URL  
  Reporting Services의 SharePoint 2.0 웹 파트와 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 는 보고서 서버에 연결되는 웹 프런트 엔드 구성 요소입니다. 백 엔드 보고서 서버에 연결하는 데 사용되는 URL은 다음과 같습니다.  

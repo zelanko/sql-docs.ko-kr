@@ -9,49 +9,84 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 105fa47ecaa560eace9d798a39950639ecbcb5c0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8869a556eff61eca9cfc085b91cfc6fb9c0c3455
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831181"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79487681"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>MSSQL Spark 커넥터를 사용하여 Spark에서 SQL Server를 읽고 쓰는 방법
 
 주요 빅 데이터 사용 패턴은 Spark에서 대량 데이터를 처리한 다음, LOB(기간 업무) 애플리케이션이 액세스할 수 있도록 SQL Server에 데이터를 쓰는 것입니다. 이 사용 패턴은 주요 SQL 최적화를 이용하고 효율적인 쓰기 메커니즘을 제공하는 커넥터를 활용합니다.
 
-이 문서에서는 MSSQL Spark 커넥터를 사용하여 빅 데이터 클러스터 내의 다음 위치를 읽고 쓰는 방법의 예제를 제공합니다.
-
+이 문서에서는 MSSQL Spark 커넥터 인터페이스와 이 인터페이스를 비 AD 모드 및 AD 모드로 사용할 수 있도록 인스턴스화하는 방법을 간략하게 설명합니다. 그런 다음, MSSQL Spark 커넥터를 사용하여 빅 데이터 클러스터 내의 다음 위치를 읽고 쓰는 방법의 예제를 제공합니다.
 1. SQL Server 마스터 인스턴스
 1. SQL Server 데이터 풀
 
    ![MSSQL Spark 커넥터 다이어그램](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
 
-샘플은 다음 작업을 수행합니다.
-
-- HDFS에서 파일을 읽고 몇 가지 기본적인 처리를 수행합니다.
-- SQL Server 마스터 인스턴스에 데이터 프레임을 SQL 테이블로 쓴 다음, 이 테이블을 데이터 프레임으로 읽어옵니다.
-- SQL Server 데이터 풀에 데이터 프레임을 SQL 외부 테이블로 쓴 다음, 이 외부 테이블을 데이터 프레임으로 읽어옵니다.
-
 ## <a name="mssql-spark-connector-interface"></a>MSSQL Spark 커넥터 인터페이스
 
-SQL Server 2019는 Spark에서 SQL로 쓰기 위해 SQL Server 대량 쓰기 API를 사용하는 **MSSQL Spark 커넥터**를 빅 데이터 클러스터에 대해 제공합니다. MSSQL Spark 커넥터는 Spark 데이터 원본 API를 기반으로 하며, 익숙한 Spark JDBC 커넥터 인터페이스를 제공합니다. 인터페이스 매개 변수는 [Apache Spark 설명서](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)를 참조하세요. MSSQL Spark 커넥터는 **com.microsoft.sqlserver.jdbc.spark**라는 이름으로 참조됩니다.
+SQL Server 2019는 Spark에서 SQL로 쓰기 위해 SQL Server 대량 쓰기 API를 사용하는 **MSSQL Spark 커넥터**를 빅 데이터 클러스터에 대해 제공합니다. MSSQL Spark 커넥터는 Spark 데이터 원본 API를 기반으로 하며, 익숙한 Spark JDBC 커넥터 인터페이스를 제공합니다. 인터페이스 매개 변수는 [Apache Spark 설명서](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)를 참조하세요. MSSQL Spark 커넥터는 **com.microsoft.sqlserver.jdbc.spark**라는 이름으로 참조됩니다. MSSQL Spark 커넥터는 SQL Server에 연결하는 두 가지 보안 모드인 비 Active Directory 모드와 AD(Active Directory) 모드를 지원합니다.
+### <a name="non-ad-mode"></a>비 AD 모드:
+비 AD 모드 보안에서는 각 사용자에게 사용자 이름과 암호가 있으며, 읽기 및/또는 쓰기를 수행하려면 커넥터를 인스턴스화할 때 사용자 이름과 암호를 매개 변수로 제공해야 합니다.
+비 AD 모드의 커넥터 인스턴스화 예제는 다음과 같습니다.
+```python
+# Note: '?' is a placeholder for a necessary user-specified value
+connector_type = "com.microsoft.sqlserver.jdbc.spark" 
+
+url = "jdbc:sqlserver://master-p-svc;databaseName=?;"
+writer = df.write \ 
+   .format(connector_type)\ 
+   .mode("overwrite") 
+   .option("url", url) \ 
+   .option("user", ?) \ 
+   .option("password",?) 
+writer.save() 
+```
+### <a name="ad-mode"></a>AD 모드:
+AD 모드 보안에서는 사용자가 keytab 파일을 생성한 후, 커넥터를 인스턴스화할 때 `principal` 및 `keytab`을 매개 변수로 제공해야 합니다.
+
+이 모드에서 드라이버는 keytab 파일을 해당 실행기 컨테이너에 로드합니다. 실행기는 보안 주체 이름과 keytab을 사용하여 읽기/쓰기용 JDBC 커넥터를 만드는 데 사용되는 토큰을 생성합니다.
+
+AD 모드의 커넥터 인스턴스화 예제는 다음과 같습니다.
+```python
+# Note: '?' is a placeholder for a necessary user-specified value
+connector_type = "com.microsoft.sqlserver.jdbc.spark"
+
+url = "jdbc:sqlserver://master-p-svc;databaseName=?;integratedSecurity=true;authenticationScheme=JavaKerberos;" 
+writer = df.write \ 
+   .format(connector_type)\ 
+   .mode("overwrite") 
+   .option("url", url) \ 
+   .option("principal", ?) \ 
+   .option("keytab", ?)   
+
+writer.save() 
+```
 
 다음 표에서는 변경되었거나 새로 추가된 인터페이스 매개 변수를 설명합니다.
 
 | 속성 이름 | 옵션 | Description |
 |---|---|---|
-| **isolationLevel** | yes | 연결의 격리 수준을 설명합니다. MSSQL Spark 커넥터의 기본값은 **READ_COMMITTED**입니다. |
+| **isolationLevel** | 예 | 연결의 격리 수준을 설명합니다. MSSQL Spark 커넥터의 기본값은 **READ_COMMITTED**입니다. |
 
 이 커넥터는 SQL Server 대량 쓰기 API를 사용합니다. 사용자는 모든 대량 쓰기 매개 변수를 선택적 매개 변수로 전달할 수 있으며, 커넥터는 이 매개 변수를 그대로 기본 API에 전달합니다. 대량 쓰기 작업에 대한 자세한 내용은 [SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions)를 참조하세요.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="mssql-spark-connector-sample"></a>MSSQL Spark 커넥터 샘플
+샘플은 다음 작업을 수행합니다.
+
+- HDFS에서 파일을 읽고 몇 가지 기본적인 처리를 수행합니다.
+- SQL Server 마스터 인스턴스에 데이터 프레임을 SQL 테이블로 쓴 다음, 이 테이블을 데이터 프레임으로 읽어옵니다.
+- SQL Server 데이터 풀에 데이터 프레임을 SQL 외부 테이블로 쓴 다음, 이 외부 테이블을 데이터 프레임으로 읽어옵니다.
+### <a name="prerequisites"></a>사전 요구 사항
 
 - [SQL Server 빅 데이터 클러스터](deploy-get-started.md)
 
 - [Azure Data Studio](https://aka.ms/getazuredatastudio)
 
-## <a name="create-the-target-database"></a>대상 데이터베이스 만들기
+### <a name="create-the-target-database"></a>대상 데이터베이스 만들기
 
 1. Azure Data Studio를 열고 [빅 데이터 클러스터의 SQL Server 마스터 인스턴스에 연결](connect-to-big-data-cluster.md)합니다.
 
@@ -62,7 +97,7 @@ SQL Server 2019는 Spark에서 SQL로 쓰기 위해 SQL Server 대량 쓰기 API
    GO
    ```
 
-## <a name="load-sample-data-into-hdfs"></a>HDFS에 샘플 데이터 로드
+### <a name="load-sample-data-into-hdfs"></a>HDFS에 샘플 데이터 로드
 
 1. [AdultCensusIncome.csv](https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv)를 로컬 머신으로 다운로드합니다.
 
@@ -74,9 +109,9 @@ SQL Server 2019는 Spark에서 SQL로 쓰기 위해 SQL Server 대량 쓰기 API
 
    ![AdultCensusIncome CSV 파일](./media/spark-mssql-connector/spark_data.png)
 
-## <a name="run-the-sample-notebook"></a>샘플 Notebook 실행
+### <a name="run-the-sample-notebook"></a>샘플 Notebook 실행
 
-이 데이터와 함께 MSSQL Spark 커넥터를 사용하는 방법을 보여 주기 위해 샘플 Notebook을 다운로드하여 Azure Data Studio에서 열고 각 코드 블록을 실행할 수 있습니다. 노트북 작업에 대한 자세한 내용은 [SQL Server에서 노트북 사용 방법](notebooks-guidance.md)을 참조하세요.
+이 데이터와 함께 MSSQL Spark 커넥터를 비 AD 모드로 사용하는 방법을 보여 주려는 경우, 샘플 Notebook을 다운로드하여 Azure Data Studio에서 열고 각 코드 블록을 실행할 수 있습니다. 노트북 작업에 대한 자세한 내용은 [SQL Server에서 노트북 사용 방법](notebooks-guidance.md)을 참조하세요.
 
 1. PowerShell 또는 bash 명령줄에서 다음 명령을 실행하여 **mssql_spark_connector_non_ad_pyspark.ipynb** 샘플 Notebook을 다운로드합니다.
 
@@ -91,3 +126,5 @@ SQL Server 2019는 Spark에서 SQL로 쓰기 위해 SQL Server 대량 쓰기 API
 ## <a name="next-steps"></a>다음 단계
 
 빅 데이터 클러스터에 대한 자세한 내용은 [Kubernetes에 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 배포하는 방법](deployment-guidance.md)을 참조하세요.
+
+SQL Server 빅 데이터 클러스터에 대한 피드백이나 기능 권장 사항이 있으면 [SQL Server 빅 데이터 클러스터 피드백에 의견을 남겨 주세요](https://aka.ms/sql-server-bdc-feedback).

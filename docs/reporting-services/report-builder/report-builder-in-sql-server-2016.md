@@ -1,5 +1,6 @@
 ---
 title: SQL Server의 보고서 작성기 | Microsoft Docs
+description: 보고서 작성기는 페이지를 매긴 보고서를 작성하는 도구입니다. 보고서를 만들려면 사용자가 검색할 데이터, 데이터를 가져올 위치, 가져온 데이터를 표시할 방법을 지정해야 합니다.
 ms.date: 05/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c10e37d7c1231a3ed4db2d7412ea223cccc6922d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f67cf34bd18dc6a2743822f66acbee1692000bdb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67688512"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290890"
 ---
 # <a name="report-builder-in-sql-server"></a>SQL Server의 보고서 작성기
 
@@ -30,7 +31,7 @@ ms.locfileid: "67688512"
   
  이 페이지를 매긴 보고서에는 행/열 그룹, 스파크라인, 표시기, 모서리 셀의 요약 원형 차트가 포함된 행렬이 나와 있습니다. 그리고 색과 원 크기로 구분되어 표시된 두 가지 지리 데이터 집합을 보여 주는 지도도 함께 포함되어 있습니다.  
   
-##  <a name="JumpStartReptCreation"></a> 빠른 보고서 만들기  
+##  <a name="jump-start-report-creation"></a><a name="JumpStartReptCreation"></a> 빠른 보고서 만들기  
   
 -   **공유 데이터 세트를 사용하여 보고서를 작성**합니다. 공유 데이터 세트는 공유 데이터 원본을 기반으로 하는 쿼리이며 기본 모드 또는 SharePoint 통합 모드에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 저장됩니다.  
   
@@ -40,7 +41,7 @@ ms.locfileid: "67688512"
   
 -   **먼저 보고서 파트를 보고서에 포함**합니다. 보고서 파트는 기본 모드 또는 SharePoint 통합 모드에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 별도로 게시된 보고서 항목이며 다른 보고서에서 다시 사용할 수 있습니다. 테이블, 행렬, 차트 및 이미지와 같은 보고서 항목은 보고서 파트로 게시할 수 있습니다.  
   
-##  <a name="DesignRept"></a> 보고서 디자인  
+##  <a name="design-your-report"></a><a name="DesignRept"></a> 보고서 디자인  
   
 -   **테이블, 행렬, 차트, 자유 형식 보고서 레이아웃을 사용하여 페이지를 매긴 보고서를 작성합니다.** 열 중심의 데이터에 대한 테이블 보고서, 요약된 데이터에 대한 행렬 보고서(예: 크로스탭 또는 피벗 테이블 보고서), 그래픽 데이터에 대한 차트 보고서, 그 외 모든 데이터에 대한 자유 형식 보고서를 만듭니다. 목록, 그래픽, 동적 웹 기반 애플리케이션을 위한 컨트롤 등과 함께 다른 보고서 및 차트를 보고서에 포함할 수 있습니다.  
   
@@ -55,7 +56,7 @@ ms.locfileid: "67688512"
   
 -   **이미지** 및 외부 콘텐츠를 비롯한 기타 리소스를 포함시키거나 참조합니다.  
   
-##  <a name="ManageRpt"></a> 보고서 관리  
+##  <a name="manage-your-report"></a><a name="ManageRpt"></a> 보고서 관리  
   
 -   **보고서 정의를 컴퓨터에 저장** 하거나, 다른 사람과 공유하고 직접 관리할 수 있도록 보고서 서버에 저장합니다.  
   

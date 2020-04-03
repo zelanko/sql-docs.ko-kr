@@ -1,6 +1,6 @@
 ---
 title: 가용성 그룹 SQL Server on Linux 작동
-description: ''
+description: 이 문서에서는 가용성 그룹을 사용하여 Linux에서 SQL Server 인스턴스를 통해 롤링 업그레이드를 수행하는 방법을 설명합니다. 업그레이드에 앞서 모범 사례를 검토하세요.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 24a9d3d9ee0fd65b08e30f40a0597eadf47c6b76
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 59e2f6c4321b1ccd90a66dd8e7466a3e0ccb490e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67916046"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216822"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>Linux에서 Always On 가용성 그룹 작동
 

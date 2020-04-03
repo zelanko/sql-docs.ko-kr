@@ -8,13 +8,13 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 83635ac9cb5b35aba25ace6947bc1281d468cb65
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 0018d38beb1c576ea80b39d525388118d7b8063c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558314"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79434110"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>sqlmlutils를 사용하여 Python 패키지 설치
 
@@ -58,7 +58,7 @@ ms.locfileid: "77558314"
 
 **sqlmlutils**를 사용하려면 먼저 SQL Server에 연결하는 데 사용하는 클라이언트 컴퓨터에 설치해야 합니다. `pip`를 설치했는지 확인합니다. 자세한 내용은 [pip 설치](https://pip.pypa.io/en/stable/installing/)를 참조하세요.
 
-1. 최신 **sqlmlutils** zip 파일을 https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist에서 클라이언트 컴퓨터로 다운로드합니다. 파일 압축을 풀지 마세요.
+1. 최신 **sqlmlutils** zip 파일을 https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist 에서 클라이언트 컴퓨터로 다운로드합니다. 파일 압축을 풀지 마세요.
 
 1. **명령 프롬프트**를 열고 다음 명령을 실행하여 **sqlmlutils** 패키지를 설치합니다. 다운로드한 **sqlmlutils** zip 파일의 전체 경로를 대체합니다. 이 예제에서는 다운로드한 파일을 `c:\temp\sqlmlutils_0.7.2.zip`이라고 가정합니다.
 
@@ -75,9 +75,21 @@ ms.locfileid: "77558314"
 
 SQL Server에 연결하는 데 사용하는 클라이언트 컴퓨터가 인터넷에 연결되어 있는 경우 **sqlmlutils**를 사용하여 인터넷을 통해 **text-tools** 패키지와 종속성을 찾은 다음, 원격으로 SQL Server 인스턴스에 패키지를 설치할 수 있습니다.
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+1. 클라이언트 컴퓨터에서 **Python** 또는 Python 환경을 엽니다.
+
+1. 다음 명령을 사용하여 **text-tools** 패키지를 설치합니다. 사용자 고유의 SQL Server 데이터베이스 연결 정보로 대체합니다(Windows 인증을 사용하는 경우에는 `uid` 및 `pwd` 매개 변수 필요 없음).
+
+::: moniker-end
+
+::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+
 1. 클라이언트 컴퓨터에서 **Python** 또는 Python 환경을 엽니다.
 
 1. 다음 명령을 사용하여 **text-tools** 패키지를 설치합니다. 사용자의 SQL Server 데이터베이스 연결 정보를 대체합니다.
+
+::: moniker-end
 
    ```python
    import sqlmlutils
@@ -105,17 +117,27 @@ SQL Server에 연결하는 데 사용하는 클라이언트 컴퓨터가 인터�
 
 이 예제에서는 **text-tools**에는 종속성이 없으므로 `text-tools` 폴더에는 설치할 파일이 1개 뿐입니다. 반면, **scikit-plot**과 같은 패키지에는 11개의 종속성이 있으므로 폴더에서 12개 파일(**scikit-plot** 패키지 및 11개의 종속성 패키지)을 찾을 수 있으며 각각을 설치합니다.
 
-다음 Python 스크립트를 실행합니다. 패키지의 실제 파일 경로와 이름, 사용자 고유의 SQL Server 데이터베이스 연결 정보를 대체합니다(Windows 인증을 사용하지 않는 경우 `uid` 및 `pwd` 매개 변수 추가). 폴더의 각 패키지 파일에 대해 `sqlmlutils.SQLPackageManager` 문을 반복합니다.
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+다음 Python 스크립트를 실행합니다. 패키지의 실제 파일 경로와 이름, 사용자 고유의 SQL Server 데이터베이스 연결 정보로 대체합니다(Windows 인증을 사용하는 경우에는 `uid` 및 `pwd` 매개 변수 필요 없음). 폴더의 각 패키지 파일에 대해 `sqlmlutils.SQLPackageManager` 문을 반복합니다.
+
+::: moniker-end
+
+::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+
+다음 Python 스크립트를 실행합니다. 패키지의 실제 파일 경로와 이름, 사용자 고유의 SQL Server 데이터베이스 연결 정보로 대체합니다. 폴더의 각 패키지 파일에 대해 `sqlmlutils.SQLPackageManager` 문을 반복합니다.
+
+::: moniker-end
 
 ```python
 import sqlmlutils
-connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
-sqlmlutils.SQLPackageManager(connection).install("c:/temp/packages/text-tools/text_tools-1.0.0-py3-none-any.whl")
+connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase", uid="username", pwd="password"))
+sqlmlutils.SQLPackageManager(connection).install("text_tools-1.0.0-py3-none-any.whl")
 ```
 
 ## <a name="use-the-package-in-sql-server"></a>SQL Server에서 패키지 사용
 
-이제 SQL Server의 Python 스크립트에서 이 패키지를 사용할 수 있습니다. 다음은 그 예입니다. 
+이제 SQL Server의 Python 스크립트에서 이 패키지를 사용할 수 있습니다. 다음은 그 예입니다.
 
 ```python
 EXECUTE sp_execute_external_script

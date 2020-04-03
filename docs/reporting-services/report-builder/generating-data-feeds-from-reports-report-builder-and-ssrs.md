@@ -1,5 +1,6 @@
 ---
 title: 보고서에서 데이터 피드 만들기(보고서 작성기) | Microsoft Docs
+description: Reporting Services Atom 렌더링 확장 프로그램은 페이지를 매긴 보고서의 데이터 피드와 보고서 내 데이터 영역의 데이터 피드가 포함된 서비스 문서를 생성합니다.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 35f1f5f80d47aa5a59b77de9c4ebcab168394498
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 93eecfd3ffb66be1a1758f3265bf91a5842a4abc
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079170"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342802"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>보고서에서 데이터 피드 만들기(보고서 작성기 및 SSRS)
 
@@ -31,7 +32,7 @@ ms.locfileid: "77079170"
   
  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportDataAsDataFeeds"></a> 데이터 피드로 보고서 사용  
+##  <a name="reports-as-data-feeds"></a><a name="ReportDataAsDataFeeds"></a> 데이터 피드로 보고서 사용  
  프로덕션 보고서를 데이터 피드로 내보내거나 기본 목적이 애플리케이션에 데이터를 제공하는 것인 보고서를 데이터 피드 형태로 만들 수 있습니다. 보고서를 데이터 피드로 사용하는 것은 클라이언트 데이터 공급자를 통해 데이터에 액세스하기가 쉽지 않은 경우나 데이터 원본의 복잡성을 숨기고 데이터를 더 간단하게 사용하게 하려는 경우 애플리케이션에 데이터를 제공하는 또 다른 방법입니다. 보고서 데이터를 데이터 피드로 사용하는 경우 보안, 예약 및 보고서 스냅샷과 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 사용하여 데이터 피드를 제공하는 보고서를 관리할 수 있다는 추가적인 이점이 있습니다.  
   
  Atom 렌더링 확장 프로그램을 최대한 활용하려면 보고서가 데이터 피드로 렌더링되는 방식을 이해해야 합니다. 기존 보고서를 사용하는 경우 보고서에서 생성할 데이터 피드를 예측할 수 있으면 유용합니다. 데이터 피드로 특별히 사용하기 위해 보고서를 작성하는 경우에는 데이터 피드의 유용성을 최대화하기 위해 데이터를 포함하고 보고서 레이아웃을 조정할 수 있으면 크게 도움이 됩니다.  
@@ -39,7 +40,7 @@ ms.locfileid: "77079170"
  자세한 내용은 [보고서에서 데이터 피드 생성&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)을 참조하세요.  
   
   
-##  <a name="AtomServiceDocument"></a> Atom 서비스 문서(.atomsvc 파일)  
+##  <a name="atom-service-document-atomsvc-file"></a><a name="AtomServiceDocument"></a> Atom 서비스 문서(.atomsvc 파일)  
  Atom 서비스 문서는 하나 이상의 데이터 피드에 대한 연결을 지정합니다. 최소한 연결은 피드를 생성하는 데이터 서비스에 대한 간단한 URL입니다.  
   
  Atom 렌더링 확장 프로그램을 사용하여 보고서 데이터를 렌더링하는 경우 Atom 서비스 문서는 보고서에 사용할 수 있는 데이터 피드를 나열합니다. 이 문서는 보고서의 각 데이터 영역에 대한 데이터 피드를 하나 이상 나열합니다. 테이블과 계기는 각각 데이터 피드를 하나만 생성하지만 행렬, 목록 및 차트는 표시하는 데이터에 따라 여러 데이터 피드를 생성할 수 있습니다.  
@@ -59,7 +60,7 @@ ms.locfileid: "77079170"
  ![RS_Atom_PeerDynamicDataFeeds](../../reporting-services/report-builder/media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
   
-##  <a name="DataFeeds"></a> 데이터 피드  
+##  <a name="data-feeds"></a><a name="DataFeeds"></a> 데이터 피드  
  데이터 피드는 보고서가 실행될 때마다 다를 수 있는 변수 데이터와 시간이 흐름에 따라 변경되지 않는 일관성 있는 표 형식이 있는 XML 파일입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 생성하는 데이터 피드는 ADO.NET Data Services에서 생성하는 데이터 피드와 동일한 형식으로 되어 있습니다.  
   
  데이터 피드에는 헤더 섹션과 데이터 섹션이 포함되어 있습니다. Atom 사양은 각 섹션에서 요소를 정의합니다. 헤더에는 데이터 피드에서 사용할 문자 인코딩 스키마와 같은 정보가 포함됩니다.  
@@ -122,7 +123,7 @@ ms.locfileid: "77079170"
  데이터 피드는 .atom 파일 이름 확장명으로 저장됩니다. 메모장 또는 XML 편집기와 같은 텍스트 또는 XML 편집기를 사용하여 파일 구조와 내용을 볼 수 있습니다.  
   
   
-##  <a name="FlatteningReportData"></a> 보고서 데이터 일반화  
+##  <a name="flattening-report-data"></a><a name="FlatteningReportData"></a> 보고서 데이터 일반화  
  Atom 렌더러는 XML 형식의 일반화된 행 집합으로 보고서 데이터를 제공합니다. 데이터 테이블을 일반화하기 위한 규칙은 몇 가지 예외를 제외하고 CSV 렌더러의 규칙과 동일합니다.  
   
 -   범위의 항목은 세부 수준으로 일반화됩니다. CSV 렌더러와 달리 최상위 수준의 입력란은 데이터 피드에 작성된 각 항목에 나타납니다.  
@@ -144,7 +145,7 @@ ms.locfileid: "77079170"
  자세한 내용은 [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)를 참조하세요.  
   
   
-##  <a name="AtomRendering"></a> Atom 렌더링 규칙  
+##  <a name="atom-rendering-rules"></a><a name="AtomRendering"></a> Atom 렌더링 규칙  
  Atom 렌더링 확장 프로그램은 데이터 피드를 렌더링할 때 다음 정보를 무시합니다.  
   
 -   서식 및 레이아웃  
@@ -181,7 +182,7 @@ ms.locfileid: "77079170"
 |지도|각 지도 데이터 영역에 대한 데이터 피드를 생성합니다. 여러 지도 계층에서 동일한 데이터 영역을 사용하는 경우 데이터 피드에는 모든 지도 계층이 포함됩니다. 데이터 피드에는 지도 계층의 각 지도 멤버에 대한 레이블과 값이 있는 레코드가 포함됩니다.|  
   
   
-##  <a name="DeviceInfo"></a> 디바이스 정보 설정  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> 디바이스 정보 설정  
  사용할 인코딩 스키마를 비롯하여 이 렌더러의 기본 설정을 일부 변경할 수 있습니다. 자세한 내용은 [ATOM Device Information Settings](../../reporting-services/atom-device-information-settings.md)을 참조하세요.  
 
 ## <a name="next-steps"></a>다음 단계

@@ -1,5 +1,6 @@
 ---
 title: CSV 파일로 내보내기(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기의 CSV 렌더링 확장 프로그램은 페이지를 매긴 보고서를 여러 애플리케이션에서 호환되어 읽을 수 있는 일반 텍스트 형식으로 렌더링합니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0b53c40aeb36b2db7586fe135daa05aff17e54e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1104054faef55ca3b3b661ea210c279c9aa55841
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078370"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342884"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>CSV 파일로 내보내기(보고서 작성기 및 SSRS)
   CSV(쉼표로 구분된 값) 렌더링 확장 프로그램은 페이지가 매겨진 보고서의 데이터를 결합하여 읽기 쉽고 많은 애플리케이션과 교환할 수 있는 표준화된 일반 텍스트 형식으로 렌더링합니다.  
@@ -27,7 +28,7 @@ ms.locfileid: "77078370"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CSVRendering"></a> CSV 렌더링  
+##  <a name="csv-rendering"></a><a name="CSVRendering"></a> CSV 렌더링  
  기본 설정을 사용하여 렌더링된 CSV 보고서는 다음과 같은 특징을 가집니다.  
   
 -   기본 필드 구분 기호 문자열은 쉼표(,)입니다.  
@@ -95,7 +96,7 @@ ms.locfileid: "77078370"
  자세한 내용은 [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)를 참조하세요.  
   
   
-##  <a name="RenderingModes"></a> 렌더러 모드  
+##  <a name="renderer-modes"></a><a name="RenderingModes"></a> 렌더러 모드  
  CSV 렌더링 확장 프로그램은 두 가지 모드로 작동할 수 있습니다. 하나는 Excel에 대해 최적화된 모드이고, 다른 하나는 RFC 4180에 지정된 CSV 사양의 엄격한 준수를 요구하는 타사 애플리케이션에 최적화되어 있습니다. 사용하는 모드에 따라 피어 데이터 영역은 다르게 처리됩니다.  
   
 ### <a name="default-mode"></a>기본 모드  
@@ -119,7 +120,7 @@ ms.locfileid: "77078370"
 #### <a name="formatting"></a>서식 지정  
  값에는 서식이 지정되지 않습니다.  
   
-##  <a name="Interactivity"></a> 상호 작용  
+##  <a name="interactivity"></a><a name="Interactivity"></a> 상호 작용  
  상호 작용은 이 렌더러에 의해 생성되는 어떤 CSV 형식에서도 지원되지 않습니다. 다음 대화형 요소는 렌더링되지 않습니다.  
   
 -   하이퍼링크  
@@ -137,7 +138,7 @@ ms.locfileid: "77078370"
 -   책갈피  
   
   
-##  <a name="DeviceInfo"></a> 디바이스 정보 설정  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> 디바이스 정보 설정  
  디바이스 정보 설정을 변경하여 렌더링할 모드, 구분 기호로 사용할 문자, 텍스트 한정자 기본 문자열로 사용할 문자 등 이 렌더러의 일부 기본 설정을 변경할 수 있습니다. 자세한 내용은 [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md)을 참조하세요.  
   
   

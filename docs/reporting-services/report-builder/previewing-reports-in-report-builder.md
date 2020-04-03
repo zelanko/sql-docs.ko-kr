@@ -1,5 +1,6 @@
 ---
 title: 보고서 작성기에서 보고서 미리 보기 | Microsoft Docs
+description: Reporting Services 페이지를 매긴 보고서를 만들 때 보고서를 미리 보고 보고서가 원하는 대로 표시되는지 확인할 수 있습니다.
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 36c1c3172e4d37963340fdbebce85eff9b5086b9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c5af8a22b4cba1fd7d2ad43629b379e351b207b3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580720"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342759"
 ---
 # <a name="previewing-reports-in-report-builder"></a>보고서 작성기에서 보고서 미리 보기
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서를 만들 때 보고서에 원하는 항목이 표시되는지 확인하기 위해 자주 보고서를 미리 보는 것이 유용합니다. 보고서를 미리 보려면 **실행**을 클릭합니다. 보고서가 미리 보기 모드에서 렌더링됩니다.  

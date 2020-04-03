@@ -1,5 +1,6 @@
 ---
 title: Windows에 PolyBase 설치 | Microsoft Docs
+description: PolyBase를 단일 노드 또는 PolyBase 스케일 아웃 그룹으로 설치하는 방법을 알아봅니다. 설치 마법사나 명령 프롬프트를 사용할 수 있습니다. 마지막으로, PolyBase를 사용하도록 설정합니다.
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
@@ -10,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 007719c2407f6e193b8612ef51944ccbfd3238d3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: d6c9585f536c92e1f2776831434614c59919ddf3
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288477"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80217134"
 ---
 # <a name="install-polybase-on-windows"></a>Windows에 PolyBase 설치
 
@@ -95,7 +96,7 @@ PolyBase를 독립 실행형 또는 스케일 아웃 그룹에 설치한 후에�
    > 설치 후 [PolyBase 기능을 사용하도록 설정](#enable)해야 합니다.
 
 
-##  <a name="installing"></a> 명령 프롬프트 사용
+##  <a name="use-a-command-prompt"></a><a name="installing"></a> 명령 프롬프트 사용
 
 이 테이블의 값을 사용하여 설치 스크립트를 만듭니다. SQL Server PolyBase 엔진 및 SQL Server PolyBase 데이터 이동 서비스는 동일한 계정 하에서 실행되어야 합니다. PolyBase 스케일 아웃 그룹에서 모든 노드의 양쪽 PolyBase 서비스는 동일한 도메인 계정 하에서 실행해야 합니다.  
    
@@ -151,7 +152,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
    
 ```  
 
-## <a id="enable"></a> PolyBase 사용
+## <a name="enable-polybase"></a><a id="enable"></a> PolyBase 사용
 
 설치 후 PolyBase를 활성화하여 해당 기능에 액세스해야 합니다. 다음 Transact-SQL 명령을 사용합니다. 빅 데이터 클러스터 설치 중에 배포된 SQL 2019 인스턴스에는 이 설정이 기본적으로 사용하도록 지정되어 있습니다.
 
@@ -166,7 +167,7 @@ RECONFIGURE;
 
 PolyBase는 세 개의 사용자 데이터베이스, DWConfiguration, DWDiagnostics, 및 DWQueue를 설치합니다. 이러한 데이터베이스는 PolyBase용으로 사용됩니다. 변경하거나 삭제하지 마세요.  
    
-### <a id="confirminstall"></a> 설치 확인 방법  
+### <a name="how-to-confirm-installation"></a><a id="confirminstall"></a> 설치 확인 방법  
 
 다음 명령을 실행합니다. PolyBase가 설치된 경우 1을 반환합니다. 그렇지 않으면 0을 반환합니다.  
 

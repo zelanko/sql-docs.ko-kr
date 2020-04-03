@@ -1,5 +1,6 @@
 ---
 title: 보고서 디자인 뷰 (보고서 작성기) | Microsoft Docs
+description: 이 문서에서는 보고서 리소스를 추가, 선택 및 구성하고 보고서 항목 속성을 변경하는 데 사용되는 보고서 작성기 창의 컨트롤에 대해 설명합니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ecc2115b106fe61492be388c90cfa2bd27eae9f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ca82e7fa0a302c4156c56c2e5ff66ad0cc49da99
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190040"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290863"
 ---
 # <a name="report-design-view-report-builder"></a>보고서 디자인 뷰(보고서 작성기)
   보고서 작성기 창은 보고서 리소스를 쉽게 구성하고 필요한 페이지가 매겨진 보고서를 신속하게 작성할 수 있도록 디자인되어 있습니다. 디자인 화면은 창의 가운데에 있고 그 주위에 리본과 창이 있습니다. 디자인 화면에서 보고서 항목을 추가하고 구성합니다. 이 문서에서는 보고서 리소스를 추가, 선택 및 구성하고 보고서 항목 속성을 변경하는 데 사용하는 창에 대해 설명합니다.  
@@ -47,13 +48,13 @@ ms.locfileid: "74190040"
   
 8.  현재 보고서 상태 표시줄  
   
-##  <a name="Ribbon"></a> 매개 변수 창  
+##  <a name="parameters-pane"></a><a name="Ribbon"></a> 매개 변수 창  
  보고서 매개 변수를 사용하면 보고서 데이터를 제어하고, 관련된 보고서를 서로 연결하고, 다양하게 보고서를 표현할 수 있습니다. 매개 변수 창에서는 보고서 매개 변수에 대한 유연한 레이아웃을 제공합니다.  
   
  자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)에 대해 자세히 알아봅니다.  
   
   
-##  <a name="RptDesignSurface"></a> 보고서 디자인 화면  
+##  <a name="the-report-design-surface"></a><a name="RptDesignSurface"></a> 보고서 디자인 화면  
  보고서 작성기 보고서 디자인 화면은 보고서를 디자인할 때 주로 사용되는 작업 영역입니다. 데이터 영역, 하위 보고서, 입력란, 이미지, 사각형 및 선과 같은 보고서 항목을 보고서에 배치하려면 원하는 보고서 항목을 리본 또는 보고서 파트 갤러리에서 디자인 화면에 추가합니다. 디자인 화면에서 보고서 항목에 그룹, 식, 매개 변수, 필터, 동작, 표시 유형 및 서식을 추가할 수 있습니다.  
   
  다음을 변경할 수도 있습니다.  
@@ -75,7 +76,7 @@ ms.locfileid: "74190040"
 >  눈금자를 표시하려면 **보기** 탭에서 **눈금자** 확인란을 선택합니다.  
   
   
-##  <a name="ReptDataPane"></a> The Report Data Pane  
+##  <a name="the-report-data-pane"></a><a name="ReptDataPane"></a> The Report Data Pane  
  보고서 데이터 창에서는 보고서 레이아웃을 디자인하기 전에 보고서에 필요한 보고서 데이터와 보고서 리소스를 정의합니다. 예를 들어 데이터 원본, 데이터 세트, 계산 필드, 보고서 매개 변수 및 이미지를 보고서 데이터 창에 추가할 수 있습니다.  
   
  보고서 데이터 창에 항목을 추가한 후 필드를 디자인 화면의 보고서 항목으로 끌어 보고서에서 데이터가 나타나는 위치를 제어할 수 있습니다.  
@@ -105,7 +106,7 @@ ms.locfileid: "74190040"
 -   [데이터 세트 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   
-##  <a name="ReptPartGallery"></a> 보고서 파트 갤러리  
+##  <a name="the-report-part-gallery"></a><a name="ReptPartGallery"></a> 보고서 파트 갤러리  
  보고서를 만드는 가장 쉬운 방법은 보고서 서버나 SharePoint 사이트에 통합된 보고서 서버에서 테이블, 차트 등의 기존 보고서 파트를 찾는 것입니다.  
   
  삽입 탭에서 **보고서 파트** 를 클릭하여 보고서 파트 갤러리를 엽니다. 여기서 보고서에 추가할 보고서 파트를 검색할 수 있습니다. 보고서 파트 이름(전체 또는 일부분), 파트를 만든 사람, 마지막으로 수정한 사람, 마지막으로 수정한 시간, 저장 위치 또는 파트 유형으로 파트를 필터링할 수 있습니다. 예를 들어 지난 주에 동료 중 한 사람이 만든 모든 차트를 검색할 수 있습니다.  
@@ -116,7 +117,7 @@ ms.locfileid: "74190040"
  검색 결과는 축소판 그림이나 목록으로 볼 수 있으며 이름, 만든 날짜/수정한 날짜 및 작성자로 정렬할 수 있습니다. 자세한 내용은 [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)를 참조하세요.  
   
   
-##  <a name="PropertiesPane"></a> 속성 창(보고서 작성기)  
+##  <a name="the-properties-pane-report-builder"></a><a name="PropertiesPane"></a> 속성 창(보고서 작성기)  
  데이터 영역, 이미지, 입력란 및 보고서 본문 자체를 비롯한 보고서의 모든 항목은 연관된 속성을 가지고 있습니다. 예를 들어 입력란의 BorderColor 속성은 입력란 테두리의 색 값을 표시하고 보고서의 PageSize 속성은 보고서의 페이지 크기를 표시합니다.  
   
  이러한 속성은 속성 창에 표시됩니다. 선택한 보고서 항목에 따라 속성 창에 표시되는 속성이 달라집니다.  
@@ -142,7 +143,7 @@ ms.locfileid: "74190040"
  속성 창의 위쪽에는 범주, 사전순, 속성 페이지라는 세 개의 단추가 있습니다. 범주 및 사전순 단추를 클릭하면 속성 창 보기를 전환할 수 있고 **속성 페이지** 단추를 클릭하면 선택한 보고서 항목의 속성 대화 상자를 열 수 있습니다.  
   
   
-##  <a name="GroupPane"></a> 그룹화 창(보고서 작성기)  
+##  <a name="the-grouping-pane-report-builder"></a><a name="GroupPane"></a> 그룹화 창(보고서 작성기)  
  그룹은 보고서 데이터를 시각적 계층으로 구성하고 합계를 계산하는 데 사용됩니다. 디자인 화면은 물론 그룹화 창에서도 데이터 영역 내의 행 및 열 그룹을 볼 수 있습니다. 그룹화 창에는 행 그룹과 열 그룹이라는 두 개의 창이 있습니다. 데이터 영역을 선택하면 해당 데이터 영역 내의 모든 그룹이 계층적 목록으로 그룹화 창에 표시되며, 자식 그룹은 해당 부모 그룹보다 한 수준 아래에 표시됩니다.  
   
  ![보고서 작성기 행 그룹](../../reporting-services/report-builder/media/ssrb-rowgroups.png "보고서 작성기 행 그룹")  
@@ -154,7 +155,7 @@ ms.locfileid: "74190040"
  자세한 내용은 [그룹화 창&#40;보고서 작성기&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md) 및 [그룹 이해&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)를 참조하세요.  
   
   
-##  <a name="RunMode"></a> 실행 모드에서 보고서 미리 보기  
+##  <a name="previewing-your-report-in-run-mode"></a><a name="RunMode"></a> 실행 모드에서 보고서 미리 보기  
  보고서 디자인 뷰에서는 실제 데이터로 작업하는 것이 아니라 필드 이름이나 식으로 나타나는 데이터 표현으로 작업합니다. 디자인한 보고서의 문맥에 표시되는 실제 데이터를 확인하려는 경우에는 보고서를 실행하여 보고서 레이아웃에 표시되는 기본 데이터베이스의 데이터를 미리 볼 수 있습니다. 보고서 디자인과 실행 작업 간을 전환하면서 보고서의 디자인을 조정하고 결과를 즉시 볼 수 있습니다. 보고서를 미리 보려면 리본의 **뷰** 그룹에서 **실행** group on the ribbon.  
   
  **실행**을 클릭하면 보고서 작성기가 보고서 데이터 원본에 연결하고, 컴퓨터에 데이터를 캐시하고, 데이터와 레이아웃을 결합한 다음 HTML 뷰어에서 보고서를 렌더링합니다. 보고서를 계속 디자인하면서 필요에 따라 보고서를 실행해 볼 수 있습니다. 보고서가 만족스럽게 작성되면 보고서 서버에 보고서를 저장할 수 있으며 보고서 서버에 저장된 보고서는 적절한 권한이 있는 다른 사용자가 볼 수 있습니다.  

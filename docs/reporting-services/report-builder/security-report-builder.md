@@ -1,5 +1,6 @@
 ---
 title: 보안(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기 보안 기능은 게시 위치, 게시된 보고서, 외부 데이터 원본 및 데이터 원본 기반 모델, 대화형 기능과 관련이 있습니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e8b89f31330fa09d5dbe1f70fd10b2c473d26c0d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1d2c4c195b0d21d2090e13eff578cc533871da4d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190103"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290832"
 ---
 # <a name="security-report-builder"></a>보안 (보고서 작성기)
   보고서 작성기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 작동하도록 고안된 보고서 작성 클라이언트 애플리케이션입니다. 보고서 서버는 기본 모드에서 독립 실행형 서버로 작동하거나 SharePoint 사이트의 보고서를 지원하는 SharePoint 통합 모드에서 작동하도록 구성할 수 있습니다.  
@@ -34,7 +35,7 @@ ms.locfileid: "74190103"
   
  이 항목의 정보는 보고서 및 보고서 관련 항목을 관리하고 보안을 설정하는 방법을 이해하는 데 도움이 됩니다.  
   
-##  <a name="ReportServers"></a> 보고서 서버에 대한 보안 이해  
+##  <a name="understanding-security-for-report-servers"></a><a name="ReportServers"></a> 보고서 서버에 대한 보안 이해  
  보고서 게시와 보고서 보기는 권한이 필요한 작업입니다. 보고서 서버 관리자는 다음 형식의 보고서 서버 중 하나에서 권한이 있는 사용자만 보고서를 게시하고 볼 수 있도록 권한을 부여합니다.  
   
 -   기본 모드에서 구성된 보고서 서버  
@@ -54,7 +55,7 @@ ms.locfileid: "74190103"
      SharePoint 사이트나 하위 사이트에 연결할 수 없거나 해당 사이트를 찾을 수 없는 경우 SharePoint 사이트 관리자에게 문의하세요.  
   
   
-##  <a name="Reports"></a> 게시된 보고서 및 보고서 관련 항목에 대한 보안 이해  
+##  <a name="understanding-security-for-published-reports-and-report-related-items"></a><a name="Reports"></a> 게시된 보고서 및 보고서 관련 항목에 대한 보안 이해  
  보고서 및 보고서 관련 항목에 대한 보안은 보고서 서버 관리자가 관리합니다. 보고서 관련 항목에는 자격 증명, 공유 데이터 세트, 매개 변수, 보고서 파트 및 모델을 비롯한 포함된 데이터 원본 및 공유 데이터 원본이 포함됩니다.  
   
  보고서 서버 또는 SharePoint 사이트에서 보고서 및 보고서 관련 항목과 작업은 독립적인 보안 개체입니다. 항목 및 작업에 대한 액세스 권한은 항목에 따라 사용자 또는 그룹 계정을 사용 권한 수준에 매핑하는 SharePoint 보안 정책을 통해 부여됩니다. 많은 정책을 유지 관리할 때 발생할 수 있는 복잡성과 오버헤드를 줄이기 위해 폴더와 같은 컨테이너에 대한 사용 권한이 컨테이너의 항목별로 상속됩니다. 예를 들어 사용자가 폴더에 대한 특정 보고서 보기 권한을 가지고 있는 경우 해당 폴더의 항목에 대한 보고서 보기 권한도 가집니다.  
@@ -81,7 +82,7 @@ ms.locfileid: "74190103"
  자세한 내용은 [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)를 참조하세요.  
   
   
-##  <a name="Data"></a> 보고서 데이터 및 외부 데이터 원본에 대한 보안 이해  
+##  <a name="understanding-security-for-report-data-and-external-data-sources"></a><a name="Data"></a> 보고서 데이터 및 외부 데이터 원본에 대한 보안 이해  
  보고서의 각 외부 데이터 원본 데이터에 액세스하려면 보고서에 포함된 데이터 원본을 만들거나 공유 데이터 원본 또는 공유 데이터 세트에 대한 참조를 추가해야 합니다.  
   
  각 외부 데이터 원본에 대해 원본 및 기본 데이터에 액세스할 수 있는 자격 증명을 제공해야 합니다. 데이터 원본의 소유자는 이 액세스를 제공하는 자격 증명의 유형을 지정합니다.  
@@ -96,13 +97,13 @@ ms.locfileid: "74190103"
  데이터 원본에 대한 자세한 내용은 [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)를 참조하세요.  
   
   
-##  <a name="Models"></a> 모델 및 보안 필터 이해  
+##  <a name="understanding-models-and-security-filters"></a><a name="Models"></a> 모델 및 보안 필터 이해  
  외부 데이터를 기반으로 하는 보고서 모델에서 데이터를 검색할 때 모델에 보안 필터를 적용할 수 있습니다. 이것은 보고서를 실행하는 각 사용자가 사용 권한을 가진 데이터만 볼 수 있도록 데이터에 보안을 설정할 수 있는 좋은 방법입니다.  
   
  보고서 매개 변수는 행 수준 보안에는 사용되지 않으며 특정 데이터 행을 사용자나 사용자 그룹이 보지 못하도록 방지하지 않습니다. 보고서에 표시된 데이터에 보안을 적용하려면 보안 필터 또는 모델 항목 보안을 사용해야 합니다.  
   
   
-##  <a name="Interactive"></a> 대화형 기능을 위한 보고서 제작에 대한 보안 이해  
+##  <a name="understanding-security-for-report-authoring-for-interactive-features"></a><a name="Interactive"></a> 대화형 기능을 위한 보고서 제작에 대한 보안 이해  
  보고서에서는 일반적으로 매개 변수를 사용하여 사용자가 보고서 보기를 대화형으로 사용자 지정할 수 있도록 합니다. 다음 팁을 사용하면 좋은 방법으로 보고서를 디자인하는 데 도움이 됩니다.  
   
 -   유효한 값을 제공한 경우에만 쿼리 매개 변수를 기반으로 하는 **텍스트** 형식의 매개 변수를 사용하세요. 사용 가능한 값 목록은 사용자가 유효한 값만 선택하는 데 도움이 됩니다. 사용 가능한 값 목록이 없으면 사용자가 입력할 수 있는 값을 제한할 수 없습니다.  

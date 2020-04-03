@@ -8,12 +8,12 @@ ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b71bad98aa6e9172b69efa67ce8708f1479fa691
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 427aff5fe9911fde59f3f37077fc9c2306d2bd42
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67910479"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487601"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>샘플: Ubuntu용 무인 SQL Server 설치 스크립트
 
@@ -31,6 +31,9 @@ ms.locfileid: "67910479"
 - 기타 시스템 요구 사항은 [SQL Server on Linux에 대한 시스템 요구 사항](sql-server-linux-setup.md#system)을 참조하세요.
 
 ## <a name="sample-script"></a>샘플 스크립트
+
+> [!NOTE]
+> SQL Server를 시작하는 데 시간이 오래 걸릴 경우 스크립트가 실패할 수 있습니다. 스크립트가 0이 아닌 상태로 종료되기 때문입니다. 첫 번째 줄에서 `-e` 스위치를 제거하면 이 문제가 해결될 수도 있습니다.
 
 ```bash
 #!/bin/bash -e

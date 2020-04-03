@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a3f978865d2fdd643650a7c7308adb65d2c79fa7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 83bb4fa7861feaccd2ff430ca10f80ef0bc5b10a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76916410"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80380804"
 ---
 # <a name="quickstart-data-structures-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services에서 R을 사용하는 데이터 구조, 데이터 형식 및 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ EXECUTE sp_execute_external_script
 
 일반적으로 R `str()` 명령을 사용하여 그 대답을 찾을 수 있습니다. R 스크립트에 `str(object_name)` 함수를 추가하여 지정된 R 개체의 데이터 스키마가 정보 메시지로 반환되도록 합니다. 메시지를 보려면 Visual Studio Code의 **메시지** 창 또는 SSMS의 **메시지** 탭에서 확인합니다.
 
-예제 1 및 예제 2의 결과가 다른 이유를 확인하려면 다음과 같이 각 문에서 _@script_ 변수 정의의 끝 부분에 `str(OutputDataSet)` 줄을 삽입합니다.
+예제 1 및 예제 2의 결과가 다른 이유를 확인하려면 다음과 같이 각 문에서 `@script` 변수 정의의 끝부분에 `str(OutputDataSet)` 줄을 삽입합니다.
 
 **str 함수가 추가된 예제 1**
 

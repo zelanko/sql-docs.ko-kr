@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 모바일 보고서에 대한 데이터 준비 | Microsoft Docs
+description: SQL Server 모바일 보고서 게시자는 필터링, 집계, 시분할 등의 복잡한 데이터 작업을 지원합니다. 이러한 작업을 위해 데이터를 준비하는 방법을 알아봅니다.
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ded496c3509420d54325dc054e018048ede0732
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bbd04e9eef6d0775407e9b9893c59daefd7dc0a9
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62499932"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448385"
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>Prepare data for Reporting Services mobile reports
   

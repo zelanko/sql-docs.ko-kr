@@ -9,12 +9,12 @@ ms.date: 02/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1cd604c754113f7196963daf714eab3dd41143cc
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.openlocfilehash: 2bbacb2bdeeb409f08e6e68438535bc0d6671b01
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79190587"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79487621"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Active Directory 모드에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포
 
@@ -77,19 +77,19 @@ BDC DSA(도메인 서비스 계정)는 OU에서 사용자, 그룹 및 컴퓨터 
 
     ![image15](./media/deploy-active-directory/image15.png)
 
-1. **추가...** 를 클릭하고, **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA** 사용자를 추가 합니다.
+1. **추가...** 를 클릭하고 **bdcDSA** 사용자를 추가합니다.
 
     ![image16](./media/deploy-active-directory/image16.png)
 
     ![image17](./media/deploy-active-directory/image17.png)
 
-1. **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA** 사용자를 선택하고, 모든 권한을 지운 다음, **고급**을 클릭합니다.
+1. **bdcDSA** 사용자를 선택하고 모든 권한을 지운 다음, **고급**을 클릭합니다.
 
 1. **추가**를 클릭합니다.
 
     ![image18](./media/deploy-active-directory/image18.png)
 
-    - **보안 주체 선택**을 클릭하고, **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA**를 삽입한 다음, [확인]을 클릭합니다.
+    - **보안 주체 선택**을 클릭하고 **bdcDSA**를 삽입한 다음, 확인을 클릭합니다.
 
     - **형식**을 **허용**으로 설정합니다.
 
@@ -113,7 +113,7 @@ BDC DSA(도메인 서비스 계정)는 OU에서 사용자, 그룹 및 컴퓨터 
 
 - **추가**를 클릭합니다.
 
-    - **보안 주체 선택**을 클릭하고, **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA**를 삽입한 다음, [확인]을 클릭합니다.
+    - **보안 주체 선택**을 클릭하고 **bdcDSA**를 삽입한 다음, 확인을 클릭합니다.
 
     - **형식**을 **허용**으로 설정합니다.
 
@@ -127,7 +127,7 @@ BDC DSA(도메인 서비스 계정)는 OU에서 사용자, 그룹 및 컴퓨터 
 
 - **추가**를 클릭합니다.
 
-    - **보안 주체 선택**을 클릭하고, **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA**를 삽입한 다음, [확인]을 클릭합니다.
+    - **보안 주체 선택**을 클릭하고 **bdcDSA**를 삽입한 다음, 확인을 클릭합니다.
 
     - **형식**을 **허용**으로 설정합니다.
 
@@ -166,7 +166,7 @@ AD 통합에 필요한 매개 변수는 다음과 같습니다. 이 문서의 �
 
 - `security.activeDirectory.ouDistinguishedName`: 클러스터 배포에서 만든 모든 AD 계정이 추가될 OU(조직 구성 단위)의 고유 이름입니다. 도메인을 `contoso.local`이라고 하는 경우 OU의 고유 이름은 `OU=BDC,DC=contoso,DC=local`입니다.
 
-- `security.activeDirectory.dnsIpAddresses`: 도메인 컨트롤러의 IP 주소 목록입니다.
+- `security.activeDirectory.dnsIpAddresses`: 도메인의 DNS 서버 IP 주소 목록을 포함합니다. 
 
 - `security.activeDirectory.domainControllerFullyQualifiedDns`: 도메인 컨트롤러의 FQDN 목록입니다. FQDN에는 도메인 컨트롤러의 머신/호스트 이름이 포함됩니다. 여러 도메인 컨트롤러가 있는 경우 여기에 목록을 제공할 수 있습니다. 예: `HOSTNAME.CONTOSO.LOCAL`
 
@@ -250,7 +250,7 @@ azdata bdc config replace -c custom-prod-kubeadm/bdc.json -j "$.spec.resources.a
 
 이제 Active Directory 통합을 사용하여 BDC를 배포하는 데 필요한 모든 매개 변수를 설정해야 합니다.
 
-[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]를 배포하는 방법에 대한 전체 설명서는 [공식 설명서](deployment-guidance.md)를 참조하세요.
+이제 `azdata` 명령과 kubeadm-prod 배포 프로필을 사용하여 Active Directory와 통합된 BDC 클러스터를 배포할 수 있습니다. [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]를 배포하는 방법에 대한 전체 설명서는 [Kubernetes에 SQL Server 빅 데이터 클러스터를 배포하는 방법](deployment-guidance.md)을 참조하세요.
 
 ## <a name="verify-reverse-dns-entry-for-domain-controller"></a>도메인 컨트롤러에 대한 역방향 DNS 항목 확인
 
@@ -325,3 +325,5 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 - 현재 도메인(Active Directory)당 하나의 BDC만 허용됩니다. 도메인당 여러 BDC를 사용하도록 설정하는 것은 향후 릴리스에 예정되어 있습니다.
 
 - 보안 구성에 지정된 AD 그룹은 DomainLocal 범위를 지정할 수 없습니다. [이러한 지침](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)에 따라 AD 그룹의 범위를 확인할 수 있습니다.
+
+- BDC에 대해 구성된 도메인의 AD 계정을 사용하여 BDC에 로그인할 수 있습니다. 향후 릴리스에서는 다른 트러스트된 도메인의 로그인도 사용할 수 있도록 지원할 예정입니다.

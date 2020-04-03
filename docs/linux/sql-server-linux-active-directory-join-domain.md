@@ -1,7 +1,7 @@
 ---
 title: SQL Server on Linux를 Active Directory에 가입
 titleSuffix: SQL Server
-description: ''
+description: 이 문서에서는 SQL Server Linux 호스트 머신을 AD 도메인에 연결하기 위한 가이드를 제공합니다. 기본 제공 SSSD 패키지를 사용하거나 타사 AD 공급자를 사용할 수 있습니다.
 author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5999a50e793cb29ea67075d0fa36454cdb58a67d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c787409d4e8772d89fc748d39c605506f5dcb520
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76761877"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216204"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Linux 호스트의 SQL Server를 Active Directory 도메인에 가입
 
@@ -129,7 +129,7 @@ ping contoso.com
 - [옵션 1: SSSD 패키지 사용](#option1)
 - [옵션 2: 타사 openldap 공급자 유틸리티 사용](#option2)
 
-### <a id="option1"></a> 옵션 1: SSSD 패키지를 사용하여 AD 도메인 조인
+### <a name="option-1-use-sssd-package-to-join-ad-domain"></a><a id="option1"></a> 옵션 1: SSSD 패키지를 사용하여 AD 도메인 조인
 
 이 방법에서는 **realmd** 및 **sssd** 패키지를 사용하여 SQL Server 호스트를 AD 도메인에 연결합니다.
 
@@ -203,7 +203,7 @@ ping contoso.com
 
 자세한 내용은 Red Hat 설명서에서 [Discovering and Joining Identity Domains](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html)(ID 도메인 검색 및 조인)에 관한 내용을 참조하세요.
 
-### <a id="option2"></a> 옵션 2: 타사 openldap 공급자 유틸리티 사용
+### <a name="option-2-use-third-party-openldap-provider-utilities"></a><a id="option2"></a> 옵션 2: 타사 openldap 공급자 유틸리티 사용
 
 [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/) 또는 [Centrify](https://www.centrify.com/)와 같은 타사 유틸리티를 사용할 수 있습니다. 이 문서에서는 각 개별 유틸리티에 관한 단계는 다루지 않습니다. 계속하기 전에 먼저 이러한 유틸리티 중 하나를 사용하여 SQL Server의 Linux 호스트를 도메인에 조인해야 합니다.  
 

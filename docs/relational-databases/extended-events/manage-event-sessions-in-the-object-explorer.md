@@ -1,5 +1,6 @@
 ---
 title: 개체 탐색기에서 이벤트 세션 관리
+description: '개체 탐색기에서 확장 이벤트에 영향을 주는 작업(예: 확장 이벤트 만들기, 시작, 중지, 내보내기, 가져오기, 편집 또는 삭제)을 수행할 수 있습니다.'
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d7019b369999afe8c28660a6a533e61b1d01c29
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 390e8d4c65951f7b2b6c1f17d161a8ddc6d71242
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75234527"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434090"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>개체 탐색기에서 이벤트 세션 관리
 
@@ -116,7 +117,7 @@ STATE = STOP
   
 4.  이벤트 세션을 수정한 후 **확인**을 클릭합니다.  
   
-## <a name="script-an-event-session-definition-using-includetsqlincludestsql-mdmd"></a>다음을 사용하여 확장 이벤트 세션 스크립팅: [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+## <a name="script-an-event-session-definition-using-tsql"></a>다음을 사용하여 확장 이벤트 세션 스크립팅: [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  새 세션 마법사와 새 세션 대화 상자에는 확장 이벤트 세션을 정의하는, [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 생성하는 스크립트 옵션이 있습니다.  
   
  세션 이름을 마우스 오른쪽 단추로 클릭하고 [!INCLUDE[tsql](../../includes/tsql-md.md)] 세션 스크립팅 **을 선택한 다음**Create **를 선택하여 기존 확장 이벤트 세션의**에 액세스할 수 있습니다.  

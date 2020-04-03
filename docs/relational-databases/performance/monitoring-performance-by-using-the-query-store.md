@@ -1,7 +1,7 @@
 ---
 title: 쿼리 저장소를 사용하여 성능 모니터링 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2020
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02658b617400f33b5a648dab43953a041f5c2936
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: bd1dde8b4b98041ed8a9d07c82d52f8d202ed0c9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288467"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448179"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>쿼리 저장소를 사용하여 성능 모니터링
 
-[!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 저장소 기능을 통해 사용자는 쿼리 계획 선택 및 성능에 대한 정보를 얻을 수 있습니다. 쿼리 계획 변경으로 인해 발생하는 성능 차이를 신속하게 찾을 수 있도록 하여 성능 문제 해결을 간소화합니다. 쿼리 저장소는 쿼리, 계획 및 런타임 통계의 기록을 자동으로 캡처하고 사용자 검토를 위해 보관합니다. 데이터를 기간별로 구분하여 데이터베이스 사용 패턴을 파악하고 서버에서 쿼리 계획 변경이 발생한 시기를 이해할 수 있게 해줍니다. 쿼리 저장소는 [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) 옵션을 사용하여 구성할 수 있습니다.
 
@@ -303,35 +303,44 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
 
 **임시 쿼리 삭제**
 
-한 번만 실행되고 24시간 이상 지난 쿼리를 삭제합니다.
+3분마다 쿼리 저장소에서 임시 쿼리와 내부 쿼리를 제거하여 쿼리 저장소의 공간이 부족해서 실제로 추적해야 하는 쿼리가 제거되는 것을 방지합니다.
 
 ```sql
+SET NOCOUNT ON
+-- This purges adhoc and internal queries from the query store every 3 minutes so that the
+-- query store does not run out of space and remove queries we really need to track
+DECLARE @command varchar(1000)
+
+SELECT @command = 'IF ''?'' NOT IN(''master'', ''model'', ''msdb'', ''tempdb'') BEGIN USE ?
+EXEC(''
 DECLARE @id int
 DECLARE adhoc_queries_cursor CURSOR
 FOR
 SELECT q.query_id
 FROM sys.query_store_query_text AS qt
 JOIN sys.query_store_query AS q
-    ON q.query_text_id = qt.query_text_id
+ON q.query_text_id = qt.query_text_id
 JOIN sys.query_store_plan AS p
-    ON p.query_id = q.query_id
+ON p.query_id = q.query_id
 JOIN sys.query_store_runtime_stats AS rs
-    ON rs.plan_id = p.plan_id
-GROUP BY q.query_id
-HAVING SUM(rs.count_executions) < 2
-AND MAX(rs.last_execution_time) < DATEADD (hour, -24, GETUTCDATE())
-ORDER BY q.query_id ;
+ON rs.plan_id = p.plan_id
+WHERE q.is_internal_query = 1 ' -- is it an internal query then we dont care to keep track of it
 
+' OR q.object_id = 0' -- if it does not have a valid object_id then it is an adhoc query and we dont care about keeping track of it
+' GROUP BY q.query_id
+HAVING MAX(rs.last_execution_time) < DATEADD (minute, -5, GETUTCDATE()) ' -- if it has been more than 5 minutes since the adhoc query ran
+' ORDER BY q.query_id ;
 OPEN adhoc_queries_cursor ;
 FETCH NEXT FROM adhoc_queries_cursor INTO @id;
 WHILE @@fetch_status = 0
-    BEGIN
-        PRINT @id
-        EXEC sp_query_store_remove_query @id
-        FETCH NEXT FROM adhoc_queries_cursor INTO @id
-    END
+BEGIN
+EXEC sp_query_store_remove_query @id
+FETCH NEXT FROM adhoc_queries_cursor INTO @id
+END
 CLOSE adhoc_queries_cursor ;
 DEALLOCATE adhoc_queries_cursor;
+'') END' ;
+EXEC sp_MSforeachdb @command
 ```
 
 더 이상 중요하지 않은 데이터를 지우는 다른 논리를 사용하여 프로시저를 직접 정의할 수 있습니다.

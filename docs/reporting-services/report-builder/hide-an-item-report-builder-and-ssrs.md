@@ -1,5 +1,6 @@
 ---
 title: 항목 숨기기(보고서 작성기) | Microsoft Docs
+description: 보고서 작성기에서 보고서 항목의 표시 유형을 설정할 수 있습니다. 보고서 매개 변수 또는 다른 식을 지정하여 항목을 조건부로 숨길 수 있습니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 00d0544c6580e54f34b16bcce9dac2ce8604efdc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: dab0377e1f558c48be751b523c7129feefb18e66
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079054"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342782"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>항목 숨기기(보고서 작성기 및 SSRS)
   지정하는 보고서 매개 변수 또는 기타 식에 따라 항목을 숨기려면 보고서 항목의 표시 유형을 설정합니다.  

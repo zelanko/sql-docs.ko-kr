@@ -1,7 +1,7 @@
 ---
-title: JDBC 드라이버에 대한 FAQ(질문과 대답) | Microsoft Docs
+title: JDBC 드라이버에 대한 FAQ(질문과 대답)
 ms.custom: ''
-ms.date: 02/10/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e982c4b90c1c856d67720301fdf13595872b18c2
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: b91e728eb9ea3403db0f0b40c5d32ce16f542408
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903620"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271379"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 드라이버에 대한 FAQ(질문과 대답)
 
@@ -31,17 +31,17 @@ JDBC Driver는 오픈 소스이며 소스 코드는 [GitHub](https://github.com/
 **드라이버가 어떤 버전의 SQL Server 및 Java를 지원하나요?**  
 자세한 내용은 [Microsoft JDBC Driver for SQL Server 지원 매트릭스](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) 페이지를 참조하세요.
 
-**Microsoft 다운로드 센터에서 사용할 수 있는 JDBC Driver 패키지와 GitHub에서 사용할 수 있는 JDBC Driver의 차이점은 무엇인가요?**  
-Microsoft JDBC Driver용 GitHub 리포지토리에서 사용할 수 있는 JDBC Driver 파일은 JDBC Driver의 핵심이며 리포지토리에 나열된 오픈 소스 라이선스가 적용됩니다. Microsoft 다운로드 센터의 드라이버 패키지에는 Windows 통합 인증에 필요하고 JDBC 드라이버에서 XA 트랜잭션을 사용하도록 설정하기 위해 필요한 추가 라이브러리가 포함됩니다. 이러한 추가 라이브러리에는 다운로드 가능한 패키지에 포함되는 라이선스가 적용됩니다.
+**[Microsoft 다운로드 페이지](download-microsoft-jdbc-driver-for-sql-server.md)에서 사용할 수 있는 JDBC Driver 패키지와 GitHub에서 사용할 수 있는 JDBC Driver의 차이점은 무엇인가요?**  
+Microsoft JDBC Driver용 GitHub 리포지토리에서 사용할 수 있는 JDBC Driver 파일은 JDBC Driver의 핵심이며 리포지토리에 나열된 오픈 소스 라이선스가 적용됩니다. [Microsoft 다운로드 페이지](download-microsoft-jdbc-driver-for-sql-server.md)의 드라이버 패키지에는 Windows 통합 인증에 필요하고 JDBC 드라이버에서 XA 트랜잭션을 사용하도록 설정하기 위해 필요한 추가 라이브러리가 포함됩니다. 이러한 추가 라이브러리에는 다운로드 가능한 패키지에 포함되는 라이선스가 적용됩니다.
 
 **내 드라이버를 업그레이드할 때 어떤 정보를 알아야 하나요?**  
 Microsoft JDBC Driver 8.2는 JDBC 4.2 및 4.3(부분) 사양을 지원하며 설치 패키지에 다음과 같은 세 개의 JAR 클래스 라이브러리를 포함합니다.
 
 | JAR                        | JDBC 사양            | JDK 버전 |
 | -------------------------- | ----------------------------- | ----------- |
-| mssql-jdbc-8.2.1.jre13.jar | JDBC 4.3(부분) 및 4.2 | JDK 13.0    |
-| mssql-jdbc-8.2.1.jre11.jar | JDBC 4.3(부분) 및 4.2 | JDK 11.0    |
-| mssql-jdbc-8.2.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-8.2.2.jre13.jar | JDBC 4.3(부분) 및 4.2 | JDK 13.0    |
+| mssql-jdbc-8.2.2.jre11.jar | JDBC 4.3(부분) 및 4.2 | JDK 11.0    |
+| mssql-jdbc-8.2.2.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 | &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 Microsoft JDBC Driver 7.4는 JDBC 4.2 및 4.3(부분) 사양을 지원하며 설치 패키지에 다음과 같은 세 개의 JAR 클래스 라이브러리를 포함합니다.

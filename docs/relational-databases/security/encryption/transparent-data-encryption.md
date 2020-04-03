@@ -1,7 +1,7 @@
 ---
 title: TDE(투명한 데이터 암호화) | Microsoft 문서
 ms.custom: ''
-ms.date: 05/09/2019
+ms.date: 03/24/2020
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -18,12 +18,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 498fe2391cd3e8109aed3f6e1e02436234ffe6f7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: a45cddab6506fcd7b3affb262b956bcf97f30b72
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288267"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80271459"
 ---
 # <a name="transparent-data-encryption-tde"></a>TDE(투명한 데이터 암호화)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,17 +64,14 @@ ms.locfileid: "79288267"
   
  ![이 항목에서 설명하는 계층 구조를 표시합니다.](../../../relational-databases/security/encryption/media/tde-architecture.png "이 항목에서 설명하는 계층 구조를 표시합니다.")  
   
-## <a name="using-transparent-data-encryption"></a>투명한 데이터 암호화 사용  
- TDE를 사용하려면 다음 단계를 수행합니다.  
+## <a name="enable-tde"></a>TDE 사용  
+ 투명한 데이터 보호를 사용하도록 설정하려면 다음 단계를 수행하세요. 
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   마스터 키 만들기  
-  
--   마스터 키로 보호되는 인증서를 만들거나 얻기  
-  
--   데이터베이스 암호화 키를 만들고 인증서로 키 보호  
-  
+-   마스터 키 만들기    
+-   마스터 키로 보호되는 인증서를 만들거나 얻기    
+-   데이터베이스 암호화 키를 만들고 인증서로 키 보호    
 -   암호화를 사용하도록 데이터베이스 설정  
   
  다음 예에서는 `AdventureWorks2012` 라는 서버에 설치된 인증서를 사용하여 `MyServerCert`데이터베이스를 암호화하고 암호를 해독하는 방법을 보여 줍니다.  
@@ -146,7 +143,7 @@ GO
 > [!TIP]  
 > 데이터베이스의 TDE 상태 변경을 모니터링하려면 SQL Server Audit 또는 SQL Database 감사를 사용합니다. SQL Server의 경우 [SQL Server 감사 동작 그룹 및 동작](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)에서 찾을 수 있는 감사 동작 그룹 DATABASE_CHANGE_GROUP에서 TDE가 추적됩니다.
   
-### <a name="restrictions"></a>제한  
+## <a name="restrictions"></a>제한  
  초기 데이터베이스 암호화, 키 변경 또는 데이터베이스 암호 해독 중에는 다음 작업을 수행할 수 없습니다.  
   
 -   데이터베이스의 파일 그룹에서 파일 삭제  
@@ -196,8 +193,26 @@ GO
  데이터베이스 파일을 만들 때 TDE가 사용하도록 설정되어 있으면 즉시 파일 초기화를 사용할 수 없습니다.  
   
  비대칭 키로 데이터베이스 암호화 키를 암호화하려면 비대칭 키가 확장 가능 키 관리 공급자에 있어야 합니다.  
+
+## <a name="tde-scan"></a>TDE 검사
+
+데이터베이스에서 TDE(투명한 데이터 암호화)를 사용하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 데이터 파일에서 버퍼 풀로 각 페이지를 읽은 다음, 암호화된 페이지를 다시 작성하는 암호화 검사를 수행해야 합니다. 사용자에게 암호화 검사에 대한 추가 제어 권한을 제공하기 위해 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]는 TDE 검사(일시 중단 및 다시 시작 구문)를 도입하여 시스템의 워크로드가 많거나 업무상 중요한 시간 동안 검색을 일시 중지한 다음, 나중에 검사를 다시 시작하도록 합니다.
+
+TDE 암호화 검사를 일시 중지하려면 다음 구문을 사용합니다.
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
+```
+
+마찬가지로, 다음 구문은 TDE 암호화 검사를 다시 시작합니다.
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
+```
+
+암호화 검사의 현재 상태를 표시하기 위해 `sys.dm_database_encryption_keys` 동적 관리 뷰에 `encryption_scan_state`가 추가되었습니다. 마지막 암호화 검사 상태 변경 날짜와 시간을 포함하는 `encryption_scan_modify_date`라는 새 열도 있습니다. 또한 암호화 검사가 일시 중단된 상태에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작하면 일시 중지된 기존 검사가 있음을 나타내는 메시지가 시작 시 오류 로그에 기록됩니다.
   
-### <a name="transparent-data-encryption-and-transaction-logs"></a>투명한 데이터 암호화 및 트랜잭션 로그  
+## <a name="tde-and-transaction-logs"></a>TDE 및 트랜잭션 로그  
  TDE를 사용하도록 데이터베이스를 설정하면 가상 트랜잭션 로그의 남은 부분을 비우는 효과가 있어서 다음 가상 트랜잭션 로그를 강제로 실행할 수 있습니다. 이렇게 하면 데이터베이스에 암호화가 설정된 후 트랜잭션 로그에 남아 있는 일반 텍스트가 없습니다. 이 예에서와 같이 `encryption_state` 뷰의 `sys.dm_database_encryption_keys` 열을 확인하여 로그 파일 암호화의 상태를 찾을 수 있습니다.  
   
 ```  
@@ -217,39 +232,44 @@ GO
   
  데이터베이스 암호화 키를 두 번 수정한 후 다시 데이터베이스 암호화 키를 수정하려면 먼저 로그 백업을 수행해야 합니다.  
   
-### <a name="transparent-data-encryption-and-the-tempdb-system-database"></a>투명한 데이터 암호화 및 tempdb 시스템 데이터베이스  
+## <a name="tde-and-tempdb"></a>TDE 및 tempdb 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 TDE를 사용하여 암호화된 다른 데이터베이스가 있으면 tempdb 시스템 데이터베이스가 암호화됩니다. 이로 인해 동일한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 암호화되지 않은 데이터베이스의 성능에 영향을 미칠 수 있습니다. tempdb 시스템 데이터베이스에 대한 자세한 내용은 [tempdb 데이터베이스](../../../relational-databases/databases/tempdb-database.md)를 참조하세요.  
   
-### <a name="transparent-data-encryption-and-replication"></a>투명한 데이터 암호화 및 복제  
+## <a name="tde-and-replication"></a>TDE 및 복제  
  복제를 수행해도 암호화된 형식의 TDE 설정 데이터베이스에 있는 데이터는 자동으로 복제되지 않습니다. 배포 및 구독자 데이터베이스를 보호하려면 TDE를 개별적으로 설정해야 합니다. 트랜잭션 및 병합 복제를 위한 데이터의 초기 배포뿐만 아니라 스냅샷 복제도 암호화되지 않은 중간 파일(예: bcp 파일)에 데이터를 저장할 수 있습니다.  트랜잭션 또는 병합 복제 중에 통신 채널을 보호하도록 암호화를 설정할 수 있습니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
-  
-### <a name="transparent-data-encryption-and-filestream-data"></a>투명한 데이터 암호화 및 FILESTREAM 데이터  
+
+## <a name="tde-and-always-on"></a>TDE 및 Always On
+ [Always On 가용성 그룹에 암호화된 데이터베이스를 추가](../../../database-engine/availability-groups/windows/encrypted-databases-with-always-on-availability-groups-sql-server.md)할 수 있습니다. 
+ 
+ 가용성 그룹의 일부인 데이터베이스를 암호화하려면 먼저 마스터 키와 인증서를 만들거나 모든 보조 복제본에서 EKM(비대칭 키)을 만든 후에 주 복제본에서 [데이터베이스 암호화 키](../../../t-sql/statements/create-database-encryption-key-transact-sql.md)를 만들어야 합니다. 
+ 
+ DEK(데이터베이스 암호화 키)를 보호하는 데 인증서가 사용되는 경우, 먼저 주 복제본에서 만든 [인증서를 백업](../../../t-sql/statements/backup-certificate-transact-sql.md)한 다음, 모든 보조 복제본에서 [파일로부터 인증서를 만든](../../../t-sql/statements/create-certificate-transact-sql.md) 후에 주 복제본에서 데이터베이스 암호화 키를 만들어야 합니다. 
+
+## <a name="tde-and-filestream-data"></a>TDE 및 FILESTREAM 데이터  
  TDE를 사용하는 경우에도 FILESTREAM 데이터는 암호화되지 않습니다.  
 
 <a name="scan-suspend-resume"></a>
 
-## <a name="transparent-data-encryption-tde-scan"></a>TDE(투명한 데이터 암호화) 검사
+## <a name="remove-tde"></a>TDE 제거
 
-데이터베이스에서 TDE(투명한 데이터 암호화)를 사용하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 데이터 파일에서 버퍼 풀로 각 페이지를 읽은 다음, 암호화된 페이지를 다시 작성하는 암호화 검사를 수행해야 합니다. 사용자에게 암호화 검사에 대한 추가 제어 권한을 제공하기 위해 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]는 TDE 검사(일시 중단 및 다시 시작 구문)를 도입하여 시스템의 워크로드가 많거나 업무상 중요한 시간 동안 검색을 일시 중지한 다음, 나중에 검사를 다시 시작하도록 합니다.
-
-TDE 암호화 검사를 일시 중지하려면 다음 구문을 사용합니다.
+ALTER DATABASE 문을 사용하여 데이터베이스에서 암호화를 제거합니다.
 
 ```sql
-ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
+ALTER DATABASE <db_name> SET ENCRYPTION OFF;
 ```
 
-마찬가지로, 다음 구문은 TDE 암호화 검사를 다시 시작합니다.
+데이터베이스 상태를 보려면 [sys.dm_database_encryption_keys](../../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 동적 관리 뷰를 사용합니다.
 
-```sql
-ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
-```
+암호 해독이 완료될 때까지 기다린 후에 [DROP DATABASE ENCRYPTION KEY](../../../t-sql/statements/drop-database-encryption-key-transact-sql.md)를 사용하여 데이터베이스 암호화 키를 제거합니다.
 
-암호화 검사의 현재 상태를 표시하기 위해 `sys.dm_database_encryption_keys` 동적 관리 뷰에 `encryption_scan_state`가 추가되었습니다. 마지막 암호화 검사 상태 변경 날짜와 시간을 포함하는 `encryption_scan_modify_date`라는 새 열도 있습니다. 또한 암호화 검사가 일시 중단된 상태에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작하면 일시 중지된 기존 검사가 있음을 나타내는 메시지가 시작 시 오류 로그에 기록됩니다.
+> [!IMPORTANT]  
+> TDE에 사용되는 마스터 키와 인증서를 안전한 위치에 백업합니다. 마스터 키와 인증서는 데이터베이스가 TDE로 암호화될 때 만들어진 백업을 복원하는 데 필요합니다. 데이터베이스 암호화 키를 제거한 후에는 로그 백업을 수행한 다음, 암호 해독된 데이터베이스의 새로운 전체 백업을 수행합니다.  
+
+## <a name="tde-and-buffer-pool-extension"></a>TDE 및 버퍼 풀 확장  
+
+TDE를 사용하여 데이터베이스를 암호화한 경우에 BPE(버퍼 풀 확장)와 관련된 파일을 암호화하지 않습니다. BitLocker와 같은 파일 시스템 수준 암호화 도구 또는 BPE 관련 파일에 대한 EFS를 사용해야 합니다.  
   
-## <a name="transparent-data-encryption-and-buffer-pool-extension"></a>투명한 데이터 암호화 및 버퍼 풀 확장  
- TDE를 사용하여 데이터베이스를 암호화한 경우에 BPE(버퍼 풀 확장)와 관련된 파일을 암호화하지 않습니다. BitLocker와 같은 파일 시스템 수준 암호화 도구 또는 BPE 관련 파일에 대한 EFS를 사용해야 합니다.  
-  
-## <a name="transparent-data-encryption-and-in-memory-oltp"></a>투명한 데이터 암호화 및 메모리 내 OLTP  
+## <a name="tde-and-in-memory-oltp"></a>TDE 및 메모리 내 OLTP  
  TDE는 메모리 내 OLTP 개체가 포함된 데이터베이스에서 사용할 수 있습니다. TDE를 사용하는 경우 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 및 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 메모리 내 OLTP 로그 레코드와 데이터가 암호화됩니다. TDE를 사용하지만 MEMORY_OPTIMIZED_DATA 파일 그룹의 파일이 암호화되지 않으면 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 메모리 내 OLTP 로그 레코드와 데이터가 암호화됩니다.  
   
 ## <a name="related-tasks"></a>관련 작업  

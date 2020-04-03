@@ -1,5 +1,6 @@
 ---
 title: '빠른 시작: SQL Server의 확장 이벤트'
+description: 이 빠른 시작은 간단한 성능 모니터링 시스템인 확장 이벤트를 통해 데이터를 수집하여 SQL Server 문제를 모니터링하고 해결하는 데 도움이 됩니다.
 ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e4512400d2f05500f2db9a98a72f57ac50bc3a7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: f38c8c3097009a755355e5a7b50e55b55faba3cb
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75242917"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487651"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>빠른 시작: SQL Server의 확장 이벤트
 
@@ -555,7 +556,7 @@ SQL Server PowerShell 공급자를 사용하여 SQL Server 확장 이벤트를 �
 
 [!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
 
-## <a name="appendix1"></a> 부록: 사용 권한 소유자를 미리 확인하기 위한 SELECT
+## <a name="appendix-selects-to-ascertain-permission-owner-in-advance"></a><a name="appendix1"></a> 부록: 사용 권한 소유자를 미리 확인하기 위한 SELECT
 
 이 문서에 언급된 사용 권한은 다음과 같습니다.
 

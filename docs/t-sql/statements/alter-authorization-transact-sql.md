@@ -26,12 +26,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af69908f78c5f6a0958c87d315c0ba20da25cfb3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 01fc7ed0e32df7c5c3465f85b5358c2c359fc767
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73982876"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215914"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION(Transact-SQL)
 
@@ -191,7 +191,7 @@ ALTER AUTHORIZATION ON
 |CERTIFICATE 또는 ASYMMETRIC KEY|이러한 엔터티의 소유권을 역할이나 그룹에 이전할 수 없습니다.|    
 |엔드포인트|보안 주체는 로그인이어야 합니다.|    
   
-## <a name="AlterDB"></a> 데이터베이스에 대한 ALTER AUTHORIZATION  
+## <a name="alter-authorization-for-databases"></a><a name="AlterDB"></a> 데이터베이스에 대한 ALTER AUTHORIZATION  
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 ### <a name="for-sql-server"></a>SQL Server의 경우.  
 **새 소유자 요구 사항:**    

@@ -1,7 +1,7 @@
 ---
 title: JDBC 드라이버 시스템 요구 사항 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/10/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1a6aac999ef6877356f66f4db1d6d6763cc0f1ea
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: 7e80f52f1edba3826c18cc6a306206bdfb254248
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903730"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271389"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC 드라이버 시스템 요구 사항
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "77903730"
 
 **SQL Server용 Microsoft JDBC Driver 8.2:**  
 
-  JDBC Driver 8.2의 경우 각 설치 패키지에 **mssql-jdbc-8.2.1.jre8.jar**, **mssql-jdbc-8.2.1.jre11.jar** 및 **mssql-jdbc-8.2.1.jre13.jar**이라는 세 개의 JAR 클래스 라이브러리가 포함되어 있습니다.
+  JDBC Driver 8.2의 각 설치 패키지에는 **mssql-jdbc-8.2.2.jre8.jar**, **mssql-jdbc-8.2.2.jre11.jar** 및 **mssql-jdbc-8.2.2.jre13.jar**이라는 세 개의 JAR 클래스 라이브러리가 포함되어 있습니다.
 
   JDBC Driver 8.2는 모든 주요 Java 가상 머신에서 사용 가능하고 지원되지만, OpenJDK 1.8, OpenJDK 11.0, OpenJDK 13.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0 및 Azul Zulu JRE 13.0에서만 테스트되었습니다.
   
@@ -55,9 +55,9 @@ ms.locfileid: "77903730"
   
   |JAR|JDBC 버전 규격|권장 Java 버전|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-8.2.1.jre8.jar|4.2|8|JRE(Java Runtime Environment) 1.8이 필요합니다. JRE 1.7 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 8\.2의 새로운 기능: JDK 13 지원, 보안 Enclave를 사용한 Always Encrypted 및 임시 데이터 형식 성능 개선 |
-|mssql-jdbc-8.2.1.jre11.jar|4.3|11|JRE(Java Runtime Environment) 11.0이 필요합니다. JRE 10.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 8\.2의 새로운 기능: JDK 13 지원, 보안 Enclave를 사용한 Always Encrypted 및 임시 데이터 형식 성능 개선 |
-|mssql-jdbc-8.2.1.jre13.jar|4.3|13|JRE(Java Runtime Environment) 13.0이 필요합니다. JRE 11.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 8\.2의 새로운 기능: JDK 13 지원, 보안 Enclave를 사용한 Always Encrypted 및 임시 데이터 형식 성능 개선 |
+|mssql-jdbc-8.2.2.jre8.jar|4.2|8|JRE(Java Runtime Environment) 1.8이 필요합니다. JRE 1.7 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 8\.2의 새로운 기능: JDK 13 지원, 보안 Enclave를 사용한 Always Encrypted 및 임시 데이터 형식 성능 개선 |
+|mssql-jdbc-8.2.2.jre11.jar|4.3|11|JRE(Java Runtime Environment) 11.0이 필요합니다. JRE 10.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 8\.2의 새로운 기능: JDK 13 지원, 보안 Enclave를 사용한 Always Encrypted 및 임시 데이터 형식 성능 개선 |
+|mssql-jdbc-8.2.2.jre13.jar|4.3|13|JRE(Java Runtime Environment) 13.0이 필요합니다. JRE 11.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 8\.2의 새로운 기능: JDK 13 지원, 보안 Enclave를 사용한 Always Encrypted 및 임시 데이터 형식 성능 개선 |
 
 
   또한, JDBC Driver 8.2는 Maven 중앙 리포지토리에서도 사용할 수 있고 POM.XML에 다음 코드를 추가하여 Maven 프로젝트에 추가할 수 있습니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "77903730"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.1.jre11</version>
+    <version>8.2.2.jre11</version>
 </dependency>
 ```
 

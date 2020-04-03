@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 모바일 보고서의 데이터 | Microsoft Docs
+description: SQL Server 모바일 보고서 게시자로 데이터를 가져온 후 모바일 보고서를 만들고 디자인하는 방법은 데이터 원본이 Excel 파일이든, 공유 데이터 세트든 관계없이 동일합니다.
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 91138ef8-ddb4-4ac5-a1e4-fa4cf1c58dcc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b6131f6bce9cb6d1c87a4a75215a906b6d097c7d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3c022631d0f21c4e23756e39e4824fe9f52ef3b5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63129737"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79447866"
 ---
 # <a name="data-for-reporting-services-mobile-reports"></a>Data for Reporting Services mobile reports
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 데이터 모델은 간단 합니다. 데이터는 데이터 세트의 컬렉션으로 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]로 가져옵니다. 데이터 세트 간의 형식 관계는 필요하지 않습니다. 데이터 세트 간의 조회는 키 값이 일치하는 한 작동합니다. 날짜/시간 집계는 모바일 보고서 런타임을 통해 처리되며 데이터 세트 간에 날짜/시간 데이터 세분성이 달라도 데이터 세트 간의 집계 일치 여부를 확인합니다.   

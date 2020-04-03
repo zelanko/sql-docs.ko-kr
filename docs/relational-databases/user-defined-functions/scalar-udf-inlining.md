@@ -1,8 +1,8 @@
 ---
-title: Microsoft SQL 데이터베이스의 스칼라 UDF 인라인 처리 | Microsoft Docs
-description: 스칼라 UDF 인라인 처리 기능은 SQL Server(SQL Server 2019부터) 및 Azure SQL Database에서 스칼라 UDF를 호출하는 쿼리의 성능 향상을 위한 것입니다.
+title: Microsoft SQL Server의 스칼라 UDF 인라인 처리 | Microsoft Docs
+description: 스칼라 UDF 인라인 처리 기능은 SQL Server(SQL Server 2019부터)에서 스칼라 UDF를 호출하는 쿼리의 성능을 향상하기 위한 것입니다.
 ms.custom: ''
-ms.date: 01/09/2020
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,18 +15,18 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 79608c96e56a7f70d10aaa4b897db837bdf03acc
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287407"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79486552"
 ---
 # <a name="scalar-udf-inlining"></a>스칼라 UDF 인라인 처리
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 문서에서는 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 기능 모음의 기능인 스칼라 UDF 인라인 처리를 소개합니다. 이 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]부터) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 스칼라 UDF를 호출하는 쿼리 성능을 높입니다.
+이 문서에서는 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 기능 모음의 기능인 스칼라 UDF 인라인 처리를 소개합니다. 이 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]부터)에서 스칼라 UDF를 호출하는 쿼리의 성능을 향상합니다.
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>T-SQL 스칼라 사용자 정의 함수
 [!INCLUDE[tsql](../../includes/tsql-md.md)]로 구현되며 단일 데이터 값을 반환하는 UDF(사용자 정의 함수)를 T-SQL 스칼라 사용자 정의 함수라고 합니다. T-SQL UDF는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리에서 코드 재사용과 모듈화를 구현하는 세련된 방법입니다. 일부 계산(예: 복잡한 비즈니스 규칙)은 명령적 UDF 형태에서 더 표현하기 쉽습니다. UDF는 복잡한 SQL 쿼리를 작성하기 위한 전문 지식 없이도 복잡한 논리를 구축하는 데 도움이 됩니다.

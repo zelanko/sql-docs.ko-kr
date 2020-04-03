@@ -1,7 +1,7 @@
 ---
 title: Always Encrypted와 JDBC 드라이버 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 41c91f87a62e9f4d912c7e8bbdebe86574ceebe6
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: 37057985b6c552091d2989d56a13c52b0b0cf5ac
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004609"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271329"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>상시 암호화와 JDBC 드라이버 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -58,6 +58,8 @@ SQL Server용 Microsoft JDBC Driver에는 다음과 같은 기본 제공 열 마
 
 ### <a name="using-azure-key-vault-provider"></a>Azure Key Vault 공급자 사용
 Azure 주요 자격 증명 모음은 상시 암호화에 대한 열 마스터 키를 저장 및 관리하는 편리한 옵션입니다(특히 애플리케이션이 Azure에서 호스트되는 경우). SQL Server용 Microsoft JDBC Driver에는 Azure Key Vault에 키가 저장된 애플리케이션용 기본 제공 공급자인 SQLServerColumnEncryptionAzureKeyVaultProvider가 포함되어 있습니다. 이 공급자의 이름은 AZURE_KEY_VAULT입니다. Azure Key Vault 저장소 공급자를 사용하려면 애플리케이션 개발자가 Azure Key Vault에서 자격 증명 모음 및 키를 만들고 Azure Active Directory에서 앱 등록을 만들어야 합니다. 등록된 애플리케이션은 Always Encrypted와 함께 사용하기 위해 생성된 키 자격 증명 모음에 대해 정의된 액세스 정책에서 Get, Decrypt, Encrypt, Unwrap Key, Wrap Key 및 Verify 권한을 가져야 합니다. 키 자격 증명 모음을 설정하고 열 마스터 키를 만드는 방법에 대한 자세한 내용은 [Azure Key Vault - 단계별 가이드](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) 및 [Azure Key Vault에서 열 마스터 키 만들기](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)를 참조하세요.
+
+Azure Key Vault 공급자를 사용하는 경우, JDBC 드라이버가 열 마스터 키 경로를 신뢰할 수 있는 엔드포인트 목록과 비교하여 유효성을 검사합니다. 드라이버 버전 8.2.2부터 이 목록을 구성할 수 있습니다. 애플리케이션의 작업 디렉터리 안에 “mssql-jdbc.properties” 파일을 만들고 `AKVTrustedEndpoints` 속성을 세미콜론으로 구분된 목록으로 설정하세요. 값이 세미콜론으로 시작되면 기본 목록을 확장합니다. 그러지 않으면 기본 목록을 대체합니다.
 
 이 페이지의 예에서 SQL Server Management Studio를 사용하여 Azure Key Vault 기반 열 마스터 키 및 열 암호화 키를 만든 경우 다시 만들기 위한 T-SQL 스크립트는 고유한 **KEY_PATH** 및 **ENCRYPTED_VALUE**에 대한 이 예와 유사할 수 있습니다.
 

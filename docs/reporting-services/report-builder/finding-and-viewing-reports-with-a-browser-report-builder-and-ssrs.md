@@ -1,5 +1,6 @@
 ---
 title: 브라우저를 사용하여 보고서 찾기 및 보기(보고서 작성기) | Microsoft Docs
+description: 웹 브라우저에서 보고서 서버에서 직접 연결하여 보고서를 볼 수 있습니다. 보고서에는 탐색하고 검색할 수 있는 보고서 도구 모음이 포함되어 있습니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dc69666eaecfcacea21291dec13f6356e0f18d13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 489d91bc5f410b6bdce4ef61bd694861bd1c1a7d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079257"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342823"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>브라우저를 사용하여 보고서 찾기 및 보기(보고서 작성기 및 SSRS)
   지원되는 웹 브라우저에서 보고서 서버에 직접 연결하여 보고서를 볼 수 있습니다. 모든 보고서에는 보고서 서버에 대한 URL 주소가 있습니다. 보고서의 웹 주소를 입력하여 웹 애플리케이션과는 상관없이 브라우저 창에 보고서를 열 수 있습니다. 보고서는 HTML 형식으로 열리고 페이지를 탐색하거나 보고서 내의 데이터 값을 검색하는 데 사용할 수 있는 보고서 도구 모음이 함께 표시됩니다. URL에 매개 변수를 설정하여 도구 모음을 숨기거나 보고서의 출력 형식을 선택할 수 있습니다.  

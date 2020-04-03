@@ -1,5 +1,6 @@
 ---
 title: SQL Server에서 확장 이벤트에 대한 대상
+description: 이 문서에서는 SQL Server 확장 이벤트의 package0 대상을 설명합니다. 데이터 및 대상 매개 변수를 수집하고 보고하는 대상 기능에 대해 알아봅니다.
 ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 942f69fc92fa06b5131cee2dba9145f4faaae0cc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ba516e2e58a19ffdd5d225f3bc0a8c495c0432bd
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75501987"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487521"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server에서 확장 이벤트에 대한 대상
 
@@ -37,7 +38,7 @@ ms.locfileid: "75501987"
 ### <a name="prerequisites"></a>사전 요구 사항
 
 
-- [빠른 시작: SQL Server에서 확장 이벤트](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)에서 설명한 대로 확장 이벤트의 기본 사항에 대해 일반적으로 잘 알고 있어야 합니다.
+- [빠른 시작에서 설명한 대로 확장 이벤트의 기본 사항에 대해 일반적으로 잘 알고 있어야 합니다. SQL Server의 확장 이벤트](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)를 참조하세요.
 
 
 - 자주 업데이트되는 유틸리티 SQL Server Management Studio(SSMS.exe)의 최신 버전이 설치되어 있어야 합니다. 자세한 내용은 다음을 참조하세요.

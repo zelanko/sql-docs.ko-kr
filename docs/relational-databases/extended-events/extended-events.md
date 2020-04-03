@@ -1,5 +1,6 @@
 ---
 title: XEvents 개요 - SQL Server
+description: SQL Server 확장 이벤트 아키텍처를 사용하면 성능 문제를 확인하고 해결하는 데 필요한 데이터를 수집할 수 있습니다. SQL Server 확장 이벤트 아키텍처는 구성 가능하고 확장성이 있습니다.
 ms.date: 07/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 34ebcae99f096d095839cb533fb6efe58b113050
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3dbd6e4beee31e90d0354345bb25e4f0c32fc969
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75234596"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434050"
 ---
 # <a name="extended-events-overview"></a>확장 이벤트 개요
 
@@ -29,7 +30,7 @@ ms.locfileid: "75234596"
 
 확장 이벤트에 대한 자세한 내용은 [빠른 시작: SQL Server의 확장 이벤트](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)를 참조하세요.
 
-## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트의 이점  
+## <a name="benefits-of-ssnoversion-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트의 이점  
 
 확장 이벤트는 최소한의 성능 리소스를 사용하는 간단한 성능 모니터링 시스템입니다. 확장 이벤트에서는 두 가지 그래픽 사용자 인터페이스가 제공되므로 세션 데이터를 작성, 수정, 표시 및 분석할 수 있습니다. 이러한 인터페이스의 이름은 다음과 같습니다.
 

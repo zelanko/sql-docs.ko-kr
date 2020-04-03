@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 90e200cba5cf2b8c367dfdb97b5ae5e192773e44
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 29b2fcad38e2971f39f63b400d307a2f64459eea
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74822420"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79510014"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>로그 전달 보조 데이터베이스로 장애 조치(Failover)(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "74822420"
   
 2.  적용되지 않은 트랜잭션 로그 백업을 각 보조 데이터베이스에 순서대로 적용합니다. 자세한 내용은 [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)을 참조하세요.  
   
-3.  주 데이터베이스에 액세스할 수 있으면 활성 트랜잭션 로그를 백업하여 이 로그 백업을 보조 데이터베이스에 적용합니다.  
+3.  주 데이터베이스에 액세스할 수 있는 경우, 활성 트랜잭션 로그를 백업한 후 이 로그 백업을 보조 데이터베이스에 적용합니다. 복원 명령을 실행하기 전에 데이터베이스를 [단일 사용자 모드](../../relational-databases/databases/set-a-database-to-single-user-mode.md)로 설정하여 단독 액세스 권한을 얻은 다음, 복원이 완료된 후 다중 사용자로 다시 전환해야 할 수도 있습니다.  
   
      원래 주 서버 인스턴스가 손상되지 않은 경우 WITH NORECOVERY를 사용하여 주 데이터베이스의 트랜잭션 비상 로그를 백업합니다. 이렇게 하면 데이터베이스가 복원 상태로 남아 있으므로 사용자가 사용할 수 없습니다. 그러므로 대체 주 데이터베이스에서 트랜잭션 로그 백업을 적용하여 이 데이터베이스를 롤포워드할 수 있습니다.  
   
-     자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)을 참조하세요.  
+     자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)을 참조하세요.   
   
 4.  보조 서버가 동기화된 후 해당 보조 데이터베이스를 복구하고 해당 서버 인스턴스로 리디렉션하여 원하는 데이터베이스로 장애 조치(Failover)할 수 있습니다. 복구하면 데이터베이스가 일관성 있는 온라인 상태가 됩니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74822420"
   
      다른 보조 데이터베이스를 사용하는 경우 [로그 전달 구성&#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [주 로그 전달 서버와 보조 로그 전달 서버 간 역할 변경&#40;SQL Server&#41;](../../database-engine/log-shipping/change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md)  
   

@@ -1,5 +1,6 @@
 ---
 title: 확장 이벤트에 PowerShell 공급자 사용
+description: SQL Server PowerShell 공급자를 사용하여 SQL Server 확장 이벤트를 관리할 수 있습니다. 이 문서에서는 세션을 생성, 변경 및 관리하는 예제를 보여 줍니다.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7fba3c0ad9ab6f004d001b1a8e04d86e27d1818
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 86c1aeeca719fff8f63926ff1c28fb810f0c5d8f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75242893"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487561"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>확장 이벤트에 PowerShell 공급자 사용
 

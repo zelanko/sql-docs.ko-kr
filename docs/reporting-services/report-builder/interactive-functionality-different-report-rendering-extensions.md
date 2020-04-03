@@ -1,5 +1,6 @@
 ---
 title: 대화형 기능 - 여러 보고서 렌더링 확장 프로그램 | Microsoft Docs
+description: Reporting Services를 사용하면 페이지를 매긴 보고서와 런타임에 상호 작용할 수 있습니다. 이 문서에서는 특정 형식에서 대화형 기능이 어떻게 작동하는지 설명합니다.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1038958e969a04531cf790a9254816b24d3b5646
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8df9a5b08f4aa8883bb9351fa59df147e80bac95
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580694"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342778"
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>대화형 기능 - 여러 보고서 렌더링 확장 프로그램
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 런타임 시 페이지를 매긴 보고서와 상호 작용하기 위한 기능을 제공합니다. 모든 보고서 렌더링 형식에 대화형 기능을 전부 사용할 수 있는 것은 아닙니다. 다음 표에는 각 대화형 기능이 특정 형식에서 어떻게 작동하는지 이해하는 데 도움이 되는 정보가 나와 있습니다.  

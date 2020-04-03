@@ -1,5 +1,6 @@
 ---
 title: SharePoint 라이브러리에 보고서 저장(보고서 작성기) | Microsoft Docs
+description: 이 문서에서는 SharePoint 통합을 위해 구성된 보고서 서버에 보고서를 저장하는 데 필요한 요구 사항과 프로세스를 설명합니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4daa1eee-78b7-43d0-8b22-4a98e8fa66ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 916c135c9de0d67862d4b7300e24c2ae412b0cb6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 41331a57b9eb8c3981a82e826794b9031b3eb73c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581139"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290851"
 ---
 # <a name="save-a-report-to-a-sharepoint-library-report-builder"></a>SharePoint 라이브러리에 보고서 저장(보고서 작성기)
   SharePoint 통합용으로 구성된 보고서 서버에 보고서를 저장하려면 SharePoint 서버로 이동하여 보고서 서버에 대한 연결을 설정해야 합니다. 보고서 정의에서 보고서와 관련된 항목에 대한 모든 참조에는 SharePoint 보고서 서버에 맞는 값을 사용해야 합니다. 관련 항목에는 하위 보고서, 드릴스루 보고서 및 웹 기반 이미지 등의 리소스가 포함됩니다. 자세한 내용은 [외부 항목에 대한 경로 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)을 참조하세요.  

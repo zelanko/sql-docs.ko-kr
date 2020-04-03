@@ -1,5 +1,5 @@
 ---
-title: Deploy applications with azdata
+title: azdata를 사용하여 애플리케이션 배포
 titleSuffix: SQL Server Big Data Clusters
 description: '[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]에서 Python 또는 R 스크립트를 애플리케이션으로 배포합니다.'
 author: jeroenterheerdt
@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 33b5bf6061e9168fd150adcb4a7ccf29302bce63
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253153"
 ---
-# <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에서 앱을 배포하는 방법
+# <a name="how-to-deploy-an-app-on-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에서 앱을 배포하는 방법
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -92,7 +92,7 @@ kubectl get node --selector='node-role.kubernetes.io/master'
 
 ## <a name="create-an-app"></a>앱 만들기
 
-애플리케이션을 만들려면 `azdata` 명령과 함께 `app create`를 사용합니다. 이 파일은 앱을 만들 때 사용한 머신에 로컬로 상주합니다.
+애플리케이션을 만들려면 `app create` 명령과 함께 `azdata`를 사용합니다. 이 파일은 앱을 만들 때 사용한 머신에 로컬로 상주합니다.
 
 다음 구문을 사용하여 빅 데이터 클러스터에 새 앱을 만듭니다.
 
@@ -106,7 +106,7 @@ azdata app create --spec <directory containing spec file>
 azdata app create --spec ./addpy
 ```
 
-이 명령은 애플리케이션이 `addpy` 폴더에 저장되어 있다고 가정합니다. 이 폴더에는 `spec.yaml`이라는 애플리케이션 사양 파일도 들어 있어야 합니다. [ 파일에 대한 자세한 내용은 ](concept-application-deployment.md)애플리케이션 배포 페이지`spec.yaml`를 참조하세요.
+이 명령은 애플리케이션이 `addpy` 폴더에 저장되어 있다고 가정합니다. 이 폴더에는 `spec.yaml`이라는 애플리케이션 사양 파일도 들어 있어야 합니다. `spec.yaml` 파일에 대한 자세한 내용은 [애플리케이션 배포 페이지](concept-application-deployment.md)를 참조하세요.
 
 이 샘플 앱을 배포하려면 `addpy`라는 디렉터리에 다음 파일을 만듭니다.
 

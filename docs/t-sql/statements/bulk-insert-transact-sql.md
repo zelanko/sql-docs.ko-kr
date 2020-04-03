@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 999ae75343a71efafd7348065b2a1d3533b4bd10
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+ms.openlocfilehash: e333a2e489f178ff1301001822f80ec24354184c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558362"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448405"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT(Transact-SQL)
 
@@ -310,7 +310,7 @@ BULK INSERT 문은 데이터를 테이블 또는 뷰로 가져올 사용자 정�
 
  SQL Server로 대량 가져오기에서 수행된 행 삽입 작업이 트랜잭션 로그에 기록되는 경우에 대한 자세한 내용은 [대량 가져오기의 최소 로깅을 위한 필수 조건](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)을 참조하세요. 최소 로깅은 Azure SQL Database에서 지원되지 않습니다.
 
-## <a name="Limitations"></a> 제한 사항
+## <a name="restrictions"></a><a name="Limitations"></a> 제한 사항
 
 서식 파일을 BULK INSERT와 함께 사용하면 최대 1024개의 필드만 지정할 수 있습니다. 이는 테이블에 허용된 최대 열 수와 동일합니다. 1024개가 넘는 필드를 포함하는 데이터 파일의 BULK INSERT와 함께 서식 파일을 사용하면 BULK INSERT에서 4822 오류가 발생합니다. [bcp 유틸리티](../../tools/bcp-utility.md)에는 이러한 제한이 없으므로, 1024개가 넘는 필드를 포함하는 데이터 파일의 경우 서식 파일 없이 BULK INSERT를 사용하거나 **bcp** 명령을 사용합니다.
 
@@ -464,6 +464,24 @@ CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
 WITH ( TYPE = BLOB_STORAGE,
           LOCATION = 'https://****************.blob.core.windows.net/invoices'
           , CREDENTIAL= MyAzureBlobStorageCredential --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
+);
+
+BULK INSERT Sales.Invoices
+FROM 'inv-2017-12-08.csv'
+WITH (DATA_SOURCE = 'MyAzureBlobStorage');
+```
+스토리지 계정에 액세스하는 또 다른 방법은 [관리 ID](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)를 사용하는 것입니다. [1~3단계](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json#steps)를 수행하여 관리 ID를 통해 스토리지에 액세스하도록 SQL Database를 구성하면 됩니다. 그런 다음, 코드 샘플을 아래와 같이 구현할 수 있습니다.
+```sql
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
+GO
+--> Change to using Managed Identity instead of SAS key 
+CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Identity';
+GO
+CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
+WITH ( TYPE = BLOB_STORAGE,
+          LOCATION = 'https://****************.blob.core.windows.net/curriculum'
+          , CREDENTIAL= msi_cred --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
 );
 
 BULK INSERT Sales.Invoices

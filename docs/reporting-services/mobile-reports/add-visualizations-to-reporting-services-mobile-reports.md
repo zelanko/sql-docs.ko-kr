@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 모바일 보고서에 시각화 추가 | Microsoft Docs
+description: Reporting Services 모바일 보고서에서 사용할 수 있는 세 가지 기본 차트 종류(시간, 범주, 요약) 및 해당하는 비교 차트에 대해 알아봅니다.
 ms.date: 09/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 42df96705e680643a9dacca3393e8c9c262c66c9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3379d5eb53bc255a09e255d4986eb924912e5eb3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63316574"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79447985"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Reporting Services 모바일 보고서에 시각화 추가
 차트는 데이터 시각화의 필수적인 부분입니다. [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 모바일 보고서에서 여러 시나리오를 처리할 수 있는 차트에 대해 알아보세요. 
@@ -143,7 +144,7 @@ ms.locfileid: "63316574"
 
      * **크기** 에서 타일 크기에 대한 숫자 필드를 선택합니다.
      * **색** 에서 타일 색에 대한 숫자 필드를 선택합니다. 
-     * [옵션] **사용자 지정 중앙값**: 시각화 형식이 HeatMapWithCustomCenterValue인 경우 **사용자 지정 중앙값** 만 사용할 수 있습니다.
+     * [선택 사항] **사용자 지정 중앙값**: 시각화 형식이 HeatMapWithCustomCenterValue인 경우 **사용자 지정 중앙값**만 사용할 수 있습니다.
      
          중앙값은 상자의 색을 결정합니다. 중앙값에 비해 메트릭이 좋을수록 더 녹색이 됩니다. 메트릭이 나쁠수록 더 빨간색이 됩니다.
      

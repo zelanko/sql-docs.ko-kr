@@ -1,6 +1,6 @@
 ---
 title: 가용성 그룹 장애 조치(failover) 관리 - SQL Server on Linux
-description: ''
+description: 이 문서에서는 자동 장애 조치(failover), 계획된 수동 장애 조치 및 강제 수동 장애 조치와 같은 장애 조치 유형에 대해 설명합니다. 자동 장애 조치와 계획된 수동 장애 조치에서는 모든 데이터가 보존됩니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 92d9a7518e0a6176199f39dcd69c87ea25c8004d
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.openlocfilehash: 635c567722fd5744aa56a16a6f48e8c4284f8ba8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78280878"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216852"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux의 Always On 가용성 그룹 장애 조치(failover)
 
@@ -24,7 +24,7 @@ AG(가용성 그룹)의 컨텍스트 내에서는 일반적으로 가용성 복�
 
 장애 조치(failover)에 대한 배경 정보는 [장애 조치(failover) 및 장애 조치(failover) 모드](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)를 참조하세요.
 
-## <a name="failover"></a> 수동 장애 조치(failover)
+## <a name="manual-failover"></a><a name="failover"></a> 수동 장애 조치(failover)
 
 클러스터 관리 도구를 사용하여 외부 클러스터 관리자가 관리하는 AG를 장애 조치(failover)합니다. 예를 들어 솔루션에서 Pacemaker를 사용하여 Linux 클러스터를 관리하는 경우 `pcs`를 사용하여 RHEL 또는 Ubuntu에서 수동 장애 조치(failover)를 수행합니다. SLES에서는 `crm`을 사용합니다. 
 
@@ -43,7 +43,7 @@ AG(가용성 그룹)의 컨텍스트 내에서는 일반적으로 가용성 복�
 
    두 번째로, [위치 제약 조건을 제거](#removeLocConstraint)합니다.
 
-#### <a name="manualMove"></a> 1단계. 가용성 그룹 리소스를 이동하여 수동으로 장애 조치(failover)
+#### <a name="step-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove"></a> 1단계. 가용성 그룹 리소스를 이동하여 수동으로 장애 조치(failover)
 
 *ag_cluster*라는 AG 리소스를 *nodeName2*라는 클러스터 노드로 수동으로 장애 조치(failover)하려면 사용 중인 배포에 해당하는 명령을 실행합니다.
 
@@ -62,7 +62,7 @@ AG(가용성 그룹)의 컨텍스트 내에서는 일반적으로 가용성 복�
 >[!IMPORTANT]
 >리소스를 수동으로 장애 조치(failover)한 후 자동으로 추가되는 위치 제약 조건을 제거해야 합니다.
 
-#### <a name="removeLocConstraint"> </a> 2단계. 위치 제약 조건 제거
+#### <a name="step-2-remove-the-location-constraint"></a><a name="removeLocConstraint"> </a> 2단계. 위치 제약 조건 제거
 
 수동으로 장애 조치(failover)하는 동안 `pcs` 명령 `move` 또는 `crm` 명령 `migrate`는 새 대상 노드에 배치될 리소스에 대한 위치 제약 조건을 추가합니다. 새 제약 조건을 확인하려면 리소스를 수동으로 이동한 후 다음 명령을 실행합니다.
 
@@ -107,7 +107,7 @@ AG(가용성 그룹)의 컨텍스트 내에서는 일반적으로 가용성 복�
 - [Pacemaker - Move Resources Manually](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_move_resources_manually.html)(Pacemaker - 수동으로 리소스 이동)
  [SLES Administration Guide - Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource)(SLES 관리 가이드 - 리소스) 
  
-## <a name="forceFailover"></a> 강제 장애 조치(failover) 
+## <a name="force-failover"></a><a name="forceFailover"></a> 강제 장애 조치(failover) 
 
 강제 장애 조치(failover)는 재해 복구에만 사용됩니다. 이 경우 주 데이터 센터의 작동이 중단되기 때문에 클러스터 관리 도구를 사용하여 장애 조치(failover)할 수 없습니다. 동기화되지 않은 보조 복제본으로 강제 장애 조치(failover)를 수행하면 데이터 손실이 발생할 수 있습니다. 데이터 손실을 감수하더라도 즉시 AG로 서비스를 복원해야 하는 경우에만 강제로 장애 조치(failover)합니다.
 

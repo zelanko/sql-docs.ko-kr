@@ -1,5 +1,6 @@
 ---
 title: 보고서 인쇄(보고서 작성기) | Microsoft Docs
+description: 원하는 브라우저나 Reporting Services 웹 포털 또는 내보낸 보고서를 보는 데 사용하는 임의의 애플리케이션에서 보고서를 보고 인쇄할 수 있습니다.
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ec88487e55015edcea264e3530ad13f732ca5fc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7838979bb6ba1cbd4c4067bc6d83597f6567115d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082516"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290829"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>보고서 인쇄(보고서 작성기 및 SSRS)
   보고서 서버에 보고서를 저장한 후에는 브라우저, Reporting Services 웹 포털 또는 내보낸 보고서를 보는 데 사용되는 애플리케이션에서 보고서를 보고 인쇄할 수 있습니다. 보고서를 저장하기 전 미리 볼 때 해당 보고서를 인쇄할 수 있습니다.  

@@ -1,5 +1,6 @@
 ---
 title: 보고서 서버에 보고서 게시 | Microsoft Docs
+description: SSDT(SQL Server Data Tools)의 배포 기능을 사용하여 보고서 서버에 보고서를 게시하는 방법을 알아봅니다.
 ms.date: 06/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2a2628bc5d098c32fc63d4a80bcf4c7b403a82a0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c4891d308c81a82ecb3f371cca8812111467bc37
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "72359403"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510094"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>보고서 서버에 보고서 게시
   보고서 또는 보고서 집합을 디자인 및 테스트한 후에 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 기본 제공 배포 기능을 사용하여 보고서를 보고서 서버에 게시할 수 있습니다. 개별 보고서뿐만 아니라 여러 보고서와 데이터 원본을 포함할 수 있는 보고서 서버 프로젝트를 게시할 수 있습니다. 보고서 서버 프로젝트를 게시하는 것은 여러 보고서를 게시하는 가장 쉬운 방법입니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서는 *게시*라는 용어 대신에 *배포*라는 용어를 사용합니다. 두 용어는 같은 의미로 사용할 수 있습니다.  
@@ -39,7 +40,7 @@ ms.locfileid: "72359403"
 ## <a name="project-configurations"></a>프로젝트 구성  
  보고 환경에는 여러 보고서 서버와 다른 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가 설치되었을 수 있습니다. 여러 구성을 만든 다음 배포 시나리오에 따라 다른 구성을 사용할 수 있습니다. 프로젝트 구성에는 빌드된 보고서를 임시로 저장하는 폴더, 빌드 문제를 처리하는 방법 등과 같은 보고서 빌드를 위한 속성이 포함됩니다. 또한 보고서 서버의 위치 및 버전과 보고서 서버의 폴더를 지정하는 데 사용되는 속성도 포함됩니다.  
   
- 기본적으로 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 은 **DebugLocal**, **Debug**및 **Release**라는 세 가지 프로젝트 구성을 제공합니다. 기본 구성은 DebugLocal입니다. 일반적으로 DebugLocal 구성을 사용하면 로컬 미리 보기 창으로 보고서를 볼 수 있고 Debug 구성을 사용하면 테스트 서버에 보고서를 게시할 수 있으며 Release 구성을 사용하면 프로덕션 서버에 보고서를 게시할 수 있습니다. 표준 도구 모음의 솔루션 구성 드롭다운 목록에는 활성 구성이 표시됩니다. 다른 구성을 사용하려면 목록에서 해당 구성을 선택합니다.  
+ 기본적으로 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 **DebugLocal**, **Debug** 및 **Release**의 세 가지 프로젝트 구성을 제공합니다. 기본 구성은 DebugLocal입니다. 일반적으로 DebugLocal 구성을 사용하면 로컬 미리 보기 창으로 보고서를 볼 수 있고 Debug 구성을 사용하면 테스트 서버에 보고서를 게시할 수 있으며 Release 구성을 사용하면 프로덕션 서버에 보고서를 게시할 수 있습니다. 표준 도구 모음의 솔루션 구성 드롭다운 목록에는 활성 구성이 표시됩니다. 다른 구성을 사용하려면 목록에서 해당 구성을 선택합니다.  
   
  ![ssrs_project_properties](../../reporting-services/reports/media/ssrs-project-properties.png) 
   

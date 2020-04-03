@@ -1,5 +1,6 @@
 ---
 title: '방법: 사용자 지정 어셈블리 디버그 | Microsoft Docs'
+description: Microsoft .NET Framework 디버깅 도구를 사용하여 사용자 지정 어셈블리 코드를 분석하고 코드에 있는 오류를 찾는 방법을 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1ec4fb2f9d38997c7000e576a36fa8c6c1407e45
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 17162c5cb862c496c70459818497e66d1342923a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194311"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217077"
 ---
-# <a name="how-to-debug-custom-assemblies"></a>방법: 사용자 지정 어셈블리 디버그
+# <a name="how-to-debug-custom-assemblies"></a>방법: 사용자 지정 어셈블리 디버깅
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]는 사용자 지정 어셈블리 코드를 분석하고 오류를 찾는 데 유용한 디버깅 도구를 다수 제공합니다. 사용하기에 가장 좋은 도구는 수행하려는 작업에 따라 달라집니다. 이 예에서는 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]를 사용합니다.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대한 사용자 지정 어셈블리 디자인, 개발 및 테스트를 위해 권장되는 방법은 테스트 보고서와 사용자 지정 어셈블리가 모두 포함된 솔루션을 만드는 것입니다.  

@@ -15,12 +15,12 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 30155a37f57391edeee916cd2b6629d63a1dcaaa
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 58773f430fc61a7817d7d3ee7c9e7b597716c438
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288657"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434180"
 ---
 # <a name="sql-server-installation-guide"></a>SQL Server 설치 가이드
 
@@ -44,7 +44,9 @@ ms.locfileid: "79288657"
     - [[!INCLUDE[ss2016](../../includes/sssql15-md.md)]](~/sql-server/editions-and-components-of-sql-server-2016.md)를 참조하세요.  
     - [[!INCLUDE[ss2014](../../includes/sssql14-md.md)]](https://technet.microsoft.com/library/cc645993(v=sql.120).aspx)
 
-*  **요구 사항**: [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md)에서 설치 요구 사항, 시스템 구성 검사 및 보안 고려 사항을 검토합니다. 
+*  **요구 사항**: [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md)에서 [SQL Server 2016 및 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), [SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) 또는 [SQL Server on Linux](../../linux/sql-server-linux-setup.md)의 하드웨어 및 소프트웨어 설치 요구 사항, 시스템 구성 검사 및 보안 고려 사항을 검토합니다. 
+
+
   
 * **샘플 데이터베이스 및 샘플 코드**: 
     * 기본적으로 SQL Server 설치의 일부로 설치되지 않지만 찾을 수 있습니다. 
@@ -68,8 +70,19 @@ ms.locfileid: "79288657"
 * [Azure Data Studio](https://go.microsoft.com/fwlink/?linkid=2109256)
 
 
+## <a name="considerations"></a>고려 사항
+
+-   미디어가 RDC 클라이언트의 로컬 리소스에 있는 상태에서 원격 데스크톱 연결을 통해 설치를 시작하면 설치에 실패합니다. 원격으로 설치하려면 미디어가 네트워크 공유에 있거나 물리적 또는 가상 머신의 로컬이어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 미디어는 네트워크 공유, 매핑된 드라이브, 로컬 드라이브에 있거나 가상 머신에 대한 ISO로 표시될 수 있습니다.  
+  
+  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 제품에 필요한 다음 소프트웨어 구성 요소를 설치합니다.  
+  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client    
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 지원 파일  
+
 ## <a name="sql-server-installation"></a>SQL Server 설치
- 
+
+
 |아티클|Description|  
 |-----------|-----------------|  
 |[설치 마법사](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|setup.exe 설치 미디어에서 시작된 설치 마법사 GUI를 사용하여 SQL Server를 설치합니다. |  
@@ -111,7 +124,7 @@ ms.locfileid: "79288657"
 
 [[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 업그레이드](../../database-engine/install-windows/upgrade-sql-server.md)   
 [[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 제거](../../sql-server/install/uninstall-sql-server.md)   
-[SSRS(SQL Server Reporting Services) 설치](../../reporting-services/install-windows/install-reporting-services.md)
-[SSAS(SQL Server Analysis Services) 설치](/analysis-services/instances/install-windows/install-analysis-services)
+[SSRS(SQL Server Reporting Services) 설치](../../reporting-services/install-windows/install-reporting-services.md)   
+[SSAS(SQL Server Analysis Services) 설치](/analysis-services/instances/install-windows/install-analysis-services)   
 [[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Business Intelligence 기능 설치](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
 [고가용성 솔루션&#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  

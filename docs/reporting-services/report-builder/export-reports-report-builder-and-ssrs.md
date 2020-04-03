@@ -1,5 +1,6 @@
 ---
 title: 보고서 내보내기(보고서 작성기) | Microsoft Docs
+description: Reporting Services 보고서를 보고서 작성기, 보고서 디자이너 또는 보고서 서버를 사용하여 PowerPoint나 PDF와 같은 다른 파일 형식으로 내보낼 수 있습니다.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-builder
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a213d0decf0b2765dca07faec69135ddd3e44d99
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a97450563aa62e7b8179b7c5a0d2bead5f156f1b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078492"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342923"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>보고서 내보내기(보고서 작성기 및 SSRS)
 
@@ -37,7 +38,7 @@ ms.locfileid: "77078492"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-## <a name="bkmk_export_from_rb"></a> 보고서 작성기에서 보고서를 내보내려면
+## <a name="to-export-a-report-from-report-builder"></a><a name="bkmk_export_from_rb"></a> 보고서 작성기에서 보고서를 내보내려면
 
 1.  보고서를 실행하거나 미리 봅니다.  
   
@@ -49,7 +50,7 @@ ms.locfileid: "77078492"
   
      **다른 이름으로 저장** 대화 상자가 열립니다. 기본적으로 파일 이름은 내보낸 보고서의 이름입니다. 필요한 경우 파일 이름을 변경할 수 있습니다.  
   
-##  <a name="bkmk_export_from_rm"></a>[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털에서 보고서를 내보내려면  
+##  <a name="to-export-a-report-from-the-ssrsnoversion-web-portal"></a><a name="bkmk_export_from_rm"></a>[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털에서 보고서를 내보내려면  
   
 1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털 **홈** 페이지에서 내보낼 보고서로 이동합니다.  
   
@@ -71,7 +72,7 @@ ms.locfileid: "77078492"
   
      선택한 형식에 연결되어 있는 애플리케이션을 사용하여 보고서가 표시 또는 저장됩니다. **저장**을 클릭하면 보고서를 저장할 위치를 묻는 메시지가 나타납니다.  
   
-##  <a name="bkmk_export_from_sharepoint"></a> SharePoint 라이브러리에서 보고서를 내보내려면  
+##  <a name="to-export-a-report-from-a-sharepoint-library"></a><a name="bkmk_export_from_sharepoint"></a> SharePoint 라이브러리에서 보고서를 내보내려면  
   
 1.  보고서를 미리 봅니다.  
   
@@ -91,7 +92,7 @@ ms.locfileid: "77078492"
   
      **참고** 선택한 파일 형식에 연결된 프로그램이 없어서 지정된 형식으로 보고서를 열 수 없는 경우에는 내보낸 보고서를 저장하거나 보고서를 여는 데 필요한 프로그램을 온라인으로 찾으라는 메시지가 나타납니다.  
   
-##  <a name="RendererTypes"></a> 렌더링 확장 프로그램 유형  
+##  <a name="rendering-extension-types"></a><a name="RendererTypes"></a> 렌더링 확장 프로그램 유형  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 렌더링 확장 프로그램에는 다음 세 가지 유형이 있습니다.  
   
 -   **데이터 렌더링 확장 프로그램** 데이터 렌더링 확장 프로그램은 보고서에서 서식 및 레이아웃 정보를 모두 제거하고 데이터만 표시합니다. 이렇게 내보낸 파일은 Excel 같은 다른 파일 형식, 다른 데이터베이스, XML 데이터 메시지 또는 사용자 지정 애플리케이션으로 원시 보고서 데이터를 가져오는 데 사용할 수 있습니다. 데이터 렌더링 확장 프로그램은 페이지 나누기를 지원하지 않습니다.  
@@ -106,8 +107,8 @@ ms.locfileid: "77078492"
   
      지원되는 하드 페이지 나누기 렌더링 확장 프로그램은 TIFF와 PDF입니다.  
   
-##  <a name="ExportFormats"></a> 보고서를 보는 중에 내보낼 수 형식  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 다양한 형식으로 보고서를 렌더링하는 렌더링 확장 프로그램을 제공합니다. 선택한 파일 형식에 맞게 보고서 디자인을 최적화해야 합니다.  다음 표에는 사용자 인터페이스에서 내보낼 수 형식이 나와 있습니다.  URL에 액세스하여 내보내는 경우 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독에서 내보내는 경우에는 추가 형식을 사용할 수 있습니다.  이 항목의 [보고서를 내보내는 다른 방법](#OtherWaysExportingReports)섹션을 참조하세요.  
+##  <a name="formats-you-can-export-while-viewing-reports"></a><a name="ExportFormats"></a> 보고서를 보는 중에 내보낼 수 형식  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 다양한 형식으로 보고서를 렌더링하는 렌더링 확장 프로그램을 제공합니다. 선택한 파일 형식에 맞게 보고서 디자인을 최적화해야 합니다.  다음 표에는 사용자 인터페이스에서 내보낼 수 있는 형식이 나와 있습니다.  URL에 액세스하여 내보내는 경우 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독에서 내보내는 경우에는 추가 형식을 사용할 수 있습니다.  이 항목의 [보고서를 내보내는 다른 방법](#OtherWaysExportingReports)섹션을 참조하세요.  
   
 |형식|렌더링 확장 프로그램 유형|Description|  
 |------------|------------------------------|-----------------|  
@@ -121,12 +122,12 @@ ms.locfileid: "77078492"
 |WORDOPENXML|소프트 페이지 나누기|보고서를 볼 때 내보내기 메뉴에 "Word"로 표시됩니다. Word 렌더링 확장 프로그램은 보고서를 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013과 호환되는 Word 문서(.docx)로 렌더링합니다.  자세한 내용은 [Microsoft Word로 내보내기](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)를 참조하세요.|  
 |XML|데이터|XML 렌더링 확장 프로그램은 보고서를 XML 형식으로 반환합니다. 보고서의 XML 스키마는 보고서마다 고유하며 데이터만 포함합니다. 레이아웃 정보는 렌더링되지 않으며 페이지 번호는 XML 렌더링 확장 프로그램을 통해 유지되지 않습니다. 이 확장 프로그램에서 생성된 XML은 데이터베이스로 가져오거나 XML 데이터 메시지로 사용하거나 사용자 지정 애플리케이션으로 전송할 수 있습니다.<br/><br/> 자세한 내용은 [XML로 내보내기](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)를 참조하세요.|  
   
-##  <a name="GeneratingDataFeedsFromReport"></a> 보고서에서 데이터 피드 생성  
+##  <a name="generating-data-feeds-from-a-report"></a><a name="GeneratingDataFeedsFromReport"></a> 보고서에서 데이터 피드 생성  
  보고서에서 데이터 피드를 생성하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털에서 보고서를 실행한 다음 웹 포털 도구 모음에서 **데이터 피드 생성** 아이콘을 클릭합니다. 파일을 저장할지, 아니면 열지를 선택하라는 메시지가 나타납니다. **열기**를 선택하면 .atomsvc 파일 확장명과 연결된 애플리케이션에서 Atom 서비스 문서가 열리고, **저장**을 선택하면 문서가 .atomsvc 파일로 저장됩니다. 기본적으로 이 파일의 이름은 보고서의 이름입니다. 이 이름은 보다 의미 있는 이름으로 변경할 수 있습니다.  
   
  Atom 서비스 문서를 컴퓨터에 저장한 후 나중에 다른 사용자가 사용할 수 있도록 보고서 서버나 다른 서버에 업로드할 수 있습니다. 자세한 내용은 [보고서에서 데이터 피드 생성](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md) 및 [보고서에서 데이터 피드 생성](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)을 참조하세요.  
   
-##  <a name="Troubleshooting"></a> 내보낸 보고서의 문제 해결  
+##  <a name="troubleshooting-exported-reports"></a><a name="Troubleshooting"></a> 내보낸 보고서의 문제 해결  
  보고서를 다른 형식으로 내보낸 후 보고서가 다르게 표시되거나 원하는 대로 동작하지 않는 경우가 있습니다. 이 문제는 렌더러에 몇 가지 규칙 및 제한 사항이 적용되기 때문일 수 있습니다. 보고서를 만들 때 이러한 제한 사항을 고려하면 대부분의 문제를 해결할 수 있습니다. 보고서에서 약간 다른 레이아웃을 사용하거나, 보고서 내의 항목을 주의해서 맞추거나, 보고서 바닥글을 한 줄 텍스트로 제한하는 등의 작업이 필요할 수 있습니다.  
   
  보고서에 아라비아 숫자가 포함된 유니코드 텍스트 또는 아랍어로 된 날짜가 포함되는 경우, 다음 형식으로 보고서를 내보내거나 보고서를 인쇄할 때 날짜와 숫자가 올바르게 렌더링되지 않습니다.  
@@ -163,7 +164,7 @@ ms.locfileid: "77078492"
   
  또한 기본 제공 전역 변수인 RenderFormat을 사용하면 조건에 따라 렌더러마다 각기 다른 보고서 레이아웃을 적용할 수 있습니다. 자세한 내용은 [기본 제공 Globals 및 Users 참조](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)를 참조하세요.
 
-##  <a name="OtherWaysExportingReports"></a> 보고서를 내보내는 다른 방법  
+##  <a name="other-ways-of-exporting-reports"></a><a name="OtherWaysExportingReports"></a> 보고서를 내보내는 다른 방법  
  보고서 내보내기는 보고서가 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털이나 보고서 작성기에 열려 있을 때 사용자가 수행하는 요청 시 태스크입니다. 되풀이 일정에서 특정 파일 형식으로 공유 폴더에 보고서를 내보내려는 경우와 같이 내보내기 작업을 자동화하려면 보고서를 공유 폴더로 배달하는 구독을 만듭니다. 자세한 내용은 [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)을 참조하세요.  
   
  보고서 작성 도구에서 미리 보거나 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털과 같은 브라우저 애플리케이션에서 여는 보고서는 항상 HTML로 먼저 렌더링됩니다. 다른 렌더링 확장 프로그램을 보고서를 표시하는 기본 프로그램으로 지정할 수 없습니다. 그러나 이후에 받은 편지함이나 공유 폴더로 배달할 때 사용할 렌더링 형식으로 보고서를 생성하는 구독을 만들 수 있습니다. 자세한 내용은 [기본 모드 보고서 서버 구독 만들기 및 관리](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) 및 [데이터 기반 구독 만들기, 수정 및 삭제](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)를 참조하세요.  

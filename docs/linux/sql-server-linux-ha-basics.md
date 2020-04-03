@@ -1,6 +1,6 @@
 ---
 title: Linux 배포의 SQL Server 고가용성
-description: Always On 가용성 그룹, FCI(장애 조치 클러스터 인스턴스), 로그 전달 등 SQL Server on Linux에 사용할 수 있는 다양한 고가용성 옵션을 알아봅니다.
+description: Always On 가용성 그룹, FCI(장애 조치(failover) 클러스터 인스턴스), 로그 전달 등 SQL Server on Linux에 사용할 수 있는 고가용성 옵션을 알아봅니다.
 ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 474533a69d74512e3e305f44d96f90009aa64e00
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c999228cdcd78ca2996ee134266a36543e97d913
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75656612"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216692"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 배포의 SQL Server 가용성 기본 사항
 
@@ -22,7 +22,7 @@ ms.locfileid: "75656612"
 
 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]부터 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]는 Linux 및 Windows에서 모두 지원됩니다. Windows 기반 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 배포와 마찬가지로 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 데이터베이스 및 인스턴스는 Linux에서 가용성이 높아야 합니다. 이 문서에서는 Windows 기반 설치의 일부 차이뿐만 아니라 고가용성 Linux 기반 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 데이터베이스 및 인스턴스를 계획하고 배포하는 기술적 측면을 설명합니다. Linux 전문가는 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]를 처음 사용하고 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 전문가는 Linux를 처음 사용할 수 있으므로 이 문서에서는 때때로 일부 사용자에게는 익숙하고 다른 사용자에게는 익숙하지 않을 수 있는 개념을 소개합니다.
 
-## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>Linux 배포에 대한 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 가용성 옵션
+## <a name="ssnoversion-md-availability-options-for-linux-deployments"></a>Linux 배포에 대한 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 가용성 옵션
 백업 및 복원 외에도 Windows 기반 배포와 동일한 세 가지 가용성 기능을 Linux에서 사용할 수 있습니다.
 -   Always On AG(가용성 그룹)
 -   Always On FCI(장애 조치(failover) 클러스터 인스턴스)
@@ -51,7 +51,7 @@ Windows Server에서 많은 작업을 관리자 권한으로 수행해야 하는
 -   `systemctl` - 서비스 시작, 중지 또는 사용
 -   텍스트 편집기 명령입니다. Linux에는 vi 및 emacs와 같은 다양한 텍스트 편집기 옵션이 있습니다.
 
-## <a name="common-tasks-for-availability-configurations-of-includessnoversion-mdincludesssnoversion-mdmd-on-linux"></a>Linux에서 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]의 가용성 구성에 대한 일반 작업
+## <a name="common-tasks-for-availability-configurations-of-ssnoversion-md-on-linux"></a>Linux에서 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]의 가용성 구성에 대한 일반 작업
 이 섹션에서는 모든 Linux 기반 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 배포에 공통적인 작업에 대해 설명합니다.
 
 ### <a name="ensure-that-files-can-be-copied"></a>파일을 복사할 수 있는지 확인
@@ -120,7 +120,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 -   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
-### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>가용성을 위한 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 패키지 설치
+### <a name="install-ssnoversion-md-packages-for-availability"></a>가용성을 위한 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 패키지 설치
 Windows 기반 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 설치에서 일부 구성 요소는 기본 엔진 설치에도 설치되지만 다른 구성 요소는 설치되지 않습니다. Linux에서는 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 엔진만 설치 프로세스의 일부로 설치됩니다. 다른 모든 항목은 선택 사항입니다. Linux에서 고가용성 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 인스턴스의 경우 다음 두 개의 패키지가 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]와 함께 설치됩니다. [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 에이전트(*mssql-server-agent*) 및 HA(고가용성) 패키지(*mssql-server-ha*). [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 에이전트는 기술적으로 선택 사항이지만 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]의 작업 스케줄러이며 로그 전달에 필요하므로 설치하는 것이 좋습니다. Windows 기반 설치에서 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 에이전트는 선택 사항이 아닙니다.
 
 >[!NOTE]
@@ -204,10 +204,10 @@ Pacemaker 클러스터의 로그 위치는 배포에 따라 다릅니다.
 
 기본 로깅 위치를 변경하려면 `corosync.conf`를 수정합니다.
 
-## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]에 대한 Pacemaker 클러스터 계획
+## <a name="plan-pacemaker-clusters-for-ssnoversion-md"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]에 대한 Pacemaker 클러스터 계획
 이 섹션에서는 Pacemaker 클러스터의 중요한 계획 사항을 설명합니다.
 
-### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]에 대한 Linux 기반 Pacemaker 클러스터 가상화
+### <a name="virtualizing-linux-based-pacemaker-clusters-for-ssnoversion-md"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]에 대한 Linux 기반 Pacemaker 클러스터 가상화
 가상 머신을 사용하여 AG 및 FCI에 대해 Linux 기반 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 배포를 배포하는 작업에는 Windows 기반 배포의 경우와 동일한 규칙이 적용됩니다. [Microsoft 지원 KB 956893](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment)에는 Microsoft에서 제공하는 가상화된 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 배포의 지원 가능성에 대한 기본 규칙 세트가 있습니다. Microsoft의 Hyper-V 및 VMware의 ESXi와 같은 하이퍼바이저는 플랫폼 자체의 차이로 인해 서로 다른 분산을 포함할 수 있습니다.
 
 가상화된 AG 및 FCI의 경우 지정된 Pacemaker 클러스터의 노드에 대해 선호도 방지가 설정되어 있는지 확인합니다. AG 또는 FCI 구성에서 고가용성을 위해 구성된 경우 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]를 호스트하는 VM은 동일한 하이퍼바이저 호스트에서 실행되지 않아야 합니다. 예를 들어 2노드 FCI가 배포된 경우에는, 특히 Live Migration 또는 vMotion 같은 기능을 사용하는 경우 호스트 오류 발생 시 이동할 노드를 호스트하는 VM 중 하나에 사용할 위치가 있도록 ‘적어도’ 세 개의 하이퍼바이저 호스트가 있어야 합니다. 

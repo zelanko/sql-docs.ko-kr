@@ -1,5 +1,6 @@
 ---
 title: 사용자 지정 보고서 항목 클래스 라이브러리 | Microsoft Docs
+description: 사용자 지정 보고서 항목 클래스 라이브러리에 대해 알아보고, 코드 샘플을 사용하여 이러한 클래스를 사용하는 방법을 살펴봅니다.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ed0bd3c53550a21f4a157ee637e7d153d8f2922
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f30b581c67eb161bd0d221b9a4aa341d90ab7148
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194106"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216949"
 ---
 # <a name="custom-report-item-class-libraries"></a>사용자 지정 보고서 항목 클래스 라이브러리
   사용자 지정 보고서 항목은 **Microsoft.ReportDesigner** 네임스페이스의 클래스를 사용합니다. 사용자 지정 보고서 항목 구현에 사용되는 클래스는 두 개의 기본 범주로 그룹화할 수 있습니다. 하나는 사용자 지정 보고서 항목 인프라를 지원하도록 설계된 고유 클래스이고, 다른 하나는 관련 RDL(Report Definition Language) 요소의 기능을 캡슐화하는 관리되는 래퍼 클래스입니다. 이러한 클래스 사용 방법에 대한 코드 예는 [SQL Server Reporting Services 제품 예제(SQL Server Reporting Services Product Samples)](https://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.  
@@ -61,7 +62,7 @@ ms.locfileid: "63194106"
 |**OnPaint**|**Paint** 이벤트에 대한 응답으로 호출됩니다.|  
   
 ### <a name="microsoftreportdesignercustomreportitemattribute"></a>Microsoft.ReportDesigner.CustomReportItemAttribute  
- 사용자 지정 보고서 항목의 유형을 식별하는 데 사용되는 특성입니다. 보고서 디자이너 구성 파일의 \<ReportItem**요소의** **Name**> 특성 값과 이름이 일치해야 합니다.  
+ 사용자 지정 보고서 항목의 유형을 식별하는 데 사용되는 특성입니다. 보고서 디자이너 구성 파일의 **ReportItem** 요소의 \<**Name**> 특성 값과 이름이 일치해야 합니다.  
   
 #### <a name="public-methods"></a>Public 메서드  
   

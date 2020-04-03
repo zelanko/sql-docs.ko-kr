@@ -18,15 +18,15 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: 7646eb379b3fe81603e78843808c90914889ed5d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241268"
 ---
 # <a name="column-properties-visual-database-tools"></a>열 속성(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-There are two sets of properties for columns: a full set that you can see in the **Column Properties** tab within Table Designer (available only for [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases) and a subset you can see in the Properties window using Server Explorer.  
+열 속성 집합에는 테이블 디자이너([!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서만 사용 가능) 내 **열 속성** 탭에서 볼 수 있는 전체 집합과 서버 탐색기를 사용하여 속성 창에서 볼 수 있는 하위 집합이 있습니다.  
   
 > [!NOTE]  
 > 이 항목의 속성은 사전순 대신 범주별로 정렬됩니다.  

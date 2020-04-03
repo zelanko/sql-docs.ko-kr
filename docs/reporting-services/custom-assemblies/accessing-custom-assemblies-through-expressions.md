@@ -1,5 +1,6 @@
 ---
 title: 식을 통해 사용자 지정 어셈블리 액세스 | Microsoft Docs
+description: 사용자 지정 어셈블리를 만든 후에 보고서 식을 사용하여 사용자 지정 어셈블리의 클래스에 액세스하는 방법을 알아봅니다.
 ms.date: 03/04/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 101af9d59d4a3f1e48d85859c91f77c8be2e4719
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e77b3df959230b7ecb8bb20874d61e9191074285
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194366"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217042"
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>식을 통해 사용자 지정 어셈블리 액세스
   사용자 지정 어셈블리를 만들어 보고서 디자이너 또는 보고서 서버에서 사용할 수 있도록 했으며, 적절한 보안 정책을 추가하고, 보고서 정의에서 사용자 지정 어셈블리에 대한 참조를 추가했으면 보고서 식을 사용하여 어셈블리의 클래스 멤버에 액세스할 수 있습니다. 식의 사용자 지정 코드를 참조하려면 어셈블리 내에서 클래스의 멤버를 호출해야 합니다. 이 방법은 메서드가 정적인지 아니면 인스턴스 기반인지에 따라 달라집니다.  

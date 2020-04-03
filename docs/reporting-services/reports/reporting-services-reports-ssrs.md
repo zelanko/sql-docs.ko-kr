@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 보고서 | Microsoft Docs
+description: 보고서의 혜택, 페이지를 매긴 보고서를 만드는 방법 및 보고서를 보는 방법을 포함하여 Reporting Services 보고서에 대해 자세히 알아봅니다.
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4d178d69c68d2466fcec808b0cabdd180368f23a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9eb81b3b3274afa8a53a217ea1139a8a904979ef
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082432"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510064"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services 보고서(SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지가 매겨진 보고서는 보고서 데이터 및 보고서 레이아웃 요소가 포함된 XML 기반 보고서 정의입니다. 보고서 정의는 .rdl 확장자로 클라이언트 파일 시스템에 저장됩니다. 페이지가 매겨진 보고서를 게시한 후에는 보고서 서버 또는 SharePoint 사이트에 저장된 보고서 항목이 됩니다. 페이지가 매겨진 보고서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 제공하는 서버 기반 보고 플랫폼의 일부입니다. [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)도 가능합니다.  
@@ -45,7 +46,7 @@ ms.locfileid: "77082432"
   
     ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
-##  <a name="bkmk_StagesSummary"></a> 보고서 처리 단계  
+##  <a name="stages-of-report-processing"></a><a name="bkmk_StagesSummary"></a> 보고서 처리 단계  
  보고서를 만들 때 XML 형식의 보고서 정의 파일(.rdl)을 정의합니다. 이 파일에는 보고서 처리기에서 보고서 데이터와 보고서 레이아웃을 통합하는 데 필요한 모든 정보가 포함되어 있습니다. 보고서를 볼 때 보고서는 다음 단계를 통해 처리됩니다.  
   
 -   **컴파일.** 보고서 정의에 포함된 식을 평가하여 컴파일된 중간 형식을 보고서 서버에 내부적으로 저장합니다.  
@@ -155,7 +156,7 @@ ms.locfileid: "77082432"
   
  성능에 대한 자세한 내용은 [성능, 스냅샷, 캐시&#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)을 참조하세요.  
   
-##  <a name="bkmk_SecureReportsSummary"></a> 보고서 보안  
+##  <a name="secure-reports"></a><a name="bkmk_SecureReportsSummary"></a> 보고서 보안  
  보고서 보안을 유지하려면  
   
 보고서 서버 관리자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치에 사용된 권한 부여 및 인증 시스템을 확인해야 합니다. 기본적으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 Windows 인증, 통합 보안 및 역할 할당을 사용하여 게시된 보고서에 대한 액세스를 제어하도록 도와줍니다. 자세한 내용은 [역할 및 권한&#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md) 및 [Reporting Services 보안 및 보호](../../reporting-services/security/reporting-services-security-and-protection.md)를 참조하세요.  

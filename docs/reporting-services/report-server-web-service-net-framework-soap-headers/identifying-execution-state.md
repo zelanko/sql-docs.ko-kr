@@ -1,5 +1,6 @@
 ---
 title: 실행 상태 식별 | Microsoft Docs
+description: 보고서와 다양한 방법으로 상호 작용할 수 있도록 Reporting Services를 사용하여 실행 상태를 식별하는 방법을 알아봅니다.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b9e33f7c4d1b3ed953882175cd430df2b1e6ce1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0977cc384dac80f28d6b7c5b7a0149ba200f1794
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62991576"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215603"
 ---
 # <a name="identifying-execution-state"></a>실행 상태 식별
   HTTP(Hypertext Transfer Protocol)는 연결 없는 상태 비저장 프로토콜이므로 다양한 요청이 동일한 클라이언트에서 나온 것인지 여부 또는 단일 브라우저 인스턴스에서 페이지나 사이트를 계속 사용 중인지 여부를 자동으로 나타내지 않습니다. 다수의 세션에서 논리적 연결이 만들어져 서버와 클라이언트 간의 상태가 HTTP를 통해 유지됩니다. 특정 세션과 관련된 사용자별 정보를 세션 상태라고 합니다.  

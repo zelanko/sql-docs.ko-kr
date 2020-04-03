@@ -1,5 +1,6 @@
 ---
 title: SoapException 오류 테이블 | Microsoft Docs
+description: 보고서 서버 웹 서비스에서 SoapException을 통해 메서드에서 액세스할 수 있는 오류에 대해 알아봅니다.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3dbf1b5a-bd2a-4385-925d-5d095d72014c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 95427ddaa6d220afe3397a138f9b5baa085f324d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d8025cc433a8ef6b773b51d86452a6a2f6b07534
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62991551"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215638"
 ---
 # <a name="soapexception-errors-table"></a>SoapException 오류 테이블
   보고서 서버는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 발생하는 오류를 기반으로 SOAP 예외 오류 및 오류 메시지를 생성합니다. 다음 표는 보고서 서버 웹 서비스의 **SoapException**을 통해 메서드에서 액세스할 수 있는 오류를 보여 줍니다. 예외를 throw하는 메서드별로 구성되어 있습니다.  

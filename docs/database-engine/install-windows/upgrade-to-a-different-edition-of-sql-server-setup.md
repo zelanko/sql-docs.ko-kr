@@ -10,12 +10,12 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 996d0f90a76760c4c02a7a3d2bbf08f8c7ba6981
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c3de07aaa65e2dac2859aaf5c0be3e63e0f22dcf
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75258791"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434130"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>다른 SQL Server 버전으로 업그레이드(설치 프로그램)
 
@@ -29,7 +29,7 @@ ms.locfileid: "75258791"
 - [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
-> **장애 조치 클러스터 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치 클러스터 인스턴스의 노드 중 하나에서 버전 업그레이드를 실행하는 것으로 충분합니다. 이 노드는 활성 또는 수동 모드로 있을 수 있으며, 엔진은 버전 업그레이드 중에 리소스를 오프라인으로 가져오지 않습니다. 버전 업그레이드 후에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작하거나 다른 노드에 대한 장애 조치(failover)를 다시 시작해야 합니다.  
+> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스에서:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치 클러스터 인스턴스의 노드 중 하나에서 버전 업그레이드를 실행하는 것으로 충분합니다. 이 노드는 활성 또는 수동 모드로 있을 수 있으며, 엔진은 버전 업그레이드 중에 리소스를 오프라인으로 가져오지 않습니다. 버전 업그레이드 후에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작하거나 다른 노드에 대한 장애 조치(failover)를 다시 시작해야 합니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
 로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하는 경우 원격 공유에 대한 읽기 권한이 있는 도메인 계정을 사용해야 합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "75258791"
   
 ## <a name="procedure"></a>절차  
   
-### <a name="to-upgrade-to-a-different-edition-of-includessnoversionincludesssnoversion-mdmd"></a>다른 버전의 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]로 업그레이드하려면  
+### <a name="to-upgrade-to-a-different-edition-of-ssnoversion"></a>다른 버전의 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]로 업그레이드하려면  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 미디어를 넣고 루트 폴더에서 setup.exe를 두 번 클릭하거나, 구성 도구에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 센터를 시작합니다. 네트워크 공유에서 설치하려면 공유에서 루트 폴더를 찾은 다음 Setup.exe를 두 번 클릭합니다.  
   
@@ -78,7 +78,15 @@ ms.locfileid: "75258791"
 -   tempdb 및 model 시스템 데이터베이스에 대한 크기 및 복구 모드는 업그레이드 후에도 변경되지 않은 상태로 유지됩니다. 필요에 따라 이러한 설정을 다시 구성하십시오. 자세한 내용은 [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)를 참조하세요.  
   
 -   템플릿 데이터베이스는 업그레이드 후에도 컴퓨터에 그대로 유지됩니다.  
-  
+
+> [!NOTE]  
+> 프로시저가 Engine_SqlEngineHealthCheck 규칙에서 실패할 경우, 업그레이드 프로세스가 성공적으로 완료될 수 있도록 명령줄 설치 옵션을 사용하여 이 특정 규칙을 건너뛸 수 있습니다. 이 규칙 검사를 건너뛰려면 명령 프롬프트를 열고 SQL Server 설치 프로그램(setup.exe)이 포함된 경로로 변경합니다. 다음 명령을 입력합니다. 
+
+```console
+setup.exe /q /ACTION=editionupgrade /InstanceName=MSSQLSERVER /PID=<appropriatePid> /SkipRules=Engine_SqlEngineHealthCheck
+```
+
+
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 업그레이드](../../database-engine/install-windows/upgrade-sql-server.md)   
  [이전 버전과의 호환성_삭제됨](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  

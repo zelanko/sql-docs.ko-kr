@@ -1,7 +1,7 @@
 ---
 title: SQL Server용 Microsoft JDBC Driver의 기능 종속성 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/10/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 56964eabd62246eefe660c949155cf671fb14970
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: f9e051e5d50c2fb86536304b065b1303f9b634dc
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903710"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271409"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>SQL Server용 Microsoft JDBC Driver의 기능 종속성
 
@@ -44,7 +44,7 @@ ms.locfileid: "77903710"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.1.jre11</version>
+    <version>8.2.2.jre11</version>
     <scope>compile</scope>
 </dependency>
 
@@ -67,7 +67,7 @@ ms.locfileid: "77903710"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.1.jre11</version>
+    <version>8.2.2.jre11</version>
     <scope>compile</scope>
 </dependency>
 
@@ -94,7 +94,7 @@ ms.locfileid: "77903710"
 
 ### <a name="working-with-the-azure-key-vault-provider"></a>Azure Key Vault 공급자 사용:
 
-- JDBC 드라이버 버전 8.2.1 - 종속성 버전: Azure-Keyvault(버전 1.2.2), Adal4j(버전 1.6.4), Client-Runtime-for-AutoRest(1.7.0) 및 해당 종속성([애플리케이션 예제](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
+- JDBC 드라이버 버전 8.2.2 - 종속성 버전: Azure-Keyvault(버전 1.2.2), Adal4j(버전 1.6.4), Client-Runtime-for-AutoRest(1.7.0) 및 해당 종속성([애플리케이션 예제](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
 - JDBC 드라이버 버전 7.4.1 - 종속성 버전: Azure-Keyvault(버전 1.2.1), Adal4j(버전 1.6.4), Client-Runtime-for-AutoRest(1.6.10) 및 해당 종속성([애플리케이션 예제](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
 - JDBC 드라이버 버전 7.2.2 - 종속성 버전: Azure-keyvault(버전 1.2.0), Azure Keyvault Webkey(버전 1.2.0), Adal4j(버전 1.6.3), Client-Runtime-for-AutoRest(1.6.5) 및 해당 종속성([애플리케이션 예제](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
 - JDBC 드라이버 버전 7.0.0 - 종속성 버전: Azure-Keyvault(버전 1.0.0), Adal4j(version 1.6.0) 및 해당 종속성([애플리케이션 예제](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
@@ -109,7 +109,7 @@ ms.locfileid: "77903710"
 
 ### <a name="working-with-azure-active-directory-authentication"></a>Azure Active Directory 인증 사용:
 
-- JDBC 드라이버 버전 8.2.1 - 종속성 버전: Adal4j(버전 1.6.4), Client-Runtime-for-AutoRest(1.7.0) 및 해당 종속성. 이 드라이버 버전에서는 ‘sqljdbc_auth.dll’이 ‘mssql-jdbc_auth-\<버전>-\<arch>.dll’로 이름이 바뀌었습니다.
+- JDBC 드라이버 버전 8.2.2 - 종속성 버전: Adal4j(버전 1.6.4), Client-Runtime-for-AutoRest(1.7.0) 및 해당 종속성. 이 드라이버 버전에서는 ‘sqljdbc_auth.dll’이 ‘mssql-jdbc_auth-\<버전>-\<arch>.dll’로 이름이 바뀌었습니다.
 - JDBC 드라이버 버전 7.4.1 - 종속성 버전: Adal4j(버전 1.6.4), Client-Runtime-for-AutoRest(1.6.10) 및 해당 종속성
 - JDBC 드라이버 버전 7.2.2 - 종속성 버전: Adal4j(버전 1.6.3), Client-Runtime-for-AutoRest(1.6.5) 및 해당 종속성
 - JDBC 드라이버 버전 7.0.0 - 종속성 버전: Adal4j(버전 1.6.0) 및 해당 종속성
@@ -121,7 +121,7 @@ ms.locfileid: "77903710"
 
 ‘Windows 운영 체제’의 경우  드라이버는 기본적으로 sqljdbc_auth.dll을 찾고 Kerberos 티켓 설정이나 Azure 라이브러리 종속성이 필요하지 않습니다. sqljdbc_auth.dll을 사용할 수 없으면 드라이버는 다른 운영 체제에서처럼 Active Directory에 인증하기 위해 Kerberos 티켓을 찾습니다.
 
-드라이버 버전 8.2.1부터 ‘sqljdbc_auth.dll’의 이름이 ‘mssql-jdbc_auth-\<버전>-\<arch>.dll’로 바뀌었습니다. 예를 들어 ‘mssql-jdbc_auth-8.2.1.x64.dll’과 같습니다.
+드라이버 버전 8.2.2부터 ‘sqljdbc_auth.dll’의 이름이 ‘mssql-jdbc_auth-\<버전>-\<arch>.dll’로 바뀌었습니다. 예를 들어 ‘mssql-jdbc_auth-8.2.2.x64.dll’입니다.
 
 이 기능을 사용하는 [애플리케이션 예제](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)를 다운로드할 수 있습니다.
 

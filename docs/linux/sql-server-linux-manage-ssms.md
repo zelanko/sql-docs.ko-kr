@@ -1,6 +1,6 @@
 ---
 title: SSMS를 사용하여 SQL Server on Linux 관리
-description: ''
+description: 이 문서에서는 SQL Server의 구성 요소를 액세스, 구성, 관리, 운영 및 개발하기 위한 통합 환경인 SQL Server Management Studio를 소개합니다.
 author: VanMSFT
 ms.author: vanto
 ms.date: 05/21/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.openlocfilehash: 753845d41c946d955b80a927901f827ee4643567
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3ddc3ffa91b62956fdfef91ff3c19a784fc2fe2b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68000098"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216662"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Windows에서 SQL Server Management Studio를 사용하여 SQL Server on Linux 관리
 

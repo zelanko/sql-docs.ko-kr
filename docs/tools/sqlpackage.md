@@ -8,13 +8,13 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 ms.reviewer: alayu; sstein
-ms.date: 06/28/2018
-ms.openlocfilehash: f5a1391865b2f08d6eb127fc360d94437c08155e
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.date: 03/17/2020
+ms.openlocfilehash: 3a45b9164d2d81983e9a40f0395189979d4daa7d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286487"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448256"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -78,7 +78,7 @@ sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_ve
 |**/DiagnosticsFile:**|**/df**|{string}|진단 로그를 저장할 파일을 지정합니다. |
 |**/MaxParallelism:**|**/mp**|{int}| 데이터베이스에 대해 실행 중인 동시 작업에 대한 병렬 처리 수준을 지정합니다. 기본값은 8입니다. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|sqlpackage.exe이 기존 파일을 덮어써야 할지 여부를 지정합니다. False를 지정하면 기존 파일이 나타나는 경우 sqlpackage.exe에서 작업이 중단됩니다. 기본값은 True입니다. |
-|**/Properties:**|**/p**|{PropertyName}={Value}|작업별 속성에 대한 이름 값 쌍을 지정합니다. {PropertyName}={Value}. 해당 작업의 속성 이름을 보려면 특정 작업의 도움말을 참조하십시오. 예: sqlpackage.exe /Action:Publish /?. |
+|**/Properties:**|**/p**|{PropertyName}={Value}|작업별 속성에 대한 이름 값 쌍을 지정합니다. {PropertyName}={Value}. 해당 작업의 속성 이름을 보려면 특정 작업의 도움말을 참조하십시오. 예: sqlpackage.exe /Action:Extract /?. |
 |**/Quiet:**|**/q**|{True&#124;False}|자세한 피드백을 무시할지 여부를 지정합니다. 기본값은 False입니다. |
 |**/SourceConnectionString:**|**/scs**|{string}|원본 데이터베이스에 대한 유효한 SQL Server/Azure 연결 문자열을 지정합니다. 이 매개 변수를 지정한 경우 다른 모든 원본 매개 변수와 단독으로 연결 문자열이 사용됩니다. |
 |**/SourceDatabaseName:**|**/sdn**|{string}|원본 데이터베이스의 이름을 정의합니다. |
@@ -111,7 +111,7 @@ sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_ve
 |**/p:**|IgnoreUserLoginMappings=(BOOLEAN)|사용자와 로그인 간의 관계를 무시할지 여부를 지정합니다.|
 |**/p:**|LongRunningCommandTimeout=(INT32)| SQL Server에 대한 쿼리를 실행할 때 장기 명령 시간 제한(초)을 지정합니다. 무기한 대기하려면 0을 사용합니다.|
 |**/p:**|Storage=({File&#124;Memory} 'File')|추출 중에 사용되는 스키마 모델에 대한 지원 스토리지 유형을 지정합니다.|
-|**/p:**|TableData=(STRING)|데이터를 추출할 테이블을 나타냅니다. schema_name.table_identifier 형식에서 이름 부분이 괄호로 묶이거나 묶이지 않은 형태로 테이블 이름을 지정하십시오.|
+|**/p:**|TableData=(STRING)|데이터를 추출할 테이블을 나타냅니다. schema_name.table_identifier 형식에서 이름 부분이 괄호로 묶이거나 묶이지 않은 형태로 테이블 이름을 지정하십시오. 이 옵션은 여러 번 지정할 수 있습니다.|
 |**/p:**| TempDirectoryForTableData=(STRING)|패키지 파일에 기록되기 전에 테이블 데이터를 버퍼링하는 데 사용되는 임시 디렉터리를 지정합니다.|
 |**/p:**|VerifyExtraction=(BOOLEAN)|추출된 dacpac를 확인할지 여부를 지정합니다.|
 
@@ -277,7 +277,7 @@ SqlPackage.exe Export 작업은 SQL Server 또는 Azure SQL Database의 라이�
 |**/DiagnosticsFile:**|**/df**|{string}|진단 로그를 저장할 파일을 지정합니다. |
 |**/MaxParallelism:**|**/mp**|{int}| 데이터베이스에 대해 실행 중인 동시 작업에 대한 병렬 처리 수준을 지정합니다. 기본값은 8입니다. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|sqlpackage.exe이 기존 파일을 덮어써야 할지 여부를 지정합니다. False를 지정하면 기존 파일이 나타나는 경우 sqlpackage.exe에서 작업이 중단됩니다. 기본값은 True입니다. |
-|**/Properties:**|**/p**|{PropertyName}={Value}|작업별 속성에 대한 이름 값 쌍을 지정합니다. {PropertyName}={Value}. 해당 작업의 속성 이름을 보려면 특정 작업의 도움말을 참조하십시오. 예: sqlpackage.exe /Action:Publish /?.|
+|**/Properties:**|**/p**|{PropertyName}={Value}|작업별 속성에 대한 이름 값 쌍을 지정합니다. {PropertyName}={Value}. 해당 작업의 속성 이름을 보려면 특정 작업의 도움말을 참조하십시오. 예: sqlpackage.exe /Action:Export /?.|
 |**/Quiet:**|**/q**|{True&#124;False}|자세한 피드백을 무시할지 여부를 지정합니다. 기본값은 False입니다.|
 |**/SourceConnectionString:**|**/scs**|{string}|원본 데이터베이스에 대한 유효한 SQL Server/Azure 연결 문자열을 지정합니다. 이 매개 변수를 지정한 경우 다른 모든 원본 매개 변수와 단독으로 연결 문자열이 사용됩니다. |
 |**/SourceDatabaseName:**|**/sdn**|{string}|원본 데이터베이스의 이름을 정의합니다. |
@@ -299,7 +299,7 @@ SqlPackage.exe Export 작업은 SQL Server 또는 Azure SQL Database의 라이�
 |**/p:**|DatabaseLockTimeout=(INT32 '60')| SQLServer에 대해 쿼리를 실행할 때의 데이터베이스 잠금 시간 제한(초)를 지정합니다. 무기한 대기하려면 -1을 사용합니다.|
 |**/p:**|LongRunningCommandTimeout=(INT32)| SQL Server에 대한 쿼리를 실행할 때 장기 명령 시간 제한(초)을 지정합니다. 무기한 대기하려면 0을 사용합니다.|
 |**/p:**|Storage=({File&#124;Memory} 'File')|추출 중에 사용되는 스키마 모델에 대한 지원 스토리지 유형을 지정합니다.|
-|**/p:**|TableData=(STRING)|데이터를 추출할 테이블을 나타냅니다. schema_name.table_identifier 형식에서 이름 부분이 괄호로 묶이거나 묶이지 않은 형태로 테이블 이름을 지정하십시오.|
+|**/p:**|TableData=(STRING)|데이터를 추출할 테이블을 나타냅니다. schema_name.table_identifier 형식에서 이름 부분이 괄호로 묶이거나 묶이지 않은 형태로 테이블 이름을 지정하십시오. 이 옵션은 여러 번 지정할 수 있습니다.|
 |**/p:**|TempDirectoryForTableData=(STRING)|패키지 파일에 기록되기 전에 테이블 데이터를 버퍼링하는 데 사용되는 임시 디렉터리를 지정합니다.|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|필요한 대상 엔진 버전을 지정합니다. 이 작업은 생성된 bacpac에서 V12 기능(예: 메모리 최적화 테이블)이 포함된 Azure SQL Database 서버가 지원하는 개체를 허용할지 여부에 영향을 줍니다.|
 |**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Microsoft Azure SQL Database v12에 대해 지원되는 전체 텍스트 문서 유형을 확인할지 여부를 지정합니다.|
@@ -317,7 +317,7 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
 |**/Diagnostics:**|**/d**|{True&#124;False}|진단 로깅이 콘솔로 출력되는지 여부를 지정합니다. 기본값은 False입니다. |
 |**/DiagnosticsFile:**|**/df**|{string}|진단 로그를 저장할 파일을 지정합니다. |
 |**/MaxParallelism:**|**/mp**|{int}| 데이터베이스에 대해 실행 중인 동시 작업에 대한 병렬 처리 수준을 지정합니다. 기본값은 8입니다. |
-|**/Properties:**|**/p**|{PropertyName}={Value}|작업별 속성에 대한 이름 값 쌍을 지정합니다. {PropertyName}={Value}. 해당 작업의 속성 이름을 보려면 특정 작업의 도움말을 참조하십시오. 예: sqlpackage.exe /Action:Publish /?.|
+|**/Properties:**|**/p**|{PropertyName}={Value}|작업별 속성에 대한 이름 값 쌍을 지정합니다. {PropertyName}={Value}. 해당 작업의 속성 이름을 보려면 특정 작업의 도움말을 참조하십시오. 예: sqlpackage.exe /Action:Import /?.|
 |**/Quiet:**|**/q**|{True&#124;False}|자세한 피드백을 무시할지 여부를 지정합니다. 기본값은 False입니다.|
 |**/SourceFile:**|**/sf**|{string}|작업 원본으로 사용할 원본 파일을 지정합니다. 이 매개 변수를 사용하는 경우 다른 원본 매개 변수가 무효화됩니다. |
 |**/TargetConnectionString:**|**/tcs**|{string}|대상 데이터베이스에 대한 유효한 SQL Server/Azure 연결 문자열을 지정합니다. 이 매개 변수를 지정한 경우 다른 모든 대상 매개 변수와 단독으로 연결 문자열이 사용됩니다. |
@@ -362,7 +362,7 @@ Import 동작과 관련된 속성:
 |**/OutputPath:**|**/op**|{string}|출력 파일이 생성되는 파일 경로를 지정합니다. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|sqlpackage.exe이 기존 파일을 덮어써야 할지 여부를 지정합니다. False를 지정하면 기존 파일이 나타나는 경우 sqlpackage.exe에서 작업이 중단됩니다. 기본값은 True입니다. |
 |**/Profile:**|**/pr**|{string}|DAC 게시 프로필에 대한 파일 경로를 지정합니다. 프로필은 출력을 생성할 때 사용할 속성 및 변수 컬렉션을 정의합니다. |
-|**/Properties:**|**/p**|{PropertyName}={Value}|작업별 속성에 대한 이름 값 쌍을 지정합니다. {PropertyName}={Value}. 해당 작업의 속성 이름을 보려면 특정 작업의 도움말을 참조하십시오. 예: sqlpackage.exe /Action:Publish /?. |
+|**/Properties:**|**/p**|{PropertyName}={Value}|작업별 속성에 대한 이름 값 쌍을 지정합니다. {PropertyName}={Value}. 해당 작업의 속성 이름을 보려면 특정 작업의 도움말을 참조하십시오. 예: sqlpackage.exe /Action:DeployReport /?. |
 |**/Quiet:**|**/q**|{True&#124;False}|자세한 피드백을 무시할지 여부를 지정합니다. 기본값은 False입니다. |
 |**/SourceConnectionString:**|**/scs**|{string}|원본 데이터베이스에 대한 유효한 SQL Server/Azure 연결 문자열을 지정합니다. 이 매개 변수를 지정한 경우 다른 모든 원본 매개 변수와 단독으로 연결 문자열이 사용됩니다. |
 |**/SourceDatabaseName:**|**/sdn**|{string}|원본 데이터베이스의 이름을 정의합니다. |
@@ -527,7 +527,7 @@ Import 동작과 관련된 속성:
 |**/OutputPath:**|**/op**|{string}|출력 파일이 생성되는 파일 경로를 지정합니다. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|sqlpackage.exe이 기존 파일을 덮어써야 할지 여부를 지정합니다. False를 지정하면 기존 파일이 나타나는 경우 sqlpackage.exe에서 작업이 중단됩니다. 기본값은 True입니다. |
 |**/Profile:**|**/pr**|{string}|DAC 게시 프로필에 대한 파일 경로를 지정합니다. 프로필은 출력을 생성할 때 사용할 속성 및 변수 컬렉션을 정의합니다.|
-|**/Properties:**|**/p**|{PropertyName}={Value}|작업별 속성에 대한 이름 값 쌍을 지정합니다. {PropertyName}={Value}. 해당 작업의 속성 이름을 보려면 특정 작업의 도움말을 참조하십시오. 예: sqlpackage.exe /Action:Publish /?.|
+|**/Properties:**|**/p**|{PropertyName}={Value}|작업별 속성에 대한 이름 값 쌍을 지정합니다. {PropertyName}={Value}. 해당 작업의 속성 이름을 보려면 특정 작업의 도움말을 참조하십시오. 예: sqlpackage.exe /Action:Script /?.|
 |**/Quiet:**|**/q**|{True&#124;False}|자세한 피드백을 무시할지 여부를 지정합니다. 기본값은 False입니다.|
 |**/SourceConnectionString:**|**/scs**|{string}|원본 데이터베이스에 대한 유효한 SQL Server/Azure 연결 문자열을 지정합니다. 이 매개 변수를 지정한 경우 다른 모든 원본 매개 변수와 단독으로 연결 문자열이 사용됩니다. |
 |**/SourceDatabaseName:**|**/sdn**|{string}|원본 데이터베이스의 이름을 정의합니다. |

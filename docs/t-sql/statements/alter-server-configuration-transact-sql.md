@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ef4bf385e2ce0ecd140ad402c43d0039669c56e8
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 39273f66a62f713e7aa95c3ce20d9ed3204776e8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288297"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80380814"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -177,8 +177,10 @@ SQL  Server  장애 조치(failover)  클러스터링에 대한 로깅 수준을
   
 -   2 - 오류 및 경고가 로깅됩니다.  
   
+리소스 장애 조치 시나리오에서, SQL Server 리소스 DLL은 장애 조치가 이루어지기 전에 덤프 파일을 가져올 수 있습니다. 이는 FCI 기술과 가용성 그룹 기술에 모두 적용됩니다. SQL Server 리소스가 실패한 것을 확인한 SQL Server 리소스 DLL은 Sqldumper.exe 유틸리티를 사용하여 SQL Server 프로세스의 덤프 파일을 가져옵니다. Sqldumper.exe 유틸리티가 리소스 장애 조치 시점에 덤프 파일을 성공적으로 생성하도록 하려면 SqlDumperDumpTimeOut, SqlDumperDumpPath, SqlDumperDumpFlags와 같은 세 가지 속성을 필수 구성 요소로 설정해야 합니다.
+
 SQLDUMPEREDUMPFLAGS  
-SQL  Server  SQLDumper  유틸리티에서 생성되는 덤프 파일의 형식을 결정합니다. 기본 설정은 0입니다. 자세한 내용은 [SQL Server Dumper 유틸리티 기술 자료 문서](https://go.microsoft.com/fwlink/?LinkId=206173)를 참조하세요.  
+SQL  Server  SQLDumper  유틸리티에서 생성되는 덤프 파일의 형식을 결정합니다. 기본 설정은 0입니다. 이 설정에는 16진수 값이 아닌 10진수 값이 사용됩니다. 미니 덤프에는 288을 사용하고, 간접 메모리를 사용하는 미니 덤프에는 296을 사용하고, 필터링된 덤프에는 33024를 사용합니다. 자세한 내용은 [SQL Server Dumper 유틸리티 기술 자료 문서](https://go.microsoft.com/fwlink/?LinkId=206173)를 참조하세요.  
   
 SQLDUMPERDUMPPATH  =  {  'os_file_path'  |  DEFAULT  }  
 SQLDumper  유틸리티에서 덤프 파일을 저장하는 위치입니다. 자세한 내용은 [SQL Server Dumper 유틸리티 기술 자료 문서](https://go.microsoft.com/fwlink/?LinkId=206173)를 참조하세요.  
@@ -304,7 +306,7 @@ HYBRID_BUFFER_POOL = ON | OFF <br>
 |[IMDB 옵션 설정](#MemoryOptimized)|MEMORY_OPTIMIZED|
 
   
-###  <a name="Affinity"></a> 프로세스 선호도 설정  
+###  <a name="setting-process-affinity"></a><a name="Affinity"></a> 프로세스 선호도 설정  
 이 섹션의 예에서는 CPU  및 NUMA  노드에 대한 프로세스 선호도를 설정하는 방법을 보여 줍니다. 이 예에서는 서버에 각각 16  NUMA  노드를 가진 4개 그룹으로 정렬된 256개의 CPU가 포함되어 있다고 가정합니다. 모든 NUMA 노드 또는 CPU에는 스레드가 할당되지 않습니다.  
   
 -   그룹 0: 0~3개의 NUMA 노드, 0~63개의 CPU  
@@ -351,7 +353,7 @@ ALTER SERVER CONFIGURATION
 SET PROCESS AFFINITY CPU=AUTO;  
 ```  
   
-###  <a name="Diagnostic"></a> Setting diagnostic log options  
+###  <a name="setting-diagnostic-log-options"></a><a name="Diagnostic"></a> Setting diagnostic log options  
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터)    
   
@@ -387,7 +389,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
-###  <a name="Failover"></a> 장애 조치(failover) 클러스터 속성 설정  
+###  <a name="setting-failover-cluster-properties"></a><a name="Failover"></a> 장애 조치(failover) 클러스터 속성 설정  
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터)   
   
@@ -401,7 +403,7 @@ ALTER SERVER CONFIGURATION
 SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;  
 ```  
   
-###  <a name="ChangeClusterContextExample"></a> 2. 가용성 복제본의 클러스터 컨텍스트 변경  
+###  <a name="b-changing-the-cluster-context-of-an-availability-replica"></a><a name="ChangeClusterContextExample"></a> 2. 가용성 복제본의 클러스터 컨텍스트 변경  
 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 HARD  클러스터 컨텍스트를 변경합니다. 이 예에서는 대상 WSFC  클러스터 `clus01`을 지정하기 위해 전체 클러스터 개체 이름 `clus01.xyz.com`을 지정합니다.  
   
 ```sql  
@@ -410,7 +412,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
   
 ### <a name="setting-buffer-pool-extension-options"></a>버퍼 풀 확장 옵션 설정  
   
-####  <a name="BufferPoolExtension"></a> 1. 버퍼 풀 확장 옵션 설정  
+####  <a name="a-setting-the-buffer-pool-extension-option"></a><a name="BufferPoolExtension"></a> 1. 버퍼 풀 확장 옵션 설정  
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터)    
   
@@ -439,7 +441,7 @@ SET BUFFER POOL EXTENSION ON
 GO   
 ```  
 
-### <a name="MemoryOptimized"></a>IMDB 옵션 설정
+### <a name="setting-in-memory-database-options"></a><a name="MemoryOptimized"></a>IMDB 옵션 설정
 
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터)
 

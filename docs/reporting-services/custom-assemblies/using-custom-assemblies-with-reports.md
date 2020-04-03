@@ -1,5 +1,6 @@
 ---
 title: 보고서에서 사용자 지정 어셈블리 사용 | Microsoft Docs
+description: 보고서 정의 파일에서 사용자 지정 코드 어셈블리를 참조할 수 있도록 Microsoft .NET Framework를 사용하여 사용자 지정 코드 어셈블리를 개발합니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 53d141d0-2185-466a-84dc-7b90d284da3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 94fdcbb6219aefb0cf38f0d77c0c3437ccf19915
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 526f80fe202c14773aeafce6b5889116b975e3c2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194100"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217055"
 ---
 # <a name="using-custom-assemblies-with-reports"></a>보고서에서 사용자 지정 어셈블리 사용
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 보고서 항목 값, 스타일 및 서식 지정을 위한 사용자 지정 코드를 작성할 수 있습니다. 예를 들어, 사용자 지정 코드를 사용하여 로캘에 따른 통화 형식을 지정하거나 특정 값을 특수한 서식으로 플래그 지정하거나 회사에서 사용되는 다른 비즈니스 규칙을 적용할 수 있습니다. 보고서에 이 코드를 포함하는 방법은 보고서 정의 파일 내에서 참조할 수 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 사용자 지정 코드 어셈블리를 만드는 것입니다. 보고서가 실행되면 서버는 사용자 어셈블리에서 함수를 호출합니다. 사용자 지정 어셈블리는 보고서에서 사용하고자 하는 특수화된 함수를 검색하는 데 사용할 수 있습니다.  

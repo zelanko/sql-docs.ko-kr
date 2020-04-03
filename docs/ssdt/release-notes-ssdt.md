@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 860888bf0f2292a68fa6a4c6a6b92489466a586c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b83ceb3dd5079f82a13e8f1e2aba37fcf5ca5835
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75688784"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271429"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools) 릴리스 정보
 
@@ -44,6 +44,39 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+
+## <a name="1594nbsp-ssdt-for-vs-2017"></a>15.9.4,&nbsp; VS 2017용 SSDT
+
+_릴리스 날짜:_ &nbsp; 2020년 3월 26일  
+_빌드 번호:_ &nbsp; 14.0.16214.0  
+_Visual Studio 2017용 SSDT._
+
+### <a name="whats-new"></a>새로운 기능
+
+| 새 항목 | 세부 정보 |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services(SSIS) | 컨테이너 내부의 제어 흐름 제약 조건 줄을 이동할 때 VS가 크래시되는 문제를 해결했습니다. |
+| Integration Services(SSIS) | 유지 관리 계획 작업 UI에 작업 UI 외부에서 생성된 ADO.NET 연결 관리자가 표시되지 않는 문제를 해결했습니다. |
+| Integration Services(SSIS) | SSIS 프로젝트가 로드된 솔루션에 속하는 SSAS 프로젝트를 배포할 때 Azure 대화형 로그인 페이지가 표시되지 않는 문제를 해결했습니다. |
+| Integration Services(SSIS) | SQL Server가 설치되지 않은 상태에서 MSOLAP 드라이버 속성 단추를 클릭하면 DTS 마법사가 크래시되는 문제를 해결했습니다. |
+| Integration Services(SSIS) | MSOLEDBSQL 드라이버가 DTS 마법사에서 AAD 인증을 지원하지 않는 문제를 해결했습니다. |
+| Integration Services(SSIS) | SQL Server 2012를 대상으로 지정할 때 XML 소스 및 ADO.NET 대상이 올바르게 유지되지 않는 문제를 해결했습니다. |
+| Integration Services(SSIS) | 웹 서비스 태스크 편집기의 “WSDL 다운로드” 단추가 올바르게 표시되지 않는 문제를 해결했습니다. |
+| Integration Services(SSIS) | 조회 변환 편집기의 연결 관리자 페이지에서 테이블을 선택할 수 없는 문제를 해결했습니다. |
+| Integration Services(SSIS) | 캐시 변환 편집기의 레이아웃이 지저분해지는 문제를 해결했습니다. |
+| Integration Services(SSIS) | 패키지 편집기의 “연결 관리자” 영역이 올바르게 표시되지 않는 문제를 해결했습니다. |
+| Integration Services(SSIS) | 패키지 배포 모델로 변환 마법사에서 상태 아이콘이 올바르게 표시되지 않는 문제를 해결했습니다. |
+| Integration Services(SSIS) | 설치 프로그램을 인터넷에서의 다운로드 페이로드가 필요하지 않은 전체 설치 프로그램으로 변경했습니다. |
+
+### <a name="known-issues"></a>알려진 문제
+
+| 알려진 문제 | 세부 정보 |
+| :---------- | :------ |
+| SSIS 패키지 실행 태스크는 ExecuteOutOfProcess가 True로 설정되었을 때 디버깅을 지원하지 않습니다. | 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다. |
+| SSIS 및 SSAS가 동일한 Visual Studio 인스턴스에 설치되면 파워 쿼리 원본은 OData v4를 지원하지 않습니다. | &nbsp; |
+| SSIS 및 SSAS가 동일한 Visual Studio 인스턴스에 설치되면 파워 쿼리 원본은 Oracle에 연결하는 데 ODBC를 사용하도록 지원하지 않습니다. | &nbsp; |
+| 파워 쿼리 원본이 지역화되지 않았습니다. | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## <a name="1593nbsp-ssdt-for-vs-2017"></a>15.9.3,&nbsp; VS 2017용 SSDT
 

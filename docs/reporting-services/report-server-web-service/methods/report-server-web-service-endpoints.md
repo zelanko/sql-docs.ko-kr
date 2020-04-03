@@ -1,5 +1,6 @@
 ---
 title: 보고서 서버 웹 서비스 엔드포인트 | Microsoft Docs
+description: 보고서 서버 웹 서비스에는 보고서 서버를 관리하고 보고서를 실행 및 탐색할 수 있는 엔드포인트 세 개가 제공됩니다.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 19daac65c808691be20621d6718b4b71e33b83f9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a546ba4143b7f0cc63281ce9e7a95a4eb6910366
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284626"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509754"
 ---
 # <a name="report-server-web-service-endpoints"></a>보고서 서버 웹 서비스 엔드포인트
   보고서 서버 웹 서비스는 보고서 서버 관리 및 보고서의 실행과 탐색을 위한 엔드포인트를 다수 제공합니다.  

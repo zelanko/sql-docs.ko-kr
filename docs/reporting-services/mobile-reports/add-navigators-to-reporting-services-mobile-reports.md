@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 모바일 보고서에 탐색기 추가 | Microsoft Docs
+description: 모바일 보고서 게시자에서 탐색기를 추가하여 시간 또는 선택 항목을 기준으로 데이터를 필터링합니다. 탐색기는 Power BI 및 Excel 피벗 테이블의 슬라이서와 비슷합니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27060715a2d616dd99e294175163ad74b54a17b9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6749853bc1717077a4d65f4f27546c0fe260cdaf
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63317014"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448204"
 ---
 # <a name="add-navigators-to-reporting-services-mobile-reports"></a>Add navigators to Reporting Services mobile reports
 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]에서 시각화의 데이터를 시간별 또는 선택 항목별로 필터링하려면 *탐색기* 를 추가합니다. 

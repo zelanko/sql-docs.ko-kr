@@ -8,16 +8,16 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
-ms.openlocfilehash: e37237224dd9e8a6b44b913914c43d29cbc25d21
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 497791ba9eb066621a468ec954a0d3bc27d2cfcb
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "69028719"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216623"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>PowerShell Core를 사용하여 SQL Server on Linux 관리
 
-이 문서에서는 [SQL Server PowerShell](../powershell/sql-server-powershell.md)을 소개하고 macOS 및 Linux에서 PowerShell Core(PS Core)와 함께 사용하는 방법에 관한 몇 가지 예를 안내합니다. PowerShell Core는 이제 [GitHub](https://github.com/powershell/powershell)의 오픈 소스 프로젝트입니다.
+이 문서에서는 [SQL Server PowerShell](../powershell/sql-server-powershell.md)을 소개하고 macOS 및 Linux에서 PowerShell Core(PS Core)와 함께 사용하는 방법에 관한 몇 가지 예를 안내합니다. PowerShell Core는 현재 [GitHub](https://github.com/powershell/powershell)에 게시된 오픈 소스 프로젝트입니다.
 
 ## <a name="cross-platform-editor-options"></a>플랫폼 간 편집기 옵션
 
@@ -198,7 +198,7 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 ```
 
 ## <a name="explore-cmdlets-currently-available-in-ps-core"></a>현재 PS Core에서 사용할 수 있는 cmdlet 살펴보기
-SqlServer 모듈에는 현재 Windows PowerShell에서 사용할 수 있는 109개 cmdlet이 있지만 PSCore에서는 109개 중 62개만 사용할 수 있습니다. 현재 사용할 수 있는 59개 cmdlet의 전체 목록은 아래와 같습니다.  Sqlserver 모듈의 모든 cmdlet에 대한 자세한 설명서는 SqlServer [cmdlet reference](https://docs.microsoft.com/powershell/module/sqlserver/)(cmdlet 참조)를 참조하세요.
+SqlServer 모듈에는 현재 Windows PowerShell에서 사용할 수 있는 109개 cmdlet이 있지만 PSCore에서는 109개 중 62개만 사용할 수 있습니다. 현재 사용할 수 있는 62개 cmdlet의 전체 목록은 아래와 같습니다.  Sqlserver 모듈의 모든 cmdlet에 대한 자세한 설명서는 SqlServer [cmdlet reference](https://docs.microsoft.com/powershell/module/sqlserver/)(cmdlet 참조)를 참조하세요.
 
 다음 명령을 실행하면 사용 중인 PowerShell 버전에서 사용할 수 있는 모든 cmdlet이 표시됩니다.
 

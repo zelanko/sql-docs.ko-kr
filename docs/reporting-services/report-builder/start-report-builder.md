@@ -1,5 +1,6 @@
 ---
 title: 보고서 작성기 시작 | Microsoft Docs
+description: 보고서 작성기는 독립 실행형 보고서 제작 환경입니다. 보고서 작성기를 처음 시작하면 Microsoft 다운로드 센터에서 다운로드하라는 메시지가 표시됩니다.
 ms.date: 01/03/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd186252204a82e115387b625503945c50604460
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bdb67ef174ec849233826b65a2d90f08e8e4eb7d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75721388"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290769"
 ---
 # <a name="start-report-builder"></a>보고서 작성기 시작
 

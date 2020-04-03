@@ -1,5 +1,6 @@
 ---
 title: 디바이스 정보 설정을 렌더링 확장 프로그램에 전달 | Microsoft Docs
+description: 렌더링 매개 변수는 렌더링 확장 프로그램에 전달됩니다. Render 메서드를 통해, URL 매개 변수로 또는 구성 파일에서 디바이스 정보 설정을 지정합니다.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4171fcbc01b7dfd36003bef6c4fa5d90c74600d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9c8dc233904cb94520d9074924c3aabc30be85a7
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63128884"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509774"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>디바이스 정보 설정을 렌더링 확장 프로그램에 전달
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 디바이스 정보 설정을 사용하여 렌더링 매개 변수를 렌더링 확장 프로그램으로 전달할 수 있습니다. 보고서 서버 웹 서비스의 설정이 **DeviceInfo** XML 요소로 전달되고 보고서 서버에서 처리됩니다. 디바이스 정보 설정은 기본값을 가지므로 렌더링 프로세스에서 선택적 인수로 간주됩니다. 그러나 디바이스 정보 설정을 사용하여 렌더링을 사용자 지정하고 서버에서 공급한 기본값을 무효화할 수 있습니다.  

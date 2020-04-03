@@ -16,16 +16,16 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 602502f636d4204364025ae9a8e4b039e822ae8b
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.openlocfilehash: 6674f818d9983de56b4b015cb446b2c8f2931b84
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79190569"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434160"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 수신기 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 문서에서는 *,* 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]의 PowerShell을 사용하여 Always On 가용성 그룹에 대한 단일 [!INCLUDE[tsql](../../../includes/tsql-md.md)]가용성 그룹 수신기 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 만들거나 구성하는 방법에 대해 설명합니다.  
+  이 항목에서는 *,* 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]의 PowerShell을 사용하여 Always On 가용성 그룹에 대한 단일 [!INCLUDE[tsql](../../../includes/tsql-md.md)]가용성 그룹 수신기 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 만들거나 구성하는 방법에 대해 설명합니다.  
   
 > [!IMPORTANT]  
 >  가용성 그룹의 첫 번째 가용성 그룹 수신기를 만들려면 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell을 사용하는 것이 좋습니다. 추가 수신기를 만들려는 경우처럼 필요한 경우를 제외하고 WSFC 클러스터에서 수신기를 직접 만들지 마세요.  
@@ -321,21 +321,11 @@ Start-ClusterResource yourListenerName
   
  자세한 내용은 [동일한 가용성 그룹에 대해 여러 수신기를 만드는 방법](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/) (SQL Server Always On 팀 블로그)을 참조하세요.  
   
-##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
+ 
   
--   [가용성 그룹 수신기 속성 보기&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)  
-  
--   [가용성 그룹 수신기 제거&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
-  
-##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
-  
--   [동일한 가용성 그룹에 대해 여러 수신기를 만드는 방법](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/)  
-  
--   [SQL Server Always On 팀 블로그: 공식 SQL Server Always On 팀 블로그](https://blogs.msdn.microsoft.com/sqlalwayson/)  
-  
-## <a name="see-also"></a>참고 항목  
- [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
- [SQL Server 다중 서브넷 클러스터링&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  
-  
+## <a name="next-steps"></a>다음 단계
+
+이제 수신기를 만들었으므로, [수신기에 연결](listeners-client-connectivity-application-failover.md)하도록 애플리케이션을 구성합니다. 다양한 [가용성 그룹 모니터링 전략](monitoring-of-availability-groups-sql-server.md)을 검토하여 가용성 그룹의 상태를 확인할 수도 있습니다.
+
+[수신기의 속성을 확인](view-availability-group-listener-properties-sql-server.md)하거나, 필요한 경우 [수신기를 제거](remove-an-availability-group-listener-sql-server.md)하는 방법을 알아볼 수도 있습니다. 
   

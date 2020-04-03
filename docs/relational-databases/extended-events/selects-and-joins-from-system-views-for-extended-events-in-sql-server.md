@@ -1,5 +1,6 @@
 ---
 title: 확장 이벤트에 대한 시스템 뷰의 SELECT 및 JOIN
+description: SQL Server와 Azure SQL Database에는 확장 이벤트의 시스템 뷰가 있습니다. 이벤트 세션 정보를 다양한 큐브 뷰에 표시하는 방법을 알아봅니다.
 ms.date: 08/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3bcb7e272c1a5120b65018aab781546ba8d0f2b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3245b4288871e4b92b783aad0f08ca1027b401a0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75242895"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79526758"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server 확장 이벤트에 대한 시스템 뷰의 SELECT 및 JOIN
 
@@ -348,26 +349,22 @@ ORDER BY
 #### <a name="output"></a>출력
 
 
-다음은 앞의 SELECT JOIN UNION을 실행하여 얻은 실제 출력입니다. 출력 매개 변수 이름과 값은 앞의 CREATE EVENT SESSION 문에서 명확하게 표시되는 항목에 매핑됩니다.
+다음 표에는 위의 SELECT JOIN UNION을 실행하여 얻은 출력이 나와 있습니다. 출력 매개 변수 이름과 값은 앞의 CREATE EVENT SESSION 문에서 명확하게 표시되는 항목에 매핑됩니다.
 
-
-```
-Session-Name          Clause-Type            Parameter-Name                  Parameter-Value
-------------          -----------            --------------                  ---------------
-event_session_test3   1_EVENT                Event-Name                      lock_deadlock
-event_session_test3   2_EVENT_SET            collect_database_name           1
-event_session_test3   3_EVENT_ACTION         sqlserver.client_hostname       (Not_Applicable)
-event_session_test3   3_EVENT_ACTION         sqlserver.collect_system_time   (Not_Applicable)
-event_session_test3   3_EVENT_ACTION         sqlserver.event_sequence        (Not_Applicable)
-event_session_test3   4_EVENT_PREDICATES     ([sqlserver].[equal_i_sql_unicode_string]([database_name],N'InMemTest2') AND [package0].[counter]<=(16))   (Not_Applicable)
-event_session_test3   5_TARGET               event_file                      (Not_Applicable)
-event_session_test3   6_TARGET_SET           filename                        C:\Junk\event_session_test3_EF.xel
-event_session_test3   6_TARGET_SET           max_file_size                   20
-event_session_test3   6_TARGET_SET           max_rollover_files              2
-event_session_test3   7_WITH_MAX_MEMORY      max_memory                      4096
-event_session_test3   7_WITH_STARTUP_STATE   startup_state                   1
-```
-
+| Session-Name | Clause-Type | Parameter-Name | Parameter-Value |
+|---|---|---|---|
+|event_session_test3  | 1_EVENT |                Event-Name |                       lock_deadlock |
+|event_session_test3  |  2_EVENT_SET |             collect_database_name |            1 |
+|event_session_test3  |  3_EVENT_ACTION |          sqlserver.client_hostname |       (Not_Applicable) |
+|event_session_test3  |  3_EVENT_ACTION |         sqlserver.collect_system_time |   (Not_Applicable) |
+|event_session_test3  |  3_EVENT_ACTION |         sqlserver.event_sequence |        (Not_Applicable) |
+|event_session_test3  |  4_EVENT_PREDICATES |     (\[sqlserver\].\[equal_i_sql_unicode_string\]\(\[database_name\],N'InMemTest2'\) AND \[package0\].\[counter\]<=\(16\)\) |   (Not_Applicable) |
+|event_session_test3  |  5_TARGET |               event_file |                      (Not_Applicable) |
+|event_session_test3  |  6_TARGET_SET |           filename  |                       C:\Junk\event_session_test3_EF.xel |
+|event_session_test3  |  6_TARGET_SET |           max_file_size |                   20 |
+|event_session_test3  |  6_TARGET_SET |           max_rollover_files |              2 |
+|event_session_test3  |  7_WITH_MAX_MEMORY |      max_memory |                      4096 |
+|event_session_test3  |  7_WITH_STARTUP_STATE |   startup_state |                   1 |
 
 이상으로 카탈로그 뷰 섹션을 마쳤습니다.
 
@@ -423,28 +420,23 @@ SELECT  --C.1
 
 패키지 목록은 다음과 같습니다.
 
-
-```
-/***  (The unique p.guid values are not shown.)
-Package        Package-Description
--------        -------------------
-filestream     Extended events for SQL Server FILESTREAM and FileTable
-package0       Default package. Contains all standard types, maps, compare operators, actions and targets
-qds            Extended events for Query Store
-SecAudit       Security Audit Events
-sqlclr         Extended events for SQL CLR
-sqlos          Extended events for SQL Operating System
-SQLSatellite   Extended events for SQL Satellite
-sqlserver      Extended events for Microsoft SQL Server
-sqlserver      Extended events for Microsoft SQL Server
-sqlserver      Extended events for Microsoft SQL Server
-sqlsni         Extended events for Microsoft SQL Server
-ucs            Extended events for Unified Communications Stack
-XtpCompile     Extended events for the XTP Compile
-XtpEngine      Extended events for the XTP Engine
-XtpRuntime     Extended events for the XTP Runtime
-***/
-```
+| 패키지        |Package-Description|
+|---|---|
+|filestream|     Extended events for SQL Server FILESTREAM and FileTable |
+|package0   |    Default package. Contains all standard types, maps, compare operators, actions and targets |
+|qds         |   Extended events for Query Store |
+|SecAudit     |  Security Audit Events |
+|sqlclr        | Extended events for SQL CLR |
+|sqlos         | Extended events for SQL Operating System |
+|SQLSatellite |  Extended events for SQL Satellite |
+|sqlserver   |   Microsoft SQL Server의 확장 이벤트 |
+|sqlserver  |    Microsoft SQL Server의 확장 이벤트 |
+|sqlserver  |    Microsoft SQL Server의 확장 이벤트 |
+|sqlsni     |    Microsoft SQL Server의 확장 이벤트 |
+|ucs        |    Extended events for Unified Communications Stack |
+|XtpCompile |    Extended events for the XTP Compile |
+|XtpEngine  |    Extended events for the XTP Engine |
+|XtpRuntime |    Extended events for the XTP Runtime |
 
 
 *앞의 두문자어 정의:*
@@ -481,23 +473,16 @@ SELECT  --C.2
 
 개체 유형별 개체 개수는 다음과 같습니다. 약 1915개의 개체가 있습니다.
 
-
-```
-/***  Actual output, sum is about 1915:
-
-Count-of-Type   object_type
--------------   -----------
-1303            event
-351             map
-84              message
-77              pred_compare
-53              action
-46              pred_source
-28              type
-17              target
-***/
-```
-
+|Count-of-Type |   object_type |
+|---|---|
+|1303|            이벤트 |
+|351  |           map |
+|84    |          message |
+|77     |         pred_compare |
+|53     |        action |
+|46     |         pred_source |
+|28     |         type |
+|17     |         대상 |
 
 <a name="section_C_3_select_all_available_objects"></a>
 
@@ -537,34 +522,28 @@ SELECT  --C.3
 앞의 SELECT에서 반환된 개체의 임의 샘플링은 다음과 같습니다.
 
 
-```
-/***
-Type-of-Item   Package        Item                          Item-Description
-------------   -------        ----                          ----------------
-action         package0       callstack                     Collect the current call stack
-action         package0       debug_break                   Break the process in the default debugger
-action         sqlos          task_time                     Collect current task execution time
-action         sqlserver      sql_text                      Collect SQL text
-event          qds            query_store_aprc_regression   Fired when Query Store detects regression in query plan performance
-event          SQLSatellite   connection_accept             Occurs when a new connection is accepted. This event serves to log all connection attempts.
-event          XtpCompile     cgen                          Occurs at start of C code generation.
-map            qds            aprc_state                    Query Store Automatic Plan Regression Correction state
-message        package0       histogram_event_required      A value is required for the parameter 'filtering_event_name' when source type is 0.
-pred_compare   package0       equal_ansi_string             Equality operator between two ANSI string values
-pred_compare   sqlserver      equal_i_sql_ansi_string       Equality operator between two SQL ANSI string values
-pred_source    sqlos          task_execution_time           Get current task execution time
-pred_source    sqlserver      client_app_name               Get the current client application name
-target         package0       etw_classic_sync_target       Event Tracing for Windows (ETW) Synchronous Target
-target         package0       event_counter                 Use the event_counter target to count the number of occurrences of each event in the event session.
-target         package0       event_file                    Use the event_file target to save the event data to an XEL file, which can be archived and used for later analysis and review. You can merge multiple XEL files to view the combined data from separate event sessions.
-target         package0       histogram                     Use the histogram target to aggregate event data based on a specific event data field or action associated with the event. The histogram allows you to analyze distribution of the event data over the period of the event session.
-target         package0       pair_matching                 Pairing target
-target         package0       ring_buffer                   Asynchronous ring buffer target.
-type           package0       xml                           Well formed XML fragment
-***/
-```
-
-
+|Type-of-Item|   패키지|        항목|                          Item-Description|
+|---|---|---|---|
+|action|         package0  |     callstack                     |Collect the current call stack|
+|action |        package0  |     debug_break                   |Break the process in the default debugger|
+|action |       sqlos      |    task_time                     |Collect current task execution time|
+|action |        sqlserver |     sql_text                     | Collect SQL text|
+|이벤트  |        qds       |     query_store_aprc_regression  | Fired when Query Store detects regression in query plan performance|
+|이벤트  |        SQLSatellite |  connection_accept            | 새 연결이 허용될 때 발생합니다. 이 이벤트는 모든 연결 시도를 기록합니다.|
+|이벤트  |        XtpCompile  |   cgen                          |Occurs at start of C code generation.|
+|map    |        qds         |   aprc_state                    |Query Store Automatic Plan Regression Correction state|
+|message |       package0    |   histogram_event_required      |A value is required for the parameter 'filtering_event_name' when source type is 0.|
+|pred_compare |  package0   |    equal_ansi_string             |Equality operator between two ANSI string values|
+|pred_compare |  sqlserver  |    equal_i_sql_ansi_string       |Equality operator between two SQL ANSI string values|
+|pred_source |   sqlos      |    task_execution_time           |Get current task execution time|
+|pred_source |   sqlserver  |    client_app_name               |Get the current client application name|
+|대상 |        package0   |    etw_classic_sync_target       |Event Tracing for Windows (ETW) Synchronous Target|
+|대상 |        package0   |    event_counter                 |Use the event_counter target to count the number of occurrences of each event in the event session.|
+|대상  |       package0  |     event_file                    |Use the event_file target to save the event data to an XEL file, which can be archived and used for later analysis and review. You can merge multiple XEL files to view the combined data from separate event sessions.|
+|대상  |       package0   |    histogram                     |Use the histogram target to aggregate event data based on a specific event data field or action associated with the event. The histogram allows you to analyze distribution of the event data over the period of the event session.|
+|대상   |      package0  |     pair_matching                 |Pairing target|
+|대상   |      package0  |     ring_buffer                   |Asynchronous ring buffer target|
+|type     |      package0  |     Xml                           |Well formed XML fragment|
 
 <a name="section_C_4_data_fields"></a>
 
@@ -611,34 +590,29 @@ SELECT  -- C.4
 
 - 각 행은 *sqlserver.lock_deadlock* 이벤트에 대한 선택적 필터를 나타냅니다.
 - *\[열 설명\]* 열은 다음 표시에서 생략되었습니다. 값이 NULL인 경우가 많습니다.
+- 실제 출력으로, 대체로 NULL인 Description 열은 생략되었습니다.
+- object_type = ‘lock_deadlock’인 행입니다.
 
+|패키지|     이벤트|           Column-for-Predicate-Data|
+|---|---|---|
+|sqlserver|   lock_deadlock|   associated_object_id|
+|sqlserver|  lock_deadlock |  database_id|
+|sqlserver|  lock_deadlock |  database_name|
+|sqlserver|   lock_deadlock|   deadlock_id|
+|sqlserver|   lock_deadlock|   duration|
+|sqlserver|   lock_deadlock|   lockspace_nest_id|
+|sqlserver|   lock_deadlock|   lockspace_sub_id|
+|sqlserver|   lock_deadlock|   lockspace_workspace_id|
+|sqlserver|   lock_deadlock|   mode|
+|sqlserver|   lock_deadlock|   object_id|
+|sqlserver|   lock_deadlock|   owner_type|
+|sqlserver|   lock_deadlock|   resource_0|
+|sqlserver|   lock_deadlock|  resource_1|
+|sqlserver|   lock_deadlock|   resource_2|
+|sqlserver|   lock_deadlock|   resource_description|
+|sqlserver|   lock_deadlock|   resource_type|
+|sqlserver|   lock_deadlock|   transaction_id|
 
-```
-/***
-Actual output, except for the omitted Description column which is often NULL.
-These rows are where object_type = 'lock_deadlock'.
-
-Package     Event           Column-for-Predicate-Data
--------     -----           -------------------------
-sqlserver   lock_deadlock   associated_object_id
-sqlserver   lock_deadlock   database_id
-sqlserver   lock_deadlock   database_name
-sqlserver   lock_deadlock   deadlock_id
-sqlserver   lock_deadlock   duration
-sqlserver   lock_deadlock   lockspace_nest_id
-sqlserver   lock_deadlock   lockspace_sub_id
-sqlserver   lock_deadlock   lockspace_workspace_id
-sqlserver   lock_deadlock   mode
-sqlserver   lock_deadlock   object_id
-sqlserver   lock_deadlock   owner_type
-sqlserver   lock_deadlock   resource_0
-sqlserver   lock_deadlock   resource_1
-sqlserver   lock_deadlock   resource_2
-sqlserver   lock_deadlock   resource_description
-sqlserver   lock_deadlock   resource_type
-sqlserver   lock_deadlock   transaction_id
-***/
-```
 
 
 

@@ -1,6 +1,6 @@
 ---
 title: Linux의 SQL Server용 애플리케이션 개발
-description: ''
+description: 다양한 프로그래밍 언어와 널리 사용되는 웹 프레임워크에서 SQL Server on Linux에 연결하고 SQL Server on Linux를 사용하는 애플리케이션을 만들 수 있습니다.
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/17/2017
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 584bf33201cab5d0f57205de0fed181725187d52
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ad0b4de881afe1cf30f865540ddff692d1415d9c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68077408"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216783"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Linux의 SQL Server용 애플리케이션 개발을 시작하는 방법
 
@@ -60,7 +60,7 @@ SSMS, SSDT, PowerShell 등 Windows에서 현재 실행되는 도구는 Linux의 
 
 ## <a name="use-new-sql-tools-for-linux"></a>Linux용 새 SQL 도구 사용
 
-Linux, macOS 및 Windows에서 [Visual Studio Code](https://aka.ms/mssql-marketplace)의 새로운 [mssql 확장](https://code.visualstudio.com)을 사용할 수 있습니다. 단계별 연습을 진행하려면 다음 자습서를 참조하세요.
+Linux, macOS 및 Windows에서 [Visual Studio Code](https://code.visualstudio.com)의 새로운 [mssql 확장](https://aka.ms/mssql-marketplace)을 사용할 수 있습니다. 단계별 연습을 진행하려면 다음 자습서를 참조하세요.
 
 - [Visual Studio Code 사용](sql-server-linux-develop-use-vscode.md)
 

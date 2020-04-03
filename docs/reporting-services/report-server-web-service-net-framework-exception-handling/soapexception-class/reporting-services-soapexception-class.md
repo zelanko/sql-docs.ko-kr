@@ -1,5 +1,6 @@
 ---
 title: Reporting Services SoapException 클래스 | Microsoft Docs
+description: 발생 가능한 특정 Reporting Services SoapException 클래스 오류를 해결하는 방법을 알아봅니다.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2cec49ee-20b1-40eb-a75b-0908d9c05b34
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: daab30930fb1ae5df3c36dcfb417bd977d6663c7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1e5dca57a7ccc4d3ca08f4b1c22e460747cc6d46
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62991684"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215730"
 ---
 # <a name="reporting-services-soapexception-class"></a>Reporting Services SoapException 클래스
   발생할 수 있다고 판단되는 특정 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 오류를 해결해야 합니다. 예를 들어, 사용자에게 폴더를 만들도록 요구하는 애플리케이션에서 사용자는 이미 존재하는 폴더를 만들려고 시도할 수 있습니다. 개발자는 사용자가 애플리케이션의 폴더 이름 및 경로 필드에 입력하는 내용을 제어하지 못하지만, 누군가가 실수로 이미 존재하는 항목을 만들려고 시도할 때 발생하는 사용자 경험은 제어할 수 있습니다.  

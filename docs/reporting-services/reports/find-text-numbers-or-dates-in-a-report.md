@@ -1,5 +1,6 @@
 ---
 title: 보고서에서 텍스트, 숫자 또는 날짜 찾기 | Microsoft Docs
+description: Reporting Services를 사용하여 보고서에서 텍스트, 숫자, 날짜 등의 콘텐츠를 검색하는 방법을 알아봅니다.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f76bc00eca721a2ca118062d21cafe042e572dbb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 39dad6e1717e151a7fc90cfac60a6adc1c7dddf2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576412"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510154"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report"></a>보고서에서 텍스트, 숫자 또는 날짜 찾기
   찾을 단어나 구(검색 단어는 최대 256자까지 입력 가능)를 입력하여 보고서 내용을 검색할 수 있습니다. 검색은 보고서에서 일치하는 값을 찾아 해당 값이 포함된 보고서 부분에 중점을 두는 탐색 기술입니다.  

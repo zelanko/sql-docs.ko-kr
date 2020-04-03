@@ -1,5 +1,6 @@
 ---
 title: 모바일 보고서에 계기 추가 | Reporting Services | Microsoft Docs
+description: Reporting Services 모바일 보고서에 계기를 추가할 수 있습니다. 계기에는 데이터 세트의 단일 값이 단독으로 표시되거나 목표와 비교해서 표시됩니다.
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 90440119ec21cbfe97096b439e61074c7e515e00
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 456c50650afc01fc18465b0d96f3cfeb715ddecb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63280556"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448287"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>모바일 보고서에 계기 추가 | Reporting Services
 계기는 모바일 보고서에서 가장 기본적이고 가장 널리 사용되는 시각화 개체입니다. 데이터 세트의 단일 값을 표시합니다. 값만 표시하거나 목표와 비교하여 값을 표시합니다.
@@ -58,7 +59,7 @@ SQL Server 모바일 보고서 게시자의 모든 계기에는 하나 이상의
   
 계기 요소를 데이터 필드에 연결하는 데이터 속성과 더불어 많은 기능 및 시각적 속성을 사용자 지정할 수도 있습니다. 
 
-### <a name="set-value-direction-high-or-low-is-better"></a>값 방향(값이 높을수록 좋음 또는 값이 낮을수록 좋음) 설정
+### <a name="set-value-direction-high-or-low-is-better"></a>값 방향 설정: 값이 높을수록 좋음 또는 값이 낮을수록 좋음
 * 계기를 선택한 다음 **시각적 속성** 창의 **레이아웃** 탭에서 **값 방향** 을 **값이 높을수록 좋음** 또는 **값이 낮을수록 좋음**으로 설정합니다. 
 
 **값이 높을수록 좋음** 에서는 양수 값을 녹색으로 지정하여 바람직한 방향으로 변경된 사항을 나타낼지, 낮은 값을 빨간색으로 지정하여 바람직하지 않은 방향으로 변경된 사항을 나타낼지 결정합니다. 
