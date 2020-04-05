@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>= sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 86b9cd8a9327eb8afaf9945ca09629362062011f
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: 45afb5e861aee7b8cf253f6c241a884b54ff9451
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517450"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662844"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ SQL Server 데이터베이스의 이진 형식으로 저장된 기계 학습 모
 
 R 및 파이썬 기계 학습 모델에 대한 점수를 거의 실시간으로 제공합니다. `sp_rxPredict`[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) 및 [MicrosoftML의](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package) `rxPredict` R 함수에 대한 래퍼로 제공되는 저장 프로시저이며, [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) 및 [microsoftml에서](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) 파이썬 함수입니다. C++로 작성되었으며 점수 매기기 작업에 특별히 최적화되어 있습니다.
 
-R 또는 Python을 사용하여 모델을 만들어야 하지만 대상 데이터베이스 엔진 인스턴스의 이진 형식으로 직렬화되고 저장되면 R 또는 Python 통합이 설치되지 않은 경우에도 해당 데이터베이스 엔진 인스턴스에서 사용할 수 있습니다. 자세한 내용은 sp_rxPredict 실시간 [채점을](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring)참조하십시오.
+R 또는 Python을 사용하여 모델을 만들어야 하지만 대상 데이터베이스 엔진 인스턴스의 이진 형식으로 직렬화되고 저장되면 R 또는 Python 통합이 설치되지 않은 경우에도 해당 데이터베이스 엔진 인스턴스에서 사용할 수 있습니다. 자세한 내용은 sp_rxPredict 실시간 [채점을](https://docs.microsoft.com/sql/machine-learning/real-time-scoring)참조하십시오.
 
 ## <a name="syntax"></a>구문
 
@@ -64,7 +64,7 @@ sp_rxPredict  ( @model, @input )
 
 ### <a name="supported-algorithms"></a>지원되는 알고리즘
 
-모델을 만들고 학습하려면 [SQL Server 2Machine 학습 서비스(R 또는 파이썬)](https://docs.microsoft.com/sql/advanced-analytics/what-is-sql-server-machine-learning)및 SQL Server [2016 R 서비스,](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services) [SQL Server 기계 학습 서버(독립 실행형) 또는](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone)SQL Server [2016 R 서버(독립 실행형)에서](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016)제공하는 R 또는 파이썬에 대한 지원되는 알고리즘 중 하나를 사용합니다.
+모델을 만들고 학습하려면 [SQL Server 2Machine 학습 서비스(R 또는 파이썬)](https://docs.microsoft.com/sql/machine-learning/what-is-sql-server-machine-learning)및 SQL Server [2016 R 서비스,](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services) [SQL Server 기계 학습 서버(독립 실행형) 또는](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)SQL Server [2016 R 서버(독립 실행형)에서](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)제공하는 R 또는 파이썬에 대한 지원되는 알고리즘 중 하나를 사용합니다.
 
 #### <a name="r-revoscaler-models"></a>R: 반란 스케일R 모델
 
