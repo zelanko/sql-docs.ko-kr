@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
-ms.openlocfilehash: 6b6870e6b958b2ce7a7c5d050000bd190ef345df
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5e9223f957692074090b949cd522c0146d4a57fb
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893079"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665389"
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server 자습서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68893079"
 |[Integration Services 자습서](../integration-services/integration-services-tutorials.md)|[!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지를 만들고 배포하는 방법에 대해 알아봅니다.|  
 |[복제 자습서](../relational-databases/replication/replication-tutorials.md)|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 복제 토폴로지를 설정 및 실행하는 방법에 대해 알아봅니다.|  
 |[Reporting Services&#40;SSRS&#41; 자습서](../reporting-services/reporting-services-tutorials-ssrs.md)|기본 보고서와 구독을 만드는 방법에 대해 알아봅니다.|  
-|[SQL Server Machine Learning 자습서](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|R 또는 Python을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터로 작업하는 방법을 알아봅니다. [!INCLUDE[tsql](../includes/tsql-md.md)]에서 R 또는 Python 스크립트를 실행합니다.|  
+|[SQL Server Machine Learning 자습서](../machine-learning/tutorials/sql-server-r-tutorials.md)|R 또는 Python을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터로 작업하는 방법을 알아봅니다. [!INCLUDE[tsql](../includes/tsql-md.md)]에서 R 또는 Python 스크립트를 실행합니다.|  
   
  ## <a name="previously-published-tutorials"></a>이전에 게시된 자습서 
   

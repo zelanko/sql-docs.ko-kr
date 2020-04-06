@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9e2204000400c06ea0fd884dbf4db6c08085d495
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 828ad42bd6ecdc31d6e1c99a489fb4cbe8548d0e
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286067"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531082"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Kubernetes에 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 배포하는 방법
 
@@ -54,7 +54,7 @@ SQL Server 2019 빅 데이터 클러스터를 배포하기 전에 먼저 [빅 �
 | **단일 또는 여러 머신(`kubeadm`)** | `kubeadm`을 사용하여 물리적 머신 또는 가상 머신에 배포된 Kubernetes 클러스터입니다. | [지침](deploy-with-kubeadm.md) |
 
 > [!TIP]
-> AKS 및 빅 데이터 클러스터의 배포를 한 단계로 스크립팅할 수도 있습니다. 자세한 내용은 [python 스크립트](quickstart-big-data-cluster-deploy.md) 또는 Azure Data Studio [Notebook](deploy-notebooks.md)의 작업 방법을 참조하세요.
+> AKS 및 빅 데이터 클러스터의 배포를 한 단계로 스크립팅할 수도 있습니다. 자세한 내용은 [python 스크립트](quickstart-big-data-cluster-deploy.md) 또는 Azure Data Studio [Notebook](notebooks-deploy.md)의 작업 방법을 참조하세요.
 
 ### <a name="verify-kubernetes-configuration"></a>Kubernetes 구성 확인
 

@@ -10,12 +10,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 2c928db781c6e7d31f07e1cea37ed80481b8fed6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b59588853342b298ebe4ffa8effb59e371c9df6a
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68136477"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665406"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -149,7 +149,7 @@ ms.locfileid: "68136477"
 
 ## <a name="more-information"></a>자세한 정보
 - [SQL Server Reporting Services 릴리스 정보](../reporting-services/release-notes-reporting-services.md)관련 제한 사항 및 문제에 대해 설명합니다.
-- [Machine Learning Services에 대한 알려진 문제](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
+- [Machine Learning Services에 대한 알려진 문제](../machine-learning/known-issues-for-sql-server-machine-learning-services.md)
 - [SQL Server 업데이트 센터 - 지원되는 모든 버전에 대한 링크 및 정보](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -12,12 +12,12 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 3a6592781464bb148bf31fdaa135d17a159b5e13
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 907fc65dc781ed3308e2f6752ab09702c5d7c16a
+ms.sourcegitcommit: d818a307725983c921987749915fe1a381233d98
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68136528"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80625500"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ Windows Server 2008 R2 Server Core SP1에 SQL Server를 설치할 수 있습니�
   
 **해결 방법:** 의미 체계 언어 통계 데이터베이스를 의미 체계 인덱싱을 위한 필수 구성 요소로 설정하려면 다음 태스크를 수행합니다.  
   
-1.  SQL Server 설치 미디어에서 SemanticLanguageDatabase.msi라는 Windows Installer 패키지를 찾아 실행하여 데이터베이스를 추출합니다. SQL Server 2012 Express의 경우 의미 체계 언어 통계 데이터베이스를 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=35582)(https://www.microsoft.com/download/details.aspx?id=35582) )에서 다운로드하고 Windows Installer 패키지를 실행합니다.  
+1.  SQL Server 설치 미디어에서 SemanticLanguageDatabase.msi라는 Windows Installer 패키지를 찾아 실행하여 데이터베이스를 추출합니다. SQL Server 2012 Express의 경우 의미 체계 언어 통계 데이터베이스를 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=52681)(https://www.microsoft.com/download/details.aspx?id=52681) )에서 다운로드하고 Windows Installer 패키지를 실행합니다.  
   
 2.  데이터베이스를 적절한 데이터 폴더로 이동합니다. 데이터베이스를 기본 위치에 두는 경우 연결하기 전에 권한을 변경해야 합니다.  
   

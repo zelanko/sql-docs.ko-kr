@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e4f3a84e5001d7485ab590a66ee497522042824
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0d85376a8ebcd946950062ead62387897c47b537
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73658844"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664408"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>Windows에 SQL Server 언어 확장 설치
 
@@ -39,7 +39,7 @@ ms.locfileid: "73658844"
 
 + 도메인 컨트롤러에 SQL Server 언어 확장을 설치하지 마세요. 설치 프로그램의 언어 확장 부분이 실패합니다.
 
-+ 언어 확장 및 [Machine Learning Services](../../advanced-analytics/index.yml)는 SQL Server 빅 데이터 클러스터에 기본적으로 설치됩니다. 빅 데이터 클러스터를 사용하는 경우에는 이 문서의 단계를 수행하지 않아도 됩니다. 자세한 내용은 [빅 데이터 클러스터에서 Machine Learning Services(Python 및 R) 사용](../../big-data-cluster/machine-learning-services.md)을 참조하세요.
++ 언어 확장 및 [Machine Learning Services](../../machine-learning/index.yml)는 SQL Server 빅 데이터 클러스터에 기본적으로 설치됩니다. 빅 데이터 클러스터를 사용하는 경우에는 이 문서의 단계를 수행하지 않아도 됩니다. 자세한 내용은 [빅 데이터 클러스터에서 Machine Learning Services(Python 및 R) 사용](../../big-data-cluster/machine-learning-services.md)을 참조하세요.
 
 > [!IMPORTANT]
 > 설치가 완료되면 이 문서에 설명된 구성 후 단계를 완료해야 합니다. 이러한 단계에는 SQL Server에서 외부 코드를 사용하도록 설정하고 SQL Server가 사용자를 대신하여 Java 코드를 실행하는 데 필요한 계정을 추가하는 것이 포함됩니다. 일반적으로 구성 변경 시 인스턴스를 다시 시작하거나 실행 패드 서비스를 다시 시작해야 합니다.
@@ -87,7 +87,7 @@ SQL Server 2019 릴리스 후보 1에서는 SQL Server를 사용하여 Java를 �
 
         - 자체 Java 런타임을 사용하려면 **Machine Learning Services 및 언어 확장**을 선택합니다. Java는 선택하지 마세요.
 
-        R 및 Python을 사용하려면 [Windows에 SQL Server Machine Learning Services 설치](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)를 참조하세요.
+        R 및 Python을 사용하려면 [Windows에 SQL Server Machine Learning Services 설치](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install)를 참조하세요.
 
     ![언어 확장용 기능 옵션](../media/sql-install-feature-selection.png)
 
@@ -227,17 +227,17 @@ GO
 
 인스턴스 수준에서 추가 구성은 다음을 포함할 수 있습니다.
 
-* [SQL Server Machine Learning Services에 대한 방화벽 구성](../../advanced-analytics/security/firewall-configuration.md)
+* [SQL Server Machine Learning Services에 대한 방화벽 구성](../../machine-learning/security/firewall-configuration.md)
 * [추가 네트워크 프로토콜 사용](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [원격 연결 사용](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
-* [SQLRUserGroup에 대한 로그인 만들기](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
+* [SQLRUserGroup에 대한 로그인 만들기](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
 
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 
 
 데이터베이스에서는 다음 구성 업데이트가 필요할 수 있습니다.
 
-* [사용자에게 SQL Server Machine Learning Services 사용 권한 부여](../../advanced-analytics/security/user-permission.md)
+* [사용자에게 SQL Server Machine Learning Services 사용 권한 부여](../../machine-learning/security/user-permission.md)
 * [사용자에게 특정 언어를 실행할 수 있는 권한 부여](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql#permissions)
 
 > [!NOTE]

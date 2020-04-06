@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 02c3e6e217ea2918ab36829d6f0cceb4a6269e81
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 11bc21819760bebabd12018030c352bd98f79adb
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190385"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531092"
 ---
 # <a name="get-started-with-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 시작
 
@@ -55,7 +55,7 @@ ms.locfileid: "74190385"
 
 빅 데이터 클러스터는 [Kubernetes](https://kubernetes.io/docs/home)에서 관리되는 일련의 상호 관련된 컨테이너로 배포됩니다. 다양한 방법으로 Kubernetes를 호스트할 수 있습니다. 기존 Kubernetes 환경이 이미 있더라도 빅 데이터 클러스터와 관련된 요구 사항을 검토해야 합니다.
 
-- **AKS(Azure Kubernetes Service)** : AKS를 사용하여 관리되는 Kubernetes 클러스터를 Azure에 배포할 수 있습니다. 에이전트 노드만 관리하고 유지하면 됩니다. AKS를 사용하면 클러스터에 사용할 고유한 하드웨어를 프로비저닝할 필요가 없습니다. 또한 간편하게 [python 스크립트](quickstart-big-data-cluster-deploy.md) 또는 [배포 Notebook](deploy-notebooks.md)을 사용하여 한 단계로 AKS 클러스터를 만들고 빅 데이터 클러스터를 배포할 수 있습니다. 빅 데이터 클러스터 배포를 위한 AKS를 구성하는 방법에 대한 자세한 내용은 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]배포를 위한 Azure Kubernetes Service 구성](deploy-on-aks.md)을 참조하세요.
+- **AKS(Azure Kubernetes Service)** : AKS를 사용하여 관리되는 Kubernetes 클러스터를 Azure에 배포할 수 있습니다. 에이전트 노드만 관리하고 유지하면 됩니다. AKS를 사용하면 클러스터에 사용할 고유한 하드웨어를 프로비저닝할 필요가 없습니다. 또한 간편하게 [python 스크립트](quickstart-big-data-cluster-deploy.md) 또는 [배포 Notebook](notebooks-deploy.md)을 사용하여 한 단계로 AKS 클러스터를 만들고 빅 데이터 클러스터를 배포할 수 있습니다. 빅 데이터 클러스터 배포를 위한 AKS를 구성하는 방법에 대한 자세한 내용은 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]배포를 위한 Azure Kubernetes Service 구성](deploy-on-aks.md)을 참조하세요.
 
 - **여러 머신**: 물리적 서버 또는 가상 머신일 수 있는 여러 Linux 머신에 Kubernetes를 배포할 수도 있습니다. [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) 도구를 사용하여 Kubernetes 클러스터를 만들 수 있습니다. [bash 스크립트](deployment-script-single-node-kubeadm.md)를 사용하여 이러한 유형의 배포를 자동화할 수 있습니다. 이 방법은 빅 데이터 클러스터에 사용하려는 기존 인프라가 이미 있는 경우에 적합합니다. 빅 데이터 클러스터에서 **kubeadm** 배포를 사용하는 방법에 대한 자세한 내용은 [여러 머신에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 배포를 위한 Kubernetes 구성](deploy-with-kubeadm.md)을 참조하세요.
 
@@ -83,7 +83,7 @@ Kubernetes를 구성한 후에 <`azdata bdc create` 명령을 사용하여 빅 �
 
 Azure Data Studio Notebook을 실행하여 빅 데이터 클러스터를 배포할 수도 있습니다. Notebook을 사용하여 AKS에 배포하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
 
-- [Azure Data Studio Notebook을 사용하여 빅 데이터 클러스터 배포](deploy-notebooks.md)
+- [Azure Data Studio Notebook을 사용하여 빅 데이터 클러스터 배포](notebooks-deploy.md)
 
 ## <a name="next-steps"></a>다음 단계
 

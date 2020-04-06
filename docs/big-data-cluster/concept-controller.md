@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 96a652a562ea5b38df593dc9642a46cd32c41f8b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5390ca81583668c49fa07fa2cacac8bedc7f8cef
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73532409"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742115"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터의 컨트롤러란?
 
@@ -64,4 +64,4 @@ ms.locfileid: "73532409"
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 대한 자세한 내용은 다음 리소스를 참조하세요.
 
 - [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]란 무엇인가요?](big-data-cluster-overview.md)
-- [워크샵: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 아키텍처](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [워크샵: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 아키텍처](https://github.com/microsoft/sqlworkshops-bdc)

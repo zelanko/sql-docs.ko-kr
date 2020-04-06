@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b0b4a72519a0fa20d0c4a7472760a8f06a9ced32
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dbf5f8534b19e93d956531df3c43a04776afe1c5
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79190619"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665370"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016의 새로운 기능
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -55,7 +55,7 @@ ms.locfileid: "79190619"
 
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SSAS(SQL Server 2016 Analysis Services)
 SQL Server 2016 Analysis Services는 **1200 호환성 수준**을 기준으로 테이블 형식 모델 데이터베이스에 대한 향상된 성능, 제작, 데이터베이스 관리, 필터링, 프로세싱 및 그 외 많은 기능을 제공합니다.
-- **[SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** 는 통계 분석에 사용되는 R 프로그래밍 언어를 SQL Server에 통합합니다. 
+- **[SQL Server R Services](~/machine-learning/what-s-new-in-sql-server-machine-learning-services.md)** 는 통계 분석에 사용되는 R 프로그래밍 언어를 SQL Server에 통합합니다. 
 - 새 **데이터베이스 일관성 검사기(DBCC)** 는 잠재적 데이터 손상 문제를 감지하기 위해 내부적으로 실행됩니다.
 - **직접 쿼리**는 라이브 외부 데이터를 먼저 가져오는 대신 쿼리하며 이제 Azure SQL, Oracle 및 Teradata를 비롯한 더 많은 데이터 원본을 지원합니다. 
 - 다양한 새 **DAX(Data Access Expressions) 기능**이 있습니다.

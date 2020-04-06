@@ -11,12 +11,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 48188e98d992f45ca282c3687bf56e255d15a40a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 55ed24599e3bed15a0478ce12ac316edb623f0cf
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79190621"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662880"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017의 새로운 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ SQL Server 개발자는 이제 Microsoft의 최신 혁신 기능과 함께 오�
 - **성능 향상** - 저장 프로시저 `sp_execute_external_script`는 columnstore 데이터에 대한 일괄 처리 모드 실행을 지원하도록 최적화되었습니다.
 
 
-자세한 내용은 [What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)(SQL Server Machine Learning Services의 새로운 기능)를 참조하세요.
+자세한 내용은 [What's new in SQL Server Machine Learning Services](~/machine-learning/what-s-new-in-sql-server-machine-learning-services.md)(SQL Server Machine Learning Services의 새로운 기능)를 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 - [SQL Server 2017 릴리스 정보](sql-server-2017-release-notes.md)를 참조하세요.

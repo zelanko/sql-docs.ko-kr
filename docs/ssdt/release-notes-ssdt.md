@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: b83ceb3dd5079f82a13e8f1e2aba37fcf5ca5835
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 79ee8bba588f7d429cf0a6fd279ec4b8d0271262
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80271429"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742325"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools) 릴리스 정보
 
@@ -106,7 +106,6 @@ _Visual Studio 2017용 SSDT._
 | 알려진 문제 | 세부 정보 |
 | :---------- | :------ |
 | SSIS 패키지 실행 태스크는 ExecuteOutOfProcess가 True로 설정되었을 때 디버깅을 지원하지 않습니다. | 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다. |
-| Visual Studio 2017용 SSDT 15.8 이상은 Teradata 원본/대상이 포함된 패키지 디자인을 지원하지 않습니다. | Visual Studio 2017용 SSDT(15.8)를 사용하세요. |
 | SSIS 및 SSAS가 동일한 Visual Studio 인스턴스에 설치되면 파워 쿼리 원본은 OData v4를 지원하지 않습니다. | &nbsp; |
 | SSIS 및 SSAS가 동일한 Visual Studio 인스턴스에 설치되면 파워 쿼리 원본은 Oracle에 연결하는 데 ODBC를 사용하도록 지원하지 않습니다. | &nbsp; |
 | 파워 쿼리 원본이 지역화되지 않았습니다. | &nbsp; |
@@ -134,7 +133,6 @@ _Visual Studio 2017용 SSDT._
 | 알려진 문제 | 세부 정보 |
 | :---------- | :------ |
 | SSIS 패키지 실행 태스크는 ExecuteOutOfProcess가 True로 설정되었을 때 디버깅을 지원하지 않습니다. | 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다. |
-| Visual Studio 2017용 SSDT 15.8 이상은 Teradata 원본/대상이 포함된 패키지 디자인을 지원하지 않습니다. | Visual Studio 2017용 SSDT(15.8)를 사용하세요. |
 | 패키지 배포 모델에서 데이터 원본을 만들거나 편집할 수 없습니다. | 데이터 원본 마법사를 열지 못합니다. |
 | SSIS 및 SSAS가 동일한 Visual Studio 인스턴스에 설치되면 파워 쿼리 원본은 OData v4를 지원하지 않습니다. | &nbsp; |
 | SSIS 및 SSAS가 동일한 Visual Studio 인스턴스에 설치되면 파워 쿼리 원본은 Oracle에 연결하는 데 ODBC를 사용하도록 지원하지 않습니다. | &nbsp; |
@@ -164,7 +162,6 @@ _Visual Studio 2017용 SSDT._
 | 알려진 문제 | 세부 정보 |
 | :---------- | :------ |
 | SSIS 패키지 실행 태스크는 ExecuteOutOfProcess가 True로 설정되었을 때 디버깅을 지원하지 않습니다. | 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다. |
-| Visual Studio 2017용 SSDT 15.8 이상은 Teradata 원본/대상이 포함된 패키지 디자인을 지원하지 않습니다. | Visual Studio 2017용 SSDT(15.8)를 사용하세요. |
 | 패키지 배포 모델에서 데이터 원본을 만들거나 편집할 수 없습니다. | 데이터 원본 마법사를 열지 못합니다. |
 | SSIS 및 SSAS가 동일한 Visual Studio 인스턴스에 설치되면 파워 쿼리 원본은 OData v4를 지원하지 않습니다. | &nbsp; |
 | SSIS 및 SSAS가 동일한 Visual Studio 인스턴스에 설치되면 파워 쿼리 원본은 Oracle에 연결하는 데 ODBC를 사용하도록 지원하지 않습니다. | &nbsp; |
@@ -198,7 +195,6 @@ _Visual Studio 2017용 SSDT._
 | 알려진 문제 | 세부 정보 |
 | :---------- | :------ |
 | SSIS 패키지 실행 태스크는 ExecuteOutOfProcess가 True로 설정되었을 때 디버깅을 지원하지 않습니다. | 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다. |
-| Visual Studio 2017용 SSDT 15.8 이상은 Teradata 원본/대상이 포함된 패키지 디자인을 지원하지 않습니다. | Visual Studio 2017용 SSDT(15.8)를 사용하세요. |
 | SSIS 및 SSAS가 동일한 Visual Studio 인스턴스에 설치되면 파워 쿼리 원본은 OData v4를 지원하지 않습니다. | &nbsp; |
 | SSIS 및 SSAS가 동일한 Visual Studio 인스턴스에 설치되면 파워 쿼리 원본은 Oracle에 연결하는 데 ODBC를 사용하도록 지원하지 않습니다. | &nbsp; |
 | 파워 쿼리 원본은 지역화되지 않습니다. | &nbsp; |
@@ -218,7 +214,6 @@ _Visual Studio 2017용 SSDT._
 ### <a name="known-issues"></a>알려진 문제:
 
 - SSIS 패키지 실행 태스크는 ExecuteOutOfProcess가 True로 설정되었을 때 디버깅을 지원하지 않습니다. 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다.
-- Visual Studio 2017용 SSDT(15.8.2)는 Oracle/Teradata 원본/대상이 포함된 패키지 디자인을 지원하지 않습니다. Visual Studio 2017용 SSDT(15.8)를 사용하세요.
 
 ## <a name="1581nbsp-ssdt-for-vs-2017"></a>15.8.1,&nbsp; VS 2017용 SSDT
 
@@ -237,7 +232,6 @@ _Visual Studio 2017용 SSDT._
 
 - SSIS 패키지 실행 태스크는 ExecuteOutOfProcess가 True로 설정되었을 때 디버깅을 지원하지 않습니다. 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다.
 - 스크립트 작업/플랫 파일 대상을 포함하는 패키지가 있는 SSIS 프로젝트를 Azure SSIS에 배포하면 Azure-SSIS에서 실행에 실패합니다.
-- Visual Studio 2017용 SSDT(15.8.1)는 Oracle/Teradata 원본/대상이 포함된 패키지 디자인을 지원하지 않습니다. Visual Studio 2017용 SSDT(15.8)를 사용하세요.
 
 
 ## <a name="158nbsp-ssdt-for-vs-2017"></a>15.8,&nbsp; VS 2017용 SSDT

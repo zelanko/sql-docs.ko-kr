@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 52285164928e1a4811abc17e931a1af1921c6d07
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bcac2f50f8d4712b21a53aedb8ab14fdc9280963
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76831416"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531140"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에 샘플 데이터 로드
 
@@ -126,4 +126,4 @@ ms.locfileid: "76831416"
 
 Notebook:
 
-- [자습서: SQL Server 2019 빅 데이터 클러스터에서 샘플 Notebook 실행](tutorial-notebook-spark.md)
+- [자습서: SQL Server 2019 빅 데이터 클러스터에서 샘플 Notebook 실행](notebooks-tutorial-spark.md)

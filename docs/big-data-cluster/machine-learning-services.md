@@ -8,18 +8,18 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
-ms.openlocfilehash: e16304765e5f4a51feed4d3d59e790505baa740d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dd8e1b948d259b4c233aebcb3614dea5b3e72129
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252029"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664127"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터에서 Machine Learning Services를 사용하여 Python 및 R 스크립트 실행
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[SQL Server 빅 데이터 클러스터](big-data-cluster-overview.md)에서 [Machine Learning Services](../advanced-analytics/index.yml)를 사용하여 Python 및 R 스크립트를 실행할 수 있습니다.
+[SQL Server 빅 데이터 클러스터](big-data-cluster-overview.md)에서 [Machine Learning Services](../machine-learning/index.yml)를 사용하여 Python 및 R 스크립트를 실행할 수 있습니다.
 
 > [!NOTE]
 > [SQL Server 언어 확장](../language-extensions/language-extensions-overview.md)을 사용하면 마스터 인스턴스에서 Java 코드를 실행할 수도 있습니다. 다음 단계를 수행하면 언어 확장도 사용하도록 설정됩니다.
@@ -82,7 +82,7 @@ GO
 
 ## <a name="next-steps"></a>다음 단계
 
-+ [빠른 시작: SQL Server Machine Learning Services를 사용하여 간단한 Python 스크립트 만들기 및 실행](../advanced-analytics/tutorials/quickstart-python-create-script.md)
-+ [빠른 시작: SQL Server Machine Learning Services를 사용하여 Python에서 예측 모델 만들기 및 점수 매기기](../advanced-analytics/tutorials/quickstart-python-train-score-model.md)
-+ [빠른 시작: SQL Server Machine Learning Services를 사용하여 간단한 R 스크립트 만들기 및 실행](../advanced-analytics/tutorials/quickstart-r-create-script.md)
-+ [빠른 시작: SQL Server Machine Learning Services를 사용하여 R에서 예측 모델 만들기 및 점수 매기기](../advanced-analytics/tutorials/quickstart-r-train-score-model.md)
++ [빠른 시작: SQL Server Machine Learning Services를 사용하여 간단한 Python 스크립트 만들기 및 실행](../machine-learning/tutorials/quickstart-python-create-script.md)
++ [빠른 시작: SQL Server Machine Learning Services를 사용하여 Python에서 예측 모델 만들기 및 점수 매기기](../machine-learning/tutorials/quickstart-python-train-score-model.md)
++ [빠른 시작: SQL Server Machine Learning Services를 사용하여 간단한 R 스크립트 만들기 및 실행](../machine-learning/tutorials/quickstart-r-create-script.md)
++ [빠른 시작: SQL Server Machine Learning Services를 사용하여 R에서 예측 모델 만들기 및 점수 매기기](../machine-learning/tutorials/quickstart-r-train-score-model.md)

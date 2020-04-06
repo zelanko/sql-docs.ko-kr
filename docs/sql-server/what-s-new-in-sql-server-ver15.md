@@ -9,12 +9,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55d59d140d8b833cb4b2ea6b11360043710de60d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eb85d1867461ba25bb4fc572634fba443dd14282
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79218049"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665360"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 새로운 기능
 
@@ -231,7 +231,7 @@ ms.locfileid: "79218049"
 
 |새로운 기능 또는 업데이트 | 세부 정보 |
 |:---|:---|
-|파티션 기반 모델링 | `sp_execute_external_script`에 추가된 새 매개 변수를 사용하여 데이터 파티션별로 외부 스크립트를 처리할 수 있습니다. 이 기능은 하나의 큰 모델 대신, 많은 작은 모델(데이터 파티션당 하나의 모델)을 학습하도록 지원합니다. [파티션 기반 모델 만들기](../advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md)를 참조하세요.|
+|파티션 기반 모델링 | `sp_execute_external_script`에 추가된 새 매개 변수를 사용하여 데이터 파티션별로 외부 스크립트를 처리할 수 있습니다. 이 기능은 하나의 큰 모델 대신, 많은 작은 모델(데이터 파티션당 하나의 모델)을 학습하도록 지원합니다. [파티션 기반 모델 만들기](../machine-learning/tutorials/r-tutorial-create-models-per-partition.md)를 참조하세요.|
 |Windows Server 장애 조치(Failover) 클러스터| Windows Server 장애 조치(Failover) 클러스터에서 Machine Learning Services 고가용성을 구성할 수 있습니다.|
 | &nbsp; | &nbsp; |
 
