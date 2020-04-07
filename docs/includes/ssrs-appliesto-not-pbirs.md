@@ -8,11 +8,11 @@ ms.topic: include
 ms.date: 03/26/2018
 ms.author: maggies
 ms.custom: include file
-ms.openlocfilehash: e8cbf4d07fccb7e13de3ad91796347de674bde0b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6f8ebb842caf13a20e2647a0d73ab8ad037d4f3a
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68221344"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80502155"
 ---
- ![아니요](media/no.png)Power BI Report Server
+ ![예](media/no-icon.png)Power BI Report Server
