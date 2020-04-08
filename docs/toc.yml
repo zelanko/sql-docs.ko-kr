@@ -78,6 +78,8 @@
           items:
             - name: 배포 지침
               href: big-data-cluster/deployment-guidance.md
+            - name: 배포된 리소스
+              href: big-data-cluster/concept-architecture-pods.md
             - name: 새 릴리스로 업그레이드
               href: big-data-cluster/deployment-upgrade.md
             - name: 배포 사용자 지정
@@ -107,7 +109,7 @@
                 - name: 단일 노드 kubeadm 스크립트
                   href: big-data-cluster/deployment-script-single-node-kubeadm.md
                 - name: 전자 필기장을 사용하여 배포
-                  href: big-data-cluster/deploy-notebooks.md
+                  href: big-data-cluster/notebooks-deploy.md
     - name: 개념
       items:
         - name: 애플리케이션 개발
@@ -190,26 +192,18 @@
               href: big-data-cluster/connect-to-big-data-cluster.md
             - name: 클러스터 상태 보기
               href: big-data-cluster/view-cluster-status.md
-            - name: Kubernetes 문제 해결
-              href: big-data-cluster/cluster-troubleshooting-commands.md
-            - name: Notebook으로 관리
-              href: big-data-cluster/manage-notebooks.md
             - name: 컨트롤러 대시보드로 관리
               href: big-data-cluster/manage-with-controller-dashboard.md
+            - name: 기존 전자 필기장 관리
+              href: big-data-cluster/notebooks-manage-bdc.md
+            - name: Spark를 사용하여 Notebook 실행
+              href: big-data-cluster/notebooks-tutorial-spark.md
             - name: 보안
               items:
                 - name: AZDATA_PASSWORD 업데이트
                   href: big-data-cluster/change-azdata-password.md
                 - name: 사용자 액세스 관리
                   href: big-data-cluster/manage-user-access.md
-        - name: Notebooks
-          items:
-            - name: Notebooks 개요
-              href: big-data-cluster/notebooks-guidance.md
-            - name: 전자 필기장 자습서
-              href: big-data-cluster/tutorial-notebook-spark.md
-            - name: 기존 전자 필기장 관리
-              href: big-data-cluster/notebooks-how-to-manage.md
         - name: Spark 작업
           items:
             - name: Azure Data Studio에서 Spark 작업 제출
@@ -222,7 +216,9 @@
               href: big-data-cluster/spark-history-server.md
         - name: 문제 해결
           items:
-            - name: Active Directory 배포
+            - name: Kubernetes 문제 해결
+              href: big-data-cluster/cluster-troubleshooting-commands.md
+            - name: Active Directory 그룹 범위
               href: big-data-cluster/troubleshoot-active-directory.md
     - name: 참조
       items:
@@ -2555,7 +2551,11 @@
             - name: Java에서 SQL 데이터 유형으로
               href: language-extensions/how-to/java-to-sql-data-types.md
             - name: Java jar 파일 만들기
-              href: language-extensions/how-to/create-a-java-jar-file-from-class-files.md
+              href: language-extensions/how-to/call-java-from-sql.md
+        - name: 참조
+          items:
+            - name: 확장성 프레임워크 API
+              href: language-extensions/reference/extensibility-framework-api.md
     - name: SQL Server Native Client
       href: relational-databases/native-client/sql-server-native-client.md
       items:
@@ -7017,8 +7017,8 @@
           href: relational-databases/synonyms/create-synonyms.md
 - name: 보고 및 분석
   items:
-    - name: 고급 분석 및 기계 학습 >
-      href: advanced-analytics/
+    - name: Machine Learning Services >
+      href: machine-learning/
     - name: 분석 플랫폼 시스템 >>
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: analytics-platform-system/index.md
@@ -7791,8 +7791,6 @@
               href: azure-data-studio/keyboard-shortcuts.md
             - name: 탐색기 Azure SQL 리소스
               href: azure-data-studio/azure-resource-explorer.md
-            - name: SQL Notebook
-              href: azure-data-studio/sql-notebooks.md
             - name: 서버 그룹
               href: azure-data-studio/server-groups.md
             - name: 원본 제어
@@ -7801,6 +7799,14 @@
               href: azure-data-studio/settings.md
             - name: Windows 인증(Kerberos)
               href: azure-data-studio/enable-kerberos.md
+            - name: Notebooks
+              items:
+                - name: Notebooks 개요
+                  href: azure-data-studio/notebooks-guidance.md
+                - name: SQL 커널을 사용하는 방법
+                  href: azure-data-studio/notebooks-tutorial-sql-kernel.md
+                - name: Notebook을 관리하는 방법
+                  href: azure-data-studio/notebooks-manage-sql-server.md
             - name: 사용량 현황 데이터 수집
               href: azure-data-studio/usage-data-collection.md
         - name: 확장
