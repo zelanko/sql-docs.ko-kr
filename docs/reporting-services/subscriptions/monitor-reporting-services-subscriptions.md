@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 구독 모니터링 | Microsoft Docs
+description: UI, PowerShell 또는 로그 파일을 사용하여 Reporting Services 구독을 추적하는 방법을 알아봅니다. 모니터링 옵션은 실행 중인 보고서 서버 모드에 따라 달라집니다.
 ms.date: 06/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d1cfa2c5face12eab1677d4a1386511d005aa5dd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d5c5b4965489544cfd1f6ee5ccfb1ce4170381bf
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67285040"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742038"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Reporting Services 구독 모니터링
   사용자 인터페이스, Windows PowerShell 또는 로그 파일을 통해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 모니터링할 수 있습니다. 모니터링에 사용할 수 있는 옵션은 실행 중인 보고서 서버의 모드에 따라 달라집니다.  
@@ -76,7 +77,7 @@ ms.locfileid: "67285040"
   
  다음은 구독과 관련된 추적 로그 파일 예제 오류 메시지입니다.  
   
--   library!WindowsService_7!b60!05/20/2019-22:34:36 i INFO: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 오류: **메일을 보내는 중 오류가 발생했습니다**. 예외: System.Net.Mail.SmtpException: SMTP 서버에 보안 연결이 필요하거나 클라이언트가 인증되지 않았습니다. 서버 응답: 5.7.1 System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, 문자열 응답)에서 클라이언트가 인증되지 않았습니다.  
+-   library!WindowsService_7!b60!05/20/2019-22:34:36 i INFO: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 ERROR: **메일을 보내는 중 오류가 발생했습니다**. 예외:  System.Net.Mail.SmtpException: SMTP 서버에 보안 연결이 필요하거나 클라이언트가 인증되지 않았습니다. 서버 응답: 5.7.1 System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, 문자열 응답)에서 클라이언트가 인증되지 않았습니다.  
   
  로그 파일에는 보고서를 열었는지 여부 또는 배달이 실제로 성공했는지 여부에 대한 정보가 없습니다. 성공적인 배달은 일정 예약 및 배달 프로세서에서 오류가 발생하지 않고 보고서 서버가 메일 서버에 연결되었음을 의미합니다. 사용자의 사서함에 전자 메일을 배달할 수 없다는 메시지 오류가 표시될 경우 해당 정보는 로그 파일에 포함되지 않습니다. 로그 파일에 대한 자세한 내용은 [Reporting Services 로그 파일 및 소스](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)를 참조하세요.  
   
@@ -97,7 +98,7 @@ ms.locfileid: "67285040"
 ||||||||  
 |-|-|-|-|-|-|-|  
 |Date|Process|영역|Category|Level|Correlation|메시지|  
-|2019/5/21 14:34:06:15|응용 프로그램 풀: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|보고서 서버 전자 메일 확장 프로그램|예기치 않은 오류|(empty)|**메일을 보내는 중 오류가 발생했습니다.** 예외: System.Net.Mail.SmtpException: 사서함을 사용할 수 없습니다. 서버 응답: 5.7.1 클라이언트가 Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification 알림)의 System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) at System.Net.Mail.SmtpClient.Send(MailMessage 메시지)의 System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, 문자열 serverResponse)에서 이 보낸 사람으로 보낼 수 있는 권한이 없습니다.|  
+|2019/5/21 14:34:06:15|응용 프로그램 풀: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|보고서 서버 전자 메일 확장 프로그램|예기치 않은 오류|(empty)|**메일을 보내는 중 오류가 발생했습니다.** 예외:  System.Net.Mail.SmtpException: 사서함을 사용할 수 없습니다. 서버 응답: 5.7.1 클라이언트가 Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification 알림)의 System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  at System.Net.Mail.SmtpClient.Send(MailMessage 메시지)의 System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, 문자열 serverResponse)에서 이 보낸 사람으로 보낼 수 있는 권한이 없습니다.|  
   
 ##  <a name="use-powershell-to-monitor-subscriptions"></a><a name="bkmk_use_powershell"></a> PowerShell을 사용한 구독 모니터링  
  기본 모드나 SharePoint 모드 구독 상태를 확인하는 데 사용할 수 있는 PowerShell 스크립트의 예가 필요하면 [구독 소유자 관리 및 구독 실행 - PowerShell](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)을 참조하세요.  

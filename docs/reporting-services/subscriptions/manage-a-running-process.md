@@ -1,5 +1,6 @@
 ---
 title: 실행 중인 프로세스 관리 | Microsoft Docs
+description: 사용자 작업, 시스템 작업 등의 실행 중인 프로세스를 관리하는 방법을 알아봅니다. 작업을 보거나, 작업을 취소하거나, 프로그래밍 방식으로 작업을 관리할 수 있습니다.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6eeec8517b9b55e30eb51abc25fefed0b36b2a79
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5764cfafb9db66dc10e2db6092cd6421b3463bd5
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579010"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742112"
 ---
 # <a name="manage-a-running-process"></a>실행 중인 프로세스 관리
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 보고서 서버에서 실행 중인 작업의 상태를 모니터링합니다. 보고서 서버는 진행 중인 작업을 정기적으로 검색하고 SharePoint 모드용 서비스 애플리케이션 데이터베이스 또는 보고서 서버 데이터베이스에 상태 정보를 씁니다. 원격 또는 로컬 데이터베이스 서버에서 쿼리가 실행되거나 보고서가 처리되거나 보고서가 렌더링되는 경우 작업이 진행 중인 것입니다.  

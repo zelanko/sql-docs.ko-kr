@@ -1,5 +1,6 @@
 ---
 title: 기본 Reporting Services 배달 확장 프로그램 변경 | Microsoft Docs
+description: Reporting Services 설정을 구성하여 “배달 방법” 목록에 표시된 배달 확장 프로그램의 순서를 변경하고 기본 배달 확장 프로그램을 설정하는 방법을 알아봅니다.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 007427739f91a12ea6603bbf58450821d2c999ea
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 83c2c0c6bb3c2a457182e8dcf56c5caa68397184
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66500397"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742309"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>기본 Reporting Services 배달 확장 프로그램 변경
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 설정을 수정하여 구독 정의 페이지의 **배달 방법** 목록에 표시될 배달 확장 프로그램을 결정할 수 있습니다. 예를 들어, 구성을 수정하여 사용자가 새 구독을 만들었을 때 전자 메일 배달 대신 기본적으로 파일 공유 전달을 선택할 수 있습니다. 또한 배달 확장 프로그램이 사용자 인터페이스에 나열되는 순서를 변경할 수 있습니다.  

@@ -1,5 +1,6 @@
 ---
 title: Reporting Services의 파일 공유 배달 | Microsoft Docs
+description: 이 문서에서는 보고서를 폴더에 배달할 수 있도록 파일 공유 배달 확장 프로그램을 설정하는 방법을 알아봅니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e3b27070e3edb81f548e37f76459b6ac828f2646
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a411b818d0b844f3f43ae29db7a3e1ee732be798
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72278233"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742052"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services의 파일 공유 배달
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 보고서를 폴더에 배달할 수 있도록 파일 공유 배달 확장 프로그램이 포함되어 있습니다. 파일 공유 배달 확장 프로그램은 기본적으로 사용 가능하며 추가 구성이 필요하지 않습니다. 파일을 성공적으로 배달하려면 공유 폴더에 쓰기 권한을 설정해야 합니다. 작성자 권한이 필요한 계정은 구독에 구성된 자격 증명이거나 보고서 서버용으로 구성된 **파일 공유 계정**일 수 있습니다. 파일 공유 계정에 대한 자세한 내용은 [구독 설정 및 파일 공유 계정&#40;구성 관리자&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)을 참조하세요. 또한 보고서에 액세스해야 하는 사용자에게 공유 폴더에 대한 읽기 권한이 있어야 합니다.  
@@ -70,7 +71,7 @@ ms.locfileid: "72278233"
   
  **파일 이름:** 기본 파일 이름은 원본 보고서 이름을 따르지만 구독에서 사용자 지정 이름을 제공할 수 있습니다. 확장명은 옵션이지만 사용자가 지정하면 보고서 서버가 렌더링 형식에 해당하는 확장명을 만듭니다.  
   
- **덮어쓰기:** 덮어쓰기 옵션을 지정해 각각의 보고서 배달에 대해 동일한 파일 이름을 다시 사용할지 아니면 새 파일을 만들지를 선택할 수 있습니다. 파일을 덮어쓰려면 동일한 파일 이름 및 확장명을 사용해야 합니다.  
+ **덮어쓰기:** 각각의 보고서 배달에 대해 동일한 파일 이름을 다시 사용하거나 새 파일을 만들려면 덮어쓰기 옵션을 지정할 수 있습니다. 파일을 덮어쓰려면 동일한 파일 이름 및 확장명을 사용해야 합니다.  
   
  배달마다 고유한 파일을 만들기 위한 또 다른 방법은 파일 이름에 타임스탬프를 포함하는 것입니다. 이렇게 하려면 파일 이름에 **\@timestamp** 변수를 추가하세요(예: *CompanySales@timestamp* ). 이 방법을 사용하면 파일 이름 정의가 고유하게 되므로 덮어쓰는 일이 생기지 않습니다.  
   

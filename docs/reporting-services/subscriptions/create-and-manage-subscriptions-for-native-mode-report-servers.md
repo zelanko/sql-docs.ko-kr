@@ -1,5 +1,6 @@
 ---
 title: 기본 모드 보고서 서버 구독 만들기 및 관리 | Microsoft Docs
+description: 메일을 통해 또는 공유 폴더로 보고서를 배달하려는 개별 사용자로 표준 구독을 만들고 관리하는 방법을 알아봅니다.
 ms.date: 05/28/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5bcfeabda2eda62a6a4118ac5542e83a4b0afd66
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c0521826132a51b6f0ec18b43bb8008098c61bd4
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76971311"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742302"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>기본 모드 보고서 서버 구독 만들기 및 관리
   표준 구독은 전자 메일을 통해 또는 공유 폴더로 보고서를 배달하려는 개인이 만든 구독입니다. 이 항목에서는 개별 사용자가 만들고 관리하는 표준 구독에 대한 정보를 제공합니다. 데이터 기반 구독의 경우 다른 요구 사항과 단계가 필요하며 이에 대해서는 별도의 항목에 설명되어 있습니다. 자세한 내용은 [데이터 기반 구독 만들기, 수정 및 삭제](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)를 참조하세요.  
@@ -112,7 +113,7 @@ ms.locfileid: "76971311"
      >[!NOTE]  
      > 사용 권한에 따라 보고서를 배달할 전자 메일 주소를 입력할 수 있습니다. 전자 메일 주소를 여러 개 지정하려면 세미콜론(;)으로 구분합니다. **참조**, **숨은 참조**및 **회신** 입력란에 메일 주소를 추가로 입력할 수도 있습니다. 이 작업을 수행하려면 모든 구독을 관리할 수 있는 권한이 있어야 합니다.  
   
-   - **제목**: "@ReportName은 @ExecutionTime에서 실행됩니다."가 기본값입니다. 제목을 편집할 수는 있지만 @ReportName 및 @ExecutionTime은 **주체** 필드에 지원되는 유일한 전역 변수입니다.  
+   - **주체**: "@ReportName은 @ExecutionTime에서 실행됩니다."가 기본값입니다. 제목을 편집할 수는 있지만 @ReportName 및 @ExecutionTime은 **주체** 필드에 지원되는 유일한 전역 변수입니다.  
   
      ![전자 메일 구독](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-e-mail-delivery-option.png "전자 메일 구독")  
 

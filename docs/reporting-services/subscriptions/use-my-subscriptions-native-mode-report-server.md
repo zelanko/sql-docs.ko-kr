@@ -1,5 +1,6 @@
 ---
 title: 내 구독 사용(기본 모드 보고서 서버) | Microsoft Docs
+description: Reporting Services 웹 포털의 내 구독 페이지를 사용하여 기존 구독을 확인, 수정, 사용하지 않도록 설정 또는 삭제하는 방법을 알아봅니다.
 ms.date: 07/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d4066d5ea8e44fca9b63a24d25e4f18a4f0ccb78
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 55842ea259a2298388dc82b89cc941f561c029fb
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68892319"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742210"
 ---
 # <a name="use-my-subscriptions-native-mode-report-server"></a>내 구독 사용(기본 모드 보고서 서버)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털에는 하나의 위치에서 모든 구독을 구성하는 **내 구독** 페이지가 포함되어 있습니다. *내 구독* 을 사용하여 기존 구독을 보고, 수정하고, 삭제할 수 있습니다. 하지만 내 구독을 사용하여 구독을 만들 수는 없습니다.  내 구독에는 사용자가 만든 구독만 표시됩니다. 다른 사용자의 구독에 구독자로 추가되더라도 다른 사용자 소유의 구독은 나열되지 않으며 데이터 기반 구독도 표시되지 않습니다.
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드|  
   
 구독을 이름별로 검색할 수 없으며 트리거 정보, 상태 정보 등을 기준으로 검색할 수도 없으므로 검색 필드에서는 구독 목록을 동적으로 필터링합니다. 자세한 내용은 [기본 모드 보고서 서버 구독 만들기 및 관리](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)를 참조하세요.
   

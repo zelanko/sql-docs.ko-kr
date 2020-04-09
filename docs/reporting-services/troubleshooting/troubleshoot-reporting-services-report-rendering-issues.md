@@ -1,5 +1,6 @@
 ---
-title: Reporting Services 보고서 렌더링 문제 해결 | Microsoft Docs
+title: Reporting Services 보고서 렌더링 문제 해결
+description: 이 문서에서는 컴파일된 보고서 및 레이아웃 데이터가 SQL Server Reporting Services의 보고서 렌더러에 전송될 때 발생하는 표시 문제를 진단하고 해결합니다.
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3f8c5029d66a068d43ebc659592697fd2914fd2b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3a834ee415fd725c26314b95d507b86ff5280f78
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574691"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662777"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Reporting Services 보고서 렌더링 문제 해결
 보고서 데이터와 레이아웃 정보가 조합되면 컴파일된 보고서가 보고서 렌더러로 전송됩니다. 예를 들어 보고서를 로컬로 미리 볼 때는 HTML 렌더러를 사용하여 컴파일된 보고서를 표시합니다. 이 항목을 사용하여 보고서 렌더링 관련 문제를 해결할 수 있습니다.   
@@ -58,9 +59,9 @@ Microsoft SharePoint 목록 연결 유형에 맞게 데이터 원본이 구성�
 `Query execution failed for dataset 'DataSet1'.`   
 `The request failed with HTTP status 401: Unauthorized.`  
   
-**이 문제를 해결하려면:** Windows 자격 증명 대신 저장된 자격 증명을 사용하도록 데이터 원본을 수정합니다.  
+**이 문제를 해결하는 방법:** Windows 자격 증명 대신 저장된 자격 증명을 사용하도록 데이터 원본을 수정합니다.  
   
-**이 문제는:** 자격 증명을 요청하도록 구성된 브라우저에 적용됩니다.  
+**이 문제가 적용되는 대상:** 자격 증명 확인 메시지를 표시하도록 구성된 브라우저  
   
 ## <a name="see-also"></a>참고 항목  
 [오류 및 이벤트(Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

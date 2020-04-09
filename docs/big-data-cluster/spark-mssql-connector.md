@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8869a556eff61eca9cfc085b91cfc6fb9c0c3455
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7c8b8da0912f3c928857dd84b8981fecb10b17da
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79487681"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531113"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>MSSQL Spark 커넥터를 사용하여 Spark에서 SQL Server를 읽고 쓰는 방법
 
@@ -111,7 +111,7 @@ writer.save()
 
 ### <a name="run-the-sample-notebook"></a>샘플 Notebook 실행
 
-이 데이터와 함께 MSSQL Spark 커넥터를 비 AD 모드로 사용하는 방법을 보여 주려는 경우, 샘플 Notebook을 다운로드하여 Azure Data Studio에서 열고 각 코드 블록을 실행할 수 있습니다. 노트북 작업에 대한 자세한 내용은 [SQL Server에서 노트북 사용 방법](notebooks-guidance.md)을 참조하세요.
+이 데이터와 함께 MSSQL Spark 커넥터를 비 AD 모드로 사용하는 방법을 보여 주려는 경우, 샘플 Notebook을 다운로드하여 Azure Data Studio에서 열고 각 코드 블록을 실행할 수 있습니다. Notebook 사용 방법에 대한 자세한 내용은 [SQL Server에서 Notebook을 사용하는 방법](../azure-data-studio/notebooks-guidance.md)을 참조하세요.
 
 1. PowerShell 또는 bash 명령줄에서 다음 명령을 실행하여 **mssql_spark_connector_non_ad_pyspark.ipynb** 샘플 Notebook을 다운로드합니다.
 

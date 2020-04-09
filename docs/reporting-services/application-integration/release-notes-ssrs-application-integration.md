@@ -11,18 +11,25 @@ ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
 ms.reviewer: maggies
 author: RhysSchmidtke
 ms.author: rhys
-ms.openlocfilehash: 5ee9bd80519e9dc9d75bb78a98b548b2a60ef247
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1ed8d92f77a360d195c893c38ee08e642ee0b24a
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76259381"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80752880"
 ---
 # <a name="release-notes-for-report-viewer-controls-for-webforms-and-winforms-of-ssrs"></a>SSRS의 WebForms 및 WinForms 보고서 뷰어 컨트롤의 릴리스 정보
 
 다음은 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)](SSRS)와 관련된 WebForms 및 WinForms용 보고서 뷰어 컨트롤에 대한 릴리스 정보입니다.
 
 SSRS에 대한 릴리스 정보는 [SQL Server Reporting Services(SSRS) 2017 이상 릴리스 정보](../release-notes-reporting-services.md)를 참조하세요.
+
+## <a name="15014040"></a>150.1404.0
+| 변경 설명 | 세부 정보 |
+| :----------------- | :------ |
+| 버그 수정 | WebForms에서 도구 모음의 탭 순서와 관련된 문제를 해결했습니다. |
+|           | 테이블에 대한 HTML 렌더링 접근성이 향상되었습니다. |
+| &nbsp; | &nbsp; |
 
 ## <a name="15014000"></a>150.1400.0
 | 변경 설명 | 세부 정보 |

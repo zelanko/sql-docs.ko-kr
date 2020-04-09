@@ -1,5 +1,6 @@
 ---
 title: 공유 일정 일시 중지 및 다시 시작 | Microsoft Docs
+description: 이 문서에서는 사용 중이지만 진행되고 있지 않은 공유 일정을 일시 중지하고 다시 시작하는 방법을 알아봅니다. 기본 모드 또는 SharePoint 모드에서 일시 중지하고 다시 시작할 수 있습니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ec4c97ad3627ae91fd01cf0d8d73a2569a0c41a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 93a24bc7b76ba780ccd8136eb75702f8c3b236ef
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578175"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742094"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>공유 일정 일시 중지 및 다시 시작
   사용 중인 공유 일정을 일시 중지하고 다시 시작할 수 있습니다. 공유 일정을 일시 중지하여 보고서 처리 및 구독을 트리거하는 데 사용되는 일정을 일시적으로 중지할 수 있습니다. 공유 일정만 일시 중지하고 다시 시작할 수 있습니다. 보고서별 일정은 일시 중지할 수 없습니다.  

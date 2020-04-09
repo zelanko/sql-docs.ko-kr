@@ -1,5 +1,6 @@
 ---
 title: 데이터 기반 구독 | Microsoft Docs
+description: 런타임에 외부 데이터 원본에서 검색되는 동적 구독 데이터를 사용할 수 있는 데이터 기반 구독에 대해 알아봅니다.
 ms.date: 05/20/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2791293f805f1e2c0d9bd39822bc3f452777c007
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bfdd423b50a1d0b644c7db8fbfd0635675ef09fc
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66175603"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742285"
 ---
 # <a name="data-driven-subscriptions"></a>데이터 기반 구독
   데이터 기반 구독을 통해 런타임에 외부 데이터 원본에서 검색되는 동적 구독 데이터를 사용할 수 있습니다. 데이터 기반 구독에서는 구독이 정의될 때 사용자가 지정한 정적 텍스트와 기본값을 사용할 수도 있습니다. 데이터 기반 구독을 사용하여 수행할 수 있는 작업은 다음과 같습니다.  

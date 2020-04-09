@@ -1,5 +1,6 @@
 ---
-title: Reporting Services 오류의 원인 및 해결 방법 | Microsoft Docs
+title: Reporting Services 오류의 원인 및 해결 방법
+description: Reporting Services와 관련된 오류 메시지 문서 목록을 확인합니다. 각 문서에서는 오류 메시지, 가능한 원인 및 문제 해결 방법을 설명합니다.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a554e3f4ce5f7f5f844038eeb8c31f84e205312c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9a07487083c645679001435ae14fd6befd618b4d
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65575578"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664260"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Reporting Services 오류의 원인 및 해결 방법
   이 항목에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 관련한 몇 가지 오류의 원인 및 해결 방법 정보가 포함되어 있습니다. 이 섹션의 오류 메시지 항목에서는 오류 메시지, 가능한 원인 및 문제 해결을 위해 수행할 수 있는 동작에 대해 설명합니다.  

@@ -5,16 +5,16 @@ description: 이 문서에서는 SQL Server 빅 데이터 클러스터의 최신
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 03/12/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 136665cbe354ce0fdbbc575d2e97759f35cb3444
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cd004554ad45db40beae958bdf0a7142b1b74bab
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286227"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517162"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 빅 데이터 클러스터 릴리스 정보
 
@@ -24,7 +24,7 @@ ms.locfileid: "79286227"
 
 ## <a name="supported-platforms"></a>지원 플랫폼
 
-이 섹션에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)](BDC)에서 지원하는 플랫폼에 관해 설명합니다.
+이 섹션에서는 BDC에서 지원되는 플랫폼에 대해 설명합니다.
 
 ### <a name="kubernetes-platforms"></a>Kubernetes 플랫폼
 
@@ -50,25 +50,34 @@ ms.locfileid: "79286227"
 
 |플랫폼|지원되는 버전|
 |---------|---------|
-|`azdata`|서버와 동일한 부 버전이어야 합니다(SQL Server 마스터 인스턴스와 동일).<br/><br/>`azdata –-version`을 실행하여 버전을 확인하세요.<br/><br/>SQL Server 2019 CU3을 기준으로, 이 버전은 `15.0.4023`입니다.|
+|`azdata`|서버와 동일한 부 버전이어야 합니다(SQL Server 마스터 인스턴스와 동일).<br/><br/>`azdata –-version`을 실행하여 버전을 확인하세요.<br/><br/>최신 버전은 [릴리스 기록](#release-history)을 참조하세요.|
 |Azure Data Studio|[Azure Data Studio](https://aka.ms/getazuredatastudio)의 최신 빌드를 받으세요.|
 
 ## <a name="release-history"></a>릴리스 기록
 
 다음 표에는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]의 릴리스 기록이 나와 있습니다.
 
-| 해제               | 버전       | 릴리스 날짜 |
-|-----------------------|---------------|--------------|
-| [CU3](#cu3)           | 15.0.4023.6    | 2020-03-12   |
+| 해제               | 버전         | 릴리스 날짜 |
+|-----------------------|-----------------|--------------|
+| [CU4](#cu4)           | 15.0.4033.1     | 2020-03-31   |
+| [CU3](#cu3)           | 15.0.4023.6     | 2020-03-12   |
 | [CU2](#cu2)           | 15.0.4013.40    | 2020-02-13   |
-| [CU1](#cu1)           | 15.0.4003.23   | 2020-01-07   |
-| [GDR1](#rtm)            | 15.0.2070.34  | 2019-11-04   |
+| [CU1](#cu1)           | 15.0.4003.23    | 2020-01-07   |
+| [GDR1](#rtm)          | 15.0.2070.34    | 2019-11-04   |
 
 ## <a name="how-to-install-updates"></a>업데이트 설치 방법
 
 업데이트를 설치하려면 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 업그레이드하는 방법](deployment-upgrade.md)을 참조하세요.
 
-## <a name="cu3-mar-2020"></a><a id="cu3"></a> CU3(2020년 5월)
+## <a name="cu4-april-2020"></a><a id="cu4"></a> CU4(2020년 4월)
+
+SQL Server 2019의 CU4(누적 업데이트 4) 릴리스입니다. 이 릴리스의 SQL Server 데이터베이스 엔진 버전은 15.0.4033.1입니다.
+
+|패키지 버전 | 이미지 태그 |
+|-----|-----|
+|15.0.4033.1 |[2019-CU4-ubuntu-16.04]
+
+## <a name="cu3-march-2020"></a><a id="cu3"></a> CU3(2020년 3월)
 
 SQL Server 2019의 CU3(누적 업데이트 3) 릴리스입니다. 이 릴리스의 SQL Server 데이터베이스 엔진 버전은 15.0.4023.6입니다.
 
@@ -83,7 +92,7 @@ SQL Server 2019 CU3에서는 이전 릴리스의 다음 문제를 해결합니�
 - [프라이빗 리포지토리를 사용하여 배포](#deployment-with-private-repository)
 - [시간 초과로 인해 업그레이드에 실패할 수 있음](#upgrade-may-fail-due-to-timeout)
 
-## <a name="cu2-feb-2020"></a><a id="cu2"></a> CU2(2020년 2월)
+## <a name="cu2-february-2020"></a><a id="cu2"></a> CU2(2020년 2월)
 
 SQL Server 2019의 CU2(누적 업데이트 2) 릴리스입니다. 이 릴리스에 대한 SQL Server 데이터베이스 엔진 버전은 15.0.4013.40입니다.
 
@@ -91,7 +100,7 @@ SQL Server 2019의 CU2(누적 업데이트 2) 릴리스입니다. 이 릴리스�
 |-----|-----|
 |15.0.4013.40 |[2019-CU2-ubuntu-16.04]
 
-## <a name="cu1-jan-2020"></a><a id="cu1"></a> CU1(2020년 1월)
+## <a name="cu1-january-2020"></a><a id="cu1"></a> CU1(2020년 1월)
 
 SQL Server 2019의 CU1(누적 업데이트 1) 릴리스입니다. 이 릴리스에 대한 SQL Server 데이터베이스 엔진 버전은 15.0.4003.23입니다.
 
@@ -99,7 +108,7 @@ SQL Server 2019의 CU1(누적 업데이트 1) 릴리스입니다. 이 릴리스�
 |-----|-----|
 |15.0.4003.23|[2019-CU1-ubuntu-16.04]
 
-## <a name="gdr1-nov-2019"></a><a id="rtm"></a> GDR1(2019년 11월)
+## <a name="gdr1-november-2019"></a><a id="rtm"></a> GDR1(2019년 11월)
 
 SQL Server 2019 GDR1(일반 배포 릴리스 1) - [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-nover.md)]에 대한 일반 가용성이 도입되었습니다. 이 릴리스에 대한 SQL Server 데이터베이스 엔진 버전은 15.0.2070.34입니다.
 

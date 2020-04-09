@@ -1,5 +1,6 @@
 ---
-title: Reporting Services 구독 및 배달 문제 해결 | Microsoft Docs
+title: Reporting Services 구독 및 배달 문제 해결
+description: 이 문서에서는 SQL Server Reporting Services에서 보고서 구독, 일정 및 배달 작업을 수행할 때 발견되는 문제를 진단하고 해결합니다.
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 84ca5db4b8979b1b49ffc25b809638defc40fe1e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 577ca01b2764df923c0208934c597e17e8412ff2
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572114"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662752"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Reporting Services 구독 및 배달 문제 해결
   
@@ -24,7 +25,7 @@ ms.locfileid: "65572114"
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 의 구독 페이지에는 구독의 상태가 포함되지만 구독에 문제가 있는 경우 세부 정보는 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 로그에 있습니다. 
 ![ssrs_tutorial_datadriven_subscription_status_ReportManager](../../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png)
 
-**추적 로그:** 추적 로그는 다음 위치에 기록된 텍스트 파일입니다. `\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles`
+**추적 로그:** 추적 로그는 다음 위치에 기록되는 텍스트 파일입니다. `\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles`
 
 다음은 로그 항목의 예입니다.
 
@@ -52,7 +53,7 @@ Microsoft Windows Server 2003에서 POP3(Post Office Protocol 버전 3)을 사�
   
 로컬 SMTP 서비스를 사용하여 보고서를 전자 메일로 배달하는 방법에 대한 자세한 내용은 전자 메일 배달을 위한 보고서 서버 구성을 참조하세요.  
   
-## <a name="failure-sending-mail-the-server-rejected-the-sender-address-the-server-response-was-454-573-client-does-not-have-permission-to-submit-mail-to-this-server"></a>메일을 보내지 못했습니다. 서버가 보낸 사람 주소를 거부했습니다. 서버 응답: 454 5.7.3 클라이언트가 이 서버에 메일을 제출할 권한이 없습니다.  
+## <a name="failure-sending-mail-the-server-rejected-the-sender-address-the-server-response-was-454-573-client-does-not-have-permission-to-submit-mail-to-this-server"></a>메일을 보내지 못했습니다. 보낸 사람 주소를 서버에서 거부했습니다. 서버 응답: 454 5.7.3 이 서버에 메일을 제출할 수 있는 권한이 클라이언트에 없습니다.  
 이 오류는 SMTP 서버의 보안 정책 설정에 의해 인증된 사용자만 배달할 메일을 제출할 수 있는 경우 발생합니다. SMTP 서버에서 익명 사용자의 전자 메일 제출을 허용하지 않는 경우 시스템 관리자에게 해당 서버 사용 권한을 얻는 방법을 문의하십시오.  
 > 이 오류는 Exchange Server 이름을 SMTPServer로 지정한 경우에도 발생할 수 있습니다. 전자 메일 배달에 Exchange 서버를 사용하려면 해당 Exchange 서버에 대해 구성된 SMTP 게이트웨이의 이름을 지정해야 합니다. 이 정보는 Exchange 관리자에게 문의하십시오.  
   

@@ -1,5 +1,6 @@
 ---
 title: 구독 및 배달(Reporting Services) | Microsoft Docs
+description: 이 문서에서는 특정 시간에 또는 이벤트에 대한 응답으로 보고서를 배달하는 Reporting Services 구독에 대해 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fd9288a630dd24dd8d79deef184cfc4c4fabcd9f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 91de7513eb5d7a6528537ca68b15765c36162f8d
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578041"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742233"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>구독 및 배달(Reporting Services)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독은 특정 시간 또는 이벤트에 대한 응답으로 보고서를 지정하는 파일 형식으로 배달하는 구성입니다. 예를 들어 수요일마다 MonthlySales.rdl 보고서를 Microsoft Word 문서로 파일 공유에 저장합니다. 구독을 사용하면 특정 보고서 매개 변수 값 집합을 사용하여 일정을 예약한 다음 보고서 배달을 자동화할 수 있습니다.  
@@ -176,7 +177,7 @@ ms.locfileid: "65578041"
   
 -   <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]파일 공유 계정**을 사용하도록 구성된 모든**  구독을 나열하는 예제 PowerShell 스크립트는 [구독 설정 및 파일 공유 계정&#40;구성 관리자&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)을 참조하세요.  
+-   **파일 공유 계정**을 사용하도록 구성된 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 나열하는 예제 PowerShell 스크립트는 [구독 설정 및 파일 공유 계정&#40;구성 관리자&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   

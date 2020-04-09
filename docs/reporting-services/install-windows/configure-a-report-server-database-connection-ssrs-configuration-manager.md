@@ -8,13 +8,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: seo-lt-2019, seo-mmd-2019
-ms.date: 12/04/2019
-ms.openlocfilehash: d65c0e8bebf9f4019055e2fbabb30785235dacea
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 01/04/2020
+ms.openlocfilehash: 0497915a9f1f0f2a50eafeed70f9dde4550bd1f0
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866045"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531163"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>보고서 서버 데이터베이스 연결 구성(SSRS 구성 관리자)
 
@@ -91,6 +91,13 @@ ms.locfileid: "74866045"
   
 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 Windows 인증이 구성되어 있고 이 인스턴스가 보고서 서버 컴퓨터와 같은 도메인이나 트러스트된 도메인에 있는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 통해 연결 속성으로 관리되는 서비스 계정 또는 도메인 사용자 계정을 사용하도록 연결을 구성할 수 있습니다. 데이터베이스 서버가 다른 도메인에 있거나 작업 그룹 보안을 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 로그인을 사용하도록 연결을 구성해야 합니다. 이 경우 연결을 암호화해야 합니다.  
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+> [!NOTE]
+> Azure SQL Managed Instance를 사용하여 보고서 서버 데이터베이스를 호스트하는 경우 지원되는 자격 증명 유형은 SQL Server 인증뿐입니다. 또한 Managed Instance는 보고서 서버 인스턴스를 호스트할 수 없습니다.
+
+::: moniker-end
+
 #### <a name="using-service-accounts-and-integrated-security"></a>서비스 계정 및 통합 보안 사용
 
 Windows 통합 보안을 사용하면 보고서 서버 서비스 계정을 통해 연결할 수 있습니다. 이 계정에는 보고서 서버 데이터베이스에 대한 로그인 권한이 부여됩니다. 이 유형은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 기본 구성으로 설치하는 경우 설치 프로그램에서 선택하는 기본 자격 증명 유형입니다.  
@@ -105,14 +112,7 @@ Windows 통합 보안을 사용하면 보고서 서버 서비스 계정을 통�
 
 #### <a name="using-a-sql-server-login"></a>SQL Server 로그인 사용
 
-보고서 서버 데이터베이스 연결에 단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 사용하도록 지정할 수 있습니다. 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하고 있고, 보고서 서버 데이터베이스가 원격 컴퓨터에 있는 경우에는 IPSec를 사용하여 서버 간 데이터 전송을 보호해야 합니다. 데이터베이스 로그인을 사용하는 경우에는 암호나 계정을 변경할 때마다 보고서 서버 데이터베이스 연결을 업데이트해야 합니다.  
-
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-
-> [!NOTE]
-> Azure SQL Managed Instance를 사용하여 Reporting Services 2019 데이터베이스를 호스트하는 경우에는 연결에 SQL Server 로그인 자격 증명을 사용해야 합니다.
-
-::: moniker-end
+보고서 서버 데이터베이스 연결에 단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 사용하도록 지정할 수 있습니다. 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하고 있고, 보고서 서버 데이터베이스가 원격 컴퓨터에 있는 경우에는 IPSec를 사용하여 서버 간 데이터 전송을 보호해야 합니다. 데이터베이스 로그인을 사용하는 경우에는 암호나 계정을 변경할 때마다 보고서 서버 데이터베이스 연결을 업데이트해야 합니다.
 
 ### <a name="database-permissions"></a>데이터베이스 권한
 

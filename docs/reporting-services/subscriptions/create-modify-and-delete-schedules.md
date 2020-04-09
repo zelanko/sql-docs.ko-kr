@@ -1,5 +1,6 @@
 ---
 title: 일정 만들기, 수정 및 삭제 | Microsoft Docs
+description: Reporting Services 공유 일정을 만들고 수정 및 삭제합니다. 기본 모드에서는 웹 포털이나 Management Studio를 사용합니다. SharePoint 모드에서는 서비스 앱을 사용합니다.
 ms.date: 06/11/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 29b453914dce3d371ded8f401fd4af0380a115b8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ca14dd80ab00e0a2930ddabdf206f8fbaf6c08eb
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140220"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742265"
 ---
 # <a name="create-modify-and-delete-schedules"></a>일정 만들기, 수정 및 삭제
   이 문서에서는 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 공유 일정을 만들고 수정하고 삭제하는 방법을 알아봅니다.  기본 모드에 대한 공유 일정을 관리하려면 웹 포털의 일정 페이지나 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 공유 일정 폴더를 사용합니다. SharePoint 모드의 경우에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 위한 관리 페이지를 사용합니다.

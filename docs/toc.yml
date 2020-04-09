@@ -8529,6 +8529,14 @@
                   href: ssms/register-servers/registered-servers-f1-help.md
             - name: SSMS를 사용한 스크립팅
               items:
+                - name: 스크립트 생성
+                  items:
+                    - name: 스크립트 생성
+                      href: ssms/scripting/generate-scripts-sql-server-management-studio.md
+                    - name: 스크립트 생성 및 게시 마법사
+                      href: ssms/scripting/generate-and-publish-scripts-wizard.md
+                    - name: 스크립트 생성 마법사에 지원되는 개체
+                      href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
                 - name: 쿼리 및 텍스트 편집기
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
@@ -8650,14 +8658,6 @@
                       items:
                         - name: 공간 데이터 결과 창
                           href: ssms/scripting/spatial-results-window.md
-                        - name: 스크립트 생성
-                          href: ssms/scripting/generate-scripts-sql-server-management-studio.md
-                          items:
-                            - name: 스크립트 생성 및 게시 마법사
-                              href: ssms/scripting/generate-and-publish-scripts-wizard.md
-                              items:
-                                - name: 스크립트 생성 마법사에 지원되는 개체
-                                  href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
         - name: 방법
           items:
             - name: 영어 이외의 SSMS 설치

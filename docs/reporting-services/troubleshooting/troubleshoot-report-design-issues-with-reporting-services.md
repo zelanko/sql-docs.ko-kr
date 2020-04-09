@@ -1,5 +1,6 @@
 ---
-title: Reporting Services의 보고서 디자인 문제 해결 | Microsoft Docs
+title: Reporting Services의 보고서 디자인 문제 해결
+description: 이 문서에서는 보고서 제작 애플리케이션의 디자인 뷰에서 보고서 레이아웃을 만들 때 발생할 수 있는 보고서 디자인 문제를 진단하고 해결합니다.
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3eb298bc6b359b0df92566f9add8d7011cdc907
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dd38603a00c01187c131c2f515c2a4c6c1cb858e
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573849"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662810"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Reporting Services의 보고서 디자인 문제 해결
 보고서 디자인 문제는 보고서 제작 애플리케이션의 디자인 뷰에서 보고서 레이아웃을 만들 때 발생할 수 있습니다. 이 항목에서는 이러한 문제를 해결하는 데 유용한 정보를 제공합니다.   

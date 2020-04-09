@@ -1,5 +1,6 @@
 ---
-title: Reporting Services 보고서의 데이터 검색 문제 해결 | Microsoft Docs
+title: Reporting Services 보고서에서 데이터 검색 문제 해결
+description: 이 문서에서는 보고서를 로컬로 미리 보거나 보고서 서버에서 보고서를 실행하여 보고서 데이터를 검색할 때 발생하는 문제를 진단하고 해결합니다.
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 86f1b8bda63cf8e6436e0dd3d5823fdada53a9f3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d62cff71d6967203ab3980624b1f7b192fb89906
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574424"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664456"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Reporting Services 보고서에서 데이터 검색 문제 해결
 보고서 처리의 첫 번째 단계는 데이터 세트 쿼리를 실행하여 각 데이터 세트에 대한 보고서 데이터를 검색하는 것입니다. 보고서를 로컬로 미리 볼 때 데이터 원본 연결 및 자격 증명은 충분한 권한을 사용하여 데이터를 컴퓨터로 읽어 들여야 합니다. 보고서 서버에서 보고서를 실행할 때 데이터 원본 연결 및 자격 증명은 충분한 권한을 사용하여 보고서 서버에서 데이터를 검색해야 합니다. 이 항목을 사용하여 보고서 데이터 검색 관련 문제를 해결할 수 있습니다.   
   
 ## <a name="i-cannot-create-a-connection-to-a-data-source"></a>데이터 원본에 대한 연결을 만들 수 없는 경우  
-데이터 원본을 만들거나, 데이터 세트 쿼리를 실행하거나, 보고서를 미리 볼 때 '데이터 원본 `<data source name>`에 대한 연결을 설정할 수 없습니다'라는 메시지가 표시될 수 있습니다.   
+데이터 원본을 만들거나, 데이터 세트 쿼리를 실행하거나, 보고서를 미리 볼 때 '데이터 원본 `<data source name>`에 대한 연결을 설정할 수 없습니다.'라는 메시지가 표시될 수 있습니다.   
     
 ### <a name="data-source-is-not-available"></a>데이터 원본을 사용할 수 없는 경우  
 데이터 원본은 여러 이유로 인해 오프라인 상태가 되거나 사용할 수 없게 될 수 있습니다.   
@@ -57,7 +58,7 @@ ms.locfileid: "65574424"
 데이터 세트 필드 컬렉션을 채우려면 다음을 수행합니다.  
 * 데이터베이스에서 필드 정보를 검색할 수 있는 권한이 있는지 확인합니다. 일부 데이터 원본의 경우 데이터 원본에 액세스할 수는 있지만 테이블이나 열에 대한 사용 권한은 없을 수 있습니다. 뷰에 액세스할 수는 있지만 뷰를 만드는 저장 프로시저를 실행할 수 있는 사용 권한은 없을 수 있습니다. 데이터베이스의 특정 테이블 또는 열에 대한 액세스 권한이 유효한지 검사하려면 보고서에 사용하는 것과 동일한 권한을 사용하여 SQL Server Management Studio와 같은 별도의 애플리케이션에서 쿼리 결과를 확인합니다. 쿼리에 대해 원하는 결과를 볼 수 없는 경우 시스템 관리자에게 문의하여 데이터에 대한 사용 권한을 조정합니다.   
 * **데이터 세트 속성** 대화 상자의 쿼리 창에서 쿼리를 실행합니다. 자세한 내용은 [보고서 데이터 세트(보고서 작성기 3.0 및 SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)를 참조하세요.  
-* 수동으로 필드를 추가합니다. 자세한 내용은 [보고서 데이터 창에서 필드 추가, 편집, 새로 고침(보고서 작성기 3.0 및 SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)을 참조하세요.   
+* 수동으로 필드를 추가합니다. 자세한 내용은 [방법: 보고서 데이터 창에서 필드 추가, 편집, 새로 고침(보고서 작성기 3.0 및 SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)을 참조하세요.   
   
 ## <a name="see-also"></a>참고 항목  
 [오류 및 이벤트(Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

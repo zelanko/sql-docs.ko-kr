@@ -1,5 +1,6 @@
 ---
-title: Reporting Services 보고서의 처리 문제 해결 | Microsoft Docs
+title: Reporting Services 보고서의 처리 문제 해결
+description: 이 문서에서는 보고서 처리기가 데이터 및 레이아웃 정보를 결합하고 보고서 항목 속성 식을 평가할 때 발생하는 문제를 해결합니다.
 ms.date: 08/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 85486e929683abaf99216a4d4b03c19a146f230c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d10dc9e4e5808fbc9c315cb262a1b2136c73029
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573866"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664438"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Reporting Services 보고서의 처리 문제 해결
 보고서 데이터가 검색되면 보고서 처리기는 데이터와 레이아웃 정보를 조합합니다. 식이 포함된 각 보고서 항목 속성은 조합된 데이터와 레이아웃의 컨텍스트에서 계산됩니다. 이 항목에서는 이러한 문제를 해결하는 데 유용한 정보를 제공합니다.   
@@ -23,7 +24,7 @@ ms.locfileid: "65573866"
   
 보고서 처리기는 보고서 정의(.rdl 파일)가 .rdl 파일의 시작 부분에 있는 네임스페이스 선언에 정의된 스키마를 따르는지 확인합니다. RDL 스키마에 대한 자세한 내용은 [보고서 정의 스키마 버전(SSRS) 찾기](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)를 참조하세요.  
   
-또한 런타임에 계산되는 보고서 식은 보고서 데이터 및 레이아웃이 올바르게 조합될 수 있도록 보장하는 일련의 규칙을 따라야 합니다. 보고서 처리기가 문제를 발견하면 ' `<report name>` 보고서의 정의가 잘못되었습니다'라는 메시지가 표시될 수 있습니다.  
+또한 런타임에 계산되는 보고서 식은 보고서 데이터 및 레이아웃이 올바르게 조합될 수 있도록 보장하는 일련의 규칙을 따라야 합니다. 보고서 처리기가 문제를 발견하면 ‘`<report name>` 보고서의 정의가 잘못되었습니다.’라는 메시지가 표시될 수 있습니다.  
   
 ### <a name="report-item-expressions-can-only-refer-to-fields-within-the-current-dataset-scope-or-if-inside-an-aggregate-the-specified-dataset-scope"></a>보고서 항목 식은 현재 데이터 세트 범위 내의 필드만 참조하거나, 집계 함수 내에 있는 경우 지정한 데이터 세트 범위만 참조할 수 있습니다.  
   

@@ -1,5 +1,6 @@
 ---
 title: 데이터 기반 구독 만들기, 수정 및 삭제 | Microsoft Docs
+description: 이 문서에서는 데이터 기반 구독을 만들고 수정 및 삭제하는 방법을 알아봅니다. 구독 정보를 검색하는 쿼리를 정의하는 방법에 대한 팁도 제공합니다.
 ms.date: 06/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b385e04cf2efa103dba4a66d4e794a7984814fb4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3d38d44537589ff4b58a41b6b89960b262783e06
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140265"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742194"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>데이터 기반 구독 만들기, 수정 및 삭제
   데이터 기반 구독은 런타임에 구독을 처리하는 데 사용하는 데이터 값을 가져오는 쿼리 기반 구독입니다. 구독이 실행될 때 받는 사람, 보고서 배달 옵션, 렌더링 형식 및 매개 변수 설정에 대한 최신 정보를 가져오기 위한 쿼리가 처리됩니다. 쿼리 결과가 구독 정의에 조합되어 직원 데이터베이스, 고객 데이터베이스 또는 구독자 데이터로 사용할 수 있는 정보가 포함된 기타 데이터베이스에서 이미 유지 관리되고 있는 데이터를 사용하는 동적 구독을 형성합니다.  

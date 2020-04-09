@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 717093278790c90486b424678d332f73e056e86e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9d51cc4164cbb40ff647cad337240e689696b449
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255907"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531124"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에서 Spark Machine Learning 모델을 만들고, 내보내고, 채점합니다.
 
@@ -52,7 +52,7 @@ ms.locfileid: "75255907"
 
    이 노트북에는 샘플의 이 섹션에 필요한 명령이 포함된 셀이 있습니다.
 
-1. Azure Data Studio에서 노트북을 열고 각 코드 블록을 실행합니다. 노트북 작업에 대한 자세한 내용은 [SQL Server에서 노트북 사용 방법](notebooks-guidance.md)을 참조하세요.
+1. Azure Data Studio에서 노트북을 열고 각 코드 블록을 실행합니다. Notebook 사용 방법에 대한 자세한 내용은 [SQL Server에서 Notebook을 사용하는 방법](../azure-data-studio/notebooks-guidance.md)을 참조하세요.
 
 데이터가 먼저 Spark로 읽혀진 후 학습 및 테스트 데이터 세트로 분할됩니다. 그런 다음, 코드가 학습 데이터를 사용하여 파이프라인 모델을 학습시킵니다. 마지막으로 모델을 MLeap 번들로 내보냅니다.
 
@@ -61,7 +61,7 @@ ms.locfileid: "75255907"
 
 ## <a name="model-scoring-with-sql-server"></a>SQL Server로 모델 채점
 
-이제 Spark ML 파이프라인 모델이 일반 직렬화 [MLeap 번들](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html) 형식이므로, Spark가 없어도 Java로 모델을 채점할 수 있습니다. 
+이제 Spark ML 파이프라인 모델이 일반 직렬화 [MLeap 번들](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html) 형식이므로, Spark가 없어도 Java로 모델을 채점할 수 있습니다.
 
 이 샘플은 SQL Server에서 [Java 언어 확장 프로그램](../language-extensions/language-extensions-overview.md)을 사용합니다. SQL Server에서 모델을 채점하려면 먼저 모델을 Java로 로드하고 채점할 수 있는 Java 애플리케이션을 빌드해야 합니다. 이 Java 애플리케이션의 샘플 코드는 [mssql-mleap-app 폴더](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mssql-mleap-app)에서 찾을 수 있습니다.
 

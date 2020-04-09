@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0bed12749231eb9ca4c4398699d662666004613a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bd9624ed1b3d6b164168d162ee68f1773b7a55ac
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285857"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550203"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>클러스터 리소스 및 서비스에 대한 배포 설정 구성
 
@@ -466,6 +466,8 @@ azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.zookeeper.spec
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.gateway.spec.nodeLabel=bdc-shared"
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.appproxy.spec.nodeLabel=bdc-shared"
 ```
+>[!NOTE]
+> 모범 사례는 위의 BDC 역할에 Kubernetes 마스터를 제공하지 않도록 방지합니다. Kubernetes 마스터 노드에 해당 역할을 할당할 계획인 경우 [``master:NoSchedule`` taint를 제거](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)해야 합니다. 이 경우 마스터 노드를 오버로드되어 대규모 클러스터에서 Kubernetes 관리 임무를 수행할 수 없게 된다는 것에 유의하세요. 모든 배포의 마스터에 일부 Pod가 예약되어 있는 것이 일반적입니다. 이미 ``master:NoSchedule`` taint을 허용하며, 클러스터를 관리하는 데 주로 사용됩니다. 
 
 ## <a name="other-customizations-using-json-patch-files"></a><a id="jsonpatch"></a> JSON 패치 파일을 사용한 기타 사용자 지정
 
