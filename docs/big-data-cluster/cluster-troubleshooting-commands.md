@@ -1,5 +1,5 @@
 ---
-title: 모니터링 및 문제 해결
+title: Kubernetes 문제 해결
 titleSuffix: SQL Server big data clusters
 description: 이 문서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]를 모니터링하고 문제를 해결하는 데 유용한 명령을 제공합니다.
 author: mihaelablendea
@@ -9,21 +9,21 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9ab57972b9ba0d758ff692887fa8d93d7f731d0a
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "70153629"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664177"
 ---
-# <a name="monitoring-and-troubleshoot-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 모니터링 및 문제 해결
+# <a name="troubleshoot-big-data-clusters-2019-kubernetes"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes 문제 해결
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 문서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]를 모니터링하고 문제를 해결하는 데 사용할 수 있는 몇 가지 유용한 Kubernetes 명령을 설명합니다. 빅 데이터 클러스터에 있는 Pod 또는 다른 Kubernetes 아티팩트에 대한 자세한 정보를 보는 방법을 보여 줍니다. 이 문서에서는 SQL Server 빅 데이터 클러스터 서비스 중 하나를 실행하는 컨테이너에(서) 파일 복사 등의 일반적인 작업에 대해서도 설명합니다.
 
 > [!TIP]
-> 빅 데이터 클러스터 구성 요소의 상태를 모니터링하기 위해 [**azdata bdc status**](deployment-guidance.md#status) 명령 또는 Azure Data Studio에서 제공되는 기본 제공 [문제 해결 Notebook](manage-notebooks.md)을 사용할 수 있습니다.
+> 빅 데이터 클러스터 구성 요소의 상태를 모니터링하기 위해 [**azdata bdc status**](deployment-guidance.md#status) 명령 또는 Azure Data Studio에서 제공되는 기본 제공 [문제 해결 Notebook](notebooks-manage-bdc.md)을 사용할 수 있습니다.
 
 > [!TIP]
 > Windows(cmd 또는 PS) 또는 Linux(bash) 클라이언트 머신에서 다음 **kubectl** 명령을 실행합니다. 명령이 제대로 실행되려면 클러스터 내의 이전 인증과 명령을 실행할 클러스터 컨텍스트가 필요합니다. 예를 들어 이전에 만든 AKS 클러스터의 경우 `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>`을 실행하여 Kubernetes 클러스터 구성 파일을 다운로드하고 클러스터 컨텍스트를 설정할 수 있습니다.
