@@ -10,15 +10,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 39723f61eaa5bf2fc18e950bbd3432837ee8620a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 185c8648af5a55f53a25839a40008a203239957f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78897115"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80929020"
 ---
 # <a name="finding-additional-sqlclient-driver-information"></a>추가 SqlClient 드라이버 정보 찾기
 

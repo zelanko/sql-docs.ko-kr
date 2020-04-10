@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: a1fc3f50-3635-4fc5-b570-94d2c5a1873c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: df819ddaf8f6f574af26c5f7973beb7ae97384e1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4efecb754137bb5fbd57d4df9146e6fe775d4f2b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67952989"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927203"
 ---
 # <a name="getcolumncount-method-sqlserverresultsetmetadata"></a>getColumnCount 메서드(SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

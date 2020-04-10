@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e825765c-eb55-4800-951b-f3495da36641
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0c91b965498c0b617a02c7707e369a2ba61c0065
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4b17c514a293f4566c3408e364acccbab721e1ce
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67976148"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923134"
 ---
 # <a name="preparestatement-method-javalangstring"></a>prepareStatement 메서드(java.lang.String)
 

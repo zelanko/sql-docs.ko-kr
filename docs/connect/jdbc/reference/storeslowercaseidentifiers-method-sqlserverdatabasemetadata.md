@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b7dd60f5-c4f3-4b14-9a33-d95327395083
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b0c4a376970658df1bdce94e45694edae18149c9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c36a032ad428030a30e3b3339224ae688c8006db
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67969996"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925623"
 ---
 # <a name="storeslowercaseidentifiers-method-sqlserverdatabasemetadata"></a>storesLowerCaseIdentifiers 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: dc61c774-dcd9-49c0-8dfa-2e775fe2afa8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: accd36006c48d13c211d5e0d9db7ecf49cbfd91d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7fd9b54b243a04edb55c4b435dbecc2becbbdf29
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67954263"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923433"
 ---
 # <a name="getarray-method-sqlserverresultset"></a>getArray 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 164532be-7ed6-40fa-a273-dece4c8d72c4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5106bddd6cf71401be0f4a71dfaaf0406901a6cd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1f064d1fa6dd84d72f49ebc5352db85de088b8f4
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67981242"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80905089"
 ---
 # <a name="getobject-method-int-javautilmap"></a>getObject 메서드(int, java.util.Map)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

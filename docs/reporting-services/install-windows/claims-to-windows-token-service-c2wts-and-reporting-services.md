@@ -6,12 +6,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: 2ed9c2a5070a1034970f2f34f5e7bf88a77e8533
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 49a42d5b84217e5fd2b49cd9de0092336d7933b2
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68264997"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002666"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>C2WTS(Windows 토큰 서비스에 대한 클레임) 및 Reporting Services
 
@@ -49,7 +49,7 @@ C2WTS에서 만들어진 토큰은 제한된 위임(특정 서비스로 제한�
 
     **모범 사례로 C2WTS는 자체 도메인 ID에서 실행되어야 합니다.**
 
-    * Active Directory 계정을 만들고 SharePoint Server에서 관리되는 계정으로 등록합니다. 관리되는 계정에 대한 자세한 내용은 [Sharepoint의 관리되는 계정](https://blog.wbaer.net/2010/04/11/managed-accounts-in-sharepoint-2010/)을 참조하세요.
+    * Active Directory 계정을 만들고 SharePoint Server에서 관리되는 계정으로 등록합니다.
    
     * SharePoint 중앙 관리 > 보안 > 서비스 계정 구성 > Windows 서비스 - Windows 토큰 서비스에 대한 클레임을 통해 관리되는 계정을 사용하도록 C2WTS 서비스 구성
 

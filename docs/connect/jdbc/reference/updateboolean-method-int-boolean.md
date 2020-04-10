@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7937f4bb-8537-4012-af81-837f9ac123a2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 658d23f4a2a2a465a6c7344858f67efb005f81bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 88dc682abfff75f5668888d2d4598e0619ed033e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67997012"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924715"
 ---
 # <a name="updateboolean-method-int-boolean"></a>updateBoolean 메서드(int, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

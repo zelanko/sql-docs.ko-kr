@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fb9ab0375c1d718b9559b3c85acc0b3ba4f6993b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 51e9e14fc53c4b9904e64180307f7da8939408ab
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027978"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924633"
 ---
 # <a name="jdbc-42-compliance-for-the-jdbc-driver"></a>JDBC 드라이버의 JDBC 4.2 준수
 

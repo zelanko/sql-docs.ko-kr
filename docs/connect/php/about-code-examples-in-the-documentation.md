@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dc76cee723c11d49a4d6149a7c3a1df4cedbc256
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9da3b91dfa90ed9b28ec9518b5cdb012002d62ab
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015175"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80911789"
 ---
 # <a name="about-code-examples-in-the-documentation"></a>설명서의 코드 예제 정보
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
