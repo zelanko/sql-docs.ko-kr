@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 6b1f31c1-97de-4fc6-8d23-71d299f7bc28
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 89918afe6fdeb70e4051f6a821f603e05196c317
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 279f9b05d6483ec0c5751bfc9202a6092782a777
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67955141"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922175"
 ---
 # <a name="datetimeoffset-methods"></a>DateTimeOffset 메서드
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

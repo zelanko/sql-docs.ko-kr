@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 68d49f2c-fd8d-4abb-bfdc-e7b0fbd9a9da
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: abbd62ffbd256334511a30ae89091618ec37abf9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cc029cf788bcd55562b2434ece8de7cfe18c0921
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67974567"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927134"
 ---
 # <a name="setclob-method-int-javasqlclob"></a>setClob 메서드(int, java.sql.Clob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
