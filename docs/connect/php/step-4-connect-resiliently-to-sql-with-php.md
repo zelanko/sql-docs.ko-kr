@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 8013474f-48e9-43d5-ab89-7b0504044468
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 002c27145360e0877d4e1bff816c25070247ddd8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9467a62d2d3ca1cbbd9b5a543c27f310f7d3ba60
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "70874368"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926901"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-php"></a>4단계: PHP로 SQL에 탄력적으로 연결
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

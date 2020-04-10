@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - constants
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4081e9db30e3607d783de40a71d9d7b2e7599c76
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c54021d6165d0fbf221c7af1c4f10235efb55820
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67993696"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928073"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>상수(Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

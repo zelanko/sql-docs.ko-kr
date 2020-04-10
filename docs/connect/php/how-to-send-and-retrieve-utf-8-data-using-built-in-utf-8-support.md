@@ -12,14 +12,14 @@ helpviewer_keywords:
 - converting data types
 - updating data
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 74d64aa0a5a93587997bc66d064d0c5c47ffb132
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fe406ec4c1a198a6657da987e58bcfea289c41fd
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67993376"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80916009"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>기본 제공 UTF-8 지원을 사용하여 UTF-8 데이터를 보내고 검색하는 방법
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

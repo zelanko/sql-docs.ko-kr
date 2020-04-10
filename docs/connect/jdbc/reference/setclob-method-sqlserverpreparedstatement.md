@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 1b148388-01a8-4e2e-bc72-470ce29164de
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3fd21b8bcd3876186e76d0dcee10e900a0dccda2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 906cf6225e77abc232f805a6a93ffb236ee52685
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67974803"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924631"
 ---
 # <a name="setclob-method-sqlserverpreparedstatement"></a>setClob 메서드(SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

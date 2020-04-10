@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: cfe35e14-49cb-45df-b444-addbb94a773f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 43de9c84bcb1356961d2e5fa0b0c48d05a72de3d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fb320fbd7b5abbd796964d4215a6cf38b72b5f48
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67935795"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926835"
 ---
 # <a name="using-directional-parameters"></a>방향 매개 변수 사용
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

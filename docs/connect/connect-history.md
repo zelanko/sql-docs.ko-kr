@@ -3,17 +3,16 @@ title: Microsoft SQL Server용 드라이버 기록 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/04/2018
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a0eb869cf19f128515951421efddc229aa785cdd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 858e22e0f8ff3992e0a499c245255e2cc03ec12e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72451842"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927754"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Microsoft SQL Server용 드라이버 기록
 

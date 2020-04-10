@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: db0a96a8-248f-4664-9c13-f480f309ab91
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ee869c9d9bdcc707456f1cb04b5dcacdacee89a0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0582672a9203e8efbae1de9767ff4c24a10919f9
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67998684"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928344"
 ---
 # <a name="updatencharacterstream-method-javalangstring-javaioreader-long"></a>updateNCharacterStream 메서드(java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

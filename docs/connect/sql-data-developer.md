@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2e750d14aae5006e1229130eb4055fac74a7029b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b67bf56247302fb451e1ea9d0ea9f76f9726a836
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198420"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926696"
 ---
 # <a name="sql-data-developer"></a>SQL 데이터 개발자
 Microsoft의 SQL 데이터 플랫폼을 사용하여 웹 서버, 엔터프라이즈 서버 및 클라우드의 모바일 디바이스 및 데스크톱에서 데이터 중심 솔루션을 만들 수 있습니다.  
