@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 18bfd63a8cf3255a62b6aef5c4c31573c60e76b0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: eb926c0696f0e926f91297ee5b719bbafce3eda8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027590"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80909129"
 ---
 # <a name="tracing-driver-operation"></a>드라이버 작업 추적
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

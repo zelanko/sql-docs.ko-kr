@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7dbbdacb-74ef-42e7-9bdc-a3229505dad8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 74c2228b944dce2f9c59f4f8fcfc4bc0ac2e5753
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 29e69dedbb34972d80300d4066a7a46bcf4c7668
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67980995"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80904580"
 ---
 # <a name="getparametercount-method-sqlserverparametermetadata"></a>getParameterCount 메서드(SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

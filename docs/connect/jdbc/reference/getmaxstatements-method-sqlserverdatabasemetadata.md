@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 71d58431-b671-49c5-939a-f581d1fef7cd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2af23d551982787c7c20332f2c48049b95fd83d5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f567de2206542e78b427951f7534b604ac5ad43d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67981974"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80906499"
 ---
 # <a name="getmaxstatements-method-sqlserverdatabasemetadata"></a>getMaxStatements 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

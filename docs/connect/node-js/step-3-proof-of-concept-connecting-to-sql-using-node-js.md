@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7925b376fa7ec751faf0b109b6598ab86a348b3f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b52af27ed1f811246a7654ee19fa97ba7deddf07
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78897150"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923820"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>3단계: Node.js를 사용하여 SQL에 연결하는 개념 증명
 

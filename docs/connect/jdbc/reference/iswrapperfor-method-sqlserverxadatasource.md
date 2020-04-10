@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: d612461d-4c3f-46db-b968-ff4c80b2aa7c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e32cbf975d156aae723dfbff105fe51e039dc1b5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a240fe5828a424035208ca8f445680ef195b22ac
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67977019"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80915124"
 ---
 # <a name="iswrapperfor-method-sqlserverxadatasource"></a>isWrapperFor 메서드(SQLServerXADataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
