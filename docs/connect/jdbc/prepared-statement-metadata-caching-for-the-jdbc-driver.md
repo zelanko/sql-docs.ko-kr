@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ''
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 97224f53bb716abe3b79dd00df12d0eed4a63cec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8918be02b5dbb0e6decf49bc315b0ebd8c83e369
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027840"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923763"
 ---
 # <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>JDBC 드라이버에 대한 준비된 명령문 메타데이터 캐싱
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
