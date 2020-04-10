@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 19a71b27-b788-43a3-a76d-fe3001a6f016
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3ed890ee562d3fcc2221877b23ee09bbf9a8ccf9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9ce45cb7fb76c1b01b57d96d86e34b051dc73043
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027146"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80916949"
 ---
 # <a name="user-defined-types"></a>사용자 정의 형식
 

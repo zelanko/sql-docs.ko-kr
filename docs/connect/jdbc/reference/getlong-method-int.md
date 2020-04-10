@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b7078ca7-fd2a-4474-ab29-989ae28c77e8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b19807b810605a42b0036e9ee2cee57da4d20b2e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b71fa2f0f243f4d5ad55751039d1b6b73fea7840
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67982523"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921355"
 ---
 # <a name="getlong-method-int"></a>getLong 메서드(int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

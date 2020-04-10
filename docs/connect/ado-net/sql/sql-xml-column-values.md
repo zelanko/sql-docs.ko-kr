@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 4fd63ceb329fd6e6f7768425a1ccf43afa27dd21
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2704ceae26c58edc85b0cbc1f0fbe6cc98f64311
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896255"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80902015"
 ---
 # <a name="sql-xml-column-values"></a>SQL XML 열 값
 
