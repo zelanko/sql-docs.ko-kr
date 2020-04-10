@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7e80f52f1edba3826c18cc6a306206bdfb254248
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: afd559e7ee6f5b72fd688f5175517abab5f08659
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80271389"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80909239"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC 드라이버 시스템 요구 사항
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

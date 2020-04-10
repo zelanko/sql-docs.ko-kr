@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1af26ac2-76e5-4a26-a600-9919211333ba
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 72b483091a3466527f5a394ab37ff21b985857c8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 01e63937d1e6009e2c87b3c1e9e94e0963a08bc7
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67997144"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80903599"
 ---
 # <a name="updatebinarystream-method-sqlserverresultset"></a>updateBinaryStream 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

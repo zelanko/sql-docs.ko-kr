@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 09ec7d40-4c4a-4d89-ba11-78e5327b5759
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 272fd1bbcacabda3bf2b3ecfe236e6c14354f9cf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 35c808e25c114bf4503c2edfa06d80a204a6fbbe
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67981895"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80906319"
 ---
 # <a name="getmaxusernamelength-method-sqlserverdatabasemetadata"></a>getMaxUserNameLength 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

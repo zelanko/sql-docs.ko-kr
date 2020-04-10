@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: fe13326b-799d-4bf3-b4f1-32ab1841d0ed
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5136e4502b3101bfe53998cbf268962e2761d574
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6cf5e286cc0a4f784b6e96ee583590f4b5efd650
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67974818"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927176"
 ---
 # <a name="setcharacterstream-method-sqlserverpreparedstatement"></a>setCharacterStream 메서드(SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

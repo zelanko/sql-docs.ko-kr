@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 5b8e78e6-2bb0-4dc7-9c77-a5609654cb05
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2a5893bb1585fba014a5bf652265d69953c6a11d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e5c8d9c6c0b4d59aff90515818c13e849a55a1b8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67979297"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926161"
 ---
 # <a name="getsupertypes-method-sqlserverdatabasemetadata"></a>getSuperTypes 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

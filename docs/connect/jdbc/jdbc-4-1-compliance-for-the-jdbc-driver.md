@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: f087fd40-8451-478e-b465-43112c711515
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ea3d783fb98d22b3937016c9e6e60ed625ffca2d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 501b5a6ad21fa9b5e6078e27547b612b9fba9fd6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027968"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924648"
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>JDBC 드라이버의 JDBC 4.1 준수
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

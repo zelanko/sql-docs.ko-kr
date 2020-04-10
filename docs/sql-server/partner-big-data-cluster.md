@@ -9,12 +9,12 @@ ms.technology: ''
 ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 918b3b6bfcb217ef90ae08a9fb746a4836d51900
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0b070ea673ca4763e3af3259e0603e7df4ca504e
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256900"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002835"
 ---
 # <a name="sql-server-big-data-clusters-partners"></a>SQL Server 빅 데이터 클러스터 파트너
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ SQL Server 빅 데이터 클러스터를 사용하는 솔루션 구현을 지원
 
 <!--YouTube links-->
 [dellemc_youtube]:https://www.youtube.com/watch?v=_52Y-qDKT-4
-[hpe_youtube]:https://www.hpe.com/h22228/video-gallery/us/en/products/data-storage-hybrid-cloud/storage-multi/95fd26db-e6ea-44ca-b727-c84d2ef1d446/big-data-clusters-and-hpe-storage-for-microsoft-sql-server-2019/video/
+[hpe_youtube]:https://www.hpe.com/h22228/video-gallery/us/en/products/data-storage-hybrid-cloud/storage-multi/95fd26db-e6ea-44ca-b727-c84d2ef1d446/big-data-clusters-and-hpe-storage-for-microsoft-sql-server-2019/video
 [netapp_youtube]:https://www.youtube.com/watch?v=304z8j7aLpc
 [streamsets_youtube]:https://www.youtube.com/watch?v=OtNrTBLooBw
 

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c9ddcd7d-1dd4-491a-99ff-6cce7f67a73b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c1257ced0c69a461913d9c3a9ae147fffcf72cea
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7b8cb92a23a9d3c3c9725dc555ff66c967ed4ecd
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67998961"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927866"
 ---
 # <a name="updatefloat-method-int-float"></a>updateFloat 메서드(int, float)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
