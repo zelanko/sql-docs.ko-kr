@@ -15,16 +15,16 @@ helpviewer_keywords:
 - sp_rxPredict procedure
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>= sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 45afb5e861aee7b8cf253f6c241a884b54ff9451
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 3c12349e48f474b53957ffac55415ccc0689eeca
+ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662844"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81012442"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 데이터베이스의 이진 형식으로 저장된 기계 학습 모델로 구성된 지정된 입력에 대한 예측 값을 생성합니다.
 
@@ -64,7 +64,7 @@ sp_rxPredict  ( @model, @input )
 
 ### <a name="supported-algorithms"></a>지원되는 알고리즘
 
-모델을 만들고 학습하려면 [SQL Server 2Machine 학습 서비스(R 또는 파이썬)](https://docs.microsoft.com/sql/machine-learning/what-is-sql-server-machine-learning)및 SQL Server [2016 R 서비스,](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services) [SQL Server 기계 학습 서버(독립 실행형) 또는](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)SQL Server [2016 R 서버(독립 실행형)에서](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)제공하는 R 또는 파이썬에 대한 지원되는 알고리즘 중 하나를 사용합니다.
+모델을 만들고 학습하려면 [SQL Server 기계 학습 서비스(R 또는 파이썬)](https://docs.microsoft.com/sql/machine-learning/what-is-sql-server-machine-learning)및 SQL Server [2016 R 서비스,](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services)SQL Server 기계 학습 [서버(독립 실행형) 또는](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)SQL Server [2016 R 서버(독립 실행형)에서](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)제공하는 R 또는 파이썬에 대한 지원되는 알고리즘 중 하나를 사용합니다.
 
 #### <a name="r-revoscaler-models"></a>R: 반란 스케일R 모델
 
@@ -86,7 +86,7 @@ sp_rxPredict  ( @model, @input )
 #### <a name="r-transformations-supplied-by-microsoftml"></a>R: MicrosoftML에서 제공하는 변환
 
   + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
-  + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
+  + [Concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
   + [categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
   + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
   + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
@@ -112,7 +112,7 @@ sp_rxPredict  ( @model, @input )
 #### <a name="python-transformations-supplied-by-microsoftml"></a>파이썬 : 마이크로 소프트 ml에 의해 제공 된 변환
 
   + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
-  + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
+  + [Concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
   + [categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
   + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash)
   
