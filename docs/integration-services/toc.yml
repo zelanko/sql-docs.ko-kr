@@ -63,6 +63,8 @@
       href: ../integration-services/lift-shift/ssis-azure-schedule-packages.md
     - name: SSMS를 사용하여 Azure에서 패키지 예약
       href: ../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md
+    - name: Azure 프로세스 및 도구로 마이그레이션
+      href: ../integration-services/lift-shift/ssis-migration-to-Azure.md
 - name: Integration Services 설치
   href: ../integration-services/install-windows/install-integration-services.md
 - name: 여러 Integration Services 버전을 병렬로 설치
@@ -933,7 +935,7 @@
       href: ../integration-services/scale-out/integration-services-ssis-scale-out.md
     - name: 단일 컴퓨터에서 SSIS Scale Out 시작
       href: ../integration-services/scale-out/get-started-with-ssis-scale-out-onebox.md
-    - name: '연습: Integration Services 규모 확장 설치'
+    - name: '연습: Integration Services 스케일 아웃 설정'
       href: ../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md
     - name: 규모 확장에서 패키지 실행
       href: ../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md
