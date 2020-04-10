@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursor types
 - scrollable cursors
 ms.assetid: 51147e4f-5f07-4ee6-8245-e937eefec71f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: adc776d009a6836a6ce46207d0d426f7e444259b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8ae3d54f71c70b06601309ea490377241b84598b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67935872"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923782"
 ---
 # <a name="specifying-a-cursor-type-and-selecting-rows"></a>커서 유형 지정 및 행 선택
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4fbe9123-7365-4a8f-bbd5-dc2b16f1b231
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2eee4ccb8230ee32398cb75445297950ff89aa94
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5485dcf459728a3fdee5161d76ef975d935dabae
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67999146"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919854"
 ---
 # <a name="updatedate-method-javalangstring-javasqldate"></a>updateDate 메서드(java.lang.String, java.sql.Date)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
