@@ -16,15 +16,15 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 54e89acfe1f24aaf83292c787e7b3253454bee32
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d496e53641b64a88fcf82016247b2ce4ab12b843
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251427"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980429"
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>쿼리 및 뷰 디자이너 열기(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 쿼리 및 뷰 디자이너는 뷰의 정의를 열거나, 쿼리 또는 뷰의 결과를 표시하거나, 쿼리를 만들거나 열 때 나타납니다. 이 디자이너는 네 개의 개별 창으로 구성되어 있습니다.  
   
 -   다이어그램 창은 데이터 연결에서 선택한 테이블 또는 테이블 반환 개체를 그래픽으로 표시합니다. 또한 이들 사이의 조인 관계도 보여 줍니다.  

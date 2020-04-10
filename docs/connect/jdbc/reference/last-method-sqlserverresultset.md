@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ac9bef59-8c31-437b-a183-619cc778fe7a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bf176794b2fac5a241c14ee494d08ddd4aa98dbc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 32d569a7343914bd9d409f9f5caba63f43cf9ae5
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67976894"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80915054"
 ---
 # <a name="last-method-sqlserverresultset"></a>last 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

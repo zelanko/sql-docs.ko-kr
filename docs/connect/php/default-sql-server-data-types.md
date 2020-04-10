@@ -11,14 +11,14 @@ helpviewer_keywords:
 - default data types
 - converting data types
 ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 69c138e7eb5d2c4f6dbace0db59ce235e1c0a5f9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dcfe4dd998f320da7e23ea28df99a28c48d2abba
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67993662"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928013"
 ---
 # <a name="default-sql-server-data-types"></a>기본 SQL Server 데이터 형식
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

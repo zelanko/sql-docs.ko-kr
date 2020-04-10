@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bce89cc12c7493522de55adffb69fcbe3307cbdf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2ba06f87c5ff4970d3d8686e7195d57dc076cc04
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68003763"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923834"
 ---
 # <a name="step-1--configure-development-environment-for-nodejs-development"></a>1단계: Node.js 개발을 위한 개발 환경 구성
 SQL Server의 Node.js 드라이버로 애플리케이션을 개발하려면 개발 환경을 필수 구성 요소로 구성해야 합니다.  가장 일반적인 방법은 npm(노드 패키지 관리자)으로 Tedious 모듈을 설치하는 것이지만, 원한다면 [Github](https://github.com/pekim/tedious)에서 Tedious 모듈을 직접 다운로드할 수도 있습니다.  

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8fff14d68fa1e708e2f6daa84aa84c9cd5be2dcf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a7b3befd16e81f8717adf710ec926f123761eb41
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76941092"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928488"
 ---
 # <a name="sample-jdbc-driver-applications"></a>샘플 JDBC 드라이버 애플리케이션
 
