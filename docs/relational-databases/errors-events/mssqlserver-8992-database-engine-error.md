@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9d5da60bc3e2716fb808c47f949b3b918b4e9d85
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 25d673f7f385649afb0a46ae65a61e3eb0f270f9
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77479671"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531071"
 ---
 # <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
   
-|||  
-|-|-|  
+|항목|값|
+|:---|:---|
 |제품 이름|SQL Server|  
 |이벤트 ID|8992|  
 |이벤트 원본|MSSQLSERVER|  
@@ -43,9 +43,9 @@ DBCC CHECKCATALOG 또는 DBCC CHECKDB에서 지정된 개체에 대한 시스템
 이 오류는 SQL Server 2000에서 SQL Server 2005 이상 버전으로 업그레이드된 데이터베이스에 대해 DBCC CHECKDB를 실행하는 경우에 발생할 수 있습니다. SQL Server 2000의 경우 DBCC CHECKDB에 DBCC CHECKCATALOG 기능이 포함되지 않으므로 SQL Server 2000에서 데이터베이스에 대해 DBCC CHECKCATALOG를 명시적으로 실행하지 않는 한 이 오류는 업그레이드 이전에 발견되지 않습니다.  
   
 오류 8992와 함께 다음과 같은 오류가 표시될 수 있습니다.  
-|||
-|-|-| 
+
 |메시지 ID|메시지 텍스트|
+|:---|:---|
 |3851|시스템 테이블 sys.%ls%ls에서 잘못된 행(%ls)을 찾았습니다.|
 |3852|sys.%ls%ls의 행(%ls)과 대응하는 행(%ls)이 sys.%ls%ls에 없습니다.|
 |3853|sys.%ls%ls의 행(%ls)의 특성(%ls)과 대응하는 행(%ls)이 sys.%ls%ls에 없습니다.|

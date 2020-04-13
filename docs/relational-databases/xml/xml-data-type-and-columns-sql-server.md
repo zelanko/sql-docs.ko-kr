@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2293f8cf40bcd5b3d104f63df80abacf282686ed
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 83cea04e6617706151c0f74c43273281e6b89901
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68096892"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664788"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 데이터 형식 및 열(SQL Server)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   이 항목에서는 **의** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터 형식을 사용할 때의 장점과 제한 사항을 설명하며, XML 데이터의 저장 방법을 선택할 수 있도록 도와 줍니다.  
   
 ## <a name="relational-or-xml-data-model"></a>관계형 데이터 모델 또는 XML 데이터 모델  

@@ -13,15 +13,15 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 156ed5549daa8129ff17d1b2827d798521c8a88b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9ca8eb44f7dad50d22b36a1cd795b3695836cb6b
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257633"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664886"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>계산 열을 사용하여 자주 사용되는 XML 값 승격
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   쿼리가 주로 적은 수의 요소 및 특성 값으로 작성된 경우 이러한 수량을 관계형 열로 승격시킬 수 있습니다. 이 방식은 전체 XML 인스턴스를 검색하는 동안 XML 데이터의 일부에 대해서 쿼리가 실행된 경우에 유용합니다. XML 열에 XML 인덱스를 만들 필요는 없습니다. 대신 승격된 열을 인덱싱할 수 있습니다. 승격된 열을 사용하도록 쿼리를 작성해야 합니다. 즉, 쿼리 최적화 프로그램은 XML 열에 있는 쿼리를 승격된 열로 다시 대상화하지 않습니다.  
   
  승격된 열은 같은 테이블에 있는 계산 열이거나 테이블에서 사용자가 유지 관리하는 별개의 열일 수 있습니다. 각 XML 인스턴스로부터 단일 항목 값이 승격되는 경우에는 이것으로 충분합니다. 하지만 다중 값 속성의 경우 다음 섹션의 설명과 같이 속성에 대해 별개의 테이블을 만들어야 합니다.  

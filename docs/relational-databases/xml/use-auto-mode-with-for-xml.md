@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5331a474d24d2204ca81e37427fc2615ecede622
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4d8d3674766bfa6cb96a23e53b9f2aee440beb37
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68078010"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665202"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>FOR XML에서 AUTO 모드 사용
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [FOR XML&#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)에 설명된 대로 AUTO 모드는 쿼리 결과를 중첩 XML 요소로 반환합니다. 이 모드에서는 쿼리 결과로 생성되는 XML의 모양을 상세하게 조정할 수 없습니다. AUTO 모드 쿼리는 간단한 계층을 생성하려는 경우에 유용합니다. 그러나 [FOR XML에서 EXPLICIT 모드 사용](../../relational-databases/xml/use-explicit-mode-with-for-xml.md) 및 [FOR XML에서 PATH 모드 사용](../../relational-databases/xml/use-path-mode-with-for-xml.md) 에서는 쿼리 결과로 생성되는 XML의 모양을 좀 더 상세하게 조정할 수 있습니다.  
   
  최소한 한 개의 해당 열이 SELECT 절에 나열되는 FROM 절의 각 테이블은 XML 요소로 표시됩니다. 선택 항목인 ELEMENTS 옵션이 FOR XML 절에 지정된 경우 SELECT 절에 나열되는 열은 특성이나 하위 요소로 매핑됩니다.  

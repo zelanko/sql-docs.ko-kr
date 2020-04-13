@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c5e7595b421627266c7f08ca76588f481a19554f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 55ed06976ef161037134164116ea2364f420f405
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257665"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80530942"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>전체 텍스트 인덱스 만들기 및 관리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ ms.locfileid: "75257665"
   
 [SELECT](../../t-sql/queries/select-transact-sql.md) 문을 사용하여 [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) 함수를 호출합니다. 함수 호출 시 다음과 같이 OBJECT_ID 함수를 사용하여 테이블 이름(*table_name*)을 테이블 ID로 변환하고 테이블의 고유 인덱스 이름을 지정한 다음 **IsFulltextKey** 인덱스 속성을 지정합니다.  
   
-```  
+```sql  
 SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );  
 ```  
   
@@ -119,7 +119,7 @@ SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );
   
  다음 예에서는 `PK_Document_DocumentID` 인덱스가 전체 텍스트 키 열의 고유성을 강제 적용하는 데 사용되는지 여부를 확인합니다.  
   
-```  
+```sql  
 USE AdventureWorks  
 GO  
 SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID',  'IsFulltextKey' )  
@@ -133,7 +133,7 @@ SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID
  
 이 식별자를 가져오려면 SELECT 문을 사용하여 OBJECTPROPERTYEX 함수를 호출하면 됩니다. 다음과 같이 OBJECT_ID 함수를 사용하여 테이블 이름(*table_name*)을 테이블 ID로 변환하고 **TableFulltextKeyColumn** 속성을 지정합니다.  
   
-```  
+```sql  
 SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 'Column Identifier';  
 ```  
   
@@ -141,7 +141,7 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 
   
  다음 예에서는 전체 텍스트 키 열의 식별자나 NULL을 반환합니다. NULL은 잘못된 인덱스 이름이 사용 중이거나, 인덱스 이름이 테이블과 일치하지 않거나, 테이블이 존재하지 않음 등을 의미합니다.  
   
-```  
+```sql  
 USE AdventureWorks;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID('Production.Document'), 'TableFulltextKeyColumn');  
@@ -150,7 +150,7 @@ GO
   
  다음 예에서는 고유 키 열의 식별자를 사용하여 열의 이름을 가져오는 방법을 보여 줍니다.  
   
-```  
+```sql  
 USE AdventureWorks;  
 GO  
 DECLARE @key_column sysname  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a90f68a55b10234e0397aba480b8d78a9cea1d9c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b11588e7f8a1e075b5091e73fe71879c7b035fd4
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68039125"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664938"
 ---
 # <a name="use-xml-in-computed-columns"></a>계산 열에 XML 사용
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML 인스턴스는 계산 열의 원본이나 계산 열의 유형으로 표시될 수 있습니다. 이 항목의 예에서는 계산 열이 있는 XML을 사용하는 방법을 보여 줍니다.  
   
 ## <a name="creating-computed-columns-from-xml-columns"></a>XML 열에서 계산 열 만들기  

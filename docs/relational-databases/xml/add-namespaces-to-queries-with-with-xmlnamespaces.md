@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cede10b01e1300a1b354cdc5a0d1dd5f80d5a006
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b575cfdf7f35326d661ef9ef312601c7b9b8bca3
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095452"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664750"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [WITH XMLNAMESPACES(Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md) 는 다음과 같은 방식으로 네임스페이스 URI를 지원합니다.  
   
 -   [FOR XML을 사용하는 XML 생성](../../relational-databases/xml/for-xml-sql-server.md) 쿼리 시 URI 매핑에 대한 네임스페이스 접두사를 사용할 수 있도록 만듭니다.  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6e67e3bb42aa2d70ae4e27a3f13955e5d0827c2b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b6c6c2f5e19e22cdff4b7f9ca282fc3406efd3fc
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006751"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664780"
 ---
 # <a name="example-specifying-the-cdata-directive"></a>예제: CDATA 지시어 지정
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   지시어가 **CDATA**로 설정되면 포함된 데이터가 엔터티 인코딩되지는 않지만 CDATA 섹션에 놓여집니다. **CDATA** 특성은 이름이 없어야 합니다.  
   
  다음 쿼리는 제품 모델 요약 설명을 CDATA 섹션에 포함시킵니다.  

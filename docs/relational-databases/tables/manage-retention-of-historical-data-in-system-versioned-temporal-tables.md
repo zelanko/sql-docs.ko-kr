@@ -11,12 +11,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 81e51dfca5692882ec75841f9be1244ef3479c33
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8a51b45abe1b35c827b6af384bb33499a7572527
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74401576"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002806"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>시스템 버전 관리된 temporal 테이블에서 기록 데이터의 보존 관리
 
@@ -258,7 +258,7 @@ BEGIN TRANSACTION
             DATA_COMPRESSION = PAGE
         )
 /*(2) Create index on the same filegroups as the partition that will be switched out*/
-    CREATE CLUSTERED INDEX [ox_staging_DepartmentHistory_September_2015]
+    CREATE CLUSTERED INDEX [ix_staging_DepartmentHistory_September_2015]
         ON [dbo].[staging_DepartmentHistory_September_2015]
         (
             [SysEndTime] ASC

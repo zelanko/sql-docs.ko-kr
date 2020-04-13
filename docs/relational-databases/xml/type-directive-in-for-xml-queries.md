@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1948f42f5a572a7a7737b58afab8f407932660d1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fa7bd23de60f82aa83620e0d81a1887c1c997634
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68078035"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665274"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML 쿼리의 TYPE 지시어
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [xml&#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md)을 지원하므로 필요에 따라 TYPE 지시어를 지정하여 FOR XML 쿼리 결과가 **xml** 데이터 형식으로 반환되도록 요청할 수 있습니다. 그러면 서버에서 FOR XML 쿼리 결과를 처리할 수 있습니다. 예를 들어 이 결과에 대해 XQuery 쿼리를 지정하거나 **xml** 유형 변수에 결과를 할당하거나 [중첩 FOR XML 쿼리](../../relational-databases/xml/use-nested-for-xml-queries.md)를 쓸 수 있습니다.  
   
 > [!NOTE]  

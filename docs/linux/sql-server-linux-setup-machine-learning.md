@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d626b478a94f796155a895e134eb171c18fcc28
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 84d76508ad50de0b76266ce936f752065b989105
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216602"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664372"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Linux에 SQL Server Machine Learning Services(Python 및 R) 설치
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 문서에서는 Linux에 [SQL Server Machine Learning Services](../advanced-analytics/index.yml)를 설치하는 과정을 안내합니다. Machine Learning Services를 사용하여 데이터베이스 내에서 Python 및 R 스크립트를 실행할 수 있습니다.
+이 문서에서는 Linux에 [SQL Server Machine Learning Services](../machine-learning/index.yml)를 설치하는 과정을 안내합니다. Machine Learning Services를 사용하여 데이터베이스 내에서 Python 및 R 스크립트를 실행할 수 있습니다.
 
 > [!NOTE]
 > Machine Learning Services는 기본적으로 SQL Server 빅 데이터 클러스터에 설치됩니다. 자세한 내용은 [빅 데이터 클러스터에서 Machine Learning Services(Python 및 R) 사용](../big-data-cluster/machine-learning-services.md)을 참조하세요.
@@ -435,10 +435,10 @@ mssql-mlservices-mlm-py-9.4.7.64
 
 Python 개발자는 다음 자습서에 따라 SQL Server에서 Python을 사용하는 방법을 알아볼 수 있습니다.
 
-+ [Python 자습서: SQL Server Machine Learning Services에서 선형 회귀를 사용하여 스키 대여 예측](..\advanced-analytics\tutorials\python-ski-rental-linear-regression-deploy-model.md)
-+ [자습서: Categorizing customers using k-means clustering with SQL Server Machine Learning Services](../advanced-analytics/tutorials/python-clustering-model.md)(SQL Server Machine Learning Services에서 k-평균 클러스터링을 사용하여 고객 분류)
++ [Python 자습서: SQL Server Machine Learning Services에서 선형 회귀를 사용하여 스키 대여 예측](../machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md)
++ [Python 자습서: Categorizing customers using k-means clustering with SQL Server Machine Learning Services](../machine-learning/tutorials/python-clustering-model.md)(SQL Server Machine Learning Services에서 k-평균 클러스터링을 사용하여 고객 분류)
 
 R 개발자는 몇 가지 간단한 예제를 시작하고 R이 SQL Server에서 작동하는 방식의 기초를 알아볼 수 있습니다. 다음 단계로 가려면 아래 링크를 참조하세요.
 
-+ [자습서: T-SQL에서 R 사용](../advanced-analytics/tutorials/quickstart-r-create-script.md)
-+ [자습서: R 개발자를 위한 데이터베이스 내 분석](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [빠른 시작: T-SQL에서 R 사용](../machine-learning/tutorials/quickstart-r-create-script.md)
++ [자습서: R 개발자를 위한 데이터베이스 내 분석](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)

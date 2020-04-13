@@ -38,12 +38,12 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: edc3b7277646122dfec73f7b79445a8ca066e24c
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287337"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664459"
 ---
 # <a name="database-level-roles"></a>데이터베이스 수준 역할
 
@@ -112,18 +112,6 @@ ms.locfileid: "79287337"
 > [!IMPORTANT]  
 >  **db_ssisadmin** 및 **dc_admin** 역할의 멤버는 해당 권한을 sysadmin으로 승격할 수 있습니다. 이러한 권한 승격이 발생할 수 있는 것은 이러한 역할이 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 패키지를 수정할 수 있고 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트의 sysadmin 보안 컨텍스트를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 패키지를 실행할 수 있기 때문입니다. 유지 관리 계획, 데이터 컬렉션 집합 및 기타 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 패키지를 실행할 때 이러한 권한 상승이 발생하지 않도록 하려면 패키지를 실행하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업이 제한된 권한을 갖는 프록시 계정을 사용하도록 구성하거나 **db_ssisadmin** 및 **dc_admin** 역할에 **sysadmin** 멤버만 추가합니다.  
 
-## <a name="working-with-r-services"></a>R Services 작업  
-
-**적용 대상:** [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)] 이상의 SQL Server   
-
-R Services가 설치된 경우 추가 데이터베이스 역할을 패키지 관리에 사용할 수 있습니다. 자세한 내용은 [SQL Server에 대한 R 패키지 관리](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md)를 참조하세요.
-
-|역할 이름 |Description|  
-|-------------|-----------------|
-|**rpkgs-users** |사용자가 rpkgs-shared 역할의 멤버가 설치한 모든 공유 패키지를 사용하도록 허용합니다.|
-|**rpkgs-private** |rpkgs-users 역할과 동일한 권한으로 공유 패키지에 액세스할 수 있습니다. 이 역할의 멤버는 프라이빗으로 범위가 지정된 패키지를 설치, 제거 및 사용할 수도 있습니다.|
-|**rpkgs-shared** |rpkgs-private 역할과 동일한 권한을 제공합니다. 이 역할의 멤버인 사용자는 공유 패키지를 설치하거나 제거할 수도 있습니다.|
-  
 ## <a name="working-with-database-level-roles"></a>데이터베이스 수준 역할 작업  
  다음 표에서는 데이터베이스 수준 역할 작업을 위한 명령, 뷰 및 함수에 대해 설명합니다.  
   

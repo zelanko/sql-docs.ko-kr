@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 9381c07f-6887-4a62-9730-32661f9aa87c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0fb8b86daedb73f62396e1dc13a06a5a4e2a7bb3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f7672d59b2355c0733a5e26da6217fbabf729c6a
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113071"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664701"
 ---
 # <a name="columns-that-contain-a-null-value-by-default"></a>기본적으로 Null 값을 포함하는 열
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 기본적으로 열에 Null 값이 있으면 특성, 노드 또는 요소가 없습니다. 이 기본 동작은 ELEMENTS XSINIL 키워드 구를 사용하여 재정의할 수 있습니다. 이 구문은 요소 중심 XML을 요청합니다. 이는 반환된 결과에 null 값이 명시적으로 표시됨을 의미합니다. 이러한 요소에는 값이 없습니다.
 

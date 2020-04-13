@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: b8aeb87f-9cce-40e2-a47c-2dc1460548af
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e420937a61f55905d4d373a7a4f52f585b5c0e2e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e050c3f6817bc6c975f8bf28f561fb91af109dd8
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943244"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662950"
 ---
 # <a name="for-xml-support-for-various-sql-server-data-types"></a>다양한 SQL Server 데이터 형식에 대한 FOR XML 지원
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   이 섹션의 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터 형식에 대한 FOR XML 지원에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  

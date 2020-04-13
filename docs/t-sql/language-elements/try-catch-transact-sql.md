@@ -29,12 +29,12 @@ ms.assetid: 248df62a-7334-4bca-8262-235a28f4b07f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ccb51c6934a60fa60fa7fbcb12967928d63de92
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ca4bfd07491b25659253ca56eb1c16adb414544b
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121562"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809842"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,9 +70,14 @@ END CATCH
   
  TRY...CATCH 구문은 여러 일괄 처리에 걸쳐 있을 수 없으며 여러 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 블록에도 걸쳐 있을 수 없습니다. 예를 들어 하나의 TRY...CATCH 구문이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 BEGIN…END 블록 2개에 걸쳐 있거나 IF...ELSE 구문에 걸쳐 있을 수 없습니다.  
   
- TRY 블록의 마지막 문 실행을 완료할 때 TRY 블록으로 묶은 코드에 오류가 없는 경우 연결된 END CATCH 문 바로 다음 문으로 제어가 전달됩니다. TRY 블록으로 묶은 코드에 오류가 있는 경우 연결된 CATCH 블록의 첫 번째 문으로 제어가 전달됩니다. END CATCH 문이 저장 프로시저 또는 트리거의 마지막 문인 경우 해당 저장 프로시저를 호출하거나 트리거를 발생시킨 문으로 제어가 전달됩니다.  
-  
- CATCH 블록의 코드를 완료하면 END CATCH 문 바로 다음 문으로 제어가 전달됩니다. CATCH 블록이 포착한 오류는 호출 애플리케이션으로 반환되지 않습니다. 오류 정보를 애플리케이션으로 반환해야 하는 경우 CATCH 블록의 코드에서 SELECT 결과 집합 또는 RAISERROR 및 PRINT 문과 같은 메커니즘을 사용하세요.  
+ TRY 블록의 마지막 문 실행을 완료할 때 TRY 블록으로 묶은 코드에 오류가 없는 경우 연결된 END CATCH 문 바로 다음 문으로 제어가 전달됩니다.
+ 
+ TRY 블록으로 묶은 코드에 오류가 있는 경우 연결된 CATCH 블록의 첫 번째 문으로 제어가 전달됩니다. CATCH 블록의 코드를 완료하면 END CATCH 문 바로 다음 문으로 제어가 전달됩니다. 
+ 
+ > [!NOTE] 
+ > END CATCH 문이 저장 프로시저 또는 트리거의 마지막 문인 경우 해당 저장 프로시저를 호출하거나 트리거를 발생시킨 문으로 제어가 전달됩니다. 
+ 
+ CATCH 블록이 포착한 오류는 호출 애플리케이션으로 반환되지 않습니다. 오류 정보를 애플리케이션으로 반환해야 하는 경우 CATCH 블록의 코드에서 SELECT 결과 집합 또는 RAISERROR 및 PRINT 문과 같은 메커니즘을 사용하세요.  
   
  TRY...CATCH 구문은 중첩될 수 있습니다. TRY 블록 또는 CATCH 블록에는 중첩된 TRY...CATCH 구문이 포함될 수 있습니다. 예를 들어 CATCH 블록에 TRY...CATCH 구문이 포함되어 CATCH 코드가 발견하는 오류를 처리할 수 있습니다.  
   
@@ -133,7 +138,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- ERROR\_\* 함수는 `CATCH`고유하게 컴파일된 저장 프로시저[ 안의 ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md) 블록에서도 작동합니다.  
+ ERROR\_\* 함수는 [고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md) 안의 `CATCH` 블록에서도 작동합니다.  
   
 ## <a name="errors-unaffected-by-a-trycatch-construct"></a>TRY...CATCH 구문의 영향을 받지 않는 오류  
  TRY...CATCH 구문은 다음과 같은 조건을 트래핑하지 않습니다.  

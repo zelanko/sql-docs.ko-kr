@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e67e7f0d764a35dab94e26a70b7af39dfd23dae2
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 619fddade48e56c28995b193776e6d13f31918ac
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402641"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809721"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SSIS(SQL Server Integration Services) DevOps 도구(미리 보기)
 
@@ -172,7 +172,7 @@ SSIS 카탈로그 구성 JSON 파일의 원본입니다. “파일 경로” 또
 
 SSIS 카탈로그 구성 JSON 파일의 경로입니다. 이 속성은 구성 파일 원본으로 “파일 경로”를 선택한 경우에만 표시됩니다.
 
-구성 JSON 파일에서 [파이프라인 변수](https://docs.microsoft.comazure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch)를 사용하려면 이 작업 앞에 [파일 변환 작업](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops)을 추가하여 구성 값을 파이프라인 변수로 대체해야 합니다. 자세한 내용은 [JSON variable substitution](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution)(JSON 변수 대체)을 참조하세요.
+구성 JSON 파일에서 [파이프라인 변수](/azure/devops/pipelines/process/variables)를 사용하려면 이 작업 앞에 [파일 변환 작업](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops)을 추가하여 구성 값을 파이프라인 변수로 대체해야 합니다. 자세한 내용은 [JSON variable substitution](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution)(JSON 변수 대체)을 참조하세요.
 
 #### <a name="inline-configuration-json"></a>인라인 구성 JSON
 

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 63a80b7bebafdaf05c93a95b9ce5efd0dc89c316
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cd64762cced69019e1d58414b43af061933c4437
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001793"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665019"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>FOR XML에서 EXPLICIT 모드 사용
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [FOR XML을 사용하는 XML 생성](../../relational-databases/xml/for-xml-sql-server.md)항목에 설명된 것과 같이 RAW 및 AUTO 모드에서는 쿼리 결과로 생성되는 XML의 모양을 상세하게 조정할 수 없습니다. 하지만 EXPLICIT 모드에서는 쿼리 결과로 생성되는 XML의 모양을 좀 더 상세하게 조정할 수 있습니다.  
   
  XML에 예상되는 중첩과 같은 필수 XML에 대한 추가 정보는 쿼리의 일부로 명시적으로 지정하는 방식으로 EXPLICIT 모드 쿼리를 작성해야 합니다. 요청한 XML에 따라 EXPLICIT 모드 쿼리를 작성하는 작업은 복잡할 수 있습니다. EXPLICIT 모드 쿼리를 작성하는 것보다는 [PATH 모드 사용](../../relational-databases/xml/use-path-mode-with-for-xml.md) 의 설명에 따라 중첩을 사용하는 것이 더 간단합니다.  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 561a683f6b4c9489121c8fe9910ca798c50ecd82
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52d67c4fb8bf48726c5ac65f3f312fc97a1d9628
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76971220"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664345"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>Linux에 SQL Server 언어 확장 설치
 
@@ -30,7 +30,7 @@ Java 확장의 패키지 위치는 SQL Server Linux 원본 리포지토리에 �
 
 언어 확장은 Linux 컨테이너에서도 지원됩니다. 언어 확장을 사용하는 미리 빌드된 컨테이너는 제공하지 않지만 [GitHub에서 이용 가능한 예제 템플릿](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)을 사용하여 SQL Server 컨테이너에서 만들 수 있습니다.
 
-언어 확장 및 [Machine Learning Services](../advanced-analytics/index.yml)는 SQL Server 빅 데이터 클러스터에 기본적으로 설치됩니다. 빅 데이터 클러스터를 사용하는 경우에는 이 문서의 단계를 수행하지 않아도 됩니다. 자세한 내용은 [빅 데이터 클러스터에서 Machine Learning Services(Python 및 R) 사용](../big-data-cluster/machine-learning-services.md)을 참조하세요.
+언어 확장 및 [Machine Learning Services](../machine-learning/index.yml)는 SQL Server 빅 데이터 클러스터에 기본적으로 설치됩니다. 빅 데이터 클러스터를 사용하는 경우에는 이 문서의 단계를 수행하지 않아도 됩니다. 자세한 내용은 [빅 데이터 클러스터에서 Machine Learning Services(Python 및 R) 사용](../big-data-cluster/machine-learning-services.md)을 참조하세요.
 
 ## <a name="uninstall-preview-version"></a>미리 보기 버전 제거
 

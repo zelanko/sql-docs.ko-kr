@@ -1,21 +1,20 @@
 ---
 title: CREATE EXTERNAL LANGUAGE(Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 02/19/2020
+ms.date: 04/03/2020
 ms.prod: sql
-ms.reviewer: dphansen
 ms.technology: language-extensions
 ms.topic: language-reference
-author: nelgson
-ms.author: negust
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 65f805c0d2467f3b4301ed1d237284cb61224b97
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 76d14fac74d806427f67eadaea3bb5363b17d88a
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77520896"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664209"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -23,7 +22,7 @@ ms.locfileid: "77520896"
 지정된 파일 경로 또는 바이트 스트림에서 데이터베이스의 외부 언어 확장을 등록합니다. 이 명령문은 데이터베이스 관리자가 SQL Server에서 지원되는 OS 플랫폼에 새 외부 언어를 등록하는 일반 메커니즘의 역할을 합니다. 자세한 내용은 [언어 확장](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)을 참조하세요.
 
 > [!NOTE]
-> 현재, **Java**만 외부 언어로 지원됩니다. **R** 및 **Python**은 예약된 이름이며 해당 특정 이름을 사용하여 외부 언어를 만들 수 없습니다. **R** 및 **Python** 사용 방법에 대한 자세한 내용은 [SQL Server Machine Learning Services](https://docs.microsoft.com/sql/advanced-analytics/)를 참조하세요.
+> 현재, **Java**만 외부 언어로 지원됩니다. **R** 및 **Python**은 예약된 이름이며 해당 특정 이름을 사용하여 외부 언어를 만들 수 없습니다. **R** 및 **Python** 사용 방법에 대한 자세한 내용은 [SQL Server Machine Learning Services](https://docs.microsoft.com/sql/machine-learning/)를 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -106,10 +105,6 @@ FROM <file_spec> [ ,...2 ]
 **platform**
 
 이 매개 변수는 하이브리드 OS 시나리오에 필요합니다. 하이브리드 아키텍처에서 언어는 플랫폼당 한 번 등록해야 합니다. 플랫폼 및 언어 이름은 외부 언어마다 고유한 키입니다. 플랫폼을 지정하지 않으면 현재 OS를 가정합니다.
-
-## <a name="remarks"></a>설명
-
-현재 **PARAMETERS** 및 **ENVIRONMENT_VARIABLES**는 지원되지 않습니다.
 
 ## <a name="permissions"></a>사용 권한
 

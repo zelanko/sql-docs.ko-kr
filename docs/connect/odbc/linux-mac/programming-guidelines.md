@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: 9299e42d4e9defb5695716771a60ea2855729ee7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b54fd76c8c6e60b7250ef354b8999347eb96d95a
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912379"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219235"
 ---
 # <a name="programming-guidelines"></a>프로그래밍 지침
 
@@ -22,10 +22,10 @@ ms.locfileid: "80912379"
 
 macOS 및 Linux 기반 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 프로그래밍 기능은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client([SQL Server Native Client(ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151))를 기반으로 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 Windows Data Access Components의 ODBC를 기반으로 합니다([ODBC 프로그래머 참조](https://go.microsoft.com/fwlink/?LinkID=45250)).  
 
-ODBC 애플리케이션은 unixODBC 헤더([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], `/usr/local/include/msodbcsql.h`, `sql.h` 및 `sqlext.h`)를 포함한 후 `sqltypes.h`를 포함하여 MARS(Multiple Active Result Set) 및 다른 `sqlucode.h` 고유 기능을 사용할 수 있습니다. 그런 다음, Windows ODBC 애플리케이션에서 사용하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관련 항목에 대해 동일한 기호화된 이름을 사용합니다.
+ODBC 애플리케이션은 unixODBC 헤더(`sql.h`, `sqlext.h`, `sqltypes.h` 및 `sqlucode.h`)를 포함한 후 `/usr/local/include/msodbcsql.h`를 포함하여 MARS(Multiple Active Result Set) 및 다른 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 고유 기능을 사용할 수 있습니다. 그런 다음, Windows ODBC 애플리케이션에서 사용하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관련 항목에 대해 동일한 기호화된 이름을 사용합니다.
 
 ## <a name="available-features"></a>사용 가능한 기능  
-ODBC([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]SQL Server Native Client(ODBC)[)에 대한 ](https://go.microsoft.com/fwlink/?LinkID=134151) Native Client 설명서의 다음 섹션은 macOS 및 Linux 기반 ODBC 드라이버를 사용할 때 유용합니다.  
+ODBC([SQL Server Native Client(ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151))에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 설명서의 다음 섹션은 macOS 및 Linux 기반 ODBC 드라이버를 사용할 때 유용합니다.  
 
 -   [SQL Server와 통신(ODBC)](https://msdn.microsoft.com/library/ms131692.aspx)  
 -   [연결 및 쿼리 시간 제한 지원](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
@@ -39,7 +39,7 @@ ODBC([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]SQL Server Nati
 -   [결과 처리(ODBC)](https://msdn.microsoft.com/library/ms130812.aspx)  
 -   [저장 프로시저 실행](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
 -   [스파스 열 지원(ODBC)](https://msdn.microsoft.com/library/cc280357.aspx)
--   [SSL 암호화](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
+-   [유효성 검사 없이 암호화 사용](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
 -   [테이블 반환 매개 변수](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
 -   [명령 및 데이터 API용 UTF-8 및 UTF-16](https://msdn.microsoft.com/library/ff878241.aspx)
 -   [카탈로그 함수 사용](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
@@ -75,7 +75,7 @@ ODBC 드라이버 13 및 13.1의 경우 SQLCHAR 데이터는 UTF-8이어야 합�
 ODBC 드라이버 17의 경우 다음 문자 세트/인코딩 중 하나의 SQLCHAR 데이터가 지원됩니다.
 
 > [!NOTE]  
-> `iconv`과 `musl`의 `glibc` 차이로 인해 이러한 로캘 대부분은 Alpine Linux에서 지원되지 않습니다.
+> `musl`과 `glibc`의 `iconv` 차이로 인해 이러한 로캘 대부분은 Alpine Linux에서 지원되지 않습니다.
 >
 > 자세한 내용은 [glibc의 기능 차이점](https://wiki.musl-libc.org/functional-differences-from-glibc.html)을 참조하세요.
 
@@ -106,7 +106,7 @@ ODBC 드라이버 17의 경우 다음 문자 세트/인코딩 중 하나의 SQLC
 |ISO-8859-13|라틴어-7|
 |ISO-8859-15|라틴어-9|
 
-연결 시 드라이버에서 로드된 프로세스의 현재 로캘을 검색합니다. 위의 인코딩 중 하나를 사용하는 경우 드라이버에서 SQLCHAR(반각 문자) 데이터에 해당 인코딩을 사용하며, 그렇지 않으면 기본적으로 UTF-8을 사용합니다. 모든 프로세스는 기본적으로 “C” 로캘로 시작하므로(그리고 따라서 드라이버에서 기본적으로 UTF-8을 사용하므로), 애플리케이션이 위의 인코딩 중 하나를 사용해야 하는 경우 연결하기 전에 원하는 로캘을 명시적으로 지정하거나 빈 문자열(예: **)을 사용해 환경의 로캘 설정을 사용함으로써** setlocale`setlocale(LC_ALL, "")` 함수를 사용하여 로캘을 적합하게 설정해야 합니다.
+연결 시 드라이버에서 로드된 프로세스의 현재 로캘을 검색합니다. 위의 인코딩 중 하나를 사용하는 경우 드라이버에서 SQLCHAR(반각 문자) 데이터에 해당 인코딩을 사용하며, 그렇지 않으면 기본적으로 UTF-8을 사용합니다. 모든 프로세스는 기본적으로 “C” 로캘로 시작하므로(그리고 따라서 드라이버에서 기본적으로 UTF-8을 사용하므로), 애플리케이션이 위의 인코딩 중 하나를 사용해야 하는 경우 연결하기 전에 원하는 로캘을 명시적으로 지정하거나 빈 문자열(예: `setlocale(LC_ALL, "")`)을 사용해 환경의 로캘 설정을 사용함으로써 **setlocale** 함수를 사용하여 로캘을 적합하게 설정해야 합니다.
 
 그러므로 인코딩이 UTF-8인 일반적인 Linux 또는 Mac 환경에서 ODBC 드라이버 13 또는 13.1에서 17로 업그레이드하는 사용자의 경우 해당 차이점이 발생하지 않습니다. 그러나 `setlocale()`을 통해 위 목록의 UTF-8이 아닌 인코딩을 사용하는 애플리케이션은 드라이버에 대한 데이터에 UTF-8 대신 해당 인코딩을 사용해야 합니다.
 

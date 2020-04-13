@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4de53a22bb650098db48619bef26efe543dd9ebd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1e2deef952a4c938a65cf1c8a5c8181c2fd6bc04
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137430"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665070"
 ---
 # <a name="non-deterministic-content-models"></a>비결정적 콘텐츠 모델
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1(서비스 팩 1) 이전에, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 비결정적 콘텐츠 모델이 있는 XML 스키마를 거부했습니다.  
   
  그러나 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1부터 비결정적 콘텐츠 모델은 발생빈도 제약 조건이 0 또는 1이거나 해제된 경우 허용됩니다.  

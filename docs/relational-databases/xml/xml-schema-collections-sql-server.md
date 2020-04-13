@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4a334b4a02126023b94e5623b45050b067b48ce6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 850e6b9b1961809f51939edfc07fc1d11943fda7
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68096824"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664901"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 스키마 컬렉션 [SQL Server]
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [xml&#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) 항목에 설명된 것과 같이 SQL Server는 **xml** 데이터 형식을 통해 XML 데이터에 대한 네이티브 스토리지를 제공합니다. 선택적으로 XML 스키마 컬렉션을 통해 **xml** 유형의 열 또는 변수와 XSD 스키마를 연결할 수 있습니다. XML 스키마 컬렉션은 가져온 XML 스키마를 저장하고 다음을 수행하는 데 사용됩니다.  
   
 -   XML 인스턴스 유효성 검사  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5b98f2283cfb9d89277ad97ffc7a883e43a42b4f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9bef65845acd2e81cfea0910e81443d7e4bc390f
+ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042523"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80891154"
 ---
 # <a name="spatial-types---geography"></a>공간 형식 - geography
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68042523"
 ### <a name="a-showing-how-to-add-and-query-geography-data"></a>A. geography 데이터를 추가하고 쿼리하는 방법 보기  
  다음 예에서는 geography 데이터를 추가하고 쿼리하는 방법을 보여 줍니다. 첫 번째 예에서는 ID 열과 `geography` 열 `GeogCol1`이 있는 테이블을 만듭니다. 세 번째 열에서는 `geography` 열을 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현으로 렌더링하고 `STAsText()` 메서드를 사용합니다. 그러고 나면 두 개의 행이 삽입됩니다. 이 중 한 행에는 `LineString` 의 `geography`인스턴스가 들어 있고, 다른 행에는 `Polygon` 인스턴스가 들어 있습니다.  
   
-```  
+```sql  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
     DROP TABLE dbo.SpatialTable;  
 GO  
@@ -64,7 +64,7 @@ GO
 ### <a name="b-returning-the-intersection-of-two-geography-instances"></a>B. 두 geography 인스턴스의 교차점 반환  
  다음 예에서는 `STIntersection()` 메서드를 사용하여 앞에서 삽입한 두 개의 `geography` 인스턴스가 교차하는 지점을 반환합니다.  
   
-```  
+```sql  
 DECLARE @geog1 geography;  
 DECLARE @geog2 geography;  
 DECLARE @result geography;  
@@ -78,7 +78,7 @@ SELECT @result.STAsText();
 ### <a name="c-using-geography-in-a-computed-column"></a>C. 계산 열에 geography 사용  
  다음 예제에서는 **geography** 형식을 사용하여 지속형 계산 열이 있는 테이블을 만듭니다.  
   
-```  
+```sql  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
     DROP TABLE dbo.SpatialTable;  
 GO  
@@ -88,7 +88,7 @@ CREATE TABLE SpatialTable
     locationId int IDENTITY(1,1),  
     location geography,  
     deliveryArea as location.STBuffer(10) persisted  
-)  
+);  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

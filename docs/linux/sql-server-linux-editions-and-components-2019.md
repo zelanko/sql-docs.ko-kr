@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: 68ad6f8f3c56b094b5d14d369452d78237b6dcee
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: b1ebc05fcae4bbf6065b0821101618b7eb64f541
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402664"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002778"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>SQL Server 2019 on Linux 버전 및 지원되는 기능
 
@@ -227,7 +227,6 @@ Developer, Enterprise Core 및 Evaluation Edition에서 지원하는 기능의 �
 | **SQL Server 에이전트** |  하위 시스템: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | 경고 |
 | &nbsp; | 관리되는 백업 |
-| &nbsp; | MSX/TSX를 사용하는 다중 서버 관리 |
 | **고가용성** | 데이터베이스 미러링  |
 | **보안** | 확장 가능 키 관리 |
 | &nbsp; | 연결된 서버의 AD 인증 | 

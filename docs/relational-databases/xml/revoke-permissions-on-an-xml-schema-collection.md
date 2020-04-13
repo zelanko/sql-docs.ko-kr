@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5d2cdfdf47aad32c9fc669ae054cf84c061c0ee5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b3e6a69d61f65cb755fd96d8b0a310f002ab85a5
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000759"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664846"
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>XML 스키마 컬렉션에 대한 사용 권한 취소
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML 스키마 컬렉션을 만드는 권한은 다음 중 하나를 사용하여 취소할 수 있습니다.  
   
 -   관계형 스키마에 대한 ALTER 권한을 취소합니다. 그러면 보안 주체가 관계형 스키마에서 XML 스키마 컬렉션을 만들 수 없습니다. 하지만 보안 주체는 동일 데이터베이스의 다른 관계형 스키마에서 여전히 같은 작업을 수행할 수 있습니다.  

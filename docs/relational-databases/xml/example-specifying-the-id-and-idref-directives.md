@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 76e471b3e6e35e3c6f0568c446b9650466ffa542
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a98637671787e70dff614779c9e49393cae8a6e8
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006702"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664224"
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>예제: ID 및 IDREF 지시어 지정
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 이 예는 [ELEMENTXSINIL 지시어 지정](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) 예와 가장 비슷합니다. 쿼리가 **ID** 및 **IDREF** 지시어를 지정한다는 점만 다릅니다. 이러한 지시어는 < **> 및 <** > 요소에 있는 `OrderHeader`SalesPersonID`OrderDetail` 특성의 유형을 덮어씁니다. 이 쿼리는 문서 간 연결을 형성합니다. 덮어쓴 유형을 확인하려면 스키마가 필요합니다. 따라서 이 쿼리에서는 FOR XML 절에 스키마를 검색하기 위한 **XMLDATA** 옵션을 지정합니다.  
   

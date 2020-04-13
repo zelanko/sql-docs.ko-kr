@@ -12,12 +12,12 @@ ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e50fd6037b10008029d5373348605d11726b6199
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 91a8515417d25c2ef9f23d1698811a5f872227db
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70148043"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664276"
 ---
 # <a name="install-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진 설치
 
@@ -39,15 +39,15 @@ ms.locfileid: "70148043"
 -   [SQL Server 복제](../../relational-databases/replication/sql-server-replication.md) - 선택적 구성 요소입니다.  
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
--   [Machine Learning Services](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md)(R 및 Python)와 [언어 확장](../..//language-extensions/install/install-sql-server-language-extensions-on-windows.md)(Java) - 선택적 구성 요소입니다.
+-   [Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md)(R 및 Python)와 [언어 확장](../..//language-extensions/install/install-sql-server-language-extensions-on-windows.md)(Java) - 선택적 구성 요소입니다.
 ::: moniker-end
 
 ::: monikerRange=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
--   [Machine Learning Services(데이터베이스 내)](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md)(R 및 Python) - 선택적 구성 요소입니다.
+-   [Machine Learning Services(데이터베이스 내)](../../machine-learning/install/sql-machine-learning-services-windows-install.md)(R 및 Python) - 선택적 구성 요소입니다.
 ::: moniker-end
 
 ::: monikerRange=">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
--   [R Services(데이터베이스 내)](../../advanced-analytics/install/sql-r-services-windows-install.md) - 선택적 구성 요소입니다.
+-   [R Services(데이터베이스 내)](../../machine-learning/install/sql-r-services-windows-install.md) - 선택적 구성 요소입니다.
 ::: moniker-end
 
 -   전체 텍스트 검색 - 선택적 구성 요소입니다.  

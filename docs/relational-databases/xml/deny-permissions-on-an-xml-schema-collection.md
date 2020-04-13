@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 068701e16d192ca5edfb45267ebee0cece3619a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b20aa168defac0e42c81336581fb61641443c8a1
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68052285"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664548"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>XML 스키마 컬렉션에 대한 사용 권한 거부
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   새 XML 스키마 컬렉션을 만들거나 기존 스키마 컬렉션을 사용할 권한을 거부할 수 있습니다.  
   
 ## <a name="denying-permission-to-create-an-xml-schema-collection"></a>XML 스키마 컬렉션을 만드는 권한 거부  

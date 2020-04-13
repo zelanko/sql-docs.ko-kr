@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e60c7f85-6823-4d28-93d6-b053d08cc830
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b07b7f782c534c7d98e6e20047f58787fe32e8e7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b39e3fef3b3729f9f2d4e58fe29e303d3070cb64
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67902865"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664858"
 ---
 # <a name="xml-system-stored-procedures"></a>XML 시스템 저장 프로시저
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   SQL Server는 OPENXML과 함께 사용되는 다음 시스템 저장 프로시저를 제공합니다.  
   
 -   [sp_xml_preparedocument&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)  

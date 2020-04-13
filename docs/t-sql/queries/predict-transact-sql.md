@@ -17,17 +17,17 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c97363e7f13c3b42cf447ecf69929171544f3a6b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d5874c8714706e760f40c1862d18b94b3c28952b
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907256"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664420"
 ---
 # <a name="predict-transact-sql"></a>PREDICT(Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-저장된 모델을 기반으로 예측 값 또는 점수를 생성합니다. 자세한 내용은 [PREDICT T-SQL 함수를 사용하는 네이티브 채점](../../advanced-analytics/sql-native-scoring.md)을 참조하세요.
+저장된 모델을 기반으로 예측 값 또는 점수를 생성합니다. 자세한 내용은 [PREDICT T-SQL 함수를 사용하는 네이티브 채점](../../machine-learning/sql-native-scoring.md)을 참조하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -98,7 +98,7 @@ WITH 절을 사용하여 `PREDICT` 함수에서 반환되는 출력의 스키마
 
 ### <a name="supported-algorithms"></a>지원되는 알고리즘
 
-사용하는 알고리즘은 RevoScaleR 패키지에서 지원되는 알고리즘 중 하나를 사용하여 만들어졌어야 합니다. 현재 지원되는 모델의 목록은 [실시간 점수 매기기](../../advanced-analytics/real-time-scoring.md)를 참조하세요.
+사용하는 알고리즘은 RevoScaleR 패키지에서 지원되는 알고리즘 중 하나를 사용하여 만들어졌어야 합니다. 현재 지원되는 모델의 목록은 [실시간 점수 매기기](../../machine-learning/real-time-scoring.md)를 참조하세요.
 
 ### <a name="permissions"></a>사용 권한
 
@@ -182,4 +182,4 @@ WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
 
 ## <a name="next-steps"></a>다음 단계
 
-- [PREDICT T-SQL 함수를 사용하는 네이티브 채점](../../advanced-analytics/sql-native-scoring.md)
+- [PREDICT T-SQL 함수를 사용하는 네이티브 채점](../../machine-learning/sql-native-scoring.md)
