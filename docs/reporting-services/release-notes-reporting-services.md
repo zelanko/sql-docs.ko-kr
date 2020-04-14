@@ -1,6 +1,6 @@
 ---
 title: Reporting Services(2017 이상)의 릴리스 정보 | Microsoft Docs
-ms.date: 12/04/2019
+ms.date: 04/06/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +9,12 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 39049ee5a2561821e0a2284ed66b9b04730998bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9227aa7ad22b64da499020d0c4bc561de00c14f4
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74834247"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809850"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>SSRS(SQL Server Reporting Services)(2017 이상)의 릴리스 정보
 
@@ -50,7 +50,17 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
-## <a name="1406001451-20191113"></a>14.0.600.1451 2019/11/13 
+## <a name="1406001572-20200406"></a>14.0.600.1572, 2020/04/06 
+
+| 해결된 문제 | 세부 정보 |
+| :---------- | :------ |
+| JQuery UI를 1.12로 업데이트했습니다.  | &nbsp; |
+| URL 대/소문자 구분을 수정했습니다.  | &nbsp; |
+| 매개 변수가 많은 경우 매개 변수 배치를 수정했습니다.  | &nbsp; |
+| HTML5 렌더링에서 작동하지 않는 FindString을 수정했습니다.  | &nbsp; |
+| TLS 1.0/1.1 사용 중단을 처리하도록 Analysis Services 클라이언트 라이브러리를 업데이트했습니다. | &nbsp; |
+
+## <a name="1406001451-20191113"></a>14.0.600.1451, 2019/11/13 
 
 | 해결된 문제 | 세부 정보 |
 | :---------- | :------ |

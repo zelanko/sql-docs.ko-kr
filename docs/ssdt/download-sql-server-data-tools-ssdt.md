@@ -13,12 +13,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f6a7628d324236a8fbbe7afa5b80c746f95fec13
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ca30249097fa9ad4eec386ca0fc0698976e5362a
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80271489"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809591"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio용 SSDT(SQL Server Data Tools) 다운로드
 
@@ -84,7 +84,11 @@ Analysis Services, Integration Services 및 Reporting Services 프로젝트 지�
 > [!IMPORTANT]
 > * Visual Studio 2017용 SSDT(15.9.4)를 설치하기 전에 *Analysis Services Projects* 및 *Reporting Services Projects* 확장이 이미 설치되어 있는 경우 모두 제거하고, VS 인스턴스를 모두 닫습니다.
 > * SQL Server 2017용 수신함 구성 요소 파워 쿼리 원본을 제거했습니다. 이제 SQL Server 2017 및 2019용 파워 쿼리 원본을 기본 구성 요소로 발표했습니다. 이 구성 요소는 [여기](https://www.microsoft.com/download/details.aspx?id=100619)에서 다운로드할 수 있습니다.
-> * SQL Server 2019용 수신함 구성 요소 Microsoft Oracle Connector를 제거했습니다. 이제 SQL Server 2019용 Microsoft Oracle Connector를 기본 구성 요소로 발표했습니다. 이 구성 요소는 [여기](https://www.microsoft.com/download/details.aspx?id=58228)에서 다운로드할 수 있습니다.
+> * Oracle 및 Teradata 커넥터를 사용하고 SQL 2019보다 이전 버전의 SQL Server를 대상으로 지정하여 패키지를 디자인하려면 [Microsoft Oracle Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=58228) 및 [Microsoft Teradata Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=100599) 외에도 해당 버전의 Microsoft Connector for Oracle 및 Teradata by Attunity를 설치해야 합니다.
+>    * [SQL Server 2017을 대상으로 하는 Microsoft Connector Version 5.0 for Oracle 및 Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)
+>    * [SQL Server 2016을 대상으로 하는 Microsoft Connector Version 4.0 for Oracle 및 Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=52950)
+>    * [SQL Server 2014를 대상으로 하는 Microsoft Connector Version 3.0 for Oracle 및 Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=44582)
+>    * [SQL Server 2012를 대상으로 하는 Microsoft Connector Version 2.0 for Oracle 및 Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=29283)
 
 ### <a name="release-notes"></a>릴리스 정보
 

@@ -1,22 +1,22 @@
 ---
-title: Microsoft SQL Server용 확장성 프레임워크 API
+title: 확장성 프레임워크 API
 titleSuffix: SQL Server Language Extensions
-description: ''
+description: 확장성 프레임워크를 사용하여 SQL Server용 프로그래밍 언어 확장을 작성할 수 있습니다. Microsoft SQL Server용 확장성 프레임워크 API는 언어 확장에서 SQL Server와 상호 작용하고 데이터를 교환하는 데 사용할 수 있는 API입니다.
 author: dphansen
 ms.author: davidph
-ms.date: 03/30/2020
+ms.date: 04/09/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ba2405be5b4bb4805c524197bbac4ee9baa73ce
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: bc33ebc4ae271841cba2de73cb9168e1a41e7b69
+ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517714"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81012429"
 ---
-# <a name="extensibility-framework-api-for-microsoft-sql-server"></a>Microsoft SQL Server용 확장성 프레임워크 API
+# <a name="extensibility-framework-api-for-sql-server"></a>SQL Server용 확장성 프레임워크 API
 
 확장성 프레임워크를 사용하여 SQL Server용 프로그래밍 언어 확장을 작성할 수 있습니다. Microsoft SQL Server용 확장성 프레임워크 API는 언어 확장에서 SQL Server와 상호 작용하고 데이터를 교환하는 데 사용할 수 있는 API입니다.
 

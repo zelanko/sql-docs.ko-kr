@@ -1,5 +1,6 @@
 ---
 title: 릴리스 정보(SSMS)
+description: SSMS(SQL Server Management Studio) 릴리스 정보.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -10,13 +11,13 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: dnethi
 ms.custom: seo-lt-2019
-ms.date: 02/19/2020
-ms.openlocfilehash: 8be225915b657b4c3bcd8a141c6ebc4c3e6440c4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 04/07/2020
+ms.openlocfilehash: 7abe0347e01ffa922b95b86c71bd3afef7d140ae
+ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77507563"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80873109"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 릴리스 정보
 
@@ -42,20 +43,135 @@ Thank you.
 GeneMi. 2019/04/02.
 -->
 
-## <a name="ssms-184"></a>SSMS 18.4
+## <a name="185"></a>18.5
 
-다운로드: [SSMS 18.4 다운로드](download-sql-server-management-studio-ssms.md)  
-빌드 번호: 15.0.18206.0  
-릴리스 날짜: 2019년 11월 4일
+- 다운로드: [SSMS 18.5 다운로드](download-sql-server-management-studio-ssms.md)
+- 빌드 번호: 15.0.18330.0
+- 릴리스 날짜: 2020년 4월 7일
 
-SSMS 18.4는 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전의 SSMS가 필요한 경우 [이전 SSMS 릴리스](release-notes-ssms.md#previous-ssms-releases)를 참조하세요.
+[중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x40a)
+
+SSMS 18.5는 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전의 SSMS가 필요한 경우 [이전 SSMS 릴리스](release-notes-ssms.md#previous-ssms-releases)를 참조하세요.
+
+18.5는 18.4의 업데이트로, 다음과 같은 새 항목과 버그 수정이 포함되어 있습니다.
+
+### <a name="whats-new-in-185"></a>18.5의 새로운 기능
+
+| 새 항목 | 세부 정보 |
+|----------|---------|
+| Analysis Services | Analysis Services에서 Power BI 엔드포인트에 대한 지원이 추가되었습니다(Azure Analysis Services의 일치 기능). |
+| Analysis Services | 프로파일러: Analysis Services Analysis Services Trace Definition 15.1에 대한 지원이 추가되었습니다. |
+| 데이터 분류 | 데이터 분류 창으로 이동하여 데이터 분류 규칙을 재구성하기 위해 VA 검색 결과 보기에 단추를 추가했습니다. |
+| 데이터 분류 | 데이터 분류의 민감도 순위에 대한 지원이 추가되었습니다. |
+| 하이퍼스케일 | SQL Azure 하이퍼스케일에 *데이터 계층 애플리케이션(.bacpac) 가져오기*에 대한 지원이 추가되었습니다. |
+| Integration Services | MI 에이전트 작업에서 파일 시스템으로부터 SSIS 패키지 실행을 지원합니다. |
+| Integration Services | Azure-SSIS Integration Runtime에서 SSIS 패키지 실행을 호출하도록 Azure 지원 DTExec를 구성하는 데 사용자 친화적 개선 사항이 있습니다.
+| Integration Services | Azure-SSIS Integration Runtime 연결 및 패키지 저장소에서 SSIS 패키지 관리 또는 실행을 지원합니다.
+| Integration Services | 온-프레미스 SSIS 에이전트 작업을 ADF 파이프라인 및 트리거로 마이그레이션하는 것을 지원합니다.
+| Integration Services | SSIS DB에서 SSIS 프로젝트를 내보내는 사용자 환경을 개선했습니다. SSIS 프로젝트에서 패키지를 로드하고 업그레이드한 이전 내보내기와 비교할 때 새 버전 독립적 내보내기는 SSIS 프로젝트에서 패키지를 로드 및 업그레이드하지 않습니다. 대신, 보호 수준을 EncryptSensitiveWithUserKey로 변경하는 것을 제외하고 SSIS DB에 있는 패키지를 프로젝트에 유지합니다. |
+| SMO/스크립팅 | 보기 개체에 새 DwMaterializedViewDistribution 속성을 추가했습니다. |
+| SMO/스크립팅 | *기능 제한*에 대한 지원이 제거되었습니다(이 미리 보기 기능은 SQL Azure 및 SQL 온-프레미스에서 제거됨). |
+| SMO/스크립팅 | 스크립트 생성 마법사에 대한 대상으로 *Notebook*을 추가했습니다. |
+| SMO/스크립팅 | *SQL On Demand*에 대한 지원을 추가했습니다. |
+| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - Platform, Name 및 engineEdition 필드에는 이제 일반적인 쉼표로 구분된 목록(*platform*: \[*Windows*, *Linux*\])뿐 아니라 정규식(*platform*: *\/Windows\|Linux\/* )도 포함될 수 있습니다.
+| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - 13개의 평가 규칙이 추가되었습니다. 자세한 내용은 [GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-assessment-api))를 참조하세요. |
+
+### <a name="bug-fixes-in-185"></a>18.5의 버그 수정
+
+| 새 항목 | 세부 정보 |
+|----------|---------|
+| 접근성 | SSIS ADF/새 일정: *새 일정* 마법사에서 내레이터의 검색 모드에서 포커스 순서가 논리적이지 않은 문제를 해결했습니다. |
+| 접근성 | 스트레치 데이터베이스 마법사: 화면 판독기가 테이블에 대한 정보를 제공할 때 쿼리 테이블의 이름을 알리지 않는 문제를 해결했습니다. |
+| Analysis Services | AAD 연결을 사용하여 AS에서 스크립팅하는 경우 캐시된 연결을 수정합니다. |
+| Always On | Always On AG에 추가된 첫 번째 데이터베이스가 올바르게 조인되지 않는 문제를 해결했습니다.
+| Always On | 빅 데이터 클러스터 엔드포인트에 연결될 때 대시보드를 표시하려고 하면 오류가 표시되는 문제를 해결했습니다. |
+| 감사 | 스토리지 계정의 루트 폴더에 빈 이름의 폴더가 있으면 감사 로그 병합 창이 충돌하는 문제를 해결했습니다. |
+| 감사 | 컨테이너의 루트에 항목이 너무 많은 경우 감사 로그 병합 창에 모든 서버가 표시되지 않는 문제를 해결했습니다. |
+| 데이터 설명 | 많은 수의 테이블이 있는 데이터베이스에서 *데이터 분류* 마법사가 열리지 않는 문제를 해결했습니다. |
+| 데이터 설명 | 이제 유효성 검사 프로세스에서 모든 label/infoType 및 GUID의 구조에 서로 다른 GUID를 적용합니다. |
+| 데이터 설명 | SqlServer2019에서 분류 프로세스를 제거합니다. |
+| 데이터 설명 | 이전 유효성 검사 테스트를 수정하고(순위 추가, 잘못된 속성 *InformationTypes* 제거) 처음 두 지점에 대해 새 항목을 추가하는 중입니다. |
+| 데이터 설명 | 분류된 열 테이블 바로 위에 있는 단추가 이제 이름대로 권장 사항 패널을 최소화합니다. |
+| 일반 SSMS | MSODBC 및 MSOLEDB 드라이버의 버전을 업데이트하는 중입니다. |
+| 일반 SSMS | SSMS에서 두 개 이상의 공통 원본 중단 및 충돌을 해결했습니다. |
+| 일반 SSMS | 찾아보기 단추를 선택할 때 *복원 대화 상자*가 중단되는 하나 이상의 사례를 해결했습니다. |
+| 일반 SSMS | SQL On Demand용 *새 데이터베이스 GUI*를 수정했습니다. |
+| 일반 SSMS | SQL On Demand용 *새 외부 테이블...* 및 *새 외부 데이터 원본...* 템플릿을 수정했습니다. |
+| 일반 SSMS | SQL On Demand에 대한 데이터베이스 속성, 연결 속성, 보고서 숨기기 및 이름 바꾸기를 수정했습니다. |
+| 일반 SSMS | Always Encrypted: 새 Enclave 사용 키를 선택할 때 키 이름 드롭다운이 읽기 전용이 되는 문제를 해결했습니다. |
+| 일반 SSMS | 두 가지 *기타 범주*가 표시되던 *데이터베이스 속성 옵션* 표를 정리했습니다. |
+| 일반 SSMS | "데이터베이스 속성 옵션" 표에서 스크롤 막대가 중간부터 시작하는 문제를 해결했습니다. |
+| 일반 SSMS | Analysis Services 서버에 연결된 상태에서 .sql 파일을 열 때 SSMS가 충돌하는 문제를 해결했습니다. |
+| 일반 SSMS | 연결 대화 상자: "암호 저장" 선택 취소가 작동하지 않는 문제를 해결했습니다. |
+| 일반 SSMS | 서버/사용자에 연결된 자격 증명이 항상 기억되는 문제를 해결했습니다. [UserVoice 37875172](https://feedback.azure.com/forums/908035/suggestions/37875172)를 참조하세요. |
+| 일반 SSMS | 가끔 편집기 창이 제대로 새로 고쳐지지 않는 문제를 해결했습니다. 이 문제는 *도구 > 옵션 > 환경*에서 하드웨어 가속을 사용하지 않도록 설정하면 해결됩니다. [UserVoice 37474042](https://feedback.azure.com/forums/908035/suggestions/37474042)를 참조하세요. |
+| 일반 SSMS | Azure Active Directory 인증이 프록시를 통해 작동하지 않는 문제를 해결했습니다. |
+| 높은 DPI/크기 조정 | *인덱스 속성*의 컨트롤이 잘못 렌더링 될 수 있는 문제(단추가 표와 겹침)를 해결했습니다. [UserVoice 36030424](https://feedback.azure.com/forums/908035/suggestions/36030424)를 참조하세요. |
+| 높은 DPI/크기 조정 | *데이터베이스 속성* 대화 상자에서 4K 모니터에 잘린 컨트롤이 표시될 수 있는 여러 문제를 해결했습니다. |
+| 높은 DPI/크기 조정 | 4k 디스플레이에서 게시 및 구독 마법사를 수정했습니다. |
+| 높은 DPI/크기 조정 | 새 감사 서버 사양 페이지에서 사소한 수정. |
+| 높은 DPI/크기 조정 | 고가용성 마법사의 4k 디스플레이 문제를 수정했습니다. |
+| 높은 DPI/크기 조정 | 사용자가 Xevent 새 세션 창에서 대상을 추가할 수 없는 문제를 해결했습니다. 125% 크기 조정으로 표시할 때 Xevent 세션 마법사에서 세션 이벤트 필터를 설정합니다. |
+| 높은 DPI/크기 조정 | 100% 이상 크기 조정에서 *URL에 데이터베이스 백업* UI에 대한 컨트롤이 보이지 않는 문제를 해결하는 중입니다. |
+|플랫 파일 가져오기 | Null 허용 열에서 모두 선택을 허용하도록 플랫 파일 가져오기 마법사를 업데이트했습니다. [UserVoice 38027137](https://feedback.azure.com/forums/908035/suggestions/38027137)을 참조하세요. |
+| 개체 탐색기 | 연결 대화 상자에서 연결 문자열을 사용하여 연결하는 경우 개체 탐색기가 잘못된 정보를 표시할 수 있는 문제를 해결했습니다. |
+| 개체 탐색기 | 수천 개 테이블(20k+)이 있는 데이터베이스에서 테이블을 확장하는 동안 OE가 느려지는 문제를 해결했습니다. |
+| 쿼리 저장소 UI | 각 개별 대기 범주에 대한 실행 수를 합하는(정확하지 않음) TRC 보고서 계산 실행 횟수(*대기 시간* 메트릭)를 수정했습니다. 쿼리는 단일 실행을 제외하고 대기한 각 대기 범주에 대해 등록됩니다. 따라서 TRC가 대기 범주에서만 합계를 계산하는 경우 실행 횟수가 과장됩니다. 실제로는 wait_category의 최대값이어야 합니다. |
+| 쿼리 저장소 UI | 결과 집합이 상위 x에서 필터링되면 수정된 TRC 자세히 보기가 잘못된 데이터를 반환합니다. 이는 쿼리가 여러 공통 테이블 식을 사용하고 이를 조인하여 최종 결과 집합을 만들기 때문에 발생합니다. 상위 x가 CTE에 푸시되는 경우에는 때때로 필수 행을 필터링할 수 있습니다. 이 경우 결과 집합을 비결정적으로 만들 수 있습니다. 해결 방법은 상위 x 절을 CTE에 푸시하지 않는 것입니다. |
+| 쿼리 저장소 UI | 수정된 플랜 요약은 표 또는 차트 보기 모두에서 마지막 쿼리 실행 대기 시간이 필요합니다. 이 열이 없으면 쿼리가 중단됩니다. 이 변경 집합은 대기 통계 CTE에 이 열을 추가합니다. |
+| 실행 계획 | SSMS가 여러 번 실행되는 연산자에 대해 예상 행 개수를 표시하는 방법을 개선했습니다. (1) SSMS에서 *예상 행 수*를 "실행당 예상 행 수"로 수정했습니다. (2) 새 속성 *모든 실행에 대한 예상 행 수*를 추가했습니다. (3) 속성 *실제 행 수*를 *모든 실행에 대한 실제 행 수*로 수정했습니다. |
+| SQL 에이전트 | SQL 에이전트 작업 단계를 편집하려고 할 때 SSMS UI가 고정되는 문제를 해결했습니다. 이제 SSMS에서 (적어도 런타임 시 결정되지 않은 SQL 에이전트에서 지원하는 간단한 매크로/토큰에 대해) 이름이 토큰화된 output_file을 볼 수 있습니다(*보기* 단추). 또한 사용자가 (SQL 권한 때문에) 파일에 액세스할 수 없는 경우 SSMS는 "보기" 단추를 비활성화하지 않습니다. [UserVoice 39063124](https://feedback.azure.com/forums/908035/suggestions/39063124)를 참조하세요. |
+| SQL 에이전트 | 작업 단계 페이지에서 탭 순서를 수정했습니다. |
+| SQL 에이전트 | 작업 단계 페이지에서 "다음" 및 "이전" 단추의 위치를 반대로 하여 논리적 순서로 배치했습니다. |
+| SQL 에이전트 | UI가 잘리지 않도록 작업 일정 창을 조정했습니다. |
+| SMO/스크립팅 | SQL On Demand에 대한 데이터베이스 스크립팅을 수정했습니다. |
+| SMO/스크립팅 | SqlOnDemand에 대한 스크립팅을 수정하는 명시적인 sqlvariant 캐스트(SqlOnDemand에 대한 잘못된 T-SQL 구문)를 제거하는 중입니다. |
+| SMO/스크립팅 | SQL Azure 인덱스에 대한 FILLFACTOR를 건너뛰는 문제를 해결했습니다. |
+| SMO/스크립팅 | 외부 개체 스크립팅과 관련된 문제를 해결했습니다. |
+| SMO/스크립팅 | *스크립트 생성*이 SQL DB에 대해 확장 속성 스크립팅 옵션을 선택하는 것을 허용하지 않는 문제를 해결했습니다. 또한 이러한 확장 속성의 스크립팅도 수정했습니다. |
+| SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - XTPHashAvgChainBuckets 규칙에서 도움말 링크가 잘못되었습니다. |
+| XEvent UI | 표에서 마우스로 가리키면 항목이 선택되는 문제를 수정했습니다. [UserVoice 38262124](https://feedback.azure.com/forums/908035/suggestions/38262124) 및 [UserVoice 37873921](https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921)을 참조하세요. |
+
+### <a name="known-issues-185"></a>알려진 문제(18.5)
+
+- 머신 A에서 실행되는 SSMS에서 만든 데이터베이스 다이어그램을 머신 B에서 수정할 수 없습니다(SSMS 충돌). 자세한 내용은 [UserVoice 37992649](https://feedback.azure.com/forums/908035/suggestions/37992649)를 참조하세요.
+
+- Azure-SSIS Integration Runtime에서 패키지를 가져오거나 내보낼 때 Integration Services 스크립트 태스크/구성 요소가 포함된 패키지에 대한 스크립트가 손실됩니다. 해결 방법은 *C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild* 폴더를 제거하는 것입니다.
+
+- 새 서버 감사 사양 대화 상자에서 SSMS가 액세스 위반 오류로 인해 충돌을 일으킬 수 있습니다.
+
+- SMO를 사용하는 SSMS 확장은 새 SMO v160을 대상으로 다시 컴파일해야 합니다(SSMS 18.5 릴리스 직후 Nuget.org에서 패키지를 사용할 수 있음).
+
+다른 알려진 문제를 확인하고 제품 팀에 피드백을 제공하려면 [UserVoice](https://feedback.azure.com/forums/908035-sql-server)를 참조할 수 있습니다.
+
+## <a name="previous-ssms-releases"></a>이전 SSMS 릴리스
+
+관련 섹션에서 다운로드 링크를 선택하여 이전 SSMS 버전을 다운로드합니다.
+
+| SSMS 버전 | 빌드 번호 | 릴리스 날짜 |
+|--------------|--------------|-------------------|
+| [18.4](#184) | 15.0.18206.0 | 2019년 11월 4일 |
+| [18.3.1](#1831) | 15.0.18183.0 | 2019년 10월 2일 |
+| [18.2](#182) | 15.0.18142.0 | 2019년 7월 25일 |
+| [18.1](#181) | 15.0.18131.0 | 2019년 6월 11일 |
+| [18.0](#180) | 15.0.18118.0 | 2019년 4월 24일 |
+| [17.9.1](#1791) | 14.0.17289.0 | 2018년 11월 21일 |
+| [16.5.3](#1653) | 13.0.16106.4 | 2017년 1월 30일 |
+
+### <a name="184"></a>18.4
+
+![다운로드](media/download-icon.png) [SSMS 18.4 다운로드](https://go.microsoft.com/fwlink/?linkid=2108895)
+
+- 릴리스 번호: 18.4
+- 빌드 번호: 15.0.18206.0
+- 릴리스 날짜: 2019년 11월 4일
+
+[중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x40a)
 
 18.4는 18.3.1의 업데이트로, 다음과 같은 새 항목과 버그 수정이 포함되어 있습니다.
 
-### <a name="whats-new-in-184"></a>18.4의 새로운 기능
-
 | 새 항목 | 세부 정보 |
-|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|----------|---------|
 | 데이터 분류 | 데이터 분류에 대한 사용자 지정 정보 보호 정책에 대한 지원을 추가했습니다. |
 | 쿼리 저장소 | 대화 상자 속성에서 *쿼리당 최대 계획* 값을 추가했습니다. |
 | 쿼리 저장소 | 새 사용자 지정 캡처 정책에 대한 지원을 추가했습니다. |
@@ -71,10 +187,10 @@ SSMS 18.4는 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | SMO/스크립팅 | [SQL 평가 API](../sql-assessment-api/sql-assessment-api-overview.md) - cmdlet 출력을 업데이트하여 권장 사항의 가독성을 향상했습니다. |
 | XEvent 프로파일러 | XEvent Profiler 세션에 *error_reported* 이벤트를 추가했습니다. |
 
-### <a name="bug-fixes-in-184"></a>18.4의 버그 수정
+#### <a name="bug-fixes-in-184"></a>18.4의 버그 수정
 
 | 새 항목 | 세부 정보 |
-|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|----------|---------|
 | Analysis Services | 다차원 데이터베이스용 DAX 스크립트 편집기에서 IntelliSense에 테이블을 표시하지 않는 문제가 해결되었습니다. |
 | Analysis Services | DAX 파서를 사용하여 엔진 문자열로 변환합니다. 이것은 국제 구분 기호, 소수점 및 공백입니다. |
 | Always Encrypted | ‘클레임 유효성 검사’에서 ‘대/소문자를 구분하지 않는’ 문제를 해결했습니다.   |
@@ -91,45 +207,32 @@ SSMS 18.4는 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | SMO/스크립팅 | ScriptAlter()가 서버에서 문을 실행하는 문제가 해결되었습니다.|
 | SQL 에이전트 | 에이전트 운영자 UI가 UI에서 변경될 때 운영자 이름을 업데이트하지 않거나 스크립팅되지 않는 문제를 해결했습니다. 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/32897647)를 참조하세요.|
 
-### <a name="known-issues-184"></a>알려진 문제(18.4)
+#### <a name="known-issues-184"></a>알려진 문제(18.4)
 
-* 머신 A에서 실행되는 SSMS에서 만든 데이터베이스 다이어그램을 머신 B에서 수정할 수 없습니다(SSMS 충돌). 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649)를 참조하세요.
+- 머신 A에서 실행되는 SSMS에서 만든 데이터베이스 다이어그램을 머신 B에서 수정할 수 없습니다(SSMS 충돌). 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649)를 참조하세요.
 
-* 여러 쿼리 창 간을 전환할 때 다시 그려지는 문제가 있습니다. 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)를 참조하세요. 이 문제의 해결 방법은 *도구 > 옵션*에서 하드웨어 가속을 사용하지 않도록 설정하는 것입니다.
+- 여러 쿼리 창 간을 전환할 때 다시 그려지는 문제가 있습니다. 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)를 참조하세요. 이 문제의 해결 방법은 *도구 > 옵션*에서 하드웨어 가속을 사용하지 않도록 설정하는 것입니다.
 
 다른 알려진 문제를 확인하고 제품 팀에 피드백을 제공하려면 [UserVoice](https://feedback.azure.com/forums/908035-sql-server)를 참조할 수 있습니다.
 
-## <a name="previous-ssms-releases"></a>이전 SSMS 릴리스
-
-관련 섹션에서 다운로드 링크를 선택하여 이전 SSMS 버전을 다운로드합니다.
-
-| SSMS 버전 | 빌드 번호 | 릴리스 날짜 |
-|--------------|--------------|-------------------|
-| [18.3.1](#1831) | 15.0.18183.0 | 2019년 10월 2일 |
-| [18.2](#182) | 15.0.18142.0 | 2019년 7월 25일 |
-| [18.1](#181) | 15.0.18131.0 | 2019년 6월 11일 |
-| [18.0](#180) | 15.0.18118.0 | 2019년 4월 24일 |
-| [17.9.1](#1791) | 14.0.17289.0 | 2018년 11월 21일 |
-| [16.5.3](#1653) | 13.0.16106.4 | 2017년 1월 30일 |
-
 ### <a name="1831"></a>18.3.1
 
-![다운로드](../ssdt/media/download.png) [SSMS 18.3.1 다운로드](https://go.microsoft.com/fwlink/?linkid=2105412)
+![다운로드](media/download-icon.png) [SSMS 18.3.1 다운로드](https://go.microsoft.com/fwlink/?linkid=2105412)
 
-릴리스 번호: 18.3.1  
-빌드 번호: 15.0.18183.0  
-릴리스 날짜: 2019년 10월 2일
+- 릴리스 번호: 18.3.1
+- 빌드 번호: 15.0.18183.0
+- 릴리스 날짜: 2019년 10월 2일
 
-SSMS 18.3.1은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전의 SSMS가 필요한 경우 [이전 SSMS 릴리스](release-notes-ssms.md#previous-ssms-releases)를 참조하세요.
+[중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x40a)
 
 18.3.1은 18.2의 업데이트로, 다음과 같은 새 항목과 버그 수정이 포함되어 있습니다.
 
 #### <a name="whats-new-in-1831"></a>18.3.1의 새로운 기능
 
 | 새 항목 | 세부 정보 |
-|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|----------|---------|
 | 데이터 분류 | 데이터 분류 정보를 열 속성 UI에 추가했습니다(*정보 유형*, *정보 유형 ID*, *민감도 레이블* 및 *민감도 레이블 ID*는 SSMS UI에 노출되지 않음). |
-| Intellisense/편집기 | 최근 SQL Server 2019에 추가된 기능에 대한 지원이 업데이트되었습니다(예: "ALTER SERVER CONFIGURATION"). |
+| Intellisense/편집기 | 최근 SQL Server 2019에 추가된 기능에 대한 지원이 업데이트되었습니다(예: *ALTER SERVER CONFIGURATION*). |
 | Integration Services | ADF 파이프라인에서 SSIS 패키지 실행 작업으로 Azure-SSIS Integration Runtime에서 SSIS 패키지 실행을 호출하는 새 선택 메뉴 항목 `Tools > Migrate to Azure > Configure Azure-enabled DTExec`가 추가되었습니다. |
 | SMO/스크립팅 | Azure SQL DW UNIQUE 제약 조건의 스크립팅 지원에 대한 지원이 추가되었습니다. |
 | SMO/스크립팅 | 데이터 분류 </br> - SQL 버전 10(SQL 2008) 이상에 대한 지원이 추가되었습니다. </br> - SQL 버전 15(SQL 2019) 이상 및 Azure SQL DB에 대한 새 민감도 특성 '순위'가 추가되었습니다. |
@@ -141,7 +244,7 @@ SSMS 18.3.1은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버�
 #### <a name="bug-fixes-in-1831"></a>18.3.1의 버그 수정
 
 | 새 항목 | 세부 정보 |
-|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|----------|---------|
 | Analysis Services | MDX 쿼리 편집기에서 크기 조정 문제를 수정했습니다.|
 | Analysis Services | 사용자가 새 세션을 만들 수 없도록 하는 XEvent UI 문제를 수정했습니다. |
 | SQL Azure에 데이터베이스 배포 | 이 기능이 작동하지 않도록 만드는 문제를 수정했습니다(DacFx에서).|
@@ -170,18 +273,20 @@ SSMS 18.3.1은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버�
 
 ### <a name="182"></a>18.2
 
-![다운로드](../ssdt/media/download.png) [SSMS 18.2 다운로드](https://go.microsoft.com/fwlink/?linkid=2099720)
+![다운로드](media/download-icon.png) [SSMS 18.2 다운로드](https://go.microsoft.com/fwlink/?linkid=2099720)
 
-릴리스 번호: 18.2  
-빌드 번호: 15.0.18142.0  
-릴리스 날짜: 2019년 7월 25일
+- 릴리스 번호: 18.2
+- 빌드 번호: 15.0.18142.0
+- 릴리스 날짜: 2019년 7월 25일
+
+[중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x40a)
 
 18.2는 18.1의 업데이트로 다음과 같은 새 항목 및 버그가 수정되었습니다.
 
 ### <a name="whats-new-in-182"></a>18.2의 새로운 기능
 
-|  새 항목  |  세부 정보  |
-|-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 새 항목 | 세부 정보 |
+|----------|---------|
 | Integration Services(SSIS) | Azure에서 SSIS 패키지 스케줄러에 대한 성능 최적화. |
 | Intellisense/편집기 | 데이터 분류에 대한 지원이 추가되었습니다. |
 | OPTIMIZE_FOR_SEQUENTIAL_KEY | Intellisense 지원이 추가되었습니다. |
@@ -194,8 +299,8 @@ SSMS 18.3.1은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버�
 
 #### <a name="bug-fixes-in-182"></a>18.2의 버그 수정
 
-|  새 항목  |  세부 정보  |
-|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 새 항목 | 세부 정보 |
+|------------|-------|
 | 접근성 | F3 키를 눌러 정렬할 수 있도록 XEvent UI(표)를 업데이트했습니다. |
 | Always On | AG(가용성 그룹)를 삭제하려고 할 때 SSMS에서 오류를 발생하는 문제를 해결했습니다. |
 | Always On | SSMS가 동기로 구성된 경우 읽기 확장 AG(클러스터 유형=없음)를 사용할 때 잘못된 장애 조치(failover) 마법사를 표시하는 문제를 해결했습니다. 이제 SSMS는 클러스터 유형이 없음인 가용성에만 허용되는 Force_Failover_Allow_Data_Loss 옵션에 대한 마법사를 표시합니다. |
@@ -242,10 +347,10 @@ SSMS 18.3.1은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버�
 
 ### <a name="181"></a>18.1
 
-![다운로드](../ssdt/media/download.png) [SSMS 18.1 다운로드](https://go.microsoft.com/fwlink/?linkid=2094583)
+![다운로드](media/download-icon.png) [SSMS 18.1 다운로드](https://go.microsoft.com/fwlink/?linkid=2094583)
 
-- 릴리스 번호: 18.1  
-- 빌드 번호: 15.0.18131.0  
+- 릴리스 번호: 18.1
+- 빌드 번호: 15.0.18131.0
 - 릴리스 날짜: 2019년 6월 11일
 
 [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
@@ -254,7 +359,7 @@ SSMS 18.3.1은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버�
 
 #### <a name="whats-new-in-181"></a>18.1의 새로운 기능
 
-| 새 항목| 세부 정보|
+| 새 항목 | 세부 정보 |
 | :-------| :------|
 | 데이터베이스 다이어그램 | [데이터베이스 다이어그램이 SSMS에 다시 추가됨](https://feedback.azure.com/forums/908035/suggestions/37507828).
 | SSBDIAGNOSE.EXE |SQL Server 진단 명령줄 도구가 SSMS 패키지에 다시 추가되었습니다.|
@@ -264,7 +369,7 @@ SSMS 18.3.1은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버�
 
 | 새 항목 | 세부 정보 |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 접근성 | 에이전트 작업 UI의 향상된 액세스 가능성. |
+| 접근성 | 에이전트 작업 UI의 향상된 액세스 가능성. |'
 | 접근성 | *자동 새로 고침* 단추에 액세스 가능한 이름을 추가하고 사용자가 어떤 단추가 있는지뿐만 아니라 단추 누름의 영향을 알 수 있도록 도와주는 지능형 액세스 가능 이름을 추가하여 Stretch 모니터 페이지의 액세스 가능성을 개선했습니다. |
 | ADS 통합| ADS 등록 서버를 사용하려고 할 때 SSMS에서 발생할 수 있는 오류를 해결했습니다.|
 | 데이터베이스 디자이너 | Latin1_General_100_BIN2_UTF8 데이터 정렬에 대한 지원 추가(SQL Server 2019 CTP3.0에서 사용 가능) |
@@ -314,7 +419,7 @@ SSMS 18.3.1은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버�
 
 ### <a name="180"></a>18.0
 
-![다운로드](../ssdt/media/download.png) [SSMS 18.0 다운로드](https://go.microsoft.com/fwlink/?linkid=2088649)
+![다운로드](media/download-icon.png) [SSMS 18.0 다운로드](https://go.microsoft.com/fwlink/?linkid=2088649)
 
 - 릴리스 번호: 18.0  
 - 빌드 번호: 15.0.18118.0  
@@ -346,7 +451,7 @@ SSMS 18.3.1은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버�
 |SSMS는 더 이상 PATH 환경 변수에 추가되지 않습니다.|SSMS.EXE(및 일반적인 도구)의 경로는 더 이상 경로에 추가되지 않습니다. 사용자는 수동으로 추가하거나 최신 Windows 컴퓨터의 경우 시작 메뉴에서 사용할 수 있습니다.|
 |패키지 ID는 SSMS 확장을 개발하는 데 더 이상 필요하지 않습니다.| 과거에는 SSMS가 잘 알려진 패키지만 선택적으로 로드하여 개발자가 직접 패키지를 등록해야 했습니다. 더 이상 그렇지 않습니다.|
 |일반 SSMS|SSMS의 파일 그룹에 대한 AUTOGROW_ALL_FILES 구성 옵션을 공개합니다.|
-|일반 SSMS|문제가 발생할 수 있는 '경량 풀링' 및 '우선순위 높임' 옵션이 SSMS GUI에서 제거되었습니다. 자세한 내용은 [우선순위 높임 세부 정보 및 권장되지 않은 이유](https://deep.data.blog/2010/01/26/priority-boost-details-and-why-its-not-recommended/)를 참조하세요.
+|일반 SSMS|문제가 발생할 수 있는 '경량 풀링' 및 '우선순위 높임' 옵션이 SSMS GUI에서 제거되었습니다. 자세한 내용은 [우선 순위 높임 세부 정보 및 권장되지 않은 이유](https://deep.data.blog/2010/01/26/priority-boost-details-and-why-its-not-recommended/)를 참조하세요.
 |일반 SSMS|파일을 생성하는 새 메뉴 및 키 바인딩: **CTRL+ALT+N**. **Ctrl+N**을 사용하면 새 쿼리를 계속 만듭니다.|
 |일반 SSMS|이제 사용자는 규칙 이름 하나를 자동으로 생성하는 대신 **새 방화벽 규칙** 대화 상자에서 규칙 이름을 지정할 수 있습니다.|
 |일반 SSMS|특별히 v140+ T-SQL을 위해 편집기에서 Intellisense를 개선했습니다.|
@@ -398,7 +503,7 @@ SSMS 18.3.1은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버�
 |SMO| 사용 중인 SQL 버전의 서비스 수준(예: CU12, RTM)에 매핑되는 서버 개체에 대한 새 ProductUpdateLevel 속성이 공개되었습니다.|
 |SMO| "lastgoodcheckdbtime" 데이터베이스 속성에 매핑되는 데이터베이스 개체에 대한 새 LastGoodCheckDbTime 속성이 공개되었습니다. 해당 속성을 사용할 수 없는 경우 기본값인 1/1/1900 12:00:00 AM이 반환됩니다.|
 |SMO|RegSrvr.xml 파일(등록된 서버 구성 파일)의 위치를 "%AppData%\Microsoft\SQL Server Management Studio"(버전이 지정되지 않은 경우 SSMS의 버전 간에 공유할 수 있음)로 이동했습니다.|
-|SMO|"클라우드 감시"가 새 쿼럼 유형 및 새 리소스 종류로 추가되었습니다.|
+|SMO|"클라우드 감시"를 새 쿼럼 유형 및 새 리소스 종류로 추가했습니다.|
 |SMO|SMO 및 SSMS 모두에 "Edge 제약 조건" 지원이 추가되었습니다.|
 |SMO|SMO 및 SSMS 모두에 "Edge 제약 조건"에 대한 계단식 삭제 지원이 추가되었습니다.|
 |SMO|데이터 분류에 "읽기-쓰기" 권한에 대한 지원이 추가되었습니다.|
@@ -460,7 +565,7 @@ SSMS 18.3.1은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버�
 |DB 백업/복원/연결/분리|SSMS가 유효한 복원 계획을 찾지 못하거나 최적이 아닌 계획을 찾을 수 있는 문제를 해결했습니다. 자세한 내용은 [https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752)를 참조하세요. |
 |DB 백업/복원/연결/분리|"데이터베이스 연결" 마법사에서 이름이 변경된 보조 파일을 표시하지 않는 문제가 해결되었습니다. 이제 파일이 표시되며 이에 대한 주석(예: "찾을 수 없음")이 추가되었습니다. 자세한 내용은 [https://feedback.azure.com/forums/908035/suggestions/32897434](https://feedback.azure.com/forums/908035/suggestions/32897434)를 참조하세요. |
 |데이터베이스 복사 마법사|스크립트 생성/전송/데이터베이스 복사 마법사가 메모리 테이블이 있는 테이블을 만들려고 해도 ansi_padding이 강제 실행되지 않습니다.|
-|데이터베이스 복사 마법사|SQL Server 2017 및 SQL Server 2019에서 데이터베이스 전송 작업/데이터베이스 복사 마법사가 중단되었습니다.|
+|데이터베이스 복사 마법사|SQL Server 2017 및 SQL Server 2019에서 데이터베이스 전송 작업/데이터베이스 복사 마법사가 중단되었습니다.|""
 |데이터베이스 복사 마법사|연결된 외부 데이터 원본을 만들기 전에 스크립트 생성/전송/데이터베이스 복사 마법사 스크립트 테이블을 생성합니다.|
 |연결 대화 상자|DEL 키를 눌러 이전 사용자 이름 목록에서 사용자 이름을 제거할 수 있도록 했습니다. 자세한 내용은 [SSMS 로그인 창에서 사용자 삭제 허용](https://feedback.azure.com/forums/908035/suggestions/32897632)을 참조하세요.|
 |DAC 가져오기 마법사|AAD를 사용하여 연결할 때 DAC 가져오기 마법사가 작동하지 않는 문제가 해결되었습니다.|
@@ -585,7 +690,7 @@ SSMS 18.3.1은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버�
 
 ### <a name="1791"></a>17.9.1
 
-![다운로드](../ssdt/media/download.png) [SSMS 17.9.1 다운로드](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+![다운로드](media/download-icon.png) [SSMS 17.9.1 다운로드](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 
 - 릴리스 번호: 17.9.1  
 - 빌드 번호: 14.0.17289.0  
@@ -630,7 +735,7 @@ SSMS 설치에 문제가 있고, 표준 제거 및 다시 설치로 해결되지
 
 ### <a name="1653"></a>16.5.3
 
-![다운로드](../ssdt/media/download.png) [SSMS 16.5.3 다운로드](https://go.microsoft.com/fwlink/?LinkID=840946)
+![다운로드](media/download-icon.png) [SSMS 16.5.3 다운로드](https://go.microsoft.com/fwlink/?LinkID=840946)
 
 - 릴리스 번호: 16.5.3  
 - 빌드 번호: 13.0.16106.4  

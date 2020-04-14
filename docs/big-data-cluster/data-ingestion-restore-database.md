@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bad1a62752dd75e181d30c28485e1c9b707aa888
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 925254bbdc7200b5e7ca2a3c413de87e8915b2b4
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69652235"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002718"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>SQL Server 빅 데이터 클러스터 마스터 인스턴스에 데이터베이스 복원
 
@@ -29,7 +29,7 @@ ms.locfileid: "69652235"
 이 문서에서는 AdventureWorks 데이터베이스를 복원하는 방법을 보여 주지만, 모든 데이터베이스 백업을 사용할 수 있습니다. 
 
 > [!TIP]
-> AdventureWorks 백업은 [여기](https://www.microsoft.com/download/details.aspx?id=49502)에서 다운로드할 수 있습니다.
+> [AdventureWorks 백업](../samples/adventureworks-install-configure.md)을 다운로드합니다.
 
 ## <a name="copy-the-backup-file"></a>백업 파일 복사
 
