@@ -1,5 +1,5 @@
 ---
-title: 숫자 리터럴 구문 | Microsoft Docs
+title: 숫자 리터럴 구문 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,42 +12,42 @@ helpviewer_keywords:
 - numeric literals [ODBC]
 - literals [ODBC], numeric
 ms.assetid: fb17498d-4f1d-4b3d-b33d-1e62c7d3c32d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9daa81e2e0c2e927ee7407d4a00d5d48c333bd54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e035e3ec53c5b5494c029d6840b9f5c836821209
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67990721"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299863"
 ---
 # <a name="numeric-literal-syntax"></a>숫자 리터럴 구문
-ODBC의 숫자 리터럴에는 다음 구문이 사용 됩니다.  
+다음 구문은 ODBC의 숫자 리터럴에 사용됩니다.  
   
- *숫자-리터럴* :: = *부호 있는 숫자 리터럴 &#124; 부호 없는 숫자* 리터럴  
+ *숫자 리터럴* ::= *서명 된 숫자 - 리터럴 &#124; 서명되지 않은 숫자 - 리터럴*  
   
- *부호 있는 숫자-리터럴* :: = [*부호*] *부호 없는 숫자 리터럴*  
+ *서명된 숫자-리터럴* ::= [*부호]* *서명되지 않은 숫자-리터럴*  
   
- *부호 없는 숫자* 리터럴:: = *정확한 숫자 리터럴 &#124; 근사 숫자 리터럴*  
+ *서명되지 않은 숫자-리터럴* ::= *정확한 숫자-리터럴 &#124; 대략적인 숫자-리터럴*  
   
- *exact-numeric-literal* :: = *unsigned-integer* [*period*[*unsigned-integer*]] *&#124;period unsigned-integer*  
+ *정확한 숫자-리터럴* ::= *서명되지 않은 정수* [*기간*[*서명되지 않은 정수]]* *&#124;기간 서명되지 않은 정수*  
   
- *sign* :: = *더하기 기호 &#124; 빼기 기호*  
+ *기호* ::= *플러스 기호 &#124; 마이너스 기호*  
   
- *근사 숫자 리터럴* :: =가 수 *E 지* 수  
+ *근사 숫자-리터럴* ::= *사마증 E 지수*  
   
- 가 *중::* = *정확한 숫자 리터럴*  
+ *사마증* ::= *정확한 숫자 리터럴*  
   
- *지수가* :: = *signed-integer*  
+ *지수* ::= *서명된 정수*  
   
- *signed-integer* :: = [*sign*] *unsigned-integer*  
+ *서명된 정수* ::= [*서명되지* *않은 정수*  
   
- *unsigned-integer* :: = *digit* ...  
+ *서명되지 않은 정수* ::= *숫자...*  
   
- *더하기 기호* :: =*+*  
+ *플러스 기호* ::=*+*  
   
- *빼기 기호* :: =-  
+ *마이너스 기호* ::= -  
   
- *digit* :: = 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
+ *숫자* ::= 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 0 &#124;  
   
- *period* :: =
+ *기간* :=.

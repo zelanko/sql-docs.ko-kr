@@ -1,5 +1,5 @@
 ---
-title: SQL 및 ODBC 소개 | Microsoft Docs
+title: SQL 및 ODBC 소개 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 27ed4223-89ff-4044-8bb9-19c8eafa8ad8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 911f7b71f3d0ae555853560a33744a3fc333512d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8cffbbf47bbd8febfb5fa4187ead92f40b3a11e7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68093728"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81295896"
 ---
 # <a name="introduction-to-sql-and-odbc"></a>SQL 및 ODBC 소개
-ODBC는 서로 다른 유형의 Dbms (데이터베이스 관리 시스템)에 대 한 일관 된 액세스 방법을 제공 하기 위해 만들어졌습니다. 이 소개에서는 ODBC 개발과 관련 된 개념을 설명 합니다.  
+ODBC는 DBMS(데이터베이스 관리 시스템)에 대한 다양한 또는 이기종적인 데이터베이스에 대한 균일한 액세스 방법을 제공하기 위해 만들어졌습니다. 이 소개에서는 ODBC 개발과 관련된 개념에 대해 설명합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: SQLBulkOperations를 사용 하 여 행 페치 | Microsoft Docs
+title: SQLBulkOperations로 행 가져오기 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,26 +15,26 @@ helpviewer_keywords:
 - updating data [ODBC], bookmarks
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: 0efee2d6-ce94-411e-9976-97ba28b8da37
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 60b6673c4a6d618e52c78b48fe7307c20c8628f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ae0b4c2114059cecaaf8f8825169300f131bd473
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68069838"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305652"
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>SQLBulkOperations로 행 페치
-SQLBulkOperations에 대 한 호출로 책갈피를 사용 하 여 행 집합으로 데이터를 **Refetched** 수 있습니다. 인출할 행은 바인딩된 책갈피 열의 책갈피를 통해 식별 됩니다. SQL_COLUMN_IGNORE 값이 있는 열은 인출 되지 않습니다.  
+**SQLBulkOperations에** 대한 호출을 통해 책갈피를 사용하여 데이터를 행 집합으로 다시 가져올 수 있습니다. 가져올 행은 바인딩된 책갈피 열의 책갈피로 식별됩니다. SQL_COLUMN_IGNORE 값이 있는 열은 가져오지 않습니다.  
   
- **SQLBulkOperations**를 사용 하 여 대량 페치를 수행 하기 위해 응용 프로그램은 다음을 수행 합니다.  
+ **SQLBulkOperations를**사용하여 대량 인출을 수행하려면 응용 프로그램이 다음을 수행합니다.  
   
-1.  업데이트할 모든 행의 책갈피를 검색 하 고 캐시 합니다. 책갈피와 열 단위 바인딩이 모두 사용 되는 경우 책갈피는 배열에 저장 됩니다. 책갈피와 행 단위 바인딩이 모두 사용 되는 경우 책갈피는 행 구조의 배열에 저장 됩니다.  
+1.  업데이트할 모든 행의 책갈피를 검색하고 캐시합니다. 두 개 이상의 책갈피와 열별 바인딩이 사용되는 경우 책갈피는 배열에 저장됩니다. 책갈피와 행별 바인딩이 두 개 이상 사용되는 경우 책갈피는 행 구조의 배열에 저장됩니다.  
   
-2.  SQL_ATTR_ROW_ARRAY_SIZE statement 특성을 인출 하 여 책갈피 값을 포함 하는 버퍼 또는 책갈피의 배열을 열 0에 바인딩하는 행 수로 설정 합니다.  
+2.  SQL_ATTR_ROW_ARRAY_SIZE 문 특성을 가져올 행 수로 설정하고 책갈피 값 또는 책갈피 배열을 포함하는 버퍼를 열 0으로 바인딩합니다.  
   
-3.  필요에 따라 각 열의 길이/표시기 버퍼에 값을 설정 합니다. 이는 문자열 버퍼에 바인딩된 열에 대 한 데이터 또는 SQL_NTS 바이트 길이, 이진 버퍼에 바인딩된 열의 데이터 바이트 길이, NULL로 설정 될 열에 대 한 SQL_NULL_DATA입니다. 응용 프로그램은 기본값 (있는 경우) 또는 NULL (있는 경우 SQL_COLUMN_IGNORE)로 설정 될 열에 대 한 길이/표시기 버퍼의 값을 설정 합니다 (있는 경우).  
+3.  필요에 따라 각 열의 길이/표시기 버퍼의 값을 설정합니다. 문자열 버퍼에 바인딩된 열에 대한 데이터 또는 SQL_NTS 바이트 길이, 이진 버퍼에 바인딩된 열에 대한 데이터의 바이트 길이 및 NULL로 설정될 모든 열에 대한 SQL_NULL_DATA. 응용 프로그램은 SQL_COLUMN_IGNORE 위해 기본값(있는 경우) 또는 NULL(그렇지 않은 경우)으로 설정될 해당 열의 길이/표시기 버퍼에서 값을 설정합니다.  
   
-4.  SQL_FETCH_BY_BOOKMARK로 설정 된 *Operation* 인수를 사용 하 여 **SQLBulkOperations** 를 호출 합니다.  
+4.  SQL_FETCH_BY_BOOKMARK 설정된 *작업* 인수를 사용하여 **SQLBulkOperations를** 호출합니다.  
   
- 특정 열에 대해 작업을 수행 하는 것을 방지 하기 위해 응용 프로그램에서 row 작업 배열을 사용할 필요는 없습니다. 응용 프로그램은 해당 행의 책갈피를 바인딩된 책갈피 배열에 복사 하 여 페치할 행을 선택 합니다.
+ 응용 프로그램이 특정 열에서 수행되는 작업을 방지하기 위해 행 작업 배열을 사용할 필요가 없습니다. 응용 프로그램은 해당 행의 책갈피만 바인딩된 책갈피 배열에 복사하여 가져올 행을 선택합니다.

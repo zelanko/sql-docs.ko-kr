@@ -1,5 +1,5 @@
 ---
-title: 헤더 파일 | Microsoft Docs
+title: 헤더 파일 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - header files [ODBC]
 ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2d20f2535038b13eac0b8d5ca20dfa77bfc12588
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 62364d828e7b1f1ed8c70cae7ae1fc7dc3bc33fc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68139033"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300193"
 ---
 # <a name="header-files"></a>헤더 파일
-Sql .h 헤더 파일에는 핵심 ODBC 인터페이스 규칙 수준의 함수 및 기능에 대 한 프로토타입이 포함 되어 있습니다. Sqlext .h 헤더 파일에는 수준 1 및 수준 2 API 규칙 수준의 함수 및 기능에 대 한 프로토타입이 포함 되어 있습니다. Sqltypes 헤더 파일에는 SQL 데이터 형식에 대 한 형식 정의와 표시기가 포함 되어 있습니다.  
+Sql.h 헤더 파일에는 코어 ODBC 인터페이스 준수 수준의 함수 및 기능에 대한 프로토타입이 포함되어 있습니다. Sqlext.h 헤더 파일에는 수준 1 및 수준 2 API 준수 수준의 함수 및 기능에 대한 프로토타입이 포함되어 있습니다. Sqltypes.h 헤더 파일에는 SQL 데이터 형식에 대한 형식 정의 및 표시등이 포함되어 있습니다.  
   
- 헤더 파일에는 응용 프로그램 또는 드라이버가 서로 다른 버전의 ODBC에 대해 컴파일되도록 설정할 수 있는 **#define**ODBCVER이 포함 되어 있습니다.  
+ 헤더 파일에는 모두 응용 프로그램 또는 드라이버가 다른 버전의 ODBC에 대해 컴파일되도록 설정할 수 있는 **#define**ODBCVER가 포함되어 있습니다.  
   
- ISO CLI에 맞추고 그룹 CLI를 열면 헤더 파일에 **SQLGetInfo**호출에 사용 되는 정보 형식에 대 한 별칭이 포함 됩니다. 다음 표에서 "ODBC 이름" 열은 [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)의 정보 유형에 대 한 odbc 이름을 나타냅니다. "헤더 파일의 별칭" 열은 ISO CLI 및 오픈 그룹 CLI에서 사용 되는 이름을 나타냅니다. 이러한 매니페스트 이름의 실제 숫자 값은 ODBC와 표준 CLIs에서 동일 합니다. 이러한 별칭을 사용 하면 표준 규격 응용 프로그램 또는 드라이버 *에서 ODBC 2.x* 헤더 파일을 사용 하 여 컴파일할 수 있습니다.  
+ ISO CLI 및 열기 그룹 CLI에 맞추기 위해 헤더 파일에는 **SQLGetInfo**에 대한 호출에 사용되는 정보 유형에 대한 별칭이 포함되어 있습니다. 다음 표에서 "ODBC 이름" 열은 [ODBC API 참조의](../../../odbc/reference/syntax/odbc-api-reference.md)정보 형식에 대한 ODBC 이름을 나타냅니다. "헤더 파일의 별칭" 열은 ISO CLI 및 열린 그룹 CLI에 사용되는 이름을 나타냅니다. 이러한 매니페스트 이름의 실제 숫자 값은 ODBC와 표준 CLI 모두에서 동일합니다. 이러한 별칭을 사용하면 표준을 준수하는 응용 프로그램 이나 드라이버가 ODBC *3.x* 헤더 파일로 컴파일할 수 있습니다.  
   
- 이러한 별칭에는 이름이 더 이해 하기 쉽도록 ODBC 이름에 약어 확장이 포함 되어 있습니다. "MAX"는 "MAXIMUM", "LEN" to "LENGTH", "MULT" to "MULTIPLE", "OJ" to "OUTER_JOIN" 및 "TRANSACTION"으로 확장 됩니다.  
+ 이러한 별칭에는 ODBC 이름의 약어 확장이 포함되어 있으므로 이름을 더 이해할 수 있습니다. "MAX"는 "최대", "LEN"에서 "길이"로, "MULT"에서 "MULTIPLE"으로, "OJ"를 "OUTER_JOIN"로, "TXN"을 "트랜잭션"으로 확장합니다.  
   
 |ODBC 이름|헤더 파일의 별칭|  
 |---------------|--------------------------|  

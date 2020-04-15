@@ -1,5 +1,5 @@
 ---
-title: SQLBindParameter (Excel 드라이버) | Microsoft Docs
+title: SQLBind매개 변수 (엑셀 드라이버) | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Excel driver [ODBC], SQLBindParameter
 - SQLBindParameter function [ODBC], Excel Driver
 ms.assetid: 40489bc5-3e2a-425e-892d-e0dc037f4d7a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8b33200e0628566bc88f770ca1fe8fd895ecbf2a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c3a2d0a03bded3ec909cd158b36f52ee9007647e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68063249"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300633"
 ---
 # <a name="sqlbindparameter-excel-driver"></a>SQLBindParameter(Excel 드라이버)
 > [!NOTE]  
->  이 항목에서는 Excel 드라이버 관련 정보를 제공 합니다. 이 함수에 대 한 일반 정보는 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)에서 적절 한 항목을 참조 하세요.  
+>  이 항목에서는 Excel 드라이버 관련 정보를 제공합니다. 이 함수에 대한 일반적인 정보는 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)에서 적절한 항목을 참조하십시오.  
   
- Microsoft Excel 드라이버를 사용 하는 경우 매개 변수를 사용 하 여 SQL_CHAR 열에 NULL을 삽입 하는 INSERT 문을 실행 하면 SQLSTATE 01004, "데이터가 잘렸습니다."와 함께 SQL_SUCCESS_WITH_INFO 반환 됩니다.
+ Microsoft Excel 드라이버를 사용하면 매개 변수를 사용하여 SQL_CHAR 열에 NULL을 삽입하는 INSERT 문을 실행하면 SQLSTATE 01004 "잘린 데이터"가 SQL_SUCCESS_WITH_INFO 반환됩니다.

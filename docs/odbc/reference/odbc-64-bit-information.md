@@ -1,5 +1,5 @@
 ---
-title: ODBC 64 비트 정보 | Microsoft Docs
+title: ODBC 64비트 정보 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,30 +8,30 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f9ead25f93ff16d453923be437dfacd7572c09f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b9cb8e3fc42d0ad71ac83f1432c165f243f39012
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67937973"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298303"
 ---
 # <a name="odbc-64-bit-information"></a>ODBC 64비트 정보
-Windows Server 2003부터 Microsoft 운영 체제는 64 비트 ODBC 라이브러리를 지원 합니다. MDAC 2.7 SDK와 함께 제공 되는 ODBC 헤더 및 라이브러리에는 프로그래머가 새 64 비트 플랫폼에 대 한 코드를 쉽게 작성할 수 있도록 변경 된 내용이 포함 되어 있습니다. 코드에서 아래 나열 된 ODBC 정의 형식을 사용 하도록 하 여 **_WIN64** 또는 **WIN32** 매크로를 기반으로 64 비트 및 32 비트 플랫폼에 대해 동일한 소스 코드를 컴파일할 수 있습니다.  
+Windows Server 2003을 시작으로 Microsoft 운영 체제는 64비트 ODBC 라이브러리를 지원했습니다. MDAC 2.7 SDK와 함께 처음 제공되는 ODBC 헤더와 라이브러리에는 프로그래머가 새로운 64비트 플랫폼에 대한 코드를 쉽게 작성할 수 있도록 변경 사항이 포함되어 있습니다. 코드에서 아래에 나열된 ODBC 정의 형식을 사용하므로 **_WIN64** 또는 **WIN32** 매크로를 기반으로 64비트 및 32비트 플랫폼에 대해 동일한 소스 코드를 컴파일할 수 있습니다.  
   
- 64 비트 프로세서를 프로그래밍 하는 경우 다음과 같은 몇 가지 사항을 염두에 두어야 합니다.  
+ 64비트 프로세서를 프로그래밍할 때 염두에 두어야 할 몇 가지 사항이 있습니다.  
   
--   포인터의 크기가 4 바이트에서 8 바이트로 변경 되었지만 정수 및 long는 여전히 4 바이트 값입니다. **INT64** 및 **UINT64** 형식은 8 바이트 정수에 대해 정의 되었습니다. 새 ODBC 유형인 **Sqllen** 및 **sqlulen** 은 **_WIN64** 정의 된 경우 Odbc 헤더 파일에서 **INT64** 및 **UINT64** 로 정의 됩니다.  
+-   포인터의 크기가 4바이트에서 8바이트로 변경되었지만 정수 및 롱은 여전히 4바이트 값입니다. **INT64** 및 **UINT64** 형식은 8바이트 정수에 대해 정의되었습니다. 새로운 ODBC 형식 **SQLLEN** 및 **SQLULEN은** **_WIN64** 정의된 경우 ODBC 헤더 파일에 **INT64** 및 **UINT64로** 정의됩니다.  
   
--   ODBC의 여러 함수는 포인터 매개 변수를 가져오는 것으로 선언 됩니다. 32 비트 ODBC에서 포인터로 정의 된 매개 변수는 호출의 컨텍스트에 따라 정수 값 또는 버퍼에 대 한 포인터를 전달 하는 데 자주 사용 됩니다. 물론 포인터와 정수의 크기가 동일 하기 때문에 가능 합니다. 64 비트 Windows에서는 그렇지 않습니다.  
+-   ODBC의 여러 함수는 포인터 매개 변수를 취하는 것으로 선언됩니다. 32비트 ODBC에서 포인터로 정의된 매개 변수는 호출 컨텍스트에 따라 정수 값 또는 포인터를 버퍼에 전달하는 데 자주 사용되었습니다. 물론 포인터와 정수의 크기가 동일하기 때문에 가능했습니다. 64 비트 윈도우에서는 그렇지 않습니다.  
   
--   이전에 **Sqlinteger** 및 **SQLUINTEGER** 매개 변수를 사용 하 여 정의 된 일부 ODBC 함수가 새로운 **Sqlinteger** 및 **sqlulen** typedef를 사용 하도록 적절 하 게 변경 되었습니다. 이러한 변경 내용은 다음 섹션인 함수 선언 변경 내용에 나와 있습니다.  
+-   **SQLINTEGER** 및 **SQLUINTEGER** 매개 변수로 이전에 정의된 일부 ODBC 함수는 새 **SQLLEN** 및 **SQLULEN** 형식 defs를 사용하기에 적합한 경우 변경되었습니다. 이러한 변경 내용은 다음 섹션인 함수 선언 변경에 나열됩니다.  
   
--   다양 한 **sqlset** 및 **sqlset** 함수를 통해 설정할 수 있는 일부 설명자 필드는 64 비트 값을 수용할 수 있도록 변경 되었으며, 다른 일부는 여전히 32 비트 값입니다. 이러한 필드를 설정 하 고 검색할 때 적절 한 크기의 변수를 사용 해야 합니다. 변경 된 설명자 필드에 대 한 세부 정보는 함수 선언 변경 아래에 나열 됩니다.  
+-   다양한 **SQLSet** 및 **SQLGet** 함수를 통해 설정할 수 있는 설명자 필드 중 일부는 64비트 값을 수용하도록 변경되었으며 다른 필드는 여전히 32비트 값입니다. 이러한 필드를 설정하고 검색할 때 적절한 크기의 변수를 사용해야 합니다. 설명자 필드가 변경된 세부 사항은 함수 선언 변경 사항에 나열됩니다.  
   
 ## <a name="function-declaration-changes"></a>함수 선언 변경  
- 64 비트 프로그래밍에 대해 다음과 같은 함수 시그니처가 변경 되었습니다. 굵은 텍스트의 항목은 서로 다른 특정 매개 변수입니다.  
+ 다음 함수 시그니처가 64비트 프로그래밍에 대해 변경되었습니다. 굵은 텍스트의 항목은 다른 특정 매개 변수입니다.  
   
 ```cpp
 SQLBindCol (SQLHSTMT StatementHandle, SQLUSMALLINT ColumnNumber,  
@@ -111,8 +111,8 @@ SQLSetStmtOption (SQLHSTMT StatementHandle, SQLUSMALLINT Option,
    SQLULEN Value);  
 ```  
   
-## <a name="changes-in-sql-data-types"></a>SQL 데이터 형식의 변경 내용  
- 다음 네 가지 SQL 형식은 여전히 32 비트 에서만 지원 됩니다. 64 비트 컴파일러에는 정의 되어 있지 않습니다. 이러한 형식은 MDAC 2.7의 모든 매개 변수에 더 이상 사용 되지 않습니다. 이러한 형식을 사용 하면 64 비트 플랫폼에서 컴파일러 오류가 발생 합니다.  
+## <a name="changes-in-sql-data-types"></a>SQL 데이터 유형의 변경 사항  
+ 다음 네 가지 SQL 유형은 32비트에서만 계속 지원됩니다. 64비트 컴파일러에 대해 정의되지 않습니다. 이러한 형식은 MDAC 2.7의 매개 변수에 더 이상 사용되지 않습니다. 이러한 형식을 사용하면 64비트 플랫폼에서 컴파일러 오류가 발생합니다.  
   
 ```cpp
 #ifdef WIN32   
@@ -123,7 +123,7 @@ typedef SQLLEN SQLROWOFFSET;
 #endif  
 ```  
   
- 32 비트 및 64 비트 컴파일러에 대해 SQLSETPOSIROW의 정의가 변경 되었습니다.  
+ SQLSETPOSIROW의 정의는 32비트 및 64비트 컴파일러 모두에 대해 변경되었습니다.  
   
 ```cpp
 #ifdef _WIN64   
@@ -133,7 +133,7 @@ typedef UINT64 SQLSETPOSIROW;
 #endif  
 ```  
   
- 64 비트 컴파일러의 경우 SQLLEN 및 SQLULEN의 정의가 변경 되었습니다.  
+ SQLLEN 및 SQLULEN의 정의는 64비트 컴파일러에 대해 변경되었습니다.  
   
 ```cpp
 #ifdef _WIN64   
@@ -145,7 +145,7 @@ typedef UINT64 SQLULEN;
 #endif  
 ```  
   
- SQL_C_BOOKMARK는 ODBC 3.0에서 더 이상 사용 되지 않지만 2.0 클라이언트의 64 비트 컴파일러에서는이 값이 변경 되었습니다.  
+ SQL_C_BOOKMARK ODBC 3.0에서 더 이상 사용되지 않지만 2.0 클라이언트의 64비트 컴파일러의 경우 이 값이 변경되었습니다.  
   
 ```cpp
 #ifdef _WIN64   
@@ -155,18 +155,18 @@ typedef UINT64 SQLULEN;
 #endif  
 ```  
   
- 책갈피 형식은 새 헤더에서 다르게 정의 됩니다.  
+ BOOKMARK 유형은 최신 헤더에서 다르게 정의됩니다.  
   
 ```cpp
 typedef SQLULEN BOOKMARK;  
 ```  
   
-## <a name="values-returned-from-odbc-api-calls-through-pointers"></a>포인터를 통해 ODBC API 호출에서 반환 되는 값  
- 다음 ODBC 함수 호출은 데이터를 드라이버에서 반환 하는 버퍼에 대 한 포인터를 입력 매개 변수로 사용 합니다. 반환 되는 데이터의 컨텍스트 및 의미는 함수에 대 한 다른 입력 매개 변수에 의해 결정 됩니다. 경우에 따라 이러한 메서드는 일반적인 32 비트 (4 바이트) 정수 값 대신 64 비트 (8 바이트 정수) 값을 반환할 수 있습니다. 이러한 경우는 다음과 같습니다.  
+## <a name="values-returned-from-odbc-api-calls-through-pointers"></a>포인터를 통해 ODBC API 호출에서 반환 된 값  
+ 다음 ODBC 함수 호출은 드라이버에서 데이터가 반환되는 버퍼에 대한 포인터를 입력 매개 변수로 사용합니다. 반환되는 데이터의 컨텍스트 와 의미는 함수에 대한 다른 입력 매개 변수에 의해 결정됩니다. 경우에 따라 이러한 메서드는 이제 일반적인 32비트(4바이트) 정수 값 대신 64비트(8바이트 정수) 값을 반환할 수 있습니다. 이러한 경우는 다음과 같습니다.  
   
  **SQLColAttribute**  
   
- *FieldIdentifier* 매개 변수에 다음 값 중 하나가 있는 경우 **NumericAttribute*에 64 비트 값이 반환 됩니다.  
+ *FieldIdentifier* 매개 변수에 다음 값 중 하나가 있으면 **numericAttribute*: 64비트 값이 반환됩니다.  
   
  SQL_DESC_AUTO_UNIQUE_VALUE  
   
@@ -202,9 +202,9 @@ typedef SQLULEN BOOKMARK;
   
  SQL_DESC_UPDATABLE  
   
- **SQLColAttributes**  
+ **SQLCol속성**  
   
- *FDescType* 매개 변수에 다음 값 중 하나가 있는 경우 **pfDesc*에 64 비트 값이 반환 됩니다.  
+ *fDescType* 매개 변수에 다음 값 중 하나가 있으면 **pfDesc에서*64비트 값이 반환됩니다.  
   
  SQL_COLUMN_COUNT  
   
@@ -228,7 +228,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetConnectAttr**  
   
- *특성* 매개 변수에 다음 값 중 하나가 있으면 *값*에 64 비트 값이 반환 됩니다.  
+ *특성* 매개 변수에 다음 값 중 하나가 있으면 64비트 값이 *값으로*반환됩니다.  
   
  SQL_ATTR_ASYNC_ENABLE  
   
@@ -238,15 +238,15 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_QUIET_MODE  
   
- **SQLGetConnectOption**  
+ **SQLGet연결 옵션**  
   
- *특성* 매개 변수에 다음 값 중 하나가 있으면 *값*에 64 비트 값이 반환 됩니다.  
+ *특성* 매개 변수에 다음 값 중 하나가 있으면 64비트 값이 *값으로*반환됩니다.  
   
  SQL_ATTR_QUIET_MODE  
   
  **SQLGetDescField**  
   
- *FieldIdentifier* 매개 변수에 다음 값 중 하나를 사용할 경우 **valueptr*에서 64 비트 값이 반환 됩니다.  
+ *FieldIdentifier* 매개 변수에 다음 값 중 하나가 있으면 **ValuePtr*: 64비트 값이 반환됩니다.  
   
  SQL_DESC_ARRAY_SIZE  
   
@@ -270,7 +270,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetDiagField**  
   
- *DiagIdentifier* 매개 변수에 다음 값 중 하나가 있는 경우 **DiagInfoPtr*에 64 비트 값이 반환 됩니다.  
+ *DiagIdentifier* 매개 변수에 다음 값 중 하나가 있으면 **DiagInfoPtr*: 64비트 값이 반환됩니다.  
   
  SQL_DIAG_CURSOR_ROW_COUNT  
   
@@ -280,7 +280,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetInfo**  
   
- *InfoType* 매개 변수에 다음 값 중 하나가 있는 경우 **Infovalueptr*에서 64 비트 값이 반환 됩니다.  
+ *InfoType* 매개 변수에 다음 값 중 하나가 있으면 **InfoValuePtr*: 64비트 값이 반환됩니다.  
   
  SQL_DRIVER_HDBC  
   
@@ -288,7 +288,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_DRIVER_HLIB  
   
- *InfoType* 에 다음 두 값 중 하나가 있는 경우 **Infovalueptr* 은 입력 및 출력 모두에서 64 비트입니다.  
+ *InfoType에* 다음 2개 값 중 하나가 있는 경우 **InfoValuePtr은* 입력 및 출력 모두에서 64비트입니다.  
   
  SQL_DRIVER_HDESC  
   
@@ -296,7 +296,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetStmtAttr**  
   
- *특성* 매개 변수에 다음 값 중 하나를 사용할 경우 **valueptr*에서 64 비트 값이 반환 됩니다.  
+ *특성* 매개 변수에 다음 값 중 하나가 있으면 **ValuePtr*: 64비트 값이 반환됩니다.  
   
  SQL_ATTR_APP_PARAM_DESC  
   
@@ -362,9 +362,9 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_USE_BOOKMARKS  
   
- **SQLGetStmtOption**  
+ **SQLGetStmt옵션**  
   
- *Option* 매개 변수에 다음 값 중 하나를 사용할 경우 **값*에 64 비트 값이 반환 됩니다.  
+ *Option* 매개 변수에 다음 값 중 하나가 있으면 64비트 값이 **값으로*반환됩니다.  
   
  SQL_KEYSET_SIZE  
   
@@ -376,7 +376,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetConnectAttr**  
   
- *특성* 매개 변수에 다음 값 중 하나가 있는 경우 64 비트 값은 *값*으로 전달 됩니다.  
+ *특성* 매개 변수에 다음 값 중 하나가 있으면 64비트 값이 *값으로*전달됩니다.  
   
  SQL_ATTR_ASYNC_ENABLE  
   
@@ -386,15 +386,15 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_QUIET_MODE  
   
- **SQLSetConnectOption**  
+ **SQLSet연결옵션**  
   
- *특성* 매개 변수에 다음 값 중 하나가 있는 경우 64 비트 값은 *값*으로 전달 됩니다.  
+ *특성* 매개 변수에 다음 값 중 하나가 있으면 64비트 값이 *값으로*전달됩니다.  
   
  SQL_ATTR_QUIET_MODE  
   
  **SQLSetDescField**  
   
- *FieldIdentifier* 매개 변수에 다음 값 중 하나를 사용할 경우 64 비트 값은 *valueptr*에 전달 됩니다.  
+ *FieldIdentifier* 매개 변수에 다음 값 중 하나가 있는 경우 64비트 값은 *ValuePtr:*  
   
  SQL_DESC_ARRAY_SIZE  
   
@@ -418,7 +418,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetStmtAttr**  
   
- *특성* 매개 변수에 다음 값 중 하나가 있는 경우 64 비트 값은 이상 값에 전달 *됩니다.*  
+ *특성* 매개 변수에 다음 값 중 하나가 있는 경우 64비트 값은 *ValuePtr:*  
   
  SQL_ATTR_APP_PARAM_DESC  
   
@@ -484,9 +484,9 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_USE_BOOKMARKS  
   
- **SQLSetStmtOption**  
+ **SQLSetStmt옵션**  
   
- *Option* 매개 변수에 다음 값 중 하나가 있는 경우 64 비트 값은 *값*으로 전달 됩니다.  
+ *Option* 매개 변수에 다음 값 중 하나가 있는 경우 64비트 값은 *값으로*전달됩니다.  
   
  SQL_KEYSET_SIZE  
   

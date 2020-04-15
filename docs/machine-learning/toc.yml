@@ -61,7 +61,7 @@
           href: ../machine-learning/tutorials/quickstart-python-train-score-model.md
     - name: R
       items:
-        - name: R 스크립트 만들기
+        - name: R 스크립트 실행
           href: ../machine-learning/tutorials/quickstart-r-create-script.md
         - name: 데이터 형식 및 개체
           href: ../machine-learning/tutorials/quickstart-r-data-types-and-objects.md
@@ -74,7 +74,7 @@
     - name: Python
       items:
         - name: Python 자습서
-          href: ../machine-learning/tutorials/sql-server-python-tutorials.md
+          href: ../machine-learning/tutorials/python-tutorials.md
         - name: 스키 대여(선형 회귀)
           items:
             - name: 1 - 소개
@@ -112,7 +112,7 @@
     - name: R
       items:
         - name: R 자습서
-          href: ../machine-learning/tutorials/sql-server-r-tutorials.md
+          href: ../machine-learning/tutorials/r-tutorials.md
         - name: 파티션 기반 모델 만들기
           href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
         - name: T-SQL에서 R 사용

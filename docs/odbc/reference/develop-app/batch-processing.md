@@ -1,5 +1,5 @@
 ---
-title: 일괄 처리 | Microsoft Docs
+title: 배치 처리 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - interoperability [ODBC], batch processing
 - batches [ODBC], interoperable applications
 ms.assetid: 3fa4eca8-691c-467d-bfa7-39c59cdb9c8d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: da416fd8953dce575f5a4aa09f22f113d135b9a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: eed0eeee58bb7462d639d9f99ce4e9c0afb2d07f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68103905"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81285033"
 ---
 # <a name="batch-processing"></a>일괄 처리
-SQL 문의 일괄 처리는 광범위 하 게 지원 되지 않으므로 상호 운용 가능한 응용 프로그램은 조건부로 사용 하거나 전혀 사용 하지 않아야 합니다. 자세한 내용은 [일괄 처리 실행](../../../odbc/reference/develop-app/executing-batches.md)을 참조 하세요.
+SQL 문 일괄 처리에 대한 지원은 광범위하지 않으므로 상호 운용 가능한 응용 프로그램은 이를 조건부로 사용하거나 전혀 사용하지 않아야 합니다. 자세한 내용은 [일괄 처리 실행](../../../odbc/reference/develop-app/executing-batches.md)을 참조하십시오.

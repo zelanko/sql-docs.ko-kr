@@ -1,5 +1,5 @@
 ---
-title: Oracle 용 ODBC 드라이버 사용자&#39;s 가이드 | Microsoft Docs
+title: 오라클 사용자를 위한 ODBC 드라이버&#39;가이드 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,20 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], using ODBC driver for Oracle
 ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5ca4e8aa690aae9c8c3e30ed73745f2054dc396
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 09eed63bec2a7dd7ff361a1407159977a3a84b4d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915795"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81293154"
 ---
-# <a name="odbc-driver-for-oracle-user39s-guide"></a>Oracle 사용자를 위한 ODBC 드라이버&#39;s 가이드
+# <a name="odbc-driver-for-oracle-user39s-guide"></a>오라클 사용자를 위한 ODBC 드라이버&#39;가이드
 > [!IMPORTANT]  
->  이 기능은 이후 버전의 Windows에서 제거 될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신 Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
+>  이 기능은 이후 버전의 Windows에서 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신 오라클에서 제공하는 ODBC 드라이버를 사용합니다.  
   
- Oracle 용 ODBC 드라이버 사용자 가이드는 [Odbc 데이터 원본 관리자](../../odbc/admin/odbc-data-source-administrator.md)를 통해 액세스할 수 있는 설치 도움말을 보완 하기 위한 것입니다.  
+ 오라클 사용자 가이드용 ODBC 드라이버는 [ODBC 데이터 원본 관리자를](../../odbc/admin/odbc-data-source-administrator.md)통해 액세스할 수 있는 설정 도움말을 보완하기 위한 것입니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67915795"
   
 -   [Oracle용 ODBC 드라이버 구성](../../odbc/microsoft/configuring-the-odbc-driver-for-oracle.md)  
   
--   [데이터 원본에 연결](../../odbc/microsoft/connecting-to-a-data-source-odbc-driver-for-oracle.md)  
+-   [데이터 소스에 연결](../../odbc/microsoft/connecting-to-a-data-source-odbc-driver-for-oracle.md)  
   
 -   [설치된 Oracle 구성 요소 확인](../../odbc/microsoft/determining-installed-oracle-components.md)  
   
