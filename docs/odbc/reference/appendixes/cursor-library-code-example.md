@@ -1,5 +1,5 @@
 ---
-title: 커서 라이브러리 코드 예제 | Microsoft Docs
+title: 커서 라이브러리 코드 예제 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - ODBC cursor library [ODBC], examples
 - cursor library [ODBC], examples
 ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4d985786e4743b8bcc691cf6888c24153f5cb5f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cdbc751ecf6ed2427809c70707226f335a7b8d4b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019058"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284683"
 ---
 # <a name="cursor-library-code-example"></a>커서 라이브러리 코드 예제
 > [!IMPORTANT]  
->  이 기능은 이후 버전의 Windows에서 제거 될 예정입니다. 새 개발 작업에서는이 기능을 사용 하지 않도록 하 고 현재이 기능을 사용 하는 응용 프로그램은 수정 하십시오. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
+>  이 기능은 이후 버전의 Windows에서 제거됩니다. 새 개발 작업에서 이 기능을 사용하지 말고 현재 이 기능을 사용하는 응용 프로그램을 수정할 계획입니다. 드라이버의 커서 기능을 사용하는 것이 좋습니다.  
   
- 다음 예에서는 커서 라이브러리를 사용 하 여 ORDERS 테이블에서 각 주문의 ID, open date 및 status를 검색 합니다. 그런 다음 20 개의 데이터 행을 표시 합니다. 사용자가이 데이터를 업데이트 하는 경우 코드는 행 집합 버퍼를 업데이트 하 고 위치 지정 update 문을 실행 합니다. 마지막으로 스크롤 하는 방향을 사용자에 게 묻는 메시지를 표시 하 고 프로세스를 반복 합니다.  
+ 다음 예제에서는 커서 라이브러리를 사용하여 ORDERS 테이블에서 각 주문의 ID, 열린 날짜 및 상태를 검색합니다. 그런 다음 20행의 데이터를 표시합니다. 사용자가 이 데이터를 업데이트하는 경우 코드는 행 집합 버퍼를 업데이트하고 위치 지정 업데이트 문을 실행합니다. 마지막으로 스크롤 방향을 묻는 메시지가 표시되고 프로세스를 반복합니다.  
   
 ```  
 #define ROWS 20  

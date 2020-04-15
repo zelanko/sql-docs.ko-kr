@@ -1,5 +1,5 @@
 ---
-title: OLE DB 테이블 반환 매개 변수 형식 (속성)
+title: OLE DB 테이블 값 매개 변수 유형(속성)
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (properties)
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fbb516647b76a720adfd855af3f6205d3814e0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2f289da99108bb51c90f9f15bbe8d39a20a6be78
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75242766"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81283223"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB 테이블 반환 매개 변수 형식 지원(속성)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "75242766"
   이 항목에서는 테이블 반환 매개 변수 행 집합 개체와 연관된 OLE DB 속성 및 속성 집합에 대한 정보를 제공합니다.  
   
 ## <a name="properties"></a>속성  
- 다음은 테이블 반환 매개 변수 행 집합 개체에 대한 IRowsetInfo::GetProperties 메서드를 통해 표시되는 속성 목록입니다. 모든 테이블 반환 매개 변수 행 집합 속성은 읽기 전용입니다. 따라서 IOpenRowset:: OpenRowset 또는 ITableDefinitionWithConstraints:: CreateTableWithConstraints 메서드를 통해 기본값이 아닌 값으로 속성을 설정 하려고 하면 오류가 발생 하 고 개체가 생성 되지 않습니다.  
+ 다음은 테이블 반환 매개 변수 행 집합 개체에 대한 IRowsetInfo::GetProperties 메서드를 통해 표시되는 속성 목록입니다. 모든 테이블 반환 매개 변수 행 집합 속성은 읽기 전용입니다. 따라서 IOpenRowset::OpenRowset 또는 ITableDefinitionWithConstraints::CreateTableWithConstraints 메서드를 통해 기본값이 아닌 값을 속성으로 설정하려고 하면 오류가 발생하고 개체가 생성되지 않습니다.  
   
  테이블 반환 매개 변수 행 집합 개체에 구현되지 않은 속성은 다음 목록에 없습니다. 전체 속성 목록을 보려면 Windows Data Access Components의 OLE DB 설명서를 참조하십시오.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "75242766"
 |DBPROP_DELAYSTORAGEOBJECTS|VARIANT_FALSE|  
 |DBPROP_IAccessor<br /><br /> DBPROP_IColumnsInfo<br /><br /> DBPROP_IConvertType<br /><br /> DBPROP_IRowset<br /><br /> DBPROP_IRowsetInfo<br /><br /> DBPROP_IColumnsRowset|VARIANT_TRUE|  
 |DBPROP_IConnectionPointContainer<br /><br /> DBPROP_IMultipleResults<br /><br /> DBPROP_IRowsetUpdate<br /><br /> DBPROP_IRowsetIdentity<br /><br /> DBPROP_IRowsetLocate<br /><br /> DBPROP_IRowsetScroll<br /><br /> DBPROP_IRowsetResynch|VARIANT_FALSE|  
-|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> 참고: 테이블 반환 매개 변수 행 집합 개체는 IRowsetChange 인터페이스를 지원 합니다.<br /><br /> DBPROP_IRowsetChange = VARIANT_TRUE를 사용하여 만들어진 행 집합은 즉시 업데이트 모드 동작을 나타냅니다.<br /><br /> 그러나 BLOB 열이 ISequentialStream 개체로 바인딩된 경우 소비자는 테이블 반환 매개 변수 행 집합 개체가 사용되는 동안 열을 유지해야 합니다.|  
+|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> 참고: 테이블 값 매개 변수 행 집합 개체는 IRowsetChange 인터페이스를 지원합니다.<br /><br /> DBPROP_IRowsetChange = VARIANT_TRUE를 사용하여 만들어진 행 집합은 즉시 업데이트 모드 동작을 나타냅니다.<br /><br /> 그러나 BLOB 열이 ISequentialStream 개체로 바인딩된 경우 소비자는 테이블 반환 매개 변수 행 집합 개체가 사용되는 동안 열을 유지해야 합니다.|  
 |DBPROP_ISupportErrorInfo|VARIANT_TRUE|  
 |DBPROP_ISequentialStream|VARIANT_TRUE|  
 |DBPROP_IMMOBILEROWS|VARIANT_TRUE|  
@@ -78,15 +78,15 @@ ms.locfileid: "75242766"
  다음 속성 집합은 테이블 반환 매개 변수를 지원합니다.  
   
 ### <a name="dbpropset_sqlservercolumn"></a>DBPROPSET_SQLSERVERCOLUMN  
- 필요한 경우이 속성은 소비자가 DBCOLUMNDESC structure를 통해 각 열에 대해 ITableDefinitionWithConstraints:: CreateTableWithConstraints를 사용 하 여 테이블 반환 매개 변수 행 집합 개체를 만드는 과정에서 사용 됩니다.  
+ 이 속성은 소비자가 필요한 경우 DBCOLUMNDESC 구조체를 통해 각 열에 대해 ITableDefinitionWithConstraints::CreateTableWithConstraints를 사용하여 테이블 반환 매개 변수 행 집합 개체를 만드는 프로세스에서 사용합니다.  
   
 |속성 ID|속성 값|  
 |-----------------|--------------------|  
-|SSPROP_COL_COMPUTED|R/W: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 형식: VT_BOOL<br /><br /> 설명: VARIANT_TRUE로 설정된 경우 열이 계산 열임을 나타냅니다. VARIANT_FALSE는 열이 계산 열이 아님을 나타냅니다.|  
+|SSPROP_COL_COMPUTED|R/W: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 유형: VT_BOOL<br /><br /> 설명: VARIANT_TRUE로 설정된 경우 열이 계산 열임을 나타냅니다. VARIANT_FALSE는 열이 계산 열이 아님을 나타냅니다.|  
 |||
 
 ### <a name="dbpropset_sqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- 이러한 속성은 소비자가 ISSCommandWithParameters:: GetParameterProperties에 대 한 호출에서 테이블 반환 매개 변수 형식 정보를 검색 하 고, 소비자가 설정 하는 동안 테이블 반환 매개 변수에 대 한 특정 속성을 설정 하는 동안 읽습니다. ISSCommandWithParameters:: SetParameterProperties를 통해.  
+ 이러한 속성은 소비자가 ISSCommandWithParameters::GetParameterProperties에 대한 호출에서 테이블 반환 매개 변수 형식 정보를 검색하는 동안 읽혀지고, 소비자가 ISSCommandWithParameters::SetParameterProperties를 통해 테이블 반환 매개 변수에 대한 특정 속성을 설정하는 동안 설정됩니다.  
   
  다음 표에서는 이러한 속성에 대해 자세히 설명합니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "75242766"
 |||
 
 ## <a name="see-also"></a>참고 항목  
- [OLE DB 테이블 반환 매개 변수 형식 지원](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
+ [OLE DB 테이블 값 매개 변수 유형 지원](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
  [테이블 반환 매개 변수&#40;OLE DB&#41; 사용](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

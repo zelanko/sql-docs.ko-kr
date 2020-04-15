@@ -1,5 +1,5 @@
 ---
-title: 규모가 많은 Udt에 대 한 지원 | Microsoft Docs
+title: 대형 UDT 지원 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -8,30 +8,29 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d8621aac563f9211f7d4ee0c9ebd8f557e33bea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7ebd3d8439b70930039ec6fee37c7195dbb23ca0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73780479"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81281786"
 ---
 # <a name="support-for-large-udts"></a>큰 UDT에 대한 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   이 예제 솔루션에는 두 개의 프로젝트가 포함되어 있습니다. 첫 번째 프로젝트는 C# 원본 코드에서 어셈블리(DLL)를 만듭니다. 이 어셈블리에는 CLR 유형이 포함되어 있습니다. 테이블이 데이터베이스에 추가됩니다. 테이블의 열은 어셈블리에 정의된 유형으로 지정됩니다. 기본적으로 이 예제에서는 master 데이터베이스를 사용합니다. 두 번째 프로젝트는 테이블에서 데이터를 읽는 네이티브 C 애플리케이션입니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서는 이 예제를 사용할 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서는 이 예제를 사용할 수 없습니다.  
   
- 많은 Udt에 대 한 지원에 대 한 자세한 내용은 [ODBC&#41;&#40;LARGE CLR 사용자 정의 형식 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
+ 대형 UDT에 대한 지원에 대한 자세한 내용은 [큰 CLR 사용자 정의 유형 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조하십시오.  
   
 ## <a name="example"></a>예제  
  첫 번째 코드 목록은 C# 원본 코드입니다. 이 코드 목록을 LargeStringUDT.cs라는 파일에 붙여 넣고 DLL로 컴파일합니다. LargeStringUDT.dll을 C 드라이브의 루트 디렉터리에 복사합니다.  
   
- 두 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은 master 데이터베이스에서 어셈블리를 만듭니다.  
+ 두 번째 [!INCLUDE[tsql](../../includes/tsql-md.md)]() 코드 목록은 마스터 데이터베이스에서 어셈블리를 만듭니다.  
   
  odbc32.lib 및 user32.lib를 사용하여 두 번째(C++) 코드 목록을 컴파일합니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "73780479"
   
  이 예제는 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 명명된 인스턴스에 연결하려면 ODBC 데이터 원본의 정의를 변경하여 server\namedinstance 형식으로 인스턴스를 지정합니다. 기본적으로 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 는 명명된 인스턴스에 설치됩니다.  
   
- 네 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은 master 데이터베이스에서 어셈블리를 삭제 합니다.  
+ 네 번째 [!INCLUDE[tsql](../../includes/tsql-md.md)]() 코드 목록은 마스터 데이터베이스에서 어셈블리를 삭제합니다.  
   
 ```  
 // LargeStringUDT.cs  

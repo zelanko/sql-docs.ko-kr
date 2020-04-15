@@ -1,5 +1,5 @@
 ---
-title: Microsoft Excel 드라이버 프로그래밍 고려 사항 | Microsoft Docs
+title: 마이크로소프트 엑셀 드라이버 프로그래밍 고려 사항 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Excel driver
 - ODBC desktop database drivers [ODBC], Excel driver
 ms.assetid: d3cf324c-aa52-47a6-b44a-a59a778fad23
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: adb76a40b9f8ed79af41fd122ac94f8a0d9ee7c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5e0eec3f6cfc8b4c0e761ec0eea9b1dfd42005df
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68045042"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81283763"
 ---
 # <a name="microsoft-excel-driver-programming-considerations"></a>Microsoft Excel 드라이버 프로그래밍 고려 사항
 이 섹션에서는 다음 항목을 다룹니다.  
