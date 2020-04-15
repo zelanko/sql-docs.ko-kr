@@ -1,5 +1,5 @@
 ---
-title: 버퍼 할당 및 해제 | Microsoft Docs
+title: 버퍼 할당 및 해제 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - allocating buffers [ODBC]
 - freeing buffers [ODBC]
 ms.assetid: 886bc9ed-39d4-43d2-82ff-aebc35b14d39
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b783c2fc6766f0e2d2685724169894160c15ffc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e6aab888d24fcbc987b3db921436f14812618519
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077195"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288403"
 ---
 # <a name="allocating-and-freeing-buffers"></a>버퍼 할당 및 해제
-응용 프로그램에서 모든 버퍼를 할당 하 고 해제 합니다. 버퍼가 지연 되지 않은 경우에는 함수를 호출 하는 동안에만 존재 해야 합니다. 예를 들어 **SQLGetInfo** 는 *Infovalueptr* 인수가 가리키는 버퍼의 특정 옵션과 연결 된 값을 반환 합니다. 다음 코드 예제와 같이 **SQLGetInfo**를 호출한 후 즉시이 버퍼를 해제할 수 있습니다.  
+모든 버퍼는 응용 프로그램에서 할당되고 해제됩니다. 버퍼가 지연되지 않으면 함수에 대한 호출 기간 동안만 존재합니다. 예를 **들어, SQLGetInfo** *InfoValuePtr* 인수에 의해 가리키는 버퍼에서 특정 옵션과 관련 된 값을 반환 합니다. 다음 코드 예제와 같이 **SQLGetInfo를**호출한 직후이 버퍼를 해제할 수 있습니다.  
   
 ```  
 SQLSMALLINT   InfoValueLen;  
@@ -34,7 +34,7 @@ SQLGetInfo(hdbc, SQL_DBMS_NAME, (SQLPOINTER)InfoValuePtr, 50,
 free(InfoValuePtr);                        // OK to free InfoValuePtr.  
 ```  
   
- 지연 된 버퍼는 한 함수에서 지정 되 고 다른 함수에서 사용 되므로 드라이버가 여전히 존재 하는 동안 지연 된 버퍼를 해제 하는 것은 응용 프로그램 프로그래밍 오류입니다. 예를 들어 \*, 나중에 **sqlfetch**에서 사용 하기 위해 **SQLBindCol** 에 전달 됩니다. ** 다음 코드 예제에 표시 된 것 처럼 **SQLBindCol** 또는 **SQLFreeStmt** 에 대 한 호출을 사용 하는 경우와 같이 열을 바인딩 해제 해야이 버퍼를 해제할 수 있습니다.  
+ 지연 된 버퍼는 한 함수에 지정 하 고 다른 함수에서 사용 하기 때문에 드라이버가 여전히 존재 를 기대 하는 동안 지연 된 버퍼를 해제 하는 응용 프로그램 프로그래밍 오류입니다. 예를 들어 \* *ValuePtr* 버퍼의 주소는 **SQLBindCol에서** 나중에 사용할 수 있도록 **SQLBindCol에**전달됩니다. 다음 코드 예제와 같이 **SQLBindCol** 또는 **SQLFreeStmt에** 대한 호출과 같이 열이 언바운드될 때까지 이 버퍼를 해제할 수 없습니다.  
   
 ```  
 SQLRETURN    rc;  
@@ -59,7 +59,7 @@ SQLFreeStmt(hstmt, SQL_UNBIND);
 free(ValuePtr);  
 ```  
   
- 이러한 오류는 버퍼를 함수에서 로컬로 선언 하 여 쉽게 만들 수 있습니다. 응용 프로그램에서 함수를 벗어나면 버퍼가 해제 됩니다. 예를 들어 다음 코드는 드라이버에서 정의 되지 않은 동작을 발생 시킬 수 있습니다.  
+ 이러한 오류는 함수에서 로컬로 버퍼를 선언하여 쉽게 이루어집니다. 버퍼는 응용 프로그램이 함수를 떠날 때 해제됩니다. 예를 들어 다음 코드로 인해 드라이버에서 정의되지 않고 치명적인 동작이 발생합니다.  
   
 ```  
 SQLRETURN   rc;  

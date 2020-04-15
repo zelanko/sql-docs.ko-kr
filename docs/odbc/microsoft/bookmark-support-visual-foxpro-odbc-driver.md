@@ -1,5 +1,5 @@
 ---
-title: 책갈피 지원 (Visual FoxPro ODBC 드라이버) | Microsoft Docs
+title: 북마크 지원 (비주얼 폭스프로 ODBC 드라이버) | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], bookmarks
 - bookmarks [ODBC]
 ms.assetid: feb7ec20-3e0c-4a47-8feb-7dd9f23efdf6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c6f6bd1e8b2bea09822b46a325d1531a7b087a71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cacabc113547eaacf99ca94fc2f519ba962fcbd1
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68138104"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307704"
 ---
 # <a name="bookmark-support-visual-foxpro-odbc-driver"></a>책갈피 지원(Visual FoxPro ODBC 드라이버)
-Visual FoxPro ODBC 드라이버는 간단한 책갈피를 지원 합니다. SQL_BOOKMARK_PERSISTENCE *InfoType*를 사용 하 여 [SQLGetInfo](../../odbc/microsoft/sqlgetinfo-visual-foxpro-odbc-driver.md) 를 호출 하는 경우 반환 값은 SQL_BP_SCROLL 됩니다.  
+비주얼 FoxPro ODBC 드라이버는 간단한 책갈피를 지원합니다. SQL_BOOKMARK_PERSISTENCE *InfoType을*통해 [SQLGetInfo를](../../odbc/microsoft/sqlgetinfo-visual-foxpro-odbc-driver.md) 호출하면 반환 값이 SQL_BP_SCROLL.  
   
- 책갈피에 대 한 자세한 내용은 [책갈피 (ODBC)](../../odbc/reference/develop-app/bookmarks-odbc.md)를 참조 하세요.
+ 책갈피(ODBC)에 대한 자세한 내용은 [북마크(ODBC)를](../../odbc/reference/develop-app/bookmarks-odbc.md)참조하십시오.

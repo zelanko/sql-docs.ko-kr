@@ -1,5 +1,5 @@
 ---
-title: '방법: Geography 열에 행 삽입 (ODBC) | Microsoft Docs'
+title: '방법: 지리 열(ODBC)에 행 삽입 | 마이크로 소프트 문서'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 94c533392a824bf14b2b6f8f5ef57674a9a8c440
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3693a2f38542b0ae8c12d0634a9784a00340ba73
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781292"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81293915"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>방법: Geography 열에 행 삽입(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,13 +25,12 @@ ms.locfileid: "73781292"
   
  이 예제는 ODBC 데이터 원본을 필요로 하지는 않지만 기본적으로 SQL Server의 로컬 인스턴스에서 실행됩니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서는 이 예제를 사용할 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서는 이 예제를 사용할 수 없습니다.  
   
- 공간 저장소에 대 한 자세한 내용은 [공간 데이터 &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)를 참조 하세요.  
+ 공간 저장소에 대한 자세한 내용은 [공간 데이터 &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)을 참조하십시오.  
   
 ## <a name="example"></a>예제  
- 첫 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은이 예제에서 사용 하는 테이블을 만듭니다.  
+ 첫 번째 [!INCLUDE[tsql](../../includes/tsql-md.md)]() 코드 목록은 이 샘플에서 사용하는 테이블을 만듭니다.  
   
  odbc32.lib 및 user32.lib를 사용하여 두 번째(C++) 코드 목록을 컴파일합니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "73781292"
   
  이 예제는 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 명명된 인스턴스에 연결하려면 ODBC 데이터 원본의 정의를 변경하여 server\namedinstance 형식으로 인스턴스를 지정합니다. 기본적으로 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 는 명명된 인스턴스에 설치됩니다.  
   
- 세 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은이 예제에서 사용 하는 테이블을 삭제 합니다.  
+ 세 번째 [!INCLUDE[tsql](../../includes/tsql-md.md)]() 코드 목록은 이 샘플에서 사용하는 테이블을 삭제합니다.  
   
 ```sql
 use tempdb  

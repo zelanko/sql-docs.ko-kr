@@ -1,5 +1,5 @@
 ---
-title: Visual FoxPro ODBC 드라이버 사용 | Microsoft Docs
+title: 비주얼 폭스프로 ODBC 드라이버 사용 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], using Visual FoxPro ODBC driver
 - FoxPro ODBC driver [ODBC], using Visual FoxPro ODBC driver
 ms.assetid: c50371a0-b1b2-406c-a4e5-d5191d519f5b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6b6c0aa518e1471e0b316dcf9ffd8e5a668851fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2ce3cb5e16aca2587a7dc892763f194f54e085ad
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68087989"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81292553"
 ---
 # <a name="using-the-visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC 드라이버 사용
-이 섹션에서 다음 항목에서는 Microsoft® Visual FoxPro® ODBC 드라이버를 사용 하는 방법을 설명 합니다.  
+이 섹션에서는 Microsoft® Visual FoxPro® ODBC 드라이버를 사용하는 방법에 대해 설명합니다.  
   
 -   [Visual FoxPro 데이터 원본 추가](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md)  
   
@@ -33,8 +33,8 @@ ms.locfileid: "68087989"
   
 -   [연결 문자열 사용](../../odbc/microsoft/using-connection-strings.md)  
   
--   [Visual Basic 응용 프로그램과 함께 Visual FoxPro ODBC 드라이버 사용](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)  
+-   [시각적 기본 응용 프로그램과 함께 시각적 FoxPro ODBC 드라이버 사용](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)  
   
--   [C 또는 c + + 응용 프로그램과 함께 Visual FoxPro ODBC 드라이버 사용](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)  
+-   [C 또는 C++ 응용 프로그램과 함께 Visual FoxPro ODBC 드라이버 사용](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)  
   
 -   [Microsoft Office에서 Visual FoxPro 데이터에 액세스](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)

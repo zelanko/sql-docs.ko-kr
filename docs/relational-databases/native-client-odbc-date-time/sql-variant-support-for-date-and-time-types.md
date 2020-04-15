@@ -1,5 +1,5 @@
 ---
-title: 날짜 및 시간 형식에 대 한 sql_variant 지원 | Microsoft Docs
+title: 날짜 및 시간 형식에 대한 sql_variant 지원 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -10,26 +10,26 @@ ms.topic: reference
 helpviewer_keywords:
 - sql_variant data type
 ms.assetid: 12ff1ea6-e2cc-40e6-910c-3126974a90b3
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f795f1848f3e4c9fe1239df79677c35c38ba3b58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 588fcceb40ea096c549a004c1e2636d0eaf17c6c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73783513"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81291734"
 ---
 # <a name="sql_variant-support-for-date-and-time-types"></a>날짜 및 시간 형식에 대한 sql_variant 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   이 항목에서는 **sql_variant** 데이터 형식에서 향상된 날짜 및 시간 기능을 지원하는 방법에 대해 설명합니다.  
   
- 열 특성 SQL_CA_SS_VARIANT_TYPE은 C 형식의 variant 결과 열을 반환하는 데 사용됩니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]IRD (구현 행 설명자)에서 변형 결과 열의 SQL 형식을 설정 하는 추가 특성인 SQL_CA_SS_VARIANT_SQL_TYPE를 소개 합니다. IPD(구현 매개 변수 설명자)에서 SQL_SS_VARIANT 형식으로 바인딩된 SQL_C_BINARY C 형식을 갖는 SQL 형식의 SQL_SS_TIME2 또는 SQL_SS_TIMESTAMPOFFSET 매개 변수를 지정하는 데에도 SQL_CA_SS_VARIANT_SQL_TYPE을 사용할 수 있습니다.  
+ 열 특성 SQL_CA_SS_VARIANT_TYPE은 C 형식의 variant 결과 열을 반환하는 데 사용됩니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]구현 행 설명자(IRD)에서 변형 결과 열의 SQL 형식을 설정하는 추가 특성인 SQL_CA_SS_VARIANT_SQL_TYPE 도입합니다. IPD(구현 매개 변수 설명자)에서 SQL_SS_VARIANT 형식으로 바인딩된 SQL_C_BINARY C 형식을 갖는 SQL 형식의 SQL_SS_TIME2 또는 SQL_SS_TIMESTAMPOFFSET 매개 변수를 지정하는 데에도 SQL_CA_SS_VARIANT_SQL_TYPE을 사용할 수 있습니다.  
   
- 새 형식 SQL_SS_TIME2 및 SQL_SS_TIMESTAMPOFFSET는 SQLColAttribute로 설정할 수 있습니다. SQL_CA_SS_VARIANT_SQL_TYPE는 SQLGetDescField에서 반환 될 수 있습니다.  
+ sqlColAttribute에서 SQL_SS_TIME2 및 SQL_SS_TIMESTAMPOFFSET 새 형식을 설정할 수 있습니다. SQL_CA_SS_VARIANT_SQL_TYPE SQLGetDescField에 의해 반환 될 수 있습니다.  
   
- 결과 열의 경우 드라이버에서는 variant를 날짜/시간 형식으로 변환합니다. 자세한 내용은 [SQL에서 C로 변환](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)을 참조 하세요. SQL_C_BINARY에 바인딩할 때 버퍼 길이는 SQL 형식에 해당 하는 구조체를 받을 수 있을 만큼 커야 합니다.  
+ 결과 열의 경우 드라이버에서는 variant를 날짜/시간 형식으로 변환합니다. 자세한 내용은 [SQL에서 C로의 변환을](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)참조하십시오. SQL_C_BINARY 바인딩할 때 버퍼 길이는 SQL 형식에 해당하는 구조체를 수신할 수 있을 만큼 커야 합니다.  
   
  SQL_SS_TIME2 및 SQL_SS_TIMESTAMPOFFSET 매개 변수의 경우 드라이버에서는 아래 표에 설명된 대로 C 값을 **sql_variant** 값으로 변환합니다. 매개 변수가 SQL_C_BINARY로 바인딩되어 있고 서버 형식이 SQL_SS_VARIANT인 경우에는 애플리케이션에서 SQL_CA_SS_VARIANT_SQL_TYPE을 다른 SQL 형식으로 설정한 경우 외에는 이진 값으로 처리됩니다. 이 경우 SQL_CA_SS_VARIANT_SQL_TYPE이 우선 순위가 높습니다. 즉, SQL_CA_SS_VARIANT_SQL_TYPE이 설정된 경우 C 형식에서 variant SQL 형식을 추론하는 기본 동작이 무시됩니다.  
   
@@ -61,6 +61,6 @@ ms.locfileid: "73783513"
 |SQL_C_SS_TIMESTAMPOFFSET|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;날짜 및 시간 기능 향상](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [ODBC&#41;&#40;날짜 및 시간 개선](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

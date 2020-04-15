@@ -11,24 +11,23 @@ helpviewer_keywords:
 - stored procedures [ODBC]
 - ODBC CALL syntax
 ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0d61d50f7ff79da77dab15b654ec1720b1ee3b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 11e50e3937137b44c273d10914968dde2cfefdc5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75244489"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302230"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>ODBC 호출 및 프로세스 출력을 사용하여 저장 프로시저 실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 저장 프로시저는 정수 반환 코드 및 출력 매개 변수를 사용할 수 있습니다. 반환 코드와 출력 매개 변수는 서버의 마지막 패킷으로 전달되지 않으므로 행 집합이 완전히 해제될 때까지 애플리케이션에서 사용할 수 없습니다. 명령이 여러 결과를 반환하는 경우 **IMultipleResults::GetResult** 에서 DB_S_NORESULT를 반환하거나 **IMultipleResults** 인터페이스가 완전히 해제될 때 출력 매개 변수 데이터를 사용할 수 있습니다.  
   
 > [!IMPORTANT]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지 해야 하는 경우에는 [Win32 CRYPTO API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용 하 여 자격 증명을 암호화 해야 합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>반환 코드 및 출력 매개 변수를 처리하려면  
   
@@ -36,13 +35,11 @@ ms.locfileid: "75244489"
   
 2.  DBBINDING 구조의 배열을 사용하여 바인딩 집합을 매개 변수 작성자마다 하나씩 만듭니다.  
   
-3.  
-  **IAccessor::CreateAccessor** 메서드를 사용하여 정의된 매개 변수에 대한 접근자를 만듭니다. **Createaccessor** 는 바인딩 집합에서 접근자를 만듭니다.  
+3.  **IAccessor::CreateAccessor** 메서드를 사용하여 정의된 매개 변수에 대한 접근자를 만듭니다. **CreateAccessor** 는 바인딩 집합에서 접근자를 만듭니다.  
   
 4.  DBPARAMS 구조를 채웁니다.  
   
-5.  
-  **Execute** 명령을 호출(이 경우 저장 프로시저 호출)합니다.  
+5.  **Execute** 명령을 호출(이 경우 저장 프로시저 호출)합니다.  
   
 6.  행 집합을 처리하고 **IRowset::Release** 메서드를 사용하여 해제합니다.  
   
@@ -360,6 +357,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [결과 처리 방법 도움말 항목 &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [결과 처리 방법 도움말 항목&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

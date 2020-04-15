@@ -1,5 +1,5 @@
 ---
-title: 공급자 앱 SQL Native Client OLE DB
+title: SQL 네이티브 클라이언트 OLE DB 공급자 앱
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - applications [SQL Server Native Client]
 - OLE DB, creating applications
 ms.assetid: f3ae6815-f32d-4913-a1a2-2ba2f20cfd88
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84a920320860512dcc0cdd80619cd7aa671c96a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ef8459fb3d906be6efca0e47d83418fb70bdebdb
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75247127"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81289729"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>SQL Server Native Client OLE DB 공급자 애플리케이션 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB 공급자 응용 프로그램을 만들려면 다음 단계를 수행 해야 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 OLE DB 공급자 응용 프로그램을 만드는 데는 다음 단계가 포함됩니다.  
   
 1.  데이터 원본에 대한 연결 설정  
   

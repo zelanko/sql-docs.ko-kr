@@ -1,5 +1,5 @@
 ---
-title: 데이터 원본 또는 드라이버에 연결 | Microsoft Docs
+title: 데이터 소스 또는 드라이버에 연결 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e93027ab-9e60-47b7-ba96-8289dae32a22
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d51d92ae02084ea46c2a8bd2d73a27f0154e1a95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 48015cf134b71eb96bd19cdcf61ec2d7fcc04fcc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083140"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307465"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>데이터 원본 또는 드라이버에 연결
-응용 프로그램은 원하는 수의 드라이버 및 데이터 원본에 연결할 수 있습니다. 이는 다양 한 드라이버 및 데이터 원본, 동일한 드라이버와 다양 한 데이터 원본 또는 동일한 드라이버와 데이터 원본에 대 한 여러 연결이 될 수 있습니다.  
+응용 프로그램은 여러 드라이버 및 데이터 원본에 연결할 수 있습니다. 이러한 드라이버는 다양한 드라이버 및 데이터 원본, 동일한 드라이버 및 다양한 데이터 원본 또는 동일한 드라이버 및 데이터 원본에 대한 여러 연결일 수 있습니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
