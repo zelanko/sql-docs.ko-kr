@@ -1,5 +1,5 @@
 ---
-title: OLE DB 데이터 원본 열거 (OLE DB) | Microsoft Docs
+title: OLE DB 데이터 원본 열거(OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - data sources [OLE DB]
 ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 803e3de97115bea9c467044d59a1a5a305836fa3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2f15092bd515ed16a470c854168b228d5445e3d6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73790103"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300954"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>OLE DB 데이터 원본 열거(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,26 +34,21 @@ ms.locfileid: "73790103"
  이 예제에는 [Microsoft SQL Server 예제 및 커뮤니티 프로젝트(Microsoft SQL Server Samples and Community Projects)](https://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지에서 다운로드할 수 있는 AdventureWorks 예제 데이터베이스가 필요합니다.  
   
 > [!IMPORTANT]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지해야 하는 경우 [Win32 암호화 API를](https://go.microsoft.com/fwlink/?LinkId=64532)통해 자격 증명을 암호화해야 합니다.  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>OLE DB 데이터 원본을 열거하려면  
   
-1.  
-  **ISourceRowset::GetSourcesRowset**을 호출하여 원본 행 집합을 검색합니다.  
+1.  **ISourceRowset::GetSourcesRowset**을 호출하여 원본 행 집합을 검색합니다.  
   
-2.  
-  **GetColumnInfo::IColumnInfo**를 호출하여 열거자 행 집합에 대한 설명을 찾습니다.  
+2.  **GetColumnInfo::IColumnInfo**를 호출하여 열거자 행 집합에 대한 설명을 찾습니다.  
   
 3.  열 정보를 사용하여 바인딩 구조를 만듭니다.  
   
-4.  
-  **IAccessor::CreateAccessor**를 호출하여 행 집합 접근자를 만듭니다.  
+4.  **IAccessor::CreateAccessor**를 호출하여 행 집합 접근자를 만듭니다.  
   
-5.  
-  **IRowset::GetNextRows**를 호출하여 행을 인출합니다.  
+5.  **IRowset::GetNextRows**를 호출하여 행을 인출합니다.  
   
-6.  
-  **IRowset::GetData**를 호출하여 행 집합의 행 복사본에서 데이터를 검색합니다.  
+6.  **IRowset::GetData**를 호출하여 행 집합의 행 복사본에서 데이터를 검색합니다.  
   
 ## <a name="example"></a>예제  
  ole32.lib를 사용하여 컴파일하고 다음 C++ 코드 목록을 실행합니다. 이 애플리케이션은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명된 인스턴스에 연결하려면 연결 문자열을 L"(local)"에서 L"(local)\\\name"으로 변경합니다. 여기서 name은 명명된 인스턴스입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  

@@ -1,5 +1,5 @@
 ---
-title: SQL_NO_DATA | Microsoft Docs
+title: SQL_NO_DATA | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - compatibility [ODBC], SQL_NO_DATA
 - upgrading applications [ODBC], SQL_NO_DATA
 ms.assetid: 07a4144a-a548-4578-b2be-715c3cf73bf8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1f899e7a034e1ec5fc967d834caad3a4ccc4caa1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9a399a270eb1cd2f3daf9449c53b1f577a6b9545
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68041836"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299793"
 ---
 # <a name="sql_no_data"></a>SQL_NO_DATA
-ODBC 3 인 경우 *x* 응용 프로그램은 ODBC 2에서 **sqlexecdirect**, **Sqlexecute**또는 **sqlexecdirect** 를 호출 합니다. *x* 드라이버 데이터 원본의 행에 영향을 주지 않는 검색 된 update 또는 delete 문을 실행 하려면 드라이버가 SQL_NO_DATA 아닌 SQL_SUCCESS을 반환 해야 합니다. ODBC 2 인 경우 *x* 또는 ODBC 3. ODBC 3에서 작동 하는 *x* 응용 프로그램입니다. *x* 드라이버는 동일한 결과 (ODBC 3)를 사용 하 여 **sqlexecdirect**, **Sqlexecute**또는 **sqlexecdirect** 를 호출 합니다. *x* 드라이버는 SQL_NO_DATA을 반환 해야 합니다.
+때 ODBC 3. *x* 응용 프로그램은 **SQLExecDirect,** **SQLExecute**또는 **SQLParamData를** ODBC 2에서 호출합니다. *x* 드라이버는 데이터 원본의 행에 영향을 주지 않는 검색된 업데이트를 실행하거나 문을 삭제하려면 드라이버가 SQL_NO_DATA SQL_SUCCESS 반환해야 합니다. 때 ODBC 2. *x* 또는 ODBC 3. *x* 응용 프로그램은 ODBC 3로 작업합니다. *x* 드라이버는 **SQLExecDirect,** **SQLExecute**또는 **SQLParamData와** 동일한 결과, ODBC 3을 호출합니다. *x* 드라이버는 SQL_NO_DATA 반환해야합니다.

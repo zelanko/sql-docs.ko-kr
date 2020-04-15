@@ -1,5 +1,5 @@
 ---
-title: 데이터 원본에 대 한 연결 설정 | Microsoft Docs
+title: 데이터 원본에 대한 연결 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - CoCreateInstance method
 - OLE DB data sources [SQL Server Native Client]
 ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ba503bbf77f386af280b0fbe3a3441e2ccae378
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e4ec6125d3c8fe2469f599b3f11c1888383de6e5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73763821"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81290479"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>데이터 원본에 대한 연결 설정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에 액세스 하려면 소비자는 먼저 **CoCreateInstance** 메서드를 호출 하 여 데이터 원본 개체의 인스턴스를 만들어야 합니다. 각 OLE DB 공급자는 고유한 CLSID(클래스 ID)를 사용하여 식별합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자의 경우 클래스 식별자가 CLSID_SQLNCLI10 됩니다. 참조 하는 SQLNCLI에서 사용 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 확인 하는 SQLNCLI_CLSID 기호를 사용할 수도 있습니다.  
+  네이티브 클라이언트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB 공급자에 액세스하려면 소비자는 먼저 **CoCreateInstance** 메서드를 호출하여 데이터 원본 개체의 인스턴스를 만들어야 합니다. 각 OLE DB 공급자는 고유한 CLSID(클래스 ID)를 사용하여 식별합니다. 네이티브 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 OLE DB 공급자의 경우 클래스 식별자가 CLSID_SQLNCLI10. 참조하는 sqlncli.h에 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 OLE DB 공급자로 해결되는 기호 SQLNCLI_CLSID 사용할 수도 있습니다.  
   
  소비자는 데이터 원본 개체가 공개하는 **IDBProperties** 인터페이스를 사용하여 서버 이름, 데이터베이스 이름, 사용자 ID 및 암호와 같은 기본 인증 정보를 제공할 수 있습니다. 이러한 속성을 설정하려면 **IDBProperties::SetProperties** 메서드를 호출합니다.  
   
@@ -43,7 +43,7 @@ CoCreateInstance(CLSID_SQLNCLI10,
                  (void **) &pIDBInitialize)  
 ```  
   
- 이 **CoCreateInstance** 호출은 CLSID_SQLNCLI10와 연결 된 클래스의 단일 개체 (데이터와 연결 된 CSLID 개체를 만드는 데 사용 되는 코드)를 만듭니다. IID_IDBInitialize는 개체와 통신하는 데 사용되는 인터페이스(**IDBInitialize**)의 식별자에 대한 참조입니다.  
+ **CoCreateInstance에** 대한 이 호출은 CLSID_SQLNCLI10 연결된 클래스의 단일 개체를 만듭니다(개체를 만드는 데 사용되는 데이터 및 코드와 연결된 CSLID). IID_IDBInitialize는 개체와 통신하는 데 사용되는 인터페이스(**IDBInitialize**)의 식별자에 대한 참조입니다.  
   
  다음 예제 함수는 데이터 원본에 대한 연결을 초기화하고 설정합니다.  
   

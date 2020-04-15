@@ -1,5 +1,5 @@
 ---
-title: CONVERT 함수 제한 사항 | Microsoft Docs
+title: 변환 기능 제한 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - ODBC SQL grammar, CONVERT function limitations
 - Convert function limitations [ODBC]
 ms.assetid: 3c81fc58-57f0-4dd7-be16-2b146eb15cbc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 65cc8fa7517d3093b7314cacdafd8f607d89bc3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 63f4258e737327ae11f03a96cfef3cdecf133e53
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68081992"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81281033"
 ---
 # <a name="convert-function-limitations"></a>CONVERT 함수 제한 사항
-형식 변환 실패가 발생 하면 영향을 받는 열이 NULL로 설정 됩니다.  
+형식 변환 실패로 인해 영향을 받는 열이 NULL로 설정됩니다.  
   
- CONVERT 함수를 통해 날짜 또는 타임 스탬프 데이터 형식을 다른 데이터 형식으로 변환할 수 없습니다.
+ 날짜 또는 TIMESTAMP 데이터 형식은 CONVERT 함수에 의해 다른 데이터 형식(또는 자체)으로 변환할 수 없습니다.

@@ -1,5 +1,5 @@
 ---
-title: 연결 설정 | Microsoft Docs
+title: 연결 설정 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - SQLDriverConnect function [ODBC], making a connection
 - ODBC drivers [ODBC], connection functions
 ms.assetid: 8e3c717e-35e3-47ef-b5d3-3a96eeb7b869
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7ef6f3d50382d810dd9df246c4d857d9467674f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6f71190a8a2ca1dd8af0d28adb5531540fb1b57e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76941031"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298703"
 ---
 # <a name="establishing-a-connection"></a>연결 설정
-환경 및 연결 핸들을 할당 하 고 연결 특성을 설정 하 고 나면 응용 프로그램은 데이터 원본 또는 드라이버에 연결할 준비가 된 것입니다. 응용 프로그램에서이 작업을 수행 하는 데 사용할 수 있는 세 가지 함수는 **SQLConnect** (핵심 인터페이스 규칙 수준), **SQLDriverConnect** (core) 및 **SQLBrowseConnect** (수준 1)입니다. 각각의 세 가지는 다른 시나리오에서 사용 하도록 설계 되었습니다. 연결 하기 전에 응용 프로그램은 **sqldrivers**에서 반환 된 **connectfunctions** 키워드를 사용 하 여 지원 되는 함수를 결정할 수 있습니다.  
+환경 및 연결 핸들을 할당하고 연결 특성을 설정하면 응용 프로그램이 데이터 원본 또는 드라이버에 연결할 준비가 된 것입니다. 응용 프로그램에서 이 작업을 수행하는 데 사용할 수 있는 세 가지 기능은 **SQLConnect(코어** 인터페이스 적합성 수준), **SQLDriverConnect(코어),** **SQLBrowseConnect(수준** 1)의 세 가지 다른 함수입니다. 세 가지 각각은 서로 다른 시나리오에서 사용되도록 설계되었습니다. 연결하기 전에 응용 프로그램은 **SQLDriver에서**반환되는 **ConnectFunctions** 키워드로 지원되는 함수를 결정할 수 있습니다.  
   
 > [!NOTE]  
->  일부 드라이버는 지원 되는 활성 연결 수를 제한 합니다. 응용 프로그램은 SQL_MAX_DRIVER_CONNECTIONS 옵션으로 **SQLGetInfo** 를 호출 하 여 특정 드라이버에서 지 원하는 활성 연결 수를 확인 합니다.  
+>  일부 드라이버는 지원하는 활성 연결 수를 제한합니다. 응용 프로그램은 **SQLGetInfo를** SQL_MAX_DRIVER_CONNECTIONS 옵션으로 호출하여 특정 드라이버가 지원하는 활성 연결 수를 결정합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: 일관성 확인 | Microsoft Docs
+title: 일관성 검사 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - descriptors [ODBC], consistency checks
 - consistency checks [ODBC]
 ms.assetid: deb80efa-ad1f-4ea5-b334-9817cd279e5c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 419e338a5e96821606dc26a53a4fccecbc72ae3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: edd946ca865cd9d8d2edff2c7bedbb3b2629c97c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68125534"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299003"
 ---
 # <a name="consistency-check"></a>일관성 검사
-응용 프로그램에서 APD, IPD 또는의 SQL_DESC_DATA_PTR 필드를 설정 하면 자동으로 일관성 확인이 수행 됩니다. 이 필드가 설정 될 때마다 드라이버는 SQL_DESC_TYPE 필드의 값과 같은 레코드의 SQL_DESC_TYPE 필드에 적용 가능한 값이 유효 하 고 일관적인 지 확인 합니다.  
+응용 프로그램이 APD, ARD 또는 IPD의 SQL_DESC_DATA_PTR 필드를 설정할 때마다 드라이버가 일관성 검사를 자동으로 수행합니다. 이 필드를 설정할 때마다 드라이버는 SQL_DESC_TYPE 필드의 값과 동일한 레코드의 SQL_DESC_TYPE 필드에 적용되는 값이 유효하고 일관적이있는지 확인합니다.  
   
- IPD의 SQL_DESC_DATA_PTR 필드는 일반적으로 설정 되지 않습니다. 그러나 IPD 필드에 대 한 일관성 확인을 강제 적용 하기 위해 응용 프로그램에서이 작업을 수행할 수 있습니다. IPD의 SQL_DESC_DATA_PTR 필드가로 설정 된 값은 실제로 저장 되지 않으며 **SQLGetDescField** 또는 **SQLGetDescRec**를 호출 하 여 검색할 수 없습니다. 이 설정은 일관성 확인을 강제 적용 하는 경우에만 수행 됩니다. IRD에 대해 일관성 확인을 수행할 수 없습니다.  
+ IPD의 SQL_DESC_DATA_PTR 필드는 일반적으로 설정되지 않습니다. 그러나 응용 프로그램은 IPD 필드의 일관성 검사를 강제로 수행할 수 있습니다. IPD의 SQL_DESC_DATA_PTR 필드가 실제로 저장되지 않으며 **SQLGetDescField** 또는 **SQLGetDescRec에**대한 호출로 검색할 수 없습니다. 이 설정은 일관성 검사를 강제로 하기 위해서만 만들어집니다. IRD에서 일관성 검사를 수행할 수 없습니다.  
   
- 일관성 확인에 대 한 자세한 내용은 [SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)를 참조 하세요.
+ 일관성 검사에 대한 자세한 내용은 [SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)을 참조하십시오.

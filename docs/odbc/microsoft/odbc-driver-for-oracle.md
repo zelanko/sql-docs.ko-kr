@@ -12,18 +12,18 @@ helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], about ODBC driver for Oracle
 - Oracle data access [ODBC]
 ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2b5f1aabd23a587e681c33aed4b4119523444219
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 093cb7352a7f509b0afcc061e2691311bb183169
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402607"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298133"
 ---
 # <a name="odbc-driver-for-oracle"></a>Oracle용 ODBC 드라이버
 > [!IMPORTANT]  
->  이 기능은 이후 버전의 Windows에서 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신 [오라클에서 제공하는 ODBC 드라이버를](https://www.oracle.com/database/technologies/releasenote-odbc-ic.html)사용합니다.  
+>  이 기능은 이후 버전의 Windows에서 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신 오라클에서 제공하는 ODBC 드라이버를 사용합니다.  
   
  오라클용 Microsoft® ODBC 드라이버를 사용하면 ODBC 호환 응용 프로그램을 Oracle 데이터베이스에 연결할 수 있습니다. 오라클의 ODBC 드라이버는 *ODBC 프로그래머의 참조에*설명된 개방형 데이터베이스 연결(ODBC) 사양을 준수합니다. 인터넷 정보 서비스(IIS) 내에서 PL/SQL 패키지, XA/DTC 통합 및 오라클 액세스에 액세스할 수 있습니다.  
   

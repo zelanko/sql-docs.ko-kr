@@ -1,5 +1,5 @@
 ---
-title: ODBC Visual FoxPro 설정 대화 상자 | Microsoft Docs
+title: ODBC 비주얼 폭스프로 설치 대화 상자 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,62 +12,62 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], installing
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d9aa8954cd42ac715b3e6e67e0b0add69d07a570
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ef7ac702a69342833c6dfffa0ffc9cdd0ac2857e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915659"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298083"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>ODBC Visual FoxPro 설치 대화 상자
-**ODBC Visual Foxpro 설정** 대화 상자를 사용 하 여 visual foxpro 데이터 원본을 추가 하거나 변경할 수 있습니다.  
+**ODBC Visual FoxPro 설치** 설정 대화 상자를 사용하면 Visual FoxPro 데이터 원본을 추가하거나 변경할 수 있습니다.  
   
- 드라이버를 다운로드 하려면 [Visual FOXPRO ODBC 드라이버 다운로드 사이트](https://go.microsoft.com/fwlink/?LinkId=121318)를 참조 하세요.  
+ 드라이버를 다운로드하려면 [Visual FoxPro ODBC 드라이버 다운로드 사이트를](https://go.microsoft.com/fwlink/?LinkId=121318)참조하십시오.  
   
 ## <a name="dialog-box-options"></a>대화 상자 옵션  
  **데이터 원본 이름**  
- 데이터 원본에 사용할 이름을 입력 합니다.  
+ 데이터 원본에 사용할 이름을 입력합니다.  
   
  **설명**  
- 데이터 원본에 대 한 설명을 입력 합니다.  
+ 데이터 원본에 대한 설명을 입력합니다.  
   
  **데이터베이스 유형**  
- 를 사용 하 여 데이터 원본을 연결 하려는 데이터베이스 유형을 선택할 수 있습니다.  
+ 데이터 원본에 연결할 데이터베이스 유형을 선택할 수 있습니다.  
   
- **Visual FoxPro 데이터베이스 (. DBC**  
- 데이터 원본이 Visual FoxPro [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md) (dbc 파일)와 데이터베이스의 모든 테이블 및 로컬 뷰에 연결 하도록 지정 합니다.  
+ **비주얼 폭스프로 데이터베이스(. DBC)**  
+ 데이터 원본이 Visual FoxPro 데이터베이스(.dbc 파일)와 데이터베이스의 모든 테이블 및 로컬 뷰에 연결되도록 지정합니다. [database](../../odbc/microsoft/visual-foxpro-terminology.md)  
   
- **Free 테이블 디렉터리**  
- 데이터 원본을 [사용 가능한 테이블](../../odbc/microsoft/visual-foxpro-terminology.md)의 디렉터리에 연결 하도록 지정 합니다. [Sqlcolumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md) 또는 [SQLCOLUMNS](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)와 같은 ODBC 카탈로그 함수는 동일한 디렉터리에 있는 모든 [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md) 테이블을 무시 합니다. [Sqlexecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md) 및 [sqlexecdirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)를 통해 전송 되는 SQL SELECT 문을 사용 하 여 데이터베이스 테이블에 액세스할 수 있습니다.  
+ **무료 테이블 디렉토리**  
+ 데이터 원본이 [무료 테이블](../../odbc/microsoft/visual-foxpro-terminology.md)디렉터리에 연결되도록 지정합니다. 동일한 디렉터리에 있는 모든 [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md) 테이블은 SQLColumns 또는 [SQLTable](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)과 같은 ODBC 카탈로그 함수에서 [무시됩니다.](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md) 데이터베이스 테이블은 [SQLExecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md) 및 [SQLExecDirect를](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)통해 전송된 SQL SELECT 문을 사용하여 액세스할 수 있습니다.  
   
- **Path**  
- 데이터베이스의 경로와 이름 또는 데이터 원본이 연결 된 free 테이블의 디렉터리를 표시 합니다.  
+ **경로**  
+ 데이터베이스의 경로와 이름을 표시하거나 데이터 원본이 연결되는 무료 테이블의 디렉토리를 표시합니다.  
   
  **찾아보기**  
- 를 사용 하면 데이터 원본에 연결 하려는 데이터베이스 또는 디렉터리에 대 한 시스템 및 네트워크를 검색할 수 있습니다.  
+ 시스템 및 네트워크를 검색하여 데이터 원본을 연결하려는 데이터베이스 또는 디렉터리를 검색할 수 있습니다.  
   
  **옵션**  
- Visual FoxPro ODBC 드라이버 옵션을 설정할 수 있도록 대화 상자를 확장 합니다.  
+ Visual FoxPro ODBC 드라이버 옵션을 설정할 수 있도록 대화 상자를 확장합니다.  
   
 ## <a name="driver"></a>드라이버  
- **데이터 정렬 순서**  
- 필드가 정렬 되는 순서입니다. 기본 시퀀스는 운영 체제의 언어 버전에서 지원 되는 시퀀스를 반영 합니다. 지원 되는 데이터 정렬 순서 목록은 [COLLATE 설정](../../odbc/microsoft/set-collate-command.md)을 참조 하세요.  
+ **정렬 시퀀스**  
+ 필드가 정렬되는 시퀀스입니다. 기본 시퀀스는 운영 체제의 언어 버전에서 지원하는 시퀀스를 반영합니다. 지원되는 정렬 시퀀스 목록은 [COLLATE SET을](../../odbc/microsoft/set-collate-command.md)참조하십시오.  
   
  **단독**  
- 이 확인란을 선택 하면 데이터 원본을 사용 하 여 데이터에 액세스할 때 드라이버가 Visual FoxPro 데이터베이스를 독점적으로 엽니다. 데이터베이스가 단독으로 열리는 동안에는 다른 사용자가 데이터베이스 또는 데이터베이스의 테이블에 액세스할 수 없습니다. 단독으로 열린 데이터베이스 내의 테이블은 공유로 열립니다. 테이블을 독점적으로 열려면 [SET EXCLUSIVE](../../odbc/microsoft/set-exclusive-command.md) 명령을 사용 합니다. **데이터베이스 유형** 을 **Free 테이블 디렉터리로**설정한 경우에는이 확인란을 사용할 수 없습니다.  
+ 이 확인란을 선택하면 데이터 원본을 사용하여 데이터에 액세스할 때 드라이버가 Visual FoxPro 데이터베이스를 단독으로 엽니다. 데이터베이스를 단독으로 여는 동안에는 다른 사용자가 데이터베이스 또는 데이터베이스의 테이블에 액세스할 수 없습니다. 단독으로 열린 데이터베이스 내의 테이블은 SHARED로 열립니다. 테이블을 단독으로 열려면 단독 [설정](../../odbc/microsoft/set-exclusive-command.md) 명령을 사용합니다. **데이터베이스 유형이** 사용 가능한 테이블 **디렉터리로**설정되어 있을 때 이 확인란을 사용하지 않도록 설정합니다.  
   
  **Null**  
- ALTER TABLE 및 CREATE TABLE를 사용 하 여 만든 열에 null 값을 사용할 수 있는지 여부를 결정 합니다. 에 Null을 설정 하는 경우 INSERT sql은 INSERT-SQL에 포함 되지 않은 모든 열에 null 값을 삽입 합니다. 값 절입니다. Null이 해제 되어 있으면 빈가 삽입 됩니다. 다음 코드와 같이 전달 된 연결 문자열을 통해이 옵션을 제어할 수도 있습니다.  
+ ALTER TABLE 및 CREATE TABLE으로 만든 열이 null 값을 허용하는지 여부를 결정합니다. Null ON을 설정하면 INSERT - SQL은 INSERT - SQL에 포함되지 않은 열에 null 값을 삽입합니다. 값 절입니다. Null이 꺼져 있으면 공백이 삽입됩니다. 다음 코드에서와 같이 전달된 연결 문자열을 통해 이 옵션을 제어할 수도 있습니다.  
   
 ```  
 strCon = "DRIVER=MICROSOFT VISUAL FOXPRO DRIVER;  
 SOURCETYPE=DBC;SOURCEDB=D:\Testdata.dbc;BACKGROUNDFETCH=NO;NULL=NO"  
 ```  
   
- **Deleted**  
- 삭제 된 것으로 표시 된 행이 반환 되는지 여부를 결정 합니다. 다음 코드와 같이 전달 된 연결 문자열을 통해이 옵션을 제어할 수도 있습니다.  
+ **삭제**  
+ 삭제됨으로 표시된 행이 반환되는지 여부를 결정합니다. 다음 코드에서와 같이 전달된 연결 문자열을 통해 이 옵션을 제어할 수도 있습니다.  
   
 ```  
 strCon = "DRIVER=MICROSOFT VISUAL FOXPRO DRIVER;  
@@ -75,5 +75,5 @@ SOURCETYPE=DBC;SOURCEDB=D:\Testdata.dbc;BACKGROUNDFETCH=NO;
 DELETED=YES"  
 ```  
   
- **백그라운드에서 데이터 페치**  
- 백그라운드에서 레코드를 페치할 지 (점진적 페치) 아니면 응용 프로그램이 결과 집합의 모든 레코드가 인출 될 때까지 대기 하는지 결정 합니다.
+ **백그라운드에서 데이터 가져오기**  
+ 레코드를 백그라운드에서 가져올지(프로그레시브 페칭) 또는 결과 집합의 모든 레코드가 가져올 때까지 응용 프로그램이 대기할지 여부를 결정합니다.

@@ -1,5 +1,5 @@
 ---
-title: Oracle 용 ODBC 드라이버 규칙 수준 | Microsoft Docs
+title: 오라클 적합성 수준을 위한 ODBC 드라이버 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,27 +11,27 @@ helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], conformance levels
 - conformance levels [ODBC], ODBC driver for Oracle
 ms.assetid: 2ad2ef7a-a86f-4a77-b12c-bbd5a3499dac
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a3174c65725c4eefebc035865dcc4a7a6eb6606b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 41b696dfcdd57d07ec58e59040499bc11543f1e4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68044949"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298143"
 ---
 # <a name="odbc-driver-for-oracle-conformance-levels"></a>Oracle용 ODBC 드라이버 적합성 수준
 > [!IMPORTANT]  
->  이 기능은 이후 버전의 Windows에서 제거 될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신 Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
+>  이 기능은 이후 버전의 Windows에서 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신 오라클에서 제공하는 ODBC 드라이버를 사용합니다.  
   
- ODBC는 드라이버에 대 한 두 가지 유형의 규칙 표준 (API 규칙 표준 및 SQL 문법 준수 표준)을 정의 합니다. API 규칙은 드라이버가 지 원하는 함수를 나타냅니다. SQL 규칙은 드라이버가 지 원하는 SQL 문법을 나타냅니다. 각 규칙 표준은 수준으로 구성 됩니다.  
+ ODBC는 드라이버에 대한 두 가지 유형의 준수 표준을 정의합니다: API 준수 표준 및 SQL 문법 준수 표준. API 준수는 드라이버가 지원하는 함수를 나타냅니다. SQL 준수는 드라이버가 지원하는 SQL 문법을 나타냅니다. 각 적합성 표준은 레벨로 구성됩니다.  
   
- 이 섹션에서는 Oracle 용 ODBC 드라이버에 대 한 규칙 정보를 제공 합니다.  
+ 이 섹션에서는 오라클의 ODBC 드라이버에 대한 적합성 정보를 제공합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
--   [API 규칙 수준 (Oracle 용 ODCB 드라이버)](../../odbc/microsoft/api-conformance-level-odbc-driver-for-oracle.md)  
+-   [API 준수 수준(오라클용 ODCB 드라이버)](../../odbc/microsoft/api-conformance-level-odbc-driver-for-oracle.md)  
   
--   [지원 되는 옵션 (ODCB Driver for Oracle)](../../odbc/microsoft/supported-options-odbc-driver-for-oracle.md)  
+-   [지원되는 옵션(오라클용 ODCB 드라이버)](../../odbc/microsoft/supported-options-odbc-driver-for-oracle.md)  
   
--   [SQL 규칙 수준 (Oracle 용 ODCB 드라이버)](../../odbc/microsoft/sql-conformance-levels-odbc-driver-for-oracle.md)
+-   [SQL 적합성 수준(오라클용 ODCB 드라이버)](../../odbc/microsoft/sql-conformance-levels-odbc-driver-for-oracle.md)

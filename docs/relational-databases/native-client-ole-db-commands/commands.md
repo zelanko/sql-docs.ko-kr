@@ -11,20 +11,20 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, commands
 - commands [OLE DB]
 ms.assetid: de03b27e-8c5a-4060-b650-f77279be01df
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f2f603a610291b9b0ad70b2960302a73e16e759
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a8f1d969c49665b1384aa3ae938f1b0d8a8e4d82
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73790438"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304474"
 ---
 # <a name="commands"></a>명령
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는이 섹션에 설명 된 **ICommand** 인터페이스 및 명령 개체를 노출 합니다.  
+  네이티브 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 OLE DB 공급자는 이 섹션에 설명된 **ICommand** 인터페이스 및 명령 개체를 노출합니다.  
   
 -   [명령 구문](../../relational-databases/native-client-ole-db-commands/command-syntax.md)  
   

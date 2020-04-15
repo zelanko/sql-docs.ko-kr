@@ -13,20 +13,20 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, persisted data source objects
 - persisted data source objects
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1c553835cc0380082821dd49f53f69e767baacb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3355b086d884d68f829c34fb461589e4a46e05fc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73771476"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297290"
 ---
 # <a name="persisted-data-source-objects"></a>지속형 데이터 원본 개체
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 **IPersistFile** 인터페이스를 사용 하 여 지속형 데이터 원본 개체를 지원 합니다.  
+  네이티브 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 OLE DB 공급자는 **IPersistFile** 인터페이스를 사용하여 지속된 데이터 원본 개체를 지원합니다.  
   
 ## <a name="examples"></a>예  
  **1. 데이터 원본 초기화 지속:**  
@@ -228,9 +228,7 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- 
-  **IDBInitialize::Initialize**를 호출하기 전이나 호출한 후에 **IPersistFile::Save** 메서드를 호출할 수 있습니다. 
-  **IDBInitialize::Initialize**가 성공적으로 반환된 후에 이 메서드를 호출하면 유효한 데이터 원본 지정이 지속됩니다.  
+ **IDBInitialize::Initialize**를 호출하기 전이나 호출한 후에 **IPersistFile::Save** 메서드를 호출할 수 있습니다. **IDBInitialize::Initialize**가 성공적으로 반환된 후에 이 메서드를 호출하면 유효한 데이터 원본 지정이 지속됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 원본 개체 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  

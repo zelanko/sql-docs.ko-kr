@@ -1,5 +1,5 @@
 ---
-title: Windows의 ODBC | Microsoft Docs
+title: 윈도우의 ODBC | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 98e61767-12ed-4aec-816e-639bd9c27b31
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5f06b10f1d69b7165e1193b6be78e5aa8d38b1b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: de5f78f55f7242e0762d9b7cffb6dfe41c83d1dd
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68104800"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81282533"
 ---
 # <a name="odbc-in-windows"></a>Windows의 ODBC
-다음 항목은 Microsoft® Windows NT®/Windows 2000 및 Microsoft Windows® 95/98 운영 체제에서 실행 되는 ODBC에만 적용 됩니다.  
+다음 항목은 마이크로소프트에서 실행 되는 ODBC에만 적용® 윈도우 NT®/윈도우 2000 그리고 마이크로소프트 윈도우® 95/98 운영 체제.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

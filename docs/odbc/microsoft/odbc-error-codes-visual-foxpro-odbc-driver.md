@@ -1,5 +1,5 @@
 ---
-title: ODBC 오류 코드 (Visual FoxPro ODBC 드라이버) | Microsoft Docs
+title: ODBC 오류 코드 (비주얼 폭스프로 ODBC 드라이버) | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - SQLSTATE [ODBC]
 - FoxPro ODBC driver [ODBC], error codes
 ms.assetid: 9b4251f2-6fa6-49df-8abf-7cc1cc35d1c8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4364590e908688fe094da0e7687410bdda3b97cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a2f6da9d4e4799bb9c40ec1c2716b71f70c53695
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915775"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298113"
 ---
 # <a name="odbc-error-codes-visual-foxpro-odbc-driver"></a>ODBC 오류 코드(Visual FoxPro ODBC 드라이버)
-다음 표에서는 ODBC 오류 코드 SQLSTATE 값에 매핑되는 Visual FoxPro 오류 코드를 보여 줍니다. 매핑된 SQLSTATE 값은 [Sqlexecdirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) 및 [sqlprepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)에서 제공 됩니다. **Sqlexecdirect** 및 **Sqlprepare** 는 Visual FoxPro 엔진에 액세스 하는 유일한 함수 이므로 다른 ODBC API의 다른 SQLSTATE 값은 매핑되지 않습니다.  
+다음 표에는 ODBC 오류 코드 SQLSTATE 값에 매핑된 Visual FoxPro 오류 코드가 나열되어 있습니다. 매핑된 SQLSTATE 값은 [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) 및 [SQLPrepare에서](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)제공됩니다. **SQLExecDirect** 및 **SQLPrepare는** Visual FoxPro 엔진에 액세스하는 유일한 함수이기 때문에 다른 ODBC API의 다른 SQLSTATE 값은 매핑되지 않습니다.  
   
- ODBC 오류 코드에 대 한 자세한 내용은 *Odbc 프로그래머 참조*에서 [부록 a: odbc 오류 코드](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)를 참조 하세요.  
+ ODBC 오류 코드에 대한 자세한 내용은 *ODBC 프로그래머의 참조에서* [부록 A: ODBC 오류 코드를](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)참조하십시오.  
   
-|SQLSTATE|Visual FoxPro 오류 코드|  
+|SQLSTATE|비주얼 폭스프로 오류 코드|  
 |--------------|------------------------------|  
 |S1001|149<br /><br /> 150<br /><br /> 182<br /><br /> 202<br /><br /> 308|  
 |1004|159|  

@@ -1,5 +1,5 @@
 ---
-title: 열 단위 바인딩 | Microsoft Docs
+title: 열 별 바인딩 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,23 +12,23 @@ helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6f91dca1ac20173f9c10b4a52adf292e7abc45d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 538f225de2e08adcd7fea8a27edea35dc4b4e17f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083379"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299153"
 ---
 # <a name="column-wise-binding"></a>열 단위 바인딩
-열 단위 바인딩을 사용 하는 경우 응용 프로그램은 데이터를 반환할 각 열에 하나 또는 두 개의 배열을 바인딩합니다. 첫 번째 배열에는 데이터 값이 포함 되 고 두 번째 배열에는 길이/표시기 버퍼가 포함 됩니다. SQL_DESC_INDICATOR_PTR 및 SQL_DESC_OCTET_LENGTH_PTR 설명자 필드를 서로 다른 값으로 설정 하 여 표시기 및 길이 값을 별도의 버퍼에 저장할 수 있습니다. 이 작업이 수행 되 면 세 번째 배열이 바인딩됩니다. 각 배열에는 행 집합의 행 수 만큼의 요소가 포함 되어 있습니다.  
+열 별 바인딩을 사용하는 경우 응용 프로그램은 데이터를 반환할 각 열에 하나 또는 두 개 또는 경우에 따라 3개의 배열을 바인딩합니다. 첫 번째 배열은 데이터 값을 보유하고 두 번째 배열은 길이/표시기 버퍼를 보유합니다. 표시기 및 길이 값은 SQL_DESC_INDICATOR_PTR 및 SQL_DESC_OCTET_LENGTH_PTR 설명자 필드를 다른 값으로 설정하여 별도의 버퍼에 저장할 수 있습니다. 이렇게 하면 세 번째 배열이 바인딩됩니다. 각 배열에는 행 집합에 행이 있는 만큼많은 요소가 포함됩니다.  
   
- 응용 프로그램은 매개 변수 집합 버퍼와는 달리 행 집합 버퍼의 바인딩 형식을 결정 하는 SQL_ATTR_ROW_BIND_TYPE statement 특성과 함께 열 단위 바인딩을 사용 한다고 선언 합니다. 드라이버는 각 배열의 연속 요소에 있는 각 행에 대 한 데이터를 반환 합니다. 다음 그림에서는 열 단위 바인딩의 작동 방식을 보여 줍니다.  
+ 응용 프로그램은 매개 변수 집합 버퍼가 아닌 행 집합 버퍼에 대한 바인드 유형을 결정하는 SQL_ATTR_ROW_BIND_TYPE 문 특성과 함께 열별 바인딩을 사용하고 있음을 선언합니다. 드라이버는 각 배열의 연속된 요소에서 각 행에 대 한 데이터를 반환 합니다. 다음 그림에서는 열별 바인딩의 작동 방식을 보여 주시면 됩니다.  
   
- ![열&#45;세 개의 열로 이루어진 바인딩](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
+ ![열&#45;세 개의 열의 현명한 바인딩](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
   
- 예를 들어 다음 코드는 10 개의 요소 배열을 OrderID, 영업 사원 및 상태 열에 바인딩합니다.  
+ 예를 들어 다음 코드는 OrderID, SalesPerson 및 상태 열에 10개 요소 배열을 바인딩합니다.  
   
 ```  
 #define ROW_ARRAY_SIZE 10  
