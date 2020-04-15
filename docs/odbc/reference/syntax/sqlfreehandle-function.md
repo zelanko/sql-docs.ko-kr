@@ -1,5 +1,5 @@
 ---
-title: SQLFreeHandle 함수 | Microsoft Docs
+title: SQLFreeHandle 기능 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 07/18/2019
 ms.prod: sql
@@ -18,24 +18,24 @@ f1_keywords:
 helpviewer_keywords:
 - SQLFreeHandle function [ODBC]
 ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e312bcbc6efcb96ff02657b98034f0340ae377dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0b136dec98a19676aa67c78615d8fe931f62aafa
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68345178"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81285774"
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle 함수
 **규칙**  
- 소개 된 버전: ODBC 3.0 표준 준수: ISO 92  
+ 버전 출시: ODBC 3.0 표준 규정 준수: ISO 92  
   
  **요약**  
- **Sqlfreehandle** 은 특정 환경, 연결, 문 또는 설명자 핸들과 연결 된 리소스를 해제 합니다.  
+ **SQLFreeHandle** 특정 환경, 연결, 문 또는 설명자 핸들과 관련 된 리소스를 해제 합니다.  
   
 > [!NOTE]
->  이 함수는 핸들을 해제 하기 위한 제네릭 함수입니다. 이 2.0는 **SQLFreeConnect** (연결 핸들을 해제 하기 위해) 및 **sqlfreeenv** (환경 핸들 해제)를 대체 합니다. **SQLFreeConnect** 및 **sqlfreeenv** 는 모두 ODBC 3.x에서 더 이상 사용 되지*않습니다.* 또한 **Sqlfreehandle** 은 문 핸들을 해제 하기 위해 ODBC 2.0 함수 **SQLFreeStmt** (SQL_DROP *옵션*포함)를 대체 합니다. 자세한 내용은 "설명"을 참조 하십시오. ODBC*2.x 응용 프로그램이* odbc*2.x 드라이버를 사용할 때 드라이버 관리자* 가이 기능을에 매핑하는 방법에 대 한 자세한 내용은 [응용 프로그램의 이전 버전과의 호환성을 위한 대체 함수 매핑](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)을 참조 하세요.  
+>  이 함수는 핸들을 해제하기 위한 일반 함수입니다. ODBC 2.0 함수 인 **SQLFreeConnect** (연결 핸들 해제) 및 **SQLFreeEnv** (환경 핸들 해제)를 대체합니다. **SQLFreeConnect** 및 **SQLFreeEnv는** 모두 ODBC 3 *.x .* **또한 SQLFreeHandle은** ODBC 2.0 함수 **SQLFreeStmt(SQL_DROP** *옵션*포함)를 대체하여 문 핸들을 해제합니다. 자세한 내용은 '댓글'을 참조하세요. ODBC 3 *.x* 응용 프로그램이 ODBC 2 *.x* 드라이버로 작업할 때 드라이버 관리자가 이 함수를 매핑하는 작업에 대한 자세한 내용은 [응용 프로그램의 이전 버전과의 호환성에 대한 매핑 교체 함수를](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)참조하십시오.  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,7 +48,7 @@ SQLRETURN SQLFreeHandle(
   
 ## <a name="arguments"></a>인수  
  *HandleType*  
- 입력 **Sqlfreehandle**에서 해제할 핸들의 형식입니다. 다음 값 중 하나여야 합니다.  
+ [입력] **SQLFreeHandle에서**해제할 핸들 유형입니다. 다음 값 중 하나여야 합니다.  
   
 -   SQL_HANDLE_DBC  
   
@@ -60,64 +60,64 @@ SQLRETURN SQLFreeHandle(
   
 -   SQL_HANDLE_STMT  
   
- SQL_HANDLE_DBC_INFO_TOKEN 핸들은 드라이버 관리자 및 드라이버 에서만 사용 됩니다. 응용 프로그램은이 핸들 형식을 사용 하면 안 됩니다. SQL_HANDLE_DBC_INFO_TOKEN에 대 한 자세한 내용은 [ODBC 드라이버에서 연결 풀 인식 개발](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)을 참조 하세요.  
+ SQL_HANDLE_DBC_INFO_TOKEN 핸들은 드라이버 관리자와 드라이버에서만 사용됩니다. 응용 프로그램에서는 이 핸들 형식을 사용해서는 안 됩니다. SQL_HANDLE_DBC_INFO_TOKEN 대한 자세한 내용은 [ODBC 드라이버에서 연결-풀 인식 개발을](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)참조하십시오.  
   
- *HandleType* 가 이러한 값 중 하나가 아닌 경우 **sqlfreehandle** 은 SQL_INVALID_HANDLE를 반환 합니다.  
+ *핸들 Type이* 이러한 값 중 하나가 아닌 경우 **SQLFreeHandle은** SQL_INVALID_HANDLE 반환합니다.  
   
- *처리*  
- 입력 해제할 핸들입니다.  
+ *Handle*  
+ [입력] 해제할 핸들입니다.  
   
 ## <a name="returns"></a>반환  
  SQL_SUCCESS, SQL_ERROR 또는 SQL_INVALID_HANDLE.  
   
- **Sqlfreehandle** 이 SQL_ERROR 반환 하는 경우에도 핸들이 유효 합니다.  
+ **SQLFreeHandle** SQL_ERROR 반환하는 경우 핸들은 여전히 유효합니다.  
   
 ## <a name="diagnostics"></a>진단  
- **Sqlfreehandle** 이 SQL_ERROR을 반환 하는 경우 **sqlfreehandle** 에서 해제 하려고 했지만 실패 한 핸들의 진단 데이터 구조에서 연결 된 SQLSTATE 값을 가져올 수 있습니다. 다음 표에서는 일반적으로 **Sqlfreehandle** 에서 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR 됩니다.  
+ **SQLFreeHandle** SQL_ERROR 반환 하는 경우 **SQLFreeHandle** 해제 하려고 하지만 할 수 없는 핸들에 대 한 진단 데이터 구조에서 관련 된 SQLSTATE 값을 가져올 수 있습니다. 다음 표에서는 일반적으로 **SQLFreeHandle에서** 반환되는 SQLSTATE 값을 나열하고 이 함수의 컨텍스트에서 각 값을 설명합니다. "(DM)"는 드라이버 관리자가 반환하는 SQLSTATEs의 설명 앞에 옵니다. 별도로 명시되지 않는 한 각 SQLSTATE 값과 연결된 반환 코드는 SQL_ERROR.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Error|설명|  
 |--------------|-----------|-----------------|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. MessageText 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
-|HY001|메모리 할당 오류|드라이버가 실행 또는 함수의 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
-|HY010|함수 시퀀스 오류|(DM) *HandleType* 인수가 SQL_HANDLE_ENV 되었으며 하나 이상의 연결이 할당 되거나 연결 된 상태입니다. SQL_HANDLE_ENV *HandleType* 의 SQL_HANDLE_DBC *HandleType* 를 사용 하 여 **sqlfreehandle** 을 호출 하기 전에 각 연결에 대해 **sqldisconnect** 및 **sqlfreehandle** 을 호출 해야 합니다.<br /><br /> (DM) *HandleType* 인수가 SQL_HANDLE_DBC 되었으며 연결에 대해 **sqldisconnect** 를 호출 하기 전에 함수가 호출 되었습니다.<br /><br /> (DM) *HandleType* 인수가 SQL_HANDLE_DBC 되었습니다. 이 함수가 호출 될 때 *핸들* 을 사용 하 여 비동기적으로 실행 되는 함수가 호출 되었으며 함수가 여전히 실행 되 고 있습니다.<br /><br /> (DM) *HandleType* 인수가 SQL_HANDLE_STMT 되었습니다. **Sqlexecute**, **sqlexecdirect**, **SQLBulkOperations**또는 **SQLSetPos** 가 문 핸들을 사용 하 여 호출 되 고 SQL_NEED_DATA 반환 되었습니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대해 데이터를 보내기 전에 호출 되었습니다.<br /><br /> (DM) *HandleType* 인수가 SQL_HANDLE_STMT 되었습니다. 비동기 방식으로 실행 되는 함수가 문 핸들 또는 연결 된 연결 핸들에서 호출 되 고 함수가 호출 될 때 함수가 여전히 실행 되 고 있습니다.<br /><br /> (DM) *HandleType* 인수가 SQL_HANDLE_DESC 되었습니다. 연결 된 연결 핸들에 대해 비동기적으로 실행 되는 함수가 호출 되었습니다. 이 함수가 호출 될 때 함수는 계속 실행 중입니다.<br /><br /> (DM) **Sqlfreehandle** 을 호출 하기 전에 모든 자회사 핸들 및 기타 리소스가 해제 되지 않았습니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**또는 **SQLMoreResults** 가 *핸들과* 연결 된 문 핸들 중 하나에 대해 호출 되었으며 *HandleType* 가 SQL_HANDLE_STMT 또는 SQL_HANDLE_DESC SQL_PARAM_DATA_AVAILABLE 반환 되도록 설정 되었습니다. 이 함수는 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에 호출 되었습니다.|  
-|HY013|메모리 관리 오류|*HandleType* 인수는 SQL_HANDLE_STMT 되었거나 SQL_HANDLE_DESC, 기본 메모리 개체에 액세스할 수 없기 때문에 함수 호출을 처리할 수 없습니다. 메모리가 부족 하기 때문일 수 있습니다.|  
-|HY017|자동으로 할당 된 설명자 핸들 사용이 잘못 되었습니다.|(DM) *핸들* 인수가 자동으로 할당 된 설명자에 대 한 핸들로 설정 되었습니다.|  
-|HY117|알 수 없는 트랜잭션 상태로 인해 연결이 일시 중단 되었습니다. 연결 끊기 및 읽기 전용 함수만 허용 됩니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 [Sqlendtran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)를 참조 하세요.|  
-|HYT01|연결 제한 시간이 만료 되었습니다.|데이터 원본이 요청에 응답 하기 전에 연결 제한 시간이 만료 되었습니다. 연결 제한 시간은 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT을 통해 설정 됩니다.|  
-|IM001|드라이버가이 기능을 지원 하지 않습니다.|(DM) *HandleType* 인수가 SQL_HANDLE_DESC 되었으며 드라이버가 ODBC*2.x 드라이버 였습니다.*<br /><br /> (DM) *HandleType* 인수가 SQL_HANDLE_STMT 되었으며 드라이버가 올바른 ODBC 드라이버가 아닙니다.|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현별 SQLSTATE가 정의되지 않은 오류가 발생했습니다. MessageText 버퍼에서 **SQLGetDiagRec에서** 반환 된 오류 메시지는 오류 및 그 원인을 설명 합니다. * \**|  
+|HY01|메모리 할당 오류|드라이버가 함수의 실행 또는 완료를 지원하는 데 필요한 메모리를 할당할 수 없습니다.|  
+|HY010|함수 시퀀스 오류|(DM) *HandleType* 인수가 SQL_HANDLE_ENV 하나 이상의 연결이 할당또는 연결된 상태에 있었습니다. **SQLDisconnect** *핸들 유형* SQL_HANDLE_DBC **SQLFreeHandle을** SQL_HANDLE_ENV *핸들 유형으로* **SQLFreeHandle을** 호출하기 전에 각 연결에 대해 호출해야 합니다.<br /><br /> (DM) *핸들타이* 인수가 SQL_HANDLE_DBC 연결에 대해 **SQLDisconnect를** 호출하기 전에 함수가 호출되었습니다.<br /><br /> (DM) *핸들 타이* 인수가 SQL_HANDLE_DBC. *핸들을* 사용 하 여 비동기적으로 실행 하는 함수를 호출 하 고 이 함수를 호출 할 때 함수는 여전히 실행 되 고 있었습니다.<br /><br /> (DM) *핸들타이* 인수가 SQL_HANDLE_STMT. **SQLExecDirect**, **SQLBulkOperations**또는 **SQLSetPos는** 명령문 핸들을 호출하고 SQL_NEED_DATA 반환했습니다. **SQLExecDirect** 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대해 데이터를 보내기 전에 호출되었습니다.<br /><br /> (DM) *핸들타이* 인수가 SQL_HANDLE_STMT. 문 핸들 또는 연결된 연결 핸들에서 비동기적으로 실행 되는 함수가 호출 되었으며 이 함수가 호출 될 때 함수가 계속 실행 되었습니다.<br /><br /> (DM) *핸들 타이* 인수가 SQL_HANDLE_DESC. 연결된 연결 핸들에서 비동기적으로 실행되는 함수가 호출되었습니다. 이 함수가 호출될 때 함수가 계속 실행되고 있었습니다.<br /><br /> (DM) **SQLFreeHandle이** 호출되기 전에 모든 보조 핸들 및 기타 리소스가 해제되지 않았습니다.<br /><br /> (DM) **SQLExecDirect**또는 **SQLMoreResults핸들** 및 *핸들유형과* 연관된 명령문 핸들 중 하나를 호출하여 *SQL_HANDLE_STMT* 반환된 SQL_PARAM_DATA_AVAILABLE SQL_HANDLE_DESC. **SQLExecute** 이 함수는 스트리밍된 모든 매개 변수에 대해 데이터를 검색하기 전에 호출되었습니다.|  
+|HY013|메모리 관리 오류|*HandleType* 인수가 SQL_HANDLE_STMT SQL_HANDLE_DESC 메모리 부족 조건으로 인해 기본 메모리 개체에 액세스할 수 없기 때문에 함수 호출을 처리할 수 없습니다.|  
+|HY017|자동으로 할당된 설명자 핸들을 잘못 사용합니다.|(DM) *핸들* 인수가 자동으로 할당된 설명자의 핸들로 설정되었습니다.|  
+|HY17|알 수 없는 트랜잭션 상태로 인해 연결이 일시 중단됩니다. 분리 및 읽기 전용 함수만 허용됩니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 [SQLEndTran 함수를](../../../odbc/reference/syntax/sqlendtran-function.md)참조 하십시오.|  
+|HYT01|연결 시간 시간이 만료되었습니다.|데이터 원본이 요청에 응답하기 전에 연결 시간 시간 만료 기간이 만료되었습니다. 연결 시간 설정 기간은 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 통해 설정됩니다.|  
+|IM001|드라이버가 이 기능을 지원하지 않습니다.|(DM) *핸들타이* 인수가 SQL_HANDLE_DESC 드라이버가 ODBC*2.x* 드라이버였습니다.<br /><br /> (DM) *핸들타이* 인수가 SQL_HANDLE_STMT 드라이버가 유효한 ODBC 드라이버가 아닙니다.|  
   
 ## <a name="comments"></a>주석  
- **Sqlfreehandle** 은 다음 섹션에 설명 된 대로 환경, 연결, 문 및 설명자에 대 한 핸들을 해제 하는 데 사용 됩니다. 핸들에 대 한 일반적인 내용은 [핸들](../../../odbc/reference/develop-app/handles.md)을 참조 하십시오.  
+ **SQLFreeHandle은** 다음 섹션에 설명된 대로 환경, 연결, 명령문 및 설명자에 대한 핸들을 해제하는 데 사용됩니다. 핸들에 대한 일반적인 정보는 [핸들 을](../../../odbc/reference/develop-app/handles.md)참조하십시오.  
   
- 응용 프로그램은 해제 된 후에 핸들을 사용 하면 안 됩니다. 드라이버 관리자는 함수 호출에서 핸들의 유효성을 검사 하지 않습니다.  
+ 응용 프로그램이 해제된 후에는 핸들을 사용해서는 안 됩니다. 드라이버 관리자는 함수 호출에서 핸들의 유효성을 확인하지 않습니다.  
   
 ## <a name="freeing-an-environment-handle"></a>환경 핸들 해제  
- SQL_HANDLE_ENV의 *HandleType* 를 사용 하 여 **sqlfreehandle** 을 호출 하기 전에 응용 프로그램은 환경에서 할당 된 모든 연결에 대해 *HandleType* 의 SQL_HANDLE_DBC를 사용 하 여 **sqlfreehandle** 을 호출 해야 합니다. 그렇지 않으면 **Sqlfreehandle** 을 호출 하면 SQL_ERROR이 반환 되 고 환경 및 활성 연결은 모두 유효한 상태로 유지 됩니다. 자세한 내용은 [환경](../../../odbc/reference/develop-app/environment-handles.md) 핸들 및 [환경 핸들 할당](../../../odbc/reference/develop-app/allocating-the-environment-handle.md)을 참조 하세요.  
+ *SQL_HANDLE_ENV 핸들 타입을* 사용 하 여 **SQLFreeHandle를** 호출 하기 전에 응용 프로그램은 환경에서 할당 된 모든 연결에 대 한 *SQL_HANDLE_DBC 핸들 유형으로* **SQLFreeHandle을** 호출 해야 합니다. 그렇지 않으면 **SQLFreeHandle에** 대 한 호출 SQL_ERROR 반환 하 고 환경 및 활성 연결 유효 하 게 유지 합니다. 자세한 내용은 [환경 핸들](../../../odbc/reference/develop-app/environment-handles.md) 및 환경 [핸들 할당을](../../../odbc/reference/develop-app/allocating-the-environment-handle.md)참조하십시오.  
   
- 환경이 공유 환경인 경우 *HandleType* SQL_HANDLE_ENV의 **sqlfreehandle** 을 호출 하는 응용 프로그램은 호출 후 환경에 더 이상 액세스할 수 없지만 환경의 리소스를 반드시 해제할 필요는 없습니다. **Sqlfreehandle** 에 대 한 호출은 환경의 참조 횟수를 감소 시킵니다. 참조 횟수는 드라이버 관리자에 의해 유지 관리 됩니다. 이 값이 0에 도달 하지 않으면 공유 환경은 다른 구성 요소에서 사용 되 고 있기 때문에 해제 되지 않습니다. 참조 횟수가 0에 도달 하면 공유 환경의 리소스가 해제 됩니다.  
+ 환경이 공유 환경인 경우 *핸들유형* SQL_HANDLE_ENV **SQLFreeHandle을** 호출하는 응용 프로그램은 호출 후 환경에 더 이상 액세스할 수 없지만 환경의 리소스가 반드시 해제되지는 않습니다. **SQLFreeHandle에** 대 한 호출 환경의 참조 수를 감소 합니다. 참조 수는 드라이버 관리자에 의해 유지됩니다. 0에 도달하지 않으면 다른 구성 요소에서 여전히 사용 중이므로 공유 환경이 해제되지 않습니다. 참조 수가 0에 도달하면 공유 환경의 리소스가 해제됩니다.  
   
 ## <a name="freeing-a-connection-handle"></a>연결 핸들 해제  
- SQL_HANDLE_DBC *HandleType* 를 사용 하 여 **sqlfreehandle** 을 호출 하기 전에 응용 프로그램은이 핸들에 대 한 연결이 있는 경우 연결에 대해 **sqldisconnect** 를 호출 해야 합니다 *.* 그렇지 않으면 **Sqlfreehandle** 을 호출 하면 SQL_ERROR가 반환 되 고 연결은 유효한 상태로 유지 됩니다.  
+ *SQL_HANDLE_DBC 핸들 타입을* 사용 하 여 **SQLFreeHandle를** 호출 하기 전에 응용 프로그램은 이 핸들에 연결 이 면 연결에 대 한 **SQLDisconnect를** 호출 해야*합니다.* 그렇지 않으면 **SQLFreeHandle** 에 대 한 호출 SQL_ERROR 반환 하 고 연결 유효 한 상태로 유지 됩니다.  
   
- 자세한 내용은 [연결 핸들](../../../odbc/reference/develop-app/connection-handles.md) 및 [데이터 원본 또는 드라이버에서 연결 끊기](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md)를 참조 하세요.  
+ 자세한 내용은 [연결 핸들 및](../../../odbc/reference/develop-app/connection-handles.md) 데이터 원본 또는 [드라이버의 연결을](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md)참조하십시오.  
   
 ## <a name="freeing-a-statement-handle"></a>문 핸들 해제  
- SQL_HANDLE_STMT *HandleType* 를 사용 하 여 **sqlfreehandle** 을 호출 하면 *HandleType* SQL_HANDLE_STMT의 **SQLAllocHandle** 에 대 한 호출로 할당 된 모든 리소스가 해제 됩니다. 응용 프로그램에서 **Sqlfreehandle** 을 호출 하 여 보류 중인 결과가 포함 된 문을 해제할 때 보류 중인 결과가 삭제 됩니다. 응용 프로그램에서 문 핸들을 해제 하면 드라이버는 해당 핸들과 연결 된 4 개의 자동 할당 설명자를 해제 합니다. 자세한 [내용은 문 핸들 및](../../../odbc/reference/develop-app/statement-handles.md) [문 핸들 해제](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md)를 참조 하세요.  
+ *핸들 유형* SQL_HANDLE_STMT **SQLFreeHandle을** 호출하면 *핸들 유형* SQL_HANDLE_STMT **SQLAllocHandle** 호출에 의해 할당된 모든 리소스를 해제합니다. 응용 프로그램에서 **SQLFreeHandle을** 호출하여 보류 중인 결과가 있는 문을 해제하면 보류 중인 결과가 삭제됩니다. 응용 프로그램이 명령문 핸들을 해제하면 드라이버는 해당 핸들과 연결된 4개의 자동으로 할당된 설명자가 해제됩니다. 자세한 내용은 [명령문 핸들](../../../odbc/reference/develop-app/statement-handles.md) 및 [명령문 핸들 해제를](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md)참조하십시오.  
   
- **Sqldisconnect** 는 연결에서 열려 있는 문과 설명자를 자동으로 삭제 합니다.  
+ **SQLDisconnect는** 연결에서 열려 있는 모든 명령문 및 설명자가 자동으로 삭제됩니다.  
   
 ## <a name="freeing-a-descriptor-handle"></a>설명자 핸들 해제  
- SQL_HANDLE_DESC *HandleType* 를 사용 하는 **sqlfreehandle** 을 호출 하면 *핸들*에서 설명자 핸들이 해제 됩니다. **Sqlfreehandle** 을 호출 하면 *핸들*의 설명자 레코드에 대 한 포인터 필드 (SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR 및 SQL_DESC_OCTET_LENGTH_PTR)를 포함 하 여 참조 될 수 있는 응용 프로그램에서 할당 한 메모리를 해제 하지 않습니다. 포인터 필드가 아닌 필드에 대해 드라이버가 할당 한 메모리는 핸들을 해제할 때 해제 됩니다. 사용자 할당 설명자 핸들을 해제 하면 해제 된 핸들이 연결 된 모든 문이 자동으로 할당 된 해당 설명자 핸들로 돌아갑니다.  
+ *핸들 SQL_HANDLE_DESC* 핸들 을 사용하여 **SQLFreeHandle을** 호출하려면 *핸들에서*설명자 핸들을 해제합니다. **SQLFreeHandle에** 대 한 호출 *은 핸들의*설명자 레코드의 포인터 필드 (SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR 및 SQL_DESC_OCTET_LENGTH_PTR 포함 하 여) 참조 될 수 있는 응용 프로그램에 의해 할당 된 메모리를 해제 하지 않습니다. 포인터 필드가 아닌 필드에 대해 드라이버에서 할당한 메모리는 핸들이 해제될 때 해제됩니다. 사용자 할당된 설명자 핸들이 해제되면 해제된 핸들이 자동으로 할당된 각 설명자 핸들로 되돌려 연결되던 모든 명령문이 해제됩니다.  
   
 > [!NOTE]
->  ODBC 2.x*드라이버는* 설명자 핸들 할당을 지원 하지 않으므로 설명자 핸들을 해제 하는 것을 지원 하지 않습니다.  
+>  ODBC 2 *.x* 드라이버는 설명자 할당 핸들을 지원하지 않는 것처럼 해제 설명자 핸들을 지원하지 않습니다.  
   
- **Sqldisconnect** 는 연결에서 열려 있는 문과 설명자를 자동으로 삭제 합니다. 응용 프로그램에서 문 핸들을 해제 하면 드라이버는 해당 핸들과 연결 된 자동으로 생성 된 모든 설명자를 해제 합니다.  
+ **SQLDisconnect는** 연결에서 열려 있는 모든 명령문 및 설명자가 자동으로 삭제됩니다. 응용 프로그램이 명령문 핸들을 해제하면 드라이버는 해당 핸들과 연결된 자동으로 생성된 모든 설명자가 해제됩니다.  
   
- 설명자에 대 한 자세한 내용은 [설명자](../../../odbc/reference/develop-app/descriptors.md)를 참조 하십시오.  
+ 설명자에 대한 자세한 내용은 [설명자](../../../odbc/reference/develop-app/descriptors.md)를 참조하십시오.  
   
 ## <a name="code-example"></a>코드 예  
- 추가 코드 샘플은 [SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md) 및 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)를 참조 하세요.  
+ 추가 코드 샘플은 [SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md) 및 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)를 참조하십시오.  
   
 ### <a name="code"></a>코드  
   
@@ -175,10 +175,10 @@ int main() {
   
 ## <a name="related-functions"></a>관련 함수  
   
-|원하는 정보|참조 항목|  
+|원하는 정보|참조|  
 |---------------------------|---------|  
 |핸들 할당|[SQLAllocHandle 함수](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
-|문 처리 취소|[SQLCance Functionl](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|명령문 처리 취소|[SQLCance 함수](../../../odbc/reference/syntax/sqlcancel-function.md)|  
 |커서 이름 설정|[SQLSetCursorName 함수](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
 ## <a name="see-also"></a>참고 항목  

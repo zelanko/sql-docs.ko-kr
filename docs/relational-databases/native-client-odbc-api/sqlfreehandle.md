@@ -1,5 +1,5 @@
 ---
-title: SQLFreeHandle | Microsoft Docs
+title: SQLFree핸들 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLFreeHandle function
 ms.assetid: d374e5c8-ed35-43bf-8dd6-c37e38d9b5f1
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2320ec5059535702d8fb203b32a316b49821b20c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fc8a8cac364c9226d32ed2ebadbc2702e13031ab
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73786839"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298459"
 ---
 # <a name="sqlfreehandle"></a>SQLFreeHandle
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

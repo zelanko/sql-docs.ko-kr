@@ -1,5 +1,5 @@
 ---
-title: LIKE 조건자 제한 사항 | Microsoft Docs
+title: 좋아요 조건자 제한 사항 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - LIKE predicate limitations [ODBC]
 - ODBC SQL grammar, LIKE predicate limitations
 ms.assetid: dbd39099-caf6-4c4c-9ad8-f6c63c1bd5e4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8cd3cebfcf20df2f8a3a786ea66fd28dd76307c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6d596d688956d7bdbf3d9125184d81c16249781c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68119706"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298963"
 ---
 # <a name="like-predicate-limitations"></a>LIKE 조건자 제한 사항
-열의 데이터가 255 자를 초과 하는 경우에는 첫 번째 255 문자만 기반으로 하는 비교를 사용할 수 있습니다.  
+열의 데이터가 255자보다 긴 경우 LIKE 비교는 처음 255자만 기준으로 합니다.  
   
- 프로시저에서 사용 되는 것은 상수 패턴 에서만 지원 됩니다. 데스크톱 데이터베이스 드라이버는 패턴 일치와 같은 SQL-92를 지원 합니다.  
+ 프로시저에 사용되는 LIKE는 상수 패턴으로만 지원됩니다. 데스크톱 데이터베이스 드라이버는 SQL-92 LIKE 패턴 일치를 지원합니다.  
   
- LIKE 조건자에는 escape 절을 사용할 수 없습니다.  
+ LIKE 조건자에서 이스케이프 절의 사용은 지원되지 않습니다.  
   
- Numeric 또는 float 데이터 형식의 데이터를 포함 하는 열에 대해서는 LIKE 비교를 수행 하면 안 됩니다. 결과를 예측할 수 없습니다. 자세한 내용은 *Microsoft Jet 데이터베이스 엔진 프로그래머 가이드*를 참조 하세요.
+ 숫자 또는 부동 데이터 형식의 데이터가 포함된 열에서는 LIKE 비교를 수행해서는 안 됩니다. 결과를 예측할 수 없습니다. 자세한 내용은 Microsoft *Jet 데이터베이스 엔진 프로그래머 가이드를*참조하십시오.

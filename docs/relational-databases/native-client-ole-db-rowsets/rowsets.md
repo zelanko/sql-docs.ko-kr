@@ -14,31 +14,28 @@ helpviewer_keywords:
 - OLE DB rowsets, about rowsets
 - rowsets [OLE DB]
 ms.assetid: 5e7b3cbe-3670-4e18-8172-2226e0b6b142
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1a7156f90b2db2de328f37fa046811475bdde2a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: da51990e310b7903ce90d0369e30ff098103e141
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761683"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300259"
 ---
 # <a name="rowsets"></a>행 집합
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   행 집합은 데이터 열이 포함된 행의 집합입니다. 행 집합은 모든 OLE DB 데이터 공급자가 결과 집합 데이터를 테이블 형식으로 노출할 수 있도록 하는 중앙 개체입니다.  
   
- 소비자는 **IDBCreateSession::CreateSession** 메서드를 사용하여 세션을 만든 후 세션에서 **IOpenRowset** 또는 **IDBCreateCommand** 인터페이스를 사용하여 행 집합을 만들 수 있습니다. Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 두 인터페이스를 모두 지원 합니다. 여기서는 두 메서드에 대해 모두 설명합니다.  
+ 소비자는 **IDBCreateSession::CreateSession** 메서드를 사용하여 세션을 만든 후 세션에서 **IOpenRowset** 또는 **IDBCreateCommand** 인터페이스를 사용하여 행 집합을 만들 수 있습니다. 네이티브 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 OLE DB 공급자는 이러한 인터페이스를 모두 지원합니다. 여기서는 두 메서드에 대해 모두 설명합니다.  
   
--   
-  **IOpenRowset::OpenRowset** 메서드를 호출하여 행 집합을 만듭니다.  
+-   **IOpenRowset::OpenRowset** 메서드를 호출하여 행 집합을 만듭니다.  
   
-     이것은 단일 테이블에 대해 행 집합을 만드는 것과 같습니다. 이 메서드는 단일 기본 테이블의 모든 행이 포함된 행 집합을 열고 반환합니다. 
-  **OpenRowset**에 대한 인수 중 하나는 행 집합을 만드는 데 사용할 테이블을 식별하는 테이블 ID입니다.  
+     이것은 단일 테이블에 대해 행 집합을 만드는 것과 같습니다. 이 메서드는 단일 기본 테이블의 모든 행이 포함된 행 집합을 열고 반환합니다. **OpenRowset**에 대한 인수 중 하나는 행 집합을 만드는 데 사용할 테이블을 식별하는 테이블 ID입니다.  
   
--   
-  **IDBCreateCommand::CreateCommand** 메서드를 호출하여 명령 개체를 만듭니다.  
+-   **IDBCreateCommand::CreateCommand** 메서드를 호출하여 명령 개체를 만듭니다.  
   
      명령 개체는 공급자가 지원하는 명령을 실행합니다. 소비자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용하여 SELECT 문이나 저장 프로시저 호출과 같은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 지정할 수 있습니다. 명령 개체를 사용하여 행 집합을 만드는 단계는 다음과 같습니다.  
   
@@ -48,8 +45,7 @@ ms.locfileid: "73761683"
   
  소비자는 **ICommandProperties** 인터페이스를 사용하여 **ICommand::Execute** 인터페이스가 실행한 명령에서 반환된 행 집합의 속성을 가져오거나 설정할 수 있습니다. 자주 요청되는 속성은 행 집합에서 지원해야 하는 인터페이스입니다. 인터페이스 외에도 소비자는 행 집합이나 인터페이스의 동작을 수정하는 속성을 요청할 수 있습니다.  
   
- 소비자는 **IRowset::Release** 메서드를 사용하여 행 집합을 해제합니다. 행 집합을 해제하면 해당 행 집합에서 소비자가 보유한 행 핸들이 모두 해제됩니다. 행 집합을 해제해도 접근자는 해제되지 않습니다. 
-  **IAccessor** 인터페이스가 있는 경우 이를 해제해야 합니다.  
+ 소비자는 **IRowset::Release** 메서드를 사용하여 행 집합을 해제합니다. 행 집합을 해제하면 해당 행 집합에서 소비자가 보유한 행 핸들이 모두 해제됩니다. 행 집합을 해제해도 접근자는 해제되지 않습니다. **IAccessor** 인터페이스가 있는 경우 이를 해제해야 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

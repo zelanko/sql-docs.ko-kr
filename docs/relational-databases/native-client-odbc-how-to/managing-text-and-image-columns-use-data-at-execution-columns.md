@@ -1,5 +1,5 @@
 ---
-title: 실행 시 데이터 열 사용 (ODBC) | Microsoft Docs
+title: 실행 시 데이터 열(ODBC) 사용 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - data-at-execution
 ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb282274f8c1246f3771f83cfca15872d6d30937
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 78bfa4cd343fd13be121b660de700ef670f24adb
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73782505"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81293803"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>텍스트 및 이미지 열 관리 - Data-at-Execution 열 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,32 +32,28 @@ ms.locfileid: "73782505"
   
     -   네 번째 매개 변수에 대해 프로그램에서 정의된 열 식별자를 배치합니다.  
   
-2.  
-  [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) 를 호출하면 실행 시 데이터 열을 처리할 준비가 되었음을 나타내는 SQL_NEED_DATA가 반환됩니다.  
+2.  [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) 를 호출하면 실행 시 데이터 열을 처리할 준비가 되었음을 나타내는 SQL_NEED_DATA가 반환됩니다.  
   
 3.  각 실행 시 데이터 열에 대해 다음을 수행합니다.  
   
-    -   
-  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 를 호출하여 열 배열 포인터를 가져옵니다. 다른 실행 시 데이터 열이 있는 경우 SQL_NEED_DATA가 반환됩니다.  
+    -   [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 를 호출하여 열 배열 포인터를 가져옵니다. 다른 실행 시 데이터 열이 있는 경우 SQL_NEED_DATA가 반환됩니다.  
   
-    -   
-  [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) 를 한 번 이상 호출하여 길이가 전달될 때까지 열 데이터를 보냅니다.  
+    -   [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) 를 한 번 이상 호출하여 길이가 전달될 때까지 열 데이터를 보냅니다.  
   
-4.  
-  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 를 호출하여 최종 실행 시 데이터 열의 모든 데이터가 전달되었음을 나타냅니다. SQL_NEED_DATA는 반환되지 않습니다.  
+4.  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 를 호출하여 최종 실행 시 데이터 열의 모든 데이터가 전달되었음을 나타냅니다. SQL_NEED_DATA는 반환되지 않습니다.  
 
 ## <a name="example"></a>예제  
  이 예제에서는 SQLGetData를 사용하여 SQL_LONG 변수 문자 데이터를 읽는 방법을 보여 줍니다. 이 예제는 IA64에서 지원되지 않습니다.  
   
- AdventureWorks 예제 데이터베이스를 기본 데이터베이스로 사용하는 AdventureWorks라는 ODBC 데이터 원본이 필요합니다. AdventureWorks 샘플 데이터베이스는 [Microsoft SQL Server 샘플 및 커뮤니티 프로젝트](https://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지에서 다운로드할 수 있습니다. 이 데이터 원본은 운영 체제에서 제공 하는 ODBC 드라이버를 기반으로 해야 합니다. 드라이버 이름은 "SQL Server"입니다. 이 예제를 64비트 운영 체제에서 32비트 애플리케이션으로 작성하여 실행하려는 경우 %windir%\SysWOW64\odbcad32.exe에서 ODBC 관리자를 사용하여 ODBC 데이터 원본을 만들어야 합니다.  
+ AdventureWorks 예제 데이터베이스를 기본 데이터베이스로 사용하는 AdventureWorks라는 ODBC 데이터 원본이 필요합니다. [(Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) 샘플 및 커뮤니티 프로젝트 홈 페이지에서 AdventureWorks 샘플 데이터베이스를 다운로드할 수 있습니다.) 이 데이터 원본은 운영 체제에서 제공하는 ODBC 드라이버를 기반으로 해야 합니다(드라이버 이름은 "SQL Server"). 이 예제를 64비트 운영 체제에서 32비트 애플리케이션으로 작성하여 실행하려는 경우 %windir%\SysWOW64\odbcad32.exe에서 ODBC 관리자를 사용하여 ODBC 데이터 원본을 만들어야 합니다.  
   
  이 예제는 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 명명된 인스턴스에 연결하려면 ODBC 데이터 원본의 정의를 변경하여 server\namedinstance 형식으로 인스턴스를 지정합니다. 기본적으로 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 는 명명된 인스턴스에 설치됩니다.  
   
- 첫 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록을 실행 하 여 예제에서 사용 하는 테이블을 만듭니다.  
+ 첫 번째 [!INCLUDE[tsql](../../includes/tsql-md.md)]() 코드 목록을 실행하여 샘플에서 사용하는 테이블을 만듭니다.  
   
  odbc32.lib를 사용하여 두 번째(C++) 코드 목록을 컴파일합니다. 그리고 나서 프로그램을 실행합니다.  
   
- 세 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록을 실행 하 여 예제에서 사용 하는 테이블을 삭제 합니다.  
+ 세 번째 [!INCLUDE[tsql](../../includes/tsql-md.md)]() 코드 목록을 실행하여 샘플에서 사용하는 테이블을 삭제합니다.  
   
 ```  
 use AdventureWorks  
@@ -191,6 +187,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [텍스트 및 이미지 열 관리 방법 항목 ODBC&#41;&#40;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+ [ODBC&#41;&#40;텍스트 및 이미지 열 방법 항목 관리](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   

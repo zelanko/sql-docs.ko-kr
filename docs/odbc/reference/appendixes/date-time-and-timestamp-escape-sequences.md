@@ -1,5 +1,5 @@
 ---
-title: 날짜, 시간 및 타임 스탬프 이스케이프 시퀀스 | Microsoft Docs
+title: 날짜, 시간 및 타임스탬프 이스케이프 시퀀스 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - ODBC escape sequences [ODBC], about escape sequences
 - ODBC escape sequences [ODBC]
 ms.assetid: 67b7dee0-e5b1-4469-a626-0c7767852b80
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a6d7a35d0697d1dcbda8f9f64b7ac5a32307d5c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e6cbcdac00b4cd7497f53c9f3a13f4f7303b5154
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68051144"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284345"
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>날짜, 시간 및 타임스탬프 이스케이프 시퀀스
-ODBC는 날짜, 시간 및 타임 스탬프 리터럴에 대 한 이스케이프 시퀀스를 정의 합니다. 이러한 이스케이프 시퀀스의 구문은 다음과 같습니다.  
+ODBC는 날짜, 시간 및 타임스탬프 리터럴에 대한 이스케이프 시퀀스를 정의합니다. 이러한 이스케이프 시퀀스의 구문은 다음과 같습니다.  
   
 ```  
   
@@ -53,4 +53,4 @@ timestamp-separator ::=
 ```  
   
 ## <a name="remarks"></a>설명  
- 날짜, 시간 및 타임 스탬프 리터럴 이스케이프 시퀀스는 데이터 원본에서 날짜, 시간 및 타임 스탬프 데이터 형식이 지원 되는 경우에만 지원 됩니다. 응용 프로그램은 **SQLGetTypeInfo** 를 호출 하 여 이러한 데이터 형식이 지원 되는지 여부를 확인 해야 합니다.
+ 날짜, 시간 및 타임스탬프 리터럴 이스케이프 시퀀스가 데이터 원본에서 날짜, 시간 및 타임스탬프 데이터 형식을 지원하는 경우 지원됩니다. 응용 프로그램은 **SQLGetTypeInfo를** 호출하여 이러한 데이터 형식이 지원되는지 확인해야 합니다.

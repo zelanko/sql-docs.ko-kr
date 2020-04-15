@@ -1,5 +1,5 @@
 ---
-title: 데이터 형식 매핑 (Oracle 용 ODBC 드라이버) | Microsoft Docs
+title: 매핑 데이터 유형(오라클용 ODBC 드라이버) | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,24 +12,24 @@ helpviewer_keywords:
 - data types [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], data types
 ms.assetid: a5d9ce12-19da-4943-8493-e3d56fa08348
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 47646fd6fdf1e8fd16165af1bcfc5e741c6e610f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 432c21b70efcdd63ef36bfe3d26f8488ddb11d1d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68080729"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302674"
 ---
 # <a name="mapping-data-types-odbc-driver-for-oracle"></a>매핑 데이터 형식(Oracle용 ODBC 드라이버)
 > [!IMPORTANT]  
->  이 기능은 이후 버전의 Windows에서 제거 될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신 Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
+>  이 기능은 이후 버전의 Windows에서 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신 오라클에서 제공하는 ODBC 드라이버를 사용합니다.  
   
- Oracle 서버는 데이터 형식 집합을 지원 합니다. Oracle 용 ODBC 드라이버는 이러한 데이터 형식을 적절 한 ODBC SQL 데이터 형식에 매핑합니다. 다음 표에서는 Oracle 7.3 서버 데이터 형식 및 해당 ODBC SQL 데이터 형식을 보여 줍니다.  
+ Oracle Server는 데이터 형식 집합을 지원합니다. 오라클의 ODBC 드라이버는 이러한 데이터 형식을 적절한 ODBC SQL 데이터 형식에 매핑합니다. 다음 표에는 Oracle 7.3 Server 데이터 형식과 해당 ODBC SQL 데이터 형식이 나열되어 있습니다.  
   
- Oracle 용 ODBC 드라이버는 Oracle 7.3 및 일부 Oracle8 데이터 형식을 지원 합니다. 지원 되는 Oracle8 데이터 형식에 대 한 자세한 내용은 [지원 되는 데이터 형식](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)을 참조 하세요.  
+ 오라클용 ODBC 드라이버는 오라클 7.3 및 일부 Oracle8 데이터 유형을 지원합니다. 지원되는 Oracle8 데이터 유형에 대한 자세한 내용은 [지원되는 데이터 유형을](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)참조하십시오.  
   
-|Oracle Server 데이터 형식|ODBC SQL 데이터 형식|  
+|오라클 서버 데이터 유형|ODBC SQL 데이터 유형|  
 |-----------------------------|------------------------|  
 |CHAR|SQL_CHAR|  
 |DATE|SQL_TIMESTAMP|  
@@ -42,4 +42,4 @@ ms.locfileid: "68080729"
 |VARCHAR2|SQL_VARCHAR|  
   
 > [!NOTE]  
->  VARCHAR 열에 허용 되는 크기에 대 한 자세한 내용은이 가이드의 [Varchar 열 크기](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) 를 참조 하십시오.
+>  VARCHAR 열의 허용 크기에 대한 자세한 내용은 이 가이드의 [VARCHAR 열 크기를](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) 참조하십시오.

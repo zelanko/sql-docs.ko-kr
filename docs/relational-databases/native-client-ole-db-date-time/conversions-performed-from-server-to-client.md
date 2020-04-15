@@ -9,16 +9,16 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], server to client
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1a00acbda8626813faf77e3876f78abe60c6febc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9ed1216a0afd9091af7a0597592310eb457a4cbe
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74095622"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304426"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>서버에서 클라이언트로 수행되는 변환
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,30 +26,30 @@ ms.locfileid: "74095622"
   이 항목에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]이상 버전과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB로 작성된 클라이언트 애플리케이션 간에 수행되는 날짜 및 시간 변환에 대해 설명합니다.  
   
 ## <a name="conversions"></a>변환  
- 다음 표에서는 클라이언트로 반환된 형식과 바인딩 형식 간의 변환에 대해 설명합니다. 출력 매개 변수의 경우 ICommandWithParameters:: SetParameterInfo를 호출 하 고 *pwszDataSourceType* 에 지정 된 형식이 서버의 실제 형식과 일치 하지 않는 경우 서버에서 암시적 변환을 수행 하 고 클라이언트에 반환 되는 형식은 ICommandWithParameters:: SetParameterInfo를 통해 지정 된 형식과 일치 합니다. 따라서 서버의 변환 규칙이이 항목에 설명 된 것과 다를 경우 예기치 않은 변환 결과가 발생할 수 있습니다. 예를 들어 기본 날짜를 입력해야 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 1899-12-30을 사용하지 않고, 1900-1-1을 사용합니다.  
+ 다음 표에서는 클라이언트로 반환된 형식과 바인딩 형식 간의 변환에 대해 설명합니다. 출력 매개 변수의 경우 ICommandWithParameters::SetParameterInfo가 호출된 후 *pwszDataSourceType*에 지정된 형식이 서버의 실제 형식과 일치하지 않으면 서버에 의해 암시적 변환이 수행되며 클라이언트로 반환되는 형식은 ICommandWithParameters::SetParameterInfo를 통해 지정된 형식과 일치하게 됩니다. 이로 인해 서버의 변환 규칙이 이 항목에서 설명한 것과 다른 경우 예기치 않은 변환 결과가 발생할 수 있습니다. 예를 들어 기본 날짜를 입력해야 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 1899-12-30을 사용하지 않고, 1900-1-1을 사용합니다.  
   
-|대상 -><br /><br /> 원본|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
+|대상 -><br /><br /> 보낸 사람|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|Date|1,7|확인|-|-|1|1,3|1,7|-|확인 (VT_BSTR)|확인|확인|4|4|  
-|Time|5, 6, 7|-|9|확인|6|3, 6|5, 6|-|확인 (VT_BSTR)|확인|확인|4|4|  
+|Date|1,7|확인|-|-|1|1,3|1,7|-|OK(VT_BSTR)|확인|확인|4|4|  
+|Time|5,6,7|-|9|확인|6|3,6|5,6|-|OK(VT_BSTR)|확인|확인|4|4|  
 |Smalldatetime|7|8|9,10|10|확인|3|7|-|7(VT_DATE)|확인|확인|4|4|  
-|DateTime|5, 7|8|9,10|10|확인|3|7|-|7(VT_DATE)|확인|확인|4|4|  
-|Datetime2|5, 7|8|9,10|10|7|3|5, 7|-|확인 (VT_BSTR)|확인|확인|4|4|  
-|Datetimeoffset|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|확인|5, 7, 11|-|확인 (VT_BSTR)|확인|확인|4|4|  
-|Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12, 9|12|12|12|7, 13|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|  
+|DateTime|5,7|8|9,10|10|확인|3|7|-|7(VT_DATE)|확인|확인|4|4|  
+|Datetime2|5,7|8|9,10|10|7|3|5,7|-|OK(VT_BSTR)|확인|확인|4|4|  
+|Datetimeoffset|5,7,11|8,11|9,10,11|10,11|7,11|확인|5,7,11|-|OK(VT_BSTR)|확인|확인|4|4|  
+|Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12,9|12|12|12|7,13|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|  
 |Sql_variant<br /><br /> (datetime)|7|8|9,10|10|확인|3|7|-|7(VT_DATE)|확인|확인|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|확인|3|7|-|7(VT_DATE)|확인|확인|4|4|  
 |Sql_variant<br /><br /> (date)|1,7|확인|2|2|1|1,3|1,7|-|가능(VT_BSTR)|확인|확인|4|4|  
-|Sql_variant<br /><br /> (time)|5, 6, 7|2|6|확인|6|3, 6|5, 6|-|가능(VT_BSTR)|확인|확인|4|4|  
-|Sql_variant<br /><br /> (datetime2)|5, 7|8|9,10|10|확인|3|5, 7|-|가능(VT_BSTR)|확인|확인|4|4|  
-|Sql_variant<br /><br /> (datetimeoffset)|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|확인|5, 7, 11|-|가능(VT_BSTR)|확인|확인|4|4|  
+|Sql_variant<br /><br /> (time)|5,6,7|2|6|확인|6|3,6|5,6|-|가능(VT_BSTR)|확인|확인|4|4|  
+|Sql_variant<br /><br /> (datetime2)|5,7|8|9,10|10|확인|3|5,7|-|가능(VT_BSTR)|확인|확인|4|4|  
+|Sql_variant<br /><br /> (datetimeoffset)|5,7,11|8,11|9,10,11|10,11|7,11|확인|5,7,11|-|가능(VT_BSTR)|확인|확인|4|4|  
   
 ## <a name="key-to-symbols"></a>기호 설명  
   
 |기호|의미|  
 |------------|-------------|  
 |확인|변환이 필요 없습니다.|  
-|-|변환이 지원되지 않습니다. IAccessor:: CreateAccessor가 호출 될 때 바인딩의 유효성을 검사 하는 경우에는 DBBINDSTATUS_UPSUPPORTEDCONVERSION *rgStatus*에 반환 됩니다. 접근자 유효성 검사가 지연되면 DBSTATUS_E_BADACCESSOR가 설정됩니다.|  
+|-|변환이 지원되지 않습니다. IAccessor::CreateAccessor가 호출될 때 바인딩의 유효성이 검사되면 *rgStatus*에 DBBINDSTATUS_UPSUPPORTEDCONVERSION이 반환됩니다. 접근자 유효성 검사가 지연되면 DBSTATUS_E_BADACCESSOR가 설정됩니다.|  
 |1|시간 필드가 0으로 설정됩니다.|  
 |2|DBSTATUS_E_CANTCONVERTVALUE가 설정됩니다.|  
 |3|표준 시간대가 0으로 설정됩니다.|  
@@ -65,6 +65,6 @@ ms.locfileid: "74095622"
 |13|문자열이 ISO 리터럴로 구문 분석되고 대상 형식으로 변환됩니다. 실패하면 문자열이 OLE 날짜 리터럴(여기에도 시간 구성 요소가 포함되어 있음)로 구문 분석되고 OLE 날짜(DBTYPE_DATE)에서 대상 형식으로 변환됩니다. 대상이 DBTYPE_DATE 또는 DBTYPE_DBTIMESTAMP가 아닌 경우 문자열은 날짜/시간 리터럴 구문을 준수해야 합니다. 이 경우에 ISO 형식 구문 분석이 성공하려면 날짜/시간 또는 시간 리터럴이 사용되어야 합니다. OLE 구문 분석이 성공하려면 문자열이 OLE가 인식할 수 있는 구문을 준수해야 합니다. 문자열을 구문 분석할 수 없는 경우 DBSTATUS_E_CANTCONVERTVALUE가 설정됩니다. 범위를 벗어나는 구성 요소 값이 있으면 DBSTATUS_E_DATAOVERFLOW가 설정됩니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [바인딩 및 변환 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
+ [바인딩 및 변환&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
   
   

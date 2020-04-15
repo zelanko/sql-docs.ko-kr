@@ -1,5 +1,5 @@
 ---
-title: 추가 SQL Server Native Client 정보 찾기 | Microsoft Docs
+title: 더 많은 SQL 서버 네이티브 클라이언트 정보 찾기 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,23 +10,22 @@ helpviewer_keywords:
 - SQLNCLI, additional resources
 - SQL Server Native Client, additional resources
 ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 415e4817a7ed9b4fa8d3d9f8c24e9b6944cba8ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 67a4e0d84e23fc386a466090d94ab17965711329
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761172"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303782"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>SQL Server Native Client 추가 정보 찾기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 및 다른 데이터 액세스 프로그래밍 유형에 대한 자세한 내용은 다음 온라인 리소스를 참조하십시오.  
   
- [데이터 액세스 및 스토리지 개발자 센터](https://go.microsoft.com/fwlink?linkid=4173)  
+ [데이터 액세스 및 스토리지 개발자 센터(Data Access and Storage Developer Center)](https://go.microsoft.com/fwlink?linkid=4173)  
  이 사이트에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 및 다른 데이터 액세스 기술에 대한 기술 문서, 예제 코드 및 기타 리소스를 제공합니다.  
   
  [데이터 액세스 블로그](https://go.microsoft.com/fwlink/?LinkId=48617)  

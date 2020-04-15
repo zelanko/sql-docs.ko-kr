@@ -1,5 +1,5 @@
 ---
-title: SQLAllocStmt 매핑 | Microsoft Docs
+title: SQLAllocStmt 매핑 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLAllocStmt
 - SQLAllocStmt function [ODBC], mapping
 ms.assetid: a2449dbb-1b6c-4b49-81b9-ebdddd4442fd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cf79d3ef813e87e785cea588cfc1d6e3eed44ee4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 447233a3ba014a5ef92f2f49840ad302f8aeccf0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68064987"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305486"
 ---
 # <a name="sqlallocstmt-mapping"></a>SQLAllocStmt 매핑
-응용 프로그램에서 ODBC *3.x 드라이버를* 통해 **sqlallocstmt** 를 호출 하는 경우에 대 한 호출을 수행 합니다.  
+응용 프로그램이 ODBC *3.x* 드라이버를 통해 **SQLAllocStmt를** 호출할 때 다음을 호출합니다.  
   
 ```  
 SQLAllocStmt(hdbc, phstmt)  
 ```  
   
- 드라이버 관리자는 다음과 같이 **SQLAllocHandle** 에 매핑됩니다.  
+ 다음과 같이 드라이버 관리자에 의해 **SQLAllocHandle에** 매핑됩니다.  
   
 ```  
 SQLAllocHandle(SQL_HANDLE_STMT, InputHandle, OutputHandlePtr)  
 ```  
   
- *InputHandle* 를 *hdbc* 로 설정 하 고 *OutputHandlePtr* 를 *phstmt*로 설정 합니다.
+ *입력핸들이* *hdbc및* *OutputHandlePtr로* 설정하여 *phstmt로*설정합니다.

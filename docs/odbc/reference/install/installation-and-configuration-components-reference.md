@@ -1,5 +1,5 @@
 ---
-title: 설치 및 구성 구성 요소 참조 | Microsoft Docs
+title: 설치 및 구성 구성 요소 참조 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,27 +8,27 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c48b4303-6f39-4b5e-9134-1113cdef0e43
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ca15d3946dffe67c28d285c95f62d8956b276fb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b7a9c62df89318b32a431146511b9404c2802ded
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68094148"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301952"
 ---
 # <a name="installation-and-configuration-components-reference"></a>설치 및 구성 구성 요소 참조
 > [!NOTE]  
->  Windows XP 및 Windows Server 2003부터 ODBC는 Windows 운영 체제에 포함 되어 있습니다. ODBC는 이전 버전의 Windows에만 명시적으로 설치 해야 합니다.  
+>  Windows XP 및 Windows 서버 2003을 시작으로 ODBC는 Windows 운영 체제에 포함되어 있습니다. 이전 버전의 Windows에서는 ODBC만 명시적으로 설치해야 합니다.  
   
- 다음 섹션에서는 ODBC를 설치 및 구성 하는 데 사용 되는 구성 요소에 대 한 정보를 제공 합니다.  
+ 다음 섹션에서는 ODBC를 설치하고 구성하는 데 사용되는 구성 요소에 대한 정보를 제공합니다.  
   
 -   [관리 프로그램](../../../odbc/reference/install/administration-program.md)  
   
--   [드라이버 설정 DLL](../../../odbc/reference/install/driver-setup-dll.md)  
+-   [드라이버 설치 DLL](../../../odbc/reference/install/driver-setup-dll.md)  
   
 -   [설치 관리자 DLL](../../../odbc/reference/install/installer-dll.md)  
   
 -   [설치 프로그램](../../../odbc/reference/install/setup-program.md)  
   
--   [변환기 설정 DLL](../../../odbc/reference/install/translator-setup-dlls.md)
+-   [변환기 설치 DLL](../../../odbc/reference/install/translator-setup-dlls.md)

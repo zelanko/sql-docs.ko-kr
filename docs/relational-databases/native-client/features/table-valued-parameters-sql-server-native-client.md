@@ -1,5 +1,5 @@
 ---
-title: 테이블 반환 매개 변수, Native Client SQL
+title: 테이블 값 매개 변수, 네이티브 클라이언트 SQL
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,24 +10,24 @@ helpviewer_keywords:
 - SQL Server Native Client, table-valued parameters
 - table-valued parameters (SQL Server Native Client)
 ms.assetid: 5ee6bdcd-0309-4a20-b5c2-0e6b6839f34f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68540de199a5ed3b4c861bf46d52319de3b9e663
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4505593df677a4f82afc1fd579172b73ea626f7e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75247402"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303225"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>테이블 반환 매개 변수(SQL Server Native Client)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   테이블 반환 매개 변수는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]에서 도입되었으며 여러 개의 데이터 행을 서버로 전달하는 효율적인 방법을 제공합니다. 테이블 반환 매개 변수는 매개 변수 배열과 유사한 기능을 제공하지만 더 유연하며 [!INCLUDE[tsql](../../../includes/tsql-md.md)]과 더 밀접하게 통합될 뿐만 아니라 대체로 성능을 향상시킬 수 있습니다. 또한 테이블 반환 매개 변수는 집합 기반 작업에 참여할 수 있지만 매개 변수 배열은 참여할 수 없습니다.  
   
- 테이블 반환 매개 변수 및 ODBC에 대 한 자세한 내용은 [odbc&#41;&#40;테이블 반환 매개 변수 ](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)를 참조 하세요.  
+ 테이블 값 매개 변수 및 ODBC에 대한 자세한 내용은 [odBC&#41;&#40;테이블 값 매개 변수를 ](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)참조하십시오.  
   
- 테이블 반환 매개 변수 및 OLE DB에 대 한 자세한 내용은 [&#40;OLE DB&#41;테이블 반환 매개 변수 ](../../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)를 참조 하세요.  
+ 테이블 반환 매개 변수 및 OLE DB에 대한 자세한 내용은 [테이블 반환 매개 변수&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client 기능](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

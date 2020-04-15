@@ -1,5 +1,5 @@
 ---
-title: ODBC의 트랜잭션 | Microsoft Docs
+title: ODBC내 거래 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - transactions [ODBC]
 - ODBC, transactions
 ms.assetid: c5a87fa5-827a-4e6f-a0d9-924bac881eb0
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bffb00c2e6a4879befb91f002ac581c79251bfdf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 093eae04962409b5ac426713aedc74aa1bd0703b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73760486"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303680"
 ---
 # <a name="performing-transactions-in-odbc"></a>ODBC에서 트랜잭션 수행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,11 +35,9 @@ ms.locfileid: "73760486"
   
 -   수동 커밋 모드  
   
-     
-  **SQLEndTran**을 호출하여 중지하기 전까지는 실행된 모든 문이 동일한 트랜잭션에 포함됩니다.  
+     **SQLEndTran**을 호출하여 중지하기 전까지는 실행된 모든 문이 동일한 트랜잭션에 포함됩니다.  
   
- 자동 커밋 모드는 ODBC의 기본 트랜잭션 모드입니다. 연결을 설정하면 **SQLSetConnectAttr** 호출을 통해 자동 커밋 모드를 해제하고 수동 커밋 모드로 전환하기 전까지 자동 커밋 모드가 사용됩니다. 애플리케이션에서 자동 커밋을 해제하면 데이터베이스에 보내는 다음 문부터 트랜잭션이 시작되고, 이 트랜잭션은 애플리케이션에서 SQL_COMMIT 또는 SQL_ROLLBACK 옵션을 사용하여 **SQLEndTran** 을 호출하기 전까지 유효한 상태로 유지됩니다. 
-  **SQLEndTran** 을 호출한 이후에 데이터베이스에 보내는 명령부터 다음 트랜잭션이 시작됩니다.  
+ 자동 커밋 모드는 ODBC의 기본 트랜잭션 모드입니다. 연결을 설정하면 **SQLSetConnectAttr** 호출을 통해 자동 커밋 모드를 해제하고 수동 커밋 모드로 전환하기 전까지 자동 커밋 모드가 사용됩니다. 애플리케이션에서 자동 커밋을 해제하면 데이터베이스에 보내는 다음 문부터 트랜잭션이 시작되고, 이 트랜잭션은 애플리케이션에서 SQL_COMMIT 또는 SQL_ROLLBACK 옵션을 사용하여 **SQLEndTran** 을 호출하기 전까지 유효한 상태로 유지됩니다. **SQLEndTran** 을 호출한 이후에 데이터베이스에 보내는 명령부터 다음 트랜잭션이 시작됩니다.  
   
  애플리케이션에서 수동 커밋 모드에서 자동 커밋 모드로 전환하면 드라이버에서는 연결에 현재 열려 있는 모든 트랜잭션을 커밋합니다.  
   

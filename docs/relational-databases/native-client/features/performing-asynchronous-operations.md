@@ -16,46 +16,41 @@ helpviewer_keywords:
 - SQLNCLI, asynchronous operations
 - SQL Server Native Client, asynchronous operations
 ms.assetid: 8fbd84b4-69cb-4708-9f0f-bbdf69029bcc
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de08a6ca5e7f68c1a2537eafb6c837085a3ec254
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1adc7b723e6986a9d713847f09cafcb41c3d5a49
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761373"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303824"
 ---
 # <a name="performing-asynchronous-operations"></a>비동기 작업 수행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]을 사용하면 애플리케이션에서 비동기 데이터베이스 작업을 수행할 수 있습니다. 비동기 처리는 호출 스레드를 차단하지 않고 메서드를 즉시 반환할 수 있도록 합니다. 이를 통해 개발자는 명시적으로 스레드를 만들거나 동기화를 처리하지 않고도 보다 강력하고 유연한 다중 스레딩을 구현할 수 있습니다. 데이터베이스 연결을 초기화하거나 명령의 실행 결과를 초기화할 때 애플리케이션에서는 비동기 처리를 요청합니다.  
   
 ## <a name="opening-and-closing-a-database-connection"></a>데이터베이스 연결 열기 및 닫기  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용 하는 경우 데이터 소스 개체를 비동기적으로 초기화 하도록 디자인 된 응용 프로그램은 **IDBInitialize:: initialize**를 호출 하기 전에 DBPROP_INIT_ASYNCH 속성에서 DBPROPVAL_ASYNCH_INITIALIZE 비트를 설정할 수 있습니다. 이 속성이 설정된 경우 공급자는 **Initialize** 호출 시 S_OK 또는 DB_S_ASYNCHRONOUS와 함께 즉시 반환됩니다. S_OK는 초기화 작업이 즉시 완료된 경우 반환되고 DB_S_ASYNCHRONOUS는 초기화 작업이 비동기식으로 계속되는 경우 반환됩니다. 응용 프로그램은 데이터 원본 개체에서 **IdISSAsynchStatus** 인터페이스에 [](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)대해 쿼리 한 다음 **Idw Chstatus:: GetStatus** 또는[ISSAsynchStatus:: WaitForAsynchCompletion](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) 을 호출 하 여 초기화 상태를 가져올 수 있습니다.  
+ 네이티브 클라이언트 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB 공급자를 사용하는 경우 데이터 원본 개체를 비동기적으로 초기화하도록 설계된 응용 프로그램은 **IDBInitialize::Initialize**를 호출하기 전에 DBPROP_INIT_ASYNCH 속성에서 DBPROPVAL_ASYNCH_INITIALIZE 비트를 설정할 수 있습니다. 이 속성이 설정된 경우 공급자는 **Initialize** 호출 시 S_OK 또는 DB_S_ASYNCHRONOUS와 함께 즉시 반환됩니다. S_OK는 초기화 작업이 즉시 완료된 경우 반환되고 DB_S_ASYNCHRONOUS는 초기화 작업이 비동기식으로 계속되는 경우 반환됩니다. 응용 프로그램은 데이터 원본 개체에서 **IDBAsynchStatus** 또는 [ISSAynchStatus](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)인터페이스를 쿼리한 다음 **IDBAsynchStatus:::GetStatus** 또는[ISSAsynchStatus::WaitForAsynch완성을](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) 호출하여 초기화 상태를 얻을 수 있습니다.  
   
- 또한 SSPROP_ISSAsynchStatus 속성이 DBPROPSET_SQLSERVERROWSET 속성 집합에 추가되었습니다. 
-  **ISSAsynchStatus** 인터페이스를 지원하는 공급자는 VARIANT_TRUE 값을 사용하여 이 속성을 구현해야 합니다.  
+ 또한 SSPROP_ISSAsynchStatus 속성이 DBPROPSET_SQLSERVERROWSET 속성 집합에 추가되었습니다. **ISSAsynchStatus** 인터페이스를 지원하는 공급자는 VARIANT_TRUE 값을 사용하여 이 속성을 구현해야 합니다.  
   
- **Idbasynchstatus:: abort** 또는 [ISSAsynchStatus:: abort](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-abort-ole-db.md) 를 호출 하 여 비동기 **Initialize** 호출을 취소할 수 있습니다. 소비자는 비동기 데이터 원본 초기화를 명시적으로 요청해야 합니다. 그렇지 않으면 데이터 원본 개체가 완전히 초기화될 때까지 **IDBInitialize::Initialize**가 반환되지 않습니다.  
+ **IDBAsynchStatus::Abort** 또는 [ISSAsynchStatus::Abort](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-abort-ole-db.md)를 호출하여 비동기 **Initialize** 호출을 취소할 수 있습니다. 소비자는 비동기 데이터 원본 초기화를 명시적으로 요청해야 합니다. 그렇지 않으면 데이터 원본 개체가 완전히 초기화될 때까지 **IDBInitialize::Initialize**가 반환되지 않습니다.  
   
 > [!NOTE]  
->  연결 풀링을 사용 하는 데이터 원본 개체는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에서 **ISSAsynchStatus** 인터페이스를 호출할 수 없습니다. 
-  **ISSAsynchStatus** 인터페이스는 풀에 있는 데이터 원본 개체에 대해 표시되지 않습니다.  
+>  연결 풀링에 사용되는 데이터 원본 개체는 네이티브 클라이언트 OLE [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] DB 공급자의 **ISSAsynchStatus** 인터페이스를 호출할 수 없습니다. **ISSAsynchStatus** 인터페이스는 풀에 있는 데이터 원본 개체에 대해 표시되지 않습니다.  
 >   
 >  애플리케이션에서 명시적으로 커서 엔진을 사용하도록 설정한 경우 **IOpenRowset::OpenRowset** 및 **IMultipleResults::GetResult**는 비동기 처리를 지원하지 않습니다.  
 >   
->  또한 원격 프록시/스텁 dll (MDAC 2.8)은 Native Client에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ISSAsynchStatus** 인터페이스를 호출할 수 없습니다. 
-  **ISSAsynchStatus** 인터페이스는 원격을 통해 표시되지 않습니다.  
+>  또한 원격 프록시/스텁 dll(MDAC 2.8)은 네이티브 클라이언트에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ISSAsynchStatus** 인터페이스를 호출할 수 없습니다. **ISSAsynchStatus** 인터페이스는 원격을 통해 표시되지 않습니다.  
 >   
 >  Service Components는 **ISSAsynchStatus**를 지원하지 않습니다.  
   
 ## <a name="execution-and-rowset-initialization"></a>실행 및 행 집합 초기화  
- 명령의 실행 결과를 비동기식으로 열도록 설계된 애플리케이션에서는 DBPROP_ROWSET_ASYNCH 속성의 DBPROPVAL_ASYNCH_INITIALIZE 비트를 설정할 수 있습니다. 
-  **IDBInitialize::Initialize**, **ICommand::Execute**, **IOpenRowset::OpenRowset** 또는 **IMultipleResults::GetResult**를 호출하기 전에 이 비트를 설정할 경우 *riid* 인수를 IID_IDBAsynchStatus, IID_ISSAsynchStatus 또는 IID_IUnknown으로 설정해야 합니다.  
+ 명령의 실행 결과를 비동기식으로 열도록 설계된 애플리케이션에서는 DBPROP_ROWSET_ASYNCH 속성의 DBPROPVAL_ASYNCH_INITIALIZE 비트를 설정할 수 있습니다. **IDBInitialize::Initialize**, **ICommand::Execute**, **IOpenRowset::OpenRowset** 또는 **IMultipleResults::GetResult**를 호출하기 전에 이 비트를 설정할 경우 *riid* 인수를 IID_IDBAsynchStatus, IID_ISSAsynchStatus 또는 IID_IUnknown으로 설정해야 합니다.  
   
- 메서드는 행 집합 초기화가 즉시 완료되면 S_OK와 함께 즉시 반환되고 행 집합 초기화가 행 집합의 요청된 인터페이스로 설정된 *ppRowset*을 사용하여 비동기식으로 계속되면 DB_S_ASYNCHRONOUS와 함께 즉시 반환됩니다. Native Client OLE DB 공급자의 경우이 인터페이스는 **IdwISSAsynchStatus Chstatus** 또는 일 수 있습니다. **** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 행 집합이 완전히 초기화될 때까지 이 인터페이스는 일시 중단 상태에 있는 것처럼 동작하며 인터페이스에 대해 **IID_IDBAsynchStatus** 또는 **IID_ISSAsynchStatus**가 아닌 **QueryInterface**를 호출하면 E_NOINTERFACE가 반환될 수 있습니다. 소비자가 비동기 처리를 명시적으로 요청하지 않을 경우 행 집합은 동기식으로 초기화됩니다. 동기화 작업이 완료되었다는 메시지와 함께 **IDBAsynchStaus::GetStatus** 또는 **ISSAsynchStatus::WaitForAsynchCompletion**이 반환되면 요청된 모든 인터페이스를 사용할 수 있습니다. 이는 행 집합이 모두 채워지지는 않았지만 초기화가 완료되어 모든 기능이 올바로 작동함을 의미합니다.  
+ 메서드는 행 집합 초기화가 즉시 완료되면 S_OK와 함께 즉시 반환되고 행 집합 초기화가 행 집합의 요청된 인터페이스로 설정된 *ppRowset*을 사용하여 비동기식으로 계속되면 DB_S_ASYNCHRONOUS와 함께 즉시 반환됩니다. 네이티브 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트 OLE DB 공급자의 경우 이 인터페이스는 **IDBAsynchStatus** 또는 **ISSAynchStatus**일 수 있습니다. 행 집합이 완전히 초기화될 때까지 이 인터페이스는 일시 중단 상태에 있는 것처럼 동작하며 인터페이스에 대해 **IID_IDBAsynchStatus** 또는 **IID_ISSAsynchStatus**가 아닌 **QueryInterface**를 호출하면 E_NOINTERFACE가 반환될 수 있습니다. 소비자가 비동기 처리를 명시적으로 요청하지 않을 경우 행 집합은 동기식으로 초기화됩니다. 동기화 작업이 완료되었다는 메시지와 함께 **IDBAsynchStaus::GetStatus** 또는 **ISSAsynchStatus::WaitForAsynchCompletion**이 반환되면 요청된 모든 인터페이스를 사용할 수 있습니다. 이는 행 집합이 모두 채워지지는 않았지만 초기화가 완료되어 모든 기능이 올바로 작동함을 의미합니다.  
   
  실행한 명령이 행 집합을 반환하지 않을 경우 이 명령은 계속 **IDBAsynchStatus**를 지원하는 개체와 함께 즉시 반환됩니다.  
   
@@ -63,15 +58,14 @@ ms.locfileid: "73761373"
   
 -   명령을 실행하기 전에 DBPROP_ROWSET_ASYNCH 속성의 DBPROPVAL_ASYNCH_INITIALIZE 비트를 설정합니다.  
   
--   
-  **ICommand::Execute**를 호출하고 **IMultipleResults**를 요청합니다.  
+-   **ICommand::Execute**를 호출하고 **IMultipleResults**를 요청합니다.  
   
  그러면 **QueryInterface**를 통해 여러 결과 인터페이스를 쿼리하여 **IDBAsynchStatus** 및 **ISSAsynchStatus** 인터페이스를 가져올 수 있습니다.  
   
- 명령 실행이 완료 되 면 IMultipleResults를 정상적으로 사용할 수 있습니다 .이 경우에는 **** 가 반환 될 수 있습니다 .이 경우 **Idbasynchstatus** 또는 **ISSAsynchStatus** 를 사용 하 여 작업이 완료 된 시간을 확인할 수 있습니다 DB_S_ASYNCHRONOUS.  
+ 명령 실행이 완료되면 **IMultipleResults는** 동기 사례에서 한 가지 예외를 제외하고 정상적으로 사용할 수 있습니다 DB_S_ASYNCHRONOUS. **IDBAsynchStatus** **ISSAsynchStatus**  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 애플리케이션에서 비블로킹 메서드를 호출하고 몇 가지 다른 처리를 수행한 다음 다시 호출 결과를 처리합니다. **ISSAsynchStatus:: WaitForAsynchCompletion** 는 비동기적으로 실행 중인 작업이 완료 되거나 *dwMilisecTimeOut* 에 지정 된 시간이 경과할 때까지 내부 이벤트 개체를 대기 합니다.  
+ 다음 예에서는 애플리케이션에서 비블로킹 메서드를 호출하고 몇 가지 다른 처리를 수행한 다음 다시 호출 결과를 처리합니다. **ISSAsynchStatus::WaitForAsynchCompletion**은 비동기식으로 실행된 작업이 완료되거나 *dwMilisecTimeOut*으로 지정한 시간이 경과될 때까지 내부 이벤트 개체를 기다립니다.  
   
 ```  
 // Set the DBPROPVAL_ASYNCH_INITIALIZE bit in the   
@@ -112,7 +106,7 @@ if (hr == DB_S_ASYNCHRONOUS)
 }  
 ```  
   
- **ISSAsynchStatus:: WaitForAsynchCompletion** 는 비동기적으로 실행 되는 작업이 완료 되거나 *dwMilisecTimeOut* 값이 전달 될 때까지 내부 이벤트 개체를 대기 합니다.  
+ **ISSAsynchStatus::WaitForAsynchCompletion**은 비동기식으로 실행된 작업이 완료되거나 *dwMilisecTimeOut* 값이 전달될 때까지 내부 이벤트 개체를 기다립니다.  
   
  다음 예에서는 다중 결과 집합의 비동기 처리를 보여 줍니다.  
   
@@ -193,8 +187,8 @@ if (hr == DB_S_ASYNCHRONOUS)
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server Native Client 기능](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [행 집합 속성 및 동작](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)   
- [ISSAsynchStatus &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [SQL 서버 네이티브 클라이언트 기능](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [행 집합 속성 및 비헤이비어](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)   
+ [ISSAsynchStatus&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

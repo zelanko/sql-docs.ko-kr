@@ -1,5 +1,5 @@
 ---
-title: 카탈로그 메타 데이터 | Microsoft Docs
+title: 카탈로그 메타데이터 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -11,46 +11,46 @@ helpviewer_keywords:
 - metadata [ODBC]
 - catalog metadata [ODBC]
 ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de11cf1346010881ae3af0bbdf69035583090dd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ebf39ceb63a814b90bc5e6f0e2ebddeec401b126
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73783699"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301844"
 ---
 # <a name="metadata---catalog"></a>메타데이터 - 카탈로그
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  이 항목에서는 **Sqlcolumns** 및 **SQLProcedureColumns**에서 반환 하는 열 메타 데이터와 **SQLGetTypeInfo**에서 반환 하는 데이터 형식 메타 데이터에 대해 설명 합니다.  
+  이 항목에서는 **SQLColumns** 및 **SQLProcedureColumns에서**반환하는 열 메타데이터와 **SQLGetTypeInfo**에서 반환된 데이터 형식 메타데이터에 대해 설명합니다.  
   
 ## <a name="remarks"></a>설명  
- **Sqlcolumns** 및 **SQLProcedureColumns**에서 날짜/시간 형식에 대해 반환 되는 열 값은 다음과 같습니다.  
+ 다음 열 값은 **SQLColumns** 및 SQLProcedureColumns에 의해 날짜/시간 **형식에 대해 반환됩니다.**  
   
-|매개 변수 형식|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
+|매개 변수 유형|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
 |TYPE_NAME|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
-|COLUMN_SIZE|10|8, 10 ... 16|16|23|19, 21..27|26, 28..34|  
+|COLUMN_SIZE|10|8,10..16|16|23|19, 21..27|26, 28..34|  
 |BUFFER_LENGTH|6|10|16|16|16|20|  
-|DECIMAL_DIGITS|0|0..7|0|3|1.7|1.7|  
+|DECIMAL_DIGITS|0|0..7|0|3|1..7|1..7|  
 |SQL_DATA_TYPE|SQL_DATETIME|SQL_SS_TYPE_TIME2|SQL_DATETIME|SQL_DATETIME|SQL_DATETIME|SQL_SS_TYPE_TIMESTAMPOFFSET|  
 |SQL_DATETIME_SUB|SQL_CODE_DATE|NULL|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|NULL|  
 |CHAR_OCTET_LENGTH|NULL|NULL|NULL|NULL|NULL|NULL|  
 |SS_DATA_TYPE|0|0|111|111|0|0|  
   
- **SQLGetTypeInfo**에서 날짜/시간 형식에 대해 반환 되는 열 값은 다음과 같습니다.  
+ 다음 열 값은 **SQLGetTypeInfo에서**날짜/시간 형식에 대해 반환됩니다.  
   
-|매개 변수 형식|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
+|매개 변수 유형|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |TYPE_NAME|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
 |LITERAL_SUFFIX|'|'|'|'|'|'|  
-|CREATE_PARAMS|NULL|크기 조정|NULL|NULL|크기 조정|크기 조정|  
+|CREATE_PARAMS|NULL|소수 자릿수|NULL|NULL|소수 자릿수|소수 자릿수|  
 |NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|  
 |CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|  
@@ -67,6 +67,6 @@ ms.locfileid: "73783699"
 |USERTYPE|0|0|12|22|0|0|  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;메타 데이터](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
+ [ODBC&#41;&#40;메타데이터](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQLSetPos를 사용 하 여 행 집합의 행 업데이트 Microsoft Docs
+title: SQLSetPos로 행 업데이트 행 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,35 +12,35 @@ helpviewer_keywords:
 - data updates [ODBC], SQLSetPos
 - SQLSetPos function [ODBC], updating rows
 ms.assetid: d83a8c2a-5aa8-4f19-947c-79a817167ee1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0575c7ef7e380b1157640f9927e41192838c1ac0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4851d4ba741379fc188b2b88c895a378ef3bb80d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68091606"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298973"
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>SQLSetPos를 사용하여 행 집합의 행 업데이트
-**SQLSetPos** 의 업데이트 작업을 수행 하면 데이터 원본에서 각 바인딩된 열에 대해 응용 프로그램 버퍼의 데이터를 사용 하 여 하나 이상의 선택 된 행을 업데이트 합니다 (길이/지표 버퍼의 값이 SQL_COLUMN_IGNORE 되지 않은 경우). 바인딩되지 않은 열은 업데이트 되지 않습니다.  
+**SQLSetPos의** 업데이트 작업은 데이터 원본이 각 바인딩된 열에 대한 응용 프로그램 버퍼의 데이터를 사용하여 테이블의 하나 이상의 선택된 행을 업데이트하도록 합니다(길이/표시기 버퍼의 값이 SQL_COLUMN_IGNORE 않는 한). 바인딩되지 않은 열은 업데이트되지 않습니다.  
   
- **SQLSetPos**를 사용 하 여 행을 업데이트 하기 위해 응용 프로그램은 다음을 수행 합니다.  
+ **SQLSetPos로**행을 업데이트하려면 응용 프로그램은 다음을 수행합니다.  
   
-1.  새 데이터 값을 행 집합 버퍼에 배치 합니다. **SQLSetPos**를 사용 하 여 long 데이터를 전송 하는 방법에 대 한 자세한 내용은 [Long data And SQLSetPos and SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)을 참조 하세요.  
+1.  행 집합 버퍼에 새 데이터 값을 배치합니다. **SQLSetPos를**사용하여 긴 데이터를 보내는 방법에 대한 자세한 내용은 [긴 데이터 및 SQLSetPos 및 SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)를 참조하십시오.  
   
-2.  필요에 따라 각 열의 길이/표시기 버퍼에 값을 설정 합니다. 이는 문자열 버퍼에 바인딩된 열에 대 한 데이터 또는 SQL_NTS 바이트 길이, 이진 버퍼에 바인딩된 열의 데이터 바이트 길이, NULL로 설정 될 열에 대 한 SQL_NULL_DATA입니다.  
+2.  필요에 따라 각 열의 길이/표시기 버퍼의 값을 설정합니다. 문자열 버퍼에 바인딩된 열에 대한 데이터 또는 SQL_NTS 바이트 길이, 이진 버퍼에 바인딩된 열에 대한 데이터의 바이트 길이 및 NULL로 설정될 모든 열에 대한 SQL_NULL_DATA.  
   
-3.  SQL_COLUMN_IGNORE 업데이트 하지 않을 열의 길이/표시기 버퍼에 값을 설정 합니다. 응용 프로그램에서이 단계를 건너뛰고 기존 데이터를 다시 보낼 수 있지만이는 데이터를 읽을 때 잘린 데이터 원본에 값을 보내는 위험과 비효율적입니다.  
+3.  SQL_COLUMN_IGNORE 업데이트할 수 없는 열의 길이/표시기 버퍼에 값을 설정합니다. 응용 프로그램이 이 단계를 건너뛰고 기존 데이터를 다시 보낼 수 있지만 이는 비효율적이며 읽을 때 잘린 데이터 원본으로 값을 보낼 위험이 있습니다.  
   
-4.  *작업* 을 SQL_UPDATE로 설정 하 고 *RowNumber* 를 업데이트할 행 번호로 설정 하 여 **SQLSetPos** 를 호출 합니다. *RowNumber* 가 0 이면 행 집합의 모든 행이 업데이트 됩니다.  
+4.  *작업을* 사용하여 **SQLSetPos를** SQL_UPDATE 로 설정하고 *RowNumber를* 업데이트할 행 수로 설정합니다. *RowNumber가* 0이면 행 집합의 모든 행이 업데이트됩니다.  
   
- **SQLSetPos** 가 반환 된 후 현재 행이 업데이트 된 행으로 설정 됩니다.  
+ **SQLSetPos가** 반환되면 현재 행이 업데이트된 행으로 설정됩니다.  
   
- 행 집합의 모든 행을 업데이트할 때 (*RowNumber* 가 0 인 경우) 응용 프로그램은 행 작업 배열의 해당 요소 (SQL_ATTR_ROW_OPERATION_PTR statement 특성에 의해 가리키는)를 SQL_ROW_IGNORE로 설정 하 여 특정 행의 업데이트를 비활성화할 수 있습니다. Row 작업 배열은 행 상태 배열에 대 한 요소의 크기 및 수에 해당 하며 SQL_ATTR_ROW_STATUS_PTR statement 특성에서 가리킵니다. 성공적으로 인출 되었고 행 집합에서 삭제 되지 않은 결과 집합의 행만 업데이트 하기 위해 응용 프로그램은 행 집합을 인출 하는 함수의 행 상태 배열을 **SQLSetPos**로 사용 합니다.  
+ 행 집합의 모든 행을 업데이트할*때(RowNumber가* 0과 같음) 응용 프로그램은 행 작업 배열의 해당 요소(SQL_ATTR_ROW_OPERATION_PTR 문 특성으로 가리키는)를 SQL_ROW_IGNORE 설정하여 특정 행의 업데이트를 비활성화할 수 있습니다. 행 작업 배열은 행 상태 배열(SQL_ATTR_ROW_STATUS_PTR 문 특성으로 가리키는)에 대한 요소의 크기와 수에 해당합니다. 성공적으로 가져온 결과 집합의 해당 행만 업데이트하고 행 집합에서 삭제되지 않은 경우 응용 프로그램은 행 집합을 가져온 함수의 행 상태 배열을 **SQLSetPos로**가져옵니다.  
   
- 데이터 원본에 업데이트로 전송 되는 모든 행의 경우 응용 프로그램 버퍼에 올바른 행 데이터가 있어야 합니다. 페치를 통해 응용 프로그램 버퍼를 채우고 행 상태 배열이 유지 된 경우 이러한 각 행 위치에 있는 값을 SQL_ROW_DELETED, SQL_ROW_ERROR 또는 SQL_ROW_NOROW 하지 않아야 합니다.  
+ 업데이트로 데이터 원본으로 전송되는 모든 행에 대해 응용 프로그램 버퍼에는 유효한 행 데이터가 있어야 합니다. 응용 프로그램 버퍼가 가져오기로 채워지고 행 상태 배열이 유지된 경우 이러한 각 행 위치의 해당 값은 SQL_ROW_DELETED, SQL_ROW_ERROR 또는 SQL_ROW_NOROW 않아야 합니다.  
   
- 예를 들어 다음 코드를 사용 하 여 사용자는 Customers 테이블을 스크롤하고 새 행을 업데이트, 삭제 또는 추가할 수 있습니다. **SQLSetPos** 를 호출 하기 전에 새 데이터를 행 집합 버퍼에 배치 하 여 새 행을 업데이트 하거나 추가 합니다. 새 행을 저장 하기 위해 행 집합 버퍼의 끝에 추가 행이 할당 됩니다. 이렇게 하면 새 행에 대 한 데이터가 버퍼에 배치 될 때 기존 데이터를 덮어쓰지 않습니다.  
+ 예를 들어 다음 코드를 통해 사용자는 Customers 테이블을 스크롤하여 새 행을 업데이트, 삭제 또는 추가할 수 있습니다. **SQLSetPos를** 호출하기 전에 행 집합 버퍼에 새 데이터를 배치하여 새 행을 업데이트하거나 추가합니다. 행 집합 버퍼의 끝에 새 행을 보유하는 추가 행이 할당됩니다. 이렇게 하면 새 행의 데이터가 버퍼에 배치될 때 기존 데이터가 덮어쓰지 않습니다.  
   
 ```  
 #define UPDATE_ROW   100  

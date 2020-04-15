@@ -1,5 +1,5 @@
 ---
-title: 기타 Excel 드라이버 프로그래밍 세부 정보 | Microsoft Docs
+title: 기타 엑셀 드라이버 프로그래밍 세부 정보 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,18 +12,18 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Excel driver
 - ODBC desktop database drivers [ODBC], Excel driver
 ms.assetid: 92453ef5-86d6-4d13-bdd6-a4f5cf9c453f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 464d454928b575e5151b09663d96b1f837356761
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d7a932d99ba30e84de0ccd4cfbcce1516cd2fad9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68043775"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81291003"
 ---
 # <a name="other-excel-driver-programming-details"></a>기타 Excel 드라이버 프로그래밍 세부 정보
 > [!NOTE]  
->  이 섹션에서는 ODBC 함수 및 기타 프로그래밍 정보에 대 한 Excel 드라이버 관련 정보를 제공 합니다. 함수에 대 한 일반 정보는 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)에서 적절 한 항목을 참조 하세요.  
+>  이 섹션에서는 ODBC 함수 및 기타 프로그래밍 세부 정보에 대한 Excel 드라이버 관련 정보를 제공합니다. 함수에 대한 일반 정보는 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)에서 적절한 항목을 참조하십시오.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68043775"
   
 -   [SQLColumns(Excel 드라이버)](../../odbc/microsoft/sqlcolumns-excel-driver.md)  
   
--   [SQLConfigDataSource (Excel 드라이버)](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)  
+-   [SQLConfigData원본(엑셀 드라이버)](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)  
   
 -   [SQLDriverConnect(Excel 드라이버)](../../odbc/microsoft/sqldriverconnect-excel-driver.md)  
   

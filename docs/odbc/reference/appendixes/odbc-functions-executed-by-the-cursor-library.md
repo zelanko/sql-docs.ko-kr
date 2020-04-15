@@ -1,5 +1,5 @@
 ---
-title: 커서 라이브러리에 의해 실행 되는 ODBC 함수 | Microsoft Docs
+title: 커서 라이브러리에서 실행되는 ODBC 함수 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,35 +13,35 @@ helpviewer_keywords:
 - ODBC functions [ODBC], cursor library
 - ODBC cursor library [ODBC], functions
 ms.assetid: 2f1d3386-7e59-4d55-a5b4-3440b61343a3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 00a369b4fd6cc11728fb9e3fcea2db958d4ae45d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 70fb48a8764a913ea4c2376c1a44bcd8712e7d29
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67990603"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298233"
 ---
 # <a name="odbc-functions-executed-by-the-cursor-library"></a>커서 라이브러리에 의해 실행되는 ODBC 함수
 > [!IMPORTANT]  
->  이 기능은 이후 버전의 Windows에서 제거 될 예정입니다. 새 개발 작업에서는이 기능을 사용 하지 않도록 하 고 현재이 기능을 사용 하는 응용 프로그램은 수정 하십시오. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
+>  이 기능은 이후 버전의 Windows에서 제거됩니다. 새 개발 작업에서 이 기능을 사용하지 말고 현재 이 기능을 사용하는 응용 프로그램을 수정할 계획입니다. 드라이버의 커서 기능을 사용하는 것이 좋습니다.  
   
- 커서 라이브러리는 다음 함수를 실행 합니다. 응용 프로그램이이 목록에 있는 함수를 호출 하는 경우 드라이버 관리자는 드라이버가 아니라 커서 라이브러리를 호출 합니다. 커서 라이브러리는 함수를 실행할 때 드라이버를 호출할 수 있습니다.  
+ 커서 라이브러리는 다음 기능을 실행합니다. 응용 프로그램이 이 목록의 함수를 호출하면 드라이버 관리자는 드라이버가 아닌 커서 라이브러리를 호출합니다. 커서 라이브러리는 함수를 실행할 때 드라이버를 호출할 수 있습니다.  
   
 |||  
 |-|-|  
-|**SQLBindCol**|**SQLGetStmtOption**|  
-|**Sqlbindparam 함수와**|**SQLNativeSql**|  
+|**SQLBindCol**|**SQLGetStmt옵션**|  
+|**SQLBindParam**|**SQLNativeSql**|  
 |**SQLBindParameter**|**SQLNumParams**|  
-|**SQLCloseCursor**|**SQLParamOptions**|  
+|**SQLCloseCursor**|**SQLParam옵션**|  
 |**SQLEndTran**|**SQLRowCount**|  
 |**SQLExtendedFetch**|**SQLSetConnectAttr**|  
-|**SQLFetchScroll**|**SQLSetConnectOption**|  
+|**SQLFetchScroll**|**SQLSet연결옵션**|  
 |**SQLFreeHandle**|**SQLSetDescField**|  
 |**SQLFreeStmt**|**SQLSetDescRec**|  
 |**SQLGetData**|**SQLSetPos**|  
-|**SQLGetDescField**|**SQLSetScrollOptions**|  
+|**SQLGetDescField**|**SQLSet스크롤 옵션**|  
 |**SQLGetDescRec**|**SQLSetStmtAttr**|  
-|**SQLGetFunctions**|**SQLSetStmtOption**|  
+|**SQLGetFunctions**|**SQLSetStmt옵션**|  
 |**SQLGetInfo**|**SQLTransact**|  
 |**SQLGetStmtAttr**||

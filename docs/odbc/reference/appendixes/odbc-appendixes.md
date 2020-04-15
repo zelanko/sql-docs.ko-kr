@@ -1,5 +1,5 @@
 ---
-title: ODBC 부록 | Microsoft Docs
+title: ODBC 부록 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 3331aa89-24d0-4c0e-b377-c720c1107ad5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9c9e54bec1c4a4f57ade8ded1034c8c503c0cece
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 555dccd513c78c490eb647ea8227ed3843e8a4be
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67990651"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299843"
 ---
 # <a name="odbc-appendixes"></a>ODBC 부록
-Microsoft ODBC 인터페이스와 관련 된 기술 세부 정보는 다음 부록에 포함 되어 있습니다.  
+Microsoft ODBC 인터페이스와 관련된 기술 세부 사항은 다음 부록에 포함되어 있습니다.  
   
 -   [부록 A: ODBC 오류 코드](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
   

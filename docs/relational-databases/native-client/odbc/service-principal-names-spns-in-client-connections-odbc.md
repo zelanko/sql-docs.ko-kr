@@ -1,5 +1,5 @@
 ---
-title: ODBC 클라이언트의 Spn (서비스 사용자 이름)
+title: ODBC 클라이언트의 서비스 주체 이름(SPN)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,20 +8,20 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 1d60cb30-4c46-49b2-89ab-701e77a330a2
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6eb3887586a7c0398b196ba042c44381c2d900f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c3f83b227a6f67c5700ff07a0cd9dbc78065adf9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75247378"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303700"
 ---
 # <a name="service-principal-names-spns-in-client-connections-odbc"></a>클라이언트 연결(ODBC)의 SPN(서비스 사용자 이름)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  이 항목에서는 클라이언트 애플리케이션의 SPN(서비스 사용자 이름)을 지원하는 ODBC 특성 및 함수에 대해 설명합니다. 클라이언트 응용 프로그램의 Spn에 대 한 자세한 내용은 [서비스 사용자 이름 &#40;spn&#41; 클라이언트 연결에서 지원](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md) 및 [상호 Kerberos 인증 가져오기](../../../relational-databases/native-client-odbc-how-to/get-mutual-kerberos-authentication.md)를 참조 하세요.  
+  이 항목에서는 클라이언트 애플리케이션의 SPN(서비스 사용자 이름)을 지원하는 ODBC 특성 및 함수에 대해 설명합니다. 클라이언트 응용 프로그램의 SPN에 대한 자세한 내용은 [클라이언트 연결에서 서비스 주체 이름 &#40;SPN&#41; 지원을](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md) 참조하고 상호 [Kerberos 인증](../../../relational-databases/native-client-odbc-how-to/get-mutual-kerberos-authentication.md)을 가져옵니다.  
   
 ## <a name="connection-string-keywords"></a>연결 문자열 키워드  
  클라이언트 애플리케이션은 다음 연결 문자열 키워드를 사용하여 SPN을 지정할 수 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "75247378"
 |키워드|값|  
 |-------------|-----------|  
 |**ServerSPN**|서버의 SPN입니다. 기본값은 빈 문자열이며 이 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 드라이버에서 생성한 기본 SPN을 사용합니다.|  
-|**Failoverpartnerspn이**|장애 조치(failover) 파트너의 SPN입니다. 기본값은 빈 문자열이며 이 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 드라이버에서 생성한 기본 SPN을 사용합니다.|  
+|**FailoverPartnerSPN**|장애 조치(failover) 파트너의 SPN입니다. 기본값은 빈 문자열이며 이 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 드라이버에서 생성한 기본 SPN을 사용합니다.|  
   
 ## <a name="connection-attributes"></a>연결 특성  
  클라이언트 애플리케이션은 다음 연결 특성을 사용하여 SPN을 지정하고 인증 방법을 쿼리할 수 있습니다.  
@@ -54,6 +54,6 @@ ms.locfileid: "75247378"
 -   [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;SQL Server Native Client &#40;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

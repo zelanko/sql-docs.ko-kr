@@ -1,5 +1,5 @@
 ---
-title: 테이블 반환 매개 변수 사용 (ODBC) | Microsoft Docs
+title: 테이블 값 매개 변수(ODBC) 사용 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,22 +8,22 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 6f8da6ab-9de6-4d0a-9b7e-acb76a50a2e7
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ea30d6b1e0a90a4feec188698fd452903cf83ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1572330ee537976f32e4cca082f46d9e451189d4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73780025"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298063"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>테이블 반환 매개 변수 사용(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   이 예제에서는 테이블 반환 매개 변수를 사용하여 여러 열과 함께 서버에 대한 한 번의 호출로 여러 행을 삽입하는 방법을 보여 줍니다.  
   
- 테이블 반환 매개 변수에 대 한 자세한 내용은 [ODBC&#41;&#40;테이블 반환 매개 변수 ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)를 참조 하세요. 테이블 반환 매개 변수를 사용하는 예제에 대한 자세한 내용은 [ODBC Table-Valued Parameter Programming Examples](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)를 참조하십시오.  
+ 테이블 값 매개 변수에 대한 자세한 내용은 ODBC&#41;[&#40;테이블 값 매개 변수를 ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)참조하십시오. 테이블 반환 매개 변수를 사용하는 예제에 대한 자세한 내용은 [ODBC Table-Valued Parameter Programming Examples](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)를 참조하십시오.  
   
 ## <a name="example"></a>예제  
  TVPDemo라는 ODBC 데이터 원본이 필요합니다. 컴퓨터의 모든 테스트 데이터베이스가 TVPDemo의 기본 데이터베이스가 될 수 있습니다. 이 데이터 원본은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에 대한 ODBC 드라이버를 기반으로 해야 합니다.  
