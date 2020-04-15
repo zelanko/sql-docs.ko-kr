@@ -1,5 +1,5 @@
 ---
-title: SQLNumParams | Microsoft Docs
+title: SQLNumParams | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 8e0c7d87-d7f2-455a-bfb8-67066adc04f9
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18bf18341a30def47cdf2b09f2eb11d6aede2b98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 687204574e590075a046b8d77a233dfaf3d14b7a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73786250"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81289125"
 ---
 # <a name="sqlnumparams"></a>SQLNumParams
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  에서 시작 하는 데이터베이스 엔진의 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 향상 된 기능으로는 SQLNumParams가 예상 결과에 대 한 보다 정확한 설명을 얻을 수 있습니다. 이러한 보다 정확한 결과는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 SQLNumParams에 의해 반환 되는 값과 다를 수 있습니다.  
+  SQLNumParams을 통해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 데이터베이스 엔진의 개선으로 인해 예상결과에 대한 보다 정확한 설명을 얻을 수 있습니다. 이러한 보다 정확한 결과는 이전 버전의 에서 SQLNumParams에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환된 값과 다를 수 있습니다.  
   
  자세한 내용은 [메타데이터 검색](../../relational-databases/native-client/features/metadata-discovery.md)을 참조하세요.  
   

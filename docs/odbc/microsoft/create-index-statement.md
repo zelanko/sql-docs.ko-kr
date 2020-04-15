@@ -1,5 +1,5 @@
 ---
-title: CREATE INDEX 문 | Microsoft Docs
+title: 인덱스 문 만들기 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,24 +11,24 @@ helpviewer_keywords:
 - CREATE INDEX [ODBC]
 - SQL grammar [ODBC], create index
 ms.assetid: 69438247-eef3-44c5-bef2-acef4e146f41
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ad15ad436b0f34f00acbd75e371e998183f22d2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c6aa512ff789fcbd00f45f84fb194d4ab3f5da07
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68081916"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81280973"
 ---
 # <a name="create-index-statement"></a>CREATE INDEX 문
-CREATE INDEX 문의 구문은 다음과 같습니다.  
+CREATE INDEX 문의 구문은 다음과 같은 것입니다.  
   
- CREATE [UNIQUE] 인덱스 *인덱스 이름* ( *테이블 이름* ) (*열 식별자* [asc] [desc] [, *열 식별자* [asc] [desc] ...]) \< *인덱스 옵션 목록* 포함>  
+ *테이블 이름에* [고유] 인덱스 *이름* 만들기(열*식별자* [ASC][DESC][, 열 식별자[ASC][DESC]...]) *column-identifier* 포함 \< *인덱스 옵션 목록*>  
   
- 여기서 \< *인덱스 옵션 목록*>는 기본 &#124; null 허용 안 함 &#124; null을 무시 합니다.  
+ \< *인덱스 옵션 목록*> 될 수 있는 위치: 기본 &#124; NULL 을 무시 &#124; NULL을 허용하지 &#124;.  
   
- Microsoft Access 드라이버만 NULL 허용 안 함 및 NULL 인덱스 무시 옵션을 사용 합니다. DBASE 및 Paradox 드라이버는 구문을 적용 하지만 두 옵션의 존재는 무시 합니다.  
+ Microsoft Access 드라이버만 NULL 허용 안 및 NULL 인덱스 무시 옵션을 사용합니다. dBASE 및 역설 드라이버는 구문을 수락하지만 두 옵션 중 하나의 존재를 무시합니다.  
   
- Paradox 드라이버를 사용 하는 경우 CREATE INDEX 문은 Paradox 기본 키 파일과 보조 파일을 만듭니다.  
+ 역설 드라이버를 사용 하는 경우 CREATE INDEX 문은 역설 기본 키 파일 및 보조 파일을 만듭니다.  
   
- Microsoft Excel 또는 텍스트 드라이버에서는이 문을 지원 하지 않습니다.
+ 이 문은 Microsoft Excel 또는 텍스트 드라이버에서 지원되지 않습니다.
