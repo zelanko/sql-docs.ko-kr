@@ -1,5 +1,5 @@
 ---
-title: 스파스 열이 있는 테이블에 대해 SQLColumns 호출 | Microsoft Docs
+title: 희소 한 열이있는 테이블에 SQLColumns 호출 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -9,23 +9,22 @@ ms.technology: native-client
 yms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ffe65b15ef18618058ea9ccc385dd12cd0482d96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 57dc76c3373623ac133b0911e37ac4298682fa92
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781702"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298322"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>스파스 열이 있는 테이블에 대해 SQLColumns 호출
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   이 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서 ODBC를 사용하여 정의된 스파스 열이 있는 테이블에 대해 SQLColumns를 호출하는 방법을 보여 줍니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서는 이 예제를 사용할 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서는 이 예제를 사용할 수 없습니다.  
   
  스파스 열 기능에 대한 자세한 내용은 [Sparse Columns Support in SQL Server Native Client](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)을 참조하십시오.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "73781702"
   
  /EHsc /D, "UNICODE" 및 odbc32.lib를 사용하여 컴파일합니다.  
   
- 두 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은이 예제에서 만든 테이블을 삭제 합니다.  
+ 두 번째 [!INCLUDE[tsql](../../includes/tsql-md.md)]() 코드 목록은 이 샘플에서 만든 테이블을 삭제합니다.  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

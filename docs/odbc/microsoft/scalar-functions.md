@@ -1,5 +1,5 @@
 ---
-title: 스칼라 함수 | Microsoft Docs
+title: 스칼라 기능 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - scalar functions [ODBC], desktop database drivers
 - SQL grammar [ODBC], scalar functions
 ms.assetid: 18e1e0c1-b43f-44d9-b310-7d9e1d499e8b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85511a9997ccbae0ebe4838218d43bc997344085
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e9d319b08069fd0ae32af20bf39dbdb7cdfb819c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67997782"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306014"
 ---
 # <a name="scalar-functions"></a>스칼라 함수
-Microsoft ODBC 데스크톱 데이터베이스 드라이버는 다음과 같은 스칼라 함수를 지원 합니다.  
+Microsoft ODBC 데스크톱 데이터베이스 드라이버는 다음과 같은 스칼라 기능을 지원합니다.  
   
 ||||  
 |-|-|-|  
@@ -35,4 +35,4 @@ Microsoft ODBC 데스크톱 데이터베이스 드라이버는 다음과 같은 
 |DAYOFMONTH|MOD|YEAR|  
 |DAYOFWEEK|MONTH||  
   
- 스칼라 함수의 인수 및 반환 값에 대 한 자세한 내용은 *ODBC 프로그래머 참조* 의 부록 F를 참조 하세요.
+ 스칼라 함수의 인수 및 반환 값에 대한 자세한 내용은 *ODBC 프로그래머 참조의* 부록 F를 참조하십시오.

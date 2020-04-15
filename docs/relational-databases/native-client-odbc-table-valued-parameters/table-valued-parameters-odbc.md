@@ -1,5 +1,5 @@
 ---
-title: 테이블 반환 매개 변수 (ODBC) | Microsoft Docs
+title: 테이블 값 매개 변수(ODBC) | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,28 +11,28 @@ helpviewer_keywords:
 - table-valued parameters (ODBC)
 - ODBC, table-valued parameters
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f53e1780beaea56ba659c11771d469163a964971
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c303a1b3b8a9a42792feb6802e9f09fabc1e3ca3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73790472"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297758"
 ---
 # <a name="table-valued-parameters-odbc"></a>테이블 반환 매개 변수(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   ODBC의 테이블 반환 매개 변수 지원을 통해 한 번의 호출로 여러 행을 서버로 보냄으로써 클라이언트 애플리케이션에서 서버로 매개 변수가 있는 데이터를 보다 효율적으로 전송할 수 있습니다.  
   
- 서버에 있는 테이블 반환 매개 변수에 대 한 자세한 내용은 [테이블 반환 매개 변수 &#40;사용 하 여 데이터베이스 엔진&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)를 참조 하세요.  
+ 서버의 테이블 값 매개 변수에 대한 자세한 내용은 [테이블 값 매개 변수 사용을 ](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)&#40;데이터베이스 엔진&#41;.  
   
  ODBC에서 다음 두 가지 방법으로 테이블 반환 매개 변수를 서버로 보낼 수 있습니다.  
   
--   SQLExecDirect 또는 SQLExecute를 호출할 때 모든 테이블 반환 매개 변수 데이터는 메모리에 있을 수 있습니다. 테이블 반환에 행이 여러 개 있으면 이 데이터가 배열로 저장됩니다.  
+-   모든 테이블 값 매개 변수 데이터는 SQLExecDirect 또는 SQLExecute가 호출될 때 메모리에 있을 수 있습니다. 테이블 반환에 행이 여러 개 있으면 이 데이터가 배열로 저장됩니다.  
   
--   SQLExecDirect 또는 SQLExecute를 호출 하는 경우 응용 프로그램은 테이블 반환 매개 변수에 대해 실행 시 데이터를 지정할 수 있습니다. 이 경우 테이블 반환의 데이터 행을 일괄 처리로 제공하거나, 한 번에 하나씩 제공해 메모리 사용량을 줄일 수 있습니다.  
+-   응용 프로그램은 SQLExecDirect 또는 SQLExecute가 호출될 때 테이블 값 매개 변수에 대해 실행 시 데이터를 지정할 수 있습니다. 이 경우 테이블 반환의 데이터 행을 일괄 처리로 제공하거나, 한 번에 하나씩 제공해 메모리 사용량을 줄일 수 있습니다.  
   
  첫 번째 옵션을 사용하면 저장 프로시저가 비즈니스 논리를 더 많이 캡슐화할 수 있습니다. 예를 들어 주문 항목이 테이블 반환 매개 변수로 전달된 경우 단일 저장 프로시저가 전체 주문 입력 트랜잭션을 캡슐화할 수 있습니다. 이 옵션은 서버로의 왕복이 한 번만 필요하기 때문에 매우 효율적입니다. 또는 다른 프로시저를 사용하여 주문 헤더와 주문 항목을 각각 별도로 처리할 수도 있습니다. 이 경우 코드가 더 많이 필요하고 클라이언트와 서버 간의 계약이 복잡해집니다.  
   
@@ -66,14 +66,13 @@ ms.locfileid: "73790472"
  애플리케이션에서 준비된 프로시저 호출의 메타데이터를 가져오는 방법을 설명합니다.  
   
  [추가 테이블 반환 매개 변수 메타데이터](../../relational-databases/native-client-odbc-table-valued-parameters/additional-table-valued-parameter-metadata.md)  
- SQLProcedureColumns, SQLTables 및 Sqltables를 사용 하 여 테이블 반환 매개 변수의 메타 데이터를 검색 하는 방법을 설명 합니다.  
+ SQLProcedureColumns, SQLTable 및 SQLColumns를 사용하여 테이블 값 매개 변수에 대한 메타데이터를 검색하는 방법을 설명합니다.  
   
  [테이블 반환 매개 변수 데이터 변환과 기타 오류 및 경고](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-data-conversion-and-other-errors-and-warnings.md)  
  테이블 반환 매개 변수 열 값에서 발생한 오류를 처리하는 방법을 설명합니다.  
   
  [버전 간 호환성](../../relational-databases/native-client-odbc-table-valued-parameters/cross-version-compatibility.md)  
- 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]보다 이전 버전의 클라이언트나 서버에서 테이블 반환 매개 변수를 사용할 때 발생할 수 있는 충돌에 대해 설명합니다.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]보다 이전 버전의 클라이언트나 서버에서 테이블 반환 매개 변수를 사용할 때 발생할 수 있는 충돌에 대해 설명합니다.  
   
  [ODBC 테이블 반환 매개 변수 API 요약](../../relational-databases/native-client-odbc-table-valued-parameters/odbc-table-valued-parameter-api-summary.md)  
  테이블 반환 매개 변수를 지원하는 ODBC 함수 목록을 보여 줍니다.  
@@ -82,7 +81,7 @@ ms.locfileid: "73790472"
  일반적인 태스크를 수행하는 방법을 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;SQL Server Native Client &#40;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [테이블 반환 매개 변수 SQL Server Native Client &#40;&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
+ [SQL 서버 네이티브 클라이언트 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [SQL Server 네이티브 클라이언트&#41;&#40;테이블 값 매개 변수](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
   
   

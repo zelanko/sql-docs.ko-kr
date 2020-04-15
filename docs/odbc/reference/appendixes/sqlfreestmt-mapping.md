@@ -1,5 +1,5 @@
 ---
-title: SQLFreeStmt 매핑 | Microsoft Docs
+title: SQLFreeStmt 매핑 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - SQLFreeStmt function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLFreeStmt
 ms.assetid: 267d95f2-4f0c-47ab-9411-5afe105215a2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a92af35d8a1b1e98a484c69d7d2e66bf5bef3196
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9d187db4d40132385b9ae4564fddbf89987e3e97
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68086085"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302014"
 ---
 # <a name="sqlfreestmt-mapping"></a>SQLFreeStmt 매핑
-응용 *프로그램이 ODBC 3.x* 드라이버를 통해 SQL_DROP의 *Option* 인수를 사용 하 여 **SQLFreeStmt** 를 호출 하는 경우에 대 한 호출은  
+응용 프로그램이 ODBC *3.x* 드라이버를 통해 SQL_DROP *옵션* 인수로 **SQLFreeStmt를** 호출하면  
   
 ```  
 SQLFreeStmt(hstmt, SQL_DROP)   
 ```  
   
- 매핑 대상  
+ 매핑됩니다.  
   
 ```  
 SQLFreeHandle(SQL_HANDLE_STMT,Handle)  
 ```  
   
- *핸들* 인수가 *hstmt*의 값으로 설정 된입니다.
+ *핸들* 인수를 *hstmt의*값으로 설정합니다.

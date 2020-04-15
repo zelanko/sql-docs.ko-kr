@@ -1,5 +1,5 @@
 ---
-title: 파일 기반 드라이버 진단 예제 | Microsoft Docs
+title: 파일 기반 드라이버 진단 예제 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - diagnostic information [ODBC], examples
 - error messages [ODBC], diagnostic messages
 ms.assetid: 0575fccd-4641-478d-a3cc-5a764e35bae2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 23234a490f664c4be0811152b2b77ae7c0b73761
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6f09e4f4758b6276836b08f02b24fb31dd1fadc7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68069828"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305641"
 ---
 # <a name="file-based-driver-diagnostic-example"></a>파일 기반 드라이버 진단 예제
-파일 기반 드라이버는 ODBC 드라이버와 데이터 원본으로 모두 작동 합니다. 따라서 ODBC 연결의 구성 요소 및 데이터 원본으로 오류와 경고를 생성할 수 있습니다. 또한 드라이버 관리자와 상호 작용 하는 구성 요소 이기 때문에 **SQLGetDiagRec**에 대 한 인수를 포맷 하 고 반환 합니다.  
+파일 기반 드라이버는 ODBC 드라이버와 데이터 원본 역할을 모두 합니다. 따라서 ODBC 연결의 구성 요소와 데이터 원본으로 오류 및 경고를 생성할 수 있습니다. 또한 드라이버 관리자와 인터페이스하는 구성 요소이기 때문에 **SQLGetDiagRec**에 대한 인수를 서식을 지정하고 반환합니다.  
   
- 예를 들어, dBASE 용 Microsoft® 드라이버에서 충분 한 메모리를 할당할 수 없는 경우 **SQLGetDiagRec**에서 다음 값을 반환할 수 있습니다.  
+ 예를 들어 dBASE에 대한 Microsoft ® 드라이버가 충분한 메모리를 할당할 수 없는 경우 **SQLGetDiagRec에서**다음 값을 반환할 수 있습니다.  
   
 ```  
 SQLSTATE:         "HY001"  
@@ -32,9 +32,9 @@ Native Error:      42052
 Diagnostic Msg:   "[Microsoft][ODBC dBASE Driver]Unable to allocate sufficient memory."  
 ```  
   
- 이 오류가 데이터 원본과 관련이 없기 때문에 드라이버는 공급 업체 ([Microsoft]) 및 드라이버 ([ODBC dBASE Driver])에 대 한 진단 메시지에만 접두사를 추가 했습니다.  
+ 이 오류는 데이터 원본과 관련이 없기 때문에 드라이버는 공급업체([Microsoft]))와 드라이버([ODBC dBASE 드라이버])에 대한 진단 메시지에 접두사만 추가했습니다.  
   
- 드라이버가 Employee .dbf 파일을 찾을 수 없는 경우 **SQLGetDiagRec**에서 다음 값을 반환할 수 있습니다.  
+ 드라이버가 Employee.dbf 파일을 찾을 수 없는 경우 **SQLGetDiagRec에서**다음 값을 반환할 수 있습니다.  
   
 ```  
 SQLSTATE:         "42S02"  
@@ -42,4 +42,4 @@ Native Error:      -1305
 Diagnostic Msg:   "[Microsoft][ODBC dBASE Driver][dBASE]No such table or object"  
 ```  
   
- 이 오류가 데이터 원본과 관련 되어 있으므로 드라이버는 데이터 원본 ([dBASE])의 파일 형식을 진단 메시지의 접두사로 추가 했습니다. 드라이버는 데이터 원본으로 되 하는 구성 요소 이기도 하므로 공급 업체 ([Microsoft]) 및 드라이버 ([ODBC dBASE Driver])에 대 한 접두사를 추가 했습니다.
+ 이 오류는 데이터 원본과 관련이 있기 때문에 드라이버는 데이터 원본의 파일 형식을 [dBASE]를 진단 메시지의 접두사로 추가했습니다. 드라이버는 데이터 원본과 인터페이스하는 구성 요소이기도 했기 때문에 공급업체([Microsoft]))와 드라이버([ODBC dBASE 드라이버])에 대한 접두사를 추가했습니다.

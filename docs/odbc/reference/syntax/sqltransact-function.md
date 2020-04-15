@@ -1,5 +1,5 @@
 ---
-title: SQLTransact 함수 | Microsoft Docs
+title: SQLTransact 기능 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,24 +17,24 @@ f1_keywords:
 helpviewer_keywords:
 - SQLTransact function [ODBC]
 ms.assetid: 496249e0-8eff-4c60-8358-5543bc3ead9c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6c96c903b68dee2d1d215804d318d47b4c39a7a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c7a4f1da36a7c233e9a1b5832ee83e86a5c1f77d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039500"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81287083"
 ---
 # <a name="sqltransact-function"></a>SQLTransact 함수
 **규칙**  
- 소개 된 버전: ODBC 1.0 표준 준수: 사용 되지 않음  
+ 버전 도입: ODBC 1.0 표준 규정 준수: 더 이상 사용되지 않는  
   
  **요약**  
- *Odbc 3.x에서는 odbc*2.X 함수 **Sqltransact** 이 **sqlendtran**로 대체 *되었습니다.* 자세한 내용은 [Sqlendtran](../../../odbc/reference/syntax/sqlendtran-function.md)을 참조 하십시오.  
+ ODBC *3.x에서*ODBC *2.x* 함수 **SQLTransact가** **SQLEndTran으로**대체되었습니다. 자세한 내용은 [SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)을 참조하십시오.  
   
 > [!NOTE]  
->  ODBC 3.8에 도입 된 SQL_ASYNC_DBC_FUNCTION_ENABLE 특성은 **Sqltransact**에서 지원 되지 않습니다. 연결 핸들에 대해 비동기 작업을 사용 하는 응용 프로그램은 **Sqlendtran**을 사용 해야 합니다.  
+>  ODBC 3.8에 도입 된 SQL_ASYNC_DBC_FUNCTION_ENABLE 특성은 **SQLTransact에서**지원되지 않습니다. 연결 핸들에서 비동기 연산을 사용하는 응용 프로그램은 **SQLEndTran**을 사용해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   

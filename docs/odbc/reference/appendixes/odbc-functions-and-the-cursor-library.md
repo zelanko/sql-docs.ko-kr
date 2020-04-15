@@ -1,5 +1,5 @@
 ---
-title: ODBC 함수 및 커서 라이브러리 | Microsoft Docs
+title: ODBC 함수 및 커서 라이브러리 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,20 +8,20 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c609d0fb-787a-4b39-9673-332d411b3d63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 877dda7f387c8574c8ea2e91281b10b7563037b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d8293e9bc952fc1dffc5a8f796f5a066b91ae811
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68100660"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304344"
 ---
 # <a name="odbc-functions-and-the-cursor-library"></a>ODBC 함수 및 커서 라이브러리
 > [!IMPORTANT]  
->  이 기능은 이후 버전의 Windows에서 제거 될 예정입니다. 새 개발 작업에서는이 기능을 사용 하지 않도록 하 고 현재이 기능을 사용 하는 응용 프로그램은 수정 하십시오. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
+>  이 기능은 이후 버전의 Windows에서 제거됩니다. 새 개발 작업에서 이 기능을 사용하지 말고 현재 이 기능을 사용하는 응용 프로그램을 수정할 계획입니다. 드라이버의 커서 기능을 사용하는 것이 좋습니다.  
   
- 연결에 ODBC 커서 라이브러리를 사용 하는 경우 드라이버 관리자는 드라이버 대신 커서 라이브러리의 함수를 호출 합니다. 커서 라이브러리는 함수를 실행 하거나 지정 된 드라이버에서 호출 합니다.  
+ 연결에 대해 ODBC 커서 라이브러리를 사용하도록 설정하면 드라이버 관리자는 드라이버 대신 커서 라이브러리에서 함수를 호출합니다. 커서 라이브러리는 함수를 실행하거나 지정된 드라이버에서 호출합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
@@ -33,9 +33,9 @@ ms.locfileid: "68100660"
   
 -   [SQLBindParameter(커서 라이브러리)](../../../odbc/reference/appendixes/sqlbindparameter-cursor-library.md)  
   
--   [SQLBulkOperations (커서 라이브러리)](../../../odbc/reference/appendixes/sqlbulkoperations-and-the-cursor-library.md)  
+-   [SQLBulk연산 (커서 라이브러리)](../../../odbc/reference/appendixes/sqlbulkoperations-and-the-cursor-library.md)  
   
--   [SQLCloseCursor (커서 라이브러리)](../../../odbc/reference/appendixes/sqlclosecursor-odbc.md)  
+-   [SQLClose커서(커서 라이브러리)](../../../odbc/reference/appendixes/sqlclosecursor-odbc.md)  
   
 -   [SQLEndTran(커서 라이브러리)](../../../odbc/reference/appendixes/sqlendtran-cursor-library.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 텍스트 파일 드라이버 프로그래밍 고려 사항 | Microsoft Docs
+title: 텍스트 파일 드라이버 프로그래밍 고려 사항 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], text file driver
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: aabff9d9-20ea-4b68-b8fd-1e33061bd0ef
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba56db60d38f6babc52f81f65f9b94e2c3a2f531
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 72f624f65cadd6d7cbd5eb9d9354c84200733de0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67939692"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81279843"
 ---
 # <a name="text-file-driver-programming-considerations"></a>텍스트 파일 드라이버 프로그래밍 고려 사항
 이 섹션에서는 다음 항목을 다룹니다.  

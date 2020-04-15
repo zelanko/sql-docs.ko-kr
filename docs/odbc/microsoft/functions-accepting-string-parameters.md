@@ -1,5 +1,5 @@
 ---
-title: 문자열 매개 변수를 허용 하는 함수 | Microsoft Docs
+title: 문자열 매개 변수를 수락하는 함수 | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,27 +14,27 @@ helpviewer_keywords:
 - functions [ODBC], string parameters
 - string parameters [ODBC]
 ms.assetid: 869b8421-f71e-4dfd-adce-691bd3012b16
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4165dd51437f143351835bc1739ffb8279bd04ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 01d0f143c72f57e946f7fe2bf52a50910d4e56aa
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67952482"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81286303"
 ---
 # <a name="functions-accepting-string-parameters"></a>문자열 매개 변수를 수락하는 함수
-문자열 매개 변수를 사용 하는 모든 함수는 유니코드로 변환 됩니다. (함수의 "W" 형태를 내보냅니다.) 바이트 수는 해당 하는 ODBC Api에 대 한 문자 수로 변환 됩니다. 이는 다음 함수에 적용 됩니다.  
+문자열 매개 변수를 취하는 모든 함수는 유니코드로 변환됩니다. (함수의 "W" 형식이 내보내집니다.) 바이트 수는 해당 ODBC API에 대한 문자 수로 변환됩니다. 이는 다음 함수에 적용됩니다.  
   
 -   **SQLConnect**  
   
 -   **SQLDriverConnect**  
   
--   **SQLColAttributes**  
+-   **SQLCol속성**  
   
 -   **SQLDescribeCol**  
   
--   **SQLError** ( **SQLGetDiagField**로 바뀜)  
+-   **SQLError** **(SQLGetDiagField로**대체)  
   
 -   **SQLExecDirect**  
   
@@ -46,13 +46,13 @@ ms.locfileid: "67952482"
   
 -   **SQLGetInfo**  
   
--   **SQLGetStmtOption** ( **SQLGetStmtAttr**)  
+-   **SQLGetStmt옵션(SQLGetStmtAttr이**됨) **SQLGetStmtOption**  
   
--   **SQLSetStmtOption** ( **SQLSetStmtAttr**)  
+-   **SQLSetStmt옵션(SQLSetStmtAttr)** **SQLSetStmtOption**  
   
--   **SQLGetConnectOption**  
+-   **SQLGet연결 옵션**  
   
--   **SQLSetConnectOption**  
+-   **SQLSet연결옵션**  
   
 -   **SQLGetTypeInfo**  
   
@@ -60,10 +60,10 @@ ms.locfileid: "67952482"
   
 -   **SQLTables**  
   
--   **SQLNativeSQL**  
+-   **SQL네이티브SQL**  
   
 -   **SQLSpecialColumns**  
   
--   **ConfigDSNEx**  
+-   **콘피그드스넥스**  
   
--   **ConfigDSN**
+-   **구성DSN**

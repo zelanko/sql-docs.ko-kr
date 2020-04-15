@@ -1,5 +1,5 @@
 ---
-title: 데이터 FILESTREAM, IRowsetFastUpload (OLE DB)
+title: 데이터 파일스트림, IRowsetFastUpload (올레 DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,30 +8,29 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 545190d2852d617fa7d73f4aaf464d15b7f1327b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d298d9c4677d6b50ad0234a85e3d51b4bb8478ae
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75225949"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81295696"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>IRowsetFastUpload를 사용하여 FILESTREAM 열에 데이터 전송(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   이 예제에서는 IRowsetFastUpload 인터페이스를 사용하여 filestream 열에 4MB에서 4GB 사이의 데이터를 전송합니다.  
   
- Filestream 기능에 대 한 자세한 내용은 [Filestream Support &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)를 참조 하세요.  
+ 파일 스트림 기능에 대한 자세한 내용은 OLE DB&#41;[&#40;FILESTREAM 지원 ](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)기능을 참조하십시오.  
   
 ## <a name="example"></a>예제  
- 이 샘플을 컴파일하고 실행 하기 전에 FILESTREAM 지원 ([Filestream 설정 및 구성](../../../relational-databases/blob/enable-and-configure-filestream.md))을 사용 하도록 설정 합니다.  
+ 이 샘플을 컴파일하고 실행하기 전에 FILESTREAM 지원을 설정합니다([FILESTREAM 사용 및 구성](../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
  INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
- 서버에는 C:\DBFsa라는 디렉터리가 있어야 합니다. 예제에서는 이 디렉터리에 데이터베이스를 만듭니다. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에는 이 위치에 대한 쓰기 권한이 있어야 합니다(예: 로컬 시스템 계정으로 로그온).  
+ 서버에는 C:\DBFsa라는 디렉터리가 있어야 합니다. 예제에서는 이 디렉터리에 데이터베이스를 만듭니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에는 이 위치에 대한 쓰기 권한이 있어야 합니다(예: 로컬 시스템 계정으로 로그온).  
   
  첫 번째 코드 목록을 복사하고 ISSHelper.h라는 파일로 붙여 넣습니다.  
   
