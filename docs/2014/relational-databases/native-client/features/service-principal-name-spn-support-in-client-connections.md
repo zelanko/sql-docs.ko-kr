@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 42b25dfe8f0a39c577e38c6d1ef21c7f3315a89d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "75231780"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>클라이언트 연결의 SPN(서비스 사용자 이름) 지원
@@ -33,10 +33,10 @@ ms.locfileid: "75231780"
 >  클라이언트 애플리케이션에서 지정한 SPN은 Windows 통합 보안으로 연결이 설정되는 경우에만 사용됩니다.  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../../includes/msconame-md.md)]용 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Kerberos 구성 관리자**는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]과의 Kerberos 관련 연결 문제를 해결하는 진단 도구입니다. 자세한 내용은 [SQL Server용 Microsoft Kerberos 구성 관리자](https://www.microsoft.com/download/details.aspx?id=39046)를 참조하십시오.  
+>  **Kerberos 구성 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리자에 대 한 Kerberos 관련 연결 문제를 해결 하는 데 도움이 진단 도구입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 자세한 내용은 [SQL Server용 Microsoft Kerberos 구성 관리자](https://www.microsoft.com/download/details.aspx?id=39046)를 참조하십시오.  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../../includes/msconame-md.md)]용 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Kerberos 구성 관리자**는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]과의 Kerberos 관련 연결 문제를 해결하는 진단 도구입니다. 자세한 내용은 [SQL Server용 Microsoft Kerberos 구성 관리자](https://www.microsoft.com/download/details.aspx?id=39046)를 참조하십시오.  
+>  **Kerberos 구성 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리자에 대 한 Kerberos 관련 연결 문제를 해결 하는 데 도움이 진단 도구입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 자세한 내용은 [SQL Server용 Microsoft Kerberos 구성 관리자](https://www.microsoft.com/download/details.aspx?id=39046)를 참조하십시오.  
   
  Kerberos에 대한 자세한 내용은 다음 문서를 참조하십시오.  
   
@@ -50,17 +50,11 @@ ms.locfileid: "75231780"
 |시나리오|Description|  
 |--------------|-----------------|  
 |레거시 애플리케이션이 SPN을 지정하지 않습니다.|이 호환성 시나리오는 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용으로 개발된 애플리케이션의 동작에 변화가 없을 것임을 보장합니다. 지정된 SPN이 없으면 해당 애플리케이션은 생성된 SPN에 의존하며, 어떤 인증 방법이 사용되는지 알 수 없습니다.|  
-|현재 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 사용하는 클라이언트 애플리케이션이 연결 문자열의 SPN을 도메인 사용자 또는 컴퓨터 계정으로, 인스턴스별 SPN으로, 또는 사용자 정의 문자열로 지정합니다.| 공급자, 초기화 또는 연결 문자열에서 `ServerSPN` 키워드를 사용하여 다음을 수행할 수 있습니다.<br /><br /> - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 연결을 위해 사용 하는 계정을 지정 합니다. 이를 통해 Kerberos 인증에 대한 액세스가 간소화됩니다. Kerberos KDC(키 배포 센터)가 있고 올바른 계정이 지정된 경우 NTLM보다 Kerberos 인증이 사용될 가능성이 더 높습니다. KDC는 일반적으로 도메인 컨트롤러와 동일한 컴퓨터에 위치합니다.<br />- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대 한 서비스 계정을 조회할 SPN을 지정 합니다. 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 이 용도로 사용할 수 있는 두 개의 기본 SPN이 생성됩니다. 그러나 키가 Active Directory에 있다는 보장은 없으므로 이 경우 Kerberos 인증이 보장되지는 않습니다.<br />- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 서비스 계정을 조회 하는 데 사용할 SPN을 지정 합니다. 이는 서비스 계정에 매핑되는 사용자 정의 문자열일 수 있습니다. 이 경우 키는 KDC에 수동으로 등록해야 하며 사용자 정의 SPN에 대한 규칙을 충족해야 합니다.<br /><br /> 
-  `FailoverPartnerSPN` 키워드를 사용하여 장애 조치(Failover) 파트너 서버에 대한 SPN을 지정할 수 있습니다. 계정 및 Active Directory 키 값의 범위는 주 서버에 지정할 수 있는 값과 동일합니다.|  
-|ODBC 애플리케이션이 주 서버 또는 장애 조치 파트너 서버에 대한 연결 특성으로 SPN을 지정합니다.|
-  `SQL_COPT_SS_SERVER_SPN` 연결 문자열을 사용하여 주 서버 연결에 대한 SPN을 지정할 수 있습니다.<br /><br /> 
-  `SQL_COPT_SS_FAILOVER_PARTNER_SPN` 연결 문자열을 사용하여 장애 조치 파트너 서버에 대한 SPN을 지정할 수 있습니다.|  
-|OLE DB 애플리케이션이 주 서버 또는 장애 조치 파트너 서버에 대한 데이터 원본 초기화 속성으로 SPN을 지정합니다.|
-  `SSPROP_INIT_SERVER_SPN` 속성 집합의 `DBPROPSET_SQLSERVERDBINIT` 연결 속성을 사용하여 연결에 대한 SPN을 지정할 수 있습니다.<br /><br /> 
-  `SSPROP_INIT_FAILOVER_PARTNER_SPN`의 `DBPROPSET_SQLSERVERDBINIT` 연결 속성을 사용하여 장애 조치 파트너 서버에 대한 SPN을 지정할 수 있습니다.|  
+|현재 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 사용하는 클라이언트 애플리케이션이 연결 문자열의 SPN을 도메인 사용자 또는 컴퓨터 계정으로, 인스턴스별 SPN으로, 또는 사용자 정의 문자열로 지정합니다.| 공급자, 초기화 또는 연결 문자열에서 `ServerSPN` 키워드를 사용하여 다음을 수행할 수 있습니다.<br /><br /> - 연결에 대 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 한 인스턴스에서 사용 하는 계정을 지정 합니다. 이를 통해 Kerberos 인증에 대한 액세스가 간소화됩니다. Kerberos KDC(키 배포 센터)가 있고 올바른 계정이 지정된 경우 NTLM보다 Kerberos 인증이 사용될 가능성이 더 높습니다. KDC는 일반적으로 도메인 컨트롤러와 동일한 컴퓨터에 위치합니다.<br />- 인스턴스에 대한 서비스 계정을 조회할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SPN을 지정합니다. 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 이 용도로 사용할 수 있는 두 개의 기본 SPN이 생성됩니다. 그러나 키가 Active Directory에 있다는 보장은 없으므로 이 경우 Kerberos 인증이 보장되지는 않습니다.<br />- 인스턴스의 서비스 계정을 조회하는 데 사용할 SPN을 지정합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이는 서비스 계정에 매핑되는 사용자 정의 문자열일 수 있습니다. 이 경우 키는 KDC에 수동으로 등록해야 하며 사용자 정의 SPN에 대한 규칙을 충족해야 합니다.<br /><br /> `FailoverPartnerSPN` 키워드를 사용하여 장애 조치(Failover) 파트너 서버에 대한 SPN을 지정할 수 있습니다. 계정 및 Active Directory 키 값의 범위는 주 서버에 지정할 수 있는 값과 동일합니다.|  
+|ODBC 애플리케이션이 주 서버 또는 장애 조치 파트너 서버에 대한 연결 특성으로 SPN을 지정합니다.|`SQL_COPT_SS_SERVER_SPN` 연결 문자열을 사용하여 주 서버 연결에 대한 SPN을 지정할 수 있습니다.<br /><br /> `SQL_COPT_SS_FAILOVER_PARTNER_SPN` 연결 문자열을 사용하여 장애 조치 파트너 서버에 대한 SPN을 지정할 수 있습니다.|  
+|OLE DB 애플리케이션이 주 서버 또는 장애 조치 파트너 서버에 대한 데이터 원본 초기화 속성으로 SPN을 지정합니다.|`SSPROP_INIT_SERVER_SPN` 속성 집합의 `DBPROPSET_SQLSERVERDBINIT` 연결 속성을 사용하여 연결에 대한 SPN을 지정할 수 있습니다.<br /><br /> `SSPROP_INIT_FAILOVER_PARTNER_SPN`의 `DBPROPSET_SQLSERVERDBINIT` 연결 속성을 사용하여 장애 조치 파트너 서버에 대한 SPN을 지정할 수 있습니다.|  
 |사용자가 ODBC DSN(데이터 원본 이름)에 서버 또는 장애 조치 파트너 서버에 대한 SPN을 지정합니다.|DSN 설정 대화 상자를 통해 SPN을 ODBC DSN에 지정할 수 있습니다.|  
-|사용자가 OLE DB **데이터 연결** 또는 **로그인** 대화 상자에 서버 또는 장애 조치 파트너 서버에 대한 SPN을 지정합니다.|SPN은 **데이터 연결** 또는 **로그인** 대화 상자에 지정할 수 있습니다. 
-  **로그인** 대화 상자는 ODBC 또는 OLE DB에서 사용할 수 있습니다.|  
+|사용자가 OLE DB **데이터 연결** 또는 **로그인** 대화 상자에 서버 또는 장애 조치 파트너 서버에 대한 SPN을 지정합니다.|SPN은 **데이터 연결** 또는 **로그인** 대화 상자에 지정할 수 있습니다. **로그인** 대화 상자는 ODBC 또는 OLE DB에서 사용할 수 있습니다.|  
 |ODBC 애플리케이션이 연결을 설정하는 데 사용된 인증 방법을 확인합니다.| 연결이 성공적으로 열리면 애플리케이션은 `SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD` 연결 특성을 쿼리하여 사용된 인증 방법을 확인할 수 있습니다. 값에는 `NTLM`, `Kerberos` 등이 포함됩니다.|  
 |OLE DB 애플리케이션이 연결을 설정하는 데 사용된 인증 방법을 확인합니다.| 연결이 성공적으로 열리면 애플리케이션은 `SSPROP_AUTHENTICATION_METHOD` 속성 집합의 `DBPROPSET_SQLSERVERDATASOURCEINFO` 연결 속성을 쿼리하여 사용된 인증 방법을 확인할 수 있습니다. 값에는 `NTLM`, `Kerberos` 등이 포함됩니다.|  
   
@@ -78,7 +72,7 @@ ms.locfileid: "75231780"
  새 연결 동작은 클라이언트에 의해 구현되므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 특정 버전에 국한되지 않습니다.  
   
 ## <a name="linked-servers-and-delegation"></a>연결된 서버 및 위임  
- 연결된 서버가 만들어질 때 `@provstr`sp_addlinkedserver의 [](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql) 매개 변수를 사용하여 서버 및 장애 조치 파트너 SPN을 지정할 수 있습니다. 이렇게 하는 경우의 이점은 클라이언트 연결 문자열에 SPN을 지정하는 경우와 동일합니다. Kerberos 인증을 사용하는 연결을 설정하는 것이 더 쉽고 안정적입니다.  
+ 연결된 서버가 만들어질 때 [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)의 `@provstr` 매개 변수를 사용하여 서버 및 장애 조치 파트너 SPN을 지정할 수 있습니다. 이렇게 하는 경우의 이점은 클라이언트 연결 문자열에 SPN을 지정하는 경우와 동일합니다. Kerberos 인증을 사용하는 연결을 설정하는 것이 더 쉽고 안정적입니다.  
   
  연결된 서버를 사용한 위임에는 Kerberos 인증이 필요합니다.  
   
@@ -100,20 +94,20 @@ ms.locfileid: "75231780"
   
 |구문|Description|  
 |------------|-----------------|  
-|MSSQLSvc/*fqdn*|TCP 이외의 프로토콜이 사용될 때 기본 인스턴스에 대해 공급자가 생성하는 기본 SPN입니다.<br /><br /> *fqdn* 은 정규화된 도메인 이름입니다.|  
-|MSSQLSvc/*fqdn*:*port*|TCP가 사용될 때 공급자가 생성하는 기본 SPN입니다.<br /><br /> *port* 는 TCP 포트 번호입니다.|  
-|MSSQLSvc/*fqdn*:*InstanceName*|TCP 이외의 프로토콜이 사용될 때 명명된 인스턴스에 대해 공급자가 생성하는 기본 SPN입니다.<br /><br /> *InstanceName*은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 이름입니다.|  
+|MSSQLSvc /*fqdn*|TCP 이외의 프로토콜이 사용될 때 기본 인스턴스에 대해 공급자가 생성하는 기본 SPN입니다.<br /><br /> *fqdn은* 정규화된 도메인 이름입니다.|  
+|MSSQLSvc /*fqdn*:*포트*|TCP가 사용될 때 공급자가 생성하는 기본 SPN입니다.<br /><br /> *포트는* TCP 포트 번호입니다.|  
+|MSSQLSvc /*fqdn*:*인스턴스 이름*|TCP 이외의 프로토콜이 사용될 때 명명된 인스턴스에 대해 공급자가 생성하는 기본 SPN입니다.<br /><br /> *InstanceName*은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 이름입니다.|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|Windows에서 자동으로 등록되는 기본 제공 컴퓨터 계정에 매핑되는 SPN입니다.|  
-|*Username*@*Domain*|도메인 계정 직접 지정입니다.<br /><br /> *Username* 은 Windows 사용자 계정 이름입니다.<br /><br /> *Domain* 은 Windows 도메인 이름 또는 정규화된 도메인 이름입니다.|  
-|*MachineName*$@*Domain*|컴퓨터 계정 직접 지정입니다.<br /><br /> (연결 하는 서버가 로컬 시스템 또는 네트워크 서비스 계정으로 실행 되 고 있는 경우 Kerberos 인증을 `ServerSPN` 얻으려면가 *MachineName*$@*도메인* 형식일 수 있습니다.)|  
-|*KDCKey*/*MachineName*|사용자가 지정한 SPN<br /><br /> *KDCKey* 는 KDC 키에 대한 규칙을 따르는 영숫자 문자열입니다.|  
+|*사용자 이름*@*도메인*|도메인 계정 직접 지정입니다.<br /><br /> *Username* 은 Windows 사용자 계정 이름입니다.<br /><br /> *Domain* 은 Windows 도메인 이름 또는 정규화된 도메인 이름입니다.|  
+|*기계 이름*$@*도메인*|컴퓨터 계정 직접 지정입니다.<br /><br /> 연결하는 서버가 LOCAL SYSTEM 또는 네트워크 서비스 계정에서 실행 중인 경우 Kerberos 인증을 받으려면 *MachineName*$@*도메인* 형식일 `ServerSPN` 수 있습니다.|  
+|*KDCKey*/*기계 이름*|사용자가 지정한 SPN<br /><br /> *KDCKey* 는 KDC 키에 대한 규칙을 따르는 영숫자 문자열입니다.|  
   
 ## <a name="odbc-and-ole-db-syntax-supporting-spns"></a>SPN을 지원하는 ODBC 및 OLE DB 구문  
  구문별 정보는 다음 항목을 참조하십시오.  
   
 -   [클라이언트 연결의 SPN&#40;서비스 사용자 이름&#41;&#40;ODBC&#41;](../odbc/service-principal-names-spns-in-client-connections-odbc.md)  
   
--   [클라이언트 연결&#40;OLE DB&#41;의 SPN&#40;서비스 사용자 이름&#41;](../ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [클라이언트 연결의 SPN&#40;서비스 사용자 이름&#41;&#40;OLE DB&#41;](../ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
  이 기능을 보여 주는 예제 애플리케이션에 대한 자세한 내용은 [SQL Server 데이터 프로그래밍 기능 예제](https://msftdpprodsamples.codeplex.com/)를 참조하십시오.  
   

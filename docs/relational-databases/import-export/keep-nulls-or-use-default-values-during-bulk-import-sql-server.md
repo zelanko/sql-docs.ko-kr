@@ -1,5 +1,6 @@
 ---
 title: 대량 가져오기 수행 중 null 유지 또는 기본값 사용
+description: SQL Server에서 대량으로 가져오는 경우, bcp와 BULK INSERT는 모두 기본값을 로드하여 null 값을 대체합니다. 둘 다에서 null 값을 유지하도록 선택할 수 있습니다.
 ms.date: 09/20/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,23 +22,23 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 7120efd623905f05e1f02c6c02856b793ad15cea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9c4a92c1d98bfc7af773cac1be7aedb7113c5b28
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055961"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980386"
 ---
 # <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>대량 가져오기 수행 중 null 유지 또는 기본값 사용(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 기본적으로 데이터를 테이블로 가져올 때 [bcp](../../tools/bcp-utility.md) 명령 및 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 문은 해당 테이블의 열에 대해 정의된 기본값을 유지합니다.  예를 들어 데이터 파일에 null 필드가 있으면 열의 기본값이 대신 로드됩니다.  [bcp](../../tools/bcp-utility.md) 명령 및 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 문을 사용하면 Null 값을 유지하도록 지정할 수 있습니다.
 
-반대로 일반 INSERT 문은 기본값을 삽입하는 대신 Null 값을 유지합니다. INSERT ... SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 문은 일반 INSERT와 같은 기본 동작을 제공하지만 기본값 삽입에 대한 [테이블 힌트](../../t-sql/queries/hints-transact-sql-table.md) 를 추가로 지원합니다.
+반대로 일반 INSERT 문은 기본값을 삽입하는 대신 Null 값을 유지합니다. INSERT ... SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 문은 일반 INSERT와 같은 기본 동작을 제공하지만 기본값 삽입에 대한 [테이블 힌트](../../t-sql/queries/hints-transact-sql-table.md)를 추가로 지원합니다.
 
 |윤곽선|
 |---|
-|[Null 값 유지](#keep_nulls)<br />[INSERT ... SELECT * FROM OPENROWSET(BULK...) 로 기본 값 사용](#keep_default)<br />[예제 테스트 조건](#etc)<br />&emsp;&#9679;&emsp;[샘플 테이블](#sample_table)<br />&emsp;&#9679;&emsp;[샘플 데이터 파일](#sample_data_file)<br />&emsp;&#9679;&emsp;[샘플 비 XML 서식 파일](#nonxml_format_file)<br />[대량 가져오기 수행 중 Null 유지 또는 기본값 사용](#import_data)<br />&emsp;&#9679;&emsp;[서식 파일 없이 bcp 사용 및 Null 값 유지](#bcp_null)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 bcp 사용 및 Null 값 유지](#bcp_null_fmt)<br />&emsp;&#9679;&emsp;[서식 파일 없이 bcp 사용 및 기본값 사용](#bcp_default)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 bcp 사용 및 기본값 사용](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[서식 파일 없이 BULK INSERT 사용 및 Null 값 유지](#bulk_null)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 BULK INSERT 사용 및 Null 값 유지](#bulk_null_fmt)<br />&emsp;&#9679;&emsp;[서식 파일 없이 BULK INSERT 사용 및 기본값 사용](#bulk_default)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 BULK INSERT 사용 및 기본값 사용](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 OPENROWSET(BULK...) 사용 및 Null 값 유지](#openrowset__null_fmt)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 OPENROWSET(BULK...) 사용 및 기본값 사용](#openrowset__default_fmt)
+|[Null 값 유지](#keep_nulls)<br />[INSERT ... SELECT * FROM OPENROWSET(BULK...)에서 기본값 사용](#keep_default)<br />[예제 테스트 조건](#etc)<br />&emsp;&#9679;&emsp;[샘플 테이블](#sample_table)<br />&emsp;&#9679;&emsp;[샘플 데이터 파일](#sample_data_file)<br />&emsp;&#9679;&emsp;[샘플 비 XML 서식 파일](#nonxml_format_file)<br />[대량 가져오기 수행 중 Null 유지 또는 기본값 사용](#import_data)<br />&emsp;&#9679;&emsp;[서식 파일 없이 bcp 사용 및 Null 값 유지](#bcp_null)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 bcp 사용 및 Null 값 유지](#bcp_null_fmt)<br />&emsp;&#9679;&emsp;[서식 파일 없이 bcp 사용 및 기본값 사용](#bcp_default)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 bcp 사용 및 기본값 사용](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[서식 파일 없이 BULK INSERT 사용 및 Null 값 유지](#bulk_null)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 BULK INSERT 사용 및 Null 값 유지](#bulk_null_fmt)<br />&emsp;&#9679;&emsp;[서식 파일 없이 BULK INSERT 사용 및 기본값 사용](#bulk_default)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 BULK INSERT 사용 및 기본값 사용](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 OPENROWSET(BULK...) 사용 및 Null 값 유지](#openrowset__null_fmt)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 OPENROWSET(BULK...) 사용 및 기본값 사용](#openrowset__default_fmt)
 
 ## <a name="keeping-null-values"></a>Null 값 유지<a name="keep_nulls"></a>  
 다음 한정자는 대량 가져오기 작업 중 테이블 열에 대한 기본값(있는 경우)을 상속하기보다는 데이터 파일의 빈 필드에 Null 값을 유지하도록 지정합니다.  [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)의 경우 기본적으로 대량 로드 작업에 지정되지 않은 열은 NULL로 설정됩니다.
@@ -46,14 +47,14 @@ ms.locfileid: "74055961"
 |-------------|---------------|--------------------|  
 |bcp|-k|스위치|  
 |BULK INSERT|KEEPNULLS\*|인수|  
-|INSERT ... SELECT * FROM OPENROWSET(BULK...)|해당 없음|해당 없음|  
+|INSERT ... 선택 * OPENROWSET (BULK)에서|해당 없음|해당 없음|  
   
 \*[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)의 경우 기본값을 사용할 수 없으면 null 값을 허용하도록 테이블 열을 정의해야 합니다. 
   
 > [!NOTE]
 > 이러한 한정자는 대량 가져오기 명령을 통해 테이블에서 DEFAULT 정의 확인을 비활성화합니다.  그러나 동시 INSERT 문의 경우 DEFAULT 정의가 있어야 합니다.
  
-## <a name="using-default-values-with-insert--select--from-openrowsetbulk"></a>INSERT ... SELECT * FROM OPENROWSET(BULK...) SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)<a name="keep_default"></a>  
+## <a name="using-default-values-with-insert--select--from-openrowsetbulk"></a>INSERT ... SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)<a name="keep_default"></a>에 기본값 사용  
 데이터 파일의 빈 필드의 경우 해당 테이블 열에서 기본값(있는 경우)을 사용하도록 지정할 수 있습니다.  기본값을 사용하려면 테이블 힌트 [KEEPDEFAULTS](../../t-sql/queries/hints-transact-sql-table.md)를 사용하세요.
  
 > [!NOTE]

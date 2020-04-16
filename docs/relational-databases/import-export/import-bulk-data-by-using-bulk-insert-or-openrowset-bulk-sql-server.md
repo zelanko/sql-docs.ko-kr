@@ -1,5 +1,6 @@
 ---
 title: BULK INSERT 또는 OPENROWSET(BULK ...)을 사용하여 데이터를 SQL Server로 가져오기
+description: 보안 고려 사항을 포함하여, Transact-SQL 문을 통해 파일에서 SQL Server 또는 Azure SQL Database 테이블로 데이터를 대량으로 가져오는 방법을 알아봅니다.
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,15 +21,15 @@ ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 author: markingmyname
 ms.author: maghan
 manager: jroth
-ms.custom: seo-lt-2019
 ms.date: 09/25/2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0fb3a05f08cdf3481b9e2957c35bf6ee48bce6b0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: fe9d407b446177004715ae5d3403e856028985d3
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76909966"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980585"
 ---
 # <a name="use-bulk-insert-or-openrowsetbulk-to-import-data-to-sql-server"></a>BULK INSERT 또는 OPENROWSET(BULK ...)을 사용하여 데이터를 SQL Server로 가져오기
 

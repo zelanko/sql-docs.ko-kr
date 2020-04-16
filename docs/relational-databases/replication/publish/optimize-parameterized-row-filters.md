@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 08bc847d6b3bffe57df7fc0c70be622365f156d0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: baa8ac4db20eab2ce24ec3bb3963cd847f707fa4
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710862"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219352"
 ---
 # <a name="optimize-parameterized-row-filters"></a>매개 변수가 있는 행 필터 최적화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,19 +50,19 @@ ms.locfileid: "71710862"
  다음 설정을 사용하여 매개 변수가 있는 행 필터를 최적화할 수 있습니다.  
   
  **Partition Options**  
- **아티클 속성 -** Article> **대화 상자 또는 \<필터 추가** 대화 상자의 **속성** 페이지에서 이 옵션을 설정합니다. 두 대화 상자는 새 게시 마법사 및 **게시 속성 - \<게시>** 대화 상자에서 사용할 수 있습니다. **아티클 속성 - \<Article>** 대화 상자에서는 **필터 추가** 대화 상자에서 사용할 수 없는 이 옵션에 대한 추가 값을 지정할 수 있습니다.  
+ **아티클 속성 - \<Article>** 대화 상자 또는 **필터 추가** 대화 상자의 **속성** 페이지에서 이 옵션을 설정합니다. 두 대화 상자는 새 게시 마법사 및 **게시 속성 - \<게시>** 대화 상자에서 사용할 수 있습니다. **아티클 속성 - \<Article>** 대화 상자에서는 **필터 추가** 대화 상자에서 사용할 수 없는 이 옵션에 대한 추가 값을 지정할 수 있습니다.  
   
  **파티션 미리 계산**  
- 게시의 아티클이 일련의 요구 사항을 충족하는 경우 이 옵션은 기본적으로 **True** 로 설정됩니다. 이러한 요구 사항에 대한 자세한 내용은 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)를 참조하세요. **게시 속성 -** 게시> **대화 상자의 \<구독 옵션** 페이지에서 이 옵션을 수정합니다.  
+ 게시의 아티클이 일련의 요구 사항을 충족하는 경우 이 옵션은 기본적으로 **True** 로 설정됩니다. 이러한 요구 사항에 대한 자세한 내용은 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)를 참조하세요. **게시 속성 - \<게시>** 대화 상자의 **구독 옵션** 페이지에서 이 옵션을 수정합니다.  
   
  **동기화 최적화**  
- **파티션 미리 계산** 이 **False** 로 설정된 경우에만 이 옵션을 **True**로 설정해야 합니다. **게시 속성 -** 게시> **대화 상자의 \<구독 옵션** 페이지에서 이 옵션을 설정합니다.  
+ **파티션 미리 계산** 이 **False** 로 설정된 경우에만 이 옵션을 **True**로 설정해야 합니다. **게시 속성 - \<게시>** 대화 상자의 **구독 옵션** 페이지에서 이 옵션을 설정합니다.  
   
  새 게시 마법사 사용 및 **게시 속성 - \<게시>** 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md) 및 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="to-set-partition-options-in-the-add-filter-or-edit-filter-dialog-box"></a>필터 추가 또는 필터 편집 대화 상자에서 파티션 옵션을 설정하려면  
   
-1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 -** 게시> **대화 상자의 \<행 필터** 페이지에서 **추가**를 클릭하고 **필터 추가**를 클릭합니다.  
+1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>** 대화 상자의 **행 필터** 페이지에서 **추가**를 클릭하고 **필터 추가**를 클릭합니다.  
   
 2.  매개 변수가 있는 필터를 만듭니다. 자세한 내용은 [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하세요.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "71710862"
   
 2.  **선택한 테이블 아티클 속성 설정** 또는 **모든 테이블 아티클 속성 설정**을 클릭합니다.  
   
-3.  **아티클 속성 -** Article>**대화 상자의**속성 **탭에 있는 \<대상 개체** 섹션에서 **파티션 옵션**에 대해 다음 값 중 하나를 지정합니다.  
+3.  **아티클 속성 - \<Article>** 대화 상자의 **속성** 탭에 있는 **대상 개체** 섹션에서 **파티션 옵션**에 대해 다음 값 중 하나를 지정합니다.  
   
     -   **겹침**  
   
@@ -102,7 +102,7 @@ ms.locfileid: "71710862"
   
 #### <a name="to-set-precompute-partitions"></a>파티션 미리 계산을 설정하려면  
   
-1.  **게시 속성 -** 게시> **대화 상자의 \<구독 옵션** 페이지에서 **파티션 사전 계산** 옵션의 값을 선택합니다. 다음과 같은 경우 이 속성은 읽기 전용입니다.  
+1.  **게시 속성 - \<게시>** 대화 상자의 **구독 옵션** 페이지에서 **파티션 사전 계산** 옵션의 값을 선택합니다. 다음과 같은 경우 이 속성은 읽기 전용입니다.  
   
     -   게시가 사전 계산 파티션의 요구 사항을 충족시키지 못합니다.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "71710862"
   
 #### <a name="to-set-optimize-synchronization"></a>동기화 최적화를 설정하려면  
   
-1.  **게시 속성 -** 게시> **대화 상자의 \<구독 옵션** 페이지에서 `True`동기화 최적화**옵션에 대해** 값을 선택합니다.  
+1.  **게시 속성 - \<게시>** 대화 상자의 **구독 옵션** 페이지에서 **동기화 최적화** 옵션에 대해 `True` 값을 선택합니다.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -147,16 +147,16 @@ ms.locfileid: "71710862"
   
 #### <a name="to-view-and-modify-merge-filter-behaviors-for-an-existing-publication"></a>기존 게시에 대한 병합 필터 동작을 확인 및 수정하려면  
   
-1.  (옵션) 게시 데이터베이스의 게시자에서 [을 지정하고 ](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)sp_helpmergepublication`@publication`을 실행합니다. 결과 집합에서 `keep_partition_changes` 및 `use_partition_groups`의 값을 확인합니다.  
+1.  (옵션) 게시 데이터베이스의 게시자에서 `@publication`을 지정하고 [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)을 실행합니다. 결과 집합에서 `keep_partition_changes` 및 `use_partition_groups`의 값을 확인합니다.  
   
-2.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)을 실행합니다. `use_partition_groups`에 `@property` 값, `true`에 `false` 또는 `@value` 중 하나를 지정합니다.  
+2.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)을 실행합니다. `@property`에 `use_partition_groups` 값, `@value`에 `true` 또는 `false` 중 하나를 지정합니다.  
   
-3.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)을 실행합니다. `keep_partition_changes`에 `@property` 값, `true`에 `false` 또는 `@value` 중 하나를 지정합니다.  
+3.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)을 실행합니다. `@property`에 `keep_partition_changes` 값, `@value`에 `true` 또는 `false` 중 하나를 지정합니다.  
   
     > [!NOTE]  
-    >  `keep_partition_changes`를 사용하도록 설정하는 경우, 먼저 `use_partition_groups`를 사용하지 않도록 설정하고 `1`에 `@force_reinit_subscription` 값을 지정해야 합니다.  
+    >  `keep_partition_changes`를 사용하도록 설정하는 경우, 먼저 `use_partition_groups`를 사용하지 않도록 설정하고 `@force_reinit_subscription`에 `1` 값을 지정해야 합니다.  
   
-4.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행합니다. `partition_options`에 `@property` 값, *@value`에 적절한 값을 지정합니다. 이러한 필터링 옵션의 정의는 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 을 참조하십시오.  
+4.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행합니다. `@property` 값을 `partition_options`로 지정하고 `@value`에 적절한 값을 지정합니다. 이러한 필터링 옵션의 정의는 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 을 참조하십시오.  
   
 5.  필요에 따라 스냅샷 에이전트를 시작하여 스냅샷을 다시 생성합니다. 새 스냅샷을 생성해야 하는 변경에 대한 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
   

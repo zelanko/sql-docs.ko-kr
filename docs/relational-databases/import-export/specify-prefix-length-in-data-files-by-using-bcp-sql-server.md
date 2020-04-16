@@ -1,5 +1,6 @@
 ---
 title: bcp를 사용하여 데이터 파일에 접두사 길이 지정
+description: 이 문서에서는 원시 형식으로 데이터 파일에 대량으로 내보내기 위해 압축 파일 스토리지를 제공하도록 필드 길이를 인코드하는 접두사 필드에 대해 설명합니다.
 ms.date: 07/28/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -16,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 689206ce4462b4befeded788fc6e679af6215a59
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d8b55e88d1264ce8204083fd260eb427dc428e7
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056376"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980514"
 ---
 # <a name="specify-prefix-length-in-data-files-using-bcp-sql-server"></a>bcp를 사용하여 데이터 파일에 접두사 길이 지정(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

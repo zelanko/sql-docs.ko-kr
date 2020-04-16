@@ -1,5 +1,6 @@
 ---
 title: 서식 파일 만들기(SQL Server) | Microsoft 문서
+description: SQL Server 테이블을 대량으로 가져오거나 내보낼 때 서식 파일을 사용하면 다른 프로그램의 데이터 파일을 거의 편집하거나 읽지 않고 데이터 파일을 쓸 수 있습니다.
 ms.custom: ''
 ms.date: 02/23/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb0199e5ec3bc083d7a6e2087ec86c04c233436b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95ac8a8a42523d513a6025d85308c4e130c044c8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68035822"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980485"
 ---
 # <a name="create-a-format-file-sql-server"></a>서식 파일 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -151,7 +152,7 @@ bcp 명령을 사용하여 서식 파일을 만들 경우(즉, `bcp format` 사�
   
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ..." 또는 "`bcp in -c -C65001 -f format_file``BULK INSERT`/ ... `OPENROWSET` ..."을 사용하여 `FORMATFILE='format_file' CODEPAGE=65001`로 데이터를 가져오려는 경우 데이터 정렬/코드 페이지에 대한 정보가 65001 옵션보다 우선됩니다.  
+ `bcp in -c -C65001 -f format_file` ..." 또는 "`BULK INSERT`/`OPENROWSET` ... `FORMATFILE='format_file' CODEPAGE=65001` ..."을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 데이터를 가져오려는 경우 데이터 정렬/코드 페이지에 대한 정보가 65001 옵션보다 우선됩니다.  
 따라서 서식 파일을 생성하는 경우 생성된 서식 파일에서 데이터 정렬 정보를 수동으로 삭제한 후 데이터 가져오기를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](으)로 다시 가져와야 합니다.  
 다음은 데이터 정렬 정보가 없는 서식 파일의 예입니다.  
   

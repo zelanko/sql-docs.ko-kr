@@ -17,12 +17,12 @@ ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c7fed197491d26c4aaad4b4d09ba480d2d7eb82
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 445453f6be42c6015fc3b6728eb12ee9a78f0ef6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68123595"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928170"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>결정적 함수 및 비결정적 함수
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68123595"
 ## <a name="built-in-function-determinism"></a>기본 제공 함수 결정성  
  기본 제공 함수의 결정성에는 영향을 줄 수 없습니다. 각 기본 제공 함수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 함수를 구현하는 방식에 따라 결정적이거나 비결정적입니다. 예를 들어 쿼리에서 ORDER BY 절을 지정하는 경우 해당 쿼리에서 사용된 함수의 결정성이 변경되지 않습니다.  
   
- 모든 기본 제공 문자열 함수는 결정적입니다. 이러한 함수 목록은 [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)를 참조하세요.  
+ [FORMAT](../../t-sql/functions/format-transact-sql.md)을 제외한 모든 기본 제공 문자열 함수는 결정적입니다. 이러한 함수 목록은 [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)를 참조하세요.  
   
  문자열 함수 이외의 기본 제공 함수 범주에 속하는 다음 기본 제공 함수는 항상 결정적입니다.  
   

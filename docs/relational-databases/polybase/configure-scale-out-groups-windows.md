@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 658dcbccb515b7d5d720d0bb0c677aa2178b7606
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc70544fdb0bb79ef97d5026ad8b985ad8add2ba
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216082"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80443389"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Windows에서 PolyBase 스케일 아웃 그룹 구성
 
@@ -87,7 +87,10 @@ ms.locfileid: "80216082"
 3. 컴퓨팅 노드(PQTH4A-CMP02)에서 services.msc를 실행합니다.
   
 4. PolyBase 엔진을 종료하고 PolyBase 데이터 이동 서비스를 다시 시작합니다.
-  
+
+> [!NOTE] 
+> 헤드 노드에서 Polybase 엔진 서비스를 다시 시작하거나 중지하는 경우, DMS(데이터 이동 서비스) 서비스는 DMS와 DW(Polybase 엔진 서비스) 간의 통신 채널이 닫히는 즉시 중지됩니다. DW 엔진을 두 번 넘게 다시 시작하는 경우, DMS는 90분 대기 기간으로 전환되며 다음에 자동 시작이 시도될 때까지 90분간 기다려야 합니다. 이 경우에는 모든 노드에서 해당 서비스를 수동으로 시작해야 합니다.
+
 ## <a name="optional-remove-a-compute-node"></a>선택 사항: 컴퓨팅 노드 제거  
   
 1. 컴퓨팅 노드 SQL Server(PQTH4A CMP02)에 연결합니다.

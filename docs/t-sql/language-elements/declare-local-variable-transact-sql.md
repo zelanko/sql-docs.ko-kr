@@ -1,6 +1,6 @@
 ---
 title: DECLARE @local_variable(Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: 일괄 처리 또는 프로시저에서 사용할 지역 변수를 정의하기 위한 DECLARE 사용의 Transact-SQL 참조입니다.
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,12 +21,12 @@ ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed6848494d9d9673905dadbff036ad97f3be834c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 99323a0124e5e5507a22fdf36c6622738aea3ce2
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67894891"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517659"
 ---
 # <a name="declare-local_variable-transact-sql"></a>DECLARE @local_variable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

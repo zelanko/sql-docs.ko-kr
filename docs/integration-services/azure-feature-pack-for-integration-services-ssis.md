@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c50eee13c4831bfb8d3830da6dbd20b9efc64298
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5099b46b611043dcbfa0f5b4c3ca4e72c70a5800
+ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77568086"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607869"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Integration Services에 대한 Azure 기능 팩(SSIS)
 
@@ -193,6 +193,12 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
 
 ## <a name="release-notes"></a>릴리스 정보
+
+### <a name="version-1180"></a>버전 1.18.0
+
+#### <a name="improvements"></a>개선 사항
+
+1. 유연한 파일 작업을 위한 다음 세 가지 개선 사항이 있습니다. (1) 복사/삭제 작업에 대한 와일드카드 지원이 추가되었습니다. (2) 사용자가 삭제 작업을 위한 재귀 검색을 사용하거나 사용하지 않도록 설정할 수 있습니다. (3) 원본 파일 이름을 유지하기 위해 복사 작업의 대상 파일 이름을 비워 둘 수 있습니다.
 
 ### <a name="version-1170"></a>버전 1.17.0
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ea69255ecd92b8df7fbaa9199e948ae171bfaebb
+ms.sourcegitcommit: d818a307725983c921987749915fe1a381233d98
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70873887"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80625561"
 ---
 # <a name="edge-constraints"></a>에지 제약 조건
 
@@ -39,7 +39,7 @@ ms.locfileid: "70873887"
 
 각 에지 제약 조건은 하나 이상의 에지 제약 조건 절로 이루어집니다. 에지 제약 조건 절은 지정된 에지가 연결될 수 있는 FROM 및 TO 노드 쌍입니다.
 
-그래프에 `Product` 및 `Customer` 노드가 있으며 `Bought` 에지를 사용하여 이러한 노드를 연결한다고 가정합니다. 에지 제약 조건 절은 FROM 및 TO 노드 쌍과 에지 방향을 지정합니다. 이 경우 에지 제약 조건 절은 `Customer` TO `Product`가 됩니다. 즉, `Bought`에서 `Customer`로 이동하는 `Product`를 삽입할 수 있습니다. `Product`에서 `Customer`로 이동하는 에지를 삽입하려고 하면 실패합니다.
+그래프에 `Product` 및 `Customer` 노드가 있으며 `Bought` 에지를 사용하여 이러한 노드를 연결한다고 가정합니다. 에지 제약 조건 절은 FROM 및 TO 노드 쌍과 에지 방향을 지정합니다. 이 경우 에지 제약 조건 절은 `Customer` TO `Product`가 됩니다. 즉, `Customer`에서 `Product`로 이동하는 `Bought`를 삽입할 수 있습니다. `Product`에서 `Customer`로 이동하는 에지를 삽입하려고 하면 실패합니다.
 
 - 에지 제약 조건 절은 에지 제약 조건이 적용되는 FROM 및 TO 노드 테이블 쌍을 포함합니다.
 - 분리로 적용되는 에지 제약 조건당 여러 에지 제약 조건 절을 지정할 수 있습니다.
@@ -50,7 +50,7 @@ ms.locfileid: "70873887"
 에지 제약 조건을 만들어도 에지 테이블의 `$from_id` 및 `$to_id` 열에 해당 인덱스가 자동으로 생성되지 않습니다. `$from_id`에서 인덱스를 수동으로 만들 경우 지점 조회 쿼리 또는 OLTP 워크로드가 있으면 `$to_id` 쌍이 권장됩니다.
 
 ### <a name="on-delete-referential-actions-on-edge-constraints"></a>에지 제약 조건에 대한 ON DELETE 참조 동작
-에지 제약 조건에 연속 동작을 사용하면 사용자는 지정된 에지가 연결되는 노드를 삭제할 때 데이터베이스 엔진이 수행하는 동작을 정의할 수 있습니다. 다음 참조 동작을 정의할 수 있습니다.  
+에지 제약 조건에 연계 동작을 사용하면 사용자는 지정된 에지가 연결되는 노드를 삭제할 때 데이터베이스 엔진이 수행하는 동작을 정의할 수 있습니다. 다음 참조 동작을 정의할 수 있습니다.  
 *NO ACTION*   
 연결된 에지가 있는 노드를 삭제하려고 하면 데이터베이스 엔진에서 오류를 발생시킵니다.  
 
@@ -59,7 +59,7 @@ ms.locfileid: "70873887"
 
 ## <a name="working-with-edge-constraints"></a>에지 제약 조건 작업
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 에지 제약 조건을 정의할 수 있습니다. 에지 제약 조건은 그래프 에지 테이블에서만 정의할 수 있습니다. 에지 제약 조건을 만들거나, 삭제하거나, 수정하려면 테이블에 대한 **ALTER** 권한이 있어야합니다.
+[!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 에지 제약 조건을 정의할 수 있습니다. 에지 제약 조건은 그래프 에지 테이블에서만 정의할 수 있습니다. 에지 제약 조건을 만들거나, 삭제하거나, 수정하려면 테이블에 대한 **ALTER** 권한이 있어야합니다.
 
 ### <a name="create-edge-constraints"></a>에지 제약 조건 만들기
 

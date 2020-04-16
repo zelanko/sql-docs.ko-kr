@@ -9,17 +9,17 @@ ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 624131beece632cffd13bde3d6ad378f67b3a340
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 13488d4ab9fe2622322eb6e66c653391ff4415b3
+ms.sourcegitcommit: d818a307725983c921987749915fe1a381233d98
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68141269"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80625515"
 ---
 # <a name="rename-transact-sql"></a>RENAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 사용자가 만든 테이블의 이름을 바꿉니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 사용자가 만든 테이블 또는 데이터베이스의 이름을 바꿉니다.
+[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 사용자가 만든 테이블의 이름을 바꿉니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 사용자가 만든 테이블, 사용자가 만든 테이블의 열 또는 데이터베이스의 이름을 바꿉니다.
 
 > [!NOTE]
 > [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 데이터베이스의 이름을 바꾸려면 [ALTER DATABASE(Azure SQL Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7)를 사용합니다. Azure SQL Database에서 데이터베이스의 이름을 바꾸려면 [ALTER DATABASE(Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-mi-current) 문을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스의 이름을 바꾸려면 저장 프로시저 [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md)를 사용합니다.
@@ -45,6 +45,9 @@ RENAME OBJECT [::] [ [ database_name . [ schema_name ] . ] | [ schema_name . ] ]
 -- Rename a database
 RENAME DATABASE [::] database_name TO new_database_name
 [;]
+
+-- Rename a column 
+RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ] table_name COLUMN column_name TO new_column_name [;]
 ```
 
 ## <a name="arguments"></a>인수
@@ -69,6 +72,12 @@ RENAME DATABASE [::] [ *database_name* TO *new_database_name*
 - DWDiagnostics
 - DWQueue
 
+
+RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ]*table_name* COLUMN *column_name* TO *new_column_name*
+**적용 대상:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+
+테이블의 열 이름을 변경합니다. 
+
 ## <a name="permissions"></a>사용 권한
 
 이 명령을 실행하려면 이 권한이 필요합니다.
@@ -85,11 +94,17 @@ RENAME DATABASE [::] [ *database_name* TO *new_database_name*
 
 사용 중일 때는 테이블 또는 데이터베이스 이름을 바꿀 수 없습니다. 테이블 이름을 변경하려면 테이블에 대해 배타적 잠금이 필요합니다. 테이블이 사용 중인 경우 테이블을 사용 중인 세션을 종료해야 합니다. KILL 명령을 사용하여 세션을 종료할 수 있습니다. 세션이 종료될 때 커밋되지 않은 모든 작업은 롤백될 수 있으므로 KILL은 신중하게 사용합니다. SQL Data Warehouse의 세션 앞에 ‘SID’를 붙입니다. KILL 명령을 호출할 때 'SID'와 세션 수를 포함합니다. 이 예제에서는 활성 또는 유휴 세션의 목록을 본 다음, ‘SID1234’ 세션을 종료합니다.
 
+### <a name="rename-column-restrictions"></a>열 이름 바꾸기 제한 사항
+
+테이블 배포에 사용되는 열의 이름은 바꿀 수 없습니다. 외부 테이블 또는 임시 테이블의 열 이름도 바꿀 수 없습니다. 
+
 ### <a name="views-are-not-updated"></a>뷰는 업데이트되지 않습니다.
 
 데이터베이스의 이름을 바꾸면 이전 데이터베이스 이름을 사용하는 모든 뷰가 무효화됩니다. 이 동작은 데이터베이스의 내부 및 외부 모두에 대한 보기에 적용됩니다. 예를 들어 판매 데이터베이스의 이름을 바꾸면 `SELECT * FROM Sales.dbo.table1`을 포함하는 뷰는 유효하지 않게 됩니다. 이 문제를 해결하려면 보기에서 세 부분으로 된 이름을 사용하지 않거나, 새 데이터베이스 이름을 참조하도록 보기를 업데이트합니다.
 
 테이블의 이름을 바꾸면 뷰는 새 테이블 이름을 참조하도록 업데이트되지 않습니다. 이전 테이블 이름을 참조하는 데이터베이스의 내부 또는 외부의 각 뷰는 유효하지 않게 됩니다. 이 문제를 해결하기 위해 새 테이블 이름을 참조하도록 각 보기를 업데이트할 수 있습니다.
+
+열 이름을 바꾸는 경우, 뷰는 새 열 이름을 참조하도록 업데이트되지 않습니다. ALTER VIEW를 수행할 때까지 뷰에 이전 열 이름이 계속 표시됩니다. 뷰가 잘못되어 삭제하고 다시 만들어야 하는 경우도 있습니다.
 
 ## <a name="locking"></a>잠금
 
@@ -150,4 +165,17 @@ WHERE status='Active' OR status='Idle';
 
 -- Terminate a session using the session_id.
 KILL 'SID1234';
+```
+
+### <a name="e-rename-a-column"></a>E. 열 이름 바꾸기 
+
+**적용 대상:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+
+이 예제에서는 Customer 테이블의 FName 열 이름을 FirstName으로 바꿉니다.
+
+```sql
+-- Rename the Fname column of the customer table
+RENAME OBJECT::Customer COLUMN FName TO FirstName;
+
+RENAME OBJECT mydb.dbo.Customer COLUMN FName TO FirstName;
 ```

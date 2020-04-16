@@ -1,6 +1,6 @@
 ---
 title: STRING_SPLIT(Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: STRING_SPLIT 함수의 Transact-SQL 참조입니다. 이 테이블 반환 함수는 문자 구분 기호를 기준으로 문자열을 부분 문자열로 분할합니다.
 ms.date: 11/28/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,12 +18,12 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 20580d1c746a678771ff3be0e67bab72e2b72be8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f75e154faf4525fbff03b7ece4dbb42da896ac94
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77179274"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517105"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT(Transact-SQL)
 
@@ -48,10 +48,10 @@ STRING_SPLIT ( string , separator )
 ## <a name="arguments"></a>인수
 
  *string*  
- 모든 문자 형식(예: [nvarchar](../../t-sql/language-elements/expressions-transact-sql.md), **varchar**, **nchar** 또는 **char**)의 **식**입니다.  
+ 모든 문자 형식(예: **nvarchar**, **varchar**, **nchar** 또는 **char**)의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
  *separator*  
- 연결된 부분 문자열의 구분 기호로 사용되는 모든 문자 형식(예: [nvarchar(1)](../../t-sql/language-elements/expressions-transact-sql.md), **varchar(1)** , **nchar(1)** 또는 **char(1)** )의 단일 문자 **식**입니다.  
+ 연결된 부분 문자열의 구분 기호로 사용되는 모든 문자 형식(예: **nvarchar(1)** , **varchar(1)** , **nchar(1)** 또는 **char(1)** )의 단일 문자 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="return-types"></a>반환 형식  
 

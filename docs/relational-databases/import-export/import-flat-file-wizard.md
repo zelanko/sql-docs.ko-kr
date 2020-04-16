@@ -1,5 +1,6 @@
 ---
 title: 플랫 파일을 SQL로 가져오기 | Microsoft Docs
+description: 플랫 파일 가져오기 마법사는 .csv 또는 .txt 파일의 데이터를 새 데이터베이스 테이블에 복사하는 간단한 방법입니다. 이 문서에서는 마법사를 사용해야 하는 경우와 방법을 보여 줍니다.
 ms.custom: ''
 ms.date: 09/26/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 792cb1bcef1097c3eddaa325519b43a229bcccb4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f04842324642c3d24f8b378a3c096e94aa96227c
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74190797"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980557"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>SQL 마법사로 플랫 파일 가져오기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

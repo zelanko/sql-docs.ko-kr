@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eb926c0696f0e926f91297ee5b719bbafce3eda8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 91f71543b9fecd994cc2b951758caacd23e8ae1f
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909129"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219362"
 ---
 # <a name="tracing-driver-operation"></a>드라이버 작업 추적
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "80909129"
 |WARNING|잠재적인 문제를 의미합니다.|  
 |INFO|정보 메시지를 제공합니다.|  
 |FINE|기본 개체 생성 및 소멸을 포함한 추적 정보를 제공합니다. 또한 공용 메서드에서 발생한 모든 예외에 대한 정보도 제공합니다.|  
-|FINER|모든 공용 메서드 진입점 및 진출점과 관련 매개 변수 데이터 형식 및 공용 클래스의 모든 공용 속성을 포함하는 자세한 추적 정보를 제공합니다. 또한 입력 매개 변수, 출력 매개 변수 및 CLOB, BLOB, NCLOB, Reader, \<stream> 반환 값 형식을 제외한 메서드 반환 값을 제공합니다.<br /><br /> JDBC 드라이버 버전 1.2에 포함된 로깅 범주 중 로깅 수준이 FINE인 범주는 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md), [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), XA 및 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)입니다. 이 범주들은 버전 2.0 릴리스에서부터 FINER 수준으로 업그레이드되었습니다.|  
+|FINER|모든 공용 메서드 진입점 및 진출점과 관련 매개 변수 데이터 형식 및 공용 클래스의 모든 공용 속성을 포함하는 자세한 추적 정보를 제공합니다. 또한 입력 매개 변수, 출력 매개 변수 및 CLOB, BLOB, NCLOB, Reader, \<stream> 반환 값 형식을 제외한 메서드 반환 값을 제공합니다.<br /><br /> JDBC 드라이버 버전 1.2에 포함된 로깅 범주 중 로깅 수준이 FINE인 범주는 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md), [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), XA, [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)입니다. 이 범주들은 버전 2.0 릴리스에서부터 FINER 수준으로 업그레이드되었습니다.|  
 |FINEST|매우 자세한 추적 정보를 제공합니다. 이 수준은 가장 낮은 로깅 수준입니다.<br /><br /> JDBC 드라이버 버전 1.2에 포함된 로깅 범주 중 로깅 수준이 FINEST인 범주는 TDS.DATA 및 TDS.TOKEN입니다. 버전 2.0 릴리스에서부터 FINEST 로깅 수준이 유지됩니다.|  
 |OFF|로깅을 해제합니다.|  
 |ALL|모든 메시지의 로깅을 활성화합니다.|  
@@ -89,7 +89,7 @@ ms.locfileid: "80909129"
 |XA|[SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) 클래스의 모든 XA 트랜잭션에 대한 메시지를 로깅합니다. 애플리케이션에서는 로깅 수준을 FINE 및 FINER로 설정할 수 있습니다.|  
 |KerbAuthentication|유형 4 Kerberos 인증에 관한 메시지를 로깅합니다(**authenticationScheme** 연결 속성이 **JavaKerberos**로 설정된 경우). 애플리케이션에서는 로깅 수준을 FINE 또는 FINER로 설정할 수 있습니다.|  
 |TDS.DATA|드라이버와 SQL 서버 간 TDS 프로토콜 수준 대화를 포함하는 메시지를 로깅합니다. 주고받는 각 TDS 패킷의 자세한 내용이 ASCII 및 16진수로 로깅됩니다. 로그인 자격 증명(사용자 이름 및 암호)은 로깅되지 않습니다. 다른 모든 데이터는 로깅됩니다.<br /><br /> 이 범주는 매우 자세한 메시지를 작성하기 때문에 로깅 수준을 FINEST로 설정해야만 사용할 수 있습니다.|  
-|TDS.Channel|이 범주는 SQL 서버와의 TCP 통신 채널의 동작을 추적합니다. 로깅된 메시지는 소켓을 열고 닫는 동작과 읽고 쓰는 동작을 포함합니다. 또한 SQL 서버와의 SSL(Secure Sockets Layer) 연결 설정과 관련된 메시지를 추적합니다.<br /><br /> 이 범주는 로깅 수준을 FINE, FINER 또는 FINEST로 설정해야만 사용할 수 있습니다.|  
+|TDS.Channel|이 범주는 SQL 서버와의 TCP 통신 채널의 동작을 추적합니다. 로깅된 메시지는 소켓을 열고 닫는 동작과 읽고 쓰는 동작을 포함합니다. 또한 이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안) 연결을 SQL 서버에 설정하는 경우와 관련된 메시지를 추적합니다.<br /><br /> 이 범주는 로깅 수준을 FINE, FINER 또는 FINEST로 설정해야만 사용할 수 있습니다.|  
 |TDS.Writer|이 범주는 TDS 채널에 대한 쓰기 동작을 추적합니다. 내용이 아닌, 쓰기 길이만 추적됩니다. 또한 이 범주에서는 문의 실행을 취소하기 위해 주의 신호가 서버로 전송되는 경우의 문제를 추적합니다.<br /><br /> 이 범주는 로깅 수준을 FINEST로 설정해야만 사용할 수 있습니다.|  
 |TDS.Reader|FINEST 수준에서 이 범주는 TDS 채널의 특정 읽기 동작을 추적합니다. FINEST 수준에서는 추적이 자세할 수 있습니다. WARNING 및 SEVERE 수준에서 이 범주는 드라이버가 연결을 닫기 전 SQL 서버에서 잘못된 TDS 프로토콜을 수신하는 경우 추적을 수행합니다.<br /><br /> 이 범주는 로깅 수준을 FINER 또는 FINEST로 설정해야만 사용할 수 있습니다.|  
 |TDS.Command|이 범주는 낮은 수준의 상태 전환 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 실행, ResultSet 커서 인출, 커밋 등 TDS 명령 실행과 관련된 기타 정보를 추적합니다.<br /><br /> 이 범주는 로깅 수준을 FINEST로 설정해야만 사용할 수 있습니다.|  
@@ -132,7 +132,7 @@ logger.setLevel(Level.OFF);
 ```  
   
 ## <a name="enabling-tracing-by-using-the-loggingproperties-file"></a>Logging.Properties 파일을 사용하여 추적 활성화  
- JRE(Java Runtime Environment) 설치의 `logging.properties` 디렉터리에 있는 `lib` 파일을 사용하여 추적을 활성화하는 방법도 있습니다. 이 파일은 추적 기능을 활성화할 때 사용할 로거 및 처리기의 기본 값을 설정하는 데 사용할 수 있습니다.  
+ JRE(Java Runtime Environment) 설치의 `lib` 디렉터리에 있는 `logging.properties` 파일을 사용하여 추적을 활성화하는 방법도 있습니다. 이 파일은 추적 기능을 활성화할 때 사용할 로거 및 처리기의 기본 값을 설정하는 데 사용할 수 있습니다.  
   
  다음은 `logging.properties` 파일에서 설정할 수 있는 예입니다.  
   

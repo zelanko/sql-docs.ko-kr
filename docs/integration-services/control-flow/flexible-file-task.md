@@ -12,12 +12,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ed8ba34e8e50d6414d68cae4aa386848f88b6d5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 83ef614593641b762a628838354a6a3bef9dfadd
+ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72807415"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607852"
 ---
 # <a name="flexible-file-task"></a>유연한 파일 작업
 
@@ -44,18 +44,19 @@ Flexible File Task는 [Azure용 SSIS(SQL Server Integration Services) 기능 팩
 - **SourceConnectionType:** 원본 연결 관리자 유형을 지정합니다.
 - **SourceConnection:** 원본 연결 관리자를 지정합니다.
 - **SourceFolderPath:** 원본 폴더 경로를 지정합니다.
-- **SourceFileName:** 원본 파일 이름을 지정합니다. 빈 상태로 둔 경우 원본 폴더가 복사됩니다.
+- **SourceFileName:** 원본 파일 이름을 지정합니다. 빈 상태로 둔 경우 원본 폴더가 복사됩니다. 원본 파일 이름에는 `*`(0자 이상의 문자와 일치), `?`(0자 또는 단일 문자와 일치), `^`(이스케이프 문자) 등의 와일드카드를 사용할 수 있습니다.
 - **SearchRecursively:** 재귀적으로 하위 폴더를 복사할지 여부를 지정합니다.
 - **DestinationConnectionType:** 대상 연결 관리자 유형을 지정합니다.
 - **DestinationConnection** 대상 연결 관리자를 지정합니다.
 - **DestinationFolderPath:** 대상 폴더 경로를 지정합니다.
-- **DestinationFileName:** 대상 파일 이름을 지정합니다.
+- **DestinationFileName:** 대상 파일 이름을 지정합니다. 비워 두면 원본 파일 이름이 사용됩니다.
 
 **삭제** 작업에 사용할 수 있는 속성은 다음과 같습니다.
 - **ConnectionType:** 연결 관리자 유형을 지정합니다.
 - **Connection:** 연결 관리자를 지정합니다.
 - **FolderPath:** 폴더 경로를 지정합니다.
-- **FileName:** 파일 이름을 지정합니다. 빈 상태로 두면 폴더가 삭제됩니다. Azure Blob Storage에서는 폴더 삭제가 지원되지 않습니다.
+- **FileName:** 파일 이름을 지정합니다. 빈 상태로 두면 폴더가 삭제됩니다. Azure Blob Storage에서는 폴더 삭제가 지원되지 않습니다. 파일 이름에는 `*`(0자 이상의 문자와 일치), `?`(0자 또는 단일 문자와 일치), `^`(이스케이프 문자) 등의 와일드카드를 사용할 수 있습니다.
+- **DeleteRecursively:** 파일을 재귀적으로 삭제할지 여부를 지정합니다.
 
 ***서비스 사용자 권한 구성에 대한 참고 사항***
 

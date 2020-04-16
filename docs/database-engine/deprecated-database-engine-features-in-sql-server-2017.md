@@ -3,7 +3,7 @@ title: 사용되지 않는 데이터베이스 엔진 기능 | Microsoft Docs
 titleSuffix: SQL Server 2019
 description: 사용되지 않는 데이터베이스 엔진 기능을 알아보세요. 이러한 기능은 SQL Server 2017(14.x)에서도 계속 사용할 수 있지만 새 애플리케이션에서는 사용하면 안 됩니다.
 ms.custom: seo-lt-2019
-ms.date: 03/30/2020
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -17,33 +17,31 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9e5bccc61c9c1f395e49a7a0a601271ed46f3502
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 9fcc5f3ebca860e35365bd640a3473b478e06b49
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402600"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550170"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017에서 사용되지 않는 데이터베이스 엔진 기능
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-이 토픽에서는 더 이상 사용되지 않으나 SQL Server 2017(14.x)에서 아직 사용할 수 있는 SQL Server 데이터베이스 엔진 기능에 대해 설명합니다. 새 애플리케이션에는 이러한 기능을 사용하면 안 됩니다.  
-
-기능이 사용되지 않는 것으로 표시된 경우 이는 다음을 의미합니다.
+  이 항목에서는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 에서 계속 제공되지만 더 이상 사용되지 않는 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]기능에 대해 설명합니다. 새 애플리케이션에는 이러한 기능을 사용하면 안 됩니다.  
+  
+기능이 사용되지 않는 것으로 표시된 경우 다음을 의미합니다.
 
 - 기능이 유지 관리 모드로만 유지됩니다. 새로운 기능과의 상호 운용성과 관련된 변경 사항을 비롯한 새로운 변경 사항이 적용되지 않습니다.
+- 업그레이드를 더욱 용이하게 할 수 있도록 사용되지 않는 기능을 되도록이면 향후 릴리스에서 제거하지 않으려고 합니다. 드문 경우이긴 하지만 이로 인해 향후 혁신에 제한이 있다면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 해당 기능이 영구적으로 제거될 수도 있습니다.
+- 새로운 개발 작업에서는 사용되지 않는 기능을 사용하지 않는 것이 좋습니다.      
 
-- 업그레이드를 더욱 용이하게 할 수 있도록 사용되지 않는 기능을 되도록이면 향후 릴리스에서 제거하지 않으려고 합니다. 드문 경우이긴 하지만 이로 인해 향후 혁신에 제한이 있다면 SQL Server에서 해당 기능이 영구적으로 제거될 수도 있습니다.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features 개체 성능 카운터 및 추적 이벤트를 통해 더 이상 사용되지 않는 기능의 사용을 모니터링할 수 있습니다. 자세한 내용은 [SQL Server 개체 사용](../relational-databases/performance-monitor/use-sql-server-objects.md)을 참조하세요.  
 
-- 새로운 개발 작업에서는 사용되지 않는 기능을 사용하지 않는 것이 좋습니다.
-
-‘SQL Server:사용되지 않는 기능’ 개체 성능 카운터 및 추적 이벤트를 통해 더 이상 사용되지 않는 기능의 사용을 모니터링할 수 있습니다. 자세한 내용은 [SQL Server 개체 사용](../relational-databases/performance-monitor/use-sql-server-objects.md)을 참조하세요.
-
-다음 문을 실행하여 이러한 카운터의 값을 사용할 수도 있습니다.
+다음 문을 실행하여 이러한 카운터의 값을 사용할 수도 있습니다.  
 
 ```sql
-SELECT * FROM sys.dm_os_performance_counter
+SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name = 'SQLServer:Deprecated Features';
 ```
 
@@ -77,31 +75,21 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | 사용되지 않는 기능 | 대체 기능 | 기능 이름 | 기능 ID |
 |--------------------|-------------|--------------|------------|
 | RC4 또는 RC4_128을 사용한 암호화는 더 이상 사용되지 않으며 다음 버전에서 제거될 예정입니다. RC4 및 RC4_128의 암호 해독은 계속 사용됩니다. | AES 등과 같은 다른 암호화 알고리즘을 사용하십시오. | 사용되지 않는 암호화 알고리즘 | 253 |
-
-### <a name="hash-algorithms"></a>해시 알고리즘
-
-| 사용되지 않는 기능 | 대체 기능 | 기능 이름 | 기능 ID |
-|--------------------|-------------|--------------|------------|
 | MD2, MD4, MD5, SHA 및 SHA1 사용은 더 이상 사용되지 않습니다. | 대신에 SHA2_256 또는 SHA2_512를 사용합니다. 이전 알고리즘은 계속 작동하지만 사용 중단 이벤트가 발생합니다. |사용되지 않는 해시 알고리즘 | None |
 
 ### <a name="remote-servers"></a>원격 서버
 
 | 사용되지 않는 기능 | 대체 기능 | 기능 이름 | 기능 ID |
 |--------------------|-------------|--------------|------------|
-| sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption|연결된 서버를 사용하여 원격 서버를 대체합니다. sp_addserver는 로컬 옵션으로만 사용할 수 있습니다. | sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption | 70 <br /><br /> 69 <br /><br /> 71 <br /><br /> 72 <br /><br /> 73 |
+| sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption|연결된 서버를 사용하여 원격 서버를 대체합니다. sp_addserver는 로컬 옵션으로만 사용할 수 있습니다. | sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br > sp_remoteoption | 70 <br /><br /> 69 <br /><br /> 71 <br /><br /> 72 <br /><br /> 73 |
 | \@\@remserver | 연결된 서버를 사용하여 원격 서버를 대체합니다. | None | None |
 | SET REMOTE_PROC_TRANSACTIONS|연결된 서버를 사용하여 원격 서버를 대체합니다. | SET REMOTE_PROC_TRANSACTIONS | 110 |
 
-### <a name="set-options"></a>Set 옵션
+### <a name="transact-sql"></a>Transact-SQL
 
 | 사용되지 않는 기능 | 대체 기능 | 기능 이름 | 기능 ID |
 |--------------------|-------------|--------------|------------|
 | **SET ROWCOUNT** , **INSERT**및 **UPDATE**문에 대한 **DELETE** | TOP 키워드 | SET ROWCOUNT | 109 |
-
-### <a name="table-hints"></a>테이블 힌트
-
-| 사용되지 않는 기능 | 대체 기능 | 기능 이름 | 기능 ID |
-|--------------------|-------------|--------------|------------|
 | 괄호가 없는 HOLDLOCK 테이블 힌트 | HOLDLOCK에 괄호를 사용합니다. | 괄호가 없는 HOLDLOCK 테이블 힌트 | 167 |
 
 ## <a name="features-deprecated-in-a-future-version-of-sql-server"></a>향후 버전의 SQL Server에서 사용되지 않는 기능
@@ -131,12 +119,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | 힌디어 <br /><br /> 마케도니아어 | 이러한 데이터 정렬은 SQL Server 2005(9.x) 이상에서 지원되기는 하지만 fn_helpcollations를 통해 볼 수는 없습니다. 대신 Macedonian_FYROM_90 및 Indic_General_90을 사용하십시오.|힌디어 <br /><br /> 마케도니아어 |
 | Azeri_Latin_90 <br /><br /> Azeri_Cyrilllic_90 | Azeri_Latin_100 <br /><br /> Azeri_Cyrilllic_100 | Azeri_Latin_90 <br /><br /> Azeri_Cyrilllic_90 |
 
-### <a name="configuration"></a>구성
-
-| 사용되지 않는 기능 | 대체 기능 | 기능 이름 |
-|--------------------|-------------|--------------|
-| SET ANSI_NULLS OFF 및 ANSI_NULLS OFF 데이터베이스 옵션<br /><br />SET ANSI_PADDING OFF 및 ANSI_PADDING OFF 데이터베이스 옵션<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF 및 CONCAT_NULL_YIELDS_NULL OFF 데이터베이스 옵션<br /><br />SET OFFSETS | 없음 <br /><br /> ANSI_NULLS, ANSI_PADDING 및 CONCAT_NULLS_YIELDS_NULL은 항상 ON으로 설정됩니다. SET OFFSETS는 사용할 수 없습니다. | SET ANSI_NULLS OFF <br /><br /> SET ANSI_PADDING OFF<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF<br /><br />SET OFFSETS<br /><br />ALTER DATABASE SET ANSI_NULLS OFF<br /><br />ALTER DATABASE SET ANSI_PADDING OFF <br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF |
-
 ### <a name="data-types"></a>데이터 형식
 
 | 사용되지 않는 기능 | 대체 기능 | 기능 이름 |
@@ -152,6 +134,9 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | 사용되지 않는 기능 | 대체 기능 | 기능 이름 |
 |--------------------|-------------|--------------|
 | sp_attach_db <br /><br /> sp_attach_single_file_db|FOR ATTACH 옵션을 사용하는 CREATE DATABASE 문. 하나 이상의 로그 파일에 새 위치가 있는 경우 여러 로그 파일을 다시 작성하려면 FOR ATTACH_REBUILD_LOG 옵션을 사용합니다. | sp_attach_db <br /><br /> sp_attach_single_file_db |
+| sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable |
+| sp_dbremove | DROP DATABASE | sp_dbremove |
+| sp_renamedb | ALTER DATABASE의 MODIFY NAME | sp_renamedb |
 
 ### <a name="database-objects"></a>데이터베이스 개체
 
@@ -161,7 +146,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule | CREATE TABLE 및 ALTER TABLE의 CHECK 키워드 | CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule |
 | sp_change_users_login | ALTER USER를 사용합니다. | sp_change_users_login |
 | sp_depends | sys.dm_sql_referencing_entities 및 sys.dm_sql_referenced_entities | sp_depends |
-| sp_renamedb | ALTER DATABASE의 MODIFY NAME | sp_renamedb |
 | sp_getbindtoken | MARS 또는 분산 트랜잭션을 사용합니다. | sp_getbindtoken |
 
 ### <a name="database-options"></a>데이터베이스 옵션
@@ -201,12 +185,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc | 대신 CLR 통합을 사용하십시오. | sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc |
 | xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|CREATE LOGIN 사용<br /><br /> SERVERPROPERTY의 DROP LOGIN IsIntegratedSecurityOnly 인수 사용 | xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig |
 
-### <a name="function"></a>함수
-
-| 사용되지 않는 기능 | 대체 기능 | 기능 이름 |
-|--------------------|-------------|--------------|
-| fn_get_sql | sys.dm_exec_sql_text | fn_get_sql |
-
 ### <a name="high-availability"></a>고가용성
 
 | 사용되지 않는 기능 | 대체 기능 | 기능 이름 |
@@ -235,12 +213,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |--------------------|-------------|--------------|
 | 연결된 서버에 대한 SQLOLEDB 공급자를 지정합니다. | SQL Server Native Client(SQLNCLI) | 연결된 서버에 대한 SQLOLEDDB |
 
-### <a name="locking"></a>잠금
-
-| 사용되지 않는 기능 | 대체 기능 | 기능 이름 |
-|--------------------|-------------|--------------|
-| sp_lock | sys.dm_tran_locks | sp_lock |
-
 ### <a name="metadata"></a>메타데이터
 
 | 사용되지 않는 기능 | 대체 기능 | 기능 이름 |
@@ -258,13 +230,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | 사용되지 않는 기능 | 대체 기능 | 기능 이름 |
 |--------------------|-------------|--------------|
 | DB-Library<br /><br />C 언어용 Embedded SQL|데이터베이스 엔진이 DB-Library 및 Embedded SQL API를 사용한 기존 애플리케이션과의 연결을 계속 지원하지만 이들 API를 사용하는 애플리케이션에서 프로그래밍 작업을 수행하는 데 필요한 파일 또는 문서는 포함되지 않습니다. 이후 버전의 SQL Server 데이터베이스 엔진에서는 DB-Library 또는 Embedded SQL 애플리케이션과의 연결이 더 이상 지원되지 않습니다. DB-Library 또는 Embedded SQL을 사용하여 새 애플리케이션을 개발하지 마십시오. 기존의 애플리케이션을 수정할 때 DB-Library 또는 Embedded SQL에 대한 모든 종속 관계를 제거하십시오. 이러한 API 대신 SQLClient 네임스페이스 또는 ODBC 등의 API를 사용하세요. SQL Server 2019(15.x)에는 이러한 애플리케이션을 실행하는 데 필요한 DB-Library DLL이 없습니다. DB-Library 또는 Embedded SQL 애플리케이션을 실행하려면 SQL Server 버전 6.5, SQL Server 7.0 또는 SQL Server 2000(8.x)의 사용 가능한 DB-Library DLL이 있어야 합니다. | None |
-
-### <a name="removable-databases"></a>이동식 데이터베이스
-
-| 사용되지 않는 기능 | 대체 기능 | 기능 이름 |
-|--------------------|-------------|--------------|
-| sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable |
-| sp_dbremove | DROP DATABASE | sp_dbremove |
 
 ### <a name="security"></a>보안
 
@@ -288,12 +253,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | PERMISSIONS 내장 함수 | 대신 sys.fn_my_permissions를 쿼리해야 합니다. | PERMISSIONS |
 | SETUSER | EXECUTE AS | SETUSER |
 | RC4 및 DESX 암호화 알고리즘|AES 등의 다른 알고리즘을 사용합니다. | DESX 알고리즘 |
-
-### <a name="set-options"></a>Set 옵션
-
-| 사용되지 않는 기능 | 대체 기능 | 기능 이름 |
-|--------------------|-------------|--------------|
-| SET FMTONLY | [sys.dm_exec_describe_first_result_set&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), [sys.dm_exec_describe_first_result_set_for_object&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md), [sp_describe_first_result_set&#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 및 [sp_describe_undeclared_parameters&#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md). | SET FMTONLY |
 
 ### <a name="server-configuration-options"></a>서버 구성 옵션
 
@@ -319,11 +278,14 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |--------------------|-------------|--------------|
 | SQL Server Management Studio의 솔루션 탐색기 통합 | | None |
 
-### <a name="system-stored-procedures"></a>시스템 저장 프로시저
+### <a name="system-stored-procedures-and-functions"></a>시스템 저장 프로시저와 함수
 
 | 사용되지 않는 기능 | 대체 기능 | 기능 이름 |
 |--------------------|-------------|--------------|
 | sp_db_increased_partitions | 없음 SQL Server 2019(15.x)에서 기본적으로 증가 파티션에 대한 지원을 사용할 수 있습니다. | sp_db_increased_partitions |
+| fn_virtualservernodes<br /><br />fn_servershareddrives | sys.dm_os_cluster_nodes<br /><br />sys.dm_io_cluster_shared_drives | fn_virtualservernodes<br /><br /> fn_servershareddrives |
+| fn_get_sql | sys.dm_exec_sql_text | fn_get_sql |
+| sp_lock | sys.dm_tran_locks | sp_lock |
 
 ### <a name="system-tables"></a>시스템 테이블
 
@@ -338,12 +300,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |--------------------|-------------|--------------|
 | sp_trace_create<br /><br />sp_trace_setevent<br /><br />sp_trace_setfilter<br /><br />sp_trace_setstatus<br /><br />fn_trace_geteventinfo<br /><br />fn_trace_getfilterinfo<br /><br />fn_trace_getinfo<br /><br />fn_trace_gettable<br /><br />sys.traces<br /><br />sys.trace_events<br /><br />sys.trace_event_bindings<br /><br />sys.trace_categories<br /><br />sys.trace_columns<br /><br />sys.trace_subclass_values|[확장 이벤트](../relational-databases/extended-events/extended-events.md) | sp_trace_create<br /><br />sp_trace_setevent<br /><br />sp_trace_setfilter<br /><br />sp_trace_setstatus<br /><br />fn_trace_geteventinfo<br /><br />fn_trace_getfilterinfo<br /><br />fn_trace_getinfo<br /><br />fn_trace_gettable<br /><br />sys.traces<br /><br />sys.trace_events<br /><br />sys.trace_event_bindings<br /><br />sys.trace_categories<br /><br />sys.trace_columns<br /><br />sys.trace_subclass_values |
 
-### <a name="system-functions"></a>시스템 함수
-
-| 사용되지 않는 기능 | 대체 기능 | 기능 이름 |
-|--------------------|-------------|--------------|
-| fn_virtualservernodes<br /><br />fn_servershareddrives | sys.dm_os_cluster_nodes<br /><br />sys.dm_io_cluster_shared_drives | fn_virtualservernodes<br /><br />fn_servershareddrives |
-
 ### <a name="system-views"></a>시스템 뷰
 
 | 사용되지 않는 기능 | 대체 기능 | 기능 이름 |
@@ -357,14 +313,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | VarDecimal 스토리지 형식의 사용 | VarDecimal 스토리지 형식은 더 이상 사용되지 않습니다. SQL Server 2019(15.x) 데이터 압축은 10진수 값 이외의 다른 데이터 형식도 압축합니다. VarDecimal 스토리지 형식 대신 데이터 압축을 사용하는 것이 좋습니다. | VarDecimal 스토리지 형식 |
 | sp_db_vardecimal_storage_format 프로시저의 사용|VarDecimal 스토리지 형식은 더 이상 사용되지 않습니다. SQL Server 2019(15.x) 데이터 압축은 10진수 값 이외의 다른 데이터 형식도 압축합니다. VarDecimal 스토리지 형식 대신 데이터 압축을 사용하는 것이 좋습니다. | sp_db_vardecimal_storage_format |
 | sp_estimated_rowsize_reduction_for_vardecimal 프로시저의 사용|대신 데이터 압축 및 sp_estimate_data_compression_savings 프로시저를 사용합니다. |sp_estimated_rowsize_reduction_for_vardecimal |
-
-### <a name="table-hints"></a>테이블 힌트
-
-| 사용되지 않는 기능 | 대체 기능 | 기능 이름 |
-|--------------------|-------------|--------------|
-| UPDATE 또는 DELETE 문의 FROM 절에 NOLOCK 또는 READUNCOMMITTED 지정 | FROM 절에서 NOLOCK 또는 READUNCOMMITTED 테이블 참고를 제거합니다. | UPDATE 또는 DELETE의 NOLOCK 또는 READUNCOMMITTED |
-| WITH 키워드를 사용하지 않고 테이블 힌트 지정|WITH를 사용합니다.|WITH가 없는 테이블 힌트 |
-| INSERT_HINTS | | INSERT_HINTS |
 
 ### <a name="text-pointers"></a>텍스트 포인터
 
@@ -386,13 +334,18 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | GROUP BY ALL|UNION 또는 파생 테이블과 함께 사용자 지정 사례별 솔루션을 사용합니다. | GROUP BY ALL |
 | DML 문의 열 이름으로서 ROWGUIDCOL|$rowguid를 사용합니다.|ROWGUIDCOL |
 | DML 문의 열 이름으로서 IDENTITYCOL|$identity를 사용합니다.|IDENTITYCOL |
-| 임시 테이블 및 임시 저장 프로시저 이름으로서 # 및 ##의 사용|적어도 하나 이상의 추가 문자를 사용해야 합니다.|임시 테이블 및 저장 프로시저의 이름으로 사용되는 '#' 및 '##'|185|  
-| \@, \@\@ 또는 Transact-SQL 식별자 \@\@의 사용|\@ 또는 \@\@나 \@\@ 식별자로 시작하는 이름을 사용할 수 없습니다.|‘\@’ 및 Transact-SQL 식별자 ‘\@\@’으로 시작하는 이름 |
+| 임시 테이블 및 임시 저장 프로시저 이름으로서 # 및 ##의 사용 | 적어도 하나 이상의 추가 문자를 사용해야 합니다.|임시 테이블 및 저장 프로시저의 이름으로 사용되는 '#' 및 '##'
+| \@, \@\@ 또는 Transact-SQL 식별자 \@\@의 사용 | \@ 또는 \@\@나 \@\@ 식별자로 시작하는 이름을 사용할 수 없습니다. | ‘\@’ 및 Transact-SQL 식별자 ‘\@\@’으로 시작하는 이름 |
 | 기본값으로서 DEFAULT 키워드의 사용|DEFAULT라는 단어를 기본값으로 사용하지 마십시오. | 기본값으로서 DEFAULT 키워드 |
 | 테이블 힌트 사이의 구분 기호로서 공백의 사용|쉼표를 사용하여 테이블 힌트를 구분합니다. | 쉼표가 없는 여러 테이블 힌트 |
-| 인덱싱된 집계 뷰의 SELECT 목록은 90의 호환성 모드에서 COUNT_BIG(\*)을 포함해야 합니다. | COUNT_BIG(\*)을 사용합니다. | 인덱스 뷰가 COUNT_BIG(\*)이 없는 목록 선택|2|  
+| 인덱싱된 집계 뷰의 SELECT 목록은 90의 호환성 모드에서 COUNT_BIG(\*)을 포함해야 합니다. | COUNT_BIG(\*)을 사용합니다. | 인덱스 뷰가 COUNT_BIG(\*)이 없는 목록 선택 |
 | 뷰를 통해 다중 문 TVF(테이블 반환 함수)를 호출하는 테이블 힌트의 간접 적용|없음|간접 TVF 힌트 |
-| ALTER DATABASE 구문:<br /><br />MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE | MODIFY FILEGROUP READ_ONLY<br /><br />MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE |
+| ALTER DATABASE 구문:<br /><br />MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE | MODIFY FILEGROUP READ_ONLY<br /><br />MODIFY FILEGROUP READ_WRITE | MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE |
+| SET ANSI_NULLS OFF 및 ANSI_NULLS OFF 데이터베이스 옵션<br /><br />SET ANSI_PADDING OFF 및 ANSI_PADDING OFF 데이터베이스 옵션<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF 및 CONCAT_NULL_YIELDS_NULL OFF 데이터베이스 옵션<br /><br />SET OFFSETS | 없음 <br /><br /> ANSI_NULLS, ANSI_PADDING 및 CONCAT_NULLS_YIELDS_NULL은 항상 ON으로 설정됩니다. SET OFFSETS는 사용할 수 없습니다. | SET ANSI_NULLS OFF <br /><br /> SET ANSI_PADDING OFF<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF<br /><br />SET OFFSETS<br /><br />ALTER DATABASE SET ANSI_NULLS OFF<br /><br />ALTER DATABASE SET ANSI_PADDING OFF <br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF |
+| SET FMTONLY | [sys.dm_exec_describe_first_result_set&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), [sys.dm_exec_describe_first_result_set_for_object&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md), [sp_describe_first_result_set&#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 및 [sp_describe_undeclared_parameters&#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md). | SET FMTONLY |
+| UPDATE 또는 DELETE 문의 FROM 절에 NOLOCK 또는 READUNCOMMITTED 지정 | FROM 절에서 NOLOCK 또는 READUNCOMMITTED 테이블 참고를 제거합니다. | UPDATE 또는 DELETE의 NOLOCK 또는 READUNCOMMITTED |
+| WITH 키워드를 사용하지 않고 테이블 힌트 지정 | WITH를 사용합니다. | WITH가 없는 테이블 힌트 |
+| INSERT_HINTS | | INSERT_HINTS |
 
 ### <a name="tools"></a>도구
 
@@ -415,7 +368,8 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 > [!NOTE]
 > 현재 **sp_setapprole** 에 대한 쿠키 **OUTPUT** 매개 변수는 정확한 최대 길이인 **varbinary(8000)** 로 정의되어 있습니다. 그러나 현재 구현은 **varbinary(50)** 입니다. 개발자가 **varbinary(50)** 를 할당할 경우 이후 릴리스에서 쿠키 반환 크기가 증가하면 애플리케이션을 변경해야 할 수 있습니다. 이 문제는 사용 중지에 관한 문제는 아니지만 애플리케이션 조정이 유사하기 때문에 이 항목에서 다룹니다. 자세한 내용은 [sp_setapprole&#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)을 참조하세요.  
+  
+## <a name="see-also"></a>참고 항목  
+ [SQL Server 2016에서 지원되지 않는 데이터베이스 엔진 기능](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
+  
 
-## <a name="see-also"></a>참고 항목
-
- [SQL Server 2016에서 지원되지 않는 데이터베이스 엔진 기능](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)

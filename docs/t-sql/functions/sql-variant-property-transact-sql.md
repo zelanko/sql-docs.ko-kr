@@ -1,7 +1,7 @@
 ---
 title: SQL_VARIANT_PROPERTY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/12/2017
+ms.date: 02/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ ms.assetid: 50e5c1d9-4e95-4ed0-9c92-435c872a399e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22b11ff1f9a6ed218b4c63c2f22bfb6e2d441703
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6c6816f1cd60450ecfc15e7a7c10199624f8c3dd
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74550192"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550185"
 ---
 # <a name="sql_variant_property-transact-sql"></a>SQL_VARIANT_PROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,9 +48,9 @@ SQL_VARIANT_PROPERTY ( expression , property )
   
 |값|Description|반환된 sql_variant의 기본 형식|  
 |-----------|-----------------|----------------------------------------|  
-|**BaseType**|다음과 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식<br /><br /> **bigint**<br /><br /> **binary**<br /><br /> **char**<br /><br /> **date**<br /><br /> **datetime**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **int**<br /><br /> **money**<br /><br /> **nchar**<br /><br /> **numeric**<br /><br /> **nvarchar**<br /><br /> **real**<br /><br /> **smalldatetime**<br /><br /> **smallint**<br /><br /> **smallmoney**<br /><br /> **time**<br /><br /> **tinyint**<br /><br /> **uniqueidentifier**<br /><br /> **varbinary**<br /><br /> **varchar**|**sysname**<br /><br /> NULL = 입력이 잘못되었습니다.|  
-|**정밀도**|숫자 기본 데이터 형식의 전체 자릿수<br /><br /> **datetime** = 23<br /><br />**datetime2** = 27<br /><br /> **smalldatetime** = 16<br /><br /> **float** = 53<br /><br /> **real** = 24<br /><br /> **decimal** (p,s) 및 **numeric** (p,s) = p<br /><br /> **money** = 19<br /><br /> **smallmoney** = 10<br /><br /> **bigint** = 19<br /><br /> **int** = 10<br /><br /> **smallint** = 5<br /><br /> **tinyint** = 3<br /><br /> **bit** = 1<br /><br /> 기타 모든 유형 = 0|**int**<br /><br /> NULL = 입력이 잘못되었습니다.|  
-|**규모**|숫자 기반 데이터 형식의 소수점 이하 자릿수<br /><br /> **decimal** (p,s) 및 **numeric** (p,s) = s<br /><br /> **money** 및 **smallmoney** = 4<br /><br /> **datetime** = 3<br /><br />**datetime2** = 7<br /><br /> 기타 모든 유형 = 0|**int**<br /><br /> NULL = 입력이 잘못되었습니다.|  
+|**BaseType**|다음과 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식<br /><br /> **bigint**<br /><br /> **binary**<br /><br /> **bit**<br /><br /> **char**<br /><br /> **date**<br /><br /> **datetime**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **int**<br /><br /> **money**<br /><br /> **nchar**<br /><br /> **numeric**<br /><br /> **nvarchar**<br /><br /> **real**<br /><br /> **smalldatetime**<br /><br /> **smallint**<br /><br /> **smallmoney**<br /><br /> **time**<br /><br /> **tinyint**<br /><br /> **uniqueidentifier**<br /><br /> **varbinary**<br /><br /> **varchar**|**sysname**<br /><br /> NULL = 입력이 잘못되었습니다.|  
+|**정밀도**|숫자 기본 데이터 형식의 전체 자릿수<br /><br /> **date** = 10<br /><br /> **datetime** = 23<br /><br /> **datetime2** = 27<br /><br /> **datetime2** (s) = 19 when s = 0, else s + 20<br /><br /> **datetimeoffset** = 34<br /><br /> **datetimeoffset** (s) = 26 when s = 0, else s + 27<br /><br /> **smalldatetime** = 16<br /><br /> **time** = 16<br /><br /> **time** (s) = 8 when s = 0, else s + 9<br /><br /> **float** = 53<br /><br /> **real** = 24<br /><br /> **decimal** 및 **numeric** = 18<br /><br /> **decimal** (p,s) 및 **numeric** (p,s) = p<br /><br /> **money** = 19<br /><br /> **smallmoney** = 10<br /><br /> **bigint** = 19<br /><br /> **int** = 10<br /><br /> **smallint** = 5<br /><br /> **tinyint** = 3<br /><br /> **bit** = 1<br /><br /> 기타 모든 유형 = 0|**int**<br /><br /> NULL = 입력이 잘못되었습니다.|  
+|**규모**|숫자 기반 데이터 형식의 소수점 이하 자릿수<br /><br /> **decimal** 및 **numeric** = 0<br /><br /> **decimal** (p,s) 및 **numeric** (p,s) = s<br /><br /> **money** 및 **smallmoney** = 4<br /><br /> **datetime** = 3<br /><br /> **datetime2** = 7<br /><br /> **datetime2** (s) = s (0 - 7)<br /><br /> **datetimeoffset** = 7<br /><br /> **datetimeoffset** (s) = s (0 - 7)<br /><br /> **time** = 7<br /><br /> **time** (s) = s (0 - 7)<br /><br /> 기타 모든 유형 = 0|**int**<br /><br /> NULL = 입력이 잘못되었습니다.|  
 |**TotalBytes**|메타데이터 및 값의 모든 데이터를 저장하는 데 필요한 바이트 수입니다. 이 정보는 **sql_variant** 열의 데이터에 대한 최대치를 확인하는 데 유용합니다. 값이 900을 초과하면 인덱스를 만들 수 없습니다.|**int**<br /><br /> NULL = 입력이 잘못되었습니다.|  
 |**데이터 정렬**|특정 **sql_variant** 값의 데이터 정렬을 나타냅니다.|**sysname**<br /><br /> NULL = 입력이 잘못되었습니다.|  
 |**MaxLength**|최대 데이터 형식 길이(바이트)입니다. 예를 들어 **nvarchar(** 50 **)** 의 **MaxLength**는 100이고, **int**의 **MaxLength**는 4입니다.|**int**<br /><br /> NULL = 입력이 잘못되었습니다.|  
@@ -60,7 +60,7 @@ SQL_VARIANT_PROPERTY ( expression , property )
   
 ## <a name="examples"></a>예  
 ### <a name="a-using-a-sql_variant-in-a-table"></a>A. 테이블에서 sql_variant 사용  
- 다음 예에서는 `SQL_VARIANT_PROPERTY`에 `colA` 및 `46279.1` 형식의 `colB`가 있는 경우  =`1689``tableA`일 때 `colA` 값 `sql_variant`에 대한 `colB` 정보를 검색합니다.  
+ 다음 예에서는 `tableA`에 `sql_variant` 및 `colB` 형식의 `colA`가 있는 경우 `colB` =`1689`일 때 `colA` 값 `46279.1`에 대한 `SQL_VARIANT_PROPERTY` 정보를 검색합니다.  
   
 ```sql    
 CREATE   TABLE tableA(colA sql_variant, colB int)  
@@ -83,7 +83,7 @@ decimal      8           2
 ```  
   
 ### <a name="b-using-a-sql_variant-as-a-variable"></a>B. 변수로 sql_variant 사용   
- 다음 예에서는 변수 `SQL_VARIANT_PROPERTY`에 대한 @v1 정보를 검색합니다.  
+ 다음 예에서는 변수 @v1에 대한 `SQL_VARIANT_PROPERTY` 정보를 검색합니다.  
   
 ```sql    
 DECLARE @v1 sql_variant;  

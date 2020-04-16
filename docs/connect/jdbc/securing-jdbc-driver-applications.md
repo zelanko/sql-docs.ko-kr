@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bb59afd2044fc1614bdf0303702d72a5435728ea
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fd01462987ef425af32c8537f1fc99218d59e290
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928436"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219432"
 ---
 # <a name="securing-jdbc-driver-applications"></a>JDBC 드라이버 애플리케이션 보안
 
@@ -32,7 +32,7 @@ ms.locfileid: "80928436"
 | [연결 문자열 보안](../../connect/jdbc/securing-connection-strings.md) | 데이터 원본에 연결하는 데 사용되는 정보를 보호하는 기술에 대해 설명합니다.                                                                                    |
 | [사용자 입력 유효성 검사](../../connect/jdbc/validating-user-input.md)             | 사용자 입력의 유효성을 검사하는 기술에 대해 설명합니다.                                                                                                                          |
 | [애플리케이션 보안](../../connect/jdbc/application-security.md)               | Java 정책 권한을 사용하여 JDBC 드라이버 애플리케이션의 보안을 유지하는 방법에 대해 설명합니다.                                                                                |
-| [SSL 암호화 사용](../../connect/jdbc/using-ssl-encryption.md)               | SSL(Secure Sockets Layer)을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스로 보안 통신 채널을 설정하는 방법에 대해 설명합니다. |
+| [암호화 사용](../../connect/jdbc/using-ssl-encryption.md)               | 이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 보안 통신 채널을 설정하는 방법을 설명합니다. |
 | [FIPS 모드](../../connect/jdbc/fips-mode.md)                                     | FIPS 규격 모드에서 JDBC 드라이버를 사용하는 방법을 설명합니다.                                                                                                              |
   
 ## <a name="see-also"></a>참고 항목  

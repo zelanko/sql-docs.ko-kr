@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d323481aaf3e12da9786a3b02f21f47c3c98f7cf
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 52511cbda93f5148daab116f0def292b55828efd
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924537"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219402"
 ---
 # <a name="connecting-to-sql-server"></a>SQL Server에 연결
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -62,8 +62,8 @@ Server = [protocol:]server[,port]
 `isql`을 사용하여 연결을 테스트해 드라이버가 작동하는지 확인할 수 있으며, 다음 명령을 사용할 수도 있습니다.
  - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  
 
-## <a name="using-secure-sockets-layer-ssl"></a>SSL(Secure Sockets Layer) 사용  
-SSL(Secure Sockets Layer)을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 연결을 암호화할 수 있습니다. SSL은 네트워크에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 사용자 이름 및 암호를 보호합니다. SSL은 또한 MITM(메시지 가로채기) 공격으로부터 보호하기 위해 서버의 ID를 확인합니다.  
+## <a name="using-tlsssl"></a>TLS/SSL 사용  
+이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안)를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 연결을 암호화할 수 있습니다. TLS는 네트워크에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 사용자 이름과 암호를 보호합니다. 또한 TLS는 서버의 ID를 확인하여 MITM(메시지 가로채기) 공격으로부터 보호합니다.  
 
 암호화를 사용하면 보안은 강화되지만 성능은 저하됩니다.
 
@@ -74,7 +74,7 @@ SSL(Secure Sockets Layer)을 사용하여 [!INCLUDE[ssNoVersion](../../../includ
 ||**TrustServerCertificate=no**|**TrustServerCertificate=yes**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|서버 인증서를 확인하지 않습니다.<br /><br />클라이언트와 서버 간에 전송되는 데이터가 암호화되지 않습니다.|서버 인증서를 확인하지 않습니다.<br /><br />클라이언트와 서버 간에 전송되는 데이터가 암호화되지 않습니다.|  
-|**Encrypt=yes**|서버 인증서를 확인합니다.<br /><br />클라이언트와 서버 간에 전송되는 데이터가 암호화됩니다.<br /><br />[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSL 인증서에 있는 주체 CN(일반 이름) 또는 SAN(주체 대체 이름)의 이름(또는 IP 주소)은 연결 문자열에 지정된 서버 이름(또는 IP 주소)과 정확하게 일치해야 합니다.|서버 인증서를 확인하지 않습니다.<br /><br />클라이언트와 서버 간에 전송되는 데이터가 암호화됩니다.|  
+|**Encrypt=yes**|서버 인증서를 확인합니다.<br /><br />클라이언트와 서버 간에 전송되는 데이터가 암호화됩니다.<br /><br />[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] TLS/SSL 인증서에 있는 주체 CN(일반 이름) 또는 SAN(주체 대체 이름)의 이름(또는 IP 주소)은 연결 문자열에 지정된 서버 이름(또는 IP 주소)과 정확하게 일치해야 합니다.|서버 인증서를 확인하지 않습니다.<br /><br />클라이언트와 서버 간에 전송되는 데이터가 암호화됩니다.|  
 
 기본적으로 암호화된 연결에서 서버의 인증서를 항상 확인합니다. 그러나 자체 서명된 인증서가 있는 서버에 연결하는 경우에는 신뢰할 수 있는 인증 기관 목록에 대해 인증서 검사를 우회하는 `TrustServerCertificate` 옵션도 추가해야 합니다.  
 
@@ -82,7 +82,7 @@ SSL(Secure Sockets Layer)을 사용하여 [!INCLUDE[ssNoVersion](../../../includ
 Driver={ODBC Driver 13 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
 ```  
   
-SSL은 OpenSSL 라이브러리를 사용합니다. 다음 표에서는 최소 지원되는 버전의 OpenSSL 및 각 플랫폼에 대한 기본 인증서 신뢰 저장소 위치를 보여 줍니다.
+TLS는 OpenSSL 라이브러리를 사용합니다. 다음 표에서는 최소 지원되는 버전의 OpenSSL 및 각 플랫폼에 대한 기본 인증서 신뢰 저장소 위치를 보여 줍니다.
 
 |플랫폼|최소 OpenSSL 버전|기본 인증서 신뢰 저장소 위치|  
 |------------|---------------------------|--------------------------------------------|

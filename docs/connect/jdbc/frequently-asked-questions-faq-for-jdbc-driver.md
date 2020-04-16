@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9f753fde186e056b5c7222c2c801303661e1fd79
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 78fe63a54214ad7ff231ebf5df2353ef09d0fc09
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924670"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219167"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 드라이버에 대한 FAQ(질문과 대답)
 
@@ -113,8 +113,8 @@ JDBC 드라이버 6.0, 6.2, 6.4 및 7.0은 재배포 가능합니다. 라이선�
 **이 드라이버를 사용하여 Linux 컴퓨터에서 Microsoft SQL Server에 액세스할 수 있나요?**  
 예! 이 드라이버를 사용하여 Linux, Unix 및 기타 Windows 이외의 플랫폼에서 SQL Server에 액세스할 수 있습니다. 자세한 내용은 [Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)(SQL Server용 Microsoft JDBC Driver 지원 매트릭스)를 참조하세요.
 
-**드라이버가 SSL(Secure Sockets Layer) 암호화를 지원하나요?**  
-버전 1.2부터 이 드라이버는 SSL(Secure Sockets Layer) 암호화를 지원합니다. 자세한 내용은 [Using SSL Encryption](../../connect/jdbc/using-ssl-encryption.md)(SSL 암호화 사용)을 참조하세요.
+**드라이버가 TLS 암호화를 지원하나요?**  
+버전 1.2부터 드라이버는 이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안) 암호화를 지원합니다. 자세한 내용은 [암호화 사용](../../connect/jdbc/using-ssl-encryption.md)을 참조하세요.
 
 **Microsoft JDBC Driver for SQL Server에서는 어떤 유형의 인증을 지원하나요?**  
 다음 표에는서 사용할 수 있는 인증 옵션을 보여 줍니다. 이 드라이버 4.0 릴리스부터는 순수한 Java Kerberos 인증을 사용할 수 있습니다.

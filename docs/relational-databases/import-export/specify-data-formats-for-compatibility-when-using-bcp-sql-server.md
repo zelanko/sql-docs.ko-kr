@@ -1,5 +1,6 @@
 ---
 title: bcp를 사용하여 호환성 데이터 형식 지정
+description: bcp를 사용하여 SQL Server에서 대량으로 내보내는 경우, 데이터 형식이 예상 레이아웃과 호환되지 않을 수 있습니다. 비 xml 서식 파일은 호환성 데이터 형식을 지정합니다.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -17,12 +18,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: d16b152bed2a0ed774ea443ada13201e4416f173
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a50db4c804e16c8d7ef93ab1bb9b2d201218d993
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055932"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980354"
 ---
 # <a name="specify-compatibility-data-formats-when-using-bcp-sql-server"></a>bcp를 사용하는 경우 호환 데이터 형식 지정(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

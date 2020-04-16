@@ -1,5 +1,6 @@
 ---
 title: XML 서식 파일(SQL Server) | Microsoft 문서
+description: SQL Server 2019에서는 SQL Server 테이블에 데이터를 대량으로 가져오는 데 사용할 XML 서식 파일을 작성하는 구문을 정의하는 XML 스키마를 제공합니다.
 ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 724898bb35df9126ba61b5ebac147a37f272effc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ad508056c5ba614b92e06ca6453ea87bc4ed730
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68091430"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980378"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 서식 파일(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -256,7 +257,7 @@ ms.locfileid: "68091430"
 |----------------------|-----------------|------------------------------|  
 |SOURCE **="** _fieldID_ **"**|열에 매핑되는 필드의 ID를 지정합니다.<br /><br /> \<COLUMN SOURCE **="** _fieldID_ **"** />는 \<FIELD ID **="** _fieldID_ **"** />에 매핑됩니다.|필수|  
 |NAME = "*columnName*"|서식 파일에 의해 표현된 행 집합의 열 이름을 지정합니다. 이 열 이름은 결과 집합에서 열을 식별하는 데 사용되며 대상 테이블에서 사용되는 열 이름과 일치할 필요는 없습니다.|필수|  
-|xsi **:** type **="** _ColumnType_ **"**|요소의 인스턴스 데이터 형식을 식별하는 XML 구문(특성처럼 사용)입니다. *ColumnType* 값은 지정한 인스턴스에서 필요한 옵션 특성(아래)을 결정합니다.<br /><br /> 참고: *ColumnType*의 가능한 값 및 관련 특성은 \<[COLUMN&lt; 요소의 Xsi:type 값&gt; 섹션의 ](#XsiTypeValuesOfCOLUMN)COLUMN> 요소 테이블에 나와 있습니다.|옵션|  
+|xsi **:** type **="** _ColumnType_ **"**|요소의 인스턴스 데이터 형식을 식별하는 XML 구문(특성처럼 사용)입니다. *ColumnType* 값은 지정한 인스턴스에서 필요한 옵션 특성(아래)을 결정합니다.<br /><br /> 참고: *ColumnType*의 가능한 값 및 관련 특성은 [&lt;COLUMN&gt; 요소의 Xsi:type 값](#XsiTypeValuesOfCOLUMN) 섹션의 \<COLUMN> 요소 테이블에 나와 있습니다.|옵션|  
 |LENGTH **="** _n_ **"**|고정 길이 데이터 형식의 인스턴스 길이를 정의합니다. LENGTH는 xsi:type이 문자열 데이터 형식인 경우에만 사용됩니다.<br /><br /> *n* 값은 양의 정수여야 합니다.|선택(xsi:type이 문자열 데이터 형식인 경우에만 사용 가능)|  
 |PRECISION **="** _n_ **"**|숫자의 전체 자릿수를 나타냅니다. 예를 들어 123.45의 전체 자릿수는 5입니다.<br /><br /> 값은 양의 정수여야 합니다.|선택(xsi:type이 가변 숫자 데이터 형식인 경우에만 사용 가능)|  
 |SCALE **="** _int_ **"**|숫자에서 소수점 이하 자릿수를 나타냅니다. 예를 들어 123.45의 소수 자릿수는 2입니다.<br /><br /> 값은 정수여야 합니다.|선택(xsi:type이 가변 숫자 데이터 형식인 경우에만 사용 가능)|  
@@ -350,7 +351,7 @@ for(int i=0;i<ColumnList.Count;i++)
 ###  <a name="a-ordering-character-data-fields-the-same-as-table-columns"></a><a name="OrderCharFieldsSameAsCols"></a> 1. 테이블 열과 동일하게 문자 데이터 필드 정렬  
  다음 예에서는 3개의 문자 데이터 필드가 포함된 데이터 파일을 설명하는 XML 서식 파일을 보여 줍니다. 서식 파일은 데이터 파일을 3개의 열이 포함된 테이블로 매핑합니다. 데이터 필드는 테이블 열과 일 대 일로 대응합니다.  
   
- **테이블(행):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
+ **테이블(행):** Person(Age int, FirstName varchar(20), LastName varchar(30))  
   
  **데이터 파일(레코드):** Age\<tab>Firstname\<tab>Lastname\<return>  
   
@@ -388,7 +389,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="b-ordering-data-fields-and-table-columns-differently"></a><a name="OrderFieldsAndColsDifferently"></a> 2. 데이터 필드와 테이블 열을 서로 다르게 정렬  
  다음 예에서는 3개의 문자 데이터 필드가 포함된 데이터 파일을 설명하는 XML 서식 파일을 보여 줍니다. 서식 파일은 데이터 파일을 데이터 파일의 필드와 다르게 정렬된 3개의 열을 포함하는 테이블로 매핑합니다.  
   
- **테이블(행):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
+ **테이블(행):** Person(Age int, FirstName varchar(20), LastName varchar(30))  
   
  **데이터 파일**(레코드): Age\<tab>Lastname\<tab>Firstname\<return>  
   
@@ -423,7 +424,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="c-omitting-a-data-field"></a><a name="OmitField"></a> 3. 데이터 필드 생략  
  다음 예에서는 4개의 문자 데이터 필드가 포함된 데이터 파일을 설명하는 XML 서식 파일을 보여 줍니다. 서식 파일은 데이터 파일을 3개의 열이 포함된 테이블로 매핑합니다. 두 번째 데이터 필드는 대응되는 테이블 열이 없습니다.  
   
- **테이블(행):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
+ **테이블(행):** Person(Age int, FirstName Varchar(20), LastName Varchar(30))  
   
  **데이터 파일(레코드):** Age\<tab>employeeID\<tab>Firstname\<tab>Lastname\<return>  
   

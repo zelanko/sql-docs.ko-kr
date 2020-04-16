@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 650a298b9cc67b24c33f3da370a8a1b6de6ac63b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2f7d9c9a1610b5ebcd086bec1cc11d0ec85f7358
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922667"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219442"
 ---
 # <a name="application-security"></a>애플리케이션 보안
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -59,9 +59,9 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
 >  "file:/install_dir/lib/-" 코드는 JDBC 드라이버의 설치 디렉터리를 나타냅니다.  
   
 ## <a name="protecting-server-communication"></a>서버 통신 보호  
- JDBC 드라이버를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 통신할 경우 IPSEC(인터넷 프로토콜 보안), SSL(Secure Sockets Layer) 또는 둘 다를 사용하여 통신 채널의 보안을 유지할 수 있습니다.  
+ JDBC 드라이버를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 통신하는 경우, IPSEC(인터넷 프로토콜 보안), 이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안) 또는 둘 다를 사용하여 통신 채널의 보안을 유지할 수 있습니다.  
   
- SSL 지원을 사용하여 IPSec 외에 추가 수준의 보호 기능을 제공할 수 있습니다. SSL을 사용하는 방법에 대한 자세한 내용은 [SSL 암호화 사용](../../connect/jdbc/using-ssl-encryption.md)을 참조하세요.  
+ TLS 지원을 사용하여 IPSec 외에 추가 수준의 보호 기능을 제공할 수 있습니다. TLS를 사용하는 방법에 대한 자세한 내용은 [암호화 사용](../../connect/jdbc/using-ssl-encryption.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버 애플리케이션 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)  

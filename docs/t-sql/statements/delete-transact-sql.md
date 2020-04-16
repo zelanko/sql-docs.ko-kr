@@ -25,12 +25,12 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28329315313f6f08f84aa2d8944eef55d26fdd46
+ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75548278"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80873169"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -192,7 +192,7 @@ DELETE
  TOP은 분할된 뷰에서 DELETE 문에 사용할 수 없습니다.  
   
 ## <a name="locking-behavior"></a>잠금 동작  
- 기본적으로 DELETE 문은 항상 수정하는 테이블에 대해 배타적(X) 잠금을 획득하고 해당 트랜잭션이 완료될 때까지 이 잠금을 보유합니다. 배타(X) 잠금을 사용하면 다른 트랜잭션이 데이터를 수정할 수 없습니다. 읽기 작업은 NOLOCK 힌트 또는 READ UNCOMMITED 격리 수준을 사용해서만 수행할 수 있습니다. 테이블 힌트를 지정해 다른 잠금 방법을 지정하여 DELETE 문의 기간에 이 기본 동작을 재정의할 수 있지만, 숙련된 개발자 및 데이터베이스 관리자가 최후의 수단으로만 힌트를 사용하시기 바랍니다. 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)를 참조하세요.  
+ 기본적으로 DELETE 문은 항상, 수정하는 테이블 개체에 대해 IX(의도 배타) 잠금을 획득하고 해당 트랜잭션이 완료될 때까지 이 잠금을 보유합니다. IX(의도 배타) 잠금을 사용하면 다른 트랜잭션이 데이터를 수정할 수 없습니다. NOLOCK 힌트 또는 READ UNCOMMITED 격리 수준을 사용하여 읽기 작업만 가능합니다. 테이블 힌트를 지정해 다른 잠금 방법을 지정하여 DELETE 문의 기간에 이 기본 동작을 재정의할 수 있지만, 숙련된 개발자 및 데이터베이스 관리자가 최후의 수단으로만 힌트를 사용하시기 바랍니다. 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)를 참조하세요.  
   
  힙에서 행을 삭제할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 작업에 대해 행 또는 페이지 잠금을 사용할 수 있습니다. 이 경우 삭제 작업에서 비운 페이지가 힙에 할당된 상태로 남아 있습니다. 빈 페이지의 할당이 취소되지 않으면 데이터베이스의 다른 개체가 해당 공간을 다시 사용할 수 없습니다.  
   
@@ -200,7 +200,7 @@ DELETE
   
 -   DELETE 문에 TABLOCK 힌트를 지정합니다. TABLOCK 힌트를 사용하면 삭제 작업이 행 또는 페이지 잠금 대신 배타적 잠금을 수행하므로 페이지 할당을 취소할 수 있습니다. TABLOCK 힌트에 대한 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)를 참조하세요.  
   
--   테이블에서 모든 행이 삭제되는 경우 TRUNCATE TABLE을 사용합니다.  
+-   테이블에서 모든 행을 삭제하려면 `TRUNCATE TABLE`을 사용합니다.  
   
 -   행을 삭제하기 전에 힙에 클러스터형 인덱스를 만듭니다. 행이 삭제되고 나면 클러스터형 인덱스를 삭제할 수 있습니다. 이 방법은 앞의 두 방법보다 시간이 오래 걸리며 임시 리소스를 더 많이 사용합니다.  
   
@@ -208,14 +208,14 @@ DELETE
 >  `ALTER TABLE <table_name> REBUILD` 문을 사용하여 언제든지 힙에서 빈 페이지를 제거할 수 있습니다.  
   
 ## <a name="logging-behavior"></a>로깅 동작  
- DELETE 문은 항상 전체 로깅됩니다.  
+DELETE 문은 항상 전체 로깅됩니다.  
   
 ## <a name="security"></a>보안  
   
 ### <a name="permissions"></a>사용 권한  
- 대상 테이블에 DELETE 권한이 필요합니다. 문에 WHERE 절이 포함되어 있을 경우 SELECT 권한도 필요합니다.  
+ 대상 테이블에 대한 `DELETE` 권한이 필요합니다. 문에 WHERE 절이 포함되어 있으면 `SELECT` 권한도 필요합니다.  
   
- **sysadmin** 고정 서버 역할의 멤버, **db_owner** 및 **db_datawriter** 고정 데이터베이스 역할의 멤버 및 테이블 소유자에게는 기본적으로 DELETE 권한이 부여됩니다. **sysadmin**, **db_owner** 및 **db_securityadmin** 역할의 멤버와 테이블 소유자는 다른 사용자에게 권한을 위임할 수 있습니다.  
+ DELETE 권한은 `sysadmin` 고정 서버 역할, `db_owner` 및 `db_datawriter` 고정 데이터베이스 역할, 테이블 소유자의 멤버에게 기본적으로 부여됩니다. `sysadmin`, `db_owner` 및 `db_securityadmin` 역할의 멤버와 테이블 소유자는 다른 사용자에게 권한을 이전할 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
@@ -241,7 +241,7 @@ GO
  이 섹션의 예에서는 삭제되는 행 수를 제한하는 방법을 보여 줍니다.  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. WHERE 절을 사용하여 행 집합 삭제  
- 다음 예에서는 `ProductCostHistory` 열의 값이 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]을 초과하는 모든 행을 `StandardCost` 데이터베이스의 `1000.00`테이블에서 삭제합니다.  
+ 다음 예에서는 `StandardCost` 열의 값이 `1000.00`을 초과하는 모든 행을 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `ProductCostHistory`테이블에서 삭제합니다.  
   
 ```sql
 DELETE FROM Production.ProductCostHistory  
@@ -259,7 +259,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>C. 커서를 사용하여 삭제할 행 확인  
- 다음 예에서는 `EmployeePayHistory`이라는 커서를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `complex_cursor` 테이블에서 단일 행을 삭제합니다. 삭제 작업은 현재 커서에서 인출된 한 행에만 영향을 줍니다.  
+ 다음 예에서는 `complex_cursor`이라는 커서를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `EmployeePayHistory` 테이블에서 단일 행을 삭제합니다. 삭제 작업은 현재 커서에서 인출된 한 행에만 영향을 줍니다.  
   
 ```sql
 DECLARE complex_cursor CURSOR FOR  
@@ -279,7 +279,7 @@ GO
 ```  
   
 #### <a name="d-using-joins-and-subqueries-to-data-in-one-table-to-delete-rows-in-another-table"></a>D. 한 테이블의 데이터에 대한 조인 및 하위 쿼리를 사용하여 다른 테이블의 행 삭제  
- 다음 예에서는 한 테이블의 데이터를 기반으로 다른 테이블의 행을 삭제하는 두 가지 방법을 보여 줍니다. 두 예에서 모두 `SalesPersonQuotaHistory` 테이블에 저장된 연누계 매출에 기반하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `SalesPerson` 테이블에서 행을 삭제합니다. 첫 번째 `DELETE` 문은 ISO 호환 하위 쿼리 솔루션을 보여 주고 두 번째 `DELETE` 문은 두 테이블을 조인하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] FROM 확장을 보여 줍니다.  
+ 다음 예에서는 한 테이블의 데이터를 기반으로 다른 테이블의 행을 삭제하는 두 가지 방법을 보여 줍니다. 두 예에서 모두 `SalesPerson` 테이블에 저장된 연누계 매출에 기반하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `SalesPersonQuotaHistory` 테이블에서 행을 삭제합니다. 첫 번째 `DELETE` 문은 ISO 호환 하위 쿼리 솔루션을 보여 주고 두 번째 `DELETE` 문은 두 테이블을 조인하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] FROM 확장을 보여 줍니다.  
   
 ```sql
 -- SQL-2003 Standard subquery  
@@ -404,7 +404,7 @@ GO
 ```  
   
 #### <a name="j-using-output-with-from_table_name-in-a-delete-statement"></a>J. DELETE 문에 OUTPUT 및 <from_table_name> 사용  
- 다음 예에서는 `ProductProductPhoto` 문의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 절에 정의된 검색 조건에 따라 `FROM` 데이터베이스의 `DELETE` 테이블에서 행을 삭제합니다. `OUTPUT` 절은 삭제될 테이블의 `DELETED.ProductID`, `DELETED.ProductPhotoID`열과 `Product` 테이블의 열을 반환합니다. 이것은 `FROM` 절에서 삭제할 행을 지정하는 데 사용됩니다.  
+ 다음 예에서는 `DELETE` 문의 `FROM` 절에 정의된 검색 조건에 따라 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `ProductProductPhoto` 테이블에서 행을 삭제합니다. `OUTPUT` 절은 삭제될 테이블의 `DELETED.ProductID`, `DELETED.ProductPhotoID`열과 `Product` 테이블의 열을 반환합니다. 이것은 `FROM` 절에서 삭제할 행을 지정하는 데 사용됩니다.  
   
 ```sql
 DECLARE @MyTableVar table (  

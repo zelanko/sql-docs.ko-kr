@@ -1,7 +1,7 @@
 ---
 title: SERVERPROPERTY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4654771be070cc02f2c56b1f08950d120706216d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db0bbc0fe85809ea827b005e8c10bbbfe4f30670
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76761714"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517522"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY(Transact-SQL)
 
@@ -67,6 +67,7 @@ SERVERPROPERTY ( 'propertyname' )
 |InstanceDefaultLogPath|**적용 대상**: 2015년 후반부터 업데이트된 현재 버전을 통해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 적용됩니다.<br /><br /> 인스턴스 로그 파일의 기본 경로 이름입니다.|  
 |InstanceName|사용자가 연결된 인스턴스의 이름입니다.<br /><br /> 인스턴스 이름이 기본 인스턴스이거나 입력이 유효하지 않거나 오류일 경우에는 NULL을 반환합니다.<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
 |IsAdvancedAnalyticsInstalled|설치 중에 Advanced Analytics 기능이 설치되어 있으면 1을, Advanced Analytics가 설치되어 있지 않으면 0을 반환합니다.|  
+|IsBigDataCluster| [!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] CU4부터 도입되었습니다.<br /><br />인스턴스가 빅 데이터 클러스터 SQL Server이면 1을 반환하고, 그렇지 않으면 0을 반환합니다.|  
 |IsClustered|서버 인스턴스가 장애 조치(failover) 클러스터에 구성되어 있습니다.<br /><br /> 1 = 클러스터형입니다.<br /><br /> 0 = 비클러스터형입니다.<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.<br /><br /> 기본 데이터 형식: **int**|  
 |IsFullTextInstalled|전체 텍스트 및 의미 체계 인덱싱 구성 요소가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 현재 인스턴스에 설치되었습니다.<br /><br /> 1 = 전체 텍스트 및 의미 체계 인덱싱 구성 요소가 설치되었습니다.<br /><br /> 0 = 전체 텍스트 및 의미 체계 인덱싱 구성 요소가 설치되지 않았습니다.<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.<br /><br /> 기본 데이터 형식: **int**|  
 |IsHadrEnabled|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 이 서버 인스턴스에서 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]을 사용합니다.<br /><br /> 0 = [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 기능을 사용하지 않습니다.<br /><br /> 1 = [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 기능을 사용합니다.<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.<br /><br /> 기본 데이터 형식: **int**<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 가용성 복제본을 만들고 실행하려면 서버 인스턴스에서 HADR 서비스를 사용하도록 설정해야 합니다. 자세한 내용은 [AlwaysOn 가용성 그룹 활성화 및 비활성화(SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)를 참조하세요.<br /><br /> **참고:** IsHadrEnabled 속성은 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]에만 적용됩니다. 데이터베이스 미러링 또는 로그 전달 등의 다른 고가용성 또는 재해 복구 기능은 이 서버 속성의 영향을 받지 않습니다.|  

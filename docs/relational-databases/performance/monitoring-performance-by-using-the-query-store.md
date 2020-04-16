@@ -1,7 +1,7 @@
 ---
 title: 쿼리 저장소를 사용하여 성능 모니터링 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2020
+ms.date: 04/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: bd1dde8b4b98041ed8a9d07c82d52f8d202ed0c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44d90d6f77433c3dceba4d3bf16de10d6eb70c36
+ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79448179"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81012419"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>쿼리 저장소를 사용하여 성능 모니터링
 
@@ -34,9 +34,9 @@ Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 쿼리 저장소 작업�
 
 ## <a name="enabling-the-query-store"></a><a name="Enabling"></a> 쿼리 저장소 사용
 
- 새 데이터베이스에서는 기본적으로 쿼리 저장소가 활성 상태가 아닙니다.
+ 쿼리 저장소는 새 SQL Server 및 Azure Synapse Analytics(SQL DW) 데이터베이스에는 기본적으로 사용되지 않고, 새 Azure SQL Database 데이터베이스에는 기본적으로 사용됩니다.
 
-## <a name="use-the-query-store-page-in-ssmanstudiofull"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 쿼리 저장소 페이지를 사용합니다.
+### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 쿼리 저장소 페이지를 사용합니다.
 
 1. 개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.
 
@@ -47,7 +47,7 @@ Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 쿼리 저장소 작업�
 
 3. **작업 모드(요청)** 상자에서 **읽기/쓰기**를 선택합니다.
 
-## <a name="use-transact-sql-statements"></a>Transact-SQL 문 사용
+### <a name="use-transact-sql-statements"></a>Transact-SQL 문 사용
 
 **ALTER DATABASE** 문을 사용하여 지정된 데이터베이스에 대해 쿼리 저장소를 사용하도록 설정할 수 있습니다. 다음은 그 예입니다.
 

@@ -21,12 +21,12 @@ ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbedcb09ba05ff427fbae722a9223d902f2c438d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e1179633f88bef025648b08892859e73b06f14b8
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71271957"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550146"
 ---
 # <a name="database-identifiers"></a>데이터베이스 식별자
 
@@ -37,7 +37,7 @@ ms.locfileid: "71271957"
 
 ```sql
 CREATE TABLE TableX
-(KeyCol INT PRIMARY KEY, Description nvarchar(80))
+(KeyCol INT PRIMARY KEY, Description nvarchar(80));
 ```
 
  이 테이블에는 이름 없는 제약 조건도 있습니다. `PRIMARY KEY` 제약 조건에는 식별자가 없습니다.
@@ -48,34 +48,55 @@ CREATE TABLE TableX
 > 변수의 이름 또는 함수와 저장 프로시저의 매개 변수는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자의 규칙을 따라야 합니다.
 
 ## <a name="classes-of-identifiers"></a>식별자 클래스
+다음과 같이 두 가지 식별자 클래스가 있습니다.
 
- 다음과 같이 두 가지 식별자 클래스가 있습니다.
+-  일반 식별자    
+   식별자 형식에 대한 규칙을 따릅니다. 일반 식별자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 사용될 때 구분되지 않습니다.
 
- DMX의 일반 식별자는 식별자 형식 규칙을 따릅니다. 일반 식별자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 사용될 때 구분되지 않습니다.
+   ```sql
+   USE AdventureWorks
+   GO
+   SELECT *
+   FROM HumanResources.Employee
+   WHERE NationalIDNumber = 153479919
+   ```
+
+-  구분 식별자    
+   큰따옴표(")나 대괄호([])로 묶여져 있습니다. 식별자 형식 규칙을 따르는 식별자는 구분되지 않을 수도 있습니다. 다음은 그 예입니다.
+
+   ```sql
+   USE AdventureWorks
+   GO
+   SELECT *
+   FROM [HumanResources].[Employee] --Delimiter is optional.
+   WHERE [NationalIDNumber] = 153479919 --Delimiter is optional.
+   ```
+
+모든 식별자 규칙을 따르지 않는 식별자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 구분되어야 합니다. 다음은 그 예입니다.
 
 ```sql
+USE AdventureWorks
+GO
+CREATE TABLE [SalesOrderDetail Table] --Identifier contains a space and uses a reserved keyword.
+(
+    [Order] [int] NOT NULL,
+    [SalesOrderDetailID] [int] IDENTITY(1,1) NOT NULL,
+    [OrderQty] [smallint] NOT NULL,
+    [ProductID] [int] NOT NULL,
+    [UnitPrice] [money] NOT NULL,
+    [UnitPriceDiscount] [money] NOT NULL,
+    [ModifiedDate] [datetime] NOT NULL,
+  CONSTRAINT [PK_SalesOrderDetail_Order_SalesOrderDetailID] PRIMARY KEY CLUSTERED 
+  ([Order] ASC, [SalesOrderDetailID] ASC)
+);
+GO
+
 SELECT *
-FROM TableX
-WHERE KeyCol = 124
+FROM [SalesOrderDetail Table]  --Identifier contains a space and uses a reserved keyword.
+WHERE [Order] = 10;            --Identifier is a reserved keyword.
 ```
 
- 따옴표 붙은 식별자는 큰따옴표(")나 대괄호([])로 묶여 있습니다. 식별자 형식 규칙을 따르는 식별자는 구분되지 않을 수도 있습니다. 다음은 그 예입니다.
-
-```sql
-SELECT *
-FROM [TableX]         --Delimiter is optional.
-WHERE [KeyCol] = 124  --Delimiter is optional.
-```
-
- 모든 식별자 규칙을 따르지 않는 식별자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 구분되어야 합니다. 다음은 그 예입니다.
-
-```sql
-SELECT *
-FROM [My Table]      --Identifier contains a space and uses a reserved keyword.
-WHERE [order] = 10   --Identifier is a reserved keyword.
-```
-
- 일반 식별자 및 구분 식별자 모두는 1-128자의 문자로 이루어져야 합니다. 로컬 임시 테이블의 경우에는 식별자에 116자까지 포함할 수 있습니다.
+일반 식별자 및 구분 식별자 모두는 1-128자의 문자로 이루어져야 합니다. 로컬 임시 테이블의 경우에는 식별자에 116자까지 포함할 수 있습니다.
 
 ## <a name="rules-for-regular-identifiers"></a>일반 식별자 규칙
  변수, 함수 및 저장 프로시저의 이름은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자의 다음 규칙을 따라야 합니다.
@@ -84,11 +105,11 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
 
     -   Unicode Standard 3.2에서 정의한 문자. 문자의 유니코드 정의에는 a-z, A-Z의 라틴어 문자와 다른 언어의 문자가 포함되어 있습니다.
 
-    -   밑줄(_), at 기호(@) 또는 숫자 기호(#)
+    -   밑줄(\_), at 기호(@) 또는 숫자 기호(#)
 
-         특정 기호는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 식별자의 맨 앞에 올 때 특별한 의미를 갖습니다. at 기호로 시작하는 일반 식별자는 항상 지역 변수나 매개 변수를 표시하며 다른 개체 유형의 이름으로 사용할 수 없습니다. # 기호로 시작하는 식별자는 임시 테이블 또는 프로시저를 나타냅니다. 이중 숫자 기호(##)로 시작하는 식별자는 전역 임시 개체를 나타냅니다. 숫자 기호나 이중 숫자 기호를 사용하여 다른 개체 유형의 이름을 시작할 수 있지만 이 방법은 사용하지 않는 것이 좋습니다.
+        특정 기호는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 식별자의 맨 앞에 올 때 특별한 의미를 갖습니다. at 기호로 시작하는 일반 식별자는 항상 지역 변수나 매개 변수를 표시하며 다른 개체 유형의 이름으로 사용할 수 없습니다. # 기호로 시작하는 식별자는 임시 테이블 또는 프로시저를 나타냅니다. 이중 숫자 기호(##)로 시작하는 식별자는 전역 임시 개체를 나타냅니다. 숫자 기호나 이중 숫자 기호를 사용하여 다른 개체 유형의 이름을 시작할 수 있지만 이 방법은 사용하지 않는 것이 좋습니다.
 
-         일부 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수는 두 개의 at 기호(@@)로 시작하는 이름을 사용합니다. 이러한 함수와 혼동하지 않도록 @@으로 시작하는 이름을 사용하지 않아야 합니다.
+        일부 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수는 두 개의 at 기호(@@)로 시작하는 이름을 사용합니다. 이러한 함수와 혼동하지 않도록 @@으로 시작하는 이름을 사용하지 않아야 합니다.
 
 2.  후속 문자는 다음을 포함할 수 있습니다.
 
@@ -102,7 +123,7 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
 
 4.  포함된 공백이나 특수 문자는 사용할 수 없습니다.
 
-5.  보충 문자도 사용할 수 없습니다.
+5.  [보충 문자](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters)도 사용할 수 없습니다.
 
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 식별자를 사용하는 경우 이러한 규칙을 따르지 않는 식별자는 큰따옴표나 대괄호로 구분해야 합니다.
 
@@ -110,18 +131,17 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
 > 일반 식별자 형식의 일부 규칙은 데이터베이스 호환성 수준에 따라 달라집니다. 이 수준은 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)를 사용하여 설정할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
-
-- [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
-- [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
-- [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
-- [CREATE PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
-- [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
-- [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
-- [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
-- [CREATE VIEW&#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
-- [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
-- [DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
-- [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
-- [예약 키워드 &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
-- [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
-- [UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
+[ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
+[CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+[CREATE DEFAULT&#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
+[CREATE PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
+[CREATE RULE&#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
+[CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
+[CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
+[CREATE VIEW&#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
+[DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
+[DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
+[INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+[예약 키워드&#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
+[SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
+[UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  

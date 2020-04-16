@@ -1,6 +1,6 @@
 ---
 title: WITH common_table_expression(Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: 쿼리에서 CTE(공용 테이블 식)를 사용하는 방법의 Transact-SQL 참조입니다.
 ms.date: 08/09/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -27,12 +27,12 @@ ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cedcec468c061d38225ab4cbb24b8f5320a4f13
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d82ec259664eaa0573f841b9fea21fd705b23ee5
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287307"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517597"
 ---
 # <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,14 +62,14 @@ CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 �
  *CTE_query_definition*  
  공통 테이블 식을 채울 결과 집합을 위한 SELECT 문을 지정합니다. *CTE_query_definition*의 SELECT 문은 CTE가 또 다른 CTE를 정의하지는 못한다는 점을 제외하고는 뷰를 만들 때와 동일한 요구 사항을 만족해야 합니다. 자세한 내용은 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)과 주의 섹션을 참조하세요.  
   
- *CTE_query_definition*이 두 개 이상 정의된 경우 UNION ALL, UNION, EXCEPT 또는 INTERSECT 등의 집합 연산자 중 하나를 사용하여 쿼리 정의에 조인해야 합니다.  
+ *CTE_query_definition*을 두 개 이상 정의하는 경우: UNION ALL, UNION, EXCEPT 또는 INTERSECT 집합 연산자 중 하나로 쿼리 정의를 조인해야 합니다.  
   
 ## <a name="remarks"></a>설명  
   
 ## <a name="guidelines-for-creating-and-using-common-table-expressions"></a>공통 테이블 식 만들기 및 사용 지침  
 다음 지침은 비재귀 공통 테이블 식에 적용됩니다. 재귀 공통 테이블 식에 적용되는 지침은 다음에 나오는 [재귀 공통 테이블 식 정의 및 사용 지침](#guidelines-for-defining-and-using-recursive-common-table-expressions)을 참조하세요.  
   
--   CTE 뒤에는 일부 또는 모든 CTE 열을 참조하는 단일 `SELECT`, `INSERT`, `UPDATE` 또는 `DELETE` 문이 와야 합니다. CTE는 뷰의 `CREATE VIEW` 문 정의의 일부로 `SELECT` 문에 지정할 수도 있습니다.  
+-   CTE 뒤에는 일부 또는 모든 CTE 열을 참조하는 단일 `SELECT`, `INSERT`, `UPDATE` 또는 `DELETE` 문이 와야 합니다. CTE는 뷰의 `SELECT` 문 정의의 일부로 `CREATE VIEW` 문에 지정할 수도 있습니다.  
   
 -   비재귀 CTE 내에 여러 개의 CTE 쿼리 정의를 정의할 수 있습니다. 정의는 `UNION ALL`, `UNION`, `INTERSECT` 또는 `EXCEPT` 집합 연산자 중 하나에 의해 결합되어야 합니다.  
   
@@ -100,7 +100,7 @@ CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 �
   
 -   재귀 CTE 정의는 적어도 두 개의 CTE 쿼리 정의 즉, 하나의 앵커 멤버와 재귀 멤버를 포함해야 합니다. 앵커 멤버와 재귀 멤버를 여러 개 정의할 수 있지만 앵커 멤버 쿼리 정의는 모두 첫 번째 재귀 멤버 정의 앞에 와야 합니다. 모든 CTE 쿼리 정의는 CTE 자체를 참조하지 않는 한 앵커 멤버입니다.  
   
--   앵커 멤버는 UNION ALL, UNION, INTERSECT 또는 EXCEPT 등의 집합 연산자 중 하나를 사용하여 결합해야 합니다. UNION ALL은 여러 재귀 멤버를 결합할 때 마지막 앵커 멤버와 첫 번째 재귀 멤버 사이에서 허용되는 유일한 집합 연산자입니다.  
+-   고정 멤버는 UNION ALL, UNION, INTERSECT 또는 EXCEPT 집합 연산자 중 하나를 사용해 결합해야 합니다. UNION ALL은 여러 재귀 멤버를 결합할 때 마지막 앵커 멤버와 첫 번째 재귀 멤버 사이에서 허용되는 유일한 집합 연산자입니다.  
   
 -   앵커 멤버 및 재귀 멤버에 있는 열의 수는 같아야 합니다.  
   
@@ -132,7 +132,7 @@ CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 �
   
 -   재귀 CTE가 반환하는 모든 열은 참가하는 `SELECT` 문이 반환하는 열의 Null 허용 여부와는 상관없이 Null을 허용합니다.  
   
--   잘못 구성된 재귀적 CTE로 인해 무한 루프가 발생할 수 있습니다. 예를 들어 재귀 멤버 쿼리 정의가 부모 열과 자식 열 모두에 대해 동일한 값을 반환하면 무한 루프가 생성된 것입니다. 무한 루프를 방지하기 위해 `MAXRECURSION`, `INSERT`, `UPDATE` 또는 `DELETE` 문의 OPTION 절에서 `SELECT` 힌트와 0부터 32,767 사이의 값을 사용하여 특정 명령문에 허용되는 재귀 수준을 제한할 수 있습니다. 이 방법으로 루프를 발생시키는 코드 문제를 해결할 때까지 문의 실행을 제어할 수 있습니다. 서버 차원의 기본값은 100입니다. 0을 지정하면 제한이 적용되지 않습니다. 각 명령문에는 하나의 `MAXRECURSION` 값만 지정할 수 있습니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
+-   잘못 구성된 재귀적 CTE로 인해 무한 루프가 발생할 수 있습니다. 예를 들어 재귀 멤버 쿼리 정의가 부모 열과 자식 열 모두에 대해 동일한 값을 반환하면 무한 루프가 생성된 것입니다. 무한 루프를 방지하기 위해 `INSERT`, `UPDATE`, `DELETE` 또는 `SELECT` 문의 OPTION 절에서 `MAXRECURSION` 힌트와 0부터 32,767 사이의 값을 사용하여 특정 명령문에 허용되는 재귀 수준을 제한할 수 있습니다. 이 방법으로 루프를 발생시키는 코드 문제를 해결할 때까지 문의 실행을 제어할 수 있습니다. 서버 차원의 기본값은 100입니다. 0을 지정하면 제한이 적용되지 않습니다. 각 명령문에는 하나의 `MAXRECURSION` 값만 지정할 수 있습니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
 -   재귀 공통 테이블 식을 포함한 뷰를 사용하여 데이터를 업데이트할 수 없습니다.  
   
@@ -171,7 +171,7 @@ CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 �
   
 -   일괄 처리에 속한 문에 CTE를 사용할 때는 그 전의 문 다음에 반드시 세미콜론을 추가해야 합니다.  
   
--   `sp_prepare`에서 준비한 명령문에 사용될 때 CTE는 PDW의 다른 `SELECT` 문과 같은 방식으로 작동합니다. 그러나 CTE가 `sp_prepare`에서 준비한 CETAS의 일부로서 사용되는 경우 그 동작은 바인딩이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 구현되는 방식 때문에 `sp_prepare` 및 기타 PDW 문에서 지연될 수 있습니다. CTE를 참조하는 `SELECT`가 CTE에 존재하지 않는 잘못된 열을 사용하고 있는 경우, `sp_prepare`는 오류를 탐지하지 않고 지나가지만 대신 `sp_execute` 동안 오류가 throw됩니다.  
+-   `sp_prepare`에서 준비한 명령문에 사용될 때 CTE는 PDW의 다른 `SELECT` 문과 같은 방식으로 작동합니다. 그러나 CTE가 `sp_prepare`에서 준비한 CETAS의 일부로서 사용되는 경우 그 동작은 바인딩이 `sp_prepare`에 대해 구현되는 방식 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 기타 PDW 문에서 지연될 수 있습니다. CTE를 참조하는 `SELECT`가 CTE에 존재하지 않는 잘못된 열을 사용하고 있는 경우, `sp_prepare`는 오류를 탐지하지 않고 지나가지만 대신 `sp_execute` 동안 오류가 throw됩니다.  
   
 ## <a name="examples"></a>예  
   
@@ -423,7 +423,7 @@ ORDER BY ComponentLevel, AssemblyID, ComponentID;
 ```  
   
 ### <a name="f-using-a-recursive-cte-in-an-update-statement"></a>F. UPDATE 문에서 재귀 CTE 사용  
- 다음 예에서는 제품 'Road-550-W Yellow, 44' `PerAssemblyQty`를 제작하는 데 사용되는 모든 부품의 `(ProductAssemblyID``800` 값을 업데이트합니다). 공통 테이블 식은 `ProductAssemblyID 800`을 제작하는 데 사용되는 부품 및 해당 부품을 만드는 데 사용되는 구성 요소 등의 계층적 목록을 반환합니다. 이렇게 공통 테이블 식이 반환한 행만 수정됩니다.  
+ 다음 예에서는 제품 'Road-550-W Yellow, 44' `(ProductAssemblyID``800`를 제작하는 데 사용되는 모든 부품의 `PerAssemblyQty` 값을 업데이트합니다). 공통 테이블 식은 `ProductAssemblyID 800`을 제작하는 데 사용되는 부품 및 해당 부품을 만드는 데 사용되는 구성 요소 등의 계층적 목록을 반환합니다. 이렇게 공통 테이블 식이 반환한 행만 수정됩니다.  
   
 ```sql  
 USE AdventureWorks2012;  

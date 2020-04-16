@@ -1,6 +1,6 @@
 ---
 title: decimal 및 numeric(Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: decimal 및 numeric 데이터 형식의 Transact-SQL 참조입니다. decimal 및 numeric은 고정 전체 자릿수와 소수 자릿수가 있는 숫자 데이터 형식의 동의어입니다.
 ms.date: 09/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -23,12 +23,12 @@ ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2836dc2d57ef5844463c303c6432698bf05a4d1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8b1fc6dd8afb9d6cb68f9cf509e29dc47feae97
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71682107"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517146"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal 및 numeric(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

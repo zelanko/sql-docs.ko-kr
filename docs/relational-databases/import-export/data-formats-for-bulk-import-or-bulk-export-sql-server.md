@@ -1,5 +1,6 @@
 ---
 title: 대량 가져오기 및 대량 내보내기를 위한 데이터 형식
+description: SQL Server에서는 문자 형식 또는 원시 이진 형식의 데이터를 사용할 수 있습니다. SQL Server와 다른 앱 간에는 문자 형식을 사용하고, SQL Server 인스턴스 간에는 원시 형식을 사용합니다.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1f6bb69e4d1a18cf2f3e596a4bbbd179e8c4f373
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ce702e31c61971097cfd56789294dc0a035b4f1a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056017"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980475"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>대량 가져오기 또는 대량 내보내기를 위한 데이터 형식(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,11 +39,11 @@ ms.locfileid: "74056017"
 |작업(Operation)|네이티브|유니코드 네이티브|문자|유니코드 문자|  
 |---------------|------------|--------------------|---------------|-----------------------|  
 |확장 또는 DBCS(더블바이트 문자 집합) 문자가 들어 있지 않는 데이터 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 다수 인스턴스 간에 데이터를 대량으로 전송합니다. 서식 파일을 사용하지 않는 한 테이블을 동일하게 정의해야 합니다.|예*|-|-|-|  
-|**sql_variant** 열의 경우 문자 또는 유니코드 형식과는 달리 원시 데이터 형식이 각 **sql_variant** 값에 대해 메타데이터를 보존하기 때문에 원시 데이터 형식을 사용하는 것이 가장 좋습니다.|yes|-|-|-|  
-|확장 또는 DBCS 문자가 들어 있는 데이터 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 다수 인스턴스 간에 데이터를 대량으로 전송합니다.|-|yes|-|-|  
-|다른 프로그램으로 생성된 텍스트 파일에서 데이터를 대량으로 가져옵니다.|-|-|yes|-|  
-|다른 프로그램에서 사용할 텍스트 파일로 데이터를 대량으로 내보냅니다.|-|-|yes|-|  
-|유니코드 데이터가 들어 있으나 확장 또는 DBCS 문자는 들어 있지 않는 데이터 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 다수 인스턴스 간에 데이터를 대량으로 전달합니다.|-|-|-|yes|  
+|**sql_variant** 열의 경우 문자 또는 유니코드 형식과는 달리 원시 데이터 형식이 각 **sql_variant** 값에 대해 메타데이터를 보존하기 때문에 원시 데이터 형식을 사용하는 것이 가장 좋습니다.|예|-|-|-|  
+|확장 또는 DBCS 문자가 들어 있는 데이터 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 다수 인스턴스 간에 데이터를 대량으로 전송합니다.|-|예|-|-|  
+|다른 프로그램으로 생성된 텍스트 파일에서 데이터를 대량으로 가져옵니다.|-|-|예|-|  
+|다른 프로그램에서 사용할 텍스트 파일로 데이터를 대량으로 내보냅니다.|-|-|예|-|  
+|유니코드 데이터가 들어 있으나 확장 또는 DBCS 문자는 들어 있지 않는 데이터 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 다수 인스턴스 간에 데이터를 대량으로 전달합니다.|-|-|-|예|  
   
  \*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bcp **를 사용하는 경우**에서 데이터를 대량으로 내보내는 가장 빠른 방법입니다.  
   

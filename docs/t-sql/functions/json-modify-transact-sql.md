@@ -1,7 +1,7 @@
 ---
 title: JSON_MODIFY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/02/2016
+ms.date: 04/02/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: genemi
@@ -11,12 +11,12 @@ ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: d340d362301698f7dfaef28476ea659b948163bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 36e6f8f630439baddf1fb3a88ab8df7eb6687e4c
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68109378"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002820"
 ---
 # <a name="json_modify-transact-sql"></a>JSON_MODIFY(Transact-SQL)
 
@@ -60,10 +60,11 @@ JSON_MODIFY ( expression , path , newValue )
   
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]에서 *path* 값으로 변수를 제공할 수 있습니다.
 
-**path**의 형식이 유효하지 않으면 *JSON_MODIFY*가 오류를 반환합니다.  
+*path*의 형식이 유효하지 않으면 **JSON_MODIFY**가 오류를 반환합니다.  
   
  *newValue*  
  *path*로 지정된 속성의 새 값입니다.  
+ 새 값은 [n]varchar 또는 text여야 합니다.
   
  lax 모드에서 JSON_MODIFY는 새 값이 NULL일 경우 지정된 키를 삭제합니다.  
   
@@ -81,9 +82,9 @@ JSON_MODIFY는 값의 형식이 VARCHAR 또는 NVARCHAR인 경우 새 값의 모
   
 |기존 값|경로가 존재|lax 모드|strict 모드|  
 |--------------------|-----------------|--------------|-----------------|  
-|NOT NULL|yes|기존 값을 업데이트합니다.|기존 값을 업데이트합니다.|  
-|NOT NULL|예|지정된 경로에서 새 키:값 쌍을 만들려고 시도합니다.<br /><br /> 이는 실패할 수 있습니다. 예를 들어 경로 `$.user.setting.theme`을 지정하면, JSON_MODIFY는 `theme` 또는 `$.user` 개체가 존재하지 않거나 설정이 배열 또는 스칼라 값인 경우 키 `$.user.settings`을 삽입하지 않습니다.|오류 – INVALID_PROPERTY|  
-|NULL|yes|기존 속성을 삭제합니다.|기존 값을 null로 설정합니다.|  
+|NOT NULL|예|기존 값을 업데이트합니다.|기존 값을 업데이트합니다.|  
+|NOT NULL|예|지정된 경로에서 새 키:값 쌍을 만들려고 시도합니다.<br /><br /> 이는 실패할 수 있습니다. 예를 들어 경로 `$.user.setting.theme`을 지정하면, JSON_MODIFY는 `$.user` 또는 `$.user.settings` 개체가 존재하지 않거나 설정이 배열 또는 스칼라 값인 경우 키 `theme`을 삽입하지 않습니다.|오류 – INVALID_PROPERTY|  
+|NULL|예|기존 속성을 삭제합니다.|기존 값을 null로 설정합니다.|  
 |NULL|예|동작이 없습니다. 첫 번째 인수가 결과로 반환됩니다.|오류 – INVALID_PROPERTY|  
   
  lax 모드에서 JSON_MODIFY는 새 키:값 쌍을 만들려고 시도하지만 일부 경우에는 실패할 수 있습니다.  

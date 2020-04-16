@@ -11,12 +11,12 @@ ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e518d4021e4c78d4716f80c7f63f9a18bc1908be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a91cffde531d7d72564df6935a48aff91dae8187
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286677"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550217"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Columnstore 인덱스 - 데이터 로드 지침
 
@@ -47,7 +47,7 @@ ms.locfileid: "79286677"
 
 -   **축소 로깅:** 압축된 행 그룹으로 데이터가 직접 로드되므로 로그 크기를 훨씬 줄일 수 있습니다. 예를 들어 데이터가 10배 압축된 경우 TABLOCK 또는 대량 로그/단순 복구 모델 없이도 해당 트랜잭션 로그가 대략 10배 축소됩니다. 델타 행 그룹으로 이동하는 데이터는 자세히 로깅됩니다. 여기에는 102,400개의 행보다 작은 모든 일괄 처리 크기가 포함됩니다.  모범 사례는 batchsize >= 102400을 사용하는 것입니다. TABLOCK이 필요하지 않으므로 데이터를 병렬로 로드할 수 있습니다. 
 
--   **최소 로깅:** [최소 로깅](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)의 필수 조건을 따르면 로깅을 더욱 줄일 수 있습니다. 그러나 rowstore로 데이터를 로드하는 경우와 달리 TABLOCK이 BU(대량 업데이트) 잠금이 아닌 테이블에 대한 X 잠금을 수행하므로 병렬 데이터 로드를 수행할 수 없습니다. 잠금에 대한 자세한 내용은 [잠금 및 행 버전 관리[(.../sql-server-transaction-locking-and-row-versioning-guide.md)를 참조하세요.
+-   **최소 로깅:** [최소 로깅](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)의 필수 조건을 따르면 로깅을 더욱 줄일 수 있습니다. 그러나 rowstore로 데이터를 로드하는 경우와 달리 TABLOCK이 BU(대량 업데이트) 잠금이 아닌 테이블에 대한 X 잠금을 수행하므로 병렬 데이터 로드를 수행할 수 없습니다. 잠금에 대한 자세한 내용은 [잠금 및 행 버전 관리](../sql-server-transaction-locking-and-row-versioning-guide.md)를 참조하세요.
 
 -   **잠금 최적화:** 압축된 행 그룹으로 데이터를 로드하는 경우 행 그룹에 대한 X 잠금이 자동으로 획득됩니다. 그러나 델타 행 그룹으로 대량 로드 시 행 그룹에서 X 잠금이 획득되지만, X 행 그룹 잠금이 잠금 계층 구조의 일부가 아니므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 계속해서 PAGE/EXTENT를 잠급니다.  
   
@@ -97,7 +97,7 @@ SELECT <list of columns> FROM <Staging Table>
 -   **로그 최적화:** 데이터가 압축된 행 그룹으로 로드되면 로깅이 축소됩니다.   
 -   **잠금 최적화:** 압축된 행 그룹으로 로드 시 행 그룹에 대한 X 잠금이 획득됩니다. 그러나 델타 행 그룹을 통해 X 잠금이 행 그룹에서 획득되지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 X 행 그룹 잠금이 잠금 계층 구조의 일부가 아니므로, 잠금 PAGE/EXTENT를 그대로 잠급니다.  
   
- 하나 이상의 비클러스터형 인덱스가 있는 경우 인덱스 자체에 대한 잠금 또는 로깅 최적화는 없지만 위의 설명대로 클러스터형 columnstore 인덱스에 대한 최적화는 여전히 남아 있습니다.  
+ 하나 이상의 비클러스터형 인덱스가 있는 경우 인덱스 자체의 잠금 또는 로깅 최적화는 없지만, 위에서 설명한 대로 클러스터형 columnstore 인덱스의 최적화는 유지됩니다.  
   
 ## <a name="what-is-trickle-insert"></a>trickle insert란 무엇인가요?
 

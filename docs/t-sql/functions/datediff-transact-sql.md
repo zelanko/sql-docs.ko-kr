@@ -1,6 +1,6 @@
 ---
 title: DATEDIFF(Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: DATEDIFF 함수의 Transact-SQL 참조입니다. datepart를 기준으로 시작 날짜와 종료 날짜 사이의 숫자 차이를 반환합니다.
 ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -31,12 +31,12 @@ ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d6ab92ef6c9f10aea46d375633ae539122299e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d74f65d119de40a2a02902076eebe6ae42bf4ce5
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68731126"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517515"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF(Transact-SQL)
 
@@ -44,7 +44,7 @@ ms.locfileid: "68731126"
 
 이 기능은 지정된 *startdate*와 *enddate* 사이에 지정된 datepart 경계의 수(부호 있는 정수 값으로)를 반환합니다.
   
-[startdate](../../t-sql/functions/datediff-big-transact-sql.md)와 *enddate* 값 간의 더 큰 차이를 처리하는 함수는 *DATEDIFF_BIG &#40;Transact-SQL&#41;* 를 참조하세요. 모든 [의 날짜 및 시간 데이터 형식 및 함수에 대한 개요는 ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;[!INCLUDE[tsql](../../includes/tsql-md.md)]을 참조하세요.
+*startdate*와 *enddate* 값 간의 더 큰 차이를 처리하는 함수는 [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-transact-sql.md)를 참조하세요. 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식 및 함수에 대한 개요는 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)을 참조하세요.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -102,7 +102,7 @@ _datepart_ 값은 변수나 `'month'` 같은 따옴표 문자열처럼 지정할
   
 ## <a name="return-value"></a>Return Value  
 
-**startdate**와 *enddate* 사이의 *int* 차이로, *datepart*에 설정된 범위로 표시됩니다.
+*startdate*와 *enddate* 사이의 **int** 차이로, *datepart*에 설정된 범위로 표시됩니다.
   
 예를 들어 `SELECT DATEDIFF(day, '2036-03-01', '2036-02-28');`는 2036이 윤년이어야 한다는 것을 암시하는 -2를 반환합니다. 이 경우 _startdate_ '2036-03-01'에서 시작한 다음 -2일을 계산하면 '2036-02-28'의 _enddate_에 도달합니다.
   
@@ -139,13 +139,13 @@ SELECT DATEDIFF(microsecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 *startdate* 및 *enddate*의 연도 값이 다르지만 달력 주 값이 동일한 경우 `DATEDIFF`는 *datepart* **week**에 대해 0을 반환합니다.
 
 ## <a name="remarks"></a>설명  
-`DATEDIFF`, `SELECT <list>`, `WHERE`, `HAVING` 및 `GROUP BY` 절에서 `ORDER BY`를 사용합니다.
+`SELECT <list>`, `WHERE`, `HAVING`, `GROUP BY` 및 `ORDER BY` 절에서 `DATEDIFF`를 사용합니다.
   
 `DATEDIFF`는 문자열 리터럴을 **datetime2** 형식으로 암시적으로 캐스팅합니다. 즉 `DATEDIFF`는 데이터가 문자열로 전달될 때 형식 YDM을 지원하지 않습니다. YDM 형식을 사용하려면 문자열을 **datetime** 또는 **smalldatetime** 형식으로 명시적으로 캐스팅해야 합니다.
   
 `SET DATEFIRST` 지정은 `DATEDIFF`에 영향을 주지 않습니다. `DATEDIFF`은 항상 일요일을 한 주의 첫 날로 사용하여 함수가 결정적으로 작동하게 합니다.
 
-`DATEDIFF`enddate**와** startdate*간의 차이가*int*의 범위를 벗어난 값을 반환하는 경우* 는 **분** 이상의 정밀도로 오버플로할 수 있습니다.
+*enddate*와 *startdate* 간의 차이가 **int**의 범위를 벗어난 값을 반환하는 경우 `DATEDIFF`는 **분** 이상의 정밀도로 오버플로할 수 있습니다.
   
 ## <a name="examples"></a>예  
 이러한 예에서는 여러 유형의 식을 *startdate* 및 *enddate* 매개 변수에 대한 인수로 사용합니다.

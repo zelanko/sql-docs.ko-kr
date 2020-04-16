@@ -1,6 +1,6 @@
 ---
 title: SUBSTRING(Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: SUBSTRING 함수의 Transact-SQL 참조입니다. 이 함수는 지정된 문자, 이진, 텍스트 또는 이미지 식의 일부를 반환합니다.
 ms.date: 10/21/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -24,12 +24,12 @@ ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19c261227f81debb3afec4e9d4b68f6ca7e8d607
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68618e0dbafd152c8bdba71f0abf4b7c0b99bdac
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68117673"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517089"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ SUBSTRING ( expression ,start , length )
  반환된 문자가 시작되는 위치를 지정하는 정수 또는 **bigint** 식입니다. (번호 매기기는 식의 첫 번째 문자가 1을 의미하는 1 기준입니다). *start*가 1보다 작은 경우 반환되는 식은 *expression*에 지정된 첫째 문자에서 시작합니다. 이 경우 반환되는 문자 수는 *start* + *length*-1 또는 0 중에서 더 큰 값입니다. *start*가 값 식의 문자 수보다 큰 경우 길이가 0인 식이 반환됩니다.  
   
  *length*  
- 반환될 **expression**의 문자 수를 지정하는 양의 정수 또는 *bigint* 식입니다. *length*가 음수이면 오류가 발생하면서 문이 종료됩니다. *start*와 *length*의 합계가 *expression*의 문자 수보다 크면 *start*에서 시작하는 전체 값 식이 반환됩니다.  
+ 반환될 *expression*의 문자 수를 지정하는 양의 정수 또는 **bigint** 식입니다. *length*가 음수이면 오류가 발생하면서 문이 종료됩니다. *start*와 *length*의 합계가 *expression*의 문자 수보다 크면 *start*에서 시작하는 전체 값 식이 반환됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
  *expression*이 지원되는 문자 데이터 형식 중 하나이면 문자 데이터를 반환합니다. *expression*이 지원되는 **binary** 데이터 형식 중 하나이면 이진 데이터를 반환합니다. 반환되는 문자열은 다음 표에 표시된 항목을 제외하고 지정된 식과 같은 형식입니다.  
@@ -64,9 +64,9 @@ SUBSTRING ( expression ,start , length )
 |**binary**/**varbinary**/**image**|**varbinary**|  
   
 ## <a name="remarks"></a>설명  
- *ntext*, *char* 또는 **varchar** 데이터 형식의 문자 수와 **text**, **image**, **binary** 또는 **varbinary** 데이터 형식의 바이트에 대해 **start** 및 **length** 값을 지정해야 합니다.  
+ **ntext**, **char** 또는 **varchar** 데이터 형식의 문자 수와 **text**, **image**, **binary** 또는 **varbinary** 데이터 형식의 바이트에 대해 *start* 및 *length* 값을 지정해야 합니다.  
   
- *start* 또는 **length**에 2147483647보다 큰 값이 포함된 경우 **expression**은 *varchar(max)* 또는 *varbinary(max)* 여야 합니다.  
+ *start* 또는 *length*에 2147483647보다 큰 값이 포함된 경우 *expression*은 **varchar(max)** 또는 **varbinary(max)** 여야 합니다.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>보조 문자(서로게이트 쌍)  
  SC(보조 문자) 데이터 정렬을 사용하는 경우 *start* 및 *length*가 *expression*의 각 서로게이트 쌍을 단일 문자로 계산합니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
@@ -87,10 +87,10 @@ WHERE database_id < 5;
 
 |name |Initial |ThirdAndFourthCharacters|
 |---|--|--|
-|master  |m  |st |
-|tempdb  |t  |mp |
-|model   |m  |de |
-|msdb    |m  |db |
+|master    |m    |st |
+|tempdb    |t    |mp |
+|model    |m    |de |
+|msdb    |m    |db |
 
 
   
@@ -115,7 +115,7 @@ bcd
 > [!NOTE]  
 >  다음 예를 실행하려면 **pubs** 데이터베이스를 설치해야 합니다.  
   
- 다음 예에서는 **데이터베이스의** 테이블에 있는 각각의 **text** 및 `pub_info`image`pubs` 데이터 열에서 처음 10자를 반환하는 방법을 보여 줍니다. **text** 데이터는 **varchar**로 반환되며 **image** 데이터는 **varbinary**로 반환됩니다.  
+ 다음 예에서는 `pubs` 데이터베이스의 `pub_info` 테이블에 있는 각각의 **text** 및 **image** 데이터 열에서 처음 10자를 반환하는 방법을 보여 줍니다. **text** 데이터는 **varchar**로 반환되며 **image** 데이터는 **varbinary**로 반환됩니다.  
   
 ```  
 USE pubs;  
@@ -135,7 +135,7 @@ WHERE pub_id = '1756';
 (1 row(s) affected)
 ```  
   
- 다음 예에서는 **text** 및 **ntext** 데이터에 SUBSTRING을 사용한 결과를 보여 줍니다. 이 예제는 먼저 `pubs` 데이터베이스에서 `npub_info`라는 새 테이블을 만듭니다. 다음 `pr_info` 열의 처음 80자로 `npub_info` 테이블의 `pub_info.pr_info` 열을 만들고 `ü`를 첫 번째 문자로 추가합니다. 마지막으로 `INNER JOIN`을 사용해 모든 게시자 ID와 `SUBSTRING`text**및**ntext**게시자 정보 열의**을 검색합니다.  
+ 다음 예에서는 **text** 및 **ntext** 데이터에 SUBSTRING을 사용한 결과를 보여 줍니다. 이 예제는 먼저 `pubs` 데이터베이스에서 `npub_info`라는 새 테이블을 만듭니다. 다음 `pr_info` 열의 처음 80자로 `npub_info` 테이블의 `pub_info.pr_info` 열을 만들고 `ü`를 첫 번째 문자로 추가합니다. 마지막으로 `INNER JOIN`을 사용해 모든 게시자 ID와 **text** 및 **ntext** 게시자 정보 열의 `SUBSTRING`을 검색합니다.  
   
 ```  
 IF EXISTS (SELECT table_name FROM INFORMATION_SCHEMA.TABLES   

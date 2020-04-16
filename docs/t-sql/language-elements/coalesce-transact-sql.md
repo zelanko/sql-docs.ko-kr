@@ -1,6 +1,6 @@
 ---
 title: COALESCE (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: NULL로 계산되지 않는 첫 번째 식의 값을 반환하는 COALESCE의 Transact-SQL 참조입니다.
 ms.date: 08/30/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,12 +21,12 @@ ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 085972109c9b19173e46c97cc5cef239a454dcb7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9e3692da70cf2d503dc994646a6cb2e92a05fe94
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67950297"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517678"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +65,7 @@ END
   
 입력 값(_expression1_, _expression2_, _expressionN_ 등)이 여러 번 평가 됩니다. 하위 쿼리가 포함된 값 식은 비결정적인 것으로 간주되어 하위 쿼리가 두 번 평가됩니다. 이 결과는 SQL 표준을 준수합니다. 어느 경우에든 첫 번째 평가와 예정된 평가 간에 서로 다른 결과가 반환될 수 있습니다.  
   
-예를 들어 `COALESCE((subquery), 1)` 코드를 실행하면 하위 쿼리가 두 번 평가됩니다. 따라서 쿼리 격리 수준에 따라 다른 결과가 반환될 수 있습니다. 예를 들어 다중 사용자 환경의 `NULL` 격리 수준에서는 이 코드에서 `READ COMMITTED`을 반환할 수 있습니다. 일정한 결과가 반환되도록 하려면 `SNAPSHOT ISOLATION` 격리 수준을 사용하거나 `COALESCE` 함수로 `ISNULL`를 바꿔야 합니다. 또는 다음 예와 같이 하위 쿼리가 하위 선택 안에 들어가도록 쿼리를 다시 작성할 수 있습니다.  
+예를 들어 `COALESCE((subquery), 1)` 코드를 실행하면 하위 쿼리가 두 번 평가됩니다. 따라서 쿼리 격리 수준에 따라 다른 결과가 반환될 수 있습니다. 예를 들어 다중 사용자 환경의 `READ COMMITTED` 격리 수준에서는 이 코드에서 `NULL`을 반환할 수 있습니다. 일정한 결과가 반환되도록 하려면 `SNAPSHOT ISOLATION` 격리 수준을 사용하거나 `ISNULL` 함수로 `COALESCE`를 바꿔야 합니다. 또는 다음 예와 같이 하위 쿼리가 하위 선택 안에 들어가도록 쿼리를 다시 작성할 수 있습니다.  
   
 ```sql  
 SELECT CASE WHEN x IS NOT NULL THEN x ELSE 1 END  
@@ -109,7 +109,7 @@ SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x
     );  
     ```  
   
-4.  `ISNULL` 및 `COALESCE`에 대한 유효성 검사도 다릅니다. 예를 들어 `NULL`의 경우 데이터 형식을 직접 제공해야 하지만 `ISNULL`에 대한 **값은**int`COALESCE`로 변환됩니다.  
+4.  `ISNULL` 및 `COALESCE`에 대한 유효성 검사도 다릅니다. 예를 들어 `COALESCE`의 경우 데이터 형식을 직접 제공해야 하지만 `ISNULL`에 대한 `NULL` 값은 **int**로 변환됩니다.  
   
 5.  `ISNULL`에는 다음 두 개의 매개 변수만 사용됩니다. 반대로, `COALESCE`가 사용하는 매개 변수의 수는 가변적입니다.  
   
@@ -217,7 +217,7 @@ Socks, Mens  Blue       PN1965         Blue
 NULL         White      PN9876         White
 ```  
   
-첫 번째 행에서의 `FirstNotNull` 값은 `PN1278`가 아닌 `Socks, Mens`입니다. 예제에서 `Name` 열이 `COALESCE`에 대한 매개 변수로 지정되지 않았기 때문에 이와 같은 값이 사용됩니다.  
+첫 번째 행에서의 `FirstNotNull` 값은 `Socks, Mens`가 아닌 `PN1278`입니다. 예제에서 `Name` 열이 `COALESCE`에 대한 매개 변수로 지정되지 않았기 때문에 이와 같은 값이 사용됩니다.  
   
 ### <a name="d-complex-example"></a>D: 복잡한 예  
 다음 예제에서는 `COALESCE`를 사용하여 세 열의 값을 비교하고 열에서 찾은 Null이 아닌 값만 반환합니다.  

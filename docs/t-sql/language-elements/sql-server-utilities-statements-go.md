@@ -1,5 +1,5 @@
 ---
-title: GO(Transact-SQL) | Microsoft Docs
+title: SQL Server 유틸리티 문 - GO | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 48bca691f10822176c5169cf6bf9a052d7675478
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 21f930a4224c0d80c1db299f4dda8ef8c9c95729
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072304"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531223"
 ---
 # <a name="sql-server-utilities-statements---go"></a>SQL Server 유틸리티 문 - GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]sqlcmd**및**osql**유틸리티와** 코드 편집기에서 인식되는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 문이 아닌 명령을 제공합니다. 이러한 명령을 사용하면 일괄 처리 및 스크립트를 쉽게 읽고 실행할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **sqlcmd** 및 **osql** 유틸리티와 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 코드 편집기에서 인식되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 아닌 명령을 제공합니다. 이러한 명령을 사용하면 일괄 처리 및 스크립트를 쉽게 읽고 실행할 수 있습니다.  
   
   GO는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 일괄 처리의 끝을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 알립니다.  
   

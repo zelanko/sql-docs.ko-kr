@@ -15,12 +15,12 @@ apitype: Assembly
 ms.assetid: bab5485d-4547-426c-adbe-44e2b5702d1d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e3d229e9e9c4758f43a090c1481d751560d072da
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 30af86d585602c730dfe49e1a5f6b557b065f6cc
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80901919"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219172"
 ---
 # <a name="settruststore-method-sqlserverdatasource"></a>setTrustStore 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,7 +50,7 @@ public void setTrustStore(java.lang.String trustStore)
   
  자세한 내용은 Sun Microsystems 웹 사이트에서 SunX509 TrustManager 인터페이스 설명서를 참조하십시오.  
   
- trustStore 속성이 문자열이나 빈 문자열 ""로 설정되어 있으면 드라이버에서는 해당 값으로 trustStore 파일을 찾아서 서버 SSL 인증서의 유효성을 검사합니다.  
+ trustStore 속성이 문자열이나 빈 문자열 “”로 설정되어 있으면, 드라이버는 해당 값으로 trustStore 파일을 찾아서 서버 TLS/SSL 인증서의 유효성을 검사합니다.  
   
  trustStorePassword 속성은 trustStore 속성과 함께 지정할 수 있으며 해당 값을 사용하여 trustStore 파일을 엽니다. 자세한 내용은 [setTrustStorePassword](../../../connect/jdbc/reference/settruststorepassword-method-sqlserverdatasource.md)를 참조하세요.  
   

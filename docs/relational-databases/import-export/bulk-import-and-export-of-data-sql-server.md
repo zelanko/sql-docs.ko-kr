@@ -1,5 +1,6 @@
 ---
 title: 데이터 대량 가져오기 및 내보내기(SQL Server) | Microsoft 문서
+description: SQL Server는 SQL Server 테이블에서 데이터를 대량으로 내보내고, SQL Server 테이블이나 분할되지 않은 뷰로 대량 데이터를 가져오는 기능을 지원합니다.
 ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: sql
@@ -25,12 +26,12 @@ ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 462df4c5acf09d5de57a237c8fd68e5a394fb0dc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 74c9d7286363984825d51fb3598f246da422f88d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71680812"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980495"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>데이터 대량 가져오기 및 내보내기(SQL Server)
 
@@ -47,10 +48,10 @@ ms.locfileid: "71680812"
 
 |방법|Description|데이터 가져오기|데이터 내보내기|
 |------------|-----------------|------------------|------------------|
-|[bcp 유틸리티](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|데이터를 대량으로 내보내고 가져오며 서식 파일을 생성하는 명령줄 유틸리티(Bcp.exe)입니다.|yes|yes|
-|[BULK INSERT 문](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|데이터 파일에서 데이터베이스 테이블이나 분할되지 않은 뷰로 직접 데이터를 가져오는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.|yes|예|
-|[INSERT ... SELECT * FROM OPENROWSET(BULK...) 문](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|INSERT 문의 데이터를 선택하는 OPENROWSET(BULK…) 함수를 지정하여 대량의 데이터를 [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블로 가져오기 위해 OPENROWSET 대량 행 집합 공급 기업을 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문입니다.|yes|예|
-|[SQL Server 가져오기 및 내보내기 마법사](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)|이 마법사는 데이터베이스, 스프레드시트, 텍스트 파일 등 많은 일반적인 데이터 형식 간에 데이터를 가져오고 내보내는 간단한 패키지를 만듭니다.|yes|yes|
+|[bcp 유틸리티](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|데이터를 대량으로 내보내고 가져오며 서식 파일을 생성하는 명령줄 유틸리티(Bcp.exe)입니다.|예|예|
+|[BULK INSERT 문](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|데이터 파일에서 데이터베이스 테이블이나 분할되지 않은 뷰로 직접 데이터를 가져오는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.|예|예|
+|[INSERT ... SELECT * FROM OPENROWSET(BULK...) 문](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|INSERT 문의 데이터를 선택하는 OPENROWSET(BULK…) 함수를 지정하여 대량의 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로 가져오기 위해 OPENROWSET 대량 행 집합 공급 기업을 사용하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.|예|예|
+|[SQL Server 가져오기 및 내보내기 마법사](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)|이 마법사는 데이터베이스, 스프레드시트, 텍스트 파일 등 많은 일반적인 데이터 형식 간에 데이터를 가져오고 내보내는 간단한 패키지를 만듭니다.|예|예|
 
 > [!IMPORTANT]
 > SQL Server에 데이터를 대량으로 가져오기 위한 데이터 파일로 CSV (쉼표로 구분된 값) 파일을 사용하는 방법에 대한 규칙은 [대량 내보내기 또는 가져오기를 위한 데이터 준비(SQL Server) ](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)를 참조하세요.
@@ -60,14 +61,14 @@ ms.locfileid: "71680812"
 
 ## <a name="format-files"></a><a name="FFs"></a> 서식 파일
 
-[bcp 유틸리티](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)및 [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 은 모두 데이터 파일의 각 필드에 대한 서식 정보를 저장하는 *서식 파일* 이라는 특수 파일 사용을 지원합니다. 또한 서식 파일에는 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 대한 정보가 포함되어 있습니다. 서식 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 데이터를 대량으로 내보내거나 SQL Server 인스턴스에서 데이터를 대량으로 가져올 때 필요한 모든 서식 정보를 제공할 수 있습니다.
+[bcp 유틸리티](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)은 모두 데이터 파일의 각 필드에 대한 서식 정보를 저장하는 *서식 파일*이라는 특수 파일 사용을 지원합니다. 또한 서식 파일에는 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 대한 정보가 포함되어 있습니다. 서식 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 데이터를 대량으로 내보내거나 SQL Server 인스턴스에서 데이터를 대량으로 가져올 때 필요한 모든 서식 정보를 제공할 수 있습니다.
 
 > [!IMPORTANT]
 > BCP를 사용하여 Azure Blob Storage로 데이터를 내보내거나 Azure Blob Storage의 데이터를 Azure SQL Database로 가져올 수는 없습니다. [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 또는 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)를 사용하여 Azure Blob Storage로 내보내거나 가져옵니다.
 
 서식 파일을 사용하면 가져오기 작업 중 데이터 파일에 있는 데이터의 해석뿐만 아니라 내보내기 작업 중 데이터 파일에 있는 데이터의 서식을 지정할 수 있습니다. 이와 같이 융통성이 있기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 외부 애플리케이션에 대한 특정 요구 사항에 따라 데이터를 해석하거나 데이터의 서식을 다시 지정하기 위해 특수한 목적의 코드를 작성할 필요가 없습니다. 예를 들어 대량으로 내보낸 데이터를 쉼표로 값을 구분해야 하는 애플리케이션으로 로드해야 할 경우 서식 파일을 사용하여 내보낸 데이터에서 쉼표를 필드 종결자로 삽입할 수 있습니다.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 두 종류의 서식 파일, 즉 XML 서식 파일 및 비 XML 서식 파일을 지원합니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음과 같은 두 종류의 서식 파일을 지원합니다. XML 서식 파일 및 비 XML 서식 파일.
 
 서식 파일을 생성할 수 있는 유일한 도구는 [bcp 유틸리티](../../tools/bcp-utility.md) 입니다. 자세한 내용은 [서식 파일 만들기&#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)를 참조하세요. 서식 파일에 대한 자세한 내용은 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)을 참조하세요.
 

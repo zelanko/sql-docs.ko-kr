@@ -1,10 +1,9 @@
 ---
 title: CREATE TRIGGER(Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: DML, DDL 또는 로그온 트리거를 만드는 데 사용되는 CREATE TRIGGER 문의 Transact-SQL 참조입니다.
 ms.date: 10/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: mathoma
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -28,12 +27,13 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0e3a0829702dfe46a2d6c00925a82938d23bad92
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: mathoma
+ms.openlocfilehash: 93f97568bbdc2d640e947311acd90152a9ddf4ca
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287687"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517469"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -162,7 +162,7 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
   
 ## <a name="arguments"></a>인수
 OR ALTER  
-**적용 대상**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터) 
+**적용 대상**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 시작) 
   
 이미 있는 경우에만 트리거를 조건부로 변경합니다. 
   
@@ -170,7 +170,7 @@ OR ALTER
 DML 트리거가 속한 스키마의 이름입니다. DML 트리거는 트리거가 생성된 테이블 또는 뷰의 스키마로 한정됩니다. *schema_name*은 DDL 또는 LOGON 트리거에 대해 지정될 수 없습니다.  
   
 *trigger_name*  
-트리거의 이름입니다. *trigger_name*이 # 또는 ##으로 시작할 수 없는 경우를 제외하고 [trigger_name](../../relational-databases/databases/database-identifiers.md)은 *식별자*에 대한 규칙을 따라야 합니다.  
+트리거의 이름입니다. *trigger_name*이 # 또는 ##으로 시작할 수 없는 경우를 제외하고 *trigger_name*은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다.  
   
 *table* | *view*  
 DML 트리거가 실행되는 테이블 또는 뷰입니다. 이 테이블 또는 뷰를 트리거 테이블 또는 트리거 뷰라고도 합니다. 테이블 또는 뷰의 정규화된 이름을 지정하는 것은 옵션입니다. INSTEAD OF 트리거에서만 뷰를 참조할 수 있습니다. 로컬 또는 전역 임시 테이블에는 DML 트리거를 정의할 수 없습니다.  
@@ -231,7 +231,7 @@ WITH APPEND
 시작된 후에 DDL 트리거가 실행되도록 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 이벤트의 이름입니다. DDL 트리거에 유효한 이벤트는 [DDL 이벤트](../../relational-databases/triggers/ddl-events.md)에 나열되어 있습니다.  
   
 *event_group*  
-[!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 이벤트의 미리 정의된 그룹 이름입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]event_group*에 속한*  언어 이벤트가 시작된 후에 DDL 트리거가 실행됩니다. DDL 트리거에 유효한 이벤트 그룹은 [DDL 이벤트 그룹](../../relational-databases/triggers/ddl-event-groups.md)에 나열되어 있습니다.  
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 이벤트의 미리 정의된 그룹 이름입니다. *event_group*에 속한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 이벤트가 시작된 후에 DDL 트리거가 실행됩니다. DDL 트리거에 유효한 이벤트 그룹은 [DDL 이벤트 그룹](../../relational-databases/triggers/ddl-event-groups.md)에 나열되어 있습니다.  
   
 CREATE TRIGGER 실행이 완료된 후 *event_group*은 해당 이벤트 유형을 sys.trigger_events 카탈로그 뷰에 추가하여 매크로 역할을 합니다.  
   
@@ -269,7 +269,7 @@ DDL 및 LOGON 트리거는 [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functio
 CLR 트리거의 경우 트리거와 바인딩할 어셈블리의 메서드를 지정합니다. 이 메서드는 인수가 없어야 하며 void를 반환해야 합니다. *class_name*은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 하며 어셈블리 표시 유형이 있는 어셈블리의 클래스로 존재해야 합니다. 클래스가 마침표 '.'를 사용하여 네임스페이스 부분을 구분하는 네임스페이스로 한정된 이름을 가질 경우 클래스 이름은 [ ] 또는 " " 구분 기호를 사용하여 구분되어야 합니다. 클래스는 중첩 클래스일 수 없습니다.  
   
 > [!NOTE]  
->  기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 CLR 코드 실행 기능은 해제됩니다. 관리 코드 모듈을 참조하는 데이터베이스 개체를 만들고 변경하고 삭제할 수 있지만, 이러한 참조는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_configure[를 사용하여 ](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)clr enabled 옵션[을 설정하지 않는 한 ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 인스턴스에서 실행되지 않습니다.  
+>  기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 CLR 코드 실행 기능은 해제됩니다. 관리 코드 모듈을 참조하는 데이터베이스 개체를 만들고 변경하고 삭제할 수 있지만, 이러한 참조는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용하여 [clr enabled 옵션](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)을 설정하지 않는 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 실행되지 않습니다.  
   
 ## <a name="remarks-for-dml-triggers"></a>DML 트리거 설명  
 DML 트리거는 비즈니스 규칙 및 데이터 무결성을 적용하는 데 자주 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 ALTER TABLE 및 CREATE TABLE 문을 통해 DRI(선언적 참조 무결성)를 제공하지만 DRI는 데이터베이스 간 참조 무결성은 제공하지 않습니다. 참조 무결성은 테이블의 기본 키와 외래 키 간의 관계에 대한 규칙을 말합니다. 참조 무결성을 강제 적용하려면 ALTER TABLE 및 CREATE TABLE에서 PRIMARY KEY 및 FOREIGN KEY 제약 조건을 사용하세요. 제약 조건이 트리거 테이블에 있는 경우에는 INSTEAD OF 트리거가 실행된 후와 AFTER 트리거가 실행되기 전에 제약 조건이 확인됩니다. 제약 조건을 위반하면 INSTEAD OF 트리거 동작이 롤백되고 AFTER 트리거가 실행되지 않습니다.  
@@ -414,7 +414,7 @@ DML 트리거를 만들려면 트리거를 만들 테이블이나 뷰에 대한 
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-a-dml-trigger-with-a-reminder-message"></a>A. 미리 알림 메시지로 DML 트리거 사용  
-다음 DML 트리거는 `Customer` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에 데이터를 추가하거나 변경하려고 할 때 클라이언트에 메시지를 출력합니다.  
+다음 DML 트리거는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Customer` 테이블에 데이터를 추가하거나 변경하려고 할 때 클라이언트에 메시지를 출력합니다.  
   
 ```sql  
 CREATE TRIGGER reminder1  
@@ -528,7 +528,7 @@ GO
 ```  
   
 ### <a name="f-using-a-logon-trigger"></a>F. LOGON 트리거 사용  
-다음 예에서는 LOGON 트리거가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]login_test*로그인의 멤버로*에 로그인을 시도할 때 해당 로그인에서 이미 3개의 사용자 세션이 실행 중일 경우 해당 시도를 거부합니다.  
+다음 예에서는 LOGON 트리거가 *login_test* 로그인의 멤버로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로그인을 시도할 때 해당 로그인에서 이미 3개의 사용자 세션이 실행 중일 경우 해당 시도를 거부합니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
@@ -555,7 +555,7 @@ END;
 ```  
   
 ### <a name="g-viewing-the-events-that-cause-a-trigger-to-fire"></a>G. 트리거를 발생시킨 이벤트 보기  
-다음 예에서는 `sys.triggers` 및 `sys.trigger_events` 카탈로그 뷰를 쿼리하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 트리거를 발생시킨 `safety` 언어 이벤트를 확인합니다. `safety` 트리거는 위에 있는 'D' 예제에서 생성됩니다.  
+다음 예에서는 `sys.triggers` 및 `sys.trigger_events` 카탈로그 뷰를 쿼리하여 `safety` 트리거를 발생시킨 [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 이벤트를 확인합니다. `safety` 트리거는 위에 있는 'D' 예제에서 생성됩니다.  
   
 ```sql  
 SELECT TE.*  

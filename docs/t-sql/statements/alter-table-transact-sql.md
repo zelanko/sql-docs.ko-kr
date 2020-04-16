@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2019
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37cbb3621a1c9567a778fe58c4771e4336308647
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c61329dcaeb7972382e9385b723f5be889470c3c
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288307"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002838"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE(Transact-SQL)
 
@@ -245,6 +245,15 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 }
 ```
 
+> [!NOTE]
+> 자세한 내용은 다음을 참조하세요.
+>
+> - [ALTER TABLE column_constraint](alter-table-column-constraint-transact-sql.md)
+> - [ALTER TABLE column_definition](alter-table-column-definition-transact-sql.md)
+> - [ALTER TABLE computed_column_definition](alter-table-computed-column-definition-transact-sql.md)
+> - [ALTER TABLE index_option](alter-table-index-option-transact-sql.md)
+> - [ALTER TABLE table_constraints](alter-table-table-constraint-transact-sql.md)
+
 ## <a name="syntax-for-memory-optimized-tables"></a>메모리 최적화 테이블의 구문
 
 ```
@@ -341,8 +350,7 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 ```
 
 ```
-
--- Syntax for Azure SQL Data Warehouse and Analytics Platform System
+-- Syntax for Azure Synapse Analytics and Analytics Platform System
 
 ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
 {
@@ -374,8 +382,12 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
 }
 
 <column_constraint>::=
-    [ CONSTRAINT constraint_name ] DEFAULT constant_expression
-
+    [ CONSTRAINT constraint_name ] 
+    {
+        DEFAULT DEFAULT constant_expression
+        | PRIMARY KEY (column_name) NONCLUSTERED  NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        | UNIQUE (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
+    }
 <rebuild_option > ::=
 {
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }
@@ -407,8 +419,21 @@ ALTER COLUMN
 - **timestamp** 데이터 형식이 있는 열
 - 테이블의 ROWGUIDCOL
 - 계산 열 또는 계산 열에 사용되는 열
-- CREATE STATISTICS 문에서 생성된 통계에 사용됩니다. 열이 **varchar**, **nvarchar** 또는 **varbinary** 데이터 형식이 아닌 경우에는 데이터 형식이 변경되지 않습니다. 또한 새 크기는 이전 크기보다 크거나 같습니다. 또는 열이 Not Null에서 Null로 변경된 경우. 먼저 DROP STATISTICS 문을 사용하여 통계를 제거합니다.
+- CREATE STATISTICS 문에서 생성된 통계에 사용됩니다. ALTER COLUMN에 성공하려면 먼저 사용자가 DROP STATISTICS를 실행하여 통계를 삭제해야 합니다.  이 쿼리를 실행하여 사용자가 테이블에 대해 만든 모든 통계와 통계 열을 가져옵니다.
 
+``` sql
+
+SELECT s.name AS statistics_name  
+      ,c.name AS column_name  
+      ,sc.stats_column_id  
+FROM sys.stats AS s  
+INNER JOIN sys.stats_columns AS sc   
+    ON s.object_id = sc.object_id AND s.stats_id = sc.stats_id  
+INNER JOIN sys.columns AS c   
+    ON sc.object_id = c.object_id AND c.column_id = sc.column_id  
+WHERE s.object_id = OBJECT_ID('<table_name>'); 
+
+```
    > [!NOTE]
    > 쿼리 최적화 프로그램에 의해 자동으로 생성된 통계는 ALTER COLUMN에 의해 자동으로 삭제됩니다.
 
@@ -1058,11 +1083,11 @@ ALTER TABLE 문의 열을 CLR(공용 언어 런타임) 사용자 정의 형식 �
 
 |Category|중요한 구문 요소|
 |--------------|------------------------------|
-|[열 및 제약 조건 추가](#add)|ADD • 인덱스 옵션이 있는 PRIMARY KEY • 스파스 열 및 열 집합 •|
+|[열 및 제약 조건 추가](#add)|ADD * 인덱스 옵션이 있는 PRIMARY KEY * 스파스 열과 열 집합 *|
 |[열 및 제약 조건 삭제](#Drop)|DROP|
-|[열 정의 변경](#alter_column)|데이터 형식 변경 • 열 크기 변경 • 데이터 정렬|
-|[테이블 정의 변경](#alter_table)|DATA_COMPRESSION • SWITCH PARTITION • LOCK ESCALATION • 변경 내용 추적|
-|[제약 조건 및 트리거 해제/설정](#disable_enable)|CHECK • NO CHECK • ENABLE TRIGGER • DISABLE TRIGGER|
+|[열 정의 변경](#alter_column)|데이터 형식 변경 * 열 크기 변경 * 데이터 정렬|
+|[테이블 정의 변경](#alter_table)|DATA_COMPRESSION * SWITCH PARTITION * LOCK ESCALATION * 변경 내용 추적|
+|[제약 조건 및 트리거 해제/설정](#disable_enable)|CHECK * NO CHECK * ENABLE TRIGGER * DISABLE TRIGGER|
 | &nbsp; | &nbsp; |
 
 ### <a name="adding-columns-and-constraints"></a><a name="add"></a>열 및 제약 조건 추가

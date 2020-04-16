@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ebf82ec10f01b52b606a1250266884bbcd0a4497
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6f1e6d89848da95ab71cc6153faa55b50fc7452b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288617"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925472"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>방법: 명령 프롬프트에서 SQL Server 2008 R2 설치
 
@@ -261,7 +261,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [필수](#Accounts)|SQL Server 2017부터 더 이상 적용할 수 없습니다.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 시작 계정의 암호를 지정합니다. 관리 서비스 계정, 가상 계정 또는 기본 제공 계정을 사용할 때는 이 매개 변수를 생략할 수 있습니다.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **선택 사항**|SQL Server 2017부터 더 이상 적용할 수 없습니다.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 [시작](#Accounts) 모드를 지정합니다. 지원되는 값:<br /><br /> **자동**<br /><br /> **사용 안 함**<br /><br /> **수동**|  
 |Python/Machine Learning Services(데이터베이스 내)|/MPYCACHEDIRECTORY|다음에 사용하도록 예약됩니다. 인터넷 연결이 되지 않은 컴퓨터에 설치하기 위한 Python .CAB 파일을 저장하려면 %TEMP%를 사용합니다. |  
-|R/Machine Learning Services(데이터베이스 내)|/MRCACHEDIRECTORY|이 매개 변수를 사용하여 SQL Server 2017 Machine Learning Services 또는 Machine Learning Server(독립 실행형)에서 Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server(독립 실행형) 또는 R 지원 기능에 대한 캐시 디렉터리를 지정합니다. 일반적으로 이 설정은 [인터넷에 액세스할 수 없는 컴퓨터의 명령줄](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access)에서 R 구성 요소를 설치하는 경우에 사용됩니다.|  
+|R/Machine Learning Services(데이터베이스 내)|/MRCACHEDIRECTORY|이 매개 변수를 사용하여 SQL Server Machine Learning Services 또는 Machine Learning Server(독립 실행형)에서 Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server(독립 실행형) 또는 R 기능을 지원하는 데 사용할 캐시 디렉터리를 지정할 수 있습니다. 일반적으로 이 설정은 [인터넷에 액세스할 수 없는 컴퓨터의 명령줄](https://docs.microsoft.com/sql/machine-learning/install/sql-ml-component-install-without-internet-access)에서 R 구성 요소를 설치하는 경우에 사용됩니다.|  
 |Java/언어 확장| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "path"<br /><br /> **선택 사항** | SQL Server 2019부터 언어 확장을 사용하여 Java를 설치하도록 지정합니다. /SQLJAVADIR 매개 변수 없이 /SQL_INST_JAVA를 제공하면 설치 미디어에서 제공되는 Zulu Open JRE를 설치하려는 것으로 가정합니다. <br /><br /> /SQLJAVADIR의 경로를 제공하면 이미 설치된 JRE 또는 JDK를 사용하려는 것임을 나타냅니다. |
   
 ###### <a name="sample-syntax"></a>예제 구문:  
@@ -843,10 +843,10 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||PolyBase |PolyBase 구성 요소를 설치합니다.|
 ||PolyBaseCore | SQL Server 2019부터 **PolyBase**와 연결하여 표준 T-SQL 문을 사용하는 Oracle, Teradata, SQL Server 및 기타 관계형 및 비관계형 데이터에 걸쳐 진정한 통합 쿼리를 수행하도록 해주는 Polybase 기술을 설치합니다. |
 || PolyBaseJava | SQL Server 2019부터 **PolyBase**와 연결하여 표준 T-SQL 문을 사용하는 HDFS 데이터에 걸쳐 진정한 통합 쿼리를 수행하도록 해주는 PolyBase Java 커넥터를 설치합니다.
-||AdvancedAnalytics |[SQL Server 2017 Machine Learning Services](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install) 또는 [SQL Server 2016 R Services(데이터베이스 내)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-services-windows-install)를 설치합니다.|  
-||SQL_INST_MR |[SQL Server 2017 Machine Learning Services 이상](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)에 적용됩니다. **AdvancedAnalytics**와 쌍으로 R Open 및 전용 R 패키지를 설치합니다.|  
-||SQL_INST_MPY|[SQL Server 2017 Machine Learning Services 이상](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)에 적용됩니다. **AdvancedAnalytics**와 쌍으로 Anaconda 및 전용 Python 패키지를 설치합니다.|  
-||SQL_INST_JAVA |[SQL Server 2017 Machine Learning Services 이상](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)에 적용됩니다. 표준 T-SQL 문을 사용하여 Java와 통합할 수 있도록 하는 확장을 설치하려면 **AdvancedAnalytics**와 연결합니다.|  
+||AdvancedAnalytics |[SQL Server Machine Learning Services](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install) 또는 [SQL Server 2016 R Services(데이터베이스 내)](https://docs.microsoft.com/sql/machine-learning/install/sql-r-services-windows-install)를 설치합니다.|  
+||SQL_INST_MR |[SQL Server Machine Learning Services](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install)에 적용됩니다. **AdvancedAnalytics**와 쌍으로 R Open 및 전용 R 패키지를 설치합니다.|  
+||SQL_INST_MPY|[SQL Server Machine Learning Services](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install)에 적용됩니다. **AdvancedAnalytics**와 쌍으로 Anaconda 및 전용 Python 패키지를 설치합니다.|  
+||SQL_INST_JAVA |[SQL Server Machine Learning Services](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install)에 적용됩니다. 표준 T-SQL 문을 사용하여 Java와 통합할 수 있도록 하는 확장을 설치하려면 **AdvancedAnalytics**와 연결합니다.|  
 |AS||모든 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 구성 요소를 설치합니다.|  
 |RS||모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소를 설치합니다. SQL Server 2017부터 제거되었습니다. |  
 |RS_SHP||SharePoint용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소를 설치합니다. SQL Server 2017부터 제거되었습니다.|  
@@ -856,8 +856,8 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||IS_Master|Integration Services 규모 확장을 위한 규모 확장 마스터가 포함됩니다.| 
 ||IS_Worker|Integration Services 규모 확장을 위한 규모 확장 마스터가 포함됩니다.| 
 |MDS||[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]를 설치합니다.|  
-|SQL_SHARED_MPY||[SQL Server 2017 Machine Learning 서버(독립 실행형)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-standalone-windows-install)용 Python 패키지 설치 |  
-|SQL_SHARED_MR||[SQL Server 2016 R Server(독립 실행형)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-standalone-windows-install) 또는 SQL Server 2017 Machine Learning 서버(독립 실행형)용 R 패키지 설치 |  
+|SQL_SHARED_MPY||[SQL Server 2017 Machine Learning 서버(독립 실행형)](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-standalone-windows-install)용 Python 패키지 설치 |  
+|SQL_SHARED_MR||[SQL Server 2016 R Server(독립 실행형)](/sql/machine-learning/install/sql-machine-learning-standalone-windows-install?view=sql-server-2016) 또는 [SQL Server Machine Learning 서버(독립 실행형)](/sql/machine-learning/install/sql-machine-learning-standalone-windows-install)용 R 패키지를 설치합니다. |  
 |Tools*||클라이언트 도구와 SQL Server 온라인 설명서 구성 요소를 설치합니다.|  
 ||BC|이전 버전과의 호환성 구성 요소를 설치합니다.|  
 ||Conn|연결 구성 요소를 설치합니다.|

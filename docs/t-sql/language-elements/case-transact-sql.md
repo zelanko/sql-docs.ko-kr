@@ -1,6 +1,6 @@
 ---
 title: CASE(Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: CASE 식의 Transact-SQL 참조입니다. CASE는 조건 목록을 평가하여 특정 결과를 반환합니다.
 ms.date: 06/28/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,12 +21,12 @@ ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00175ce9c9c9c0f6f83b7661b685063f97ef8c44
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 62366f21c1b909348910ed3b72f0afbb3e5cfc15
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67950354"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517697"
 ---
 # <a name="case-transact-sql"></a>CASE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -99,7 +99,7 @@ END
   
 -   지정된 순서대로 각 WHEN 절에 대해 input_expression = when_expression을 평가합니다.  
   
--   TRUE로 평가되는 첫 번째 *input_expression*  when_expression = 의 *result_expression*을 반환합니다.  
+-   TRUE로 평가되는 첫 번째 *input_expression* = *when_expression*의 *result_expression*을 반환합니다.  
   
 -   *input_expression* = *when_expression*이 TRUE로 평가되지 않은 경우, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 ELSE 절이 지정되어 있으면 *else_result_expression*을 반환하고, ELSE 절이 지정되어 있지 않으면 NULL 값을 반환합니다.  
   
@@ -219,7 +219,7 @@ WHERE SalariedFlag = 0;
 ```  
   
 ### <a name="e-using-case-in-a-set-statement"></a>E. SET 문에 CASE 사용  
- 다음 예에서는 테이블 반환 함수 `dbo.GetContactInfo`에서 SET 문에 CASE 식을 사용합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 사용자와 관련된 모든 데이터는 `Person.Person` 테이블에 저장됩니다. 예를 들어 사용자는 직원, 공급업체 담당자 또는 고객일 수 있습니다. 함수는 지정된 `BusinessEntityID`의 성과 이름 및 해당 사용자에 대한 연락처 유형을 반환합니다. SET 문의 CASE 식은 `ContactType`, `BusinessEntityID` 또는 `Employee` 테이블에 `Vendor` 열이 있는지 여부에 따라 `Customer` 열에 대해 표시할 값을 결정합니다.  
+ 다음 예에서는 테이블 반환 함수 `dbo.GetContactInfo`에서 SET 문에 CASE 식을 사용합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 사용자와 관련된 모든 데이터는 `Person.Person` 테이블에 저장됩니다. 예를 들어 사용자는 직원, 공급업체 담당자 또는 고객일 수 있습니다. 함수는 지정된 `BusinessEntityID`의 성과 이름 및 해당 사용자에 대한 연락처 유형을 반환합니다. SET 문의 CASE 식은 `Employee`, `Vendor` 또는 `Customer` 테이블에 `BusinessEntityID` 열이 있는지 여부에 따라 `ContactType` 열에 대해 표시할 값을 결정합니다.  
   
 ```  
   

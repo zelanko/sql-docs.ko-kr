@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bfaf987fe9eb674ece6724b903c6a629f213fc3d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c7035ebdab328abd33c4648754ebaba6b80efb54
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923125"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219199"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>고가용성, 재해 복구를 위한 JDBC 드라이브 지원
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ Microsoft JDBC Driver for SQL Server 버전 6.0부터, Always On 가용성 그�
  
   
 ## <a name="connecting-with-multisubnetfailover"></a>multiSubnetFailover로 연결  
- **가용성 그룹 또는** 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]multiSubnetFailover=true[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]를 지정합니다. **multiSubnetFailover**를 사용하면 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 모든 가용성 그룹 및 장애 조치(Failover) 클러스터 인스턴스에 대한 장애 조치(Failover)를 빠르게 수행하고 단일 및 다중 서브넷 Always On 토폴로지에 대한 장애 조치(Failover) 시간을 크게 줄일 수 있습니다. 다중 서브넷 장애 조치(Failover) 중에는 클라이언트가 연결을 병렬로 시도합니다. 서브넷을 장애 조치하는 동안 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 TCP 연결을 공격적으로 재시도합니다.  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 가용성 그룹 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **multiSubnetFailover=true**를 지정합니다. **multiSubnetFailover**를 사용하면 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 모든 가용성 그룹 및 장애 조치(Failover) 클러스터 인스턴스에 대한 장애 조치(Failover)를 빠르게 수행하고 단일 및 다중 서브넷 Always On 토폴로지에 대한 장애 조치(Failover) 시간을 크게 줄일 수 있습니다. 다중 서브넷 장애 조치(Failover) 중에는 클라이언트가 연결을 병렬로 시도합니다. 서브넷을 장애 조치하는 동안 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 TCP 연결을 공격적으로 재시도합니다.  
   
  **multiSubnetFailover** 연결 속성은 애플리케이션을 가용성 그룹 또는 장애 조치(Failover) 클러스터 인스턴스에 배포하는 중이며 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]가 모든 IP 주소에 연결을 시도하여 주 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 데이터베이스에 연결을 시도함을 나타냅니다. 연결에 대해 **MultiSubnetFailover=true**를 지정하면 클라이언트는 운영 체제의 기본 TCP 재전송 간격보다 빠르게 TCP 연결을 다시 시도합니다. 이렇게 하면 AlwaysOn 가용성 그룹 또는 AlwaysOn 장애 조치(Failover) 클러스터 인스턴스의 장애 조치(Failover) 후 더 빠르게 다시 연결할 수 있습니다. 이 설정은 단일/다중 서브넷 가용성 그룹 및 장애 조치(Failover) 클러스터 인스턴스에 모두 적용됩니다.  
   
@@ -69,7 +69,7 @@ Microsoft JDBC Driver for SQL Server 버전 6.0부터, Always On 가용성 그�
   
 -   IP 주소가 64개 이상으로 구성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하면 연결 오류가 발생합니다.  
   
--   **multiSubnetFailover** 연결 속성을 사용하는 애플리케이션 동작은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증, Kerberos 인증, Windows 인증과 같은 인증 유형의 영향을 받지 않습니다.  
+-   **MultiSubnetFailover** 연결 속성을 사용하는 애플리케이션의 동작은 인증 유형([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증, Kerberos 인증 또는 Windows 인증)에 영향을 받지 않습니다.  
   
 -   장애 조치(failover) 시간을 수용하고 애플리케이션의 연결 재시도 횟수를 줄이기 위해 **loginTimeout** 값을 증가시킵니다.  
   
@@ -111,8 +111,8 @@ Microsoft JDBC Driver for SQL Server 버전 6.0부터, Always On 가용성 그�
   
  **getMultiSubnetFailover**, **setMultiSubnetFailover**, **getApplicationIntent**, **setApplicationIntent**, **getTransparentNetworkIPResolution** 및 **setTransparentNetworkIPResolution** 메서드는 [SQLServerDataSource 클래스](../../connect/jdbc/reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource 클래스](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) 및 [SQLServerXADataSource 클래스](../../connect/jdbc/reference/sqlserverxadatasource-class.md)에도 추가됩니다.  
   
-## <a name="ssl-certificate-validation"></a>SSL 인증서의 유효성 검사  
- 가용성 그룹은 여러 물리적 서버로 구성되어 있습니다. [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]에서는 여러 호스트를 동일한 인증서에 연결할 수 있도록 SSL 인증서에서 **Subject Alternate Name**에 대한 지원을 추가했습니다. SSL에 대한 자세한 내용은 [SSL 지원 이해](../../connect/jdbc/understanding-ssl-support.md)를 참조하세요.  
+## <a name="tlsssl-certificate-validation"></a>TLS/SSL 인증서 유효성 검사  
+ 가용성 그룹은 여러 물리적 서버로 구성되어 있습니다. [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]에서는 여러 호스트를 동일한 인증서에 연결할 수 있도록 TLS/SSL 인증서의 **주체 대체 이름** 지원이 추가되었습니다. TLS에 대한 자세한 내용은 [암호화 지원 이해](../../connect/jdbc/understanding-ssl-support.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버로 SQL Server에 연결](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   

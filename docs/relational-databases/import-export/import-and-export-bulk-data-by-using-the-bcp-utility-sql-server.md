@@ -1,5 +1,6 @@
 ---
 title: bcp를 사용하여 대량 데이터 가져오기 및 내보내기
+description: bcp를 사용하여 SELECT가 실행되는 SQL Server 데이터베이스의 어디에서든 데이터를 내보낼 수 있습니다. 테이블 또는 쿼리에서 데이터를 대량으로 내보내거나 파일에서 대량으로 가져옵니다.
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.technology: data-movement
@@ -13,15 +14,15 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.reviewer: ''
-ms.custom: seo-lt-2019
 ms.date: 09/28/2016
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 521ef35d9d06244c36395e96ab681a21abffe6ea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: c8e3309cc1e0e4c36960fb2a4e8c9432188c0076
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055988"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980119"
 ---
 # <a name="import-and-export-bulk-data-using-bcp-sql-server"></a>bcp를 사용하여 대량 데이터 가져오기 및 내보내기(SQL Server)
 

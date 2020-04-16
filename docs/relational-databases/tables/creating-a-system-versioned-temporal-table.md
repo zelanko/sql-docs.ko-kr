@@ -11,12 +11,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50c2d3aba84ce537e34b5c2bf5948c6ee84ac359
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cd7bcfd87f6ab51f2692d9d1a9ec11d9740aaab9
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165222"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809861"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>시스템 버전 관리 temporal 테이블 만들기
 
@@ -52,7 +52,7 @@ WITH (SYSTEM_VERSIONING = ON);
 - **PERIOD** 열은 null 허용 여부를 지정하지 않은 경우에도 언제나 null을 허용하지 않는다고 가정합니다. **PERIOD** 열을 명시적으로 null 허용으로 정의한 경우 **CREATE TABLE** 문이 실패합니다.
 - 기록 테이블은 언제나 열 수, 열 이름, 순서 및 데이터 형식에서 현재 또는 temporal 테이블과 스키마를 맞춰야 합니다.
 - 익명 기록 테이블은 자동으로 현재 또는 temporal 테이블과 같은 스키마에 생성됩니다.
-- 익명 기록 테이블 이름의 형식은 *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]* 입니다. 접미사는 선택 사항이며 테이블 이름의 첫 번째 부분이 고유하지 않은 경우에만 추가됩니다.
+- 익명 기록 테이블 이름의 형식은 다음과 같습니다. *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]* . 접미사는 선택 사항이며 테이블 이름의 첫 번째 부분이 고유하지 않은 경우에만 추가됩니다.
 - 기록 테이블은 rowstore 테이블로 생성됩니다. 페이지 압축은 가능하면 적용되며, 그렇지 않으면 기록 테이블을 압축하지 않습니다. 예를 들어 스파스 열과 같은 일부 테이블 구성은 압축을 허용하지 않습니다.
 - 기본 클러스터형 인덱스는 형식 *IX_<history_table_name>* 의 자동 생성된 이름을 가진 기록 테이블에 대해 생성됩니다. 클러스터형 인덱스는 **PERIOD** 열(시작, 종료)을 포함합니다.
 - 현재 테이블을 메모리 최적화 테이블로 만들려면 [메모리 최적화 테이블을 포함한 시스템 버전 temporal 테이블](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)을 참조하세요.
@@ -164,9 +164,8 @@ ALTER TABLE InsurancePolicy
 
 - SQL Server Enterprise Edition 이외의 모든 버전에서 데이터가 포함된 기존 테이블에 기본값을 가진 null이 허용되지 않는 열을 추가하는 경우 데이터 작업(메타데이터 작업)의 크기에 주의해야 합니다. SQL Server Standard Edition에서 데이터가 포함된 큰 기존 기록 테이블의 경우 null이 아닌 열을 추가하면 작업 비용이 많이 들 수 있습니다.
 - 기간 시작 및 기간 종료 열에 대한 제약 조건을 신중하게 선택해야 합니다.
-
   - 시작 열에 대한 기본값은 기존 행이 유효하다고 생각하는 시점을 지정합니다. 미래의 datetime 포인트로 지정할 수 없습니다.
-  - 종료 시간은 지정된 datetime2 정밀도에 대한 최대값으로 지정해야 함
+  - 종료 시간은 지정된 datetime2 정밀도의 최댓값으로 지정해야 합니다(예: `9999-12-31 23:59:59` 또는 `9999-12-31 23:59:59.9999999`).
 - 기간을 추가하면 기간 열에 대한 기본값이 유효한지 확인하기 위해 현재 테이블에 대해 데이터 일관성 검사를 수행합니다.
 - **SYSTEM_VERSIONING**을 사용하도록 설정할 때 기존 기록 테이블을 지정하는 경우 현재 테이블과 기록 테이블 둘 다에 대해 데이터 일관성 검사가 수행됩니다. **DATA_CONSISTENCY_CHECK = OFF**를 추가 매개 변수로 지정하는 경우 이 과정을 건너뛸 수 있습니다.
 

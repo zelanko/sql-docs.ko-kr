@@ -1,5 +1,6 @@
 ---
 title: 대량 가져오기의 최소 로깅을 위한 필수 조건 | Microsoft 문서
+description: 단순 복구 또는 대량 로그 복구 모델에서 대량 가져오기 작업의 로깅을 최소화하면 작업을 통해 로그 공간이 채워질 가능성이 줄어듭니다.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 99572edbc477999a1ccc8f6c1fff89b5e04521d6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 69872eeb356ff4dbd530bf0c752cdf02706d8344
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70910838"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980145"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prerequisites for Minimal Logging in Bulk Import
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

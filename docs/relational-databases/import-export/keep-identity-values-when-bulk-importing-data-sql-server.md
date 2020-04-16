@@ -1,5 +1,6 @@
 ---
 title: 데이터 대량 가져오기 중 ID 값 유지
+description: ID 값을 포함하는 데이터를 SQL Server 인스턴스에 대량으로 가져오는 경우, 기본적으로 새 값이 할당됩니다. 원래 값을 유지하도록 선택할 수 있습니다.
 ms.date: 09/21/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -15,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a5993a5ba452e3d46709462e75a316dba02f7540
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9dc47ecc9056c2344b64feb4eb0f122e340927b5
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055967"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980615"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>데이터 대량 가져오기 중 ID 값 유지(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +40,7 @@ ID 값이 들어 있는 데이터 파일을 Microsoft SQL Server 인스턴스로
 |-------------|------------------------------|--------------------|  
 |bcp|-E|스위치|  
 |BULK INSERT|KEEPIDENTITY|인수|  
-|INSERT ... SELECT * FROM OPENROWSET(BULK...)|KEEPIDENTITY|테이블 힌트|  
+|INSERT ... 선택 * OPENROWSET (BULK)에서|KEEPIDENTITY|테이블 힌트|  
    
  자세한 내용은 [bcp 유틸리티](../../tools/bcp-utility.md), [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md), [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md), [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md), [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md) 및 [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)를 참조하세요.  
 
@@ -134,7 +135,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
 ```
 
-### <a name="using-bcp-and-keeping-identity-values-with-a-non-xml-format-file"></a>**[비 XML 서식 파일](../../tools/bcp-utility.md)과 함께 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 사용 및 ID 값 유지**<a name="bcp_identity_fmt"></a>
+### <a name="using-bcp-and-keeping-identity-values-with-a-non-xml-format-file"></a>**[비 XML 서식 파일](../../relational-databases/import-export/non-xml-format-files-sql-server.md)과 함께 [bcp](../../tools/bcp-utility.md) 사용 및 ID 값 유지**<a name="bcp_identity_fmt"></a>
 **-E** 및 **-f** 스위치.  명령 프롬프트에서 다음 명령을 입력합니다.
 ```
 REM Truncate table (for testing)
@@ -228,7 +229,7 @@ BULK INSERT dbo.myIdentity
 SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
-### <a name="using-bulk-insert-and-generated-identity-values-with-a-non-xml-format-file"></a>**[비 XML 서식 파일](../../t-sql/statements/bulk-insert-transact-sql.md)과 함께 [BULK INSERT](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 및 생성된 ID 값 사용**<a name="bulk_default_fmt"></a>
+### <a name="using-bulk-insert-and-generated-identity-values-with-a-non-xml-format-file"></a>**[비 XML 서식 파일](../../relational-databases/import-export/non-xml-format-files-sql-server.md)과 함께 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 생성된 ID 값 사용**<a name="bulk_default_fmt"></a>
 기본값 및 **FORMATFILE** 인수 사용.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```sql
 USE TestDatabase;
@@ -245,7 +246,7 @@ BULK INSERT dbo.myIdentity
 SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
-### <a name="using-openrowsetbulk-and-keeping-identity-values-with-a-non-xml-format-file"></a>**[비 XML 서식 파일](../../t-sql/functions/openrowset-transact-sql.md)과 함께 [OPENROWSET(BULK...)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 사용 및 ID 값 유지**<a name="openrowset_identity_fmt"></a>
+### <a name="using-openrowsetbulk-and-keeping-identity-values-with-a-non-xml-format-file"></a>**[비 XML 서식 파일](../../relational-databases/import-export/non-xml-format-files-sql-server.md)과 함께 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 사용 및 ID 값 유지**<a name="openrowset_identity_fmt"></a>
 **KEEPIDENTITY** 테이블 힌트 및 **FORMATFILE** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```sql
 USE TestDatabase;

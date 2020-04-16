@@ -1,5 +1,6 @@
 ---
 title: Excel에서 SQL로 데이터 가져오기 | Microsoft Docs
+description: 이 문서에서는 Excel에서 SQL Server 또는 Azure SQL Database로 데이터를 가져오는 방법을 설명합니다. 한 단계로 수행하는 방법도 있고, 중간 텍스트 파일이 필요한 방법도 있습니다.
 ms.custom: sqlfreshmay19
 ms.date: 09/30/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68a5542d36731e260ab4aeb5a0734bea2a983108
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6bbb114a2d3ae3f5655f4d5a60a2842af77170b6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245265"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980579"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Excel에서 SQL Server 또는 Azure SQL Database로 데이터 가져오기
 
@@ -128,7 +129,7 @@ FROM OPENDATASOURCE('Microsoft.ACE.OLEDB.12.0',
 GO
 ```
 
-가져온 데이터를 새 테이블을 만들지 않고 *기존* 테이블에 *추가*하려면 앞의 예제에서 사용된 `INSERT INTO ... SELECT ... FROM ...` 구문 대신에 `SELECT ... INTO ... FROM ...` 구문을 사용합니다.
+가져온 데이터를 새 테이블을 만들지 않고 *기존* 테이블에 *추가*하려면 앞의 예제에서 사용된 `SELECT ... INTO ... FROM ...` 구문 대신에 `INSERT INTO ... SELECT ... FROM ...` 구문을 사용합니다.
 
 Excel 데이터를 가져오지 않고 쿼리를 사용하려면 표준 `SELECT ... FROM ...` 구문을 사용하면 됩니다.
 
@@ -140,7 +141,7 @@ Excel 데이터를 가져오지 않고 쿼리를 사용하려면 표준 `SELECT 
 
 ### <a name="linked-servers"></a>연결된 서버
 
-SQL Server에서 Excel 파일로의 영구 연결을 ‘연결된 서버’로 구성할 수도 있습니다.  다음 예제에서는 기존 Excel 연결된 서버 `Data`에 있는 `EXCELLINK` 워크시트에서 `Data_ls`라는 새 SQL Server 데이터베이스 테이블로 데이터를 가져옵니다.
+SQL Server에서 Excel 파일로의 영구 연결을 ‘연결된 서버’로 구성할 수도 있습니다.  다음 예제에서는 기존 Excel 연결된 서버 `EXCELLINK`에 있는 `Data` 워크시트에서 `Data_ls`라는 새 SQL Server 데이터베이스 테이블로 데이터를 가져옵니다.
 
 ```sql
 USE ImportFromExcel;
