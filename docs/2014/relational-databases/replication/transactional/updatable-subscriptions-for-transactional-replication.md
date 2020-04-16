@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "62655500"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
@@ -56,7 +56,7 @@ ms.locfileid: "62655500"
  **업데이트 모드를 전환하려면**  
   
  업데이트 모드를 전환하려면 이 두 업데이트 모드에 대한 게시와 구독을 설정한 다음 필요에 따라 모드를 전환합니다. 자세한 내용은 다음을 참조하세요.  
-[업데이트 가능한 트랜잭션 구독에 대한 업데이트 모드 전환](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)  
+[업데이터 블 트랜잭션 구독에 대한 업데이트 모드 간 전환](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>업데이트할 수 있는 구독 사용 시 고려 사항  
   
@@ -76,12 +76,11 @@ ms.locfileid: "62655500"
   
 -   구독자에서의 업데이트는 구독이 만료되었거나 비활성화 상태에 있더라도 게시자로 전파됩니다. 이러한 구독은 삭제하거나 다시 초기화하십시오.  
   
--   
-  `TIMESTAMP` 또는 `IDENTITY` 열을 사용하고 이러한 열이 자체 기본 데이터 형식으로 복제되는 경우에는 이러한 열의 값을 구독자에서 업데이트할 수 없습니다.  
+-   `TIMESTAMP` 또는 `IDENTITY` 열을 사용하고 이러한 열이 자체 기본 데이터 형식으로 복제되는 경우에는 이러한 열의 값을 구독자에서 업데이트할 수 없습니다.  
   
--   복제에 대한 변경 내용 추적 트리거 내의 삽입 테이블 또는 삭제 테이블에서는 읽기 작업을 수행할 수 없으므로 구독자는 `text`, `ntext` 또는 `image` 값을 업데이트하거나 삽입할 수 없습니다. 마찬가지로 게시자가 데이터를 덮어쓰므로 구독자는 `text` 또는 `image`를 사용하여 `WRITETEXT` 또는 `UPDATETEXT` 값을 업데이트하거나 삽입할 수 없습니다. 대신 `text` 및 `image` 열을 별개의 테이블에 분할할 수 있고 트랜잭션 내에서 두 테이블을 수정할 수 있습니다.  
+-   복제에 대한 변경 내용 추적 트리거 내의 삽입 테이블 또는 삭제 테이블에서는 읽기 작업을 수행할 수 없으므로 구독자는 `text`, `ntext` 또는 `image` 값을 업데이트하거나 삽입할 수 없습니다. 마찬가지로 게시자가 데이터를 덮어쓰므로 구독자는 `WRITETEXT` 또는 `UPDATETEXT`를 사용하여 `text` 또는 `image` 값을 업데이트하거나 삽입할 수 없습니다. 대신 `text` 및 `image` 열을 별개의 테이블에 분할할 수 있고 트랜잭션 내에서 두 테이블을 수정할 수 있습니다.  
   
-     구독자에서 큰 개체를 업데이트하려면 `varchar(max)`, `nvarchar(max)` 및 `varbinary(max)` 데이터 형식 대신 `text`, `ntext` 및 `image` 데이터 형식을 사용합니다.  
+     구독자에서 큰 개체를 업데이트하려면 `text`, `ntext` 및 `image` 데이터 형식 대신 `varchar(max)`, `nvarchar(max)` 및 `varbinary(max)` 데이터 형식을 사용합니다.  
   
 -   중복을 생성하는 고유 키(기본 키 포함)에 대한 업데이트(예: `UPDATE <column> SET <column> =<column>+1` 형식의 업데이트)는 허용되지 않으며 고유성 위반 때문에 거부됩니다. 이는 구독자에서의 업데이트 설정이 영향을 받는 각 행에 대한 개별 `UPDATE` 문으로 복제에 의해 전파되기 때문입니다.  
   
@@ -109,11 +108,9 @@ ms.locfileid: "62655500"
   
 -   데이터 형식이 `SQL_VARIANT`인 열의 경우: 데이터를 구독자에서 삽입하거나 업데이트하면 해당 데이터가 구독자에서 큐로 복사될 때 큐 판독기 에이전트에 의해 다음과 같은 방식으로 매핑됩니다.  
   
-    -   
-  `BIGINT`, `DECIMAL`, `NUMERIC`, `MONEY` 및 `SMALLMONEY`는 `NUMERIC`으로 매핑됩니다.  
+    -   `BIGINT`, `DECIMAL`, `NUMERIC`, `MONEY` 및 `SMALLMONEY`는 `NUMERIC`으로 매핑됩니다.  
   
-    -   
-  `BINARY` 및 `VARBINARY`는 `VARBINARY` 데이터로 매핑됩니다.  
+    -   `BINARY` 및 `VARBINARY`는 `VARBINARY` 데이터로 매핑됩니다.  
   
 ### <a name="conflict-detection-and-resolution"></a>충돌 감지 및 해결  
   
@@ -126,7 +123,7 @@ ms.locfileid: "62655500"
     -   충돌이 예상되는 경우에는 "구독자 내용 적용" 충돌 해결 사용 시 게시자나 구독자에서 외래 키 제약 조건을 사용해서는 안 되며 "게시자 내용 적용" 충돌 해결 사용 시 구독자에서 외래 키 제약 조건을 사용해서는 안 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)   
+ [피어 투 피어 트랜잭션 복제](peer-to-peer-transactional-replication.md)   
  [트랜잭션 복제](transactional-replication.md)   
  [데이터 및 데이터베이스 개체 게시](../publish/publish-data-and-database-objects.md)   
  [게시 구독](../subscribe-to-publications.md)  

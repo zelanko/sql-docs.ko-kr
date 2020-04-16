@@ -19,15 +19,15 @@ ms.assetid: bc91b422-c6ab-4062-a300-8290fae6191b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2cd868dc316a9da8339b5e12002a11d167e30710
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 1c7a12ec8f9e2bd49c9aecc1080fe0b5cff854ce
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78172995"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81387967"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface"></a>Hyperion Essbase 쿼리 디자이너 사용자 인터페이스
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] 데이터 원본에 대한 MDX(Multidimensional Expression) 쿼리를 작성하기 위한 그래픽 쿼리 디자이너를 제공합니다. MDX 그래픽 쿼리 디자이너에는 디자인 모드와 쿼리 모드 두 가지가 있습니다. 각 모드는 메타데이터 창을 제공하며 이 창을 통해 데이터 원본에 정의되어 있는 큐브에서 멤버를 끌어 보고서 처리 시 데이터를 검색하는 MDX 쿼리를 작성할 수 있습니다.
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] 데이터 원본에 대한 MDX(Multidimensional Expression) 쿼리를 작성하기 위한 그래픽 쿼리 디자이너를 제공합니다. MDX 그래픽 쿼리 디자이너에는 디자인 모드와 쿼리 모드의 두 가지 모드가 있습니다. 각 모드는 메타데이터 창을 제공하며 이 창을 통해 데이터 원본에 정의되어 있는 큐브에서 멤버를 끌어 보고서 처리 시 데이터를 검색하는 MDX 쿼리를 작성할 수 있습니다.
 
 > [!IMPORTANT]
 >  사용자는 쿼리를 작성하고 실행할 때 데이터 원본에 액세스합니다. 데이터 원본에 대해서는 읽기 전용 권한과 같이 최소한의 사용 권한을 부여해야 합니다.
@@ -64,14 +64,14 @@ ms.locfileid: "78172995"
 |------------|-----------------|
 |**텍스트로 편집**|텍스트 기반 쿼리 디자이너와 그래픽 쿼리 디자이너 사이를 전환합니다. 이 데이터 원본 유형에는 사용할 수 없습니다.|
 |**가져오기**|파일 시스템의 보고서 정의 파일(.rdl)에서 기존 쿼리를 가져옵니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.|
-|![데이터 세트 필드 새로 고침](../media/rsqdicon-refreshfields.gif "데이터 집합 필드 새로 고침")|데이터 원본의 메타데이터를 새로 고칩니다.|
-|![계산 멤버 추가](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "계산 멤버 추가")|**계산 멤버 작성기** 대화 상자를 표시합니다. 이 대화 상자를 사용하여 **계산 순서** 속성 설정을 비롯한 계산 멤버 식 생성 및 편집 작업을 수행할 수 있습니다.|
-|![빈 셀 표시 설정/해제](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "빈 셀 표시 설정/해제")|데이터 창에서 빈 셀을 표시하거나 표시하지 않는 기능 사이를 전환합니다. 이것은 MDX에 NON EMPTY 절을 사용하는 것과 동일합니다.|
-|![쿼리 자동 실행](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "쿼리 자동 실행")|데이터 창에서 열을 삭제하는 경우와 같이 변경 내용이 있을 때마다 쿼리를 자동으로 실행하고 결과를 표시합니다. 결과는 데이터 창에 표시됩니다.|
-|![Delete](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "DELETE")|선택한 항목을 쿼리에서 삭제합니다. 이 단추를 사용하여 필터 창에서 선택한 행을 삭제할 수 있습니다.|
-|![쿼리 실행](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "쿼리 실행")|쿼리를 실행하고 데이터 창에 결과를 표시합니다.|
-|![쿼리 취소](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-cancel.gif "쿼리 취소")|쿼리를 취소합니다.|
-|![디자인 모드로 전환](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "디자인 모드로 전환")|디자인 모드와 쿼리 모드 사이를 전환합니다.|
+|![데이터 세트 필드 새로 고침](../media/rsqdicon-refreshfields.gif "데이터 세트 필드 새로 고침")|데이터 원본의 메타데이터를 새로 고칩니다.|
+|![계산 멤버 추가](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "계산 멤버 추가")|**계산 멤버 작성기** 대화 상자를 표시합니다. 이 대화 상자를 사용하여 **계산 순서** 속성 설정을 비롯한 계산 멤버 식 생성 및 편집 작업을 수행할 수 있습니다.|
+|![빈 셀 표시 설정/해제](../../analysis-services/media/rsqdicon-showemptycells.gif "빈 셀 표시 설정/해제")|데이터 창에서 빈 셀을 표시하거나 표시하지 않는 기능 사이를 전환합니다. 이것은 MDX에 NON EMPTY 절을 사용하는 것과 동일합니다.|
+|![쿼리 자동 실행](../../analysis-services/media/rsqdicon-autoexecute.gif "쿼리 자동 실행")|데이터 창에서 열을 삭제하는 경우와 같이 변경 내용이 있을 때마다 쿼리를 자동으로 실행하고 결과를 표시합니다. 결과는 데이터 창에 표시됩니다.|
+|![Delete](../../analysis-services/media/rsqdicon-delete.gif "DELETE")|선택한 항목을 쿼리에서 삭제합니다. 이 단추를 사용하여 필터 창에서 선택한 행을 삭제할 수 있습니다.|
+|![쿼리 실행](../../analysis-services/media/rsqdicon-run.gif "쿼리 실행")|쿼리를 실행하고 데이터 창에 결과를 표시합니다.|
+|![쿼리 취소](../../analysis-services/media/rsqdicon-cancel.gif "쿼리 취소")|쿼리를 취소합니다.|
+|![디자인 모드로 전환](../../analysis-services/media/rsqdicon-designmode.gif "디자인 모드로 전환")|디자인 모드와 쿼리 모드 사이를 전환합니다.|
 
 ## <a name="graphical-query-designer-in-query-mode"></a>쿼리 모드의 그래픽 쿼리 디자이너
  그래픽 쿼리 디자이너를 쿼리 모드로 변경하려면 도구 모음에서 **디자인 모드** 토글 단추를 클릭합니다. 다음 그림에서는 쿼리 모드에 표시되는 쿼리 디자이너의 각 부분을 보여 줍니다.
@@ -94,13 +94,13 @@ ms.locfileid: "78172995"
 
 -   **텍스트로 편집**
 
--   **계산 멤버 추가**(![계산 멤버 추가](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "계산 멤버 추가"))
+-   **계산 멤버 추가**(![계산 멤버 추가](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "계산 멤버 추가"))
 
--   **빈 셀 표시**(![빈 셀 표시 설정/해제](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "빈 셀 표시 설정/해제"))
+-   **빈 셀 표시**(![빈 셀 표시 설정/해제](../../analysis-services/media/rsqdicon-showemptycells.gif "빈 셀 표시 설정/해제"))
 
--   **자동 실행**(![쿼리 자동 실행](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "쿼리 자동 실행"))
+-   **자동 실행**(![쿼리 자동 실행](../../analysis-services/media/rsqdicon-autoexecute.gif "쿼리 자동 실행"))
 
 ## <a name="see-also"></a>참고 항목
- [공유 데이터 집합 또는 포함 된 데이터 집합 &#40;보고서 작성기 및 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) [rsreportdesigner.config 구성 파일](../report-server/rsreportdesigner-configuration-file.md) 을 만듭니다.
+ [RSReportDesigner 구성 파일을](../report-server/rsreportdesigner-configuration-file.md) [&#41;보고서 작성기 및 SSRS를 &#40;공유 데이터 집합 또는 포함된 데이터 집합](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) 만들기
 
 

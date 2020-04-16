@@ -1,5 +1,5 @@
 ---
-title: 네이티브 클라이언트, 업데이트 응용 프로그램 SQL 2005
+title: SQL 2005에서 업데이트
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c047d243804b13733a7380ced362546ceda1e294
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 3287f5faf6d748a433a425c1ecf505bbe551d3b2
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81302517"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388295"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>SQL Server 2005 Native Client에서 애플리케이션 업데이트
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "81302517"
   
  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]와 함께 제공되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]와 함께 제공되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 함께 제공되는 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 10.5. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]와 함께 제공되는 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client 11.0.  
   
-|[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이후에 SQL Server Native Client에서 변경된 동작|설명|  
+|[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이후에 SQL Server Native Client에서 변경된 동작|Description|  
 |------------------------------------------------------------------------------------|-----------------|  
 |OLE DB가 정의된 배율로만 패딩됩니다.|변환된 데이터가 서버로 전송되는 변환의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 경우 Native [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]Client(시작)는 **데이터에서** 0을 후행하는 패드가 최대 날짜 시간 값의 최대 길이까지만 표시됩니다. 9자리까지 패딩된 SQL Server Native Client 9.0입니다.|  
 |ICommandWithParameter::SetParameterInfo에 대한 DBTYPE_DBTIMESTAMP의 유효성을 검사합니다.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]네이티브 클라이언트(시작 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]부분)는 iCommandWithParameter::SetParameterInfo에서 *bScale에* 대한 OLE DB 요구 사항을 구현하여 DBTYPE_DBTIMESTAMP 대한 분수 초의 정밀도로 설정합니다.|  

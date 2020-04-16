@@ -1,5 +1,5 @@
 ---
-title: Analysis Services MDX 쿼리 디자이너 (PowerPivot) | Microsoft Docs
+title: 분석 서비스 MDX 쿼리 디자이너(PowerPivot) | 마이크로 소프트 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd6b880fc1908d973b4a78fdc04cb59ed9eca731
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "66062464"
 ---
 # <a name="analysis-services-mdx-query-designer-powerpivot"></a>Analysis Services MDX 쿼리 디자이너(PowerPivot)
-  Analysis Services mdx (Multidimensional Expression) 쿼리 디자이너는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 원본에 대 한 mdx 쿼리를 만드는 데 도움이 되는 그래픽 사용자 인터페이스를 제공 합니다. MDX 그래픽 쿼리 디자이너에는 디자인 모드와 쿼리 모드의 두 가지 모드가 있습니다. 각 모드는 메타데이터 창을 제공하는 데 이 창에서는 선택한 큐브에서 멤버를 끌어 사용할 데이터를 검색하는 MDX 쿼리를 작성할 수 있습니다.  
+  분석 서비스 MDX(다차원 식) 쿼리 디자이너는 데이터 원본에 대한 MDX 쿼리를 만드는 데 도움이 되는 그래픽 사용자 인터페이스를 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 제공합니다. MDX 그래픽 쿼리 디자이너에는 디자인 모드와 쿼리 모드의 두 가지 모드가 있습니다. 각 모드는 메타데이터 창을 제공하는 데 이 창에서는 선택한 큐브에서 멤버를 끌어 사용할 데이터를 검색하는 MDX 쿼리를 작성할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  사용자는 쿼리를 작성하고 실행할 때 데이터 원본에 액세스합니다. 데이터 원본에 대해서는 읽기 전용 권한과 같이 최소한의 사용 권한을 부여해야 합니다.  
@@ -40,10 +40,9 @@ ms.locfileid: "66062464"
 |메타데이터 창|선택한 큐브에 정의된 측정값, KPI(핵심 성과 지표) 및 차원의 계층 목록을 표시합니다.|  
 |계산 멤버 창|쿼리에 사용할 수 있는 현재 정의된 계산 멤버를 표시합니다.|  
 |필터 창|원본의 데이터를 필터링하고 반환되는 데이터를 제한하기 위해 차원과 관련 계층을 선택하려면 사용합니다.|  
-|데이터 창|메타데이터 창 및 계산 멤버 창에서 항목을 끌 때 결과 집합에 대한 열 머리글을 표시합니다. 
-  **자동 실행** 단추가 선택된 경우 결과 집합을 자동으로 업데이트합니다.|  
+|데이터 창|메타데이터 창 및 계산 멤버 창에서 항목을 끌 때 결과 집합에 대한 열 머리글을 표시합니다. **자동 실행** 단추가 선택된 경우 결과 집합을 자동으로 업데이트합니다.|  
   
- 메타데이터 창의 차원, 측정값 및 KPI와 계산 멤버 창의 계산 멤버를 데이터 창으로 끌 수 있습니다. 필터 창에서 차원 및 관련 계층을 선택하고 필터 식을 설정하여 쿼리에 사용할 수 있는 데이터를 제한할 수 있습니다. 도구 모음의 **자동 실행** (![쿼리 자동 실행](media/rsqdicon-autoexecute.gif "쿼리 자동 실행")) 토글 단추가 선택 된 경우 메타 데이터 개체를 데이터 창에 놓을 때마다 쿼리 디자이너에서 쿼리를 실행 합니다. 도구 모음에서 **실행** (![쿼리 실행](media/rsqdicon-run.gif "쿼리 실행")) 단추를 사용 하 여 쿼리를 수동으로 실행할 수 있습니다.  
+ 메타데이터 창의 차원, 측정값 및 KPI와 계산 멤버 창의 계산 멤버를 데이터 창으로 끌 수 있습니다. 필터 창에서 차원 및 관련 계층을 선택하고 필터 식을 설정하여 쿼리에 사용할 수 있는 데이터를 제한할 수 있습니다. 도구 모음의 **자동 실행**(![쿼리 자동 실행](media/rsqdicon-autoexecute.gif "쿼리 자동 실행")) 토글 단추가 선택된 경우 메타데이터 개체를 데이터 창에 놓을 때마다 쿼리 디자이너는 쿼리를 실행합니다. 도구 모음의 **실행**(![쿼리 실행](media/rsqdicon-run.gif "쿼리 실행")) 단추를 사용하여 쿼리를 수동으로 실행할 수 있습니다.  
   
  이 모드에서 MDX 쿼리를 만들면 다음 추가 속성이 자동으로 쿼리에 포함됩니다.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66062464"
  파일에서 .mdx 쿼리를 가져올 수는 없습니다.  
   
 > [!NOTE]  
->  MDX에 대한 자세한 내용 및 MDX 쿼리 디자이너에 대한 일반 정보는 [SQL Server 온라인 설명서](https://go.microsoft.com/fwlink/?linkid=98335)의 "MDX 쿼리 편집기(Analysis Services - 다차원 데이터)"를 참조하십시오.  
+>  MDX에 대한 자세한 내용 및 MDX 쿼리 디자이너에 대한 일반 정보는 [SQL Server 온라인 설명서](https://go.microsoft.com/fwlink/?linkid=98335)의 "MDX 쿼리 편집기(Analysis Services - 다차원 데이터)"를 참조하세요.  
   
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>디자인 모드의 그래픽 MDX 쿼리 디자이너 도구 모음  
  쿼리 디자이너 도구 모음은 그래픽 인터페이스를 사용하여 MDX 쿼리를 디자인하는 데 도움이 되는 단추를 제공합니다. 다음 표에서는 단추와 해당 기능을 나열합니다.  
@@ -67,14 +66,12 @@ ms.locfileid: "66062464"
 |**가져오기**|파일 시스템의 보고서 정의 파일(.rdl)에서 기존 쿼리를 가져옵니다.|  
 |![MDX 쿼리 뷰로 변경](media/rsqdicon-commandtypemdx.gif "MDX 쿼리 뷰로 변경")|MDX 명령 유형으로 전환합니다.|  
 |![결과 데이터 새로 고침](media/rsqdicon-refresh.gif "결과 데이터 새로 고침")|데이터 원본의 메타데이터를 새로 고칩니다.|  
-|![계산 멤버 추가](media/rsqdicon-addcalculatedmember.gif "계산 멤버 추가")|
-  **계산 멤버 작성기** 대화 상자를 표시합니다.|  
+|![계산 멤버 추가](media/rsqdicon-addcalculatedmember.gif "계산 멤버 추가")|**계산 멤버 작성기** 대화 상자를 표시합니다.|  
 |![빈 셀 표시 설정/해제](media/rsqdicon-showemptycells.gif "빈 셀 표시 설정/해제")|데이터 창에서 빈 셀을 표시하거나 표시하지 않는 기능 사이를 전환합니다. 이것은 MDX에 NON EMPTY 절을 사용하는 것과 동일합니다.|  
 |![쿼리 자동 실행](media/rsqdicon-autoexecute.gif "쿼리 자동 실행")|변경이 수행될 때마다 쿼리를 자동으로 실행하고 결과를 표시합니다. 결과는 데이터 창에 표시됩니다.|  
 |![집계 표시 단추](media/rsqdicon-showaggregations.gif "집계 표시 단추")|데이터 창에서 집계를 표시합니다.|  
-|![Delete](media/rsqdicon-delete.gif "DELETE")|데이터 창의 선택된 열을 쿼리에서 삭제합니다.|  
-|![쿼리 매개 변수 대화 상자 아이콘](media/iconqueryparameter.gif "쿼리 매개 변수 대화 상자 아이콘")|
-  **쿼리 매개 변수** 대화 상자를 표시합니다. 쿼리 매개 변수의 값을 지정하면 같은 이름의 매개 변수가 자동으로 만들어집니다.|  
+|![삭제](media/rsqdicon-delete.gif "DELETE")|데이터 창의 선택된 열을 쿼리에서 삭제합니다.|  
+|![쿼리 매개 변수 대화 상자 아이콘](media/iconqueryparameter.gif "쿼리 매개 변수 대화 상자 아이콘")|**쿼리 매개 변수** 대화 상자를 표시합니다. 쿼리 매개 변수의 값을 지정하면 같은 이름의 매개 변수가 자동으로 만들어집니다.|  
 |![쿼리 준비 단추](media/rsqdicon-preparequery.gif "쿼리 준비 단추")|쿼리를 준비합니다.|  
 |![쿼리 실행](media/rsqdicon-run.gif "쿼리 실행")|쿼리를 실행하고 데이터 창에 결과를 표시합니다.|  
 |![쿼리 취소](media/rsqdicon-cancel.gif "쿼리 취소")|쿼리를 취소합니다.|  
@@ -96,10 +93,7 @@ ms.locfileid: "66062464"
 |쿼리 창|쿼리 텍스트를 표시합니다.|  
 |결과 창|쿼리의 실행 결과를 표시합니다.|  
   
- 메타데이터 창에는 **메타데이터**, **함수**및 **템플릿**탭이 표시됩니다. 
-  **메타데이터** 탭에서는 차원, 계층, KPI 및 측정값을 MDX 쿼리 창으로 끌 수 있습니다. 
-  **함수** 탭에서는 함수를 MDX 쿼리 창으로 끌 수 있습니다. 
-  **템플릿** 탭에서는 MDX 템플릿을 MDX 쿼리 창에 추가할 수 있습니다. 쿼리를 실행하면 현재 MDX 쿼리의 결과가 결과 창에 표시됩니다.  
+ 메타데이터 창에는 **메타데이터**, **함수**및 **템플릿**탭이 표시됩니다. **메타데이터** 탭에서는 차원, 계층, KPI 및 측정값을 MDX 쿼리 창으로 끌 수 있습니다. **함수** 탭에서는 함수를 MDX 쿼리 창으로 끌 수 있습니다. **템플릿** 탭에서는 MDX 템플릿을 MDX 쿼리 창에 추가할 수 있습니다. 쿼리를 실행하면 현재 MDX 쿼리의 결과가 결과 창에 표시됩니다.  
   
  디자인 모드에서 생성된 기본 MDX 쿼리를 확장하여 추가 멤버 속성 및 셀 속성을 포함할 수 있습니다. 쿼리를 실행할 때 이러한 값은 결과 집합에 나타나지 않습니다. 그러나 이러한 값은 데이터 세트 필드 컬렉션과 함께 다시 전달되므로 해당 값을 사용할 수 있습니다.  
   
@@ -110,12 +104,12 @@ ms.locfileid: "66062464"
   
 -   **텍스트로 편집**  
   
--   **계산 멤버 추가** (![계산 멤버 추가](media/rsqdicon-addcalculatedmember.gif "계산 멤버 추가"))  
+-   **계산 멤버 추가**(![계산 멤버 추가](media/rsqdicon-addcalculatedmember.gif "계산 멤버 추가"))  
   
--   **빈 셀 표시** (![빈 셀 표시 설정/해제](media/rsqdicon-showemptycells.gif "빈 셀 표시 설정/해제"))  
+-   **빈 셀 표시**(![빈 셀 표시 설정/해제](media/rsqdicon-showemptycells.gif "빈 셀 표시 설정/해제"))  
   
--   **자동 실행** (![쿼리 자동 실행](media/rsqdicon-autoexecute.gif "쿼리 자동 실행"))  
+-   **자동 실행**(![쿼리 자동 실행](media/rsqdicon-autoexecute.gif "쿼리 자동 실행"))  
   
--   **집계 표시** (![집계 표시 단추](media/rsqdicon-showaggregations.gif "집계 표시 단추"))  
+-   **집계 표시**(![집계 표시 단추](media/rsqdicon-showaggregations.gif "집계 표시 단추"))  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQL 서버 네이티브 클라이언트 | 마이크로 소프트 문서
+title: 정보
 ms.date: 04/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 30ef404501c498fca2c722e9eb88bb13997a17b5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: d175942c9d636221868ca12743e6dac79bb2ddcb
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81305041"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388713"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,6 +59,6 @@ SNAC 또는 SQL Server 네이티브 클라이언트는 SQL Server용 ODBC 및 OL
 
 -   [문자 변환을 처리 시 ODBC 드라이버 동작 변경](../../relational-databases/native-client/features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
 
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
 [SQL 서버 네이티브 클라이언트 설치](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
  [SQL Server Native Client 기능](../../relational-databases/native-client/features/sql-server-native-client-features.md)  

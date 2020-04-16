@@ -1,5 +1,6 @@
 ---
-title: ADO (SQLXML)를 사용 하 여 Updategram 실행
+title: ADO(SQLXML)를 사용하여 업데이트 그램 실행
+description: Microsoft SQL Server 인스턴스에 대한 연결을 설정하고 ADO(SQLXML 4.0)를 사용하여 updategram.by 실행하는 방법을 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9982a7128c8b6d34fefad77045bda59ed4f2f5f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7392ec41759116b350047302cfe770da006e6c66
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75252488"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388734"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>ADO를 사용하여 updategram 실행(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,19 +29,19 @@ ms.locfileid: "75252488"
   
  이 예제 애플리케이션에서는 다음 작업이 수행됩니다.  
   
--   **Conn** 개체 (**ADODB. 연결**) 특정 서버 컴퓨터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 실행 중인 인스턴스에 대 한 연결을 설정 합니다.  
+-   **conn** **개체(ADODB) 연결)은**특정 서버 컴퓨터에서 실행 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 중인 인스턴스에 대한 연결을 설정합니다.  
   
--   **Cmd** 개체 (**ADODB 명령**)는 설정 된 연결에서 실행 됩니다.  
+-   **cmd** **개체(ADODB.Command)는**설정된 연결에서 실행됩니다.  
   
 -   명령 언어가 DBGUID_MSSQLXML로 설정됩니다.  
   
--   Updategram가 명령 스트림 (**Strmin**)에 복사 됩니다.  
+-   업데이트 그램은 명령**스트림(strmIn)으로**복사됩니다.  
   
--   명령의 출력 스트림은 **Strmout** 개체 (**ADODB. Stream**)을 클릭 하 여 반환 된 데이터를 수신 합니다.  
+-   명령의 출력 스트림은 **StrmOut** **개체(ADODB)로 설정됩니다. 스트리밍)을**사용하여 반환된 데이터를 수신합니다.  
   
 -   최종적으로 명령(updategram)이 실행됩니다.  
   
- 다음은 샘플 코드입니다.  
+ 다음은 예제 코드입니다.  
   
 ```vb  
 Private Sub Form_Load()  
@@ -184,7 +185,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>매개 변수 전달  
- 앞서 살펴보았던 Visual Basic 애플리케이션에서는 매개 변수가 전달되지 않았습니다. 이 응용 프로그램에서 **ContactID** 및 **MiddleName** 값은 매개 변수가 있는 입력으로 updategram에 전달 됩니다.  
+ 앞서 살펴보았던 Visual Basic 애플리케이션에서는 매개 변수가 전달되지 않았습니다. 이 응용 프로그램에서 **ContactID** 및 **MiddleName** 값은 업데이트 그램에 매개 변수입력으로 전달됩니다.  
   
 ```vb  
 Private Sub Form_Load()  

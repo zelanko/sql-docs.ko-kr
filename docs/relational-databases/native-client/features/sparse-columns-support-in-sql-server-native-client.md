@@ -1,5 +1,5 @@
 ---
-title: SQL 네이티브 클라이언트에서 스파스 열 지원
+title: 스파스 열 지원
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 958424a4710b76e7e09ae15e10b612630f09eee3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 54fe59caad74c856ef7a548fb54433f66c216a2c
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81303791"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388452"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>SQL Server Native Client의 스파스 열 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,5 +1,6 @@
 ---
-title: CommandStream 속성을 사용 하 여 템플릿 파일 실행
+title: CommandStream 속성을 통해 템플릿 파일 실행
+description: SqlXmlCommand 개체의 CommandStream 속성을 사용하여 SQL 또는 XPath 쿼리로 구성된 템플릿 파일을 실행하는 방법에 대해 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8741f9f4a094e33aa8da52d6a27d5169e2b09866
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a3b7922921c64c9afb7ef37be57db23a32470eaf
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75251477"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388360"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>CommandStream 속성을 사용하여 템플릿 파일 실행
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  이 예에서는 SqlXmlCommand 개체의 CommandStream 속성을 사용 하 여 SQL 또는 XPath 쿼리로 구성 된 템플릿 파일을 지정할 수 있는 방법을 보여 줍니다. 이 응용 프로그램에서 FileStreamobject는 명령 파일에 대해 열리며, 파일 스트림은 실행 되는 CommandStream으로 할당 됩니다.  
+  이 예제에서는 SqlXmlCommand 개체의 CommandStream 속성을 사용하여 SQL 또는 XPath 쿼리로 구성된 템플릿 파일을 지정하는 방법을 보여 줍니다. 이 응용 프로그램에서는 명령 파일에 대해 FileStreamobject가 열리고 파일 스트림이 실행되는 CommandStream으로 할당됩니다.  
   
- 다음 예제에서 CommandType 속성은 SqlXmlCommandType로 지정 됩니다 (템플릿 파일 아님).  
+ 다음 예제에서 CommandType 속성은 SqlXmlCommandType.Template(템플릿파일이 아님)으로 지정됩니다.  
   
  예제 XML 템플릿은 다음과 같습니다.  
   

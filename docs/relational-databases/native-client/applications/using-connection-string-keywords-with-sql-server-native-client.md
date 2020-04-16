@@ -1,5 +1,5 @@
 ---
-title: 네이티브 클라이언트, 연결 키워드 SQL
+title: 연결 문자열 키워드 사용
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -17,12 +17,12 @@ ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4c6dd4f0cecc7b2772e82386d552e8b391d6dfd
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 86e615d22284c5e22f3c6281caa683becfc35bb0
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81303921"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388581"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>SQL Server Native Client에서 연결 문자열 키워드 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "81303921"
   
  다음 표에서는 ODBC 연결 문자열에서 사용할 수 있는 키워드에 대해 설명합니다.  
   
-|키워드|설명|  
+|키워드|Description|  
 |-------------|-----------------|  
 |**Addr**|"Address"에 대한 동의어입니다.|  
 |**주소**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 서버의 네트워크 주소입니다. **Address**는 일반적으로 서버의 네트워크 이름이지만 파이프, IP 주소나 TCP/IP 포트 및 소켓 주소와 같은 다른 이름일 수도 있습니다.<br /><br /> IP 주소를 지정하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자에서 TCP/IP 또는 명명된 파이프 프로토콜이 설정되어 있는지 확인합니다.<br /><br /> **주소** 값은 네이티브 클라이언트를 사용할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 때 ODBC 연결 문자열에서 **서버에** 전달된 값보다 우선합니다. 또한 **서버** 키워드에 지정된 서버에 `Address=;` 연결되지만 , `Address= ;, Address=.;`에 `Address=localhost;`있는 `Address=(local);` 모든 것은 로컬 서버에 대한 연결을 유발합니다.<br /><br /> **Address** 키워드에 대한 전체 구문은 다음과 같습니다.<br /><br /> [_protocol_**:**]*Address*[**,**_port &#124;\pipe\pipename_]<br /><br /> *protocol* 은 **tcp** (TCP/IP), **lpc** (공유 메모리) 또는 **np** (명명된 파이프)일 수 있습니다. 프로토콜에 대한 자세한 내용은 [클라이언트 프로토콜 구성](../../../database-engine/configure-windows/configure-client-protocols.md)을 참조하세요.<br /><br /> *프로토콜이나* **네트워크** 키워드를 모두 지정하지 않으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자에 지정된 프로토콜 순서를 사용합니다.<br /><br /> *port*는 지정한 서버에서 연결할 포트입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 포트 1433을 사용합니다.|  
@@ -140,7 +140,7 @@ ms.locfileid: "81303921"
   
  다음 표에서는 DBPROP_INIT_PROVIDERSTRING에서 사용할 수 있는 키워드에 대해 설명합니다.  
   
-|키워드|초기화 속성|설명|  
+|키워드|초기화 속성|Description|  
 |-------------|-----------------------------|-----------------|  
 |**Addr**|SSPROP_INIT_NETWORKADDRESS|"Address"에 대한 동의어입니다.|  
 |**주소**|SSPROP_INIT_NETWORKADDRESS|조직의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 네트워크 주소입니다.<br /><br /> 유효한 주소 구문에 대한 자세한 내용은 이 항목의 후반부의 **주소** ODBC 키워드에 대한 설명을 참조하세요.|  
@@ -195,7 +195,7 @@ ms.locfileid: "81303921"
   
  다음 표에서는 **IDataInitialize::GetDataSource**에서 사용할 수 있는 키워드에 대해 설명합니다.  
   
-|키워드|초기화 속성|설명|  
+|키워드|초기화 속성|Description|  
 |-------------|-----------------------------|-----------------|  
 |**응용 프로그램 이름**|SSPROP_INIT_APPNAME|애플리케이션을 식별하는 문자열입니다.|  
 |**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 가능한 값은 **ReadOnly** 및 **ReadWrite**입니다.<br /><br /> 기본값은 **ReadWrite**입니다. 네이티브 클라이언트의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 지원에 대한 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]자세한 내용은 [고가용성, 재해 복구에 대한 SQL Server 네이티브 클라이언트 지원을](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)참조하십시오.|  
@@ -216,7 +216,7 @@ ms.locfileid: "81303921"
 |**패킷 크기**|SSPROP_INIT_PACKETSIZE|네트워크 패킷 크기입니다. 기본값은 4096입니다.|  
 |**암호**|DBPROP_AUTH_PASSWORD|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 암호입니다.|  
 |**보안 정보 유지**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|문자열 "true" 및 "false"를 값으로 받습니다. "false"인 경우 중요한 인증 정보를 데이터 원본 개체에 유지할 수 없습니다.|  
-|**공급 기업**||[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 경우 "SQLNCLI11"이어야 합니다.|  
+|**공급자**||[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 경우 "SQLNCLI11"이어야 합니다.|  
 |**Server SPN**|SSPROP_INIT_SERVERSPN|서버의 SPN입니다. 기본값은 빈 문자열입니다. 빈 문자열을 지정하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 공급자가 생성한 기본 SPN을 사용합니다.|  
 |**트러스트 서버 인증서**|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|문자열 "true" 및 "false"를 값으로 받습니다. 기본값은 "false"이며 서버 인증서의 유효성을 검사하는 것을 의미합니다.|  
 |**Use Encryption for Data**|SSPROP_INIT_ENCRYPT|데이터를 네트워크를 통해 보내기 전에 암호화해야 하는지 여부를 지정합니다. 가능한 값은 "true" 및 "false"입니다. 기본값은 "false"입니다.|  
@@ -246,7 +246,7 @@ ms.locfileid: "81303921"
   
  다음 표에서는 ADO 연결 문자열에서 사용할 수 있는 키워드에 대해 설명합니다.  
   
-|키워드|초기화 속성|설명|  
+|키워드|초기화 속성|Description|  
 |-------------|-----------------------------|-----------------|  
 |**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 가능한 값은 **ReadOnly** 및 **ReadWrite**입니다.<br /><br /> 기본값은 **ReadWrite**입니다. 네이티브 클라이언트의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 지원에 대한 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]자세한 내용은 [고가용성, 재해 복구에 대한 SQL Server 네이티브 클라이언트 지원을](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)참조하십시오.|  
 |**응용 프로그램 이름**|SSPROP_INIT_APPNAME|애플리케이션을 식별하는 문자열입니다.|  
@@ -267,7 +267,7 @@ ms.locfileid: "81303921"
 |**패킷 크기**|SSPROP_INIT_PACKETSIZE|네트워크 패킷 크기입니다. 기본값은 4096입니다.|  
 |**암호**|DBPROP_AUTH_PASSWORD|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 암호입니다.|  
 |**보안 정보 유지**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|문자열 "true" 및 "false"를 값으로 받습니다. "false"인 경우 중요한 인증 정보를 데이터 원본 개체에 유지할 수 없습니다.|  
-|**공급 기업**||[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 경우 "SQLNCLI11"이어야 합니다.|  
+|**공급자**||[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 경우 "SQLNCLI11"이어야 합니다.|  
 |**Server SPN**|SSPROP_INIT_SERVERSPN|서버의 SPN입니다. 기본값은 빈 문자열입니다. 빈 문자열을 지정하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 공급자가 생성한 기본 SPN을 사용합니다.|  
 |**트러스트 서버 인증서**|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|문자열 "true" 및 "false"를 값으로 받습니다. 기본값은 "false"이며 서버 인증서의 유효성을 검사하는 것을 의미합니다.|  
 |**Use Encryption for Data**|SSPROP_INIT_ENCRYPT|데이터를 네트워크를 통해 보내기 전에 암호화해야 하는지 여부를 지정합니다. 가능한 값은 "true" 및 "false"입니다. 기본값은 "false"입니다.|  
@@ -276,7 +276,7 @@ ms.locfileid: "81303921"
   
  **참고** 연결 문자열에서 “이전 암호” 속성은 공급자 문자열 속성을 통해 사용할 수 없는 현재(만료된) 암호인 SSPROP_AUTH_OLD_PASSWORD를 설정합니다.  
   
-## <a name="see-also"></a>참조  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client를 사용하여 애플리케이션 빌드](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

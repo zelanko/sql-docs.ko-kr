@@ -1,5 +1,5 @@
 ---
-title: SQL 서버 네이티브 클라이언트 설치 | 마이크로 소프트 문서
+title: 설치
 ms.custom: ''
 ms.date: 07/15/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - removing SQL Server Native Client
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c6f7dba15a6c86839f7c0285fbb383920e18589
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
-ms.translationtype: HT
+ms.openlocfilehash: 77d5bcf0d1000b0ceee182ba043f81b4c1221ae8
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81302491"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388220"
 ---
 # <a name="installing-sql-server-native-client"></a>SQL Server Native Client 설치
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

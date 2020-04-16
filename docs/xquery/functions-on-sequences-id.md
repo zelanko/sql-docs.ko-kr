@@ -1,5 +1,6 @@
 ---
-title: id 함수 (XQuery) | Microsoft Docs
+title: ID 함수 (X쿼리) | 마이크로 소프트 문서
+description: XQuery id 함수를 사용하여 제공된 xs:IDREF 값과 함께 문서 순서대로 XML 인스턴스의 요소 시퀀스를 반환하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 21bf98ac97c9a695b7b9576412d43c832011322d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 45b7f9f7ee9fa301b10c29fafb663c3a307509d7
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68004665"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388510"
 ---
 # <a name="functions-on-sequences---id"></a>시퀀스 함수 - id
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  *$Arg*에 제공 된 하나 이상의 XS: IDREF 값과 일치 하는 XS: ID 값이 포함 된 요소 노드의 시퀀스를 반환 합니다.  
+  *$arg*제공된 하나 이상의 xs:IDREF 값과 일치하는 xs:ID 값을 사용하여 요소 노드 시퀀스를 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,20 +45,20 @@ fn:id($arg as xs:IDREF*) as element()*
  요소와 일치하는 xs:IDREF 값이 없으면 이 함수는 빈 시퀀스를 반환합니다.  
   
 ## <a name="examples"></a>예  
- 이 항목에서는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 Xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
+ 이 항목에서는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스의 다양한 xml 형식 열에 저장된 **XML** 인스턴스에 대한 XQuery 예제를 제공합니다.  
   
 ### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. IDREF 특성 값을 기반으로 요소 검색  
- 다음 예에서는 fn: id를 사용 하 여 IDREF `employee` manager 특성에 따라 <> 요소를 검색 합니다. 이 예에서 관리자 특성은 IDREF 유형 특성이고 eid 특성은 ID 유형 특성입니다.  
+ 다음 예제에서는 fn:id를 사용하여 `employee` IDREF 관리자 특성을 기반으로 <> 요소를 검색합니다. 이 예에서 관리자 특성은 IDREF 유형 특성이고 eid 특성은 ID 유형 특성입니다.  
   
- 특정 관리자 특성 값의 경우 **id ()** 함수는 id 유형 특성 값 `employee` 이 입력 IDREF 값과 일치 하는 <> 요소를 찾습니다. 즉, 특정 직원에 대해 **id ()** 함수는 employee manager를 반환 합니다.  
+ 특정 관리자 특성 값의 경우 **id()** `employee` 함수는 id type 값값이 입력 IDREF 값과 일치하는 <> 요소를 찾습니다. 즉, 특정 직원의 **경우 id()** 함수는 직원 관리자를 반환합니다.  
   
  다음은 이 예에서 수행된 작업입니다.  
   
 -   XML 스키마 컬렉션이 생성됩니다.  
   
--   형식화 된 **xml** 변수는 xml 스키마 컬렉션을 사용 하 여 생성 됩니다.  
+-   XML 스키마 컬렉션을 사용하여 형식이 입력된 **xml** 변수가 만들어집니다.  
   
--   이 쿼리는 <`employee`> 요소의 **manager** IDREF 특성에서 참조 하는 ID 특성 값을 가진 요소를 검색 합니다.  
+-   쿼리는 <`employee`> 요소의 **관리자** IDREF 특성에서 참조하는 ID 특성 값이 있는 요소를 검색합니다.  
   
 ```  
 -- If exists, drop the XML schema collection (SC).  
@@ -98,9 +99,9 @@ Go
  쿼리는 "Dave"를 값으로 반환합니다. 즉 Dave가 Joe의 관리자라는 의미입니다.  
   
 ### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. OrderList IDREFS 특성 값을 기반으로 요소 검색  
- 다음 예에서는 <`Customer`> 요소의 ORDERLIST 특성이 IDREFS 유형 특성입니다. 특정 고객에 대한 주문 ID를 나열합니다. 각 주문 id에는 주문 값을 제공 `Order` 하는> <`Customer` <> 요소 자식이 있습니다.  
+ 다음 예제에서 <`Customer`> 요소의 OrderList 특성은 IDREFS 형식 특성입니다. 특정 고객에 대한 주문 ID를 나열합니다. 각 주문 id에 대해 `Order` 주문 값을 제공하는 `Customer` <> 아래에 <> 요소 자식이 있습니다.  
   
- 쿼리 식 `data(CustOrders:Customers/Customer[1]/@OrderList)[1]`은 첫 번째 고객에 대한 IDRES 목록에서 첫 번째 값을 검색합니다. 그런 다음이 값은 **id ()** 함수에 전달 됩니다. 그런 다음이 함수는 OrderID `Order` 특성 값이 **id ()** 함수의 입력과 일치 하는 <> 요소를 찾습니다.  
+ 쿼리 식 `data(CustOrders:Customers/Customer[1]/@OrderList)[1]`은 첫 번째 고객에 대한 IDRES 목록에서 첫 번째 값을 검색합니다. 그런 다음 이 값은 **id()** 함수에 전달됩니다. 그런 다음 함수는 `Order` orderID 특성 값이 **id()** 함수에 입력과 일치하는 <> 요소를 찾습니다.  
   
 ```  
 drop xml schema collection SC  
@@ -176,9 +177,9 @@ select @x.query('declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>구현 시 제한 사항  
  제한 사항은 다음과 같습니다.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 **id ()** 의 두 인수 버전을 지원 하지 않습니다.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]**id()** 의 2인수 버전을 지원하지 않습니다.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]**id ()** 의 인수 형식이 XS: IDREF *의 하위 형식 이어야 합니다.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]**id()** 인수 형식이 xs:IDREF*의 하위 유형이어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [시퀀스 함수](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  

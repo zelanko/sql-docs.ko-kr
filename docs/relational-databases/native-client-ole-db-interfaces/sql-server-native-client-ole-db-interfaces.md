@@ -1,5 +1,5 @@
 ---
-title: SQL 서버 네이티브 클라이언트(OLE DB) 참조 | 마이크로 소프트 문서
+title: 올레 DB 레퍼런스
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 7c462c92-ad5b-4dd5-817d-2b89c83d8fe4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc5fb3b05d4bb91b71e74bf68eb5ac2ec583a083
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 31fff0767ecbbbf41349b3f0dd431eb440fa7d77
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81289783"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388522"
 ---
 # <a name="sql-server-native-client-ole-db-interfaces"></a>SQL Server Native Client(OLE DB) 인터페이스
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
