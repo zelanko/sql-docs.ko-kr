@@ -1,5 +1,5 @@
 ---
-title: '작업 3: 마스터 데이터 관리자에서 데이터 확인 | Microsoft Docs'
+title: '작업 3: 마스터 데이터 관리자의 데이터 확인 | 마이크로 소프트 문서'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,21 +10,19 @@ ms.assetid: d88953d2-2258-40ac-b3bf-2ef502f9b5fd
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 786bbfe8acb029bf23ad0e2169ef29ab89a85b01
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 8e5d87a9d98e4804dd9f2687b5125e55882606c7
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177263"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487684"
 ---
 # <a name="task-3-verifying-the-data-in-master-data-manager"></a>태스크 3: 마스터 데이터 관리자에서 데이터 확인
   이 작업에서는 **마스터 데이터 관리자 웹 애플리케이션** 을 사용해서 **Supplier** 엔터티가 **MDS**에 생성되었는지 확인합니다.
 
-1.  
-  **마스터 데이터 관리자** 가 이미 열려 있으면 상단에서 **SQL Server 2012 Master Data Services** 를 클릭하여 홈 페이지로 이동합니다. 그렇지 않으면로 [http://localhost/mds](http://localhost/mds) 이동 하 여 **마스터 데이터 관리자**를 시작 합니다.
+1.  **마스터 데이터 관리자** 가 이미 열려 있으면 상단에서 **SQL Server 2012 Master Data Services** 를 클릭하여 홈 페이지로 이동합니다. 그렇지 않으면 `http://localhost/MDS` 마스터 **데이터 관리자를**시작하려면 이동합니다.
 
-2.  
-  **모델** 에 대해 **Suppliers**를 선택하고 **탐색기**를 클릭합니다.
+2.  **모델** 에 대해 **Suppliers**를 선택하고 **탐색기**를 클릭합니다.
 
      ![마스터 데이터 관리자 - 탐색기 단추](../../2014/tutorials/media/et-verifyingthedatainmasterdatamanager.jpg "마스터 데이터 관리자 - 탐색기 단추")
 

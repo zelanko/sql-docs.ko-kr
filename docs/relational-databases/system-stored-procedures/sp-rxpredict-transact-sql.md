@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3c12349e48f474b53957ffac55415ccc0689eeca
-ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
+ms.openlocfilehash: 9663b4cd51a7aca9e9e30ccafcdcb0652ec4229a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "81012442"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488546"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,13 +64,13 @@ sp_rxPredict  ( @model, @input )
 
 ### <a name="supported-algorithms"></a>지원되는 알고리즘
 
-모델을 만들고 학습하려면 [SQL Server 기계 학습 서비스(R 또는 파이썬)](https://docs.microsoft.com/sql/machine-learning/what-is-sql-server-machine-learning)및 SQL Server [2016 R 서비스,](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services)SQL Server 기계 학습 [서버(독립 실행형) 또는](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)SQL Server [2016 R 서버(독립 실행형)에서](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)제공하는 R 또는 파이썬에 대한 지원되는 알고리즘 중 하나를 사용합니다.
+모델을 만들고 학습하려면 [SQL Server 기계 학습 서비스(R 또는 파이썬)](https://docs.microsoft.com/sql/machine-learning/sql-server-machine-learning-services)및 SQL Server [2016 R 서비스,](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services)SQL Server 기계 학습 [서버(독립 실행형) 또는](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)SQL Server [2016 R 서버(독립 실행형)에서](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)제공하는 R 또는 파이썬에 대한 지원되는 알고리즘 중 하나를 사용합니다.
 
 #### <a name="r-revoscaler-models"></a>R: 반란 스케일R 모델
 
   + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)
   + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)
-  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)
+  + [rxB트리](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)
   + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)
   + [rxd포레스트](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest)
 

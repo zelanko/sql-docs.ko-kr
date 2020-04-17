@@ -1,5 +1,6 @@
 ---
-title: SqlDataRecord 개체 | Microsoft Docs
+title: SqlDataRecord 개체 | 마이크로 소프트 문서
+description: SQL Server CLR 통합에서 저장 프로시저는 SqlDataRecord 클래스를 사용하여 사용자 지정 결과 집합을 클라이언트에 보낼 수 있습니다.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,20 +14,18 @@ helpviewer_keywords:
 ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 76f89af5ea6a7b1ab7a01bda14cce391a1b4b750
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4aa5ea4d06ac5b8da69eec246387007ba5d03606
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68122768"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487512"
 ---
 # <a name="sqldatarecord-object"></a>SqlDataRecord 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
   **SqlDataRecord** 개체는 관련 메타데이터와 함께 하나의 데이터 행을 나타냅니다.  
   
- 관리되는 저장 프로시저는 **SqlDataReader**에서 제공되지 않은 결과 집합을 클라이언트로 보낼 수 있습니다. 
-  **SqlDataRecord** 클래스와 함께 **SendResultsStart**개체의 **SendResultsRow**, **SendResultsEnd** 및 **SqlPipe** 메서드를 사용하면 저장 프로시저에서 사용자 지정 결과 집합을 클라이언트로 보낼 수 있습니다.  
+ 관리되는 저장 프로시저는 **SqlDataReader**에서 제공되지 않은 결과 집합을 클라이언트로 보낼 수 있습니다. **SqlDataRecord** 클래스와 함께 **SendResultsStart**개체의 **SendResultsRow**, **SendResultsEnd** 및 **SqlPipe** 메서드를 사용하면 저장 프로시저에서 사용자 지정 결과 집합을 클라이언트로 보낼 수 있습니다.  
   
  자세한 내용은 .NET Framework SDK 설명서의 **Microsoft.SqlServer.Server.SqlDataRecord** 클래스 참조 설명서를 참조하십시오.  
   

@@ -16,12 +16,12 @@ ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1bedefd277f1be7f44d807e6539097dd24f5ab2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4c015844fd0b0a3ed219adabaf95f4b2af98d663
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62900913"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486979"
 ---
 # <a name="raw-file-source"></a>원시 파일 원본
   원시 파일 원본은 파일에서 원시 데이터를 읽습니다. 원본의 기본 데이터 표현을 사용하므로 데이터를 변환하거나 거의 구문 분석할 필요도 없습니다. 따라서 원시 파일 원본은 플랫 파일 및 OLE DB 원본과 같은 다른 원본보다 빨리 데이터를 읽을 수 있습니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "62900913"
   
 ## <a name="related-content"></a>관련 내용  
   
--   sqlservercentral.com의 블로그 항목 - [원시 파일의 놀라운 기능](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)  
+-   sqlservercentral.com의 블로그 항목 - [원시 파일의 놀라운 기능](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131)  
   
 ## <a name="see-also"></a>참고 항목  
  [원시 파일 대상](raw-file-destination.md)   

@@ -192,7 +192,7 @@
               href: tables/lesson-2-5-summary-managing-data-in-a-hierarchical-table.md
     - name: '자습서: 인증서로 저장 프로시저 서명'
       href: tutorial-signing-stored-procedures-with-a-certificate.md
-    - name: 'Tutorial: Ownership Chains and Context Switching'
+    - name: '자습서: 소유권 체인 및 컨텍스트 전환'
       href: tutorial-ownership-chains-and-context-switching.md
     - name: '자습서: 정책 기반 관리를 사용하여 서버 관리'
       href: policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md
@@ -208,9 +208,9 @@
           href: policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
           items:
             - name: Finance Name 정책 만들기
-              href: policy-based-management/lesson-2-1-create-the-finance-name-policy.md
+              href: policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
             - name: Finance Name 정책 구독 및 확인
-              href: policy-based-management/lesson-2-2-subscribe-to-and-check-the-finance-name-policy.md
+              href: policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
     - name: '자습서: 정책 기반 관리를 사용하여 최선의 구현 방법 평가'
       href: ../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md
       items:
@@ -235,13 +235,13 @@
       items:
         - name: '1단원: Azure Storage 개체 만들기'
           href: ../tutorials/lesson-1-create-windows-azure-storage-objects.md
-        - name: 'Lesson 2: Create a SQL Server Credential'
+        - name: '2단원: SQL Server 자격 증명 만들기'
           href: ../tutorials/lesson-2-create-a-sql-server-credential.md
-        - name: '3단원: Azure Blob Storage 서비스로 전체 데이터베이스 백업 작성'
+        - name: '3단원: Azure Blob Storage Service로 전체 데이터베이스 백업 작성'
           href: ../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md
         - name: '4단원: 전체 데이터베이스 백업에서 복원 수행'
           href: ../tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md
-    - name: '자습서: Azure Storage 서비스의 SQL Server 데이터 파일'
+    - name: '자습서: Azure Storage의 SQL Server 데이터 파일 서비스'
       href: tutorial-use-azure-blob-storage-service-with-sql-server-2016.md
       items:
         - name: '1단원: Azure Storage 계정 및 컨테이너 만들기'

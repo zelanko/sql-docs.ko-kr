@@ -1,5 +1,6 @@
 ---
-title: 어셈블리 속성 (일반 페이지) | Microsoft Docs
+title: 어셈블리 속성(일반 페이지) | 마이크로 소프트 문서
+description: SQL Server에서 호스팅되는 어셈블리의 속성을 보거나 수정할 수 있습니다. 여기에는 어셈블리 이름 및 소유자, 사용 권한 집합 및 기타 속성이 포함됩니다.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cab96fb470e4cc19da0612163f364d6339841985
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 64e1847db5477ce556824d1b424649f617a0fa9f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68027968"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488022"
 ---
 # <a name="assemblies---properties"></a>어셈블리 - 속성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68027968"
  **어셈블리 소유자**  
  소유자 이름 또는 스키마 이름을 입력하거나 목록에서 선택합니다.  
   
- **권한 집합**  
+ **사용 권한 집합**  
  어셈블리에 대한 보안 수준을 설정합니다. 제공되는 세 가지 보안 수준은 **Safe**, **External access**, **Unsafe** 액세스입니다.  
   
  **어셈블리 경로**  
@@ -39,13 +40,13 @@ ms.locfileid: "68027968"
  추가할 어셈블리로 이동합니다. 어셈블리 파일의 경로를 입력하지 않으려면 **찾아보기** 를 클릭합니다.  
   
 ## <a name="additional-properties-grid"></a>추가 속성 표  
- **만든 날짜**  
+ **생성 날짜**  
  어셈블리를 만들거나 등록한 날짜를 표시합니다.  
   
  **강력한 이름**  
  어셈블리에 디지털 서명된 경우에는 **True** 를 표시하고 디지털 서명되지 않은 경우에는 **False** 를 표시합니다.  
   
- **버전**  
+ **Version**  
  어셈블리의 버전 번호를 표시합니다.  
   
 ## <a name="see-also"></a>참고 항목  

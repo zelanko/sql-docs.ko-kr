@@ -20,12 +20,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 19eaefc6fcd6615b74614893a37aa1722095e63d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 9597b55eabb247dc4a95ed83fe04abac5067a269
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664311"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488185"
 ---
 # <a name="sysdm_external_script_execution_stats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "80664311"
 외부 스크립트 요청의 각 유형에 대해 하나의 행을 반환합니다. 외부 스크립트 요청이 지원되는 외부 스크립트 언어로 그룹화됩니다. 각 등록된 외부 스크립트 함수에 대해 행이 하나씩 생성됩니다. 임의의 외부 스크립트 함수는 `rxExec`같은 부모 프로세스에 의해 전송되지 않는 한 기록되지 않습니다.
   
 > [!NOTE]  
-> 이 동적 관리 보기(DMV)는 외부 스크립트 실행을 지원하는 기능을 설치하고 사용하도록 설정한 경우에만 사용할 수 있습니다. 자세한 내용은 [SQL Server 2016의 R 서비스](../../machine-learning/r/sql-server-r-services.md) 및 SQL Server [2017 및 이후의 기계 학습 서비스(R, Python)를](../../machine-learning/what-is-sql-server-machine-learning.md)참조하십시오.  
+> 이 동적 관리 보기(DMV)는 외부 스크립트 실행을 지원하는 기능을 설치하고 사용하도록 설정한 경우에만 사용할 수 있습니다. 자세한 내용은 [SQL Server 2016의 R 서비스](../../machine-learning/r/sql-server-r-services.md) 및 SQL Server [2017 및 이후의 기계 학습 서비스(R, Python)를](../../machine-learning/sql-server-machine-learning-services.md)참조하십시오.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |언어|**nvarchar**|등록된 외부 스크립트 언어의 이름입니다. 각 외부 스크립트에서 연결된 실행 프로그램을 시작하려면 스크립트 요청에서 언어를 지정 해야 합니다. |  
 |counter_name|**nvarchar**|등록된 외부 스크립트 함수의 이름입니다. Null을 허용하지 않습니다.|  

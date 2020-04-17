@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 67e24b9c5c4ccd5f6ab2159ed5924474ff77bc84
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 70f1024f73ff955facaa2b6a2af2b9f5f4ccf247
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664286"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488203"
 ---
 # <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "80664286"
   
 > [!NOTE] 
 >  
-> 이 동적 관리 보기(DMV)는 외부 스크립트 실행을 지원하는 기능을 설치하고 사용하도록 설정한 경우에만 사용할 수 있습니다. 자세한 내용은 [SQL Server 2016의 R 서비스](../../machine-learning/r/sql-server-r-services.md) 및 SQL Server [2017 및 이후의 기계 학습 서비스(R, Python)를](../../machine-learning/what-is-sql-server-machine-learning.md)참조하십시오.  
+> 이 동적 관리 보기(DMV)는 외부 스크립트 실행을 지원하는 기능을 설치하고 사용하도록 설정한 경우에만 사용할 수 있습니다. 자세한 내용은 [SQL Server 2016의 R 서비스](../../machine-learning/r/sql-server-r-services.md) 및 SQL Server [2017 및 이후의 기계 학습 서비스(R, Python)를](../../machine-learning/sql-server-machine-learning-services.md)참조하십시오.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |external_script_request_id|**고유 식별자**|외부 스크립트 요청을 전송한 프로세스 ID입니다. 이는[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |언어|**nvarchar**|지원되는 스크립트 언어를 나타내는 키워드입니다. |  
-|degree_of_parallelism|**Int**|생성된 병렬 프로세스의 수를 나타내는 숫자입니다. 이 값은 요청된 병렬 프로세스의 수와 다를 수 있습니다.|  
+|degree_of_parallelism|**int**|생성된 병렬 프로세스의 수를 나타내는 숫자입니다. 이 값은 요청된 병렬 프로세스의 수와 다를 수 있습니다.|  
 |external_user_name|**nvarchar**|스크립트가 실행된 Windows 작업자 계정입니다.|  
   
 ## <a name="permissions"></a>사용 권한  

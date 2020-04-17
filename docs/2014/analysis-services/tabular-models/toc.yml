@@ -166,7 +166,7 @@
     - name: Excel에서 테이블 형식 모델 분석
       href: analyze-a-tabular-model-in-excel-ssas-tabular.md
 - name: 테이블 형식 모델 솔루션 배포
-  href: tabular-model-solution-deployment-ssas-tabular.md
+  href: 'https://docs.microsoft.com/analysis-services/deployment/tabular-model-solution-deployment'
   items:
     - name: SQL Server Data Tools에서 배포
       href: deploy-from-sql-server-data-tools-ssas-tabular.md

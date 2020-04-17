@@ -18,12 +18,12 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b7996ed3cc3ea209361790f23f6955f09be035e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6a4610a5f0963cbe94c82c33a63f08490cec36d9
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62770863"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487015"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
   원시 파일 대상은 원시 데이터를 파일에 기록합니다. 대상의 기본 데이터 형식을 사용하므로 데이터를 변환하거나 구문 분석할 필요도 거의 없습니다. 따라서 원시 파일 대상은 플랫 파일 및 OLE DB 대상과 같은 다른 대상보다 빨리 데이터를 기록할 수 있습니다.  
@@ -113,7 +113,7 @@ ms.locfileid: "62770863"
   
 1.  WriteOption 속성을 **CreateOnce** 또는 **CreateAlways**로 설정하고 루프의 반복 하나를 실행합니다. 파일이 생성됩니다. 이렇게 하면 추가된 데이터와 파일의 메타데이터가 일치하게 됩니다.  
   
-2.  WriteOption 속성을 **Append** 로 다시 설정 하 고 ValidateExternalMetadata 속성을 `False`로 설정 합니다.  
+2.  WriteOption 속성을 다시 설정하여 에 대해 ValidateExternalMetadata `False`속성을 **부가합니다.**  
   
  **Append** 옵션 대신에 **TruncateAppend** 옵션을 사용할 경우 이전 반복에서 추가된 행이 잘리고 새 행이 추가됩니다. **TruncateAppend** 옵션을 사용할 경우에도 데이터가 파일 형식과 일치해야 합니다.  
   
@@ -130,10 +130,10 @@ ms.locfileid: "62770863"
  구성 요소의 속성을 설정하는 방법에 대한 자세한 내용은 [데이터 흐름 구성 요소의 속성 설정](set-the-properties-of-a-data-flow-component.md)을 참조하세요.  
   
 ## <a name="related-content"></a>관련 내용  
- sqlservercentral.com의 블로그 항목 - [원시 파일의 놀라운 기능](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)  
+ sqlservercentral.com의 블로그 항목 - [원시 파일의 놀라운 기능](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131)  
   
 ## <a name="see-also"></a>참고 항목  
- [원시 파일 원본](raw-file-source.md)   
+ [원시 파일 소스](raw-file-source.md)   
  [데이터 흐름](data-flow.md)  
   
   

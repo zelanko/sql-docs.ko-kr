@@ -6,7 +6,7 @@
   expanded: true
   items:
     - name: Machine Learning Services (Python 및 R)란?
-      href: ../machine-learning/what-is-sql-server-machine-learning.md
+      href: ../machine-learning/sql-server-machine-learning-services.md
     - name: R Services란?
       href: ../machine-learning/r/sql-server-r-services.md
     - name: 독립 실행형 서버

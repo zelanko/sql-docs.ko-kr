@@ -1,5 +1,6 @@
 ---
-title: Dataadapter를 사용 하 여 UDT 열 업데이트 | Microsoft Docs
+title: 데이터 어댑터로 UDT 열 업데이트 | 마이크로 소프트 문서
+description: SQL Server 데이터베이스의 UDT는 System.Data.DataSet 및 System.Data.SqlClient.SqlDataAdapter를 사용하여 데이터를 검색하고 수정하여 지원됩니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,20 +23,19 @@ helpviewer_keywords:
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2154f5f81842cf8cefd5eac71f42837cbf33da31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 08c36963088684d415534e091a2764f576a86d22
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68028381"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488229"
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>사용자 정의 형식 액세스 - DataAdapters로 UDT 열 업데이트
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Udt (사용자 정의 형식)는 데이터를 검색 및 수정 **하는** **SqlDataAdapter** 및 데이터를 사용 하 여 지원 됩니다.  
+  사용자 정의 형식(UDT)은 **System.Data.DataSet** 및 **System.Data.SqlClient.SqlDataAdapter를** 사용하여 데이터를 검색하고 수정하여 지원됩니다.  
   
 ## <a name="populating-a-dataset"></a>데이터 세트 채우기  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문을 사용하여 UDT 열 값을 선택하면 데이터 어댑터를 사용하여 데이터 세트을 채울 수 있습니다. 다음 예에서는 다음 구조와 일부 샘플 데이터를 사용 하 여 정의 된 **Points** 테이블이 있다고 가정 합니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 **Points** 테이블을 만들고 몇 개의 행을 삽입 합니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문을 사용하여 UDT 열 값을 선택하면 데이터 어댑터를 사용하여 데이터 세트을 채울 수 있습니다. 다음 예제에서는 다음 구조와 일부 샘플 데이터로 정의된 **포인트** 테이블이 있다고 가정합니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 포인트 테이블을 만들고 몇 개의 행을 **삽입합니다.**  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -47,7 +47,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- 다음 ADO.NET 코드 조각에서는 유효한 연결 문자열을 검색 하 고, 새 **SqlDataAdapter**를 만든 다음, **Points** 테이블의 데이터 **행으로 system.xml을 채웁니다** .  
+ 다음 ADO.NET 코드 조각은 유효한 연결 문자열을 검색하고, 새 **SqlDataAdapter를**만들고, **Points** 테이블의 데이터 행으로 **System.Data.DataTable을** 채웁니다.  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  
@@ -64,16 +64,16 @@ da.Fill(datTable);
 ```  
   
 ## <a name="updating-udt-data-in-a-dataset"></a>데이터 세트의 UDT 데이터 업데이트  
- 다음 두 가지 방법을 사용 하 여 **데이터 집합**의 UDT 열을 업데이트할 수 있습니다.  
+ **데이터 집합에서**UDT 열을 업데이트하려면 두 가지 방법을 사용할 수 있습니다.  
   
--   **SqlDataAdapter** 개체에 대 한 사용자 지정 **InsertCommand**, **UpdateCommand** 및 **DeleteCommand** 개체를 제공 합니다.  
+-   **SqlDataAdapter** 개체에 대한 사용자 지정 **InsertCommand,** **UpdateCommand** 및 **DeleteCommand** 개체를 제공합니다.  
   
--   명령 작성기 (**SqlCommandBuilder**)를 사용 하 여 자동으로 INSERT, UPDATE 및 DELETE 명령을 만듭니다. 충돌 감지를 위해 UDT가 포함 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 **timestamp** 열 (alias **rowversion**)을 추가 합니다. **Timestamp** 데이터 형식을 사용 하 여 테이블의 행을 버전 스탬프로 만들고 데이터베이스 내에서 고유 하 게 보장할 수 있습니다. 테이블의 값이 변경되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 변경이 적용되는 행의 8바이트 이진 숫자를 업데이트합니다.  
+-   명령**작성기(System.Data.SqlClient.SqlCommandBuilder)를**사용하여 자동으로 삽입, 업데이트 및 DELETE 명령을 만듭니다. 충돌 감지를 위해 UDT가 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 **타임스탬프** 열(별칭 **행버전)을**추가합니다. **타임스탬프** 데이터 형식을 사용하면 테이블의 행을 버전 스탬프할 수 있으며 데이터베이스 내에서 고유하게 보장됩니다. 테이블의 값이 변경되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 변경이 적용되는 행의 8바이트 이진 숫자를 업데이트합니다.  
   
- 기본 테이블에 **timestamp** 열이 없는 경우 **SqlCommandBuilder** 는 충돌 검색에 UDT를 고려 하지 않습니다. UDT는 비교가 가능할 수도 있고 불가능할 수도 있으므로 "원래 값 비교" 옵션을 사용하여 명령을 생성하는 경우 WHERE 절에 포함되지 않습니다.  
+ **SqlCommandBuilder는** 기본 테이블에 **타임스탬프** 열이 없는 한 충돌 검색을 위해 UDT를 고려하지 않습니다. UDT는 비교가 가능할 수도 있고 불가능할 수도 있으므로 "원래 값 비교" 옵션을 사용하여 명령을 생성하는 경우 WHERE 절에 포함되지 않습니다.  
   
 ### <a name="example"></a>예제  
- 다음 예에서는 **Point** UDT 열 뿐만 아니라 **timestamp** 열을 포함 하는 두 번째 테이블을 만들어야 합니다. 두 테이블은 데이터를 업데이트 하는 사용자 지정 명령 개체를 만드는 방법과 **타임 스탬프** 열을 사용 하 여 업데이트 하는 방법을 설명 하는 데 사용 됩니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하여 두 번째 테이블을 만들고 예제 데이터를 채웁니다.  
+ 다음 예제에서는 **Point** UDT 열과 **타임스탬프** 열을 포함하는 두 번째 테이블을 작성해야 합니다. 두 테이블 모두 데이터를 업데이트하기 위해 사용자 지정 명령 개체를 만드는 방법과 **타임스탬프** 열을 사용하여 업데이트하는 방법을 설명하는 데 사용됩니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하여 두 번째 테이블을 만들고 예제 데이터를 채웁니다.  
   
 ```  
 CREATE TABLE dbo.Points_ts (id int PRIMARY KEY, p Point, ts timestamp);  
@@ -86,9 +86,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  다음 ADO.NET 예에는 두 개의 메서드가 있습니다.  
   
--   **InsertCommand**, **UpdateCommand**및 **DeleteCommand** 개체를 제공 하 여 **Points** 테이블 ( **타임 스탬프** 열이 포함 되지 않음)의 **Point** UDT를 업데이트 하는 방법을 보여 주는 **user제공**되는 명령입니다.  
+-   **UserProvidedCommand은** **Point** **테이블(타임스탬프** 열을 포함하지 않음)에서 **포인트** UDT를 업데이트하기 위한 **InsertCommand,** **UpdateCommand**및 **DeleteCommand** 개체를 제공하는 방법을 보여 줍니다.  
   
--   **CommandBuilder**는 **타임 스탬프** 열이 포함 된 **Points_ts** 테이블에서 **SqlCommandBuilder** 를 사용 하는 방법을 보여 줍니다.  
+-   **명령 빌더는** **타임 스탬프** 열을 포함 하는 **Points_ts** 테이블에서 **SqlCommandBuilder를** 사용 하는 방법을 보여 줍니다.  
   
 ```vb  
 Imports System  

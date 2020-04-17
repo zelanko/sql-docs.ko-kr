@@ -18,12 +18,12 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c233a5e9755e910a53a53fa1366faef733370474
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63128760"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487162"
 ---
 # <a name="permissions-database-engine"></a>사용 권한(데이터베이스 엔진)
   모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 개체에는 보안 주체에 부여될 수 있는 연결된 사용 권한이 있습니다. 이 항목에서는 다음 정보를 제공합니다.  
@@ -32,13 +32,13 @@ ms.locfileid: "63128760"
   
 -   [특정 보안 개체와 관련된 사용 권한](#_securables)  
   
--   [SQL Server 권한](#_permissions)  
+-   [SQL 서버 권한](#_permissions)  
   
 -   [사용 권한 검사 알고리즘](#_algorithm)  
   
 -   [예](#_examples)  
   
-##  <a name="_conventions"></a> 사용 권한 명명 규칙  
+##  <a name="permissions-naming-conventions"></a><a name="_conventions"></a>사용 권한 명명 규칙  
  다음은 사용 권한 이름 지정에 대한 일반적인 규칙 설명입니다.  
   
 -   CONTROL  
@@ -49,11 +49,11 @@ ms.locfileid: "63128760"
   
      특정 보안 개체의 소유권을 제외한 속성을 변경할 수 있는 사용 권한을 줍니다. 범위에 부여된 경우 ALTER는 또한 해당 범위 내에 포함된 임의의 보안 개체를 변경하고, 만들고, 삭제할 수 있는 기능을 부여합니다. 예를 들어 스키마의 ALTER 권한에는 스키마에서 개체를 만들고, 변경하고, 삭제할 수 있는 기능이 포함됩니다.  
   
--   ALTER ANY \<*Server Securable*>(여기서 *Server Securable*은 임의의 서버 보안 개체)  
+-   \< *서버 분리 가능* 서버가 모든 서버 를 분리할 *수* 있는> 변경합니다.  
   
      *Server Securable*의 개별 항목을 만들거나 변경하거나 삭제할 수 있는 기능을 제공합니다. 예를 들어 ALTER ANY LOGIN은 인스턴스의 모든 로그인을 만들거나 변경하거나 삭제할 수 있는 기능을 제공합니다.  
   
--   ALTER ANY \<*Database Securable*>(여기서 *Database Securable*은 데이터베이스 수준의 임의의 보안 개체)  
+-   \< *데이터베이스 분리 가능 데이터베이스 가* *Database Securable* 데이터베이스 수준에서 모든 증권화 가능 할 수있는 모든 데이터베이스 분리> 변경합니다.  
   
      *Database Securable*의 개별 항목을 만들거나(CREATE) 변경하거나(ALTER) 삭제(DROP)할 수 있는 기능을 제공합니다. 예를 들어 ALTER ANY SCHEMA는 데이터베이스의 모든 스키마를 만들거나 변경하거나 삭제할 수 있는 기능을 제공합니다.  
   
@@ -61,23 +61,23 @@ ms.locfileid: "63128760"
   
      피부여자가 부여된 보안 개체의 소유권을 갖도록 합니다.  
   
--   IMPERSONATE \<*Login*>  
+-   \< *로그인* 을 가장>  
   
      피부여자가 로그인을 가장하도록 합니다.  
   
--   IMPERSONATE \<*User*>  
+-   \< *사용자* 사칭>  
   
      피부여자가 사용자를 가장하도록 합니다.  
   
--   CREATE \<*Server Securable*>  
+-   \< *서버 분리 가능* 만들기>  
   
      피부여자에게 *Server Securable*을 만들 수 있는 기능을 제공합니다.  
   
--   CREATE \<*Database Securable*>  
+-   \< *데이터베이스 분리 가능* 만들기>  
   
      피부여자에게 *Database Securable*을 만들 수 있는 기능을 제공합니다.  
   
--   CREATE \<*Schema-contained Securable*>  
+-   \< *스키마 포함 증권 화만들기*>  
   
      스키마가 포함된 보안 개체를 만들 수 있는 기능을 제공합니다. 하지만 특정 스키마에 보안 개체를 만들려면 스키마에 대한 ALTER 권한이 필요합니다.  
   
@@ -92,9 +92,9 @@ ms.locfileid: "63128760"
      개체에 대한 REFERENCES 권한은 해당 개체를 참조하는 `WITH SCHEMABINDING` 절을 사용하여 FUNCTION 또는 VIEW를 만드는 데 필요합니다.  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 사용 권한 차트  
- Pdf 형식의 모든 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 사용 권한에 대 한 포스터 크기 차트를 보려면을 [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)참조 하십시오.  
+ PDF 형식으로 모든 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 권한의 포스터 크기 차트는 을 참조하십시오. [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)  
   
-##  <a name="_securables"></a> 특정 보안 개체에 적용 가능한 사용 권한  
+##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a>특정 증권화에 적용되는 권한  
  다음 표에서는 주요 사용 권한 클래스와 사용 권한이 적용될 수 있는 보안 개체 종류를 나열합니다.  
   
 |사용 권한|적용 대상|  
@@ -102,21 +102,21 @@ ms.locfileid: "63128760"
 |SELECT|동의어<br /><br /> 테이블 및 열<br /><br /> 테이블 반환 함수, [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR(공용 언어 런타임) 및 열<br /><br /> 뷰 및 열|  
 |VIEW CHANGE TRACKING|테이블<br /><br /> 스키마|  
 |UPDATE|동의어<br /><br /> 테이블 및 열<br /><br /> 뷰 및 열<br /><br /> 시퀀스 개체|  
-|REFERENCES|스칼라 및 집계 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 테이블 및 열<br /><br /> 테이블 반환 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR) 및 열<br /><br /> 형식<br /><br /> 뷰 및 열<br /><br /> 시퀀스 개체|  
+|REFERENCES|스칼라 및 집계 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 테이블 및 열<br /><br /> 테이블 반환 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR) 및 열<br /><br /> 유형<br /><br /> 뷰 및 열<br /><br /> 시퀀스 개체|  
 |INSERT|동의어<br /><br /> 테이블 및 열<br /><br /> 뷰 및 열|  
 |Delete|동의어<br /><br /> 테이블 및 열<br /><br /> 뷰 및 열|  
 |CREATE 문을 실행하기 전에|프로시저([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 스칼라 및 집계 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 동의어<br /><br /> CLR 유형|  
 |RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐|  
-|VIEW DEFINITION|가용성 그룹<br /><br /> 프로시저([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 스칼라 및 집계 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 로그인, 사용자 및 역할<br /><br /> 동의어<br /><br /> 테이블<br /><br /> 테이블 반환 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 뷰<br /><br /> 시퀀스 개체|  
-|ALTER|가용성 그룹<br /><br /> 프로시저([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 스칼라 및 집계 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 시퀀스 개체<br /><br /> 로그인, 사용자 및 역할<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 테이블<br /><br /> 테이블 반환 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 뷰|  
-|TAKE OWNERSHIP|가용성 그룹<br /><br /> 역할<br /><br /> 프로시저([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 스칼라 및 집계 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 서버 역할<br /><br /> 동의어<br /><br /> 테이블<br /><br /> 테이블 반환 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 뷰<br /><br /> 시퀀스 개체|  
-|CONTROL|가용성 그룹<br /><br /> 프로시저([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 스칼라 및 집계 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 로그인, 사용자 및 역할<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 동의어<br /><br /> 테이블<br /><br /> 테이블 반환 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 뷰<br /><br /> 시퀀스 개체|  
+|VIEW DEFINITION|가용성 그룹<br /><br /> 프로시저([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 스칼라 및 집계 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 로그인, 사용자 및 역할<br /><br /> 동의어<br /><br /> 테이블<br /><br /> 테이블 반환 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 보기<br /><br /> 시퀀스 개체|  
+|ALTER|가용성 그룹<br /><br /> 프로시저([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 스칼라 및 집계 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 시퀀스 개체<br /><br /> 로그인, 사용자 및 역할<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 테이블<br /><br /> 테이블 반환 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 보기|  
+|TAKE OWNERSHIP|가용성 그룹<br /><br /> 역할<br /><br /> 프로시저([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 스칼라 및 집계 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 서버 역할<br /><br /> 동의어<br /><br /> 테이블<br /><br /> 테이블 반환 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 보기<br /><br /> 시퀀스 개체|  
+|CONTROL|가용성 그룹<br /><br /> 프로시저([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 스칼라 및 집계 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 로그인, 사용자 및 역할<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 동의어<br /><br /> 테이블<br /><br /> 테이블 반환 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 보기<br /><br /> 시퀀스 개체|  
 |IMPERSONATE|로그인 및 사용자|  
   
 > [!CAUTION]  
 >  설치 시 시스템 개체에 부여되는 기본 사용 권한은 발생할 수 있는 위협이 있는지 신중하게 평가되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 보안 강화의 일환으로 변경할 필요는 없습니다. 시스템 개체에 대한 사용 권한을 변경하면 기능이 제한 또는 중단될 수 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치가 지원되지 않는 상태가 될 수 있습니다.  
   
-##  <a name="_permissions"></a>SQL Server 및 SQL Database 권한  
+##  <a name="sql-server-and-sql-database-permissions"></a><a name="_permissions"></a>SQL 서버 및 SQL 데이터베이스 사용 권한  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 권한의 전체 목록을 제공합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 사용 권한은 지원되는 기본 보안 개체에만 사용할 수 있습니다. 서버 수준 사용 권한은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 부여될 수 없지만 일부 경우에 데이터베이스 사용 권한을 대신 사용할 수 있습니다.  
   
 |기본 보안 개체|기본 보안 개체에 대한 세부적 사용 권한|사용 권한 유형 코드|기본 보안 개체를 포함하는 보안 개체|기본 보안 개체의 세부적 사용 권한을 나타내는 컨테이너 보안 개체의 사용 권한|  
@@ -157,7 +157,7 @@ ms.locfileid: "63128760"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 참고:에 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]만 적용 됩니다.|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 참고: [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에만 적용됩니다.|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +165,7 @@ ms.locfileid: "63128760"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> 참고:에 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]만 적용 됩니다.|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> 참고: [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에만 적용됩니다.|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -204,7 +204,7 @@ ms.locfileid: "63128760"
 |DATABASE|Delete|DL|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE 문을 실행하기 전에|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 참고:에 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]만 적용 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 ALTER ANY CONNECTION을 사용합니다.|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 참고: [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에만 적용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 ALTER ANY CONNECTION을 사용합니다.|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
@@ -342,7 +342,7 @@ ms.locfileid: "63128760"
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="_algorithm"></a> 사용 권한 검사 알고리즘 요약  
+##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a>권한 확인 알고리즘 요약  
  사용 권한 검사는 복잡할 수 있습니다. 사용 권한 검사 알고리즘에는 겹치는 그룹 멤버 자격과 소유권 체인이 포함됩니다. 둘 다 명시적 및 암시적 사용 권한이며 보안 가능한 엔터티가 포함된 보안 개체 클래스에 대한 사용 권한의 영향을 받을 수 있습니다. 알고리즘의 일반적인 프로세스는 관련된 사용 권한을 모두 수집하는 것입니다. DENY 차단이 발견되지 않는 경우 알고리즘에서는 충분한 액세스 권한을 제공하는 GRANT를 검색합니다. 알고리즘에는 세 가지 필수 요소인 **보안 컨텍스트**, **사용 권한 공간**및 **필요한 사용 권한**이 포함되어 있습니다.  
   
 > [!NOTE]  
@@ -396,7 +396,7 @@ ms.locfileid: "63128760"
   
 7.  **필요한 권한** 이 거부되지 않고 **사용 권한 공간** 의 모든 개체에 대한 **보안 컨텍스트** 에서 모든 ID에 대한 직접적 또는 암시적인 GRANT 또는 GRANT WITH GRANT 사용 권한이 **필요한 권한**에 포함되는 경우 사용 권한 검사가 통과합니다.  
   
-##  <a name="_examples"></a> 예  
+##  <a name="examples"></a><a name="_examples"></a> 예  
  이 섹션의 예에서는 사용 권한 정보를 검색하는 방법을 보여 줍니다.  
   
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. 부여 가능한 사용 권한의 전체 목록 반환  
@@ -433,7 +433,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [사용 권한 계층&#40;데이터베이스 엔진&#41;](permissions-hierarchy-database-engine.md)   
+ [사용 권한 계층 &#40;데이터베이스 엔진&#41;](permissions-hierarchy-database-engine.md)   
  [sys.database_permissions&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)  
   
   

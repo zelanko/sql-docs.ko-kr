@@ -1,5 +1,6 @@
 ---
-title: CLR 사용자 정의 집계 함수 호출 | Microsoft Docs
+title: CLR 사용자 정의 집계 함수 호출 | 마이크로 소프트 문서
+description: SQL Server CLR 통합에서 Transact-SQL SELECT를 사용하여 시스템 집계 함수에 적용되는 규칙에 따라 CLR 사용자 정의 집계를 호출합니다.
 ms.custom: ''
 ms.date: 01/15/2019
 ms.prod: sql
@@ -17,27 +18,26 @@ helpviewer_keywords:
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53cd38b80b6884e9be5c41042fac34b68ec2cda0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 286967567a48b35252f097ce6b88193c4e3bcb95
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68028360"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488413"
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>CLR 사용자 정의 집계 - 함수 호출
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
   [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문에서 시스템 집계 함수에 적용되는 모든 규칙을 따르는 CLR(공용 언어 런타임) 사용자 정의 집계를 호출할 수 있습니다.  
   
  다음 추가 규칙이 적용됩니다.  
   
--   현재 사용자에 게는 사용자 정의 집계에 대 한 **EXECUTE** 권한이 있어야 합니다.  
+-   현재 사용자는 사용자 정의 집계에 대한 **EXECUTE** 권한이 있어야 합니다.  
   
--   사용자 정의 집계는 schema_name 형식의 두 부분으로 된 이름을 사용 하 여 호출 해야 합니다 *. udagg_name*.  
+-   사용자 정의 집계는 *schema_name.udagg_name*의 형태로 두 부분으로 구성된 이름을 사용하여 호출되어야 합니다.  
   
--   사용자 정의 집계의 인수 형식은 **CREATE aggregate** 문에 정의 된 대로 집계의 *input_type* 일치 하거나 암시적으로 변환할 수 있어야 합니다.  
+-   사용자 정의 집계의 인수 형식은 **CREATE AGGREGATE** 문에 정의된 대로 집계의 *input_type* 일치하거나 암시적으로 변환할 수 있어야 합니다.  
   
--   사용자 정의 집계의 반환 형식은 **CREATE aggregate** 문의 *return_type* 와 일치 해야 합니다.  
+-   사용자 정의 집계의 반환 형식은 **CREATE AGGREGATE** 문의 *return_type* 일치해야 합니다.  
   
 ## <a name="example-1"></a>예 1  
  테이블의 열에서 가져온 문자열 값 집합을 연결하는 사용자 정의 집계 함수의 예는 다음과 같습니다.  
@@ -197,7 +197,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- 코드를 **Myagg .dll**로 컴파일하면에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음과 같이 집계를 등록할 수 있습니다.  
+ **MyAgg.dll에**코드를 컴파일하면 다음과 같이 집계를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 등록할 수 있습니다.  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -209,7 +209,7 @@ EXTERNAL NAME MyAgg.Concatenate;
 > [!NOTE]  
 >  /clr:pure 컴파일러 옵션을 사용하여 컴파일된 Visual C++ 데이터베이스 개체(예: 스칼라 반환 함수)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행할 수 없습니다.  
   
- 대부분의 집계와 마찬가지로 논리의 대부분은 **누적** 메서드에 있습니다. 여기서는 **누적** 메서드에 매개 변수로 전달 되는 문자열이 **Init** 메서드에서 초기화 된 **StringBuilder** 개체에 추가 됩니다. **누적** 메서드를 처음 호출 하는 것이 아니라 전달 된 문자열을 추가 하기 전에 **StringBuilder** 에 쉼표를 추가 한다고 가정 합니다. 계산 태스크가 끝날 때 **Terminate** 메서드를 호출 하 여 **StringBuilder** 를 문자열로 반환 합니다.  
+ 대부분의 집계와 마찬가지로 대부분의 논리는 **누적** 메서드에 있습니다. 여기서 **누적** 메서드에 매개 변수로 전달되는 문자열은 **Init** 메서드에서 초기화된 **StringBuilder** 개체에 추가됩니다. **누적** 메서드가 처음 호출되지 않았다고 가정하면 전달된 문자열을 추가하기 전에 **StringBuilder에도** 쉼표가 추가됩니다. 계산 작업이 끝나면 **StringBuilder를** 문자열로 반환하는 **Terminate** 메서드가 호출됩니다.  
   
  예를 들어 다음 스키마가 있는 테이블을 고려해 보십시오.  
   
@@ -242,7 +242,7 @@ GROUP BY BookID;
 |3|Roberts, Michaels, Steven|  
   
 ## <a name="example-2"></a>예제 2  
- 다음 샘플에서는 **누적** 메서드에 두 개의 매개 변수가 있는 집계를 보여 줍니다.  
+ 다음 샘플에서는 **누적** 메서드에 두 개의 매개 변수가 있는 집계를 보여 주십입니다.  
   
  [C#]  
   

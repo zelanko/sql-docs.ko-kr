@@ -362,7 +362,7 @@
         - name: SQL Database에 복제 +
           href: 'https://docs.microsoft.com/azure/sql-database/replication-to-sql-database'
         - name: SQL Database MI를 사용하여 복제 +
-          href: 'https://docs.microsoft.com/azure/sql-database/replication-with-sql-database-managed-instance.md'
+          href: 'https://docs.microsoft.com/azure/sql-database/replication-with-sql-database-managed-instance'
         - name: 데이터 다시 게시
           href: republish-data.md
         - name: 인터넷을 통한 복제

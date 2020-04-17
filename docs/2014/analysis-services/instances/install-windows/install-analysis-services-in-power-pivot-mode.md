@@ -10,12 +10,12 @@ ms.assetid: d3310562-82c1-454f-9c48-33a241749238
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0cd41c3a139a2e4be03d0204a16cb698b3d36c89
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.openlocfilehash: 95642654da9492087b3720e1b85c369131b55ed2
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "68888662"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487398"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>PowerPivot for SharePoint 2013 Installation
   이 항목의 절차에서는 SharePoint 배포 모드에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버의 단일 서버 설치하는 단계를 안내합니다. 이 단계에는 SharePoint 2013 중앙 관리를 사용하는 SQL Server 설치 마법사 및 구성 태스크가 포합됩니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "68888662"
 ###  <a name="sql-server-edition-requirements"></a><a name="bkmk_sqleditions"></a> SQL Server 버전 요구 사항  
  비즈니스 인텔리전스 기능은 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 일부 버전에서만 사용할 수 있습니다. 자세한 내용은 [SQL Server 2012 버전에서 지원하는https://go.microsoft.com/fwlink/?linkid=232473) 기능(및 SQL Server 2014의](https://go.microsoft.com/fwlink/?linkid=232473) [버전 및 구성 요소)을](../../../sql-server/editions-and-components-of-sql-server-2016.md)참조하십시오.  
   
- 현재 릴리스 노트는 [SQL Server 2012 SP1 릴리스 노트(.](ttp://go.microsoft.com/fwlink/?LinkID=248389) https://go.microsoft.com/fwlink/?LinkID=248389)  
+ 현재 릴리스 노트는 [SQL Server 2012 SP1 릴리스 노트(.](https://go.microsoft.com/fwlink/?LinkID=248389) https://go.microsoft.com/fwlink/?LinkID=248389)  
   
  [마이크로소프트 SQL 서버 2012https://go.microsoft.com/fwlink/?LinkId=236893)릴리스 정보 (](https://go.microsoft.com/fwlink/?LinkId=236893).  
   
@@ -189,7 +189,7 @@ ms.locfileid: "68888662"
   
 6.  **Ok**를 클릭합니다.  
   
-7.  변경 내용은 몇 분 후에 적용됩니다. 또는 **Excel 계산 서비스** 를 **중지** 하고 **시작**할 수 있습니다. 수행할 작업  
+7.  변경 내용은 몇 분 후에 적용됩니다. 또는 **Excel 계산 서비스** 를 **중지** 하고 **시작**할 수 있습니다. 대상  
   
      다른 옵션은 관리 권한으로 명령 프롬프트를 열고 `iisreset /noforce`를 입력하는 것입니다.  
   
