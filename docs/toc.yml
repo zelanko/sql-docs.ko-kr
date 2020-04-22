@@ -222,6 +222,8 @@
               href: big-data-cluster/troubleshoot-active-directory.md
     - name: 참조
       items:
+        - name: BDC 파트너
+          href: sql-server/partner-big-data-cluster.md
         - name: 배포 참조
           items:
             - name: 배포 구성 파일
@@ -1385,6 +1387,15 @@
                       href: relational-databases/databases/database-properties-mirroring-page.md
                     - name: 쿼리 저장소 페이지
                       href: relational-databases/databases/database-properties-query-store-page.md
+    - name: 이벤트 알림
+      href: relational-databases/service-broker/event-notifications.md
+      items:
+        - name: 구현
+          href: relational-databases/service-broker/implement-event-notifications.md
+        - name: 대화 상자 보안 구성
+          href: relational-databases/service-broker/configure-dialog-security-for-event-notifications.md
+        - name: 정보 가져오기
+          href: relational-databases/service-broker/get-information-about-event-notifications.md
     - name: 'Filestream, Filetable, BLOB'
       href: relational-databases/blob/binary-large-object-blob-data-sql-server.md
       items:
@@ -1540,14 +1551,7 @@
         - name: 시퀀스 속성
           href: relational-databases/sequence-numbers/sequence-properties-general-page.md
     - name: Service Broker
-      href: relational-databases/service-broker/event-notifications.md
-      items:
-        - name: 구현
-          href: relational-databases/service-broker/implement-event-notifications.md
-        - name: 대화 상자 보안 구성
-          href: relational-databases/service-broker/configure-dialog-security-for-event-notifications.md
-        - name: 정보 가져오기
-          href: relational-databases/service-broker/get-information-about-event-notifications.md
+      href: database-engine/configure-windows/sql-server-service-broker.md
     - name: 공간 데이터
       href: relational-databases/spatial/spatial-data-sql-server.md
       items:
@@ -4370,8 +4374,6 @@
           href: database-engine/configure-windows/remote-servers.md
         - name: SQL Server 모니터 개요
           href: database-engine/configure-windows/sql-server-monitor-overview.md
-        - name: Service Broker
-          href: database-engine/configure-windows/sql-server-service-broker.md
         - name: Buffer Pool Extension
           href: database-engine/configure-windows/buffer-pool-extension.md
         - name: 서버 구성 옵션
@@ -10073,8 +10075,6 @@
           href: sql-server/sql-server-docs-contribute.md
     - name: 파트너
       items:
-        - name: 빅 데이터 클러스터
-          href: sql-server/partner-big-data-cluster.md
         - name: 모니터링
           href: sql-server/partner-monitor-sql-server.md
         - name: 고가용성 및 재해 복구
@@ -10354,6 +10354,8 @@
                   href: relational-databases/errors-events/mssqlserver-4846-database-engine-error.md
             - name: 오류 5000~8000
               items:
+                - name: 5120
+                  href: relational-databases/errors-events/mssqlserver-5120-database-engine-error.md
                 - name: 5228
                   href: relational-databases/errors-events/mssqlserver-5228-database-engine-error.md
                 - name: 5229
@@ -10626,6 +10628,8 @@
                   href: relational-databases/errors-events/mssqlserver-17194-database-engine-error.md
                 - name: 17204
                   href: relational-databases/errors-events/mssqlserver-17204-database-engine-error.md
+                - name: 17207
+                  href: relational-databases/errors-events/mssqlserver-17207-database-engine-error.md
                 - name: 17300
                   href: relational-databases/errors-events/mssqlserver-17300-database-engine-error.md
                 - name: 17660
