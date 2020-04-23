@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 30e4be2e-e65d-462c-895a-5a0a636d042f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f2738eed803691eb8d18bb9affeee6e423ae5bae
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ab369901f67e278fd1e62a54694eeebf12877741
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082229"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487052"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>URL 예약 구문(SSRS 구성 관리자)
   이 항목에서는 보고서 서버 웹 서비스 및 보고서 관리자에서 사용하는 URL 문자열 부분에 대해 설명합니다. 내부적으로 저장되는 URL 문자열의 구조는 브라우저 창의 주소 표시줄에 입력하는 URL과는 다릅니다. URL 예약 문자열은 URL을 구성할 때 Reporting Services 구성 도구의 결과 창 및 RSReportServer.config 파일에 표시됩니다. URL 문자열이 정의되는 방식을 알면 URL 예약 문제를 해결하거나 HTTP.SYS를 쿼리하여 서버에 정의된 내부 URL 문자열 예약을 보는 경우 도움이 됩니다.  
@@ -30,9 +30,9 @@ ms.locfileid: "77082229"
   
 |속성|유효한 값|Description|  
 |--------------|------------------|-----------------|  
-|구성표|HTTP 또는 HTTPS|SSL 및 SSL 이외의 연결에 대한 접두사|  
+|구성표|HTTP 또는 HTTPS|비 TLS 및 TLS 연결에 대한 접두사입니다.|  
 |Hostname|(+) 강력한 와일드카드, IP 주소의 **(모두 할당됨)** 값과 동일<br /><br /> (\*) 약한 와일드 카드, **(모두 할당되지 않음)** IP 주소와 동일<br /><br /> 정규화된 도메인 이름<br /><br /> 컴퓨터 이름<br /><br /> IP 주소(IPV4)<br /><br /> IP 주소(IPV6)|네트워크에서 서버를 식별합니다.<br /><br /> (+) 강력한 와일드카드가 기본값입니다. HTTP.SYS는 지정된 포트 및 가상 디렉터리 조합에 대해 모든 네트워크 어댑터에서 모든 요청을 수락합니다. 보고서 서버는 포트에 들어오는 모든 요청을 수락합니다.<br /><br /> (\*) 약한 와일드카드. HTTP.SYS는 주어진 포트 및 가상 디렉터리 조합에 대해 모든 네트워크 어댑터의 다른 URL 예약에서 처리되지 않은 모든 요청을 수락합니다.<br /><br /> 컴퓨터 이름은 네트워크에 있는 컴퓨터의 NETBIOS 이름입니다.<br /><br /> 정규화된 도메인 이름에는 도메인 컨트롤러 또는 공용 도메인 이름 서버에 등록된 도메인 주소 및 서버 이름이 포함됩니다.<br /><br /> IP 주소(IPV4)는 컴퓨터에 있는 네트워크 어댑터의 IPV4 형식 IP 주소로, *nnn.nnn.nnn.nnn*형식입니다.<br /><br /> IP 주소(IPV6)는 컴퓨터에 있는 네트워크 어댑터의 IPV6 형식 IP 주소로, \<header>:\<header>:*nnn.nnn.nnn.nnn* 형식입니다.|  
-|포트|80<br /><br /> 443<br /><br /> \<custom>|포트 80은 서버에서 HTTP 요청이 들어오고 나가는 표준 포트입니다.<br /><br /> 포트 443은 SSL 연결에 대한 표준 포트입니다.<br /><br /> 다른 애플리케이션에 예약되지 않은 모든 포트를 사용할 수도 있습니다.|  
+|포트|80<br /><br /> 443<br /><br /> \<custom>|포트 80은 서버에서 HTTP 요청이 들어오고 나가는 표준 포트입니다.<br /><br /> 포트 443은 TLS 연결에 대한 표준 보고서입니다.<br /><br /> 다른 애플리케이션에 예약되지 않은 모든 포트를 사용할 수도 있습니다.|  
 |VirtualDirectory|ReportServer *[_InstanceName]*<br /><br /> Reports *[_InstanceName]*<br /><br /> \<custom>|애플리케이션의 이름을 지정합니다. 이 값은 문자열입니다. 기본적으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 서버 웹 서비스 및 보고서 관리자 애플리케이션에 대한 애플리케이션 이름으로 ReportServer와 Reports를 사용합니다. 원하는 경우 다른 이름을 사용할 수도 있습니다.<br /><br /> 이 값은 필수입니다. 애플리케이션을 식별합니다.<br /><br /> 각 애플리케이션 인스턴스에 대해 하나의 가상 디렉터리만 지정합니다. 같은 인스턴스에 있는 같은 애플리케이션에 대해 여러 개의 URL을 만들려면 여러 개의 **UrlString**버전을 만듭니다. 여러 애플리케이션 인스턴스에 대해 고유한 가상 디렉터리 이름을 만들려면 인스턴스 이름에 밑줄 문자(_)를 추가하여 가상 디렉터리 이름에 인스턴스 이름을 포함하면 됩니다. *InstanceName* 은 선택 사항이지만 같은 컴퓨터에 여러 개의 인스턴스가 있는 경우 권장됩니다. 명명된 인스턴스에 대한 URL 예약을 설정하는 방법은 [다중 인스턴스 보고서 서버 배포를 위한 URL 예약&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md)을 참조하세요.<br /><br /> 가상 디렉터리에 대한 값은 대/소문자를 구분하지 않습니다. URL 구분 기호 문자 또는 URL 인코딩을 포함하지 않는다면 어떠한 문자열이라도 사용할 수 있습니다.|  
   
 ## <a name="see-also"></a>참고 항목  

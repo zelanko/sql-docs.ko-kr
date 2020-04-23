@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6e88e6cf9cb4101f22d3a30f5ca53fdf15b754fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0bcf8cbc87fc1784a177a9bf58a43f58156fbb96
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77256746"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487953"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 데이터베이스 백업 및 복원
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "77256746"
   
  SQL Server 백업 및 복원 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 저장된 중요한 데이터를 보호하기 위한 필수 보호 방법을 제공합니다. 치명적인 데이터 손실 위험을 최소화하려면 정기적으로 데이터베이스를 백업하여 수정 내용을 보존해야 합니다. 잘 계획된 백업 및 복원 전략은 다양한 오류로 인한 데이터 손실을 막아줍니다. 백업 세트를 복원하고 데이터베이스를 복구하는 방법으로 전략을 테스트하여 재해에 효과적으로 대응할 수 있도록 준비하세요.
   
- 백업을 저장하기 위한 로컬 스토리지 외에도 SQL Server는 Azure Blob Storage 서비스로의 백업 및 복원도 지원합니다. 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. Microsoft Azure Blob Storage 서비스를 사용하여 스토리지된 데이터베이스 파일의 경우 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 은(는) 거의 즉시 백업 및 빠른 복원에 Azure 스냅샷을 사용하는 옵션을 제공합니다. 자세한 내용은 [Azure에서 데이터베이스 파일에 대한 파일-스냅샷 Backup](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
+ 백업을 저장하기 위한 로컬 스토리지 외에도 SQL Server는 Azure Blob Storage 서비스로의 백업 및 복원도 지원합니다. 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. Microsoft Azure Blob Storage 서비스를 사용하여 스토리지된 데이터베이스 파일의 경우 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 은(는) 거의 즉시 백업 및 빠른 복원에 Azure 스냅샷을 사용하는 옵션을 제공합니다. 자세한 내용은 [Azure에서 데이터베이스 파일에 대한 파일-스냅샷 Backup](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요. Azure는 Azure VM에서 실행 중인 SQL Server에 대한 엔터프라이즈 클래스 백업 솔루션도 제공합니다. 완전히 관리되는 백업 솔루션인 Azure는 Always On 가용성 그룹, 장기 보존, 지정 시간 복구, 중앙 관리 및 모니터링을 지원합니다. 자세한 내용은 [Azure VM에서 SQL Server에 대한 Azure Backup](https://docs.microsoft.com/azure/backup/backup-azure-sql-database)을 참조하세요.
   
 ##  <a name="why-back-up"></a>백업 이유  
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 백업하고 백업에 대한 테스트 복원 절차를 실행한 다음 안전한 오프 사이트 위치에 백업을 저장하여 치명적인 데이터 손실을 방지할 수 있습니다. **백업은 데이터를 보호하는 유일한 방법입니다.**
@@ -53,7 +53,7 @@ ms.locfileid: "77256746"
   
 ##  <a name="glossary-of-backup-terms"></a>백업 용어 설명
  **백업** [동사]  
- **데이터베이스에서 데이터 레코드를 복사하거나 트랜잭션 로그에서 로그 레코드를 복사하여**백업[명사][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 만드는 프로세스입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 데이터 레코드를 복사하거나 트랜잭션 로그에서 로그 레코드를 복사하여 **백업[명사]** 을 만드는 프로세스입니다.  
   
  **백업** [명사]  
  오류가 발생한 이후에 데이터를 복원 및 복구하는 데 사용할 수 있는 데이터 복사본입니다. 데이터베이스 백업을 사용하여 데이터베이스 복사본을 새 위치에 복원할 수도 있습니다.  

@@ -5,17 +5,17 @@ ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
-ms.openlocfilehash: c1f2a7670913f2df948201b29f26e0283f27f698
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: maghan
+ms.openlocfilehash: b6d36286fc4286c902479271546841841db0b84d
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288747"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488002"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>연습: Integration Services(SSIS) Scale Out 설정
 
@@ -66,9 +66,9 @@ Scale Out 마스터 기능을 설치하려면 [!INCLUDE[ssNoVersion_md](../../in
 
     ![마스터 구성](media/master-config.PNG "마스터 구성")
 
-4.  다음 중 하나를 수행하여 Scale Out 마스터와 Scale Out 작업자 간의 통신을 보호하는 데 사용되는 SSL 인증서를 지정합니다.
-    * 설치 프로세스에서 **새 SSL 인증서 만들기**를 클릭하여 자체 서명된 기본 SSL 인증서를 만들도록 합니다.  기본 인증서는 신뢰할 수 있는 루트 인증 기관, 로컬 컴퓨터에 아래에 설치됩니다. 이 인증서에 CN을 지정할 수 있습니다. 마스터 엔드포인트의 호스트 이름은 CN에 포함되어야 합니다. 기본적으로 마스터 노드의 컴퓨터 이름과 IP가 포함됩니다.
-    * **기존 SSL 인증서 사용**을 클릭한 다음 **찾아보기**를 클릭하여 인증서를 선택함으로써 로컬 컴퓨터의 기존 SSL 인증서를 선택합니다. 인증서의 지문이 텍스트 상자에 나타납니다. **찾아보기** 를 클릭하면 신뢰할 수 있는 루트 인증 기관, 로컬 컴퓨터에 저장된 인증서가 표시됩니다. 선택한 인증서는 여기에 저장되어야 합니다.       
+4.  다음 중 하나를 수행하여 Scale Out 마스터와 Scale Out 작업자 간의 통신을 보호하는 데 사용되는 TLS/SSL 인증서를 지정합니다.
+    * 설치 프로세스에서 **새 SSL 인증서 만들기**를 클릭하여 자체 서명된 기본 TLS/SSL 인증서를 만들도록 합니다.  기본 인증서는 신뢰할 수 있는 루트 인증 기관, 로컬 컴퓨터에 아래에 설치됩니다. 이 인증서에 CN을 지정할 수 있습니다. 마스터 엔드포인트의 호스트 이름은 CN에 포함되어야 합니다. 기본적으로 마스터 노드의 컴퓨터 이름과 IP가 포함됩니다.
+    * **기존 SSL 인증서 사용**을 클릭한 다음 **찾아보기**를 클릭하여 인증서를 선택함으로써 로컬 컴퓨터의 기존 TLS/SSL 인증서를 선택합니다. 인증서의 지문이 텍스트 상자에 나타납니다. **찾아보기** 를 클릭하면 신뢰할 수 있는 루트 인증 기관, 로컬 컴퓨터에 저장된 인증서가 표시됩니다. 선택한 인증서는 여기에 저장되어야 합니다.       
 
     ![마스터 구성 2](media/master-config-2.PNG "마스터 구성 2")
   
@@ -118,14 +118,14 @@ Scale Out 작업자 기능을 설치하려면 [!INCLUDE[ssNoVersion_md](../../in
     > [!NOTE]
     > 설치한 후에 이 시점에서 작업자 구성을 건너뛰고 [Scale Out 관리자](integration-services-ssis-scale-out-manager.md)를 사용하여 Scale Out 작업자를 Scale Out 마스터에 연결할 수 있습니다.
 
-4. **여러 컴퓨터** 환경의 경우 Scale Out 마스터의 유효성을 검사하는 데 사용되는 클라이언트 SSL 인증서를 지정합니다. **단일 컴퓨터** 환경의 경우 클라이언트 SSL 인증서를 지정할 필요가 없습니다. 
+4. **여러 컴퓨터** 환경의 경우 Scale Out 마스터의 유효성을 검사하는 데 사용되는 클라이언트 TLS/SSL 인증서를 지정합니다. **단일 컴퓨터** 환경의 경우 클라이언트 TLS/SSL 인증서를 지정할 필요가 없습니다. 
   
-    **찾아보기** 를 클릭하여 인증서 파일(*.cer)을 찾습니다. 기본 SSL 인증서를 사용하려면 Scale Out 마스터가 설치된 컴퓨터에서 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` 아래에 있는 `SSISScaleOutMaster.cer` 파일을 선택합니다.   
+    **찾아보기** 를 클릭하여 인증서 파일(*.cer)을 찾습니다. 기본 TLS/SSL 인증서를 사용하려면 Scale Out 마스터가 설치된 컴퓨터에서 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` 아래에 있는 `SSISScaleOutMaster.cer` 파일을 선택합니다.   
 
     ![작업자 구성 2](media/worker-config-2.PNG "작업자 구성 2")
 
     > [!NOTE]
-    > Scale Out 마스터에서 사용되는 SSL 인증서가 자체 서명된 경우 해당 클라이언트 SSL 인증서가 Scale Out 작업자와 함께 컴퓨터에 설치되어 있어야 합니다. **Integration Services Scale Out 작업자 구성** 페이지에서 클라이언트 SSL 인증서의 파일 경로를 제공하는 경우 인증서가 자동으로 설치됩니다. 그렇지 않은 경우 나중에 인증서를 수동으로 설치해야 합니다. 
+    > Scale Out 마스터에서 사용되는 TLS/SSL 인증서가 자체 서명된 경우 해당 클라이언트 TLS/SSL 인증서가 Scale Out 작업자와 함께 컴퓨터에 설치되어 있어야 합니다. **Integration Services Scale Out 작업자 구성** 페이지에서 클라이언트 TLS/SSL 인증서의 파일 경로를 제공하는 경우 인증서가 자동으로 설치됩니다. 그렇지 않은 경우 나중에 인증서를 수동으로 설치해야 합니다. 
      
 5. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 설치를 마칩니다.
 

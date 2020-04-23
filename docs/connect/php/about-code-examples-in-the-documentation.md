@@ -1,5 +1,6 @@
 ---
-title: 설명서의 코드 예제 정보 | Microsoft Docs
+title: 설명서의 코드 예제 정보
+description: Microsoft Drivers for PHP for SQL Server 설명서의 코드 예제를 실행할 때 몇 가지 유의 사항이 있습니다.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9da3b91dfa90ed9b28ec9518b5cdb012002d62ab
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c90f2f1a420f1ab40f99a2fe83c928890e37e621
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80911789"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631894"
 ---
 # <a name="about-code-examples-in-the-documentation"></a>설명서의 코드 예제 정보
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "80911789"
   
     SQL Server 무료 버전 및 평가판 버전을 다운로드하는 방법에 대한 자세한 내용은 [SQL Server](https://go.microsoft.com/fwlink/?LinkID=120193)를 참조하세요.  
   
-    AdventureWorks 데이터베이스를 다운로드하고 설치하는 방법에 관한 정보는 [SQL Server Samples Github 리포지토리의 AdventureWorks 페이지](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)를 참조하세요.
+    AdventureWorks 데이터베이스를 다운로드하고 설치하는 방법에 관한 정보는 [SQL Server Samples GitHub 리포지토리의 AdventureWorks 페이지](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)를 참조하세요.
   
 -   이 설명서의 거의 모든 코드 예제는 명령줄에서 실행하기 위한 것으로, 모든 코드 예제의 자동화된 테스트를 사용할 수 있습니다. 명령줄에서 PHP를 실행하는 방법에 대한 자세한 내용은 [Using PHP from the command line(명령줄에서 PHP 사용)](https://php.net/manual/en/features.commandline.php)을 참조하세요.  
   
@@ -48,8 +49,8 @@ ms.locfileid: "80911789"
     die();  
     ```  
   
-    오류 및 경고 처리에 대한 자세한 내용은 [오류 및 경고 처리](../../connect/php/handling-errors-and-warnings.md)를 참조하세요.  
+    오류 및 경고 처리에 대한 자세한 내용은 [오류 및 경고 처리](handling-errors-and-warnings.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
-[Microsoft Drivers for PHP for SQL Server 개요](../../connect/php/overview-of-the-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 개요](overview-of-the-php-sql-driver.md)
   

@@ -1,5 +1,6 @@
 ---
-title: PHP Drivers for SQL Server와 함께 보안 Enclave를 사용한 Always Encrypted 사용 | Microsoft Docs
+title: PHP Drivers와 함께 보안 Enclave를 사용한 Always Encrypted
+description: Microsoft Drivers for PHP for SQL Server와 함께 보안 Enclave를 사용한 Always Encrypted를 사용하는 방법에 대해 알아봅니다.
 ms.date: 01/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
@@ -7,15 +8,14 @@ ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: ''
-ms.author: v-dapugl
-author: david-puglielli
-manager: v-mabarw
-ms.openlocfilehash: 796a77f3be0e1d15609f91ee1c36c2769a541cc5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.author: v-daenge
+author: David-Engel
+ms.openlocfilehash: f407cae7fe7d53a7522e64f0bb26961ebeb4276f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76941081"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632093"
 ---
 # <a name="using-always-encrypted-with-secure-enclaves-with-the-php-drivers-for-sql-server"></a>PHP Drivers for SQL Server와 함께 보안 Enclave를 사용한 Always Encrypted 사용
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "76941081"
 
 ## <a name="enabling-always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted를 사용하도록 설정
 
-PHP Drivers for SQL Server 5.8.0부터 보안 Enclave를 사용한 Always Encrypted가 지원됩니다. 보안 Enclave를 사용한 Always Encrypted에는 SQL Server 2019 이상 및 ODBC 드라이버 버전 17.4 이상이 필요합니다. PHP Drivers for SQL Server와 함께 Always Encrypted를 사용하기 위한 일반적인 요구 사항에 대한 자세한 내용은 [여기](../../connect/php/using-always-encrypted-php-drivers.md)를 참조하세요.
+PHP Drivers for SQL Server 5.8.0부터 보안 Enclave를 사용한 Always Encrypted가 지원됩니다. 보안 Enclave를 사용한 Always Encrypted에는 SQL Server 2019 이상 및 ODBC 드라이버 버전 17.4 이상이 필요합니다. PHP Drivers for SQL Server와 함께 Always Encrypted를 사용하기 위한 일반적인 요구 사항에 대한 자세한 내용은 [여기](using-always-encrypted-php-drivers.md)를 참조하세요.
 
 보안 Enclave를 사용한 Always Encrypted에서는 enclave를 증명하여, 즉 외부 증명 서비스에 대해 enclave를 확인하여 암호화된 데이터의 보안을 유지할 수 있습니다. 보안 enclave를 사용하려면 `ColumnEncryption` 키워드가 쉼표로 구분된 연결된 증명 데이터와 함께 증명 형식 및 프로토콜을 식별해야 합니다. ODBC 드라이버 버전 17.4는 enclave 형식 및 프로토콜에 대해 VBS(가상화 기반 보안) 및 HGS(호스트 보호 서비스) 프로토콜만 지원합니다. 연결된 증명 데이터는 증명 서버의 URL입니다. 따라서 연결 문자열에 다음이 추가됩니다.
 
@@ -46,9 +46,9 @@ SQLSRV 및 PDO_SQLSRV에 대한 다음 예제는 일반 텍스트로 여러 데�
 
 - `ALTER TABLE`을 사용하여 테이블을 암호화하는 경우 `ALTER TABLE`을 호출할 때마다 하나의 열만 암호화할 수 있으므로 여러 열을 암호화하려면 여러 번 호출해야 합니다.
 - 비교 임계값을 char 및 nchar 형식 비교를 위한 매개 변수로 전달하는 경우 열 너비를 해당 `SQLSRV_SQLTYPE_*`에 지정해야 합니다. 그렇지 않으면 `HY104` 오류 `Invalid precision value`가 반환됩니다.
-- 패턴 일치의 경우 `Latin1_General_BIN2` 절을 사용하여 데이터 정렬을 `COLLATE`로 지정해야 합니다.
-- 일치하는 char 및 nchar 형식에 대한 매개 변수로 패턴 일치 문자열을 전달하는 경우 `SQLSRV_SQLTYPE_*` 또는 `sqlsrv_query`에 전달된 `sqlsrv_prepare`은 char 및 nchar 형식이 문자열의 끝에 공백을 패딩하기 때문에 일치시킬 열의 크기가 아닌 길이를 지정해야 합니다. 예를 들어 char(10) 열에 대해 문자열 `%abc%`를 일치시킬 때 `SQLSRV_SQLTYPE_CHAR(5)`를 지정합니다. 대신 `SQLSRV_SQLTYPE_CHAR(10)`를 지정할 경우 쿼리는 5개의 공백이 추가된 `%abc%     `와 일치하고, 5개 미만의 공백이 추가된 열의 데이터는 일치하지 않습니다. 따라서 `abcdef`는 패딩 공백이 4개 있으므로 `%abc%`와 일치하지 않습니다. 유니코드 문자열의 경우 `mb_strlen` 또는 `iconv_strlen` 함수를 사용하여 문자 수를 가져옵니다.
-- PDO 인터페이스에서는 매개 변수의 길이를 지정할 수 없습니다. 대신 `null`의 길이를 0 또는 `PDOStatement::bindParam`로 지정합니다. 길이를 명시적으로 다른 숫자로 설정한 경우 매개 변수는 출력 매개 변수로 처리됩니다.
+- 패턴 일치의 경우 `COLLATE` 절을 사용하여 데이터 정렬을 `Latin1_General_BIN2`로 지정해야 합니다.
+- 일치하는 char 및 nchar 형식에 대한 매개 변수로 패턴 일치 문자열을 전달하는 경우 `sqlsrv_query` 또는 `sqlsrv_prepare`에 전달된 `SQLSRV_SQLTYPE_*`은 char 및 nchar 형식이 문자열의 끝에 공백을 패딩하기 때문에 일치시킬 열의 크기가 아닌 길이를 지정해야 합니다. 예를 들어 char(10) 열에 대해 문자열 `%abc%`를 일치시킬 때 `SQLSRV_SQLTYPE_CHAR(5)`를 지정합니다. 대신 `SQLSRV_SQLTYPE_CHAR(10)`를 지정할 경우 쿼리는 5개의 공백이 추가된 `%abc%     `와 일치하고, 5개 미만의 공백이 추가된 열의 데이터는 일치하지 않습니다. 따라서 `abcdef`는 패딩 공백이 4개 있으므로 `%abc%`와 일치하지 않습니다. 유니코드 문자열의 경우 `mb_strlen` 또는 `iconv_strlen` 함수를 사용하여 문자 수를 가져옵니다.
+- PDO 인터페이스에서는 매개 변수의 길이를 지정할 수 없습니다. 대신 `PDOStatement::bindParam`의 길이를 0 또는 `null`로 지정합니다. 길이를 명시적으로 다른 숫자로 설정한 경우 매개 변수는 출력 매개 변수로 처리됩니다.
 - 패턴 일치는 Always Encrypted의 문자열이 아닌 형식에 대해 작동하지 않습니다.
 - 명확성을 위해 오류 검사는 제외했습니다. 
 
@@ -391,8 +391,8 @@ zyxwv
 㛜ꆶ㕸㔈♠既ꁺꖁ㓫ޘ갧ᛄ
 ```
 ## <a name="see-also"></a>참고 항목  
-[PHP SQL 드라이버 프로그래밍 가이드](../../connect/php/programming-guide-for-php-sql-driver.md)  
-[SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
-[PDO_SQLSRV 드라이버 API 참조](../../connect/php/pdo-sqlsrv-driver-reference.md)  
-[PHP Drivers for SQL Server와 함께 Always Encrypted 사용 | Microsoft Docs](../../connect/php/using-always-encrypted-php-drivers.md)
+[PHP SQL 드라이버 프로그래밍 가이드](programming-guide-for-php-sql-driver.md)  
+[SQLSRV 드라이버 API 참조](sqlsrv-driver-api-reference.md)  
+[PDO_SQLSRV 드라이버 API 참조](pdo-sqlsrv-driver-reference.md)  
+[SQL Server용 PHP 드라이버와 함께 Always Encrypted 사용](using-always-encrypted-php-drivers.md)
   

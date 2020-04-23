@@ -3,17 +3,17 @@ title: 'SUSE: SQL Server on Linux 설치'
 description: 이 빠른 시작에서는 SUSE Linux Enterprise Server에 SQL Server 2017 또는 SQL Server 2019를 설치한 다음, sqlcmd를 사용하여 데이터베이스를 만들고 쿼리하는 방법을 보여 줍니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: bb7a6689d2cf6638f2d4e2de078e4e4412225595
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 563b651a4f43257ad8c585f91a15d0b9cea1f2f3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79487611"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306481"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>빠른 시작: SQL Server 설치 및 SUSE Linux Enterprise Server에 데이터베이스 만들기
 
@@ -184,7 +184,7 @@ SLES에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실행
    sudo zypper --gpg-auto-import-keys refresh
    ```
 
-1. unixODBC 개발자 패키지와 함께 **mssql-tools**를 설치합니다.
+1. unixODBC 개발자 패키지와 함께 **mssql-tools**를 설치합니다. 자세한 내용은 [Microsoft ODBC Driver for SQL Server(Linux) 설치](../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)를 참조하세요.
 
    ```bash
    sudo zypper install -y mssql-tools unixODBC-devel

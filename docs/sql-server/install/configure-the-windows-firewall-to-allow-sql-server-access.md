@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5e88b1543490bd0c44abbbdea12bf361ddf43419
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f2e73d6acd17e3a77802ecde712a2e18c7d66846
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253469"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528877"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -113,7 +113,7 @@ ms.locfileid: "75253469"
 |관리자 전용 연결|기본 인스턴스에 대한 TCP 포트 1434. 다른 포트는 명명된 인스턴스에 사용됩니다. 오류 로그에서 포트 번호를 확인하세요.|기본적으로 DAC(관리자 전용 연결)에 대한 원격 연결은 설정되지 않습니다. 원격 DAC를 설정하려면 노출 영역 구성 패싯을 사용하세요. 자세한 내용은 [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)을 참조하세요.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스|UDP 포트 1434|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스는 명명된 인스턴스에 대한 들어오는 연결을 수신하고 이 명명된 인스턴스에 해당하는 TCP 포트 번호를 클라이언트에 제공합니다. 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 명명된 인스턴스가 사용될 때마다 시작됩니다. 명명된 인스턴스의 특정 포트에 연결되도록 클라이언트를 구성한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 시작할 필요가 없습니다.|  
 |HTTP 엔드포인트가 있는 인스턴스.|HTTP 엔드포인트를 만들 때 지정할 수 있습니다. 기본값은 CLEAR_PORT 트래픽의 경우 TCP 포트 80이고, SSL_PORT 트래픽의 경우 443입니다.|URL을 통한 HTTP 연결에 사용됩니다.|  
-|HTTPS 엔드포인트가 있는 기본 인스턴스. |TCP 포트 443|URL을 통한 HTTPS 연결에 사용됩니다. HTTPS는 SSL(Secure Sockets Layer)을 사용하는 HTTP 연결입니다.|  
+|HTTPS 엔드포인트가 있는 기본 인스턴스. |TCP 포트 443|URL을 통한 HTTPS 연결에 사용됩니다. HTTPS는 이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안)를 사용하는 HTTP 연결입니다.|  
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|TCP 포트 4022. 사용되는 포트를 확인하려면 다음 쿼리를 실행합니다.<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)]에 대한 기본 포트는 없지만 이는 온라인 설명서 예에서는 이 구성이 일반적으로 사용됩니다.|  
 |데이터베이스 미러링|관리자가 선택한 포트입니다. 포트를 확인하려면 다음 쿼리를 실행합니다.<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|데이터베이스 미러링에 대한 기본 포트는 없지만 온라인 설명서의 예에서는 TCP 포트 5022 또는 7022를 사용합니다. 특히 자동 장애 조치(Failover)를 사용하는 보안 수준이 높은 모드에서는 사용 중인 미러링 엔드포인트가 중단되지 않도록 하는 것이 중요합니다. 방화벽 구성으로 인해 쿼럼이 중단되면 안 됩니다. 자세햔 내용은 [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)을 사용합니다.|  
 |복제|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 복제 연결에는 일반적인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 포트(기본 인스턴스의 경우 TCP 포트 1433 등)가 사용됩니다.<br /><br /> 복제 스냅샷을 위한 웹 동기화 및 FTP/UNC 액세스를 위해서는 방화벽에서 추가 포트를 열어야 합니다. 복제는 초기 데이터 및 스키마를 다른 위치로 전송하기 위해 FTP(TCP 포트 21)를 사용하거나 HTTP(TCP 포트 80) 또는 파일 공유를 통해 동기화할 수 있습니다. 파일 공유에는 UDP 포트 137 및 138, TCP 포트 139가 사용됩니다(NetBIOS를 사용하는 경우). 파일 공유에는 TCP 포트 445가 사용됩니다.|HTTP를 통한 동기화의 경우 복제는 IIS 엔드포인트(포트를 구성할 수 있지만 기본 포트는 80)를 사용하지만 IIS 프로세스는 표준 포트(기본 인스턴스의 경우 1433)를 통해 백 엔드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결합니다.<br /><br /> FTP를 사용한 웹 동기화 중에 FTP 전송은 구독자와 IIS 사이가 아닌 IIS와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자 사이에 이뤄집니다.|  
@@ -155,7 +155,7 @@ ms.locfileid: "75253469"
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|기본 인스턴스에 대한 TCP 포트 2383|기본 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 대한 표준 포트입니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 명명된 인스턴스에만 필요한 TCP 포트 2382|포트 번호를 지정하지 않는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 명명된 인스턴스에 대한 클라이언트 연결 요청은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser에서 수신하는 포트인 포트 2382로 전달됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser에서 해당 요청을 명명된 인스턴스가 사용하는 포트로 리디렉션합니다.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] - IIS/HTTP를 통해 사용하도록 구성<br /><br /> (PivotTable® 서비스는 HTTP 또는 HTTPS 사용)|TCP 포트 80|URL을 통한 HTTP 연결에 사용됩니다.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] - IIS/HTTPS를 통해 사용하도록 구성<br /><br /> (PivotTable® 서비스는 HTTP 또는 HTTPS 사용)|TCP 포트 443|URL을 통한 HTTPS 연결에 사용됩니다. HTTPS는 SSL(Secure Sockets Layer)을 사용하는 HTTP 연결입니다.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] - IIS/HTTPS를 통해 사용하도록 구성<br /><br /> (PivotTable® 서비스는 HTTP 또는 HTTPS 사용)|TCP 포트 443|URL을 통한 HTTPS 연결에 사용됩니다. HTTPS는 TLS를 사용하는 HTTP 연결입니다.|  
   
  사용자가 IIS 및 인터넷을 통해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 액세스하는 경우 IIS가 수신하고 있는 포트를 열고 클라이언트 연결 문자열에 해당 포트를 지정해야 합니다. 이 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 직접 액세스하는 포트를 열 필요가 없습니다. 기본 포트 2389 및 포트 2382는 필요 없는 다른 모든 포트와 함께 제한해야 합니다.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "75253469"
 |기능|포트|주석|  
 |-------------|----------|--------------|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 서비스|TCP 포트 80|URL을 통한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] HTTP 연결에 사용됩니다. 미리 구성된 규칙 **World Wide Web 서비스(HTTP)** 는 사용하지 않는 것이 좋습니다. 자세한 내용은 아래의 [다른 방화벽 규칙과의 상호 작용](#BKMK_other_rules) 섹션을 참조하세요.|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - HTTPS를 통해 사용하도록 구성|TCP 포트 443|URL을 통한 HTTPS 연결에 사용됩니다. HTTPS는 SSL(Secure Sockets Layer)을 사용하는 HTTP 연결입니다. 미리 구성된 규칙 **보안 World Wide Web 서비스(HTTPS)** 는 사용하지 않는 것이 좋습니다. 자세한 내용은 아래의 [다른 방화벽 규칙과의 상호 작용](#BKMK_other_rules) 섹션을 참조하세요.|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - HTTPS를 통해 사용하도록 구성|TCP 포트 443|URL을 통한 HTTPS 연결에 사용됩니다. HTTPS는 TLS를 사용하는 HTTP 연결입니다. 미리 구성된 규칙 **보안 World Wide Web 서비스(HTTPS)** 는 사용하지 않는 것이 좋습니다. 자세한 내용은 아래의 [다른 방화벽 규칙과의 상호 작용](#BKMK_other_rules) 섹션을 참조하세요.|  
   
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결되는 경우 이러한 서비스에 대해 적절한 포트를 열어야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대해 Windows 방화벽을 구성하는 단계별 지침은 [보고서 서버 액세스를 위한 방화벽 구성](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)을 참조하세요.  
   

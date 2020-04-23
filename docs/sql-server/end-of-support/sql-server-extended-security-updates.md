@@ -10,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ac74f1af3d570863bafae7185d6d4ce653f1f036
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 243ebc612e5d3786ec54d8ad089e317d440e4bba
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256734"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488362"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>SQL Server의 연장 보안 업데이트란 무엇입니까?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -206,6 +206,25 @@ ESU를 다운로드하려면 다음 단계를 수행합니다.
    ![사용 가능한 업데이트에 대한 보안 업데이트 창 확인](media/sql-server-extended-security-updates/security-updates-sql-registry.png)
 
 1. 사용할 수 있게 되면 여기에서 보안 업데이트를 다운로드합니다. 
+
+## <a name="configure-regional-redundancy"></a>지역 중복 구성 
+
+**SQL Server 레지스트리**에 대한 지역 중복이 필요한 고객은 두 개의 고유한 지역에 등록 데이터를 만들 수 있습니다. 그러면 고객은 **SQL Server 레지스트리** 서비스 가용성에 따라 어느 지역에서나 보안 업데이트를 다운로드할 수 있습니다. 
+
+지역 중복을 위해 **SQL Server 레지스트리** 서비스를 두 개의 다른 지역에 만들어야 하며, SQL Server 인벤토리는 이러한 두 서비스 간에 분할되어야 합니다. 이러한 방식으로 SQL Server의 절반은 한 지역의 레지스트리 서비스에 등록 되고 SQL Server의 나머지 절반은 다른 지역의 레지스트리 서비스에 등록 됩니다. 
+
+지역 중복을 구성하려면 다음 단계를 수행합니다.
+
+1. SQL Server 2008 또는 2008 R2 인벤토리를 upload1.csv 및 upload2.csv와 같은 두 개의 파일로 분할합니다. 
+  
+   :::image type="content" source="media/sql-server-extended-security-updates/two-upload-files-for-regional-redundancy.png" alt-text="파일 업로드 예제":::
+
+1. 한 지역에 첫 번째 **SQL Server 레지스트리** 서비스를 만든 다음 csv 파일 중 하나를 대량으로 등록합니다. 예를 들어 **미국 서부** 지역에서 첫 번째 **SQL Server 레지스트리** 서비스를 만든 다음 upload1.csv 파일을 사용하여 SQL Server를 대량으로 등록합니다. 
+1. 두 번째 지역에서 두 번째 **SQL Server 레지스트리** 서비스를 만든 다음 다른 csv 파일을 대량으로 등록합니다. 예를 들어 **미국 동부** 지역에서 두 번째 **SQL Server 레지스트리** 서비스를 만든 다음 upload2.csv 파일을 사용하여 SQL Server를 대량으로 등록합니다. 
+
+
+데이터가 두 개의 서로 다른 **SQL Server 레지스트리** 리소스에 등록된 후 서비스 가용성에 따라 어느 지역에서나 보안 업데이트를 다운로드할 수 있습니다. 
+
 
 ## <a name="faq"></a>FAQ
 

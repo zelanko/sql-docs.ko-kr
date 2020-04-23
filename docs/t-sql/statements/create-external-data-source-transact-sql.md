@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 461ce274af8d58574afa3e55e44e950b77cb6014
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e5937edb162883ac0dfde2d6c444b86092e0a4a
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77705888"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633426"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE(Transact-SQL)
 
@@ -58,7 +58,7 @@ PolyBase 쿼리에 대한 외부 데이터 원본을 만듭니다. 외부 데이
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -106,7 +106,7 @@ WITH
 - 일관된 쿼리 의미 체계를 보장하기 위해 Hadoop을 쿼리할 때 모든 테이블에 대해 동일한 외부 데이터 원본을 사용합니다.
 - `sqlserver` 위치 접두사를 사용하여 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]를 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 또는 Azure Synapse Analytics에 연결할 수 있습니다.
 - `ODBC`를 통해 연결할 때 `Driver={<Name of Driver>}`를 지정합니다.
-- `wasb`는 Azure Blob 스토리지의 기본 프로토콜입니다. `wasbs`는 선택 사항이지만 보안 SSL 연결을 통해 데이터를 전송하므로 권장됩니다.
+- `wasb`는 Azure Blob 스토리지의 기본 프로토콜입니다. `wasbs`는 선택 사항이지만 보안 TLS/SSL 연결을 통해 데이터를 전송하므로 권장됩니다.
 - Hadoop `Namenode` 장애 조치(failover) 중에 PolyBase 쿼리를 성공적으로 수행하려면 Hadoop 클러스터의 `Namenode`에 대한 가상 IP 주소 사용을 고려하세요. 그렇지 않은 경우 [ALTER EXTERNAL DATA SOURCE][alter_eds] 명령을 실행하여 새 위치를 가리킵니다.
 
 ### <a name="connection_options--key_value_pair"></a>CONNECTION_OPTIONS = *key_value_pair*
@@ -405,7 +405,7 @@ WITH
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -622,7 +622,7 @@ PolyBase에 대한 외부 데이터 원본을 만듭니다. 외부 데이터 원
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -654,10 +654,10 @@ WITH
 
 위치 설정 시 추가 참고 사항 및 지침:
 
-- Azure Data Lake Storage Gen 2를 프로비저닝할 때 기본 옵션은 `enable secure SSL connections`를 사용하는 것입니다. 이 기능을 사용하도록 설정한 경우 보안 SSL 연결을 선택할 때 `abfss`를 사용해야 합니다. `abfss`는 보안되지 않은 SSL 연결에서도 작동합니다.
+- Azure Data Lake Storage Gen 2를 프로비저닝할 때 기본 옵션은 `enable secure SSL connections`를 사용하는 것입니다. 이 기능을 사용하도록 설정한 경우 보안 TLS/SSL 연결을 선택할 때 `abfss`를 사용해야 합니다. `abfss`는 보안되지 않은 TLS/ 연결에서도 작동합니다.
 - Azure Synapse는 개체가 생성될 때 외부 데이터 원본이 존재하는지 확인하지 않습니다. . 유효성을 검사하려면 외부 데이터 원본을 사용하여 외부 테이블을 만듭니다.
 - 일관된 쿼리 의미 체계를 보장하기 위해 Hadoop을 쿼리할 때 모든 테이블에 대해 동일한 외부 데이터 원본을 사용합니다.
-- `wasb`는 Azure Blob 스토리지의 기본 프로토콜입니다. `wasbs`는 선택 사항이지만 보안 SSL 연결을 통해 데이터를 전송하므로 권장됩니다.
+- `wasb`는 Azure Blob 스토리지의 기본 프로토콜입니다. `wasbs`는 선택 사항이지만 보안 TLS 연결을 통해 데이터를 전송하므로 권장됩니다.
 
 ### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
@@ -872,7 +872,7 @@ PolyBase 쿼리에 대한 외부 데이터 원본을 만듭니다. 외부 데이
 
 ## <a name="syntax"></a>구문
 
-```sql
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -908,7 +908,7 @@ WITH
 
 - PDW 엔진은 개체가 생성될 때 외부 데이터 원본이 존재하는지 확인하지 않습니다. 유효성을 검사하려면 외부 데이터 원본을 사용하여 외부 테이블을 만듭니다.
 - 일관된 쿼리 의미 체계를 보장하기 위해 Hadoop을 쿼리할 때 모든 테이블에 대해 동일한 외부 데이터 원본을 사용합니다.
-- `wasb`는 Azure Blob 스토리지의 기본 프로토콜입니다. `wasbs`는 선택 사항이지만 보안 SSL 연결을 통해 데이터를 전송하므로 권장됩니다.
+- `wasb`는 Azure Blob 스토리지의 기본 프로토콜입니다. `wasbs`는 선택 사항이지만 보안 TLS 연결을 통해 데이터를 전송하므로 권장됩니다.
 - Hadoop `Namenode` 장애 조치(failover) 중에 PolyBase 쿼리를 성공적으로 수행하려면 Hadoop 클러스터의 `Namenode`에 대한 가상 IP 주소 사용을 고려하세요. 그렇지 않은 경우 [ALTER EXTERNAL DATA SOURCE][alter_eds] 명령을 실행하여 새 위치를 가리킵니다.
 
 ### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*

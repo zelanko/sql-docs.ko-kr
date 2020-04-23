@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 64c6981b34f973737b30480b92152faae9e74fd4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9ea3cde2e407600dab0b595df1dace43dc6b1ca3
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79510194"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486855"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Reporting Services 2016 기본 모드 보고서 서버 설치
 
@@ -90,7 +90,7 @@ URL 예약은 접두사, 호스트 이름, 포트 및 가상 디렉터리로 구
 
 |부분|Description|
 |----------|-----------------|
-|접두사|기본 접두사는 HTTP입니다. 이전에 SSL(Secure Sockets Layer) 인증서를 설치한 경우 설치 프로그램에서 HTTPS 접두사를 사용하는 URL 예약을 만들려고 시도합니다.|
+|접두사|기본 접두사는 HTTP입니다. 이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안) 인증서를 설치한 경우 설치 프로그램에서 HTTPS 접두사를 사용하는 URL 예약을 만들려고 시도합니다.|
 |호스트 이름|기본 호스트 이름은 강력한 와일드카드(+)로서 보고서 서버가 `https://<computername>/reportserver`, `https://localhost/reportserver` 또는 `https://<IPAddress>/reportserver`를 포함하여 컴퓨터로 확인되는 모든 호스트 이름에 대해 지정된 포트에서 HTTP 요청을 수락하도록 지정합니다.|
 |포트|기본 포트는 80입니다. 80 이외의 포트를 사용하는 경우 브라우저 창에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 애플리케이션을 열 때 URL에 해당 포트를 명시적으로 추가해야 합니다.|
 |가상 디렉터리|기본적으로 가상 디렉터리는 보고서 서버 웹 서비스의 경우 ReportServer_\<*instance_name*> 형식으로, [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]의 경우 Reports_\<*instance_name*> 형식으로 만들어집니다. 보고서 서버 웹 서비스의 기본 가상 디렉터리는 **reportserver**이고 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]의 기본 가상 디렉터리는 **reports**입니다.|
@@ -188,7 +188,7 @@ URL 예약은 접두사, 호스트 이름, 포트 및 가상 디렉터리로 구
 [보고서 서버 데이터베이스 연결 구성](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
 [파일만 설치&#40;Reporting Services&#41;](../../reporting-services/install-windows/files-only-installation-reporting-services.md)  
 [보고서 서버 초기화](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
-[기본 모드 보고서 서버에서 SSL 연결 구성](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
+[기본 모드 보고서 서버에서 TLS 연결 구성](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,5 +1,6 @@
 ---
 title: SQL Server용 Microsoft JDBC Driver | Microsoft Docs
+description: Microsoft는 SQL Server 및 Azure SQL Database에서 사용할 수 있는 JDBC 드라이버를 제공하여 Java 애플리케이션, 서버 또는 애플릿에 대한 연결을 설정합니다.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 09257402146c8e2354d54a04d202f2daf697bb3d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: be47bcad4526a65012fdd94e5dfe6b79d780985a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928229"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487817"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>SQL Server용 Microsoft JDBC Driver
 

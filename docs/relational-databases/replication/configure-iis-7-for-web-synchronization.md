@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b77faf60734e6aad7248c59d37033b26bb6b92e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 908c5d532386f83078c0dbb7976462f2d282533e
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903208"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529137"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>웹 동기화를 위한 IIS 7 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "67903208"
   
 1.  IIS를 실행하는 컴퓨터에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 수신기를 설치하고 구성합니다.  
   
-2.  SSL(Secure Sockets Layer)을 구성합니다. SSL은 IIS와 모든 구독자 간의 통신을 위해 필요합니다.  
+2.  이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안)를 구성합니다. TLS는 IIS와 모든 구독자 간의 통신에 필요합니다.  
   
 3.  IIS 인증을 구성합니다.  
   
@@ -97,9 +97,7 @@ ms.locfileid: "67903208"
 ## <a name="configuring-iis-authentication"></a>IIS 인증 구성  
  구독자 컴퓨터가 IIS에 연결한 다음 리소스 및 프로세스에 액세스하려면 먼저 IIS에서 해당 구독자를 인증해야 합니다. 인증은 전체 웹 사이트나 사용자가 만든 가상 디렉터리에 적용할 수 있습니다.  
   
- 기본 인증과 함께 SSL을 사용하는 것이 좋습니다. SSL은 사용하는 인증 유형에 관계없이 필요합니다.  
-  
- 기본 인증과 함께 SSL을 사용하는 것이 좋습니다. SSL은 사용하는 인증 유형에 관계없이 필요합니다.  
+ 기본 인증과 함께 TLS를 사용하는 것이 좋습니다. TLS는 사용하는 인증 유형에 관계없이 필요합니다.
   
 #### <a name="to-configure-iis-authentication"></a>IIS 인증을 구성하려면  
   
@@ -112,7 +110,7 @@ ms.locfileid: "67903208"
 4.  기본 인증을 마우스 오른쪽 단추로 클릭한 다음 사용을 클릭합니다.  
   
 ## <a name="configuring-secure-sockets-layer"></a>SSL(Secure Sockets Layer) 구성  
- SSL을 구성하려면 IIS를 실행하는 컴퓨터에서 사용할 인증서를 지정합니다. 병합 복제를 위한 웹 동기화에서는 서버 인증서를 사용할 수 있지만 클라이언트 인증서는 사용할 수 없습니다. 배포를 위해 IIS를 구성하려면 먼저 CA(인증 기관)에서 인증서를 얻어야 합니다. 인증서에 대한 자세한 내용은 IIS 설명서를 참조하십시오.  
+ TLS를 구성하려면 IIS를 실행하는 컴퓨터에서 사용할 인증서를 지정합니다. 병합 복제를 위한 웹 동기화에서는 서버 인증서를 사용할 수 있지만 클라이언트 인증서는 사용할 수 없습니다. 배포를 위해 IIS를 구성하려면 먼저 CA(인증 기관)에서 인증서를 얻어야 합니다. 인증서에 대한 자세한 내용은 IIS 설명서를 참조하십시오.  
   
  인증서를 설치한 다음에는 웹 동기화에서 사용하는 웹 사이트와 인증서를 연결해야 합니다. 개발 및 테스트용으로 자체 서명 인증서를 지정할 수 있습니다. IIS 7은 인증서를 만들고 해당 인증서를 사용자의 컴퓨터에 등록할 수 있습니다.  
   
@@ -121,9 +119,9 @@ ms.locfileid: "67903208"
 > [!IMPORTANT]  
 >  프로덕션 설치의 경우에는 자체 서명된 인증서를 사용하지 않는 것이 좋습니다. 자체 서명된 인증서는 안전하지 않습니다. 자체 서명된 인증서는 개발 및 테스트용으로만 사용하십시오.  
   
- SSL을 구성하려면 다음 단계를 수행하십시오.  
+ TLS를 구성하려면 다음 단계를 수행합니다.  
   
-1.  웹 사이트에서 SSL을 필요로 하고 클라이언트 인증서를 무시하도록 구성합니다.  
+1.  웹 사이트에서 TLS를 필요로 하고 클라이언트 인증서를 무시하도록 구성합니다.  
   
 2.  CA에서 인증서를 얻거나 자체 서명된 인증서를 만듭니다.  
   
@@ -268,7 +266,7 @@ ms.locfileid: "67903208"
     5.  다시 **확인** 을 클릭하여 고급 설정을 닫습니다.  
   
 ## <a name="testing-the-connection-to-replisapidll"></a>replisapi.dll에 대한 연결 테스트  
- 진단 모드에서 웹 동기화를 실행하여 IIS를 실행하는 컴퓨터에 대한 연결을 테스트하고 SSL(Secure Sockets Layer) 인증서가 제대로 설치되었는지 확인합니다. 진단 모드에서 웹 동기화를 실행하려면 IIS가 실행되는 컴퓨터의 관리자여야 합니다.  
+ 진단 모드에서 웹 동기화를 실행하여 IIS를 실행하는 컴퓨터에 대한 연결을 테스트하고 TLS/SSL 인증서가 제대로 설치되었는지 확인합니다. 진단 모드에서 웹 동기화를 실행하려면 IIS가 실행되는 컴퓨터의 관리자여야 합니다.  
   
 #### <a name="to-test-the-connection-to-replisapidll"></a>replisapi.dll에 대한 연결을 테스트하려면  
   

@@ -1,7 +1,8 @@
 ---
-title: Microsoft Drivers for PHP for SQL Server 지원 매트릭스 | Microsoft Docs
+title: Microsoft Drivers for PHP 지원 매트릭스
+description: 이 페이지에는 Microsoft PHP Driver for SQL Server에 대한 지원 매트릭스 및 지원 드라이버에 대한 지원 주기 정책이 포함되어 있습니다.
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 04/15/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 manager: ''
-ms.openlocfilehash: 57e7a8e5849b984676c2e0a843c753a12f2f20dd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 82d394cd3c940de43f8b9706b719515ed45d97a4
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922822"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632756"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Microsoft PHP Drivers for SQL Server 지원 매트릭스
 
@@ -55,7 +56,7 @@ MSL(Microsoft 지원 수명 주기) 정책은 Microsoft 제품 지원 수명 주
 ## <a name="sql-server-version-certified-compatibility"></a>SQL Server 버전 인증 호환성
  다음 매트릭스는 테스트를 통해 해당 드라이버 버전과 호환되는 것으로 인증된 SQL Server 버전을 나열합니다. 이전 드라이버 버전과의 호환성을 유지하기 위해 노력하고 있지만 SQL Server가 출시될 때 최신 지원 드라이버는 새 SQL Server 버전에서만 테스트하고 인증됩니다.
 
-|SQL Server 드라이버 버전용 PHP &#8594;<br />&#8595; SQL Server 버전|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|PHP for SQL Server 드라이버 버전 &#8594;<br />&#8595; SQL Server 버전|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Azure SQL Managed Instance|Y|Y|Y|Y|Y| | |
 |Azure SQL Data Warehouse|Y|Y|Y|Y|Y| | |
@@ -72,7 +73,7 @@ MSL(Microsoft 지원 수명 주기) 정책은 Microsoft 제품 지원 수명 주
 
 다음 버전의 PHP는 나열된 버전의 Microsoft PHP Drivers에서 지원됩니다.
 
-|SQL Server 드라이버 버전용 PHP &#8594;<br />&#8595; PHP 버전|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|PHP for SQL Server 드라이버 버전 &#8594;<br />&#8595; PHP 버전|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |:---:|---|---|---|---|---|---|---|
 |7.4|7.4.0+          |                |                |                |       |        |        |
 |7.3|7.3.0+          |7.3.0+          |                |                |       |        |        |
@@ -90,7 +91,7 @@ MSL(Microsoft 지원 수명 주기) 정책은 Microsoft 제품 지원 수명 주
 
 다음 Windows 운영 체제 버전이 나열된 버전의 Microsoft PHP Drivers에서 지원됩니다.
 
-|SQL Server 드라이버 버전용 PHP &#8594;<br />&#8595; 운영 체제|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|PHP for SQL Server 드라이버 버전 &#8594;<br />&#8595; 운영 체제|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Windows Server 2019                 |Y  |Y  |   |   |   |   |   |
 |Windows Server 2016                 |Y  |Y  |Y  |Y  |Y  |   |   |
@@ -106,9 +107,9 @@ MSL(Microsoft 지원 수명 주기) 정책은 Microsoft 제품 지원 수명 주
 |Windows Vista SP2                   |   |   |   |   |   |Y  |Y  |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-다음 Linux 및 Mac 운영 체제 버전(64비트만 해당)이 나열된 버전의 Microsoft PHP Drivers에서 지원됩니다.
+다음 Linux 및 macOS 운영 체제 버전(64비트만 해당)은 나열된 Microsoft PHP Drivers 버전에서 지원됩니다.
 
-|SQL Server 드라이버 버전용 PHP &#8594;<br />&#8595; 운영 체제|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|PHP for SQL Server 드라이버 버전 &#8594;<br />&#8595; 운영 체제|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Ubuntu 19.10(64비트)               |Y  |   |   |   |   |   |   |
 |Ubuntu 18.10(64비트)               |   |Y  |   |   |   |   |   |
@@ -132,12 +133,12 @@ MSL(Microsoft 지원 수명 주기) 정책은 Microsoft 제품 지원 수명 주
 |macOS El Capitan(64비트)           |   |   |Y  |Y  |Y  |   |   |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-<sup>1</sup> Alpine Linux 지원은 버전 5.8에서 실험적입니다.
+<sup>1</sup> Alpine Linux 지원은 버전 5.8.0에서 실험적입니다. 버전 5.8.1은 프로덕션 지원을 도입합니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[릴리스 정보](../../connect/php/release-notes-php-sql-driver.md)
+[릴리스 정보](release-notes-php-sql-driver.md)
 
-[지원 리소스](../../connect/php/support-resources-for-the-php-sql-driver.md)
+[지원 리소스](support-resources-for-the-php-sql-driver.md)
 
-[시스템 요구 사항](../../connect/php/system-requirements-for-the-php-sql-driver.md)
+[시스템 요구 사항](system-requirements-for-the-php-sql-driver.md)

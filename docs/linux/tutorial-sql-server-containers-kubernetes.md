@@ -9,12 +9,12 @@ ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 50c10c976cd30db4c8fcdcd1404f4618e77356c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 729aacf69f8aa36964f33c0bcb282351a67ab444
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216673"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635426"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>AKS(Azure Kubernetes Services)를 사용하여 Kubernetes에 SQL Server 컨테이너 배포
 
@@ -52,7 +52,7 @@ Kubernetes 1.6 이상에서는 [스토리지 클래스](https://kubernetes.io/do
 * **Kubernetes 클러스터**
    - 이 자습서를 완료하려면 Kubernetes 클러스터가 필요합니다. 이 단계에서는 [kubectl](https://kubernetes.io/docs/user-guide/kubectl/)을 사용하여 클러스터를 관리합니다. 
 
-   - `kubectl`을 사용하여 AKS에서 단일 노드 Kubernetes 클러스터를 만들고 연결하려면 [AKS(Azure Container Service) 클러스터 배포](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster)를 참조하세요. 
+   - `kubectl`을 사용하여 AKS에서 단일 노드 Kubernetes 클러스터를 만들고 연결하려면 [AKS(Azure Kubernetes Service) 클러스터 배포](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster)를 참조하세요. 
 
    >[!NOTE]
    >노드 오류로부터 보호하려면 Kubernetes 클러스터에 두 개 이상의 노드가 필요합니다.

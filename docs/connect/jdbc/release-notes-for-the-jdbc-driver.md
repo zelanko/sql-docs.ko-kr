@@ -1,5 +1,6 @@
 ---
 title: JDBC 드라이버에 대한 릴리스 정보
+description: 이 문서에는 SQL Server용 Microsoft JDBC Driver의 릴리스가 나열되어 있습니다. 릴리스 버전별로 변경 내용을 밝히고 설명합니다.
 ms.custom: ''
 ms.date: 03/24/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 35073498dd654df3d03f6fc0d66d2cfca758ec3a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: bbcff4ee14db85a3a973496ce8a5cb24772a35b9
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902296"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634290"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>SQL Server용 Microsoft JDBC 드라이버에 대한 릴리스 정보
 
@@ -50,7 +51,7 @@ SQL Server용 Microsoft JDBC Driver 8.2는 이제 JDK 11.0 및 1.8 외에도 JDK
 | Always Encrypted 변경 | 세부 정보 |
 | :--------- | :------ |
 | SQL Server용 Microsoft JDBC Driver 8.2는 이제 보안 Enclave를 사용한 Always Encrypted를 지원합니다. 자세한 내용은 여기에서 찾을 수 있습니다. 보안 enclave를 사용한 Always Encrypted. |
-| 추가 정보 및 샘플 코드. | [보안 Enclave를 사용한 Always Encrypted](../../connect/jdbc/always-encrypted-with-secure-enclaves.md)를 참조하세요. |
+| 추가 정보 및 샘플 코드. | [보안 Enclave를 사용한 Always Encrypted](always-encrypted-with-secure-enclaves.md)를 참조하세요. |
 | &nbsp; | &nbsp; |
 
 ### <a name="performance-improvement-when-retrieving-temporal-datatypes-from-sql-server-sup1sup"></a>SQL Server에서 Temporal 데이터 형식을 검색하는 경우의 성능 향상<sup>1</sup>
@@ -110,7 +111,7 @@ SQL Server용 Microsoft JDBC Driver 7.4는 이제 JDK 11.0 및 1.8 외에도 JDK
 | NTLM 변경 | 세부 정보 |
 | :--------- | :------ |
 | NTLM 인증 모드를 지원합니다. | 이 인증 모드를 사용하면 Windows 및 다른 운영 체제의 클라이언트가 모두 Windows 도메인 사용자를 사용하여 SQL Server에 대해 자신을 인증할 수 있습니다. |
-| 이 인증 모드를 사용하기 위한 자세한 내용 및 애플리케이션 예제 | [NTLM 인증을 사용하여 연결](../../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md)을 참조하세요. |
+| 이 인증 모드를 사용하기 위한 자세한 내용 및 애플리케이션 예제 | [NTLM 인증을 사용하여 연결](using-ntlm-authentication-to-connect-to-sql-server.md)을 참조하세요. |
 | &nbsp; | &nbsp; |
 
 ### <a name="introduces-querying-parametermetadata-via-_usefmtonly_"></a>_useFmtOnly_를 통해 ParameterMetaData 쿼리를 소개
@@ -118,7 +119,7 @@ SQL Server용 Microsoft JDBC Driver 7.4는 이제 JDK 11.0 및 1.8 외에도 JDK
 | useFmtOnly 변경 | 세부 정보 |
 | :---------- | :------ |
 | **useFmtOnly** 연결 속성이 추가되었습니다. | 이 기능을 사용하면 `SET FMTONLY ON` 레거시 API를 통해 ParameterMetaData를 선택적으로 쿼리할 수 있습니다. 이 기능은 `sp_describe_undeclared_parameters`가 예상대로 작동하지 않는 시나리오에 유용합니다. |
-| 세부 사항 및 제한 사항 | [useFmtOnly 사용](../../connect/jdbc/using-usefmtonly.md) 참조 |
+| 세부 사항 및 제한 사항 | [useFmtOnly 사용](using-usefmtonly.md) 참조 |
 | &nbsp; | &nbsp; |
 
 ### <a name="updated-_microsoft-azure-key-vault-sdk-for-java_-version-121"></a>업데이트된 _Java용 Microsoft Azure Key Vault SDK_ 버전: 1.2.1
@@ -127,7 +128,7 @@ SQL Server용 Microsoft JDBC Driver 7.4는 이제 JDK 11.0 및 1.8 외에도 JDK
 | :------------------- | :------ |
 | _Java용 Microsoft Azure Key Vault SDK_의 Maven 종속성을 버전 1.2.1로 업데이트했습니다. | &nbsp; |
 | _Key Vault WebKey용 Microsoft Azure SDK_를 Maven 종속성에서 제거합니다. | &nbsp; |
-| 추가 정보 | [SQL Server용 Microsoft JDBC Driver의 기능 종속성](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)을 참조하세요. |
+| 추가 정보 | [SQL Server용 Microsoft JDBC Driver의 기능 종속성](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)을 참조하세요. |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>알려진 문제
@@ -135,7 +136,7 @@ SQL Server용 Microsoft JDBC Driver 7.4는 이제 JDK 11.0 및 1.8 외에도 JDK
 | 알려진 문제 | 세부 정보 |
 | :----------- | :------ |
 | NTLM 인증을 사용하는 경우 | 확장 보호 및 암호화된 연결을 동시에 활성화하는 기능은 현재 지원되지 않습니다. |
-| useFmtOnly를 사용하는 경우 | 이 기능에는 SQL 구문 분석 논리의 결함으로 인해 발생하는 몇 가지 문제가 있습니다. 자세한 내용 및 해결 방법에 관한 제안은 [useFmtOnly 사용](../../connect/jdbc/using-usefmtonly.md)을 참조하세요. |
+| useFmtOnly를 사용하는 경우 | 이 기능에는 SQL 구문 분석 논리의 결함으로 인해 발생하는 몇 가지 문제가 있습니다. 자세한 내용 및 해결 방법에 관한 제안은 [useFmtOnly 사용](using-usefmtonly.md)을 참조하세요. |
 | &nbsp; | &nbsp; |
 
 ## <a name="a-id72-722"></a><a id="72"> 7.2.2
@@ -171,7 +172,7 @@ tar.gz 파일에 포함된 드라이버: [중국어(간체)](https://go.microsof
 | MSI 변경 | 세부 정보 |
 | :--------- | :------ |
 | Active Directory Service MSI(관리 서비스 ID) 인증 모드를 지원합니다. | 이 인증 모드는 ‘ID’ 기능 지원을 사용하도록 설정한 Azure 리소스에 사용할 수 있습니다.<br/><br/>드라이버에서 **accessToken**을 가져와 보안 연결을 설정하기 위해 MSI(관리 시스템 ID)의 두 가지 유형이 모두 지원됩니다. |
-| 이 인증 모드를 사용하기 위한 자세한 내용 및 애플리케이션 예제 | [Azure Active Directory 인증을 사용하여 연결](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)을 참조하세요. |
+| 이 인증 모드를 사용하기 위한 자세한 내용 및 애플리케이션 예제 | [Azure Active Directory 인증을 사용하여 연결](connecting-using-azure-active-directory-authentication.md)을 참조하세요. |
 | &nbsp; | &nbsp; |
 
 ### <a name="introduces-_open-service-gateway-initiative_-osgi-support"></a>_OSGi(Open Service Gateway Initiative)_ 지원 소개
@@ -187,7 +188,7 @@ tar.gz 파일에 포함된 드라이버: [중국어(간체)](https://go.microsof
 | 오류 API 변경 | 세부 정보 |
 | :--------------- | :------ |
 | SQLServerError API가 도입되었습니다. | 서버에서 생성된 오류에 대한 추가 정보를 검색하는 Getter API입니다.<br/><br/>&bull; &nbsp; `SQLServerException.getSQLServerError()`<br/>&bull; &nbsp; `SQLServerError` |
-| 추가 정보 | [오류 처리](../../connect/jdbc/handling-errors.md)를 참조하세요. |
+| 추가 정보 | [오류 처리](handling-errors.md)를 참조하세요. |
 | &nbsp; | &nbsp; |
 
 ### <a name="updated-_microsoft-azure-active-directory-authentication-library-adal4j-for-java_-version-163"></a>업데이트된 _ADAL4J(Java용 Microsoft Azure Active Directory 인증 라이브러리)_ 버전: 1.6.3
@@ -196,7 +197,7 @@ tar.gz 파일에 포함된 드라이버: [중국어(간체)](https://go.microsof
 | :------------ | :------ |
 | ADAL4J에 대한 Maven 종속성을 버전 1.6.3으로 업데이트했습니다. | &nbsp; |
 | ‘AutoRest용 Java 클라이언트 런타임’을  Maven 종속성 버전 1.6.5로 도입합니다. | &nbsp; |
-| 추가 정보 | [SQL Server용 Microsoft JDBC Driver의 기능 종속성](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)을 참조하세요. |
+| 추가 정보 | [SQL Server용 Microsoft JDBC Driver의 기능 종속성](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)을 참조하세요. |
 | &nbsp; | &nbsp; |
 
 ### <a name="updated-_microsoft-azure-key-vault-sdk-for-java_-version-120"></a>Java용 Microsoft Azure Key Vault SDK  버전 1.2.0 업데이트
@@ -205,7 +206,7 @@ tar.gz 파일에 포함된 드라이버: [중국어(간체)](https://go.microsof
 | :------------------- | :------ |
 | ‘Java용 Microsoft Azure Key Vault SDK’에 대한  Maven 종속성을 버전 1.2.0으로 업데이트했습니다. | &nbsp; |
 | _Key Vault WebKey용 Microsoft Azure SDK_를 Maven 종속성(버전 1.2.0.)을 소개합니다. | &nbsp; |
-| 추가 정보 | [SQL Server용 Microsoft JDBC Driver의 기능 종속성](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)을 참조하세요. |
+| 추가 정보 | [SQL Server용 Microsoft JDBC Driver의 기능 종속성](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)을 참조하세요. |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>알려진 문제
@@ -236,23 +237,23 @@ SQL Server용 Microsoft JDBC Driver 7.0은는 이제 JDK 1.8 외에도 JDK(Java 
 
 ### <a name="support-for-spatial-datatypes"></a>공간 데이터 형식 지원
 
-SQL Server용 Microsoft JDBC Driver 7.0은 이제 SQL Server 공간 데이터 형식 Geography 및 Geometry를 지원합니다. 공간 데이터 형식 API 및 사용 방법에 대한 자세한 내용은 [Using spatial datatypes](../../connect/jdbc/use-spatial-datatypes.md)(공간 데이터 형식 사용)를 참조하세요.
+SQL Server용 Microsoft JDBC Driver 7.0은 이제 SQL Server 공간 데이터 형식 Geography 및 Geometry를 지원합니다. 공간 데이터 형식 API 및 사용 방법에 대한 자세한 내용은 [Using spatial datatypes](use-spatial-datatypes.md)(공간 데이터 형식 사용)를 참조하세요.
 
 ### <a name="implementation-for-jdbc-43-introduced-javasqlconnection-apis-beginrequest-and-endrequest"></a>JDBC 4.3에서 도입된 java.sql.Connection API beginRequest() 및 endRequest()에 대한 구현
 
-SQL Server용 Microsoft JDBC Driver 7.0은 이제 `java.sql.Connection` 클래스에서 `beginRequest()` 및 `endRequest()` API를 구현합니다. 이러한 API는 JDBC 4.3 사양 및 JDK 9에서 도입되었습니다. 드라이버의 이러한 API 구현에 대한 자세한 내용은 Api의 드라이버의 구현에 대한 자세한 내용은 참조하세요. [JDBC 4.3 compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md)(JDBC Driver의 JDBC 4.3 준수)를 참조하세요.
+SQL Server용 Microsoft JDBC Driver 7.0은 이제 `java.sql.Connection` 클래스에서 `beginRequest()` 및 `endRequest()` API를 구현합니다. 이러한 API는 JDBC 4.3 사양 및 JDK 9에서 도입되었습니다. 드라이버의 이러한 API 구현에 대한 자세한 내용은 Api의 드라이버의 구현에 대한 자세한 내용은 참조하세요. [JDBC 4.3 compliance for the JDBC Driver](jdbc-4-3-compliance-for-the-jdbc-driver.md)(JDBC Driver의 JDBC 4.3 준수)를 참조하세요.
 
 ### <a name="support-for-sql-data-discovery-and-classification"></a>SQL 데이터 검색 및 분류 지원
 
 SQL Server용 Microsoft JDBC Driver 7.0은 SQL 데이터 검색 및 분류 기능을 해당 기능을 지원하는 모든 대상 데이터베이스에서 지원합니다. 이제 드라이버는 `SQLServerResultSet.getSensitivityClassification()` API를 노출하여 가져온 `ResultSet`에서 이 정보를 추출합니다.
 
-JDBC 드라이버에서 이 기능을 사용하는 방법에 대한 자세한 내용은 [SQL 데이터 검색 및 분류](../../connect/jdbc/data-discovery-classification-sample.md)를 참조하세요.
+JDBC 드라이버에서 이 기능을 사용하는 방법에 대한 자세한 내용은 [SQL 데이터 검색 및 분류](data-discovery-classification-sample.md)를 참조하세요.
 
 ### <a name="added-connection-property-usebulkcopyforbatchinsert"></a>추가된 연결 속성: useBulkCopyForBatchInsert
 
 SQL Server용 Microsoft JDBC Driver 7.0은 새 연결 속성 `useBulkCopyForBatchInsert`를 도입합니다. 이 속성은 Azure SQL Data Warehouse에서만 지원됩니다.
 
-이 속성은 기본적으로 사용되지 않습니다. Azure SQL Data Warehouse로 많은 양의 데이터를 푸시하는 경우 이 기능을 사용하도록 설정하여 사용자 애플리케이션의 성능을 향상할 수 있습니다. 이 속성을 사용하도록 설정하면 일괄 삽입 작업의 동작이 바뀌어 사용자가 지정한 데이터를 사용한 대량 복사 작업으로 전환됩니다. 이 속성 및 해당 제한 사항에 대한 자세한 내용은 [Using Bulk Copy API for batch insert operation](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md)(일괄 삽입 작업에 대량 복사 API 사용)을 참조하세요.
+이 속성은 기본적으로 사용되지 않습니다. Azure SQL Data Warehouse로 많은 양의 데이터를 푸시하는 경우 이 기능을 사용하도록 설정하여 사용자 애플리케이션의 성능을 향상할 수 있습니다. 이 속성을 사용하도록 설정하면 일괄 삽입 작업의 동작이 바뀌어 사용자가 지정한 데이터를 사용한 대량 복사 작업으로 전환됩니다. 이 속성 및 해당 제한 사항에 대한 자세한 내용은 [Using Bulk Copy API for batch insert operation](use-bulk-copy-api-batch-insert-operation.md)(일괄 삽입 작업에 대량 복사 API 사용)을 참조하세요.
 
 ### <a name="added-connection-property-cancelquerytimeout"></a>추가된 연결 속성: cancelQueryTimeout
 
@@ -281,7 +282,7 @@ public SQLServerColumnEncryptionAzureKeyVaultProvider(
 
 ### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-160"></a>업데이트된 "ADAL4J(Java용 Microsoft Azure Active Directory 인증 라이브러리)" 버전: 1.6.0
 
-SQL Server용 Microsoft JDBC Driver 7.0에서는 “ADAL4J(Java용 Microsoft Azure Active Directory 인증 라이브러리)"에 대한 Maven 종속성을 버전 1.6.0으로 업데이트했습니다. 종속성에 대한 자세한 내용은 [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)(SQL Server용 Microsoft JDBC Driver의 기능 종속성)를 참조하세요.
+SQL Server용 Microsoft JDBC Driver 7.0에서는 “ADAL4J(Java용 Microsoft Azure Active Directory 인증 라이브러리)"에 대한 Maven 종속성을 버전 1.6.0으로 업데이트했습니다. 종속성에 대한 자세한 내용은 [Feature dependencies of the Microsoft JDBC Driver for SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)(SQL Server용 Microsoft JDBC Driver의 기능 종속성)를 참조하세요.
 
 ## <a name="64"></a>6.4
 
@@ -303,7 +304,7 @@ SQL Server용 Microsoft JDBC Driver 6.4는 JDBC API 사양 4.1 및 4.2를 완벽
 
 ### <a name="jdbc-43-compliance"></a>JDBC 4.3 준수
 
-드라이버는 4.1 및 4.2 외에도 Java Database Connectivity API 4.3 사양을 지원합니다. JDBC 4.3 API 메서드가 추가되었지만 아직 구현되지 않았습니다. 자세한 내용은 [JDBC Driver의 JDBC 4.3 준수](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md)를 참조하세요.
+드라이버는 4.1 및 4.2 외에도 Java Database Connectivity API 4.3 사양을 지원합니다. JDBC 4.3 API 메서드가 추가되었지만 아직 구현되지 않았습니다. 자세한 내용은 [JDBC Driver의 JDBC 4.3 준수](jdbc-4-3-compliance-for-the-jdbc-driver.md)를 참조하세요.
 
 ### <a name="added-connection-property-sslprotocol"></a>추가된 연결 속성: sslProtocol
 
@@ -339,15 +340,15 @@ SQL Server용 Microsoft JDBC Driver 6.4는 JDBC API 사양 4.1 및 4.2를 완벽
 
 ### <a name="implemented-prepared-statement-metadata-caching"></a>준비된 문 메타데이터 캐싱이 구현됨
 
-JDBC Driver에서 성능 향상을 위해 준비된 문 메타데이터 캐싱을 구현했습니다. 드라이버는 이제 `disableStatementPooling` 및 `statementPoolingCacheSize` 연결 속성을 사용하여 드라이버에서 준비된 문 메타데이터 캐싱을 지원합니다. 이 기능은 기본적으로 해제되어 있습니다. 자세한 내용은 [Prepared statement metadata caching for the JDBC Driver](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)(JDBC Driver에 대한 준비된 문 메타데이터 캐싱)를 참조하세요.
+JDBC Driver에서 성능 향상을 위해 준비된 문 메타데이터 캐싱을 구현했습니다. 드라이버는 이제 `disableStatementPooling` 및 `statementPoolingCacheSize` 연결 속성을 사용하여 드라이버에서 준비된 문 메타데이터 캐싱을 지원합니다. 이 기능은 기본적으로 해제되어 있습니다. 자세한 내용은 [Prepared statement metadata caching for the JDBC Driver](prepared-statement-metadata-caching-for-the-jdbc-driver.md)(JDBC Driver에 대한 준비된 문 메타데이터 캐싱)를 참조하세요.
 
-### <a name="added-support-for-azure-ad-integrated-authentication-on-linuxmac"></a>Linux/Mac에서 Azure AD 통합 인증에 대한 지원 추가
+### <a name="added-support-for-azure-ad-integrated-authentication-on-linuxmacos"></a>Linux/macOS에서 Azure AD 통합 인증에 대한 지원 추가
 
-또한 JDBC Driver는 이제 지원되는 모든 운영 체제(Windows, Linux, Mac)에서 Kerberos를 사용하여 Azure AD(Azure Active Directory) 통합 인증을 지원합니다. 또는 Windows 운영 체제에서 사용자는 mssql-jdbc_auth-\<버전>-\<arch>.dll을 사용하여 인증할 수 있습니다.
+또한 JDBC Driver는 이제 지원되는 모든 운영 체제(Windows, Linux, macOS)에서 Kerberos를 사용하여 Azure AD(Azure Active Directory) 통합 인증을 지원합니다. 또는 Windows 운영 체제에서 사용자는 mssql-jdbc_auth-\<버전>-\<arch>.dll을 사용하여 인증할 수 있습니다.
 
 ### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-140"></a>업데이트된 "ADAL4J(Java용 Microsoft Azure Active Directory 인증 라이브러리)" 버전: 1.4.0
 
-JDBC Driver에서 “ADAL4J(Java용 Microsoft Azure Active Directory 인증 라이브러리)"에 대한 Maven 종속성을 버전 1.4.0으로 업데이트했습니다. 종속성에 대한 자세한 내용은 [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)(SQL Server용 Microsoft JDBC Driver의 기능 종속성)를 참조하세요.
+JDBC Driver에서 “ADAL4J(Java용 Microsoft Azure Active Directory 인증 라이브러리)"에 대한 Maven 종속성을 버전 1.4.0으로 업데이트했습니다. 종속성에 대한 자세한 내용은 [Feature dependencies of the Microsoft JDBC Driver for SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)(SQL Server용 Microsoft JDBC Driver의 기능 종속성)를 참조하세요.
 
 ## <a name="62"></a>6.2
 
@@ -423,11 +424,11 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 ### <a name="always-encrypted"></a>Always Encrypted
 
-이 드라이버는 SQL Server 2016에서 Always Encrypted 기능을 지원합니다. 이 기능을 사용하면 SQL Server 인스턴스에서 중요한 데이터가 일반 텍스트로 표시되지 않도록 할 수 있습니다. 항상 암호화는 SQL Server에서 일반 텍스트 값이 아니라 암호화된 데이터만 처리하도록 애플리케이션의 데이터를 투명하게 암호화하여 작동합니다. SQL Server 인스턴스 또는 호스트 머신이 손상된 경우에도 공격자가 얻을 수 있는 것은 중요한 데이터의 암호 텍스트뿐입니다. 자세한 내용은 [Always Encrypted와 JDBC Driver 사용](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)을 참조하세요.
+이 드라이버는 SQL Server 2016에서 Always Encrypted 기능을 지원합니다. 이 기능을 사용하면 SQL Server 인스턴스에서 중요한 데이터가 일반 텍스트로 표시되지 않도록 할 수 있습니다. 항상 암호화는 SQL Server에서 일반 텍스트 값이 아니라 암호화된 데이터만 처리하도록 애플리케이션의 데이터를 투명하게 암호화하여 작동합니다. SQL Server 인스턴스 또는 호스트 머신이 손상된 경우에도 공격자가 얻을 수 있는 것은 중요한 데이터의 암호 텍스트뿐입니다. 자세한 내용은 [Always Encrypted와 JDBC Driver 사용](using-always-encrypted-with-the-jdbc-driver.md)을 참조하세요.
 
 ### <a name="internationalized-domain-names"></a>다국어 도메인 이름
 
-이 드라이버에서는 서버 이름에 IDN(다국어 도메인 이름)을 지원합니다. 자세한 내용은 [International features of the JDBC Driver](../../connect/jdbc/international-features-of-the-jdbc-driver.md)(JDBC Driver의 국가별 기능) 문서에서 "Using International Domain Names(다국어 도메인 이름 사용)"를 참조하세요.
+이 드라이버에서는 서버 이름에 IDN(다국어 도메인 이름)을 지원합니다. 자세한 내용은 [International features of the JDBC Driver](international-features-of-the-jdbc-driver.md)(JDBC Driver의 국가별 기능) 문서에서 "Using International Domain Names(다국어 도메인 이름 사용)"를 참조하세요.
 
 ### <a name="parameterized-queries"></a>매개 변수가 있는 쿼리
 
@@ -437,11 +438,11 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 Azure AD 인증은 Azure AD에서 ID를 참조하여 Azure SQL Database v12에 연결하는 메커니즘입니다. 중앙에서 데이터베이스 사용자의 ID를 관리할 수 있는 Azure AD 인증은 SQL Server 인증 대신으로도 사용할 수 있습니다.
 
-JDBC Driver 6.0을 사용하면 JDBC 연결 문자열에서 Azure AD 자격 증명을 지정하여 Azure SQL Database에 연결할 수 있습니다. 자세한 내용은 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md) 문서의 authentication 속성을 참조하세요.
+JDBC Driver 6.0을 사용하면 JDBC 연결 문자열에서 Azure AD 자격 증명을 지정하여 Azure SQL Database에 연결할 수 있습니다. 자세한 내용은 [연결 속성 설정](setting-the-connection-properties.md) 문서의 authentication 속성을 참조하세요.
 
 ### <a name="table-valued-parameters"></a>테이블 반환 매개 변수
 
-TVP를 사용하면 데이터를 처리하는 데 여러 번 왕복하거나 서버 측 특수 논리를 설정하지 않고도 데이터의 여러 행을 클라이언트 애플리케이션에서 SQL Server로 쉽게 마샬링할 수 있습니다. 또한 TVP를 사용하면 클라이언트 애플리케이션에서 데이터 행을 캡슐화하고 매개 변수가 있는 단일 명령으로 데이터를 서버에 보낼 수 있습니다. 들어오는 데이터 행을 테이블 변수에 저장하여 Transact-SQL에서 사용할 수 있습니다. 자세한 내용은 [Using table-valued parameters](../../connect/jdbc/using-table-valued-parameters.md)(테이블 반환 매개 변수 사용)를 참조하세요.
+TVP를 사용하면 데이터를 처리하는 데 여러 번 왕복하거나 서버 측 특수 논리를 설정하지 않고도 데이터의 여러 행을 클라이언트 애플리케이션에서 SQL Server로 쉽게 마샬링할 수 있습니다. 또한 TVP를 사용하면 클라이언트 애플리케이션에서 데이터 행을 캡슐화하고 매개 변수가 있는 단일 명령으로 데이터를 서버에 보낼 수 있습니다. 들어오는 데이터 행을 테이블 변수에 저장하여 Transact-SQL에서 사용할 수 있습니다. 자세한 내용은 [Using table-valued parameters](using-table-valued-parameters.md)(테이블 반환 매개 변수 사용)를 참조하세요.
 
 ### <a name="always-on-availability-groups"></a>Always On 가용성 그룹
 
@@ -474,19 +475,19 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 ### <a name="jdbc-41-and-42-compliance"></a>JDBC 4.1 및 4.2 준수
 
-드라이버는 4.0 외에도 Java Database Connectivity API 4.1 및 4.2 사양을 지원합니다. 자세한 내용은 [JDBC 4.1 compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md)(JDBC Driver의 JDBC 4.1 준수) 및 [JDBC 4.2 compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md)(JDBC Driver의 JDBC 4.2 준수)를 참조하세요.
+드라이버는 4.0 외에도 Java Database Connectivity API 4.1 및 4.2 사양을 지원합니다. 자세한 내용은 [JDBC 4.1 compliance for the JDBC Driver](jdbc-4-1-compliance-for-the-jdbc-driver.md)(JDBC Driver의 JDBC 4.1 준수) 및 [JDBC 4.2 compliance for the JDBC Driver](jdbc-4-2-compliance-for-the-jdbc-driver.md)(JDBC Driver의 JDBC 4.2 준수)를 참조하세요.
 
 ### <a name="bulk-copy"></a>대량 복사
 
-대량 복사 기능을 사용하여 SQL Server 데이터베이스의 테이블이나 뷰에 많은 양의 데이터를 신속하게 복사할 수 있습니다. 자세한 내용은 [JDBC Driver에서 대량 복사 사용](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md)을 참조하세요.
+대량 복사 기능을 사용하여 SQL Server 데이터베이스의 테이블이나 뷰에 많은 양의 데이터를 신속하게 복사할 수 있습니다. 자세한 내용은 [JDBC Driver에서 대량 복사 사용](using-bulk-copy-with-the-jdbc-driver.md)을 참조하세요.
 
 ### <a name="xa-transaction-rollback-option"></a>XA 트랜잭션 롤백 옵션
 
-드라이버에 이제 준비되지 않은 트랜잭션의 기존 자동 롤백에 대해 새로운 제한 시간 옵션이 있습니다. 자세한 내용은 [Understanding XA transactions](../../connect/jdbc/understanding-xa-transactions.md)(XA 트랜잭션이해)를 참조하세요.
+드라이버에 이제 준비되지 않은 트랜잭션의 기존 자동 롤백에 대해 새로운 제한 시간 옵션이 있습니다. 자세한 내용은 [Understanding XA transactions](understanding-xa-transactions.md)(XA 트랜잭션이해)를 참조하세요.
 
 ### <a name="new-kerberos-principal-connection-property"></a>새 Kerberos 보안 주체 연결 속성
 
-드라이버는 새 연결 속성을 사용하여 Kerberos 연결을 유연하게 합니다. 자세한 내용은 [Kerberos 통합 인증을 사용하여 SQL Server에 연결](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)을 참조하세요.
+드라이버는 새 연결 속성을 사용하여 Kerberos 연결을 유연하게 합니다. 자세한 내용은 [Kerberos 통합 인증을 사용하여 SQL Server에 연결](using-kerberos-integrated-authentication-to-connect-to-sql-server.md)을 참조하세요.
 
 ## <a name="41"></a>4.1
 
@@ -503,4 +504,4 @@ SQL Server 애플리케이션용 Microsoft JDBC Driver는 Itanium 컴퓨터에�
 
 ## <a name="see-also"></a>참고 항목
 
-[JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)
+[JDBC 드라이버 개요](overview-of-the-jdbc-driver.md)

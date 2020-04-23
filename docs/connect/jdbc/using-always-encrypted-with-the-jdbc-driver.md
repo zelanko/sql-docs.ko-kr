@@ -1,5 +1,6 @@
 ---
-title: Always Encrypted와 JDBC 드라이버 사용 | Microsoft Docs
+title: 상시 암호화와 JDBC 드라이버 사용
+description: SQL Server에 대한 JDBC 드라이버를 통해 Java 애플리케이션에서 Always Encrypted를 사용하여 서버에서 중요한 데이터를 암호화하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/24/2020
 ms.prod: sql
@@ -10,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 19656198dfc3d49eca3f33841b5333f8aa9a3f63
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 37250a846a7dbf712a61731c3ee996b1312d3b8c
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924053"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634865"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>상시 암호화와 JDBC 드라이버 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 이 페이지에서는 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 및 SQL Server용 Microsoft JDBC Driver 6.0(이상)을 사용하여 Java 애플리케이션을 개발하는 방법을 설명합니다.
 
-상시 암호화를 사용하면 클라이언트가 중요한 데이터를 암호화하고 해당 데이터 또는 암호화 키를 SQL Server 또는 Azure SQL Database에 표시하지 않을 수 있습니다. SQL Server용 Microsoft JDBC Driver 6.0 이상과 같이 상시 암호화 지원 드라이버는 클라이언트 애플리케이션의 중요한 데이터를 투명하게 암호화하고 해독하여 이 동작을 구현합니다. 이 드라이버는 Always Encrypted 데이터베이스 열에 해당하는 쿼리 매개 변수를 자동으로 확인하고 SQL Server 또는 Azure SQL Database로 보내기 전에 이러한 매개 변수의 값을 암호화합니다. 마찬가지로, 이 드라이버는 쿼리 결과의 암호화된 데이터베이스 열에서 검색한 데이터의 암호를 투명하게 해독합니다. 자세한 내용은 [Always Encrypted(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 및 [JDBC 드라이버에 대해 Always Encrypted API 참조](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)를 참조하세요.
+상시 암호화를 사용하면 클라이언트가 중요한 데이터를 암호화하고 해당 데이터 또는 암호화 키를 SQL Server 또는 Azure SQL Database에 표시하지 않을 수 있습니다. SQL Server용 Microsoft JDBC Driver 6.0 이상과 같이 상시 암호화 지원 드라이버는 클라이언트 애플리케이션의 중요한 데이터를 투명하게 암호화하고 해독하여 이 동작을 구현합니다. 이 드라이버는 Always Encrypted 데이터베이스 열에 해당하는 쿼리 매개 변수를 자동으로 확인하고 SQL Server 또는 Azure SQL Database로 보내기 전에 이러한 매개 변수의 값을 암호화합니다. 마찬가지로, 이 드라이버는 쿼리 결과의 암호화된 데이터베이스 열에서 검색한 데이터의 암호를 투명하게 해독합니다. 자세한 내용은 [Always Encrypted(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 및 [JDBC 드라이버에 대해 Always Encrypted API 참조](always-encrypted-api-reference-for-the-jdbc-driver.md)를 참조하세요.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 - SQL Server용 Microsoft JDBC Driver 6.0 이상이 개발 컴퓨터에 설치되어 있는지 확인합니다. 
@@ -107,7 +108,7 @@ SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumn
 
 **clientID**는 Azure Active Directory 인스턴스에 있는 앱 등록의 애플리케이션 ID입니다. **clientKey**는 Azure Key Vault에 대한 API 액세스를 제공하는 해당 애플리케이션에 등록된 키 암호입니다.
 
-애플리케이션에서 SQLServerColumnEncryptionAzureKeyVaultProvider의 인스턴스를 만든 후에는 SQLServerConnection.registerColumnEncryptionKeyStoreProviders() 메서드를 사용하여 해당 인스턴스를 드라이버에 등록해야 합니다. SQLServerColumnEncryptionAzureKeyVaultProvider.getName() API를 호출하여 얻을 수 있는 기본 조회 이름인 AZURE_KEY_VAULT를 사용하여 인스턴스를 등록하는 것이 좋습니다. 기본 이름을 사용하면 SQL Server Management Studio 또는 PowerShell과 같은 도구를 사용하여 Always Encrypted 키를 프로비전하고 관리할 수 있습니다. 도구는 기본 이름을 사용하여 열 마스터 키에 대한 메타데이터 개체를 생성합니다. 다음 예에서는 Azure Key Vault 공급자를 등록하는 방법을 보여 줍니다. SQLServerConnection.registerColumnEncryptionKeyStoreProviders() 메서드에 대한 자세한 내용은 [JDBC 드라이버에 대해 Always Encrypted API 참조](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)를 참조하세요.
+애플리케이션에서 SQLServerColumnEncryptionAzureKeyVaultProvider의 인스턴스를 만든 후에는 SQLServerConnection.registerColumnEncryptionKeyStoreProviders() 메서드를 사용하여 해당 인스턴스를 드라이버에 등록해야 합니다. SQLServerColumnEncryptionAzureKeyVaultProvider.getName() API를 호출하여 얻을 수 있는 기본 조회 이름인 AZURE_KEY_VAULT를 사용하여 인스턴스를 등록하는 것이 좋습니다. 기본 이름을 사용하면 SQL Server Management Studio 또는 PowerShell과 같은 도구를 사용하여 Always Encrypted 키를 프로비전하고 관리할 수 있습니다. 도구는 기본 이름을 사용하여 열 마스터 키에 대한 메타데이터 개체를 생성합니다. 다음 예에서는 Azure Key Vault 공급자를 등록하는 방법을 보여 줍니다. SQLServerConnection.registerColumnEncryptionKeyStoreProviders() 메서드에 대한 자세한 내용은 [JDBC 드라이버에 대해 Always Encrypted API 참조](always-encrypted-api-reference-for-the-jdbc-driver.md)를 참조하세요.
 
 ```java
 Map<String, SQLServerColumnEncryptionKeyStoreProvider> keyStoreMap = new HashMap<String, SQLServerColumnEncryptionKeyStoreProvider>();
@@ -168,7 +169,7 @@ JDBC 드라이버는 Java 키 저장소를 위해 기본 제공된 키 저장소
 String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;keyStoreAuthentication=JavaKeyStorePassword;keyStoreLocation=<path_to_the_keystore_file>;keyStoreSecret=<keystore_key_password>";
 ```
 
-SQLServerDataSource 개체를 사용하여 이러한 설정을 가져오거나 설정할 수도 있습니다. 자세한 내용은 [JDBC 드라이버에 대해 Always Encrypted API 참조](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)를 참조하세요.
+SQLServerDataSource 개체를 사용하여 이러한 설정을 가져오거나 설정할 수도 있습니다. 자세한 내용은 [JDBC 드라이버에 대해 Always Encrypted API 참조](always-encrypted-api-reference-for-the-jdbc-driver.md)를 참조하세요.
 
 JDBC 드라이버는 연결 속성 사이에 이러한 자격 증명이 있는 경우 SQLServerColumnEncryptionJavaKeyStoreProvider를 자동으로 인스턴스화합니다.
 
@@ -392,7 +393,7 @@ SQLServerConnection con = (SQLServerConnection) ds.getConnection();
 이 속성에 대한 자세한 내용은 [java.sql.Time 값을 서버에 보내는 방식 구성](configuring-how-java-sql-time-values-are-sent-to-the-server.md)을 참조하세요.
 
 ### <a name="configuring-how-string-values-are-sent-to-the-server"></a>문자열 값을 서버에 보내는 방식 구성
-**sendStringParametersAsUnicode** 연결 속성은 문자열 값이 SQL Server로 전송되는 방법을 구성하는 데 사용됩니다. true로 설정하면 문자열 매개 변수가 유니코드 형식으로 서버에 전송됩니다. false로 설정하면 문자열 매개 변수가 유니코드가 아닌 ASCII 또는 MBCS 등의 형식으로 전송됩니다. 이 속성의 기본값은 true입니다. Always Encrypted가 사용 가능하고 char/varchar/varchar(max) 열이 암호화된 경우에는 **sendStringParametersAsUnicode**의 값을 false로 설정해야 합니다. 이 속성을 true로 설정하면 유니코드 문자를 포함하는 암호화된 char/varchar/varchar(max) 열에서 데이터를 해독할 때 드라이버가 예외를 throw합니다. 이 속성에 대한 자세한 내용은 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)을 참조하세요.
+**sendStringParametersAsUnicode** 연결 속성은 문자열 값이 SQL Server로 전송되는 방법을 구성하는 데 사용됩니다. true로 설정하면 문자열 매개 변수가 유니코드 형식으로 서버에 전송됩니다. false로 설정하면 문자열 매개 변수가 유니코드가 아닌 ASCII 또는 MBCS 등의 형식으로 전송됩니다. 이 속성의 기본값은 true입니다. Always Encrypted가 사용 가능하고 char/varchar/varchar(max) 열이 암호화된 경우에는 **sendStringParametersAsUnicode**의 값을 false로 설정해야 합니다. 이 속성을 true로 설정하면 유니코드 문자를 포함하는 암호화된 char/varchar/varchar(max) 열에서 데이터를 해독할 때 드라이버가 예외를 throw합니다. 이 속성에 대한 자세한 내용은 [연결 속성 설정](setting-the-connection-properties.md)을 참조하세요.
   
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>암호화된 열에서 데이터 검색 및 수정
 애플리케이션 쿼리에 대해 Always Encrypted를 사용하도록 설정하면 표준 JDBC API를 사용하여 암호화된 데이터베이스 열의 데이터를 검색하거나 수정할 수 있습니다. 애플리케이션에 필요한 데이터베이스 사용 권한이 있고 열 마스터 키에 액세스할 수 있는 경우, 드라이버는 암호화된 열을 대상으로 하는 모든 쿼리 매개 변수를 암호화하고 암호화된 열에서 검색된 데이터를 해독합니다.
@@ -542,9 +543,9 @@ catch (SQLException e) {
 
 상시 암호화는 암호화된 데이터 형식에 대해 몇 가지 변환을 지원합니다. 지원되는 형식 변환의 자세한 목록은 [Always Encrypted(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)를 참조하세요. 데이터 형식 변환 오류를 방지하기 위해 수행할 수 있는 작업은 다음과 같습니다. 확인할 사항은 다음과 같습니다.
 
-- 암호화된 열을 대상으로 하는 매개 변수의 값을 전달할 때 적절한 setter 메서드를 사용합니다. 매개 변수의 SQL Server 데이터 형식이 대상 열의 형식과 정확히 동일하거나 매개 변수의 SQL Server 데이터 형식이 열의 대상 형식으로 변환되는 것이 지원되는지 확인합니다. 특정 SQL Server 데이터 형식에 해당하는 매개 변수를 전달하기 위해 API 메서드가 SQLServerPreparedStatement, SQLServerCallableStatement 및 SQLServerResultSet 클래스에 추가되었습니다. 예를 들어 열이 암호화되지 않은 경우 setTimestamp() 메서드를 사용하여 매개 변수를 datetime2 또는 datetime 열에 전달할 수 있습니다. 그러나 열이 암호화된 경우에는 데이터베이스의 열 형식을 나타내는 정확한 메서드를 사용해야 합니다. 예를 들어 setTimestamp()를 사용하여 값을 암호화된 datetime2 열에 전달하고 setDateTime()을 사용하여 값을 암호화된 datetime 열에 전달합니다. 새 API의 전체 목록은 [JDBC 드라이버에 대해 Always Encrypted API 참조](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)를 참조하세요.
-- SQL Server 데이터 형식이 decimal 및 numeric인 열을 대상으로 하는 매개 변수의 정밀도 및 배율이 대상 열에 대해 구성된 정밀도 및 배율과 동일해야 합니다. 10진 및 숫자 데이터 형식을 나타내는 매개 변수/열에 대한 데이터 값과 함께 정밀도 및 규모를 허용하기 위해 API 메서드가 SQLServerPreparedStatement, SQLServerCallableStatement 및 SQLServerResultSet 클래스에 추가되었습니다. 신규/오버로드된 API의 전체 목록은 [JDBC 드라이버에 대해 Always Encrypted API 참조](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)를 참조하세요.  
-- 대상 열의 값을 수정하는 쿼리에서 SQL Server 데이터 형식이 datetime2, datetimeoffset 또는 time인 열을 대상으로 하는 매개 변수의 소수 초 정밀도/규모가 대상 열의 소수 초 정밀도/규모보다 크지 않아야 합니다. 이러한 데이터 형식을 나타내는 매개 변수에 대한 데이터 값과 함께 소수 초 정밀도/규모를 허용하기 위해 API 메서드가 SQLServerPreparedStatement, SQLServerCallableStatement 및 SQLServerResultSet 클래스에 추가되었습니다. 신규/오버로드된 API의 전체 목록은 [JDBC 드라이버에 대해 Always Encrypted API 참조](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)를 참조하세요.
+- 암호화된 열을 대상으로 하는 매개 변수의 값을 전달할 때 적절한 setter 메서드를 사용합니다. 매개 변수의 SQL Server 데이터 형식이 대상 열의 형식과 정확히 동일하거나 매개 변수의 SQL Server 데이터 형식이 열의 대상 형식으로 변환되는 것이 지원되는지 확인합니다. 특정 SQL Server 데이터 형식에 해당하는 매개 변수를 전달하기 위해 API 메서드가 SQLServerPreparedStatement, SQLServerCallableStatement 및 SQLServerResultSet 클래스에 추가되었습니다. 예를 들어 열이 암호화되지 않은 경우 setTimestamp() 메서드를 사용하여 매개 변수를 datetime2 또는 datetime 열에 전달할 수 있습니다. 그러나 열이 암호화된 경우에는 데이터베이스의 열 형식을 나타내는 정확한 메서드를 사용해야 합니다. 예를 들어 setTimestamp()를 사용하여 값을 암호화된 datetime2 열에 전달하고 setDateTime()을 사용하여 값을 암호화된 datetime 열에 전달합니다. 새 API의 전체 목록은 [JDBC 드라이버에 대해 Always Encrypted API 참조](always-encrypted-api-reference-for-the-jdbc-driver.md)를 참조하세요.
+- SQL Server 데이터 형식이 decimal 및 numeric인 열을 대상으로 하는 매개 변수의 정밀도 및 배율이 대상 열에 대해 구성된 정밀도 및 배율과 동일해야 합니다. 10진 및 숫자 데이터 형식을 나타내는 매개 변수/열에 대한 데이터 값과 함께 정밀도 및 규모를 허용하기 위해 API 메서드가 SQLServerPreparedStatement, SQLServerCallableStatement 및 SQLServerResultSet 클래스에 추가되었습니다. 신규/오버로드된 API의 전체 목록은 [JDBC 드라이버에 대해 Always Encrypted API 참조](always-encrypted-api-reference-for-the-jdbc-driver.md)를 참조하세요.  
+- 대상 열의 값을 수정하는 쿼리에서 SQL Server 데이터 형식이 datetime2, datetimeoffset 또는 time인 열을 대상으로 하는 매개 변수의 소수 초 정밀도/규모가 대상 열의 소수 초 정밀도/규모보다 크지 않아야 합니다. 이러한 데이터 형식을 나타내는 매개 변수에 대한 데이터 값과 함께 소수 초 정밀도/규모를 허용하기 위해 API 메서드가 SQLServerPreparedStatement, SQLServerCallableStatement 및 SQLServerResultSet 클래스에 추가되었습니다. 신규/오버로드된 API의 전체 목록은 [JDBC 드라이버에 대해 Always Encrypted API 참조](always-encrypted-api-reference-for-the-jdbc-driver.md)를 참조하세요.
 
 ### <a name="errors-due-to-incorrect-connection-properties"></a>잘못된 연결 속성으로 인한 오류
 
@@ -574,7 +575,7 @@ ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM Customer
 
 암호화 적용 기능은 Always Encrypted를 사용할 경우 매개 변수의 암호화를 적용합니다. 암호화가 강제 적용되고 SQL Server에서 매개 변수를 암호화할 필요가 없다고 드라이버에 알리는 경우 매개 변수를 사용하는 쿼리는 실패합니다. 이 속성은 데이터 노출을 야기할 수 있는 잘못된 암호화 메타데이터를 클라이언트에게 제공하는 손상된 SQL Server를 포함하는 보안 공격에 대한 추가 보호를 제공합니다. SQLServerPreparedStatement 및 SQLServerCallableStatement 클래스의 set* 메서드와 SQLServerResultSet 클래스의 update\* 메서드는 암호화 적용 설정을 지정하는 부울 인수를 수락하도록 오버로드됩니다. 이 인수의 값이 false이면 드라이버는 매개 변수를 강제로 암호화하지 않습니다. 암호화 적용을 true로 설정하면 지정 열이 암호화되고 연결 또는 문에서 Always Encrypted를 사용하도록 설정된 경우에만 쿼리 매개 변수가 설정됩니다. 이 속성을 사용하면 암호화될 것으로 예상되는 경우 드라이버가 실수로 SQL Server에 데이터를 일반 텍스트로 보내지 않도록 하는 추가 보안 계층이 제공됩니다.
 
-암호화 적용 설정으로 오버로드된 SQLServerPreparedStatement 및 SQLServerCallableStatement 메서드에 대한 자세한 내용은 [JDBC 드라이버에 대해 Always Encrypted API 참조](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)를 참조하세요.  
+암호화 적용 설정으로 오버로드된 SQLServerPreparedStatement 및 SQLServerCallableStatement 메서드에 대한 자세한 내용은 [JDBC 드라이버에 대해 Always Encrypted API 참조](always-encrypted-api-reference-for-the-jdbc-driver.md)를 참조하세요.  
 
 ## <a name="controlling-the-performance-impact-of-always-encrypted"></a>상시 암호화의 성능 영향 제어
 
@@ -607,7 +608,7 @@ Always Encrypted는 클라이언트 쪽 암호화 기술이므로 데이터베�
     - 암호화해야 하는 모든 매개 변수가 있는 개별 쿼리에 대해 SQLServerStatementColumnEncryptionSetting.Enabled를 설정합니다. 이 설정은 sys.sp_describe_parameter_encryption이 호출될 뿐만 아니라 암호화된 열에서 검색된 모든 쿼리 결과의 암호가 해독되도록 합니다.
     - 암호화를 요구하는 매개 변수가 없지만 암호화된 열에서 데이터를 검색하는 쿼리에 대해 SQLServerStatementColumnEncryptionSetting.ResultSet을 설정합니다. 이 설정은 sys.sp_describe_parameter_encryption 호출 및 매개 변수 암호화가 사용되지 않도록 합니다. 쿼리가 암호화 열에서 결과를 해독할 수 없습니다.
 
-SQLServerStatementColumnEncryptionSetting 설정을 사용하여 암호화를 우회하고 일반 텍스트 데이터에 액세스할 수는 없습니다. 문에서 열 암호화를 구성하는 방법에 대한 자세한 내용은 [JDBC 드라이버에 대해 Always Encrypted API 참조](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)를 참조하세요.  
+SQLServerStatementColumnEncryptionSetting 설정을 사용하여 암호화를 우회하고 일반 텍스트 데이터에 액세스할 수는 없습니다. 문에서 열 암호화를 구성하는 방법에 대한 자세한 내용은 [JDBC 드라이버에 대해 Always Encrypted API 참조](always-encrypted-api-reference-for-the-jdbc-driver.md)를 참조하세요.  
 
 다음 예제에서는 데이터베이스 연결에 대해 상시 암호화가 사용되지 않습니다. 애플리케이션에서 실행하는 쿼리에는 암호화되지 않은 LastName 열을 대상으로 하는 매개 변수가 있습니다. 쿼리는 암호화된 SSN 및 BirthDate 열에서 데이터를 검색합니다. 이러한 경우 암호화 메타데이터를 검색할 때 sys.sp_describe_parameter_encryption을 호출하지 않아도 됩니다. 그러나 애플리케이션에서 두 암호화된 열에서 일반 텍스트 값을 가져올 수 있도록 쿼리 결과에 대한 암호 해독을 설정해야 합니다. 이러한 기능을 위해 SQLServerStatementColumnEncryptionSetting.ResultSet 설정이 사용됩니다.
 
@@ -664,7 +665,7 @@ SQLServerBulkCopy를 사용하면 데이터의 암호를 해독하지 않고 한
 
 - 대상 테이블의 암호화 구성이 원본 테이블의 구성과 일치하는지 확인합니다. 특히 두 테이블에 동일한 암호화 열이 있고 동일한 암호화 형식 및 암호화 키를 사용하여 열이 암호화되어야 합니다. 대상 열이 해당 원본 열과 다르게 암호화된 경우 복사 작업 후 대상 테이블의 데이터 암호를 해독할 수 없습니다. 데이터가 손상됩니다.
 - 상시 암호화를 사용하지 않고 원본 테이블과 대상 테이블에 대한 데이터베이스 연결을 구성합니다.
-- allowEncryptedValueModifications 옵션을 설정합니다. 자세한 내용은 [JDBC 드라이버에서 대량 복사 사용](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md)을 참조하세요.
+- allowEncryptedValueModifications 옵션을 설정합니다. 자세한 내용은 [JDBC 드라이버에서 대량 복사 사용](using-bulk-copy-with-the-jdbc-driver.md)을 참조하세요.
 
 > [!NOTE]
 > 이 옵션을 AllowEncryptedValueModifications로 지정하면 SQL Server용 Microsoft JDBC Driver는 데이터가 암호화되었는지 여부 또는 동일한 암호화 형식, 알고리즘 및 키를 대상 열로 사용하여 올바르게 암호화되었는지 확인하지 않아 데이터베이스가 손상될 수 있으므로 주의하여 사용합니다.

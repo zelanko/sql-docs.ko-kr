@@ -1,5 +1,6 @@
 ---
-title: 버그 수정 목록 | Microsoft Docs
+title: 버그 수정 목록
+description: 이 페이지에는 Microsoft ODBC Driver 17 for SQL Server부터 각 릴리스에서 수정된 버그의 목록이 포함되어 있습니다.
 ms.custom: ''
 ms.date: 06/29/2018
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: e1be25052ed75370eead58832119d543717b8e16
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0541f875230426f6ebc0fd1f90ac06110861f025
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896774"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629723"
 ---
 # <a name="list-of-bugs-fixed"></a>버그 수정 목록
 
@@ -30,10 +31,10 @@ ms.locfileid: "78896774"
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-175-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 버그 수정
 
-- Linux/Mac에서 AKV CMK 메타데이터 해시 계산 수정
+- Linux/macOS에서 AKV CMK 메타데이터 해시 계산 수정
 - OpenSSL 1.0.0을 로드할 때 오류 수정
 - ISO-8859-1 및 ISO-8859-2 코드 페이지를 사용할 때 변환 문제 해결
-- Mac의 내부 라이브러리 이름을 버전 번호를 포함하도록 수정
+- macOS의 내부 라이브러리 이름을 버전 번호를 포함하도록 수정
 - 별도의 길이 및 표시기 바인딩을 사용하는 경우 null 표시기의 설정 수정
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-1742-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.4.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 버그 수정
@@ -82,7 +83,7 @@ ms.locfileid: "78896774"
 - 잘린 ADAL 오류 메시지 수정
 - 부동 소수점 숫자를 정수로 변환할 때 32비트 창에서 드물게 발생하는 버그 수정
 - Always Encrypted가 켜진 상태에서 10진수 필드에 실수(double)를 삽입하면 데이터 잘림 오류가 반환되는 문제 해결
-- MacOS 설치 프로그램에 대한 경고 수정
+- macOS 설치 프로그램에 대한 경고 수정
 - 연결 복원력과 연결 풀링이 모두 사용하도록 설정되어 세션이 서버에 의해 삭제되는 경우 세션 복구를 시도하는 동안 SQL Server로 잘못된 상태를 보내는 문제 해결
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-17-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 버그 수정
@@ -101,5 +102,5 @@ ms.locfileid: "78896774"
 - SQLTables에서 이스케이프된 밑줄이 작동하지 않는 문제 해결
 - Linux에서 와이드 문자로 반환될 때 히브리어 데이터(varchar)가 잘리는 버그 수정
 - UTF-8 애플리케이션에서 Shift-JIS로 인코딩된 char/varchar를 쿼리할 때의 문제 해결
-- MacOS에서 SQL_DRIVER_NAME 매개 변수를 사용하여 SQLGetInfo를 호출할 경우 Linux 스타일 파일 이름을 반환하는 버그 수정
+- macOS에서 SQL_DRIVER_NAME 매개 변수를 사용하여 SQLGetInfo를 호출할 경우 Linux 스타일 파일 이름을 반환하는 버그 수정
 - BCP 유틸리티를 사용하여 32kb보다 큰 입력 파일의 Windows-1252 문자 데이터를 VARCHAR 열로 로드할 때 오류가 발생하는 문제 해결

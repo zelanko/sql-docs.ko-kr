@@ -1,5 +1,6 @@
 ---
-title: '3단계: pymssql을 사용하여 SQL에 연결하는 개념 증명 | Microsoft Docs'
+title: '3단계: pymssql를 사용하여 SQL에 연결'
+description: 3단계는 Python 및 pymssql을 사용하여 SQL Server에 연결할 수 있는 방법을 보여 주는 개념 증명입니다. 기본 예제에서는 데이터를 선택하고 삽입하는 방법을 보여 줍니다.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ea474658e57c3f61df7eb95866ea4688c942a750
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c1c75d13e9e44632c411639385227776f54ca1a9
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80913111"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528567"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>3단계: pymssql을 사용하여 SQL에 연결하는 개념 증명
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
@@ -50,7 +51,7 @@ SQL Database에 연결하는 데 [pymssql.connect](https://pypi.org/project/pyms
   
 ## <a name="step-3--insert-a-row"></a>3단계:  행 삽입  
   
-이 예제에서는 [INSERT](../../../t-sql/statements/insert-transact-sql.md) 명령문을 안전하게 실행하고 [SQL injection](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) 값으로부터 애플리케이션을 보호하는 매개 변수를 전달하는 방법을 보여줍니다.    
+이 예에서는 [INSERT](../../../t-sql/statements/insert-transact-sql.md) 문을 안전하게 실행하고 매개 변수를 전달하는 방법을 확인합니다. 매개 변수를 값으로 전달하면 [SQL 삽입](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)으로부터 애플리케이션이 보호됩니다.  
   
   
 ```python
@@ -66,7 +67,7 @@ SQL Database에 연결하는 데 [pymssql.connect](https://pypi.org/project/pyms
     conn.close()
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>4단계:  트랜잭션 롤백  
+## <a name="step-4-roll-back-a-transaction"></a>4단계: 트랜잭션 롤백  
   
 이 코드 예제는 다음과 같은 트랜잭션의 사용법을 보여줍니다.  
   

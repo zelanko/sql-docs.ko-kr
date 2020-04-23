@@ -1,5 +1,6 @@
 ---
-title: '2단계: PHP 개발을 위한 SQL 데이터베이스 만들기 | Microsoft Docs'
+title: '2단계: PHP를 위한 SQL 데이터베이스 만들기'
+description: 이 시작 가이드의 2단계에서는 SQL Server 또는 Azure SQL Database에서 데이터베이스를 만드는 과정을 설명합니다.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 91046e09-837d-4c4a-9f4f-3a10042f1c19
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f8f0a004029cb30d12b3d7e6906ad20a1d7ffb9a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3073503b22c603e2c00099ea00470b05176d3255
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926891"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528355"
 ---
 # <a name="step-2-create-a-sql-database-for-php-development"></a>2단계: PHP 개발을 위한 SQL 데이터베이스 만들기
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

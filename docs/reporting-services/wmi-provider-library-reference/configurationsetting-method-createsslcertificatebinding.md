@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7b65838720b7300b92829aa57da58563628740cf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3c417eb84350ee2b2c3fcf5e74c0e17b2b195d93
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570754"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630649"
 ---
 # <a name="configurationsetting-method---createsslcertificatebinding"></a>ConfigurationSetting 메서드 - CreateSSLCertificateBinding
-  SSL 인증서 바인딩을 만듭니다.  
+  TLS/SSL 인증서 바인딩을 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,7 +46,7 @@ public void CreateSSLCertificateBinding(string application,
  애플리케이션의 IP 주소입니다.  
   
  *포트*  
- 바인딩과 연결된 SSL 포트입니다.  
+ 바인딩과 연결된 TLS 포트입니다.  
   
  *Lcid*  
  반환되는 오류 메시지에 사용할 로캘입니다.  
@@ -63,7 +63,7 @@ public void CreateSSLCertificateBinding(string application,
 ## <a name="remarks"></a>설명  
  이 메서드는 애플리케이션의 rsreportserver.config에 바인딩을 추가합니다. HTTP.SYS에 바인딩이 없으면 이 파일에 바인딩이 만들어집니다.  
   
- 바인딩을 만들기 전에 메서드 호출은 지정된 애플리케이션에 대한 URL 예약을 검사하여 SSL 인증서 바인딩이 유효한지 확인합니다.  
+ 바인딩을 만들기 전에 메서드 호출은 지정된 애플리케이션에 대한 URL 예약을 검사하여 TLS/SSL 인증서 바인딩이 유효한지 확인합니다.  
   
  다음과 같은 경우 유효성 검사 후 오류가 발생할 수 있습니다.  
   

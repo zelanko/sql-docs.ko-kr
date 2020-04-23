@@ -1,5 +1,6 @@
 ---
 title: 애플리케이션에서 XML 데이터 사용 | Microsoft 문서
+description: 애플리케이션에서 xml 데이터 형식을 사용하기 위해 제공되는 옵션에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fa573c4d824d8a1f419335fa0c7b3d451b80f96e
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 7e4811d4c79a167efbf7f5b40ecf6270caff38df
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664982"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388318"
 ---
 # <a name="use-xml-data-in-applications"></a>애플리케이션에서 XML 데이터 사용
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

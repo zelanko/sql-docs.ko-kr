@@ -25,12 +25,12 @@ f1_keywords:
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: acd4bd2641296301449138322e0b4d4e15f7ffb4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9e2330442d2e50b5f62328d831e582a03e1ac202
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080654"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488250"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>지도 또는 지도 계층 추가, 변경 또는 삭제(보고서 작성기 및 SSRS)
   지도는 계층의 모음입니다. 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에 지도를 추가할 때 첫 번째 계층을 정의합니다. 지도 계층 마법사를 사용하여 추가 계층을 만들 수 있습니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "77080654"
   
 1.  지도 창이 나타날 때까지 지도를 클릭합니다.  
   
-2.  도구 모음에서 **계층 추가** 단추를 클릭하고 드롭다운 목록의 **점**, **선**또는 **다각형**중에서 추가할 계층의 유형을 클릭합니다.  
+2.  도구 모음에서 **계층 추가** 단추를 클릭하고 드롭다운 목록의 **점**, **선** 또는 **다각형** 중에서 추가할 계층의 유형을 클릭합니다.  
   
     > [!NOTE]  
     >  지도 계층을 추가하고 수동으로 구성할 수 있지만 지도 계층 마법사를 사용하여 새 계층을 추가하는 것이 좋습니다. 지도 창 도구 모음에서 마법사를 실행하려면 계층 마법사 단추(![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))를 클릭합니다.  
@@ -220,7 +220,7 @@ ms.locfileid: "77080654"
   
 3.  속성 창에서 UseSecureConnection을 **True**로 설정합니다.  
   
- Bing Maps 웹 서비스의 연결에서는 HTTP SSL(Secure Sockets Layer) 서비스를 사용하여 해당 계층에 대한 Bing Maps 타일을 검색합니다.  
+ Bing Maps 웹 서비스의 연결에서는 HTTP SSL 서비스를 사용하여 해당 계층에 대한 Bing Maps 타일을 검색합니다. TLS(전송 계층 보안)는 이전에 SSL(Secure Sockets Layer)로 알려져 있었습니다.
   
 ##  <a name="to-specify-the-language-for-tile-labels"></a><a name="Language"></a> 타일 레이블의 언어를 지정하려면  
   
@@ -250,6 +250,6 @@ ms.locfileid: "77080654"
   
 ## <a name="see-also"></a>참고 항목  
  [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [보고서 문제해결: 지도 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [보고서 문제 해결: 맵 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

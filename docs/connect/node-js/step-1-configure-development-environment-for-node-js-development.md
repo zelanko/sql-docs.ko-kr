@@ -1,5 +1,6 @@
 ---
-title: '1단계: Node.js 개발을 위한 개발 환경 구성 | Microsoft Docs'
+title: '1단계: Node.js 개발을 위한 개발 환경 구성'
+description: SQL Server의 Node.js 드라이버로 애플리케이션을 개발하려면 개발 환경을 필수 구성 요소로 구성해야 합니다.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2ba06f87c5ff4970d3d8686e7195d57dc076cc04
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 38337772d9ec9db2503637122d0d1b616dc6ef5f
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923834"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528137"
 ---
-# <a name="step-1--configure-development-environment-for-nodejs-development"></a>1단계: Node.js 개발을 위한 개발 환경 구성
-SQL Server의 Node.js 드라이버로 애플리케이션을 개발하려면 개발 환경을 필수 구성 요소로 구성해야 합니다.  가장 일반적인 방법은 npm(노드 패키지 관리자)으로 Tedious 모듈을 설치하는 것이지만, 원한다면 [Github](https://github.com/pekim/tedious)에서 Tedious 모듈을 직접 다운로드할 수도 있습니다.  
+# <a name="step-1--configure-development-environment-for-nodejs-development"></a>1단계:  Node.js 개발을 위한 개발 환경 구성
+SQL Server의 Node.js 드라이버로 애플리케이션을 개발하려면 개발 환경을 필수 구성 요소로 구성해야 합니다.  가장 일반적인 방법은 npm(노드 패키지 관리자)으로 Tedious 모듈을 설치하는 것이지만, 원한다면 [GitHub](https://github.com/pekim/tedious)에서 Tedious 모듈을 직접 다운로드할 수도 있습니다.  
   
 Node.js 드라이버는 SQL Server와 Azure SQL Database에서 기본적으로 사용 설정되는 TDS 프로토콜을 사용합니다.  추가적인 서버 구성은 필요하지 않습니다.  
   
@@ -41,7 +42,7 @@ b. 적절한 Windows Installer msi 링크를 클릭합니다.
 > npm init  
 ```  
   
-5. **프로젝트에 Tedious 모듈을 설치합니다.**  그러면 드라이버가 SQL Server와의 통신에 사용하는 TDS 프로토콜이 구현됩니다.  
+5. **프로젝트에 Tedious 모듈을 설치합니다.**  Tedious는 SQL Server와의 통신에 사용되는 TDS 프로토콜의 구현입니다.  
 ```  
 > npm install tedious  
 ```  
@@ -69,17 +70,17 @@ b. 적절한 Windows Installer msi 링크를 클릭합니다.
 > sudo npm init  
 ```  
   
-6. **프로젝트에 Tedious 모듈을 설치합니다.**  그러면 드라이버가 SQL Server와의 통신에 사용하는 TDS 프로토콜이 구현됩니다.  
+6. **프로젝트에 Tedious 모듈을 설치합니다.**  Tedious는 SQL Server와의 통신에 사용되는 TDS 프로토콜의 구현입니다.  
 ```  
 > sudo npm install tedious  
 ```  
   
-## <a name="mac"></a>Mac  
+## <a name="macos"></a>macOS  
   
 1. **Node.js 런타임 및 npm 패키지 관리자를 설치합니다.**  
 a. [Node.js](https://nodejs.org/en/download/)로 이동합니다.  
-b. 적절한 Mac OS 설치 관리자 링크를 클릭합니다.  
-다. 다운로드가 완료되면 dmg를 실행하여 Node.js를 설치합니다  
+b. 적절한 macOS 설치 관리자 링크를 클릭합니다.  
+다. 다운로드가 완료되면 ‘dmg’를 실행하여 Node.js를 설치합니다  
   
 2. **터미널을 엽니다.**  
   
@@ -98,4 +99,3 @@ b. 적절한 Mac OS 설치 관리자 링크를 클릭합니다.
 ```  
 > npm install tedious  
 ```  
-  

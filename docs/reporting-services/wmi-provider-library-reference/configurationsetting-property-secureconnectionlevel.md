@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fd5549e7-b874-41e2-866e-2f58caf6f733
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fdb8fc97b8b2403366e19456b7c744012ee9007f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 59c833c86c632c0f5a0838a98f31d89f4f0df5fb
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570258"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635868"
 ---
 # <a name="configurationsetting-property---secureconnectionlevel"></a>ConfigurationSetting 속성 - SecureConnectionLevel
   RSReportServer.config 파일에 지정된 보안 연결 수준을 반환합니다. 읽기 전용입니다.  
@@ -36,7 +36,7 @@ public Integer SecureConnectionLevel;
 ```  
   
 ## <a name="property-values"></a>속성 값  
- 보안 연결 수준을 나타내는 **Integer** 값입니다. 반환 값은 SSL이 구성되어 있는지 여부를 나타냅니다. 값이 1보다 크거나 같으면 SSL이 설정되어 있음을 나타냅니다. 값이 0이면 SSL이 해제되어 있음을 나타냅니다.  
+ 보안 연결 수준을 나타내는 **Integer** 값입니다. 반환 값은 TLS가 구성되어 있는지 여부를 나타냅니다. 값이 1보다 크거나 같으면 TLS가 설정되어 있음을 나타냅니다. 값이 0이면 TLS가 해제되어 있음을 나타냅니다.  
   
 ## <a name="example-code"></a>코드 예  
  [MSReportServer_ConfigurationSetting 클래스](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  

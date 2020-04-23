@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: d3dadf7955dcb61b5d652a1190280926af09c4ae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 27087dd1ef9291cd75f8ef5f9b38f822b8900295
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286887"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487992"
 ---
 # <a name="scale-out-support-for-high-availability"></a>고가용성에 대한 Scale Out 지원
 
@@ -53,7 +53,7 @@ Scale Out 마스터의 주 노드에 SQL Server 데이터베이스 엔진 서비
 ## <a name="3-install-scale-out-master-on-the-secondary-node"></a>3. 보조 노드에 Scale Out 마스터 설치
 Scale Out 마스터의 보조 노드에 SQL Server 데이터베이스 엔진 서비스, Integration Services 및 Scale Out 마스터를 설치합니다. 
 
-주 노드에 보낸 것과 동일한 Scale Out 마스터 인증서를 사용합니다. 주 노드에서 프라이빗 키를 사용하여 Scale Out 마스터 SSL 인증서를 내보내고, 보조 노드에서 로컬 컴퓨터의 루트 인증서 저장소에 설치합니다. 보조 노드에서 Scale Out 마스터를 설치할 때 이 인증서를 선택합니다.
+주 노드에 보낸 것과 동일한 Scale Out 마스터 인증서를 사용합니다. 주 노드에서 프라이빗 키를 사용하여 Scale Out 마스터 TLS/SSL 인증서를 내보내고, 보조 노드에서 로컬 컴퓨터의 루트 인증서 저장소에 설치합니다. 보조 노드에서 Scale Out 마스터를 설치할 때 이 인증서를 선택합니다.
 
 ![HA 마스터 구성 2](media/ha-master-config2.PNG)
 

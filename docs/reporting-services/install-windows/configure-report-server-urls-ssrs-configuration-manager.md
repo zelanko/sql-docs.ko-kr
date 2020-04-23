@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: da3f7c0f0385ddfd8bdb61ab7009a6503acfb80a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 021df541af90bcaae13e1544f9f6a72e77f8eaf7
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080252"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486919"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>보고서 서버 URL 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 URL은 보고서 서버 웹 서비스 및 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]에 액세스하는 데 사용됩니다. 애플리케이션을 사용하려면 먼저 웹 서비스와 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]마다 적어도 한 개의 URL을 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 다른 웹 서비스와 애플리케이션을 함께 배포하는 경우를 비롯한 대부분의 배포 시나리오에서 잘 작동하는 두 애플리케이션 URL에 대한 기본값을 제공합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "77080252"
 |호스트 이름|TCP/IP 네트워크는 IP 주소를 사용하여 네트워크에 있는 디바이스를 고유하게 식별합니다. 물리적 IP 주소는 컴퓨터에 설치된 네트워크 어댑터 카드당 한 개가 있습니다. IP 주소가 호스트 헤더로 확인되면 호스트 헤더를 지정할 수 있습니다. 보고서 서버를 회사 네트워크에 배포하는 경우 컴퓨터의 네트워크 이름을 사용할 수 있습니다.|  
 |포트|TCP 포트는 디바이스의 엔드포인트입니다. 보고서 서버는 지정된 포트에서 요청을 수신합니다.|  
 |가상 디렉터리|포트는 종종 여러 웹 서비스나 애플리케이션에서 공유할 수 있습니다. 따라서 보고서 서버 URL에는 요청을 가져오는 애플리케이션에 해당하는 가상 디렉터리가 항상 포함되어야 합니다. 같은 IP 주소와 포트를 수신하는 각각의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션에 대해 고유한 가상 디렉터리 이름을 지정해야 합니다.|  
-|SSL 설정|이전에 컴퓨터에 설치한 기존 SSL 인증서를 사용하도록 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 URL을 구성할 수 있습니다. 자세한 내용은 [기본 모드 보고서 서버에서 SSL 연결 구성](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)을 참조하세요.|  
+|SSL 설정|이전에 컴퓨터에 설치한 기존 TLS/SSL 인증서를 사용하도록 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 URL을 구성할 수 있습니다. 자세한 내용은 [기본 모드 보고서 서버에서 TLS 연결 구성](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)을 참조하세요.|  
   
 ## <a name="default-urls"></a>기본 URL  
  URL을 통해 보고서 서버 또는 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에 액세스하는 경우 URL에는 IP 주소가 아닌 호스트 이름이 포함되어야 합니다. TCP/IP 네트워크에서는 IP 주소가 호스트 이름(또는 컴퓨터의 네트워크 이름)으로 확인됩니다. 기본값을 사용하여 URL을 구성한 경우 다음과 같이 컴퓨터 이름 또는 localhost가 호스트 이름으로 지정된 URL을 사용하여 보고서 서버 웹 서비스에 액세스할 수 있어야 합니다.  

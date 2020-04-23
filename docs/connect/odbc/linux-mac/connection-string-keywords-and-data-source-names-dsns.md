@@ -1,5 +1,6 @@
 ---
-title: SQL Server에 연결 | Microsoft Docs
+title: ODBC를 사용하여 연결
+description: Microsoft ODBC Driver for SQL Server를 사용하여 Linux 또는 macOS에서 데이터베이스에 대한 연결을 만드는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 52511cbda93f5148daab116f0def292b55828efd
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: 2b99479883fd1cc74008d62a9c322226ed587244
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219402"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632813"
 ---
 # <a name="connecting-to-sql-server"></a>SQL Server에 연결
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "81219402"
   
 ## <a name="connection-properties"></a>연결 속성  
 
-Linux 및 Mac에서 지원되는 모든 연결 문자열 키워드 및 특성은 [DSN 및 연결 문자열 키워드 및 특성](../../../connect/odbc/dsn-connection-string-attribute.md)을 참조하세요.
+Linux 및 macOS에서 지원되는 모든 연결 문자열 키워드 및 특성은 [DSN 및 연결 문자열 키워드 및 특성](../dsn-connection-string-attribute.md)을 참조하세요.
 
 > [!IMPORTANT]  
 > 데이터베이스 미러링(장애 조치(failover) 파트너 있음)을 사용하는 데이터베이스에 연결할 때 연결 문자열에 데이터베이스 이름을 지정하지 마세요. 대신, 쿼리를 실행하기 전에 **use** _database_name_ 명령을 보내 데이터베이스에 연결합니다.  
@@ -113,6 +114,6 @@ ODBC 드라이버 17.4부터 드라이버가 연결 유지 패킷을 전송하�
 
 ## <a name="see-also"></a>참고 항목
 
-- [Linux 기반 Microsoft ODBC Driver for SQL Server 설치](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
-- [macOS 기반 Microsoft ODBC Driver for SQL Server 설치](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
-- [프로그래밍 지침](../../../connect/odbc/linux-mac/programming-guidelines.md)
+- [Linux 기반 Microsoft ODBC Driver for SQL Server 설치](installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [macOS 기반 Microsoft ODBC Driver for SQL Server 설치](install-microsoft-odbc-driver-sql-server-macos.md)
+- [프로그래밍 지침](programming-guidelines.md)

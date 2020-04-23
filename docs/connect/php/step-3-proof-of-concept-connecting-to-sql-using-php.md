@@ -1,5 +1,6 @@
 ---
-title: '3단계: PHP를 사용하여 SQL에 연결하는 개념 증명 | Microsoft Docs'
+title: '3단계: PHP를 사용하여 SQL에 연결'
+description: 3단계는 PHP를 사용하여 SQL Server에 연결할 수 있는 방법을 보여 주는 개념 증명입니다. 기본 예제에서는 데이터를 선택하고 삽입하는 방법을 보여 줍니다.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b88a71d1800b13b4d8fd867715cc3690eee4fc43
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 69c8b1ec58dbb40ab6e4463d343720e02e583ac8
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926860"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528587"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>3단계: PHP를 사용하여 SQL에 연결하는 개념 증명
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -79,8 +80,7 @@ ms.locfileid: "80926860"
   
 ## <a name="step-3--insert-a-row"></a>3단계:  행 삽입  
   
-이 예제에서는 [INSERT](../../t-sql/statements/insert-transact-sql.md) 명령문을 안전하게 실행하고 [SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md) 값으로부터 애플리케이션을 보호하는 매개 변수를 전달하는 방법을 보여줍니다.    
-  
+이 예에서는 [INSERT](../../t-sql/statements/insert-transact-sql.md) 문을 안전하게 실행하고 매개 변수를 전달하는 방법을 확인합니다. 매개 변수 값이 [SQL 삽입](../../relational-databases/tables/primary-and-foreign-key-constraints.md)으로부터 애플리케이션을 보호합니다.
   
 ```php 
     function InsertData()  
@@ -109,7 +109,7 @@ ms.locfileid: "80926860"
     }  
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>4단계:  트랜잭션 롤백  
+## <a name="step-4--roll-back-a-transaction"></a>4단계:  트랜잭션 롤백  
   
   
 이 코드 예제는 다음과 같은 트랜잭션의 사용법을 보여줍니다.  

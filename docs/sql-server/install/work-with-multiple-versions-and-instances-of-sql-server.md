@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ff71430707e210daf970e969d854e408d777e4e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 42359f4b8b6f36eec3c4618d39ee68d0f8c84ba5
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258975"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528411"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>여러 버전 및 인스턴스의 SQL Server 작업
 
@@ -38,9 +38,8 @@ SQL Server를 여러 개 설치하거나 이전 SQL Server 버전이 이미 설�
 
 - Analysis Services
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-- Reporting Services
-::: moniker-end
+- Reporting Services(SQL Server 2016 및 이전) SQL Server 2016부터 SSRS(SQL Server Reporting Services)에는 별도의 설치가 있습니다. 
+
 
 다른 SQL Server 버전이 이미 설치되어 있는 컴퓨터에서 이전 버전의 SQL Server를 업그레이드할 수 있습니다. 지원되는 업그레이드 시나리오에 대한 자세한 내용은 [지원되는 버전 및 에디션 업그레이드](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)를 참조하세요.
   
@@ -64,7 +63,7 @@ SQL Server를 여러 개 설치하거나 이전 SQL Server 버전이 이미 설�
 
  특정 구성 요소는 설치된 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전의 모든 인스턴스에서 공유합니다. 이러한 구성 요소는 버전이 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 같은 컴퓨터에 함께 설치하면 자동으로 최신 버전으로 업그레이드됩니다. 일반적으로 이러한 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 마지막 인스턴스가 제거되면 자동으로 제거됩니다.
   
- 예제: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 브라우저 및 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer
+ 예제: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 및 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS 기록기.
   
 ### <a name="components-shared-across-all-instances-of-the-same-major-version-of-ssnoversion"></a>주 버전이 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -76,7 +75,7 @@ SQL Server를 여러 개 설치하거나 이전 SQL Server 버전이 이미 설�
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 공유하는 구성 요소입니다.
   
-예제: 설치 지원 파일
+예제: 설치 지원 파일.
   
 ### <a name="components-specific-to-an-instance-of-ssnoversion"></a>다음의 특정 인스턴스에 고유한 구성 요소 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -88,30 +87,31 @@ SQL Server를 여러 개 설치하거나 이전 SQL Server 버전이 이미 설�
 
 특정 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치할 때 설치되지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전과 관계가 없습니다. 이러한 구성 요소는 주 버전 간에 공유될 수도 있고 모든 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 공유될 수도 있습니다.  
 
-예제: Microsoft Sync Framework, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact  
+예제: Microsoft Sync Framework, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 설치에 대한 자세한 내용은 [설치 마법사에서 SQL Server 2016 설치&#40;설치 프로그램&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)를 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact를 제거하는 방법은 [SQL Server의 기존 인스턴스 제거&#40;설치 프로그램&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)를 참조하세요.  
   
 ## <a name="using-ssnoversion-side-by-side-with-previous-versions-of-ssnoversion"></a>이전 버전과 함께 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 다음을 함께 사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 인스턴스가 이미 실행 중인 컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치할 수 있습니다. 컴퓨터에 기본 인스턴스가 이미 있는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 명명된 인스턴스로 설치되어야 합니다.  
+
+다음 표에서는 .NET의 필수 버전이 설치되어 있는 일반적으로 지원되는 Windows의 버전에서 SQL Server의 각 버전에 대한 side-by-side 지원을 보여 줍니다.
+
+| 기존 인스턴스 | Side by side 지원| 
+|-------------------|----------------------------|
+| SQL Server 2019 | SQL Server 2008 ~ SQL Server 2017| 
+| SQL Server 2017 | SQL Server 2008 ~ SQL Server 2016| 
+| SQL Server 2016 | SQL Server 2008 ~ SQL Server 2014| 
+
+자세한 내용은 [Windows 8 이상에서 SQL Server 사용](https://support.microsoft.com/help/2681562/using-sql-server-in-windows-8-and-later-versions-of-windows-operating)을 참조하세요. 
+
   
 > [!CAUTION]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 준비 인스턴스를 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 같은 컴퓨터에 함께 설치할 수 없습니다. 예를 들어 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스를 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]의 준비 인스턴스와 함께 준비할 수 없습니다. 그러나 같은 주 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스를 같은 컴퓨터에 여러 개 설치할 수 있습니다. 자세한 내용은 [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)을 참조하세요.  
 >
-> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 은 Windows Server 2008 R2 Server Core SP1을 실행하는 컴퓨터에서 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 함께 설치할 수 없습니다. Server Core 설치에 대한 자세한 내용은 [Server Core에 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-on-server-core.md)를 참조하세요.  
+> SQL Server 2016 이상은 Windows Server 2008 R2 Server Core SP1을 실행하는 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이전 버전과 함께 side-by-side 설치할 수 없습니다. Server Core 설치에 대한 자세한 내용은 [Server Core에 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-on-server-core.md)를 참조하세요.  
   
-다음 표에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]과 함께 설치할 수 있는 버전을 보여 줍니다.
-  
-|다음의 기존 인스턴스 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|함께 설치 가능|  
-|--------------------------------------------------|----------------------------|  
-|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (64비트) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (32비트)<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (64비트) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (32비트)<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (64비트) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (32비트)<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (64비트) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (32비트)<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (64비트) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (32비트)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (64비트) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)] <br /><br /> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|  
 
-다음 표에서는 이전 버전과 함께 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 대해 함께 설치할 수 있는 버전을 보여 줍니다.
-
-|다음의 기존 인스턴스 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|이전 버전에 대해 함께 설치할 수 있는 버전|  
-|--------------------------------------------------|----------------------------|  
-|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (32비트)<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (64비트) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (32비트)<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (64비트) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (32비트)<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (64비트) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (32비트)<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (64비트) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (32비트)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (64비트) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]|  
 
 ## <a name="preventing-ip-address-conflicts"></a>IP 주소 충돌 방지
 

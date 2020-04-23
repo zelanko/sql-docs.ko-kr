@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 11354683f94b5805255ddd5b2b5c73ec2c1aa5ba
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1f7a6a95033d16e7bc39f07d6b72324e3aea6634
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117466"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486734"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>R과 SQL Server 간의 데이터 형식 매핑
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ SQL Server의 특정 인스턴스와 연결된 R 버전을 보려면 **RGui**를
 
 ## <a name="changes-in-data-types-between-sql-server-2016-and-earlier-versions"></a>SQL Server 2016 이하 버전 간의 데이터 형식 변경 내용
 
-Microsoft SQL Server 2016 및 Microsoft Azure SQL Database의 데이터 형식 변환 및 여러 가지 기타 작업이 향상되었습니다. 대부분의 이러한 향상된 기능에서는 유동 소수점 형식을 처리할 때 전체 자릿수가 증가하고 클래식 **datetime** 형식에 대한 작업이 약간 변경됩니다.
+Microsoft SQL Server 2016 이상의 데이터 형식 변환 및 여러 가지 기타 작업이 향상되었습니다. 대부분의 이러한 향상된 기능에서는 유동 소수점 형식을 처리할 때 전체 자릿수가 증가하고 클래식 **datetime** 형식에 대한 작업이 약간 변경됩니다.
 
 이러한 향상된 기능은 모두 130 이상의 데이터베이스 호환성 수준을 사용할 경우 기본적으로 사용할 수 있습니다. 하지만 다른 호환성 수준을 사용하거나 이전 버전으로 데이터베이스에 연결하면 숫자의 전체 자릿수 또는 기타 결과에 차이가 나타날 수 있습니다. 
 
@@ -101,7 +101,7 @@ Microsoft SQL Server 2016 및 Microsoft Azure SQL Database의 데이터 형식 �
 R에서 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원하지 않지만 R 스크립트에서 데이터 열을 사용해야 하는 경우 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) 함수를 사용하여 R 스크립트에서 데이터를 사용하기 전에 데이터 형식 변환이 의도한 대로 시행되었는지 확인하는 것이 좋습니다.  
 
 > [!WARNING]
-> 데이터를 이동하는 동안 **rxDataStep**을 사용하여 호환되지 않는 열을 삭제할 경우 _RxSqlServerData_ 데이터 원본 형식에는 인수 _varsToKeep_ 및 **varsToDrop**이 지원되지 않습니다.
+> 데이터를 이동하는 동안 **rxDataStep**을 사용하여 호환되지 않는 열을 삭제할 경우 **RxSqlServerData** 데이터 원본 형식에는 인수 _varsToKeep_ 및 _varsToDrop_이 지원되지 않습니다.
 
 
 ## <a name="examples"></a>예

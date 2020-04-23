@@ -1,6 +1,6 @@
 ---
-title: SQL Server용 OLE DB 드라이버에서 ADO 사용 | Microsoft Docs
-description: SQL Server용 OLE DB 드라이버에서 ADO 사용
+title: OLE DB 드라이버에서 ADO 사용
+description: 여러 활성 결과 집합, 쿼리 알림, 사용자 정의 형식 또는 xml 데이터 형식과 같은 새 기능을 포함하여 OLE DB 드라이버에서 ADO를 사용하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - MSOLEDBSQL, ADO
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: b7e8ab700404aee32140bc935443e5911e4a56db
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 72d82433e04ead61ec71eecd3c8771cbe744b751
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67989243"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633894"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버에서 ADO 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  MARS(Multiple Active Result Sets), 쿼리 알림, UDT(사용자 정의 형식) 또는 새 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]xml**데이터 형식과 같은**에 도입된 새 기능을 사용하려면 ADO(ActiveX Data Objects)를 사용하는 기존 애플리케이션은 SQL Server용 OLE DB 드라이버를 데이터 액세스 공급자로 사용해야 합니다.  
+  MARS(Multiple Active Result Sets), 쿼리 알림, UDT(사용자 정의 형식) 또는 새 **xml** 데이터 형식과 같은 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에 도입된 새 기능을 사용하려면 ADO(ActiveX Data Objects)를 사용하는 기존 애플리케이션은 SQL Server용 OLE DB 드라이버를 데이터 액세스 공급자로 사용해야 합니다.  
   
  ADO에서 최신 버전 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 새 기능을 사용할 수 있도록 OLE DB의 주요 기능이 확장된 것을 비롯해 SQL Server용 OLE DB 드라이버의 기능이 향상되었습니다. 이러한 기능 향상을 통해 ADO 애플리케이션에서는 최신 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능과 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에 도입된 **xml** 및 **udt**의 두 데이터 형식을 사용할 수 있습니다. 또한 개선된 **varchar**, **nvarchar** 및 **varbinary** 데이터 형식도 활용할 수 있습니다. SQL Server용 OLE DB 드라이버에서는 SSPROP_INIT_DATATYPECOMPATIBILITY 초기화 속성을 DBPROPSET_SQLSERVERDBINIT 속성 집합에 추가하고 ADO 애플리케이션에서 사용하여 새 데이터 형식이 ADO와 맞는 방식으로 노출되도록 할 수 있습니다. 또한 OLE DB Driver for SQL Server에서는 연결 문자열에서 설정하는 **DataTypeCompatibility**라는 새로운 연결 문자열 키워드도 정의합니다.  
 
@@ -41,7 +41,7 @@ ms.locfileid: "67989243"
 
 -   `DataTypeCompatibility=80`  
 
- SQL Server용 OLE DB Driver에서 지원되는 ADO 연결 문자열 키워드에 대한 내용은 [SQL Server용 OLE DB 드라이버에서 연결 문자열 키워드 사용](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)을 참조하세요.  
+ SQL Server용 OLE DB Driver에서 지원되는 ADO 연결 문자열 키워드에 대한 내용은 [SQL Server용 OLE DB 드라이버에서 연결 문자열 키워드 사용](using-connection-string-keywords-with-oledb-driver-for-sql-server.md)을 참조하세요.  
 
  다음은 MARS 기능을 비롯하여 SQL Server용 OLE DB 드라이버가 완전히 사용되도록 설정하는 ADO 연결 문자열의 설정 예입니다.  
 
@@ -167,4 +167,4 @@ Set con = Nothing
  이전 버전의 OLE DB 공급자에서는 단일 연결당 하나의 활성 결과 집합만 열 수 있었으므로 이 코드를 두 번째로 실행하면 암시적 연결이 만들어집니다. 암시적 연결은 OLE DB 연결 풀에서 풀링되지 않았으므로 이로 인해 추가 오버헤드가 발생했습니다. SQL Server용 OLE DB 드라이버에서 MARS 기능을 노출하면 하나의 연결에서 여러 활성 결과를 열 수 있습니다.  
 
 ## <a name="see-also"></a>참고 항목  
- [SQL Server용 OLE DB 드라이버로 애플리케이션 빌드](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [SQL Server용 OLE DB 드라이버로 애플리케이션 빌드](building-applications-with-oledb-driver-for-sql-server.md)  

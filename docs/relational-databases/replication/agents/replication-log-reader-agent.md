@@ -16,12 +16,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5c6ed8c51ea7b471f69a462cee06d5ffd0560973
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58ff313686f1f37643068a28d4e30ac93eddd2ce
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288115"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528227"
 ---
 # <a name="replication-log-reader-agent"></a>복제 로그 판독기 에이전트
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -95,16 +95,16 @@ logread [-?]
  배포자의 보안 모드를 지정합니다. 값 **0** 은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 모드(기본값)를 나타내며 값 **1** 은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 인증 모드를 나타냅니다.  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
- 연결을 만들 때 로그 판독기 에이전트에서 사용하는 SSL(Secure Sockets Layer) 암호화의 수준입니다.  
+ 연결을 만들 때 로그 판독기 에이전트에서 사용하는 이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안) 암호화의 수준입니다.  
   
 |EncryptionLevel 값|Description|  
 |---------------------------|-----------------|  
-|**0**|SSL이 사용되지 않음을 지정합니다.|  
-|**1**|SSL이 사용되지만 에이전트에서 SSL 서버 인증서가 트러스트된 발급자에 의해 서명된 것인지 확인하지 않음을 지정합니다.|  
-|**2**|SSL이 사용되고 인증서가 확인됨을 지정합니다.|  
+|**0**|TLS가 사용되지 않음을 지정합니다.|  
+|**1**|TLS가 사용되지만 에이전트에서 TLS/SSL 서버 인증서가 트러스트된 발급자에 의해 서명된 것인지 확인하지 않음을 지정합니다.|  
+|**2**|TLS가 사용되고 인증서가 확인됨을 지정합니다.|  
 
  > [!NOTE]  
- >  유효한 SSL 인증서는 SQL Server의 정규화된 도메인 이름으로 정의됩니다. -EncryptionLevel을 2로 설정할 때 에이전트가 성공적으로 연결되도록 하려면 로컬 SQL Server에서 별칭을 만듭니다. '별칭 이름' 매개 변수는 서버 이름이어야 하며 '서버' 매개 변수는 SQL Server의 정규화된 이름으로 설정되어야 합니다.
+ >  유효한 TLS/SSL 인증서는 SQL Server의 정규화된 도메인 이름으로 정의됩니다. -EncryptionLevel을 2로 설정할 때 에이전트가 성공적으로 연결되도록 하려면 로컬 SQL Server에서 별칭을 만듭니다. '별칭 이름' 매개 변수는 서버 이름이어야 하며 '서버' 매개 변수는 SQL Server의 정규화된 이름으로 설정되어야 합니다.
  
  자세한 내용은 [복제 보안 설정 보기 및 수정](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)을 참조하세요.  
   

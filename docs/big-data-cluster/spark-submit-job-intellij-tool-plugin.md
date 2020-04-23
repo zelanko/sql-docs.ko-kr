@@ -10,12 +10,12 @@ ms.metadata: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 70cdc7e9738abdde2dfaf479320b11a94469f661
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 604292d548d9368439b810fa4dfebf2d4388929e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244076"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634955"
 ---
 # <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>IntelliJ에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 Spark 작업 제출
 
@@ -33,9 +33,9 @@ ms.locfileid: "75244076"
 ## <a name="link-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터 연결
 1. IntelliJ IDEA 도구를 엽니다.
 
-2. 자체 서명된 인증서를 사용하는 경우 **도구** 메뉴에서 SSL 인증서 유효성 검사를 사용하지 않도록 설정하고 **Azure**, **Spark 클러스터 SSL 인증서 유효성 검사**를 선택한 후 **사용 안 함**을 선택합니다.
+2. 자체 서명된 인증서를 사용하는 경우 **도구** 메뉴에서 TLS/SSL 인증서 유효성 검사를 사용하지 않도록 설정하고 **Azure**, **Spark 클러스터 SSL 인증서 유효성 검사**를 선택한 후 **사용 안 함**을 선택합니다.
 
-    ![SQL Server 빅 데이터 클러스터 연결 - SSL 사용 안 함](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
+    ![SQL Server 빅 데이터 클러스터 연결 - TLS/SSL 사용 안 함](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
 3. **보기** 메뉴에서 Azure Explorer를 열고 **도구 창**을 선택한 후 **Azure Explorer**를 선택합니다.
 4. **SQL Server 빅 데이터 클러스터**를 마우스 오른쪽 단추로 클릭하고 **SQL Server 빅 데이터 클러스터 연결**을 선택합니다. **서버**, **사용자 이름** 및 **암호**를 입력한 다음, **확인**을 클릭합니다.

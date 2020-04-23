@@ -29,15 +29,18 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 845a9203bf680921b3ac85283be610a2fa678c0e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 450914318f3bc7a17e16599fd715992356ed6e91
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72252043"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630922"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!NOTE]
+> **RAISERROR** 문은 **SET XACT_ABORT**를 적용하지 않습니다. 새 애플리케이션에서는 **RAISERROR** 대신 **THROW**를 사용해야 합니다.
 
   오류 메시지를 생성하고 세션에 대한 오류 처리를 시작합니다. RAISERROR는 sys.messages 카탈로그 뷰에 저장된 사용자 정의 메시지를 참조하거나 동적으로 메시지를 작성할 수 있습니다. 메시지는 호출하는 애플리케이션 또는 연결된 TRY...CATCH 구문의 CATCH 블록에 서버 오류 메시지로 반환됩니다. 새 애플리케이션에서는 [THROW](../../t-sql/language-elements/throw-transact-sql.md)를 대신 사용해야 합니다.  
   
@@ -45,7 +48,7 @@ ms.locfileid: "72252043"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 RAISERROR ( { msg_id | msg_str | @local_variable }  
@@ -54,7 +57,7 @@ RAISERROR ( { msg_id | msg_str | @local_variable }
     [ WITH option [ ,...n ] ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 RAISERROR ( { msg_str | @local_variable }  

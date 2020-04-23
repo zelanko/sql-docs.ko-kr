@@ -1,5 +1,6 @@
 ---
-title: 연결 사용 | Microsoft Docs
+title: JDBC 연결 사용
+description: Microsoft JDBC Driver for SQL Server의 SQLServerConnection 클래스를 사용하여 SQL Server 데이터베이스에 연결하는 다양한 방법의 예입니다.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,21 +11,21 @@ ms.topic: conceptual
 ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6bb17c47097966faa6ae86194a3e5069fd91648b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1253c2ec5822fef83d6da71279752202f2d93ebd
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923905"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631953"
 ---
 # <a name="working-with-a-connection"></a>연결 사용
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-다음 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스를 사용하여 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 데이터베이스에 연결하는 다양한 방법의 예를 보여 줍니다.
+다음 섹션에서는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]의 [SQLServerConnection](reference/sqlserverconnection-class.md) 클래스를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 다양한 방법의 예를 보여 줍니다.
 
 > [!NOTE]  
-> JDBC 드라이버를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하는 데 문제가 있으면 [연결 문제 해결](../../connect/jdbc/troubleshooting-connectivity.md)에서 문제 해결을 위한 제안 사항을 참조하세요.
+> JDBC 드라이버를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하는 데 문제가 있으면 [연결 문제 해결](troubleshooting-connectivity.md)에서 문제 해결을 위한 제안 사항을 참조하세요.
 
 ## <a name="creating-a-connection-by-using-the-drivermanager-class"></a>DriverManager 클래스를 사용한 연결
 
@@ -43,7 +44,7 @@ Connection con = DriverManager.getConnection(connectionUrl);
 
 ## <a name="creating-a-connection-by-using-the-sqlserverdriver-class"></a>SQLServerDriver 클래스를 사용한 연결 만들기
 
-DriverManager에 대해 드라이버 목록에서 특정 드라이버를 지정하려면 다음과 같이 [SQLServerDriver](../../connect/jdbc/reference/connect-method-sqlserverdriver.md) 클래스의 [connect](../../connect/jdbc/reference/sqlserverdriver-class.md) 메서드를 사용하여 데이터베이스에 연결합니다.
+DriverManager에 대해 드라이버 목록에서 특정 드라이버를 지정하려면 다음과 같이 [SQLServerDriver](reference/sqlserverdriver-class.md) 클래스의 [connect](reference/connect-method-sqlserverdriver.md) 메서드를 사용하여 데이터베이스에 연결합니다.
 
 ```java
 Driver d = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();  
@@ -53,7 +54,7 @@ Connection con = d.connect(connectionUrl, new Properties());
 
 ## <a name="creating-a-connection-by-using-the-sqlserverdatasource-class"></a>SQLServerDataSource 클래스를 사용한 연결
 
-[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스를 사용하여 연결하려면 다음과 같이 [getConnection](../../connect/jdbc/reference/getconnection-method.md) 메서드를 호출하기 전에 클래스의 다양한 setter 메서드를 사용합니다.
+[SQLServerDataSource](reference/sqlserverdatasource-class.md) 클래스를 사용하여 연결하려면 다음과 같이 [getConnection](reference/getconnection-method.md) 메서드를 호출하기 전에 클래스의 다양한 setter 메서드를 사용합니다.
 
 ```java
 SQLServerDataSource ds = new SQLServerDataSource();  
@@ -65,39 +66,39 @@ ds.setDatabaseName("AdventureWorks");
 Connection con = ds.getConnection();  
 ```
 
-## <a name="creating-a-connection-that-targets-a-very-specific-data-source"></a>특정 데이터 원본을 대상으로 한 연결
+## <a name="creating-a-connection-that-targets-a-specific-data-source"></a>특정 데이터 원본을 대상으로 한 연결
 
 특정 데이터 원본을 대상으로 하는 데이터베이스 연결을 설정해야 하는 경우 여러 가지 접근 방식을 사용할 수 있습니다. 각 접근 방식은 연결 URL을 사용하여 설정하는 속성에 따라 달라집니다.
 
-원격 서버의 기본 인스턴스에 연결하려면 다음을 사용합니다.
+원격 서버의 기본 인스턴스에 연결하려면 다음 예제를 사용합니다.
 
 ```java
 String url = "jdbc:sqlserver://MyServer;integratedSecurity=true;"
 ```
 
-서버의 특정 포트에 연결하려면 다음을 사용합니다.
+서버의 특정 포트에 연결하려면 다음 예제를 사용합니다.
 
 ```java
 String url = "jdbc:sqlserver://MyServer:1533;integratedSecurity=true;"
 ```
 
-서버의 명명된 인스턴스에 연결하려면 다음을 사용합니다.
+서버의 명명된 인스턴스에 연결하려면 다음 예제를 사용합니다.
 
 ```java
 String url = "jdbc:sqlserver://209.196.43.19;instanceName=INSTANCE1;integratedSecurity=true;"
 ```
 
-서버의 특정 데이터베이스에 연결하려면 다음을 사용합니다.
+서버의 특정 데이터베이스에 연결하려면 다음 예제를 사용합니다.
 
 ```java
 String url = "jdbc:sqlserver://172.31.255.255;database=AdventureWorks;integratedSecurity=true;"
 ```
 
-추가적인 연결 URL 예제는 [연결 URL 작성](../../connect/jdbc/building-the-connection-url.md)을 참조하세요.
+추가적인 연결 URL 예제는 [연결 URL 작성](building-the-connection-url.md)을 참조하세요.
 
-## <a name="creating-a-connection-with-a-custom-login-time-out"></a>사용자 지정 로그인 제한 시간이 있는 연결
+## <a name="creating-a-connection-with-a-custom-login-timeout"></a>사용자 지정 로그인 제한 시간이 있는 연결 만들기
 
-서버 부하나 네트워크 트래픽을 조절해야 하는 경우 다음과 같이 초 단위의 세부적인 로그인 제한 시간이 있는 연결을 설정할 수 있습니다.
+서버 부하나 네트워크 트래픽을 조절해야 하는 경우 다음 예제와 같이 초 단위의 세부적인 로그인 제한 시간이 있는 연결을 설정할 수 있습니다.
 
 ```java
 String url = "jdbc:sqlserver://MyServer;loginTimeout=90;integratedSecurity=true;"
@@ -105,7 +106,7 @@ String url = "jdbc:sqlserver://MyServer;loginTimeout=90;integratedSecurity=true;
 
 ## <a name="create-a-connection-with-application-level-identity"></a>애플리케이션 수준 ID가 있는 연결
 
-로깅 및 프로파일링을 사용해야 하는 경우 다음과 같이 연결을 특정 애플리케이션에서 시작된 것으로 식별해야 합니다.
+로깅 및 프로파일링을 사용해야 하는 경우 다음 예제와 같이 연결을 특정 애플리케이션에서 시작된 것으로 식별해야 합니다.
 
 ```java
 String url = "jdbc:sqlserver://MyServer;applicationName=MYAPP.EXE;integratedSecurity=true;"
@@ -113,7 +114,7 @@ String url = "jdbc:sqlserver://MyServer;applicationName=MYAPP.EXE;integratedSecu
 
 ## <a name="closing-a-connection"></a>연결 닫기
 
-다음과 같이 SQLServerConnection 클래스의 [close](../../connect/jdbc/reference/close-method-sqlserverconnection.md) 메서드를 호출하여 데이터베이스 연결을 명시적으로 닫을 수 있습니다.
+다음과 같이 SQLServerConnection 클래스의 [close](reference/close-method-sqlserverconnection.md) 메서드를 호출하여 데이터베이스 연결을 명시적으로 닫을 수 있습니다.
 
 ```java
 con.close();
@@ -126,4 +127,4 @@ con.close();
 
 ## <a name="see-also"></a>참고 항목
 
-[JDBC 드라이버로 SQL Server에 연결](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)
+[JDBC 드라이버로 SQL Server에 연결](connecting-to-sql-server-with-the-jdbc-driver.md)

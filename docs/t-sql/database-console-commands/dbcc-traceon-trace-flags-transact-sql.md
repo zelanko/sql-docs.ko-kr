@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 3296dad876dc0f3ce95a29dc1b9f21f38db7b0a5
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 713658238cf9e737b8fff9e6c239c8b5a644e039
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402587"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529378"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 추적 플래그(Transact-SQL)
 
@@ -97,6 +97,8 @@ ms.locfileid: "80402587"
 |**1448**|비동기 보조 복제본이 변경 내용 수신을 확인하지 않은 경우에도 복제 로그 판독기가 앞으로 진행하도록 설정합니다. 이 추적 플래그를 설정하면 로그 판독기가 항상 동기 보조 복제본을 기다립니다. 로그 판독기는 동기 보조 복제본에 대한 최소 승인을 넘지 않습니다. 이 추적 플래그는 단순히 가용성 그룹, 가용성 데이터베이스 또는 로그 판독기 인스턴스가 아니라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 적용됩니다. 다시 시작하지 않고 즉시 적용됩니다. 이 추적 플래그는 비동기 보조 복제본이 실패할 때 또는 미리 활성화할 수 있습니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/937041)를 참조하세요.<br /><br />**범위**: 전역만|   
 |**1462**|비동기 가용성 그룹에 대해 로그 스트림 압축을 사용하지 않도록 설정합니다. 이 기능은 네트워크 대역폭을 최적화하기 위해 비동기 가용성 그룹에서 기본적으로 사용하도록 설정됩니다. 자세한 내용은 [가용성 그룹에 대한 압축 조정](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)을 참조하세요.<br /><br />**범위**: 전역만| 
 |**1800**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Always On 및 로그 전달 환경에서 다른 섹터 크기의 디스크가 주 복제본 및 보조 복제본 로그 파일에 사용되는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 최적화를 사용하도록 설정합니다. 섹터 크기가 512바이트인 디스크에 트랜잭션 로그 파일이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서만 이 추적 플래그를 사용하도록 설정해야 합니다. 섹터 크기가 4KB인 디스크에서는 사용하도록 설정할 필요가 **없습니다**. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/3009974)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU13, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP2 CU3, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] RTM CU5 이상의 빌드에 적용됩니다.<br /><br />**범위**: 전역만|
+| **1819**| [URL로 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md)하면 Azure 블록 Blob에 액세스할 때 프록시 서버를 활용할 수 있습니다. 이 추적 플래그 외에도 다음 방법 중 하나를 통해 서버에서 WinHTTP 프록시 구성을 설정해야 합니다. <br /><br />- Windows XP 또는 Windows Server 2003 이전 버전의 [proxycfg.exe](/windows/win32/winhttp/proxycfg-exe--a-proxy-configuration-tool) 유틸리티. <br /> - Windows Vista 및 Windows Server 2008 이상 버전의 [netsh.exe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131) 유틸리티. <br /><br />**범위**: 전역, 세션 또는 쿼리(QUERYTRACEON) |
+|**1802**|데이터베이스 연결 또는 분리 작업 중 ACL 변경 및 가장된 액세스 확인을 사용하지 않습니다. 이는 데이터베이스를 연결할 때 오류 5120과 같은 액세스 권한 오류가 발생할 경우 유용할 수 있습니다.<br /><br />**범위**: 전역만| 
 |**2301**|고급 의사 결정 지원 최적화를 사용하도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/920093)를 참조하세요.<br /><br />**범위**: 전역, 세션 또는 쿼리(QUERYTRACEON) |
 |**2312**|데이터베이스 호환성 수준에 따라 쿼리 최적화 프로그램 카디널리티 추정 모델을 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 버전으로 설정합니다.<br /><br />**참고:** 데이터베이스 호환성 수준이 120 미만인 경우 추적 플래그 2312를 사용하도록 설정하면 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 카디널리티 추정 모델(120)이 사용됩니다. 자세한 내용은 [Microsoft 지원 문서](https://support.microsoft.com/kb/2801413)를 참조하세요.<br /><br />[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 쿼리 수준에서 이 작업을 수행하려면, 이 추적 플래그를 사용하는 대신 USE HINT ‘FORCE_DEFAULT_CARDINALITY_ESTIMATION’ [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 추가합니다.<br /><br />**범위**: 전역, 세션 또는 쿼리(QUERYTRACEON)| 
 |**2335**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 쿼리 최적화 중에 고정된 크기의 메모리를 사용한다고 가정하도록 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 쿼리를 실행하도록 허용하는 메모리를 제한하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 구성된 메모리는 데이터 캐시, 쿼리 실행 및 다른 소비자에서 계속 사용됩니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/2413549)를 참조하세요.<br /><br />**참고:** 프로덕션 환경에 배포하기 전에 이 옵션을 철저히 테스트하세요.<br /><br />**범위**: 전역, 세션 또는 쿼리(QUERYTRACEON)|

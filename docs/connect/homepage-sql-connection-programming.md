@@ -1,6 +1,6 @@
 ---
 title: SQL 클라이언트 프로그래밍 홈페이지 | Microsoft Docs
-description: SQL Server 또는 Azure SQL Database에 연결하는 데 사용되는 다양한 언어 및 운영 체제 조합에 대한 다운로드 및 설명서 링크를 제공하는 허브 페이지입니다.
+description: SQL Server 또는 Azure SQL Database에 연결하는 데 사용되는 다양한 언어 및 운영 체제에 대한 다운로드 및 설명서 링크를 제공하는 페이지입니다.
 author: David-Engel
 ms.date: 11/07/2018
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: v-daveng
 ms.author: v-daenge
-ms.openlocfilehash: df07130ea77578dd467add9d8a96cc331d5c127f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c3f2b6db58879a8d0fd3ce82a89511275fe9d3bb
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924890"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529047"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Microsoft SQL Server로의 클라이언트 프로그래밍 홈페이지
 
@@ -23,7 +23,7 @@ ms.locfileid: "80924890"
 Microsoft SQL Server 및 클라우드의 Azure SQL Database와 상호 작용하기 위한 클라이언트 프로그래밍에 관련된 홈페이지에 오신 것을 환영합니다. 이 문서에서는 다음 정보를 제공합니다.
 
 - 사용 가능한 언어 및 드라이버 조합을 나열하고 설명합니다.
-    - Linux(Ubuntu 및 기타), MacOS 및 Windows의 운영 체제에 대한 정보를 제공합니다.
+  - Linux(Ubuntu 및 기타), macOS 및 Windows의 운영 체제에 대한 정보를 제공합니다.
 - 각 조합의 자세한 설명서에 대한 링크를 제공합니다.
 - 특정 언어에 대한 계층적 설명서의 영역 및 하위 영역을 표시합니다(해당 하는 경우).
 
@@ -35,7 +35,7 @@ Microsoft SQL Server 및 클라우드의 Azure SQL Database와 상호 작용하�
 Azure SQL Database에 연결하기 위한 연결 문자열에 대한 자세한 내용은 다음을 참조하세요.
 
 - [.NET Core(C#)를 사용하여 Azure SQL 데이터베이스 쿼리](/azure/sql-database/sql-database-connect-query-dotnet-core).
-- Azure SQL Database에서 기타 언어 사용에 대한 설명(목차에서 이전 항목과 가까이 있음). 예를 들어 [PHP를 사용하여 Azure SQL 데이터베이스 쿼리](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php)를 참조하세요.
+- 기타 Azure SQL Database 아티클에서 기타 언어 사용에 대한 설명(목차에서 이전 항목과 가까이 있음). 예를 들어 [PHP를 사용하여 Azure SQL 데이터베이스 쿼리](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php)를 참조하세요.
 
 
 #### <a name="build-an-app-webpages"></a>앱 빌드 웹 페이지
@@ -118,7 +118,7 @@ EF는 다음 기술과 직접 또는 간접적인 관계가 있습니다.
 
 |     |     |
 | :-- | :-- |
-| [EF 6.x](https://docs.microsoft.com/ef/ef6/) | Microsoft는 2008년 8월 EF를 최초로 발표했습니다. 2015년 3월에는 Microsoft가 개발한 최종 버전인 EF 6.x가 발표되었습니다. Microsoft는 퍼블릭 도메인에 소스 코드를 릴리스했습니다.<br /><br />초기에는 EF가 .NET Framework의 일부였습니다. 그러나 EF 6.x는 .NET Framework에서 제거되었습니다.<br /><br />[Github의 EF 6.x에서 소스 코드, 리포지토리: *aspnet/EntityFramework6*](https://github.com/aspnet/EntityFramework6) |
+| [EF 6.x](https://docs.microsoft.com/ef/ef6/) | Microsoft는 2008년 8월 EF를 최초로 발표했습니다. 2015년 3월에는 Microsoft가 개발한 최종 버전인 EF 6.x가 발표되었습니다. Microsoft는 퍼블릭 도메인에 소스 코드를 릴리스했습니다.<br /><br />초기에는 EF가 .NET Framework의 일부였습니다. 그러나 EF 6.x는 .NET Framework에서 제거되었습니다.<br /><br />[GitHub의 EF 6.x에서 소스 코드, 리포지토리: *aspnet/EntityFramework6*](https://github.com/aspnet/EntityFramework6) |
 | [EF Core](https://docs.microsoft.com/ef/core/) | Microsoft는 2016년 6월에 새로 개발된 EF Core를 출시했습니다. EF Core는 향상된 유연성 및 이식성을 제공하도록 설계되었습니다. EF Core는 Microsoft Windows 이외의 운영 체제에서도 실행할 수 있습니다. 또한 EF Core는 Microsoft SQL Server 및 기타 관계형 데이터베이스 이외의 데이터베이스와도 상호 작용할 수 있습니다.<br /><br />**C&#x23; 코드 예제:**<br />[Entity Framework Core 시작하기](https://docs.microsoft.com/ef/core/get-started/index)<br />[기존 데이터베이스를 사용하여 .NET Framework의 EF Core 시작하기](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
 | &nbsp; | <br /> |
 
@@ -162,9 +162,9 @@ JDBC 설명서에는 다음과 같은 주요 영역이 포함되어 있습니다
 
 ## <a name="nodejs-logoimage-ref-340-node-nodejs"></a>![Node.js 로고][image-ref-340-node] Node.js
 
-Node.js를 사용하여 Windows, Linux 또는 Mac에서 SQL Server에 연결할 수 있습니다. Node.js 설명서의 루트는 [여기](./node-js/index.md)입니다.
+Node.js를 사용하여 Windows, Linux 또는 macOS에서 SQL Server에 연결할 수 있습니다. Node.js 설명서의 루트는 [여기](./node-js/index.md)입니다.
 
-SQL Server용 Node.js 연결 드라이버는 JavaScript에서 구현됩니다. 이 드라이버는 모든 최신 버전의 SQL Server에서 지원되는 TDS 프로토콜을 사용합니다. 드라이버는 오픈소스 프로젝트이며 [Github에서 제공](https://tediousjs.github.io/tedious/)됩니다.
+SQL Server용 Node.js 연결 드라이버는 JavaScript에서 구현됩니다. 이 드라이버는 모든 최신 버전의 SQL Server에서 지원되는 TDS 프로토콜을 사용합니다. 드라이버는 오픈 소스 프로젝트이며 [GitHub에서 제공](https://tediousjs.github.io/tedious/)됩니다.
 
 #### <a name="code-examples"></a>코드 예제
 
@@ -179,7 +179,7 @@ SQL Server용 Node.js 연결 드라이버는 JavaScript에서 구현됩니다. �
 
 <a name="an-160-odbc-cpp-docu" />
 
-## <a name="odbc-for-c"></a>C++용 ODBC 
+## <a name="odbc-for-c"></a>C++용 ODBC
 
 ![ODBC 로고][image-ref-350-odbc] ![cpp-big-plus][image-ref-322-cpp]
 
@@ -201,7 +201,7 @@ ODBC(Open Database Connectivity)는 .NET Framework보다 앞서 1990년에 개�
 | 영역 | 하위 영역 | Description |
 | :--- | :------ | :---------- |
 | [C++용 ODBC](./odbc/index.md) | 설명서의 루트입니다. |
-| [Linux-Mac](./odbc/linux-mac/index.md) | &nbsp; | Linux 또는 MacOS 운영 체제에서 ODBC를 사용하는 방법입니다. |
+| [Linux-macOS](./odbc/linux-mac/index.md) | &nbsp; | Linux 또는 macOS 운영 체제에서 ODBC를 사용하는 방법입니다. |
 | [Windows](./odbc/windows/index.md)     | &nbsp; | Windows 운영 체제에서 ODBC를 사용하는 방법입니다. |
 | [관리](../odbc/admin/index.md) | &nbsp; | ODBC 데이터 원본을 관리하기 위한 관리 도구에 대한 설명입니다. |
 | [Microsoft](../odbc/microsoft/index.md)  | &nbsp; | Microsoft에서 만들고 제공하는 다양한 ODBC 드라이버에 대한 설명입니다. |
@@ -271,7 +271,7 @@ Ruby를 사용하여 SQL Server와 상호 작용할 수 있습니다. Ruby 설�
 | :-- | :-- |
 | [Ruby를 사용하여 SQL에 연결하는 개념 증명](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | SQL Server에 연결하고 쿼리하는 데 초점을 맞춘 소형 코드 예제입니다. |
 | [Azure SQL Database: Ruby를 사용하여 쿼리](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL Database 예제입니다. |
-| [MacOS에서 SQL Server를 사용하는 Ruby 앱 만들기](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | 구성 정보입니다. 코드 예제도 제공됩니다. |
+| [macOS에서 SQL Server를 사용하는 Ruby 앱 만들기](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | 구성 정보입니다. 코드 예제도 제공됩니다. |
 | &nbsp; | <br /> |
 
 
@@ -293,7 +293,7 @@ Ruby를 사용하여 SQL Server와 상호 작용할 수 있습니다. Ruby 설�
 
 다음은 웹 사이트에서 제공되는 세부 정보의 대략적인 개요입니다.
 
-#### <a name="java-on-ubuntu"></a>Ubuntu에서의 Java:
+#### <a name="java-on-ubuntu"></a>Ubuntu에서의 Java
 
 1. 환경 설정
     - 1\.1 단계 SQL Server 설치
@@ -306,7 +306,7 @@ Ruby를 사용하여 SQL Server와 상호 작용할 수 있습니다. Ruby 설�
 3. Java 애플리케이션을 최대 100배 빠르게 만들기
     - 3\.1 단계 Columnstore 인덱스를 시연하는 Java 앱 만들기
 
-#### <a name="python-on-windows"></a>Windows에서의 Python:
+#### <a name="python-on-windows"></a>Windows에서의 Python
 
 1. 환경 설정
     - 1\.1 단계 SQL Server 설치
@@ -331,7 +331,7 @@ Ruby를 사용하여 SQL Server와 상호 작용할 수 있습니다. Ruby 설�
 
 &nbsp;
 
-#### <a name="choose-an-operating-system"></a>운영 체제 선택:
+#### <a name="choose-an-operating-system"></a>운영 체제 선택
 
 ![SQL Dev 웹 사이트, Java Ubuntu][image-ref-400-aka-ms-sqldev-java-ubuntu]
 

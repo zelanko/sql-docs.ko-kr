@@ -1,10 +1,11 @@
 ---
-title: Microsoft Drivers for PHP for SQL Server 릴리스 정보 | Microsoft Docs
+title: Microsoft Drivers for PHP 릴리스 정보
+description: 이 페이지에서는 Microsoft Drivers for PHP for SQL Server의 각 버전에 변경된 기능에 대해 설명합니다.
 ms.custom: ''
-ms.date: 03/05/2020
+ms.date: 04/15/2020
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-dapugl, kenvh
+ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe4a5b0b9d336ad02cb7fdf8431f9e3754bd8d35
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e2dc190e617ce9a9ffc3c45a623cb82a78411046
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923811"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633865"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 릴리스 정보
 
@@ -38,6 +39,26 @@ TO  :  'release-notes-php-sql-driver.md'
 For any questions, ask GeneMi or CraigG.
 Thanks a lot.  2019-03-28  (DevO= 1467988)
 -->
+
+## <a name="581"></a>5.8.1
+
+이 릴리스는 Linux 및 macOS에만 적용됩니다.
+
+[GitHub 릴리스 태그(Linux 및 macOS 패키지 확인 가능)](https://github.com/Microsoft/msphpsql/releases/tag/v5.8.1)
+
+### <a name="version-information"></a>버전 정보
+
+- 릴리스 번호: 5.8.1
+- 릴리스 날짜: 2020년 4월15일
+
+## <a name="whats-new-in-581"></a>5\.8.1의 새로운 기능
+
+| 새 항목 | 세부 정보 |
+| :------- | :------ |
+| 버그 수정 | Alpine Linux에서 기본 로캘 문제를 수정했습니다. |
+| 버그 수정 | Alpine Linux에서 클라이언트 쪽 커서 기능을 지원하기 위해 불필요한 데이터 구조를 제거했습니다. |
+| 버그 수정 | 모든 드라이버가 Alpine Linux에서 사용하도록 설정된 경우 로깅 문제를 수정했습니다. |
+| &nbsp; | &nbsp; |
 
 ## <a name="58"></a>5.8
 
@@ -131,7 +152,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 - 모든 플랫폼에서 Microsoft ODBC 드라이버 17.2를 지원합니다.
 - macOS High Sierra를 지원합니다(ODBC 드라이버 17 이상 필요).
-- 모든 지원되는 Windows, Linux 또는 macOS 플랫폼에서 Always Encrypted 기능을 사용할 수 있도록 기본 CRUD 기능에 대해 Always Encrypted용 Azure Key Vault를 지원합니다. [SQL Server용 PHP 드라이버와 함께 Always Encrypted 사용](../../connect/php/using-always-encrypted-php-drivers.md)
+- 모든 지원되는 Windows, Linux 또는 macOS 플랫폼에서 Always Encrypted 기능을 사용할 수 있도록 기본 CRUD 기능에 대해 Always Encrypted용 Azure Key Vault를 지원합니다. [SQL Server용 PHP 드라이버와 함께 Always Encrypted 사용](using-always-encrypted-php-drivers.md)
 - Ubuntu 18.04 LTS를 지원합니다(ODBC Driver 17.2 필요).
 - Linux 또는 macOS에서 연결 복원력을 지원합니다(ODBC 드라이버 17.2 필요).
 
@@ -152,7 +173,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
   - 이제 모든 플랫폼에서 버전 17이 기본 버전입니다.
 - Ubuntu 17.10, Debian 9 및 Suse Enterprise Linux 12를 지원합니다.
 - Ubuntu 15.10에 대한 지원을 삭제했습니다.
-- Windows에서 CRUD 기능을 사용하는 Always Encrypted를 지원합니다. 자세한 내용은 [Using Always Encrypted with the PHP Drivers for SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)(SQL Server용 PHP 드라이버와 함께 Always Encrypted 사용)를 참조하세요.
+- Windows에서 CRUD 기능을 사용하는 Always Encrypted를 지원합니다. 자세한 내용은 [Using Always Encrypted with the PHP Drivers for SQL Server](using-always-encrypted-php-drivers.md)(SQL Server용 PHP 드라이버와 함께 Always Encrypted 사용)를 참조하세요.
   - Windows 인증서 저장소를 지원합니다.
   - Always Encrypted는 Microsoft ODBC 드라이버 17 이상에서만 지원됩니다.
 - Linux 및 macOS에서 비 UTF8 로캘을 지원합니다.
@@ -176,11 +197,11 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - macOS Sierra 및 macOS El Capitan을 지원합니다.
 - Ubuntu 15.10 및 Debian 8을 지원합니다.
 - Ubuntu 15.04에 대한 지원을 삭제했습니다.
-- 투명 네트워크 IP 확인을 통해 Always On 가용성 그룹을 지원합니다. 자세한 내용은 [Connection Options](../../connect/php/connection-options.md)을 참조하세요.
+- 투명 네트워크 IP 확인을 통해 Always On 가용성 그룹을 지원합니다. 자세한 내용은 [Connection Options](connection-options.md)을 참조하세요.
 - 제한 사항이 있는 sql_variant 데이터 형식에 대한 지원을 추가했습니다.
-- Windows에서 유휴 연결 복원력을 지원합니다. 자세한 내용은 [Connection Options](../../connect/php/connection-options.md)을 참조하세요.
-- Linux 및 macOS에서 연결 풀링을 지원합니다. 자세한 내용은 [Connection Pooling](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md)을 참조하세요.
-- ActiveDirectoryPassword 및 SqlPassword를 사용한 Azure Active Directory 인증을 지원합니다. 자세한 내용은 [Connection Options](../../connect/php/connection-options.md)을 참조하세요.
+- Windows에서 유휴 연결 복원력을 지원합니다. 자세한 내용은 [Connection Options](connection-options.md)을 참조하세요.
+- Linux 및 macOS에서 연결 풀링을 지원합니다. 자세한 내용은 [Connection Pooling](connection-pooling-microsoft-drivers-for-php-for-sql-server.md)을 참조하세요.
+- ActiveDirectoryPassword 및 SqlPassword를 사용한 Azure Active Directory 인증을 지원합니다. 자세한 내용은 [Connection Options](connection-options.md)을 참조하세요.
 
 ## <a name="40"></a>4.0
 
@@ -231,17 +252,17 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 ## <a name="whats-new-in-30"></a>3\.0의 새로운 기능  
 
 - PHP 5.4를 지원합니다.  PHP 5.2는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 3에서 지원되지 않습니다.  
-- AttachDBFileName 연결 옵션이 추가되었습니다. 자세한 내용은 [Connection Options](../../connect/php/connection-options.md)을 참조하세요.  
-- LocalDB 지원이 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 추가되었습니다. 자세한 내용은 [LocalDB 지원](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)을 참조하세요.
-- AttachDBFileName 연결 옵션이 추가되었습니다. 자세한 내용은 [Connection Options](../../connect/php/connection-options.md)을 참조하세요.  
-- 고가용성, 재해 복구 기능을 지원합니다. 자세한 내용은 [고가용성, 재해 복구를 위한 JDBC 드라이브 지원](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)을 참조하세요.
-- 클라이언트 쪽 커서(메모리 내 결과 집합 캐싱)를 지원합니다. 자세한 내용은 [커서 유형&#40;SQLSRV 드라이버&#41;](../../connect/php/cursor-types-sqlsrv-driver.md) 및 [커서 유형&#40;PDO_SQLSRV 드라이버&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)를 참조하세요.
-- PDO::ATTR_EMULATE_PREPARES 특성이 추가되었습니다. 자세한 내용은 [PDO::prepare](../../connect/php/pdo-prepare.md)을 참조하세요.  
+- AttachDBFileName 연결 옵션이 추가되었습니다. 자세한 내용은 [Connection Options](connection-options.md)을 참조하세요.  
+- LocalDB 지원이 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 추가되었습니다. 자세한 내용은 [LocalDB 지원](php-driver-for-sql-server-support-for-localdb.md)을 참조하세요.
+- AttachDBFileName 연결 옵션이 추가되었습니다. 자세한 내용은 [Connection Options](connection-options.md)을 참조하세요.  
+- 고가용성, 재해 복구 기능을 지원합니다. 자세한 내용은 [고가용성, 재해 복구를 위한 JDBC 드라이브 지원](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)을 참조하세요.
+- 클라이언트 쪽 커서(메모리 내 결과 집합 캐싱)를 지원합니다. 자세한 내용은 [커서 유형&#40;SQLSRV 드라이버&#41;](cursor-types-sqlsrv-driver.md) 및 [커서 유형&#40;PDO_SQLSRV 드라이버&#41;](cursor-types-pdo-sqlsrv-driver.md)를 참조하세요.
+- PDO::ATTR_EMULATE_PREPARES 특성이 추가되었습니다. 자세한 내용은 [PDO::prepare](pdo-prepare.md)을 참조하세요.  
 
 ## <a name="whats-new-in-20"></a>2\.0의 새로운 기능
 
-버전 2.0에서는 PDO_SQLSRV 드라이버에 대한 지원이 추가되었습니다. 자세한 내용은 [PDO_SQLSRV 드라이버 참조](../../connect/php/pdo-sqlsrv-driver-reference.md)를 참조하세요.  
+버전 2.0에서는 PDO_SQLSRV 드라이버에 대한 지원이 추가되었습니다. 자세한 내용은 [PDO_SQLSRV 드라이버 참조](pdo-sqlsrv-driver-reference.md)를 참조하세요.  
 
 ## <a name="see-also"></a>참고 항목
 
-[Microsoft Drivers for PHP for SQL Server 개요](../../connect/php/overview-of-the-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 개요](overview-of-the-php-sql-driver.md)

@@ -1,5 +1,6 @@
 ---
 title: Microsoft ODBC Driver for SQL Server 설치(macOS)
+description: macOS 클라이언트에 Microsoft ODBC Driver for SQL Server를 설치하여 데이터베이스 연결을 사용하도록 설정하는 방법을 알아봅니다.
 ms.date: 03/05/2020
 ms.prod: sql
 ms.prod_service: connectivity
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - driver, installing
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 61bbc198c695ba6e1a0b6a339bfb110108435de8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9daa17d8619fa05ac9abf52a768740eb3e223c77
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921915"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488521"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-macos"></a>Microsoft ODBC Driver for SQL Server 설치(macOS)
 
@@ -59,7 +60,7 @@ macOS 기반 ODBC 드라이버는 다음 구성 요소를 포함합니다.
 |---------------|-----------------|  
 |libmsodbcsql.17.dylib 또는 libmsodbcsql.13.dylib|드라이버 기능이 모두 포함된 동적 라이브러리(`dylib`) 파일입니다. 이 파일은 `/usr/local/lib/`에 설치됩니다.|  
 |`msodbcsqlr17.rll` 또는 `msodbcsqlr13.rll`|드라이버 라이브러리에 대한 해당 리소스 파일입니다. 이 파일은 드라이버 17의 경우 `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` 및 드라이버 13의 경우 `[driver .dylib directory]../share/msodbcsql/resources/en_US/`에 설치됩니다. | 
-|msodbcsql.h|드라이버를 사용하는 데 필요한 새 정의를 모두 포함하는 헤더 파일입니다.<br /><br /> **참고:**  동일한 프로그램에서 msodbcsql.h 및 odbcss.h를 참조할 수 없습니다.<br /><br /> msodbcsql.h는 드라이버 17의 경우 `/usr/local/include/msodbcsql17/` 및 드라이버 13의 경우 `/usr/local/include/msodbcsql/`에 설치됩니다. |
+|msodbcsql.h|드라이버를 사용하는 데 필요한 새 정의를 모두 포함하는 헤더 파일입니다.<br /><br /> **참고:**  동일한 프로그램에 msodbcsql.h 및 odbcss.h를 참조할 수 없습니다.<br /><br /> msodbcsql.h는 드라이버 17의 경우 `/usr/local/include/msodbcsql17/` 및 드라이버 13의 경우 `/usr/local/include/msodbcsql/`에 설치됩니다. |
 |LICENSE.txt|최종 사용자 사용권 계약의 사용 약관을 포함하는 텍스트 파일입니다. 이 파일은 드라이버 17의 경우 `/usr/local/share/doc/msodbcsql17/` 및 드라이버 13의 경우 `/usr/local/share/doc/msodbcsql/`에 저장됩니다. |
 |RELEASE_NOTES|릴리스 정보를 포함하는 텍스트 파일입니다. 이 파일은 드라이버 17의 경우 `/usr/local/share/doc/msodbcsql17/` 및 드라이버 13의 경우 `/usr/local/share/doc/msodbcsql/`에 저장됩니다. |
 

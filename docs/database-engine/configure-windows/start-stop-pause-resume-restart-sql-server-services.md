@@ -40,12 +40,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 6fee83f5560891e6160c3e885ca0a0ed4e5e8058
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 50f57be62b93d201e472cee0d1d7a6adda67ad97
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78946728"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81287963"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>SQL Server 서비스 시작, 중지, 일시 중지, 계속 및 다시 시작
 
@@ -338,6 +338,10 @@ Microsoft Windows **net** 명령을 사용하여 Microsoft SQL Server 서비스�
     # Display the state of the service.
     $DfltInstance
     ```  
+  
+##  <a name="using-service-controller-class"></a><a name="ServiceController"></a> ServiceController 클래스 사용
+
+ServiceController 클래스를 사용하여 SQL Server 서비스 또는 다른 Windows 서비스를 제어할 수 있습니다. 이 작업을 수행하는 방법에 대한 예제는 [ServiceController 클래스](https://docs.microsoft.com/dotnet/api/system.serviceprocess.servicecontroller?view=netframework-4.8)를 참조 하세요.
 
 ## <a name="manage-the-sql-server-service-on-linux"></a>Linux에서 SQL Server 서비스 관리
 

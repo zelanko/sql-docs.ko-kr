@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae98fa644b5aa200db807fd93380802e66eb4eb4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 11aaa38d8fb06c288399c253d530c1bd8440e597
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571272"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634571"
 ---
 # <a name="configurationsetting-method---removesslcertificatebinding"></a>ConfigurationSetting 메서드 - RemoveSSLCertificateBinding
-  SSL 인증서 바인딩을 제거합니다.  
+  TLS/SSL 인증서 바인딩을 제거합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,7 +46,7 @@ public void RemoveSSLCertificateBindings(string Application,
  애플리케이션의 IP 주소입니다.  
   
  *포트*  
- 바인딩과 연결된 SSL 포트입니다.  
+ 바인딩과 연결된 TLS 포트입니다.  
   
  *lcid*  
  반환되는 오류 메시지에 사용할 로캘입니다.  

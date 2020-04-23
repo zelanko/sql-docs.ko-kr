@@ -1,5 +1,6 @@
 ---
-title: bcp를 사용하여 연결 | Microsoft Docs
+title: bcp를 사용하여 연결
+description: Linux 및 macOS 기반 Microsoft ODBC Driver for SQL Server에서 bcp 유틸리티를 사용하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0967f40a4f38156babe2f5fd736e57b5567cbdcc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d667309e390ebe7c31af335d8b3d52b9fd524880
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924549"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632808"
 ---
 # <a name="connecting-with-bcp"></a>bcp를 사용하여 연결
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "80924549"
 > -   -r"\n"  
 > -   -r'\n'  
   
-다음은 텍스트 파일로 테이블 행을 복사하는 `bcp`의 샘플 명령 호출입니다.  
+다음 예는 텍스트 파일로 테이블 행을 복사하는 `bcp`의 명령 호출입니다.  
   
 ```  
 bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.xxx  
@@ -61,7 +62,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 연결할 데이터베이스를 지정합니다.  
   
 - -d  
-`bcp` -S 옵션에 전달된 값이 DSN(데이터 원본 이름)으로 해석되도록 합니다. 자세한 내용은 [Connecting with sqlcmd](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)에서 "sqlcmd 및 bcp에서 DSN 지원"을 참조하세요.  
+`bcp` -S 옵션에 전달된 값이 DSN(데이터 원본 이름)으로 해석되도록 합니다. 자세한 내용은 [Connecting with sqlcmd](connecting-with-sqlcmd.md)에서 "sqlcmd 및 bcp에서 DSN 지원"을 참조하세요.  
   
 - -e *error_file*`bcp` 유틸리티가 파일에서 데이터베이스로 전송할 수 없는 행을 저장하는 데 사용되는 오류 파일의 전체 경로를 지정합니다.  
   
@@ -147,4 +148,4 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
   
 ## <a name="see-also"></a>참고 항목
 
-[**sqlcmd**를 사용하여 연결](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  
+[**sqlcmd**를 사용하여 연결](connecting-with-sqlcmd.md)  

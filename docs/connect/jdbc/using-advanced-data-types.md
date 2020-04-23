@@ -1,5 +1,6 @@
 ---
-title: 고급 데이터 형식 사용 | Microsoft Docs
+title: 고급 데이터 형식 사용
+description: Microsoft JDBC Driver for SQL Server를 사용하여 SQL Server 데이터 형식에서 Java 데이터 형식으로 변환하는 JDBC 고급 데이터 형식을 사용하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 066a56a3c9556ff6e89478a9deeda3716b7d2aac
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 509c2735475b7113887a2291ac6cdfb67dfc865a
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924081"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528727"
 ---
 # <a name="using-advanced-data-types"></a>고급 데이터 형식 사용
 
@@ -57,7 +58,7 @@ JDBC 드라이버는 java.sql.Blob, java.sql.Clob 및 java.sql.NClob 인터페�
 
 ### <a name="retrieving-large-value-types-from-a-database"></a>데이터베이스에서 큰 값 형식 검색
 
-**varchar(max)** 데이터 형식과 같이 이진이 아닌 큰 값 데이터 형식을 데이터베이스에서 검색할 때 사용할 수 있는 한 가지 방법은 해당 데이터를 문자 스트림으로 읽는 것입니다. 다음 예제에서는 [SQLServerStatement](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 클래스의 [executeQuery](../../connect/jdbc/reference/sqlserverstatement-class.md) 메서드를 사용하여 데이터베이스에서 데이터를 검색하고 이를 결과 집합으로 반환합니다. 그런 다음 [SQLServerResultSet](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) 클래스의 [getCharacterStream](../../connect/jdbc/reference/sqlserverresultset-class.md) 메서드를 사용하여 결과 집합에서 큰 값 데이터를 읽습니다.  
+**varchar(max)** 데이터 형식과 같이 이진이 아닌 큰 값 데이터 형식을 데이터베이스에서 검색할 때 사용할 수 있는 한 가지 방법은 해당 데이터를 문자 스트림으로 읽는 것입니다. 다음 예제에서는 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스의 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 메서드를 사용하여 데이터베이스에서 데이터를 검색하고 이를 결과 집합으로 반환합니다. 그런 다음 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) 메서드를 사용하여 결과 집합에서 큰 값 데이터를 읽습니다.  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT TOP 1 * FROM Test1");  
@@ -122,7 +123,7 @@ try (PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (Col1, Co
 
 ### <a name="modifying-large-value-types-in-a-database"></a>데이터베이스에서 큰 값 데이터 형식 수정
 
-대개의 경우 데이터베이스의 큰 값을 업데이트하거나 수정할 때 권장되는 방법은 [, ](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 및 [과 같은 ](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 명령을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]SQLServerPreparedStatement`UPDATE` 및 `WRITE`SQLServerCallableStatement`SUBSTRING` 클래스를 통해 매개 변수를 전달하는 것입니다.  
+대개의 경우 데이터베이스의 큰 값을 업데이트하거나 수정할 때 권장되는 방법은 `UPDATE`, `WRITE` 및 `SUBSTRING`과 같은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 사용하여 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 및 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스를 통해 매개 변수를 전달하는 것입니다.  
 
 보관된 HTML 파일처럼 큰 텍스트 파일에서 단어의 인스턴스를 바꾸려면 다음과 같이 Clob 개체를 사용합니다.  
 
@@ -146,7 +147,7 @@ try (Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, Resul
 
 ## <a name="xml-data-type"></a>XML 데이터 형식
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 XML 문서와 조각을 **데이터베이스에 저장할 수 있도록 하는**xml[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 제공합니다. **xml** 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 제공 데이터 형식이며 **int** 및 **varchar**와 같은 다른 기본 제공 형식과 비슷합니다. 다른 기본 제공 유형과 마찬가지로 변수 유형, 매개 변수 유형, 함수 반환 형식 또는 **CAST 및 CONVERT 함수로 테이블을 만들 때**xml[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터 형식을 열 유형으로 사용할 수 있습니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 XML 문서와 조각을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 저장할 수 있도록 하는 **xml** 데이터 형식을 제공합니다. **xml** 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 제공 데이터 형식이며 **int** 및 **varchar**와 같은 다른 기본 제공 형식과 비슷합니다. 다른 기본 제공 유형과 마찬가지로 변수 유형, 매개 변수 유형, 함수 반환 형식 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 및 CONVERT 함수로 테이블을 만들 때 **xml** 데이터 형식을 열 유형으로 사용할 수 있습니다.  
   
 JDBC 드라이버에서 **xml** 데이터 형식은 문자열, 바이트 배열, 스트림, CLOB, BLOB 또는 SQLXML 개체로 매핑될 수 있습니다. 기본값은 문자열입니다. JDBC 드라이버 버전 2.0 이상에서는 SQLXML 인터페이스가 추가된 JDBC 4.0 API가 지원됩니다. SQLXML 인터페이스는 XML 데이터에 대한 상호 작용 및 조작을 수행하는 메서드를 정의합니다. **SQLXML** 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml** 데이터 형식에 매핑됩니다. **SQLXML** Java 데이터 형식으로 관계형 데이터베이스에서 XML 데이터를 읽고 쓰는 방법은 [XML 데이터 지원](../../connect/jdbc/supporting-xml-data.md)을 참조하세요.  
   

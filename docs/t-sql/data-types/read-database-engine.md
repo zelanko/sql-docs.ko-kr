@@ -1,7 +1,7 @@
 ---
 title: Read(데이터베이스 엔진) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/22/2017
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,21 +17,28 @@ helpviewer_keywords:
 ms.assetid: f2b8207c-b69f-4327-a874-100b3a1f27d8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9fb69a5c4e9d303ab0e3a7a3e2edeeeeed228391
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 246c24d261879880a079191210841fefef62549f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000606"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633589"
 ---
-# <a name="read-database-engine"></a>Read(데이터베이스 엔진)
+# <a name="read-database-engine-by-using-csharp"></a>CSharp를 사용하여 읽기(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Read는 전달된 **BinaryReader**에서 **SqlHierarchyId**의 이진 표현을 읽고 **SqlHierarchyId** 개체를 해당 값으로 설정합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 Read를 호출할 수 없습니다. 대신 CAST 또는 CONVERT를 사용합니다.
   
 ## <a name="syntax"></a>구문  
-  
-```sql
+
+<!--
+This is not T-SQL, despite the ```sql colorizer specified.
+Neither should this be ```syntaxsql.
+Rather, this is C# (or C# syntax).  Same for the later code blocks.
+I am making this fix now, from ```sql to ```cs, on 2020/04/16.  GeneMi.
+-->
+
+```csharp
 void Read( BinaryReader r )   
 ```  
   
@@ -47,11 +54,11 @@ void Read( BinaryReader r )
   
  Read는 새로 생성된 **SqlHierarchyId** 개체에서만 호출할 수 있습니다.  
   
- Read는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hierarchyid**열에 데이터를 쓸 때와 같이**에서 필요한 경우에 내부적으로 사용됩니다. 또한 Read는 **varbinary**와 **hierarchyid** 간의 변환 시 내부적으로 호출됩니다.  
+ Read는 **hierarchyid** 열에 데이터를 쓸 때와 같이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 필요한 경우에 내부적으로 사용됩니다. 또한 Read는 **varbinary**와 **hierarchyid** 간의 변환 시 내부적으로 호출됩니다.  
   
 ## <a name="examples"></a>예  
   
-```sql
+```csharp
 Byte[] encoding = new byte[] { 0x58 };  
 MemoryStream stream = new MemoryStream(encoding, false /*not writable*/);  
 BinaryReader br = new BinaryReader(stream);  

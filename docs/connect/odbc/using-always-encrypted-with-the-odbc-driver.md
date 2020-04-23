@@ -1,5 +1,6 @@
 ---
-title: SQL Server용 ODBC 드라이버와 함께 상시 암호화 사용 | Microsoft Docs
+title: Always Encrypted와 ODBC Driver 사용
+description: Always Encrypted 및 Microsoft ODBC Driver for SQL Server를 사용하여 ODBC 애플리케이션을 개발하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 09/01/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 637198e079c6aa1b1e08e1a69e204b36f54f3827
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d47e0d0f874689ca81a5153de08cb3e81fff22fc
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285847"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635417"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server용 ODBC 드라이버와 함께 상시 암호화 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "79285847"
 
 ### <a name="introduction"></a>소개
 
-이 문서에서는 [Always Encrypted(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 또는 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 및 [ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)를 사용하여 ODBC 애플리케이션을 개발하는 방법을 설명합니다.
+이 문서에서는 [Always Encrypted(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 또는 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 및 [ODBC Driver for SQL Server](microsoft-odbc-driver-for-sql-server.md)를 사용하여 ODBC 애플리케이션을 개발하는 방법을 설명합니다.
 
 Always Encrypted를 사용하면 클라이언트 애플리케이션이 중요한 데이터를 암호화하고 해당 데이터 또는 암호화 키를 SQL Server 또는 Azure SQL Database에 표시하지 않을 수 있습니다. SQL Server용 ODBC 드라이버와 같은 상시 암호화 지원 드라이버는 클라이언트 애플리케이션의 중요한 데이터를 투명하게 암호화하고 암호 해독합니다. 이 드라이버는 중요 데이터베이스 열에 해당하는 쿼리 매개 변수를 자동으로 확인하고(Always Encrypted를 사용하여 보호) 데이터를 SQL Server 또는 Azure SQL Database로 전달하기 전에 이러한 매개 변수의 값을 암호화합니다. 마찬가지로, 이 드라이버는 쿼리 결과의 암호화된 데이터베이스 열에서 검색한 데이터의 암호를 투명하게 해독합니다. *보안 Enclave를 사용한* Always Encrypted는 이 기능을 확장하여 데이터 기밀성을 유지하면서 중요한 데이터에 대해 보다 풍부한 기능을 사용하도록 설정합니다.
 
@@ -60,7 +61,7 @@ Always Encrypted를 사용하도록 설정해도 암호화 또는 암호 해독�
 ### <a name="enabling-always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted를 사용하도록 설정
 
 > [!NOTE]
-> Linux 및 Mac에서는 보안 Enclave를 사용한 Always Encrypted를 사용하는 데 OpenSSL 버전 1.0.1 이상이 필요합니다.
+> Linux 및 macOS에서는 보안 Enclave를 사용한 Always Encrypted를 사용하는 데 OpenSSL 버전 1.0.1 이상이 필요합니다.
 
 버전 17.4부터 드라이버는 보안 Enclave를 사용한 Always Encrypted를 지원합니다. SQL Server 2019 이상에 연결할 때 Enclave를 사용할 수 있도록 하려면 `ColumnEncryption` DSN, 연결 문자열 또는 연결 특성을 Enclave 유형 및 증명 프로토콜의 이름 그리고 연결된 증명 데이터를 쉼표로 구분하여 설정합니다. 버전 17.4에서는 [가상화 기반 보안](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) Enclave 유형 및 [호스트 보호 서비스](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) 증명 프로토콜(`VBS-HGS`)만 지원됩니다. 이를 사용하려면 증명 서버의 URL을 지정합니다. 예를 들면 다음과 같습니다.
 
@@ -431,16 +432,16 @@ DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 AKV를 CMK 스토리지에 사용하는 데 필요한 다른 ODBC 애플리케이션 변경 내용은 없습니다.
 
 > [!NOTE]
-> 드라이버는 신뢰할 수 있는 AKV 엔드포인트 목록을 포함합니다. 드라이버 버전 17.5.2부터 이 목록을 구성할 수 있습니다. 드라이버의 `AKVTrustedEndpoints` 속성이나 DSN의 ODBCINST.INI 또는 ODBC.INI 레지스트리 키(Windows)/`odbcinst.ini` 또는 `odbc.ini` 파일 섹션(Linux/Mac)을 세미콜론으로 구분된 목록으로 설정합니다. DSN의 설정이 드라이버의 설정보다 우선 적용됩니다. 값이 세미콜론으로 시작되면 기본 목록을 확장합니다. 그러지 않으면 기본 목록을 대체합니다. 기본 목록(17.5 기준)은 `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`입니다.
+> 드라이버는 신뢰할 수 있는 AKV 엔드포인트 목록을 포함합니다. 드라이버 버전 17.5.2부터 이 목록을 구성할 수 있습니다. 드라이버의 `AKVTrustedEndpoints` 속성이나 DSN의 ODBCINST.INI 또는 ODBC.INI 레지스트리 키(Windows)/`odbcinst.ini` 또는 `odbc.ini` 파일 섹션(Linux/macOS)을 세미콜론으로 구분된 목록으로 설정합니다. DSN의 설정이 드라이버의 설정보다 우선 적용됩니다. 값이 세미콜론으로 시작되면 기본 목록을 확장합니다. 그러지 않으면 기본 목록을 대체합니다. 기본 목록(17.5 기준)은 `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`입니다.
 
 
 ### <a name="using-the-windows-certificate-store-provider"></a>Windows 인증서 저장소 공급자 사용
 
-Windows의 ODBC Driver for SQL Server에는 `MSSQL_CERTIFICATE_STORE`라는 Windows 인증서 저장소용 기본 제공 열 마스터 키 저장소 공급자가 포함되어 있습니다. macOS 또는 Linux에서는 이 공급자를 사용할 수 없습니다. 이 공급자를 사용하면 CMK가 클라이언트 머신에 로컬로 저장되며, 드라이버에서 CMK를 사용하는 데 필요한 애플리케이션의 추가 구성이 없습니다. 그러나 애플리케이션에서 인증서 및 저장소에 있는 해당 프라이빗 키에 액세스할 수 있어야 합니다. 자세한 내용은 [열 마스터 키 만들기 및 저장(상시 암호화)](https://docs.microsoft.com/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted)을 참조하세요.
+Windows의 ODBC Driver for SQL Server에는 `MSSQL_CERTIFICATE_STORE`라는 Windows 인증서 저장소용 기본 제공 열 마스터 키 저장소 공급자가 포함되어 있습니다. macOS 또는 Linux에서는 이 공급자를 사용할 수 없습니다. 이 공급자를 사용하면 CMK가 클라이언트 머신에 로컬로 저장되며, 드라이버에서 CMK를 사용하는 데 필요한 애플리케이션의 추가 구성이 없습니다. 그러나 애플리케이션에서 인증서 및 저장소에 있는 해당 프라이빗 키에 액세스할 수 있어야 합니다. 자세한 내용은 [열 마스터 키 만들기 및 저장(상시 암호화)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)을 참조하세요.
 
 ### <a name="using-custom-keystore-providers"></a>사용자 지정 키 저장소 공급자 사용
 
-ODBC Driver for SQL Server는 CEKeystoreProvider 인터페이스를 사용하여 사용자 지정 타사 키 저장소 공급자도 지원합니다. 이 기능을 통해 애플리케이션에서 드라이버가 암호화된 열에 액세스하는 데 사용할 수 있도록 키 저장소 공급자를 로드, 쿼리 및 구성할 수 있습니다. 애플리케이션에서 SQL Server에 저장할 CEK를 암호화하고 ODBC를 사용하여 암호화된 열에 액세스하는 이상의 태스크를 수행하기 위해 키 스토리지 공급자와 직접 상호 작용할 수도 있습니다. 자세한 내용은 [사용자 지정 키 스토리지 공급자](../../connect/odbc/custom-keystore-providers.md)를 참조하세요.
+ODBC Driver for SQL Server는 CEKeystoreProvider 인터페이스를 사용하여 사용자 지정 타사 키 저장소 공급자도 지원합니다. 이 기능을 통해 애플리케이션에서 드라이버가 암호화된 열에 액세스하는 데 사용할 수 있도록 키 저장소 공급자를 로드, 쿼리 및 구성할 수 있습니다. 애플리케이션에서 SQL Server에 저장할 CEK를 암호화하고 ODBC를 사용하여 암호화된 열에 액세스하는 이상의 태스크를 수행하기 위해 키 스토리지 공급자와 직접 상호 작용할 수도 있습니다. 자세한 내용은 [사용자 지정 키 스토리지 공급자](custom-keystore-providers.md)를 참조하세요.
 
 두 개의 연결 특성이 사용자 지정 키 저장소 공급자와 상호 작용하는 데 사용됩니다. 아래에 이 계정과 키의 예제가 나와 있습니다.
 
@@ -543,7 +544,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 [SQLGetDiacRec](https://msdn.microsoft.com/library/ms710921(v=vs.85).aspx)를 통해 자세한 오류 정보를 얻을 수 있습니다.
 
 > [!NOTE]
-> 공급자는 필요한 경우 연결 핸들을 사용하여 기록된 데이터를 특정 연결에 연관지을 수 있습니다. 이 기능은 연결별 구성을 구현하는 데 유용합니다. 연결 컨텍스트를 무시하고, 데이터 전송에 사용된 연결과 관계없이 데이터를 동일하게 처리할 수도 있습니다. 자세한 내용은 [컨텍스트 연결](../../connect/odbc/custom-keystore-providers.md#context-association)을 참조하세요.
+> 공급자는 필요한 경우 연결 핸들을 사용하여 기록된 데이터를 특정 연결에 연관지을 수 있습니다. 이 기능은 연결별 구성을 구현하는 데 유용합니다. 연결 컨텍스트를 무시하고, 데이터 전송에 사용된 연결과 관계없이 데이터를 동일하게 처리할 수도 있습니다. 자세한 내용은 [컨텍스트 연결](custom-keystore-providers.md#context-association)을 참조하세요.
 
 #### <a name="reading-data-from-a-provider"></a>공급자에서 데이터 읽기
 
@@ -565,7 +566,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 애플리케이션과 키 저장소 공급자 간에 전송되는 데이터의 형식과 관련해서 이 인터페이스의 추가 요구 사항은 없습니다. 각 공급자가 필요에 따라 고유한 프로토콜/데이터 형식을 정의할 수 있습니다.
 
-고유한 키 저장소 공급자를 구현하는 예제는 [사용자 지정 키 저장소 공급자](../../connect/odbc/custom-keystore-providers.md)를 참조하세요.
+고유한 키 저장소 공급자를 구현하는 예제는 [사용자 지정 키 저장소 공급자](custom-keystore-providers.md)를 참조하세요.
 
 ## <a name="limitations-of-the-odbc-driver-when-using-always-encrypted"></a>Always Encrypted를 사용할 때 ODBC 드라이버의 제한 사항
 

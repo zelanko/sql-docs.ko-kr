@@ -3,17 +3,17 @@ title: SQL Server 2017 on Linux 릴리스 정보
 description: 이 문서에는 Linux에서 실행되는 SQL Server 2017에 대한 릴리스 정보 및 지원되는 기능이 포함됩니다. 최신 릴리스 및 여러 이전 릴리스에 대한 릴리스 정보가 포함됩니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/03/2020
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: e52132e0121b602092a9e1bb94cca3e5e8d1ba73
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0decf0cbaf3d64353e76c4927369503add744808
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286697"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298263"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>SQL Server 2017 on Linux 릴리스 정보
 
@@ -28,9 +28,9 @@ ms.locfileid: "79286697"
 
 | 플랫폼 | 파일 시스템 | 설치 가이드 |
 |-----|-----|-----|
-| Red Hat Enterprise Linux 7.3, 7.4, 7.5 또는 7.6 서버 | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-red-hat.md) | 
+| Red Hat Enterprise Linux 7.3, 7.4, 7.5, 7.6 또는 8 서버 | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2 | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-suse.md) |
-| Ubuntu 16.04LTS | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-ubuntu.md) | 
+| Ubuntu 16.04 LTS, 18.04 LTS | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-ubuntu.md) | 
 | Windows, Mac 또는 Linux의 Docker Engine 1.8 이상 | 해당 없음 | [설치 가이드](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
@@ -46,6 +46,7 @@ ms.locfileid: "79286697"
 
 | 해제               | 버전       | 릴리스 날짜 |
 |-----------------------|---------------|--------------|
+| [CU20](#CU20)         | 14.0.3294.2   | 2020-04-10   |
 | [CU19](#CU19)         | 14.0.3281.6   | 2020-02-05   |
 | [CU18](#CU18)         | 14.0.3257.3   | 2019-12-09   |
 | [CU17](#CU17)         | 14.0.3238.1   | 2019-10-08   |
@@ -80,6 +81,27 @@ CU 리포지토리(**mssql-server-2017**)를 구성한 경우에는 새 설치�
 - [전체 텍스트 검색 패키지 설치](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services 설치](sql-server-linux-setup-ssis.md)
 - [SQL Server 에이전트 사용](sql-server-linux-setup-sql-agent.md)
+
+## <a name="cu20-april-2020"></a><a id="CU20"></a> CU20(2020년 4월)
+
+이것은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 CU20(누적 업데이트 20) 릴리스입니다. 이 릴리스의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 버전은 14.0.3294.2입니다. 이 릴리스의 수정 사항 및 향상된 기능에 대한 자세한 내용은 <https://support.microsoft.com/help/4541283>을 참조하세요.
+
+### <a name="package-details"></a>패키지 세부 정보
+
+수동 또는 오프라인 패키지 설치의 경우 다음 표의 정보를 사용하여 RPM 및 Debian 패키지를 다운로드할 수 있습니다.
+
+> [!NOTE]
+> **Ubuntu 18.04** 및 **RHEL 8**은 CU20부터 SQL Server 2017에서 지원됩니다.
+>
+> Ubuntu에 대한 오프라인 패키지 설치 링크는 SSIS 패키지(Ubuntu 18.04에는 사용할 수 없음)를 제외하고 Ubuntu 18.04 패키지를 가리킵니다. Ubuntu 16.04 패키지를 찾고 있는 경우 다운로드 경로 <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/>을 참조하세요.
+>
+> Red Hat에 대한 오프라인 패키지 설치 링크는 SSIS 패키지(RHEL 8에는 사용할 수 없음)를 제외하고 RHEL 8 패키지를 가리킵니다. RHEL 7 패키지를 찾고 있는 경우 다운로드 경로 <https://packages.microsoft.com/rhel/7/mssql-server-2017/>을 참조하세요.
+
+| 패키지 | 패키지 버전 | 다운로드 |
+|-----|-----|-----|
+| Red Hat RPM 패키지 | 14.0.3294.2-27 | [엔진 RPM 패키지](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-14.0.3294.2-27.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-ha-14.0.3294.2-27.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-fts-14.0.3294.2-27.x86_64.rpm)</br>[SSIS 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM 패키지 | 14.0.3294.2-27 | [mssql-server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3294.2-27.x86_64.rpm)</br>[고가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3294.2-27.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3294.2-27.x86_64.rpm) | 
+| Ubuntu 18.04 Debian 패키지 | 14.0.3294.2-27 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3294.2-27_amd64.deb)</br>[고가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3294.2-27_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3294.2-27_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a name="cu19-february-2020"></a><a id="CU19"></a> CU19(2020년 2월)
 
@@ -502,19 +524,19 @@ sudo systemctl start mssql-server
 
       1. /var/opt/mssql/mssql.conf에 다음을 추가합니다.
 
-      ```
-      [network]
-      tlsciphers= AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!ECDHE-RSA-AES128-GCM-SHA256:!ECDHE-RSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES128-GCM-SHA256:!ECDHE-ECDSA-AES256-SHA384:!ECDHE-ECDSA-AES128-SHA256:!ECDHE-ECDSA-AES256-SHA:!ECDHE-ECDSA-AES128-SHA:!ECDHE-RSA-AES256-SHA384:!ECDHE-RSA-AES128-SHA256:!ECDHE-RSA-AES256-SHA:!ECDHE-RSA-AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA:!DHE-DSS-AES256-SHA256:!DHE-DSS-AES128-SHA256:!DHE-DSS-AES256-SHA:!DHE-DSS-AES128-SHA:!DHE-DSS-DES-CBC3-SHA:!NULL-SHA256:!NULL-SHA
-      ```
+         ```
+         [network]
+         tlsciphers= AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!ECDHE-RSA-AES128-GCM-SHA256:!ECDHE-RSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES128-GCM-SHA256:!ECDHE-ECDSA-AES256-SHA384:!ECDHE-ECDSA-AES128-SHA256:!ECDHE-ECDSA-AES256-SHA:!ECDHE-ECDSA-AES128-SHA:!ECDHE-RSA-AES256-SHA384:!ECDHE-RSA-AES128-SHA256:!ECDHE-RSA-AES256-SHA:!ECDHE-RSA-AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA:!DHE-DSS-AES256-SHA256:!DHE-DSS-AES128-SHA256:!DHE-DSS-AES256-SHA:!DHE-DSS-AES128-SHA:!DHE-DSS-DES-CBC3-SHA:!NULL-SHA256:!NULL-SHA
+         ```
 
-         >[!NOTE]
-         >In the preceding code, `!` negates the expression. This tells OpenSSL to not use the following cipher suite.  
+         > [!NOTE]
+         > 위의 코드에서 `!`는 식을 부정합니다. 이는 OpenSSL에 다음 암호화 그룹을 사용하지 않도록 지시합니다.  
 
       1. 다음 명령을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 다시 시작합니다.
 
-      ```bash
-      sudo systemctl restart mssql-server
-      ```
+         ```bash
+         sudo systemctl restart mssql-server
+         ```
 
 - 메모리 내 OLTP를 사용하는 Windows의 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 데이터베이스는 Linux의 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]에서 복원할 수 없습니다. 메모리 내 OLTP를 사용하는 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 데이터베이스를 복원하려면 먼저 백업/복원 또는 분리/연결을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux로 이동하기 전에 Windows의 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 또는 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]로 데이터베이스를 업그레이드합니다.
 

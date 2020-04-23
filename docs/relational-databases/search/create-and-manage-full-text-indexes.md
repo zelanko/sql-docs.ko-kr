@@ -1,7 +1,7 @@
 ---
 title: 전체 텍스트 인덱스 만들기 및 관리 | Microsoft 문서
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55ed06976ef161037134164116ea2364f420f405
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: a76112a515f33bc169883c60de68742239c8d4e1
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80530942"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304444"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>전체 텍스트 인덱스 만들기 및 관리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -76,9 +76,9 @@ ms.locfileid: "80530942"
     |----------|-----------------|  
     |**일반**|전체 텍스트 인덱스의 기본 속성을 표시합니다. 이러한 속성으로는 데이터베이스 이름, 테이블 이름 및 전체 텍스트 키 열의 이름과 같이 변경할 수 없는 많은 속성과 여러 가지 수정 가능한 속성이 있습니다. 수정 가능한 속성은 다음과 같습니다.<br /><br /> **전체 텍스트 인덱스 중지 목록**<br /><br /> **전체 텍스트 인덱싱 설정**<br /><br /> **변경 내용 추적**<br /><br /> **검색 속성 목록**|  
     |**열**|전체 텍스트 인덱싱에 사용할 수 있는 테이블 열을 표시합니다. 열을 선택하면 선택한 열이 전체 텍스트 인덱싱됩니다. 이때 전체 텍스트 인덱스에 포함하려는 만큼 사용 가능한 열을 선택할 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 채우기](populate-full-text-indexes.md)를 참조하세요.|
-    |**일정**|이 페이지를 사용하여 전체 텍스트 인덱스 채우기에 대한 증분 테이블 채우기를 시작하는 SQL Server 에이전트 작업의 일정을 만들거나 관리할 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 채우기](../../relational-databases/search/populate-full-text-indexes.md)를 참조하세요.<br /><br /> 참고: **전체 텍스트 인덱스 속성** 대화 상자를 닫으면 새로 만든 일정이 SQL Server 에이전트 작업( *database_name*.*table_name*에 대한 증분 테이블 채우기 시작)에 연결됩니다.|  
+    |**일정**|이 페이지를 사용하여 전체 텍스트 인덱스 채우기에 대한 증분 테이블 채우기를 시작하는 SQL Server 에이전트 작업의 일정을 만들거나 관리할 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 채우기](../../relational-databases/search/populate-full-text-indexes.md)를 참조하세요.<br /><br /> 참고: **전체 텍스트 인덱스 속성** 대화 상자를 닫으면 새로 만든 일정이 SQL Server 에이전트 작업에 연결됩니다(*database_name*.*table_name*에 대한 증분 테이블 채우기 시작).|  
   
-6.  변경 내용을 저장하고 [!INCLUDE[clickOK](../../includes/clickok-md.md)]전체 텍스트 인덱스 속성**대화 상자를 닫으려면**  
+6.  변경 내용을 저장하고 **전체 텍스트 인덱스 속성** 대화 상자를 닫으려면 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ##  <a name="view-the-properties-of-indexed-tables-and-columns"></a><a name="props"></a> 인덱싱된 테이블 및 열 속성 보기  
  OBJECTPROPERTYEX와 같은 여러 가지 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 사용하여 다양한 전체 텍스트 인덱싱 속성 값을 얻을 수 있습니다. 이 정보는 전체 텍스트 검색을 관리하고 이러한 검색에서 발생하는 문제를 해결하는 데 유용합니다.  
@@ -117,15 +117,15 @@ SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );
   
  **예제**  
   
- 다음 예에서는 `PK_Document_DocumentID` 인덱스가 전체 텍스트 키 열의 고유성을 강제 적용하는 데 사용되는지 여부를 확인합니다.  
+ 다음 예에서는 `PK_Document_DocumentNode` 인덱스가 전체 텍스트 키 열의 고유성을 강제 적용하는 데 사용되는지 여부를 확인합니다.  
   
 ```sql  
 USE AdventureWorks  
 GO  
-SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID',  'IsFulltextKey' )  
+SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentNode',  'IsFulltextKey' )  
 ```  
   
- 이 예에서는 전체 텍스트 키 열의 고유성을 강제 적용하기 위해 `PK_Document_DocumentID` 인덱스가 사용되면 1을 반환하고, 그렇지 않으면 0 또는 NULL을 반환합니다. NULL은 잘못된 인덱스 이름이 사용 중이거나, 인덱스 이름이 테이블과 일치하지 않거나, 테이블이 존재하지 않음 등을 의미합니다.  
+ 이 예에서는 전체 텍스트 키 열의 고유성을 강제 적용하기 위해 `PK_Document_DocumentNode` 인덱스가 사용되면 1을 반환하고, 그렇지 않으면 0 또는 NULL을 반환합니다. NULL은 잘못된 인덱스 이름이 사용 중이거나, 인덱스 이름이 테이블과 일치하지 않거나, 테이블이 존재하지 않음 등을 의미합니다.  
   
 ### <a name="find-the-identifier-of-the-full-text-key-column"></a>전체 텍스트 키 열의 식별자 찾기  
   
@@ -141,7 +141,7 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 
   
  다음 예에서는 전체 텍스트 키 열의 식별자나 NULL을 반환합니다. NULL은 잘못된 인덱스 이름이 사용 중이거나, 인덱스 이름이 테이블과 일치하지 않거나, 테이블이 존재하지 않음 등을 의미합니다.  
   
-```sql  
+```sql
 USE AdventureWorks;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID('Production.Document'), 'TableFulltextKeyColumn');  
@@ -162,7 +162,7 @@ SELECT @key_column AS 'Unique Key Column';
 GO  
 ```  
   
- 이 예에서는 Document 테이블의 고유 키 열 이름인 DocumentID가 포함된 단일 행을 표시하는 `Unique Key Column`라는 결과 집합 열을 반환합니다. 이 쿼리에 잘못된 인덱스 이름이 포함되어 있거나, 인덱스 이름이 테이블과 일치하지 않거나, 테이블이 존재하지 않는 경우에는 NULL이 반환됩니다.  
+ 이 예에서는 Document 테이블의 고유 키 열 이름인 DocumentNode가 포함된 단일 행을 표시하는 `Unique Key Column`이라는 결과 집합 열을 반환합니다. 이 쿼리에 잘못된 인덱스 이름이 포함되어 있거나, 인덱스 이름이 테이블과 일치하지 않거나, 테이블이 존재하지 않는 경우에는 NULL이 반환됩니다.  
 
 ## <a name="index-varbinarymax-and-xml-columns"></a>varbinary(max) 및 xml 열 인덱싱  
  **varbinary(max)** , **varbinary**또는 **xml** 열이 전체 텍스트 인덱싱된 경우 다른 전체 텍스트 인덱싱된 열과 마찬가지로 전체 텍스트 조건자(CONTAINS 및 FREETEXT) 및 함수(CONTAINSTABLE 및 FREETEXTTABLE)를 사용하여 이러한 열을 쿼리할 수 있습니다.

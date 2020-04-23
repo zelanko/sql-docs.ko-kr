@@ -1,5 +1,6 @@
 ---
-title: '예제: ID 및 IDREFS 지시어 지정 | Microsoft 문서'
+title: '예제: ID 및 IDREFS 지시어 지정 | Microsoft Docs'
+description: SQL 쿼리에서 ID 및 IDREFS 지시어를 지정하여 문서 내 링크를 사용하도록 설정하는 방법을 알아봅니다.
 ms.custom: fresh2019may
 ms.date: 05/22/2019
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 29468af968f8e4ffd92e52258b12eb4aece3793b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2a05de3b0fbdec71ec15f221158dc9f2e362da8f
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662981"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388662"
 ---
 # <a name="example-specifying-the-id-and-idrefs-directives"></a>예제: ID 및 IDREFS 지시어 지정
 
@@ -39,7 +40,7 @@ ms.locfileid: "80662981"
 </Customer>  
 ```  
   
-`SalesOrderIDList` 요소의 `<Customer>` 특성은 `SalesOrderID` 요소의 `<SalesOrder>` 특성을 참조하는 다중 값 특성입니다. 이 연결을 구성하려면 `SalesOrderID` 특성이 `ID` 유형으로 선언되어야 하며 `SalesOrderIDList` 요소의 `<Customer>` 특성이 `IDREFS` 유형으로 선언되어야 합니다. 한 고객이 여러 개의 주문을 요청할 수 있으므로 `IDREFS` 유형이 사용됩니다.
+`<Customer>` 요소의 `SalesOrderIDList` 특성은 `<SalesOrder>` 요소의 `SalesOrderID` 특성을 참조하는 다중 값 특성입니다. 이 연결을 구성하려면 `SalesOrderID` 특성이 `ID` 유형으로 선언되어야 하며 `<Customer>` 요소의 `SalesOrderIDList` 특성이 `IDREFS` 유형으로 선언되어야 합니다. 한 고객이 여러 개의 주문을 요청할 수 있으므로 `IDREFS` 유형이 사용됩니다.
   
  **IDREFS** 유형의 요소에는 또한 두 개 이상의 값이 포함됩니다. 따라서 같은 태그, 부모 및 키 열 정보를 다시 사용하는 별개의 SELECT 절을 사용해야 합니다. 그런 다음 `ORDER BY` 에서 **IDREFS** 값을 구성하는 행 시퀀스가 해당 부모 요소 아래에 함께 그룹화되어 표시되도록 해야 합니다.  
   

@@ -1,5 +1,6 @@
 ---
-title: ODBC Driver에서 Azure Active Directory 사용 | Microsoft Docs for SQL Server
+title: ODBC 드라이버에서 Azure Active Directory 사용
+description: Microsoft ODBC Driver for SQL Server를 사용하면 ODBC 애플리케이션에서 Azure Active Directory를 사용하여 Azure SQL Database 인스턴스에 연결할 수 있습니다.
 ms.custom: ''
 ms.date: 03/18/2020
 ms.prod: sql
@@ -10,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f572479921eef0f8957bba6890d0d92415b7c44b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 15f8117c84f952d4244c95a53d187e142daa8572
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928333"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635407"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>ODBC 드라이버에서 Azure Active Directory 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## <a name="purpose"></a>목적
 
-Microsoft ODBC Driver for SQL Server 버전 13.1 이상에서는 ODBC 애플리케이션이 Active Directory의 페더레이션된 ID로 사용자 이름/암호, Azure Active Directory 액세스 토큰, Azure Active Directory 관리 서비스 ID 또는 Windows 통합 인증(_Windows 드라이버만 해당_)을 사용하여 Azure SQL Azure 인스턴스에 연결할 수 있습니다. ODBC 드라이버 버전 13.1의 경우 Azure Active Directory 액세스 토큰 인증은 _Windows 전용_입니다. ODBC 드라이버 버전 17 이상에서는 모든 플랫폼(Windows, Linux 및 macOS)에서 이 인증을 지원합니다. 로그인 ID를 사용하는 새로운 Azure Active Directory 대화형 인증은 Windows용 ODBC 드라이버 버전 17.1에서 도입되었습니다. 시스템 할당 ID와 사용자 할당 ID 모두에 대해 새로운 Azure Active Directory 관리 서비스 ID 인증 방법이 ODBC 드라이버 버전 17.3.1.1에서 추가되었습니다. 이러한 기능은 모두 새 DSN 및 연결 문자열 키워드를 사용하고 연결 특성을 사용하여 수행됩니다.
+Microsoft ODBC Driver for SQL Server 버전 13.1 이상에서는 ODBC 애플리케이션이 Active Directory의 페더레이션된 ID로 사용자 이름/암호, Azure Active Directory 액세스 토큰, Azure Active Directory 관리 서비스 ID 또는 Windows 통합 인증(_Windows 드라이버만 해당_)을 사용하여 Azure SQL Database 인스턴스에 연결할 수 있습니다. ODBC 드라이버 버전 13.1의 경우 Azure Active Directory 액세스 토큰 인증은 _Windows 전용_입니다. ODBC 드라이버 버전 17 이상에서는 모든 플랫폼(Windows, Linux 및 macOS)에서 이 인증을 지원합니다. 로그인 ID를 사용하는 새로운 Azure Active Directory 대화형 인증은 Windows용 ODBC 드라이버 버전 17.1에서 도입되었습니다. 시스템 할당 ID와 사용자 할당 ID 모두에 대해 새로운 Azure Active Directory 관리 서비스 ID 인증 방법이 ODBC 드라이버 버전 17.3.1.1에서 추가되었습니다. 이러한 기능은 모두 새 DSN 및 연결 문자열 키워드를 사용하고 연결 특성을 사용하여 수행됩니다.
 
 > [!NOTE]
 > Linux 및 macOS의 ODBC 드라이버는 Azure Active Directory에 대해 직접 Azure Active Directory 인증만을 지원합니다. Linux 또는 macOS 클라이언트에서 Azure Active Directory 사용자 이름/암호 인증을 사용하고 Active Directory 구성에서 Active Directory Federation Services 엔드포인트에 대해 클라이언트를 인증해야 하는 경우 인증이 실패할 수 있습니다.

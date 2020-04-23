@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: e2ec01c0dcb22317e2e20e4485621d2a9aa8352a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: beb565ec08336cb3cee74faf4e4439cc64529a68
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903810"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488135"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Integration Services(SSIS) 규모 확장 마스터
 
@@ -55,7 +55,7 @@ Scale Out 마스터 서비스는 `<drive>:\Program Files\Microsoft SQL Server\14
 |구성  |Description  |기본값  |
 |---------|---------|---------|
 |PortNumber|규모 확장 작업자와 통신하는 데 사용되는 네트워크 포트 번호입니다.|8391|
-|SSLCertThumbprint|규모 확장 작업자와의 통신을 보호하는 데 사용되는 SSL 인증서의 지문입니다.|규모 확장 마스터 설치 중에 지정된 SSL 인증서의 지문|
+|SSLCertThumbprint|Scale Out 작업자와의 통신을 보호하는 데 사용되는 TLS/SSL 인증서의 지문입니다.|Scale Out 마스터 설치 중에 지정된 TLS/SSL 인증서의 지문|
 |SqlServerName|SSISDB 카탈로그를 포함하는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]의 이름입니다. 예: ServerName\\InstanceName.|Scale Out 마스터와 함께 설치되는 SQL Server의 이름입니다.|
 |CleanupCompletedJobsIntervalInMs|완료된 실행 작업을 정리하는 간격(밀리초)입니다.|43200000|
 |DealWithExpiredTasksIntervalInMs|만료된 시행 작업을 처리하는 간격(밀리초)입니다.|300000|

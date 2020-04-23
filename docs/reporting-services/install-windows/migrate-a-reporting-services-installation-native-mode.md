@@ -6,12 +6,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 11/06/2018
-ms.openlocfilehash: 5db33f22ffd5143d88c5654c753f1b08811c0c8a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4a5b217ba8733aa92c2255170d2ff1f750d996a7
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68262900"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487062"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Reporting Services 설치 마이그레이션(기본 모드)
 
@@ -109,7 +109,7 @@ ms.locfileid: "68262900"
   
 * IP 주소 제한은 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이상 버전에서 지원되지 않습니다. IP 주소 제한을 사용할 경우 마이그레이션 전에 보고 솔루션을 다시 디자인하거나 방화벽, 라우터 또는 NAT(네트워크 주소 변환)와 같은 기술을 사용하여 보고서 서버에 액세스할 수 없도록 제한된 주소를 구성해야 합니다.  
   
-* 클라이언트 SSL(Secure Sockets Layer) 인증서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이상 버전에서 지원되지 않습니다. 클라이언트 SSL 인증서를 사용하는 경우 마이그레이션 전에 보고 솔루션을 다시 디자인해야 합니다.  
+* 이전에 SSL(Secure Sockets Layer)로 알려진 클라이언트 TLS(전송 계층 보안) 인증서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이상 버전에서 지원되지 않습니다. 클라이언트 TLS 인증서를 사용하는 경우 마이그레이션 전에 보고 솔루션을 다시 디자인해야 합니다.  
   
 * Windows 통합 인증 이외의 인증 유형을 사용할 경우 `<AuthenticationTypes>` RSReportServer.config **파일의** 요소를 지원되는 인증 유형으로 업데이트해야 합니다. 지원되는 인증 유형은 NTLM, Kerberos, 협상 및 기본 인증입니다. 익명, .NET Passport 및 다이제스트 인증은 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이상 버전에서 지원되지 않습니다.  
   

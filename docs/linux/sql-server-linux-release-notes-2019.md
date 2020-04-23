@@ -7,12 +7,12 @@ ms.date: 03/31/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e75becc77691ccd91c8c5db01bd08112aaad9476
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: 7782806a1ba44c4f18c4005dfa592998cc9f026b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517669"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301725"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>SQL Server 2019 on Linux 릴리스 정보
 
@@ -29,7 +29,7 @@ ms.locfileid: "80517669"
 |-----|-----|-----|
 | Red Hat Enterprise Linux 7.3, 7.4, 7.5, 7.6 또는 8 서버 | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2, SP3, SP4 또는 SP5 | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-suse.md) |
-| Ubuntu 16.04LTS, 18.04 | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-ubuntu.md) | 
+| Ubuntu 16.04 LTS, 18.04 LTS | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-ubuntu.md) | 
 | Windows, Mac 또는 Linux의 Docker Engine 1.8 이상 | 해당 없음 | [설치 가이드](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
@@ -205,19 +205,19 @@ SQL Server 2019(15.x)의 CU3(누적 업데이트 3) 릴리스입니다. 이 릴�
 
       1. /var/opt/mssql/mssql.conf에 다음을 추가합니다.
 
-      ```
-      [network]
-      tlsciphers= AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!ECDHE-RSA-AES128-GCM-SHA256:!ECDHE-RSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES128-GCM-SHA256:!ECDHE-ECDSA-AES256-SHA384:!ECDHE-ECDSA-AES128-SHA256:!ECDHE-ECDSA-AES256-SHA:!ECDHE-ECDSA-AES128-SHA:!ECDHE-RSA-AES256-SHA384:!ECDHE-RSA-AES128-SHA256:!ECDHE-RSA-AES256-SHA:!ECDHE-RSA-AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA:!DHE-DSS-AES256-SHA256:!DHE-DSS-AES128-SHA256:!DHE-DSS-AES256-SHA:!DHE-DSS-AES128-SHA:!DHE-DSS-DES-CBC3-SHA:!NULL-SHA256:!NULL-SHA
-      ```
+          ```
+          [network]
+          tlsciphers= AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!ECDHE-RSA-AES128-GCM-SHA256:!ECDHE-RSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES128-GCM-SHA256:!ECDHE-ECDSA-AES256-SHA384:!ECDHE-ECDSA-AES128-SHA256:!ECDHE-ECDSA-AES256-SHA:!ECDHE-ECDSA-AES128-SHA:!ECDHE-RSA-AES256-SHA384:!ECDHE-RSA-AES128-SHA256:!ECDHE-RSA-AES256-SHA:!ECDHE-RSA-AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA:!DHE-DSS-AES256-SHA256:!DHE-DSS-AES128-SHA256:!DHE-DSS-AES256-SHA:!DHE-DSS-AES128-SHA:!DHE-DSS-DES-CBC3-SHA:!NULL-SHA256:!NULL-SHA
+          ```
 
-         >[!NOTE]
-         >In the preceding code, `!` negates the expression. This tells OpenSSL to not use the following cipher suite.  
+         > [!NOTE]
+         > 위의 코드에서 `!`는 식을 부정합니다. 이는 OpenSSL에 다음 암호화 그룹을 사용하지 않도록 지시합니다.  
 
       1. 다음 명령을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 다시 시작합니다.
 
-      ```bash
-      sudo systemctl restart mssql-server
-      ```
+          ```bash
+          sudo systemctl restart mssql-server
+          ```
 
 - 메모리 내 OLTP를 사용하는 Windows의 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 데이터베이스는 SQL Server 2019(15.x) on Linux에서 복원할 수 없습니다. 메모리 내 OLTP를 사용하는 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 데이터베이스를 복원하려면 먼저 백업/복원 또는 분리/연결을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux로 이동하기 전에 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], SQL Server 2017 또는 SQL Server 2019 on Windows로 데이터베이스를 업그레이드합니다.
 

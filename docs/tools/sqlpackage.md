@@ -9,12 +9,12 @@ author: pensivebrian
 ms.author: broneill
 ms.reviewer: alayu; sstein
 ms.date: 03/17/2020
-ms.openlocfilehash: 3a45b9164d2d81983e9a40f0395189979d4daa7d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1ee42c97fe4e032835ccb2f8a07ea51fe70114ac
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448256"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303144"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -86,7 +86,7 @@ sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_ve
 |**/SourcePassword:**|**/sp**|{string}|SQL Server 인증 시나리오에서 원본 데이터베이스에 액세스하는 데 사용할 암호를 정의합니다. |
 |**/SourceServerName:**|**/ssn**|{string}|원본 데이터베이스를 호스팅하는 서버의 이름을 정의합니다. |
 |**/SourceTimeout:**|**/st**|{int}|원본 데이터베이스에 대한 연결을 설정하는 데 대한 제한 시간(초)을 지정합니다. |
-|**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|원본 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 SSL을 사용할지 여부를 지정합니다. |
+|**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|원본 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 TLS를 사용할지 여부를 지정합니다. |
 |**/SourceUser:**|**/su**|{string}|SQL Server 인증 시나리오에서 원본 데이터베이스에 액세스하는 데 사용할 SQL Server 사용자를 정의합니다. |
 |**/TargetFile:**|**/tf**|{string}| 데이터베이스 대신 작업 대상으로 사용될 대상 파일(.dacpac 파일)을 지정합니다. 이 매개 변수를 사용하는 경우 다른 대상 매개 변수가 무효화됩니다. 이 매개 변수는 데이터베이스 대상만 지원하는 동작에는 유효하지 않습니다.| 
 |**/TenantId:**|**/tid**|{string}|Azure AD 테넌트 ID 또는 도메인 이름을 나타냅니다. 이 옵션은 outlook.com, hotmail.com 또는 live.com과 같은 Microsoft 계정뿐만 아니라 게스트 또는 가져온 Azure AD 사용자를 지원해야 합니다. 이 매개 변수를 생략하면 인증된 사용자가 이 AD의 기본 사용자라고 가정하여 Azure AD의 기본 테넌트 ID가 사용됩니다. 그러나 이 경우 이 Azure AD에서 호스트되는 모든 게스트 또는 가져온 사용자 및/또는 Microsoft 계정은 지원되지 않으며 작업이 실패합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
@@ -144,7 +144,7 @@ SqlPackage.exe 게시 작업은 원본 데이터베이스의 구조와 일치하
 |**/SourcePassword:**|**/sp**|{string}|SQL Server 인증 시나리오에서 원본 데이터베이스에 액세스하는 데 사용할 암호를 정의합니다. |
 |**/SourceServerName:**|**/ssn**|{string}|원본 데이터베이스를 호스팅하는 서버의 이름을 정의합니다. |
 |**/SourceTimeout:**|**/st**|{int}|원본 데이터베이스에 대한 연결을 설정하는 데 대한 제한 시간(초)을 지정합니다. |
-|**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|원본 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 SSL을 사용할지 여부를 지정합니다. |
+|**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|원본 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 TLS를 사용할지 여부를 지정합니다. |
 |**/SourceUser:**|**/su**|{string}|SQL Server 인증 시나리오에서 원본 데이터베이스에 액세스하는 데 사용할 SQL Server 사용자를 정의합니다. |
 |**/TargetConnectionString:**|**/tcs**|{string}|대상 데이터베이스에 대한 유효한 SQL Server/Azure 연결 문자열을 지정합니다. 이 매개 변수를 지정한 경우 다른 모든 대상 매개 변수와 단독으로 연결 문자열이 사용됩니다. |
 |**/TargetDatabaseName:**|**/tdn**|{string}|sqlpackage.exe 동작의 대상인 데이터베이스의 이름에 대한 재정의를 지정합니다. |
@@ -152,7 +152,7 @@ SqlPackage.exe 게시 작업은 원본 데이터베이스의 구조와 일치하
 |**/TargetPassword:**|**/tp**|{string}|SQL Server 인증 시나리오에서 대상 데이터베이스에 액세스하는 데 사용할 암호를 정의합니다. |
 |**/TargetServerName:**|**/tsn**|{string}|대상 데이터베이스를 호스팅하는 서버의 이름을 정의합니다. |
 |**/TargetTimeout:**|**/tt**|{int}|대상 데이터베이스에 대한 연결을 설정하는 데 대한 제한 시간(초)을 지정합니다. Azure AD의 경우 이 값을 30초보다 크거나 같게 하는 것이 좋습니다.|
-|**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|대상 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 SSL을 사용할지 여부를 지정합니다. |
+|**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|대상 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 TLS를 사용할지 여부를 지정합니다. |
 |**/TargetUser:**|**/tu**|{string}|SQL Server 인증 시나리오에서 대상 데이터베이스에 액세스하는 데 사용할 SQL Server 사용자를 정의합니다. |
 |**/TenantId:**|**/tid**|{string}|Azure AD 테넌트 ID 또는 도메인 이름을 나타냅니다. 이 옵션은 outlook.com, hotmail.com 또는 live.com과 같은 Microsoft 계정뿐만 아니라 게스트 또는 가져온 Azure AD 사용자를 지원해야 합니다. 이 매개 변수를 생략하면 인증된 사용자가 이 AD의 기본 사용자라고 가정하여 Azure AD의 기본 테넌트 ID가 사용됩니다. 그러나 이 경우 이 Azure AD에서 호스트되는 모든 게스트 또는 가져온 사용자 및/또는 Microsoft 계정은 지원되지 않으며 작업이 실패합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
 |**/UniversalAuthentication:**|**/ua**|{True&#124;False}|유니버설 인증을 사용해야 하는지 여부를 지정합니다. True로 설정되면 대화형 인증 프로토콜이 MFA를 지원하도록 활성화됩니다. 이 옵션은 사용자가 사용자 이름 및 암호 또는 통합 인증(Windows 자격 증명)을 입력해야 하는 대화형 프로토콜을 사용하여 MFA가 없는 Azure AD 인증에도 사용할 수 있습니다. /UniversalAuthentication을 True로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정할 수 없습니다. /UniversalAuthentication을 False로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정해야 합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
@@ -285,7 +285,7 @@ SqlPackage.exe Export 작업은 SQL Server 또는 Azure SQL Database의 라이�
 |**/SourcePassword:**|**/sp**|{string}|SQL Server 인증 시나리오에서 원본 데이터베이스에 액세스하는 데 사용할 암호를 정의합니다. |
 |**/SourceServerName:**|**/ssn**|{string}|원본 데이터베이스를 호스팅하는 서버의 이름을 정의합니다. |
 |**/SourceTimeout:**|**/st**|{int}|원본 데이터베이스에 대한 연결을 설정하는 데 대한 제한 시간(초)을 지정합니다. |
-|**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|원본 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 SSL을 사용할지 여부를 지정합니다. |
+|**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|원본 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 TLS를 사용할지 여부를 지정합니다. |
 |**/SourceUser:**|**/su**|{string}|SQL Server 인증 시나리오에서 원본 데이터베이스에 액세스하는 데 사용할 SQL Server 사용자를 정의합니다. |
 |**/TargetFile:**|**/tf**|{string}| 데이터베이스 대신 작업 대상으로 사용될 대상 파일(.dacpac 파일)을 지정합니다. 이 매개 변수를 사용하는 경우 다른 대상 매개 변수가 무효화됩니다. 이 매개 변수는 데이터베이스 대상만 지원하는 동작에는 유효하지 않습니다.|
 |**/TenantId:**|**/tid**|{string}|Azure AD 테넌트 ID 또는 도메인 이름을 나타냅니다. 이 옵션은 outlook.com, hotmail.com 또는 live.com과 같은 Microsoft 계정뿐만 아니라 게스트 또는 가져온 Azure AD 사용자를 지원해야 합니다. 이 매개 변수를 생략하면 인증된 사용자가 이 AD의 기본 사용자라고 가정하여 Azure AD의 기본 테넌트 ID가 사용됩니다. 그러나 이 경우 이 Azure AD에서 호스트되는 모든 게스트 또는 가져온 사용자 및/또는 Microsoft 계정은 지원되지 않으며 작업이 실패합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
@@ -326,7 +326,7 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
 |**/TargetPassword:**|**/tp**|{string}|SQL Server 인증 시나리오에서 대상 데이터베이스에 액세스하는 데 사용할 암호를 정의합니다. |
 |**/TargetServerName:**|**/tsn**|{string}|대상 데이터베이스를 호스팅하는 서버의 이름을 정의합니다. |
 |**/TargetTimeout:**|**/tt**|{int}|대상 데이터베이스에 대한 연결을 설정하는 데 대한 제한 시간(초)을 지정합니다. Azure AD의 경우 이 값을 30초보다 크거나 같게 하는 것이 좋습니다.|
-|**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|대상 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 SSL을 사용할지 여부를 지정합니다. |
+|**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|대상 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 TLS를 사용할지 여부를 지정합니다. |
 |**/TargetUser:**|**/tu**|{string}|SQL Server 인증 시나리오에서 대상 데이터베이스에 액세스하는 데 사용할 SQL Server 사용자를 정의합니다. |
 |**/TenantId:**|**/tid**|{string}|Azure AD 테넌트 ID 또는 도메인 이름을 나타냅니다. 이 옵션은 outlook.com, hotmail.com 또는 live.com과 같은 Microsoft 계정뿐만 아니라 게스트 또는 가져온 Azure AD 사용자를 지원해야 합니다. 이 매개 변수를 생략하면 인증된 사용자가 이 AD의 기본 사용자라고 가정하여 Azure AD의 기본 테넌트 ID가 사용됩니다. 그러나 이 경우 이 Azure AD에서 호스트되는 모든 게스트 또는 가져온 사용자 및/또는 Microsoft 계정은 지원되지 않으며 작업이 실패합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
 |**/UniversalAuthentication:**|**/ua**|{True&#124;False}|유니버설 인증을 사용해야 하는지 여부를 지정합니다. True로 설정되면 대화형 인증 프로토콜이 MFA를 지원하도록 활성화됩니다. 이 옵션은 사용자가 사용자 이름 및 암호 또는 통합 인증(Windows 자격 증명)을 입력해야 하는 대화형 프로토콜을 사용하여 MFA가 없는 Azure AD 인증에도 사용할 수 있습니다. /UniversalAuthentication을 True로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정할 수 없습니다. /UniversalAuthentication을 False로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정해야 합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
@@ -371,7 +371,7 @@ Import 동작과 관련된 속성:
 |**/SourcePassword:**|**/sp**|{string}|SQL Server 인증 시나리오에서 원본 데이터베이스에 액세스하는 데 사용할 암호를 정의합니다. |
 |**/SourceServerName:**|**/ssn**|{string}|원본 데이터베이스를 호스팅하는 서버의 이름을 정의합니다. |
 |**/SourceTimeout:**|**/st**|{int}|원본 데이터베이스에 대한 연결을 설정하는 데 대한 제한 시간(초)을 지정합니다. |
-|**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|원본 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 SSL을 사용할지 여부를 지정합니다. |
+|**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|원본 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 TLS를 사용할지 여부를 지정합니다. |
 |**/SourceUser:**|**/su**|{string}|SQL Server 인증 시나리오에서 원본 데이터베이스에 액세스하는 데 사용할 SQL Server 사용자를 정의합니다. |
 |**/TargetConnectionString:**|**/tcs**|{string}|대상 데이터베이스에 대한 유효한 SQL Server/Azure 연결 문자열을 지정합니다. 이 매개 변수를 지정한 경우 다른 모든 대상 매개 변수와 단독으로 연결 문자열이 사용됩니다. |
 |**/TargetDatabaseName:**|**/tdn**|{string}|sqlpackage.exe 동작의 대상인 데이터베이스의 이름에 대한 재정의를 지정합니다. |
@@ -380,7 +380,7 @@ Import 동작과 관련된 속성:
 |**/TargetPassword:**|**/tp**|{string}|SQL Server 인증 시나리오에서 대상 데이터베이스에 액세스하는 데 사용할 암호를 정의합니다. |
 |**/TargetServerName:**|**/tsn**|{string}|대상 데이터베이스를 호스팅하는 서버의 이름을 정의합니다. |
 |**/TargetTimeout:**|**/tt**|{int}|대상 데이터베이스에 대한 연결을 설정하는 데 대한 제한 시간(초)을 지정합니다. Azure AD의 경우 이 값을 30초보다 크거나 같게 하는 것이 좋습니다.|
-|**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|대상 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 SSL을 사용할지 여부를 지정합니다. |
+|**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|대상 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 TLS를 사용할지 여부를 지정합니다. |
 |**/TargetUser:**|**/tu**|{string}|SQL Server 인증 시나리오에서 대상 데이터베이스에 액세스하는 데 사용할 SQL Server 사용자를 정의합니다. |
 |**/TenantId:**|**/tid**|{string}|Azure AD 테넌트 ID 또는 도메인 이름을 나타냅니다. 이 옵션은 outlook.com, hotmail.com 또는 live.com과 같은 Microsoft 계정뿐만 아니라 게스트 또는 가져온 Azure AD 사용자를 지원해야 합니다. 이 매개 변수를 생략하면 인증된 사용자가 이 AD의 기본 사용자라고 가정하여 Azure AD의 기본 테넌트 ID가 사용됩니다. 그러나 이 경우 이 Azure AD에서 호스트되는 모든 게스트 또는 가져온 사용자 및/또는 Microsoft 계정은 지원되지 않으며 작업이 실패합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
 |**/UniversalAuthentication:**|**/ua**|{True&#124;False}|유니버설 인증을 사용해야 하는지 여부를 지정합니다. True로 설정되면 대화형 인증 프로토콜이 MFA를 지원하도록 활성화됩니다. 이 옵션은 사용자가 사용자 이름 및 암호 또는 통합 인증(Windows 자격 증명)을 입력해야 하는 대화형 프로토콜을 사용하여 MFA가 없는 Azure AD 인증에도 사용할 수 있습니다. /UniversalAuthentication을 True로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정할 수 없습니다. /UniversalAuthentication을 False로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정해야 합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
@@ -504,7 +504,7 @@ Import 동작과 관련된 속성:
 |**/TargetPassword:**|**/tp**|{string}|SQL Server 인증 시나리오에서 대상 데이터베이스에 액세스하는 데 사용할 암호를 정의합니다. |
 |**/TargetServerName:**|**/tsn**|{string}|대상 데이터베이스를 호스팅하는 서버의 이름을 정의합니다. |
 |**/TargetTimeout:**|**/tt**|{int}|대상 데이터베이스에 대한 연결을 설정하는 데 대한 제한 시간(초)을 지정합니다. Azure AD의 경우 이 값을 30초보다 크거나 같게 하는 것이 좋습니다.|
-|**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|대상 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 SSL을 사용할지 여부를 지정합니다. |
+|**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|대상 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 TLS를 사용할지 여부를 지정합니다. |
 |**/TargetUser:**|**/tu**|{string}|SQL Server 인증 시나리오에서 대상 데이터베이스에 액세스하는 데 사용할 SQL Server 사용자를 정의합니다. |
 |**/TenantId:**|**/tid**|{string}|Azure AD 테넌트 ID 또는 도메인 이름을 나타냅니다. 이 옵션은 outlook.com, hotmail.com 또는 live.com과 같은 Microsoft 계정뿐만 아니라 게스트 또는 가져온 Azure AD 사용자를 지원해야 합니다. 이 매개 변수를 생략하면 인증된 사용자가 이 AD의 기본 사용자라고 가정하여 Azure AD의 기본 테넌트 ID가 사용됩니다. 그러나 이 경우 이 Azure AD에서 호스트되는 모든 게스트 또는 가져온 사용자 및/또는 Microsoft 계정은 지원되지 않으며 작업이 실패합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
 |**/UniversalAuthentication:**|**/ua**|{True&#124;False}|유니버설 인증을 사용해야 하는지 여부를 지정합니다. True로 설정되면 대화형 인증 프로토콜이 MFA를 지원하도록 활성화됩니다. 이 옵션은 사용자가 사용자 이름 및 암호 또는 통합 인증(Windows 자격 증명)을 입력해야 하는 대화형 프로토콜을 사용하여 MFA가 없는 Azure AD 인증에도 사용할 수 있습니다. /UniversalAuthentication을 True로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정할 수 없습니다. /UniversalAuthentication을 False로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정해야 합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
@@ -536,7 +536,7 @@ Import 동작과 관련된 속성:
 |**/SourcePassword:**|**/sp**|{string}|SQL Server 인증 시나리오에서 원본 데이터베이스에 액세스하는 데 사용할 암호를 정의합니다. |
 |**/SourceServerName:**|**/ssn**|{string}|원본 데이터베이스를 호스팅하는 서버의 이름을 정의합니다. |
 |**/SourceTimeout:**|**/st**|{int}|원본 데이터베이스에 대한 연결을 설정하는 데 대한 제한 시간(초)을 지정합니다. |
-|**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|원본 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 SSL을 사용할지 여부를 지정합니다. |
+|**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|원본 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 TLS를 사용할지 여부를 지정합니다. |
 |**/SourceUser:**|**/su**|{string}|SQL Server 인증 시나리오에서 원본 데이터베이스에 액세스하는 데 사용할 SQL Server 사용자를 정의합니다. |
 |**/TargetConnectionString:**|**/tcs**|{string}|대상 데이터베이스에 대한 유효한 SQL Server/Azure 연결 문자열을 지정합니다. 이 매개 변수를 지정한 경우 다른 모든 대상 매개 변수와 단독으로 연결 문자열이 사용됩니다. |
 |**/TargetDatabaseName:**|**/tdn**|{string}|sqlpackage.exe 동작의 대상인 데이터베이스의 이름에 대한 재정의를 지정합니다. |
@@ -545,7 +545,7 @@ Import 동작과 관련된 속성:
 |**/TargetPassword:**|**/tp**|{string}|SQL Server 인증 시나리오에서 대상 데이터베이스에 액세스하는 데 사용할 암호를 정의합니다. |
 |**/TargetServerName:**|**/tsn**|{string}|대상 데이터베이스를 호스팅하는 서버의 이름을 정의합니다. |
 |**/TargetTimeout:**|**/tt**|{int}|대상 데이터베이스에 대한 연결을 설정하는 데 대한 제한 시간(초)을 지정합니다. Azure AD의 경우 이 값을 30초보다 크거나 같게 하는 것이 좋습니다.|
-|**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|대상 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 SSL을 사용할지 여부를 지정합니다. |
+|**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|대상 데이터베이스 연결을 암호화하고 신뢰의 유효성을 검증하기 위한 인증서 체인 검색을 건너뛰는 데 TLS를 사용할지 여부를 지정합니다. |
 |**/TargetUser:**|**/tu**|{string}|SQL Server 인증 시나리오에서 대상 데이터베이스에 액세스하는 데 사용할 SQL Server 사용자를 정의합니다. |
 |**/TenantId:**|**/tid**|{string}|Azure AD 테넌트 ID 또는 도메인 이름을 나타냅니다. 이 옵션은 outlook.com, hotmail.com 또는 live.com과 같은 Microsoft 계정뿐만 아니라 게스트 또는 가져온 Azure AD 사용자를 지원해야 합니다. 이 매개 변수를 생략하면 인증된 사용자가 이 AD의 기본 사용자라고 가정하여 Azure AD의 기본 테넌트 ID가 사용됩니다. 그러나 이 경우 이 Azure AD에서 호스트되는 모든 게스트 또는 가져온 사용자 및/또는 Microsoft 계정은 지원되지 않으며 작업이 실패합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|
 |**/UniversalAuthentication:**|**/ua**|{True&#124;False}|유니버설 인증을 사용해야 하는지 여부를 지정합니다. True로 설정되면 대화형 인증 프로토콜이 MFA를 지원하도록 활성화됩니다. 이 옵션은 사용자가 사용자 이름 및 암호 또는 통합 인증(Windows 자격 증명)을 입력해야 하는 대화형 프로토콜을 사용하여 MFA가 없는 Azure AD 인증에도 사용할 수 있습니다. /UniversalAuthentication을 True로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정할 수 없습니다. /UniversalAuthentication을 False로 설정하면 SourceConnectionString(/scs)에 Azure AD 인증을 지정해야 합니다. <br/> Active Directory 유니버설 인증에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)을 참조하세요.|

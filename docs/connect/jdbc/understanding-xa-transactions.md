@@ -1,5 +1,6 @@
 ---
-title: XA 트랜잭션 이해 | Microsoft Docs
+title: XA 트랜잭션 이해
+description: Microsoft JDBC Driver for SQL Server는 Java Platform, Enterprise Edition/JDBC 2.0 분산 트랜잭션(옵션)을 지원합니다.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: efd99a3bc59b18eb29cb03719212b4f00e0c40b0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9bcf55fd300c977105229473228955581da7cdd3
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916999"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528737"
 ---
 # <a name="understanding-xa-transactions"></a>XA 트랜잭션 이해
 
@@ -46,7 +47,7 @@ ms.locfileid: "80916999"
 
 - XA 트랜잭션을 MS DTC(Distributed Transaction Coordinator)와 함께 사용할 경우 MS DTC의 현재 버전이 밀접하게 결합된 XA 분기 동작을 지원하지 않습니다. 예를 들어 MS DTC에는 XID(XA 분기 트랜잭션 ID)와 MS DTC 트랜잭션 ID 간에 일 대 일 매핑이 있으며 느슨하게 연결된 XA 분기에서 수행되는 작업이 다른 작업과 격리됩니다.  
   
-- 또한 MS DTC는 동일한 GTRID(전역 트랜잭션 ID)를 사용하는 여러 XA 분기가 단일 MS DTC 트랜잭션 ID에 매핑되는 긴밀하게 결합된 XA 분기를 지원합니다. 이러한 지원을 통해 밀접하게 결합된 XA 분기가 리소스 관리자에서 서로의 변경 내용을 확인할 수 있습니다(예: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).
+- 또한 MS DTC는 동일한 GTRID(전역 트랜잭션 ID)를 사용하는 여러 XA 분기가 단일 MS DTC 트랜잭션 ID에 매핑되는 밀접하게 결합된 XA 분기를 지원합니다. 이러한 지원을 통해 밀접하게 결합된 XA 분기가 리소스 관리자에서 서로의 변경 내용을 확인할 수 있습니다(예: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).
   
 - [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) 플래그를 사용하면 애플리케이션에서 BQUAL(XA 분기 트랜잭션 ID)은 다르지만 GTRID(글로벌 트랜잭션 ID) 및 FormatID(형식 ID)는 동일한, 밀접하게 결합된 XA 트랜잭션을 사용할 수 있습니다. 이 기능을 사용하려면 XAResource.start 메서드의 flags 매개 변수에 [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)를 설정해야 합니다.
   

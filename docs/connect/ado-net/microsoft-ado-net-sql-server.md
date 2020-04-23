@@ -1,6 +1,6 @@
 ---
-title: Microsoft ADO.NET for SQL Server | Microsoft Docs
-description: Microsoft ADO.NET for SQL Server 소개.
+title: Microsoft ADO.NET
+description: Microsoft ADO.NET for SQL Server는 .NET 언어에 대한 핵심 데이터 액세스 기술입니다. Microsoft.Data.SqlClient 네임스페이스를 사용하여 SQL Server에 액세스합니다.
 ms.custom: ''
 ms.date: 09/30/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 5e037c080d850bbb34327f46b2aac931f64c687d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c89c1c5073e86121e4fbadc3a2901057c0a361a4
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928970"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529103"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 

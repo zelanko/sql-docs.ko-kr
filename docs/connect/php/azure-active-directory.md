@@ -1,5 +1,6 @@
 ---
-title: Azure Active Directory | Microsoft Docs
+title: Azure Active Directory
+description: Microsoft Drivers for PHP for SQL Server에서 Azure Active Directory 인증을 사용하는 방법에 대해 알아봅니다.
 ms.date: 02/25/2019
 ms.prod: sql
 ms.prod_service: connectivity
@@ -8,35 +9,32 @@ ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - azure active directory, authentication, access token
-author: david-puglielli
-ms.author: v-dapugl
-manager: v-mabarw
-ms.openlocfilehash: 8712681a244e969d230b0b7099acd4aa56334f11
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ac1e598b5599caa9020ed795d1bffd185887ad76
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68265185"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81625463"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Azure Active Directory 인증을 사용하여 연결
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-whatis)(Azure Active Directory)는 [SQL Server 인증](../../connect/php/how-to-connect-using-sql-server-authentication.md) 대신 사용 가능한 중앙 사용자 ID 관리 기술입니다. Azure AD는 Azure AD의 페더레이션 ID로 사용자 이름과 암호, Windows 통합 인증, 또는 Azure AD 액세스 토큰을 사용하여 Microsoft Azure SQL Database 및 SQL Data Warehouse에 대한 연결을 허용합니다. SQL Server의 PHP 드라이버는 이 기능을 부분적으로 지원합니다.
+[Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-whatis)(Azure Active Directory)는 [SQL Server 인증](how-to-connect-using-sql-server-authentication.md) 대신 사용 가능한 중앙 사용자 ID 관리 기술입니다. Azure AD는 Azure AD의 페더레이션 ID로 사용자 이름과 암호, Windows 통합 인증, 또는 Azure AD 액세스 토큰을 사용하여 Microsoft Azure SQL Database 및 SQL Data Warehouse에 대한 연결을 허용합니다. SQL Server의 PHP 드라이버는 이 기능을 부분적으로 지원합니다.
 
-Azure AD를 사용하려면 다음 표에 나와 있는 것처럼 **인증** 또는 **AccessToken** 키워드를 사용합니다(함께 사용할 수 없음). 자세한 기술 정보는 [ODBC 드라이버에서 Azure Active Directory 사용](../../connect/odbc/using-azure-active-directory.md)을 참조하세요.
+Azure AD를 사용하려면 다음 표에 나와 있는 것처럼 **인증** 또는 **AccessToken** 키워드를 사용합니다(함께 사용할 수 없음). 자세한 기술 정보는 [ODBC 드라이버에서 Azure Active Directory 사용](../odbc/using-azure-active-directory.md)을 참조하세요.
 
 |키워드|값|Description|
 |-|-|-|
-|**AccessToken**|미설정(기본값)|다른 키워드에 의해 결정되는 인증 모드입니다. 자세한 내용은 [Connection Options](../../connect/php/connection-options.md)을 참조하세요. |
+|**AccessToken**|미설정(기본값)|다른 키워드에 의해 결정되는 인증 모드입니다. 자세한 내용은 [Connection Options](connection-options.md)을 참조하세요. |
 ||바이트 문자열|OAuth JSON 응답에서 추출된 Azure AD 액세스 토큰입니다. 연결 문자열에는 사용자 ID, 암호 또는 인증 키워드가 포함되지 않아야 합니다(Linux 또는 macOS에서 ODBC 드라이버 버전 17 이상 필요). |
-|**인증**|미설정(기본값)|다른 키워드에 의해 결정되는 인증 모드입니다. 자세한 내용은 [Connection Options](../../connect/php/connection-options.md)을 참조하세요. |
+|**인증**|미설정(기본값)|다른 키워드에 의해 결정되는 인증 모드입니다. 자세한 내용은 [Connection Options](connection-options.md)을 참조하세요. |
 ||`SqlPassword`|사용자 이름과 암호로 SQL Server 인스턴스(Azure 인스턴스일 수 있음)에 직접 인증합니다. **UID** 및 **PWD** 키워드로 사용자 이름과 암호를 연결 문자열에 전달해야 합니다. |
-||`ActiveDirectoryPassword`|Azure Active Directory ID로 사용자 이름 및 암호를 사용하여 인증합니다. **UID** 및 **PWD** 키워드로 사용자 이름과 암호를 연결 문자열에 전달해야 합니다. |
+||`ActiveDirectoryPassword`|사용자 이름과 암호를 사용하는 Azure Active Directory ID로 인증합니다. **UID** 및 **PWD** 키워드로 사용자 이름과 암호를 연결 문자열에 전달해야 합니다. |
 ||`ActiveDirectoryMsi`|시스템 할당 관리 ID 또는 사용자 할당 관리 ID 중 하나로 인증합니다(ODBC 드라이버 버전 17.3.1.1 이상 필요). 개요와 자습서는 [Azure 리소스에 대한 관리 ID란?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)을 참조하세요.|
 
 **인증** 키워드는 연결 보안 설정에 영향을 줍니다. 연결 문자열에 설정된 경우 **암호화** 키워드는 기본적으로 true로 설정되며, 따라서 클라이언트가 암호화를 요청합니다. 또한 **TrustServerCertificate**의 설정이 true가 아니면(**false**로 기본 설정 시) 암호화 설정과 관계없이 서버 인증서의 유효성이 검사됩니다. 이 기능은 연결 문자열에서 암호화가 구체적으로 요청된 경우에만 서버 인증서의 유효성을 검사하는 방식 때문에 보안성이 비교적 떨어지던 이전의 로그인 방법과 구별됩니다.
-
-Windows에서 SQL Server용 PHP 드라이버로 Azure AD를 사용하는 경우 [Microsoft Online Services 로그인 도우미](https://www.microsoft.com/download/details.aspx?id=41950)를 설치하라는 메시지가 표시될 수 있습니다(ODBC 17 이상에서는 필요 없음).
 
 #### <a name="limitations"></a>제한 사항
 
@@ -237,6 +235,6 @@ try {
 ```
 
 ## <a name="see-also"></a>참고 항목
-[ODBC 드라이버에서 Azure Active Directory 사용](https://docs.microsoft.com/sql/connect/odbc/using-azure-active-directory)
+[ODBC 드라이버에서 Azure Active Directory 사용](../odbc/using-azure-active-directory.md)
 
 [Azure 리소스용 관리 ID란?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)

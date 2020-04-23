@@ -9,12 +9,12 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bc33ebc4ae271841cba2de73cb9168e1a41e7b69
-ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
+ms.openlocfilehash: cd1ab5402383681172ff111b7daf5fcea675beaa
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "81012429"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298213"
 ---
 # <a name="extensibility-framework-api-for-sql-server"></a>SQL Server용 확장성 프레임워크 API
 
@@ -587,7 +587,7 @@ SQLRETURN InstallExternalLibrary(
 *LibraryErrorLength*  
 \[출력\] LibraryError 문자열의 길이입니다.
 
-## <a name="uninstalllibrary"></a>UninstallLibrary
+## <a name="uninstallexternallibrary"></a>UninstallExternalLibrary
 
 라이브러리를 제거합니다. 이 함수는 선택 사항으로, 구현이 필요하지 않습니다. 기본 구현은 InstallExternalLibrary의 기본 구현에서 수행된 작업을 실행 취소하는 것입니다. 기본 구현에서는 *LibraryInstallDirectory*에 있는 *LibraryName* 파일의 콘텐츠를 삭제합니다.
 

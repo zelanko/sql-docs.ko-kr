@@ -16,12 +16,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e777b49ab8c27abff81f54fef52f2a2a7c4dec31
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3c48422e86cfd3f42e6634a3ca3be1d0dbc85f24
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710348"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528487"
 ---
 # <a name="replication-snapshot-agent"></a>Replication Snapshot Agent
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -128,16 +128,16 @@ snapshot [ -?]
  동적 스냅샷을 생성할 위치입니다.  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
- 연결을 만들 때 스냅샷 에이전트에서 사용하는 SSL(Secure Sockets Layer) 암호화의 수준입니다.  
+ 연결을 만들 때 스냅샷 에이전트에서 사용하는 이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안) 암호화의 수준입니다.  
   
 |EncryptionLevel 값|Description|  
 |---------------------------|-----------------|  
-|**0**|SSL이 사용되지 않음을 지정합니다.|  
-|**1**|SSL이 사용되지만 에이전트에서 SSL 서버 인증서가 트러스트된 발급자에 의해 서명된 것인지 확인하지 않음을 지정합니다.|  
-|**2**|SSL이 사용되고 인증서가 확인됨을 지정합니다.|  
+|**0**|TLS가 사용되지 않음을 지정합니다.|  
+|**1**|TLS가 사용되지만 에이전트에서 TLS/SSL 서버 인증서가 트러스트된 발급자에 의해 서명된 것인지 확인하지 않음을 지정합니다.|  
+|**2**|TLS가 사용되고 인증서가 확인됨을 지정합니다.|  
 
  > [!NOTE]  
- >  유효한 SSL 인증서는 SQL Server의 정규화된 도메인 이름으로 정의됩니다. -EncryptionLevel을 2로 설정할 때 에이전트가 성공적으로 연결되도록 하려면 로컬 SQL Server에서 별칭을 만듭니다. '별칭 이름' 매개 변수는 서버 이름이어야 하며 '서버' 매개 변수는 SQL Server의 정규화된 이름으로 설정되어야 합니다.
+ >  유효한 TLS/SSL 인증서는 SQL Server의 정규화된 도메인 이름으로 정의됩니다. -EncryptionLevel을 2로 설정할 때 에이전트가 성공적으로 연결되도록 하려면 로컬 SQL Server에서 별칭을 만듭니다. '별칭 이름' 매개 변수는 서버 이름이어야 하며 '서버' 매개 변수는 SQL Server의 정규화된 이름으로 설정되어야 합니다.
   
  자세한 내용은 [복제 보안 설정 보기 및 수정](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)을 참조하세요.  
   

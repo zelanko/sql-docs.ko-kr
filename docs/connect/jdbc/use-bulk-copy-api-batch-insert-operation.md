@@ -1,5 +1,6 @@
 ---
-title: MSSQL JDBC 드라이버에 대한 일괄 처리 삽입 작업에 대량 복사 API 사용 | Microsoft Docs
+title: JDBC에서 일괄 처리 삽입 작업을 위한 대량 복사 API
+description: Microsoft JDBC Driver for SQL Server는 Azure Data Warehouse에 대한 일괄 처리 삽입 작업을 위해 대량 복사 API를 사용할 수 있도록 지원합니다.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 62843af006d730c3994519fe4c31182805923478
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 497b68b2b1f19d5d67ca3e790f06844592205d70
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916889"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633993"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>일괄 처리 삽입 작업에 대량 복사 API 사용
 
@@ -141,4 +142,4 @@ Finished. Time taken : 1058 milliseconds.
 
 ## <a name="see-also"></a>참고 항목
 
-[JDBC 드라이버로 성능 및 안정성 개선](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)
+[JDBC 드라이버로 성능 및 안정성 개선](improving-performance-and-reliability-with-the-jdbc-driver.md)

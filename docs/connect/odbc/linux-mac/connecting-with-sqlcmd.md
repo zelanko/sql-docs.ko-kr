@@ -1,5 +1,6 @@
 ---
-title: sqlcmd를 사용하여 연결 | Microsoft Docs
+title: sqlcmd를 사용하여 연결
+description: Linux 및 macOS 기반 Microsoft ODBC Driver for SQL Server에서 sqlcmd 유틸리티를 사용하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d2493e3ba903c44cf25bf98a10ddf6f52a56dd7c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 628968b7d93b9278eb4aaf6ebca3d03fb3cde102
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924556"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632823"
 ---
 # <a name="connecting-with-sqlcmd"></a>sqlcmd를 사용하여 연결
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -51,7 +52,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 - -e 표준 출력 디바이스(stdout)에 입력 스크립트를 기록합니다.
 
-- -E 신뢰할 수 있는 연결을 사용합니다(통합된 인증). Linux 또는 macOS 클라이언트에서 통합된 인증을 사용하는 신뢰할 수 있는 연결을 만드는 방법에 대한 자세한 내용은 [통합 인증 사용](../../../connect/odbc/linux-mac/using-integrated-authentication.md)을 참조하세요.
+- -E 신뢰할 수 있는 연결을 사용합니다(통합된 인증). Linux 또는 macOS 클라이언트에서 통합된 인증을 사용하는 신뢰할 수 있는 연결을 만드는 방법에 대한 자세한 내용은 [통합 인증 사용](using-integrated-authentication.md)을 참조하세요.
 
 - -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage] 입력 및 출력 코드 페이지를 지정합니다. 코드 페이지 번호는 설치된 Linux 코드 페이지를 지정하는 숫자 값입니다.
 (17.5.1.1부터 사용 가능)
@@ -67,7 +68,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 - -k 제어 문자를 제거하거나 바꿉니다.  
   
 - **-K**_application\_intent_  
-서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 현재 **ReadOnly**값만 지원됩니다. **-K** 를 지정하지 않으면 `sqlcmd`가 AlwaysOn 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [ODBC Driver on Linux and macOS - High Availability and Disaster Recovery](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)(Linux 및 macOS의 ODBC 드라이버 - 고가용성, 재해 복구)를 참조하세요.  
+서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 현재 **ReadOnly**값만 지원됩니다. **-K** 를 지정하지 않으면 `sqlcmd`가 AlwaysOn 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [ODBC Driver on Linux and macOS - High Availability and Disaster Recovery](odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)(Linux 및 macOS의 ODBC 드라이버 - 고가용성, 재해 복구)를 참조하세요.  
   
 > [!NOTE]  
 > **-K** 가 CTP for SUSE Linux에서 지원되지 않습니다. 그러나 `sqlcmd`에 전달된 DSN 파일에서 **ApplicationIntent=ReadOnly** 키워드를 지정합니다. 자세한 내용은 이 항목의 끝에 있는 "`sqlcmd` 및 `bcp`에서 DSN 지원"을 참조하세요.  
@@ -77,7 +78,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 - -m *error_level* stdout에 보낼 오류 메시지를 제어합니다.  
   
 - **-M**_multisubnet\_failover_  
-[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 가용성 그룹 또는 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **-M**을 지정합니다. **-M**은 현재 활성 상태인 서버에 대한 장애 조치를 빠르게 검색하고 연결할 수 있도록 지원합니다. **–M**이 지정되지 않으면 **-M** 이 해제되어 있습니다. [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]에 대한 자세한 내용은 [Linux 및 macOS의 ODBC 드라이버 - 고가용성 및 재해 복구](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)를 참조하세요.  
+[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 가용성 그룹 또는 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **-M**을 지정합니다. **-M**은 현재 활성 상태인 서버에 대한 장애 조치를 빠르게 검색하고 연결할 수 있도록 지원합니다. **–M**이 지정되지 않으면 **-M** 이 해제되어 있습니다. [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]에 대한 자세한 내용은 [Linux 및 macOS의 ODBC 드라이버 - 고가용성 및 재해 복구](odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)를 참조하세요.  
   
 > [!NOTE]  
 > **-M** 이 CTP for SUSE Linux에서 지원되지 않습니다. 그러나 `sqlcmd`에 전달된 DSN 파일에서 **MultiSubnetFailover=Yes** 키워드를 지정합니다. 자세한 내용은 이 항목의 끝에 있는 "`sqlcmd` 및 `bcp`에서 DSN 지원"을 참조하세요.  
@@ -161,7 +162,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 ## <a name="unavailable-options"></a>사용할 수 없는 옵션
 현재 릴리스에서 다음 옵션을 사용할 수 없습니다.  
 
-- -A DAC(관리자 전용 연결)를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 로그인합니다. DAC(관리자 전용 연결)를 만드는 방법에 대한 자세한 내용은 [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md)을 참조하세요.  
+- -A DAC(관리자 전용 연결)를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 로그인합니다. DAC(관리자 전용 연결)를 만드는 방법에 대한 자세한 내용은 [Programming Guidelines](programming-guidelines.md)을 참조하세요.  
   
 - -L 로컬로 구성된 서버 컴퓨터와 네트워크상에서 브로드캐스팅하는 서버 컴퓨터의 이름을 나열합니다.  
   
@@ -227,5 +228,5 @@ DSN에서는 DRIVER 항목만 필요하지만 서버에 연결하려면 `sqlcmd`
 다음 별칭을 정의하여 `isql`을 호출하는 기존 스크립트는 `sqlcmd`를 사용하도록 수정할 수 있습니다. `alias isql="sqlcmd -D"`  
 
 ## <a name="see-also"></a>참고 항목  
-[**bcp**를 사용하여 연결](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  
+[**bcp**를 사용하여 연결](connecting-with-bcp.md)  
  

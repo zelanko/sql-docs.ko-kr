@@ -21,12 +21,12 @@ ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15a37c87808b5b44d59a243b2bff57ce6db5de25
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 928e7eafe6de60c71f3a79cef89eb93d5521e2fe
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903784"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305254"
 ---
 # <a name="application-roles"></a>애플리케이션 역할
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "72903784"
  이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 애플리케이션 역할을 시작한 후 사용자가 자신의 원래 보안 컨텍스트를 다시 얻으려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 연결을 끊고 다시 연결해야 합니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터는 **sp_setapprole** 에서 쿠키를 만들 수 있는 옵션을 제공합니다. 이 쿠키에는 애플리케이션 역할을 활성화하기 전 컨텍스트 정보가 들어 있습니다. 이 쿠키를 **sp_unsetapprole** 에서 사용하여 원래 컨텍스트로 세션을 되돌릴 수 있습니다. 이 새 옵션에 대한 자세한 내용과 예를 보려면 [sp_setapprole&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)에 부여한 사용 권한을 통해서만 해당 데이터베이스에 액세스할 수 있습니다.  
   
 > [!IMPORTANT]  
->  ODBC **encrypt** 옵션은 **SqlClient**에서 지원되지 않습니다. 네트워크로 기밀 정보를 전송하려면 SSL(Secure Sockets Layer) 또는 IPsec을 사용하여 채널을 암호화합니다. 클라이언트 애플리케이션의 자격 증명을 유지해야 하는 경우에는 crypto API 함수를 사용하여 자격 증명을 암호화하십시오. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전에서 *password* 매개 변수는 단방향 해시로 저장됩니다.  
+>  ODBC **encrypt** 옵션은 **SqlClient**에서 지원되지 않습니다. 네트워크로 기밀 정보를 전송하려면 이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안) 또는 IPsec를 사용하여 채널을 암호화합니다. 클라이언트 애플리케이션의 자격 증명을 유지해야 하는 경우에는 crypto API 함수를 사용하여 자격 증명을 암호화하십시오. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전에서 *password* 매개 변수는 단방향 해시로 저장됩니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
   

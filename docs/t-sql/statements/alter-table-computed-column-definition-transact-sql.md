@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7eaa4c35079d8eec49d7197778a01b7bac6cf9c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b06287c5a21b2b333335cc199a9447200e04110
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982043"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631681"
 ---
 # <a name="alter-table-computed_column_definition-transact-sql"></a>ALTER TABLE computed_column_definition(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "73982043"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 column_name AS computed_column_expression  
 [ PERSISTED [ NOT NULL ] ]  
 [   
@@ -55,7 +55,7 @@ column_name AS computed_column_expression
  변경, 추가 또는 삭제할 열의 이름입니다. *column_name*은 1~128자의 문자를 포함할 수 있습니다. 새 열의 경우 **timestamp** 데이터 형식으로 만들어진 열에 대해 *column_name*을 생략할 수 있습니다. **타임스탬프** 데이터 형식 열에 대해 *column_name*이 지정되지 않으면 **타임스탬프**가 이름으로 사용됩니다.  
   
 *computed_column_expression*  
- 계산 열의 값을 정의하는 식입니다. 계산 열은 테이블에 물리적으로 저장된 열이 아니라 해당 테이블의 다른 열을 사용하여 식으로 계산된 가상의 열입니다. 예를 들어 계산 열은 cost AS price * qty 정의를 가질 수 있습니다. 식은 계산되지 않은 열 이름, 상수, 함수, 변수 및 이러한 요소를 하나 이상의 연산자로 연결한 조합이 될 수 있습니다. 식은 하위 쿼리가 될 수 없으며 별칭 데이터 형식을 포함할 수 없습니다.  
+ 계산 열의 값을 정의하는 식입니다. 계산 열은 테이블에 물리적으로 저장된 열이 아니라 해당 테이블의 다른 열을 사용하여 식으로 계산된 가상의 열입니다. 식에서 값을 생성해야 합니다. 예를 들어 계산 열은 cost AS price * qty 정의를 가질 수 있습니다. 비트 연산자를 사용하는 다른 예: is_finalised AS is_checked | is_approved 식은 계산되지 않은 열 이름, 상수, 함수, 변수 및 이러한 요소를 하나 이상의 연산자로 연결한 조합이 될 수 있습니다. 식은 검색 조건, 하위 쿼리가 될 수 없으며 별칭 데이터 형식을 포함할 수 없습니다.  
   
  다음과 같은 경우를 제외하면 SELECT 목록, WHERE 절, ORDER BY 절 및 정규식이 사용되는 모든 위치에 계산 열을 사용할 수 있습니다.  
   

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b524f312fa1978b55e74be3dd46a24c95a3f6d29
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ff235cecbfc4bd01e6531d32f206dec56658a6c2
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116106"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632113"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>1단원: 데이터 탐색 및 시각화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,11 +67,11 @@ ms.locfileid: "81116106"
 > SQL Server 2019부터 격리 메커니즘이 변경되었습니다. 따라서 플롯 파일이 저장되는 디렉터리에 적절한 권한을 부여해야 합니다. 이러한 권한을 설정하는 방법에 대한 자세한 내용은 [Windows의 SQL Server 2019: Machine Learning Services에 대한 격리 변경 내용의 파일 사용 권한 섹션](../install/sql-server-machine-learning-services-2019.md#file-permissions)을 참조하세요.
 ::: moniker-end
 
-플롯을 만들려면 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)에 제공되는 향상된 R 함수 중 하나인 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)을 사용합니다. 이 단계에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리의 데이터를 기반으로 하는 히스토그램을 그립니다. 이 함수를 저장 프로시저 **PlotRxHistogram**에 래핑할 수 있습니다.
+플롯을 만들려면 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)에 제공되는 향상된 R 함수 중 하나인 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)을 사용합니다. 이 단계에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리의 데이터를 기반으로 하는 히스토그램을 그립니다. 이 함수를 저장 프로시저 **RxPlotHistogram**에 래핑할 수 있습니다.
 
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 **NYCTaxi_Sample** 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 선택합니다.
 
-2. 다음 스크립트를 붙여넣어 히스토그램을 그리는 저장 프로시저를 만듭니다. 이 예의 이름은 **RPlotRxHistogram*입니다.
+2. 다음 스크립트를 붙여넣어 히스토그램을 그리는 저장 프로시저를 만듭니다. 이 예의 이름은 **RxPlotHistogram**입니다.
 
     ```sql
     CREATE PROCEDURE [dbo].[RxPlotHistogram]

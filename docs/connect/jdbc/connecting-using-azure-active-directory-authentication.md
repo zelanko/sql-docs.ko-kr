@@ -1,5 +1,6 @@
 ---
-title: Azure Active Directory 인증을 사용하여 연결 | Microsoft Docs
+title: Azure Active Directory 인증을 사용하여 연결
+description: Microsoft JDBC Driver for SQL Server에서 Azure Active Directory 인증 기능을 사용하는 Java 애플리케이션을 개발하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 01/29/2020
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e46a8e4d290a5b8c23173153c6e72bd7730be4e7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 73b377076dfea329ba82c0219c28bf9c955d7e7f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922453"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634810"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Azure Active Directory 인증을 사용하여 연결
 
@@ -40,7 +41,7 @@ Microsoft JDBC Driver for SQL Server에서 Azure Active Directory 인증을 지�
 
 *   **accessToken**: 액세스 토큰을 사용하여 SQL Database에 연결하려면 이 연결 속성을 사용합니다. accessToken은 DriverManager 클래스에서 getConnection() 메서드의 Properties 매개 변수를 사용하여 설정할 수 있습니다. 연결 URL에는 사용할 수 없습니다.  
 
-자세한 내용은 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md) 페이지에서 인증 속성을 참조하세요.  
+자세한 내용은 [연결 속성 설정](setting-the-connection-properties.md) 페이지에서 인증 속성을 참조하세요.  
 
 
 ## <a name="client-setup-requirements"></a>클라이언트 설치 요구 사항
@@ -107,10 +108,10 @@ You have successfully logged on as: <your MSI username>
 
 ## <a name="connecting-using-activedirectoryintegrated-authentication-mode"></a>ActiveDirectoryIntegrated 인증 모드를 사용하여 연결
 Microsoft JDBC Driver는 버전 6.4에서 여러 플랫폼(Windows, Linux 및 macOS)에서 Kerberos 티켓을 사용하는 ActiveDirectoryIntegrated 인증에 대한 지원을 추가합니다.
-자세한 내용은 [Windows, Linux 및 Mac에서 Kerberos 티켓 설정](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac)을 참조하세요. 또는 Windows에서 JDBC 드라이버를 사용하는 ActiveDirectoryIntegrated 인증에 mssql-jdbc_auth-\<버전>-\<arch>.dll을 사용할 수도 있습니다.
+자세한 내용은 [Windows, Linux 및 macOS에서 Kerberos 티켓 설정](#set-kerberos-ticket-on-windows-linux-and-macos)을 참조하세요. 또는 Windows에서 JDBC 드라이버를 사용하는 ActiveDirectoryIntegrated 인증에 mssql-jdbc_auth-\<버전>-\<arch>.dll을 사용할 수도 있습니다.
 
 > [!NOTE]
->  이전 버전의 드라이버를 사용하는 경우 이 인증 모드를 사용하는 데 필요한 각 종속성에 대한 이 [링크](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)를 확인하세요. 
+>  이전 버전의 드라이버를 사용하는 경우 이 인증 모드를 사용하는 데 필요한 각 종속성에 대한 이 [링크](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)를 확인하세요. 
 
 다음 예제에서는 `authentication=ActiveDirectoryIntegrated` 모드를 사용하는 방법을 보여줍니다. Azure Active Directory와 페더레이션된 도메인 가입 컴퓨터에서 이 예제를 실행합니다. Azure AD 보안 주체를 나타내거나 사용자가 속한 그룹 중 하나를 나타내는 포함된 데이터베이스 사용자가 데이터베이스에 존재해야 하며 CONNECT 권한이 있어야 합니다. 
 
@@ -156,7 +157,7 @@ public class AADIntegrated {
 You have successfully logged on as: <your domain user name>
 ```
 
-### <a name="set-kerberos-ticket-on-windows-linux-and-mac"></a>Windows, Linux 및 Mac에서 Kerberos 티켓 설정
+### <a name="set-kerberos-ticket-on-windows-linux-and-macos"></a>Windows, Linux 및 macOS에서 Kerberos 티켓 설정
 
 현재 사용자를 Windows 도메인 계정에 연결하는 Kerberos 티켓을 설정해야 합니다. 아래에 주요 단계가 요약되어 있습니다.
 
@@ -172,7 +173,7 @@ JDK는 `kinit`와 함께 제공되며,이를 사용하여 Azure Active Directory
 > [!NOTE]
 >  애플리케이션에서 KDC를 찾기 위해 `-Djava.security.krb5.conf`를 사용하여 `.ini` 파일을 지정해야 할 수 있습니다.
 
-#### <a name="linux-and-mac"></a>Linux 및 Mac
+#### <a name="linux-and-macos"></a>Linux 및 macOS
 
 ##### <a name="requirements"></a>요구 사항
 Kerberos 도메인 컨트롤러를 쿼리하기 위해 Windows 도메인에 가입된 머신에 액세스할 수 있어야 합니다.
@@ -190,7 +191,7 @@ Kerberos 도메인 컨트롤러를 쿼리하기 위해 Windows 도메인에 가�
 - **추출할 정보** DC 이름(이 경우 `co1-red-dc-33.domain.company.com`)
 
 ##### <a name="step-2-configuring-kdc-in-krb5conf"></a>2단계: krb5.conf에서 KDC 구성
-- **실행 위치**: Linux/Mac
+- **실행 위치**: Linux/macOS
 - **작업**: 선택한 편집기에서 /etc/krb5.conf를 편집합니다. 다음 키 구성
   ```
   [libdefaults]
@@ -207,7 +208,7 @@ Kerberos 도메인 컨트롤러를 쿼리하기 위해 Windows 도메인에 가�
 >  도메인은 모두 대문자여야 합니다.
 
 ##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>3단계: 허용 티켓 검색 테스트
-- **실행 위치**: Linux/Mac
+- **실행 위치**: Linux/macOS
 - **작업**:
   - `kinit username@DOMAIN.COMPANY.COM` 명령을 사용하여 KDC에서 TGT를 가져옵니다. 그러면 도메인 암호를 입력하라는 메시지가 표시됩니다.
   - 사용 가능한 티켓을 보려면 `klist`를 사용합니다. kinit가 성공적으로 수행된 경우에는 krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM의 티켓이 표시되어야 합니다.
@@ -285,7 +286,7 @@ You have successfully logged on as: <your user name>
     11. "키" 섹션에서 이름 필드를 입력하고 키의 기간을 선택한 다음 구성을 저장하여 키를 만듭니다. 값 필드는 비워 둡니다. 저장하면 값 필드가 자동으로 채워집니다. 생성된 값을 복사합니다. 클라이언트 비밀입니다.
     12. 왼쪽 패널에서 Azure Active Directory를 클릭합니다. "앱 등록"에서 "엔드포인트" 탭을 찾습니다. "OATH 2.0 토큰 엔드포인트"에서 URL을 복사합니다. 이것이 STS URL입니다.
     
-    ![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
+    ![JDBC_AAD_Token](media/jdbc_aad_token.png)  
 2. Azure SQL Server의 사용자 데이터베이스에 Azure Active Directory 관리자로 로그인하고 T-SQL 명령을 사용하여 애플리케이션 보안 주체에 대해 포함된 데이터베이스 사용자를 프로비전합니다. Azure Active Directory 관리자 및 포함된 데이터베이스 사용자를 만드는 방법에 대한 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database에 또는 SQL Data Warehouse에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)을 참조하세요.
 
     ```

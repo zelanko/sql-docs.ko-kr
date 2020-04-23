@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 95acac097d1c3ec5ffd4989058db0c2927441554
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e00888943ae196cfb5b579368a7b05d80c4f1182
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907240"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529125"
 ---
 # <a name="configure-web-synchronization"></a>웹 동기화 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "72907240"
   
  웹 동기화는 IIS 버전 5.0부터 지원됩니다. 웹 동기화 구성 마법사는 IIS 버전 7.0에서 지원되지 않습니다. SQL Server 2012부터 IIS 서버의 웹 동기화 구성 요소를 사용하려면 사용자가 복제와 함께 SQL Server를 설치하는 것이 좋습니다. 무료 SQL Server Express Edition일 수 있습니다.  
   
- 웹 동기화에 SSL이 필요합니다. 인증 기관에서 발급한 보안 인증서가 필요합니다. 테스트용으로만 자체 발급 보안 인증서를 사용할 수 있습니다.  
+ 웹 동기화에 TLS가 필요합니다. 인증 기관에서 발급한 보안 인증서가 필요합니다. 테스트용으로만 자체 발급 보안 인증서를 사용할 수 있습니다.  
    
   
  **웹 동기화를 위해 IIS를 구성하려면**  
@@ -144,7 +144,7 @@ ms.locfileid: "72907240"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 배포자 및 게시자는 동일한 컴퓨터에 있을 수 있습니다. 이러한 설정은 병합 복제에 일반적입니다. 그러나 IIS는 서로 다른 컴퓨터에 설치되어 있어야 합니다.  
   
--   SSL(Secure Sockets Layer)을 사용하여 IIS를 실행하는 컴퓨터와 구독자 간의 연결을 암호화합니다. 이 작업은 웹 동기화에 필요합니다.  
+-   이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안)를 사용하여 IIS를 실행하는 컴퓨터와 구독자 간의 연결을 암호화합니다. 이 작업은 웹 동기화에 필요합니다.  
   
 -   구독자에서 IIS로 연결할 때 기본 인증을 사용합니다. 기본 인증을 사용하면 IIS가 위임 없이 구독자를 대신하여 게시자/배포자에 연결할 수 있습니다. 통합 인증을 사용하는 경우에는 위임이 필요합니다.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "72907240"
   
 -   복제 토폴로지에 있는 서버에 방화벽이 설정되어 있는 경우 웹 동기화를 사용하기 위해 방화벽에서 포트를 열어야 할 수 있습니다.  
   
-    -   구독자 컴퓨터는 SSL을 사용하는 HTTPS(일반적으로 포트 443을 사용하도록 구성)를 통해 IIS를 실행하는 컴퓨터에 연결합니다. [!INCLUDE[ssEW](../../includes/ssew-md.md)] 구독자는 HTTP(일반적으로 포트 80을 사용하도록 구성)를 통해 연결할 수도 있습니다.  
+    -   구독자 컴퓨터는 TLS를 사용하는 HTTPS(일반적으로 포트 443을 사용하도록 구성)를 통해 IIS를 실행하는 컴퓨터에 연결합니다. [!INCLUDE[ssEW](../../includes/ssew-md.md)] 구독자는 HTTP(일반적으로 포트 80을 사용하도록 구성)를 통해 연결할 수도 있습니다.  
   
     -   IIS를 실행하는 컴퓨터는 일반적으로 포트 1433(기본 인스턴스)을 사용하여 게시자나 배포자에 연결합니다. 다른 기본 인스턴스가 있는 서버에서 게시자나 배포자가 명명된 인스턴스인 경우 일반적으로 포트 1500을 사용하여 명명된 인스턴스에 연결합니다.  
   

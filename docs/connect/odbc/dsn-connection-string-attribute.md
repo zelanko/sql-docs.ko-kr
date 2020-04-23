@@ -1,5 +1,6 @@
 ---
-title: ODBC 드라이버용 DSN 및 연결 문자열 키워드 - SQL Server | Microsoft Docs
+title: ODBC DSN 연결 문자열 키워드
+description: 이 페이지에는 연결 문자열과 DSN용 키워드, 그리고 SQL Server용 ODBC 드라이버에서 사용할 수 있는 SQLSetConnectAttr 및 SQLGetConnectAttr용 연결 특성을 나열합니다.
 ms.custom: ''
 ms.date: 02/04/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.reviewer: v-chojas
 ms.author: v-jizho2
 author: karinazhou
-ms.openlocfilehash: bf9b755176913ad144781c5be0ad53150aedcd1b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bf0c3d880b9ebd13106be4247d42afd9d9316da9
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76911247"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528985"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN 및 연결 문자열 키워드 및 특성
 
@@ -22,7 +23,7 @@ ms.locfileid: "76911247"
 
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>지원되는 DSN/연결 문자열 키워드 및 연결 특성
 
-다음 표에 각 플랫폼(L: Linux, M: Mac, W: Windows)에 사용할 수 있는 키워드 및 특성을 나열합니다. 자세한 내용을 보려면 키워드 또는 특성을 클릭하세요.
+다음 표에는 각 플랫폼(L: Linux, M: Mac, W: Windows)에 Linux; M: macOS; W: 특성이 나열되어 있습니다. 자세한 내용을 보려면 키워드 또는 특성을 클릭하세요.
 
 | DSN/연결 문자열 키워드 | 연결 특성 | 플랫폼 |
 |-|-|-|
@@ -178,7 +179,7 @@ SQL Server에 연결할 때 사용할 인증 모드를 설정합니다. 자세�
 
 ### <a name="transparentnetworkipresolution---sql_copt_ss_tnir"></a>TransparentNetworkIPResolution - SQL_COPT_SS_TNIR
 
-다시 연결 시도가 더 빨리 실행될 수 있도록 MultiSubnetFailover와 상호 작용하는 투명한 네트워크 IP 확인 기능을 제어합니다. 자세한 내용은 [투명한 네트워크 IP 확인 사용](using-transparent-network-ip-resolution.md)을 참조하세요.
+다시 연결 시도가 더 빨리 실행될 수 있도록 MultiSubnetFailover와 상호 작용하는 투명한 네트워크 IP 확인 기능을 제어합니다. 자세한 내용은 [투명 네트워크 IP 확인 사용](using-transparent-network-ip-resolution.md)을 참조하세요.
 
 | 키워드 값 | 특성 값| Description |
 |-|-|-|
@@ -192,7 +193,7 @@ SQL Server 2012 이상에 연결할 때 메타데이터에 대한 SET FMTONLY �
 | 키워드 값 | Description |
 |-|-|
 |예|(기본값) 사용 가능한 경우 메타데이터에 sp_describe_first_result_set을 사용합니다. |
-|yes| 메타데이터에 SET FMTONLY를 사용합니다. |
+|예| 메타데이터에 SET FMTONLY를 사용합니다. |
 
 
 ## <a name="clientcertificate"></a>ClientCertificate
@@ -230,7 +231,7 @@ ClientCertificate 특성에 따라 지정된 PEM 또는 DER 인증서에 대해 
 
 ### <a name="sql_copt_ss_cekeystoredata"></a>SQL_COPT_SS_CEKEYSTOREDATA
 
-로드된 키 저장소 공급자 라이브러리와 통신합니다. 투명한 열 암호화(Always Encrypted) 제어를 참조하세요. 이 특성에는 기본값이 없습니다. 자세한 내용은 [사용자 지정 키 저장소 공급자](custom-keystore-providers.md)을 참조하세요.
+로드된 키 저장소 공급자 라이브러리와 통신합니다. 투명한 열 암호화(Always Encrypted) 제어를 참조하세요. 이 특성에는 기본값이 없습니다. 자세한 내용은 [사용자 지정 키 저장소 공급자](custom-keystore-providers.md)를 참조하세요.
 
 | 특성 값 | Description |
 |-|-|
@@ -238,7 +239,7 @@ ClientCertificate 특성에 따라 지정된 PEM 또는 DER 인증서에 대해 
 
 ### <a name="sql_copt_ss_cekeystoreprovider"></a>SQL_COPT_SS_CEKEYSTOREPROVIDER
 
-Always Encrypted용 키 저장소 공급자 라이브러리를 로드하거나 로드된 키 저장소 공급자 라이브러리의 이름을 검색합니다. 자세한 내용은 [사용자 지정 키 저장소 공급자](custom-keystore-providers.md)을 참조하세요. 이 특성에는 기본값이 없습니다.
+Always Encrypted용 키 저장소 공급자 라이브러리를 로드하거나 로드된 키 저장소 공급자 라이브러리의 이름을 검색합니다. 자세한 내용은 [사용자 지정 키 저장소 공급자](custom-keystore-providers.md)를 참조하세요. 이 특성에는 기본값이 없습니다.
 
 | 특성 값 | Description |
 |-|-|
@@ -246,7 +247,7 @@ Always Encrypted용 키 저장소 공급자 라이브러리를 로드하거나 �
 
 ### <a name="sql_copt_ss_enlist_in_xa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
-XA 규정 준수 TP(트랜잭션 프로세서)에서 XA 트랜잭션을 사용하도록 설정하려면 애플리케이션에서 SQL_COPT_SS_ENLIST_IN_XA 및 **개체 포인터를 사용하여**SQLSetConnectAttr`XACALLPARAM`을 호출해야 합니다. 이 옵션은 Windows, Linux(17.3 이상) 및 Mac에서 지원됩니다.
+XA 규정 준수 TP(트랜잭션 프로세서)에서 XA 트랜잭션을 사용하도록 설정하려면 애플리케이션에서 SQL_COPT_SS_ENLIST_IN_XA 및 `XACALLPARAM` 개체 포인터를 사용하여 **SQLSetConnectAttr**을 호출해야 합니다. 이 옵션은 Windows, Linux(17.3 이상) 및 macOS에서 지원됩니다.
 ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
 ``` 
@@ -257,7 +258,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
 
 |값|Description|플랫폼|  
 |-----------|-----------------|-----------------|  
-|XACALLPARAM 개체*|`XACALLPARAM` 개체에 대한 포인터입니다.|Windows, Linux 및 Mac|
+|XACALLPARAM 개체*|`XACALLPARAM` 개체에 대한 포인터입니다.|Windows, Linux 및 macOS|
 |TRUE|XA 트랜잭션을 ODBC 연결과 연결합니다. 관련된 모든 데이터베이스 작업은 XA 트랜잭션의 보호 아래 수행됩니다.|Windows|  
 |FALSE|ODBC 연결과 트랜잭션의 연결을 해제합니다.|Windows|
 

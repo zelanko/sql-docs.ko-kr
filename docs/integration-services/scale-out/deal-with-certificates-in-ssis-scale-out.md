@@ -10,12 +10,12 @@ ms.custom: performance
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 6c90b71ed61deeadbc0af2592f137893fa676a05
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ab701d44e14bbbd6234f5301a5fb3abdba451ef2
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67896959"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488139"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>SQL Server Integration Services Scale Out의 인증서 관리
 
@@ -29,20 +29,20 @@ Scale Out 마스터와 Scale Out 작업자 사이의 통신 보안을 위해 SSI
 
 대부분의 경우 Scale Out 마스터 인증서는 Scale Out 마스터 설치 중에 구성됩니다.
 
-SQL Server 설치 마법사의 **Integration Services Scale Out 구성 - 마스터 노드** 페이지에서 자체 서명 SSL 인증서를 새로 만들거나 기존 SSL 인증서를 사용하도록 선택할 수 있습니다.
+SQL Server 설치 마법사의 **Integration Services Scale Out 구성 - 마스터 노드** 페이지에서 자체 서명 TLS/SSL 인증서를 새로 만들거나 기존 TLS/SSL 인증서를 사용하도록 선택할 수 있습니다.
 
 ![마스터 구성](media/master-config.PNG)
 
-**새 인증서**. 인증서에 특별한 요구 사항이 없는 경우 자체 서명 SSL 인증서를 새로 만들도록 선택할 수 있습니다. 인증서의 CN을 더 지정할 수 있습니다. 나중에 Scale Out 작업자에 사용될 마스터 엔드포인트의 호스트 이름이 CN에 포함되어야 합니다. 기본적으로 마스터 노드의 컴퓨터 이름과 IP 주소가 포함됩니다. 
+**새 인증서**. 인증서에 특별한 요구 사항이 없는 경우 자체 서명 TLS/SSL 인증서를 새로 만들도록 선택할 수 있습니다. 인증서의 CN을 더 지정할 수 있습니다. 나중에 Scale Out 작업자에 사용될 마스터 엔드포인트의 호스트 이름이 CN에 포함되어야 합니다. 기본적으로 마스터 노드의 컴퓨터 이름과 IP 주소가 포함됩니다. 
 
-**기존 인증서**. 기존 인증서를 사용하도록 선택하는 경우 로컬 컴퓨터의 **루트** 인증서 저장소에서 **찾아보기**를 클릭하여 SSL 인증서를 선택합니다.
+**기존 인증서**. 기존 인증서를 사용하도록 선택하는 경우 로컬 컴퓨터의 **루트** 인증서 저장소에서 **찾아보기**를 클릭하여 TLS/SSL 인증서를 선택합니다.
 
 ### <a name="change-the-scale-out-master-certificate"></a>Scale Out 마스터 인증서 변경
 
 인증서 만료나 기타 이유로 인해 Scale Out 마스터 인증서를 변경할 수 있습니다. Scale Out 마스터 인증서를 변경하려면 다음을 수행합니다.
 
-#### <a name="1-create-an-ssl-certificate"></a>1. SSL 인증서 만들기
-다음 명령으로 마스터 노드에 SSL 인증서를 만들고 설치합니다.
+#### <a name="1-create-a-tlsssl-certificate"></a>1. TLS/SSL 인증서를 만듭니다.
+다음 명령으로 마스터 노드에 TLS/SSL 인증서를 만들고 설치합니다.
 
 ```dos
 MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
@@ -70,7 +70,7 @@ netsh http show sslcert ipport=0.0.0.0:8391
 
 ```dos
 netsh http delete sslcert ipport=0.0.0.0:{Master port}
-netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={SSL Certificate Thumbprint} certstorename=Root appid={original appid}
+netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={TLS/SSL Certificate Thumbprint} certstorename=Root appid={original appid}
 ```
 
 다음은 그 예입니다.
@@ -81,18 +81,18 @@ netsh http add sslcert ipport=0.0.0.0:8391 certhash=01d207b300ca662f479beb884efe
 ```
 
 #### <a name="3-update-the-scale-out-master-service-configuration-file"></a>3. Scale Out 마스터 서비스 구성 파일 업데이트
-마스터 노드에서 Scale Out 마스터 서비스 구성 파일인 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`를 업데이트합니다. **SSLCertThumbprint**를 새 SSL 인증서의 지문으로 업데이트합니다.
+마스터 노드에서 Scale Out 마스터 서비스 구성 파일인 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`를 업데이트합니다. **SSLCertThumbprint**를 새 TLS/SSL 인증서의 지문으로 업데이트합니다.
 
 #### <a name="4-restart-the-scale-out-master-service"></a>4. Scale Out 마스터 서비스 다시 시작
 
 #### <a name="5-reconnect-scale-out-workers-to-scale-out-master"></a>5. Scale Out 작업자를 Scale Out 마스터에 다시 연결
 각 Scale Out 작업자에 대해 작업자를 삭제한 다음 [Scale Out 관리자](integration-services-ssis-scale-out-manager.md)를 사용하여 다시 추가하거나 다음을 수행합니다.
 
-a.  작업자 노드에서 로컬 컴퓨터의 루트 저장소에 클라이언트 SSL 인증서를 설치합니다.
+a.  작업자 노드에서 로컬 컴퓨터의 루트 저장소에 클라이언트 TLS/SSL 인증서를 설치합니다.
 
 b.  Scale Out 작업자 서비스 구성 파일을 업데이트합니다.
 
-작업자 노드에서 Scale Out 작업자 서비스 구성 파일인 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`를 업데이트합니다. **MasterHttpsCertThumbprint**를 새 SSL 인증서의 지문으로 업데이트합니다.
+작업자 노드에서 Scale Out 작업자 서비스 구성 파일인 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`를 업데이트합니다. **MasterHttpsCertThumbprint**를 새 TLS/SSL 인증서의 지문으로 업데이트합니다.
 
 다.  Scale Out 작업자 서비스를 다시 시작합니다.
 

@@ -1,5 +1,6 @@
 ---
-title: Azure SQL 데이터베이스에 연결 | Microsoft Docs
+title: Azure SQL 데이터베이스에 연결
+description: 이 문서에서는 Microsoft JDBC Driver for SQL Server를 사용하여 Azure SQL Database에 연결하는 경우의 문제에 대해 설명합니다.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,29 +11,29 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f7ecc575fc444a7f834cd8ed84ee340902199b09
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8d709a8dee2577a9689a43a839126dcb2ec741e7
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922462"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632536"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Azure SQL 데이터베이스에 연결
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-이 문서에서는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]를 사용하여 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]에 연결하는 경우의 문제에 대해 논의합니다. [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 연결 정보에 대한 자세한 내용은 다음을 참조하세요.  
+이 문서에서는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]를 사용하여 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]에 연결하는 경우의 문제에 대해 논의합니다. [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]에 연결하는 방법에 대한 자세한 내용은 다음을 참조하세요.  
   
 - [SQL Azure 데이터베이스](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
   
 - [방법: JDBC를 사용하여 SQL Azure에 연결](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
 
-- [Azure Active Directory 인증을 사용하여 연결](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
+- [Azure Active Directory 인증을 사용하여 연결](connecting-using-azure-active-directory-authentication.md)  
   
 ## <a name="details"></a>세부 정보
 
 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]에 연결할 때 **SQLServerDatabaseMetaData.getCatalogs**를 호출하려면 master 데이터베이스에 연결해야 합니다.  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]는 사용자 데이터베이스에서 전체 카탈로그 집합을 반환하는 기능을 지원하지 않습니다. **SQLServerDatabaseMetaData.getCatalogs**는 sys.databases 보기를 사용하여 카탈로그를 가져옵니다. [SQLServerDatabaseMetaData](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) **(transact-sql)** 의 사용 권한에 대 한 설명을 참조 하 여의 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]동작을 이해 하십시오.  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]는 사용자 데이터베이스에서 전체 카탈로그 집합을 반환하는 기능을 지원하지 않습니다. **SQLServerDatabaseMetaData.getCatalogs**는 sys.databases 보기를 사용하여 카탈로그를 가져옵니다. [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]에서 **SQLServerDatabaseMetaData.getCatalogs** 동작을 이해하려면 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)의 사용 권한에 대한 설명을 참조하세요.  
   
 ## <a name="connections-dropped"></a>연결이 삭제됨
 
@@ -90,4 +91,4 @@ jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password
 
 ## <a name="see-also"></a>참고 항목
 
-[JDBC 드라이버로 SQL Server에 연결](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+[JDBC 드라이버로 SQL Server에 연결](connecting-to-sql-server-with-the-jdbc-driver.md)  

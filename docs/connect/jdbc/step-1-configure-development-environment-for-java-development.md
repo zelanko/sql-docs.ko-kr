@@ -1,5 +1,6 @@
 ---
-title: '1단계: Java 개발을 위한 개발 환경 구성 | Microsoft Docs'
+title: '1단계: Java를 위한 환경 구성'
+description: 이 시작 가이드의 1단계에는 Java 및 Microsoft JDBC Driver for SQL Server를 설치하고 개발 환경을 구성하는 작업이 포함됩니다.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a59cac14-32f5-4fa3-ad38-81a3e1e9d29c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ee43294f88a00dc6294872020610268ccd53b74d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8e5b9aba9e329ec2a2ecda990ca174ddb998e63a
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909273"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529447"
 ---
 # <a name="step-1-configure-development-environment-for-java-development"></a>1단계: Java 개발을 위한 개발 환경 구성
   

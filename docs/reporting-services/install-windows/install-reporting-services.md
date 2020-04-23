@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42d3d697ace0f427dcad7fdcd394695672061e13
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 37ce1267bd4b83943560183e5628839858d9c5de
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77429054"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486822"
 ---
 # <a name="install-sql-server-reporting-services"></a>SQL Server Reporting Services 설치
 
@@ -95,7 +95,7 @@ URL 예약은 접두사, 호스트 이름, 포트 및 가상 디렉터리로 구
 
 |부분|Description|
 |----------|-----------------|
-|접두사|기본 접두사는 HTTP입니다. 이전에 SSL(Secure Sockets Layer) 인증서를 설치한 경우 설치 프로그램에서 HTTPS 접두사를 사용하는 URL 예약을 만들려고 시도합니다.|
+|접두사|기본 접두사는 HTTP입니다. 이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안) 인증서를 설치한 경우 설치 프로그램에서 HTTPS 접두사를 사용하는 URL 예약을 만들려고 시도합니다.|
 |호스트 이름|기본 호스트 이름은 강력한 와일드카드(+)로서 보고서 서버가 `https://<computername>/reportserver`, `https://localhost/reportserver` 또는`https://<IPAddress>/reportserver.`를 포함하여 컴퓨터로 확인되는 모든 호스트 이름에 대해 지정된 포트에서 HTTP 요청을 수락하도록 지정합니다.|
 |포트|기본 포트는 80입니다. 80 이외의 포트를 사용하는 경우 브라우저 창에서 웹 포털을 열 때 URL에 해당 포트를 명시적으로 추가해야 합니다.|
 |가상 디렉터리|기본적으로 가상 디렉터리는 보고서 서버 웹 서비스의 경우 ReportServer 형식, 웹 포털의 경우 Reports 형식으로 만들어집니다. 보고서 서버 웹 서비스의 기본 가상 디렉터리는 **reportserver**이고 웹 포털의 기본 가상 디렉터리는 **reports**입니다.|

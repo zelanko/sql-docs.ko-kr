@@ -1,5 +1,6 @@
 ---
-title: 테이블 반환 매개 변수 사용 | Microsoft Docs
+title: 테이블 반환 매개 변수 사용
+description: 테이블 반환 매개 변수는 매개 변수가 있는 단일 명령으로 클라이언트에서 SQL Server로 여러 데이터 행을 전송하는 효율적인 방법을 제공합니다.
 ms.custom: ''
 ms.date: 11/19/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8a4a46120991400f8e76c91e8a0e9b00ada2eac0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 698cf6e4e44210ea5f4575d4021514c07fe4255d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923861"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631943"
 ---
 # <a name="using-table-valued-parameters"></a>테이블 반환 매개 변수 사용
 
@@ -48,7 +49,7 @@ SQL Server 2008에 테이블 반환 매개 변수가 도입되기 전에는 여�
   
 - 여러 행에 영향을 주는 데이터 수정을 위한 일련의 개별 SQL 문을 만듭니다. 변경 내용을 개별적으로 서버에 제출하거나 그룹으로 일괄 처리할 수 있습니다. 그러나 여러 문이 포함된 일괄 처리로 전송된 경우에도 각 문은 서버에서 개별적으로 실행됩니다.  
   
-- bcp 유틸리티 프로그램 또는 [SQLServerBulkCopy](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md)를 사용하여 많은 데이터 행을 테이블에 로드할 수 있습니다. 이 기법은 매우 효율적이지만 데이터를 임시 테이블 또는 테이블 변수에 로드하지 않는 한 서버 쪽 처리를 지원하지 않습니다.
+- bcp 유틸리티 프로그램 또는 [SQLServerBulkCopy](using-bulk-copy-with-the-jdbc-driver.md)를 사용하여 많은 데이터 행을 테이블에 로드할 수 있습니다. 이 기법은 매우 효율적이지만 데이터를 임시 테이블 또는 테이블 변수에 로드하지 않는 한 서버 쪽 처리를 지원하지 않습니다.
   
 ## <a name="creating-table-valued-parameter-types"></a>테이블 반환 매개 변수 형식 만들기  
 
@@ -314,4 +315,4 @@ pStmt.execute();
 
 ## <a name="see-also"></a>참고 항목
 
-[JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[JDBC 드라이버 개요](overview-of-the-jdbc-driver.md)  

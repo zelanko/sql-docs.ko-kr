@@ -9,12 +9,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bd26e2ddcacd91269a51e663b80acd4edf95c196
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b1cb553c263bc822d5139d50169241a0f19fdd79
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286627"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487800"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 데이터 경고
 
@@ -270,12 +270,12 @@ SQL Server Reporting Services 데이터 경고는 사용자가 관심을 가지�
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 기타 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능에 대한 성능 카운터를 제공합니다. 자세한 내용은 [ReportServer:Service 및 ReportServerSharePoint:Service 성능 개체에 대한 성능 카운터](../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md), [MSRS 2011 웹 서비스 및 MSRS 2011 Windows 서비스 성능 개체에 대한 성능 카운터&#40;기본 모드&#41;](../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md) 및 [MSRS 2011 웹 서비스 SharePoint 모드 및 MSRS 2011 Windows 서비스 SharePoint 모드 성능 개체에 대한 성능 카운터&#40;SharePoint 모드&#41;](../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)를 참조하세요.  
   
-##  <a name="support-for-ssl"></a><a name="SupportForSSL"></a> SSL 지원  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP SSL(Secure Sockets Layer) 서비스를 사용하여 보고서 서버 또는 SharePoint 사이트에 대한 암호화된 연결을 설정할 수 있습니다.  
+##  <a name="support-for-tls"></a><a name="SupportForSSL"></a> TLS 지원  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]는 HTTP SSL 서비스를 사용하여 보고서 서버 또는 SharePoint 사이트에 대한 암호화된 연결을 설정할 수 있습니다. TLS(전송 계층 보안)는 이전에 SSL(Secure Sockets Layer)로 알려져 있었습니다.
   
- 경고 런타임 서비스와 데이터 경고 사용자 인터페이스는 SSL을 지원하며 사용자가 SSL을 사용하는지, 아니면 HTTP를 사용하는지에 관계없이 유사하게 작동하지만 약간의 차이점은 있습니다. SSL 연결을 사용하여 데이터 경고 정의를 만들면 데이터 경고 메시지에서 SharePoint 라이브러리로 다시 연결되는 URL에도 SSL이 사용됩니다. URL에 HTTP 대신 HTTPS가 사용되므로 SSL 연결을 식별할 수 있습니다. 마찬가지로, HTTP 연결을 사용하여 데이터 경고 정의를 만들면 SharePoint 사이트로 다시 연결되는 링크에 HTTP가 사용됩니다. 경고 정의가 SSL 또는 HTTP 중 어떤 것을 사용하여 생성되었는지에 상관없이 사용자 및 경고 관리자는 데이터 경고 디자이너 또는 데이터 경고 관리자에서 동일한 환경을 사용하게 됩니다. 경고 정의가 생성된 다음 업데이트 및 다시 저장된 시점 사이에 프로토콜(HTTP 또는 SSL)을 변경해야 하는 경우에는 원래 프로토콜이 유지되어 링크 URL에 사용됩니다.  
+ 경고 런타임 서비스와 데이터 경고 사용자 인터페이스는 TLS를 지원하며 사용자가 TLS를 사용하는지, 아니면 HTTP를 사용하는지에 관계없이 유사하게 작동하지만 약간의 차이점은 있습니다. TLS 연결을 사용하여 데이터 경고 정의를 만들면 데이터 경고 메시지에서 SharePoint 라이브러리로 다시 연결되는 URL에도 TLS가 사용됩니다. URL에 HTTP 대신 HTTPS가 사용되므로 TLS 연결을 식별할 수 있습니다. 마찬가지로, HTTP 연결을 사용하여 데이터 경고 정의를 만들면 SharePoint 사이트로 다시 연결되는 링크에 HTTP가 사용됩니다. 경고 정의가 TLS 또는 HTTP 중 어떤 것을 사용하여 생성되었는지에 상관없이 사용자 및 경고 관리자는 데이터 경고 디자이너 또는 데이터 경고 관리자에서 동일한 환경을 사용하게 됩니다. 경고 정의가 생성된 다음 업데이트 및 다시 저장된 시점 사이에 프로토콜(HTTP 또는 TLS)을 변경해야 하는 경우에는 원래 프로토콜이 유지되어 링크 URL에 사용됩니다.  
   
- SSL을 사용하도록 구성된 SharePoint 사이트에서 데이터 경고를 만든 다음 SSL 요구 사항을 제거하면 경고가 사이트에서 계속 작동합니다. 사이트가 삭제되면 기본 영역 사이트가 대신 사용됩니다.  
+ TLS를 사용하도록 구성된 SharePoint 사이트에서 데이터 경고를 만든 다음 TLS 요구 사항을 제거하면 경고가 사이트에서 계속 작동합니다. 사이트가 삭제되면 기본 영역 사이트가 대신 사용됩니다.  
   
 ##  <a name="data-alert-user-interface"></a><a name="UserInterface"></a> 데이터 경고 사용자 인터페이스  
  데이터 경고에는 경고 관리를 위한 SharePoint 페이지와 데이터 경고 정의를 만들고 편집하기 위한 디자이너가 제공됩니다.  

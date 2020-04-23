@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dff79a428833e365d0ca55b287da6154f66d9966
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8fe4348947203e54a889c9e7fa18067a0562feca
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75952466"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635749"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>서버 감사 및 서버 감사 사양 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -164,14 +164,19 @@ ms.locfileid: "75952466"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 
   
     ```  
     -- Creates a server audit called "HIPAA_Audit" with a binary file as the target and no options.  
     CREATE SERVER AUDIT HIPAA_Audit  
-        TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
+        TO FILE ( FILEPATH ='E:\SQLAudit\' );  
     ```  
-  
+> [!NOTE]
+> UNC 경로를 감사 파일 대상으로 사용할 수 있는 경우에도 주의해야 합니다. 해당 파일 공유에 대한 네트워크 대기 시간이 있는 경우 진행하기 전에 스레드가 감사 쓰기가 완료되기를 기다리는 동안 SQL Server 성능이 저하될 수 있습니다. 17894와 같은 SQL Server 오류 로그의 다양한 오류 메시지를 확인할 수 있습니다.
+>
+>   디스패처 풀 'XE 엔진 기본 디스패처 풀' 작업자 0x00000058E7300000의 2020-02-07 12:21:35.100 서버 디스패처(0x7954)가 노드 0에서 양보하지 않는 것 같습니다.
+
+
 #### <a name="to-create-a-server-audit-specification"></a>서버 감사 사양을 만들려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  

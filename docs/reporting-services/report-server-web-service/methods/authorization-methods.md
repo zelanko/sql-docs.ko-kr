@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 45e9cf2c-facf-4801-9482-c855403f42a8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5a8c9ba25c3f9dfd03aa528b4d02f9e02e197546
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ae203110efcb9cc6a649d8f0c4af8856c779a741
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79509834"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488426"
 ---
 # <a name="authorization-methods"></a>권한 부여 메서드
   다음 메서드를 사용하여 보고서 서버에서 태스크, 역할 및 정책을 관리할 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "79509834"
 |<xref:ReportService2010.ReportingService2010.GetSystemPermissions%2A>|사용자의 시스템 사용 권한을 반환합니다. 이 메서드는 기본 모드에만 적용됩니다.|  
 |<xref:ReportService2010.ReportingService2010.GetSystemPolicies%2A>|연결된 그룹 및 역할을 포함한 시스템 정책을 반환합니다. 이 메서드는 기본 모드에만 적용됩니다.|  
 |<xref:ReportService2010.ReportingService2010.InheritParentSecurity%2A>|보고서 서버 데이터베이스의 특정 항목과 연결된 정책을 삭제하고 항목에 대한 보안 정책을 부모의 보안 정책으로 설정합니다.|  
-|<xref:ReportService2010.ReportingService2010.IsSSLRequired%2A>|<xref:ReportService2010> 끝점을 사용하는 데 SSL(Secure Sockets Layer) 프로토콜이 필요한지 여부를 나타내는 부울 값을 반환합니다.|  
+|<xref:ReportService2010.ReportingService2010.IsSSLRequired%2A>|<xref:ReportService2010> 엔드포인트를 사용하는 데 이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안) 프로토콜이 필요한지 여부를 나타내는 부울 값을 반환합니다.|  
 |<xref:ReportService2010.ReportingService2010.ListRoles%2A>|보고서 서버에서 관리되는 역할의 이름과 설명을 반환합니다.|  
 |<xref:ReportExecution2005.ReportExecutionService.ListSecureMethods%2A>|<xref:ReportExecution2005> 엔드포인트에서 호출될 때 보안 연결이 필요한 SOAP(Simple Object Access Protocol) 메서드 목록을 반환합니다. 반환되는 메서드를 결정하는 데는 보고서 서버의 **SecureConnectionLevel** 설정이 사용됩니다.|  
 |<xref:ReportService2010.ReportingService2010.ListTasks%2A>|보고서 서버에서 관리되는 태스크를 반환합니다.|  

@@ -1,5 +1,6 @@
 ---
-title: 프로그래밍 지침(SQL Server용 ODBC 드라이버) | Microsoft Docs
+title: 프로그래밍 지침(ODBC Driver)
+description: macOS 및 Linux 기반 Microsoft ODBC Driver for SQL Server의 프로그래밍 기능은 SQL Server Native Client의 ODBC(ODBC)를 기반으로 합니다.
 ms.custom: ''
 ms.date: 01/12/2018
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: b54fd76c8c6e60b7250ef354b8999347eb96d95a
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: ecaa595fa08a4a37c9a5d3146dd03af440aa4453
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219235"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632793"
 ---
 # <a name="programming-guidelines"></a>프로그래밍 지침
 
@@ -49,7 +50,7 @@ ODBC([SQL Server Native Client(ODBC)](https://go.microsoft.com/fwlink/?LinkID=13
 다음 기능은 이 macOS 및 Linux 기반 ODBC 드라이버 릴리스에서 올바르게 작동하는 것으로 확인되지 않았습니다.
 
 -   장애 조치(failover) 클러스터 연결
--   [투명한 네트워크 IP 확인](https://docs.microsoft.com/sql/connect/odbc/linux/using-transparent-network-ip-resolution)(ODBC 드라이버 17 이전)
+-   [투명한 네트워크 IP 확인](../using-transparent-network-ip-resolution.md)(ODBC 드라이버 17 이전)
 -   [고급 드라이버 추적](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
 
 다음 기능은 이 macOS 및 Linux 기반 ODBC 드라이버 릴리스에서 사용할 수 없습니다. 
@@ -108,7 +109,7 @@ ODBC 드라이버 17의 경우 다음 문자 세트/인코딩 중 하나의 SQLC
 
 연결 시 드라이버에서 로드된 프로세스의 현재 로캘을 검색합니다. 위의 인코딩 중 하나를 사용하는 경우 드라이버에서 SQLCHAR(반각 문자) 데이터에 해당 인코딩을 사용하며, 그렇지 않으면 기본적으로 UTF-8을 사용합니다. 모든 프로세스는 기본적으로 “C” 로캘로 시작하므로(그리고 따라서 드라이버에서 기본적으로 UTF-8을 사용하므로), 애플리케이션이 위의 인코딩 중 하나를 사용해야 하는 경우 연결하기 전에 원하는 로캘을 명시적으로 지정하거나 빈 문자열(예: `setlocale(LC_ALL, "")`)을 사용해 환경의 로캘 설정을 사용함으로써 **setlocale** 함수를 사용하여 로캘을 적합하게 설정해야 합니다.
 
-그러므로 인코딩이 UTF-8인 일반적인 Linux 또는 Mac 환경에서 ODBC 드라이버 13 또는 13.1에서 17로 업그레이드하는 사용자의 경우 해당 차이점이 발생하지 않습니다. 그러나 `setlocale()`을 통해 위 목록의 UTF-8이 아닌 인코딩을 사용하는 애플리케이션은 드라이버에 대한 데이터에 UTF-8 대신 해당 인코딩을 사용해야 합니다.
+그러므로 인코딩이 UTF-8인 일반적인 Linux 또는 macOS 환경에서 ODBC 드라이버 13 또는 13.1에서 17로 업그레이드하는 사용자의 경우 해당 차이점이 발생하지 않습니다. 그러나 `setlocale()`을 통해 위 목록의 UTF-8이 아닌 인코딩을 사용하는 애플리케이션은 드라이버에 대한 데이터에 UTF-8 대신 해당 인코딩을 사용해야 합니다.
 
 SQLWCHAR 데이터는 UTF-16LE(Little Endian)이어야 합니다.
 
@@ -147,8 +148,8 @@ ODBC 드라이버 13 및 13.1에서 UTF-8 멀티바이트 문자 또는 UTF-16 �
 3.  다중 스레드 애플리케이션에서 드라이버를 사용하는 경우 unixODBC의 처리 유효성 검사가 성능 병목 상태가 될 수 있습니다. 이러한 시나리오에서는 `--enable-fastvalidate` 옵션으로 unixODBC를 컴파일링하여 성능을 크게 향상할 수 있습니다. 다만 이로 인해 잘못된 핸들을 ODBC API로 전달하는 애플리케이션의 경우 `SQL_INVALID_HANDLE` 오류 반환이 아닌 충돌이 발생할 수 있다는 데 유의해야 합니다.
 
 ## <a name="see-also"></a>참고 항목  
-[질문과 대답](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
+[질문과 대답](frequently-asked-questions-faq-for-odbc-linux.md)
 
-[이 버전의 드라이버에서 알려진 문제](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
+[이 버전의 드라이버에서 알려진 문제](known-issues-in-this-version-of-the-driver.md)
 
-[릴리스 정보](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+[릴리스 정보](release-notes-odbc-sql-server-linux-mac.md)

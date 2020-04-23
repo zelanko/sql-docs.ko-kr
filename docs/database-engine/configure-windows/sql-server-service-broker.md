@@ -23,12 +23,12 @@ ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 11dc9169ec88928c893d875b7051bfbf551c95fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 99800a06e04d5f5d4f9651e32d0a143e90331b09
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68034525"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528157"
 ---
 # <a name="service-broker"></a>Service Broker
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -106,8 +106,8 @@ FROM ExpenseQueue;
 
 - 인스턴스 간 Service Broker는 지원되지 않습니다. 
  - `sys.routes` - 필수 조건: sys.routes에서 주소를 선택합니다. 주소는 모든 경로에서 LOCAL이어야 합니다. [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)를 참조하세요.
- - `CREATE ROUTE` - `CREATE ROUTE` 이외의 `ADDRESS`가 포함된 `LOCAL`는 사용할 수 없습니다. [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql)를 참조하세요.
- - `ALTER ROUTE`는 `ALTER ROUTE` 외에 `ADDRESS`와 함께 `LOCAL`를 사용할 수 없습니다. [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md)를 참조하세요.  
+ - `CREATE ROUTE` - `LOCAL` 이외의 `ADDRESS`가 포함된 `CREATE ROUTE`는 사용할 수 없습니다. [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql)를 참조하세요.
+ - `ALTER ROUTE`는 `LOCAL` 외에 `ADDRESS`와 함께 `ALTER ROUTE`를 사용할 수 없습니다. [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md)를 참조하세요.  
   
 ### <a name="messages-can-be-sent-to-multiple-target-services-multicast"></a>메시지를 여러 대상 서비스에 보낼 수 있음(멀티캐스트)  
  [SEND&#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md) 문의 구문은 여러 대화 핸들을 지원하여 멀티캐스트를 설정하기 위해 확장되었습니다.  
@@ -122,4 +122,8 @@ FROM ExpenseQueue;
  자세한 내용은 [Always On 가용성 그룹이 포함된 Service Broker(SQL Server)](../../database-engine/availability-groups/windows/service-broker-with-always-on-availability-groups-sql-server.md)를 참조하세요.  
   
   
+## <a name="next-steps"></a>다음 단계
+
+가장 일반적으로 사용되는 Service Broker는 [이벤트 알림](../../relational-databases/service-broker/event-notifications.md)에 대한 것입니다. [이벤트 알림을 구현](../../relational-databases/service-broker/implement-event-notifications.md)하거나 [대화 상자 보안을 구성](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)하거나 [추가 정보를 가져오는](../../relational-databases/service-broker/get-information-about-event-notifications.md) 방법을 알아봅니다. 
+
 

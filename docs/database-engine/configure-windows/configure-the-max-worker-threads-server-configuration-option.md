@@ -1,7 +1,7 @@
 ---
 title: max worker threads 서버 구성 옵션 구성 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/23/2017
+ms.date: 04/14/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5d27c61576c3af432acfa6c791d25b1bbe9a51de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d573bc4c8fc628bf4f1cc1fa36e50bc0e69c3202
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75776418"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488332"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>max worker threads 서버 구성 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "75776418"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
--   실제 쿼리 요청 수가 **max worker threads**에 설정된 값보다 적으면 각 쿼리 요청마다 스레드 하나가 사용됩니다. 그러나 실제 쿼리 요청 수가 **max worker threads**에 설정된 값보다 많아지면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 다음에 사용할 수 있는 작업자 스레드가 요청을 처리할 수 있도록 작업자 스레드를 풀링합니다.  
+-   실제 쿼리 요청 수가 **max worker threads**에 설정된 값보다 적으면 각 쿼리 요청마다 스레드 하나가 사용됩니다. 그러나 실제 쿼리 요청 수가 **max worker threads**에 설정된 값보다 많아지면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 다음에 사용할 수 있는 작업자 스레드가 요청을 처리할 수 있도록 작업자 스레드를 풀링합니다.  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
@@ -55,35 +55,43 @@ ms.locfileid: "75776418"
   
 -   스레드 풀링을 사용하면 많은 클라이언트가 서버에 연결되어 있을 때 성능이 최적화됩니다. 보통 각 쿼리 요청마다 별도의 운영 체제 스레드가 생성됩니다. 그러나 서버에 대한 연결 수가 수백 개인 경우 쿼리 요청별로 스레드를 하나씩 사용하면 시스템 리소스를 상당히 많이 소비하게 될 수 있습니다. **max worker threads** 옵션을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 작업자 스레드 풀을 만들어 많은 쿼리 요청을 처리할 수 있으므로 성능이 향상됩니다.  
   
--   다음 표에서는 다양한 CPU 조합과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에 대해 자동으로 구성되는 최대 작업자 스레드 수를 보여 줍니다.  
+-   다음 표에서는 * **기본 최대 작업자* + ((* 논리 CPU* - 4) * *작업자당 CPU*)**와 같은 수식을 사용하여 CPU, 컴퓨터 아키텍처 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 다양한 조합에 대해 자동으로 구성된 최대 작업자 스레드 수를 보여 줍니다.  
   
-    |CPU 수|32비트 컴퓨터|64비트 컴퓨터|  
-    |------------|------------|------------|  
-    |\<4개 이하 프로세서|256|512|  
-    |8개의 프로세서|288|576|  
-    |16개의 프로세서|352|704|  
-    |32개의 프로세서|480|960|  
-    |64개의 프로세서|736|1472|  
-    |128개의 프로세서|4224|4480|  
-    |256개의 프로세서|8320|8576| 
+    |CPU 수|32비트 컴퓨터(최대 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])|64비트 컴퓨터(최대 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1)|64비트 컴퓨터([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터)|   
+    |------------|------------|------------|------------|  
+    |\< = 4|256|512|512|   
+    |8|288|576|576|   
+    |16|352|704|704|   
+    |32|480|960|960|   
+    |64|736|1472|2432|   
+    |128|1248|2496|4480|   
+    |256|2272|4544|8576|   
     
-    다음 수식 사용:
+    최대 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1에서 *CPU당 작업자*는 다음 아키텍처(32비트 또는 64비트)에 따라서만 달라집니다.
     
-    |CPU 수|32비트 컴퓨터|64비트 컴퓨터|  
-    |------------|------------|------------| 
-    |\<4개 이하 프로세서|256|512|
-    |\> 4개 프로세서 및 \< = 64개의 프로세서|256 + ((논리 CPU 수 - 4) * 8)|512 + ((논리 CPU 수 - 4) * 16)|
-    |\> 64개 프로세서|256 + ((논리 CPU 수 - 4) * 32)|512 + ((논리 CPU 수 - 4) * 32)|
+    |CPU 수|32비트 컴퓨터 <sup>1</sup>|64비트 컴퓨터|   
+    |------------|------------|------------|   
+    |\< = 4|256|512|   
+    |\> 4|256 + ((논리 CPU 수 - 4) * 8)|512 <sup>2</sup> + ((논리 CPU 수 - 4) * 16)|   
+    
+    [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 *CPU당 작업자*는 다음 프로세스의 아키텍처 및 수(4와 64 간 또는 64 초과)에 따라 달라집니다.
+    
+    |CPU 수|32비트 컴퓨터 <sup>1</sup>|64비트 컴퓨터|   
+    |------------|------------|------------|   
+    |\< = 4|256|512|   
+    |\> 4 및 \< = 64|256 + ((논리 CPU 수 - 4) * 8)|512 <sup>2</sup> + ((논리 CPU 수 - 4) * 16)|   
+    |\> 64|256 + ((논리 CPU 수 - 4) * 32)|512 <sup>2</sup> + ((논리 CPU 수 - 4) * 32)|   
   
-    > [!NOTE]  
-    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 32비트 운영 체제에 더 이상 설치할 수 없습니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 및 이전 버전을 실행하는 고객을 돕기 위해 32비트 컴퓨터 값을 나열합니다. 32비트 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 최대 작업자 스레드 수는 1,024로 설정하는 것이 좋습니다.  
+    <sup>1</sup> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 32비트 운영 체제에 더 이상 설치할 수 없습니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 및 이전 버전을 실행하는 고객을 돕기 위해 32비트 컴퓨터 값을 나열합니다. 32비트 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 최대 작업자 스레드 수는 1,024로 설정하는 것이 좋습니다.
+    
+    <sup>2</sup> [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 2GB 미만의 메모리를 사용하는 컴퓨터에 대해 *기본 최대 작업자* 값이 2로 나뉩니다.
   
-    > [!NOTE]  
+    > [!TIP]  
     > 64개가 넘는 CPU 사용에 대한 권장 사항은 [64개를 초과하는 CPU가 있는 컴퓨터에서 SQL Server를 실행하기 위한 최선의 방법](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus)을 참조하세요.  
   
 -   장기 실행 쿼리의 모든 작업자 스레드가 활성 상태이면 작업자 스레드가 완료되어 사용 가능 상태가 되기 전에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 응답하지 않을 수 있습니다. 이는 오류는 아니지만 바람직한 상태는 아닙니다. 프로세스가 응답할 수 없고 새 쿼리를 처리할 수 없으면 DAC(관리자 전용 연결)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결한 다음 해당 프로세스를 중지합니다. 이를 방지하려면 max worker threads 수를 증가시킵니다.  
   
- **최대 작업자 스레드 수** 서버 구성 옵션이 시스템에 생성될 수 있는 모든 스레드를 제한하는 것은 아닙니다. 가용성 그룹, Service Broker, 잠금 관리자 등의 작업에 필요한 스레드는 이 제한에서 벗어나 생성됩니다. 다음 쿼리는 구성된 스레드 수가 초과되면 추가 스레드를 생성한 시스템 작업에 대한 정보를 제공합니다.  
+ **max worker threads** 서버 구성 옵션이 시스템에 생성될 수 있는 모든 스레드를 제한하는 것은 아닙니다. 가용성 그룹, Service Broker, 잠금 관리자 등의 작업에 필요한 스레드는 이 제한에서 벗어나 생성됩니다. 다음 쿼리는 구성된 스레드 수가 초과되면 추가 스레드를 생성한 시스템 작업에 대한 정보를 제공합니다.  
   
  ```sql  
  SELECT  s.session_id, r.command, r.status,  

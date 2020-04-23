@@ -1,5 +1,6 @@
 ---
-title: '4단계: PHP로 SQL에 탄력적으로 연결 | Microsoft Docs'
+title: '4단계: PHP로 SQL에 탄력적으로 연결'
+description: 4단계는 연결 시도 중 일시적인 오류로 재시도하는 방법을 소개하도록 디자인된 데모 프로그램입니다.
 ms.custom: ''
 ms.date: 01/22/2018
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 8013474f-48e9-43d5-ab89-7b0504044468
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9467a62d2d3ca1cbbd9b5a543c27f310f7d3ba60
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2433dd8662fd06ce8c429fb3d4b25409fa191911
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926901"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528354"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-php"></a>4단계: PHP로 SQL에 탄력적으로 연결
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
   
-데모 프로그램은 연결 시도 중 (이 [부록](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)에 제시된 바와 같이 접두사 '08 '이 포함된 오류 코드에 해당되는) 일시적인 오류로 다시 시도하도록 설계되었습니다. 하지만 쿼리 명령 동안 일시적 오류로 프로그램이 연결을 무시하고 쿼리 명령을 다시 시도하기 전에 새 연결을 만듭니다. 이 디자인 선택을 권장하지 않거나, 또는 권장하지도 않습니다. 데모 프로그램은 사용할 수 있는 디자인 유연성 중 일부를 보여줍니다.  
+데모 프로그램은 연결 시도 중 (이 [부록](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)에 제시된 바와 같이 접두사 '08 '이 포함된 오류 코드에 해당되는) 일시적인 오류로 다시 시도하도록 설계되었습니다. 하지만 쿼리 명령 동안 일시적 오류로 프로그램이 연결을 무시하고 쿼리 명령을 다시 시도하기 전에 새 연결을 만듭니다. 이 디자인 선택에 대해서는 권장하거나 만류하지 않습니다. 데모 프로그램은 사용할 수 있는 디자인 유연성 중 일부를 보여줍니다.  
   
 이 코드 샘플의 길이는 주로 catch 예외 논리 때문입니다.   
   

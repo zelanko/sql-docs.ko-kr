@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c1092674266b518ec051dd20c51d4b05184ff4f0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fdf93fe49275f0604606b65b7a8b5f60df0e887e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193854"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488590"
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services의 인증
   인증은 사용자의 권한을 ID에 설정하는 과정입니다. 사용자를 인증하는 데 사용할 수 있는 많은 방법이 있습니다. 가장 일반적인 방법은 암호를 사용하는 것입니다. 예를 들어 폼 인증을 구현하는 경우 사용자에게 자격 증명을 요구(대개 로그인 이름과 암호를 요구하는 인터페이스를 통해 이루어짐)한 다음 데이터베이스 테이블이나 구성 파일과 같은 데이터 저장소와 대조하여 사용자를 검사하도록 구현합니다. 자격 증명을 확인할 수 없는 경우 인증 프로세스가 실패하고 사용자는 익명 ID를 가집니다.  
@@ -106,7 +106,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 1.  클라이언트 애플리케이션에서 사용자를 인증하도록 웹 서비스 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 메서드를 호출합니다.  
   
-2.  웹 서비스에서 보안 확장 프로그램, 특히 <xref:ReportService2010.ReportingService2010.LogonUser%2A>IAuthenticationExtension2**를 구현하는 클래스의**  메서드를 호출합니다.  
+2.  웹 서비스에서 보안 확장 프로그램, 특히 **IAuthenticationExtension2**를 구현하는 클래스의 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 메서드를 호출합니다.  
   
 3.  <xref:ReportService2010.ReportingService2010.LogonUser%2A> 구현에서 사용자 저장소 또는 보안 기관에 있는 사용자 이름과 암호를 검사합니다.  
   
@@ -117,14 +117,14 @@ internal static bool VerifyPassword(string suppliedUserName,
  웹 서비스에서 보안 확장 프로그램을 통해 사용자를 성공적으로 인증하면 이후 요청에 사용되는 쿠키를 생성합니다. 보고서 서버에 보안 기관이 포함되어 있지 않으므로 쿠키는 사용자 지정 보안 기관 내에 계속 유지되지 않을 수 있습니다. 쿠키는 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 웹 서비스 메서드에서 반환되고 이후 웹 서비스 메서드 호출 및 URL 액세스에서 사용됩니다.  
   
 > [!NOTE]  
->  전송 중 쿠키의 노출을 피하려면 <xref:ReportService2010.ReportingService2010.LogonUser%2A>에서 반환된 인증 쿠키를 SSL(Secure Sockets Layer) 암호화를 사용하여 안전하게 전송해야 합니다.  
+>  전송 중 쿠키의 노출을 피하려면 <xref:ReportService2010.ReportingService2010.LogonUser%2A>에서 반환된 인증 쿠키를 이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안) 암호화를 사용하여 안전하게 전송해야 합니다.  
   
  사용자 지정 보안 확장 프로그램이 설치되어 있는 경우 URL 액세스를 통해 보고서 서버에 액세스하면 IIS(인터넷 정보 서비스) 및 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]에서 인증 티켓 전송을 자동으로 관리합니다. SOAP API를 통해 보고서 서버에 액세스하려는 경우에는 프록시 클래스 구현에서 인증 티켓 관리를 추가로 지원해야 합니다. SOAP API를 사용하고 인증 티켓을 관리하는 방법은 "웹 서비스에서 사용자 지정 보안 사용"을 참조하십시오.  
   
 ## <a name="forms-authentication"></a>폼 인증  
  폼 인증은 인증되지 않은 사용자를 HTML 양식으로 지정하는 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 인증 유형입니다. 사용자가 자격 증명을 제공하면 인증 티켓이 포함된 쿠키가 발행됩니다. 이후에 요청이 있으면 먼저 쿠키 검사를 통해 사용자가 보고서 서버에서 이미 인증되었는지 여부에 대한 확인이 이루어집니다.  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 Reporting Services API를 통해 사용 가능한 보안 확장성 인터페이스를 사용하여 폼 인증을 지원하도록 확장할 수 있습니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]를 확장하여 폼 인증을 사용할 경우 보고서 서버와의 모든 통신에 대해 SSL(Secure Sockets Layer)을 사용하여 악의적인 사용자가 다른 사용자의 쿠키에 액세스하지 못하도록 해야 합니다. SSL을 사용하면 클라이언트와 보고서 서버 간의 상호 인증이 가능하며 이 두 컴퓨터 간의 통신 내용을 다른 컴퓨터에서 읽지 못하도록 할 수 있습니다. SSL 연결을 통해 클라이언트에서 전송되는 모든 데이터는 암호화되므로 악의적인 사용자가 보고서 서버로 전송된 암호나 데이터를 가로챌 수 없습니다.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 Reporting Services API를 통해 사용 가능한 보안 확장성 인터페이스를 사용하여 폼 인증을 지원하도록 확장할 수 있습니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]를 확장하여 폼 인증을 사용할 경우 보고서 서버와의 모든 통신에 대해 이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안)를 사용하여 악의적인 사용자가 다른 사용자의 쿠키에 액세스하지 못하도록 해야 합니다. TLS를 사용하면 클라이언트와 보고서 서버 간의 상호 인증이 가능하며 이 두 컴퓨터 간의 통신 내용을 다른 컴퓨터에서 읽지 못하도록 할 수 있습니다. TLS 연결을 통해 클라이언트에서 전송되는 모든 데이터는 암호화되므로 악의적인 사용자가 보고서 서버로 전송된 암호나 데이터를 가로챌 수 없습니다.  
   
  폼 인증은 일반적으로 Windows 이외의 플랫폼에 대한 계정 및 인증을 지원하기 위해 구현됩니다. 보고서 서버 액세스를 요청하는 사용자는 그래픽 인터페이스를 볼 수 있으며, 제공된 자격 증명은 인증을 위해 보안 기관에 제출됩니다.  
   

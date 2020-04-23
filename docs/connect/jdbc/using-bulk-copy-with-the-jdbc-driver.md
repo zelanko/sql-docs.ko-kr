@@ -1,5 +1,6 @@
 ---
-title: JDBC 드라이버에서 대량 복사 사용 | Microsoft Docs
+title: JDBC 드라이버에서 대량 복사 사용
+description: SQLServerBulkCopy 클래스를 사용하면 표준 JDBC API에 비해 상당한 성능 이점을 제공하는 데이터 로드 솔루션을 Java로 작성할 수 있습니다.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9cc73888791f4fb1c4aab58b60fec51119a2408a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 945bdaf05c9a10e3ab72b11e0049c6053dd108b5
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924034"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634023"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>JDBC 드라이버에서 대량 복사 사용
 
@@ -117,7 +118,7 @@ SQL Server 대량 복사 작업을 수행하는 가장 간단한 방법은 데�
   
 > [!NOTE]  
 > 오류가 발생하여 대량 복사의 일부 또는 전체를 롤백해야 하는 경우 SQLServerBulkCopy 관리 트랜잭션을 사용하거나 기존 트랜잭션 내에서 대량 복사 작업을 수행할 수 있습니다.  
-> 자세한 내용은 [트랜잭션 및 대량 복사 작업](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#transaction-and-bulk-copy-operations)을 참조하세요.  
+> 자세한 내용은 [트랜잭션 및 대량 복사 작업](#transaction-and-bulk-copy-operations)을 참조하세요.  
   
  대량 복사 작업을 수행하는 일반적인 단계는 다음과 같습니다.  
   
@@ -143,7 +144,7 @@ SQL Server 대량 복사 작업을 수행하는 가장 간단한 방법은 데�
 다음 애플리케이션에서는 SQLServerBulkCopy 클래스를 사용하여 데이터를 로드하는 방법을 보여 줍니다. 이 예제에서 ResultSet은 SQL Server AdventureWorks 데이터베이스 Production.Product 테이블의 데이터를 동일한 데이터베이스의 유사한 테이블에 복사하는 데 사용됩니다.  
   
 > [!IMPORTANT]  
-> 이 샘플은 [테이블 설정](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup)에 설명된 대로 작업 테이블을 만들지 않은 경우 실행되지 않습니다. 이 코드는 SQLServerBulkCopy를 사용하는 구문을 보여 주기 위해서만 제공됩니다. 원본 테이블과 대상 테이블이 동일한 SQL Server 인스턴스에 있는 경우에는 Transact-SQL INSERT … SELECT 문을 사용하여 데이터를 복사합니다.  
+> 이 샘플은 [테이블 설정](#table-setup)에 설명된 대로 작업 테이블을 만들지 않은 경우 실행되지 않습니다. 이 코드는 SQLServerBulkCopy를 사용하는 구문을 보여 주기 위해서만 제공됩니다. 원본 테이블과 대상 테이블이 동일한 SQL Server 인스턴스에 있는 경우에는 Transact-SQL INSERT … SELECT 문을 사용하여 데이터를 복사합니다.  
 
 ```java
 import java.sql.Connection;
@@ -237,7 +238,7 @@ SQLServerBulkCopy 클래스의 단일 인스턴스를 사용하여 여러 대량
 동일한 SQLServerBulkCopy 개체를 사용하여 여러 대량 복사 작업을 수행하는 경우 원본 또는 대상 정보가 각 작업에서 동일한지 다른지에 대한 제한이 없습니다. 그러나 서버에 쓸 때마다 열 연결 정보가 제대로 설정되어 있는지 확인해야 합니다.  
   
 > [!IMPORTANT]  
-> 이 샘플은 [테이블 설정](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup)에 설명된 대로 작업 테이블을 만들지 않은 경우 실행되지 않습니다. 이 코드는 SQLServerBulkCopy를 사용하는 구문을 보여 주기 위해서만 제공됩니다. 원본 테이블과 대상 테이블이 동일한 SQL Server 인스턴스에 있는 경우에는 Transact-SQL INSERT … SELECT 문을 사용하여 데이터를 복사합니다.  
+> 이 샘플은 [테이블 설정](#table-setup)에 설명된 대로 작업 테이블을 만들지 않은 경우 실행되지 않습니다. 이 코드는 SQLServerBulkCopy를 사용하는 구문을 보여 주기 위해서만 제공됩니다. 원본 테이블과 대상 테이블이 동일한 SQL Server 인스턴스에 있는 경우에는 Transact-SQL INSERT … SELECT 문을 사용하여 데이터를 복사합니다.  
 
 ```java
 import java.sql.Connection;
@@ -366,7 +367,7 @@ public class BulkCopyMultiple {
 대량 복사 작업은 **BatchSize** 속성을 10으로 설정하여 실행됩니다. 작업에서 잘못된 행이 발견되는 경우 예외가 throw됩니다. 이 첫 번째 예제에서는 대량 복사 작업이 트랜잭션되지 않습니다. 오류 지점까지 복사된 모든 일괄 처리가 커밋됩니다. 중복 키가 포함된 일괄 처리는 롤백되고 대량 복사 작업은 다른 모든 일괄 처리를 처리하기 전에 중지됩니다.  
   
 > [!NOTE]  
-> 이 샘플은 [테이블 설정](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup)에 설명된 대로 작업 테이블을 만들지 않은 경우 실행되지 않습니다. 이 코드는 SQLServerBulkCopy를 사용하는 구문을 보여 주기 위해서만 제공됩니다. 원본 테이블과 대상 테이블이 동일한 SQL Server 인스턴스에 있는 경우에는 Transact-SQL INSERT … SELECT 문을 사용하여 데이터를 복사합니다.  
+> 이 샘플은 [테이블 설정](#table-setup)에 설명된 대로 작업 테이블을 만들지 않은 경우 실행되지 않습니다. 이 코드는 SQLServerBulkCopy를 사용하는 구문을 보여 주기 위해서만 제공됩니다. 원본 테이블과 대상 테이블이 동일한 SQL Server 인스턴스에 있는 경우에는 Transact-SQL INSERT … SELECT 문을 사용하여 데이터를 복사합니다.  
 
 ```java
 import java.sql.Connection;
@@ -475,7 +476,7 @@ copyOptions.setUseInternalTransaction(true);
 다음 애플리케이션은 한 가지 예외를 제외하고 **BulkCopyNonTransacted**와 유사합니다. 이 예제에서는 대량 복사 작업이 더 큰 외부 트랜잭션에 포함됩니다. 기본 키 위반 오류가 발생하면 전체 트랜잭션이 롤백되고 행이 대상 테이블에 추가되지 않습니다.
 
 > [!NOTE]  
-> 이 샘플은 [테이블 설정](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup)에 설명된 대로 작업 테이블을 만들지 않은 경우 실행되지 않습니다. 이 코드는 SQLServerBulkCopy를 사용하는 구문을 보여 주기 위해서만 제공됩니다. 원본 테이블과 대상 테이블이 동일한 SQL Server 인스턴스에 있는 경우에는 Transact-SQL INSERT … SELECT 문을 사용하여 데이터를 복사합니다.  
+> 이 샘플은 [테이블 설정](#table-setup)에 설명된 대로 작업 테이블을 만들지 않은 경우 실행되지 않습니다. 이 코드는 SQLServerBulkCopy를 사용하는 구문을 보여 주기 위해서만 제공됩니다. 원본 테이블과 대상 테이블이 동일한 SQL Server 인스턴스에 있는 경우에는 Transact-SQL INSERT … SELECT 문을 사용하여 데이터를 복사합니다.  
 
 ```java
 import java.sql.Connection;
@@ -570,7 +571,7 @@ public class BulkCopyExistingTransactions {
  다음 애플리케이션에서는 SQLServerBulkCopy 클래스를 사용하여 데이터를 로드하는 방법을 보여 줍니다. 이 예제에서 CSV 파일은 SQL Server AdventureWorks 데이터베이스의 Production.Product 테이블에서 내보낸 데이터를 데이터베이스의 유사한 테이블에 복사하는 데 사용됩니다.  
   
 > [!IMPORTANT]  
-> 이 샘플은 가져올 [테이블 설정](../../ssms/download-sql-server-management-studio-ssms.md)에 설명된 대로 작업 테이블을 만들지 않은 경우 실행되지 않습니다.  
+> 이 샘플은 가져올 [테이블 설정](#table-setup)에 설명된 대로 작업 테이블을 만들지 않은 경우 실행되지 않습니다.  
   
 1. **SQL Server Management Studio**를 열고 AdventureWorks 데이터베이스가 있는 SQL Server에 연결합니다.  
   
@@ -658,7 +659,7 @@ SQL Server용 Microsoft JDBC Driver 6.0부터 Always Encrypted 열을 포함하�
   
 대량 복사 옵션 및 원본와 대상 테이블의 암호화 유형에 따라 JDBC 드라이버에서 데이터를 투명하게 해독한 다음, 암호화하거나 암호화된 데이터를 그대로 보낼 수 있습니다. 예를 들어 데이터를 암호화된 열에서 암호화되지 않은 열로 대량 복사하는 경우 드라이버에서 데이터를 SQL Server로 보내기 전에 투명하게 해독합니다. 마찬가지로 데이터를 암호화되지 않은 열에서(또는 CSV 파일에서) 암호화된 열로 대량 복사하는 경우 드라이버에서 데이터를 SQL Server로 보내기 전에 투명하게 암호화합니다. 소스와 대상이 모두 암호화된 경우 **allowEncryptedValueModifications** 대량 복사 옵션에 따라 드라이버에서 데이터를 그대로 보내거나 SQL Server로 보내기 전에 다시 해독 및 암호화합니다.  
   
-자세한 내용은 아래의 **allowEncryptedValueModifications** 대량 복사 옵션 및 [JDBC 드라이버에서 Always Encrypted 사용](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)을 참조하세요.  
+자세한 내용은 아래의 **allowEncryptedValueModifications** 대량 복사 옵션 및 [JDBC 드라이버에서 Always Encrypted 사용](using-always-encrypted-with-the-jdbc-driver.md)을 참조하세요.  
   
 > [!IMPORTANT]  
 > 데이터를 CSV 파일에서 암호화된 열로 대량 복사하는 경우 SQL Server용 Microsoft JDBC Driver 6.0의 제한 사항:  
@@ -723,7 +724,7 @@ SQLServerBulkCopy 클래스를 사용하면 SQL Server 테이블에만 데이터
 | Boolean UseInternalTransaction           | 지정한 경우 대량 복사 작업의 각 일괄 처리가 트랜잭션 내에서 발생됩니다. SQLServerBulkCopy가 생성자에 지정된 대로 기존 연결을 사용하는 경우 SQLServerException이 발생합니다.  SQLServerBulkCopy에서 전용 연결을 만든 경우 트랜잭션이  전용된 연결을 만든 경우 트랜잭션이 활성화됩니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | False - 트랜잭션이 없습니다.                                               |
 | Int BatchSize                            | 각 일괄 처리의 행 수입니다. 각 일괄 처리가 끝나면 일괄 처리의 행이 서버로 보내집니다.<br /><br /> 일괄 처리는 BatchSize 행이 처리되었거나 대상 데이터 원본으로 보낼 행이 더 이상 없는 경우 완료됩니다.  SQLServerBulkCopy 인스턴스가 UseInternalTransaction 옵션을 적용하지 않고 선언된 경우 행은 한 번에 서버 BatchSize 행으로 보내지지만 트랜잭션 관련 작업이 수행되지 않습니다. UseInternalTransaction이 적용된 경우 행의 각 일괄 처리가 별도의 트랜잭션으로 삽입됩니다.                                                                                                                                                                                                                                                                                                                                                                                                                                           | 0 - 각 writeToServer 작업이 단일 일괄 처리임을 나타냅니다.    |
 | Int BulkCopyTimeout                      | 제한 시간이 초과되기 전에 작업이 완료되는 시간(초)입니다. 0 값은 제한이 없음을 나타내며 대량 복사가 무기한 대기합니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | 60초입니다.                                                          |
-| Boolean allowEncryptedValueModifications | 이 옵션은 SQL Server용 Microsoft JDBC Driver 6.0 이상에서 사용할 수 있습니다.<br /><br /> **allowEncryptedValueModifications**을 지정하면 데이터를 해독하지 않고 테이블 또는 데이터베이스 간에 암호화된 데이터를 대량 복사할 수 있습니다. 일반적으로 애플리케이션은 데이터를 해독하지 않고 한 테이블에서 암호화된 열을 선택한(앱은 열 암호화 설정 키워드가 사용하지 않도록 설정된 상태에서 데이터베이스에 연결함) 다음, 이 옵션을 사용하여 여전히 암호돠된 데이터를 대량 복사합니다. 자세한 내용은 [상시 암호화와 JDBC 드라이버 사용](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)을 참조하세요.<br /><br /> **allowEncryptedValueModifications**를 지정하면 드라이버에서 데이터가 실제로 암호화되었는지 여부 또는 동일한 암호화 형식, 알고리즘 및 키를 대상 열로 사용하여 올바르게 암호화되었는지 확인하지 않아 데이터베이스가 손상될 수 있으므로 주의하여 사용합니다. |
+| Boolean allowEncryptedValueModifications | 이 옵션은 SQL Server용 Microsoft JDBC Driver 6.0 이상에서 사용할 수 있습니다.<br /><br /> **allowEncryptedValueModifications**을 지정하면 데이터를 해독하지 않고 테이블 또는 데이터베이스 간에 암호화된 데이터를 대량 복사할 수 있습니다. 일반적으로 애플리케이션은 데이터를 해독하지 않고 한 테이블에서 암호화된 열을 선택한(앱은 열 암호화 설정 키워드가 사용하지 않도록 설정된 상태에서 데이터베이스에 연결함) 다음, 이 옵션을 사용하여 여전히 암호돠된 데이터를 대량 복사합니다. 자세한 내용은 [상시 암호화와 JDBC 드라이버 사용](using-always-encrypted-with-the-jdbc-driver.md)을 참조하세요.<br /><br /> **allowEncryptedValueModifications**를 지정하면 드라이버에서 데이터가 실제로 암호화되었는지 여부 또는 동일한 암호화 형식, 알고리즘 및 키를 대상 열로 사용하여 올바르게 암호화되었는지 확인하지 않아 데이터베이스가 손상될 수 있으므로 주의하여 사용합니다. |
   
  Getter 및 setter:  
   
@@ -796,4 +797,4 @@ SQLServerBulkCopy 클래스를 사용하면 SQL Server 테이블에만 데이터
   
 ## <a name="see-also"></a>참고 항목  
 
-[JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[JDBC 드라이버 개요](overview-of-the-jdbc-driver.md)  

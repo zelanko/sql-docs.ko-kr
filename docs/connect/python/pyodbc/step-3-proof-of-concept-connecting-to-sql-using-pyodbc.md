@@ -1,5 +1,6 @@
 ---
-title: '3단계: pyodbc를 사용하여 SQL에 연결하는 개념 증명 | Microsoft Docs'
+title: '3단계: pyodbc를 사용하여 SQL에 연결'
+description: 3단계는 Python 및 pyODBC를 사용하여 SQL Server에 연결할 수 있는 방법을 보여 주는 개념 증명입니다. 기본 예제에서는 데이터를 선택하고 삽입하는 방법을 보여 줍니다.
 ms.custom: ''
 ms.date: 03/01/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: arob98
 ms.author: angrobe
-ms.openlocfilehash: c5d8adfa33541402fb50017c3790d38f0396d73d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 971f89f9748ab8f31c234f872e817b0b474dcbe0
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78256903"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528477"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>3단계: pyodbc를 사용하여 SQL에 연결하는 개념 증명
 

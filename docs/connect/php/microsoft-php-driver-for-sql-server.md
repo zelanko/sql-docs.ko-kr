@@ -1,5 +1,6 @@
 ---
 title: Microsoft Drivers for PHP for SQL Server | Microsoft Docs
+description: Microsoft Drivers for PHP for SQL Server는 PHP 확장을 통해 PHP 애플리케이션용 SQL Server와 통합할 수 있습니다.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b13d533ae1acd2fee069a2418b70cf9489d74884
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 007bc81ce5528d1f03f73716bf54b325c48a0ff9
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922843"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486751"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server
 
@@ -27,7 +28,7 @@ Microsoft Drivers for PHP for SQL Server는 PHP 애플리케이션용 SQL Server
 * [1단계: PHP 개발을 위한 개발 환경 구성](step-1-configure-development-environment-for-php-development.md)  
 * [2단계: PHP 개발을 위한 데이터베이스 만들기](step-2-create-a-sql-database-for-php-development.md)  
 * [3단계: PHP를 사용하여 SQL에 연결하는 개념 증명](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
-* [4단계: PHP를 사용하여 탄력적으로 SQL에 연결](step-4-connect-resiliently-to-sql-with-php.md)  
+* [4단계: PHP로 SQL에 탄력적으로 연결](step-4-connect-resiliently-to-sql-with-php.md)  
   
 ## <a name="documentation"></a>문서화  
 * [시작](getting-started-with-the-php-sql-driver.md)

@@ -1,5 +1,6 @@
 ---
 title: rsProcessingError - Reporting Services 오류 | Microsoft Docs
+description: 이 오류 참조 페이지에서 이벤트 ID 'rsProcessingError'에 대해 알아봅니다. SQL Server Reporting Services 보고서를 처리하는 동안 오류가 발생했습니다.
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 684f2ec1878e7918f9aa43017feb4b4f8d32cfa1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4b8f4bd0718d0fa9785d3a2f87c437a6b732f39a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573816"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487222"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services 오류
     

@@ -3,16 +3,16 @@ title: SQL Server 2017 on Linux의 새로운 기능
 description: 이 문서에서는 SQL Server 2017 on Linux의 새로운 기능을 중점적으로 설명합니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 10/23/2019
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 6874c34c70b562ef726bda5abbda2aebe615cc08
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a400a7b40f388fcc47f3a0d73c6917559afb069
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72890550"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81308064"
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>SQL Server 2017 on Linux의 새로운 기능
 
@@ -22,6 +22,14 @@ ms.locfileid: "72890550"
 
 > [!NOTE]
 > 이 문서의 이러한 기능 외에도 누적 업데이트가 정기적으로 릴리스됩니다. 이러한 누적 업데이트는 다양한 향상된 기능 및 수정 사항을 제공합니다. 최신 CU 릴리스에 대한 자세한 내용은 [https://aka.ms/sql2017cu](https://aka.ms/sql2017cu)를 참조하세요. 패키지 다운로드 및 알려진 문제에 대해서는 [릴리스 정보](sql-server-linux-release-notes.md)를 참조하세요.
+
+## <a name="ubuntu-1804-supported"></a>Ubuntu 18.04 지원됨
+
+SQL Server 2017 CU20부터 Ubuntu 18.04가 지원됩니다. [Ubuntu에 SQL Server를 설치하고 데이터베이스를 만드는 방법](quickstart-install-connect-ubuntu.md?view=sql-server-2017)에 대한 빠른 시작을 확인합니다.
+
+## <a name="rhel-8-supported"></a>RHEL 8 지원됨
+
+SQL Server 2017 CU20부터 RHEL 8이 지원됩니다. [Red Hat에 SQL Server를 설치하고 데이터베이스를 만드는 방법](quickstart-install-connect-red-hat.md?view=sql-server-2017)에 대한 빠른 시작을 확인합니다.
 
 ## <a name="sql-server-database-engine"></a>SQL Server 데이터베이스 엔진
 

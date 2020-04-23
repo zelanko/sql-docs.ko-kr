@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 766adecbc91f88ed0796e4214b7e4074fc564f01
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6bc7dfadecfe24d5bd91b7dd12eaa3b68ef01753
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117086"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487708"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>PREDICT T-SQL 함수를 사용하는 네이티브 채점
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 기본 채점에서는 [PREDICT T-SQL 함수](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) 및 SQL Server 2017의 네이티브 C++ 확장 기능을 사용하여 새 데이터 입력에 대한 예측 값이나 *점수*를 거의 실시간으로 생성할 수 있습니다. 이 방법론은 예측 워크로드에 가장 빠른 처리 속도를 제공하지만 플랫폼 및 라이브러리 요구 사항이 있습니다. RevoScaleR 및 revoscalepy의 함수에만 C++를 구현할 수 있습니다.
 
-네이티브 채점을 사용하려면 이미 학습된 모델이 있어야 합니다. SQL Server 2017 Windows 또는 Linux나 Azure SQL Database에서는 Transact-SQL에서 PREDICT 함수를 호출하여 입력 매개 변수로 제공하는 새 데이터에 대해 네이티브 채점을 호출할 수 있습니다. PREDICT 함수는 사용자가 제공하는 데이터 입력에 대한 점수를 반환합니다.
+네이티브 채점을 사용하려면 이미 학습된 모델이 있어야 합니다. SQL Server 2017 Windows 또는 Linux에서는 Transact-SQL에서 PREDICT 함수를 호출하여 입력 매개 변수로 제공하는 새 데이터에 대해 네이티브 채점을 호출할 수 있습니다. PREDICT 함수는 사용자가 제공하는 데이터 입력에 대한 점수를 반환합니다.
 
 ## <a name="how-native-scoring-works"></a>네이티브 채점의 작동 방법
 
@@ -36,7 +36,7 @@ ms.locfileid: "81117086"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-PREDICT는 Windows의 SQL Server Machine Learning Services, SQL Server 2017(Windows), SQL Server 2017(Linux) 또는 Azure SQL Database를 비롯한 SQL Server 2017 데이터베이스 엔진의 모든 버전에서 사용할 수 있으며 기본적으로 사용하도록 설정되어 있습니다. R, Python을 설치하거나 추가 기능을 사용하도록 설정할 필요는 없습니다.
+PREDICT는 Windows의 SQL Server Machine Learning Services, Windows 및 Linux 기반 SQL Server 2017 이상을 비롯한 SQL Server 2017 이상 데이터베이스 엔진의 모든 버전에서 사용할 수 있으며 기본적으로 사용하도록 설정되어 있습니다. R, Python을 설치하거나 추가 기능을 사용하도록 설정할 필요는 없습니다.
 
 + 아래에 나열된 지원 되는 **rx** 알고리즘 중 하나를 사용하여 모델을 미리 학습시켜야 합니다.
 

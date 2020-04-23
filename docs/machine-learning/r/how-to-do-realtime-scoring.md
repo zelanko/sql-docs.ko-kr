@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c07a5b8d3e1b34c0bb33f44a20ab5fff867db922
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 3f431d1598038d0789579697fccbaeffe5ef1fd0
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117626"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487842"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>SQL Server에서 기계 학습 모델을 사용하여 예측을 생성하는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ _채점_은 2단계 프로세스입니다. 먼저 테이블에서 로드할 이�
 
 | 제품 버전 및 플랫폼 | 방법 |
 |------------------------------|-------------|
-| SQL Server 2017 on Windows, SQL Server 2017 Linux 및 Azure SQL Database | T-SQL PREDICT를 사용하는 **네이티브 채점** |
+| Windows 및 Linux에서 SQL Server 2017 이상 | T-SQL PREDICT를 사용하는 **네이티브 채점** |
 | SQL Server 2017(Windows 전용), SQL Server 2016 R Services SP1 이상 | sp\_rxPredict 저장 프로시저를 사용하는 **실시간 채점** |
 
 PREDICT 함수를 사용하는 네이티브 채점을 추천합니다. sp\_rxPredict를 사용하려면 SQLCLR 통합을 사용하도록 설정해야 합니다. 이 옵션을 사용하도록 설정하기 전에 보안 문제를 고려해야 합니다.

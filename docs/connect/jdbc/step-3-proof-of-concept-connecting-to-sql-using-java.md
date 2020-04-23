@@ -1,5 +1,6 @@
 ---
-title: '3단계: Java를 사용하여 SQL에 연결하는 개념 증명 | Microsoft Docs'
+title: '3단계: Java를 사용하여 SQL에 연결'
+description: 3단계는 Java 및 JDBC를 사용하여 SQL Server에 연결할 수 있는 방법을 보여 주는 개념 증명입니다. 기본 예제에서는 데이터를 선택하고 삽입하는 방법을 보여 줍니다.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 014b81238a197f93500ae43a622138bda6818500
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 966c931f5012e5701a0f6db0bd64503be1189d50
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909142"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528897"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>3단계: Java를 사용하여 SQL에 연결하는 개념 증명
   

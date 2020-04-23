@@ -1,20 +1,20 @@
 ---
 title: 유휴 연결 복원력
+description: 유휴 연결 복원력이란 무엇이며 Microsoft Drivers for PHP for SQL Server 내에서 작동하는 방식에 대해 알아봅니다.
 ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: david-puglielli
-ms.author: v-dapugl
-manager: v-mabarw
-ms.openlocfilehash: 3edba0cde94d8661eed053319142ce7f84a70613
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8b425d57a0b1aee0c01db62d3fd1b77eb59c8aed
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68265174"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632953"
 ---
 # <a name="idle-connection-resiliency"></a>유휴 연결 복원력
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

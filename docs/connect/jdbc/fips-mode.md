@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: efa536024021e1182ad565fe534d3e706f4e7eff
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 83ce3690d194b8b06fc79d58c2d7bc7efa996619
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917955"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81293383"
 ---
 # <a name="fips-mode"></a>FIPS 모드
 
@@ -25,7 +25,7 @@ SQL Server용 Microsoft JDBC 드라이버는 *FIPS 140을 준수*하도록 구�
 #### <a name="prerequisites"></a>사전 요구 사항
 
 - FIPS 구성 JVM
-- 적절한 SSL 인증서
+- 적절한 TLS/SSL 인증서
 - 적절한 정책 파일
 - 적절한 구성 매개 변수
 
@@ -38,11 +38,11 @@ FIPS 구성에 대해 승인된 모듈은 [암호화 모듈 유효성 검사 프
 공급업체는 FIPS로 JVM을 구성하기 위해 몇 가지 추가 단계를 밟아야 할 수 있습니다.
 
 ## <a name="appropriate-ssl-certificate"></a>적절한 SSL 인증서
-FIPS 모드에서 SQL Server에 연결하려면 유효한 SSL 인증서가 필요합니다. FIPS가 사용 설정된 클라이언트 컴퓨터(JVM)의 Java 키 저장소에 이 인증서를 설치하거나 가져옵니다.
+FIPS 모드에서 SQL Server에 연결하려면 유효한 TLS/SSL 인증서가 필요합니다. FIPS가 사용 설정된 클라이언트 컴퓨터(JVM)의 Java 키 저장소에 이 인증서를 설치하거나 가져옵니다.
 
 ### <a name="importing-ssl-certificate-in-java-keystore"></a>Java 키 저장소에서 SSL 인증서 가져오기
 FIPS의 경우 PKCS 또는 공급자별 형식으로 인증서(.cert)를 가져와야 할 가능성이 높습니다.
-다음 코드 조각을 사용하여 SSL 인증서를 가져온 다음 적절한 키 저장소 형식의 작업 디렉터리에 저장합니다. Java 키 저장소의 암호는 _TRUST\_STORE\_PASSWORD_입니다.
+다음 코드 조각을 사용하여 TLS/SSL 인증서를 가져온 다음 적절한 키 저장소 형식의 작업 디렉터리에 저장합니다. Java 키 저장소의 암호는 _TRUST\_STORE\_PASSWORD_입니다.
 
 ```java
 public void saveGenericKeyStore(
@@ -72,7 +72,7 @@ private Certificate getCertificate(String pathName)
 }
 ```
 
-다음 예제에서는 BouncyCastle 공급자를 사용하여 PKCS12 형식의 Azure SSL 인증서를 가져옵니다. 인증서는 다음 코드 조각을 사용하여 _MyTrustStore\_PKCS12_이라는 작업 디렉터리에서 가져옵니다.
+다음 예제에서는 BouncyCastle 공급자를 사용하여 PKCS12 형식의 Azure TLS/SSL 인증서를 가져옵니다. 인증서는 다음 코드 조각을 사용하여 _MyTrustStore\_PKCS12_이라는 작업 디렉터리에서 가져옵니다.
 
 `saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer");`
 

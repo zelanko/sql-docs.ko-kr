@@ -1,5 +1,6 @@
 ---
-title: Microsoft Drivers for PHP for SQL Server 로드 | Microsoft Docs
+title: Microsoft Drivers for PHP 로드
+description: 이 페이지에서는 Microsoft Drivers for PHP for SQL Server를 PHP 프로세스 공간에 로드하는 방법에 대한 지침을 제공합니다.
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5ce26b4800250cab25a6db6f5b3ed7ebf0b1d9bd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 73899b2ea917c3981b0c696b78de453eacbf894d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922867"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632777"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 로드
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 이 페이지에서는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 PHP 프로세스 공간에 로드하는 방법에 대한 지침을 제공합니다.  
   
-[Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) Github 프로젝트 페이지에서 플랫폼에 대한 미리 빌드된 드라이버를 다운로드할 수 있습니다. 각 설치 패키지에는 스레드 및 비스레드 변형의 SQLSRV 및 PDO_SQLSRV 드라이버 파일이 포함되어 있습니다. Windows에서는 32비트 및 64비트 변형도 사용할 수 있습니다. 각 패키지에 포함된 드라이버 파일 목록을 보려면 [Microsoft Drivers for PHP for SQL Server 시스템 요구 사항](../../connect/php/system-requirements-for-the-php-sql-driver.md)을 참조하세요. 드라이버 파일은 PHP 환경의 PHP 버전, 아키텍처 및 스레드 여부가 일치해야 합니다.
+[Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub 프로젝트 페이지에서 플랫폼에 대한 미리 빌드된 드라이버를 다운로드할 수 있습니다. 각 설치 패키지에는 스레드 및 비스레드 변형의 SQLSRV 및 PDO_SQLSRV 드라이버 파일이 포함되어 있습니다. Windows에서는 32비트 및 64비트 변형도 사용할 수 있습니다. 각 패키지에 포함된 드라이버 파일 목록을 보려면 [Microsoft Drivers for PHP for SQL Server 시스템 요구 사항](system-requirements-for-the-php-sql-driver.md)을 참조하세요. 드라이버 파일은 PHP 환경의 PHP 버전, 아키텍처 및 스레드 여부가 일치해야 합니다.
 
-Linux 및 macOS에서는 [설치 자습서](../../connect/php/installation-tutorial-linux-mac.md)에서 설명한 대로 PECL를 사용하여 드라이버를 설치할 수 있습니다.
+Linux 및 macOS에서는 [설치 자습서](installation-tutorial-linux-mac.md)에서 설명한 대로 PECL를 사용하여 드라이버를 설치할 수 있습니다.
 
 PHP를 빌드하거나 `phpize`를 사용하여 원본에서 드라이버를 빌드할 수도 있습니다. 원본에서 드라이버를 빌드하도록 선택하는 경우 PHP를 빌드할 때 `--enable-sqlsrv=static --with-pdo_sqlsrv=static`(Linux 및 macOS) 또는 `--enable-sqlsrv=static --with-pdo-sqlsrv=static`(Windows)를 `./configure` 명령에 추가하여 공유 확장으로 빌드하는 대신 PHP에 정적으로 빌드할 수 있습니다. PHP 빌드 시스템 및 `phpize`에 대한 자세한 내용은 [PHP 설명서](http://php.net/manual/install.php)를 참조하세요.
   
@@ -63,7 +64,7 @@ PHP를 시작할 때 SQLSRV 드라이버를 로드하려면 먼저 드라이버 
     ```
     Linux에서 시스템의 패키지 관리자를 사용하여 PHP를 설치한 경우 PDO는 pdo.so라는 동적으로 로드된 확장으로 설치될 수 있습니다. PDO_SQLSRV 확장 전에 PDO 확장을 로드해야 합니다. 그렇지 않으면 로드에 실패합니다. 확장은 일반적으로 개별 .ini 파일을 사용하여 로드되고 이러한 파일은 php.ini 다음에 읽힙니다. 따라서 pdo.so가 자체 .ini 파일을 통해 로드된 경우 PDO 다음에 PDO_SQLSRV 드라이버를 로드하는 별도의 파일이 필요합니다. 
 
-    확장 관련 .ini 파일이 있는 디렉터리를 확인하려면 `php --ini`를 실행하고 `Scan for additional .ini files in:`에 나열된 디렉터리를 확인합니다. pdo.so를 로드하는 파일을 찾습니다 .이 파일에는 숫자가 접두사로 추가될 수 있습니다(예: 10-pdo). 숫자 접두사는 .ini 파일의 로드 순서를 나타내지만 숫자 접두사가 없는 파일은 사전순으로 로드됩니다. 30-pdo_sqlsrv.ini(pdo.ini에 지정된 접두사보다 큰 임의의 숫자) 또는 pdo_sqlsrv.ini(pdo.ini에 숫자 접두사가 지정되지 않은 경우)라는 파일을 만들어 PDO_SQLSRV 드라이버 파일을 로드하고, 여기에 다음 줄을 추가하여 파일 이름을 적절하게 변경합니다.  
+    확장 관련 .ini 파일이 있는 디렉터리를 확인하려면 `php --ini`를 실행하고 `Scan for additional .ini files in:`에 나열된 디렉터리를 확인합니다. pdo.so를 로드하는 파일을 찾습니다. 이 파일에는 숫자가 접두사로 추가될 수 있습니다(예: 10-pdo.ini). 숫자 접두사는 .ini 파일의 로드 순서를 나타내지만 숫자 접두사가 없는 파일은 사전순으로 로드됩니다. 30-pdo_sqlsrv.ini(pdo.ini에 지정된 접두사보다 큰 임의의 숫자) 또는 pdo_sqlsrv.ini(pdo.ini에 숫자 접두사가 지정되지 않은 경우)라는 파일을 만들어 PDO_SQLSRV 드라이버 파일을 로드하고, 여기에 다음 줄을 추가하여 파일 이름을 적절하게 변경합니다.  
     ```
     extension=php_pdo_sqlsrv_72_nts.so
     ```
@@ -83,13 +84,13 @@ PHP를 시작할 때 SQLSRV 드라이버를 로드하려면 먼저 드라이버 
 **php.ini** 지시문에 대한 자세한 내용은 [핵심 php.ini 지시문 설명](https://php.net/manual/en/ini.core.php)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
-[Microsoft Drivers for PHP for SQL Server 시작](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 시작](getting-started-with-the-php-sql-driver.md)
 
-[Microsoft Drivers for PHP for SQL Server에 대한 시스템 요구 사항](../../connect/php/system-requirements-for-the-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server에 대한 시스템 요구 사항](system-requirements-for-the-php-sql-driver.md)
 
-[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드 | Microsoft Docs](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드 | Microsoft Docs](programming-guide-for-php-sql-driver.md)
 
-[SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)
+[SQLSRV 드라이버 API 참조](sqlsrv-driver-api-reference.md)
 
-[PDO_SQLSRV 드라이버 API 참조](../../connect/php/pdo-sqlsrv-driver-reference.md)  
+[PDO_SQLSRV 드라이버 API 참조](pdo-sqlsrv-driver-reference.md)  
   

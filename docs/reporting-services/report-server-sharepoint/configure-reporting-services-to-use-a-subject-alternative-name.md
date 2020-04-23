@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 493abba0e4396b6f12670dd3214d19e4767c4d0d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 41a39c92a8ec9e9d940c44660a02abe5e710fede
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580013"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487026"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>주체 대체 이름을 사용하도록 Reporting Services 구성
 
@@ -20,11 +20,11 @@ ms.locfileid: "65580013"
 
 이 지침은 보고 서비스 URL과 웹 서비스 URL에 적용됩니다.
 
-SAN을 사용하려면 서버에 SSL 인증서를 등록 및 서명하고 프라이빗 키를 가지고 있어야 합니다. 자체 서명된 인증서를 사용할 수 없습니다.  
+SAN을 사용하려면 서버에 TLS/SSL 인증서를 등록 및 서명하고 프라이빗 키를 가지고 있어야 합니다. 자체 서명된 인증서를 사용할 수 없습니다.  
   
- Reporting Services의 URL은 SSL 인증서를 사용하도록 구성할 수 있습니다. 인증서에는 일반적으로 SSL(Secure Sockets Layer) 세션에 대해 하나의 URL만 허용하는 주체 이름만 있습니다. SAN은 SSL 서비스에서 여러 URL을 수신하도록 허용하며 다른 애플리케이션과 SSL 포트를 공유하도록 허용하는 인증서의 추가 필드입니다. SAN은 `www.s2.com`과 같습니다.  
+ Reporting Services의 URL은 TLS/SSL 인증서를 사용하도록 구성할 수 있습니다. 인증서에는 일반적으로 이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안) 세션에 대해 하나의 URL만 허용하는 주체 이름만 있습니다. SAN은 TLS 서비스에서 여러 URL을 수신하도록 허용하며 다른 애플리케이션과 TLS 포트를 공유하도록 허용하는 인증서의 추가 필드입니다. SAN은 `www.s2.com`과 같습니다.  
   
- Reporting Services의 SSL 설정에 대한 자세한 내용은 [기본 모드 보고서 서버에서 SSL 연결 구성](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)을 참조하세요.  
+ Reporting Services의 TLS 설정에 대한 자세한 내용은 [기본 모드 보고서 서버에서 TLS 연결 구성](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)을 참조하세요.  
   
 ## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>웹 서비스 URL에 대해 주체 대체 이름을 사용하도록 SSRS 구성
   
@@ -32,11 +32,11 @@ SAN을 사용하려면 서버에 SSL 인증서를 등록 및 서명하고 프라
   
      자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)을 참조하세요.  
   
-2.  **웹 서비스 URL** 페이지에서 SSL 포트 및 SSL 인증서를 선택합니다.  
+2.  **웹 서비스 URL** 페이지에서 TLS/SSL 포트 및 TLS/SSL 인증서를 선택합니다.  
   
      ![Reporting Services 구성 관리자](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Reporting Services 구성 관리자")  
   
-     구성 관리자가 포트에 대해 SSL 인증서를 등록합니다.  
+     구성 관리자가 포트에 대해 TLS/SSL 인증서를 등록합니다.  
   
 3.  rsreportserver.config 파일을 엽니다.  
   

@@ -1,6 +1,6 @@
 ---
 title: 전체 텍스트 검색 시작 | Microsoft 문서
-ms.date: 08/22/2016
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -15,12 +15,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 349e00b7734ed8e8176585c55018b7565649cc1f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c0394fdfaf25042eef28c4f350b6ca2bf141b14e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903832"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288257"
 ---
 # <a name="get-started-with-full-text-search"></a>전체 텍스트 검색 시작
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,10 +55,17 @@ SQL Server 데이터베이스는 기본적으로 전체 텍스트를 사용하�
 2.  Document 테이블에 대한 전체 텍스트 인덱스를 만들려면 먼저 이 테이블에 Null을 허용하지 않는 고유한 단일 열 인덱스가 있는지 확인해야 합니다. 다음 [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) 문에서는 Document 테이블의 DocumentID 열에 대한 고유 인덱스 `ui_ukDoc`를 만듭니다.  
   
     ```sql 
-    CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
+    CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentNode);  
     ```  
 
-3.  고유 키를 만든 후 다음 `Document` CREATE FULLTEXT INDEX [문을 사용하여](../../t-sql/statements/create-fulltext-index-transact-sql.md) 테이블에 대한 전체 텍스트 인덱스를 만들 수 있습니다.  
+3.  다음 [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) 문을 사용하여 `Document` 테이블에 기존 전체 텍스트 인덱스를 삭제합니다. 
+
+    ```sql
+    DROP FULLTEXT INDEX ON Production.Document
+    GO
+    ```
+
+4.  고유 키를 만든 후 다음 `Document` CREATE FULLTEXT INDEX [문을 사용하여](../../t-sql/statements/create-fulltext-index-transact-sql.md) 테이블에 대한 전체 텍스트 인덱스를 만들 수 있습니다.  
   
     ```sql  
     CREATE FULLTEXT INDEX ON Production.Document  
@@ -72,6 +79,8 @@ SQL Server 데이터베이스는 기본적으로 전체 텍스트를 사용하�
     GO  
   
     ```  
+    
+  
   
      이 예에서 정의된 TYPE COLUMN은 'Document' 열(이진 형식)의 각 행에 있는 문서 유형이 포함된 테이블의 유형 열을 지정합니다. 유형 열은 지정된 행의 문서에 대한 사용자 제공 파일 확장명("doc", "xls" 등)을 저장합니다. 전체 텍스트 엔진은 지정된 행의 확장명을 사용하여 이러한 행의 데이터를 구문 분석하는 데 적합한 필터를 호출합니다. 필터에서 행의 이진 데이터를 구문 분석한 후 지정된 단어 분리기에서 콘텐츠를 구문 분석합니다. (이 예제에서는 영어(영국)에 대한 단어 분리기가 사용됩니다.) 자세한 내용은 [고급 분석 확장 구성 및 관리](../../relational-databases/search/configure-and-manage-filters-for-search.md)를 참조하세요.  
 

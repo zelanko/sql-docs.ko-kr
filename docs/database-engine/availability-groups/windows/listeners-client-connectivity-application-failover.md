@@ -1,6 +1,6 @@
 ---
 title: 가용성 그룹 수신기에 연결
-description: 주 복제본 및 읽기 전용 보조 복제본에 연결하는 방법, SSL 및 Kerberos를 사용하는 방법 등 Always On 가용성 그룹 수신기에 연결하는 방법에 대한 정보를 포함합니다.
+description: 주 복제본 및 읽기 전용 보조 복제본에 연결하는 방법, TLS/SSL 및 Kerberos를 사용하는 방법 등 Always On 가용성 그룹 수신기에 연결하는 방법에 대한 정보를 포함합니다.
 ms.custom: seodec18
 ms.date: 02/27/2020
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0c8b30de41b8a6a74661e3b4e55e7f2216c29c98
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4505fed51589e2666dd2aa28e8ee42c4aac27f94
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433740"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528497"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Always On 가용성 그룹 수신기에 연결 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,18 +131,54 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI; Mul
   
  가용성 그룹이 단일 서브넷에 대해서만 적용되는 경우에도 **MultiSubnetFailover** 연결 옵션을 **True** 로 설정해야 합니다.  그러면 나중에 클라이언트 연결 문자열을 변경하지 않고도 서브넷 확장을 지원하도록 새 클라이언트를 미리 구성하여 단일 서브넷 장애 조치(failover)에 대한 장애 조치(failover) 성능을 최적화할 수 있습니다.  **MultiSubnetFailover** 연결 옵션은 필수가 아니지만 서브넷 장애 조치(failover) 시간을 단축하는 이점이 있습니다.  클라이언트 드라이버가 가용성 그룹과 병렬로 연결된 각 IP 주소에 대해 TCP 소켓을 열려고 하기 때문입니다.  클라이언트 드라이버는 첫 번째 IP가 응답할 때까지 기다린 다음 성공적으로 응답하면 해당 IP를 사용하여 연결합니다.  
   
-##  <a name="listeners--ssl-certificates"></a><a name="SSLcertificates"></a> 수신기 및 SSL 인증서  
+##  <a name="listeners--tlsssl-certificates"></a><a name="SSLcertificates"></a> 수신기 및 TLS/SSL 인증서  
 
- 가용성 그룹 수신기에 연결할 때 SQL Server의 참여 인스턴스에서 SSL 인증서를 세션 암호화와 함께 사용하는 경우 암호화를 적용하려면 연결하는 클라이언트 드라이버가 SSL 인증서에서 Subject Alternate 이름을 지원해야 합니다.  인증서 Subject Alternative 이름에 대한 SQL Server 드라이버 지원은 ADO.NET(SqlClient), Microsoft JDBC 및 SNAC(SQL Native Client)에 포함될 계획입니다.  
+가용성 그룹 수신기에 연결할 때 SQL Server의 참여 인스턴스에서 TLS/SSL 인증서를 세션 암호화와 함께 사용하는 경우 암호화를 적용하려면 연결하는 클라이언트 드라이버가 TLS/SSL 인증서에서 Subject Alternate 이름을 지원해야 합니다.  인증서 Subject Alternative 이름에 대한 SQL Server 드라이버 지원은 ADO.NET(SqlClient), Microsoft JDBC 및 SNAC(SQL Native Client)에 포함될 계획입니다.  
   
- 인증서의 Subject Alternate 이름에 모든 가용성 그룹 수신기 목록을 설정하여 참여하는 각 서버 노드에 대해 X.509 인증서를 구성해야 합니다.  
-  
- 예를 들어 WSFC에 `AG1_listener.Adventure-Works.com`, `AG2_listener.Adventure-Works.com`및 `AG3_listener.Adventure-Works.com`이라는 세 개의 가용성 그룹 수신기가 있는 경우 인증서에 대한 Subject Alternative 이름은 다음과 같습니다.  
-  
+인증서의 Subject Alternate 이름에 모든 가용성 그룹 수신기 목록을 설정하여 참여하는 각 서버 노드에 대해 X.509 인증서를 구성해야 합니다. 
+
+인증서 값의 형식은 다음과 같습니다. 
+
 ```  
-CN = ServerFQDN  
-SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.com, AG3_listener.Adventure-Works.com  
-```  
+CN = Server.FQDN  
+SAN = Server.FQDN,Listener1.FQDN,Listener2.FQDN
+```
+
+예를 들어 다음과 같은 값이 있다고 가정합니다. 
+
+```
+Servername: Win2019   
+Instance: SQL2019   
+AG: AG2019   
+Listener: Listener2019   
+Domain: contoso.com  (which is also the FQDN)
+```
+
+단일 가용성 그룹을 포함하는 WSFC의 경우 인증서는 서버의 FQDN(정규화된 도메인 이름)과 수신기의 FQDN을 포함해야 합니다. 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019.contoso.com, Listener2019.contoso.com 
+```
+
+이 구성을 사용하면 인스턴스(`WIN2019\SQL2019`) 또는 수신기(`Listener2019`)에 연결할 때 연결이 암호화됩니다. 
+
+네트워킹이 구성된 방식에 따라, SAN에 NetBIOS를 추가해야 할 수 있는 작은 고객 하위 집합이 있습니다. 이 경우 인증서 값은 다음과 같아야 합니다. 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019,Win2019.contoso.com,Listener2019,Listener2019.contoso.com
+```
+
+WSFC에 다음과 같은 세 개의 가용성 그룹 수신기가 있는 경우 (Listener1, Listener2, Listener3)
+
+인증서 값은 다음과 같아야 합니다. 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019.contoso.com,Listener1.contoso.com,Listener2.contoso.com,Listener3.contoso.com
+```
+  
   
 ##  <a name="listeners-and-kerberos-spns"></a><a name="SPNs"></a> 수신기 및 Kerberos(SPN) 
 

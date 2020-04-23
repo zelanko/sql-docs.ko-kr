@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 70127c0f3064dfce46a6c4fea101b0199900fcbe
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: c25fa11961ec082a6c8b912eca471d578a29a057
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742080"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632539"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services의 전자 메일 배달
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 개별 사용자 또는 그룹에 보고서를 메일로 보낼 수 있는 메일 배달 확장 프로그램이 포함되어 있습니다. 보고서를 전자 메일로 배포하려면 1) 전자 메일 배달용 보고서 서버를 구성하고 2) 표준 구독 또는 데이터 기반 구독을 정의합니다. 단일 구독에서 전자 메일 메시지 하나에 여러 보고서를 포함해 배달할 수는 없습니다. 그러나 여러 구독을 만들 수는 있습니다.  
   
- 보고서 서버는 표준 연결을 통해 전자 메일 서버에 연결합니다. SSL(Secure Sockets Layer)을 통해 암호화된 통신은 사용하지 않습니다. 전자 메일 서버는 보고서 서버와 동일한 네트워크에 있는 원격 또는 로컬 SMTP(Simple Mail Transport Protocol) 서버여야 합니다.  
+ 보고서 서버는 표준 연결을 통해 전자 메일 서버에 연결합니다. 이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안)를 통해 암호화된 통신은 사용하지 않습니다. 전자 메일 서버는 보고서 서버와 동일한 네트워크에 있는 원격 또는 로컬 SMTP(Simple Mail Transport Protocol) 서버여야 합니다.  
   
  구독을 만드는 방법을 안내하는 자세한 단계는 다음 항목을 참조하세요.  
   

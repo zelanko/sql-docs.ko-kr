@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 894ba4f1b73cb482ab521e859d0472f7039bfabf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 910918a3dd0162bc29eef882cf12b529f98fa05f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077063"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487172"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 또는 보고서 서버 웹 서비스를 사용하려면 먼저 각 애플리케이션에 대한 URL을 한 개 이상 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 "파일만" 모드(즉, 설치 마법사의 보고서 서버 설치 옵션 페이지에서 **서버 구성 없이 설치** 옵션을 선택한 경우)에서 설치한 경우에는 URL을 반드시 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 기본 구성으로 설치한 경우 각 애플리케이션에 대해 URL이 이미 구성되어 있습니다.  
@@ -84,20 +84,20 @@ ms.locfileid: "77077063"
   
 6.  아직 확인하지 않은 경우 사용하려는 이름과 동일한 가상 디렉터리 이름을 IIS(설치된 경우)에서 사용하고 있지 않은지 확인합니다.  
   
-7.  SSL 인증서를 설치한 경우 지금 이 인증서를 선택하여 컴퓨터에 설치된 SSL 인증서에 URL을 바인딩할 수 있습니다.  
+7.  TLS/SSL 인증서를 설치한 경우 지금 이 인증서를 선택하여 컴퓨터에 설치된 TLS/SSL 인증서에 URL을 바인딩할 수 있습니다.  
   
-8.  SSL 인증서를 선택하면 선택적으로 사용자 지정 포트를 지정할 수 있습니다. 기본 포트는 443이지만 사용 가능한 포트라면 모두 사용할 수 있습니다.  
+8.  TLS/SSL 인증서를 선택하면 선택적으로 사용자 지정 포트를 지정할 수 있습니다. 기본 포트는 443이지만 사용 가능한 포트라면 모두 사용할 수 있습니다.  
   
 9. **적용** 을 클릭하여 URL을 만듭니다.  
   
 10. 페이지의 **URL** 섹션에 있는 링크를 클릭하여 URL을 테스트합니다. URL을 테스트하려면 먼저 보고서 서버 데이터베이스를 만들어 구성해야 합니다. 자세한 내용은 [기본 모드 보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)를 참조하세요.  
 
 > [!NOTE]
->  기존 SSL 바인딩 및 URL 예약이 있는 상태에서 SSL 바인딩을 변경하려면(예: 다른 인증서 또는 호스트 헤더를 사용하는 경우) 다음 단계를 순서대로 수행하는 것이 좋습니다.  
+>  기존 TLS 바인딩 및 URL 예약이 있는 상태에서 TLS 바인딩을 변경하려면(예: 다른 인증서 또는 호스트 헤더를 사용하는 경우) 다음 단계를 순서대로 수행하는 것이 좋습니다.  
 > 
 >  1.  먼저 모든 URL 예약을 제거합니다.  
-> 2.  모든 SSL 바인딩을 제거합니다.  
-> 3.  그런 다음 URL 및 SSL 바인딩을 다시 만듭니다.  
+> 2.  그런 다음 모든 TLS 바인딩을 제거합니다.  
+> 3.  그런 다음 URL 및 TLS 바인딩을 다시 만듭니다.  
 > 
 >  이전 단계는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 완료할 수 있습니다.  
 > 
@@ -113,9 +113,9 @@ ms.locfileid: "77077063"
   
 3.  가상 디렉터리를 지정합니다. [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 는 보고서 서버 웹 서비스와 동일한 IP 주소와 포트를 수신합니다. 다른 보고서 서버 웹 서비스를 가리키도록 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 를 구성한 경우 RSReportServer.config 파일에서 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] URL 설정을 수정해야 합니다.  
   
-4.  SSL 인증서를 설치한 경우 지금 이 인증서를 선택하여 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에 대한 모든 요청이 HTTPS를 통해 라우팅되도록 할 수 있습니다.  
+4.  TLS/SSL 인증서를 설치한 경우 지금 이 인증서를 선택하여 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]에 대한 모든 요청이 HTTPS를 통해 라우팅되도록 할 수 있습니다.  
   
-     SSL 인증서를 선택하면 선택적으로 사용자 지정 포트를 지정할 수 있습니다. 기본 포트는 443이지만 사용 가능한 포트라면 모두 사용할 수 있습니다.  
+     TLS/SSL 인증서를 선택하면 선택적으로 사용자 지정 포트를 지정할 수 있습니다. 기본 포트는 443이지만 사용 가능한 포트라면 모두 사용할 수 있습니다.  
   
 5.  **적용** 을 클릭하여 URL을 만듭니다.  
   
@@ -136,14 +136,14 @@ ms.locfileid: "77077063"
  호스트 헤더란 여러 웹 사이트에서 단일 IP 주소와 포트를 공유할 수 있도록 하는 고유한 이름으로, IP 주소와 포트 번호에 비해 기억하기 쉬울 뿐 아니라 입력하기도 쉽습니다. 호스트 헤더 이름의 예로는 www.adventure-works.com 을 들 수 있습니다.  
   
  **SSL 포트**  
- SSL 연결용 포트를 지정합니다. SSL용 기본 포트는 443입니다.  
+ TLS/SSL 연결용 포트를 지정합니다. TLS용 기본 포트는 443입니다.  
   
  **SSL 인증서**  
- 이 컴퓨터에 설치된 SSL 인증서의 인증서 이름을 지정합니다. 인증서가 와일드카드에 매핑될 경우 이 인증서를 보고서 서버 연결에 사용할 수 있습니다.  
+ 이 컴퓨터에 설치된 TLS/SSL 인증서의 인증서 이름을 지정합니다. 인증서가 와일드카드에 매핑될 경우 이 인증서를 보고서 서버 연결에 사용할 수 있습니다.  
   
  인증서가 등록되어 있는 정규화된 컴퓨터 이름을 지정합니다. 지정하는 이름은 인증서가 등록된 이름과 같아야 합니다.  
   
- 이 옵션을 사용하려면 인증서가 설치되어 있어야 합니다. RSReportServer.config 파일에서 UrlRoot 구성 설정도 수정하여 인증서가 등록되어 있는 컴퓨터의 정규화된 이름을 지정하도록 해야 합니다. 자세한 내용은 [기본 모드 보고서 서버에서 SSL 연결 구성](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)을 참조하세요.  
+ 이 옵션을 사용하려면 인증서가 설치되어 있어야 합니다. RSReportServer.config 파일에서 UrlRoot 구성 설정도 수정하여 인증서가 등록되어 있는 컴퓨터의 정규화된 이름을 지정하도록 해야 합니다. 자세한 내용은 [기본 모드 보고서 서버에서 TLS 연결 구성](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)을 참조하세요.  
   
 ### <a name="to-set-advanced-properties-on-a-url"></a>고급 URL 속성을 설정하려면  
   

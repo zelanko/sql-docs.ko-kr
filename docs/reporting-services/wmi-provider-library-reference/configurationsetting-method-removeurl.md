@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3d98bd97-e152-48ce-ab1c-bd2c4f8b7fe9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3471c54ae18269c281104c3572235099bcf4e61b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3ea8098d3dd6a1512f83022fe7ab7e733bd42ae5
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571301"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636391"
 ---
 # <a name="configurationsetting-method---removeurl"></a>ConfigurationSetting 메서드 - RemoveURL
   보고서 서버용으로 예약된 URL을 제거합니다. 제거할 URL이 여러 개인 경우 이 API를 호출하여 하나씩 수행해야 합니다.  
@@ -57,7 +57,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
   
  [ReserveURL](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-reserveurl.md) 메서드를 호출하기 전에 *Application* 매개 변수의 VirtualDirectory 구성 속성에 값을 제공해야 합니다. [SetVirtualDirectory 메서드&#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md) 메서드를 사용하여 VirtualDirectory 속성을 설정할 수 있습니다.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 제공한 SSL 인증서가 다른 URL에서 더 이상 사용되지 않을 경우 해당 인증서는 제거됩니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 제공한 TLS/SSL 인증서가 다른 URL에서 더 이상 사용되지 않을 경우 해당 인증서는 제거됩니다.  
   
  이 메서드를 사용하면 구성 응용 프로그램 도메인을 제외한 모든 응용 프로그램 도메인이 하드 재활용됩니다. 이 작업이 진행되는 동안 응용 프로그램 도메인이 중지되므로 이 작업이 완료되면 응용 프로그램 도메인을 다시 시작해야 합니다.  
   

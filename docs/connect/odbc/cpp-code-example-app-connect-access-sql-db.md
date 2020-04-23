@@ -1,5 +1,6 @@
 ---
 title: SQL 데이터베이스에 액세스하는 C++ ODBC 앱
+description: C++ 샘플 애플리케이션은 ODBC API를 사용하여 SQL 데이터베이스에 연결하고 액세스하는 방법을 보여줍니다.
 ms.custom: ''
 ms.date: 07/08/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d4f3df5ecdefffc8c9d5ae1cc43ba9210f458c41
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 819fdc766d03d845582dfc0ae7885615cd8a6019
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80907709"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528927"
 ---
 # <a name="c-odbc-example-application-accesses-a-sql-database"></a>C++ ODBC 예제 애플리케이션의 SQL 데이터베이스 액세스
 
@@ -22,7 +23,7 @@ ms.locfileid: "80907709"
 
 C++ 샘플 애플리케이션은 ODBC API를 사용하여 SQL 데이터베이스에 연결하고 액세스하는 방법을 보여줍니다.
 
-2013년 10월부터 2019년 7월 사이에 이 C++ ODBC 애플리케이션은 47,300회 다운로드되었습니다. 2019년 7월 이 애플리케이션 원본은 Microsoft의 코드 갤러리에서 이 웹 페이지로 옮겨 왔습니다.
+2013년 10월부터 2019년 7월 사이에 이 C++ ODBC 애플리케이션은 47,300회 다운로드되었습니다. 2019년 7월, 이 애플리케이션 원본은 Microsoft의 코드 갤러리에서 이 웹 페이지로 옮겨 왔습니다.
 
 <!-- 
 docs/connect/odbc/ , cpp-code-example-app-connect-access-sql-db.md

@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a9874a24ae077b0381d8e8e8834b091a72953688
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 821d9e5339c70551a3503faa81ca15276892ed86
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980599"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529233"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>서식 파일을 사용하여 테이블 열을 데이터 파일 필드에 매핑(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,20 +85,20 @@ bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 ```
 13.0
 4
-1       SQLCHAR 0       7       ","      1     PersonID               ""
-2       SQLCHAR 0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
-3       SQLCHAR 0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
-4       SQLCHAR 0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
+1       SQLCHAR    0       7       ","      1     PersonID               ""
+2       SQLCHAR    0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR    0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR    0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
 
 ```
 **이후**
 ```
 13.0
 4
-1       SQLCHAR 0       7       ","      1     PersonID               ""
-2       SQLCHAR 0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
-3       SQLCHAR 0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
-4       SQLCHAR 0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
+1       SQLCHAR    0       7       ","      1     PersonID               ""
+2       SQLCHAR    0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR    0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR    0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
 
 ```
 수정된 서식 파일에 이제 다음 내용이 반영됩니다.
@@ -116,7 +116,7 @@ bcp TestDatabase.dbo.myRemap format nul -c -x -f D:\BCP\myRemap.xml -t, -T
 용어는 [XML 서식 파일의 스키마 구문](../../relational-databases/import-export/xml-format-files-sql-server.md#StructureOfXmlFFs) 을 참조하세요.  메모장에서 `D:\BCP\myRemap.xml` 를 열고 다음과 같이 수정합니다.
 1. 서식 파일에서 \<FIELD> elements가 선언되는 순서는 이들 필드가 데이터 파일에 나열되는 순서로, ID 특성이 2이고 3인 \<FIELD> elements 순서와 반대가 됩니다.
 2. \<필드 > ID 특성 값이 순차적인지 확인합니다.
-3. \<ROW> 요소에서 \<COLUMN> 요소의 순서에 따라 대량 작업에서 반환되는 순서가 정의됩니다.  XML 서식 파일은 각 \<COLUMN> 요소에 대량 가져오기 작업의 대상 테이블에 있는 열과 관계가 없는 로컬 이름을 지정합니다.  \<COLUMN> 요소의 순서는 \<RECORD> 정의에 있는 \<FIELD> 요소의 순서와는 독립적입니다.  각 \<COLUMN> 요소는 ID가 \<COLUMN> 요소의 SOURCE 특성에서 지정되는 \<FIELD> 요소에 해당합니다.  따라서 \<COLUMN> SOURCE에 대한 값은 버전이 필요한 특성뿐입니다.  \<COLUMN> SOURCE 특성 2와 3에 대한 순서를 반대로 설정합니다.
+3. \<ROW> 요소에서 \<COLUMN> 요소의 순서에 따라 대량 작업에서 대상으로 전송하는 순서가 정의됩니다.  XML 서식 파일은 각 \<COLUMN> 요소에 대량 가져오기 작업의 대상 테이블에 있는 열과 관계가 없는 로컬 이름을 지정합니다.  \<COLUMN> 요소의 순서는 \<RECORD> 정의에 있는 \<FIELD> 요소의 순서와는 독립적입니다.  각 \<COLUMN> 요소는 ID가 \<COLUMN> 요소의 SOURCE 특성에서 지정되는 \<FIELD> 요소에 해당합니다.  따라서 \<COLUMN> SOURCE에 대한 값은 버전이 필요한 특성뿐입니다.  \<COLUMN> SOURCE 특성 2와 3에 대한 순서를 반대로 설정합니다.
 
 변경 내용을 비교합니다.  
 **이전**

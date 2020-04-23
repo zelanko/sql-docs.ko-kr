@@ -15,12 +15,12 @@ ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8359c9844cf9ebbc91da556f212429c96909d857
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 91277deb1aab5916f23d52fed3f8d8f0530b6fab
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76285754"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529119"
 ---
 # <a name="replication-programming-concepts"></a>복제 프로그래밍 개념
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ ms.locfileid: "76285754"
   
 2.  영업 애플리케이션에 필요한 일반적인 데이터 액세스 이외에 이 애플리케이션에서는 영업 사원이 단추를 클릭하여 필요할 때 끌어오기 구독을 동기화할 수 있어야 합니다. 이 애플리케이션은 영업 담당자가 설치하고 실행할 것이므로 클라이언트에서 구독을 구성하고 초기 스냅샷을 적용할 수 있는 기능도 필요합니다. 필요한 경우 애플리케이션에서는 연결이 발견되면 구독을 자동으로 동기화할 수 있도록 Windows에서 제공하는 무선 연결 감지 인프라를 사용할 수도 있습니다.  
   
-3.  게시자에 연결할 때 Windows 인증 및 VPN(가상 프라이빗 네트워크)을 사용하는 것을 포함하여 복제와 관련된 모든 보안 지침을 따릅니다. 웹 동기화를 구현하는 경우에는 SSL(Secure Sockets Layer) 연결을 사용합니다. 자세한 내용은 [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md)을 참조하세요.  
+3.  게시자에 연결할 때 Windows 인증 및 VPN(가상 프라이빗 네트워크)을 사용하는 것을 포함하여 복제와 관련된 모든 보안 지침을 따릅니다. 웹 동기화를 구현하는 경우 이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안) 연결을 사용합니다. 자세한 내용은 [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md)을 참조하세요.  
   
 4.  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]의 기능을 활용하려면 관리되는 코드 언어를 사용하여 애플리케이션을 개발합니다.  
   

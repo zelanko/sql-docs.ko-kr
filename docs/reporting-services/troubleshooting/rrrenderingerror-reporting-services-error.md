@@ -1,5 +1,6 @@
 ---
 title: rrRenderingError - Reporting Services 오류 | Microsoft Docs
+description: 이 오류 참조 페이지에서 이벤트 ID 107 'rrRenderingError'에 대해 알아봅니다. 보고서를 렌더링하는 동안 오류가 발생했습니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0751efc3-b81b-44ee-8aac-8560f86ca322
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1fcfe999a7cfaf41cc4b6b9fad437ea14dfe2613
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 143520a4bb62df4f38ed0d1d116fd6dc1df22f2c
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65575559"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487742"
 ---
 # <a name="rrrenderingerror---reporting-services-error"></a>rrRenderingError - Reporting Services 오류
     

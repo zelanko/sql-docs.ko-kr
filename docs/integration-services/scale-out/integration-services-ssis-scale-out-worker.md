@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 1f2be60ff216b65afbb50c0e97da4edfb4239aec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6fd7b8d17790fcc1747116b9454a3aaf38136935
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68082067"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488260"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services(SSIS) 규모 확장 작업자
 
@@ -33,7 +33,7 @@ Scale Out 작업자 서비스는 `\<drive\>:\Program Files\Microsoft SQL Server\
 |DisplayName|규모 확장 작업자의 표시 이름입니다. **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017에서는 사용되지 않습니다.**|컴퓨터 이름|
 |Description|규모 확장 작업자에 대한 설명입니다. **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017에서는 사용되지 않습니다.**|Empty|
 |MasterEndpoint|규모 확장 마스터에 연결하는 엔드포인트입니다.|규모 확장 작업자 설치 중에 설정된 엔드포인트|
-|MasterHttpsCertThumbprint|규모 확장 마스터를 인증하는 데 사용되는 클라이언트 SSL 인증서의 지문입니다.|규모 확장 작업자 설치 중에 지정된 클라이언트 인증서의 지문|
+|MasterHttpsCertThumbprint|규모 확장 마스터를 인증하는 데 사용되는 클라이언트 TLS/SSL 인증서의 지문입니다.|규모 확장 작업자 설치 중에 지정된 클라이언트 인증서의 지문|
 |WorkerHttpsCertThumbprint|규모 확장 작업자를 인증하는 데 사용되는 규모 확장 마스터에 대한 인증서의 지문입니다.|규모 확장 작업자 설치 중에 자동으로 생성되고 설치되는 인증서의 지문|
 |StoreLocation|작업자 인증서의 저장소 위치입니다.|LocalMachine|
 |StoreName|해당 작업자 인증서가 있는 저장소 이름입니다.|My|
@@ -59,7 +59,7 @@ Scale Out 작업자 서비스는 `\<drive\>:\Program Files\Microsoft SQL Server\
 ## <a name="view-the-scale-out-worker-log"></a>Scale Out 작업자 로그 보기
 Scale Out 작업자 서비스의 로그 파일은 `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Agent` 폴더에 있습니다.
 
-각 개별 작업의 로그 위치는 `WorkerSettings.config`의 `TasksRootFolder` 파일에 구성됩니다. 값을 지정하지 않으면 `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks` 폴더에 로그가 있습니다. 
+각 개별 작업의 로그 위치는 `TasksRootFolder`의 `WorkerSettings.config` 파일에 구성됩니다. 값을 지정하지 않으면 `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks` 폴더에 로그가 있습니다. 
 
 *[account]* 매개 변수는 Scale Out 작업자 서비스를 실행하는 계정입니다. 기본적으로 이 계정은 `SSISScaleOutWorker140`입니다.
 

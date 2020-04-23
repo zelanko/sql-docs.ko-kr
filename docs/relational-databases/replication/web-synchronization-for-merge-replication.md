@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: db49332ec2710586e9cae23c3e41ee4aff42b486
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2374100459ea4e6ee05a8bba8e77919ec9185898
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68136974"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529132"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>병합 복제에 대한 웹 동기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68136974"
   
  예를 들어 출장 중인 영업 담당자가 웹 동기화를 사용할 수 있습니다. [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]라는 회사의 영업 담당자는 전역에 있는 매장과 공급업체로 출장을 갑니다. 장기 출장인 경우 담당자는 호텔에 머무르면서 매일 업무가 끝날 때마다 판매 데이터를 업로드하고 제품 업데이트를 다운로드할 수 있는 편리한 방법이 필요합니다.  
   
- [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] IT 부서에서는 각 휴대용 컴퓨터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 구성하고 웹 동기화를 사용할 수 있도록 병합 복제를 설정했습니다. 각 휴대용 컴퓨터의 병합 에이전트에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인터넷 정보 서비스(IIS)를 실행하는 컴퓨터에 설치된 복제 구성 요소를 가리키는 인터넷 URL이 있습니다. 이러한 구성 요소는 구독자와 게시자를 동기화합니다. 각 담당자는 이제 원격 전화 접속 연결을 사용하지 않고도 사용 가능한 임의의 인터넷 연결을 통해 연결을 설정하여 해당 데이터를 업로드 및 다운로드할 수 있습니다. 인터넷 연결은 SSL(Secure Sockets Layer)을 사용하므로 VPN(가상 프라이빗 네트워크)이 필요하지 않습니다.  
+ [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] IT 부서에서는 각 휴대용 컴퓨터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 구성하고 웹 동기화를 사용할 수 있도록 병합 복제를 설정했습니다. 각 휴대용 컴퓨터의 병합 에이전트에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인터넷 정보 서비스(IIS)를 실행하는 컴퓨터에 설치된 복제 구성 요소를 가리키는 인터넷 URL이 있습니다. 이러한 구성 요소는 구독자와 게시자를 동기화합니다. 각 담당자는 이제 원격 전화 접속 연결을 사용하지 않고도 사용 가능한 임의의 인터넷 연결을 통해 연결을 설정하여 해당 데이터를 업로드 및 다운로드할 수 있습니다. 인터넷 연결은 이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안)를 사용하므로 VPN(가상 프라이빗 네트워크)이 필요하지 않습니다.  
   
  웹 동기화에 필요한 구성 요소를 구성하는 방법은 [웹 동기화 구성](../../relational-databases/replication/configure-web-synchronization.md), [웹 동기화를 위한 IIS 구성](../../relational-databases/replication/configure-iis-for-web-synchronization.md) 및 [웹 동기화를 위한 IIS 7 구성](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)을 참조하세요.  
   

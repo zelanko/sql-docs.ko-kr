@@ -1,5 +1,6 @@
 ---
 title: 보고서 서버 Windows 서비스(MSSQLServer) 107 | Microsoft Docs
+description: 이 오류 참조 페이지에서 이벤트 ID 107에 대해 알아봅니다. Report Server Windows Service (SQL Server)에서 보고서 서버 데이터베이스에 연결할 수 없습니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 52b5704b-27f9-400a-a821-d8fa0786afe4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0133ef77db176910c33ae8e78174cb5c3e507c3c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3d37bca818ecd0641f35cc3ff8a08493f7037a9a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65575542"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487767"
 ---
 # <a name="report-server-windows-service-mssqlserver-107"></a>Report Server Windows Service (MSSQLServer) 107
     

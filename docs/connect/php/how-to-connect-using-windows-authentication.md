@@ -1,5 +1,6 @@
 ---
-title: '방법: Windows 인증을 사용하여 연결 | Microsoft Docs'
+title: '방법: Windows 인증을 사용하여 연결'
+description: Drivers for PHP for SQL Server를 통해 Windows 통합 인증을 사용하여 연결하는 것이 어떤 의미인지 알아봅니다.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 066c58d9ee72f1160b84d4f4a3de9f7156a47d6e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4915343cf9ed7ebf730ac11360f10271c59e92c3
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916506"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634835"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>방법: Windows 인증을 사용하여 연결
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +32,7 @@ Windows 인증을 사용하여 SQL Server에 연결할 때 다음 사항을 고�
 -   SQL Server와 웹 서버가 서로 다른 컴퓨터에 있는 경우 SQL Server는 원격 연결을 사용하도록 구성되어야 합니다.  
   
 > [!NOTE]  
-> 연결을 설정할 때 *Database* 및 *ConnectionPooling* 등의 연결 특성을 설정할 수 있습니다. 지원되는 연결 특성의 전체 목록은 [Connection Options](../../connect/php/connection-options.md)을 참조하세요.  
+> 연결을 설정할 때 *Database* 및 *ConnectionPooling* 등의 연결 특성을 설정할 수 있습니다. 지원되는 연결 특성의 전체 목록은 [Connection Options](connection-options.md)을 참조하세요.  
   
 다음과 같은 이유로 가능하면 SQL Server에 연결하는 데 Windows 인증을 사용해야 합니다.  
   
@@ -39,7 +40,7 @@ Windows 인증을 사용하여 SQL Server에 연결할 때 다음 사항을 고�
   
 -   사용자가 중앙 집중식 계정 관리를 받습니다. 암호 만료 기간, 최소 암호 길이 및 잘못된 로그온 요청이 여러 번 있을 경우 계정 잠금 등의 보안 정책을 강제로 적용합니다.  
   
-Windows 인증이 실제 옵션이 아니면 [방법: SQL Server 인증을 사용하여 연결](../../connect/php/how-to-connect-using-sql-server-authentication.md)을 참조하세요.  
+Windows 인증이 실제 옵션이 아니면 [방법: SQL Server 인증을 사용하여 연결](how-to-connect-using-sql-server-authentication.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 SQLSRV 드라이버를 사용하는 경우 다음 예제에서는 Windows 인증을 사용하여 SQL Server의 로컬 인스턴스에 연결합니다. 연결이 설정된 후 데이터베이스에 액세스하는 사용자의 로그인에 대해 서버가 쿼리됩니다.  
@@ -105,11 +106,11 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ```  
   
 ## <a name="see-also"></a>참고 항목  
-[방법: SQL Server 인증을 사용하여 연결](../../connect/php/how-to-connect-using-sql-server-authentication.md)
+[방법: SQL Server 인증을 사용하여 연결](how-to-connect-using-sql-server-authentication.md)
 
-[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드 | Microsoft Docs](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드 | Microsoft Docs](programming-guide-for-php-sql-driver.md)
 
-[설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)
+[설명서의 코드 예제 정보](about-code-examples-in-the-documentation.md)
 
 [방법: SQL Server 로그인 만들기](../../relational-databases/security/authentication-access/create-a-login.md)
 

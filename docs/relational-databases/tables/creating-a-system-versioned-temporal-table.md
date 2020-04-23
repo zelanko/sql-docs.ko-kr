@@ -11,12 +11,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd7bcfd87f6ab51f2692d9d1a9ec11d9740aaab9
-ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
+ms.openlocfilehash: 8797219e96083d65d2bad83c83c8aebba783b207
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80809861"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299061"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>시스템 버전 관리 temporal 테이블 만들기
 
@@ -134,7 +134,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory));
 - DML 성능 향상
 - 유지 관리 비용 최소화
 
- 기존 테이블을 변환하는 경우 새 열을 처리하도록 설계되지 않은 기존 애플리케이션에 대한 영향을 피하기 위해 **HIDDEN** 절을 사용하여 새 **PERIOD** 열(**SysStartTime** 및 **SysEndTime** datetime2 열) 열을 숨기는 것을 고려하세요.
+ 기존 테이블을 변환하는 경우 열 이름을 명시적으로 지정하지 않아(예: 열 목록이 없는 SELECT * 또는 INSERT) 새 열을 처리하도록 설계되지 않은 기존 애플리케이션에 대한 영향을 피하기 위해 **HIDDEN** 절을 사용하여 새 **PERIOD** 열(**SysStartTime** 및 **SysEndTime** datetime2 열) 열을 숨기는 것을 고려하세요.
 
 ### <a name="adding-versioning-to-non-temporal-tables"></a>비temporal 테이블에 버전 관리 추가
 

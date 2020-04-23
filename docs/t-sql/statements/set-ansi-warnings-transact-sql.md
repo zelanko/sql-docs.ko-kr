@@ -1,7 +1,7 @@
 ---
 title: SET ANSI_WARNINGS(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/04/2017
+ms.date: 04/15/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7209914e92854dc301266625a0345336f787e4e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 141e7ddb6fb0f8d539af559532debe65c01b569f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67948010"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634457"
 ---
 # <a name="set-ansi_warnings-transact-sql"></a>SET ANSI_WARNINGS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "67948010"
   
 ## <a name="syntax"></a>구문
   
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
   
 SET ANSI_WARNINGS { ON | OFF }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
 
 SET ANSI_WARNINGS ON
@@ -73,8 +73,8 @@ sp_configure의 user options를 사용하여 서버의 모든 연결에 대해 A
 > [!IMPORTANT]
 > 분산 쿼리를 실행할 때는 ANSI_WARNINGS를 ON으로 설정해야 합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 연결될 때 자동으로 ANSI_WARNINGS를 ON으로 설정합니다. 이 옵션은 연결하기 전에 애플리케이션에 설정된 ODBC 데이터 원본과 ODBC 연결 특성에서 구성할 수 있습니다. DB-Library 애플리케이션으로부터 연결할 때 SET ANSI_WARNINGS의 기본값은 OFF입니다.  
-  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 Microsoft JDBC Driver와 같은 클라이언트는 연결 플래그를 사용하여 자동으로 ANSI_WARNINGS를 ON으로 설정합니다. 이 옵션은 연결하기 전에 애플리케이션에 설정된 ODBC 데이터 원본과 ODBC 연결 특성에서 구성할 수 있습니다. DB-Library 애플리케이션으로부터 연결할 때 SET ANSI_WARNINGS의 기본값은 OFF입니다. 자세한 내용은 TDS(Tabular Data Stream) 프로토콜 사양에서 [LOGIN7](https://docs.microsoft.com/openspecs/windows_protocols/ms-tds/773a62b6-ee89-4c02-9e5e-344882630aac)을 참조하세요. 
+
 ANSI_DEFAULTS 옵션이 ON이면 ANSI_WARNINGS가 활성화됩니다.  
   
 ANSI_WARNINGS 옵션은 실행 시 또는 런타임에 정의되며 구문 분석 시에는 정의되지 않습니다.  

@@ -1,5 +1,6 @@
 ---
-title: 통합 인증 사용 | Microsoft Docs
+title: 통합 인증 사용
+descrption: The Microsoft ODBC Driver for SQL Server on Linux and macOS supports connections that use Kerberos integrated authentication.
 ms.custom: ''
 ms.date: 01/20/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e938b9dc95daac7f8e5c4727e1e1185bd8dc8087
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 391d81c46640eb10a0ab2968f278412e55f57611
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921166"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629663"
 ---
 # <a name="using-integrated-authentication"></a>통합 인증 사용
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -32,9 +33,9 @@ Linux 및 macOS 기반 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] OD
 Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
 ```
   
-DSN과 연결하는 경우 **의 DSN 항목에** Trusted_Connection = yes`odbc.ini`를 추가할 수도 있습니다.
+DSN과 연결하는 경우 `odbc.ini`의 DSN 항목에 **Trusted_Connection = yes**를 추가할 수도 있습니다.
   
-또한 `-E`의 `sqlcmd` 옵션 및 `-T`의 `bcp`을 사용하여 통합 인증을 지정할 수 있습니다. 자세한 내용은 [**sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)를 사용하여 연결 및 [**bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)를 사용하여 연결을 참조하세요.
+또한 `sqlcmd`의 `-E` 옵션 및 `bcp`의 `-T`을 사용하여 통합 인증을 지정할 수 있습니다. 자세한 내용은 [**sqlcmd**](connecting-with-sqlcmd.md)를 사용하여 연결 및 [**bcp**](connecting-with-bcp.md)를 사용하여 연결을 참조하세요.
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결할 클라이언트 보안 주체가 이미 Kerberos KDC로 인증되었는지 확인합니다.
   
@@ -87,10 +88,10 @@ Kerberos 자격 증명이 설계에 따라 만료되므로 애플리케이션이
 통합된 인증을 구성한 후 자격 증명이 연결된 서버에 전달됩니다.  
   
 ## <a name="integrated-authentication-and-sqlcmd"></a>통합 인증 및 sqlcmd
-통합 인증을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 액세스하려면 `-E`의 `sqlcmd` 옵션을 사용합니다. `sqlcmd`를 실행하는 계정이 기본 Kerberos 클라이언트 보안 주체와 연결되었는지 확인합니다.
+통합 인증을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 액세스하려면 `sqlcmd`의 `-E` 옵션을 사용합니다. `sqlcmd`를 실행하는 계정이 기본 Kerberos 클라이언트 보안 주체와 연결되었는지 확인합니다.
 
 ## <a name="integrated-authentication-and-bcp"></a>통합 인증 및 bcp
-통합 인증을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 액세스하려면 `-T`의 `bcp` 옵션을 사용합니다. `bcp`를 실행하는 계정이 기본 Kerberos 클라이언트 보안 주체와 연결되었는지 확인합니다. 
+통합 인증을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 액세스하려면 `bcp`의 `-T` 옵션을 사용합니다. `bcp`를 실행하는 계정이 기본 Kerberos 클라이언트 보안 주체와 연결되었는지 확인합니다. 
   
 `-T`를 `-U` 또는 `-P` 옵션과 함께 사용하는 것은 오류입니다.
   
@@ -125,11 +126,11 @@ Linux 또는 macOS 컴퓨터의 시간과 KDC Kerberos KDC(Key Distribution Cent
 
 Kerberos 인증이 실패하는 경우 Linux 또는 macOS 기반 ODBC 드라이버가 NTLM 인증을 사용하지 않습니다.  
 
-Active Directory를 사용하여 Linux 또는 macOS 컴퓨터 인증에 대한 자세한 내용은 [Active Directory를 사용하여 Linux 인증](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) 및 [OS X와 Active Directory 통합 모범 사례](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf)를 참조하세요. Kerberos 구성에 대한 자세한 내용은 [MIT Kerberos 설명서](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)를 참조하세요.
+Active Directory를 사용하여 Linux 또는 macOS 컴퓨터를 인증하는 방법에 대한 자세한 내용은 [Active Directory를 사용하여 Linux 클라이언트 인증](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)을 참조하세요. Kerberos 구성에 대한 자세한 내용은 [MIT Kerberos 설명서](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목  
-[프로그래밍 지침](../../../connect/odbc/linux-mac/programming-guidelines.md)
+[프로그래밍 지침](programming-guidelines.md)
 
-[릴리스 정보](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+[릴리스 정보](release-notes-odbc-sql-server-linux-mac.md)
 
-[Azure Active Directory 사용](../../../connect/odbc/using-azure-active-directory.md)
+[Azure Active Directory 사용](../using-azure-active-directory.md)

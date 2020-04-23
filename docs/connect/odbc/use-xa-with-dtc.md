@@ -1,5 +1,6 @@
 ---
-title: Microsoft ODBC Driver for SQL Server와 XA 사용 | Microsoft Docs
+title: Microsoft ODBC 드라이버를 통해 XA 사용
+description: Microsoft ODBC Driver for SQL Server는 Windows, Linux 및 macOS에서 DTC(Distributed Transaction Coordinator)와 XA 트랜잭션을 지원합니다.
 ms.custom: ''
 ms.date: 02/04/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: fc73cec066671c70699b4baa1dc75d249b1860c3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ba11ff1bee512b0e3ea7b2b641ac6dc64f60adc9
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77544930"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635549"
 ---
 # <a name="using-xa-transactions"></a>XA 트랜잭션 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "77544930"
 
 ## <a name="overview"></a>개요
 
-버전 17.3부터 Microsoft ODBC Driver for SQL Server는 Windows, Linux 및 Mac에서 DTC(Distributed Transaction Coordinator)와 XA 트랜잭션을 지원합니다. 드라이버 측의 XA 구현을 통해 클라이언트 애플리케이션이 TM(트랜잭션 관리자)에 작업(예: 트랜잭션 분기 시작, 커밋, 롤백 등)을 보낼 수 있습니다. 그런 다음, TM은 이러한 작업에 따라 RM(Resource Manager)과 통신합니다. XA 사양 및 DTC(MS DTC)의 Microsoft 구현에 대한 자세한 내용은 [작동 방식: SQL Server DTC(MSDTC 및 XA 트랜잭션)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/)을 참조하세요.
+버전 17.3부터 Microsoft ODBC Driver for SQL Server는 Windows, Linux 및 macOS에서 DTC(Distributed Transaction Coordinator)와 XA 트랜잭션을 지원합니다. 드라이버 측의 XA 구현을 통해 클라이언트 애플리케이션이 TM(트랜잭션 관리자)에 작업(예: 트랜잭션 분기 시작, 커밋, 롤백 등)을 보낼 수 있습니다. 그런 다음, TM은 이러한 작업에 따라 RM(Resource Manager)과 통신합니다. XA 사양 및 DTC(MS DTC)의 Microsoft 구현에 대한 자세한 내용은 [작동 방식: SQL Server DTC(MSDTC 및 XA 트랜잭션)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/)을 참조하세요.
 
 
 
@@ -49,16 +50,16 @@ typedef struct XACallParam {
 `XACALLPARAM` 구조체의 크기입니다. `XACALLPARAM` 다음의 데이터 크기를 제외합니다.
 
 *operation*  
-TM에 전달할 XA 작업입니다. 가능한 작업은 [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh)에 정의됩니다.
+TM에 전달할 XA 작업입니다. 가능한 작업은 [xadefs.h](use-xa-with-dtc.md#xadefsh)에 정의됩니다.
 
 *xid*  
 트랜잭션 분기 식별자입니다.
 
 *flags*  
-TM 요청에 연결된 플래그입니다. 가능한 값은 [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh)에 정의됩니다.
+TM 요청에 연결된 플래그입니다. 가능한 값은 [xadefs.h](use-xa-with-dtc.md#xadefsh)에 정의됩니다.
 
 *status*  
-TM에서 상태를 반환합니다. 가능한 반환 상태는 [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) 헤더를 참조하세요.
+TM에서 상태를 반환합니다. 가능한 반환 상태는 [xadefs.h](use-xa-with-dtc.md#xadefsh) 헤더를 참조하세요.
 
 *sizeData*  
 `XACALLPARAM` 다음의 데이터 버퍼 크기입니다. 
@@ -75,7 +76,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XA
 
 ## <a name="code-sample"></a>코드 예제 
 
-다음 예제에서는 XA 트랜잭션에 대해 TM과 통신하고 클라이언트 애플리케이션에서 다른 작업을 실행하는 방법을 보여 줍니다. Microsoft SQL Server에 대해 테스트를 실행하는 경우에는 XA 트랜잭션을 사용하도록 MS DTC를 적절히 구성해야 합니다. XA 정의는 [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) 헤더 파일에서 찾을 수 있습니다. 
+다음 예제에서는 XA 트랜잭션에 대해 TM과 통신하고 클라이언트 애플리케이션에서 다른 작업을 실행하는 방법을 보여 줍니다. Microsoft SQL Server에 대해 테스트를 실행하는 경우에는 XA 트랜잭션을 사용하도록 MS DTC를 적절히 구성해야 합니다. XA 정의는 [xadefs.h](#xadefsh) 헤더 파일에서 찾을 수 있습니다. 
 
 ```
 

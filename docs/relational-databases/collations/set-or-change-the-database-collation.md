@@ -13,22 +13,19 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2221d88e5f564b08f993f68f9be4131588aebe2a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1f36317fd3572b0fd3b8e7f45cecd735c26da8f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78866112"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388070"
 ---
 # <a name="set-or-change-the-database-collation"></a>데이터베이스 데이터 정렬 설정 또는 변경
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 데이터베이스 데이터 정렬을 설정하고 변경하는 방법에 대해 설명합니다. 데이터 정렬을 지정하지 않으면 서버 데이터 정렬이 사용됩니다.  
   
 > [!IMPORTANT]
-> 데이터베이스 데이터 정렬 변경은 Azure SQL Database에서 명시적으로 금지되지 않습니다. 그러나 데이터베이스 데이터 정렬을 변경하려면 데이터베이스 및 기타 사용자에 대한 배타적 잠금이 필요하며, 없는 경우 백그라운드 프로세스(예: 백업을 수행하는 백그라운드)에서 데이터베이스 잠금을 유지하여 데이터 정렬이 변경되지 않을 수 있습니다. 백그라운드 프로세스가 데이터베이스에 액세스하는 동안 Azure SQL Database에서 `ALTER DATABASE COLLATE` 문을 실행하는 경우 실패하게 됩니다. 잠금 시간 초과 오류가 발생하는 경우 문을 다시 시도해야 합니다. 
- 
-> [!NOTE]
-> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 데이터베이스를 만든 후에는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]를 사용하여 데이터 정렬을 변경할 수 없습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]를 통해서만 변경할 수 있습니다.
+> 데이터베이스 데이터 정렬 변경은 Azure SQL Database에서 명시적으로 금지되지 않습니다. 그러나 데이터베이스 데이터 정렬을 변경하려면 데이터베이스 및 기타 사용자에 대한 배타적 잠금이 필요하며, 없는 경우 백그라운드 프로세스(예: 백업을 수행하는 백그라운드)에서 데이터베이스 잠금을 유지하여 데이터 정렬이 변경되지 않을 수 있습니다. `ALTER DATABASE COLLATE`Azure SQL Database의 문은 지원되지 않습니다.
 
  **항목 내용**  
   
@@ -54,7 +51,7 @@ ms.locfileid: "78866112"
   
 -   지정된 데이터 정렬 또는 참조된 개체가 사용하는 데이터 정렬에서 Windows가 지원하지 않는 코드 페이지를 사용하는 경우에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 오류가 나타납니다.  
 
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 데이터베이스를 만든 후에는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]를 사용하여 데이터 정렬을 변경할 수 없습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]를 통해서만 변경할 수 있습니다.
+-   [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 데이터베이스를 만든 후에는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 데이터 정렬을 변경할 수 없습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]를 통해서만 변경할 수 있습니다.
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
@@ -68,12 +65,12 @@ ms.locfileid: "78866112"
   
 -   **char**, **varchar**, **text**, **nchar**, **nvarchar**또는 **ntext** 시스템 데이터 형식 및 이러한 시스템 데이터 형식을 기반으로 하는 모든 사용자 정의 데이터 형식이 새 기본 데이터 정렬로 변경됩니다.  
   
-사용자 데이터베이스에서 새로 만든 새 개체의 데이터 정렬은 `COLLATE`ALTER DATABASE[ 문의 ](../../t-sql/statements/alter-database-transact-sql.md) 절을 사용하여 변경할 수 있습니다. 이 문은 기존 사용자 정의 테이블에 있는 열의 데이터 정렬은 **변경하지 않습니다**. 이러한 열은 `COLLATE`ALTER TABLE[의 ](../../t-sql/statements/alter-table-transact-sql.md) 절을 사용하여 변경할 수 있습니다.  
+사용자 데이터베이스에서 새로 만든 새 개체의 데이터 정렬은 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문의 `COLLATE` 절을 사용하여 변경할 수 있습니다. 이 문은 기존 사용자 정의 테이블에 있는 열의 데이터 정렬은 **변경하지 않습니다**. 이러한 열은 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)의 `COLLATE` 절을 사용하여 변경할 수 있습니다.  
   
 ###  <a name="security"></a><a name="Security"></a> 보안  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> 권한  
- 새 데이터베이스를 만들려면 `CREATE DATABASE`마스터**데이터베이스에서** 권한이 필요하거나, `CREATE ANY DATABASE` 또는 `ALTER ANY DATABASE` 권한이 필요합니다.  
+ 새 데이터베이스를 만들려면 **마스터** 데이터베이스에서 `CREATE DATABASE` 권한이 필요하거나, `CREATE ANY DATABASE` 또는 `ALTER ANY DATABASE` 권한이 필요합니다.  
   
  기존 데이터베이스의 데이터 정렬을 변경하려면 데이터베이스에 대한 `ALTER` 권한이 필요합니다.  
   

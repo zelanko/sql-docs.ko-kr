@@ -16,29 +16,31 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3eedcac9715dec28d3a0ee785effa450d7309c89
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6f954ae7a2b2316acd70450db4f986b80b6ef73d
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80342918"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528267"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Microsoft SQL Server Express LocalDB는 개발자를 대상으로 하는 [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-2016.md) 기능입니다. SQL Server Express with Advanced Services에서 사용할 수 있습니다.
+Microsoft SQL Server Express LocalDB는 개발자를 대상으로 하는 [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-version-15.md) 기능입니다. SQL Server Express with Advanced Services에서 사용할 수 있습니다.
 
 LocalDB를 설치하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 시작하는 데 필요한 최소한의 파일 집합이 복사됩니다. LocalDB가 설치되면 특수 연결 문자열을 사용하여 연결을 시작할 수 있습니다. 연결할 때, 필요한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인프라가 자동으로 생성되고 시작되므로 복잡한 구성 태스크 없이 애플리케이션에서 데이터베이스를 사용하도록 할 수 있습니다. 개발자 도구는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 전체 서버 인스턴스를 관리할 필요 없이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 작성하고 테스트할 수 있게 해주는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 엔진을 개발자에게 제공합니다. 
 
-## <a name="try-it-out"></a>사용해 보세요! 
+## <a name="installation-media"></a>설치 미디어 
 
-- SQL Server Express LocalDB를 다운로드하고 설치하려면 **[SQL Server 다운로드](https://www.microsoft.com/sql-server/sql-server-downloads)** 로 이동하세요. LocalDB는 설치 중에 선택하는 기능이며, 미디어를 다운로드할 때 사용할 수 있습니다. 미디어를 다운로드하려면 **Express Advanced** 또는 LocalDB 패키지를 선택합니다. **Visual Studio 설치 관리자**에서 **.NET 데스크톱 개발** 워크로드의 일부로 또는 개별 구성 요소로서 SQL Server Express LocalDB를 설치할 수 있습니다.
+LocalDB는 SQL Server Express 설치 중에 선택하는 기능이며, 미디어를 다운로드할 때 사용할 수 있습니다. 미디어를 다운로드하려면 **Express Advanced** 또는 LocalDB 패키지를 선택합니다. 
 
- >[!TIP]
- > 또한 LocalDB를 Visual Studio의 일부로 설치할 수도 있습니다. Visual Studio 설치 중에 SQL Server Express LocalDB를 포함하는 **.NET 데스크톱 개발** 워크로드를 선택합니다.
+- [SQL Server Express 2019](https://go.microsoft.com/fwlink/?LinkID=866658)
+- [SQL Server Express 2017](https://go.microsoft.com/fwlink/?LinkID=853017)
+- [SQL Server Express 2016](https://go.microsoft.com/fwlink/?LinkID=799012)
 
-- Azure 계정이 있으세요? SQL Server가 이미 설치된 가상 머신을 [시작](https://azure.microsoft.com/services/virtual-machines/sql-server/)하고 실행하세요.
+또는 **데이터 스토리지 및 처리** 워크로드의 일부로, **ASP.NET 및 웹 개발** 워크로드의 일부로 또는 개별 구성 요소로 [Visual Studio 설치 관리자](https://visualstudio.microsoft.com/downloads/)를 통해 LocalDB를 설치할 수 있습니다.
+
 
 ## <a name="install-localdb"></a>LocalDB 설치
 
@@ -92,8 +94,11 @@ LocalDB는 자동 인스턴스 및 명명된 인스턴스의 두 가지 인스�
 
 LocalDB를 사용하는 가장 쉬운 방법은 연결 문자열 `Server=(localdb)\MSSQLLocalDB;Integrated Security=true`을(를) 사용하여 현재 사용자가 소유한 자동 인스턴스에 연결하는 것입니다. 파일 이름을 사용하여 특정 데이터베이스에 연결하려면 `Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf`와 비슷한 연결 문자열을 사용하여 연결합니다.
 
+SQL Server 2014에서 LocalDB 형식에 대한 명명 규칙 및 연결 문자열이 변경 되었습니다. 이전에 인스턴스 이름은 단일 v 문자고 그 뒤에 LocalDB와 버전 번호가 있습니다. SQL Server 2014부터 이 인스턴스 이름 형식은 더 이상 지원되지 않으며, 이전에 언급된 연결 문자열을 대신 사용해야 합니다.  
+
 >[!NOTE]
->컴퓨터에서 사용자가 처음으로 LocalDB에 연결하려고 시도하는 경우 자동 인스턴스가 생성되고 시작되어야 합니다. 인스턴스를 만드는 추가 시간으로 인해 시간 초과 메시지와 함께 연결 시도가 실패할 수 있습니다. 이 경우 만들기 프로세스가 완료되도록 몇 초 정도 기다린 후에 다시 연결하세요.
+> - 컴퓨터에서 사용자가 처음으로 LocalDB에 연결하려고 시도하는 경우 자동 인스턴스가 생성되고 시작되어야 합니다. 인스턴스를 만드는 추가 시간으로 인해 시간 초과 메시지와 함께 연결 시도가 실패할 수 있습니다. 이 경우 만들기 프로세스가 완료되도록 몇 초 정도 기다린 후에 다시 연결하세요.
+
 
 ### <a name="create-and-connect-to-a-named-instance"></a>명명된 인스턴스를 만들고 연결합니다.
 

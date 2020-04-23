@@ -1,5 +1,6 @@
 ---
 title: rsInternalError - Reporting Services 오류 | Microsoft Docs
+description: 이 오류 참조 페이지에서 이벤트 ID 107 'rsInternalError'에 대해 알아봅니다. 보고서 서버에서 내부 오류가 발생했습니다. 자세한 내용은 오류 로그를 참고하세요.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 52613d52-fc78-4870-93f0-7d393ab9c335
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e7257e1c7a24786e580ce8d2c2da9bd52ac5b86c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3f134f1c071b62c1c32f48855f76f62d5a1b0a69
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573995"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487246"
 ---
 # <a name="rsinternalerror---reporting-services-error"></a>rsInternalError - Reporting Services 오류
     

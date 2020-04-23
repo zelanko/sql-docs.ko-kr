@@ -3,17 +3,17 @@ title: SQL Server 2017 및 2019에 대한 Linux 리포지토리 구성
 description: Linux에서 SQL Server 2019 및 SQL Server 2017의 원본 리포지토리를 확인하고 구성합니다. 원본 리포지토리는 설치 및 업그레이드 중에 적용되는 SQL Server 버전에 영향을 줍니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/12/2020
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 5f302c774ccb4c3f98722e4b416968a813f951bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7253fb18ea783a1fb7aeec77aa73b9a899ec6ae9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79198430"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301704"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>SQL Server on Linux 설치 및 업그레이드를 위한 리포지토리 구성
 
@@ -158,13 +158,13 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 필요한 경우 이전 리포지토리를 제거합니다. 이전에 구성한 리포지토리의 유형에 따라 다음 명령 중 하나를 사용합니다.
 
 > [!NOTE]
-> SQL Server 2019 CU3부터 Ubuntu 18.04가 지원됩니다. Ubuntu 16.04를 사용하는 경우 아래 경로를 `/ubuntu/18.04` 대신 `/ubuntu/16.04`로 변경합니다.
+> SQL Server 2019 CU3 및 SQL Server 2017 CU20부터 Ubuntu 18.04가 지원됩니다. Ubuntu 16.04를 사용하는 경우 아래 경로를 `/ubuntu/18.04`대신 `/ubuntu/16.04`로 변경하고 올바른 [배포 코드 이름](https://releases.ubuntu.com/)을 사용합니다.
 
 | 리포지토리 | 제거할 명령 |
 |---|---|
 | **미리 보기(2019)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview xenial main'` |
-| **2019 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019 xenial main'` | 
-| **2019 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019-gdr xenial main'` |
+| **2019 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019 bionic main'` | 
+| **2019 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019-gdr bionic main'` |
 | **2017 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
 | **2017 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
@@ -179,14 +179,16 @@ SQL Server 설치 및 업그레이드에 사용할 새 리포지토리를 구성
 > [!NOTE]
 > SQL Server 2019에 대한 다음 명령은 RHEL 8 리포지토리를 가리킵니다. RHEL 8에는 SQL Server에 필요한 python2이 사전 설치되어 있지 않습니다. 자세한 내용은 python2 설치 및 기본 인터프리터로 구성하는 방법에 대한 블로그(https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta )를 참조하세요.
 >
-> RHEL 7을 사용 중인 경우 아래 경로를 `/rhel/8` 대신 `/rhel/7`(으)로 변경합니다.
+> SQL Server 2017 CU20부터 RHEL 8이 지원됩니다.
+>
+> RHEL 7 또는 RHEL 8을 사용하는 경우 경로가 `/rhel/7` 또는 `/rhel/8`과 일치하는지 확인합니다.
 
 | 리포지토리 | 버전 | 명령 |
 |---|---|---|
 | **2019 CU** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo` |
 | **2019 GDR** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019-gdr.repo` |
-| **2017 CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
-| **2017 GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+| **2017 CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2017.repo` |
+| **2017 GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2017-gdr.repo` |
 
 ::: zone-end
 
@@ -208,7 +210,7 @@ SQL Server 설치 및 업그레이드에 사용할 새 리포지토리를 구성
 SQL Server 설치 및 업그레이드에 사용할 새 리포지토리를 구성합니다.
 
 > [!NOTE]
-> SQL Server 2019 CU3부터 Ubuntu 18.04가 지원됩니다. SQL Server 2019에서 다음 명령은 Ubuntu 18.04 리포지토리를 가리킵니다.
+> SQL Server 2019 CU3 및 SQL Server 2017 CU20부터 Ubuntu 18.04가 지원됩니다. 다음 명령은 Ubuntu 18.04 리포지토리를 가리킵니다.
 >
 > Ubuntu 16.04를 사용하는 경우 아래 경로를 `/ubuntu/18.04` 대신 `/ubuntu/16.04`로 변경합니다.
 
@@ -224,8 +226,8 @@ SQL Server 설치 및 업그레이드에 사용할 새 리포지토리를 구성
    |---|---|---|
    | **2019 CU** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"` |
    | **2019 GDR** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019-gdr.list)"` |
-   | **2017 CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
-   | **2017 GDR** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
+   | **2017 CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2017.list)"` |
+   | **2017 GDR** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2017-gdr.list)"` |
 
 3. **apt-get update**를 실행합니다.
 

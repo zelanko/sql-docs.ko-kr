@@ -1,5 +1,6 @@
 ---
 title: JDBC 드라이버 개요 | Microsoft Docs
+description: Microsoft JDBC Driver for SQL Server는 SQL 데이터베이스에 대한 데이터 액세스를 제공하는 유형 4 JDBC(Java Database Connectivity) 4.2 규격 드라이버입니다.
 ms.custom: ''
 ms.date: 10/28/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e22698cc939b3ad3d5cea70583ee97166869d19a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a405918283f1e72c63cf56bd6ac9da1bcb498d36
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920355"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529341"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>JDBC 드라이버 개요
 

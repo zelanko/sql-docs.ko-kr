@@ -11,12 +11,12 @@ ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: b6d1328c7bbdebe90a2e30118f67123214008989
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dde55bd4afd162869606e336126c32c274ea7445
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918215"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633320"
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>1단계: ADO.NET 개발을 위한 개발 환경 구성
 
@@ -26,7 +26,7 @@ ms.locfileid: "80918215"
 
 ## <a name="download-a-net-sql-driver"></a>.NET SQL 드라이버 다운로드
 
-현재 코드 예제에서는 Windows용 .NET Framework의 ADO.NET을 사용합니다. .NET Core는 Windows 외에도 Linux 및 MacOS에서 사용할 수 있습니다.
+현재 코드 예제에서는 Windows용 .NET Framework의 ADO.NET을 사용합니다. .NET Core는 Windows 외에도 Linux 및 macOS에서 사용할 수 있습니다.
 
 ### <a name="adonet-for-windows"></a>Windows용 ADO.NET
 
@@ -37,7 +37,7 @@ ms.locfileid: "80918215"
     - [무료 Visual Studio에 대한 더 많은 옵션](https://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
 
 
-### <a name="net-core-for-linux-ubuntu-and-macos"></a>Linux-Ubuntu 및 MacOS용 .NET Core
+### <a name="net-core-for-linux-ubuntu-and-macos"></a>Linux-Ubuntu 및 macOS용 .NET Core
 
 운영 체제별 .NET Core의 다운로드 링크는 다음에서 제공됩니다.
 

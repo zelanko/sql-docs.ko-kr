@@ -1,5 +1,6 @@
 ---
 title: SQL Server용 Python 드라이버 | Microsoft Docs
+description: Windows, Linux 또는 macOS에서 Python을 사용하여 SQL Database에 연결할 수 있습니다.
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be70fb850262c6825ea45fdf5533f0304b702146
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 347e6e386c0e634ce94b3341334d1463fd5e729d
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926754"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487872"
 ---
 # <a name="python-sql-driver"></a>Python SQL Driver
 
 ![](../../ssms/media/download-icon.png)[Python용 SQL 드라이버를 설치하려면](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Windows, Linux 또는 Mac에서 Python을 사용하여 SQL Database에 연결할 수 있습니다.   
+Windows, Linux 또는 macOS에서 Python을 사용하여 SQL Database에 연결할 수 있습니다.  
   
 ## <a name="getting-started"></a>시작하기  
 사용할 수 있는 Python SQL 드라이버가 몇 가지 있습니다. 그러나 Microsoft는 **pyodbc** 드라이버를 주로 테스트했으며 이 드라이버를 권장합니다. 드라이버를 선택하고 그에 따라 개발 환경을 구성합니다.

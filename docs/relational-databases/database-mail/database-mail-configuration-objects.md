@@ -32,16 +32,16 @@ helpviewer_keywords:
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a591ccc983732fe09a74db12c4b9f6a5a713955
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68134427"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529437"
 ---
 # <a name="database-mail-configuration-objects"></a>데이터베이스 메일 구성 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  데이터베이스 메일에는 두 가지 구성 개체가 있습니다. 데이터베이스 구성 개체를 사용하면 데이터베이스 애플리케이션 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 전자 메일을 보낼 때 데이터베이스 모델에서 사용할 설정을 구성할 수 있습니다.  
+  데이터베이스 메일에는 두 가지 구성 개체가 있습니다. 데이터베이스 구성 개체를 사용하면 데이터베이스 애플리케이션 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 메일을 보낼 때 데이터베이스 메일에 사용할 설정을 구성할 수 있습니다.  
   
 -   데이터베이스 메일 계정  
   
@@ -59,11 +59,11 @@ ms.locfileid: "68134427"
   
  데이터베이스 메일은 SMTP 서버와 통신하는 다음 3가지 인증 방법을 지원합니다.  
   
--   Windows 인증: 데이터베이스 메일은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Windows 서비스 계정의 자격 증명을 SMTP 서버 인증에 사용합니다.  
+-   Windows 인증: 데이터베이스 메일이 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Windows 서비스 계정의 자격 증명을 사용하여 SMTP 서버에 인증합니다.  
   
--   기본 인증: 데이터베이스 메일은 SMTP 서버 인증에 지정된 사용자 이름과 암호를 사용합니다.  
+-   기본 인증:  데이터베이스 메일이 지정된 사용자 이름과 암호를 사용하여 SMTP 서버에 인증합니다.  
   
--   익명 인증: SMTP 서버에 인증이 필요하지 않습니다.  데이터베이스 메일은 SMTP 서버 인증에 자격 증명을 사용하지 않습니다.  
+-   익명 인증:  SMTP 서버에 인증이 필요하지 않습니다.  데이터베이스 메일은 SMTP 서버 인증에 자격 증명을 사용하지 않습니다.  
   
  계정 정보는 **msdb** 데이터베이스에 저장됩니다. 각 계정은 다음 정보로 구성됩니다.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "68134427"
   
 -   전자 메일 서버의 포트 번호  
   
--   SSL(Secure Sockets Layer)을 사용하여 SMTP 메일 서버에 연결하는지 여부를 나타내는 bit 열  
+-   이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안)를 사용하여 SMTP 메일 서버에 연결하는지 여부를 나타내는 bit 열  
   
 -   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 대해 구성된 자격 증명을 사용하여 SMTP 서버에 연결하는지 여부를 나타내는 bit 열  
   

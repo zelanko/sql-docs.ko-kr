@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 270075c5-bf12-4467-a775-abbda3d954a5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 03234369ed7422433b35a5e3d296f6db1d1b2223
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 189c0d314ba3f16b00ad570b3e0f9fbce9fa2f7e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570654"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632423"
 ---
 # <a name="reporting-services-security-and-protection"></a>Reporting Services 보안 및 보호
   이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 보안 기능에 대해 설명합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 지원되는 권한 부여 모델 및 인증 공급자에 대해서도 설명합니다.  
@@ -33,6 +33,6 @@ ms.locfileid: "65570654"
   
 |태스크 설명|링크|  
 |-----------------------|-----------|  
-|SSL(Secure Socket Layer)를 구성하여 클라이언트와 보고서 서버의 연결에 보안을 설정합니다.|[기본 모드 보고서 서버에서 SSL 연결 구성](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)|  
+|이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안)를 구성하여 보고서 서버에 대한 클라이언트 연결을 보호합니다.|[기본 모드 보고서 서버에서 TLS 연결 구성](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)|  
   
   
