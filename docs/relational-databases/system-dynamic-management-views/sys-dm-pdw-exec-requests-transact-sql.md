@@ -12,12 +12,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 851c138e00300a303b1618041a16e2c38516968e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 4f4ebcbf84da7d899b4d4cbd861cfb2ae3f75863
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81301273"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087563"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (거래 SQL)
 
@@ -34,15 +34,15 @@ ms.locfileid: "81301273"
 |start_time|**datetime**|요청 실행이 시작된 시간입니다.|큐에 대기된 요청에 대해 NULL; 그렇지 않으면 유효한 **날짜 시간이** 현재 시간으로 작거나 동일합니다.|  
 |end_compile_time|**datetime**|엔진이 요청 컴파일을 완료한 시간입니다.|아직 컴파일되지 않은 요청에 대해 NULL; 그렇지 않으면 유효한 **날짜 시간이** start_time 미만이고 현재 시간보다 낮거나 같습니다.|
 |end_time|**datetime**|요청 실행이 완료, 실패 또는 취소된 시간입니다.|큐에 대기 중인 요청 또는 활성 요청에 대해 Null; 그렇지 않으면 유효한 **날짜 시간이** 현재 시간으로 작거나 동일합니다.|  
-|total_elapsed_time|**Int**|요청이 시작된 이후 실행 시간이 밀리초 단위로 경과했습니다.|0과 start_time end_time 차이.</br></br> total_elapsed_time 정수의 최대값을 초과하면 total_elapsed_time 계속 최대값이 됩니다. 이 조건은 "최대값이 초과되었습니다"라는 경고를 생성합니다.</br></br> 밀리초의 최대값은 24.8일과 동일합니다.|  
+|total_elapsed_time|**int**|요청이 시작된 이후 실행 시간이 밀리초 단위로 경과했습니다.|0과 start_time end_time 차이.</br></br> total_elapsed_time 정수의 최대값을 초과하면 total_elapsed_time 계속 최대값이 됩니다. 이 조건은 "최대값이 초과되었습니다"라는 경고를 생성합니다.</br></br> 밀리초의 최대값은 24.8일과 동일합니다.|  
 |label|**nvarchar(255)**|일부 SELECT 쿼리 문과 연결된 선택적 레이블 문자열입니다.|'a-z', 'A-Z','0-9',''_'를 포함하는 모든 문자열.|  
 |error_id|**은바르차르 (36)**|요청과 연결된 오류의 고유 ID(있는 경우)입니다.|[sys.dm_pdw_errors &#40;거래-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md)참조하십시오. 오류가 발생하지 않은 경우 NULL로 설정합니다.|  
-|database_id|**Int**|명시적 컨텍스트에서 사용하는 데이터베이스의 식별자(예: USE DB_X).|[transact-SQL&#41;&#40;sys.데이터베이스의 ID를 ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)참조하십시오.|  
+|database_id|**int**|명시적 컨텍스트에서 사용하는 데이터베이스의 식별자(예: USE DB_X).|[transact-SQL&#41;&#40;sys.데이터베이스의 ID를 ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)참조하십시오.|  
 |command|**nvarchar(4000)**|사용자가 제출한 요청의 전체 텍스트를 보유합니다.|유효한 쿼리 또는 요청 텍스트입니다. 4000바이트보다 긴 쿼리는 잘립니다.|  
 |resource_class|**nvarchar (20)**|이 요청에 사용된 워크로드 그룹입니다. |정적 리소스 클래스</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>동적 리소스 클래스</br>스몰RC</br>미디엄 RC</br>라지RC</br>XLargeRC|
-|importance|**엔바르차르 (128)**|실행된 요청을 설정하는 중요도입니다.  이는 이 워크로드 그룹 및 공유 리소스에 대한 워크로드 그룹 간 요청의 상대적 중요성입니다.  분류자에 지정된 중요도는 워크로드 그룹 중요도 설정을 재정의합니다.</br>적용 대상: Azure SQL Data Warehouse|NULL</br>low</br>below_normal</br>일반(기본값)</br>above_normal</br>high|
-|group_name|**Sysname** |리소스를 사용하는 요청의 경우 group_name 요청이 실행 중인 워크로드 그룹의 이름입니다.  요청이 리소스를 사용하지 않는 경우 group_name null입니다.</br>적용 대상: Azure SQL Data Warehouse|
-|classifier_name|**Sysname**|리소스를 사용하는 요청의 경우 리소스 및 중요도를 할당하는 데 사용되는 분류자의 이름입니다.||
+|importance|**nvarchar(128)**|실행된 요청을 설정하는 중요도입니다.  이는 이 워크로드 그룹 및 공유 리소스에 대한 워크로드 그룹 간 요청의 상대적 중요성입니다.  분류자에 지정된 중요도는 워크로드 그룹 중요도 설정을 재정의합니다.</br>적용 대상: Azure SQL Data Warehouse|NULL</br>low</br>below_normal</br>일반(기본값)</br>above_normal</br>high|
+|group_name|**sysname** |리소스를 사용하는 요청의 경우 group_name 요청이 실행 중인 워크로드 그룹의 이름입니다.  요청이 리소스를 사용하지 않는 경우 group_name null입니다.</br>적용 대상: Azure SQL Data Warehouse|
+|classifier_name|**sysname**|리소스를 사용하는 요청의 경우 리소스 및 중요도를 할당하는 데 사용되는 분류자의 이름입니다.||
 |resource_allocation_percentage|**십진수 (5,2)**|요청에 할당된 리소스의 백분율 양입니다.</br>적용 대상: Azure SQL Data Warehouse|
 |result_cache_hit|**16 진수**|완료된 쿼리가 결과 집합 캐시를 사용했는지 여부를 자세히 설명합니다.  </br>적용 대상: Azure SQL Data Warehouse| 1 = 결과 세트 캐시 적중 </br> 0 = 결과 세트 캐시 누락 </br> 음수 값 = 결과 집합 캐싱이 사용되지 않은 이유입니다.  자세한 내용은 비고 섹션을 참조하십시오.|
 ||||
@@ -62,7 +62,7 @@ ms.locfileid: "81301273"
 |-**0x08**|행 수준 보안 조건으로 인해 결과 집합 캐싱이 비활성화됩니다.|  
 |-**0x10**|쿼리에서 시스템 테이블, 임시 테이블 또는 외부 테이블을 사용하기 때문에 결과 집합 캐싱이 비활성화됩니다.|  
 |-**0x20**|쿼리에 런타임 상수, 사용자 정의 함수 또는 비결정 함수가 포함되어 있으므로 결과 집합 캐싱이 비활성화됩니다.|  
-|-**0x40**|예상 결과 집합 크기가 너무 커서 결과 집합 캐싱이 비활성화됩니다(> 1백만 행).|  
+|-**0x40**|결과 집합 캐싱은 예상 결과 집합 크기가 10GB>때문에 비활성화됩니다.|  
 |-**0x80**|결과 집합에는 크기가 큰 행(>64kb)이 포함되어 있으므로 결과 집합 캐싱이 비활성화됩니다.|  
   
 ## <a name="permissions"></a>사용 권한

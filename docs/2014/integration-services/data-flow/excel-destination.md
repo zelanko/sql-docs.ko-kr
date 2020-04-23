@@ -15,12 +15,12 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 84647752eb549bd5d3607637d679e58356597a6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3f736d03a573f61ed31e0cb95c1768907f8a9560
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62827226"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087163"
 ---
 # <a name="excel-destination"></a>Excel 대상
   Excel 대상은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 통합 문서의 워크시트 또는 범위로 데이터를 로드합니다.  
@@ -48,10 +48,9 @@ ms.locfileid: "62827226"
   
      작은따옴표가 포함되지 않도록 하는 방법에 대한 내용은 msdn.com의 블로그 게시물 중 [SSIS 패키지에서 Excel 대상 데이터 흐름 구성 요소를 사용하여 Excel로 데이터를 변환할 때 모든 문자열에 추가되는 작은따옴표](https://go.microsoft.com/fwlink/?LinkId=400876)(영문)를 참조하세요.  
   
--   **메모 (ntext) da**Ta를 저장 합니다. 255자보다 긴 문자열을 Excel 열에 저장하려면 드라이버에서 대상 열의 데이터 형식을 **string** 이 아닌 **memo**로 인식해야 합니다. 대상 테이블에 이미 데이터 행이 포함된 경우 드라이버에서 샘플링하는 처음 몇 개 행의 메모 열에 값이 255자보다 긴 인스턴스가 하나 이상 들어 있어야 합니다. 패키지 디자인 또는 런타임에 대상 테이블을 만드는 경우 CREATE TABLE 문은 메모 열의 데이터 형식으로 LONGTEXT (또는 해당 동의어 중 하나)를 사용 해야 합니다.  
+-   **메모(ntext) 데이터 저장**. 255자보다 긴 문자열을 Excel 열에 저장하려면 드라이버에서 대상 열의 데이터 형식을 **string** 이 아닌 **memo**로 인식해야 합니다. 대상 테이블에 이미 데이터 행이 포함된 경우 드라이버에서 샘플링하는 처음 몇 개 행의 메모 열에 값이 255자보다 긴 인스턴스가 하나 이상 들어 있어야 합니다. 대상 테이블이 패키지 디자인 중에 또는 런타임에 만들어지는 경우 CREATE TABLE 문은 LONGTEXT(또는 동의어 중 하나)를 메모 열의 데이터 유형으로 사용해야 합니다.  
   
--   **데이터 형식**. Excel 드라이버는 제한된 데이터 형식 집합만 인식합니다. 예를 들어 모든 숫자 열은 double(DT_R8)로 해석되고 모든 문자열 열(메모 열 제외)은 255자 유니코드 문자열(DT_WSTR)로 해석됩니다. 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 Excel 데이터 형식을 다음과 같이 매핑합니다.  
+-   **데이터 형식입니다.** Excel 드라이버는 제한된 데이터 형식 집합만 인식합니다. 예를 들어 모든 숫자 열은 double(DT_R8)로 해석되고 모든 문자열 열(메모 열 제외)은 255자 유니코드 문자열(DT_WSTR)로 해석됩니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 Excel 데이터 형식을 다음과 같이 매핑합니다.  
   
     -   숫자    배정밀도 부동 소수점 수(DT_R8)  
   
@@ -59,14 +58,13 @@ ms.locfileid: "62827226"
   
     -   부울    Boolean(DT_BOOL)  
   
-    -   날짜/시간 `datetime` (DT_DATE)  
+    -   날짜/시간(DT_DATE) `datetime`  
   
     -   문자열    길이가 255인 유니코드 문자열(DT_WSTR)  
   
     -   메모    유니코드 텍스트 스트림(DT_NTEXT)  
   
--   **데이터 형식 및 길이 변환**. 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 데이터 형식을 암시적으로 변환하지 않습니다. 따라서 파생 열 변환이나 데이터 변환을 사용하여 Excel 데이터를 비 Excel 대상으로 로드하기 전에 명시적으로 변환하거나 비 Excel 데이터를 Excel 대상으로 로드하기 전에 변환해야 할 수 있습니다. 이 경우 필요한 변환을 구성해 주는 가져오기 및 내보내기 마법사를 사용하여 초기 패키지를 만들면 유용할 수 있습니다. 필요할 수 있는 일부 변환 예는 다음과 같습니다.  
+-   **데이터 형식 및 길이 변환**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 데이터 형식을 암시적으로 변환하지 않습니다. 따라서 파생 열 변환이나 데이터 변환을 사용하여 Excel 데이터를 비 Excel 대상으로 로드하기 전에 명시적으로 변환하거나 비 Excel 데이터를 Excel 대상으로 로드하기 전에 변환해야 할 수 있습니다. 이 경우 필요한 변환을 구성해 주는 가져오기 및 내보내기 마법사를 사용하여 초기 패키지를 만들면 유용할 수 있습니다. 필요할 수 있는 일부 변환 예는 다음과 같습니다.  
   
     -   유니코드 Excel 문자열 열과 특정 코드 페이지가 있는 비유니코드 문자열 열 간 변환  
   
@@ -81,19 +79,17 @@ ms.locfileid: "62827226"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- 
-  **Excel 대상 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
+ **Excel 대상 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Excel 대상 편집기 &#40;연결 관리자 페이지&#41;](../excel-destination-editor-connection-manager-page.md)  
+-   [Excel 대상 편집기&#40;연결 관리자 페이지&#41;](../excel-destination-editor-connection-manager-page.md)  
   
--   [Excel 대상 편집기 &#40;매핑 페이지&#41;](../excel-destination-editor-mappings-page.md)  
+-   [Excel 대상 편집기&#40;매핑 페이지&#41;](../excel-destination-editor-mappings-page.md)  
   
--   [Excel 대상 편집기 &#40;오류 출력 페이지&#41;](../excel-destination-editor-error-output-page.md)  
+-   [Excel 대상 편집기&#40;오류 출력 페이지&#41;](../excel-destination-editor-error-output-page.md)  
   
- 
-  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 모든 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
+ **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 모든 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](../common-properties.md)  
+-   [공용 속성](../common-properties.md)  
   
 -   [Excel 사용자 지정 속성](excel-custom-properties.md)  
   
@@ -107,17 +103,9 @@ ms.locfileid: "62827226"
   
 -   [데이터 흐름 구성 요소의 속성 설정](set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="related-content"></a>관련 내용  
-  
--   dougbert.com의 블로그 항목 - [Integration Services의 Excel, 3부 중 1부: 연결 및 구성 요소](https://go.microsoft.com/fwlink/?LinkId=217674)  
-  
--   dougbert.com의 블로그 항목 - [Integration Services의 Excel, 3부 중 2부: 표 및 데이터 형식](https://go.microsoft.com/fwlink/?LinkId=217675)  
-  
--   dougbert.com의 블로그 항목 - [Integration Services의 Excel, 3부 중 3부: 문제 및 대안](https://go.microsoft.com/fwlink/?LinkId=217676)  
-  
 ## <a name="see-also"></a>참고 항목  
- [Excel 원본](excel-source.md)   
- [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md)   
+ [엑셀 소스](excel-source.md)   
+ [SSIS&#41; 변수를 &#40;통합 서비스](../integration-services-ssis-variables.md)   
  [데이터 흐름](data-flow.md)   
  [스크립트 태스크를 사용한 Excel 파일 작업](../extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   
