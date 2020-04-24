@@ -20,12 +20,12 @@ ms.assetid: 6f2b4278-0dea-4603-bbd3-7cbad602a645
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86ae34994c00622ae66eee4afcb3ae3dacedd989
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2ff6cc86bb2b8df43ccf47beb144190567492fc
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075308"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634938"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE(IF...ELSE)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68075308"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 IF Boolean_expression   
      { sql_statement | statement_block }   
 [ ELSE   
@@ -58,14 +58,14 @@ IF Boolean_expression
 ### <a name="a-using-a-simple-boolean-expression"></a>A. 간단한 부울 식 사용  
  다음 예에 포함된 간단한 부울 식(`1=1`)의 결과는 true이므로 첫째 문이 출력됩니다.  
   
-```  
+```sql
 IF 1 = 1 PRINT 'Boolean_expression is true.'  
 ELSE PRINT 'Boolean_expression is false.' ;  
 ```  
   
  다음 예에 포함된 간단한 부울 식(`1=2`)의 결과는 false이므로 둘째 문이 출력됩니다.  
   
-```  
+```sql
 IF 1 = 2 PRINT 'Boolean_expression is true.'  
 ELSE PRINT 'Boolean_expression is false.' ;  
 GO  
@@ -74,7 +74,7 @@ GO
 ### <a name="b-using-a-query-as-part-of-a-boolean-expression"></a>B. 쿼리를 부울 식의 일부로 사용  
  다음 예에서는 부울 식의 일부로 쿼리를 실행합니다. `Product` 테이블에는 `WHERE` 절을 충족하는 자전거 10대가 있으므로 첫째 print 문이 실행됩니다. 둘째 문이 실행되도록 하려면 `> 5`를 `> 15`로 변경합니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF   
@@ -87,7 +87,7 @@ GO
 ### <a name="c-using-a-statement-block"></a>C. 문 블록 사용  
  다음 예에서는 부울 식의 일부로 쿼리를 실행한 후 부울 식의 결과를 기반으로 약간 다른 문 블록을 실행합니다. 각 문 블록은 `BEGIN`으로 시작하여 `END`로 끝납니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 DECLARE @AvgWeight decimal(8,2), @BikeCount int  
@@ -119,7 +119,7 @@ GO
 ### <a name="d-using-nested-ifelse-statements"></a>D. 중첩된 IF...ELSE 문 사용  
  다음 예제에서는 IF... ELSE 문이 어떻게 다른 문에 중첩될 수 있는지를 보여 줍니다. `@Number` 변수를 `5`, `50` 및 `500`으로 설정하여 각 문을 테스트해 보십시오.  
   
-```  
+```sql
 DECLARE @Number int;  
 SET @Number = 50;  
 IF @Number > 100  
@@ -139,7 +139,7 @@ GO
 ### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E: 쿼리를 부울 식의 일부로 사용  
  다음 예에서는 `IF...ELSE`를 사용하여 `DimProduct` 테이블에 있는 항목의 가중치에 따라 두 응답 중 사용자를 표시할 응답을 결정합니다.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 DECLARE @maxWeight float, @productKey integer  

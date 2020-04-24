@@ -11,12 +11,12 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 22f296db7717e81068ac52d6c3df547a0ba0d085
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e71924aa85d4761448c340f1f0554c383df288d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73660789"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632923"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT(Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ CREATE TABLE AS SELECT(CTAS)는 사용할 수 있는 매우 중요한 T-SQL 기�
 
 ## <a name="syntax"></a>구문   
 
-```  
+```syntaxsql
 CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ ( column_name [ ,...n ] ) ]  
     WITH ( 

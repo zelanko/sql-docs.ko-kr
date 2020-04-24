@@ -25,12 +25,12 @@ ms.assetid: 6b0d0e52-8ac1-4f88-b091-f98d6fb8574a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19019a0493ef20aac9ab51090d64646d5d626185
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cd4fd5dbb880562f77a226397b683d12b7984baf
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68041798"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634367"
 ---
 # <a name="set-datefirst-transact-sql"></a>SET DATEFIRST(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,13 +43,13 @@ ms.locfileid: "68041798"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 SET DATEFIRST { number | @number_var }   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 SET DATEFIRST 7 ;  
@@ -82,7 +82,7 @@ SET DATEFIRST 7 ;
 ## <a name="examples"></a>예  
  다음 예에서는 날짜 값에 대해 요일을 표시하고 `DATEFIRST` 설정 변경 시의 결과를 보여 줍니다.  
   
-```  
+```sql
 -- SET DATEFIRST to U.S. English default value of 7.  
 SET DATEFIRST 7;  
   

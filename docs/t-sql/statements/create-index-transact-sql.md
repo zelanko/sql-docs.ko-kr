@@ -54,12 +54,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3695dcb6f322f2b0509bca2bb98b1c592c13a1f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ac07912de601370884d818c7d046f5c1f476672c
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79448357"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632503"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX(Transact-SQL)
 
@@ -103,7 +103,7 @@ CREATE UNIQUE INDEX i1 ON t1 (col1 DESC, col2 ASC, col3 DESC);
 
 ### <a name="syntax-for-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database에 대한 구문
 
-```
+```syntaxsql
 CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
     ON <object> ( column [ ASC | DESC ] [ ,...n ] )
     [ INCLUDE ( column_name [ ,...n ] ) ]
@@ -131,13 +131,13 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | STATISTICS_INCREMENTAL = { ON | OFF }
   | DROP_EXISTING = { ON | OFF }
   | ONLINE = { ON | OFF }
-  | RESUMABLE = {ON | OF }
+  | RESUMABLE = { ON | OFF }
   | MAX_DURATION = <time> [MINUTES]
   | ALLOW_ROW_LOCKS = { ON | OFF }
   | ALLOW_PAGE_LOCKS = { ON | OFF }
-  | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
+  | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF }
   | MAXDOP = max_degree_of_parallelism
-  | DATA_COMPRESSION = { NONE | ROW | PAGE}
+  | DATA_COMPRESSION = { NONE | ROW | PAGE }
      [ ON PARTITIONS ( { <partition_number_expression> | <range> }
      [ , ...n ] ) ]
 }
@@ -168,7 +168,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 > 새 개발 작업에서는 이 구문 구조를 사용하지 않도록 하고 현재 이 기능을 사용하는 애플리케이션은 수정하십시오.
 > 대신 <relational_index_option>에서 지정된 구문 구조를 사용합니다.
 
-```
+```syntaxsql
 CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
     ON <object> ( column_name [ ASC | DESC ] [ ,...n ] )
     [ WITH <backward_compatible_index_option> [ ,...n ] ]
@@ -193,7 +193,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 
 ### <a name="syntax-for-azure-sql-data-warehouse-and-parallel-data-warehouse"></a>Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스용 구문
 
-```
+```syntaxsql
 
 CREATE CLUSTERED COLUMNSTORE INDEX INDEX index_name
     ON [ database_name . [ schema ] . | schema . ] table_name

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4919a5df6c7036cce13a2d0218af1727f3ec9d0b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 417fce6637f17b428f0e4d45404760088a8c0e20
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292184"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488602"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
 
@@ -136,7 +136,7 @@ ms.locfileid: "71292184"
  구성 요소의 속성을 설정하는 방법에 대한 자세한 내용은 [데이터 흐름 구성 요소의 속성 설정](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)을 참조하세요.  
   
 ## <a name="related-content"></a>관련 내용  
- sqlservercentral.com의 블로그 항목 - [원시 파일의 놀라운 기능](https://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)  
+ sqlservercentral.com의 블로그 항목 - [원시 파일의 놀라운 기능](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131)  
   
 ## <a name="raw-file-destination-editor-connection-manager-page"></a>원시 파일 대상 편집기(연결 관리자 페이지)
   원시 파일 대상 편집기를 사용하여 원시 데이터를 파일에 기록하도록 원시 파일 대상을 구성합니다.  

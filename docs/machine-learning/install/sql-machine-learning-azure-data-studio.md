@@ -8,17 +8,17 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b090f7e630082fa93951db56deb16d8842f977ea
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4b6bb16013b75765ee5fdf6b1b52ab0bd65de37f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118606"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487572"
 ---
 # <a name="run-python-and-r-scripts-in-azure-data-studio-notebooks-with-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services를 사용하여 Azure Data Studio Notebook에서 Python 및 R 스크립트 실행
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)를 사용하여 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) Notebook에서 Python 및 R 스크립트를 실행하는 방법을 알아봅니다. Azure Data Studio는 플랫폼 간 데이터베이스 도구입니다.
+[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)를 사용하여 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) Notebook에서 Python 및 R 스크립트를 실행하는 방법을 알아봅니다. Azure Data Studio는 플랫폼 간 데이터베이스 도구입니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 

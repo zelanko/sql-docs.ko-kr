@@ -10,12 +10,12 @@ ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: cbd815ee666f4f3a2fd144dd08161bbbf57d0fbe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4ff3c8a24624b3833c04b4e6269fb3618b36568f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75623257"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488364"
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "75623257"
  SQL Server 2016 업그레이드 관리자의 기능인 Stretch Database 관리자를 사용하여 Stretch Database용 데이터베이스 및 테이블을 식별합니다. 자세한 내용은 [스트레치 데이터베이스 관리자를 실행하여 스트레치 데이터베이스용 데이터베이스 및 테이블 식별](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)을 참조하세요. 잠재적인 차단 문제에 대한 자세한 내용은 [Stretch Database에 대한 제한](../../sql-server/stretch-database/limitations-for-stretch-database.md)을 참조하세요.  
 
 ## <a name="test-drive-stretch-database"></a>Stretch Database 시험 사용  
- **AdventureWorks 예제 데이터베이스를 사용하여 Stretch Database를 시험 사용합니다.** AdventureWorks 예제 데이터베이스를 가져오려면 [여기](https://www.microsoft.com/download/details.aspx?id=49502). 샘플 데이터베이스를 SQL Server 2016의 인스턴스에 복원한 후, 샘플 파일의 압축을 풀고 스트레치 DB 폴더에서 스트레치 DB 샘플 파일을 엽니다. 이 파일에서 스크립트를 실행하여 Stretch Database 사용 전후 데이터가 사용하는 공간을 확인하고, 데이터 마이그레이션의 진행 상황을 추적하며, 그리고 데이터 마이그레이션 도중 및 이후에도 계속 기존 데이터를 쿼리하고 새 데이터를 삽입할 수 있는지 확인합니다.  
+ **AdventureWorks 예제 데이터베이스를 사용하여 Stretch Database를 시험 사용합니다.** AdventureWorks 예제 데이터베이스를 가져오려면 [여기](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks). 샘플 데이터베이스를 SQL Server 2016의 인스턴스에 복원한 후, 샘플 파일의 압축을 풀고 스트레치 DB 폴더에서 스트레치 DB 샘플 파일을 엽니다. 이 파일에서 스크립트를 실행하여 Stretch Database 사용 전후 데이터가 사용하는 공간을 확인하고, 데이터 마이그레이션의 진행 상황을 추적하며, 그리고 데이터 마이그레이션 도중 및 이후에도 계속 기존 데이터를 쿼리하고 새 데이터를 삽입할 수 있는지 확인합니다.  
   
 ## <a name="next-step"></a>다음 단계  
  **스트레치 데이터베이스에 적합한 데이터베이스 및 테이블 식별.** Data Migration Assistant를 다운로드하고 평가를 실행하여 Stretch Database의 후보인 데이터베이스 및 테이블을 식별합니다. 자세한 내용은 [스트레치 데이터베이스 관리자를 실행하여 스트레치 데이터베이스용 데이터베이스 및 테이블 식별](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)을 참조하세요.  

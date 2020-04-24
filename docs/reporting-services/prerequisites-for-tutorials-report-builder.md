@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 450a490e5c4f54f9fec2e88c1c73bfbf8502869a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3f00a23d175ce798edc8c73fe0c1ec7e92053392
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66499988"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81485186"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>자습서의 사전 요구 사항(보고서 작성기)
 
@@ -35,9 +35,9 @@ ms.locfileid: "66499988"
   
 -   SQL Server 인스턴스의 이름과 모든 데이터베이스에 대한 읽기 전용 액세스에 필요한 자격 증명. 자습서의 데이터 세트 쿼리에서는 리터럴 데이터를 사용하지만 보고서 데이터 세트에 필요한 메타데이터가 반환되도록 하려면 각 쿼리를 SQL Server 인스턴스에서 처리해야 합니다. 예를 들어 연결 문자열 `data source=<servername>`은 서버만 지정합니다. 서버에 액세스할 수 있는 권한을 부여하는 시스템 관리자가 할당한 기본 데이터베이스에 대한 읽기 권한이 있어야 합니다. 연결 문자열 `data source=<servername>;initial catalog=<database>`에 표시된 것처럼 데이터베이스를 지정할 수도 있습니다.  
   
--   [자습서: 지도 보고서(보고서 작성기)](Tutorial:%20Map%20Report%20\(Report%20Builder\).md)에서는 Bing 지도를 배경으로 지원하도록 보고서 서버를 구성해야 합니다. 자세한 내용은 [지도 보고서 지원 계획](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)을 참조하세요.   
+-   [자습서: 지도 보고서(보고서 작성기)](tutorial-map-report-report-builder.md)에서는 Bing 지도를 배경으로 지원하도록 보고서 서버를 구성해야 합니다. 자세한 내용은 [지도 보고서 지원 계획](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)을 참조하세요.   
 
--   [자습서: 드릴스루 보고서 및 주 보고서 만들기(보고서 작성기)](Tutorial:%20Creating%20Drillthrough%20and%20Main%20Reports%20\(Report%20Builder\).md) 자습서를 실행하려면 Contoso Sales 큐브에 액세스해야 합니다. 자세한 내용은 자습서를 참조하세요. 
+-   [자습서: 드릴스루 보고서 및 주 보고서 만들기(보고서 작성기)](tutorial-creating-drillthrough-and-main-reports-report-builder.md) 자습서를 실행하려면 Contoso Sales 큐브에 액세스해야 합니다. 자세한 내용은 자습서를 참조하세요. 
   
 보고서 서버 관리자는 보고서 서버에서 필요한 권한을 부여하고, [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 폴더 위치를 구성하고, 보고서 작성기 기본 옵션을 구성해야 합니다. 자세한 내용은 [Install Report Builder](install-windows/install-report-builder.md)를 참조하세요.  
 

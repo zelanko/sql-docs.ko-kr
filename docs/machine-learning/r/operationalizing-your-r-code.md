@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ebca30560a437cc8c95b9604cc24fbd7542c9d85
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 324cf4446a593175fd5a8cd11b2abc24bff7d2d7
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117586"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486812"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 저장 프로시저를 사용하여 R 코드 운영화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ R 또는 Python 코드에서 사전에 약간의 최적화가 수행되면 SQL�
 
 애플리케이션에 채점을 통합하는 방법에 대한 예는 다음 솔루션 템플릿을 참조하세요.
 
-+ [소매 예측](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/RetailForecasting/Introduction.md)
++ [소매 예측](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/RetailForecasting/README.md)
 + [사기 검색](https://github.com/Microsoft/r-server-fraud-detection)
 + [고객 클러스터링](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/r-services/getting-started/customer-clustering)
 

@@ -19,12 +19,12 @@ ms.assetid: c9fa8ae1-3373-4f3e-9b97-fa05077c1040
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85a2162e2b1973032e4e4678ef2eb9d7b6ac6dc1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 01fd70854568dcd1539e76eb6b798dc988efff7e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026537"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81625636"
 ---
 # <a name="cos-transact-sql"></a>COS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68026537"
   
 ## <a name="syntax"></a>구문  
   
-```sql
+```syntaxsql
 COS ( float_expression )  
 ```  
   

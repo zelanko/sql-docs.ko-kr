@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 13680aea1d34b83d76647d39d0f40b84609b2e8c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ee4eb18589bc0ebdf214c2c21be25b1410b5db0
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910652"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633005"
 ---
 # <a name="grouping_id-transact-sql"></a>GROUPING_ID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "67910652"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 GROUPING_ID ( <column_expression>[ ,...n ] )  
 ```  

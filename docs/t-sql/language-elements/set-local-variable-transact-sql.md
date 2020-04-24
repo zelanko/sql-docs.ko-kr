@@ -18,12 +18,12 @@ ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 770ef448094e764bcc1ca970354941c0d1d03d4c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a1096fab5377ff448ba4ea17b6444cca16b71f8f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072277"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630353"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ DECLARE @*local_variable* 문을 사용하여 이전에 만든 지정된 지역 
 ## <a name="syntax"></a>구문  
 SQL Server 및 Azure SQL Database에 대한 구문:
 
-```sql    
+```syntaxsql
 SET   
 { @local_variable  
     [ . { property_name | field_name } ] = { expression | udt_name { . | :: } method_name }  
@@ -61,7 +61,7 @@ SET
 }   
 ```  
 Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스용 구문:  
-```sql  
+```syntaxsql
 SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression  
 ```  
   

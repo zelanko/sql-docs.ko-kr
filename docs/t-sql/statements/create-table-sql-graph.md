@@ -32,12 +32,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37e374d44fc6013c1cdf6b9594d709ff4282f7aa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 053e3f5b7d800a2113165de6bb873a19ecd63906
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70846717"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632908"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "70846717"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 CREATE TABLE   
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition> } 

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ad3852f0bb935371fd141cc4ceb98f90c7aa9c19
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 57d18e823d76e039f93eff8e5c685239686fe505
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67904350"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634298"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 절(Transact-SQL)
 
@@ -44,7 +44,7 @@ FOR 절을 사용하여 쿼리 결과에 대해 다음 옵션 중 하나를 지�
   
 ## <a name="syntax"></a>구문  
   
-```
+```syntaxsql
 [ FOR { BROWSE | <XML> | <JSON>} ]  
   
 <XML> ::=  

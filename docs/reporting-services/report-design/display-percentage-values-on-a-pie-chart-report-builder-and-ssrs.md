@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ffa11ae9d6c0d539accb4bbf6d796019cbc3371e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1b250f8bffdebeb0cb0f1e68a739bb808cb75abd
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254604"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487589"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>원형 차트에서 백분율 값 표시(보고서 작성기 및 SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지가 매겨진 보고서에서 기본적으로 범례는 범주를 표시합니다. 범례 또는 원형 조각 자체에서 백분율할 수 있습니다.   
 
 ![report-builder-pie-chart-preview-percents](../../reporting-services/media/report-builder-pie-chart-preview-percents.png)
 
- [자습서: 보고서에 원형 차트 추가(보고서 작성기)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)는 이 샘플 데이터로 먼저 시도하려는 경우 원형 조각에 백분율을 추가하는 것을 안내합니다.
+ [자습서: 보고서에 원형 차트 추가(보고서 작성기)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)는 이 샘플 데이터로 먼저 시도하려는 경우 원형 조각에 백분율을 추가하는 것을 안내합니다.
  
   
 ## <a name="to-display-percentage-values-as-labels-on-a-pie-chart"></a>원형 차트에 레이블로 백분율 값을 표시하려면  
@@ -43,7 +43,7 @@ ms.locfileid: "75254604"
 2.  **범례**에서 **사용자 지정 범례 텍스트** 속성에 **#PERCENT** 를 입력합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-* [자습서: 보고서에 원형 차트 추가(보고서 작성기)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
+* [자습서: 보고서에 원형 차트 추가(보고서 작성기)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)
 *  [원형 차트 &#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
 *  [차트의 범례 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
 *  [원형 차트 외부에 데이터 요소 레이블 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   

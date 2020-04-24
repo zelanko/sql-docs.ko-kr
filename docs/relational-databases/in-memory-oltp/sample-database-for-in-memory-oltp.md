@@ -11,12 +11,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef40223423b1645ce2acd7944db2ba32f85d01db
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fea6c071434a50dc0e592533ccc3647aadec0106
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258779"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487669"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 예제 데이터베이스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "75258779"
 ##  <a name="installing-the-in-memory-oltp-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> AdventureWorks 기반의 메모리 내 OLTP 샘플 설치  
  다음 단계를 수행하여 예제를 설치합니다.  
   
-1.  [https://www.microsoft.com/download/details.aspx?id=49502](https://www.microsoft.com/download/details.aspx?id=49502)에서 로컬 폴더(예: 'c:\temp')에 AdventureWorks2016CTP3.bak 및 SQLServer2016CTP3Samples.zip을 다운로드합니다.  
+1.  [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)에서 로컬 폴더(예: 'c:\temp')에 AdventureWorks2016CTP3.bak 및 SQLServer2016CTP3Samples.zip을 다운로드합니다.  
   
 2.  [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 데이터베이스 백업을 복원합니다.  
   

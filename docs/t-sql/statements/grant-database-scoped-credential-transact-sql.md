@@ -21,12 +21,12 @@ ms.assetid: 501f2c8a-6aeb-41af-bf0b-974d17af33c0
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d820e8740740335a576385a7c971d1e0fe5eb5d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 865a46c90fb45b6e41dc5ca202133e7b3a22dd53
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67942945"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633728"
 ---
 # <a name="grant-database-scoped-credential-permissions-transact-sql"></a>GRANT Database Scoped Credential Permissions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67942945"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 GRANT permission  [ ,...n ]    
     ON DATABASE SCOPED CREDENTIAL :: credential_name   
     TO principal [ ,...n ] [ WITH GRANT OPTION ]   

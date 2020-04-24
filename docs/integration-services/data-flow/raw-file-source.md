@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e35fffa75f72b4edaddba344d166cb1c89fb3338
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e18b3ea191e51dabe010dc66ad0cff0fce8c8f50
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298133"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488562"
 ---
 # <a name="raw-file-source"></a>원시 파일 원본
 
@@ -57,7 +57,7 @@ ms.locfileid: "71298133"
   
 ## <a name="related-content"></a>관련 내용  
   
--   sqlservercentral.com의 블로그 항목 - [원시 파일의 놀라운 기능](https://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)  
+-   sqlservercentral.com의 블로그 항목 - [원시 파일의 놀라운 기능](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131)  
   
 ## <a name="raw-file-source-editor-connection-manager-page"></a>원시 파일 원본 편집기(연결 관리자 페이지)
   원시 파일 원본은 파일에서 원시 데이터를 읽습니다. 원본의 기본 데이터 표현을 사용하므로 데이터를 변환하거나 거의 구문 분석할 필요도 없습니다.   

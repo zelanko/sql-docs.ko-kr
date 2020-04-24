@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
-ms.openlocfilehash: 5e9223f957692074090b949cd522c0146d4a57fb
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: fde2b4aa622d420795422dd614ad313106dd586e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665389"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488367"
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server 자습서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]에서는 새로운 기술과 기능을 알아볼 수 있는 자습서를 제공합니다. 대개 이전 버전용 자습서를 최신 버전에서도 사용할 수 있습니다. 자습서에서 최신 기능을 설명할 때는 자습서를 완료하는 데 필요한 최소 버전이 표시됩니다.  
      
--   자습서에서 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 데이터베이스 중 하나를 사용하는 경우에는 CodePlex에서 최신 버전을 다운로드하여 사용해야 합니다. 자세한 내용은 [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502)(SQL Server 2016 CTP3용 AdventureWorks 데이터베이스 및 스크립트)을 참조하세요.    
+-   자습서에서 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 데이터베이스 중 하나를 사용하는 경우에는 CodePlex에서 최신 버전을 다운로드하여 사용해야 합니다. 자세한 내용은 [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)(SQL Server 2016 CTP3용 AdventureWorks 데이터베이스 및 스크립트)을 참조하세요.    
 -   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 자습서에서 사용할 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 통합 문서와 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 보고서를 다운로드하려면 [SQL Server 2012용 파워 뷰 샘플](https://go.microsoft.com/fwlink/?LinkId=220734)로 이동합니다.  
 - [sql-server-samples](../sample/world-wide-importers/wide-world-importers-documentation.md) GitHub 리포지토리에서 사용할 수 있는 새로운 [Wide World Importers](https://github.com/Microsoft/sql-server-samples) 샘플을 확인합니다. 
 

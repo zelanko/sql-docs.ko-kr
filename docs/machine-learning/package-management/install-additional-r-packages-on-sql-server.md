@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ff2d40dab5fa2d8f03bf3d1fa32b08e66a0ccdbc
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 34ab0ad4011c0301aa22a437315d8a5a64e0e372
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118116"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487129"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>sqlmlutils를 사용하여 새 R 패키지 설치
 
@@ -250,4 +250,4 @@ sql_remove.packages(connectionString = connection, pkgs = "glue", scope = "PUBLI
 - 설치된 R 패키지에 대한 자세한 내용은 [R 패키지 정보 가져오기](r-package-information.md)를 참조하세요.
 - R 패키지 사용에 대한 도움말은 [R 패키지 사용 팁](tips-for-using-r-packages.md)을 참조하세요.
 - Python 패키지 설치에 대한 자세한 내용은 [pip를 사용하여 Python 패키지 설치](install-additional-python-packages-on-sql-server.md)를 참조하세요.
-- SQL Server Machine Learning Services에 대한 자세한 내용은 [SQL Server Machine Learning Services(Python 및 R)란?](../what-is-sql-server-machine-learning.md)을 참조하세요.
+- SQL Server Machine Learning Services에 대한 자세한 내용은 [SQL Server Machine Learning Services(Python 및 R)란?](../sql-server-machine-learning-services.md)을 참조하세요.

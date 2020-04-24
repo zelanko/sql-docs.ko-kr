@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e3ccf8ed-1cec-43ac-90b7-d8597c24b050
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 92dd195322e03f8b3eb776269cd6a8636fffd150
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 33f63b558f4cbddcfc692ef3a59fcb8ccad29641
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68059745"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635011"
 ---
 # <a name="logical-functions---iif-transact-sql"></a>논리 함수 - IIF(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68059745"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 IIF ( boolean_expression, true_value, false_value )  
 ```  

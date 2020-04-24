@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: df6819f9beaa78232227e0fadd3e7c7a2e56c801
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73530923"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634744"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문(Transact-SQL)
 
@@ -86,7 +86,7 @@ BACKUP 명령을 사용하여 만든 SQL 데이터베이스 백업을 복원합�
 
 ## <a name="syntax"></a>구문
 
-```sql
+```syntaxsql
 --To Restore an Entire Database from a Full database backup (a Complete Restore):
 RESTORE DATABASE { database_name | @database_name_var }
  [ FROM <backup_device> [ ,...n ] ]
@@ -751,7 +751,7 @@ RESTORE DATABASE Sales
 
 ## <a name="syntax"></a>구문
 
-```sql
+```syntaxsql
 --To Restore an Entire Database from a Full database backup (a Complete Restore):
 RESTORE DATABASE { database_name | @database_name_var }
  FROM URL = { 'physical_device_name' | @physical_device_name_var } [ ,...n ]
@@ -883,7 +883,7 @@ WHERE r.command = 'RESTORE DATABASE'
 
 ## <a name="syntax"></a>구문
 
-```sql
+```syntaxsql
 
 -- Restore the master database
 -- Use the Configuration Manager tool.
@@ -995,7 +995,7 @@ FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';
 
 데이터베이스의 전체 백업은 `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full` 디렉터리에 저장된 전체 백업에서 복원됩니다. 복원이 성공적으로 완료되면 차등 백업이 SalesInvoices2013 데이터베이스에 복원됩니다. 차등 백업은 `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff` 디렉터리에 저장됩니다.
 
-```sql
+```syntaxsql
 RESTORE DATABASE SalesInvoices2013
     FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff'
     WITH BASE = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'
@@ -1007,7 +1007,7 @@ RESTORE DATABASE SalesInvoices2013
 
 이 예에서는 `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full` 데이터베이스 백업에 대한 헤더 정보를 복원합니다. 명령은 Invoices2013Full 백업에 대한 정보에서 하나의 행에 발생합니다.
 
-```sql
+```syntaxsql
 RESTORE HEADERONLY
     FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'
 [;]

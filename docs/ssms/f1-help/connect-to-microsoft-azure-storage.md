@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eb943430136a1406ea18b9c387c98fbec6fd27cf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f10095fe581b00411199a63b4bd12a4b29346a26
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245020"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487443"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Microsoft Azure Storage에 연결
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ Azure 계정에 대해 다음 정보를 지정한 후 **다음**을 클릭하여
 1.  **스토리지 계정** - 스토리지 계정 이름을 지정합니다.
 
    >[!NOTE]
-   > [범용 스토리지 계정](https://docs.microsoft.com/azure/storage/storage-introduction#azure-storage-services)에만 연결할 수 있습니다. 다른 유형의 스토리지 계정에 연결하면 다음과 유사한 오류 메시지가 발생할 수 있습니다.
+   > [범용 스토리지 계정](https://docs.microsoft.com/azure/storage/common/storage-introduction#azure-storage-services)에만 연결할 수 있습니다. 다른 유형의 스토리지 계정에 연결하면 다음과 유사한 오류 메시지가 발생할 수 있습니다.
    >
    >  HTTP 헤더 중 하나에 대한 값 형식이 올바르지 않습니다. (Microsoft.SqlServer.StorageClient).
    >

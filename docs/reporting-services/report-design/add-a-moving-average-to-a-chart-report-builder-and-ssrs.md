@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7d125bdd5fd23273a9601405c99b1908d57dd6dd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2cffa994cadf61b9d1d78c2cbe138c736e34b626
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080708"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488325"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>차트에 이동 평균 추가(보고서 작성기 및 SSRS)
 이동 평균은 정의된 기간 동안 계산되는 계열 데이터의 평균입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 이동 평균은 차트에서 중요한 추세를 파악하기 위해 표시될 수 있습니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "77080708"
   
  이동 평균 수식은 기술 분석에서 사용되는 가장 일반적인 가격 표시기입니다. 평균값, 중앙값 및 표준 편차를 비롯한 다른 많은 수식들도 차트의 계열에서 파생될 수 있습니다. 이동 평균을 지정할 때 각 수식은 하나 이상의 필수 매개 변수를 가질 수 있습니다.  
  
- [자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)는 샘플 데이터로 시도하려는 경우 차트에 이동 평균을 추가하는 것을 안내합니다.
+ [자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기)](../tutorial-add-a-column-chart-to-your-report-report-builder.md)는 샘플 데이터로 시도하려는 경우 차트에 이동 평균을 추가하는 것을 안내합니다.
   
  디자인 모드에서 이동 평균 수식을 추가할 때 유일한 시각적 자리 표시자는 추가되는 선 계열입니다. 차트는 보고서 처리 중에 각 수식에 대한 데이터 요소를 계산합니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "77080708"
     >  기간은 이동 평균을 계산하는 데 사용되는 일 수입니다. x축에 날짜/시간 값이 지정되지 않으면 이동 평균을 계산하는 데 사용되는 데이터 요소의 수에 따라 기간이 표시됩니다. 데이터 요소가 한 개뿐이면 이동 평균 수식이 계산되지 않습니다. 이동 평균은 두 번째 요소부터 계산됩니다. **첫 번째 요소에서 시작** 옵션을 지정할 경우 차트에서 이동 평균이 첫 번째 요소에서부터 시작됩니다. 데이터 요소가 한 개뿐이면 계산된 이동 평균의 요소는 원본 계열의 첫 번째 요소와 동일합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-* [자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
+* [자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기)](../tutorial-add-a-column-chart-to-your-report-report-builder.md)
 *  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
 *  [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 *  [차트에 빈 요소 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md)  

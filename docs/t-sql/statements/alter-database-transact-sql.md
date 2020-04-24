@@ -26,12 +26,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fc4b442fc6d6afb7f5e913293733296cdaa4c2b9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6a079b070df9718135a6c9d99dd56ed51ad04ab5
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77074425"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81628122"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
 
@@ -76,7 +76,7 @@ ALTER DATABASE 현재 아티클은 데이터베이스의 이름 및 데이터 �
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 -- SQL Server Syntax
 ALTER DATABASE { database_name | CURRENT }
 {
@@ -292,7 +292,7 @@ ALTER DATABASE 현재 아티클은 데이터베이스의 이름 및 데이터 �
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 -- Azure SQL Database Syntax
 ALTER DATABASE { database_name | CURRENT }
 {
@@ -711,7 +711,7 @@ ALTER DATABASE 현재 문서에서는 파일 및 파일 그룹 옵션, 데이터
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 -- Azure SQL Database Syntax  
 ALTER DATABASE { database_name | CURRENT }  
 {
@@ -946,7 +946,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 -- Analytics Platform System
 ALTER DATABASE database_name
     SET ( <set_database_options> | <db_encryption_option> )

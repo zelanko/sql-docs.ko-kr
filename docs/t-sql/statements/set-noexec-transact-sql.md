@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7c74a19dc498e3551b1e8bdc2018c10392e803f6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3eff51bcf1c16f8df8f3058d3b9b1481d1360cfd
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68034944"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633038"
 ---
 # <a name="set-noexec-transact-sql"></a>SET NOEXEC(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68034944"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 SET NOEXEC { ON | OFF }  
 ```  
@@ -56,7 +56,7 @@ SET NOEXEC { ON | OFF }
 ## <a name="examples"></a>예  
  다음 예에서는 유효한 쿼리, 유효하지 않은 개체 이름이 있는 쿼리 및 잘못된 구문이 있는 쿼리에 `NOEXEC`를 사용합니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 PRINT 'Valid query';  

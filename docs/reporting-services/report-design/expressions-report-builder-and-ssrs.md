@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8cff1f3e79c383dbcbfe365ab36d9fa6912d6e28
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 99314c9108ef0af50a3c43d83a5fcb69b9ccf14f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080364"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487622"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>식(보고서 작성기 및 SSRS)
   식은 데이터를 검색, 계산, 표시, 그룹화, 정렬, 필터링, 매개 변수화 및 서식 지정하기 위해 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 에서 페이지를 매긴 보고서 전체에서 광범위하게 사용됩니다. 
@@ -110,6 +110,6 @@ ms.locfileid: "77080364"
 -   [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
 -   [필터 수식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)  
 -   [그룹 식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
--   [자습서: 식 소개](Tutorial:%20Introducing%20Expressions.md)
+-   [자습서: 식 소개](../tutorial-introducing-expressions.md)
 -   [보고서 예제(보고서 작성기 및 SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   

@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 2c6647dfab3a095228023fd56af2c766a8b40fee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f28fced64212c9b7e76989d29fa837d4983cebe2
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903820"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631976"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY(Transact-SQL)(미리 보기)
 
@@ -36,7 +36,7 @@ ms.locfileid: "77903820"
 
 ## <a name="syntax"></a>구문  
 
-```
+```syntaxsql
 COPY INTO [schema.]table_name
 [(Column_list)] 
 FROM ‘<external_location>’ [,...n]
@@ -364,7 +364,7 @@ WITH (
 기능이 출시될 시점에는 COPY 명령의 성능이 향상될 예정입니다. 퍼블릭 미리 보기 중에 최상의 로드 성능을 얻으려면 CSV를 로드할 때 입력을 여러 개의 파일로 분할하는 것이 좋습니다. 현재 COPY는 INSERT SELECT 사용 시 PolyBase와 성능이 같습니다. 
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>CSV 파일을 로드하는 COPY 명령의 파일 분할 지침은 무엇인가요?
-파일 수에 대한 지침은 아래 표에 나와 있습니다. 권장 파일 수에 도달하면 파일이 클수록 성능이 향상됩니다. COPY 명령이 출시되면 압축되지 않은 파일을 분할할 필요가 없습니다. 
+파일 수에 대한 지침은 아래 표에 나와 있습니다. 권장 파일 수에 도달하면 파일이 클수록 성능이 향상됩니다. 
 
 | **DWU** | **#Files** |
 | :-----: | :--------: |

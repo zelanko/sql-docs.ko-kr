@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 26d7442164d4d018feb6066e6cafdf12c9312429
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cf4b7ebc576908cdccabdd3d92eec7420705b44d
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294149"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488190"
 ---
 # <a name="for-loop-container"></a>For 루프 컨테이너
 
@@ -72,8 +72,6 @@ ms.locfileid: "71294149"
 
 ##  <a name="configure-the-for-loop-container"></a>For 루프 컨테이너 구성
 이 절차에서는 **For 루프 편집기** 대화 상자를 사용하여 For 루프 컨테이너를 구성하는 방법에 대해 설명합니다.  
-  
- For Loop 컨테이너의 예는 bimonkey.com의 [실패하지 않는 SSIS 루프](https://go.microsoft.com/fwlink/?LinkId=240295) 를 참조하십시오.  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 For 루프 컨테이너를 두 번 클릭하여 **For 루프 편집기**를 엽니다.  
   

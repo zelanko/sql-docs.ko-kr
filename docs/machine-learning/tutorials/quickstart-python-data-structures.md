@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0f04e021664a92241c8c029d296a298b10c142d2
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 03d578b2cd6419a676ed6bd1b581dd57107d4209
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116336"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487336"
 ---
 # <a name="quickstart-data-structures-and-objects-using-python-in-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services에서 Python을 사용하는 데이터 구조 및 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -214,4 +214,4 @@ SQL Server에서 고급 Python 함수를 작성하는 방법을 알아보려면 
 SQL Server Machine Learning Services에서 Python 사용에 대한 자세한 내용은 다음 문서를 참조하세요.
 
 - [Python에서 예측 모델 만들기 및 점수 매기기](quickstart-python-train-score-model.md)
-- [SQL Server Machine Learning Services(Python 및 R)란?](../what-is-sql-server-machine-learning.md)
+- [SQL Server Machine Learning Services(Python 및 R)란?](../sql-server-machine-learning-services.md)

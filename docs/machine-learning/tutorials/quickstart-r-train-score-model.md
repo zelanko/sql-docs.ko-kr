@@ -10,17 +10,17 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b6be97041912027cf284ff34c2c826a37edabe93
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: b34bfbf4f539412835c0de1e3c75b55e15b1e471
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116146"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487279"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services를 사용하여 R에서 예측 모델 만들기 및 채점
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 빠른 시작에서는 T를 사용하여 예측 모델을 만들어 학습시키고, 모델을 SQL Server 인스턴스의 테이블에 저장한 다음, [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)를 사용하여 모델로 새 데이터의 값을 예측합니다.
+이 빠른 시작에서는 T를 사용하여 예측 모델을 만들어 학습시키고, 모델을 SQL Server 인스턴스의 테이블에 저장한 다음, [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)를 사용하여 모델로 새 데이터의 값을 예측합니다.
 
 SQL에서 실행되는 두 개의 저장 프로시저를 만들고 실행합니다. 첫 번째 저장 프로시저는 R에 포함된 **mtcars** 데이터 세트를 사용하여 차량에 수동 변속기가 장착되었을 확률을 예측하는 단순한 일반화된 선형 모델(GLM)을 생성합니다. 두 번째 저장 프로시저는 첫 번째 프로시저에서 생성된 모델을 호출하여 새 데이터를 기반으로 예측 세트를 출력합니다. SQL 저장 프로시저에 R 코드를 배치하면 작업이 SQL에 포함되고 다시 사용할 수 있으며 다른 저장 프로시저와 클라이언트 애플리케이션에서 호출할 수 있습니다.
 
@@ -222,4 +222,4 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 
 SQL Server Machine Learning Services에 대한 자세한 내용은 다음을 참조하세요.
 
-- [SQL Server Machine Learning Services(Python 및 R)란?](../what-is-sql-server-machine-learning.md)
+- [SQL Server Machine Learning Services(Python 및 R)란?](../sql-server-machine-learning-services.md)

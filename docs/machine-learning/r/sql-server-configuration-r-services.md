@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cedc5c08f44da357da70f63b47676383f6f53675
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6daadcd1e98e19f2d4f43c4b5a6c95f1cf137697
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117346"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486712"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>R 사용을 위한 SQL Server 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -192,7 +192,7 @@ SQL Server의 이점 중 하나는 매우 많은 양의 행을 병렬로 처리�
 
 또한 입력 데이터를 단일 쿼리로 보내면 SQL Server가 쿼리를 분석합니다. 입력 데이터에 대해 병렬 쿼리 계획을 만들 수 있으면 노드에 할당되는 데이터를 자동으로 분할하고 필요한 조인 및 집계를 병렬로 수행합니다.
 
-채점에 사용하기 위한 저장 프로시저를 정의하는 방법에 대해 자세히 알고 싶으면 [GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips/SQLR)에서 샘플 프로젝트를 참조하고 "step5_score_for_matching.sql" 파일을 검색하십시오. 샘플 스크립트는 또한 성능을 평가할 수 있도록 쿼리 시작 및 종료 시간을 추적하고 이 시간을 SQL 콘솔에 기록합니다.
+채점에 사용하기 위한 저장 프로시저를 정의하는 방법에 대해 자세히 알고 싶으면 [GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching/SQLR)에서 샘플 프로젝트를 참조하고 "step5_score_for_matching.sql" 파일을 검색하십시오. 샘플 스크립트는 또한 성능을 평가할 수 있도록 쿼리 시작 및 종료 시간을 추적하고 이 시간을 SQL 콘솔에 기록합니다.
 
 ### <a name="concurrent-scoring-using-resource-groups"></a>리소스 그룹을 사용한 동시 채점
 
@@ -214,7 +214,7 @@ SQL Server의 이점 중 하나는 매우 많은 양의 행을 병렬로 처리�
 
 - 각 작업 그룹은 두 개의 채점 작업을 처리해야 합니다. 한 작업의 데이터 읽기가 완료되고, 채점이 시작되는 즉시, 다른 작업이 데이터베이스에서 데이터 읽기를 시작할 수 있습니다.
 
-이 시나리오의 PowerShell 스크립트를 보려면 [Github 프로젝트](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)에서 experiment.ps1 파일을 엽니다.
+이 시나리오의 PowerShell 스크립트를 보려면 [Github 프로젝트](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching)에서 experiment.ps1 파일을 엽니다.
 
 ### <a name="storing-models-for-prediction"></a>예측을 위한 모델 저장
 

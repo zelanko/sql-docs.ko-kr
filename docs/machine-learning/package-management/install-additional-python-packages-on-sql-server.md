@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e4aaac1eb06d391cf73f32cda28b12419a2b5645
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4e72ded2e2f2a51805403132c662bff3d70c97ce
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "81119116"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487121"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>sqlmlutils를 사용하여 Python 패키지 설치
 
@@ -37,7 +37,7 @@ ms.locfileid: "81119116"
 
 ### <a name="other-considerations"></a>기타 고려 사항
 
-+ 패키지는 사용 중인 Python 버전의 규격을 준수해야 합니다. 각 SQL Server 버전에 포함된 Python 버전에 대한 자세한 내용은 [SQL Server Machine Learning Services(Python 및 R)이란?의 Python 및 R 버전](../what-is-sql-server-machine-learning.md#versions)을 참조하세요.
++ 패키지는 사용 중인 Python 버전의 규격을 준수해야 합니다. 각 SQL Server 버전에 포함된 Python 버전에 대한 자세한 내용은 [SQL Server Machine Learning Services(Python 및 R)이란?의 Python 및 R 버전](../sql-server-machine-learning-services.md#versions)을 참조하세요.
 
 + Python 패키지 라이브러리는 SQL Server 인스턴스의 Program Files 폴더에 있으며, 기본적으로 이 폴더에 설치하려면 관리자 권한이 필요합니다. 자세한 내용은 [패키지 라이브러리 위치](../package-management/python-package-information.md#default-python-library-location)를 참조하세요.
 

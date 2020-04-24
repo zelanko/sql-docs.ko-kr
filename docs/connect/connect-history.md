@@ -1,5 +1,6 @@
 ---
 title: Microsoft SQL Server용 드라이버 기록 | Microsoft Docs
+description: 이 페이지에서는 SQL Server에 연결하기 위한 Microsoft의 기록 데이터 연결 기술에 대해 설명합니다.
 ms.custom: ''
 ms.date: 05/04/2018
 ms.prod: sql
@@ -7,12 +8,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 858e22e0f8ff3992e0a499c245255e2cc03ec12e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3724e9c616a17e490946888d2acc8c886a57545a
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927754"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529070"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Microsoft SQL Server용 드라이버 기록
 

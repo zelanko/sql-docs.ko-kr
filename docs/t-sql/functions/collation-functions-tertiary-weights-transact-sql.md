@@ -20,12 +20,12 @@ ms.assetid: 7e1f5350-260b-4c61-8c84-69bb1a214f1f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11d5012cadf7bdb028ce921f9039d5502363cbc9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b288c04797853b1590c1e45de4aba21c3cd185c7
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68064687"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634869"
 ---
 # <a name="collation-functions---tertiary_weights-transact-sql"></a>데이터 정렬 함수 - TERTIARY_WEIGHTS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68064687"
   
 ## <a name="syntax"></a>구문  
   
-```sql
+```syntaxsql
 TERTIARY_WEIGHTS( non_Unicode_character_string_expression )  
 ```  
   

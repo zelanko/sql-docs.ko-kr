@@ -1,7 +1,7 @@
 ---
 title: SET SHOWPLAN_ALL(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 063c4c94fc457b6b9bb69fa0395398c62bf49516
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d9e7712128269033a8391169063cf205f40208c
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67941698"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634299"
 ---
 # <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "67941698"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 SET SHOWPLAN_ALL { ON | OFF }  
 ```  
@@ -78,7 +78,8 @@ SET SHOWPLAN_ALL { ON | OFF }
 |**형식**|노드 유형. 각 쿼리의 부모 노드에 대해서는 노드 유형이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 유형(예: SELECT, INSERT, EXECUTE 등)입니다. 실행 계획을 나타내는 하위 노드에 대해서는 PLAN_ROW 유형입니다.|  
 |**Parallel**|**0** = 연산자가 병렬로 실행되지 않습니다.<br /><br /> **1** = 연산자가 병렬로 실행됩니다.|  
 |**EstimateExecutions**|현재 쿼리를 실행하는 동안 이 연산자가 실행될 예상 횟수입니다.|  
-  
+|||
+
  비용 단위는 벽 시계 시간(wall-clock time)이 아닌 내부 측정 시간을 기반으로 합니다. 다른 계획과 비교하여 계획의 상대 비용을 결정하는 데 사용합니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -101,7 +102,7 @@ SET SHOWPLAN_ALL { ON | OFF }
   
  처음 인덱싱된 쿼리의 경우에는 **EstimateRows** 및 **TotalSubtreeCost** 특성의 값이 더 작습니다. 즉, 인덱싱된 쿼리가 인덱싱되지 않은 쿼리에 비해 훨씬 빨리 처리되고 리소스도 더 적게 사용한다는 의미입니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_ALL ON;  

@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 98ef57702b01a3f32babd6b0ac9b64fb3c22e9ea
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: c85839d89fbdb2d69752ac989abb40637f9d13ca
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118666"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487567"
 ---
 # <a name="r-language-extension-in-sql-server"></a>SQL Server의 R 언어 확장
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 R 확장은 관계형 데이터베이스 엔진에 대한 SQL Server Machine Learning Services 추가 기능에 포함되어 있습니다. 이 확장은 R 실행 환경, 표준 라이브러리 및 도구가 포함된 기본 R 배포판, Microsoft R 라이브러리를 추가합니다. [RevoScaleR](../r/ref-r-revoscaler.md)은 대규모 분석용이고, [MicrosoftML](../r/ref-r-microsoftml.md)은 기계 학습 알고리즘용이며, 그 외에도 SQL Server에서 데이터 또는 R 코드에 액세스하기 위한 기타 라이브러리를 추가합니다.
 
-R 통합은 [SQL Server R Services](../r/sql-server-r-services.md) 및 [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)에서 사용할 수 있습니다.
+R 통합은 [SQL Server R Services](../r/sql-server-r-services.md) 및 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)에서 사용할 수 있습니다.
 
 ## <a name="r-components"></a>R 구성 요소
 

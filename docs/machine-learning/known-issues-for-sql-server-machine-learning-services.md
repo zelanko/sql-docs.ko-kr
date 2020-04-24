@@ -7,17 +7,17 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7151d375385cc7af54a68a141274a033011759e6
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 87cea1d05376669292edb824631c3834328763f0
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "81119076"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487196"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 알려진 문제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 문서에서는 [SQL Server Machine Learning Services](what-is-sql-server-machine-learning.md) 및 [SQL Server 2016 R Services](r/sql-server-r-services.md)에서 옵션으로 제공되는 기계 학습 구성 요소의 알려진 문제 또는 제한 사항을 설명합니다.
+이 문서에서는 [SQL Server Machine Learning Services](sql-server-machine-learning-services.md) 및 [SQL Server 2016 R Services](r/sql-server-r-services.md)에서 옵션으로 제공되는 기계 학습 구성 요소의 알려진 문제 또는 제한 사항을 설명합니다.
 
 ## <a name="setup-and-configuration-issues"></a>설치 및 구성 문제
 

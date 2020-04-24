@@ -1,5 +1,6 @@
 ---
 title: SQL 데이터 개발자 | Microsoft Docs
+description: Microsoft의 SQL 데이터 플랫폼을 사용하여 웹 서버, 엔터프라이즈 서버 및 클라우드의 모바일 디바이스 및 데스크톱에서 데이터 중심 솔루션을 만들 수 있습니다.
 ms.custom: ''
 ms.date: 03/28/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b67bf56247302fb451e1ea9d0ea9f76f9726a836
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7571287c89589969e3b2d3b8c26677423c1c35b0
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926696"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528764"
 ---
 # <a name="sql-data-developer"></a>SQL 데이터 개발자
 Microsoft의 SQL 데이터 플랫폼을 사용하여 웹 서버, 엔터프라이즈 서버 및 클라우드의 모바일 디바이스 및 데스크톱에서 데이터 중심 솔루션을 만들 수 있습니다.  

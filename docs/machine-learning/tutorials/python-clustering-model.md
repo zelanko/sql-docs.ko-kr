@@ -11,18 +11,18 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7112b89375251244ba54182197855e0bed412455
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4117596621141ced75e3cf013bfbc6048dbf52c4
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116526"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487385"
 ---
 # <a name="tutorial-categorizing-customers-using-k-means-clustering-with-sql-server-machine-learning-services"></a>자습서: SQL Server Machine Learning Services와 함께 K-평균 클러스터링을 사용하여 고객 분류
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-4부로 구성된 이 자습서 시리즈에서는 고객 데이터를 클러스터링하기 위해 [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)에서 Python을 사용하여 K-평균 클러스터링 모델을 개발 및 배포합니다.
+4부로 구성된 이 자습서 시리즈에서는 고객 데이터를 클러스터링하기 위해 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)에서 Python을 사용하여 K-평균 클러스터링 모델을 개발 및 배포합니다.
 
 이 시리즈 중 1부에서는 자습서의 사전 요구 사항을 설정한 후 샘플 데이터 세트를 SQL 데이터베이스에 복원합니다. 이 시리즈의 후반부에서는 이 데이터를 사용하여 SQL Server Machine Learning Services와 함께 Python에서 클러스터링 모델을 학습시키고 배포합니다.
 
@@ -44,7 +44,7 @@ K-평균 클러스터링은 유사성을 기준으로 데이터의 패턴을 찾
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-* [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) 및 Python 언어 옵션 - [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md) 또는 [Linux 설치 가이드](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning?toc=%2fsql%2fmachine-learning%2ftoc.json&view=sql-server-linux-ver15)의 설치 지침을 따릅니다.
+* [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 및 Python 언어 옵션 - [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md) 또는 [Linux 설치 가이드](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning?toc=%2fsql%2fmachine-learning%2ftoc.json&view=sql-server-linux-ver15)의 설치 지침을 따릅니다.
 
 * [Azure Data Studio](../../azure-data-studio/what-is.md) Python 및 SQL에 대한 Azure Data Studio에서 Notebook을 사용합니다. Notebook에 대한 자세한 내용은 [Azure Data Studio에서 Notebook을 사용하는 방법](../../azure-data-studio/sql-notebooks.md)을 참조하세요.
 

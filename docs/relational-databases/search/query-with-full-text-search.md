@@ -17,12 +17,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fbc89d21deb7fab0662623634fb965a2f88640f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fd248b42f01a65aabcd1146d23c7b247d0053908
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68053567"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488189"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68053567"
 
 ## <a name="examples-of-each-predicate-and-function"></a><a name="examples_simple"></a> 각 조건자 및 함수의 예제
 
-다음 예제에서는 AdventureWorks 샘플 데이터베이스를 사용합니다. AdventureWorks의 최종 릴리스는 [SQL Server 2016 CTP3용 AdventureWorks 데이터베이스 및 스크립트](https://www.microsoft.com/download/details.aspx?id=49502)를 참조하세요. 예제 쿼리를 실행하기 위해 전체 텍스트 검색을 설정할 수도 있습니다. 자세한 내용은 [전체 텍스트 검색 시작](get-started-with-full-text-search.md)을 참조하세요. 
+다음 예제에서는 AdventureWorks 샘플 데이터베이스를 사용합니다. AdventureWorks의 최종 릴리스는 [SQL Server 2016 CTP3용 AdventureWorks 데이터베이스 및 스크립트](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)를 참조하세요. 예제 쿼리를 실행하기 위해 전체 텍스트 검색을 설정할 수도 있습니다. 자세한 내용은 [전체 텍스트 검색 시작](get-started-with-full-text-search.md)을 참조하세요. 
 
 ### <a name="example---contains"></a>예제 - CONTAINS  
 다음 예에서는 가격이 `$80.99`이고 `"Mountain"`이라는 단어가 포함된 모든 제품을 검색합니다.

@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c61329dcaeb7972382e9385b723f5be889470c3c
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.openlocfilehash: a1ac8a66c76e7244d36652e4c240d02036f81d98
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81002838"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632253"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE(Transact-SQL)
 
@@ -88,7 +88,7 @@ ms.locfileid: "81002838"
 
 ## <a name="syntax-for-disk-based-tables"></a>디스크 기반 테이블의 구문
 
-```
+```syntaxsql
 ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 {
     ALTER COLUMN column_name
@@ -256,7 +256,7 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 
 ## <a name="syntax-for-memory-optimized-tables"></a>메모리 최적화 테이블의 구문
 
-```
+```syntaxsql
 ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 {
     ALTER COLUMN column_name
@@ -349,7 +349,7 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure Synapse Analytics and Analytics Platform System
 
 ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
@@ -872,7 +872,7 @@ SET ( FILETABLE_DIRECTORY = *directory_name* )
 
 Windows 호환 FileTable 디렉터리 이름을 지정합니다. 이 이름은 데이터베이스의 모든 FileTable 디렉터리 이름 중에서 고유해야 합니다. 고유성을 비교할 때는 SQL 데이터 정렬 설정과 관계없이 대/소문자가 구분되지 않습니다. FileTable에서만 사용할 수 있습니다.
 
-```sql
+```syntaxsql
  SET (
         REMOTE_DATA_ARCHIVE
         {

@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 48f3b3433d0ca2f4daf08048228989598c5cf36a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 25b21944db46a5054ad8765b83fe7e2985f8d894
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117226"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486706"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>SQL Server 2016 R Services란?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "81117226"
 R Services는 관계형 데이터를 사용하여 R 스크립트를 실행하는 기능을 제공하는 SQL Server 2016의 기능입니다. 예측 분석 및 기계 학습에 오픈 소스 패키지와 프레임워크 및 [Microsoft R 패키지](#packages)를 사용할 수 있습니다. 스크립트는 SQL Server 외부에서 또는 네트워크를 통해 데이터를 이동하지 않고 데이터베이스 내에서 실행됩니다. 이 문서에서는 SQL Server R Services의 기본 사항에 대해 설명합니다.
 
 > [!Note]
-> R Services는 SQL Server 2017 이상에서 [Machine Learning Services](../what-is-sql-server-machine-learning.md)로 이름이 변경되었으며 Python과 R을 모두 지원합니다.
+> R Services는 SQL Server 2017 이상에서 [Machine Learning Services](../sql-server-machine-learning-services.md)로 이름이 변경되었으며 Python과 R을 모두 지원합니다.
 
 ## <a name="what-is-r-services"></a>R Services란?
 
@@ -60,7 +60,7 @@ R Services에서 R 스크립트를 실행하는 방법에는 다음 두 가지�
 
 ## <a name="r-version"></a>R 버전
 
-R 버전 3.2.2는 SQL Server 2016 R Services에 포함되어 있습니다. 최신 버전 R의 경우 [SQL Server 2017 이상용 Machine Learning Services](../what-is-sql-server-machine-learning.md)를 사용합니다.
+R 버전 3.2.2는 SQL Server 2016 R Services에 포함되어 있습니다. 최신 버전 R의 경우 [SQL Server 2017 이상용 Machine Learning Services](../sql-server-machine-learning-services.md)를 사용합니다.
 
 <a name="packages"></a>
 

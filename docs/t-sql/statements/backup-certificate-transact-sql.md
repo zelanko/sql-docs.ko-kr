@@ -1,7 +1,7 @@
 ---
 title: BACKUP CERTIFICATE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
@@ -28,12 +28,12 @@ ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 7b2559ca1eee0f2787fbf74adba97b03671d6faf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cbf9127ebf7e7c7ae649e432d7227265767ec56d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68091760"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632180"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68091760"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server  
   
 BACKUP CERTIFICATE certname TO FILE = 'path_to_file'  
@@ -57,7 +57,7 @@ BACKUP CERTIFICATE certname TO FILE = 'path_to_file'
     ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 BACKUP CERTIFICATE certname TO FILE ='path_to_file'  
@@ -107,7 +107,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
 ### <a name="a-exporting-a-certificate-to-a-file"></a>A. 인증서를 파일로 내보내기  
  다음 예에서는 인증서를 파일로 내보냅니다.  
   
-```  
+```sql
 BACKUP CERTIFICATE sales05 TO FILE = 'c:\storedcerts\sales05cert';  
 GO  
 ```  
@@ -115,7 +115,7 @@ GO
 ### <a name="b-exporting-a-certificate-and-a-private-key"></a>B. 인증서와 프라이빗 키 내보내기  
  다음 예에서는 백업된 인증서의 프라이빗 키가 암호 `997jkhUbhk$w4ez0876hKHJH5gh`를 사용하여 암호화됩니다.  
   
-```  
+```sql
 BACKUP CERTIFICATE sales05 TO FILE = 'c:\storedcerts\sales05cert'  
     WITH PRIVATE KEY ( FILE = 'c:\storedkeys\sales05key' ,   
     ENCRYPTION BY PASSWORD = '997jkhUbhk$w4ez0876hKHJH5gh' );  
@@ -125,7 +125,7 @@ GO
 ### <a name="c-exporting-a-certificate-that-has-an-encrypted-private-key"></a>C. 프라이빗 키가 암호화된 인증서 내보내기  
  다음 예에서 인증서의 프라이빗 키가 데이터베이스에서 암호화됩니다. 프라이빗 키는 암호 `9875t6#6rfid7vble7r`로 암호화되어야 합니다. 인증서가 백업 파일에 저장될 때 프라이빗 키는 암호 `9n34khUbhk$w4ecJH5gh`로 암호화됩니다.  
   
-```  
+```sql
 BACKUP CERTIFICATE sales09 TO FILE = 'c:\storedcerts\sales09cert'   
     WITH PRIVATE KEY ( DECRYPTION BY PASSWORD = '9875t6#6rfid7vble7r' ,  
     FILE = 'c:\storedkeys\sales09key' ,   

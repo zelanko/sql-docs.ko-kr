@@ -1,7 +1,7 @@
 ---
 title: CREATE VIEW(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/10/2018
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50ae26a445faa8f8bcd811ed7834868417fc27b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5f29027f7b9ab16b1cb9de5c92f5aaf7dccf9765
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982665"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634849"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "73982665"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [ (column [ ,...n ] ) ]   
@@ -76,7 +76,7 @@ AS select_statement
 }   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
@@ -210,7 +210,7 @@ OR ALTER
   
  `Server1`의 분할 뷰는 다음과 같이 정의됩니다.  
   
-```  
+```sql
 --Partitioned view as defined on Server1  
 CREATE VIEW Customers  
 AS  
@@ -229,7 +229,7 @@ FROM Server3.CompanyData.dbo.Customers_99;
   
  일반적으로 뷰의 형식이 다음과 같은 경우에 분할 뷰라고 합니다.  
   
-```  
+```syntaxsql
 SELECT <select_list1>  
 FROM T1  
 UNION ALL  
@@ -253,7 +253,7 @@ FROM Tn;
   
          `C1` 테이블에 정의되는 `T1` 제약 조건은 다음 형식을 따라야 합니다.  
   
-        ```  
+        ```syntaxsql
         C1 ::= < simple_interval > [ OR < simple_interval > OR ...]  
         < simple_interval > :: =   
         < col > { < | > | \<= | >= | = < value >}   
@@ -261,13 +261,13 @@ FROM Tn;
         | < col > IN ( value_list )  
         | < col > { > | >= } < value1 > AND  
         < col > { < | <= } < value2 >  
-        ```  
+        ```
   
     -   제약 조건은 `<col>`의 지정된 값이 모두 `C1, ..., Cn` 제약 조건을 최대 하나까지 만족시켜 제약 조건이 결합되지 않거나 겹치지 않는 일련의 간격을 구성하도록 해야 합니다. 결합되지 않은 제약 조건이 정의된 `<col>` 열을 분할 열이라고 합니다. 분할 열 이름은 기본 테이블에 있는 이름과 다를 수 있습니다. 앞에서 언급한 분할 열의 조건을 만족시키려면 제약 조건이 활성화되어 트러스트된 상태여야 합니다. 제약 조건이 해제되면 ALTER TABLE의 CHECK CONSTRAINT *constraint_name* 옵션을 사용하고 WITH CHECK 옵션으로 제약 조건의 유효성을 검사하여 제약 조건 검사를 다시 설정하세요.  
   
          다음 예에서는 올바른 제약 조건 집합을 보여 줍니다.  
   
-        ```  
+        ```syntaxsql
         { [col < 10], [col between 11 and 20] , [col > 20] }  
         { [col between 11 and 20], [col between 21 and 30], [col between 31 and 100] }  
         ```  
@@ -356,7 +356,7 @@ FROM Tn;
 ### <a name="a-using-a-simple-create-view"></a>A. 간단한 CREATE VIEW 사용  
  다음 예에서는 간단한 `SELECT` 문을 사용하여 뷰를 만듭니다. 간단한 뷰는 열 조합을 자주 쿼리할 때 유용합니다. 이 뷰의 데이터는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `HumanResources.Employee` 및 `Person.Person` 테이블에 있습니다. 이 데이터는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]의 직원 이름과 채용 날짜 정보를 제공합니다. 입사일 추적 담당자에게 이 테이블의 모든 데이터에 액세스할 권한을 주지 않아도 해당 뷰를 만들 수 있습니다.  
   
-```  
+```sql
 CREATE VIEW hiredate_view  
 AS   
 SELECT p.FirstName, p.LastName, e.BusinessEntityID, e.HireDate  
@@ -371,7 +371,7 @@ GO
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
-```  
+```sql
 CREATE VIEW Purchasing.PurchaseOrderReject  
 WITH ENCRYPTION  
 AS  
@@ -387,7 +387,7 @@ GO
 ### <a name="c-using-with-check-option"></a>C. WITH CHECK OPTION 사용  
  다음 예에서는 5개의 테이블을 참조하고 데이터 수정을 허용하여 시애틀에 사는 직원에게만 적용하는 `SeattleOnly`라는 뷰를 보여 줍니다.  
   
-```  
+```sql
 CREATE VIEW dbo.SeattleOnly  
 AS  
 SELECT p.LastName, p.FirstName, e.JobTitle, a.City, sp.StateProvinceCode  
@@ -408,7 +408,7 @@ GO
 ### <a name="d-using-built-in-functions-within-a-view"></a>D. 뷰에서 기본 제공 함수 사용  
  다음 예에서는 기본 제공 함수를 포함하는 뷰 정의를 보여 줍니다. 함수를 사용할 때는 파생 열의 열 이름을 지정해야 합니다.  
   
-```  
+```sql
 CREATE VIEW Sales.SalesPersonPerform  
 AS  
 SELECT TOP (100) SalesPersonID, SUM(TotalDue) AS TotalSales  
@@ -422,7 +422,7 @@ GO
 ### <a name="e-using-partitioned-data"></a>E. 분할된 데이터 사용  
  다음 예에서는 `SUPPLY1`, `SUPPLY2`, `SUPPLY3` 및 `SUPPLY4` 테이블을 사용합니다. 이러한 테이블은 서로 다른 국가/지역에 있는 4개 사무실의 공급자 테이블입니다.  
   
-```  
+```sql
 --Create the tables and insert the values.  
 CREATE TABLE dbo.SUPPLY1 (  
 supplyID INT PRIMARY KEY CHECK (supplyID BETWEEN 1 and 150),  
@@ -469,7 +469,7 @@ GO
 ### <a name="f-creating-a-simple-view"></a>F. 간단한 뷰 만들기  
  다음 예는 원본 테이블에서 일부 열만 선택하여 뷰를 만듭니다.  
   
-```  
+```sql
 CREATE VIEW DimEmployeeBirthDates AS  
 SELECT FirstName, LastName, BirthDate   
 FROM DimEmployee;  
@@ -478,7 +478,7 @@ FROM DimEmployee;
 ### <a name="g-create-a-view-by-joining-two-tables"></a>G. 두 테이블을 조인하여 뷰 만들기  
  다음 예에서는 `OUTER JOIN`이 있는 `SELECT` 문을 사용하여 뷰를 만듭니다. 조인 쿼리의 결과가 뷰를 채웁니다.  
   
-```  
+```sql
 CREATE VIEW view1  
 AS 
 SELECT fis.CustomerKey, fis.ProductKey, fis.OrderDateKey, 

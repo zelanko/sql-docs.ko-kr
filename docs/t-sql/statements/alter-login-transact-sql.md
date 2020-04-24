@@ -24,12 +24,12 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6523da9177f15673461880cbad0fc0a751a4391d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4efecdda3375430a380e10ddb1845f08050ce4a3
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75871138"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81627673"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN(Transact-SQL)
 
@@ -54,7 +54,7 @@ ms.locfileid: "75871138"
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 -- Syntax for SQL Server
 
 ALTER LOGIN login_name
@@ -276,7 +276,7 @@ GO
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Database
 
 ALTER LOGIN login_name
@@ -432,7 +432,7 @@ GO
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database managed instance
 
 ALTER LOGIN login_name
@@ -471,7 +471,7 @@ ALTER LOGIN login_name
 > [!NOTE]
 > 생성 후 관리형 인스턴스 기능에 대한 Azure AD 관리자가 변경되었습니다. 자세한 내용은 [MI의 새 Azure AD 관리자 기능](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)을 참조하세요.
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Database managed instance using Azure AD logins
 
 ALTER LOGIN login_name
@@ -683,7 +683,7 @@ ALTER LOGIN [joe@contoso.com] DISABLE
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 -- Syntax for Azure Synapse
 
 ALTER LOGIN login_name
@@ -838,7 +838,7 @@ GO
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 -- Syntax for Analytics Platform System
 
 ALTER LOGIN login_name

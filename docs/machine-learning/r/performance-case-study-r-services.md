@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 19935bbcaba9b856ff04b5c618de3b3643e48732
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1313cc2074058b104ea0939d02cdac30ddf28595
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117576"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486782"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services에 대한 성능: 결과 및 리소스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -351,7 +351,7 @@ CPU affinitization은 R 작업에 대한 영향을 평가하기 위해 다시 �
 
 + 다시 시작 일치 솔루션을 설명하는 문서: [SQL Server R Services에 대한 최적화 팁과 요령](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
 
-+ 다시 시작 일치 솔루션을 위해 SQL 최적화에 사용되는 스크립트: [GitHub 리포지토리](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
++ 다시 시작 일치 솔루션을 위해 SQL 최적화에 사용되는 스크립트: [GitHub 리포지토리](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching)
 
 ### <a name="learn-about-windows-server-management"></a>Windows 서버 관리에 대한 자세한 정보
 

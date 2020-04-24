@@ -23,12 +23,12 @@ ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 83cb5bb61d64cab7dc9d45b5aae871a863368f3f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ea7316580a1c9d3ce2f68e0d701cd5885c52bc80
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68007168"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488012"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>테이블 또는 인덱스에 압축 사용
 
@@ -211,7 +211,7 @@ ms.locfileid: "68007168"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 먼저 `sp_estimate_data_compression_savings` 저장 프로시저를 실행하여 ROW 압축 설정을 사용할 경우의 예상 개체 크기를 반환합니다. 그런 다음 지정한 테이블의 모든 파티션에 대해 ROW 압축을 사용하도록 설정합니다.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     EXEC sp_estimate_data_compression_savings 'Production', 'TransactionHistory', NULL, NULL, 'ROW' ;  
@@ -229,7 +229,7 @@ ms.locfileid: "68007168"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 먼저 `sys.indexes` 카탈로그 뷰를 쿼리하여 `index_id` 테이블에 있는 각 인덱스의 이름 및 `Production.TransactionHistory` 를 반환합니다. 그런 다음, `sp_estimate_data_compression_savings` 저장 프로시저를 실행하여 PAGE 압축 설정을 사용할 경우의 지정한 인덱스 ID에 대한 예상 크기를 반환합니다. 마지막으로 PAGE 압축을 지정하여 인덱스 ID 2(`IX_TransactionHistory_ProductID`)를 다시 작성합니다.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     SELECT name, index_id  

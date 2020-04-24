@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 83bb4fa7861feaccd2ff430ca10f80ef0bc5b10a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 07d167ddc39f281a3330ffd80460d9cc34ccfa65
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116226"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487328"
 ---
 # <a name="quickstart-data-structures-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services에서 R을 사용하는 데이터 구조, 데이터 형식 및 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -308,4 +308,4 @@ SQL Server에서 고급 R 함수 작성에 대해 알아보려면 다음 빠른 
 SQL Server Machine Learning Services에서 R 사용에 대한 자세한 내용은 다음 문서를 참조하세요.
 
 - [SQL Server Machine Learning Services를 사용하여 R에서 예측 모델 만들기 및 채점](quickstart-r-train-score-model.md)
-- [SQL Server Machine Learning Services(Python 및 R)란?](../what-is-sql-server-machine-learning.md)
+- [SQL Server Machine Learning Services(Python 및 R)란?](../sql-server-machine-learning-services.md)

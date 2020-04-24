@@ -22,12 +22,12 @@ ms.assetid: 0ec0e5cf-e115-4be9-a0db-e65837d6fa45
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac79430a87cccb7b67ce81a3cb6ca9b05d0a04db
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 549d1e478c15999dec12c5cd170d94e5d0ec0804
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67928932"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634334"
 ---
 # <a name="set-language-transact-sql"></a>SET LANGUAGE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67928932"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 SET LANGUAGE { [ N ] 'language' | @language_var }   
 ```  
@@ -59,7 +59,7 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
 ## <a name="examples"></a>예  
  다음 예제에서는 기본 언어를 `Italian`으로 설정하고 월 이름을 표시한 다음, `us_english`로 다시 전환하고 월 이름을 다시 표시합니다.  
   
-```  
+```sql
 DECLARE @Today DATETIME;  
 SET @Today = '12/5/2007';  
   

@@ -10,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6042621491bfd26cb175b1a50d5a68374be41aa9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: bdb358c2414d40aa39ead1323eff90aefbb3081e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115706"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487042"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 새로운 기능
 
@@ -43,7 +43,7 @@ Microsoft는 데이터 플랫폼, 고급 분석 및 데이터 과학 간의 통�
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2017"></a>SQL Server 2017의 새로운 기능
 
-이 릴리스에는 [Python 지원 및 업계 최고 수준의 기계 학습 알고리즘](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)이 추가되었습니다. 새로운 범위를 반영하도록 이름이 바뀐 SQL Server 2017에는 Python 및 R 언어 지원과 함께 [SQL Server Machine Learning Services(데이터베이스 내)](what-is-sql-server-machine-learning.md)가 도입되었습니다. 
+이 릴리스에는 [Python 지원 및 업계 최고 수준의 기계 학습 알고리즘](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)이 추가되었습니다. 새로운 범위를 반영하도록 이름이 바뀐 SQL Server 2017에는 Python 및 R 언어 지원과 함께 [SQL Server Machine Learning Services(데이터베이스 내)](sql-server-machine-learning-services.md)가 도입되었습니다. 
 
 전체 기능 공지는 [SQL Server 2017의 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md)을 참조하세요.
 
@@ -110,14 +110,8 @@ T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 함수를 사용하여
 
 SQL Server 2019는 데이터베이스 엔진 인스턴스를 사용하여 기계 학습 패키지를 설치할 때 R 및 Python에 Linux를 사용할 수 있도록 지원이 추가되었습니다. 자세한 내용은 [Linux에 SQL Server Machine Learning Services 설치](../linux/sql-server-linux-setup-machine-learning.md)를 참조하세요.
 
-Linux에서는 SQL Server 2017이 R 또는 Python과 통합되지 않지만, Linux에서 실행되는 T-SQL [PREDICT](sql-native-scoring.md)를 통해 해당 기능을 사용할 수 있으므로 Linux에서 [네이티브 채점](../t-sql/queries/predict-transact-sql.md)을 사용할 수 있습니다. 네이티브 채점을 사용하면 R 런타임을 호출하지 않고 또는 심지어 R 런타임 없이, 미리 학습된 모델에서 고성능 채점이 가능합니다.
+Linux에서는 SQL Server 2017이 R 또는 Python과 통합되지 않지만, Linux에서 실행되는 T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md)를 통해 해당 기능을 사용할 수 있으므로 Linux에서 [네이티브 채점](sql-native-scoring.md)을 사용할 수 있습니다. 네이티브 채점을 사용하면 R 런타임을 호출하지 않고 또는 심지어 R 런타임 없이, 미리 학습된 모델에서 고성능 채점이 가능합니다.
 ::: moniker-end
-
-<a name="azure-sql-database-roadmap"></a>
-
-## <a name="machine-learning-services-in-azure-sql-database"></a>Azure SQL Database의 Machine Learning Services
-
-Azure SQL Database의 Machine Learning Services는 공개 미리 보기로 제공됩니다. 자세한 내용은 [Azure SQL Database Machine Learning Services(미리 보기)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview)를 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 

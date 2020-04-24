@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a322934e89cb0b7b0c7959d3078c52a4a3fac65a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6db50af7454526c910b3c2688e0a81fe261c2167
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75952423"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632203"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER(Transact-SQL)
 
@@ -55,7 +55,7 @@ ms.locfileid: "75952423"
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 -- Syntax for SQL Server
 
 ALTER USER userName
@@ -216,7 +216,7 @@ GO
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Database
 
 ALTER USER userName
@@ -391,7 +391,7 @@ GO
 > Azure AD 로그인을 사용하는 사용자에게 적용하는 경우 Azure SQL Database 관리되는 인스턴스에 대해 `DEFAULT_SCHEMA = { schemaName | NULL }` 및 `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }` 옵션만 지원됩니다.
 > </br> </br> 관리되는 인스턴스로 마이그레이션된 데이터베이스의 사용자를 다시 매핑하는 데 도움이 되는 새로운 구문 확장이 추가되었습니다. ALTER USER 구문은 Azure AD와 페더레이션 및 동기화된 도메인의 데이터베이스 사용자를 Azure AD 로그인에 매핑하는 데 도움이 됩니다.
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Database managed instance
 ALTER USER userName
  { WITH <set_item> [ ,...n ] | FROM EXTERNAL PROVIDER }
@@ -641,7 +641,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 -- Syntax for Azure Synapse
 
 ALTER USER userName
@@ -752,7 +752,7 @@ GO
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 -- Syntax for Analytics Platform System
 
 ALTER USER userName

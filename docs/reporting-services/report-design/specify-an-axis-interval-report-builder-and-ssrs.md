@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fecaea37ca01f7d005934c8b371d228bc0bb6b93
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7467cc02ec7351edb879da18c20e0cf2af4bb099
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080944"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487710"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>축 간격 지정(보고서 작성기 및 SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 의 페이지를 매긴 보고서에서 축 간격을 설정하여 차트에서 범주(x) 축에 레이블 수와 눈금 수를 변경하는 방법을 알아 봅니다.
@@ -22,7 +22,7 @@ ms.locfileid: "77080944"
 
 하지만 범주 축(일반적으로 x축)에서는 자동 축 간격으로 인해 축 레이블이 없는 범주가 만들어지기도 합니다. 축 Interval 속성에서 원하는 간격 수를 지정할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 결과 집합의 데이터를 기반으로 런타임에 간격 수를 계산합니다. 축 간격을 계산하는 방법에 대한 자세한 내용은 [차트의 축 레이블 서식 지정](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)을 참조하세요.  
 
-샘플 데이터로 축 간격을 설정해 보려면 [자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)를 참조하세요.
+샘플 데이터로 축 간격을 설정해 보려면 [자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기)](../tutorial-add-a-column-chart-to-your-report-report-builder.md)를 참조하세요.
   
 > [!NOTE]  
 >  일반적으로 범주 축은 가로 축 또는 x축이지만 가로 막대형 차트에서는 범주 축이 세로 축 또는 y축입니다.  

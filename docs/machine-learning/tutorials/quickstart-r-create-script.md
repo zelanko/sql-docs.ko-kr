@@ -10,17 +10,17 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 495bb56cf76391c8baa1734665d5064b586d4be8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 33baeba807711c1eb65b3a9c972066bb384e2542
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116246"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487302"
 ---
 # <a name="quickstart-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services로 간단한 R 스크립트 실행
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 빠른 시작에서는 [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)를 사용하여 간단한 R 스크립트 세트를 실행합니다. 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 사용하여 SQL Server 인터페이스에서 스크립트를 실행하는 방법을 알아봅니다.
+이 빠른 시작에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)를 사용하여 간단한 R 스크립트 세트를 실행합니다. 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 사용하여 SQL Server 인터페이스에서 스크립트를 실행하는 방법을 알아봅니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -249,4 +249,4 @@ SQL Server Machine Learning Services에서 R 사용에 대한 자세한 내용�
 
 - [SQL Server Machine Learning Services를 사용하여 고급 R 함수 작성](quickstart-r-functions.md)
 - [SQL Server Machine Learning Services를 사용하여 R에서 예측 모델 만들기 및 채점](quickstart-r-train-score-model.md)
-- [SQL Server Machine Learning Services(Python 및 R)란?](../what-is-sql-server-machine-learning.md)
+- [SQL Server Machine Learning Services(Python 및 R)란?](../sql-server-machine-learning-services.md)

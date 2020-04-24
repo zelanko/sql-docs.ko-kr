@@ -18,12 +18,12 @@ ms.assetid: 8ca0973c-30b2-4633-a165-c09b13cc81ae
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df4f6cb9ed29d5efb5c943d140591c5c97bf124d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 48628140f4d0e01e522a2fd9032cc797c78ff170
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75255458"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634033"
 ---
 # <a name="revoke-xml-schema-collection-permissions-transact-sql"></a>REVOKE XML 스키마 컬렉션 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "75255458"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON   
     XML SCHEMA COLLECTION :: [ schema_name . ]  

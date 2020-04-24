@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dfcf8ddd7b77132a1658c2ea1d55f7a220c336d0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5c318bebf807846aed85f49770498c57a27ef4d3
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082251"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487982"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>원형 차트에서 작은 조각 수집(보고서 작성기 및 SSRS)
 너무 많은 조각이 있는 원형 차트는 복잡하게 보일 수 있습니다. [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지가 매겨진 보고서에서 원형 차트의 많은 작은 조각을 하나의 단일 조각으로 수집하는 방법을 알아봅니다.
  
  여러 개의 작은 조각을 한 조각으로 수집하려면 먼저 작은 조각을 수집하기 위한 임계값을 원형 차트의 백분율과 고정 값 중 어떤 것으로 측정할지 결정해야 합니다. 
  
- [자습서: 보고서에 원형 차트 추가(보고서 작성기)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)는 이 샘플 데이터로 먼저 시도하려는 경우 작은 조각을 단일 조각으로 수집하는 것을 안내합니다.
+ [자습서: 보고서에 원형 차트 추가(보고서 작성기)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)는 이 샘플 데이터로 먼저 시도하려는 경우 작은 조각을 단일 조각으로 수집하는 것을 안내합니다.
  
  ![report-builder-pie-chart-other-slice](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
   
@@ -79,7 +79,7 @@ ms.locfileid: "77082251"
 >  보조 원형 차트의 서식은 지정할 수 없습니다. 이러한 이유로 원형 조각을 수집할 때는 첫 번째 방법을 사용하는 것이 좋습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-* [자습서: 보고서에 원형 차트 추가(보고서 작성기)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
+* [자습서: 보고서에 원형 차트 추가(보고서 작성기)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)
 *  [원형 차트 &#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
 *  [차트의 데이터 요소에 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
 *  [원형 차트 외부에 데이터 요소 레이블 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   

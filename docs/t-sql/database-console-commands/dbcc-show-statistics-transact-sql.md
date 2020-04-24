@@ -33,12 +33,12 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50587bc33f6fd37e4c114fa28a7171e6ea951b84
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 350ece68d98f8333eb6281a5cbb6fdacf792e51a
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77074451"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632354"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ DBCC SHOW_STATISTICS는 통계 개체에 저장된 데이터를 바탕으로 헤
   
 ## <a name="syntax"></a>구문  
   
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )   
@@ -64,7 +64,7 @@ DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )
     STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM  
 ```  
   
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 DBCC SHOW_STATISTICS ( table_name , target )   

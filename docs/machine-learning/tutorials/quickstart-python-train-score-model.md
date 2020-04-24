@@ -10,17 +10,17 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c6c74d73a531a40e0f8e57e7104109de71e27ce3
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2eeb4bd6a384b37d8a0d7f2bd15e8ea126654a4e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116296"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487342"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services를 사용하여 Python에서 예측 모델 만들기 및 채점
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 빠른 시작에서는 Python을 사용하여 예측 모델을 만들고 학습합니다. SQL Server 인스턴스의 테이블에 모델을 저장한 다음 [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)로 새로운 데이터의 값을 예측하는 데 해당 모델을 사용합니다.
+이 빠른 시작에서는 Python을 사용하여 예측 모델을 만들고 학습합니다. SQL Server 인스턴스의 테이블에 모델을 저장한 다음 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)로 새로운 데이터의 값을 예측하는 데 해당 모델을 사용합니다.
 
 SQL에서 실행되는 두 개의 저장 프로시저를 만들고 실행합니다. 첫 번째 저장 프로시저는 클래식 아이리스 꽃 데이터 세트를 사용하여 꽃 특성을 기반으로 아이리스 종류를 예측하는 Naive Bayes 모델을 생성합니다. 두 번째 저장 프로시저는 첫 번째 프로시저에서 생성된 모델을 호출하여 새 데이터를 기반으로 예측 세트를 출력합니다. SQL 저장 프로시저에 Python 코드를 배치하면 작업이 SQL에 포함되고 다시 사용할 수 있으며, 다른 저장 프로시저와 클라이언트 애플리케이션에서 호출할 수 있습니다.
 
@@ -186,4 +186,4 @@ SQL Server에서 다시 사용하기 위해 저장된 모델은 바이트 스트
 
 SQL Server Machine Learning Services에 대한 자세한 내용은 다음을 참조하세요.
 
-- [SQL Server Machine Learning Services(Python 및 R)란?](../what-is-sql-server-machine-learning.md)
+- [SQL Server Machine Learning Services(Python 및 R)란?](../sql-server-machine-learning-services.md)

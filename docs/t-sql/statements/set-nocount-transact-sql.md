@@ -24,12 +24,12 @@ ms.assetid: eb3e6727-cb26-4bc2-84c7-171cbac02029
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3593709dfbae0406e9952392ef82e184f205208
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fb582717e0a98e8aaba60b4d7a100a09d0076f1a
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68034947"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634695"
 ---
 # <a name="set-nocount-transact-sql"></a>SET NOCOUNT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68034947"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 SET NOCOUNT { ON | OFF }   
 ```  
@@ -56,7 +56,7 @@ SET NOCOUNT { ON | OFF }
   
  이 설정에 대한 현재 설정을 보려면 다음 쿼리를 실행합니다.  
   
-```  
+```sql
 DECLARE @NOCOUNT VARCHAR(3) = 'OFF';  
 IF ( (512 & @@OPTIONS) = 512 ) SET @NOCOUNT = 'ON';  
 SELECT @NOCOUNT AS NOCOUNT;  
@@ -69,7 +69,7 @@ SELECT @NOCOUNT AS NOCOUNT;
 ## <a name="examples"></a>예  
  다음 예에서는 영향을 받은 행 수에 대한 메시지가 표시되지 않도록 지정합니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET NOCOUNT OFF;  

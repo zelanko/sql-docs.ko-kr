@@ -18,12 +18,12 @@ ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 262830dfa4bf32dfb49638b3f0d730ea8aeadde5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ca9cc9d45c1b69b4fa3761eeadfa321378a979c0
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77037009"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635097"
 ---
 # <a name="json_value-transact-sql"></a>JSON_VALUE(Transact-SQL)
 
@@ -122,7 +122,7 @@ ORDER BY JSON_VALUE(jsonInfo,'$.info.address[0].town')
 ### <a name="example-2"></a>예제 2
  다음 예에서는 JSON 속성 `town`의 값을 로컬 변수로 추출합니다.  
   
-```sql  
+```sql
 DECLARE @jsonInfo NVARCHAR(MAX)
 DECLARE @town NVARCHAR(32)
 

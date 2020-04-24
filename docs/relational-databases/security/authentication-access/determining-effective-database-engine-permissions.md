@@ -14,12 +14,12 @@ ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40f30fd646e166cc9b8db433934d22a378c907cb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b7c27c18cb862a753bc1a71c38d732c72a040a48
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67995630"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488033"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>효과적인 데이터베이스 엔진 사용 권한 결정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -156,5 +156,5 @@ REVERT;
 ## <a name="see-also"></a>참고 항목:
 
 [데이터베이스 엔진 권한 시작](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
-[자습서: 데이터베이스 엔진 시작](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
+[자습서: 데이터베이스 엔진 시작](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
 
