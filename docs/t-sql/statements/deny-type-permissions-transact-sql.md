@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fd74479464d23ab6ce85a92babf6ba92fa8baf49
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6c140ba3c074e6c46fabe3bf5ad39083cc2d50ed
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67984349"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636127"
 ---
 # <a name="deny-type-permissions-transact-sql"></a>DENY 유형 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "67984349"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name  
         TO <database_principal> [ ,...n ]  
     [ CASCADE ]  

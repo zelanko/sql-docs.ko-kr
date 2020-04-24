@@ -18,12 +18,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3fb28ddb5e910c70c8f5e72f34703d18fc4c38c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 746f0763ccc8878ea8f4673888c47983b15f28e5
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70874458"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636241"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 데이터 정렬 이름(Transact-SQL)
 
@@ -35,7 +35,7 @@ ms.locfileid: "70874458"
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 <Windows_collation_name> :: =
 CollationDesignator_<ComparisonStyle>
 
@@ -234,6 +234,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상의 서버 수준에서 더 이상 사용할 수 없음|Korean_Wansung_Unicode|Korean_Wansung_Unicode|
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상의 서버 수준에서 더 이상 사용할 수 없음|Lithuanian_Classic|Lithuanian_Classic|
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상의 서버 수준에서 더 이상 사용할 수 없음|마케도니아어|마케도니아어|
+||||
 
 <sup>1</sup> Windows 유니코드 전용 데이터 정렬은 열 수준 또는 식 수준 데이터에만 적용할 수 있으며 서버 또는 데이터베이스 데이터 정렬로 사용할 수 없습니다.
 

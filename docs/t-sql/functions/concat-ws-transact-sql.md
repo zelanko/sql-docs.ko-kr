@@ -18,12 +18,12 @@ ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fcdbb300bbc9209f284cd5a92d192a219f79052d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af7ce381b1a0fdef6db197e8e764d137cf641b7c
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075336"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635400"
 ---
 # <a name="concat_ws-transact-sql"></a>CONCAT_WS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68075336"
 이 함수는 둘 이상의 문자열 값을 엔드투엔드 방식으로 연결하거나 조인한 결과 문자열을 반환합니다. 첫 번째 함수 인수에 지정된 구분 기호와 연결된 해당 문자열 값을 구분합니다. (`CONCAT_WS`는 *구분 기호를 이용한 연결*을 나타냅니다.)
 
 ##  <a name="syntax"></a>구문   
-```sql
+```syntaxsql
 CONCAT_WS ( separator, argument1, argument2 [, argumentN]... )
 ```
 

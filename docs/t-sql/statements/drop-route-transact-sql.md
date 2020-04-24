@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d8fab0bc-d54a-46ca-9437-552db7477d40
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b11908f182037a1368b9d1fda34ebda3f1422918
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fbd5b67994d2b9972138745b6d2d62c975a4ab87
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68022590"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635238"
 ---
 # <a name="drop-route-transact-sql"></a>DROP ROUTE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68022590"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
   
 DROP ROUTE route_name  
 [ ; ]  
