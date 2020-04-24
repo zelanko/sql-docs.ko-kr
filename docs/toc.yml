@@ -10083,8 +10083,8 @@
           href: sql-server/partner-management-sql-server.md
         - name: 개발
           href: sql-server/partner-dev-sql-server.md
-    - name: 도움말 뷰어에서의 로컬 콘텐츠
-      href: sql-server/sql-server-help-installation.md
+    - name: SQL Server 설명서
+      href: sql-server/sql-server-offline-documentation.md
 - name: 참조
   items:
     - name: 보관된 콘텐츠(SQL 2005 - 2012) >
