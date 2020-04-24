@@ -19,12 +19,12 @@ ms.assetid: 5208de3c-90a3-4f59-a7e3-10b01bf285bb
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 041b54d110686b8309320612164ca6815daff0d8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9d7ab96504635e135f91c56233809b9eed91a04e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68135948"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636378"
 ---
 # <a name="degrees-transact-sql"></a>DEGREES(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68135948"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 DEGREES ( numeric_expression )  
 ```  
   
