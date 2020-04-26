@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f80afa10c1dbd067648db26c2bed0f423f371b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63250545"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화
@@ -30,7 +30,7 @@ ms.locfileid: "63250545"
   
  사전 계산 파티션을 사용하는 것 외에도 스냅샷을 미리 생성하거나 구독자가 처음 동기화될 때 스냅샷의 생성과 적용을 요청하도록 합니다. 이러한 옵션 중 하나 또는 둘 모두를 사용하여 매개 변수가 있는 필터를 사용하는 게시에 대한 스냅샷을 제공할 수 있습니다. 이러한 옵션을 하나도 지정하지 않으면 **bcp** 유틸리티를 사용하지 않고 일련의 SELECT 및 INSERT 문을 사용하여 구독을 초기화하게 되는데 이 경우 프로세스의 속도가 훨씬 느립니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md)을(를) 참조하세요.  
   
- **사전 계산 파티션을 사용 하려면**  
+ **사전 계산 파티션을 사용하려면**  
   
  위에서 설명한 지침을 따르는 새 게시와 기존 게시의 경우 사전 계산 파티션이 기본적으로 설정됩니다. 설정은 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 를 통해 또는 프로그래밍 방식으로 변경할 수 있습니다. 자세한 내용은 [Optimize Parameterized Row Filters](../publish/optimize-parameterized-row-filters.md)을 참조하세요.  
   

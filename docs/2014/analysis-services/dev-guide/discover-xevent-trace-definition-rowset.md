@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 826389eafb4fdf6a32e8d3b62ebfc1f333b62d4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62731915"
 ---
 # <a name="discover_xevent_trace_definition-rowset"></a>DISCOVER_XEVENT_TRACE_DEFINITION 행 집합
@@ -23,8 +23,7 @@ ms.locfileid: "62731915"
  **적용 대상:** 테이블 형식 모델, 다차원 모델  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- 
-  `DISCOVER_XEVENT_TRACE_DEFINITION` 행 집합에는 다음 열이 포함되어 있습니다.  
+ `DISCOVER_XEVENT_TRACE_DEFINITION` 행 집합에는 다음 열이 포함되어 있습니다.  
   
 |열 이름|유형 표시기|길이|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -37,7 +36,7 @@ ms.locfileid: "62731915"
   
  다음 표에서는 이 행 집합을 식별하는 GUID와 문자열 값을 제공합니다.  
   
-|인수|값|  
+|인수|Value|  
 |--------------|-----------|  
 |GUID|a07ccd1c-8148-11d0-87bb-00c04fc33942|  
 |String|DISCOVER_XEVENT_TRACE_DEFINITION|  
@@ -45,6 +44,6 @@ ms.locfileid: "62731915"
 ## <a name="see-also"></a>참고 항목  
  [XML for Analysis 스키마 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/xml-for-analysis-schema-rowsets)   
  [SQL Server 확장 이벤트 &#40;Xevent&#41;를 사용 하 여 모니터링 Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
- [Dmv&#41; &#40;동적 관리 뷰를 사용 하 여 모니터링할 Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [DMV&#40;동적 관리 뷰&#41;를 사용하여 Analysis Services 모니터링](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

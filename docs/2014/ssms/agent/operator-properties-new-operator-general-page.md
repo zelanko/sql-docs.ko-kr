@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c394792f3d56614c4e3bc316e2b4a73dcd1e88b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211344"
 ---
 # <a name="operator-properties-and-new-operator-general-page"></a>운영자 속성 및 새 운영자(일반 페이지)
@@ -26,32 +26,29 @@ ms.locfileid: "68211344"
  **이름**  
  운영자의 이름을 변경합니다.  
   
- **Enabled**  
+ **사용**  
  운영자를 활성화합니다. 활성화하지 않으면 해당 운영자에게 알림이 전송되지 않습니다.  
   
  **전자 메일 이름**  
  운영자의 전자 메일 주소를 지정합니다.  
   
- **Net send 주소**  
- 
-  **net send**에 사용할 주소를 지정합니다.  
+ **Net Send 주소**  
+ **net send**에 사용할 주소를 지정합니다.  
   
  **호출기 전자 메일 이름**  
  운영자의 호출기에 사용할 전자 메일 주소를 지정합니다.  
   
- **호출기 연락 가능 일정**  
+ **호출기 연락 가능 근무 일정**  
  호출기로 연락 가능한 시간을 설정합니다.  
   
- **월요일-일요일**  
+ **월요일 - 일요일**  
  호출기로 연락 가능한 요일을 선택합니다.  
   
- **Workday 시작**  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 호출기로 메시지를 보내기 시작하는 시간을 선택합니다.  
+ **업무 시작 시간**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 호출기로 메시지를 보내기 시작하는 시간을 선택합니다.  
   
- **Workday 종료**  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 호출기로 메시지를 더 이상 보내지 않는 기준 시간을 선택합니다.  
+ **업무 종료 시간**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 호출기로 메시지를 더 이상 보내지 않는 기준 시간을 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [연산자](operators.md)  

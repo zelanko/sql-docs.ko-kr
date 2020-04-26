@@ -17,23 +17,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fdfaeeb9e8dafe82a1312593df2dd128635b8365
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766196"
 ---
 # <a name="debugging-data-flow"></a>데이터 흐름 디버깅
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름 문제를 해결 하는 데 사용할 수 있는 기능과 도구가 포함 되어 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 데이터 흐름 문제를 해결하는 데 사용할 수 있는 기능과 도구가 포함되어 있습니다.  
   
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너는 데이터 뷰어를 제공합니다.  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너는 데이터 뷰어를 제공합니다.  
   
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너와 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 변환은 행 개수를 확인합니다.  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너와 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 변환은 행 개수를 확인합니다.  
   
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너는 런타임에 진행률을 보고합니다.  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너는 런타임에 진행률을 보고합니다.  
   
 ## <a name="data-viewers"></a>데이터 뷰어  
  데이터 뷰어는 두 구성 요소 간 데이터를 데이터 흐름으로 표시합니다. 데이터 뷰어는 데이터 원본에서 데이터가 추출되어 처음으로 데이터 흐름에 들어갈 때, 변환으로 데이터가 업데이트되기 전/후와 데이터가 해당 대상으로 로드되기 전에 데이터를 표시합니다.  
@@ -48,8 +45,7 @@ ms.locfileid: "62766196"
   
  런타임에 **데이터 뷰어** 창이 열리고 데이터 뷰어 형식으로 지정된 정보가 표시됩니다. 예를 들어 표 형식을 사용하는 데이터 뷰어는 선택된 열, 데이터 흐름 구성 요소로 전달된 출력 행의 수 및 표시된 행의 수에 대한 데이터를 표시합니다. 이 정보는 버퍼별로 표시되며 버퍼에 포함되는 행의 수는 데이터 흐름에서 행의 폭에 따라 결정됩니다.  
   
- 
-  **데이터 뷰어** 대화 상자에서 데이터를 클립보드로 복사하고, 테이블에서 모든 데이터를 삭제하고, 데이터 뷰어를 다시 구성하고, 데이터 흐름을 재개하고, 데이터 뷰어를 연결하거나 연결을 끊을 수 있습니다.  
+ **데이터 뷰어** 대화 상자에서 데이터를 클립보드로 복사하고, 테이블에서 모든 데이터를 삭제하고, 데이터 뷰어를 다시 구성하고, 데이터 흐름을 재개하고, 데이터 뷰어를 연결하거나 연결을 끊을 수 있습니다.  
   
 #### <a name="to-add-a-data-viewer"></a>데이터 뷰어를 추가하려면  
   
@@ -68,7 +64,7 @@ ms.locfileid: "62766196"
 |색|Description|  
 |-----------|-----------------|  
 |색 없음|데이터 흐름 엔진의 호출을 대기 중입니다.|  
-|노랑|변환 수행, 데이터 추출 또는 데이터 로드 중입니다.|  
+|노란색|변환 수행, 데이터 추출 또는 데이터 로드 중입니다.|  
 |녹색|성공적으로 실행되었습니다.|  
 |red|실행 중 오류가 발생했습니다.|  
   

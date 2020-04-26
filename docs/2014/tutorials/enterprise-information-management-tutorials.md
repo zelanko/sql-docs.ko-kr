@@ -11,15 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 60becb35980b896aa2c44bbc8ff0a78a81210f48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65485575"
 ---
 # <a name="enterprise-information-management-tutorials"></a>엔터프라이즈 정보 관리 자습서
-  이 단원에는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에 포함된 EIM(엔터프라이즈 정보 관리) 기술을 사용해서 기업에서 정보를 관리하기 위한 자습서가 포함되어 있습니다. EIM(엔터프라이즈 통합 관리)은 조직이 중요한 비즈니스 의사 결정을 내릴 수 있도록 데이터의 진실성 및 일관성을 신뢰할 수 있게 해주는 솔루션 포트폴리오를 제공합니다. 
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에는 기업 환경에 EIM 솔루션을 구현할 수 있도록 도와주는 다음과 같은 기술이 포함되어 있습니다.  
+  이 단원에는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에 포함된 EIM(엔터프라이즈 정보 관리) 기술을 사용해서 기업에서 정보를 관리하기 위한 자습서가 포함되어 있습니다. EIM(엔터프라이즈 통합 관리)은 조직이 중요한 비즈니스 의사 결정을 내릴 수 있도록 데이터의 진실성 및 일관성을 신뢰할 수 있게 해주는 솔루션 포트폴리오를 제공합니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에는 기업 환경에 EIM 솔루션을 구현할 수 있도록 도와주는 다음과 같은 기술이 포함되어 있습니다.  
   
 -   SSIS(SQL Server Integration Services). SSIS는 다양한 원본의 데이터를 비즈니스 워크플로, 데이터 웨어하우스 또는 마스터 데이터 관리가 지원되는 포괄적인 ETL(추출, 변환 및 로드) 솔루션으로 통합하기 위한 강력하고 확장 가능한 플랫폼을 제공합니다.  
   

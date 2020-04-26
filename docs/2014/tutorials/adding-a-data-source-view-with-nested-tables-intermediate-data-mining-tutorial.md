@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 648b9d561ae340b67ed5e2d1aa878969e5a3bc47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62822783"
 ---
 # <a name="adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial"></a>중첩 테이블이 있는 데이터 원본 뷰 추가(중급 데이터 마이닝 자습서)
@@ -45,8 +45,7 @@ ms.locfileid: "62822783"
   
      데이터 원본 뷰 마법사가 열립니다.  
   
-2.  
-  **데이터 원본 뷰 마법사 시작** 페이지에서 **다음**을 클릭합니다.  
+2.  **데이터 원본 뷰 마법사 시작** 페이지에서 **다음**을 클릭합니다.  
   
 3.  **데이터 원본 선택** 페이지의 **관계형 데이터 원본**아래에서 기본 데이터 마이닝 자습서에서 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] 만든 데이터 원본을 선택 합니다. **다음**을 클릭합니다.  
   
@@ -83,6 +82,6 @@ ms.locfileid: "62822783"
 ## <a name="see-also"></a>참고 항목  
  [Analysis Services 데이터 마이닝&#41;&#40;중급 데이터 마이닝 자습서](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [마이닝 구조 &#40;Analysis Services 데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [마이닝 모델 &#40;Analysis Services 데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [마이닝 모델&#40;Analysis Services - 데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

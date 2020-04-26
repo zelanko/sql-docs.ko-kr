@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2d738066e4832c029743d53f7ec99dbb1b6fe5cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721364"
 ---
 # <a name="distributor-information-dialog-box"></a>배포자 정보 대화 상자 
@@ -73,13 +73,13 @@ ms.locfileid: "62721364"
  **구독**  
  [*SubscriberName*].[*Database*]와(과) 같은 형식의 구독 이름입니다.  
   
- **형식**  
+ **Type**  
  복제 유형(밀어넣기, 끌어오기 또는 익명)입니다.  
   
  **마지막 시작 시간**  
  마지막으로 에이전트가 시작된 시간입니다.  
   
- **Duration**  
+ **작업**  
  에이전트가 실행된 기간입니다. 에이전트가 현재 실행되고 있는 경우 이 시간은 경과된 시간을 나타내고 에이전트가 이전에 실행된 경우에는 총 시간을 나타냅니다.  
   
  **마지막 동작**  
@@ -119,13 +119,13 @@ ms.locfileid: "62721364"
  **구독**  
  [*SubscriberName*].[*Database*]와(과) 같은 형식의 구독 이름입니다.  
   
- **형식**  
+ **Type**  
  복제 유형(밀어넣기, 끌어오기 또는 익명)입니다.  
   
  **마지막 시작 시간**  
  마지막으로 에이전트가 시작된 시간입니다.  
   
- **Duration**  
+ **작업**  
  에이전트가 실행된 기간입니다. 에이전트가 현재 실행되고 있는 경우 이 시간은 경과된 시간을 나타내고 에이전트가 이전에 실행된 경우에는 총 시간을 나타냅니다.  
   
  **마지막 동작**  

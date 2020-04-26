@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fd074e705c5ae135eb8161a0ea5d2919d1c183e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076260"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>원격 파티션 만들기 및 관리(Analysis Services)
@@ -27,15 +27,14 @@ ms.locfileid: "66076260"
   
  전용 보조 데이터베이스는 단 하나의 master 데이터베이스에 대한 원격 파티션을 저장할 수 있지만 모든 보조 데이터베이스가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 동일한 원격 인스턴스에 있는 경우 master 데이터베이스는 여러 보조 데이터베이스를 사용할 수 있습니다. 원격 파티션 전용 데이터베이스의 차원은 연결된 차원으로 생성됩니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>전제 조건  
  원격 파티션을 만들기 전에 다음 조건이 충족되어야 합니다.  
   
 -   파티션을 저장하려면 두 번째 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스와 전용 데이터베이스가 있어야 합니다. 보조 데이터베이스는 master 데이터베이스에 원격 파티션 스토리지를 제공하는 한 가지 용도로 사용됩니다.  
   
 -   두 서버 인스턴스가 같은 버전이어야 합니다. 두 데이터베이스는 동일한 기능 수준이어야 합니다.  
   
--   두 인스턴스는 TCP 연결에 맞게 구성되어야 합니다. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 HTTP 프로토콜을 사용하여 원격 파티션을 만드는 작업을 지원하지 않습니다.  
+-   두 인스턴스는 TCP 연결에 맞게 구성되어야 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 HTTP 프로토콜을 사용하여 원격 파티션을 만드는 작업을 지원하지 않습니다.  
   
 -   두 컴퓨터 모두 방화벽 설정이 외부 연결을 허용하도록 설정되어야 합니다. 방화벽을 설정하는 방법에 대한 자세한 내용은 [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
@@ -50,38 +49,32 @@ ms.locfileid: "66076260"
   
  다음 절차에서는 마스터 서버에 배포된 큐브 데이터베이스가 있는 두 개의 서버 인스턴스가 있다고 가정합니다. 이 절차에서는 큐브 데이터베이스를 db 마스터라고 합니다. 원격 파티션을 포함하는 스토리지 데이터베이스는 db 스토리지라고 합니다.  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 사용하여 이 절차를 완료합니다.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 사용하여 이 절차를 완료합니다.  
   
 > [!NOTE]  
 >  원격 파티션은 다른 원격 파티션과만 병합할 수 있습니다. 로컬 파티션과 원격 파티션을 조합하여 사용하는 경우 다른 방법은 더 이상 사용하지 않는 파티션을 삭제하여 결합된 데이터를 포함하는 새 파티션을 만드는 것입니다.  
   
 #### <a name="specify-valid-server-names-for-cube-deployment-in-ssdt"></a>SSDT의 큐브 배포에 대한 올바른 서버 이름 지정  
   
-1.  마스터 서버: 솔루션 탐색기에서 솔루션 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 
-  **속성** 대화 상자에서 **구성 속성**을 클릭한 다음 **배포**를 클릭하고 **서버** 를 클릭한 다음 마스터 서버 이름을 설정합니다.  
+1.  마스터 서버: 솔루션 탐색기에서 솔루션 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **속성** 대화 상자에서 **구성 속성**을 클릭한 다음 **배포**를 클릭하고 **서버** 를 클릭한 다음 마스터 서버 이름을 설정합니다.  
   
-2.  종속 서버: 솔루션 탐색기에서 솔루션 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 
-  **속성** 대화 상자에서 **구성 속성**을 클릭한 다음 **배포**를 클릭하고 **서버** 를 클릭한 다음 하위 서버 이름을 설정합니다.  
+2.  종속 서버: 솔루션 탐색기에서 솔루션 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **속성** 대화 상자에서 **구성 속성**을 클릭한 다음 **배포**를 클릭하고 **서버** 를 클릭한 다음 하위 서버 이름을 설정합니다.  
   
 #### <a name="create-and-deploy-a-secondary-database-in-ssdt"></a>SSDT의 보조 데이터베이스 만들기 및 배포  
   
 1.  종속 서버: 스토리지 데이터베이스용으로 새 Analysis Services 프로젝트를 만듭니다.  
   
-2.  종속 서버: 솔루션 탐색기에서 큐브 데이터베이스 db-master를 가리키는 새 데이터 원본을 만듭니다. 
-  **네이티브 OLE DB\Microsoft OLE DB Provider for Analysis Services 11.0**공급자를 사용합니다.  
+2.  종속 서버: 솔루션 탐색기에서 큐브 데이터베이스 db-master를 가리키는 새 데이터 원본을 만듭니다. **네이티브 OLE DB\Microsoft OLE DB Provider for Analysis Services 11.0**공급자를 사용합니다.  
   
 3.  종속 서버: 솔루션을 배포합니다.  
   
 #### <a name="enable-features-in-ssms"></a>기능 활성화(SSMS)  
   
-1.  종속 서버: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 연결된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 
-  **Feature\LinkToOtherInstanceEnabled** 및 **Feature\LinkFromOtherInstanceEnabled** 를 **True**로 설정합니다.  
+1.  종속 서버: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 연결된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **Feature\LinkToOtherInstanceEnabled** 및 **Feature\LinkFromOtherInstanceEnabled** 를 **True**로 설정합니다.  
   
 2.  종속 서버: 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭하고 **다시 시작**을 선택하여 서버를 다시 시작합니다.  
   
-3.  마스터 서버: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 연결된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 
-  **Feature\LinkToOtherInstanceEnabled** 및 **Feature\LinkFromOtherInstanceEnabled** 를 **True**로 설정합니다.  
+3.  마스터 서버: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 연결된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **Feature\LinkToOtherInstanceEnabled** 및 **Feature\LinkFromOtherInstanceEnabled** 를 **True**로 설정합니다.  
   
 4.  마스터 서버: 서버를 다시 시작하려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭하고 **다시 시작**을 선택합니다.  
   
@@ -123,8 +116,7 @@ ms.locfileid: "66076260"
   
 3.  쿼리 바인딩을 사용하는 경우 만드는 새 파티션의 데이터를 분할하는 WHERE 절을 제공합니다.  
   
-4.  
-  **처리 및 스토리지 위치**의 **처리 위치**에서 **원격 Analysis Services 데이터 원본**을 선택하고 **새로 만들기**를 클릭하여 하위 데이터베이스(db 스토리지)를 가리키는 새 데이터 원본을 만듭니다.  
+4.  **처리 및 스토리지 위치**의 **처리 위치**에서 **원격 Analysis Services 데이터 원본**을 선택하고 **새로 만들기**를 클릭하여 하위 데이터베이스(db 스토리지)를 가리키는 새 데이터 원본을 만듭니다.  
   
     > [!NOTE]  
     >  컬렉션에 데이터 원본이 없음을 나타내는 오류가 표시되면 스토리지 데이터베이스(db 스토리지)의 프로젝트를 열고 master 데이터베이스(db 마스터)를 가리키는 데이터 원본을 만듭니다.  
@@ -132,16 +124,14 @@ ms.locfileid: "66076260"
 5.  마스터 서버: 솔루션 탐색기에서 큐브 이름을 마우스 오른쪽 단추로 클릭하고 **처리** 를 선택하여 큐브를 전체 처리합니다.  
   
 ## <a name="administering-remote-partitions"></a>원격 파티션 관리  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 원격 파티션의 병렬 및 순차적 처리를 지원합니다. 파티션이 정의된 master 데이터베이스는 큐브의 파티션 처리에 참여하는 모든 인스턴스 간의 트랜잭션을 조정합니다. 그런 다음 파티션을 처리한 모든 인스턴스에 처리 보고서가 전송됩니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 원격 파티션의 병렬 및 순차적 처리를 지원합니다. 파티션이 정의된 master 데이터베이스는 큐브의 파티션 처리에 참여하는 모든 인스턴스 간의 트랜잭션을 조정합니다. 그런 다음 파티션을 처리한 모든 인스턴스에 처리 보고서가 전송됩니다.  
   
- 원격 파티션을 포함하는 큐브는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 단일 인스턴스에 있는 해당 파티션과 함께 관리할 수 있습니다. 하지만 원격 파티션에 대한 메타데이터는 파티션과 부모 큐브가 정의된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 인스턴스에서만 보고 업데이트할 수 있습니다. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 원격 인스턴스에서 원격 파티션을 보거나 업데이트할 수 없습니다.  
+ 원격 파티션을 포함하는 큐브는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 단일 인스턴스에 있는 해당 파티션과 함께 관리할 수 있습니다. 하지만 원격 파티션에 대한 메타데이터는 파티션과 부모 큐브가 정의된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 인스턴스에서만 보고 업데이트할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 원격 인스턴스에서 원격 파티션을 보거나 업데이트할 수 없습니다.  
   
 > [!NOTE]  
 >  원격 파티션 스토리지에 전용되는 데이터베이스는 스키마 행 집합에 노출되지 않지만, AMO(Analysis Management Objects)를 사용하는 애플리케이션은 Analysis Discover 명령에 대한 XML을 사용하여 전용 데이터베이스를 검색할 수 있습니다. TCP 또는 HTTP 클라이언트를 사용하여 전용 데이터베이스에 직접 전송되는 CREATE 또는 DELETE 명령은 성공하지만, 이 동작을 수행하면 면밀하게 관리되는 이 데이터베이스가 손상될 수 있음을 알리는 경고가 서버에서 반환됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [파티션 &#40;Analysis Services 다차원 데이터&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [파티션&#40;Analysis Services - 다차원 데이터&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

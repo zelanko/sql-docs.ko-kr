@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90d1fc5d6dd4eb972e15ae942822418aba30573e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721503"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>비즈니스 논리 처리기 디버깅(복제 프로그래밍)
@@ -35,8 +35,7 @@ ms.locfileid: "62721503"
   
 2.  비즈니스 논리 처리기를 만들고 등록합니다. 자세한 내용은 [병합 아티클에 대 한 비즈니스 논리 처리기 구현](implement-a-business-logic-handler-for-a-merge-article.md)을 참조 하세요.  
   
-3.  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio에서 프로그래밍 방식으로 병합 에이전트를 동기적으로 시작하는 RMO(복제 관리 개체) 프로젝트를 만듭니다. 자세한 내용은 [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md)을 참조하세요.  
+3.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio에서 프로그래밍 방식으로 병합 에이전트를 동기적으로 시작하는 RMO(복제 관리 개체) 프로젝트를 만듭니다. 자세한 내용은 [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md)을 참조하세요.  
   
 4.  비즈니스 논리 처리기 코드에서 디버깅 대상 메서드 또는 클래스 생성자 내에 중단점을 설정합니다. 비즈니스 논리 처리기에 구현할 수 있는 메서드에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 메서드 항목을 참조하십시오.  
   
@@ -72,8 +71,7 @@ ms.locfileid: "62721503"
   
     -   inetinfo.exe - Windows 2000 및 Windows XP  
   
-7.  
-  **출력** 창의 디버그 출력에서 등록된 어셈블리에 대한 기호가 올바르게 로드되었는지 확인합니다. 기호가 로드되지 않은 경우 4단계에서 올바른 .pdb 파일을 복사했는지 확인하고 5단계를 반복합니다.  
+7.  **출력** 창의 디버그 출력에서 등록된 어셈블리에 대한 기호가 올바르게 로드되었는지 확인합니다. 기호가 로드되지 않은 경우 4단계에서 올바른 .pdb 파일을 복사했는지 확인하고 5단계를 반복합니다.  
   
 8.  구독 또는 게시 데이터베이스를 대상으로 삽입, 업데이트 또는 삭제 명령을 실행합니다. 명령 및 실행 위치는 디버깅 대상 메서드에 따라 달라집니다.  
   
@@ -84,6 +82,6 @@ ms.locfileid: "62721503"
 11. 설정된 다른 중단점이 없고 올바른 명령이 복제된 경우 비즈니스 논리 처리기에 설정한 중단점에 도달하면 실행이 중지됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [병합 아티클에 대 한 비즈니스 논리 처리기 구현](implement-a-business-logic-handler-for-a-merge-article.md)  
+ [병합 아티클에 대한 비즈니스 논리 처리기 구현](implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

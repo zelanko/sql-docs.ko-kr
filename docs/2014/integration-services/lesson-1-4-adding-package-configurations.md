@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c1d98187fbe76e726dadfe163d75a27c51fd60e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767645"
 ---
 # <a name="step-4-adding-package-configurations"></a>4단계: 패키지 구성 추가
@@ -69,7 +69,7 @@ ms.locfileid: "62767645"
   
 7.  **구성 파일 위치 선택** 대화 상자에서 C:\DeploymentTutorial로 이동한 다음 **파일 이름** 상자에 **DataTransferConfig** 를 입력하고 **저장**을 클릭합니다.  
   
-8.  구성 유형 선택 페이지에서 **다음**을 클릭합니다.  
+8.  구성 유형 선택 페이지에서 **다음**을 클릭 합니다.  
   
 9. 내보낼 속성 선택 페이지에서 DataTransfer, 연결 관리자, Deployment Tutorial Log 및 Properties를 확장한 다음 **연결 문자열** 확인란을 선택합니다.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "62767645"
   
 7.  **구성 파일 위치 선택** 대화 상자에서 C:\DeploymentTutorial로 이동한 다음 **파일 이름** 상자에 **LoadXMLDataConfig** 를 입력하고 **저장**을 클릭합니다.  
   
-8.  구성 유형 선택 페이지에서 **다음**을 클릭합니다.  
+8.  구성 유형 선택 페이지에서 **다음**을 클릭 합니다.  
   
 9. 내보낼 속성 선택 페이지에서 LoadXMLData, 실행 파일, Load XML Data 및 Properties를 확장한 다음 **[XMLSource].[XMLData]** 및 **[XMLSource].[XMLSchemaDefinition]** 확인란을 선택합니다.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "62767645"
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [5단계: 업데이트된 패키지 테스트](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-![Integration Services 아이콘 (작은 아이콘)](media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
+![Integration Services 아이콘 (작은 아이콘)](media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [패키지 구성](../../2014/integration-services/package-configurations.md)   

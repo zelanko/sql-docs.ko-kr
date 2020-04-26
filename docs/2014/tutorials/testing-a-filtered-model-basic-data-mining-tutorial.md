@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: baa4910b2849c4eb2dd04c6d0115c83683ee8bea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044098"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>필터링된 모델 테스트(기본 데이터 마이닝 자습서)
@@ -31,8 +31,7 @@ ms.locfileid: "63044098"
   
 1.  의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]솔루션 탐색기에서 **BasicDataMining**을 선택 합니다.  
   
-2.  
-  **마이닝 모델** 탭을 클릭합니다.  
+2.  **마이닝 모델** 탭을 클릭합니다.  
   
 3.  모델을 마우스 오른쪽 단추로 클릭 하 고 **새 마이닝 모델을 선택 합니다.** `TM_Decision_Tree`  
   
@@ -48,11 +47,9 @@ ms.locfileid: "63044098"
   
      -- 또는 --  
   
-     모델을 선택합니다. 
-  **마이닝 모델** 메뉴에서 **모델 필터 설정**을 선택합니다.  
+     모델을 선택합니다. **마이닝 모델** 메뉴에서 **모델 필터 설정**을 선택합니다.  
   
-2.  
-  **모델 필터** 대화 상자의 **마이닝 구조 열** 입력란에서 표의 첫 행을 클릭합니다.  
+2.  **모델 필터** 대화 상자의 **마이닝 구조 열** 입력란에서 표의 첫 행을 클릭합니다.  
   
      드롭다운 목록에서 해당 테이블에 있는 열의 이름만 표시합니다.  
   
@@ -90,7 +87,7 @@ ms.locfileid: "63044098"
   
  [기본 데이터 마이닝 자습서 &#40;의사 결정 트리 모델 탐색&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
   
- [리프트 차트를 사용 하 여 정확도 테스트 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [리프트 차트를 사용하여 정확도 테스트&#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 #### <a name="to-explore-the-filtered-models"></a>필터링된 모델을 탐색하려면  
   
@@ -132,15 +129,15 @@ ms.locfileid: "63044098"
  중첩 테이블에 필터를 적용 하는 방법에 대 한 예는 [Analysis Services-데이터 마이닝&#41;&#40;중급 데이터 마이닝 자습서 ](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)를 참조 하세요.  
   
 ## <a name="previous-task-in-lesson"></a>단원의 이전 태스크  
- [리프트 차트를 사용 하 여 정확도 테스트 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [리프트 차트를 사용하여 정확도 테스트&#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>다음 단원  
- [6 단원: 예측 만들기 및 작업 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [6단원: 예측 만들기 및 작업&#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [Analysis Services 데이터 마이닝&#41;&#40;중급 데이터 마이닝 자습서](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [마이닝 모델 태스크 및 방법](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [마이닝 모델에서 필터 삭제](../../2014/analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)   
- [마이닝 모델 &#40;Analysis Services 데이터 마이닝&#41;필터](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [마이닝 모델에 대한 필터&#40;Analysis Services - 데이터 마이닝&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

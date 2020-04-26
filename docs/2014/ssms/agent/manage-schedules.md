@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2371109c8fa28c579cd90735a51a4ad3a790385
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63255068"
 ---
 # <a name="manage-schedules"></a>일정 관리
@@ -29,16 +29,16 @@ ms.locfileid: "63255068"
  **이름**  
  일정 이름을 표시합니다.  
   
- **Enabled**  
+ **사용**  
  일정을 사용하려면 이 옵션을 선택합니다.  
   
  **설명**  
  일정에서 작업을 실행하는 조건을 설명합니다.  
   
- **일정 내의 작업**  
+ **이 일정 내의 작업**  
  일정에 연결된 작업 번호를 나열합니다. 작업의 속성을 보려면 번호를 클릭합니다.  
   
- **새로 만들기**  
+ **신규**  
  새 일정을 만들려면 이 단추를 클릭합니다.  
   
  **Delete**  

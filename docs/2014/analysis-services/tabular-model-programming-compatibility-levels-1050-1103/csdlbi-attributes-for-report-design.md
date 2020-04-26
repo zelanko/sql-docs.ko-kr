@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7d2a9f075879ce1bfa0c0e7257ea8a2495562c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62757932"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>보고서 디자인의 CSDLBI 특성
@@ -38,8 +38,7 @@ ms.locfileid: "62757932"
 |`Documentation`|텍스트|비즈니스 사용자가 데이터의 의미를 이해하는 데 도움을 주는 설명 텍스트입니다.|  
 |`Hidden`|부울|엔터티를 표시해야 하는지 여부를 나타냅니다. 기본값은 `false`입니다.|  
 |`CollectionCaption`|텍스트|엔터티의 인스턴스 집합을 참조하기 위한 복수 이름입니다. 생략하면 Caption 특성이 사용됩니다.|  
-|`DisplayKey`|MemberRef[]|비즈니스 사용자가 엔터티 인스턴스를 식별하는 데 사용하는 필드의 정렬된 목록입니다. 참조는 인스턴스 속성 및 탐색 속성을 포함할 수 있습니다. 탐색 속성을 참조하면 대상 엔터티의 `DisplayKey`가 표시됩니다. 
-  `DisplayKey` 값을 생략하면 키 필드가 사용됩니다.|  
+|`DisplayKey`|MemberRef[]|비즈니스 사용자가 엔터티 인스턴스를 식별하는 데 사용하는 필드의 정렬된 목록입니다. 참조는 인스턴스 속성 및 탐색 속성을 포함할 수 있습니다. 탐색 속성을 참조하면 대상 엔터티의 `DisplayKey`가 표시됩니다. `DisplayKey` 값을 생략하면 키 필드가 사용됩니다.|  
 |`DefaultImage`|MemberRef|비즈니스 사용자가 엔터티 인스턴스를 시각적으로 식별하는 데 사용하는 이미지가 포함된 필드에 대한 참조입니다. 생략하면 엔터티의 첫 번째 이미지 필드가 사용됩니다(있는 경우).|  
 |`DefaultDetails`|MemberRef[]|엔터티 인스턴스에 대해 비즈니스 사용자에게 표시하는 기본 세부 정보 집합을 나타내는 필드의 정렬된 목록입니다. 생략하면 엔터티의 처음 5개 필드가 사용됩니다. 이때 `Key`, `DisplayKey` 또는 `DefaultImage`에서 이미 참조하는 필드는 제외됩니다.|  
 |`SortProperties`|MemberRef[]|엔터티 인스턴스가 일반적으로 정렬될 때 기준이 되는 필드의 정렬된 목록입니다. 이러한 필드를 정렬할 때는 각 필드에 지정된 `SortDirection`이 사용됩니다. 생략하면 `DisplayKey` 필드가 사용됩니다.|  

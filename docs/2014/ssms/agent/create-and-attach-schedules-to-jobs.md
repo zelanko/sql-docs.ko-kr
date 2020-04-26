@@ -19,14 +19,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 414ff334139919e08b06291ec910f8531c70cd55
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63136282"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>일정을 만들고 작업에 연결
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 일정 예약이란 사용자 개입 없이 작업을 실행할 조건을 정의하는 것입니다. 작업에 대한 새로운 일정을 만들거나 기존 일정을 작업에 연결하여 작업이 자동으로 실행되도록 예약할 수 있습니다.  
   
  일정을 만드는 방법에는 두 가지가 있습니다.  
@@ -39,8 +38,7 @@ ms.locfileid: "63136282"
   
  일정은 시간 또는 이벤트에 기반을 둘 수 있습니다. 예를 들어 다음과 같은 시간에 작업이 실행되도록 예약할 수 있습니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 시작할 때마다  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 시작할 때마다  
   
 -   컴퓨터의 CPU 사용률이 유휴로 정의한 수준에 있을 때마다  
   
@@ -61,8 +59,7 @@ ms.locfileid: "63136282"
   
 -   작업에 연결된 일정을 분리합니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 중지합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 중지합니다.  
   
 -   일정을 삭제합니다.  
   
@@ -78,8 +75,7 @@ ms.locfileid: "63136282"
  일정을 작업에 연결한 후에 일정 시작 날짜를 변경할 수 있습니다.  
   
 ## <a name="cpu-idle-schedules"></a>CPU 유휴 일정  
- CPU 리소스를 최대화하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에 대해 CPU 유휴 상태를 정의할 수 있습니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 CPU 유휴 상태 설정을 사용하여 작업 실행의 최적 시기를 결정합니다. 예를 들어 CPU 유휴 시간과 프로덕션 속도가 느린 시간에 인덱스를 다시 구축하도록 작업을 예약할 수 있습니다.  
+ CPU 리소스를 최대화하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에 대해 CPU 유휴 상태를 정의할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 CPU 유휴 상태 설정을 사용하여 작업 실행의 최적 시기를 결정합니다. 예를 들어 CPU 유휴 시간과 프로덕션 속도가 느린 시간에 인덱스를 다시 구축하도록 작업을 예약할 수 있습니다.  
   
  CPU 유휴 시간 동안 작업이 실행되도록 정의하기 전에 정상적인 처리 동안 CPU의 로드를 결정하십시오. 이렇게 하려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 또는 성능 모니터를 사용하여 서버 트래픽을 모니터링하고 통계 자료를 수집합니다. 수집한 정보를 사용하여 CPU 유휴 시간 백분율과 지속 시간을 설정할 수 있습니다.  
   
@@ -90,11 +86,9 @@ ms.locfileid: "63136282"
 |||  
 |-|-|  
 |**설명**|**항목**|  
-|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업에 대한 예약을 만드는 방법에 대해 설명합니다.|[Create a Schedule](create-a-schedule.md)|  
-|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 예약하는 방법에 대해 설명합니다.|[Schedule a Job](schedule-a-job.md)|  
-|서버의 CPU 유휴 상태 판단 기준을 정의하는 방법에 대해 설명합니다.|[CPU 유휴 시간 및 기간 설정 &#40;SQL Server Management Studio&#41;](set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업에 대한 예약을 만드는 방법에 대해 설명합니다.|[Create a Schedule](create-a-schedule.md)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 예약하는 방법에 대해 설명합니다.|[작업 예약](schedule-a-job.md)|  
+|서버의 CPU 유휴 상태 판단 기준을 정의하는 방법에 대해 설명합니다.|[CPU 유휴 시간 및 기간 설정&#40;SQL Server Management Studio&#41;](set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_help_jobschedule &#40;](/sql/relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql)   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01ef137ef7297be5171bcfdcacd13c80e4da4624
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63301727"
 ---
 # <a name="operator-properties-history-page"></a>운영자 속성(기록 페이지)
@@ -29,7 +29,7 @@ ms.locfileid: "63301727"
  **호출기로**  
  호출기를 통한 가장 최근의 알림을 표시하거나 이 운영자에게 호출기로 알린 적이 없으면 **(호출한 적 없음)** 을 표시합니다.  
   
- **Net send로**  
+ **Net Send로**  
  Net Send를 통한 가장 최근의 알림을 표시하거나 이 운영자에게 Net Send로 알린 적이 없으면 **(Net Send로 알린 적 없음)** 을 표시합니다.  
   
 ## <a name="see-also"></a>참고 항목  

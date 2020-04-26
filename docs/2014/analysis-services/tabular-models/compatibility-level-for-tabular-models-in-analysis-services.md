@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57a1e67db8bcbf17dc964f7341df25a396c36ad0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067594"
 ---
 # <a name="compatibility-level-ssas-tabular-sp1"></a>호환성 수준(SSAS 테이블 형식 SP1)
@@ -25,8 +25,7 @@ ms.locfileid: "66067594"
 ## <a name="compatibility-level"></a>호환성 수준  
  일반적으로 새 버전과 서비스 팩은 프로덕션 컴퓨터에 설치하기 전에 개발 및 테스트 컴퓨터에 먼저 설치합니다. 이 경우 두 새 테이블 형식 모델 프로젝트에 대한 호환성 수준과 프로덕션 환경에 이미 배포된 기존 프로젝트에 대한 호환성 수준을 설정하는 방법을 알아야 합니다.  
   
- 
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Analysis Services 인스턴스는 다음 호환성 수준(데이터베이스 버전)을 지원합니다.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Analysis Services 인스턴스는 다음 호환성 수준(데이터베이스 버전)을 지원합니다.  
   
 -   SQL Server 2012 (1100)  
   
@@ -52,6 +51,6 @@ ms.locfileid: "66067594"
  **데이터베이스 속성**의 **호환성 수준** 속성 (의 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]새로운 기능)을 확인 하 여 SSMS의 테이블 형식 모델 데이터베이스에 대 한 호환성 수준을 확인할 수 있습니다.  
   
 ### <a name="check-supported-compatibility-level-for-an-analysis-services-instance-in-ssms"></a>SSMS에서 Analysis Services 인스턴스에 대해 지원되는 호환성 수준 확인  
- **Analysis Services 속성**의 **정보** 페이지 (의 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]새로 만들기)에서 **지원 되는 호환성 수준** 속성을 보면 SSMS에서 지원 되는 호환성 수준을 확인할 수 있습니다. 지원되는 호환성 수준 1103은 SQL Server SP1 이상이 설치되어 있음을 나타냅니다. 지원되는 호환성 수준을 변경할 수 없습니다.  
+ **Analysis Services 속성**의 **정보** 페이지 (의 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]새로 만들기)에서 **지원 되는 호환성 수준** 속성을 보면 SSMS에서 지원 되는 호환성 수준을 확인할 수 있습니다. 지원되는 호환성 수준 1103은 SQL Server SP1 이상이 설치되어 있음을 나타냅니다. 지원되는 호환성 수준은 변경할 수 없습니다.  
   
   

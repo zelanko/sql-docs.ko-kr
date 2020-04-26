@@ -11,14 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 1f2f1c579e4f4eccad8015b1ed5448bd0b6e376a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63254496"
 ---
 # <a name="lesson-6-run-the-rdl-schema-application-vb-c"></a>6 단원: RDL 스키마 응용 프로그램 실행 (VB-C #)
-  
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]에서는 다음과 같이 IDE(통합 개발 환경)에서 콘솔 애플리케이션을 작성하고 실행하는 두 가지 방법을 제공합니다.  
   
 -   디버깅으로 시작  
@@ -27,8 +26,7 @@ ms.locfileid: "63254496"
   
 ### <a name="to-build-and-run-the-samplerdlschema-application"></a>SampleRDLSchema 애플리케이션을 작성하고 실행하려면  
   
-1.  
-  **디버그** 메뉴에서 **디버깅하지 않고 시작**을 클릭합니다. 이렇게 하면 프로그램이 실행을 마친 후에도 콘솔 창이 열린 채로 있게 됩니다.  
+1.  **디버그** 메뉴에서 **디버깅하지 않고 시작**을 클릭합니다. 이렇게 하면 프로그램이 실행을 마친 후에도 콘솔 창이 열린 채로 있게 됩니다.  
   
      애플리케이션은 다음 결과를 콘솔로 출력합니다.  
   
@@ -49,6 +47,6 @@ ms.locfileid: "63254496"
   
 ## <a name="see-also"></a>참고 항목  
  [RDL 스키마 &#40;생성 된 클래스를 사용 하 여 보고서 업데이트 (SSRS 자습서&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
- [SSRS&#41;&#40;보고서 정의 언어](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [보고서 정의 언어&#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3e8fc0f770d8763ccb330b3c7588a97604d876e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62762845"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell Provider
@@ -33,8 +33,7 @@ ms.locfileid: "62762845"
 ## <a name="the-sql-server-powershell-hierarchy"></a>SQL Server PowerShell 계층 구조  
  데이터나 개체 모델을 계층 구조로 표현할 수 있는 제품은 Windows PowerShell 공급자를 사용하여 계층 구조를 표시합니다. Windows 파일 시스템에 사용되는 것과 유사한 드라이브 및 경로 구조를 사용하여 계층 구조를 표시합니다.  
   
- 각 Windows PowerShell 공급자는 하나 이상의 드라이브를 구현합니다. 각 드라이브는 관련 개체 계층 구조의 루트 노드를 나타냅니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자는 SQLSERVER: 드라이브를 구현합니다. 또한 공급자는 SQLSERVER: 드라이브에 대한 기본 폴더 집합을 정의합니다. 각 폴더 및 해당 하위 폴더는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리 개체 모델을 사용하여 액세스할 수 있는 개체 집합을 나타냅니다. 이러한 주 폴더 중 하나로 시작하는 경로의 하위 폴더에 포커스를 설정하면 관련 개체 모델의 메서드를 사용하여 이러한 노드가 나타내는 개체에 대해 동작을 수행할 수 있습니다. 
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 공급자가 구현하는 Windows PowerShell 폴더는 다음 테이블에 나열되어 있습니다.  
+ 각 Windows PowerShell 공급자는 하나 이상의 드라이브를 구현합니다. 각 드라이브는 관련 개체 계층 구조의 루트 노드를 나타냅니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자는 SQLSERVER: 드라이브를 구현합니다. 또한 공급자는 SQLSERVER: 드라이브에 대한 기본 폴더 집합을 정의합니다. 각 폴더 및 해당 하위 폴더는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리 개체 모델을 사용하여 액세스할 수 있는 개체 집합을 나타냅니다. 이러한 주 폴더 중 하나로 시작하는 경로의 하위 폴더에 포커스를 설정하면 관련 개체 모델의 메서드를 사용하여 이러한 노드가 나타내는 개체에 대해 동작을 수행할 수 있습니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 공급자가 구현하는 Windows PowerShell 폴더는 다음 테이블에 나열되어 있습니다.  
   
 |폴더|SQL Server 개체 모델 네임스페이스|개체|  
 |------------|---------------------------------------|-------------|  
@@ -47,7 +46,7 @@ ms.locfileid: "62762845"
 |SQLSERVER:\IntegrationServices|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체.|  
 |SQLSERVER:\SQLAS|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체|  
   
- 예를 들어 SQLSERVER:\SQL 폴더를 사용하여 SMO 개체 모델에서 지원하는 개체를 표시할 수 있는 경로를 시작할 수 있습니다. SQLSERVER:\SQL 경로의 앞쪽 부분은 SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*입니다. 인스턴스 이름 뒤에 오는 노드에는 개체 컬렉션(예: *데이터베이스* 또는 *뷰*)과 개체 이름(예: AdventureWorks2012)이 번갈아 사용됩니다. 스키마는 개체 클래스로 표현되지 않습니다. 스키마의 테이블 또는 뷰와 같은 최상위 수준 개체에 대한 노드를 지정할 때는 개체 이름을 *SchemaName.ObjectName*형식으로 지정해야 합니다.  
+ 예를 들어 SQLSERVER:\SQL 폴더를 사용하여 SMO 개체 모델에서 지원하는 개체를 표시할 수 있는 경로를 시작할 수 있습니다. Sqlserver: \ sql 경로의 선행 부분은 sqlserver: \ sql\\*ComputerName*\\*InstanceName*입니다. 인스턴스 이름 뒤에 오는 노드에는 개체 컬렉션(예: *데이터베이스* 또는 *뷰*)과 개체 이름(예: AdventureWorks2012)이 번갈아 사용됩니다. 스키마는 개체 클래스로 표현되지 않습니다. 스키마의 테이블 또는 뷰와 같은 최상위 수준 개체에 대한 노드를 지정할 때는 개체 이름을 *SchemaName.ObjectName*형식으로 지정해야 합니다.  
   
  다음은 로컬 컴퓨터의 기본 [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스에서 AdventureWorks2012 데이터베이스의 Purchasing 스키마에 있는 Vendor 테이블의 경로입니다.  
   

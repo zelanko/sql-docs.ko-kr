@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d128085012c0ef3a9bc58b147f982a26d2c094b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035390"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 유틸리티
@@ -89,22 +89,16 @@ ms.locfileid: "63035390"
  **-E**  
  사용자 이름과 암호를 사용하는 대신 트러스트된 연결을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 로그온합니다. -E를 지정하지 않으면 `sqlcmd`는 기본적으로 트러스트된 연결 옵션을 사용합니다.  
   
- 
-  **-E** 옵션은 SQLCMDPASSWORD 등의 가능한 사용자 이름 및 암호 환경 변수 설정을 무시합니다. 
-  **-E** 옵션과 함께 **-U** 옵션 또는 **-P** 옵션을 사용하면 오류 메시지가 생성됩니다.  
+ **-E** 옵션은 SQLCMDPASSWORD 등의 가능한 사용자 이름 및 암호 환경 변수 설정을 무시합니다. **-E** 옵션과 함께 **-U** 옵션 또는 **-P** 옵션을 사용하면 오류 메시지가 생성됩니다.  
   
  **-H** _workstation_name_  
  워크스테이션 이름입니다. 이 옵션은 `sqlcmd` 스크립팅 변수 SQLCMDWORKSTATION을 설정합니다. 워크스테이션 이름은 **sys.processes** 카탈로그 뷰의 **hostname** 열에 나열되며 **sp_who** 저장 프로시저를 사용하여 반환할 수 있습니다. 이 옵션을 지정하지 않으면 기본적으로 현재 컴퓨터 이름이 사용됩니다. 이 이름을 사용하여 다른 `sqlcmd` 세션을 식별할 수 있습니다  
   
  **-K** _application_intent_  
- 서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 현재 **ReadOnly**값만 지원됩니다. 
-  **-K**를 지정하지 않으면 sqlcmd 유틸리티가 AlwaysOn 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [활성 보조: 읽기 가능한 보조 복제본](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조 하세요.  
+ 서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 현재 **ReadOnly**값만 지원됩니다. **-K**를 지정하지 않으면 sqlcmd 유틸리티가 AlwaysOn 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [활성 보조: 읽기 가능한 보조 복제본](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조 하세요.  
   
  `-M`*multisubnet_failover*  
- 
-  `-M` 가용성 그룹 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 지정하십시오. 
-  `-M`은 현재 활성 상태인 서버를 빠르게 검색하여 연결할 수 있도록 제공합니다. 
-  `-M`이 지정되지 않은 경우 `-M`이 해제됩니다. [!INCLUDE[ssHADR](../includes/sshadr-md.md)]에 대 한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치 (failover) &#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md), [가용성 그룹 만들기 및 구성 &#40;SQL Server ](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)&#41;, [장애 조치 (failover) 클러스터링 및 AlwaysOn 가용성 그룹 ](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)&#40;SQL Server 및 [활성 보조: 읽기 가능한 보조 복제본](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) 을 참조 하세요.  
+ `-M` 가용성 그룹 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 지정하십시오. `-M`은 현재 활성 상태인 서버를 빠르게 검색하여 연결할 수 있도록 제공합니다. `-M`이 지정되지 않은 경우 `-M`이 해제됩니다. [!INCLUDE[ssHADR](../includes/sshadr-md.md)]에 대 한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치 (failover) &#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md), [가용성 그룹 만들기 및 구성 &#40;SQL Server ](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)&#41;, [장애 조치 (failover) 클러스터링 및 AlwaysOn 가용성 그룹 ](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)&#40;SQL Server 및 [활성 보조: 읽기 가능한 보조 복제본](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) 을 참조 하세요.  
   
  **-N**  
  이 스위치는 클라이언트에서 암호화된 연결을 요청하는 데 사용됩니다.  
@@ -113,7 +107,7 @@ ms.locfileid: "63035390"
  사용자가 지정하는 암호입니다. 암호는 대/소문자를 구분합니다. -U 옵션을 사용 하 고 **-P** 옵션을 사용 하지 않고 SQLCMDPASSWORD 환경 변수를 설정 하지 않은 경우에서 사용자에 게 `sqlcmd` 암호를 묻는 메시지를 표시 합니다. 암호 `sqlcmd` 없이 명령 프롬프트의 끝에 **-P** 옵션을 사용 하면 기본 암호 (NULL)를 사용 합니다.  
   
 > [!IMPORTANT]  
->  빈 암호를 사용하지 마세요. 강력한 암호를 사용하세요. 자세한 내용은 [강력한 암호](../relational-databases/security/strong-passwords.md)를 참조하십시오.  
+>  빈 암호를 사용하지 마세요. 강력한 암호를 사용하세요. 자세한 내용은 [Strong Passwords](../relational-databases/security/strong-passwords.md)을 참조하세요.  
   
  암호 프롬프트는 다음과 같이 콘솔에 출력되어 표시됩니다. `Password:`  
   
@@ -121,7 +115,7 @@ ms.locfileid: "63035390"
   
  SQLCMDPASSWORD 환경 변수를 사용하면 현재 세션에 대한 기본 암호를 설정할 수 있습니다. 그러므로 암호를 배치 파일로 하드 코딩할 필요가 없습니다.  
   
- 다음 예에서는 먼저 명령 프롬프트에서 SQLCMDPASSWORD 변수를 설정하고 `sqlcmd` 유틸리티에 액세스합니다. 명령 프롬프트에서 다음과 같이 입력합니다.  
+ 다음 예에서는 먼저 명령 프롬프트에서 SQLCMDPASSWORD 변수를 설정하고 `sqlcmd` 유틸리티에 액세스합니다. 명령 프롬프트에 다음을 입력합니다.  
   
  `SET SQLCMDPASSWORD= p@a$$w0rd`  
   
@@ -137,17 +131,14 @@ ms.locfileid: "63035390"
 > [!NOTE]  
 >  OSQLPASSWORD 환경 변수는 이전 버전과의 호환성을 위해 유지되었습니다. SQLCMDPASSWORD 환경 변수는 OSQLPASSWORD 환경 변수 보다 우선 적용 됩니다. 즉 `sqlcmd` , 및 **osql** 은 간섭 없이 서로 옆에 사용할 수 있으며 이전 스크립트는 계속 작동 합니다.  
   
- 
-  **-P** 옵션과 함께 **-E** 옵션을 사용하면 오류 메시지가 생성됩니다.  
+ **-P** 옵션과 함께 **-E** 옵션을 사용하면 오류 메시지가 생성됩니다.  
   
- 
-  **-P** 옵션 다음에 둘 이상의 인수를 지정하면 오류 메시지가 생성되고 프로그램이 종료됩니다.  
+ **-P** 옵션 다음에 둘 이상의 인수를 지정하면 오류 메시지가 생성되고 프로그램이 종료됩니다.  
   
- **-S** [*protocol*:]*server*[**\\**_instance_name_] [**,**_port_]  
- 연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 지정합니다. 
-  `sqlcmd` 스크립팅 변수 SQLCMDSERVER를 설정합니다.  
+ **-S** [*protocol*:]*server*[**\\**_instance_name_][**,**_port_]  
+ 연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 지정합니다. `sqlcmd` 스크립팅 변수 SQLCMDSERVER를 설정합니다.  
   
- 해당 서버 컴퓨터에 있는 기본 * 인스턴스에 연결하려면 *server_name[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다. 해당 서버 컴퓨터 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 있는 명명 된 인스턴스에 연결 하려면 *server_name* [ **\\** _instance_name_ ]를 지정 합니다. 서버 컴퓨터를 지정하지 않으면 `sqlcmd`가 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터에서 `sqlcmd`를 실행할 경우에는 이 옵션을 지정해야 합니다.  
+ 해당 서버 컴퓨터에 있는 기본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하려면 *server_name*을 지정합니다. 해당 서버 컴퓨터 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 있는 명명 된 인스턴스에 연결 하려면 *server_name* [ **\\** _instance_name_ ]를 지정 합니다. 서버 컴퓨터를 지정하지 않으면 `sqlcmd`가 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터에서 `sqlcmd`를 실행할 경우에는 이 옵션을 지정해야 합니다.  
   
  *프로토콜* 은 ( `tcp` tcp/ip), `lpc` (공유 메모리) 또는 `np` (명명 된 파이프) 일 수 있습니다.  
   
@@ -162,11 +153,9 @@ ms.locfileid: "63035390"
 > [!NOTE]  
 >  OSQLUSER 환경 변수는 이전 버전과의 호환성을 위해 제공됩니다. SQLCMDUSER 환경 변수는 OSQLUSER 환경 변수보다 우선적으로 적용됩니다. 즉 `sqlcmd` , 및 **osql** 은 간섭 없이 서로 옆에 사용할 수 있습니다. 이전 **osql** 스크립트도 계속 사용할 수 있습니다.  
   
- **-U** 옵션과 **-P** 옵션을 모두 지정 하지 않으면에서 `sqlcmd` Windows 인증 모드를 사용 [!INCLUDE[msCoName](../includes/msconame-md.md)] 하 여 연결을 시도 합니다. 
-  `sqlcmd`를 실행하는 사용자의 Windows 계정을 기반으로 인증이 수행됩니다.  
+ **-U** 옵션과 **-P** 옵션을 모두 지정 하지 않으면에서 `sqlcmd` Windows 인증 모드를 사용 [!INCLUDE[msCoName](../includes/msconame-md.md)] 하 여 연결을 시도 합니다. `sqlcmd`를 실행하는 사용자의 Windows 계정을 기반으로 인증이 수행됩니다.  
   
- 이 항목의 뒷부분에 설명되어 있는 **-E** 옵션과 함께 **-U** 옵션을 사용하면 오류 메시지가 생성됩니다. 
-  **–U** 옵션 다음에 둘 이상의 인수를 지정하면 오류 메시지가 생성되고 프로그램이 종료됩니다.  
+ 이 항목의 뒷부분에 설명되어 있는 **-E** 옵션과 함께 **-U** 옵션을 사용하면 오류 메시지가 생성됩니다. **-U** 옵션 다음에 둘 이상의 인수를 입력 하면 오류 메시지가 생성 되 고 프로그램이 종료 됩니다.  
   
  **-z** _new_password_  
  암호를 변경합니다.  
@@ -179,16 +168,14 @@ ms.locfileid: "63035390"
  `sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd`  
   
  **입/출력 옵션**  
-  **-f** _codepage_ | **i:**_codepage_[**, o:**_codepage_] | **o:**_codepage_[**, i:**_codepage_]  
+  **-f** _codepage_ | **i:**_codepage_[**,o:**_codepage_] | **o:**_codepage_[**,i:**_codepage_]  
  입력 및 출력 코드 페이지를 지정합니다. 코드 페이지 번호는 설치된 Windows 코드 페이지를 지정하는 숫자 값입니다.  
   
  코드 페이지 변환 규칙은 다음과 같습니다.  
   
 -   변환이 필요 없는 유니코드 파일이 입력 파일로 사용된 경우가 아니라면 `sqlcmd`는 지정된 코드 페이지가 없는 경우 입력 파일과 출력 파일에 현재 코드 페이지를 사용합니다.  
   
--   
-  `sqlcmd`는 Big-Endian 및 Little-Endian 유니코드 입력 파일을 모두 자동으로 인식합니다. 
-  **-u** 옵션이 지정된 경우 출력은 항상 Little-Endian 유니코드가 됩니다.  
+-   `sqlcmd`는 Big-Endian 및 Little-Endian 유니코드 입력 파일을 모두 자동으로 인식합니다. **-u** 옵션이 지정된 경우 출력은 항상 Little-Endian 유니코드가 됩니다.  
   
 -   지정된 출력 파일이 없는 경우 출력 코드 페이지는 콘솔 코드 페이지가 됩니다. 이 경우 출력이 콘솔에 올바르게 표시됩니다.  
   
@@ -212,12 +199,9 @@ ms.locfileid: "63035390"
  이 옵션은 두 번 이상 사용할 수 있습니다. **-i**_input_file_ **-i**_input_file._  
   
  **-o** _output_file_  
- 
-  `sqlcmd`에서 출력을 받는 파일을 나타냅니다.  
+ `sqlcmd`에서 출력을 받는 파일을 나타냅니다.  
   
- 
-  **-u** 를 지정하면 *output_file* 이 유니코드 형식으로 저장됩니다. 파일 이름이 잘못된 경우 오류 메시지가 생성되고 `sqlcmd`가 종료됩니다. 
-  `sqlcmd`는 여러 `sqlcmd` 프로세스를 같은 파일에 동시에 쓸 수 없습니다. 이 경우 파일 출력이 손상되거나 제대로 수행되지 않습니다. 파일 형식에 대한 자세한 내용은 **-f** 스위치를 참조하세요. 이 파일은 존재하지 않는 경우 만들어집니다. 이전 `sqlcmd` 세션에서와 이름이 같은 파일은 덮어쓰여집니다. 여기에 지정된 파일은 **stdout** 파일이 아닙니다. **Stdout** 파일이 지정 된 경우에는이 파일이 사용 되지 않습니다.  
+ **-u** 를 지정하면 *output_file* 이 유니코드 형식으로 저장됩니다. 파일 이름이 잘못된 경우 오류 메시지가 생성되고 `sqlcmd`가 종료됩니다. `sqlcmd`는 여러 `sqlcmd` 프로세스를 같은 파일에 동시에 쓸 수 없습니다. 이 경우 파일 출력이 손상되거나 제대로 수행되지 않습니다. 파일 형식에 대한 자세한 내용은 **-f** 스위치를 참조하세요. 이 파일은 존재하지 않는 경우 만들어집니다. 이전 `sqlcmd` 세션에서와 이름이 같은 파일은 덮어쓰여집니다. 여기에 지정된 파일은 **stdout** 파일이 아닙니다. **Stdout** 파일이 지정 된 경우에는이 파일이 사용 되지 않습니다.  
   
  경로 예는 다음과 같습니다.  
   
@@ -230,28 +214,25 @@ ms.locfileid: "63035390"
  공백이 포함된 파일 경로는 따옴표로 묶어야 합니다.  
   
  **-r**[**0** | **1**]  
- 오류 메시지 출력을 화면으로 리디렉션합니다(**stderr**). 매개 변수를 지정하지 않거나 **0**을 지정하면 심각도가 11 이상인 오류 메시지만 리디렉션됩니다. 
-  **1**을 지정하면 PRINT를 포함하는 모든 오류 메시지 출력이 리디렉션됩니다. -o를 사용할 경우 아무 효과도 없습니다. 기본적으로 메시지는 **stdout**으로 전송됩니다.  
+ 오류 메시지 출력을 화면으로 리디렉션합니다(**stderr**). 매개 변수를 지정하지 않거나 **0**을 지정하면 심각도가 11 이상인 오류 메시지만 리디렉션됩니다. **1**을 지정하면 PRINT를 포함하는 모든 오류 메시지 출력이 리디렉션됩니다. -o를 사용할 경우 아무 효과도 없습니다. 기본적으로 메시지는 **stdout**으로 전송됩니다.  
   
  **-R**  
  에서 `sqlcmd` 클라이언트의 로캘을 기반으로에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 검색 한 숫자, 통화, 날짜 및 시간 열을 지역화 합니다. 기본적으로 이러한 열은 서버의 국가별 설정을 사용하여 표시됩니다.  
   
  **-u**  
- 
-  *input_file* 형식에 관계없이 *output_file*이 유니코드 형식으로 저장되도록 지정합니다.  
+ *input_file* 형식에 관계없이 *output_file*이 유니코드 형식으로 저장되도록 지정합니다.  
   
  **쿼리 실행 옵션**  
   **-e**  
  표준 출력 디바이스에 입력 스크립트를 기록합니다(**stdout**).  
   
  **-I**  
- SET QUOTED_IDENTIFIER 연결 옵션을 ON으로 설정합니다. 기본적으로 OFF로 설정되어 있습니다. 자세한 내용은 [SET QUOTED_IDENTIFIER &#40;transact-sql&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)를 참조 하세요.  
+ SET QUOTED_IDENTIFIER 연결 옵션을 ON으로 설정합니다. 기본적으로 OFF로 설정되어 있습니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)를 참조하세요.  
   
- **-q "** _명령줄 query_ **"**  
- 
-  `sqlcmd`가 시작될 때 쿼리를 실행하지만 쿼리 실행이 완료되더라도 `sqlcmd`를 종료하지 않습니다. 세미콜론으로 구분된 여러 쿼리를 실행할 수 있습니다. 다음 예와 같이 쿼리를 따옴표로 묶습니다.  
+ **-q"** _cmdline query_ **"**  
+ `sqlcmd`가 시작될 때 쿼리를 실행하지만 쿼리 실행이 완료되더라도 `sqlcmd`를 종료하지 않습니다. 세미콜론으로 구분된 여러 쿼리를 실행할 수 있습니다. 다음 예와 같이 쿼리를 따옴표로 묶습니다.  
   
- 명령 프롬프트에서 다음과 같이 입력합니다.  
+ 명령 프롬프트에 다음을 입력합니다.  
   
  `sqlcmd -d AdventureWorks2012 -q "SELECT FirstName, LastName FROM Person.Person WHERE LastName LIKE 'Whi%';"`  
   
@@ -260,16 +241,14 @@ ms.locfileid: "63035390"
 > [!IMPORTANT]  
 >  쿼리에 GO 종결자를 사용하지 마십시오.  
   
- 이 옵션과 함께 `-b`를 지정하면 `sqlcmd`에 오류가 발생하여 종료됩니다. 
-  `-b`에 대해서는 이 항목의 뒷부분에서 설명합니다.  
+ 이 옵션과 함께 `-b`를 지정하면 `sqlcmd`에 오류가 발생하여 종료됩니다. `-b`에 대해서는 이 항목의 뒷부분에서 설명합니다.  
   
  **-Q "** _명령줄 query_ **"**  
- 
-  `sqlcmd`가 시작될 때 쿼리를 실행한 다음 바로 `sqlcmd`를 종료합니다. 세미콜론으로 구분된 여러 쿼리를 실행할 수 있습니다.  
+ `sqlcmd`가 시작될 때 쿼리를 실행한 다음 바로 `sqlcmd`를 종료합니다. 세미콜론으로 구분된 여러 쿼리를 실행할 수 있습니다.  
   
  다음 예와 같이 쿼리를 따옴표로 묶습니다.  
   
- 명령 프롬프트에서 다음과 같이 입력합니다.  
+ 명령 프롬프트에 다음을 입력합니다.  
   
  `sqlcmd -d AdventureWorks2012 -Q "SELECT FirstName, LastName FROM Person.Person WHERE LastName LIKE 'Whi%';"`  
   
@@ -278,8 +257,7 @@ ms.locfileid: "63035390"
 > [!IMPORTANT]  
 >  쿼리에 GO 종결자를 사용하지 마십시오.  
   
- 이 옵션과 함께 `-b`를 지정하면 `sqlcmd`에 오류가 발생하여 종료됩니다. 
-  `-b`에 대해서는 이 항목의 뒷부분에서 설명합니다.  
+ 이 옵션과 함께 `-b`를 지정하면 `sqlcmd`에 오류가 발생하여 종료됩니다. `-b`에 대해서는 이 항목의 뒷부분에서 설명합니다.  
   
  **-t** _query_timeout_  
  명령 또는 SQL 문 제한 시간 (초)을 지정 합니다. 이 옵션은 스크립팅 `sqlcmd` 변수 SQLCMDSTATTIMEOUT을 설정 합니다. *Time_out* 값을 지정 하지 않으면 명령이 시간 초과 되지 않습니다. ** * Time_out 쿼리* 는 1에서 65534 사이의 숫자 여야 합니다. 입력한 값이 숫자가 아니거나 이 범위에 속하지 않을 경우 `sqlcmd`는 오류 메시지를 생성합니다.  
@@ -295,15 +273,14 @@ ms.locfileid: "63035390"
  `sqlcmd -v MyVar1=something -v MyVar2="some thing"`  
   
  **-x**  
- 
-  `sqlcmd`에서 스크립팅 변수를 무시하도록 합니다. 이는 $(*variable_name*) 등의 일반 변수와 형식이 같은 문자열이 포함되어 있을 수 있는 INSERT 문이 스크립트에 많이 포함된 경우에 유용합니다.  
+ `sqlcmd`에서 스크립팅 변수를 무시하도록 합니다. 이는 $(*variable_name*) 등의 일반 변수와 형식이 같은 문자열이 포함되어 있을 수 있는 INSERT 문이 스크립트에 많이 포함된 경우에 유용합니다.  
   
- **서식 옵션**  
-  **-h** _헤더_  
+ **형식 지정 옵션**  
+  **-h** _headers_  
  열 머리글 사이에 출력할 행의 수를 지정합니다. 기본적으로 각 쿼리 결과 집합마다 머리글을 한 번 출력합니다. 이 옵션은 `sqlcmd` 스크립팅 변수 SQLCMDHEADERS를 설정합니다. 머리글을 출력하지 않으려면 **-1** 을 사용합니다. 잘못된 값을 지정할 경우 `sqlcmd`는 오류 메시지를 생성하고 종료됩니다.  
   
  **-k** [**1** | **2**]  
- 출력에서 탭이나 줄 바꿈 문자와 같은 모든 제어 문자를 제거합니다. 데이터를 반환할 때 열 서식은 유지됩니다. 1을 지정하면 제어 문자가 단일 공백으로 바뀝니다. 2를 지정하면 연속된 제어 문자가 단일 공백으로 바뀝니다. **-k** 는 **-k1**와 동일 합니다.  
+ 출력에서 탭이나 줄 바꿈 문자와 같은 모든 제어 문자를 제거합니다. 데이터를 반환할 때 열 서식은 유지됩니다. 1을 지정하면 제어 문자가 단일 공백으로 바뀝니다. 2를 지정하면 연속된 제어 문자가 단일 공백으로 바뀝니다. **-k** 는 **-k1**과 같습니다.  
   
  **-s** _col_separator_  
  열 구분 기호 문자를 지정합니다. 기본값은 공백입니다. 이 옵션은 `sqlcmd` 스크립팅 변수 SQLCMDCOLSEP를 설정합니다. 앰퍼샌드(&)나 세미콜론(;)과 같이 운영 체제에서 특별한 의미를 갖는 문자를 사용하려면 해당 문자를 따옴표(")로 묶습니다. 열 구분 기호로 임의의 8비트 문자를 사용할 수 있습니다.  
@@ -312,12 +289,10 @@ ms.locfileid: "63035390"
  출력할 화면 너비를 지정합니다. 이 옵션은 `sqlcmd` 스크립팅 변수 SQLCMDCOLWIDTH를 설정합니다. 열 너비는 8보다 크고 65536보다 작은 숫자여야 합니다. 지정한 열 너비가 이 범위에 속하지 않을 경우 `sqlcmd`는 오류 메시지를 생성합니다. 기본 너비는 80자입니다. 출력 줄이 지정한 열 너비를 초과하면 다음 줄로 넘어갑니다.  
   
  **-W**  
- 이 옵션은 열에서 후행 공백을 제거합니다. 다른 애플리케이션으로 내보낼 데이터를 준비하는 경우 **-s** 옵션과 함께 이 옵션을 사용합니다. 
-  **-y** 또는 **-Y** 옵션과 함께 사용할 수 없습니다.  
+ 이 옵션은 열에서 후행 공백을 제거합니다. 다른 애플리케이션으로 내보낼 데이터를 준비하는 경우 **-s** 옵션과 함께 이 옵션을 사용합니다. **-y** 또는 **-Y** 옵션과 함께 사용할 수 없습니다.  
   
  **-y** _variable_length_type_display_width_  
- 
-  `sqlcmd` 스크립팅 변수 SQLCMDMAXVARTYPEWIDTH를 설정합니다. 기본값은 256입니다. 다음과 같은 큰 가변 길이 데이터 형식에 대해 반환되는 문자 수를 제한합니다.  
+ `sqlcmd` 스크립팅 변수 SQLCMDMAXVARTYPEWIDTH를 설정합니다. 기본값은 256입니다. 다음과 같은 큰 가변 길이 데이터 형식에 대해 반환되는 문자 수를 제한합니다.  
   
 -   `varchar(max)`  
   
@@ -340,12 +315,10 @@ ms.locfileid: "63035390"
   
  
 > [!IMPORTANT]  
->  
-  **-y 0** 옵션은 반환되는 데이터 크기에 따라 서버와 네트워크 모두에서 심각한 성능 문제를 일으킬 수 있으므로 사용 시 매우 주의해야 합니다.  
+>  **-y 0** 옵션은 반환되는 데이터 크기에 따라 서버와 네트워크 모두에서 심각한 성능 문제를 일으킬 수 있으므로 사용 시 매우 주의해야 합니다.  
   
  **-Y** _fixed_length_type_display_width_  
- 
-  `sqlcmd` 스크립팅 변수 SQLCMDMAXFIXEDTYPEWIDTH를 설정합니다. 기본값은 0(무제한)입니다. 다음 데이터 형식에 대해 반환되는 문자 수를 제한합니다.  
+ `sqlcmd` 스크립팅 변수 SQLCMDMAXFIXEDTYPEWIDTH를 설정합니다. 기본값은 0(무제한)입니다. 다음 데이터 형식에 대해 반환되는 문자 수를 제한합니다.  
   
 -   `char(`*n* `)`, 여기서 1<= n<= 8000  
   
@@ -361,18 +334,12 @@ ms.locfileid: "63035390"
   
  **오류 보고 옵션**  
   `-b`  
- 오류가 발생하면 `sqlcmd`를 끝내고 DOS ERRORLEVEL 값을 반환하도록 지정합니다. 
-  **오류 메시지의 심각도가 10보다 큰 경우 DOS ERRORLEVEL 변수로** 1 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이 반환되며 심각도가 10보다 작거나 같은 경우 **0**이 반환됩니다. 
-  `-V` 외에도 `-b` 옵션을 설정한 경우 심각도가 `sqlcmd`를 사용하여 설정한 값보다 작으면 `-V`는 오류를 보고하지 않습니다. 명령 프롬프트 배치 파일은 ERRORLEVEL 값을 테스트하고 그에 따라 적절히 오류를 처리할 수 있습니다. 
-  `sqlcmd`는 심각도가 10(정보 메시지)인 오류는 보고하지 않습니다.  
+ 오류가 발생하면 `sqlcmd`를 끝내고 DOS ERRORLEVEL 값을 반환하도록 지정합니다. **오류 메시지의 심각도가 10보다 큰 경우 DOS ERRORLEVEL 변수로** 1 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이 반환되며 심각도가 10보다 작거나 같은 경우 **0**이 반환됩니다. `-V` 외에도 `-b` 옵션을 설정한 경우 심각도가 `-V`를 사용하여 설정한 값보다 작으면 `sqlcmd`는 오류를 보고하지 않습니다. 명령 프롬프트 배치 파일은 ERRORLEVEL 값을 테스트하고 그에 따라 적절히 오류를 처리할 수 있습니다. `sqlcmd`는 심각도가 10(정보 메시지)인 오류는 보고하지 않습니다.  
   
- 
-  `sqlcmd` 스크립트에 잘못된 설명 또는 구문 오류가 포함되었거나 스크립팅 변수가 없을 경우 반환되는 ERRORLEVEL은 1입니다.  
+ `sqlcmd` 스크립트에 잘못된 설명 또는 구문 오류가 포함되었거나 스크립팅 변수가 없을 경우 반환되는 ERRORLEVEL은 1입니다.  
   
  **-m** _error_level_  
- 
-  **stdout**에 보낼 오류 메시지를 제어합니다. 심각도가 이 수준보다 크거나 같은 메시지는 보내집니다. 이 값을 **1**로 설정하면 정보 메시지를 포함한 모든 메시지가 보내집니다. 
-  **-m** 과 **-1**사이에는 공백이 있으면 안 됩니다. 예를 들어 **-m-1** 은 유효하고 **-m-1** 은 유효하지 않습니다.  
+ **stdout**에 보낼 오류 메시지를 제어합니다. 심각도가 이 수준보다 크거나 같은 메시지는 보내집니다. 이 값을 **-1**로 설정 하면 정보 메시지를 포함 한 모든 메시지가 전송 됩니다. **-m** 과 **-1**사이에는 공백이 있으면 안 됩니다. 예를 들어 **-m-1** 은 유효하고 **-m-1** 은 유효하지 않습니다.  
   
  이 옵션은 `sqlcmd` 스크립팅 변수 SQLCMDERRORLEVEL도 설정합니다. 이 변수의 기본값은 0입니다.  
   
@@ -381,7 +348,7 @@ ms.locfileid: "63035390"
   
  **기타 옵션**  
   **-a** _packet_size_  
- 다른 크기의 패킷을 요청합니다. 이 옵션은 `sqlcmd` 스크립팅 변수 SQLCMDPACKETSIZE를 설정합니다. *packet_size* 은 512에서 32767 사이의 값 이어야 합니다. 기본값은 4096입니다. GO 명령 사이에 SQL 문 수가 많은 스크립트를 실행할 때는 패킷 크기가 클수록 성능이 더 향상됩니다. 더 큰 패킷 크기를 요청할 수 있습니다. 그러나 요청이 거부되면 `sqlcmd`는 서버 기본값을 패킷 크기로 사용합니다.  
+ 다른 크기의 패킷을 요청합니다. 이 옵션은 `sqlcmd` 스크립팅 변수 SQLCMDPACKETSIZE를 설정합니다. *packet_size* 는 512에서 32767 사이의 값이어야 합니다. 기본값은 4096입니다. GO 명령 사이에 SQL 문 수가 많은 스크립트를 실행할 때는 패킷 크기가 클수록 성능이 더 향상됩니다. 더 큰 패킷 크기를 요청할 수 있습니다. 그러나 요청이 거부되면 `sqlcmd`는 서버 기본값을 패킷 크기로 사용합니다.  
   
  **-c** _batch_terminator_  
  일괄 처리 종결자를 지정합니다. 기본적으로 줄에 "GO"만 단독으로 입력하면 명령이 종료되어 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로 보내집니다. 일괄 처리 종결자를 다시 설정할 때는 앞에 백슬래시가 있더라도 [!INCLUDE[tsql](../includes/tsql-md.md)] 예약 키워드 또는 운영 체제와 연관된 특별한 의미를 가진 문자를 사용하지 마십시오.  
@@ -392,7 +359,7 @@ ms.locfileid: "63035390"
 > [!NOTE]  
 >  네트워크에서 브로드캐스팅의 특성으로 인해 `sqlcmd`는 모든 서버로부터 시기 적절한 응답을 받지 못할 수 있습니다. 그러므로 반환되는 서버 목록은 이 옵션을 호출할 때마다 다를 수 있습니다.  
   
- 선택적 매개 변수 **c** 를 지정 하면 서버: 머리글 없이 출력이 나타나고 각 서버 줄이 선행 공백 없이 나열 됩니다. 이를 정리된 출력이라고 합니다. 정리된 출력은 스크립트 언어의 처리 성능을 향상시킵니다.  
+ 옵션 매개 변수 **c** 를 지정하면 Servers: 머리글 없이 출력이 나타납니다. 그리고 각 서버 줄이 선행 공백 없이 나열됩니다. 이를 정리된 출력이라고 합니다. 정리된 출력은 스크립트 언어의 처리 성능을 향상시킵니다.  
   
  **-p**[**1**]  
  모든 결과 집합에 대한 성능 통계를 출력합니다. 다음은 성능 통계 형식의 예입니다.  
@@ -405,16 +372,13 @@ ms.locfileid: "63035390"
   
  위치:  
   
- `x`=에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]처리 하는 트랜잭션 수입니다.  
+ `x` = [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 처리되는 트랜잭션 수  
   
- 
-  `t1` = 모든 트랜잭션의 총 시간  
+ `t1` = 모든 트랜잭션의 총 시간  
   
- 
-  `t2` = 단일 트랜잭션의 평균 시간  
+ `t2` = 단일 트랜잭션의 평균 시간  
   
- 
-  `t3` = 초당 평균 트랜잭션 수  
+ `t3` = 초당 평균 트랜잭션 수  
   
  모든 시간은 밀리초 단위입니다.  
   
@@ -423,26 +387,23 @@ ms.locfileid: "63035390"
  선택적 매개 변수 값이 **1**이 아닌 경우 오류가 생성 되 고 `sqlcmd` 가 종료 됩니다.  
   
  `-X`[**1**]  
- 배치 파일에서 `sqlcmd`를 실행할 때 시스템 보안을 손상시킬 수 있는 명령을 사용할 수 없게 설정합니다. 사용할 수 없게 설정된 명령은 여전히 인식되지만 `sqlcmd`는 경고 메시지를 표시하고 계속 실행됩니다. 선택적 매개 변수 **1** 을 지정 하면에서 `sqlcmd` 오류 메시지를 생성 하 고 종료 됩니다. 
-  `-X` 옵션을 사용하면 다음 명령이 사용할 수 없게 설정됩니다.  
+ 배치 파일에서 `sqlcmd`를 실행할 때 시스템 보안을 손상시킬 수 있는 명령을 사용할 수 없게 설정합니다. 사용할 수 없게 설정된 명령은 여전히 인식되지만 `sqlcmd`는 경고 메시지를 표시하고 계속 실행됩니다. 선택적 매개 변수 **1** 을 지정 하면에서 `sqlcmd` 오류 메시지를 생성 하 고 종료 됩니다. `-X` 옵션을 사용하면 다음 명령이 사용할 수 없게 설정됩니다.  
   
 -   **ED**  
   
 -   **!!** _명령_  
   
- 
-  `-X` 옵션을 지정하면 환경 변수가 `sqlcmd`에 전달되지 않습니다. 또한 SQLCMDINI 스크립팅 변수를 사용하여 지정한 시작 스크립트가 실행되지 않습니다. 스크립팅 변수에 대 한 `sqlcmd` 자세한 내용은 [스크립팅 변수와 함께 sqlcmd 사용](../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)을 참조 하세요.  
+ `-X` 옵션을 지정하면 환경 변수가 `sqlcmd`에 전달되지 않습니다. 또한 SQLCMDINI 스크립팅 변수를 사용하여 지정한 시작 스크립트가 실행되지 않습니다. 스크립팅 변수에 대 한 `sqlcmd` 자세한 내용은 [스크립팅 변수와 함께 sqlcmd 사용](../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)을 참조 하세요.  
   
  **-?**  
- 
-  `sqlcmd` 옵션의 구문 요약 정보를 표시합니다.  
+ `sqlcmd` 옵션의 구문 요약 정보를 표시합니다.  
   
 ## <a name="remarks"></a>설명  
  옵션은 구문 섹션에 표시된 순서대로 사용하지 않아도 됩니다.  
   
  여러 결과가 반환된 경우 `sqlcmd`는 일괄 처리의 각 결과 집합 사이에 빈 줄을 출력합니다. 또한 실행 된 문에 적용\<되지 않으면 "x> 행 영향을 받음" 메시지가 나타나지 않습니다.  
   
- 대화형으로 `sqlcmd` 사용 하려면이 `sqlcmd` 항목의 앞부분에서 설명한 하나 이상의 옵션을 사용 하 여 명령 프롬프트에을 입력 합니다. 자세한 내용은 [sqlcmd 유틸리티 사용](../relational-databases/scripting/sqlcmd-use-the-utility.md)을 참조하세요.  
+ 대화형으로 `sqlcmd` 사용 하려면이 `sqlcmd` 항목의 앞부분에서 설명한 하나 이상의 옵션을 사용 하 여 명령 프롬프트에을 입력 합니다. 자세한 내용은 [Sqlcmd 유틸리티 사용](../relational-databases/scripting/sqlcmd-use-the-utility.md) 을 참조 하세요.  
   
 > [!NOTE]  
 >  **-L**, **-Q**, **-Z** 또는 **-i** `sqlcmd` 옵션을 선택 하면 실행 후 종료 됩니다.  
@@ -457,12 +418,12 @@ ms.locfileid: "63035390"
   
 3.  실행 `sqlcmd`하기 전에 명령 프롬프트에서 설정한 명령 셸 (**Set** X = Y)입니다.  
   
-4.  **sqlcmd-v** X = Y  
+4.  **sqlcmd-v** X=Y  
   
-5.  **: Setvar** X Y  
+5.  **:Setvar** X Y  
   
 > [!NOTE]  
->  환경 변수를 보려면 **제어판**에서 **시스템**을 연 다음 **고급** 탭을 클릭합니다.  
+>   환경 변수를 보려면 **제어판**에서 **시스템**을 연 다음 **고급** 탭을 클릭합니다.  
   
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd 스크립팅 변수  
   
@@ -472,11 +433,11 @@ ms.locfileid: "63035390"
 |SQLCMDPASSWORD|-P|--|""|  
 |SQLCMDSERVER|-S|R|"DefaultLocalInstance"|  
 |SQLCMDWORKSTATION|-H|R|"ComputerName"|  
-|SQLCMDDBNAME|일시 중지되고|R|""|  
+|SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|R/W|"8"(초)|  
 |SQLCMDSTATTIMEOUT|-t|R/W|"0" = 무기한 대기|  
-|SQLCMDHEADERS|-h|R/W|"0"|  
-|SQLCMDCOLSEP|-s|R/W|" "|  
+|SQLCMDHEADERS|-H|R/W|"0"|  
+|SQLCMDCOLSEP|-S|R/W|" "|  
 |SQLCMDCOLWIDTH|-w|R/W|"0"|  
 |SQLCMDPACKETSIZE|지정하지 않을 경우|R|"4096"|  
 |SQLCMDERRORLEVEL|-M|R/W|0|  
@@ -494,39 +455,34 @@ ms.locfileid: "63035390"
  R/W는 값이 **setvar** 명령을 사용하여 수정될 수 있으며 후속 명령이 새 값의 영향을 받을 수 있음을 나타냅니다.  
   
 ## <a name="sqlcmd-commands"></a>sqlcmd 명령  
- 
-  [!INCLUDE[tsql](../includes/tsql-md.md)]에서 `sqlcmd` 문 외에도 다음 명령을 사용할 수 있습니다.  
+ `sqlcmd`에서 [!INCLUDE[tsql](../includes/tsql-md.md)] 문 외에도 다음 명령을 사용할 수 있습니다.  
   
 |||  
 |-|-|  
-|**GO** [*count*]|**: 목록**|  
+|**GO** [*count*]|**:List**|  
 |[**:**] **RESET**|**: 오류**|  
 |[**:**] **ED**|**: Out**|  
-|[**:**] **!!**|**:P erftrace**|  
+|[**:**] **!!**|**:Perftrace**|  
 |[**:**] **QUIT**|**: 연결**|  
-|[**:**] **EXIT**|**: 오류 발생 시**|  
+|[**:**] **EXIT**|**:On Error**|  
 |**: r**|**: 도움말**|  
-|**: Serverlist가**|**: XML** [**ON** &#124; **OFF**]|  
-|**: Setvar**|**: Listvar**|  
+|**:ServerList**|**:XML** [**ON** &#124; **OFF**]|  
+|**: Setvar**|**:Listvar**|  
   
- 
-  `sqlcmd` 명령을 사용할 때는 다음 사항에 주의하십시오.  
+ `sqlcmd` 명령을 사용할 때는 다음 사항에 주의하십시오.  
   
 -   GO를 제외하고 모든 `sqlcmd` 명령에는 접두사로 콜론(:)을 붙여야 합니다.  
   
     > [!IMPORTANT]  
-    >  
-  **osql** 스크립트와의 호환성을 유지하기 위해 일부 명령은 콜론 없이도 인식됩니다. 이러한 명령은 [**:**]으로 표시됩니다.  
+    >  **osql** 스크립트와의 호환성을 유지하기 위해 일부 명령은 콜론 없이도 인식됩니다. 이러한 명령은 [**:**]으로 표시됩니다.  
   
--   
-  `sqlcmd` 명령은 줄 시작 부분에 나타난 경우에만 인식됩니다.  
+-   `sqlcmd` 명령은 줄 시작 부분에 나타난 경우에만 인식됩니다.  
   
 -   모든 `sqlcmd` 명령은 대/소문자를 구분하지 않습니다.  
   
 -   각 명령을 별도의 줄에 입력해야 합니다. 명령 다음에 [!INCLUDE[tsql](../includes/tsql-md.md)] 문이나 다른 명령을 입력할 수 없습니다.  
   
--   명령은 즉시 실행되며 
-  [!INCLUDE[tsql](../includes/tsql-md.md)] 문처럼 실행 버퍼에 포함되지 않습니다.  
+-   명령은 즉시 실행되며 [!INCLUDE[tsql](../includes/tsql-md.md)] 문처럼 실행 버퍼에 포함되지 않습니다.  
   
  **명령 편집**  
   [**:**] **ED**  
@@ -539,13 +495,12 @@ ms.locfileid: "63035390"
  [**:**] **RESET**  
  문 캐시를 지웁니다.  
   
- **: 목록**  
+ **:List**  
  문 캐시 내용을 출력합니다.  
   
  **변수**  
   **: Setvar** \< **var**> [ **"*`value`*"** ]  
- 
-  `sqlcmd` 스크립팅 변수를 정의합니다. 스크립팅 변수의 형식은 다음과 같습니다. `$(VARNAME)`.  
+ `sqlcmd` 스크립팅 변수를 정의합니다. 스크립팅 변수의 형식은 다음과 같습니다. `$(VARNAME)`.  
   
  변수 이름은 대/소문자를 구분하지 않습니다.  
   
@@ -553,18 +508,14 @@ ms.locfileid: "63035390"
   
 -   명령줄 옵션을 사용하여 암시적으로 설정합니다. 예를 들어 **-l** 옵션은 SQLCMDLOGINTIMEOUT `sqlcmd` 변수를 설정 합니다.  
   
--   
-  **:Setvar** 명령을 사용하여 명시적으로 설정합니다.  
+-   **:Setvar** 명령을 사용하여 명시적으로 설정합니다.  
   
--   
-  `sqlcmd`를 실행하기 전에 환경 변수를 정의하여 설정합니다.  
+-   `sqlcmd`를 실행하기 전에 환경 변수를 정의하여 설정합니다.  
   
 > [!NOTE]  
->  
-  `-X` 옵션은 환경 변수가 `sqlcmd`에 전달되지 않도록 합니다.  
+>  `-X` 옵션은 환경 변수가 `sqlcmd`에 전달되지 않도록 합니다.  
   
- 
-  **:Setvar** 명령을 사용하여 정의한 변수와 환경 변수의 이름이 같을 경우 **:Setvar** 명령을 사용하여 정의한 변수가 우선적으로 적용됩니다.  
+ **:Setvar** 명령을 사용하여 정의한 변수와 환경 변수의 이름이 같을 경우 **:Setvar** 명령을 사용하여 정의한 변수가 우선적으로 적용됩니다.  
   
  변수 이름에는 공백 문자를 포함해서는 안 됩니다.  
   
@@ -572,7 +523,7 @@ ms.locfileid: "63035390"
   
  스크립팅 변수의 문자열 값에 공백이 포함된 경우 값을 따옴표로 묶습니다. 스크립팅 변수 값을 지정하지 않으면 스크립팅 변수가 삭제됩니다.  
   
- **: Listvar**  
+ **:Listvar**  
  현재 설정되어 있는 스크립팅 변수의 목록을 표시합니다.  
   
 > [!NOTE]  
@@ -581,8 +532,7 @@ ms.locfileid: "63035390"
  **출력 명령**  
   **: 오류**   
  **_\<_**_파일 이름_ ** _>|_ STDERR | STDOUT**    
- 
-  *file name*에 지정된 파일, **stderr** 또는 **stdout**으로 모든 오류 출력을 리디렉션합니다. 스크립트에서 **Error** 명령이 여러 번 나타날 수 있습니다. 기본적으로 오류 출력은 **stderr**로 전송됩니다.  
+ *file name*에 지정된 파일, **stderr** 또는 **stdout**으로 모든 오류 출력을 리디렉션합니다. 스크립트에서 **Error** 명령이 여러 번 나타날 수 있습니다. 기본적으로 오류 출력은 **stderr**로 전송됩니다.  
   
  *파일 이름*  
  출력을 받을 파일을 만들고 엽니다. 이 파일이 이미 있을 경우 0바이트로 잘립니다. 권한이나 기타 이유로 인해 이 파일을 사용할 수 없을 경우 출력이 전환되지 않으며 마지막으로 지정한 대상이나 기본 대상으로 전송됩니다.  
@@ -593,7 +543,7 @@ ms.locfileid: "63035390"
  **STDOUT**  
  오류 출력을 **stdout** 스트림으로 전환합니다. 스트림을 리디렉션할 경우 리디렉션된 스트림 대상이 오류 출력을 받습니다.  
   
- **: Out \< ** _파일 이름_ **>** |  **** STDERR| **STDOUT**  
+ **: Out \< ** _파일 이름_ **>** |  **STDERR**STDERR| **STDOUT**  
  쿼리 결과를 만들어 *file name*에 지정된 파일, **stderr** 또는 **stdout**으로 모두 리디렉션합니다. 기본적으로 출력은 **stdout**으로 전송됩니다. 이 파일이 이미 있을 경우 0바이트로 잘립니다. 스크립트에서 **Out** 명령이 여러 번 나타날 수 있습니다.  
   
  **:P erftrace \< ** _파일 이름_ **>** |  **STDERR**| **STDOUT**  
@@ -603,32 +553,27 @@ ms.locfileid: "63035390"
   **: On Error**[ `exit`  |  `ignore`]  
  스크립트나 일괄 처리를 실행하는 동안 오류가 발생할 때 수행할 동작을 설정합니다.  
   
- 
-  `exit` 옵션을 사용하면 해당 오류 값이 표시되고 `sqlcmd`가 종료됩니다.  
+ `exit` 옵션을 사용하면 해당 오류 값이 표시되고 `sqlcmd`가 종료됩니다.  
   
- 
-  `ignore` 옵션을 사용하면 `sqlcmd`는 오류를 무시하고 일괄 처리 또는 스크립트를 계속 실행합니다. 기본적으로 오류 메시지가 출력됩니다.  
+ `ignore` 옵션을 사용하면 `sqlcmd`는 오류를 무시하고 일괄 처리 또는 스크립트를 계속 실행합니다. 기본적으로 오류 메시지가 출력됩니다.  
   
  [**:**] **QUIT**  
- 
-  `sqlcmd`를 끝냅니다.  
+ `sqlcmd`를 끝냅니다.  
   
  [**:**] **EXIT**[ **(*`statement`*)** ]  
- 
-  `sqlcmd`의 반환 값에 SELECT 문의 결과를 사용할 수 있도록 합니다. 숫자일 경우 마지막 결과 행의 첫째 열은 4바이트 정수(long)로 변환됩니다. MS-DOS는 하위 바이트를 부모 프로세스 또는 운영 체제 오류 수준에 전달합니다. Windows 200x에서는 4바이트 정수 전체를 전달합니다. 구문:  
+ `sqlcmd`의 반환 값에 SELECT 문의 결과를 사용할 수 있도록 합니다. 숫자일 경우 마지막 결과 행의 첫째 열은 4바이트 정수(long)로 변환됩니다. MS-DOS는 하위 바이트를 부모 프로세스 또는 운영 체제 오류 수준에 전달합니다. Windows 200x에서는 4바이트 정수 전체를 전달합니다. 구문은 다음과 같습니다.  
   
  `:EXIT(query)`  
   
- 다음은 그 예입니다.  
+ 예를 들어:  
   
  `:EXIT(SELECT @@ROWCOUNT)`  
   
- 
-  **EXIT** 매개 변수를 배치 파일의 일부로 포함할 수도 있습니다. 예를 들어 명령 프롬프트에서 다음을 입력합니다.  
+ **EXIT** 매개 변수를 배치 파일의 일부로 포함할 수도 있습니다. 예를 들어 명령 프롬프트에서 다음을 입력합니다.  
   
  `sqlcmd -Q "EXIT(SELECT COUNT(*) FROM '%1')"`  
   
- 유틸리티 `sqlcmd` 는 괄호 **()** 사이에 있는 모든 항목을 서버로 보냅니다. 시스템의 저장 프로시저가 설정을 선택하고 값을 반환하면 선택 내용만 반환됩니다. 괄호 사이에 아무것도 없는 EXIT **()** 문은 일괄 처리에서 이 문 앞에 나오는 모든 문을 실행한 후에 반환 값 없이 종료됩니다.  
+ 유틸리티 `sqlcmd` 는 괄호 **()** 사이에 있는 모든 항목을 서버로 보냅니다. 시스템의 저장 프로시저가 설정을 선택하고 값을 반환하면 선택 내용만 반환됩니다. 괄호 사이에 아무 것도 없는 EXIT **()** 문은 일괄 처리에 포함 된 모든 항목을 실행 한 다음 반환 값 없이 종료 됩니다.  
   
  잘못된 쿼리를 지정하면 `sqlcmd`는 값을 반환하지 않고 종료됩니다.  
   
@@ -646,8 +591,7 @@ ms.locfileid: "63035390"
   
  쿼리를 포함하는 일괄 처리를 실행하며 쿼리 결과를 반환한 다음 종료합니다.  
   
- 
-  `sqlcmd` 스크립트에 RAISERROR를 사용할 때 상태 127이 발생하면 `sqlcmd`가 종료되고 메시지 ID가 클라이언트에 반환됩니다. 다음은 그 예입니다.  
+ `sqlcmd` 스크립트에 RAISERROR를 사용할 때 상태 127이 발생하면 `sqlcmd`가 종료되고 메시지 ID가 클라이언트에 반환됩니다. 예를 들어:  
   
  `RAISERROR(50001, 10, 127)`  
   
@@ -662,11 +606,10 @@ ms.locfileid: "63035390"
 |-102|반환 값을 선택할 때 변환 오류가 발생했습니다.|  
   
  **GO** [*count*]  
- GO는 일괄 처리의 끝을 알려 주고 캐시된 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 실행하도록 신호를 보냅니다. 
-  *count*값을 지정하면 캐시된 문이 *count* 에 지정한 횟수만큼 단일 일괄 처리로 실행됩니다.  
+ GO는 일괄 처리의 끝을 알려 주고 캐시된 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 실행하도록 신호를 보냅니다. *count*값을 지정하면 캐시된 문이 *count* 에 지정한 횟수만큼 단일 일괄 처리로 실행됩니다.  
   
  **기타 명령**  
-  **: r \< ** _파일 이름_**>**  
+  **:r \<** _filename_ **>**  
  에 [!INCLUDE[tsql](../includes/tsql-md.md)] `sqlcmd` **지정 <된 파일에서 추가 문과 명령을 문 캐시로 구문 분석 합니다. *`filename`* **  
   
  파일에 [!INCLUDE[tsql](../includes/tsql-md.md)] 문이 포함되어 있고 뒤에 **GO**가 오지 않을 경우 **:r** 뒤에 오는 줄에 **GO**를 입력해야 합니다.  
@@ -677,15 +620,13 @@ ms.locfileid: "63035390"
  일괄 처리 종결자가 나타난 후 이 파일이 읽혀지고 실행됩니다. 여러 **:r** 명령을 실행할 수 있습니다. 이 파일에는 모든 유형의 `sqlcmd` 명령이 포함될 수 있으며 그 예로 일괄 처리 종결자 **GO**를 들 수 있습니다.  
   
 > [!NOTE]  
->  대화형 모드에서 표시되는 줄 수는 **:r** 명령이 나타날 때마다 1씩 증가합니다. 
-  **:r** 명령은 목록 명령의 출력에 나타납니다.  
+>  대화형 모드에서 표시되는 줄 수는 **:r** 명령이 나타날 때마다 1씩 증가합니다. **:r** 명령은 목록 명령의 출력에 나타납니다.  
   
  **: Serverlist가**  
  로컬로 구성된 서버와 네트워크상에서 브로드캐스팅하는 서버의 이름을 표시합니다.  
   
  **: Connect** _server_name_[**\\**_instance_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 또한 현재 연결을 종료합니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 또한 현재 연결을 종료합니다.  
   
  제한 시간 옵션은 다음과 같습니다.  
   
@@ -696,8 +637,7 @@ ms.locfileid: "63035390"
   
  SQLCMDSERVER 스크립팅 변수는 현재 활성 연결을 반영합니다.  
   
- 
-  *timeout* 을 지정하지 않으면 기본적으로 SQLCMDLOGINTIMEOUT 변수 값이 사용됩니다.  
+ *timeout* 을 지정하지 않으면 기본적으로 SQLCMDLOGINTIMEOUT 변수 값이 사용됩니다.  
   
  옵션이나 환경 변수로 *user_name* 만 지정하면 사용자에게 암호를 입력하라는 메시지가 표시됩니다. 이는 SQLCMDUSER 또는 SQLCMDPASSWORD 환경 변수를 설정한 경우 해당되지 않습니다. 옵션이나 환경 변수를 지정하지 않을 경우 로그인하는 데 Windows 인증 모드가 사용됩니다. 예를 들어 통합 보안을 사용하여 `instance1`[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 인스턴스인 `myserver`에 연결하려면 다음을 사용합니다.  
   
@@ -712,20 +652,18 @@ ms.locfileid: "63035390"
  `:connect $(myservername) $(myusername)`  
   
  [**:**] **!!** \< *명령*>  
- 운영 체제 명령을 실행합니다. 운영 체제 명령을 실행하려면 느낌표 두 개(**!!**)로 줄을 시작하고 운영 체제 명령을 입력합니다. 다음은 그 예입니다.  
+ 운영 체제 명령을 실행합니다. 운영 체제 명령을 실행하려면 느낌표 두 개(**!!**)로 줄을 시작하고 운영 체제 명령을 입력합니다. 예를 들어:  
   
  `:!! Dir`  
   
 > [!NOTE]  
->  
-  `sqlcmd`를 실행 중인 컴퓨터에서 명령이 실행됩니다.  
+>  `sqlcmd`를 실행 중인 컴퓨터에서 명령이 실행됩니다.  
   
- **: XML** [**ON** | **OFF**]  
+ **:XML** [**ON** | **OFF**]  
  자세한 내용은 이 항목의 뒷부분에 나오는 "XML 출력 형식"을 참조하십시오.  
   
  **: 도움말**  
- 
-  `sqlcmd` 명령과 각 명령에 대한 간단한 설명을 표시합니다.  
+ `sqlcmd` 명령과 각 명령에 대한 간단한 설명을 표시합니다.  
   
 ### <a name="sqlcmd-file-names"></a>sqlcmd 파일 이름  
  `sqlcmd`입력 파일은 **-i** 옵션 또는 **: r** 명령을 사용 하 여 지정할 수 있습니다. 출력 파일은 **-o** 옵션 또는 **:Error**, **:Out** 및 **:Perftrace** 명령을 사용하여 지정할 수 있습니다. 다음은 이러한 파일 작업에 대한 지침입니다.  
@@ -739,10 +677,9 @@ ms.locfileid: "63035390"
 -   각각의 새 `sqlcmd` 세션은 이름이 같은 기존 파일을 덮어씁니다.  
   
 ### <a name="informational-messages"></a>정보 메시지  
- 
-  `sqlcmd`는 서버에서 보낸 모든 정보 메시지를 출력합니다. 다음 예에서는 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 실행한 후 정보 메시지가 출력됩니다.  
+ `sqlcmd`는 서버에서 보낸 모든 정보 메시지를 출력합니다. 다음 예에서는 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 실행한 후 정보 메시지가 출력됩니다.  
   
- 명령 프롬프트에서 다음을 입력합니다.  
+ 명령 프롬프트에 다음을 입력합니다.  
   
  `sqlcmd`  
   
@@ -759,8 +696,7 @@ ms.locfileid: "63035390"
   
  이 줄 다음에는 대시 문자로 이루어진 구분선이 삽입됩니다. 다음은 출력의 예입니다.  
   
- `sqlcmd`를 시작합니다. 
-  `sqlcmd` 명령 프롬프트에서 다음을 입력합니다.  
+ `sqlcmd`를 시작합니다. `sqlcmd` 명령 프롬프트에서 다음을 입력합니다.  
   
  `USE AdventureWorks2012;`  
   
@@ -782,8 +718,7 @@ ms.locfileid: "63035390"
   
  `(2 row(s) affected)`  
   
- 
-  `BusinessEntityID` 열의 너비는 4자이지만 보다 긴 열 이름을 포함할 수 있도록 확장되었습니다. 기본적으로 출력은 80자에서 끝납니다. 그러나 **-w** 옵션을 사용하거나 SQLCMDCOLWIDTH 스크립팅 변수를 설정하여 이 값을 변경할 수 있습니다.  
+ `BusinessEntityID` 열의 너비는 4자이지만 보다 긴 열 이름을 포함할 수 있도록 확장되었습니다. 기본적으로 출력은 80자에서 끝납니다. 그러나 **-w** 옵션을 사용하거나 SQLCMDCOLWIDTH 스크립팅 변수를 설정하여 이 값을 변경할 수 있습니다.  
   
 ### <a name="xml-output-format"></a>XML 출력 형식  
  FOR XML 절의 결과로 나오는 XML 출력은 연속 스트림에서 형식이 지정되지 않은 출력입니다.  
@@ -791,9 +726,7 @@ ms.locfileid: "63035390"
  XML 출력을 원하는 경우에는 `:XML ON`명령을 사용합니다.  
   
 > [!NOTE]  
->  
-  `sqlcmd`는 일반 형식으로 오류 메시지를 반환합니다. 오류 메시지는 XML 형식으로 XML 텍스트 스트림에도 출력됩니다. 
-  `:XML ON`을 사용할 경우 `sqlcmd`에서는 정보 메시지를 표시하지 않습니다.  
+>  `sqlcmd`는 일반 형식으로 오류 메시지를 반환합니다. 오류 메시지는 XML 형식으로 XML 텍스트 스트림에도 출력됩니다. `:XML ON`을 사용할 경우 `sqlcmd`에서는 정보 메시지를 표시하지 않습니다.  
   
  XML 모드를 해제하려면 `:XML OFF`명령을 사용합니다.  
   
@@ -802,8 +735,7 @@ ms.locfileid: "63035390"
  스트리밍된 XML 데이터와 행 집합 데이터를 혼합할 수 없습니다. XML 스트림을 출력하는 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 실행하기 전에 XML ON 명령을 실행하지 않은 경우 출력이 잘못됩니다. XML ON 명령을 실행한 경우 일반 행 집합을 출력하는 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 실행할 수 없습니다.  
   
 > [!NOTE]  
->  
-  **:XML** 명령은 SET STATISTICS XML 문을 지원하지 않습니다.  
+>  **:XML** 명령은 SET STATISTICS XML 문을 지원하지 않습니다.  
   
 ## <a name="sqlcmd-best-practices"></a>sqlcmd를 위한 최선의 구현 방법  
  보안 및 효율성을 극대화하려면 다음 방법을 사용하십시오.  
@@ -819,7 +751,7 @@ ms.locfileid: "63035390"
 -   일괄 처리 또는 쿼리를 실행하는 데 걸리는 예상 시간보다 높은 제한 시간 값을 일괄 처리 또는 쿼리 실행에 대해 설정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [sqlcmd 유틸리티 시작](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
+ [Sqlcmd 유틸리티 시작](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
  [Sqlcmd를 사용 하 여 Transact-sql 스크립트 파일 실행](../relational-databases/scripting/sqlcmd-run-transact-sql-script-files.md)   
  [Sqlcmd 유틸리티 사용](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
  [스크립팅 변수와 함께 sqlcmd 사용](../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   

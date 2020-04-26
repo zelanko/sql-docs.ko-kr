@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "68210711"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>시간 기반 행 필터에 대한 최상의 구현 방법
@@ -49,8 +49,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
 ## <a name="recommendations-for-using-time-based-row-filters"></a>시간 기반 행 필터 사용에 대한 권장 사항  
  시간을 기반으로 필터링하기 위한 강력하고 간단한 방법은 다음과 같습니다.  
   
--   
-  `bit` 데이터 형식의 테이블에 열을 추가합니다. 이 열은 행이 복제되는지 여부를 나타내는 데 사용합니다.  
+-   `bit` 데이터 형식의 테이블에 열을 추가합니다. 이 열은 행이 복제되는지 여부를 나타내는 데 사용합니다.  
   
 -   시간 기반 열 이외의 새 열을 참조하는 행 필터를 사용합니다.  
   

@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62773434"
 ---
 # <a name="view-a-list-of-modified-files"></a>수정된 파일의 목록 보기
@@ -35,7 +35,7 @@ ms.locfileid: "62773434"
      **체크 인**  
      솔루션을 체크 인합니다.  
   
-     **주석**  
+     **설명**  
      일반 텍스트 설명을 보류 중인 체크 인에 연결합니다. 만들어진 설명은 각 버전의 프로젝트와 연결되며 원본 제어 데이터베이스에 저장됩니다.  
   
      **옵션**  

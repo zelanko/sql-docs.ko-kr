@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c251a77d0272e069d57b46940f8fcb06144653a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767435"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>3단계: 플랫 파일 연결 관리자 수정
@@ -26,20 +26,17 @@ ms.locfileid: "62767435"
   
 1.  **연결 관리자** 창에서 **Sample Flat File Source Data**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-2.  속성 창에서 **식**의 빈 셀을 클릭한 다음, 줄임표 단추 **(...)** 를 클릭합니다.  
+2.  속성 창에서 **식**에 대해 빈 셀을 클릭 한 다음 줄임표 단추 **(...)** 를 클릭 합니다.  
   
 3.  **속성 식 편집기** 대화 상자의 **속성** 열에서를 입력 하거나 선택 `ConnectionString`합니다.  
   
-4.  
-  **식** 열에서 줄임표 단추 **(...)** 를 클릭하여 **식 작성기** 대화 상자를 엽니다.  
+4.  **식** 열에서 줄임표 단추 **(...)** 를 클릭 하 여 **식 작성기** 대화 상자를 엽니다.  
   
-5.  
-  **식 작성기** 대화 상자에서 **변수** 노드를 확장합니다.  
+5.  **식 작성기** 대화 상자에서 **변수** 노드를 확장합니다.  
   
 6.  **사용자:: varFileName**변수를 **식** 상자로 끌어 옵니다.  
   
-7.  
-  **확인** 을 클릭하여 **식 작성기** 대화 상자를 닫습니다.  
+7.  **확인** 을 클릭하여 **식 작성기** 대화 상자를 닫습니다.  
   
 8.  다시 **확인** 을 클릭하여 **PropertiesExpressionEditor** 대화 상자를 닫습니다.  
   

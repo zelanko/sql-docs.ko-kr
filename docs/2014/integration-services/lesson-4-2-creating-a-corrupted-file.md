@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767385"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>2단계: 손상된 파일 만들기
@@ -28,11 +28,9 @@ ms.locfileid: "62767385"
   
      예제 데이터는 SSIS 단원 패키지에 포함되어 있습니다. 예제 데이터 및 단원 패키지를 다운로드하려면 다음을 수행합니다.  
   
-    1.  
-  [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkID=267527)로 이동합니다.  
+    1.  [Integration Services 제품 샘플](https://go.microsoft.com/fwlink/?LinkID=267527)로 이동 합니다.  
   
-    2.  
-  **DOWNLOADS** 탭을 클릭합니다.  
+    2.  **다운로드** 탭을 클릭 합니다.  
   
     3.  SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 파일을 클릭합니다.  
   
@@ -47,7 +45,7 @@ ms.locfileid: "62767385"
   
 ### <a name="to-verify-that-an-error-will-occur-during-run-time"></a>런타임 도중 오류가 발생하는지 확인하려면  
   
-1.  **디버그** 메뉴에서 **디버깅 시작**을 클릭합니다.  
+1.  **디버그** 메뉴에서 **디버깅 시작**을 클릭 합니다.  
   
      세 번째 데이터 흐름 반복에서 Lookup Currency Key 변환은 Currency_BAD.txt 파일을 처리하려고 하며 여기서 변환이 실패합니다. 변환 실패로 인해 전체 패키지가 실패하게 됩니다.  
   
@@ -63,6 +61,6 @@ ms.locfileid: "62767385"
     >  27은 구성 요소의 ID입니다. 이 값은 데이터 흐름을 작성할 때 할당되며 패키지 값과 다를 수 있습니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- [3단계: 오류 흐름 리디렉션 추가](lesson-4-3-adding-error-flow-redirection.md)  
+ [3단계: 오류 Flow 리디렉션 추가](lesson-4-3-adding-error-flow-redirection.md)  
   
   

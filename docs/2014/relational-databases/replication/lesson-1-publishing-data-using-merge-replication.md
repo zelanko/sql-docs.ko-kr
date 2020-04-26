@@ -13,21 +13,20 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 204742cb6c712c1e293048ed6216d9b007f2541b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721182"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>1단원: 병합 복제를 사용하여 데이터 게시
-  이 단원에서는를 사용 하 여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 병합 게시를 만들어 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스에 **Employee**, **SalesOrderHeader**및 **SalesOrderDetail** 테이블의 하위 집합을 게시 합니다. 이러한 테이블은 각 구독에 고유한 데이터 파티션이 포함되도록 매개 변수가 있는 행 필터로 필터링됩니다. 또한 병합 에이전트에 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 PAL(게시 액세스 목록)에 추가합니다. 이 자습서를 사용하려면 이전 자습서인 [복제용 서버 준비](tutorial-preparing-the-server-for-replication.md)를 완료해야 합니다.  
+  이 단원에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 병합 게시를 만들어 **샘플 데이터베이스에**Employee **,** SalesOrderHeader **및** SalesOrderDetail [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 테이블의 하위 집합을 게시합니다. 이러한 테이블은 각 구독에 고유한 데이터 파티션이 포함되도록 매개 변수가 있는 행 필터로 필터링됩니다. 또한 병합 에이전트에 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 PAL(게시 액세스 목록)에 추가합니다. 이 자습서를 사용하려면 이전 자습서인 [복제용 서버 준비](tutorial-preparing-the-server-for-replication.md)를 완료해야 합니다.  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>게시를 만들고 아티클을 정의하려면  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결한 다음 해당 서버 노드를 확장합니다.  
   
-2.  
-  **복제** 폴더를 확장하고 **로컬 게시**를 마우스 오른쪽 단추로 클릭한 다음 **새 게시**를 클릭합니다.  
+2.  **복제** 폴더를 확장하고 **로컬 게시**를 마우스 오른쪽 단추로 클릭한 다음 **새 게시**를 클릭합니다.  
   
      게시 구성 마법사가 시작됩니다.  
   
@@ -44,58 +43,45 @@ ms.locfileid: "62721182"
   
 7.  테이블 행 필터 페이지에서 **추가** 를 클릭한 다음 **필터 추가**를 클릭합니다.  
   
-8.  
-  **필터 추가** 대화 상자의 **필터링할 테이블을 선택하십시오.** 에서 **Employee(HumanResources)** 를 선택하고 **LoginID** 열을 클릭한 다음 오른쪽 화살표를 클릭하여 해당 열을 필터 쿼리의 WHERE 절에 추가하고 WHERE 절을 다음과 같이 수정합니다.  
+8.  **필터 추가** 대화 상자의 **필터링할 테이블을 선택하십시오.** 에서 **Employee(HumanResources)** 를 선택하고 **LoginID** 열을 클릭한 다음 오른쪽 화살표를 클릭하여 해당 열을 필터 쿼리의 WHERE 절에 추가하고 WHERE 절을 다음과 같이 수정합니다.  
   
     ```  
     WHERE [LoginID] = HOST_NAME()  
     ```  
   
-9. 
-  **이 테이블의 행을 단일 구독으로 이동**을 클릭하고 **확인**을 클릭합니다.  
+9. **이 테이블의 행을 단일 구독으로 이동**을 클릭하고 **확인**을 클릭합니다.  
   
-10. 
-  **테이블 행 필터** 페이지에서 **Employee(Human Resources)** 를 클릭하고 **추가** 를 클릭한 다음 **선택한 필터 확장을 위해 조인 추가**를 클릭합니다.  
+10. **테이블 행 필터** 페이지에서 **Employee(Human Resources)** 를 클릭하고 **추가** 를 클릭한 다음 **선택한 필터 확장을 위해 조인 추가**를 클릭합니다.  
   
-11. 
-  **조인 추가** 대화 상자의 **조인된 테이블** 에서 **Sales.SalesOrderHeader**를 선택하고 **조인 문 직접 작성**을 클릭한 후 다음과 같이 조인 문을 완성합니다.  
+11. **조인 추가** 대화 상자의 **조인된 테이블** 에서 **Sales.SalesOrderHeader**를 선택하고 **조인 문 직접 작성**을 클릭한 후 다음과 같이 조인 문을 완성합니다.  
   
     ```  
     ON Employee.EmployeeID = SalesOrderHeader.SalesPersonID  
     ```  
   
-12. 
-  **조인 옵션을 지정하십시오.** 에서 **고유 키**를 선택한 다음 **확인**을 클릭합니다.  
+12. **조인 옵션을 지정하십시오.** 에서 **고유 키**를 선택한 다음 **확인**을 클릭합니다.  
   
 13. 테이블 행 필터 페이지에서 **SalesOrderHeader**를 클릭하고 **추가**를 클릭한 다음 **선택한 필터 확장을 위해 조인 추가**를 클릭합니다.  
   
-14. 
-  **조인 추가** 대화 상자의 **조인된 테이블** 에서 **Sales.SalesOrderDetail**을 선택합니다.  
+14. **조인 추가** 대화 상자의 **조인된 테이블** 에서 **Sales.SalesOrderDetail**을 선택합니다.  
   
-15. 
-  **조인 문 직접 작성**을 클릭합니다.  
+15. **조인 문 직접 작성**을 클릭합니다.  
   
-16. 
-  **필터링된 테이블 열**에서 **BusinessEntityID**를 선택한 다음 화살표 단추를 클릭하여 열 이름을 조인 문에 추가합니다.  
+16. **필터링된 테이블 열**에서 **BusinessEntityID**를 선택한 다음 화살표 단추를 클릭하여 열 이름을 조인 문에 추가합니다.  
   
-17. 
-  **조인 문** 상자에서 다음과 같이 조인 문을 작성합니다.  
+17. **조인 문** 상자에서 다음과 같이 조인 문을 작성합니다.  
   
     ```  
     ON Employee.BusinessEntityID = SalesOrderHeader.SalesPersonID  
     ```  
   
-18. 
-  **조인 옵션을 지정하십시오.** 에서 **고유 키**를 선택한 다음 **확인**을 클릭합니다.  
+18. **조인 옵션을 지정하십시오.** 에서 **고유 키**를 선택한 다음 **확인**을 클릭합니다.  
   
-19. 
-  **테이블 행 필터** 페이지에서 **SalesOrderHeader(Sales)** 를 클릭하고 **추가**를 클릭한 다음 **선택한 필터 확장을 위해 조인 추가**를 클릭합니다.  
+19. **테이블 행 필터** 페이지에서 **SalesOrderHeader(Sales)** 를 클릭하고 **추가**를 클릭한 다음 **선택한 필터 확장을 위해 조인 추가**를 클릭합니다.  
   
-20. 
-  **조인 추가** 대화 상자의 **조인된 테이블** 에서 **Sales.SalesOrderDetail**을 선택한 다음 **확인**, **다음**을 차례로 클릭합니다.  
+20. **조인 추가** 대화 상자의 **조인된 테이블** 에서 **Sales.SalesOrderDetail**을 선택한 다음 **확인**, **다음**을 차례로 클릭합니다.  
   
-21. 
-  **즉시 스냅샷 만들기**를 선택하고 **스냅샷 에이전트 실행 시간 예약**을 선택 취소한 후 **다음**을 클릭합니다.  
+21. **즉시 스냅샷 만들기**를 선택하고 **스냅샷 에이전트 실행 시간 예약**을 선택 취소한 후 **다음**을 클릭합니다.  
   
 22. 에이전트 보안 페이지에서 **보안 설정**을 클릭 \<하 고 **프로세스 계정** 상자에 _Machine_Name>_ **\ repl_snapshot** 를 입력 한 다음이 계정에 대 한 암호를 입력 하 고 **확인**을 클릭 합니다. **Finish**를 클릭합니다.  
   
@@ -105,7 +91,7 @@ ms.locfileid: "62721182"
   
 ### <a name="to-view-the-status-of-snapshot-generation"></a>스냅샷 생성의 상태를 보려면  
   
-1.  에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]게시자에 연결 하 고 서버 노드를 확장 한 다음 **복제** 폴더를 확장 합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결하고 해당 서버 노드를 확장한 다음 **복제** 폴더를 확장합니다.  
   
 2.  로컬 게시 폴더에서 **AdvWorksSalesOrdersMerge**를 마우스 오른쪽 단추로 클릭한 다음 **스냅샷 에이전트 상태 보기**를 클릭합니다.  
   
@@ -113,24 +99,21 @@ ms.locfileid: "62721182"
   
 ### <a name="to-add-the-merge-agent-login-to-the-pal"></a>PAL에 병합 에이전트 로그인을 추가하려면  
   
-1.  에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]게시자에 연결 하 고 서버 노드를 확장 한 다음 **복제** 폴더를 확장 합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결하고 해당 서버 노드를 확장한 다음 **복제** 폴더를 확장합니다.  
   
 2.  로컬 게시 폴더에서 **AdvWorksSalesOrdersMerge**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-     
-  **게시 속성** 대화 상자가 표시됩니다.  
+     **게시 속성** 대화 상자가 표시됩니다.  
   
-3.  
-  **게시 액세스 목록** 페이지를 선택하고 **추가**를 클릭합니다.  
+3.  **게시 액세스 목록** 페이지를 선택하고 **추가**를 클릭합니다.  
   
-4.  게시 액세스 추가 대화 상자에서 _<Machine_Name>_ **\ repl_merge** 를 선택 하 고 **확인**을 클릭 합니다. **확인**을 클릭합니다.  
+4.  게시 액세스 추가 대화 상자에서 _<Machine_Name>_**\repl_merge**를 선택한 다음 **확인**을 클릭합니다. **확인**을 클릭합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 병합 게시를 성공적으로 만들었습니다. 다음 단원에서는 이 게시를 구독합니다. 
-  [2단원: 병합 게시에 대한 구독 만들기](lesson-2-creating-a-subscription-to-the-merge-publication.md)를 참조하세요.  
+ 병합 게시를 성공적으로 만들었습니다. 다음 단원에서는 이 게시를 구독합니다. [2단원: 병합 게시에 대한 구독 만들기](lesson-2-creating-a-subscription-to-the-merge-publication.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [게시된 데이터 필터링](publish/filter-published-data.md)   
+ [게시 된 데이터 필터링](publish/filter-published-data.md)   
  [매개 변수가 있는 행 필터](merge/parameterized-filters-parameterized-row-filters.md)   
  [아티클 정의](publish/define-an-article.md)  
   

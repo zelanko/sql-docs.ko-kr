@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 675d15f2d2c20ecb18b03cd5fa85684befeddff0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067899"
 ---
 # <a name="tabular-model-solutions-ssas-tabular"></a>테이블 형식 모델 솔루션(SSAS 테이블 형식)
@@ -23,38 +23,38 @@ ms.locfileid: "66067899"
 ## <a name="in-this-section"></a>섹션 내용  
  [테이블 형식 모델 디자이너 &#40;SSAS 테이블 형식&#41;](tabular-model-designer-ssas-tabular.md)  
   
- [SSAS 테이블 형식&#41;&#40;작업 영역 데이터베이스](tabular-models/workspace-database-ssas-tabular.md)  
+ [작업 영역 데이터베이스&#40;SSAS 테이블 형식&#41;](tabular-models/workspace-database-ssas-tabular.md)  
   
  [호환성 수준 &#40;SSAS 테이블 형식 SP1&#41;](tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
- [테이블 형식 모델 프로젝트 &#40;SSAS 테이블 형식&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)  
+ [테이블 형식 모델 프로젝트&#40;SSAS 테이블 형식&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)  
   
- [SSAS 테이블 형식&#41;속성 &#40;](tabular-models/properties-ssas-tabular.md)  
+ [속성&#40;SSAS 테이블 형식&#41;](tabular-models/properties-ssas-tabular.md)  
   
- [데이터 원본 &#40;SSAS 테이블 형식&#41;](data-sources-ssas-tabular.md)  
+ [데이터 원본&#40;SSAS 테이블 형식&#41;](data-sources-ssas-tabular.md)  
   
- [DirectQuery 모드 &#40;SSAS 테이블 형식&#41;](tabular-models/directquery-mode-ssas-tabular.md)  
+ [DirectQuery 모드&#40;SSAS 테이블 형식&#41;](tabular-models/directquery-mode-ssas-tabular.md)  
   
- [SSAS 테이블 형식&#41;&#40;테이블 및 열](tabular-models/tables-and-columns-ssas-tabular.md)  
+ [테이블 및 열&#40;SSAS 테이블 형식&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
- [SSAS 테이블 형식&#41;&#40;관계](tabular-models/relationships-ssas-tabular.md)  
+ [관계&#40;SSAS 테이블 형식&#41;](tabular-models/relationships-ssas-tabular.md)  
   
- [SSAS 테이블 형식&#41;계산 &#40;](tabular-models/calculations-ssas-tabular.md)  
+ [계산&#40;SSAS 테이블 형식&#41;](tabular-models/calculations-ssas-tabular.md)  
   
- [SSAS 테이블 형식&#41;&#40;측정값](tabular-models/measures-ssas-tabular.md)  
+ [측정값&#40;SSAS 테이블 형식&#41;](tabular-models/measures-ssas-tabular.md)  
   
- [SSAS 테이블 형식&#41;&#40;Kpi](tabular-models/kpis-ssas-tabular.md)  
+ [KPI&#40;SSAS 테이블 형식&#41;](tabular-models/kpis-ssas-tabular.md)  
   
- [계층 &#40;SSAS 테이블 형식&#41;](tabular-models/hierarchies-ssas-tabular.md)  
+ [계층 구조&#40;SSAS 테이블 형식&#41;](tabular-models/hierarchies-ssas-tabular.md)  
   
- [SSAS 테이블 형식&#41;&#40;파티션](tabular-models/partitions-ssas-tabular.md)  
+ [파티션&#40;SSAS 테이블 형식&#41;](tabular-models/partitions-ssas-tabular.md)  
   
- [SSAS 테이블 형식&#41;&#40;큐브 뷰](tabular-models/perspectives-ssas-tabular.md)  
+ [큐브 뷰&#40;SSAS 테이블 형식&#41;](tabular-models/perspectives-ssas-tabular.md)  
   
- [SSAS 테이블 형식&#41;역할 &#40;](tabular-models/roles-ssas-tabular.md)  
+ [역할&#40;SSAS 테이블 형식&#41;](tabular-models/roles-ssas-tabular.md)  
   
- [Excel에서 분석 &#40;SSAS 테이블 형식&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [Excel에서 분석&#40;SSAS 테이블 형식&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [테이블 형식 모델 솔루션 배포 &#40;SSAS 테이블 형식&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+ [테이블 형식 모델 솔루션 배포&#40;SSAS 테이블 형식&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   

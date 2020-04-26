@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6aa4074aa04af86e478b57b1870fd0dd855bea8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63315077"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>콜 센터 모델 탐색(중급 데이터 마이닝 자습서)
@@ -24,7 +24,7 @@ ms.locfileid: "63315077"
   
 -   [Microsoft 일반 콘텐츠 트리 뷰어](#bkmk_genviewer) **:** 이 표준 뷰어에서는 모델을 생성할 때 알고리즘에서 발견 한 패턴 및 통계에 대 한 자세한 정보를 제공 합니다.  
   
-##  <a name="bkmk_NNviewer"></a>Microsoft 신경망 뷰어  
+##  <a name="microsoft-neural-network-viewer"></a><a name="bkmk_NNviewer"></a>Microsoft 신경망 뷰어  
  뷰어에는 **입력**, **출력**및 **변수**라는 세 개의 창이 있습니다.  
   
  **출력** 창을 사용 하 여 예측 가능한 특성 또는 종속 변수에 대해 서로 다른 값을 선택할 수 있습니다. 모델에 예측 가능한 특성이 여러 개 있는 경우 **출력 특성** 목록에서 특성을 선택할 수 있습니다.  
@@ -107,14 +107,14 @@ ms.locfileid: "63315077"
   
  그러나 영향을 주는 요인 목록을 살펴보면 보다 미묘하고 해석하기 더 어려운 영향을 가진 몇 가지 다른 요인을 확인할 수 있습니다. 예를 들어 교대조가 서비스에 영향을 주는 것 같지만 리프트 점수 및 상대 확률은 교대조가 주요 요인이 아님을 나타냅니다.  
   
-|attribute|값|0.07 \< 우위|>= 0.12 우위|  
+|attribute|Value|0.07 \< 우위|>= 0.12 우위|  
 |---------------|-----------|--------------------|----------------------|  
 |Average Time Per Issue|89.087-120.000||점수: 100<br /><br /> Value1의 확률: 4.45%<br /><br /> Value2의 확률: 51.94%<br /><br /> Value1의 리프트: 0.19<br /><br /> Value2의 리프트: 1.94|  
 |Average Time Per Issue|44.000-70.597|점수: 92.35<br /><br /> 값 1의 확률: 60.06%<br /><br /> 값 2의 확률: 8.30%<br /><br /> 값 1의 리프트: 2.61<br /><br /> 값 2의 리프트: 0.31||  
   
  [맨 위로 이동](#bkmk_NNviewer)  
   
-##  <a name="bkmk_genviewer"></a>Microsoft 일반 콘텐츠 트리 뷰어  
+##  <a name="microsoft-generic-content-tree-viewer"></a><a name="bkmk_genviewer"></a>Microsoft 일반 콘텐츠 트리 뷰어  
  이 뷰어를 사용하면 모델을 처리할 때 알고리즘에서 만든 보다 자세한 정보를 볼 수 있습니다. **MicrosoftGeneric 콘텐츠 트리 뷰어** 는 마이닝 모델을 일련의 노드로 나타내며 각 노드는 학습 데이터에 대 한 배운 정보를 나타냅니다. 이 뷰어는 모든 모델에서 사용할 수 있지만 노드 내용은 모델 유형에 따라 다릅니다.  
   
  신경망 모델 또는 로지스틱 회귀 모델의 경우 특히 `marginal statistics node`가 유용합니다. 이 노드에는 데이터의 값 분포에 대한 파생 통계가 들어 있습니다. 많은 T-SQL 쿼리를 작성하지 않고 데이터 요약을 얻으려는 경우 이 정보가 유용할 수 있습니다. 이전 항목의 값 범주화에 대한 차트가 marginal statistics node에서 파생되었습니다.  

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 283fd67d14d57c3d1d5d60dd9d8de2a159ca6d5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721368"
 ---
 # <a name="distribution-database"></a>배포 데이터베이스
@@ -26,9 +26,9 @@ ms.locfileid: "62721368"
   
 ## <a name="options"></a>옵션  
  **배포 데이터베이스 이름**  
- 배포 데이터베이스 이름을 입력합니다. 배포 데이터베이스의 기본 이름은 'distribution'입니다. 이름을 지정할 경우 이름은 최대 128 자까지 지정할 수 있으며 인스턴스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]내에서 고유 해야 하며 식별자에 대 한 규칙을 준수 해야 합니다. 자세한 내용은 [Database Identifiers](../databases/database-identifiers.md)을 참조하세요.  
+ 배포 데이터베이스 이름을 입력합니다. 배포 데이터베이스의 기본 이름은 'distribution'입니다. 이름을 지정하는 경우 이름은 최대 128자가 될 수 있으며, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 고유해야 하고, 식별자 규칙을 따라야 합니다. 자세한 내용은 [Database Identifiers](../databases/database-identifiers.md)을 참조하세요.  
   
- 배포 데이터베이스 **파일 폴더** 및 **배포 데이터베이스 로그 파일 폴더**  
+ **배포 데이터베이스 파일 폴더** 및 **배포 데이터베이스 로그 파일 폴더**  
  배포 데이터베이스 및 로그 파일에 대한 경로를 입력합니다. 경로는 배포자에 로컬인 디스크여야 하므로 로컬 드라이브 문자와 콜론(예: C:)으로 시작해야 합니다. 매핑된 드라이브 문자와 네트워크 경로는 유효하지 않습니다.  
   
 > [!NOTE]  

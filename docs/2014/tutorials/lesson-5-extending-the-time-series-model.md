@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62822075"
 ---
 # <a name="lesson-5-extending-the-time-series-model"></a>5단원: 시계열 모델 확장
-  
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise에서는 시계열 모델에 새 데이터를 추가하고 새 데이터를 모델에 자동으로 통합할 수 있습니다. 다음 두 가지 방법 중 하나를 사용하여 시계열 마이닝 모델에 새 데이터를 추가할 수 있습니다.  
   
 -   PREDICTION JOIN을 사용하여 외부 원본의 데이터를 학습 데이터에 조인합니다.  
@@ -50,8 +49,7 @@ PREDICTION JOIN <source query>
   
 #### <a name="to-create-a-singleton-prediction-query-on-a-time-series-model"></a>시계열 모델에 대한 단일 예측 쿼리를 만들려면  
   
-1.  
-  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
@@ -63,7 +61,7 @@ PREDICTION JOIN <source query>
     SELECT [<model columns>,] PredictTimeSeries(<table column reference>, n, EXTEND_MODEL_CASES)   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     SELECT [Model Region],  
@@ -80,7 +78,7 @@ PREDICTION JOIN <source query>
     FROM <mining model>  
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     FROM [Forecasting_MIXED]  
@@ -92,7 +90,7 @@ PREDICTION JOIN <source query>
     PREDICTION JOIN <source query>  
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     NATURAL PREDICTION JOIN   
@@ -113,7 +111,7 @@ PREDICTION JOIN <source query>
     [WHERE <criteria>]  
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     WHERE [ModelRegion] = 'M200 Europe' OR  
@@ -140,8 +138,7 @@ PREDICTION JOIN <source query>
     [ModelRegion] = 'M200 Pacific'  
     ```  
   
-7.  
-  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
+7.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
 8.  다른 이름 **으로 저장** 대화 상자에서 해당 폴더로 이동한 다음 파일 `Singleton_TimeSeries_Query.dmx`이름을로 합니다.  
   
@@ -237,6 +234,6 @@ WHERE [ModelRegion] = 'M200 Europe'
   
 ## <a name="see-also"></a>참고 항목  
  [시계열 모델 쿼리 예제](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
+ [PredictTimeSeries&#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   
   

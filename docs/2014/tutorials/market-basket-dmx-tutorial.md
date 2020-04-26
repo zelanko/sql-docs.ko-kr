@@ -19,21 +19,19 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: fe12f1c4ca1c0946572c61e89f4f4edb8ba9a762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185646"
 ---
 # <a name="market-basket-dmx-tutorial"></a>Market Basket DMX 자습서
   이 자습서에서는 DMX(Data Mining Extensions) 쿼리 언어를 사용하여 마이닝 모델을 만들고 학습하며 탐색하는 방법을 설명합니다. 이러한 마이닝 모델을 사용하여 동시에 구입되는 경향이 있는 제품을 설명하는 예측을 만들 수 있습니다.  
   
- 마이닝 모델은 가상 회사인 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 에 대한 데이터를 저장하는 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]예제 데이터베이스에 포함된 데이터에서 만들어집니다. 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]는 규모가 큰 다국적 제조 회사입니다. 이 회사는 금속 및 합성 소재 자전거를 제조하여 북미, 유럽 및 아시아 시장에 판매합니다. 워싱턴 주 보셀에 위치한 본사에는 290명의 직원이 근무하고 있으며 각 지역 시장별로 영업 팀이 배치되어 있습니다.  
+ 마이닝 모델은 가상 회사인 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 에 대한 데이터를 저장하는 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]예제 데이터베이스에 포함된 데이터에서 만들어집니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]는 규모가 큰 다국적 제조 회사입니다. 이 회사는 금속 및 합성 소재 자전거를 제조하여 북미, 유럽 및 아시아 시장에 판매합니다. 워싱턴 주 보셀에 위치한 본사에는 290명의 직원이 근무하고 있으며 각 지역 시장별로 영업 팀이 배치되어 있습니다.  
   
 ## <a name="tutorial-scenario"></a>자습서 시나리오  
- 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]에서는 고객이 동시에 구입하는 경향이 있는 제품 유형을 예측하는 기능인 데이터 마이닝을 사용하는 사용자 지정 애플리케이션을 만들기로 했습니다. 사용자 지정 애플리케이션의 목표는 제품 집합을 지정하고 지정한 제품과 함께 구입할 가능성이 있는 추가 제품을 예측할 수 있게 하는 것입니다. 그러면 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]에서 이러한 정보를 사용하여 웹 사이트에 "제안" 기능을 추가하고 고객에게 정보를 제공하는 방식을 더 효과적으로 구성하게 됩니다.  
+ [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]에서는 고객이 동시에 구입하는 경향이 있는 제품 유형을 예측하는 기능인 데이터 마이닝을 사용하는 사용자 지정 애플리케이션을 만들기로 했습니다. 사용자 지정 애플리케이션의 목표는 제품 집합을 지정하고 지정한 제품과 함께 구입할 가능성이 있는 추가 제품을 예측할 수 있게 하는 것입니다. 그러면 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]에서 이러한 정보를 사용하여 웹 사이트에 "제안" 기능을 추가하고 고객에게 정보를 제공하는 방식을 더 효과적으로 구성하게 됩니다.  
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는이 작업을 수행 하는 데 사용할 수 있는 여러 가지 도구를 제공 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 합니다.  
   
@@ -41,8 +39,7 @@ ms.locfileid: "63185646"
   
 -   [Microsoft 연결 알고리즘](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)  
   
--   
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 쿼리 편집기  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 쿼리 편집기  
   
  DMX(Data Mining Extensions)는 마이닝 모델을 만들고 작업할 때 사용할 수 있는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 제공하는 쿼리 언어입니다. 연결 [!INCLUDE[msCoName](../includes/msconame-md.md)] 알고리즘은 함께 구입할 가능성이 있는 제품을 예측할 수 있는 모델을 만듭니다.  
   
@@ -57,8 +54,7 @@ ms.locfileid: "63185646"
   
  마이닝 모델에는 마이닝 구조에 설명된 키 열뿐만 아니라 나머지 열의 하위 집합도 포함되어야 합니다. 마이닝 모델은 각 열의 사용법을 정의하고 마이닝 모델을 만드는 데 사용되는 알고리즘을 정의합니다. 예를 들어 DMX에서 열을 Key 열이나 Predict 열로 지정할 수 있습니다. 열을 지정하지 않으면 Input 열로 간주됩니다.  
   
- DMX에서는 두 가지 방법으로 마이닝 모델을 만들 수 있습니다. 
-  `CREATE MINING MODEL` 문을 사용하여 마이닝 구조 및 연결된 마이닝 모델을 함께 만들거나 `CREATE MINING STRUCTURE` 문을 사용하여 먼저 마이닝 구조를 만든 다음 `ALTER STRUCTURE` 문을 사용하여 구조에 마이닝 모델을 추가할 수 있습니다. 이러한 방법은 아래에서 설명합니다.  
+ DMX에서는 두 가지 방법으로 마이닝 모델을 만들 수 있습니다. `CREATE MINING MODEL` 문을 사용하여 마이닝 구조 및 연결된 마이닝 모델을 함께 만들거나 `CREATE MINING STRUCTURE` 문을 사용하여 먼저 마이닝 구조를 만든 다음 `ALTER STRUCTURE` 문을 사용하여 구조에 마이닝 모델을 추가할 수 있습니다. 이러한 방법은 아래에서 설명합니다.  
   
  `CREATE MINING MODEL`  
  이 문을 사용하여 동일한 이름으로 마이닝 구조 및 연결 마이닝 모델을 함께 만들 수 있습니다. 이때 마이닝 모델 이름에 "Structure"가 추가되므로 마이닝 구조와 구분할 수 있습니다.  
@@ -83,7 +79,7 @@ ms.locfileid: "63185646"
   
  이 자습서에서는 여러 마이닝 모델을 포함하는 마이닝 구조를 만들 것이므로 두 번째 방법을 사용합니다.  
   
- **참조 항목**  
+ **자세한 내용**  
   
  Dmx&#41; 참조 &#40;dmx를 사용 하 [여 Dmx Select 문](/sql/dmx/understanding-the-dmx-select-statement), [구조 및 Dmx 예측 쿼리의 사용](/sql/dmx/structure-and-usage-of-dmx-prediction-queries) 을 이해 하는 [데이터 마이닝 확장](/sql/dmx/data-mining-extensions-dmx-reference)  
   
@@ -109,11 +105,9 @@ ms.locfileid: "63185646"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   
-  [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 데이터베이스  
+-   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 데이터베이스  
   
- 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다. 의 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]공식 예제 데이터베이스를 설치 하려면 Microsoft SQL Server 제품 샘플 [http://www.CodePlex.com/MSFTDBProdSamples](https://go.microsoft.com/fwlink/?LinkId=88417) 섹션의 Microsoft SQL Server 샘플 및 커뮤니티 프로젝트 홈 페이지에서 또는으로 이동 합니다. 
-  **Databases**, **Releases** 탭을 차례로 클릭한 다음 원하는 데이터베이스를 선택합니다.  
+ 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다. 의 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]공식 예제 데이터베이스를 설치 하려면 Microsoft SQL Server 제품 샘플 [http://www.CodePlex.com/MSFTDBProdSamples](https://go.microsoft.com/fwlink/?LinkId=88417) 섹션의 Microsoft SQL Server 샘플 및 커뮤니티 프로젝트 홈 페이지에서 또는으로 이동 합니다. **Databases**, **Releases** 탭을 차례로 클릭한 다음 원하는 데이터베이스를 선택합니다.  
   
 > [!NOTE]  
 >  자습서를 검토할 때는 문서 뷰어 도구 모음에 **다음 항목** 단추 및 **이전 항목** 단추를 추가하는 것이 좋습니다.  
@@ -121,6 +115,6 @@ ms.locfileid: "63185646"
 ## <a name="see-also"></a>참고 항목  
  [자전거 구매자 DMX 자습서](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
  [기본 데이터 마이닝 자습서](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [3 단원: 중급 데이터 마이닝 자습서 &#40;시장 바구니 시나리오 구축&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [3단원: 시장 바구니 시나리오 구축&#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

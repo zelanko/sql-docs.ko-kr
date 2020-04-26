@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e28a5077057c9a02a3b45de6a88180eab5c87b2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62938585"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 복제 충돌 뷰어(병합 게시)
@@ -58,7 +58,7 @@ ms.locfileid: "62938585"
  **모두 선택**  
  표에 나열된 모든 충돌을 선택하려면 클릭합니다.  
   
- **모두 선택 안 함**  
+ **없음 선택**  
  표에 나열된 모든 충돌의 선택을 취소하려면 클릭합니다.  
   
  **제거**  
@@ -70,7 +70,7 @@ ms.locfileid: "62938585"
  **처음 다섯 개의 열 및 충돌하는 데이터를 포함하는 기타 열 표시**  
  처음 5개 열과 충돌이 발생한 기타 모든 열을 표시하려면 선택합니다. 이 옵션은 테이블에 많은 열이 있지만 충돌 해결에 가장 도움이 되는 열만 보려는 경우에 유용합니다. 기본 키 또는 이름 필드와 같이 행을 식별하는 필드가 테이블의 앞쪽 열에 포함되어 있는 경우가 많으므로 처음 5개 열은 항상 이 뷰에 포함됩니다.  
   
- **열 정보 표시** (**...**)  
+ **열 정보 표시**(**…**)  
  열 정보를 보려면 **테이블 이름**, **열 이름**, **데이터 형식**및 **열 값**을 클릭합니다. **열 값** 은 읽기 전용으로 표시되지 않는 경우 편집할 수 있습니다.  
   
  **적용되는 내용 전송**  
@@ -80,10 +80,10 @@ ms.locfileid: "62938585"
  충돌 해결 프로그램에서 무시되는 내용으로 결정한 행을 적용하려면 클릭합니다. 이 단추를 클릭하기 전에 읽기 전용으로 표시되지 않은 모든 열의 값을 변경할 수 있습니다.  
   
  **이 충돌 정보 기록**  
- 자세한 충돌 정보를 파일에 기록하려면 이 확인란을 선택합니다. 파일 위치를 지정하려면 **보기** 메뉴를 가리키고 **옵션**을 클릭합니다. 값을 입력하거나 찾아보기 ( **...** )를 클릭한 다음 해당 파일로 이동합니다. **확인** 을 클릭하여 **옵션** 대화 상자를 종료합니다.  
+ 자세한 충돌 정보를 파일에 기록하려면 이 확인란을 선택합니다. 파일 위치를 지정하려면 **보기** 메뉴를 가리키고 **옵션**을 클릭합니다. 값을 입력하거나 찾아보기 (**...**)를 클릭한 다음 해당 파일로 이동합니다. **확인** 을 클릭하여 **옵션** 대화 상자를 종료합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [병합 게시에 대한 데이터 충돌 보기 및 해결&#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)   
+ [병합 게시에 대 한 데이터 충돌 보기 및 해결 &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)   
  [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f60ea2b2a642cf9435ed8366c42e43abb927e426
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62823133"
 ---
 # <a name="adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial"></a>예측할 데이터 원본 뷰 추가(중급 데이터 마이닝 자습서)
@@ -24,8 +24,7 @@ ms.locfileid: "62823133"
   
 1.  솔루션 탐색기에서 **데이터 원본 뷰**를 마우스 오른쪽 단추로 클릭 한 다음 **새 데이터 원본 뷰**를 선택 합니다.  
   
-2.  
-  **데이터 원본 뷰 마법사 시작** 페이지에서 **다음**을 클릭합니다.  
+2.  **데이터 원본 뷰 마법사 시작** 페이지에서 **다음**을 클릭합니다.  
   
 3.  **데이터 원본 선택** 페이지의 **관계형 데이터**원본에서 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 데이터 원본을 선택 합니다. **다음**을 클릭합니다.  
   

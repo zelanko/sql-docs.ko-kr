@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: c96b70775105ea9446810ac3b064ae7cb07d4337
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312877"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>대체 데이터를 사용한 시계열 예측(중급 데이터 마이닝 자습서)
   이 태스크에서는 전 세계 판매 데이터를 기준으로 새 모델을 작성합니다. 그런 다음 개별 지역 중 한 곳에 전 세계 판매 모델을 적용하는 예측 쿼리를 만듭니다.  
   
 ## <a name="building-a-general-model"></a>일반 모델 작성  
- 원래 마이닝 모델의 결과 분석에서는 특정 지역 간 및 제품 라인 간에 큰 차이를 보였음을 기억하십시오. 예를 들어 북미 지역에서는 M200 모델의 판매량이 높았던 반면 T1000 모델의 판매량은 그다지 높지 않았습니다. 그러나 일부 계열에는 많은 데이터가 없거나 다른 시점에 데이터가 시작 되는 사실 때문에 분석이 복잡해 집니다. 일부 데이터는 누락되기도 했습니다.  
+ 원래 마이닝 모델의 결과 분석에서는 특정 지역 간 및 제품 라인 간에 큰 차이를 보였음을 기억하십시오. 예를 들어 북아메리카 지역에서는 M200 모델의 판매량이 높았던 반면 T1000 모델의 판매량은 그다지 높지 않았습니다. 그러나 일부 계열에는 많은 데이터가 없거나 다른 시점에 데이터가 시작 되는 사실 때문에 분석이 복잡해 집니다. 일부 데이터는 누락되기도 했습니다.  
   
  ![M200 및 T1000 수량을 예측하는 계열](../../2014/tutorials/media/6series-defaultforecasting.gif "M200 및 T1000 수량을 예측하는 계열")  
   
@@ -56,8 +56,7 @@ ms.locfileid: "63312877"
   
          키: 지역  
   
-    -   
-  `Input` 및 `Predict`에 대해 다음 열을 선택합니다.  
+    -   `Input` 및 `Predict`에 대해 다음 열을 선택합니다.  
   
          SumQty  
   
@@ -130,7 +129,7 @@ ms.locfileid: "63312877"
 9. **결과**를 클릭 합니다.  
   
 ## <a name="creating-the-cross-prediction-query-in-dmx"></a>DMX에서 교차 예측 쿼리 만들기  
- 교차 예측에 문제가 있을 수 있습니다. 즉, 북아메리카 지역의 T1000 product 모델과 같이 다른 데이터 계열에 일반 모델을 적용 하려면 각 계열에 대해 서로 다른 쿼리를 만들어야 합니다. 따라서의 각 집합을 매핑할 수 있습니다. 모델에를 넣습니다.  
+ 교차 예측 문제를 발견 했을 수 있습니다. 즉, 북아메리카 지역의 T1000 product 모델과 같이 다른 데이터 계열에 일반 모델을 적용 하려면 각 계열에 대해 다른 쿼리를 만들어야 합니다. 그러면 각 입력 집합을 모델에 매핑할 수 있습니다.  
   
  그러나 디자이너에서 쿼리를 작성하지 않고 DMX 뷰로 전환하여 이미 작성된 DMX 문을 편집할 수 있습니다. 예를 들어 다음 DMX 문은 작성한 쿼리를 나타냅니다.  
   
@@ -163,6 +162,6 @@ AND
   
 ## <a name="see-also"></a>참고 항목  
  [시계열 모델 쿼리 예제](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
+ [PredictTimeSeries&#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   
   

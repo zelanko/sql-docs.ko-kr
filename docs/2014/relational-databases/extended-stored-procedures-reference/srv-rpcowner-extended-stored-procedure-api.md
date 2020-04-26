@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 68e5d0214a2bd14a466b7a0c40f792031d3fac5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62745504"
 ---
 # <a name="srv_rpcowner-extended-stored-procedure-api"></a>srv_rpcowner(확장 저장 프로시저 API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 CLR 통합을 사용 하세요.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
   
  현재 원격 저장 프로시저에 대한 소유자 구성 요소를 반환합니다.  
   
@@ -53,8 +53,7 @@ len
  특정 클라이언트 연결에 대한 핸들(이 경우 원격 저장 프로시저를 수신한 핸들)인 SRV_PROC 구조에 대한 포인터입니다. 이 구조에는 확장 저장 프로시저 API 라이브러리가 애플리케이션과 클라이언트 간 통신 및 데이터를 관리하는 데 사용하는 정보가 들어 있습니다.  
   
  *길이가*  
- 소유자 이름의 길이를 받는 정수 변수에 대한 포인터입니다. 
-  *len* 매개 변수는 NULL일 수 있으며, 이 경우 소유자 구성 요소의 길이가 반환되지 않습니다.  
+ 소유자 이름의 길이를 받는 정수 변수에 대한 포인터입니다. *len* 매개 변수는 NULL일 수 있으며, 이 경우 소유자 구성 요소의 길이가 반환되지 않습니다.  
   
 ## <a name="returns"></a>반환  
  현재 원격 저장 프로시저의 Null로 끝나는 소유자 구성 요소에 대한 DBCHAR 포인터입니다. 현재 원격 저장 프로시저가 없으면 NULL이 반환되고 *len*이 -1로 설정됩니다.  

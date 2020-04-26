@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 285eae7ea20d5919fa73bd0d514c755fe73d9de0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484711"
 ---
 # <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>태스크 17: SSIS 패키지로 생성된 DQS 정리 프로젝트 검토
@@ -48,8 +48,7 @@ ms.locfileid: "65484711"
   
 13. **다음**을 클릭합니다. 이 **내보내기** 페이지에서는 excel 파일, CSV 파일 또는 SQL 데이터베이스로 결과를 내보낼 수 있습니다.  
   
-14. 
-  **마침** 을 클릭하여 작업을 마칩니다.  
+14. **마침** 을 클릭하여 작업을 마칩니다.  
   
 15. **DQS 클라이언트**의 기본 페이지에 있는 **관리** 창에서 **작업 모니터링** 을 클릭 합니다.  
   

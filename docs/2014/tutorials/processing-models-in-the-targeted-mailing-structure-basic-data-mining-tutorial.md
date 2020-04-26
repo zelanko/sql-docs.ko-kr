@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 605088d405cbd2dcfba92a2da5fa4e07c38d8f0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188228"
 ---
 # <a name="processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>대상 메일 구조에서 모델 처리(기본 데이터 마이닝 자습서)
@@ -43,7 +43,7 @@ ms.locfileid: "63188228"
   
 3.  **Cachemode** 가 **KeepTrainingCases**으로 설정 되어 있는지 확인 합니다.  
   
-4.  HoldoutSeed `12` 에 **** 대해을 입력 합니다.  
+4.  HoldoutSeed `12` 에 **HoldoutSeed**대해을 입력 합니다.  
   
 ## <a name="deploying-and-processing-the-models"></a>모델 배포 및 처리  
  데이터 마이닝 디자이너에서 모델에 대 한 변경 내용 또는 기본 데이터의 범위에 따라 처리할 개체를 결정할 수 있습니다.  
@@ -58,8 +58,7 @@ ms.locfileid: "63188228"
   
 2.  **마이닝 구조 처리-대상 메일링** 대화 상자에서 **실행** 을 클릭 합니다.  
   
-     
-  **처리 진행률** 대화 상자가 열리고 모델 처리 세부 정보를 표시합니다. 컴퓨터에 따라 모델 처리에 시간이 걸릴 수 있습니다.  
+     **처리 진행률** 대화 상자가 열리고 모델 처리 세부 정보를 표시합니다. 컴퓨터에 따라 모델 처리에 시간이 걸릴 수 있습니다.  
   
 3.  모델 처리가 완료되면 **처리 진행률** 대화 상자에서 **닫기** 를 클릭합니다.  
   
@@ -72,6 +71,6 @@ ms.locfileid: "63188228"
  [4 단원: 기본 데이터 마이닝 자습서 &#40;대상 메일링 모델 탐색&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 마이닝&#41;&#40;처리 요구 사항 및 고려 사항](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [처리 요구 사항 및 고려 사항&#40;데이터 마이닝&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

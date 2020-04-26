@@ -17,17 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: daf554338a50a81f46d86a77bf04e770fcc2512e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137457"
 ---
 # <a name="lesson-5-building-neural-network-and-logistic-regression-models-intermediate-data-mining-tutorial"></a>5단원: 신경망 및 로지스틱 회귀 모델 작성(중급 데이터 마이닝 자습서)
   
   
- 
-  [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 의 운영 부서가 콜 센터에서 고객 만족도를 향상시키는 프로젝트를 수행하고 있습니다. 이 부서에서는 콜 센터를 관리하고 콜 센터 효율성에 대한 메트릭을 보고할 한 업체를 선정하고 여러분에게 이 업체가 제공한 일부 예비 정보를 분석하는 업무를 요청합니다. 이 부서에서는 업체가 보고한 정보에 관심이 갈 만한 내용이 있는지 알고 싶습니다. 특히 이 데이터에서 직원 배치의 문제점 또는 고객 만족도를 개선하는 방법을 제안하는지 알고 싶습니다.  
+ [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 의 운영 부서가 콜 센터에서 고객 만족도를 향상시키는 프로젝트를 수행하고 있습니다. 이 부서에서는 콜 센터를 관리하고 콜 센터 효율성에 대한 메트릭을 보고할 한 업체를 선정하고 여러분에게 이 업체가 제공한 일부 예비 정보를 분석하는 업무를 요청합니다. 이 부서에서는 업체가 보고한 정보에 관심이 갈 만한 내용이 있는지 알고 싶습니다. 특히 이 데이터에서 직원 배치의 문제점 또는 고객 만족도를 개선하는 방법을 제안하는지 알고 싶습니다.  
   
  데이터 집합은 작으며 30일간의 콜 센터 운영 기간만 포함합니다. 데이터는 각 교대조의 신규 및 경력 전화 상담원 수, 수신 전화 수, 주문 수는 물론 해결해야 할 문제 및 고객의 평균 통화 응답 대기 시간을 추적합니다. 또한 데이터에는 고객 불만 지표인 *중단율*을 기반으로 한 서비스 품질 메트릭도 포함됩니다.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "63137457"
   
  [2 단원: 중급 데이터 마이닝 자습서 &#40;예측 시나리오 구축&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
- [3 단원: 중급 데이터 마이닝 자습서 &#40;시장 바구니 시나리오 구축&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [3단원: 시장 바구니 시나리오 구축&#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
  [4 단원: 중간 데이터 마이닝 자습서 &#40;시퀀스 클러스터링 시나리오 빌드&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   

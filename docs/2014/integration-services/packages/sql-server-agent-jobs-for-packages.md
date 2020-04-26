@@ -16,15 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a4b9cd5eaad7b51f7cc3d2a0c73bea3f23fd542
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767185"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>패키지에 대한 SQL Server 에이전트 작업
-  에이전트를 사용 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 여 패키지 실행을 자동화 하 고 예약할 수 있습니다. 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템에 저장된 패키지를 예약할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 실행을 자동화하고 예약할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템에 저장된 패키지를 예약할 수 있습니다.  
   
 ## <a name="sections-in-this-topic"></a>이 항목의 섹션  
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
@@ -33,15 +32,12 @@ ms.locfileid: "62767185"
   
 -   [Integration Services 패키지 예약](#packages)  
   
--   [예약 된 패키지 문제 해결](#trouble)  
+-   [예약 패키지 문제 해결](#trouble)  
   
-##  <a name="jobs"></a>SQL Server 에이전트에서 작업 예약  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 실행하여 태스크를 자동화 및 예약할 수 있도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 설치하는 서비스입니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 실행되고 있어야만 작업이 자동으로 실행될 수 있습니다. 자세한 내용은 [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)을 참조하세요.  
+##  <a name="scheduling-jobs-in-sql-server-agent"></a><a name="jobs"></a>SQL Server 에이전트에서 작업 예약  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 실행하여 태스크를 자동화 및 예약할 수 있도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 설치하는 서비스입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 실행되고 있어야만 작업이 자동으로 실행될 수 있습니다. 자세한 내용은 [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)을 참조하세요.  
   
- 
-  **SQL Server 에이전트** 노드는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 인스턴스에 연결하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 개체 탐색기에 표시됩니다.  
+ **SQL Server 에이전트** 노드는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 인스턴스에 연결하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 개체 탐색기에 표시됩니다.  
   
  되풀이 태스크를 자동화하려면 **새 작업** 대화 상자를 사용하여 작업을 만들어야 합니다. 자세한 내용은 [작업 구현](../../ssms/agent/implement-jobs.md)을 참조하세요.  
   
@@ -51,43 +47,37 @@ ms.locfileid: "62767185"
   
  작업을 종료하거나 경고를 추가할 때 전자 메일 메시지를 보낼 운영자를 지정하는 등의 알림 옵션 설정으로 작업을 향상시킬 수 있습니다. 자세한 내용은 [경고](../../ssms/agent/alerts.md)를 참조하세요.  
   
-##  <a name="packages"></a>Integration Services 패키지 예약  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 만들어 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 예약한 경우 **SQL Server Integration Services 패키지**에 하나 이상의 단계를 추가하고 단계 유형을 설정해야 합니다. 한 개의 작업은 각각 다른 패키지를 실행하는 여러 단계를 포함할 수 있습니다.  
+##  <a name="scheduling-integration-services-packages"></a><a name="packages"></a> Scheduling Integration Services Packages  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 만들어 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 예약한 경우 **SQL Server Integration Services 패키지**에 하나 이상의 단계를 추가하고 단계 유형을 설정해야 합니다. 한 개의 작업은 각각 다른 패키지를 실행하는 여러 단계를 포함할 수 있습니다.  
   
  작업 단계에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행하는 것은 **dtexec** (dtexec.exe) 및 **DTExecUI** (dtexecui.exe) 유틸리티를 사용하여 패키지를 실행하는 것과 비슷합니다. 명령줄 옵션 또는 **패키지 실행 유틸리티** 대화 상자를 사용하여 패키지의 런타임 옵션을 설정하는 대신 **새 작업 단계** 대화 상자에서 런타임 옵션을 설정할 수 있습니다. 패키지를 실행하는 옵션에 대한 자세한 내용은 [dtexec Utility](dtexec-utility.md)를 참조하십시오.  
   
  자세한 내용은 [SQL Server 에이전트를 사용하여 패키지 예약](../schedule-a-package-by-using-sql-server-agent.md)을 참조하세요.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 패키지를 실행하는 방법을 보여 주는 비디오는 MSDN Library의 비디오 홈 페이지에서 [방법: SQL Server 에이전트를 사용하여 패키지 실행 자동화(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=141771)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 패키지를 실행하는 방법을 보여 주는 비디오는 MSDN Library의 비디오 홈 페이지에서 [방법: SQL Server 에이전트를 사용하여 패키지 실행 자동화(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=141771)를 참조하세요.  
   
-##  <a name="trouble"></a> 문제 해결  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 커맨드 라인에서 패키지가 성공적으로 실행되더라도 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에이전트 작업 단계를 시작하지 못할 수 있습니다. 이 문제에 대한 몇 가지 일반적인 이유와 권장 솔루션이 있습니다. 자세한 내용은 다음 리소스를 참조하세요.  
+##  <a name="troubleshooting"></a><a name="trouble"></a>슈팅이  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 커맨드 라인에서 패키지가 성공적으로 실행되더라도 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에이전트 작업 단계를 시작하지 못할 수 있습니다. 이 문제에 대한 몇 가지 일반적인 이유와 권장 솔루션이 있습니다. 자세한 내용은 다음 리소스를 참조하세요.  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)][SQL Server 에이전트 작업 단계에서 ssis 패키지를 호출할 때 ssis 패키지가 실행 되지 않는](https://support.microsoft.com/kb/918760) 기술 자료 문서  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료 문서 - [SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행되지 않는다](https://support.microsoft.com/kb/918760)  
   
 -   비디오, [문제 해결: MSDN Library에서 SQL Server 에이전트 (SQL Server 비디오)를 사용 하 여 패키지를 실행](https://go.microsoft.com/fwlink/?LinkId=141772)합니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서 패키지를 시작한 후에 패키지 실행이 실패하거나 패키지가 성공적으로 실행되더라도 예기치 않은 결과가 발생할 수 있습니다. 이 문제를 해결하려면 다음 도구를 사용합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서 패키지를 시작한 후에 패키지 실행이 실패하거나 패키지가 성공적으로 실행되더라도 예기치 않은 결과가 발생할 수 있습니다. 이 문제를 해결하려면 다음 도구를 사용합니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] MSDB 데이터베이스, [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 또는 로컬 컴퓨터의 폴더에 저장된 패키지는 **로그 파일 뷰어** 뿐만 아니라 패키지 실행 중 생성된 로그 및 디버그 덤프 파일을 사용할 수 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] MSDB 데이터베이스, [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 또는 로컬 컴퓨터의 폴더에 저장된 패키지는 **로그 파일 뷰어** 뿐만 아니라 패키지 실행 중 생성된 로그 및 디버그 덤프 파일을 사용할 수 있습니다.  
   
-     **로그 파일 뷰어를 사용 하려면 다음을 수행 합니다.**  
+     **로그 파일 뷰어를 사용하려면 다음을 수행합니다.**  
   
     1.  개체 탐색기에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 마우스 오른쪽 단추로 누르고 **기록 보기**를 클릭합니다.  
   
-    2.  
-  **메시지** 열에 **작업이 실패했습니다.** 메시지가 있는 **로그 파일 요약** 상자에서 작업 실행을 찾습니다.  
+    2.  **메시지** 열에 **작업이 실패했습니다.** 메시지가 있는 **로그 파일 요약** 상자에서 작업 실행을 찾습니다.  
   
     3.  작업 노드를 확장하고 작업 단계를 클릭하여 **로그 파일 요약** 상자 아래 영역에서 메시지의 세부 정보를 봅니다.  
   
 -   SSISDB 데이터베이스에 저장된 패키지에 대해서도 **로그 파일 뷰어** 뿐만 아니라 패키지 실행 중 생성된 로그 및 디버그 덤프 파일을 사용할 수 있습니다. 또한 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 대한 보고서를 사용할 수도 있습니다.  
   
-     **보고서에서 작업 실행과 연결 된 패키지 실행에 대 한 정보를 찾으려면 다음을 수행 합니다.**  
+     **보고서에서 작업 실행과 연결된 패키지 실행에 대한 정보를 찾으려면 다음을 수행합니다.**  
   
     1.  위의 단계별 지침에 따라 작업 단계에 대한 자세한 메시지를 봅니다.  
   
@@ -97,15 +87,13 @@ ms.locfileid: "62767185"
   
     4.  SSISDB를 마우스 오른쪽 단추로 클릭하고 보고서, 표준 보고서를 차례로 가리킨 다음 모든 실행을 클릭합니다.  
   
-    5.  
-  **모든 실행** 보고서의 **ID** 열에서 실행 ID를 찾습니다. 패키지 실행에 대한 정보를 보려면 **개요**, **모든 메시지**또는 **실행 성능** 을 클릭합니다.  
+    5.  **모든 실행** 보고서의 **ID** 열에서 실행 ID를 찾습니다. 패키지 실행에 대한 정보를 보려면 **개요**, **모든 메시지**또는 **실행 성능** 을 클릭합니다.  
   
          개요, 모든 메시지 및 실행 성능 보고서에 대한 자세한 내용은 [Reports for the Integration Services Server](../reports-for-the-integration-services-server.md)를 참조합니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
   
--   
-  [웹 사이트의 기술 자료 문서 -](https://support.microsoft.com/kb/918760)SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행되지 않는다 [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
+-   [웹 사이트의 기술 자료 문서 -](https://support.microsoft.com/kb/918760)SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행되지 않는다 [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
 -   MSDN Library의 비디오 - [문제 해결: SQL Server 에이전트를 사용하여 패키지 실행(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=141772)  
   

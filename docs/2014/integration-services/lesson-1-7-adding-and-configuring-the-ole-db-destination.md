@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767562"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>7단계: OLE DB 대상 추가 및 구성
@@ -24,7 +24,7 @@ ms.locfileid: "62767562"
   
 ### <a name="to-add-and-configure-the-sample-ole-db-destination"></a>예제 OLE DB 대상을 추가하고 구성하려면  
   
-1.  **SSIS 도구 상자에서** **다른 대상을**확장하고 **OLE DB 대상을** 데이터 **흐름** 탭의 디자인 표면으로 드래그합니다. **Lookup Date Key**  
+1.  **SSIS 도구 상자**에서 **기타 대상**을 확장 하 고 **OLE DB Destination** 을 **데이터 흐름** 탭의 디자인 화면으로 끌어다 놓습니다. OLE DB 대상을 **Lookup Date Key** 변환 바로 아래에 배치 합니다.  
   
 2.  **Lookup Date Key** 변환을 클릭하고 새로 추가한 **OLE DB 대상** 위로 녹색 화살표를 끌어 두 구성 요소를 함께 연결합니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62767562"
   
 13. **Sample OLE DB Destination** 대상을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-14. 속성 창에서 `LocaleID` 속성이 **영어(미국)로** 설정되어 있고 속성이`DefaultCodePage` **1252로**설정되어 있는지 확인합니다.  
+14. 속성 창에서 `LocaleID` 속성이 **영어 (미국)** 로 설정 되어 있고`DefaultCodePage` 속성이 **1252**로 설정 되어 있는지 확인 합니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [8단계: 1단원 패키지를 쉽게 이해할 수 있도록 만들기](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  

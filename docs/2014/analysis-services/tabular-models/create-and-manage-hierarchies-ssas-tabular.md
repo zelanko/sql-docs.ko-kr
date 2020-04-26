@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e0c1162d196abba660cb1f15091c5d6a5c13884
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067503"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>계층 만들기 및 관리(SSAS 테이블 형식)
@@ -28,7 +28,7 @@ ms.locfileid: "66067503"
   
 -   [계층 삭제](#bkmk_delete)  
   
-##  <a name="bkmk_create"></a>계층 만들기  
+##  <a name="create-a-hierarchy"></a><a name="bkmk_create"></a> 계층 만들기  
  열 및 테이블의 상황에 맞는 메뉴를 사용하여 계층을 만들 수 있습니다. 계층을 만들면 새 부모 수준이 자식 수준으로 선택한 열과 함께 나타납니다.  
   
 #### <a name="to-create-a-hierarchy-from-the-context-menu"></a>상황에 맞는 메뉴에서 계층을 만들려면  
@@ -46,7 +46,7 @@ ms.locfileid: "66067503"
 > [!NOTE]  
 >  하나 이상의 열과 함께 측정값을 여러 개 선택하거나 여러 테이블의 열을 선택할 경우 계층 만들기 명령이 비활성화됩니다.  
   
-##  <a name="bkmk_edit"></a>계층 편집  
+##  <a name="edit-a-hierarchy"></a><a name="bkmk_edit"></a>계층 편집  
  계층 이름 바꾸기, 자식 수준 이름 바꾸기, 자식 수준 순서 변경, 다른 열을 자식 수준으로 추가, 계층에서 자식 수준 제거, 자식 수준의 원본 이름(열 이름) 표시, 계층 부모 수준과 이름이 동일한 자식 수준 숨기기 등의 편집 작업을 수행할 수 있습니다.  
   
 #### <a name="to-change-the-name-of-a-hierarchy-or-child-level"></a>계층 또는 자식 수준의 이름을 변경하려면  
@@ -79,14 +79,13 @@ ms.locfileid: "66067503"
 -   또는 계층의 자식 수준을 클릭하고 **Delete**키를 누릅니다.  
   
 > [!NOTE]  
->  계층 자식 수준의 이름을 바꿀 경우 해당 자식 수준은 더 이상 자식 수준을 복사하는 데 사용된 열과 동일한 이름을 공유하지 않습니다. 
-  **원본 열 이름 표시** 명령을 사용하여 복사해 온 원본 열을 표시합니다.  
+>  계층 자식 수준의 이름을 바꿀 경우 해당 자식 수준은 더 이상 자식 수준을 복사하는 데 사용된 열과 동일한 이름을 공유하지 않습니다. **원본 열 이름 표시** 명령을 사용하여 복사해 온 원본 열을 표시합니다.  
   
 #### <a name="to-show-a-source-name"></a>원본 이름을 표시하려면  
   
 -   계층 자식 수준을 마우스 오른쪽 단추로 클릭하고 **원본 이름 표시**를 클릭합니다. 복사해 온 원본 열의 이름이 표시됩니다.  
   
-##  <a name="bkmk_delete"></a>계층 삭제  
+##  <a name="delete-a-hierarchy"></a><a name="bkmk_delete"></a>계층 삭제  
   
 #### <a name="to-delete-a-hierarchy-and-remove-its-child-levels"></a>계층을 삭제하고 자식 수준을 제거하려면  
   
@@ -97,6 +96,6 @@ ms.locfileid: "66067503"
 ## <a name="see-also"></a>참고 항목  
  [테이블 형식 모델 디자이너 &#40;SSAS 테이블 형식&#41;](../tabular-model-designer-ssas-tabular.md)   
  [계층 &#40;SSAS 테이블 형식&#41;](hierarchies-ssas-tabular.md)   
- [SSAS 테이블 형식&#41;&#40;측정값](measures-ssas-tabular.md)  
+ [측정값&#40;SSAS 테이블 형식&#41;](measures-ssas-tabular.md)  
   
   

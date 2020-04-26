@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a492aee19d6b09cb7d227b34648f1ea35d1d95d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62762084"
 ---
 # <a name="database-identifiers"></a>데이터베이스 식별자
-  데이터베이스 개체 이름을 그 개체의 식별자라고 합니다. 의 모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 항목에는 식별자가 있을 수 있습니다. 서버, 데이터베이스 그리고 테이블, 뷰, 열, 인덱스, 트리거, 프로시저, 제약 조건, 규칙 등과 같은 데이터베이스 개체도 식별자를 가질 수 있습니다. 식별자는 대부분의 개체에서 필수 항목이지만 제약 조건과 같은 일부 개체에서는 옵션입니다.  
+  데이터베이스 개체 이름을 그 개체의 식별자라고 합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 모든 개체에는 식별자가 있습니다. 서버, 데이터베이스 그리고 테이블, 뷰, 열, 인덱스, 트리거, 프로시저, 제약 조건, 규칙 등과 같은 데이터베이스 개체도 식별자를 가질 수 있습니다. 식별자는 대부분의 개체에서 필수 항목이지만 제약 조건과 같은 일부 개체에서는 옵션입니다.  
   
  개체의 식별자는 개체를 정의할 때 만들어집니다. 만들어진 식별자는 개체를 참조하는 데 사용됩니다. 예를 들어 다음 문은 식별자가 `TableX`인 테이블과 식별자가 `KeyCol` 및 `Description`인 두 열을 만듭니다.  
   
@@ -37,8 +37,7 @@ CREATE TABLE TableX
 (KeyCol INT PRIMARY KEY, Description nvarchar(80))  
 ```  
   
- 이 테이블에는 이름 없는 제약 조건도 있습니다. 
-  `PRIMARY KEY` 제약 조건에는 식별자가 없습니다.  
+ 이 테이블에는 이름 없는 제약 조건도 있습니다. `PRIMARY KEY` 제약 조건에는 식별자가 없습니다.  
   
  식별자의 데이터 정렬은 식별자가 정의된 수준에 따라 달라집니다. 로그인과 데이터베이스 이름 등 인스턴스 수준 개체의 식별자에는 인스턴스의 기본 데이터 정렬이 할당됩니다. 테이블, 뷰, 열 이름 등 데이터베이스에 있는 개체의 식별자에는 데이터베이스의 기본 데이터 정렬이 할당됩니다. 예를 들어 대/소문자만 다르고 이름은 동일한 두 테이블은 데이터 정렬이 대/소문자를 구분하는 데이터베이스에서는 만들 수 있지만 데이터 정렬이 대/소문자를 구분하지 않는 데이터베이스에서는 만들 수 없습니다.  
   
@@ -97,17 +96,13 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
   
     -   at 기호(@), 달러 기호($), 숫자 기호 또는 밑줄  
   
-3.  
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 예약어는 식별자로 사용할 수 없습니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 예약어는 대문자와 소문자가 모두 예약됩니다. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 식별자를 사용하는 경우 이러한 규칙을 따르지 않는 식별자는 큰따옴표나 대괄호로 구분해야 합니다. 예약되는 단어는 데이터베이스 호환성 수준에 따라 다릅니다. 이 수준은 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) 문을 사용하여 설정할 수 있습니다.  
+3.  [!INCLUDE[tsql](../../includes/tsql-md.md)] 예약어는 식별자로 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 예약어는 대문자와 소문자가 모두 예약됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 식별자를 사용하는 경우 이러한 규칙을 따르지 않는 식별자는 큰따옴표나 대괄호로 구분해야 합니다. 예약되는 단어는 데이터베이스 호환성 수준에 따라 다릅니다. 이 수준은 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) 문을 사용하여 설정할 수 있습니다.  
   
 4.  포함된 공백이나 특수 문자는 사용할 수 없습니다.  
   
 5.  보충 문자도 사용할 수 없습니다.  
   
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 식별자를 사용하는 경우 이러한 규칙을 따르지 않는 식별자는 큰따옴표나 대괄호로 구분해야 합니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 식별자를 사용하는 경우 이러한 규칙을 따르지 않는 식별자는 큰따옴표나 대괄호로 구분해야 합니다.  
   
 > [!NOTE]  
 >  일반 식별자 형식의 일부 규칙은 데이터베이스 호환성 수준에 따라 달라집니다. 이 수준은 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)를 사용하여 설정할 수 있습니다.  
@@ -116,15 +111,15 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
  [ALTER TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [CREATE DEFAULT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql)   
- [Transact-sql&#41;&#40;프로시저 만들기](/sql/t-sql/statements/create-procedure-transact-sql)   
+ [CREATE PROCEDURE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
  [CREATE RULE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-rule-transact-sql)   
  [CREATE TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
  [CREATE TRIGGER&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   
  [CREATE VIEW&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)   
- [Transact-sql @local_variable&#41;&#40;선언](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
+ [DECLARE @local_variable&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
  [DELETE&#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql)   
  [INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
- [Transact-sql&#41;&#40;예약 된 키워드](/sql/t-sql/language-elements/reserved-keywords-transact-sql)   
+ [예약 키워드&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql)   
  [SELECT&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [UPDATE&#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql)  
   

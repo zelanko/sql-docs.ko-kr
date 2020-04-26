@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8022532dcb038b7c9a5839acb0541337ac3d5001
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766154"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>패키지 실행을 위한 덤프 파일 생성
@@ -42,7 +42,7 @@ ms.locfileid: "62766154"
   
 -   .tmp 디버그 덤프 파일. 텍스트 형식 파일입니다.  
   
- 기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 이러한 파일을 *\<드라이브>:* \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 폴더에 저장합니다.  
+ 기본적으로에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 이러한 파일을 * \<drive>:* fileFiles\Microsoft SQL server\110\shared\errordumps 폴더에 저장 합니다.  
   
  다음 표에서는 .tmp 파일의 특정 섹션에 대해서만 설명합니다. .tmp 파일에는 이 표에 나열되지 않은 추가 데이터가 포함되어 있습니다.  
   
@@ -53,6 +53,6 @@ ms.locfileid: "62766154"
 |최근 메시지|시스템에서 표시한 최근 메시지. 각 메시지의 시간, 유형, 설명 및 스레드 ID가 포함됩니다.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Time Stamp: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID: 2368           (ThreadID)<br /><br /> [E:3]         Event Name: OnError                        (EventName)<br /><br /> [E:3]         Source Name:                (SourceName)<br /><br /> [E:3]         Source ID:                        (SourceID)<br /><br /> [E:3]         Execution ID:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         설명: 구성 요소가 없거나, 등록되지 않았거나, 업그레이드할 수 없거나, 필수 인터페이스가 없습니다. 이 구성 요소에 대한 연락처 정보는 ""입니다.|  
   
 ## <a name="related-content"></a>관련 내용  
- [패키지 실행 대화 상자](../execute-package-dialog-box.md)  
+ [Execute Package Dialog Box](../execute-package-dialog-box.md)  
   
   

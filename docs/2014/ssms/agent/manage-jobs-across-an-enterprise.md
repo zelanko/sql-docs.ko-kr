@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f051b3de9ba88354f5fded8cd1f429e3b277747
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188180"
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>기업 내 작업 관리
@@ -32,13 +32,13 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
  다중 서버 작업이 수정되었음을 대상 서버에 알리려면 다음 프로시저 중 하나를 사용한 후 앞의 명령을 호출해야 합니다.  
   
--   [sp_add_jobstep (Transact-sql)](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
+-   [sp_add_jobstep(Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
   
--   [sp_update_jobstep (Transact-sql)](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql)  
+-   [sp_update_jobstep(Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql)  
   
--   [sp_delete_jobstep (Transact-sql)](/sql/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql)  
+-   [sp_delete_jobstep(Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql)  
   
--   [Transact-sql&#41;sp_attach_schedule &#40;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
+-   [sp_attach_schedule&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
 -   [Transact-sql&#41;sp_detach_schedule &#40;](/sql/relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql)  
   
@@ -47,13 +47,13 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
  다음은 기업 전체에 걸쳐 업무 관리에 사용하는 공통 태스크입니다.  
   
- **대상 서버의 상태를 확인 하려면**  
+ **대상 서버의 상태를 점검하려면**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)  
   
 -   [SMO(SQL Server 관리 개체)](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
- **작업의 대상 서버를 변경 하려면**  
+ **작업의 대상 서버를 변경하려면**  
   
 -   [SQL Server Management Studio](modify-the-target-servers-for-a-job.md)  
   
@@ -61,7 +61,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [SMO(SQL Server 관리 개체)](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
- **대상 서버의 위치를 변경 하려면**  
+ **대상 서버의 위치를 변경하려면**  
   
 -   [SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
   
@@ -69,13 +69,13 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [SMO(SQL Server 관리 개체)](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
- **대상 서버 클럭을 동기화 하려면**  
+ **대상 서버 클럭을 동기화하려면**  
   
 -   [SQL Server Management Studio](synchronize-target-server-clocks-sql-server-management-studio.md)  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)  
   
- **대상 서버가 마스터 서버를 폴링하 게 하려면**  
+ **대상 서버가 마스터 서버를 폴링하도록 설정하려면**  
   
 -   [SQL Server Management Studio](force-a-target-server-to-poll-the-master-server.md)  
   

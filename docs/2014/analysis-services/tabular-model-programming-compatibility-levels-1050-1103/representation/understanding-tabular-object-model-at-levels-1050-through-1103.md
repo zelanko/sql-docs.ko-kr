@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dcfd16ae7e49392c9ba0a001ea8d205c4fa88d1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62795344"
 ---
 # <a name="understanding-the-tabular-object-model"></a>테이블 형식 개체 모델 이해
@@ -46,8 +46,7 @@ ms.locfileid: "62795344"
  계산 측정값은 모델이 배포된 후 요청 시 평가되는 저장 식입니다. AMO 개체를 기준으로 계산 측정값은 일 대 다 매핑 관계를 가지며 계산된 열은 <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> AMO 개체를 사용하여 나타납니다. <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A>가 주된 필수 개체입니다. 모델링을 수행할 때 앞에서 말한 AMO 개체의 포함된 개체를 모두 사용할 수 있다는 의미는 아닙니다.  
   
 > [!NOTE]  
->  
-  <xref:Microsoft.AnalysisServices.Measure> 개체는 테이블 형식 모델의 계산 측정값과 아무런 관계가 없으며 테이블 형식 모델에서 지원되지 않습니다.  
+>  <xref:Microsoft.AnalysisServices.Measure> 개체는 테이블 형식 모델의 계산 측정값과 아무런 관계가 없으며 테이블 형식 모델에서 지원되지 않습니다.  
   
  계산 측정값 표현을 만들고 조작 하는 방법에 대 한 자세한 설명은 [계산 측정값 표현 &#40;테이블 형식&#41;](tables-calculated-measure-representation.md) 을 참조 하세요.  
   
@@ -60,8 +59,7 @@ ms.locfileid: "62795344"
  KPI는 기본 측정값으로 정의된 값을 대상 값과 비교하여 값 성과를 측정하는 데 사용됩니다. AMO 개체를 기준으로 KPI 표현은 일 대 다 매핑 관계를 가지며 KPI는 <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> AMO 개체를 사용하여 나타납니다. <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A>가 주된 필수 개체입니다.  모델링을 수행할 때 앞에서 말한 AMO 개체의 포함된 개체를 모두 사용할 수 있다는 의미는 아닙니다.  
   
 > [!NOTE]  
->  
-  <xref:Microsoft.AnalysisServices.Kpi> 개체는 테이블 형식 모델의 KPI와 아무런 관계가 없다는 것도 중요한 차이점입니다. 또한 이러한 개체는 테이블 형식 모델에서 지원되지 않습니다.  
+>  <xref:Microsoft.AnalysisServices.Kpi> 개체는 테이블 형식 모델의 KPI와 아무런 관계가 없다는 것도 중요한 차이점입니다. 또한 이러한 개체는 테이블 형식 모델에서 지원되지 않습니다.  
   
  KPI 표현을 만들고 조작 하는 방법에 대 한 자세한 내용은 [핵심 성과 지표 표현 &#40;표 형식&#41;](tables-key-performance-indicator-representation.md) 을 참조 하세요.  
   

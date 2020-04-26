@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 77cc99e74a1ee9d5d4be08bf7f9ce8d39288bd5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076334"
 ---
 # <a name="create-a-report-data-source"></a>보고서 데이터 원본 만들기
@@ -44,14 +44,11 @@ ms.locfileid: "66076334"
     > [!NOTE]  
     >  메뉴에 **보고서 데이터 원본** 항목이 표시되지 않는 경우 이 라이브러리에 대해 보고서 데이터 원본의 콘텐츠 형식이 설정되어 있지 않은 것입니다. 자세한 내용은 [SharePoint 통합 모드&#41;에서 &#40;Reporting Services 라이브러리에 보고서 서버 콘텐츠 형식 추가 ](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)를 참조 하세요.  
   
-3.  
-  **데이터 원본 속성** 페이지에서 **이름**에 연결 .rsds 파일의 이름을 입력합니다.  
+3.  **데이터 원본 속성** 페이지에서 **이름**에 연결 .rsds 파일의 이름을 입력합니다.  
   
-4.  
-  **데이터 원본 유형**에서 **파워 뷰용 Microsoft BI 의미 체계 모델**을 선택합니다.  
+4.  **데이터 원본 유형**에서 **파워 뷰용 Microsoft BI 의미 체계 모델**을 선택합니다.  
   
-5.  
-  **연결 문자열**에서 Analysis Services 서버 이름, 데이터베이스 이름, 큐브 이름 및 선택적 설정을 지정합니다.  
+5.  **연결 문자열**에서 Analysis Services 서버 이름, 데이터베이스 이름, 큐브 이름 및 선택적 설정을 지정합니다.  
   
      연결 문자열: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'`  
   
@@ -62,8 +59,7 @@ ms.locfileid: "66076334"
   
      (선택 사항) 큐브에는 모델 내의 다양한 언어에 대해 지정된 메타데이터 및 데이터 번역이 있을 수 있습니다. 번역 (데이터 및 메타 데이터)을 보려면 연결 문자열에 "로캘 식별자" 속성을 추가 해야 합니다.`Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
   
-6.  
-  **자격 증명**에서 보고서 서버가 외부 데이터 원본에 액세스하는 데 필요한 자격 증명을 얻는 방법을 지정합니다.  
+6.  **자격 증명**에서 보고서 서버가 외부 데이터 원본에 액세스하는 데 필요한 자격 증명을 얻는 방법을 지정합니다.  
   
     -   보고서를 연 사용자의 자격 증명을 사용하여 데이터에 액세스하려면 **Windows 인증(통합)** 을 선택합니다. SharePoint 사이트 또는 팜에서 폼 인증을 사용하거나 트러스트된 계정을 통해 보고서 서버에 연결하는 경우 이 옵션을 선택하지 마십시오. 이 보고서에 대한 구독 또는 데이터 처리를 예약하려는 경우 이 옵션을 선택하지 마십시오. 이 옵션은 도메인에 Kerberos 인증을 설정한 경우나 데이터 원본이 보고서 서버와 같은 컴퓨터에 있는 경우에 가장 잘 작동합니다. Kerberos 인증을 해제하면 Windows 자격 증명이 하나의 다른 컴퓨터로만 전달될 수 있습니다. 따라서 추가 연결이 필요한 다른 컴퓨터에 외부 데이터 원본이 있는 경우 원하는 데이터 대신 오류가 표시됩니다.  
   
@@ -73,8 +69,7 @@ ms.locfileid: "66076334"
   
     -   연결 문자열에서 자격 증명을 지정하거나 최소 권한 계정을 사용하여 보고서를 실행하려면 **자격 증명 필요 없음** 을 선택합니다.  
   
-7.  
-  **연결 테스트** 를 클릭하여 유효성을 검사합니다.  
+7.  **연결 테스트** 를 클릭하여 유효성을 검사합니다.  
   
 8.  데이터 원본을 활성화 하려면 **이 데이터 원본 사용** 을 선택합니다. 데이터 원본이 구성되었지만 활성이 아닌 경우 사용자가 보고서를 만들려고 하면 오류 메시지가 나타납니다.  
   

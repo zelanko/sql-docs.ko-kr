@@ -11,19 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e7b77b445ff8cbef8be3acb72ef9cdb6fa3af159
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63224594"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>의사 결정 트리 모델 탐색(기본 데이터 마이닝 자습서)
-  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 학습 집합의 나머지 열을 기준으로 자전거 구매 결정에 영향을 주는 열을 예측합니다.  
   
 
   
-##  <a name="Decision_Tree_Tab"></a>의사 결정 트리 탭  
+##  <a name="decision-tree-tab"></a><a name="Decision_Tree_Tab"></a>의사 결정 트리 탭  
  **의사 결정 트리** 탭에서 데이터 집합의 모든 예측 가능한 특성에 대 한 의사 결정 트리를 볼 수 있습니다.  
   
  이 경우 모델은 하나의 열 자전거 구매자만 예측 하므로 볼 트리가 하나만 있습니다. 트리가 더 있으면 **트리** 상자를 사용 하 여 다른 트리를 선택할 수 있습니다.  
@@ -77,7 +76,7 @@ ms.locfileid: "63224594"
      끝에 구조 열이 추가된 같은 스프레드시트가 표시됩니다.  
   
   
-###  <a name="Dependency_Network_Tab"></a>종속성 네트워크 탭  
+###  <a name="dependency-network-tab"></a><a name="Dependency_Network_Tab"></a>종속성 네트워크 탭  
  **종속성 네트워크** 탭에는 마이닝 모델의 예측 기능에 영향을 주는 특성 간의 관계가 표시 됩니다. 종속성 네트워크 뷰어에서 Age 및 Region이 자전거 구매 예측에 중요한 요소임을 나타냅니다.  
   
 ##### <a name="to-explore-the-model-in-the-dependency-network-tab"></a>종속성 네트워크 탭에서 모델을 탐색하려면  

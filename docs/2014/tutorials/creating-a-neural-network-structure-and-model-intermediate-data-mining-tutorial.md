@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62856321"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>신경망 구조 및 모델 만들기(중급 데이터 마이닝 자습서)
@@ -42,19 +42,17 @@ ms.locfileid: "62856321"
   
  [모든 모델 처리](#bkmk_SeedProcess)  
   
-## 기본 콜 센터 구조 만들기<a name="bkmk_defaul"></a>  
+## <a name="create-the-default-call-center-structure"></a>기본 콜 센터 구조 만들기<a name="bkmk_defaul"></a>  
   
 1.  의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]솔루션 탐색기에서 **마이닝 구조** 를 마우스 오른쪽 단추로 클릭 하 고 **새 마이닝 구조**를 선택 합니다.  
   
-2.  
-  **데이터 마이닝 마법사 시작** 페이지에서 **다음**을 클릭합니다.  
+2.  **데이터 마이닝 마법사 시작** 페이지에서 **다음**을 클릭합니다.  
   
 3.  **정의 방법 선택** 페이지에서 **기존 관계형 데이터베이스 또는 데이터 웨어하우스** 를 선택 했는지 확인 하 고 **다음**을 클릭 합니다.  
   
 4.  **데이터 마이닝 구조 만들기** 페이지에서 **마이닝 모델을 사용 하 여 마이닝 구조 만들기** 옵션이 선택 되어 있는지 확인 합니다.  
   
-5.  
-  **사용할 데이터 마이닝 기술 선택** 옵션에 대한 드롭다운 목록을 클릭한 다음 **Microsoft 신경망**을 선택합니다.  
+5.  **사용할 데이터 마이닝 기술 선택** 옵션에 대한 드롭다운 목록을 클릭한 다음 **Microsoft 신경망**을 선택합니다.  
   
      로지스틱 회귀 모델이 신경망을 기반으로 하기 때문에 동일한 구조를 다시 사용하여 새 마이닝 모델을 추가할 수 있습니다.  
   
@@ -79,11 +77,11 @@ ms.locfileid: "62856321"
     |Calls|입력|  
     |DateKey|사용 안 함|  
     |DayOfWeek|입력|  
-    |FactCallCenterID|키|  
+    |FactCallCenterID|Key|  
     |IssuesRaised|입력|  
     |LevelOneOperators|입력/예측|  
     |LevelTwoOperators|입력|  
-    |주문|입력/예측|  
+    |Orders|입력/예측|  
     |ServiceGrade|입력/예측|  
     |Shift|입력|  
     |TotalOperators|사용 안 함|  
@@ -99,11 +97,11 @@ ms.locfileid: "62856321"
     |AverageTimePerIssue|연속|long|  
     |Calls|연속|long|  
     |DayOfWeek|불연속|텍스트|  
-    |FactCallCenterID|키|long|  
+    |FactCallCenterID|Key|long|  
     |IssuesRaised|연속|long|  
     |LevelOneOperators|연속|long|  
     |LevelTwoOperators|연속|long|  
-    |주문|연속|long|  
+    |Orders|연속|long|  
     |ServiceGrade|연속|Double|  
     |Shift|불연속|텍스트|  
     |WageType|불연속|텍스트|  
@@ -138,14 +136,14 @@ ms.locfileid: "62856321"
   
  기본 모델(연속)  
   
-|값|지원|  
+|값|별칭|  
 |-----------|-------------|  
 |Missing|0|  
 |0.09875|120|  
   
  클러스터링에 의한 범주화  
   
-|값|지원|  
+|값|별칭|  
 |-----------|-------------|  
 |\<0.0748051948|34|  
 |0.0748051948-0.09716216215|27|  
@@ -155,7 +153,7 @@ ms.locfileid: "62856321"
   
  Equal Areas에 의한 범주화  
   
-|값|지원|  
+|값|별칭|  
 |-----------|-------------|  
 |\<0.07|26|  
 |0.07-0.00|22|  
@@ -181,14 +179,14 @@ ms.locfileid: "62856321"
   
  범주화 옵션에 대 한 자세한 내용은 [데이터 마이닝&#41;&#40;분할 방법 ](../../2014/analysis-services/data-mining/discretization-methods-data-mining.md)을 참조 하세요.  
   
- 또는 숫자 값을 사용 하는 것이 아니라 서비스 등급을 미리 정의 된 대상 범위로 분류 하는 별도의 파생 열을 추가할 수 **** 있습니다 (예: \<Best (servicegrade = 0.05), **허용** 가능 (0.10 > Servicegrade > 0.05) 및 **나쁨** (servicegrade >= 0.10).  
+ 또는 숫자 값을 사용 하는 것이 아니라 서비스 등급을 미리 정의 된 대상 범위로 분류 하는 별도의 파생 열을 추가할 수 **Best** 있습니다 (예: \<Best (servicegrade = 0.05), **허용** 가능 (0.10 > Servicegrade > 0.05) 및 **나쁨** (servicegrade >= 0.10).  
   
-###  <a name="bkmk_newColumn"></a>열의 복사본을 만들고 분할 메서드를 변경 합니다.  
+###  <a name="create-a-copy-of-a-column-and-change-the-discretization-method"></a><a name="bkmk_newColumn"></a>열의 복사본을 만들고 분할 메서드를 변경 합니다.  
  대상 특성인 ServiceGrade를 포함 하는 마이닝 열의 복사본을 만들고 숫자를 그룹화 하는 방법을 변경 합니다. 예측 가능한 특성을 비롯하여 임의의 열의 여러 복사본을 마이닝 구조에서 만들 수 있습니다.  
   
  이 자습서에서는 Equal Areas 분할 메서드를 사용하고 4개의 버킷을 지정합니다. 이 메서드에서 생성되는 그룹화는 비즈니스 사용자가 관심을 가지는 대상 값에 매우 근접해 있습니다.  
   
-####  <a name="bkmk_ColumnCopy"></a>마이닝 구조에 열에 대 한 사용자 지정 복사본을 만들려면  
+####  <a name="to-create-a-customized-copy-of-a-column-in-the-mining-structure"></a><a name="bkmk_ColumnCopy"></a>마이닝 구조에 열에 대 한 사용자 지정 복사본을 만들려면  
   
 1.  솔루션 탐색기에서 앞에서 만든 마이닝 구조를 두 번 클릭합니다.  
   
@@ -204,13 +202,11 @@ ms.locfileid: "62856321"
   
 5.  **속성** 창에서 **이름** 속성을 찾아 이름을 **서비스 등급** 에 맞게 변경 합니다.  
   
-6.  관련된 모든 마이닝 모델 열의 이름을 동일하게 변경할 것인지 묻는 대화 상자가 나타납니다. 
-  **아니요**를 클릭합니다.  
+6.  관련된 모든 마이닝 모델 열의 이름을 동일하게 변경할 것인지 묻는 대화 상자가 나타납니다. **아니요**를 클릭합니다.  
   
 7.  **속성** 창에서 섹션 **데이터 형식을** 찾고 필요한 경우 확장 합니다.  
   
-8.  
-  `Content` 속성의 값을 `Continuous`에서 `Discretized`로 변경합니다.  
+8.  `Content` 속성의 값을 `Continuous`에서 `Discretized`로 변경합니다.  
   
      이제 사용할 수 있는 속성은 다음과 같습니다. 다음 표에 있는 대로 속성 값을 변경합니다.  
   
@@ -220,14 +216,13 @@ ms.locfileid: "62856321"
     |`DiscretizationBucketCount`|값 없음|4|  
   
     > [!NOTE]  
-    >  
-  <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A>의 기본값은 0이며, 이는 알고리즘이 자동으로 최적의 버킷 수를 결정함을 의미합니다. 따라서 이 속성 값을 기본값으로 다시 설정하려면 0을 입력합니다.  
+    >  <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A>의 기본값은 0이며, 이는 알고리즘이 자동으로 최적의 버킷 수를 결정함을 의미합니다. 따라서 이 속성 값을 기본값으로 다시 설정하려면 0을 입력합니다.  
   
 9. 데이터 마이닝 디자이너에서 **마이닝 모델** 탭을 클릭 합니다.  
   
      마이닝 구조 열의 복사본을 추가할 때 복사본의 사용법 플래그가 자동으로 `Ignore`로 설정됩니다. 일반적으로 열의 복사본을 마이닝 구조에 추가할 때 원래 열과 함께 분석용 복사본을 사용하지 않습니다. 복사본을 사용하면 알고리즘에서 두 열의 강한 상관 관계를 발견하므로 다른 관계가 명확하게 드러나지 않을 수도 있습니다.  
   
-##  <a name="bkmk_NewModel"></a>마이닝 구조에 새 마이닝 모델 추가  
+##  <a name="add-a-new-mining-model-to-the-mining-structure"></a><a name="bkmk_NewModel"></a>마이닝 구조에 새 마이닝 모델 추가  
  대상 특성의 새로운 그룹화 방식을 만들었으므로 분할 열을 사용하는 새 마이닝 모델을 추가해야 합니다. 완료하면 CallCenter 마이닝 구조에 두 가지 마이닝 모델이 포함됩니다.  
   
 -   Call Center Default NN 마이닝 모델은 ServiceGrade 값을 연속 범위로 처리합니다.  
@@ -238,8 +233,7 @@ ms.locfileid: "62856321"
   
 1.  솔루션 탐색기에서 방금 만든 마이닝 구조를 마우스 오른쪽 단추로 클릭 하 고 **열기**를 선택 합니다.  
   
-2.  
-  **마이닝 모델** 탭을 클릭합니다.  
+2.  **마이닝 모델** 탭을 클릭합니다.  
   
 3.  **관련 마이닝 모델 만들기를**클릭 합니다.  
   
@@ -249,10 +243,10 @@ ms.locfileid: "62856321"
   
 6.  이와 마찬가지로 ServiceGrade Binned를 찾고 사용법을 `Ignore`에서 `Predict`로 변경합니다.  
   
-##  <a name="bkmk_Alias2"></a>대상 열에 대 한 별칭 만들기  
+##  <a name="create-an-alias-for-the-target-column"></a><a name="bkmk_Alias2"></a>대상 열에 대 한 별칭 만들기  
  일반적으로 예측 가능한 여러 특성을 사용하는 마이닝 모델은 비교할 수 없습니다. 그러나 마이닝 모델 열의 별칭을 만들 수는 있습니다. 즉, 마이닝 모델 내에서 원본 열과 동일한 이름을 갖도록 ServiceGrade 열의 이름을 바꿀 수 있습니다. 이렇게 한 다음 데이터가 다르게 분할된 경우에도 정확도 차트에서 이러한 두 모델을 직접 비교할 수 있습니다.  
   
-###  <a name="bkmk_Alias"></a>마이닝 모델의 마이닝 구조 열에 대 한 별칭을 추가 하려면  
+###  <a name="to-add-an-alias-for-a-mining-structure-column-in-a-mining-model"></a><a name="bkmk_Alias"></a>마이닝 모델의 마이닝 구조 열에 대 한 별칭을 추가 하려면  
   
 1.  **마이닝 모델** 탭의 **구조**에서 servicegrade 범주화를 선택 합니다.  
   
@@ -275,7 +269,7 @@ ms.locfileid: "62856321"
     |**모델링 플래그**||  
     |**이름**|Service Grade|  
     |**SourceColumn ID**|Service Grade 1|  
-    |**사용 현황**|예측|  
+    |**사용법**|예측|  
   
 5.  **마이닝 모델** 탭에서 아무 곳 이나 클릭 합니다.  
   
@@ -288,11 +282,11 @@ ms.locfileid: "62856321"
     |AverageTimePerIssue|예측|예측|  
     |Calls|입력|입력|  
     |DayOfWeek|입력|입력|  
-    |FactCallCenterID|키|키|  
+    |FactCallCenterID|Key|Key|  
     |IssuesRaised|입력|입력|  
     |LevelOneOperators|입력|입력|  
     |LevelTwoOperators|입력|입력|  
-    |주문|입력|입력|  
+    |Orders|입력|입력|  
     |ServceGrade Binned|무시|예측(ServiceGrade)|  
     |ServiceGrade|예측|무시|  
     |Shift|입력|입력|  
@@ -305,7 +299,7 @@ ms.locfileid: "62856321"
 > [!NOTE]  
 >  초기값 매개 변수에 대한 숫자 값을 지정하지 않으면 SQL Server Analysis Services에서 모델 이름을 기반으로 하여 초기값을 생성합니다. 모델의 이름은 항상 서로 다르므로 동일한 순서로 데이터를 처리하도록 초기값을 설정해야 합니다.  
   
-###  <a name="bkmk_SeedProcess"></a>초기값을 지정 하 고 모델을 처리 하려면  
+###  <a name="to-specify-the-seed-and-process-the-models"></a><a name="bkmk_SeedProcess"></a>초기값을 지정 하 고 모델을 처리 하려면  
   
 1.  **마이닝 모델** 탭에서 Call CENTER-LR 이라는 모델의 열을 마우스 오른쪽 단추로 클릭 하 고 **알고리즘 매개 변수 설정**을 선택 합니다.  
   
@@ -326,6 +320,6 @@ ms.locfileid: "62856321"
  [중급 데이터 마이닝 자습서 &#40;콜 센터 모델 탐색&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [마이닝 구조 &#40;Analysis Services 데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63190837"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>시장 바구니 구조 및 모델 만들기(중급 데이터 마이닝 자습서)
@@ -27,8 +27,7 @@ ms.locfileid: "63190837"
   
 1.  의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]솔루션 탐색기에서 **마이닝 구조** 를 마우스 오른쪽 단추로 클릭 하 고 **새 마이닝 구조** 를 선택 하 여 데이터 마이닝 마법사를 엽니다.  
   
-2.  
-  **데이터 마이닝 마법사 시작** 페이지에서 **다음**을 클릭합니다.  
+2.  **데이터 마이닝 마법사 시작** 페이지에서 **다음**을 클릭합니다.  
   
 3.  **정의 방법 선택** 페이지에서 **기존 관계형 데이터베이스 또는 데이터 웨어하우스** 를 선택 했는지 확인 하 고 **다음**을 클릭 합니다.  
   
@@ -42,7 +41,7 @@ ms.locfileid: "63190837"
   
      시장 바구니 분석의 목적은 단일 트랜잭션에 포함 되는 제품을 확인 하는 것 이므로 **Customerkey** 필드를 사용할 필요가 없습니다.  
   
-8.  모델 옆의 **키** 확인란을 선택 하 여 중첩 테이블 vAssocSeqLineItems의 키를 설정 합니다. **입력** 확인란은이 작업을 수행 하는 경우에도 자동으로 선택 됩니다. 에 대 **** 한 `Model` 예측 가능 확인란도 선택 합니다.  
+8.  모델 옆의 **키** 확인란을 선택 하 여 중첩 테이블 vAssocSeqLineItems의 키를 설정 합니다. **입력** 확인란은이 작업을 수행 하는 경우에도 자동으로 선택 됩니다. 에 대 **Predictable** 한 `Model` 예측 가능 확인란도 선택 합니다.  
   
      시장 바구니 모델에서는 시장 바구니의 제품 순서를 고려 하지 않으므로 중첩 테이블의 키로 **LineNumber** 를 포함 하면 안 됩니다. 시퀀스가 중요 한 모델 에서만 **LineNumber** 을 키로 사용 합니다. 4단원에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘을 사용하는 모델을 만듭니다.  
   
@@ -57,16 +56,15 @@ ms.locfileid: "63190837"
     |열|콘텐츠 형식|데이터 형식|  
     |-------------|------------------|---------------|  
     |IncomeGroup|불연속|텍스트|  
-    |주문 번호|키|텍스트|  
+    |주문 번호|Key|텍스트|  
     |지역|불연속|텍스트|  
     |vAssocSeqLineItems|||  
-    |모델|키|텍스트|  
+    |모델|Key|텍스트|  
   
 12. **테스트 집합 만들기** 페이지에서 **테스트용 데이터 백분율** 옵션의 기본값은 30%입니다. 이를 **0**으로 변경 합니다. **다음**을 클릭합니다.  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 모델 정확도를 측정하는 여러 다른 차트를 제공합니다. 그러나 리프트 차트 및 교차 유효성 검사 보고서와 같은 일부 정확도 차트 유형은 분류 및 추정용으로 디자인되었으며 연결 예측에 대해서는 지원되지 않습니다.  
+    >  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 모델 정확도를 측정하는 여러 다른 차트를 제공합니다. 그러나 리프트 차트 및 교차 유효성 검사 보고서와 같은 일부 정확도 차트 유형은 분류 및 추정용으로 디자인되었으며 연결 예측에 대해서는 지원되지 않습니다.  
   
 13. **마법사 완료** 페이지의 **마이닝 구조 이름**에을 입력 `Association`합니다.  
   
@@ -81,6 +79,6 @@ ms.locfileid: "63190837"
   
 ## <a name="see-also"></a>참고 항목  
  [Microsoft 연결 알고리즘](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
- [데이터 마이닝&#41;&#40;내용 유형](../../2014/analysis-services/data-mining/content-types-data-mining.md)  
+ [콘텐츠 형식&#40;데이터 마이닝&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)  
   
   

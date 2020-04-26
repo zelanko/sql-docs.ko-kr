@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63000340"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Advanced Merge Replication Conflict Detection and Resolution
@@ -40,7 +40,7 @@ ms.locfileid: "63000340"
   
     -   관리 코드로 작성된 *비즈니스 논리 처리기*  
   
-    -   COM 기반 *사용자 지정 해결 프로그램*  
+    -   COM 기반 *사용자 지정 해결 프로그램*입니다.  
   
     -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]에서 제공하는 COM 기반 해결 프로그램  
   
@@ -81,11 +81,11 @@ ms.locfileid: "63000340"
   
 -   COM 기반 사용자 지정 해결 프로그램  
   
-     병합 복제는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]과 같은 언어를 사용하여 해결 프로그램을 COM 개체로 작성하기 위한 API를 제공합니다. 자세한 내용은 [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md)을(를) 참조하세요.  
+     병합 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] 복제는 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]과 같은 언어로 확인자를 COM 개체로 작성 하기 위한 API를 제공 합니다. 자세한 내용은 [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md)을(를) 참조하세요.  
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]에서 제공하는 COM 기반 해결 프로그램  
   
-     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에는 많은 COM 기반 해결 프로그램이 포함되어 있습니다. 자세한 내용은 [Microsoft COM 기반 해결 프로그램](advanced-merge-replication-conflict-com-based-resolvers.md)을(를) 참조하세요.  
+     [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에는 많은 COM 기반 해결 프로그램이 포함 되어 있습니다. 자세한 내용은 [Microsoft COM 기반 해결 프로그램](advanced-merge-replication-conflict-com-based-resolvers.md)을(를) 참조하세요.  
   
  적절한 유형의 해결 프로그램을 선택하는 방법에 대한 자세한 내용은 [해결 프로그램 선택](advanced-merge-replication-conflict-choose-a-resolver.md)을 참조하세요.  
   

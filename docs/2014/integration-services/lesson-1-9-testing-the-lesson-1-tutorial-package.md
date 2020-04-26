@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 566284668ac8ea27aded665da7028375d97623e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767613"
 ---
 # <a name="step-9-testing-the-lesson-1-tutorial-package"></a>9단계: 1단원 자습서 패키지 테스트
@@ -41,7 +41,7 @@ ms.locfileid: "62767613"
   
 ### <a name="to-run-the-lesson-1-tutorial-package"></a>1단원 자습서 패키지를 실행하려면  
   
-1.  **디버그** 메뉴에서 **디버깅 시작**을 클릭합니다.  
+1.  **디버그** 메뉴에서 **디버깅 시작**을 클릭 합니다.  
   
      패키지가 실행되어 1097개의 행이 **AdventureWorksDW2012** 의 **FactCurrency**팩트 테이블에 성공적으로 추가됩니다.  
   

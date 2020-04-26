@@ -11,17 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 32e66a84dea20964c11c7de0aa568530aa8c28c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62823280"
 ---
 # <a name="adding-a-logistic-regression-model-to-the-call-center-structure-intermediate-data-mining-tutorial"></a>콜 센터 구조에 로지스틱 회귀 모델 추가(중급 데이터 마이닝 자습서)
   콜 센터 운영에 영향을 줄 수 있는 요인을 분석하는 것 외에 직원이 서비스 품질을 향상시킬 수 있는 방법에 대한 일부 특정 권장 사항을 제공할 것도 요청받았습니다. 이 작업에서는 탐색 모델을 작성하는 데 사용한 마이닝 구조를 그대로 사용하고 예측을 만드는 데 사용될 마이닝 모델을 추가합니다.  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 로지스틱 회귀 모델은 신경망 알고리즘을 기반으로 하므로 신경망 모델과 동일한 유연성과 강력한 기능을 제공합니다. 그러나 로지스틱 회귀는 이진 결과 예측에 특히 적합합니다.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 로지스틱 회귀 모델은 신경망 알고리즘을 기반으로 하므로 신경망 모델과 동일한 유연성과 강력한 기능을 제공합니다. 그러나 로지스틱 회귀는 이진 결과 예측에 특히 적합합니다.  
   
  이 시나리오에서는 신경망 모델에 사용한 것과 같은 마이닝 구조를 사용합니다. 다만 해당 비즈니스 질문에 맞게 새 모델을 사용자 지정합니다. 서비스 품질을 향상시키고 필요한 경력 전화 상담원 수를 결정하는 데 관심이 있으므로 그러한 값을 예측하도록 모델을 설정합니다.  
   
@@ -70,6 +69,6 @@ ms.locfileid: "62823280"
  [중급 데이터 마이닝 자습서 &#40;콜 센터 모델에 대 한 예측 만들기&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 마이닝&#41;&#40;처리 요구 사항 및 고려 사항](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [처리 요구 사항 및 고려 사항&#40;데이터 마이닝&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

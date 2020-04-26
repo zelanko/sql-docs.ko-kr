@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ca661105c28cab2bf3e881cf262922e95da5eed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63250364"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>다운로드 전용 아티클로 병합 복제 성능 최적화
@@ -47,7 +47,7 @@ ms.locfileid: "63250364"
  애플리케이션의 요구 사항을 이해하면 최대 유연성과 최적 성능 간 균형을 유지할 수 있습니다. 예를 들어 게시자와 구독자에서 충돌이 자주 발생하고 내용이 자주 변경되는 애플리케이션의 경우 표준 아티클로 구성된 애플리케이션을 사용합니다. SFA(Sales Force Automation) 애플리케이션과 같은 일부 애플리케이션에는 충돌 가능성이 있는 아티클과 다운로드 전용으로 지정할 수 있는 조회 테이블의 기능을 하는 다른 아티클이 있을 수 있습니다. POS(Point of Sale) 시스템 및 FFA(Field Force Automation) 애플리케이션과 같은 데이터 항목 애플리케이션은 충돌을 제거하고 한 구독자의 데이터가 다른 구독자로 이동하지 않는 방식으로 데이터를 엄격하게 분할하는 경우가 많습니다. 이러한 경우 겹치지 않는 파티션, 다운로드 전용 아티클 및 사전 계산 파티션을 잘 조합하여 성능과 확장성을 최적화할 수 있습니다. 겹치지 않는 파티션 및 사전 계산 파티션에 대한 자세한 내용은 [매개 변수가있는 행 필터](parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [병합 복제를 위한 아티클 옵션](article-options-for-merge-replication.md)   
+ [병합 복제에 대 한 아티클 옵션](article-options-for-merge-replication.md)   
  [조건부 삭제 추적으로 병합 복제 성능 최적화](optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
   
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d8162c7654d99cd2ebab41d290c0a39c6c686686
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63058099"
 ---
 # <a name="login-for-updatable-subscriptions"></a>업데이트할 수 있는 구독에 대한 로그인
@@ -36,26 +36,25 @@ ms.locfileid: "63058099"
  처음 두 가지 옵션은 이 마법사에서 지정할 수 있습니다. 마지막 옵션은 [sp_link_publication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql)사용 하는 경우에만 지정할 수 있습니다. 매개 변수의 **@security_mode**값을 **1** 로 지정 합니다.  
   
 ## <a name="options"></a>옵션  
- **다음 SQL Server 인증 로그인을 사용 하 여 연결 되는 연결 된 서버를 만듭니다.**  
+ **다음 SQL Server 인증을 사용하여 연결되는 연결된 서버 만들기**  
  복제는 **로그인** 및 **암호** 필드에 지정된 자격 증명을 사용하여 연결된 서버를 만듭니다.  
   
  **로그인**  
  이 항목 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 설명 된 사용 권한만 있는 로그인을 입력 합니다.  
   
  **암호**  
- 
-  **로그인**에서 지정한 로그인에 대한 강력한 암호를 입력합니다.  
+ **로그인**에서 지정한 로그인에 대한 강력한 암호를 입력합니다.  
   
  **암호 확인**  
  암호를 다시 입력하여 올바로 입력되었는지 확인합니다.  
   
- **이미 정의한 연결 된 서버 또는 원격 서버를 사용 합니다.**  
+ **이미 정의한 연결된 서버나 원격 서버 사용**  
  이 옵션을 사용하려면 이미 정의한 연결된 서버나 원격 서버가 필요합니다. 자세한 내용은 [연결된 서버&#40;데이터베이스 엔진&#41;](../linked-servers/linked-servers-database-engine.md) 및 [원격 서버](../../database-engine/configure-windows/remote-servers.md)를 참조하세요. 연결된 서버나 원격 서버에 사용된 로그인에 강력한 암호가 있고 이 항목에 설명된 사용 권한만 있는지 확인합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [복제 보안 설정 보기 및 수정](security/view-and-modify-replication-security-settings.md)   
  [트랜잭션 복제에 대 한 업데이트할 수 있는 구독](transactional/updatable-subscriptions-for-transactional-replication.md)   
- [게시 구독](subscribe-to-publications.md)  
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

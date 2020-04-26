@@ -13,29 +13,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d18e97a60bf1c6108b3672f40747e8b612ad6e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62732269"
 ---
 # <a name="data-mining-programming"></a>데이터 마이닝 프로그래밍
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 기본 제공 도구 및 뷰어가 사용자의 요구 사항을 충족시키지 못할 경우 사용자 고유의 확장을 코딩하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 기능을 확장할 수 있습니다. 이 경우 다음 중 하나를 선택할 수 있습니다.  
   
 -   **XMLA**  
   
      [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 에서는 클라이언트 응용 프로그램과의 통신을 위한 프로토콜로 XMLA (XML for Analysis)를 지원 합니다. 추가 명령은 XML for Analysis 사양을 확장한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 지원됩니다.  
   
-     
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 데이터 정의, 데이터 조작 및 데이터 제어 지원을 위해 XMLA를 사용하므로 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 제공하는 비주얼 도구를 사용하여 마이닝 구조 및 마이닝 모델을 만든 다음 DMX(Data Mining Extensions) 및 ASSL(Analysis Services Scripting Language) 스크립트를 사용하여 만든 데이터 마이닝 개체를 확장할 수 있습니다.  
+     [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 데이터 정의, 데이터 조작 및 데이터 제어 지원을 위해 XMLA를 사용하므로 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 제공하는 비주얼 도구를 사용하여 마이닝 구조 및 마이닝 모델을 만든 다음 DMX(Data Mining Extensions) 및 ASSL(Analysis Services Scripting Language) 스크립트를 사용하여 만든 데이터 마이닝 개체를 확장할 수 있습니다.  
   
      데이터 마이닝 개체를 XMLA 스크립트에서 전적으로 만들고 수정할 수 있으며, 사용자 고유의 애플리케이션에서 모델에 대한 예측 쿼리를 프로그래밍 방식으로 실행할 수 있습니다.  
   
 -   **AMO(Analysis Management Object) (AMO)**  
   
-     
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 또한 타사 데이터 마이닝 공급자가 데이터 마이닝 개체를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 통합할 수 있도록 하는 완전한 프레임워크를 제공합니다.  
+     [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 또한 타사 데이터 마이닝 공급자가 데이터 마이닝 개체를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 통합할 수 있도록 하는 완전한 프레임워크를 제공합니다.  
   
      AMO를 사용하여 마이닝 구조와 마이닝 모델을 만들 수 있습니다. CodePlex의 다음 예제를 참조하십시오.  
   
@@ -61,14 +58,14 @@ ms.locfileid: "62732269"
  [ADOMD.NET를 사용하여 개발](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
  ADOMD.NET 클라이언트 및 서버 프로그래밍 개체를 소개합니다.  
   
- [AMO(Analysis Management Object) &#40;AMO&#41;를 사용 하 여 개발](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
+ [AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
  AMO 프로그래밍 라이브러리를 소개합니다.  
   
- [Analysis Services 스크립팅 언어 &#40;를 사용 하 여 개발&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [ASSL&#40;Analysis Services Scripting Language&#41;을 사용하여 개발](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
  XMLA(XML for Analysis) 및 해당 확장을 소개합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [개발자 가이드 &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)   
- [DMX&#41; 참조 &#40;데이터 마이닝 확장](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [DMX&#40;Data Mining Extensions&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a9b8361c83201fa2e3c6aa0c6a091e09f7c12f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767491"
 ---
 # <a name="step-4-testing-the-lesson-2-tutorial-package"></a>4단계: 2단원 자습서 패키지 테스트
@@ -38,8 +38,7 @@ ms.locfileid: "62767491"
   
 ### <a name="to-test-the-lesson-2-tutorial-package"></a>2단원 자습서 패키지를 테스트하려면  
   
-1.  
-  **솔루션 탐색기**에서 **Lesson 2.dtsx** 를 마우스 오른쪽 단추로 클릭한 다음 **패키지 실행**을 클릭합니다.  
+1.  **솔루션 탐색기**에서 **Lesson 2.dtsx** 를 마우스 오른쪽 단추로 클릭한 다음 **패키지 실행**을 클릭합니다.  
   
      패키지가 실행됩니다. 출력 창에서 각 루프의 상태를 확인 하거나 **진행률** 탭을 클릭 하 여 확인할 수 있습니다. 예를 들어 Currency_VEB 파일에서 대상 테이블에 1097 줄이 추가 된 것을 볼 수 있습니다.  
   

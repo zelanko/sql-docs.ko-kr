@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a5f4d6dd79f62541e207df688349f694680e2421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62822315"
 ---
 # <a name="lesson-5-executing-prediction-queries"></a>5단원: 예측 쿼리 실행
@@ -38,8 +38,7 @@ ms.locfileid: "62822315"
   
  이 자습서의 예측은 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 예제 데이터베이스의 ProspectiveBuyer 테이블을 기반으로 합니다. ProspectiveBuyer 테이블에는 잠재 고객 및 관련 특징 목록이 있습니다. 이 테이블의 고객은 의사 결정 트리 마이닝 모델을 만드는 데 사용된 고객과는 독립적입니다.  
   
- 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 예측 쿼리 작성기를 사용하여 예측을 만들 수도 있습니다.  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 예측 쿼리 작성기를 사용하여 예측을 만들 수도 있습니다.  
   
 ## <a name="lesson-tasks"></a>단원 태스크  
  이 단원에서는 다음 태스크를 수행합니다.  
@@ -77,8 +76,7 @@ ORDER BY <expression>
   
 #### <a name="to-create-a-singleton-prediction-query"></a>단일 예측 쿼리를 만들려면  
   
-1.  
-  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
@@ -90,7 +88,7 @@ ORDER BY <expression>
     <select list>   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     [Bike Buyer] AS Buyer, PredictHistogram([Bike Buyer]) AS Statistics  
@@ -104,7 +102,7 @@ ORDER BY <expression>
     [<mining model>]   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     [Decision Tree]  
@@ -116,7 +114,7 @@ ORDER BY <expression>
     (SELECT '<value>' AS [<column name>], ...)  AS t  
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     (SELECT 35 AS [Age],  
@@ -142,8 +140,7 @@ ORDER BY <expression>
        2 AS [Total Children]) AS t  
     ```  
   
-6.  
-  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
+6.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
 7.  다른 이름 **으로 저장** 대화 상자에서 해당 폴더로 이동한 다음 파일 `Singleton_Query.dmx`이름을로 합니다.  
   
@@ -198,8 +195,7 @@ ORDER BY <expression> [DESC|ASC]
   
 #### <a name="to-create-a-batch-prediction-query"></a>일괄 처리 예측 쿼리를 만들려면  
   
-1.  
-  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
@@ -211,7 +207,7 @@ ORDER BY <expression> [DESC|ASC]
     <select list>   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     SELECT  
@@ -331,8 +327,7 @@ ORDER BY <expression> [DESC|ASC]
     ORDER BY PredictProbability([Bike Buyer]) DESC  
     ```  
   
-7.  
-  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
+7.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
 8.  다른 이름 **으로 저장** 대화 상자에서 해당 폴더로 이동한 다음 파일 `Batch_Prediction.dmx`이름을로 합니다.  
   

@@ -28,27 +28,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5eae331b064d83510d657f6f09a819955e6259a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62762415"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>데이터베이스 분리 및 연결(SQL Server)
   데이터베이스의 데이터 및 트랜잭션 로그 파일은 분리할 수 있으며 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스나 다른 인스턴스에 다시 연결할 수 있습니다. 데이터베이스 분리 및 연결은 데이터베이스를 같은 컴퓨터의 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 변경하거나 데이터베이스를 이동하는 경우 유용합니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디스크상 스토리지 형식은 64비트 및 32비트 환경에서 동일합니다. 따라서 32비트 및 64비트 환경에서 연결 작업을 수행할 수 있습니다.  한 환경에서 실행 중인 서버 인스턴스에서 분리된 데이터베이스를 다른 환경에서 실행하는 서버 인스턴스에 연결할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디스크상 스토리지 형식은 64비트 및 32비트 환경에서 동일합니다. 따라서 32비트 및 64비트 환경에서 연결 작업을 수행할 수 있습니다.  한 환경에서 실행 중인 서버 인스턴스에서 분리된 데이터베이스를 다른 환경에서 실행하는 서버 인스턴스에 연결할 수 있습니다.  
   
   
   
-##  <a name="Security"></a> 보안  
+##  <a name="security"></a><a name="Security"></a> 보안  
  파일 액세스 권한은 데이터베이스 분리, 연결 등의 여러 데이터베이스 작업 중에 설정됩니다.  
   
 > [!IMPORTANT]  
->  알 수 없거나 신뢰할 수 없는 출처의 데이터베이스는 연결 또는 복원하지 않는 것이 좋습니다. 이러한 데이터베이스에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마 또는 물리적 데이터베이스 구조를 수정하여 오류가 발생할 수 있습니다. 출처를 알 수 없거나 신뢰할 수 없는 데이터베이스를 사용 하기 전에 비프로덕션 서버의 데이터베이스에서 [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) 를 실행 하 고 데이터베이스의 코드 (예: 저장 프로시저 또는 다른 사용자 정의 코드)도 검사 합니다.  
+>  알 수 없거나 신뢰할 수 없는 출처의 데이터베이스는 연결 또는 복원하지 않는 것이 좋습니다. 이러한 데이터베이스에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마 또는 물리적 데이터베이스 구조를 수정하여 오류가 발생할 수 있습니다. 알 수 없거나 신뢰할 수 없는 소스의 데이터베이스를 사용하기 전에 비프로덕션 서버의 데이터베이스에서 [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) 를 실행하여 데이터베이스에서 코드(예: 저장 프로시저 또는 다른 사용자 정의 코드)를 시험해 보세요.  
   
-##  <a name="DetachDb"></a>데이터베이스 분리  
+##  <a name="detaching-a-database"></a><a name="DetachDb"></a> 데이터베이스 분리  
  데이터베이스를 분리하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 해당 데이터베이스가 제거되지만 데이터베이스의 데이터 파일 및 트랜잭션 로그 파일은 그대로 유지됩니다. 이 파일은 데이터베이스가 분리된 해당 서버뿐 아니라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스가 실행되는 모든 컴퓨터에 데이터베이스를 연결하는 데 사용할 수 있습니다.  
   
  다음 중 하나라도 해당하는 경우 데이터베이스를 분리할 수 없습니다.  
@@ -56,8 +55,7 @@ ms.locfileid: "62762415"
 -   데이터베이스를 복제하여 게시한 경우. 데이터베이스가 복제된 경우 해당 데이터베이스의 게시를 해제해야 합니다. 따라서 데이터베이스를 분리하려면 먼저 [sp_replicationdboption](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql)을 실행하여 게시를 해제해야 합니다.  
   
     > [!NOTE]  
-    >  
-  **sp_replicationdboption**을 사용할 수 없는 경우 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql)을 실행하여 복제를 제거할 수 있습니다.  
+    >  **sp_replicationdboption**을 사용할 수 없는 경우 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql)을 실행하여 복제를 제거할 수 있습니다.  
   
 -   데이터베이스에 데이터베이스 스냅샷이 있는 경우  
   
@@ -86,7 +84,7 @@ ms.locfileid: "62762415"
   
 3.  데이터베이스를 다시 분리합니다.  
   
-##  <a name="AttachDb"></a>데이터베이스 연결  
+##  <a name="attaching-a-database"></a><a name="AttachDb"></a> 데이터베이스 연결  
  복사 또는 분리한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 연결할 수 있습니다. [!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)] 서버 인스턴스를 연결 하는 경우에서 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]와 같이 다른 데이터베이스 파일과 함께 이전 위치에서 카탈로그 파일이 연결 됩니다. 자세한 내용은 [전체 텍스트 검색 업그레이드](../search/upgrade-full-text-search.md)를 참조하세요.  
   
  데이터베이스를 연결할 경우 모든 데이터 파일(MDF 및 NDF 파일)이 사용 가능해야 합니다. 데이터베이스가 처음 생성되었을 때 또는 마지막으로 연결되었을 때와 경로가 다른 데이터 파일이 있으면 해당 파일의 현재 경로를 지정해야 합니다.  
@@ -106,48 +104,47 @@ ms.locfileid: "62762415"
   
   
   
-###  <a name="Metadata"></a>데이터베이스 연결 시 메타 데이터 변경  
- 읽기 전용 데이터베이스를 분리한 다음 다시 연결하는 경우 현재 차등 기반에 대한 백업 정보는 손실됩니다. 
-  *차등 기반* 은 데이터베이스나 데이터베이스에 있는 파일 또는 파일 그룹의 하위 집합에 있는 모든 데이터에 대한 최신 전체 백업입니다. 기반 백업 정보가 없는 경우 **master** 데이터베이스는 읽기 전용 데이터베이스와 동기화되지 않으므로 이후에 수행되는 차등 백업에서 예기치 않은 결과가 발생할 수 있습니다. 그러므로 읽기 전용 데이터베이스를 차등 백업하는 경우에는 데이터베이스를 다시 연결한 다음 전체 백업을 수행하여 새로운 차등 기반을 만들어야 합니다. 차등 백업에 대한 자세한 내용은 [차등 백업&#40;SQL Server&#41;](../backup-restore/differential-backups-sql-server.md)을 참조하세요.  
+###  <a name="metadata-changes-on-attaching-a-database"></a><a name="Metadata"></a> 데이터베이스 연결 시 메타데이터 변경  
+ 읽기 전용 데이터베이스를 분리한 다음 다시 연결하는 경우 현재 차등 기반에 대한 백업 정보는 손실됩니다. *차등 기반* 은 데이터베이스나 데이터베이스에 있는 파일 또는 파일 그룹의 하위 집합에 있는 모든 데이터에 대한 최신 전체 백업입니다. 기반 백업 정보가 없는 경우 **master** 데이터베이스는 읽기 전용 데이터베이스와 동기화되지 않으므로 이후에 수행되는 차등 백업에서 예기치 않은 결과가 발생할 수 있습니다. 그러므로 읽기 전용 데이터베이스를 차등 백업하는 경우에는 데이터베이스를 다시 연결한 다음 전체 백업을 수행하여 새로운 차등 기반을 만들어야 합니다. 차등 백업에 대한 자세한 내용은 [차등 백업&#40;SQL Server&#41;](../backup-restore/differential-backups-sql-server.md)을 참조하세요.  
   
  연결 시 데이터베이스가 시작됩니다. 일반적으로 데이터베이스를 연결하면 데이터베이스를 분리 또는 복사한 시점과 동일한 상태가 됩니다. 그러나 연결 및 분리 작업을 수행하면 해당 데이터베이스의 데이터베이스 간 소유권 체인을 사용할 수 없게 됩니다. 체인을 사용하도록 설정하는 방법은 [cross db ownership chaining 서버 구성 옵션](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)을 참조하세요. 또한 데이터베이스를 연결할 때마다 TRUSTWORTHY는 OFF로 설정됩니다. TRUSTWORTHY를 ON으로 설정하는 방법은 [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)를 참조하세요.  
   
 ### <a name="backup-and-restore-and-attach"></a>백업, 복원 및 연결  
  완전히 또는 부분적으로 오프라인 상태인 데이터베이스와 마찬가지로 파일을 복원 중인 데이터베이스에는 연결될 수 없습니다. 이때 복원 시퀀스를 중지하면 데이터베이스를 연결할 수 있습니다. 그런 다음 복원 시퀀스를 다시 시작할 수 있습니다.  
   
-###  <a name="OtherServerInstance"></a> 다른 서버 인스턴스에 데이터베이스 연결  
+###  <a name="attaching-a-database-to-another-server-instance"></a><a name="OtherServerInstance"></a> 다른 서버 인스턴스에 데이터베이스 연결  
   
 > [!IMPORTANT]  
 >  최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 만든 데이터베이스를 이전 버전에서 연결할 수 없습니다.  
   
- 데이터베이스를 다른 서버 인스턴스에 연결하는 경우 사용자와 애플리케이션에 일관된 환경을 제공하려면 로그인, 작업 등 데이터베이스의 일부 또는 모든 메타데이터를 다른 서버 인스턴스에서 다시 만들어야 할 수도 있습니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md)을 참조하세요.  
+ 데이터베이스를 다른 서버 인스턴스에 연결하는 경우 사용자와 애플리케이션에 일관된 환경을 제공하려면 로그인, 작업 등 데이터베이스의 일부 또는 모든 메타데이터를 다른 서버 인스턴스에서 다시 만들어야 할 수도 있습니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타 데이터 관리 &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md)를 참조 하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
- **데이터베이스를 분리 하려면**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
+ **데이터베이스를 분리하려면**  
   
 -   [sp_detach_db&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
   
 -   [데이터베이스 분리](detach-a-database.md)  
   
- **데이터베이스를 연결 하려면**  
+ **데이터베이스를 연결하려면**  
   
 -   [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
 -   [데이터베이스 연결](attach-a-database.md)  
   
--   [Transact-sql&#41;sp_attach_db &#40;](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql)  
+-   [sp_attach_db&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql)  
   
--   [Transact-sql&#41;sp_attach_single_file_db &#40;](/sql/relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql)  
+-   [sp_attach_single_file_db&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql)  
   
- **분리 및 연결 작업을 사용 하 여 데이터베이스를 업그레이드 하려면**  
+ **분리 및 연결 작업을 사용하여 데이터베이스를 업그레이드하려면**  
   
--   [분리 및 연결을 사용 하 여 데이터베이스 업그레이드 &#40;Transact-sql&#41;](upgrade-a-database-using-detach-and-attach-transact-sql.md)  
+-   [분리 및 연결을 사용하여 데이터베이스 업그레이드&#40;Transact-SQL&#41;](upgrade-a-database-using-detach-and-attach-transact-sql.md)  
   
- **분리 및 연결 작업을 사용 하 여 데이터베이스를 이동 하려면**  
+ **분리 및 연결 작업을 사용하여 데이터베이스를 이동하려면**  
   
--   [Transact-sql을 사용 하 &#40;분리 및 연결을 사용 하 여 데이터베이스 이동&#41;](move-a-database-using-detach-and-attach-transact-sql.md)  
+-   [분리 및 연결을 사용하여 데이터베이스 이동&#40;Transact-SQL&#41;](move-a-database-using-detach-and-attach-transact-sql.md)  
   
- **데이터베이스 스냅숏을 삭제 하려면**  
+ **데이터베이스 스냅샷을 삭제하려면**  
   
 -   [데이터베이스 스냅샷 삭제&#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)  
   

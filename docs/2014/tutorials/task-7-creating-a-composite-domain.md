@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bbc00117e10e48adbde37b9f0561610feff8f87e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65488962"
 ---
 # <a name="task-7-creating-a-composite-domain"></a>태스크 7: 복합 도메인 만들기
@@ -30,7 +30,7 @@ ms.locfileid: "65488962"
   
 3.  도메인 목록에서 **Address Line**, **City**, **State**및 **Zip** 을 선택 하 고 **오른쪽 화살표** 를 클릭 하 여 **복합 도메인 목록의 도메인** 에 추가 합니다.  
   
-4.  **확인** 을 클릭하여 대화 상자를 닫습니다.  
+4.  **확인**을 클릭하여 대화 상자를 닫습니다.  
   
 ## <a name="next-step"></a>다음 단계  
  [태스크 8: 복합 도메인 규칙 만들기](../../2014/tutorials/task-8-creating-a-composite-domain-rule.md)  
