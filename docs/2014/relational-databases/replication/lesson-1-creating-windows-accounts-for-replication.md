@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721163"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>1단원: 복제용 Windows 계정 만들기
@@ -37,8 +37,7 @@ ms.locfileid: "62721163"
   
 1.  게시자에서 제어판의 **관리 도구**에 있는 **컴퓨터 관리**를 엽니다.  
   
-2.  
-  **시스템 도구**에서 **로컬 사용자 및 그룹**을 확장합니다.  
+2.  **시스템 도구**에서 **로컬 사용자 및 그룹**을 확장합니다.  
   
 3.  **사용자** 를 마우스 오른쪽 단추로 클릭 한 다음 **새 사용자**를 클릭 합니다.  
   
@@ -52,8 +51,7 @@ ms.locfileid: "62721163"
   
 1.  구독자에서 제어판의 **관리 도구**에 있는 **컴퓨터 관리**를 엽니다.  
   
-2.  
-  **시스템 도구**에서 **로컬 사용자 및 그룹**을 확장합니다.  
+2.  **시스템 도구**에서 **로컬 사용자 및 그룹**을 확장합니다.  
   
 3.  **사용자** 를 마우스 오른쪽 단추로 클릭 한 다음 **새 사용자**를 클릭 합니다.  
   
@@ -64,8 +62,7 @@ ms.locfileid: "62721163"
 6.  **닫기**를 클릭합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 복제 에이전트에 대한 Windows 계정을 성공적으로 만들었습니다. 다음 단원에서는 스냅샷 폴더를 구성합니다. 
-  [2단원: 스냅샷 폴더 준비](lesson-2-preparing-the-snapshot-folder.md)를 참조하세요.  
+ 복제 에이전트에 대한 Windows 계정을 성공적으로 만들었습니다. 다음 단원에서는 스냅샷 폴더를 구성합니다. [2단원: 스냅샷 폴더 준비](lesson-2-preparing-the-snapshot-folder.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [복제 에이전트 개요](agents/replication-agents-overview.md)  

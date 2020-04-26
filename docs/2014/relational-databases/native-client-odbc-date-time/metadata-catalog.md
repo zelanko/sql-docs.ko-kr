@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c2784b7915d96665cae814e0dff46b2f2135bc52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62511527"
 ---
 # <a name="catalog-metadata"></a>카탈로그 메타데이터
@@ -26,7 +26,7 @@ ms.locfileid: "62511527"
 ## <a name="remarks"></a>설명  
  날짜/시간 형식에 대해 `SQLColumns` 및 `SQLProcedureColumns`에서 다음 열 값이 반환됩니다.  
   
-|매개 변수 형식|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
+|매개 변수 유형|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
 |TYPE_NAME|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
@@ -40,14 +40,14 @@ ms.locfileid: "62511527"
   
  날짜/시간 형식에 대해 `SQLGetTypeInfo`에서 다음 열 값이 반환됩니다.  
   
-|매개 변수 형식|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
+|매개 변수 유형|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |TYPE_NAME|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
 |LITERAL_SUFFIX|'|'|'|'|'|'|  
-|CREATE_PARAMS|NULL|크기 조정|NULL|NULL|크기 조정|크기 조정|  
+|CREATE_PARAMS|NULL|소수 자릿수|NULL|NULL|소수 자릿수|소수 자릿수|  
 |NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|  
 |CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|  

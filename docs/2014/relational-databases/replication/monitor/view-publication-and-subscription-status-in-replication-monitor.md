@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62666970"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>복제 모니터에서 게시 및 구독 상태 보기
@@ -64,13 +64,12 @@ ms.locfileid: "62666970"
 |Error|![UI 아이콘: 오류](../media/repl-icon-error.gif "UI 아이콘: 오류")|  
 |성능 심각|![UI 아이콘: 경고](../media/repl-icon-warn.gif "UI 아이콘: 경고")|  
 |실패한 명령 다시 시도 중|![UI 아이콘: 복제 에이전트 다시 시도](../media/repl-icon-retry.gif "UI 아이콘: 복제 에이전트 다시 시도")|  
-|확인|없음|  
+|확인|none|  
   
 ## <a name="subscription-status-values"></a>구독 상태 값  
  다음 표에서는 구독 상태 값과 해당 아이콘을 우선 순위순으로 보여 줍니다. 한 구독이 동시에 두 가지 상태에 있을 수 있습니다(예: **곧 만료됨/만료됨** 및 **실패한 명령 다시 시도 중**). 이 경우 우선 순위가 가장 높은 상태가 표시됩니다.  
   
- 
-  **성능 심각**, **곧 만료됨/만료됨**및 **초기화되지 않음** 의 상태 값은 경고입니다. 경고를 표시할 때 복제 모니터는 에이전트가 실행되고 있는지 여부도 표시합니다. 예를 들어 상태가 **실행 중, 성능 심각**과 같이 표시될 수 있습니다.  
+ **성능 심각**, **곧 만료됨/만료됨**및 **초기화되지 않음** 의 상태 값은 경고입니다. 경고를 표시할 때 복제 모니터는 에이전트가 실행되고 있는지 여부도 표시합니다. 예를 들어 상태가 **실행 중, 성능 심각**과 같이 표시될 수 있습니다.  
   
 ### <a name="transactional-subscriptions"></a>트랜잭션 구독  
   

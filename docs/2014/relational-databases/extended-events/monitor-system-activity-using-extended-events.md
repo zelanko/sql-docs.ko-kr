@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44bb482d1385ad9b22900bb74015a779ea6750d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62638731"
 ---
 # <a name="monitor-system-activity-using-extended-events"></a>확장 이벤트를 사용하여 시스템 작업 모니터링
@@ -94,7 +94,7 @@ ms.locfileid: "62638731"
 7.  명령 프롬프트에서 다음 명령을 실행하여 ETW 데이터를 확인합니다.  
   
     > [!NOTE]  
-    >  **tracerpt** 명령에 대한 도움말을 보려면 명령 프롬프트에서 `tracerpt /?`를 입력하세요.  
+    >  **tracerpt** 명령에 대한 도움말을 보려면 명령 프롬프트에서 `tracerpt /?`를 입력하십시오.  
   
     ```  
     logman query -ets --- List the ETW sessions. This is optional.  
@@ -116,9 +116,9 @@ ms.locfileid: "62638731"
     ```  
   
 ## <a name="see-also"></a>참고 항목  
- [CREATE EVENT SESSION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
- [ALTER EVENT SESSION&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)   
- [DROP EVENT SESSION&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-event-session-transact-sql)   
+ [Transact-sql&#41;&#40;이벤트 세션 만들기](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [ALTER EVENT SESSION &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)   
+ [DROP EVENT SESSION &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-event-session-transact-sql)   
  [확장 이벤트 카탈로그 뷰&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql)  
  [확장 이벤트 동적 관리 뷰](../views/views.md)   
  [SQL Server 확장 이벤트 대상](../../database-engine/sql-server-extended-events-targets.md)  

@@ -15,16 +15,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b7c992f8b33e2eb96b0e6ea7eec1f58beaf8aefd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62511828"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>유니코드 데이터 및 서버 코드 페이지
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 CLR 통합을 사용 하세요.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하십시오.  
   
  확장 저장 프로시저 API는 유니코드 데이터에 사용되지만 유니코드 메타데이터에는 사용되지 않습니다. #define 유니코드 지시문은 확장 저장 프로시저 API에 적용되지 않습니다.  
   

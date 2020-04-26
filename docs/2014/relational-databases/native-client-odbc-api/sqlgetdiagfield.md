@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8fb158b2c11f48733c5eacb3827a43a3303c4a51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62657706"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
@@ -34,8 +34,7 @@ ms.locfileid: "62657706"
   
  문자 데이터가 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 진단 필드 SQL_DIAG_SS_PROCNAME과 SQL_DIAG_SS_SRVNAME은 해당 데이터를 Null로 종결된 ANSI 또는 유니코드 문자열로 클라이언트에 반환합니다. 필요한 경우 문자 너비로 문자 수를 조정해야 합니다. 또는 이식 가능한 C 데이터 형식(예: TCHAR 또는 SQLTCHAR)을 사용하여 올바른 프로그램 변수 길이를 유지할 수 있습니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 마지막으로 시도된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문을 식별하는 다음과 같은 추가 동적 함수 코드를 보고합니다. 동적 함수 코드는 진단 레코드 집합의 헤더(레코드 0)에 반환되므로 성공 여부에 관계없이 실행할 때마다 사용할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 마지막으로 시도된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문을 식별하는 다음과 같은 추가 동적 함수 코드를 보고합니다. 동적 함수 코드는 진단 레코드 집합의 헤더(레코드 0)에 반환되므로 성공 여부에 관계없이 실행할 때마다 사용할 수 있습니다.  
   
 |동적 함수 코드|원본|  
 |---------------------------|------------|  

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 402622033abd307d71b0dac8894ff4f6facebef9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62467857"
 ---
 # <a name="utility-explorer-f1-help"></a>유틸리티 탐색기 F1 도움말
@@ -31,7 +31,7 @@ ms.locfileid: "62467857"
   
  [유틸리티 관리&#40;SQL Server 유틸리티&#41;](../../database-engine/utility-administration-sql-server-utility.md)  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>참고  
  [SQL Server 유틸리티 제어 지점 만들기&#40;SQL Server 유틸리티&#41;](create-a-sql-server-utility-control-point-sql-server-utility.md)  
   
  [SQL Server 유틸리티에 연결](connect-to-a-sql-server-utility.md)  
@@ -43,7 +43,7 @@ ms.locfileid: "62467857"
  [SQL Server 유틸리티에서 SQL Server 인스턴스 모니터링](monitor-instances-of-sql-server-in-the-sql-server-utility.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 유틸리티 기능 및 태스크](sql-server-utility-features-and-tasks.md)   
+ [SQL Server 유틸리티 기능 및 작업](sql-server-utility-features-and-tasks.md)   
  [SQL Server 유틸리티 문제 해결](../../database-engine/troubleshoot-the-sql-server-utility.md)  
   
   

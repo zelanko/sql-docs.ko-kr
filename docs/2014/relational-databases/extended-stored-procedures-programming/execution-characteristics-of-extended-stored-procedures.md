@@ -14,16 +14,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d21f002ca6b7ea185df2e01f66abf0e1ef5cfd1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62512222"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>확장 저장 프로시저의 실행 특징
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 CLR 통합을 사용 하세요.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하십시오.  
   
  확장 저장 프로시저 실행에는 다음과 같은 세 가지 특징이 있습니다.  
   
@@ -40,15 +40,14 @@ ms.locfileid: "62512222"
   
  확장 저장 프로시저 DLL을 로드 한 후에는가 중지 되거나 관리자가 DBCC *DLL_name* (무료)를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하 여 dll을 명시적으로 언로드할 때까지 dll이 서버의 주소 공간에 로드 된 상태로 유지 됩니다.  
   
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 EXECUTE 문을 사용하여 확장 저장 프로시저를 저장 프로시저처럼 사용할 수 있습니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 EXECUTE 문을 사용하여 확장 저장 프로시저를 저장 프로시저처럼 사용할 수 있습니다.  
   
 ```  
 EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT  
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- \@*retval*  
+ \@ *retval*  
  반환 값입니다.  
   
  \@*param1*  

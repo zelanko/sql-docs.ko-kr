@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 61173f4b9ef6c8f836b3654bdc5b7366a8a54461
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62654071"
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>SQL Server 에이전트 마스터 작업과 연관된 대상 서버 수정
@@ -28,30 +28,27 @@ ms.locfileid: "62654071"
   
      [보안](#Security)  
   
--   **다음을 사용 하 여 SQL Server 에이전트 마스터 작업과 연결 된 대상 서버를 수정 하려면**  
+-   **다음을 사용하여 SQL Server 에이전트 마스터 작업과 연결된 대상 서버를 수정하려면:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 마스터 작업은 로컬 및 원격 서버 모두에서 대상이 될 수 없습니다.  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 마스터 작업은 로컬 및 원격 서버 모두에서 대상이 될 수 없습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
- 
-  **sysadmin** 고정 서버 역할의 멤버가 아닌 경우 자신이 소유한 작업만 수정할 수 있습니다. 자세한 내용은 [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)을 참조하세요.  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
+ **sysadmin** 고정 서버 역할의 멤버가 아닌 경우 자신이 소유한 작업만 수정할 수 있습니다. 자세한 내용은 [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)을 참조하세요.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>SQL Server 에이전트 마스터 작업과 연결된 대상 서버를 수정하려면  
   
-1.  
-  **개체 탐색기** 에서 더하기 기호를 클릭하여 대상 서버를 수정할 작업이 포함된 서버를 확장합니다.  
+1.  **개체 탐색기** 에서 더하기 기호를 클릭하여 대상 서버를 수정할 작업이 포함된 서버를 확장합니다.  
   
 2.  더하기 기호를 클릭하여 **SQL Server 에이전트**를 확장합니다.  
   
@@ -59,12 +56,11 @@ ms.locfileid: "62654071"
   
 4.  대상 서버를 수정할 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-5.  
-  **작업 속성 -**_job_name_ 대화 상자의 **페이지 선택**에서 **대상**을 선택합니다. 이 페이지에서 사용할 수 있는 옵션에 대 한 자세한 내용은 [작업 속성: 새 작업 &#40;대상 페이지&#41;](job-properties-new-job-targets-page.md)를 참조 하세요.  
+5.  **작업 속성-**_job_name_ 대화 상자의 **페이지 선택**에서 **대상**을 선택 합니다. 이 페이지에서 사용할 수 있는 옵션에 대 한 자세한 내용은 [작업 속성: 새 작업 &#40;대상 페이지&#41;](job-properties-new-job-targets-page.md)를 참조 하세요.  
   
-6.  완료되었으면 **확인**을 클릭합니다.  
+6.  작업을 완료한 후 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-delete-a-target-server-currently-associated-with-a-sql-server-agent-master-job"></a>현재 SQL Server 에이전트 마스터 작업과 연결되어 있는 대상 서버를 삭제하려면  
   

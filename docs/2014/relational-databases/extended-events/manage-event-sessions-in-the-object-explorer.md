@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62705523"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>개체 탐색기에서 이벤트 세션 관리
@@ -96,7 +96,7 @@ STATE = STOP
   
 4.  **템플릿** 드롭다운 상자를 확장합니다.  
   
-5.  **\<File From …>Open**을 클릭하고 가져올 세션(XML 파일)을 찾습니다.  
+5.  ** \<파일 시작 ...을 클릭 >여** 가져올 세션 (XML 파일)을 찾습니다.  
   
  해당 세션이 **세션** 노드에 표시됩니다. 기본적으로 세션은 시작되지 않습니다.  
   
@@ -105,7 +105,7 @@ STATE = STOP
   
  확장 이벤트 세션을 편집하려면  
   
-1.  **개체 탐색기**에서 **관리**, **확장 이벤트**, **세션** 노드를 차례로 확장합니다.  
+1.  **개체 탐색기**에서 **관리**, **확장 이벤트**, **세션** 노드를 차례로 확장 합니다.  
   
 2.  세션을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
@@ -113,7 +113,7 @@ STATE = STOP
   
 4.  이벤트 세션을 수정한 후 **확인**을 클릭합니다.  
   
-## <a name="script-an-event-session-definition-using-includetsqlincludestsql-mdmd"></a>다음을 사용하여 확장 이벤트 세션 스크립팅: [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+## <a name="script-an-event-session-definition-using-tsql"></a>다음을 사용하여 확장 이벤트 세션 스크립팅: [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  새 세션 마법사와 새 세션 대화 상자에는 확장 이벤트 세션을 정의하는, [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 생성하는 스크립트 옵션이 있습니다.  
   
  세션 이름을 마우스 오른쪽 단추로 클릭하고 [!INCLUDE[tsql](../../includes/tsql-md.md)] 세션 스크립팅 **을 선택한 다음**Create **를 선택하여 기존 확장 이벤트 세션의**에 액세스할 수 있습니다.  
@@ -123,7 +123,7 @@ STATE = STOP
   
 -   쿼리 편집기에서 `DROP EVENT SESSION` 사용  
   
--   **개체 탐색기**에서  
+-   **개체 탐색기**.  
   
  이벤트 세션을 삭제하면 모든 구성 정보도 제거되므로 해당 세션 정의가 더 이상 sys.server_event_sessions 카탈로그 뷰에 나타나지 않습니다.  
   
@@ -134,7 +134,7 @@ STATE = STOP
   
  **개체 탐색기**에서 확장 이벤트 세션을 삭제하려면  
   
-1.  **관리**, **확장 이벤트**및 **세션** 노드를 차례로 확장합니다.  
+1.  **관리**, **확장 이벤트**및 **세션** 노드를 차례로 확장 합니다.  
   
 2.  세션을 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다.  
   

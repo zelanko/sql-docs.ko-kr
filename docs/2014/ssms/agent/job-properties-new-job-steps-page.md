@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9b7941f7d85404f56d24252534c518037d30a17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62695653"
 ---
 # <a name="job-propertiesnew-job-steps-page"></a>작업 속성: 새 작업(단계 페이지)
@@ -32,7 +32,7 @@ ms.locfileid: "62695653"
  **시작 단계**  
  작업을 시작할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 시작할 단계를 선택합니다.  
   
- **새로 만들기**  
+ **신규**  
  선택한 작업 단계 아래에 새 작업 단계를 만듭니다.  
   
  **넣거나**  

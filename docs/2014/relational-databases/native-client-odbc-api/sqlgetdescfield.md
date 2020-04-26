@@ -15,18 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a92b3a9491b8424fb9015fc4d30875fedb38758
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62657787"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 IRD(구현 행 설명자) 전용의 드라이버별 설명자 필드를 노출합니다. IRD 내에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설명자 필드는 드라이버별 열 특성을 통해 참조됩니다. 사용 가능한 드라이버별 설명자 필드의 전체 목록에 대한 자세한 내용은 [SQLColAttribute](sqlcolattribute.md)를 참조하십시오.  
   
- 열 식별자 문자열이 포함된 설명자 필드는 대체로 길이가 0인 문자열입니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]관련 설명자 필드 값은 모두 읽기 전용입니다.  
+ 열 식별자 문자열이 포함된 설명자 필드는 대체로 길이가 0인 문자열입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]관련 설명자 필드 값은 모두 읽기 전용입니다.  
   
  SQLColAttribute를 사용 하 여 검색 된 특성과 마찬가지로 행 수준 특성 (예: SQL_CA_SS_COMPUTE_ID)을 보고 하는 설명자 필드는 결과 집합의 모든 열에 대해 보고 됩니다.  
   
@@ -41,8 +39,7 @@ ms.locfileid: "62657787"
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 응용 프로그램에서 ODBC 3.8 `SQL_C_SS_TIME2` 를 사용 `time` 하는 경우 `SQL_C_SS_TIMESTAMPOFFSET` SQLGetDescField는 `datetimeoffset`대신 `SQL_C_BINARY`(형식) 또는 (의 경우)를 반환할 수 있습니다.  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLGetDescField 지원  
- 
-  `SQLGetDescField`는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [ODBC&#41;&#40;LARGE CLR 사용자 정의 형식 ](../native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
+ `SQLGetDescField`는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [ODBC&#41;&#40;LARGE CLR 사용자 정의 형식 ](../native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
   
 ## <a name="sqlgetdescfield-support-for-sparse-columns"></a>스파스 열에 대한 SQLGetDescField 지원  
  SQLGetDescField를 사용 하 여 열이 `column_set` 열 인지 여부를 확인 하는 SQL_CA_SS_IS_COLUMN_SET 새 IRD 필드를 쿼리할 수 있습니다.  

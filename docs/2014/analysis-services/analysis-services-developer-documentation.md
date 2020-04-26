@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1beb0a644edb25537b85c559192ece9288c2de6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62638784"
 ---
 # <a name="developer39s-guide-analysis-services"></a>개발자&#39;s 가이드 (Analysis Services)
@@ -38,7 +38,7 @@ ms.locfileid: "62638784"
  [Analysis Services 스크립팅 언어 &#40;,&#41; 참조](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
  XMLA에 대한 ASSL 확장 프로그램에 대해 설명합니다. ASSL은 XMLA 사양을 보완하는 Analysis Services 다차원 모델에 대한 데이터 정의 및 조작 언어를 제공합니다.  
   
- [&#40;XMLA&#41; 참조 XML for Analysis](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
+ [XMLA&#40;XML for Analysis&#41; 참조](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
  XMLA가 사용자 지정 솔루션에 적용되는 방법을 이해하는 데 도움이 될 수 있는 XMLA 개념에 대해 설명합니다. 또한 XMLA 1.1 사양과의 호환성 수준에 대해서도 설명합니다.  
   
   

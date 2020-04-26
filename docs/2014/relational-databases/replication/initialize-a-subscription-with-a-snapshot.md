@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 23ad4cd92d186f43fb1a9dd81e1dbb0727170367
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721128"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>스냅샷으로 구독 초기화
@@ -37,7 +37,7 @@ ms.locfileid: "62721128"
  특정 시점에서 중단된 스냅샷 전송은 자동으로 재개되며 전송이 이미 완료된 파일은 다시 보내지 않습니다. 스냅샷 에이전트의 배달 단위는 각 게시 아티클에 대한 bcp 파일이므로 부분적으로 배달된 파일은 완전히 다시 배달되어야 합니다. 그러나 스냅샷 배달을 재개하면 전송되는 데이터 양이 크게 줄어들 수 있으므로 연결이 불안한 경우에도 스냅샷이 늦지 않게 배달될 수 있습니다.  
   
 ## <a name="snapshot-options"></a>Snapshot Options  
- 스냅샷으로 구독을 초기화할 때 사용할 수 있는 옵션에는 여러 가지가 있습니다. 다음을 수행할 수 있습니다.  
+ 스냅샷으로 구독을 초기화할 때 사용할 수 있는 옵션에는 여러 가지가 있습니다. 다음과 같습니다.  
   
 -   기본 스냅샷 폴더 위치 대신 또는 기본 스냅샷 폴더 위치에 추가로 대체 스냅샷 폴더 위치를 지정합니다. 자세한 내용은 [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md)을 참조하세요.  
   

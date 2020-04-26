@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2e3f85016b32884b9a6b809e28d20d9985f97cd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62655809"
 ---
 # <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>3단원: Bike Buyer 마이닝 구조 처리
@@ -74,8 +74,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
   
 #### <a name="to-process-the-mining-structure-by-using-insert-into"></a>INSERT INTO를 사용하여 마이닝 구조를 처리하려면  
   
-1.  
-  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
@@ -87,7 +86,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
     [<mining structure name>]   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     Bike Buyer  
@@ -99,7 +98,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
     <mining structure columns>  
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     [Customer Key],  
@@ -124,7 +123,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
     OPENQUERY([<datasource>],'<SELECT statement>')  
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     OPENQUERY([Adventure Works DW],  
@@ -169,8 +168,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
         FROM dbo.vTargetMail')  
     ```  
   
-6.  
-  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
+6.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
 7.  다른 이름 **으로 저장** 대화 상자에서 해당 폴더로 이동한 다음 파일 `Process Bike Buyer Structure.dmx`이름을로 합니다.  
   

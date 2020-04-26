@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59361a2c0428be8ec7f2abc5b3a7fd199611bccc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62650204"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>프록시 계정 속성 및 새 프록시 계정(일반 페이지)
@@ -33,13 +33,12 @@ ms.locfileid: "62650204"
 >  기존 자격 증명의 이름을 제공해야 합니다. 자격 증명을 만드는 방법에 대 한 자세한 내용은 [자격 증명 만들기](../../relational-databases/security/authentication-access/create-a-credential.md) 를 참조 하세요.  
   
  **...**  
- 
-  **자격 증명 선택** 대화 상자를 시작합니다.  
+ **자격 증명 선택** 대화 상자를 시작합니다.  
   
  **설명**  
  프록시에 대한 설명을 입력합니다.  
   
- **다음 하위 시스템에 대해 활성**  
+ **다음 하위 시스템에 대해 활성화**  
  프록시 계정이 액세스할 수 있는 하위 시스템을 선택합니다.  
   
  **작업 단계 재할당 대상**  

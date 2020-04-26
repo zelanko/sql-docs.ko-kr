@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 31ed60f10f12bbc11037a64caa50802360b919de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62467303"
 ---
 # <a name="table-valued-parameters-odbc"></a>테이블 반환 매개 변수(ODBC)
@@ -69,8 +69,7 @@ ms.locfileid: "62467303"
  테이블 반환 매개 변수 열 값에서 발생한 오류를 처리하는 방법을 설명합니다.  
   
  [버전 간 호환성](cross-version-compatibility.md)  
- 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]보다 이전 버전의 클라이언트나 서버에서 테이블 반환 매개 변수를 사용할 때 발생할 수 있는 충돌에 대해 설명합니다.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]보다 이전 버전의 클라이언트나 서버에서 테이블 반환 매개 변수를 사용할 때 발생할 수 있는 충돌에 대해 설명합니다.  
   
  [ODBC 테이블 반환 매개 변수 API 요약](odbc-table-valued-parameter-api-summary.md)  
  테이블 반환 매개 변수를 지원하는 ODBC 함수 목록을 보여 줍니다.  

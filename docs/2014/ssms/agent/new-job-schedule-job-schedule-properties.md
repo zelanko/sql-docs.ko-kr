@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62704620"
 ---
 # <a name="new-job-schedule-job-schedule-properties"></a>새 작업 일정: 작업 일정 속성
@@ -27,23 +27,23 @@ ms.locfileid: "62704620"
  **이름**  
  새 일정 이름을 입력합니다.  
   
- **일정 내의 작업**  
+ **이 일정 내의 작업**  
  일정을 사용하는 작업을 표시합니다.  
   
  **일정 유형**  
  일정 유형을 선택합니다.  
   
- **Enabled**  
+ **사용**  
  일정을 사용하거나 사용하지 않으려면 선택합니다.  
   
 ## <a name="recurring-schedule-types-options"></a>되풀이 일정 유형 옵션  
- **생깁니다**  
+ **되풀이**  
  일정 되풀이 간격을 선택합니다.  
   
- **되풀이 간격**  
+ **매**  
  일정 되풀이 간격을 일 또는 주 단위(수)로 선택합니다. 월별 되풀이 일정에는 이 옵션을 사용할 수 없습니다.  
   
- **월**  
+ **월요일**  
  월요일에 작업이 수행되도록 설정합니다. 주별 되풀이 일정에만 사용할 수 있습니다.  
   
  **화요일**  
@@ -52,10 +52,10 @@ ms.locfileid: "62704620"
  **수요일**  
  수요일에 작업이 수행되도록 설정합니다. 주별 되풀이 일정에만 사용할 수 있습니다.  
   
- **목요일**  
+ **자원은**  
  목요일에 작업이 수행되도록 설정합니다. 주별 되풀이 일정에만 사용할 수 있습니다.  
   
- **금요일**  
+ **까지**  
  금요일에 작업이 수행되도록 설정합니다. 주별 되풀이 일정에만 사용할 수 있습니다.  
   
  **토요일**  
@@ -67,10 +67,10 @@ ms.locfileid: "62704620"
  **동안**  
  일정이 시작되는 날짜를 선택합니다. 월별 되풀이 일정에만 사용할 수 있습니다.  
   
- **매**  
+ **일 /**  
  일정 되풀이 간격을 월 단위(수)로 선택합니다. 월별 되풀이 일정에만 사용할 수 있습니다.  
   
- **기본적으로**  
+ **이**  
  해당 월의 특정 주에 있는 특정 요일에 대한 일정을 지정합니다. 월별 되풀이 일정에만 사용할 수 있습니다.  
   
  **한 번 수행**  
@@ -89,14 +89,14 @@ ms.locfileid: "62704620"
  일정을 무기한 유지하도록 지정합니다.  
   
 ## <a name="one-time-schedule-types-options"></a>일회 일정 유형 옵션  
- **Date**  
+ **날짜**  
  작업을 실행할 날짜를 선택합니다.  
   
- **Time**  
+ **시간**  
  작업을 실행할 시간을 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [일정을 만들고 작업에 연결](create-and-attach-schedules-to-jobs.md)   
- [Schedule a Job](schedule-a-job.md)  
+ [작업 예약](schedule-a-job.md)  
   
   

@@ -16,19 +16,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bc740b25f875b451168a8c051e6f32bd984fbfe6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62514458"
 ---
 # <a name="programming-extended-stored-procedures"></a>확장 저장 프로시저 프로그래밍
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 CLR 통합을 사용 하세요.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
   
- 이전에는 개방형 Data Services를 사용하여 SQL Server가 아닌 데이터베이스 환경에 대한 게이트웨이와 같은 서버 애플리케이션을 작성했습니다. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 개방형 Data Services API의 사용되지 않는 부분을 지원하지 않습니다. 원래 개방형 Data Services API 중 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 여전히 지원되는 부분은 확장 저장 프로시저뿐이므로 API의 이름이 확장 저장 프로시저 API로 바뀌었습니다.  
+ 이전에는 개방형 Data Services를 사용하여 SQL Server가 아닌 데이터베이스 환경에 대한 게이트웨이와 같은 서버 애플리케이션을 작성했습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 개방형 Data Services API의 사용되지 않는 부분을 지원하지 않습니다. 원래 개방형 Data Services API 중 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 여전히 지원되는 부분은 확장 저장 프로시저뿐이므로 API의 이름이 확장 저장 프로시저 API로 바뀌었습니다.  
   
  분산 쿼리 및 CLR 통합과 같은 보다 강력한 최신 기술이 등장하면서 확장 저장 프로시저 API 애플리케이션의 필요성이 크게 바뀌었습니다.  
   

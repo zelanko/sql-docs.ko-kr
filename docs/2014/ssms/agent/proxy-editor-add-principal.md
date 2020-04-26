@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c16001cf0b96c42ed2f14c3d63dc0ecd7c456988
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62650499"
 ---
 # <a name="proxy-editor-and--add-principal"></a>프록시 편집기 및 보안 주체 추가
   이 페이지를 사용 하 여 서버 보안 주체에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정에 대 한 액세스 권한을 부여할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
- **보안 주체 유형**  
+ **주체 유형**  
  표시할 보안 주체의 유형입니다.  
   
  **사용 가능한 보안 주체**  

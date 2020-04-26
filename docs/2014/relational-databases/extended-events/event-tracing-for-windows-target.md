@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62519307"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows용 이벤트 추적 대상
@@ -75,7 +75,7 @@ ms.locfileid: "62519307"
     > [!IMPORTANT]  
     >  첫 번째 세션이 시작되면 파일 경로를 변경할 수 없습니다.  
   
--   MOF(Managed Object Format) 파일은 *\<설치 경로*\Microsoft SQL Server\Shared에 있습니다. 자세한 내용은 MSDN의 [Managed Object Format](https://go.microsoft.com/fwlink/?LinkId=92851) 을 참조하십시오.  
+-   MOF(Managed Object Format) (MOF) 파일은 * \<설치 경로>* \Microsoft SQL server\shared에 있습니다. 자세한 내용은 MSDN의 [Managed Object Format](https://go.microsoft.com/fwlink/?LinkId=92851) 을 참조하십시오.  
   
 ## <a name="adding-the-target-to-a-session"></a>세션에 대상 추가  
  확장 이벤트 세션에 ETW 대상을 추가하려면 이벤트 세션을 만들거나 변경할 때 다음 문을 포함해야 합니다.  
@@ -87,9 +87,9 @@ ADD TARGET package0.etw_classic_sync_target
  데이터를 보는 방법을 비롯한 ETW 대상을 사용하는 방법을 보여 주는 전체 예에 대한 자세한 내용은 [확장 이벤트를 사용하여 시스템 작업 모니터링](monitor-system-activity-using-extended-events.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 확장 이벤트 대상](../../database-engine/sql-server-extended-events-targets.md)   
- [sys.dm_xe_session_targets&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
- [CREATE EVENT SESSION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [확장 이벤트 대상 SQL Server](../../database-engine/sql-server-extended-events-targets.md)   
+ [dm_xe_session_targets &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
+ [Transact-sql&#41;&#40;이벤트 세션 만들기](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)  
   
   

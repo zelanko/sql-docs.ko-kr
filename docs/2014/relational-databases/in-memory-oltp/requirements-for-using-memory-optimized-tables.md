@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9b9e442fb97245d32c398602cdfd727de8239cb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62467906"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 사용을 위한 요구 사항
@@ -22,8 +22,7 @@ ms.locfileid: "62467906"
   
 -   64비트 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise, Developer 또는 Evaluation Edition이 필요합니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 메모리 최적화 테이블에 데이터를 저장하기에 충분한 메모리가 필요합니다. 행 버전을 지원하기 위해서는 메모리 최적화 테이블 및 인덱스의 예상 크기의 두 배에 해당하는 메모리 양을 제공해야 합니다. 하지만 실제로 필요한 메모리 양은 작업에 따라 다릅니다. 메모리 사용량을 모니터링하고 필요한 대로 조정해야 합니다. 메모리 최적화 테이블의 데이터 크기는 풀을 기준으로 허용된 비율을 초과할 수 없습니다. 메모리 최적화 테이블의 크기를 검색 하려면 [dm_db_xtp_table_memory_stats &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql)을 참조 하십시오.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 메모리 최적화 테이블에 데이터를 저장하기에 충분한 메모리가 필요합니다. 행 버전을 지원하기 위해서는 메모리 최적화 테이블 및 인덱스의 예상 크기의 두 배에 해당하는 메모리 양을 제공해야 합니다. 하지만 실제로 필요한 메모리 양은 작업에 따라 다릅니다. 메모리 사용량을 모니터링하고 필요한 대로 조정해야 합니다. 메모리 최적화 테이블의 데이터 크기는 풀을 기준으로 허용된 비율을 초과할 수 없습니다. 메모리 최적화 테이블의 크기를 검색 하려면 [dm_db_xtp_table_memory_stats &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql)을 참조 하십시오.  
   
      데이터베이스에 디스크 기반 테이블이 있는 경우 버퍼 풀 및 해당 테이블에 대한 쿼리 처리에 충분한 메모리를 제공해야 합니다.  
   
@@ -37,17 +36,15 @@ ms.locfileid: "62467906"
   
 -   메모리 내 OLTP를 설치하려면 **를 설치할 때** 데이터베이스 엔진 서비스 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 선택합니다.  
   
-     보고서 생성 (메모리 내[oltp에 테이블 또는 저장 프로시저를 이식 해야 하는지 확인](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 및를 설치 하려면 (개체 탐색기를 통해 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 메모리 내 oltp를 관리 하려면)를 설치할 **** [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]때 관리 도구-기본 또는 **관리 도구-고급** 을 선택 합니다.  
+     보고서 생성 (메모리 내[oltp에 테이블 또는 저장 프로시저를 이식 해야 하는지 확인](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 및를 설치 하려면 (개체 탐색기를 통해 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 메모리 내 oltp를 관리 하려면)를 설치할 **Management Tools-Basic** [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]때 관리 도구-기본 또는 **관리 도구-고급** 을 선택 합니다.  
   
-## <a name="important-notes-on-using-includehek_2includeshek-2-mdmd"></a>
-  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 사용에 관한 중요 사항  
+## <a name="important-notes-on-using-hek_2"></a>[!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
   
 -   데이터베이스에 있는 모든 영구 테이블의 총 메모리 내 크기는 250GB를 초과할 수 없습니다. 자세한 내용은 [메모리 액세스에 최적화 된 테이블에 대 한 내구성](durability-for-memory-optimized-tables.md)을 참조 하십시오.  
   
 -   이 버전의 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 는 소켓이 2 - 4개이고 코어가 60개 미만인 시스템에서 최적으로 수행되도록 설계되었습니다.  
   
--   검사점 파일을 수동으로 삭제해서는 안 됩니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 불필요한 검사점 파일에서 가비지 수집을 자동으로 수행합니다. 자세한 내용은 [메모리 최적화 테이블에 대 한 내구성](durability-for-memory-optimized-tables.md)의 데이터 및 델타 파일 병합에 대 한 설명을 참조 하세요.  
+-   검사점 파일을 수동으로 삭제해서는 안 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 불필요한 검사점 파일에서 가비지 수집을 자동으로 수행합니다. 자세한 내용은 [메모리 최적화 테이블에 대 한 내구성](durability-for-memory-optimized-tables.md)의 데이터 및 델타 파일 병합에 대 한 설명을 참조 하세요.  
   
 -   메모리 내 OLTP의 이 첫 번째 릴리스에서([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서) 메모리 최적화 파일 그룹을 제거하는 유일한 방법은 데이터베이스를 삭제하는 것입니다.  
   

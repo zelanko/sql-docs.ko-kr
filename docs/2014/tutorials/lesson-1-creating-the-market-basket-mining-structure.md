@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6a6e123e525512a72d70bcc8ca2eba549d1347e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676272"
 ---
 # <a name="lesson-1-creating-the-market-basket-mining-structure"></a>1단원: Market Basket 마이닝 구조 만들기
@@ -98,11 +98,9 @@ CREATE MINING STRUCTURE [Mining Structure Name]
   
 1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 엽니다.  
   
-2.  
-  **서버에 연결** 대화 상자에서 **서버 유형**으로 **Analysis Services**를 선택합니다. **서버 이름**,를 입력 `LocalHost`하거나이 단원에서 연결할 인스턴스의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이름을 입력 합니다. **연결**을 클릭합니다.  
+2.  **서버에 연결** 대화 상자에서 **서버 유형**으로 **Analysis Services**를 선택합니다. **서버 이름**,를 입력 `LocalHost`하거나이 단원에서 연결할 인스턴스의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이름을 입력 합니다. **연결**을 클릭합니다.  
   
-3.  
-  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
+3.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
@@ -119,7 +117,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
     [mining structure name]   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     [Market Basket]  
@@ -131,7 +129,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
     <key column>  
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     OrderNumber TEXT KEY  
@@ -145,7 +143,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
        <nested mining structure columns> )  
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     [Products] TABLE (  
@@ -166,8 +164,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
     )  
     ```  
   
-5.  
-  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
+5.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
 6.  다른 이름 **으로 저장** 대화 상자에서 해당 폴더로 이동한 다음 파일 `Market Basket Structure.dmx`이름을로 합니다.  
   

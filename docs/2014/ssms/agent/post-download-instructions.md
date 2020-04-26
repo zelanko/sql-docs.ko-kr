@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 607ca94af07916fc76ddb02d2c81bf299efc39c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473052"
 ---
 # <a name="post-download-instructions"></a>다운로드 명령 게시
@@ -35,10 +35,10 @@ ms.locfileid: "62473052"
  **모든 대상 서버**  
  다운로드 명령을 모든 대상 서버에 게시하려면 이 옵션을 선택합니다.  
   
- **대상 서버**  
+ **대상 서버 지정**  
  다운로드 명령을 선택한 대상 서버에 게시하려면 이 옵션을 선택합니다.  
   
- **[**  
+ **선택**  
  대상 서버가 다운로드 명령을 받도록 지정합니다.  
   
  **대상 서버**  

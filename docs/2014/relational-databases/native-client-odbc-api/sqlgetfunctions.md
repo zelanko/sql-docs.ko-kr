@@ -15,15 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e7dbd69379bd59e75ac39fc5765514ab8e1b4151
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62657832"
 ---
 # <a name="sqlgetfunctions"></a>SQLGetFunctions
-  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 인터페이스는 ODBC에 대해 정의된 세 가지 호환성 수준(ISO, Open Group 및 ODBC 수준 2)으로 컴파일됩니다. **SQLGetFunctions** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client odbc 드라이버에 대해 모든 odbc 함수가 지원 되는지 보고 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 인터페이스는 ODBC에 대해 정의된 세 가지 호환성 수준(ISO, Open Group 및 ODBC 수준 2)으로 컴파일됩니다. **SQLGetFunctions** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에 모든 ODBC 함수가 지원된다는 것을 보고합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLGetFunctions 함수](https://go.microsoft.com/fwlink/?LinkId=59353)   

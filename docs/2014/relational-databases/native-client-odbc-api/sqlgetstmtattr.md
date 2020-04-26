@@ -15,26 +15,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5604aafbbc8a6d77081e829269955c8b7600f4ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62657812"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
   Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC 드라이버는 SQLGetStmtAttr를 확장 하 여 드라이버별 문 특성을 노출 합니다.  
   
- [SQLSetStmtAttr](sqlsetstmtattr.md) 는 읽기 및 쓰기 문 특성을 나열 합니다. 이 항목에서는 읽기 전용 문 특성을 나열합니다.  
+ [SQLSetStmtAttr](sqlsetstmtattr.md) 에서는 읽기 및 쓰기 문 특성을 나열합니다. 이 항목에서는 읽기 전용 문 특성을 나열합니다.  
   
 ## <a name="sql_sopt_ss_current_command"></a>SQL_SOPT_SS_CURRENT_COMMAND  
- SQL_SOPT_SS_CURRENT_COMMAND 특성은 명령 일괄 처리의 현재 명령을 노출합니다. 반환 값은 일괄 처리에서 명령의 위치를 지정하는 정수 값입니다. 
-  *ValuePtr* 값은 SQLLEN 유형입니다.  
+ SQL_SOPT_SS_CURRENT_COMMAND 특성은 명령 일괄 처리의 현재 명령을 노출합니다. 반환 값은 일괄 처리에서 명령의 위치를 지정하는 정수 값입니다. *ValuePtr* 값은 SQLLEN 유형입니다.  
   
 ## <a name="sql_sopt_ss_nocount_status"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
- SQL_SOPT_SS_NOCOUNT_STATUS 특성은 NOCOUNT 옵션의 현재 설정을 나타냅니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLRowCount [를 호출할 때](sqlrowcount.md) 가 문의 영향을 받는 행 수를 보고할지 여부를 제어합니다. 
-  *ValuePtr* 값은 SQLLEN 유형입니다.  
+ SQL_SOPT_SS_NOCOUNT_STATUS 특성은 NOCOUNT 옵션의 현재 설정을 나타냅니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLRowCount [를 호출할 때](sqlrowcount.md) 가 문의 영향을 받는 행 수를 보고할지 여부를 제어합니다. *ValuePtr* 값은 SQLLEN 유형입니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |SQL_NC_OFF|NOCOUNT가 OFF입니다. SQLRowCount는 영향을 받는 행의 수를 반환 합니다.|  
 |SQL_NC_ON|NOCOUNT가 ON입니다. 영향을 받는 행 수는 SQLRowCount에서 반환 되지 않으며 반환 된 값은 0입니다.|  

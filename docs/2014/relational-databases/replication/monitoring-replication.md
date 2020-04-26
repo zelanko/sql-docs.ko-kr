@@ -19,10 +19,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e2b3441d98bc9226abce3a49fd28820df6ec99ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62666871"
 ---
 # <a name="monitoring-replication"></a>모니터링(복제)
@@ -34,11 +34,9 @@ ms.locfileid: "62666871"
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   
-     
-  [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 는 복제 모니터에 대한 액세스를 제공합니다. 또한 로그 판독기 에이전트, 스냅샷 에이전트, 병합 에이전트 및 배포 에이전트에 의해 기록된 현재 상태 및 마지막 메시지를 보고 각 에이전트를 시작 및 중지할 수 있도록 합니다. 자세한 내용은 [Monitor Replication Agents](monitor/monitor-replication-agents.md)을 참조하세요.  
+     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 는 복제 모니터에 대한 액세스를 제공합니다. 또한 로그 판독기 에이전트, 스냅샷 에이전트, 병합 에이전트 및 배포 에이전트에 의해 기록된 현재 상태 및 마지막 메시지를 보고 각 에이전트를 시작 및 중지할 수 있도록 합니다. 자세한 내용은 [Monitor Replication Agents](monitor/monitor-replication-agents.md)을 참조하세요.  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 RMO(복제 관리 개체)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 RMO(복제 관리 개체)  
   
      두 인터페이스 모두 배포자의 모든 복제 유형을 모니터링할 수 있도록 합니다. 또한 병합 복제는 구독자의 복제를 모니터링하는 기능을 제공합니다.  
   
@@ -52,7 +50,7 @@ ms.locfileid: "62666871"
   
 ## <a name="see-also"></a>참고 항목  
  [복제 관리 FAQ](administration/frequently-asked-questions-for-replication-administrators.md)   
- [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)   
+ [복제 관리에 대 한 모범 사례](administration/best-practices-for-replication-administration.md)   
 
   
   

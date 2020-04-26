@@ -29,10 +29,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62667249"
 ---
 # <a name="programmatically-monitor-replication"></a>프로그래밍 방식으로 복제 모니터링
@@ -54,7 +54,7 @@ ms.locfileid: "62667249"
   
  [RMO(복제 관리 개체)](#RMO)  
   
-##  <a name="Tsql"></a> Transact-SQL  
+##  <a name="transact-sql"></a><a name="Tsql"></a> Transact-SQL  
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>배포자에서 게시자, 게시 및 구독을 모니터링하려면  
   
@@ -78,10 +78,7 @@ ms.locfileid: "62667249"
   
 1.  배포 데이터베이스의 배포자에서 [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql)을 실행합니다. 이렇게 하면 이 배포자를 사용하는 모든 구독의 모든 병합 에이전트 세션에 대해 **Session_id**를 포함한 모니터링 정보가 반환됩니다. **MSmerge_sessions** 시스템 테이블을 쿼리하여 [Session_id](/sql/relational-databases/system-tables/msmerge-sessions-transact-sql) 를 얻을 수도 있습니다.  
   
-2.  배포 데이터베이스의 배포자에서 [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql)을 실행합니다. 
-  **
-  **
-  **에 1단계에서 얻은 @session_idSession_id** 값을 지정합니다. 이렇게 하면 해당 세션에 대한 세부 모니터링 정보가 표시됩니다.  
+2.  배포 데이터베이스의 배포자에서 [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql)을 실행합니다. **@session_id**에 1단계에서 얻은 **Session_id** 값을 지정합니다. 이렇게 하면 해당 세션에 대한 세부 모니터링 정보가 표시됩니다.  
   
 3.  각 관심 세션에 대해 2단계를 반복합니다.  
   
@@ -89,10 +86,7 @@ ms.locfileid: "62667249"
   
 1.  구독 데이터베이스의 구독자에서 [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql)을 실행합니다. 지정 된 구독에 대해, **@publisher** **@publication**및에 대 한 **@publisher_db**게시 데이터베이스의 이름을 지정 합니다. 이렇게 하면 이 구독의 마지막 다섯 개 병합 에이전트 세션에 대한 모니터링 정보가 반환됩니다. 결과 집합에 있는 관심 세션의 **Session_id** 값을 확인합니다.  
   
-2.  구독 데이터베이스의 구독자에서 [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql)을 실행합니다. 
-  **
-  **
-  **에 1단계에서 얻은 @session_idSession_id** 값을 지정합니다. 이렇게 하면 해당 세션에 대한 세부 모니터링 정보가 표시됩니다.  
+2.  구독 데이터베이스의 구독자에서 [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql)을 실행합니다. **@session_id**에 1단계에서 얻은 **Session_id** 값을 지정합니다. 이렇게 하면 해당 세션에 대한 세부 모니터링 정보가 표시됩니다.  
   
 3.  각 관심 세션에 대해 2단계를 반복합니다.  
   
@@ -102,10 +96,7 @@ ms.locfileid: "62667249"
   
 2.  배포 데이터베이스의 배포자에서 [sp_replmonitorchangepublicationthreshold](/sql/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql)를 실행합니다. 다음을 필요한 대로 지정합니다.  
   
-    -   
-  **
-  **
-  **에 1단계에서 얻은 @metric_idMetric_id** 값을 지정합니다.  
+    -   **@metric_id**에 1단계에서 얻은 **Metric_id** 값을 지정합니다.  
   
     -   에 대 한 **@value**모니터 임계값 메트릭의 새 값입니다.  
   
@@ -113,7 +104,7 @@ ms.locfileid: "62667249"
   
     -   이 임계값에 도달할 때 경고를 기록하려면 **@shouldalert** 에 값 **@mode** 을 지정하고 모니터 임계값 메트릭을 사용하지 않으려면 값 **2** 를 지정합니다.  
   
-##  <a name="RMO"></a> RMO(복제 관리 개체)  
+##  <a name="replication-management-objects-rmo"></a><a name="RMO"></a> RMO(복제 관리 개체)  
   
 #### <a name="to-monitor-a-subscription-to-a-merge-publication-at-the-subscriber"></a>구독자에서 병합 게시에 대한 구독을 모니터링하려면  
   
@@ -277,20 +268,13 @@ ms.locfileid: "62667249"
   
         |값|Description|  
         |-----------|-----------------|  
-        |1|
-  `expiration` - 트랜잭션 게시에 대한 구독의 만료가 임박했는지 모니터링합니다.|  
-        |2|
-  `latency` - 트랜잭션 게시에 대한 구독의 성능을 모니터링합니다.|  
-        |4|
-  `mergeexpiration` - 병합 게시에 대한 구독의 만료가 임박했는지 모니터링합니다.|  
-        |5|
-  `mergeslowrunduration` - 저대역폭(전화 접속) 연결을 통한 병합 동기화의 기간을 모니터링합니다.|  
-        |6|
-  `mergefastrunduration` - 고대역폭(LAN) 연결을 통한 병합 동기화의 기간을 모니터링합니다.|  
-        |7|
-  `mergefastrunspeed` - 고대역폭(LAN) 연결을 통한 병합 동기화의 동기화 속도를 모니터링합니다.|  
-        |8|
-  `mergeslowrunspeed` - 저대역폭(전화 접속) 연결을 통한 병합 동기화의 동기화 속도를 모니터링합니다.|  
+        |1|`expiration` - 트랜잭션 게시에 대한 구독의 만료가 임박했는지 모니터링합니다.|  
+        |2|`latency` - 트랜잭션 게시에 대한 구독의 성능을 모니터링합니다.|  
+        |4|`mergeexpiration` - 병합 게시에 대한 구독의 만료가 임박했는지 모니터링합니다.|  
+        |5|`mergeslowrunduration` - 저대역폭(전화 접속) 연결을 통한 병합 동기화의 기간을 모니터링합니다.|  
+        |6|`mergefastrunduration` - 고대역폭(LAN) 연결을 통한 병합 동기화의 기간을 모니터링합니다.|  
+        |7|`mergefastrunspeed` - 고대역폭(LAN) 연결을 통한 병합 동기화의 동기화 속도를 모니터링합니다.|  
+        |8|`mergeslowrunspeed` - 저대역폭(전화 접속) 연결을 통한 병합 동기화의 동기화 속도를 모니터링합니다.|  
   
     -   *enable* - <xref:System.Boolean> 값입니다.  
   

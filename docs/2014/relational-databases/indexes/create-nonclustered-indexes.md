@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3dc7c4b9b32ee872ec48e78ecb05a713f2cf8a12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62651492"
 ---
 # <a name="create-nonclustered-indexes"></a>비클러스터형 인덱스 만들기
@@ -30,19 +30,19 @@ ms.locfileid: "62651492"
   
 -   **시작하기 전 주의 사항:**  
   
-     [일반적인 구현 방법](#Implementations)  
+     [일반적인 구현](#Implementations)  
   
      [보안](#Security)  
   
--   **다음을 사용 하 여 비클러스터형 인덱스를 만듭니다.**  
+-   **비클러스터형 인덱스를 만들려면:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Implementations"></a> 일반적인 구현 방법  
+###  <a name="typical-implementations"></a><a name="Implementations"></a> 일반적인 구현 방법  
  비클러스터형 인덱스는 다음 방법으로 구현합니다.  
   
 -   **UNIQUE 제약 조건**  
@@ -57,12 +57,12 @@ ms.locfileid: "62651492"
   
      뷰에 클러스터형 고유 인덱스를 만든 후 비클러스터형 인덱스를 만들 수 있습니다. 자세한 내용은 [인덱싱된 뷰 만들기](../views/views.md)를 참조하세요.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-create-a-nonclustered-index-by-using-the-table-designer"></a>테이블 디자이너를 사용하여 비클러스터형 인덱스를 만들려면  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62651492"
   
 8.  **닫기**를 클릭합니다.  
   
-9. **파일** 메뉴에서_table_name_ **저장**을 클릭 합니다.  
+9. **파일** 메뉴에서 _table name_**저장**을 클릭합니다.  
   
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>개체 탐색기를 사용하여 비클러스터형 인덱스를 만들려면  
   
@@ -92,19 +92,19 @@ ms.locfileid: "62651492"
   
 3.  비클러스터형 인덱스를 만들 테이블을 확장합니다.  
   
-4.  **인덱스** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 인덱스**를 가리킨 다음, **비클러스터형 인덱스...** 를 선택합니다.  
+4.  **인덱스** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **새 인덱스**를 가리킨 다음 **비클러스터형 인덱스**...를 선택 합니다.  
   
 5.  **새 인덱스** 대화 상자의 **일반** 페이지에서 **인덱스 이름** 상자에 새 인덱스의 이름을 입력합니다.  
   
-6.  **인덱스 키 열** 아래에서 **추가...** 를 클릭합니다.  
+6.  **인덱스 키 열**아래에서 **추가 ...** 를 클릭 합니다.  
   
-7.  _Table_name_ **에서 열 선택**대화 상자에서 비클러스터형 인덱스에 추가할 테이블 열의 확인란을 선택 합니다.  
+7.  **table_name**_에서 열 선택_ 대화 상자에서 비클러스터형 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
   
 8.  **확인**을 클릭합니다.  
   
 9. **새 인덱스** 대화 상자에서 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-create-a-nonclustered-index-on-a-table"></a>테이블에 비클러스터형 인덱스를 만들려면  
   

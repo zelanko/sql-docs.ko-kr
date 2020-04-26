@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 790dd7e9199f511f434585c6b6741d0e09ab7d59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62472957"
 ---
 # <a name="automated-administration-tasks-sql-server-agent"></a>관리 태스크 자동화(SQL Server 에이전트)
-  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 관리 태스크를 자동화할 수 있습니다. 관리를 자동화하려면 예측 가능한 관리 태스크를 정의한 다음 각 태스크를 수행할 조건을 지정합니다. 자동화된 관리를 사용하여 일상적인 태스크와 이벤트를 처리하면 시간이 절약되므로 다른 관리 기능을 수행할 수 있습니다.  
+  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 관리 태스크를 자동화할 수 있습니다. 관리를 자동화하려면 예측 가능한 관리 태스크를 정의한 다음 각 태스크를 수행할 조건을 지정합니다. 자동화된 관리를 사용하여 일상적인 태스크와 이벤트를 처리하면 시간이 절약되므로 다른 관리 기능을 수행할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)  

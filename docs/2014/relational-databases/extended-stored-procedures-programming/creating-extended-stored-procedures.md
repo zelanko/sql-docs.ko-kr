@@ -16,16 +16,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0d0343113b350c48cbc42ec5b79bbd0b849f2860
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62512637"
 ---
 # <a name="creating-extended-stored-procedures"></a>확장 저장 프로시저 만들기
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 CLR 통합을 사용 하세요.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하십시오.  
   
  확장 저장 프로시저는 프로토타입이 다음과 같은 함수입니다.  
   
@@ -67,8 +67,7 @@ __declspec(dllexport) ULONG __GetXpVersion()
  확장 저장 프로시저 DLL이 __GetXpVersion()을 내보내지만 함수에서 반환하는 버전이 서버에 필요한 버전보다 낮을 경우 함수에서 반환한 버전과 서버에 필요한 버전을 알리는 경고 메시지가 오류 로그에 출력됩니다. 이 메시지가 표시 되 면 _GetXpVersion ()에서 \_잘못 된 값을 반환 하거나 이전 버전의 srv를 사용 하 여 컴파일하는 것입니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32 함수인 SetErrorMode는 확장 저장 프로시저 내에서 호출하지 않아야 합니다.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32 함수인 SetErrorMode는 확장 저장 프로시저 내에서 호출하지 않아야 합니다.  
   
  장기 실행 확장 저장 프로시저의 경우 연결이 끊기거나 일괄 처리가 중단될 경우 프로시저가 자동으로 종료될 수 있도록 주기적으로 srv_got_attention을 호출하는 것이 좋습니다.  
   

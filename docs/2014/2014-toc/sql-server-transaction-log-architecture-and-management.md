@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 2495b9487a633fff6c5214a07e589f58fafa5e61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62512766"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management"></a>SQL Server 트랜잭션 로그 아키텍처 및 관리
@@ -24,7 +24,7 @@ ms.locfileid: "62512766"
   각 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스에는 각 트랜잭션에 의해 적용된 모든 트랜잭션 및 데이터베이스 수정 내용을 기록하는 트랜잭션 로그가 있습니다. 트랜잭션 로그는 데이터베이스의 주요 구성 요소이며 시스템 오류가 발생할 경우 데이터베이스를 다시 일관된 상태로 만들려면 트랜잭션 로그가 필요할 수 있습니다. 이 지침에서는 트랜잭션 로그의 물리적 및 논리적 아키텍처에 대한 정보를 제공합니다. 아키텍처를 이해하면 트랜잭션 로그를 보다 효율적으로 관리할 수 있습니다.  
 
   
-##  <a name="Logical_Arch"></a> 트랜잭션 로그 논리 아키텍처  
+##  <a name="transaction-log-logical-architecture"></a><a name="Logical_Arch"></a>트랜잭션 로그 논리 아키텍처  
 
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 트랜잭션 로그는 로그 레코드 문자열처럼 논리적으로 작동합니다. 각 로그 레코드는 LSN(로그 시퀀스 번호)으로 식별됩니다. 각 새 로그 레코드는 LSN과 함께 로그의 논리적 끝에 작성되며 이때 LSN은 오름차순입니다. 로그 레코드는 작성된 순서대로 저장됩니다. 각 로그 레코드에는 자신이 속한 트랜잭션의 ID가 포함됩니다. 각 트랜잭션에서 트랜잭션과 관련된 모든 로그 레코드는 트랜잭션의 롤백 속도를 높이는 후방 포인터로 체인에 개별적으로 연결되어 있습니다.  
   
@@ -56,17 +56,15 @@ ms.locfileid: "62512766"
   
  롤백 작업도 기록됩니다. 각 트랜잭션은 트랜잭션 로그에 공간을 예약하여 명시적 롤백 문이나 오류로 인해 발생한 롤백을 지원하기에 충분한 로그 공간을 확보합니다. 예약된 공간의 크기는 트랜잭션에서 수행되는 작업에 따라 다르지만 일반적으로 각 작업을 기록하는 데 사용되는 공간의 크기와 같습니다. 이렇게 예약된 공간은 트랜잭션 완료 시 해제됩니다.  
   
- 마지막으로 작성 된 로그 레코드로의 성공적인 데이터베이스 차원의 롤백을 위해 반드시 있어야 하는 첫 번째 로그 레코드의 로그 파일 섹션을 로그의 활성 부분 또는 *활성 로그*라고 합니다. 로그의 이 섹션은 데이터베이스의 전체 복구를 수행하는 데 필요합니다. 활성 로그는 어떤 부분도 잘라낼 수 없습니다. 이 첫 번째 로그 레코드의 LSN(로그 시퀀스 번호)은 최소 복구 LSN(*MinLSN*) 이라고 합니다.  
+ 마지막으로 작성된 로그 레코드로의 성공적인 데이터베이스 차원의 롤백에 필요한 첫 번째 로그 레코드의 로그 파일 섹션을 로그의 활성 부분 또는 *활성 로그*라고 합니다. 로그의 이 섹션은 데이터베이스의 전체 복구를 수행하는 데 필요합니다. 활성 로그는 어떤 부분도 잘라낼 수 없습니다. 이 첫 번째 로그 레코드의 LSN(로그 시퀀스 번호)은 최소 복구 LSN(*MinLSN*)이라고 합니다.  
   
-##  <a name="physical_arch"></a> 트랜잭션 로그 물리 아키텍처  
+##  <a name="transaction-log-physical-architecture"></a><a name="physical_arch"></a> 트랜잭션 로그 물리 아키텍처  
 
  데이터베이스의 트랜잭션 로그는 하나 이상의 물리 파일에 매핑됩니다. 개념상으로 로그 파일은 로그 레코드의 문자열입니다. 실제로 로그 레코드의 시퀀스는 트랜잭션 로그를 구현하는 물리적 파일 집합에 효율적으로 저장됩니다. 데이터베이스마다 최소한 하나의 로그 파일이 있어야 합니다.  
   
- 
-  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 은 내부적으로 각 물리 로그 파일을 여러 개의 가상 로그 파일로 나눕니다. 가상 로그 파일의 크기는 고정되어 있지 않으며 물리 로그 파일에 대해 고정된 수의 가상 로그 파일이 있는 것도 아닙니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 은 로그 파일을 만들거나 확장할 때 동적으로 가상 로그 파일의 크기를 선택합니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 은 적은 수의 가상 파일을 유지하려고 합니다. 로그 파일 확장 후 가상 파일 크기는 기존 로그 크기와 새 파일 증가 크기를 합한 크기입니다. 관리자가 가상 로그 파일의 크기 또는 수를 구성하거나 설정할 수 없습니다.  
+ [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 은 내부적으로 각 물리 로그 파일을 여러 개의 가상 로그 파일로 나눕니다. 가상 로그 파일의 크기는 고정되어 있지 않으며 물리 로그 파일에 대해 고정된 수의 가상 로그 파일이 있는 것도 아닙니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 은 로그 파일을 만들거나 확장할 때 동적으로 가상 로그 파일의 크기를 선택합니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 은 적은 수의 가상 파일을 유지하려고 합니다. 로그 파일 확장 후 가상 파일 크기는 기존 로그 크기와 새 파일 증가 크기를 합한 크기입니다. 관리자가 가상 로그 파일의 크기 또는 수를 구성하거나 설정할 수 없습니다.  
   
- 작은 *size* 및 *growth_increment* 값으로 물리적 로그 파일을 정의하는 경우에만 가상 로그 파일이 시스템 성능에 영향을 줍니다. 
-  *size* 값은 로그 파일의 처음 크기이며 *growth_increment* 값은 공간이 새로 필요할 때마다 파일에 추가되는 공간 크기입니다. 수많은 작은 증가값으로 인해 로그 파일이 크게 증가하는 경우 가상 로그 파일이 많이 생성됩니다. 이로 인해 데이터베이스 시작뿐 아니라 로그 백업 및 복원 작업이 느려질 수 있습니다. 필요한 최종 크기에 가까운 *size* 값을 로그 파일에 할당하고 *growth_increment* 값을 비교적 크게 지정하는 것이 좋습니다. 이러한 매개 변수에 대한 자세한 내용은 [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)을 참조하세요.  
+ 작은 *size* 및 *growth_increment* 값으로 물리적 로그 파일을 정의하는 경우에만 가상 로그 파일이 시스템 성능에 영향을 줍니다. *size* 값은 로그 파일의 처음 크기이며 *growth_increment* 값은 공간이 새로 필요할 때마다 파일에 추가되는 공간 크기입니다. 수많은 작은 증가값으로 인해 로그 파일이 크게 증가하는 경우 가상 로그 파일이 많이 생성됩니다. 이로 인해 데이터베이스 시작뿐 아니라 로그 백업 및 복원 작업이 느려질 수 있습니다. 필요한 최종 크기에 가까운 *size* 값을 로그 파일에 할당하고 *growth_increment* 값을 비교적 크게 지정하는 것이 좋습니다. 이러한 매개 변수에 대한 자세한 내용은 [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)을 참조하세요.  
   
  트랜잭션 로그는 순환 파일입니다. 예를 들어 데이터베이스에 4개의 가상 로그 파일로 나뉜 물리 로그 파일이 한 개 있다고 가정합니다. 이 데이터베이스가 생성될 때 물리 로그 파일의 시작 부분에서 논리 로그 파일이 시작됩니다. 새 로그 레코드는 논리 로그의 끝 부분에 추가되며 물리 로그의 끝 방향으로 확장됩니다. 로그 잘림을 수행하면 모든 레코드가 MinLSN(최소 복구 로그 시퀀스 번호) 앞에 있는 가상 로그에 대한 공간이 확보됩니다. *MinLSN* 은 성공적인 데이터베이스 차원의 롤백에 필요한 가장 오래된 로그 레코드의 로그 시퀀스 번호입니다. 예제 데이터베이스의 트랜잭션 로그는 다음 그림의 로그와 유사합니다.  
   
@@ -104,16 +102,15 @@ ms.locfileid: "62512766"
   
  여러 요소로 인해 로그 잘림이 지연될 수 있습니다. 로그 잘림이 장시간 지연될 경우 트랜잭션 로그가 꽉 찰 수 있습니다. 자세한 내용은 [로그 잘림을 지연 시킬 수 있는 요소](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation) 를 참조 하 고 [전체 트랜잭션 로그 &#40;문제를 해결 SQL Server 오류 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)를 참조 하세요.  
   
-##  <a name="WAL"></a> 미리 쓰기 트랜잭션 로그  
+##  <a name="write-ahead-transaction-log"></a><a name="WAL"></a>미리 쓰기 트랜잭션 로그  
 
- 이 섹션에서는 데이터 수정 내용을 디스크에 기록할 때 미리 쓰기 트랜잭션 로그의 역할에 대해 설명합니다. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 WAL(미리 쓰기 로그)을 사용하여 연결된 로그 레코드가 디스크에 기록되기 전에는 어떠한 데이터 수정 내용도 디스크에 기록되지 않도록 합니다. 따라서 트랜잭션의 ACID 속성이 유지 관리됩니다.  
+ 이 섹션에서는 데이터 수정 내용을 디스크에 기록할 때 미리 쓰기 트랜잭션 로그의 역할에 대해 설명합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 WAL(미리 쓰기 로그)을 사용하여 연결된 로그 레코드가 디스크에 기록되기 전에는 어떠한 데이터 수정 내용도 디스크에 기록되지 않도록 합니다. 따라서 트랜잭션의 ACID 속성이 유지 관리됩니다.  
   
  미리 쓰기 로그 작동 방식을 이해하려면 수정된 데이터가 디스크에 기록되는 방법을 알아야 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 데이터를 검색해야 할 때 데이터 페이지를 읽어오는 버퍼 캐시를 유지 관리합니다. 페이지가 버퍼 캐시에서 수정될 때 페이지는 디스크에 바로 다시 기록되지 않고 대신 *더티*로 표시됩니다. 데이터 페이지는 물리적으로 디스크에 기록되기 전에 두 개 이상의 논리적 쓰기를 수행할 수 있습니다. 각 논리적 쓰기의 경우 트랜잭션 로그 레코드는 수정 사항을 기록하는 로그 캐시에 삽입됩니다. 로그 레코드는 관련된 더티 페이지가 버퍼 캐시에서 디스크로 제거되기 전에 디스크에 기록되어야 합니다. 검사점 프로세스는 주기적으로 버퍼 캐시에서 지정된 특정 데이터베이스의 페이지를 포함하는 버퍼를 검색한 다음 모든 더티 페이지를 디스크에 기록합니다. 검사점은 모든 더티 페이지가 디스크에 기록되었음을 확인하는 지점을 만들어 나중에 복구하는 동안 시간을 절약할 수 있습니다.  
   
  버퍼 캐시에 있는 수정된 데이터 페이지를 디스크에 쓰는 작업을 페이지 플러시라고 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에는 연결된 로그 레코드가 기록되기 전에 더티 페이지가 플러시되지 않도록 하는 논리가 있습니다. 로그 레코드는 트랜잭션이 커밋되면 디스크에 기록됩니다.  
   
-##  <a name="Backups"></a> 트랜잭션 로그 백업  
+##  <a name="transaction-log-backups"></a><a name="Backups"></a>트랜잭션 로그 백업  
 
  이 섹션에서는 트랜잭션 로그를 백업 및 복원하거나 적용하는 방법에 대한 개념을 설명합니다. 전체 및 대량 로그 복원 모델에서 데이터를 복구하려면 트랜잭션 로그를 정기적으로 백업(*로그 백업*)해야 합니다. 전체 백업이 실행되는 동안 로그를 백업할 수 있습니다. 복구 모델에 대한 자세한 내용은 [SQL Server 데이터베이스 백업 및 복원](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)을 참조하세요.  
   
@@ -137,7 +134,7 @@ ms.locfileid: "62512766"
 
  트랜잭션 로그에 대한 자세한 내용은 다음 기사 및 책을 참조하십시오.  
   
- [Paul Randall, "에서 SQL Server의 로깅 및 복구 이해](https://technet.microsoft.com/magazine/2009.02.logging.aspx)  
+ [Paul Randall, "SQL Server의 로깅 및 복구 이해"](https://technet.microsoft.com/magazine/2009.02.logging.aspx)  
   
  [Tony Davis 및 Gail Shaw 공저, "SQL Server 트랜잭션 로그 관리"](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   

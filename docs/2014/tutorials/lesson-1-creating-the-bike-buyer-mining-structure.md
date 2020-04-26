@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62678497"
 ---
 # <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>1단원: Bike Buyer 마이닝 구조 만들기
@@ -87,7 +87,7 @@ WITH HOLDOUT (<holdout specifier>)
   
 -   마이닝 구조를 만들기 위해 쿼리를 변경합니다.  
   
--   쿼리를 실행합니다.  
+-   쿼리 실행.  
   
 ## <a name="creating-the-query"></a>쿼리 만들기  
  첫 번째 단계는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 연결하고 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 새 DNX 쿼리를 만드는 것입니다.  
@@ -96,8 +96,7 @@ WITH HOLDOUT (<holdout specifier>)
   
 1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 엽니다.  
   
-2.  
-  **서버에 연결** 대화 상자에서 **서버 유형**으로 **Analysis Services**를 선택합니다. **서버 이름**에을 입력 `LocalHost`하거나이 단원에서 연결할 인스턴스의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이름을 입력 합니다. **연결**을 클릭합니다.  
+2.  **서버에 연결** 대화 상자에서 **서버 유형**으로 **Analysis Services**를 선택합니다. **서버 이름**에을 입력 `LocalHost`하거나이 단원에서 연결할 인스턴스의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이름을 입력 합니다. **연결**을 클릭합니다.  
   
 3.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭 하 고 **새 쿼리**를 가리킨 다음 **DMX** 를 클릭 하 여 **쿼리 편집기** 와 비어 있는 새 쿼리를 엽니다.  
   
@@ -114,7 +113,7 @@ WITH HOLDOUT (<holdout specifier>)
     [<mining structure>]   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     [Bike Buyer]  
@@ -126,7 +125,7 @@ WITH HOLDOUT (<holdout specifier>)
     <key column>   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     CustomerKey LONG KEY  
@@ -138,7 +137,7 @@ WITH HOLDOUT (<holdout specifier>)
     <mining structure columns>   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     [Age] LONG DISCRETIZED(Automatic,10),  
@@ -162,7 +161,7 @@ WITH HOLDOUT (<holdout specifier>)
     WITH HOLDOUT (holdout specifier>)  
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     WITH HOLDOUT (30 PERCENT or 1000 CASES)  
@@ -192,8 +191,7 @@ WITH HOLDOUT (<holdout specifier>)
   
     ```  
   
-6.  
-  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
+6.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
 7.  다른 이름 **으로 저장** 대화 상자에서 해당 폴더로 이동한 다음 파일 `Bike Buyer Structure.dmx`이름을로 합니다.  
   

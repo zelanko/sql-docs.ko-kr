@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c96977ac3b2ed36ab9709d2af86a0d9f79e8eb73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653887"
 ---
 # <a name="modify-a-sql-server-agent-master-job"></a>SQL Server 에이전트 마스터 작업 수정
@@ -32,6 +32,6 @@ ms.locfileid: "62653887"
   
  [Remove Steps from a SQL Server Agent Master Job](remove-steps-from-a-sql-server-agent-master-job.md)  
   
- [SQL Server 에이전트 마스터 작업과 연결 된 대상 서버&#40;s&#41; 수정](modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md)  
+ [SQL Server 에이전트 마스터 작업과 연관된 대상 서버 수정](modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md)  
   
   
