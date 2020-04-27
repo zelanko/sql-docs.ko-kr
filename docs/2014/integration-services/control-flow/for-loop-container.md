@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 991223c373113b465c3182f552e5f5d157efef9f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831613"
 ---
 # <a name="for-loop-container"></a>For 루프 컨테이너
@@ -38,7 +38,7 @@ ms.locfileid: "62831613"
   
  ![한 태스크를 4번 반복하는 For 루프 컨테이너](../media/ssis-forloop.gif "한 태스크를 4번 반복하는 For 루프 컨테이너")  
   
- 식은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식 이어야 합니다.  
+ 식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 유효한 식이어야 합니다.  
   
  초기화 식과 대입 식을 만들려면 대입 연산자(=)를 사용할 수 있습니다. 이 연산자는 Integration Services 식 문법에서 다른 용도로 지원되지 않으며 For 루프 컨테이너의 초기화 및 대입 식 유형에만 사용할 수 있습니다. 대입 연산자를 사용하는 식의 구문은 `@Var = <expression>`이어야 합니다. 여기서 **Var**은 런타임 변수이고 \<expression>은 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 식 구문의 규칙을 따르는 식입니다. 식은 변수, 리터럴 및 SSIS 식 문법에서 지원하는 모든 연산자와 함수를 포함할 수 있습니다. 변수의 데이터 형식으로 캐스팅할 수 있는 데이터 형식으로 식이 계산되어야 합니다.  
   
@@ -49,8 +49,7 @@ ms.locfileid: "62831613"
 ## <a name="configuration-of-the-for-loop-container"></a>For 루프 컨테이너 구성  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- 
-  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
 -   [For 루프 편집기](../for-loop-editor.md)  
   

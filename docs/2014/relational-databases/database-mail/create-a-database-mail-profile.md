@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 55eab0bbfacdde17ff69dd36a0641561695bc14d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62872209"
 ---
 # <a name="create-a-database-mail-profile"></a>데이터베이스 메일 프로필 만들기
@@ -26,83 +26,71 @@ ms.locfileid: "62872209"
   
 
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 조건  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
  프로필에 대한 데이터베이스 메일 계정을 하나 이상 만듭니다. 데이터베이스 메일 계정을 만드는 방법은 [데이터베이스 메일 계정 만들기](create-a-database-mail-account.md)를 참조하세요.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
  공개 프로필을 사용하여 **msdb** 데이터베이스에 액세스할 수 있는 모든 사용자는 해당 프로필을 사용하여 메일을 보낼 수 있습니다. 프라이빗 프로필은 사용자 또는 역할에 의해 사용될 수 있습니다. 프로필에 대한 액세스 권한을 역할에 부여하면 보다 쉽게 유지 관리되는 아키텍처가 생성됩니다. 메일을 보내려면 **msdb** 데이터베이스에서 **DatabaseMailUserRole** 의 멤버여야 하며 적어도 하나 이상의 데이터베이스 메일 프로필에 액세스할 수 있어야 합니다.  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  프로필 계정을 만들고 저장 프로시저를 실행하는 사용자는 sysadmin 고정 서버 역할의 멤버여야 합니다.  
   
 
   
-##  <a name="SSMSProcedure"></a>데이터베이스 메일 구성 마법사 사용  
+##  <a name="using-database-mail-configuration-wizard"></a><a name="SSMSProcedure"></a> 데이터베이스 메일 구성 마법사 사용  
  **데이터베이스 메일 프로필을 만들려면**  
   
 -   개체 탐색기에서 데이터베이스 메일을 구성할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결한 다음 서버 트리를 확장합니다.  
   
--   **관리** 노드를 확장 합니다.  
+-   **관리** 노드를 확장합니다.  
   
 -   데이터베이스 메일을 두 번 클릭하여 데이터베이스 메일 구성 마법사를 엽니다.  
   
 -   **구성 태스크 선택** 페이지에서 **데이터베이스 메일 계정 및 프로필 관리** 옵션을 선택 하 고 **다음**을 클릭 합니다.  
   
--   
-  **프로필 및 계정 관리** 페이지에서 **새 프로필 만들기** 옵션을 선택하고 **다음**을 클릭합니다.  
+-   **프로필 및 계정 관리** 페이지에서 **새 프로필 만들기** 옵션을 선택하고 **다음**을 클릭합니다.  
   
--   
-  **새 프로필** 페이지에서 프로필 이름과 설명을 지정하고, 프로필에 포함할 계정을 추가하고, **다음**을 클릭합니다.  
+-   **새 프로필** 페이지에서 프로필 이름과 설명을 지정하고, 프로필에 포함할 계정을 추가하고, **다음**을 클릭합니다.  
   
--   
-  **마법사 완료** 페이지에서 수행할 동작을 검토하고 **마침** 을 클릭하여 새 프로필 만들기를 완료합니다.  
+-   **마법사 완료** 페이지에서 수행할 동작을 검토하고 **마침** 을 클릭하여 새 프로필 만들기를 완료합니다.  
   
--   **데이터베이스 메일 개인 프로필을 구성 하려면:**  
+-   **데이터베이스 메일 프라이빗 프로필을 구성하려면**  
   
     -   데이터베이스 메일 구성 마법사를 엽니다.  
   
-    -   
-  **구성 태스크 선택** 페이지에서 **데이터베이스 메일 계정 및 프로필 관리** 옵션을 선택하고 **다음**을 클릭합니다.  
+    -   **구성 태스크 선택** 페이지에서 **데이터베이스 메일 계정 및 프로필 관리** 옵션을 선택하고 **다음**을 클릭합니다.  
   
-    -   
-  **프로필 및 계정 관리** 페이지에서 **프로필 보안 관리** 옵션을 선택하고 **다음**을 클릭합니다.  
+    -   **프로필 및 계정 관리** 페이지에서 **프로필 보안 관리** 옵션을 선택하고 **다음**을 클릭합니다.  
   
-    -   
-  **프라이빗 프로필** 탭에서 구성하려는 프로필에 대한 확인란을 선택하고 **다음**을 클릭합니다.  
+    -   **프라이빗 프로필** 탭에서 구성하려는 프로필에 대한 확인란을 선택하고 **다음**을 클릭합니다.  
   
-    -   
-  **마법사 완료** 페이지에서 수행할 동작을 검토하고 **마침** 을 클릭하여 프로필 구성을 완료합니다.  
+    -   **마법사 완료** 페이지에서 수행할 동작을 검토하고 **마침** 을 클릭하여 프로필 구성을 완료합니다.  
   
--   **데이터베이스 메일 공개 프로필을 구성 하려면:**  
+-   **데이터베이스 메일 공개 프로필을 구성하려면**  
   
     -   데이터베이스 메일 구성 마법사를 엽니다.  
   
-    -   
-  **구성 태스크 선택** 페이지에서 **데이터베이스 메일 계정 및 프로필 관리** 옵션을 선택하고 **다음**을 클릭합니다.  
+    -   **구성 태스크 선택** 페이지에서 **데이터베이스 메일 계정 및 프로필 관리** 옵션을 선택하고 **다음**을 클릭합니다.  
   
-    -   
-  **프로필 및 계정 관리** 페이지에서 **프로필 보안 관리** 옵션을 선택하고 **다음**을 클릭합니다.  
+    -   **프로필 및 계정 관리** 페이지에서 **프로필 보안 관리** 옵션을 선택하고 **다음**을 클릭합니다.  
   
-    -   
-  **공개 프로필** 탭에서 구성하려는 프로필에 대한 확인란을 선택하고 **다음**을 클릭합니다.  
+    -   **공개 프로필** 탭에서 구성하려는 프로필에 대한 확인란을 선택하고 **다음**을 클릭합니다.  
   
-    -   
-  **마법사 완료** 페이지에서 수행할 동작을 검토하고 **마침** 을 클릭하여 프로필 구성을 완료합니다.  
+    -   **마법사 완료** 페이지에서 수행할 동작을 검토하고 **마침** 을 클릭하여 프로필 구성을 완료합니다.  
   
 
   
 ## <a name="using-transact-sql"></a>Transact-SQL 사용  
   
-###  <a name="PrivateProfile"></a>데이터베이스 메일 개인 프로필을 만들려면  
+###  <a name="to-create-a-database-mail-private-profile"></a><a name="PrivateProfile"></a>데이터베이스 메일 개인 프로필을 만들려면  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
   
 -   새 프로필을 만들려면 시스템 저장 프로시저 [sysmail_add_profile_sp&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql)를 다음과 같이 실행합니다.  
   
-     **EXECUTEmsdb. sysmail_add_profile_sp**  
+     **EXECUTEmsdb.dbo.sysmail_add_profile_sp**  
   
      *@profile_name*= '*프로필 이름*'  
   
@@ -112,7 +100,7 @@ ms.locfileid: "62872209"
   
 -   각 계정에 대해 저장 프로시저 [sysmail_add_profileaccount_sp&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql)를 다음과 같이 실행합니다.  
   
-     **EXECUTEmsdb. sysmail_add_profileaccount_sp**  
+     **EXECUTEmsdb.dbo.sysmail_add_profileaccount_sp**  
   
      *@profile_name*= '*프로필 이름*'  
   
@@ -124,7 +112,7 @@ ms.locfileid: "62872209"
   
 -   이 프로필을 사용하여 메일을 보내는 각 데이터베이스 역할 또는 사용자에게 프로필에 대한 액세스 권한을 부여합니다. 이렇게 하려면 저장 프로시저 [sysmail_add_principalprofile_sp&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql)를 다음과 같이 실행합니다.  
   
-     **EXECUTEmsdb. sysmail_add_principalprofile_sp**  
+     **EXECUTEmsdb.sysmail_add_principalprofile_sp**  
   
      *@profile_name*= '*프로필 이름*'  
   
@@ -166,14 +154,13 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
  
   
-###  <a name="PublicProfile"></a>데이터베이스 메일 공개 프로필을 만들려면  
+###  <a name="to-create-a-database-mail-public-profile"></a><a name="PublicProfile"></a>데이터베이스 메일 공개 프로필을 만들려면  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
   
 -   새 프로필을 만들려면 시스템 저장 프로시저 [sysmail_add_profile_sp&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql)를 다음과 같이 실행합니다.  
   
-     **EXECUTEmsdb. sysmail_add_profile_sp**  
+     **EXECUTEmsdb.dbo.sysmail_add_profile_sp**  
   
      *@profile_name*= '*프로필 이름*'  
   
@@ -183,7 +170,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
 -   각 계정에 대해 저장 프로시저 [sysmail_add_profileaccount_sp&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql)를 다음과 같이 실행합니다.  
   
-     **EXECUTEmsdb. sysmail_add_profileaccount_sp**  
+     **EXECUTEmsdb.dbo.sysmail_add_profileaccount_sp**  
   
      *@profile_name*= '*프로필 이름*'  
   
@@ -195,7 +182,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
 -   공용 액세스를 허용하려면 저장 프로시저 [sysmail_add_principalprofile_sp&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql)를 다음과 같이 실행합니다.  
   
-     **EXECUTEmsdb. sysmail_add_principalprofile_sp**  
+     **EXECUTEmsdb.sysmail_add_principalprofile_sp**  
   
      *@profile_name*= '*프로필 이름*'  
   

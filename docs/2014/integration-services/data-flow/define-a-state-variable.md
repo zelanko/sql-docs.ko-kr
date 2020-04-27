@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b0dcc3c1709943207834aab6ef4b39453b2d89d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62827562"
 ---
 # <a name="define-a-state-variable"></a>상태 변수 정의
@@ -37,7 +37,7 @@ ms.locfileid: "62827562"
 |`<ir-start>`|초기 로드가 시작되기 직전 변경 내용의 LSN입니다.|  
 |`<ir-end>`|초기 로드가 끝난 직후 변경 내용의 LSN입니다.|  
 |`TS`|이렇게 하면 마지막 CDC 상태 업데이트의 타임 스탬프가 표시됩니다.|  
-|**\<timestamp>**|System.DateTime.UtcNow 속성인 64비트의 10진수 표현입니다.|  
+|**\<타임 스탬프>**|System.DateTime.UtcNow 속성인 64비트의 10진수 표현입니다.|  
 |`ER`|마지막 작업이 실패했을 때 표시되며 오류의 원인에 대한 간단한 설명이 포함되어 있습니다. 이 구성 요소가 있으면 항상 마지막에 표시됩니다.|  
 |`<short-error-text>`|간단한 오류 설명입니다.|  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62827562"
   
  다음 표에는 가능한 CDC 상태 값에 대한 설명이 나와 있습니다.  
   
-|시스템 상태|Description|  
+|시스템 상태|설명|  
 |-----------|-----------------|  
 |(INITIAL)|현재 CDC 그룹에서 패키지가 실행되기 전의 초기 상태입니다. CDC 상태가 비어 있을 때의 상태이기도 합니다.|  
 |ILSTART(초기 로드 시작)|CDC 제어 태스크에 대한 `MarkInitialLoadStart` 작업 호출 이후 초기 로드 패키지를 시작할 때의 상태입니다.|  
@@ -85,7 +85,7 @@ ms.locfileid: "62827562"
  자동 상태 지속과 함께 CDC 제어 태스크를 사용하지 않는 경우에는 패키지가 마지막으로 실행되었을 때 변수 값이 저장된 영구 스토리지에서 해당 값을 로드하고 현재 처리 범위에 대한 처리가 완료될 때 영구 스토리지에 다시 써야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [CDC Control Task](../control-flow/cdc-control-task.md)   
+ [CDC 제어 태스크](../control-flow/cdc-control-task.md)   
  [CDC 제어 태스크 편집기](../cdc-control-task-editor.md)  
   
   

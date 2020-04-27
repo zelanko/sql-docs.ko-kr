@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b7cef1e64ab9c499c52ac3bbc0364a05bfcc812
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62829479"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Master 저장 프로시저 전송 태스크
@@ -62,10 +62,9 @@ ms.locfileid: "62829479"
 ## <a name="configuration-of-the-transfer-master-stored-procedures-task"></a>Master 저장 프로시저 전송 태스크 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [Master 저장 프로시저 전송 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [master 저장 프로시저 전송 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [master 저장 프로시저 전송 태스크 편집기&#40저장 프로시저 페이지&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
   
@@ -84,7 +83,7 @@ ms.locfileid: "62829479"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 개체 전송 태스크](transfer-sql-server-objects-task.md)   
- [Integration Services 태스크](integration-services-tasks.md)   
+ [작업 Integration Services](integration-services-tasks.md)   
  [제어 흐름](control-flow.md)  
   
   

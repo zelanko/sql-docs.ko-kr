@@ -12,14 +12,13 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 226f9d37e9a65eac795b2cf6644394dae318e227
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62837478"
 ---
 # <a name="microsoft-sql-server-privacy-statement"></a>Microsoft SQL Server 개인 정보 취급 방침
-  
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 사용자 데이터 컬렉션 구성 요소에 대한 자세한 내용은 [SQL Server 개인 정보 취급 방침](https://go.microsoft.com/fwlink/?LinkID=282418)을 참조하십시오.  
   
   

@@ -17,17 +17,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0a895fd1dc3fe51296a110902fb1dd4c27d3d5a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831902"
 ---
 # <a name="data-profiling-task"></a>데이터 프로파일링 태스크
   데이터 프로파일링 태스크는 사용자가 데이터 원본에 익숙해지고 데이터에서 해결해야 할 문제를 식별하는 데 도움이 되는 다양한 프로필을 계산합니다.  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 내에 있는 데이터 프로파일링 태스크를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 저장된 데이터를 프로파일링하고 잠재적인 데이터 품질 문제를 식별할 수 있습니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 내에 있는 데이터 프로파일링 태스크를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 저장된 데이터를 프로파일링하고 잠재적인 데이터 품질 문제를 식별할 수 있습니다.  
   
 > [!NOTE]  
 >  이 항목에서는 데이터 프로파일링 작업의 기능 및 요구 사항에 대해서만 설명합니다. 데이터 프로파일링 태스크 사용 방법에 대한 자세한 내용은 [데이터 프로파일링 태스크 및 뷰어](data-profiling-task-and-viewer.md)섹션을 참조하세요.  
@@ -76,18 +75,12 @@ ms.locfileid: "62831902"
 |-------------|------------------------|  
 |ColumnStatisticsProfile|숫자 형식 또는 `datetime` 형식(`mean` 열에 대해 `stddev` 및 `datetime`는 안 됨)|  
 |ColumnNullRatioProfile|모든 열**|  
-|ColumnValueDistributionProfile|
-  `integer` 형식, `char` 형식 및 `datetime` 형식의 열|  
-|ColumnLengthDistributionProfile|
-  `char` 형식의 열|  
-|ColumnPatternProfile|
-  `char` 형식의 열|  
-|CandidateKeyProfile|
-  `integer` 형식, `char` 형식 및 `datetime` 형식의 열|  
-|FunctionalDependencyProfile|
-  `integer` 형식, `char` 형식 및 `datetime` 형식의 열|  
-|InclusionProfile|
-  `integer` 형식, `char` 형식 및 `datetime` 형식의 열|  
+|ColumnValueDistributionProfile|`integer` 형식, `char` 형식 및 `datetime` 형식의 열|  
+|ColumnLengthDistributionProfile|`char` 형식의 열|  
+|ColumnPatternProfile|`char` 형식의 열|  
+|CandidateKeyProfile|`integer` 형식, `char` 형식 및 `datetime` 형식의 열|  
+|FunctionalDependencyProfile|`integer` 형식, `char` 형식 및 `datetime` 형식의 열|  
+|InclusionProfile|`integer` 형식, `char` 형식 및 `datetime` 형식의 열|  
   
  \*유효한 데이터 형식에 대 한 이전 `integer`표에서, `char` `datetime`, 및 `numeric` 형식에는 다음과 같은 특정 데이터 형식이 포함 됩니다.  
   
@@ -111,9 +104,9 @@ ms.locfileid: "62831902"
 ## <a name="features-of-the-data-profiling-task"></a>데이터 프로파일링 태스크의 기능  
  데이터 프로파일링 태스크는 다음과 같은 편리한 구성 옵션을 제공합니다.  
   
--   **와일드 카드 열** 프로필 요청을 구성 하는 경우 태스크는 열 이름 대신 **(\*)** 와일드 카드를 허용 합니다. 이 기능을 통해 구성을 간편히 수행하고 생소한 데이터의 특성을 보다 쉽게 검색할 수 있습니다. 태스크는 실행될 때 해당 데이터 형식을 가진 모든 열을 프로파일링합니다.  
+-   **와일드카드 열** 프로필 요청을 구성하는 경우 태스크는 열 이름 대신 **(\*)** 와일드카드를 허용합니다. 이 기능을 통해 구성을 간편히 수행하고 생소한 데이터의 특성을 보다 쉽게 검색할 수 있습니다. 태스크는 실행될 때 해당 데이터 형식을 가진 모든 열을 프로파일링합니다.  
   
--   **빠른 프로필** 빠른 프로필을 선택 하 여 작업을 신속 하 게 구성할 수 있습니다. 빠른 프로필은 모든 기본 프로필과 기본 설정을 사용하여 테이블 또는 뷰를 프로파일링합니다.  
+-   **빠른 프로필** 빠른 프로필을 선택하여 신속히 태스크를 구성할 수 있습니다. 빠른 프로필은 모든 기본 프로필과 기본 설정을 사용하여 테이블 또는 뷰를 프로파일링합니다.  
   
 ## <a name="custom-logging-messages-available-on-the-data-profililng-task"></a>데이터 프로파일링 태스크에 사용할 수 있는 사용자 지정 로깅 메시지  
  다음 표에서는 데이터 프로파일링 태스크에 대한 사용자 지정 로그 항목을 나열합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../performance/integration-services-ssis-logging.md) 및 [로깅할 메시지 사용자 지정](../custom-messages-for-logging.md)을 참조하세요.  
@@ -123,7 +116,7 @@ ms.locfileid: "62831902"
 |**DataProfilingTaskTrace**|태스크 상태에 대한 설명 정보를 제공합니다. 메시지에는 다음 정보가 포함됩니다.<br /><br /> 처리 요청 시작<br /><br /> 쿼리 시작<br /><br /> 쿼리 종료<br /><br /> 계산 요청 마침|  
   
 ## <a name="output-and-its-schema"></a>출력 및 스키마  
- 데이터 프로파일링 태스크는 선택한 프로필을 DataProfile.xsd 스키마에 따라 구조화된 XML로 출력합니다. 이 XML을 파일 또는 패키지 변수에 저장하도록 지정할 수 있습니다. 이 스키마는에서 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)온라인으로 볼 수 있습니다. 웹 페이지에서 스키마를 로컬 복사본으로 저장할 수 있습니다. 그런 다음 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 또는 다른 스키마 편집기, XML 편집기나 메모장과 같은 텍스트 편집기에서 스키마의 로컬 복사본을 볼 수 있습니다.  
+ 데이터 프로파일링 태스크는 선택한 프로필을 DataProfile.xsd 스키마에 따라 구조화된 XML로 출력합니다. 이 XML을 파일 또는 패키지 변수에 저장하도록 지정할 수 있습니다. 이 스키마는 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)에서 온라인으로 볼 수 있습니다. 웹 페이지에서 스키마를 로컬 복사본으로 저장할 수 있습니다. 그런 다음 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 또는 다른 스키마 편집기, XML 편집기나 메모장과 같은 텍스트 편집기에서 스키마의 로컬 복사본을 볼 수 있습니다.  
   
  데이터 품질 정보에 대한 이 스키마는 다음과 같은 경우 유용할 수 있습니다.  
   
@@ -131,7 +124,7 @@ ms.locfileid: "62831902"
   
 -   데이터 품질 정보를 사용하는 사용자 지정 도구 빌드  
   
- 대상 네임 스페이스는 스키마에서로 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)식별 됩니다.  
+ 대상 네임스페이스는 스키마에서 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)로 식별됩니다.  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>패키지 조건부 워크플로의 출력  
  데이터 프로파일링 구성 요소에는 데이터 프로파일링 태스크의 출력을 기반으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 워크플로에 조건부 논리를 구현하기 위한 기본 제공 기능이 없습니다. 그러나 이 논리는 스크립트 태스크를 사용하여 최소한의 프로그래밍 작업으로 손쉽게 추가할 수 있습니다. 이 코드는 XML 출력을 대상으로 XPath 쿼리를 수행한 다음 그 결과를 패키지 변수로 저장합니다. 스크립트 태스크를 후속 태스크에 연결하는 선행 제약 조건은 식을 사용하여 워크플로를 확인할 수 있습니다. 예를 들어 스크립트 태스크는 열에서 특정 임계값을 초과하는 null 값의 비율을 탐지합니다. 이 경우 패키지를 중단하면 문제가 계속되기 전에 해결할 수 있습니다.  
@@ -140,27 +133,25 @@ ms.locfileid: "62831902"
  데이터 프로파일링 태스크는 **데이터 프로파일링 태스크 편집기**를 사용하여 구성합니다. 이 편집기에는 다음과 같은 두 개의 페이지가 있습니다.  
   
  [일반 페이지](../general-page-of-integration-services-designers-options.md)  
- 
-  **일반** 페이지에서는 출력 파일 또는 변수를 지정합니다. 또한 **빠른 프로필**을 선택하여 기본 설정으로 신속히 태스크를 구성, 프로필을 컴퓨팅할 수 있습니다. 자세한 내용은 [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](data-profiling-task.md)을 참조하세요.  
+ **일반** 페이지에서는 출력 파일 또는 변수를 지정합니다. 또한 **빠른 프로필**을 선택하여 기본 설정으로 신속히 태스크를 구성, 프로필을 컴퓨팅할 수 있습니다. 자세한 내용은 [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](data-profiling-task.md)을 참조하세요.  
   
  [프로필 요청 페이지](data-profiling-task-editor-profile-requests-page.md)  
- 
-  **프로필 요청** 페이지에서는 데이터 원본을 지정하고 컴퓨팅할 데이터 프로필을 선택 및 구성할 수 있습니다. 구성 가능한 여러 프로필에 대한 자세한 내용은 다음 항목을 참조하십시오.  
+ **프로필 요청** 페이지에서는 데이터 원본을 지정하고 컴퓨팅할 데이터 프로필을 선택 및 구성할 수 있습니다. 구성 가능한 여러 프로필에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   [후보 키 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [후보 키 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [열 길이 분포 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [열 길이 분포 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [열 Null 비율 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [열 Null 비율 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [열 패턴 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [열 패턴 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [열 통계 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [열 통계 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [열 값 분포 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [열 값 분포 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [함수 종속성 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [함수 종속성 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [값 포함 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [값 포함 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
   

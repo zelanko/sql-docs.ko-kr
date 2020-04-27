@@ -15,28 +15,25 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9177dceefb03617a1837f7f051fb52aa805f33aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833756"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Analysis Services 연결 관리자 추가 대화 상자 UI 참조
-  
   **Analysis Services 연결 관리자 추가** 대화 상자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 실행하는 서버에 대한 연결을 만들거나 연결 속성을 편집할 수 있습니다.  
   
  Analysis Services 연결 관리자에 대한 자세한 내용은 [Analysis Services Connection Manager](analysis-services-connection-manager.md)를 참조하십시오.  
   
 ## <a name="options"></a>옵션  
- **Analysis Services를 실행 하는 컴퓨터에 대 한 연결을 만듭니다.**  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스를 실행하는 서버에 대한 기본 연결을 사용하거나 **편집**을 클릭하여 새 연결을 만듭니다.  
+ **Analysis Services를 실행하는 컴퓨터에 대한 연결 만들기**  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스를 실행하는 서버에 대한 기본 연결을 사용하거나 **편집**을 클릭하여 새 연결을 만듭니다.  
   
  **편집**  
- 
-  **연결 관리자** 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스를 실행하는 서버에 대한 연결을 만들거나 연결 속성을 편집할 수 있습니다.  
+ **연결 관리자** 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스를 실행하는 서버에 대한 연결을 만들거나 연결 속성을 편집할 수 있습니다.  
   
- **이 솔루션의 Analysis Services 프로젝트에 대 한 연결을 만듭니다.**  
+ **이 솔루션의 Analysis Services 프로젝트에 대한 연결 만들기**  
  연결에서 열려 있는 솔루션의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 사용하도록 지정합니다.  
   
 > [!NOTE]  

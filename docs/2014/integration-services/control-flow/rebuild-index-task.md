@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9e89c081c1c543c198a827955ab4865709ead391
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830427"
 ---
 # <a name="rebuild-index-task"></a>인덱스 다시 작성 태스크
@@ -59,7 +59,7 @@ ms.locfileid: "62830427"
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법에 대한 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](../set-the-properties-of-a-task-or-container.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Integration Services 태스크](integration-services-tasks.md)   
+ [작업 Integration Services](integration-services-tasks.md)   
  [제어 흐름](control-flow.md)  
   
   

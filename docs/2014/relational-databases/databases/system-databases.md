@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 916fd6d996a1a5270173d290c61f262ddf3f797b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871130"
 ---
 # <a name="system-databases"></a>시스템 데이터베이스
@@ -34,22 +34,17 @@ ms.locfileid: "62871130"
 |[tempdb 데이터베이스](tempdb-database.md)|임시 개체나 중간 결과 집합을 보관하기 위한 작업 영역입니다.|  
   
 ## <a name="modifying-system-data"></a>시스템 데이터 수정  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 사용자가 시스템 테이블, 시스템 저장 프로시저 및 카탈로그 뷰와 같은 시스템 개체의 정보를 직접 업데이트할 수 없습니다. 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 사용자가 시스템을 완전히 관리하고 데이터베이스의 모든 사용자와 개체를 관리하는 데 사용할 수 있는 완전한 관리 도구 집합을 제공합니다. 여기에는 다음과 같은 옵션이 포함됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 사용자가 시스템 테이블, 시스템 저장 프로시저 및 카탈로그 뷰와 같은 시스템 개체의 정보를 직접 업데이트할 수 없습니다. 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 사용자가 시스템을 완전히 관리하고 데이터베이스의 모든 사용자와 개체를 관리하는 데 사용할 수 있는 완전한 관리 도구 집합을 제공합니다. 이러한 요구 사항은 다음과 같습니다.  
   
--   
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]등의 관리 유틸리티  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]등의 관리 유틸리티  
   
 -   SQL-SMO API. 이 도구를 통해 프로그래머는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 관리할 수 있는 완전한 기능을 애플리케이션에 포함할 수 있습니다.  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 및 저장 프로시저. 시스템 저장 프로시저와 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 문을 사용할 수 있습니다.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 및 저장 프로시저. 시스템 저장 프로시저와 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 문을 사용할 수 있습니다.  
   
- 이러한 관리 도구는 시스템 개체의 변경 내용으로부터 애플리케이션을 보호합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 새 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 새로 추가되는 기능을 지원하기 위해 시스템 테이블을 변경해야 하는 경우가 있습니다. 시스템 테이블을 직접 참조하는 SELECT 문을 실행하는 애플리케이션은 대개 시스템 테이블의 이전 형식을 기준으로 합니다. 사이트는 시스템 테이블에서 선택되는 애플리케이션을 다시 작성해야만 새 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 업그레이드할 수 있습니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 시스템 저장 프로시저, DDL 및 SQL-SMO 게시 인터페이스를 고려하며 이러한 인터페이스와 이전 버전과의 호환성을 유지합니다.  
+ 이러한 관리 도구는 시스템 개체의 변경 내용으로부터 애플리케이션을 보호합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 새 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 새로 추가되는 기능을 지원하기 위해 시스템 테이블을 변경해야 하는 경우가 있습니다. 시스템 테이블을 직접 참조하는 SELECT 문을 실행하는 애플리케이션은 대개 시스템 테이블의 이전 형식을 기준으로 합니다. 사이트는 시스템 테이블에서 선택되는 애플리케이션을 다시 작성해야만 새 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 업그레이드할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 시스템 저장 프로시저, DDL 및 SQL-SMO 게시 인터페이스를 고려하며 이러한 인터페이스와 이전 버전과의 호환성을 유지합니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 시스템의 작업을 수정할 수 있기 때문에 시스템 테이블에 정의된 트리거는 지원하지 않습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 시스템의 작업을 수정할 수 있기 때문에 시스템 테이블에 정의된 트리거는 지원하지 않습니다.  
   
 > [!NOTE]  
 >  시스템 데이터베이스는 UNC 공유 디렉터리에 있을 수 없습니다.  
@@ -65,8 +60,7 @@ ms.locfileid: "62871130"
   
 -   ADO, OLE DB, ODBC 등의 애플리케이션에 사용되는 데이터 API의 카탈로그 함수, 메서드, 특성 또는 속성  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 시스템 저장 프로시저 및 기본 제공 함수  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 시스템 저장 프로시저 및 기본 제공 함수  
   
 ## <a name="related-tasks"></a>관련 작업  
  [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41;](../backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  

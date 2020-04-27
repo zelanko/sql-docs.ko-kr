@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62872057"
 ---
 # <a name="contained-database-collations"></a>포함된 데이터베이스 데이터 정렬
@@ -85,8 +85,7 @@ JOIN #T2
   
  같음 연산에서 "Latin1_General_100_CI_AS_KS_WS_SC"와 "Chinese_Simplified_Pinyin_100_CI_AS" 사이의 데이터 정렬 충돌을 해결할 수 없습니다.  
   
- 임시 테이블에 대해 명시적으로 데이터 정렬을 수행하여 이 문제를 해결할 수 있습니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 `DATABASE_DEFAULT` 절에 제공되는 `COLLATE` 키워드를 사용하면 편리합니다.  
+ 임시 테이블에 대해 명시적으로 데이터 정렬을 수행하여 이 문제를 해결할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 `DATABASE_DEFAULT` 절에 제공되는 `COLLATE` 키워드를 사용하면 편리합니다.  
   
 ```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1387b6321ace59ec8a0c13ed03444553f4adf85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871920"
 ---
 # <a name="drop-a-database-snapshot-transact-sql"></a>데이터베이스 스냅샷 삭제(Transact-SQL)
@@ -26,10 +26,10 @@ ms.locfileid: "62871920"
   
 ## <a name="security"></a>보안  
   
-###  <a name="Permissions"></a> 권한  
+###  <a name="permissions"></a><a name="Permissions"></a> 권한  
  DROP DATABASE 권한을 가진 사용자는 누구든지 데이터베이스 스냅샷을 삭제할 수 있습니다.  
   
-##  <a name="TsqlProcedure"></a> 데이터베이스 스냅샷을 삭제하는 방법(Transact-SQL 사용)  
+##  <a name="how-to-drop-a-database-snapshot-using-transact-sql"></a><a name="TsqlProcedure"></a> 데이터베이스 스냅샷을 삭제하는 방법(Transact-SQL 사용)  
  **데이터베이스 스냅샷을 삭제하려면**  
   
 1.  삭제할 데이터베이스 스냅샷을 확인합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 데이터베이스의 스냅샷을 확인할 수 있습니다. 자세한 내용은 [View a Database Snapshot &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "62871920"
   
      여기서 *database_snapshot_name* 은 삭제할 데이터베이스 스냅샷의 이름입니다.  
   
-####  <a name="TsqlExample"></a> 예(Transact-SQL)  
+####  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  이 예에서는 원본 데이터베이스에 영향을 주지 않고 SalesSnapshot0600이라는 데이터베이스 스냅샷을 삭제합니다.  
   
 ```  
@@ -52,7 +52,7 @@ DROP DATABASE SalesSnapshot0600 ;
 > [!NOTE]  
 >  데이터베이스 스냅샷이 사용하는 스파스 파일에 대한 자세한 내용은 [데이터베이스 스냅샷&#40;SQL Server&#41;](database-snapshots-sql-server.md)에서 데이터베이스의 스냅샷을 확인할 수 있습니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [데이터베이스 스냅샷 만들기&#40;Transact-SQL&#41;](create-a-database-snapshot-transact-sql.md)  
   

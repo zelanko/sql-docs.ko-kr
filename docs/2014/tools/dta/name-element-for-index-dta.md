@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fbf267591ccd85b31bd8436a773e2337e292d0b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62866218"
 ---
 # <a name="name-element-for-index-dta"></a>Index의 Name 요소(DTA)
@@ -37,8 +37,7 @@ ms.locfileid: "62866218"
   
 |특성|Description|  
 |--------------------|-----------------|  
-|**데이터 형식 및 길이**|
-  `string`, 길이 제한 없음|  
+|**데이터 형식 및 길이**|`string`, 길이 제한 없음|  
 |**기본값**|없음|  
 |**발생 빈도**|각 `Index` 요소에 한 번만 지정해야 합니다.|  
   

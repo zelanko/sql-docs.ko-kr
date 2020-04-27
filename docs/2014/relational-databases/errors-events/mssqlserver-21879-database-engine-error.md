@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 98bfedce41d05a613fe47941b86cfa3fa176ee5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62869190"
 ---
 # <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
@@ -33,8 +33,7 @@ ms.locfileid: "62869190"
 |메시지 텍스트|%d 오류로 인해 원래 게시자 '%s' 및 게시자 데이터베이스 '%s'의 리디렉션된 서버 '%s'을(를) 쿼리하여 원격 서버 이름을 확인할 수 없습니다(오류 메시지 '%s').|  
   
 ## <a name="explanation"></a>설명  
- 
-  `sp_validate_redirected_publisher`는 원격 서버의 이름을 검색하기 위해 자체적으로 만든 임시 연결된 서버를 사용하여 리디렉션된 게시자에 연결합니다. 오류 21879는 연결된 서버 쿼리에 실패한 경우에 반환됩니다. 원격 서버 이름 요청을 위한 호출은 일반적으로 임시 연결된 서버를 처음 사용할 때 이루어지므로 연결 문제가 있을 경우 가장 먼저 이 호출에서 연결 문제가 나타날 가능성이 높습니다. 이 원격 호출은 원격 서버에서 `@@servername`을 선택하여 실행합니다.  
+ `sp_validate_redirected_publisher`는 원격 서버의 이름을 검색하기 위해 자체적으로 만든 임시 연결된 서버를 사용하여 리디렉션된 게시자에 연결합니다. 오류 21879는 연결된 서버 쿼리에 실패한 경우에 반환됩니다. 원격 서버 이름 요청을 위한 호출은 일반적으로 임시 연결된 서버를 처음 사용할 때 이루어지므로 연결 문제가 있을 경우 가장 먼저 이 호출에서 연결 문제가 나타날 가능성이 높습니다. 이 원격 호출은 원격 서버에서 `@@servername`을 선택하여 실행합니다.  
   
  리디렉션된 게시자를 쿼리하는 데 사용된 연결된 서버는 원래 게시자에 대해 `sp_adddistpublisher`가 호출될 때 제공된 보안 모드, 로그인 및 암호를 사용합니다.  
   
@@ -44,8 +43,7 @@ ms.locfileid: "62869190"
   
     -   사용자가 `sp_validate_redirected_publisher`를 명시적으로 호출한 경우에는 사용자가 실행되고 있는 Windows 로그인을 사용하여 연결합니다.  
   
-    -   
-  `sp_validate_redirected_`publisher를 `sp_get_redirected_publisher`의 복제 에이전트에서 호출한 경우에는 해당 에이전트와 연관된 Windows 로그인이 사용됩니다.  
+    -   `sp_validate_redirected_`publisher를 `sp_get_redirected_publisher`의 복제 에이전트에서 호출한 경우에는 해당 에이전트와 연관된 Windows 로그인이 사용됩니다.  
   
  오류 21879는 리디렉션된 대상 게시자에 알려지지 않은 로그인을 사용하여 `sp_validate_redirected_publisher`가 호출되었음을 나타낼 수 있습니다.  
   
@@ -58,6 +56,6 @@ ms.locfileid: "62869190"
   
 -   을 `sp_changedistpublisher` 사용 하 여 MSdistpublishers의 원래 게시자와 연결 된 보안 모드를 변경 하 고 연결에 사용할 로그인과 암호를 지정할 수 있습니다.  
   
--   배포자에서가 호출 될 ** 때 `sp_get_redirected_publisher` 유효성 검사를 무시 하도록 병합 에이전트 명령줄에서 명령줄 매개 변수 BypassPublisherValidation를 지정 합니다.  
+-   배포자에서가 호출 될 *BypassPublisherValidation* 때 `sp_get_redirected_publisher` 유효성 검사를 무시 하도록 병합 에이전트 명령줄에서 명령줄 매개 변수 BypassPublisherValidation를 지정 합니다.  
   
   

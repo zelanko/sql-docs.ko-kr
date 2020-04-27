@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cda3117df524ba90f322bbb99d6db98ee989ab71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62870632"
 ---
 # <a name="mssqlserver_10532"></a>MSSQLSERVER_10532
@@ -30,19 +30,13 @@ ms.locfileid: "62870632"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|PG_NO_ELIGIBLE_STMT|  
-|메시지 텍스트|
-  \*
-  `@plan_handle`
-  로 지정된 일괄 처리 또는 모듈이 계획 지침에 적합한 문을 포함하지 않으므로 계획 지침 '%.ls'을(를) 만들 수 없습니다. 
-  `@plan_handle`에 다른 값을 지정하십시오.|  
+|메시지 텍스트|`@plan_handle`로 지정된 일괄 처리 또는 모듈이 계획 지침에 적합한 문을 포함하지 않으므로 계획 지침 '%.\*ls'을(를) 만들 수 없습니다. `@plan_handle`에 다른 값을 지정하십시오.|  
   
 ## <a name="explanation"></a>설명  
- 
-  `@plan_handle`로 지정된 일괄 처리 또는 모듈이 계획 지침에 적합한 문을 포함하지 않습니다.  
+ `@plan_handle`로 지정된 일괄 처리 또는 모듈이 계획 지침에 적합한 문을 포함하지 않습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
- 
-  `@plan_handle`에 다른 값을 지정하십시오.  
+ `@plan_handle`에 다른 값을 지정하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [계획 지침](../performance/plan-guides.md)   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 979a0e0a1e8a05b676d4de7ccda0c5876943d587
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830584"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑
@@ -34,17 +34,13 @@ ms.locfileid: "62830584"
   
 3.  **제어 흐름** 탭에 Foreach 루프 컨테이너를 추가 합니다. Foreach 루프 컨테이너를 구성 하는 방법에 대 한 자세한 내용은 [Foreach 루프 컨테이너 구성](foreach-loop-container.md)을 참조 하세요.  
   
-4.  
-  **Foreach 루프 편집기** 의 **컬렉션**페이지에서 Foreach File 열거자를 선택하고 Excel 통합 문서가 있는 폴더를 지정한 다음 파일 필터(일반적으로 *.xls)를 지정합니다.  
+4.  **Foreach 루프 편집기** 의 **컬렉션**페이지에서 Foreach File 열거자를 선택하고 Excel 통합 문서가 있는 폴더를 지정한 다음 파일 필터(일반적으로 *.xls)를 지정합니다.  
   
-5.  
-  **변수 매핑** 페이지에서 루프 반복마다 현재 Excel 경로 및 파일 이름을 받는 사용자 정의 문자열 변수에 인덱스 0을 매핑합니다. 이 절차의 뒷부분에 나오는 샘플 식에서는 변수 이름 `ExcelFile`을 사용합니다.  
+5.  **변수 매핑** 페이지에서 루프 반복마다 현재 Excel 경로 및 파일 이름을 받는 사용자 정의 문자열 변수에 인덱스 0을 매핑합니다. 이 절차의 뒷부분에 나오는 샘플 식에서는 변수 이름 `ExcelFile`을 사용합니다.  
   
-6.  
-  **Foreach 루프 편집기**를 닫습니다.  
+6.  **Foreach 루프 편집기**를 닫습니다.  
   
-7.  
-  [패키지에서 연결 관리자 추가, 삭제 또는 공유](../add-delete-or-share-a-connection-manager-in-a-package.md)에 설명된 대로 패키지에 Excel 연결 관리자를 추가합니다. 연결에 기존 Excel 통합 문서 파일을 선택하면 유효성 검사 오류를 방지할 수 있습니다.  
+7.  [패키지에서 연결 관리자 추가, 삭제 또는 공유](../add-delete-or-share-a-connection-manager-in-a-package.md)에 설명된 대로 패키지에 Excel 연결 관리자를 추가합니다. 연결에 기존 Excel 통합 문서 파일을 선택하면 유효성 검사 오류를 방지할 수 있습니다.  
   
     > [!IMPORTANT]  
     >  이 Excel 연결 관리자 관리자를 사용하는 태스크 및 데이터 흐름 구성 요소를 구성할 때 유효성 검사 오류가 발생하지 않도록 하려면 **Excel 연결 관리자 편집기**에서 기존 Excel 통합 문서를 선택합니다. 다음 단계에서 설명하는 대로 `ConnectionString` 속성에 대한 식을 구성하고 나면 연결 관리자는 런타임에 이 통합 문서를 사용하지 않습니다. 패키지를 만들고 구성한 다음에는 속성 창에서 `ConnectionString` 속성 값을 지울 수 있습니다. 그러나 이 값을 지우면 Foreach 루프가 실행될 때까지는 Excel 연결 관리자의 연결 문자열 속성이 유효하지 않게 됩니다. 따라서 연결 관리자가 사용된 태스크나 패키지에서 `DelayValidation` 속성을 `True`로 설정하여 유효성 검사 오류를 방지해야 합니다.  
@@ -73,30 +69,24 @@ ms.locfileid: "62830584"
   
 ### <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Foreach ADO.NET 스키마 행 집합 열거자를 사용하여 Excel 테이블을 루핑하려면  
   
-1.  Microsoft Jet OLE DB 공급자를 사용하는 ADO.NET 연결 관리자를 만들어 Excel 통합 문서에 연결합니다. 
-  **연결 관리자** 대화 상자의 모든 페이지에서 Extended Properties 속성의 값으로 Excel 8.0을 입력합니다. 자세한 내용은 [패키지에서 연결 관리자 추가, 삭제 또는 공유](../add-delete-or-share-a-connection-manager-in-a-package.md)을 참조하세요.  
+1.  Microsoft Jet OLE DB 공급자를 사용하는 ADO.NET 연결 관리자를 만들어 Excel 통합 문서에 연결합니다. **연결 관리자** 대화 상자의 모든 페이지에서 Extended Properties 속성의 값으로 Excel 8.0을 입력합니다. 자세한 내용은 [패키지에서 연결 관리자 추가, 삭제 또는 공유](../add-delete-or-share-a-connection-manager-in-a-package.md)을 참조하세요.  
   
 2.  루프 반복마다 현재 테이블의 이름을 받을 문자열 변수를 만듭니다.  
   
 3.  **제어 흐름** 탭에 Foreach 루프 컨테이너를 추가 합니다. Foreach 루프 컨테이너를 구성 하는 방법에 대 한 자세한 내용은 [Foreach 루프 컨테이너 구성](foreach-loop-container.md)을 참조 하세요.  
   
-4.  
-  **Foreach 루프 편집기** 의 **컬렉션**페이지에서 Foreach ADO.NET 스키마 행 집합 열거자를 선택합니다.  
+4.  **Foreach 루프 편집기** 의 **컬렉션**페이지에서 Foreach ADO.NET 스키마 행 집합 열거자를 선택합니다.  
   
-5.  
-  **연결**값으로 앞에서 만든 ADO.NET 연결 관리자를 선택합니다.  
+5.  **연결**값으로 앞에서 만든 ADO.NET 연결 관리자를 선택합니다.  
   
-6.  
-  **스키마**값으로 테이블을 선택합니다.  
+6.  **스키마**값으로 테이블을 선택합니다.  
   
     > [!NOTE]  
     >  Excel 통합 문서의 테이블 목록에는 워크시트($ 접미사를 가짐)와 명명된 범위가 모두 포함됩니다. 워크시트 또는 명명된 범위 목록만 필터링해야 하는 경우 스크립트 태스크에 이를 위한 사용자 지정 코드를 작성해야 합니다. 자세한 내용은 [스크립트 태스크를 사용 하 여 Excel 파일 작업](script-task.md)합니다.  
   
-7.  
-  **변수 매핑** 페이지에서 현재 테이블 이름을 포함하도록 앞에서 만든 문자열 변수에 인덱스 2를 매핑합니다.  
+7.  **변수 매핑** 페이지에서 현재 테이블 이름을 포함하도록 앞에서 만든 문자열 변수에 인덱스 2를 매핑합니다.  
   
-8.  
-  **Foreach 루프 편집기**를 닫습니다.  
+8.  **Foreach 루프 편집기**를 닫습니다.  
   
 9. Excel 연결 관리자를 사용하는 Foreach 루프 컨테이너 내에 태스크를 만들어 지정된 통합 문서의 각 Excel 테이블에 같은 작업을 수행합니다. 스크립트 태스크를 사용하여 열거된 테이블 이름을 검사하거나 각 테이블을 작업할 경우에는 스크립트 태스크의 ReadOnlyVariables 속성에 문자열 변수를 추가해야 합니다.  
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ecaffb9e40024eca7cbeac77f4b50058e5440cee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62870612"
 ---
 # <a name="mssqlserver_10521"></a>MSSQLSERVER_10521
@@ -30,14 +30,10 @@ ms.locfileid: "62870612"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|PG_PARAM_NEEDED|  
-|메시지 텍스트|
-  \*
-  `@type`
-  이 '%ls'(으)로 지정되었고 매개 변수 '%ls'이(가) NULL이므로 계획 지침 '%.ls'을(를) 만들 수 없습니다. 이 유형은 매개 변수에 NULL이 아닌 값이 필요합니다. 매개 변수에 NULL이 아닌 값을 지정하거나, 매개 변수에 NULL 값을 허용하는 유형으로 유형을 변경하십시오.|  
+|메시지 텍스트|`@type`이 '%ls'(으)로 지정되었고 매개 변수 '%ls'이(가) NULL이므로 계획 지침 '%.\*ls'을(를) 만들 수 없습니다. 이 유형은 매개 변수에 NULL이 아닌 값이 필요합니다. 매개 변수에 NULL이 아닌 값을 지정하거나, 매개 변수에 NULL 값을 허용하는 유형으로 유형을 변경하십시오.|  
   
 ## <a name="explanation"></a>설명  
- 
-  `@type`에 지정된 유형이 지정된 매개 변수에 대해 NULL 값을 허용하지 않지만 NULL 값이 제공되었습니다.  
+ `@type`에 지정된 유형이 지정된 매개 변수에 대해 NULL 값을 허용하지 않지만 NULL 값이 제공되었습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
  매개 변수에 NULL이 아닌 값을 지정하거나, 매개 변수에 NULL 값을 허용하는 유형으로 유형을 변경하십시오.  

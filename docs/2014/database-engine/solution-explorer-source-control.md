@@ -19,10 +19,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 788ce615f914dcc8a2a49fba7575061fff0df870
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843115"
 ---
 # <a name="solution-explorer-source-control"></a>솔루션 탐색기 원본 제어
@@ -33,8 +33,7 @@ ms.locfileid: "62843115"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]  
   
- 소스 제어란 서버 소프트웨어의 중심부에서 파일 버전을 저장 및 추적하고 파일에 대한 액세스를 제어하는 시스템을 말합니다. 일반 원본 제어 시스템에는 원본 제어 공급자 및 둘 이상의 원본 제어 클라이언트가 포함됩니다. 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 원본 제어 서비스와 통합할 수 있습니다. 이는 원본 제어 공급자를 위한 클라이언트로서 이 도구를 사용할 수 있다는 것을 의미합니다. 현재 환경에서 이동하지 않은 상태로 개별 및 팀 프로젝트를 쉽게 관리할 수 있습니다. 원본 제어 공급자는 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]와 함께 제공되지 않습니다.  
+ 소스 제어란 서버 소프트웨어의 중심부에서 파일 버전을 저장 및 추적하고 파일에 대한 액세스를 제어하는 시스템을 말합니다. 일반 원본 제어 시스템에는 원본 제어 공급자 및 둘 이상의 원본 제어 클라이언트가 포함됩니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 원본 제어 서비스와 통합할 수 있습니다. 이는 원본 제어 공급자를 위한 클라이언트로서 이 도구를 사용할 수 있다는 것을 의미합니다. 현재 환경에서 이동하지 않은 상태로 개별 및 팀 프로젝트를 쉽게 관리할 수 있습니다. 원본 제어 공급자는 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]와 함께 제공되지 않습니다.  
   
 #### <a name="to-select-a-source-control-provider"></a>원본 제어 공급자를 선택하려면  
   
@@ -48,13 +47,11 @@ ms.locfileid: "62843115"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[원본 제어 기본 사항](../../2014/database-engine/source-control-basics.md)|기본 원본 제어 용어를 정의하고 원본 제어 서비스를 사용할 경우 프로젝트에 어떤 이점이 있는지에 대해 설명합니다.|  
-|[원본 제어에 솔루션 및 프로젝트 추가](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)|
-  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 환경을 사용하여 솔루션과 프로젝트를 원본 제어에 추가하는 방법에 대해 설명합니다.|  
-|[원본 제어에서 솔루션 및 프로젝트 열기](../../2014/database-engine/open-solutions-and-projects-from-source-control.md)|
-  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 환경을 사용하여 원본 제어 솔루션과 프로젝트를 여는 방법에 대해 설명합니다.|  
+|[원본 제어에 솔루션 및 프로젝트 추가](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)|[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 환경을 사용하여 솔루션과 프로젝트를 원본 제어에 추가하는 방법에 대해 설명합니다.|  
+|[원본 제어에서 솔루션 및 프로젝트 열기](../../2014/database-engine/open-solutions-and-projects-from-source-control.md)|[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 환경을 사용하여 원본 제어 솔루션과 프로젝트를 여는 방법에 대해 설명합니다.|  
 |[체크 아웃 관리](../../2014/database-engine/manage-checkouts.md)|솔루션과 파일을 원본 제어에서 체크 아웃하는 방법에 대해 설명합니다.|  
 |[체크 인 관리](../../2014/database-engine/manage-checkins.md)|솔루션과 파일을 원본 제어로 체크 인하는 방법에 대해 설명합니다.|  
 |[버전 정보 설정 및 검색](../../2014/database-engine/set-and-retrieve-version-information.md)|프로젝트 또는 항목의 기록을 검색하거나 항목의 로컬 복사본을 검색하거나 두 항목 버전을 비교하는 방법에 대해 설명합니다.|  

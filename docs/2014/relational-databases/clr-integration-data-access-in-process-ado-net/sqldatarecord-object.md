@@ -14,18 +14,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c688d41a1f27c6f3d620e9395d2a908d9b9cddd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874680"
 ---
 # <a name="sqldatarecord-object"></a>SqlDataRecord 개체
-  
   `SqlDataRecord` 개체는 관련 메타데이터와 함께 하나의 데이터 행을 나타냅니다.  
   
- 관리되는 저장 프로시저는 `SqlDataReader`에서 제공되지 않은 결과 집합을 클라이언트로 보낼 수 있습니다. 
-  `SqlDataRecord` 클래스와 함께 `SendResultsStart` 개체의 `SendResultsRow`, `SendResultsEnd` 및 `SqlPipe` 메서드를 사용하면 저장 프로시저에서 사용자 지정 결과 집합을 클라이언트로 보낼 수 있습니다.  
+ 관리되는 저장 프로시저는 `SqlDataReader`에서 제공되지 않은 결과 집합을 클라이언트로 보낼 수 있습니다. `SqlDataRecord` 클래스와 함께 `SendResultsStart` 개체의 `SendResultsRow`, `SendResultsEnd` 및 `SqlPipe` 메서드를 사용하면 저장 프로시저에서 사용자 지정 결과 집합을 클라이언트로 보낼 수 있습니다.  
   
  자세한 내용은 .NET Framework SDK 설명서의 `Microsoft.SqlServer.Server.SqlDataRecord` 클래스 참조 설명서를 참조하십시오.  
   

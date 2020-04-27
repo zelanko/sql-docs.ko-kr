@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d7ed4098feb8bfd2d156e3de2f81fbf7329915aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62842538"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>메모리 액세스에 최적화된 해시 인덱스의 일반적인 성능 문제 해결
@@ -48,7 +48,7 @@ WITH (MEMORY_OPTIMIZED = ON)
   
  테이블에는 두 열(o_id, od_id)에 해시 인덱스가 있지만 쿼리에는 (o_id)에 같음 조건자가 있습니다. 쿼리에는 인덱스 키 열의 하위 집합에만 같음 연산자가 있으므로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 PK_od를 사용하여 Index Seek 연산을 수행할 수 없습니다. 그 대신, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 전체 인덱스 검색으로 돌아가야 합니다.  
   
- **해결 방법:** 몇 가지 가능한 해결 방법이 있습니다. 다음은 그 예입니다.  
+ **해결 방법:** 몇 가지 가능한 해결 방법이 있습니다. 예를 들어:  
   
 -   비클러스터형 해시 대신 비클러스터형 유형으로 인덱스를 다시 만듭니다. 메모리 최적화 비클러스터형 인덱스가 정렬되므로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 선행 인덱스 키 열에서 Index Seek를 수행할 수 있습니다. 결과적으로 이 예의 기본 키 정의는 `constraint PK_od primary key nonclustered`가 됩니다.  
   
@@ -70,7 +70,7 @@ WITH (MEMORY_OPTIMIZED = ON)
      ) WITH (MEMORY_OPTIMIZED=ON)  
     ```  
   
- 지정 된 인덱스 키 값에 대 한 중복 행이 많은 경우 메모리 최적화 해시 인덱스가 최적으로 수행 되지 않습니다. 예를 들어 o_id 열에 대 한 고유 값 수가 테이블의 행 수보다 훨씬 작은 경우 에서 인덱스를 추가 하는 것은 최적이 아닙니다 (o_id). 대신 인덱스 PK_od의 형식을 해시에서 비클러스터형으로 변경 하는 것이 더 나은 솔루션입니다. 자세한 내용은 [Determining the Correct Bucket Count for Hash Indexes](../relational-databases/indexes/indexes.md)을 참조하세요.  
+ 지정 된 인덱스 키 값에 대 한 중복 행이 많은 경우 메모리 최적화 해시 인덱스가 최적으로 수행 되지 않습니다. 예를 들어 o_id 열에 대 한 고유 값 수가 테이블의 행 수보다 훨씬 작은 경우에는 인덱스를 추가 하는 것이 최적이 아닙니다 (o_id). 대신 인덱스 PK_od의 형식을 해시에서 비클러스터형으로 변경 하는 것이 더 나은 솔루션입니다. 자세한 내용은 [Determining the Correct Bucket Count for Hash Indexes](../relational-databases/indexes/indexes.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [메모리 액세스에 최적화된 테이블의 인덱스](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  

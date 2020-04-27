@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 61c11ad810109d76a59b9f6d9c1a3620a2866d65
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62844101"
 ---
 # <a name="new-full-text-catalog-general-page"></a>새 전체 텍스트 카탈로그(일반 페이지)
@@ -38,8 +38,7 @@ ms.locfileid: "62844101"
  이 카탈로그를 새 전체 텍스트 카탈로그의 기본 카탈로그로 설정하려면 선택합니다.  
   
  **악센트 구분**  
- 카탈로그가 물결표 (**~**), 악센트 부호 (**́**) 또는**움라우트 (?**)와 같이 분음 부호와 구분 되는지 여부를 나타냅니다. 
-  **구분 안 함**을 선택하면 이 전체 텍스트 카탈로그와 연관된 전체 텍스트 인덱스에서 분음 기호가 무시됩니다. 분음 부호에 대 한 자세한 내용은 Merriam-Webster 웹 사이트의 [분음 기호](https://www.merriam-webster.com/dictionary/diacritic) 를 참조 하세요.  
+ 카탈로그가 물결표 (**~**), 악센트 부호 (**́**) 또는**움라우트 (?**)와 같이 분음 부호와 구분 되는지 여부를 나타냅니다. **구분 안 함**을 선택하면 이 전체 텍스트 카탈로그와 연관된 전체 텍스트 인덱스에서 분음 기호가 무시됩니다. 분음 부호에 대 한 자세한 내용은 Merriam-Webster 웹 사이트의 [분음 기호](https://www.merriam-webster.com/dictionary/diacritic) 를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [CREATE FULLTEXT CATALOG&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  

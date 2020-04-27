@@ -16,21 +16,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a9b51e0fc192c94b32b4d496523dbf3c9216efd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873814"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 통합 프로그래밍 모델 제한 사항
   관리 되는 저장 프로시저나 다른 관리 되는 데이터베이스 개체를 작성 하는 경우에는 관리 되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 코드 어셈블리에 대 한 검사를 수행 하 고, `CREATE ASSEMBLY` 문을 사용 하 고, 런타임에를 사용 하 여 수행 하는 특정 코드 검사가 있습니다. 실제로 런타임에 접근할 수 없는 코드 경로가 어셈블리에 있을 수 있으므로 관리 코드는 런타임에도 검사됩니다.  따라서 특히 클라이언트 환경에서 실행되는 '안전하지 않은' 코드가 있는 경우 어셈블리가 차단되지 않고 호스팅된 CLR에서 실행되지 않도록 유연성 있게 타사 어셈블리를 등록할 수 있습니다. 관리 코드에서 충족 해야 하는 요구 사항은 `SAFE`어셈블리를, `EXTERNAL_ACCESS`또는 `UNSAFE`로 등록 하 고, 가장 엄격한 `SAFE` 하 고, 아래에 나열 되어 있는지 여부에 따라 달라 집니다.  
   
- 관리 코드 어셈블리에 적용되는 제한뿐 아니라 부여되는 코드 보안 권한도 있습니다. CLR(공용 언어 런타임)은 관리 코드에 대해 CAS(코드 액세스 보안)라는 보안 모델을 지원합니다. 이 모델에서는 코드 ID를 기반으로 어셈블리에 사용 권한이 부여됩니다. 
-  `SAFE`, `EXTERNAL_ACCESS` 및 `UNSAFE` 어셈블리에는 서로 다른 CAS 권한이 있습니다. 자세한 내용은 [CLR 통합 코드 액세스 보안](../security/clr-integration-code-access-security.md)을 참조 하세요.  
+ 관리 코드 어셈블리에 적용되는 제한뿐 아니라 부여되는 코드 보안 권한도 있습니다. CLR(공용 언어 런타임)은 관리 코드에 대해 CAS(코드 액세스 보안)라는 보안 모델을 지원합니다. 이 모델에서는 코드 ID를 기반으로 어셈블리에 사용 권한이 부여됩니다. `SAFE`, `EXTERNAL_ACCESS` 및 `UNSAFE` 어셈블리에는 서로 다른 CAS 권한이 있습니다. 자세한 내용은 [CLR 통합 코드 액세스 보안](../security/clr-integration-code-access-security.md)을 참조 하세요.  
   
 ## <a name="create-assembly-checks"></a>CREATE ASSEMBLY 검사  
- 
-  `CREATE ASSEMBLY` 문을 실행하면 각 보안 수준에 대해 다음과 같은 검사가 수행됩니다.  감사가 실패하면 오류 메시지와 함께 `CREATE ASSEMBLY`가 실패합니다.  
+ `CREATE ASSEMBLY` 문을 실행하면 각 보안 수준에 대해 다음과 같은 검사가 수행됩니다.  감사가 실패하면 오류 메시지와 함께 `CREATE ASSEMBLY`가 실패합니다.  
   
 ### <a name="global-any-security-level"></a>전역(모든 보안 수준)  
  참조된 모든 어셈블리가 다음 조건을 하나 이상 충족해야 합니다.  

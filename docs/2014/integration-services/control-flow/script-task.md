@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7c710065bf0a87b5ec3850010344f2ef5114022e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830564"
 ---
 # <a name="script-task"></a>스크립트 태스크
@@ -66,7 +66,7 @@ ms.locfileid: "62830564"
 ### <a name="configuring-the-script-task-in-the-designer"></a>디자이너에서 스크립트 태스크 구성  
  다음 표에서는 스크립트 태스크용으로 로깅될 수 있는 `ScriptTaskLogEntry` 이벤트에 대해 설명합니다. `ScriptTaskLogEntry` **SSIS 로그 구성** 대화 상자의 **자세히** 탭에서 로깅할 이벤트를 선택 합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../performance/integration-services-ssis-logging.md) 및 [로깅할 메시지 사용자 지정](../custom-messages-for-logging.md)을 참조하세요.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |`ScriptTaskLogEntry`|스크립트에서 로깅을 구현한 결과를 보고합니다. 이 태스크는 `Log` 개체의 `Dts` 메서드를 호출할 때마다 로그 항목을 기록합니다. 이러한 항목은 코드가 실행될 때 기록됩니다. 자세한 내용은 [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md)을 참조하세요.|  
   

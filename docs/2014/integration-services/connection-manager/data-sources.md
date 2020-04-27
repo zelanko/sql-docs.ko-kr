@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5fa4a428c1d1f290ceadee19d21f3b8f0b8bd942
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833849"
 ---
 # <a name="data-sources"></a>솔루션 탐색기
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에는 패키지에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 사용할 수 있는 데이터 원본에 사용할 수 있는 디자인 타임 개체가 포함 되어 있습니다.  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에 사용할 수 있는 데이터 원본인 디자인 타임 개체를 포함합니다.  
   
  데이터 원본 개체는 연결에 대한 참조이며 최소한 연결 문자열과 데이터 원본 식별자가 포함됩니다. 또한 여기에는 설명, 이름, 사용자 이름 및 암호와 같은 추가 메타데이터가 포함될 수 있습니다.  
   
@@ -29,17 +29,14 @@ ms.locfileid: "62833849"
 >   
 >  배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하십시오. 프로젝트를 프로젝트 배포 모델로 변환하는 방법은 [Deploy Projects to Integration Services Server](../deploy-projects-to-integration-services-server.md)를 참조하십시오.  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 데이터 원본을 사용하면 다음과 같은 이점이 있습니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 데이터 원본을 사용하면 다음과 같은 이점이 있습니다.  
   
 -   데이터 원본에는 프로젝트 범위가 있습니다. 즉, 특정 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에서 만든 데이터 원본은 해당 프로젝트의 모든 패키지에서 사용할 수 있습니다. 데이터 원본을 한 번 정의한 다음에는 여러 패키지에서 연결 관리자를 통해 참조할 수 있습니다.  
   
 -   데이터 원본은 데이터 원본 개체와 해당 패키지 참조 간의 동기화를 제공합니다. 데이터 원본과 이를 참조하는 패키지가 동일 프로젝트에 들어 있는 경우 데이터 원본 참조에 대한 연결 문자열 속성은 데이터 원본이 변경될 때 자동으로 업데이트됩니다.  
   
 ## <a name="reference-data-sources"></a>데이터 원본 참조  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에 데이터 원본 개체를 추가하려면 **솔루션 탐색기** 에서 **데이터 원본** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 데이터 원본**을 클릭합니다. 
-  **데이터 원본** 폴더에 항목이 추가됩니다. 다른 프로젝트에서 만든 데이터 원본 개체를 사용하려면 이를 먼저 프로젝트에 추가해야 합니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에 데이터 원본 개체를 추가하려면 **솔루션 탐색기** 에서 **데이터 원본** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 데이터 원본**을 클릭합니다. **데이터 원본** 폴더에 항목이 추가됩니다. 다른 프로젝트에서 만든 데이터 원본 개체를 사용하려면 이를 먼저 프로젝트에 추가해야 합니다.  
   
  패키지에서 데이터 원본 개체를 사용하려면 해당 데이터 원본 개체를 참조하는 연결 관리자를 패키지에 추가하면 됩니다. 패키지 제어 흐름 및 데이터 흐름을 작성하기 전이나 제어 흐름 또는 데이터 흐름을 구성하는 단계에서 패키지에 연결 관리자를 추가할 수 있습니다.  
   

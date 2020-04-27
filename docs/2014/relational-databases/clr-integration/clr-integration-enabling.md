@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1cb5f1f4bcc3a3e796cc99b4da7f14e5a5976b93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874096"
 ---
 # <a name="enabling-clr-integration"></a>CLR 통합 사용
@@ -50,7 +50,7 @@ GO
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [clr enabled 서버 구성 옵션](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)   
  [RECONFIGURE&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
- [GRANT&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
+ [Transact-sql&#41;&#40;권한 부여](/sql/t-sql/statements/grant-transact-sql)   
  [서버 수준 역할](../security/authentication-access/server-level-roles.md)  
   
   

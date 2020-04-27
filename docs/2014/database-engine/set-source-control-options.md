@@ -17,14 +17,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843743"
 ---
 # <a name="set-source-control-options"></a>원본 제어 옵션 설정
-  
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 내장된 원본 제어 기능을 활용하기 전에 작업을 수행하는 다양한 환경에 대한 원본 제어 옵션을 구성해야 합니다.  
   
  **옵션** 대화 상자를 사용 하 여 소스 제어 역할을 하나 이상 구성 하 여 원본 제어 옵션을 구성 합니다. 역할은 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 적용되는 설정에 대한 일반적인 설명과 해당 설정에 연결된 원본 제어 옵션으로 구성됩니다.  
@@ -70,12 +69,10 @@ ms.locfileid: "62843743"
   
 5.  **원본 제어 환경 설정** 상자에서 소스 제어 옵션을 설정 하려는 역할을 선택 합니다.  
   
-     
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]는 선택한 역할에 대한 기본 원본 제어 옵션을 자동으로 선택합니다. 기본 옵션을 선택 취소 하면 **원본 제어 환경 설정** 상자에 **사용자 지정** 옵션이 표시 되어 원래 선택한 역할을 사용자 지정 했음을 나타냅니다.  
+     [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]는 선택한 역할에 대한 기본 원본 제어 옵션을 자동으로 선택합니다. 기본 옵션을 선택 취소 하면 **원본 제어 환경 설정** 상자에 **사용자 지정** 옵션이 표시 되어 원래 선택한 역할을 사용자 지정 했음을 나타냅니다.  
   
      **소스 제어 환경 설정**  
-     사용할 역할을 지정합니다. 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]는 다음 역할을 정의합니다.  
+     사용할 역할을 지정합니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]는 다음 역할을 정의합니다.  
   
     |역할|Description|  
     |----------|-----------------|  
@@ -93,7 +90,7 @@ ms.locfileid: "62843743"
   
      **Saving**  
   
-    |작업|Description|  
+    |작업|설명|  
     |------------|-----------------|  
     |**체크 아웃 확인**|**체크 아웃** 대화 상자를 표시 합니다.|  
     |**자동으로 체크 아웃**|**체크 아웃** 대화 상자를 표시 하지 않고 항목을 체크 아웃 합니다. 기본 옵션입니다.|  
@@ -101,7 +98,7 @@ ms.locfileid: "62843743"
   
      **편집**  
   
-    |작업|Description|  
+    |작업|설명|  
     |------------|-----------------|  
     |**체크 아웃 확인**|**체크 아웃** 대화 상자를 표시 합니다.|  
     |**단독 체크 아웃 확인**|**체크 아웃** 대화 상자를 표시 합니다.|  
@@ -111,12 +108,12 @@ ms.locfileid: "62843743"
      **체크 인한 항목 편집 허용**  
      체크 인한 항목을 메모리에서 편집할 수 있도록 지정합니다. 이 확인란을 선택 하면 체크 인 된 항목을 편집 하려고 할 때 **체크 아웃** 대화 상자에 **편집** 단추가 표시 됩니다. 이 단추를 클릭한 후 항목을 편집할 수 있습니다. 항목을 저장하려면 체크 아웃하거나 다른 위치에 저장해야 합니다.  
   
-     **재설정**  
+     **다시 설정**  
      소스 제어 환경 대화 상자의 설정을 기본 설정으로 되돌립니다. 예를 들어 원본 제어 대화 상자에서 **이 대화 상자를 다시 표시 안 함** 확인란을 선택한 경우 **다시 설정** 옵션을 선택 하면 해당 작업이 취소 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [원본 제어 기본 사항](../../2014/database-engine/source-control-basics.md)   
  [원본 제어 연결 변경](../../2014/database-engine/change-source-control-connections.md)   
- [원본 제어에서 파일 제외](../../2014/database-engine/exclude-files-from-source-control.md)  
+ [소스 제어에서 파일 제외](../../2014/database-engine/exclude-files-from-source-control.md)  
   
   

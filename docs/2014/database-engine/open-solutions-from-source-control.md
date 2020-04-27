@@ -14,14 +14,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f8405c9fcb04559b6f25d2244bc36dde760a182
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62844769"
 ---
 # <a name="open-solutions-from-source-control"></a>원본 제어에서 솔루션 열기
-  
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 원본 제어에서 솔루션을 직접 열 수 있습니다. 이렇게 할 경우 Studio 환경은 최신 버전의 솔루션 파일에 대한 복사본을 지정된 위치에 만듭니다.  
   
  솔루션의 로컬 복사본이 로컬 디스크에 존재하지 않을 경우 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 솔루션을 체크 아웃하거나 솔루션 파일을 검색할 수 있으려면 먼저 원본 제어에서 프로젝트를 열어야 합니다.  

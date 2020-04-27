@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62869598"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
@@ -75,7 +75,7 @@ ms.locfileid: "62869598"
   
  다른 오류 상태가 있으며 예기치 않은 내부 처리 오류를 나타냅니다.  
   
- **추가 비정상적인 원인**  
+ **일반적이진 않지만 가능한 다른 원인**  
   
  **SQL 인증을 사용 하 여 로그인 하지 못한 오류 원인입니다. 서버는 Windows 인증용 으로만 구성 됩니다.** 오류 원인이 반환할 수 있습니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "62869598"
 ## <a name="examples"></a>예  
  이 예에서 인증 오류 상태는 8이며 암호가 잘못되었음을 나타냅니다.  
   
-|Date|원본|메시지|  
+|날짜|원본|메시지|  
 |----------|------------|-------------|  
 |2007-12-05 20:12:56.34|로그온|오류: 18456, 심각도: 14, 상태: 8.|  
 |2007-12-05 20:12:56.34|로그온|사용자 '<user_name>'이(가) 로그인하지 못했습니다. [클라이언트: \<ip 주소>]|  
@@ -99,8 +99,7 @@ ms.locfileid: "62869598"
 ## <a name="user-action"></a>사용자 동작  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 연결하려고 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 혼합 인증 모드로 구성되어 있는지 확인합니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 연결하려고 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 있고 이 로그인 이름의 철자가 올바른지 확인합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 연결하려고 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 있고 이 로그인 이름의 철자가 올바른지 확인합니다.  
   
  Windows 인증을 사용하여 연결하려고 하는 경우 올바른 도메인에 제대로 로그인되어 있는지 확인합니다.  
   
@@ -108,10 +107,8 @@ ms.locfileid: "62869598"
   
  관리자 자격 증명을 사용하여 연결하려면 **관리자 권한으로 실행** 옵션을 사용하여 애플리케이션을 시작합니다. 연결되면 Windows 사용자를 개별 로그인으로 추가합니다.  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 포함된 데이터베이스를 지원하는 경우 포함된 데이터베이스 사용자로 마이그레이션한 후 해당 로그인이 삭제되지 않았는지 확인하십시오.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 포함된 데이터베이스를 지원하는 경우 포함된 데이터베이스 사용자로 마이그레이션한 후 해당 로그인이 삭제되지 않았는지 확인하십시오.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 로컬로 연결하는 경우 **NT AUTHORITY\NETWORK SERVICE**에서 실행되는 서비스의 연결도 컴퓨터의 정규화된 도메인 이름을 사용하여 인증해야 합니다. 자세한 내용은 [방법: 네트워크 서비스 계정을 사용하여 ASP.NET의 리소스에 액세스](https://msdn.microsoft.com/library/ff647402.aspx)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 로컬로 연결하는 경우 **NT AUTHORITY\NETWORK SERVICE**에서 실행되는 서비스의 연결도 컴퓨터의 정규화된 도메인 이름을 사용하여 인증해야 합니다. 자세한 내용은 [방법: 네트워크 서비스 계정을 사용하여 ASP.NET의 리소스에 액세스](https://msdn.microsoft.com/library/ff647402.aspx)을 참조하세요.  
   
   

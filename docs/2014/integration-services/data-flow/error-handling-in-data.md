@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b5a98877e04a077bf1bb1c0c527500f3102b862
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62827151"
 ---
 # <a name="error-handling-in-data"></a>데이터 오류 처리
@@ -46,9 +46,7 @@ ms.locfileid: "62827151"
   
  ![오류 출력이 있는 데이터 흐름](../media/mw-dts-11.gif "오류 출력이 있는 데이터 흐름")  
   
- 데이터 열 외에도 오류 출력에는 **ErrorCode** 및 **ErrorColumn** 열이 포함됩니다. 
-  **ErrorCode** 열은 오류를 식별하며 **ErrorColumn** 에는 오류 열의 계보 식별자가 포함됩니다. 이러한 열의 메타데이터를 보려면 오류 출력을 데이터 흐름의 다음 구성 요소로 연결하는 경로를 클릭합니다. 
-  **ErrorColumn** 열의 값이 0으로 설정되는 경우도 있습니다. 이는 오류 조건이 단일 열 대신 전체 행에 영향을 주는 경우 발생합니다. 조회 변환에서 조회가 실패하는 경우를 예로 들 수 있습니다.  
+ 데이터 열 외에도 오류 출력에는 **ErrorCode** 및 **ErrorColumn** 열이 포함됩니다. **ErrorCode** 열은 오류를 식별하며 **ErrorColumn** 에는 오류 열의 계보 식별자가 포함됩니다. 이러한 열의 메타데이터를 보려면 오류 출력을 데이터 흐름의 다음 구성 요소로 연결하는 경로를 클릭합니다. **ErrorColumn** 열의 값이 0으로 설정되는 경우도 있습니다. 이는 오류 조건이 단일 열 대신 전체 행에 영향을 주는 경우 발생합니다. 조회 변환에서 조회가 실패하는 경우를 예로 들 수 있습니다.  
   
  자세한 내용은 [데이터 흐름](data-flow.md) 및 [Integration Services 경로](integration-services-paths.md)를 참조하세요.  
   
@@ -61,7 +59,7 @@ ms.locfileid: "62827151"
   
  원본, 변환 및 대상에서 오류 및 잘림이 처리되는 방법을 구성할 수 있습니다. 다음 표에서는 옵션에 대해 설명합니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |구성 요소 실패|오류 또는 잘림이 발생하면 데이터 흐름 태스크가 실패합니다. 실패는 오류 또는 잘림에 대한 기본 옵션입니다.|  
 |오류 무시|오류 또는 잘림이 무시되고 데이터 행이 변환 또는 원본의 출력으로 전달됩니다.|  

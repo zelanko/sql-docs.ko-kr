@@ -19,17 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 64dc9129373a57de2924b2983e14266a67d4915e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873517"
 ---
 # <a name="write-international-transact-sql-statements"></a>국가별 Transact-SQL 문 작성
   다음 지침에 따라 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하는 데이터베이스 및 데이터베이스 애플리케이션을 특정 언어에서 다른 언어로 이식하거나 여러 언어를 지원하도록 할 수 있습니다.  
   
--   
-  `char`, `varchar` 및 `text` 데이터 형식을 사용하는 경우 모두 `nchar`, `nvarchar` 및 `nvarchar(max)`로 대체합니다. 이렇게 하면 코드 페이지 변환 문제가 발생하지 않습니다. 자세한 내용은 [Collation and Unicode Support](collation-and-unicode-support.md)을 참조하세요.  
+-   `char`, `varchar` 및 `text` 데이터 형식을 사용하는 경우 모두 `nchar`, `nvarchar` 및 `nvarchar(max)`로 대체합니다. 이렇게 하면 코드 페이지 변환 문제가 발생하지 않습니다. 자세한 내용은 [Collation and Unicode Support](collation-and-unicode-support.md)을 참조하세요.  
   
 -   월과 요일을 비교하고 연산하려면 문자열 이름 대신 숫자 형식의 날짜 부분을 사용하십시오. 언어 설정이 다르면 월과 요일에 대해 각기 다른 이름이 반환됩니다. 예를 들어 DATENAME(MONTH,GETDATE())은 언어가 영어(미국)로 설정되었을 경우 May를 반환하고 독일어로 설정되었을 경우 Mai를 반환하며 프랑스어로 설정되었을 경우에는 mai를 반환합니다. 대신 이름이 아닌 해당 월의 숫자를 사용하는 DATEPART 함수 등을 사용하십시오. 날짜 이름이 숫자 표시보다 의미를 쉽게 알 수 있으므로 사용자에게 표시되는 결과 집합을 만들 때에는 DATEPART 이름을 사용합니다. 그러나 특정 언어로 표시된 이름에 따라 달라지는 논리는 코딩하지 마십시오.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "62873517"
   
          **{ts '** yyyy**-**_mm_**-**_(yyyy_)**:**_mm_**:**_ss_[**.** _fff_] **'}** 예: **{ts '** 1998**-** 09**-** 24 10 **:** 02 **:** 20 **'}**  
   
-         **{d '** _yyyy_ **-** _mm_ **-** _dd_ **'}** (예: **{d '** 1998**-** 09**-** 24 **'}** )  
+         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** 예: **{ d'** 1998**-** 09**-** 24 **'}**  
   
          **{t '** _hh_ **:** _mm_ **:** _ss_ **'}** (예: **{t '** 10:02:20 **'})**  
   

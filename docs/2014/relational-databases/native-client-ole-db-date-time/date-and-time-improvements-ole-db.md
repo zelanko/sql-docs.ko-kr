@@ -1,5 +1,5 @@
 ---
-title: 날짜 및 시간 기능 향상 (OLE DB) | Microsoft Docs
+title: 날짜 및 시간 기능 향상(OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -14,26 +14,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1dec9e1281d2ff61dcab9312cdf5a7ad1ecb8da3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62866840"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>날짜 및 시간 기능 향상(OLE DB)
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에는 새로운 날짜 및 시간 데이터 형식이 도입되었습니다. 이 섹션에서는 이러한 새로운 형식이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 확장에서 어떤 방식으로 나타나는지 설명합니다. 새 날짜 및 시간 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식에 대 한 Native Client 지원의 개요는 [날짜 및 시간 기능 향상](../native-client/features/date-and-time-improvements.md)을 참조 하세요. 샘플은 [향상된 날짜 및 시간 기능 사용&#40;OLE DB&#41;](../native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)을 참조하세요.  
   
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에는 새로운 날짜 및 시간 데이터 형식이 도입되었습니다. 이 섹션에서는 이러한 새로운 형식이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 확장에서 어떤 방식으로 나타나는지 설명합니다. 새 날짜 및 시간 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식에 대 한 Native Client 지원의 개요는 [날짜 및 시간 기능 향상](../native-client/features/date-and-time-improvements.md)을 참조 하세요. 예제는 [OLE DB&#41;&#40;향상 된 날짜 및 시간 기능 사용 ](../native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)을 참조 하세요.  
-  
- 날짜 및 시간 데이터 형식에 대 한 일반적인 정보는 [datetime &#40;transact-sql&#41;](/sql/t-sql/data-types/datetime-transact-sql)을 참조 하세요.  
+ 날짜 및 시간 데이터 형식에 대한 일반적인 정보는 [datetime&#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)을 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  
  날짜 및 시간 데이터 형식을[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지 원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB (Native Client) 형식에 대 한 정보를 제공 합니다.  
   
- [메타 데이터 &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
+ [메타데이터&#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
  DBBINDING `ICommandWithParameters::GetParameterInfo`구조체, `ICommandWithParameters::SetParameterInfo` `IColumnsRowset::GetColumnsRowset`,, 및 I`ColumnsInfo::GetColumnInfo`에 대 한 정보를 포함 합니다. 또한 OLE DB 스키마 행 집합에 대 한 업데이트 정보를 제공 합니다.  
   
- [바인딩 및 변환 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
+ [바인딩 및 변환&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
  기존 데이터 형식 및 새로운 데이터 형식에 대한 서버와 클라이언트 간 변환 규칙을 설명합니다.  
   
  [향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 내용 &#40;OLE DB 및 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)  

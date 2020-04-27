@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 348a50b1f199fa28b9bc67718b47ee4819bdde87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873489"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>컬렉션 집합 일정 보기 또는 변경(SQL Server Management Studio)
@@ -99,7 +99,7 @@ ms.locfileid: "62873489"
   
 6.  **확인** 을 클릭하면 변경 내용이 저장되고 **데이터 컬렉션 집합 속성** 대화 상자가 닫힙니다.  
   
-####  <a name="CollectionSet"></a> 데이터 컬렉션 집합 속성 대화 상자  
+####  <a name="data-collection-set-properties-dialog-box"></a><a name="CollectionSet"></a> 데이터 컬렉션 집합 속성 대화 상자  
  **일반 페이지**  
   
  이 페이지를 사용하여 관리 데이터 웨어하우스에서 데이터를 수집하고 업로드하는 방법, 일정 및 데이터 보존 기간을 구성할 수 있습니다. 또한 이 페이지를 사용하면 수집기 유형과 컬렉션 빈도 같은 컬렉션 집합에 대한 정보뿐 아니라 컬렉션 집합에 사용되는 입력 매개 변수도 확인할 수 있습니다.  
@@ -112,8 +112,7 @@ ms.locfileid: "62873489"
   
 |||  
 |-|-|  
-|**캐시되지 않음. 동일한 일정에 따라 데이터를 수집 및 업로드합니다.**|이 옵션을 선택할 경우 다음 중 하나를 지정합니다.<br /><br /> **요청 시**. 요청 시 데이터가 수집되고 업로드됩니다.<br /><br /> **일정**. 일정에 따라 데이터가 수집되고 업로드됩니다. 
-  **선택** 을 클릭하여 미리 정의된 일정 목록에서 선택하거나 **새로 만들기** 를 클릭하여 새 일정을 만듭니다.|  
+|**캐시되지 않음. 동일한 일정에 따라 데이터를 수집 및 업로드합니다.**|이 옵션을 선택할 경우 다음 중 하나를 지정합니다.<br /><br /> **요청 시**. 요청 시 데이터가 수집되고 업로드됩니다.<br /><br /> **일정**. 일정에 따라 데이터가 수집되고 업로드됩니다. **선택** 을 클릭하여 미리 정의된 일정 목록에서 선택하거나 **새로 만들기** 를 클릭하여 새 일정을 만듭니다.|  
 |**캐시됨. 컬렉션 빈도 집합에 따라 데이터를 수집 및 캐시합니다. 캐시된 데이터는 별도의 일정에 따라 업로드합니다.**|지정된 컬렉션 빈도에 따라 데이터를 수집 및 캐시합니다. 수집된 데이터는 별도의 일정에 따라 업로드합니다.|  
   
  **컬렉션 빈도(초)**  

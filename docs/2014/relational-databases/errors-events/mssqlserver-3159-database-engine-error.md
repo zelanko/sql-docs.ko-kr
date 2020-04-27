@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0373952a28a901519d1d40e92750af3da72f94e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62868884"
 ---
 # <a name="mssqlserver_3159"></a>MSSQLSERVER_3159
@@ -48,9 +48,9 @@ ms.locfileid: "62868884"
  비상 로그를 백업할 수 없으면 RESTORE 문에 WITH STOPAT 또는 WITH REPLACE를 사용합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](../backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
+ [SQL Server 데이터베이스를 지정 시간 &#40;전체 복구 모델로 복원&#41;](../backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [데이터베이스가 손상 된 경우 트랜잭션 로그를 백업 &#40;SQL Server&#41;](../backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)   
- [트랜잭션 로그 백업&#40;SQL Server&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)   
+ [트랜잭션 로그 &#40;SQL Server 백업&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)   
  [비상 로그 백업&#40;SQL Server&#41;](../backup-restore/tail-log-backups-sql-server.md)  
   
   

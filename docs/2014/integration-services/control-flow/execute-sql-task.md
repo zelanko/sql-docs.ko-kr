@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6be23e1a45f2b2ed0cc055c5032a72ffe2387399
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831771"
 ---
 # <a name="execute-sql-task"></a>SQL 실행 태스크
@@ -54,10 +54,9 @@ ms.locfileid: "62831771"
 ## <a name="creating-sql-statements"></a>SQL 문 만들기  
  이 태스크에 사용되는 SQL 문의 원본은 문이 포함된 작업 속성, 하나 이상의 문이 포함된 파일에 대한 연결 또는 문이 포함된 변수 이름일 수 있습니다. SQL 문은 원본 DBMS(데이터베이스 관리 시스템) 언어로 기록되어야 합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 쿼리](../integration-services-ssis-queries.md)를 참조하세요.  
   
- SQL 문이 파일에 저장되어 있을 경우 SQL 실행 태스크는 파일 연결 관리자를 사용하여 해당 파일에 연결합니다. 자세한 내용은 [파일 연결 관리자](../connection-manager/file-connection-manager.md)를 참조 하세요.  
+ SQL 문이 파일에 저장되어 있을 경우 SQL 실행 태스크는 파일 연결 관리자를 사용하여 해당 파일에 연결합니다. 자세한 내용은 [File Connection Manager](../connection-manager/file-connection-manager.md)를 참조하세요.  
   
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서는 **SQL 실행 태스크 편집기** 대화 상자를 사용하여 SQL 문을 입력하거나 SQL 쿼리 작성용 그래픽 사용자 인터페이스인 **쿼리 작성기**를 사용할 수 있습니다. 자세한 내용은 [SQL 실행 태스크 편집기&#40;일반 페이지&#41;](../execute-sql-task-editor-general-page.md) 및 [쿼리 작성기](../query-builder.md)를 참조하세요.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서는 **SQL 실행 태스크 편집기** 대화 상자를 사용하여 SQL 문을 입력하거나 SQL 쿼리 작성용 그래픽 사용자 인터페이스인 **쿼리 작성기**를 사용할 수 있습니다. 자세한 내용은 [SQL 실행 태스크 편집기&#40;일반 페이지&#41;](../execute-sql-task-editor-general-page.md) 및 [쿼리 작성기](../query-builder.md)를 참조하세요.  
   
 > [!NOTE]  
 >  SQL 실행 태스크 외부에서 작성된 SQL 문은 유효하더라도 SQL 실행 태스크에서 성공적으로 구문 분석되지 않을 수도 있습니다.  
@@ -105,7 +104,7 @@ ms.locfileid: "62831771"
 ### <a name="custom-log-entries"></a>사용자 지정 로그 항목  
  다음 표에서는 SQL 실행 태스크에 대한 사용자 지정 로그 항목을 설명합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../performance/integration-services-ssis-logging.md) 및 [로깅할 메시지 사용자 지정](../custom-messages-for-logging.md)을 참조하세요.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |`ExecuteSQLExecutingQuery`|SQL 문의 실행 단계에 대한 정보를 제공합니다. 로그 항목은 태스크에서 데이터베이스에 대한 연결을 설정할 때, 태스크에서 SQL 문 준비를 시작할 때 또는 SQL 문 실행이 완료된 후에 기록됩니다. 준비 단계에 대한 로그 항목은 태스크에서 사용하는 SQL 문을 포함합니다.|  
   
@@ -126,8 +125,7 @@ ms.locfileid: "62831771"
   
  프로그래밍 방식을 통해 또는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하여 속성을 설정할 수 있습니다.  
   
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
 -   [SQL 실행 태스크 편집기 &#40;일반 페이지&#41;](../execute-sql-task-editor-general-page.md)  
   

@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873411"
 ---
 # <a name="system-data-collection-set-reports"></a>시스템 데이터 컬렉션 집합 보고서
@@ -38,7 +38,7 @@ ms.locfileid: "62873411"
   
  이러한 보고서를 사용하여 시스템 용량을 모니터링하고 시스템 성능 문제를 해결하는 데 필요한 정보를 얻을 수 있습니다.  
   
-##  <a name="Disk"></a> 디스크 사용 요약 보고서  
+##  <a name="disk-usage-summary-report"></a><a name="Disk"></a> 디스크 사용 요약 보고서  
  디스크 사용 요약 보고서에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 있는 모든 데이터베이스의 디스크 공간 사용에 대한 데이터가 포함되어 있습니다. 이 보고서에 제공되는 데이터는 일반 T-SQL 쿼리 수집기 형식을 사용하는 디스크 사용 컬렉션 집합을 사용하여 가져옵니다.  
   
  개체 탐색기에서 디스크 사용 요약 보고서에 액세스할 수 있습니다. 이 보고서를 보려면 **관리** 폴더를 확장하고 **데이터 컬렉션**을 마우스 오른쪽 단추로 클릭한 다음 **보고서**, **관리 데이터 웨어하우스**를 차례로 가리키고 **디스크 사용 요약**을 클릭합니다. 자세한 내용은 [컬렉션 집합 보고서 보기&#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)인스턴스에 있는 모든 데이터베이스의 디스크 공간 사용에 대한 데이터가 포함되어 있습니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "62873411"
   
  데이터베이스의 각 데이터 파일이 사용하는 디스크 공간이 보고됩니다. 예약된 공간으로 보고된 공간은 사용 중인 공간과 파일에 할당되었지만 아직 사용되지 않은 공간을 더한 양입니다. 사용 중인 공간으로 보고된 공간은 할당된 공간을 제외한 파일이 현재 사용하는 실제 공간입니다.  
   
-##  <a name="Query"></a> 쿼리 통계 기록 보고서  
+##  <a name="query-statistics-history-report"></a><a name="Query"></a> 쿼리 통계 기록 보고서  
  쿼리 통계 기록 보고서에는 쿼리 실행 통계가 포함되어 있습니다. 이 보고서에서 사용되는 데이터는 쿼리 작업 수집기 유형을 사용하는 쿼리 통계 컬렉션 집합을 사용하여 가져옵니다.  
   
  개체 탐색기에서 쿼리 통계 기록 보고서에 액세스할 수 있습니다. 이 보고서를 보려면 **관리** 폴더를 확장하고 **데이터 컬렉션**을 마우스 오른쪽 단추로 클릭한 다음 **보고서**, **관리 데이터 웨어하우스**를 차례로 가리키고 **쿼리 통계 기록**을 클릭합니다. 자세한 내용은 [컬렉션 집합 보고서 보기&#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)인스턴스에 있는 모든 데이터베이스의 디스크 공간 사용에 대한 데이터가 포함되어 있습니다.  
@@ -118,24 +118,22 @@ ms.locfileid: "62873411"
   
  이 달력 단추를 사용하여 보고하려는 데이터의 시작 날짜, 시작 시간 및 기간을 지정할 수 있습니다.  
   
-###  <a name="Server"></a> 서버 작업 기록 보고서  
+###  <a name="server-activity-history-report"></a><a name="Server"></a> 서버 작업 기록 보고서  
  서버 작업 기록 보고서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 및 호스트 운영 체제에 대한 서버 작업의 초기 보기를 보여 줍니다.  
   
  다음 표에서는 이 보고서의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 시스템 작업을 표시하는 그래프와 이 그래프를 통해 액세스할 수 있는 자세한 하위 보고서에 대해 설명합니다.  
   
 |그래프|보고서 설명|  
 |-----------|------------------------|  
-|CPU(%)|CPU(%) 그래프의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 시스템 그래프 선에 있는 점을 클릭하면 이러한 하위 보고서에 액세스할 수 있습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /> 쿼리 통계 기록 보고서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 가장 비용이 많이 드는 쿼리의 그래프를 제공합니다. 이 그래프 아래의 테이블에는 쿼리 목록과 각 쿼리에 대한 통계 데이터가 표시됩니다. 쿼리를 클릭하면 추가 정보를 볼 수 있습니다.<br /><br /> 시스템<br /> 시스템 CPU 사용량 보고서에서는 프로세서당 CPU 시간(%)에 대한 그래프 및 각 프로세스에 대한 통계 데이터를 테이블 형식으로 제공합니다.|  
-|메모리 사용량|메모리 사용량 그래프의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 시스템 그래프 선에 있는 점을 클릭하면 이러한 하위 보고서에 액세스할 수 있습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 사용량 보고서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 메모리 사용량, 메모리 카운터, 유형별 내부 메모리 사용에 대한 그래프 및 구성 요소 유형별 평균 메모리 사용량에 대한 데이터를 나열하는 테이블을 제공합니다.<br /><br /> 시스템<br /> 시스템 메모리 사용량 보고서에서는 메모리 사용량, 캐시 및 페이지 적중률에 대한 그래프 및 각 프로세스의 작업 집합 및 프라이빗 바이트에 대한 정보를 나열하는 테이블을 제공합니다.|  
-|디스크 I/O 사용량|디스크 I/O 사용량 그래프의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 시스템 그래프 선에 있는 점을 클릭하면 이러한 하위 보고서에 액세스할 수 있습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디스크 I/O 사용량 보고서에서는 디스크 응답 시간 및 디스크 전송 속도에 대한 그래프를 제공합니다. 디스크, 데이터베이스 및 파일별 가상 파일 통계는 추가 테이블에서 제공합니다.<br /><br /> 시스템<br /> 시스템 디스크 사용량 보고서에서는 디스크 응답 시간, 평균 디스크 큐 길이 및 디스크 전송 속도에 대한 그래프 및 각 프로세스의 IO 쓰기 및 읽기에 대한 정보를 나열하는 테이블을 제공합니다.|  
+|CPU(%)|CPU(%) 그래프의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 시스템 그래프 선에 있는 점을 클릭하면 이러한 하위 보고서에 액세스할 수 있습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /> 쿼리 통계 기록 보고서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 가장 비용이 많이 드는 쿼리의 그래프를 제공합니다. 이 그래프 아래의 테이블에는 쿼리 목록과 각 쿼리에 대한 통계 데이터가 표시됩니다. 쿼리를 클릭하면 추가 정보를 볼 수 있습니다.<br /><br /> System<br /> 시스템 CPU 사용량 보고서에서는 프로세서당 CPU 시간(%)에 대한 그래프 및 각 프로세스에 대한 통계 데이터를 테이블 형식으로 제공합니다.|  
+|메모리 사용량|메모리 사용량 그래프의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 시스템 그래프 선에 있는 점을 클릭하면 이러한 하위 보고서에 액세스할 수 있습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 사용량 보고서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 메모리 사용량, 메모리 카운터, 유형별 내부 메모리 사용에 대한 그래프 및 구성 요소 유형별 평균 메모리 사용량에 대한 데이터를 나열하는 테이블을 제공합니다.<br /><br /> System<br /> 시스템 메모리 사용량 보고서에서는 메모리 사용량, 캐시 및 페이지 적중률에 대한 그래프 및 각 프로세스의 작업 집합 및 프라이빗 바이트에 대한 정보를 나열하는 테이블을 제공합니다.|  
+|디스크 I/O 사용량|디스크 I/O 사용량 그래프의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 시스템 그래프 선에 있는 점을 클릭하면 이러한 하위 보고서에 액세스할 수 있습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디스크 I/O 사용량 보고서에서는 디스크 응답 시간 및 디스크 전송 속도에 대한 그래프를 제공합니다. 디스크, 데이터베이스 및 파일별 가상 파일 통계는 추가 테이블에서 제공합니다.<br /><br /> System<br /> 시스템 디스크 사용량 보고서에서는 디스크 응답 시간, 평균 디스크 큐 길이 및 디스크 전송 속도에 대한 그래프 및 각 프로세스의 IO 쓰기 및 읽기에 대한 정보를 나열하는 테이블을 제공합니다.|  
 |네트워크 사용량|사용할 수 있는 추가 보고서가 없습니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대기 작업|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대기 작업 그래프는 실행 중인 스레드로 인해 발생한 대기 작업을 대기 범주별로 보여 줍니다. 이 그래프에 있는 세그먼트를 클릭하면 자세한 보고서에 액세스할 수 있습니다. 이 보고서에서는 좁은 시간 프레임 동안의 그래픽 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대기 작업 통계를 제공할 뿐만 아니라 대기 범주에 대한 정보를 테이블 형식으로 제공합니다. CPU 및 해당 하위 범주와 같은 각 범주에 대해 테이블에서 대기 작업 수, 대기 시간 및 총 대기 시간 비율을 보여 줍니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업 그래프에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업의 다양한 측면에 액세스할 수 있습니다. SQL 컴파일/초 그래프 선 위의 점을 클릭하여 다음과 같은 보고서를 가져올 수 있습니다.<br /><br /> 연결 및 세션<br /><br /> 요청<br /><br /> 계획 캐시 적중률<br /><br /> tempdb 특징|  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 컬렉션](data-collection.md)   
+ [데이터 수집](data-collection.md)   
  [컬렉션 집합 보고서 보기&#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)  
   
   

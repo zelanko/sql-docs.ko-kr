@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832459"
 ---
 # <a name="data-flow-task"></a>데이터 흐름 태스크
@@ -44,9 +44,7 @@ ms.locfileid: "62832459"
  ![데이터 흐름](../media/mw-dts-09.gif "데이터 흐름")  
   
 ## <a name="log-entries"></a>로그 항목  
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에서는 모든 태스크에서 사용할 수 있는 로그 이벤트 집합을 제공합니다. 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에서는 여러 태스크에서 사용할 수 있는 사용자 지정 로그 항목도 제공합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../performance/integration-services-ssis-logging.md) 및 [로깅할 메시지 사용자 지정](../custom-messages-for-logging.md)을 참조하세요. 데이터 흐름 태스크에는 다음 사용자 지정 로그 항목이 포함됩니다.  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에서는 모든 태스크에서 사용할 수 있는 로그 이벤트 집합을 제공합니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에서는 여러 태스크에서 사용할 수 있는 사용자 지정 로그 항목도 제공합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../performance/integration-services-ssis-logging.md) 및 [로깅할 메시지 사용자 지정](../custom-messages-for-logging.md)을 참조하세요. 데이터 흐름 태스크에는 다음 사용자 지정 로그 항목이 포함됩니다.  
   
 |로그 항목|Description|  
 |---------------|-----------------|  
@@ -55,8 +53,7 @@ ms.locfileid: "62832459"
 |`OnPipelinePostPrimeOutput`|구성 요소가 `PrimeOutput` 메서드에 대한 마지막 호출을 완료했음을 나타냅니다. 데이터 흐름에 따라 여러 로그 항목이 기록될 수 있습니다. 구성 요소가 원본일 경우 이 로그 항목은 구성 요소가 행 처리를 완료했음을 의미합니다.|  
 |`OnPipelinePreEndOfRowset`|구성 요소가 `ProcessInput` 메서드의 마지막 호출로 설정된 해당 행 집합 끝 신호를 수신하려고 함을 나타냅니다. 입력을 처리하는 데이터 흐름의 각 구성 요소에 대한 항목이 기록됩니다. 이 항목은 구성 요소의 이름을 포함합니다.|  
 |`OnPipelinePrePrimeOutput`|구성 요소가 `PrimeOutput` 메서드에서 해당 호출을 수신하려고 함을 나타냅니다. 데이터 흐름에 따라 여러 로그 항목이 기록될 수 있습니다.|  
-|`OnPipelineRowsSent`|
-  `ProcessInput` 메서드 호출로 구성 요소 입력에 제공한 행 수를 보고합니다. 이 로그 항목은 구성 요소 이름을 포함합니다.|  
+|`OnPipelineRowsSent`|`ProcessInput` 메서드 호출로 구성 요소 입력에 제공한 행 수를 보고합니다. 이 로그 항목은 구성 요소 이름을 포함합니다.|  
 |`PipelineBufferLeak`|버퍼 관리자가 없어진 후에 버퍼를 활성 상태로 유지하는 모든 구성 요소에 대한 정보를 제공합니다. 버퍼가 여전히 활성 상태인 경우 버퍼 리소스가 해제되지 않으므로 메모리가 손실될 수 있습니다. 로그 항목은 구성 요소 이름과 버퍼 ID를 제공합니다.|  
 |`PipelineComponentTime`|5개의 주요 처리 단계인 Validate, PreExecute, PostExecute, ProcessInput 및 ProcessOutput 각각에서 구성 요소에 소요된 시간(밀리초)을 보고합니다.|  
 |`PipelineExecutionPlan`|데이터 흐름의 실행 계획을 보고합니다. 실행 계획은 버퍼를 구성 요소로 전송하는 방법에 대한 정보를 제공합니다. 이 정보는 PipelineExecutionTrees 로그 항목과 함께 데이터 흐름 태스크 내에서 발생하는 사항에 대해 설명합니다.|  
@@ -102,11 +99,9 @@ ms.locfileid: "62832459"
 |**RowsSent**|정렬 변환의 입력으로 보내지는 행 수입니다.|76|  
   
 ## <a name="configuration-of-the-data-flow-task"></a>데이터 흐름 태스크 구성  
- 
-  **속성** 창을 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
+ **속성** 창을 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- 
-  **속성** 창에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
+ **속성** 창에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
 -   [태스크 또는 컨테이너의 속성 설정](../set-the-properties-of-a-task-or-container.md)  
   

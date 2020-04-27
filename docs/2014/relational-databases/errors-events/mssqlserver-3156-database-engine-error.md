@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2b1c972481b7c4cf614cf0a91b29247c643696d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62868928"
 ---
 # <a name="mssqlserver_3156"></a>MSSQLSERVER_3156
@@ -50,7 +50,7 @@ ms.locfileid: "62868928"
  액세스 권한을 부여하거나 RESTORE 문에 WITH MOVE 옵션을 사용하는 방법으로 파일의 위치를 다시 지정하여 지정된 위치와 관련된 문제를 수정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스를 새 위치로 복원&#40;SQL Server&#41;](../backup-restore/restore-a-database-to-a-new-location-sql-server.md)   
+ [SQL Server &#40;새 위치로 데이터베이스를 복원&#41;](../backup-restore/restore-a-database-to-a-new-location-sql-server.md)   
  [SQL Server&#41;&#40;새 위치로 파일을 복원 합니다.](../backup-restore/restore-files-to-a-new-location-sql-server.md)   
  [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   

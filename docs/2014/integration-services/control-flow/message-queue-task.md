@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7857294534f1c3c434f43c302cee8864925d953
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831480"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
-  메시지 큐 태스크를 사용 하면 MSMQ 라고도 하는 메시지 큐를 사용 하 여 패키지 간에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 메시지를 보내고 받거나 사용자 지정 응용 프로그램에서 처리 하는 응용 프로그램 큐에 메시지를 보낼 수 있습니다. 이러한 메시지는 단순한 텍스트, 파일 또는 변수와 해당 값의 형태로 사용될 수 있습니다.  
+  메시지 큐 태스크에서는 MSMQ(메시지 큐)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 간에 메시지를 보내고 받거나 사용자 지정 애플리케이션에서 처리되는 애플리케이션 큐에 메시지를 보낼 수 있습니다. 이러한 메시지는 단순한 텍스트, 파일 또는 변수와 해당 값의 형태로 사용될 수 있습니다.  
   
  메시지 큐 태스크를 사용하면 회사 전반의 작업을 조정할 수 있습니다. 대상이 없거나 사용 중인 경우에는 메시지를 큐에 저장하고 다음에 배달할 수 있습니다. 예를 들어 네트워크에 연결될 때 메시지를 받는 판매 영업 직원의 랩톱 컴퓨터가 오프라인인 경우 이 태스크는 메시지를 큐에 저장할 수 있습니다. 메시지 큐 태스크는 다음 용도로 사용할 수 있습니다.  
   
@@ -39,9 +39,7 @@ ms.locfileid: "62831480"
   
  이 태스크는 MSMQ 연결 관리자를 사용하여 메시지 큐에 연결합니다. 자세한 내용은 [MSMQ 연결 관리자](../connection-manager/msmq-connection-manager.md)를 참조하세요. 메시지 큐에 대한 자세한 내용은 [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022)를 참조하십시오.  
   
- 메시지 큐 태스크를 사용하려면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스가 설치되어 있어야 합니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 **설치할 구성 요소** 페이지 또는 **기능 선택** 페이지에서 선택하여 설치할 수 있는 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 구성 요소의 일부 하위 집합을 설치합니다. 이러한 구성 요소는 특정 태스크에 유용하지만 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 기능은 제한됩니다. 예를 들어 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 옵션을 선택하면 패키지 디자인에 필요한 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 구성 요소가 설치되지만 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스가 설치되지 않기 때문에 메시지 큐 태스크가 작동하지 않습니다. 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 전체 설치하려면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 설치할 구성 요소 **페이지에서** 를 선택해야 합니다. 메시지 큐 태스크 설치 및 실행에 대한 자세한 내용은 [Integration Services 설치](../install-windows/install-integration-services.md)를 참조하세요.  
+ 메시지 큐 태스크를 사용하려면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스가 설치되어 있어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 **설치할 구성 요소** 페이지 또는 **기능 선택** 페이지에서 선택하여 설치할 수 있는 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 구성 요소의 일부 하위 집합을 설치합니다. 이러한 구성 요소는 특정 태스크에 유용하지만 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 기능은 제한됩니다. 예를 들어 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 옵션을 선택하면 패키지 디자인에 필요한 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 구성 요소가 설치되지만 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스가 설치되지 않기 때문에 메시지 큐 태스크가 작동하지 않습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 전체 설치하려면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 설치할 구성 요소 **페이지에서** 를 선택해야 합니다. 메시지 큐 태스크 설치 및 실행에 대한 자세한 내용은 [Integration Services 설치](../install-windows/install-integration-services.md)를 참조하세요.  
   
 > [!NOTE]  
 >  컴퓨터의 운영 체제가 FIPS 모드에서 구성되고 태스크에서 암호화를 사용하는 경우 메시지 큐 태스크는 FIPS(Federal Information Processing Standard) 140-2와 호환되지 않습니다. 메시지 큐 태스크에서 암호화를 사용하지 않는 경우에는 태스크가 성공적으로 실행됩니다.  
@@ -49,17 +47,13 @@ ms.locfileid: "62831480"
 ## <a name="message-types"></a>메시지 유형  
  메시지 큐 태스크에서 제공하는 메시지 유형을 다음과 같은 방법으로 구성할 수 있습니다.  
   
--   
-  `Data file` 메시지는 파일에 메시지가 포함되도록 지정합니다. 메시지를 받을 때 파일을 저장하고, 기존 파일을 덮어쓰고, 메시지를 받을 수 있는 태스크의 패키지를 지정하도록 태스크를 구성할 수 있습니다.  
+-   `Data file` 메시지는 파일에 메시지가 포함되도록 지정합니다. 메시지를 받을 때 파일을 저장하고, 기존 파일을 덮어쓰고, 메시지를 받을 수 있는 태스크의 패키지를 지정하도록 태스크를 구성할 수 있습니다.  
   
--   
-  `String` 메시지는 메시지를 문자열로 지정합니다. 메시지를 받을 때 받은 문자열을 사용자 정의 문자열과 비교하고 비교 결과에 따라 동작을 취하도록 태스크를 구성할 수 있습니다. 문자열 비교 시에는 전체 문자열 일치 및 대/소문자 구분 여부를 지정하거나 하위 문자열을 사용할 수 있습니다.  
+-   `String` 메시지는 메시지를 문자열로 지정합니다. 메시지를 받을 때 받은 문자열을 사용자 정의 문자열과 비교하고 비교 결과에 따라 동작을 취하도록 태스크를 구성할 수 있습니다. 문자열 비교 시에는 전체 문자열 일치 및 대/소문자 구분 여부를 지정하거나 하위 문자열을 사용할 수 있습니다.  
   
--   
-  `String message to variable`은 원본 메시지를 대상 변수에 전송되는 문자열로 지정합니다. 전체 문자열 일치, 대/소문자 구분 또는 하위 문자열 비교를 사용하여 받은 문자열을 사용자 정의 문자열과 비교하도록 태스크를 구성할 수 있습니다. 이 메시지 유형은 태스크에서 메시지를 받는 경우에만 사용할 수 있습니다.  
+-   `String message to variable`은 원본 메시지를 대상 변수에 전송되는 문자열로 지정합니다. 전체 문자열 일치, 대/소문자 구분 또는 하위 문자열 비교를 사용하여 받은 문자열을 사용자 정의 문자열과 비교하도록 태스크를 구성할 수 있습니다. 이 메시지 유형은 태스크에서 메시지를 받는 경우에만 사용할 수 있습니다.  
   
--   
-  `Variable`은 메시지에 하나 이상의 변수가 포함되도록 지정합니다. 메시지에 포함된 변수 이름을 지정하도록 메시지를 구성할 수 있습니다. 메시지를 받을 때 메시지를 받아올 패키지와 메시지의 대상인 변수를 모두 지정하도록 태스크를 구성할 수 있습니다.  
+-   `Variable`은 메시지에 하나 이상의 변수가 포함되도록 지정합니다. 메시지에 포함된 변수 이름을 지정하도록 메시지를 구성할 수 있습니다. 메시지를 받을 때 메시지를 받아올 패키지와 메시지의 대상인 변수를 모두 지정하도록 태스크를 구성할 수 있습니다.  
   
 ## <a name="sending-messages"></a>메시지 보내기  
  메시지 큐 태스크에서 메시지를 보내도록 구성할 경우 메시지 큐 기술이 현재 지원하는 RC2 및 RC4 암호화 알고리즘 중 하나를 사용하여 메시지를 암호화할 수 있습니다. 이 두 암호화 알고리즘은 현재 메시지 큐 기술에서 지원하지 않는 최신 알고리즘에 비해 암호화 방식이 취약한 것으로 간주됩니다. 따라서 메시지 큐 태스크를 사용하여 메시지를 전송할 때는 암호화 요구를 신중하게 고려해야 합니다.  
@@ -92,25 +86,23 @@ ms.locfileid: "62831480"
 |`MSMQTaskTimeOut`|태스크 시간이 초과되었음을 나타냅니다.|  
   
 ## <a name="configuration-of-the-message-queue-task"></a>메시지 큐 태스크 구성  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다. 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [메시지 큐 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [메시지 큐 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [메시지 큐 태스크 편집기 &#40;수신 페이지&#41;](../message-queue-task-editor-receive-page.md)  
+-   [메시지 큐 태스크 편집기&#40;받기 페이지&#41;](../message-queue-task-editor-receive-page.md)  
   
--   [메시지 큐 태스크 편집기 &#40;보내기 페이지&#41;](../message-queue-task-editor-send-page.md)  
+-   [메시지 큐 태스크 편집기&#40;보내기 페이지&#41;](../message-queue-task-editor-send-page.md)  
   
 -   [식 페이지](../expressions/expressions-page.md)  
   
  프로그래밍 방식으로 이러한 속성을 설정하는 방법은 개발자 가이드에서 **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** 클래스에 대한 설명서를 참조하십시오.  
   
 ## <a name="related-tasks"></a>관련 작업  
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법에 대한 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](../set-the-properties-of-a-task-or-container.md)을 참조하세요.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법에 대한 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](../set-the-properties-of-a-task-or-container.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Integration Services 태스크](integration-services-tasks.md)   
+ [작업 Integration Services](integration-services-tasks.md)   
  [제어 흐름](control-flow.md)  
   
   

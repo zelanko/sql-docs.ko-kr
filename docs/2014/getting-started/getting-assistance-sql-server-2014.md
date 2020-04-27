@@ -12,18 +12,16 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69127078f72eeab296c754dfce666804dcdda53d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62837706"
 ---
 # <a name="getting-assistance-sql-server-2014"></a>지원 받기(SQL Server 2014)
-  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 는 다음과 같은 세 가지 주요 정보원을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대한 정보를 제공합니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]와 함께 설치되는 설명서 및 자습서  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]와 함께 설치되는 설명서 및 자습서  
   
 -   MSDN( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Network) 및 TechNet의 [!INCLUDE[msCoName](../includes/msconame-md.md)] 사이트  
   
@@ -33,10 +31,9 @@ ms.locfileid: "62837706"
   
 ## <a name="in-this-section"></a>섹션 내용  
  [SQL Server 지원 받기](../../2014/getting-started/getting-sql-server-assistance.md)  
- 
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]와 관련된 정보를 제공하는 주요 정보원에 대한 링크가 포함되어 있습니다. 이 항목에는 지원 사이트에 대한 링크도 포함되어 있습니다.  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]와 관련된 정보를 제공하는 주요 정보원에 대한 링크가 포함되어 있습니다. 이 항목에는 지원 사이트에 대한 링크도 포함되어 있습니다.  
   
- [기능 제약을 느끼는 사용자를 위한 내게 필요한 옵션](../../2014/getting-started/accessibility-for-people-with-disabilities.md)  
+ [장애가 있는 사용자를 위한 접근성](../../2014/getting-started/accessibility-for-people-with-disabilities.md)  
  장애가 있는 사용자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 보다 편리하게 사용할 수 있도록 지원하는 제품, 기능 및 서비스에 대해 설명합니다.  
   
  [SQL Server 2014에 대한 사용자 의견 제공](../../2014/getting-started/providing-feedback-for-sql-server-2014.md)  

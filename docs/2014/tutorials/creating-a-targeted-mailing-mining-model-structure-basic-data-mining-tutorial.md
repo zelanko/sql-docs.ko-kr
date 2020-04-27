@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2bd2e9d0decc730a59b63ee600bec2d080cc85fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62856159"
 ---
 # <a name="creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial"></a>타겟 메일링 마이닝 모델 구조 만들기(기본 데이터 마이닝 자습서)
@@ -26,8 +26,7 @@ ms.locfileid: "62856159"
   
 1.  솔루션 탐색기에서 **마이닝 구조** 를 마우스 오른쪽 단추로 클릭 하 고 **새 마이닝 구조** 를 선택 하 여 데이터 마이닝 마법사를 시작 합니다.  
   
-2.  
-  **데이터 마이닝 마법사 시작** 페이지에서 **다음**을 클릭합니다.  
+2.  **데이터 마이닝 마법사 시작** 페이지에서 **다음**을 클릭합니다.  
   
 3.  **정의 방법 선택** 페이지에서 **기존 관계형 데이터베이스 또는 데이터 웨어하우스** 를 선택 했는지 확인 하 고 **다음**을 클릭 합니다.  
   
@@ -103,7 +102,7 @@ ms.locfileid: "62856159"
   
     -   **FirstName**  
   
-    -   **LastName**  
+    -   **성이**  
   
      왼쪽 열에서만 이러한 행에 확인란이 있습니다. 이러한 열은 구조에 추가되지만 모델에 포함되지는 않습니다. 그러나 모델을 작성하면 드릴스루 및 테스트에 사용할 수 있습니다. 드릴스루에 대 한 자세한 내용은 [데이터 마이닝 &#40;드릴스루 쿼리](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md) 를 참조 하세요&#41;  
   

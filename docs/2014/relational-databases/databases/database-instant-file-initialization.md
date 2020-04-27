@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 491c8a63c7ee3ed06c90356c58820f34ed3c0bf9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62872098"
 ---
 # <a name="database-instant-file-initialization"></a>데이터베이스 즉시 파일 초기화
@@ -36,8 +36,7 @@ ms.locfileid: "62872098"
  파일 초기화는 이러한 작업의 수행 시간을 더 오래 만듭니다. 그러나 데이터를 처음으로 파일에 기록할 때 운영 체제는 0으로 파일을 채울 수 없습니다.  
   
 ## <a name="instant-file-initialization"></a>즉시 파일 초기화  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터 파일을 즉시 초기화할 수 있습니다. 이를 통해 이전에 언급한 파일 작업을 신속히 실행할 수 있습니다. 즉시 파일 초기화는 디스크 공간을 0으로 채우지 않고 디스크 공간을 회수합니다. 대신, 새 데이터를 파일에 기록할 때 디스크 내용을 덮어씁니다. 로그 파일은 즉시 초기화할 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터 파일을 즉시 초기화할 수 있습니다. 이를 통해 이전에 언급한 파일 작업을 신속히 실행할 수 있습니다. 즉시 파일 초기화는 디스크 공간을 0으로 채우지 않고 디스크 공간을 회수합니다. 대신, 새 데이터를 파일에 기록할 때 디스크 내용을 덮어씁니다. 로그 파일은 즉시 초기화할 수 없습니다.  
   
 > [!NOTE]  
 >  인스턴트 파일 초기화는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] 또는 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 이상 버전에서만 사용할 수 있습니다.  
@@ -54,8 +53,7 @@ ms.locfileid: "62872098"
   
 3.  오른쪽 창에서 **볼륨 유지 관리 작업 수행**을 두 번 클릭합니다.  
   
-4.  
-  **사용자 또는 그룹 추가** 를 클릭하고 백업에 사용되는 사용자 계정을 추가합니다.  
+4.  **사용자 또는 그룹 추가** 를 클릭하고 백업에 사용되는 사용자 계정을 추가합니다.  
   
 5.  **적용**을 클릭 한 다음 모든 `Local Security Policy` 대화 상자를 닫습니다.  
   
@@ -66,8 +64,7 @@ ms.locfileid: "62872098"
   
 -   분리된 데이터 파일 및 백업 파일에 제한적인 DACL이 있는지 항상 확인합니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정에서 SE_MANAGE_VOLUME_NAME을 취소하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스에 대한 즉시 파일 초기화를 해제합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정에서 SE_MANAGE_VOLUME_NAME을 취소하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스에 대한 즉시 파일 초기화를 해제합니다.  
   
 > [!NOTE]  
 >  즉시 파일 초기화 해제는 사용자 권한이 취소된 후 생성되거나 크기를 늘린 파일에만 영향을 미칩니다.  

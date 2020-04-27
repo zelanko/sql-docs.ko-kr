@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bce3bd6862e612a8cefa35d1c981d608bf2c341c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62842988"
 ---
 # <a name="source-control-basics"></a>원본 제어 기본 사항
@@ -40,8 +40,7 @@ ms.locfileid: "62842988"
   
 -   실수로 삭제한 내용을 복원합니다. 원본 제어에 체크 인된 최신 파일 버전을 복원할 수 있습니다.  
   
--   원본 제어 클라이언트 및 서버 모두에서 디스크 공간을 절약합니다. 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe와 같은 일부 원본 제어 공급자는 파일의 최신 버전과 각 버전 및 이전 또는 이후 버전의 차이를 저장하여 서버에서 디스크 공간을 절약할 수 있습니다. 클라이언트에서도 Visual SourceSafe는 디스크 공간 절약을 지원합니다. 로컬 디스크로 다운로드되지 않도록 폴더와 파일을 숨길 수 있습니다.  
+-   원본 제어 클라이언트 및 서버 모두에서 디스크 공간을 절약합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe와 같은 일부 원본 제어 공급자는 파일의 최신 버전과 각 버전 및 이전 또는 이후 버전의 차이를 저장하여 서버에서 디스크 공간을 절약할 수 있습니다. 클라이언트에서도 Visual SourceSafe는 디스크 공간 절약을 지원합니다. 로컬 디스크로 다운로드되지 않도록 폴더와 파일을 숨길 수 있습니다.  
   
  파일 체크 아웃, 체크 인 및 기타 원본 제어 작업은 실제로 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 같은 원본 제어 클라이언트를 통해 수행합니다. 원본 제어 클라이언트는 대상 사용자 그룹에서 공급자의 기능을 사용할 수 있도록 공급자와 상호 작용하도록 설계되었습니다. 원본 제어 클라이언트를 사용하면 사용자는 공급자에 의해 저장된 파일을 탐색하거나 파일을 추가 및 삭제하거나 파일을 체크 인 및 체크 아웃하거나 로컬 파일의 복사본을 검색할 수 있습니다.  
   
@@ -55,6 +54,6 @@ ms.locfileid: "62842988"
 |**Task**|**항목**|  
 |원본 제어 옵션 설정|[원본 제어 옵션 설정](../../2014/database-engine/set-source-control-options.md)|  
 |원본 제어 연결 변경|[원본 제어 연결 변경](../../2014/database-engine/change-source-control-connections.md)|  
-|원본 제어에서 파일 제외|[원본 제어에서 파일 제외](../../2014/database-engine/exclude-files-from-source-control.md)|  
+|원본 제어에서 파일 제외|[소스 제어에서 파일 제외](../../2014/database-engine/exclude-files-from-source-control.md)|  
   
   

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 286b37195b200761ce8cd8e941076c8a27e61011
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62836809"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>프로그래밍 방식으로 데이터 흐름 구성 요소 추가
@@ -35,8 +35,7 @@ ms.locfileid: "62836809"
 ## <a name="adding-a-managed-component"></a>관리되는 구성 요소 추가  
  CLSID나 PROGID는 구성 요소 자체가 아니라 래퍼를 가리키므로 이러한 값을 사용하여 데이터 흐름에 관리되는 데이터 흐름 구성 요소를 추가할 수는 없습니다. 대신 다음 예제에 표시된 대로 `CreationName` 속성이나 `AssemblyQualifiedName` 속성을 사용할 수 있습니다.  
   
- 
-  `AssemblyQualifiedName` 속성을 사용하려면 관리되는 구성 요소가 들어 있는 어셈블리에 대한 참조를 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 프로젝트에 추가해야 합니다. 이러한 어셈블리는 **참조 추가** 대화 상자의 .NET 탭에 표시되지 않습니다. 일반적으로 **C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents** 폴더의 어셈블리를 찾도록 이동해야 합니다.  
+ `AssemblyQualifiedName` 속성을 사용하려면 관리되는 구성 요소가 들어 있는 어셈블리에 대한 참조를 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 프로젝트에 추가해야 합니다. 이러한 어셈블리는 **참조 추가** 대화 상자의 .NET 탭에 표시되지 않습니다. 일반적으로 **C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents** 폴더의 어셈블리를 찾도록 이동해야 합니다.  
   
  기본 제공되는 관리되는 데이터 흐름 구성 요소에는 다음이 포함됩니다.  
   
@@ -283,7 +282,7 @@ End Module
 ## <a name="external-resources"></a>외부 리소스  
  blogs.msdn.com의 블로그 항목 - [EzAPI – SQL Server 2012용으로 업데이트됨](https://go.microsoft.com/fwlink/?LinkId=243223)  
   
-![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [프로그래밍 방식으로 데이터 흐름 구성 요소 연결](../building-packages-programmatically/connecting-data-flow-components-programmatically.md)  

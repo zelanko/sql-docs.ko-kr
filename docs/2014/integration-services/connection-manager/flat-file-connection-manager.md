@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4466ebd24647520c7cbba2bf0baa93a0f60a72bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833823"
 ---
 # <a name="flat-file-connection-manager"></a>Flat File Connection Manager
@@ -30,11 +30,9 @@ ms.locfileid: "62833823"
  플랫 파일 연결 관리자는 하나의 파일만 액세스할 수 있습니다. 파일을 여러 개 참조하려면 플랫 파일 연결 관리자 대신 다중 플랫 파일 연결 관리자를 사용하십시오. 자세한 내용은 [Multiple Flat Files Connection Manager](multiple-flat-files-connection-manager.md)을 참조하세요.  
   
 ## <a name="column-length"></a>열 길이  
- 기본적으로 플랫 파일 연결 관리자는 문자열 열의 길이를 50자로 설정합니다. 
-  **플랫 파일 연결 관리자 편집기** 대화 상자에서 샘플 데이터를 평가하고 이러한 열의 길이를 자동으로 조정하여 데이터가 잘리지 않거나 열 너비를 초과하지 않도록 할 수 있습니다. 또한 플랫 파일 원본 또는 변환에서 열 길이를 나중에 조정하지 않는 한 문자열 열 길이가 데이터 흐름 전체에서 동일하게 유지됩니다. 이러한 문자열 열이 보다 좁은 대상 열에 매핑되면 사용자 인터페이스에 경고가 나타나고 런타임 시 데이터 잘림으로 인한 오류가 발생할 수 있습니다. 오류나 잘림이 발생하지 않도록 하기 위해 플랫 파일 연결 관리자, 플랫 파일 원본 또는 변환에서 대상 열과 호환 가능하도록 열 크기를 조정할 수 있습니다. 출력 열의 길이를 수정 하려면 `Length` **고급 편집기** 대화 상자의 **입/출력 속성** 탭에서 출력 열의 속성을 설정 합니다.  
+ 기본적으로 플랫 파일 연결 관리자는 문자열 열의 길이를 50자로 설정합니다. **플랫 파일 연결 관리자 편집기** 대화 상자에서 샘플 데이터를 평가하고 이러한 열의 길이를 자동으로 조정하여 데이터가 잘리지 않거나 열 너비를 초과하지 않도록 할 수 있습니다. 또한 플랫 파일 원본 또는 변환에서 열 길이를 나중에 조정하지 않는 한 문자열 열 길이가 데이터 흐름 전체에서 동일하게 유지됩니다. 이러한 문자열 열이 보다 좁은 대상 열에 매핑되면 사용자 인터페이스에 경고가 나타나고 런타임 시 데이터 잘림으로 인한 오류가 발생할 수 있습니다. 오류나 잘림이 발생하지 않도록 하기 위해 플랫 파일 연결 관리자, 플랫 파일 원본 또는 변환에서 대상 열과 호환 가능하도록 열 크기를 조정할 수 있습니다. 출력 열의 길이를 수정 하려면 `Length` **고급 편집기** 대화 상자의 **입/출력 속성** 탭에서 출력 열의 속성을 설정 합니다.  
   
- 연결 관리자를 사용하는 플랫 파일 원본을 추가 및 구성한 후에 플랫 파일 연결 관리자에서 열 길이를 업데이트한 경우에는 플랫 파일 원본에서 출력 열의 크기를 수동으로 조정하지 않아도 됩니다. 
-  **플랫 파일 원본** 대화 상자를 열면 플랫 파일 원본에 열 메타데이터를 동기화하는 옵션이 제공됩니다.  
+ 연결 관리자를 사용하는 플랫 파일 원본을 추가 및 구성한 후에 플랫 파일 연결 관리자에서 열 길이를 업데이트한 경우에는 플랫 파일 원본에서 출력 열의 크기를 수동으로 조정하지 않아도 됩니다. **플랫 파일 원본** 대화 상자를 열면 플랫 파일 원본에 열 메타데이터를 동기화하는 옵션이 제공됩니다.  
   
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>플랫 파일 연결 관리자 구성  
  패키지에 플랫 파일 연결 관리자를 추가 하면에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임에 플랫 파일 연결로 확인 되는 연결 관리자를 만들고, 플랫 파일 연결 속성을 설정 하 고, 플랫 파일 연결 관리자를 패키지의 `Connections` 컬렉션에 추가 합니다.  
@@ -61,8 +59,7 @@ ms.locfileid: "62833823"
   
 -   개별 열에 대해 이름, 데이터 형식 및 최대 너비와 같은 속성을 설정합니다.  
   
- 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 속성 창에 식을 지정하여 플랫 파일 연결 관리자에 대한 ConnectionString 속성을 설정할 수 있습니다. 유효성 검사 오류를 방지하려면 다음을 수행합니다.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 속성 창에 식을 지정하여 플랫 파일 연결 관리자에 대한 ConnectionString 속성을 설정할 수 있습니다. 유효성 검사 오류를 방지하려면 다음을 수행합니다.  
   
 -   식을 사용해서 파일을 지정할 경우, **플랫 파일 연결 관리자 편집기** 의 **파일 이름**상자에 파일 경로를 추가합니다.  
   
@@ -72,16 +69,15 @@ ms.locfileid: "62833823"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [플랫 파일 연결 관리자 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [플랫 파일 연결 관리자 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [플랫 파일 연결 관리자 편집기 &#40;열 페이지&#41;](../flat-file-connection-manager-editor-columns-page.md)  
+-   [플랫 파일 연결 관리자 편집기&#40;열 페이지&#41;](../flat-file-connection-manager-editor-columns-page.md)  
   
--   [플랫 파일 연결 관리자 편집기 &#40;고급 페이지&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
+-   [플랫 파일 연결 관리자 편집기&#40;고급 페이지&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
   
--   [플랫 파일 연결 관리자 편집기 &#40;미리 보기 페이지&#41;](../flat-file-connection-manager-editor-preview-page.md)  
+-   [플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](../flat-file-connection-manager-editor-preview-page.md)  
   
  연결 관리자를 프로그래밍 방식으로 구성하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../building-packages-programmatically/adding-connections-programmatically.md)로 설정됩니다.  
   
