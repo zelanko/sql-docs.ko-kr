@@ -17,20 +17,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 224facf54b0cde09f97010be472e3cc28754e94b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62757004"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]는 프로그램 개발자를 대상 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 으로 하는의 실행 모드입니다. [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] `LocalDB` `LocalDB`설치는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]를 시작 하는 데 필요한 최소한의 파일 집합을 복사 합니다. 가 `LocalDB` 설치 되 면 개발자가 특수 연결 문자열을 사용 하 여 연결을 시작 합니다. 연결할 때, 필요한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인프라가 자동으로 생성되고 시작되므로 복잡한 태스크 또는 시간이 많이 걸리는 구성 태스크 없이 애플리케이션에서 데이터베이스를 사용하도록 할 수 있습니다. 개발자 도구는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 전체 서버 인스턴스를 관리할 필요 없이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 작성하고 테스트할 수 있게 해주는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 엔진을 개발자에게 제공합니다.
- 인스턴스 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] `LocalDB` 는 유틸리티를 `SqlLocalDB.exe` 사용 하 여 관리 됩니다. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB`는 사용 되지 않는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 사용자 인스턴스 기능 대신 사용 해야 합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]는 프로그램 개발자를 대상 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 으로 하는의 실행 모드입니다. [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] `LocalDB` `LocalDB`설치는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]를 시작 하는 데 필요한 최소한의 파일 집합을 복사 합니다. 가 `LocalDB` 설치 되 면 개발자가 특수 연결 문자열을 사용 하 여 연결을 시작 합니다. 연결할 때, 필요한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인프라가 자동으로 생성되고 시작되므로 복잡한 태스크 또는 시간이 많이 걸리는 구성 태스크 없이 애플리케이션에서 데이터베이스를 사용하도록 할 수 있습니다. 개발자 도구는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 전체 서버 인스턴스를 관리할 필요 없이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 작성하고 테스트할 수 있게 해주는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 엔진을 개발자에게 제공합니다. 인스턴스 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] `LocalDB` 는 유틸리티를 `SqlLocalDB.exe` 사용 하 여 관리 됩니다. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB`는 사용 되지 않는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 사용자 인스턴스 기능 대신 사용 해야 합니다.  
   
 ## <a name="installing-localdb"></a>LocalDB 설치  
  을 설치 `LocalDB` 하는 기본 방법은 SqlLocalDB 프로그램을 사용 하는 것입니다. `LocalDB`는의 [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]SKU를 설치할 때 사용할 수 있는 옵션입니다. 설치 `LocalDB` 중 **기능 선택** 페이지에서를 선택 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]합니다. 각 주 `LocalDB` [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 버전에는 이진 파일을 하나만 설치할 수 있습니다. 여러 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 프로세스를 시작할 수 있으며, 이러한 프로세스에는 모두 동일한 이진 파일이 사용됩니다. 로 시작 된 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에는 다음과 `LocalDB` 같은 제한 사항이 있습니다.[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
  설치 `LocalDB` 프로그램은 SqlLocalDB 프로그램을 사용 하 여 컴퓨터에 필요한 파일을 설치 합니다. 설치 되 면 `LocalDB` 는 데이터베이스를 만들고 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 열 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 수 있는의 인스턴스입니다. 데이터베이스의 시스템 데이터베이스 파일은 사용자의 로컬 AppData 경로에 저장되는데, 이 경로는 일반적으로 숨겨져 있습니다. 예를 들어 **C:\Users\\<사용자\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\** 입니다. 사용자 데이터베이스 파일은 사용자가 지정하는 위치(일반적으로 **C:\Users\\<사용자\>\Documents\\** 폴더 내 임의 위치)에 저장됩니다.  
   
  응용 프로그램에를 포함 `LocalDB` 하는 방법에 대 한 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 자세한 내용은 설명서 [로컬 데이터 개요](https://msdn.microsoft.com/library/ms233817\(VS.110\).aspx), [연습: SQL Server LocalDB 데이터베이스 만들기](https://msdn.microsoft.com/library/ms233763\(VS.110\).aspx)및 [연습: SQL Server localdb 데이터베이스의 데이터에 연결 (Windows Forms)](https://msdn.microsoft.com/library/ms171890\(VS.110\).aspx)을 참조 하세요.  
@@ -60,8 +59,7 @@ ms.locfileid: "62757004"
  컴퓨터의 다른 사용자는 동일한 이름의 인스턴스를 가질 수 있습니다. 각 인스턴스는 다른 사용자로 실행되는 서로 다른 프로세스입니다.  
   
 ## <a name="shared-instances-of-localdb"></a>LocalDB의 공유 인스턴스  
- 컴퓨터의 여러 사용자가의 `LocalDB`단일 인스턴스에 연결 해야 하는 시나리오를 지원 하기 위해는 `LocalDB` 인스턴스 공유를 지원 합니다. 인스턴스 소유자는 컴퓨터의 다른 사용자가 자신의 인스턴스에 연결하도록 허용할 수 있습니다. 의 `LocalDB` 자동 및 명명 된 인스턴스를 모두 공유할 수 있습니다. 
-  `LocalDB` 인스턴스를 공유하려면 사용자가 해당 인스턴스에 대한 공유 이름(별칭)을 선택합니다. 공유 이름은 컴퓨터의 모든 사용자에게 표시되기 때문에 이 공유 이름은 해당 컴퓨터에서 고유해야 합니다. 인스턴스의 `LocalDB` 공유 이름은의 `LocalDB`명명 된 인스턴스와 형식이 동일 합니다.  
+ 컴퓨터의 여러 사용자가의 `LocalDB`단일 인스턴스에 연결 해야 하는 시나리오를 지원 하기 위해는 `LocalDB` 인스턴스 공유를 지원 합니다. 인스턴스 소유자는 컴퓨터의 다른 사용자가 자신의 인스턴스에 연결하도록 허용할 수 있습니다. 의 `LocalDB` 자동 및 명명 된 인스턴스를 모두 공유할 수 있습니다. `LocalDB` 인스턴스를 공유하려면 사용자가 해당 인스턴스에 대한 공유 이름(별칭)을 선택합니다. 공유 이름은 컴퓨터의 모든 사용자에게 표시되기 때문에 이 공유 이름은 해당 컴퓨터에서 고유해야 합니다. 인스턴스의 `LocalDB` 공유 이름은의 `LocalDB`명명 된 인스턴스와 형식이 동일 합니다.  
   
  컴퓨터의 관리자만의 `LocalDB`공유 인스턴스를 만들 수 있습니다. 의 `LocalDB` 공유 인스턴스는 관리자 또는 공유 인스턴스 소유자가 공유 하지 않을 수 있습니다 `LocalDB`. 인스턴스를 공유 하 고 공유 하지 `LocalDB`않는 경우 `LocalDB` API `LocalDBShareInstance` 의 `LocalDBUnShareInstance` 및 메서드를 사용 하거나 SqlLocalDb 유틸리티의 공유 및 공유 해제 옵션을 사용 합니다.  
   

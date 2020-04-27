@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755361"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>데이터베이스 미러링 모니터링(SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "62755361"
   
 -   [관련 작업](#RelatedTasks)  
   
-##  <a name="MonitoringStatus"></a> 미러링 상태 모니터링  
+##  <a name="monitoring-mirroring-status"></a><a name="MonitoringStatus"></a> 미러링 상태 모니터링  
  서버 인스턴스에 있는 하나 이상의 미러된 데이터베이스에 대한 모니터링을 설정하고 관리하려면 데이터베이스 미러링 모니터 서버 또는 **dbmmonitor** 시스템 저장 프로시저를 사용합니다. 미러링 세션 중에 미러된 데이터베이스를 모니터링하여 데이터 흐름 여부와 상태를 확인할 수 있습니다.  
   
  미러된 데이터베이스를 모니터링하면 구체적으로 다음 작업을 수행할 수 있습니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "62755361"
   
      새 상태 행에 포함된 값이 임계값을 초과하면 정보 이벤트가 Windows 이벤트 로그로 전송됩니다. 그러면 시스템 관리자가 수동으로 이러한 이벤트를 기반으로 경고를 구성할 수 있습니다. 자세한 내용은 [미러링 성능 메트릭에 대해 경고 임계값 및 경고 사용&#40;SQL Server&#41;](use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)을 참조하세요.  
   
-###  <a name="tools_for_monitoring_dbm_status"></a> 데이터베이스 미러링 상태 모니터링 도구  
+###  <a name="tools-for-monitoring-database-mirroring-status"></a><a name="tools_for_monitoring_dbm_status"></a> 데이터베이스 미러링 상태 모니터링 도구  
  데이터베이스 미러링 모니터나 **sp_dbmmonitorresults** 시스템 저장 프로시저를 사용하여 미러링 상태를 모니터링할 수 있습니다. 두 시스템 관리자, 즉 **sysadmin** 고정 서버 역할의 멤버와 시스템 관리자가 **msdb** 데이터베이스의 **dbm_monitor** 고정 데이터베이스 역할에 추가한 사용자는 모두 이러한 도구를 사용하여 로컬 서버 인스턴스의 모든 미러된 데이터베이스에서 데이터베이스 미러링을 모니터링할 수 있습니다. 이러한 도구를 사용할 때 시스템 관리자가 수동으로 미러링 상태를 새로 고칠 수도 있습니다.  
   
 > [!NOTE]  
@@ -130,14 +130,14 @@ ms.locfileid: "62755361"
      시스템 관리자는 **sp_dbmmonitorresults** 시스템 저장 프로시저를 사용하여 상태 테이블을 볼 수 있으며 이전 15초 내에 업데이트되지 않은 경우 필요에 따라 업데이트할 수 있습니다. 이 프로시저는 **sp_dbmmonitorupdate** 프로시저를 호출한 다음 프로시저 호출에서 요청된 양에 따라 기록 행을 하나 이상 반환합니다. 결과 집합의 상태에 대한 자세한 내용은 [sp_dbmmonitorresults&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql)을 참조하세요.  
   
 #### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>데이터베이스 미러링 상태 모니터링(dbm_monitor 멤버가 사용하는 경우)  
- 앞에서 설명한 것처럼 **sp_dbmmonitorupdate** 는 처음 실행될 때 **msdb** 데이터베이스에 **dbm_monitor** 고정 데이터베이스 역할을 만듭니다. **dbm_monitor** 고정 데이터베이스 역할의 멤버는 데이터베이스 미러링 모니터 또는 **sp_dbmmonitorresults** 저장 프로시저를 사용하여 기존 미러링 상태를 볼 수 있습니다. 그러나 이러한 사용자는 상태 테이블을 업데이트할 수 없습니다. 표시되는 상태의 수명을 알아보려면 사용자가 **상태*** 페이지에서 \<보안 주체 로그 (***** 시간>**)*** 및 \<미러 로그 (***** 시간>**)** 레이블의 시간을 확인하면 됩니다.  
+ 앞에서 설명한 것처럼 **sp_dbmmonitorupdate** 는 처음 실행될 때 **msdb** 데이터베이스에 **dbm_monitor** 고정 데이터베이스 역할을 만듭니다. **dbm_monitor** 고정 데이터베이스 역할의 멤버는 데이터베이스 미러링 모니터 또는 **sp_dbmmonitorresults** 저장 프로시저를 사용하여 기존 미러링 상태를 볼 수 있습니다. 그러나 이러한 사용자는 상태 테이블을 업데이트할 수 없습니다. 표시 된 상태의 기간을 알아보려면 사용자가 **상태** 페이지에서 **주 로그 (***\<시간>***)** 및 **미러 로그 (***\<시간>***)** 레이블의 시간을 확인 하면 됩니다.  
   
  **dbm_monitor** 고정 데이터베이스 역할의 멤버는 **데이터베이스 미러링 모니터 작업** 을 사용하여 정기적으로 상태 테이블을 업데이트합니다. 작업이 없거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 중지된 경우 상태가 점점 유효하지 않게 되어 미러링 세션의 구성을 더 이상 반영할 수 없습니다. 예를 들어 장애 조치(failover) 후에 파트너가 동일한 역할(주 서버 또는 미러 서버)을 공유하는 것으로 표시되거나 현재 주 서버가 미러 서버로 표시되고 현재 미러 서버가 주 서버로 표시될 수 있습니다.  
   
 #### <a name="dropping-the-database-mirroring-monitor-job"></a>데이터베이스 미러링 모니터 작업 삭제  
  데이터베이스 미러링 모니터 작업인 **데이터베이스 미러링 모니터 작업**은 삭제할 때까지 유지됩니다. 시스템 관리자가 모니터링 작업을 관리해야 합니다. **데이터베이스 미러링 모니터 작업**을 삭제하려면 **sp_dbmmonitordropmonitoring**을 사용합니다. 자세한 내용은 [sp_dbmmonitordropmonitoring&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql)을 참조하세요.  
   
-###  <a name="perf_metrics_of_dbm_monitor"></a> 데이터베이스 미러링 모니터에 표시되는 상태  
+###  <a name="status-displayed-by-the-database-mirroring-monitor"></a><a name="perf_metrics_of_dbm_monitor"></a> 데이터베이스 미러링 모니터에 표시되는 상태  
  데이터베이스 미러링 모니터의 **상태** 페이지에는 파트너에 대한 설명과 미러링 세션의 상태가 표시됩니다. 상태에는 장애 조치를 완료하는 데 필요한 시간과 세션이 아직 동기화되지 않은 경우 데이터 손실 가능성을 예상하는 데 도움이 되는 기타 정보와 트랜잭션 로그 상태 같은 성능 메트릭이 포함됩니다. 또한 **상태** 페이지에는 미러링 세션의 상태와 일반적인 정보가 표시됩니다.  
   
 > [!NOTE]  
@@ -247,7 +247,7 @@ ms.locfileid: "62755361"
   
     -   자동 장애 조치(Failover)가 있는 보호 우선(동기)  
   
-##  <a name="AdditionalSources"></a> 미러된 데이터베이스에 대한 추가 정보 원본  
+##  <a name="additional-sources-of-information-about-a-mirrored-database"></a><a name="AdditionalSources"></a> 미러된 데이터베이스에 대한 추가 정보 원본  
  데이터베이스 미러링 모니터 서버와 dbmmonitor 저장 프로시저를 사용하여 미러된 데이터베이스를 모니터링하고 모니터링된 성능 변수에 대해 경고를 설정하는 것 외에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 카탈로그 뷰, 성능 카운터 및 데이터베이스 미러링 이벤트 알림을 제공합니다.  
   
  **섹션 내용**  
@@ -258,7 +258,7 @@ ms.locfileid: "62755361"
   
 -   [데이터베이스 미러링 이벤트 알림](#DbmEventNotif)  
   
-###  <a name="DbmMetadata"></a> 데이터베이스 미러링 메타데이터  
+###  <a name="database-mirroring-metadata"></a><a name="DbmMetadata"></a> 데이터베이스 미러링 메타데이터  
  각 데이터베이스 미러링 세션은 다음 카탈로그 또는 동적 관리 뷰에 표시된 메타데이터에 설명되어 있습니다.  
   
 -   **sys.database_mirroring**  
@@ -279,7 +279,7 @@ ms.locfileid: "62755361"
   
      자세한 내용은 [sys.dm_db_mirroring_connections&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)를 참조하세요.  
   
-###  <a name="DbmPerfCounters"></a> 데이터베이스 미러링 성능 카운터  
+###  <a name="database-mirroring-performance-counters"></a><a name="DbmPerfCounters"></a> 데이터베이스 미러링 성능 카운터  
  성능 카운터를 사용하면 데이터베이스 미러링 성능을 모니터링할 수 있습니다. 예를 들어 **Transaction Delay** 카운터를 사용하면 데이터베이스 미러링이 주 서버의 성능에 영향을 주는지 여부를 알 수 있고 **Redo Queue** 와 **Log Send Queue** 카운터를 사용하면 미러 데이터베이스가 주 데이터베이스와 동기화가 제대로 이루어지는지 알 수 있습니다. **Log Bytes Sent/sec** 카운터를 사용하면 초당 보낸 로그의 양을 모니터링할 수 있습니다.  
   
  각 파트너의 성능 모니터에서 성능 카운터는 데이터베이스 미러링 성능 개체(**SQLServer:Database Mirroring**)에서 사용할 수 있습니다. 자세한 내용은 [SQL Server, Database Mirroring Object](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md)을(를) 참조하세요.  
@@ -288,7 +288,7 @@ ms.locfileid: "62755361"
   
 -   [시스템 모니터 시작&#40;Windows&#41;](../../relational-databases/performance/start-system-monitor-windows.md)  
   
-###  <a name="DbmEventNotif"></a> 데이터베이스 미러링 이벤트 알림  
+###  <a name="database-mirroring-event-notifications"></a><a name="DbmEventNotif"></a> 데이터베이스 미러링 이벤트 알림  
  이벤트 알림은 특별한 종류의 데이터베이스 개체입니다. 이벤트 알림은 다양한 Transact-SQL DDL(데이터 언어 정의) 문과 SQL 추적 이벤트에 대한 응답으로 실행되며 서버 및 데이터베이스 이벤트에 대한 정보를 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스로 보냅니다.  
   
  데이터베이스 미러링에 대해 사용할 수 있는 이벤트는 다음과 같습니다.  
@@ -301,7 +301,7 @@ ms.locfileid: "62755361"
   
      데이터베이스 미러링 전송 보안과 관련된 감사 메시지를 보고합니다. 자세한 내용은 [Audit Database Mirroring Login Event Class](../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [미러링 성능 메트릭에 대해 경고 임계값 및 경고 사용&#40;SQL Server&#41;](use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
   

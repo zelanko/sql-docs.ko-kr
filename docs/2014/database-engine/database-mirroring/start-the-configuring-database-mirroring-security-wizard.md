@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b9f9d698496c05ca28d0d2a8b8341007bca13e8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754439"
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard-sql-server-management-studio"></a>데이터베이스 미러링 보안 구성 마법사 시작(SQL Server Management Studio)
@@ -34,8 +34,8 @@ ms.locfileid: "62754439"
 4.  **보안 구성**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 미러링&#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [데이터베이스 속성&#40;미러링 페이지&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [데이터베이스 미러링 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [데이터베이스 속성 &#40;미러링 페이지&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
   

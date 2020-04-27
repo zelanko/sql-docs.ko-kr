@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5dfc0aa145f106fc57c25a6249b928ee27ab4b87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62757201"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>원격 서버 연결 옵션 보기 또는 구성(SQL Server)
@@ -38,27 +38,26 @@ ms.locfileid: "62757201"
   
 -   **후속 작업:**  [원격 서버 연결 옵션을 구성한 후](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  **sp_serveroption** 을 실행하려면 서버에 대한 ALTER ANY LINKED SERVER 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-view-or-configure-remote-server-connection-options"></a>원격 서버 연결 옵션을 보거나 구성하려면  
   
 1.  개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-2.  
-  **SQL Server 속성 - \<***server_name***>** 대화 상자에서 **연결**을 클릭합니다.  
+2.  **SQL Server 속성 - \<***server_name***>** 대화 상자에서 **연결**을 클릭합니다.  
   
 3.  **연결** 페이지에서 **원격 서버 연결** 설정을 확인한 다음 필요한 경우 수정합니다.  
   
 4.  원격 서버 쌍의 다른 서버에 대해 1단계에서 3단계까지 반복합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-view-remote-server-connection-options"></a>원격 서버 연결 옵션을 보려면  
   
@@ -87,7 +86,7 @@ USE master;
 EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';  
 ```  
   
-##  <a name="FollowUp"></a> 후속 작업: 원격 서버 연결 옵션을 구성한 후  
+##  <a name="follow-up-after-you-configure-remote-server-connection-options"></a><a name="FollowUp"></a> 후속 작업: 원격 서버 연결 옵션을 구성한 후  
  설정을 적용하려면 원격 서버를 중지한 후 다시 시작해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

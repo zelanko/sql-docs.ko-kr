@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 313a5268b754089d4ca8964328d53cb23ec6edd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62746117"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>RDL 스키마에서 생성한 클래스를 사용하여 보고서 업데이트(SSRS 자습서)
@@ -29,8 +29,7 @@ ms.locfileid: "62746117"
   
 -   콘솔 응용 프로그램 프로젝트 템플릿을 [!INCLUDE[msCoName](../includes/msconame-md.md)] 사용 하 여 응용 프로그램을 만듭니다. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]  
   
--   
-  **xsd** 도구를 사용하여 RDL(Report Definition Language) 스키마의 클래스를 생성합니다.  
+-   **xsd** 도구를 사용하여 RDL(Report Definition Language) 스키마의 클래스를 생성합니다.  
   
 -   보고서 서버에 연결하고 보고서 정의를 검색합니다.  
   
@@ -52,15 +51,14 @@ ms.locfileid: "62746117"
   
 -   보고서 서버가 있는 컴퓨터의 보고서 서버 웹 서비스에 액세스하고 보고서를 게시할 수 있는 권한  
   
--   
-  [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 인스턴스에 설치된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]예제 데이터베이스  
+-   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 인스턴스에 설치된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]예제 데이터베이스  
   
 -   보고서 서버에 설치된 보고서. 이 자습서에서는 예제 보고서 Company Sales 2012를 사용합니다. 예제 보고서에 대한 자세한 내용은 [SQL Server Reporting Services 제품 예제(SQL Server Reporting Services Product Samples)](https://go.microsoft.com/fwlink/?LinkId=177889)를 참조하십시오.  
   
 > [!NOTE]  
 >  설치 시 예제가 자동으로 설치되지 않지만 예제는 언제든지 설치할 수 있습니다. 예제에 대한 정보는 [SQL Server 제품 예제](https://go.microsoft.com/fwlink/?LinkId=182887)를 참조하십시오.  
   
- **자습서를 완료 하는 데 소요 되는 예상 시간:** 30 분  
+ **자습서에 소요되는 예상 시간:** 30분  
   
 ## <a name="tasks"></a>작업  
  [1단원: RDL Schema Visual Studio 프로젝트 만들기](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  
@@ -76,6 +74,6 @@ ms.locfileid: "62746117"
  [6 단원: VB-C&#35;&#41;&#40;RDL 스키마 응용 프로그램 실행](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [SSRS&#41;&#40;보고서 정의 언어](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [보고서 정의 언어&#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

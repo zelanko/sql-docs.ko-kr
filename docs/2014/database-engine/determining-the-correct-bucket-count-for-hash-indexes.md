@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754245"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>해시 인덱스에 대한 올바른 버킷 수 결정
@@ -31,8 +31,7 @@ ms.locfileid: "62754245"
 ## <a name="recommendations"></a>권장 사항  
  대부분의 경우 버킷 수는 인덱스 키에 있는 고유한 값 수의 1~2배 사이여야 합니다. 인덱스 키에 중복 값이 많이 포함되어 있는 경우 평균적으로 각 인덱스 키 값에 대해 10개 이상의 행이 있으므로 대신 비클러스터형 인덱스를 사용하세요.  
   
- 특정 인덱스 키에 얼마나 많은 값이 지정될지 항상 예측할 수 있는 것은 아닙니다. 
-  `BUCKET_COUNT` 값이 실제 키 값 수의 5배 이내에 해당하는 경우 성능이 적절해야 합니다.  
+ 특정 인덱스 키에 얼마나 많은 값이 지정될지 항상 예측할 수 있는 것은 아닙니다. `BUCKET_COUNT` 값이 실제 키 값 수의 5배 이내에 해당하는 경우 성능이 적절해야 합니다.  
   
  기존 데이터에 있는 고유한 인덱스 키 수를 확인하려면 다음 예제와 비슷한 쿼리를 사용하세요.  
   
@@ -83,17 +82,14 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
  해시 인덱스 상태의 두 가지 키 지표는 다음과 같습니다.  
   
  *empty_bucket_percent*  
- *empty_bucket_percent* 해시 인덱스에 있는 빈 버킷 수를 나타냅니다.  
+ *empty_bucket_percent* 는 해시 인덱스에 있는 빈 버킷 수를 나타냅니다.  
   
- 
-  *empty_bucket_percent* 가 10% 미만인 경우 버킷 수도 적을 가능성이 큽니다. 
-  *empty_bucket_percent* 가 33% 이상이 되는 것이 이상적입니다. 버킷 수가 인덱스 키 값 수와 일치하는 경우 해시 분포로 인해 버킷의 1/3이 비어 있습니다.  
+ *empty_bucket_percent* 가 10% 미만인 경우 버킷 수도 적을 가능성이 큽니다. *empty_bucket_percent* 가 33% 이상이 되는 것이 이상적입니다. 버킷 수가 인덱스 키 값 수와 일치하는 경우 해시 분포로 인해 버킷의 1/3이 비어 있습니다.  
   
  *avg_chain_length*  
- *avg_chain_length* 해시 버킷의 평균 행 체인 길이를 나타냅니다.  
+ *avg_chain_length* 는 해시 버킷의 평균 행 체인 길이를 나타냅니다.  
   
- 
-  *avg_chain_length* 가 10보다 크고 *empty_bucket_percent* 가 10% 이상이면 중복 인덱스 키 값이 많을 수 있으므로 비클러스터형 인덱스가 더 적합합니다. 평균 체인 길이 1이 이상적입니다.  
+ *avg_chain_length* 가 10보다 크고 *empty_bucket_percent* 가 10% 이상이면 중복 인덱스 키 값이 많을 수 있으므로 비클러스터형 인덱스가 더 적합합니다. 평균 체인 길이 1이 이상적입니다.  
   
  다음 두 가지 요소가 체인 길이에 영향을 줍니다.  
   

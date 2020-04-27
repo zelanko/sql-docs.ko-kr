@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2bce064ee38082861e9b6c5d4f2c6e28bf41dded
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62745524"
 ---
 # <a name="srv_senddone-extended-stored-procedure-api"></a>srv_senddone(확장 저장 프로시저 API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 CLR 통합을 사용 하세요.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
   
  결과 완료 메시지를 클라이언트에게 보냅니다.  
   
@@ -58,22 +58,19 @@ count
  *srvproc*  
  특정 클라이언트 연결에 대한 핸들(이 경우 언어 요청을 수신한 핸들)인 SRV_PROC 구조에 대한 포인터입니다. 이 구조에는 확장 저장 프로시저 API 라이브러리가 애플리케이션과 클라이언트 간 통신 및 데이터를 관리하는 데 사용하는 정보가 들어 있습니다.  
   
- *업무*  
- 다양한 *status* 플래그에 대한 2바이트 필드입니다. 
-  *status* 플래그 값에 AND 및 OR 논리 연산자를 사용하여 여러 플래그를 설정할 수 있습니다. 다음 표에서는 가능한 *status* 플래그를 보여 줍니다.  
+ *status*  
+ 다양한 *status* 플래그에 대한 2바이트 필드입니다. *status* 플래그 값에 AND 및 OR 논리 연산자를 사용하여 여러 플래그를 설정할 수 있습니다. 다음 표에서는 가능한 *status* 플래그를 보여 줍니다.  
   
-|상태 플래그|Description|  
+|상태 플래그|설명|  
 |-----------------|-----------------|  
-|SRV_DONE_COUNT|
-  *count* 매개 변수에 올바른 개수가 포함되어 있습니다.|  
+|SRV_DONE_COUNT|*count* 매개 변수에 올바른 개수가 포함되어 있습니다.|  
 |SRV_DONE_ERROR|현재 클라이언트 명령에 오류가 수신되었습니다.|  
   
  *나타납니다*  
  예약된 2바이트 필드입니다. 이 값을 0으로 설정합니다.  
   
  *count*  
- 현재 결과 집합의 개수를 나타내는 데 사용되는 4바이트 필드입니다. 
-  *status* 필드에 SRV_DONE_COUNT 플래그를 설정하면 *count* 에 올바른 개수가 포함됩니다.  
+ 현재 결과 집합의 개수를 나타내는 데 사용되는 4바이트 필드입니다. *status* 필드에 SRV_DONE_COUNT 플래그를 설정하면 *count* 에 올바른 개수가 포함됩니다.  
   
 ## <a name="returns"></a>반환  
  SUCCEED 또는 FAIL  
@@ -81,9 +78,7 @@ count
 ## <a name="remarks"></a>설명  
  클라이언트 요청으로 인해 서버에서 많은 명령을 실행하고 많은 결과 집합을 반환할 수 있습니다. 각 결과 집합에 대해 **srv_senddone** 에서 결과 완료 메시지를 클라이언트에 반환해야 합니다.  
   
- 
-  *count* 필드는 명령의 영향을 받는 행 수를 나타냅니다. 
-  *count* 필드에 개수가 포함되어 있는 경우 *status* 필드에 SRV_DONE_COUNT 플래그를 설정해야 합니다. 이 설정을 사용하면 클라이언트에서 *count* 값 0과 사용되지 않은 *count* 필드를 구분할 수 있습니다.  
+ *count* 필드는 명령의 영향을 받는 행 수를 나타냅니다. *count* 필드에 개수가 포함되어 있는 경우 *status* 필드에 SRV_DONE_COUNT 플래그를 설정해야 합니다. 이 설정을 사용하면 클라이언트에서 *count* 값 0과 사용되지 않은 *count* 필드를 구분할 수 있습니다.  
   
  SRV_CONNECT 처리기에서 **srv_senddone** 을 호출하지 마십시오.  
   

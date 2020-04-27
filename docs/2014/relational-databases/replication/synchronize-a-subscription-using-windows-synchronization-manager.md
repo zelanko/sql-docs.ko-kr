@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62745762"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Windows 동기화 관리자를 사용하여 구독 동기화(Windows 동기화 관리자)
@@ -34,7 +34,7 @@ ms.locfileid: "62745762"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Windows 동기화 관리자를 통한 끌어오기 구독 동기화가 가능하도록 설정하려면  
   
-1.  **구독 속성-** Subscriber>: **SubscriptionDatabase>\< 대화 상자의 \<일반** 페이지에서 **Windows 동기화 관리자 사용** 옵션에 **사용** 값을 선택합니다.  
+1.  **구독 속성-\<Subscriber>: \<SubscriptionDatabase>** 대화 상자의 **일반** 페이지에서 **Windows 동기화 관리자 사용** 옵션에 **사용** 값을 선택합니다.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62745762"
   
     -   **시작**을 클릭하고 **프로그램** 또는 **모든 프로그램**, **보조프로그램**을 차례로 가리킨 다음 **동기화**를 클릭합니다.  
   
-    -   **시작**, **실행** **실행** 대화 상자에서 **열기** 필드에 `mobsync.exe` 를 입력 한 다음 **확인**을 클릭 합니다.  
+    -   **시작**을 클릭 한 다음 실행을 클릭 **합니다.** **실행** 대화 상자에서 **열기** 필드에 `mobsync.exe` 를 입력 한 다음 **확인**을 클릭 합니다.  
   
 2.  **동기화할 항목** 대화 상자에서 동기화할 구독을 선택합니다. 구독은 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 아래에 나열되어 있습니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62745762"
   
 2.  다음 탭에서 속성을 보고 수정합니다.  
   
-    -   **ID**  
+    -   **등록**  
   
     -   **구독자 로그인**, **배포자 로그인**및 **게시자 로그인** (병합 복제의 경우만 해당)  
   
@@ -117,5 +117,5 @@ ms.locfileid: "62745762"
 >  편집을 수행한 경우에는 편집 내용이 해결을 위해 선택한 행의 일부인 경우에만 적용됩니다. 예를 들어 **게시자**에서 편집을 수행한 다음 **구독자 허용**을 클릭하면 편집 내용이 무시됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
+ [대화형 충돌 해결](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
   

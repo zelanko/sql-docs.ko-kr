@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dfdce0d0db35d651d12670ffd3cb1c9437961cd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736520"
 ---
 # <a name="developing-with-analysis-services-scripting-language-assl"></a>ASSL(Analysis Services Scripting Language)을 사용하여 개발
@@ -27,12 +27,11 @@ ms.locfileid: "62736520"
   
 -   명령 언어 - `Create`, `Alter` 또는 `Process`와 같은 동작 명령을 Analysis Services 인스턴스로 보냅니다. 이 명령 언어는 [XML for Analysis &#40;XMLA&#41; 참조](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)에 설명 되어 있습니다.  
   
- 
-  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]에서 다차원 솔루션을 설명하는 ASSL을 보려면 프로젝트 수준에서 View Code 명령을 사용합니다. XMLA 쿼리 편집기를 사용하여 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]에서 ASSL 스크립트를 만들거나 편집할 수도 있습니다. 작성하는 스크립트는 서버에서 개체를 관리하거나 명령을 실행하는 데 사용할 수 있습니다.  
+ [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]에서 다차원 솔루션을 설명하는 ASSL을 보려면 프로젝트 수준에서 View Code 명령을 사용합니다. XMLA 쿼리 편집기를 사용하여 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]에서 ASSL 스크립트를 만들거나 편집할 수도 있습니다. 작성하는 스크립트는 서버에서 개체를 관리하거나 명령을 실행하는 데 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [개체 및 개체 특징](assl-objects-and-object-characteristics.md)   
  [XML 규칙](assl-xml-conventions.md)   
- [데이터 원본 및 바인딩 &#40;SSAS 다차원&#41;](../data-sources-and-bindings-ssas-multidimensional.md)  
+ [데이터 원본 및 바인딩&#40;SSAS 다차원&#41;](../data-sources-and-bindings-ssas-multidimensional.md)  
   
   

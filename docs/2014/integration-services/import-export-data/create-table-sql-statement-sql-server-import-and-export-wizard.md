@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7f541ad24e87bf5bdea9ed8b8c2523a73c81daa9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768005"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>테이블 생성 SQL 문(SQL Server 가져오기 및 내보내기 마법사)
@@ -36,7 +36,7 @@ ms.locfileid: "62768005"
 > [!NOTE]  
 >  SQL 문에 캐리지 리턴을 포함하려면 Ctrl+Enter를 누릅니다. Enter 키만 누르면 대화 상자가 닫힙니다.  
   
- **자동 생성**  
+ **자동**  
  기본 SQL 문을 수정한 경우 **자동 생성**을 클릭하여 복원합니다.  
   
   

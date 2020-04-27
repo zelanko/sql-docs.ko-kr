@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fd397349bc3fa3ed7f69e9e1293415ea96fc75d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754317"
 ---
 # <a name="set-up-login-accounts-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>데이터베이스 미러링 또는 AlwaysOn 가용성 그룹에 대한 로그인 계정 설정(SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "62754317"
     > [!IMPORTANT]  
     >  보다 안전한 환경을 만들려면 각 서버 인스턴스에 대해 별도의 도메인 계정을 사용해 보십시오.  
   
-##  <a name="CreateLogin"></a> 다른 계정에 대해 로그인 만들기  
+##  <a name="create-a-login-for-a-different-account"></a><a name="CreateLogin"></a>다른 계정에 대 한 로그인 만들기  
  두 서버 인스턴스가 다른 계정으로 실행되는 경우 시스템 관리자는 CREATE LOGIN [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 서버 인스턴스마다 원격 인스턴스의 시작 서비스 계정에 대한 로그인을 만들 수 있습니다. 자세한 내용은 [CREATE LOGIN&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)을 참조하세요.  
   
 > [!IMPORTANT]  
@@ -49,20 +49,20 @@ ms.locfileid: "62754317"
 > [!NOTE]  
 >  도메인 사용자 대신 컴퓨터 계정을 사용하여 네트워크 서비스 계정과 연결할 수 있습니다. 컴퓨터 계정을 사용하는 경우 다른 서버 인스턴스의 사용자로 추가해야 합니다.  
   
-##  <a name="GrantConnect"></a> 현재 권한 부여  
+##  <a name="grant-connect-permission"></a><a name="GrantConnect"></a>Connect 권한 부여  
  서버 인스턴스에 로그인을 만든 후에는 해당 로그인에 서버 인스턴스의 데이터베이스 미러링 엔드포인트에 연결할 권한을 부여해야 합니다. 시스템 관리자는 GRANT [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 CONNECT 권한을 부여합니다. 자세한 내용은 [GRANT&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [로그인 만들기](../../relational-databases/security/authentication-access/create-a-login.md)  
   
--   [Windows 인증을 사용하여 데이터베이스 미러링 엔드포인트에 대한 네트워크 액세스 허용&#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)  
+-   [Windows 인증 &#40;SQL Server&#41;를 사용 하 여 데이터베이스 미러링 끝점에 대 한 네트워크 액세스를 허용 ](../database-mirroring-allow-network-access-windows-authentication.md)합니다.  
   
 -   [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 미러링 엔드포인트&#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
- [데이터베이스 미러링 구성 문제 해결&#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
+ [데이터베이스 미러링 끝점은 SQL Server을 &#40;&#41;](the-database-mirroring-endpoint-sql-server.md)   
+ [데이터베이스 미러링 구성 문제 해결 &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [AlwaysOn 가용성 그룹 구성 &#40;SQL Server에 대 한 문제 해결&#41;](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   

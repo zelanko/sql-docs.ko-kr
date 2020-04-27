@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a092a7228f5ec70247e38cf39073d946de0e56ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62761635"
 ---
 # <a name="mssqlserver_9955"></a>MSSQLSERVER_9955
@@ -40,7 +40,7 @@ ms.locfileid: "62761635"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 구성 관리자](../sql-server-configuration-manager.md)   
- [전체 텍스트 필터 데몬 시작 관리자 서비스 계정 설정](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
+ [전체 텍스트 필터 데몬 시작 관리자에 대 한 서비스 계정 설정](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [전체 텍스트 검색](../search/full-text-search.md)  
   
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d2d799eff20ebe060fd68e0c55015f4c401edfff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736320"
 ---
 # <a name="change-column-order-in-a-table"></a>테이블에서 열 순서 변경
@@ -34,7 +34,7 @@ ms.locfileid: "62736320"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-change-the-column-order"></a>열 순서를 변경하려면  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62736320"
   
 3.  테이블 내에 다른 위치로 열을 끌어 놓습니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **열 순서를 변경하려면**  
   
  이 작업은 Transact-SQL 문을 사용하여 수행할 수 없습니다.  

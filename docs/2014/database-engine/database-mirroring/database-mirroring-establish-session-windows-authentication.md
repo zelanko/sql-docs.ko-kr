@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c1ea3cd62c97cecd9af0b8b696156b9f2622f5b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755515"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>Windows 인증을 사용하여 데이터베이스 미러링 세션 구성(Transact-SQL)
@@ -104,7 +104,7 @@ ms.locfileid: "62755515"
   
     -   **성능 우선 모드**  
   
-         자동 장애 조치 기능을 지원하지 않고 가용성보다 성능을 우선하려면 트랜잭션 보안을 해제합니다. 자세한 내용은 [데이터베이스 미러링 세션에서 트랜잭션 보안 변경&#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)을 참조하세요.  
+         자동 장애 조치 기능을 지원하지 않고 가용성보다 성능을 우선하려면 트랜잭션 보안을 해제합니다. 자세한 내용은 [데이터베이스 미러링 세션에서 트랜잭션 보안 변경 &#40;transact-sql&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)을 참조 하세요.  
   
         > [!NOTE]  
         >  성능 우선 모드에서는 WITNESS를 OFF로 설정해야 합니다. 자세한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.  
@@ -152,8 +152,7 @@ ms.locfileid: "62755515"
     GO  
     ```  
   
-4.  
-  `PARTNERHOST5`의 미러 서버 인스턴스에서 데이터베이스를 복원합니다.  
+4.  `PARTNERHOST5`의 미러 서버 인스턴스에서 데이터베이스를 복원합니다.  
   
     ```  
     RESTORE DATABASE AdventureWorks   
@@ -211,15 +210,15 @@ ms.locfileid: "62755515"
 >  보안 설정 표시, 미러 데이터베이스 준비, 파트너 설정 및 미러링 모니터 서버 추가 등의 작업을 수행하는 전체 예제는 [데이터베이스 미러링 설정&#40;SQL Server&#41;](database-mirroring-sql-server.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 미러링 설정&#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [데이터베이스 미러링 &#40;SQL Server&#41;설정](database-mirroring-sql-server.md)   
+ [ALTER DATABASE &#40;Transact-SQL &#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Windows 인증 &#40;SQL Server를 사용 하 여 데이터베이스 미러링 끝점에 대 한 네트워크 액세스 허용&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
- [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
+ [미러링을 위한 미러 데이터베이스 준비 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
+ [Transact-sql&#41;&#40;Windows 인증에 대 한 데이터베이스 미러링 끝점 만들기](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
  [데이터베이스 미러링 및 로그 전달 &#40;SQL Server&#41;](database-mirroring-and-log-shipping-sql-server.md)   
- [데이터베이스 미러링&#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [데이터베이스 미러링 및 복제&#40;SQL Server&#41;](database-mirroring-and-replication-sql-server.md)   
- [데이터베이스 미러링 설정&#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [데이터베이스 미러링 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [데이터베이스 미러링 및 복제 &#40;SQL Server&#41;](database-mirroring-and-replication-sql-server.md)   
+ [데이터베이스 미러링 &#40;SQL Server&#41;설정](database-mirroring-sql-server.md)   
  [데이터베이스 미러링 &#40;서버 네트워크 주소를 지정&#41;](specify-a-server-network-address-database-mirroring.md)   
  [데이터베이스 미러링 운영 모드](database-mirroring-operating-modes.md)  
   

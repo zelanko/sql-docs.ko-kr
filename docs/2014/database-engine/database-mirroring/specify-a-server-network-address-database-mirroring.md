@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f197eef6369281001359969bf1d92bd0390bedc8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755062"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>서버 네트워크 주소 지정(데이터베이스 미러링)
@@ -29,33 +29,33 @@ ms.locfileid: "62755062"
   
   
   
-##  <a name="Syntax"></a> 서버 네트워크 주소 구문  
+##  <a name="syntax-for-a-server-network-address"></a><a name="Syntax"></a> 서버 네트워크 주소 구문  
  서버 네트워크 주소 구문은 다음 형식을 사용합니다.  
   
  TCP:<strong>//</strong>*\<시스템 주소>* <strong>:<strong>*\<포트>* 
   
- 라는 설치 관리자 실행 파일에 포함됩니다. 여기서  
+ where  
   
--   *\<system-address>* 는 대상 컴퓨터 시스템을 명확하게 식별하는 문자열입니다. 일반적으로 서버 주소는 시스템 이름(시스템이 같은 도메인에 있는 경우), 정규화된 도메인 이름 또는 IP 주소입니다.  
+-   시스템 주소>는 대상 컴퓨터 시스템을 명확 하 게 식별 하는 문자열입니다. * \<* 일반적으로 서버 주소는 시스템 이름(시스템이 같은 도메인에 있는 경우), 정규화된 도메인 이름 또는 IP 주소입니다.  
   
     -   시스템이 같은 도메인에 있는 경우 `SYSTEM46`과 같이 컴퓨터 시스템의 이름을 사용할 수 있습니다.  
   
-    -   IP 주소를 사용하려면 환경에서 고유한 주소여야 합니다. 정적인 경우에만 IP 주소를 사용하는 것이 좋습니다. IP 주소는 IP 버전 4(IPv4) 또는 IP 버전 6(IPv6)일 수 있습니다. IPv6 주소는 대괄호로 묶어야 합니다(예: **[** _<IPv6_address>_ **]** ).  
+    -   IP 주소를 사용하려면 환경에서 고유한 주소여야 합니다. 정적인 경우에만 IP 주소를 사용하는 것이 좋습니다. IP 주소는 IP 버전 4(IPv4) 또는 IP 버전 6(IPv6)일 수 있습니다. IPv6 주소는 대괄호로 묶어야 합니다 (예: **[** _<IPv6_address>_ **])**.  
   
          시스템의 IP 주소를 확인하려면 Windows 명령 프롬프트에서 **ipconfig** 명령을 입력합니다.  
   
     -   정규화된 도메인 이름을 사용하는 것이 좋습니다. 이 주소 문자열은 로컬로 정의되므로 위치에 따라 형식이 달라집니다. 항상은 아니지만 정규화된 도메인 이름은 컴퓨터 이름과 마침표로 구분된 일련의 도메인 세그먼트를 다음 형식으로 포함하는 복합 이름입니다.  
   
-         _computer_name_ **.** _domain_segment_[... **.** _domain_segment_]  
+         _computer_name_ **.** _domain_segment_[...**.**_domain_segment_]  
   
-         여기에서 *computer_name*은 서버 인스턴스를 실행하는 컴퓨터의 네트워크 이름이고 *domain_segment*[... **.** _domain_segment_]는 서버의 나머지 도메인 정보입니다(예: `localinfo.corp.Adventure-Works.com`).  
+         여기에서 *computer_name*은 서버 인스턴스를 실행하는 컴퓨터의 네트워크 이름이고 *domain_segment*[...**.**_domain_segment_]는 서버의 나머지 도메인 정보입니다(예: `localinfo.corp.Adventure-Works.com`).  
   
          도메인 세그먼트의 내용과 개수는 회사 또는 조직 내에서 결정됩니다. 서버의 정규화된 도메인 이름을 모르는 경우 시스템 관리자에게 문의하세요.  
   
         > [!NOTE]  
         >  정규화된 도메인 이름을 찾는 방법은 이 항목의 뒷부분에 나오는 "정규화된 도메인 이름 찾기"를 참조하세요.  
   
--   *\<포트&gt;* 는 파트너 서버 인스턴스의 미러링 엔드포인트에서 사용하는 포트 번호입니다. 엔드포인트 지정에 대한 자세한 내용은 [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)를 참조하세요.  
+-   port>는 파트너 서버 인스턴스의 미러링 끝점에서 사용 하는 포트 번호입니다. * \<* 엔드포인트 지정에 대한 자세한 내용은 [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)를 참조하세요.  
   
      데이터베이스 미러링 엔드포인트는 컴퓨터 시스템에서 사용 가능한 모든 포트를 사용할 수 있습니다. 컴퓨터 시스템의 각 포트 번호는 하나의 엔드포인트에만 연결되어야 하고 각 엔드포인트는 단일 서버 인스턴스와 연결되므로 같은 서버의 서로 다른 서버 인스턴스는 서로 다른 포트의 각 엔드포인트에서 수신합니다. 따라서 데이터베이스 미러링 세션을 설정할 때 서버 네트워크 주소에 지정하는 포트는 항상 엔드포인트가 해당 포트와 연결된 서버 인스턴스로 세션을 지정합니다.  
   
@@ -120,7 +120,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `MYSERVER.mydomain.Adventure-Works.com`  
   
-##  <a name="Examples"></a> 예  
+##  <a name="examples"></a><a name="Examples"></a> 예  
  다음 예에서는 다른 도메인에 있는 `REMOTESYSTEM3` 이라는 컴퓨터 시스템의 서버 인스턴스에 대한 서버 네트워크 주소를 보여 줍니다. 도메인 정보는 `NORTHWEST.ADVENTURE-WORKS.COM`이고 데이터베이스 미러링 엔드포인트의 포트는 `7025`입니다. 이러한 예제 구성 요소가 지정되면 서버 네트워크 주소는 다음과 같습니다.  
   
  `TCP://REMOTESYSTEM3.NORTHWEST.ADVENTURE-WORKS.COM:7025`  
@@ -129,12 +129,12 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `TCP://DBSERVER1:7022`  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 미러링&#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [데이터베이스 미러링 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [데이터베이스 미러링 엔드포인트&#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)  
   
   

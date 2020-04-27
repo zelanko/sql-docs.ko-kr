@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 650e4a8efac5ce39e3fdfb476099ea648ca8ae62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736952"
 ---
 # <a name="instancename-property-serversettings-class"></a>InstanceName 속성(ServerSettings 클래스)
@@ -37,13 +37,11 @@ object
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
- 
-  [인스턴스의 서버 설정을 나타내는](serversettings-class.md) ServerSettings 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]개체입니다.  
+ *object*  
+ [인스턴스의 서버 설정을 나타내는](serversettings-class.md) ServerSettings 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스 이름을 지정하는 문자열 값입니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스 이름을 지정하는 문자열 값입니다.  
   
 ## <a name="remarks"></a>설명  
   

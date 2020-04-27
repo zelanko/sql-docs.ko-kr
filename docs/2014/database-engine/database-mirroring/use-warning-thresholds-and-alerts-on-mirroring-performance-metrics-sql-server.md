@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5d8ef6822b623e546aa0215964ba0ae237862687
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754036"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>미러링 성능 메트릭에 대해 경고 임계값 및 경고 사용(SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "62754036"
   
  미러된 데이터베이스에 대해 모니터링을 설정하면 시스템 관리자가 여러 개의 주요 성능 메트릭에 대해 경고 임계값을 구성할 수 있습니다. 또한 관리자는 이러한 데이터베이스 미러링 이벤트 및 기타 이벤트에 대해 경고를 구성할 수 있습니다.  
   
- **항목 내용**  
+ **항목 내용:**  
   
 -   [성능 메트릭 및 경고 임계값](#PerfMetricsAndWarningThresholds)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62754036"
   
 -   [관련 작업](#RelatedTasks)  
   
-##  <a name="PerfMetricsAndWarningThresholds"></a> 성능 메트릭 및 경고 임계값  
+##  <a name="performance-metrics-and-warning-thresholds"></a><a name="PerfMetricsAndWarningThresholds"></a> 성능 메트릭 및 경고 임계값  
  다음 표에서는 경고를 구성할 수 있는 성능 메트릭을 보여 주고 해당 경고 임계값과 데이터베이스 미러링 모니터 레이블에 대해 나열합니다.  
   
 |성능 메트릭|경고 임계값|데이터베이스 미러링 모니터 레이블|  
@@ -51,7 +51,7 @@ ms.locfileid: "62754036"
   
  이러한 성능 메트릭 중 하나에 대해 시스템 관리자는 미러된 데이터베이스에서 임계값을 지정할 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [경고 임계값 설정 및 관리](#SetUpManageWarningThresholds)를 참조하세요.  
   
-##  <a name="SetUpManageWarningThresholds"></a> 경고 임계값 설정 및 관리  
+##  <a name="setting-up-and-managing-warning-thresholds"></a><a name="SetUpManageWarningThresholds"></a> 경고 임계값 설정 및 관리  
  시스템 관리자는 주요 미러링 성능 메트릭에 대해 하나 이상의 경고 임계값을 구성할 수 있습니다. 데이터베이스가 장애 조치되는 경우에도 경고가 지속되도록 두 파트너에서 모두 지정된 경고에 대해 임계값을 설정하는 것이 좋습니다. 각 파트너에 적합한 임계값은 해당 파트너 시스템의 성능 기능에 따라 달라집니다.  
   
  다음 중 하나를 사용하여 경고 임계값을 구성하고 관리할 수 있습니다.  
@@ -66,14 +66,14 @@ ms.locfileid: "62754036"
   
      다음 시스템 저장 프로시저 집합을 사용하면 관리자가 한 번에 한 파트너의 미러된 데이터베이스에 대해 경고 임계값을 설정하고 관리할 수 있습니다.  
   
-    |절차|Description|  
+    |절차|설명|  
     |---------------|-----------------|  
     |[sp_dbmmonitorchangealert&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql)|지정한 미러링 성능 메트릭에 대해 경고 임계값을 추가하거나 변경합니다.|  
     |[sp_dbmmonitorhelpalert&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql)|여러 가지 주요 데이터베이스 미러링 모니터 성능 메트릭 중 하나 또는 모두에 대한 경고 임계값 정보를 반환합니다.|  
     |[sp_dbmmonitordropalert&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql)|지정한 성능 메트릭에 대한 경고를 삭제합니다.|  
   
 ## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>Windows 이벤트 로그로 전송되는 성능 임계값 이벤트  
- 성능 메트릭에 대해 경고 임계값을 정의하면 상태 테이블이 업데이트될 때 최신 값이 임계값에 대해 평가됩니다. 임계값에 도달하지 않은 경우 업데이트 프로시저 **sp_dbmmonitorupdate**가 메트릭에 대해 정보 이벤트(*성능 임계값 이벤트*)를 생성하고 해당 이벤트를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 이벤트 로그에 기록합니다. 다음 표에서는 성능 임계값 이벤트의 이벤트 ID를 보여 줍니다.  
+ 성능 메트릭에 대해 경고 임계값을 정의하면 상태 테이블이 업데이트될 때 최신 값이 임계값에 대해 평가됩니다. 임계값에 도달 하면 업데이트 프로시저 **sp_dbmmonitorupdate**에서 메트릭에 대 한 정보 이벤트 ( *성능 임계값 이벤트*)를 생성 하 고 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 이벤트 로그에 이벤트를 기록 합니다. 다음 표에서는 성능 임계값 이벤트의 이벤트 ID를 보여 줍니다.  
   
 |성능 메트릭|이벤트 ID|  
 |------------------------|--------------|  
@@ -87,7 +87,7 @@ ms.locfileid: "62754036"
 >   
 >  참조하세요.  
   
-##  <a name="UseAlerts"></a> 미러된 데이터베이스에 대해 경고 사용  
+##  <a name="using-alerts-for-a-mirrored-database"></a><a name="UseAlerts"></a>미러된 데이터베이스에 대해 경고 사용  
  미러된 데이터베이스 모니터링의 핵심은 중요한 데이터베이스 미러링 이벤트에 대해 경고를 구성하는 것입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 다음 유형의 데이터베이스 미러링 이벤트를 생성합니다.  
   
 -   성능 임계값 이벤트  
@@ -110,7 +110,7 @@ ms.locfileid: "62754036"
 > [!IMPORTANT]  
 >  모든 미러링 세션에서 상태 변경 이벤트에 대해 경고를 보내도록 데이터베이스를 구성하는 것이 좋습니다. 수동 구성 변경의 결과로 상태 변경이 예상되는 경우가 아니면 문제가 발생한 것이므로 데이터가 손상될 수 있습니다. 데이터를 보호하려면 예기치 않은 상태 변경의 원인을 확인하고 해결합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **SQL Server Management Studio를 사용하여 경고를 만들려면**  
   
 -   [오류 번호를 사용하여 경고 만들기](../../ssms/agent/create-an-alert-using-an-error-number.md)  
@@ -140,7 +140,7 @@ ms.locfileid: "62754036"
 -   [sp_dbmmonitorupdate&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql)  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 미러링&#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [데이터베이스 미러링 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [데이터베이스 미러링 모니터링&#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)  
   
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67df7c541b0c664f200f6cf77affc0c809dbc719
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736356"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>한 테이블에서 다른 테이블로 열 복사(데이터베이스 엔진)
@@ -31,23 +31,23 @@ ms.locfileid: "62736356"
   
      [보안](#Security)  
   
--   **다음을 사용 하 여 열을 복사 합니다.**  
+-   **다음을 사용하여 열을 복사하려면:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
  별칭 데이터 형식의 열을 데이터베이스 간에 복사하면 대상 데이터베이스에서 별칭 데이터 형식을 사용하지 못할 수도 있습니다. 이 경우 해당 열에는 대상 데이터베이스에서 사용할 수 있는 가장 비슷한 기본 데이터 형식이 지정됩니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>한 테이블에서 다른 테이블로 열 정의를 복사하려면  
   
@@ -70,21 +70,18 @@ ms.locfileid: "62736356"
   
 2.  개체 탐색기에서 **뷰** 노드를 마우스 오른쪽 단추로 클릭한 다음 **새 뷰**를 클릭합니다.  
   
-3.  
-  **쿼리 디자이너** 메뉴에서 **형식 변경**을 가리킨 다음 **결과 삽입**을 클릭합니다.  
+3.  **쿼리 디자이너** 메뉴에서 **형식 변경**을 가리킨 다음 **결과 삽입**을 클릭합니다.  
   
-4.  
-  **결과 삽입의 대상 테이블 선택** 대화 상자에서 데이터를 복사해 넣을 대상 테이블을 선택한 다음 **확인**을 클릭합니다.  
+4.  **결과 삽입의 대상 테이블 선택** 대화 상자에서 데이터를 복사해 넣을 대상 테이블을 선택한 다음 **확인**을 클릭합니다.  
   
      테이블 내에서 행을 복사하는 경우 원본 테이블을 대상 테이블로 추가할 수 있습니다.  
   
     > [!NOTE]  
-    >  **쿼리 디자이너** 는 업데이트할 수 있는 테이블 및 뷰를 미리 확인할 수 없습니다. 따라서, **결과 삽입의 대상 테이블 선택** 대화 상자의 테이블 목록에는 쿼리하려는 데이터 연결에 사용 가능한 모든 테이블과 뷰가 표시됩니다. 여기에는 행을 복사해 넣을 수 없는 테이블이나 뷰도 포함됩니다.  
+    >  **쿼리 디자이너** 에서는 업데이트 가능한 테이블과 뷰를 미리 확인할 수 없습니다. 따라서, **결과 삽입의 대상 테이블 선택** 대화 상자의 테이블 목록에는 쿼리하려는 데이터 연결에 사용 가능한 모든 테이블과 뷰가 표시됩니다. 여기에는 행을 복사해 넣을 수 없는 테이블이나 뷰도 포함됩니다.  
   
 5.  다이어그램 창의 본문을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **다이어그램에 테이블 추가**를 클릭합니다.  
   
-6.  
-  **테이블 추가** 대화 상자에서 데이터를 복사하려는 각 원본 테이블을 선택하고 **추가**를 클릭한 다음 **닫기**를 클릭합니다.  
+6.  **테이블 추가** 대화 상자에서 데이터를 복사하려는 각 원본 테이블을 선택하고 **추가**를 클릭한 다음 **닫기**를 클릭합니다.  
   
      다이어그램 창에 테이블이 간략한 형태로 나타납니다.  
   
@@ -102,7 +99,7 @@ ms.locfileid: "62736356"
   
      결과 삽입 쿼리를 실행해도 [결과 창](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)에는 결과가 보고되지 않습니다. 대신, 복사한 행의 수를 나타내는 메시지가 표시됩니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>한 테이블에서 다른 테이블로 열 정의를 복사하려면  
   

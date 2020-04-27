@@ -16,17 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755328"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션에 클라이언트 연결(SQL Server)
-  데이터베이스 미러링 세션에 연결하기 위해 클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 또는 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용할 수 있습니다. 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스에 대해 구성하면 두 데이터 액세스 공급자가 모두 데이터베이스 미러링을 완전하게 지원합니다. 미러된 데이터베이스 사용 시 프로그래밍 고려 사항에서 대한 자세한 내용은 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)을 참조하십시오. 또한 현재 주 서버 인스턴스를 사용할 수 있어야 하며 서버 인스턴스에 클라이언트 로그인이 만들어져 있어야 합니다. 자세한 내용은 [분리된 사용자 문제 해결&#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)을 실행합니다. 클라이언트에서 데이터베이스 미러링 세션에 연결할 때는 미러링 모니터 서버 인스턴스가 있어도 사용되지 않습니다.  
+  데이터베이스 미러링 세션에 연결하기 위해 클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 또는 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용할 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스에 대해 구성하면 두 데이터 액세스 공급자가 모두 데이터베이스 미러링을 완전하게 지원합니다. 미러된 데이터베이스 사용 시 프로그래밍 고려 사항에서 대한 자세한 내용은 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)을 참조하십시오. 또한 현재 주 서버 인스턴스를 사용할 수 있어야 하며 서버 인스턴스에 클라이언트 로그인이 만들어져 있어야 합니다. 자세한 내용은 [분리된 사용자 문제 해결&#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)을 실행합니다. 클라이언트에서 데이터베이스 미러링 세션에 연결할 때는 미러링 모니터 서버 인스턴스가 있어도 사용되지 않습니다.  
   
- ##  <a name="InitialConnection"></a>데이터베이스 미러링 세션에 대 한 초기 연결 설정  
+ ##  <a name="making-the-initial-connection-to-a-database-mirroring-session"></a><a name="InitialConnection"></a> 데이터베이스 미러링 세션에 대한 초기 연결 설정  
  미러된 데이터베이스에 대한 초기 연결의 경우 클라이언트에서 최소한 서버 인스턴스의 이름을 제공하는 연결 문자열을 제공해야 합니다. 이 필수 서버 이름은 현재 주 서버 인스턴스를 식별하며 *초기 파트너 이름*이라고 합니다.  
   
  필요에 따라 연결 문자열에서 다른 서버 인스턴스의 이름을 제공할 수도 있습니다. 이 이름은 첫 번째 연결 시도 중에 초기 파트너를 사용할 수 없는 경우 사용되는 현재 미러 서버 인스턴스를 식별합니다. 두 번째 이름을 *장애 조치(failover) 파트너 이름*이라고 합니다.  
@@ -54,8 +53,7 @@ ms.locfileid: "62755328"
   
  장애 조치(failover) 파트너 이름이 연결 문자열에 제공되는 경우 데이터 액세스 공급자의 동작은 클라이언트의 네트워크 프로토콜과 운영 체제에 따라 다음과 같이 달라집니다.  
   
--   TCP/IP의 경우 데이터베이스 미러링과 관련된 연결 다시 시도 알고리즘에 의해 연결 시도가 조정됩니다. 
-  *연결 다시 시도 알고리즘* 은 지정된 연결 시도에서 연결을 여는 데 할당되는 최대 시간( *다시 시도 시간*)을 결정합니다.  
+-   TCP/IP의 경우 데이터베이스 미러링과 관련된 연결 다시 시도 알고리즘에 의해 연결 시도가 조정됩니다. *연결 다시 시도 알고리즘* 은 지정된 연결 시도에서 연결을 여는 데 할당되는 최대 시간( *다시 시도 시간*)을 결정합니다.  
   
 -   기타 네트워크 프로토콜의 경우  
   
@@ -87,11 +85,11 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Server 특성  
  연결 문자열에는 초기 파트너 이름을 제공하는 `Server` 특성이 있어야 합니다. 이 특성은 현재 주 서버 인스턴스를 식별합니다.  
   
- 서버 인스턴스를 식별 하는 가장 간단한 방법은 이름, *<server_name>*[**\\** _<SQL_Server_instance_name>_]를 지정 하는 것입니다. 다음은 그 예입니다.  
+ 서버 인스턴스를 식별 하는 가장 간단한 방법은 이름, *<server_name>*[**\\** _<SQL_Server_instance_name>_]를 지정 하는 것입니다. 예를 들어:  
   
  `Server=Partner_A;`  
   
- 또는  
+ 를 실행하거나  
   
  `Server=Partner_A\Instance_2;`  
   
@@ -154,7 +152,7 @@ Server=123.34.45.56,4724;
 "Server=250.65.43.21,4734; Failover_Partner=Partner_B; Database=AdventureWorks; Network=dbmssocn"  
 ```  
   
-##  <a name="RetryAlgorithm"></a>연결 다시 시도 알고리즘 (TCP/IP 연결용)  
+##  <a name="connection-retry-algorithm-for-tcpip-connections"></a><a name="RetryAlgorithm"></a> 연결 다시 시도 알고리즘(TCP/IP 연결용)  
  TCP/IP 연결의 경우 두 파트너 이름이 캐시에 있을 때 데이터 액세스 공급자가 연결 다시 시도 알고리즘을 따릅니다. 이는 세션에 대한 초기 연결을 설정하는 경우와 설정된 연결이 끊어진 후 다시 연결하는 경우에 모두 적용됩니다. 연결이 열려 있으면 사전 로그인 및 로그인 단계를 완료하는 데 추가 시간이 필요합니다.  
   
 > [!NOTE]  
@@ -183,7 +181,7 @@ Server=123.34.45.56,4724;
   
  다음 그림에서는 각각 시간 초과되는 연속 연결 시도의 다시 시도 시간을 보여 줍니다.  
   
- ![15초의 로그인 제한 시간에 대한 최대 다시 시도 간격](../media/dbm-retry-algorithm.gif "15초의 로그인 제한 시간에 대한 최대 다시 시도 간격")  
+ ![15초 로그인 제한 시간의 최대 다시 시도 지연](../media/dbm-retry-algorithm.gif "15초 로그인 제한 시간의 최대 다시 시도 지연")  
   
  기본 로그인 제한 시간 동안 처음 세 라운드의 연결 시도에 할당되는 최대 시간은 14.4초입니다. 모든 시도에서 할당 된 시간을 모두 사용 하는 경우 로그인 기간이 시간 초과 되기 전에 0.6 초의 시간만 남아 있습니다. 이 경우 네 번째 라운드는 curtailed 있으므로 초기 파트너 이름을 사용 하 여 최종 빠른 시도만 연결할 수 있습니다. 그러나 특히 이후 라운드에서 연결 시도가 할당된 다시 시도 시간보다 먼저 실패할 수 있습니다. 예를 들어 네트워크 오류가 발생하면 다시 시도 시간이 만료되기 전에 시도가 종료될 수 있습니다. 네트워크 오류로 인해 이전 시도가 실패하면 네 번째 라운드 및 추가 라운드에 더 많은 시간을 사용할 수 있습니다.  
   
@@ -201,16 +199,15 @@ Server=123.34.45.56,4724;
   
  다음 그림에서는 파트너가 서로 역할을 전환하는 수동 장애 조치 중에 다시 시도 지연이 연결 시도에 미치는 영향을 보여 줍니다. 로그인 제한 시간은 15초입니다.  
   
- ![다시 시도 간격 알고리즘](../media/dbm-retry-delay-algorithm.gif "다시 시도 간격 알고리즘")  
+ ![다시 시도 지연 알고리즘](../media/dbm-retry-delay-algorithm.gif "다시 시도 지연 알고리즘")  
   
-##  <a name="Reconnecting"></a>데이터베이스 미러링 세션에 다시 연결  
+##  <a name="reconnecting-to-a-database-mirroring-session"></a><a name="Reconnecting"></a> 데이터베이스 미러링 세션에 다시 연결  
  데이터베이스 미러링 장애 조치(Failover) 등의 이유로 데이터베이스 미러링 세션에 대해 설정된 연결이 실패하고 애플리케이션이 초기 서버에 다시 연결하는 경우 데이터 액세스 공급자는 클라이언트 캐시에 저장된 장애 조치(failover) 파트너 이름을 사용하여 다시 연결할 수 있습니다. 그러나 다시 연결은 자동으로 수행되지 않습니다. 애플리케이션에서 오류를 알고 있어야 합니다. 그런 다음 애플리케이션은 실패한 연결을 닫고 동일한 연결 문자열 특성을 사용하여 새 연결을 열어야 합니다. 이때 데이터 액세스 공급자는 장애 조치(failover) 파트너로 연결을 리디렉션합니다. 이 이름으로 식별된 서버 인스턴스가 현재 주 서버이면 일반적으로 연결 시도에 성공합니다. 트랜잭션이 커밋 또는 롤백되었는지가 확실하지 않으면 애플리케이션에서 독립 실행형 서버 인스턴스에 다시 연결할 때와 같은 방식으로 트랜잭션 상태를 확인해야 합니다.  
   
  다시 연결은 연결 문자열이 장애 조치(failover) 파트너 이름을 제공한 초기 연결과 유사합니다. 첫 번째 연결 시도가 실패하면 클라이언트가 주 서버에 연결하거나 데이터 액세스 공급자가 시간 초과될 때까지 연결 시도에서 초기 파트너 이름과 장애 조치(failover) 파트너 이름을 교대로 사용합니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 주 서버 인스턴스에 연결하는지 확인하지만, 이 인스턴스가 연결 문자열의 초기 파트너 이름에 지정된 서버 인스턴스의 파트너인지 여부는 확인하지 않습니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 주 서버 인스턴스에 연결하는지 확인하지만, 이 인스턴스가 연결 문자열의 초기 파트너 이름에 지정된 서버 인스턴스의 파트너인지 여부는 확인하지 않습니다.  
   
  연결에서 TCP/IP를 사용하는 경우 연결 다시 시도 알고리즘에 의해 각 라운드의 연결 시도에 할당되는 시간이 결정됩니다.  
   
@@ -223,7 +220,7 @@ Server=123.34.45.56,4724;
   
  장애 조치(failover) 파트너로 리디렉션된 후에 클라이언트에서 다른 데이터베이스를 사용하기 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)] USE 문을 사용하면 예기치 않은 결과가 발생할 수 있습니다. 현재 주 서버 인스턴스(장애 조치(failover) 파트너)에 원래 주 서버(초기 파트너)와 다른 데이터베이스 집합이 있을 경우 이런 문제가 발생합니다.  
   
-##  <a name="StalePartnerName"></a>부실 장애 조치 (Failover) 파트너 이름의 영향  
+##  <a name="the-impact-of-a-stale-failover-partner-name"></a><a name="StalePartnerName"></a> 유효하지 않은 장애 조치(Failover) 파트너 이름의 영향  
  데이터베이스 관리자는 언제라도 장애 조치(Failover) 파트너를 변경할 수 있습니다. 그러므로 클라이언트에서 제공한 장애 조치(failover) 파트너 이름이 최신이 아니거나 *부실*할 수 있습니다. 예를 들어 Partner_B라는 장애 조치(failover) 파트너가 다른 서버 인스턴스인 Partner_C로 바뀔 수 있습니다. 이 경우 클라이언트에서는 장애 조치(failover) 파트너 이름으로 Partner_B를 제공하지만 이 이름은 유효하지 않습니다. 클라이언트가 제공한 장애 조치(failover) 파트너 이름이 지난 데이터인 경우 데이터 액세스 공급자의 동작은 클라이언트에서 장애 조치(failover) 파트너 이름을 제공하지 않은 경우와 같습니다.  
   
  예를 들어 클라이언트가 하나의 연결 문자열을 사용하여 4회 연속으로 연결 시도를 하는 경우를 가정합니다. 연결 문자열에서 초기 파트너 이름은 Partner_A이고 장애 조치(failover) 파트너 이름은 Partner_B입니다.  
@@ -237,15 +234,15 @@ Server=123.34.45.56,4724;
 > [!NOTE]  
 >  애플리케이션에서 구성 변경 내용을 추적하고 연결 문자열을 적절하게 변경할 수 있습니다. 이렇게 하려면 추가 코드가 필요하지만 관리 작업이 줄어듭니다.  
   
-|구성|주 서버|미러 서버|Partner_A 및 Partner_B를 지정하여 연결을 시도할 때의 동작|  
+|Configuration|주 서버|미러 서버|Partner_A 및 Partner_B를 지정하여 연결을 시도할 때의 동작|  
 |-------------------|----------------------|-------------------|------------------------------------------------------------------------------|  
 |초기 미러링 구성 단계입니다.|Db_1|Partner_B|Partner_A가 초기 파트너 이름으로 캐시됩니다. 클라이언트가 Partner_A에 대한 연결에 성공합니다. 클라이언트는 미러 서버 이름인 Partner_B를 다운로드하고 이를 캐시합니다. 이때 클라이언트가 제공한 장애 조치(failover) 파트너 이름은 무시합니다.|  
-|Partner_A에 하드웨어 오류가 발생하고 장애 조치가 수행됩니다(클라이언트 연결 끊기).|Partner_B|없음|Partner_A가 초기 파트너 이름으로 계속 캐시되지만 클라이언트가 제공한 장애 조치(failover) 파트너 이름인 Partner_B를 사용하여 클라이언트는 현재 주 서버에 연결할 수 있습니다.|  
+|Partner_A에 하드웨어 오류가 발생하고 장애 조치가 수행됩니다(클라이언트 연결 끊기).|Partner_B|none|Partner_A가 초기 파트너 이름으로 계속 캐시되지만 클라이언트가 제공한 장애 조치(failover) 파트너 이름인 Partner_B를 사용하여 클라이언트는 현재 주 서버에 연결할 수 있습니다.|  
 |데이터베이스 관리자는 미러링을 중지(클라이언트 연결 끊기)하고 Partner_A를 Partner_C로 바꾼 다음 미러링을 다시 시작합니다.|Partner_B|Partner_C|클라이언트가 Partner_A에 연결을 시도하지만 실패합니다. 그런 다음 클라이언트가 Partner_B(현재 주 서버)에 연결을 시도하여 성공합니다. 데이터 액세스 공급자는 현재 미러 서버 이름인 Partner_C를 다운로드하고 이를 현재 장애 조치(failover) 파트너 이름으로 캐시합니다.|  
 |서비스가 Partner_C로 수동으로 장애 조치가 수행됩니다(클라이언트 연결 끊기).|Partner_C|Partner_B|클라이언트가 처음에는 Partner_A로 연결을 시도한 다음 Partner_B로 연결을 시도합니다. 두 이름이 모두 유효하지 않으면 연결 요청 시간이 초과되고 실패합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 미러링&#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [데이터베이스 미러링 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Possible Failures During Database Mirroring](possible-failures-during-database-mirroring.md)  
   
   

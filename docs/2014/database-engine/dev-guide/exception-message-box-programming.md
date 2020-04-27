@@ -18,18 +18,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 205638b82e8d0d71a3d674bd970e4bf8d2e3ea5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62753376"
 ---
 # <a name="exception-message-box-programming"></a>예외 메시지 상자 프로그래밍
   예외 메시지 상자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 그래픽 구성 요소와 함께 설치 되 고 사용 되는 프로그래밍 인터페이스입니다. 예외 메시지 상자는 지원 가능한 관리 어셈블리로, 애플리케이션에서 이를 사용하면 메시징 환경을 더욱 효율적으로 제어할 수 있을 뿐 아니라 나중에 참조할 수 있도록 오류 메시지 내용을 저장하고 메시지에 대한 도움말을 찾는 옵션을 사용자에게 제공할 수 있습니다. 예외 메시지 상자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 제외한 모든 버전의 [!INCLUDE[ssEW](../../includes/ssew-md.md)]에서 설치되므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 구성 요소가 설치되어 있는 컴퓨터에서 추가 구성 없이 사용할 수 있습니다.  
   
- 
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 네임스페이스의 <xref:Microsoft.SqlServer.MessageBox> 클래스에는 <xref:System.Windows.Forms.MessageBox> 클래스의 모든 기능뿐 아니라 다른 추가 기능도 있습니다. 
-  <xref:System.Windows.Forms.MessageBox>를 사용할 수 있는 모든 태스크에 적합한 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>는 관리 코드 예외를 원활하게 처리하도록 설계되었습니다. 예외 메시지 상자를 사용하여 다음을 수행할 수 있습니다.  
+ <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 네임스페이스의 <xref:Microsoft.SqlServer.MessageBox> 클래스에는 <xref:System.Windows.Forms.MessageBox> 클래스의 모든 기능뿐 아니라 다른 추가 기능도 있습니다. <xref:System.Windows.Forms.MessageBox>를 사용할 수 있는 모든 태스크에 적합한 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>는 관리 코드 예외를 원활하게 처리하도록 설계되었습니다. 예외 메시지 상자를 사용하여 다음을 수행할 수 있습니다.  
   
 -   최대 5개의 단추에 대해 사용자 지정된 단추 텍스트를 제공합니다. 달라진 텍스트 길이에 맞게 단추와 대화 상자의 크기가 자동으로 조정됩니다.  
   

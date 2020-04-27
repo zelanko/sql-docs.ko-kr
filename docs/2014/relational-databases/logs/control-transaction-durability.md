@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a90d40b158acf786ccb5bcdf962c2d6077c59dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62743169"
 ---
 # <a name="control-transaction-durability"></a>트랜잭션 내구성 제어
@@ -98,12 +98,12 @@ ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  [기본값] 이 설정을 사용하면 커밋 수준 설정(DELAYED_DURABILITY=[ON | OFF])에 상관없이 데이터베이스에 커밋된 모든 트랜잭션이 완전 내구성을 가집니다. 저장 프로시저를 변경하고 다시 컴파일할 필요가 없습니다. 따라서 지연된 내구성으로 인해 데이터가 위험에 노출되지 않습니다.  
   
  `ALLOWED`  
- 이 설정을 사용하면 각 트랜잭션의 내구성이 트랜잭션 수준에서 결정됩니다. 즉, DELAYED_DURABILITY = { *OFF* | ON }에 의해 결정됩니다. 자세한 내용은 [Atomic 블록 수준 제어-고유 하 게 컴파일된 저장 프로시저](#atomic-block-level-control---natively-compiled-stored-procedures) 및 [커밋 수준 제어-transact-sql](#commit-level-control---t-sql) 을 참조 하세요.  
+ 이 설정을 사용 하는 경우 각 트랜잭션의 내구성이 트랜잭션 수준에서 결정 됩니다-DELAYED_DURABILITY = { *OFF* | }. 자세한 내용은 [Atomic 블록 수준 제어-고유 하 게 컴파일된 저장 프로시저](#atomic-block-level-control---natively-compiled-stored-procedures) 및 [커밋 수준 제어-transact-sql](#commit-level-control---t-sql) 을 참조 하세요.  
   
  `FORCED`  
  이 설정을 사용하면 데이터베이스에 커밋되는 모든 트랜잭션이 지연된 내구성을 가집니다. 트랜잭션이 완전 내구성(DELAYED_DURABILITY = OFF)을 지정하는지 여부에 상관없이 트랜잭션은 지연된 내구성이 있습니다. 이 설정은 지연된 트랜잭션 내구성이 데이터베이스에 유용하고 애플리케이션 코드를 변경하지 않으려는 경우에 유용합니다.  
   
-### <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a> Atomic 블록 수준 제어 – 고유하게 컴파일된 저장 프로시저  
+### <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a>Atomic 블록 수준 제어-고유 하 게 컴파일된 저장 프로시저  
  다음 코드는 ATOMIC 블록 내로 이동합니다.  
   
 ```sql  
@@ -116,7 +116,7 @@ DELAYED_DURABILITY = { OFF | ON }
  `ON`  
  DELAYED_DURABLITY = DISABLED 데이터베이스 옵션을 적용하여 커밋이 동기적이고 완전 내구성이 있는 경우를 제외하고 트랜잭션은 지연된 내구성을 가집니다.  자세한 내용은 [Database level control](#database-level-control) 을 참조하세요.  
   
- **코드 예:**  
+ **예제 코드:**  
   
 ```sql  
 CREATE PROCEDURE <procedureName> ...  
@@ -157,14 +157,10 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
   
 |COMMIT 설정/데이터베이스 설정|DELAYED_DURABILITY = DISABLED|DELAYED_DURABILITY = ALLOWED|DELAYED_DURABILITY = FORCED|  
 |--------------------------------------|-------------------------------------|------------------------------------|-----------------------------------|  
-|
-  `DELAYED_DURABILITY = OFF` 데이터베이스 수준 트랜잭션|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 지연된 내구성을 가집니다.|  
-|
-  `DELAYED_DURABILITY = ON` 데이터베이스 수준 트랜잭션|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 지연된 내구성을 가집니다.|트랜잭션이 지연된 내구성을 가집니다.|  
-|
-  `DELAYED_DURABILITY = OFF` 데이터베이스 간 트랜잭션 또는 분산 트랜잭션|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|  
-|
-  `DELAYED_DURABILITY = ON` 데이터베이스 간 트랜잭션 또는 분산 트랜잭션|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|  
+|`DELAYED_DURABILITY = OFF` 데이터베이스 수준 트랜잭션|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 지연된 내구성을 가집니다.|  
+|`DELAYED_DURABILITY = ON` 데이터베이스 수준 트랜잭션|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 지연된 내구성을 가집니다.|트랜잭션이 지연된 내구성을 가집니다.|  
+|`DELAYED_DURABILITY = OFF` 데이터베이스 간 트랜잭션 또는 분산 트랜잭션|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|  
+|`DELAYED_DURABILITY = ON` 데이터베이스 간 트랜잭션 또는 분산 트랜잭션|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|  
   
 ## <a name="how-to-force-a-transaction-log-flush"></a>트랜잭션 로그를 강제로 플러시하는 방법  
  디스크에 트랜잭션 로그를 강제로 플러시하는 두 가지 방법이 있습니다.  
@@ -186,7 +182,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **AlwaysOn 가용성 그룹 및 미러링**  
  지연된 내구성이 있는 트랜잭션은 기본 또는 보조 데이터베이스에서 내구성을 보장하지 않습니다. 또한 보조 데이터베이스에서 트랜잭션에 대한 정보를 보장하지 않습니다. 제어는 커밋 후 동기 보조 데이터베이스에서 승인이 수신되기 이전에 클라이언트에 반환됩니다.  
   
- **장애 조치(Failover) 클러스터링**  
+ **장애 조치 (Failover) 클러스터링**  
  일부 지연된 내구성이 있는 트랜잭션 쓰기가 손실될 수 있습니다.  
   
  **트랜잭션 복제**  

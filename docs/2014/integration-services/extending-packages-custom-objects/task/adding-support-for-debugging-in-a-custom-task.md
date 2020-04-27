@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44b583c062280cb080228d7db3bd24a312a350fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768539"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>사용자 지정 태스크에 디버깅 지원 추가
@@ -40,8 +40,7 @@ ms.locfileid: "62768539"
  중단점을 사용하지 않는 태스크도 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 및 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 인터페이스를 구현해야 합니다. 이러한 인터페이스를 구현하면 패키지의 다른 개체가 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> 이벤트를 발생시킬 때 태스크가 올바르게 일시 중지됩니다.  
   
 ## <a name="idtsbreakpointsite-interface-and-breakpointmanager"></a>IDTSBreakpointSite 인터페이스 및 BreakpointManager  
- 태스크에서는 정수 ID와 문자열 설명을 매개 변수로 제공하는 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.CreateBreakpointTarget%2A>의 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> 메서드를 호출하여 중단점 대상을 만듭니다. 태스크는 코드에서 중단점 대상이 들어 있는 지점에 도달하면 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.IsBreakpointTargetEnabled%2A> 메서드로 중단점 대상을 평가하여 해당 중단점이 설정되어 있는지 확인합니다. 
-  `true`인 경우 태스크에서는 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> 이벤트를 발생시켜 런타임 엔진에 이를 알립니다.  
+ 태스크에서는 정수 ID와 문자열 설명을 매개 변수로 제공하는 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.CreateBreakpointTarget%2A>의 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> 메서드를 호출하여 중단점 대상을 만듭니다. 태스크는 코드에서 중단점 대상이 들어 있는 지점에 도달하면 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.IsBreakpointTargetEnabled%2A> 메서드로 중단점 대상을 평가하여 해당 중단점이 설정되어 있는지 확인합니다. `true`인 경우 태스크에서는 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> 이벤트를 발생시켜 런타임 엔진에 이를 알립니다.  
   
  <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 인터페이스는 태스크를 만들 때 런타임 엔진에서 호출하는 단일 메서드 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite.AcceptBreakpointManager%2A>를 정의합니다. 이 메서드는 매개 변수로 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> 개체를 제공하며, 이 개체는 태스크에서 중단점을 만들고 관리하는 데 사용됩니다. 태스크에서는 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>를 `Validate` 및 `Execute` 메서드 실행 중에 사용할 수 있도록 로컬로 저장해야 합니다.  
   
@@ -88,13 +87,11 @@ End Function
 ```  
   
 ## <a name="idtssuspend-interface"></a>IDTSSuspend 인터페이스  
- <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 인터페이스는 런타임 엔진에서 태스크 실행을 일시 중지하거나 다시 시작할 때 호출하는 메서드를 정의합니다. 
-  <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 인터페이스는 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 인터페이스에 의해 구현되며 이 인터페이스의 `Suspend` 및 `ResumeExecution` 메서드는 대개 사용자 지정 태스크에 의해 재정의됩니다. 런타임 엔진은 태스크에서 `OnBreakpointHit` 이벤트를 받으면 실행 중인 각 태스크의 `Suspend` 메서드를 호출하여 태스크를 일시 중지하라고 알립니다. 클라이언트가 실행을 다시 시작하면 런타임 엔진에서는 일시 중지된 태스크의 `ResumeExecution` 메서드를 호출합니다.  
+ <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 인터페이스는 런타임 엔진에서 태스크 실행을 일시 중지하거나 다시 시작할 때 호출하는 메서드를 정의합니다. <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 인터페이스는 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 인터페이스에 의해 구현되며 이 인터페이스의 `Suspend` 및 `ResumeExecution` 메서드는 대개 사용자 지정 태스크에 의해 재정의됩니다. 런타임 엔진은 태스크에서 `OnBreakpointHit` 이벤트를 받으면 실행 중인 각 태스크의 `Suspend` 메서드를 호출하여 태스크를 일시 중지하라고 알립니다. 클라이언트가 실행을 다시 시작하면 런타임 엔진에서는 일시 중지된 태스크의 `ResumeExecution` 메서드를 호출합니다.  
   
  태스크 실행을 일시 중지하고 다시 시작하려면 태스크의 실행 스레드를 일시 중지하고 다시 시작해야 합니다. 관리 코드에서는 .NET Framework의 `ManualResetEvent` 네임스페이스에 있는 `System.Threading` 클래스를 사용하여 이 작업을 수행합니다.  
   
- 다음 코드 예제에서는 태스크 실행을 일시 중지하고 다시 시작하는 방법을 보여 줍니다. 
-  `Execute` 메서드는 앞의 코드 예제에서 변경되었으며, 중단점이 발생하면 실행 스레드가 일시 중지됩니다.  
+ 다음 코드 예제에서는 태스크 실행을 일시 중지하고 다시 시작하는 방법을 보여 줍니다. `Execute` 메서드는 앞의 코드 예제에서 변경되었으며, 중단점이 발생하면 실행 스레드가 일시 중지됩니다.  
   
 ```csharp  
 private ManualResetEvent m_suspended = new ManualResetEvent( true );  
@@ -343,7 +340,7 @@ Public Sub Suspend()
 End Sub  
 ```  
   
-![Integration Services 아이콘 (작은 아이콘)](../../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
+![Integration Services 아이콘 (작은 아이콘)](../../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [제어 흐름 디버깅](../../troubleshooting/debugging-control-flow.md)  

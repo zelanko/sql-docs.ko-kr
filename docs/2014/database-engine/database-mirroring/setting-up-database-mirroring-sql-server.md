@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c6b7fcdc3f50b941feac4958daa6dad49fde9eac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754449"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>데이터베이스 미러링 설정(SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "62754449"
   
  
   
-##  <a name="PrepareInstances"></a> 미러 서버를 호스팅하도록 서버 인스턴스 준비  
+##  <a name="preparing-a-server-instance-to-host-a-mirror-server"></a><a name="PrepareInstances"></a> 미러 서버를 호스팅하도록 서버 인스턴스 준비  
  각 데이터베이스 미러링 세션에 대해 다음을 준비합니다.  
   
 1.  주 서버, 미러 서버 및 미러링 모니터 서버(있는 경우)는 별도의 호스트 시스템에 있는 개별 서버 인스턴스로 호스팅되어야 합니다. 각 서버 인스턴스에는 데이터베이스 미러링 엔드포인트가 필요합니다. 데이터베이스 미러링 엔드포인트를 만들어야 할 경우 다른 서버 인스턴스에 액세스할 수 있는지 확인합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "62754449"
   
 3.  미러 데이터베이스를 호스팅하는 서버 인스턴스에서 미러링된 데이터베이스에 필요한 환경의 남은 부분을 설정합니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)을 참조하세요.  
   
-##  <a name="EstablishUsingWinAuthentication"></a> 개요: 데이터베이스 미러링 세션 설정  
+##  <a name="overview-establishing-a-database-mirroring-session"></a><a name="EstablishUsingWinAuthentication"></a> 개요: 데이터베이스 미러링 세션 설정  
  미러링 세션을 설정하는 기본 단계는 다음과 같습니다.  
   
 1.  모든 복원 작업에서 RESTORE WITH NORECOVERY를 사용하여 다음 백업을 복원해서 미러 데이터베이스를 만듭니다.  
@@ -99,7 +99,7 @@ ms.locfileid: "62754449"
   
  
   
-##  <a name="InThisSection"></a> 섹션 내용  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> 섹션 내용  
  [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)  
  일시 중단된 세션을 재개하기 전에 미러 데이터베이스를 만들거나 준비하는 단계를 요약합니다. 또한 방법 도움말 항목에 대한 링크를 제공합니다.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "62754449"
  [데이터베이스 미러링을 위한 로그인 계정을 설정 하거나 &#40;SQL Server를 AlwaysOn 가용성 그룹&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
  로컬 서버 인스턴스가 아닌 다른 계정을 사용하는 원격 서버 인스턴스의 로그인을 만드는 방법에 대해 설명합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **SQL Server Management Studio**  
   
 -   [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  

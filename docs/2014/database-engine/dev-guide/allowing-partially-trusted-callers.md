@@ -16,16 +16,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bed854ba13bec4206f3ee869795af91c4da4f525
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754201"
 ---
 # <a name="allowing-partially-trusted-callers"></a>부분적으로 신뢰할 수 있는 호출자 허용
   코드 라이브러리 공유는 CLR(공용 언어 런타임) 통합에서의 일반적인 시나리오입니다. 이 경우 사용자 정의 형식, 저장 프로시저, 사용자 정의 함수, 사용자 정의 집계, 트리거 또는 유틸리티 클래스가 포함된 어셈블리를 다른 어셈블리나 애플리케이션에서 액세스하는 경우가 많습니다. 여러 애플리케이션에서 공유할 코드 라이브러리는 강력한 이름으로 서명되어야 합니다.  
   
- 런타임 코드 액세스 보안 시스템에서 완전히 신뢰하는 애플리케이션만 명시적으로 `System.Security.AllowPartiallyTrustedCallers` 특성이 표시되지 않은 공유 관리 코드 어셈블리에 액세스할 수 있습니다. 부분적으로 신뢰할 수 있는 어셈블리([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 `SAFE` 권한 집합으로 `EXTERNAL_ACCESS`에 등록된 어셈블리)가 이 특성 없이 강력한 이름으로 서명된 어셈블리에 액세스하려고 하면 `System.Security.SecurityException`이 throw됩니다. 표시되는 오류 메시지는 다음과 유사합니다.  
+ 런타임 코드 액세스 보안 시스템에서 완전히 신뢰하는 애플리케이션만 명시적으로 `System.Security.AllowPartiallyTrustedCallers` 특성이 표시되지 않은 공유 관리 코드 어셈블리에 액세스할 수 있습니다. 부분적으로 신뢰할 수 있는 어셈블리(`SAFE` 또는 `EXTERNAL_ACCESS` 권한 집합으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 등록된 어셈블리)가 이 특성 없이 강력한 이름으로 서명된 어셈블리에 액세스하려고 하면 `System.Security.SecurityException`이 throw됩니다. 표시되는 오류 메시지는 다음과 유사합니다.  
   
 ```  
 Msg 6522, Level 16, State 1, Procedure usp_RSTest, Line 0  
@@ -39,14 +39,13 @@ IPermission permThatFailed) at
 Microsoft.Samples.SqlServer.TestResultSet.Test()  
 ```  
   
- 전역 어셈블리 캐시에 추가된 어셈블리를 제외하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 등록된 모든 어셈블리에 `AllowPartiallyTrustedCallers` 특성을 표시하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 로드한 어셈블리가 서로 액세스할 수 있도록 하는 것이 좋습니다. 
-  `AllowPartiallyTrustedCallers` 특성을 추가하면 예기치 않은 컨텍스트에서 부분적으로 신뢰할 수 있는 호출자가 어셈블리를 사용할 수 있으므로 안전을 위해 특성을 추가하기 전에 전역 어셈블리 캐시에 추가할 어셈블리를 철저하게 검토해야 합니다. 어셈블리를 완전히 신뢰할 수 있게 만들면 안 됩니다(`UNSAFE` 권한 집합으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 등록됨).  
+ 전역 어셈블리 캐시에 추가된 어셈블리를 제외하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 등록된 모든 어셈블리에 `AllowPartiallyTrustedCallers` 특성을 표시하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 로드한 어셈블리가 서로 액세스할 수 있도록 하는 것이 좋습니다. `AllowPartiallyTrustedCallers` 특성을 추가하면 예기치 않은 컨텍스트에서 부분적으로 신뢰할 수 있는 호출자가 어셈블리를 사용할 수 있으므로 안전을 위해 특성을 추가하기 전에 전역 어셈블리 캐시에 추가할 어셈블리를 철저하게 검토해야 합니다. 어셈블리를 완전히 신뢰할 수 있게 만들면 안 됩니다(`UNSAFE` 권한 집합으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 등록됨).  
   
  자세한 내용은 .NET Framework 소프트웨어 개발 키트의 "부분적으로 신뢰할 수 있는 코드에서 라이브러리 사용"을 참조하십시오.  
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>설명  
  많은 서버 쪽 CLR 통합 애플리케이션에 유용한 유틸리티 클래스가 있다고 가정합니다. 예를 들어 이 클래스는 쿼리 호출 결과를 나타내는 클래스일 수 있습니다. 이 구성 요소를 공유할 수 있도록 이 유틸리티 클래스는 별도의 어셈블리에 배치됩니다. 그러면 CLR 통합 개체가 포함된 다른 여러 어셈블리에서 해당 어셈블리가 참조됩니다. 이 유틸리티 클래스는 다양한 서버 애플리케이션에서 사용되므로 신중하게 검토되고 모든 보안 문제가 해결됩니다. 그런 후에 이 유틸리티 클래스가 포함된 어셈블리에 `AllowPartiallyTrustedCallers` 특성이 적용되어 `SAFE` 또는 `EXTERNAL_ACCESS` 권한 집합으로 표시된 어셈블리에 포함된 CLR 통합 개체에서 유틸리티 클래스와 메서드가 별도의 어셈블리에 있는 경우에도 사용할 수 있게 합니다.  
   
  경우에 따라서는 쿼리 결과를 읽는 동안 새 연결을 열거나 모든 결과를 메모리로 읽어 오지 않고 명령을 실행하는 것이 유용할 수 있습니다. ADO.NET 2.0의 MARS(Multiple Active Result Set)는 이러한 작업을 가능하게 하는 기술입니다. 현재로서는 서버 쪽 프로그래밍에 사용되는 in-process 공급자에는 MARS가 구현되지 않습니다. 서버 쪽 커서를 사용하면 이러한 제한을 해결할 수 있습니다. 이 예제는 서버 쪽 커서를 사용하여 서버 쪽 프로그래밍을 지원하지 않는 MARS의 한계를 극복하는 방법을 보여 줍니다.  

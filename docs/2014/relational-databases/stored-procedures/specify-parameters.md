@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736366"
 ---
 # <a name="specify-parameters"></a>매개 변수 지정
@@ -63,10 +63,10 @@ GO
  매개 변수 이름을 명시적으로 지정하고 프로시저 호출 시 적절한 값을 각 매개 변수에 할당하면 매개 변수를 임의의 순서로 제공할 수 있습니다. 예를 들어, 프로시저 **my_proc**에서 **\@first**, **\@second** 및 **\@third**라는 세 개의 매개 변수를 사용하는 경우 `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`과 같이 프로시저에 전달된 값을 매개 변수 이름에 할당할 수 있습니다.  
   
 > [!NOTE]
->  매개 변수 값이 폼 ** \@매개 변수 =**_value_에 제공 되는 경우 모든 후속 매개 변수도 이러한 방식으로 제공 되어야 합니다. 매개 변수 값이 form ** \@매개 변수 =**_value_에 전달 되지 않은 경우 매개 변수가 CREATE PROCEDURE 문에 나열 되어 있으므로 값을 동일한 순서 (왼쪽에서 오른쪽)로 제공 해야 합니다.  
+>  **\@parameter =** _value_ 형식에 하나의 매개 변수 값이 입력되는 경우 모든 후속 매개 변수도 이러한 방식으로 입력되어야 합니다. **\@parameter =** _value_ 형식에 매개 변수 값이 전달되지 않은 경우 해당 값은 CREATE PROCEDURE 문에 나열된 매개 변수를 따라 동일한 순서(왼쪽에서 오른쪽)로 제공되어야 합니다.  
 > 
 > [!WARNING]
->  철자가 잘못 된 매개 변수를 사용 하 여 form ** \@parameter =**_value_ 에 전달 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 매개 변수는 오류를 생성 하 고 프로시저 실행을 방지 합니다.  
+>  철자가 잘못 입력된 매개 변수와 함께 **\@parameter =** _value_ 형식으로 매개 변수가 전달될 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 오류가 발생하여 프로시저 실행을 방해할 수 있습니다.  
   
 ## <a name="specifying-parameter-data-types"></a>매개 변수 데이터 형식 지정  
  CREATE PROCEDURE 문에서 매개 변수가 선언될 때에는 데이터 형식이 함께 정의되어야 합니다. 프로시저가 호출될 때 매개 변수의 데이터 형식에 따라 매개 변수에 허용되는 값의 형식과 범위가 결정됩니다. 예를 들어 `tinyint` 데이터 형식으로 매개 변수를 정의하면 해당 매개 변수로는 0에서 255까지의 숫자 값만 전달될 수 있습니다. 데이터 형식과 맞지 않는 값으로 프로시저를 실행하면 오류가 반환됩니다.  
@@ -85,8 +85,7 @@ GO
   
  매개 변수에 적당한 기본값을 지정할 수 없을 때는 NULL을 기본값으로 지정합니다. 프로시저가 매개 변수 값이 없이 실행되는 경우 프로시저에서 사용자 지정 메시지를 반환하는 것이 좋습니다.  
   
- 다음 예는 한 개의 입력 매개 변수 `usp_GetSalesYTD` 을 사용하여 `@SalesPerson`프로시저를 만듭니다. 
-  `@SalesPerson` 매개 변수 값 없이 프로시저를 실행할 경우 NULL이 이 매개 변수의 기본값으로 할당되고 사용자 지정 오류 메시지를 반환하는 오류 처리 문에서 NULL이 사용됩니다.  
+ 다음 예는 한 개의 입력 매개 변수 `usp_GetSalesYTD` 을 사용하여 `@SalesPerson`프로시저를 만듭니다. `@SalesPerson` 매개 변수 값 없이 프로시저를 실행할 경우 NULL이 이 매개 변수의 기본값으로 할당되고 사용자 지정 오류 메시지를 반환하는 오류 처리 문에서 NULL이 사용됩니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -165,8 +164,7 @@ GO
   
 ```  
   
- 
-  `usp_GetList` 를 실행하여 가격이 $700 미만인 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 제품(자전거) 목록을 반환합니다. 출력 매개 변수 ** \@cost** 및 ** \@compareprices** **메시지** 창에서 메시지를 반환 하기 위해 흐름 제어 언어와 함께 사용 됩니다.  
+ `usp_GetList` 를 실행하여 가격이 $700 미만인 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 제품(자전거) 목록을 반환합니다. 출력 매개 변수 ** \@cost** 및 ** \@compareprices** **메시지** 창에서 메시지를 반환 하기 위해 흐름 제어 언어와 함께 사용 됩니다.  
   
 > [!NOTE]  
 >  OUTPUT 변수는 프로시저를 만들 때와 변수를 사용할 때 정의되어야 합니다. 매개 변수 이름과 변수 이름은 일치하지 않아도 되지만 그러나 ** \@listprice =** _variable_ 을 사용 하지 않는 경우 데이터 형식과 매개 변수 위치는 일치 해야 합니다.  
