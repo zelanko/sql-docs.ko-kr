@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4501bc77a28746de3b0ce97b7b619889093650d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918579"
 ---
 # <a name="set-or-change-the-server-collation"></a>서버 데이터 정렬 설정 또는 변경
@@ -32,7 +32,7 @@ ms.locfileid: "62918579"
   
 -   모든 사용자 데이터베이스를 삭제합니다.  
   
--   **setup** 명령의 SQLCOLLATION 속성에 새 데이터 정렬을 지정하여 master 데이터베이스를 다시 작성합니다. 다음은 그 예입니다.  
+-   **setup** 명령의 SQLCOLLATION 속성에 새 데이터 정렬을 지정하여 master 데이터베이스를 다시 작성합니다. 예를 들어:  
   
     ```  
     Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName   

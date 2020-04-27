@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 32b95a5d156ae52394b7128b024c86b9a7e308b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891541"
 ---
 # <a name="step-5-adding-and-configuring-the-flat-file-source"></a>5단계: 플랫 파일 원본 추가 및 구성
@@ -26,8 +26,7 @@ ms.locfileid: "62891541"
   
 1.  데이터 흐름 태스크를 두 번 클릭 `Extract Sample Currency Data` 하거나 데이터 흐름 **탭**을 클릭 하 여 **데이터 흐름** 디자이너를 엽니다.  
   
-2.  
-  **SSIS 도구 상자**에서 **기타 원본**을 확장한 다음 **플랫 파일 원본** 을 **데이터 흐름** 탭의 디자인 화면으로 끌어다 놓습니다.  
+2.  **SSIS 도구 상자**에서 **기타 원본**을 확장한 다음 **플랫 파일 원본** 을 **데이터 흐름** 탭의 디자인 화면으로 끌어다 놓습니다.  
   
 3.  **데이터 흐름** 디자인 화면에서 새로 추가한 **플랫 파일 원본을**마우스 오른쪽 단추로 클릭 하 고 이름 **바꾸기**를 클릭 한 다음 이름을로 `Extract Sample Currency Data`변경 합니다.  
   
@@ -35,8 +34,7 @@ ms.locfileid: "62891541"
   
 5.  **플랫 파일 연결 관리자** 상자에서를 선택 `Sample Flat File Source Data`합니다.  
   
-6.  
-  **열** 을 클릭하고 열 이름이 올바른지 확인합니다.  
+6.  **열** 을 클릭하고 열 이름이 올바른지 확인합니다.  
   
 7.  **확인**을 클릭합니다.  
   
@@ -49,6 +47,6 @@ ms.locfileid: "62891541"
   
 ## <a name="see-also"></a>참고 항목  
  [플랫 파일 원본](data-flow/flat-file-source.md)   
- [플랫 파일 연결 관리자 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)  
+ [플랫 파일 연결 관리자 편집기&#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)  
   
   

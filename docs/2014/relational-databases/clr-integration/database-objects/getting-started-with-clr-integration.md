@@ -26,10 +26,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: db3a72facf1676360e7c338663facac66840a113
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874116"
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 통합으로 작업 시작
@@ -96,14 +96,13 @@ End Class
 C:\Windows\Microsoft.NET\Framework\(version)  
 ```  
   
- version에는 설치된 .NET Framework 재배포 가능 패키지의 버전 번호가 포함됩니다. 다음은 그 예입니다.  
+ version에는 설치된 .NET Framework 재배포 가능 패키지의 버전 번호가 포함됩니다. 예를 들어:  
   
 ```  
 C:\Windows\Microsoft.NET\Framework\v2.0.31113  
 ```  
   
- 경로에 .NET Framework 디렉터리를 추가한 후에는 다음 명령을 사용하여 예제 저장 프로시저를 어셈블리로 컴파일할 수 있습니다. 
-  `/target` 옵션을 사용하면 저장 프로시저를 어셈블리로 컴파일할 수 있습니다.  
+ 경로에 .NET Framework 디렉터리를 추가한 후에는 다음 명령을 사용하여 예제 저장 프로시저를 어셈블리로 컴파일할 수 있습니다. `/target` 옵션을 사용하면 저장 프로시저를 어셈블리로 컴파일할 수 있습니다.  
   
  Visual C# 원본 파일의 경우 다음 명령을 실행합니다.  
   
@@ -122,8 +121,7 @@ vbc /target:library helloworld.vb
 ## <a name="loading-and-running-the-hello-world-stored-procedure-in-sql-server"></a>SQL Server에서 "Hello World" 저장 프로시저 로드 및 실행  
  샘플 프로시저가 성공적으로 컴파일되면에서 [!INCLUDE[ssNoVersion](../../../includes/ssmanstudiofull-md.md)] 테스트 하 고 새 쿼리를 만들어 적절 한 테스트 데이터베이스 (예: AdventureWorks 예제 데이터베이스)에 연결할 수 있습니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 CLR(공용 언어 런타임) 코드를 실행하는 기능이 기본적으로 OFF로 설정되어 있습니다. **Sp_configure** 시스템 저장 프로시저를 사용 하 여 CLR 코드를 사용 하도록 설정할 수 있습니다. 자세한 내용은 [Enabling CLR Integration](../clr-integration-enabling.md)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 CLR(공용 언어 런타임) 코드를 실행하는 기능이 기본적으로 OFF로 설정되어 있습니다. **Sp_configure** 시스템 저장 프로시저를 사용 하 여 CLR 코드를 사용 하도록 설정할 수 있습니다. 자세한 내용은 [Enabling CLR Integration](../clr-integration-enabling.md)을 참조하세요.  
   
  저장 프로시저에 액세스할 수 있게 어셈블리를 만들어야 합니다. 이 예에서는 C:\ 디렉터리에 helloworld.dll 어셈블리를 만들었다고 가정합니다. 쿼리에 다음의 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 추가합니다.  
   
@@ -144,7 +142,7 @@ EXTERNAL NAME helloworld.HelloWorldProc.HelloWorld
 -- EXTERNAL NAME helloworld.[MyNS.HelloWorldProc].HelloWorld  
 ```  
   
- 프로시저가 만들어지면 [!INCLUDE[tsql](../../../includes/tsql-md.md)]로 작성된 일반적인 저장 프로시저와 마찬가지로 프로시저를 실행할 수 있습니다. 다음 명령을 실행합니다.  
+ 프로시저가 만들어지면 [!INCLUDE[tsql](../../../includes/tsql-md.md)]로 작성된 일반적인 저장 프로시저와 마찬가지로 프로시저를 실행할 수 있습니다. 다음 명령을 실행하십시오.  
   
 ```  
 DECLARE @J nchar(25)  

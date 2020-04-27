@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fd52b851d4ff35fe1fc9a3a9fed05be0b8098fa9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900992"
 ---
 # <a name="parsing-data"></a>데이터 구문 분석
@@ -28,6 +28,6 @@ ms.locfileid: "62900992"
   
 -   빠른 구문 분석은 신속하고 간단한 구문 분석 루틴이지만 로캘 특정 데이터 형식 변환을 지원하지 않으며 가장 자주 사용되는 날짜 및 시간 형식만 지원합니다. 자세한 내용은 [Fast Parse](../fast-parse.md)을 참조하세요.  
   
--   표준 구문 분석은 다양한 기능이 포함된 구문 분석 루틴이며 Oleaut32.dll 및 Ole2dsip.dll에서 사용할 수 있는 Automation 데이터 형식 변환 API에 제공되는 모든 데이터 형식 변환을 지원합니다. 자세한 내용은 [Standard Parse](../standard-parse.md)을 참조하세요.  
+-   표준 구문 분석은 다양한 기능이 포함된 구문 분석 루틴이며 Oleaut32.dll 및 Ole2dsip.dll에서 사용할 수 있는 자동 데이터 형식 변환 API에 제공되는 모든 데이터 형식 변환을 지원합니다. 자세한 내용은 [Standard Parse](../standard-parse.md)을 참조하세요.  
   
   

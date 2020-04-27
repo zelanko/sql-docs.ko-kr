@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 34462589141133e04ca8728361e3a173f0944f12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62895502"
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>스크립트 태스크를 사용하여 빈 플랫 파일 검색
@@ -35,15 +35,13 @@ ms.locfileid: "62895502"
   
 1.  이라는 `EmptyFlatFileTest`플랫 파일 연결 관리자를 만들고 구성 합니다.  
   
-2.  
-  `FFNonDataRows`라는 정수 변수를 만들고 해당 값을 플랫 파일에 필요한 비데이터 행의 개수로 설정합니다.  
+2.  `FFNonDataRows`라는 정수 변수를 만들고 해당 값을 플랫 파일에 필요한 비데이터 행의 개수로 설정합니다.  
   
-3.  
-  `FFIsEmpty`라는 부울 변수를 만듭니다.  
+3.  `FFIsEmpty`라는 부울 변수를 만듭니다.  
   
-4.  스크립트 태스크의 `FFNonDataRows`ReadOnlyVariables** 속성에 ** 변수를 추가합니다.  
+4.  스크립트 태스크의 `FFNonDataRows`ReadOnlyVariables**속성에** 변수를 추가합니다.  
   
-5.  스크립트 태스크의 `FFIsEmpty`ReadWriteVariables** 속성에 ** 변수를 추가합니다.  
+5.  스크립트 태스크의 `FFIsEmpty`ReadWriteVariables**속성에** 변수를 추가합니다.  
   
 6.  코드에서 `System.IO` 네임스페이스를 가져옵니다.  
   
@@ -141,7 +139,7 @@ public void Main()
         }  
 ```  
   
-![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [스크립트 태스크 예](../extending-packages-scripting-task-examples/script-task-examples.md)  

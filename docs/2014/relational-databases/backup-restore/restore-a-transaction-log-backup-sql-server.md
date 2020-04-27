@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62875667"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>트랜잭션 로그 백업 복원(SQL Server)
@@ -45,9 +45,9 @@ ms.locfileid: "62875667"
   
 -   [관련 작업](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 조건  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
   
 -   백업은 만든 순서대로 복원해야 합니다. 특정 트랜잭션 로그 백업을 복원하려면 먼저 커밋되지 않은 트랜잭션을 롤백하지 않고, 즉 WITH NORECOVERY로 다음과 같은 이전 백업을 복원해야 합니다.  
   
@@ -57,12 +57,12 @@ ms.locfileid: "62875667"
   
          트랜잭션 로그 백업에 대한 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](transaction-log-backups-sql-server.md) 및 [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](apply-transaction-log-backups-sql-server.md)을 참조하세요.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  멤버 자격 정보를 서버에서 항상 사용할 수 있는 역할에 RESTORE 권한이 제공됩니다. 고정 데이터베이스 역할의 멤버 자격은 데이터베이스가 액세스 가능한 상태이며 손상되지 않은 경우에만 확인할 수 있는데, RESTORE 실행 시 데이터베이스가 항상 이러한 상태인 것은 아니므로 **db_owner** 고정 데이터베이스 역할의 멤버에게는 RESTORE 권한이 없습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 > [!WARNING]  
 >  일반적인 복원 프로세스는 데이터 백업 및 차등 백업과 함께 **데이터베이스 복원** 대화 상자에서 로그 백업을 선택하는 것입니다.  
@@ -189,7 +189,7 @@ ms.locfileid: "62875667"
   
 11. 필요에 따라 **대기 파일** 입력란에 대기 파일 이름을 지정합니다. 데이터베이스를 읽기 전용 모드로 유지하는 경우 이 옵션이 필요합니다. 대기 파일을 찾아보거나 입력란에 해당 경로 이름을 입력할 수 있습니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 > [!IMPORTANT]  
 >  모호하지 않도록 항상 모든 RESTORE 문에 명시적으로 WITH NORECOVERY 또는 WITH RECOVERY를 지정하는 것이 좋습니다. 이는 스크립트 작성 시 특히 중요합니다.  
@@ -234,7 +234,7 @@ ms.locfileid: "62875667"
     > [!IMPORTANT]  
     >  미러 데이터베이스를 만드는 경우 복구 단계를 생략하세요. 미러 데이터베이스는 RESTORING 상태로 유지되어야 합니다.  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  기본적으로 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스는 단순 복구 모델을 사용합니다. 다음 예에서는 전체 복구 모델을 사용하도록 데이터베이스를 다음과 같이 변경해야 합니다.  
   
 ```sql  
@@ -287,7 +287,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [트랜잭션 로그 백업&#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   

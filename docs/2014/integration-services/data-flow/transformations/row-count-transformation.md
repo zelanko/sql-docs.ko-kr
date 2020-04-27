@@ -19,16 +19,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d991ee94e04be0ea72450b8e3e4649c339d1c2a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900213"
 ---
 # <a name="row-count-transformation"></a>행 개수 변환
   행 개수 변환은 행이 데이터 흐름을 통과할 때 행 수를 세어 최종 개수를 변수에 저장합니다.  
   
- 패키지 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 는 행 개수를 사용 하 여 스크립트, 식 및 속성 식에 사용 된 변수를 업데이트할 수 있습니다. (예를 들어 행 개수가 저장되는 변수는 행 개수가 포함되도록 전자 메일 메시지의 메시지 텍스트를 업데이트할 수 있습니다.) 행 개수 변환에 사용되는 변수는 이미 존재해야 하며 행 개수 변환이 포함된 데이터 흐름이 속해 있는 데이터 흐름 태스크의 범위 내에 있어야 합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 패키지는 행 개수를 사용하여 스크립트, 식 및 속성 식에 사용된 변수를 업데이트할 수 있습니다. (예를 들어 행 개수가 저장되는 변수는 행 개수가 포함되도록 전자 메일 메시지의 메시지 텍스트를 업데이트할 수 있습니다.) 행 개수 변환에 사용되는 변수는 이미 존재해야 하며 행 개수 변환이 포함된 데이터 흐름이 속해 있는 데이터 흐름 태스크의 범위 내에 있어야 합니다.  
   
  변환에서는 마지막 행이 변환을 통과한 후에만 변수에 행 개수 값을 저장합니다. 따라서 변수 값은 행 개수 변환이 포함된 데이터 흐름에서 업데이트된 값을 사용할 수 있도록 적시에 업데이트되지 않습니다. 업데이트된 변수는 별도의 데이터 흐름에서 사용할 수 있습니다.  
   

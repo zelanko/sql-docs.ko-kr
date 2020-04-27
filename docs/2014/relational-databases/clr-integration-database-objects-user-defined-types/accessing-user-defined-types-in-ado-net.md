@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 893b2c69a20974bb379cc032f442e5fcb3525ec5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919680"
 ---
 # <a name="accessing-user-defined-types-in-adonet"></a>ADO.NET의 사용자 정의 형식 액세스
@@ -26,22 +26,18 @@ ms.locfileid: "62919680"
   
  ADO.NET에서 `System.Data.SqlClient` 공급자는 UDT를 다음과 같은 방식으로 노출합니다.  
   
--   
-  `System.Data.SqlClient.SqlDataReader`를 통해 개체로 노출  
+-   `System.Data.SqlClient.SqlDataReader`를 통해 개체로 노출  
   
--   
-  `SqlDataReader`를 통해 원시 바이트로 노출  
+-   `SqlDataReader`를 통해 원시 바이트로 노출  
   
--   
-  `System.Data.SqlClient.SqlParameter` 개체의 매개 변수로 노출  
+-   `System.Data.SqlClient.SqlParameter` 개체의 매개 변수로 노출  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [UDT 데이터 검색](accessing-user-defined-types-retrieving-udt-data.md)  
  UDT 데이터를 검색하는 방법과 매개 변수를 지정하는 방법에 대해 설명합니다.  
   
  [DataAdapter로 UDT 열 업데이트](accessing-user-defined-types-updating-udt-columns-with-dataadapters.md)  
- 
-  `DataSets`에서 UDT로 작업하는 방법과 `DataAdapters`를 사용하여 UDT를 업데이트하는 방법에 대해 설명합니다.  
+ `DataSets`에서 UDT로 작업하는 방법과 `DataAdapters`를 사용하여 UDT를 업데이트하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CLR 사용자 정의 형식](clr-user-defined-types.md)  

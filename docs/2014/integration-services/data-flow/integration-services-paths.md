@@ -17,21 +17,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 832ea48478eb28b94caf292067344a3754040b2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901797"
 ---
 # <a name="integration-services-paths"></a>Integration Services 경로
   경로는 하나의 데이터 흐름 구성 요소의 출력을 다른 구성 요소의 입력에 연결함으로써 데이터 흐름의 두 구성 요소를 연결합니다. 경로에는 원본과 대상이 있습니다. 예를 들어 경로가 OLE DB 원본과 정렬 변환을 연결하는 경우 OLE DB 원본은 경로의 원본이며, 정렬 변환은 경로의 대상입니다. 원본은 경로가 시작되는 구성 요소이며, 대상은 경로가 끝나는 구성 요소입니다.  
   
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 패키지를 실행하는 경우에는 데이터 뷰어를 경로에 연결하여 데이터 흐름의 데이터를 볼 수 있습니다. 표에 데이터를 표시하도록 데이터 뷰어를 구성할 수 있습니다. 데이터 뷰어는 유용한 디버깅 도구입니다. 자세한 내용은 [Debugging Data Flow](../troubleshooting/debugging-data-flow.md)을 참조하세요.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 패키지를 실행하는 경우에는 데이터 뷰어를 경로에 연결하여 데이터 흐름의 데이터를 볼 수 있습니다. 표에 데이터를 표시하도록 데이터 뷰어를 구성할 수 있습니다. 데이터 뷰어는 유용한 디버깅 도구입니다. 자세한 내용은 [Debugging Data Flow](../troubleshooting/debugging-data-flow.md)을 참조하세요.  
   
 ## <a name="configuration-of-the-path"></a>경로 구성  
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너는 경로 속성을 설정하고, 경로를 통과하는 데이터 열의 메타데이터를 보고, 데이터 뷰어를 구성할 수 있는 **데이터 흐름 경로 편집기** 대화 상자를 제공합니다.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너는 경로 속성을 설정하고, 경로를 통과하는 데이터 열의 메타데이터를 보고, 데이터 뷰어를 구성할 수 있는 **데이터 흐름 경로 편집기** 대화 상자를 제공합니다.  
   
  구성 가능한 경로 속성에는 경로의 이름, 설명 및 주석이 포함됩니다. 또한 경로를 프로그래밍 방식으로 구성할 수 있습니다. 자세한 내용은 [프로그래밍 방식으로 데이터 흐름 구성 요소 연결](../building-packages-programmatically/connecting-data-flow-components-programmatically.md)을 참조하세요.  
   
@@ -41,8 +39,7 @@ ms.locfileid: "62901797"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- 
-  **데이터 흐름 경로 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ **데이터 흐름 경로 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
 -   [데이터 흐름 경로 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
   

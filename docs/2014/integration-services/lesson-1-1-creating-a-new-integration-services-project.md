@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2513a698fc073c751613e8e387d41ddb3e0fe9e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891765"
 ---
 # <a name="step-1-creating-a-new-integration-services-project"></a>1단계: 새 Integration Services 프로젝트 만들기
@@ -29,27 +29,21 @@ ms.locfileid: "62891765"
   
 ### <a name="to-create-a-new-integration-services-project"></a>새 Integration Services 프로젝트를 만들려면  
   
-1.  
-  **시작** 메뉴에서 **모든 프로그램**, **Microsoft SQL Server**를 차례로 가리킨 다음 **SQL Server Data Tools**를 클릭합니다.  
+1.  **시작** 메뉴에서 **모든 프로그램**, **Microsoft SQL Server**를 차례로 가리킨 다음 **SQL Server Data Tools**를 클릭합니다.  
   
-2.  
-  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트** 를 클릭하여 새 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만듭니다.  
+2.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트** 를 클릭하여 새 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만듭니다.  
   
-3.  
-  **새 프로젝트** 대화 상자의 **설치된 템플릿** 아래에서 **비즈니스 인텔리전스**를 확장하고 **템플릿** 창에서 **통합 서비스 프로젝트** 를 선택합니다.  
+3.  **새 프로젝트** 대화 상자의 **설치된 템플릿** 아래에서 **비즈니스 인텔리전스**를 확장하고 **템플릿** 창에서 **통합 서비스 프로젝트** 를 선택합니다.  
   
-4.  
-  **이름** 상자에서 기본 이름을 **SSIS Tutorial**로 변경합니다. 필요에 따라 **솔루션용 디렉터리 만들기** 확인란의 선택을 취소합니다.  
+4.  **이름** 상자에서 기본 이름을 **SSIS Tutorial**로 변경합니다. 필요에 따라 **솔루션용 디렉터리 만들기** 확인란의 선택을 취소합니다.  
   
-5.  기본 위치를 적용하거나 **찾아보기** 를 클릭하여 사용할 폴더를 찾아 이동합니다. 
-  **프로젝트 위치** 대화 상자에서 해당 폴더를 클릭한 다음 **폴더 선택**을 클릭합니다.  
+5.  기본 위치를 적용하거나 **찾아보기** 를 클릭하여 사용할 폴더를 찾아 이동합니다. **프로젝트 위치** 대화 상자에서 해당 폴더를 클릭한 다음 **폴더 선택**을 클릭합니다.  
   
 6.  **확인**을 클릭합니다.  
   
      기본적으로 **Package.dtsx**라는 빈 패키지가 만들어지고 SSIS 패키지 아래 프로젝트에 추가됩니다.  
   
-7.  
-  **솔루션 탐색기** 도구 모음에서 **Package.dtsx**를 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 클릭한 다음 기본 패키지의 이름을 **Lesson 1.dtsx**로 바꿉니다.  
+7.  **솔루션 탐색기** 도구 모음에서 **Package.dtsx**를 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 클릭한 다음 기본 패키지의 이름을 **Lesson 1.dtsx**로 바꿉니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [2단계: 플랫 파일 연결 관리자 추가 및 구성](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  

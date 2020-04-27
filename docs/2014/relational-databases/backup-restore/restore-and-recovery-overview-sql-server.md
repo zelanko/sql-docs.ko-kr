@@ -21,16 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 254b05afdaa08483117c07660630b3120527a3fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921015"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>복원 및 복구 개요(SQL Server)
-  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 오류를 복구하려면 데이터베이스 관리자는 논리적으로 올바르고 의미 있는 복원 시퀀스로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 집합을 복원해야 합니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복원 및 복구에서는 다음과 같이 전체 데이터베이스, 데이터 파일 또는 데이터 페이지 백업으로부터의 데이터 복원을 지원합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 오류를 복구하려면 데이터베이스 관리자는 논리적으로 올바르고 의미 있는 복원 시퀀스로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 집합을 복원해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복원 및 복구에서는 다음과 같이 전체 데이터베이스, 데이터 파일 또는 데이터 페이지 백업으로부터의 데이터 복원을 지원합니다.  
   
 -   데이터베이스( *전체 데이터베이스 복원*)  
   
@@ -44,26 +42,24 @@ ms.locfileid: "62921015"
   
      전체 복구 모델 또는 대량 로그 복구 모델에서 개별 데이터베이스를 복원할 수 있습니다. 페이지 복원은 파일 그룹의 수에 관계없이 모든 데이터베이스에서 수행할 수 있습니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원은 지원되는 모든 운영 체제(64비트 또는 32비트 시스템)에서 작동합니다. 지원 되는 운영 체제에 대 한 자세한 내용은 [SQL Server 2014을 설치 하기 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)을 참조 하세요. 이전 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 백업 지원에 대한 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)의 "호환성 지원" 섹션을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원은 지원되는 모든 운영 체제(64비트 또는 32비트 시스템)에서 작동합니다. 지원 되는 운영 체제에 대 한 자세한 내용은 [SQL Server 2014을 설치 하기 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)을 참조 하세요. 이전 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 백업 지원에 대한 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)의 "호환성 지원" 섹션을 참조하세요.  
   
- **항목 내용**  
+ **항목 내용:**  
   
 -   [복원 시나리오 개요](#RestoreScenariosOv)  
   
--   [복구 모델 및 지원 되는 복원 작업](#RMsAndSupportedRestoreOps)  
+-   [복구 모델 및 지원되는 복원 작업](#RMsAndSupportedRestoreOps)  
   
 -   [단순 복구 모델에서의 복원 제한 사항](#RMsimpleScenarios)  
   
 -   [대량 로그 복구 모델에서 복원](#RMblogRestore)  
   
--   [데이터베이스 복구 관리자 (SQL Server Management Studio)](#DRA)  
+-   [데이터베이스 복구 관리자(SQL Server Management Studio)](#DRA)  
   
 -   [관련 내용](#RelatedContent)  
   
-##  <a name="RestoreScenariosOv"></a>복원 시나리오 개요  
- 
-  *의* 복원 시나리오 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 하나 이상의 백업에서 데이터를 복원한 다음 데이터베이스를 복구하는 프로세스입니다. 지원되는 복원 시나리오는 데이터베이스의 복구 모델 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에 따라 달라집니다.  
+##  <a name="overview-of-restore-scenarios"></a><a name="RestoreScenariosOv"></a>복원 시나리오 개요  
+ *의* 복원 시나리오 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 하나 이상의 백업에서 데이터를 복원한 다음 데이터베이스를 복구하는 프로세스입니다. 지원되는 복원 시나리오는 데이터베이스의 복구 모델 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에 따라 달라집니다.  
   
  다음 표에서는 복구 모델별로 지원되는 복원 시나리오에 대해 설명합니다.  
   
@@ -83,10 +79,9 @@ ms.locfileid: "62921015"
   
 -   복원하는 데이터가 적어 데이터를 복사하고 복구하는 데 필요한 시간이 줄어듭니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 파일 또는 페이지를 복원하면 복원 작업을 수행하는 동안 데이터베이스에 있는 다른 데이터가 온라인 상태를 유지할 수 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 파일 또는 페이지를 복원하면 복원 작업을 수행하는 동안 데이터베이스에 있는 다른 데이터가 온라인 상태를 유지할 수 있습니다.  
   
-##  <a name="RMsAndSupportedRestoreOps"></a>복구 모델 및 지원 되는 복원 작업  
+##  <a name="recovery-models-and-supported-restore-operations"></a><a name="RMsAndSupportedRestoreOps"></a>복구 모델 및 지원 되는 복원 작업  
  데이터베이스에서 사용할 수 있는 복원 작업은 복구 모델에 따라 다릅니다. 다음 표에서는 각 복구 모델이 지정된 복원 시나리오를 지원하는지, 또 지원하면 어느 범위까지 지원하는지 요약합니다.  
   
 |복원 작업|전체 복구 모델|대량 로그 복구 모델|단순 복구 모델|  
@@ -104,7 +99,7 @@ ms.locfileid: "62921015"
 > [!IMPORTANT]  
 >  데이터베이스 복구 모델에 관계없이, 백업을 만든 버전보다 오래된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 복원할 수는 없습니다.  
   
-##  <a name="RMsimpleScenarios"></a>단순 복구 모델에서의 복원 시나리오  
+##  <a name="restore-scenarios-under-the-simple-recovery-model"></a><a name="RMsimpleScenarios"></a>단순 복구 모델에서의 복원 시나리오  
  단순 복구 모델의 경우 복원 작업 시 다음과 같은 제한 사항이 있습니다.  
   
 -   파일 복원과 증분 복원은 읽기 전용 보조 파일 그룹에만 사용할 수 있습니다. 이러한 복원 시나리오에 대한 자세한 내용은 [파일 복원&#40;단순 복구 모델&#41;](file-restores-simple-recovery-model.md) 및 [증분 복원&#40;SQL Server&#41;](piecemeal-restores-sql-server.md)을 참조하세요.  
@@ -118,7 +113,7 @@ ms.locfileid: "62921015"
 > [!IMPORTANT]  
 >  데이터베이스 복구 모델에 관계없이, 백업을 만든 버전보다 오래된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 복원할 수는 없습니다.  
   
-##  <a name="RMblogRestore"></a>대량 로그 복구 모델에서 복원  
+##  <a name="restore-under-the-bulk-logged-recovery-model"></a><a name="RMblogRestore"></a>대량 로그 복구 모델에서 복원  
  이 섹션에서는 전체 복구 모델을 보완하기 위한 용도로만 사용되는 대량 로그 복구 모델에 관련된 복원 고려 사항에 대해 설명합니다.  
   
 > [!NOTE]  
@@ -145,20 +140,20 @@ ms.locfileid: "62921015"
   
  온라인 복원을 수행하는 방법은 [온라인 복원&#40;SQL Server&#41;](online-restore-sql-server.md)을 참조하세요.  
   
-##  <a name="DRA"></a>데이터베이스 복구 관리자 (SQL Server Management Studio)  
+##  <a name="database-recovery-advisor-sql-server-management-studio"></a><a name="DRA"></a>데이터베이스 복구 관리자 (SQL Server Management Studio)  
  데이터베이스 복구 관리자는 올바른 최적의 복원 시퀀스를 구현하는 복원 계획 생성을 용이하게 합니다. 알려진 데이터베이스 복원 문제와 고객이 요청한 개선 사항이 해결되었습니다. 데이터베이스 복구 관리자에 의해 도입되는 주요 개선 사항은 다음과 같습니다.  
   
--   **복원 계획 알고리즘:**  특히 복잡 한 복원 시나리오의 경우 복원 계획을 생성 하는 데 사용 되는 알고리즘이 크게 향상 되었습니다. 지정 시간 복원의 분기 시나리오를 비롯한 여러 경계 사례가 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서보다 효율적으로 처리됩니다.  
+-   **복원 계획 알고리즘:**  복원 계획 생성에 사용되는 알고리즘, 특히 복잡한 복원 시나리오가 크게 향상되었습니다. 지정 시간 복원의 분기 시나리오를 비롯한 여러 경계 사례가 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서보다 효율적으로 처리됩니다.  
   
--   지정 **시간 복원:**  데이터베이스 복구 관리자는 지정 된 시점으로 데이터베이스를 복원 하는 것을 크게 간소화 합니다. 시각적 백업 시간대에서 지정 시간 복원에 대한 지원이 크게 향상됩니다. 이 시각적 시간대를 사용하면 데이터베이스 복원의 대상 복원 시점으로 적합한 시점을 확인할 수 있습니다. 시간대는 분기 복구 경로(복구 분기를 연결하는 경로) 순회를 용이하게 합니다. 특정 지정 시간 복원 계획은 대상 지정 시간(날짜 및 시간)으로의 복원과 관련된 백업을 자동으로 포함합니다. 자세한 내용은 [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)을 참조하세요.  
+-   **지정 시간 복원:**  데이터베이스 복구 관리자를 사용하면 지정된 시간 내의 데이터베이스 복원이 훨씬 쉬워집니다. 시각적 백업 시간대에서 지정 시간 복원에 대한 지원이 크게 향상됩니다. 이 시각적 시간대를 사용하면 데이터베이스 복원의 대상 복원 시점으로 적합한 시점을 확인할 수 있습니다. 시간대는 분기 복구 경로(복구 분기를 연결하는 경로) 순회를 용이하게 합니다. 특정 지정 시간 복원 계획은 대상 지정 시간(날짜 및 시간)으로의 복원과 관련된 백업을 자동으로 포함합니다. 자세한 내용은 [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)을 참조하세요.  
   
  데이터베이스 복구 관리자에 대한 자세한 내용은 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 효율성 블로그를 참조하십시오.  
   
 -   [복구 관리자: 소개](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [복구 관리자: SSMS를 사용 하 여 분할 백업 만들기/복원](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [복구 관리자: SSMS를 사용하여 분할 백업 만들기/복원](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
   
-##  <a name="RelatedContent"></a> 관련 내용  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
  없음  
   
 ## <a name="see-also"></a>참고 항목  

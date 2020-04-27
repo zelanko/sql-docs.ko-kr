@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46b9fef97433609310169c98d8ffc623a21a10c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876118"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>백업 및 복원 중 발생 가능한 미디어 오류(SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "62876118"
   
   
   
-##  <a name="BckChecksums"></a> 백업 체크섬  
+##  <a name="backup-checksums"></a><a name="BckChecksums"></a> 백업 체크섬  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 페이지 체크섬, 로그 블록 체크섬 및 백업 체크섬의 3가지 유형의 체크섬을 지원합니다. 백업 체크섬을 생성할 때 BACKUP은 데이터베이스에서 읽은 데이터가 데이터베이스에 들어 있는 체크섬이나 조각난 페이지 표시와 일치하는지 확인합니다.  
   
  BACKUP 문은 필요에 따라 백업 스트림에 대한 백업 체크섬을 계산합니다. 페이지 체크섬 또는 조각난 페이지 정보가 지정한 페이지에 있을 경우 BACKUP은 해당 페이지를 백업하면서 해당 페이지의 체크섬과 조각난 페이지 상태 및 페이지 ID도 확인합니다. 백업 체크섬을 만들 때 백업 작업은 체크섬을 페이지에 추가하지 않습니다. 페이지는 데이터베이스에 있는 대로 백업되고 페이지가 백업에 의해 수정되지 않습니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "62876118"
   
 4.  백업이 생성되었지만 페이지 오류가 있다는 메시지를 표시합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **백업 체크섬을 설정 또는 해제하려면**  
   
 -   [백업 또는 복원 중 백업 체크섬 설정 또는 해제&#40;SQL Server&#41;](enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  

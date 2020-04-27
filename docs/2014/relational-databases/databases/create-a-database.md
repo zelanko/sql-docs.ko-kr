@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d93e6cfa3ce6e958b31c1156cd4fc5fa046ad5ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62872338"
 ---
 # <a name="create-a-database"></a>데이터베이스 만들기
@@ -36,53 +36,51 @@ ms.locfileid: "62872338"
   
      [보안](#Security)  
   
--   **다음을 사용 하 여 데이터베이스를 만듭니다.**  
+-   **데이터베이스를 만들려면:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   하나의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스당 최대 32,767개의 데이터베이스를 지정할 수 있습니다.  
   
-###  <a name="Prerequisites"></a> 필수 조건  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
   
 -   CREATE DATABASE 문은 기본 트랜잭션 관리 모드인 자동 커밋 모드에서 실행해야 하며 명시적 또는 암시적 트랜잭션에서는 허용되지 않습니다.  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
--   사용자 데이터베이스를 생성, 수정 또는 삭제할 때마다 [master](master-database.md) 데이터베이스를 백업 해야 합니다.  
+-   사용자 데이터베이스를 생성, 수정 또는 삭제할 때마다 [master](master-database.md) 데이터베이스를 백업해야 합니다.  
   
 -   데이터베이스를 만들 때는 데이터베이스에서 예상되는 최대 데이터 크기를 고려하여 데이터 파일을 가능한 한 크게 만드는 것이 좋습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  master 데이터베이스의 CREATE DATABASE 권한이 있거나 CREATE ANY DATABASE 또는 ALTER ANY DATABASE 권한이 있어야 합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디스크 사용을 제어하기 위해 일반적으로 데이터베이스를 만들 수 있는 사용 권한은 일부 로그인 계정으로 제한됩니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-create-a-database"></a>데이터베이스를 만들려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기**에서 인스턴스에 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 연결한 다음 해당 인스턴스를 확장 합니다.  
   
 2.  **데이터베이스**를 마우스 오른쪽 단추로 클릭한 다음 **새 데이터베이스**를 클릭합니다.  
   
-3.  
-  **새 데이터베이스**에 데이터베이스 이름을 입력합니다.  
+3.  **새 데이터베이스**에 데이터베이스 이름을 입력합니다.  
   
 4.  모든 기본값을 사용하여 데이터베이스를 만들려면 **확인**을 클릭합니다. 그렇지 않으면 다음 옵션 단계로 계속 진행합니다.  
   
-5.  소유자 이름을 변경하려면 (**…**)을 클릭하여 다른 소유자를 선택합니다.  
+5.  소유자 이름을 변경 하려면 (**...**)을 클릭 하 여 다른 소유자를 선택 합니다.  
   
     > [!NOTE]  
-    >  
-  **부터 모든 사용자 데이터베이스에서 전체 텍스트를 사용할 수 있기 때문에** 전체 텍스트 인덱싱 사용 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]옵션이 항상 선택되어 있고 흐리게 표시됩니다.  
+    >  **부터 모든 사용자 데이터베이스에서 전체 텍스트를 사용할 수 있기 때문에** 전체 텍스트 인덱싱 사용 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]옵션이 항상 선택되어 있고 흐리게 표시됩니다.  
   
 6.  주 데이터 및 트랜잭션 로그 파일의 기본값을 변경하려면 **데이터베이스 파일** 표에서 해당 셀을 클릭하고 새 값을 입력합니다. 자세한 내용은 [데이터베이스에 데이터 또는 로그 파일 추가](add-data-or-log-files-to-a-database.md)을 참조하세요.  
   
@@ -92,20 +90,17 @@ ms.locfileid: "62872338"
   
 9. 데이터베이스 옵션을 변경하려면 **옵션** 페이지를 선택한 다음 데이터베이스 옵션을 수정합니다. 각 옵션에 대한 자세한 내용은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)을 참조하세요.  
   
-10. 새 파일 그룹을 추가하려면 **파일 그룹** 페이지를 클릭합니다. 
-  **추가** 를 클릭한 다음 파일 그룹의 값을 입력합니다.  
+10. 새 파일 그룹을 추가하려면 **파일 그룹** 페이지를 클릭합니다. **추가** 를 클릭한 다음 파일 그룹의 값을 입력합니다.  
   
 11. 데이터베이스에 확장 속성을 추가하려면 **확장 속성** 페이지를 선택합니다.  
   
-    1.  
-  **이름** 열에 확장 속성의 이름을 입력합니다.  
+    1.  **이름** 열에 확장 속성의 이름을 입력합니다.  
   
-    2.  
-  **값** 열에 확장 속성 텍스트를 입력합니다. 예를 들어 데이터베이스에 대해 설명하는 하나 이상의 문을 입력할 수 있습니다.  
+    2.  **값** 열에 확장 속성 텍스트를 입력합니다. 예를 들어 데이터베이스에 대해 설명하는 하나 이상의 문을 입력할 수 있습니다.  
   
 12. 데이터베이스를 만들려면 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-create-a-database"></a>데이터베이스를 만들려면  
   
@@ -113,10 +108,7 @@ ms.locfileid: "62872338"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 `Sales`데이터베이스를 만듭니다. PRIMARY 키워드를 사용하지 않았으므로 첫 번째 파일(`Sales`_`dat`)이 주 파일이 됩니다. 
-  `Sales`
-  \_
-  `dat` 파일의 SIZE 매개 변수에 MB 또는 KB를 지정하지 않았으므로 기본값 MB를 사용하여 할당됩니다. 사용자 데이터베이스를 생성, 수정 또는 삭제할 때마다 `Sales`\_`log` 파일은 `MB` 매개 변수에 명시적으로 `SIZE` 접미사를 지정했으므로 메가바이트(MB)로 공간이 할당됩니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 `Sales`데이터베이스를 만듭니다. PRIMARY 키워드를 사용하지 않았으므로 첫 번째 파일(`Sales`_`dat`)이 주 파일이 됩니다. `Sales`\_`dat` 파일의 SIZE 매개 변수에 MB 또는 KB를 지정하지 않았으므로 기본값 MB를 사용하여 할당됩니다. 사용자 데이터베이스를 생성, 수정 또는 삭제할 때마다 `Sales`\_`log` 파일은 `MB` 매개 변수에 명시적으로 `SIZE` 접미사를 지정했으므로 메가바이트(MB)로 공간이 할당됩니다.  
   
 ```sql  
 USE master ;  
@@ -140,9 +132,9 @@ GO
  추가 예제를 보려면 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Database Files and Filegroups](database-files-and-filegroups.md)   
+ [데이터베이스 파일 및 파일 그룹](database-files-and-filegroups.md)   
  [데이터베이스 분리 및 연결 &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
- [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [ALTER DATABASE &#40;Transact-SQL &#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [데이터베이스에 데이터 또는 로그 파일 추가](add-data-or-log-files-to-a-database.md)  
   
   

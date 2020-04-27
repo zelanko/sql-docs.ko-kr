@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 530cca00459ed1ae170272dfd20a54928f039b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900351"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>병합 및 병합 조인 변환을 위한 데이터 정렬
@@ -51,8 +51,7 @@ ms.locfileid: "62900351"
 -   데이터가 정렬되었는지 여부를 나타내는 출력의 `IsSorted` 속성. 이 속성을 `True`로 설정해야 합니다.  
   
     > [!IMPORTANT]  
-    >  
-  `IsSorted` 속성의 값을 `True`로 설정해도 데이터가 정렬되지는 않습니다. 이 속성은 데이터가 이전에 정렬되었다는 정보를 다운스트림 구성 요소에 제공하기만 합니다.  
+    >  `IsSorted` 속성의 값을 `True`로 설정해도 데이터가 정렬되지는 않습니다. 이 속성은 데이터가 이전에 정렬되었다는 정보를 다운스트림 구성 요소에 제공하기만 합니다.  
   
 -   열이 정렬되었는지 여부, 열의 정렬 순서 및 여러 열이 정렬된 시퀀스를 나타내는 출력 열의 `SortKeyPosition` 속성. 정렬된 데이터의 각 열에 이 속성을 설정해야 합니다.  
   
@@ -89,8 +88,7 @@ ms.locfileid: "62900351"
   
     -   기본값인 0은 열이 정렬되지 않았음을 나타냅니다. 출력 열이 정렬에 참여하지 않는 경우 값을 0으로 둡니다.  
   
-     
-  `SortKeyPosition` 속성을 설정하는 방법을 보여 주는 예는 원본에서 데이터를 로드하는 다음 Transact-SQL 문을 참조하십시오.  
+     `SortKeyPosition` 속성을 설정하는 방법을 보여 주는 예는 원본에서 데이터를 로드하는 다음 Transact-SQL 문을 참조하십시오.  
   
      `SELECT * FROM MyTable ORDER BY ColumnA, ColumnB DESC, ColumnC`  
   

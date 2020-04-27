@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 785ca6c05bc221e1449607b9dc3deaa93aa667bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62896585"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>동기 출력을 사용하여 사용자 지정 변환 구성 요소 개발
@@ -184,8 +184,7 @@ End Sub
 ### <a name="processing-rows"></a>행 처리  
  구성 요소는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 메서드에서 행 및 열이 들어 있는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 개체를 받습니다. 이 메서드가 실행되는 동안에는 버퍼의 행을 반복하고 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> 실행 중 식별된 열을 읽고 수정합니다. 이 메서드는 업스트림 구성 요소에서 더 이상 행을 제공하지 않을 때까지 데이터 흐름 태스크에서 반복적으로 호출됩니다.  
   
- 버퍼의 개별 열은 배열 인덱서 액세스 메서드를 사용하거나 `Get` 또는 `Set` 메서드 중 하나를 사용하여 읽거나 쓸 수 있습니다. 
-  `Get` 및 `Set` 메서드가 보다 효율적이므로 버퍼에 있는 열의 데이터 형식을 알고 있는 경우에는 이 두 메서드를 사용해야 합니다.  
+ 버퍼의 개별 열은 배열 인덱서 액세스 메서드를 사용하거나 `Get` 또는 `Set` 메서드 중 하나를 사용하여 읽거나 쓸 수 있습니다. `Get` 및 `Set` 메서드가 보다 효율적이므로 버퍼에 있는 열의 데이터 형식을 알고 있는 경우에는 이 두 메서드를 사용해야 합니다.  
   
  다음 코드 예에서는 들어오는 행을 처리하는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 메서드의 구현을 보여 줍니다.  
   
@@ -322,10 +321,10 @@ Namespace Uppercase
 End Namespace  
 ```  
   
-![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [비동기 출력을 사용하여 사용자 지정 변환 구성 요소 개발](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)   
+ [비동기 출력을 사용 하 여 사용자 지정 변환 구성 요소 개발](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)   
  [동기 및 비동기 변환 이해](../understanding-synchronous-and-asynchronous-transformations.md)   
  [스크립트 구성 요소를 사용하여 동기 변환 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) 
   

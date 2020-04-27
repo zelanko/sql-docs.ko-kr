@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0259f14bb814fd4157af95e4ce92f462d1fab68a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62877270"
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>시스템 데이터베이스 백업 및 복원(SQL Server)
@@ -58,7 +58,7 @@ ms.locfileid: "62877270"
   
 -   model 데이터베이스 복구를 위해 시스템 데이터베이스를 다시 작성하거나 model 데이터베이스에 대한 mdf 및 ldf 파일을 바꿔야 하는 경우도 있습니다. 자세한 내용은 [시스템 데이터베이스 다시 작성](../databases/system-databases.md)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   

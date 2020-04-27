@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2a59277110d91ffd40a2db7d62fd3a01aa109dfc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921555"
 ---
 # <a name="remove-defunct-filegroups-sql-server"></a>존재하지 않는 파일 그룹 제거(SQL Server)
@@ -43,26 +43,26 @@ ms.locfileid: "62921555"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   이 항목에서는 여러 개의 파일 또는 파일 그룹이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 관련된 내용 및 단순 모델의 경우 읽기 전용 파일 그룹과 관련된 내용을 다룹니다.  
   
 -   오프라인 파일 그룹이 제거되면 파일 그룹의 모든 파일이 존재하지 않음 상태가 됩니다.  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   복원되지 않은 파일 그룹을 복원할 필요가 없는 경우 데이터베이스에서 해당 파일 그룹을 제거하여 *존재하지 않는* 파일 그룹으로 만들 수 있습니다. 존재하지 않는 파일 그룹은 이 데이터베이스로 복원될 수 없지만 해당 메타데이터는 유지됩니다. 파일 그룹이 존재하지 않는 상태가 된 후 데이터베이스를 다시 시작할 수 있으며 복원된 파일 그룹 간에 데이터베이스의 일관성을 복구를 통해 유지할 수 있습니다.  
   
      예를 들어 데이터베이스에서 더 이상 필요하지 않은 오프라인 파일 그룹으로 인해 트랜잭션이 지연되는 문제를 해결하기 위한 한 가지 방법으로 파일 그룹을 존재하지 않는 상태로 만드는 것입니다. 파일 그룹이 오프라인 상태이므로 지연된 트랜잭션은 이 파일 그룹이 존재하지 않게 된 후에 지연된 상태에서 벗어납니다. 자세한 내용은 [지연된 트랜잭션&#40;SQL Server&#41;](deferred-transactions-sql-server.md)에서 존재하지 않는 파일 그룹을 제거하는 방법에 대해 설명합니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-remove-defunct-filegroups"></a>존재하지 않는 파일 그룹을 제거하려면  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62921555"
   
 6.  **행** 표에서 삭제할 파일 그룹을 선택하고 **제거**를 클릭한 다음 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-remove-defunct-filegroups"></a>존재하지 않는 파일 그룹을 제거하려면  
   

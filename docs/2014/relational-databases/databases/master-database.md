@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 767d77eefe8c54fe5a3d584c670cc991b284178e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917046"
 ---
 # <a name="master-database"></a>master 데이터베이스
@@ -39,33 +39,33 @@ ms.locfileid: "62917046"
 |데이터베이스 옵션|기본값|수정 가능|  
 |---------------------|-------------------|---------------------|  
 |ALLOW_SNAPSHOT_ISOLATION|켜기|예|  
-|ANSI_NULL_DEFAULT|OFF|yes|  
-|ANSI_NULLS|OFF|yes|  
-|ANSI_PADDING|OFF|yes|  
-|ANSI_WARNINGS|OFF|yes|  
-|ARITHABORT|OFF|yes|  
-|AUTO_CLOSE|OFF|예|  
-|AUTO_CREATE_STATISTICS|켜기|yes|  
-|AUTO_SHRINK|OFF|예|  
-|AUTO_UPDATE_STATISTICS|켜기|yes|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|yes|  
-|CHANGE_TRACKING|OFF|예|  
-|CONCAT_NULL_YIELDS_NULL|OFF|yes|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|yes|  
-|CURSOR_DEFAULT|GLOBAL|yes|  
-|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|예<br /><br /> 예<br /><br /> 예|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|yes|  
+|ANSI_NULL_DEFAULT|OFF|예|  
+|ANSI_NULLS|OFF|예|  
+|ANSI_PADDING|OFF|예|  
+|ANSI_WARNINGS|OFF|예|  
+|ARITHABORT|OFF|예|  
+|AUTO_CLOSE|OFF|아니요|  
+|AUTO_CREATE_STATISTICS|켜기|예|  
+|AUTO_SHRINK|OFF|아니요|  
+|AUTO_UPDATE_STATISTICS|켜기|예|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|예|  
+|CHANGE_TRACKING|OFF|아니요|  
+|CONCAT_NULL_YIELDS_NULL|OFF|예|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|예|  
+|CURSOR_DEFAULT|GLOBAL|예|  
+|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니요<br /><br /> 아니요<br /><br /> 아니요|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|예|  
 |DB_CHAINING|켜기|예|  
-|ENCRYPTION|OFF|예|  
-|NUMERIC_ROUNDABORT|OFF|yes|  
-|PAGE_VERIFY|CHECKSUM|yes|  
-|PARAMETERIZATION|SIMPLE|yes|  
-|QUOTED_IDENTIFIER|OFF|yes|  
+|ENCRYPTION|OFF|아니요|  
+|NUMERIC_ROUNDABORT|OFF|예|  
+|PAGE_VERIFY|CHECKSUM|예|  
+|PARAMETERIZATION|SIMPLE|예|  
+|QUOTED_IDENTIFIER|OFF|예|  
 |READ_COMMITTED_SNAPSHOT|OFF|예|  
-|RECOVERY|SIMPLE|yes|  
-|RECURSIVE_TRIGGERS|OFF|yes|  
-|Service Broker 옵션|DISABLE_BROKER|예|  
-|TRUSTWORTHY|OFF|yes|  
+|RECOVERY|SIMPLE|예|  
+|RECURSIVE_TRIGGERS|OFF|예|  
+|Service Broker 옵션|DISABLE_BROKER|아니요|  
+|TRUSTWORTHY|OFF|예|  
   
  이러한 데이터베이스 옵션에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)를 참조하세요.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62917046"
   
 -   데이터베이스 삭제  
   
--   데이터베이스에서 **guest** 사용자 삭제  
+-   데이터베이스에서 **게스트** 사용자를 삭제 합니다.  
   
 -   변경 데이터 캡처 설정  
   
@@ -136,7 +136,7 @@ ms.locfileid: "62917046"
   
  [sys.databases&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [sys.master_files&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
+ [sys.master_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
   
  [데이터베이스 파일 이동](move-database-files.md)  
   

@@ -11,17 +11,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f652519efc4b77bd785cdded468fe114f6499200
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891551"
 ---
 # <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>6단계: 조회 변환 추가 및 구성
   원본 파일에서 데이터를 추출하도록 플랫 파일 원본을 구성한 후에 다음 태스크에서는 **CurrencyKey** 및 **DateKey**값을 얻는 데 필요한 조회 변환을 정의합니다. 조회 변환에서는 지정한 입력 열의 데이터를 참조 데이터 세트의 열로 조인하여 조회를 수행합니다. 참조 데이터 세트는 기존 테이블, 기존 뷰, 새 테이블 또는 SQL 문의 결과일 수 있습니다. 이 자습서에서 조회 변환은 OLE DB 연결 관리자를 사용하여 참조 데이터 세트의 원본인 데이터가 포함된 데이터베이스에 연결합니다.  
   
 > [!NOTE]  
->  또한 참조 데이터 세트가 포함된 캐시에 연결되도록 조회 변환을 구성할 수도 있습니다. 자세한 내용은 [조회 변환](data-flow/transformations/lookup-transformation.md)을 참조 하세요.  
+>  또한 참조 데이터 세트가 포함된 캐시에 연결되도록 조회 변환을 구성할 수도 있습니다. 자세한 내용은 [Lookup Transformation](data-flow/transformations/lookup-transformation.md)을(를) 참조하세요.  
   
  이 자습서에서는 다음과 같은 두 가지 조회 변환 구성 요소를 패키지에 추가하고 구성하는 과정을 다룹니다.  
   
@@ -35,14 +35,11 @@ ms.locfileid: "62891551"
   
 1.  **SSIS 도구 상자**에서 **일반**을 확장 한 다음 **조회** 를 **데이터 흐름** 탭의 디자인 화면으로 끌어다 놓습니다. lookup을 **Extract Sample Currency 데이터** 원본 바로 아래에 배치 합니다.  
   
-2.  
-  **Extract Sample Currency Data** 플랫 파일 원본을 클릭하고 녹색 화살표를 새로 추가한 **조회** 변환으로 끌어다 놓아서 두 구성 요소를 연결합니다.  
+2.  **Extract Sample Currency Data** 플랫 파일 원본을 클릭하고 녹색 화살표를 새로 추가한 **조회** 변환으로 끌어다 놓아서 두 구성 요소를 연결합니다.  
   
-3.  
-  **데이터 흐름** 디자인 화면에서 **조회** 변환의 **조회** 를 클릭하고 이름을 **Lookup Currency Key**로 바꿉니다.  
+3.  **데이터 흐름** 디자인 화면에서 **조회** 변환의 **조회** 를 클릭하고 이름을 **Lookup Currency Key**로 바꿉니다.  
   
-4.  
-  **Lookup CurrencyKey** 변환을 두 번 클릭하여 조회 변환 편집기를 표시합니다.  
+4.  **Lookup CurrencyKey** 변환을 두 번 클릭하여 조회 변환 편집기를 표시합니다.  
   
 5.  **일반** 페이지에서 다음을 선택합니다.  
   
@@ -54,8 +51,7 @@ ms.locfileid: "62891551"
   
     1.  **OLE DB 연결 관리자** 상자에 **localhost.AdventureWorksDW2012** 가 표시되어 있는지 확인합니다.  
   
-    2.  
-  **SQL 쿼리 결과 사용**을 선택하고 다음 SQL 문을 입력하거나 복사합니다.  
+    2.  **SQL 쿼리 결과 사용**을 선택하고 다음 SQL 문을 입력하거나 복사합니다.  
   
         ```  
         select * from (select * from [dbo].[DimCurrency]) as refTable  
@@ -88,17 +84,13 @@ ms.locfileid: "62891551"
         [refTable].[CurrencyAlternateKey] = 'VEB'  
         ```  
   
-7.  
-  **열** 페이지에서 다음을 선택합니다.  
+7.  **열** 페이지에서 다음을 선택합니다.  
   
-    1.  
-  **사용 가능한 입력 열** 패널에서 **CurrencyID** 를 **사용 가능한 조회 열** 패널로 끌어다 **CurrencyAlternateKey**에 놓습니다.  
+    1.  **사용 가능한 입력 열** 패널에서 **CurrencyID** 를 **사용 가능한 조회 열** 패널로 끌어다 **CurrencyAlternateKey**에 놓습니다.  
   
-    2.  
-  **사용 가능한 조회 열** 목록에서 **CurrencyKey**왼쪽에 있는 확인란을 선택합니다.  
+    2.  **사용 가능한 조회 열** 목록에서 **CurrencyKey**왼쪽에 있는 확인란을 선택합니다.  
   
-8.  
-  **확인** 을 클릭하여 **데이터 흐름** 디자인 화면으로 돌아갑니다.  
+8.  **확인** 을 클릭하여 **데이터 흐름** 디자인 화면으로 돌아갑니다.  
   
 9. Lookup Currency Key 변환을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
@@ -106,47 +98,33 @@ ms.locfileid: "62891551"
   
 ### <a name="to-add-and-configure-the--lookup-datekey-transformation"></a>Lookup DateKey 변환을 추가하고 구성하려면  
   
-1.  
-  **SSIS 도구 상자**에서 **조회** 를 **데이터 흐름** 디자인 화면으로 끌어다 놓습니다. 조회를 **Lookup Currency Key** 변환 바로 아래에 배치합니다.  
+1.  **SSIS 도구 상자**에서 **조회** 를 **데이터 흐름** 디자인 화면으로 끌어다 놓습니다. 조회를 **Lookup Currency Key** 변환 바로 아래에 배치합니다.  
   
-2.  
-  **Lookup Currency Key** 변환을 클릭하고 녹색 화살표를 새로 추가한 **조회** 변환으로 끌어다 놓아서 두 구성 요소를 연결합니다.  
+2.  **Lookup Currency Key** 변환을 클릭하고 녹색 화살표를 새로 추가한 **조회** 변환으로 끌어다 놓아서 두 구성 요소를 연결합니다.  
   
-3.  
-  **입/출력 선택** 대화 상자에서 **출력** 목록 상자의 **조회 일치 항목 출력** 을 클릭한 다음 **확인**을 클릭합니다.  
+3.  **입/출력 선택** 대화 상자에서 **출력** 목록 상자의 **조회 일치 항목 출력** 을 클릭한 다음 **확인**을 클릭합니다.  
   
-4.  
-  **데이터 흐름** 디자인 화면에서 새로 추가한 **Lookup** 변환의 **조회** 를 클릭하고 이름을 **Lookup Date Key**로 바꿉니다.  
+4.  **데이터 흐름** 디자인 화면에서 새로 추가한 **Lookup** 변환의 **조회** 를 클릭하고 이름을 **Lookup Date Key**로 바꿉니다.  
   
-5.  
-  **Lookup Date Key** 변환을 두 번 클릭합니다.  
+5.  **Lookup Date Key** 변환을 두 번 클릭합니다.  
   
-6.  
-  **일반** 페이지에서 **부분 캐시**를 선택합니다.  
+6.  **일반** 페이지에서 **부분 캐시**를 선택합니다.  
   
-7.  
-  **연결** 페이지에서 다음을 선택합니다.  
+7.  **연결** 페이지에서 다음을 선택합니다.  
   
-    1.  
-  **OLEDB 연결 관리자** 대화 상자에서 **localhost.AdventureWorksDW2012** 가 표시되어 있는지 확인합니다.  
+    1.  **OLEDB 연결 관리자** 대화 상자에서 **localhost.AdventureWorksDW2012** 가 표시되어 있는지 확인합니다.  
   
-    2.  
-  **테이블 또는 뷰 사용** 상자에서 **[dbo].[DimDate]** 를 입력하거나 선택합니다.  
+    2.  **테이블 또는 뷰 사용** 상자에서 **[dbo].[DimDate]** 를 입력하거나 선택합니다.  
   
-8.  
-  **열** 페이지에서 다음을 선택합니다.  
+8.  **열** 페이지에서 다음을 선택합니다.  
   
-    1.  
-  **사용 가능한 입력 열** 패널에서 **CurrencyDate** 를 **사용 가능한 조회 열** 패널로 끌어다 **FullDateAlternateKey**에 놓습니다.  
+    1.  **사용 가능한 입력 열** 패널에서 **CurrencyDate** 를 **사용 가능한 조회 열** 패널로 끌어다 **FullDateAlternateKey**에 놓습니다.  
   
-    2.  
-  **사용 가능한 조회 열** 목록에서 **DateKey**왼쪽에 있는 확인란을 선택합니다.  
+    2.  **사용 가능한 조회 열** 목록에서 **DateKey**왼쪽에 있는 확인란을 선택합니다.  
   
-9. 
-  **고급** 페이지에서 캐싱 옵션을 검토합니다.  
+9. **고급** 페이지에서 캐싱 옵션을 검토합니다.  
   
-10. 
-  **확인** 을 클릭하여 **데이터 흐름** 디자인 화면으로 돌아갑니다.  
+10. **확인** 을 클릭하여 **데이터 흐름** 디자인 화면으로 돌아갑니다.  
   
 11. Lookup Date Key 변환을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   

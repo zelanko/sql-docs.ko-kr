@@ -17,17 +17,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1e65bb5c651862a82d78faede158234d20392c1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919691"
 ---
 # <a name="managing-clr-integration-assemblies"></a>CLR 통합 어셈블리 관리
   관리 코드는 컴파일한 다음 어셈블리라는 단위로 배포합니다. 어셈블리는 DLL이나 실행 파일(.exe)로 패키지됩니다. 실행 파일은 독립적으로 실행할 수 있는 반면 DLL은 기존 애플리케이션 내에서 호스팅해야 합니다. 관리 되는 DLL 어셈블리를에 로드 하 여 [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]호스팅할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]CREATE ASSEMBLY 문을 사용 하는 데이터베이스는 프로세스에서 로드 하 고 사용할 수 있습니다. ALTER ASSEMBLY 문을 사용하여 어셈블리를 최신 버전에서 업데이트하거나 DROP ASSEMBLY 문을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 제거할 수도 있습니다.  
   
- 어셈블리 정보는 어셈블리가 설치된 데이터베이스의 `sys.assembly_files` 테이블에 저장됩니다. 
-  `sys.assembly_files` 테이블에는 다음 열이 있습니다.  
+ 어셈블리 정보는 어셈블리가 설치된 데이터베이스의 `sys.assembly_files` 테이블에 저장됩니다. `sys.assembly_files` 테이블에는 다음 열이 있습니다.  
   
 |열|Description|  
 |------------|-----------------|  
@@ -38,16 +37,13 @@ ms.locfileid: "62919691"
   
 ## <a name="in-this-section"></a>섹션 내용  
  [어셈블리 만들기](creating-an-assembly.md)  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 SAFE, EXTERNAL_ACCESS 및 UNSAFE CLR 어셈블리를 만드는 방법에 대해 설명합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 SAFE, EXTERNAL_ACCESS 및 UNSAFE CLR 어셈블리를 만드는 방법에 대해 설명합니다.  
   
  [어셈블리 변경](altering-an-assembly.md)  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 CLR 어셈블리를 업데이트하는 방법에 대해 설명합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 CLR 어셈블리를 업데이트하는 방법에 대해 설명합니다.  
   
  [어셈블리 삭제](dropping-an-assembly.md)  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 CLR 어셈블리를 삭제하는 방법에 대해 설명합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 CLR 어셈블리를 삭제하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CLR 통합 보안](../security/clr-integration-security.md)   

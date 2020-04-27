@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d1cc7358a7058af9feb3f0540085ab140cfd8a7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889637"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>프로그래밍 방식으로 원격 패키지 로드 및 실행
@@ -29,16 +29,16 @@ ms.locfileid: "62889637"
   
  또는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]가 설치된 로컬 컴퓨터에서 원격 패키지를 실행할 수 있습니다. 자세한 내용은 [프로그래밍 방식으로 로컬 패키지 로드 및 실행](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)을 참조하세요.  
   
-##  <a name="top"></a> 원격 컴퓨터에서 원격 패키지 실행  
+##  <a name="running-a-remote-package-on-the-remote-computer"></a><a name="top"></a> 원격 컴퓨터에서 원격 패키지 실행  
  위에서 언급한 대로 원격 서버에서 원격 패키지를 실행하는 방법에는 여러 가지가 있습니다.  
   
 -   [SQL Server 에이전트를 사용하여 프로그래밍 방식으로 원격 패키지 실행](#agent)  
   
 -   [웹 서비스 또는 원격 구성 요소를 사용하여 프로그래밍 방식으로 원격 패키지 실행](#service)  
   
- 이 항목에서 설명하는 패키지 로드 및 저장 방법을 사용할 경우에는 대부분 `Microsoft.SqlServer.ManagedDTS` 어셈블리에 대한 참조가 필요합니다. 예외는 **sp_start_job** 저장 프로시저를 실행 하기 위해이 항목에서 설명 하는 ADO.NET 방법입니다 .이 방법에서는에 `System.Data`대 한 참조만 필요 합니다. 새 프로젝트에 `Microsoft.SqlServer.ManagedDTS` 어셈블리에 대한 참조를 추가한 후에는 <xref:Microsoft.SqlServer.Dts.Runtime> 또는 `using` 문을 사용하여 `Imports` 네임스페이스를 가져옵니다.  
+ 이 항목에서 설명하는 패키지 로드 및 저장 방법을 사용할 경우에는 대부분 `Microsoft.SqlServer.ManagedDTS` 어셈블리에 대한 참조가 필요합니다. 예외는 **sp_start_job** 저장 프로시저를 실행 하기 위해이 항목에서 설명 하는 ADO.NET 방법입니다 .이 방법에서는에 `System.Data`대 한 참조만 필요 합니다. 새 프로젝트에 `Microsoft.SqlServer.ManagedDTS` 어셈블리에 대한 참조를 추가한 후에는 `using` 또는 `Imports` 문을 사용하여 <xref:Microsoft.SqlServer.Dts.Runtime> 네임스페이스를 가져옵니다.  
   
-###  <a name="agent"></a> SQL Server 에이전트를 사용하여 서버에서 프로그래밍 방식으로 원격 패키지 실행  
+###  <a name="using-sql-server-agent-to-run-a-remote-package-programmatically-on-the-server"></a><a name="agent"></a> SQL Server 에이전트를 사용하여 서버에서 프로그래밍 방식으로 원격 패키지 실행  
  다음 코드 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 프로그래밍 방식으로 사용하여 서버에서 원격 패키지를 실행하는 방법을 보여 줍니다. 이 코드 샘플에서는 **에이전트 작업을 시작하는**sp_start_job[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 저장 프로시저를 호출합니다. 이 프로시저가 시작하는 작업의 이름은 `RunSSISPackage`이며 이 작업은 원격 컴퓨터에 있습니다. 그런 다음 `RunSSISPackage` 작업은 원격 컴퓨터에서 패키지를 실행합니다.  
   
 > [!NOTE]  
@@ -145,7 +145,7 @@ namespace LaunchSSISPackageAgent_CS
   
  
   
-###  <a name="service"></a> 웹 서비스 또는 원격 구성 요소를 사용하여 프로그래밍 방식으로 원격 패키지 실행  
+###  <a name="using-a-web-service-or-remote-component-to-run-a-remote-package-programmatically"></a><a name="service"></a> 웹 서비스 또는 원격 구성 요소를 사용하여 프로그래밍 방식으로 원격 패키지 실행  
  서버에서 프로그래밍 방식으로 패키지를 실행하기 위한 이전 솔루션의 경우 서버에서 사용자 지정 코드가 필요하지 않습니다. 그러나 SQL Server 에이전트를 사용하지 않고 패키지를 실행할 수 있는 솔루션이 필요한 경우가 있습니다. 다음 예에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 로컬로 시작하기 위해 서버에 만들 수 있는 웹 서비스와 클라이언트 컴퓨터에서 웹 서비스를 호출하는 데 사용할 수 있는 테스트 애플리케이션을 보여 줍니다. 웹 서비스 대신 원격 구성 요소를 만들려면 원격 구성 요소를 거의 변경하지 않는 동일한 코드 논리를 사용할 수 있습니다. 그러나 원격 구성 요소를 만들 경우에는 웹 서비스를 만들 때보다 더욱 광범위한 구성이 필요할 수 있습니다.  
   
 > [!IMPORTANT]  
@@ -422,7 +422,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 -   technet.microsoft.com의 비디오 - [방법: SQL Server 에이전트를 사용하여 SSIS 패키지 실행 자동화(SQL Server 비디오)](https://technet.microsoft.com/sqlserver/ff686764.aspx)  
   
-![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [로컬 실행과 원격 실행의 차이점 이해](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

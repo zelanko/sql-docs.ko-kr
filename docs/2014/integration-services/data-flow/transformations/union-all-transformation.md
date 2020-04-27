@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cfbe5ab3a255367922195594063a1734b8c66b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899876"
 ---
 # <a name="union-all-transformation"></a>UNION ALL 변환
@@ -41,8 +41,7 @@ ms.locfileid: "62899876"
 ## <a name="configuration-of-the-union-all-transformation"></a>UNION ALL 변환 구성  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- 
-  **UNION ALL 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [Union All Transformation Editor](../../union-all-transformation-editor.md)를 참조하십시오.  
+ **UNION ALL 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [Union All Transformation Editor](../../union-all-transformation-editor.md)를 참조하십시오.  
   
  프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용은 [Common Properties](../../common-properties.md)을 참조하십시오.  
   

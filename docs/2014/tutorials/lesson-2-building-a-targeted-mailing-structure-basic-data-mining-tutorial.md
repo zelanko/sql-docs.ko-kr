@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 42893ce0b921f47a86e6a52f3262786ca8b82bb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62931501"
 ---
 # <a name="lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial"></a>2 단원: 타겟 메일링 구조 구축 (기본 데이터 마이닝 자습서)
-  
   [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]의 마케팅 부서에서 특정 고객 대상의 메일 캠페인을 실시하여 판매를 증진하고자 합니다. 회사의 데이터베이스에는 이전 고객의 목록과 잠재적 새 고객 목록이 포함 되어 있습니다. 회사는 이전 고객의 특성을 조사 하 여 잠재 고객에 게 적용할 수 있는 패턴을 검색 하려고 합니다. 예를 들어 과거 추세를 사용 하 여 자전거 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]를 구매할 가능성이 높은 잠재 고객을 예측 하거나 이후 마케팅 캠페인을 위해 고객 세그먼트를 만들 수 있습니다.  
   
  이 단원에서는 **데이터 마이닝 마법사** 를 사용 하 여 타겟 메일링 구조를 만듭니다. 이 단원의 태스크를 마치면 단일 모델이 있는 마이닝 구조가 만들어집니다. 구조 만들기와 관련된 여러 단계와 중요한 개념이 있으므로 이 프로세스를 다음 3개의 태스크로 구분했습니다.  

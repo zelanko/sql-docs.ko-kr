@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c32441ebcf8804f712fad3061bbd380864db3426
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916302"
 ---
 # <a name="mssqlserver_10507"></a>MSSQLSERVER_10507
@@ -30,10 +30,7 @@ ms.locfileid: "62916302"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|PG_STMT_DOES_NOT_MATCH|  
-|메시지 텍스트|
-  \*
-  `@stmt`
-   및  또는 `@module_or_batch` 및 `@plan_handle`으로 지정된 문이 지정된 모듈 또는 일괄 처리 문과 일치하지 않아 계획 지침 '%.`@statement_start_offset`ls'을(를) 만들 수 없습니다. 모듈 또는 일괄 처리 문과 일치하도록 값을 수정하십시오.|  
+|메시지 텍스트|`@stmt` 및 `@module_or_batch` 또는 `@plan_handle` 및 `@statement_start_offset`으로 지정된 문이 지정된 모듈 또는 일괄 처리 문과 일치하지 않아 계획 지침 '%.\*ls'을(를) 만들 수 없습니다. 모듈 또는 일괄 처리 문과 일치하도록 값을 수정하십시오.|  
   
 ## <a name="explanation"></a>설명  
  지정한 모듈 또는 일괄 처리 문이 지정된 문 또는 문 오프셋 값과 일치하지 않습니다.  

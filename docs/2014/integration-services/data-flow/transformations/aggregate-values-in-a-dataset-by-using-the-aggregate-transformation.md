@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 10b14aa8a1f68b32c00ecb321c1af36fb15b868e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900956"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>집계 변환을 사용하여 데이터 세트의 값 집계
@@ -54,7 +54,7 @@ ms.locfileid: "62900956"
     > [!NOTE]  
     >  정확하게든 또는 대략적으로든 고유 값 수를 제공하면 변환을 통해 작업을 수행할 수 있도록 해당 메모리 양을 미리 할당할 수 있으므로 성능이 최적화됩니다.  
   
-12. 선택적으로 **고급** 을 클릭하여 집계 변환 출력의 이름을 업데이트합니다. 집계에 `Group By` 작업이 포함 된 경우 키 **배율** 열에서 키 값 그룹화의 대략적인 개수를 선택 하거나 키 열에서 정확 하 게 그룹화 된 키 값 수를 지정할 수 **** 있습니다.  
+12. 선택적으로 **고급** 을 클릭하여 집계 변환 출력의 이름을 업데이트합니다. 집계에 `Group By` 작업이 포함 된 경우 키 **배율** 열에서 키 값 그룹화의 대략적인 개수를 선택 하거나 키 열에서 정확 하 게 그룹화 된 키 값 수를 지정할 수 **Keys** 있습니다.  
   
     > [!NOTE]  
     >  정확하게든 또는 대략적으로든 고유 값 수를 제공하면 변환을 통해 작업을 수행할 수 있도록 해당 메모리 양을 미리 할당할 수 있으므로 성능이 최적화됩니다.  

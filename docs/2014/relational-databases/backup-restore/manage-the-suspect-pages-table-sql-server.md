@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922021"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>suspect_pages 테이블 관리(SQL Server)
@@ -30,9 +30,9 @@ ms.locfileid: "62922021"
   
  [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 에서 데이터 페이지를 읽으려고 할 때 다음 오류 중 하나가 발생하면 페이지가 "주의 대상"으로 간주됩니다.  
   
--   디스크 오류 (특정 하드웨어 오류)와 같이 운영 체제에서 실행 되는 CRC (순환 중복 검사)로 인해 발생 한 [823 오류](../errors-events/mssqlserver-823-database-engine-error.md) 입니다.  
+-   디스크 오류(특정 하드웨어 오류)와 같이 운영 체제에서 실행되는 CRC(순환 중복 검사)로 인해 발생하는 [823 오류](../errors-events/mssqlserver-823-database-engine-error.md)  
   
--   조각난 페이지 (논리적 오류)와 같은 [824 오류](../errors-events/mssqlserver-824-database-engine-error.md)  
+-   조각난 페이지(논리적 오류)와 같은 [824 오류](../errors-events/mssqlserver-824-database-engine-error.md)  
   
  모든 주의 대상 페이지의 페이지 ID는 **suspect_pages** 테이블에 기록됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 다음과 같은 정상적인 처리 중에 발생하는 모든 주의 대상 페이지를 기록합니다.  
   
@@ -58,9 +58,9 @@ ms.locfileid: "62922021"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   **suspect_pages 테이블에 기록되는 오류**  
   
@@ -115,12 +115,12 @@ ms.locfileid: "62922021"
   
      데이터베이스 관리자는 또한 레코드를 삽입하거나 업데이트할 수 있습니다. 예를 들어 데이터베이스 관리자가 특정 주의 대상 페이지가 존재함을 알고 있지만 잠시 동안 해당 레코드를 보존하려는 경우 행 업데이트가 유용할 수 있습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  **msdb** 에 대한 액세스 권한이 있는 사용자는 **suspect_pages** 테이블의 데이터를 읽을 수 있습니다. suspect_pages 테이블에 대한 UPDATE 권한이 있는 사용자는 레코드를 업데이트할 수 있습니다. **msdb** 의 **db_owner** 고정 데이터베이스 역할 또는 **sysadmin** 고정 서버 역할의 멤버는 레코드를 삽입, 업데이트 및 삭제할 수 있습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-manage-the-suspect_pages-table"></a>suspect_pages 테이블을 관리하려면  
   
@@ -132,7 +132,7 @@ ms.locfileid: "62922021"
   
 4.  쿼리 창에서 원하는 행을 편집, 업데이트 또는 삭제합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-manage-the-suspect_pages-table"></a>suspect_pages 테이블을 관리하려면  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ccc7b96f4275b09b90b8120813b93f860ec07b9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871061"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>데이터베이스의 호환성 수준 보기 또는 변경
@@ -36,14 +36,14 @@ ms.locfileid: "62871061"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-view-or-change-the-compatibility-level-of-a-database"></a>데이터베이스의 호환성 수준을 보거나 변경하려면  
   
@@ -59,10 +59,9 @@ ms.locfileid: "62871061"
   
      현재 호환성 수준이 **호환성 수준** 목록 상자에 표시됩니다.  
   
-5.  호환성 수준을 변경하려면 목록에서 다른 옵션을 선택합니다. 
-  **SQL Server 2008(100)**, **SQL Server 2012(110)** 또는 **SQL Server 2014(120)** 중에서 선택할 수 있습니다.  
+5.  호환성 수준을 변경하려면 목록에서 다른 옵션을 선택합니다. **SQL Server 2008(100)**, **SQL Server 2012(110)** 또는 **SQL Server 2014(120)** 중에서 선택할 수 있습니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-view-the-compatibility-level-of-a-database"></a>데이터베이스의 호환성 수준을 보려면  
   

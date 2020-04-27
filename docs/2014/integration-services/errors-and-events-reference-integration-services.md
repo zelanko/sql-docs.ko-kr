@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71efd530222ce548bb867b9e886b1891d5aedb05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899451"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>오류 및 이벤트 참조(Integration Services)
@@ -28,8 +28,7 @@ ms.locfileid: "62899451"
  가장 흔히 발생하는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 목록 및 해당 오류에 대한 설명을 비롯하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 메시지에 대한 자세한 내용은 [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)를 참조하세요. 그러나 현재 목록에는 문제 해결 정보가 포함되어 있지 않습니다.  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 작업할 때 볼 수 있는 오류 메시지 중 상당수가 다른 구성 요소의 메시지입니다. 여기에는 OLE DB Provider, 다른 데이터베이스 구성 요소(예: [!INCLUDE[ssDE](../includes/ssde-md.md)] 및 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ) 또는 다른 서비스나 구성 요소(예: 파일 시스템, SMTP 서버 또는 Microsoft Message Queueing)가 포함됩니다. 이러한 외부 오류 메시지에 대한 자세한 내용은 해당 구성 요소의 설명서를 참조하십시오.  
+>  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 작업할 때 볼 수 있는 오류 메시지 중 상당수가 다른 구성 요소의 메시지입니다. 여기에는 OLE DB Provider, 다른 데이터베이스 구성 요소(예: [!INCLUDE[ssDE](../includes/ssde-md.md)] 및 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ) 또는 다른 서비스나 구성 요소(예: 파일 시스템, SMTP 서버 또는 Microsoft Message Queueing)가 포함됩니다. 이러한 외부 오류 메시지에 대한 자세한 내용은 해당 구성 요소의 설명서를 참조하십시오.  
   
 ## <a name="error-messages"></a>오류 메시지  
   
@@ -39,13 +38,11 @@ ms.locfileid: "62899451"
 |DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|지정한 연결이 실패하여 패키지를 실행할 수 없음을 나타냅니다.|  
 |DTS_E_CANNOTCONVERTBETWEENUNICODEANDNONUNICODESTRINGCOLUMN|데이터 흐름 구성 요소가 해당 열에 비유니코드 문자열 데이터를 필요로 하는 다른 구성 요소에 유니코드 문자열 데이터를 전달하거나 그 반대 작업을 시도하고 있음을 나타냅니다.|  
 |DTS_E_CANNOTCONVERTBETWEENUNICODEANDNONUNICODESTRINGCOLUMNS|데이터 흐름 구성 요소가 해당 열에 비유니코드 문자열 데이터를 필요로 하는 다른 구성 요소에 유니코드 문자열 데이터를 전달하거나 그 반대 작업을 시도하고 있음을 나타냅니다.|  
-|DTS_E_CANTINSERTCOLUMNTYPE|
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 열 데이터 형식과 데이터베이스 열 데이터 형식 간의 변환이 지원되지 않으므로 데이터베이스 테이블에 열을 추가할 수 없음을 나타냅니다.|  
+|DTS_E_CANTINSERTCOLUMNTYPE|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 열 데이터 형식과 데이터베이스 열 데이터 형식 간의 변환이 지원되지 않으므로 데이터베이스 테이블에 열을 추가할 수 없음을 나타냅니다.|  
 |DTS_E_CONNECTIONNOTFOUND|지정한 연결 관리자를 찾을 수 없어서 패키지를 실행할 수 없음을 나타냅니다.|  
-|DTS_E_CONNECTIONREQUIREDFORMETADATA|
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 원본이나 대상에 대한 새 메타데이터 또는 업데이트된 메타데이터를 검색하기 위해 데이터 원본에 연결해야 하지만 해당 데이터 원본에 연결할 수 없음을 나타냅니다.|  
+|DTS_E_CONNECTIONREQUIREDFORMETADATA|[!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 원본이나 대상에 대한 새 메타데이터 또는 업데이트된 메타데이터를 검색하기 위해 데이터 원본에 연결해야 하지만 해당 데이터 원본에 연결할 수 없음을 나타냅니다.|  
 |DTS_E_MULTIPLECACHEWRITES|캐시 변환이 메모리 내 캐시에 데이터를 쓰려고 하고 있기 때문에 패키지를 실행할 수 없음을 나타냅니다. 그러나 다른 캐시 변환이 메모리 내 캐시에 데이터를 이미 썼습니다.|  
-|DTS_E_PRODUCTLEVELTOLOW|적절 한 버전이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 설치 되어 있지 않으므로 패키지를 실행할 수 없음을 나타냅니다.|  
+|DTS_E_PRODUCTLEVELTOLOW|적절한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 버전이 설치되어 있지 않으므로 패키지를 실행할 수 없음을 나타냅니다.|  
 |DTS_E_READNOTFILLEDCACHE|캐시 변환이 메모리 내 캐시에 데이터를 쓰는 동안 조회 변환이 메모리 내 캐시에서 데이터를 읽으려고 하고 있음을 나타냅니다.|  
 |DTS_E_UNPROTECTXMLFAILED|시스템에서 보호된 XML 노드를 해독하지 않았음을 나타냅니다.|  
 |DTS_E_WRITEWHILECACHEINUSE|조회 변환이 메모리 내 캐시에서 데이터를 읽는 동안 캐시 변환이 메모리 내 캐시에 데이터를 쓰려고 하고 있음을 나타냅니다.|  

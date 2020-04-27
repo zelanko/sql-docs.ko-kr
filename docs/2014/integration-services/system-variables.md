@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62927232"
 ---
 # <a name="system-variables"></a>시스템 변수
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 실행 중인 패키지 및 해당 개체에 대 한 정보를 저장 하는 시스템 변수 집합을 제공 합니다. 이러한 변수를 식 및 속성 식에서 사용하여 패키지, 컨테이너, 태스크 및 이벤트 처리기를 사용자 지정할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 런타임 패키지 및 해당 개체에 대한 정보가 저장되는 일련의 시스템 변수를 제공합니다. 이러한 변수를 식 및 속성 식에서 사용하여 패키지, 컨테이너, 태스크 및 이벤트 처리기를 사용자 지정할 수 있습니다.  
   
  SQL 실행 태스크에서 변수를 매개 변수에 매핑하는 데 사용되는 매개 변수 바인딩에 시스템 변수와 사용자 정의 변수를 포함한 모든 변수를 사용할 수 있습니다.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62927232"
   
 |시스템 변수|데이터 형식|Description|  
 |---------------------|---------------|-----------------|  
-|**맞지**|Int32|태스크 실행을 중지해야 함을 나타내기 위해 태스크가 표시할 수 있는 Windows 이벤트 개체에 대한 핸들입니다.|  
+|**CancelEvent**|Int32|태스크 실행을 중지해야 함을 나타내기 위해 태스크가 표시할 수 있는 Windows 이벤트 개체에 대한 핸들입니다.|  
 |`ContainerStartTime`|DateTime|컨테이너의 시작 시간입니다.|  
 |**CreationDate**|DateTime|패키지를 만든 날짜입니다.|  
 |`CreatorComputerName`|String|패키지를 만든 컴퓨터입니다.|  
@@ -41,18 +41,16 @@ ms.locfileid: "62927232"
 |`ExecutionInstanceGUID`|String|실행 중인 패키지의 고유 식별자입니다.|  
 |`FailedConfigurations`|String|실패한 패키지 구성 이름입니다.|  
 |`IgnoreConfigurationsOnLoad`|부울|패키지를 로드할 때 패키지 구성을 무시할지 여부를 지정합니다.|  
-|**InteractiveMode**|부울|패키지가 대화형 모드에서 실행 중인지 여부를 나타냅니다. 
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 패키지를 실행 중인 경우 이 속성은 `True`로 설정됩니다. **DTExec** 명령 프롬프트 유틸리티를 사용 하 여 패키지를 실행 하는 경우 속성이로 `False`설정 됩니다.|  
+|**InteractiveMode**|부울|패키지가 대화형 모드에서 실행 중인지 여부를 나타냅니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 패키지를 실행 중인 경우 이 속성은 `True`로 설정됩니다. **DTExec** 명령 프롬프트 유틸리티를 사용 하 여 패키지를 실행 하는 경우 속성이로 `False`설정 됩니다.|  
 |`LocaleId`|Int32|패키지에서 사용되는 로캘입니다.|  
 |**MachineName**|String|패키지가 실행 중인 컴퓨터 이름입니다.|  
 |**OfflineMode**|부울|패키지가 오프라인 모드인지 여부를 나타냅니다. 오프라인 모드에서는 데이터 원본에 연결하지 않습니다.|  
 |**PackageID**|String|패키지의 고유 식별자입니다.|  
 |**PackageName**|String|패키지의 이름입니다.|  
 |**StartTime**|DateTime|패키지 실행을 시작한 시간입니다.|  
-|`ServerExecutionID`|Int64|
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에서 실행되는 패키지의 실행 ID입니다.<br /><br /> 기본값은 영입니다. 이 값은 패키지가 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에서 ISServerExec에 의해 실행되는 경우에만 변경됩니다. 자식 패키지가 있으면 값이 부모 패키지에서 자식 패키지로 전달됩니다.|  
+|`ServerExecutionID`|Int64|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에서 실행되는 패키지의 실행 ID입니다.<br /><br /> 기본값은 영입니다. 이 값은 패키지가 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에서 ISServerExec에 의해 실행되는 경우에만 변경됩니다. 자식 패키지가 있으면 값이 부모 패키지에서 자식 패키지로 전달됩니다.|  
 |**이름**|String|패키지를 시작한 사용자의 계정입니다. 사용자 이름은 도메인 이름에 의해 한정됩니다.|  
-|**VersionBuild**|Int32|패키지 버전입니다.|  
+|**Versionbuild 속성이**|Int32|패키지 버전입니다.|  
 |**VersionComment**|String|패키지 버전에 대한 설명입니다.|  
 |**VersionGUID**|String|버전의 고유 식별자입니다.|  
 |**VersionMajor**|Int32|패키지의 주 버전입니다.|  
@@ -61,14 +59,14 @@ ms.locfileid: "62927232"
 ## <a name="system-variables-for-containers"></a>컨테이너의 시스템 변수  
  다음 표에서는 For 루프, Foreach 루프 및 시퀀스 컨테이너에 대해 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 제공하는 시스템 변수에 대해 설명합니다.  
   
-|시스템 변수|데이터 형식|Description|컨테이너|  
+|시스템 변수|데이터 형식|설명|컨테이너|  
 |---------------------|---------------|-----------------|---------------|  
 |`LocaleId`|Int32|컨테이너에서 사용되는 로캘입니다.|For 루프 컨테이너<br /><br /> Foreach 루프 컨테이너<br /><br /> 시퀀스 컨테이너|  
   
 ## <a name="system-variables-for-tasks"></a>태스크의 시스템 변수  
  다음 표에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 태스크에 대해 제공하는 시스템 변수에 대해 설명합니다.  
   
-|시스템 변수|데이터 형식|Description|  
+|시스템 변수|데이터 형식|설명|  
 |---------------------|---------------|-----------------|  
 |**CreationName**|String|작업의 이름입니다.|  
 |`LocaleId`|Int32|태스크에서 사용되는 로캘입니다.|  
@@ -79,7 +77,7 @@ ms.locfileid: "62927232"
 ## <a name="system-variables-for-event-handlers"></a>이벤트 처리기의 시스템 변수  
  다음 표에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 이벤트 처리기에 대해 제공하는 시스템 변수에 대해 설명합니다. 일부 변수는 특정 이벤트 처리기에서만 사용할 수 있습니다.  
   
-|시스템 변수|데이터 형식|Description|이벤트 처리기|  
+|시스템 변수|데이터 형식|설명|이벤트 처리기|  
 |---------------------|---------------|-----------------|-------------------|  
 |**취소**|부울|오류, 경고 또는 쿼리 취소가 발생할 때 이벤트 처리기 실행이 중지되는지 여부를 나타냅니다.|OnError 이벤트 처리기<br /><br /> OnWarning 이벤트 처리기<br /><br /> OnQueryCancel 이벤트 처리기|  
 |**ErrorCode**|Int32|오류 식별자입니다.|OnError 이벤트 처리기<br /><br /> OnInformation 이벤트 처리기<br /><br /> OnWarning 이벤트 처리기|  
@@ -87,7 +85,7 @@ ms.locfileid: "62927232"
 |**ExecutionStatus**|부울|현재 실행 상태입니다.|OnExecStatusChanged 이벤트 처리기|  
 |`ExecutionValue`|DBNull|실행 값입니다.|OnTaskFailed 이벤트 처리기|  
 |`LocaleId`|Int32|이벤트 처리기에서 사용되는 로캘입니다.|모든 이벤트 처리기|  
-|**PercentComplete**|Int32|완료된 작업의 백분율입니다.|OnProgress 이벤트 처리기|  
+|**되었고**|Int32|완료된 작업의 백분율입니다.|OnProgress 이벤트 처리기|  
 |**ProgressCountHigh**|Int32|OnProgress 이벤트에 의해 처리된 전체 작업 개수를 나타내는 64비트 값의 상위 부분입니다.|OnProgress 이벤트 처리기|  
 |`ProgressCountLow`|Int32|OnProgress 이벤트에 의해 처리된 전체 작업 개수를 나타내는 64비트 값의 하위 부분입니다.|OnProgress 이벤트 처리기|  
 |**ProgressDescription**|String|진행률에 대한 설명입니다.|OnProgress 이벤트 처리기|  

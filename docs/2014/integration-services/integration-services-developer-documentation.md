@@ -19,25 +19,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3fc7c93f8e499fb063e0d01c9132606f3ddfa3f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892417"
 ---
 # <a name="developer39s-guide-integration-services"></a>개발자&#39;s 가이드 (Integration Services)
-  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 완전히 다시 작성된 개체 모델이 포함되어 있으며 이러한 개체 모델은 패키지 확장 및 프로그래밍을 보다 쉽고 유연하고 강력하게 해 주는 다양한 기능을 갖도록 향상되었습니다. 개발자는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지의 거의 모든 측면을 확장하고 프로그래밍할 수 있습니다.  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개발자가 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로그래밍에 사용할 수 있는 기본적인 방법은 다음 두 가지가 있습니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개발자가 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로그래밍에 사용할 수 있는 기본적인 방법은 다음 두 가지가 있습니다.  
   
 -   패키지에 사용자 지정 기능을 제공하기 위해 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너 내에서 사용할 수 있게 되는 구성 요소를 작성하여 패키지를 확장할 수 있습니다.  
   
 -   개발자 고유의 애플리케이션에서 프로그래밍 방식으로 패키지를 만들고 구성하고 실행할 수 있습니다.  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 기본 제공 구성 요소가 개발자의 요구 사항을 충족시키지 못할 경우 개발자 고유의 확장을 코딩하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 기능을 확장할 수 있습니다. 이 경우 다음 중 하나를 선택할 수 있습니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 기본 제공 구성 요소가 개발자의 요구 사항을 충족시키지 못할 경우 개발자 고유의 확장을 코딩하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 기능을 확장할 수 있습니다. 이 경우 다음 중 하나를 선택할 수 있습니다.  
   
 -   단일 패키지에서 임시로 사용하려는 경우 스크립트 태스크에 코드를 작성하여 사용자 지정 태스크를 만들거나, 스크립트 구성 요소에 코드를 작성하여 사용자 지정 데이터 흐름 구성 요소를 만들 수 있습니다. 스크립트 구성 요소는 원본, 변환 또는 대상으로 구성할 수 있습니다. 이러한 강력한 래퍼는 인프라 코드를 자동으로 작성하므로 개발자가 사용자 지정 기능을 개발하는 데만 집중할 수 있게 해 주지만 다른 항목에서 쉽게 재사용할 수는 없습니다.  
   
@@ -55,8 +52,7 @@ ms.locfileid: "62892417"
   
 ## <a name="in-this-section"></a>섹션 내용  
  [Integration Services 프로그래밍 개요](integration-services-programming-overview.md)  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개발 과정에서 제어 흐름과 데이터 흐름이 하는 역할을 설명합니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개발 과정에서 제어 흐름과 데이터 흐름이 하는 역할을 설명합니다.  
   
  [동기 및 비동기 변환 이해](understanding-synchronous-and-asynchronous-transformations.md)  
  동기 출력과 비동기 출력 간의 중요한 차이를 설명하고 데이터 흐름에서 이러한 출력을 사용하는 구성 요소에 대해 설명합니다.  
@@ -82,12 +78,11 @@ ms.locfileid: "62892417"
   
 ## <a name="related-sections"></a>관련 섹션  
  [패키지 배포 문제 해결 도구](troubleshooting/troubleshooting-tools-for-package-development.md)  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 개발 과정의 패키지 문제 해결을 위해 제공하는 기능 및 도구에 대해 설명합니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 개발 과정의 패키지 문제 해결을 위해 제공하는 기능 및 도구에 대해 설명합니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
   
--   [www.codeplex.com/MSFTISProdSamples](www.codeplex.com/MSFTISProdSamples) 의 CodePlex 예제 - [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkID=131204)  
+-   www.codeplex.com/MSFTISProdSamples 의 CodePlex 예제 - [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkID=131204)  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Integration Services](sql-server-integration-services.md)  

@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af647a446366ea03063ea0deb84603a3f8f90dd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62896131"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>사용자 지정 태스크에서 이벤트 발생 및 정의
@@ -37,7 +37,7 @@ ms.locfileid: "62896131"
  <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 인터페이스에 정의되며 태스크 대신 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>에서 발생시키는 다른 이벤트 집합도 있습니다. <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>에서는 유효성 검사 및 실행 전후에 이벤트를 발생시키는 반면 태스크에서는 실행 및 유효성 검사 도중에 이벤트를 발생시킵니다.  
   
 ## <a name="creating-custom-events"></a>사용자 지정 이벤트 만들기  
- 사용자 지정 태스크 개발자는 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> 메서드의 재정의된 구현에서 새 <xref:Microsoft.SqlServer.Dts.Runtime.Task.InitializeTask%2A>를 만들어 새 사용자 지정 이벤트를 정의할 수 있습니다. 만들어진 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo>는 `EventInfos` 메서드를 사용하여 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> 컬렉션에 추가합니다. <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> 메서드의 서명은 다음과 같습니다.  
+ 사용자 지정 태스크 개발자는 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> 메서드의 재정의된 구현에서 새 <xref:Microsoft.SqlServer.Dts.Runtime.Task.InitializeTask%2A>를 만들어 새 사용자 지정 이벤트를 정의할 수 있습니다. 만들어진 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo>는 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> 메서드를 사용하여 `EventInfos` 컬렉션에 추가합니다. <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> 메서드의 서명은 다음과 같습니다.  
   
  `public void Add(string eventName, string description, bool allowEventHandlers, string[] parameterNames, TypeCode[] parameterTypes, string[] parameterDescriptions);`  
   
@@ -117,7 +117,7 @@ Nothing,  bFireOnBeforeIncrement)
 ```  
   
 ## <a name="sample"></a>샘플  
- 다음 예에서는 `InitializeTask` 메서드에서 사용자 지정 이벤트를 정의하고 이 사용자 지정 이벤트를 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> 컬렉션에 추가한 다음 `Execute` 메서드를 호출하여 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A> 메서드 실행 중 사용자 지정 이벤트를 발생시키는 태스크를 보여 줍니다.  
+ 다음 예에서는 `InitializeTask` 메서드에서 사용자 지정 이벤트를 정의하고 이 사용자 지정 이벤트를 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> 컬렉션에 추가한 다음 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A> 메서드를 호출하여 `Execute` 메서드 실행 중 사용자 지정 이벤트를 발생시키는 태스크를 보여 줍니다.  
   
 ```csharp  
 [DtsTask(DisplayName = "CustomEventTask")]  
@@ -189,10 +189,10 @@ Nothing,  bFireOnBeforeIncrement)
     End Class  
 ```  
   
-![Integration Services 아이콘 (작은 아이콘)](../../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
+![Integration Services 아이콘 (작은 아이콘)](../../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Integration Services&#40;SSIS&#41; 이벤트 처리기](../../integration-services-ssis-event-handlers.md)   
+ [Integration Services &#40;SSIS&#41; 이벤트 처리기](../../integration-services-ssis-event-handlers.md)   
  [패키지에 이벤트 처리기 추가](../../add-an-event-handler-to-a-package.md)  
   
   

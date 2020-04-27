@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 31b22b1dce53bb82f85ae946290024408d2facd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874475"
 ---
 # <a name="requirements-for-clr-user-defined-aggregates"></a>CLR 사용자 정의 집계 요구 사항
@@ -36,10 +36,9 @@ ms.locfileid: "62874475"
 ## <a name="aggregation-methods"></a>집계 메서드  
  사용자 정의 집계로 등록된 클래스는 다음과 같은 인스턴스 메서드를 지원해야 합니다. 쿼리 프로세서는 이러한 메서드를 사용하여 집계를 컴퓨팅합니다.  
   
-|방법|구문|Description|  
+|메서드|구문|Description|  
 |------------|------------|-----------------|  
-|`Init`|public void Init ();|쿼리 프로세서는 이 메서드를 사용하여 집계 계산을 초기화합니다. 이 메서드는 쿼리 프로세서가 집계하는 각 그룹에 대해 한 번씩 호출됩니다. 쿼리 프로세서는 여러 그룹의 집계를 계산할 때 집계 클래스의 동일한 인스턴스를 다시 사용할 수 있습니다. 
-  `Init` 메서드는 이전에 인스턴스를 사용할 때 필요했던 모든 정리를 수행하고 인스턴스를 사용하여 새 집계 계산을 다시 시작할 수 있도록 만들어야 합니다.|  
+|`Init`|public void Init ();|쿼리 프로세서는 이 메서드를 사용하여 집계 계산을 초기화합니다. 이 메서드는 쿼리 프로세서가 집계하는 각 그룹에 대해 한 번씩 호출됩니다. 쿼리 프로세서는 여러 그룹의 집계를 계산할 때 집계 클래스의 동일한 인스턴스를 다시 사용할 수 있습니다. `Init` 메서드는 이전에 인스턴스를 사용할 때 필요했던 모든 정리를 수행하고 인스턴스를 사용하여 새 집계 계산을 다시 시작할 수 있도록 만들어야 합니다.|  
 |`Accumulate`|public void 누적 (입력 형식 값 [, 입력-형식 값, ...]);|함수의 매개 변수를 나타내는 1개 이상의 매개 변수. *input_type* 은 `CREATE AGGREGATE` 문에서 *input_sqltype* 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지정 된 네이티브 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 해당 하는 관리 되는 데이터 형식 이어야 합니다. 자세한 내용은 [CLR 매개 변수 데이터 매핑](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)을 참조 하세요.<br /><br /> UDT(사용자 정의 형식)의 경우 input-type이 UDT 형식과 동일합니다. 쿼리 프로세서는 이 메서드를 사용하여 집계 값을 누적시킵니다. 이 메서드는 집계되는 그룹의 각 값에 대해 한 번씩 호출됩니다. 쿼리 프로세서는 항상 집계 클래스의 지정된 인스턴스에서 `Init` 메서드를 호출한 후에만 이 메서드를 호출합니다. 이 메서드 구현은 전달되는 인수 값의 누적을 반영하도록 인스턴스 상태를 업데이트해야 합니다.|  
 |`Merge`|public void Merge (udagg_class 값);|이 메서드를 사용하여 이 집계 클래스의 다른 인스턴스를 현재 인스턴스와 병합할 수 있습니다. 쿼리 프로세서는 이 메서드를 사용하여 집계의 다중 부분 계산을 병합합니다.|  
 |`Terminate`|public return_type Terminate ();|이 메서드는 집계 계산을 완료하고 집계 결과를 반환합니다. *Return_type* 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `CREATE AGGREGATE` 문에 지정 된 *return_sqltype* 에 해당 하는 관리 되는 데이터 형식 이어야 합니다. *Return_type* 은 사용자 정의 형식일 수도 있습니다.|  
@@ -51,8 +50,7 @@ ms.locfileid: "62874475"
   
 |업데이트된 내용|  
 |---------------------|  
-|
-  `Accumulate` 메서드의 설명이 업데이트되어 이제 2개 이상의 매개 변수를 사용합니다.|  
+|`Accumulate` 메서드의 설명이 업데이트되어 이제 2개 이상의 매개 변수를 사용합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [CLR 사용자 정의 형식](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   

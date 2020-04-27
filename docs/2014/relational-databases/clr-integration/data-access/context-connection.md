@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f6334964a58e643ad373aa8fb0599f39bd3ba01c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919226"
 ---
 # <a name="context-connection"></a>컨텍스트 연결
@@ -51,7 +51,7 @@ End Using
 ```  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [일반 연결과 컨텍스트 연결 비교](context-connections-vs-regular-connections.md)  
+ [일반 연결 및 컨텍스트 연결](context-connections-vs-regular-connections.md)  
  일반 연결과 컨텍스트 연결의 차이를 설명합니다.  
   
  [일반 연결 및 컨텍스트 연결에 대한 제한 사항](context-connections-and-regular-connections-restrictions.md)  

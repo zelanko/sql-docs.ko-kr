@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dd935387e8d6e4a95a25d21eb5d5d229f9599bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62895492"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>스크립트 구성 요소를 사용하여 오류 출력 향상
@@ -43,11 +43,9 @@ ms.locfileid: "62895492"
   
 3.  업스트림 구성 요소의 오류 출력을 새 스크립트 구성 요소에 연결합니다.  
   
-4.  
-  **스크립트 변환 편집기**를 열고 **스크립트** 페이지의 **ScriptLanguage** 속성에서 스크립트 언어를 선택합니다.  
+4.  **스크립트 변환 편집기**를 열고 **스크립트** 페이지의 **ScriptLanguage** 속성에서 스크립트 언어를 선택합니다.  
   
-5.  
-  **스크립트 편집**을 클릭하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] VSTA(Tools for Applications) IDE를 열고 아래에 표시된 샘플 코드를 추가합니다.  
+5.  **스크립트 편집**을 클릭하여  VSTA([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) IDE를 열고 아래에 표시된 샘플 코드를 추가합니다.  
   
 6.  VSTA를 닫습니다.  
   
@@ -55,8 +53,7 @@ ms.locfileid: "62895492"
   
 8.  **입/출력** 페이지에서 `String` **ErrorDescription**이라는 형식의 새 출력 열을 추가 합니다. 긴 메시지를 지원할 수 있도록 새 열의 기본 길이를 255로 늘립니다.  
   
-9. 
-  **스크립트 변환 편집기**를 닫습니다.  
+9. **스크립트 변환 편집기**를 닫습니다.  
   
 10. 스크립트 구성 요소의 출력을 적절한 대상에 연결합니다. 임시 테스트용으로 구성하는 데는 플랫 파일 대상이 가장 쉽습니다.  
   
@@ -88,7 +85,7 @@ public class ScriptMain:
   
 ```  
   
-![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 오류 처리](../data-flow/error-handling-in-data.md)   

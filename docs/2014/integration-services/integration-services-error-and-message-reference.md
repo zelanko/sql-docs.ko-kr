@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892661"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 오류 및 메시지 참조
@@ -43,9 +43,8 @@ ms.locfileid: "62892661"
   
 -   [데이터 흐름 구성 요소 오류 메시지(DTSBC_E_*)](#msgPipeline)  
   
-##  <a name="msgError"></a> 오류 메시지  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 메시지의 심볼 이름은 `DTS_E_`로 시작합니다.  
+##  <a name="error-messages"></a><a name="msgError"></a> 오류 메시지  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 메시지의 심볼 이름은 `DTS_E_`로 시작합니다.  
   
 |16진수 코드|10진수 코드|심볼 이름|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -1114,7 +1113,7 @@ ms.locfileid: "62892661"
 |0xC00470F4|-1073450764|DTS_E_EXPREVALINVALIDNULLSCALE|값 %1!d!이(가) 유효한 액세스 모드로 인식되지 벗어났습니다. 소수 자릿수는 %3!d!에서 %4!d! 사이의 범위 내에 있어야 합니다. 소수 자릿수는 전체 자릿수를 초과할 수 없으며 음수가 아니어야 합니다.|  
 |0xC00470F5|-1073450763|DTS_E_EXPREVALINVALIDNULLLENGTH|값 %1!d!이(가) 유효한 액세스 모드로 인식되지 잘못되었습니다. 길이는 양수여야 합니다.|  
 |0xC00470F6|-1073450762|DTS_E_NEGATIVESNOTALLOWED|%1에 음수 값을 할당할 수 없습니다.|  
-|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|"%2"에 대한 "%1" 사용자 지정 속성을 true로 설정할 수 없습니다.  열 데이터 형식은  DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2 또는 DT_FILETIME 중 하나여야 합니다.|  
+|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|"%2"에 대한 "%1" 사용자 지정 속성을 true로 설정할 수 없습니다.  열 데이터 형식은 DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2 또는 DT_FILETIME 중 하나여야 합니다.|  
 |0xC00470F8|-1073450760|DTS_E_CANNOTREATTACHPATH|"%1"을(를) 다시 연결할 수 없습니다. 경로를 삭제하고 새로 추가한 다음 연결하십시오.|  
 |0xC00470F9|-1073450759|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSPLURALSINGULAR|함수 "%1"에는 %3!d!개의 매개 변수가 아니라 %2!d!개의 매개 변수가 필요합니다. 함수 이름이 인식되었지만 매개 변수 수가 잘못되었습니다.|  
 |0xC00470FA|-1073450758|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSSINGULARPLURAL|함수 "%1"에는 %3!d!개의 매개 변수가 아니라 %2!d!개의 매개 변수가 필요합니다. 함수 이름이 인식되었지만 매개 변수 수가 잘못되었습니다.|  
@@ -2018,9 +2017,8 @@ ms.locfileid: "62892661"
 |||DTS_E_GETCATMANAGERFAILED|0x%1!8.8X! "%2!s!" 오류로 인해 COM 구성 요소 범주 관리자를 만들지 못했습니다.|  
 |||DTS_E_COMPONENTINITFAILED|0x%2!8.8X! " %3!s!" 오류로 인해 %1!s! 구성 요소를 초기화하지 반환되었습니다|  
   
-##  <a name="msgWarning"></a> 경고 메시지  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 경고 메시지의 심볼 이름은 `DTS_W_`로 시작합니다.  
+##  <a name="warning-messages"></a><a name="msgWarning"></a> 경고 메시지  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 경고 메시지의 심볼 이름은 `DTS_W_`로 시작합니다.  
   
 |16진수 코드|10진수 코드|심볼 이름|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2165,9 +2163,8 @@ ms.locfileid: "62892661"
 |0xC020822C|-1071611348|DTS_W_UNMAPPEDOUTPUTCOLUMN|매핑되는 입력 열이 %1에 없습니다.|  
 |0x930D|37645|DTS_W_EXTERNALTABLECOLSOUTOFSYNC|테이블 "%1"이(가) 변경되었습니다. 이 테이블에 새 열이 추가되었을 수 있습니다.|  
   
-##  <a name="msgInfo"></a> 정보 메시지  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 정보 메시지의 심볼 이름은 `DTS_I_`로 시작합니다.  
+##  <a name="informational-messages"></a><a name="msgInfo"></a> 정보 메시지  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 정보 메시지의 심볼 이름은 `DTS_I_`로 시작합니다.  
   
 |16진수 코드|10진수 코드|심볼 이름|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2265,9 +2262,8 @@ ms.locfileid: "62892661"
 |0x40209317|1075876631|DTS_I_CACHEFILEWRITESUCCEEDED|%1이(가) 파일 "%2"에 캐시를 기록했습니다.|  
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|OLE DB 대상 "%1"의 최대 삽입 커밋 크기 속성이 0으로 설정되어 있습니다. 이 속성 설정으로 인해 실행 중인 패키지의 작동이 중지될 수 있습니다. 자세한 내용은 F1 도움말 항목의 OLE DB 대상 편집기(연결 관리자 페이지)를 참조하십시오.|  
   
-##  <a name="msgGeneral"></a> 일반 및 이벤트 메시지  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 메시지의 심볼 이름은 `DTS_MSG_`로 시작합니다.  
+##  <a name="general-and-event-messages"></a><a name="msgGeneral"></a> 일반 및 이벤트 메시지  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 메시지의 심볼 이름은 `DTS_MSG_`로 시작합니다.  
   
 |16진수 코드|10진수 코드|심볼 이름|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2305,9 +2301,8 @@ ms.locfileid: "62892661"
 |0x4010310D|1074802957|DTS_MSG_EVENTLOGENTRY_PACKAGEEND|이벤트 이름: %1<br /><br /> 메시지: %9<br /><br /> 연산자: %2<br /><br /> 원본 이름: %3<br /><br /> 원본 ID: %4<br /><br /> 실행 ID: %5<br /><br /> 시작 시간: %6<br /><br /> 종료 시간: %7<br /><br /> 데이터 코드: %8|  
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|이벤트 이름: %1<br /><br /> 메시지: %9<br /><br /> 연산자: %2<br /><br /> 원본 이름: %3<br /><br /> 원본 ID: %4<br /><br /> 실행 ID: %5<br /><br /> 시작 시간: %6<br /><br /> 종료 시간: %7<br /><br /> 데이터 코드: %8|  
   
-##  <a name="msgSuccess"></a> Success Messages  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 성공 메시지의 심볼 이름은 `DTS_S_`로 시작합니다.  
+##  <a name="success-messages"></a><a name="msgSuccess"></a> Success Messages  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 성공 메시지의 심볼 이름은 `DTS_S_`로 시작합니다.  
   
 |16진수 코드|10진수 코드|심볼 이름|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2315,9 +2310,8 @@ ms.locfileid: "62892661"
 |0x40005|262149|DTS_S_TRUNCATED|문자열 값이 잘렸습니다. 너무 길어서 열에 맞지 않는 문자열을 버퍼에서 받았으며 문자열이 버퍼에 의해 잘렸습니다.|  
 |0x200001|2097153|DTS_S_EXPREVALTRUNCATIONOCCURRED|식을 계산하는 동안 잘림이 발생했습니다. 계산 중에 잘림이 발생하면 중간 단계에 임의 지점이 포함될 수 있습니다.|  
   
-##  <a name="msgPipeline"></a> 데이터 흐름 구성 요소 오류 메시지  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 메시지의 심볼 이름은 `DTSBC_E_`로 시작합니다. 여기서 "BC"는 대부분의 Microsoft 데이터 흐름 구성 요소가 파생되는 네이티브 기본 클래스를 나타냅니다.  
+##  <a name="data-flow-component-error-messages"></a><a name="msgPipeline"></a> 데이터 흐름 구성 요소 오류 메시지  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 메시지의 심볼 이름은 `DTSBC_E_`로 시작합니다. 여기서 "BC"는 대부분의 Microsoft 데이터 흐름 구성 요소가 파생되는 네이티브 기본 클래스를 나타냅니다.  
   
 |16진수 코드|10진수 코드|심볼 이름|Description|  
 |----------------------|------------------|-------------------|-----------------|  

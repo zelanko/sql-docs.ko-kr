@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900259"
 ---
 # <a name="lookup-transformation"></a>조회 변환
@@ -53,7 +53,7 @@ ms.locfileid: "62900259"
   
 -   DB2  
   
- 조회 변환은 변환 입력 값과 참조 데이터 세트 값 간에 동등 조인을 수행합니다. 동등 조인을 사용하는 경우 변환 입력의 각 행이 참조 데이터 세트의 행과 하나 이상 일치해야 합니다. 동등 조인을 사용할 수 없는 경우 조회 변환은 다음 동작 중 하나를 수행합니다.  
+ 조회 변환은 변환 입력 값과 참조 데이터 세트 값 간에 동등 조인을 수행합니다. (동등 조인을 사용하는 경우 변환 입력의 각 행이 참조 데이터 세트의 행과 하나 이상 일치해야 합니다.) 동등 조인을 사용할 수 없는 경우 조회 변환은 다음 동작 중 하나를 수행합니다.  
   
 -   참조 데이터 세트에 일치하는 항목이 없으면 조인이 발생하지 않습니다. 기본적으로 조회 변환은 일치하는 항목이 없는 행을 오류로 간주합니다. 하지만 이러한 행을 불일치 항목 출력으로 리디렉션하도록 조회 변환을 구성할 수 있습니다. 자세한 내용은 [조회 변환 편집기&#40;일반 페이지&#41;](../../lookup-transformation-editor-general-page.md) 및 [조회 변환 편집기&#40;오류 출력 페이지&#41;](../../lookup-transformation-editor-error-output-page.md)를 참조하세요.  
   
@@ -74,8 +74,7 @@ ms.locfileid: "62900259"
 -   불일치 항목 출력. 불일치 항목 출력은 참조 데이터 세트와 하나의 항목도 일치하지 않는 입력 행을 처리합니다. 일치하는 항목이 없는 행을 오류로 처리하도록 조회 변환을 구성하면 해당 행이 오류 출력으로 리디렉션됩니다. 그렇지 않으면 변환이 이러한 행을 불일치 항목 출력으로 리디렉션합니다.  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)]에서는 조회 변환에 하나의 출력만 제공합니다. 에서 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]만든 조회 변환을 실행 하는 방법에 대 한 자세한 내용은 [조회 변환 업그레이드](../../../sql-server/install/upgrade-lookup-transformations.md)를 참조 하세요.  
+    >  [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)]에서는 조회 변환에 하나의 출력만 제공합니다. 에서 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]만든 조회 변환을 실행 하는 방법에 대 한 자세한 내용은 [조회 변환 업그레이드](../../../sql-server/install/upgrade-lookup-transformations.md)를 참조 하세요.  
   
 -   오류 출력.  
   
@@ -88,7 +87,7 @@ ms.locfileid: "62900259"
   
 -   ***여러 패키지 간에 캐시 파일을 공유 합니다. 자세한 내용은***[캐시 연결 관리자를 사용 하 여 전체 캐시 모드에서 조회 변환 구현](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)을 참조 하세요 ***.***      
   
--   패키지와 함께 캐시 파일을 배포합니다. ***그런 다음 여러 컴퓨터에서 데이터를 사용할 수 있습니다.*** 자세한 내용은 [조회 변환에 대한 캐시 만들기 및 배포](create-and-deploy-a-cache-for-the-lookup-transformation.md)를 참조하세요.  
+-   패키지와 함께 캐시 파일을 배포합니다. ***그러면 데이터를 여러 컴퓨터에서 사용할 수 있습니다.*** 자세한 내용은 [조회 변환에 대한 캐시 만들기 및 배포](create-and-deploy-a-cache-for-the-lookup-transformation.md)를 참조하세요.  
   
 -   원시 파일 원본을 사용하여 캐시 파일에서 데이터를 읽습니다. 그러면 다른 데이터 흐름 구성 요소를 사용하여 데이터를 변환하거나 이동할 수 있습니다. 자세한 내용은 [Raw File Source](../raw-file-source.md)을 참조하세요.  
   
@@ -115,7 +114,7 @@ ms.locfileid: "62900259"
   
      이 캐싱 옵션은 [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)]의 조회 변환에서 제공되는 캐싱 없음 옵션과 호환됩니다.  
   
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 문자열을 비교 하는 방식에 따라 다릅니다. 조회 변환이 실행되기 전에 참조 데이터 세트를 캐시로 로드하도록 조회 변환이 구성된 경우 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]는 캐시에서 조회 비교를 수행합니다. 그렇지 않으면 조회 작업에서 매개 변수가 있는 SQL 문을 사용하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 조회 비교를 수행합니다. 이는 캐시 유형에 따라 조회 변환이 동일한 조회 테이블에서 다른 개수의 일치하는 항목을 반환할 수 있다는 것을 의미합니다.  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 문자열 비교 방식에는 차이가 있습니다. 조회 변환이 실행되기 전에 참조 데이터 세트를 캐시로 로드하도록 조회 변환이 구성된 경우 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]는 캐시에서 조회 비교를 수행합니다. 그렇지 않으면 조회 작업에서 매개 변수가 있는 SQL 문을 사용하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 조회 비교를 수행합니다. 이는 캐시 유형에 따라 조회 변환이 동일한 조회 테이블에서 다른 개수의 일치하는 항목을 반환할 수 있다는 것을 의미합니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다. 자세한 내용은 다음 항목을 참조하십시오.  
@@ -138,8 +137,7 @@ ms.locfileid: "62900259"
   
 -   msftisprodsamples.codeplex.com의 예제 - [조회 변환](https://go.microsoft.com/fwlink/?LinkId=267528)  
   
-     
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 제품 예제 및 예제 데이터베이스를 설치하는 방법은 [SQL Server Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=267527)를 참조하십시오.  
+     [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 제품 예제 및 예제 데이터베이스를 설치하는 방법은 [SQL Server Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=267527)를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [유사 항목 조회 변환](fuzzy-lookup-transformation.md)   

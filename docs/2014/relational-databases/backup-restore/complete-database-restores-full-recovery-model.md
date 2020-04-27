@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb523d8e9b1dbbb136475d0aa739491935f755ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922162"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>전체 데이터베이스 복원(전체 복구 모델)
@@ -32,11 +32,11 @@ ms.locfileid: "62922162"
  데이터베이스를 복원할 경우, 특히 전체 복구 모델 또는 대량 로그 복구 모델에서는 단일 복원 순서를 사용해야 합니다. *복원 순서* 는 하나 이상의 복원 단계를 통해 데이터를 이동시키는 하나 이상의 복원 작업으로 구성됩니다.  
   
 > [!IMPORTANT]  
->  알 수 없거나 신뢰할 수 없는 출처의 데이터베이스는 연결 또는 복원하지 않는 것이 좋습니다. 이러한 데이터베이스에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마 또는 물리적 데이터베이스 구조를 수정하여 오류가 발생할 수 있습니다. 출처를 알 수 없거나 신뢰할 수 없는 데이터베이스를 사용 하기 전에 비프로덕션 서버의 데이터베이스에서 [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) 를 실행 하 고 데이터베이스의 코드 (예: 저장 프로시저 또는 다른 사용자 정의 코드)도 검사 합니다.  
+>  알 수 없거나 신뢰할 수 없는 출처의 데이터베이스는 연결 또는 복원하지 않는 것이 좋습니다. 이러한 데이터베이스에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마 또는 물리적 데이터베이스 구조를 수정하여 오류가 발생할 수 있습니다. 알 수 없거나 신뢰할 수 없는 소스의 데이터베이스를 사용하기 전에 비프로덕션 서버의 데이터베이스에서 [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) 를 실행하여 데이터베이스에서 코드(예: 저장 프로시저 또는 다른 사용자 정의 코드)를 시험해 보세요.  
   
- **항목 내용**  
+ **항목 내용:**  
   
--   [데이터베이스를 오류 지점으로 복원](#PointOfFailure)  
+-   [오류 지점으로 데이터베이스 복원](#PointOfFailure)  
   
 -   [데이터베이스를 로그 백업 내 지점으로 복원](#PointWithinBackup)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62922162"
 > [!NOTE]  
 >  이전 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 백업 지원에 대한 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)의 "호환성 지원" 섹션을 참조하세요.  
   
-##  <a name="PointOfFailure"></a> 오류 지점으로 데이터베이스 복원  
+##  <a name="restoring-a-database-to-the-point-of-failure"></a><a name="PointOfFailure"></a>데이터베이스를 오류 지점으로 복원  
  일반적으로 실패 지점으로 데이터베이스를 복구하는 작업에는 다음의 기본 단계가 포함됩니다.  
   
 1.  활성 트랜잭션 로그(비상 로그)를 백업합니다. 이렇게 하면 비상 로그 백업이 만들어집니다. 활성 트랜잭션 로그를 사용할 수 없을 때 해당 로그 부분의 모든 트랜잭션이 손실됩니다.  
@@ -72,8 +72,8 @@ ms.locfileid: "62922162"
 > [!NOTE]  
 >  데이터베이스 백업을 다른 서버 인스턴스로 복원할 경우 [백업 및 복원으로 데이터베이스 복사](../databases/copy-databases-with-backup-and-restore.md)를 참조하세요.  
   
-###  <a name="TsqlSyntax"></a> 기본 Transact-SQL RESTORE 구문  
- 이전 그림의 복원 순서에 대한 기본 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] 구문은 다음과 같습니다.  
+###  <a name="basic-transact-sql-restore-syntax"></a><a name="TsqlSyntax"></a> 기본 Transact-SQL RESTORE 구문  
+ 이전 그림의 복원 순서에 대 한 기본 [restore](/sql/t-sql/statements/restore-statements-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문은 다음과 같습니다.  
   
 1.  RESTORE DATABASE *database* FROM *full database backup* WITH NORECOVERY;  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62922162"
   
 4.  RESTORE DATABASE *database* WITH RECOVERY;  
   
-###  <a name="ExampleToPoFTsql"></a> 예: 오류 지점으로 복구(Transact-SQL)  
+###  <a name="example-recovering-to-the-point-of-failure-transact-sql"></a><a name="ExampleToPoFTsql"></a>예: 오류 지점으로 복구 (Transact-sql)  
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 예에서는 복원 순서에서 오류 지점으로 데이터베이스를 복원하는 필수 옵션을 보여 줍니다. 이 예에서는 데이터베이스의 비상 로그 백업을 만듭니다. 다음으로 전체 데이터베이스 백업 및 로그 백업을 복원한 다음 비상 로그 백업을 복원합니다. 이 예의 경우 별도의 마지막 단계에서 데이터베이스를 복구합니다.  
   
 > [!NOTE]  
@@ -121,7 +121,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 GO  
 ```  
   
-##  <a name="PointWithinBackup"></a> 데이터베이스를 로그 백업 내 지점으로 복원  
+##  <a name="restoring-a-database-to-a-point-within-a-log-backup"></a><a name="PointWithinBackup"></a>데이터베이스를 로그 백업 내 지점으로 복원  
  전체 복구 모델에서, 전체 데이터베이스 복원은 일반적으로 지정 시간, 표시된 트랜잭션 또는 로그 백업 내 LSN으로 복구될 수 있습니다. 그러나 대량 로그 복구 모델에서 로그 백업에 대량 로그 변경 내용이 있을 경우 지정 시간 복구를 사용할 수 없습니다.  
   
 ### <a name="sample-point-in-time-restore-scenarios"></a>예제 지정 시간 복원 시나리오  
@@ -148,7 +148,7 @@ GO
 > [!NOTE]  
 >  지정 시간으로 복원하는 예제를 보려면 [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)의 "호환성 지원" 섹션을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **전체 데이터베이스 백업을 복원하려면**  
   
 -   [데이터베이스 백업 복원 &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
@@ -178,10 +178,10 @@ GO
 ## <a name="see-also"></a>참고 항목  
  [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
- [sp_addumpdevice&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
- [전체 데이터베이스 백업&#40;SQL Server&#41;](full-database-backups-sql-server.md)   
- [차등 백업&#40;SQL Server&#41;](differential-backups-sql-server.md)   
+ [SQL Server&#41;&#40;트랜잭션 로그 백업 적용](transaction-log-backups-sql-server.md)   
+ [Transact-sql&#41;sp_addumpdevice &#40;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
+ [SQL Server&#41;&#40;전체 데이터베이스 백업](full-database-backups-sql-server.md)   
+ [차등 백업 &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [백업 개요&#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [복원 및 복구 개요&#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  
   

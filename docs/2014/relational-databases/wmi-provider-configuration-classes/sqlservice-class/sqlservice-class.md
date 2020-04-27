@@ -19,19 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c48db11ae347d1fb1c2a393e440aebb0c80def54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62912137"
 ---
 # <a name="sqlservice-class"></a>SqlService 클래스
-  
   [SqlService 클래스](sqlservice-class.md) 는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스의 인스턴스를 나타냅니다.  
   
- 
-  [SqlService 클래스](sqlservice-class.md) 를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스를 프로그래밍 방식으로 관리할 수 있습니다. 
-  [SqlService 클래스](sqlservice-class.md) 개체를 사용하여 다음 태스크를 수행할 수 있습니다.  
+ [SqlService 클래스](sqlservice-class.md) 를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스를 프로그래밍 방식으로 관리할 수 있습니다. [SqlService 클래스](sqlservice-class.md) 개체를 사용하여 다음 태스크를 수행할 수 있습니다.  
   
 -   서비스에 연결합니다.  
   

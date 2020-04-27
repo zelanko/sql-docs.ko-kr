@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917097"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>분리 및 연결을 사용하여 데이터베이스 이동(Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "62917097"
     > [!NOTE]  
     >  로그 파일을 지정하지 않고 데이터베이스를 연결할 경우 연결 작업은 원래 위치에서 로그 파일을 검색합니다. 원래 위치에 로그 복사본이 있으면 해당 복사본이 연결됩니다. 원래 로그 파일을 사용하지 않으려면 새 로그 파일의 경로를 지정하거나 로그 파일의 원본을 새 위치로 복사한 후 제거합니다.  
   
-3.  복사된 파일을 연결합니다. 자세한 내용은 [데이터베이스 연결](attach-a-database.md)을 참조하세요.  
+3.  복사된 파일을 연결합니다. 자세한 내용은 [Attach a Database](attach-a-database.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
  다음 예에서는가 연결 된 서버 인스턴스에 [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] 연결 된 쿼리 편집기 창에서 실행 되는 문의 복사본을 만듭니다.  

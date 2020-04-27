@@ -23,19 +23,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 085b1783214e7f629f1cb91084303edacd151c25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874639"
 ---
 # <a name="retrieving-udt-data"></a>UDT 데이터 검색
   클라이언트에서 UDT(사용자 정의 형식)를 만들려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 UDT로 등록된 어셈블리를 클라이언트 애플리케이션에서 사용할 수 있어야 합니다. UDT 어셈블리는 애플리케이션과 같은 디렉터리나 GAC(전역 어셈블리 캐시)에 넣을 수 있습니다. 사용자의 프로젝트에서 어셈블리에 대한 참조를 설정할 수도 있습니다.  
   
 ## <a name="requirements-for-using-udts-in-adonet"></a>ADO.NET에서 UDT 사용을 위한 요구 사항  
- 클라이언트에서 UDT를 만들려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드된 어셈블리와 클라이언트의 어셈블리가 호환되어야 합니다. 
-  `Native` 직렬화 형식으로 정의된 UDT의 경우 어셈블리가 구조적으로 호환되어야 하며, 
-  `UserDefined` 형식으로 정의된 어셈블리의 경우 클라이언트에서 어셈블리를 사용할 수 있어야 합니다.  
+ 클라이언트에서 UDT를 만들려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드된 어셈블리와 클라이언트의 어셈블리가 호환되어야 합니다. `Native` 직렬화 형식으로 정의된 UDT의 경우 어셈블리가 구조적으로 호환되어야 하며, `UserDefined` 형식으로 정의된 어셈블리의 경우 클라이언트에서 어셈블리를 사용할 수 있어야 합니다.  
   
  클라이언트에 UDT 어셈블리의 복사본이 없어도 테이블의 UDT 열에서 원시 데이터를 검색할 수 있습니다.  
   
@@ -376,9 +374,7 @@ class GetRawBytes
  사용자의 ADO.NET 코드에서 UDT를 입력 및 출력 매개 변수 모두로 사용할 수 있습니다.  
   
 ## <a name="using-udts-in-query-parameters"></a>쿼리 매개 변수에 UDT 사용  
- 
-  `SqlParameter` 개체의 `System.Data.SqlClient.SqlCommand`를 설정할 때 UDT를 매개 변수 값으로 사용할 수 있습니다. 
-  `SqlDbType.Udt` 컬렉션에 대해 `SqlParameter` 메서드를 호출할 때는 매개 변수가 UDT임을 나타내기 위해 `Add` 개체의 `Parameters` 열거형을 사용합니다. `SqlCommand` 개체 `UdtTypeName` 의 속성을 사용 하 여 데이터베이스에서 UDT의 정규화 된 이름을 *schema_name. object_name* 구문을 사용 하 여 지정 합니다. 꼭 필요한 것은 아니지만 정규화된 이름을 사용하면 코드가 명확해집니다.  
+ `SqlParameter` 개체의 `System.Data.SqlClient.SqlCommand`를 설정할 때 UDT를 매개 변수 값으로 사용할 수 있습니다. `SqlDbType.Udt` 컬렉션에 대해 `SqlParameter` 메서드를 호출할 때는 매개 변수가 UDT임을 나타내기 위해 `Add` 개체의 `Parameters` 열거형을 사용합니다. `SqlCommand` 개체 `UdtTypeName` 의 속성을 사용 하 여 데이터베이스에서 UDT의 정규화 된 이름을 *schema_name. object_name* 구문을 사용 하 여 지정 합니다. 꼭 필요한 것은 아니지만 정규화된 이름을 사용하면 코드가 명확해집니다.  
   
 > [!NOTE]  
 >  클라이언트 프로젝트에서 UDT 어셈블리의 로컬 복사본을 사용할 수 있어야 합니다.  

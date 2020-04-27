@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4850be4c112f9c0b987d543873cb55af08372455
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917358"
 ---
 # <a name="display-data-and-log-space-information-for-a-database"></a>데이터베이스의 데이터 및 로그 공간 정보 표시
@@ -41,15 +41,14 @@ ms.locfileid: "62917358"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
- **sp_spaceused** 를 실행할 수 있는 사용 권한은 **public** 역할에 부여됩니다. 
-  **db_owner** 고정 데이터베이스 역할의 멤버만 **@updateusage** 매개 변수를 지정할 수 있습니다.  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
+ **sp_spaceused** 를 실행할 수 있는 사용 권한은 **public** 역할에 부여됩니다. **db_owner** 고정 데이터베이스 역할의 멤버만 **@updateusage** 매개 변수를 지정할 수 있습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-display-data-and-log-space-information-for-a-database"></a>데이터베이스의 데이터 및 로그 공간 정보를 표시하려면  
   
@@ -59,7 +58,7 @@ ms.locfileid: "62917358"
   
 3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **보고서**, **표준 보고서**를 차례로 가리킨 다음 **디스크 사용량**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-display-data-and-log-space-information-for-a-database-by-using-sp_spaceused"></a>sp_spaceused를 사용하여 데이터베이스에 대한 데이터 및 로그 공간 정보를 표시하려면  
   
@@ -95,8 +94,8 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [SELECT&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
- [sys.database_files&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
- [sp_spaceused&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql)   
+ [database_files &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
+ [Transact-sql&#41;sp_spaceused &#40;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql)   
  [데이터베이스에 데이터 또는 로그 파일 추가](add-data-or-log-files-to-a-database.md)   
  [데이터베이스에서 데이터 또는 로그 파일 삭제](delete-data-or-log-files-from-a-database.md)  
   

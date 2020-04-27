@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 973cb7dcfe7eb95e003428adf0c8a0beb7e68e87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62877717"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>프로그래밍 방식으로 연결 관리자 사용
@@ -61,11 +61,11 @@ ms.locfileid: "62877717"
 |MULTIFILE|다중 파일 연결 관리자|`System.String`|파일 중 하나에 대한 경로입니다.|  
 |MULTIFLATFILE|다중 플랫 파일 연결 관리자|`System.String`|파일 중 하나에 대한 경로입니다.|  
 |SMOServer|SMO 연결 관리자|`Microsoft.SqlServer.Management.Smo.Server`||  
-|SMTP|SMTP 연결 관리자|`System.String`|예: `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
+|SMTP|SMTP 연결 관리자|`System.String`|예를 들면 다음과 같습니다. `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
 |WMI|WMI 연결 관리자|`System.Management.ManagementScope`||  
 |SQLMOBILE|SQL Server Compact 연결 관리자|`System.Data.SqlServerCe.SqlCeConnection`||  
   
-![Integration Services 아이콘 (작은 아이콘)](media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
+![Integration Services 아이콘 (작은 아이콘)](media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [스크립트 태스크에서 데이터 원본에 연결](extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   

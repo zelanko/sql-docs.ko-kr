@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 74bcf1549cdd97752c805f1c6a9cc774ef1a9e52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62896033"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>여러 입력을 지원하는 데이터 흐름 구성 요소 개발
@@ -22,17 +22,14 @@ ms.locfileid: "62896033"
   
 -   <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> 속성 - 사용자 지정 데이터 흐름 구성 요소에서 속도가 균일하지 않은 데이터를 관리하는 데 필요한 코드를 구현하려면 이 속성 값을 `true`로 설정합니다.  
   
--   <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 메서드 - 
-  <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> 속성을 `true`로 설정한 경우 이 메서드의 구현을 제공해야 합니다. 그러지 않으면 데이터 흐름 엔진에서 런타임 시 예외가 발생합니다.  
+-   <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 메서드 - <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> 속성을 `true`로 설정한 경우 이 메서드의 구현을 제공해야 합니다. 그러지 않으면 데이터 흐름 엔진에서 런타임 시 예외가 발생합니다.  
   
--   <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 메서드 - 
-  <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> 속성을 `true`로 설정하고 사용자 지정 구성 요소가 세 개 이상의 입력을 지원하는 경우에는 이 메서드의 구현도 제공해야 합니다. 그러지 않으면 사용자가 세 개 이상의 입력을 연결할 경우 데이터 흐름 엔진에서 런타임 시 예외가 발생합니다.  
+-   <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 메서드 - <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> 속성을 `true`로 설정하고 사용자 지정 구성 요소가 세 개 이상의 입력을 지원하는 경우에는 이 메서드의 구현도 제공해야 합니다. 그러지 않으면 사용자가 세 개 이상의 입력을 연결할 경우 데이터 흐름 엔진에서 런타임 시 예외가 발생합니다.  
   
  이러한 멤버를 함께 사용하여 Microsoft에서 병합 및 병합 조인 변환을 위해 개발한 솔루션과 유사한 메모리 가중 관리 솔루션을 개발할 수 있습니다.  
   
 ## <a name="setting-the-supportsbackpressure-property"></a>SupportsBackPressure 속성 설정  
- 여러 입력을 지원하는 사용자 지정 데이터 흐름 구성 요소의 메모리 관리 성능을 향상시키는 첫 번째 단계는 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A>에서 `true` 속성을 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>로 설정하는 것입니다. 
-  <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> 값이 `true`인 경우 데이터 흐름 엔진은 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 메서드를 호출하며, 입력이 세 개 이상인 경우 런타임에 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> 메서드도 호출합니다.  
+ 여러 입력을 지원하는 사용자 지정 데이터 흐름 구성 요소의 메모리 관리 성능을 향상시키는 첫 번째 단계는 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A>에서 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> 속성을 `true`로 설정하는 것입니다. <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> 값이 `true`인 경우 데이터 흐름 엔진은 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 메서드를 호출하며, 입력이 세 개 이상인 경우 런타임에 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> 메서드도 호출합니다.  
   
 ### <a name="example"></a>예제  
  다음 예에서 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>의 구현은 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> 값을 `true`로 설정합니다.  
@@ -52,8 +49,7 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
 ```  
   
 ## <a name="implementing-the-isinputready-method"></a>IsInputReady 메서드 구현  
- 
-  <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> 개체에서 `true` 속성 값을 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>로 설정한 경우 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 메서드에 대한 구현도 제공해야 합니다.  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> 개체에서 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> 속성 값을 `true`로 설정한 경우 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 메서드에 대한 구현도 제공해야 합니다.  
   
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 메서드의 구현은 기본 클래스의 구현을 호출해서는 안 됩니다. 기본 클래스의 이 메서드에 대한 기본 구현은 `NotImplementedException`만 발생시킵니다.  
@@ -91,8 +87,7 @@ public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)
 }  
 ```  
   
- 위의 예에서는 부울 `inputEOR` 배열을 사용하여 각 입력에 사용 가능한 추가 업스트림 데이터가 있는지 여부를 나타냅니다. 이 배열 이름에서 `EOR`은 "행 집합의 끝(end of rowset)"을 나타내며 데이터 흐름 버퍼의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 속성을 참조합니다. 이 예에서 여기에 표시되지 않은 일부분인 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 메서드는 받은 각 데이터 버퍼의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 속성 값을 확인합니다. 
-  `true` 값이 입력에 사용할 수 있는 추가 업스트림 데이터가 없음을 나타내는 경우 이 예는 해당 입력에 대한 `inputEOR` 배열 요소 값을 `true`로 설정합니다. 이 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 메서드의 예제에서는 `inputEOR` 배열 요소 값이 입력에 사용할 수 있는 업스트림 데이터가 없음을 나타내는 경우 `false` *canprocess* 배열의 해당 요소 값을 입력에 대해로 설정 합니다.  
+ 위의 예에서는 부울 `inputEOR` 배열을 사용하여 각 입력에 사용 가능한 추가 업스트림 데이터가 있는지 여부를 나타냅니다. 이 배열 이름에서 `EOR`은 "행 집합의 끝(end of rowset)"을 나타내며 데이터 흐름 버퍼의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 속성을 참조합니다. 이 예에서 여기에 표시되지 않은 일부분인 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 메서드는 받은 각 데이터 버퍼의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 속성 값을 확인합니다. `true` 값이 입력에 사용할 수 있는 추가 업스트림 데이터가 없음을 나타내는 경우 이 예는 해당 입력에 대한 `inputEOR` 배열 요소 값을 `true`로 설정합니다. 이 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 메서드의 예제에서는 `inputEOR` 배열 요소 값이 입력에 사용할 수 있는 업스트림 데이터가 없음을 나타내는 경우 `false` *canprocess* 배열의 해당 요소 값을 입력에 대해로 설정 합니다.  
   
 ## <a name="implementing-the-getdependentinputs-method"></a>GetDependentInputs 메서드 구현  
  사용자 지정 데이터 흐름 구성 요소가 세 개 이상의 입력을 지원하는 경우에는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 메서드에 대한 구현도 제공해야 합니다.  

@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900003"
 ---
 # <a name="use-a-recordset-destination"></a>레코드 집합 대상 사용
-  레코드 집합 대상은 외부 데이터 원본에 데이터를 저장하지 않습니다. 대신 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식의 `Object` 패키지 변수에 저장된 레코드 집합의 데이터를 메모리에 저장합니다. 레코드 집합 대상이 데이터를 저장한 후에는 일반적으로 Foreach 루프 컨테이너를 Foreach ADO 열거자와 함께 사용하여 레코드 집합의 행을 한 번에 하나씩 처리합니다. Foreach ADO 열거자는 현재 행의 각 열 값을 개별 패키지 변수에 저장합니다. 그러면 Foreach 루프 컨테이너 내에 구성한 태스크가 변수에서 이러한 값을 읽어 와서 이를 가지고 몇 가지 동작을 수행합니다.  
+  레코드 집합 대상은 외부 데이터 원본에 데이터를 저장하지 않습니다. 대신 `Object` 데이터 형식의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 변수에 저장된 레코드 집합의 데이터를 메모리에 저장합니다. 레코드 집합 대상이 데이터를 저장한 후에는 일반적으로 Foreach 루프 컨테이너를 Foreach ADO 열거자와 함께 사용하여 레코드 집합의 행을 한 번에 하나씩 처리합니다. Foreach ADO 열거자는 현재 행의 각 열 값을 개별 패키지 변수에 저장합니다. 그러면 Foreach 루프 컨테이너 내에 구성한 태스크가 변수에서 이러한 값을 읽어 와서 이를 가지고 몇 가지 동작을 수행합니다.  
   
  레코드 집합 대상은 다양한 시나리오에서 사용할 수 있습니다. 예를 들어 다음과 같은 노래를 선택할 수 있다.  
   
@@ -68,29 +68,21 @@ ms.locfileid: "62900003"
   
 3.  **변수** 창에서 다음과 같이 레코드 집합과 현재 행의 열 값을 보유할 변수를 만듭니다.  
   
-    1.  
-  `BonusRecordset`이라는 변수를 만들고 이 변수의 유형을 `Object`로 설정합니다.  
+    1.  `BonusRecordset`이라는 변수를 만들고 이 변수의 유형을 `Object`로 설정합니다.  
   
-         
-  `BonusRecordset` 변수는 레코드 집합을 보유합니다.  
+         `BonusRecordset` 변수는 레코드 집합을 보유합니다.  
   
-    2.  
-  `EmailAddress`이라는 변수를 만들고 이 변수의 유형을 `String`로 설정합니다.  
+    2.  `EmailAddress`이라는 변수를 만들고 이 변수의 유형을 `String`로 설정합니다.  
   
-         
-  `EmailAddress` 변수는 판매 직원의 전자 메일 메시지를 보유합니다.  
+         `EmailAddress` 변수는 판매 직원의 전자 메일 메시지를 보유합니다.  
   
-    3.  
-  `FirstName`이라는 변수를 만들고 이 변수의 유형을 `String`로 설정합니다.  
+    3.  `FirstName`이라는 변수를 만들고 이 변수의 유형을 `String`로 설정합니다.  
   
-         
-  `FirstName` 변수는 판매 직원의 이름을 보유합니다.  
+         `FirstName` 변수는 판매 직원의 이름을 보유합니다.  
   
-    4.  
-  `Bonus`이라는 변수를 만들고 이 변수의 유형을 `Double`로 설정합니다.  
+    4.  `Bonus`이라는 변수를 만들고 이 변수의 유형을 `Double`로 설정합니다.  
   
-         
-  `Bonus` 변수는 판매 직원의 보너스를 보유합니다.  
+         `Bonus` 변수는 판매 직원의 보너스를 보유합니다.  
   
 #### <a name="to-configure-the-connection-managers"></a>연결 관리자를 구성하려면  
   

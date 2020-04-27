@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 479cc0e650c598e0a253caca796b854dc4eb69cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892671"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>원본 테이블 및 뷰 선택(SQL Server 가져오기 및 내보내기 마법사)
@@ -39,8 +39,7 @@ ms.locfileid: "62892671"
  목록에서 각 원본 테이블에 대한 대상 테이블을 선택합니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]나 다른 도구를 사용하여 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 대상 테이블을 만들기 위해 마법사의 이 지점에서 일시 중지할 경우 사용 가능한 대상 테이블의 목록에 새 테이블이 즉시 표시되지는 않습니다. 대상 테이블 목록을 새로 고치려면 두 페이지 뒤로 이동 하 여 **대상 선택** 페이지에서 대상 데이터베이스를 다시 선택한 다음 **원본 테이블 및 뷰를 선택**합니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]나 다른 도구를 사용하여 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 대상 테이블을 만들기 위해 마법사의 이 지점에서 일시 중지할 경우 사용 가능한 대상 테이블의 목록에 새 테이블이 즉시 표시되지는 않습니다. 대상 테이블 목록을 새로 고치려면 두 페이지 뒤로 이동 하 여 **대상 선택** 페이지에서 대상 데이터베이스를 다시 선택한 다음 **원본 테이블 및 뷰를 선택**합니다.  
   
 ### <a name="other-options"></a>다른 옵션  
  **매핑 편집**  

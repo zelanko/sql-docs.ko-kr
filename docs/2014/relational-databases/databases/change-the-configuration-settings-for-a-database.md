@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 05dc6188a46e0e2d43b7a4bc3275fae7d4cd8da6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917563"
 ---
 # <a name="change-the-configuration-settings-for-a-database"></a>데이터베이스 메일의 구성 설정 변경
@@ -38,18 +38,18 @@ ms.locfileid: "62917563"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   시스템 관리자, 데이터베이스 소유자, **sysadmin** 및 **dbcreator** 고정 서버 역할과 **db_owner** 고정 데이터베이스 역할의 멤버만 이 옵션을 수정할 수 있습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-change-the-option-settings-for-a-database"></a>데이터베이스의 옵션 설정을 변경하려면  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62917563"
   
 2.  **데이터베이스 속성** 대화 상자에서 **옵션** 을 클릭하면 대부분의 구성 설정에 액세스할 수 있습니다. 파일 및 파일 그룹 구성, 미러링 및 로그 전달은 해당 페이지에서 설정할 수 있습니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-change-the-option-settings-for-a-database"></a>데이터베이스의 옵션 설정을 변경하려면  
   

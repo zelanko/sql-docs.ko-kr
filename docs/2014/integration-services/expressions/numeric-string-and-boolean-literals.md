@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b307c48da04e32691afa12ff1b05f6a4e8c33d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62897467"
 ---
 # <a name="literals-ssis"></a>리터럴(SSIS)
@@ -97,7 +97,7 @@ ms.locfileid: "62897467"
   
  이스케이프 시퀀스가 필요한 다른 문자가 문자열에 포함될 수 있습니다. 다음 표에서는 문자열 리터럴의 이스케이프 시퀀스를 보여 줍니다.  
   
-|이스케이프 시퀀스|Description|  
+|이스케이프 시퀀스|설명|  
 |---------------------|-----------------|  
 |\a|경고|  
 |\b|백스페이스|  

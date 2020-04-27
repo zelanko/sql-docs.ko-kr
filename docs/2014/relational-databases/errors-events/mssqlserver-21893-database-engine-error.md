@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6258f36990efccf83b43e8d8ac8bd4c2397477aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62914958"
 ---
 # <a name="mssqlserver_21893"></a>MSSQLSERVER_21893
@@ -38,7 +38,6 @@ ms.locfileid: "62914958"
  이는 오류로 간주되지 않습니다. 이 오류가 발생한 에이전트에서는 이 오류를 정보로 기록하지만 에이전트가 종료되지는 않습니다. 이는 새 게시자에 적절한 구독자 항목이 없더라도 복제에 주는 영향이 적기 때문입니다. sysservers에 구독자에 대한 적절한 항목이 없으면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 통해 일부 구독 관리 작업을 수행할 경우 작업이 실패할 수 있습니다. 하지만 관리 저장 프로시저를 명시적으로 실행하여 동일한 작업을 수행할 수 있습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
- 리디렉션된 게시자에서 식별된 각 구독자에 대해 `sp_addlinkedserver`를 실행하여 각각을 원격 서버로 추가한 다음 
-  `sp_serveroption`을 실행하여 서버에 대해 구독자 비트를 설정하십시오.  
+ 리디렉션된 게시자에서 식별된 각 구독자에 대해 `sp_addlinkedserver`를 실행하여 각각을 원격 서버로 추가한 다음 `sp_serveroption`을 실행하여 서버에 대해 구독자 비트를 설정하십시오.  
   
   

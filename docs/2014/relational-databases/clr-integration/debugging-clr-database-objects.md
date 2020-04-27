@@ -17,17 +17,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 70b092f81030c7905fe1d771844369f2d59317b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919015"
 ---
 # <a name="debugging-clr-database-objects"></a>CLR 데이터베이스 개체 디버깅
-  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 데이터베이스의 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 및 CLR(공용 언어 런타임) 개체 디버깅을 지원합니다. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 디버깅에서 중요한 점은, 설치 및 사용이 쉽고 SQL Server 디버거를 Microsoft Visual Studio 디버거와 통합할 수 있다는 것입니다. 또한 디버깅이 여러 언어에서 작동합니다. 사용자는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 CLR 개체로 매끄럽게 한 단계씩 코드를 실행할 수 있으며 그 반대의 경우도 가능합니다. 관리되는 데이터베이스 개체를 디버깅할 때는 SQL Server Management Studio의 Transact-SQL 디버거를 사용할 수 없지만 Visual Studio의 디버거를 사용하여 개체를 디버깅할 수 있습니다. Visual Studio의 관리되는 데이터베이스 개체 디버깅은 서버에서 실행 중인 루틴에서 "step into" 및 "step over" 문과 같은 대부분의 일반적인 디버깅 기능을 지원합니다. 디버거는 디버깅하는 동안 중단점을 설정하고, 호출 스택을 검사하고, 변수를 검사하고, 변수 값을 수정할 수 있습니다. Visual Studio .NET 2003은 CLR 통합 프로그래밍 또는 디버깅에 사용할 수 없습니다. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에는 .NET Framework가 미리 설치되어 있으며 Visual Studio .NET 2003에서는 .NET Framework 2.0 어셈블리를 사용할 수 없습니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 데이터베이스의 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 및 CLR(공용 언어 런타임) 개체 디버깅을 지원합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 디버깅에서 중요한 점은, 설치 및 사용이 쉽고 SQL Server 디버거를 Microsoft Visual Studio 디버거와 통합할 수 있다는 것입니다. 또한 디버깅이 여러 언어에서 작동합니다. 사용자는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 CLR 개체로 매끄럽게 한 단계씩 코드를 실행할 수 있으며 그 반대의 경우도 가능합니다. 관리되는 데이터베이스 개체를 디버깅할 때는 SQL Server Management Studio의 Transact-SQL 디버거를 사용할 수 없지만 Visual Studio의 디버거를 사용하여 개체를 디버깅할 수 있습니다. Visual Studio의 관리되는 데이터베이스 개체 디버깅은 서버에서 실행 중인 루틴에서 "step into" 및 "step over" 문과 같은 대부분의 일반적인 디버깅 기능을 지원합니다. 디버거는 디버깅하는 동안 중단점을 설정하고, 호출 스택을 검사하고, 변수를 검사하고, 변수 값을 수정할 수 있습니다. Visual Studio .NET 2003은 CLR 통합 프로그래밍 또는 디버깅에 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에는 .NET Framework가 미리 설치되어 있으며 Visual Studio .NET 2003에서는 .NET Framework 2.0 어셈블리를 사용할 수 없습니다.  
   
  Visual Studio를 사용 하 여 관리 코드를 디버깅 하는 방법에 대 한 자세한 내용은 Visual Studio 설명서의 "[관리 코드 디버깅](https://go.microsoft.com/fwlink/?LinkId=120377)" 항목을 참조 하세요.  
   
@@ -36,16 +33,14 @@ ms.locfileid: "62919015"
   
  디버깅하는 동안에는 다음 제한 사항이 적용됩니다.  
   
--   CLR 루틴 디버깅은 한 번에 하나의 디버거 인스턴스로 제한됩니다. 이 제한이 적용되는 이유는, 중단점에 도달하면 모든 CLR 코드 실행이 중지되고 이 중단점에서 디버거가 전진할 때까지 실행이 멈추기 때문입니다. 하지만 다른 연결에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 디버깅을 계속할 수 있습니다. 
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 디버깅은 서버의 다른 실행을 중지하지는 않지만 잠금을 보유함으로써 다른 연결들을 기다리게 만드는 원인이 됩니다.  
+-   CLR 루틴 디버깅은 한 번에 하나의 디버거 인스턴스로 제한됩니다. 이 제한이 적용되는 이유는, 중단점에 도달하면 모든 CLR 코드 실행이 중지되고 이 중단점에서 디버거가 전진할 때까지 실행이 멈추기 때문입니다. 하지만 다른 연결에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 디버깅을 계속할 수 있습니다. [!INCLUDE[tsql](../../../includes/tsql-md.md)] 디버깅은 서버의 다른 실행을 중지하지는 않지만 잠금을 보유함으로써 다른 연결들을 기다리게 만드는 원인이 됩니다.  
   
 -   기존 연결은 디버깅할 수 없습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 연결을 만들려면 클라이언트 및 디버거 환경에 대한 정보가 필요하므로 새 연결만 디버깅할 수 있습니다.  
   
  위의 제한 사항으로 인해 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 및 CLR 코드를 테스트 서버에서 디버깅하는 것이 좋습니다. 프로덕션 서버는 사용하지 마십시오.  
   
 ## <a name="overview-of-debugging-managed-database-objects"></a>관리되는 데이터베이스 개체 디버깅 개요  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 디버깅은 각 연결 모델을 따릅니다. 디버거는 자신이 연결된 클라이언트 연결에 대해서만 작업을 감지하고 디버깅할 수 있습니다. 디버거 기능은 연결 유형의 제한을 받지 않으므로 TDS(Tabular Data Stream) 및 HTTP 연결을 모두 디버깅할 수 있습니다. 하지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 기존 연결 디버깅은 허용되지 않습니다. 디버깅은 서버에서 실행 중인 루틴에서 대부분의 일반적인 디버깅 기능을 지원합니다. 디버거와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 간의 상호 작용은 분산 COM(구성 요소 개체 모델)을 통해 이루어집니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 디버깅은 각 연결 모델을 따릅니다. 디버거는 자신이 연결된 클라이언트 연결에 대해서만 작업을 감지하고 디버깅할 수 있습니다. 디버거 기능은 연결 유형의 제한을 받지 않으므로 TDS(Tabular Data Stream) 및 HTTP 연결을 모두 디버깅할 수 있습니다. 하지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 기존 연결 디버깅은 허용되지 않습니다. 디버깅은 서버에서 실행 중인 루틴에서 대부분의 일반적인 디버깅 기능을 지원합니다. 디버거와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 간의 상호 작용은 분산 COM(구성 요소 개체 모델)을 통해 이루어집니다.  
   
  관리 되는 저장 프로시저, 함수, 트리거, 사용자 정의 형식 및 집계를 디버깅 하는 방법에 대 한 자세한 내용 및 시나리오는 Visual Studio 설명서의 "[SQL SERVER CLR 통합 데이터베이스 디버깅](https://go.microsoft.com/fwlink/?LinkId=120378)" 항목을 참조 하세요.  
   

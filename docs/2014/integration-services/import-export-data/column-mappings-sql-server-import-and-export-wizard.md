@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0108004bc7fb5743ab92c455f4aee99a9f3df498
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62893044"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>열 매핑(SQL Server 가져오기 및 내보내기 마법사)
@@ -48,10 +48,10 @@ ms.locfileid: "62893044"
  **SQL 편집**  
  **테이블 생성 SQL 문** 대화 상자에서 기본 문을 사용 하거나 용도에 맞게 수정 합니다. 이 문을 수정하는 경우 테이블 매핑에서도 관련 내용을 변경해야 합니다.  
   
- **대상 테이블을 삭제 하 고 다시 만들기**  
+ **대상 테이블을 삭제하고 다시 만들기**  
  대상 테이블을 덮어쓰려면 이 옵션을 선택합니다. 이 옵션은 마법사를 사용하여 대상 테이블을 만들 때만 사용할 수 있습니다. 마법사에서 만든 패키지를 저장한 다음 해당 패키지를 다시 실행하는 경우에만 대상 테이블이 삭제되고 다시 생성됩니다.  
   
- **Id 삽입 사용**  
+ **ID 삽입 가능**  
  원본 데이터의 기존 ID 값을 대상 테이블의 ID 열에 삽입할 수 있게 하려면 이 옵션을 선택합니다. 기본적으로 대상 ID 열에는 이러한 작업을 수행할 수 없습니다.  
   
  **매핑**  
@@ -65,7 +65,7 @@ ms.locfileid: "62893044"
  **대상**  
  복사 작업 중에 특정 열을 무시할지 여부를 지정합니다. 건너 뛰 려는 열에 대해이 열에서 ** \<>무시** 를 선택 하 여 열의 하위 집합만 복사할 수 있습니다. 열을 매핑하기 전에 매핑하지 않을 열은 모두 무시해야 합니다.  
   
- **형식**  
+ **Type**  
  열에 대한 데이터 형식을 선택합니다.  
   
  **Null 허용**  

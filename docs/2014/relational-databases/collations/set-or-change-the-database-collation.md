@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 38c29f8d70b3cc72baf81e2ae23082fe270ba573
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874034"
 ---
 # <a name="set-or-change-the-database-collation"></a>데이터베이스 데이터 정렬 설정 또는 변경
@@ -39,15 +39,15 @@ ms.locfileid: "62874034"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   Windows 유니코드 전용 데이터 정렬은 COLLATE 절에서 열 수준 및 식 수준 데이터의 `nchar`, `nvarchar` 및 `ntext` 데이터 형식에 데이터 정렬을 적용하기 위해서만 사용할 수 있고 COLLATE 절에서 데이터베이스 또는 서버 인스턴스의 데이터 정렬을 변경하기 위해 사용할 수는 없습니다.  
   
 -   지정된 데이터 정렬 또는 참조된 개체가 사용하는 데이터 정렬에서 Windows가 지원하지 않는 코드 페이지를 사용하는 경우에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 오류가 나타납니다.  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   지원되는 데이터 정렬 이름은 [Windows 데이터 정렬 이름&#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql) 및 [SQL Server 데이터 정렬 이름&#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql)에서 확인할 수 있거나 [sys.fn_helpcollations&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql) 시스템 함수를 사용할 수 있습니다.  
   
@@ -57,22 +57,20 @@ ms.locfileid: "62874034"
   
     -   저장 프로시저 및 사용자 정의 함수에 대한 모든 기존 `char`, `varchar`, `text`, `nchar`, `nvarchar` 또는 `ntext` 매개 변수와 스칼라 반환 값이 새 데이터 정렬로 변경됩니다.  
   
-    -   
-  `char`, `varchar`, `text`, `nchar`, `nvarchar` 또는 `ntext` 시스템 데이터 형식 및 이러한 시스템 데이터 형식에 기반을 두는 모든 사용자 정의 데이터 형식이 새 기본 데이터 정렬로 변경됩니다.  
+    -   `char`, `varchar`, `text`, `nchar`, `nvarchar` 또는 `ntext` 시스템 데이터 형식 및 이러한 시스템 데이터 형식에 기반을 두는 모든 사용자 정의 데이터 형식이 새 기본 데이터 정렬로 변경됩니다.  
   
 -   사용자 데이터베이스에서 새로 만든 새 개체의 데이터 정렬은 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 문의 COLLATE 절을 사용하여 변경할 수 있습니다. 이 문은 기존 사용자 정의 테이블에 있는 열의 데이터 정렬은 변경하지 않습니다. 이러한 열은 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)문의 COLLATE 절을 사용하여 변경할 수 있습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  CREATE DATABASE  
- 
-  **master** 데이터베이스의 CREATE DATABASE 권한이 있거나 CREATE ANY DATABASE 또는 ALTER ANY DATABASE 권한이 있어야 합니다.  
+ **master** 데이터베이스의 CREATE DATABASE 권한이 있거나 CREATE ANY DATABASE 또는 ALTER ANY DATABASE 권한이 있어야 합니다.  
   
  ALTER DATABASE  
  데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-set-or-change-the-database-collation"></a>데이터베이스 데이터 정렬을 설정하거나 변경하려면  
   
@@ -84,7 +82,7 @@ ms.locfileid: "62874034"
   
 3.  작업이 완료되면 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-set-the-database-collation"></a>데이터베이스 데이터 정렬을 설정하려면  
   

@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1a6a226ae76f75a07b483b74a09ecafc0191eee2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919954"
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>SQL 서버의 사용자 정의 형식 작업
@@ -28,12 +28,10 @@ ms.locfileid: "62919954"
   
 ## <a name="in-this-section"></a>섹션 내용  
  [UDT 테이블 및 열 정의](working-with-user-defined-types-defining-udt-tables-and-columns.md)  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 테이블에 UDT 열을 만드는 방법을 설명합니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 테이블에 UDT 열을 만드는 방법을 설명합니다.  
   
  [UDT 데이터 조작](working-with-user-defined-types-manipulating-udt-data.md)  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 사용하여 UDT 데이터로 작업하는 방법을 설명합니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 사용하여 UDT 데이터로 작업하는 방법을 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CLR 사용자 정의 형식](clr-user-defined-types.md)  

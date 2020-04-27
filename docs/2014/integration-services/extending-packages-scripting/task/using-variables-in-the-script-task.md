@@ -21,22 +21,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a15edc663d5f855a5aa217400e1c38376e292f4c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62894594"
 ---
 # <a name="using-variables-in-the-script-task"></a>스크립트 태스크에서 변수 사용
   스크립트 태스크에서는 변수를 통해 패키지의 다른 개체와 데이터를 교환할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services-ssis-variables.md)을 참조하세요.  
   
- 스크립트 태스크에서는 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 개체의 `Dts` 속성을 사용하여 패키지의 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 개체를 읽고 씁니다.  
+ 스크립트 태스크에서는 `Dts` 개체의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 속성을 사용하여 패키지의 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 개체를 읽고 씁니다.  
   
 > [!NOTE]  
->  
-  <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 클래스의 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 속성은 `Object` 형식을 사용합니다. 스크립트 태스크에는 `Option Strict`가 설정되어 있으므로 스크립트 태스크를 사용하려면 먼저 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 속성을 적절한 형식으로 캐스팅해야 합니다.  
+>  <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 클래스의 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 속성은 `Object` 형식을 사용합니다. 스크립트 태스크에는 `Option Strict`가 설정되어 있으므로 스크립트 태스크를 사용하려면 먼저 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 속성을 적절한 형식으로 캐스팅해야 합니다.  
   
- <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A>스크립트 태스크 편집기<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A>의 **및** 목록에 기존 변수를 추가하여 사용자 지정 스크립트에서 해당 변수를 사용할 수 있게 할 수 있습니다. 변수 이름은 대/소문자를 구분합니다. 스크립트 내에서는 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 개체의 `Dts` 속성을 통해 두 유형의 변수에 액세스합니다. 개별 변수를 읽고 쓰는 데는 `Value` 속성을 사용합니다. 스크립트 태스크에서는 스크립트가 변수 값을 읽고 수정할 때 잠금을 투명하게 관리합니다.  
+ <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A>스크립트 태스크 편집기<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A>의 **및** 목록에 기존 변수를 추가하여 사용자 지정 스크립트에서 해당 변수를 사용할 수 있게 할 수 있습니다. 변수 이름은 대/소문자를 구분합니다. 스크립트 내에서는 `Dts` 개체의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 속성을 통해 두 유형의 변수에 액세스합니다. 개별 변수를 읽고 쓰는 데는 `Value` 속성을 사용합니다. 스크립트 태스크에서는 스크립트가 변수 값을 읽고 수정할 때 잠금을 투명하게 관리합니다.  
   
  <xref:Microsoft.SqlServer.Dts.Runtime.Variables.Contains%2A> 속성에서 반환된 <xref:Microsoft.SqlServer.Dts.Runtime.Variables> 컬렉션의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 메서드를 사용하여 코드에서 변수를 사용하기 전에 해당 변수가 있는지 여부를 확인할 수 있습니다.  
   
@@ -115,10 +114,10 @@ public class ScriptMain
   
 ```  
   
-![Integration Services 아이콘 (작은 아이콘)](../../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
+![Integration Services 아이콘 (작은 아이콘)](../../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Integration Services&#40;SSIS&#41; 변수](../../integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; 변수](../../integration-services-ssis-variables.md)   
  [패키지에서 변수 사용](../../use-variables-in-packages.md)  
   
   

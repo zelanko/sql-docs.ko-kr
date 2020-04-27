@@ -13,14 +13,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a4f23fd3d6d8208410c520676ee4e0c8bbe00fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922144"
 ---
 # <a name="backup-device-general-page"></a>백업 디바이스(일반 페이지)
-  
   **일반** 페이지를 사용하여 논리적 백업 디바이스의 일반 속성을 지정하거나 확인할 수 있습니다.  
   
  **SQL Server Management Studio를 사용하여 백업 디바이스의 내용을 보려면**  
@@ -30,21 +29,19 @@ ms.locfileid: "62922144"
 -   [논리적 백업 디바이스의 속성 및 내용 보기&#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
 ## <a name="options"></a>옵션  
- **장치 이름**  
+ **디바이스 이름**  
  기존 논리적 백업 디바이스의 이름을 확인하거나 새 논리적 백업 디바이스의 이름을 지정합니다.  
   
- **Tape**  
- 
-  **테이프** 목록에서 대상 테이프 디바이스를 확인하거나 선택합니다. 이 옵션은 인스턴스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]를 실행 하는 컴퓨터에 테이프 드라이브가 연결 되어 있는 경우에만 사용할 수 있습니다.  
+ **테이프**  
+ **테이프** 목록에서 대상 테이프 디바이스를 확인하거나 선택합니다. 이 옵션은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스를 실행하는 컴퓨터에 테이프 드라이브가 연결된 경우에만 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  원격 컴퓨터의 테이프 백업 디바이스는 올바른 백업 대상이 아닙니다.  
   
- **파일**  
+ **최근에 사용한 파일**  
  기존 논리적 백업 디바이스의 대상 파일을 확인하거나 새 논리적 백업 디바이스의 대상 파일을 지정합니다.  
   
--   기존 논리적 백업 디바이스의 경우 백업 파일의 경로가 표시됩니다. 
-  **파일** 필드를 편집할 수 없으며 찾아보기 단추를 사용할 수 없습니다.  
+-   기존 논리적 백업 디바이스의 경우 백업 파일의 경로가 표시됩니다. **파일** 필드를 편집할 수 없으며 찾아보기 단추를 사용할 수 없습니다.  
   
 -   새 논리적 백업 디바이스의 경우 논리적 백업 디바이스를 정의할 백업 파일의 경로를 제공해야 합니다. 아직 이 파일이 있을 필요는 없습니다.  
   
@@ -56,26 +53,25 @@ ms.locfileid: "62922144"
     >  네트워크를 통해 데이터를 백업할 경우에는 네트워크 오류가 발생할 수 있으므로 완료된 후에 백업 작업을 확인하는 것이 좋습니다. 자세한 내용은 [RESTORE VERIFYONLY&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)를 참조하세요.  
   
 ## <a name="remarks"></a>설명  
- 하나 이상의 백업 디바이스 세트에서의 백업이 미디어 세트 하나를 구성합니다. 
-  *미디어 세트* 는 하나 이상의 백업 작업에서 고정된 유형과 개수의 백업 디바이스를 사용하여 기록한 백업 미디어, 테이프 또는 디스크 파일의 모음입니다. 미디어 세트에 대한 자세한 내용은 [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)인스턴스를 실행하는 컴퓨터에 테이프 드라이브가 연결되어 있는 경우에만 사용할 수 있습니다.  
+ 하나 이상의 백업 디바이스 세트에서의 백업이 미디어 세트 하나를 구성합니다. *미디어 세트* 는 하나 이상의 백업 작업에서 고정된 유형과 개수의 백업 디바이스를 사용하여 기록한 백업 미디어, 테이프 또는 디스크 파일의 모음입니다. 미디어 세트에 대한 자세한 내용은 [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)인스턴스를 실행하는 컴퓨터에 테이프 드라이브가 연결되어 있는 경우에만 사용할 수 있습니다.  
   
  미디어 세트의 첫 번째 백업이 논리적 백업 디바이스에 기록되면 논리적 백업 디바이스에 해당하는 물리적 백업 디바이스가 초기화됩니다. 물리적 백업 디바이스가 아직 존재하지 않는 파일인 경우 이 시점에 만들어집니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [디스크 파일에 대한 논리적 백업 디바이스 정의&#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
 -   [테이프 드라이브에 대한 논리적 백업 디바이스 정의&#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
--   [디스크 또는 테이프를 백업 대상으로 지정 &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [디스크 또는 테이프를 백업 대상으로 지정&#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
--   [SQL Server&#41;&#40;백업 장치 삭제](delete-a-backup-device-sql-server.md)  
+-   [백업 디바이스 삭제&#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   
--   [백업 &#40;에서 만료 날짜를 설정 SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
+-   [백업의 만료 날짜 설정&#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
   
 -   [백업 테이프 또는 파일의 내용 보기&#40;SQL Server&#41;](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
--   [백업 세트에 있는 데이터 및 로그 파일 &#40;SQL Server를 확인&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
+-   [백업 세트의 데이터와 로그 파일 보기&#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
 -   [논리적 백업 디바이스의 속성 및 내용 보기&#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   

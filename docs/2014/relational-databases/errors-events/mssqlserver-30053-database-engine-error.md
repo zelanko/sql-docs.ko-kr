@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2b753397b4791d658692a8cb63dbc6a3d779c621
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62914360"
 ---
 # <a name="mssqlserver_30053"></a>MSSQLSERVER_30053
@@ -57,7 +57,7 @@ ms.locfileid: "62914360"
 |서버에서 실행되는 쿼리 작업의 양이 너무 많은 경우|부하를 줄여 쿼리를 다시 실행하십시오.|  
   
 ## <a name="see-also"></a>참고 항목  
- [전체 텍스트 필터 데몬 시작 관리자 서비스 계정 설정](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
+ [전체 텍스트 필터 데몬 시작 관리자에 대 한 서비스 계정 설정](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [전체 텍스트 검색](../search/full-text-search.md)   
  [Transact-sql&#41;sp_help_fulltext_system_components &#40;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
  [검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   

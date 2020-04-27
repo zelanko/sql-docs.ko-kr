@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922438"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>백업 및 복원: 상호 운용성 및 공존성(SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "62922438"
   
 -   [관련 작업](#RelatedTasks)  
   
-##  <a name="FileRestoreAndDbStartup"></a> 파일 복원 및 데이터베이스 시작  
+##  <a name="file-restore-and-database-startup"></a><a name="FileRestoreAndDbStartup"></a> 파일 복원 및 데이터베이스 시작  
  이 섹션에서는 여러 개의 파일 그룹이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 관련된 내용을 다룹니다.  
   
 > [!NOTE]  
@@ -52,14 +52,14 @@ ms.locfileid: "62922438"
   
  데이터베이스가 성공적으로 시작되면 오프라인 파일을 포함하는 모든 파일 그룹은 오프라인 상태로 남게 됩니다.  
   
-##  <a name="OnlineRestoreAndDisabledIndexes"></a> 온라인 복원 및 비활성화된 인덱스  
+##  <a name="online-restore-and-disabled-indexes"></a><a name="OnlineRestoreAndDisabledIndexes"></a> 온라인 복원 및 비활성화된 인덱스  
  이 섹션에서는 여러 개의 파일 그룹이 있는 데이터베이스와 관련된 내용 및 단순 복구 모델의 경우 하나 이상의 읽기 전용 파일 그룹과 관련된 내용을 다룹니다.  
   
  이러한 경우 데이터베이스가 온라인 상태이면 인덱스를 생성, 삭제, 활성화 또는 비활성화하기 위해서는 일부라도 인덱스를 보유하는 모든 파일 그룹이 온라인 상태여야 합니다.  
   
  오프라인 파일 그룹을 복원하는 방법은 [온라인 복원&#40;SQL Server&#41;](online-restore-sql-server.md)을 참조하세요.  
   
-##  <a name="DbMandBnR"></a> 데이터베이스 미러링, 백업 및 복원  
+##  <a name="database-mirroring-and-backup-and-restore"></a><a name="DbMandBnR"></a> 데이터베이스 미러링, 백업 및 복원  
  이 섹션에서는 여러 개의 파일 그룹이 있는 전체 모델 데이터베이스와 관련된 내용을 다룹니다.  
   
 > [!NOTE]  
@@ -84,7 +84,7 @@ ms.locfileid: "62922438"
   
 -   주 데이터베이스 복원이 허용되지 않습니다.  
   
-##  <a name="PiecemealAndFTIndexes"></a> 증분 복원 및 전체 텍스트 인덱스  
+##  <a name="piecemeal-restore-and-full-text-indexes"></a><a name="PiecemealAndFTIndexes"></a> 증분 복원 및 전체 텍스트 인덱스  
  이 섹션에서는 여러 개의 파일 그룹이 있는 데이터베이스와 관련된 내용 및 단순 모델 데이터베이스의 경우 읽기 전용 파일 그룹과 관련된 내용을 다룹니다.  
   
  전체 텍스트 인덱스는 데이터베이스 파일 그룹에 저장되며 증분 복원의 영향을 받을 수 있습니다. 전체 텍스트 인덱스가 관련 테이블 데이터와 동일한 파일 그룹에 있는 경우 증분 복원은 올바르게 동작합니다.  
@@ -111,7 +111,7 @@ ms.locfileid: "62922438"
   
  기본 테이블 파일 그룹과 전체 텍스트 인덱스 파일 그룹이 모두 온라인 상태가 된 직후부터 일시 중지된 전체 텍스트 채우기가 재개됩니다.  
   
-##  <a name="FileBnRandCompression"></a> 파일 백업과 복원 및 압축  
+##  <a name="file-backup-and-restore-and-compression"></a><a name="FileBnRandCompression"></a> 파일 백업과 복원 및 압축  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 읽기 전용 파일 그룹과 읽기 전용 데이터베이스에 대한 NTFS 파일 시스템 데이터 압축을 지원합니다.  
   
  압축된 NTFS 파일에 대해 읽기 전용 파일 그룹의 파일 복원이 지원됩니다. 이러한 파일 그룹의 백업 및 복원은 기본적으로 모든 읽기 전용 파일 그룹에서와 동일하게 동작하지만 다음과 같은 예외가 있습니다.  
@@ -123,7 +123,7 @@ ms.locfileid: "62922438"
 > [!NOTE]  
 >  읽기/쓰기 데이터베이스의 로그 파일은 압축 파일 시스템에 저장할 수 없습니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

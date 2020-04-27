@@ -19,17 +19,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62902450"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 데이터 형식
   데이터가 패키지의 데이터 흐름으로 들어갈 때 데이터를 추출하는 원본은 데이터를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환합니다. 숫자 데이터에는 숫자 데이터 형식이 지정되고, 문자열 데이터에는 문자 데이터 형식이, 그리고 날짜에는 날짜 데이터 형식이 지정됩니다. 또한 GUID 및 BLOB(Binary Large Object Block)과 같은 다른 데이터에는 해당 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식이 지정됩니다. 데이터에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식과 호환되지 않는 데이터 형식이 있는 경우에는 오류가 발생합니다.  
   
- 일부 데이터 흐름 구성 요소는 데이터 형식과의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]관리 되는 데이터 형식 간에 데이터 형식을 변환 합니다. 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 와 관리 데이터 형식 간 매핑에 대한 자세한 내용은 [데이터 흐름의 데이터 형식 작업](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)을 참조하세요.  
+ 일부 데이터 흐름 구성 요소는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식과 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 관리형 데이터 형식 간에 데이터 형식을 변환합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 와 관리 데이터 형식 간 매핑에 대한 자세한 내용은 [데이터 흐름의 데이터 형식 작업](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)을 참조하세요.  
   
  다음 표에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식을 나열합니다. 이 표의 일부 데이터 형식에는 해당 형식에 적용되는 전체 자릿수 및 소수 자릿수 정보가 있습니다. 전체 자릿수 및 소수 자릿수에 대한 자세한 내용은 [전체 자릿수, 소수 자릿수 및 길이&#40;Transact-SQL&#41;](/sql/t-sql/data-types/precision-scale-and-length-transact-sql)를 참조하세요.  
   
@@ -68,8 +67,7 @@ ms.locfileid: "62902450"
 ## <a name="conversion-of-data-types"></a>데이터 형식 변환  
  열의 데이터에 원본 데이터 형식으로 할당된 전체 너비가 필요하지 않은 경우 열의 데이터 형식을 변경할 수 있습니다. 각 행이 좁을수록 원본에서 대상으로 데이터를 이동하는 속도가 빨라지기 때문에 각 데이터 행을 가능한 한 좁게 만들면 데이터 전송 시 성능을 최적화할 수 있습니다.  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 숫자 데이터 형식이 모두 포함되어 있으므로 데이터의 크기와 적합한 데이터 형식을 찾아 볼 수 있습니다. 예를 들어 데이터 형식이 DT_UI8인 열의 값이 항상 0에서 3000 사이의 정수인 경우 데이터 형식을 DT_UI2로 변경할 수 있습니다. 마찬가지로, 데이터 형식이 DT_CY인 열에 대해 정수 데이터 형식을 대신 사용해도 패키지의 데이터 요구 사항에 문제가 없다면 해당 데이터 형식을 DT_I4로 변경할 수 있습니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 숫자 데이터 형식이 모두 포함되어 있으므로 데이터의 크기와 적합한 데이터 형식을 찾아 볼 수 있습니다. 예를 들어 데이터 형식이 DT_UI8인 열의 값이 항상 0에서 3000 사이의 정수인 경우 데이터 형식을 DT_UI2로 변경할 수 있습니다. 마찬가지로, 데이터 형식이 DT_CY인 열에 대해 정수 데이터 형식을 대신 사용해도 패키지의 데이터 요구 사항에 문제가 없다면 해당 데이터 형식을 DT_I4로 변경할 수 있습니다.  
   
  열의 데이터 형식은 다음과 같은 방식으로 변경할 수 있습니다.  
   
@@ -228,17 +226,17 @@ ms.locfileid: "62902450"
 |DT_DATE|||||||  
 |DT_DBDATE|[date&#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|[date&#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)||date|date|date|  
 |DT_DBTIME||||timestamp|time|time|  
-|DT_DBTIME2|[time &#40;transact-sql&#41;](/sql/t-sql/data-types/time-transact-sql)(p)|[time &#40;transact-sql&#41;](/sql/t-sql/data-types/time-transact-sql) (p)|||||  
-|DT_DBTIMESTAMP|[datetime &#40;transact-sql&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;transact-sql&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;transact-sql&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;transact-sql&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|DateTime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
+|DT_DBTIME2|[time&#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)(p)|[time&#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)(p)|||||  
+|DT_DBTIMESTAMP|[datetime&#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime&#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime&#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime&#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|DateTime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
 |DT_DBTIMESTAMP2|[datetime2&#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|[datetime2&#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)||timestamp|timestamp|timestamp|  
-|DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;transact-sql&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql)(p)|[datetimeoffset &#40;transact-sql&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
+|DT_DBTIMESTAMPOFFSET|[datetimeoffset&#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql)(p)|[datetimeoffset&#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
 |DT_FILETIME|||||||  
 |DT_GUID|uniqueidentifier|uniqueidentifier|GUID||||  
 |DT_I1|||||||  
-|DT_I2|smallint|smallint|짧음||SmallInt|SmallInt|  
+|DT_I2|smallint|smallint|Short||SMALLINT|SMALLINT|  
 |DT_I4|int|int|long||INTEGER|INTEGER|  
-|DT_I8|bigint|bigint|||BIGINT|BIGINT|  
+|DT_I8|bigint|bigint|||bigint|bigint|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
 |DT_R4|real|real|Single||real|real|  
 |DT_R8|float|float|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  

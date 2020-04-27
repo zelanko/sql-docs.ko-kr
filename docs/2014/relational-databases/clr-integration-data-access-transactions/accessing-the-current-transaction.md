@@ -15,16 +15,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad369e49298c4d39a7e936ce8acf47ca2035c8f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62920014"
 ---
 # <a name="accessing-the-current-transaction"></a>현재 트랜잭션 액세스
-  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행되는 CLR(공용 언어 런타임) 코드를 입력하는 시점에 트랜잭션이 활성 상태인 경우 트랜잭션은 `System.Transactions.Transaction` 클래스를 통해 표시됩니다. 
-  `Transaction.Current` 속성은 현재 트랜잭션에 액세스하는 데 사용됩니다. 대부분의 경우 트랜잭션에 명시적으로 액세스할 필요가 없습니다. 데이터베이스 연결의 경우 ADO.NET에서는 `Transaction.Current` 메서드를 호출할 때 `Connection.Open`를 자동으로 검사하고 연결 문자열에서 `Enlist` 키워드가 false로 설정되지 않은 경우 연결을 트랜잭션에 투명하게 참여시킵니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행되는 CLR(공용 언어 런타임) 코드를 입력하는 시점에 트랜잭션이 활성 상태인 경우 트랜잭션은 `System.Transactions.Transaction` 클래스를 통해 표시됩니다. `Transaction.Current` 속성은 현재 트랜잭션에 액세스하는 데 사용됩니다. 대부분의 경우 트랜잭션에 명시적으로 액세스할 필요가 없습니다. 데이터베이스 연결의 경우 ADO.NET에서는 `Transaction.Current` 메서드를 호출할 때 `Connection.Open`를 자동으로 검사하고 연결 문자열에서 `Enlist` 키워드가 false로 설정되지 않은 경우 연결을 트랜잭션에 투명하게 참여시킵니다.  
   
  다음 시나리오에서는 `Transaction` 개체를 직접 사용할 수 있습니다.  
   
@@ -66,8 +64,7 @@ The context transaction which was active before entering user defined routine, t
  이 예외도 예상된 것이며 실행을 계속하려면 트리거를 발생시키는 동작을 수행하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 try/catch 블록으로 둘러싸야 합니다. 두 가지 예외가 throw되지만 트랜잭션이 롤백되고 변경 내용이 커밋되지 않습니다.  
   
 ### <a name="example"></a>예제  
- 다음은 `Transaction.Rollback` 메서드를 사용하여 관리되는 프로시저에서 트랜잭션을 롤백하는 예입니다. 관리되는 코드에서 `Transaction.Rollback` 메서드는 try/catch 블록으로 둘러싸여 있습니다. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트는 어셈블리 및 관리되는 저장 프로시저를 만듭니다. `EXEC uspRollbackFromProc` 문이 try/catch 블록에 래핑되어 관리 되는 프로시저의 실행이 완료 될 때 throw 되는 예외가 catch 됩니다.  
+ 다음은 `Transaction.Rollback` 메서드를 사용하여 관리되는 프로시저에서 트랜잭션을 롤백하는 예입니다. 관리되는 코드에서 `Transaction.Rollback` 메서드는 try/catch 블록으로 둘러싸여 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트는 어셈블리 및 관리되는 저장 프로시저를 만듭니다. `EXEC uspRollbackFromProc` 문이 try/catch 블록에 래핑되어 관리 되는 프로시저의 실행이 완료 될 때 throw 되는 예외가 catch 됩니다.  
   
 ```csharp  
 using System;  

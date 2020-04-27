@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 12ca3fcb00122313c1d1e4aae8b64733be9140c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918994"
 ---
 # <a name="clr-integration-security"></a>CLR 통합 보안
@@ -27,8 +27,7 @@ ms.locfileid: "62918994"
   
  CLR 통합 보안 모델의 목표는 다음과 같습니다.  
   
--   기본적으로에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]관리 되는 사용자 코드를 실행 합니다. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 견고성을 손상할 수 있는 작업을 수행하려면 높은 수준의 사용 권한으로 보호해야 합니다.  
+-   기본적으로에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]관리 되는 사용자 코드를 실행 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 견고성을 손상할 수 있는 작업을 수행하려면 높은 수준의 사용 권한으로 보호해야 합니다.  
   
 -   관리되는 사용자 코드에서 데이터베이스의 사용자 데이터나 다른 사용자 코드에 무단으로 액세스하지 못하도록 해야 합니다. 사용자 정의 코드는 해당 코드를 호출한 사용자 세션의 보안 컨텍스트에서 해당 보안 컨텍스트에 대한 올바른 권한을 사용하여 실행해야 합니다.  
   
@@ -47,8 +46,7 @@ ms.locfileid: "62918994"
  SAFE 및 EXTERNAL_ACCESS 어셈블리에서 허용되지 않는 HPA(호스트 보호 특성)에 대한 정보를 제공합니다.  
   
  [CLR 통합 보안의 링크](../../../database-engine/dev-guide/links-in-clr-integration-security.md)  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용자 코드 조각이 상호 호출하는 방법을 설명합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용자 코드 조각이 상호 호출하는 방법을 설명합니다.  
   
  [가장 및 CLR 통합 보안](../../../database-engine/dev-guide/impersonation-and-clr-integration-security.md)  
  관리 코드에서 가장을 사용하여 외부 리소스에 액세스하는 방법을 설명합니다.  

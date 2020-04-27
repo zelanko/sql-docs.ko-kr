@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95d0da610a8030c68bcf25d650e68aef4ae83128
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62915466"
 ---
 # <a name="mssqlserver_17084"></a>MSSQLSERVER_17084
@@ -36,8 +36,7 @@ ms.locfileid: "62915466"
  BEGIN ATOMIC 문의 WITH 절이 옵션 값을 지정하지 않았습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
- 
-  `ATOMIC` 블록에는 `WITH` 옵션 `TRANSACTION ISOLATION LEVEL` 및 `LANGUAGE`에 대한 값이 필요합니다. 예::  
+ `ATOMIC` 블록에는 `WITH` 옵션 `TRANSACTION ISOLATION LEVEL` 및 `LANGUAGE`에 대한 값이 필요합니다. 예::  
   
 ```  
 BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N'us_english')  

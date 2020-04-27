@@ -18,18 +18,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f47eec543c21e74565d750035d20fbcee9baa82e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62877313"
 ---
 # <a name="administer-multiple-servers-using-central-management-servers"></a>중앙 관리 서버를 사용하여 여러 서버 관리
   중앙 관리 서버를 지정하고 서버 그룹을 만들어 여러 서버를 관리할 수 있습니다.  
   
 ## <a name="benefits-of-central-management-servers-and-server-groups"></a>중앙 관리 서버 및 서버 그룹의 이점  
- 중앙 관리 서버로 지정된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스는 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 대한 연결 정보를 포함하는 서버 그룹을 유지 관리합니다. 서버 그룹에 대해 [!INCLUDE[tsql](../includes/tsql-md.md)] 문과 정책 기반 관리 정책을 동시에 실행할 수 있습니다. 중앙 관리 서버를 통해 관리되는 인스턴스에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그 파일을 볼 수도 있습니다. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이전의 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 버전은 중앙 관리 서버로 지정할 수 없습니다.  
+ 중앙 관리 서버로 지정된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스는 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 대한 연결 정보를 포함하는 서버 그룹을 유지 관리합니다. 서버 그룹에 대해 [!INCLUDE[tsql](../includes/tsql-md.md)] 문과 정책 기반 관리 정책을 동시에 실행할 수 있습니다. 중앙 관리 서버를 통해 관리되는 인스턴스에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그 파일을 볼 수도 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이전의 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 버전은 중앙 관리 서버로 지정할 수 없습니다.  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 실행할 수도 있습니다.  
   

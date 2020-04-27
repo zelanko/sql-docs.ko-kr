@@ -19,14 +19,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8f70a2df2fd824d8a0021a0985d6f75e79efce48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919601"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>CLR 사용자 정의 집계 함수 호출
-  
   [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문에서 시스템 집계 함수에 적용되는 모든 규칙을 따르는 CLR(공용 언어 런타임) 사용자 정의 집계를 호출할 수 있습니다.  
   
  다음 추가 규칙이 적용됩니다.  
@@ -209,8 +208,7 @@ EXTERNAL NAME MyAgg.Concatenate;
 > [!NOTE]  
 >  /clr:pure 컴파일러 옵션을 사용하여 컴파일된 Visual C++ 데이터베이스 개체(예: 스칼라 반환 함수)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행할 수 없습니다.  
   
- 대부분의 집계와 마찬가지로, 많은 논리가 `Accumulate` 메서드에 있습니다. 여기서 `Accumulate` 메서드에 매개 변수로 전달되는 문자열이 `StringBuilder` 메서드에서 초기화된 `Init` 개체에 추가됩니다. 
-  `Accumulate` 메서드가 처음으로 호출된 것이 아닐 경우 전달된 문자열을 추가하기 전에 `StringBuilder`에 쉼표도 추가됩니다. 계산 태스크를 마칠 때 `Terminate` 메서드가 호출되고 `StringBuilder`가 문자열로 반환됩니다.  
+ 대부분의 집계와 마찬가지로, 많은 논리가 `Accumulate` 메서드에 있습니다. 여기서 `Accumulate` 메서드에 매개 변수로 전달되는 문자열이 `StringBuilder` 메서드에서 초기화된 `Init` 개체에 추가됩니다. `Accumulate` 메서드가 처음으로 호출된 것이 아닐 경우 전달된 문자열을 추가하기 전에 `StringBuilder`에 쉼표도 추가됩니다. 계산 태스크를 마칠 때 `Terminate` 메서드가 호출되고 `StringBuilder`가 문자열로 반환됩니다.  
   
  예를 들어 다음 스키마가 있는 테이블을 고려해 보십시오.  
   

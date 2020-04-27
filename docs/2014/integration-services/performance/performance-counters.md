@@ -17,19 +17,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 79c9e433a6b5bcf9babee0060fdf028775e0e8a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889839"
 ---
 # <a name="performance-counters"></a>성능 카운터
-  
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 데이터 흐름 엔진의 성능을 모니터링하는 데 사용할 수 있는 성능 카운터 집합을 설치합니다. 예를 들어 "Buffers spooled" 카운터를 보면 패키지가 실행되는 동안 데이터 버퍼가 디스크에 임시로 기록되는지 여부를 확인할 수 있습니다. 이러한 스와핑은 성능을 저하시키고 컴퓨터에 메모리가 부족함을 나타냅니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 을 실행하는 컴퓨터에 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]를 설치한 다음 해당 컴퓨터를 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]로 업그레이드하는 경우 업그레이드 프로세스는 컴퓨터에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 성능 카운터를 제거합니다. 컴퓨터에 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 성능 카운터를 복원하려면 복원 모드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행합니다.  
+>  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 을 실행하는 컴퓨터에 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]를 설치한 다음 해당 컴퓨터를 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]로 업그레이드하는 경우 업그레이드 프로세스는 컴퓨터에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 성능 카운터를 제거합니다. 컴퓨터에 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 성능 카운터를 복원하려면 복원 모드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행합니다.  
   
  다음 표에서는 성능 카운터에 대해 설명합니다.  
   
@@ -53,8 +51,7 @@ ms.locfileid: "62889839"
  성능을 향상시키는 방법에 대한 자세한 내용은 [데이터 흐름 성능 기능](../data-flow/data-flow-performance-features.md)을 참조하세요.  
   
 ## <a name="obtain-performance-counter-statistics"></a>성능 카운터 통계 가져오기  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트의 경우 [dm_execution_performance_counters&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/functions-dm-execution-performance-counters) 함수를 사용하여 성능 카운터 통계를 가져올 수 있습니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트의 경우 [dm_execution_performance_counters&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/functions-dm-execution-performance-counters) 함수를 사용하여 성능 카운터 통계를 가져올 수 있습니다.  
   
  다음 예에서는 이 함수가 ID가 34인 실행 인스턴스에 대한 통계를 반환합니다.  
   
@@ -70,9 +67,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
 ```  
   
 > [!IMPORTANT]  
->  
-  `ssis_admin` 데이터베이스 역할의 멤버에게는 진행 중인 모든 실행에 대한 성능 통계가 반환됩니다.  
-  `ssis_admin` 데이터베이스 역할이 아닌 멤버에게는 읽기 권한이 있는 진행 중인 실행에 대한 성능 통계가 반환됩니다.  
+>  `ssis_admin` 데이터베이스 역할의 멤버에게는 진행 중인 모든 실행에 대한 성능 통계가 반환됩니다.  `ssis_admin` 데이터베이스 역할이 아닌 멤버에게는 읽기 권한이 있는 진행 중인 실행에 대한 성능 통계가 반환됩니다.  
   
 ## <a name="related-content"></a>관련 내용  
   

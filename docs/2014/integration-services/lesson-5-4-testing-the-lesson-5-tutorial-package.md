@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30f395ed065df5974adf6146a4ee12d0c7b472f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890945"
 ---
 # <a name="step-4-testing-the-lesson-5-tutorial-package"></a>4단계: 5단원 자습서 패키지 테스트
@@ -35,9 +35,9 @@ ms.locfileid: "62890945"
   
 ### <a name="to-test-the-lesson-5-tutorial-package"></a>5단원 자습서 패키지를 테스트하려면  
   
-1.  **디버그** 메뉴에서 **디버깅 시작**을 클릭합니다.  
+1.  **디버그** 메뉴에서 **디버깅 시작**을 클릭 합니다.  
   
-2.  패키지의 실행이 완료된 후에 **디버그** 메뉴에서 **디버깅 중지**를 클릭합니다.  
+2.  패키지 실행이 완료 되 면 **디버그** 메뉴에서 **디버깅 중지**를 클릭 합니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
  [6단원: 프로젝트 배포 모델에 매개 변수 사용](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  

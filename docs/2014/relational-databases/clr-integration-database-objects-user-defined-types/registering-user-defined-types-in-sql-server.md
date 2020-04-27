@@ -34,18 +34,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 19ea6e9f077b5097b8c5daa6d967a17336553ba7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919945"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>SQL Server의 사용자 정의 형식 등록
   에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]UDT (사용자 정의 형식)를 사용 하려면 등록 해야 합니다. UDT를 등록하려면 해당 형식을 사용할 데이터베이스에 어셈블리를 등록하고 형식을 만듭니다. UDT는 범위가 단일 데이터베이스로 한정되며, 데이터베이스마다 동일한 어셈블리와 UDT를 등록하지 않는 한 여러 데이터베이스에 사용할 수 없습니다. UDT 어셈블리가 등록되고 형식이 만들어지면 [!INCLUDE[tsql](../../includes/tsql-md.md)]과 클라이언트 코드에 UDT를 사용할 수 있습니다. 자세한 내용은 [CLR 사용자 정의 형식](clr-user-defined-types.md)을 참조하세요.  
   
 ## <a name="using-visual-studio-to-deploy-udts"></a>Visual Studio를 사용하여 UDT 배포  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio를 사용하면 UDT를 간편하게 배포할 수 있습니다. 그러나 배포 시나리오가 복잡하거나 높은 유연성이 요구되는 경우에는 이 항목에서 설명하는 대로 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용해야 합니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio를 사용하면 UDT를 간편하게 배포할 수 있습니다. 그러나 배포 시나리오가 복잡하거나 높은 유연성이 요구되는 경우에는 이 항목에서 설명하는 대로 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용해야 합니다.  
   
  다음 단계에 따라 Visual Studio를 사용하여 UDT를 만들고 배포하십시오.  
   
@@ -65,10 +64,9 @@ ms.locfileid: "62919945"
 ### <a name="using-create-assembly"></a>CREATE ASSEMBLY 사용  
  CREATE ASSEMBLY 구문은 UDT를 사용할 데이터베이스에 어셈블리를 등록하는 데 사용됩니다. 등록된 어셈블리에는 종속성이 없습니다.  
   
- 특정 데이터베이스에 같은 어셈블리를 여러 버전으로 만들 수 없습니다. 그러나 특정 데이터베이스의 culture에 따라 같은 어셈블리를 여러 버전으로 만들 수는 있습니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 어셈블리의 여러 culture 버전을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 서로 다른 이름으로 등록하여 구분합니다. 자세한 내용은 .NET Framework SDK에서 "강력한 이름의 어셈블리 생성 및 사용"을 참조하십시오.  
+ 특정 데이터베이스에 같은 어셈블리를 여러 버전으로 만들 수 없습니다. 그러나 특정 데이터베이스의 culture에 따라 같은 어셈블리를 여러 버전으로 만들 수는 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 어셈블리의 여러 culture 버전을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 서로 다른 이름으로 등록하여 구분합니다. 자세한 내용은 .NET Framework SDK에서 "강력한 이름의 어셈블리 생성 및 사용"을 참조하십시오.  
   
- SAFE 또는 EXTERNAL_ACCESS 권한 집합을 사용하여 CREATE ASSEMBLY를 실행하면 확인할 수 있으며 형식이 안전한지 여부에 대해 어셈블리 검사가 수행됩니다. 권한 집합을 지정하지 않으면 SAFE가 사용됩니다. UNSAFE 권한 집합을 사용한 코드는 검사되지 않습니다. 어셈블리 권한 집합에 대한 자세한 내용은 [Designing Assemblies](../../relational-databases/clr-integration/assemblies-designing.md)을 참조하십시오.  
+ SAFE 또는 EXTERNAL_ACCESS 권한 집합을 사용하여 CREATE ASSEMBLY를 실행하면 확인할 수 있으며 형식이 안전한지 여부에 대해 어셈블리 검사가 수행됩니다. 권한 집합을 지정하지 않으면 SAFE가 사용됩니다. UNSAFE 권한 집합을 사용한 코드는 검사되지 않습니다. 어셈블리 권한 집합에 대한 자세한 내용은 [Designing Assemblies](../../relational-databases/clr-integration/assemblies-designing.md)를 참조하십시오.  
   
 #### <a name="example"></a>예제  
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 SAFE 권한 집합을 사용 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 여 **AdventureWorks** 데이터베이스의에 Point 어셈블리를 등록 합니다. WITH PERMISSION_SET 절을 생략하면 어셈블리가 SAFE 권한 집합을 사용하여 등록됩니다.  
@@ -146,8 +144,7 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
 ```  
   
 ## <a name="maintaining-udts"></a>UDT 유지 관리  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 만든 UDT는 수정할 수 없습니다. 단, 해당 형식의 기반이 되는 어셈블리는 변경할 수 있습니다. 대부분의 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] DROP TYPE 문을 사용하여 데이터베이스에서 UDT를 제거하고 기본 어셈블리를 변경한 다음 ALTER ASSEMBLY 문을 사용하여 다시 로드해야 합니다. 그런 다음 UDT와 모든 종속 개체를 다시 만들어야 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 만든 UDT는 수정할 수 없습니다. 단, 해당 형식의 기반이 되는 어셈블리는 변경할 수 있습니다. 대부분의 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] DROP TYPE 문을 사용하여 데이터베이스에서 UDT를 제거하고 기본 어셈블리를 변경한 다음 ALTER ASSEMBLY 문을 사용하여 다시 로드해야 합니다. 그런 다음 UDT와 모든 종속 개체를 다시 만들어야 합니다.  
   
 ### <a name="example"></a>예제  
  UDT 어셈블리의 원본 코드를 변경하여 다시 컴파일한 후에는 ALTER ASSEMBLY 문이 사용됩니다. 이 문은 .dll 파일을 서버에 복사하고 새 어셈블리에 다시 바인딩합니다. 전체 구문은 [ALTER ASSEMBLY &#40;transact-sql&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)를 참조 하세요.  
@@ -180,7 +177,7 @@ ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;
  **file_id**  
  지정 된 **assembly_id** 와 연결 된 첫 번째 개체의 값이 1 인 각 개체를 식별 하는 숫자입니다. 동일한 **assembly_id**와 연결 된 개체가 여러 개 있는 경우 각 후속 **file_id** 값은 1 씩 증가 합니다.  
   
- **콘텐트가**  
+ **content**  
  어셈블리 또는 파일의 16진수 표현입니다.  
   
  CAST 또는 CONVERT 함수를 사용 하 여 **콘텐츠** 열의 내용을 읽을 수 있는 텍스트로 변환할 수 있습니다. 다음 쿼리는 WHERE 절에 이름을 사용하여 결과 집합을 단일 행으로 제한함으로써 Point.cs 파일의 내용을 읽기 쉬운 텍스트로 변환합니다.  
@@ -214,8 +211,7 @@ SELECT CAST(content AS varchar(8000))
   
 -   한 데이터베이스 테이블의 UDT 열에서 UDT 데이터를 선택하여 동일한 UDT 열이 있는 다른 한 데이터베이스에 삽입  
   
- 이러한 시나리오에서는 필요한 변환이 서버에서 자동으로 수행됩니다. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 함수나 CONVERT 함수를 사용하여 변환을 명시적으로 수행할 수는 없습니다.  
+ 이러한 시나리오에서는 필요한 변환이 서버에서 자동으로 수행됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 함수나 CONVERT 함수를 사용하여 변환을 명시적으로 수행할 수는 없습니다.  
   
  에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **tempdb** 시스템 데이터베이스에 작업 테이블을 만들 때는 udt 사용에 대 한 작업을 수행할 필요가 없습니다. 여기에는 커서, 테이블 변수 및 **tempdb**를 투명 하 게 사용 하는 udt를 포함 하는 사용자 정의 테이블 반환 함수를 처리 하는 작업이 포함 됩니다. 그러나 UDT 열을 정의 하는 **tempdb** 에 임시 테이블을 명시적으로 만드는 경우에는 사용자 데이터베이스와 동일한 방식으로 **tempdb** 에 udt를 등록 해야 합니다.  
   

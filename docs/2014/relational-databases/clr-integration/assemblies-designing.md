@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad5135eb8141cc84bc6e5bddc8bd8477f4699b9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874926"
 ---
 # <a name="designing-assemblies"></a>어셈블리 디자인
@@ -57,8 +57,7 @@ ms.locfileid: "62874926"
  또한 UNSAFE를 지정하면 어셈블리에 있는 코드에서 CLR 확인 프로그램에 의해 안전하지 않은 유형으로 간주되는 작업을 수행할 수 있습니다. 이러한 작업은 제어되지 않는 방식으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로세스 공간에서 메모리 버퍼에 액세스할 가능성이 있습니다. UNSAFE 어셈블리는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 공용 언어 런타임 중 하나의 보안 시스템을 손상시킬 수도 있습니다. UNSAFE 권한은 숙련된 개발자 또는 관리자가 가장 신뢰할 수 있는 어셈블리에만 부여해야 합니다. **Sysadmin** 고정 서버 역할의 멤버만 UNSAFE 어셈블리를 만들 수 있습니다.  
   
 ## <a name="restrictions-on-assemblies"></a>어셈블리에 대한 제한  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 어셈블리를 안정적이고 확장 가능한 방식으로 실행할 수 있도록 보장하기 위해 어셈블리에 있는 관리 코드에 특정 제한을 지정합니다. 즉, 서버의 견고성을 손상시킬 수 있는 작업은 SAFE 및 EXTERNAL_ACCESS 어셈블리에서 허용되지 않습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 어셈블리를 안정적이고 확장 가능한 방식으로 실행할 수 있도록 보장하기 위해 어셈블리에 있는 관리 코드에 특정 제한을 지정합니다. 즉, 서버의 견고성을 손상시킬 수 있는 작업은 SAFE 및 EXTERNAL_ACCESS 어셈블리에서 허용되지 않습니다.  
   
 ### <a name="disallowed-custom-attributes"></a>허용되지 않는 사용자 지정 특성  
  다음과 같은 사용자 지정 특성으로는 어셈블리에 주석을 지정할 수 없습니다.  

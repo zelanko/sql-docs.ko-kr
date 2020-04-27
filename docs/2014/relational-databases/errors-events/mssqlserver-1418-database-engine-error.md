@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7abc0b4dea4df1637b4ba9456dee6a897184f20a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62915769"
 ---
 # <a name="mssqlserver_1418"></a>MSSQLSERVER_1418
@@ -94,8 +94,8 @@ ms.locfileid: "62915769"
   
 ## <a name="see-also"></a>참고 항목  
  [ALTER ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
- [데이터베이스 미러링 엔드포인트&#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
+ [데이터베이스 미러링 끝점은 SQL Server을 &#40;&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [미러링을 위한 미러 데이터베이스 준비 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [SERVERPROPERTY &#40;Transact-sql&#41;](/sql/t-sql/functions/serverproperty-transact-sql)   
  [데이터베이스 미러링 &#40;서버 네트워크 주소를 지정&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
  [database_mirroring_endpoints &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)   

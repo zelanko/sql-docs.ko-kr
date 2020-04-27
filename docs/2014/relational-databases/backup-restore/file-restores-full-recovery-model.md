@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a78b177b1fb429535a4bb9b271d0b1dbc4eedc79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921944"
 ---
 # <a name="file-restores-full-recovery-model"></a>파일 복원(전체 복구 모델)
@@ -54,7 +54,7 @@ ms.locfileid: "62921944"
   
   
   
-##  <a name="Overview"></a> 파일 백업에서 손상된 파일 복원  
+##  <a name="restoring-damaged-files-from-file-backups"></a><a name="Overview"></a> 파일 백업에서 손상된 파일 복원  
   
 1.  하나 이상의 손상된 파일을 복원하려면 먼저 [비상 로그 백업](tail-log-backups-sql-server.md)을 만듭니다.  
   
@@ -120,7 +120,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 -   [예제: 주 파일 그룹 및 다른 파일 그룹의 오프라인 복원&#40;전체 복구 모델&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **파일과 파일 그룹을 복원하려면**  
   
 -   [새 위치로 파일 복원&#40;SQL Server&#41;](restore-files-to-a-new-location-sql-server.md)  

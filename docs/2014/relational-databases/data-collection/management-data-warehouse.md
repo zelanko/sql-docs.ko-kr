@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918341"
 ---
 # <a name="management-data-warehouse"></a>관리 데이터 웨어하우스
@@ -126,9 +126,9 @@ ms.locfileid: "62918341"
 |"snapshots 스키마" 섹션의 테이블 목록이 업데이트되었습니다. snapshots.os_memory_clerks,snapshots.sql_process_and_system_memory 및 snapshots.io_virtual_file_stats가 추가되었습니다. snapshots.os_process_memory 및 snapshots.distinct_query_stats가 제거되었습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [관리 데이터 웨어하우스 저장 프로시저&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
- [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
- [데이터 컬렉션](data-collection.md)   
+ [Transact-sql&#41;관리 데이터 웨어하우스 저장 프로시저 &#40;](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
+ [Transact-sql&#41;&#40;데이터 수집기 저장 프로시저](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
+ [데이터 수집](data-collection.md)   
  [컬렉션 집합 보고서 보기&#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)  
   
   

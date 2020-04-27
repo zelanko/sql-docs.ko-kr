@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916747"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>힙 크기 예측
@@ -63,7 +63,7 @@ ms.locfileid: "62916747"
   
 5.  전체 행 크기를 계산합니다.  
   
-     ***Row_Size***  = ***Fixed_Data_Size*** + ***Variable_Data_Size*** + ***Null_Bitmap*** + 4  
+     ***Row_Size***  = ***Fixed_Data_Size***Fixed_Data_Size + ***Variable_Data_Size***Variable_Data_Size + ***Null_Bitmap*** + 4  
   
      이 수식에서 값 4는 데이터 행의 행 머리글 오버헤드입니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62916747"
   
 7.  모든 행을 저장하는 데 필요한 페이지 수를 계산합니다.  
   
-     ***Num_Pages***    = ***Num_Rows ***  / ***Rows_Per_Page***  
+     ***Num_Pages***  = ***Num_Rows*** / ***Rows_Per_Page***  
   
      예상 페이지 수는 가장 근사한 전체 페이지로 올림되어 계산됩니다.  
   

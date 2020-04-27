@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 83ac357d01b616a0010b9c2132f77bbcf89b479b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917004"
 ---
 # <a name="database-properties-transaction-log-shipping-page"></a>데이터베이스 속성(트랜잭션 로그 전달 페이지)
@@ -32,7 +32,7 @@ ms.locfileid: "62917004"
  백업 일정, 위치, 경고 및 보관 매개 변수를 구성하려면 **백업 설정** 을 클릭합니다.  
   
  **백업 일정**  
- 주 데이터베이스에 대해 현재 선택한 백업 일정을 보여 줍니다. 이러한 설정을 수정하려면 **백업 설정** 을 클릭합니다.  
+ 주 데이터베이스에 대해 현재 선택한 백업 일정을 보여 줍니다. 이러한 설정을 수정하려면 **백업 설정**을 클릭합니다.  
   
  **마지막으로 백업을 만든 날짜**  
  주 데이터베이스에서 마지막으로 수행된 트랜잭션 로그 백업의 시간과 날짜를 나타냅니다.  

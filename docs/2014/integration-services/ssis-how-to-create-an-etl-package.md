@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e25c90b3baa4e718f40dc3a3f84b6dc221d54c33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62878287"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>SSIS 자습서: 간단한 ETL 패키지 만들기
@@ -39,21 +39,18 @@ ms.locfileid: "62878287"
   
  이 자습서를 사용하려면 시스템에 다음 구성 요소가 설치되어 있어야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]**AdventureWorksDW2012** 데이터베이스를 사용 합니다. 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다. 
-  **AdventureWorksDW2012** 데이터베이스를 다운로드하려면 [SQL Server 2012용 Adventure Works](https://go.microsoft.com/fwlink/?LinkId=275026)를 참조하십시오.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]**AdventureWorksDW2012** 데이터베이스를 사용 합니다. 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다. **AdventureWorksDW2012** 데이터베이스를 다운로드하려면 [SQL Server 2012용 Adventure Works](https://go.microsoft.com/fwlink/?LinkId=275026)를 참조하십시오.  
   
     > [!IMPORTANT]  
-    >  데이터베이스(\*.mdf 파일)에 연결할 때 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에서 기본적으로 .ldf 파일을 검색합니다. 
-  **데이터베이스 연결** 대화 상자에서 확인을 클릭하기 전에 .ldf 파일을 수동으로 제거해야 합니다.  
+    >  데이터베이스(\*.mdf 파일)에 연결할 때 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에서 기본적으로 .ldf 파일을 검색합니다. **데이터베이스 연결** 대화 상자에서 확인을 클릭하기 전에 .ldf 파일을 수동으로 제거해야 합니다.  
     >   
     >  데이터베이스 연결에 대한 자세한 내용은 [Attach a Database](../relational-databases/databases/attach-a-database.md)을 참조하십시오.  
   
 -   데이터 샘플링 예제 데이터는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 단원 패키지에 포함되어 있습니다. 예제 데이터 및 단원 패키지를 다운로드하려면 다음을 수행합니다.  
   
-    1.  [Integration Services 제품 샘플](https://go.microsoft.com/fwlink/?LinkId=275027) 로 이동 합니다.  
+    1.  [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=275027)로 이동합니다.  
   
-    2.  
-  **DOWNLOADS** 탭을 클릭합니다.  
+    2.  **다운로드** 탭을 클릭 합니다.  
   
     3.  SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 파일을 클릭합니다.  
   
@@ -67,7 +64,7 @@ ms.locfileid: "62878287"
  [3단원: 로깅 추가](lesson-3-add-logging-with-ssis.md)  
  이 단원에서는 2단원에서 만든 패키지를 확장하여 새 로깅 기능을 활용합니다.  
   
- [4단원: 오류 흐름 리디렉션 추가](lesson-4-add-error-flow-redirection-with-ssis.md)  
+ [4단원: 오류 Flow 리디렉션 추가](lesson-4-add-error-flow-redirection-with-ssis.md)  
  이 단원에서는 3단원에서 만든 패키지를 확장하여 새 오류 출력 구성을 활용합니다.  
   
  [5단원: 패키지 배포 모델을 위한 패키지 구성 추가](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  

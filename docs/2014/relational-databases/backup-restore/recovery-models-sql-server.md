@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6c5b85e316c859e0b6d44fb83e3df6da2edd72ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921768"
 ---
 # <a name="recovery-models-sql-server"></a>복구 모델(SQL Server)
@@ -44,25 +44,25 @@ ms.locfileid: "62921768"
   
 -   [관련 작업](#RelatedTasks)  
   
-##  <a name="RMov"></a> 복구 모델 개요  
+##  <a name="recovery-model-overview"></a><a name="RMov"></a> 복구 모델 개요  
  다음 표에서는 세 가지 복구 모델을 요약합니다.  
   
 |복구 모델|Description|작업 손실 가능성|정해진 시간에 복구 가능 여부|  
 |--------------------|-----------------|------------------------|-------------------------------|  
 |**간단**|로그 백업 없음<br /><br /> 로그 공간을 자동으로 회수하여 공간 요구 사항을 적게 유지함으로써 트랜잭션 로그 공간을 관리할 필요가 없도록 함 단순 복구 모델에서의 데이터베이스 백업에 대한 자세한 내용은 [전체 데이터베이스 백업&#40;SQL Server&#41;](full-database-backups-sql-server.md)을 참조하세요.<br /><br /> 트랜잭션 로그 백업이 필요한 작업에는 단순 복구 모델이 지원되지 않습니다. 다음 기능은 단순 복구 모드에서 사용할 수 없습니다.<br /><br /> 로그 전달<br /><br /> AlwaysOn 또는 데이터베이스 미러링<br /><br /> 데이터 손실 없는 미디어 복구<br /><br /> 지정 시간 복원|가장 최근 백업 이후의 변경 내용은 보호되지 않음. 재해가 발생할 경우 이러한 변경 내용을 다시 실행해야 함|백업의 끝으로만 복구 가능 자세한 내용은 [전체 데이터베이스 복원&#40;단순 복구 모델&#41;](complete-database-restores-simple-recovery-model.md)을 참조하세요.|  
-|**전체**|로그 백업 필요<br /><br /> 데이터 파일의 손실 또는 손상으로 인한 작업의 손실이 없음<br /><br /> 임의의 지정 시간으로 복구 가능(예: 애플리케이션이나 사용자 오류가 발생하기 이전) 전체 복구 모델에서 데이터베이스 백업에 대한 자세한 내용은 [전체 데이터베이스 백업&#40;SQL Server&#41;](full-database-backups-sql-server.md) 및 [전체 데이터베이스 복원&#40;전체 복구 모델&#41;](complete-database-restores-full-recovery-model.md)을 참조하세요.|일반적으로는 없음<br /><br /> 비상 로그가 손상된 경우 가장 최근에 로그를 백업한 후에 변경된 사항을 다시 실행해야 함.|백업이 특정 시점까지 완료된 경우 해당 시점으로 복구 가능. 로그 백업을 사용하여 오류 지점으로 복원하는 방법은 [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)을 참조하세요.<br /><br /> 참고: 논리적으로 일치해야 하는 전체 복구 모델 데이터베이스가 둘 이상이면 이 데이터베이스의 복구 가능성을 확인하는 특수 절차를 구현해야 합니다. 자세한 내용은 [표시된 트랜잭션이 포함된 관련 데이터베이스 복구](recovery-of-related-databases-that-contain-marked-transaction.md)를 참조하세요.|  
-|**대량 로그**|로그 백업 필요<br /><br /> 성능 우선 대량 복사 작업을 허용하는 전체 복구 모델의 보충 모델<br /><br /> 대부분의 대량 작업에 대해 최소 로깅을 사용하여 로그 공간 사용량을 줄입니다. 최소 로깅이 가능한 작업에 대한 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)를 참조하세요.<br /><br /> 대량 로그된 복구 모델에서 데이터베이스 백업에 대한 자세한 내용은 [전체 데이터베이스 백업&#40;SQL Server&#41;](full-database-backups-sql-server.md) 및 [전체 데이터베이스 복원&#40;전체 복구 모델&#41;](complete-database-restores-full-recovery-model.md)을 참조하세요.|로그가 손상되었거나 가장 최근의 로그 백업 이후 대량 로그 작업이 수행된 경우 마지막 백업 이후의 변경 내용을 다시 실행해야 함<br /><br /> 그 외에는 작업이 손실되지 않음|백업의 끝으로 복구 가능. 지정 시간 복구는 지원되지 않습니다.|  
+|**차지**|로그 백업 필요<br /><br /> 데이터 파일의 손실 또는 손상으로 인한 작업의 손실이 없음<br /><br /> 임의의 지정 시간으로 복구 가능(예: 애플리케이션이나 사용자 오류가 발생하기 이전) 전체 복구 모델에서 데이터베이스 백업에 대한 자세한 내용은 [전체 데이터베이스 백업&#40;SQL Server&#41;](full-database-backups-sql-server.md) 및 [전체 데이터베이스 복원&#40;전체 복구 모델&#41;](complete-database-restores-full-recovery-model.md)을 참조하세요.|일반적으로는 없음<br /><br /> 비상 로그가 손상된 경우 가장 최근에 로그를 백업한 후에 변경된 사항을 다시 실행해야 함.|백업이 특정 시점까지 완료된 경우 해당 시점으로 복구 가능. 로그 백업을 사용하여 오류 지점으로 복원하는 방법은 [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)을 참조하세요.<br /><br /> 참고: 논리적으로 일치해야 하는 전체 복구 모델 데이터베이스가 둘 이상이면 이 데이터베이스의 복구 가능성을 확인하는 특수 절차를 구현해야 합니다. 자세한 내용은 [표시된 트랜잭션이 포함된 관련 데이터베이스 복구](recovery-of-related-databases-that-contain-marked-transaction.md)를 참조하세요.|  
+|**대량 로그**|로그 백업 필요<br /><br /> 성능 우선 대량 복사 작업을 허용하는 전체 복구 모델의 보충 모델<br /><br /> 대부분의 대량 작업에 대해 최소 로깅을 사용하여 로그 공간 사용량을 줄입니다. 최소 로깅이 가능한 작업에 대한 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)을 참조하세요.<br /><br /> 대량 로그된 복구 모델에서 데이터베이스 백업에 대한 자세한 내용은 [전체 데이터베이스 백업&#40;SQL Server&#41;](full-database-backups-sql-server.md) 및 [전체 데이터베이스 복원&#40;전체 복구 모델&#41;](complete-database-restores-full-recovery-model.md)을 참조하세요.|로그가 손상되었거나 가장 최근의 로그 백업 이후 대량 로그 작업이 수행된 경우 마지막 백업 이후의 변경 내용을 다시 실행해야 함<br /><br /> 그 외에는 작업이 손실되지 않음|백업의 끝으로 복구 가능. 지정 시간 복구는 지원되지 않습니다.|  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
--   [데이터베이스 &#40;SQL Server 복구 모델 보기 또는 변경&#41;](view-or-change-the-recovery-model-of-a-database-sql-server.md)  
+-   [데이터베이스 복구 모델 보기 또는 변경&#40;SQL Server&#41;](view-or-change-the-recovery-model-of-a-database-sql-server.md)  
   
 -   [꽉 찬 트랜잭션 로그 문제 해결&#40;SQL Server 오류 9002&#41;](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [backupset&#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)   
+ [backupset &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)   
  [sys.databases&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
- [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
+ [ALTER DATABASE SET 옵션 &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
  [SQL Server 데이터베이스 백업 및 복원](back-up-and-restore-of-sql-server-databases.md)   
  [트랜잭션 로그&#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [자동화 된 관리 작업 &#40;SQL Server 에이전트&#41;](../../ssms/agent/sql-server-agent.md)   

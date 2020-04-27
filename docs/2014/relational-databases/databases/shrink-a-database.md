@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21f58cd6991b760edeefb81c37e02c617f8e09cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917010"
 ---
 # <a name="shrink-a-database"></a>데이터베이스 축소
@@ -32,9 +32,9 @@ ms.locfileid: "62917010"
   
 
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   데이터베이스를 최소 데이터베이스 크기보다 작게 축소할 수는 없습니다. 최소 크기는 데이터베이스를 처음 만들 때 지정된 크기나 DBCC SHRINKFILE과 같은 파일 크기 변경 작업을 사용하여 명시적으로 설정한 최종 크기입니다. 예를 들어 원래 10MB로 생성된 데이터베이스가 100MB까지 증가한 경우 포함된 모든 데이터를 삭제하더라도 데이터베이스를 10MB 이하로는 축소할 수 없습니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62917010"
   
 -   xVelocity 메모리 최적화 Columnstore 인덱스가 발생할 경우 DBCC SHRINKDATABASE는 실패합니다. Columnstore 인덱스가 발생하기 전에 완료된 작업은 성공하므로 데이터베이스 크기가 작아질 수 있습니다. DBCC SHRINKDATABASE를 완료하려면 DBCC SHRINKDATABASE를 실행하기 전에 모든 columnstore 인덱스를 사용하지 않도록 설정한 다음 columnstore 인덱스를 다시 작성합니다.  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   현재 데이터베이스에 있는 여유(할당되지 않은) 공간의 양을 보려면 자세한 내용은 [데이터베이스의 데이터 및 로그 공간 정보 표시](display-data-and-log-space-information-for-a-database.md)를 참조하세요.  
   
@@ -56,41 +56,39 @@ ms.locfileid: "62917010"
   
     -   특정 요구 사항이 없을 경우 AUTO_SHRINK 데이터베이스 옵션을 ON으로 설정하지 마세요.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-shrink-a-database"></a>데이터베이스를 축소하려면  
   
 1.  **개체 탐색기**에서 인스턴스에 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]연결한 다음 해당 인스턴스를 확장 합니다.  
   
-2.  
-  **데이터베이스**를 확장한 다음 축소할 데이터베이스를 마우스 오른쪽 단추로 클릭합니다.  
+2.  **데이터베이스**를 확장 한 다음 축소할 데이터베이스를 마우스 오른쪽 단추로 클릭 합니다.  
   
-3.  
-  **태스크**, **축소**를 차례로 가리킨 다음 **데이터베이스**를 클릭합니다.  
+3.  **태스크**, **축소**를 차례로 가리킨 다음 **데이터베이스**를 클릭합니다.  
   
      **Database**  
      선택한 데이터베이스의 이름을 표시합니다.  
   
-     **현재 할당 된 공간**  
+     **현재 할당된 공간**  
      선택한 데이터베이스의 총 사용 공간 및 사용되지 않은 공간을 표시합니다.  
   
      **사용 가능한 공간**  
      선택한 데이터베이스의 로그 및 데이터 파일의 총 사용 가능한 공간을 표시합니다.  
   
-     **사용 하지 않은 공간을 해제 하기 전에 파일 다시 구성**  
+     **사용하지 않은 공간을 해제하기 전에 파일을 다시 구성합니다.**  
      이 옵션을 선택하는 것은 목표 백분율 옵션을 지정하여 DBCC SHRINKDATABASE를 실행하는 것과 같습니다. 또한 이 옵션의 선택을 취소하는 것은 TRUNCATEONLY 옵션을 사용하여 DBCC SHRINKDATABASE를 실행하는 것과 같습니다. 기본적으로 대화 상자를 열 때 이 옵션은 선택되어 있지 않습니다. 이 옵션을 선택하면 목표 백분율 옵션을 지정해야 합니다.  
   
-     **축소 후 파일의 최대 여유 공간**  
+     **축소 후 파일에 남는 최대 여유 공간**  
      데이터베이스를 축소한 후 데이터베이스 파일에 남겨둘 여유 공간의 최대 비율을 입력합니다. 허용되는 값은 0에서 99까지입니다.  
   
 4.  **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-shrink-a-database"></a>데이터베이스를 축소하려면  
   
@@ -102,14 +100,14 @@ ms.locfileid: "62917010"
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkdb1)]  
   
-##  <a name="FollowUp"></a>후속 작업: 데이터베이스를 축소 한 후  
+##  <a name="follow-up-after-you-shrink-a-database"></a><a name="FollowUp"></a> 후속 작업: 데이터베이스를 축소한 후  
  파일 축소를 위해 이동되는 데이터는 파일 내의 모든 사용 가능한 위치로 분산될 수 있습니다. 이로 인해 인덱스 조각화가 발생하여 인덱스 범위를 검색하는 쿼리 성능이 저하될 수 있습니다. 조각화를 방지하려면 축소 후 파일에 대한 인덱스를 다시 작성하는 것이 좋습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [파일 축소](shrink-a-file.md)   
  [sys.databases&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
- [sys.database_files&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
- [DBCC&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
+ [database_files &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
+ [DBCC &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
  [Transact-sql&#41;DBCC SHRINKFILE &#40;](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)   
  [데이터베이스 파일 및 파일 그룹](database-files-and-filegroups.md)  
   

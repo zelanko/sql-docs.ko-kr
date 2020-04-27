@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4be1c196adbe21635c1339da3d5ec7ca519001fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876603"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>차등 데이터베이스 백업 만들기(SQL Server)
@@ -43,28 +43,28 @@ ms.locfileid: "62876603"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   명시적 또는 암시적 트랜잭션에서는 BACKUP 문을 사용할 수 없습니다.  
   
-###  <a name="Prerequisites"></a> 필수 조건  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
   
 -   차등 데이터베이스 백업을 만들려면 이전 전체 데이터베이스 백업이 있어야 합니다. 선택한 데이터베이스를 백업한 적이 없으면 차등 백업을 만들기 전에 전체 데이터베이스 백업을 실행합니다. 자세한 내용은 [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)에서 차등 데이터베이스 백업을 만듭니다.  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   차등 백업의 크기가 커질수록 차등 백업을 복원할 때 데이터베이스 복원 시간이 훨씬 길어질 수 있습니다. 따라서 새 전체 백업을 지정된 간격으로 수행하여 데이터의 새 차등 기반을 설정하는 것이 좋습니다. 예를 들어 전체 데이터베이스의 전체 백업(즉, 전체 데이터베이스 백업)을 매주 수행하고 주중에 일련의 정기적인 차등 데이터베이스 백업을 수행할 수 있습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버로 설정됩니다.  
   
- 백업 디바이스의 물리적 파일에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 디바이스를 읽고 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 있어야 합니다. 그러나 시스템 테이블의 백업 디바이스에 대한 항목을 추가하는 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)는 파일 액세스 권한을 확인하지 않습니다. 백업 디바이스의 물리적 파일에서 발생하는 이러한 문제는 백업 또는 복원을 시도할 때 실제 리소스를 액세스하기 전까지는 발생하지 않습니다.  
+ 백업 디바이스의 물리적 파일에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 디바이스를 읽고 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 있어야 합니다. 그러나 시스템 테이블의 백업 디바이스에 대한 항목을 추가하는 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)는 파일 액세스 권한을 확인하지 않습니다 . 백업 디바이스의 물리적 파일에서 발생하는 이러한 문제는 백업 또는 복원을 시도할 때 실제 리소스를 액세스하기 전까지는 발생하지 않습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-create-a-differential-database-backup"></a>차등 데이터베이스 백업을 만들려면  
   
@@ -81,8 +81,7 @@ ms.locfileid: "62876603"
 5.  **백업 유형** 목록 상자에서 **차등**을 선택합니다.  
   
     > [!IMPORTANT]  
-    >  
-  **차등**을 선택하는 경우 **복사 전용 백업** 확인란을 선택하지 말아야 합니다.  
+    >  **차등**을 선택하는 경우 **복사 전용 백업** 확인란을 선택하지 말아야 합니다.  
   
 6.  **백업 구성 요소**의 경우 **데이터베이스**를 클릭합니다.  
   
@@ -136,7 +135,7 @@ ms.locfileid: "62876603"
     > [!NOTE]  
     >  또는 유지 관리 계획 마법사를 사용하여 차등 데이터베이스 백업을 만들 수 있습니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-create-a-differential-database-backup"></a>차등 데이터베이스 백업을 만들려면  
   
@@ -152,7 +151,7 @@ ms.locfileid: "62876603"
   
      BACKUP DATABASE *database_name* TO <backup_device> WITH DIFFERENTIAL  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  이 예에서는 `MyAdvWorks` 데이터베이스에 대한 전체 및 차등 데이터베이스 백업을 만듭니다.  
   
 ```sql  

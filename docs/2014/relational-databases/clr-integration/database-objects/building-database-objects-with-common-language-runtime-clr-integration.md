@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8dc507d455636bf6256fd7ba4649dba53d32884e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919249"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>CLR(공용 언어 런타임) 통합을 사용하여 데이터베이스 개체 작성
@@ -40,8 +40,7 @@ ms.locfileid: "62919249"
  .NET Framework 루틴의 각 형식에는 [!INCLUDE[tsql](../../../includes/ssnoversion-md.md)] 해당 하 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 는를 사용할 수 있는가 있습니다. 예를 들어 스칼라 UDF는 모든 스칼라 식에 사용할 수 있고, TVF는 모든 FROM 절에 사용할 수 있습니다. 프로시저는 EXEC 문에서 호출되거나 클라이언트 애플리케이션에서 호출될 수 있습니다.  
   
 > [!NOTE]  
->  쿼리 최적화 프로그램에서 적절하다고 판단할 경우 공용 언어 런타임에서 CLR 개체(사용자 정의 함수, 사용자 정의 형식 또는 트리거)의 실행은 여러 스레드(병렬 계획)에서 발생할 수 있습니다. 그러나 사용자 정의 함수는 데이터에 액세스하므로 직렬 계획에서 실행됩니다. 
-  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이전의 서버 버전에서 LOB 매개 변수나 반환 값을 포함하는 사용자 정의 함수를 실행할 경우 직렬 계획에서도 해당 함수를 실행해야 합니다.  
+>  쿼리 최적화 프로그램에서 적절하다고 판단할 경우 공용 언어 런타임에서 CLR 개체(사용자 정의 함수, 사용자 정의 형식 또는 트리거)의 실행은 여러 스레드(병렬 계획)에서 발생할 수 있습니다. 그러나 사용자 정의 함수는 데이터에 액세스하므로 직렬 계획에서 실행됩니다. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이전의 서버 버전에서 LOB 매개 변수나 반환 값을 포함하는 사용자 정의 함수를 실행할 경우 직렬 계획에서도 해당 함수를 실행해야 합니다.  
   
  다음 표에는 이 섹션에서 다루는 항목이 나와 있습니다.  
   
@@ -55,8 +54,7 @@ ms.locfileid: "62919249"
  CLR 통합 프로그래밍의 모델 제한 사항에 대한 정보를 제공합니다.  
   
  [.NET Framework의 SQL Server 데이터 형식](../../clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식과 해당되는 .NET Framework 데이터 형식에 대해 간략하게 설명합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식과 해당되는 .NET Framework 데이터 형식에 대해 간략하게 설명합니다.  
   
  [CLR 통합 사용자 지정 특성 개요](../../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md)  
  CLR 통합 사용자 지정 특성에 대한 정보를 제공합니다.  

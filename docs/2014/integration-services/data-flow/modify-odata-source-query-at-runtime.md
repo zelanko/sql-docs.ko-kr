@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1fac598789c53f460ed5239f304de2a39acff81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901190"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>런타임에 OData 원본 쿼리 수정
-  데이터 흐름 태스크의 [OData Source].[Query] 속성에 **식**을 추가하여 런타임에 OData 원본 쿼리를 수정할 수 있습니다.  
+  데이터 흐름 태스크의 **[OData Source].[Query]** 속성에 식을 추가하여 런타임에 OData 원본 쿼리를 수정할 수 있습니다.  
   
  열은 디자인 타임에 사용된 것과 동일하게 유지되어야 합니다. 그렇지 않으면 패키지가 실행될 때 오류가 발생합니다. $select 쿼리 옵션을 사용할 때 동일한 열을 같은 순서로 지정해야 합니다. $select 옵션을 사용하는 것보다 안전한 방법은 원본 구성 요소 UI에서 직접 원하지 않는 열의 선택을 취소하는 것입니다.  
   
@@ -33,8 +33,7 @@ ms.locfileid: "62901190"
   
 3.  **새 매개 변수 만들기** 또는 **기존 매개 변수 사용**중에서 하나를 선택합니다.  
   
-4.  
-  **새 매개 변수 만들기**를 선택하는 경우 다음을 수행합니다.  
+4.  **새 매개 변수 만들기**를 선택하는 경우 다음을 수행합니다.  
   
     1.  매개 변수의 **이름** 및 **설명** 을 입력합니다.  
   
@@ -49,8 +48,7 @@ ms.locfileid: "62901190"
 ## <a name="using-an-expression"></a>식 사용  
  이 방법은 런타임에 쿼리 문자열을 동적으로 생성하려는 경우에 유용합니다. 이 예에서 MaxRows 변수는 다른 수단(스크립트, 매개 변수 등)을 통해 설정됩니다.  
   
-1.  
-  **OData 원본** 이 포함된 **데이터 흐름 태스크**를 선택합니다.  
+1.  **OData 원본** 이 포함된 **데이터 흐름 태스크**를 선택합니다.  
   
 2.  **속성** 창에서 **Expressions** 속성을 강조 표시합니다.  
   
@@ -60,7 +58,7 @@ ms.locfileid: "62901190"
   
 5.  ...를 클릭 합니다. **식**에 대 한 (줄임표) 단추입니다.  
   
-6.  **식**을 입력합니다.  
+6.  **식을**입력 합니다.  
   
 7.  **확인**을 클릭합니다.  
   

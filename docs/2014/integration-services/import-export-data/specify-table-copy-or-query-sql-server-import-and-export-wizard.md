@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 524e878933652699bef6e31da42d3a784b54df7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892645"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>테이블 복사 또는 쿼리 지정(SQL Server 가져오기 및 내보내기 마법사)
@@ -30,8 +30,7 @@ ms.locfileid: "62892645"
  **하나 이상의 테이블 또는 뷰에서 데이터 복사**  
  **원본 테이블 및 뷰 선택** 대화 상자를 사용 하 여 선택한 원본 테이블과 뷰의 필드를 지정한 대상에 복사 합니다. 레코드를 필터링하거나 순서를 지정하지 않고 원본의 모든 데이터를 복사하려면 이 옵션을 사용합니다.  
   
- 
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 사용하여 데이터 원본에 연결하면 **하나 이상의 테이블 또는 뷰에서 데이터 복사** 옵션을 사용하지 못할 수 있습니다. 이 옵션은 ProviderDescriptors.xml 파일에 ProviderDescription 섹션이 있는 공급자에 대해서만 사용할 수 있습니다. 각 ProviderDescription 섹션에는 해당 공급자에서 메타데이터를 검색하는 데 필요한 정보가 포함되어 있습니다. 기본적으로 다음 공급자에 대해서만 ProviderDescriptors.xml 파일에 ProviderDescription 섹션이 포함됩니다.  
+ [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 사용하여 데이터 원본에 연결하면 **하나 이상의 테이블 또는 뷰에서 데이터 복사** 옵션을 사용하지 못할 수 있습니다. 이 옵션은 ProviderDescriptors.xml 파일에 ProviderDescription 섹션이 있는 공급자에 대해서만 사용할 수 있습니다. 각 ProviderDescription 섹션에는 해당 공급자에서 메타데이터를 검색하는 데 필요한 정보가 포함되어 있습니다. 기본적으로 다음 공급자에 대해서만 ProviderDescriptors.xml 파일에 ProviderDescription 섹션이 포함됩니다.  
   
 -   System.Data.SqlClient  
   

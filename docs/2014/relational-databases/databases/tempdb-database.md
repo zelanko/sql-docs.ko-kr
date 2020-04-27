@@ -16,14 +16,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916893"
 ---
 # <a name="tempdb-database"></a>tempdb 데이터베이스
-  
   **tempdb** 시스템 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결된 모든 사용자가 사용할 수 있는 전역 리소스로서 다음 항목을 보관하는 데 사용됩니다.  
   
 -   전역 또는 로컬 임시 테이블, 임시 저장 프로시저, 테이블 변수, 커서 등 명시적으로 생성된 임시 사용자 개체  
@@ -34,9 +33,7 @@ ms.locfileid: "62916893"
   
 -   온라인 인덱스 작업, MARS(Multiple Active Result Sets) 및 AFTER 트리거 같은 기능에 대한 데이터 수정 트랜잭션에서 생성된 행 버전  
   
- 
-  **tempdb** 내의 작업은 최소한으로 기록됩니다. 이렇게 하면 트랜잭션을 롤백할 수 있습니다. **** 시스템이 항상 깨끗 한 데이터베이스 복사본으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 되도록를 시작할 때마다 tempdb가 다시 생성 됩니다. 연결이 끊길 때 임시 테이블 및 저장 프로시저는 자동으로 제거되고 시스템이 종료될 때 활성 상태인 연결이 없습니다. 따라서 **tempdb** 에는 한 세션에서 다른 세션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 으로 저장 하는 것이 없습니다. 
-  **tempdb**에서는 백업 및 복원 작업이 허용되지 않습니다.  
+ **tempdb** 내의 작업은 최소한으로 기록됩니다. 이렇게 하면 트랜잭션을 롤백할 수 있습니다. **tempdb** 시스템이 항상 깨끗 한 데이터베이스 복사본으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 되도록를 시작할 때마다 tempdb가 다시 생성 됩니다. 연결이 끊길 때 임시 테이블 및 저장 프로시저는 자동으로 제거되고 시스템이 종료될 때 활성 상태인 연결이 없습니다. 따라서 **tempdb** 에는 한 세션에서 다른 세션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 으로 저장 하는 것이 없습니다. **tempdb**에서는 백업 및 복원 작업이 허용되지 않습니다.  
   
 ## <a name="physical-properties-of-tempdb"></a>tempdb의 물리적 속성  
  다음 표에는 **tempdb** 데이터 및 로그 파일의 초기 구성 값이 나열되어 있습니다. 이러한 파일의 크기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에 따라 조금씩 다를 수 있습니다.  
@@ -49,16 +46,13 @@ ms.locfileid: "62916893"
  **Tempdb** 의 크기는 시스템의 성능에 영향을 줄 수 있습니다. 예를 들어 **tempdb** 크기가 너무 작은 경우 시작할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]때마다 워크 로드 요구 사항을 지원 하기 위해 데이터베이스를 자동 증가 시키기 때문에 시스템 처리에 너무 많은 시간이 걸릴 수 있습니다. **Tempdb**의 크기를 늘려서 이러한 오버 헤드를 방지할 수 있습니다.  
   
 ## <a name="performance-improvements-in-tempdb"></a>tempdb의 성능 향상  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음과 같은 방법으로 **tempdb** 의 성능이 향상됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음과 같은 방법으로 **tempdb** 의 성능이 향상됩니다.  
   
 -   임시 테이블과 테이블 변수를 캐시할 수 있습니다. 캐싱을 사용하면 임시 개체를 삭제하고 만드는 작업이 매우 신속하게 실행되며 페이지 할당 경합이 줄어듭니다.  
   
 -   할당 페이지 래치 프로토콜이 향상되어 사용되는 UP(업데이트) 래치 수가 줄어듭니다.  
   
--   
-  **tempdb** 에 대한 로깅 오버헤드가 감소하여 
-  **tempdb** 로그 파일의 디스크 I/O 대역폭 사용이 줄어듭니다.  
+-   **tempdb** 에 대한 로깅 오버헤드가 감소하여 **tempdb** 로그 파일의 디스크 I/O 대역폭 사용이 줄어듭니다.  
   
 -   **Tempdb** 에서 혼합 페이지를 할당 하는 알고리즘이 향상 되었습니다.  
   
@@ -70,36 +64,34 @@ ms.locfileid: "62916893"
   
 |데이터베이스 옵션|기본값|수정 가능|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|yes|  
-|ANSI_NULL_DEFAULT|OFF|yes|  
-|ANSI_NULLS|OFF|yes|  
-|ANSI_PADDING|OFF|yes|  
-|ANSI_WARNINGS|OFF|yes|  
-|ARITHABORT|OFF|yes|  
-|AUTO_CLOSE|OFF|예|  
-|AUTO_CREATE_STATISTICS|켜기|yes|  
-|AUTO_SHRINK|OFF|예|  
-|AUTO_UPDATE_STATISTICS|켜기|yes|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|yes|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|예|  
+|ANSI_NULL_DEFAULT|OFF|예|  
+|ANSI_NULLS|OFF|예|  
+|ANSI_PADDING|OFF|예|  
+|ANSI_WARNINGS|OFF|예|  
+|ARITHABORT|OFF|예|  
+|AUTO_CLOSE|OFF|아니요|  
+|AUTO_CREATE_STATISTICS|켜기|예|  
+|AUTO_SHRINK|OFF|아니요|  
+|AUTO_UPDATE_STATISTICS|켜기|예|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|예|  
 |CHANGE_TRACKING|OFF|예|  
-|CONCAT_NULL_YIELDS_NULL|OFF|yes|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|yes|  
-|CURSOR_DEFAULT|GLOBAL|yes|  
-|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|예<br /><br /> 예<br /><br /> 예|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|yes|  
+|CONCAT_NULL_YIELDS_NULL|OFF|예|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|예|  
+|CURSOR_DEFAULT|GLOBAL|예|  
+|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니요<br /><br /> 아니요<br /><br /> 아니요|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|예|  
 |DB_CHAINING|켜기|예|  
 |ENCRYPTION|OFF|예|  
-|NUMERIC_ROUNDABORT|OFF|yes|  
-|PAGE_VERIFY|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]새 설치의 경우 CHECKSUM입니다.<br /><br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]업그레이드의 경우 NONE입니다.|yes|  
-|PARAMETERIZATION|SIMPLE|yes|  
-|QUOTED_IDENTIFIER|OFF|yes|  
+|NUMERIC_ROUNDABORT|OFF|예|  
+|PAGE_VERIFY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]새 설치의 경우 CHECKSUM입니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]업그레이드의 경우 NONE입니다.|예|  
+|PARAMETERIZATION|SIMPLE|예|  
+|QUOTED_IDENTIFIER|OFF|예|  
 |READ_COMMITTED_SNAPSHOT|OFF|예|  
 |RECOVERY|SIMPLE|예|  
-|RECURSIVE_TRIGGERS|OFF|yes|  
-|Service Broker 옵션|ENABLE_BROKER|yes|  
-|TRUSTWORTHY|OFF|예|  
+|RECURSIVE_TRIGGERS|OFF|예|  
+|Service Broker 옵션|ENABLE_BROKER|예|  
+|TRUSTWORTHY|OFF|아니요|  
   
  이러한 데이터베이스 옵션에 대한 자세한 내용은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)을 참조하세요.  
   
@@ -118,7 +110,7 @@ ms.locfileid: "62916893"
   
 -   데이터베이스 삭제  
   
--   데이터베이스에서 **guest** 사용자 삭제  
+-   데이터베이스에서 **게스트** 사용자를 삭제 합니다.  
   
 -   변경 데이터 캡처 설정  
   
@@ -146,11 +138,11 @@ ms.locfileid: "62916893"
   
  [sys.databases&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [sys.master_files&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
+ [sys.master_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
   
  [데이터베이스 파일 이동](move-database-files.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 2005에서 tempdb 사용](https://chresandro.wordpress.com/2014/09/29/working-with-tempdb-in-sql-server-2005/)  
+ [SQL Server 2005에서의 tempdb 사용](https://chresandro.wordpress.com/2014/09/29/working-with-tempdb-in-sql-server-2005/)  
   
   

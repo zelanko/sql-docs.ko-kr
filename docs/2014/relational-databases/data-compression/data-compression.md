@@ -23,14 +23,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873549"
 ---
 # <a name="data-compression"></a>Data Compression
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]는 rowstore 테이블 및 인덱스를 위해 행 및 페이지 압축을 지원하며 columnstore 테이블 및 인덱스를 위해 columnstore 및 columnstore 보관 압축을 지원합니다.  
   
  rowstore 테이블 및 인덱스의 경우 데이터베이스 크기를 줄이려면 데이터 압축 기능을 사용하십시오. 데이터를 압축하면 공간을 절약할 수 있을 뿐만 아니라 데이터가 보다 적은 수의 페이지에 저장되어 쿼리가 디스크에서 읽어야 하는 페이지가 적어지므로 I/O가 많은 작업의 성능을 향상시킬 수 있습니다. 그러나 데이터를 애플리케이션과 교환하는 동안 데이터를 압축하고 압축 해제하기 위해 데이터베이스 서버에 추가 CPU 리소스가 필요합니다. 다음 데이터베이스 개체에 대해 행 및 페이지 압축을 구성할 수 있습니다.  
@@ -100,11 +99,10 @@ ms.locfileid: "62873549"
   
 -   큰 값 데이터 형식은 해당 크기 때문에 일반 행 데이터와 별도로 특수 용도 페이지에 저장되기도 합니다. 별도로 저장되는 데이터에는 데이터 압축을 사용할 수 없습니다.  
   
--   
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서 vardecimal 스토리지 형식을 구현한 테이블을 업그레이드해도 해당 설정은 유지됩니다. vardecimal 스토리지 형식의 테이블에 행 압축을 적용할 수 있습니다. 그러나 행 압축이 vardecimal 스토리지 형식의 상위 집합이므로 vardecimal 스토리지 형식을 유지할 필요가 없습니다. vardecimal 스토리지 형식과 행 압축을 함께 사용해도 10진수 값이 추가로 압축되지 않습니다. vardecimal 스토리지 형식의 테이블에 페이지 압축을 적용할 수 있지만 vardecimal 스토리지 형식 열이 추가로 압축되지는 않습니다.  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서 vardecimal 스토리지 형식을 구현한 테이블을 업그레이드해도 해당 설정은 유지됩니다. vardecimal 스토리지 형식의 테이블에 행 압축을 적용할 수 있습니다. 그러나 행 압축이 vardecimal 스토리지 형식의 상위 집합이므로 vardecimal 스토리지 형식을 유지할 필요가 없습니다. vardecimal 스토리지 형식과 행 압축을 함께 사용해도 10진수 값이 추가로 압축되지 않습니다. vardecimal 스토리지 형식의 테이블에 페이지 압축을 적용할 수 있지만 vardecimal 스토리지 형식 열이 추가로 압축되지는 않습니다.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 vardecimal 저장소 형식을 지원 합니다. 그러나 행 수준 압축은 동일한 목표를 달성 하므로 vardecimal 저장소 형식은 더 이상 사용 되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 vardecimal 스토리지 형식을 지원하지만 행 수준 압축으로 동일한 결과를 얻을 수 있으므로 vardecimal 스토리지 형식은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## <a name="using-columnstore-and-columnstore-archive-compression"></a>Columnstore 및 Columnstore 보관 압축 사용  
   
@@ -121,7 +119,7 @@ ms.locfileid: "62873549"
   
  보관 압축을 추가하려면 REBUILD 옵션 및 DATA COMPRESSION = COLUMNSTORE와 함께 [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) 또는 [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) 를 사용하세요.  
   
- 예제:  
+ 예:  
   
 ```  
 ALTER TABLE ColumnstoreTable1   
@@ -137,7 +135,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE ON PARTITI
   
  보관 압축을 제거하고 데이터를 columnst또는e 압축으로 복원하려면 REBUILD 옵션 및 DATA COMPRESSION = COLUMNSTORE와 함께 [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) 또는 [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) 를 사용하세요.  
   
- 예제:  
+ 예:  
   
 ```  
 ALTER TABLE ColumnstoreTable1   
@@ -173,8 +171,7 @@ REBUILD PARTITION = ALL WITH (
   
 -   [&#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) -및 `data_compression` `data_compression_desc` 열에는 COLUMNSTORE 및 COLUMNSTORE_ARCHIVE가 포함 됩니다.  
   
- 
-  [sp_estimate_data_compression_savings&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) 프로시저는 columnstore 인덱스에 적용되지 않습니다.  
+ [sp_estimate_data_compression_savings&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) 프로시저는 columnstore 인덱스에 적용되지 않습니다.  
   
 ## <a name="how-compression-affects-partitioned-tables-and-indexes"></a>압축이 분할된 테이블 및 인덱스에 주는 영향  
  분할된 테이블 및 인덱스에서 데이터 압축을 사용할 때는 다음 사항을 고려해야 합니다.  

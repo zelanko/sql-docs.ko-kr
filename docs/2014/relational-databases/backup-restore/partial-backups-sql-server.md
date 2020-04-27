@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4213bcee1d17d27bf63da9eb286b21dea4cc5a02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921932"
 ---
 # <a name="partial-backups-sql-server"></a>부분 백업(SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "62921932"
   
  부분 백업은 차등 부분 백업에 대해 *차등 기반* 으로 사용될 수 있습니다. 자세한 내용은 [차등 백업&#40;SQL Server&#41;](differential-backups-sql-server.md)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 > [!NOTE]  
 >  부분 백업은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 유지 관리 계획 마법사에서 지원하지 않습니다.  

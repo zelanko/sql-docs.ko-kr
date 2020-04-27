@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7913d82b471b50605c51fbfb61b3782cf135382
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62898861"
 ---
 # <a name="identifiers-ssis"></a>식별자(SSIS)
@@ -112,7 +112,7 @@ ms.locfileid: "62898861"
 > [!IMPORTANT]  
 >  식 계산기에서 변수를 인식할 수 있도록 네임스페이스와 정규화된 변수 이름 조합을 대괄호로 묶어야 합니다.  
   
- **사용자** 네임 스페이스의 **count** 값이 10이 고 **MyNamespace** 의 count 값이 2 이면 식 계산기에서 두 개의 다른 변수를 `true` 인식 하므로 식이로 평가 됩니다. ****  
+ **사용자** 네임 스페이스의 **count** 값이 10이 고 **MyNamespace** 의 count 값이 2 이면 식 계산기에서 두 개의 다른 변수를 `true` 인식 하므로 식이로 평가 됩니다. **Count**  
   
  고유한 변수 이름을 사용하지 않아도 오류가 발생하지는 않습니다. 대신 식 계산기가 해당 변수의 한 개 인스턴스만 사용하여 식을 계산하고 잘못된 결과를 반환합니다. 예를 들어 다음 식은 두 개의 별도 **Count** 변수에 대 한 값 (10과 2)을 비교 하기 위한 것 이지만 식 계산기에서 `false` **Count** 변수의 같은 인스턴스를 두 번 사용 하므로 식이로 계산 됩니다.  
   

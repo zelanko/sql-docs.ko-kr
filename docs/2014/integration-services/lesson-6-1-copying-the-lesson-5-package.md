@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890759"
 ---
 # <a name="step-1-copying-the-lesson-5-package"></a>1단계: 5단원 패키지 복사
@@ -52,10 +52,9 @@ ms.locfileid: "62890759"
   
      이 자습서에 대한 모든 단원 패키지를 다운로드하려면 다음을 수행합니다.  
   
-    1.  [Integration Services 제품 샘플](https://go.microsoft.com/fwlink/?LinkId=275027) 로 이동 합니다.  
+    1.  [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=275027)로 이동합니다.  
   
-    2.  
-  **DOWNLOADS** 탭을 클릭합니다.  
+    2.  **다운로드** 탭을 클릭 합니다.  
   
     3.  SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 파일을 클릭합니다.  
   

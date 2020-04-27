@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5d39cfd6ca3eba8222dda09a83fdd809bb7d00e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62915053"
 ---
 # <a name="mssqlserver_207"></a>MSSQLSERVER_207
@@ -118,8 +118,8 @@ ms.locfileid: "62915053"
 -   MERGE 문의 WHEN NOT MATCHED BY SOURCE 절이 참조하는 값에 액세스할 수 없습니다. WHEN NOT MATCHED BY SOURCE 절의 원본 테이블에서 하나 이상의 행을 반환하도록 MERGE 문을 수정합니다. 예를 들어 이 절에 지정된 검색 조건을 추가하거나 수정해야 할 수 있습니다. 또는 절을 수정하여 원본 테이블을 참조하지 않는 값을 지정할 수 있습니다. `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`)을 입력합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [MERGE&#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)   
- [FROM&#40;Transact-SQL&#41;](/sql/t-sql/queries/from-transact-sql)   
+ [MERGE &#40;Transact-sql&#41;](/sql/t-sql/statements/merge-transact-sql)   
+ [&#40;Transact-sql&#41;](/sql/t-sql/queries/from-transact-sql)   
  [SELECT&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [UPDATE&#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql)  
   

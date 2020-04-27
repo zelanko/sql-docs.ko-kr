@@ -15,20 +15,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 223111874ca34ba4df4968c550e6cc47edf2b390
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62920049"
 ---
 # <a name="sqlcontext-object"></a>SqlContext 개체
   프로시저 또는 함수를 호출하거나, CLR(공용 언어 런타임) 사용자 정의 형식의 메서드를 호출하거나, 사용자의 동작이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 언어로 정의된 트리거를 발생시키면 서버에서 관리 코드가 호출됩니다. 이러한 코드 실행은 사용자 연결의 일부로 요청되므로 서버에서 실행되는 코드에서 호출자의 컨텍스트에 대한 액세스가 필요합니다. 또한 특정 데이터 액세스 작업은 호출자의 컨텍스트에서 실행해야만 유효합니다. 예를 들어 트리거 작업에서 사용된 삽입되거나 삭제된 의사 테이블에 대한 액세스는 호출자의 컨텍스트에서만 유효합니다.  
   
- 호출자의 컨텍스트는 `SqlContext` 개체에 추상화됩니다. 
-  `SqlTriggerContext` 메서드 및 속성에 대한 자세한 내용은 `Microsoft.SqlServer.Server.SqlTriggerContext` SDK의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 클래스 참조 설명서를 참조하십시오.  
+ 호출자의 컨텍스트는 `SqlContext` 개체에 추상화됩니다. `SqlTriggerContext` 메서드 및 속성에 대한 자세한 내용은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK의 `Microsoft.SqlServer.Server.SqlTriggerContext` 클래스 참조 설명서를 참조하십시오.  
   
- 
-  `SqlContext`는 다음 구성 요소에 대한 액세스를 제공합니다.  
+ `SqlContext`는 다음 구성 요소에 대한 액세스를 제공합니다.  
   
 -   `SqlPipe`: 개체 `SqlPipe` 는 결과가 클라이언트로 흐르는 "파이프"를 나타냅니다. `SqlPipe` 개체에 대 한 자세한 내용은 [SqlPipe 개체](sqlpipe-object.md)를 참조 하세요.  
   
@@ -39,23 +37,14 @@ ms.locfileid: "62920049"
 -   `WindowsIdentity`: `WindowsIdentity` 속성은 호출자의 Windows id를 검색 하는 데 사용 됩니다.  
   
 ## <a name="determining-context-availability"></a>컨텍스트 가용성 확인  
- 
-  `SqlContext` 클래스를 쿼리하면 현재 실행 중인 코드가 in-process로 실행 중인지 확인할 수 있습니다. 이렇게 하려면 `IsAvailable` 개체의 `SqlContext` 속성을 확인합니다. 
-  `IsAvailable` 속성은 읽기 전용이며, 호출 코드가 `True` 내에서 실행 중이고 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 멤버에 액세스가 허용되면 `SqlContext`를 반환합니다. 
-  `IsAvailable` 속성이 `False`를 반환하는 경우 다른 모든 `SqlContext` 멤버를 사용하면 `InvalidOperationException`이 throw됩니다. 
-  `IsAvailable`이 `False`를 반환하는 경우 연결 문자열에 "context connection=true"가 있는 연결 개체를 열려고 하면 오류가 발생합니다.  
+ `SqlContext` 클래스를 쿼리하면 현재 실행 중인 코드가 in-process로 실행 중인지 확인할 수 있습니다. 이렇게 하려면 `IsAvailable` 개체의 `SqlContext` 속성을 확인합니다. `IsAvailable` 속성은 읽기 전용이며, 호출 코드가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내에서 실행 중이고 다른 `True` 멤버에 액세스가 허용되면 `SqlContext`를 반환합니다. `IsAvailable` 속성이 `False`를 반환하는 경우 다른 모든 `SqlContext` 멤버를 사용하면 `InvalidOperationException`이 throw됩니다. `IsAvailable`이 `False`를 반환하는 경우 연결 문자열에 "context connection=true"가 있는 연결 개체를 열려고 하면 오류가 발생합니다.  
   
 ## <a name="retrieving-windows-identity"></a>Windows ID 검색  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내에서 실행되는 CLR 코드는 항상 프로세스 계정의 컨텍스트에서 호출됩니다. 코드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 ID 대신 호출 사용자의 ID를 사용하여 특정 동작을 수행해야 하는 경우 `WindowsIdentity` 개체의 `SqlContext` 속성을 통해 가장 토큰을 얻어야 합니다. 
-  `WindowsIdentity` 속성은 호출자의 `WindowsIdentity` Windows ID를 나타내는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인스턴스를 반환하며, 클라이언트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 인증된 경우에는 Null을 반환합니다. 
-  `EXTERNAL_ACCESS` 또는 `UNSAFE` 권한으로 표시된 어셈블리만 이 속성에 액세스할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내에서 실행되는 CLR 코드는 항상 프로세스 계정의 컨텍스트에서 호출됩니다. 코드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 ID 대신 호출 사용자의 ID를 사용하여 특정 동작을 수행해야 하는 경우 `WindowsIdentity` 개체의 `SqlContext` 속성을 통해 가장 토큰을 얻어야 합니다. `WindowsIdentity` 속성은 호출자의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ID를 나타내는 `WindowsIdentity` 인스턴스를 반환하며, 클라이언트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 인증된 경우에는 Null을 반환합니다. `EXTERNAL_ACCESS` 또는 `UNSAFE` 권한으로 표시된 어셈블리만 이 속성에 액세스할 수 있습니다.  
   
- 
-  `WindowsIdentity` 개체를 얻으면 호출자는 클라이언트 계정을 가장하고 이를 대신해 동작을 수행할 수 있습니다.  
+ `WindowsIdentity` 개체를 얻으면 호출자는 클라이언트 계정을 가장하고 이를 대신해 동작을 수행할 수 있습니다.  
   
- 호출자 ID는 저장 프로시저 또는 함수 실행을 시작한 클라이언트가 Windows 인증을 사용하여 서버에 연결된 경우 `SqlContext.WindowsIdentity`를 통해서만 얻을 수 있습니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증이 사용된 경우 이 속성은 Null이며 코드는 호출자를 가장할 수 없습니다.  
+ 호출자 ID는 저장 프로시저 또는 함수 실행을 시작한 클라이언트가 Windows 인증을 사용하여 서버에 연결된 경우 `SqlContext.WindowsIdentity`를 통해서만 얻을 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증이 사용된 경우 이 속성은 Null이며 코드는 호출자를 가장할 수 없습니다.  
   
 ### <a name="example"></a>예제  
  다음 예에서는 호출 클라이언트의 Windows ID를 얻고 클라이언트를 가장하는 방법을 보여 줍니다.  

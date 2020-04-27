@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2109346c60ca807dcc818941f9baff862a211247
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921818"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>데이터를 복원하지 않고 데이터베이스 복구(Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "62921818"
  RESTORE DATABASE *database_name* WITH RECOVERY  
   
 > [!NOTE]  
->  FROM **=** \<*backup_device>* 절은 백업이 필요 없는 복구 전용 복원에는 사용되지 않습니다.  
+>  From **=** \< *backup_device>* 절은 백업이 필요 하지 않기 때문에 복구 전용 복원에 사용 되지 않습니다.  
   
  **예제**  
   
@@ -89,10 +89,10 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   
 ## <a name="see-also"></a>참고 항목  
- [온라인 복원&#40;SQL Server&#41;](online-restore-sql-server.md)   
- [증분 복원&#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
- [파일 복원&#40;단순 복구 모델&#41;](file-restores-simple-recovery-model.md)   
- [파일 복원&#40;전체 복구 모델&#41;](file-restores-full-recovery-model.md)   
+ [온라인 복원 &#40;SQL Server&#41;](online-restore-sql-server.md)   
+ [증분 &#40;SQL Server 복원&#41;](piecemeal-restores-sql-server.md)   
+ [파일 복원 &#40;단순 복구 모델&#41;](file-restores-simple-recovery-model.md)   
+ [파일 복원이 전체 복구 모델 &#40;&#41;](file-restores-full-recovery-model.md)   
  [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

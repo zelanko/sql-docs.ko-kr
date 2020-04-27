@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921035"
 ---
 # <a name="restore-pages-sql-server"></a>페이지 복원(SQL Server)
@@ -47,14 +47,14 @@ ms.locfileid: "62921035"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="WhenUseful"></a> 페이지 복원이 유용한 경우  
+###  <a name="when-is-a-page-restore-useful"></a><a name="WhenUseful"></a> 페이지 복원이 유용한 경우  
  페이지 복원은 격리된 손상 페이지를 복구하기 위한 기능입니다. 몇몇 페이지를 각각 복원하고 복구하면 복원 작업 도중 오프라인 상태인 데이터의 양이 줄어들어 파일 복원보다 빠를 수 있습니다. 그러나 파일에 있는 여러 페이지를 복원할 경우에는 일반적으로 전체 파일을 복원하는 것이 효율적입니다. 예를 들어 디바이스의 여러 페이지에서 디바이스 오류의 가능성을 나타내는 경우 파일을 다른 위치로 복원한 다음 해당 디바이스를 복구해 보세요.  
   
  또한 모든 페이지 오류를 복원해야 하는 것은 아닙니다. 보조 인덱스와 같은 캐시 데이터에서 발생한 문제는 데이터를 다시 계산하여 해결할 수 있습니다. 예를 들어 데이터베이스 관리자가 보조 인덱스를 삭제하고 다시 작성하면 손상된 데이터는 수정되었더라도 [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 테이블에 이러한 수정 내용이 반영되지 않습니다.  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   페이지 복원은 전체 복구 모델 또는 대량 로그 복구 모델을 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 적용됩니다. 페이지 복원은 읽기/쓰기 파일 그룹에 대해서만 지원됩니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62921035"
   
          페이지 복원을 수행하는 최선의 구현 방법은 데이터베이스를 전체 복구 모델로 설정하고 로그 백업을 시도하는 것입니다. 로그 백업이 성공하면 페이지 복원을 계속 진행할 수 있습니다. 로그 백업이 실패하면 이전 로그 백업 이후의 작업을 잃게 되거나 REPAIR_ALLOW_DATA_LOSS 옵션을 사용하여 DBCC를 실행해야 합니다.  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   페이지 복원 시나리오:  
   
@@ -97,14 +97,14 @@ ms.locfileid: "62921035"
   
      후속 로그 백업을 복원하는 경우 복구할 페이지가 하나 이상 포함된 데이터베이스 파일에만 백업이 적용됩니다. 해당 페이지를 포함하는 파일 그룹을 현재 로그 파일로 가져오려면 손상되지 않은 로그 백업 체인을 마지막 전체 복원 또는 차등 복원에 적용해야 합니다. 파일 복원의 경우와 같이 롤포워드 세트는 단일 로그 다시 실행 과정을 사용하여 진행됩니다. 페이지 복원이 성공하기 위해서는 복원된 페이지가 데이터베이스와 동일한 상태로 복구되어야 합니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  복원할 데이터베이스가 없으면 CREATE DATABASE 권한이 있어야 RESTORE를 실행할 수 있습니다. 데이터베이스가 있으면 RESTORE 권한은 기본적으로 **sysadmin** 및 **dbcreator** 고정 서버 역할의 멤버와 데이터베이스의 소유자(**dbo**)에 설정됩니다. FROM DATABASE_SNAPSHOT 옵션의 경우 데이터베이스가 항상 있습니다.  
   
  멤버 자격 정보를 서버에서 항상 사용할 수 있는 역할에 RESTORE 권한이 제공됩니다. 고정 데이터베이스 역할의 멤버 자격은 데이터베이스가 액세스 가능한 상태이며 손상되지 않은 경우에만 확인할 수 있는데, RESTORE 실행 시 데이터베이스가 항상 이러한 상태인 것은 아니므로 **db_owner** 고정 데이터베이스 역할의 멤버에게는 RESTORE 권한이 없습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]부터는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 페이지 복원을 지원합니다.  
   
 #### <a name="to-restore-pages"></a>페이지를 복원하려면  
@@ -163,7 +163,7 @@ ms.locfileid: "62921035"
   
 7.  페이지 표에 나열된 페이지를 복원하려면 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  RESTORE DATABASE 문에서 페이지를 지정하려면 페이지를 포함하는 파일의 파일 ID와 해당 페이지의 페이지 ID가 필요합니다. 필요한 구문은 다음과 같습니다.  
   
  `RESTORE DATABASE <database_name>`  
@@ -201,7 +201,7 @@ ms.locfileid: "62921035"
     > [!NOTE]  
     >  이 시퀀스는 파일 복원 시퀀스와 유사하며 동일한 시퀀스의 일부로 페이지 복원과 파일 복원을 모두 수행할 수도 있습니다.  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 예에서는 `B` 로 `NORECOVERY`파일의 손상된 4페이지를 복원합니다. 그런 다음 두 개의 로그 백업에 `NORECOVERY`를 적용하고 `RECOVERY`로 복원되는 비상 로그 백업을 실행합니다. 이 예에서는 온라인 복원을 수행합니다. 이 예에서 `B` 파일의 파일 ID는 `1`이고 손상된 페이지의 페이지 ID는 각각 `57`, `202`, `916`및 `1016`입니다.  
   
 ```sql  
