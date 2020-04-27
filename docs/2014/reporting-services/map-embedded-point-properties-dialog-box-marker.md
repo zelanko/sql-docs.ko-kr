@@ -14,14 +14,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e58ab5cbee4b039206eec713fe964169c4aecee1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108329"
 ---
 # <a name="map-embedded-point-properties-dialog-box-marker"></a>지도 포함 점 속성 대화 상자, 표식
-  
   **포함 점 속성** 대화 상자에서 **표식** 을 선택하여 다음 지도 요소의 표식 유형 및 표식 크기 옵션을 변경할 수 있습니다.  
   
 -   현재 선택한 포함 점. 이 페이지는 지도 포함 점 속성 대화 상자, 일반 페이지에서 무시 옵션을 선택하는 경우에만 나타납니다. 이러한 옵션은 선택한 점에만 적용되며 지도 점 속성 대화 상자의 일반 페이지 또는 지도 표식 유형 규칙 대화 상자의 일반 페이지에 설정된 옵션을 무시합니다.  

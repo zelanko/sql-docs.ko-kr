@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 905aa453c8a6cac78e8423d071672d6431e3c3c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109195"
 ---
 # <a name="expression-dialog-box"></a>식 대화 상자
@@ -27,14 +27,11 @@ ms.locfileid: "66109195"
   
  식은 간단하거나 복잡할 수 있습니다. 간단한 식은 디자인 화면의 입력란이나 대화 상자에 직접 입력할 수 있습니다. 복잡 한 식을 만들려면 **식** 대화 상자를 사용 합니다. 식은 한 번에 하나씩 만들 수 있습니다. 자세한 내용은 [식&#40;보고서 작성기 및 SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)을 참조하세요.  
   
- 
-  **식** 대화 상자를 열려면 대화 상자에서 식 단추(**fx**)를 클릭하거나 속성 창의 바로 가기 메뉴 또는 드롭다운 목록에서 **식** 을 선택합니다. 자세한 내용은 [보고서 &#40;보고서 작성기 및 SSRS&#41;에서 식 사용 ](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)을 참조 하세요.  
+ **식** 대화 상자를 열려면 대화 상자에서 식 단추(**fx**)를 클릭하거나 속성 창의 바로 가기 메뉴 또는 드롭다운 목록에서 **식** 을 선택합니다. 자세한 내용은 [보고서 &#40;보고서 작성기 및 SSRS&#41;에서 식 사용 ](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)을 참조 하세요.  
   
- 
-  **식** 대화 상자에는 코드 창, 범주 트리, 범주 항목, 설명 창 및 예 창이 있습니다.  
+ **식** 대화 상자에는 코드 창, 범주 트리, 범주 항목, 설명 창 및 예 창이 있습니다.  
   
- 
-  **식** 대화 상자는 상황에 맞게 표시되며 작업 중인 식 범주에 따라 범주 항목과 설명이 변경됩니다. IntelliSense와 문 완성, 함수 호출 예를 지원하며 구문 오류를 쉽게 확인할 수 있도록 구문 색 지정도 지원합니다.  
+ **식** 대화 상자는 상황에 맞게 표시되며 작업 중인 식 범주에 따라 범주 항목과 설명이 변경됩니다. IntelliSense와 문 완성, 함수 호출 예를 지원하며 구문 오류를 쉽게 확인할 수 있도록 구문 색 지정도 지원합니다.  
   
 ## <a name="expression-constructs"></a>식 생성  
  식은 등호(=)로 시작하며 상수, 리터럴, 연산자, 기본 제공 필드에 대한 참조, 기본 제공 컬렉션, 기본 제공 함수, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 런타임 라이브러리 함수, [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 공용 언어 런타임 클래스 및 사용자 지정 함수를 포함할 수 있습니다. 다음 목록에서는 식에 추가할 수 있는 범주와 값에 대해 설명합니다.  
@@ -56,7 +53,7 @@ ms.locfileid: "66109195"
  **필드 (** _ \<선택한 데이터 집합>_ **)**  
  데이터 세트 범주에 선택된 데이터 세트에 대한 필드 목록을 표시합니다. 필드를 두 번 클릭하여 필드를 **식** 상자에 복사할 수 있습니다.  
   
- **데이터베이스나**  
+ **데이터 세트**  
  사용 가능한 데이터 세트의 목록을 제공하고 데이터 세트의 멤버 필드를 표시합니다.  
   
  **변수**  
@@ -68,12 +65,11 @@ ms.locfileid: "66109195"
  **일반 함수**  
  일반 함수를 형식에 따라 그룹화하여 표시합니다. 항목 창에서 함수를 선택하면 설명과 예가 표시됩니다.  
   
- 일반 함수에는 기본 제공 보고서 및 집계 함수, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 런타임 라이브러리 함수, 그리고 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 및 <xref:System.Math> 네임스페이스의 <xref:System.Convert> CLR(공용 언어 런타임) 클래스가 포함됩니다. 범주 목록에 나타나지 않는 CLR 클래스와 외부 어셈블리에 대한 참조를 추가할 수도 있습니다. 자세한 내용은 [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)를 나타냅니다.  
+ 일반 함수에는 기본 제공 보고서 및 집계 함수, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 런타임 라이브러리 함수, 그리고 <xref:System.Math> 및 <xref:System.Convert> 네임스페이스의 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임) 클래스가 포함됩니다. 범주 목록에 나타나지 않는 CLR 클래스와 외부 어셈블리에 대한 참조를 추가할 수도 있습니다. 자세한 내용은 [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)를 나타냅니다.  
   
 ## <a name="options"></a>옵션  
  코드 창  
- 창 맨 위에 있는 코드 창을 사용하여 식을 입력할 수 있습니다. 
-  **식** 대화 상자를 열면 코드 창에 식이 포함됩니다. 이러한 식을 바꾸거나 수정할 수 있습니다. 함수 호출, 연산자, 상수, 필드, 매개 변수, 전역 컬렉션의 항목 및 사용자 지정 코드에 대한 참조를 추가할 수 있습니다. 코드 창에는 변경 내용이 표시됩니다.  
+ 창 맨 위에 있는 코드 창을 사용하여 식을 입력할 수 있습니다. **식** 대화 상자를 열면 코드 창에 식이 포함됩니다. 이러한 식을 바꾸거나 수정할 수 있습니다. 함수 호출, 연산자, 상수, 필드, 매개 변수, 전역 컬렉션의 항목 및 사용자 지정 코드에 대한 참조를 추가할 수 있습니다. 코드 창에는 변경 내용이 표시됩니다.  
   
  빨강 물결선 밑줄은 구문 오류를 나타냅니다. 오류 메시지를 보려면 밑줄이 그어진 텍스트를 포인터로 가리킵니다.  
   
@@ -93,13 +89,13 @@ ms.locfileid: "66109195"
 ## <a name="see-also"></a>참고 항목  
  [식&#40;보고서 작성기 및 SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [숫자 및 날짜 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [매개 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
- [그룹 식 예&#40;보고서 작성기 및 SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [보고서 &#40;보고서 작성기 및 SSRS에서 사용 하는 식&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [숫자 및 날짜 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [매개 변수 컬렉션 참조 &#40;보고서 작성기 및 SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
+ [그룹 식 예제는 보고서 작성기 및 SSRS를 &#40;&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [필터 수식 예 보고서 작성기 및 SSRS &#40;&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
- [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [식의 기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](report-design/built-in-collections-in-expressions-report-builder.md)   
- [보고서 작성기 및 SSRS &#40;식을 추가&#41;](report-design/add-an-expression-report-builder-and-ssrs.md)  
+ [식의 데이터 형식 &#40;보고서 작성기 및 SSRS&#41;](report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [식의 기본 제공 컬렉션은 보고서 작성기 및 SSRS를 &#40;&#41;](report-design/built-in-collections-in-expressions-report-builder.md)   
+ [식 추가&#40;보고서 작성기 및 SSRS&#41;](report-design/add-an-expression-report-builder-and-ssrs.md)  
   
   

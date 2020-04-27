@@ -14,14 +14,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1adbeccdedb8d80900047790d94ff35568460ff4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108276"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>지도 뷰포트 속성 대화 상자, 최적화
-  
   **지도 뷰포트 속성** 대화 상자의 **최적화** 를 선택하여 보고서에서 지도를 보기 위한 해상도를 제어할 수 있습니다.  
   
  공간 데이터가 보고서에 포함된 경우 해상도가 높을수록 보고서에 저장된 데이터가 많아집니다. 공간 데이터가 보고서에 포함되지 않은 경우에는 해상도가 높을수록 보고서 처리기가 지도 세부 항목을 만드는 데 시간이 더 걸립니다. 해상도가 낮을수록 보고서 렌더링을 기다리는 시간이 줄어듭니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "66108276"
  **성능**  
  지도를 단순화하고 덜 자세하게 표시하려면 포인터를 **성능** 에 가깝게 이동합니다.  
   
- **품질**  
+ **Quality**  
  지도를 더 자세하게 그리려면 포인터를 **품질** 에 가깝게 이동합니다.  
   
  **지도 해상도**  
@@ -40,6 +39,6 @@ ms.locfileid: "66108276"
   
 ## <a name="see-also"></a>참고 항목  
  [지도&#40;보고서 작성기 및 SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [보고서 문제 해결: 보고서 작성기 및 SSRS&#41;&#40;지도 보고서](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [보고서 문제 해결: 맵 보고서&#40;보고서 작성기 및 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

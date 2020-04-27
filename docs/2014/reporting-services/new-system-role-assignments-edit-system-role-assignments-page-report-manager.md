@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 661ae0cafe5b484839bbee2531f82f3b62f72c75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108127"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>새 시스템 역할 할당: 시스템 역할 할당 편집 페이지(보고서 관리자)
@@ -53,10 +53,9 @@ ms.locfileid: "66108127"
   
  보고서 관리자는 각 역할의 태스크를 표시하지 않으며 태스크를 추가 또는 수정하는 방법을 제공하지 않습니다. 정의된 그대로 역할을 사용해야 합니다. 역할을 만들거나, 수정 하거나, 삭제 하려면를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]사용 합니다. 자세한 내용은 [역할 만들기, 삭제 또는 수정&#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)을 참조하세요.  
   
- 
-  [!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)] with Advanced Services를 사용하는 경우에는 제공된 기본 역할을 사용해야 합니다.  
+ [!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)] with Advanced Services를 사용하는 경우에는 제공된 기본 역할을 사용해야 합니다.  
   
- **기술**  
+ **설명**  
  역할에 대한 추가 정보를 표시합니다. 시스템 사용자 또는 시스템 관리자와 같은 미리 정의된 역할의 경우 설명에는 각 역할이 지원하는 태스크가 요약되어 표시됩니다.  
   
  **역할 할당 삭제**  

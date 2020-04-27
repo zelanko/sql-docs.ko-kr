@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b67e2a7048520d8a411789e501dbbe545d3cc02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109667"
 ---
 # <a name="create-a-model-using-report-manager"></a>보고서 관리자를 사용하여 모델 만들기
@@ -32,22 +32,17 @@ ms.locfileid: "66109667"
   
 1.  웹 브라우저의 주소 표시줄에 보고서 서버의 URL을 입력합니다.  
   
-2.  
-  **새 데이터 원본**을 클릭합니다.  
+2.  **새 데이터 원본**을 클릭합니다.  
   
-3.  
-  **이름** 입력란에 데이터 원본의 이름을 입력합니다.  
+3.  **이름** 입력란에 데이터 원본의 이름을 입력합니다.  
   
 4.  필요에 따라 **설명** 입력란에 모델에 대한 간략한 설명을 입력합니다.  
   
-5.  
-  **이 데이터 원본 사용** 확인란이 선택되어 있는지 확인합니다.  
+5.  **이 데이터 원본 사용** 확인란이 선택되어 있는지 확인합니다.  
   
-6.  
-  **연결 유형** 목록에서 연결할 데이터 원본 유형을 선택합니다. 연결 유형은 **Oracle**, **Microsoft SQL Server** 또는 **Microsoft SQL Server Analysis Services**중 하나여야 합니다.  
+6.  **연결 유형** 목록에서 연결할 데이터 원본 유형을 선택합니다. 연결 유형은 **Oracle**, **Microsoft SQL Server** 또는 **Microsoft SQL Server Analysis Services**중 하나여야 합니다.  
   
-7.  
-  **연결 문자열** 입력란에 데이터베이스를 가리키는 연결 문자열을 입력합니다.  
+7.  **연결 문자열** 입력란에 데이터베이스를 가리키는 연결 문자열을 입력합니다.  
   
 8.  보고서 작성기 사용자가 데이터베이스에 연결할 때 사용할 연결 방법을 선택합니다.  
   
@@ -68,16 +63,13 @@ ms.locfileid: "66109667"
   
 2.  데이터 원본에 대해 지정된 옵션을 사용할 것인지 확인합니다.  
   
-3.  
-  **모델 생성**을 클릭합니다.  
+3.  **모델 생성**을 클릭합니다.  
   
      데이터 원본에 대한 일반 페이지가 표시됩니다.  
   
-4.  
-  **이름** 입력란에 보고서 모델의 이름을 입력합니다.  
+4.  **이름** 입력란에 보고서 모델의 이름을 입력합니다.  
   
-5.  
-  **설명** 입력란에 모델에 대한 간단한 설명을 입력합니다.  
+5.  **설명** 입력란에 모델에 대한 간단한 설명을 입력합니다.  
   
 6.  보고서 모델을 저장할 새 위치를 지정하려면 **위치 변경**을 클릭합니다.  
   
@@ -90,6 +82,6 @@ ms.locfileid: "66109667"
 ## <a name="see-also"></a>참고 항목  
  [기본 모드 보고서 서버에 대한 사용 권한 부여](security/granting-permissions-on-a-native-mode-report-server.md)   
  [Reporting Services의 데이터 연결, 데이터 원본 및 연결 문자열](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [새 데이터 원본 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)  
+ [새 데이터 원본 페이지&#40;보고서 관리자&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)  
   
   

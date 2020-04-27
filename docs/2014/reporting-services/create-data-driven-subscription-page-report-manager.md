@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 130027d60f5458b451d4f853a79228510c5e7d66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109615"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>데이터 기반 구독 만들기 페이지(보고서 관리자)
@@ -38,8 +38,7 @@ ms.locfileid: "66109615"
   
 3.  드롭다운 메뉴에서 **관리**를 클릭합니다. 보고서의 **일반** 속성 페이지가 열립니다.  
   
-4.  
-  **구독** 탭을 선택한 다음 **새 데이터 기반 구독**을 클릭합니다.  
+4.  **구독** 탭을 선택한 다음 **새 데이터 기반 구독**을 클릭합니다.  
   
     > [!NOTE]  
     >  이 단추를 설정하려면 보고서 데이터 원본에서 저장된 자격 증명을 사용해야 합니다.  
@@ -76,7 +75,7 @@ ms.locfileid: "66109615"
   
  데이터 원본에서 Windows 인증을 사용하는 경우 연결을 지정할 때 **Windows 자격 증명으로 사용** 을 선택합니다.  
   
- 사용자 연결을 인증하지 않는 데이터 원본(예: 데이터 원본이 XML 파일인 경우)을 사용하는 경우 자격 증명 필요 없음을 선택합니다. 이 옵션을 사용하려면 먼저 무인 실행 계정을 구성해야 합니다. 자세한 내용은 [Configure The 무인 실행 계정 &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)를 참조 하세요.  
+ 사용자 연결을 인증하지 않는 데이터 원본(예: 데이터 원본이 XML 파일인 경우)을 사용하는 경우 자격 증명 필요 없음을 선택합니다. 이 옵션을 사용하려면 먼저 무인 실행 계정을 구성해야 합니다. 자세한 내용은 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.  
   
 ## <a name="specify-a-query-page-3"></a>쿼리 지정(3페이지)  
  이 페이지를 사용하여 구독자 데이터를 검색하는 쿼리를 입력할 수 있습니다. 최상의 결과를 얻으려면 데이터 기반 구독에 사용하기 전에 먼저 SQL Server Management Studio에서 쿼리를 실행합니다. 그러면 결과를 통해 필요한 정보가 포함되어 있는지 확인할 수 있습니다. 쿼리 결과에 대해 유의해야 할 중요한 점은 다음과 같습니다.  
@@ -92,8 +91,7 @@ ms.locfileid: "66109615"
  쿼리 제한 시간 값을 지정합니다. 이 값은 쿼리 처리를 완료할 수 있도록 충분히 커야 합니다.  
   
  **유효성 검사**  
- 쿼리를 확인하려면 **유효성 검사** 를 클릭합니다. 계속하려면 쿼리에서 올바른 결과를 반환해야 합니다. 
-  **유효성 검사**를 클릭하지 않아도 **다음**을 클릭하면 쿼리 유효성 검사가 수행됩니다.  
+ 쿼리를 확인하려면 **유효성 검사** 를 클릭합니다. 계속하려면 쿼리에서 올바른 결과를 반환해야 합니다. **유효성 검사**를 클릭하지 않아도 **다음**을 클릭하면 쿼리 유효성 검사가 수행됩니다.  
   
 ## <a name="set-delivery-options-page-4"></a>배달 옵션 설정(4페이지)  
  넷째 페이지에서 배달 확장 프로그램 옵션을 지정합니다. 이 페이지에 표시되는 옵션은 배달 확장 프로그램에서 가져온 것으로, 배달 확장 프로그램에서 이 옵션을 제공하는 방식에 따라 이 페이지에서의 해당 옵션 지정 방식도 상당히 달라질 수 있습니다. 확장 프로그램에 옵션이 설정되지 않은 경우 이 페이지에 옵션이 표시되지 않습니다.  
@@ -110,7 +108,7 @@ ms.locfileid: "66109615"
  **파일 이름**  
  보고서의 파일 이름을 지정합니다. 파일 공유 배달 확장 프로그램은 정적 애플리케이션 파일로 보고서를 공유 폴더로 배달합니다. 대부분의 경우 데이터베이스의 값을 사용하여 파일 이름을 만들어야 합니다. 쓰기 모드를 어떻게 설정하느냐에 따라 정적 값 사용 시 새로운 각 배달이 이전 배달을 덮어쓰게 됩니다.  
   
- **Path**  
+ **경로**  
  네트워크 연결을 통해 액세스할 수 있는 공유 폴더를 지정합니다. 폴더에 액세스할 수 있는지 확인 하려면 시작 메뉴에서 **실행** 을 클릭 하 \\ \\ 고<computername\> \\<sharedfoldername\>형식으로 폴더 경로를 입력 합니다.  
   
  **렌더링 형식**  
@@ -158,10 +156,10 @@ ms.locfileid: "66109615"
  **매주**  
  주별 간격으로 특정 시간과 분에 실행되는 일정을 정의합니다. 간격은 주 전체(예: 격주간)나 주 중 요일로 지정할 수 있습니다.  
   
- **월별**  
+ **매월**  
  월별로 실행되는 일정을 정의합니다. 월에서 패턴에 따른 날짜(예: 매월 마지막 일요일)나 특정 달력 날짜(예: 매월 1일과 15일을 나타내는 1과 15)를 선택할 수 있습니다. 쉼표와 하이픈을 사용하여 여러 날짜와 범위를 지정할 수 있습니다(예: 1, 5, 7-12, 21).  
   
- **한 번**  
+ **만**  
  한 번만 실행되는 일정을 정의합니다. 일정을 실행할 날짜를 지정하려면 **시작 및 끝 날짜** 섹션을 사용합니다. 이 일정은 처리되는 즉시 만료됩니다.  
   
  **시작 및 끝 날짜**  
@@ -173,8 +171,8 @@ ms.locfileid: "66109615"
 ## <a name="see-also"></a>참고 항목  
  [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
- [SSRS 자습서 &#40;데이터 기반 구독 만들기&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
- [보고서 데이터 원본에 대 한 자격 증명 및 연결 정보 지정](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [구독 및 배달&#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  
   

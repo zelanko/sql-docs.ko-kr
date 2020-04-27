@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d71c83195c8f91984bbbce95bd00402928fdb36e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109205"
 ---
 # <a name="excel-device-information-settings"></a>Excel 디바이스 정보 설정
@@ -27,13 +27,12 @@ ms.locfileid: "66109205"
 |-------------|-----------|  
 |**OmitDocumentMap**|지원하는 보고서에 대한 문서 구조를 생략할지 여부를 나타냅니다. 기본값은 `false`입니다.|  
 |**OmitFormulas**|렌더링된 보고서에서 수식을 생략할지 여부를 나타냅니다. 기본값은 `false`입니다.|  
-|`SimplePageHeade`dvd-r|보고서의 페이지 머리글이 Excel 페이지 머리글로 렌더링되는지 여부를 나타냅니다. 
-  `false` 값은 페이지 머리글이 워크시트의 첫 행에 렌더링됨을 나타냅니다. 기본값은 `false`입니다.|  
+|`SimplePageHeade`rs|보고서의 페이지 머리글이 Excel 페이지 머리글로 렌더링되는지 여부를 나타냅니다. `false` 값은 페이지 머리글이 워크시트의 첫 행에 렌더링됨을 나타냅니다. 기본값은 `false`입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [디바이스 정보 설정을 렌더링 확장 프로그램에 전달](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수를 사용자 지정](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [장치 정보 설정을 렌더링 확장 프로그램에 전달](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Rsreportserver.config의 렌더링 확장 프로그램 매개 변수 사용자 지정](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [기술 참조&#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

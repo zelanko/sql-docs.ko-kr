@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 295a40bc7964e50e5fc0c4a9ea0294b593fdde18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109387"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>데이터 세트 속성 대화 상자, 매개 변수(보고서 작성기)
@@ -42,8 +42,7 @@ ms.locfileid: "66109387"
  선택한 매개 변수를 목록에서 아래쪽으로 이동합니다.  
   
  **매개 변수 이름**  
- 
-  **데이터 세트 속성** 대화 상자의 **쿼리** 탭에서 데이터 세트에 추가한 쿼리 매개 변수의 이름을 입력합니다.  
+ **데이터 세트 속성** 대화 상자의 **쿼리** 탭에서 데이터 세트에 추가한 쿼리 매개 변수의 이름을 입력합니다.  
   
  **매개 변수 값**  
  포함된 데이터 세트에만 해당됩니다.  
@@ -61,7 +60,7 @@ ms.locfileid: "66109387"
   
  null을 지정하려면 Null 허용 옵션을 선택합니다.  
   
- **읽기 전용**  
+ **Read Only**  
  공유 데이터 세트에만 해당됩니다.  
   
  공유 데이터 세트 정의에서 이 매개 변수를 읽기 전용으로 표시하려면 이 옵션을 선택합니다. 그러면 공유 데이터 세트을 보고서에 추가할 때 매개 변수가 속성에 나타나지 않습니다. 공유 데이터 세트을 보고서 서버에서 캐시할 때 값을 변경할 수 없습니다.  
@@ -80,11 +79,11 @@ ms.locfileid: "66109387"
  [대화 상자, 창 및 마법사에 대 한 보고서 작성기 도움말](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [데이터 집합 속성 대화 상자, 쿼리 &#40;보고서 작성기&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [식&#40;보고서 작성기 및 SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
- [자습서: 보고서에 매개 변수 추가&#40;보고서 작성기&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
- [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
- [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [자습서: 보고서에 매개 변수를 추가 &#40;보고서 작성기&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [보고서 매개 변수 &#40;보고서 작성기 및 보고서 디자이너&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
+ [보고서 포함 된 데이터 집합 및 공유 데이터 집합 &#40;보고서 작성기 및 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [쿼리 디자이너 &#40;보고서 작성기&#41;](../../2014/reporting-services/query-designers-report-builder.md)   
- [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [공유 데이터 집합 또는 포함 된 데이터 집합 &#40;보고서 작성기 및 SSRS를 만듭니다&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
+ [보고서 포함 된 데이터 집합 및 공유 데이터 집합 &#40;보고서 작성기 및 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [공유 데이터 세트 또는 포함된 데이터 세트 만들기&#40;보고서 작성기 및 SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
   

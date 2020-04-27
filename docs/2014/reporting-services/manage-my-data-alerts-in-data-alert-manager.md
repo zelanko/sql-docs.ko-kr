@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07c75779d05d22e09e7823b5d0b3bffc2ca7acc8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108313"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>데이터 경고 관리자에서 내 데이터 경고 관리
@@ -35,8 +35,7 @@ ms.locfileid: "66108313"
   
      데이터 경고 관리자가 열립니다. 기본적으로 라이브러리에서 선택된 보고서에 대한 경고가 나열됩니다.  
   
-3.  
-  **보고서 경고 보기** 목록 옆에서 아래쪽 화살표를 클릭하고 경고를 볼 보고서를 선택하거나 **모두 표시** 를 클릭하여 모든 경고를 나열합니다.  
+3.  **보고서 경고 보기** 목록 옆에서 아래쪽 화살표를 클릭하고 경고를 볼 보고서를 선택하거나 **모두 표시** 를 클릭하여 모든 경고를 나열합니다.  
   
     > [!NOTE]  
     >  선택한 보고서에 경고가 없으면 경고가 있는 보고서를 찾아 선택하기 위해 SharePoint 라이브러리로 돌아가지 않아도 됩니다. 대신, **모두 표시** 를 클릭하여 모든 경고 목록을 확인합니다.  
@@ -68,7 +67,7 @@ ms.locfileid: "66108313"
      데이터 경고 디자이너에서 지정한 일정 옵션에 관계없이 경고 인스턴스가 생성되고 데이터 경고 메시지가 즉시 전송됩니다. 예를 들어 매주, 그리고 결과가 변경된 경우에만 전송되도록 구성된 경고가 전송됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [경고 관리자를 위한 데이터 경고 관리자](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+ [경고 담당자를 위한 데이터 경고 관리자](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Reporting Services 데이터 경고](../ssms/agent/alerts.md)  
   
   

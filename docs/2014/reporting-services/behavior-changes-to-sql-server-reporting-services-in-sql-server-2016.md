@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 91fa7a66981f3e36c7e25babffbf73dc2519a0c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109935"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2014"></a>SQL Server 2014에서 SQL Server Reporting Services의 동작 변경 내용
@@ -41,11 +41,10 @@ ms.locfileid: "66109935"
   
 -   [SQL Server 2008 R2 Reporting Services의 동작 변경 내용](#bkmk_kj)  
   
-##  <a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services 동작 변경 내용  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]기능에는 동작 변경 내용이 없습니다.  
+##  <a name="sssql14-reporting-services-behavior-changes"></a><a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services 동작 변경 내용  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]기능에는 동작 변경 내용이 없습니다.  
   
-##  <a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services 동작 변경 내용  
+##  <a name="sssql11-reporting-services-behavior-changes"></a><a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services 동작 변경 내용  
  이 섹션에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드의 동작 변경 내용에 대해 설명합니다.  
   
 ### <a name="view-items-permission-will-not-download-shared-datasets-sharepoint-mode"></a>항목 보기 권한으로 공유 데이터 세트 다운로드 불가(SharePoint 모드)  
@@ -68,16 +67,15 @@ ms.locfileid: "66109935"
 ### <a name="report-server-configuration-and-management-tools"></a>보고서 서버 구성 및 관리 도구  
   
 #### <a name="configuration-manager-is-not-used-for-sharepoint-mode"></a>구성 관리자가 SharePoint 모드에서 사용되지 않음  
- **새 동작:** Configuration Manager [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 더 이상 SharePoint 모드 보고서 서버를 지원 하지 않습니다. 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드 구성을 이제 SharePoint 중앙 관리를 사용하여 완료할 수 있으므로 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 관리자가 더 이상 SharePoint 모드를 지원하지 않습니다. 구성 관리자는 이제 기본 모드 보고서 서버에만 사용됩니다.  
+ **새 동작:**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 관리자가 더 이상 SharePoint 모드 보고서 서버를 지원하지 않습니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드 구성을 이제 SharePoint 중앙 관리를 사용하여 완료할 수 있으므로 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 관리자가 더 이상 SharePoint 모드를 지원하지 않습니다. 구성 관리자는 이제 기본 모드 보고서 서버에만 사용됩니다.  
   
 #### <a name="you-cannot-change-the-server-from-one-mode-to-another"></a>서버를 한 모드에서 다른 모드로 변경할 수 없음  
  **새 동작:** 서버 모드를 변경할 수 없습니다. 보고서 서버를 기본 모드로 설치하는 경우 이것을 SharePoint 모드로 변경하거나 다시 구성할 수 없습니다. SharePoint 모드로 설치하는 경우 보고서 서버를 기본 모드로 변경할 수 있습니다.  
   
- **이전 동작:** 고객이 SharePoint 모드로 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버를 설치 합니다. 고객이 보고서 서버를 기본 모드로 전환하려는 경우 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 관리자를 열어 새 기본 모드 데이터베이스를 만들거나 기존 기본 모드 데이터베이스에 연결하여 기본 모드로 전환할 수 있었습니다. 또한 고객은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 SharePoint 모드에서 기본 모드로 전환할 수 있었습니다.  
+ **이전 동작:** 고객이 SharePoint 모드로 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버를 설치합니다. 고객이 보고서 서버를 기본 모드로 전환하려는 경우 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 관리자를 열어 새 기본 모드 데이터베이스를 만들거나 기존 기본 모드 데이터베이스에 연결하여 기본 모드로 전환할 수 있었습니다. 또한 고객은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 SharePoint 모드에서 기본 모드로 전환할 수 있었습니다.  
   
-##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services 동작 변경 내용  
- 이 섹션에서는 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 동작 변경 내용에 대해 설명합니다.  
+##  <a name="sql-server-2008-r2-reporting-services-behavior-changes"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services 동작 변경 내용  
+ 이 섹션에서는의 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]동작 변경 내용에 대해 설명 합니다.  
   
 > [!NOTE]  
 >  SQL Server 2008 R2는 SQL Server 2008의 부 버전 업그레이드이므로 SQL Server 2008 섹션의 내용도 검토하는 것이 좋습니다.  
@@ -85,8 +83,7 @@ ms.locfileid: "66109935"
 ### <a name="secureconnectionlevel-property-in-the-reporting-services-wmi-provider-library"></a>Reporting Services WMI 공급자 라이브러리의 SecureConnectionLevel 속성  
  의 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]WMI 공급자 라이브러리에서 **secureconnectionlevel** 속성은 모든 웹 서비스 메서드에 ssl `0`(`1`Secure`2`Socket`3`Layer) `0` 이 필요 `3` 하지 않음을 나타내는,,, 및 값을 사용 하 여 모든 웹 서비스 메서드에 ssl이 필요 함을 나타내고 `1` 및 `2` 는 ssl이 필요한 웹 서비스 메서드의 하위 집합을 나타냅니다. 에서 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]이러한 값은 두 가지 의미를 가질 수 있습니다.  
   
--   
-  `0`은 웹 서비스에 메서드에 SSL이 필요하지 않음을 나타냅니다.  
+-   `0`은 웹 서비스에 메서드에 SSL이 필요하지 않음을 나타냅니다.  
   
 -   양의 정수는 모든 웹 서비스에 메서드에 SSL이 필요함을 나타냅니다.  
   

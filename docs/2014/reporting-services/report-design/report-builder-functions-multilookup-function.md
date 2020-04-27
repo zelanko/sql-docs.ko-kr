@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e6a60f1b47c7015fa0fca27cc7ce68bf4d04b15d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105209"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Multilookup 함수(보고서 작성기 및 SSRS)
@@ -44,15 +44,12 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  보고서의 데이터 세트 이름을 지정하는 상수입니다. 예를 들면 "Colors"입니다.  
   
 ## <a name="return"></a>반환 값  
- 
-  `VariantArray`를 반환하거나, 일치하는 항목이 없으면 `Nothing`을 반환합니다.  
+ `VariantArray`를 반환하거나, 일치하는 항목이 없으면 `Nothing`을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- 
-  `Multilookup`을 사용하여 일 대 일 관계가 있는 이름-값 쌍의 데이터 세트에서 값 집합을 검색할 수 있습니다. 
-  `MultiLookup`은 이름 또는 키 집합에 대해 `Lookup`을 호출하는 것과 동일합니다. 예를 들어 기본 키 식별자를 기반으로 하는 다중값 매개 변수의 경우 테이블의 입력란에 있는 식에 `Multilookup`을 사용하여 매개 변수 또는 테이블에 바인딩되지 않은 데이터 세트에서 연결된 값을 검색할 수 있습니다.  
+ `Multilookup`을 사용하여 일 대 일 관계가 있는 이름-값 쌍의 데이터 세트에서 값 집합을 검색할 수 있습니다. `MultiLookup`은 이름 또는 키 집합에 대해 `Lookup`을 호출하는 것과 동일합니다. 예를 들어 기본 키 식별자를 기반으로 하는 다중값 매개 변수의 경우 테이블의 입력란에 있는 식에 `Multilookup`을 사용하여 매개 변수 또는 테이블에 바인딩되지 않은 데이터 세트에서 연결된 값을 검색할 수 있습니다.  
   
- `Multilookup`는 다음을 수행 합니다.  
+ `Multilookup`은 다음을 수행합니다.  
   
 -   현재 범위에서 원본 식을 평가하고 변형 개체의 배열을 생성합니다.  
   
@@ -64,7 +61,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  다음 제한 사항이 적용됩니다.  
   
--   `Multilookup`모든 필터 식이 적용 된 후 평가 됩니다.  
+-   `Multilookup`은 모든 필터 식이 적용된 후 평가됩니다.  
   
 -   조회 수준이 하나만 지원됩니다. 원본, 대상 또는 결과 식에는 조회 함수에 대한 참조가 포함될 수 없습니다.  
   
@@ -72,8 +69,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 -   원본, 대상 및 결과 식에는 보고서 또는 그룹 변수에 대한 참조가 포함될 수 없습니다.  
   
--   
-  `Multilookup`은 다음 보고서 항목에 대한 식으로 사용할 수 없습니다.  
+-   `Multilookup`은 다음 보고서 항목에 대한 식으로 사용할 수 없습니다.  
   
     -   데이터 원본에 대한 동적 연결 문자열  
   

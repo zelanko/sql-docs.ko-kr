@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1dbb3fd9ec10c5e1ca11a7e150f0d8a4c0fec883
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106514"
 ---
 # <a name="add-sparklines-and-data-bars-report-builder-and-ssrs"></a>스파크라인 및 데이터 막대 추가(보고서 작성기 및 SSRS)
@@ -42,14 +42,14 @@ ms.locfileid: "66106514"
   
      **차트 데이터** 창이 열립니다.  
   
-6.  **값** 영역에서 **필드 추가** 더하기 기호( **+** )를 클릭한 다음 차트에 표시할 값이 포함된 필드를 클릭합니다.  
+6.  **값** 영역에서 **필드 추가** 더하기 기호(**+**)를 클릭한 다음 차트에 표시할 값이 포함된 필드를 클릭합니다.  
   
-7.  **범주 그룹** 영역에서 **필드 추가** 더하기 기호( **+** )를 클릭한 다음 그룹화할 값이 포함된 필드를 클릭합니다.  
+7.  **범주 그룹** 영역에서 **필드 추가** 더하기 기호(**+**)를 클릭한 다음 그룹화할 값이 포함된 필드를 클릭합니다.  
   
      일반적으로 스파크라인과 데이터 막대의 경우 각 행에 한 계열만 필요하기 때문에 **계열 그룹** 영역에 필드를 추가하지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [테이블 또는 행렬에서 차트의 데이터 정렬&#40;보고서 작성기 및 SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
   
   

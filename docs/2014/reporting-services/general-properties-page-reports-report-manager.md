@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b89d67636dd28514b8d5f34bee423e60abd9b81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109097"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>일반 속성 페이지, 보고서(보고서 관리자)
@@ -49,13 +49,13 @@ ms.locfileid: "66109097"
  **Delete**  
  보고서 서버 데이터베이스에서 보고서를 제거하려면 클릭합니다. 보고서를 삭제하면 연결된 보고서 기록은 물론 보고서별 일정 및 구독이 모두 삭제됩니다. 보고서가 링크된 보고서에 연결되어 있으면 이 링크된 보고서도 무효화됩니다.  
   
- **이동**  
+ **옮기고**  
  보고서 서버 폴더 계층 구조 내의 다른 위치로 보고서를 옮기려면 클릭합니다. 이 단추를 클릭하면 폴더를 검색하여 새 폴더 위치를 찾을 수 있는 항목 이동 페이지가 열립니다. 자세한 내용은 [항목 이동 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/move-items-page-report-manager.md)를 참조 하세요.  
   
  **링크된 보고서 만들기**  
  새 링크된 보고서 페이지를 열려면 클릭합니다. 이 페이지와 링크 된 보고서에 대 한 자세한 내용은 [보고서 관리자&#41;&#40;새 링크 된 보고서 페이지 ](../../2014/reporting-services/new-linked-report-page-report-manager.md)를 참조 하세요.  
   
- **Save**  
+ **저장**  
  보고서 정의의 읽기 전용 복사본을 추출하려면 클릭합니다. 컴퓨터에 정의된 파일 연결에 따라 파일이 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 또는 다른 애플리케이션에서 열립니다. 대부분의 경우 보고서는 XML 파일로 열립니다.  
   
  사용자가 여는 복사본은 보고서 서버에 초기에 게시된 원래 보고서 정의와 동일합니다. 보고서가 게시된 후 보고서에 설정된 모든 속성(예: 매개 변수 및 데이터 원본 속성)은 여는 파일에 반영되지 않습니다.  

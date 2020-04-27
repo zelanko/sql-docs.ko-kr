@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e094c61fe26faca4e60303c340f2b3557c0f148e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109416"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>데이터 원본 속성 페이지(보고서 관리자)
@@ -33,8 +33,7 @@ ms.locfileid: "66109416"
   
 3.  드롭다운 메뉴에서 **관리**를 클릭합니다. 보고서의 **일반** 속성 페이지가 열립니다.  
   
-4.  
-  **데이터 원본** 탭을 선택합니다.  
+4.  **데이터 원본** 탭을 선택합니다.  
   
 ## <a name="options"></a>옵션  
  **공유 데이터 원본**  
@@ -67,17 +66,14 @@ ms.locfileid: "66109416"
  **보고서를 실행하는 사용자가 제공한 자격 증명**  
  각 사용자가 데이터 원본에 액세스하려면 사용자 이름과 암호를 입력해야 합니다. 사용자 자격 증명을 요청하는 프롬프트 텍스트를 정의할 수 있습니다. 기본 텍스트 문자열은 "데이터 원본에 액세스하려면 사용자 이름 및 암호를 입력하십시오."입니다.  
   
- 사용자가 제공하는 자격 증명이 Windows 인증 자격 증명인 경우 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용** 을 선택합니다. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증과 같은 데이터베이스 인증을 사용하는 경우에는 이 확인란을 선택하지 마십시오.  
+ 사용자가 제공하는 자격 증명이 Windows 인증 자격 증명인 경우 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용** 을 선택합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증과 같은 데이터베이스 인증을 사용하는 경우에는 이 확인란을 선택하지 마십시오.  
   
  **보고서 서버에 안전하게 저장된 자격 증명**  
  암호화된 사용자 이름 및 암호를 보고서 서버 데이터베이스에 저장합니다. 사용자 동작이 아닌 일정이나 이벤트로 시작되는 보고서와 같이 무인 모드로 보고서를 실행하려는 경우 이 옵션을 선택하십시오. 기본 보안을 사용하는 경우 사용자 이름은 Windows 도메인 계정이어야 합니다. 계정을 \<도메인>\\<사용자 이름\>형식으로 지정 합니다. 지정하는 계정에는 보고서에 사용되는 데이터 원본을 호스팅하는 컴퓨터에 대한 로컬 로그온 권한이 있어야 합니다.  
   
- 자격 증명이 Windows 인증 자격 증명인 경우 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용** 을 선택합니다. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증과 같은 데이터베이스 인증을 사용하는 경우에는 이 확인란을 선택하지 마십시오.  
+ 자격 증명이 Windows 인증 자격 증명인 경우 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용** 을 선택합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증과 같은 데이터베이스 인증을 사용하는 경우에는 이 확인란을 선택하지 마십시오.  
   
- 데이터 원본에서 가장을 지원하는 경우에만 자격 증명 위임을 허용하려면 **데이터 원본에 연결한 후 인증된 사용자로 가장** 을 선택하십시오. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 경우 이 옵션은 SETUSER 함수를 설정합니다.  
+ 데이터 원본에서 가장을 지원하는 경우에만 자격 증명 위임을 허용하려면 **데이터 원본에 연결한 후 인증된 사용자로 가장** 을 선택하십시오. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 경우 이 옵션은 SETUSER 함수를 설정합니다.  
   
 > [!TIP]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 Windows 계정 자격 증명만 지원합니다. 따라서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 원본에 대해 "데이터 원본에 연결할 때 Windows 자격 증명으로 사용" 및 "데이터 원본에 연결한 후 인증된 사용자로 가장" 옵션을 모두 선택합니다.  
@@ -99,7 +95,7 @@ ms.locfileid: "66109416"
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 데이터 원본 관리](report-data/manage-report-data-sources.md)   
- [보고서 데이터 원본에 대 한 자격 증명 및 연결 정보 지정](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

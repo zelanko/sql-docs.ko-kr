@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa3f8b6ec0cd81f1a29ea3262bd3ec52dd8158ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109094"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>일반 속성 페이지, 보고서 파트(보고서 관리자)
@@ -58,7 +58,7 @@ ms.locfileid: "66109094"
  **목록 뷰에서 숨기기**  
  보고서 관리자에서 목록 뷰 모드를 사용하는 사용자가 볼 수 없게 보고서 파트를 숨기려면 선택합니다. 목록 뷰 모드는 보고서 서버 폴더 계층을 찾아 볼 때 표시되는 기본 뷰 형식입니다. 목록 뷰에서는 항목을 숨길 수 있지만 자세히 보기에서는 항목을 숨길 수 없습니다. 항목에 대한 액세스를 제한하려면 역할 할당을 만들어야 합니다.  
   
- **형식**  
+ **Type**  
  보고서 파트의 유형입니다. 읽기 전용입니다.  
   
  **적용**  
@@ -67,10 +67,10 @@ ms.locfileid: "66109094"
  **Delete**  
  보고서 서버 데이터베이스에서 보고서 파트를 제거합니다. 서버에서 보고서 파트를 삭제해도 보고서 파트가 추가된 기존 보고서는 렌더링됩니다.  
   
- **이동**  
+ **옮기고**  
  보고서 서버 폴더 계층 구조 내에서 보고서 파트를 이동하기 위해 항목 이동 페이지를 열려면 클릭합니다. 자세한 내용은 [항목 이동 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/move-items-page-report-manager.md)를 참조 하세요.  
   
- **다운로드할지**  
+ **다운로드**  
  .rsc 파일로 저장할 보고서 파트 정의의 복사본을 추출합니다. .rsc 파일을 보고서 서버 폴더에 업로드하거나 보고서 서버 폴더의 기존 보고서 파트를 바꾸는 데 사용할 수 있습니다.  
   
  **바꾸십시오**  
@@ -80,7 +80,7 @@ ms.locfileid: "66109094"
  [보고서 파트 관리](report-design/managing-report-parts.md)   
  [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [내용 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [보고서 파트 &#40;보고서 작성기 및 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [F1 도움말 보고서 관리자](../../2014/reporting-services/report-manager-f1-help.md)   
  [보고서 작성기의 보고서 파트 및 데이터 세트](report-data/report-parts-and-datasets-in-report-builder.md)  
   

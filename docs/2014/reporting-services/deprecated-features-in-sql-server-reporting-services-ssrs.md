@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d5cbef64cbed910018e7d2f8dae1844074aaa3f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109349"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014의 SQL Server Reporting Services에서 지원되지 않는 기능
@@ -27,18 +27,18 @@ ms.locfileid: "66109349"
   
  이 항목의 내용:  
   
--   [SQL Server 2014 Reporting Services 사용 되지 않는 기능](#bkmk_2014)  
+-   [SQL Server 2014 R2 Reporting Services에서 지원되지 않는 기능](#bkmk_2014)  
   
 -   [SQL Server 2012 SP1 Reporting Services에서 지원되지 않는 기능](#bkmk_2012sp1)  
   
--   [SQL Server 2012 Reporting Services 사용 되지 않는 기능](#bkmk_2012)  
+-   [SQL Server 2012 R2 Reporting Services에서 지원되지 않는 기능](#bkmk_2012)  
   
 -   [SQL Server 2008 R2 Reporting Services에서 지원되지 않는 기능](#bkmk_kj)  
   
-##  <a name="bkmk_2014"></a>SQL Server 2014 Reporting Services 사용 되지 않는 기능  
+##  <a name="sql-server-2014-reporting-services-deprecated-features"></a><a name="bkmk_2014"></a>SQL Server 2014 Reporting Services 사용 되지 않는 기능  
   
 ### <a name="features-not-supported-in-the-next-version-of-sql-server"></a>다음 버전의 SQL Server에서 지원되지 않는 기능  
- 다음 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능은의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **다음** 버전에서 지원 되지 않습니다. 새 개발 작업에서는 이러한 기능을 사용하지 말고, 현재 이러한 기능을 사용하는 애플리케이션은 가능한 한 빨리 수정하십시오.  
+ 아래의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능은 **** 의 버전 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 지원되지 않습니다. 새 개발 작업에서는 이러한 기능을 사용하지 말고, 현재 이러한 기능을 사용하는 애플리케이션은 가능한 한 빨리 수정하십시오.  
   
 #### <a name="html-rendering-extension-device-information-settings"></a>HTML 렌더링 확장 프로그램 디바이스 정보 설정  
  HTML 렌더링 확장 프로그램에 대한 다음 디바이스 정보 설정은 지원되지 않습니다.  
@@ -97,10 +97,9 @@ ms.locfileid: "66109349"
 ### <a name="features-not-supported-in-a-future-version-of-sql-server"></a>이후 버전의 SQL Server에서 지원되지 않는 기능  
  아래의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능은 다음 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 지원되지만 이후 버전에서는 제거될 예정입니다. 어떤 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 제거될지는 결정되지 않았습니다.  
   
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 사용되지 않는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]기능은 없습니다.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 사용되지 않는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]기능은 없습니다.  
   
-##  <a name="bkmk_2012sp1"></a>SQL Server 2012 SP1 Reporting Services 사용 되지 않는 기능  
+##  <a name="sql-server-2012-sp1-reporting-services-deprecated-features"></a><a name="bkmk_2012sp1"></a>SQL Server 2012 SP1 Reporting Services 사용 되지 않는 기능  
  이 섹션에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 지원되지 않는 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]기능에 대해 설명합니다. 아래의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능은 다음 버전의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 지원되지만 이후 버전에서는 제거될 예정입니다. 어떤 버전의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 제거될지는 결정되지 않았습니다.  
   
 ### <a name="sharepoint-web-parts"></a>SharePoint 웹 파트  
@@ -108,7 +107,7 @@ ms.locfileid: "66109349"
   
  사용 되지 않는 웹 파트에 대 한 자세한 내용은 [SharePoint 웹 파트를 사용 하 여 기본 모드 보고서 보기 및 탐색 (SSRS)](https://msdn.microsoft.com/library/ms159772.aspx) 을 참조 하세요.  
   
-##  <a name="bkmk_2012"></a>SQL Server 2012 Reporting Services 사용 되지 않는 기능  
+##  <a name="sql-server-2012-reporting-services-deprecated-features"></a><a name="bkmk_2012"></a>SQL Server 2012 Reporting Services 사용 되지 않는 기능  
  이 섹션에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 지원되지 않는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]기능에 대해 설명합니다.  
   
 ### <a name="html-rendering-extension-device-information-settings"></a>HTML 렌더링 확장 프로그램 디바이스 정보 설정  
@@ -160,7 +159,7 @@ ms.locfileid: "66109349"
   
 -   <xref:ReportService2010.ReportingService2010.IsSSLRequired%2A>  
   
-##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services 사용 되지 않는 기능  
+##  <a name="sql-server-2008-r2-reporting-services-deprecated-features"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services 사용 되지 않는 기능  
   
 > [!NOTE]  
 >  SQL Server 2008 R2는 SQL Server 2008의 부 버전 업그레이드이므로 SQL Server 2008 섹션의 내용도 검토하는 것이 좋습니다.  

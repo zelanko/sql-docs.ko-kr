@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b8043bb8f95ea67dbc3dceedc9cfd0154b033d51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109046"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 뷰어 및 보고서 도구 모음
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버에서 요청 시 보고서를 표시 하는 데 사용 되는 HTML 뷰어를 제공 합니다. HTML 뷰어는 HTML 형식의 보고서를 표시하는 프레임워크, 즉 보고서 도구 모음, 매개 변수 섹션, 자격 증명 섹션 및 문서 구조를 제공합니다. HTML 뷰어의 보고서 도구 모음에는 보고서를 HTML이 아닌 다른 형식으로 표시할 수 있도록 하는 내보내기 옵션을 비롯하여 보고서 작업에 사용할 수 있는 다양한 기능이 있습니다. 매개 변수 섹션과 문서 구조는 매개 변수 및 문서 구조 컨트롤을 사용하도록 구성된 보고서를 열 경우에만 표시됩니다.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 보고서 서버의 요청에 따라 보고서를 표시하는 데 사용되는 HTML 뷰어를 제공합니다. HTML 뷰어는 HTML 형식의 보고서를 표시하는 프레임워크, 즉 보고서 도구 모음, 매개 변수 섹션, 자격 증명 섹션 및 문서 구조를 제공합니다. HTML 뷰어의 보고서 도구 모음에는 보고서를 HTML이 아닌 다른 형식으로 표시할 수 있도록 하는 내보내기 옵션을 비롯하여 보고서 작업에 사용할 수 있는 다양한 기능이 있습니다. 매개 변수 섹션과 문서 구조는 매개 변수 및 문서 구조 컨트롤을 사용하도록 구성된 보고서를 열 경우에만 표시됩니다.  
   
 > [!NOTE]  
 >  보고서 도구 모음을 수정할 수는 없지만 보고서 URL의 매개 변수를 구성하여 보고서에서 보고서 도구 모음을 숨길 수 있습니다. 보고서 도구 모음을 숨기는 방법은 [URL 액세스 매개 변수 참조](url-access-parameter-reference.md)를 참조하세요.  
@@ -39,14 +39,13 @@ ms.locfileid: "66109046"
   
 |아이콘 또는 컨트롤||수행할 작업|  
 |------------------------------|-|--------|  
-|![페이지 탐색 컨트롤](media/htmlviewer-pagenav.gif "페이지 이동 컨트롤")|**페이지 탐색 컨트롤**|보고서의 첫 번째 또는 마지막 페이지를 열고, 페이지 단위로 스크롤하고, 특정 페이지를 엽니다. 특정 페이지를 보려면 페이지 번호를 입력한 다음 Enter 키를 누릅니다.|  
-|![페이지 표시 컨트롤](media/htmlviewer-pagesize.gif "페이지 표시 컨트롤")|**페이지 표시 컨트롤**|보고서 페이지의 크기를 확대하거나 축소합니다. 비율에 따라 보고서 페이지 크기를 조정할 수 있을 뿐만 아니라 **페이지 너비** 를 선택하여 페이지의 가로 길이를 브라우저 창에 맞추거나 **전체 페이지** 를 선택하여 페이지의 세로 길이를 브라우저 창에 맞출 수도 있습니다. 
-  **확대/축소** 옵션은 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 5.5 이상에서 지원됩니다.|  
+|![페이지 이동 컨트롤](media/htmlviewer-pagenav.gif "페이지 이동 컨트롤")|**페이지 이동 컨트롤**|보고서의 첫 번째 또는 마지막 페이지를 열고, 페이지 단위로 스크롤하고, 특정 페이지를 엽니다. 특정 페이지를 보려면 페이지 번호를 입력한 다음 Enter 키를 누릅니다.|  
+|![페이지 표시 컨트롤](media/htmlviewer-pagesize.gif "페이지 표시 컨트롤")|**페이지 표시 컨트롤**|보고서 페이지의 크기를 확대하거나 축소합니다. 비율에 따라 보고서 페이지 크기를 조정할 수 있을 뿐만 아니라 **페이지 너비** 를 선택하여 페이지의 가로 길이를 브라우저 창에 맞추거나 **전체 페이지** 를 선택하여 페이지의 세로 길이를 브라우저 창에 맞출 수도 있습니다. **확대/축소** 옵션은 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 5.5 이상에서 지원됩니다.|  
 |![검색 필드](media/htmlviewer-search.gif "검색 필드")|**검색 필드**|찾을 단어나 구(최대 256자까지 입력 가능)를 입력하여 보고서 내용을 검색합니다. 검색은 대/소문자를 구분하며 현재 선택한 페이지나 섹션에서 시작됩니다. 표시 가능한 내용만 검색 작업에 포함됩니다. 같은 값을 계속 검색하려면 **다음**을 클릭합니다.|  
 |![내보내기 형식](media/htmlviewer-export.GIF "내보내기 형식")|**내보내기 형식**|새 브라우저 창을 열고 보고서를 선택한 형식으로 렌더링합니다. 사용할 수 있는 형식은 보고서 서버에 설치되어 있는 렌더링 확장 프로그램에 따라 다릅니다. 인쇄할 경우에는 TIFF 형식을 권장합니다. 선택한 형식으로 보고서를 표시하려면 **내보내기** 를 클릭합니다.|  
 |![문서 구조 아이콘](media/htmlviewer-docmap.GIF "문서 구조 아이콘")|**문서 구조 아이콘**|문서 구조를 포함하는 보고서에서 문서 구조 창을 표시하거나 숨깁니다. 문서 구조는 웹 사이트의 탐색 창과 유사한 보고서 탐색 컨트롤입니다. 문서 구조의 항목을 클릭하여 특정 그룹, 페이지 또는 하위 보고서로 이동할 수 있습니다.|  
 |![프린터 아이콘](media/printer-icon.gif "프린터 아이콘")|**프린터 아이콘**|인쇄 옵션을 지정하고 보고서를 인쇄할 수 있도록 인쇄 대화 상자를 엽니다. 인쇄 기능을 처음 사용하는 경우 이 아이콘을 클릭하면 인쇄 컨트롤을 다운로드하라는 메시지가 표시됩니다.|  
-||**아이콘 표시 및 숨기기**|매개 변수가 포함된 보고서에서 매개 변수 값 필드와 **보고서 보기** 단추를 표시하거나 숨깁니다.|  
+||**표시 및 숨기기 아이콘**|매개 변수가 포함된 보고서에서 매개 변수 값 필드와 **보고서 보기** 단추를 표시하거나 숨깁니다.|  
 |![보고서 도구 모음의 브라우저 새로 고침 단추](media/htmlviewer-refresh.GIF "보고서 도구 모음의 브라우저 새로 고침 단추")|**보고서 새로 고침 아이콘**|보고서를 새로 고칩니다. 활성화된 보고서의 데이터를 새로 고칩니다. 캐시된 보고서는 저장된 위치에서 다시 로드됩니다.|  
 |![htmlviewer_datafeed](media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|**데이터 피드 아이콘**|보고서에서 생성된 데이터 피드를 나타냅니다.|  
   
@@ -55,13 +54,12 @@ ms.locfileid: "66109046"
   
  기본 보고서 서버 설치에는 다음과 같은 내보내기 형식이 포함되어 있습니다. 실제로 사용할 수 있는 내보내기 형식 목록은 여기에 나열된 것과 다를 수 있습니다.  
   
-|내보내기 형식|Description|  
+|내보내기 형식|설명|  
 |-------------------|-----------------|  
 |XML|보고서를 XML 구문으로 표시합니다. XML로 표시된 보고서는 새 브라우저 창에서 열립니다.|  
 |CSV|보고서를 쉼표로 분리된 형식으로 표시합니다. 보고서가 CSV 파일 형식과 연결된 애플리케이션에서 열립니다.|  
 |Acrobat(PDF) 파일|클라이언트 쪽 PDF 뷰어를 사용하여 보고서를 봅니다. 이 형식을 사용하려면 타사의 PDF Viewer(예: Adobe Acrobat Reader)가 있어야 합니다.|  
-|Excel|
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel에서 보고서를 봅니다.|  
+|Excel|[!INCLUDE[msCoName](../includes/msconame-md.md)] Excel에서 보고서를 봅니다.|  
 |웹 보관 파일|보고서와 함께 이미지와 연결된 내용을 유지하는 MIME로 인코딩된 HTML 형식으로 보고서를 봅니다.|  
 |TIFF 파일|기본 TIFF 뷰어로 보고서를 봅니다. 일부 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 클라이언트의 경우 이 뷰어는 Windows 사진 및 팩스 뷰어입니다. 페이지 단위의 레이아웃으로 보고서를 보려면 이 형식을 선택합니다.|  
   
@@ -74,8 +72,8 @@ ms.locfileid: "66109046"
  자격 증명은 데이터 원본에 액세스할 수 있는 사용자 이름과 암호 값입니다. 자격 증명을 지정한 후 데이터를 가져오려면 **보고서 보기** 를 클릭합니다. 로그온이 필요한 보고서의 경우 각 사용자에게 표시되는 데이터가 다를 수 있습니다. 따라서 두 사용자가 같은 보고서를 실행해도 다른 결과를 얻을 수 있습니다. 또한 일부 보고서에는 숨겨진 영역이 있는데 사용자 로그온 자격 증명이나 보고서 자체의 선택 사항에 따라 표시 여부가 결정됩니다. 보고서의 숨겨진 영역은 검색 작업에서 제외되므로 보고서의 모든 부분을 볼 수 있는 경우와는 검색 결과가 다를 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 데이터 원본에 대 한 자격 증명 및 연결 정보 지정](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [보고서 작성기 및 SSRS &#40;보고서 찾기, 보기 및 관리 &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [보고서 &#40;보고서 작성기 및 SSRS&#41;내보내기](report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

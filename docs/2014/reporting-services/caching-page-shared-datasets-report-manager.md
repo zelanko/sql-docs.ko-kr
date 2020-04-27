@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ae18d021465a7d14ea22b56534ea48ac316154c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109907"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>캐싱 페이지, 공유 데이터 세트(보고서 관리자)
@@ -34,8 +34,7 @@ ms.locfileid: "66109907"
   
 3.  드롭다운 목록에서 **관리**를 클릭합니다. 보고서의 일반 속성 페이지가 열립니다.  
   
-4.  
-  **캐싱** 탭을 클릭합니다.  
+4.  **캐싱** 탭을 클릭합니다.  
   
 ## <a name="options"></a>옵션  
  **공유 데이터 세트 캐시**  

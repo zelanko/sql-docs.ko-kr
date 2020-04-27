@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 862d8b90f3c91dffda35971677db7fdc231c1b63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108924"
 ---
 # <a name="import-reports-from-microsoft-access-reporting-services"></a>Microsoft Access에서 보고서 가져오기(Reporting Services)
@@ -26,8 +26,7 @@ ms.locfileid: "66108924"
  가져오기 기능을 사용하면 데이터베이스나 프로젝트 파일의 모든 보고서를 가져옵니다. Access 파일에 보고서가 많이 있을 경우 보고서를 가져올 개별 보고서 프로젝트를 만든 후 주 보고서 프로젝트에서 각 RDL 파일을 열 수 있습니다. 보고서를 보고서 디자이너로 가져와야 편집할 수 있습니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 일부 Access 보고서 개체는 지원되지 않습니다. 변환 되지 않은 항목은 **작업 목록** 창에 표시 됩니다. 자세한 내용은 [SSRS&#41;&#40;지원 되는 액세스 보고서 기능 ](../../2014/reporting-services/supported-access-report-features-ssrs.md)을 참조 하세요.  
+>  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 일부 Access 보고서 개체는 지원되지 않습니다. 변환 되지 않은 항목은 **작업 목록** 창에 표시 됩니다. 자세한 내용은 [SSRS&#41;&#40;지원 되는 액세스 보고서 기능 ](../../2014/reporting-services/supported-access-report-features-ssrs.md)을 참조 하세요.  
   
 ### <a name="to-import-reports-from-microsoft-access"></a>Microsoft Access에서 보고서를 가져오려면  
   

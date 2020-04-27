@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3859dbf74d1def19b5f3aad405a884ae607fbca3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107965"
 ---
 # <a name="tutorials-report-builder"></a>자습서(보고서 작성기)
@@ -68,8 +68,8 @@ ms.locfileid: "66107965"
  이 자습서의 단계를 따라 식을 사용하여 필드 값의 연결, 계산 및 조회를 수행하고 그 결과를 보고서에 표시하는 방법을 배울 수 있습니다. 또한 식을 사용하여 서로 다른 이미지와 표시기 상태를 조건부로 표시하는 방법도 배울 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 디자인 뷰&#40;보고서 작성기&#41;](report-builder/report-design-view-report-builder.md)   
+ [보고서 디자인 뷰 &#40;보고서 작성기&#41;](report-builder/report-design-view-report-builder.md)   
  [2014 SQL Server의 보고서 작성기](report-builder/report-builder-in-sql-server-2016.md)   
- [자습서: 오프 라인에서 빠른 차트 보고서 만들기 &#40;보고서 작성기&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [자습서: 오프라인에서 빠른 차트 보고서 만들기&#40;보고서 작성기&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
   
   

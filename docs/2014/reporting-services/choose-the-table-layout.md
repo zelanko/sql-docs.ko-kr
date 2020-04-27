@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 916ea06221ffd6ff33427a26870cd3005ec79e67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109848"
 ---
 # <a name="choose-the-table-layout"></a>테이블 레이아웃 선택
@@ -30,9 +30,7 @@ ms.locfileid: "66109848"
  그룹 필드가 각 그룹의 첫 번째 정보 행에 표시되고 필드마다 하나의 열이 있는 보고서를 만듭니다. 이러한 유형의 테이블에는 **부분합 포함** 을 선택한 경우에만 그룹 바닥글이 있습니다.  
   
  **부분합 포함**  
- 보고서의 숫자 필드에 부분합을 포함시키려면 이 옵션을 선택합니다. 
-  **단계별** 을 선택한 경우에는 부분합이 그룹 머리글 행에 표시됩니다. 
-  **블록** 을 선택한 경우에는 부분합이 그룹 바닥글 행에 표시됩니다.  
+ 보고서의 숫자 필드에 부분합을 포함시키려면 이 옵션을 선택합니다. **단계별** 을 선택한 경우에는 부분합이 그룹 머리글 행에 표시됩니다. **블록** 을 선택한 경우에는 부분합이 그룹 바닥글 행에 표시됩니다.  
   
  **드릴다운 설정**  
  보고서의 내부 그룹을 숨기고 표시 유형 토글을 설정하여 드릴다운 보고서를 작성하려면 이 옵션을 선택합니다.  

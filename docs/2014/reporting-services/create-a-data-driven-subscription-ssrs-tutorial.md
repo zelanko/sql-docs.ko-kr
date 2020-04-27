@@ -15,14 +15,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b905b7127d10be80d9c30ec7c594fbaedc7d9c00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109685"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>데이터 기반 구독 만들기(SSRS 자습서)
-  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 데이터 기반 구독을 제공하므로 동적 구독자 데이터를 기반으로 보고서 배포를 사용자 지정할 수 있습니다. 데이터 기반 구독은 다음과 같은 종류의 시나리오에 사용됩니다.  
   
 -   배포마다 멤버가 변경될 수 있는 대규모 받는 사람 풀에 보고서 배포. 예를 들면 모든 현재 고객에게 월별 보고서를 배포하는 경우입니다.  
@@ -37,10 +36,10 @@ ms.locfileid: "66109685"
  [1단원: 샘플 구독자 데이터베이스 만들기](lesson-1-creating-a-sample-subscriber-database.md)  
  이 단원에서는 구독자 정보가 있는 로컬 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스를 만드는 방법을 배웁니다.  
   
- [Lesson 2: Modifying the Report Data Source Properties](lesson-2-modifying-the-report-data-source-properties.md)  
+ [2단원: 보고서 데이터 원본 속성 수정](lesson-2-modifying-the-report-data-source-properties.md)  
  이 단원에서는 보고서가 무인 모드로 실행되도록 보고서 데이터 원본 속성을 수정하는 방법을 배웁니다. 무인 처리를 위해서는 저장된 자격 증명이 필요합니다. 또한 구독자 데이터로 공급되는 매개 변수를 포함하도록 보고서 데이터 세트를 수정합니다.  
   
- [Lesson 3: Defining a Data-Driven Subscription](lesson-3-defining-a-data-driven-subscription.md)  
+ [3단원: 데이터 기반 구독 정의](lesson-3-defining-a-data-driven-subscription.md)  
  이 단원에서는 데이터 기반 구독을 정의하는 방법을 배우며 데이터 기반 구독 마법사의 각 페이지를 안내합니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -64,7 +63,7 @@ ms.locfileid: "66109685"
   
 -   쓰기 권한이 있는 공유 폴더가 필요합니다. 이 공유 폴더는 네트워크 연결을 통해 액세스할 수 있어야 합니다.  
   
- **자습서에 소요되는 예상 시간:** 30분 기본 보고서 자습서를 완료하지 않은 경우 추가 30분이 소요됩니다.  
+ **자습서를 완료 하는 데 소요 되는 예상 시간:** 30 분 기본 보고서 자습서를 완료하지 않은 경우 추가 30분이 소요됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   

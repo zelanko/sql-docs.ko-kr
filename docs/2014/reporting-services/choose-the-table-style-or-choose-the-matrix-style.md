@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 137d9d4adf1377d730bac2fc6e847f97d02c2c3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109829"
 ---
 # <a name="choose-the-table-style-or-choose-the-matrix-style"></a>테이블 스타일 선택 또는 행렬 스타일 선택
@@ -25,7 +25,7 @@ ms.locfileid: "66109829"
  다른 스타일 템플릿을 추가할 수도 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [테이블, 행렬 및 목록 &#40;보고서 작성기 및 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [보고서 마법사 도움말](../../2014/reporting-services/report-wizard-help.md)  
   
   

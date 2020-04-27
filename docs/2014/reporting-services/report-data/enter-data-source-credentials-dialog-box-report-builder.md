@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f44b35fcb8a6568e0dcd4e9d3eba412207d1e83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107314"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>데이터 원본 자격 증명 입력 대화 상자(보고서 작성기)
@@ -33,6 +33,6 @@ ms.locfileid: "66107314"
  [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [데이터 원본 속성 대화 상자, 일반 &#40;보고서 작성기&#41;](../data-source-properties-dialog-box-general-report-builder.md)   
  [보고서 작성기 자격 증명 지정](../specify-credentials-in-report-builder.md)   
- [대화 상자, 창 및 마법사에 대 한 보고서 작성기 도움말](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

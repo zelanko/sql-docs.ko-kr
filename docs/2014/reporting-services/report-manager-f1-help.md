@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f77fb2a9a23c5cc44cadfcc2b4e43039f69def07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104472"
 ---
 # <a name="report-manager-f1-help"></a>보고서 관리자 F1 도움말
@@ -28,9 +28,9 @@ ms.locfileid: "66104472"
   
 -   [항목 위치 선택 페이지](../../2014/reporting-services/choose-item-location-page-report-manager.md)  
   
--   [클릭 광고 보고서 페이지](../../2014/reporting-services/clickthrough-reports-page-report-manager.md)  
+-   [클릭 방문 보고서 페이지](../../2014/reporting-services/clickthrough-reports-page-report-manager.md)  
   
--   [내용 페이지](../../2014/reporting-services/contents-page-report-manager.md)  
+-   [콘텐츠 페이지](../../2014/reporting-services/contents-page-report-manager.md)  
   
 -   [데이터 기반 구독 만들기 페이지](../../2014/reporting-services/create-data-driven-subscription-page-report-manager.md)  
   

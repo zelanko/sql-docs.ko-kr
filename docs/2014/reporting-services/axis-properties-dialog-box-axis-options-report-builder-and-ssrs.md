@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff9f3281e47cf6dfdf8a189c653d0e061f4a761d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109955"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>축 속성 대화 상자, 축 옵션(보고서 작성기 및 SSRS)
@@ -44,7 +44,7 @@ ms.locfileid: "66109955"
   
  로그 눈금을 사용하도록 축을 설정한 경우 사용할 로그의 밑을 입력란에 입력합니다. 기본적으로 차트에는 축의 로그 눈금에 대한 밑으로 10이 사용됩니다. 이 옵션은 축이 숫자일 때 y 축에만 사용할 수 있습니다.  
   
- **최소**  
+ **최대**  
  x 축의 최소값 또는 이를 반환하는 식을 입력합니다. 생략한 경우 데이터 세트에서 반환한 데이터에 의해 최소값이 결정됩니다.  
   
  **최대화**  
@@ -60,13 +60,13 @@ ms.locfileid: "66109955"
  차트 요소와 차트의 양쪽 측면 사이의 여백을 지정하는 값을 선택하거나 이를 반환하는 식을 입력하여 여백을 추가 또는 제거합니다. 이 옵션을 **자동**으로 설정하면 양쪽 여백이 추가됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [차트&#40;보고서 작성기 및 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
- [차트에서 계열 색 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [축 간격 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
- [축 레이블의 서식을 날짜 또는 통화로 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [차트의 축 레이블 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [차트 &#40;보고서 작성기 및 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
+ [차트에서 계열 색 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [보고서 작성기 및 SSRS &#40;축 간격을 지정&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
+ [축 레이블의 서식을 날짜 또는 통화로 지정 보고서 작성기 및 SSRS &#40;&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [보조 축에 데이터 플롯 &#40;보고서 작성기 및 SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [보고서 작성기 및 SSRS &#40;스파크 라인과 데이터 막대&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [차트에서 여백 추가 또는 제거 &#40;보고서 작성기 및 SSRS&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [차트에서 여백 추가 또는 제거&#40;보고서 작성기 및 SSRS&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d282636b58352f0ffad1083077bdab9769bd6fdc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105610"
 ---
 # <a name="linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs"></a>동일한 데이터 세트에 여러 데이터 영역 연결(보고서 작성기 및 SSRS)
@@ -30,8 +30,8 @@ ms.locfileid: "66105610"
  행과 열 그룹이 여러 개인 행렬은 범주와 계열 그룹이 모두 있는 영역, 가로 막대 또는 세로 막대 차트를 사용하여 표시하기에 적합합니다. 차트의 행렬 및 범주 그룹의 열 그룹에 대해 동일한 그룹 식을 사용하고 차트의 행렬 및 계열 그룹의 행 그룹에 대해 동일한 그룹 식을 사용합니다. 그룹 인스턴스의 수가 많아지면 차트를 쉽게 알아볼 수 없다는 점에 유의해야 합니다. 범위 값을 기반으로 그룹을 정의하면 보고서의 그룹 인스턴스 수를 줄일 수 있습니다. 자세한 내용은 [그룹 식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [목록&#40;보고서 작성기 및 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [&#40;보고서 작성기 및 SSRS를 나열&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [중첩된 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)  
   
   

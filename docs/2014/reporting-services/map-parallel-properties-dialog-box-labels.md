@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 03ffd44d2d119554537898f960d6befedd04dbe3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108252"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>지도 위도선 속성 대화 상자, 레이블
@@ -25,7 +25,7 @@ ms.locfileid: "66108252"
   
 -   **평면.** X 좌표입니다.  
   
--   **지역적.** 현재 도법의 위도입니다.  
+-   **지리.** 현재 도법의 위도입니다.  
   
  옵션의 값을 설정하는 식을 편집하려면 **식** 단추(*fx*)를 클릭합니다.  
   
@@ -39,15 +39,15 @@ ms.locfileid: "66108252"
  **배치**  
  뷰포트의 위쪽, 가운데 및 아래쪽과 상대적으로 레이블을 표시할 위치를 선택합니다. 기본 배치는 **가까이**입니다.  
   
--   **Near** 위쪽에 레이블을 표시 합니다.  
+-   **가까이** 위쪽에 레이블을 표시합니다.  
   
--   **1 분기** 위쪽과 가운데의 중간에 레이블을 표시 합니다.  
+-   **1/4** 위쪽과 가운데의 중간에 레이블을 표시합니다.  
   
--   **가운데** 가운데에 레이블을 표시 합니다.  
+-   **가운데** 가운데에 레이블을 표시합니다.  
   
--   **3 분기** 가운데와 아래쪽의 중간에 레이블을 표시 합니다.  
+-   **3/4** 가운데와 아래쪽의 중간에 레이블을 표시합니다.  
   
--   **Far** 아래쪽에 레이블을 표시 합니다.  
+-   **멀리** 아래쪽에 레이블을 표시합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [지도&#40;보고서 작성기 및 SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   

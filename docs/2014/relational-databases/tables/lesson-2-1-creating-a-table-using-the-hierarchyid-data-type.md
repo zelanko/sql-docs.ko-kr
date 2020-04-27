@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 98ce16a3630032001a1191b09b1b0ade13aacb73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110115"
 ---
 # <a name="creating-a-table-using-the-hierarchyid-data-type"></a>hierarchyid 데이터 형식을 사용하여 테이블 만들기
@@ -34,8 +34,7 @@ ms.locfileid: "66110115"
   
 ### <a name="to-create-the-employeeorg-table"></a>EmployeeOrg 테이블을 만들려면  
   
-1.  쿼리 편집기 창에서 다음 코드를 실행하여 `EmployeeOrg` 테이블을 만듭니다. 
-  `OrgNode` 열을 클러스터형 인덱스가 있는 기본 키로 지정하면 깊이 우선 인덱스가 생성됩니다.  
+1.  쿼리 편집기 창에서 다음 코드를 실행하여 `EmployeeOrg` 테이블을 만듭니다. `OrgNode` 열을 클러스터형 인덱스가 있는 기본 키로 지정하면 깊이 우선 인덱스가 생성됩니다.  
   
     ```  
     USE AdventureWorks2012 ;  

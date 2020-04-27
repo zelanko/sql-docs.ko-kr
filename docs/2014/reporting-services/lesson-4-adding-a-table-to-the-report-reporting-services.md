@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3bb152b749041451cdb3a3294c24d8b172c49a99
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108446"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>4단원: 보고서에 테이블 추가(Reporting Services)
@@ -24,25 +24,20 @@ ms.locfileid: "66108446"
   
 ### <a name="to-add-a-table-data-region-and-fields-to-a-report-layout"></a>보고서 레이아웃에 테이블 데이터 영역과 필드를 추가하려면  
   
-1.  
-  **도구 상자**에서 **테이블**을 클릭하고 디자인 화면을 클릭하여 마우스를 끕니다. 보고서 디자이너는 디자인 화면 가운데에 세 개의 열이 있는 테이블 데이터 영역을 그립니다.  
+1.  **도구 상자**에서 **테이블**을 클릭하고 디자인 화면을 클릭하여 마우스를 끕니다. 보고서 디자이너는 디자인 화면 가운데에 세 개의 열이 있는 테이블 데이터 영역을 그립니다.  
   
     > [!NOTE]  
-    >  
-  **보고서 데이터** 창의 왼쪽에 **도구 상자** 가 탭으로 나타날 수 있습니다. **도구 상자**를 열려면 포인터를 **도구 상자** 탭 위로 이동 합니다. **도구 상자가** 표시 되지 않으면 **보기** 메뉴에서 **도구 상자**를 클릭 합니다.  
+    >  **보고서 데이터** 창의 왼쪽에 **도구 상자** 가 탭으로 나타날 수 있습니다. **도구 상자**를 열려면 포인터를 **도구 상자** 탭 위로 이동 합니다. **도구 상자가** 표시 되지 않으면 **보기** 메뉴에서 **도구 상자**를 클릭 합니다.  
   
 2.  **보고서 데이터** 창에서 **AdventureWorksDataset** 데이터 집합을 확장 하 여 필드를 표시 합니다.  
   
-3.  
-  보고서 데이터 창에서 **Date** 필드를 테이블의 첫 번째 열로 끕니다.  
+3.  보고서 데이터 창에서 **Date** 필드를 테이블의 첫 번째 열로 끕니다.  
   
      필드를 첫 번째 열에 놓으면 두 가지 동작이 발생합니다. 먼저 데이터 셀에는 *필드 식*이라는 필드 이름이 대괄호 안에 표시됩니다. 이 경우 `[Date]`와 같이 표시됩니다. 두 번째로 열 머리글 값이 자동으로 필드 식 바로 위의 머리글 행에 추가됩니다. 기본적으로 열은 필드 이름입니다. 머리글 행 텍스트를 선택한 다음 새 이름을 입력할 수 있습니다.  
   
-4.  
-  보고서 데이터 창에서 **Order** 필드를 테이블의 두 번째 열로 끕니다.  
+4.  보고서 데이터 창에서 **Order** 필드를 테이블의 두 번째 열로 끕니다.  
   
-5.  
-  보고서 데이터 창에서 **Product** 필드를 테이블의 세 번째 열로 끕니다.  
+5.  보고서 데이터 창에서 **Product** 필드를 테이블의 세 번째 열로 끕니다.  
   
 6.  세로 커서가 나타나고 포인터가 더하기 기호(+)로 바뀔 때까지 Qty 필드를 세 번째 열의 오른쪽 가장자리로 끕니다. 마우스 단추를 놓으면 네 번째 열이 `[Qty]`에 대해 만들어집니다.  
   
@@ -69,15 +64,13 @@ ms.locfileid: "66108446"
      통화(Line Total 열)의 소수점 뒤에 6자리가 있고 날짜에는 타임스탬프가 있습니다. 다음 단원에서는 이러한 서식을 수정합니다.  
   
 > [!NOTE]  
->  
-  **파일** 메뉴에서 **모두 저장** 을 클릭하여 보고서를 저장합니다.  
+>  **파일** 메뉴에서 **모두 저장** 을 클릭하여 보고서를 저장합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 보고서에 테이블 데이터 영역을 추가하고, 데이터 영역에 필드를 추가하고, 보고서를 미리 보는 방법을 배웠습니다. 다음 단원에서는 열 머리글과 날짜 및 통화 값에 서식을 지정합니다. 
-  [5단원: 보고서 서식 지정&#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)을 참조하세요.  
+ 보고서에 테이블 데이터 영역을 추가하고, 데이터 영역에 필드를 추가하고, 보고서를 미리 보는 방법을 배웠습니다. 다음 단원에서는 열 머리글과 날짜 및 통화 값에 서식을 지정합니다. [5단원: 보고서 서식 지정&#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [테이블&#40;보고서 작성기 및 SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
+ [테이블 &#40;보고서 작성기 및 SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
  [데이터 세트 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

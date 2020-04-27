@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bb8790496efb1701baf1636e5c16769e6430aa0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109443"
 ---
 # <a name="data-source-selection-page-report-manager"></a>데이터 원본 선택 페이지(보고서 관리자)
@@ -31,8 +31,7 @@ ms.locfileid: "66109443"
   
 3.  드롭다운 메뉴에서 **관리**를 클릭합니다. 보고서나 모델의 일반 속성 페이지가 열립니다.  
   
-4.  
-  **데이터 원본** 탭을 선택합니다.  
+4.  **데이터 원본** 탭을 선택합니다.  
   
 5.  속성 창에서 **공유 데이터 원본** 을 선택한 다음 **찾아보기**를 클릭합니다.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66109443"
  **위치**  
  공유 데이터 원본 항목에 루트 폴더 이름으로 시작하는 전체 경로를 지정합니다. 경로 이름을 입력하거나 트리 보기를 사용하여 원하는 공유 데이터 원본으로 이동할 수 있습니다.  
   
- **트리 보기**  
+ **트리 뷰**  
  보고서 서버 네임스페이스의 폴더 구조를 표시합니다. 공유 데이터 원본 항목을 클릭하여 전체 경로를 **위치** 필드에 추가합니다.  
   
  **확인**  
@@ -48,7 +47,7 @@ ms.locfileid: "66109443"
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 데이터 원본 관리](report-data/manage-report-data-sources.md)   
- [보고서 데이터 원본에 대 한 자격 증명 및 연결 정보 지정](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [데이터 원본 속성 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
  [새 데이터 원본 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  

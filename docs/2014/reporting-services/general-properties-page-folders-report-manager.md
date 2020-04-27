@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 901ed097b1a1f689a854d60e0df9b541403fdc76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109127"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>일반 속성 페이지, 폴더(보고서 관리자)
@@ -49,7 +49,7 @@ ms.locfileid: "66109127"
  **Delete**  
  폴더 및 포함된 내용을 제거하려면 &lt;B&gt;삭제&lt;/B&gt;를 클릭합니다.  
   
- **이동**  
+ **옮기고**  
  보고서 서버 네임스페이스 내에서 보고서나 폴더의 위치를 다시 지정하려면 클릭합니다. 이 단추를 클릭하면 폴더를 검색하여 새 폴더 위치를 찾을 수 있는 항목 이동 페이지가 열립니다.  
   
 ## <a name="see-also"></a>참고 항목  

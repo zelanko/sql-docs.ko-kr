@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97fa6d01fc4a06825814c8494268ecb668f1da7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108106"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>URL에 보고서 매개 변수 전달
@@ -26,7 +26,7 @@ ms.locfileid: "66108106"
 > [!IMPORTANT]  
 >  URL에는 SharePoint를 통해 요청을 라우팅하는 `_vti_bin` 프록시 구문과 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP 프록시를 포함하는 것이 중요합니다. 프록시는 몇 가지 컨텍스트를 HTTP 요청에 추가하며 이 컨텍스트는 SharePoint 모드 보고서 서버에 대한 보고서의 올바른 실행을 보장하는 데 필요합니다.  
 >   
->  프록시 구문을 포함하지 않으면 접두사 *rp:* 로 매개 변수를 시작해야 합니다.  
+>  프록시 구문을 포함 하지 않는 경우 매개 변수를 *rp:* 로 접두사로 사용 해야 합니다.  
   
  모든 쿼리 매개 변수에는 해당하는 보고서 매개 변수가 있을 수 있습니다. 해당 보고서 매개 변수를 전달하여 보고서에 쿼리 매개 변수를 전달할 수 있습니다. 자세한 내용은 [관계형 쿼리 디자이너에서 쿼리 빌드&#40;보고서 작성기 및 SSRS&#41;](report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -75,14 +75,12 @@ parameter
 SalesOrderNumber:isnull=true  
 ```  
   
- 
-  `Boolean` 값을 전달하려면 False에 0을 사용하고 True에 1을 사용합니다. 
-  `Float` 값을 전달하려면 서버 로캘의 소수 구분 기호를 포함합니다.  
+ `Boolean` 값을 전달하려면 False에 0을 사용하고 True에 1을 사용합니다. `Float` 값을 전달하려면 서버 로캘의 소수 구분 기호를 포함합니다.  
   
 > [!NOTE]  
 >  보고서에 기본값을 가진 보고서 매개 변수가 포함되어 있고 `Prompt` 속성의 값이 `false`이면(즉, 보고서 관리자에서 사용자에게 확인 속성이 선택되지 않음) URL 내에서 해당 보고서 매개 변수에 대한 값을 전달할 수 없습니다. 이러한 기능을 통해 관리자는 최종 사용자가 특정 보고서 매개 변수의 값을 추가하거나 수정하지 못하도록 설정할 수 있습니다.  
   
-##  <a name="bkmk_examples"></a> 추가 예  
+##  <a name="additional-examples"></a><a name="bkmk_examples"></a> 추가 예  
  다음 URL 예제에는 공백 및 여러 매개 변수가 포함됩니다.  
   
 -   "SQL Server 사용자 교육 팀" 폴더 이름에는 공백이 포함되므로 "+"가 공백을 각각 대체합니다.  
@@ -101,14 +99,14 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  
 ```  
   
- 다음 URL 예제는 기본 모드 보고서 서버에 대해 "7/1/2005" 값이 포함된 *SellStartDate*의 단일 매개 변수를 전달합니다.  
+ 다음 URL 예제는 기본 모드 보고서 서버에 대해 값이 "7/1/2005" 인 *Sellsel의* 단일 매개 변수를 전달 합니다.  
   
 ```  
 http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [URL 액세스&#40;SSRS&#41;](url-access-ssrs.md)   
+ [SSRS&#41;&#40;URL 액세스](url-access-ssrs.md)   
  [URL 액세스 매개 변수 참조](url-access-parameter-reference.md)  
   
   

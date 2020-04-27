@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 040d49e66e9feed4f8bc213c8189c8d41486b77d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107777"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>바로 가기 키(보고서 작성기)
@@ -32,7 +32,7 @@ ms.locfileid: "66107777"
   
 ## <a name="keyboard-shortcuts-in-report-builder"></a>보고서 작성기의 바로 가기 키  
   
-|Description|키 조합|  
+|설명|키 조합|  
 |-----------------|---------------------|  
 |보고서 작성기 메뉴를 엽니다.|ALT + F|  
 |보고서를 만듭니다.|CTRL+N|  
@@ -59,7 +59,7 @@ ms.locfileid: "66107777"
 |복사|Ctrl+C, Alt+H+C|  
 |잘라내기|Ctrl+X, Alt+H+X|  
 |붙여넣기|Ctrl+V, Alt+H+V|  
-|모두 선택|CTRL+A|  
+|모두 선택|Ctrl+A|  
 |실행 취소|Ctrl+Z, Alt+Z|  
 |다시 실행|Ctrl+Y, Alt+Y|  
 |확대|Ctrl+더하기 기호(+)|  
@@ -93,7 +93,7 @@ ms.locfileid: "66107777"
   
 ## <a name="see-also"></a>참고 항목  
  [2014 SQL Server의 보고서 작성기](report-builder-in-sql-server-2016.md)   
- [보고서 디자인 뷰&#40;보고서 작성기&#41;](report-design-view-report-builder.md)   
- [용어집 &#40;보고서 작성기&#41;](glossary-report-builder.md)  
+ [보고서 디자인 뷰 &#40;보고서 작성기&#41;](report-design-view-report-builder.md)   
+ [용어 설명&#40;보고서 작성기&#41;](glossary-report-builder.md)  
   
   

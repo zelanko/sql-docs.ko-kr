@@ -21,10 +21,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fb26ce238953f9bf4a3472385de6dd1bf5c167d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106244"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>차트(보고서 작성기 및 SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "66106244"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DesigningChart"></a> 차트 디자인  
+##  <a name="designing-a-chart"></a><a name="DesigningChart"></a> 차트 디자인  
  디자인 화면에 차트 데이터 영역을 추가한 후에는 숫자 데이터 및 숫자가 아닌 데이터에 대한 보고서 데이터 세트 필드를 차트의 차트 데이터 창으로 끌 수 있습니다. 디자인 화면에서 차트를 클릭하면 범주 그룹, 계열 그룹 및 값의 세 영역이 포함된 차트 데이터 창이 나타납니다. 보고서에 공유 데이터 세트나 포함된 데이터 세트가 있는 경우 데이터 세트의 필드가 보고서 데이터 창에 나타납니다. 필드를 데이터 세트에서 적절한 영역으로 끕니다. 기본적으로 차트의 영역 중 하나에 필드를 추가하면 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 에서 필드에 대한 집계를 계산합니다. 계열 그룹화를 사용하여 계열을 동적으로 생성할 수도 있습니다. 차트는 행렬과도 밀접하게 관련됩니다.  
   
  ![rs_chartwSeriesCategories](../media/rs-chartwseriescategories.gif "rs_chartwSeriesCategories")  
@@ -49,7 +49,7 @@ ms.locfileid: "66106244"
   
   
   
-##  <a name="SimilarMatrix"></a>행렬과의 유사성  
+##  <a name="similarities-to-a-matrix"></a><a name="SimilarMatrix"></a>행렬과의 유사성  
  차트 작동 방식을 설명하는 방법 중 하나는 행렬과 비교하는 것입니다.  
   
  ![도구 상자에서 추가된 새 행렬이 선택됨](../media/rs-matrixtemplatenewselected.gif "도구 상자에서 추가된 새 행렬이 선택됨")  
@@ -64,7 +64,7 @@ ms.locfileid: "66106244"
   
  
   
-##  <a name="AddingData"></a> 차트에 데이터 추가  
+##  <a name="adding-data-to-the-chart"></a><a name="AddingData"></a> 차트에 데이터 추가  
  이름별 판매량(Sales by Name)을 표시하는 보고서가 있다고 가정해 보십시오. Full Name 필드를 범주 그룹 영역으로 끌어 놓고 Sales 필드를 값 영역으로 끌어 놓습니다.  
   
  값 영역에 Sales 필드를 추가하면 데이터 필드의 텍스트가 범례에 나타나고 이 숫자 필드의 데이터가 하나의 값으로 집계됩니다. 기본적으로 값은 기본 제공 함수 Sum을 사용하여 집계됩니다. 차트 데이터 창에는 필드에 대한 단순 식이 포함됩니다. 이 예제에서는 필드 식 `[Sum(Sales)]` 에 대해 `=Sum(Fields!Sales.Value)`가 나타납니다. 지정된 그룹이 없으면 차트에는 하나의 데이터 요소만 표시됩니다. 여러 데이터 요소를 표시하려면 그룹화 필드를 추가하여 데이터를 그룹화해야 합니다. 범주 그룹 영역에 Name 필드를 추가하면 필드와 이름이 같은 그룹화 필드가 자동으로 차트에 추가됩니다. x축과 y축을 따라 값을 정의하는 필드를 추가하면 차트에서 데이터를 올바르게 표시할 수 있도록 충분한 정보가 준비됩니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "66106244"
   
   
   
-##  <a name="GroupsInChart"></a> 차트의 범주 및 계열 그룹  
+##  <a name="category-and-series-groups-in-a-chart"></a><a name="GroupsInChart"></a> 차트의 범주 및 계열 그룹  
  차트는 중첩된 범주 및 계열 그룹을 지원합니다. 차트에는 세부 데이터가 표시되지 않습니다. 데이터 세트 필드를 선택한 차트의 범주 및 계열 끌어 놓기 영역으로 끌어 차트에 그룹을 추가합니다.  
   
  원형 차트와 같은 셰이프 차트는 범주 그룹 및 중첩 범주 그룹을 지원합니다. 가로 막대형 차트 등의 기타 차트는 범주 그룹 및 계열 그룹을 지원합니다. 그룹을 중첩할 수는 있지만 범주 또는 계열 수가 차트의 정보를 가리지 않도록 해야 합니다.  
@@ -85,14 +85,14 @@ ms.locfileid: "66106244"
   
   
   
-##  <a name="DatasetConsiderations"></a> 차트를 만들기 전의 데이터 세트 고려 사항  
+##  <a name="dataset-considerations-before-creating-a-chart"></a><a name="DatasetConsiderations"></a> 차트를 만들기 전의 데이터 세트 고려 사항  
  차트는 데이터에 대한 요약 보기를 제공합니다. 그러나 데이터 세트가 큰 경우에는 차트의 정보가 가려지거나 알아볼 수 없게 표시될 수 있습니다. 누락된 또는 Null 데이터 요소, 차트 종류에 맞지 않는 데이터 형식, 차트와 테이블을 조합하는 등의 고급 애플리케이션은 모두 차트의 가독성에 영향을 미칠 수 있습니다. 차트를 신속하고 효과적으로 디자인하려면 차트를 디자인하기 전에 신중하게 데이터를 준비하고 이해해야 합니다.  
   
  보고서에 포함할 수 있는 차트의 수에는 제한이 없습니다. 차트는 행렬 또는 테이블 등의 다른 데이터 영역과 마찬가지로 단일 데이터 세트에 바인딩됩니다. 여러 데이터 세트를 같은 차트에 표시하려면 차트에 데이터를 추가하기 전에 SQL 쿼리에서 JOIN 또는 UNION 문을 사용하는 추가 데이터 세트를 만듭니다. JOIN 및 UNION 문에 대한 자세한 내용은 온라인 설명서나 다른 SQL 참조를 참조하십시오.  
   
  세부 데이터가 필요 없거나 유용하지 않은 경우에는 데이터 세트 쿼리에서 데이터를 사전 집계하는 것을 고려하세요. 각 데이터 요소를 보다 명확하게 표시하려면 데이터 세트에서 범주의 수를 줄입니다. 데이터 세트를 필터링하거나 반환되는 행의 수를 줄이는 조건을 쿼리에 추가할 수 있습니다.  
   
-##  <a name="BestPractices"></a> 차트에 데이터를 표시하기 위한 최상의 방법  
+##  <a name="best-practices-when-displaying-data-in-a-chart"></a><a name="BestPractices"></a> 차트에 데이터를 표시하기 위한 최상의 방법  
  차트는 기본 정보에 대한 명확한 이미지를 제공할 수 있을 만큼의 요소 수가 표시될 때 가장 효과적입니다. 분산형 그래프와 같은 일부 차트는 데이터 요소가 많을수록 좋지만 원형 차트와 같은 다른 차트는 데이터 요소가 적을수록 더 효과적입니다. 데이터 세트의 값과 정보를 표시할 방법에 따라 신중하게 차트 종류를 선택해야 합니다. 자세한 내용은 [차트 종류&#40;보고서 작성기 및 SSRS&#41;](chart-types-report-builder-and-ssrs.md)를 참조하세요.  
   
  차트에 데이터를 통합하는 데는 여러 가지 방법이 있습니다.  
@@ -107,7 +107,7 @@ ms.locfileid: "66106244"
   
   
   
-##  <a name="AggregateValues"></a> 차트에서 데이터 필드의 값 집계  
+##  <a name="aggregating-values-from-a-data-field-on-the-chart"></a><a name="AggregateValues"></a> 차트에서 데이터 필드의 값 집계  
  기본적으로 차트의 값 영역에 필드를 추가하면 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 에서 필드에 대한 집계를 계산합니다. 필드를 특정 영역에 끌어다 놓지 않고 차트로 끌면 차트는 필드의 데이터 형식에 기반하여 이 필드가 범주(x) 축에 속하는지 값(y) 축에 속하는지 결정합니다. 값 영역에 끌어다 놓은 숫자 필드는 SUM 함수를 사용하여 집계됩니다. 값 필드의 데이터 형식이 값 영역에서 문자열인 경우 차트는 필드에 숫자가 있더라도 숫자 값을 표시할 수 없으므로 차트는 COUNT 함수를 표시합니다. 이러한 현상을 방지하려면 필드에 서식 지정된 숫자가 포함된 문자열이 아니라 숫자 데이터 형식이 지정되어야 합니다. Visual Basic 식을 사용하여 `CDbl` 또는 `CInt` 상수로 문자열 값을 숫자 데이터 형식으로 변환할 수 있습니다. 예를 들어 다음의 복잡한 식은 문자열 형식으로 지정된 숫자 값이 포함된 `MyField` 라는 필드를 변환합니다.  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
@@ -116,7 +116,7 @@ ms.locfileid: "66106244"
   
   
   
-##  <a name="InThisSection"></a> 섹션 내용  
+##  <a name="in-this-section"></a><a name="InThisSection"></a>섹션 항목  
  [보고서에 차트 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
  보고서에 차트를 추가할 때 첫 번째로 수행하는 단계에 대해 설명합니다.  
   
@@ -148,11 +148,11 @@ ms.locfileid: "66106244"
  차트 사용 관련 팁에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [이미지, 입력란, 사각형 및 선&#40;보고서 작성기 및 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
- [대화형 정렬, 문서 구조 및 링크&#40;보고서 작성기 및 SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [중첩된 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
- [자습서: 보고서에 세로 막대형 차트 추가&#40;보고서 작성기&#41;](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   
- [자습서: 보고서에 원형 차트 추가&#40;보고서 작성기&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [이미지, 텍스트 상자, 사각형 및 선 &#40;보고서 작성기 및 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
+ [대화형 정렬, 문서 구조 및 링크 &#40;보고서 작성기 및 SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [중첩 된 데이터 영역 &#40;보고서 작성기 및 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
+ [자습서: 보고서에 세로 막대형 차트 추가 &#40;보고서 작성기&#41;](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [자습서: 보고서에 원형 차트 추가 &#40;보고서 작성기&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [자습서: 보고서에 막대형 차트 추가&#40;보고서 작성기&#41;](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

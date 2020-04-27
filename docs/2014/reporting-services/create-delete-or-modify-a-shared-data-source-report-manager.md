@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c554215ba716a35f3e2851a5042be1989ee5648c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109608"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>공유 데이터 원본 만들기, 삭제 및 수정(보고서 관리자)
@@ -37,19 +37,15 @@ ms.locfileid: "66109608"
   
 2.  보고서 관리자에서 **내용** 페이지로 이동합니다.  
   
-3.  
-  **새 데이터 원본**을 클릭합니다. 
-  **새 데이터 원본** 페이지가 열립니다.  
+3.  **새 데이터 원본**을 클릭합니다. **새 데이터 원본** 페이지가 열립니다.  
   
 4.  항목의 이름을 입력합니다. 이름은 한 글자 이상이어야 하며 문자로 시작되어야 합니다. 특정 기호도 포함할 수 있지만 공백 또는 ; ? : \@ & = +, $/* \< > | " /.  
   
 5.  연결 정보를 제공하는 설명을 입력합니다(옵션). 이 설명은 보고서 관리자의 **내용** 페이지에 나타납니다.  
   
-6.  
-  **데이터 원본 유형** 목록에서 데이터 원본의 데이터를 처리하는 데 사용할 데이터 처리 확장 프로그램을 지정합니다.  
+6.  **데이터 원본 유형** 목록에서 데이터 원본의 데이터를 처리하는 데 사용할 데이터 처리 확장 프로그램을 지정합니다.  
   
-7.  
-  **연결 문자열**에는 보고서 서버가 데이터 원본에 연결하는 데 사용하는 연결 문자열을 지정합니다. 연결 문자열에는 자격 증명을 지정하지 않는 것이 좋습니다.  
+7.  **연결 문자열**에는 보고서 서버가 데이터 원본에 연결하는 데 사용하는 연결 문자열을 지정합니다. 연결 문자열에는 자격 증명을 지정하지 않는 것이 좋습니다.  
   
      다음 예에서는 로컬 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스에 연결 하기 위한 연결 문자열을 보여 줍니다.  
   
@@ -57,8 +53,7 @@ ms.locfileid: "66109608"
     data source=<localservername>; initial catalog=AdventureWorks2012  
     ```  
   
-8.  
-  **연결 방법**에서 보고서를 실행할 때 자격 증명을 가져오는 방법을 지정합니다.  
+8.  **연결 방법**에서 보고서를 실행할 때 자격 증명을 가져오는 방법을 지정합니다.  
   
     -   로그온 이름과 암호를 입력하라는 메시지를 표시하려면 **보고서를 실행하는 사용자가 제공한 자격 증명**을 클릭합니다. 사용자가 Windows 자격 증명으로 입력한 자격 증명을 사용하려면 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용**을 클릭합니다. 사용자 이름과 암호가 데이터베이스 자격 증명인 경우 이 옵션을 선택하지 마십시오.  
   
@@ -70,20 +65,18 @@ ms.locfileid: "66109608"
   
      자격 증명 구성 방법에 대한 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요. 무인 실행 계정에 대한 자세한 내용은 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.  
   
-9. 
-  **연결 테스트** 단추를 클릭하여 데이터 원본 구성의 유효성을 검사합니다.  
+9. **연결 테스트** 단추를 클릭하여 데이터 원본 구성의 유효성을 검사합니다.  
   
     > [!NOTE]  
     >  XML 데이터 원본 유형에서는 연결 테스트 단추를 지원하지 않습니다.  
   
-10. **확인을** 클릭 합니다.  
+10. **확인**을 클릭합니다.  
   
 ### <a name="to-modify-a-shared-data-source"></a>공유 데이터 원본을 수정하려면  
   
 1.  보고서 관리자에서 내용 페이지로 이동합니다.  
   
-2.  공유 데이터 원본 항목으로 이동하고 항목을 마우스로 가리킨 다음 드롭다운 목록을 클릭하고 상황에 맞는 메뉴에서 **관리**를 클릭합니다. 
-  **속성** 페이지가 열립니다.  
+2.  공유 데이터 원본 항목으로 이동하고 항목을 마우스로 가리킨 다음 드롭다운 목록을 클릭하고 상황에 맞는 메뉴에서 **관리**를 클릭합니다. **속성** 페이지가 열립니다.  
   
 3.  데이터 원본을 수정한 후 **적용**을 클릭합니다.  
   
@@ -95,11 +88,9 @@ ms.locfileid: "66109608"
   
          항목을 클릭하여 엽니다. 일반 속성 페이지가 열립니다.  
   
-         
-  **삭제**를 클릭한 다음 **확인**을 클릭합니다.  
+         **삭제**를 클릭한 다음 **확인**을 클릭합니다.  
   
-    -   
-  **내용** 페이지에서 삭제할 데이터 원본이 들어 있는 폴더로 이동합니다.  
+    -   **내용** 페이지에서 삭제할 데이터 원본이 들어 있는 폴더로 이동합니다.  
   
          항목을 마우스로 가리키고 드롭다운 목록을 클릭한 다음 상황에 맞는 메뉴에서 **삭제**를 클릭합니다.  
   
@@ -110,6 +101,6 @@ ms.locfileid: "66109608"
  [내용 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [SSRS&#41;&#40;공유 데이터 원본 만들기, 수정 및 삭제](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [보고서 데이터 원본 관리](report-data/manage-report-data-sources.md)   
- [보고서 &#40;보고서 관리자&#41;에 대 한 데이터 원본 속성 구성](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [보고서의 데이터 원본 속성 구성&#40;보고서 관리자&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

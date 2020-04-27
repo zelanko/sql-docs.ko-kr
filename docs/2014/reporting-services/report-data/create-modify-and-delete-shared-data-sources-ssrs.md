@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a2239e07cc24842c5cbdf44c8743ea2d79ea7cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107396"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>공유 데이터 원본 만들기, 수정 및 삭제(SSRS)
@@ -32,12 +32,11 @@ ms.locfileid: "66107396"
   
  공유 데이터 원본은 다음과 같은 부분으로 구성됩니다.  
   
-|부|Description|  
+|부분|Description|  
 |----------|-----------------|  
 |속성|보고서 서버 폴더 계층 내에서 항목을 식별하는 이름입니다.|  
 |Description|폴더 내용을 볼 때 보고서 관리자에 항목과 함께 표시되는 설명입니다.|  
-|연결 형식|데이터 원본과 함께 사용되는 데이터 처리 확장 프로그램입니다. 보고서 서버에 배포된 데이터 처리 확장 프로그램만 사용할 수 있습니다. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 포함된 데이터 처리 확장 프로그램에 대한 자세한 내용은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md)을 참조하세요.|  
+|연결 형식|데이터 원본과 함께 사용되는 데이터 처리 확장 프로그램입니다. 보고서 서버에 배포된 데이터 처리 확장 프로그램만 사용할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 포함된 데이터 처리 확장 프로그램에 대한 자세한 내용은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md)을 참조하세요.|  
 |연결 문자열|데이터베이스에 대한 연결 문자열입니다. 자세한 내용 및 자주 사용 되는 데이터 원본에 대 한 연결 문자열의 예를 보려면 [Reporting Services의 데이터 연결, 데이터 원본 및 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)을 참조 하세요.|  
 |자격 증명 유형|연결에 대한 자격 증명을 가져오는 방법 및 연결된 이후 자격 증명이 사용되는지 여부를 지정합니다. 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../integration-services/connection-manager/data-sources.md)을 참조하세요.|  
   
@@ -48,9 +47,9 @@ ms.locfileid: "66107396"
   
  공유 데이터 원본을 만드는 방법에 대한 자세한 내용은 다음을 참조하십시오.  
   
--   [SSRS&#41;&#40;포함 된 데이터 원본 또는 공유 데이터 원본 만들기](../create-an-embedded-or-shared-data-source-ssrs.md)  
+-   [포함된 데이터 원본 또는 공유 데이터 원본 만들기&#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)  
   
--   [SharePoint 통합 모드에서 공유 데이터 원본 &#40;Reporting Services 만들기 및 관리&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)  
+-   [공유 데이터 원본 만들기 및 관리&#40;SharePoint 통합 모드의 Reporting Services&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)  
   
  보고서 서버에서 공유 데이터 원본을 만든 후 역할 할당을 만들어 공유 데이터 원본에 대한 액세스를 제어하거나, 다른 위치로 이동하거나, 이름을 바꾸거나, 외부 데이터 원본에서 유지 관리 작업이 수행되는 동안 보고서가 처리되지 않도록 오프라인 상태로 만들 수 있습니다. 공유 데이터 원본 항목의 이름을 변경하거나 보고서 서버 폴더 계층의 다른 위치로 이동하면 공유 데이터 원본을 참조하는 모든 보고서나 구독의 경로 정보도 함께 업데이트됩니다. 공유 데이터 원본을 오프라인 상태로 만들면 데이터 원본을 다시 활성화할 때까지 모든 보고서, 모델 및 구독이 실행되지 않습니다.  
   
@@ -77,6 +76,6 @@ ms.locfileid: "66107396"
  [포함 된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본 &#40;보고서 작성기 및 SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [데이터 원본 속성 페이지 &#40;보고서 관리자&#41;](../data-sources-properties-page-report-manager.md)   
  [공유 데이터 원본 &#40;보고서 관리자 만들기, 삭제 또는 수정&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [보고서 &#40;보고서 관리자&#41;에 대 한 데이터 원본 속성 구성](configure-data-source-properties-for-a-report-report-manager.md)  
+ [보고서의 데이터 원본 속성 구성&#40;보고서 관리자&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

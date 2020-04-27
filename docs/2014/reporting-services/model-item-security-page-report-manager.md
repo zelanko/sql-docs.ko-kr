@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f45169a2fdc8fdc4d56cb27a8bf6348a3c3c1a29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108225"
 ---
 # <a name="model-item-security-page-report-manager"></a>모델 항목 보안 페이지(보고서 관리자)
@@ -58,8 +58,7 @@ ms.locfileid: "66108225"
   
 3.  드롭다운 메뉴에서 **관리**를 클릭합니다. 모델의 일반 속성 페이지가 열립니다.  
   
-4.  
-  **모델 항목 보안** 탭을 선택합니다.  
+4.  **모델 항목 보안** 탭을 선택합니다.  
   
 ## <a name="options"></a>옵션  
  **개별 모델 항목을 이 모델에 대해 독립적으로 유지**  

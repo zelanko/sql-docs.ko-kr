@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 35526e8928a98ccca2e2e61e88fb9361a6d00d6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105234"
 ---
 # <a name="level-function-report-builder-and-ssrs"></a>Level 함수(보고서 작성기 및 SSRS)
@@ -35,15 +35,12 @@ Level(scope)
  (`String`) 선택 사항입니다. 집계 함수를 적용할 보고서 항목을 포함하는 데이터 세트, 그룹 또는 데이터 영역의 이름입니다. *scope* 를 지정하지 않은 경우 현재 범위가 사용됩니다.  
   
 ## <a name="return-type"></a>반환 형식  
- 
-  `Integer`를 반환합니다. *Scope* 가 데이터 집합 또는 데이터 영역을 지정 하거나 비재귀 그룹화 (요소 없는 `Parent` 그룹화)를 지정 하는 경우는 0을 `Level` 반환 합니다. *scope* 를 생략하면 현재 범위의 수준이 반환됩니다.  
+ `Integer`를 반환합니다. *Scope* 가 데이터 집합 또는 데이터 영역을 지정 하거나 비재귀 그룹화 (요소 없는 `Parent` 그룹화)를 지정 하는 경우는 0을 `Level` 반환 합니다. *scope* 를 생략하면 현재 범위의 수준이 반환됩니다.  
   
 ## <a name="remarks"></a>설명  
- 
-  `Level` 함수에서 반환되는 값은 0에서 시작합니다. 즉, 계층의 첫 수준은 0입니다.  
+ `Level` 함수에서 반환되는 값은 0에서 시작합니다. 즉, 계층의 첫 수준은 0입니다.  
   
- 
-  `Level` 함수는 직원 목록과 같은 재귀 계층에서 들여쓰기를 제공하는 데 사용할 수 있습니다.  
+ `Level` 함수는 직원 목록과 같은 재귀 계층에서 들여쓰기를 제공하는 데 사용할 수 있습니다.  
   
  재귀 계층 구조에 대한 자세한 내용은 [재귀 계층 구조 그룹 만들기&#40;보고서 작성기 및 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)를 참조하세요.  
   

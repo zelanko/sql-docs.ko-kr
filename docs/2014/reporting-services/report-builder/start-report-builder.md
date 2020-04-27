@@ -16,15 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fc123be862320cd35ccf4aec76d8bc9cf7877af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107597"
 ---
 # <a name="start-report-builder-report-builder"></a>보고서 작성기 시작(보고서 작성기)
-  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]에는 독립 실행형 및 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 버전의 보고서 작성기 포함 되어 있습니다. 
-  [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 버전은 기본 모드 또는 SharePoint 통합 모드로 설치된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 사용할 수 있습니다.  
+  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]에는 독립 실행형 및 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 버전의 보고서 작성기 포함 되어 있습니다. [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 버전은 기본 모드 또는 SharePoint 통합 모드로 설치된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  보고서 작성기는 Itanium 64 기반 컴퓨터에 설치할 수 없습니다. 이는 보고서 작성기의 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 및 독립 실행형 버전에 적용됩니다.  
@@ -39,8 +38,7 @@ ms.locfileid: "66107597"
   
 1.  웹 브라우저의 주소 표시줄에 보고서 서버의 URL을 입력합니다. 기본적으로 URL은 http://\<*servername*>/reports입니다. 보고서 관리자가 열립니다.  
   
-2.  
-  **보고서 작성기**를 클릭합니다.  
+2.  **보고서 작성기**를 클릭합니다.  
   
      보고서 작성기가 열립니다. 이제 보고서를 작성하거나 보고서 서버의 보고서를 열 수 있습니다.  
   
@@ -60,11 +58,9 @@ ms.locfileid: "66107597"
   
 2.  라이브러리를 엽니다.  
   
-3.  
-  **문서**를 클릭합니다.  
+3.  **문서**를 클릭합니다.  
   
-4.  
-  **새 문서** 메뉴에서 **보고서 작성기 보고서**를 클릭합니다.  
+4.  **새 문서** 메뉴에서 **보고서 작성기 보고서**를 클릭합니다.  
   
      보고서 작성기가 열립니다. 이제 보고서를 작성하거나 보고서 서버의 보고서를 열 수 있습니다.  
   
@@ -74,8 +70,7 @@ ms.locfileid: "66107597"
   
 1.  시작 메뉴에서 **모든 프로그램**을 클릭 한 다음 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] **보고서 작성기**를 클릭 합니다.  
   
-2.  
-  **보고서 작성기** 를 클릭합니다.  
+2.  **보고서 작성기** 를 클릭합니다.  
   
      보고서 작성기가 열립니다. 이제 보고서를 작성하거나 열 수 있습니다.  
   

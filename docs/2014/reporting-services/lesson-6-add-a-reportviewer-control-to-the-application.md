@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dfce5e2bdf71dfb58481fedf05794d3603285449
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108416"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>6단원: 애플리케이션에 ReportViewer 컨트롤 추가
@@ -24,15 +24,13 @@ ms.locfileid: "66108416"
   
 1.  **솔루션 탐색기**에서 **Default.aspx**를 마우스 오른쪽 단추로 클릭한 다음 **뷰 디자이너**를 클릭합니다.  
   
-2.  
-  **도구 모음** 창의 **AJAX 확장** 그룹에서 **ScriptManager** 컨트롤을 디자인 화면으로 끌어옵니다.  
+2.  **도구 모음** 창의 **AJAX 확장** 그룹에서 **ScriptManager** 컨트롤을 디자인 화면으로 끌어옵니다.  
   
 3.  **보고** 그룹에서 **ReportViewer** 컨트롤을 **ScriptManager** 컨트롤 아래의 디자인 화면으로 끌어옵니다.  
   
 4.  **ReportViewer** 컨트롤의 오른쪽 위에 있는 화살표를 클릭하여 **ReportViewer 태스크** 창을 엽니다.  
   
-5.  
-  **보고서 선택** 상자에서 만든 부모 보고서를 선택합니다.  
+5.  **보고서 선택** 상자에서 만든 부모 보고서를 선택합니다.  
   
      보고서를 선택하면 보고서에 사용된 데이터 원본의 인스턴스가 자동으로 만들어집니다. 각 DataTable 및 해당 [DataSet](https://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) 컨테이너를 인스턴스화하는 코드가 생성됩니다. 보고서에 사용된 각 데이터 원본에 해당하는 [ObjectDataSource](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource\(v=vs.100\).aspx) 컨트롤이 디자인 화면에 추가됩니다. 이 데이터 원본 컨트롤은 자동으로 구성됩니다.  
   

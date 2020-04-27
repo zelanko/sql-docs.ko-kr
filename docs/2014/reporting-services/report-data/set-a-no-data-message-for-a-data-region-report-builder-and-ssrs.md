@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f2660582b03a121a81976d6bbc12afc1213877c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107091"
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>데이터 영역에 대한 데이터 없음 메시지 설정(보고서 작성기 및 SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "66107091"
   
 2.  속성 창에서 노드를 확장 `NoDataMessage`합니다.  
   
-3.  속성 **** 필드에 `NoDataMessage` 메시지로 표시할 텍스트를 캡션에 입력 합니다.  
+3.  속성 **Caption**필드에 `NoDataMessage` 메시지로 표시할 텍스트를 캡션에 입력 합니다.  
   
      또는 드롭다운 목록에서 **식** 을 클릭하여 **식** 대화 상자를 열고 식을 작성합니다.  
   

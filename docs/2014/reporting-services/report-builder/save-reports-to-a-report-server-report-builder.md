@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c94117f277f0d058bd67c61e8dabc609d009337
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107636"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>보고서 서버에 보고서 저장(보고서 작성기)
@@ -49,9 +49,9 @@ ms.locfileid: "66107636"
 4.  **항목 유형**에서 저장 중인 보고서 항목의 유형을 선택합니다. 보고서의 유형은 보고서 (*.rdl)입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [보고서 작성기 및 SSRS &#40;보고서 찾기, 보기 및 관리 &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [보고서 &#40;보고서 작성기 및 SSRS&#41;내보내기](export-reports-report-builder-and-ssrs.md)   
- [보고서 저장&#40;보고서 작성기&#41;](saving-reports-report-builder.md)   
+ [보고서 저장 &#40;보고서 작성기&#41;](saving-reports-report-builder.md)   
  [다른 파일 형식으로 보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)  
   
   

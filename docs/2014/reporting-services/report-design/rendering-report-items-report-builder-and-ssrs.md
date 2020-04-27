@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ecd7088b9fe76b955cc40dd495d508878b9d0d96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105348"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>보고서 항목 렌더링(보고서 작성기 및 SSRS)
@@ -77,8 +77,7 @@ ms.locfileid: "66105348"
   
 -   반복되는 열 머리글 및 행 머리글  
   
-     머리글이 바닥글보다 우선 순위가 높습니다. 반복되는 내부 그룹이 외부 그룹보다 우선 순위가 높습니다. 
-  `RepeatWith` 속성이 설정되어 있고 대상 데이터 영역에 보다 가까이 있는 항목이 데이터 영역에서 멀리 떨어져 있는 항목보다 우선 순위가 높습니다.  
+     머리글이 바닥글보다 우선 순위가 높습니다. 반복되는 내부 그룹이 외부 그룹보다 우선 순위가 높습니다. `RepeatWith` 속성이 설정되어 있고 대상 데이터 영역에 보다 가까이 있는 항목이 데이터 영역에서 멀리 떨어져 있는 항목보다 우선 순위가 높습니다.  
   
 -   명시적 KeepTogether 속성이로 `true`설정 된 입력란 또는 사각형 등의 작은 보고서 항목  
   

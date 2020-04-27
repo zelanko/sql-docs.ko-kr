@@ -13,14 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 740353035b1bd53a8c99b6336b3a70532eb57b2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110129"
 ---
 # <a name="summary-converting-a-table-to-a-hierarchical-structure"></a>요약: 테이블을 계층 구조로 변환
-  
   `hierarchyid` 데이터 형식은 단순하고 간단한 형식으로 계층 관계를 저장할 수 있습니다. 적절한 인덱스를 사용하면 계층 수준, 계층의 하위 트리 또는 기존의 단일 조회별로 데이터를 효율적으로 반환할 수 있습니다.  
   
  이 단원에서는 두 개의 계층 메서드를 사용했습니다. 다음 단원에서는 이 이외의 메서드를 사용하여 계층적 데이터를 쿼리하고 조작하는 방법을 보여 줍니다.  

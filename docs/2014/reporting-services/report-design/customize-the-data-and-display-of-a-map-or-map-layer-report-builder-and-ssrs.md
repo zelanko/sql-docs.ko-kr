@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3cc939ac63f1b53e2d2d24d70edc5fe0798bcc51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106102"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>지도 또는 지도 계층의 데이터 및 표시 사용자 지정(보고서 작성기 및 SSRS)
@@ -56,7 +56,7 @@ ms.locfileid: "66106102"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Map"></a> 지도의 옵션 변경  
+##  <a name="change-options-for-the-map"></a><a name="Map"></a> 지도의 옵션 변경  
  지도 보고서 항목에서 다음을 제어할 수 있습니다.  
   
 -   여러 제목 추가  
@@ -73,7 +73,7 @@ ms.locfileid: "66106102"
   
  
   
-##  <a name="Viewport"></a> 뷰포트의 옵션 변경  
+##  <a name="change-options-for-the-viewport"></a><a name="Viewport"></a> 뷰포트의 옵션 변경  
  보고서에 나타나는 지도의 보기를 변경하려면 뷰포트 옵션을 사용합니다.  
   
  공간 데이터 원본에서 보고서에 표시해야 하는 것보다 많은 영역을 제공할 수 있습니다. 뷰포트를 사용하여 중심 및 확대/축소 수준을 설정하고 지도의 영역을 자를 수 있습니다.  
@@ -94,7 +94,7 @@ ms.locfileid: "66106102"
   
 
   
-##  <a name="Legends"></a> 범례의 옵션 변경  
+##  <a name="change-options-for-the-legends"></a><a name="Legends"></a> 범례의 옵션 변경  
  범례는 사용자가 지도의 데이터를 해석하는 데 도움이 됩니다.  
   
  기본적으로 계층에 지정하는 모든 규칙은 첫 번째 범례에 항목을 추가합니다. 또한 모든 색 규칙은 색 눈금에 값을 표시합니다.  
@@ -107,7 +107,7 @@ ms.locfileid: "66106102"
   
 
   
-##  <a name="Layer"></a> 계층의 옵션 변경  
+##  <a name="change-options-for-the-layer"></a><a name="Layer"></a> 계층의 옵션 변경  
  지도의 계층을 표시하려면 지도를 클릭하여 선택합니다. 그러면 지도 창이 나타납니다. 계층의 옵션을 변경하려면 계층을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴를 사용합니다.  
   
  계층은 공간 데이터 원본에서 반환되는 공간 데이터에 따라 다각형 계층, 선 계층 또는 점 계층 중 하나일 수 있습니다.  
@@ -124,7 +124,7 @@ ms.locfileid: "66106102"
   
  계층에 대한 자세한 내용은 [지도 또는 지도 계층 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)를 참조하세요.  
   
-##  <a name="DataGrouping"></a> 계층의 데이터 그룹화 변경  
+##  <a name="change-data-grouping-for-the-layer"></a><a name="DataGrouping"></a> 계층의 데이터 그룹화 변경  
  사용자 고유의 셰이프에 맞게 공간 데이터의 집계 방식을 사용자 지정할 수 있습니다. 계층의 그룹 속성을 설정하려면 지도 창에서 계층을 선택하고 계층의 속성 창에서 **그룹**을 클릭한 다음, 줄임표(…)를 클릭하여 그룹 속성을 엽니다. 이 대화 상자에서 그룹 식을 지정하고, 그룹 변수를 만들고, 그룹화에 사용되는 데이터를 필터링할 수 있습니다.  
   
  그룹 식은 공간 데이터와 관계가 있는 분석 데이터가 계층의 각 지도 요소에 대해 집계되는 방법을 지정합니다. 기본적으로 그룹 식은 공간 데이터와 분석 데이터 간의 관계에 대해 지정된 일치 필드의 집합입니다. 예를 들어 국가 또는 지역의 도시 위치와 인구 크기를 표시하는 거품형 지도의 경우 이름이 같은 도시가 여러 개일 수 있기 때문에 일치 필드에는 도시 이름 [City]와 지역 이름 [Region]이 포함됩니다. 해당 그룹 식에는 두 필드 [City] 및 [Region]이 포함됩니다.  
@@ -133,7 +133,7 @@ ms.locfileid: "66106102"
   
  
   
-##  <a name="MapElements"></a> 계층의 지도 요소에 대한 옵션 변경  
+##  <a name="change-options-for-the-map-elements-on-the-layer"></a><a name="MapElements"></a> 계층의 지도 요소에 대한 옵션 변경  
  지도 요소는 계층에서 공간 데이터를 기반으로 하는 점, 선 또는 다각형입니다. 지도 요소에 대해 다음 옵션을 설정할 수 있습니다. 이러한 옵션은 포함되었는지 여부와 관계없이 계층의 모든 지도 요소에 적용됩니다.  
   
 -   레이블, 레이블 표시 유형, 레이블 오프셋 및 서식  
@@ -150,7 +150,7 @@ ms.locfileid: "66106102"
   
 
   
-##  <a name="Precedence"></a> 표시 옵션 우선 순위 이해  
+##  <a name="understanding-display-option-precedence"></a><a name="Precedence"></a> 표시 옵션 우선 순위 이해  
  지도 계층에서 점, 선 또는 다각형의 표시 모양을 제어하려면 표시 옵션을 설정할 수 있는 곳과 우선 순위가 더 높은 옵션을 이해해야 합니다. 다음 표시 옵션은 우선 순위가 낮은 것에서 높은 것 순으로 나열됩니다. 상위 표시 옵션이 이 목록에 있는 하위 표시 옵션을 무시합니다.  
   
 -   계층 옵션  

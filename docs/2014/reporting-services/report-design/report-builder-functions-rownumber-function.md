@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d4a06a24525b3d9d0c4e4a5f3f0b749a7db70261
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105164"
 ---
 # <a name="rownumber-function-report-builder-and-ssrs"></a>RowNumber 함수(보고서 작성기 및 SSRS)
@@ -32,8 +32,7 @@ RowNumber(scope)
   
 #### <a name="parameters"></a>매개 변수  
  *범위*  
- (`String`) 행 개수를 계산할 컨텍스트를 지정하는 데이터 세트, 데이터 영역, 그룹의 이름 또는 Null(`Nothing`의 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])입니다. 
-  `Nothing`은 가장 바깥쪽 컨텍스트를 지정하며 이는 일반적으로 보고서 데이터 세트입니다.  
+ (`String`) 행 개수를 계산할 컨텍스트를 지정하는 데이터 세트, 데이터 영역, 그룹의 이름 또는 Null([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]의 `Nothing`)입니다. `Nothing`은 가장 바깥쪽 컨텍스트를 지정하며 이는 일반적으로 보고서 데이터 세트입니다.  
   
 ## <a name="remarks"></a>설명  
  `RowNumber`[RunningValue](report-builder-functions-runningvalue-function.md) 가 집계 함수의 실행 값을 반환 하는 것 처럼 지정 된 범위 내에서 행 개수의 실행 값을 반환 합니다. 범위를 지정할 때 행 개수를 1로 다시 설정할 시점을 지정합니다.  

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08ed0c207b92075952ffc71669b45100e4ff7d06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109676"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>기본 테이블 보고서 만들기(SSRS 자습서)
@@ -32,8 +32,7 @@ ms.locfileid: "66109676"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 데이터베이스 엔진.  
   
--   
-  [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스.  자세한 내용은 [SQL Server 2012에 대 한 놀이 works (SQL Server 2012 용 놀이 works)](https://go.microsoft.com/fwlink/?LinkId=245471) (https://go.microsoft.com/fwlink/?LinkId=245471).)를 참조 하세요. 예제 데이터베이스 및 예제 코드에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 대 한 지원에 대 한 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]자세한 내용은 CodePlex 웹 사이트에서 [데이터베이스 및 예제 개요](https://go.microsoft.com/fwlink/?LinkId=110391) 를 참조 하십시오.  
+-   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스.  자세한 내용은 [SQL Server 2012에 대 한 놀이 works (SQL Server 2012 용 놀이 works)](https://go.microsoft.com/fwlink/?LinkId=245471) (https://go.microsoft.com/fwlink/?LinkId=245471).)를 참조 하세요. 예제 데이터베이스 및 예제 코드에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 대 한 지원에 대 한 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]자세한 내용은 CodePlex 웹 사이트에서 [데이터베이스 및 예제 개요](https://go.microsoft.com/fwlink/?LinkId=110391) 를 참조 하십시오.  
   
 -   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
   
@@ -58,7 +57,7 @@ ms.locfileid: "66109676"
  [6단원: 그룹화 및 합계 추가&#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)  
   
 > [!NOTE]  
->  자습서를 검토할 때는 문서 뷰어 도구 모음에 **다음** 단추 및 **이전** 단추를 추가 하는 것이 좋습니다. 자세한 내용은 다음을 참조하세요.  
+>  자습서를 검토할 때는 문서 뷰어 도구 모음에 **다음** 단추 및 **이전** 단추를 추가 하는 것이 좋습니다. 자세한 내용은 다음을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services&#40;SSRS&#41; 자습서](reporting-services-tutorials-ssrs.md)  

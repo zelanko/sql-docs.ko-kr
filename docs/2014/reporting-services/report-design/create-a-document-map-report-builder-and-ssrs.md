@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99456151a71e74d0e85baec19cc42d8450c00ae4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106172"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>문서 구조 만들기(보고서 작성기 및 SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66106172"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DocMapRenderExtensions"></a> 문서 구조 및 렌더링 확장 프로그램  
+##  <a name="document-maps-and-rendering-extensions"></a><a name="DocMapRenderExtensions"></a> 문서 구조 및 렌더링 확장 프로그램  
  문서 구조는 미리 보기 및 보고서 뷰어와 같은 HTML 렌더링 확장 프로그램용입니다. 다른 렌더링 확장 프로그램에서는 다음과 같은 방법으로 문서 구조를 표시합니다.  
   
 -   PDF는 문서 구조를 책갈피 창으로 렌더링합니다.  
@@ -119,6 +119,6 @@ ms.locfileid: "66106172"
  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 관리자 &#40;보고서 작성기 및 SSRS에서 보고서 찾기 및 보기&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [보고서 관리자에서 보고서 찾기 및 보기&#40;보고서 작성기 및 SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

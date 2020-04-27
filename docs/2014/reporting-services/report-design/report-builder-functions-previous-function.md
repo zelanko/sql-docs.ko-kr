@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 540bf8367ba32fbebe4e27ee6e2cd3e1aa01ae0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105196"
 ---
 # <a name="previous-function-report-builder-and-ssrs"></a>Previous 함수(보고서 작성기 및 SSRS)
@@ -35,28 +35,26 @@ Previous(expression, scope)
  (`Variant` 또는 `Binary`) 데이터를 식별하거나 이전 값을 검색하기 위한 식입니다(예: `Fields!Fieldname.Value` 또는 `Sum(Fields!Fieldname.Value)`).  
   
  *범위*  
- (`String`) 선택 사항입니다. 식으로 지정 된 이전 값을 검색할 범위를 지정 하`Nothing` 는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]그룹 또는 데이터 영역의 이름 이거나 null (의 경우)입니다. **  
+ (`String`) 선택 사항입니다. 식으로 지정 된 이전 값을 검색할 범위를 지정 하`Nothing` 는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]그룹 또는 데이터 영역의 이름 이거나 null (의 경우)입니다. *expression*  
   
 ## <a name="return-type"></a>반환 형식  
- 
-  `Variant` 또는 `Binary`를 반환합니다.  
+ `Variant` 또는 `Binary`를 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- 
-  `Previous` 함수는 모든 정렬 및 필터링이 적용된 다음 지정된 범위에서 계산된 식의 이전 값을 반환합니다.  
+ `Previous` 함수는 모든 정렬 및 필터링이 적용된 다음 지정된 범위에서 계산된 식의 이전 값을 반환합니다.  
   
  *식* 에 집계가 포함 되지 않은 경우이 함수 `Previous` 는 기본적으로 보고서 항목의 현재 범위를 설정 합니다.  
   
  세부 정보 그룹에서 `Previous`를 사용하여 세부 행의 이전 인스턴스에 필드 참조 값을 지정합니다.  
   
 > [!NOTE]  
->  함수 `Previous` 는 세부 정보 그룹의 필드 참조만 지원 합니다. 예를 들어 세부 정보 그룹의 입력란에서 `=Previous(Fields!Quantity.Value)` 는 이전 행의 `Quantity` 필드에 대한 데이터를 반환합니다. 첫 번째 행에서 이 식은 Null(`Nothing`의 경우 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])을 반환합니다.  
+>  함수 `Previous` 는 세부 정보 그룹의 필드 참조만 지원 합니다. 예를 들어 세부 정보 그룹의 입력란에서 `=Previous(Fields!Quantity.Value)` 는 이전 행의 `Quantity` 필드에 대한 데이터를 반환합니다. 첫 번째 행에서 이 식은 Null([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]의 경우 `Nothing`)을 반환합니다.  
   
  *식* 에 기본 범위를 사용 하는 집계 함수가 포함 된 `Previous` 경우는 집계 함수 호출에 지정 된 범위의 이전 인스턴스 내에서 데이터를 집계 합니다.  
   
  *식* 에 기본값 이외의 범위를 지정 하는 집계 함수가 포함 된 경우 `Previous` 함수의 *범위* 매개 변수는 집계 함수 호출에 지정 된 범위에 대해 포함 하는 범위 여야 합니다.  
   
- , `Level` `InScope` `Previous` 및 함수는 expression 매개 변수에 사용할 수 없습니다. ** `Aggregate` 집계 함수에 대해 *recursive* 매개 변수를 지정할 수 없습니다.  
+ , `Level` `InScope` `Previous` 및 함수는 expression 매개 변수에 사용할 수 없습니다. *expression* `Aggregate` 집계 함수에 대해 *recursive* 매개 변수를 지정할 수 없습니다.  
   
  자세한 내용은 [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md) 및 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)를 참조하세요.  
   

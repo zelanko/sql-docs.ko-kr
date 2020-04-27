@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 45b7695a9cd259d10155036ce1f9367a71e2fe72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108366"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>보고서를 클릭 광고 보고서로 모델에 연결
@@ -29,8 +29,7 @@ ms.locfileid: "66108366"
   
 ### <a name="to-start-report-manager-from-a-browser"></a>브라우저에서 보고서 관리자를 시작하려면  
   
-1.  
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 6.0 이상을 엽니다.  
+1.  [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 6.0 이상을 엽니다.  
   
 2.  웹 브라우저의 주소 표시줄에 보고서 관리자 URL을 입력합니다. 기본적으로 URL은 http://\<*ComputerName*>/reports입니다.  
   
@@ -40,8 +39,7 @@ ms.locfileid: "66108366"
   
 2.  보고서 모델을 두 번 클릭합니다.  
   
-3.  
-  **클릭 광고**을 클릭합니다.  
+3.  **클릭 광고**을 클릭합니다.  
   
 4.  사용자 지정 클릭 광고 보고서를 연결할 엔터티를 선택합니다.  
   

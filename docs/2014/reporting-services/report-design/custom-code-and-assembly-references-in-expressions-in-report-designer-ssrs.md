@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df09ab032929de0eca51c9640f5c5cb23d1cde21
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106105"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조(SSRS)
@@ -40,7 +40,7 @@ ms.locfileid: "66106105"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RB3"></a>보고서 작성기에서 사용자 지정 코드 작업  
+##  <a name="working-with-custom-code-in-report-builder"></a><a name="RB3"></a> 보고서 작성기에서 사용자 지정 코드 작업  
  보고서 작성기에서는 사용자 지정 어셈블리에 대한 참조를 포함하는 보고서 서버의 보고서를 열 수 있습니다. 예를 들어 보고서 디자이너를 사용하여 만들고 배포한 보고서를 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 편집할 수 있습니다. 사용자 지정 어셈블리는 보고서 서버에 배포해야 합니다.  
   
  다음 작업은 수행할 수 없습니다.  
@@ -49,30 +49,25 @@ ms.locfileid: "66106105"
   
 2.  로컬 모드에서 사용자 지정 어셈블리에 대한 참조가 포함된 보고서 미리 보기  
   
-##  <a name="Common"></a>자주 사용 하는 함수에 대 한 참조 포함  
- 
-  **식** 대화 상자를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 기본 제공되는 일반적으로 사용되는 함수 목록을 범주별로 볼 수 있습니다. 
-  **일반 함수** 를 확장하고 범주를 클릭하면 식에 포함할 수 있는 함수 목록이 **항목** 창에 표시됩니다. 일반 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> 함수에는 및 <xref:System.Convert> 네임 스페이스의 클래스와 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 런타임 라이브러리 함수가 포함 됩니다. 편의상 **식** 대화 상자에서 범주별로 나열된 가장 일반적으로 사용되는 함수 목록을 볼 수 있습니다. 범주는 텍스트, 날짜 및 시간, 수치 연산, 검사, 프로그램 흐름, 집계, 재무, 변환 및 기타입니다. 자주 사용되지 않는 함수는 목록에 표시되지 않지만 식에 사용할 수 있습니다.  
+##  <a name="including-references-to-commonly-used-functions"></a><a name="Common"></a>자주 사용 하는 함수에 대 한 참조 포함  
+ **식** 대화 상자를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 기본 제공되는 일반적으로 사용되는 함수 목록을 범주별로 볼 수 있습니다. **일반 함수** 를 확장하고 범주를 클릭하면 식에 포함할 수 있는 함수 목록이 **항목** 창에 표시됩니다. 일반 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> 함수에는 및 <xref:System.Convert> 네임 스페이스의 클래스와 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 런타임 라이브러리 함수가 포함 됩니다. 편의상 **식** 대화 상자에서 범주별로 나열된 가장 일반적으로 사용되는 함수 목록을 볼 수 있습니다. 범주는 텍스트, 날짜 및 시간, 수치 연산, 검사, 프로그램 흐름, 집계, 재무, 변환 및 기타입니다. 자주 사용되지 않는 함수는 목록에 표시되지 않지만 식에 사용할 수 있습니다.  
   
  기본 제공 함수를 사용하려면 항목 창에서 함수 이름을 두 번 클릭합니다. 함수 설명이 설명 창에 표시되고 함수 호출 예가 예제 창에 표시됩니다. 코드 창에서 함수 이름을 입력하고 왼쪽 괄호 **(** 를 입력하면 IntelliSense 도움말을 통해 해당 함수 호출에 적합한 각 구문이 표시됩니다. 예를 들어 테이블의 `Quantity` 라는 필드에 대한 최대값을 계산하려면 코드 창에 `=Max(` 라는 간단한 식을 입력하고 스마트 태그를 사용하여 해당 함수 호출에 대해 유효한 모든 구문 목록을 확인합니다. 이 예를 완료하려면 `=Max(Fields!Quantity.Value)`를 입력합니다.  
   
  각 함수에 대한 자세한 내용은 <xref:System.Math>, <xref:System.Convert>및 MSDN의 [Visual Basic 런타임 라이브러리 멤버](https://go.microsoft.com/fwlink/?LinkId=198941) 를 참조하세요.  
   
-##  <a name="NotCommon"></a>덜 자주 사용 되는 함수에 대 한 참조 포함  
+##  <a name="including-references-to-less-commonly-used-functions"></a><a name="NotCommon"></a> 일반적으로 사용되지 않는 함수에 대한 참조 포함  
  일반적으로 사용되지 않는 다른 CLR 네임스페이스에 대한 참조를 포함하려면 <xref:System.Text.StringBuilder>를 참조하세요. 일반적으로 사용되지 않는 이러한 함수의 경우 **식** 대화 상자의 코드 창에서 IntelliSense가 지원되지 않습니다.  
   
  자세한 내용은 MSDN의 [Visual Basic 런타임 라이브러리 멤버](https://go.microsoft.com/fwlink/?LinkId=198941) 를 참조하세요.  
   
-##  <a name="External"></a>외부 어셈블리에 대 한 참조 포함  
- 외부 어셈블리의 클래스에 대한 참조를 포함하려면 보고서 처리기에 대한 어셈블리를 확인해야 합니다. 
-  **보고서 속성** 대화 상자의 **참조** 페이지를 사용하여 보고서에 추가할 어셈블리의 정규화된 이름을 지정할 수 있습니다. 식에서 어셈블리의 클래스에 대한 정규화된 이름을 사용해야 합니다. 외부 어셈블리의 클래스는 **식** 대화 상자에 표시되지 않으므로 정확한 클래스 이름을 입력해야 합니다. 정규화된 이름에는 네임스페이스, 클래스 이름 및 멤버 이름이 포함됩니다.  
+##  <a name="including-references-to-external-assemblies"></a><a name="External"></a> 외부 어셈블리에 대한 참조 포함  
+ 외부 어셈블리의 클래스에 대한 참조를 포함하려면 보고서 처리기에 대한 어셈블리를 확인해야 합니다. **보고서 속성** 대화 상자의 **참조** 페이지를 사용하여 보고서에 추가할 어셈블리의 정규화된 이름을 지정할 수 있습니다. 식에서 어셈블리의 클래스에 대한 정규화된 이름을 사용해야 합니다. 외부 어셈블리의 클래스는 **식** 대화 상자에 표시되지 않으므로 정확한 클래스 이름을 입력해야 합니다. 정규화된 이름에는 네임스페이스, 클래스 이름 및 멤버 이름이 포함됩니다.  
   
-##  <a name="Embedded"></a>포함 코드 포함  
- 보고서에 포함 코드를 추가하려면 **보고서 속성** 대화 상자의 코드 탭을 사용합니다. 만드는 코드 블록에는 여러 메서드가 포함될 수 있습니다. 포함 코드의 메서드는으로 작성 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 되 고 인스턴스를 기반으로 해야 합니다. 보고서 처리기는 System.Convert 및 System.Math 네임스페이스에 대한 참조를 자동으로 추가합니다. 
-  **보고서 속성** 대화 상자의 **참조** 페이지를 사용하여 다른 어셈블리 참조를 추가할 수 있습니다. 자세한 내용은 [보고서에 어셈블리 참조 추가&#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md)를 참조하세요.  
+##  <a name="including-embedded-code"></a><a name="Embedded"></a> 포함 코드 포함  
+ 보고서에 포함 코드를 추가하려면 **보고서 속성** 대화 상자의 코드 탭을 사용합니다. 만드는 코드 블록에는 여러 메서드가 포함될 수 있습니다. 포함 코드의 메서드는으로 작성 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 되 고 인스턴스를 기반으로 해야 합니다. 보고서 처리기는 System.Convert 및 System.Math 네임스페이스에 대한 참조를 자동으로 추가합니다. **보고서 속성** 대화 상자의 **참조** 페이지를 사용하여 다른 어셈블리 참조를 추가할 수 있습니다. 자세한 내용은 [보고서에 어셈블리 참조 추가&#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md)를 참조하세요.  
   
- 포함 코드의 메서드는 전역적으로 정의된 `Code` 멤버를 통해 사용할 수 있습니다. 
-  `Code` 멤버와 메서드 이름을 참조하여 이러한 메서드에 액세스합니다. 다음 예에서는 `ToUSD` 필드 값을 달러 값으로 변환하는 `StandardCost` 메서드를 호출합니다.  
+ 포함 코드의 메서드는 전역적으로 정의된 `Code` 멤버를 통해 사용할 수 있습니다. `Code` 멤버와 메서드 이름을 참조하여 이러한 메서드에 액세스합니다. 다음 예에서는 `StandardCost` 필드 값을 달러 값으로 변환하는 `ToUSD` 메서드를 호출합니다.  
   
 ```  
 =Code.ToUSD(Fields!StandardCost.Value)  
@@ -93,8 +88,7 @@ Public Dim  MyVersion As String = "123.456"
 Public Dim MyDoubleVersion As Double = 123.456  
 ```  
   
- 
-  **식** 대화 상자의 **상수** 범주에서는 기본 제공 상수만 표시되고 사용자 지정 상수는 표시되지 않지만 아래 예와 같이 식에서 사용자 지정 상수에 대한 참조를 추가할 수 있습니다. 식에서 사용자 지정 상수는 `Variant`로 처리됩니다.  
+ **식** 대화 상자의 **상수** 범주에서는 기본 제공 상수만 표시되고 사용자 지정 상수는 표시되지 않지만 아래 예와 같이 식에서 사용자 지정 상수에 대한 참조를 추가할 수 있습니다. 식에서 사용자 지정 상수는 `Variant`로 처리됩니다.  
   
 ```  
 =Code.MyNote  
@@ -103,7 +97,7 @@ Public Dim MyDoubleVersion As Double = 123.456
 =Code.MyDoubleVersion  
 ```  
   
- 다음 예에는 `FixSpelling` 필드에 있는 모든 "Bike" 텍스트를 `"Bicycle"` 텍스트로 대체하는 `SubCategory` 함수의 코드 참조와 코드 구현이 모두 들어 있습니다.  
+ 다음 예에는 `"Bicycle"` 필드에 있는 모든 "Bike" 텍스트를 `SubCategory` 텍스트로 대체하는 `FixSpelling` 함수의 코드 참조와 코드 구현이 모두 들어 있습니다.  
   
  `=Code.FixSpelling(Fields!SubCategory.Value)`  
   
@@ -122,17 +116,17 @@ End Function
   
  기본 제공 개체 컬렉션 및 초기화에 대한 자세한 내용은 [기본 제공 Globals 및 Users 참조&#40;보고서 작성기 및 SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md) 및 [사용자 지정 어셈블리 개체 초기화](../custom-assemblies/initializing-custom-assembly-objects.md)를 참조하세요.  
   
-##  <a name="Parameters"></a>코드에서 매개 변수에 대 한 참조 포함  
+##  <a name="including-references-to-parameters-from-code"></a><a name="Parameters"></a> 코드에서 매개 변수에 대한 참조 포함  
  보고서 정의의 코드 블록 또는 사용자가 제공하는 사용자 지정 어셈블리에서 사용자 지정 코드를 통해 전역 매개 변수 컬렉션을 참조할 수 있습니다. 매개 변수 컬렉션은 읽기 전용이며 공개 반복기는 없습니다. `For Each` 구문을 사용 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 하 여 컬렉션을 단계별로 실행할 수 없습니다. 보고서 정의에 정의된 매개 변수 이름을 알아야 사용자의 코드에서 해당 매개 변수를 참조할 수 있습니다. 하지만 다중값 매개 변수의 모든 값을 반복할 수 있습니다.  
   
  다음 표에는 사용자 지정 코드에서 기본 제공 컬렉션 `Parameters` 를 참조하는 예가 들어 있습니다.  
   
-|Description|식에서의 참조|사용자 지정 코드 정의|  
+|설명|식에서의 참조|사용자 지정 코드 정의|  
 |-----------------|-----------------------------|----------------------------|  
 |전체 전역 매개 변수 컬렉션을 사용자 지정 코드에 전달.<br /><br /> 이 함수는 특정 보고서 매개 변수 *MyParameter*의 값을 반환합니다.|`=Code.DisplayAParameterValue(Parameters)`|`Public Function DisplayAParameterValue(`<br /><br /> `ByVal parameters as Parameters) as Object`<br /><br /> `Return parameters("MyParameter").Value`<br /><br /> `End Function`|  
 |개별 매개 변수를 사용자 지정 코드에 전달.<br /><br /> 이 예에서는 전달된 매개 변수의 값을 반환합니다. 매개 변수가 다중값 매개 변수일 경우 반환 문자열은 모든 값을 연결한 것입니다.|`=Code.ShowParametersValues(Parameters!DayOfTheWeek)`|`Public Function ShowParameterValues(ByVal parameter as Parameter)` <br />  `as String` <br /> `Dim s as String`  <br />  `If parameter.IsMultiValue then` <br />  `s = "Multivalue: "`  <br /> `For i as integer = 0 to parameter.Count-1` <br />  `s = s + CStr(parameter.Value(i)) + " "`  <br />  `Next` <br /> `Else` <br /> `s = "Single value: " + CStr(parameter.Value)` <br /> `End If` <br />  `Return s` <br /> `End Function`|  
   
-##  <a name="Custom"></a>사용자 지정 어셈블리의 코드에 대 한 참조 포함  
+##  <a name="including-references-to-code-from-custom-assemblies"></a><a name="Custom"></a>사용자 지정 어셈블리의 코드에 대 한 참조 포함  
  보고서에 사용자 지정 어셈블리를 사용하려면 먼저 어셈블리를 만들고 보고서 디자이너에서 사용할 수 있게 한 다음 보고서에 어셈블리에 대한 참조를 추가하고 보고서에서 식을 사용하여 해당 어셈블리에 포함된 메서드를 참조해야 합니다. 보고서가 보고서 서버에 배포될 때 사용자 지정 어셈블리도 보고서 서버에 배포해야 합니다.  
   
  사용자 지정 어셈블리를 만들고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 사용할 수 있도록 설정하는 방법에 대한 자세한 내용은 [보고서에서 사용자 지정 어셈블리 사용](../custom-assemblies/using-custom-assemblies-with-reports.md)을 참조하세요.  
@@ -143,8 +137,7 @@ End Function
 =CurrencyConversion.DollarCurrencyConversion.ToGBP(Fields!StandardCost.Value)  
 ```  
   
- 인스턴스 기반 메서드는 전역적으로 정의된 `Code` 멤버를 통해 사용할 수 있습니다. 
-  `Code` 멤버를 참조한 다음 인스턴스와 메서드 이름을 참조하여 이러한 메서드에 액세스합니다. 다음 예에서는 **Standardcost** 값을 `ToEUR`달러에서 유로로 변환 하는 instance 메서드를 호출 합니다.  
+ 인스턴스 기반 메서드는 전역적으로 정의된 `Code` 멤버를 통해 사용할 수 있습니다. `Code` 멤버를 참조한 다음 인스턴스와 메서드 이름을 참조하여 이러한 메서드에 액세스합니다. 다음 예에서는 **Standardcost** 값을 `ToEUR`달러에서 유로로 변환 하는 instance 메서드를 호출 합니다.  
   
 ```  
 =Code.m_myDollarCoversion.ToEUR(Fields!StandardCost.Value)  
@@ -155,23 +148,22 @@ End Function
   
  코드에 액세스하는 방법은 [Accessing Custom Assemblies Through Expressions](../custom-assemblies/accessing-custom-assemblies-through-expressions.md)를 참조하세요.  
   
-##  <a name="collections"></a>사용자 지정 어셈블리에 기본 제공 컬렉션 전달  
+##  <a name="passing-built-in-collections-into-custom-assemblies"></a><a name="collections"></a> 사용자 지정 어셈블리에 기본 제공 컬렉션 전달  
  처리 작업을 위해 *전역* 또는 *매개 변수* 컬렉션과 같은 기본 제공 컬렉션을 사용자 지정 어셈블리에 전달하려는 경우 기본 제공 컬렉션을 정의하고 올바른 네임스페이스에 액세스하는 어셈블리에 코드 프로젝트의 어셈블리 참조를 추가해야 합니다. 보고서 서버에서 실행되는 보고서(서버 보고서)에 대한 사용자 지정 어셈블리를 개발하는지, 아니면 .NET 애플리케이션에서 로컬로 실행되는 보고서(로컬 보고서)에 대한 사용자 지정 어셈블리를 개발하는지에 따라 다른 어셈블리를 참조해야 합니다. 자세한 내용은 다음을 참조하세요.  
   
--   **네임 스페이스:** Microsoft.reportingservices.interfaces.dll. ReportObjectModel  
+-   **네임스페이스:** Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
   
--   **어셈블리 (로컬 보고서):** Microsoft.reportingservices.interfaces.dll. Microsoft.reportingservices.processingobjectmodel.dll  
+-   **어셈블리(로컬 보고서):** Microsoft.ReportingServices.ProcessingObjectModel.dll  
   
--   **어셈블리 (서버 보고서):** Microsoft.reportingservices.processingobjectmodel.dll.  
+-   **어셈블리(서버 보고서):** Microsoft.ReportViewer.ProcessingObjectModel.dll  
   
- 
-  *Fields* 및 *ReportItems* 컬렉션의 내용은 런타임에 동적으로 변경될 수 있으므로 사용자 지정 어셈블리에 대한 호출에서(예: 멤버 변수) 해당 컬렉션을 유지해서는 안 됩니다. 일반적으로 모든 기본 제공 컬렉션에 같은 권장 사항이 적용됩니다.  
+ *Fields* 및 *ReportItems* 컬렉션의 내용은 런타임에 동적으로 변경될 수 있으므로 사용자 지정 어셈블리에 대한 호출에서(예: 멤버 변수) 해당 컬렉션을 유지해서는 안 됩니다. 일반적으로 모든 기본 제공 컬렉션에 같은 권장 사항이 적용됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SSRS&#41;&#40;보고서에 코드 추가](add-code-to-a-report-ssrs.md)   
  [보고서에서 사용자 지정 어셈블리 사용](../custom-assemblies/using-custom-assemblies-with-reports.md)   
  [SSRS&#41;&#40;보고서에 어셈블리 참조를 추가 합니다.](add-an-assembly-reference-to-a-report-ssrs.md)   
- [Reporting Services 자습서 &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
+ [SSRS를 &#40;Reporting Services 자습서&#41;](../reporting-services-tutorials-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [보고서 예제(보고서 작성기 및 SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   

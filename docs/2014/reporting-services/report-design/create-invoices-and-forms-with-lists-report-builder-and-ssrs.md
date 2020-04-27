@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3a6ded5c61c9f7bd624f1fc24b77054bd170929
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106146"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>목록(보고서 작성기 및 SSRS)
@@ -25,13 +25,12 @@ ms.locfileid: "66106146"
   
  목록을 사용하여 빠르게 시작하려면 [자습서: 자유 형식 보고서 만들기&#40;보고서 작성기&#41;](../tutorial-creating-a-free-form-report-report-builder.md)를 참조하세요.  
   
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 예제 보고서에는 목록을 사용하는 보고서가 포함되어 있습니다. 보고서 작성기 또는 보고서 디자이너에서 예제 보고서의 보고서 정의를 탐색하거나 보고서 작성기 또는 보고서 디자이너에서 렌더링된 보고서를 검토하여 목록에 대해 알 수 있습니다. 예제 보고서를 다운로드하는 방법은 [(SSRS) Reporting Services 예제](https://go.microsoft.com/fwlink/?LinkID=198283)를 참조하십시오.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 예제 보고서에는 목록을 사용하는 보고서가 포함되어 있습니다. 보고서 작성기 또는 보고서 디자이너에서 예제 보고서의 보고서 정의를 탐색하거나 보고서 작성기 또는 보고서 디자이너에서 렌더링된 보고서를 검토하여 목록에 대해 알 수 있습니다. 예제 보고서를 다운로드하는 방법은 [(SSRS) Reporting Services 예제](https://go.microsoft.com/fwlink/?LinkID=198283)를 참조하십시오.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="AddingList"></a>보고서에 목록 추가  
+##  <a name="adding-a-list-to-your-report"></a><a name="AddingList"></a>보고서에 목록 추가  
  리본 메뉴의 삽입 탭에서 디자인 화면에 목록을 추가합니다. 기본적으로 초기 목록에는 세부 정보 그룹과 연결된 행의 단일 셀이 포함되어 있습니다.  
   
  ![디자인 화면의 새 목록 보고서 항목](../media/rs-listtemplatenew.gif "디자인 화면의 새 목록 보고서 항목")  
@@ -44,7 +43,7 @@ ms.locfileid: "66106146"
   
 
   
-##  <a name="DisplayingLayout"></a>자유 형식 레이아웃으로 데이터 표시  
+##  <a name="displaying-data-in-a-free-form-layout"></a><a name="DisplayingLayout"></a> 자유 형식 레이아웃으로 데이터 표시  
  보고서 데이터를 표 대신 자유 형식 레이아웃으로 구성하려면 디자인 화면에 목록을 추가합니다. 보고서 데이터 창의 필드를 셀로 끌어옵니다. 기본적으로 셀에는 컨테이너 역할을 수행하는 사각형이 포함되어 있습니다. 원하는 디자인이 될 때까지 컨테이너의 각 필드를 이동합니다. 사각형 컨테이너의 입력란을 끌 때 표시되는 맞춤선을 사용하면 가로 및 세로로 가장자리를 맞추는 데 도움이 됩니다. 셀의 크기를 조정하여 불필요한 공백을 제거합니다 자세한 내용은 [행 높이 또는 열 너비 변경&#40;보고서 작성기 및 SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)을 참조하세요.  
   
  다음 그림에서는 Date, Order, Qty, Product, LineTotal 및 이미지 필드를 포함한 주문에 대한 정보를 보여 줍니다.  
@@ -60,7 +59,7 @@ ms.locfileid: "66106146"
   
 
   
-##  <a name="DisplayingGrouping"></a>한 수준의 그룹화를 사용 하 여 데이터 표시  
+##  <a name="displaying-data-with-one-level-of-grouping"></a><a name="DisplayingGrouping"></a> 한 가지 수준의 그룹화를 이용하여 데이터 표시  
  목록에서 컨테이너를 자동으로 제공하므로 목록을 사용하여 그룹화된 데이터를 여러 뷰로 표시할 수 있습니다. 기본 목록을 변경하여 그룹을 지정하려면 세부 정보 그룹을 편집하고, 새 이름을 지정하고, 그룹 식을 지정합니다.  
   
  예를 들어 동일한 데이터 세트에 대해 다양한 뷰를 보여 주는 테이블과 차트를 포함할 수 있습니다. 목록에 그룹을 추가하여 중첩된 보고서 항목이 그룹 값마다 한 번씩 반복되도록 할 수도 있습니다. 다음 그림에서는 제품 범주별로 그룹화된 목록을 보여 줍니다. 정보 행이 없음을 주목하십시오. 목록에서 두 개의 테이블이 함께 중첩되어 있습니다. 첫 번째 테이블에는 총 판매액과 함께 하위 범주가 표시됩니다. 두 번째 테이블에는 하위 범주의 배포를 보여 주는 차트와 함께 지리적 영역을 기준으로 그룹화된 범주가 표시됩니다.  

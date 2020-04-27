@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 0b0841e031ee1a98f4f678406f790996a709e90f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104477"
 ---
 # <a name="report-history-page-report-manager"></a>보고서 기록 페이지(보고서 관리자)
@@ -43,10 +43,9 @@ ms.locfileid: "66104477"
   
 ## <a name="options"></a>옵션  
  **Delete**  
- 하나 이상의 스냅샷을 삭제하려면 클릭합니다. 
-  **삭제**를 클릭하기 전에 삭제할 스냅샷 옆의 확인란을 선택하십시오.  
+ 하나 이상의 스냅샷을 삭제하려면 클릭합니다. **삭제**를 클릭하기 전에 삭제할 스냅샷 옆의 확인란을 선택하십시오.  
   
- **새 스냅숏**  
+ **새 스냅샷**  
  보고서 기록에 스냅샷을 추가하려면 클릭합니다. 이 단추는 보고서의 기록 속성 페이지에서 **수동으로 기록 작성 허용** 옵션을 선택하는 경우에 사용할 수 있습니다.  
   
  **마지막 실행**  
@@ -57,7 +56,7 @@ ms.locfileid: "66104477"
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 기록을 보거나 삭제 &#40;보고서 관리자&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
- [보고서 기록에 스냅샷 추가&#40;보고서 관리자&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [보고서 기록에 스냅숏을 추가 &#40;보고서 관리자&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [일반 속성 페이지, 보고서 &#40;보고서 관리자&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [F1 도움말 보고서 관리자](../../2014/reporting-services/report-manager-f1-help.md)   
  [스냅숏 옵션 속성 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)

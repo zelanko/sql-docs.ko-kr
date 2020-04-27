@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5204cab43e3c801acf80113ec92c51e00c0f9d13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108387"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>8단원: 데이터 필터 만들기
@@ -27,8 +27,7 @@ ms.locfileid: "66108387"
   
 -   자식 보고서의 테이블릭스에 필터 식을 추가합니다.  
   
--   
-  `PurchaseOrderDetail` 테이블에서 필터링되지 않은 데이터를 선택하는 함수를 만듭니다.  
+-   `PurchaseOrderDetail` 테이블에서 필터링되지 않은 데이터를 선택하는 함수를 만듭니다.  
   
 -   자식 보고서에 `PurchaseOrderDetail` DataTable을 바인딩하는 이벤트 처리기를 추가합니다.  
   
@@ -42,7 +41,7 @@ ms.locfileid: "66108387"
   
 4.  **식** 필드의 드롭다운 목록에서 `ProductID` 를 클릭 합니다. 이는 필터를 적용할 열입니다.  
   
-5.  연산자 드롭다운 목록에서**=** 같음 () 연산자 **** 를 클릭 합니다.  
+5.  연산자 드롭다운 목록에서**=** 같음 () 연산자 **Operator** 를 클릭 합니다.  
   
 6.  **값** 필드 옆의 식 단추를 클릭 하 고 **범주** 영역에서 **매개 변수** 를 클릭 한 다음 **값** 영역을 `productid` 두 번 클릭 합니다. 이제 **다음에 대한 식 설정: 값** 필드에 **=Parameters!productid.Value**와 비슷한 식이 포함됩니다.  
   
@@ -64,8 +63,7 @@ ms.locfileid: "66108387"
   
     4.  쿼리를 실행하여 필터링되지 않은 데이터로 DataSet 인스턴스를 채웁니다.  
   
-    5.  
-  `PurchaseOrderDetail` DataTable을 반환합니다.  
+    5.  `PurchaseOrderDetail` DataTable을 반환합니다.  
   
          함수는 아래와 비슷하며 이는 단순히 참조용입니다. 원하는 패턴을 따라 자식 보고서에 필요한 데이터를 인출할 수 있습니다.  
   
@@ -127,8 +125,7 @@ ms.locfileid: "66108387"
   
     2.  함수를 호출 합니다.`GetPurchaseOrderDetail`  
   
-    3.  
-  `PurchaseOrderDetail` DataTable을 보고서의 해당 데이터 원본과 바인딩합니다.  
+    3.  `PurchaseOrderDetail` DataTable을 보고서의 해당 데이터 원본과 바인딩합니다.  
   
          완성된 이벤트 처리기 코드는 다음과 비슷합니다.  
   
@@ -158,8 +155,7 @@ ms.locfileid: "66108387"
 ## <a name="query-filter"></a>쿼리 필터  
  쿼리 필터를 구현하려면 다음 태스크를 완료해야 합니다.  
   
--   
-  `PurchaseOrderDetail` 테이블에서 필터링된 데이터를 선택하는 함수를 만듭니다.  
+-   `PurchaseOrderDetail` 테이블에서 필터링된 데이터를 선택하는 함수를 만듭니다.  
   
 -   매개 변수 값을 검색하고 자식 보고서에 `PurchaseOrdeDetail` DataTable을 바인딩하는 이벤트 처리기를 추가합니다.  
   
@@ -177,8 +173,7 @@ ms.locfileid: "66108387"
   
     4.  쿼리를 실행하여 필터링된 데이터로 DataSet 인스턴스를 채웁니다.  
   
-    5.  
-  `PurchaseOrderDetail` DataTable을 반환합니다.  
+    5.  `PurchaseOrderDetail` DataTable을 반환합니다.  
   
          함수는 아래와 비슷하며 이는 단순히 참조용입니다. 원하는 패턴을 따라 자식 보고서에 필요한 데이터를 인출할 수 있습니다.  
   
@@ -243,11 +238,9 @@ ms.locfileid: "66108387"
   
     3.  매개 변수 컬렉션을 반복 처리하고 부모 보고서에서 전달되는 `ProductID` 매개 변수 값을 검색합니다.  
   
-    4.  
-  `GetPurchaseOrderDetail` 함수를 호출하고 `ProductID` 매개 변수 값을 전달합니다.  
+    4.  `GetPurchaseOrderDetail` 함수를 호출하고 `ProductID` 매개 변수 값을 전달합니다.  
   
-    5.  
-  `PurchaseOrderDetail` DataTable을 보고서의 해당 데이터 원본과 바인딩합니다.  
+    5.  `PurchaseOrderDetail` DataTable을 보고서의 해당 데이터 원본과 바인딩합니다.  
   
          완성된 이벤트 처리기 코드는 다음과 비슷합니다.  
   

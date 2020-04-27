@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2de2ed783db4f717b86e94424b994f78d4eb75d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105584"
 ---
 # <a name="managing-report-parts"></a>보고서 파트 관리
@@ -51,15 +51,15 @@ ms.locfileid: "66105584"
   
  별표(*)는 이번 릴리스에 새로 추가된 것임을 나타냅니다.  
   
-|속성|Description|보고서 파트<br /><br /> 갤러리 검색 조건|  
+|속성|설명|보고서 파트<br /><br /> 갤러리 검색 조건|  
 |--------------|-----------------|---------------------------------------------|  
-|속성|사용자가 보고서 파트 갤러리에서 검색할 수 있는 조건 중 하나입니다.|yes|  
-|Description|사용자가 갤러리에서 쉽게 찾을 수 있도록 보고서 파트 이름을 구성할 수 있습니다. 예를 들어 판매 관련 데이터 및 프레젠테이션이 포함되는 모든 보고서 파트를 찾을 때 "판매>>"로 시작하는 설명을 검색할 수 있습니다.|yes|  
-|CreatedBy|보고서 파트를 보고서 서버 데이터베이스에 추가한 사용자의 ID입니다. 정확한 형식은 인증 방식에 따라 다릅니다. 예를 들어 일부 인증 방법은 CreatedBy 및 ModifiedBy 필드에 전체 도메인\사용자 이름이 표시됩니다.|yes|  
-|CreationDate|보고서 파트가 처음 생성된 날짜입니다.<br /><br /> 사용자가 보고서 파트 갤러리에서 검색할 수 있는 조건 중 하나입니다.|yes|  
-|ModifiedBy|ModifiedBy는 보고서 파트를 마지막으로 수정한 사람의 ID입니다.|yes|  
-|ModifiedDate|서버에서 보고서 파트가 마지막으로 수정된 날짜입니다.<br /><br /> 이 필드는 보고서 파트에 대해 서버 쪽 업데이트가 이루어진 시점을 확인하는 논리의 일부로 사용됩니다. 자세한 내용은 이 표의 뒷부분에 나오는 ComponentID에 대한 설명을 참조하십시오.|yes|  
-|SubType (*)|SubType은 "테이블릭스" 또는 "차트"와 같이 검색할 보고서 파트의 종류를 나타내는 문자열입니다.|yes|  
+|이름|사용자가 보고서 파트 갤러리에서 검색할 수 있는 조건 중 하나입니다.|예|  
+|설명|사용자가 갤러리에서 쉽게 찾을 수 있도록 보고서 파트 이름을 구성할 수 있습니다. 예를 들어 판매 관련 데이터 및 프레젠테이션이 포함되는 모든 보고서 파트를 찾을 때 "판매>>"로 시작하는 설명을 검색할 수 있습니다.|예|  
+|CreatedBy|보고서 파트를 보고서 서버 데이터베이스에 추가한 사용자의 ID입니다. 정확한 형식은 인증 방식에 따라 다릅니다. 예를 들어 일부 인증 방법은 CreatedBy 및 ModifiedBy 필드에 전체 도메인\사용자 이름이 표시됩니다.|예|  
+|CreationDate|보고서 파트가 처음 생성된 날짜입니다.<br /><br /> 사용자가 보고서 파트 갤러리에서 검색할 수 있는 조건 중 하나입니다.|예|  
+|ModifiedBy|ModifiedBy는 보고서 파트를 마지막으로 수정한 사람의 ID입니다.|예|  
+|ModifiedDate|서버에서 보고서 파트가 마지막으로 수정된 날짜입니다.<br /><br /> 이 필드는 보고서 파트에 대해 서버 쪽 업데이트가 이루어진 시점을 확인하는 논리의 일부로 사용됩니다. 자세한 내용은 이 표의 뒷부분에 나오는 ComponentID에 대한 설명을 참조하십시오.|예|  
+|SubType (*)|SubType은 "테이블릭스" 또는 "차트"와 같이 검색할 보고서 파트의 종류를 나타내는 문자열입니다.|예|  
 |ComponentID (*)|ComponentID는 보고서 파트의 고유 식별자입니다. 카탈로그에 추가되는 새 필드로, 서버 쪽뿐만 아니라 보고서 작성기와 같은 보고서 제작 애플리케이션에서도 표시됩니다.<br /><br /> 클라이언트 애플리케이션이 서버에서 보고서 파트의 업데이트를 확인할 때도 이 필드가 사용됩니다. 클라이언트 애플리케이션은 서버에서 현재 클라이언트 쪽 보고서에 있는 ComponentID를 검색합니다. 일치하는 ComponentID가 있으면, ModifiedDate를 보고서 항목의 클라이언트 쪽 SyncDate와 비교합니다.|지원 안 함|  
   
 ## <a name="controlling-access-to-report-parts"></a>보고서 파트에 대한 액세스 제어  
@@ -78,7 +78,7 @@ ms.locfileid: "66105584"
 |동작|역할|  
 |-------------|----------|  
 |보고서 파트 추가, 삭제, 항목 속성 편집, 보안 관리 및 다운로드|모든 권한|  
-|보고서 파트 추가, 삭제, 항목 속성 편집 및 다운로드|디자인<br /><br /> 기고|  
+|보고서 파트 추가, 삭제, 항목 속성 편집 및 다운로드|디자인<br /><br /> 참가|  
 |검색 및 다시 사용|읽기<br /><br /> 보기만|  
   
 ### <a name="security-considerations"></a>보안 고려 사항  
@@ -91,7 +91,7 @@ ms.locfileid: "66105584"
 -   보고서 파트는 기존 "리소스" 항목 유형과 동일한 사용 권한 정책을 사용합니다. 보안 상속 관점에서 폴더 내의 기존 리소스 항목과 보고서 파트는 차이가 없습니다. 보고서 파트는 같은 폴더에 있는 이미지와 동일한 사용 권한 정책을 상속합니다. 구별해야 하는 경우에는 원하는 보고서 파트에 대해 항목 수준 보안을 구성할 수 있습니다. 또는 올바른 사용 권한이 구성된 별도의 폴더에 보고서 파트를 넣을 수도 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 작성기의 보고서 파트 및 데이터 세트](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [보고서 작성기의 보고서 파트 및 데이터 집합](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [일반 속성 페이지, 보고서 파트 &#40;보고서 관리자&#41;](../general-properties-page-report-parts-report-manager.md)   
  [항목 이동 페이지 &#40;보고서 관리자&#41;](../move-items-page-report-manager.md)   
  [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   

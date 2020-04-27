@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 697a8bbfa77a8afcabfdf00deef93620ff607233
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107464"
 ---
 # <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>보고서 매개 변수와 쿼리 매개 변수 연결(보고서 작성기 및 SSRS)
@@ -37,11 +37,9 @@ ms.locfileid: "66107464"
   
 2.  열 **매개 변수 이름**에서 쿼리 매개 변수의 이름을 찾습니다. 매개 변수 이름은 쿼리를 기반으로 자동 채워집니다. 쿼리를 변경할 때마다 새 쿼리 매개 변수가 있는지 확인됩니다. 직접 만드는 쿼리 매개 변수는 쿼리가 변경될 때 변경되지 않습니다.  
   
-    -   
-  **매개 변수 이름**에서 쿼리에 있는 것과 같은 쿼리 매개 변수 이름을 찾습니다. 직접 새 쿼리 매개 변수를 추가하고 이름을 입력할 수도 있습니다.  
+    -   **매개 변수 이름**에서 쿼리에 있는 것과 같은 쿼리 매개 변수 이름을 찾습니다. 직접 새 쿼리 매개 변수를 추가하고 이름을 입력할 수도 있습니다.  
   
-    -   
-  **매개 변수 값**에서 쿼리 매개 변수에 전달할 값을 반환하는 식을 선택하거나 입력합니다. 이는 일반적으로 보고서 매개 변수의 이름입니다.  
+    -   **매개 변수 값**에서 쿼리 매개 변수에 전달할 값을 반환하는 식을 선택하거나 입력합니다. 이는 일반적으로 보고서 매개 변수의 이름입니다.  
   
         > [!NOTE]  
         >  보고서 매개 변수는 쿼리 매개 변수에 대한 값으로 제한되지 않습니다. 값을 반환하는 식을 매개 변수 값으로 사용할 수 있습니다.  
@@ -49,7 +47,7 @@ ms.locfileid: "66107464"
 3.  쿼리 매개 변수를 추가하려면 2단계를 반복합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [보고서 포함 된 데이터 집합 및 공유 데이터 집합 &#40;보고서 작성기 및 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [보고서 매개 변수 개념 &#40;보고서 작성기 및 SSRS&#41;](../report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   
   

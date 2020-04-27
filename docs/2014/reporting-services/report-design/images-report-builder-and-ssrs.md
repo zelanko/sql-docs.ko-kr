@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d5b7a8add7f890dcd6e273597f1a43d612d6c5af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105695"
 ---
 # <a name="images-report-builder-and-ssrs"></a>이미지(보고서 작성기 및 SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "66105695"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ComparingImages"></a>외부 이미지, 포함 된 이미지 및 데이터 바인딩된 이미지 비교  
+##  <a name="comparing-external-embedded-and-data-bound-images"></a><a name="ComparingImages"></a> 외부 이미지, 포함 이미지 및 데이터 바인딩된 이미지 비교  
  보고서에서 서버 기반 이미지나 기타 외부 이미지를 사용하면 이미지 항목은 보고서 서버 또는 웹의 이미지를 가리키는 경로를 포함합니다. 하지만 포함 이미지를 사용하면 이미지 데이터가 별도의 파일로 존재하지 않고 보고서 정의 안에 저장됩니다.  
   
  서버 기반 이미지는 여러 보고서 또는 웹 페이지가 공유하는 로고 및 정적 그림에 적합합니다. 포함 이미지를 사용하면 이미지를 항상 보고서에서 사용할 수 있지만 공유할 수는 없습니다. 외부 이미지가 포함된 보고서 정의는 포함 이미지가 있는 정의보다 크기가 작습니다.  
@@ -36,19 +36,19 @@ ms.locfileid: "66105695"
   
 
   
-##  <a name="ImagesReportParts"></a>이미지를 보고서 파트로  
+##  <a name="images-as-report-parts"></a><a name="ImagesReportParts"></a> 보고서 파트인 이미지  
  이미지를 보고서와는 별도로 보고서 파트로 저장할 수 있습니다. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
  
   
-##  <a name="EmbedImages"></a>이미지 포함  
+##  <a name="embedding-images"></a><a name="EmbedImages"></a> 포함 이미지  
  모든 이미지 데이터가 보고서 정의 안에 저장되도록 보고서에 이미지를 포함할 수 있습니다. 이미지를 포함하면 이미지가 MIME로 인코딩되어 보고서 정의에 텍스트로 저장됩니다. 포함 이미지를 사용하면 보고서에서 항상 이미지를 사용할 수 있지만 보고서 정의의 크기도 늘어납니다.  
   
  이미지 포함에 대한 자세한 내용은 [보고서에 이미지 포함&#40;보고서 작성기 및 SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)을 참조하세요.  
   
 
   
-##  <a name="ExternalImages"></a>외부 이미지  
+##  <a name="external-images"></a><a name="ExternalImages"></a> 외부 이미지  
  이미지에 URL을 지정하여 저장된 이미지를 보고서에 포함할 수 있습니다. 보고서에 외부 이미지를 사용하는 경우 이미지 원본은 `External`로 설정되고 이미지 값은 이미지에 대한 URL 주소 또는 경로가 됩니다.  
   
  자세한 내용은 [외부 항목에 대한 경로 지정&#40;보고서 작성기 및 SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)을 참조하세요.  
@@ -59,7 +59,7 @@ ms.locfileid: "66105695"
   
  
   
-##  <a name="BackgroundImages"></a>배경 이미지  
+##  <a name="background-images"></a><a name="BackgroundImages"></a> 배경 이미지  
  보고서의 본문이나 사각형, 입력란, 목록, 행렬 또는 테이블의 배경 이미지로 이미지를 사용할 수 있습니다. 배경 이미지와 이미지는 속성이 유사합니다. 또한 항목의 배경을 채울 때 이미지가 반복되는 방법을 지정할 수 있습니다.  
   
 > [!NOTE]  
@@ -69,24 +69,24 @@ ms.locfileid: "66105695"
   
  
   
-##  <a name="DataboundImages"></a>데이터 바인딩된 이미지  
+##  <a name="data-bound-images"></a><a name="DataboundImages"></a> 데이터 바인딩된 이미지  
  데이터베이스에 저장된 이미지를 보고서에 추가할 수 있습니다. 정적 이미지에 사용된 것과 같은 이미지 보고서 항목을 이미지가 데이터베이스에 저장되어 있음을 나타내는 속성 집합과 함께 사용합니다. 데이터 바인딩된 이미지를 사용하는 방법은 [데이터 바인딩된 이미지 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)을 참조하세요.  
   
 
   
-##  <a name="HowTo"></a>방법 도움말 항목  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 방법 도움말 항목  
  [외부 이미지 추가&#40;보고서 작성기 및 SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)  
   
  [보고서에 이미지 포함&#40;보고서 작성기 및 SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)  
   
- [배경 이미지 &#40;보고서 작성기 및 SSRS에 추가&#41;](add-a-background-image-report-builder-and-ssrs.md)  
+ [배경 이미지 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)  
   
  [데이터 바인딩된 이미지 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)  
   
   
   
 ## <a name="see-also"></a>참고 항목  
- [이미지 파일로 내보내기 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
+ [이미지 파일로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
  [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

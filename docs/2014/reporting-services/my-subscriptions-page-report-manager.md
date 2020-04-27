@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 75d662f677ee2b6bbab8e445804ca7f142b5c034
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108185"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>내 구독 페이지(보고서 관리자)
@@ -44,7 +44,7 @@ ms.locfileid: "66108185"
  **편집**  
  설명을 보거나 편집하려면 클릭합니다.  
   
- **Report**  
+ **보고서**  
  구독에 지정된 보고서를 표시합니다. 보고서를 보려면 보고서 이름을 클릭합니다.  
   
  **설명**  
@@ -53,10 +53,8 @@ ms.locfileid: "66108185"
  **폴더**  
  구독에 지정된 보고서를 포함하는 폴더를 표시합니다. 폴더의 내용을 보려면 폴더 이름을 클릭합니다.  
   
- **트리거되도록**  
- 구독을 실행하는 조건을 식별합니다. 
-  **TimedSubscription** 트리거는 구독이 실행되는 시기를 정의하는 일정을 기반으로 합니다. 
-  **SnapshotUpdated** 트리거는 보고서 스냅샷에 대한 업데이트를 기반으로 합니다.  
+ **트리거**  
+ 구독을 실행하는 조건을 식별합니다. **TimedSubscription** 트리거는 구독이 실행되는 시기를 정의하는 일정을 기반으로 합니다. **SnapshotUpdated** 트리거는 보고서 스냅샷에 대한 업데이트를 기반으로 합니다.  
   
  **마지막 실행**  
  구독이 마지막으로 처리된 시간을 표시합니다.  

@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a854de693bce88fcba0de2f1c08e4b0fe296b512
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108837"
 ---
 # <a name="files-only-installation-reporting-services"></a>파일만 설치(Reporting Services)
-  *파일만 설치* 는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 프로그램 파일에 대 한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 폴더 구조를 만들고, 디스크에 파일을 복사 하 고, 로컬 컴퓨터에 보고서 서버 서비스를 등록 하 고, 서비스 계정을 구성 하 고, 서비스 계정에 파일 권한을 부여 하 고, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 공급자를 등록 하는 설치를 의미 합니다.  
+  *파일만 설치* 는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 프로그램 파일에 대한 폴더 구조 만들기, 디스크로 파일 복사, 로컬 컴퓨터에 보고서 서버 서비스 등록, 서비스 계정 구성, 서비스 계정에 파일 권한 부여 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 공급자 등록 등의 작업을 설치 프로그램에서 수행하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 의미합니다.  
   
- 파일만 설치에는 보고서 서버 서비스(보고서 서버 웹 서비스, 백그라운드 처리 애플리케이션 및 보고서 관리자를 호스트함), 보고서 작성기, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 명령줄 유틸리티(rsconfig.exe, rskeymgmt.exe 및 rs.exe)와 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능이 포함됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]와 같은 공유 기능에는 적용 되지 않습니다 .이 기능을 설치 하려면 별도의 항목으로 지정 해야 합니다.  
+ 파일만 설치에는 보고서 서버 서비스(보고서 서버 웹 서비스, 백그라운드 처리 애플리케이션 및 보고서 관리자를 호스트함), 보고서 작성기, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 명령줄 유틸리티(rsconfig.exe, rskeymgmt.exe 및 rs.exe)와 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능이 포함됩니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]와 같은 공유 기능에는 적용되지 않습니다. 따라서 공유 기능을 설치하려면 별도의 항목으로 지정해야 합니다.  
   
  다른 설치 모드와는 반대로 파일만 모드에서 설치되는 보고서 서버는 설치 후 작동하지 않습니다. 보고서 서버를 온라인 상태로 만들려면 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)를 사용한 추가 구성이 필요합니다.  
   
@@ -36,8 +36,7 @@ ms.locfileid: "66108837"
   
 -   사용자 지정 설정 또는 기능 사용을 비롯한 배포 요구 사항이 있으며 서버 구성 시기와 방법을 완전히 제어하려는 경우  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 포함하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]장애 조치(Failover) 클러스터를 설치하려는 경우  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 포함하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]장애 조치(Failover) 클러스터를 설치하려는 경우  
   
 ## <a name="how-to-perform-a-files-only-installation"></a>파일만 설치를 수행하는 방법  
  파일만 설치는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 기본값입니다.  

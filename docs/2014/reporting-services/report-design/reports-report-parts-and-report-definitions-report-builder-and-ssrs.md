@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d22c8c22170ecef301eacd553f15c16091c9a6e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105051"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>보고서, 보고서 파트 및 보고서 정의(보고서 작성기 및 SSRS)
@@ -56,8 +56,7 @@ ms.locfileid: "66105051"
   
 -   보고서 관리자에서 보고서를 찾아 실행합니다.  
   
--   
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버와 통합된 SharePoint 사이트에서 보고서를 찾고 실행합니다.  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버와 통합된 SharePoint 사이트에서 보고서를 찾고 실행합니다.  
   
 -   사용자가 지정한 출력 형식으로 전자 메일 받은 편지함이나 파일 공유 위치로 배달되는 보고서를 구독합니다.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66105051"
  [보고서 작성기 및 SSRS &#40;보고서 제작 개념&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [2014 SQL Server의 보고서 작성기](../report-builder/report-builder-in-sql-server-2016.md)   
  [설치, 제거 및 보고서 작성기 지원](../install-uninstall-and-report-builder-support.md)   
- [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [보고서 작성기 및 SSRS &#40;보고서 찾기, 보기 및 관리 &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [보고서 &#40;보고서 작성기 및 SSRS&#41;내보내기](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 40c623130b02c082b099938823ccc12950333982
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105558"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>차트의 여러 계열(보고서 작성기 및 SSRS)
@@ -38,8 +38,7 @@ ms.locfileid: "66105558"
   
  ![차트 영역의 다이어그램 표시](../media/chartareasdiagram.gif "차트 영역의 다이어그램 표시")  
   
- 
-  **차트 영역 속성** 대화 상자를 사용하면 차트 영역에 포함된 모든 계열의 2D 및 3D 방향을 지정하고, 여러 차트 영역을 같은 차트 안에 정렬하고, 그리기 영역의 색에 서식을 지정할 수 있습니다. 기본 차트 영역이 하나만 포함된 차트에서 새 차트 영역을 정의하면 차트 영역에 사용할 수 있는 공간은 가로 방향으로 둘로 나뉘고 새 차트 영역은 첫 번째 차트 영역 아래에 배치됩니다.  
+ **차트 영역 속성** 대화 상자를 사용하면 차트 영역에 포함된 모든 계열의 2D 및 3D 방향을 지정하고, 여러 차트 영역을 같은 차트 안에 정렬하고, 그리기 영역의 색에 서식을 지정할 수 있습니다. 기본 차트 영역이 하나만 포함된 차트에서 새 차트 영역을 정의하면 차트 영역에 사용할 수 있는 공간은 가로 방향으로 둘로 나뉘고 새 차트 영역은 첫 번째 차트 영역 아래에 배치됩니다.  
   
  각 계열은 하나의 차트 영역에만 연결할 수 있으며 기본적으로 모든 계열이 기본 차트 영역에 추가됩니다. 영역형, 세로 막대형, 꺾은선형 또는 분산형 차트를 사용할 때는 이러한 계열을 조합하여 같은 차트 영역에 표시할 수 있습니다. 예를 들어 동일한 차트 영역에 가로 막대형 계열과 선 계열을 표시할 수 있습니다. 여러 계열에 동일한 차트 영역을 사용할 때의 장점은 최종 사용자가 쉽게 비교할 수 있다는 점입니다.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66105558"
   
 ## <a name="see-also"></a>참고 항목  
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [차트 &#40;보고서 작성기 및 SSRS에 여러 데이터 범위가 있는 계열 표시&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
+ [차트에 데이터 범위가 여러 개 있는 계열 표시&#40;보고서 작성기 및 SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
  [차트 종류&#40;보고서 작성기 및 SSRS&#41;](chart-types-report-builder-and-ssrs.md)  
   
   

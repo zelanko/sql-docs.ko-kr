@@ -16,14 +16,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2fbc640573d6d897205e11dbc40d40210502ee60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109305"
 ---
 # <a name="delete-rows-dialog-box"></a>행 삭제 대화 상자
-  
   **행 삭제** 대화 상자를 사용하여 테이블, 행렬 또는 목록 데이터 영역에서 행을 삭제할 수 있습니다. 그룹과 연결된 행의 경우에는 그룹 정의도 삭제할 수 있습니다.  
   
 ## <a name="options"></a>옵션  

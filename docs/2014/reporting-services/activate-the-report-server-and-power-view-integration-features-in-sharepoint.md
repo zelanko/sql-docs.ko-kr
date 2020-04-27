@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e30ae6ea0e7fa314748c4da265650273c0a7d56e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110032"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>SharePoint에서 보고서 서버 및 파워 뷰 통합 사이트 모음 기능 활성화
@@ -30,19 +30,17 @@ ms.locfileid: "66110032"
   
  이 항목의 내용:  
   
--   [보고서 서버 및 파워 뷰 통합 사이트 모음 기능을 활성화 하려면:](#bkmk_features)  
+-   [보고서 서버 및 파워 뷰 통합 사이트 모음 기능을 활성화하려면](#bkmk_features)  
   
--   [Reporting Services 중앙 관리 사이트 모음 기능을 활성화 하거나 비활성화 하려면:](#bkmk_centraladmin)  
+-   [사이트 모음에서 Reporting Services 중앙 관리 사이트 모음 기능을 활성화 또는 비활성화하려면](#bkmk_centraladmin)  
   
-##  <a name="bkmk_features"></a>보고서 서버 및 파워 뷰 통합 사이트 모음 기능을 활성화 하려면:  
+##  <a name="to-activate-the-report-server-and-power-view-integration-site-collection-features"></a><a name="bkmk_features"></a>보고서 서버 및 파워 뷰 통합 사이트 모음 기능을 활성화 하려면:  
   
-1.  
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능을 활성화하려는 사이트로 브라우저를 엽니다.  
+1.  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능을 활성화하려는 사이트로 브라우저를 엽니다.  
   
-2.  
-  **사이트 작업**을 클릭합니다.  
+2.  **사이트 작업**을 클릭합니다.  
   
-3.  **사이트 설정**을 클릭 합니다.  
+3.  **사이트 설정**을 클릭합니다.  
   
 4.  사이트 모음 관리 그룹에서 **사이트 모음 기능** 을 클릭합니다.  
   
@@ -52,14 +50,13 @@ ms.locfileid: "66110032"
   
  기능을 비활성화하려면 동일한 절차를 수행하고 **활성화** 대신 **비활성화**를 클릭합니다.  
   
-##  <a name="bkmk_centraladmin"></a>Reporting Services 중앙 관리 사이트 모음 기능을 활성화 하거나 비활성화 하려면:  
+##  <a name="to-activate-or-deactivate-reporting-services-central-administration-site-collection-feature"></a><a name="bkmk_centraladmin"></a>Reporting Services 중앙 관리 사이트 모음 기능을 활성화 하거나 비활성화 하려면:  
   
 1.  SharePoint 중앙 관리로 브라우저를 엽니다.  
   
-2.  
-  **사이트 작업**을 클릭합니다.  
+2.  **사이트 작업**을 클릭합니다.  
   
-3.  **사이트 설정**을 클릭 합니다.  
+3.  **사이트 설정**을 클릭합니다.  
   
 4.  사이트 모음 관리 그룹에서 **사이트 모음 기능** 을 클릭합니다.  
   

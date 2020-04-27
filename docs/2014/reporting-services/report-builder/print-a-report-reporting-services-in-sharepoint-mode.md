@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8bc6234789e85105799a865e46b8b7ffe82286f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107746"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>보고서 인쇄(SharePoint 모드의 Reporting Services)
@@ -49,6 +49,6 @@ ms.locfileid: "66107746"
      인쇄하기 전에 보고서를 보려면 **미리 보기** 단추를 클릭합니다. 이렇게 하면 보고서의 첫 페이지가 별도의 미리 보기 창에서 열립니다. 보고서 서버에서 보고서가 렌더링됨에 따라 추가 페이지도 표시됩니다. 미리 보는 보고서는 EMF 형식으로 렌더링됩니다. 이전 페이지나 다음 페이지로 이동할 수 있으며 마지막 페이지에서는 **다음** 단추가 비활성화됩니다. 미리 보기 페이지에서 인쇄 여백을 수정하려면 **여백** 단추를 클릭합니다. 그러면 **여백** 대화 상자가 표시됩니다. 위쪽, 아래쪽, 오른쪽 및 왼쪽 여백을 구성하고 **확인**을 클릭합니다. 대화 상자가 닫히고 미리 보기 및 인쇄 렌더링 설정이 저장됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Reporting Services에 대한 클라이언트 쪽 인쇄 기능 사용 및 사용 안 함 설정](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
+ [Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
   

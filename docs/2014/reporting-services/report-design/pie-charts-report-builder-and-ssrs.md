@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ad12b85455d65197de81eca820814cb016f28043
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105490"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>원형 차트(보고서 작성기 및 SSRS)
@@ -35,9 +35,9 @@ ms.locfileid: "66105490"
   
 -   **쪼개진 도넛형**. 모든 조각이 도넛의 중앙에서 떨어져 있는 도넛형 차트입니다.  
   
--   **3D 원형**. 3차원 스타일이 적용된 원형 차트입니다.  
+-   **3차원 원형**. 3차원 스타일이 적용된 원형 차트입니다.  
   
--   **3D 쪼개진 원형**. 3차원 스타일이 적용된 쪼개진 원형 차트입니다.  
+-   **3차원 쪼개진 원형**. 3차원 스타일이 적용된 쪼개진 원형 차트입니다.  
   
 ## <a name="data-considerations-for-display-on-a-pie-chart"></a>원형 차트에 표시할 데이터 고려 사항  
   
@@ -86,9 +86,9 @@ ms.locfileid: "66105490"
 -   작은 조각을 보조 원형 차트로 수집합니다. 두 번째 원형 차트는 디자이너에 표시되지 않습니다. 대신 보고서 처리 중에 차트가 두 번째 원형 차트를 표시해야 할지 여부를 데이터 요소의 값을 기준으로 계산합니다. 표시해야 하는 경우 값이 다른 원형 차트에 추가됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [원형 차트 외부에 데이터 요소 레이블을 표시 하 고 보고서 작성기 및 SSRS를 &#40;&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [원형 차트 외부에 데이터 요소 레이블 표시&#40;보고서 작성기 및 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [원형 차트에서 작은 조각 수집&#40;보고서 작성기 및 SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
- [원형 차트 &#40;보고서 작성기 및 SSRS에 백분율 값을 표시&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [원형 차트에서 백분율 값 표시&#40;보고서 작성기 및 SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [자습서: 보고서에 원형 차트 추가&#40;보고서 작성기&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [차트의 범례 서식 지정&#40;보고서 작성기 및 SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [차트의 빈 데이터 요소 및 Null 데이터 요소&#40;보고서 작성기 및 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   

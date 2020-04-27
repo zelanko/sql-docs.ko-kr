@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93e53646314d211ced489d3538b40c77195f494b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105221"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Lookup 함수(보고서 작성기 및 SSRS)
@@ -44,14 +44,12 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  보고서의 데이터 세트 이름을 지정하는 상수입니다. 예를 들면 "Products"입니다.  
   
 ## <a name="return"></a>반환 값  
- 
-  `Variant`를 반환하거나, 일치하는 항목이 없으면 `Nothing`을 반환합니다.  
+ `Variant`를 반환하거나, 일치하는 항목이 없으면 `Nothing`을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- 
-  `Lookup`을 사용하여 일 대 일 관계의 이름/값 쌍에 대한 지정된 데이터 세트에서 값을 검색할 수 있습니다. 예를 들어 테이블에 있는 ID 필드의 경우 `Lookup`을 사용하여 데이터 영역에 바인딩되지 않은 데이터 세트에서 해당하는 이름 필드를 검색할 수 있습니다.  
+ `Lookup`을 사용하여 일 대 일 관계의 이름/값 쌍에 대한 지정된 데이터 세트에서 값을 검색할 수 있습니다. 예를 들어 테이블에 있는 ID 필드의 경우 `Lookup`을 사용하여 데이터 영역에 바인딩되지 않은 데이터 세트에서 해당하는 이름 필드를 검색할 수 있습니다.  
   
- `Lookup`는 다음을 수행 합니다.  
+ `Lookup`은 다음을 수행합니다.  
   
 -   현재 범위에서 원본 식을 평가합니다.  
   
@@ -65,8 +63,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
  다음 제한 사항이 적용됩니다.  
   
--   
-  `Lookup`은 모든 필터 식이 적용된 후 평가됩니다.  
+-   `Lookup`은 모든 필터 식이 적용된 후 평가됩니다.  
   
 -   조회 수준이 하나만 지원됩니다. 원본, 대상 또는 결과 식에는 조회 함수에 대한 참조가 포함될 수 없습니다.  
   
@@ -74,8 +71,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   원본, 대상 및 결과 식에는 보고서 또는 그룹 변수에 대한 참조가 포함될 수 없습니다.  
   
--   
-  `Lookup`은 다음 보고서 항목에 대한 식으로 사용할 수 없습니다.  
+-   `Lookup`은 다음 보고서 항목에 대한 식으로 사용할 수 없습니다.  
   
     -   데이터 원본에 대한 동적 연결 문자열  
   

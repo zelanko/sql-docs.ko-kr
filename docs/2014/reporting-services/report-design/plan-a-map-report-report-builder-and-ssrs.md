@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 706b930627039b5d2944b162ba9681808bfcc62c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105472"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>지도 보고서 계획(보고서 작성기 및 SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "66105472"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="MapPurpose"></a>지도의 용도 지정  
+##  <a name="specify-the-purpose-of-the-map"></a><a name="MapPurpose"></a> 지도의 목적 지정  
  훌륭한 보고서 디자인은 사용자가 문제를 해결하기 위해 조치를 취하는 데 도움이 되는 정보를 제공합니다. 유용하고 이해하기 쉬운 지도 표시를 만들려면 지도에서 무엇을 알고 싶어하는지를 결정합니다. 예를 들어 지도에서 시장 기회를 나타내기 위해 다음과 같은 유형의 데이터를 시각화할 수 있습니다.  
   
 -   각 상점의 상대적 판매량  
@@ -38,7 +38,7 @@ ms.locfileid: "66105472"
   
  
   
-##  <a name="Data"></a>공간 및 분석 데이터 지정  
+##  <a name="specify-the-spatial-and-analytical-data"></a><a name="Data"></a> 공간 및 분석 데이터 지정  
  필요한 공간 및 분석 데이터를 지정해야 합니다.  
   
  분석 데이터는 보고서 데이터 세트, 지도 갤러리의 지도에 포함된 예제 데이터 또는 ESRI 셰이프 파일에서 공간 데이터와 함께 포함된 분석 데이터에서 제공됩니다.  
@@ -58,18 +58,15 @@ ms.locfileid: "66105472"
   
 -   인터넷에서 검색할 수 있으며 공개적으로 사용할 수 있는 셰이프 파일을 비롯한 ESRI 셰이프 파일  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 공간 데이터 원본의 공간 데이터  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 공간 데이터 원본의 공간 데이터  
   
 -   지도 갤러리에 있는 보고서의 지도  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 공간 데이터 또는 ESRI 셰이프 파일인 공간 데이터를 제공하는 타사 사이트  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 공간 데이터 또는 ESRI 셰이프 파일인 공간 데이터를 제공하는 타사 사이트  
   
 -   지도 보기의 배경을 제공하는 Bing Maps 타일. 지도에 타일을 표시하려면 보고서 서버가 Bing Maps 웹 서비스를 지원하도록 구성되어 있어야 합니다.  
   
- 자세한 내용은 
-  [지도 마법사 및 지도 계층 마법사&#40;보고서 작성기 및 SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)에서 "ESRI 셰이프 파일을 어떻게 구할 수 있나요?"를 참조하세요.  
+ 자세한 내용은 [지도 마법사 및 지도 계층 마법사&#40;보고서 작성기 및 SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)에서 "ESRI 셰이프 파일을 어떻게 구할 수 있나요?"를 참조하세요.  
   
  공간 데이터는 정치적으로 중요한 정보일 수 있으며 저작권이 있을 수 있습니다. 공간 데이터 원본의 사용 조건과 개인 정보 취급 방침을 확인하여 보고서에서 공간 데이터를 사용하는 방법을 파악해야 합니다.  
   
@@ -80,7 +77,7 @@ ms.locfileid: "66105472"
   
  공간 데이터에는 다음 필드가 포함되어야 합니다.  
   
--   **공간 데이터.** 각 점, 선 또는 다각형을 정의하는 좌표 집합이 있는 공간 데이터 필드입니다.  
+-   **Spatial data.** 각 점, 선 또는 다각형을 정의하는 좌표 집합이 있는 공간 데이터 필드입니다.  
   
 -   **일치 필드.** 각 공간 데이터 필드를 고유하게 식별하는 하나 이상의 필드입니다. 예를 들어 상점 위치 점의 경우 상점의 이름을 사용할 수 있습니다. 상점 이름이 공간 데이터에서 고유하지 않으면 상점 이름뿐만 아니라 도시 이름도 포함할 수 있습니다.  
   
@@ -101,7 +98,7 @@ ms.locfileid: "66105472"
   
 
   
-##  <a name="MapType"></a>지도 유형 선택  
+##  <a name="choose-a-map-type"></a><a name="MapType"></a> 지도 유형 선택  
  지도 마법사를 실행할 때 보고서에 지도와 첫 번째 지도 계층을 추가합니다. 지도 마법사를 사용하여 다음 유형의 지도 중 하나를 보고서에 추가할 수 있습니다.  
   
 -   분석 데이터가 연결되지 않은 위치를 표시하는 기본 지도  
@@ -129,16 +126,16 @@ ms.locfileid: "66105472"
   
  
   
-##  <a name="Legend"></a>범례에 대 한 계획  
+##  <a name="plan-for-legends"></a><a name="Legend"></a> 범례 계획  
  사용자가 지도를 해석하는 데 도움이 되도록 여러 지도 범례, 색 눈금 및 거리 눈금을 추가할 수 있습니다. 지도를 디자인할 때 범례를 표시할 위치를 계획해야 합니다. 각 범례에 대한 다음 정보를 지정할 수 있습니다.  
   
--   **범례 위치입니다.** 예를 들어 범례는 뷰포트 내부 또는 외부와 뷰포트와 상대적인 12곳의 별도 위치에 표시될 수 있습니다.  
+-   **범례 위치.** 예를 들어 범례는 뷰포트 내부 또는 외부와 뷰포트와 상대적인 12곳의 별도 위치에 표시될 수 있습니다.  
   
--   **범례 스타일**입니다. 예를 들어 글꼴 스타일, 테두리 스타일, 구분 기호 선 및 채우기 속성을 지정할 수 있습니다.  
+-   **범례 스타일**. 예를 들어 글꼴 스타일, 테두리 스타일, 구분 기호 선 및 채우기 속성을 지정할 수 있습니다.  
   
--   **범례 제목입니다.** 예를 들어 제목 텍스트를 지정할 수 있으며 색 눈금이나 지도 범례의 제목을 표시할지 여부를 독립적으로 제어할 수 있습니다.  
+-   **범례 제목.** 예를 들어 제목 텍스트를 지정할 수 있으며 색 눈금이나 지도 범례의 제목을 표시할지 여부를 독립적으로 제어할 수 있습니다.  
   
--   **지도 범례 레이아웃입니다.** 예를 들어 지도 범례는 긴 표나 넓은 표로 표시될 수 있습니다.  
+-   **지도 범례 레이아웃.** 예를 들어 지도 범례는 긴 표나 넓은 표로 표시될 수 있습니다.  
   
  범례의 내용은 각 계층에 설정하는 규칙 옵션에 따라 보고서를 처리하는 동안 자동으로 만들어집니다.  
   
@@ -148,7 +145,7 @@ ms.locfileid: "66105472"
   
 
   
-##  <a name="Embedding"></a>보고서 정의 크기와 보고서 처리 시간의 균형 맞추기  
+##  <a name="balance-report-definition-size-and-report-processing-time"></a><a name="Embedding"></a> 보고서 정의 크기와 보고서 처리 시간의 균형 맞추기  
  지도를 사용하는 데 효과적으로 보고서를 디자인하려면 보고서 성능을 제어하는 옵션과 보고서 정의 크기를 제어하는 옵션의 균형을 맞춰야 합니다. 공간 데이터나 Bing Maps 타일 기반의 지도 요소는 정적이고 보고서 정의에 포함되거나 동적이고 보고서가 처리될 때마다 만들어질 수 있습니다. 정적 또는 동적 지도 데이터의 장단점을 평가하고 해당 환경에 적합한 균형점을 찾아야 합니다. 이 결정을 내리려면 다음 정보를 고려하십시오.  
   
 -   포함된 지도 요소를 사용하면 보고서 정의의 크기가 매우 증가할 수 있지만 보고서에서 지도를 보는 데 필요한 시간을 줄일 수 있습니다. 보고서 서버에는 작업하는 데 필요한 크기 제한이 있을 수 있습니다.  
@@ -164,9 +161,9 @@ ms.locfileid: "66105472"
 
   
 ## <a name="see-also"></a>참고 항목  
- [지도 또는 지도 계층의 데이터 및 표시를 사용자 지정 하 &#40;보고서 작성기 및 SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [자습서: 지도 보고서 &#40;보고서 작성기&#41;](../tutorial-map-report-report-builder.md)   
+ [지도 또는 지도 계층의 데이터 및 표시 사용자 지정&#40;보고서 작성기 및 SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
+ [자습서: 지도 보고서&#40;보고서 작성기&#41;](../tutorial-map-report-report-builder.md)   
  [지도&#40;보고서 작성기 및 SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [보고서 문제 해결: 보고서 작성기 및 SSRS&#41;&#40;지도 보고서](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [보고서 문제해결: 지도 보고서&#40;보고서 작성기 및 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

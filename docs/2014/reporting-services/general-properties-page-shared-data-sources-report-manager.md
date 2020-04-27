@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1de9a0091fa072fccea4825d31deb50463f6cd8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109082"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>일반 속성 페이지, 공유 데이터 원본(보고서 관리자)
@@ -47,8 +47,7 @@ ms.locfileid: "66109082"
  **데이터 원본 유형**  
  데이터 원본의 데이터를 처리하는 데 사용되는 데이터 처리 확장 프로그램을 지정합니다. 보고서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]서버에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)],, Oracle, XML, SAP, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], ODBC 및 OLE DB에 대 한 데이터 처리 확장 프로그램이 포함 되어 있습니다. 다른 데이터 처리 확장 프로그램은 관련 공급업체로부터 구할 수 있습니다.  
   
- 
-  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Edition with Advanced Services를 사용하는 경우에는 로컬 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 원본만 선택할 수 있습니다.  
+ [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Edition with Advanced Services를 사용하는 경우에는 로컬 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 원본만 선택할 수 있습니다.  
   
  **연결 문자열**  
  보고서 서버가 데이터 원본에 연결하는 데 사용하는 연결 문자열을 지정합니다. 연결 형식에 따라 사용하는 구문이 결정됩니다. 예를 들어 XML 데이터 처리 확장 프로그램에 대한 연결 문자열은 XML 문서에 대한 URL입니다. 대부분의 경우 일반적인 연결 문자열은 데이터베이스 서버와 데이터 파일을 지정합니다. 다음 예에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] 데이터베이스에 연결 하는 데 사용 되는 연결 문자열을 보여 줍니다.  
@@ -71,11 +70,9 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **보고서 서버에 안전하게 저장된 자격 증명**  
  암호화된 사용자 이름 및 암호를 보고서 서버 데이터베이스에 저장합니다. 사용자 동작이 아닌 일정이나 이벤트로 시작되는 보고서와 같이 무인 모드로 보고서를 실행하려는 경우 이 옵션을 선택하십시오. 기본 보안을 사용하는 경우 사용자 이름은 Windows 도메인 계정이어야 합니다. 계정을 \<도메인>\\<사용자 이름\>형식으로 지정 합니다. 지정하는 계정에는 보고서에 사용되는 데이터 원본을 호스팅하는 컴퓨터에 대한 로컬 로그온 권한이 있어야 합니다.  
   
- 자격 증명이 Windows 인증 자격 증명인 경우 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용** 을 선택합니다. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증과 같은 데이터베이스 인증을 사용하는 경우에는 이 확인란을 선택하지 마십시오.  
+ 자격 증명이 Windows 인증 자격 증명인 경우 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용** 을 선택합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증과 같은 데이터베이스 인증을 사용하는 경우에는 이 확인란을 선택하지 마십시오.  
   
- 데이터베이스 인증을 사용하는 경우 데이터베이스 자격 증명 위임을 허용하려면 데이터베이스 서버에서 가장을 지원하는 경우에만 **데이터 원본에 연결한 후 인증된 사용자로 가장** 을 선택하십시오. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 경우 이 옵션은 SETUSER 함수를 설정합니다.  
+ 데이터베이스 인증을 사용하는 경우 데이터베이스 자격 증명 위임을 허용하려면 데이터베이스 서버에서 가장을 지원하는 경우에만 **데이터 원본에 연결한 후 인증된 사용자로 가장** 을 선택하십시오. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 경우 이 옵션은 SETUSER 함수를 설정합니다.  
   
  **Windows 통합 보안**  
  현재 사용자의 Windows 자격 증명을 사용하여 데이터 원본에 액세스합니다. 데이터 원본에 액세스하는 데 사용되는 자격 증명이 네트워크 도메인에 로그온하는 데 사용되는 자격 증명과 같으면 이 옵션을 선택합니다. 이 옵션은 도메인에 Kerberos를 설정한 경우나 데이터 원본이 보고서 서버와 같은 컴퓨터에 있는 경우에 가장 잘 작동합니다. Kerberos를 해제하면 Windows 자격 증명이 다른 컴퓨터로 전달될 수 있습니다. 컴퓨터 연결이 추가로 필요한 경우에는 원하는 데이터가 아닌 오류가 반환됩니다.  
@@ -95,7 +92,7 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **Delete**  
  공유 데이터 원본을 삭제하려면 클릭합니다. 공유 데이터 원본을 삭제하면 해당 원본을 사용하는 모든 보고서, 모델 및 데이터 기반 구독이 비활성화됩니다. 보고서, 모델 및 구독을 다시 활성화하려면 각 항목을 열고 다른 공유 데이터 원본을 사용하도록 해당 데이터 원본 속성을 업데이트해야 합니다. 보고서 및 구독의 경우 데이터 원본 연결 정보를 데이터 원본 속성 값으로 지정할 수 있습니다.  
   
- **이동**  
+ **옮기고**  
  보고서 서버 폴더 네임스페이스의 다른 위치로 공유 데이터 원본을 이동하려면 클릭합니다.  
   
  **모델 생성**  

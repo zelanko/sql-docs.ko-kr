@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: efdea595034f91497befdc7f7b12adacef8d73ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109548"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정
@@ -40,11 +40,9 @@ ms.locfileid: "66109548"
 ## <a name="finding-and-modifying-rsreportserverconfig"></a>RSReportServer.config 찾기 및 수정  
  보고서 출력 형식에 대한 구성 설정은 RSReportServer.config 파일에서 렌더링 확장 프로그램 매개 변수로 지정됩니다. 구성 파일에서 렌더링 확장 프로그램 매개 변수를 지정하려면 렌더링 매개 변수를 설정하는 XML 구조의 정의 방법을 알고 있어야 합니다. 다음 두 가지 XML 구조를 수정할 수 있습니다.  
   
--   
-  `OverrideNames` 요소는 렌더링 확장 프로그램의 표시 이름과 언어를 정의합니다.  
+-   `OverrideNames` 요소는 렌더링 확장 프로그램의 표시 이름과 언어를 정의합니다.  
   
--   
-  `DeviceInfo` XML 구조는 렌더링 확장 프로그램에서 사용하는 디바이스 정보 설정을 정의합니다. 대부분의 렌더링 확장 프로그램 매개 변수는 디바이스 정보 설정으로 지정됩니다.  
+-   `DeviceInfo` XML 구조는 렌더링 확장 프로그램에서 사용하는 디바이스 정보 설정을 정의합니다. 대부분의 렌더링 확장 프로그램 매개 변수는 디바이스 정보 설정으로 지정됩니다.  
   
  이 파일은 텍스트 편집기를 사용하여 수정할 수 있습니다. RSReportServer.config 파일은 \Reporting Services\Report Server\Bin 폴더에 있습니다. 구성 파일을 수정하는 방법에 대한 자세한 내용은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요.  
   

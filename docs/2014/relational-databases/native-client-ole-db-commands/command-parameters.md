@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 836f4cb41c8c2cf5b72dbbcf08b8154381a958cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62467349"
 ---
 # <a name="command-parameters"></a>명령 매개 변수
@@ -32,8 +32,7 @@ ms.locfileid: "62467349"
   
  네트워크 트래픽을 줄여 성능을 향상 시키기 위해 명령을 실행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하기 전에 **ICommandWithParameters:: GetParameterInfo** 또는 **ICommandPrepare::P repare** 를 호출 하지 않으면 Native Client OLE DB 공급자가 자동으로 매개 변수 정보를 파생 시 키 지 않습니다. 즉, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 다음을 자동으로 수행 하지 않습니다.  
   
--   
-  **ICommandWithParameters::SetParameterInfo**에 지정된 데이터 형식이 올바른지 확인합니다.  
+-   **ICommandWithParameters::SetParameterInfo**에 지정된 데이터 형식이 올바른지 확인합니다.  
   
 -   접근자 바인딩 정보에 지정된 DBTYPE에서 매개 변수의 올바른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식으로 매핑  
   
@@ -41,15 +40,14 @@ ms.locfileid: "62467349"
   
  이 문제가 발생하지 않게 하려면 애플리케이션에서 다음을 수행해야 합니다.  
   
--   
-  *ICommandWithParameters::SetParameterInfo*를 하드 코딩할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]pwszDataSourceType**이 매개 변수의 ** 데이터 형식과 일치하는지 확인합니다.  
+-   **ICommandWithParameters::SetParameterInfo**를 하드 코딩할 경우 *pwszDataSourceType*이 매개 변수의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식과 일치하는지 확인합니다.  
   
 -   접근자를 하드 코딩할 경우 매개 변수에 바인딩되는 DBTYPE 값이 매개 변수의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식과 같은 형식인지 확인합니다.  
   
--   공급자가 매개 변수의 ** 데이터 형식을 동적으로 얻을 수 있도록 **ICommandWithParameters::GetParameterInfo[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 호출하는 애플리케이션을 코딩합니다. 이로 인해 서버로의 네트워크 왕복이 추가로 발생합니다.  
+-   공급자가 매개 변수의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 동적으로 얻을 수 있도록 **ICommandWithParameters::GetParameterInfo**를 호출하는 애플리케이션을 코딩합니다. 이로 인해 서버로의 네트워크 왕복이 추가로 발생합니다.  
   
 > [!NOTE]  
->  공급자에서는 FROM 절이 포함된 ** UPDATE 또는 DELETE 문, 매개 변수를 포함하는 하위 쿼리에 종속된 SQL 문, 비교, like 또는 한정된 조건자의 두 식이나 매개 변수 중 하나가 함수의 매개 변수인 쿼리에 매개 변수 표식이 포함된 SQL 문에 대해 **ICommandWithParameters::GetParameterInfo[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 호출할 수 없습니다. 또한 SQL 문을 일괄 처리할 경우 공급자에서는 일괄 처리의 첫 번째 문 다음에 나오는 문의 매개 변수 표식에 대해 **ICommandWithParameters::GetParameterInfo**를 호출할 수 없습니다. 주석(/* \*/)이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령에 허용되지 않습니다.  
+>  공급자에서는 FROM 절이 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UPDATE 또는 DELETE 문, 매개 변수를 포함하는 하위 쿼리에 종속된 SQL 문, 비교, like 또는 한정된 조건자의 두 식이나 매개 변수 중 하나가 함수의 매개 변수인 쿼리에 매개 변수 표식이 포함된 SQL 문에 대해 **ICommandWithParameters::GetParameterInfo**를 호출할 수 없습니다. 또한 SQL 문을 일괄 처리할 경우 공급자에서는 일괄 처리의 첫 번째 문 다음에 나오는 문의 매개 변수 표식에 대해 **ICommandWithParameters::GetParameterInfo**를 호출할 수 없습니다. 주석(/* \*/)이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령에 허용되지 않습니다.  
   
  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 SQL 문 명령에서 입력 매개 변수를 지원 합니다. 프로시저 호출 명령에서 Native Client OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공급자는 입력, 출력 및 입/출력 매개 변수를 지원 합니다. 실행 시(반환되는 행 집합이 없는 경우에만 해당) 또는 반환된 행 집합이 애플리케이션에서 모두 사용된 경우에 출력 매개 변수 값이 애플리케이션에 반환됩니다. 반환된 값이 유효한지 확인하려면 **IMultipleResults**를 사용하여 행 집합을 강제로 소비합니다.  
   

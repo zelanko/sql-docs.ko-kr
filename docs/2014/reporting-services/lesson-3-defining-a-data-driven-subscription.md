@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ee51a19d1dc169d2ae784d8a44403e021ff8b665
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108512"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
@@ -41,7 +41,7 @@ ms.locfileid: "66108512"
   
 -   [6단계 - 구독을 예약하려면](#bkmk_schedule_subscription)  
   
-##  <a name="bkmk_startwizard"></a>데이터 기반 구독 마법사 시작  
+##  <a name="start-the-data-driven-subscription-wizard"></a><a name="bkmk_startwizard"></a>데이터 기반 구독 마법사 시작  
   
 1.  보고서 관리자에서 **홈**을 클릭하고 **Sales Orders** 보고서가 있는 폴더로 이동합니다.  
   
@@ -49,17 +49,15 @@ ms.locfileid: "66108512"
   
 3.  **새 데이터 기반 구독**을 클릭 합니다. 이 단추가 표시되지 않는 경우 내용 관리자 권한이 없는 것입니다.  
   
-##  <a name="bkmk_definesubscription"></a>1 단계-설명 정의  
+##  <a name="step-1---define-a-description"></a><a name="bkmk_definesubscription"></a>1 단계-설명 정의  
   
 1.  설명에 **Sales Order 배달** 을 입력합니다.  
   
-2.  
-  **받는 사람에게 알림을 보내는 방법 지정** 에서 **Windows 파일 공유**를 선택합니다.  
+2.  **받는 사람에게 알림을 보내는 방법 지정** 에서 **Windows 파일 공유**를 선택합니다.  
   
-3.  
-  **이 구독에 대해서만 지정하세요**를 선택하고 **다음**을 클릭합니다.  
+3.  **이 구독에 대해서만 지정하세요**를 선택하고 **다음**을 클릭합니다.  
   
-##  <a name="bkmk_defineconnectiontosubscriber"></a>2 단계-구독자 데이터 원본에 대 한 연결 정의  
+##  <a name="step-2---define-a-connection-to-the-subscriber-data-source"></a><a name="bkmk_defineconnectiontosubscriber"></a>2 단계-구독자 데이터 원본에 대 한 연결 정의  
   
 1.  데이터 원본 유형으로 **Microsoft SQL Server** 를 선택합니다.  
   
@@ -72,20 +70,16 @@ ms.locfileid: "66108512"
     > [!NOTE]  
     >  구독자는 1단원에서 만든 데이터베이스입니다.  
   
-3.  
-  **보고서 서버에 안전하게 저장된 자격 증명**을 클릭합니다.  
+3.  **보고서 서버에 안전하게 저장된 자격 증명**을 클릭합니다.  
   
-4.  
-  **사용자 이름** 및 **암호**에 도메인 사용자 이름 및 암호를 입력합니다. 
-  **사용자 이름**을 지정할 때는 도메인 계정과 사용자 계정을 모두 포함합니다.  
+4.  **사용자 이름** 및 **암호**에 도메인 사용자 이름 및 암호를 입력합니다. **사용자 이름**을 지정할 때는 도메인 계정과 사용자 계정을 모두 포함합니다.  
   
     > [!NOTE]  
     >  구독자 데이터 원본에 연결하는 데 사용된 자격 증명은 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]로 다시 전달되지 않습니다. 나중에 구독을 수정할 경우 데이터 원본에 연결하는 데 사용된 암호를 다시 입력해야 합니다.  
   
-5.  
-  **데이터 원본에 연결할 때 Windows 자격 증명으로 사용**을 선택한 후 **다음**을 클릭합니다.  
+5.  **데이터 원본에 연결할 때 Windows 자격 증명으로 사용**을 선택한 후 **다음**을 클릭합니다.  
   
-##  <a name="bkmk_definequery"></a>3 단계-구독자 데이터를 검색 하는 쿼리 정의  
+##  <a name="step-3---define-a-query-to-retrieve-subscriber-data"></a><a name="bkmk_definequery"></a>3 단계-구독자 데이터를 검색 하는 쿼리 정의  
   
 1.  쿼리 상자에 다음 쿼리를 입력합니다.  
   
@@ -95,48 +89,35 @@ ms.locfileid: "66108512"
   
 2.  제한 시간을 30초로 지정합니다.  
   
-3.  
-  **유효성 검사**를 클릭하고 **다음**을 클릭합니다.  
+3.  **유효성 검사**를 클릭하고 **다음**을 클릭합니다.  
   
-##  <a name="bkmk_set_deliveryoptions"></a>4 단계-배달 옵션 설정  
+##  <a name="step-4---set-delivery-options"></a><a name="bkmk_set_deliveryoptions"></a>4 단계-배달 옵션 설정  
   
-1.  
-  **파일 이름**에 대해 **데이터베이스에서 값 가져오기**를 선택합니다. 
-  **Order**필드를 선택합니다.  
+1.  **파일 이름**에 대해 **데이터베이스에서 값 가져오기**를 선택합니다. **Order**필드를 선택합니다.  
   
-2.  
-  **경로**에 대해 **정적 값 지정**을 선택합니다. 값 설정에 쓰기 권한이 있는 공용 파일 공유의 이름(예: `\\mycomputer\public\myreports`)을 입력합니다.  
+2.  **경로**에 대해 **정적 값 지정**을 선택합니다. 값 설정에 쓰기 권한이 있는 공용 파일 공유의 이름(예: `\\mycomputer\public\myreports`)을 입력합니다.  
   
-3.  
-  **렌더링 형식**에 대해 **데이터베이스에서 값 가져오기**를 선택합니다. 
-  **형식**을 선택합니다.  
+3.  **렌더링 형식**에 대해 **데이터베이스에서 값 가져오기**를 선택합니다. **형식**을 선택합니다.  
   
-4.  
-  **쓰기 모드**에 대해 **정적 값 지정** 을 선택하고 **AutoIncrement**를 선택합니다.  
+4.  **쓰기 모드**에 대해 **정적 값 지정** 을 선택하고 **AutoIncrement**를 선택합니다.  
   
-5.  
-  **파일 확장명**에 대해 **정적 값 지정** 을 선택하고 **True**를 선택합니다.  
+5.  **파일 확장명**에 대해 **정적 값 지정** 을 선택하고 **True**를 선택합니다.  
   
-6.  
-  **사용자 이름**에 대해 **정적 값 지정**을 선택합니다. 도메인 사용자 계정을 입력합니다. 이 계정을 `<domain>\<account>`형식으로 입력합니다. 사용자 계정에는 사용자가 이전 단계에서 구성한 경로에 대한 권한이 있어야 합니다.  
+6.  **사용자 이름**에 대해 **정적 값 지정**을 선택합니다. 도메인 사용자 계정을 입력합니다. 이 계정을 `<domain>\<account>`형식으로 입력합니다. 사용자 계정에는 사용자가 이전 단계에서 구성한 경로에 대한 권한이 있어야 합니다.  
   
-7.  
-  **암호**에 대해 **정적 값 지정**을 선택합니다. 암호를 입력합니다. 마법사에서는 암호의 유효성을 검사하지 않으므로 암호 입력 시 주의합니다.  
+7.  **암호**에 대해 **정적 값 지정**을 선택합니다. 암호를 입력합니다. 마법사에서는 암호의 유효성을 검사하지 않으므로 암호 입력 시 주의합니다.  
   
 8.  **다음**을 클릭합니다.  
   
-##  <a name="bkmk_configure_parameter"></a>5 단계-보고서 출력에 대 한 매개 변수 값 구성  
+##  <a name="step-5---configure-a-parameter-value-to-very-report-output"></a><a name="bkmk_configure_parameter"></a>5 단계-보고서 출력에 대 한 매개 변수 값 구성  
   
-1.  
-  **OrderNumber**에 대해 **데이터베이스에서 값 가져오기**를 선택합니다. 값에서 **Order**를 선택합니다. **다음**을 클릭합니다.  
+1.  **OrderNumber**에 대해 **데이터베이스에서 값 가져오기**를 선택합니다. 값에서 **Order**를 선택합니다. **다음**을 클릭합니다.  
   
-##  <a name="bkmk_schedule_subscription"></a>6 단계-구독을 예약 하려면  
+##  <a name="step-6---to-schedule-a-subscription"></a><a name="bkmk_schedule_subscription"></a>6 단계-구독을 예약 하려면  
   
-1.  
-  **이 구독에 대해 생성된 일정**을 클릭한 후 **다음**을 클릭합니다.  
+1.  **이 구독에 대해 생성된 일정**을 클릭한 후 **다음**을 클릭합니다.  
   
-2.  
-  **일정 정보**에서 **한 번**을 누릅니다.  
+2.  **일정 정보**에서 **한 번**을 누릅니다.  
   
 3.  시작 시간을 현재 시간보다 몇 분 앞당겨 지정합니다.  
   
@@ -157,10 +138,10 @@ ms.locfileid: "66108512"
  이 단계는 "데이터 기반 구독 정의" 자습서의 마지막 단계입니다. 다른 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 자습서에 대 한 자세한 내용은 [SSRS&#41;&#40;Reporting Services 자습서 ](../reporting-services/reporting-services-tutorials-ssrs.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [SSRS 자습서 &#40;데이터 기반 구독 만들기&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [구독 및 배달&#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [데이터 기반 구독 만들기, 수정 및 삭제](subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [구독자 데이터에 외부 데이터 원본을 사용 하 여 데이터 기반 구독 &#40;&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
+ [구독자 데이터에 외부 데이터 원본 사용&#40;데이터 기반 구독&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   
   

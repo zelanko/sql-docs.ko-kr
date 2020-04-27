@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1589f171fd8d402572408186a10b3e6f4ac97982
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107592"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>공유 데이터 세트 디자인 뷰(보고서 작성기)
@@ -24,7 +24,7 @@ ms.locfileid: "66107592"
   
  보고서의 데이터로 작업 하는 방법에 대 한 자세한 내용은 [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](../report-data/report-datasets-ssrs.md)를 참조 하세요.  
   
-##  <a name="Ribbon"></a>리본 메뉴  
+##  <a name="the-ribbon"></a><a name="Ribbon"></a>리본 메뉴  
  리본은 태스크를 완료하는 데 필요한 명령을 빠르게 찾을 수 있도록 도와줍니다. 명령은 연결, 데이터 세트, 쿼리 디자이너 같은 논리 그룹에 구성됩니다.  
   
 ### <a name="connection"></a>연결  
@@ -36,8 +36,7 @@ ms.locfileid: "66107592"
  자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열](../data-connections-data-sources-and-connection-strings-in-report-builder.md)을 참조하세요.  
   
 ### <a name="dataset"></a>데이터 세트  
- 
-  **옵션 설정** 단추를 사용하여 공유 데이터 세트 속성을 설정할 수 있습니다. 여기에는 다음과 같은 옵션이 포함됩니다.  
+ **옵션 설정** 단추를 사용하여 공유 데이터 세트 속성을 설정할 수 있습니다. 이러한 요구 사항은 다음과 같습니다.  
   
 -   필드. 필드 컬렉션에 필드를 추가하거나 편집할 수 있습니다.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66107592"
   
 
   
-##  <a name="DesignSurface"></a>쿼리 디자이너 화면  
+##  <a name="the-query-designer-surface"></a><a name="DesignSurface"></a>쿼리 디자이너 화면  
  쿼리 디자이너를 사용하면 외부 데이터 원본에 필요한 구문으로 쿼리를 작성할 수 있습니다.  
   
  일부 데이터 원본 유형은 외부 데이터 원본의 메타데이터를 탐색하는 데 사용할 수 있는 그래픽 쿼리 디자이너를 제공합니다. 메타데이터 창에서 이름을 쿼리 디자인 화면으로 대화형으로 끌어 오거나 사용할 이름을 대화형으로 선택할 수 있습니다.  
@@ -73,7 +72,7 @@ ms.locfileid: "66107592"
   
 
   
-##  <a name="Results"></a>쿼리 결과 보기  
+##  <a name="viewing-query-results"></a><a name="Results"></a>쿼리 결과 보기  
  보고서가 처리될 때 데이터 연결에서 데이터를 검색하는 쿼리를 공유 데이터 세트 디자인 뷰에서 작성합니다.  
   
  쿼리를 실행하여 데이터 연결의 예제 데이터를 검토하여 쿼리가 예상되는 데이터 형식을 반환하는지 확인합니다. 결과 집합의 열은 데이터 연결의 데이터 스키마에 대한 메타데이터에서 가져온 것입니다. 열 이름은 데이터 세트 필드 컬렉션이 됩니다. 쿼리 결과 집합에 표시되는 데이터 값은 디자인 타임 데이터입니다. 공유 데이터 세트를 보고서 서버에 공유 데이터 세트 정의로 저장하면 쿼리 텍스트만 저장됩니다. 쿼리 결과 집합의 데이터는 저장되지 않습니다.  
@@ -91,14 +90,14 @@ ms.locfileid: "66107592"
   
 
   
-##  <a name="Save"></a>공유 데이터 집합 저장  
+##  <a name="saving-the-shared-dataset"></a><a name="Save"></a> 공유 데이터 세트 저장  
  작성한 쿼리를 저장하려면 **보고서 작성기** 단추에서 **저장** 또는 **다른 이름으로 저장**을 클릭합니다. 보고서 서버에서 해당 폴더로 이동하고 공유 데이터 세트 정의를 저장합니다. 공유 데이터 세트는 보고서 서버에 저장할 때까지 다른 사용자가 사용할 수 없습니다.  
   
 
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 &#40;보고서 작성기 및 SSRS&#41;에 데이터를 추가 합니다.](../report-data/report-datasets-ssrs.md)   
- [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [데이터 필터링, 그룹화 및 정렬 &#40;보고서 작성기 및 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

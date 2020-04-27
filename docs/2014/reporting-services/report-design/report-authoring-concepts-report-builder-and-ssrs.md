@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14ed49408c980b85e3a45902852f14f61534eec1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105305"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>보고서 제작 개념(보고서 작성기 및 SSRS)
@@ -30,13 +30,13 @@ ms.locfileid: "66105305"
  [보고서, 보고서 파트 및 보고서 정의&#40;보고서 작성기 및 SSRS&#41;](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
  사용자에게 표시되는 초기 정의, 게시된 보고서 및 표시된 보고서를 비롯한 여러 상태의 보고서를 설명하는 데 사용되는 다양한 용어에 대해 설명합니다.  
   
- [포함 된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본 &#40;보고서 작성기 및 SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)  
+ [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)  
  보고서, 보고서 모델 및 데이터 기반 구독에 사용되는 데이터 원본에 대한 연결을 정의하는 방법에 대해 설명합니다.  
   
- [포함 된 데이터 집합 및 공유 데이터 집합 &#40;보고서 작성기 및 SSRS&#41;](../report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
  포함된 데이터 세트를 만들고, 저장하고, 관리하는 방법과 공유 데이터 세트를 만들고, 저장하고, 관리하는 방법의 차이점에 대해 설명합니다.  
   
- [데이터 영역 및 지도 &#40;보고서 작성기 및 SSRS&#41;](maps-report-builder-and-ssrs.md)  
+ [데이터 영역 및 지도&#40;보고서 작성기 및 SSRS&#41;](maps-report-builder-and-ssrs.md)  
  보고서 레이아웃에 추가할 수 있는 데이터 영역 유형에 대해 설명합니다. 데이터 영역에 따라 보고서 모양이 테이블 형식, 행렬, 목록 또는 차트 중 하나로 결정됩니다.  
   
  [보고서 매개 변수 개념 &#40;보고서 작성기 및 SSRS&#41;](report-parameters-concepts-report-builder-and-ssrs.md)  

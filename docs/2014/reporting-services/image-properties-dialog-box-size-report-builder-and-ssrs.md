@@ -14,14 +14,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7fb80bffc3160b171cbffd40b80d5c8c0f9bb137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108987"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>이미지 속성 대화 상자, 크기(보고서 작성기 및 SSRS)
-  
   **이미지 속성** 대화 상자에서 **크기** 를 선택하여 필드나 디자인 영역에 표시되는 이미지의 크기를 지정할 수 있고, 셀이나 입력란의 가장자리와 셀이나 입력란 안에 포함되는 그림 또는 값 사이의 추가 공백 크기를 변경할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
@@ -46,13 +45,13 @@ ms.locfileid: "66108987"
  **맨 위로**  
  셀의 오른쪽 가장자리 또는 입력란과 셀 내에 표시되는 값 사이의 안쪽 여백 또는 공간을 지정합니다.  
   
- **아래쪽**  
+ **하위별**  
  셀의 오른쪽 가장자리 또는 입력란과 셀 내에 표시되는 값 사이의 안쪽 여백 또는 공간을 지정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [이미지 속성 대화 상자, 일반 &#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [이미지&#40;보고서 작성기 및 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
- [대화 상자, 창 및 마법사에 대 한 보고서 작성기 도움말](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [이미지 &#40;보고서 작성기 및 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

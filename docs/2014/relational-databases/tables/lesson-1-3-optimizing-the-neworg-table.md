@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 952043d5d001fe4fe65e6dd1aa7bb2001290429e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110067"
 ---
 # <a name="optimizing-the-neworg-table"></a>NewOrg 테이블 최적화
@@ -40,8 +40,7 @@ ms.locfileid: "66110067"
     GO  
     ```  
   
-2.  
-  **EmployeeID** 열에 대한 고유 인덱스를 만듭니다. 이는 **EmployeeID** 번호를 기준으로 단일 직원을 단일 조회하는 일반적인 방법입니다. 다음 코드를 실행하여 **EmployeeID**에 대한 인덱스를 만듭니다.  
+2.  **EmployeeID** 열에 대한 고유 인덱스를 만듭니다. 이는 **EmployeeID** 번호를 기준으로 단일 직원을 단일 조회하는 일반적인 방법입니다. 다음 코드를 실행하여 **EmployeeID**에 대한 인덱스를 만듭니다.  
   
     ```  
     CREATE UNIQUE INDEX EmpIDs_unq ON NewOrg(EmployeeID) ;  
@@ -96,7 +95,7 @@ ms.locfileid: "66110067"
   
      `/2/2/       0x6B40       2         8      norint`  
   
-     **Employeeid**-첫 번째 인덱스: 행이 **EmployeeID** 시퀀스에 저장 됩니다.  
+     **EmployeeID**우선 인덱스: 행이 **EmployeeID** 시퀀스에 저장됩니다.  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -125,17 +124,14 @@ ms.locfileid: "66110067"
   
 #### <a name="to-drop-the-unnecessary-columns"></a>불필요한 열을 삭제하려면  
   
-1.  
-  **ManagerID** 열은 직원/관리자 관계를 나타냅니다(이제 **OrgNode** 열이 나타냄). 다른 애플리케이션에 **ManagerID** 열이 필요하지 않은 경우 다음 문을 사용하여 해당 열을 삭제하는 것이 좋습니다.  
+1.  **ManagerID** 열은 직원/관리자 관계를 나타냅니다(이제 **OrgNode** 열이 나타냄). 다른 애플리케이션에 **ManagerID** 열이 필요하지 않은 경우 다음 문을 사용하여 해당 열을 삭제하는 것이 좋습니다.  
   
     ```  
     ALTER TABLE NewOrg DROP COLUMN ManagerID ;  
     GO  
     ```  
   
-2.  
-  **EmployeeID** 열도 중복됩니다. 
-  **OrgNode** 열은 각 직원을 고유하게 식별합니다. 다른 애플리케이션에 **EmployeeID** 열이 필요하지 않은 경우 다음 코드를 사용하여 인덱스와 열을 차례로 삭제하는 것이 좋습니다.  
+2.  **EmployeeID** 열도 중복됩니다. **OrgNode** 열은 각 직원을 고유하게 식별합니다. 다른 애플리케이션에 **EmployeeID** 열이 필요하지 않은 경우 다음 코드를 사용하여 인덱스와 열을 차례로 삭제하는 것이 좋습니다.  
   
     ```  
     DROP INDEX EmpIDs_unq ON NewOrg ;  

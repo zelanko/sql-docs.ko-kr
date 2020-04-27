@@ -15,26 +15,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b987dd46f6a60a0d0cadc95cf187566eafa4f527
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109269"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본(보고서 작성기 및 SSRS)
-  보고서는 쿼리가 실행되거나 보고서가 처리될 때 데이터 연결을 사용하여 보고서에 대한 데이터를 검색합니다. 기본 제공 데이터 연결 유형 목록에서 선택하여 관계형 데이터베이스, 다차원 데이터베이스, 웹 서비스 또는 다른 데이터 원본에 연결할 수 있습니다. 데이터 연결 설명에는 다음과 같은 용어가 사용됩니다.  
+  보고서는 쿼리가 실행되거나 보고서가 처리될 때 데이터 연결을 사용하여 보고서에 대한 데이터를 검색합니다. 기본 제공 데이터 연결 형식 목록에서 선택하여 관계형 데이터베이스, 다차원 데이터베이스, 웹 서비스 또는 다른 데이터 원본에 연결할 수 있습니다. 데이터 연결 설명에는 다음과 같은 용어가 사용됩니다.  
   
--   **데이터 연결.** 
-  *데이터 원본*이라고도 합니다. 데이터 연결에는 연결 유형에 따라 달라지는 이름 및 연결 속성이 포함되어 있습니다. 기본적으로 데이터 연결에는 자격 증명이 포함되지 않습니다. 데이터 연결은 외부 데이터 원본에서 어떤 데이터를 검색할 것인지 지정하지 않습니다. 이렇게 하려면 데이터 세트를 만들 때 쿼리를 지정합니다.  
+-   **데이터 연결** *데이터 원본*이라고도 합니다. 데이터 연결에는 연결 형식에 따라 달라지는 이름 및 연결 속성이 포함되어 있습니다. 기본적으로 데이터 연결에는 자격 증명이 포함되지 않습니다. 데이터 연결은 외부 데이터 원본에서 어떤 데이터를 검색할 것인지 지정하지 않습니다. 이렇게 하려면 데이터 세트를 만들 때 쿼리를 지정합니다.  
   
--   **데이터 원본 정의입니다.** 보고서 데이터 원본의 XML 표현을 포함하는 파일입니다. 보고서를 게시할 때 해당 데이터 원본은 보고서 정의와는 별도로 보고서 서버 또는 SharePoint 사이트에 데이터 원본 정의로 저장됩니다. 예를 들어 보고서 서버 관리자가 연결 문자열이나 자격 증명을 업데이트할 수 있습니다. 기본 보고서 서버의 파일 형식은 .rds입니다. SharePoint 사이트의 파일 형식은 .rsds입니다.  
+-   **데이터 원본 정의.** 보고서 데이터 원본의 XML 표현을 포함하는 파일입니다. 보고서를 게시할 때 해당 데이터 원본은 보고서 정의와는 별도로 보고서 서버 또는 SharePoint 사이트에 데이터 원본 정의로 저장됩니다. 예를 들어 보고서 서버 관리자가 연결 문자열이나 자격 증명을 업데이트할 수 있습니다. 기본 보고서 서버의 파일 형식은 .rds입니다. SharePoint 사이트의 파일 형식은 .rsds입니다.  
   
 -   **연결 문자열입니다.** 연결 문자열은 데이터 원본에 연결하는 데 필요한 연결 속성의 문자열 버전입니다. 연결 속성은 데이터 연결 형식에 따라 다릅니다. 예를 보려면 [Data Connections, Data Sources, and Connection Strings in Report Builder](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)를 참조하세요.  
   
 -   **공유 데이터 원본.** 여러 보고서에서 사용할 수 있도록 보고서 서버 또는 SharePoint 사이트에 제공되는 데이터 원본입니다.  
   
--   **포함 된 데이터 원본.** 
-  *보고서별 데이터 원본*이라고도 합니다. 보고서에서 정의되어 해당 보고서에서만 사용되는 데이터 원본입니다.  
+-   **포함된 데이터 원본.** *보고서별 데이터 원본*이라고도 합니다. 보고서에서 정의되어 해당 보고서에서만 사용되는 데이터 원본입니다.  
   
 -   **자격 증명.** 자격 증명은 외부 데이터 액세스를 위해 제공해야 하는 인증 정보입니다.  
   
@@ -55,10 +53,10 @@ ms.locfileid: "66109269"
 ## <a name="embedded-data-sources"></a>포함된 데이터 원본  
  포함된 데이터 원본은 보고서 정의에 저장되는 데이터 연결입니다. 포함된 데이터 원본 연결 정보는 해당 정보가 포함된 보고서에서만 사용될 수 있습니다. 포함된 데이터 원본을 정의하고 관리하려면 보고서의 **데이터 원본 속성** 대화 상자를 사용합니다.  
   
-##  <a name="Comparing"></a>포함 된 데이터 원본 및 공유 데이터 원본 비교  
+##  <a name="comparing-embedded-and-shared-data-sources"></a><a name="Comparing"></a>포함 된 데이터 원본 및 공유 데이터 원본 비교  
  다음 표에는 포함된 데이터 원본과 공유 데이터 원본의 차이점이 요약되어 있습니다.  
   
-|Description|포함된<br /><br /> 데이터 원본|공유됨<br /><br /> 데이터 원본|  
+|설명|포함된<br /><br /> 데이터 원본|Shared<br /><br /> 데이터 원본|  
 |-----------------|------------------------------|----------------------------|  
 |데이터 연결이 보고서 정의에 포함되어 있습니다.|![사용 가능](media/greencheck.gif "사용 가능")||  
 |보고서 서버의 데이터 연결에 대한 포인터가 보고서 정의에 포함되어 있습니다.||![사용 가능](media/greencheck.gif "사용 가능")|  
@@ -74,6 +72,6 @@ ms.locfileid: "66109269"
  [보고서 작성기 및 SSRS &#40;보고서 제작 개념&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Reporting Services &#40;SSRS&#41;에서 지 원하는 데이터 원본](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [데이터 연결이 나 데이터 원본 &#40;보고서 작성기 및 SSRS를 추가 하 고 확인&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
- [포함 된 데이터 집합 및 공유 데이터 집합 &#40;보고서 작성기 및 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27942be9c32d4537f729adbd69df1c64a9c9ff6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109867"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>업데이트 확인 또는 업데이트 해제(보고서 작성기 및 SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "66109867"
 -   보고서 외부의 디자인 화면 또는 보고서 본문을 마우스 오른쪽 단추로 클릭 하 고 **업데이트 확인**을 클릭 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [보고서 파트 &#40;보고서 작성기 및 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [보고서 파트 게시 및 다시 게시 &#40;보고서 작성기 및 SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
  [보고서 파트를 검색 하 고 기본 폴더 &#40;보고서 작성기 및 SSRS를 설정&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
  [보고서 파트 &#40;보고서 작성기 및 SSRS에 대 한 문제 해결&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   

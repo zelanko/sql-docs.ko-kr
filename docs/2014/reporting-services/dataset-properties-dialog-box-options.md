@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 778365e8fc7f40700b0f8c1683260f15c860a32a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109406"
 ---
 # <a name="dataset-properties-dialog-box-options"></a>데이터 세트 속성 대화 상자, 옵션
@@ -25,7 +25,7 @@ ms.locfileid: "66109406"
   
 ## <a name="options"></a>옵션  
  **데이터 정렬**  
- 데이터 정렬에 사용할 데이터 정렬 시퀀스를 결정하는 로캘을 선택합니다. **기본값** 은 보고서가 실행 될 때 보고서 서버가 데이터 공급자 로부터 값을 파생 하려고 시도 함을 나타냅니다. 값을 가져올 수 없는 경우 기본값이 컴퓨터의 로캘 설정에서 파생됩니다.  
+ 데이터 정렬에 사용할 데이터 정렬 시퀀스를 결정하는 로캘을 선택합니다. **Default** 로 설정하면 보고서가 실행될 때 보고서 서버가 데이터 공급자로부터 값을 가져와야 합니다. 값을 가져올 수 없는 경우 기본값이 컴퓨터의 로캘 설정에서 파생됩니다.  
   
  **대/소문자 구분**  
  대/소문자 구분을 결정하는 값을 선택합니다. 이 옵션은 데이터가 대/소문자를 구분하는지 여부를 나타냅니다. **대/소문자 구분** 은 **True**, **False**또는 **Auto**로 설정할 수 있습니다. 기본값인 **Auto**는 보고서가 실행 될 때 보고서 서버가 데이터 공급자 로부터 값을 파생 하려고 시도 함을 나타냅니다. 데이터 공급자가 대/소문자 구분 형식을 지원하지 않는 경우에는 이 값이 **False**인 것처럼 보고서가 실행됩니다. 지원되는 값을 알고 있는 경우 **True**를 선택합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "66109406"
  **악센트 구분**  
  악센트 구분을 결정하는 값을 선택합니다. **악센트 구분** 은 데이터가 악센트를 구분 하는지 여부를 나타내며 **True**, **False**또는 **Auto**로 설정할 수 있습니다. 기본값인 **Auto**는 보고서가 실행 될 때 보고서 서버가 데이터 공급자 로부터 값을 가져오려고 함을 나타냅니다. 데이터 공급자가 악센트 구분 형식을 지원하지 않는 경우에는 이 값이 **False**인 것처럼 보고서가 실행됩니다. 지원되는 값을 알고 있는 경우 **True**를 선택합니다.  
   
- **일본어가 나 민감도**  
+ **일본어 가나 구분**  
  일본어 가나 구분을 결정하는 값을 선택합니다. 이 옵션은 데이터가 일본어가 나를 구분 하는지 여부를 나타냅니다. **True**, **False**또는 **Auto**로 설정할 수 있습니다. 기본값인 **Auto**는 보고서가 실행 될 때 보고서 서버가 데이터 공급자 로부터 값을 파생 하려고 시도 함을 나타냅니다. 데이터 공급자가 일본어 가나 구분 형식을 지원하지 않는 경우에는 이 값이 **False**인 것처럼 보고서가 실행됩니다. 지원되는 값을 알고 있는 경우 **True**를 선택합니다.  
   
  **전자/반자 구분**  
@@ -47,6 +47,6 @@ ms.locfileid: "66109406"
  [보고서 &#40;보고서 작성기 및 SSRS&#41;에 데이터를 추가 합니다.](report-data/report-datasets-ssrs.md)   
  [Windows 데이터 정렬 이름&#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql)   
  [SQL Server 데이터 정렬 이름&#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql)   
- [집계 함수 &#40;보고서 작성기 및 SSRS&#41;](report-design/report-builder-functions-aggregate-function.md)  
+ [Aggregate 함수&#40;보고서 작성기 및 SSRS&#41;](report-design/report-builder-functions-aggregate-function.md)  
   
   

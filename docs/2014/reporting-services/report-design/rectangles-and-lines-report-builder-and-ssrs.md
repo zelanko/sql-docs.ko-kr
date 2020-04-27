@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f447d05501949df0fd0860ed7799fca2932714fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105393"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>사각형 및 선(보고서 작성기 및 SSRS)
@@ -23,14 +23,14 @@ ms.locfileid: "66105393"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RectanglesLinesReportParts"></a> 보고서 파트인 사각형 및 선  
+##  <a name="rectangles-and-lines-as-report-parts"></a><a name="RectanglesLinesReportParts"></a> 보고서 파트인 사각형 및 선  
  사각형과 그에 포함된 항목을 보고서와는 별도로 보고서 파트로 게시할 수 있습니다. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
  사각형 내의 보고서 항목은 보고서 파트로 게시할 수 없습니다. 사용자가 사각형을 보고서에 추가하면 보고서에는 사각형과 함께 사각형에 포함된 항목도 추가됩니다.  
   
 
   
-##  <a name="RectangleAsContainer"></a> 사각형을 컨테이너로 사용  
+##  <a name="using-a-rectangle-as-a-container"></a><a name="RectangleAsContainer"></a> 사각형을 컨테이너로 사용  
  사각형을 다른 항목의 컨테이너로 사용할 수 있습니다. 사각형을 이동하면 사각형 내의 항목도 함께 이동합니다. 사각형에 포함된 항목의 **Parent** 속성에는 사각형 이름이 표시됩니다. 사각형을 컨테이너로 사용하는 방법은 [사각형 또는 컨테이너 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md) 및 [행렬 및 차트에 같은 데이터 표시&#40;보고서 작성기&#41;](display-the-same-data-on-a-matrix-and-a-chart-report-builder.md)를 참조하세요.  
   
 > [!NOTE]  
@@ -40,12 +40,12 @@ ms.locfileid: "66105393"
   
 
   
-##  <a name="ReportBorder"></a> 보고서 테두리 추가  
+##  <a name="adding-a-report-border"></a><a name="ReportBorder"></a> 보고서 테두리 추가  
  선이나 사각형을 추가하지 않고 머리글, 바닥글 및 보고서 본문 자체에 테두리를 추가하여 보고서에 테두리를 추가할 수 있습니다. 자세한 내용은 [보고서에 테두리 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)에 대해 자세히 알아봅니다.  
   
 
   
-##  <a name="HowTo"></a> 방법 도움말 항목  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>방법 도움말 항목  
  [보고서에 테두리 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)  
   
  [사각형 또는 컨테이너 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  

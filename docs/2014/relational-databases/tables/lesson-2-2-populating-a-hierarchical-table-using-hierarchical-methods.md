@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0ec81ae3a078846ad9288fe75eab9fe30d547a4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110059"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>계층 메서드를 사용하여 계층적 테이블 채우기
-  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]마케팅 부서에서 근무 하는 8 명의 직원이 있습니다. 직원 계층은 다음과 같습니다.  
+  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 의 마케팅 부서에는 8명의 직원이 근무하고 있습니다. 직원 계층은 다음과 같습니다.  
   
- **EmployeeID** 6 이라는 **David**는 마케팅 관리자입니다. 다음과 같은 3명의 Marketing Specialist가 **David**에게 보고합니다.  
+ **EmployeeID**가 6인 **David** 는 Marketing Manager입니다. 다음과 같은 3명의 Marketing Specialist가 **David**에게 보고합니다.  
   
 -   **Sariya**, **EmployeeID** 46  
   
@@ -36,8 +36,7 @@ ms.locfileid: "66110059"
   
 ### <a name="to-insert-the-root-of-the-hierarchy-tree"></a>계층 트리의 루트를 삽입하려면  
   
-1.  다음 예에서는 Marketing Manager **David** 를 계층의 루트에 있는 테이블에 삽입합니다. 
-  **OrdLevel** 열은 계산 열입니다. 따라서 INSERT 문의 일부가 아닙니다. 이 첫 번째 레코드는 [GetRoot()](/sql/t-sql/data-types/getroot-database-engine) 메서드를 사용하여 이 첫 번째 레코드를 계층의 루트로 채웁니다.  
+1.  다음 예에서는 Marketing Manager **David** 를 계층의 루트에 있는 테이블에 삽입합니다. **OrdLevel** 열은 계산 열입니다. 따라서 INSERT 문의 일부가 아닙니다. 이 첫 번째 레코드는 [GetRoot()](/sql/t-sql/data-types/getroot-database-engine) 메서드를 사용하여 이 첫 번째 레코드를 계층의 루트로 채웁니다.  
   
     ```  
     INSERT HumanResources.EmployeeOrg (OrgNode, EmployeeID, EmpName, Title)  
@@ -65,8 +64,7 @@ ms.locfileid: "66110059"
   
 ### <a name="to-insert-a-subordinate-employee"></a>부하 직원을 삽입하려면  
   
-1.  **Sariya** 는 **David**에 게 보고 합니다. **Sariya의** 노드를 삽입 하려면 데이터 형식의 `hierarchyid`적절 한 **OrgNode** 값을 만들어야 합니다. 다음 코드에서는 `hierarchyid` 데이터 형식의 변수를 만들고 이를 테이블의 루트 OrgNode 값으로 채웁니다. 그런 다음 해당 변수를 [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) 메서드와 함께 사용하여 하위 노드인 행을 삽입합니다. 
-  `GetDescendant` 는 두 개의 인수를 사용합니다. 인수 값에 대해 다음 옵션을 검토합니다.  
+1.  **Sariya** 는 **David**에게 보고합니다. **Sariya의** 노드를 삽입 하려면 데이터 형식의 `hierarchyid`적절 한 **OrgNode** 값을 만들어야 합니다. 다음 코드에서는 `hierarchyid` 데이터 형식의 변수를 만들고 이를 테이블의 루트 OrgNode 값으로 채웁니다. 그런 다음 해당 변수를 [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) 메서드와 함께 사용하여 하위 노드인 행을 삽입합니다. `GetDescendant` 는 두 개의 인수를 사용합니다. 인수 값에 대해 다음 옵션을 검토합니다.  
   
     -   부모가 NULL인 경우 `GetDescendant` 는 NULL을 반환합니다.  
   

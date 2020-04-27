@@ -14,21 +14,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bb841d8014bd1a66d533c10c4740c016bb13e737
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110102"
 ---
 # <a name="access-report-server-items-using-url-access"></a>URL 액세스를 사용하여 보고서 서버 항목 액세스
-  이 항목에서는 *rs: Command*=*값*을 사용 하 여 보고서 서버 데이터 베이스 또는 SharePoint 사이트에서 여러 유형의 카탈로그 항목에 액세스 하는 방법에 대해 설명 합니다.  
+  이 항목에서는 *rs:Command*=*Value*를 사용하여 보고서 서버 데이터베이스 또는 SharePoint 사이트에서 여러 형식의 카탈로그 항목에 액세스하는 방법에 대해 설명합니다.  
   
- 이 매개 변수 문자열을  추가할 필요는 없습니다. 이 문자열을 생략한 경우 보고서 서버에서 항목 형식을 평가하고 알맞은 매개 변수 값을 자동으로 선택합니다. 그러나 URL에 *rs: Command*=*값* 문자열을 사용 하면 보고서 서버의 성능이 향상 됩니다.  
+ 이 매개 변수 문자열을  추가할 필요는 없습니다. 이 문자열을 생략한 경우 보고서 서버에서 항목 형식을 평가하고 알맞은 매개 변수 값을 자동으로 선택합니다. 그러나 URL에서 *rs:Command*=*Value* 문자열을 사용하면 보고서 서버의 성능이 향상됩니다.  
   
  아래 예의 `_vti_bin` 프록시 구문을 참고하십시오. 프록시 구문을 사용하는 방법에 대한 자세한 내용은 [URL Access Parameter Reference](url-access-parameter-reference.md)를 참조하십시오.  
   
 ## <a name="access-a-report"></a>보고서 액세스  
- 브라우저에서 보고서를 보려면 *rs: Command*=*Render* 매개 변수를 사용 합니다. 다음은 그 예입니다.  
+ 브라우저에서 보고서를 보려면 *rs: Command*=*Render* 매개 변수를 사용 합니다. 예를 들어:  
   
  `Native` `http://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66110102"
  `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
   
 ## <a name="access-a-data-source"></a>데이터 원본 액세스  
- 데이터 원본에 액세스 하려면 *rs: Command*=*GetDataSourceContents* 매개 변수를 사용 합니다. 브라우저에서 XML을 지원하는 경우 데이터 원본에 대해 `Read Contents` 권한을 가진 인증된 사용자이면 데이터 원본 정의가 표시됩니다. 다음은 그 예입니다.  
+ 데이터 원본에 액세스 하려면 *rs: Command*=*GetDataSourceContents* 매개 변수를 사용 합니다. 브라우저에서 XML을 지원하는 경우 데이터 원본에 대해 `Read Contents` 권한을 가진 인증된 사용자이면 데이터 원본 정의가 표시됩니다. 예를 들어:  
   
  `Native` `http://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
@@ -65,11 +65,10 @@ ms.locfileid: "66110102"
 </DataSourceDefinition>  
 ```  
   
- 연결 문자열은 보고서 서버의 **SecureConnectionLevel** 설정을 기준으로 반환됩니다. 
-  **SecureConnectionLevel** 설정에 대한 자세한 내용은 [Using Secure Web Service Methods](report-server-web-service/net-framework/using-secure-web-service-methods.md)을 참조하십시오.  
+ 연결 문자열은 보고서 서버의 **SecureConnectionLevel** 설정을 기준으로 반환됩니다. **SecureConnectionLevel** 설정에 대한 자세한 내용은 [Using Secure Web Service Methods](report-server-web-service/net-framework/using-secure-web-service-methods.md)을 참조하십시오.  
   
 ## <a name="access-the-contents-of-a-folder"></a>폴더 내용 액세스  
- 폴더 내용에 액세스 하려면 *rs: Command*=*getchildren* 매개 변수를 사용 합니다. 요청된 폴더의 하위 폴더, 보고서, 데이터 원본 및 리소스에 대한 링크가 포함된 일반적인 폴더 탐색 페이지가 반환됩니다. 다음은 그 예입니다.  
+ 폴더 내용에 액세스 하려면 *rs: Command*=*getchildren* 매개 변수를 사용 합니다. 요청된 폴더의 하위 폴더, 보고서, 데이터 원본 및 리소스에 대한 링크가 포함된 일반적인 폴더 탐색 페이지가 반환됩니다. 예를 들어:  
   
  `Native` `http://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
   
@@ -78,7 +77,7 @@ ms.locfileid: "66110102"
  표시되는 사용자 인터페이스는 [!INCLUDE[msCoName](../includes/msconame-md.md)] IIS(Internet Information Server)에서 사용되는 디렉터리 탐색 모드와 유사합니다. 빌드 번호를 포함한 보고서 서버의 버전 번호도 폴더 목록 아래에 표시됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [URL 액세스&#40;SSRS&#41;](url-access-ssrs.md)   
+ [SSRS&#41;&#40;URL 액세스](url-access-ssrs.md)   
  [URL 액세스 매개 변수 참조](url-access-parameter-reference.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c1e620bb0fd5cbf5ff6541fd1aa4a3552bd2eb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107855"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>브라우저를 사용하여 보고서 찾기 및 보기(보고서 작성기 및 SSRS)
@@ -42,17 +42,14 @@ ms.locfileid: "66107855"
   
 -   별도의 표시가 없는 링크는 보고서나 모델입니다.  
   
--   
-  \<ds> 태그는 공유 데이터 원본을 나타냅니다.  
+-   \<ds> 태그는 공유 데이터 원본을 나타냅니다.  
   
--   
-  \<dir> 태그는 폴더 항목을 나타냅니다.  
+-   \<dir> 태그는 폴더 항목을 나타냅니다.  
   
 -   파일 이름 확장명은 리소스를 나타냅니다. 파일 이름 확장명은 리소스의 MIME 형식을 나타냅니다. 예를 들어 .jpg는 JPEG 형식의 이미지를 나타냅니다.  
   
 ## <a name="typing-the-url-address-of-a-report"></a>보고서의 URL 주소 입력  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 보고서 서버의 특정 항목에 대한 URL 액세스를 지원합니다. 이 URL에는 보고서의 정규화된 경로와 보고서를 렌더링하기 위한 명령이 포함되어야 합니다. 보고서에 매개 변수가 포함되어 있으면 보고서를 여는 데 필요한 값도 모두 지정해야 합니다. 경로, 매개 변수 값 또는 렌더링 확장 프로그램에 공백이 포함된 보고서의 URL을 입력할 경우 원하는 결과를 얻으려면 URL 인코딩된 문자를 URL에 포함해야 합니다. 다음 예에서는 경로 이름, 매개 변수 및 렌더링 확장 프로그램에 공백에 대한 인코딩을 포함하는 보고서 URL을 보여 줍니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 보고서 서버의 특정 항목에 대한 URL 액세스를 지원합니다. 이 URL에는 보고서의 정규화된 경로와 보고서를 렌더링하기 위한 명령이 포함되어야 합니다. 보고서에 매개 변수가 포함되어 있으면 보고서를 여는 데 필요한 값도 모두 지정해야 합니다. 경로, 매개 변수 값 또는 렌더링 확장 프로그램에 공백이 포함된 보고서의 URL을 입력할 경우 원하는 결과를 얻으려면 URL 인코딩된 문자를 URL에 포함해야 합니다. 다음 예에서는 경로 이름, 매개 변수 및 렌더링 확장 프로그램에 공백에 대한 인코딩을 포함하는 보고서 URL을 보여 줍니다.  
   
  `http://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
   
@@ -61,6 +58,6 @@ ms.locfileid: "66107855"
  URL을 통해 보고서에 액세스하는 방법은 SQL Server 온라인 설명서의 [Reporting Services 설명서](https://go.microsoft.com/fwlink/?linkid=121312) 에 있는 "URL 액세스(URL Access)"를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 관리자 &#40;보고서 작성기 및 SSRS에서 보고서 찾기 및 보기&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [보고서 관리자에서 보고서 찾기 및 보기&#40;보고서 작성기 및 SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

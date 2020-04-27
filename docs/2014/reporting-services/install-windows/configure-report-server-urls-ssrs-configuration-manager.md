@@ -16,14 +16,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b086d067241606b61d733fc58c358195966a1345
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108845"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>보고서 서버 URL 구성(SSRS 구성 관리자)
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 URL은 보고서 서버 웹 서비스 및 보고서 관리자에 액세스하는 데 사용됩니다. 애플리케이션을 사용하려면 먼저 웹 서비스와 보고서 관리자마다 적어도 한 개의 URL을 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 다른 웹 서비스와 애플리케이션을 함께 배포하는 경우를 비롯한 대부분의 배포 시나리오에서 잘 작동하는 두 애플리케이션 URL에 대한 기본값을 제공합니다.  
   
 -   기본 구성을 설치한 경우 URL이 기본값을 사용하여 자동으로 생성됩니다.  
@@ -49,15 +48,14 @@ ms.locfileid: "66108845"
   
  이러한 URL을 사용 가능하게 만드는 설정은 다음 표에 나와 있습니다. 이 표에서는 호스트 이름을 포함하는 URL을 통해 보고서 서버 연결을 가능하게 하는 기본값을 보여 줍니다.  
   
-|부|값|설명|  
+|부분|값|설명|  
 |----------|-----------|-----------------|  
 |IP 주소|모두 할당됨|네트워크의 도메인 이름 서비스는 URL의 호스트 이름을 컴퓨터의 IP 주소로 확인합니다. 정의한 URL에 IP 주소가 지정되어 있으면 한 특정 호스트로 전송된 요청이 원하는 대상에 도달합니다.|  
 |포트|80|포트 80은 컴퓨터에 있는 TCP/IP 연결의 기본 포트입니다. 보고서 서버는 포트 80에서 수신하므로 URL에서 포트 번호를 생략할 수 있습니다. 다른 포트를 지정할 경우에는 URL에 포트를 지정해야 합니다.|  
 |가상 디렉터리|ReportServer|두 URL 예에는 가상 디렉터리 이름이 포함되어 있습니다. URL 정의를 사용자 지정하지 않는 한 애플리케이션의 가상 디렉터리 이름을 항상 URL에 지정해야 합니다.|  
   
 > [!NOTE]  
->  기본 URL 예약을 사용하면 유효한 호스트 이름이 URL에 사용됩니다. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구는 변형된 호스트 이름을 특정 보고서 서버 인스턴스로 확인할 수 있는 구문을 사용하여 HTTP.SYS에 URL 예약을 만듭니다. URL 예약에 대한 자세한 내용은 [URL 예약 및 등록 정보&#40;SSRS 구성 관리자&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md)에 액세스하는 데 사용됩니다.  
+>  기본 URL 예약을 사용하면 유효한 호스트 이름이 URL에 사용됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구는 변형된 호스트 이름을 특정 보고서 서버 인스턴스로 확인할 수 있는 구문을 사용하여 HTTP.SYS에 URL 예약을 만듭니다. URL 예약에 대한 자세한 내용은 [URL 예약 및 등록 정보&#40;SSRS 구성 관리자&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md)에 액세스하는 데 사용됩니다.  
   
 ## <a name="server-side-permissions-on-a-report-server-url"></a>보고서 서버 URL에 대한 서버 쪽 사용 권한  
  각 URL 엔드포인트에 대한 사용 권한은 보고서 서버 서비스 계정에 배타적으로 부여됩니다. 따라서 이 계정만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL로 전송된 요청을 받아들일 수 있습니다. 설치 프로그램 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 통해 서비스 ID를 구성할 경우 해당 계정에 대한 DACL(Discretionary Access Control List)이 생성되어 유지 관리됩니다. 서비스 계정을 변경하면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구가 새 계정 정보를 선택하기 위해 만든 모든 URL 예약을 업데이트합니다. 자세한 내용은 [URL 예약 구문&#40;SSRS 구성 관리자&#41;](url-reservation-syntax-ssrs-configuration-manager.md)에 액세스하는 데 사용됩니다.  
@@ -69,21 +67,20 @@ ms.locfileid: "66108845"
  [URL 구성&#40;SSRS 구성 관리자&#41;](configure-a-url-ssrs-configuration-manager.md)  
  이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구에서 URL 예약을 설정하고 구성하는 지침을 제공합니다.  
   
- [URL 예약 및 등록 &#40;SSRS Configuration Manager&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md)  
+ [URL 예약 및 등록 정보&#40;SSRS 구성 관리자&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md)  
  URL은 애플리케이션과 보고서에 액세스하는 데 사용됩니다. 이 항목에서는 애플리케이션 URL, 기본 URL, URL 예약 및 등록이 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 작동하는 방식에 대해 설명합니다.  
   
- [URL 예약 구문 &#40;SSRS Configuration Manager&#41;](url-reservation-syntax-ssrs-configuration-manager.md)  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 사용하는 기본 URL 예약은 대부분의 시나리오에 적합합니다. 그러나 액세스를 제한하거나 인터넷 또는 익스트라넷 액세스가 가능하도록 배포를 확장하려는 경우 요구 사항에 맞게 설정을 사용자 지정해야 할 수도 있습니다. 이 항목에서는 URL 예약 구문에 대해 설명하고 배포에 대한 사용자 지정 예약 만들기에 대한 권장 사항을 제공합니다.  
+ [URL 예약 구문&#40;SSRS 구성 관리자&#41;](url-reservation-syntax-ssrs-configuration-manager.md)  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 사용하는 기본 URL 예약은 대부분의 시나리오에 적합합니다. 그러나 액세스를 제한하거나 인터넷 또는 익스트라넷 액세스가 가능하도록 배포를 확장하려는 경우 요구 사항에 맞게 설정을 사용자 지정해야 할 수도 있습니다. 이 항목에서는 URL 예약 구문에 대해 설명하고 배포에 대한 사용자 지정 예약 만들기에 대한 권장 사항을 제공합니다.  
   
- [구성 파일의 Url &#40;SSRS Configuration Manager&#41;](urls-in-configuration-files-ssrs-configuration-manager.md)  
+ [구성 파일의 URL&#40;SSRS 구성 관리자&#41;](urls-in-configuration-files-ssrs-configuration-manager.md)  
  RSReportServer.config 파일에는 보고서 관리자가 사용하는 URL 예약과 URL 및 보고서 서버 전자 메일 배달에 대한 여러 항목이 포함되어 있습니다. 이 항목에서는 URL 구성 설정이 비교되는 방식을 이해할 수 있도록 URL 구성 설정에 대해 간략하게 설명합니다.  
   
- [다중 인스턴스 보고서 서버 배포를 위한 URL 예약 &#40;SSRS Configuration Manager&#41;](url-reservations-for-multi-instance-report-server-deployments.md)  
+ [다중 인스턴스 보고서 서버 배포를 위한 URL 예약&#40;SSRS 구성 관리자&#41;](url-reservations-for-multi-instance-report-server-deployments.md)  
  단일 컴퓨터에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 여러 개 설치할 경우 URL을 등록할 때 URL이 중복될 가능성이 높아집니다. 이러한 오류를 피하려면 이 항목에 설명된 인스턴스별 URL 예약 만들기에 대한 권장 사항을 따르십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [URL 구성&#40;SSRS 구성 관리자&#41;](configure-a-url-ssrs-configuration-manager.md)   
+ [SSRS Configuration Manager &#40;URL 구성&#41;](configure-a-url-ssrs-configuration-manager.md)   
  [웹 서비스 URL &#40;SSRS 기본 모드&#41;](../../sql-server/install/web-service-url-ssrs-native-mode.md)  
   
   

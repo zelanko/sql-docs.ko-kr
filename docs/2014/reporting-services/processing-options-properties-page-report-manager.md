@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f91cd8a93571b62f57933ff7556004f8c7b42a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108039"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>처리 옵션 속성 페이지(보고서 관리자)
@@ -34,8 +34,7 @@ ms.locfileid: "66108039"
   
 3.  드롭다운 메뉴에서 **관리**를 클릭합니다. 보고서의 일반 속성 페이지가 열립니다.  
   
-4.  
-  **처리 옵션** 탭을 선택합니다.  
+4.  **처리 옵션** 탭을 선택합니다.  
   
 ## <a name="options"></a>옵션  
  **항상 최신 데이터로 이 보고서 실행**  

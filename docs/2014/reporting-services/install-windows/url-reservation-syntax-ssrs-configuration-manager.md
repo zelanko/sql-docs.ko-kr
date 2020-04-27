@@ -13,18 +13,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e5b8cc62556749a310f8c11a5efcae32eafbd8ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108605"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>URL 예약 구문(SSRS 구성 관리자)
   이 항목에서는 보고서 서버 웹 서비스 및 보고서 관리자에서 사용하는 URL 문자열 부분에 대해 설명합니다. 내부적으로 저장되는 URL 문자열의 구조는 브라우저 창의 주소 표시줄에 입력하는 URL과는 다릅니다. URL 예약 문자열은 URL을 구성할 때 Reporting Services 구성 도구의 결과 창 및 RSReportServer.config 파일에 표시됩니다. URL 문자열이 정의되는 방식을 알면 URL 예약 문제를 해결하거나 HTTP.SYS를 쿼리하여 서버에 정의된 내부 URL 문자열 예약을 보는 경우 도움이 됩니다.  
   
 ## <a name="url-syntax"></a>URL 구문  
- 보고서 서버 URL은 `UrlString` 요소와 `VirtualDirectory` 요소에 저장됩니다. 
-  `UrlString`과 `VirtualDirectory`가 별도의 요소로 구분되는 것은 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션에서 URL 문자열은 여러 개일 수 있지만 가상 디렉터리 이름은 하나뿐이기 때문입니다.  
+ 보고서 서버 URL은 `UrlString` 요소와 `VirtualDirectory` 요소에 저장됩니다. `UrlString`과 `VirtualDirectory`가 별도의 요소로 구분되는 것은 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션에서 URL 문자열은 여러 개일 수 있지만 가상 디렉터리 이름은 하나뿐이기 때문입니다.  
   
  HTTP.SYS에서 URL 예약은 `UrlString`과 `VirtualDirectory`를 모두 포함합니다. URL 예약 구문은 다음 부분으로 구성됩니다.  
   

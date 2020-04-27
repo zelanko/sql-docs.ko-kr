@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bf433f27a5d8dc7f5e0efcf6f5774ed292d1e1a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109072"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>일반 속성 페이지, 공유 데이터 세트(보고서 관리자)
@@ -54,10 +54,10 @@ ms.locfileid: "66109072"
  **Delete**  
  보고서 서버 데이터베이스에서 공유 데이터 세트를 제거합니다. 공유 데이터 세트를 삭제하면 보고서 또는 캐시된 버전이 비활성화됩니다. 보고서를 다시 활성화하려면 보고서 제작 도구에서 해당 보고서를 열고 동일한 이름과 동일한 필드 컬렉션을 갖는 데이터 세트를 지정합니다. 또는 동일한 필드 컬렉션을 갖는 다른 데이터 세트를 사용하도록 각 데이터 영역 참조를 업데이트할 수도 있습니다.  
   
- **이동**  
+ **옮기고**  
  보고서 서버 폴더 계층 구조 내의 다른 위치로 공유 데이터 세트를 옮깁니다. 이 단추를 클릭하면 폴더를 검색하여 새 폴더 위치를 찾을 수 있는 항목 이동 페이지가 열립니다. 자세한 내용은 [항목 이동 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/move-items-page-report-manager.md)를 참조 하세요.  
   
- **다운로드할지**  
+ **다운로드**  
  공유 데이터 세트 정의의 복사본을 추출합니다. 컴퓨터에 정의된 파일 연결에 따라 파일이 Visual Studio 또는 다른 애플리케이션에서 열립니다. 대부분의 경우 공유 데이터 세트는 XML 파일로 열립니다.  
   
  **바꾸십시오**  
@@ -69,7 +69,7 @@ ms.locfileid: "66109072"
  [F1 도움말 보고서 관리자](../../2014/reporting-services/report-manager-f1-help.md)   
  [캐시 새로 고침 옵션을 보고서 관리자 &#40;&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
  [캐싱 페이지, 공유 데이터 집합 &#40;보고서 관리자&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
- [공유 데이터 세트 관리](report-data/manage-shared-datasets.md)   
+ [공유 데이터 집합 관리](report-data/manage-shared-datasets.md)   
  [공유 데이터 세트 캐시&#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
   
   

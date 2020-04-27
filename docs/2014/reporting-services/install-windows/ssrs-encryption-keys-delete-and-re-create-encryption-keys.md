@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c293b7007ccb8a42928c02ed37bcaacb898504f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108696"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>암호화 키 삭제 및 다시 만들기(SSRS 구성 관리자)
@@ -48,8 +48,7 @@ ms.locfileid: "66108696"
   
     2.  rsreportserver.config 파일을 엽니다.  
   
-    3.  
-  `IsWebServiceEnabled` 속성에 `False`를 지정한 다음 변경 내용을 저장합니다.  
+    3.  `IsWebServiceEnabled` 속성에 `False`를 지정한 다음 변경 내용을 저장합니다.  
   
 2.  Reporting Services 구성 도구를 시작한 후 구성하려는 보고서 서버 인스턴스에 연결합니다.  
   
@@ -63,8 +62,7 @@ ms.locfileid: "66108696"
   
 1.  보고서 서버 웹 서비스 및 HTTP 액세스를 사용하지 않도록 설정합니다. 이전 절차의 지시대로 웹 서비스 작업을 중지합니다.  
   
-2.  보고서 서버를 호스팅하는 컴퓨터에서 **rskeymgmt.exe** 를 로컬로 실행합니다. 
-  `-s` 인수를 사용하여 대칭 키를 다시 설정합니다. 다른 인수는 필요하지 않습니다.  
+2.  보고서 서버를 호스팅하는 컴퓨터에서 **rskeymgmt.exe** 를 로컬로 실행합니다. `-s` 인수를 사용하여 대칭 키를 다시 설정합니다. 다른 인수는 필요하지 않습니다.  
   
     ```  
     rskeymgmt -s  
@@ -93,15 +91,13 @@ ms.locfileid: "66108696"
   
 1.  Reporting Services 구성 도구를 시작한 후 구성하려는 보고서 서버 인스턴스에 연결합니다.  
   
-2.  
-  **암호화 키**를 클릭한 후 **삭제**를 클릭합니다. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+2.  **암호화 키**를 클릭한 후 **삭제**를 클릭합니다. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  보고서 서버 Windows 서비스를 다시 시작합니다. 스케일 아웃 배포의 경우 모든 보고서 서버 인스턴스에 대해 이 작업을 수행합니다.  
   
 #### <a name="how-to-delete-encryption-keys-rskeymmgt"></a>암호화 키를 삭제하는 방법(rskeymmgt)  
   
-1.  보고서 서버를 호스팅하는 컴퓨터에서 **rskeymgmt.exe** 를 로컬로 실행합니다. 
-  **-d** 적용 인수를 사용해야 합니다. 다음은 인수 지정 예입니다.  
+1.  보고서 서버를 호스팅하는 컴퓨터에서 **rskeymgmt.exe** 를 로컬로 실행합니다. **-d** 적용 인수를 사용해야 합니다. 다음은 인수 지정 예입니다.  
   
     ```  
     rskeymgmt -d  
@@ -120,7 +116,7 @@ ms.locfileid: "66108696"
 4.  암호화된 데이터(파일 공유 배달 확장 프로그램과 암호화를 사용하는 타사의 배달 확장 프로그램 포함)를 사용하는 구독의 경우 각 구독을 열고 자격 증명을 다시 입력합니다. 보고서 서버 전자 메일 배달을 사용하는 구독은 암호화된 데이터를 사용하지 않으므로 키가 달라져도 영향을 받지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [SSRS Configuration Manager &#40;암호화 된 보고서 서버 데이터 저장&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [SSRS Configuration Manager &#40;암호화 키 구성 및 관리&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
+ [암호화된 보고서 서버 데이터 저장&#40;SSRS 구성 관리자&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

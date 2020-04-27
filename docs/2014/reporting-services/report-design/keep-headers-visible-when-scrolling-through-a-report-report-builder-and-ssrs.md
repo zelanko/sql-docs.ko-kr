@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 37c3dc20ab537e7cb8bf69099dbd6d24ff384731
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105597"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>보고서를 스크롤할 때 머리글 계속 표시(보고서 작성기 및 SSRS)
@@ -42,8 +42,7 @@ ms.locfileid: "66105597"
   
 1.  테이블릭스 데이터 영역에서 행, 열 또는 모퉁이 핸들을 마우스 오른쪽 단추로 클릭한 다음 **테이블릭스 속성**을 클릭합니다.  
   
-2.  
-  **일반** 탭의 **행 머리글** 또는 **열 머리글**아래에서 **스크롤하는 동안 머리글 계속 표시**를 선택합니다.  
+2.  **일반** 탭의 **행 머리글** 또는 **열 머리글**아래에서 **스크롤하는 동안 머리글 계속 표시**를 선택합니다.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66105597"
   
 3.  스크롤하는 동안 계속 표시할 정적 멤버(행 또는 열)를 클릭합니다. 속성 창에 **테이블릭스 멤버** 속성이 표시됩니다.  
   
-     ![테이블릭스 구성원 속성](../media/grouppane-tablixmember-updated.png "테이블릭스 구성원 속성")  
+     ![테이블릭스 멤버 속성](../media/grouppane-tablixmember-updated.png "테이블릭스 멤버 속성")  
   
 4.  속성 창에서 **Fixeddata** 를로 `True`설정 합니다.  
   
@@ -73,8 +72,8 @@ ms.locfileid: "66105597"
  [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [보고서 &#40;보고서 작성기 및 SSRS&#41;내보내기](../report-builder/export-reports-report-builder-and-ssrs.md)   
- [그룹 &#40;보고서 작성기 및 SSRS를 사용 하 여 머리글 및 바닥글 표시&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
- [보고서 작성기 및 SSRS &#40;여러 페이지에 행 및 열 머리글 표시&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
+ [그룹과 함께 머리글 및 바닥글 표시&#40;보고서 작성기 및 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
+ [여러 페이지에 행 및 열 머리글 표시&#40;보고서 작성기 및 SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
  [그룹화 창&#40;보고서 작성기&#41;](grouping-pane-report-builder.md)  
   
   

@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5607dfb046e7f50eb3a015e1f4f13711256435a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108410"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>6단원: 그룹화 및 합계 추가(Reporting Services)
   보고서에 그룹화 및 합계를 추가하여 데이터를 구성하고 요약할 수 있습니다.  
   
  보고서에 누계를 추가 하는 방법에 대 한 자세한 내용은 [Reporting Services (SSRS) 보고서에 합계 추가](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/)를 참조 하십시오.  
@@ -28,29 +28,25 @@ ms.locfileid: "66108410"
   
 -   [보고서에 합계를 추가 하려면](#bkmk_addtotals)  
   
--   [보고서에 일일 합계를 추가 하려면](#bkmk_adddailytotal)  
+-   [보고서에 일일 합계를 추가하려면](#bkmk_adddailytotal)  
   
 -   [보고서에 총합계를 추가 하려면](#bkmk_addgrandtotal)  
   
 -   [보고서 서버에 보고서를 게시 하려면 (선택 사항)](#bkmk_publishreport)  
   
-##  <a name="bkmk_groupdata"></a>보고서의 데이터를 그룹화 하려면  
+##  <a name="to-group-data-in-a-report"></a><a name="bkmk_groupdata"></a>보고서의 데이터를 그룹화 하려면  
   
-1.  
-  **디자인** 탭을 클릭합니다.  
+1.  **디자인** 탭을 클릭합니다.  
   
 2.  **행 그룹** 창이 표시 되지 않으면 디자인 화면을 마우스 오른쪽 단추로 클릭 하 고 **보기** 를 클릭 한 다음 **그룹화**를 클릭 합니다.  
   
-3.  
-  **보고서 데이터** 창에서 `Date` 필드를 **행 그룹** 창으로 끕니다. 
-  **(자세히)** 라는 행 위에 놓습니다.  
+3.  **보고서 데이터** 창에서 `Date` 필드를 **행 그룹** 창으로 끕니다. **(자세히)** 라는 행 위에 놓습니다.  
   
      행 핸들 안에 대괄호가 표시되어 그룹임을 나타냅니다. 이제 테이블에 세로 점선의 양쪽에 하나씩 두 개의 Date 열이 있습니다.  
   
      ![](../../2014/tutorials/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
   
-4.  
-  **보고서 데이터** 창에서 `Order` 필드를 **행 그룹** 창으로 끕니다. Date 아래, **(자세히)** 위에 놓습니다.  
+4.  **보고서 데이터** 창에서 `Order` 필드를 **행 그룹** 창으로 끕니다. Date 아래, **(자세히)** 위에 놓습니다.  
   
      행 핸들 안에 두 개의 대괄호가 표시되어 두 개의 그룹임을 나타냅니다. 이제 테이블에 두 개의 `Order` 열이 있습니다.  
   
@@ -60,53 +56,45 @@ ms.locfileid: "66108410"
   
      열 머리글 및 날짜의 서식을 다시 지정할 수 있습니다.  
   
-6.  
-  **미리 보기** 탭으로 전환하여 보고서를 미리 봅니다. 다음 그림과 비슷해야 합니다.  
+6.  **미리 보기** 탭으로 전환하여 보고서를 미리 봅니다. 다음 그림과 비슷해야 합니다.  
   
      ![Date 및 Order 기준으로 그룹화된 테이블](../../2014/tutorials/media/rs-basictablegroupspreview.gif "Date 및 Order 기준으로 그룹화된 테이블")  
   
-##  <a name="bkmk_addtotals"></a>보고서에 합계를 추가 하려면  
+##  <a name="to-add-totals-to-a-report"></a><a name="bkmk_addtotals"></a>보고서에 합계를 추가 하려면  
   
 1.  디자인 뷰로 전환합니다.  
   
-2.  
-  `[LineTotal]`필드가 들어 있는 데이터 영역 셀을 마우스 오른쪽 단추로 클릭하고 **합계 추가**를 클릭합니다.  
+2.  `[LineTotal]`필드가 들어 있는 데이터 영역 셀을 마우스 오른쪽 단추로 클릭하고 **합계 추가**를 클릭합니다.  
   
      그러면 각 주문의 금액 합계가 표시되는 행이 추가됩니다.  
   
-3.  
-  `[Qty]`필드가 들어 있는 셀을 마우스 오른쪽 단추로 클릭하고 **합계 추가**를 클릭합니다.  
+3.  `[Qty]`필드가 들어 있는 셀을 마우스 오른쪽 단추로 클릭하고 **합계 추가**를 클릭합니다.  
   
      그러면 각 주문의 수량 합계가 합계 행에 추가됩니다.  
   
-4.  
-  `Sum[Qty]`왼쪽의 빈 셀에 "**Order Total"** 이라는 레이블을 입력합니다.  
+4.  `Sum[Qty]`왼쪽의 빈 셀에 "**Order Total"** 이라는 레이블을 입력합니다.  
   
 5.  합계 행에 배경색을 추가할 수 있습니다. 두 합계 셀과 레이블 셀을 선택합니다.  
   
-6.  
-  **서식** 메뉴에서 **배경색**, **밝은 회색**, **확인**을 차례로 클릭합니다.  
+6.  **서식** 메뉴에서 **배경색**, **밝은 회색**, **확인**을 차례로 클릭합니다.  
   
      ![디자인 뷰: 주문 합계가 있는 기본 테이블](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "디자인 뷰: 주문 합계가 있는 기본 테이블")  
   
-##  <a name="bkmk_adddailytotal"></a>보고서에 일일 합계를 추가 하려면  
+##  <a name="to-add-a-daily-total-to-a-report"></a><a name="bkmk_adddailytotal"></a>보고서에 일일 합계를 추가 하려면  
   
-1.  
-  Order 셀을 마우스 오른쪽 단추로 클릭하고 **합계 추가**를 가리킨 후 **다음 이후**를 클릭합니다.  
+1.  Order 셀을 마우스 오른쪽 단추로 클릭하고 **합계 추가**를 가리킨 후 **다음 이후**를 클릭합니다.  
   
      그러면 각 날짜에 대 한 수량과 금액의 합계가 포함 된 새 행과 Order 열에 "**Total**" 라는 레이블이 추가 됩니다.  
   
-2.  같은 셀에서 **daily** 라는 단어를 **total** 이라는 단어 앞에 입력 하 여 **일일 합계**를 읽습니다.  
+2.  같은 셀에서 **Daily** 라는 단어를 **Total** 이라는 단어 앞에 입력하여 **Daily Total**이라고 표시되도록 합니다.  
   
-3.  
-  **Daily Total** 셀, 두 개의 **Sum** 셀 및 이들 사이에 있는 빈 셀을 선택합니다.  
+3.  **Daily Total** 셀, 두 개의 **Sum** 셀 및 이들 사이에 있는 빈 셀을 선택합니다.  
   
-4.  
-  **서식** 메뉴에서 **배경색**, **주황색**, **확인**을 차례로 클릭합니다.  
+4.  **서식** 메뉴에서 **배경색**, **주황색**, **확인**을 차례로 클릭합니다.  
   
      ![](../../2014/tutorials/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
   
-##  <a name="bkmk_addgrandtotal"></a>보고서에 총합계를 추가 하려면  
+##  <a name="to-add-a-grand-total-to-a-report"></a><a name="bkmk_addgrandtotal"></a>보고서에 총합계를 추가 하려면  
   
 1.  Date 셀을 마우스 오른쪽 단추로 클릭하고 **합계 추가**를 가리킨 후 **다음 이후**를 클릭합니다.  
   
@@ -114,11 +102,9 @@ ms.locfileid: "66108410"
   
 2.  같은 셀에서 **Grand** 라는 단어를 **Total** 이라는 단어 앞에 입력하여 **Grand Total**이라고 표시되도록 합니다.  
   
-3.  
-  **Grand Total** 셀, 두 개의 **Sum** 셀 및 이들 사이에 있는 빈 셀을 선택합니다.  
+3.  **Grand Total** 셀, 두 개의 **Sum** 셀 및 이들 사이에 있는 빈 셀을 선택합니다.  
   
-4.  
-  **서식** 메뉴에서 **배경색**, **밝은 파란색**, **확인**을 차례로 클릭합니다.  
+4.  **서식** 메뉴에서 **배경색**, **밝은 파란색**, **확인**을 차례로 클릭합니다.  
   
      ![디자인 뷰: 기본 테이블의 총합계](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "디자인 뷰: 기본 테이블의 총합계")  
   
@@ -128,7 +114,7 @@ ms.locfileid: "66108410"
   
      ![미리 보기: 총합계가 있는 기본 테이블](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "미리 보기: 총합계가 있는 기본 테이블")  
   
-##  <a name="bkmk_publishreport"></a>보고서 서버에 보고서를 게시 하려면 (선택 사항)  
+##  <a name="to-publish-the-report-to-the-report-server-optional"></a><a name="bkmk_publishreport"></a>보고서 서버에 보고서를 게시 하려면 (선택 사항)  
   
 1.  선택 단계에서는 보고서 관리자에서 보고서를 볼 수 있도록 기본 모드 보고서 서버에 완료된 보고서를 게시합니다.  
   
@@ -136,7 +122,7 @@ ms.locfileid: "66108410"
   
 3.  **TargetServerURL** 에 보고서 서버의 이름 (예: **http://\<servername>/reportserver** ) 이름을 입력 합니다.  
   
-4.  **확인을** 클릭 합니다.  
+4.  **확인**을 클릭합니다.  
   
 5.  도구 모음에서 **빌드** 를 클릭한 후 **자습서 배포**를 클릭합니다.  
   

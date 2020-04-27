@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4b450470ea945f42cfdb625f7ff92444c046b04a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105961"
 ---
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>차트의 빈 데이터 요소 및 Null 데이터 요소(보고서 작성기 및 SSRS)
@@ -42,8 +42,8 @@ ms.locfileid: "66105961"
  이 동작은 보고서에 매개 변수가 있고 선택된 값이 빈 결과 세트를 반환할 때 발생할 수 있는 경우인 반환된 데이터 세트에 데이터 행이 0개인 경우와는 다릅니다. 데이터 세트 쿼리가 0개의 데이터 행을 반환하는 경우 표시할 데이터가 없음을 알리는 메시지가 런타임에 표시됩니다. **속성** 창에서 보고서의 NoDataMessage 캡션을 수정하여 이 메시지를 사용자 지정할 수 있습니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
+ [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [보고서 작성기 및 SSRS&#41;&#40;차트 서식 지정](formatting-a-chart-report-builder-and-ssrs.md)   
  [보고서 &#40;보고서 작성기 및 SSRS에 차트 추가&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)   
  [차트 문제 해결&#40;보고서 작성기 및 SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
   

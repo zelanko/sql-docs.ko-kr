@@ -17,30 +17,26 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e8109678c3e9695b842eb57b976da9e653afd737
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106654"
 ---
 # <a name="add-code-to-a-report-ssrs"></a>보고서에 코드 추가(SSRS)
   모든 식에서 고유한 사용자 지정 코드를 호출할 수 있습니다. 다음과 같은 두 가지 방법으로 코드를 제공할 수 있습니다.  
   
--   
-  [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 으로 작성된 코드를 보고서에 직접 포함합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 코드가 <xref:System.Math> 또는 <xref:System.Convert>가 아닌를 참조 하는 경우에는 보고서에 대 한 참조를 추가 해야 합니다. 자세한 내용은 [보고서에 어셈블리 참조 추가&#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md)를 참조하세요. 코드에서 만들 수 있는 기타 참조에 대한 자세한 내용은 [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)를 참조하세요.  
+-   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 으로 작성된 코드를 보고서에 직접 포함합니다. 코드가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 또는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]가 아닌 <xref:System.Math> <xref:System.Convert>를 참조하는 경우 보고서에 해당 참조를 추가해야 합니다. 자세한 내용은 [보고서에 어셈블리 참조 추가&#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md)를 참조하세요. 코드에서 만들 수 있는 기타 참조에 대한 자세한 내용은 [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)를 참조하세요.  
   
--   
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 사용자 지정 코드 어셈블리를 제공합니다. 사용자 지정 어셈블리를 제공하는 경우 보고서를 작성하는 컴퓨터와 보고서를 보는 보고서 서버 모두에 해당 어셈블리를 설치해야 합니다. 자세한 내용은 [Using Custom Assemblies with Reports](../custom-assemblies/using-custom-assemblies-with-reports.md)을(를) 참조하세요.  
+-   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 사용자 지정 코드 어셈블리를 제공합니다. 사용자 지정 어셈블리를 제공하는 경우 보고서를 작성하는 컴퓨터와 보고서를 보는 보고서 서버 모두에 해당 어셈블리를 설치해야 합니다. 자세한 내용은 [Using Custom Assemblies with Reports](../custom-assemblies/using-custom-assemblies-with-reports.md)을(를) 참조하세요.  
   
 ### <a name="to-add-embedded-code-to-a-report"></a>보고서에 포함 코드를 추가하려면  
   
-1.  
-  **디자인** 뷰에서 보고서 테두리 바깥쪽의 디자인 화면을 마우스 오른쪽 단추로 클릭하고 **보고서 속성**을 클릭합니다.  
+1.  **디자인** 뷰에서 보고서 테두리 바깥쪽의 디자인 화면을 마우스 오른쪽 단추로 클릭하고 **보고서 속성**을 클릭합니다.  
   
-2.  **코드**를 클릭 합니다.  
+2.  **코드**를 클릭합니다.  
   
-3.  
-  **사용자 지정 코드**에 코드를 입력합니다. 코드에 오류가 있으면 보고서 실행 시 경고가 발생합니다. 다음 예에서는 " `ChangeWord` "라는 단어를 "`Bike`"로 바꾸는`Bicycle`라는 사용자 지정 함수를 만듭니다.  
+3.  **사용자 지정 코드**에 코드를 입력합니다. 코드에 오류가 있으면 보고서 실행 시 경고가 발생합니다. 다음 예에서는 " `ChangeWord` "라는 단어를 "`Bike`"로 바꾸는`Bicycle`라는 사용자 지정 함수를 만듭니다.  
   
     ```  
     Public Function ChangeWord(ByVal s As String) As String  

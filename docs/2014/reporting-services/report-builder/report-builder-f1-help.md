@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97cb83d54694a1c8334ef7a9f5dd9cd2bddc5d6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107730"
 ---
 # <a name="report-builder-f1-help"></a>보고서 작성기 F1 도움말
@@ -28,7 +28,7 @@ ms.locfileid: "66107730"
   
 ## <a name="see-also"></a>참고 항목  
  [대화 상자, 창 및 마법사에 대 한 도움말 (F1)](../report-builder-help-for-dialog-boxes-panes-and-wizards.md) [보고서 디자인 뷰 &#40;보고서 작성기&#41;](report-design-view-report-builder.md)   
- [지도 마법사 및 지도 계층 마법사&#40;보고서 작성기 및 SSRS&#41;](../report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
+ [지도 마법사 및 지도 계층 마법사 &#40;보고서 작성기 및 SSRS&#41;](../report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [보고서 작성기 문제 해결](../troubleshoot-report-builder.md)  
   
   

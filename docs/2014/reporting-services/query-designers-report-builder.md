@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58a7e1a9d5ae71d659cfd214b46f3a004ea71101
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108007"
 ---
 # <a name="query-designers-report-builder"></a>쿼리 디자이너(보고서 작성기)
@@ -26,11 +26,11 @@ ms.locfileid: "66108007"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [MDX 쿼리 디자이너 사용자 인터페이스를 Analysis Services &#40;보고서 작성기&#41;](../../2014/reporting-services/analysis-services-mdx-query-designer-user-interface-report-builder.md)  
+-   [Analysis Services MDX 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](../../2014/reporting-services/analysis-services-mdx-query-designer-user-interface-report-builder.md)  
   
 -   [텍스트 기반 쿼리 디자이너 사용자 인터페이스 &#40;보고서 작성기&#41;](report-data/text-based-query-designer-user-interface-report-builder.md)  
   
--   [관계형 쿼리 디자이너 사용자 인터페이스 &#40;보고서 작성기&#41;](report-data/relational-query-designer-user-interface-report-builder.md)  
+-   [관계형 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](report-data/relational-query-designer-user-interface-report-builder.md)  
   
 -   [SAP NetWeaver BI 쿼리 디자이너 사용자 인터페이스 &#40;보고서 작성기&#41;](../../2014/reporting-services/sap-netweaver-bi-query-designer-user-interface-report-builder.md)  
   

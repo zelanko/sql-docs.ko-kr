@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7823ce29facb7f1c85a51a12b31ee2076a0d023b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107420"
 ---
 # <a name="configure-data-source-properties-for-a-report--report-manager"></a>보고서의 데이터 원본 속성 구성(보고서 관리자)
@@ -36,8 +36,7 @@ ms.locfileid: "66107420"
   
 5.  보고서 내의 데이터 원본 연결 정보를 지정하려면 **사용자 지정 데이터 원본** 을 클릭합니다.  
   
-6.  
-  **연결 형식** 목록에서 데이터 원본의 데이터를 처리하는 데 사용할 데이터 처리 확장 프로그램을 지정합니다.  
+6.  **연결 형식** 목록에서 데이터 원본의 데이터를 처리하는 데 사용할 데이터 처리 확장 프로그램을 지정합니다.  
   
 7.  **연결 문자열**에는 보고서 서버가 데이터 원본에 연결 하는 데 사용 하는 연결 문자열을 지정 합니다. 연결 문자열에는 자격 증명을 지정하지 않는 것이 좋습니다.  
   
@@ -47,8 +46,7 @@ ms.locfileid: "66107420"
     data source=<localservername>; initial catalog=AdventureWorks2012  
     ```  
   
-8.  
-  **연결 방법**에서 보고서를 실행할 때 자격 증명을 가져오는 방법을 지정합니다.  
+8.  **연결 방법**에서 보고서를 실행할 때 자격 증명을 가져오는 방법을 지정합니다.  
   
     -   로그온 이름과 암호를 입력하라는 메시지를 표시하려면 **보고서를 실행하는 사용자가 제공한 자격 증명**을 클릭합니다.  
   
@@ -66,6 +64,6 @@ ms.locfileid: "66107420"
  [SSRS&#41;&#40;공유 데이터 원본 만들기, 수정 및 삭제](create-modify-and-delete-shared-data-sources-ssrs.md)   
  [보고서 데이터 원본 관리](manage-report-data-sources.md)   
  [공유 데이터 원본 &#40;보고서 관리자 만들기, 삭제 또는 수정&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [데이터 원본 속성 페이지 &#40;보고서 관리자&#41;](../data-sources-properties-page-report-manager.md)  
+ [데이터 원본 속성 페이지&#40;보고서 관리자&#41;](../data-sources-properties-page-report-manager.md)  
   
   

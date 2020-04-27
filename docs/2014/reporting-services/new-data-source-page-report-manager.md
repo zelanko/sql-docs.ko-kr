@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9cc4dda934496bbfa33306537b515870f0de23de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108182"
 ---
 # <a name="new-data-source-page-report-manager"></a>새 데이터 원본 페이지(보고서 관리자)
@@ -67,17 +67,14 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **보고서를 실행하는 사용자가 제공한 자격 증명(연결 방법)**  
  데이터 원본에 액세스하려면 사용자 이름과 암호를 입력하라는 메시지가 각 사용자에게 표시됩니다. 사용자 자격 증명을 요청하는 프롬프트 텍스트를 정의할 수 있습니다. 기본 텍스트 문자열은 "데이터 원본에 액세스하려면 사용자 이름 및 암호를 입력하십시오."입니다.  
   
- 사용자가 제공하는 자격 증명이 Windows 인증 자격 증명인 경우 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용** 을 선택합니다. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증과 같은 데이터베이스 인증을 사용하는 경우에는 이 확인란을 선택하지 마십시오.  
+ 사용자가 제공하는 자격 증명이 Windows 인증 자격 증명인 경우 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용** 을 선택합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증과 같은 데이터베이스 인증을 사용하는 경우에는 이 확인란을 선택하지 마십시오.  
   
  **보고서 서버에 안전하게 저장된 자격 증명(연결 방법)**  
  암호화된 사용자 이름 및 암호를 보고서 서버 데이터베이스에 저장합니다. 사용자 동작이 아닌 일정 또는 이벤트로 시작되는 보고서와 같이 무인 모드로 보고서를 실행하려는 경우 이 옵션을 선택합니다. 기본 보안을 사용하는 경우 사용자 이름은 Windows 도메인 계정이어야 합니다. 계정을 \<도메인>\\<사용자 이름\>형식으로 지정 합니다. 지정하는 계정에는 보고서에 사용되는 데이터 원본을 호스팅하는 컴퓨터에 대한 로컬 로그온 권한이 있어야 합니다.  
   
- 자격 증명이 Windows 인증 자격 증명인 경우 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용** 을 선택합니다. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증과 같은 데이터베이스 인증을 사용하는 경우에는 이 확인란을 선택하지 마십시오.  
+ 자격 증명이 Windows 인증 자격 증명인 경우 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용** 을 선택합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증과 같은 데이터베이스 인증을 사용하는 경우에는 이 확인란을 선택하지 마십시오.  
   
- 데이터베이스 인증을 사용하는 경우 데이터베이스 자격 증명 위임을 허용하려면 데이터베이스 서버에서 가장을 지원하는 경우에만 **데이터 원본에 연결한 후 인증된 사용자로 가장** 을 선택하십시오. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 경우 이 옵션은 SETUSER 함수를 설정합니다.  
+ 데이터베이스 인증을 사용하는 경우 데이터베이스 자격 증명 위임을 허용하려면 데이터베이스 서버에서 가장을 지원하는 경우에만 **데이터 원본에 연결한 후 인증된 사용자로 가장** 을 선택하십시오. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 경우 이 옵션은 SETUSER 함수를 설정합니다.  
   
  **Windows 통합 보안(연결 방법)**  
  현재 사용자의 Windows 자격 증명을 사용하여 데이터 원본에 액세스합니다. 데이터 원본에 액세스하는 데 사용되는 자격 증명이 네트워크 도메인에 로그온하는 데 사용되는 자격 증명과 같으면 이 옵션을 선택합니다. 이 옵션은 도메인에 Kerberos 인증을 설정한 경우나 데이터 원본이 보고서 서버와 같은 컴퓨터에 있는 경우에 가장 잘 작동합니다. Kerberos 인증을 해제하면 Windows 자격 증명이 다른 컴퓨터로 전달될 수 있습니다. 컴퓨터 연결이 추가로 필요한 경우에는 원하는 데이터가 아닌 오류가 반환됩니다.  

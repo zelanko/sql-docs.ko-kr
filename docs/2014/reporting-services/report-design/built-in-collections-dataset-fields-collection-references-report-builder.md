@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 659fade9e10edc32c2444bf024fd475ea78a5d1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106446"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>데이터 세트 필드 컬렉션 참조(보고서 작성기 및 SSRS)
@@ -32,11 +32,10 @@ ms.locfileid: "66106446"
   
  입력란의 필드 컬렉션에 대한 요약된 값을 데이터 영역의 일부가 아닌 디자인 화면에 직접 표시하려면 데이터 세트 이름을 집계 함수에 대한 범위로 지정해야 합니다. 예를 들어 `SalesData`라는 데이터 세트에 대해 `Sales` 식은 `=Sum(Fields!Sales,"SalesData")` 필드에 대한 모든 값의 합계를 지정합니다.  
   
- 
-  **식** 대화 상자를 사용하여 단순 필드 참조를 정의하는 경우 범주 창에서 Fields 컬렉션을 선택하고 **필드** 창에서 사용 가능한 필드 목록을 볼 수 있습니다. 각 필드에는 Value 및 IsMissing을 비롯한 여러 속성이 포함됩니다. 나머지 속성은 데이터 원본 유형에 따라 데이터 세트에 사용할 수 있는 미리 정의된 확장 필드 속성입니다.  
+ **식** 대화 상자를 사용하여 단순 필드 참조를 정의하는 경우 범주 창에서 Fields 컬렉션을 선택하고 **필드** 창에서 사용 가능한 필드 목록을 볼 수 있습니다. 각 필드에는 Value 및 IsMissing을 비롯한 여러 속성이 포함됩니다. 나머지 속성은 데이터 원본 유형에 따라 데이터 세트에 사용할 수 있는 미리 정의된 확장 필드 속성입니다.  
   
 ### <a name="detecting-nulls-for-a-dataset-field"></a>데이터 세트 필드에 대한 Null 검색  
- Null(`Nothing`에서 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])인 필드 값을 검색하려면 `IsNothing` 함수를 사용합니다. 테이블 정보 행의 입력란에 다음 식이 배치되면 `MiddleName` 필드를 테스트하여 값이 Null인 경우 "No Middle Name" 텍스트를 대체하고, 값이 Null이 아닌 경우 필드 값 자체를 대체합니다.  
+ Null([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 `Nothing`)인 필드 값을 검색하려면 `IsNothing` 함수를 사용합니다. 테이블 정보 행의 입력란에 다음 식이 배치되면 `MiddleName` 필드를 테스트하여 값이 Null인 경우 "No Middle Name" 텍스트를 대체하고, 값이 Null이 아닌 경우 필드 값 자체를 대체합니다.  
   
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
@@ -46,8 +45,7 @@ ms.locfileid: "66106446"
 > [!NOTE]  
 >  IsMissing은 모든 유형의 데이터 원본에 대해 디자인 타임과 런타임 간의 데이터 세트 스키마 변경을 검색합니다. IsMissing은 다차원 큐브의 빈 멤버를 검색 하는 데 사용할 수 없으며 및 `EMPTY` `NON EMPTY`의 MDX 쿼리 언어 개념과 관련이 없습니다.  
   
- 사용자 지정 코드에서 IsMissing 속성을 테스트하여 결과 집합에 필드가 있는지 여부를 확인할 수 있습니다. 
-  [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 또는 `IIF`와 같은 `SWITCH` 함수 호출을 포함하는 식을 사용하여 필드의 존재 여부를 테스트할 수 없습니다. [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서는 함수 호출에서 모든 매개 변수를 평가하므로 누락된 필드에 대한 참조가 평가될 때 오류가 발생하기 때문입니다.  
+ 사용자 지정 코드에서 IsMissing 속성을 테스트하여 결과 집합에 필드가 있는지 여부를 확인할 수 있습니다. `IIF` 또는 `SWITCH`와 같은 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 함수 호출을 포함하는 식을 사용하여 필드의 존재 여부를 테스트할 수 없습니다. [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서는 함수 호출에서 모든 매개 변수를 평가하므로 누락된 필드에 대한 참조가 평가될 때 오류가 발생하기 때문입니다.  
   
 #### <a name="example-for-controlling-the-visibility-of-a-dynamic-column-for-a-missing-field"></a>누락된 필드에 대한 동적 열의 표시 유형을 제어하는 작업의 예  
  데이터 세트에 필드를 표시하는 열의 표시 유형을 제어하는 식을 설정하려면 먼저 필드의 누락 여부에 따라 부울 값을 반환하는 사용자 지정 코드 함수를 정의해야 합니다. 예를 들어 다음 사용자 지정 코드 함수에서는 필드가 누락되면 True를 반환하고 필드가 존재하면 False를 반환합니다.  
@@ -90,7 +88,7 @@ End Function
 ### <a name="using-extended-field-properties"></a>확장 필드 속성 사용  
  확장 필드 속성은 데이터 세트에 대한 데이터 원본 유형에 의해 결정되는 데이터 처리 확장 프로그램에서 필드에 대해 정의하는 추가 속성입니다. 확장 필드 속성은 미리 정의되거나 데이터 원본 유형 관련 속성입니다. 자세한 내용은 [Analysis Services 데이터베이스에 대한 확장 필드 속성 &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)을 참조하세요.  
   
- 해당 필드에 지원되지 않는 속성을 지정하는 경우 식이 `null`(`Nothing`에서 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])로 계산됩니다. 데이터 공급자가 확장 필드 속성을 지원하지 않거나 쿼리가 실행될 때 해당 필드가 없으면 속성 값은 `null` 및 `Nothing` 형식 속성의 경우 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)](`String`에서 `Object`)이 되고 `Integer` 형식 속성의 경우 0이 됩니다. 데이터 처리 확장 프로그램에서는 이 구문이 포함된 쿼리를 최적화하여 미리 정의된 속성을 이용할 수 있습니다.  
+ 해당 필드에 지원되지 않는 속성을 지정하는 경우 식이 `null`([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 `Nothing`)로 계산됩니다. 데이터 공급자가 확장 필드 속성을 지원하지 않거나 쿼리가 실행될 때 해당 필드가 없으면 속성 값은 `null` 및 `Nothing` 형식 속성의 경우 `String`([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 `Object`)이 되고 `Integer` 형식 속성의 경우 0이 됩니다. 데이터 처리 확장 프로그램에서는 이 구문이 포함된 쿼리를 최적화하여 미리 정의된 속성을 이용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   

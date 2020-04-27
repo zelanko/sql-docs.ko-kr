@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 661b4f3cc63eb0c19fddb53f872e940d1f9976e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108436"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>5단원: 보고서 마법사를 사용하여 자식 보고서 디자인
@@ -26,13 +26,11 @@ ms.locfileid: "66108436"
   
 2.  웹 사이트를 마우스 오른쪽 단추로 클릭하고 **새 항목 추가**를 선택합니다.  
   
-3.  
-  **새 항목 추가** 대화 상자에서 **보고서 마법사**를 클릭하고 보고서 파일의 이름을 입력한 다음 **추가**를 클릭합니다.  
+3.  **새 항목 추가** 대화 상자에서 **보고서 마법사**를 클릭하고 보고서 파일의 이름을 입력한 다음 **추가**를 클릭합니다.  
   
      그러면 보고서 마법사가 시작됩니다.  
   
-4.  
-  **데이터 세트 속성** 페이지의 **데이터 원본** 상자에서 **DataSet2**를 클릭합니다.  
+4.  **데이터 세트 속성** 페이지의 **데이터 원본** 상자에서 **DataSet2**를 클릭합니다.  
   
      **사용 가능한 데이터 세트** 상자가 만들어진 DataTable로 자동 업데이트됩니다.  
   
@@ -42,18 +40,15 @@ ms.locfileid: "66108436"
   
     1.  **ProductID**, **PurchaseOrderID**, **PurchaseOrderDetailID**, **OrderQty**, **ReceivedQty**, **RejectedQty**및 **StockedQty** 를 **사용 가능한 필드** 에서 **값** 상자로 끌어옵니다.  
   
-    2.  
-  **Sum(ProductID)**, **Sum(PurchaseOrderID)**, **Sum(PurchaseOrderDetailID)**, **Sum(OrderQty)**, **Sum(ReceivedQty)**, **Sum(RejectedQty)** 및 **Sum(StockedQty)** 옆에 있는 화살표를 클릭하고 **합계** 선택을 취소합니다.  
+    2.  **Sum(ProductID)**, **Sum(PurchaseOrderID)**, **Sum(PurchaseOrderDetailID)**, **Sum(OrderQty)**, **Sum(ReceivedQty)**, **Sum(RejectedQty)** 및 **Sum(StockedQty)** 옆에 있는 화살표를 클릭하고 **합계** 선택을 취소합니다.  
   
-7.  
-  **다음** 을 두 번 클릭한 다음 **마침** 을 클릭하여 **보고서 마법사**를 닫습니다.  
+7.  **다음** 을 두 번 클릭한 다음 **마침** 을 클릭하여 **보고서 마법사**를 닫습니다.  
   
      이제 .rdlc 파일을 만드는 작업을 마쳤습니다. 보고서 디자이너에서 파일이 열립니다. 디자인한 테이블릭스가 이제 디자인 화면에 표시됩니다.  
   
 8.  .rdlc 파일이 열려 있는 상태에서 다음을 수행하여 매개 변수를 추가합니다.  
   
-    1.  
-  **보고서 데이터** 창의 **매개 변수** 를 클릭한 다음 **매개 변수 추가**를 클릭합니다.  
+    1.  **보고서 데이터** 창의 **매개 변수** 를 클릭한 다음 **매개 변수 추가**를 클릭합니다.  
   
     2.  **이름** 상자에 **productid** 를 입력합니다.  
   

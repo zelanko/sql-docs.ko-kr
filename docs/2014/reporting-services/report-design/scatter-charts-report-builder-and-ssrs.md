@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dde53428c738fc30595d17b62175b50835fe7ec2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105036"
 ---
 # <a name="scatter-charts-report-builder-and-ssrs"></a>분산형 차트(보고서 작성기 및 SSRS)
@@ -29,9 +29,9 @@ ms.locfileid: "66105036"
   
 ## <a name="variations"></a>변형  
   
--   **표시가.** 거품형 차트는 두 데이터 요소 값의 차이를 거품의 크기로 표시합니다. 거품이 클수록 두 값의 차이가 큰 것입니다.  
+-   **거품형.** 거품형 차트는 두 데이터 요소 값의 차이를 거품의 크기로 표시합니다. 거품이 클수록 두 값의 차이가 큰 것입니다.  
   
--   **3 차원 거품형**입니다. 3차원으로 표시되는 거품형 차트입니다.  
+-   **3차원 거품형**. 3차원으로 표시되는 거품형 차트입니다.  
   
 ## <a name="data-considerations-for-a-scatter-chart"></a>분산형 차트의 데이터 고려 사항  
   

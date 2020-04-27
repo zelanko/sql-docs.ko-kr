@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fc50a5b0516bcbf8221ce3ee130090f66a929c3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109214"
 ---
 # <a name="error-page-report-manager"></a>오류 페이지(보고서 관리자)
@@ -32,7 +32,7 @@ ms.locfileid: "66109214"
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 관리자 &#40;기본 모드 구성&#41;](report-server/configure-web-portal.md)   
- [오류 및 이벤트 참조&#40;Reporting Services&#41;](troubleshooting/errors-and-events-reference-reporting-services.md)   
+ [오류 및 이벤트 참조 &#40;Reporting Services&#41;](troubleshooting/errors-and-events-reference-reporting-services.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

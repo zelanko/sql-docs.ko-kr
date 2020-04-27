@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fd3a6e7126775479ae7ca0c6b6d138a0625476af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107887"
 ---
 # <a name="exporting-to-an-image-file-report-builder-and-ssrs"></a>이미지 파일로 내보내기(보고서 작성기 및 SSRS)
@@ -25,10 +25,10 @@ ms.locfileid: "66107887"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="SupportedImageFormats"></a> 지원되는 이미지 형식  
+##  <a name="supported-image-formats"></a><a name="SupportedImageFormats"></a> 지원되는 이미지 형식  
  다음 표에는 각 이미지 렌더러 형식에 대한 파일 확장명과 MIMEType이 나와 있습니다.  
   
-|**형식**|**확장명**|**MIMEType**|  
+|**Type**|**확장명**|**MIMEType**|  
 |--------------|-------------------|------------------|  
 |BMP|BMP|image/bmp|  
 |GIF|GIF|image/gif|  
@@ -39,11 +39,11 @@ ms.locfileid: "66107887"
 |EMFPlus|EMF|image/emf|  
   
   
-##  <a name="RenderingMultiplePages"></a> 여러 페이지 렌더링  
+##  <a name="rendering-multiple-pages"></a><a name="RenderingMultiplePages"></a> 여러 페이지 렌더링  
  TIFF는 파일 하나에 여러 페이지 문서를 포함할 수 있는 유일한 형식입니다. JPG나 PNG 같은 다른 형식은 한 번에 한 페이지만 출력하며 매번 각 페이지에 대한 렌더링 확장 프로그램을 호출해야 합니다.  
   
   
-##  <a name="Interactivity"></a> 상호 작용  
+##  <a name="interactivity"></a><a name="Interactivity"></a>대화형 작업  
  상호 작용은 이 렌더러를 통해 생성되는 어떤 이미지 형식에서도 지원되지 않습니다. 다음 대화형 요소는 렌더링되지 않습니다.  
   
 -   하이퍼링크  
@@ -61,15 +61,15 @@ ms.locfileid: "66107887"
 -   책갈피  
   
   
-##  <a name="DeviceInfo"></a> 디바이스 정보 설정  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>장치 정보 설정  
  디바이스 정보 설정을 변경하여 이 렌더러의 기본 설정을 일부 변경할 수 있습니다. 자세한 내용은 [Image Device Information Settings](../image-device-information-settings.md)을(를) 참조하세요.  
   
   
 ## <a name="see-also"></a>참고 항목  
- [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
- [보고서 항목 렌더링&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Reporting Services &#40;보고서 작성기 및 SSRS의 페이지 매김&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [보고서 작성기 및 SSRS&#41;&#40;렌더링 동작](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [여러 보고서 렌더링 확장 프로그램에 대 한 대화형 기능 &#40;보고서 작성기 및 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [보고서 항목 &#40;보고서 작성기 및 SSRS&#41;렌더링](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

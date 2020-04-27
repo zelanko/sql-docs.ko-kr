@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6981b756bacd720284fcd38fd29c9ba371db8a87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107932"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>CSV 파일로 내보내기(보고서 작성기 및 SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107932"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CSVRendering"></a> CSV 렌더링  
+##  <a name="csv-rendering"></a><a name="CSVRendering"></a>CSV 렌더링  
  기본 설정을 사용하여 렌더링된 CSV 보고서는 다음과 같은 특징을 가집니다.  
   
 -   기본 필드 구분 기호 문자열은 쉼표(,)입니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "66107932"
   
  
   
-##  <a name="RenderingModes"></a> 렌더러 모드  
+##  <a name="renderer-modes"></a><a name="RenderingModes"></a> 렌더러 모드  
  CSV 렌더링 확장 프로그램은 두 가지 모드로 작동할 수 있습니다. 하나는 Excel에 대해 최적화된 모드이고, 다른 하나는 RFC 4180에 지정된 CSV 사양의 엄격한 준수를 요구하는 타사 애플리케이션에 최적화되어 있습니다. 사용하는 모드에 따라 피어 데이터 영역은 다르게 처리됩니다.  
   
 ### <a name="default-mode"></a>기본 모드  
@@ -120,7 +120,7 @@ ms.locfileid: "66107932"
 #### <a name="formatting"></a>서식 지정  
  값에는 서식이 지정되지 않습니다.  
   
-##  <a name="Interactivity"></a> 상호 작용  
+##  <a name="interactivity"></a><a name="Interactivity"></a>대화형 작업  
  상호 작용은 이 렌더러에 의해 생성되는 어떤 CSV 형식에서도 지원되지 않습니다. 다음 대화형 요소는 렌더링되지 않습니다.  
   
 -   하이퍼링크  
@@ -139,16 +139,16 @@ ms.locfileid: "66107932"
   
 
   
-##  <a name="DeviceInfo"></a> 디바이스 정보 설정  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>장치 정보 설정  
  디바이스 정보 설정을 변경하여 렌더링할 모드, 구분 기호로 사용할 문자, 텍스트 한정자 기본 문자열로 사용할 문자 등 이 렌더러의 일부 기본 설정을 변경할 수 있습니다. 자세한 내용은 [CSV Device Information Settings](../csv-device-information-settings.md)을 참조하세요.  
   
   
   
 ## <a name="see-also"></a>참고 항목  
- [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
- [보고서 항목 렌더링&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Reporting Services &#40;보고서 작성기 및 SSRS의 페이지 매김&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [보고서 작성기 및 SSRS&#41;&#40;렌더링 동작](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [여러 보고서 렌더링 확장 프로그램에 대 한 대화형 기능 &#40;보고서 작성기 및 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [보고서 항목 &#40;보고서 작성기 및 SSRS&#41;렌더링](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

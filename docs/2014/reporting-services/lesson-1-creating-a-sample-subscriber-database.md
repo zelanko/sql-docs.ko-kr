@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9e68650b21ee8cddc6258ab64b874bcf51ec1a83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108536"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>1단원: 샘플 구독자 데이터베이스 만들기
@@ -24,8 +24,7 @@ ms.locfileid: "66108536"
   
 ### <a name="to-create-a-sample-subscriber-database"></a>예제 구독자 데이터베이스를 만들려면  
   
-1.  
-  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]를 시작한 다음 [!INCLUDE[ssDE](../includes/ssde-md.md)]에 연결합니다.  
+1.  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]를 시작한 다음 [!INCLUDE[ssDE](../includes/ssde-md.md)]에 연결합니다.  
   
 2.  데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **새 데이터베이스...** 를 선택합니다.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "66108536"
  보고서 배포를 추진하고 구독자마다 보고서 출력을 다르게 할 구독 데이터를 만들었습니다. 다음 단원에서는 구독자에게 배포할 보고서의 데이터 원본 속성을 수정합니다. 데이터 원본 속성 수정은 데이터 기반 구독 배달에 사용할 보고서를 준비하기 위해 수행됩니다. 또한 구독에서 구독자 데이터와 함께 사용할 매개 변수를 포함하도록 보고서 디자인을 수정합니다. [2 단원: 보고서 데이터 원본 속성 수정](lesson-2-modifying-the-report-data-source-properties.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [SSRS 자습서 &#40;데이터 기반 구독 만들기&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [데이터베이스 만들기](../relational-databases/databases/create-a-database.md)   
  [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
   

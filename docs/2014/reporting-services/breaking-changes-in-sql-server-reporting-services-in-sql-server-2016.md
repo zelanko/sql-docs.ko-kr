@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0d86c9bb07a52aba0cd93b006fc33edf4d1aa885
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109927"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014에서 SQL Server Reporting Services의 주요 변경 내용
@@ -32,14 +32,13 @@ ms.locfileid: "66109927"
   
 -   [SQL Server 2008 R2 Reporting Services의 주요 변경 내용](#bkmk_kj)  
   
-##  <a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services 주요 변경 내용  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]기능에는 주요 변경 내용이 없습니다.  
+##  <a name="sssql14-reporting-services-breaking-changes"></a><a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services 주요 변경 내용  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]기능에는 주요 변경 내용이 없습니다.  
   
-##  <a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services 주요 변경 내용  
+##  <a name="sssql11-reporting-services-breaking-changes"></a><a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services 주요 변경 내용  
   
 ### <a name="sharepoint-mode-server-references-require-the-sharepoint-site"></a>SharePoint 모드 서버 참조에 SharePoint 사이트가 필요함  
- URL 경로에 가상 디렉터리 이름을 사용하여 보고서 서버로 직접 이동하거나 보고서 서버를 직접 참조할 수 없습니다. 다음은 그 예입니다.  
+ URL 경로에 가상 디렉터리 이름을 사용하여 보고서 서버로 직접 이동하거나 보고서 서버를 직접 참조할 수 없습니다. 예를 들어:  
   
  `http://<Server name>/ReportServer`  
   
@@ -61,20 +60,15 @@ ms.locfileid: "66109927"
   
 -   SharePoint 모드의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] WMI 공급자를 사용하는 사용자 지정 애플리케이션  
   
--   
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 관리자, rskeymgmt.exe 및 rsconfig.exe 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드 구성에 이러한 유틸리티를 사용하는 대신 SharePoint 중앙 관리 및 PowerShell을 사용합니다.  
+-   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 관리자, rskeymgmt.exe 및 rsconfig.exe [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드 구성에 이러한 유틸리티를 사용하는 대신 SharePoint 중앙 관리 및 PowerShell을 사용합니다.  
   
--   SQL Server Management Studio: 고객은 <machine_name>/<instance_name>와 비슷한 구문을 사용 하 여 서버를 참조할 수 없습니다. 
-  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 릴리스부터 권장되는 방법은 SharePoint 사이트 URL을 사용하는 것입니다. 예를 들어 **http://<sharepoint_server>/<sharePoint_site>** 합니다. 
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터는 SharePoint 사이트 URL이 지원되는 유일한 구문입니다.  
+-   SQL Server Management Studio: 고객은 <machine_name>/<instance_name>와 비슷한 구문을 사용 하 여 서버를 참조할 수 없습니다. [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 릴리스부터 권장되는 방법은 SharePoint 사이트 URL을 사용하는 것입니다. 예를 들어 **http://<sharepoint_server>/<sharePoint_site>** 합니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터는 SharePoint 사이트 URL이 지원되는 유일한 구문입니다.  
   
 ### <a name="report-model-designer-is-not-available-in-sql-server-data-tools"></a>보고서 모델 디자이너를 SQL Server Data Tools에서 사용할 수 없음  
- 보고서 모델 프로젝트가 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 더 이상 지원되지 않습니다. 보고서 모델 디자이너는 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]에서 사용할 수 없습니다. 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에서 새 보고서 모델 프로젝트를 만들거나 기존 프로젝트를 열 수 없으며, 보고서 모델을 만들거나 업데이트할 수 없습니다. 보고서 모델을 업데이트하려는 경우 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 또는 이전 도구를 사용할 수 있습니다. 보고서 작성기 및 보고서 디자이너와 같은 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 도구에서 승인된 보고서에서 보고서 모델을 데이터 원본으로 계속 사용할 수 있습니다. 보고서 모델에서 보고서 데이터를 추출하기 위해 쿼리를 만드는 데 사용하는 쿼리 디자이너는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 계속 사용할 수 있습니다.  
+ 보고서 모델 프로젝트가 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 더 이상 지원되지 않습니다. 보고서 모델 디자이너는 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]에서 사용할 수 없습니다. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에서 새 보고서 모델 프로젝트를 만들거나 기존 프로젝트를 열 수 없으며, 보고서 모델을 만들거나 업데이트할 수 없습니다. 보고서 모델을 업데이트하려는 경우 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 또는 이전 도구를 사용할 수 있습니다. 보고서 작성기 및 보고서 디자이너와 같은 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 도구에서 승인된 보고서에서 보고서 모델을 데이터 원본으로 계속 사용할 수 있습니다. 보고서 모델에서 보고서 데이터를 추출하기 위해 쿼리를 만드는 데 사용하는 쿼리 디자이너는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 계속 사용할 수 있습니다.  
   
-##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services 주요 변경 내용  
- 이 섹션에서는 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 주요 변경 내용에 대해 설명합니다.  
+##  <a name="sql-server-2008-r2-reporting-services-breaking-changes"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services 주요 변경 내용  
+ 이 섹션에서는의 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]주요 변경 내용에 대해 설명 합니다.  
   
 > [!NOTE]  
 >  SQL Server 2008 R2는 SQL Server 2008의 부 버전 업그레이드이므로 SQL Server 2008 섹션의 내용도 검토하는 것이 좋습니다.  

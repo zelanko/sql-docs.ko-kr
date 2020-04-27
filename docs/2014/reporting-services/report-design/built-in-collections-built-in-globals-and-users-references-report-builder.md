@@ -11,24 +11,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef0438dfa0750c2a516a801a2d81b5d1c0b49721
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106436"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>기본 제공 Globals 및 Users 참조(보고서 작성기 및 SSRS)
-  
-  `Globals` 및 `User` 컬렉션을 모두 포함하는 기본 제공 필드 컬렉션은 보고서를 처리할 때 Reporting Services에서 제공하는 전역 값을 나타냅니다. 
-  `Globals` 컬렉션은 보고서의 이름, 보고서 처리가 시작된 시간, 보고서 머리글 또는 바닥글의 현재 페이지 번호와 같은 값을 제공합니다. 
-  `User` 컬렉션은 사용자 식별자 및 언어 설정을 제공합니다. 이러한 값을 식에 사용하여 보고서의 결과를 필터링할 수 있습니다.  
+  `Globals` 및 `User` 컬렉션을 모두 포함하는 기본 제공 필드 컬렉션은 보고서를 처리할 때 Reporting Services에서 제공하는 전역 값을 나타냅니다. `Globals` 컬렉션은 보고서의 이름, 보고서 처리가 시작된 시간, 보고서 머리글 또는 바닥글의 현재 페이지 번호와 같은 값을 제공합니다. `User` 컬렉션은 사용자 식별자 및 언어 설정을 제공합니다. 이러한 값을 식에 사용하여 보고서의 결과를 필터링할 수 있습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-globals-collection"></a>전역 컬렉션 사용  
- 
-  `Globals` 컬렉션에는 보고서의 전역 변수가 포함됩니다. 디자인 화면에서 이러한 변수는 &(앰퍼샌드) 접두사가 붙은 상태로 표시됩니다(예: `[&ReportName]`). 다음 표에서는 `Globals` 컬렉션의 멤버를 설명합니다.  
+ `Globals` 컬렉션에는 보고서의 전역 변수가 포함됩니다. 디자인 화면에서 이러한 변수는 &(앰퍼샌드) 접두사가 붙은 상태로 표시됩니다(예: `[&ReportName]`). 다음 표에서는 `Globals` 컬렉션의 멤버를 설명합니다.  
   
 |**멤버**|**형식**|**설명**|  
 |----------------|--------------|---------------------|  
@@ -43,13 +39,12 @@ ms.locfileid: "66106436"
 |OverallTotalPages|`Integer`|전체 보고서의 총 페이지 수입니다. 이 값은 ResetPageNumber의 영향을 받지 않습니다.<br /><br /> OverallTotalPages는 페이지 머리글 또는 페이지 바닥글의 식에만 사용할 수 있습니다.|  
 |RenderFormat|`RenderFormat`|현재 렌더링 요청에 대한 정보입니다.<br /><br /> 자세한 내용은 다음 섹션의 "RenderFormat"을 참조하십시오.|  
   
- 
-  `Globals` 컬렉션 멤버는 variant를 반환합니다. 특정 데이터 형식이 필요한 식에서 이 컬렉션의 멤버를 사용하려면 먼저 변수를 캐스팅해야 합니다. 예를 들어 실행 시간 variant를 날짜 형식으로 변환하려면 `=CDate(Globals!ExecutionTime)`를 사용합니다. 자세한 내용은 [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)).  
+ `Globals` 컬렉션 멤버는 variant를 반환합니다. 특정 데이터 형식이 필요한 식에서 이 컬렉션의 멤버를 사용하려면 먼저 변수를 캐스팅해야 합니다. 예를 들어 실행 시간 variant를 날짜 형식으로 변환하려면 `=CDate(Globals!ExecutionTime)`를 사용합니다. 자세한 내용은 [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)).  
   
 ### <a name="renderformat"></a>RenderFormat  
  다음 표에서는 `RenderFormat`의 멤버에 대해 설명합니다.  
   
-|멤버|Type|Description|  
+|멤버|유형|Description|  
 |------------|----------|-----------------|  
 |속성|`String`|RSReportServer 구성 파일에 등록된 렌더러 이름입니다.<br /><br /> 보고서 처리/렌더링 주기의 특정 부분에서 사용 가능합니다.|  
 |IsInteractive|`Boolean`|현재 렌더링 요청이 대화형 렌더링 형식을 사용하는지 여부입니다.|  
@@ -68,21 +63,18 @@ ms.locfileid: "66106436"
   
 -   보고서를 Excel로 내보낼 때 선택한 열에 대해 **열 표시 유형** 대화 상자에 배치된 식은 열을 표시합니다. 그렇지 않은 경우 이 열은 숨겨집니다.  
   
-     
-  `EXCELOPENXML` 은 Office 2007에 포함된 Excel 형식을 나타냅니다. 
-  `EXCEL` 은 Office 2003에 포함된 Excel 형식을 나타냅니다.  
+     `EXCELOPENXML` 은 Office 2007에 포함된 Excel 형식을 나타냅니다. `EXCEL` 은 Office 2003에 포함된 Excel 형식을 나타냅니다.  
   
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
 ## <a name="using-the-user-collection"></a>User 컬렉션 사용  
- 
-  `User` 컬렉션에는 보고서를 실행하는 사용자에 대한 데이터가 포함됩니다. 예를 들어 이 컬렉션을 사용하여 보고서에 나타나는 데이터를 필터링함으로써 현재 사용자의 데이터만 표시하거나 보고서 제목 등에 UserID를 표시할 수 있습니다. 디자인 화면에서 이러한 변수는 &(앰퍼샌드) 접두사가 붙은 상태로 표시됩니다(예: `[&UserID]`).  
+ `User` 컬렉션에는 보고서를 실행하는 사용자에 대한 데이터가 포함됩니다. 예를 들어 이 컬렉션을 사용하여 보고서에 나타나는 데이터를 필터링함으로써 현재 사용자의 데이터만 표시하거나 보고서 제목 등에 UserID를 표시할 수 있습니다. 디자인 화면에서 이러한 변수는 &(앰퍼샌드) 접두사가 붙은 상태로 표시됩니다(예: `[&UserID]`).  
   
  다음 표에서는 `User` 컬렉션의 멤버를 설명합니다.  
   
-|**멤버**|**형식**|**설명**|  
+|**멤버**|**Type**|**설명**|  
 |----------------|--------------|---------------------|  
-|`Language`|`String`|보고서를 실행하는 사용자의 `en-US`)을 입력합니다.|  
+|`Language`|`String`|보고서를 실행하는 사용자의 예: `en-US`.|  
 |`UserID`|`String`|보고서를 실행하는 사용자의 ID입니다. Windows 인증을 사용하는 경우 이 값은 현재 사용자의 도메인 계정입니다. 값은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보안 확장 프로그램에 의해 결정되며 이 프로그램은 Windows 인증 또는 사용자 지정 인증을 사용할 수 있습니다.|  
   
  보고서에서 여러 언어를 지원하는 방법에 대한 자세한 내용은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 온라인 설명서 [의](https://go.microsoft.com/fwlink/?LinkId=120955)설명서에서 "다국어 배포 또는 글로벌 배포를 위한 솔루션 디자인 고려 사항"을 참조하세요.  
@@ -94,14 +86,13 @@ ms.locfileid: "66106436"
 >  보고서의 언어 설정을 변경할 수 있지만 이로 인한 표시 문제에 유의해야 합니다. 예를 들어 보고서의 로캘 설정을 변경하면 보고서의 날짜 형식을 변경할 수 있지만 통화 형식도 변경될 수 있습니다. 통화가 적절하게 변환되지 않으면 잘못된 통화 기호가 보고서에 표시될 수 있습니다. 이를 방지하려면 변경할 개별 항목에 대한 언어 정보를 설정하거나 통화 데이터가 있는 항목을 특정 언어로 설정합니다.  
   
 ### <a name="identifying-userid-for-snapshot-or-history-reports"></a>스냅샷 또는 기록 보고서에 대한 UserID 식별  
- 
-  *User!UserID* 변수를 포함하는 보고서에서는 보고서를 보고 있는 현재 사용자와 관련된 보고서 데이터가 표시되지 않는 경우도 있습니다.  
+ *User!UserID* 변수를 포함하는 보고서에서는 보고서를 보고 있는 현재 사용자와 관련된 보고서 데이터가 표시되지 않는 경우도 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [식 대화 상자 &#40;보고서 작성기&#41;](../expression-dialog-box-report-builder.md)   
- [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [숫자 및 날짜 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [식의 데이터 형식 &#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
+ [숫자 및 날짜 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb96831c54a67a6ea74ca984cb346dcaaf50a335
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104627"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>입력란(보고서 작성기 및 SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "66104627"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="GrowShrinkTextBox"></a>텍스트 상자 확대 및 축소  
+##  <a name="growing-and-shrinking-a-text-box"></a><a name="GrowShrinkTextBox"></a> 입력란 늘리기 및 줄이기  
  기본적으로 입력란은 고정된 크기를 가집니다. 입력란을 해당 내용에 따라 세로로 줄이거나 늘릴 수 있습니다. 자세한 내용은 [입력란을 늘리거나 줄이도록 허용&#40;보고서 작성기 및 SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)에 대해 자세히 알아봅니다.  
   
 ## <a name="orienting-a-text-box"></a>입력란 방향 지정  
@@ -55,17 +55,17 @@ ms.locfileid: "66104627"
   
  텍스트 방향 변경을 빠르게 시작 하려면 [자습서: 텍스트 &#40;서식 지정 보고서 작성기&#41;](../tutorial-format-text-report-builder.md)에서 텍스트 회전 섹션을 참조 하세요. 자세한 내용은 [텍스트 상자 방향 설정 &#40;보고서 작성기 및 SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)를 참조 하세요.  
   
-##  <a name="HowTo"></a> 방법 도움말 항목  
- [텍스트 상자 &#40;보고서 작성기 및 SSRS를 추가, 이동 또는 삭제&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>방법 도움말 항목  
+ [입력란 추가, 이동 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
   
  [입력란의 텍스트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
- [텍스트 상자 방향 &#40;보고서 작성기 및 SSRS를 설정&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
+ [입력란 방향 설정&#40;보고서 작성기 및 SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
   
- [텍스트 상자에서 보고서 작성기 및 SSRS &#40;를 늘리거나 줄일 수 있습니다&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
+ [입력란을 늘리거나 줄이도록 허용&#40;보고서 작성기 및 SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [텍스트 및 자리 표시자 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [텍스트 및 자리 표시자 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [숫자 및 날짜 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   
   

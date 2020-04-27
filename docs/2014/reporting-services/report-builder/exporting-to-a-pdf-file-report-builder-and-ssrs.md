@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3eb41d807a1b4678882c791a7bdeb7693de7b08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107918"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>PDF 파일로 내보내기(보고서 작성기 및 SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107918"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FontRequirements"></a> 글꼴 포함  
+##  <a name="font-embedding"></a><a name="FontRequirements"></a>글꼴 포함  
  가능한 경우 PDF 렌더링 확장 프로그램에는 보고서를 PDF 파일로 표시하는 데 필요한 각 하위 집합이 포함되어 있습니다. 보고서에 사용된 글꼴이 보고서 서버에 설치되어 있어야 합니다. 보고서 서버는 PDF 형식으로 보고서를 생성할 때 보고서에서 참조하는 글꼴로 저장된 정보를 사용하여 PDF 파일 내에 문자 매핑을 만듭니다. 렌더링된 글꼴이 보고서 서버에 설치되어 있지 않으면 결과 PDF 파일이 올바른 매핑을 포함하지 않을 수 있으며 화면에 올바르게 표시되지 않을 수 있습니다.  
   
  다음 조건을 만족할 경우 PDF 파일에 글꼴이 포함됩니다.  
@@ -57,25 +57,21 @@ ms.locfileid: "66107918"
   
  PDF 파일에 포함된 글꼴은 파일에 저장된 Fonts 속성에 메타데이터로 포함됩니다.  
   
-##  <a name="Metadata"></a> 메타데이터  
+##  <a name="metadata"></a><a name="Metadata"></a>메타  
  PDF 렌더링 확장 프로그램에서는 보고서 레이아웃 이외에 다음과 같은 메타데이터를 PDF 문서 정보 사전에 기록합니다.  
   
 |PDF 속성|정보 출처|  
 |------------------|------------------|  
-|`Title`|
-  `Name` RDL 요소의 `Report` 특성|  
-|`Author`|
-  `Author` RDL 요소|  
-|`Subject`|
-  `Description` RDL 요소|  
-|`Creator`|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 제품 이름 및 버전|  
+|`Title`|`Name` RDL 요소의 `Report` 특성|  
+|`Author`|`Author` RDL 요소|  
+|`Subject`|`Description` RDL 요소|  
+|`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 제품 이름 및 버전|  
 |`Producer`|렌더링 확장 프로그램 이름 및 버전|  
 |`CreationDate`|PDF `datetime` 형식의 보고서 실행 시간|  
   
   
   
-##  <a name="Interactivity"></a> 상호 작용  
+##  <a name="interactivity"></a><a name="Interactivity"></a>대화형 작업  
  PDF에서는 일부 대화형 요소가 지원됩니다. 다음은 특정 동작에 대한 설명입니다.  
   
 ### <a name="show-and-hide"></a>표시 및 숨기기  
@@ -97,7 +93,7 @@ ms.locfileid: "66107918"
   
   
   
-##  <a name="Compression"></a>수신  
+##  <a name="compression"></a><a name="Compression"></a>수신  
  이미지 압축은 이미지의 원래 파일 형식을 기준으로 합니다. PDF 렌더링 확장 프로그램에서는 기본적으로 PDF 파일을 압축합니다.  
   
  PDF 파일에 포함된 이미지의 모든 압축을 가능한 한 계속 유지하기 위해 JPEG 이미지는 JPEG로 저장되고 다른 모든 이미지 형식은 BMP로 저장됩니다.  
@@ -107,16 +103,16 @@ ms.locfileid: "66107918"
   
   
   
-##  <a name="DeviceInfo"></a> 디바이스 정보 설정  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>장치 정보 설정  
  디바이스 정보 설정을 변경하여 이 렌더러의 기본 설정을 일부 변경할 수 있습니다. 자세한 내용은 [PDF Device Information Settings](../pdf-device-information-settings.md)을 참조하세요.  
   
   
   
 ## <a name="see-also"></a>참고 항목  
- [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
- [보고서 항목 렌더링&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Reporting Services &#40;보고서 작성기 및 SSRS의 페이지 매김&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [보고서 작성기 및 SSRS&#41;&#40;렌더링 동작](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [여러 보고서 렌더링 확장 프로그램에 대 한 대화형 기능 &#40;보고서 작성기 및 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [보고서 항목 &#40;보고서 작성기 및 SSRS&#41;렌더링](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   
