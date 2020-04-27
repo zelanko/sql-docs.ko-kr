@@ -21,10 +21,10 @@ ms.assetid: 09fe4a28-ff8a-4655-9da1-4654d5bc514d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 22b1b6bf2abbf322cec690d9e466f2ea40fcb72a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68059252"
 ---
 # <a name="sysfn_trace_getfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo(Transact-SQL)
@@ -52,12 +52,12 @@ fn_trace_getfilterinfo ( trace_id )
 ## <a name="tables-returned"></a>반환된 테이블  
  다음 정보를 반환합니다. 열에 대 한 자세한 내용은 [sp_trace_setfilter &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)을 참조 하십시오.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**columnid**|**int**|필터가 적용되는 열의 ID입니다.|  
 |**logical_operator**|**int**|AND 또는 OR 연산자의 적용 여부를 지정합니다.|  
 |**comparison_operator**|**int**|비교 유형을 지정합니다.<br /><br /> 0 = 같음<br /><br /> 1 = 같지 않음<br /><br /> 2 = 보다 큼<br /><br /> 3 = 보다 작음<br /><br /> 4 = 크거나 같음<br /><br /> 5 = 작거나 같음<br /><br /> 6 = 유사함<br /><br /> 7 = 유사하지 않음|  
-|**기본값**|**sql_variant**|필터가 적용되는 값을 지정합니다.|  
+|**value**|**sql_variant**|필터가 적용되는 값을 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
  사용자는 *trace_id* 값을 설정 하 여 추적을 식별, 수정 및 제어할 수 있습니다. 특정 추적의 ID를 전달 하면 **fn_trace_getfilterinfo** 는 해당 추적의 필터에 대 한 정보를 반환 합니다. 지정된 추적에 필터가 없는 경우 이 함수는 빈 행 집합을 반환합니다. 잘못된 ID를 전달하면 빈 행 집합이 반환됩니다. 추적에 대 한 유사한 정보는 [fn_trace_getinfo &#40;transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)을 참조 하십시오.  
@@ -75,14 +75,14 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [추적 만들기&#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
- [sp_trace_setfilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
- [sp_trace_create&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
+ [Transact-sql&#41;&#40;추적 만들기](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
+ [Transact-sql&#41;sp_trace_setfilter &#40;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [Transact-sql&#41;sp_trace_create &#40;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [Transact-sql&#41;sp_trace_generateevent &#40;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setstatus&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
+ [Transact-sql&#41;sp_trace_setevent &#40;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [Transact-sql&#41;sp_trace_setstatus &#40;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [fn_trace_geteventinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [sys.fn_trace_getinfo&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [fn_trace_getinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [fn_trace_gettable &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)  
   
   

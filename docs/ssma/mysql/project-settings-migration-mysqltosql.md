@@ -10,10 +10,10 @@ ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2f3c989626f36c003937723869b5e17d1a405ea9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908862"
 ---
 # <a name="project-settings-migration-mysqltosql"></a>프로젝트 설정(마이그레이션)(MySQLToSQL)
@@ -31,9 +31,9 @@ ms.locfileid: "67908862"
   
 |용어|정의|  
 |--------|--------------|  
-|**일괄 처리 크기**|데이터 마이그레이션 중에 사용 되는 일괄 처리 크기를 지정 합니다.<br /><br />**기본 모드**: 1000<br /><br />**낙관적 모드**: 1000<br /><br />**전체 모드**: 1000|  
+|**Batch 크기**|데이터 마이그레이션 중에 사용 되는 일괄 처리 크기를 지정 합니다.<br /><br />**기본 모드**: 1000<br /><br />**낙관적 모드**: 1000<br /><br />**전체 모드**: 1000|  
 |**CHECK 제약 조건**|SQL Server 테이블에 데이터를 삽입할 때 SSMA에서 제약 조건을 확인할 지 여부를 지정 합니다.<br /><br />**기본 모드**: False<br /><br />**낙관적 모드**: False<br /><br />**전체 모드**: False|  
-|**트리거 발생**|SQL Server 테이블에 데이터를 추가할 때 SSMA에서 삽입 트리거를 발생 시켜야 하는지 여부를 지정 합니다.<br /><br />**기본 모드**: False<br /><br />**낙관적 모드**: False<br /><br />**전체 모드**: False|  
+|**트리거 실행**|SQL Server 테이블에 데이터를 추가할 때 SSMA에서 삽입 트리거를 발생 시켜야 하는지 여부를 지정 합니다.<br /><br />**기본 모드**: False<br /><br />**낙관적 모드**: False<br /><br />**전체 모드**: False|  
 |**ID 유지**|SSMA가 SQL Server에 데이터를 추가할 때 MySQL id 값을 유지할지 여부를 지정 합니다. False 값을 지정 하면 대상에서 id 값을 할당 합니다.<br /><br />**기본 모드**: True<br /><br />**낙관적 모드**: True<br /><br />**전체 모드**: True|  
 |**Null 유지**|SQL Server에 지정 된 기본값과 관계 없이 SSMA가 SQL Server에 데이터를 추가할 때 원본 데이터에서 null 값을 유지할지 여부를 지정 합니다.<br /><br />**기본 모드**: True<br /><br />**낙관적 모드**: True<br /><br />**전체 모드**: True|  
 |**테이블 잠금**|데이터 마이그레이션 중에 SSMA가 테이블에 데이터를 추가할 때 테이블을 잠글 것인지 여부를 지정 합니다. 대량 복사 작업을 수행 하는 동안 대량 업데이트 잠금을 가져옵니다. 값이 False 이면 행 수준에서 잠금이 설정 됩니다.<br /><br />**기본 모드**: False<br /><br />**낙관적 모드**: False<br /><br />**전체 모드**: False|  

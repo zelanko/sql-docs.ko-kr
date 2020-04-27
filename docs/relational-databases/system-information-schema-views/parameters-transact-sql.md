@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e6d3880c4be8925e6b85a20af1324537e3977ecc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68103279"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68103279"
   
  이러한 뷰에서 정보를 검색 하려면 INFORMATION_SCHEMA의 정규화 된 이름을 지정 합니다 **.** _view_name_.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**SPECIFIC_CATALOG**|**nvarchar (** 128 **)**|매개 변수를 가지는 대상 루틴의 카탈로그 이름입니다.|  
 |**SPECIFIC_SCHEMA**|**nvarchar (** 128 **)**|매개 변수를 가지는 대상 루틴의 스키마 이름입니다.<br /><br /> <strong> \* 중요 \* \* </strong> INFORMATION_SCHEMA 뷰를 사용 하 여 개체의 스키마를 확인 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
@@ -56,20 +56,20 @@ ms.locfileid: "68103279"
 |**NUMERIC_PRECISION_RADIX**|**smallint**|근사 숫자 데이터, 정확한 숫자 데이터, 정수 데이터 또는 통화 데이터의 전체 자릿수 기수입니다. 다른 데이터 형식에 대해서는 NULL을 반환합니다.|  
 |**NUMERIC_SCALE**|**tinyint**|근사 숫자 데이터, 정확한 숫자 데이터, 정수 데이터 또는 통화 데이터의 소수 자릿수입니다. 다른 데이터 형식에 대해서는 NULL을 반환합니다.|  
 |**DATETIME_PRECISION**|**smallint**|매개 변수 형식이 **datetime** 또는 **smalldatetime**인 경우 소수 자릿수 초의 전체 자릿수 (초)입니다. 다른 데이터 형식에 대해서는 NULL을 반환합니다.|  
-|**INTERVAL_TYPE**|**nvarchar (** 30 **)**|NULL. 향후 사용을 위해 예약되어 있습니다.|  
-|**INTERVAL_PRECISION**|**smallint**|NULL. 향후 사용을 위해 예약되어 있습니다.|  
-|**USER_DEFINED_TYPE_CATALOG**|**nvarchar (** 128 **)**|NULL. 향후 사용을 위해 예약되어 있습니다.|  
-|**USER_DEFINED_TYPE_SCHEMA**|**nvarchar (** 128 **)**|NULL. 향후 사용을 위해 예약되어 있습니다.|  
-|**USER_DEFINED_TYPE_NAME**|**nvarchar (** 128 **)**|NULL. 향후 사용을 위해 예약되어 있습니다.|  
-|**SCOPE_CATALOG**|**nvarchar (** 128 **)**|NULL. 향후 사용을 위해 예약되어 있습니다.|  
-|**SCOPE_SCHEMA**|**nvarchar (** 128 **)**|NULL. 향후 사용을 위해 예약되어 있습니다.|  
-|**SCOPE_NAME**|**nvarchar (** 128 **)**|NULL. 향후 사용을 위해 예약되어 있습니다.|  
+|**INTERVAL_TYPE**|**nvarchar (** 30 **)**|NULL 다음에 사용하도록 예약됩니다.|  
+|**INTERVAL_PRECISION**|**smallint**|NULL 다음에 사용하도록 예약됩니다.|  
+|**USER_DEFINED_TYPE_CATALOG**|**nvarchar (** 128 **)**|NULL 다음에 사용하도록 예약됩니다.|  
+|**USER_DEFINED_TYPE_SCHEMA**|**nvarchar (** 128 **)**|NULL 다음에 사용하도록 예약됩니다.|  
+|**USER_DEFINED_TYPE_NAME**|**nvarchar (** 128 **)**|NULL 다음에 사용하도록 예약됩니다.|  
+|**SCOPE_CATALOG**|**nvarchar (** 128 **)**|NULL 다음에 사용하도록 예약됩니다.|  
+|**SCOPE_SCHEMA**|**nvarchar (** 128 **)**|NULL 다음에 사용하도록 예약됩니다.|  
+|**SCOPE_NAME**|**nvarchar (** 128 **)**|NULL 다음에 사용하도록 예약됩니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;시스템 뷰](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Transact-sql&#41;&#40;정보 스키마 뷰](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [&#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys. 개체 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys. Transact-sql&#41;&#40;매개 변수](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
+ [sys.parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
   
   

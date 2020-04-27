@@ -19,10 +19,10 @@ ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d25713ba8fb298ce465910eae786befb710961d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899589"
 ---
 # <a name="sysdm_os_windows_info-transact-sql"></a>sys.dm_os_windows_info(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67899589"
   
   Windows에서 실행 되는 SQL Server에만 적용 됩니다. Windows가 아닌 호스트에서 실행 되는 SQL Server에 대 한 유사한 내용은 (예: Linux)를 보려면 [dm_os_host_info &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)를 사용 합니다. 
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**windows_release**|**nvarchar(256)**|Windows의 경우 릴리스 번호를 반환 합니다. 값 및 설명 목록은 [운영 체제 버전 (Windows)](/windows/desktop/SysInfo/operating-system-version)을 참조 하세요. NULL이 될 수 없습니다.|  
 |**windows_service_pack_level**|**nvarchar(256)**| Windows의 경우 Service Pack 번호를 반환 합니다. NULL이 될 수 없습니다. |  
@@ -63,7 +63,7 @@ FROM sys.dm_os_windows_info;
  `6.0              Service Pack 2                4            1033`  
   
 ## <a name="see-also"></a>참고 항목  
- [sys.dm_os_sys_info&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
+ [dm_os_sys_info &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [sys.dm_os_host_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)  
   
   

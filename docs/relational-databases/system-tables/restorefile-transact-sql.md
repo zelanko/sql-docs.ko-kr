@@ -20,10 +20,10 @@ ms.assetid: 8e40145a-8559-4abe-8e2a-39b818928009
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 788d0296087ee8980be0b0ecf56c43f09fb3780c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910197"
 ---
 # <a name="restorefile-transact-sql"></a>restorefile(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67910197"
 
   파일 그룹 이름을 사용하여 간접적으로 복원된 파일을 비롯하여 복원된 각 파일에 대한 행을 포함합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**restore_history_id**|**int**|해당되는 복원 작업을 식별하는 고유 ID입니다. **Restorehistory (restore_history_id)** 를 참조 합니다.|  
 |**file_number**|**숫자 (10, 0)**|복원된 파일의 파일 ID입니다. 이 번호는 각 데이터베이스 내에서 고유해야 합니다. NULL일 수 있습니다.<br /><br /> 데이터베이스를 데이터베이스 스냅샷으로 되돌릴 경우 이 값은 전체 복원과 같은 방식으로 채워집니다.|  

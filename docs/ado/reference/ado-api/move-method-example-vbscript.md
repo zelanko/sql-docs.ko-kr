@@ -15,16 +15,16 @@ ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d2075987e8c3faae9003b0edc4010fe7e4cedb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918161"
 ---
 # <a name="move-method-example-vbscript"></a>Move 메서드 예제(VBScript)
 이 예제에서는 [Move](../../../ado/reference/ado-api/move-method-ado.md) 메서드를 사용 하 여 사용자 입력을 기준으로 레코드 포인터를 배치 합니다.  
   
- Active Server 페이지 (ASP)에서 다음 예제를 사용 합니다. 이 완전 한 기능 예제를 보려면 C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb에 있는 데이터 원본 AdvWorks (SDK와 함께 설치 됨)을 사용 하거나 예제 코드에서 경로를 편집 하 여 반영 해야 합니다. 이 파일의 실제 위치입니다. 이 파일은 Microsoft Access 데이터베이스 파일입니다.  
+ Active Server 페이지 (ASP)에서 다음 예제를 사용 합니다. 이 완전 한 기능 예제를 보려면 C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb에 있는 데이터 원본 AdvWorks (SDK와 함께 설치 됨)를 사용 하거나 예제 코드에서 경로를 편집 하 여이 파일의 실제 위치를 반영 해야 합니다. 이 파일은 Microsoft Access 데이터베이스 파일입니다.  
   
  **찾기** 를 사용 하 여 Adovbs 파일을 찾은 다음 사용 하려는 디렉터리에 배치 합니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여 넣고 **MoveVBS**로 저장 합니다. 모든 브라우저에서 결과를 볼 수 있습니다.  
   

@@ -21,10 +21,10 @@ ms.assetid: 93f3a4c8-b91f-4ebb-8e96-9397bb3a1c43
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c51a69eb3604b937b9bf2aaf9a09aa383f2c1490
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046455"
 ---
 # <a name="sysfn_cdc_get_max_lsn-transact-sql"></a>sys.fn_cdc_get_max_lsn(Transact-SQL)
@@ -42,7 +42,7 @@ sys.fn_cdc_get_max_lsn ()
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- **binary (10)**  
+ **binary(10)**  
   
 ## <a name="remarks"></a>설명  
  이 함수는 [lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) 테이블의 start_lsn 열에서 최대 LSN을 반환 합니다. 즉, 이 LSN은 변경 내용이 데이터베이스 변경 테이블로 전파될 때 캡처 프로세스에 의해 처리되는 마지막 LSN이며, 데이터베이스에 대해 정의된 캡처 인스턴스와 연결된 모든 시간대의 상위 엔드포인트 역할도 합니다.  

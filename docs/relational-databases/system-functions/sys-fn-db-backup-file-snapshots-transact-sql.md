@@ -13,10 +13,10 @@ ms.assetid: 45010ff2-219f-4086-9ea4-016a6c17cddd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5159b72cb91cfdcf21129c6216cab4cf0e8d4dea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68120266"
 ---
 # <a name="sysfn_db_backup_file_snapshots-transact-sql"></a>sys. fn_db_backup_file_snapshots (Transact-sql)
@@ -40,17 +40,17 @@ sys.fn_db_backup_file_snapshots
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |file_id|**int**|데이터베이스의 파일 ID입니다. Null을 허용하지 않습니다.|  
 |snapshot_time|**nvarchar(260)**|REST API에서 반환 하는 스냅숏의 타임 스탬프입니다. 스냅숏이 없으면 NULL을 반환 합니다.|  
-|snapshot_url|**nvarchar (360)**|파일 스냅숏의 전체 URL입니다. 스냅숏이 없는 경우 NULL을 반환 합니다.|  
+|snapshot_url|**nvarchar(360)**|파일 스냅숏의 전체 URL입니다. 스냅숏이 없는 경우 NULL을 반환 합니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 VIEW DATABASE STATE 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_delete_backup_file_snapshot &#40;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)   
- [Transact-sql&#41;sp_delete_backup &#40;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
+ [sp_delete_backup&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
   
   

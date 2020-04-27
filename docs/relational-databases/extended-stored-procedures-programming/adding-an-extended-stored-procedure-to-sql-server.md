@@ -15,17 +15,17 @@ ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: bba543dbf89cb1dd3c0eb8a456a54c3c31c51d02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67903405"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>SQL Server에 확장 저장 프로시저 추가
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 CLR 통합을 사용 하세요.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하십시오.  
   
  확장 저장 프로시저 함수가 포함된 DLL은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 확장으로 사용됩니다. DLL을 설치 하려면 표준 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dll 파일이 포함 된 디렉터리 (C:\PROGRAM Files\Microsoft SQL Server\MSSQL12.0.* )와 같은 디렉터리에 파일을 복사 합니다. *기본적으로 x \MSSQL\Binn).  
   
@@ -39,15 +39,13 @@ ms.locfileid: "67903405"
 > [!IMPORTANT]  
 >  SQL Server 2005 이상으로 업그레이드하면 전체 경로에 등록되지 않은 기존 DLL은 작동하지 않습니다. 이 문제를 해결하려면 sp_dropextendedproc를 사용하여 DLL의 등록을 취소한 다음 전체 경로를 지정하여 sp_addextendedproc로 DLL을 다시 등록합니다.  
   
- 
-  `sp_addextendedproc`에 지정된 함수 이름은 DLL의 함수 이름과 대/소문자를 포함하여 정확히 일치해야 합니다. 예를 들어 다음 명령은 `xp_hello,`이라는 dll에 있는 `xp_hello.dll` 함수를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 저장 프로시저로 등록합니다.  
+ `sp_addextendedproc`에 지정된 함수 이름은 DLL의 함수 이름과 대/소문자를 포함하여 정확히 일치해야 합니다. 예를 들어 다음 명령은 `xp_hello,`이라는 dll에 있는 `xp_hello.dll` 함수를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 저장 프로시저로 등록합니다.  
   
 ```  
 sp_addextendedproc 'xp_hello', 'c:\Program Files\Microsoft SQL Server\MSSQL13.0.MSSQLSERVER\MSSQL\Binn\xp_hello.dll';  
 ```  
   
- 
-  `sp_addextendedproc`에 지정된 함수 이름이 DLL의 함수 이름과 정확히 일치하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 새 이름이 등록되지만 해당 이름을 사용할 수 없습니다. 예를 들어이 `xp_Hello` 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xp_hello.dll` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있는 확장 저장 프로시저로 등록 되더라도는를 사용 `xp_Hello` 하 여 나중에 함수를 호출 하는 경우 DLL에서 함수를 찾을 수 없습니다.  
+ `sp_addextendedproc`에 지정된 함수 이름이 DLL의 함수 이름과 정확히 일치하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 새 이름이 등록되지만 해당 이름을 사용할 수 없습니다. 예를 들어이 `xp_Hello` 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xp_hello.dll` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있는 확장 저장 프로시저로 등록 되더라도는를 사용 `xp_Hello` 하 여 나중에 함수를 호출 하는 경우 DLL에서 함수를 찾을 수 없습니다.  
   
 ```  
 --Register the function (xp_hello) with an initial upper case  
@@ -62,8 +60,7 @@ Server: Msg 17750, Level 16, State 1, Procedure xp_Hello, Line 1
 Could not load the DLL xp_hello.dll, or one of the DLLs it references. Reason: 127(The specified procedure could not be found.).  
 ```  
   
- 
-  `sp_addextendedproc`에 지정한 함수 이름이 DLL의 함수 이름과 정확히 일치하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 데이터 정렬에서 대/소문자를 구분하지 않는 경우 사용자는 이름의 대/소문자를 임의로 조합하여 확장 저장 프로시저를 호출할 수 있습니다.  
+ `sp_addextendedproc`에 지정한 함수 이름이 DLL의 함수 이름과 정확히 일치하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 데이터 정렬에서 대/소문자를 구분하지 않는 경우 사용자는 이름의 대/소문자를 임의로 조합하여 확장 저장 프로시저를 호출할 수 있습니다.  
   
 ```  
 --Register the function (xp_hello)  
@@ -80,8 +77,7 @@ DECLARE @txt varchar(33);
 EXEC xp_HELLO @txt OUTPUT;  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 데이터 정렬에서 대/소문자를 구분하는 경우에는 프로시저가 DLL의 함수 이름 및 데이터 정렬과 정확히 일치하도록 등록되었더라도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 대/소문자를 다르게 하여 프로시저를 호출하면 확장 저장 프로시저를 호출할 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 데이터 정렬에서 대/소문자를 구분하는 경우에는 프로시저가 DLL의 함수 이름 및 데이터 정렬과 정확히 일치하도록 등록되었더라도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 대/소문자를 다르게 하여 프로시저를 호출하면 확장 저장 프로시저를 호출할 수 없습니다.  
   
 ```  
 --Register the function (xp_hello)  
@@ -95,8 +91,7 @@ EXEC xp_HELLO @txt OUTPUT;
 Server: Msg 2812, Level 16, State 62, Line 1  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 중지한 후 다시 시작할 필요는 없습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 중지한 후 다시 시작할 필요는 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_addextendedproc &#40;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   

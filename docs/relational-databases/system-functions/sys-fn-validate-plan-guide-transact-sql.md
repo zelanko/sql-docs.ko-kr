@@ -21,10 +21,10 @@ ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a76835272ed86faeab807f97f6e8801985062733
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68059183"
 ---
 # <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide(Transact-SQL)
@@ -48,12 +48,12 @@ sys.fn_validate_plan_guide ( plan_guide_id )
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |msgnum|**int**|오류 메시지 ID입니다.|  
 |severity|**tinyint**|1에서 25 사이의 메시지 심각도입니다.|  
 |state|**smallint**|오류가 발생한 코드의 지점을 나타내는 오류의 상태 번호입니다.|  
-|message|**nvarchar (2048)**|오류의 메시지 텍스트입니다.|  
+|message|**nvarchar(2048)**|오류의 메시지 텍스트입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  OBJECT 범위 계획 지침에는 참조된 개체에 대한 VIEW DEFINITION 또는 ALTER 권한이 필요하고 계획 지침에 제공된 쿼리나 일괄 처리에 대한 권한이 필요합니다. 예를 들어 일괄 처리에 SELECT 문이 있으면 참조 개체의 SELECT 권한이 필요합니다.  

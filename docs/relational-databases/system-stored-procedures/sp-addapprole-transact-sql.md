@@ -18,10 +18,10 @@ ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 74860a8f4c8dee263ea7ee0eea75679c721d1fa5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68032985"
 ---
 # <a name="sp_addapprole-transact-sql"></a>sp_addapprole(Transact-SQL)
@@ -52,8 +52,7 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
  0(성공) 또는 1(실패)  
   
 ## <a name="remarks"></a>설명  
- 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자 및 역할은 스키마와 완전히 구분되지 않았습니다. 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터 스키마는 역할과 완전히 구분됩니다. 이 새 아키텍처는 CREATE APPLICATION ROLE의 동작에 반영되었습니다. 이 문은 **sp_addapprole**를 대체 합니다.  
+ 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자 및 역할은 스키마와 완전히 구분되지 않았습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터 스키마는 역할과 완전히 구분됩니다. 이 새 아키텍처는 CREATE APPLICATION ROLE의 동작에 반영되었습니다. 이 문은 **sp_addapprole**를 대체 합니다.  
   
  이전 버전과의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]호환성을 유지 하기 위해 **sp_addapprole** 은 다음을 수행 합니다.  
   

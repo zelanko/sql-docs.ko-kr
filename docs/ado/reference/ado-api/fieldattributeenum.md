@@ -16,16 +16,16 @@ ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0d375ed3dd4ea7ae7e2e5405d1feec962c5f56ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918700"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 [Field](../../../ado/reference/ado-api/field-object.md) 개체의 특성을 하나 이상 지정 합니다.  
   
-|지속적임|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|공급자가 필드 값을 캐시 하 고 이후 읽기가 캐시에서 수행 됨을 나타냅니다.|  
 |**adFldFixed**|0x10|필드에 고정 길이 데이터가 포함 되어 있음을 나타냅니다.|  
@@ -48,7 +48,7 @@ ms.locfileid: "67918700"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 동급  
  Package: **com.ms.wfc.data**  
   
-|지속적임|  
+|상수|  
 |--------------|  
 |AdoEnums. FieldAttribute 지연 됨|  
 |AdoEnums. FieldAttribute|  

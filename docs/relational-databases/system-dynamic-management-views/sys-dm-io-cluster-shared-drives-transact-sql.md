@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d6633988bf660de8225b201266a4f2ef7ebea55e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900391"
 ---
 # <a name="sysdm_io_cluster_shared_drives-transact-sql"></a>sys.dm_io_cluster_shared_drives(Transact-SQL)
@@ -35,14 +35,13 @@ ms.locfileid: "67900391"
 > [!NOTE]  
 >  에서 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]이를 호출 하려면 이름 **sys. dm_pdw_nodes_io_cluster_shared_drives**를 사용 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|**DriveName**|**nchar (2)**|클러스터 공유 디스크 배열에 속한 개별 디스크를 나타내는 드라이브 이름(드라이브 문자)입니다. 열은 Null을 허용하지 않습니다.|  
+|**DriveName**|**nchar(2)**|클러스터 공유 디스크 배열에 속한 개별 디스크를 나타내는 드라이브 이름(드라이브 문자)입니다. 열은 Null을 허용하지 않습니다.|  
 |**pdw_node_id**|**int**|**적용 대상**: sspdw<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
 ## <a name="remarks"></a>설명  
- 클러스터를 활성화한 경우 인스턴스가 다른 노드로 장애 조치(Failover)된 후 공유 디스크에 액세스할 수 있도록 하려면 장애 조치 클러스터 인스턴스에는 공유 디스크에 상주할 데이터 및 로그 파일이 필요합니다. 이 뷰의 각 행은 이 클러스터형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 사용하는 단일 공유 디스크를 나타냅니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 데이터 또는 로그 파일은 이 뷰에 나열된 디스크에만 저장할 수 있습니다. 이 뷰에 나열된 디스크는 인스턴스와 연관된 클러스터 리소스 그룹에 있는 디스크입니다.  
+ 클러스터를 활성화한 경우 인스턴스가 다른 노드로 장애 조치(Failover)된 후 공유 디스크에 액세스할 수 있도록 하려면 장애 조치 클러스터 인스턴스에는 공유 디스크에 상주할 데이터 및 로그 파일이 필요합니다. 이 뷰의 각 행은 이 클러스터형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 사용하는 단일 공유 디스크를 나타냅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 데이터 또는 로그 파일은 이 뷰에 나열된 디스크에만 저장할 수 있습니다. 이 뷰에 나열된 디스크는 인스턴스와 연관된 클러스터 리소스 그룹에 있는 디스크입니다.  
   
 > [!NOTE]  
 >  이 뷰는 이후 릴리스에서 더 이상 사용되지 않습니다. 대신 [dm_io_cluster_valid_path_names &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md) 를 사용 하는 것이 좋습니다.  

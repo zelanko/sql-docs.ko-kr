@@ -17,10 +17,10 @@ ms.assetid: d81ab76f-1aa8-4ccf-92ec-b65254dc3ea1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c3626f91018714fa4d67304c92ce464d82fb5c8e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917218"
 ---
 # <a name="requery-method"></a>Requery 메서드
@@ -35,7 +35,7 @@ recordset.Requery Options
   
 #### <a name="parameters"></a>매개 변수  
  *옵션*  
- (선택 사항) 이 작업에 영향을 주는 [Executeoptionenum](../../../ado/reference/ado-api/executeoptionenum.md) 및 [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) 값이 포함 된 비트 마스크입니다.  
+ 선택 사항입니다. 이 작업에 영향을 주는 [Executeoptionenum](../../../ado/reference/ado-api/executeoptionenum.md) 및 [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) 값이 포함 된 비트 마스크입니다.  
   
 > [!NOTE]
 >  *옵션이* **adasyncexecute**로 설정 된 경우이 작업은 비동기적으로 실행 되며 종료 될 때 [RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md) 이벤트가 발생 합니다. **AdExecuteNoRecords** 또는 **AdExecuteStream** 의 **Executeopenenum** 값은 **Requery**와 함께 사용 하면 안 됩니다.  

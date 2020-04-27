@@ -18,16 +18,15 @@ ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1bf39a9a1262f30e3c0bbd6fd2ea5892a55540dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68072675"
 ---
 # <a name="sp_addlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로컬 인스턴스의 로그인과 원격 서버 보안 계정 간의 매핑을 만들거나 업데이트합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -71,8 +70,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
   
  sp_addlinkedserver를 실행하면 로컬 서버의 모든 로그인과 연결된 서버의 원격 로그인 간의 기본 매핑이 자동으로 생성됩니다. 기본 매핑은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 로컬 로그인 대신 연결된 서버에 연결할 때 해당 로그인의 사용자 자격 증명을 사용함을 나타냅니다. 이는 로컬 사용자 이름을 지정 하지 @useself 않고 연결 된 서버에 대해를 **true** 로 설정 하 여 sp_addlinkedsrvlogin를 실행 하는 것과 같습니다. 기본 매핑을 변경하거나 특정 로컬 로그인에 새 매핑을 추가하는 경우에만 sp_addlinkedsrvlogin을 사용합니다. 기본 매핑 또는 다른 매핑을 삭제하려면 sp_droplinkedsrvlogin을 사용합니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 sp_addlinkedsrvlogin을 사용하여 미리 지정된 로그인 매핑을 만드는 대신 다음 조건이 모두 충족될 때 쿼리를 실행하는 사용자의 Windows 보안 자격 증명(Windows 로그인 이름 및 암호)을 사용하여 연결된 서버에 자동으로 연결할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 sp_addlinkedsrvlogin을 사용하여 미리 지정된 로그인 매핑을 만드는 대신 다음 조건이 모두 충족될 때 쿼리를 실행하는 사용자의 Windows 보안 자격 증명(Windows 로그인 이름 및 암호)을 사용하여 연결된 서버에 자동으로 연결할 수 있습니다.  
   
 -   사용자가 Windows 인증 모드를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결합니다.  
   
@@ -99,7 +97,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
 EXEC sp_addlinkedsrvlogin 'Accounts';  
 ```  
   
- 또는  
+ Or  
   
 ```  
 EXEC sp_addlinkedsrvlogin 'Accounts', 'true';  
@@ -120,7 +118,7 @@ EXEC sp_addlinkedsrvlogin 'Accounts', 'false', 'Domain\Mary', 'MaryP', 'd89q3w4u
   
 ## <a name="see-also"></a>참고 항목  
  [연결 된 서버 카탈로그 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
- [sp_addlinkedserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [Transact-sql&#41;sp_addlinkedserver &#40;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [Transact-sql&#41;sp_droplinkedsrvlogin &#40;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

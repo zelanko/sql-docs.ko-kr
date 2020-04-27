@@ -17,10 +17,10 @@ ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 62b78b608526ae0d6943a7416a21687fd1e51412
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918778"
 ---
 # <a name="executecomplete-event-ado"></a>ExecuteComplete 이벤트(ADO)
@@ -55,7 +55,7 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  [Connection](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. 작업이 실행 된 연결입니다.  
   
 ## <a name="remarks"></a>설명  
- **ExecuteComplete** 이벤트는 연결로 인해 발생할 수 있습니다 **.** [](../../../ado/reference/ado-api/execute-method-ado-connection.md)명령을 실행 **합니다.** [실행](../../../ado/reference/ado-api/execute-method-ado-command.md), **레코드 집합** , **레코드 집합** 을 [엽니다](../../../ado/reference/ado-api/open-method-ado-recordset.md). [Requery](../../../ado/reference/ado-api/requery-method.md)또는 **레코드 집합입니다.** [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) 메서드.  
+ **ExecuteComplete** 이벤트는 연결로 인해 발생할 수 있습니다 **.** [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)명령을 실행 **합니다.** [실행](../../../ado/reference/ado-api/execute-method-ado-command.md), **레코드 집합** , **레코드 집합** 을 [엽니다](../../../ado/reference/ado-api/open-method-ado-recordset.md). [Requery](../../../ado/reference/ado-api/requery-method.md)또는 **레코드 집합입니다.** [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) 메서드.  
   
 ## <a name="see-also"></a>참고 항목  
  [ADO Events 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   

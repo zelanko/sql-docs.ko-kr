@@ -14,10 +14,10 @@ ms.assetid: f68f58bc-ad28-46cc-9fb3-099e1a678397
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 485d011fa6762acd04cad54ff7fffc8d8136e063
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917951"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy(ADO - WFC 구문)
@@ -49,4 +49,4 @@ public Object ObjectProxy.( String method, Object[] args)
  서버에서 호출할 메서드의 이름을 포함 하는 문자열입니다.  
   
  *args*  
- (선택 사항) 서버에 있는 메서드에 대 한 인수인 개체의 배열입니다. Java 데이터 형식은 서버에서 사용 하기에 적합 한 데이터 형식으로 자동으로 변환 됩니다.
+ 선택 사항입니다. 서버에 있는 메서드에 대 한 인수인 개체의 배열입니다. Java 데이터 형식은 서버에서 사용 하기에 적합 한 데이터 형식으로 자동으로 변환 됩니다.

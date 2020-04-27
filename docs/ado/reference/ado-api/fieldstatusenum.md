@@ -16,10 +16,10 @@ ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3ad005a4c26a033f6c97d97def4cd55d867c14e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918662"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
@@ -27,7 +27,7 @@ ms.locfileid: "67918662"
   
  **Adfieldpending\* ** 값은 상태를 설정 하는 작업을 나타내며 다른 상태 값과 결합 될 수 있습니다.  
   
-|지속적임|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adFieldAlreadyExists**|26|지정 된 필드가 이미 있음을 나타냅니다.|  
 |**adFieldBadStatus**|12|잘못 된 상태 값이 ADO에서 OLE DB 공급자로 전송 되었음을 나타냅니다. OLE DB 1.0 또는 1.1 공급자 또는 잘못 된 [값](../../../ado/reference/ado-api/value-property-ado.md) 과 [상태](../../../ado/reference/ado-api/status-property-ado-field.md)조합이 포함 될 수 있습니다.|  
@@ -39,10 +39,10 @@ ms.locfileid: "67918662"
 |**adFieldDefault**|13|필드의 기본값이 데이터를 설정할 때 사용 되었음을 나타냅니다.|  
 |**adFieldDoesNotExist**|16|지정 된 필드가 존재 하지 않음을 나타냅니다.|  
 |**adFieldIgnore**|15|원본에서 데이터 값을 설정할 때이 필드를 생략 했음을 나타냅니다. 공급자에 값이 설정 되어 있지 않습니다.|  
-|**Adfield와 Ity위반**|10|필드가 계산 된 엔터티 또는 파생 된 엔터티 이므로 수정할 수 없음을 나타냅니다.|  
+|**adFieldIntegrityViolation**|10|필드가 계산 된 엔터티 또는 파생 된 엔터티 이므로 수정할 수 없음을 나타냅니다.|  
 |**adFieldInvalidURL**|17|데이터 원본 URL에 잘못 된 문자가 포함 되어 있음을 나타냅니다.|  
 |**adFieldIsNull**|3|공급자가 VT_NULL 형식의 VARIANT 값을 반환 했으며 필드가 비어 있지 않음을 나타냅니다.|  
-|**adFieldOK**|0|Default. 필드가 성공적으로 추가 또는 삭제 되었음을 나타냅니다.|  
+|**adFieldOK**|0|기본값 필드가 성공적으로 추가 또는 삭제 되었음을 나타냅니다.|  
 |**adFieldOutOfSpace**|22|공급자가 이동 또는 복사 작업을 완료 하기에 충분 한 저장소 공간을 확보할 수 없음을 나타냅니다.|  
 |**adFieldPendingChange**|0x40000|는 필드가 삭제 된 후 다른 데이터 형식으로 다시 추가 되었거나 이전에 **adFieldOK** 상태가 된 필드의 값이 변경 되었음을 나타냅니다. 필드의 마지막 형태는 [Update](../../../ado/reference/ado-api/update-method.md) 메서드를 호출한 후에 [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션을 수정 합니다.|  
 |**adFieldPendingDelete**|0x20000|**삭제** 작업으로 인해 상태가 설정 되었음을 나타냅니다. **업데이트** 메서드를 호출한 후 필드가 **Fields** 컬렉션에서 삭제 되도록 표시 되었습니다.|  

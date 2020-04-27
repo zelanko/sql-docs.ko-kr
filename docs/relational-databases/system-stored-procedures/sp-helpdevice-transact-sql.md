@@ -18,10 +18,10 @@ ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0db0242e5bdd9e04d3d7c424382933121c2e0ac2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67902988"
 ---
 # <a name="sp_helpdevice-transact-sql"></a>sp_helpdevice(Transact-SQL)
@@ -49,14 +49,14 @@ sp_helpdevice [ [ @devname = ] 'name' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**device_name**|**sysname**|논리적 디바이스 이름입니다.|  
 |**physical_name**|**nvarchar(260)**|물리적 파일 이름입니다.|  
 |**한**|**nvarchar(255)**|디바이스의 설명입니다.|  
-|**업무**|**int**|**설명** 열의 상태 설명에 해당 하는 숫자입니다.|  
+|**status**|**int**|**설명** 열의 상태 설명에 해당 하는 숫자입니다.|  
 |**cntrltype**|**smallint**|디바이스의 컨트롤러 유형입니다.<br /><br /> 2 = 디스크 디바이스<br /><br /> 5 = 테이프 디바이스|  
-|**크기가**|**int**|디바이스 크기(2KB 페이지)입니다.|  
+|**size**|**int**|디바이스 크기(2KB 페이지)입니다.|  
   
 ## <a name="remarks"></a>설명  
  *Name* 을 지정 하면 **sp_helpdevice** 는 지정 된 덤프 장치에 대 한 정보를 표시 합니다. *Name* 을 지정 하지 않으면 **sp_helpdevice** 는 **backup_devices** 카탈로그 뷰의 모든 덤프 장치에 대 한 정보를 표시 합니다.  
@@ -74,8 +74,8 @@ EXEC sp_helpdevice;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [sp_addumpdevice&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
- [sp_dropdevice&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
+ [Transact-sql&#41;sp_addumpdevice &#40;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
+ [Transact-sql&#41;sp_dropdevice &#40;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
  [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

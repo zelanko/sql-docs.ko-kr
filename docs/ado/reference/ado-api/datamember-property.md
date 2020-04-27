@@ -16,17 +16,17 @@ ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 623f9b1f1e8873ddc4819bb8500c11edf09f5f76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919227"
 ---
 # <a name="datamember-property"></a>DataMember 속성
 [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) 속성이 참조 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에서 검색 되는 데이터 멤버의 이름을 나타냅니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- **문자열** 값을 설정 하거나 반환 합니다. 이름은 대/소문자를 구분 하지 않습니다.  
+ **문자열** 값을 설정 하거나 반환 합니다. 이름은 대/소문자를 구분하지 않습니다.  
   
 ## <a name="remarks"></a>설명  
  이 속성은 데이터 환경을 사용 하 여 데이터 바인딩된 컨트롤을 만드는 데 사용 됩니다. 데이터 환경에서는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체로 표시 되는 명명 된 개체 (데이터 멤버)를 포함 하는 데이터 (데이터 원본) 컬렉션을 유지 관리 합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "67919227"
   
  **DataMember** 속성은 **DataSource** 속성으로 지정 되는 개체를 **레코드 집합** 개체로 나타낼지 여부를 결정 합니다. 이 속성을 설정 하려면 먼저 **레코드 집합** 개체를 닫아야 합니다. **Datasource 속성이 datasource** 속성 **앞에 설정** 되어 있지 않거나 **datasource** 속성에 지정 된 개체에서 **datamember** 이름이 인식 되지 않는 경우 오류가 생성 됩니다.  
   
-## <a name="usage"></a>사용  
+## <a name="usage"></a>사용법  
   
 ```  
 Dim rs as New ADODB.Recordset  

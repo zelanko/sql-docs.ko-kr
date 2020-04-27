@@ -18,10 +18,10 @@ ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 71a070de7c74d353be395628566c0bd3f63fd99a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68042739"
 ---
 # <a name="fn_syscollector_get_execution_stats-transact-sql"></a>fn_syscollector_get_execution_stats(Transact-SQL)
@@ -46,7 +46,7 @@ fn_syscollector_get_execution_stats ( log_id )
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |avg_row_count_in|**int**|패키지의 데이터 흐름 태스크에 들어간 평균 행 수입니다.<br /><br /> 참고: 데이터 흐름 태스크는 데이터를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 처리 하는 구성 요소입니다. 이 데이터는 관계형 형식으로 되어 있으므로 행으로 이루어진 입력 데이터 세트을 가집니다. 이는 태스크에 들어간 행의 수입니다. 데이터는 변환된 후에 행으로 이루어진 결과 집합으로 출력됩니다. 데이터 흐름 태스크는 데이터를 변환하고 행으로 이루어진 결과 집합을 출력합니다. 이 출력은 태스크에서 빠져나간 행의 수입니다.|  
 |min_row_count_in|**int**|패키지의 데이터 흐름 태스크에 들어간 최소 행 수입니다.|  

@@ -16,18 +16,18 @@ ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 68aaa0bfb8aa72c9e94a8b5db65768fe85895f0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917746"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 [매개 변수가](../../../ado/reference/ado-api/parameter-object.md) 입력 매개 변수, 출력 매개 변수, 입력 및 출력 매개 변수 또는 저장 프로시저의 반환 값을 나타내는지 여부를 지정 합니다.  
   
-|지속적임|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
-|**adParamInput**|1|Default. 매개 변수가 입력 매개 변수를 나타내는지 여부를 나타냅니다.|  
+|**adParamInput**|1|기본값 매개 변수가 입력 매개 변수를 나타내는지 여부를 나타냅니다.|  
 |**adParamInputOutput**|3|매개 변수가 입력 매개 변수 및 출력 매개 변수를 모두 나타내도록 지정 합니다.|  
 |**adParamOutput**|2|매개 변수가 출력 매개 변수를 나타내는지 여부를 나타냅니다.|  
 |**adParamReturnValue**|4|매개 변수가 반환 값 임을 나타냅니다.|  
@@ -36,7 +36,7 @@ ms.locfileid: "67917746"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 동급  
  Package: **com.ms.wfc.data**  
   
-|지속적임|  
+|상수|  
 |--------------|  
 |AdoEnums. ParameterDirection|  
 |AdoEnums. ParameterDirection 출력|  

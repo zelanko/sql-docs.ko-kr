@@ -14,10 +14,10 @@ ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32a36388b1be6dc7f5bab6bbb0bd9f97b01aac46
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910617"
 ---
 # <a name="adox-properties"></a>ADOX 속성
@@ -28,7 +28,7 @@ ms.locfileid: "67910617"
 |[특성](../../../ado/reference/adox-api/attributes-property-adox.md)|열 특징을 설명 합니다.|  
 |[클러스터형](../../../ado/reference/adox-api/clustered-property-adox.md)|인덱스가 클러스터형 인지 여부를 나타냅니다.|  
 |[명령](../../../ado/reference/adox-api/command-property-adox.md)|프로시저를 만들거나 실행 하는 데 사용할 수 있는 ADO **명령** 개체를 지정 합니다.|  
-|[수](../../../ado/reference/ado-api/count-property-ado.md)|컬렉션의 개체 수를 나타냅니다.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|컬렉션의 개체 수를 나타냅니다.|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|개체를 만든 날짜를 나타냅니다.|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|개체가 마지막으로 수정 된 날짜를 나타냅니다.|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|열의 최대 크기를 나타냅니다.|  
@@ -51,4 +51,4 @@ ms.locfileid: "67910617"
   
 ## <a name="see-also"></a>참고 항목  
  [ADOX API 참조](../../../ado/reference/adox-api/adox-api-reference.md)   
- [데이터 정의 언어 및 보안을 위한 ADO 확장(ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+ [DDL(데이터 정의 언어) 및 보안을 위한 ADO 확장(ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

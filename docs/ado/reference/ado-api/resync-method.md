@@ -19,10 +19,10 @@ ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e2f83a3637af8f0e89c4125d3207c8c54b86763
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917166"
 ---
 # <a name="resync-method"></a>Resync 메서드
@@ -37,10 +37,10 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
 #### <a name="parameters"></a>매개 변수  
  *AffectRecords*  
- (선택 사항) 다시 **동기화** 방법이 영향을 줄 수 있는 레코드 수를 결정 하는 [AffectEnum](../../../ado/reference/ado-api/affectenum.md) 값입니다. 기본값은 **adAffectAll**입니다. **Record** 개체의 **Fields** 컬렉션에 대 한 **Resync** 메서드에서는이 값을 사용할 수 없습니다.  
+ 선택 사항입니다. 다시 **동기화** 방법이 영향을 줄 수 있는 레코드 수를 결정 하는 [AffectEnum](../../../ado/reference/ado-api/affectenum.md) 값입니다. 기본값은 **adAffectAll**입니다. **Record** 개체의 **Fields** 컬렉션에 대 한 **Resync** 메서드에서는이 값을 사용할 수 없습니다.  
   
  *ResyncValues*  
- (선택 사항) 내부 값을 덮어쓸지 여부를 지정 하는 [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) 값입니다. 기본값은 **adResyncAllValues**입니다.  
+ 선택 사항입니다. 내부 값을 덮어쓸지 여부를 지정 하는 [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) 값입니다. 기본값은 **adResyncAllValues**입니다.  
   
 ## <a name="remarks"></a>설명  
   

@@ -16,16 +16,16 @@ ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 15ae2aac2851c496b6cac9e47d37fe5fa26b8e34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918372"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체에 대 한 트랜잭션 격리 수준을 지정 합니다.  
   
-|지속적임|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adXactUnspecified**|-1|공급자가 지정 된 것과 다른 격리 수준을 사용 하 고 있지만 수준을 확인할 수 없음을 나타냅니다.|  
 |**adXactChaos**|16|격리 된 높은 트랜잭션 으로부터의 보류 중인 변경 내용을 덮어쓸 수 없음을 나타냅니다.|  
@@ -40,7 +40,7 @@ ms.locfileid: "67918372"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 동급  
  Package: **com.ms.wfc.data**  
   
-|지속적임|  
+|상수|  
 |--------------|  
 |AdoEnums. IsolationLevel|  
 |AdoEnums. IsolationLevel|  

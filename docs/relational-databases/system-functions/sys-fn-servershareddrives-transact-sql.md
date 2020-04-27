@@ -21,10 +21,10 @@ ms.assetid: ff01eff7-8cb6-460c-ba7a-6a52bda6d471
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 71858ee3c57af8d94bdf4ef4addad720655942f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68122546"
 ---
 # <a name="sysfn_servershareddrives-transact-sql"></a>sys.fn_servershareddrives(Transact-SQL)
@@ -50,8 +50,7 @@ fn_servershareddrives()
  현재 서버 인스턴스가 클러스터형 서버가 아닌 경우 **fn_servershareddrives** 는 빈 행 집합을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
- 
-  `fn_servershareddrives`는 이 클러스터형 서버가 사용하는 공유 드라이브의 목록을 반환합니다. 이러한 공유 드라이브는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스와 동일한 클러스터 그룹에 속합니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스도 이 드라이브에 종속됩니다.  
+ `fn_servershareddrives`는 이 클러스터형 서버가 사용하는 공유 드라이브의 목록을 반환합니다. 이러한 공유 드라이브는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스와 동일한 클러스터 그룹에 속합니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스도 이 드라이브에 종속됩니다.  
   
  이 함수는 사용자가 사용할 수 있는 드라이브를 식별하는 데 유용합니다.  
   

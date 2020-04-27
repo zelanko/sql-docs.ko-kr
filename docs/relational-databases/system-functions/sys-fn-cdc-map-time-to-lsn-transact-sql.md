@@ -21,10 +21,10 @@ ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7f4f6820aeeca8b600631810ed35933d2519b495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046336"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn(Transact-SQL)
@@ -58,7 +58,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
  대조할 날짜/시간 값입니다. *tracking_time* 은 **datetime**입니다.  
   
 ## <a name="return-type"></a>반환 형식  
- **binary (10)**  
+ **binary(10)**  
   
 ## <a name="remarks"></a>설명  
  **Fn_cdc_map_time_lsn** 를 사용 하 여 datetime 범위를 lsn 범위에 매핑할 수 있는 방법을 이해 하려면 다음 시나리오를 고려 하십시오. 변경 데이터를 매일 추출하려는 고객이 있다고 가정해 보십시오. 즉, 고객은 지정된 날에 자정까지(자정 포함)의 변경 내용만 원합니다. 시간 범위의 하한은 전날 자정까지이며 자정은 포함하지 않습니다. 상한은 지정된 날의 자정까지이며 자정도 포함합니다. 다음 예에서는 **fn_cdc_map_time_to_lsn** 함수를 사용 하 여이 시간 기반 범위를 변경 데이터 캡처 열거 함수에서 필요한 lsn 기반 범위에 체계적으로 매핑하여 해당 범위 내의 모든 변경 내용을 반환 하는 방법을 보여 줍니다.  

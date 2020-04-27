@@ -46,10 +46,10 @@ ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fe7e807fc38d6f1cf6f72e5b19539bb839e9c08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918362"
 ---
 # <a name="item-property-ado"></a>Item 속성(ADO)
@@ -65,7 +65,7 @@ Set object = collection.Item ( Index )
  개체 참조를 반환 합니다.  
   
 ## <a name="parameters"></a>매개 변수  
- *인덱싱할*  
+ *인덱스*  
  컬렉션에 있는 개체의 이름 또는 서 수로 계산 되는 **변형** 식입니다.  
   
 ## <a name="remarks"></a>설명  

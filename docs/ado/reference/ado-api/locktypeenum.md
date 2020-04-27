@@ -16,16 +16,16 @@ ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ae822794b1b06a975e1cc3cd397b5a5f00036dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918251"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 편집 하는 동안 레코드에 적용 되는 잠금 유형을 지정 합니다.  
   
-|지속적임|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adLockBatchOptimistic**|4|낙관적 일괄 처리 업데이트를 나타냅니다. 일괄 업데이트 모드에 필요 합니다.|  
 |**adLockOptimistic**|3|낙관적 잠금, 레코드 별로 기록을 나타냅니다. 공급자는 낙관적 잠금을 사용 하 고 [Update](../../../ado/reference/ado-api/update-method.md) 메서드를 호출 하는 경우에만 레코드를 잠급니다.|  
@@ -36,7 +36,7 @@ ms.locfileid: "67918251"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 동급  
  Package: **com.ms.wfc.data**  
   
-|지속적임|  
+|상수|  
 |--------------|  
 |AdoEnums 낙관적|  
 |AdoEnums|  

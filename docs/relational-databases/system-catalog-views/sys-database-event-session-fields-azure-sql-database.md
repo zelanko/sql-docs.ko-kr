@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f5486fa6f9100e61dbd25ad029f1024115485111
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67915119"
 ---
 # <a name="sysdatabase_event_session_fields-azure-sql-database"></a>sys.database_event_session_fields(Azure SQL Database)
@@ -27,7 +27,7 @@ ms.locfileid: "67915119"
 |-|  
 |**적용**대상: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 이상 버전.|  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|이벤트 세션의 ID입니다. Null을 허용하지 않습니다.|  
 |object_id|**int**|이 필드와 관련된 개체의 ID입니다. Null을 허용하지 않습니다.|  
@@ -42,7 +42,7 @@ ms.locfileid: "67915119"
   
 ||||  
 |-|-|-|  
-|원본|수행할 작업|관계|  
+|시작|대상|관계|  
 |database_event_session_actions. event_session_id|database_event_sessions. event_session_id|다 대 일|  
 |database_event_session_actions. event_id<br /><br /> database_event_session_actions. object_id<br /><br /> database_event_session_actions. event_session_id|database_event_session_events. event_session_id<br /><br /> database_event_session_events. event_id|다 대 일|  
 |database_event_session_actions. event_session_id<br /><br /> database_event_session_actions. object_id|database_event_session_targets. event_session_id<br /><br /> database_event_session_targets. target_id|다 대 일|  

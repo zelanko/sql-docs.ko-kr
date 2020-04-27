@@ -19,10 +19,10 @@ ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 44c42bfebdd1a5b4e74a4a95243fb0c0606e9908
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900260"
 ---
 # <a name="sysdm_os_cluster_nodes-transact-sql"></a>sys.dm_os_cluster_nodes(Transact-SQL)
@@ -32,13 +32,11 @@ ms.locfileid: "67900260"
   
 > **참고:** 또는 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서이를 호출 하려면 이름 **sys. dm_pdw_nodes_os_cluster_nodes**을 사용 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|**NodeName**|**sysname**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스(가상 서버) 구성에 있는 노드의 이름입니다.|  
+|**NodeName**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스(가상 서버) 구성에 있는 노드의 이름입니다.|  
 |상태|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치 (failover) 클러스터 인스턴스의 노드 상태: 0, 1, 2, 3,-1. 자세한 내용은 [Getclusternodestate 함수](https://go.microsoft.com/fwlink/?LinkId=204794)를 참조 하세요.|  
-|status_description|**nvarchar (20)**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 노드의 상태에 대한 설명입니다.<br /><br /> 0 = 가동 중<br /><br /> 1 = 중지됨<br /><br /> 2 = 일시 중지됨<br /><br /> 3 = 조인 중<br /><br /> -1 = 알 수 없음|  
+|status_description|**nvarchar (20)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 노드의 상태에 대한 설명입니다.<br /><br /> 0 = 가동 중<br /><br /> 1 = 중지됨<br /><br /> 2 = 일시 중지됨<br /><br /> 3 = 조인 중<br /><br /> -1 = 알 수 없음|  
 |is_current_owner|bit|1은 이 노드가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 리소스의 현재 소유자임을 의미합니다.|  
 |pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
@@ -48,8 +46,7 @@ ms.locfileid: "67900260"
 > **참고:** 이 뷰는 이후 릴리스에서 더 이상 사용 되지 않을 fn_virtualservernodes 함수를 대체 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 VIEW SERVER STATE 권한이 필요합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 VIEW SERVER STATE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 sys. dm_os_cluster_nodes를 사용하여 클러스터형 서버 인스턴스의 노드를 반환합니다.  

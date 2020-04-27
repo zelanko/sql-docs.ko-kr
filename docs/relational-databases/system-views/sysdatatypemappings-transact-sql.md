@@ -18,10 +18,10 @@ ms.assetid: 5dfafb70-3e3d-4465-b293-1acff1f855b6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d58525ec4bcedc4249466be93628a7c1baa21bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910142"
 ---
 # <a name="sysdatatypemappings-transact-sql"></a>sysdatatypemappings(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67910142"
 
   **Msdb.dbo.sysdatatypemappings** 뷰는 SQL SERVER 아닌 DBMS (데이터베이스 관리 시스템)의 데이터 형식과 SQL Server 데이터 형식 간의 매핑을 표시 하는 데 사용 됩니다. 이 뷰는 **msdb** 데이터베이스에 저장 됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**mapping_id**|**int**|데이터 형식 매핑의 ID입니다.|  
 |**source_dbms**|**sysname**|데이터 형식이 매핑된 DBMS의 이름을 나타내며 다음 중 하나일 수 있습니다.<br /><br /> **MSSQLSERVER** = 원본이 SQL Server 데이터베이스입니다.<br /><br /> **Oracle** = 원본이 ORACLE 데이터베이스입니다.|  

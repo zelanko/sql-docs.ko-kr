@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee626b9eef8cf2f2e80217b2a3709271a227f293
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67906120"
 ---
 # <a name="sysfn_helpcollations-transact-sql"></a>sys.fn_helpcollations(Transact-SQL)
@@ -48,7 +48,7 @@ fn_helpcollations ()
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |속성|**sysname**|표준 데이터 정렬 이름입니다.|  
-|Description|**nvarchar (1000)**|데이터 정렬에 대한 설명입니다.|  
+|설명|**nvarchar(1000)**|데이터 정렬에 대한 설명입니다.|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Windows 데이터 정렬을 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 지원 되는 Windows 데이터 정렬 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발 된 데이터 정렬 (<80)의 제한 된 수 ()도 지원 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터 정렬은 이전 버전과의 호환성을 위해 계속 지원 되지만 새로운 개발 작업에는 사용할 수 없습니다. Windows 데이터 정렬에 대한 자세한 내용은 [Windows Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)을 참조하세요. 데이터 정렬에 대한 자세한 내용은 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
   

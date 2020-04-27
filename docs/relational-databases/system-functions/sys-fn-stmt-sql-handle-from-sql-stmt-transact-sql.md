@@ -14,16 +14,16 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 92ebff45c8599e6257ad22f563da6af5067d8e3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68059268"
 ---
 # <a name="sysfn_stmt_sql_handle_from_sql_stmt-transact-sql"></a>sys. fn_stmt_sql_handle_from_sql_stmt (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  지정 된 **** 매개 변수화 형식 [!INCLUDE[tsql](../../includes/tsql-md.md)] (simple 또는 강제) 아래에 있는 문의 stmt_sql_handle를 가져옵니다. 이렇게 하면 텍스트를 알고 있을 때 **stmt_sql_handle** 를 사용 하 여 쿼리 저장소에 저장 된 쿼리를 참조할 수 있습니다.  
+  지정 된 **stmt_sql_handle** 매개 변수화 형식 [!INCLUDE[tsql](../../includes/tsql-md.md)] (simple 또는 강제) 아래에 있는 문의 stmt_sql_handle를 가져옵니다. 이렇게 하면 텍스트를 알고 있을 때 **stmt_sql_handle** 를 사용 하 여 쿼리 저장소에 저장 된 쿼리를 참조할 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,9 +57,9 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="columns-returned"></a>반환되는 열  
  다음 표에서는 fn_stmt_sql_handle_from_sql_stmt에서 반환 하는 열을 나열 합니다.  
   
-|열 이름|Type|Description|  
+|열 이름|유형|설명|  
 |-----------------|----------|-----------------|  
-|**statement_sql_handle**|**varbinary (64)**|SQL 핸들입니다.|  
+|**statement_sql_handle**|**varbinary(64)**|SQL 핸들입니다.|  
 |**query_sql_text**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 텍스트입니다.|  
 |**query_parameterization_type**|**tinyint**|쿼리 매개 변수화 형식입니다.|  
   
@@ -79,7 +79,7 @@ SELECT * FROM sys.databases;
 SELECT * FROM sys.fn_stmt_sql_handle_from_sql_stmt('SELECT * FROM sys.databases', NULL);  
 ```  
   
- 함수를 사용 하 여 쿼리 저장소 데이터와 기타 동적 관리 뷰 간의 상관 관계를 바꿉니다. 다음 예제를 참조하세요.  
+ 함수를 사용 하 여 쿼리 저장소 데이터와 기타 동적 관리 뷰 간의 상관 관계를 바꿉니다. 다음 예제가 하는 일:  
   
 ```  
 SELECT qt.query_text_id, q.query_id, qt.query_sql_text, qt.statement_sql_handle,  
@@ -99,7 +99,7 @@ JOIN sys.dm_exec_query_stats AS qs
  [Transact-sql&#41;sp_query_store_reset_exec_stats &#40;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
  [Transact-sql&#41;sp_query_store_flush_db &#40;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
  [Transact-sql&#41;sp_query_store_remove_query &#40;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
- [쿼리 저장소 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;카탈로그 뷰 쿼리 저장소](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [쿼리 저장소를 사용하여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   
   

@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b9054cae2d8b67a96be964ca8dd0f1effe2113a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046313"
 ---
 # <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures(Transact-SQL)
@@ -52,7 +52,7 @@ fn_ check_object_signatures (
   
 -   '비대칭 키'  
   
- \@*class* 는 **sysname**입니다.  
+ \@*클래스*는 **sysname**입니다.  
   
  { \@ *thumbprint* }  
  키 암호화에 사용되는 인증서의 SHA-1 해시이거나 비대칭 키의 GUID입니다. \@*지문이* **varbinary (20)** 입니다.  
@@ -60,9 +60,9 @@ fn_ check_object_signatures (
 ## <a name="tables-returned"></a>반환된 테이블  
  다음 표에서는 **fn_check_object_signatures** 반환 하는 열을 나열 합니다.  
   
-|열|Type|Description|  
+|열|유형|Description|  
 |------------|----------|-----------------|  
-|type|**nvarchar (120)**|유형 설명 또는 어셈블리를 반환합니다.|  
+|type|**nvarchar(120)**|유형 설명 또는 어셈블리를 반환합니다.|  
 |entity_id|**int**|평가 중인 개체의 개체 ID를 반환합니다.|  
 |is_signed|**int**|개체가 제공된 지문으로 서명되지 않은 경우 0을 반환합니다. 개체가 제공된 지문으로 서명된 경우 1을 반환합니다.|  
 |is_signature_valid|**int**|is_signed 값이 1일 때 서명이 유효하지 않으면 0을 반환하고, 서명이 유효하면 1을 반환합니다.<br /><br /> is_signed 값이 0일 때는 항상 0을 반환합니다.|  

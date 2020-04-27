@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: b4429585d735ee4eb51d2b0b421b53fdf06bf8ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899386"
 ---
 # <a name="sysdm_pdw_hadoop_operations-transact-sql"></a>sys. dm_pdw_hadoop_operations (Transact-sql)
@@ -24,9 +24,9 @@ ms.locfileid: "67899386"
 
   외부 Hadoop 테이블에서 쿼리를 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 실행 하는 과정의 일부로 Hadoop에 푸시되는 각 지도 감소 작업에 대 한 행을 포함 합니다. 각 맵 감소 작업은 쿼리의 조건자 중 하나를 나타냅니다. 이는 Hadoop 외부 테이블에 대 한 쿼리에 조건자 푸시 다운을 사용 하는 경우에만 사용 됩니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar (32)**|이 외부 Hadoop 작업의 ID입니다.|[Dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)의 ID와 동일 합니다.|  
+|request_id|**nvarchar(32)**|이 외부 Hadoop 작업의 ID입니다.|[Dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)의 ID와 동일 합니다.|  
 |step_index|**int**|이 Hadoop 작업을 참조 하는 쿼리 단계의 인덱스입니다.|[Dm_pdw_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)step_index와 동일 합니다.|  
 |operation_type|**nvarchar(255)**|외부 작업의 유형을 설명 합니다.|' 외부 Hadoop 작업 '|  
 |operation_name|**nvarchar(4000)**|지도 감소 작업의 작업 ID입니다. 이는 작업을 제출한 후 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Hadoop에서 반환 됩니다.||  

@@ -17,10 +17,10 @@ ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d96b7968c7aba8d1249db2f43b53fc8a22596419
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918456"
 ---
 # <a name="getrows-method-ado"></a>GetRows 메서드(ADO)
@@ -37,14 +37,14 @@ array = recordset.GetRows(Rows, Start, Fields )
  해당 값이 2 차원 배열인 **Variant** 를 반환 합니다.  
   
 #### <a name="parameters"></a>매개 변수  
- *열*  
- (선택 사항) 검색할 레코드 수를 나타내는 [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) 값입니다. 기본값은 **adGetRowsRest**입니다.  
+ *행*  
+ 선택 사항입니다. 검색할 레코드 수를 나타내는 [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) 값입니다. 기본값은 **adGetRowsRest**입니다.  
   
- *시작*  
- (선택 사항) **GetRows** 작업을 시작 해야 하는 레코드의 책갈피로 계산 되는 **문자열** 값 또는 **변형** 입니다. [책갈피 열거형](../../../ado/reference/ado-api/bookmarkenum.md) 값을 사용할 수도 있습니다.  
+ *Start*  
+ 선택 사항입니다. **GetRows** 작업을 시작 해야 하는 레코드의 책갈피로 계산 되는 **문자열** 값 또는 **변형** 입니다. [책갈피 열거형](../../../ado/reference/ado-api/bookmarkenum.md) 값을 사용할 수도 있습니다.  
   
- *필드인*  
- (선택 사항) 단일 필드 이름 또는 서 수 위치를 나타내는 **Variant** 이거나, 필드 이름 또는 서 수 위치 번호의 배열입니다. ADO는 이러한 필드의 데이터만 반환 합니다.  
+ *필드*  
+ 선택 사항입니다. 단일 필드 이름 또는 서 수 위치를 나타내는 **Variant** 이거나, 필드 이름 또는 서 수 위치 번호의 배열입니다. ADO는 이러한 필드의 데이터만 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
  **GetRows** 메서드를 사용 하 여 레코드 **집합** 의 레코드를 2 차원 배열로 복사할 수 있습니다. 첫 번째 첨자는 필드를 식별 하 고 두 번째 첨자는 레코드 번호를 식별 합니다. **GetRows** 메서드가 데이터를 반환할 때 *배열* 변수는 올바른 크기로 자동 조정 됩니다.  

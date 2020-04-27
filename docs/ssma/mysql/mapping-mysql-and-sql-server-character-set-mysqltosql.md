@@ -10,10 +10,10 @@ ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 32d5e23579b99b323da870d2608b2d197520f99f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67909019"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>MySQL 및 SQL Server 문자 집합 매핑(MySQLToSQL)
@@ -100,7 +100,7 @@ ms.locfileid: "67909019"
     |간체 gbk|GBK 중국어 간체|NCHAR/NVARCHAR (기본값)|  
     |latin5|ISO 8859-9 터키어|CHAR/VARCHAR (기본값)|  
     |armscii8|ARMSCII-8 아르메니아어|CHAR/VARCHAR (기본값)|  
-    |ut|UTF-8 유니코드|NCHAR/NVARCHAR (기본값)|  
+    |utf8|UTF-8 유니코드|NCHAR/NVARCHAR (기본값)|  
     |ucs2|UCS-2 유니코드|NCHAR/NVARCHAR (기본값)|  
     |cp866|DOS 러시아어|CHAR/VARCHAR (기본값)|  
     |keybcs2|DOS Kamenicky 체코어-슬로바키아어|CHAR/VARCHAR (기본값)|  

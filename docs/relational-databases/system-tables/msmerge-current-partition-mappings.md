@@ -18,10 +18,10 @@ ms.assetid: a3088840-5a30-40f5-8e8a-aa03afc4905f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a0297b8af4e5cba9fe96df935d6d1b43a8e2d5f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907229"
 ---
 # <a name="msmerge_current_partition_mappings"></a>MSmerge_current_partition_mappings
@@ -29,7 +29,7 @@ ms.locfileid: "67907229"
 
   **MSmerge_current_partition_mappings** 테이블은 지정 된 변경 된 행이 속한 각 파티션 id에 대해 하나의 행을 저장 합니다. 이 테이블은 게시 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**publication_number**|**smallint**|**Sysmergepublications**에 저장 되는 게시 번호입니다.|  
 |**tablenick**|**int**|게시된 테이블의 애칭입니다.|  

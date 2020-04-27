@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6e6d8da7a5813f7e99c022e19f18de2800598885
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67906004"
 ---
 # <a name="head-mdx"></a>Head(MDX)
@@ -31,7 +31,7 @@ Head(Set_Expression [ ,Count ] )
  *Set_Expression*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
- *수*  
+ *Count*  
  반환할 튜플 수를 지정하는 유효한 숫자 식입니다.  
   
 ## <a name="remarks"></a>설명  
@@ -59,6 +59,6 @@ FROM [Adventure Works]
  [MDX&#41; &#40;항목 &#40;튜플&#41;](../mdx/item-tuple-mdx.md)   
  [MDX&#41; &#40;항목 &#40;멤버&#41;](../mdx/item-member-mdx.md)   
  [MDX &#40;순위&#41;](../mdx/rank-mdx.md)   
- [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

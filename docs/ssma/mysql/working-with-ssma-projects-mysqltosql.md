@@ -15,10 +15,10 @@ ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 37a763c0acca891d8bbbc1a310edcb6f8b987436
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67904900"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>SSMA 프로젝트 작업(MySQLToSQL)
@@ -67,23 +67,19 @@ MySQL 데이터베이스에서 SQL Server 또는 SQL Azure로 데이터를 마�
   
 ##### <a name="to-create-a-new-project"></a>새 프로젝트를 만들려면  
   
-1.  **파일** 메뉴에서 **새 프로젝트** 를 선택 합니다. 
-  **새 프로젝트** 대화 상자가 나타납니다. 
-  **파일** 메뉴에서 **새 프로젝트**를 선택합니다. 
-  **새 프로젝트** 대화 상자가 나타납니다.  
+1.  **파일** 메뉴에서 **새 프로젝트** 를 선택 합니다. **새 프로젝트** 대화 상자가 나타납니다. **파일** 메뉴에서 **새 프로젝트**를 선택합니다. **새 프로젝트** 대화 상자가 나타납니다.  
   
-2.  
-  **이름** 입력란에 프로젝트 이름을  
+2.  **이름** 입력란에 프로젝트 이름을  
   
 3.  **위치** 상자에서 프로젝트에 대 한 폴더를 입력 하거나 선택 합니다.  
   
 4.  **마이그레이션** 드롭다운에서 마이그레이션에 사용 되는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 선택 합니다. 제공되는 옵션은 다음과 같습니다.  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   

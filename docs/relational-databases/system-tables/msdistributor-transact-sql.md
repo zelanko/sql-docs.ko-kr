@@ -18,10 +18,10 @@ ms.assetid: 981e9903-0b4b-4508-ac6d-2ee4c813a3d0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: aa171f268fc6e39d584461dd0c2a4d69345706a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907378"
 ---
 # <a name="msdistributor-transact-sql"></a>MSdistributor(Transact-SQL)
@@ -29,10 +29,10 @@ ms.locfileid: "67907378"
 
   **Msdistributor** 테이블에는 배포자 속성이 포함 되어 있습니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|**속성**|**sysname**|속성의 이름|  
-|**기본값**|**nvarchar (3000)**|속성의 값입니다.|  
+|**property**|**sysname**|속성의 이름입니다.|  
+|**value**|**nvarchar (3000)**|속성의 값입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

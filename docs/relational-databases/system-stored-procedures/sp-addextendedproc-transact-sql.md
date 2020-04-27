@@ -18,10 +18,10 @@ ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0bc8ea22699762927a026ae4cc811500c193555c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68072748"
 ---
 # <a name="sp_addextendedproc-transact-sql"></a>sp_addextendedproc(Transact-SQL)
@@ -51,7 +51,7 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- None  
+ 없음  
   
 ## <a name="remarks"></a>설명  
  확장 저장 프로시저를 만든 후에는 **sp_addextendedproc**를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 추가 해야 합니다. 자세한 내용은 [SQL Server에 확장 저장 프로시저 추가](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md)를 참조 하세요.  
@@ -77,8 +77,8 @@ EXEC sp_addextendedproc xp_hello, 'c:\xp_hello.dll';
   
 ## <a name="see-also"></a>참고 항목  
  [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [GRANT&#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [REVOKE&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
+ [Transact-sql&#41;&#40;권한 부여](../../t-sql/statements/grant-transact-sql.md)   
+ [REVOKE &#40;Transact-sql&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [Transact-sql&#41;sp_dropextendedproc &#40;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
  [Transact-sql&#41;sp_helpextendedproc &#40;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

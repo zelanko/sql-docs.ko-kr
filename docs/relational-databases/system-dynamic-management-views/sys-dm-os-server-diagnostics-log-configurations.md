@@ -22,24 +22,23 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8a26ba08f6ddd7767dbd56371857c4d382b5ec15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899778"
 ---
 # <a name="sysdm_os_server_diagnostics_log_configurations"></a>sys.dm_os_server_diagnostics_log_configurations
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 진단 로그의 현재 구성을 포함하는 하나의 행을 반환합니다. 이러한 속성 설정에 따라 진단 로깅 설정 여부, 로그 파일의 위치, 수 및 크기가 결정됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |is_enabled|**bit**|로깅 설정 여부를 나타냅니다.<br /><br /> 1 = 진단 로깅이 설정됩니다.<br /><br /> 0 = 진단 로깅이 해제됩니다.|  
 |max_size|**int**|각 진단 로그가 증가할 수 있는 최대 크기(MB)입니다. 기본값은 100  MB입니다.|  
 |max_files|**int**|새 진단 로그에 재활용하기 전에 컴퓨터에 저장할 수 있는 최대 진단 로그 파일 수입니다.|  
-|경로|**nvarchar(260)**|진단 로그의 위치를 나타내는 경로입니다. 기본 위치는 \< 장애 조치(failover) 클러스터 인스턴스의 설치 폴더 내에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\Log>입니다.|  
+|path|**nvarchar(260)**|진단 로그의 위치를 나타내는 경로입니다. 기본 위치는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스의 설치 폴더 내에 있는 \<\MSSQL\Log>입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  SQL Server 장애 조치(failover) 클러스터 인스턴스에 대한 VIEW SERVER STATE 권한이 필요합니다.  

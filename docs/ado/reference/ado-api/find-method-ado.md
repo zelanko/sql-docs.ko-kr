@@ -17,10 +17,10 @@ ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f394d5e3b3021ca240675d6979152c63b903190
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918624"
 ---
 # <a name="find-method-ado"></a>Find 메서드(ADO)
@@ -38,13 +38,13 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  검색에 사용할 열 이름, 비교 연산자 및 값을 지정 하는 문을 포함 하는 **문자열** 값입니다.  
   
  *SkipRows*  
- (선택 사항) 기본값은 0 이며,이 값은 현재 행의 행 오프셋 또는 *시작* 책갈피를 지정 하 여 검색을 시작 하는 **Long** 값입니다. 기본적으로 검색은 현재 행에서 시작 됩니다.  
+ 선택 사항입니다. 기본값은 0 이며,이 값은 현재 행의 행 오프셋 또는 *시작* 책갈피를 지정 하 여 검색을 시작 하는 **Long** 값입니다. 기본적으로 검색은 현재 행에서 시작 됩니다.  
   
  *SearchDirection*  
- (선택 사항) 검색을 현재 행에서 시작할지 아니면 검색 방향으로 사용할 수 있는 다음 행으로 시작할지를 지정 하는 [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) 값입니다. 값이 **Adsearchforward**인 경우 **레코드 집합** 의 끝에서 실패 한 검색을 중지 합니다. 값이 **Adsearchbackward**인 경우 **레코드 집합** 의 시작 부분에서 실패 한 검색을 중지 합니다.  
+ 선택 사항입니다. 검색을 현재 행에서 시작할지 아니면 검색 방향으로 사용할 수 있는 다음 행으로 시작할지를 지정 하는 [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) 값입니다. 값이 **Adsearchforward**인 경우 **레코드 집합** 의 끝에서 실패 한 검색을 중지 합니다. 값이 **Adsearchbackward**인 경우 **레코드 집합** 의 시작 부분에서 실패 한 검색을 중지 합니다.  
   
- *시작*  
- (선택 사항) 검색의 시작 위치로 작동 하는 **변형** 책갈피입니다.  
+ *Start*  
+ 선택 사항입니다. 검색의 시작 위치로 작동 하는 **변형** 책갈피입니다.  
   
 ## <a name="remarks"></a>설명  
  *조건*에는 단일 열 이름만 지정할 수 있습니다. 이 메서드는 다중 열 검색을 지원 하지 않습니다.  

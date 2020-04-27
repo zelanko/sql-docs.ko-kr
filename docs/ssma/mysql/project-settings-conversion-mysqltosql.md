@@ -10,10 +10,10 @@ ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7a8ad0b6c4c1e836a3eacca1f497d7ed229dbfc4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908875"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>프로젝트 설정(변환)(MySQLToSQL)
@@ -89,7 +89,7 @@ ms.locfileid: "67908875"
 |**공간 인덱스에 대 한 기본 경계 상자 {XMAX&#124;XMAX&#124;YMAX&#124;YMIN}**|공간 인덱스에 사용 되는 경계 상자의 {XMAX&#124;XMAX&#124;YMAX&#124;YMIN} 매개 변수에 대 한 기본값을 정의 합니다.<br /><br />**기본 모드**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**낙관적 모드**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**전체 모드**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
 |**공간 인덱스에 대 한 기본 표 밀도**|공간 인덱스에 사용 되는 표 밀도의 LEVEL_1, LEVEL_2, LEVEL_3 및 LEVEL_4에 대 한 기본값을 정의 합니다.<br /><br />**기본 모드**<br /><br />LEVEL_1: 기본값<br /><br />LEVEL_2: 기본값<br /><br />LEVEL_3: 기본값<br /><br />LEVEL_4: 기본값<br /><br />**낙관적 모드**<br /><br />LEVEL_1: 기본값<br /><br />LEVEL_2: 기본값<br /><br />LEVEL_3: 기본값<br /><br />LEVEL_4: 기본값<br /><br />**전체 모드**<br /><br />LEVEL_1: 기본값<br /><br />LEVEL_2: 기본값<br /><br />LEVEL_3: 기본값<br /><br />LEVEL_4: 기본값|  
   
-### <a name="transactions"></a>트랜잭션  
+### <a name="transactions"></a>의  
   
 |||  
 |-|-|  

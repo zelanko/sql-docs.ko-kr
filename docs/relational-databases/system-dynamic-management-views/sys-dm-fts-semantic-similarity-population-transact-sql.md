@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 280ab197ef9347c6a209be7ef05e8f1ce2dfd23e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900879"
 ---
 # <a name="sysdm_fts_semantic_similarity_population-transact-sql"></a>sys.dm_fts_semantic_similarity_population(Transact-SQL)
@@ -34,19 +34,19 @@ ms.locfileid: "67900879"
     
 ||||  
 |-|-|-|  
-|**열 이름**|**형식**|**설명**|  
+|**열 이름**|**Type**|**설명**|  
 |**database_id**|**int**|채우기가 진행되고 있는 전체 텍스트 인덱스를 포함하는 데이터베이스의 ID입니다.|  
 |**catalog_id**|**int**|이 전체 텍스트 인덱스를 포함하는 전체 텍스트 카탈로그의 ID입니다.|  
 |**table_id**|**int**|전체 텍스트 인덱스가 채워지고 있는 테이블의 ID입니다.|  
 |**document_count**|**int**|채우기의 총 문서 수입니다.|  
 |**document_processed_count**|**int**|이 채우기 주기가 시작된 이후 처리된 문서 수입니다.|  
 |**completion_type**|**int**|이 채우기의 완료 상태입니다.|  
-|**completion_type_description**|**nvarchar (120)**|완료 유형에 대한 설명입니다.|  
+|**completion_type_description**|**nvarchar(120)**|완료 유형에 대한 설명입니다.|  
 |**worker_count**|**int**|유사성 추출과 관련된 작업자 스레드 수입니다.|  
-|**업무**|**int**|이 채우기의 상태입니다. 참고: 일부 상태는 일시적입니다. 다음 중 하나<br /><br /> 3 = 시작 중<br /><br /> 5 = 정상적으로 처리 중<br /><br /> 7 = 처리가 중지됨<br /><br /> 11 = 채우기 중단됨|  
-|**status_description**|**nvarchar (120)**|채우기 상태에 대한 설명입니다.|  
+|**status**|**int**|이 채우기의 상태입니다. 참고: 일부 상태는 일시적입니다. 다음 중 하나<br /><br /> 3 = 시작 중<br /><br /> 5 = 정상적으로 처리 중<br /><br /> 7 = 처리가 중지됨<br /><br /> 11 = 채우기 중단됨|  
+|**status_description**|**nvarchar(120)**|채우기 상태에 대한 설명입니다.|  
 |**start_time**|**datetime**|채우기가 시작된 시간입니다.|  
-|**incremental_timestamp**|**없으면**|전체 채우기의 시작 타임스탬프를 나타냅니다. 다른 모든 채우기 유형의 경우 이 값은 마지막으로 커밋된 검사점으로, 채우기의 진행 상태를 나타냅니다.|  
+|**incremental_timestamp**|**timestamp**|전체 채우기의 시작 타임스탬프를 나타냅니다. 다른 모든 채우기 유형의 경우 이 값은 마지막으로 커밋된 검사점으로, 채우기의 진행 상태를 나타냅니다.|  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  자세한 내용은 [의미 체계 검색 관리 및 모니터링](../../relational-databases/search/manage-and-monitor-semantic-search.md)을 참조 하세요.  

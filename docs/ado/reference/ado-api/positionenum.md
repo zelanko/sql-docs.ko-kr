@@ -16,16 +16,16 @@ ms.assetid: e69af0a5-3405-4b72-9c6e-6b188ff746fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d5f7ca47177a953313ff983bb25f9178b73b4930
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917601"
 ---
 # <a name="positionenum"></a>PositionEnum
 레코드 [집합](../../../ado/reference/ado-api/recordset-object-ado.md)내에서 레코드 포인터의 현재 위치를 지정 합니다.  
   
-|지속적임|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adPosBOF**|-2|현재 레코드 포인터가 BOF에 있음을 나타냅니다 (즉, [bof](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 속성이 **True**임).|  
 |**adPosEOF**|-3|현재 레코드 포인터가 EOF에 있음을 나타냅니다. 즉, [eof](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 속성이 **True**입니다.|  
@@ -34,7 +34,7 @@ ms.locfileid: "67917601"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 동급  
  Package: **com.ms.wfc.data**  
   
-|지속적임|  
+|상수|  
 |--------------|  
 |AdoEnums|  
 |AdoEnums|  

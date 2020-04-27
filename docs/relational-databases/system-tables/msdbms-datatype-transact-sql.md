@@ -18,10 +18,10 @@ ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 301aa5af9aa34031f381235341f1e7d461675432
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907509"
 ---
 # <a name="msdbms_datatype-transact-sql"></a>MSdbms_datatype(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67907509"
 
   **MSdbms_datatype** 테이블에는 다른 유형의 데이터베이스 복제에서 게시자 또는 구독자로 사용 되는 지원 되는 각 DBMS (데이터베이스 관리 시스템)에서 네이티브 데이터 형식의 전체 목록이 포함 되어 있습니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**datatype_id**|**int**|각 고유 데이터 형식을 식별합니다.|  
 |**dbms_id**|**int**|유형이 속한 DBMS를 식별합니다.|  

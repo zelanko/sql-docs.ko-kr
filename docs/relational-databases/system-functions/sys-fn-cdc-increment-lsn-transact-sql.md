@@ -21,10 +21,10 @@ ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a482acb22ad535e44d6ceb06a20474945a477e58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046373"
 ---
 # <a name="sysfn_cdc_increment_lsn-transact-sql"></a>sys.fn_cdc_increment_lsn(Transact-SQL)
@@ -46,7 +46,7 @@ sys.fn_cdc_increment_lsn ( lsn_value )
  LSN 값 *lsn_value* 는 **binary (10)** 입니다.  
   
 ## <a name="return-type"></a>반환 형식  
- **binary (10)**  
+ **binary(10)**  
   
 ## <a name="remarks"></a>설명  
  이 함수에 의해 반환된 LSN 값은 지정된 값보다 항상 크며 두 값 사이에는 LSN 값이 없습니다.  

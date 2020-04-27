@@ -16,10 +16,10 @@ ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ce90b13a677246fb64462fbe691eb9e3efaa3c7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918277"
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile 메서드(ADO)
@@ -33,7 +33,7 @@ Stream.LoadFromFileFileName
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *이름도*  
+ *FileName*  
  **스트림으로**로드할 파일의 이름을 포함 하는 **문자열** 값입니다. *파일 이름* 에는 UNC 형식의 유효한 경로와 이름이 포함 될 수 있습니다. 지정 된 파일이 없으면 런타임 오류가 발생 합니다.  
   
 ## <a name="remarks"></a>설명  

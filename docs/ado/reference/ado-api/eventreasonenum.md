@@ -16,16 +16,16 @@ ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c37a7385cc3aabb725f86261203d22b5b10c3be6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918871"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 이벤트를 발생 시킨 이유를 지정 합니다.  
   
-|지속적임|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adRsnAddNew**|1|작업에서 새 레코드를 추가 했습니다.|  
 |**adRsnClose**|9|작업에서 **레코드 집합**을 닫았습니다.|  
@@ -46,7 +46,7 @@ ms.locfileid: "67918871"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 동급  
  Package: **com.ms.wfc.data**  
   
-|지속적임|  
+|상수|  
 |--------------|  
 |AdoEnums|  
 |AdoEnums 이유. 닫기|  

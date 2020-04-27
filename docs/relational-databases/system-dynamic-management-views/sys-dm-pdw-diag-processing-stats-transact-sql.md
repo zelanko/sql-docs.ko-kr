@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8b880820ac633402d1d3cdd679b16a54d1be358e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899535"
 ---
 # <a name="sysdm_pdw_diag_processing_stats-transact-sql"></a>sys. dm_pdw_diag_processing_stats (Transact-sql)
@@ -24,7 +24,7 @@ ms.locfileid: "67899535"
 
   관리자가 정의한 진단 세션에 통합 될 수 있는 모든 내부 진단 이벤트와 관련 된 정보를 표시 합니다. 다른 모든 Dmv의 채우기를 구동 하는 진단 및 이벤트 하위 시스템의 통계를 이해 하려면이 뷰를 쿼리 합니다. 각 노드의 각 프로세스에 대 한 큐 그룹이 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**pdw_node_id**|**int**|이 로그를 가져온 어플라이언스 노드입니다.|  
 |**process_id**|**int**|이 통계 제출을 실행 하는 프로세스의 식별자입니다.|  

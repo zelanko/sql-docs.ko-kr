@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 021e9e66b281a8bbca6d5c9e21e78ffa4069c5c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67950794"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS(Transact-SQL)
@@ -33,12 +33,12 @@ ms.locfileid: "67950794"
   
  이러한 뷰에서 정보를 검색 하려면 **INFORMATION_SCHEMA**의 정규화 된 이름을 지정_view_name_합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|테이블 한정자입니다.|  
 |**TABLE_SCHEMA**|**nvarchar (** 128 **)**|테이블이 포함된 스키마의 이름입니다.<br /><br /> **&#42;&#42; 중요 &#42;&#42;** INFORMATION_SCHEMA 뷰를 사용 하 여 개체의 스키마를 확인 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
 |**TABLE_NAME**|**nvarchar (** 128 **)**|테이블 이름입니다.|  
-|**COLUMN_NAME**|**nvarchar (** 128 **)**|열 이름.|  
+|**COLUMN_NAME**|**nvarchar (** 128 **)**|열 이름입니다.|  
 |**ORDINAL_POSITION**|**int**|열 ID입니다.|  
 |**COLUMN_DEFAULT**|**nvarchar (** 4000 **)**|열의 기본값입니다.|  
 |**IS_NULLABLE**|**varchar (** 3 **)**|열의 NULL 허용 여부입니다. 열이 NULL을 허용하는 경우에는 이 열이 YES를 반환하고 허용하지 않는 경우에는 NO가 반환됩니다.|  
@@ -60,7 +60,7 @@ ms.locfileid: "67950794"
 |**DOMAIN_NAME**|**nvarchar (** 128 **)**|열이 사용자 정의 데이터 형식인 경우 이 열은 사용자 정의 데이터 형식의 이름이 됩니다. 다른 데이터 형식에 대해서는 NULL이 반환됩니다.|  
   
 ## <a name="remarks"></a>설명  
- INFORMATION_SCHEMA의 **ORDINAL_POSITION** 열 **입니다. 열** 뷰는 COLUMNS_UPDATED 함수에서 반환 된 열의 비트 패턴과 호환 되지 않습니다. COLUMNS_UPDATED와 호환 되는 비트 패턴을 얻으려면 INFORMATION_SCHEMA를 쿼리할 때 COLUMNPROPERTY 시스템 함수의 **ColumnID** 속성을 참조 해야 합니다 **. 열** 뷰입니다. 다음은 그 예입니다.  
+ INFORMATION_SCHEMA의 **ORDINAL_POSITION** 열 **입니다. 열** 뷰는 COLUMNS_UPDATED 함수에서 반환 된 열의 비트 패턴과 호환 되지 않습니다. COLUMNS_UPDATED와 호환 되는 비트 패턴을 얻으려면 INFORMATION_SCHEMA를 쿼리할 때 COLUMNPROPERTY 시스템 함수의 **ColumnID** 속성을 참조 해야 합니다 **. 열** 뷰입니다. 예를 들어:  
   
 ```  
 USE AdventureWorks2012;  
@@ -76,10 +76,10 @@ GO
  [Transact-sql&#41;&#40;정보 스키마 뷰](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys. syscharsets &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syscharsets-transact-sql.md)   
  [&#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sql_modules &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
+ [sys.sql_modules&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys. Transact-sql&#41;&#40;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [sys. 개체 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.types&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   
- [Transact-sql&#41;COLUMNS_UPDATED &#40;](../../t-sql/functions/columns-updated-transact-sql.md)  
+ [Transact-sql &#40;&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   
+ [COLUMNS_UPDATED&#40;Transact-SQL&#41;](../../t-sql/functions/columns-updated-transact-sql.md)  
   
   

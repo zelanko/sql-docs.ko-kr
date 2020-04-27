@@ -20,10 +20,10 @@ ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 52d929496bf3db83dc63cdde6d86bf1a2ee1a3f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67902218"
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity(Transact-SQL)
@@ -31,12 +31,12 @@ ms.locfileid: "67902218"
 
   현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 활동 및 상태를 기록합니다.  이 테이블은 **msdb** 데이터베이스에 저장 됩니다.
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|**Msdb** 데이터베이스의 **syssessions** 테이블에 저장 된 세션의 ID입니다.|  
 |**job_id**|**uniqueidentifier**|작업의 ID입니다.|  
 |**run_requested_date**|**datetime**|작업 실행을 요청한 날짜와 시간입니다.|  
-|**run_requested_source**|**sysname (nvarchar (128))**|작업 실행을 요청한 사람입니다.<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
+|**run_requested_source**|**sysname(nvarchar(128))**|작업 실행을 요청한 사람입니다.<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
 |**queued_date**|**datetime**|이 작업이 대기한 날짜와 시간입니다. 작업이 바로 실행된 경우 이 열은 NULL입니다.|  
 |**start_execution_date**|**datetime**|작업을 실행하도록 예약된 날짜와 시간입니다.|  
 |**last_executed_step_id**|**int**|마지막으로 실행된 작업 단계의 ID입니다.|  

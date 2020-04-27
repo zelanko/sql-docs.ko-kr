@@ -17,10 +17,10 @@ ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c2e56178ad306d5b39c2445c391c3bbabe4fc424
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917031"
 ---
 # <a name="savetofile-method"></a>SaveToFile 메서드
@@ -34,7 +34,7 @@ Stream.SaveToFile FileName, SaveOptions
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *이름도*  
+ *FileName*  
  **스트림의** 내용이 저장 될 파일의 정규화 된 이름을 포함 하는 **문자열** 값입니다. 모든 유효한 로컬 위치나 UNC 값을 통해 액세스할 수 있는 위치에 저장할 수 있습니다.  
   
  *S*  

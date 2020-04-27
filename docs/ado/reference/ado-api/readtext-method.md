@@ -17,10 +17,10 @@ ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d6c174d2e6a659a3b9da8f89816b5bdf90342416
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917368"
 ---
 # <a name="readtext-method"></a>ReadText 메서드
@@ -35,7 +35,7 @@ String = Stream.ReadText ( NumChars)
   
 #### <a name="parameters"></a>매개 변수  
  *NumChars*  
- (선택 사항) 파일에서 읽을 문자 수 또는 [Streamreadenum](../../../ado/reference/ado-api/streamreadenum.md) 값을 지정 하는 **Long** 값입니다. 기본값은 **Adreadall**입니다.  
+ 선택 사항입니다. 파일에서 읽을 문자 수 또는 [Streamreadenum](../../../ado/reference/ado-api/streamreadenum.md) 값을 지정 하는 **Long** 값입니다. 기본값은 **Adreadall**입니다.  
   
 ## <a name="return-value"></a>Return Value  
  **ReadText** 메서드는 **스트림** 개체에서 지정 된 수의 문자, 전체 줄 또는 전체 스트림을 읽고 결과 문자열을 반환 합니다.  

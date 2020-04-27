@@ -13,10 +13,10 @@ ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 83a4a2d1bea5074cc268590d4074bde631f28694
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908831"
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>MySQL 데이터를 SQL Server로 마이그레이션-Azure SQL DB (MySQLToSQL)
@@ -63,7 +63,7 @@ ms.locfileid: "67908831"
   
 **데이터를 마이그레이션하려면**  
   
-1.  다음 사항을 확인합니다.  
+1.  다음을 확인합니다.  
   
     -   MySQL 공급자는 SSMA를 실행 하는 컴퓨터에 설치 됩니다.  
   

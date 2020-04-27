@@ -18,10 +18,10 @@ ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 630c2f90085cedfbb5c59ba395c7d0d9ae9d9643
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67906102"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification(Transact-SQL)
@@ -50,10 +50,10 @@ sp_help_notification
   
 `[ @enum_type = ] 'enum_type'`반환 되는 *object_type*정보입니다. 대부분의 경우 *enum_type* 는 실제입니다. *enum_type*은 **char (10)** 이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |ACTUAL|*이름*에 연결 된 *object_types* 나열 합니다.|  
-|ALL|*이름*에 연결 되지 않은 object_types를 포함 하 여 모든** 을 나열 합니다.|  
+|ALL|*이름*에 연결 되지 않은 object_types를 포함 하 여 모든*object_types* 을 나열 합니다.|  
 |TARGET|*이름과*의 연결에 관계 없이 제공 된 *target_name*일치 하는 *object_types* 나열 합니다.|  
   
 `[ @notification_method = ] notification_method`반환할 알림 방법 열을 결정 하는 숫자 값입니다. *notification_method* 은 **tinyint**이며 다음 값 중 하나일 수 있습니다.  
@@ -63,7 +63,7 @@ sp_help_notification
 |**1**|전자 메일: **use_email** 열만 반환 합니다.|  
 |**2**|Pager: **use_pager** 열만 반환 합니다.|  
 |**4**|NetSend: **use_netsend** 열만 반환 합니다.|  
-|**일**|All: 모든 열을 반환합니다.|  
+|**7**|All: 모든 열을 반환합니다.|  
   
 `[ @target_name = ] 'target_name'`검색할 경고 이름 ( *object_type* 가 ALERTS 인 경우) 또는 검색할 운영자 이름 ( *object_type* 가 OPERATORS 인 경우)입니다. *target_name* 은 *enum_type* 대상인 경우에만 필요 합니다. *target_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
@@ -73,7 +73,7 @@ sp_help_notification
 ## <a name="result-sets"></a>결과 집합  
  *Object_type* **경고**인 경우에는 결과 집합에 지정 된 운영자에 대 한 모든 경고가 나열 됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|경고 ID 번호입니다.|  
 |**alert_name**|**sysname**|경고 이름입니다.|  
@@ -86,7 +86,7 @@ sp_help_notification
   
  **Object_type** 가 **operators**인 경우 결과 집합에 지정 된 경고에 대 한 모든 연산자가 나열 됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**operator_id**|**int**|운영자의 ID입니다.|  
 |**operator_name**|**sysname**|운영자 이름입니다.|  

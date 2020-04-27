@@ -17,10 +17,10 @@ ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 157e38c2c9c23ff8f7e92af40385b0962c6dcb70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918070"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord 메서드(ADO)
@@ -35,22 +35,22 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>매개 변수  
  *원본*  
- (선택 사항) 이동할 **레코드** 를 식별 하는 URL을 포함 하는 **문자열** 값입니다. *Source* 를 생략 하거나 빈 문자열을 지정 하면이 **레코드가** 나타내는 개체가 이동 합니다. 예를 들어 **레코드가** 파일을 나타내는 경우 파일의 내용이 *Destination*에서 지정한 위치로 이동 합니다.  
+ 선택 사항입니다. 이동할 **레코드** 를 식별 하는 URL을 포함 하는 **문자열** 값입니다. *Source* 를 생략 하거나 빈 문자열을 지정 하면이 **레코드가** 나타내는 개체가 이동 합니다. 예를 들어 **레코드가** 파일을 나타내는 경우 파일의 내용이 *Destination*에서 지정한 위치로 이동 합니다.  
   
  *대상*  
- (선택 사항) *소스* 를 이동할 위치를 지정 하는 URL을 포함 하는 **문자열** 값입니다.  
+ 선택 사항입니다. *소스* 를 이동할 위치를 지정 하는 URL을 포함 하는 **문자열** 값입니다.  
   
  *이름*  
- (선택 사항) 필요한 경우 *대상*에 대 한 액세스 권한을 부여 하는 사용자 ID를 포함 하는 **문자열** 값입니다.  
+ 선택 사항입니다. 필요한 경우 *대상*에 대 한 액세스 권한을 부여 하는 사용자 ID를 포함 하는 **문자열** 값입니다.  
   
  *암호*  
- (선택 사항) 필요한 경우 *사용자 이름을*확인 하는 암호를 포함 하는 **문자열** 입니다.  
+ 선택 사항입니다. 필요한 경우 *사용자 이름을*확인 하는 암호를 포함 하는 **문자열** 입니다.  
   
  *옵션*  
- (선택 사항) 기본값이 **Admoveunspecified 되지 않은** [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) 값입니다. 이 메서드의 동작을 지정 합니다.  
+ 선택 사항입니다. 기본값이 **Admoveunspecified 되지 않은** [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) 값입니다. 이 메서드의 동작을 지정 합니다.  
   
- *동기화*  
- (선택 사항) **True**인 경우이 작업이 비동기가 되도록 지정 하는 **부울** 값입니다.  
+ *Async*  
+ 선택 사항입니다. **True**인 경우이 작업이 비동기가 되도록 지정 하는 **부울** 값입니다.  
   
 ## <a name="return-value"></a>Return Value  
  **문자열** 값입니다. 일반적으로 *Destination* 값이 반환 됩니다. 그러나 반환 되는 정확한 값은 공급자에 따라 다릅니다.  

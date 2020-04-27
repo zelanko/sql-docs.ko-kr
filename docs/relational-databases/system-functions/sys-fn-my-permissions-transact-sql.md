@@ -21,10 +21,10 @@ ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68122630"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions(Transact-SQL)
@@ -42,8 +42,8 @@ fn_my_permissions ( securable , 'securable_class' )
 ```  
   
 ## <a name="arguments"></a>인수  
- *안전한*  
- 보안 개체의 이름입니다. 보안 개체가 서버 또는 데이터베이스인 경우 이 값은 NULL로 설정해야 합니다. *보안* 개체는 **sysname**형식의 스칼라 식입니다. *보안* 개체는 여러 부분으로 된 이름일 수 있습니다.  
+ *securable*  
+ 보안 개체의 이름입니다. 보안 개체가 서버 또는 데이터베이스인 경우 이 값은 NULL로 설정해야 합니다. *securable*은 **sysname** 형식의 스칼라 식입니다. *보안* 개체는 여러 부분으로 된 이름일 수 있습니다.  
   
  '*securable_class*'  
  권한을 나열할 보안 개체의 클래스 이름입니다. *securable_class* 는 **sysname**입니다. *securable_class* 는 응용 프로그램 역할, 어셈블리, 비대칭 키, 인증서, 계약, 데이터베이스, 끝점, 전체 텍스트 카탈로그, 로그인, 메시지 유형, 개체, 원격 서비스 바인딩, 역할, 경로, 스키마, 서버, 서비스, 대칭 키, 형식, 사용자, XML 스키마 컬렉션 중 하나 여야 합니다.  
@@ -51,7 +51,7 @@ fn_my_permissions ( securable , 'securable_class' )
 ## <a name="columns-returned"></a>반환되는 열  
  다음 표에서는 **fn_my_permissions** 반환 하는 열을 나열 합니다. 반환되는 각 행은 해당 보안 개체에 대해 현재 보안 컨텍스트가 가지는 사용 권한을 설명합니다. 쿼리가 실패하는 경우 NULL을 반환합니다.  
   
-|열 이름|Type|Description|  
+|열 이름|유형|설명|  
 |-----------------|----------|-----------------|  
 |entity_name|**sysname**|나열된 사용 권한이 유효하게 부여되는 보안 개체의 이름입니다.|  
 |subentity_name|**sysname**|보안 개체가 열인 경우 열 이름이며 그렇지 않은 경우에는 NULL입니다.|  
@@ -102,7 +102,7 @@ GO
 ```  
   
 ### <a name="c-listing-effective-permissions-on-a-view"></a>C. 뷰에 대한 유효 사용 권한 나열  
- 다음 예에서는 `vIndividualCustomer` 데이터베이스의 `Sales` 스키마에 있는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 뷰에 대한 호출자의 유효 사용 권한 목록을 반환합니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `vIndividualCustomer` 스키마에 있는 `Sales` 뷰에 대한 호출자의 유효 사용 권한 목록을 반환합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -112,7 +112,7 @@ GO
 ```  
   
 ### <a name="d-listing-effective-permissions-of-another-user"></a>D. 다른 사용자의 유효 사용 권한 나열  
- 다음 예에서는 `Wanida` 데이터베이스의 `Employee` 스키마에 있는 `HumanResources` 테이블에 대한 데이터베이스 사용자 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]의 유효 사용 권한 목록을 반환합니다. 호출자는 사용자 `Wanida`에 대한 IMPERSONATE 사용 권한이 필요합니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `Wanida` 스키마에 있는 `Employee` 테이블에 대한 데이터베이스 사용자 `HumanResources`의 유효 사용 권한 목록을 반환합니다. 호출자는 사용자 `Wanida`에 대한 IMPERSONATE 사용 권한이 필요합니다.  
   
 ```  
 EXECUTE AS USER = 'Wanida';  
@@ -149,7 +149,7 @@ GO
 ```  
   
 ### <a name="h-listing-effective-permissions-of-another-login"></a>H. 다른 로그인의 유효 사용 권한 나열  
- 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 `WanidaBenshoof` 스키마에 있는 `Employee` 테이블에 대한 `HumanResources` 로그인 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]의 유효 사용 권한 목록을 반환합니다. 호출자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `WanidaBenshoof`에 대한 IMPERSONATE 사용 권한이 필요합니다.  
+ 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 `WanidaBenshoof` 스키마에 있는 `Employee` 테이블에 대한 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 로그인 `HumanResources`의 유효 사용 권한 목록을 반환합니다. 호출자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `WanidaBenshoof`에 대한 IMPERSONATE 사용 권한이 필요합니다.  
   
 ```  
 EXECUTE AS LOGIN = 'WanidaBenshoof';  
@@ -160,12 +160,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [보안 함수&#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
+ [Transact-sql&#41;&#40;보안 함수](../../t-sql/functions/security-functions-transact-sql.md)   
  [권한 &#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [보안 개체](../../relational-databases/security/securables.md)   
- [사용 권한 계층&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [sys.fn_builtin_permissions&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
+ [데이터베이스 엔진&#41;&#40;사용 권한 계층](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [fn_builtin_permissions &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [Transact-sql&#41;&#40;보안 카탈로그 뷰](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
+ [EXECUTE AS&#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   
   

@@ -28,10 +28,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 730508fca6b6f9d3e9515e9ec496971a4b758279
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046518"
 ---
 # <a name="sysfn_builtin_permissions-transact-sql"></a>sys.fn_builtin_permissions(Transact-SQL)
@@ -68,18 +68,18 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
  DEFAULT와 동일합니다.  
   
  **'**<securable_class>**'**  
- 하나의 보안 가능한 클래스 이름으로 호출 되는 경우 fn_builtin_permissions는 클래스에 적용 되는 모든 사용 권한을 반환 합니다. <securable_class>는 따옴표를 필요로 하는 문자열 리터럴입니다. **nvarchar (60)**  
+ 하나의 보안 가능한 클래스 이름으로 호출 되는 경우 fn_builtin_permissions는 클래스에 적용 되는 모든 사용 권한을 반환 합니다. <securable_class>는 따옴표를 필요로 하는 문자열 리터럴입니다. **nvarchar(60)**  
   
 ## <a name="tables-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|데이터 정렬|Description|  
+|열 이름|데이터 형식|데이터 정렬|설명|  
 |-----------------|---------------|---------------|-----------------|  
-|class_desc|**nvarchar (60)**|서버의 데이터 정렬|보안 개체 클래스에 대한 설명입니다.|  
-|permission_name|**nvarchar (60)**|서버의 데이터 정렬|사용 권한 이름입니다.|  
-|type|**varchar (4)**|서버의 데이터 정렬|단축 사용 권한 유형 코드입니다. 다음 표를 참조하십시오.|  
-|covering_permission_name|**nvarchar (60)**|서버의 데이터 정렬|NULL이 아니면 이 클래스에 대한 다른 사용 권한을 포함하는 사용 권한의 이름입니다.|  
-|parent_class_desc|**nvarchar (60)**|서버의 데이터 정렬|NULL이 아니면 현재 클래스를 포함하는 부모 클래스의 이름입니다.|  
-|parent_covering_permission_name|**nvarchar (60)**|서버의 데이터 정렬|NULL이 아니면 부모 클래스에 대한 다른 모든 사용 권한을 포함하는 사용 권한의 이름입니다.|  
+|class_desc|**nvarchar(60)**|서버의 데이터 정렬|보안 개체 클래스에 대한 설명입니다.|  
+|permission_name|**nvarchar(60)**|서버의 데이터 정렬|사용 권한 이름입니다.|  
+|형식(type)|**varchar(4)**|서버의 데이터 정렬|단축 사용 권한 유형 코드입니다. 다음 표를 참조하십시오.|  
+|covering_permission_name|**nvarchar(60)**|서버의 데이터 정렬|NULL이 아니면 이 클래스에 대한 다른 사용 권한을 포함하는 사용 권한의 이름입니다.|  
+|parent_class_desc|**nvarchar(60)**|서버의 데이터 정렬|NULL이 아니면 현재 클래스를 포함하는 부모 클래스의 이름입니다.|  
+|parent_covering_permission_name|**nvarchar(60)**|서버의 데이터 정렬|NULL이 아니면 부모 클래스에 대한 다른 모든 사용 권한을 포함하는 사용 권한의 이름입니다.|  
   
 ### <a name="permission-types"></a>권한 유형  
   
@@ -163,7 +163,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL|인증서|  
 |CL|CONTROL|CONTRACT|  
 |CL|CONTROL|DATABASE|  
-|CL|CONTROL<br /> **적용**대상: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] |DATABASE SCOPED CREDENTIAL|
+|CL|CONTROL<br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
 |CL|CONTROL|엔드포인트|  
 |CL|CONTROL|FULLTEXT CATALOG|  
 |CL|CONTROL|FULLTEXT STOPLIST|  
@@ -242,7 +242,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |RF|REFERENCES|인증서|  
 |RF|REFERENCES|CONTRACT|  
 |RF|REFERENCES|DATABASE|  
-|RF|REFERENCES<br /> **적용**대상: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] |DATABASE SCOPED CREDENTIAL|
+|RF|REFERENCES<br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
 |RF|REFERENCES|FULLTEXT CATALOG|  
 |RF|REFERENCES|FULLTEXT STOPLIST|  
 |RF|REFERENCES|SEARCH PROPERTY LIST|  
@@ -266,7 +266,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |TO|TAKE OWNERSHIP|인증서|  
 |TO|TAKE OWNERSHIP|CONTRACT|  
 |TO|TAKE OWNERSHIP|DATABASE|  
-|TO|TAKE OWNERSHIP<br /> **적용**대상: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] |DATABASE SCOPED CREDENTIAL|
+|TO|TAKE OWNERSHIP<br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
 |TO|TAKE OWNERSHIP|엔드포인트|  
 |TO|TAKE OWNERSHIP|FULLTEXT CATALOG|  
 |TO|TAKE OWNERSHIP|FULLTEXT STOPLIST|  
@@ -293,7 +293,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |VW|VIEW DEFINITION|인증서|  
 |VW|VIEW DEFINITION|CONTRACT|  
 |VW|VIEW DEFINITION|DATABASE|  
-|VW|VIEW DEFINITION<br /> **적용**대상: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] |DATABASE SCOPED CREDENTIAL|
+|VW|VIEW DEFINITION<br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
 |VW|VIEW DEFINITION|엔드포인트|  
 |VW|VIEW DEFINITION|FULLTEXT CATALOG|  
 |VW|VIEW DEFINITION|FULLTEXT STOPLIST|  
@@ -323,11 +323,9 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |XU|UNSAFE ASSEMBLY|SERVER|  
   
 ## <a name="remarks"></a>설명  
- 
-  `sys.fn_builtin_permissions`는 미리 정의된 사용 권한 계층의 복사본을 생성하는 테이블 반환 함수입니다. 이 계층에는 적용되는 모든 사용 권한이 포함됩니다. 결과 `DEFAULT` 집합은 root가 (CLASS = SERVER, PERMISSION = CONTROL SERVER) 인 사용 권한 계층의 방향이 지정 된 비순환 그래프를 설명 합니다.  
+ `sys.fn_builtin_permissions`는 미리 정의된 사용 권한 계층의 복사본을 생성하는 테이블 반환 함수입니다. 이 계층에는 적용되는 모든 사용 권한이 포함됩니다. 결과 `DEFAULT` 집합은 root가 (CLASS = SERVER, PERMISSION = CONTROL SERVER) 인 사용 권한 계층의 방향이 지정 된 비순환 그래프를 설명 합니다.  
   
- 
-  `sys.fn_builtin_permissions`는 상호 관련된 매개 변수를 허용하지 않습니다.  
+ `sys.fn_builtin_permissions`는 상호 관련된 매개 변수를 허용하지 않습니다.  
   
  유효하지 않은 클래스 이름으로 `sys.fn_builtin_permissions`를 호출하면 빈 집합이 반환됩니다.  
  
@@ -359,10 +357,10 @@ SELECT * FROM sys.fn_builtin_permissions(DEFAULT)
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [사용 권한 계층&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [GRANT&#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [CREATE SCHEMA&#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
- [DROP SCHEMA&#40;Transact-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
+ [데이터베이스 엔진&#41;&#40;사용 권한 계층](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [Transact-sql&#41;&#40;권한 부여](../../t-sql/statements/grant-transact-sql.md)   
+ [Transact-sql&#41;스키마 &#40;만들기](../../t-sql/statements/create-schema-transact-sql.md)   
+ [DROP SCHEMA &#40;Transact-sql&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [권한 &#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [fn_my_permissions &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME&#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  

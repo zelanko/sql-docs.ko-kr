@@ -21,10 +21,10 @@ ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: e2b5631443603ea111c3ba154726ec3e6b39e0df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900945"
 ---
 # <a name="sysdm_fts_index_keywords-transact-sql"></a>sys.dm_fts_index_keywords(Transact-SQL)
@@ -46,15 +46,14 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
   
 ## <a name="arguments"></a>인수  
  db_id ('*database_name*')  
- [DB_ID ()](../../t-sql/functions/db-id-transact-sql.md) 함수에 대 한 호출입니다. 이 함수는 데이터베이스 이름을 허용 하 고 데이터베이스 ID를 반환 합니다 .이 ID를 사용 하 여 지정 된 데이터베이스를 찾을 **dm_fts_index_keywords.** 
-  *database_name*을 생략하면 현재 데이터베이스 ID가 반환됩니다.  
+ [DB_ID ()](../../t-sql/functions/db-id-transact-sql.md) 함수에 대 한 호출입니다. 이 함수는 데이터베이스 이름을 허용 하 고 데이터베이스 ID를 반환 합니다 .이 ID를 사용 하 여 지정 된 데이터베이스를 찾을 **dm_fts_index_keywords.** *database_name*을 생략하면 현재 데이터베이스 ID가 반환됩니다.  
   
  object_id ('*table_name*')  
  [OBJECT_ID ()](../../t-sql/functions/object-id-transact-sql.md) 함수에 대 한 호출입니다. 이 함수는 테이블 이름을 받아서 검사할 전체 텍스트 인덱스가 들어 있는 테이블의 테이블 ID를 반환합니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**키워드로**|**nvarchar(4000)**|전체 텍스트 인덱스에 저장되는 키워드의 16진수 표현입니다.<br /><br /> 참고: OxFF는 파일이 나 데이터 집합의 끝을 나타내는 특수 문자를 나타냅니다.|  
 |**display_term**|**nvarchar(4000)**|사람이 인식할 수 있는 키워드 형식입니다. 이 형식은 16진수 형식에서 파생됩니다.<br /><br /> 참고: OxFF에 대 한 **display_term** 값은 "파일의 끝"입니다.|  

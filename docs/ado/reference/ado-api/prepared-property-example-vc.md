@@ -15,14 +15,14 @@ ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58da870e9c65be459e6bd4a8c35bb84aef325c61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917578"
 ---
 # <a name="prepared-property-example-vc"></a>Prepared 속성 예제(VC++)
-이 예제에서는 준비 [된 속성](../../../ado/reference/ado-api/prepared-property-ado.md) 중 하나를 [](../../../ado/reference/ado-api/command-object-ado.md) 열어 준비 된 속성을 보여 줍니다.  
+이 예제에서는 준비 [된 속성](../../../ado/reference/ado-api/prepared-property-ado.md) 중 하나를 [Command](../../../ado/reference/ado-api/command-object-ado.md) 열어 준비 된 속성을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
   

@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2600543715bffaba36e29305b0893a9f17cca59c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68072695"
 ---
 # <a name="sp_addextendedproperty-transact-sql"></a>sp_addextendedproperty(Transact-SQL)
@@ -57,8 +57,7 @@ sp_addextendedproperty
  추가할 속성의 이름입니다. *property_name* 는 **sysname** 이며 NULL 일 수 없습니다. 또한 이름은 영숫자가 아닌 문자열 또는 공백 및 이진 값을 포함할 수 있습니다.  
   
  [ @value= ] {'*value*'}  
- 속성과 연결할 값입니다. *값* 은 **sql_variant**이며 기본값은 NULL입니다. 
-  *value* 의 크기는 7,500바이트보다 클 수 없습니다.  
+ 속성과 연결할 값입니다. *값* 은 **sql_variant**이며 기본값은 NULL입니다. *value* 의 크기는 7,500바이트보다 클 수 없습니다.  
   
  [ @level0type= ] {'*level0_object_type*'}  
  수준 0 개체의 유형입니다. *level0_object_type* 는 **varchar (128)** 이며 기본값은 NULL입니다.  

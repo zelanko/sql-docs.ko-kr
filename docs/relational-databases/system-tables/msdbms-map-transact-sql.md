@@ -18,10 +18,10 @@ ms.assetid: df67e691-3a50-450a-99c5-8c4a041749ae
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fffa30d0e252392c41cee34c1875b12b5b7a53b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907497"
 ---
 # <a name="msdbms_map-transact-sql"></a>MSdbms_map(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67907497"
 
   **MSdbms_map** 테이블에는 원본 데이터 형식 정보와 원본 및 대상 DBMS 쌍의 기본 대상 데이터 형식 정보에 대 한 링크가 포함 되어 있습니다. 이 테이블은 **msdb** 데이터베이스에 저장 되며 유형이 다른 게시에 사용 됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**map_id**|**int**|데이터 형식 매핑을 고유하게 식별합니다.|  
 |**src_dbms_id**|**int**|[Msdbms](../../relational-databases/system-tables/msdbms-transact-sql.md) 테이블에서 해당 **dbms_id** 을 지정 하 여 원본 DBMS를 식별 합니다.|  
