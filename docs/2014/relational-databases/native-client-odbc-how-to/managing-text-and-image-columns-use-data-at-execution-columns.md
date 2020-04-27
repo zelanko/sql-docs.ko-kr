@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: efaf7e38ef829d5250c10902151024e09df1723c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68205625"
 ---
 # <a name="use-data-at-execution-columns-odbc"></a>실행 시 데이터 열 사용(ODBC)
@@ -29,19 +29,15 @@ ms.locfileid: "68205625"
   
     -   네 번째 매개 변수에 대해 프로그램에서 정의된 열 식별자를 배치합니다.  
   
-2.  
-  [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) 를 호출하면 실행 시 데이터 열을 처리할 준비가 되었음을 나타내는 SQL_NEED_DATA가 반환됩니다.  
+2.  [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) 를 호출하면 실행 시 데이터 열을 처리할 준비가 되었음을 나타내는 SQL_NEED_DATA가 반환됩니다.  
   
 3.  각 실행 시 데이터 열에 대해 다음을 수행합니다.  
   
-    -   
-  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 를 호출하여 열 배열 포인터를 가져옵니다. 다른 실행 시 데이터 열이 있는 경우 SQL_NEED_DATA가 반환됩니다.  
+    -   [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 를 호출하여 열 배열 포인터를 가져옵니다. 다른 실행 시 데이터 열이 있는 경우 SQL_NEED_DATA가 반환됩니다.  
   
-    -   
-  [SQLPutData](../native-client-odbc-api/sqlputdata.md) 를 한 번 이상 호출하여 길이가 전달될 때까지 열 데이터를 보냅니다.  
+    -   [SQLPutData](../native-client-odbc-api/sqlputdata.md) 를 한 번 이상 호출하여 길이가 전달될 때까지 열 데이터를 보냅니다.  
   
-4.  
-  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 를 호출하여 최종 실행 시 데이터 열의 모든 데이터가 전달되었음을 나타냅니다. SQL_NEED_DATA는 반환되지 않습니다.  
+4.  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 를 호출하여 최종 실행 시 데이터 열의 모든 데이터가 전달되었음을 나타냅니다. SQL_NEED_DATA는 반환되지 않습니다.  
   
 ## <a name="example"></a>예제  
  이 예제에서는 SQLGetData를 사용하여 SQL_LONG 변수 문자 데이터를 읽는 방법을 보여 줍니다. 이 예제는 IA64에서 지원되지 않습니다.  

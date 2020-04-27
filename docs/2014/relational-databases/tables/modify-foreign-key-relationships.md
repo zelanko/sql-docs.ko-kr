@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196838"
 ---
 # <a name="modify-foreign-key-relationships"></a>외래 키 관계 수정
@@ -40,25 +40,23 @@ ms.locfileid: "68196838"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
  다음 경우를 제외하고 새 외래 키 열의 데이터 형식 및 크기는 관련된 기본 키 열의 데이터 형식 및 크기와 일치해야 합니다.  
   
--   
-  `char` 열 또는 `sysname` 열은 `varchar` 열에 연결될 수 있습니다.  
+-   `char` 열 또는 `sysname` 열은 `varchar` 열에 연결될 수 있습니다.  
   
--   
-  `binary` 열은 `varbinary` 열에 연결될 수 있습니다.  
+-   `binary` 열은 `varbinary` 열에 연결될 수 있습니다.  
   
 -   별칭 데이터 형식은 해당 기본 형식에 연결될 수 있습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-modify-a-foreign-key"></a>외래 키를 수정하려면  
   
@@ -143,7 +141,7 @@ ms.locfileid: "68196838"
   
 4.  **파일** 메뉴에서 **테이블 이름**_저장_을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **외래 키를 수정하려면**  
   
  Transact-SQL을 사용하여 FOREIGN KEY 제약 조건을 수정하려면 먼저 기존 FOREIGN KEY 제약 조건을 삭제하고 새로운 정의를 사용하여 다시 만들어야 합니다. 자세한 내용은 [Delete Foreign Key Relationships](delete-foreign-key-relationships.md) 및 [Create Foreign Key Relationships](create-foreign-key-relationships.md)를 참조하세요.  

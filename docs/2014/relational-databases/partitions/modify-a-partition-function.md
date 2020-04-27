@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d43e86596e30352286cb94e8994177247856a7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206979"
 ---
 # <a name="modify-a-partition-function"></a>파티션 함수 수정
@@ -37,9 +37,9 @@ ms.locfileid: "68206979"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   ALTER PARTITION FUNCTION은 한 파티션을 둘로 분할하거나 두 파티션을 하나로 병합하는 데만 사용할 수 있습니다. 10개의 파티션을 5개로 줄이는 것과 같이 테이블이나 인덱스가 분할되는 방식을 변경하려면 다음 옵션 중 하나를 사용합니다.  
   
@@ -58,9 +58,9 @@ ms.locfileid: "68206979"
   
 -   ALTER PARTITION FUNCTION의 영향을 받는 모든 파일 그룹이 온라인 상태여야 합니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  ALTER PARTITION FUNCTION을 실행하려면 다음 중 하나의 권한이 필요합니다.  
   
 -   ALTER ANY DATASPACE 권한. 이 권한은 기본적으로 **sysadmin** 고정 서버 역할 및 **db_owner** 및 **db_ddladmin** 고정 데이터베이스 역할의 멤버에게 부여됩니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "68206979"
   
 -   파티션 함수가 생성된 데이터베이스의 서버에 대한 CONTROL SERVER 또는 ALTER ANY DATABASE 권한  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **파티션 함수를 수정하려면**  
   
  이 특정 동작은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 수행할 수 없습니다. 파티션 함수를 수정하려면 먼저 함수를 삭제한 다음 파티션 작성 마법사를 사용하여 원하는 속성이 포함된 새 함수를 만들어야 합니다. 자세한 내용은 다음을 참조하세요.  
@@ -84,7 +84,7 @@ ms.locfileid: "68206979"
   
 4.  **개체 삭제** 대화 상자에서 올바른 파티선 함수를 선택했는지 확인한 다음 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>단일 파티션을 두 개의 파티션으로 분할하려면  
   

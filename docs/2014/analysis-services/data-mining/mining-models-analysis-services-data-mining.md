@@ -18,14 +18,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57f62b125872e6b851235c1517925c6ee10058d8
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174452"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>마이닝 모델(Analysis Services - 데이터 마이닝)
-  
   *마이닝 모델* 은 데이터에 알고리즘을 적용하여 만들지만 단순한 알고리즘 또는 메타데이터 컨테이너가 아니며, 새로운 데이터에 적용하여 예측을 생성하고 관계를 추론할 수 있는 데이터, 통계 및 패턴의 집합입니다.
 
  이 섹션에서는 데이터 마이닝 모델의 정의와 용도에 대해 설명합니다. 즉, 모델 및 구조의 기본 아키텍처, 마이닝 모델의 속성, 마이닝 모델을 만들고 사용하는 방법에 대해 설명합니다.
@@ -42,7 +41,7 @@ ms.locfileid: "78174452"
 
  [마이닝 모델 보기 및 쿼리](#bkmk_mdlView)
 
-##  <a name="bkmk_mdlArch"></a>마이닝 모델 아키텍처
+##  <a name="mining-model-architecture"></a><a name="bkmk_mdlArch"></a> 마이닝 모델 아키텍처
  데이터 마이닝 모델은 마이닝 구조에서 데이터를 가져온 다음 데이터 마이닝 알고리즘을 사용하여 해당 데이터를 분석합니다. 마이닝 구조와 마이닝 모델은 별개의 개체입니다. 마이닝 구조에는 데이터 원본을 정의하는 정보가 저장되고, 마이닝 모델에는 분석 결과로 발견된 패턴과 같이 데이터의 통계적 처리에서 파생된 정보가 저장됩니다.
 
  마이닝 모델은 마이닝 구조에서 제공한 데이터가 처리 및 분석되기 전까지 비어 있습니다. 마이닝 모델이 처리된 후에는 메타데이터, 결과 및 마이닝 구조에 대한 바인딩으로 채워집니다.
@@ -59,7 +58,7 @@ ms.locfileid: "78174452"
 
  [마이닝 모델 아키텍처](#bkmk_mdlArch)
 
-##  <a name="bkmk_mdlDefine"></a>데이터 마이닝 모델 정의
+##  <a name="defining-data-mining-models"></a><a name="bkmk_mdlDefine"></a>데이터 마이닝 모델 정의
  데이터 마이닝 모델을 만드는 일반적인 단계는 다음과 같습니다.
 
 -   기본 마이닝 구조를 만들고 필요한 데이터 열을 포함시킵니다.
@@ -72,8 +71,7 @@ ms.locfileid: "78174452"
 
 -   구조 및 모델을 *처리* 하여 모델에 데이터를 채웁니다.
 
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 마이닝 모델을 관리하는 데 유용한 다음과 같은 도구를 제공합니다.
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 마이닝 모델을 관리하는 데 유용한 다음과 같은 도구를 제공합니다.
 
 -   데이터 마이닝 마법사 - 구조와 관련 마이닝 모델을 만들 수 있습니다. 이 도구를 사용하는 것이 가장 쉬운 방법입니다. 이 마법사를 사용하면 필요한 마이닝 구조가 자동으로 만들어지며 중요한 설정을 구성하는 데 도움이 됩니다.
 
@@ -85,24 +83,22 @@ ms.locfileid: "78174452"
 
  [마이닝 모델 아키텍처](#bkmk_mdlArch)
 
-##  <a name="bkmk_mdlProps"></a>마이닝 모델 속성
+##  <a name="mining-model-properties"></a><a name="bkmk_mdlProps"></a>마이닝 모델 속성
  각 마이닝 모델에는 모델 및 해당 메타데이터를 정의하는 속성이 있습니다. 이러한 속성으로는 이름, 설명, 모델이 마지막으로 처리된 날짜, 모델에 대한 사용 권한, 학습에 사용되는 데이터에 대한 필터 등이 있습니다.
 
  각 마이닝 모델에는 마이닝 구조에서 파생되었으며 해당 모델에서 사용하는 데이터의 열을 설명하는 속성도 있습니다. 모델에 사용된 열이 중첩 테이블인 경우 열에도 별도의 필터가 적용될 수 있습니다.
 
  또한 각 마이닝 모델에는 <xref:Microsoft.AnalysisServices.MiningModel.Algorithm%2A> 및 <xref:Microsoft.AnalysisServices.MiningModelColumn.Usage%2A>라는 두 특수 속성이 있습니다.
 
--   **Algorithm 속성** 모델을 만드는 데 사용 되는 알고리즘을 지정 합니다. 사용 가능한 알고리즘은 사용 중인 공급자에 따라 달라집니다. 에 포함 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]된 알고리즘 목록은 [Analysis Services 데이터 마이닝&#41;&#40;데이터 마이닝 알고리즘 ](data-mining-algorithms-analysis-services-data-mining.md)을 참조 하세요. 
-  `Algorithm` 속성은 마이닝 모델에 적용되고 각 모델에 대해 한 번만 설정될 수 있습니다. 나중에 알고리즘을 변경할 수 있지만 마이닝 모델의 일부 열은 선택하는 알고리즘에서 지원하지 않는 경우 사용할 수 없게 될 수 있습니다. 이 속성을 변경한 후 모델을 항상 다시 처리해야 합니다.
+-   **Algorithm 속성** 모델을 만드는 데 사용되는 알고리즘을 지정합니다. 사용 가능한 알고리즘은 사용 중인 공급자에 따라 달라집니다. 에 포함 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]된 알고리즘 목록은 [Analysis Services 데이터 마이닝&#41;&#40;데이터 마이닝 알고리즘 ](data-mining-algorithms-analysis-services-data-mining.md)을 참조 하세요. `Algorithm` 속성은 마이닝 모델에 적용되고 각 모델에 대해 한 번만 설정될 수 있습니다. 나중에 알고리즘을 변경할 수 있지만 마이닝 모델의 일부 열은 선택하는 알고리즘에서 지원하지 않는 경우 사용할 수 없게 될 수 있습니다. 이 속성을 변경한 후 모델을 항상 다시 처리해야 합니다.
 
--   **Usage 속성** 모델에서 각 열이 사용 되는 방법을 정의 합니다. 열 사용을 `Input`, `Predict`, `Predict Only` 또는 `Key`로 정의할 수 있습니다. 
-  `Usage` 속성은 개별 마이닝 모델 열에 적용되고 모델에 포함되어 있는 각 열에 대해 개별적으로 설정되어야 합니다. 구조에 모델에서 사용하지 않는 열이 포함되어 있는 경우 사용이 `Ignore`로 설정됩니다. 마이닝 구조에 포함되지만 분석에 사용되지 않는 데이터의 예로는 고객 이름, 전자 메일 주소 등이 있습니다. 이렇게 하면 분석 단계에서 데이터를 포함시키지 않고 나중에 해당 데이터를 쿼리할 수 있습니다.
+-   **Usage 속성** 모델에서 각 열이 사용되는 방법을 정의합니다. 열 사용을 `Input`, `Predict`, `Predict Only` 또는 `Key`로 정의할 수 있습니다. `Usage` 속성은 개별 마이닝 모델 열에 적용되고 모델에 포함되어 있는 각 열에 대해 개별적으로 설정되어야 합니다. 구조에 모델에서 사용하지 않는 열이 포함되어 있는 경우 사용이 `Ignore`로 설정됩니다. 마이닝 구조에 포함되지만 분석에 사용되지 않는 데이터의 예로는 고객 이름, 전자 메일 주소 등이 있습니다. 이렇게 하면 분석 단계에서 데이터를 포함시키지 않고 나중에 해당 데이터를 쿼리할 수 있습니다.
 
  마이닝 모델을 만든 후 마이닝 모델 속성의 값을 변경할 수 있습니다. 그러나 마이닝 모델의 이름을 포함하여 어떤 속성이든 변경할 경우에는 해당 모델을 다시 처리해야 합니다. 모델을 다시 처리한 후에는 다른 결과가 표시될 수 있습니다.
 
  [마이닝 모델 아키텍처](#bkmk_mdlArch)
 
-##  <a name="bkmk_mdlCols"></a>마이닝 모델 열
+##  <a name="mining-model-columns"></a><a name="bkmk_mdlCols"></a>마이닝 모델 열
  마이닝 모델은 마이닝 구조에 정의된 열에서 가져온 데이터 열을 포함합니다. 마이닝 구조에서 모델에 사용할 열을 선택할 수 있을 뿐 아니라, 마이닝 구조 열의 복사본을 만든 다음 해당 이름을 바꾸거나 사용법을 변경할 수 있습니다. 모델 작성 프로세스 중에 모델별 열 사용법도 정의해야 합니다. 여기에는 열이 키인지 여부, 열이 예측에 사용되는지 여부, 알고리즘에서 열을 무시할 수 있는지 여부 등과 같은 정보가 포함됩니다.
 
  모델을 작성하는 동안 사용할 수 있는 모든 데이터 열을 자동으로 추가하는 것보다는 구조 내의 데이터를 신중히 검토하여 분석에 유용한 열만 모델에 포함되도록 하는 것이 좋습니다. 예를 들어 동일한 데이터를 반복하는 여러 열을 포함하지 말고 대부분 고유한 값을 갖는 열을 사용하지 않도록 합니다. 특정 열이 사용하기에 적합하지 않다고 생각되는 경우 해당 열을 마이닝 구조나 마이닝 모델에서 삭제할 필요는 없고, 대신 모델을 만들 때 열을 무시하도록 지정하는 플래그를 해당 열에 설정하면 됩니다. 그러면 열이 마이닝 구조에 유지되지만 마이닝 모델에 사용되지 않습니다. 모델에서 마이닝 구조로의 드릴스루를 사용하도록 설정한 경우 나중에 열에서 정보를 검색할 수 있습니다.
@@ -113,15 +109,15 @@ ms.locfileid: "78174452"
 
  [마이닝 모델 아키텍처](#bkmk_mdlArch)
 
-##  <a name="bkmk_mdlProcess"></a>마이닝 모델 처리
+##  <a name="processing-mining-models"></a><a name="bkmk_mdlProcess"></a> 마이닝 모델 처리
  데이터 마이닝 모델은 처리되기 전까지는 비어 있는 개체입니다. 모델을 처리하면 구조에서 캐시된 데이터가 필터(모델에 정의된 필터가 있는 경우)를 통과하고 알고리즘에 의해 분석됩니다. 이 알고리즘은 데이터를 설명하는 요약 통계 집합을 계산하고, 데이터 내의 규칙과 패턴을 파악한 다음 이를 사용하여 모델을 채웁니다.
 
  마이닝 모델이 처리된 후 해당 마이닝 모델에는 데이터에 대한 풍부한 정보와 분석에서 얻은 패턴(통계, 규칙, 회귀 수식 등)이 포함되어 있습니다. 사용자 지정 뷰어를 사용하여 이 정보를 찾아보거나, 데이터 마이닝 쿼리를 만들어 이 정보를 검색한 다음 분석 및 프레젠테이션에 사용할 수 있습니다.
 
  [마이닝 모델 아키텍처](#bkmk_mdlArch)
 
-##  <a name="bkmk_mdlView"></a>마이닝 모델 보기 및 쿼리
- 모델을 처리한 후에는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 제공하는 사용자 지정 뷰어를 사용하여 모델을 탐색할 수 있습니다. 의 경우
+##  <a name="viewing-and-querying-mining-models"></a><a name="bkmk_mdlView"></a> 마이닝 모델 보기 및 쿼리
+ 모델을 처리한 후에는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 제공하는 사용자 지정 뷰어를 사용하여 모델을 탐색할 수 있습니다. For
 
  마이닝 모델에 대한 쿼리를 작성하여 예측을 만들거나 모델 메타데이터 또는 해당 모델에서 생성된 패턴을 검색할 수도 있습니다. 쿼리를 작성하려면 DMX(Data Mining Extensions)를 사용합니다.
 
@@ -129,27 +125,26 @@ ms.locfileid: "78174452"
 
 |토픽|링크|
 |------------|-----------|
-|여러 마이닝 모델을 지원할 수 있는 마이닝 구조를 작성하는 방법에 대해 알아봅니다. 모델의 열 사용법에 대해 알아봅니다.|[마이닝 구조 열](mining-structure-columns.md)<br /><br /> [마이닝 모델 열](mining-model-columns.md)<br /><br /> [데이터 마이닝&#41;&#40;내용 유형](content-types-data-mining.md)|
-|선택한 알고리즘이 모델 콘텐츠에 미치는 영향과 다른 알고리즘에 대해 알아봅니다.|[마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)<br /><br /> [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)|
-|컴퍼지션과 동작에 영향을 미치는 모델에 대한 속성을 설정하는 방법에 대해 알아봅니다.|[마이닝 모델 속성](mining-model-properties.md)<br /><br /> [데이터 마이닝&#41;&#40;모델링 플래그](modeling-flags-data-mining.md)|
-|데이터 마이닝에 대한 프로그래밍 가능한 인터페이스에 대해 알아봅니다.|[AMO(Analysis Management Object) &#40;AMO&#41;를 사용 하 여 개발](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)<br /><br /> [DMX&#41; 참조 &#40;데이터 마이닝 확장](/sql/dmx/data-mining-extensions-dmx-reference)|
-|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 사용자 지정 데이터 마이닝 뷰어를 사용하는 방법에 대해 알아봅니다.|[데이터 마이닝 모델 뷰어](data-mining-model-viewers.md)|
+|여러 마이닝 모델을 지원할 수 있는 마이닝 구조를 작성하는 방법에 대해 알아봅니다. 모델의 열 사용법에 대해 알아봅니다.|[마이닝 구조 열](mining-structure-columns.md)<br /><br /> [마이닝 모델 열](mining-model-columns.md)<br /><br /> [콘텐츠 형식&#40;데이터 마이닝&#41;](content-types-data-mining.md)|
+|선택한 알고리즘이 모델 콘텐츠에 미치는 영향과 다른 알고리즘에 대해 알아봅니다.|[마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)<br /><br /> [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)|
+|컴퍼지션과 동작에 영향을 미치는 모델에 대한 속성을 설정하는 방법에 대해 알아봅니다.|[마이닝 모델 속성](mining-model-properties.md)<br /><br /> [모델링 플래그&#40;데이터 마이닝&#41;](modeling-flags-data-mining.md)|
+|데이터 마이닝에 대한 프로그래밍 가능한 인터페이스에 대해 알아봅니다.|[AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)<br /><br /> [DMX&#40;Data Mining Extensions&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)|
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 사용자 지정 데이터 마이닝 뷰어를 사용하는 방법에 대해 알아봅니다.|[데이터 마이닝 모델 뷰어](data-mining-model-viewers.md)|
 |데이터 마이닝 모델에 대해 사용할 수 있는 다양한 쿼리 유형의 예를 봅니다.|[데이터 마이닝 쿼리](data-mining-queries.md)|
 
 ## <a name="related-tasks"></a>관련 작업
  다음 링크를 사용하여 데이터 마이닝 모델 작업에 대한 자세한 정보를 확인할 수 있습니다.
 
-|Task|링크|
+|작업|링크|
 |----------|----------|
 |마이닝 모델 추가 및 삭제|[기존 마이닝 구조에 마이닝 모델 추가](add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [마이닝 구조에서 마이닝 모델 삭제](delete-a-mining-model-from-a-mining-structure.md)|
 |마이닝 모델 열 작업|[마이닝 모델에서 열 제외](exclude-a-column-from-a-mining-model.md)<br /><br /> [모델 열의 별칭 만들기](create-an-alias-for-a-model-column.md)<br /><br /> [마이닝 모델에서 열의 분할 변경](change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [모델에서 회귀 변수로 사용할 열 지정](specify-a-column-to-use-as-regressor-in-a-model.md)|
 |모델 속성 변경|[마이닝 모델의 속성 변경](change-the-properties-of-a-mining-model.md)<br /><br /> [마이닝 모델에 필터 적용](apply-a-filter-to-a-mining-model.md)<br /><br /> [마이닝 모델에서 필터 삭제](delete-a-filter-from-a-mining-model.md)<br /><br /> [마이닝 모델에 드릴스루 사용](enable-drillthrough-for-a-mining-model.md)<br /><br /> [알고리즘 매개 변수 확인 또는 변경](view-or-change-algorithm-parameters.md)|
-|없습니다. 모델 복사, 이동 또는 관리|[마이닝 모델 복사본 만들기](make-a-copy-of-a-mining-model.md)<br /><br /> [마이닝 모델의 뷰 복사](copy-a-view-of-a-mining-model.md)<br /><br /> [DMX &#40;&#41;내보내기](/sql/dmx/export-dmx)<br /><br /> [DMX &#40;&#41;가져오기](/sql/dmx/import-dmx)|
+|없습니다. 모델 복사, 이동 또는 관리|[마이닝 모델 복사본 만들기](make-a-copy-of-a-mining-model.md)<br /><br /> [마이닝 모델의 뷰 복사](copy-a-view-of-a-mining-model.md)<br /><br /> [EXPORT&#40;DMX&#41;](/sql/dmx/export-dmx)<br /><br /> [IMPORT&#40;DMX&#41;](/sql/dmx/import-dmx)|
 |모델에 데이터 채우기 또는 모델의 데이터 업데이트|[마이닝 모델 처리](process-a-mining-model.md)|
 |OLAP 모델 작업|[데이터 마이닝 차원 만들기](create-a-data-mining-dimension.md)|
 
 ## <a name="see-also"></a>참고 항목
- [데이터베이스 개체 &#40;Analysis Services 다차원 데이터&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
+ [데이터베이스 개체&#40;Analysis Services - 다차원 데이터&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
 
 

@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd272abda4b22f220e3fc599111d10cb4979f42e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211974"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>보안 로그에 SQL Server Audit 이벤트 쓰기
@@ -47,25 +47,25 @@ ms.locfileid: "68211974"
   
      [보안](#Security)  
   
--   **보안 로그에 SQL Server 감사 이벤트를 쓰려면:**  
+-   **보안 로그에 SQL Server Audit 이벤트를 쓰려면**  
   
-     [Windows에서 auditpol을 사용 하 여 감사 개체 액세스 설정 구성](#auditpolAccess)  
+     [Windows에서 auditpol을 사용하여 감사 개체 액세스 설정 구성](#auditpolAccess)  
   
-     [Windows에서 secpol.msc를 사용 하 여 감사 개체 액세스 설정 구성](#secpolAccess)  
+     [Windows에서 secpol을 사용하여 감사 개체 액세스 설정 구성](#secpolAccess)  
   
-     [Secpol.msc를 사용 하 여 계정에 보안 감사 생성 권한을 부여 합니다.](#secpolPermission)  
+     [secpol을 사용하여 계정에 보안 감사 생성 권한 부여](#secpolPermission)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 컴퓨터 관리자는 도메인 정책이 보안 로그에 대한 로컬 설정을 덮어쓸 수 있다는 점을 유의해야 합니다. 이 경우에 도메인 정책은 하위 범주 설정을 덮어쓸 수 있습니다(**auditpol /get /subcategory:"application generated"** ). 이는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 감사하려는 이벤트가 기록되지 않는다는 점을 감지할 필요 없이 이벤트를 로깅할 수 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 기능에 영향을 미칠 수 있습니다.  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 컴퓨터 관리자는 도메인 정책이 보안 로그에 대한 로컬 설정을 덮어쓸 수 있다는 점을 유의해야 합니다. 이 경우에 도메인 정책은 하위 범주 설정을 덮어쓸 수 있습니다(**auditpol /get /subcategory:"application generated"**). 이는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 감사하려는 이벤트가 기록되지 않는다는 점을 감지할 필요 없이 이벤트를 로깅할 수 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 기능에 영향을 미칠 수 있습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  이러한 설정을 구성하려면 Windows 관리자여야 합니다.  
   
-##  <a name="auditpolAccess"></a> Windows에서 auditpol을 사용하여 감사 개체 액세스 설정을 구성하려면  
+##  <a name="to-configure-the-audit-object-access-setting-in-windows-using-auditpol"></a><a name="auditpolAccess"></a>Windows에서 auditpol을 사용 하 여 감사 개체 액세스 설정을 구성 하려면  
   
 1.  관리자 권한으로 명령 프롬프트를 엽니다.  
   
@@ -81,11 +81,11 @@ ms.locfileid: "68211974"
   
 3.  명령 프롬프트 창을 닫습니다.  
   
-##  <a name="secpolAccess"></a> secpol을 사용하여 계정에 보안 감사 생성 권한을 부여하려면  
+##  <a name="to-grant-the-generate-security-audits-permission-to-an-account-using-secpol"></a><a name="secpolAccess"></a> secpol을 사용하여 계정에 보안 감사 생성 권한을 부여하려면  
   
 1.  Windows 운영 체제의 **시작** 메뉴에서 **실행**을 클릭합니다.  
   
-2.  **secpol.msc** 를 입력한 다음 **확인**을 클릭합니다. **사용자 액세스 제어** 대화 상자가 열리면 **계속**을 클릭합니다.  
+2.  **secpol.msc** 를 입력한 다음 **확인**을 클릭합니다. **사용자 Access Control** 대화 상자가 열리면 **계속**을 클릭합니다.  
   
 3.  로컬 보안 정책 도구에서 **보안 설정**, **로컬 정책**을 차례로 확장한 다음 **사용자 권한 할당**을 클릭합니다.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "68211974"
   
 5.  **로컬 보안 설정** 탭에서 **사용자 또는 그룹 추가**를 클릭합니다.  
   
-6.  **사용자, 컴퓨터 또는 그룹 선택** 대화 상자에서 **domain1\user1** 과 같은 사용자 계정의 이름을 입력한 다음 **확인**을 클릭하거나 **고급** 을 클릭하여 계정을 검색합니다.  
+6.  **사용자, 컴퓨터 또는 그룹 선택** 대화 상자에서 **domain1\user1**과 같은 사용자 계정의 이름을 입력한 다음 **확인**을 클릭하거나 **고급**을 클릭하여 계정을 검색합니다.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -101,11 +101,11 @@ ms.locfileid: "68211974"
   
 9. 이 설정을 사용하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 다시 시작합니다.  
   
-##  <a name="secpolPermission"></a> Windows에서 secpol을 사용하여 감사 개체 액세스 설정을 구성하려면  
+##  <a name="to-configure-the-audit-object-access-setting-in-windows-using-secpol"></a><a name="secpolPermission"></a> Windows에서 secpol을 사용하여 감사 개체 액세스 설정을 구성하려면  
   
 1.  운영 체제가 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 또는 Windows Server 2008 이전 버전인 경우 **시작** 메뉴에서 **실행**을 클릭합니다.  
   
-2.  **secpol.msc** 를 입력한 다음 **확인**을 클릭합니다. **사용자 액세스 제어** 대화 상자가 열리면 **계속**을 클릭합니다.  
+2.  **secpol.msc** 를 입력한 다음 **확인**을 클릭합니다. **사용자 Access Control** 대화 상자가 열리면 **계속**을 클릭합니다.  
   
 3.  로컬 보안 정책 도구에서 **보안 설정**, **로컬 정책**을 차례로 확장한 다음 **감사 정책**을 클릭합니다.  
   

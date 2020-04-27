@@ -13,12 +13,12 @@ ms.assetid: d8d6f62a-e815-425c-a80e-a63fd34ec275
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b130cf3de5e416282c08ce45059db1ea21505ce7
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: bf492b24e1473ce189f39a84096242773b78cc4a
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633533"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82086819"
 ---
 # <a name="transact-sql-statements"></a>Transact-SQL 문
 
@@ -62,7 +62,7 @@ DML(데이터 조작 언어)는 데이터베이스에 저장된 정보에 영향
 
 ## <a name="service-broker-statements"></a>Service Broker 문
 
-Service Broker는 메시징 및 큐 애플리케이션에 대한 기본 지원을 제공합니다. 자세한 내용은 [Service Broker](../../relational-databases/service-broker/event-notifications.md)를 참조하세요.
+Service Broker는 메시징 및 큐 애플리케이션에 대한 기본 지원을 제공합니다. 자세한 내용은 [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)를 참조하세요.
 
 ## <a name="session-settings"></a>세션 설정
 

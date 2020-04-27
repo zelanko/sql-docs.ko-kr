@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196431"
 ---
 # <a name="create-indexed-views"></a>인덱싱된 뷰 만들기
@@ -29,7 +29,7 @@ ms.locfileid: "68196431"
   
   
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
  다음 단계는 인덱싱된 뷰를 만들고 성공적으로 구현하는 데 필요합니다.  
   
 1.  뷰에 참조될 기존의 모든 테이블에 대해 SET 옵션이 올바른지 확인합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "68196431"
   
 5.  뷰에 고유 클러스터형 인덱스를 만듭니다.  
   
-###  <a name="Restrictions"></a>인덱싱된 뷰에 필요한 SET 옵션  
+###  <a name="required-set-options-for-indexed-views"></a><a name="Restrictions"></a>인덱싱된 뷰에 필요한 SET 옵션  
  쿼리가 실행될 때 다른 SET 옵션이 활성화되어 있으면 같은 식을 계산해도 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 다른 결과가 나올 수 있습니다. 예를 들어 SET 옵션 CONCAT_NULL_YIELDS_NULL이 ON으로 설정된 후 식 **'** abc **'** + NULL의 결과로 NULL 값이 반환됩니다. 그러나 CONCAT_NULL_YIEDS_NULL을 OFF로 설정한 후 같은 식의 결과는 **'** abc **'** 가 됩니다.  
   
  뷰를 올바르게 유지하고 일관된 결과를 반환하게 하려면 인덱싱된 뷰는 몇 가지 SET 옵션에 대해 고정 값이 필요합니다. 다음 테이블의 SET 옵션은 다음 조건이 발생할 때마다 **Requiredvalue** 열에 표시 된 값으로 설정 되어야 합니다.  
@@ -130,29 +130,28 @@ ms.locfileid: "68196431"
   
 -   뷰 정의에 GROUP BY 절이 들어 있으면 고유 클러스터형 인덱스의 키는 GROUP BY 절에 지정된 열만 참조할 수 있습니다.  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
  인덱싱된 뷰의 `datetime` 및 `smalldatetime` 문자열 리터럴을 참조할 때 결정적 날짜 형식 스타일을 사용하여 리터럴을 원하는 날짜 유형으로 명시적으로 변환하는 것이 좋습니다. 결정적 날짜 형식 스타일 목록은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)를 참조하세요. 문자열을 `datetime` 또는 `smalldatetime`으로 암시적으로 변환하는 작업과 관련된 식은 비결정적인 것으로 간주됩니다. 이는 서버 세션의 LANGUAGE 및 DATEFORMAT 설정에 따라 결과가 달라지기 때문입니다. 예를 들어 ' `CONVERT (datetime, '30 listopad 1996', 113)` ' 문자열이 다른 언어에서는 다른 월을 의미하므로`listopad`식의 결과는 LANGUAGE 설정에 따라 달라집니다. 마찬가지로 `DATEADD(mm,3,'2000-12-01')`식에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 DATEFORMAT 설정을 기준으로 `'2000-12-01'` 문자열을 해석합니다.  
   
  데이터 정렬 간의 비유니코드 문자 데이터를 암시적으로 변환하는 작업도 비결정적인 것으로 간주됩니다.  
   
-###  <a name="Considerations"></a>고려 사항  
+###  <a name="considerations"></a><a name="Considerations"></a>고려 사항  
  인덱싱된 뷰의 열에 대한 **large_value_types_out_of_row** 옵션의 설정은 기본 테이블의 해당 열에 대한 설정에서 상속됩니다. 이 값은 [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)을 통해 설정됩니다. 식으로부터 구성된 열의 기본 설정은 0으로서 큰 값 유형이 행 내부에 저장됨을 의미합니다.  
   
  인덱싱된 뷰는 분할된 테이블에서 만들 수 있으며 자신이 분할될 수 있습니다.  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 인덱싱된 뷰를 사용하지 않게 하려면 쿼리에 OPTION (EXPAND VIEW) 힌트를 포함합니다. 또한 위에 표시된 옵션을 하나라도 잘못 설정하면 최적화 프로그램에서 뷰의 인덱스를 사용할 수 없게 됩니다. OPTION (EXPAND VIEW) 힌트에 대한 자세한 내용은 [SELECT&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)를 참조하세요.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 인덱싱된 뷰를 사용하지 않게 하려면 쿼리에 OPTION (EXPAND VIEW) 힌트를 포함합니다. 또한 위에 표시된 옵션을 하나라도 잘못 설정하면 최적화 프로그램에서 뷰의 인덱스를 사용할 수 없게 됩니다. OPTION (EXPAND VIEW) 힌트에 대한 자세한 내용은 [SELECT&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)를 참조하세요.  
   
  뷰가 삭제되면 뷰에 있는 모든 인덱스도 삭제됩니다. 클러스터형 인덱스가 삭제되면 뷰의 모든 비클러스터형 인덱스 및 자동 생성된 통계가 삭제됩니다. 사용자가 만든 뷰의 통계는 유지됩니다. 비클러스터형 인덱스는 개별적으로 삭제될 수 있습니다. 뷰에서 클러스터형 인덱스를 삭제하면 저장된 결과 집합도 삭제되고 최적화 프로그램이 표준 뷰와 같은 뷰의 처리 단계로 되돌아갑니다.  
   
  테이블 및 뷰의 인덱스를 비활성화할 수 있습니다. 테이블의 클러스터형 인덱스가 비활성화되면 테이블과 관련된 뷰의 인덱스도 비활성화됩니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  데이터베이스에는 CREATE VIEW 권한이 필요하고 뷰를 만들 구성표에는 ALTER 권한이 필요합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-create-an-indexed-view"></a>인덱싱된 뷰를 만들려면  
   
@@ -213,9 +212,9 @@ ms.locfileid: "68196431"
   
 ## <a name="see-also"></a>참고 항목  
  [CREATE INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
- [SET ANSI_NULLS&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
- [SET ANSI_PADDING&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
- [SET ANSI_WARNINGS&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
+ [Transact-sql&#41;&#40;ANSI_NULLS 설정](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
+ [Transact-sql&#41;&#40;ANSI_PADDING 설정](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
+ [Transact-sql&#41;&#40;ANSI_WARNINGS 설정](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
  [ARITHABORT &#40;Transact-sql&#41;설정](/sql/t-sql/statements/set-arithabort-transact-sql)   
  [Transact-sql&#41;&#40;CONCAT_NULL_YIELDS_NULL 설정](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
  [Transact-sql&#41;&#40;NUMERIC_ROUNDABORT 설정](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   

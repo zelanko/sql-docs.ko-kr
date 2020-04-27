@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198989"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>피어 투 피어 복제에서 충돌 검색
@@ -100,6 +100,6 @@ ms.locfileid: "68198989"
     5.  [Sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)실행: 매개 변수 및 @property `false` @value 매개 변수에 대해 ' p2p_continue_onconflict '를 지정 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [@loopback_detection](peer-to-peer-transactional-replication.md)  
+ [피어 투 피어 트랜잭션 복제](peer-to-peer-transactional-replication.md)  
   
   

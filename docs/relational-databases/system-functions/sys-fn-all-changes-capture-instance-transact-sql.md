@@ -21,10 +21,10 @@ ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6b9b6e62d0f69c5182ad69e21cb46800d4ddcc86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72909394"
 ---
 # <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>sys. fn_all_changes_&lt;capture_instance&gt; (transact-sql)
@@ -60,12 +60,11 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  이 매개 변수는 다음과 같은 경우에 @closed_high_end_point 사용할 수 있는 두 가지 의미 중 하나를 사용 하 여 래퍼 함수에 대 한 create 스크립트를 생성 하기 위해 sp_cdc_generate_wrapper_function를 호출 합니다.  
   
--   @closed_high_end_point= 1  
+-   @closed_high_end_point = 1  
   
      연결 된 커밋 시간이 end_time 작거나 같은 cdc. <capture_instance>_CT 변경 테이블의 행만 결과 집합에 포함 됩니다.  
   
--   
-  @closed_high_end_point = 0  
+-   @closed_high_end_point = 0  
   
      연결된 커밋 시간이 end_time 이전인 cdc.capture_instance_CT 변경 테이블의 행만 결과 집합에 포함됩니다.  
   
@@ -76,7 +75,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  다음 옵션 중 하나를 사용할 수 있습니다.  
   
- 모두  
+ all  
  지정된 LSN 범위 내의 모든 변경을 반환합니다. 업데이트 작업으로 인해 발생하는 변경 내용의 경우 이 옵션을 사용하면 업데이트가 적용된 후의 새 값을 포함하는 행만 반환됩니다.  
   
  all update old  
@@ -84,12 +83,12 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|열 유형|Description|  
+|열 이름|열 유형|설명|  
 |-----------------|-----------------|-----------------|  
-|__CDC_STARTLSN|**binary (10)**|변경 내용과 관련된 트랜잭션의 커밋 LSN입니다. 동일한 트랜잭션에서 커밋된 모든 변경 내용은 같은 커밋 LSN을 공유합니다.|  
-|__CDC_SEQVAL|**binary (10)**|트랜잭션에서 행 변경 내용을 정렬하는 데 사용되는 시퀀스 값입니다.|  
-|\<>의 @column_list 열|**다름**|래퍼 함수를 만드는 스크립트를 생성 하기 위해 호출 될 때 sp_cdc_generate_wrapper_function *column_list* 인수에서 식별 되는 열입니다.|  
-|__CDC_OPERATION|**nvarchar (2)**|대상 환경에 행을 적용하는 데 필요한 작업을 나타내는 작업 코드입니다. 이 매개 변수는 호출에 제공 된 *row_filter_option* 인수의 값에 따라 달라 집니다.<br /><br /> *row_filter_option* = ' 모두 '<br /><br /> 'D' - 삭제 작업<br /><br /> 'I' - 삽입 작업<br /><br /> 'UN' - 업데이트 작업 새 값<br /><br /> *row_filter_option* = ' 모든 업데이트 이전 '<br /><br /> 'D' - 삭제 작업<br /><br /> 'I' - 삽입 작업<br /><br /> 'UN' - 업데이트 작업 새 값<br /><br /> 'UO' - 업데이트 작업 이전 값|  
+|__CDC_STARTLSN|**binary(10)**|변경 내용과 관련된 트랜잭션의 커밋 LSN입니다. 동일한 트랜잭션에서 커밋된 모든 변경 내용은 같은 커밋 LSN을 공유합니다.|  
+|__CDC_SEQVAL|**binary(10)**|트랜잭션에서 행 변경 내용을 정렬하는 데 사용되는 시퀀스 값입니다.|  
+|\<>의 @column_list 열|**잠기기**|래퍼 함수를 만드는 스크립트를 생성 하기 위해 호출 될 때 sp_cdc_generate_wrapper_function *column_list* 인수에서 식별 되는 열입니다.|  
+|__CDC_OPERATION|**nvarchar(2)**|대상 환경에 행을 적용하는 데 필요한 작업을 나타내는 작업 코드입니다. 이 매개 변수는 호출에 제공 된 *row_filter_option* 인수의 값에 따라 달라 집니다.<br /><br /> *row_filter_option* = ' 모두 '<br /><br /> 'D' - 삭제 작업<br /><br /> 'I' - 삽입 작업<br /><br /> 'UN' - 업데이트 작업 새 값<br /><br /> *row_filter_option* = ' 모든 업데이트 이전 '<br /><br /> 'D' - 삭제 작업<br /><br /> 'I' - 삽입 작업<br /><br /> 'UN' - 업데이트 작업 새 값<br /><br /> 'UO' - 업데이트 작업 이전 값|  
 |\<>의 @update_flag_list 열|**bit**|_uflag를 열 이름에 추가하여 이름을 지정한 비트 플래그입니다. _CDC_OPERATION이 ' d ', ' I \_', ' uo ' 인 경우 플래그는 항상 NULL로 설정 됩니다. \__CDC_OPERATION ' u n ' 이면 업데이트에서 해당 열에 대 한 변경 내용을 생성 하는 경우 1로 설정 됩니다. 그렇지 않으면 0입니다.|  
   
 ## <a name="remarks"></a>설명  

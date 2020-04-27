@@ -13,10 +13,10 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.openlocfilehash: 50f082edef5d9a6d4e95b7e37ef6d75f22eb6f2a
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289151"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>데이터베이스 실험 도우미에서 추적 재생
@@ -163,6 +163,6 @@ UNC 경로는 Distributed Replay와 호환 되지 않습니다. Distributed Repl
   
 SQL Server 2017에 대 한 최신 누적 업데이트 1에서이 문제가 해결 되었습니다. [SQL Server 2017에 대 한 최신 버전의 누적 업데이트 1](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017)을 다운로드 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - 제안 된 변경 내용에 대 한 정보를 얻는 데 도움이 되는 분석 보고서를 만들려면 [보고서 만들기](database-experimentation-assistant-create-report.md)를 참조 하세요.

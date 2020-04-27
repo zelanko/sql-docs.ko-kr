@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f035f9173477a3954a949f9ed27bc6f4f66be741
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211404"
 ---
 # <a name="edit-an-alert"></a>Edit an Alert
@@ -30,25 +30,24 @@ ms.locfileid: "68211404"
   
      [보안](#Security)  
   
--   **다음을 사용 하 여 경고를 편집 합니다.**  
+-   **다음을 사용하여 경고를 편집합니다.**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버가 경고의 정보를 편집할 수 있습니다. 다른 사용자는 **msdb** 데이터베이스의 **SQLAgentOperatorRole** 고정 데이터베이스 역할을 부여 받아야 합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-edit-an-alert"></a>경고를 편집하려면  
   
-1.  
-  **개체 탐색기** 에서 더하기 기호를 클릭하여 편집하려는 경고가 들어 있는 서버를 확장합니다.  
+1.  **개체 탐색기** 에서 더하기 기호를 클릭하여 편집하려는 경고가 들어 있는 서버를 확장합니다.  
   
 2.  더하기 기호를 클릭하여 **SQL Server 에이전트**를 확장합니다.  
   
@@ -56,12 +55,11 @@ ms.locfileid: "68211404"
   
 4.  편집할 경고를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-5.  
-  **일반**, **응답**및 **옵션** 페이지에서 경고 속성을 업데이트합니다.  
+5.  **일반**, **응답**및 **옵션** 페이지에서 경고 속성을 업데이트합니다.  
   
-6.  완료되었으면 **확인**을 클릭합니다.  
+6.  작업을 완료한 후 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-edit-an-alert"></a>경고를 편집하려면  
   

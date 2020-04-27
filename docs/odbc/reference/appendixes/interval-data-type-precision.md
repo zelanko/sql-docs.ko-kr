@@ -1,5 +1,5 @@
 ---
-title: 간격 데이터 형식 정밀도 | 마이크로 소프트 문서
+title: Interval 데이터 형식 전체 자릿수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,19 +19,19 @@ ms.assetid: eb73bd77-2e7e-4498-a266-4d7c990a0d56
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 746293c545c47917abd084ec3eb105051fc2fbcf
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81290743"
 ---
 # <a name="interval-data-type-precision"></a>간격 데이터 형식 전체 자릿수
-간격 데이터 형식의 정밀도에는 간격 선행 정밀도, 간격 정밀도 및 초 정밀도가 포함됩니다.  
+간격 데이터 형식에 대 한 전체 자릿수는 간격 선행 전체 자릿수, 간격 전체 자릿수, 초 정밀도를 포함 합니다.  
   
- 간격의 선행 필드는 서명된 숫자입니다. 선행 필드의 최대 자릿수는 데이터 형식 선언의 일부인 *간격 선행 정밀도라는* 수량에 의해 결정됩니다. 예를 들어, 선언: INTERVAL HOUR(5) to MINUTE는 간격 을 선도하는 정밀도5를 가합니다. HOUR 필드는 -99999 ~ 99999값을 사용할 수 있습니다. 선행 정밀도 간격은 설명자 레코드의 SQL_DESC_DATETIME_INTERVAL_PRECISION 필드에 포함됩니다.  
+ 간격의 선행 필드는 부호 있는 숫자입니다. 선행 필드의 최대 자릿수는 데이터 형식 선언의 일부인 *interval 선행 전체 자릿수* 라는 수량에 따라 결정 됩니다. 예를 들어, 시간 간격 시간 (5)을 분으로 설정한 경우 간격의 선행 전체 자릿수가 5가 됩니다. 시간 필드에는-99999에서 99999 까지의 값을 사용할 수 있습니다. 간격 선행 전체 자릿수는 설명자 레코드의 SQL_DESC_DATETIME_INTERVAL_PRECISION 필드에 포함 되어 있습니다.  
   
- 간격 데이터 형식이 구성된 필드 목록을 간격 *정밀도라고*합니다. "정밀도"라는 용어가 암시할 수 있듯이 숫자 값이 아닙니다. 예를 들어, 인터벌 데이에서 second까지의 간격 정밀도는 일, 시간, 분, 초 목록입니다. 이 값을 보유하는 설명자 필드가 없습니다. 간격 정밀도는 항상 간격 데이터 형식에 의해 결정될 수 있습니다.  
+ 간격 데이터 형식을 구성 하는 필드 목록을 *간격 전체 자릿수*라고 합니다. "전체 자릿수" 라는 용어는 숫자 값이 아닙니다. 예를 들어, INTERVAL DAY의 interval 전체 자릿수는 일, 시, 분, 초 목록입니다. 이 값을 보유 하는 설명자 필드가 없습니다. 간격 정밀도는 항상 interval 데이터 형식에 의해 결정 될 수 있습니다.  
   
- SECOND 필드가 있는 모든 간격 데이터 형식에는 *초 정밀도가*있습니다. 초 값의 소수 부분에 허용되는 소수 자릿수입니다. 이는 소수점 앞의 자릿수를 정밀도가 나타내는 다른 데이터 형식과 다릅니다. 간격 데이터 형식의 초 정밀도는 소수점 다음의 자릿수입니다. 예를 들어 초 정밀도가 6으로 설정된 경우 분수 필드의 숫자 123456은 .123456으로 해석되고 숫자 1230은 .001230으로 해석됩니다. 다른 데이터 형식의 경우 이를 축척이라고 합니다. 간격 초 정밀도는 설명자의 SQL_DESC_PRECISION 필드에 포함되어 있습니다. SQL 간격 값의 분수 초 구성 요소의 정밀도가 C 간격 구조에서 보유할 수 있는 값보다 큰 경우, C 간격 구조로 변환될 때 SQL 간격의 분수 초 값이 반올림되거나 잘린지 여부를 드라이버 정의합니다.  
+ 두 번째 필드가 있는 간격 데이터 형식의 *전체 자릿수는 초*입니다. 초 값의 소수 부분에 허용 되는 10 진수 숫자입니다. 이는 다른 데이터 형식에 대 한 것과 다릅니다. 여기서 precision은 소수점 앞의 자릿수를 나타냅니다. Interval 데이터 형식의 초 전체 자릿수는 소수점 뒤의 자릿수입니다. 예를 들어 초 전체 자릿수가 6으로 설정 된 경우 분수 필드의 숫자 123456는 123456로 해석 되 고 숫자 1230는. 001230로 해석 됩니다. 다른 데이터 형식의 경우이를 scale 이라고 합니다. 간격 (초)의 전체 자릿수는 설명자의 SQL_DESC_PRECISION 필드에 포함 됩니다. SQL interval 값의 소수 자릿수 초 구성 요소에 대 한 전체 자릿수가 C interval 구조에서 보유할 수 있는 것 보다 큰 경우, 해당 값은 C 간격 구조로 변환 될 때 SQL 간격의 소수 자릿수 초 값을 반올림 하거나 잘라낼 지 여부를 드라이버에서 정의 합니다.  
   
- SQL_DESC_CONCISE_TYPE 필드가 간격 데이터 유형으로 설정되면 SQL_DESC_TYPE 필드가 SQL_INTERVAL 설정되고 SQL_DESC_DATETIME_INTERVAL_CODE 간격 데이터 형식의 코드로 설정됩니다. SQL_DESC_DATETIME_INTERVAL_PRECISION 필드는 정밀도를 2로 이끄는 기본 간격으로 자동으로 설정되고 SQL_DESC_PRECISION 필드는 기본 간격 초 정밀도 6으로 자동으로 설정됩니다. 이러한 값 중 하나가 적절하지 않은 경우 응용 프로그램은 **SQLSetDescField**에 대한 호출을 통해 설명자 필드를 명시적으로 설정해야 합니다.
+ SQL_DESC_CONCISE_TYPE 필드가 interval 데이터 형식으로 설정 되어 있으면 SQL_DESC_TYPE 필드가 SQL_INTERVAL로 설정 되 고 SQL_DESC_DATETIME_INTERVAL_CODE이 interval 데이터 형식에 대 한 코드로 설정 됩니다. SQL_DESC_DATETIME_INTERVAL_PRECISION 필드는 자동으로 기본 간격 (2)으로 설정 되 고, SQL_DESC_PRECISION 필드는 자동으로 기본 간격 (초) 전체 자릿수 (6)로 설정 됩니다. 이러한 값 중 하나가 적절 하지 않은 경우 응용 프로그램은 **SQLSetDescField**를 호출 하 여 설명자 필드를 명시적으로 설정 해야 합니다.

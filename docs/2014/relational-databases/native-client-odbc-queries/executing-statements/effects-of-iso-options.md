@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ebef85cf1deb2327122edfd536991f689b14c747
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206765"
 ---
 # <a name="effects-of-iso-options"></a>ISO 옵션의 효과
@@ -34,8 +34,7 @@ ms.locfileid: "68206765"
   
  SET 옵션은 사용자와 애플리케이션이 언제라도 설정하거나 해제할 수 있으므로 저장 프로시저 및 트리거 개발자는 위에 나열된 SET 옵션을 설정한 상태와 해제한 상태 모두에서 프로시저 및 트리거를 신중하게 테스트해야 합니다. 이렇게 하면 프로시저나 트리거가 호출될 때 특정 연결에서 설정하는 옵션에 관계없이 프로시저 및 트리거가 올바르게 작동합니다. 위의 옵션 중 하나에 대한 특정한 설정이 필요한 트리거 또는 저장 프로시저는 트리거 또는 저장 프로시저의 시작 부분에서 SET 문을 실행해야 합니다. 이 SET 문은 해당 트리거 또는 저장 프로시저가 실행되는 동안에만 적용됩니다. 프로시저 또는 트리거가 종료되면 원래 설정이 복원됩니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결하면 네 번째 SET 옵션인 CONCAT_NULL_YIELDS_NULL이 설정됩니다. 데이터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 원본 또는 [SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md) 또는 [SQLBrowseConnect](../../native-client-odbc-api/sqlbrowseconnect.md)에 ansinpw = NO가 지정 된 경우 Native Client ODBC 드라이버는 이러한 옵션을 설정 하지 않습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결하면 네 번째 SET 옵션인 CONCAT_NULL_YIELDS_NULL이 설정됩니다. 데이터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 원본 또는 [SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md) 또는 [SQLBrowseConnect](../../native-client-odbc-api/sqlbrowseconnect.md)에 ansinpw = NO가 지정 된 경우 Native Client ODBC 드라이버는 이러한 옵션을 설정 하지 않습니다.  
   
  앞에서 설명한 ISO 옵션과 마찬가지로 Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC 드라이버는 QUOTEDID = NO가 데이터 원본 또는 **SQLDriverConnect** 또는 **SQLBrowseConnect**에 지정 된 경우에는 QUOTED_IDENTIFIER 옵션을 설정 하지 않습니다.  
   

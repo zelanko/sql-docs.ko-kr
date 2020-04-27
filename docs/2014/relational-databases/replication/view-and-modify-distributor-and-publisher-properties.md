@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4049cfa36020431e9cae8cbe2431c1c270d5deb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68212024"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>게시자 및 배포자 속성 보기 및 수정
@@ -41,16 +41,16 @@ ms.locfileid: "68212024"
   
      [RMO(복제 관리 개체)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전 버전을 실행하는 게시자의 경우, **sysadmin** 고정 서버 역할의 사용자가 **구독자** 페이지에서 구독자를 등록할 수 있습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터는 더 이상 복제에 대해 구독자를 명시적으로 등록하지 않아도 됩니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-view-and-modify-distributor-properties"></a>배포자 속성을 보고 수정하려면  
   
@@ -60,7 +60,7 @@ ms.locfileid: "68212024"
   
 3.  **배포자 속성 - \<Distributor>** 대화 상자에서 속성을 보고 수정합니다.  
   
-    -   배포 데이터베이스의 속성을 보고 수정하려면 대화 상자의 **일반** 페이지에서 해당 데이터베이스에 대한 속성 단추( **...** )를 클릭합니다.  
+    -   배포 데이터베이스의 속성을 보고 수정하려면 대화 상자의 **일반** 페이지에서 해당 데이터베이스에 대한 속성 단추(**...**)를 클릭합니다.  
   
     -   배포자와 관련된 게시자 속성을 보고 수정하려면 대화 상자의**게시자**페이지에서 해당 게시자에 대한 속성 단추 ( **...** )를 클릭합니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68212024"
   
 4.  필요한 경우 속성을 수정한 다음 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  복제 저장 프로시저를 사용하여 프로그래밍 방식으로 게시자와 배포자 속성을 볼 수 있습니다.  
   
 #### <a name="to-view-distributor-and-distribution-database-properties"></a>배포자 및 배포 데이터베이스 속성을 보려면  
@@ -104,7 +104,7 @@ ms.locfileid: "68212024"
   
 4.  배포자를 사용하는 게시자의 속성을 변경하려면 배포자에서 [sp_changedistpublisher](/sql/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql) 를 실행합니다.  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>예 (Transact-sql)  
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 예에서는 배포자와 배포자 데이터베이스에 대한 정보를 반환합니다.  
   
  [!code-sql[HowTo#sp_helpdistributor](../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_helpdistributor)]  
@@ -122,7 +122,7 @@ ms.locfileid: "68212024"
   
  [!code-sql[HowTo#sp_changedistributor_password](../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_changedistributor_password)]  
   
-##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
   
 #### <a name="to-view-and-modify-distributor-properties"></a>배포자 속성을 보고 수정하려면  
   
@@ -173,7 +173,7 @@ ms.locfileid: "68212024"
 5.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> 메서드를 호출합니다. *password* 매개 변수에 대해 새 암호 값을 전달합니다.  
   
     > [!IMPORTANT]  
-    >  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](https://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용합니다.  
+    >  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장 해야 하는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework에서 제공 하는 [암호화 서비스](https://go.microsoft.com/fwlink/?LinkId=34733) 를 사용 합니다.  
   
 6.  (옵션) 다음 단계를 수행하여 이 배포자를 사용하는 각 원격 게시자에서 암호를 변경합니다.  
   
@@ -187,7 +187,7 @@ ms.locfileid: "68212024"
   
     5.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> 메서드를 호출합니다. *password* 매개 변수에 대해 5단계에서 만든 새 암호 값을 전달합니다.  
   
-###  <a name="PShellExample"></a> 예(RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a>예 (RMO)  
  이 예에서는 배포 및 배포 데이터베이스 속성을 변경하는 방법을 보여 줍니다.  
   
 > [!IMPORTANT]  
@@ -198,12 +198,12 @@ ms.locfileid: "68212024"
  [!code-vb[HowTo#rmo_vb_ChangeDistPub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changedistpub)]  
   
 ## <a name="see-also"></a>참고 항목  
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
+ [복제 관리 개체 개념](concepts/replication-management-objects-concepts.md)   
  [게시 및 배포 해제](disable-publishing-and-distribution.md)   
  [배포 구성](configure-distribution.md)   
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
+ [복제 관리 개체 개념](concepts/replication-management-objects-concepts.md)   
  [배포자 및 게시자 정보 스크립트](administration/distributor-and-publisher-information-script.md)   
- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
+ [복제 시스템 저장 프로시저 개념](concepts/replication-system-stored-procedures-concepts.md)   
  [복제 모니터를 사용하여 정보 보기 및 태스크 수행](monitor/view-information-and-perform-tasks-replication-monitor.md)  
   
   

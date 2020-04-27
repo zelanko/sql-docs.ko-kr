@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f75298a4701f15a1fc0f3f471bf7628f4a7030c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782648"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
-  
   [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]에는 Windows PowerShell을 사용하여 Analysis Services 개체를 탐색, 관리 및 쿼리할 수 있도록 Analysis Services PowerShell(SQLAS) 공급자 및 cmdlet이 포함되어 있습니다.  
   
  Analysis Services PowerShell은 다음으로 구성되어 있습니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "72782648"
   
 -   처리, 역할 관리, 파티션 관리, 백업 및 복원과 같은 일상적인 작업을 위한 태스크 관련 cmdlet  
   
-## <a name="in-this-article"></a>이 문서에서는 다음을 수행합니다.  
+## <a name="in-this-article"></a>이 문서의 내용  
  [필수 구성 요소](#bkmk_prereq)  
   
  [Analysis Services 지원 되는 버전 및 모드](#bkmk_vers)  
@@ -40,18 +39,18 @@ ms.locfileid: "72782648"
 
 구문 및 예제에 대 한 자세한 내용은 [Analysis Services PowerShell 참조](/sql/analysis-services/powershell/analysis-services-powershell-reference)를 참조 하세요.
 
-##  <a name="bkmk_prereq"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 필수 조건  
  Windows PowerShell 2.0이 설치되어 있어야 합니다. 새 Windows 운영 체제 버전에서는 Windows PowerShell 2.0이 기본적으로 설치됩니다. 자세한 내용은 [Windows PowerShell 2.0 설치](https://msdn.microsoft.com/library/ff637750.aspx) 를 참조 하세요.
 
 <!-- ff637750.aspx above is linked to by:  (https://go.microsoft.com/fwlink/?LinkId=227613). -->
   
  SQLPS(SQL Server PowerShell) 모듈 및 클라이언트 라이브러리를 포함하는 SQL Server 기능을 설치해야 합니다. PowerShell 기능과 클라이언트 라이브러리가 포함되어 있는 SQL Server Management Studio를 설치하면 이러한 기능이 자동으로 설치됩니다. SQLPS(SQL Server PowerShell) 모듈에는 모든 SQL Server 기능에 대한 PowerShell 공급자 및 cmdlet이 포함되어 있습니다. 여기에는 Analysis Services 개체 계층 탐색에 사용되는 SQLAS 공급자 및 SQLASCmdlets 모듈도 포함됩니다.  
   
- 공급자 및 cmdlet을 사용 하려면 먼저 SQLPS 모듈을 가져와야 합니다. **** `SQLAS` SQLAS 공급자는 `SQLServer` 공급자의 확장입니다. SQLPS 모듈은 여러 가지 방법으로 가져올 수 있습니다. 자세한 내용은 [SQLPS 모듈 가져오기](../../2014/database-engine/import-the-sqlps-module.md)를 참조하세요.  
+ 공급자 및 cmdlet을 사용 하려면 먼저 SQLPS 모듈을 가져와야 합니다. **SQLPS** `SQLAS` SQLAS 공급자는 `SQLServer` 공급자의 확장입니다. SQLPS 모듈은 여러 가지 방법으로 가져올 수 있습니다. 자세한 내용은 [SQLPS 모듈 가져오기](../../2014/database-engine/import-the-sqlps-module.md)를 참조하세요.  
   
  Analysis Services 인스턴스에 원격으로 액세스하려면 원격 관리 및 파일 공유를 사용하도록 설정해야 합니다. 자세한 내용은이 항목의 [원격 관리 사용](#bkmk_remote) 을 참조 하세요.  
   
-##  <a name="bkmk_vers"></a>Analysis Services 지원 되는 버전 및 모드  
+##  <a name="supported-versions-and-modes-of-analysis-services"></a><a name="bkmk_vers"></a> 지원되는 Analysis Services 버전 및 모드  
  현재 Analysis Services PowerShell은 Windows Server 2008 R2, Windows Server 2008 SP1 또는 Windows 7에서 실행되는 모든 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Analysis Services 버전에서 지원됩니다.  
   
  다음 표에서는 컨텍스트별로 Analysis Services PowerShell의 사용 가능 여부를 보여 줍니다.  
@@ -66,7 +65,7 @@ ms.locfileid: "72782648"
 |PowerPivot 데이터베이스에 대한 포함된 연결<br /><br /> "Data Source = $Embedded $"|지원되지 않습니다.|  
 |Analysis Services 저장 프로시저의 로컬 서버 컨텍스트<br /><br /> "Data Source = *"|지원되지 않습니다.|  
   
-##  <a name="bkmk_auth"></a>인증 요구 사항 및 보안 고려 사항  
+##  <a name="authentication-requirements-and-security-considerations"></a><a name="bkmk_auth"></a>인증 요구 사항 및 보안 고려 사항  
  Analysis Services에 연결하는 경우 Windows 사용자 ID를 사용해야 합니다. 대부분 Windows 통합 보안을 사용하여 연결이 이루어지는데 이 경우 현재 사용자의 ID가 서버 작업이 수행되는 보안 컨텍스트를 설정합니다. 하지만 Analysis Services에 대한 HTTP 액세스를 구성하면 추가 인증 방법을 사용할 수 있습니다. 이 섹션에서는 연결 유형에 따라 사용할 수 있는 인증 옵션에 대해 설명합니다.  
   
  Analysis Services에 대한 연결은 네이티브 연결과 HTTP 연결 중 하나로 구분됩니다. 네이티브 연결은 클라이언트 애플리케이션에서 서버로의 직접 연결입니다. PowerShell 세션에서 PowerShell 클라이언트는 Analysis Services용 OLE DB 공급자를 사용하여 직접 Analysis Services 인스턴스에 연결합니다. 네이티브 연결은 언제나 Windows 통합 보안을 사용하여 이루어지며 여기서는 Analysis Services PowerShell이 현재 사용자로 실행됩니다. Analysis Services는 가장을 지원하지 않습니다. 특정 사용자로 작업을 수행하려는 경우 해당 사용자로 PowerShell 세션을 시작해야 합니다.  
@@ -77,7 +76,7 @@ ms.locfileid: "72782648"
   
  -Credential 매개 변수는 사용자 이름 및 암호를 지정 하는 PSCredential 개체를 사용 합니다. Analysis Services PowerShell에서-Credential 매개 변수는 기존 연결의 컨텍스트 내에서 실행 되는 cmdlet이 아닌 Analysis Services에 대 한 연결 요청을 수행 하는 cmdlet에 사용할 수 있습니다. 연결 요청을 수행하는 cmdlet에는 Invoke-ASCmd, Backup-ASDatabase, Restore-ASDatabase 등이 있습니다. 이러한 cmdlet의 경우 다음 조건을 충족 한다고 가정 하 여-Credential 매개 변수를 사용할 수 있습니다.  
   
-1.  서버가 HTTP 액세스를 사용하도록 구성된 경우, 즉 IIS가 연결을 처리하고, 사용자 이름 및 암호를 읽고, Analysis Services에 연결할 때 해당 사용자 ID를 가장하는 경우. 자세한 내용은 [IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)을 참조하세요.  
+1.  서버가 HTTP 액세스를 사용하도록 구성된 경우, 즉 IIS가 연결을 처리하고, 사용자 이름 및 암호를 읽고, Analysis Services에 연결할 때 해당 사용자 ID를 가장하는 경우. 자세한 내용은 [IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)을 참조하십시오.  
   
 2.  Analysis Services HTTP 액세스를 위해 생성된 IIS 가상 디렉터리가 기본 인증을 사용하도록 구성된 경우  
   
@@ -112,9 +111,8 @@ $pwd.Dispose()
 Remove-Variable -Name pwd  
 ```  
   
-##  <a name="bkmk_tasks"></a>PowerShell 작업 Analysis Services  
- Windows PowerShell 관리 셸 또는 Windows 명령 프롬프트에서 Analysis Services PowerShell을 실행할 수 있습니다. 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 Analysis Services PowerShell을 실행할 수는 없습니다.  
+##  <a name="analysis-services-powershell-tasks"></a><a name="bkmk_tasks"></a>PowerShell 작업 Analysis Services  
+ Windows PowerShell 관리 셸 또는 Windows 명령 프롬프트에서 Analysis Services PowerShell을 실행할 수 있습니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 Analysis Services PowerShell을 실행할 수는 없습니다.  
   
  이 섹션에서는 Analysis Services PowerShell을 사용할 때의 일반적인 태스크에 대해 설명합니다.  
   
@@ -128,7 +126,7 @@ Remove-Variable -Name pwd
   
 -   [Analysis Services PowerShell에 대한 도움말 가져오기](#bkmk_help)  
   
-###  <a name="bkmk_load"></a>Analysis Services 공급자 및 Cmdlet을 로드 합니다.  
+###  <a name="load-the-analysis-services-provider-and-cmdlets"></a><a name="bkmk_load"></a>Analysis Services 공급자 및 Cmdlet을 로드 합니다.  
  Analysis Services 공급자는 SQLPS 모듈을 가져오면 사용할 수 있는 SQL Server 루트 공급자의 확장 프로그램입니다. Analysis Services cmdlet은 동시에 로드됩니다. 공급자 없이 사용하려는 경우에는 독립적으로 로드할 수도 있습니다.  
   
 -   Import-module cmdlet을 실행하여 모든 Analysis Services PowerShell 기능이 포함된 SQLPS를 로드합니다. 모듈을 가져올 수 없으면 모듈을 로드하는 동안에만 임시로 실행 정책을 "제한 없음"으로 변경할 수 있습니다. 자세한 내용은 [SQLPS 모듈 가져오기](../../2014/database-engine/import-the-sqlps-module.md)를 참조하세요.  
@@ -137,8 +135,7 @@ Remove-Variable -Name pwd
     Import-Module "sqlps"  
     ```  
   
-     
-  `import-module "sqlps" -disablenamechecking`을 사용하여 승인되지 않은 동사 이름에 대한 경고를 표시하지 않을 수도 있습니다.  
+     `import-module "sqlps" -disablenamechecking`을 사용하여 승인되지 않은 동사 이름에 대한 경고를 표시하지 않을 수도 있습니다.  
   
 -   Analysis Services 공급자 또는 Invoke-ASCmd cmdlet 없이 태스크 관련 Analysis Services cmdlet만 로드하려면 독립적인 작업으로 SQLASCmdlets 모듈을 로드할 수 있습니다.  
   
@@ -146,7 +143,7 @@ Remove-Variable -Name pwd
     Import-Module "sqlascmdlets"  
     ```  
   
-###  <a name="bkmk_remote"></a>원격 관리 사용  
+###  <a name="enable-remote-administration"></a><a name="bkmk_remote"></a>원격 관리 사용  
  원격 Analysis Services 인스턴스에서 Analysis Services PowerShell을 사용하려면 먼저 원격 관리 및 파일 공유를 사용하도록 설정해야 합니다. 다음 오류는 방화벽 구성 문제를 나타냅니다. "RPC 서버를 사용할 수 없습니다. (HRESULT: 0x800706BA에서 예외가 발생했습니다.)"  
   
 1.  로컬 및 원격 컴퓨터 모두에 [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] 버전의 클라이언트 및 서버 도구가 있는지 확인하십시오.  
@@ -178,7 +175,7 @@ Enable-PSRemoting
 ```  
   
   
-###  <a name="bkmk_connect"></a>Analysis Services 개체에 연결  
+###  <a name="connect-to-an-analysis-services-object"></a><a name="bkmk_connect"></a>Analysis Services 개체에 연결  
  Analysis Services PowerShell 공급자는 Analysis Services 개체 계층 탐색을 지원하고 명령 실행 컨텍스트를 설정합니다. 이 공급자는 SQLPS 모듈을 통해 사용할 수 있는 SQLSERVER 루트 공급자의 확장 프로그램입니다. SQLPS 모듈을 로드한 후 경로를 탐색할 수 있습니다.  
   
  로컬 또는 원격 인스턴스에 연결할 수 있지만 merge-partition과 같은 일부 cmdlet은 로컬 인스턴스에서만 실행됩니다. 네이티브 연결을 사용할 수도 있고, HTTP 액세스를 사용하도록 구성한 Analysis Services 서버에 대해서는 HTTP 연결을 사용할 수도 있습니다. 다음 그림에서는 네이티브 연결과 HTTP 연결의 탐색 경로를 보여 줍니다. 다음 그림에서는 네이티브 연결과 HTTP 연결의 탐색 경로를 보여 줍니다.  
@@ -187,8 +184,7 @@ Enable-PSRemoting
   
  ![Analysis Services에 대한 네이티브 연결](media/ssas-powershell-nativeconnection.gif "Analysis Services에 대한 네이티브 연결")  
   
- 다음 예에서는 네이티브 연결을 사용하여 개체 계층을 탐색하는 방법을 보여 줍니다. 공급자에서 `dir`을 실행하여 인스턴스 정보를 봅니다. 
-  `cd`를 사용하여 해당 인스턴스의 개체를 볼 수 있습니다.  
+ 다음 예에서는 네이티브 연결을 사용하여 개체 계층을 탐색하는 방법을 보여 줍니다. 공급자에서 `dir`을 실행하여 인스턴스 정보를 봅니다. `cd`를 사용하여 해당 인스턴스의 개체를 볼 수 있습니다.  
   
 ```  
 PS SQLSERVER:> cd sqlas  
@@ -216,7 +212,7 @@ PS SQLSERVER\sqlas\http_ds\http%3A%2F%2Flocalhost%2olap%2msmdpump%2Edll:> dir
   
  어셈블리, 데이터베이스, 역할 및 추적과 같은 컬렉션이 표시 되어야 합니다. 이 컬렉션의 내용을 볼 수 없는 경우 OLAP 가상 디렉터리의 인증 설정을 확인하십시오. 익명 액세스가 비활성화되어 있는지 확인합니다. Windows 인증을 사용하는 경우 Windows 사용자 계정에 Analysis Services 인스턴스에 대한 관리 권한이 있어야 합니다.  
   
-###  <a name="bkmk_admin"></a>서비스 관리  
+###  <a name="administer-the-service"></a><a name="bkmk_admin"></a>서비스 관리  
  서비스가 실행되고 있는지 확인합니다. Analysis Services(MSSQLServerOLAPService) 및 데이터베이스 엔진을 비롯하여 SQL Server 서비스의 상태, 이름 및 표시 이름을 반환합니다.  
   
 ```powershell
@@ -235,25 +231,22 @@ Get-Process msmdsrv
 Restart-Service mssqlserverolapservice  
 ```  
   
-###  <a name="bkmk_help"></a>Analysis Services PowerShell에 대 한 도움말 보기  
+###  <a name="get-help-for-analysis-services-powershell"></a><a name="bkmk_help"></a>Analysis Services PowerShell에 대 한 도움말 보기  
  다음 cmdlet을 사용하여 cmdlet 사용 가능 여부를 확인하고 서비스, 프로세스 및 개체에 대한 추가 정보를 가져올 수 있습니다.  
   
-1.  
-  `Get-Help`는 예를 포함하여 Analysis Services cmdlet에 대한 기본 제공 도움말을 반환합니다.  
+1.  `Get-Help`는 예를 포함하여 Analysis Services cmdlet에 대한 기본 제공 도움말을 반환합니다.  
   
     ```powershell
     Get-Help invoke-ascmd -Examples  
     ```  
   
-2.  
-  `Get-Command`는 Analysis Services PowerShell cmdlet 11개의 목록을 반환합니다.  
+2.  `Get-Command`는 Analysis Services PowerShell cmdlet 11개의 목록을 반환합니다.  
   
     ```powershell
     Get-Command -module SQLASCmdlets  
     ```  
   
-3.  
-  `Get-Member`는 서비스 또는 프로세스의 속성 또는 메서드를 반환합니다.  
+3.  `Get-Member`는 서비스 또는 프로세스의 속성 또는 메서드를 반환합니다.  
   
     ```powershell
     Get-Service mssqlserverolapservice | Get-Member -Type Property  
@@ -267,16 +260,14 @@ Restart-Service mssqlserverolapservice
     Get-Process msmdsrv | Get-Member -Type Property  
     ```  
   
-4.  
-  `Get-Member`는 SQLAS 공급자를 통해 서버 인스턴스를 지정하여 개체의 속성 및 메서드(예: 서버 개체의 AMO 메서드)를 반환하는 데 사용할 수도 있습니다.  
+4.  `Get-Member`는 SQLAS 공급자를 통해 서버 인스턴스를 지정하여 개체의 속성 및 메서드(예: 서버 개체의 AMO 메서드)를 반환하는 데 사용할 수도 있습니다.  
   
     ```
     PS SQLSERVER:\sqlas\localhost\default > $serverObj = New-Object Microsoft.AnalysisServices.Server  
     PS SQLSERVER:\sqlas\localhost\default > $serverObj = | Get-Member -Type Method  
     ```  
   
-5.  
-  `Get-PSdrive`는 현재 설치되어 있는 공급자 목록을 반환합니다. SQLPS 모듈을 가져온 경우 목록에 `SQLServer` 공급자가 표시됩니다. SQLAS는 SQLServer 공급자의 일부이므로 목록에 별도로 표시되지 않습니다.  
+5.  `Get-PSdrive`는 현재 설치되어 있는 공급자 목록을 반환합니다. SQLPS 모듈을 가져온 경우 목록에 `SQLServer` 공급자가 표시됩니다. SQLAS는 SQLServer 공급자의 일부이므로 목록에 별도로 표시되지 않습니다.  
   
     ```powershell
     Get-PSDrive  
@@ -285,6 +276,6 @@ Restart-Service mssqlserverolapservice
 ## <a name="see-also"></a>참고 항목  
  [SQL Server PowerShell 설치](../database-engine/install-windows/install-sql-server-powershell.md)   
  [PowerShell을 사용 하 여 테이블 형식 모델 관리 (블로그)](https://go.microsoft.com/fwlink/?linkID=227685)   
- [&#40;IIS&#41; 8.0 인터넷 정보 서비스에서 Analysis Services에 대 한 HTTP 액세스 구성](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ [IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

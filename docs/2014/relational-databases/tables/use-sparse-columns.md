@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196670"
 ---
 # <a name="use-sparse-columns"></a>스파스 열 사용
@@ -65,8 +65,7 @@ ms.locfileid: "68196670"
 |`ntext`||  
   
 ## <a name="estimated-space-savings-by-data-type"></a>데이터 형식별 예상 공간 절약  
- 스파스 열을 사용하면 SPARSE로 표시되지 않은 동일한 데이터에 대해 필요한 공간보다 Null이 아닌 값에 더 많은 스토리지 공간이 필요합니다. 다음 표에서는 각 데이터 형식에 대한 공간 사용률을 보여 줍니다. 
-  **NULL 백분율** 열은 40%의 순 공간 절약을 위해 NULL이어야 하는 데이터 비율을 나타냅니다.  
+ 스파스 열을 사용하면 SPARSE로 표시되지 않은 동일한 데이터에 대해 필요한 공간보다 Null이 아닌 값에 더 많은 스토리지 공간이 필요합니다. 다음 표에서는 각 데이터 형식에 대한 공간 사용률을 보여 줍니다. **NULL 백분율** 열은 40%의 순 공간 절약을 위해 NULL이어야 하는 데이터 비율을 나타냅니다.  
   
  **고정 길이 데이터 형식**  
   
@@ -98,17 +97,16 @@ ms.locfileid: "68196670"
 |`datetimetoffset (7)`|10|14|49%|  
 |`decimal/numeric(1,s)`|5|9|60%|  
 |`decimal/numeric(38,s)`|17|21|42%|  
-|`vardecimal(p,s)`|
-  `decimal` 형식을 일반적인 예상치로 사용|||  
+|`vardecimal(p,s)`|`decimal` 형식을 일반적인 예상치로 사용|||  
   
  **데이터 종속 길이 데이터 형식**  
   
 |데이터 형식|비-스파스 바이트|스파스 바이트|NULL 백분율|  
 |---------------|---------------------|------------------|---------------------|  
 |`sql_variant`|기본 데이터 형식에 따라 다름|||  
-|`varchar`디스크나`char`|2*|4*|60%|  
-|`nvarchar`디스크나`nchar`|2*|4*+|60%|  
-|`varbinary`디스크나`binary`|2*|4*|60%|  
+|`varchar` 또는 `char`|2*|4*|60%|  
+|`nvarchar` 또는 `nchar`|2*|4*+|60%|  
+|`varbinary` 또는 `binary`|2*|4*|60%|  
 |`xml`|2*|4*|60%|  
 |`hierarchyid`|2*|4*|60%|  
   

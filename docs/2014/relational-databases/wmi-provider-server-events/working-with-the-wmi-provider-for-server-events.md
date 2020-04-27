@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0519561b24d8aff32adc7c375657fa85b9dfa496
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68195724"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>서버 이벤트용 WMI 공급자 작업
@@ -46,7 +46,7 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
  데이터베이스에서 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 를 사용하려면 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 문의 ENABLE_BROKER SET 옵션을 사용합니다.  
   
 ## <a name="specifying-a-connection-string"></a>연결 문자열 지정  
- 애플리케이션에서는 공급자가 정의한 WMI 네임스페이스에 연결하여 서버 이벤트용 WMI 공급자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스에 전달합니다. Windows WMI 서비스는 이 네임스페이스를 공급자 DLL인 Sqlwep.dll에 매핑하여 메모리에 로드합니다. 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 각 인스턴스에는 고유한 WMI 네임 스페이스가 있으며 기본값 \\ \\은입니다. \\ *root*\Microsoft\SqlServer\ServerEvents\\*instance_name*입니다. ** 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]기본 설치에서 instance_name 기본값은 MSSQLSERVER입니다.  
+ 애플리케이션에서는 공급자가 정의한 WMI 네임스페이스에 연결하여 서버 이벤트용 WMI 공급자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스에 전달합니다. Windows WMI 서비스는 이 네임스페이스를 공급자 DLL인 Sqlwep.dll에 매핑하여 메모리에 로드합니다. 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 각 인스턴스에는 고유한 WMI 네임 스페이스가 있으며 기본값 \\ \\은입니다. \\ *root*\Microsoft\SqlServer\ServerEvents\\*instance_name*입니다. *instance_name* 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]기본 설치에서 instance_name 기본값은 MSSQLSERVER입니다.  
   
 ## <a name="permissions-and-server-authentication"></a>권한과 서버 인증  
  서버 이벤트용 WMI 공급자에 액세스하려면 WMI 관리 애플리케이션이 시작된 클라이언트는 애플리케이션의 연결 문자열에 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 Windows 인증 로그인 또는 그룹과 일치해야 합니다.  

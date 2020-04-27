@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fdbca3ed012e082c899a5015faabc5c0019fcd75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68197114"
 ---
 # <a name="stored-procedures-database-engine"></a>저장 프로시저(데이터베이스 엔진)
-  의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저는 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 그룹 이거나 CLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 공용 언어 런타임) 메서드에 대 한 참조입니다. 프로시저는 다음과 같은 점에서 다른 프로그래밍 언어의 구문과 유사합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 저장 프로시저는 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 그룹이거나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임) 메서드에 대한 참조입니다. 프로시저는 다음과 같은 점에서 다른 프로그래밍 언어의 구문과 유사합니다.  
   
 -   입력 매개 변수를 받아 여러 값을 출력 매개 변수의 형태로 호출하는 프로그램에 반환합니다.  
   
@@ -38,8 +38,7 @@ ms.locfileid: "68197114"
  보안 강화  
  여러 사용자 및 클라이언트 프로그램이 기본 데이터베이스 개체에 대한 직접적인 사용 권한이 없는 경우에도 프로시저를 통해 이러한 기본 개체에 대해 작업을 수행할 수 있습니다. 프로시저는 수행되는 프로세스 및 작업을 제어하고 기본 데이터베이스 개체를 보호합니다. 따라서 개별 개체 수준에서 사용 권한을 부여할 필요가 없으며 보안 계층이 간소화됩니다.  
   
- 
-  [EXECUTE AS](/sql/t-sql/statements/execute-as-clause-transact-sql) 절을 CREATE PROCEDURE 문에 지정하여 다른 사용자를 가장하거나 사용자 또는 애플리케이션에서 기본 개체 및 명령에 대한 직접적인 사용 권한 없이도 특정 데이터베이스 작업을 수행할 수 있도록 할 수 있습니다. 예를 들어 TRUNCATE TABLE 등의 일부 동작에는 부여할 수 있는 권한이 없습니다. TRUNCATE TABLE을 실행하려면 사용자가 지정된 테이블에 대한 ALTER 권한을 가지고 있어야 합니다. 사용자가 너무 큰 권한을 갖게 되어 테이블을 자를 수도 있으므로 사용자에게 테이블에 대한 ALTER 권한을 부여하는 것은 최상의 방법이 아닙니다. TRUNCATE TABLE 문을 모듈에 통합하고 테이블 수정 권한을 가진 사용자로 모듈이 실행되도록 지정하면 테이블 자르기 권한을 모듈에 대해 EXECUTE 권한을 부여한 사용자에게로 확장할 수 있습니다.  
+ [EXECUTE AS](/sql/t-sql/statements/execute-as-clause-transact-sql) 절을 CREATE PROCEDURE 문에 지정하여 다른 사용자를 가장하거나 사용자 또는 애플리케이션에서 기본 개체 및 명령에 대한 직접적인 사용 권한 없이도 특정 데이터베이스 작업을 수행할 수 있도록 할 수 있습니다. 예를 들어 TRUNCATE TABLE 등의 일부 동작에는 부여할 수 있는 권한이 없습니다. TRUNCATE TABLE을 실행하려면 사용자가 지정된 테이블에 대한 ALTER 권한을 가지고 있어야 합니다. 사용자가 너무 큰 권한을 갖게 되어 테이블을 자를 수도 있으므로 사용자에게 테이블에 대한 ALTER 권한을 부여하는 것은 최상의 방법이 아닙니다. TRUNCATE TABLE 문을 모듈에 통합하고 테이블 수정 권한을 가진 사용자로 모듈이 실행되도록 지정하면 테이블 자르기 권한을 모듈에 대해 EXECUTE 권한을 부여한 사용자에게로 확장할 수 있습니다.  
   
  네트워크를 통해 프로시저를 호출하면 프로시저를 실행할 호출만 표시됩니다. 따라서 악의적인 사용자가 테이블 및 데이터베이스 개체 이름을 보거나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 포함하거나 중요한 데이터를 검색할 수 없습니다.  
   
@@ -60,17 +59,15 @@ ms.locfileid: "68197114"
   
 ## <a name="types-of-stored-procedures"></a>저장 프로시저 유형  
  사용자 정의  
- 
-  **Resource** 데이터베이스를 제외한 모든 시스템 데이터베이스 또는 사용자 정의 데이터베이스에서 사용자 정의 프로시저를 만들 수 있습니다. 이 프로시저는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 공용 언어 런타임) 메서드에 대 한 참조로 개발 될 수 있습니다.  
+ **Resource** 데이터베이스를 제외한 모든 시스템 데이터베이스 또는 사용자 정의 데이터베이스에서 사용자 정의 프로시저를 만들 수 있습니다. 이 프로시저는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임) 메서드에 대한 참조로 개발될 수 있습니다.  
   
  임시  
  임시 프로시저는 사용자 정의 프로시저에 속합니다. 임시 프로시저는 **tempdb**에 저장된다는 점을 제외하고는 영구 프로시저와 유사합니다. 임시 프로시저에는 로컬 및 전역의 두 가지 유형이 있습니다. 이 두 유형은 이름, 표시 여부 및 가용성 면에서 서로 다릅니다. 로컬 임시 프로시저는 이름이 하나의 숫자 기호(#)로 시작하며 현재 사용자 연결에만 표시되고 연결이 닫히면 삭제됩니다. 전역 임시 프로시저는 이름이 두 개의 숫자 기호(##)로 시작하며 생성된 후 모든 사용자에게 표시되고 해당 프로시저를 사용하는 마지막 세션이 끝나면 삭제됩니다.  
   
- 시스템  
+ System  
  시스템 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함됩니다. 이러한 프로시저는 물리적으로 **Resource** 데이터베이스에 저장되지만 논리적으로는 모든 시스템 정의 데이터베이스와 사용자 정의 데이터베이스의 **sys** 스키마에 표시됩니다. 또한 **msdb** 데이터베이스에도 **dbo** 스키마에 경고 및 작업을 예약하는 데 사용되는 시스템 저장 프로시저가 있습니다. 시스템 프로시저는 **sp_** 접두사로 시작하므로 사용자 정의 프로시저의 이름을 지정할 때 이 접두사를 사용하지 않는 것이 좋습니다. 시스템 저장 프로시저의 전체 목록은 [시스템 저장 프로시저&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)를 참조하세요.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다양한 유지 관리 작업을 수행할 수 있도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인터페이스를 외부 프로그램에 제공하는 시스템 프로시저를 지원합니다. 이러한 확장 프로시저에는 xp_ 접두사가 사용됩니다. 확장 저장 프로시저의 전체 목록은 [일반 확장 저장 프로시저&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 다양한 유지 관리 작업을 수행할 수 있도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인터페이스를 외부 프로그램에 제공하는 시스템 프로시저를 지원합니다. 이러한 확장 프로시저에는 xp_ 접두사가 사용됩니다. 확장 저장 프로시저의 전체 목록은 [일반 확장 저장 프로시저&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql)를 참조하세요.  
   
  확장 사용자 정의  
  확장 프로시저를 사용하면 C와 같은 프로그래밍 언어로 외부 루틴을 작성할 수 있습니다. 이러한 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 동적으로 로드 및 실행할 수 있는 DLL입니다.  

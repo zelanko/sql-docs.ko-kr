@@ -16,10 +16,10 @@ ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 48f94f7fcf823a9ed9acc519e393369e44b45302
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68771338"
 ---
 # <a name="sp_adddynamicsnapshot_job-transact-sql"></a>sp_adddynamicsnapshot_job(Transact-SQL)
@@ -84,7 +84,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**x**|매월|  
 |**32**|매월 상대적|  
 |**64**|자동 시작|  
-|**128**|Recurring|  
+|**128**|되풀이|  
   
 `[ @frequency_interval = ] frequency_interval`필터링 된 데이터 스냅숏 작업이 실행 되는 기간 (일 단위로 측정)입니다. *frequency_interval* 은 **int**이며 기본값은 1이 고 *frequency_type*의 값에 따라 달라 집니다.  
   
@@ -103,18 +103,18 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|Second|  
-|**4** (기본값)|분|  
+|**2**|초|  
+|**4** (기본값)|Minute|  
 |**20cm(8**|Hour|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`각 작업 실행 사이에 발생 하는 *frequency_subday* 기간의 수입니다. *frequency_subday_interval* 은 **int**이며 기본값은 5입니다.  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`매월 필터링 된 데이터 스냅숏 작업의 발생입니다. 이 매개 변수는 *frequency_type* 이 **32** (매월 상대적)로 설정 된 경우에 사용 됩니다. *frequency_relative_interval* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**1** (기본값)|처음|  
-|**2**|Second|  
+|**2**|초|  
 |**4**|셋째|  
 |**20cm(8**|넷째|  
 |**x**|마지막|  
@@ -133,7 +133,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**a-id**|**int**|[MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) 시스템 테이블에서 필터링 된 데이터 스냅숏 작업을 식별 합니다.|  
+|**id**|**int**|[MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) 시스템 테이블에서 필터링 된 데이터 스냅숏 작업을 식별 합니다.|  
 |**dynamic_snapshot_jobname**|**sysname**|필터링된 데이터 스냅샷 작업의 이름입니다.|  
 |**dynamic_snapshot_jobid**|**uniqueidentifier**|배포자에서 에이전트 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업을 고유 하 게 식별 합니다.|  
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7aecff691139b1041a928c42c3df2987c992cd91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68199313"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>병합 게시에 대한 호환성 수준 설정
@@ -32,8 +32,8 @@ ms.locfileid: "68199313"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- 새 게시 마법사의 **구독자 유형** 페이지에서 호환성 수준을 설정합니다. 이 마법사에 액세스하는 방법은 [Create a Publication](create-a-publication.md)에서 병합 게시의 호환성 수준을 설정하는 방법에 대해 설명합니다. 게시 스냅샷이 생성된 후 호환성 수준을 증가시킬 수는 있지만 감소시킬 수는 없습니다. **게시 속성 -** Publication> **대화 상자의 \<일반** 페이지에서 호환성 수준을 늘립니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요. 게시 호환성 수준을 증가시키면 이전 버전의 호환성 수준을 실행하는 서버에 있는 기존 구독은 더 이상 동기화할 수 없게 됩니다.  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+ 새 게시 마법사의 **구독자 유형** 페이지에서 호환성 수준을 설정합니다. 이 마법사에 액세스하는 방법은 [Create a Publication](create-a-publication.md)에서 병합 게시의 호환성 수준을 설정하는 방법에 대해 설명합니다. 게시 스냅샷이 생성된 후 호환성 수준을 증가시킬 수는 있지만 감소시킬 수는 없습니다. **게시 속성 - \<Publication>** 대화 상자의 **일반** 페이지에서 호환성 수준을 늘립니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요. 게시 호환성 수준을 증가시키면 이전 버전의 호환성 수준을 실행하는 서버에 있는 기존 구독은 더 이상 동기화할 수 없게 됩니다.  
   
 > [!NOTE]  
 >  호환성 수준은 다른 게시 속성 및 유효한 아티클 속성을 결정하는 데에도 의미를 가지므로 대화 상자를 동일하게 사용할 때는 호환성 수준 및 다른 속성을 변경하지 마세요. 속성을 변경하면 게시를 위한 스냅샷을 다시 생성해야 합니다.  
@@ -44,18 +44,18 @@ ms.locfileid: "68199313"
   
 #### <a name="to-increase-the-publication-compatibility-level"></a>게시 호환성 수준을 증가시키려면  
   
--   **게시 속성 -** 게시> **대화 상자의 \<일반** 페이지에서 **호환성 수준**을 선택합니다.  
+-   **게시 속성 - \<게시>** 대화 상자의 **일반** 페이지에서 **호환성 수준**을 선택합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  병합 게시의 호환성 수준은 게시를 만들 때 설정하거나 이후에 프로그래밍 방식으로 수정할 수 있습니다. 병합 저장 프로시저를 사용하여 이 게시 속성을 설정 또는 변경할 수 있습니다.  
   
 #### <a name="to-set-the-publication-compatibility-level-for-a-merge-publication"></a>병합 게시에 대한 게시 호환성 수준을 설정하려면  
   
-1.  게시자에서 [sp_addmergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)를 실행 **@publication_compatibility_level** 하 고의 값을 지정 하 여 이전 버전의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 호환 되는 게시를 만듭니다. 자세한 내용은 [게시 만들기](create-a-publication.md)를 참조하세요.  
+1.  게시자에서 [sp_addmergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)를 실행 **@publication_compatibility_level** 하 고의 값을 지정 하 여 이전 버전의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 호환 되는 게시를 만듭니다. 자세한 내용은 [게시 만들기](create-a-publication.md)를 참조 하세요.  
   
 #### <a name="to-change-the-publication-compatibility-level-of-a-merge-publication"></a>병합 게시의 게시 호환성 수준을 변경하려면  
   
-1.  **Publication_compatibility_level** 를 지정 하 **@property** 고에 대 **@value**한 적절 한 게시 호환성 수준을 지정 하 여 [sp_changemergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)를 실행 합니다.  
+1.  **@property**에 **publication_compatibility_level**, **@value**에 적절한 게시 호환성 수준을 지정하여 [sp_changemergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행합니다.  
   
 #### <a name="to-determine-the-publication-compatibility-level-of-a-merge-publication"></a>병합 게시의 게시 호환성 수준을 확인하려면  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68199313"
   
 2.  결과 집합의 **backward_comp_level** 열에서 게시 호환성 수준을 찾습니다.  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>예 (Transact-sql)  
  다음 예에서는 병합 게시를 만들고 게시 호환성 수준을 설정합니다.  
   
 ```  
@@ -129,6 +129,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [게시 만들기](create-a-publication.md)  
+ [Create a Publication](create-a-publication.md)  
   
   

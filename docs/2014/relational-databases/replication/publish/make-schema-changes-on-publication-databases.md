@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68199452"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>게시 데이터베이스의 스키마 변경
@@ -57,7 +57,7 @@ ms.locfileid: "68199452"
   
 -   스키마 변경에는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 설정한 제한 사항이 적용됩니다. 예를 들어 ALTER TABLE을 사용하여 기본 키 열을 변경할 수 없습니다.  
   
--   데이터 형식 매핑은 초기 스냅샷에 대해서만 수행됩니다. 스키마 변경은 이전 버전의 데이터 형식으로 매핑되지 않습니다. 예를 들어 `ALTER TABLE ADD datetime2 column`에서 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 문을 사용하는 경우 데이터 형식이 `nvarchar` 구독자에 대한 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]로 변환되지 않습니다. 게시자에서 스키마 변경이 차단되는 경우도 있습니다.  
+-   데이터 형식 매핑은 초기 스냅샷에 대해서만 수행됩니다. 스키마 변경은 이전 버전의 데이터 형식으로 매핑되지 않습니다. 예를 들어 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 `ALTER TABLE ADD datetime2 column` 문을 사용하는 경우 데이터 형식이 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 구독자에 대한 `nvarchar`로 변환되지 않습니다. 게시자에서 스키마 변경이 차단되는 경우도 있습니다.  
   
 -   게시에서 스키마 변경을 전파할 수 있도록 설정하면 게시의 아티클에 대해 관련 스키마 옵션이 어떻게 설정되었는지에 상관없이 스키마 변경이 전파됩니다. 예를 들어 테이블 아티클에 대해 FOREIGN KEY 제약 조건을 복제하지 않도록 선택하고 게시자의 테이블에 외래 키를 추가하는 ALTER TABLE 명령을 실행하면 구독자의 테이블에 외래 키가 추가됩니다. 이를 방지하려면 ALTER TABLE 명령을 실행하기 전에 스키마 변경 전파를 해제합니다.  
   
@@ -81,8 +81,7 @@ ms.locfileid: "68199452"
   
 -   커밋되지 않은 읽기는 게시된 테이블에서 DDL을 수행할 때 지원되는 격리 수준이 아닙니다.  
   
--   
-  `SET CONTEXT_INFO`는 게시된 개체에 대해 스키마 변경 내용이 수행된 트랜잭션 컨텍스트 수정에 사용할 수 없습니다.  
+-   `SET CONTEXT_INFO`는 게시된 개체에 대해 스키마 변경 내용이 수행된 트랜잭션 컨텍스트 수정에 사용할 수 없습니다.  
   
 #### <a name="adding-columns"></a>열 추가  
   
@@ -106,7 +105,7 @@ ms.locfileid: "68199452"
   
 -   삭제할 열은 데이터베이스에 있는 모든 게시 아티클의 필터 절에 사용할 수 없습니다.  
   
--   다음과 같이 게시된 아티클에서 열을 삭제할 때는 데이터베이스에 영향을 줄 수 있는 열의 제약 조건, 인덱스 또는 속성을 다음은 그 예입니다.  
+-   다음과 같이 게시된 아티클에서 열을 삭제할 때는 데이터베이스에 영향을 줄 수 있는 열의 제약 조건, 인덱스 또는 속성을 예를 들어:  
   
     -   트랜잭션 게시 아티클에서 기본 키에 사용되는 열은 복제에 사용되므로 삭제할 수 없습니다.  
   
@@ -147,8 +146,7 @@ ms.locfileid: "68199452"
         |`hierarchyid`|변경 허용|변경 차단|변경 차단|  
         |`geography` 및 `geometry`|변경 허용|변경 허용<sup>1</sup>|변경 차단|  
         |`filestream`|변경 허용|변경 차단|변경 차단|  
-        |
-  `date`, `time`, `datetime2` 및 `datetimeoffset`|변경 허용|변경 허용<sup>1</sup>|변경 차단|  
+        |`date`, `time`, `datetime2` 및 `datetimeoffset`|변경 허용|변경 허용<sup>1</sup>|변경 차단|  
   
          <sup>1</sup> SQL Server Compact 구독자는 구독자에서 이러한 데이터 형식을 변환 합니다.  
   
@@ -160,9 +158,9 @@ ms.locfileid: "68199452"
   
 ## <a name="see-also"></a>참고 항목  
  [ALTER TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
- [ALTER VIEW&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-view-transact-sql)   
- [ALTER PROCEDURE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   
- [ALTER FUNCTION&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-function-transact-sql)   
+ [ALTER VIEW &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-view-transact-sql)   
+ [ALTER PROCEDURE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   
+ [ALTER FUNCTION &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-function-transact-sql)   
  [ALTER TRIGGER&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-trigger-transact-sql)   
  [데이터 및 데이터베이스 개체 게시](publish-data-and-database-objects.md)   
  [스키마 변경 내용을 반영하기 위해 사용자 지정 트랜잭션 프로시저 다시 생성](../transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)  

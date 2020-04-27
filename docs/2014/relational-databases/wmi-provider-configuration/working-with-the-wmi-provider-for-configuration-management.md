@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9d9f3ab9f80c6f2c77153439cf554f0ae8598586
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68195770"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>구성 관리용 WMI 공급자 작업
@@ -41,8 +41,7 @@ ms.locfileid: "68195770"
 \\.\root\Microsoft\SqlServer\ComputerManagement12\instance_name  
 ```  
   
- 
-  `instance_name` 기본 설치에서 `MSSQLSERVER`의 기본값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 설치에서 `instance_name`의 기본값은 `MSSQLSERVER`입니다.  
   
  **참고:** Windows 방화벽을 통해 연결 하는 경우에는 컴퓨터가 적절히 구성 되어 있는지 확인 해야 합니다. MSDN [!INCLUDE[msCoName](../../includes/msconame-md.md)] [웹 사이트](https://go.microsoft.com/fwlink/?linkid=15426)의 WMI(Windows Management Instrumentation) 설명서에서 "Windows 방화벽을 통해 연결" 문서를 참조 하세요.  
   

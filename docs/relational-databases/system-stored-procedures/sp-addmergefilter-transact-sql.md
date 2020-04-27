@@ -16,10 +16,10 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0ba0e2384ec63d29d3a5030c0b018998896dc8cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68769183"
 ---
 # <a name="sp_addmergefilter-transact-sql"></a>sp_addmergefilter(Transact-SQL)
@@ -107,9 +107,9 @@ sp_addmergefilter [ @publication = ] 'publication'
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_addmergefilter**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
+ [아티클 정의](../../relational-databases/replication/publish/define-an-article.md)   
  [병합 아티클 간의 조인 필터 정의 및 수정](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
+ [조인 필터](../../relational-databases/replication/merge/join-filters.md)   
  [Transact-sql&#41;sp_changemergefilter &#40;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
  [Transact-sql&#41;sp_dropmergefilter &#40;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
  [Transact-sql&#41;sp_helpmergefilter &#40;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   

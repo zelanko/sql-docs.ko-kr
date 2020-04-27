@@ -19,14 +19,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ea37fdca56c222cbebbdcb00956938a92fe2c203
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211684"
 ---
 # <a name="view-user-defined-functions"></a>사용자 정의 함수 보기
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 사용자 정의 함수의 정의 또는 속성에 대한 정보를 얻을 수 있습니다. 함수 정의를 보면 어떻게 데이터가 원본 테이블에서 파생되었는지 알 수 있고 함수에서 정의한 데이터를 볼 수 있습니다.  
   
 > [!IMPORTANT]  
@@ -38,26 +37,24 @@ ms.locfileid: "68211684"
   
      [보안](#Security)  
   
--   **다음을 사용 하 여 함수에 대 한 정보를 가져옵니다.**  
+-   **함수에 대한 정보를 얻으려면:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
- 
-  **sys.sql_expression_dependencies** 를 사용하여 함수에 대한 모든 종속성을 찾으려면 데이터베이스에 대한 VIEW DEFINITION 권한과 데이터베이스의 **sys.sql_expression_dependencies** 에 대한 SELECT 권한이 있어야 합니다. OBJECT_DEFINITION에 반환되는 정의와 같은 시스템 개체 정의는 모두에게 표시됩니다.  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
+ **sys.sql_expression_dependencies** 를 사용하여 함수에 대한 모든 종속성을 찾으려면 데이터베이스에 대한 VIEW DEFINITION 권한과 데이터베이스의 **sys.sql_expression_dependencies** 에 대한 SELECT 권한이 있어야 합니다. OBJECT_DEFINITION에 반환되는 정의와 같은 시스템 개체 정의는 모두에게 표시됩니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-show-a-user-defined-functions-properties"></a>사용자 정의 함수의 속성을 표시하려면  
   
-1.  
-  **개체 탐색기**에서 속성을 볼 함수가 포함된 데이터베이스 옆의 더하기 기호를 클릭한 다음 더하기 기호를 클릭하여 **프로그래밍 기능** 폴더를 확장합니다.  
+1.  **개체 탐색기**에서 속성을 볼 함수가 포함된 데이터베이스 옆의 더하기 기호를 클릭한 다음 더하기 기호를 클릭하여 **프로그래밍 기능** 폴더를 확장합니다.  
   
 2.  더하기 기호를 클릭하여 **함수** 폴더를 확장합니다.  
   
@@ -97,10 +94,10 @@ ms.locfileid: "68211684"
      **시스템 개체**  
      함수가 시스템 개체인지 여부를 나타냅니다. 사용 가능한 값은 True와 False입니다.  
   
-     **ANSI Null**  
+     **ANSI NULL**  
      개체가 ANSI NULL 옵션으로 생성되었는지 여부를 나타냅니다.  
   
-     **암호화**  
+     **암호화됨**  
      함수를 암호화하는지 여부를 나타냅니다. 사용 가능한 값은 True와 False입니다.  
   
      **함수 유형**  
@@ -112,7 +109,7 @@ ms.locfileid: "68211684"
      **스키마 바운드**  
      스키마 바운드 함수인지 여부를 나타냅니다. 사용 가능한 값은 True와 False입니다. 스키마 바운드 함수에 대한 자세한 내용은 [CREATE FUNCTION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)의 SCHEMABINDING 섹션을 참조하세요.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>함수의 정의 및 속성을 가져오려면  
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196671"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>UNIQUE 제약 조건 및 CHECK 제약 조건
@@ -31,7 +31,7 @@ ms.locfileid: "68196671"
   
  [관련 작업](#Tasks)  
   
-##  <a name="Unique"></a> UNIQUE 제약 조건  
+##  <a name="unique-constraints"></a><a name="Unique"></a> UNIQUE 제약 조건  
  제약 조건은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 사용자에게 적용하는 규칙입니다. 예를 들어 UNIQUE 제약 조건을 사용하면 기본 키에 참여하고 있지 않은 특정 열에 중복 값이 입력되지 않도록 할 수 있습니다. UNIQUE 제약 조건과 PRIMARY KEY 제약 조건이 모두 고유성을 강제 적용하지만 기본 키가 아닌 열 또는 열 조합에 대해 고유성을 강제 적용하려면 PRIMARY KEY 제약 조건 대신 UNIQUE 제약 조건을 사용하세요.  
   
  PRIMARY KEY 제약 조건과 달리 UNIQUE 제약 조건에서는 NULL 값이 허용됩니다. 단 UNIQUE 제약 조건에서 사용되는 다른 값과 마찬가지로 Null 값도 열당 하나만 허용됩니다. UNIQUE 제약 조건은 FOREIGN KEY 제약 조건에서 참조할 수 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "68196671"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 자동으로 UNIQUE 인덱스를 만들어 UNIQUE 제약 조건의 고유성 요구 사항을 적용합니다. 따라서 중복 행을 삽입하려고 하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 UNIQUE 제약 조건을 위반하여 테이블에 행을 추가할 수 없다는 오류 메시지가 반환됩니다. 클러스터형 인덱스가 명시적으로 지정되지 않는 한 고유한 비클러스터형 인덱스가 기본적으로 생성되어 UNIQUE 제약 조건을 적용합니다.  
   
-##  <a name="Check"></a> CHECK 제약 조건  
+##  <a name="check-constraints"></a><a name="Check"></a> CHECK 제약 조건  
  CHECK 제약 조건은 하나 이상의 열에서 허용되는 값을 제한하여 도메인 무결성을 강제 적용합니다. 논리 연산자에 따라 TRUE 또는 FALSE를 반환하는 논리(부울) 식을 사용하여 CHECK 제약 조건을 만들 수 있습니다. 예를 들어 15,000달러부터 100,000달러까지의 데이터만 허용하는 CHECK 제약 조건을 만들어 **salary** 열의 값 범위를 제한할 수 있습니다. 이렇게 하면 정상 월급 범위를 벗어나는 월급은 입력되지 않습니다. 논리 식은 다음과 같습니다. `salary >= 15000 AND salary <= 100000`  
   
  열 하나에 여러 개의 CHECK 제약 조건을 적용할 수 있습니다. 테이블 수준에서 CHECK 제약 조건을 만들어 여러 열에 적용할 수도 있습니다. 예를 들어 여러 열에 대한 CHECK 제약 조건을 사용하여 **country_region** 열 값이 **USA** 인 모든 행이 **state** 열에서 두 문자의 값을 갖도록 할 수 있습니다. 이렇게 한 위치에서 여러 조건을 검사할 수 있습니다.  
@@ -84,7 +84,7 @@ DELETE CheckTbl WHERE col1 = 10;
   
  `DELETE` 제약 조건에서 `CHECK` 테이블에 행이 적어도 `CheckTbl` 개 이상 있어야 한다고 지정해도 `1` 문이 성공합니다.  
   
-##  <a name="Tasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="Tasks"></a> 관련 작업  
   
 > [!NOTE]  
 >  테이블이 복제용으로 게시된 경우 Transact-SQL 문 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) 또는 SMO(SQL Server 관리 개체)를 사용하여 스키마를 변경해야 합니다. 테이블 디자이너 또는 데이터베이스 다이어그램 디자이너를 사용하여 스키마를 변경하면 테이블 삭제 및 재생성이 시도됩니다. 게시된 개체를 삭제할 수 없으므로 스키마가 변경되지 않습니다.  

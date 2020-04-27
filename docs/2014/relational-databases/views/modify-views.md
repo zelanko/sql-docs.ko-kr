@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ef528fb128c81de1d2be07196dfe2a20ceaebba4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196400"
 ---
 # <a name="modify-views"></a>뷰 수정
@@ -39,9 +39,9 @@ ms.locfileid: "68196400"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   종속 개체를 무효화하는 방식으로 뷰 정의를 변경하지 않는 한 뷰를 수정해도 저장 프로시저나 트리거 등의 종속 개체에는 영향을 주지 않습니다.  
   
@@ -49,12 +49,12 @@ ms.locfileid: "68196400"
   
 -   인덱싱된 뷰에도 ALTER VIEW를 적용할 수 있지만 ALTER VIEW는 뷰에 대한 모든 인덱스를 무조건 삭제합니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  ALTER VIEW를 실행하려면 최소 OBJECT에 대한 ALTER 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-modify-a-view"></a>뷰를 수정하려면  
   
@@ -72,7 +72,7 @@ ms.locfileid: "68196400"
   
 4.  **파일** 메뉴에서 **저장**_view name_을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-modify-a-view"></a>뷰를 수정하려면  
   

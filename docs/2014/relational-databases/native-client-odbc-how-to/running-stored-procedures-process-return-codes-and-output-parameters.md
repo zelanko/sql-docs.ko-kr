@@ -14,18 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e9b9a581a4f5331479c7dc5ed87fc5d213e8d465
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68205576"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>반환 코드 및 출력 매개 변수 처리(ODBC)
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저는 정수 반환 코드 및 출력 매개 변수를 사용할 수 있습니다. 반환 코드와 출력 매개 변수는 서버의 마지막 패킷으로 전달되므로 [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) 에서 SQL_NO_DATA를 반환할 때까지 애플리케이션에서 사용할 수 없습니다. 저장 프로시저에서 오류가 반환 되 면 SQLMoreResults를 호출 하 여 SQL_NO_DATA 반환 될 때까지 다음 결과로 이동 합니다.  
   
 > [!IMPORTANT]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지 해야 하는 경우에는 [Win32 CRYPTO API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용 하 여 자격 증명을 암호화 해야 합니다.  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>반환 코드 및 출력 매개 변수를 처리하려면  
   
@@ -33,8 +32,7 @@ ms.locfileid: "68205576"
   
 2.  각 입력, 입/출력 및 출력 매개 변수와 프로시저 반환 값(있는 경우)에 대해 [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) 를 호출합니다.  
   
-3.  
-  `SQLExecDirect`를 사용하여 문을 실행합니다.  
+3.  `SQLExecDirect`를 사용하여 문을 실행합니다.  
   
 4.  마지막 결과 집합을 처리하는 동안 `SQLFetch` 또는 `SQLFetchScroll`에서 SQL_NO_DATA를 반환하거나 `SQLMoreResults`에서 SQL_NO_DATA를 반환할 때까지 결과 집합을 처리합니다. 이때 반환 코드 및 출력 매개 변수에 바인딩된 변수가 반환된 데이터 값으로 채워집니다.  
   

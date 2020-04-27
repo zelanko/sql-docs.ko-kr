@@ -11,10 +11,10 @@ ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4d8f95671bebf3d67368a35ab61f3c24392186fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728242"
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>엔터티 동기화 관계 편집 및 삭제(Master Data Services)
@@ -26,17 +26,17 @@ ms.locfileid: "73728242"
 ## <a name="prerequisites"></a>사전 요구 사항  
  엔터티 동기화 관계를 편집하기 위한 필수 구성 요소  
   
--   시스템 관리 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한 &#40;MDS(Master Data Services)&#41;](../master-data-services/functional-area-permissions-master-data-services.md)를 참조 하세요.  
+-   시스템 관리 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한&#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)을 참조하세요.  
   
--   대상 모델의 모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
+-   대상 모델의 모델 관리자여야 합니다. 자세한 내용은 [관리자 &#40;MDS(Master Data Services)&#41;](../master-data-services/administrators-master-data-services.md)를 참조 하세요.  
   
 -   최소한 원본 엔터티와 모든 엔터티 특성 및 멤버에 대한 읽기 권한이 있어야 합니다.  
   
  엔터티 동기화 관계를 삭제하기 위한 필수 구성 요소:  
   
--   시스템 관리 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한 &#40;MDS(Master Data Services)&#41;](../master-data-services/functional-area-permissions-master-data-services.md)를 참조 하세요.  
+-   시스템 관리 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한&#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)을 참조하세요.  
   
--   대상 모델의 모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
+-   대상 모델의 모델 관리자여야 합니다. 자세한 내용은 [관리자 &#40;MDS(Master Data Services)&#41;](../master-data-services/administrators-master-data-services.md)를 참조 하세요.  
   
  엔터티 동기화 관계를 편집할 때 다음을 고려하세요.  
   
@@ -58,34 +58,27 @@ ms.locfileid: "73728242"
   
 -   동기화는 대상 엔터티 트랜잭션/기록을 만들지 않습니다.  
   
- **엔터티 동기화 관계를 편집 하려면**  
+ **엔터티 동기화 관계를 편집하려면**  
   
-1.  마스터 데이터 관리자에서 **시스템 관리**를 클릭합니다.  
+1.  마스터 데이터 관리자에서 **시스템 관리자**를 클릭합니다.  
   
-2.  
-  **모델 뷰** 페이지의 메뉴 모음에서 **관리** 를 가리키고 **엔터티 동기화**를 클릭합니다.  
+2.  **모델 뷰** 페이지의 메뉴 모음에서 **관리** 를 가리키고 **엔터티 동기화**를 클릭합니다.  
   
-3.  
-  **엔터티 동기화 유지 관리** 페이지의 표에서 동기화 관계를 선택합니다.  
+3.  **엔터티 동기화 유지 관리** 페이지의 표에서 동기화 관계를 선택합니다.  
   
-4.  
-  **편집**을 클릭합니다. 패널은 오른쪽에 표시됩니다.  
+4.  **편집**을 클릭합니다. 패널은 오른쪽에 표시됩니다.  
   
-5.  
-  **빈도**를 변경합니다. 
-  **필요 시 동기화**를 선택하거나 **자동 동기화** 를 선택하고 빈도를 설정합니다.  
+5.  **빈도**를 변경합니다. **필요 시 동기화**를 선택하거나 **자동 동기화** 를 선택하고 빈도를 설정합니다.  
   
 6.  **저장**을 클릭합니다.  
   
- **엔터티 동기화 관계를 삭제 하려면**  
+ **엔터티 동기화 관계를 삭제하려면**  
   
-1.  마스터 데이터 관리자에서 **시스템 관리**를 클릭합니다.  
+1.  마스터 데이터 관리자에서 **시스템 관리자**를 클릭합니다.  
   
-2.  
-  **모델 뷰** 페이지의 메뉴 모음에서 **관리** 를 가리키고 **엔터티 동기화**를 클릭합니다.  
+2.  **모델 뷰** 페이지의 메뉴 모음에서 **관리** 를 가리키고 **엔터티 동기화**를 클릭합니다.  
   
-3.  
-  **엔터티 동기화 유지 관리** 페이지의 표에서 동기화 관계를 선택합니다.  
+3.  **엔터티 동기화 유지 관리** 페이지의 표에서 동기화 관계를 선택합니다.  
   
 4.  **삭제**를 클릭합니다.  
   
@@ -93,6 +86,6 @@ ms.locfileid: "73728242"
   
 ## <a name="see-also"></a>참고 항목  
  [MDS(Master Data Services)&#41;&#40;엔터티 동기화 관계 만들기 및 실행](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
- [MDS(Master Data Services)&#41;&#40;엔터티 동기화 관계](../master-data-services/entity-sync-relationship-master-data-services.md)  
+ [엔터티 동기화 관계&#40;Master Data Services&#41;](../master-data-services/entity-sync-relationship-master-data-services.md)  
   
   

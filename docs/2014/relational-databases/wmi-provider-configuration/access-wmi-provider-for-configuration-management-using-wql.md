@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: adec01de84122552812e5b1b28277d0d399fee56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68195868"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>WQL을 사용하여 구성 관리용 WMI 공급자 액세스
@@ -35,10 +35,8 @@ ms.locfileid: "68195868"
   
 3.  첫 번째 텍스트 필드에 컴퓨터 관리용 WMI 공급자 네임스페이스인 root\Microsoft\SqlServer\ComputerManagement11을 입력합니다. **연결**을 클릭합니다.  
   
-4.  
-  **쿼리**를 클릭합니다. 로컬 컴퓨터에서 실행 중인 현재 서비스를 반환 하는 쿼리를 입력 **합니다 \* . Sqlservice에서 선택 합니다.** **적용**을 클릭합니다.  
+4.  **쿼리**를 클릭합니다. 로컬 컴퓨터에서 실행 중인 현재 서비스를 반환 하는 쿼리를 입력 **합니다 \* . Sqlservice에서 선택 합니다.** **적용**을 클릭합니다.  
   
-5.  
-  `WHERE ServiceName = "MSSQLSERVER"`를 추가하여 쿼리를 구체화합니다.  
+5.  `WHERE ServiceName = "MSSQLSERVER"`를 추가하여 쿼리를 구체화합니다.  
   
   

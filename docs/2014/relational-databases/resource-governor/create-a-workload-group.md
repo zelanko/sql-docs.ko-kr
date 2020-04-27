@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1cd3b72418d0791d70d28d2dca0a434190a2d4a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198923"
 ---
 # <a name="create-a-workload-group"></a>작업 그룹 만들기
@@ -27,19 +27,19 @@ ms.locfileid: "68198923"
   
 -   **작업 그룹을 만들려면 다음을 사용합니다.**  [SQL Server Management Studio](#CreWGProp), [Transact-SQL](#CreWGTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="LimitationsRestrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 제한 사항  
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
   
  정렬되지 않은 분할된 테이블에서 인덱스 생성에 사용되는 메모리는 관련된 파티션 수에 비례합니다. 필요한 총 메모리가 작업 그룹 설정에서 지정한 쿼리당 제한(REQUEST_MAX_MEMORY_GRANT_PERCENT)을 초과하면 이 인덱스 생성이 실패할 수 있습니다. 기본 작업 그룹에서는 쿼리가 SQL Server 2005 호환성을 유지하며 시작하는 데 필요한 최소 메모리에 대한 쿼리당 제한을 초과할 수 있으므로 기본 리소스 풀에 이러한 쿼리를 실행할 수 있는 총 메모리가 충분히 구성되어 있는 경우 사용자가 기본 작업 그룹에서 동일한 인덱스 생성을 실행할 수 있습니다.  
   
  인덱스를 만들 때 처음에 부여된 것 이상의 메모리 작업 영역을 사용하여 성능을 높일 수 있습니다. 이 특수 처리는 리소스 관리자에서 지원되지만 초기 부여 및 추가 메모리 부여는 작업 그룹 및 리소스 풀 설정에 따라 제한됩니다.  
   
-###  <a name="Permissions"></a> 권한  
+###  <a name="permissions"></a><a name="Permissions"></a> 권한  
  작업 그룹을 만들려면 CONTROL SERVER 권한이 필요합니다.  
   
-##  <a name="CreWGProp"></a> SQL Server Management Studio를 사용하여 작업 그룹 만들기  
+##  <a name="create-a-workload-group-using-sql-server-management-studio"></a><a name="CreWGProp"></a> SQL Server Management Studio를 사용하여 작업 그룹 만들기  
  **다음을 사용하여 작업 그룹을 만들기: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  개체 탐색기에서 수정할 작업 그룹이 포함된 리소스 풀이 나타날 때까지 **관리** 노드를 계속 확장합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "68198923"
   
 7.  **확인**을 클릭하여 변경 내용을 저장합니다.  
   
-##  <a name="CreWGTSQL"></a> Transact-SQL을 사용하여 작업 그룹 만들기  
+##  <a name="create-a-workload-group-using-transact-sql"></a><a name="CreWGTSQL"></a> Transact-SQL을 사용하여 작업 그룹 만들기  
  **다음을 사용하여 작업 그룹을 만들기: [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  설정할 속성 값을 지정하여 CREATE WORKLOAD GROUP 문을 실행합니다.  

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d0139376adc28b07877389a023b19310b06417ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68212139"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>정책 범주에 데이터베이스 구독 또는 구독 취소
@@ -34,14 +34,14 @@ ms.locfileid: "68212139"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  db_owner 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-subscribe-or-unsubscribe-a-database-to-a-policy-category"></a>데이터베이스에 정책 범주를 구독하거나 구독 취소하려면  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68212139"
      **정책**  
      정책 그룹이 확장되면 정책 범주의 정책이 표시됩니다.  
   
-     **Enabled**  
+     **사용**  
      정책의 사용 여부를 나타냅니다.  
   
      **실행 모드**  
@@ -76,9 +76,9 @@ ms.locfileid: "68212139"
   
 4.  정책 기반 관리 범주를 구독하려면 **가입** 열 아래의 범주 확인란을 선택합니다. 범주에서 구독을 취소하려면 해당 확인란의 선택을 취소합니다.  
   
-5.  완료되었으면 **확인**을 클릭합니다.  
+5.  작업을 완료한 후 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-subscribe-a-database-to-a-policy-category"></a>데이터베이스에 정책 범주를 구독하려면  
   

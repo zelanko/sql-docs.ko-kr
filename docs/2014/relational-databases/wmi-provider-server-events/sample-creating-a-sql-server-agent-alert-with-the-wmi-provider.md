@@ -15,10 +15,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a793c6ee6e1f6e168ca2a957b84b1ba4a1d2a453
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68195832"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>예제: 서버 이벤트용 WMI 공급자를 사용하여 SQL Server 에이전트 경고 만들기
@@ -29,8 +29,7 @@ ms.locfileid: "68195832"
   
  그런 다음 경고를 만듭니다. 스크립트에서는 경고에서 실행할 작업을 만들어 작업에 작업 단계를 추가하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 현재 인스턴스를 작업의 대상으로 지정합니다. 그런 후 스크립트에서는 경고를 만듭니다.  
   
- 작업 단계는 WMI 이벤트 인스턴스의 **TextData** 속성을 검색 하 고 해당 값을 **DeadlockEvents** 테이블의 **DeadlockGraph** 열에 삽입 합니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 문자열을 XML 형식으로 암시적으로 변환합니다. 작업 단계에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 하위 시스템을 사용하기 때문에 프록시가 지정되지 않습니다.  
+ 작업 단계는 WMI 이벤트 인스턴스의 **TextData** 속성을 검색 하 고 해당 값을 **DeadlockEvents** 테이블의 **DeadlockGraph** 열에 삽입 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 문자열을 XML 형식으로 암시적으로 변환합니다. 작업 단계에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 하위 시스템을 사용하기 때문에 프록시가 지정되지 않습니다.  
   
  경고는 교착 상태 그래프 추적 이벤트가 로깅될 때마다 작업을 실행합니다. WMI 경고에 대해 SQL Server 에이전트는 지정된 네임스페이스와 WQL 문을 사용하여 알림 쿼리를 만듭니다. 이 경고에 대해 SQL Server 에이전트는 로컬 컴퓨터에서 기본 인스턴스를 모니터링합니다. WQL 문은 기본 인스턴스에서 모든 `DEADLOCK_GRAPH` 이벤트를 요청합니다. 경고에서 모니터링하는 대상 인스턴스를 변경하려면 경고의 `MSSQLSERVER`에서 `@wmi_namespace`의 인스턴스 이름을 바꿉니다.  
   
@@ -133,8 +132,7 @@ SELECT * FROM DeadlockEvents ;
 GO  
 ```  
   
- 
-  `DeadlockGraph` 열에는 교착 상태 그래프 이벤트의 모든 속성을 보여 주는 XML 문서가 포함되어 있어야 합니다.  
+ `DeadlockGraph` 열에는 교착 상태 그래프 이벤트의 모든 속성을 보여 주는 XML 문서가 포함되어 있어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [서버 이벤트용 WMI 공급자 개념](wmi-provider-for-server-events-concepts.md)  

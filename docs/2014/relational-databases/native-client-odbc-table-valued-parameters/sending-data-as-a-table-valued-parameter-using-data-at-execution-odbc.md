@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b2956dba6bb5c5107c5421f32bfa354e603a5b18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68205467"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>실행 시 데이터를 사용하여 테이블 반환 매개 변수로 데이터 전송(ODBC)
@@ -30,7 +30,7 @@ ms.locfileid: "68205467"
   
  테이블 값에 대해 SQLPutData가 호출 되 면 사용 가능한 행 수 (이 예에서는 항상 1)에 대해 *Dataptr* 이 사용 됩니다. *StrLen_or_IndPtr* 항상 0 이어야 합니다. 테이블 값의 모든 행이 전달 되 면 SQLPutData가 *Dataptr* 값 0으로 호출 됩니다.  
   
-## <a name="prerequisite"></a>필수 요소  
+## <a name="prerequisite"></a>필수 구성 요소  
  이 절차에서는 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)]이 서버에서 실행되었다고 가정합니다.  
   
 ```  
@@ -183,7 +183,7 @@ from @Items
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>설명  
  이 샘플에서는 BCP를 사용 하 여 데이터베이스에 데이터를 로드 하는 방법과 유사 하 게 ODBC TVP를 사용 하 여 SQLPutData에 대 한 호출 당 행 스트리밍을 사용할 수 있음을 보여 줍니다.  
   
  예제를 빌드하기 전에 연결 문자열의 서버 이름을 변경합니다.  
@@ -371,7 +371,7 @@ EXIT:
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>설명  
  이 샘플에서는 BCP를 사용 하 여 데이터베이스에 데이터를 로드 하는 방법과 유사 하 게 ODBC TVP를 사용 하 여 SQLPutData에 대 한 호출 당 여러 행의 행 스트리밍을 사용할 수 있음을 보여 줍니다.  
   
  예제를 빌드하기 전에 연결 문자열의 서버 이름을 변경합니다.  

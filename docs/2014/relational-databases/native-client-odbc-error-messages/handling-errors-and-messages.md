@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a4a4d87ccae235aee1a11e58aff60fe8e34d6205
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207089"
 ---
 # <a name="handling-errors-and-messages"></a>오류 및 메시지 처리
@@ -39,7 +39,7 @@ ms.locfileid: "68207089"
   
  원래 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 API 인 C 용 db-library를 사용 하면 응용 프로그램에서 오류 또는 메시지를 반환 하는 콜백 오류 처리 및 메시지 처리 함수를 설치할 수 있습니다. PRINT, RAISERROR, DBCC 및 SET과 같은 일부 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 결과를 결과 집합이 아닌 DB-Library 메시지 처리기 함수로 반환합니다. 그러나 ODBC API에는 이러한 콜백 기능이 없습니다. Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] odbc 드라이버가에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 된 메시지를 검색 하는 경우 odbc 반환 코드를 SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR로 설정 하 고 메시지를 하나 이상의 진단 레코드로 반환 합니다. 따라서 ODBC 응용 프로그램은 이러한 반환 코드를 신중 하 게 테스트 하 고 **SQLGetDiagRec** 를 호출 하 여 메시지 데이터를 검색 해야 합니다.  
   
- 오류 추적에 대한 자세한 내용은 [데이터 액세스 추적](https://go.microsoft.com/fwlink/?LinkId=125805)을 참조하십시오. 에 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]추가 된 오류 추적의 향상 된 기능에 대 한 자세한 내용은 [확장 이벤트 로그에서 진단 정보에 액세스](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)를 참조 하세요.  
+ 오류 추적에 대한 자세한 내용은 [데이터 액세스 추적](https://go.microsoft.com/fwlink/?LinkId=125805)을 참조하십시오. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 추가된 오류 추적의 향상된 기능에 대한 자세한 내용은 [확장 이벤트 로그의 진단 정보 액세스](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)를 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -54,6 +54,6 @@ ms.locfileid: "68207089"
 -   [오류 메시지](error-messages.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;SQL Server Native Client &#40;](../native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)  
   
   

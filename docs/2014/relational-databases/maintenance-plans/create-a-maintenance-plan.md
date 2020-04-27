@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de7ff72e7ce135ab477e3d254eeb26193c8bbc69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206046"
 ---
 # <a name="create-a-maintenance-plan"></a>유지 관리 계획 만들기
@@ -30,23 +30,23 @@ ms.locfileid: "68206046"
   
      [보안](#Security)  
   
--   **다음을 사용 하 여 유지 관리 계획을 만듭니다.**  
+-   **유지 관리 계획을 만들려면:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
  다중 서버 유지 관리 계획을 만들려면 하나의 마스터 서버 및 하나 이상의 대상 서버가 있는 다중 서버 환경을 구성해야 합니다. 다중 서버 유지 관리 계획은 마스터 서버에서 만들고 유지 관리해야 합니다. 이러한 계획을 대상 서버에서 볼 수 있지만 유지 관리할 수는 없습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
- 유지 관리 계획을 만들거나 관리 하려면 **sysadmin** 고정 서버 역할의 멤버 여야 합니다.  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
+ 유지 관리 계획을 만들거나 관리하려면 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-create-a-maintenance-plan-using-the-maintenance-plan-wizard"></a>유지 관리 계획 마법사를 사용하여 유지 관리 계획을 만들려면  
   
@@ -54,8 +54,7 @@ ms.locfileid: "68206046"
   
 2.  더하기 기호를 클릭하여 **관리** 폴더를 확장합니다.  
   
-3.  
-  **유지 관리 계획** 폴더를 마우스 오른쪽 단추로 클릭하고 **유지 관리 계획 마법사**를 선택합니다.  
+3.  **유지 관리 계획** 폴더를 마우스 오른쪽 단추로 클릭하고 **유지 관리 계획 마법사**를 선택합니다.  
   
 4.  마법사의 단계에 따라 유지 관리 계획을 만듭니다. 자세한 내용은 [Use the Maintenance Plan Wizard](use-the-maintenance-plan-wizard.md)을 참조하세요.  
   
@@ -65,13 +64,11 @@ ms.locfileid: "68206046"
   
 2.  더하기 기호를 클릭하여 **관리** 폴더를 확장합니다.  
   
-3.  
-  **유지 관리 계획** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 유지 관리 계획**을 선택합니다.  
+3.  **유지 관리 계획** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 유지 관리 계획**을 선택합니다.  
   
-4.  
-  [유지 관리 계획 만들기&#40;유지 관리 계획 디자인 화면&#41;](create-a-maintenance-plan-maintenance-plan-design-surface.md)의 단계에 따라 유지 관리 계획을 만듭니다.  
+4.  [유지 관리 계획 만들기&#40;유지 관리 계획 디자인 화면&#41;](create-a-maintenance-plan-maintenance-plan-design-surface.md)의 단계에 따라 유지 관리 계획을 만듭니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-create-a-maintenance-plan"></a>유지 관리 계획을 만들려면  
   
@@ -140,12 +137,12 @@ ms.locfileid: "68206046"
   
  자세한 내용은 다음을 참조하세요.  
   
--   [Transact-sql&#41;sp_add_job &#40;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
+-   [sp_add_job&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
   
--   [Transact-sql&#41;sp_add_jobstep &#40;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
+-   [sp_add_jobstep&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
   
--   [Transact-sql&#41;sp_add_schedule &#40;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)  
+-   [sp_add_schedule&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)  
   
--   [Transact-sql&#41;sp_attach_schedule &#40;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
+-   [sp_attach_schedule&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
   

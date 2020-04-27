@@ -1,5 +1,5 @@
 ---
-title: 커서 라이브러리 캐시 | 마이크로 소프트 문서
+title: 커서 라이브러리 캐시 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ ms.assetid: d6a91cd6-3905-4e3a-98ab-37fce893dbe1
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 5686bf0c3e261b1df947c02e2edaa419da498ecb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81284693"
 ---
 # <a name="cursor-library-cache"></a>커서 라이브러리 캐시
 > [!IMPORTANT]  
->  이 기능은 이후 버전의 Windows에서 제거됩니다. 새 개발 작업에서 이 기능을 사용하지 말고 현재 이 기능을 사용하는 응용 프로그램을 수정할 계획입니다. 드라이버의 커서 기능을 사용하는 것이 좋습니다.  
+>  이 기능은 이후 버전의 Windows에서 제거 될 예정입니다. 새 개발 작업에서는이 기능을 사용 하지 않도록 하 고 현재이 기능을 사용 하는 응용 프로그램은 수정 하십시오. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
   
- 결과 집합의 각 데이터 행에 대해 커서 라이브러리는 각 바인딩된 열에 대한 데이터, 바인딩된 각 열의 데이터 길이 및 행 의 상태를 캐시합니다. 커서 라이브러리는 캐시의 값을 사용하여 **SQLFetch** 및 **SQLFetchScroll을** 통해 반환하고 위치가 지정된 작업에 대한 검색된 문을 생성합니다. 자세한 내용은 [검색된 명령문 생성](../../../odbc/reference/appendixes/constructing-searched-statements.md)을 참조하십시오.  
+ 커서 라이브러리는 결과 집합의 각 데이터 행에 대해 바인딩된 각 열에 대 한 데이터, 각 바인딩된 열의 데이터 길이 및 행의 상태를 캐시 합니다. 커서 라이브러리는 캐시의 값을 모두 사용 하 여 **Sqlfetch** 및 **sqlfetchscroll** 을 통해 반환 하 고, 배치 된 작업에 대해 검색 된 문을 생성 합니다. 자세한 내용은 [검색 문 생성](../../../odbc/reference/appendixes/constructing-searched-statements.md)을 참조 하세요.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
