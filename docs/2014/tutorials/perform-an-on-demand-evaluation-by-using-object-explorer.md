@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d2aadd055334c7ee64871c2fdfe5239c9849e90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210942"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>개체 탐색기를 사용하여 요청 시 평가 수행
@@ -31,8 +31,7 @@ ms.locfileid: "68210942"
   
 ### <a name="to-perform-an-on-demand-evaluation-by-using-object-explorer"></a>개체 탐색기를 사용하여 요청 시 평가를 수행하려면  
   
-1.  
-  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]를 시작하고 [!INCLUDE[ssDE](../includes/ssde-md.md)]에 연결합니다.  
+1.  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]를 시작하고 [!INCLUDE[ssDE](../includes/ssde-md.md)]에 연결합니다.  
   
 2.  개체 탐색기에서 **관리**, **정책 관리**를 차례로 확장 하 고 **정책**을 마우스 오른쪽 단추로 클릭 한 다음 **평가**를 클릭 합니다.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "68210942"
   
 3.  **정책 평가** 대화 상자에서 **원본** 상자 옆의 줄임표 (**...**) 단추를 클릭 합니다.  
   
-4.  **원본 선택** 대화 상자에서 평가할 정책 파일의 원본으로 **파일** 또는 **서버** 를 선택할 수 있습니다. **서버**를 클릭 하면 로컬 또는 원격 서버에서 정책 기반 관리로 이전에 가져온 모범 사례 정책에 대 한 요청 시 평가를 수행할 수 있습니다. 이 자습서에서는 **파일**을 클릭 한 다음 평가할 개별 정책 파일을 선택 합니다. 이렇게 하려면 다음 단계를 수행하세요.  
+4.  **원본 선택** 대화 상자에서 평가할 정책 파일의 원본으로 **파일** 또는 **서버** 를 선택할 수 있습니다. **서버**를 클릭 하면 로컬 또는 원격 서버에서 정책 기반 관리로 이전에 가져온 모범 사례 정책에 대 한 요청 시 평가를 수행할 수 있습니다. 이 자습서에서는 **파일**을 클릭 한 다음 평가할 개별 정책 파일을 선택 합니다. 이렇게 하려면 다음 단계를 따르십시오.  
   
     1.  **파일**을 클릭 합니다.  
   

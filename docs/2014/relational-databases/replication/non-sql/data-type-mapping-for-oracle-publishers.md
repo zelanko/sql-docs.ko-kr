@@ -15,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022650"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 게시자에 대한 데이터 형식 매핑
-  Oracle 데이터 형식 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식이 항상 정확히 일치 하지는 않습니다. Oracle 테이블을 게시할 때 가능한 일치하는 데이터 형식이 자동으로 선택됩니다. 단일 데이터 형식 매핑이 명확하지 않으면 대체 데이터 형식 매핑이 제공됩니다. 대체 매핑을 선택하는 방법은 아래의 "대체 데이터 형식 매핑 지정" 섹션을 참조하십시오.  
+  Oracle 데이터 형식 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식이 항상 정확히 일치하지는 않습니다. Oracle 테이블을 게시할 때 가능한 일치하는 데이터 형식이 자동으로 선택됩니다. 단일 데이터 형식 매핑이 명확하지 않으면 대체 데이터 형식 매핑이 제공됩니다. 대체 매핑을 선택하는 방법은 아래의 "대체 데이터 형식 매핑 지정" 섹션을 참조하십시오.  
   
  다음 표에서는 Oracle 게시자에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자로 데이터 이동 시 Oracle과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 간에 데이터 형식이 기본적으로 매핑되는 방법을 보여 줍니다. 대체 형식 열은 대체 매핑을 사용할 수 있는지 여부를 나타냅니다.  
   
@@ -76,8 +76,7 @@ ms.locfileid: "63022650"
 -   REF를 사용하는 열  
   
 ### <a name="the-date-data-type"></a>DATE 데이터 형식  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 날짜 범위는 1753 A.D. 9999 A.D.까지이지만 Oracle의 날짜 범위는 4712 B.C.에서 4712 A.D.까지입니다. DATE 형식 열에 SQL Server의 범위를 벗어나는 값이 있을 경우 이 열에 대해 대체 데이터 형식인 VARCHAR(19)를 선택합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 날짜 범위는 1753 A.D. 9999 A.D.까지이지만 Oracle의 날짜 범위는 4712 B.C.에서 4712 A.D.까지입니다. DATE 형식 열에 SQL Server의 범위를 벗어나는 값이 있을 경우 이 열에 대해 대체 데이터 형식인 VARCHAR(19)를 선택합니다.  
   
 ### <a name="float-and-number-types"></a>FLOAT 및 NUMBER 형식  
  FLOAT 및 NUMBER 데이터 형식 매핑 중에 지정하는 전체 자릿수 및 소수 자릿수는 Oracle 데이터베이스에서 해당 데이터 형식을 사용하는 열에 지정된 전체 자릿수 및 소수 자릿수에 따라 달라집니다. 전체 자릿수는 숫자의 모든 자릿수이고 소수 자릿수는 숫자에서 소수점 오른쪽에 있는 자릿수입니다. 예를 들어 123.45의 전체 자릿수는 5이고 소수 자릿수는 2입니다.  

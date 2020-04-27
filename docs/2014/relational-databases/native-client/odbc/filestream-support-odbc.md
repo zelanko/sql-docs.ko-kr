@@ -14,14 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0e48619daa350fd5b7a7dc47a9762459fbddc7d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206595"
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM 지원(ODBC)
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 ODBC에서는 향상된 FILESTREAM 기능을 지원합니다. 이 기능에 대 한 자세한 내용은 [FILESTREAM 지원](../features/filestream-support.md)을 참조 하세요. FILESTREAM에 대 한 ODB 지원을 보여 주는 샘플은 [ODBC&#41;&#40;filestream을 사용 하 여 증분 방식으로 데이터 전송 및 수신 ](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)을 참조 하세요.  
   
  2gb 보다 큰 값 `varbinary(max)` 을 보내고 받으려면 응용 프로그램에서 *columnsize* 가로 `SQL_SS_LENGTH_UNLIMITED`설정 된 SQLBindParameter를 사용 하 여 매개 변수를 바인딩하고 sqlexecdirect 또는 sqlexecute `SQL_DATA_AT_EXEC` 이전에 *StrLen_or_IndPtr* 의 내용을로 설정 해야 합니다.  

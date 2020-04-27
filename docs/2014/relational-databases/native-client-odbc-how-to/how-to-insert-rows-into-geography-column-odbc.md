@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9067a1ceeff9422ed55f9a96fd3b52e2f99fe999
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206815"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>방법: Geography 열에 행 삽입(ODBC)
@@ -22,8 +22,7 @@ ms.locfileid: "68206815"
   
  이 예제는 ODBC 데이터 원본을 필요로 하지는 않지만 기본적으로 SQL Server의 로컬 인스턴스에서 실행됩니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서는 이 예제를 사용할 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서는 이 예제를 사용할 수 없습니다.  
   
  공간 저장소에 대 한 자세한 내용은 [공간 데이터 &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)를 참조 하세요.  
   

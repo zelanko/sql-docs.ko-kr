@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 06cefcdac192b715fe843f842088456f769cdd24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63042676"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>리프트 차트를 사용하여 정확도 테스트(기본 데이터 마이닝 자습서)
@@ -26,7 +26,7 @@ ms.locfileid: "63042676"
   
 -   [정확도 차트 매개 변수 구성](#BKMK_Selecting)  
   
-##  <a name="BKMK_InputData"></a>입력 데이터 선택  
+##  <a name="choosing-the-input-data"></a><a name="BKMK_InputData"></a>입력 데이터 선택  
  마이닝 모델의 정확도를 테스트하는 첫 번째 단계는 테스트에 사용할 데이터 원본을 선택하는 것입니다. 모델이 데이터 테스트를 얼마나 잘 수행하는지 테스트한 다음 외부 데이터에 이 모델을 사용합니다.  
   
 #### <a name="to-select-the-data-set"></a>데이터 집합을 선택하려면  
@@ -37,7 +37,7 @@ ms.locfileid: "63042676"
   
      다른 옵션에 대 한 자세한 내용은 [정확도 차트 유형 선택 및 차트 옵션 설정](../../2014/analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)을 참조 하세요.  
   
-##  <a name="BKMK_Selecting"></a>정확도 차트 매개 변수 설정  
+##  <a name="setting-accuracy-chart-parameters"></a><a name="BKMK_Selecting"></a>정확도 차트 매개 변수 설정  
  정확도 차트를 만들려면 다음 세 가지를 정의 해야 합니다.  
   
 -   정확도 차트에 포함 해야 하는 모델은 무엇 인가요?  

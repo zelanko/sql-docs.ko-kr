@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 135207a16ef49fca4820e0d7872d9c3542628d8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63062185"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>경고 속성-새 경고 (응답 페이지)
@@ -24,19 +24,15 @@ ms.locfileid: "63062185"
   
 ## <a name="options"></a>옵션  
  **작업 실행**  
- 
-  **작업 목록**, **새 작업** 및 **작업 보기** 옵션을 설정합니다.  
+ **작업 목록**, **새 작업** 및 **작업 보기** 옵션을 설정합니다.  
   
  **새 작업**  
- 
-  **새 작업** 대화 상자를 엽니다. 
-  **작업 실행** 이 선택되어 있지 않으면 이 단추를 사용할 수 없습니다.  
+ **새 작업** 대화 상자를 엽니다. **작업 실행** 이 선택되어 있지 않으면 이 단추를 사용할 수 없습니다.  
   
  **작업 보기**  
- 선택한 작업을 확인하거나 수정합니다. 
-  **작업 실행** 이 선택되어 있지 않으면 이 옵션을 사용할 수 없습니다.  
+ 선택한 작업을 확인하거나 수정합니다. **작업 실행** 이 선택되어 있지 않으면 이 옵션을 사용할 수 없습니다.  
   
- **운영자에 게 알림**  
+ **운영자에게 알림**  
  운영자를 추가, 제거 또는 변경할 수 있는 컨트롤을 설정합니다.  
   
  **운영자 목록**  
@@ -48,21 +44,19 @@ ms.locfileid: "63062185"
  **호출기**  
  호출기 전자 메일 주소를 사용하여 운영자에게 알립니다.  
   
- **Net send**  
- 
-  **net send** 를 사용하여 운영자에 게 알립니다.  
+ **Net Send**  
+ **net send** 를 사용하여 운영자에 게 알립니다.  
   
  **새 운영자**  
  새 운영자를 만드는 데 사용할 수 있는 **새 운영자** 대화 상자를 표시합니다.  
   
  **운영자 보기**  
- 현재 선택된 운영자에 대한 **속성** 대화 상자를 표시합니다. 
-  **운영자 속성** 대화 상자에서 운영자 속성을 확인 및 수정할 수 있습니다.  
+ 현재 선택된 운영자에 대한 **속성** 대화 상자를 표시합니다. **운영자 속성** 대화 상자에서 운영자 속성을 확인 및 수정할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Alerts](alerts.md)   
+ [알립니다](alerts.md)   
  [심각도 수준을 사용 하 여 경고 만들기](create-an-alert-using-severity-level.md)   
- [Alerts](alerts.md)   
+ [알립니다](alerts.md)   
  [경고 편집](edit-an-alert.md)   
  [Delete an Alert](delete-an-alert.md)  
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f10ba1f9ff6837d1ca308872ef166e04c417981c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067518"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>다이어그램에서 선택한 테이블 저장(Visual Database Tools)
@@ -26,15 +26,13 @@ ms.locfileid: "63067518"
   
 1.  데이터베이스 다이어그램에서 저장할 테이블을 선택합니다.  
   
-2.  
-  **파일** 메뉴에서 **선택 영역 저장**을 선택합니다.  
+2.  **파일** 메뉴에서 **선택 영역 저장**을 선택합니다.  
   
 3.  선택 영역을 저장할 때 데이터베이스에서 업데이트되는 테이블 목록이 **저장** 대화 상자에 표시됩니다.  
   
      작업을 계속 진행하기 전에 테이블 목록을 프로젝트 디렉터리에 텍스트 파일로 저장하려면 **텍스트 파일 저장** 을 선택합니다.  
   
-4.  
-  **저장** 대화 상자에서 테이블 목록을 확인한 다음 **예** 를 선택하여 해당 테이블을 저장합니다.  
+4.  **저장** 대화 상자에서 테이블 목록을 확인한 다음 **예** 를 선택하여 해당 테이블을 저장합니다.  
   
     > [!NOTE]  
     >  테이블 목록에는 선택한 항목 이외의 테이블이 포함될 수 있습니다. 예를 들어, 다른 테이블과 관계를 맺고 있는 열의 데이터 형식을 변경하면 두 테이블이 모두 이 목록에 포함됩니다.  

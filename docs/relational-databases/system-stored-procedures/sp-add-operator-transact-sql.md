@@ -18,10 +18,10 @@ ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f410024e1458d20e436df72cc2978ce41b5d60df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "74095507"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator(Transact-SQL)
@@ -58,7 +58,7 @@ sp_add_operator [ @name = ] 'name'
   
 `[ @email_address = ] 'email_address'`운영자의 전자 메일 주소입니다. 이 문자열은 전자 메일 시스템으로 직접 전달됩니다. *email_address* 은 **nvarchar (100)** 이며 기본값은 NULL입니다.  
   
- *Email_address*에 대 한 실제 전자 메일 주소나 별칭을 지정할 수 있습니다. 다음은 그 예입니다.  
+ *Email_address*에 대 한 실제 전자 메일 주소나 별칭을 지정할 수 있습니다. 예를 들어:  
   
  '**jdoe**' 또는 '**jdoe\@xyz.com**'  
   
@@ -99,22 +99,20 @@ sp_add_operator [ @name = ] 'name'
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- None  
+ 없음  
   
 ## <a name="remarks"></a>설명  
  **sp_add_operator** 는 **msdb** 데이터베이스에서 실행 해야 합니다.  
   
  호출은 전자 메일 시스템에 의해 지원되므로 호출 기능을 사용하려면 전자 메일에서 호출기로 전달되는 시스템이 있어야 합니다.  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 작업 구조를 만들고 관리할 수 있는 바람직한 방법을 제공하는데 이는 그래픽을 사용하여 쉽게 작업을 관리할 수 있는 방법입니다.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 작업 구조를 만들고 관리할 수 있는 바람직한 방법을 제공하는데 이는 그래픽을 사용하여 쉽게 작업을 관리할 수 있는 방법입니다.  
   
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_add_operator**를 실행할 수 있습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `danwi`에 대한 운영자 정보를 설정합니다. 운영자가 설정되어 있습니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 월요일부터 금요일, 오전 8시부터 오후 5시까지 호출기 알림을 보냅니다.  
+ 다음 예에서는 `danwi`에 대한 운영자 정보를 설정합니다. 운영자가 설정되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 월요일부터 금요일, 오전 8시부터 오후 5시까지 호출기 알림을 보냅니다.  
   
 ```  
 USE msdb ;  

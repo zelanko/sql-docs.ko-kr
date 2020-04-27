@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fa30824e32faae5feee1612305c1ca292d44e8e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63012014"
 ---
 # <a name="view-a-sql-server-audit-log"></a>SQL Server 감사 로그 보기
@@ -34,14 +34,14 @@ ms.locfileid: "63012014"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  `CONTROL SERVER` 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-view-a-sql-server-audit-log"></a>SQL Server 감사 로그를 보려면  
   
@@ -53,7 +53,7 @@ ms.locfileid: "63012014"
   
 4.  완료되면 **닫기**를 클릭합니다.  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 은 로그 파일 뷰어를 사용하여 감사 로그를 보는 것을 권장합니다. 그러나 자동화된 모니터링 시스템을 만들면 [sys.fn_get_audit_file&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql) 함수를 사용하여 감사 파일에서 정보를 직접 읽을 수 있습니다. 파일을 직접 읽으면 약간 다른 (처리되지 않은) 형식으로 데이터를 반환합니다. 자세한 내용은 fn_get_audit_file를 참조 하세요 **.**  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 은 로그 파일 뷰어를 사용하여 감사 로그를 보는 것을 권장합니다. 그러나 자동화된 모니터링 시스템을 만들면 [sys.fn_get_audit_file&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql) 함수를 사용하여 감사 파일에서 정보를 직접 읽을 수 있습니다. 파일을 직접 읽으면 약간 다른 (처리되지 않은) 형식으로 데이터를 반환합니다. 자세한 내용은 **sys.fn_get_audit_file** 를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Audit&#40;데이터베이스 엔진&#41;](sql-server-audit-database-engine.md)   

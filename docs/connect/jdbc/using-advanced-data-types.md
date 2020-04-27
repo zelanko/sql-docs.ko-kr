@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 509c2735475b7113887a2291ac6cdfb67dfc865a
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 70de1a4d2508a955510eb160af5622d7c1252520
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528727"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81727928"
 ---
 # <a name="using-advanced-data-types"></a>고급 데이터 형식 사용
 
@@ -77,7 +77,7 @@ rs.next();
 InputStream is = rs.getBinaryStream(2);  
 ```
 
-또한 다음과 같이 [getBytes](../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md) 메서드를 사용하여 데이터를 바이트 배열로 읽을 수도 있습니다.  
+또한 다음과 같이 [getBytes](reference/getbytes-method-sqlserverresultset.md) 메서드를 사용하여 데이터를 바이트 배열로 읽을 수도 있습니다.  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  
@@ -123,7 +123,7 @@ try (PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (Col1, Co
 
 ### <a name="modifying-large-value-types-in-a-database"></a>데이터베이스에서 큰 값 데이터 형식 수정
 
-대개의 경우 데이터베이스의 큰 값을 업데이트하거나 수정할 때 권장되는 방법은 `UPDATE`, `WRITE` 및 `SUBSTRING`과 같은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 사용하여 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 및 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스를 통해 매개 변수를 전달하는 것입니다.  
+대개의 경우 데이터베이스의 큰 값을 업데이트하거나 수정할 때 권장되는 방법은 `UPDATE`, `WRITE` 및 `SUBSTRING`과 같은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 사용하여 [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md) 및 [SQLServerCallableStatement](reference/sqlservercallablestatement-class.md) 클래스를 통해 매개 변수를 전달하는 것입니다.  
 
 보관된 HTML 파일처럼 큰 텍스트 파일에서 단어의 인스턴스를 바꾸려면 다음과 같이 Clob 개체를 사용합니다.  
 
@@ -173,12 +173,12 @@ JDBC 드라이버의 **xml** 데이터 형식 구현에서는 다음을 지원�
   
 ## <a name="sql_variant-data-type"></a>Sql_variant 데이터 형식
 
-sql_variant 데이터 형식에 대한 자세한 내용은 [Sql_variant 데이터 형식 사용](../../connect/jdbc/using-sql-variant-datatype.md)을 참조하세요.  
+sql_variant 데이터 형식에 대한 자세한 내용은 [Sql_variant 데이터 형식 사용](using-sql-variant-datatype.md)을 참조하세요.  
 
 ## <a name="spatial-data-types"></a>공간 데이터 형식
 
-공간 데이터 형식에 대한 자세한 내용은 [공간 데이터 형식 사용](../../connect/jdbc/use-spatial-datatypes.md)을 참조하세요.  
+공간 데이터 형식에 대한 자세한 내용은 [공간 데이터 형식 사용](use-spatial-datatypes.md)을 참조하세요.  
 
 ## <a name="see-also"></a>참고 항목
 
-[JDBC 드라이버 데이터 형식 이해](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[JDBC 드라이버 데이터 형식 이해](understanding-the-jdbc-driver-data-types.md)  

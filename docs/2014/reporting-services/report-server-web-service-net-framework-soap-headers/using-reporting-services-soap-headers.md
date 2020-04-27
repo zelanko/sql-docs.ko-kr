@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f48be183398d4d441b5781c9f9467178c3011e32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63012284"
 ---
 # <a name="using-reporting-services-soap-headers"></a>Reporting Services SOAP 헤더 사용
@@ -32,10 +32,10 @@ ms.locfileid: "63012284"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[일괄 처리 메서드](batching-methods.md)|<xref:ReportService2005.BatchHeader>를 사용하여 여러 작업을 단일 트랜잭션으로 일괄 처리하는 방법을 설명합니다.|  
-|[실행 상태 식별](identifying-execution-state.md)|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SessionHeader**를 사용하여** 에서 세션 상태를 관리하는 방법을 설명합니다.|  
+|[실행 상태 식별](identifying-execution-state.md)|**SessionHeader**를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 세션 상태를 관리하는 방법을 설명합니다.|  
 |[GetProperties 메서드에 대한 항목 네임스페이스 설정](setting-the-item-namespace-for-the-getproperties-method.md)|<xref:ReportService2010.ReportingService2010.GetProperties%2A> 메서드 및 <xref:ReportService2010.ItemNamespaceHeader> SOAP 헤더를 사용하여 항목의 경로나 ID를 기반으로 속성을 검색하는 방법을 설명합니다.|  
   
 ## <a name="see-also"></a>참고 항목  

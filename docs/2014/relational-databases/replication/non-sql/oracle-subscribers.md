@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022222"
 ---
 # <a name="oracle-subscribers"></a>Oracle 구독자
@@ -144,6 +144,6 @@ ms.locfileid: "63022222"
   
 ## <a name="see-also"></a>참고 항목  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
- [게시 구독](../subscribe-to-publications.md)  
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

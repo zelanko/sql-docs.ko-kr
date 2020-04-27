@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ee768eb4e50e4501af204c885916cd14409df2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210751"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>업데이트 가능한 트랜잭션 구독에 대한 업데이트 모드 전환
@@ -26,17 +26,17 @@ ms.locfileid: "68210751"
   
   
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   언제든지 즉시 업데이트에서 지연 업데이트로 장애 조치할 수 있습니다. 그러나 장애 조치한 후에는 구독자와 게시자가 연결되고 큐 판독기 에이전트에서 큐의 보류 중인 모든 메시지를 게시자에 적용할 때까지는 즉시 업데이트로 되돌릴 수 없습니다.  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   트랜잭션 게시에 대한 업데이트 구독이 한 업데이트 모드에서 다른 업데이트 모드로의 장애 조치를 지원하면 업데이트 모드를 프로그래밍 방식으로 전환하여 짧은 시간 동안 연결이 변경되는 경우를 처리할 수 있습니다. 업데이트 모드는 요청 시 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 설정할 수 있습니다. 자세한 내용은 [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)를 참조하세요.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 > [!NOTE]  
 >  구독이 생성된 후에 업데이트 모드를 변경하려면 구독이 생성될 때 **update_mode** 속성을 즉시 업데이트에서 지연 업데이트로 전환할 수 있는 **failover** 또는 지연 업데이트에서 즉시 업데이트로 전환할 수 있는 **queued failover** 로 설정합니다. 이러한 속성은 새 구독 마법사에서 자동으로 설정됩니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "68210751"
   
  **구독 속성 - \<Publisher>: \<PublicationDatabase>** 대화 상자에 액세스 하는 방법은 [끌어오기 구독 속성 보기 및 수정](../view-and-modify-pull-subscription-properties.md)을 참조하세요.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-switch-between-update-modes"></a>업데이트 모드를 전환하려면  
   

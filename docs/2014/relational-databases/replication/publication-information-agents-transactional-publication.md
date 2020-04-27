@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a4542370eff5ad631701f0bf988929ad56e8799
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021804"
 ---
 # <a name="publication-information-agents-transactional-publication"></a>게시 정보, 에이전트(트랜잭션 게시)
-  **에이전트** 탭은 선택한 게시에 대 한 에이전트의 요약 정보를 표시 합니다. 스냅샷 에이전트 및 로그 판독기 에이전트에 대한 정보는 모든 트랜잭션 게시에 대해 표시됩니다. 큐 판독기 에이전트에 대한 정보는 지연 업데이트 구독이 설정된 트랜잭션 게시에 대해 표시됩니다.  
+  **에이전트** 탭은 선택한 게시에 대한 에이전트의 요약 정보를 표시합니다. 스냅샷 에이전트 및 로그 판독기 에이전트에 대한 정보는 모든 트랜잭션 게시에 대해 표시됩니다. 큐 판독기 에이전트에 대한 정보는 지연 업데이트 구독이 설정된 트랜잭션 게시에 대해 표시됩니다.  
   
 ## <a name="options"></a>옵션  
  에이전트 관련 태스크와 자세한 정보를 보려면 해당 에이전트에 대한 행을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 옵션을 클릭합니다. 표에서 데이터를 표시하는 방식을 변경하려면 표를 마우스 오른쪽 단추로 클릭한 후 다음 옵션 중 하나를 클릭합니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "63021804"
  **마지막 시작 시간**  
  마지막으로 에이전트가 시작된 시간입니다.  
   
- **Duration**  
+ **작업**  
  에이전트가 실행된 시간입니다. 에이전트가 현재 실행되고 있는 경우 이 시간은 경과된 시간을 나타내고 에이전트가 이전에 실행된 경우에는 총 시간을 나타냅니다.  
   
  **마지막 동작**  
@@ -62,7 +62,7 @@ ms.locfileid: "63021804"
   
 ## <a name="see-also"></a>참고 항목  
  [복제 모니터 시작](monitor/start-the-replication-monitor.md)   
- [복제 모니터를 사용하여 정보 보기 및 태스크 수행](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [복제 모니터를 사용 하 여 정보 보기 및 태스크 수행](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [복제 모니터링](monitoring-replication.md)  
   
   

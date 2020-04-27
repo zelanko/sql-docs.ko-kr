@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebe8924f46de15a3a34c0f49304c87a904919bdb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035044"
 ---
 # <a name="modify-trace-templates"></a>추적 템플릿 수정
@@ -32,17 +32,17 @@ ms.locfileid: "63035044"
   
  [추적 템플릿 만들기&#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)  
   
- **추적 템플릿에서 추적을 실행 하려면**  
+ **추적 템플릿에서 추적을 실행하려면**  
   
  [추적 만들기&#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)  
   
- **추적 템플릿을 수정 하려면**  
+ **추적 템플릿을 수정하려면**  
   
  [SQL Server Profiler 사용](../../database-engine/modify-a-trace-template-sql-server-profiler.md)  
   
  [Transact-sql 사용](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
   
- **추적 템플릿 또는 추적 파일에서 이벤트를 추가 하거나 제거 하려면**  
+ **추적 템플릿 또는 추적 파일에서 이벤트를 추가하거나 제거하려면**  
   
  [SQL Server Profiler 사용](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
   

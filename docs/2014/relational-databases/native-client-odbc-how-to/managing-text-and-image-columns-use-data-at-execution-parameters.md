@@ -13,36 +13,31 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d69ec20d919110ce241aa38bcfb22069a20d53a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206797"
 ---
 # <a name="use-data-at-execution-parameters-odbc"></a>실행 시 데이터 매개 변수 사용(ODBC)
     
 ### <a name="to-use-data-at-execution-text-ntext-or-image-parameters"></a>실행 시 데이터 text, ntext 또는 image 매개 변수를 사용하려면  
   
-1.  
-  [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md)를 호출하여 프로그램 버퍼를 문 매개 변수에 바인딩하는 경우:  
+1.  [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md)를 호출하여 프로그램 버퍼를 문 매개 변수에 바인딩하는 경우:  
   
-    -   마지막 매개 변수의 경우 length를 SQL_LEN_DATA_AT_EXEC 사용 합니다. 여기서 *length* 는 `text`, `ntext`또는 `image` 매개 변수 데이터의 총 길이 (바이트)입니다.**  
+    -   마지막 매개 변수의 경우 length를 SQL_LEN_DATA_AT_EXEC 사용 합니다. 여기서 *length* 는 `text`, `ntext`또는 `image` 매개 변수 데이터의 총 길이 (바이트)입니다.*length*  
   
     -   프로그램에서 정의된 매개 변수 식별자의 `rgbValue`(8번째 매개 변수)를 사용합니다.  
   
-2.  
-  [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 또는 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 를 호출하면 데이터 실행 시 매개 변수를 처리할 준비가 되었음을 나타내는 SQL_NEED_DATA가 반환됩니다.  
+2.  [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 또는 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 를 호출하면 데이터 실행 시 매개 변수를 처리할 준비가 되었음을 나타내는 SQL_NEED_DATA가 반환됩니다.  
   
 3.  각 실행 시 데이터 매개 변수에 대해 다음을 수행합니다.  
   
-    -   
-  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 를 호출하여 프로그램에서 정의된 매개 변수 ID를 가져옵니다. 다른 실행 시 데이터 매개 변수가 있는 경우 SQL_NEED_DATA가 반환됩니다.  
+    -   [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 를 호출하여 프로그램에서 정의된 매개 변수 ID를 가져옵니다. 다른 실행 시 데이터 매개 변수가 있는 경우 SQL_NEED_DATA가 반환됩니다.  
   
-    -   
-  [SQLPutData](../native-client-odbc-api/sqlputdata.md) 를 한 번 이상 호출하여 길이가 전달될 때까지 매개 변수 데이터를 보냅니다.  
+    -   [SQLPutData](../native-client-odbc-api/sqlputdata.md) 를 한 번 이상 호출하여 길이가 전달될 때까지 매개 변수 데이터를 보냅니다.  
   
-4.  
-  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 를 호출하여 최종 실행 시 데이터 매개 변수의 모든 데이터가 전송되었음을 나타냅니다. SQL_NEED_DATA는 반환되지 않습니다.  
+4.  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 를 호출하여 최종 실행 시 데이터 매개 변수의 모든 데이터가 전송되었음을 나타냅니다. SQL_NEED_DATA는 반환되지 않습니다.  
   
 ## <a name="example"></a>예제  
  이 예제에서는 SQLParamData 및 SQLPutData를 사용하여 SQL_LONG 변수 문자 데이터를 읽는 방법을 보여 줍니다. 이 예제는 IA64에서 지원되지 않습니다.  

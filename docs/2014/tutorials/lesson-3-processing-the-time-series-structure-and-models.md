@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 493d27c9836eb765c655eba5bbb004e4d48cde40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63042879"
 ---
 # <a name="lesson-3-processing-the-time-series-structure-and-models"></a>3단원: 시계열 구조 및 모델 처리
@@ -78,8 +78,7 @@ OPENQUERY (<source data definition>)
   
 #### <a name="to-process-the-mining-structure-and-related-mining-models-by-using-insert-into"></a>INSERT INTO를 사용하여 마이닝 구조 및 관련 마이닝 모델을 처리하려면  
   
-1.  
-  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
@@ -91,7 +90,7 @@ OPENQUERY (<source data definition>)
     [<mining structure>]  
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     Forecasting_MIXED_Structure  
@@ -103,7 +102,7 @@ OPENQUERY (<source data definition>)
     <mining structure columns>  
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     [ReportingDate],  
@@ -116,7 +115,7 @@ OPENQUERY (<source data definition>)
     OPENQUERY(<source data definition>)  
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     OPENQUERY([Adventure Works DW 2008R2],'SELECT [ReportingDate], [ModelRegion], [Quantity], [Amount]  
@@ -138,8 +137,7 @@ OPENQUERY (<source data definition>)
     )   
     ```  
   
-6.  
-  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
+6.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
 7.  다른 이름 **으로 저장** 대화 상자에서 해당 폴더로 이동한 다음 파일 `ProcessForecastingAll.dmx`이름을로 합니다.  
   

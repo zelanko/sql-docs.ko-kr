@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d83a7111bbea13733190eeb612373d9136dd058
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79217124"
 ---
 # <a name="data-mining-services-and-data-sources"></a>데이터 마이닝 서비스 및 데이터 원본
@@ -46,7 +46,7 @@ ms.locfileid: "79217124"
 ### <a name="xmla-listener"></a>XMLA 수신기  
  XMLA 수신기 구성 요소는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 와 클라이언트 간의 모든 XMLA 통신을 처리합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` Msmdsrv.ini 파일의 구성 설정을 사용 하 여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스가 수신 하는 포트를 지정할 수 있습니다. 이 파일의 값이 0이면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 기본 포트에서 수신합니다. 달리 지정하지 않는 한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 기본 TCP 포트를 사용합니다.  
   
-|포트|Description|  
+|포트|설명|  
 |----------|-----------------|  
 |2383|의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]기본 인스턴스|  
 |2382|의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]다른 인스턴스에 대 한 리디렉터|  
@@ -61,9 +61,9 @@ ms.locfileid: "79217124"
   
 -   데이터 마이닝은 서버에서 제공하는 서비스이므로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 데이터 원본에 대한 액세스 권한이 있어야 합니다.  위치 및 ID 두 측면에 액세스합니다.  
   
-     **위치** 는 컴퓨터에만 저장 된 데이터를 사용 하 여 모델을 작성 한 다음 서버에 모델을 배포 하는 경우 데이터 원본을 찾을 수 없기 때문에 모델이 처리 되지 않습니다. 이 문제를 해결하려면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 실행되는 동일한 SQL Server 인스턴스로 데이터를 전송하거나 파일을 공유 위치로 이동해야 할 수 있습니다.  
+     **위치** 는 사용자 컴퓨터에만 저장된 데이터를 사용하여 모델을 작성한 후 서버에 배포할 경우 데이터 원본을 찾을 수 없으므로 모델을 처리하지 못함을 의미합니다. 이 문제를 해결하려면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 실행되는 동일한 SQL Server 인스턴스로 데이터를 전송하거나 파일을 공유 위치로 이동해야 할 수 있습니다.  
   
-     **Id** 는의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스가 적절 한 자격 증명으로 데이터 파일 또는 데이터 원본을 열 수 있어야 함을 의미 합니다. 예를 들어 모델을 작성할 때 작성자 본인에게는 데이터를 볼 수 있는 무제한적인 권한이 있는 반면, 서버에서 모델을 처리하고 업데이트하는 사용자에게는 데이터에 대한 액세스 권한이 없거나 제한적인 경우에는 모델을 처리하지 못하거나 모델의 콘텐츠가 영향을 받을 수 있습니다. 원격 데이터 원본에 연결하는 데 사용되는 계정에는 최소한 데이터에 대한 읽기 권한이 있어야 합니다.  
+     **ID** 는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 서비스가 적절한 자격 증명으로 데이터 파일 또는 데이터 원본을 열 수 있어야 함을 의미합니다. 예를 들어 모델을 작성할 때 작성자 본인에게는 데이터를 볼 수 있는 무제한적인 권한이 있는 반면, 서버에서 모델을 처리하고 업데이트하는 사용자에게는 데이터에 대한 액세스 권한이 없거나 제한적인 경우에는 모델을 처리하지 못하거나 모델의 콘텐츠가 영향을 받을 수 있습니다. 원격 데이터 원본에 연결하는 데 사용되는 계정에는 최소한 데이터에 대한 읽기 권한이 있어야 합니다.  
   
 -   모델을 이동할 때도 동일한 요구 사항이 적용됩니다. 즉, 이전 데이터 원본의 위치에 액세스하거나 데이터 원본을 복사하거나 새 데이터 원본을 구성할 수 있는 적절한 액세스 권한을 설정해야 합니다. 또한 로그인 및 역할을 전송하거나 새 위치에서 데이터 마이닝 개체를 처리하고 업데이트할 수 있는 권한을 설정해야 합니다.  
   
@@ -79,9 +79,9 @@ ms.locfileid: "79217124"
     > [!IMPORTANT]  
     >  보안을 강화하려면 이 속성을 `false`로 설정하는 것이 좋습니다. 기본값은 `false`입니다. 단, 이 속성이 `false`로 설정되는 경우에도 사용자는 계속 단일 쿼리를 만들고 허용된 데이터 원본에 대해 OPENQUERY를 사용할 수 있습니다.  
   
--   **Allowedprovidersinopenrowset** 임시 액세스가 설정 된 경우 공급자를 지정 합니다. 쉼표로 구분된 ProgID 목록을 입력하여 여러 공급자를 지정할 수 있습니다.  
+-   **AllowedProvidersInOpenRowset** 임시 액세스가 설정된 경우 공급자를 지정합니다. 쉼표로 구분된 ProgID 목록을 입력하여 여러 공급자를 지정할 수 있습니다.  
   
--   **MaxConcurrentPredictionQueries** 예측으로 인 한 서버의 로드를 제어 합니다. 기본값인 0은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise에 대해 무제한, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard에 대해 최대 5개의 동시 쿼리를 허용합니다. 제한 값 이후의 쿼리는 직렬화되어 제한 시간을 초과하게 됩니다.  
+-   **MaxConcurrentPredictionQueries** 예측에 의해 발생하는 서버의 부하를 제어합니다. 기본값인 0은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise에 대해 무제한, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard에 대해 최대 5개의 동시 쿼리를 허용합니다. 제한 값 이후의 쿼리는 직렬화되어 제한 시간을 초과하게 됩니다.  
   
  서버는 모든 데이터 마이닝 서비스에 대한 기본값, 그리고 알고리즘에 대한 제한 사항을 포함하여 사용할 수 있는 데이터 마이닝 알고리즘을 제어하는 추가 속성을 제공합니다. 단, 데이터 마이닝 저장 프로시저에 대한 액세스를 특정적으로 제어하도록 허용하는 설정은 없습니다. 자세한 내용은 [Data Mining Properties](../server-properties/data-mining-properties.md)을 참조하세요.  
   
@@ -93,15 +93,15 @@ ms.locfileid: "79217124"
 ## <a name="programmatic-access-to-data-mining-objects"></a>데이터 마이닝 개체에 대한 프로그래밍 방식 액세스  
  다음 개체 모델을 사용하여 Analysis Services 데이터베이스에 대한 연결을 만들고 데이터 마이닝 개체 작업을 수행할 수 있습니다.  
   
- **ADO** OLE DB를 사용 하 여 Analysis Services 서버에 연결 합니다. ADO를 사용하는 경우 클라이언트는 스키마 행 집합 쿼리와 DMX 문으로 제한됩니다.  
+ **ADO** OLE DB를 사용하여 Analysis Services 서버에 연결합니다. ADO를 사용하는 경우 클라이언트는 스키마 행 집합 쿼리와 DMX 문으로 제한됩니다.  
   
- **ADO.NET** 는 다른 공급자 보다 더 나은 SQL Server 공급자와 상호 작용 합니다. 데이터 어댑터를 사용하여 동적 행 집합을 저장합니다. 업데이트하거나 XML로 저장할 수 있는 데이터 테이블로 저장된 서버 데이터의 캐시인 데이터 세트 개체를 사용합니다.  
+ **ADO.NET** 다른 공급자보다 SQL Server 공급자와 더 원활하게 상호 작용합니다. 데이터 어댑터를 사용하여 동적 행 집합을 저장합니다. 업데이트하거나 XML로 저장할 수 있는 데이터 테이블로 저장된 서버 데이터의 캐시인 데이터 세트 개체를 사용합니다.  
   
- **ADOMD.NET** 데이터 마이닝 및 OLAP 사용을 위해 최적화 된 관리 되는 데이터 공급자입니다. ADOMD.NET은 ADO.NET보다 더 빠르고 메모리 효율적입니다. ADOMD.NET을 사용하면 서버 개체에 대한 메타데이터를 검색할 수도 있습니다. .NET을 사용할 수 없는 경우를 제외하고 클라이언트 애플리케이션에 권장되는 개체 모델입니다.  
+ **ADOMD.NET** 데이터 마이닝 및 OLAP과의 작업에 최적화된 관리 데이터 공급자입니다. ADOMD.NET은 ADO.NET보다 더 빠르고 메모리 효율적입니다. ADOMD.NET을 사용하면 서버 개체에 대한 메타데이터를 검색할 수도 있습니다. .NET을 사용할 수 없는 경우를 제외하고 클라이언트 애플리케이션에 권장되는 개체 모델입니다.  
   
- **서버 ADOMD** 서버에서 직접 Analysis Services 개체에 액세스 하기 위한 개체 모델입니다. Analysis Services 저장 프로시저에서 사용되며 클라이언트용이 아닙니다.  
+ **서버 ADOMD** 서버에서 직접 Analysis Services 개체에 액세스하기 위한 개체 모델입니다. Analysis Services 저장 프로시저에서 사용되며 클라이언트용이 아닙니다.  
   
- **AMO** DSO (의사 결정 지원 개체)를 대체 하는 Analysis Services에 대 한 관리 인터페이스입니다. AMO를 사용할 때는 개체 반복과 같은 작업에서 다른 인터페이스에 비해 더 높은 사용 권한이 필요합니다. 이는 ADOMD.NET 및 기타 인터페이스가 데이터베이스 스키마에만 액세스하는 반면 AMO는 메타데이터에 직접 액세스하기 때문입니다.  
+ **AMO** DSO(의사 결정 지원 개체)를 대체하는 Analysis Services용 관리 인터페이스입니다. AMO를 사용할 때는 개체 반복과 같은 작업에서 다른 인터페이스에 비해 더 높은 사용 권한이 필요합니다. 이는 ADOMD.NET 및 기타 인터페이스가 데이터베이스 스키마에만 액세스하는 반면 AMO는 메타데이터에 직접 액세스하기 때문입니다.  
   
 ### <a name="browse-and-query-access-to-servers"></a>서버에 대한 액세스 찾아보기 및 쿼리  
  OLAP/데이터 마이닝 모드에서 Analysis Services 인스턴스를 사용하여 모든 종류의 예측을 수행할 수 있습니다. 단, 다음과 같은 제한 사항이 있습니다.  

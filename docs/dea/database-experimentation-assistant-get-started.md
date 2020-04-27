@@ -13,10 +13,10 @@ ms.author: rajsell
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 36e36060e16ff85ba2b1fa58d9d900231cf6581f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75258519"
 ---
 # <a name="overview-of-the-workload-comparison-process"></a>작업 비교 프로세스 개요
@@ -63,6 +63,6 @@ SQL Server A/B 테스트의 두 번째 단계는 두 개의 대상 서버에서 
 - 하나 이상의 구성 요소가 없는 경우 새 분석 보고서 (인터넷 연결 필요)를 생성 하려고 하면 다운로드 링크가 있는 필수 구성 요소 페이지가 나타납니다.
 - 이전 버전의 도구에서 생성 된 보고서를 보려면 먼저 스키마를 업데이트 해야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - 서버에서 발생 하는 이벤트 로그를 사용 하 여 추적 파일을 생성 하는 방법에 대 한 자세한 내용은 [데이터베이스 실험 도우미 추적 캡처](database-experimentation-assistant-capture-trace.md)문서를 참조 하세요.

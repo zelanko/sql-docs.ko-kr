@@ -22,14 +22,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2adbf40b3fe0b0e079198087a47f525d464a41b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206608"
 ---
 # <a name="using-user-defined-types"></a>사용자 정의 형식 사용
-  
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터 UDT(사용자 정의 형식)가 도입되었습니다. UDT는 개체와 사용자 지정 데이터 구조를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 저장할 수 있도록 SQL 유형 시스템을 확장합니다. UDT는 여러 데이터 형식과 동작이 포함될 수 있어 단일 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 시스템 데이터 형식으로 구성된 일반적인 별칭 데이터 형식과 차별화됩니다. UDT는 검증할 수 있는 코드를 생성하는 .NET CLR(공용 언어 런타임)에서 지원하는 모든 언어를 사용하여 정의합니다. 여기에는 Microsoft Visual c #<sup>???</sup> 가 포함 됩니다. Visual Basic<sup>?</sup> 선택망. 데이터는 .NET 클래스 또는 구조체의 필드와 속성으로 노출되며 동작은 클래스 또는 구조체의 메서드로 정의됩니다.  
   
  UDT를 테이블의 열 정의, [!INCLUDE[tsql](../../../includes/tsql-md.md)] 일괄 처리의 변수 또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 함수나 저장 프로시저의 인수로 사용할 수 있습니다.  
@@ -38,34 +37,33 @@ ms.locfileid: "68206608"
  Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 udt를 개체로 관리할 수 있는 메타 데이터 정보를 사용 하 여 udt를 이진 형식으로 지원 합니다. UDT 열은 DBTYPE_UDT로 노출되고 해당 메타데이터는 핵심 OLE DB 인터페이스인 **IColumnRowset**와 새로운 [ISSCommandWithParameters](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) 인터페이스를 통해 노출됩니다.  
   
 > [!NOTE]  
->  
-  **IRowsetFind::FindNextRow** 메서드는 UDT 데이터 형식과 함께 사용할 수 없습니다. UDT가 검색 열 유형으로 사용되는 경우 DB_E_BADCOMPAREOP가 반환됩니다.  
+>  **IRowsetFind::FindNextRow** 메서드는 UDT 데이터 형식과 함께 사용할 수 없습니다. UDT가 검색 열 유형으로 사용되는 경우 DB_E_BADCOMPAREOP가 반환됩니다.  
   
 ### <a name="data-bindings-and-coercions"></a>데이터 바인딩 및 강제 변환  
  다음 표에서는 표의 데이터 형식을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT와 함께 사용할 때 발생하는 바인딩 및 강제 변환에 대해 설명합니다. UDT 열은 Native Client OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 공급자를 통해 DBTYPE_UDT 노출 됩니다. 적절한 스키마의 행 집합을 통해 메타데이터를 얻을 수 있으므로 사용자 정의 형식을 개체로 관리할 수 있습니다.  
   
-|데이터 형식|SQL Server의<br /><br /> **UDT**|SQL Server의<br /><br /> **비 UDT**|SQL Server의<br /><br /> **UDT**|SQL Server의<br /><br /> **비 UDT**|  
+|데이터 형식|SQL Server의<br /><br /> **UDT**|SQL Server의<br /><br /> **non-UDT**|SQL Server의<br /><br /> **UDT**|SQL Server의<br /><br /> **non-UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
-|DBTYPE_UDT|지원 됨<sup>6</sup>|오류<sup>1</sup>|지원 됨<sup>6</sup>|오류<sup>5</sup>|  
-|DBTYPE_BYTES|지원 됨<sup>6</sup>|해당 없음<sup>2</sup>|지원 됨<sup>6</sup>|해당 없음<sup>2</sup>|  
-|DBTYPE_WSTR|지원 되<sup>는 3, 6</sup>|해당 없음<sup>2</sup>|지원 되<sup>는 4, 6</sup>|해당 없음<sup>2</sup>|  
-|DBTYPE_BSTR|지원 되<sup>는 3, 6</sup>|해당 없음<sup>2</sup>|지원 됨<sup>4</sup>|해당 없음<sup>2</sup>|  
-|DBTYPE_STR|지원 되<sup>는 3, 6</sup>|해당 없음<sup>2</sup>|지원 되<sup>는 4, 6</sup>|해당 없음<sup>2</sup>|  
+|DBTYPE_UDT|지원됨<sup>6</sup>|오류<sup>1</sup>|지원됨<sup>6</sup>|오류<sup>5</sup>|  
+|DBTYPE_BYTES|지원됨<sup>6</sup>|해당 없음<sup>2</sup>|지원됨<sup>6</sup>|해당 없음<sup>2</sup>|  
+|DBTYPE_WSTR|지원됨<sup>3,6</sup>|해당 없음<sup>2</sup>|지원됨<sup>4,6</sup>|해당 없음<sup>2</sup>|  
+|DBTYPE_BSTR|지원됨<sup>3,6</sup>|해당 없음<sup>2</sup>|지원됨<sup>4</sup>|해당 없음<sup>2</sup>|  
+|DBTYPE_STR|지원됨<sup>3,6</sup>|해당 없음<sup>2</sup>|지원됨<sup>4,6</sup>|해당 없음<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|지원되지 않음|해당 없음<sup>2</sup>|지원되지 않음|해당 없음<sup>2</sup>|  
-|DBTYPE_VARIANT(VT_UI1 &#124; VT_ARRAY)|지원 됨<sup>6</sup>|해당 없음<sup>2</sup>|지원 됨<sup>4</sup>|해당 없음<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|지원 되<sup>는 3, 6</sup>|해당 없음<sup>2</sup>|해당 없음|해당 없음<sup>2</sup>|  
+|DBTYPE_VARIANT(VT_UI1 &#124; VT_ARRAY)|지원됨<sup>6</sup>|해당 없음<sup>2</sup>|지원됨<sup>4</sup>|해당 없음<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|지원됨<sup>3,6</sup>|해당 없음<sup>2</sup>|해당 없음|해당 없음<sup>2</sup>|  
   
- <sup>1</sup> **ICommandWithParameters:: SetParameterInfo** 를 사용 하 여 DBTYPE_UDT 이외의 서버 유형을 지정 하 고 접근자 유형을 DBTYPE_UDT 하면 문이 실행 될 때 오류가 발생 합니다 (DB_E_ERRORSOCCURRED, 매개 변수 상태가 DBSTATUS_E_BADACCESSOR). 그렇지 않은 경우에는 데이터가 서버로 전송되지만 UDT에서 매개 변수의 데이터 형식으로의 암시적 변환이 이루어지지 않았음을 나타내는 오류가 반환됩니다.  
+ <sup>1</sup>DBTYPE_UDT 이외의 서버 유형이 **ICommandWithParameters::SetParameterInfo**로 지정되고 접근자 유형이 DBTYPE_UDT인 경우 문을 실행하면 오류가 발생합니다(DB_E_ERRORSOCCURRED, 매개 변수 상태는 DBSTATUS_E_BADACCESSOR임). 그렇지 않은 경우에는 데이터가 서버로 전송되지만 UDT에서 매개 변수의 데이터 형식으로의 암시적 변환이 이루어지지 않았음을 나타내는 오류가 반환됩니다.  
   
  <sup>2</sup> 이 항목의 범위를 벗어났습니다.  
   
- <sup>3</sup> 16 진수 문자열에서 이진 데이터로의 데이터 변환이 발생 합니다.  
+ <sup>3</sup> 16진수 문자열에서 이진 데이터로의 데이터 변환이 발생합니다.  
   
- <sup>4</sup> 이진 데이터에서 16 진수 문자열로의 데이터 변환이 발생 합니다.  
+ <sup>4</sup> 이진 데이터에서 16진수 문자열로의 데이터 변환이 발생합니다.  
   
- <sup>5</sup> 유효성 검사는 create 접근자 시간에 또는 인출 시 발생할 수 있습니다. 오류는 DB_E_ERRORSOCCURRED, 바인딩 상태는 DBBINDSTATUS_UNSUPPORTEDCONVERSION로 설정 됩니다.  
+ <sup>5</sup>접근자 생성 시간 또는 인출 시간에 유효성 검사가 발생할 수 있습니다. 오류는 DBBINDSTATUS_UNSUPPORTEDCONVERSION으로 설정된 바인딩 상태, DB_E_ERRORSOCCURRED입니다.  
   
- <sup>6</sup> BY_REF를 사용할 수 있습니다.  
+ <sup>6</sup>BY_REF가 사용될 수 있습니다.  
   
  DBTYPE_NULL 및 DBTYPE_EMPTY는 입력 매개 변수에 대해서는 바인딩할 수 있지만 출력 매개 변수나 결과에 대해서는 바인딩할 수 없습니다. 입력 매개 변수에 대해 바인딩할 경우 상태를 DBSTATUS_S_ISNULL 또는 DBSTATUS_S_DEFAULT로 설정해야 합니다.  
   
@@ -84,7 +82,7 @@ ms.locfileid: "68206608"
 #### <a name="the-procedure_parameters-schema-rowset"></a>PROCEDURE_PARAMETERS 스키마 행 집합  
  PROCEDURE_PARAMETERS 스키마 행 집합에 다음이 추가되었습니다.  
   
-|열 이름|Type|Description|  
+|열 이름|유형|설명|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|세 부분으로 구성된 이름 식별자입니다.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|세 부분으로 구성된 이름 식별자입니다.|  
@@ -94,7 +92,7 @@ ms.locfileid: "68206608"
 #### <a name="the-sql_assemblies-schema-rowset"></a>SQL_ASSEMBLIES 스키마 행 집합  
  Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 등록 된 udt를 설명 하는 새 공급자별 스키마 행 집합을 노출 합니다. ASSEMBLY 서버가 DBTYPE_WSTR로 지정되지만 행 집합에는 없을 수 있습니다. 이 속성이 지정되지 않은 경우 행 집합은 기본적으로 현재 서버를 사용합니다. SQL_ASSEMBLIES 스키마 행 집합은 다음 표에 정의되어 있습니다.  
   
-|열 이름|Type|Description|  
+|열 이름|유형|설명|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|형식을 포함하는 어셈블리의 카탈로그 이름입니다.|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|형식을 포함하는 어셈블리의 스키마 이름 또는 소유자 이름입니다. 어셈블리 범위는 스키마가 아니라 데이터베이스에 의해 결정되지만 여전히 여기에서 나타내는 소유자를 가집니다.|  
@@ -106,7 +104,7 @@ ms.locfileid: "68206608"
 #### <a name="the-sql_assemblies_-dependencies-schema-rowset"></a>SQL_ASSEMBLIES_ DEPENDENCIES 스키마 행 집합  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 지정 된 서버에 대 한 어셈블리 종속성을 설명 하는 새 공급자별 스키마 행 집합을 노출 합니다. ASSEMBLY_SERVER가 호출자에 의해 DBTYPE_WSTR로 지정되지만 행 집합에는 없을 수 있습니다. 이 속성이 지정되지 않은 경우 행 집합은 기본적으로 현재 서버를 사용합니다. SQL_ASSEMBLY_DEPENDENCIES 스키마 행 집합은 다음 표에 정의되어 있습니다.  
   
-|열 이름|Type|Description|  
+|열 이름|유형|설명|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|형식을 포함하는 어셈블리의 카탈로그 이름입니다.|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|형식을 포함하는 어셈블리의 스키마 이름 또는 소유자 이름입니다. 어셈블리 범위는 스키마가 아니라 데이터베이스에 의해 결정되지만 여전히 여기에서 나타내는 소유자를 가집니다.|  
@@ -116,7 +114,7 @@ ms.locfileid: "68206608"
 #### <a name="the-sql_user_types-schema-rowset"></a>SQL_USER_TYPES 스키마 행 집합  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 지정 된 서버에 대해 등록 된 Udt가 추가 되는 경우를 설명 하는 새로운 스키마 행 집합 SQL_USER_TYPES를 노출 합니다. UDT_SERVER가 호출자에 의해 DBTYPE_WSTR로 지정되어야 하지만 행 집합에는 없을 수 있습니다. SQL_USER_TYPES 스키마 행 집합은 다음 표에 정의되어 있습니다.  
   
-|열 이름|Type|Description|  
+|열 이름|유형|설명|  
 |-----------------|----------|-----------------|  
 |UDT_CATALOGNAME|DBTYPE_WSTR|UDT 열의 경우 이 속성이 UDT가 정의되어 있는 카탈로그의 이름을 지정하는 문자열입니다.|  
 |UDT_SCHEMANAME|DBTYPE_WSTR|UDT 열의 경우 이 속성이 UDT가 정의되어 있는 스키마의 이름을 지정하는 문자열입니다.|  
@@ -126,7 +124,7 @@ ms.locfileid: "68206608"
 #### <a name="the-columns-schema-rowset"></a>COLUMNS 스키마 행 집합  
  COLUMNS 스키마 행 집합에 추가된 열은 다음과 같습니다.  
   
-|열 이름|Type|Description|  
+|열 이름|유형|설명|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|UDT 열의 경우 이 속성이 UDT가 정의되어 있는 카탈로그의 이름을 지정하는 문자열입니다.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|UDT 열의 경우 이 속성이 UDT가 정의되어 있는 스키마의 이름을 지정하는 문자열입니다.|  
@@ -139,7 +137,7 @@ ms.locfileid: "68206608"
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 속성 집합  
  OLE DB를 통해 Udt를 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 다음 값을 포함 하는 새 DBPROPSET_SQLSERVERPARAMETER 속성 집합을 구현 합니다.  
   
-|속성|Type|Description|  
+|이름|유형|설명|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_UDT_CATALOGNAME|DBTYPE_WSTR|세 부분으로 구성된 이름 식별자입니다.<br /><br /> UDT 매개 변수의 경우 이 속성이 사용자 정의 형식이 정의되어 있는 카탈로그의 이름을 지정하는 문자열입니다.|  
 |SSPROP_PARAM_UDT_SCHEMANAME|DBTYPE_WSTR|세 부분으로 구성된 이름 식별자입니다.<br /><br /> UDT 매개 변수의 경우 이 속성이 사용자 정의 형식이 정의되어 있는 스키마의 이름을 지정하는 문자열입니다.|  
@@ -150,7 +148,7 @@ ms.locfileid: "68206608"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 속성 집합  
  **Itabledefinition** 인터페이스에서 테이블 생성을 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 다음 세 개의 새 열을 DBPROPSET_SQLSERVERCOLUMN 속성 집합에 추가 합니다.  
   
-|속성|Description|Type|Description|  
+|속성|설명|Type|설명|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|DBTYPE_UDT 형식인 열의 경우 이 속성이 UDT가 정의되어 있는 카탈로그의 이름을 지정하는 문자열입니다.|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|DBTYPE_UDT 형식인 열의 경우 이 속성이 UDT가 정의되어 있는 스키마의 이름을 지정하는 문자열입니다.|  
@@ -181,7 +179,7 @@ ms.locfileid: "68206608"
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset 인터페이스  
  Native Client는 **ISSCommandWithParameters** 인터페이스 외에도 다음을 포함 하 여 **IColumnsRowset:: GetColumnRowset** 메서드를 호출 하 여 반환 된 행 집합에 새 값을 추가 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
-|열 이름|Type|Description|  
+|열 이름|유형|설명|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_UDT_CATALOGNAME|DBTYPE_WSTR|UDT 카탈로그 이름 식별자입니다.|  
 |DBCOLUMN_SS_UDT_SCHEMANAME|DBTYPE_WSTR|UDT 스키마 이름 식별자입니다.|  
@@ -208,6 +206,6 @@ ms.locfileid: "68206608"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client 기능](sql-server-native-client-features.md)   
- [ISSCommandWithParameters &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters&#40;OLE DB&#41;](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

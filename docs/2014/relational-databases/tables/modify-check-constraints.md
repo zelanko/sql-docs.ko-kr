@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 651b13121653f5627f59bc6a8a11f1e2e49c43b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211848"
 ---
 # <a name="modify-check-constraints"></a>CHECK 제약 조건 수정
@@ -37,14 +37,14 @@ ms.locfileid: "68211848"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-modify-a-check-constraint"></a>CHECK 제약 조건을 수정하려면  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68211848"
   
 6.  **파일** 메뉴에서 **테이블 이름**_저장_을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **CHECK 제약 조건을 수정하려면**  
   
  `CHECK` 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]제약 조건을 수정하려면 먼저 기존 `CHECK` 제약 조건을 삭제하고 새로운 정의를 사용하여 다시 만들어야 합니다. 자세한 내용은 [Check 제약 조건 삭제](delete-check-constraints.md) 및 [Check 제약 조건 만들기](create-check-constraints.md)를 참조하세요.  

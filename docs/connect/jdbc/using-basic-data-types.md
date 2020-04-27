@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1ab207deaa0632e2e4026aa4950c720ba6b22d75
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 97c0d4b269bfda9a9c01bf8b08f93e2b2f5f83d5
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625566"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728376"
 ---
 # <a name="using-basic-data-types"></a>기본 데이터 형식 사용
 
@@ -101,20 +101,20 @@ JDBC 기본 데이터 형식에 매핑되는 데이터 원본에서 데이터를
 
 매개 변수가 있는 쿼리를 사용하여 데이터 원본의 데이터를 업데이트해야 하는 경우 [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md) 클래스의 set\<Type> 메서드*setter 메서드*라고도 함 중 하나를 사용하여 매개 변수의 데이터 형식을 설정합니다. 다음 예제에서는 [prepareStatement](reference/preparestatement-method-sqlserverconnection.md) 메서드를 사용하여 매개 변수가 있는 쿼리를 미리 컴파일한 다음, [setString](reference/setstring-method-sqlserverpreparedstatement.md) 메서드로 매개 변수의 문자열 값을 설정한 후 [executeUpdate](reference/executeupdate-method.md) 메서드를 호출합니다.  
   
-[!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
+[!code[JDBC#UsingBasicDataTypes4](codesnippet/Java/using-basic-data-types_4.java)]  
   
-매개 변수가 있는 쿼리에 대한 자세한 내용은 [매개 변수가 있는 SQL 문 사용](../../connect/jdbc/using-an-sql-statement-with-parameters.md)을 참조하세요.  
+매개 변수가 있는 쿼리에 대한 자세한 내용은 [매개 변수가 있는 SQL 문 사용](using-an-sql-statement-with-parameters.md)을 참조하세요.  
 
 ## <a name="passing-parameters-to-a-stored-procedure"></a>저장 프로시저에 매개 변수 전달
 
 형식화된 매개 변수를 저장 프로시저에 전달하려면 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스의 \<Type> 메서드 중 하나를 사용하여 인덱스 또는 이름으로 매개 변수를 설정합니다. 다음 예제에서는 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 메서드를 사용하여 저장 프로시저 호출을 설정한 다음, [setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) 메서드로 호출에 필요한 매개 변수를 설정한 후 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 메서드를 호출합니다.  
   
-[!code[JDBC#UsingBasicDataTypes5](../../connect/jdbc/codesnippet/Java/using-basic-data-types_5.java)]  
+[!code[JDBC#UsingBasicDataTypes5](codesnippet/Java/using-basic-data-types_5.java)]  
   
 > [!NOTE]  
 > 이 예제에서는 저장 프로시저 실행 결과가 들어 있는 결과 집합을 반환합니다.
 
-저장 프로시저 및 입력 매개 변수와 함께 JDBC 드라이버를 사용하는 방법은 [입력 매개 변수가 있는 저장 프로시저 사용](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)을 참조하십시오.  
+저장 프로시저 및 입력 매개 변수와 함께 JDBC 드라이버를 사용하는 방법은 [입력 매개 변수가 있는 저장 프로시저 사용](using-a-stored-procedure-with-input-parameters.md)을 참조하십시오.  
 
 ## <a name="retrieving-parameters-from-a-stored-procedure"></a>저장 프로시저에서 매개 변수 검색
 

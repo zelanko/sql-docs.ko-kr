@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1fa9a2700bd2f6a9ce2b074b1633182fc30c9aa7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211412"
 ---
 # <a name="disable-or-enable-a-job"></a>Disable or Enable a Job
@@ -31,32 +31,30 @@ ms.locfileid: "68211412"
   
      [보안](#Security)  
   
--   **작업을 사용 하거나 사용 하지 않도록 설정 하려면:**  
+-   **작업을 사용하지 않거나 사용하도록 설정하려면:**  
   
      [SQL Server Management Studio](#SSMS)  
   
      [Transact-SQL](#TSQL)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
  자세한 내용은 [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)을 참조하세요.  
   
-##  <a name="SSMS"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-disable-or-enable-a-job"></a>작업을 사용하지 않거나 사용하도록 설정하려면  
   
 1.  **개체 탐색기**에서 인스턴스에 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]연결한 다음 해당 인스턴스를 확장 합니다.  
   
-2.  
-  **SQL Server 에이전트**를 확장합니다.  
+2.  **SQL Server 에이전트**를 확장합니다.  
   
-3.  
-  **작업**을 확장한 다음 사용하지 않거나 사용하도록 설정할 작업을 마우스 오른쪽 단추로 클릭합니다.  
+3.  **작업**을 확장한 다음 사용하지 않거나 사용하도록 설정할 작업을 마우스 오른쪽 단추로 클릭합니다.  
   
 4.  작업을 사용하지 않도록 설정하려면 **사용 안 함**을 클릭합니다. 작업을 사용하도록 설정하려면 **사용**을 클릭합니다.  
   
-##  <a name="TSQL"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Transact-SQL 사용  
   
 #### <a name="to-disable-or-enable-a-job"></a>작업을 사용하지 않거나 사용하도록 설정하려면  
   

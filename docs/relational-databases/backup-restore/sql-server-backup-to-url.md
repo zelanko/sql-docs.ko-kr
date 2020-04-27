@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8679d1e430ff2755aac32721ff40184cbe0a3c6a
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 8263000b7a6fb166657e48777cc0d8c4c007ddd2
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529088"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087373"
 ---
 # <a name="sql-server-backup-to-url"></a>URL에 대한 SQL Server 백업
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ Blob Storage에 대용량 데이터베이스를 백업하는 경우에는 [관�
 
 - 서버에서 프록시 서버를 통해 Azure에 액세스하는 경우 추적 플래그 1819를 사용하고 다음 방법 중 하나를 통해 WinHTTP 프록시 구성을 설정해야 합니다.
    - Windows XP 또는 Windows Server 2003 이전 버전의 [proxycfg.exe](/windows/win32/winhttp/proxycfg-exe--a-proxy-configuration-tool) 유틸리티. 
-   - Windows Vista 및 Windows Server 2008 이상 버전의 [netsh.exe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131) 유틸리티. 
+   - Windows Vista 및 Windows Server 2008 이상 버전의 [netsh.exe](/windows/win32/winsock/netsh-exe) 유틸리티. 
   
 ## <a name="supported-arguments--statements"></a>지원되는 인수 및 문
 

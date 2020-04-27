@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b2539995f50e31e7342a4cd27fe7277a103d041f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211737"
 ---
 # <a name="about-change-data-capture-sql-server"></a>변경 데이터 캡처 정보(SQL Server)
@@ -50,8 +50,7 @@ ms.locfileid: "68211737"
   
  변경 테이블에 보관되어 있는 데이터는 주기적이며 체계적으로 정리하지 않으면 관리할 수 없을 정도로 커집니다. 변경 데이터 캡처 정리 프로세스는 보존을 기반으로 하는 정리 정책을 적용합니다. 먼저 이 프로세스는 시간 제한에 따라 유효성 간격의 하위 엔드포인트로 이동한 다음 만료된 변경 테이블 항목을 제거합니다. 기본적으로 3일 분량의 데이터가 보존됩니다.  
   
- 높은 끝점에서 캡처 프로세스가 각각의 새 변경 데이터 일괄 처리를 커밋하면 변경 테이블 항목을 포함하는 각 트랜잭션에 대해 새 항목이 `cdc.lsn_time_mapping`에 추가됩니다. 매핑 테이블 내에서 커밋 LSN(로그 시퀀스 번호)과 트랜잭션 커밋 시간(각각 start_lsn 열 및 tran_end_time 열)은 모두 보존됩니다. 
-  `cdc.lsn_time_mapping`에 있는 최대 LSN 값은 데이터베이스 유효성 기간의 상위 워터마크를 나타냅니다. 이 값의 해당 커밋 시간은 보존 기반 정리에서 새 하위 워터마크를 계산하는 기반으로 사용됩니다.  
+ 높은 끝점에서 캡처 프로세스가 각각의 새 변경 데이터 일괄 처리를 커밋하면 변경 테이블 항목을 포함하는 각 트랜잭션에 대해 새 항목이 `cdc.lsn_time_mapping`에 추가됩니다. 매핑 테이블 내에서 커밋 LSN(로그 시퀀스 번호)과 트랜잭션 커밋 시간(각각 start_lsn 열 및 tran_end_time 열)은 모두 보존됩니다. `cdc.lsn_time_mapping`에 있는 최대 LSN 값은 데이터베이스 유효성 기간의 상위 워터마크를 나타냅니다. 이 값의 해당 커밋 시간은 보존 기반 정리에서 새 하위 워터마크를 계산하는 기반으로 사용됩니다.  
   
  캡처 프로세스에서 트랜잭션 로그의 변경 데이터를 추출하기 때문에 변경 내용이 원본 테이블에 커밋되는 시간과 변경 내용이 관련 변경 테이블 내에 나타나는 시간 사이에는 기본적으로 대기 시간이 있게 됩니다. 이러한 대기 시간은 일반적으로 짧지만, 캡처 프로세스에서 관련 로그 항목을 처리할 때까지 변경 데이터를 사용할 수 없다는 점을 알아두는 것이 중요합니다.  
   
@@ -108,9 +107,9 @@ ms.locfileid: "68211737"
  NETWORK SERVICE 계정에서 데이터베이스 엔진 서비스 또는 SQL Server 에이전트 서비스를 실행 중인 경우 변경 데이터 캡처가 제대로 작동하지 않습니다. 이로 인해 오류 22832가 발생할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 변경 내용 추적&#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)   
- [변경 데이터 캡처 설정 및 해제&#40;SQL Server&#41;](../track-changes/enable-and-disable-change-data-capture-sql-server.md)   
- [변경 데이터 작업&#40;SQL Server&#41;](../track-changes/work-with-change-data-sql-server.md)   
+ [SQL Server&#41;&#40;데이터 변경 내용 추적](../track-changes/track-data-changes-sql-server.md)   
+ [변경 데이터 캡처를 사용 하거나 사용 하지 않도록 설정 &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-data-capture-sql-server.md)   
+ [변경 데이터 &#40;SQL Server&#41;사용](../track-changes/work-with-change-data-sql-server.md)   
  [변경 데이터 캡처 관리 및 모니터링&#40;SQL Server&#41;](../track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
   

@@ -12,12 +12,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 2e0ed6f2976f0b0f0b93f91f70f82ba30822c87c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5054a00901251bc9b947e7c147619b785f52ae9d
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633881"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728458"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows 기반 Microsoft ODBC Driver for SQL Server 릴리스 정보
 
@@ -256,8 +256,8 @@ x86 드라이버의 경우: [중국어(간체)](https://go.microsoft.com/fwlink/
 
 | 추가된 기능 | 세부 정보 |
 | :------------ | :------ |
-| [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용 ODBC 드라이버 13.1에 [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) 및 [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md)에 대한 지원을 추가합니다. | 해당 추가된 지원은 Microsoft SQL Server 2016 또는 이후 버전에 연결할 때 사용할 수 있습니다. |
-| Always Encrypted 및 Azure Active Directory에 대한 지원에 해당하는 연결 풀링 키워드 및 특성이 있습니다. | 해당 키워드 및 특성은 [ODBC Driver for SQL Server의 드라이버 인식 연결 풀링](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)에서 설명합니다. |
+| [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용 ODBC 드라이버 13.1에 [Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md) 및 [Azure Active Directory](../using-azure-active-directory.md)에 대한 지원을 추가합니다. | 해당 추가된 지원은 Microsoft SQL Server 2016 또는 이후 버전에 연결할 때 사용할 수 있습니다. |
+| Always Encrypted 및 Azure Active Directory에 대한 지원에 해당하는 연결 풀링 키워드 및 특성이 있습니다. | 해당 키워드 및 특성은 [ODBC Driver for SQL Server의 드라이버 인식 연결 풀링](driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)에서 설명합니다. |
 | &nbsp; | &nbsp; |
 
 ## <a name="13"></a>13

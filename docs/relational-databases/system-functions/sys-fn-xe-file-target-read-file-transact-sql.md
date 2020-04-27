@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 126b05adab3a07099f6c9110e18e54910f5b2f25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "73982987"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file(Transact-SQL)
@@ -47,7 +47,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 ```  
   
 ## <a name="arguments"></a>인수  
- *경로*  
+ *path*  
  읽을 파일 파일의 경로입니다. *경로* 에는 와일드 카드를 포함할 수 있으며 파일 이름을 포함할 수 있습니다. *경로* 는 **nvarchar (260)** 입니다. 기본값은 없습니다. Azure SQL Database 컨텍스트에서이 값은 Azure Storage 파일에 대 한 HTTP URL입니다.
   
  *mdpath*  
@@ -67,7 +67,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |module_guid|**uniqueidentifier**|이벤트 모듈 GUID입니다. Null을 허용하지 않습니다.|  
 |package_guid|**uniqueidentifier**|이벤트 패키지 GUID입니다. Null을 허용하지 않습니다.|  
@@ -75,7 +75,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |event_data|**nvarchar(max)**|XML 형식의 이벤트 내용입니다. Null을 허용하지 않습니다.|  
 |file_name|**nvarchar(260)**|이벤트가 포함된 파일의 이름입니다. Null을 허용하지 않습니다.|  
 |file_offset|**bigint**|이벤트가 포함된 파일에 있는 블록의 오프셋입니다. Null을 허용하지 않습니다.|  
-|timestamp_utc|**datetime2**|**적용**대상: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /><br />이벤트의 날짜 및 시간 (UTC 표준 시간대)입니다. Null을 허용하지 않습니다.|  
+|timestamp_utc|**datetime2**|**적용 대상**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /><br />이벤트의 날짜 및 시간 (UTC 표준 시간대)입니다. Null을 허용하지 않습니다.|  
 
   
 ## <a name="remarks"></a>설명  
@@ -95,7 +95,7 @@ SELECT * FROM sys.fn_xe_file_target_read_file('C:\traces\*.xel', 'C:\traces\meta
   
 ## <a name="see-also"></a>참고 항목  
  [확장 이벤트 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
- [확장 이벤트 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;확장 이벤트 카탈로그 뷰](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [확장 이벤트](../../relational-databases/extended-events/extended-events.md)  
   
   

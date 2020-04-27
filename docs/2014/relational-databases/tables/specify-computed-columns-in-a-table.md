@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca62d8d45ab5a116ab657646abf2393c69e73c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211804"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>테이블에서 계산 열 지정
@@ -36,22 +36,22 @@ ms.locfileid: "68211804"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Limitations"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Limitations"></a> 제한 사항  
   
 -   계산 열은 DEFAULT 또는 FOREIGN KEY 제약 조건 정의로 사용하거나 NOT NULL 제약 조건 정의와 함께 사용할 수 없습니다. 그러나 계산 열 값이 명확한 식에 의해 정의되고 결과의 데이터 형식이 인덱스 열에 허용되는 경우에는 계산 열을 인덱스의 키 열이나 PRIMARY KEY 또는 UNIQUE 제약 조건의 일부로 사용할 수 있습니다. 예를 들어 테이블에 a와 b라는 정수 열이 있을 때 계산 열 a + b에는 인덱스를 작성할 수 있지만 계산 열 a+DATEPART(dd, GETDATE())는 다음 호출 시 값이 바뀌므로 인덱스를 작성할 수 없습니다.  
   
 -   계산 열은 INSERT 또는 UPDATE 문의 대상이 될 수 없습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-###  <a name="NewColumn"></a> 새 계산 열을 추가하려면  
+###  <a name="to-add-a-new-computed-column"></a><a name="NewColumn"></a> 새 계산 열을 추가하려면  
   
 1.  **개체 탐색기**에서 새 계산 열을 추가할 테이블을 확장합니다. **열** 을 마우스 오른쪽 단추로 클릭하고 **새 열**을 선택합니다.  
   
@@ -62,11 +62,11 @@ ms.locfileid: "68211804"
 4.  **(수식)** 자식 속성에서 오른쪽에 있는 표 형태 셀에 현재 열의 식을 입력합니다. 예를 들어 `SalesTotal` 열에 입력한 수식이 `SubTotal+TaxAmt+Freight`일 경우 이 수식은 테이블의 각 행에 대해 이 열에 값을 추가합니다.  
   
     > [!IMPORTANT]  
-    >  수식으로 데이터 형식이 다른 두 식을 결합할 경우 데이터 형식 우선 순위 규칙에 따라 우선 순위가 낮은 데이터 형식이 우선 순위가 높은 데이터 형식으로 변환됩니다. 이 암시적 변환이 지원되지 않으면 "`Error validating the formula for column column_name.`" 오류가 반환됩니다. CAST 또는 CONVERT 함수를 사용하여 데이터 형식 충돌을 해결합니다. 예를 들어 `nvarchar` 형식 열을 `int` 형식 열과 결합할 경우 `nvarchar` 수식에 표시된 대로 정수 형식을 `('Prod'+CONVERT(nvarchar(23),ProductID))`으로 변환해야 합니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)를 참조하세요.  
+    >  수식으로 데이터 형식이 다른 두 식을 결합할 경우 데이터 형식 우선 순위 규칙에 따라 우선 순위가 낮은 데이터 형식이 우선 순위가 높은 데이터 형식으로 변환됩니다. 이 암시적 변환이 지원되지 않으면 "`Error validating the formula for column column_name.`" 오류가 반환됩니다. CAST 또는 CONVERT 함수를 사용하여 데이터 형식 충돌을 해결합니다. 예를 들어 `nvarchar` 형식 열을 `int` 형식 열과 결합할 경우 `('Prod'+CONVERT(nvarchar(23),ProductID))` 수식에 표시된 대로 정수 형식을 `nvarchar`으로 변환해야 합니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)를 참조하세요.  
   
 5.  **지속형** 자식 속성 드롭다운에서 **예** 또는 **아니요** 를 선택하여 데이터를 지속할지 여부를 지정합니다.  
   
-6.  **파일** 메뉴에서 **테이블 이름**_저장_을 클릭합니다.  
+6.  **파일** 메뉴에서 ‘테이블 이름’ **저장**을 클릭합니다.__  
   
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>기존 열에 계산 열 정의를 추가하려면  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68211804"
   
 3.  새 열을 추가하고 이전 절차에 따라 새 계산 열을 추가하여 계산 열 수식을 지정합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-add-a-computed-column-when-creating-a-table"></a>테이블을 만들 때 계산 열을 추가하려면  
   
@@ -84,7 +84,7 @@ ms.locfileid: "68211804"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사 하 여 쿼리 창에 붙여 넣고 **실행**을 클릭 합니다. 이 예에서는 `QtyAvailable` 열의 값을 `UnitPrice` 열의 값으로 곱하는 계산 열을 포함하는 테이블을 만듭니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣은 후 **실행**을 클릭합니다. 이 예에서는 `QtyAvailable` 열의 값을 `UnitPrice` 열의 값으로 곱하는 계산 열을 포함하는 테이블을 만듭니다.  
   
     ```  
     CREATE TABLE dbo.Products   
@@ -111,7 +111,7 @@ ms.locfileid: "68211804"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사 하 여 쿼리 창에 붙여 넣고 **실행**을 클릭 합니다. 다음 예에서는 이전 예에서 만든 테이블에 새 열을 추가합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣은 후 **실행**을 클릭합니다. 다음 예에서는 이전 예에서 만든 테이블에 새 열을 추가합니다.  
   
     ```  
     ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.35);  
@@ -124,7 +124,7 @@ ms.locfileid: "68211804"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  기존 열을 계산 열로 변경하려면 계산 열을 삭제한 후 다시 만들어야 합니다. 다음 예를 복사 하 여 쿼리 창에 붙여 넣고 **실행**을 클릭 합니다. 다음 예에서는 이전 예에서 추가한 열을 수정합니다.  
+3.  기존 열을 계산 열로 변경하려면 계산 열을 삭제한 후 다시 만들어야 합니다. 다음 예를 복사하여 쿼리 창에 붙여 넣은 후 **실행**을 클릭합니다. 다음 예에서는 이전 예에서 추가한 열을 수정합니다.  
   
     ```  
     ALTER TABLE dbo.Products DROP COLUMN RetailValue;  
@@ -133,6 +133,6 @@ ms.locfileid: "68211804"
   
     ```  
   
-     자세한 내용은 [ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)을 참조 하세요.  
+     자세한 내용은 [ALTER TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)을 참조하세요.  
   
 ###  <a name="TsqlExample"></a>  

@@ -16,10 +16,10 @@ ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fb74cc0887d68ea01fabe7f6168c0d23275d8f4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68769156"
 ---
 # <a name="sp_addmergepushsubscription_agent-transact-sql"></a>sp_addmergepushsubscription_agent(Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68769156"
   밀어넣기 구독의 동기화를 예약하는 데 사용된 새 에이전트 작업을 병합 게시에 추가합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
 > [!IMPORTANT]  
->  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용 &#40;SQL Server 구성 관리자&#41;을 ](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)참조 하세요.  
+>  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -106,7 +106,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |**x**|매월|  
 |**32**|매월 상대적|  
 |**64**|자동 시작|  
-|**128**|Recurring|  
+|**128**|되풀이|  
 |NULL(기본값)||  
   
 > [!NOTE]  
@@ -122,10 +122,10 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |**4**|수요일|  
 |**5**|목요일|  
 |**6**|금요일|  
-|**일**|토요일|  
+|**7**|토요일|  
 |**20cm(8**|일|  
-|**되었는지**|평일|  
-|**5-10**|주말|  
+|**9**|평일|  
+|**10**|주말|  
 |NULL(기본값)||  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`병합 에이전트 날짜입니다. 이 매개 변수는 *frequency_type* 이 **32** (매월 상대적)로 설정 된 경우에 사용 됩니다. *frequency_relative_interval* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
@@ -133,7 +133,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|처음|  
-|**2**|Second|  
+|**2**|초|  
 |**4**|셋째|  
 |**20cm(8**|넷째|  
 |**x**|마지막|  
@@ -146,8 +146,8 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|Second|  
-|**4**|분|  
+|**2**|초|  
+|**4**|Minute|  
 |**20cm(8**|Hour|  
 |NULL(기본값)||  
   
@@ -176,7 +176,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_addmergepushsubscription_agent**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
+ [밀어넣기 구독 만들기](../../relational-databases/replication/create-a-push-subscription.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Transact-sql&#41;sp_addmergesubscription &#40;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
  [Transact-sql&#41;sp_changemergesubscription &#40;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   

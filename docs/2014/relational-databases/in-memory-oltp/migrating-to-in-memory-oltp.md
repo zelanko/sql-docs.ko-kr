@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89fc6a74486cad96be0baee374721e06520acfcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015306"
 ---
 # <a name="migrating-to-in-memory-oltp"></a>메모리 내 OLTP로 마이그레이션
@@ -44,7 +44,7 @@ ms.locfileid: "63015306"
   
 -   [메모리 액세스에 최적화된 테이블에서 IDENTITY 구현](implementing-identity-in-a-memory-optimized-table.md)  
   
- 마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 작업 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)을 참조하세요.  
+ 마이그레이션 방법에 대 한 자세한 내용은 [메모리 내 OLTP-일반적인 작업 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP는 메모리 내 최적화를 &#40;&#41;](in-memory-oltp-in-memory-optimization.md)   

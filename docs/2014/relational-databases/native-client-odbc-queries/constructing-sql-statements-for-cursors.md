@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3dc86f27ab9e111c5d93c91de65c51da9008ba33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207084"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>쿼리에 대한 SQL 문 생성
@@ -55,18 +55,16 @@ ms.locfileid: "68207084"
   
      둘 이상의 SELECT 문이 포함된 저장 프로시저를 실행하는 SQL 문. 여기에는 매개 변수나 변수를 채우는 SELECT 문도 포함됩니다.  
   
--   키워드  
+-   키워드가  
   
      FOR BROWSE 또는 INTO 키워드를 포함하는 SQL 문  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이러한 조건과 일치하는 SQL 문을 서버 커서를 사용하여 실행하면 서버 커서가 암시적으로 기본 결과 집합으로 변환됩니다. **Sqlexecdirect** 또는 **sqlexecute** 가 SQL_SUCCESS_WITH_INFO 반환 된 후에는 커서 특성이 기본 설정으로 다시 설정 됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이러한 조건과 일치하는 SQL 문을 서버 커서를 사용하여 실행하면 서버 커서가 암시적으로 기본 결과 집합으로 변환됩니다. **Sqlexecdirect** 또는 **sqlexecute** 가 SQL_SUCCESS_WITH_INFO 반환 된 후에는 커서 특성이 기본 설정으로 다시 설정 됩니다.  
   
  위의 범주에 맞지 않는 SQL 문은 모든 문 특성 설정을 사용하여 실행할 수 있으며, 기본 결과 집합이나 서버 커서 중 무엇을 사용하든 동일하게 작동합니다.  
   
 ## <a name="errors"></a>오류  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이상에서 여러 결과 집합을 반환하는 문을 실행하려고 하면 SQL_SUCCESS_WITH INFO 및 다음 메시지가 생성됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이상에서 여러 결과 집합을 반환하는 문을 실행하려고 하면 SQL_SUCCESS_WITH INFO 및 다음 메시지가 생성됩니다.  
   
 ```  
 SqlState: 01S02"  

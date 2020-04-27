@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6f6efdfac89014116957990ef2db21cf52e76a4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046035"
 ---
 # <a name="reporting-services-soapexception-class"></a>Reporting Services SoapException 클래스
@@ -27,16 +27,15 @@ ms.locfileid: "63046035"
   
  다음 표는 **SoapException** 클래스의 공용 속성을 나열합니다.  
   
-|공용 속성|Description|  
+|공용 속성|설명|  
 |---------------------|-----------------|  
 |**액**|예외를 발생시킨 코드입니다. 값은 웹 서비스 메서드에 대한 URL입니다.|  
 |**세부 정보**|애플리케이션별 오류 정보입니다. 값은 보고서 서버에서 설정되며 XML 형식입니다. 자세한 내용은 참조 [Detail 속성](detail-property.md) 및 [Detail 속성을 사용하여 특정 오류 처리](../best-practices/using-the-detail-property-to-handle-specific-errors.md)를 참조하세요.|  
-|**HelpLink**|오류와 연관된 도움말 파일에 대한 URL 또는 URN입니다. 일반적으로 웹 서비스에서 설정되는 이 값은 URL을 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 도움말 및 지원으로 설정합니다. 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 발생하는 오류와 관련하여 여러 도움말 링크를 지원하므로 보고서 서버에서는 도움말 링크 정보를 **Detail** 속성의 일부로 설정합니다. 자세한 내용은 [HelpLink 요소](helplink-element.md)를 참조하세요.|  
+|**HelpLink**|오류와 연관된 도움말 파일에 대한 URL 또는 URN입니다. 일반적으로 웹 서비스에서 설정되는 이 값은 URL을 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 도움말 및 지원으로 설정합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 발생하는 오류와 관련하여 여러 도움말 링크를 지원하므로 보고서 서버에서는 도움말 링크 정보를 **Detail** 속성의 일부로 설정합니다. 자세한 내용은 [HelpLink 요소](helplink-element.md)를 참조하세요.|  
 |**메시지**|오류를 설명하는 지역화된 메시지입니다. 이 텍스트는 애플리케이션 UI로 나타날 수 있습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Reporting Services의 예외 처리 소개](../introducing-exception-handling-in-reporting-services.md)   
+ [Reporting Services에서 예외 처리 소개](../introducing-exception-handling-in-reporting-services.md)   
  [SoapException 오류 테이블](soapexception-errors-table.md)  
   
   

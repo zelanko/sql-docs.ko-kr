@@ -11,10 +11,10 @@ ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2e204b5021cb2928988331c73750821225a4192d
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81728437"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>마스터 데이터 관리자 웹 서비스에 대한 프록시 클래스 만들기
@@ -28,10 +28,10 @@ ms.locfileid: "81728437"
   
 1.  텍스트 편집기에서 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web.config 파일을 엽니다. 이 파일은 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 설치 경로의 WebApplication 폴더에 있습니다.  
   
-2.  **\<serviceBehaviors>** 아래에서 **mdsWsHttpBehavior** 섹션을 찾습니다. ** \<서비스메타데이터>** 요소의 경우 **httpGetEnabled를** **true로**설정합니다.  
+2.  **\<serviceBehaviors>** 아래에서 **mdsWsHttpBehavior** 섹션을 찾습니다. ServiceMetadata>요소에 대해 **httpgetenabled** 를 **true**로 설정 합니다. ** \<**  
   
     > [!NOTE]  
-    >  이전에 SSL(보안 소켓 계층)으로 알려진 TLS(전송 계층 보안)를 통해 웹 서비스를 사용하도록 설정하려면 web.config 파일의 **mdsWsHttpBehavior** 섹션에서 **httpsGetEnabled를** **true로** 설정합니다. 또한 TLS에 대해 구성되도록 **mdsWsHTTPBinding을** 변경하고 TLS가 아닌 섹션을 주석으로 주석을 달아야 합니다.  
+    >  이전에 SSL(Secure Sockets Layer) (SSL)로 알려진 TLS (전송 계층 보안)를 통해 웹 서비스를 사용 하도록 설정 하려면 web.config 파일의 **mdsWsHttpBehavior** 섹션에서 **httpsGetEnabled** 를 **true** 로 설정 합니다. 또한 TLS에 대해 구성 되도록 **mdsWsHTTPBinding** 를 변경 하 고 비 tls 섹션을 주석으로 처리 해야 합니다.  
   
 3.  파일의 변경 내용을 저장합니다.  
   
@@ -39,10 +39,10 @@ ms.locfileid: "81728437"
     시작하는 페이지가 표시됩니다.  
   
 ## <a name="creating-proxy-classes-by-using-visual-studio"></a>Visual Studio를 사용하여 프록시 클래스 만들기  
- Visual Studio 2010이 설치된 경우 프로젝트에 **서비스 참조**를 추가하면 가장 간단하게 프록시 클래스를 생성할 수 있습니다. [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션의 URL에 /service/service.svc를 추가하면 서비스 참조의 주소가 됩니다. 예: `https://yourserver/MDS/service/service.svc` 자세한 내용은 [방법: 서비스 참조 추가, 업데이트 또는 제거](https://go.microsoft.com/fwlink/?LinkId=221167)를 참조하십시오.  
+ Visual Studio 2010이 설치된 경우 프로젝트에 **서비스 참조**를 추가하면 가장 간단하게 프록시 클래스를 생성할 수 있습니다. [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션의 URL에 /service/service.svc를 추가하면 서비스 참조의 주소가 됩니다. 예를 들면 `https://yourserver/MDS/service/service.svc`와 같습니다. 자세한 내용은 [방법: 서비스 참조 추가, 업데이트 또는 제거](https://go.microsoft.com/fwlink/?LinkId=221167)를 참조하십시오.  
   
 ## <a name="creating-proxy-classes-by-using-svcutilexe"></a>Svcutil.exe를 사용하여 프록시 클래스 만들기  
- 컴퓨터에 Svcutil.exe를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 설치하려면 Windows SDK가 설치되어 있어야 합니다. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]를 사용하는 경우에는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 명령 프롬프트를 사용하여 명령을 실행해야 합니다. 자세한 내용은 [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027) 및 [서비스 메타데이터에서 WCF 클라이언트 생성](https://go.microsoft.com/fwlink/?LinkId=164821)을 참조하십시오.  
+ 컴퓨터에 svcutil.exe를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 설치 하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 또는 Windows SDK 설치 되어 있어야 합니다. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]를 사용하는 경우에는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 명령 프롬프트를 사용하여 명령을 실행해야 합니다. 자세한 내용은 [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027) 및 [서비스 메타데이터에서 WCF 클라이언트 생성](https://go.microsoft.com/fwlink/?LinkId=164821)을 참조하십시오.  
   
  Svcutil.exe를 사용하여 C# 프록시 클래스 집합을 만들려면 다음과 같은 명령을 사용하십시오.  
   

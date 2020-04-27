@@ -1,6 +1,6 @@
 ---
 title: Reporting Services 보고서 서버(기본 모드) | Microsoft Docs
-ms.date: 06/06/2019
+ms.date: 04/21/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4a0e3f521549bb309fcbd69fc7905746be09d84b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4d4a78281f9e42921f31f8d02c5f167dd13d06d5
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66826899"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82086842"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services 보고서 서버(기본 모드)
   기본 모드에 대해 구성된 보고서 서버는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]구성 요소를 통해 모든 처리 및 관리 기능을 배타적으로 제공하는 애플리케이션 서버로 실행됩니다.  
@@ -50,9 +50,13 @@ ms.locfileid: "66826899"
 -   보고서 서버 컴퓨터에 대한 로컬 관리자 그룹의 멤버 자격이 있어야 합니다. 원격 컴퓨터에서 실행되는 서버 기능을 함께 설치할 경우 원격 연결을 통해 서버를 관리하려면 해당 컴퓨터에 대한 관리자 권한이 있어야 합니다.  
   
 -   데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 데이터베이스 관리자 권한이 있어야 합니다.  
-  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
 -   도메인 컨트롤러에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치하려면 도메인 관리자여야 합니다.  
-  
+
+::: moniker-end
+
 ##  <a name="managing-content"></a><a name="bkmk_managecontent"></a> 내용 관리  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 내용 관리는 보고서, 모델, 폴더, 리소스 및 공유 데이터 원본의 관리를 의미합니다. 이러한 모든 항목은 속성 및 보안 설정을 통해 개별적으로 관리할 수 있습니다. 모든 항목을 보고서 서버 폴더 네임스페이스의 다른 위치로 이동할 수 있습니다. 항목을 효과적으로 관리하려면 내용 관리자가 수행하는 태스크에 대한 지식이 필요합니다.  
   

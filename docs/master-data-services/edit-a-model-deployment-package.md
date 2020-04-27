@@ -11,10 +11,10 @@ ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 12cacedc8f195a965b7632760976008ba4b422b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728227"
 ---
 # <a name="edit-a-model-deployment-package"></a>모델 배포 패키지 편집
@@ -30,7 +30,7 @@ ms.locfileid: "73728227"
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자 &#40;MDS(Master Data Services)&#41;](../master-data-services/administrators-master-data-services.md)를 참조 하세요.  
   
 -   편집할 모델 패키지가 있어야 합니다. 자세한 내용은 [모델 배포&#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md) 및 [마법사를 사용하여 모델 배포 패키지 만들기](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md) 또는 [MDSModelDeploy를 사용하여 모델 배포 패키지 만들기](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)를 참조하세요.  
   
@@ -46,8 +46,7 @@ ms.locfileid: "73728227"
   
 5.  배포할 선택 항목의 목록을 확인합니다. 변경하려면 **뒤로** 를 클릭한 다음 4단계를 반복합니다.  
   
-6.  
-  **찾아보기**를 클릭하여 부분 패키지를 저장할 폴더로 이동한 다음 부분 패키지의 파일 이름(확장명은 .pkg)을 입력합니다. **저장**을 클릭합니다.  
+6.  **찾아보기**를 클릭하여 부분 패키지를 저장할 폴더로 이동한 다음 부분 패키지의 파일 이름(확장명은 .pkg)을 입력합니다. **저장**을 클릭합니다.  
   
 7.  **Finish**를 클릭합니다.  
   

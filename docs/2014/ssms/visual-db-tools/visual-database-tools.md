@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 085afa47a00875f5311e6996502e9030b6070920
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211228"
 ---
 # <a name="visual-database-tools"></a>Visual Database Tools
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에는 쿼리, 테이블 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 다이어그램 데이터베이스 작성을 위한 비주얼 디자이너가 포함 되어 있습니다.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리, 테이블 및 다이어그램 데이터베이스 작성을 위한 비주얼 디자이너가 포함되어 있습니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
  다음 태스크를 사용하여 Visual Database Tools를 시작합니다.  

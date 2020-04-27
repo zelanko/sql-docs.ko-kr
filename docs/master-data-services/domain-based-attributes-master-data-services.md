@@ -15,17 +15,16 @@ ms.assetid: df6f33ff-97f6-466c-af74-9780b2247473
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 966112716bfb484a9615c973ee397de04787862c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728265"
 ---
 # <a name="domain-based-attributes-master-data-services"></a>도메인 기반 특성(Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 도메인 기반 특성은 다른 엔터티의 멤버로 값이 채워지는 특성입니다. 도메인 기반 특성은 제한된 목록으로 생각할 수 있습니다. 도메인 기반 특성을 사용하면 사용자가 유효하지 않은 특성 값을 입력하지 못하도록 할 수 있습니다. 특성 값을 선택하려면 사용자가 목록에서 선택해야 합니다.  
   
 ## <a name="domain-based-attribute-example"></a>도메인 기반 특성 예  
@@ -45,15 +44,15 @@ ms.locfileid: "73728265"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|기존 엔터티를 원본으로 이용하여 새 도메인 기반 특성을 만듭니다.|[도메인 기반 특성 &#40;MDS(Master Data Services)를 만듭니다&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
-|새 엔터티를 만듭니다.|[엔터티 &#40;MDS(Master Data Services)를 만듭니다&#41;](../master-data-services/create-an-entity-master-data-services.md)|  
+|기존 엔터티를 원본으로 이용하여 새 도메인 기반 특성을 만듭니다.|[도메인 기반 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
+|새 엔터티를 만듭니다.|[엔터티 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   
--   [파생 계층 &#40;MDS(Master Data Services)&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
+-   [파생 계층&#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
--   [특성 &#40;MDS(Master Data Services)&#41;](../master-data-services/attributes-master-data-services.md)  
+-   [특성&#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
--   [엔터티 &#40;MDS(Master Data Services)&#41;](../master-data-services/entities-master-data-services.md)  
+-   [엔터티&#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
   

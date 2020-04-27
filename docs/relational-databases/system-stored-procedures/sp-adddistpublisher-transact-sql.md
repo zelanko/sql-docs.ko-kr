@@ -16,10 +16,10 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2190e31245cde19eca4c5a47f21ac48e12f57f53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68771395"
 ---
 # <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher(Transact-SQL)
@@ -53,12 +53,12 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 `[ @security_mode = ] security_mode`는 구현 된 보안 모드입니다. 이 매개 변수는 복제 에이전트가 지연 업데이트 구독 또는 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자로 게시자에 연결 하는 데만 사용 됩니다. *security_mode* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**0**|배포자의 복제 에이전트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 게시자에 연결합니다.|  
 |**1** (기본값)|배포자의 복제 에이전트는 Windows 인증을 사용하여 게시자에 연결합니다.|  
   
-`[ @login = ] 'login'`로그인입니다. *Security_mode* 가 **0**인 경우이 매개 변수는 필수입니다. *login* 은 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 복제 에이전트가 게시자에 연결할 때 사용합니다.  
+`[ @login = ] 'login'`로그인입니다. *Security_mode* 가 **0**인 경우이 매개 변수는 필수입니다. *login*은 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 복제 에이전트가 게시자에 연결할 때 사용합니다.  
   
 `[ @password = ] 'password']`암호입니다. *password* 는 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 복제 에이전트가 게시자에 연결할 때 사용합니다.  
   
@@ -81,16 +81,14 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 |값|Description|  
 |-----------|-----------------|  
-|**0** (기본값)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터.|  
-|**1**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 아닌 데이터베이스입니다.|  
+|**0** (기본값)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.|  
+|**1**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 아닌 데이터베이스입니다.|  
   
 `[ @publisher_type = ] 'publisher_type'`게시자가가 아닌 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]경우 게시자 유형을 지정 합니다. *publisher_type* 는 sysname 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|**MSSQLSERVER**<br /><br /> (기본값)|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정합니다.|  
+|**MSSQLSERVER**<br /><br /> (기본값)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정합니다.|  
 |**ORACLE**|표준 Oracle 게시자를 지정합니다.|  
 |**ORACLE GATEWAY**|Oracle Gateway 게시자를 지정합니다.|  
   
@@ -113,7 +111,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  [Transact-sql&#41;sp_changedistpublisher &#40;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [Transact-sql&#41;sp_dropdistpublisher &#40;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [Transact-sql&#41;sp_helpdistpublisher &#40;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [배포 구성](../../relational-databases/replication/configure-distribution.md)  
   
   

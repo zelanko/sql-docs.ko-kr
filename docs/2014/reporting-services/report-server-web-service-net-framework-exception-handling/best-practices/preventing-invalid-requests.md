@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dcb850ad7e99768781b225978f531ff991766924
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046080"
 ---
 # <a name="preventing-invalid-requests"></a>잘못된 요청 방지
@@ -70,7 +70,7 @@ private void PublishReport()
  요청이 보고서 서버로 전송되기 전에 방지할 수 있는 오류 유형에 대한 자세한 내용은 [SoapException 오류 테이블](../soapexception-class/soapexception-errors-table.md)을 참조하세요. try/catch 블록을 사용하여 위의 예를 개선하는 방법은 [Try 및 Catch 블록 사용](using-try-and-catch-blocks.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Reporting Services의 예외 처리 소개](../introducing-exception-handling-in-reporting-services.md)   
+ [Reporting Services에서 예외 처리 소개](../introducing-exception-handling-in-reporting-services.md)   
  [Reporting Services SoapException 클래스](../soapexception-class/reporting-services-soapexception-class.md)  
   
   

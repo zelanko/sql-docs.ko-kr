@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b890514422a6b9b16cdfe2eb5b07d796a46bd60
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174447"
 ---
 # <a name="customize-mining-models-and-structure"></a>마이닝 모델 및 구조 사용자 지정
@@ -41,10 +41,9 @@ ms.locfileid: "78174447"
  모델에서 사용할 데이터 열과 해당 데이터를 사용 및 처리하는 방법에 대한 결정은 분석 결과에 큰 영향을 줍니다. 다음 항목에서는 이러한 선택 사항을 이해하는 데 도움이 되는 정보를 제공합니다.
 
 ### <a name="using-feature-selection"></a>기능 선택 사용
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 데이터 마이닝 알고리즘에서는 대부분 *기능 선택* 이라는 프로세스를 사용하여 모델에 추가할 가장 유용한 특성만 선택합니다. 열과 특성 수를 줄이면 모델 품질 및 성능을 향상시킬 수 있습니다. 사용 가능한 기능 선택 방법은 선택한 알고리즘에 따라 달라집니다.
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 데이터 마이닝 알고리즘에서는 대부분 *기능 선택* 이라는 프로세스를 사용하여 모델에 추가할 가장 유용한 특성만 선택합니다. 열과 특성 수를 줄이면 모델 품질 및 성능을 향상시킬 수 있습니다. 사용 가능한 기능 선택 방법은 선택한 알고리즘에 따라 달라집니다.
 
- [기능 선택은 데이터 마이닝&#41;&#40;](feature-selection-data-mining.md).
+ [기능 선택&#40;데이터 마이닝&#41;](feature-selection-data-mining.md).
 
 ### <a name="changing-usage"></a>사용법 변경
  마이닝 모델에 포함할 열과 각 열의 사용 방법을 변경할 수 있습니다. 원하는 결과를 얻지 못한 경우 입력으로 사용한 열의 예제를 만들어 열을 올바르게 선택했는지, 그리고 다음을 포함하여 데이터 처리를 향상시키기 위해 수행할 수 있는 작업이 있는지 확인해야 합니다.
@@ -78,7 +77,7 @@ ms.locfileid: "78174447"
 ## <a name="changing-the-algorithm"></a>알고리즘 변경
  마이닝 구조에 추가한 새 모델은 동일한 데이터 집합을 공유하지만 다른 알고리즘(데이터에서 지원하는 경우)을 사용하거나 알고리즘의 매개 변수를 변경하여 다른 결과를 얻을 수 있습니다. 또한 모델링 플래그를 설정할 수 있습니다.
 
- 선택한 알고리즘에 따라 결과의 종류가 결정됩니다. 특정 알고리즘이 작동하는 방식에 대한 일반적인 내용이나 특정 알고리즘을 사용하는 것이 이익이 되는 비즈니스 시나리오는 [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md).
+ 선택한 알고리즘에 따라 결과의 종류가 결정됩니다. 특정 알고리즘이 작동하는 방식에 대한 일반적인 내용이나 특정 알고리즘을 사용하는 것이 이익이 되는 비즈니스 시나리오는 [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md).
 
  요구 사항 및 제한 사항에 대한 설명과 각 알고리즘에서 지원하는 사용자 지정 항목에 대한 자세한 내용은 각 알고리즘의 기술 참조 항목을 참조하십시오.
 
@@ -102,7 +101,7 @@ ms.locfileid: "78174447"
 |CLUSTER_SEED|[Microsoft 클러스터링 알고리즘 기술 참조](microsoft-clustering-algorithm-technical-reference.md)|
 |CLUSTERING_METHOD|[Microsoft 클러스터링 알고리즘 기술 참조](microsoft-clustering-algorithm-technical-reference.md)|
 |COMPLEXITY_PENALTY|[Microsoft 의사 결정 트리 알고리즘 기술 참조](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft Time Series 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|
-|FORCE_REGRESSOR|[Microsoft 의사 결정 트리 알고리즘 기술 참조](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 선형 회귀 알고리즘 기술 참조](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [데이터 마이닝&#41;&#40;모델링 플래그](modeling-flags-data-mining.md)|
+|FORCE_REGRESSOR|[Microsoft 의사 결정 트리 알고리즘 기술 참조](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 선형 회귀 알고리즘 기술 참조](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [모델링 플래그&#40;데이터 마이닝&#41;](modeling-flags-data-mining.md)|
 |FORECAST_METHOD|[Microsoft Time Series 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|
 |HIDDEN_NODE_RATIO|[Microsoft 신경망 알고리즘 기술 참조](microsoft-neural-network-algorithm-technical-reference.md)|
 |HISTORIC_MODEL_COUNT|[Microsoft Time Series 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|

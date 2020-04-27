@@ -18,10 +18,10 @@ ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 42e3cd2c0431a1d23f3d67f7f1e983421b9b1e9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72278336"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath(Transact-SQL)
@@ -48,23 +48,21 @@ ms.locfileid: "72278336"
 |값|Description|  
 |-----------|-----------------|  
 |**0**|데이터베이스 수준 디렉터리 내에서의 상대 경로를 반환합니다.<br /><br /> 기본값입니다.|  
-|**1**|
-  `\\computer_name`으로 시작하는 전체 UNC 경로를 반환합니다.|  
+|**1**|`\\computer_name`으로 시작하는 전체 UNC 경로를 반환합니다.|  
   
  *\@option*  
  경로에 있는 서버 구성 요소의 형식을 지정하는 방법을 정의하는 정수 식입니다. 옵션은 다음 값 중 하나를 사용할 수 있습니다. * \@*  
   
 |값|Description|  
 |-----------|-----------------|  
-|**0**|NetBIOS 형식으로 변환된 서버 이름을 반환합니다. 예를 들면 다음과 같습니다.<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> 이것은 기본값입니다.|  
+|**0**|NetBIOS 형식으로 변환된 서버 이름을 반환합니다. 예를 들면 다음과 같습니다.<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> 기본값입니다.|  
 |**1**|서버 이름을 변환하지 않고 반환합니다. 예를 들면 다음과 같습니다.<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
 |**2**|전체 서버 경로를 반환합니다. 예를 들면 다음과 같습니다.<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
   
 ## <a name="return-type"></a>반환 형식  
  **nvarchar(max)**  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 장애 조치(Failover) 클러스터에 클러스터된 경우 이 경로의 일부로 반환된 컴퓨터 이름은 클러스터형 인스턴스의 가상 호스트 이름입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 장애 조치(Failover) 클러스터에 클러스터된 경우 이 경로의 일부로 반환된 컴퓨터 이름은 클러스터형 인스턴스의 가상 호스트 이름입니다.  
   
  데이터베이스가 Always On 가용성 그룹에 속하는 경우 **FileTableRootPath** 함수는 컴퓨터 이름 대신 vnn (가상 네트워크 이름)을 반환 합니다.  
   

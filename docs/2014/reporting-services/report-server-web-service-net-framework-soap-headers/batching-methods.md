@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8b7ec19101b1abcb2e0fb825923cce7a237149dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63020139"
 ---
 # <a name="batching-methods"></a>일괄 처리 메서드
@@ -102,7 +102,7 @@ class Sample
 ## <a name="see-also"></a>참고 항목  
  <xref:ReportService2005.ReportingService2005.CancelBatch%2A>   
  <xref:ReportService2005.ReportingService2005.CreateBatch%2A>   
- [기술 참조&#40;SSRS&#41;](../technical-reference-ssrs.md)   
+ [SSRS&#41;&#40;기술 참조](../technical-reference-ssrs.md)   
  [Reporting Services SOAP 헤더 사용](using-reporting-services-soap-headers.md)  
   
   

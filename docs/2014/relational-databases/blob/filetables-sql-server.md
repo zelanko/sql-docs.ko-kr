@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2eec829c3c8909bd318a86ecf35eedb9ac0f222
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010089"
 ---
 # <a name="filetables-sql-server"></a>FileTable(SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "66010089"
   
  FileTable은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FILESTREAM 기술을 기반으로 구축된 기능입니다. FILESTREAM에 대한 자세한 내용은 [FILESTREAM&#40;SQL Server&#41;](filestream-sql-server.md)을 참조하세요.  
   
-##  <a name="Goals"></a> FileTable 기능의 이점  
+##  <a name="benefits-of-the-filetable-feature"></a><a name="Goals"></a> FileTable 기능의 이점  
  FileTable 기능의 목적은 다음과 같습니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 내에 저장된 파일 데이터에 대한 Windows API 호환성을 제공합니다. Windows API 호환성은 다음과 같습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "66010089"
   
  파일 서버에 현재 파일로 존재하는 구조화되지 않은 데이터를 스토리지하고 관리하는 데 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하려면 여러 가지 문제를 해결해야 했지만 FileTable을 사용하면 이러한 문제가 상당히 해결됩니다. 기업에서는 파일 서버의 데이터를 FileTable로 이동하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제공하는 통합된 관리 기능 및 서비스를 이용할 수 있습니다. 동시에 해당 데이터를 파일 시스템의 파일로 표시하는 기존의 Windows 애플리케이션을 위해 Windows 애플리케이션 호환성을 유지할 수 있습니다.  
     
-##  <a name="Description"></a> FileTable 정의  
+##  <a name="what-is-a-filetable"></a><a name="Description"></a> FileTable 정의  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 파일 및 디렉터리를 스토리지해야 하며 Windows API 호환성과 비트랜잭션 액세스가 필요한 애플리케이션을 위해 **FileTable**이라는 특수한 **파일 테이블**을 제공합니다. FileTable은 미리 정의된 스키마를 사용하여 파일 및 디렉터리 계층 구조 정보와 파일 특성은 물론 FILESTREAM 데이터도 저장하는 특수한 사용자 테이블입니다.  
   
  FileTable에서는 다음과 같은 기능을 제공합니다.  
@@ -82,28 +82,27 @@ ms.locfileid: "66010089"
 -   일반적인 [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스를 통해 FileTable을 쿼리하고 업데이트할 수도 있습니다. 또한 FileTable은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 도구나 백업 등의 기능과 통합되어 있습니다.  
   
   
-##  <a name="additional"></a>Filetable 사용에 대 한 추가 고려 사항  
+##  <a name="additional-considerations-for-using-filetables"></a><a name="additional"></a>Filetable 사용에 대 한 추가 고려 사항  
   
-###  <a name="DBA"></a>관리 고려 사항  
- **FILESTREAM 및 Filetable 정보**  
+###  <a name="administrative-considerations"></a><a name="DBA"></a>관리 고려 사항  
+ **FILESTREAM 및 FileTable 정보**  
   
 -   FileTable은 FILESTREAM과는 별도로 구성합니다. 따라서 비트랜잭션 액세스를 사용하도록 설정하거나 FileTable을 만들지 않고도 FILESTREAM 기능을 계속 사용할 수 있습니다.  
   
 -   FileTable을 통하지 않고 FILESTREAM 데이터에 비트랜잭션 방식으로 액세스할 수 있는 방법은 없습니다. 따라서 비트랜잭션 액세스를 사용하도록 설정해도 기존 FILESTREAM 열 및 애플리케이션의 동작에는 영향이 없습니다.  
   
- **Filetable 및 비트랜잭션 액세스 정보**  
+ **FileTable 및 비트랜잭션 액세스 정보**  
   
 -   데이터베이스 수준에서 비트랜잭션 액세스를 사용하거나 사용하지 않도록 설정할 수 있습니다.  
   
 -   데이터베이스 수준에서 비트랜잭션 액세스를 해제하거나 읽기 전용 또는 모든 읽기/쓰기 액세스를 허용하도록 설정하는 방법으로 비트랜잭션 액세스를 구성하거나 세부적으로 조정할 수 있습니다.  
   
   
-###  <a name="memory"></a>Filetable는 메모리 매핑된 파일을 지원 하지 않습니다.  
- FileTable은 메모리 매핑된 파일을 지원하지 않습니다. 메모장과 그림판이 메모리 매핑된 파일을 사용하는 애플리케이션 중 가장 일반적인 두 가지 예입니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 같은 컴퓨터에서 이러한 애플리케이션을 사용하여 FileTable에 저장된 파일을 열 수 없습니다. 하지만 원격 컴퓨터 환경에서는 메모리 매핑된 기능을 사용하지 않으므로 원격 컴퓨터에서 이러한 애플리케이션을 사용하여 FileTable에 저장된 파일을 열 수 있습니다.  
+###  <a name="filetables-do-not-support-memory-mapped-files"></a><a name="memory"></a> FileTable은 메모리 매핑된 파일을 지원하지 않음  
+ FileTable은 메모리 매핑된 파일을 지원하지 않습니다. 메모장과 그림판이 메모리 매핑된 파일을 사용하는 애플리케이션 중 가장 일반적인 두 가지 예입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 같은 컴퓨터에서 이러한 애플리케이션을 사용하여 FileTable에 저장된 파일을 열 수 없습니다. 하지만 원격 컴퓨터 환경에서는 메모리 매핑된 기능을 사용하지 않으므로 원격 컴퓨터에서 이러한 애플리케이션을 사용하여 FileTable에 저장된 파일을 열 수 있습니다.  
   
   
-##  <a name="reltasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="reltasks"></a> 관련 작업  
  [FileTable의 필수 구성 요소를 사용하도록 설정](enable-the-prerequisites-for-filetable.md)  
  FileTable을 만들고 사용하기 위한 필수 구성 요소를 사용하도록 설정하는 방법에 대해 설명합니다.  
   
@@ -126,7 +125,7 @@ ms.locfileid: "66010089"
  FileTable을 관리하는 데 사용되는 일반적인 관리 태스크에 대해 설명합니다.  
   
   
-##  <a name="relcontent"></a> 관련 내용  
+##  <a name="related-content"></a><a name="relcontent"></a> 관련 내용  
  [FileTable 스키마](filetable-schema.md)  
  FileTable의 미리 정의된 고정 스키마에 대해 설명합니다.  
   

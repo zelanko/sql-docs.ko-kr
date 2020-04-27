@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 67ed5236aad0549fa6850114280ee15d8cebcaeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892536"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>모델 &lt; &gt; 에서 고유 선택 (DMX)
@@ -30,7 +30,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
 ## <a name="arguments"></a>인수  
  *n*  
- (선택 사항) 반환할 행 수를 지정하는 정수입니다.  
+ 선택 사항입니다. 반환할 행 수를 지정하는 정수입니다.  
   
  *식 목록*  
  관련 열 식별자(모델에서 파생됨) 또는 식의 쉼표로 구분된 목록입니다.  
@@ -41,13 +41,13 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  *조건 목록*  
  열 목록에서 반환되는 값을 제한하는 조건입니다.  
   
- *식*  
- (선택 사항) 스칼라 값을 반환하는 식입니다.  
+ *expression*  
+ 선택 사항입니다. 스칼라 값을 반환하는 식입니다.  
   
 ## <a name="remarks"></a>설명  
  **SELECT DISTINCT FROM** 문은 단일 열 또는 관련 열 집합을 사용 하는 경우에만 작동 합니다. 이 절은 관련 없는 열 집합에는 적용되지 않습니다.  
   
- **SELECT DISTINCT FROM** 문을 사용 하 여 중첩 테이블 내의 열을 직접 참조할 수 있습니다. 다음은 그 예입니다.  
+ **SELECT DISTINCT FROM** 문을 사용 하 여 중첩 테이블 내의 열을 직접 참조할 수 있습니다. 예를 들어:  
   
 ```  
 <model>.<table column reference>.<column reference>  
@@ -136,6 +136,6 @@ FROM [TM Decision Tree]
 ## <a name="see-also"></a>참고 항목  
  [DMX &#40;선택&#41;](../dmx/select-dmx.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [데이터 마이닝 확장 &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

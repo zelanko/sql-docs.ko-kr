@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f5fc8fdc9b522ad79e67a7769ba2571b7a80af9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63023910"
 ---
 # <a name="mssql_eng024070"></a>MSSQL_ENG024070
@@ -49,7 +49,7 @@ ms.locfileid: "63023910"
  이 보안 그룹의 멤버가 되는 새 사용자 계정에는 복제 에이전트 작업을 실행하는 데 필요한 권한이 부여됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [오류 및 이벤트 참조&#40;복제&#41;](errors-and-events-reference-replication.md)   
+ [오류 및 이벤트 참조 &#40;복제&#41;](errors-and-events-reference-replication.md)   
  [복제의 로그인 및 암호 관리](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [SQL Server 구성 관리자](../sql-server-configuration-manager.md)  
   

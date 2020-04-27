@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc53253c93f5f52c6bbe00941eadbf14b65d5f64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206824"
 ---
 # <a name="using-cursors-odbc"></a>커서 사용(ODBC)
@@ -46,9 +46,7 @@ ms.locfileid: "68206824"
 |위치 지정 업데이트|UPDATE 또는 DELETE의 WHERE CURRENT OF 절|**SQLSetPos**|  
 |커서 닫기|닫기 *cursor_name* 할당 취소|[SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md)|  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 구현된 서버 커서는 ODBC 커서 모델의 기능을 지원합니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 서버 커서를 사용하여 ODBC API의 커서 기능을 지원합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 구현된 서버 커서는 ODBC 커서 모델의 기능을 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 서버 커서를 사용하여 ODBC API의 커서 기능을 지원합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -62,17 +60,17 @@ ms.locfileid: "68206824"
   
 -   [ODBC&#41;&#40;커서 프로그래밍 정보](programming/cursor-programming-details-odbc.md)  
   
--   [행 스크롤 및 인출](../native-client-ole-db-rowsets/fetching-rows.md)  
+-   [행 스크롤 및 페치](../native-client-ole-db-rowsets/fetching-rows.md)  
   
 -   [ODBC&#41;&#40;위치 지정 업데이트](positioned-updates-odbc.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [ODBC&#41;SQL Server Native Client &#40;](../native-client/odbc/sql-server-native-client-odbc.md)   
- [CLOSE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/close-transact-sql)   
- [커서](../../relational-databases/cursors.md)   
- [DEALLOCATE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/deallocate-transact-sql)   
- [DECLARE CURSOR&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-cursor-transact-sql)   
- [FETCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/fetch-transact-sql)   
+ [&#40;Transact-sql&#41;를 닫습니다.](/sql/t-sql/language-elements/close-transact-sql)   
+ [커서로](../../relational-databases/cursors.md)   
+ [Transact-sql&#41;&#40;할당 취소](/sql/t-sql/language-elements/deallocate-transact-sql)   
+ [Transact-sql&#41;&#40;커서를 선언 합니다.](/sql/t-sql/language-elements/declare-cursor-transact-sql)   
+ [FETCH &#40;Transact-sql&#41;](/sql/t-sql/language-elements/fetch-transact-sql)   
  [OPEN&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/open-transact-sql)  
   
   

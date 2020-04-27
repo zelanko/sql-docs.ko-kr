@@ -13,10 +13,10 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.openlocfilehash: 939ff20fd0b708e949aee41d8aa2f3f59b63a9eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75247119"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>데이터베이스 실험 도우미 개요
@@ -113,6 +113,6 @@ DEA에는 제품 환경을 개선 하는 데 사용할 수 있도록 원격 분�
 
 DEA은 [Microsoft 개인 정보 취급 방침](https://aka.ms/dea-privacy)의 적용을 받습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - 두 환경에서 작업을 비교 하는 것과 관련 된 프로세스를 설명 하는 [작업 비교 프로세스에 대 한 개요](database-experimentation-assistant-get-started.md)문서입니다.

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: adb1203276e64f21f1834fc0ce0f0b5bb12a9321
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 12abdfd169aaea9f2108d2b4776eb99cc4bd2ce7
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528337"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728386"
 ---
 # <a name="troubleshooting-connectivity"></a>연결 문제 해결
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "81528337"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하려면 JDBC 드라이버에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증과 함께 설치해야 합니다. 이 인증은 기본적으로 설치되지 않습니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 설치하거나 구성할 때 이 옵션을 반드시 포함합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [JDBC 드라이버 관련 문제 진단](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
- [JDBC 드라이버로 SQL Server에 연결](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+ [JDBC 드라이버 관련 문제 진단](diagnosing-problems-with-the-jdbc-driver.md)   
+ [JDBC 드라이버로 SQL Server에 연결](connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

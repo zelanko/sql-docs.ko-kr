@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b56bba0567a96b7bdd7b75ad191d553ffa019930
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010425"
 ---
 # <a name="access-filetables-with-transact-sql"></a>Transact-SQL을 사용하여 FileTable에 액세스
   FileTable에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] DML(데이터 조작 언어) 명령이 작동하는 방식에 대해 설명합니다.  
   
-##  <a name="BasicsInsert"></a> FileTable에 대한 INSERT 작업  
+##  <a name="insert-operations-on-filetables"></a><a name="BasicsInsert"></a> FileTable에 대한 INSERT 작업  
  FileTable에 대해 **INSERT** 작업을 수행할 때는 다음 사항을 고려해야 합니다.  
   
 -   모든 파일 특성 열에 NOT NULL 제약 조건이 있습니다. 값을 명시적으로 설정하지 않은 경우 적절한 기본값이 제공됩니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "66010425"
   
 -   애플리케이션에서는 **GetPathLocator&#40;Transact-SQL&#41;** 함수에 파일 시스템 경로를 제공하여 파일 또는 디렉터리에 대한 [path_locator](/sql/relational-databases/system-functions/getpathlocator-transact-sql)를 가져올 수 있습니다.  
   
-##  <a name="BasicsUpdate"></a> FileTable에 대한 UPDATE 작업  
+##  <a name="update-operations-on-filetables"></a><a name="BasicsUpdate"></a> FileTable에 대한 UPDATE 작업  
  FileTable에 대해 **UPDATE** 작업을 수행할 때는 다음 사항을 고려해야 합니다.  
   
 -   사용자 정의 데이터를 업데이트할 수 있습니다.  
@@ -40,14 +40,14 @@ ms.locfileid: "66010425"
   
 -   타임스탬프를 포함하여 다른 열에 영향을 주지 않고 **file_stream** 열에서 FILESTREAM 데이터를 업데이트할 수 있습니다.  
   
-##  <a name="BasicsDelete"></a> FileTable에 대한 DELETE 작업  
+##  <a name="delete-operations-on-filetables"></a><a name="BasicsDelete"></a> FileTable에 대한 DELETE 작업  
  FileTable에 대해 **DELETE** 작업을 수행할 때는 다음 사항을 고려해야 합니다.  
   
 -   행을 삭제하면 해당 파일 또는 디렉터리도 파일 시스템에서 제거됩니다.  
   
 -   행이 다른 파일 또는 디렉터리가 포함된 디렉터리에 해당하는 경우 행이 삭제되지 않습니다.  
   
-##  <a name="BasicsConstraints"></a> FileTable에 대한 DML 작업에 적용되는 제약 조건  
+##  <a name="constraints-that-are-enforced-for-dml-operations-on-filetables"></a><a name="BasicsConstraints"></a> FileTable에 대한 DML 작업에 적용되는 제약 조건  
  시스템 정의 제약 조건은 DML 동작이 파일 네임스페이스 계층의 무결성을 훼손할 수 없도록 보장합니다. 적용되는 제약 조건은 다음과 같습니다.  
   
 -   파일 또는 디렉터리의 **이름** 을 설정하거나 변경할 경우:  

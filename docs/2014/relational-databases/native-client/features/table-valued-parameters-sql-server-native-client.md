@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6eea28d6bccfa8d0f785f3b27e98141e94dd313c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206618"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>테이블 반환 매개 변수(SQL Server Native Client)
@@ -25,7 +25,7 @@ ms.locfileid: "68206618"
   
  테이블 반환 매개 변수 및 ODBC에 대 한 자세한 내용은 [odbc&#41;&#40;테이블 반환 매개 변수 ](../../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)를 참조 하세요.  
   
- 테이블 반환 매개 변수 및 OLE DB에 대 한 자세한 내용은 [&#40;OLE DB&#41;테이블 반환 매개 변수 ](../../native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)를 참조 하세요.  
+ 테이블 반환 매개 변수 및 OLE DB에 대한 자세한 내용은 [테이블 반환 매개 변수&#40;OLE DB&#41;](../../native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client 기능](sql-server-native-client-features.md)  

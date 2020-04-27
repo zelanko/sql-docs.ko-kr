@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01982222ba5a18086aeadbbec776cba222f0e235
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207056"
 ---
 # <a name="prepared-execution"></a>준비된 실행
@@ -31,15 +31,13 @@ ms.locfileid: "68207056"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**Sqlexecdirect**에서 실행 계획을 검색 하 고 다시 사용 하기 위한 향상 된 알고리즘을 통해 직접 실행과 준비 된 실행 간의 성능 차이를 줄입니다. 따라서 문을 직접 실행할 때도 준비된 실행을 사용할 때와 같이 몇 가지 성능상의 이점을 얻을 수 있습니다. 자세한 내용은 [직접 실행](direct-execution.md)을 참조 하세요.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 준비된 실행을 기본으로 지원합니다. Sqlprepare가 호출 될 때 실행 계획은 **Sqlprepare** 이상 **** 에서 작성 됩니다. 는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sqlprepare**에서 임시 저장 프로시저를 작성할 필요가 없기 때문에 **tempdb**의 시스템 테이블에 추가 오버 헤드가 없습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 준비된 실행을 기본으로 지원합니다. Sqlprepare가 호출 될 때 실행 계획은 **Sqlprepare** 이상 **SQLExecute** 에서 작성 됩니다. 는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sqlprepare**에서 임시 저장 프로시저를 작성할 필요가 없기 때문에 **tempdb**의 시스템 테이블에 추가 오버 헤드가 없습니다.  
   
- 성능상의 이유로 문 준비는 **Sqlexecute** 가 호출 되거나 메타 속성 작업 (예: [SQLDescribeCol](../../native-client-odbc-api/sqldescribecol.md) 또는 ODBC의 [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md) )이 수행 될 때까지 지연 됩니다. 기본 동작입니다. 따라서 준비 중인 문에서 발생하는 모든 오류는 문이 실행되거나 메타 속성 작업이 수행될 때까지 알 수 없습니다. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 관련 문 특성 SQL_SOPT_SS_DEFER_PREPARE를 SQL_DP_OFF로 설정하면 이 기본 동작을 해제할 수 있습니다.  
+ 성능상의 이유로 문 준비는 **Sqlexecute** 가 호출 되거나 메타 속성 작업 (예: [SQLDescribeCol](../../native-client-odbc-api/sqldescribecol.md) 또는 ODBC의 [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md) )이 수행 될 때까지 지연 됩니다. 기본 동작입니다. 따라서 준비 중인 문에서 발생하는 모든 오류는 문이 실행되거나 메타 속성 작업이 수행될 때까지 알 수 없습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 관련 문 특성 SQL_SOPT_SS_DEFER_PREPARE를 SQL_DP_OFF로 설정하면 이 기본 동작을 해제할 수 있습니다.  
   
  지연 된 준비가 된 경우 **Sqlexecute** 를 호출 하기 전에 **SQLDescribeCol** 또는 **SQLDescribeParam** 를 호출 하면 서버에 대 한 추가 왕복이 생성 됩니다. **SQLDescribeCol**에서 드라이버는 쿼리에서 WHERE 절을 제거 하 고 SET FMTONLY ON으로 서버에 전송 하 여 쿼리에서 반환 된 첫 번째 결과 집합의 열에 대 한 설명을 가져옵니다. **SQLDescribeParam**에서 드라이버는 서버를 호출 하 여 쿼리의 매개 변수 표식에서 참조 하는 식 또는 열에 대 한 설명을 가져옵니다. 이 메서드에는 하위 쿼리의 매개 변수는 확인할 수 없는 등의 몇 가지 제한이 있습니다.  
   
- Native Client ODBC 드라이버를 사용 하 여 Sqlprepare를 과도 하 게 사용 하면 특히 이전 버전의 SQL Server에 연결 된 경우 성능이 저하 됩니다. **** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 한 번만 실행되는 문에는 준비된 실행을 사용하지 않아야 합니다. 준비된 실행에는 클라이언트에서 서버로의 추가 네트워크 왕복이 필요하므로 문을 한 번만 실행할 때는 준비된 실행이 직접 실행보다 속도가 느립니다. 또한 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 임시 저장 프로시저도 생성됩니다.  
+ Native Client ODBC 드라이버를 사용 하 여 Sqlprepare를 과도 하 게 사용 하면 특히 이전 버전의 SQL Server에 연결 된 경우 성능이 저하 됩니다. **SQLPrepare** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 한 번만 실행되는 문에는 준비된 실행을 사용하지 않아야 합니다. 준비된 실행에는 클라이언트에서 서버로의 추가 네트워크 왕복이 필요하므로 문을 한 번만 실행할 때는 준비된 실행이 직접 실행보다 속도가 느립니다. 또한 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 임시 저장 프로시저도 생성됩니다.  
   
  준비된 문은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 임시 개체를 만드는 데 사용할 수 없습니다.  
   

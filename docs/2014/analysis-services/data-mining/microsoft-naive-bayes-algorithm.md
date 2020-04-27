@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a65630dc42e74aef762913775688ce5221f79fd
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174462"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes Algorithm
@@ -31,12 +31,10 @@ ms.locfileid: "78174462"
 ## <a name="example"></a>예제
  진행 중인 홍보 행사 전략의 하나로 Adventure Works Cycle사의 마케팅 부서는 우편으로 전단지를 보내 잠재 고객을 공략하기로 결정했습니다. 비용을 줄이기 위해 응답 가능성이 큰 고객에게만 전단지를 보내려고 합니다. 회사는 인구 통계 및 이전 우편물에 대한 응답 정보를 데이터베이스에 저장합니다. 이 데이터를 사용하여 특징이 유사하고 과거에 회사 제품을 구매한 고객과 잠재 고객을 비교하여 연령 및 위치와 같은 인구 통계가 홍보 행사에 대한 응답을 예측하는 데 얼마나 도움이 되는지 확인하려고 합니다. 특히 자전거를 구입한 고객과 구입하지 않은 고객의 차이점을 찾으려고 합니다.
 
- 마케팅 부서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘을 사용하여 특정 고객 프로필에 대한 결과를 신속하게 예측할 수 있으므로 전단지에 응답할 가능성이 큰 고객을 결정할 수 있습니다. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Naive Bayes 뷰어를 사용하면 특히 전단지에 대한 긍정적인 응답에 기여한 입력 열을 시각적으로 조사할 수도 있습니다.
+ 마케팅 부서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘을 사용하여 특정 고객 프로필에 대한 결과를 신속하게 예측할 수 있으므로 전단지에 응답할 가능성이 큰 고객을 결정할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Naive Bayes 뷰어를 사용하면 특히 전단지에 대한 긍정적인 응답에 기여한 입력 열을 시각적으로 조사할 수도 있습니다.
 
 ## <a name="how-the-algorithm-works"></a>알고리즘 작동 방법
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 예측 가능한 열에 가능한 각 상태가 지정되면 각 입력 열의 모든 상태에 대한 확률을 계산합니다.
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 예측 가능한 열에 가능한 각 상태가 지정되면 각 입력 열의 모든 상태에 대한 확률을 계산합니다.
 
  다음 그래픽에 표시된 것처럼 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Naive Bayes 뷰어를 사용하여 알고리즘의 상태 분포를 시각적으로 탐색함으로써 이 알고리즘의 작동 방식을 이해할 수 있습니다.
 
@@ -50,15 +48,14 @@ ms.locfileid: "78174462"
 
  뷰어에서는 분포에 대한 값도 제공하므로 1-2마일 거리를 통근하는 고객의 경우 자전거를 구입할 확률이 0.387인 반면 자전거를 구입하지 않을 확률은 0.287이라는 것도 확인할 수 있습니다. 이 예에서 알고리즘은 통근 거리와 같은 고객 특징에서 파생된 숫자 정보를 사용하여 고객의 자전거 구입 여부를 예측합니다.
 
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 뷰어를 사용하는 방법에 대한 자세한 내용은 [Microsoft Naive Bayes 뷰어를 사용하여 모델 찾아보기](browse-a-model-using-the-microsoft-naive-bayes-viewer.md)를 참조하세요.
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 뷰어를 사용하는 방법에 대한 자세한 내용은 [Microsoft Naive Bayes 뷰어를 사용하여 모델 찾아보기](browse-a-model-using-the-microsoft-naive-bayes-viewer.md)를 참조하세요.
 
 ## <a name="data-required-for-naive-bayes-models"></a>Naive Bayes 모델에 필요한 데이터
  Naive Bayes 모델을 학습하는 데 사용할 데이터를 준비할 때는 필요한 데이터의 양과 사용법을 비롯하여 해당 알고리즘의 요구 사항을 알고 있어야 합니다.
 
  Naive Bayes 모델의 요구 사항은 다음과 같습니다.
 
--   **단일 키 열** 각 모델은 각 레코드를 고유 하 게 식별 하는 숫자 또는 텍스트 열을 하나 포함 해야 합니다. 복합 키는 사용할 수 없습니다.
+-   **단일 키 열** 각 모델은 각 레코드를 고유하게 식별하는 숫자 또는 텍스트 열을 하나 포함해야 합니다. 복합 키는 사용할 수 없습니다.
 
 -   **입력 열** Naive Bayes 모델에서 모든 열은 불연속 또는 분할 된 열 이어야 합니다. 분할 열에 대 한 자세한 내용은 [데이터 마이닝&#41;&#40;분할 방법 ](discretization-methods-data-mining.md)을 참조 하세요.
 
@@ -68,13 +65,12 @@ ms.locfileid: "78174462"
 
      반대로 이 알고리즘에서 변수 간의 상관 관계를 식별하는 기능은 입력 간의 관계를 식별하기 위해 모델이나 데이터 세트를 탐색하는 경우에 유용합니다.
 
--   **하나 이상의 예측 가능한 열** 예측 가능한 특성에는 불연속 값 또는 불연속화 된 값이 포함 되어야 합니다.
+-   **하나 이상의 예측 가능한 열** 예측 가능한 특성에는 불연속 값 또는 불연속화된 값이 포함되어야 합니다.
 
      예측 가능한 열의 값은 입력으로 처리할 수 있습니다. 이 방법은 열 간의 관계를 찾기 위해 새 데이터 세트를 탐색하는 경우에 유용할 수 있습니다.
 
 ## <a name="viewing-the-model"></a>모델 보기
- 
-  **Microsoft Naive Bayes 뷰어**를 사용하여 모델을 탐색할 수 있습니다. 이 뷰어에서는 입력 특성과 예측 가능한 특성의 관계를 보여 줍니다. 또한 뷰어에서는 각 클러스터에 대한 자세한 프로필, 각 클러스터를 다른 클러스터와 구별하게 해 주는 특성 목록 및 전체 학습 데이터 집합의 특성도 제공합니다. 자세한 내용은 [Microsoft Naive Bayes 뷰어를 사용하여 모델 찾아보기](browse-a-model-using-the-microsoft-naive-bayes-viewer.md)를 참조하세요.
+ **Microsoft Naive Bayes 뷰어**를 사용하여 모델을 탐색할 수 있습니다. 이 뷰어에서는 입력 특성과 예측 가능한 특성의 관계를 보여 줍니다. 또한 뷰어에서는 각 클러스터에 대한 자세한 프로필, 각 클러스터를 다른 클러스터와 구별하게 해 주는 특성 목록 및 전체 학습 데이터 집합의 특성도 제공합니다. 자세한 내용은 [Microsoft Naive Bayes 뷰어를 사용하여 모델 찾아보기](browse-a-model-using-the-microsoft-naive-bayes-viewer.md)를 참조하세요.
 
  자세한 내용을 보려면 [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)에서 모델을 살펴보세요. 모델에 저장된 정보 유형에 대한 자세한 내용은 [Naive Bayes 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)를 참조하세요.
 

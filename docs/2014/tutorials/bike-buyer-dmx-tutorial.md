@@ -17,21 +17,19 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3cf9a0c9e6059330c0b8edbd8228f617ba093564
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140535"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Bike Buyer DMX 자습서
   이 자습서에서는 DMX(Data Mining Extensions) 쿼리 언어를 사용하여 마이닝 모델을 만들고 학습하며 탐색하는 방법을 설명합니다. 이러한 마이닝 모델을 사용하여 고객이 자전거를 구입할 것인지 여부를 결정하는 예측을 만들 수 있습니다.  
   
- 마이닝 모델은 가상 회사인 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 에 대한 데이터를 저장하는 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]예제 데이터베이스에 포함된 데이터에서 만들어집니다. 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]는 규모가 큰 다국적 제조 회사입니다. 이 회사는 금속 및 합성 소재 자전거를 제조하여 북미, 유럽 및 아시아 시장에 판매합니다. 워싱턴 주 보셀에 위치한 본사에는 290명의 직원이 근무하고 있으며 각 지역 시장별로 영업 팀이 배치되어 있습니다.  
+ 마이닝 모델은 가상 회사인 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 에 대한 데이터를 저장하는 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]예제 데이터베이스에 포함된 데이터에서 만들어집니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]는 규모가 큰 다국적 제조 회사입니다. 이 회사는 금속 및 합성 소재 자전거를 제조하여 북미, 유럽 및 아시아 시장에 판매합니다. 워싱턴 주 보셀에 위치한 본사에는 290명의 직원이 근무하고 있으며 각 지역 시장별로 영업 팀이 배치되어 있습니다.  
   
 ## <a name="tutorial-scenario"></a>자습서 시나리오  
- 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]에서는 데이터 마이닝 기능을 사용하는 사용자 지정 애플리케이션을 만들어 데이터 분석의 범위를 확장하기로 결정했습니다. 이 사용자 정의 애플리케이션을 만드는 목적은 다음과 같습니다.  
+ [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]에서는 데이터 마이닝 기능을 사용하는 사용자 지정 애플리케이션을 만들어 데이터 분석의 범위를 확장하기로 결정했습니다. 이 사용자 정의 애플리케이션을 만드는 목적은 다음과 같습니다.  
   
 -   잠재 고객의 특정 특징을 입력으로 사용하여 해당 고객이 자전거를 구입할 것인지 여부 예측  
   
@@ -45,15 +43,11 @@ ms.locfileid: "63140535"
   
 -   DMX 쿼리 언어  
   
--   
-  [Microsoft 의사 결정 트리 알고리즘](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md) 및 [Microsoft 클러스터링 알고리즘](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)  
+-   [Microsoft 의사 결정 트리 알고리즘](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md) 및 [Microsoft 클러스터링 알고리즘](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)  
   
--   
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 쿼리 편집기  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 쿼리 편집기  
   
- DMX(Data Mining Extensions)는 마이닝 모델을 만들고 작업할 때 사용할 수 있는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 제공하는 쿼리 언어입니다. 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 의사 결정 트리 알고리즘에서는 특정 고객이 자전거를 구입할 것인지 여부를 예측하는 데 사용할 수 있는 모델을 만듭니다. 결과 모델에서는 개인 고객이나 고객 테이블을 입력으로 사용할 수 있습니다. 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 클러스터링 알고리즘에서는 공유 특징을 기반으로 고객을 그룹화할 수 있습니다. 이 자습서의 목표는 사용자 지정 애플리케이션에서 사용할 DMX 스크립트를 제공하는 것입니다.  
+ DMX(Data Mining Extensions)는 마이닝 모델을 만들고 작업할 때 사용할 수 있는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 제공하는 쿼리 언어입니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 의사 결정 트리 알고리즘에서는 특정 고객이 자전거를 구입할 것인지 여부를 예측하는 데 사용할 수 있는 모델을 만듭니다. 결과 모델에서는 개인 고객이나 고객 테이블을 입력으로 사용할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 클러스터링 알고리즘에서는 공유 특징을 기반으로 고객을 그룹화할 수 있습니다. 이 자습서의 목표는 사용자 지정 애플리케이션에서 사용할 DMX 스크립트를 제공하는 것입니다.  
   
  **자세한 내용:** [데이터 마이닝 솔루션](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
@@ -78,7 +72,7 @@ ms.locfileid: "63140535"
   
  이 자습서에서는 여러 마이닝 모델을 포함하는 마이닝 구조를 만들 것이므로 두 번째 방법을 사용합니다.  
   
- **참조 항목**  
+ **자세한 내용**  
   
  Dmx&#41; 참조 &#40;dmx를 사용 하 [여 Dmx Select 문](/sql/dmx/understanding-the-dmx-select-statement), [구조 및 Dmx 예측 쿼리의 사용](/sql/dmx/structure-and-usage-of-dmx-prediction-queries) 을 이해 하는 [데이터 마이닝 확장](/sql/dmx/data-mining-extensions-dmx-reference)  
   
@@ -107,10 +101,7 @@ ms.locfileid: "63140535"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , [!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)] [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   
-  [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 데이터베이스. 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다. 
-  
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 공식 예제 데이터베이스를 설치하려면 [Microsoft SQL Sample Databases](https://go.microsoft.com/fwlink/?LinkId=88417) 페이지에서 설치할 데이터베이스를 선택합니다.  
+-   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 데이터베이스. 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 공식 예제 데이터베이스를 설치하려면 [Microsoft SQL Sample Databases](https://go.microsoft.com/fwlink/?LinkId=88417) 페이지에서 설치할 데이터베이스를 선택합니다.  
   
 > [!NOTE]  
 >  자습서를 검토할 때는 문서 뷰어 도구 모음에 **다음 항목** 단추 및 **이전 항목** 단추를 추가하는 것이 좋습니다.  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 66b042c6-479f-4a89-92c8-8c5dce67643f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8c14661e8e3ed7fb5d050121276b2ffac0fda2de
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d3acd8a63dfec0fa2a76b1674a0764f6598ae44c
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634843"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728336"
 ---
 # <a name="getting-started-with-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 시작
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "81634843"
 ## <a name="see-also"></a>참고 항목  
 [예제 애플리케이션&#40;SQLSRV 드라이버&#41;](example-application-sqlsrv-driver.md)
 
-[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드 | Microsoft Docs](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드 | Microsoft Docs](programming-guide-for-php-sql-driver.md)
 
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
   

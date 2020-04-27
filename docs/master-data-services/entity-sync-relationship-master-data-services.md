@@ -11,10 +11,10 @@ ms.assetid: bd627a2d-dc64-47e9-9a71-2d0ad04b4962
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: fde11c6b106a9e559d74504b77d975d096c1f3d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729262"
 ---
 # <a name="entity-sync-relationship-master-data-services"></a>엔터티 동기화 관계(Master Data Services)
@@ -31,6 +31,6 @@ ms.locfileid: "73729262"
   
 ## <a name="see-also"></a>참고 항목  
  [MDS(Master Data Services)&#41;&#40;엔터티 동기화 관계 만들기 및 실행](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
- [MDS(Master Data Services)&#41;&#40;엔터티 동기화 관계 편집 및 삭제](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  
+ [엔터티 동기화 관계 편집 및 삭제&#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ad01313933cb2e04bf22257bcdd0eb93a1a755e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72313750"
 ---
 # <a name="sp_addlinkedserver-transact-sql"></a>sp_addlinkedserver(Transact-SQL)
@@ -44,7 +44,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
   
 ## <a name="arguments"></a>인수  
 [ @server = ] * \'서버\' *          
-만들려고 하는 연결된 서버의 이름입니다. *서버* 는 **sysname**이며 기본값은 없습니다.  
+만들려고 하는 연결된 서버의 이름입니다. *server* 은 **sysname**이며 기본값은 없습니다.  
   
 [ @srvproduct = ] * \'product_name\' *          
 연결된 서버로 추가할 OLE DB 데이터 원본의 제품 이름입니다. *product_name* 은 **nvarchar (** 128 **)** 이며 기본값은 NULL입니다. **SQL Server**경우 *provider_name*, *data_source*, *위치*, *provider_string*및 *카탈로그* 를 지정할 필요가 없습니다.  
@@ -73,8 +73,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 > 미러된 데이터베이스에 액세스하려면 연결 문자열이 데이터베이스 이름을 포함해야 합니다. 이 이름은 데이터 액세스 공급자의 장애 조치(Failover) 시도를 지원하는 데 필요합니다. Provstr 또는 ** \@catalog** 매개 변수에 데이터베이스를 지정할 수 있습니다. ** \@** 필요에 따라 연결 문자열이 장애 조치(Failover) 파트너 이름을 제공할 수도 있습니다.  
   
 [ @catalog = ] * \'카탈로그\' *       
- OLE DB 공급자에 연결할 때 사용되는 카탈로그입니다. *catalog* 는 **sysname**이며 기본값은 NULL입니다. *카탈로그* 는 DBPROP_INIT_CATALOG 속성으로 전달 되어 OLE DB 공급자를 초기화 합니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 연결된 서버를 정의한 경우 카탈로그는 연결된 서버가 매핑된 기본 데이터베이스를 참조합니다.  
+ OLE DB 공급자에 연결할 때 사용되는 카탈로그입니다. *catalog* 는 **sysname**이며 기본값은 NULL입니다. *카탈로그* 는 DBPROP_INIT_CATALOG 속성으로 전달 되어 OLE DB 공급자를 초기화 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 연결된 서버를 정의한 경우 카탈로그는 연결된 서버가 매핑된 기본 데이터베이스를 참조합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -85,21 +84,18 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ## <a name="remarks"></a>설명  
  다음 표에서는 OLE DB를 통해 액세스할 수 있는 데이터 원본에 대해 연결된 서버를 설정하는 방법을 보여 줍니다. 특정 데이터 원본에 대해 여러 가지 방법을 사용하여 연결된 서버를 설정할 수 있습니다. 따라서 데이터 원본 유형에 대한 행이 여러 개 있을 수 있습니다. 또한이 표에서는 연결 된 서버를 설정 하는 데 사용할 **sp_addlinkedserver** 매개 변수 값을 보여 줍니다.  
   
-|원격 OLE DB 데이터 원본|OLE DB 공급자|product_name|provider_name|data_source|location|provider_string|catalog|  
+|원격 OLE DB 데이터 원본|OLE DB 공급자|product_name|provider_name|data_source|위치|provider_string|카탈로그|  
 |-------------------------------|---------------------|-------------------|--------------------|------------------|--------------|----------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<sup>1</sup> (기본값)||||||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <sup>1</sup> (기본값)||||||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자||**SQLNCLI**|기본 인스턴스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 네트워크 이름|||데이터베이스 이름(옵션)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자||**SQLNCLI**|*servername*\\*instancename* (특정 인스턴스의 경우)|||데이터베이스 이름(옵션)|  
 |Oracle 버전 8 이상|Oracle Provider for OLE DB|모두|**OraOLEDB.Oracle**|Oracle 데이터베이스의 별칭||||  
 |Access/Jet|Microsoft OLE DB Provider for Jet|모두|**Microsoft.Jet.OLEDB.4.0**|Jet 데이터베이스 파일의 전체 경로||||  
 |ODBC 데이터 원본|ODBC용 Microsoft OLE DB 공급자|모두|**MSDASQL**|ODBC 데이터 원본의 시스템 DSN||||  
-|ODBC 데이터 원본|[!INCLUDE[msCoName](../../includes/msconame-md.md)]ODBC 용 OLE DB 공급자|모두|**MSDASQL**|||ODBC 연결 문자열||  
-|파일 시스템|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Indexing Service|모두|**MSIDXS**|인덱싱 서비스 카탈로그 이름||||  
-|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 스프레드시트|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Jet 용 OLE DB 공급자|모두|**Microsoft.Jet.OLEDB.4.0**|Excel 파일의 전체 경로||Excel 5.0||  
-|IBM DB2 데이터베이스|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2|모두|**DB2OLEDB**|||OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] PROVIDER for DB2 설명서를 참조 하세요.|DB2 데이터베이스의 카탈로그 이름|  
+|ODBC 데이터 원본|ODBC용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB 공급자|모두|**MSDASQL**|||ODBC 연결 문자열||  
+|파일 시스템|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Indexing Service|모두|**MSIDXS**|인덱싱 서비스 카탈로그 이름||||  
+|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 스프레드시트|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet|모두|**Microsoft.Jet.OLEDB.4.0**|Excel 파일의 전체 경로||Excel 5.0||  
+|IBM DB2 데이터베이스|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2|모두|**DB2OLEDB**|||OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] PROVIDER for DB2 설명서를 참조 하세요.|DB2 데이터베이스의 카탈로그 이름|  
   
  <sup>1</sup> 연결 된 서버를 설정 하는이 방법은 연결 된 서버의 이름을 원격 인스턴스의 네트워크 이름과 동일 하 게 강제 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Data_source* 를 사용 하 여 서버를 지정 합니다.  
   
@@ -221,8 +217,7 @@ SELECT *
 GO  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 원격 공유에 대한 액세스 권한을 갖는 도메인 계정에서 실행되는 경우에는 매핑된 드라이브 대신 UNC 경로를 사용할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 원격 공유에 대한 액세스 권한을 갖는 도메인 계정에서 실행되는 경우에는 매핑된 드라이브 대신 UNC 경로를 사용할 수 있습니다.  
   
 ```sql  
 EXEC sp_addlinkedserver 'ExcelShare',  
@@ -289,7 +284,7 @@ EXEC sp_addlinkedserver
        Default Schema=admin;';  
 ```  
   
-### <a name="g-add-a-includesssdsfullincludessssdsfull-mdmd-as-a-linked-server-for-use-with-distributed-queries-on-cloud-and-on-premises-databases"></a>G. 클라우드 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 온-프레미스 데이터베이스에서 분산 쿼리와 함께 사용할 연결 된 서버로를 추가 합니다.  
+### <a name="g-add-a-sssdsfull-as-a-linked-server-for-use-with-distributed-queries-on-cloud-and-on-premises-databases"></a>G. 클라우드 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 온-프레미스 데이터베이스에서 분산 쿼리와 함께 사용할 연결 된 서버로를 추가 합니다.  
  을 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 연결 된 서버로 추가한 다음 온-프레미스 및 클라우드 데이터베이스를 포괄 하는 분산 쿼리와 함께 사용할 수 있습니다. 온-프레미스 회사 네트워크 및 Azure 클라우드를 포괄 하는 데이터베이스 하이브리드 솔루션에 대 한 구성 요소입니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Box 제품에는 연결 된 서버로 정의 된 원격 원본 (비 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본의 데이터 포함)의 데이터와 로컬 데이터 원본의 데이터를 결합 하는 쿼리를 작성할 수 있는 분산 쿼리 기능이 포함 되어 있습니다. 모든 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (가상 마스터 제외)를 개별 연결 된 서버로 추가한 다음 데이터베이스 응용 프로그램에서 다른 데이터베이스로 직접 사용할 수 있습니다.  
@@ -334,9 +329,9 @@ SELECT * FROM myLinkedServer.myDatabase.dbo.myTable
  [Transact-sql&#41;sp_addlinkedsrvlogin &#40;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [Transact-sql&#41;sp_addserver &#40;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [Transact-sql&#41;sp_dropserver &#40;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
- [sp_serveroption&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [Transact-sql&#41;sp_serveroption &#40;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [Transact-sql&#41;sp_setnetname &#40;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [시스템 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a9163e6d34a0de6200eafd413d163bb6d92fd4a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72174000"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_add_targetservergroup(Transact-SQL)
@@ -81,7 +81,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @type = ] 'type'`아티클의 유형입니다. *형식은* **sysname**이며 기본값은 **table**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**table** (기본값)|스키마와 데이터가 있는 테이블입니다. 복제는 테이블을 모니터링하여 복제할 데이터를 결정합니다.|  
 |**func schema only**|스키마가 있는 함수 전용입니다.|  
@@ -101,10 +101,10 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @pre_creation_cmd = ] 'pre_creation_cmd'`스냅숏 적용 시 구독자에 테이블이 있는 경우 시스템이 수행할 작업을 지정 합니다. *pre_creation_cmd* 은 **nvarchar (10)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|**없음을**|구독자에 이미 테이블이 존재하는 경우 아무런 동작이 발생하지 않습니다.|  
-|**제거**|하위 집합 필터의 WHERE 절을 기반으로 하여 삭제를 실행합니다.|  
+|**없음**|구독자에 이미 테이블이 존재하는 경우 아무런 동작이 발생하지 않습니다.|  
+|**delete**|하위 집합 필터의 WHERE 절을 기반으로 하여 삭제를 실행합니다.|  
 |**drop** (기본값)|테이블을 다시 만들기 전에 삭제합니다. 이 기능은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] 구독자를 지원하는 데 필요합니다.|  
 |**잘라내야**|대상 테이블을 자릅니다.|  
   
@@ -115,7 +115,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @schema_option = ] schema_option`지정 된 아티클에 대 한 스키마 생성 옵션의 비트맵입니다. *schema_option* 는 **이진 (8)** 이며 [ (비트 or)](../../t-sql/language-elements/bitwise-or-transact-sql.md) 이러한 값 중 하나 이상의 곱입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**0x00**|스냅숏 에이전트에서 스크립팅을 사용 하지 않도록 설정 하 고 *creation_script*에 정의 된 제공 된 스키마 사전 작성 스크립트를 사용 합니다.|  
 |**0x01**|개체를 만듭니다(CREATE TABLE, CREATE PROCEDURE 등). 이는 저장 프로시저 아티클에 대한 기본값입니다.|  
@@ -212,7 +212,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @check_permissions = ] check_permissions`병합 에이전트 변경 내용을 게시자에 적용할 때 확인 되는 테이블 수준 사용 권한의 비트맵입니다. 병합 프로세스가 사용하는 게시자 로그인/사용자 계정에 올바른 테이블 사용 권한이 없는 경우 잘못된 변경은 충돌로 기록됩니다. *check_permissions* 은 **int**이며 [| (비트 or)](../../t-sql/language-elements/bitwise-or-transact-sql.md) 다음 값 중 하나 이상의 곱입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**0x00** (기본값)|사용 권한을 확인하지 않습니다.|  
 |**10**|구독자에서 실행한 삽입 작업이 업로드되기 전에 게시자에서 사용 권한을 확인합니다.|  
@@ -240,7 +240,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  **false** *column_tracking*에 지정 된 대로 기본 충돌 검색을 사용 하도록 지정 합니다. 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)를 참조하세요.  
   
 > [!NOTE]  
->  구독자는 논리적 레코드를 지원 하지 않기 때문에 이러한 구독자를 지원 하려면 *logical_record_level_conflict_detection* 에 false 값을 지정 해야 합니다. **** [!INCLUDE[ssEW](../../includes/ssew-md.md)]  
+>  구독자는 논리적 레코드를 지원 하지 않기 때문에 이러한 구독자를 지원 하려면 *logical_record_level_conflict_detection* 에 false 값을 지정 해야 합니다. **false** [!INCLUDE[ssEW](../../includes/ssew-md.md)]  
   
 `[ @logical_record_level_conflict_resolution = ] 'logical_record_level_conflict_resolution'`논리적 레코드의 멤버인 아티클에 대 한 충돌 해결 수준을 지정 합니다. *logical_record_level_conflict_resolution* 은 **nvarchar (5)** 이며 기본값은 FALSE입니다.  
   
@@ -249,7 +249,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  **false** 는 적용 되는 행을 논리적 레코드로 제한 하지 않도록 지정 합니다. *Logical_record_level_conflict_detection* **true**이면 *logical_record_level_conflict_resolution* 도 **true**로 설정 해야 합니다. 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)를 참조하세요.  
   
 > [!NOTE]  
->  구독자는 논리적 레코드를 지원 하지 않기 때문에 이러한 구독자를 지원 하려면 *logical_record_level_conflict_resolution* 에 false 값을 지정 해야 합니다. **** [!INCLUDE[ssEW](../../includes/ssew-md.md)]  
+>  구독자는 논리적 레코드를 지원 하지 않기 때문에 이러한 구독자를 지원 하려면 *logical_record_level_conflict_resolution* 에 false 값을 지정 해야 합니다. **false** [!INCLUDE[ssEW](../../includes/ssew-md.md)]  
   
 `[ @partition_options = ] partition_options`아티클의 데이터가 분할 되는 방식을 정의 합니다 .이를 통해 모든 행이 하나의 파티션 또는 하나의 구독에만 속한 경우 성능 최적화를 사용할 수 있습니다. *partition_options* 은 **tinyint**이며 다음 값 중 하나일 수 있습니다.  
   
@@ -280,9 +280,9 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @identityrangemanagementoption = ] identityrangemanagementoption`아티클에 대해 id 범위 관리를 처리 하는 방법을 지정 합니다. *identityrangemanagementoption* 은 **nvarchar (10)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|**없음을**|ID 범위 관리를 사용하지 않습니다.|  
+|**없음**|ID 범위 관리를 사용하지 않습니다.|  
 |**수동**|수동 ID 범위 처리를 사용하려면 NOT FOR REPLICATION을 사용하여 ID 열을 표시합니다.|  
 |**자동**|ID 범위의 자동 관리를 지정합니다.|  
 |NULL (기본값)|*Auto_identity_range* 값이 **true**가 아니면 기본값은 **none**입니다.|  
@@ -334,7 +334,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**func schema only**|**0x01**|  
 |**indexed view schema only**|**0x01**|  
 |**proc schema only**|**0x01**|  
-|**table**|**** -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 기본 모드 스냅숏을 사용 하는 0x0C034FD1 이상 호환 게시.<br /><br /> **** -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 문자 모드 스냅숏을 사용 하는 0x08034FF1 이상 호환 게시입니다.|  
+|**table**|**0x0C034FD1** -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 기본 모드 스냅숏을 사용 하는 0x0C034FD1 이상 호환 게시.<br /><br /> **0x08034FF1** -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 문자 모드 스냅숏을 사용 하는 0x08034FF1 이상 호환 게시입니다.|  
 |**view schema only**|**0x01**|  
   
 > [!NOTE]  
@@ -358,7 +358,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
+ [아티클 정의](../../relational-databases/replication/publish/define-an-article.md)   
  [데이터 및 데이터베이스 개체 게시](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Id 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)   
  [Transact-sql&#41;sp_changemergearticle &#40;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   

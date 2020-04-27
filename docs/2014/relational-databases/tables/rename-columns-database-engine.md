@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5fca9032df4f1327933580a306215fd2fd47854
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211812"
 ---
 # <a name="rename-columns-database-engine"></a>열 이름 바꾸기(데이터베이스 엔진)
@@ -38,17 +38,17 @@ ms.locfileid: "68211812"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
  열 이름을 변경해도 해당 열에 대한 참조 이름은 자동으로 바뀌지 않습니다. 이름을 변경한 열을 참조하는 개체는 수동으로 수정해야 합니다. 예를 들어 테이블 열의 이름을 변경하고 이 열이 트리거에서 참조되는 경우 트리거를 수정하여 새로운 열 이름을 적용해야 합니다. [sys.sql_expression_dependencies](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql) 를 사용하여 이 개체에 종속된 개체를 나열한 다음 개체의 이름을 변경할 수 있습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  개체에 대한 ALTER 사용 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-rename-a-column-using-object-explorer"></a>개체 탐색기를 사용하여 열 이름을 바꾸려면  
   
@@ -64,12 +64,12 @@ ms.locfileid: "68211812"
   
 2.  **열 이름**아래에서 변경하려는 이름을 선택하고 새 이름을 입력합니다.  
   
-3.  **파일** 메뉴에서 **테이블 이름**_저장_을 클릭합니다.  
+3.  **파일** 메뉴에서 ‘테이블 이름’ **저장**을 클릭합니다.__  
   
 > [!NOTE]  
 >  **열 속성** 탭에서 열 이름을 변경할 수도 있습니다. 이름을 변경하려는 열을 선택하고 **이름**에 새 이름을 입력합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **열 이름을 바꾸려면**  
   
 #### <a name="to-rename-a-column"></a>열 이름을 바꾸려면  

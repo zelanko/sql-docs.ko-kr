@@ -16,17 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fd5ced641ee8fc17f0be7d7b6e19aff17dcb69bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011293"
 ---
 # <a name="get-started-with-full-text-search"></a>전체 텍스트 검색 시작
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터베이스는 기본적으로 전체 텍스트를 사용하도록 설정되어 있습니다. 하지만 테이블에서 전체 텍스트 인덱스를 사용하려면 먼저 전체 텍스트 엔진을 사용하여 액세스하려는 테이블 열에 전체 텍스트 인덱싱 기능을 설정해야 합니다.  
   
-##  <a name="configure"></a>전체 텍스트 검색을 위한 데이터베이스 구성  
+##  <a name="configuring-a-database-for-full-text-search"></a><a name="configure"></a>전체 텍스트 검색을 위한 데이터베이스 구성  
  모든 시나리오에서 데이터베이스 관리자는 다음과 같은 기본 단계를 수행하여 전체 텍스트 검색용 데이터베이스에서 테이블 열을 구성해야 합니다.  
   
 1.  전체 텍스트 카탈로그를 만듭니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "66011293"
   
  전체 텍스트 검색은 단어 분기기, 형태소 분석기, 중지 단어가 포함된 중지 목록, 동의어 사전 파일 등의 *언어 구성 요소*를 사용하여 여러 언어를 지원합니다. 동의어 사전 파일과 경우에 따라서는 중지 목록은 데이터베이스 관리자의 구성이 필요합니다. 지정된 동의어 사전 파일은 해당 언어를 사용하는 모든 전체 텍스트 인덱스를 지원하고 지정된 중지 목록은 전체 텍스트 인덱스에 원하는 만큼 연결할 수 있습니다.  
   
-##  <a name="setup"></a>전체 텍스트 카탈로그 및 인덱스 설정  
+##  <a name="setting-up-a-full-text-catalog-and-index"></a><a name="setup"></a>전체 텍스트 카탈로그 및 인덱스 설정  
  이를 위한 기본 단계는 다음과 같습니다.  
   
 1.  전체 텍스트 인덱스를 저장할 전체 텍스트 카탈로그를 만듭니다.  
@@ -63,7 +62,7 @@ ms.locfileid: "66011293"
 |같은 데이터베이스 내에서 하나 이상의 전체 텍스트 카탈로그로 그룹화됩니다.|그룹화되지 않습니다.|  
   
   
-##  <a name="options"></a>전체 텍스트 인덱스에 대 한 옵션 선택  
+##  <a name="choosing-options-for-a-full-text-index"></a><a name="options"></a>전체 텍스트 인덱스에 대 한 옵션 선택  
  이 섹션에서는 다음에 대해 설명합니다.  
   
 -   열 언어 선택  
@@ -100,9 +99,7 @@ ms.locfileid: "66011293"
   
   
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>전체 텍스트 인덱스와 중지 목록 연결  
- 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 중지 목록이 제공됩니다. 
-  *중지 목록* 이란 의미 없는 단어라고도 하는 중지 단어의 목록입니다. 중지 목록은 각 전체 텍스트 인덱스와 연결되며, 중지 목록의 단어는 전체 텍스트 인덱스의 전체 텍스트 쿼리에 적용됩니다. 기본적으로 시스템 중지 목록은 새로운 전체 텍스트 인덱스와 연결됩니다. 그러나 고유한 중지 목록을 직접 만들어 사용할 수도 있습니다. 자세한 내용은 [전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)를 참조하세요.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 중지 목록이 제공됩니다. *중지 목록* 이란 의미 없는 단어라고도 하는 중지 단어의 목록입니다. 중지 목록은 각 전체 텍스트 인덱스와 연결되며, 중지 목록의 단어는 전체 텍스트 인덱스의 전체 텍스트 쿼리에 적용됩니다. 기본적으로 시스템 중지 목록은 새로운 전체 텍스트 인덱스와 연결됩니다. 그러나 고유한 중지 목록을 직접 만들어 사용할 수도 있습니다. 자세한 내용은 [전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)를 참조하세요.  
   
  예를 들어 다음 [전체 텍스트 중지 목록](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 만들기 문은 시스템 중지 목록에서 복사 하 여 myStoplist3 라는 새 전체 텍스트 중지 목록을 만듭니다.  
   
@@ -132,9 +129,8 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
  일반적으로 전체 채우기가 진행 중이면 반환 결과는 1입니다.  
   
   
-##  <a name="example"></a>예: 전체 텍스트 검색 설정  
- 다음 두 부분으로 구성된 예에서는 AdventureWorks 데이터베이스에 `AdvWksDocFTCat`라는 전체 텍스트 카탈로그를 만든 다음 `Document`의 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 테이블에 전체 텍스트 인덱스를 만듭니다. 이 문은 설치할 때 지정한 기본 디렉터리에 전체 텍스트 카탈로그를 만듭니다. 
-  `AdvWksDocFTCat` 폴더는 기본 디렉터리에 있습니다.  
+##  <a name="example-setting-up-full-text-search"></a><a name="example"></a>예: 전체 텍스트 검색 설정  
+ 다음 두 부분으로 구성된 예에서는 AdventureWorks 데이터베이스에 `AdvWksDocFTCat`라는 전체 텍스트 카탈로그를 만든 다음 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]의 `Document` 테이블에 전체 텍스트 인덱스를 만듭니다. 이 문은 설치할 때 지정한 기본 디렉터리에 전체 텍스트 카탈로그를 만듭니다. `AdvWksDocFTCat` 폴더는 기본 디렉터리에 있습니다.  
   
 1.  이 예제에서는 `AdvWksDocFTCat`라는 전체 텍스트 카탈로그를 만들기 위해 [CREATE FULLTEXT CATALOG](/sql/t-sql/statements/create-fulltext-catalog-transact-sql) 문을 사용합니다.  
   
@@ -168,7 +164,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
      이 예에서 정의된 TYPE COLUMN은 'Document' 열(이진 형식)의 각 행에 있는 문서 유형이 포함된 테이블의 유형 열을 지정합니다. 유형 열은 지정 된 행의 문서에 대 한 사용자 제공 파일 확장명 (".doc", ".xls" 등)을 저장 합니다. 전체 텍스트 엔진은 지정된 행의 확장명을 사용하여 이러한 행의 데이터를 구문 분석하는 데 적합한 필터를 호출합니다. 필터가 이러한 행의 이진 데이터를 구문 분석하면 지정된 단어 분리기가 내용을 구문 분석합니다. 이 예에서는 영어(영국)에 대한 단어 분리기가 사용됩니다. 필터링 프로세스는 사용자가 기본 테이블에서 열을 삽입 또는 업데이트하는 경우나 인덱싱 단계에서 발생합니다. 단, 전체 텍스트 인덱스에 자동 변경 추적이 사용되는 경우에 한합니다. 자세한 내용은 [고급 분석 확장 구성 및 관리](configure-and-manage-filters-for-search.md)를 참조하세요.  
   
   
-##  <a name="tasks"></a>일반 작업  
+##  <a name="common-tasks"></a><a name="tasks"></a>일반 작업  
   
 ### <a name="to-create-a-full-text-catalog"></a>전체 텍스트 카탈로그를 만들려면  
   
@@ -184,7 +180,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
 -   [CREATE INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   
--   [Visual Database Tools를 &#40;테이블 디자이너를 엽니다&#41;](../../ssms/visual-db-tools/visual-database-tools.md)  
+-   [테이블 디자이너 열기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md)  
   
 ### <a name="to-create-a-full-text-index"></a>전체 텍스트 인덱스를 만들려면  
   
@@ -206,9 +202,9 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;전체 텍스트 카탈로그 만들기](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
+ [CREATE FULLTEXT CATALOG&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
  [CREATE FULLTEXT INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
- [CREATE FULLTEXT STOPLIST&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
+ [Transact-sql&#41;&#40;전체 텍스트 중지 목록 만들기](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
  [CREATE TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
  [전체 텍스트 인덱스 채우기](populate-full-text-indexes.md)   
  [FULLTEXTCATALOGPROPERTY &#40;Transact-sql&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql)   

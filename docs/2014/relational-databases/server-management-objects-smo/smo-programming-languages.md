@@ -18,21 +18,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: feca89ac2ac888c2fa9f082595e761e898dea971
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211923"
 ---
 # <a name="programming-languages"></a>프로그래밍 언어
   이 섹션에서는 Visual Basic .NET, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual c # .NET 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 SMO (Management Objects)를 프로그래밍 하는 방법에 대해 설명 합니다.  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[Visual Basic .NET 시작](../../database-engine/dev-guide/getting-started-in-visual-basic-net.md)|Visual Basic .NET에서 SMO 프로그램 작성을 시작하는 방법을 설명합니다.|  
 |[Visual C&#35; .NET 시작](smo-programming-getting-started-in-visual-csharp-net.md)|Visual C# .NET에서 SMO 프로그램 작성을 시작하는 방법을 설명합니다.|  
   
- SMO는 .NET 어셈블리입니다. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework를 사용하여 프로그래밍하려면 공용 언어 런타임에서 지원되는 언어를 선택해야 합니다. SMO 참조에는 Visual Basic .NET 및 Visual C# .NET 등의 관리되는 언어에 사용되는 구문이 있습니다.  
+ SMO는 .NET 어셈블리입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework를 사용하여 프로그래밍하려면 공용 언어 런타임에서 지원되는 언어를 선택해야 합니다. SMO 참조에는 Visual Basic .NET 및 Visual C# .NET 등의 관리되는 언어에 사용되는 구문이 있습니다.  
   
   

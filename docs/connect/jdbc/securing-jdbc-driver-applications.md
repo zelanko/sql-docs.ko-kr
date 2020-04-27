@@ -1,5 +1,6 @@
 ---
-title: JDBC 드라이버 애플리케이션 보안 | Microsoft Docs
+title: JDBC 드라이버 애플리케이션 보안
+description: 이 섹션의 항목에서는 연결 문자열, 사용자 입력의 유효성 검사 및 일반 애플리케이션 보안을 포함한 일반적인 보안 문제에 대해 설명해야 합니다.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fd01462987ef425af32c8537f1fc99218d59e290
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: e542328d80cabce0c0c5e923c1f150a86d9765d6
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219432"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728303"
 ---
 # <a name="securing-jdbc-driver-applications"></a>JDBC 드라이버 애플리케이션 보안
 

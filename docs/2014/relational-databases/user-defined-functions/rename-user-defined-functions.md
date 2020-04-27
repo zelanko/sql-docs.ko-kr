@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3419faca26d9d252610c07cb994ab5faa738f937
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211704"
 ---
 # <a name="rename-user-defined-functions"></a>사용자 정의 함수 이름 바꾸기
@@ -34,9 +34,9 @@ ms.locfileid: "68211704"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   함수 이름은 [식별자](../databases/database-identifiers.md)에 대한 규칙을 준수해야 합니다.  
   
@@ -44,12 +44,12 @@ ms.locfileid: "68211704"
   
 -   사용자 정의 함수의 이름 또는 정의를 변경할 때 개체에 해당 함수의 변경 내용이 적용되도록 업데이트하지 않으면 종속 개체가 실패할 수 있습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  함수를 삭제하려면 해당 함수가 속한 스키마에 대한 ALTER 권한이나 해당 함수에 대한 CONTROL 권한이 있어야 합니다. 함수를 다시 만들려면 데이터베이스에 대한 CREATE FUNCTION 권한과 함수가 생성되는 스키마에 대한 ALTER 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-rename-user-defined-functions"></a>사용자 정의 함수의 이름을 바꾸려면  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68211704"
   
 5.  함수의 새 이름을 입력합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **사용자 정의 함수의 이름을 바꾸려면**  
   
  이 작업은 Transact-SQL 문을 사용하여 수행할 수 없습니다. Transact-SQL을 사용하여 사용자 정의 함수의 이름을 바꾸려면 먼저 기존 함수를 삭제하고 새로운 이름을 사용하여 다시 만들어야 합니다. 함수의 이전 이름을 사용하는 모든 코드 및 애플리케이션이 이제 새 이름을 사용하는지 확인합니다.  

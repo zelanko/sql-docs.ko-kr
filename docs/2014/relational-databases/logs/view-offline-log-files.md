@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144599"
 ---
 # <a name="view-offline-log-files"></a>오프라인 로그 파일 보기
@@ -45,7 +45,7 @@ ms.locfileid: "63144599"
   
 -   [SqlErrorLogFile 클래스](../wmi-provider-configuration-classes/sqlerrorlogfile-class.md) (이 항목에서는 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로그 파일에 대한 정보를 검색하는 방법을 보여 줍니다.)  
   
-##  <a name="BeforeYouBegin"></a> 권한  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> 권한  
  오프라인 로그 파일에 연결하려면 로컬 컴퓨터와 원격 컴퓨터 모두에서 다음과 같은 사용 권한이 있어야 합니다.  
   
 -   **Root\Microsoft\SqlServer\ComputerManagement12** WMI 네임스페이스에 대한 읽기 권한. 기본적으로 모든 사용자는 계정 사용 권한으로 읽기 액세스합니다. 자세한 내용은 이 섹션 뒷부분의 "WMI 사용 권한을 확인하려면" 절차를 참조하십시오.  
@@ -60,8 +60,7 @@ ms.locfileid: "63144599"
   
 1.  WMI 컨트롤 스냅인을 엽니다. WMI 컨트롤 스냅인을 열려면 운영 체제에 따라 다음 중 하나를 수행합니다.  
   
-    -   
-  **시작**을 클릭하고 **검색 시작** 상자에 `wmimgmt.msc`를 입력한 다음 ENTER 키를 누릅니다.  
+    -   **시작**을 클릭하고 **검색 시작** 상자에 `wmimgmt.msc`를 입력한 다음 ENTER 키를 누릅니다.  
   
     -   **시작**, **실행**을 차례로 클릭 하 `wmimgmt.msc`고를 입력 한 다음 enter 키를 누릅니다.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "63144599"
   
     3.  원격 컴퓨터 이름을 입력하고 **확인**을 클릭합니다.  
   
-3.  **Wmi 컨트롤 (로컬)** 또는 **Wmi 컨트롤 (***RemoteComputerName***)** 을 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 클릭 합니다.  
+3.  **WMI 컨트롤(로컬)** 또는 **WMI 컨트롤(***RemoteComputerName***)** 을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
 4.  **WMI 컨트롤 속성** 대화 상자에서 **보안** 탭을 클릭합니다.  
   

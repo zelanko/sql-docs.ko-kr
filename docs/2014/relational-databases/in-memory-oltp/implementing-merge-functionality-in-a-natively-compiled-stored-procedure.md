@@ -11,17 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0e108f70f66aef1ed88ea202ddb326bd0757c10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015924"
 ---
 # <a name="implementing-merge-functionality"></a>MERGE 기능 구현
   데이터베이스에 특정 행 이 이미 있는지 여부에 따라 데이터베이스에서 삽입 또는 업데이트를 수행해야 할 수 있습니다.  
   
- 
-  `MERGE` 문을 사용하지 않는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 사용할 수 있는 방법 중 하나는 다음과 같습니다.  
+ `MERGE` 문을 사용하지 않는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 사용할 수 있는 방법 중 하나는 다음과 같습니다.  
   
 ```sql  
 UPDATE mytable SET col=@somevalue WHERE myPK = @parm  

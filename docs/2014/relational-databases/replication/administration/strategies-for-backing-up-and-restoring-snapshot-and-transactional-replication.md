@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210777"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>스냅샷 및 트랜잭션 복제의 백업 및 복원을 위한 전략
@@ -217,7 +217,7 @@ ms.locfileid: "68210777"
   
     2.  기본적으로 배포 에이전트는 연속적으로 실행되도록 설정되므로 토큰이 모든 노드로 자동 전송됩니다. 배포 에이전트가 연속 모드로 실행되지 않을 경우에는 에이전트를 실행합니다. 자세한 내용은 [복제 에이전트 실행 파일 개념](../concepts/replication-agent-executables-concepts.md) 또는 [복제 에이전트 시작 및 중지&#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)를 참조하세요. c 단계로 이동합니다.  
   
-    3.  B [](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)단계에서 검색 한 **@request_id** 값을 제공 하 여 sp_helppeerresponses를 실행 합니다. 모든 노드가 피어 요청을 받았음을 표시할 때까지 기다립니다. d 단계로 이동합니다.  
+    3.  B [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)단계에서 검색 한 **@request_id** 값을 제공 하 여 sp_helppeerresponses를 실행 합니다. 모든 노드가 피어 요청을 받았음을 표시할 때까지 기다립니다. d 단계로 이동합니다.  
   
     4.  [DBCC CHECKIDENT](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql) 를 통해 **B** 데이터베이스에 있는 각 테이블의 ID 범위에 대한 초기값을 다시 설정하여 적절한 범위가 사용되도록 합니다. 10단계로 이동합니다.  
   
@@ -233,7 +233,7 @@ ms.locfileid: "68210777"
   
     3.  기본적으로 배포 에이전트는 연속적으로 실행되도록 설정되므로 토큰이 모든 노드로 자동 전송됩니다. 배포 에이전트가 연속 모드로 실행되지 않을 경우에는 에이전트를 실행합니다. d 단계로 이동합니다.  
   
-    4.  B [](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)단계에서 검색 한 **@request_id** 값을 제공 하 여 sp_helppeerresponses를 실행 합니다. 모든 노드가 피어 요청을 받았음을 표시할 때까지 기다립니다. e 단계로 이동합니다.  
+    4.  B [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)단계에서 검색 한 **@request_id** 값을 제공 하 여 sp_helppeerresponses를 실행 합니다. 모든 노드가 피어 요청을 받았음을 표시할 때까지 기다립니다. e 단계로 이동합니다.  
   
     5.  구독자에 이미 데이터가 있음을 지정하여 **B** 데이터베이스에서 **C**데이터베이스의 게시에 대한 구독을 다시 만듭니다. b 단계로 이동합니다.  
   

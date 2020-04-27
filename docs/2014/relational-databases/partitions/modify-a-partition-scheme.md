@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 56148cca72ca9561219a9ea14025b0bd0f2204b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206576"
 ---
 # <a name="modify-a-partition-scheme"></a>파티션 구성표 수정
@@ -34,14 +34,14 @@ ms.locfileid: "68206576"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
  ALTER PARTITION SCHEME가 적용되는 모든 파일 그룹은 온라인 상태여야 합니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  다음 사용 권한을 통해 ALTER PARTITION SCHEME을 실행할 수 있습니다.  
   
 -   ALTER ANY DATASPACE 권한. 이 권한은 기본적으로 **sysadmin** 고정 서버 역할 및 **db_owner** 및 **db_ddladmin** 고정 데이터베이스 역할의 멤버에게 부여됩니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "68206576"
   
 -   파티션 구성표가 생성된 데이터베이스의 서버에 대한 CONTROL SERVER 또는 ALTER ANY DATABASE 권한  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **파티션 구성표를 수정하려면**  
   
  이 특정 동작은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 수행할 수 없습니다. 파티션 구성표를 수정하려면 먼저 구성표를 삭제한 다음 파티션 작성 마법사를 사용하여 원하는 속성이 포함된 새 구성표를 만들어야 합니다. 자세한 내용은 **분할 된 테이블 및 인덱스 만들기**에서 [SQL Server Management Studio를 사용 하 여 분할 된 테이블 및 인덱스 만들기](create-partitioned-tables-and-indexes.md#SSMSProcedure) 를 참조 하세요.  
@@ -67,7 +67,7 @@ ms.locfileid: "68206576"
   
 5.  **개체 삭제** 대화 상자에서 올바른 파티션 구성표를 선택했는지 확인한 다음 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-modify-a-partition-scheme"></a>파티션 구성표를 수정하려면  
   
