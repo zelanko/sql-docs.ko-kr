@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a79e98375c27c6a3570b2fafcf424965d7a97c8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074223"
 ---
 # <a name="using-cube-writebacks-mdx"></a>큐브 쓰기 저장(Writeback) 사용(MDX)
@@ -41,7 +41,7 @@ UPDATE [CUBE] <Cube_Name> SET <tuple>.VALUE = <value> [,<tuple>.VALUE = <value>.
  UPDATE CUBE 문은 원자 셀에 일련의 개별 쓰기 저장 작업을 생성하는 서브루틴으로 볼 수 있습니다. 이 쓰기 저장 작업은 모두 지정된 합계로 롤업됩니다.  
   
 > [!NOTE]  
->  업데이트된 셀이 겹치지 않을 경우 `Update Isolation Level` 연결 문자열 속성을 사용하여 UPDATE CUBE의 성능을 향상시킬 수 있습니다. 자세한 내용은 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>을 참조하세요.  
+>  업데이트된 셀이 겹치지 않을 경우 `Update Isolation Level` 연결 문자열 속성을 사용하여 UPDATE CUBE의 성능을 향상시킬 수 있습니다. 자세한 내용은 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>를 참조하세요.  
   
 ## <a name="example"></a>예제  
  Adventure Works 큐브에서 Sales Targets 측정값 그룹을 사용하여 UPDATE CUBE를 테스트할 수 있습니다. 이 측정값 그룹은 SUM으로 집계된 측정값으로 구성되며 UPDATE CUBE의 필수 구성 요소입니다.  
@@ -117,6 +117,6 @@ USE_EQUAL_ALLOCATION
 -   쓰기 저장(writeback)에 포함된 차원의 차원 세분성 변경  
   
 ## <a name="see-also"></a>참고 항목  
- [MDX&#41;데이터 &#40;수정](mdx-data-modification-modifying-data.md)  
+ [데이터 수정&#40;MDX&#41;](mdx-data-modification-modifying-data.md)  
   
   

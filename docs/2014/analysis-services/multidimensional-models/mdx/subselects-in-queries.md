@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c9fb5d1300b6f50f7ef0a765881896069becf0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073897"
 ---
 # <a name="subselects-in-queries"></a>쿼리의 하위 SELECT
@@ -206,7 +206,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |Oregon|$1,170,991.54|$80,450,596.98|  
 |Portland|$110,649.54|$80,450,596.98|  
 |워싱턴|$2,467,248.34|$80,450,596.98|  
-|시애틀|$75,164.86|$80,450,596.98|  
+|Seattle|$75,164.86|$80,450,596.98|  
   
  위의 예에서 Seattle은 Washington의 자식이고 Portland는 Oregon의 자식이며 Oregon과 Washington은 United States의 자식이고 United States는 [Customer Geography].[All Customers]의 자식입니다. 이 예의 표시된 모든 멤버에는 부모 집계 값에 적용되는 다른 형제가 있습니다. 예를 들어, Spokane, Tacoma 및 Everett은 Seattle의 형제 도시이고 모두 Washington Internet Sales Amount에 적용됩니다. Reseller Sales Amount 값은 Customer Geography 특성에 독립적이므로 All 값이 결과에 표시됩니다. 다음 MDX 식은 하위 SELECT 절의 필터링 효과를 설명합니다.  
   
@@ -232,7 +232,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |All Customers|$2,467,248.34|$80,450,596.98|  
 |미국|$2,467,248.34|$80,450,596.98|  
 |워싱턴|$2,467,248.34|$80,450,596.98|  
-|시애틀|$75,164.86|$80,450,596.98|  
+|Seattle|$75,164.86|$80,450,596.98|  
   
  위의 결과는 Washington State의 상위 항목과 하위 항목만 외부 SELECT 문이 실행된 하위 공간의 일부임을 보여 줍니다. Washington을 언급할 때 하위 SELECT에서 Oregon과 다른 모든 형제 주를 언급하지 않았기 때문에 Oregon과 Portland는 하위 큐브에서 제거되었습니다.  
   
@@ -261,7 +261,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |Oregon|$1,170,991.54|$30,513.17|(null)|$443,607.98|$565,372.10|$131,498.29|  
 |Portland|$110,649.54|$2,834.17|(null)|$47,099.91|$53,917.17|$6,798.29|  
 |워싱턴|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
-|시애틀|$75,164.86|$2,695.74|(null)|$19,914.53|$44,820.06|$7,734.54|  
+|Seattle|$75,164.86|$2,695.74|(null)|$19,914.53|$44,820.06|$7,734.54|  
   
 ```  
 SELECT { [Customer].[Customer Geography].[All Customers]  
@@ -284,7 +284,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |All Customers|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |미국|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |워싱턴|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
-|시애틀|$75,164.86|$2,695.74|(null)|$19,914.53|$44,820.06|$7,734.54|  
+|Seattle|$75,164.86|$2,695.74|(null)|$19,914.53|$44,820.06|$7,734.54|  
   
  위의 결과는 예상대로 Washington State의 값으로만 All Products 값이 조정되었음을 보여 줍니다.  
   
@@ -305,7 +305,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Sales Territories|오스트레일리아|캐나다|Central|Northwest|Southwest|  
+||All Sales Territories|오스트레일리아|Canada|Central|Northwest|Southwest|  
 |All Products|$7,591,495.49|$1,281,059.99|$1,547,298.12|$600,205.79|$1,924,763.50|$2,238,168.08|  
 |Mountain-200 Silver, 38|$1,449,576.15|$248,702.93|$275,052.45|$141,103.65|$349,487.01|$435,230.12|  
 |Mountain-200 Black, 38|$1,722,896.50|$218,024.05|$418,726.43|$123,929.46|$486,694.63|$475,521.93|  
@@ -328,7 +328,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Sales Territories|오스트레일리아|캐나다|Northwest|Southwest|영국|  
+||All Sales Territories|오스트레일리아|Canada|Northwest|Southwest|United Kingdom|  
 |All Products|$7,938,218.56|$1,096,312.24|$1,474,255.49|$2,042,674.72|$2,238,099.55|$1,086,876.56|  
 |Mountain-200 Silver, 38|$1,520,958.53|$248,702.93|$275,052.45|$349,487.01|$435,230.12|$212,486.03|  
 |Mountain-200 Silver, 42|$1,392,237.14|$198,127.15|$229,679.01|$361,233.58|$407,854.24|$195,343.16|  

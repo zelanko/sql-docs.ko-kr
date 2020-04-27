@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a69b2286abbc1ba4289fd482b1bbf5a2dfb3e7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070043"
 ---
 # <a name="sample-data-sql-server-data-mining-add-ins"></a>데이터 샘플링(SQL Server 데이터 마이닝 추가 기능)
@@ -70,7 +70,7 @@ ms.locfileid: "66070043"
 ## <a name="related-options"></a>관련 옵션  
  마법사를 진행하면서 다음과 같은 옵션을 사용할 수 있습니다.  
   
-|옵션|주석|  
+|옵션|설명|  
 |-------------|--------------|  
 |원본 데이터 선택 대화 상자(Excel용 데이터 마이닝 클라이언트)|데이터를 포함하는 Excel 범위 또는 테이블을 선택합니다. 외부 데이터를 사용하려는 경우 데이터는 관계형일 수 있지만 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 원본에 포함되어야 합니다. T|  
 |샘플링 유형 선택 페이지(Excel용 데이터 마이닝 클라이언트)|외부 데이터 원본을 사용할 경우 무작위 샘플링 옵션만 사용할 수 있습니다. 또한 **행 개수** 옵션을 사용 하 여 최종 데이터 집합에 만들 행 수를 지정 해야 합니다. 원본 데이터의 비율은 지정할 수 없습니다.|  

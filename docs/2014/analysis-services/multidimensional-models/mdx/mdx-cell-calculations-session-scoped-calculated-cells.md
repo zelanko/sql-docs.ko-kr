@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4388ef278c0762184859162dc55f656aae1c9a15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074433"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>세션 범위 계산 셀 만들기
@@ -73,10 +73,9 @@ FOR String_Expression AS 'MDX_Expression'
    ( CellProperty_Identifier = Scalar_Expression )  
 ```  
   
- 
-  `String_Expression` 값은 다음 표에 나열된 집합의 범주 중 하나로 확인되어야 하는 직각의 단일 차원 MDX 집합 식 목록을 포함합니다.  
+ `String_Expression` 값은 다음 표에 나열된 집합의 범주 중 하나로 확인되어야 하는 직각의 단일 차원 MDX 집합 식 목록을 포함합니다.  
   
-|Category|Description|  
+|범주|설명|  
 |--------------|-----------------|  
 |빈 집합|빈 집합으로 확인되는 MDX 집합 식입니다. 이 경우 계산 셀의 범위는 전체 큐브입니다.|  
 |단일 멤버 집합|단일 멤버로 확인되는 MDX 집합 식입니다.|  
@@ -84,6 +83,6 @@ FOR String_Expression AS 'MDX_Expression'
 |하위 항목 집합|지정된 멤버의 하위 항목으로 확인되는 MDX 집합 식입니다. 이에 대 한 예는 `Descendants`(*Member_Expression*, *Level_Expression*, *Desc_Flag*) MDX 함수입니다.<br /><br /> 자세한 내용은 [Descendants&#40;MDX&#41;](/sql/mdx/descendants-mdx)를 참조하세요.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Mdx로 셀 계산 작성 &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
+ [MDX로 셀 계산 작성&#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
   
   

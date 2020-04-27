@@ -13,16 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c08690cd2f5b77471392cab3aad1587b4cb0f9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080748"
 ---
 # <a name="impact-analysis-dialog-box-analysis-services---multidimensional-data"></a>영향 분석 대화 상자(Analysis Services - 다차원 데이터)
-  
-  **및** 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 영향 분석 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하면 **처리** 대화 상자에 나열된 개체를 처리하는 경우 영향을 받는 종속 개체를 식별하고 선택적으로 처리할 수 있습니다. 
-  **영향 분석** 대화 상자는 **처리** 대화 상자에서 **영향 분석** 을 클릭하여 표시할 수 있습니다.  
+  **및** 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 영향 분석 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하면 **처리** 대화 상자에 나열된 개체를 처리하는 경우 영향을 받는 종속 개체를 식별하고 선택적으로 처리할 수 있습니다. **영향 분석** 대화 상자는 **처리** 대화 상자에서 **영향 분석** 을 클릭하여 표시할 수 있습니다.  
   
 > [!NOTE]  
 >  두 가지 이상의 방식으로 영향을 받을 경우 한 개체가 두 번 이상 표시됩니다.  
@@ -34,12 +32,11 @@ ms.locfileid: "66080748"
  **개체 이름**  
  처리해야 하는 종속 개체의 이름을 표시합니다. 이름 왼쪽에 있는 아이콘은 개체 유형을 나타냅니다.  
   
- **형식**  
+ **Type**  
  처리해야 하는 종속 개체의 유형을 표시합니다.  
   
  **영향 유형**  
- 
-  **처리** 대화 상자에서 개체를 처리할 경우 종속 개체에 미치는 영향을 표시합니다. 다음 표에서는 처리 시 발생 가능한 영향을 나열하고 각 영향의 결과로 발생하는 경고 또는 오류를 표시합니다.  
+ **처리** 대화 상자에서 개체를 처리할 경우 종속 개체에 미치는 영향을 표시합니다. 다음 표에서는 처리 시 발생 가능한 영향을 나열하고 각 영향의 결과로 발생하는 경고 또는 오류를 표시합니다.  
   
 |영향|메시지|  
 |------------|-------------|  

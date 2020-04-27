@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fdc5f0326152eaa62bd41364ace48d7e02fbd0f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070130"
 ---
 # <a name="row-filters-role-designertabular-model"></a>행 필터(역할 디자이너)(테이블 형식 모델)
@@ -37,6 +37,6 @@ ms.locfileid: "66070130"
   
 ## <a name="see-also"></a>참고 항목  
  [테이블 형식 모델 역할 &#40;SSAS 테이블 형식&#41;](tabular-models/roles-ssas-tabular.md)   
- [SSMS &#40;SSAS 테이블 형식&#41;를 사용 하 여 역할 관리](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
+ [SSMS를 사용하여 역할 관리&#40;SSAS 테이블 형식&#41;](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
   
   

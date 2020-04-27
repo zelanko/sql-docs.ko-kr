@@ -15,14 +15,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 02d084aea4491982d560f1cf0b8dc449b8502f09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073594"
 ---
 # <a name="move-an-analysis-services-database"></a>Analysis Services 데이터베이스 이동
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA(데이터베이스 관리자)가 다차원 또는 테이블 형식 model 데이터베이스를 다른 위치로 이동해야 하는 경우가 종종 있습니다. 이러한 경우는 보다 나은 성능, 데이터베이스 확장에 따른 공간 확보, 또는 제품 업그레이드를 위해 데이터베이스를 다른 디스크로 이동하는 것과 같이 대부분 비즈니스 요구 사항에 의해 발생합니다.  
   
  데이터베이스는 여러 가지 방법으로 이동할 수 있습니다. 이 문서에서는 다음과 같은 일반적인 시나리오에 대해 설명합니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "66073594"
 > [!NOTE]  
 >  암호를 할당하지 않고 데이터베이스를 분리하면 데이터베이스가 안전하지 않은 상태에 놓이게 됩니다. 데이터베이스에 암호를 할당하여 기밀 정보를 보호하는 것이 좋습니다. 또한 데이터베이스 폴더, 하위 폴더 및 파일에 각각 해당 액세스 보안을 적용하여 무단 액세스를 방지해야 합니다.  
   
-## <a name="procedures"></a>프로시저  
+## <a name="procedures"></a>절차  
   
 #### <a name="moving-a-database-interactively-using-ssms"></a>SSMS를 사용하여 대화식으로 데이터베이스 이동  
   
@@ -54,8 +53,7 @@ ms.locfileid: "66073594"
   
 6.  **데이터베이스** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **연결** ...을 선택 합니다.  
   
-7.  
-  **폴더** 입력란에 데이터베이스 폴더의 새 위치를 입력합니다. 또는 찾아보기 단추 (**...**)를 사용 하 여 데이터베이스 폴더를 찾을 수 있습니다.  
+7.  **폴더** 입력란에 데이터베이스 폴더의 새 위치를 입력합니다. 또는 찾아보기 단추 (**...**)를 사용 하 여 데이터베이스 폴더를 찾을 수 있습니다.  
   
 8.  데이터베이스에 `ReadWrite` 대 한 모드를 선택 합니다.  
   
@@ -121,8 +119,7 @@ ms.locfileid: "66073594"
   
  `</Detach>`  
   
-1.  
-  `%dbName%` 은 데이터베이스 이름으로 대체하고 `%password%` 는 암호로 대체합니다. % 문자는 템플릿의 일부이므로 제거해야 합니다.  
+1.  `%dbName%` 은 데이터베이스 이름으로 대체하고 `%password%` 는 암호로 대체합니다. % 문자는 템플릿의 일부이므로 제거해야 합니다.  
   
 2.  XMLA 명령을 실행합니다.  
   
@@ -138,8 +135,7 @@ ms.locfileid: "66073594"
   
  `</Attach>`  
   
-1.  
-  `%dbFolder%`는 데이터베이스 폴더의 전체 UNC 경로로 대체하고 `%ReadOnlyMode%`는 해당 값(`ReadOnly` 또는 `ReadWrite`)으로, `%password%`는 암호로 대체합니다. % 문자는 템플릿의 일부이므로 제거해야 합니다.  
+1.  `%dbFolder%`는 데이터베이스 폴더의 전체 UNC 경로로 대체하고 `%ReadOnlyMode%`는 해당 값(`ReadOnly` 또는 `ReadWrite`)으로, `%password%`는 암호로 대체합니다. % 문자는 템플릿의 일부이므로 제거해야 합니다.  
   
 2.  XMLA 명령을 실행합니다.  
   

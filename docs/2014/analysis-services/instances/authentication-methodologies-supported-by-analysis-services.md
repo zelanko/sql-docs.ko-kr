@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a57aff903d41e8bcddef25e21def39a45e33d23f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080339"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Analysis Services에서 지원하는 인증 방법
@@ -34,19 +34,18 @@ ms.locfileid: "66080339"
   
  BI 및 Analysis Services 인증 흐름에 대한 자세한 내용은 [Microsoft BI 인증 및 ID 위임](https://go.microsoft.com/fwlink/?LinkID=286576)을 참조하십시오.  
   
-##  <a name="bkmk_auth"></a>인증 대안 이해  
+##  <a name="understanding-your-authentication-alternatives"></a><a name="bkmk_auth"></a> 인증 대체 방법 이해  
  Analysis Services 데이터베이스에 연결하려면 Windows 사용자 또는 그룹 ID 및 연결된 사용 권한이 필요합니다. 이 ID는 보고서를 보려는 사용자가 사용하는 일반적인 목적의 로그인이지만, 개별 사용자의 ID를 포함할 가능성이 높습니다.  
   
  테이블 형식 또는 다차원 모델은 대개 요청하는 대상에 따라 개체별로 또는 데이터 자체 내에서 서로 다른 수준의 데이터 액세스 권한을 갖게 됩니다. 이 요구 사항을 충족하기 위해 NTLM, Kerberos, EffectiveUserName 또는 기본 인증을 사용할 수 있습니다. 이러한 모든 기술은 각 연결을 통해 서로 다른 사용자 ID에 전달하기 위한 방법을 제공합니다. 그러나, 이러한 방법에는 대부분 단일 홉 제한이 적용됩니다. 위임이 가능한 Kerberos 인증을 통해서만 기존 사용자 ID로 여러 컴퓨터 연결을 거쳐 원격 서버의 백 엔드 데이터 저장소로 이동할 수 있습니다.  
   
  **NTLM**  
   
- 
-  `SSPI=Negotiate`를 지정하는 연결의 경우, NTLM은 Kerberos 도메인 컨트롤러를 사용할 수 없을 때 사용되는 백업 인증 하위 시스템입니다. NTLM을 사용하는 경우 요청이 클라이언트에서 서버로의 직접 연결 요청이고, 연결을 요청하는 사람은 해당 리소스에 대한 권한을 갖고 있으며, 클라이언트와 서버 컴퓨터가 같은 도메인에 있는 한 모든 사용자 또는 클라이언트 애플리케이션은 서버 리소스에 액세스할 수 있습니다.  
+ `SSPI=Negotiate`를 지정하는 연결의 경우, NTLM은 Kerberos 도메인 컨트롤러를 사용할 수 없을 때 사용되는 백업 인증 하위 시스템입니다. NTLM을 사용하는 경우 요청이 클라이언트에서 서버로의 직접 연결 요청이고, 연결을 요청하는 사람은 해당 리소스에 대한 권한을 갖고 있으며, 클라이언트와 서버 컴퓨터가 같은 도메인에 있는 한 모든 사용자 또는 클라이언트 애플리케이션은 서버 리소스에 액세스할 수 있습니다.  
   
  다중 계층 솔루션에서는 NTLM의 단일 홉 제한이 주요 제약 조건일 수 있습니다. 요청을 만드는 사용자 ID는 정확히 하나의 원격 서버에서 가장될 수 있지만 더 이상 이동하지는 않습니다. 현재 작업에 여러 컴퓨터에서 실행 중인 서비스가 필요한 경우, 백 엔드 서버에서 보안 토큰을 다시 사용하여 Kerberos 제한된 위임을 구성해야 합니다. 또는 저장된 자격 증명이나 기본 인증을 사용하여 단일홉 접속에 대한 새 ID 정보에 전달할 수 있습니다.  
   
- **Kerberos 인증 및 Kerberos 제한 위임**  
+ **Kerberos 인증 및 Kerberos 제한된 위임**  
   
  Kerberos 인증은 Active Directory 도메인에서 Windows 통합 보안의 기준입니다. NTLM과 마찬가지로, 위임을 사용하도록 설정하지 않는 한 Kerberos를 통한 가장은 단일 홉으로 제한됩니다.  
   
@@ -71,9 +70,9 @@ ms.locfileid: "66080339"
   
  익명 인증의 경우 익명 사용자 ID를 특정 Windows 사용자 계정(기본적으로 IUSR_GUEST) 또는 애플리케이션 풀 ID로 설정할 수 있습니다. 익명 사용자 계정은 Analysis Services 연결에서 사용되며 Analysis Services 인스턴스에서 데이터 액세스 권한을 갖고 있어야 합니다. 이 방법을 사용할 경우 익명 계정에 연결된 사용자 ID만으로 연결하게 됩니다. 애플리케이션에서 추가 ID 관리를 요구하는 경우, 다른 인증 방법 중 하나를 선택하거나 사용자의 ID 관리 솔루션으로 보완해야 할 수 있습니다.  
   
- 기본 및 익명 인증은 HTTP 액세스에 대해 Analysis Services를 구성해야 사용할 수 있으며, 이때 IIS 및 msmdpump.dll을 사용하여 연결을 설정합니다. 자세한 내용은 [IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](configure-http-access-to-analysis-services-on-iis-8-0.md)을 참조하세요.  
+ 기본 및 익명 인증은 HTTP 액세스에 대해 Analysis Services를 구성해야 사용할 수 있으며, 이때 IIS 및 msmdpump.dll을 사용하여 연결을 설정합니다. 자세한 내용은 [IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](configure-http-access-to-analysis-services-on-iis-8-0.md)을 참조하십시오.  
   
- **저장된 자격 증명**  
+ **저장 된 자격 증명**  
   
  대부분의 중간 계층 애플리케이션 서비스에는 나중에 Analysis Services 또는 SQL Server 관계형 엔진 등 하위 데이터 저장소에서 데이터를 검색하는 데 사용되는 사용자 이름과 암호를 저장하는 기능이 있습니다. 즉, 저장된 자격 증명은 데이터를 가져오는 다섯 번째 방법입니다. 이 방법의 단점은 사용자 이름 및 암호를 최신으로 유지하는 데 필요한 유지 관리 비용, 그리고 연결 시 단일 ID를 사용한다는 점 등입니다. 사용자 솔루션에서 원래 호출자의 ID를 요구하는 경우에는 저장된 자격 증명을 대안으로 이용할 수 없습니다.  
   

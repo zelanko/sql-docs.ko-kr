@@ -15,14 +15,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1eabb28250699305952d1d0746dc9487a1a25271
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076716"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>Analysis Services 프로젝트 속성 구성(SSDT)
-  
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트의 작성 및 배포에 영향을 미치는 몇 가지 기본 속성과 함께 정의됩니다.  
   
  프로젝트 속성을 변경하려면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 개체를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 또는 프로젝트 메뉴에서 **속성** 을 클릭해도 됩니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "66076716"
 ## <a name="property-description"></a>속성 설명  
  다음 표에서는 각 프로젝트 속성에 대해 설명하고 기본값을 나열하며 값 변경에 대한 정보를 제공합니다.  
   
-|속성|기본 설정|Description|  
+|속성|기본 설정|설명|  
 |--------------|---------------------|-----------------|  
 |빌드 / 배포 서버 버전|프로젝트 개발에 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전|프로젝트가 최종적으로 배포될 서버의 버전을 지정합니다. 여러 개발자가 한 프로젝트에서 작업하는 경우 개발자가 서버 버전을 이해해야만 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 통합될 기능을 알 수 있습니다.|  
 |빌드 / 배포 서버 버전|프로젝트 개발에 사용되는 버전|프로젝트가 최종적으로 배포될 서버의 버전을 지정합니다.|  
@@ -52,6 +51,6 @@ ms.locfileid: "66076716"
   
 ## <a name="see-also"></a>참고 항목  
  [SSDT &#40;Analysis Services 프로젝트 빌드&#41;](build-analysis-services-projects-ssdt.md)   
- [SSDT&#41;&#40;Analysis Services 프로젝트 배포](deploy-analysis-services-projects-ssdt.md)  
+ [Analysis Services 프로젝트 배포&#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

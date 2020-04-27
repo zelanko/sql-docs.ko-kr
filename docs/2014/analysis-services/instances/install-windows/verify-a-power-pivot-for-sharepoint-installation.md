@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4ce1b1485885719bcd31cb085d43379239612d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079871"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>SharePoint용 PowerPivot 설치 확인
   SharePoint 팜에 설치하는 SharePoint용 PowerPivot 인스턴스는 SharePoint 중앙 관리를 통해 관리됩니다. 최소한 중앙 관리와 SharePoint 사이트에서 페이지를 검사하여 PowerPivot 서버 구성 요소 및 기능이 사용 가능한지를 확인할 수는 있습니다. 그러나 설치를 전체적으로 확인하려면 SharePoint에 게시하여 라이브러리에서 액세스할 수 있는 PowerPivot 통합 문서가 있어야 합니다. 테스트를 위해 이미 PowerPivot 데이터가 포함된 예제 통합 문서를 게시하여 SharePoint 통합이 올바르게 구성되어 있는지 확인하는 데 사용할 수 있습니다.  
   
-##  <a name="verifyinstall"></a>중앙 관리 통합 확인  
+##  <a name="verify-central-administration-integration"></a><a name="verifyinstall"></a> 중앙 관리 통합을 확인하려면  
  중앙 관리와 PowerPivot의 통합을 확인하려면 다음을 수행하십시오.  
   
 1.  시작 메뉴에서 **모든 프로그램**을 클릭 하 고 Microsoft Sharepoint 2010 제품을 연 다음 **Sharepoint 2010 중앙 관리**를 클릭 합니다.  
@@ -33,27 +33,22 @@ ms.locfileid: "66079871"
   
     2.  보안 탭의 **보안 설정을 보거나 변경할 영역을 선택하십시오.** 섹션에서 신뢰할 수 있는 사이트를 클릭하고 사이트를 클릭합니다.  
   
-    3.  
-  **이 영역에 있는 모든 사이트에 대해 서버 확인(https:)을 요청** 확인란의 선택을 취소합니다.  
+    3.  **이 영역에 있는 모든 사이트에 대해 서버 확인(https:)을 요청** 확인란의 선택을 취소합니다.  
   
-    4.  
-  **영역에 웹 사이트 추가**에 사이트 URL을 입력하고 **추가**를 클릭합니다.  
+    4.  **영역에 웹 사이트 추가**에 사이트 URL을 입력하고 **추가**를 클릭합니다.  
   
-    5.  
-  **닫기**를 클릭한 후 **확인**을 클릭합니다.  
+    5.  **닫기**, **확인**을 차례로 클릭합니다.  
   
         > [!NOTE]  
         >  SharePoint 설치 설명서에는 프록시 서버 오류를 해결하고 업데이트를 다운로드 및 설치할 수 있도록 Internet Explorer의 강화된 보안 구성을 해제하기 위한 추가 지침이 포함되어 있습니다. 자세한 내용은 Microsoft 웹 사이트의 **SQL Server와 함께 단일 서버 배포** 에서 [추가 태스크 수행](https://go.microsoft.com/fwlink/?LinkId=177754) 섹션을 참조하십시오.  
   
 3.  중앙 관리의 시스템 설정에서 **팜 기능 관리**를 클릭합니다.  
   
-4.  
-  **PowerPivot 통합 기능** 이 **활성**인지 확인합니다.  
+4.  **PowerPivot 통합 기능** 이 **활성**인지 확인합니다.  
   
 5.  중앙 관리의 시스템 설정에서 **서버의 서비스 관리**를 클릭 합니다.  
   
-6.  
-  **SQL Server Analysis Services** 및 **SQL Server PowerPivot 시스템 서비스** 가 시작되었는지 확인합니다.  
+6.  **SQL Server Analysis Services** 및 **SQL Server PowerPivot 시스템 서비스** 가 시작되었는지 확인합니다.  
   
 7.  중앙 관리의 응용 프로그램 관리에서 **서비스 응용 프로그램 관리**를 클릭 합니다.  
   
@@ -75,7 +70,7 @@ ms.locfileid: "66079871"
 ## <a name="verify-data-access-on-the-server"></a>서버의 데이터 액세스 확인  
  서버에서 PowerPivot 데이터 액세스를 확인하려면 다음을 수행하십시오.  
   
-1.  Reporting Services 자습서와 함께 제공 되는 피크닉 데이터 샘플을 [다운로드](https://go.microsoft.com/fwlink/?LinkID=219108) 합니다. 이 다운로드에 포함된 예제 통합 문서를 사용하여 PowerPivot 데이터 액세스를 확인합니다. 파일의 압축을 풉니다.  
+1.  Reporting Services 자습서와 함께 제공되는 Picnic 데이터 예제를[다운로드](https://go.microsoft.com/fwlink/?LinkID=219108) 합니다. 이 다운로드에 포함된 예제 통합 문서를 사용하여 PowerPivot 데이터 액세스를 확인합니다. 파일의 압축을 풉니다.  
   
 2.  Excel 통합 문서(.xlsx)를 공유 문서로 업로드합니다. 통합 문서에는 포함된 PowerPivot 데이터가 들어 있습니다.  
   

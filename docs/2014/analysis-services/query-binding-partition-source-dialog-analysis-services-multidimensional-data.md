@@ -13,19 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 604a42cc0b3519f1034733e12f72dc1a7c969ce6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070572"
 ---
 # <a name="query-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>쿼리 바인딩 세부 정보(파티션 원본 대화 상자)(Analysis Services - 다차원 데이터)
-  
-  **파티션 원본** 대화 상자의 **쿼리 바인딩** 옵션을 사용하여 파티션에 대한 데이터를 제공하는 쿼리를 지정할 수 있습니다. 
-  **파티션 원본** 대화 상자의 **바인딩 유형** 옵션에서 **쿼리 바인딩** 을 선택하여 이 창을 표시할 수 있습니다.  
+  **파티션 원본** 대화 상자의 **쿼리 바인딩** 옵션을 사용하여 파티션에 대한 데이터를 제공하는 쿼리를 지정할 수 있습니다. **파티션 원본** 대화 상자의 **바인딩 유형** 옵션에서 **쿼리 바인딩** 을 선택하여 이 창을 표시할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
- **데이터 원본**  
+ **데이터 소스**  
  파티션에 대한 팩트 데이터를 제공하기 위해 쿼리를 실행할 데이터 원본을 선택합니다.  
   
  **쿼리**  
@@ -35,8 +33,7 @@ ms.locfileid: "66070572"
 >  WHERE 절을 지정하여 레코드 하위 집합을 이 파티션에 사용할 수 있습니다. 이것은 여러 개의 파티션이 단일 팩트 테이블을 기반으로 하는 경우 데이터 복제를 방지하기 위해 반드시 필요합니다. 자세한 내용은 [파티션 원본 대화 상자 &#40;Analysis Services 다차원 데이터&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)를 참조 하세요.  
   
  **있는지**  
- 
-  **쿼리** 의 문이 유효한 SQL 문인지 확인하려면 클릭합니다.  
+ **쿼리** 의 문이 유효한 SQL 문인지 확인하려면 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [파티션 원본 대화 상자 &#40;Analysis Services 다차원 데이터&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  

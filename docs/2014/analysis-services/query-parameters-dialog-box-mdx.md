@@ -13,16 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7ad326f5205aa7efc3be9aee79af3671d892130
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070525"
 ---
 # <a name="query-parameters-dialog-box-mdx"></a>쿼리 매개 변수 대화 상자(MDX)
-  
-  **및** 에서 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 쿼리 매개 변수 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 집합, 차원 및 하위 큐브를 정의하는 데 사용되는 MDX 쿼리에 매개 변수를 추가합니다. 
-  **MDX 쿼리 작성기** 대화 상자에서 **매개 변수** 아이콘을 클릭하여 **쿼리 매개 변수** 대화 상자를 표시할 수 있습니다.  
+  **및** 에서 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 쿼리 매개 변수 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 집합, 차원 및 하위 큐브를 정의하는 데 사용되는 MDX 쿼리에 매개 변수를 추가합니다. **MDX 쿼리 작성기** 대화 상자에서 **매개 변수** 아이콘을 클릭하여 **쿼리 매개 변수** 대화 상자를 표시할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
  **매개 변수**  
@@ -35,7 +33,7 @@ ms.locfileid: "66070525"
  매개 변수가 특정 계층에 적용된 경우 목록에서 계층을 선택합니다.  
   
  **다중 값**  
- Description  
+ 설명  
   
  **기본값**  
  필요에 따라 매개 변수에 대한 기본값을 표시합니다. 기본적으로 값이 지정되지 않습니다.  

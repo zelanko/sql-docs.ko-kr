@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b1d0c01be4901e771278c82c4277c280aeb43ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074515"
 ---
 # <a name="building-cell-calculations-in-mdx-mdx"></a>MDX로 셀 계산 작성(MDX)
@@ -34,11 +34,11 @@ ms.locfileid: "66074515"
   
  작성 범위 측면에서, 계산 셀은 한 세션 또는 단일 쿼리 중에만 임시로 만들거나 큐브의 일부로 전체적으로 사용할 수 있다는 점에서 명명된 집합 및 계산 멤버 모두와 비슷합니다.  
   
--   **쿼리 범위** MDX 쿼리의 일부로 정의 되는 계산 셀을 만들어서 해당 범위가 쿼리로 제한 되도록 하려면 WITH 키워드를 사용 합니다. 그런 다음 MDX SELECT 문 내에서 계산 셀을 사용할 수 있습니다. 이 방식을 사용할 경우 `WITH` 키워드를 사용하여 만든 계산 셀은 SELECT 문을 배포하지 않아도 변경할 수 있습니다.  
+-   **쿼리 범위** MDX 쿼리의 일부로 정의되는 계산 셀을 만들어서 해당 범위가 쿼리로 제한되도록 하려면 WITH 키워드를 사용합니다. 그런 다음 MDX SELECT 문 내에서 계산 셀을 사용할 수 있습니다. 이 방식을 사용할 경우 `WITH` 키워드를 사용하여 만든 계산 셀은 SELECT 문을 배포하지 않아도 변경할 수 있습니다.  
   
      WITH 키워드를 사용하여 계산 멤버를 만드는 방법에 대한 자세한 내용은 [쿼리 범위 셀 계산 만들기&#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)를 참조하세요.  
   
--   **세션 범위** 범위가 MDX 세션의 수명 인 쿼리 컨텍스트 보다 범위가 더 넓은 계산 멤버를 만들려면 CREATE CELL 계산 또는 ALTER CUBE 문을 사용 합니다 (예를 들어,  
+-   **세션 범위** 범위가 쿼리 컨텍스트보다 넓은 계산 멤버, 즉 범위가 MDX 세션의 수명인 계산 멤버를 만들려면 CREATE CELL CALCULATION 또는 ALTER CUBE 문을 사용합니다.  
   
      CREATE CELL CALCULATION 또는 ALTER CUBE 문을 사용하여 세션에서 계산 셀을 만드는 방법에 대한 자세한 내용은 [세션 범위 계산 셀 만들기](mdx-cell-calculations-session-scoped-calculated-cells.md)를 참조하세요.  
   
@@ -46,6 +46,6 @@ ms.locfileid: "66074515"
  [ALTER CUBE 문은 MDX &#40;&#41;](/sql/mdx/mdx-data-definition-alter-cube)   
  [MDX를 &#40;셀 계산 문 만들기&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)   
  [MDX&#41;&#40;쿼리 범위 셀 계산 만들기](../../multidimensional-models-olap-logical-cube-objects/calculations.md)   
- [MDX 쿼리 기본 사항 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

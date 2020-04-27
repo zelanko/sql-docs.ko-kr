@@ -26,17 +26,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d86734023080c9b7fc62cff636d4f1952d00d0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072987"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>파티션 스토리지 설정(Analysis Services - 다차원)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 저장소 모드 및 캐싱 옵션에 대 한 몇 가지 표준 저장소 구성을 제공 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 합니다. 이를 통해 업데이트 알림, 대기 시간 및 데이터 다시 작성에 대한 일반적인 구성을 사용할 수 있습니다.  
   
- 
-  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 큐브 파티션 탭 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 파티션 속성 페이지에서 파티션 스토리지를 지정할 수 있습니다.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 큐브 파티션 탭 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 파티션 속성 페이지에서 파티션 스토리지를 지정할 수 있습니다.  
   
 ## <a name="guidelines-for-choosing-a-storage-mode"></a>스토리지 모드 선택에 대한 지침  
  큰 측정값 그룹의 경우 파티션별로 다르게 스토리지를 구성하는 것이 일반적입니다. 다음 지침을 고려하세요.  
@@ -55,7 +54,7 @@ ms.locfileid: "66072987"
   
 ## <a name="storage-settings-descriptions"></a>스토리지 설정 설명  
   
-|표준 스토리지 설정|Description|  
+|표준 스토리지 설정|설명|  
 |------------------------------|-----------------|  
 |실시간 ROLAP|OLAP은 실시간으로 수행됩니다. 세부 데이터와 집계는 관계형 형식으로 저장됩니다. 데이터가 변경되고 모든 쿼리가 대기 시간 없이 현재 데이터 상태를 반영하면 서버에서 알림을 수신합니다.<br /><br /> 이 설정은 사용자가 항상 최신 데이터를 사용해야 하기 때문에 업데이트를 매우 자주 연속적으로 수행하는 데이터 원본에 일반적으로 사용됩니다. 클라이언트 애플리케이션에서 생성한 쿼리 유형에 따라 이 방법은 응답 시간이 가장 느릴 수 있습니다.|  
 |실시간 HOLAP|OLAP은 실시간으로 수행됩니다. 세부 데이터는 관계형 형식으로 저장되는 반면 집계는 다차원 형식으로 저장됩니다. 데이터가 변경되고 필요에 따라 MOLAP(다차원 OLAP) 집계가 새로 고쳐지면 서버에서 알림을 수신합니다. MOLAP 캐시는 생성되지 않습니다. 데이터 원본을 업데이트할 때마다 집계를 새로 고칠 때까지 서버에서 실시간 ROLAP(관계형 OLAP)으로 전환합니다. 모든 쿼리는 대기 시간 없이 현재 데이터 상태를 반영합니다.<br /><br /> 이 설정은 사용자가 항상 최신 데이터를 사용해야 하고 실시간 ROLAP만큼은 아니지만 업데이트를 자주 연속적으로 수행하는 데이터 원본에 일반적으로 사용됩니다. 이 방법의 성능은 ROLAP 스토리지보다 전반적으로 좋습니다. 데이터 원본의 대기 시간이 충분한 경우 이 설정에서 MOLAP 성능을 얻을 수 있습니다.|  
@@ -76,8 +75,7 @@ ms.locfileid: "66072987"
   
 -   데이터 원본 변경과 관계없이 캐시된 MOLAP 개체를 정기적으로 업데이트하려면 캐시 강제 업데이트를 예약할 수 있습니다. 실시간 OLAP의 이점은 원본 데이터 변경 빈도로 할당된 대기 시간과 데이터베이스 크기에 따라 달라집니다. 사용자가 가능한 한 ROLAP이 아닌 캐시로 쿼리를 보내는 것이 좋습니다.  
   
- 
-  **차원에 설정 적용** 확인란을 선택하면 측정값 그룹과 관련된 차원에 동일한 스토리지 설정이 적용됩니다. 처음에는 차원 값이 파티션 값과 같습니다.  
+ **차원에 설정 적용** 확인란을 선택하면 측정값 그룹과 관련된 차원에 동일한 스토리지 설정이 적용됩니다. 처음에는 차원 값이 파티션 값과 같습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [다차원 모델의 파티션](partitions-in-multidimensional-models.md)  

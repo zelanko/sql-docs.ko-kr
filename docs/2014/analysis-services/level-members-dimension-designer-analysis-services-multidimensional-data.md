@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad602710cab83e2be25a03a4da6cce0c3407493e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078106"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>수준 및 멤버(브라우저 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
@@ -38,8 +38,7 @@ ms.locfileid: "66078106"
   
 ## <a name="options"></a>옵션  
  **현재 수준**  
- 
-  **트리** 에서 현재 선택한 멤버가 속한 수준을 표시합니다.  
+ **트리** 에서 현재 선택한 멤버가 속한 수준을 표시합니다.  
   
  **Tree**  
  현재 선택한 계층 및 언어의 멤버를 표시합니다.  
@@ -79,8 +78,7 @@ ms.locfileid: "66078106"
 >  이 옵션은 쓰기 저장 모드가 설정된 경우에만 표시됩니다.  
   
  **붙여넣기**  
- 
-  **잘라내기** 를 사용하여 이전에 제거한 멤버를 선택한 멤버 바로 뒤에 붙여넣습니다.  
+ **잘라내기** 를 사용하여 이전에 제거한 멤버를 선택한 멤버 바로 뒤에 붙여넣습니다.  
   
 > [!NOTE]  
 >  이 옵션은 쓰기 저장 모드가 설정된 경우에만 표시됩니다.  
@@ -94,7 +92,7 @@ ms.locfileid: "66078106"
 > [!NOTE]  
 >  이 옵션은 쓰기 저장 모드가 설정된 경우에만 표시됩니다.  
   
- **바꾸면**  
+ **이름 바꾸기**  
  선택한 멤버의 이름을 편집하려면 선택합니다.  
   
 > [!NOTE]  
@@ -104,30 +102,24 @@ ms.locfileid: "66078106"
 >  이 옵션은 쓰기 저장 모드가 설정된 경우에만 표시됩니다.  
   
  **멤버 필터**  
- 
-  **멤버 필터** 대화 상자를 표시하고 선택한 계층에 대한 **수준 및 멤버**에 표시된 멤버를 필터링할 수 있습니다. 
-  **멤버 필터** 대화 상자에 대한 자세한 내용은 [멤버 필터 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](filter-members-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.  
+ **멤버 필터** 대화 상자를 표시하고 선택한 계층에 대한 **수준 및 멤버**에 표시된 멤버를 필터링할 수 있습니다. **멤버 필터** 대화 상자에 대한 자세한 내용은 [멤버 필터 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](filter-members-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.  
   
  **모두 확장**  
- 
-  **트리**에서 모든 멤버를 확장합니다.  
+ **트리**에서 모든 멤버를 확장합니다.  
   
 > [!NOTE]  
 >  이 옵션은 최하위 수준이 아닌 수준의 멤버를 선택한 경우에만 사용할 수 있습니다.  
   
  **모두 축소**  
- 
-  **트리**에서 모든 멤버를 축소합니다.  
+ **트리**에서 모든 멤버를 축소합니다.  
   
  **멤버 확장**  
- 
-  **트리**에서 선택한 멤버를 확장합니다.  
+ **트리**에서 선택한 멤버를 확장합니다.  
   
  **멤버 축소**  
- 
-  **트리**에서 선택한 멤버를 축소합니다.  
+ **트리**에서 선택한 멤버를 축소합니다.  
   
- **쓰기**  
+ **쓰기 저장(writeback)**  
  쓰기 저장 모드를 설정하려면 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  

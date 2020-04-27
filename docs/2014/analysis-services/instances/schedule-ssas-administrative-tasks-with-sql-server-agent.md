@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9b24e99ac31b126888a1fa49f3ef5547a4f82dda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079680"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>SQL Server 에이전트를 사용하여 SSAS 관리 태스크 예약
@@ -34,27 +34,21 @@ ms.locfileid: "66079680"
 ## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>예제 1: 예약된 태스크에서 차원 처리  
  이 예에서는 차원을 처리하는 작업을 만들고 예약하는 방법을 보여 줍니다.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 예약된 태스크는 SQL Server 에이전트 작업에 포함되는 XMLA 스크립트입니다. 이 작업은 원하는 시간 또는 빈도로 실행하도록 예약됩니다. SQL Server 에이전트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 일부이므로 데이터베이스 엔진 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 관리 태스크를 만들고 예약할 수 있습니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 예약된 태스크는 SQL Server 에이전트 작업에 포함되는 XMLA 스크립트입니다. 이 작업은 원하는 시간 또는 빈도로 실행하도록 예약됩니다. SQL Server 에이전트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 일부이므로 데이터베이스 엔진 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 관리 태스크를 만들고 예약할 수 있습니다.  
   
-###  <a name="bkmk_CreateScript"></a>SQL Server 에이전트 작업에서 차원 처리를 위한 스크립트 만들기  
+###  <a name="create-a-script-for-processing-a-dimension-in-a-sql-server-agent-job"></a><a name="bkmk_CreateScript"></a> SQL Server 에이전트 작업에서 차원 처리를 위한 스크립트 만들기  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 연결합니다. 데이터베이스 폴더를 열고 차원을 찾습니다. 차원을 마우스 오른쪽 단추로 클릭하고 **처리**를 선택합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 연결합니다. 데이터베이스 폴더를 열고 차원을 찾습니다. 차원을 마우스 오른쪽 단추로 클릭하고 **처리**를 선택합니다.  
   
-2.  
-  **차원 처리** 대화 상자에 있는 **개체 목록** 의 **처리 옵션**열에서 이 열에 대한 옵션이 **전체 처리**인지 확인합니다. 그렇지 않을 경우 **처리 옵션**에서 해당 옵션을 클릭하고 드롭다운 목록에서 **전체 처리** 를 선택합니다.  
+2.  **차원 처리** 대화 상자에 있는 **개체 목록** 의 **처리 옵션**열에서 이 열에 대한 옵션이 **전체 처리**인지 확인합니다. 그렇지 않을 경우 **처리 옵션**에서 해당 옵션을 클릭하고 드롭다운 목록에서 **전체 처리** 를 선택합니다.  
   
-3.  
-  **스크립트**를 클릭합니다.  
+3.  **스크립트**를 클릭합니다.  
   
      이 단계에서 차원을 처리하는 XMLA 스크립트가 포함된 **XML 쿼리** 창이 열립니다.  
   
-4.  
-  **차원 처리** 대화 상자에서 **취소** 를 클릭하여 대화 상자를 닫습니다.  
+4.  **차원 처리** 대화 상자에서 **취소** 를 클릭하여 대화 상자를 닫습니다.  
   
-5.  
-  **XMLA 쿼리** 창에서 XMLA 스크립트를 강조 표시하고 강조된 스크립트를 마우스 오른쪽 단추로 클릭한 후 **복사**를 선택합니다.  
+5.  **XMLA 쿼리** 창에서 XMLA 스크립트를 강조 표시하고 강조된 스크립트를 마우스 오른쪽 단추로 클릭한 후 **복사**를 선택합니다.  
   
      이 단계에서 XMLA 스크립트를 Windows 클립보드에 복사합니다. XMLA 스크립트를 클립보드에 남겨 두거나 메모장 또는 다른 텍스트 편집기에 붙여 넣을 수 있습니다. 다음은 XMLA 스크립트의 예입니다.  
   
@@ -73,88 +67,68 @@ ms.locfileid: "66079680"
     </Batch>  
     ```  
   
-###  <a name="bkmk_ProcessJob"></a>차원 처리 작업 만들기 및 예약  
+###  <a name="create-and-schedule-the-dimension-processing-job"></a><a name="bkmk_ProcessJob"></a> 차원 처리 작업 만들기 및 예약  
   
 1.  데이터베이스 엔진 인스턴스에 연결한 후 개체 탐색기를 엽니다.  
   
-2.  
-  **SQL Server 에이전트**를 확장합니다.  
+2.  **SQL Server 에이전트**를 확장합니다.  
   
-3.  
-  **작업** 을 마우스 오른쪽 단추로 클릭하고 **새 작업**을 선택합니다.  
+3.  **작업** 을 마우스 오른쪽 단추로 클릭하고 **새 작업**을 선택합니다.  
   
-4.  
-  **새 작업** 대화 상자에서 **이름**에 작업 이름을 입력합니다.  
+4.  **새 작업** 대화 상자에서 **이름**에 작업 이름을 입력합니다.  
   
-5.  
-  **페이지 선택**에서 **단계**를 선택하고 **새로 만들기**를 클릭합니다.  
+5.  **페이지 선택**에서 **단계**를 선택하고 **새로 만들기**를 클릭합니다.  
   
-6.  
-  **새 작업 단계** 대화 상자에서 **단계 이름**에 단계 이름을 입력합니다.  
+6.  **새 작업 단계** 대화 상자에서 **단계 이름**에 단계 이름을 입력합니다.  
   
-7.  
-  **서버**에서 **의 기본 인스턴스에 대해 **localhost[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 입력하고 명명된 인스턴스에 대해 **localhost\\**\<*instance name*>를 입력합니다.  
+7.  **서버**에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 기본 인스턴스에 대해 **localhost**를 입력하고 명명된 인스턴스에 대해 **localhost\\**\<*instance name*>를 입력합니다.  
   
      원격 컴퓨터에서 작업을 실행하려는 경우 작업을 실행할 서버 이름과 인스턴스 이름을 사용합니다. 기본 인스턴스의 경우 \< *서버 이름* \<> 형식을, 명명 된 인스턴스의 경우 *서버 이름*>\\<*인스턴스 이름*>을 사용 합니다.  
   
-8.  
-  **유형**에서 **SQL Server Analysis Services 명령**을 선택합니다.  
+8.  **유형**에서 **SQL Server Analysis Services 명령**을 선택합니다.  
   
-9. 
-  **명령**에서 마우스 오른쪽 단추를 클릭하고 **붙여넣기**를 선택합니다. 이전 단계에서 생성한 XMLA 스크립트가 명령 창에 나타나야 합니다.  
+9. **명령**에서 마우스 오른쪽 단추를 클릭하고 **붙여넣기**를 선택합니다. 이전 단계에서 생성한 XMLA 스크립트가 명령 창에 나타나야 합니다.  
   
 10. **확인**을 클릭합니다.  
   
-11. 
-  **페이지 선택**에서 **일정**을 클릭한 후 **새로 만들기**를 클릭합니다.  
+11. **페이지 선택**에서 **일정**을 클릭한 후 **새로 만들기**를 클릭합니다.  
   
-12. 
-  **새 작업 일정** 대화 상자에서 **이름**에 일정 이름을 입력하고 **확인**을 클릭합니다.  
+12. **새 작업 일정** 대화 상자에서 **이름**에 일정 이름을 입력하고 **확인**을 클릭합니다.  
   
      이 단계에서 일요일 오전 12시 일정을 만듭니다. 다음 단계에서는 수동으로 작업을 실행하는 방법을 보여 줍니다. 모니터링할 때 작업을 실행하는 일정을 지정할 수도 있습니다.  
   
-13. 
-  **새 작업** 대화 상자에서 **확인**을 클릭합니다.  
+13. **새 작업** 대화 상자에서 **확인**을 클릭합니다.  
   
-14. 
-  **개체 탐색기**에서 **작업**을 확장하고 만들어진 작업을 마우스 오른쪽 단추로 클릭한 후 **작업 시작 단계**를 선택합니다.  
+14. **개체 탐색기**에서 **작업**을 확장하고 만들어진 작업을 마우스 오른쪽 단추로 클릭한 후 **작업 시작 단계**를 선택합니다.  
   
      작업에 단계가 하나뿐이므로 작업이 즉시 실행됩니다. 작업에 둘 이상의 단계가 있으면 작업을 시작할 단계를 선택할 수 있습니다.  
   
 15. 작업이 끝나면 **닫기**를 클릭합니다.  
   
 ## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>예제 2: 예약된 태스크에서 차원 및 파티션 일괄 처리  
- 이 예의 절차는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 차원을 일괄 처리하는 작업을 만들고 예약하는 동시에 집계를 위해 차원에 종속되는 큐브 파티션을 처리하는 방법을 보여 줍니다. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 일괄 처리에 대한 자세한 내용은 [일괄 처리&#40;Analysis Services&#41;](../multidimensional-models/batch-processing-analysis-services.md)를 참조하세요.  
+ 이 예의 절차는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 차원을 일괄 처리하는 작업을 만들고 예약하는 동시에 집계를 위해 차원에 종속되는 큐브 파티션을 처리하는 방법을 보여 줍니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 일괄 처리에 대한 자세한 내용은 [일괄 처리&#40;Analysis Services&#41;](../multidimensional-models/batch-processing-analysis-services.md)를 참조하세요.  
   
-###  <a name="bkmk_BatchProcess"></a>SQL Server 에이전트 작업에서 차원 및 파티션 일괄 처리를 위한 스크립트 만들기  
+###  <a name="create-a-script-for-batch-processing-a-dimension-and-partition-in-a-sql-server-agent-job"></a><a name="bkmk_BatchProcess"></a>SQL Server 에이전트 작업에서 차원 및 파티션 일괄 처리를 위한 스크립트 만들기  
   
 1.  같은 데이터베이스를 사용하여 **차원**을 확장하고 **고객** 차원을 마우스 오른쪽 단추로 클릭한 다음 **처리**를 선택합니다.  
   
-2.  
-  **차원 처리** 대화 상자에 있는 **개체 목록** 의 **처리 옵션**열에서 이 열에 대한 옵션이 **전체 처리**인지 확인합니다.  
+2.  **차원 처리** 대화 상자에 있는 **개체 목록** 의 **처리 옵션**열에서 이 열에 대한 옵션이 **전체 처리**인지 확인합니다.  
   
-3.  
-  **스크립트**를 클릭합니다.  
+3.  **스크립트**를 클릭합니다.  
   
      이 단계에서 차원을 처리하는 XMLA 스크립트가 포함된 **XML 쿼리** 창이 열립니다.  
   
-4.  
-  **차원 처리** 대화 상자에서 **취소** 를 클릭하여 대화 상자를 닫습니다.  
+4.  **차원 처리** 대화 상자에서 **취소** 를 클릭하여 대화 상자를 닫습니다.  
   
-5.  
-  **큐브**, **Adventure Works**, **측정값 그룹**, **인터넷 판매**, **파티션**을 차례로 확장하고 목록의 마지막 파티션을 마우스 오른쪽 단추로 클릭한 다음 **처리**를 선택합니다.  
+5.  **큐브**, **Adventure Works**, **측정값 그룹**, **인터넷 판매**, **파티션**을 차례로 확장하고 목록의 마지막 파티션을 마우스 오른쪽 단추로 클릭한 다음 **처리**를 선택합니다.  
   
-6.  
-  **파티션 처리** 대화 상자에 있는 **개체 목록** 의 **처리 옵션**열에서 이 열에 대한 옵션이 **전체 처리**인지 확인합니다.  
+6.  **파티션 처리** 대화 상자에 있는 **개체 목록** 의 **처리 옵션**열에서 이 열에 대한 옵션이 **전체 처리**인지 확인합니다.  
   
-7.  
-  **스크립트**를 클릭합니다.  
+7.  **스크립트**를 클릭합니다.  
   
      이 단계에서 파티션을 처리하는 XMLA 스크립트가 포함된 두 번째 **XML 쿼리** 창이 열립니다.  
   
-8.  
-  **파티션 처리** 대화 상자에서 **취소** 를 클릭하여 편집기를 닫습니다.  
+8.  **파티션 처리** 대화 상자에서 **취소** 를 클릭하여 편집기를 닫습니다.  
   
      이때 두 스크립트를 병합하고 차원이 먼저 처리되도록 해야 합니다.  
   
@@ -176,8 +150,7 @@ ms.locfileid: "66079680"
       </Process>  
     ```  
   
-10. 차원을 처리하는 XMLA 스크립트가 포함된 **XMLA 쿼리** 창을 엽니다. 
-  `</Process>` 태그 왼쪽의 스크립트 내부를 마우스 오른쪽 단추로 클릭하고 **붙여넣기**를 선택합니다.  
+10. 차원을 처리하는 XMLA 스크립트가 포함된 **XMLA 쿼리** 창을 엽니다. `</Process>` 태그 왼쪽의 스크립트 내부를 마우스 오른쪽 단추로 클릭하고 **붙여넣기**를 선택합니다.  
   
      다음 예에서는 수정된 XMLA 스크립트를 보여 줍니다.  
   
@@ -210,52 +183,39 @@ ms.locfileid: "66079680"
   
 12. 이 단계에서 XMLA 스크립트를 Windows 클립보드에 복사합니다. XMLA 스크립트를 클립보드에 남겨 두거나 파일에 저장하거나 메모장 또는 다른 텍스트 편집기에 붙여 넣을 수 있습니다.  
   
-###  <a name="bkmk_Scheduling"></a>일괄 처리 작업 만들기 및 예약  
+###  <a name="create-and-schedule-the-batch-processing-job"></a><a name="bkmk_Scheduling"></a> 일괄 처리 작업 만들기 및 예약  
   
-1.  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 후 개체 탐색기를 엽니다.  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 후 개체 탐색기를 엽니다.  
   
-2.  
-  **SQL Server 에이전트**를 확장합니다. 서비스가 실행되지 않았으면 서비스를 시작합니다.  
+2.  **SQL Server 에이전트**를 확장합니다. 서비스가 실행되지 않았으면 서비스를 시작합니다.  
   
-3.  
-  **작업** 을 마우스 오른쪽 단추로 클릭하고 **새 작업**을 선택합니다.  
+3.  **작업** 을 마우스 오른쪽 단추로 클릭하고 **새 작업**을 선택합니다.  
   
-4.  
-  **새 작업** 대화 상자에서 **이름**에 작업 이름을 입력합니다.  
+4.  **새 작업** 대화 상자에서 **이름**에 작업 이름을 입력합니다.  
   
-5.  
-  **단계**에서 **새로 만들기**를 클릭합니다.  
+5.  **단계**에서 **새로 만들기**를 클릭합니다.  
   
-6.  
-  **새 작업 단계** 대화 상자에서 **단계 이름**에 단계 이름을 입력합니다.  
+6.  **새 작업 단계** 대화 상자에서 **단계 이름**에 단계 이름을 입력합니다.  
   
-7.  
-  **유형**에서 **SQL Server Analysis Services 명령**을 선택합니다.  
+7.  **유형**에서 **SQL Server Analysis Services 명령**을 선택합니다.  
   
-8.  
-  **다음 계정으로 실행**에서 **SQL Server 에이전트 서비스 계정**을 선택합니다. 사전 요구 사항 섹션에서 설명한 대로 이 계정에는 Analysis Services에 대한 관리 권한이 있어야 합니다.  
+8.  **다음 계정으로 실행**에서 **SQL Server 에이전트 서비스 계정**을 선택합니다. 사전 요구 사항 섹션에서 설명한 대로 이 계정에는 Analysis Services에 대한 관리 권한이 있어야 합니다.  
   
-9. 
-  **서버**에서 Analysis Services 인스턴스의 서버 이름을 지정합니다.  
+9. **서버**에서 Analysis Services 인스턴스의 서버 이름을 지정합니다.  
   
-10. 
-  **명령**에서 마우스 오른쪽 단추를 클릭하고 **붙여넣기**를 선택합니다.  
+10. **명령**에서 마우스 오른쪽 단추를 클릭하고 **붙여넣기**를 선택합니다.  
   
 11. **확인**을 클릭합니다.  
   
-12. 
-  **일정** 페이지에서 **새로 만들기**를 클릭합니다.  
+12. **일정** 페이지에서 **새로 만들기**를 클릭합니다.  
   
-13. 
-  **새 작업 일정** 대화 상자에서 **이름**에 일정 이름을 입력하고 **확인**을 클릭합니다.  
+13. **새 작업 일정** 대화 상자에서 **이름**에 일정 이름을 입력하고 **확인**을 클릭합니다.  
   
      이 단계에서 일요일 오전 12시 일정을 만듭니다. 다음 단계에서는 수동으로 작업을 실행하는 방법을 보여 줍니다. 모니터링할 때 작업을 실행할 일정을 선택할 수도 있습니다.  
   
-14. **확인** 을 클릭하여 대화 상자를 닫습니다.  
+14. **확인**을 클릭하여 대화 상자를 닫습니다.  
   
-15. 
-  **개체 탐색기**에서 **작업**을 확장하고 만들어진 작업을 마우스 오른쪽 단추로 클릭한 후 **작업 시작 단계**를 선택합니다.  
+15. **개체 탐색기**에서 **작업**을 확장하고 만들어진 작업을 마우스 오른쪽 단추로 클릭한 후 **작업 시작 단계**를 선택합니다.  
   
      작업에 단계가 하나뿐이므로 작업이 즉시 실행됩니다. 작업에 둘 이상의 단계가 있으면 작업을 시작할 단계를 선택할 수 있습니다.  
   
@@ -263,6 +223,6 @@ ms.locfileid: "66079680"
   
 ## <a name="see-also"></a>참고 항목  
  [처리 옵션 및 설정 &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
- [Analysis Services에서 관리 태스크 스크립팅](../script-administrative-tasks-in-analysis-services.md)  
+ [Analysis Services의 스크립트 관리 태스크](../script-administrative-tasks-in-analysis-services.md)  
   
   

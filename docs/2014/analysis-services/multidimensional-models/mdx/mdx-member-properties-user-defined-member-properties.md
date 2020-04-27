@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ead5a45bf163ca4e7998c30ab5c83f94cca9075b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074255"
 ---
 # <a name="user-defined-member-properties-mdx"></a>사용자 정의 멤버 속성(MDX)
@@ -37,8 +37,7 @@ ms.locfileid: "66074255"
   
  `DIMENSION PROPERTIES [Dimension.]Level.<Custom_Member_Property>`  
   
- 
-  `PROPERTIES` 키워드는 축 사양의 집합 식 뒤에 표시됩니다. 예를 들어 다음 MDX 쿼리에는 1월에 판매된 제품을 식별하는 집합 식 뒤에 `PROPERTIES` 및 `List Price` 사용자 정의 멤버 속성을 검색하는 `Dealer Price` 키워드가 있습니다.  
+ `PROPERTIES` 키워드는 축 사양의 집합 식 뒤에 표시됩니다. 예를 들어 다음 MDX 쿼리에는 1월에 판매된 제품을 식별하는 집합 식 뒤에 `List Price` 및 `Dealer Price` 사용자 정의 멤버 속성을 검색하는 `PROPERTIES` 키워드가 있습니다.  
   
 ```  
 SELECT   
@@ -69,6 +68,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>참고 항목  
  [MDX&#41;&#40;멤버 속성 사용](mdx-member-properties.md)   
- [MDX &#40;속성&#41;](/sql/mdx/properties-mdx)  
+ [속성&#40;MDX&#41;](/sql/mdx/properties-mdx)  
   
   

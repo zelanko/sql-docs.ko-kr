@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57a7a9597be4b7a662fddd9550fdf341be44f922
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074790"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>하위 SELECT 및 하위 큐브의 계산 멤버
@@ -27,7 +27,7 @@ ms.locfileid: "66074790"
   
 |||  
 |-|-|  
-|값|Description|  
+|값|설명|  
 |0|계산 멤버는 하위 SELECT 또는 하위 큐브에서 허용되지 않습니다.<br /><br /> 계산 멤버가 참조된 경우 하위 SELECT 또는 하위 큐브를 평가할 때 오류가 발생합니다.|  
 |1|계산 멤버는 하위 SELECT 또는 하위 큐브에서 허용되지만 상위 항목 멤버는 반환 하위 공간에 포함되지 않습니다.|  
 |2|계산 멤버는 하위 SELECT 또는 하위 큐브에서 허용되고 상위 항목 멤버는 반환 하위 공간에 포함됩니다. 또한 혼합 세분성이 계산 멤버 선택에서 허용됩니다.|  
@@ -124,6 +124,6 @@ Where [Measures].[Reseller Sales Amount]
 ## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [쿼리의 하위 select](subselects-in-queries.md)   
- [XMLA&#41;&#40;XMLA 속성이 지원 됩니다.](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
+ [지원되는 XMLA 속성&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
   
   

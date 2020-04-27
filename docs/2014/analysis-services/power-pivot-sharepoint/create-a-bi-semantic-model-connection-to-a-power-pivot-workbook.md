@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f525c45e71c290d3eaab410c0fa0fa62d1e9a61d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071639"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>PowerPivot 통합 문서에 대한 BI 의미 체계 모델 연결 만들기
@@ -28,13 +28,13 @@ ms.locfileid: "66071639"
   
  [연결 만들기](#bkmk_create)  
   
- [BI 의미 체계 모델 연결에 대 한 SharePoint 사용 권한 구성](#bkmk_permissions)  
+ [BI 의미 체계 모델 연결에 대한 SharePoint 사용 권한 구성](#bkmk_permissions)  
   
- [통합 문서에 대 한 SharePoint 사용 권한 구성](#bkmk_userdb)  
+ [통합 문서에 대한 SharePoint 사용 권한 구성](#bkmk_userdb)  
   
  [다음 단계](#bkmk_next)  
   
-##  <a name="bkmk_prereq"></a>필수 조건 검토  
+##  <a name="review-prerequisites"></a><a name="bkmk_prereq"></a> 필수 구성 요소 검토  
  BI 의미 체계 모델 연결 파일을 만들려면 참가 권한 이상이 있어야 합니다.  
   
  BI 의미 체계 모델 연결 콘텐츠 형식을 지원하는 라이브러리가 있어야 합니다. 자세한 내용은 [라이브러리에 BI 의미 체계 모델 연결 콘텐츠 형식 추가 &#40;SharePoint용 PowerPivot&#41;](add-bi-semantic-model-connection-content-type-to-library.md)를 참조 하세요.  
@@ -43,7 +43,7 @@ ms.locfileid: "66071639"
   
  연결 시퀀스에 참가하는 모든 컴퓨터 및 사용자는 동일한 도메인이나 트러스트된 도메인(양방향 신뢰)에 있어야 합니다.  
   
-##  <a name="bkmk_create"></a>연결 만들기  
+##  <a name="create-a-connection"></a><a name="bkmk_create"></a>연결 만들기  
   
 1.  BI 의미 체계 모델 연결이 포함될 라이브러리의 SharePoint 리본에서 **문서** 를 클릭합니다. 새 문서에서 아래쪽 화살표를 클릭하고 **BISM 연결 파일** 을 선택하여 새 BI 의미 체계 모델 연결 페이지를 엽니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66071639"
   
      통합 문서에 대한 SharePoint 사용 권한이 있는 경우 추가 유효성 검사 단계도 수행하여 위치가 올바른지 확인합니다. 데이터에 액세스할 권한이 없는 경우 유효성 검사 응답 없이 BI 의미 체계 모델 연결을 저장할 수 있는 옵션이 제공됩니다.  
   
-##  <a name="bkmk_permissions"></a>BI 의미 체계 모델 연결에 대 한 SharePoint 사용 권한 구성  
+##  <a name="configure-sharepoint-permissions-on-the-bi-semantic-model-connection"></a><a name="bkmk_permissions"></a>BI 의미 체계 모델 연결에 대 한 SharePoint 사용 권한 구성  
  BI 의미 체계 모델 연결을 Excel 통합 문서 또는 Reporting Services 보고서의 데이터 원본으로 사용하려면 SharePoint 라이브러리의 BI 의미 체계 모델 연결 항목에 대해 **읽기** 권한이 있어야 합니다. 읽기 권한 수준에는 BI 의미 체계 모델 연결 정보를 Excel 데스크톱 애플리케이션에 다운로드할 수 있는 **항목 열기** 권한이 포함되어 있습니다.  
   
  여러 가지 방법으로 SharePoint에서 사용 권한을 부여할 수 있습니다. 다음은 **읽기** 수준의 권한이 있는 **BISM Users** 라는 새 그룹을 만드는 방법을 설명하는 지침입니다.  
@@ -68,11 +68,9 @@ ms.locfileid: "66071639"
   
 1.  사이트 작업에서 **사이트 사용 권한**을 클릭합니다.  
   
-2.  
-  **그룹 만들기** 를 클릭하고 새 그룹의 이름을 **BISM Users**로 지정합니다.  
+2.  **그룹 만들기** 를 클릭하고 새 그룹의 이름을 **BISM Users**로 지정합니다.  
   
-3.  
-  **읽기** 권한 수준을 선택한 다음 **만들기**를 클릭합니다.  
+3.  **읽기** 권한 수준을 선택한 다음 **만들기**를 클릭합니다.  
   
 4.  사용자 및 그룹에서 **BISM Users** 를 선택합니다.  
   
@@ -86,18 +84,16 @@ ms.locfileid: "66071639"
   
 2.  기본적으로 항목은 사용 권한을 상속합니다. 이 라이브러리에서 개별 문서의 사용 권한을 변경하려면 **권한 상속 중지**를 클릭합니다.  
   
-3.  
-  **BISM Users**옆에 있는 확인란을 선택합니다.  
+3.  **BISM Users**옆에 있는 확인란을 선택합니다.  
   
-4.  
-  **사용자의 사용 권한 제거**를 클릭합니다.  
+4.  **사용자의 사용 권한 제거**를 클릭합니다.  
   
-##  <a name="bkmk_userdb"></a>통합 문서에 대 한 SharePoint 사용 권한 구성  
+##  <a name="configure-sharepoint-permissions-on-the-workbook"></a><a name="bkmk_userdb"></a>통합 문서에 대 한 SharePoint 사용 권한 구성  
  Excel 통합 문서 내부에서 PowerPivot 데이터베이스를 사용하는 경우 Excel 통합 문서에 대한 SharePoint 사용 권한에 따라 BI 의미 체계 모델 연결을 통한 데이터 액세스가 결정됩니다. 통합 문서를 외부 데이터 원본으로 사용하려면 통합 문서에 액세스하는 모든 사용자가 통합 문서에 대해 읽기 권한이 있어야 합니다.  
   
  통합 문서가 상속된 사용 권한을 사용한다고 가정하면 이전 섹션의 지침을 사용하여 **BISM Users** 그룹을 만든 경우 **BISM Users** 의 멤버인 사용자 및 그룹 계정에게는 통합 문서 및 BI 의미 체계 모델 연결 파일에 대해 충분한 사용 권한이 있습니다.  
   
-##  <a name="bkmk_next"></a>다음 단계  
+##  <a name="next-steps"></a><a name="bkmk_next"></a> 다음 단계  
  BI 의미 체계 모델 연결을 만들고 확인한 후 데이터 원본으로 지정할 수 있습니다. 자세한 내용은 [Excel 또는 Reporting Services에서 BI 의미 체계 모델 연결 사용](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

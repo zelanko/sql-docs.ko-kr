@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3c7ddd5311232ae12b3eb9f66adc0cd1f5714b32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081006"
 ---
 # <a name="general-storage-options-dialog-box-analysis-services---multidimensional-data"></a>일반(스토리지 옵션 대화 상자)(Analysis Services - 다차원 데이터)
-  
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 **스토리지 옵션** 대화 상자의 **일반** 탭을 사용하여 차원, 큐브, 측정값 그룹 또는 파티션에 대해 스토리지 모드와 자동 관리 캐싱 설정을 지정할 수 있습니다.  
   
 > [!NOTE]  
@@ -30,11 +29,9 @@ ms.locfileid: "66081006"
   
 |용어|정의|  
 |----------|----------------|  
-|**저장소 모드**|개체에 사용할 스토리지 모드를 선택합니다.<br /><br /> **MOLAP**<br /> 개체가 MOLAP(다차원 OLAP) 스토리지를 사용합니다.<br /><br /> **HOLAP**<br /> 개체가 HOLAP(하이브리드 OLAP) 스토리지를 사용합니다.<br /><br /> **ROLAP**<br /> 개체가 ROLAP(관계형 OLAP) 스토리지를 사용합니다.|  
+|**스토리지 모드**|개체에 사용할 스토리지 모드를 선택합니다.<br /><br /> **MOLAP**<br /> 개체가 MOLAP(다차원 OLAP) 스토리지를 사용합니다.<br /><br /> **HOLAP**<br /> 개체가 HOLAP(하이브리드 OLAP) 스토리지를 사용합니다.<br /><br /> **ROLAP**<br /> 개체가 ROLAP(관계형 OLAP) 스토리지를 사용합니다.|  
 |**자동 관리 캐싱을 설정합니다.**|자동 관리 캐싱을 설정합니다.<br /><br /> 참고: 이 옵션을 선택하지 않으면 **스토리지 모드**를 제외한 모든 옵션을 사용할 수 없습니다.|  
-|**데이터가 변경되면 캐시 업데이트**|
-  **알림** 탭에서 선택한 알림 방법을 사용하여 알림을 받을 때마다 개체에 대한 MOLAP 이미지를 업데이트할 수 있습니다. 
-  **알림** 탭에 대한 자세한 내용은 [알림&#40;스토리지 옵션 대화 상자&#41;&#40;Analysis Services - 다차원 데이터&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)을 참조하세요.<br /><br /> 참고: 이 옵션은 **자동 관리 캐싱 설정** 을 선택한 경우에만 사용할 수 있습니다.|  
+|**데이터가 변경되면 캐시 업데이트**|**알림** 탭에서 선택한 알림 방법을 사용하여 알림을 받을 때마다 개체에 대한 MOLAP 이미지를 업데이트할 수 있습니다. **알림** 탭에 대한 자세한 내용은 [알림&#40;스토리지 옵션 대화 상자&#41;&#40;Analysis Services - 다차원 데이터&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)을 참조하세요.<br /><br /> 참고: 이 옵션은 **자동 관리 캐싱 설정** 을 선택한 경우에만 사용할 수 있습니다.|  
 |**대기 간격**|자동 관리 캐싱에서 개체에 대한 새 MOLAP 이미지 만들기를 시작하기 전에 개체가 아무런 작업도 수행하지 않을 최소 시간 간격 및 단위를 설정합니다.<br /><br /> 참고: 이 옵션은 **데이터가 변경되면 캐시 업데이트** 를 선택한 경우에만 사용할 수 있습니다.|  
 |**대기 대체 간격**|개체에 대한 알림을 받은 후 개체의 현재 작업과 관계없이 자동 관리 캐싱에서 개체에 대한 새 MOLAP 이미지 만들기를 시작할 최대 시간 간격 및 단위를 설정합니다. 이 간격에 도달한 후 받은 알림은 이 간격에 의해 트리거된 MOLAP 이미지 프로세스를 취소하지 않습니다.<br /><br /> 참고: 이 옵션은 **데이터가 변경되면 캐시 업데이트** 를 선택한 경우에만 사용할 수 있습니다. **저장소 모드** 를 **HOLAP**으로 설정한 경우에는이 옵션을 설정 하면 안 됩니다.|  
 |**오래된 캐시 삭제**|새 MOLAP 캐시의 생성 시기와 기존 MOLAP 캐시의 제거 시기 간의 기간을 지정합니다.<br /><br /> 참고: 이 옵션은 **자동 관리 캐싱 설정** 을 선택한 경우에만 사용할 수 있습니다. **저장소 모드** 를 HOLAP으로 설정한 경우에는이 옵션을 설정 하면 안 됩니다.|  

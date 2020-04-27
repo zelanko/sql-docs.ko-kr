@@ -17,20 +17,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 616c39d03ff8081c209a80dcca912d831bcef1ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081681"
 ---
 # <a name="discontinued-analysis-services-functionality-in-sql-server-2014"></a>SQL Server 2014에서 지원되지 않는 Analysis Services 기능
   이 항목에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 더 이상 사용할 수 없는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]기능에 대해 설명합니다.  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>
-  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]
+## <a name="discontinued-features-in-sssql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
   
-  
-|Category|사용되지 않는 기능|대체 기능|  
+|범주|사용되지 않는 기능|대체 기능|  
 |--------------|------------------------|-----------------|  
 |로컬 큐브|InsertInto 연결 문자열 속성|로컬 큐브를 채우기 위한 원래의 연결 문자열 구문이 Create Global Cube 문으로 바뀌었습니다. 자세한 내용은 [CREATE GLOBAL CUBE Statement &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)를 참조 하세요.|  
 |로컬 큐브|CreateCube 연결 문자열 속성|로컬 큐브를 채우기 위한 원래의 연결 문자열 구문이 Create Global Cube 문으로 바뀌었습니다. 자세한 내용은 [CREATE GLOBAL CUBE Statement &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)를 참조 하세요.|  

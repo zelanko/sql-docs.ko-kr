@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: faa6198bc9fa42b55be63ec57ff49ed6703ef260
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081257"
 ---
 # <a name="filter-and-sort-data-ssas-tabular"></a>데이터 필터링 및 정렬(SSAS 테이블 형식)
@@ -24,7 +24,7 @@ ms.locfileid: "66081257"
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[SSAS 테이블 형식&#41;&#40;테이블의 데이터 정렬](tabular-models/sort-data-in-a-table-ssas-tabular.md) 테이블의 데이터 정렬|이 항목에서는 문자 또는 숫자를 사용하여 데이터를 정렬하는 방법을 설명합니다.|  
 |[SSAS 테이블 형식&#41;&#40;테이블의 데이터 필터링](tabular-models/filter-data-in-a-table-ssas-tabular.md)|이 항목의 태스크에서는 사용자 지정 필터를 적용하여 행이 표시되는 방식을 제어하는 방법에 대해 설명합니다.|  

@@ -11,21 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 33cb020aac728bec7a98d8eb7f66f78eb799b0c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081797"
 ---
 # <a name="dialog-boxes-reference-ssas"></a>대화 상자 참조(SSAS)
-  
   [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]의 대화 상자에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
 -   [열 너비 대화 상자 &#40;SSAS&#41;](column-width-dialog-box-ssas.md)  
   
 -   [날짜 테이블로 표시 대화 상자 &#40;SSAS&#41;](mark-as-date-table-dialog-box-ssas.md)  
   
--   [테이블 속성 편집 대화 상자 &#40;SSAS&#41;](edit-table-properties-dialog-box-ssas.md)  
+-   [테이블 속성 편집 대화 상자&#40;SSAS&#41;](edit-table-properties-dialog-box-ssas.md)  
   
 -   [SSAS로 이동 대화 상자 &#40;&#41;](go-to-dialog-box-ssas.md)  
   

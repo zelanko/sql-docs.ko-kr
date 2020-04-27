@@ -11,34 +11,33 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd395e605bfde9d34ed0dc4f16060812464efb56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078247"
 ---
 # <a name="lesson-9-create-perspectives"></a>9단원: 큐브 뷰 만들기
-  이 단원에서는 Internet Sales 큐브 뷰를 만듭니다. 큐브 뷰는 포커스가 있는, 비즈니스 또는 애플리케이션별 관점을 제공하는 모델의 볼 수 있는 하위 집합을 정의합니다. 사용자가 큐브 뷰를 사용하여 모델에 연결하는 경우 해당 모델 개체(테이블, 열, 측정값, 계층 및 KPI)만 해당 큐브 뷰에 정의되어 있는 필드로 볼 수 있습니다.  
+  이 단원에서는 Internet Sales 큐브 뷰를 만듭니다. 큐브 뷰는 비즈니스 또는 애플리케이션 중심의 관점에서 파악할 수 있게 해 주는 보기 가능한 모델 하위 집합을 정의합니다. 사용자가 큐브 뷰를 사용하여 모델에 연결하는 경우 해당 모델 개체(테이블, 열, 측정값, 계층 및 KPI)만 해당 큐브 뷰에 정의되어 있는 필드로 볼 수 있습니다.  
   
- 이 단원에서 만드는 Internet Sales 큐브 뷰에는 Customer 테이블 개체가 제외됩니다. 뷰에서 특정 개체가 제외된 큐브 뷰를 만드는 경우 이 개체는 모델에 계속 존재하지만 보고 클라이언트 필드 목록에 표시되지 않습니다. 큐브 뷰에 포함되었거나 포함되지 않은 계산된 열과 측정값은 여전히 제외된 개체 데이터에서 계산할 수 있습니다.  
+ 이 단원에서 만드는 Internet Sales 큐브 뷰에는 Customer 테이블 개체가 제외됩니다. 뷰에서 특정 개체를 제외하는 큐브 뷰를 만들면 해당 개체가 모델에는 그대로 있지만 보고 클라이언트 필드 목록에서는 보이지 않습니다. 큐브 뷰에 포함되어 있거나 포함되어 있지 않은 계산 열 및 측정값을 계속해서 제외된 개체 데이터에서 계산할 수 있습니다.  
   
- 이 단원의 목적은 큐브 뷰를 만드는 방법을 설명하고 사용자가 테이블 형식 모델 작성 도구를 습득하도록 하는 것입니다. 나중에 추가 테이블을 포함하도록 이 모델을 확장할 경우 큐브 뷰를 추가로 만들어 모델에 대한 다양한 뷰포인트(예: Inventory 및 Sales Force)를 정의할 수 있습니다.  
+ 이 단원의 목표는 큐브 뷰를 만드는 방법을 설명하고 테이블 형식 모델 제작 도구를 파악하도록 돕는 데 있습니다. 나중에 추가 테이블을 포함하도록 이 모델을 확장할 경우 큐브 뷰를 추가로 만들어 모델에 대한 다양한 뷰포인트(예: Inventory 및 Sales Force)를 정의할 수 있습니다.  
   
  자세한 내용은 [큐브 뷰&#40;SSAS 테이블 형식&#41;](tabular-models/perspectives-ssas-tabular.md)를 참조하세요.  
   
- 이 단원을 완료하기 위한 예상 시간: **5분**  
+ 이 단원에 소요되는 예상 시간: **5분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 항목은 테이블 형식 모델링 자습서에 포함되며 순서대로 완료해야 합니다. 이 단원의 태스크를 수행하려면 이전 단원인 [8단원: 핵심 성과 지표 만들기](lesson-7-create-key-performance-indicators.md)를 완료해야 합니다.  
   
 ## <a name="create-perspectives"></a>큐브 뷰 만들기  
   
-#### <a name="to-create-an-internet-sales-perspective"></a>인터넷 판매 큐브 뷰를 만들려면  
+#### <a name="to-create-an-internet-sales-perspective"></a>Internet Sales 큐브 뷰를 만들려면  
   
 1.  모델 디자이너에서 **모델** 메뉴를 클릭 한 다음 **큐브 뷰**를 클릭 합니다.  
   
-2.  
-  **큐브 뷰** 대화 상자에서 **새 큐브 뷰**를 클릭합니다.  
+2.  **큐브 뷰** 대화 상자에서 **새 큐브 뷰**를 클릭합니다.  
   
 3.  큐브 뷰의 이름을 바꾸려면 **새 큐브 뷰 1** 열 머리글을 두 번 클릭 한 다음를 입력 `Internet Sales`합니다.  
   

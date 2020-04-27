@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d0a08c191bfd8ec00a4e0181ad3960bf7644f93e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077399"
 ---
 # <a name="bind-an-attribute-to-a-name-column"></a>이름 열로 특성 바인딩
@@ -28,16 +28,12 @@ ms.locfileid: "66077399"
   
 1.  차원 디자이너에서 특성을 만들려는 차원을 엽니다.  
   
-2.  
-  **차원 구조** 탭의 **특성** 창에서 구성할 특성을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+2.  **차원 구조** 탭의 **특성** 창에서 구성할 특성을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-3.  
-  **속성** 창에서 **NameColumn** 속성을 찾은 다음 **(새로 만들기)** 를 선택합니다.  
+3.  **속성** 창에서 **NameColumn** 속성을 찾은 다음 **(새로 만들기)** 를 선택합니다.  
   
-4.  
-  **개체 바인딩** 대화 상자에서 **바인딩 유형**으로 **열 바인딩**을 선택합니다.  
+4.  **개체 바인딩** 대화 상자에서 **바인딩 유형**으로 **열 바인딩**을 선택합니다.  
   
-5.  
-  **원본 열** 목록에서 특성이 바인딩될 열을 선택한 다음 **확인**을 클릭합니다.  
+5.  **원본 열** 목록에서 특성이 바인딩될 열을 선택한 다음 **확인**을 클릭합니다.  
   
   

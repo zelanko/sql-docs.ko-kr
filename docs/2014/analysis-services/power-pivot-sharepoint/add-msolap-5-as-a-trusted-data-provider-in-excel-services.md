@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9095c1fa767e1854c300df1ad08bf5d1900af860
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071932"
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>MSOLAP.5를 Excel 서비스에서 신뢰할 수 있는 데이터 공급자로 추가
@@ -30,8 +30,7 @@ ms.locfileid: "66071932"
   
 1.  중앙 관리에서 **서비스 애플리케이션 관리**를 클릭한 다음 Excel 서비스 애플리케이션을 클릭합니다.  
   
-2.  
-  **신뢰할 수 있는 데이터 공급자**를 클릭합니다.  
+2.  **신뢰할 수 있는 데이터 공급자**를 클릭합니다.  
   
 3.  MSOLAP.5가 목록에 있는지 확인합니다. SharePoint용 PowerPivot을 구성한 방법에 따라 MSOLAP.5가 이미 신뢰할 수 있는 공급자일 수도 있습니다.  
   

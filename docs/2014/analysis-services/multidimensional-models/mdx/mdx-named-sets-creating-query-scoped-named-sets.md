@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a611d3d20d269bb9c3fa3a1f764181b1660713b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074064"
 ---
 # <a name="creating-query-scoped-named-sets-mdx"></a>쿼리 범위 명명된 집합 만들기(MDX)
@@ -43,8 +43,7 @@ FROM <SELECT subcube clause>
   
 ```  
   
- WITH 키워드에 대한 구문에서 `Set_Identifier` 매개 변수에는 명명된 집합에 대한 별칭이 포함됩니다. 
-  `Set_Expression` 매개 변수에는 명명된 집합 별칭이 참조할 집합 식이 포함됩니다.  
+ WITH 키워드에 대한 구문에서 `Set_Identifier` 매개 변수에는 명명된 집합에 대한 별칭이 포함됩니다. `Set_Expression` 매개 변수에는 명명된 집합 별칭이 참조할 집합 식이 포함됩니다.  
   
 ## <a name="with-keyword-example"></a>WITH 키워드 예  
  다음 MDX 쿼리에서는 Microsoft SQL Server 2000 Analysis Services의 예제 데이터베이스인 `FoodMart 2000`에서 다양한 Chardonnay 및 Chablis 와인의 단위 판매량을 조사합니다. 이 쿼리는 매우 단순한 결과 집합을 반환하지만 유지 관리 측면에서는 너무 길고 복잡합니다.  
@@ -95,6 +94,6 @@ FROM Sales
   
 ## <a name="see-also"></a>참고 항목  
  [SELECT 문 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [MDX&#41;&#40;세션 범위 명명 된 집합 만들기](mdx-named-sets-creating-session-scoped-named-sets.md)  
+ [세션 범위 명명된 집합 만들기&#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

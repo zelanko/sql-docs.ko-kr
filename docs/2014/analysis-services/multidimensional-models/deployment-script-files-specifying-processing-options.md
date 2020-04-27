@@ -17,27 +17,27 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea766d26034b9ee0d1fcefbd215f41c19da1f9ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075232"
 ---
 # <a name="specifying-processing-options"></a>처리 옵션 지정
-  배포 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 마법사는 \< *프로젝트 이름*> deploymentoptions 파일에서 처리 옵션을 읽습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]프로젝트를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 빌드할 때이 파일을 만듭니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]**** \< *프로젝트 이름>속성 페이지 대화 상자의 배포 페이지에 지정 된 처리 옵션을 사용 하 여 프로젝트 이름> deploymentoptions \<* 파일을 만듭니다. **** **  
+  배포 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 마법사는 \< *프로젝트 이름*> deploymentoptions 파일에서 처리 옵션을 읽습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]프로젝트를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 빌드할 때이 파일을 만듭니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]**Deployment** \< *프로젝트 이름>속성 페이지 대화 상자의 배포 페이지에 지정 된 처리 옵션을 사용 하 여 프로젝트 이름> deploymentoptions \<* 파일을 만듭니다. **Properties Pages** *project name*  
   
 ## <a name="reviewing-the-processing-options-for-deployment"></a>배포를 위한 처리 옵션 검토  
  \< *프로젝트 이름*> deploymentoptions 파일에 저장 된 구성 설정은 다음과 같습니다.  
   
--   **처리 방법** 이 설정은 배포 후 배포 된 개체가 처리 되는지 여부와 수행할 처리 유형을 제어 합니다. 3가지 처리 옵션은 다음과 같습니다.  
+-   **처리 방법** 이 설정은 배포 후 배포된 개체가 처리되는지 여부와 수행할 처리 유형을 제어합니다. 3가지 처리 옵션은 다음과 같습니다.  
   
     -   기본 처리(기본값)  
   
     -   전체 처리  
   
-    -   None  
+    -   없음  
   
--   **쓰기 저장 테이블 옵션** [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에서 쓰기 저장을 사용 하는 경우이 설정은 쓰기 저장이 처리 되는 방법을 정의 합니다. 3가지 쓰기 저장(writeback) 테이블 옵션은 다음과 같습니다.  
+-   **쓰기 저장(writeback) 테이블 옵션** 쓰기 저장(writeback)이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 설정된 경우 이 설정은 쓰기 저장(writeback)의 처리 방법을 정의합니다. 3가지 쓰기 저장(writeback) 테이블 옵션은 다음과 같습니다.  
   
     -   기본적으로 쓰기 저장(writeback) 테이블이 있는 경우 이 테이블이 사용됩니다. 쓰기 저장(Writeback) 테이블이 없는 경우 새 쓰기 저장 테이블이 생성됩니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66075232"
   
     -   쓰기 저장(writeback) 테이블이 이미 존재하는지 여부에 관계없이 새로운 쓰기 저장(writeback) 테이블이 생성됩니다. 이 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사는 기존 테이블을 삭제하고 이를 새로운 쓰기 저장(writeback) 테이블로 교체합니다.  
   
--   **트랜잭션 배포** 이 설정은 메타 데이터 배포가 변경 되 고 처리 명령이 단일 트랜잭션 또는 개별 트랜잭션에서 발생 하는지 여부를 제어 합니다.  
+-   **트랜잭션 배포** 이 설정은 메타데이터 배포가 변경되고 처리 명령이 단일 트랜잭션 또는 개별 트랜잭션에 발생하는지 여부를 제어합니다.  
   
     -   이 옵션이 `True`(기본값)인 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 모든 메타데이터 변경 내용과 단일 트랜잭션 내의 모든 처리 명령을 배포합니다.  
   
@@ -58,13 +58,11 @@ ms.locfileid: "66075232"
   
 #### <a name="to-change-processing-options-after-the-input-files-have-been-generated"></a>입력 파일을 생성한 다음 처리 옵션을 변경하려면  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사를 대화형으로 실행합니다. 
-  **처리 옵션** 페이지에서 배포할 프로젝트의 처리 옵션을 지정합니다.  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사를 대화형으로 실행합니다. **처리 옵션** 페이지에서 배포할 프로젝트의 처리 옵션을 지정합니다.  
   
      또는  
   
--   명령 프롬프트에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사를 실행하여 응답 파일 모드에서 마법사를 실행하도록 설정합니다. 응답 파일 모드에 대 한 자세한 내용은 [Analysis Services 배포 마법사 실행](running-the-analysis-services-deployment-wizard.md)을 참조 하세요.  
+-   명령 프롬프트에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사를 실행하여 응답 파일 모드에서 마법사를 실행하도록 설정합니다. 응답 파일 모드에 대한 자세한 내용은 [Running the Analysis Services Deployment Wizard](running-the-analysis-services-deployment-wizard.md)을 참조하십시오.  
   
      또는  
   

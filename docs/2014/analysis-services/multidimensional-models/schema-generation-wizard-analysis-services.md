@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2f8757044ba15f7b8c2567dd88e1ef3637d2e3f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073068"
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>스키마 생성 마법사(Analysis Services)
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 또는 데이터베이스 내에서 OLAP 개체를 정의할 때 두 가지 관계형 스키마 작업 방법을 지원 합니다. 일반적으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트나 데이터베이스 내의 데이터 원본 뷰에 생성된 논리적 데이터 모델을 기반으로 OLAP 개체를 정의합니다. 이 데이터 원본 뷰는 데이터 원본 뷰에 사용자 지정된 대로 하나 이상의 관계형 데이터 원본의 스키마 요소를 기반으로 정의됩니다.  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트나 데이터베이스 내의 OLAP 개체를 정의할 때 두 가지 관계형 스키마 작업 방법을 지원합니다. 일반적으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트나 데이터베이스 내의 데이터 원본 뷰에 생성된 논리적 데이터 모델을 기반으로 OLAP 개체를 정의합니다. 이 데이터 원본 뷰는 데이터 원본 뷰에 사용자 지정된 대로 하나 이상의 관계형 데이터 원본의 스키마 요소를 기반으로 정의됩니다.  
   
  또는 OLAP 개체를 먼저 정의한 다음 데이터 원본 뷰 및 데이터 원본과, 해당 OLAP 개체를 지원하는 기본 관계형 데이터베이스 스키마를 생성할 수도 있습니다. 이러한 관계형 데이터베이스를 주제 영역 데이터베이스라고 합니다.  
   
@@ -34,12 +34,12 @@ ms.locfileid: "66073068"
   
  일반적으로, 스키마 생성 마법사가 원래 생성했던 개체에서 변경된 내용은 이후에 스키마 생성 마법사가 해당 개체를 다시 생성할 때 덮어쓰게 됩니다. 단, 스키마 생성 마법사가 생성한 테이블에 열을 추가하는 경우는 예외입니다. 이와 같은 경우에는 스키마 생성 마법사가 테이블에 추가된 열 및 해당 열의 데이터를 그대로 유지합니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  다음 표에는 스키마 생성 마법사의 작업 방법을 설명하는 추가 항목이 나와 있습니다.  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
-|[스키마 생성 마법사를 사용 하 여 Analysis Services &#40;&#41;](schema-generation-wizard-analysis-services.md)|주제 영역 데이터베이스와 준비 영역 데이터베이스의 스키마를 생성하는 방법에 대해 설명합니다.|  
+|[스키마 생성 마법사 사용&#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)|주제 영역 데이터베이스와 준비 영역 데이터베이스의 스키마를 생성하는 방법에 대해 설명합니다.|  
 |[데이터베이스 스키마 이해](understanding-the-database-schemas.md)|주제 영역 데이터베이스와 준비 영역 데이터베이스에 대해 생성되는 스키마에 대해 설명합니다.|  
 |[증분 생성 이해](understanding-incremental-generation.md)|스키마 생성 마법사의 증분 생성 기능에 대해 설명합니다.|  
   

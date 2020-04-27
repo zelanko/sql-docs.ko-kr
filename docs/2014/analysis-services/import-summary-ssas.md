@@ -13,16 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dbf47c696b33e368b5b957d2d6fcf961abf417b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080517"
 ---
 # <a name="import-summary-ssas"></a>가져오기 요약(SSAS)
-  
-  **테이블 가져오기 마법사** 의 이 페이지에서는 데이터를 가져오기 위해 지정한 필터를 볼 수 있습니다. 
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
+  **테이블 가져오기 마법사** 의 이 페이지에서는 데이터를 가져오기 위해 지정한 필터를 볼 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
   
  이 필터는 **선택한 테이블 미리 보기** 대화 상자에서 선택한 옵션에 따라 결정됩니다.  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a62a05c8908391b9ce925ecfe08ae30540b8fa29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081647"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>DirectQuery 배포 시나리오(SSAS 테이블 형식)
@@ -24,7 +24,7 @@ ms.locfileid: "66081647"
   
  [DirectQuery 구성 비교](#bkmk_Configurations)  
   
-##  <a name="bkmk_DQProcedure"></a>디자인 및 배포 단계  
+##  <a name="design-and-deployment-steps"></a><a name="bkmk_DQProcedure"></a>디자인 및 배포 단계  
  **1 단계. 솔루션 만들기**  
   
  사용하는 모드에 관계없이 DirectQuery 모델에서 사용될 수 있는 데이터에 대한 제한 사항을 설명하는 정보를 검토해야 합니다. 예를 들어 모델 및 보고서에 사용되는 모든 데이터는 단일 SQL Server 데이터베이스에서 가져와야 합니다. 자세한 내용은 [DirectQuery 모드&#40;SSAS 테이블 형식&#41;](tabular-models/directquery-mode-ssas-tabular.md)를 참조하세요.  
@@ -68,7 +68,7 @@ ms.locfileid: "66081647"
   
 |||  
 |-|-|  
-|**DirectQuery 전용**|(선택 사항) DirectQuery 전용 모델은 파티션이 필요하지 않습니다.<br /><br /> 그러나 디자인 단계 동안 모델에서 파티션을 만든 경우 파티션 중 하나만 데이터 원본으로 사용될 수 있습니다. 기본적으로 첫 번째로 만든 파티션이 DirectQuery 파티션으로 사용됩니다.<br /><br /> 모델에 필요한 모든 데이터를 DirectQuery 파티션에서 사용할 수 있도록 하려면 DirectQuery 파티션을 선택한 다음 전체 데이터 집합을 가져오도록 SQL 문을 편집합니다.|  
+|**DirectQuery 전용**|선택 사항입니다. DirectQuery 전용 모델은 파티션이 필요하지 않습니다.<br /><br /> 그러나 디자인 단계 동안 모델에서 파티션을 만든 경우 파티션 중 하나만 데이터 원본으로 사용될 수 있습니다. 기본적으로 첫 번째로 만든 파티션이 DirectQuery 파티션으로 사용됩니다.<br /><br /> 모델에 필요한 모든 데이터를 DirectQuery 파티션에서 사용할 수 있도록 하려면 DirectQuery 파티션을 선택한 다음 전체 데이터 집합을 가져오도록 SQL 문을 편집합니다.|  
 |**혼합 모드**|모델의 테이블에 파티션이 여러 개 있는 경우 파티션 중 하나를 *DirectQuery 파티션*으로 선택해야 합니다. 파티션을 할당하지 않을 경우 기본적으로 처음 만들어진 파티션이 DirectQuery 파티션으로 사용됩니다.<br /><br /> DirectQuery를 제외한 모든 파티션에 대한 처리 옵션을 설정합니다. 데이터가 관계형 원본에서 전달되므로 일반적으로 DirectQuery 파티션은 처리되지 않습니다.<br /><br /> 자세한 내용은 [파티션 및 DirectQuery 모드 &#40;SSAS 테이블 형식&#41;](tabular-models/define-partitions-in-directquery-models-ssas-tabular.md)을 참조 하세요.|  
   
  **6 단계. 가장 구성**  
@@ -77,38 +77,31 @@ ms.locfileid: "66081647"
   
 |||  
 |-|-|  
-|**DirectQuery 전용**|
-  **가장 설정** 속성에서 SQL Server 데이터 원본에 연결하는 데 사용할 계정을 지정합니다.<br /><br /> 
-  **ImpersonateCurrentUser**값을 사용하면 모델을 호스팅하는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스가 현재 모델 사용자의 자격 증명을 SQL Server 데이터베이스에 전달합니다.|  
-|**혼합 모드**|
-  **가장 설정** 속성에서 SQL Server 데이터 원본의 데이터에 액세스하는 데 사용할 계정을 지정합니다.<br /><br /> 이 설정은 모델에 사용된 캐시를 처리하는 데 사용되는 자격 증명에 영향을 주지 않습니다.|  
+|**DirectQuery 전용**|**가장 설정** 속성에서 SQL Server 데이터 원본에 연결하는 데 사용할 계정을 지정합니다.<br /><br /> **ImpersonateCurrentUser**값을 사용하면 모델을 호스팅하는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스가 현재 모델 사용자의 자격 증명을 SQL Server 데이터베이스에 전달합니다.|  
+|**혼합 모드**|**가장 설정** 속성에서 SQL Server 데이터 원본의 데이터에 액세스하는 데 사용할 계정을 지정합니다.<br /><br /> 이 설정은 모델에 사용된 캐시를 처리하는 데 사용되는 자격 증명에 영향을 주지 않습니다.|  
   
  **7 단계. 모델 배포**  
   
- 모델을 배포할 준비가 되 면 Visual Studio의 **프로젝트** 메뉴를 열고 **속성**을 선택 합니다. 
-  **QueryMode** 속성을 다음 표에 설명된 값 중 하나로 설정합니다.  
+ 모델을 배포할 준비가 되 면 Visual Studio의 **프로젝트** 메뉴를 열고 **속성**을 선택 합니다. **QueryMode** 속성을 다음 표에 설명된 값 중 하나로 설정합니다.  
   
  자세한 내용은 [SQL Server Data Tools &#40;SSAS 테이블 형식&#41;에서 배포 ](tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md)를 참조 하세요.  
   
 |||  
 |-|-|  
 |**DirectQuery 전용**|**DirectQueryOnly**<br /><br /> 직접 쿼리만 지정했으므로 모델의 메타데이터는 서버에 배포되지만 모델은 처리되지 않습니다.<br /><br /> 작업 영역 데이터베이스에서 사용한 캐시가 자동으로 삭제되지는 않습니다. 캐시된 데이터를 사용자가 볼 수 없도록 하려는 경우 디자인 타임 캐시의 선택을 취소할 수 있습니다. 자세한 내용은 [Analysis Services 캐시 지우기](instances/clear-the-analysis-services-caches.md)를 참조 하세요.|  
-|**혼합 모드**|**DirectQuery (메모리 내)**<br /><br /> **DirectQuery를 사용 하는 메모리 내**<br /><br /> 이 두 값을 사용하면 필요에 따라 캐시 또는 관계형 데이터 원본을 사용할 수 있습니다. 순서에 따라 모델에 대한 쿼리에 응답할 때 기본적으로 사용되는 데이터 원본이 정의됩니다.<br /><br /> 혼합 모드에서는 모델 메타데이터를 서버에 배포하는 동시에 캐시를 처리해야 합니다.<br /><br /> 배포 후 이 설정을 변경할 수 있습니다.|  
+|**혼합 모드**|**DirectQuery with In-Memory**<br /><br /> **DirectQuery를 사용 하는 메모리 내**<br /><br /> 이 두 값을 사용하면 필요에 따라 캐시 또는 관계형 데이터 원본을 사용할 수 있습니다. 순서에 따라 모델에 대한 쿼리에 응답할 때 기본적으로 사용되는 데이터 원본이 정의됩니다.<br /><br /> 혼합 모드에서는 모델 메타데이터를 서버에 배포하는 동시에 캐시를 처리해야 합니다.<br /><br /> 배포 후 이 설정을 변경할 수 있습니다.|  
   
  **8 단계. 배포 된 모델 확인**  
   
- 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 모델을 배포한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스를 엽니다. 데이터베이스 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 모델을 배포한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스를 엽니다. 데이터베이스 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
--   
-  **DirectQueryMode**속성은 배포 속성을 정의할 때 설정되었습니다.  
+-   **DirectQueryMode**속성은 배포 속성을 정의할 때 설정되었습니다.  
   
--   
-  **데이터 원본 가장 정보**속성은 사용자 가장 옵션을 정의할 때 설정되었습니다. 자세한 내용은 [가장 옵션 설정&#40;SSAS - 다차원&#41;](multidimensional-models/set-impersonation-options-ssas-multidimensional.md)을 참조하세요.  
+-   **데이터 원본 가장 정보**속성은 사용자 가장 옵션을 정의할 때 설정되었습니다. 자세한 내용은 [가장 옵션 설정&#40;SSAS - 다차원&#41;](multidimensional-models/set-impersonation-options-ssas-multidimensional.md)을 참조하세요.  
   
 -   모델을 배포한 후 언제든지 이러한 속성을 변경할 수 있습니다.  
   
-##  <a name="bkmk_Configurations"></a>DirectQuery 옵션 비교  
+##  <a name="comparing-directquery-options"></a><a name="bkmk_Configurations"></a>DirectQuery 옵션 비교  
  **DirectQuery 전용**  
  단일 데이터 원본을 사용하려고 하거나 데이터가 너무 커서 메모리에 맞지 않는 경우 이 옵션을 사용하는 것이 좋습니다. 매우 큰 관계형 데이터 원본을 사용하는 경우 디자인 타임에 데이터의 일부 하위 집합을 사용하여 모델을 만들 수 있습니다. DirectQuery 전용 모드에서 모델을 배포하는 경우 필요한 데이터를 모두 포함하도록 데이터 원본 정의를 편집할 수 있습니다.  
   
@@ -130,7 +123,7 @@ ms.locfileid: "66081647"
   
 |||  
 |-|-|  
-|**캐시가 기본 설정된 혼합 모드**|모델을 처리하고 캐시에 데이터를 로드할 수 있습니다. 쿼리는 기본적으로 캐시를 사용합니다.  클라이언트가 DirectQuery 원본을 사용하려는 경우 연결 문자열에 매개 변수를 삽입해야 합니다.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **** = **DirectQuery를 사용 하는 메모리 내** querymode|  
+|**캐시가 기본 설정된 혼합 모드**|모델을 처리하고 캐시에 데이터를 로드할 수 있습니다. 쿼리는 기본적으로 캐시를 사용합니다.  클라이언트가 DirectQuery 원본을 사용하려는 경우 연결 문자열에 매개 변수를 삽입해야 합니다.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode** = **DirectQuery를 사용 하는 메모리 내** querymode|  
 |**DirectQuery가 기본 설정된 혼합 모드**|모델을 처리하고 캐시에 데이터를 로드할 수 있습니다. 그러나 쿼리는 기본적으로 Directquery를 사용합니다. 클라이언트가 캐시된 데이터를 사용하려는 경우 연결 문자열에 매개 변수를 삽입해야 합니다. 모델에서 테이블이 분할되면 캐시의 주 파티션도 **In-Memory with DirectQuery**로 설정됩니다.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **Querymode** = **DirectQuery (메모리 내)**|  
   
 ## <a name="see-also"></a>참고 항목  

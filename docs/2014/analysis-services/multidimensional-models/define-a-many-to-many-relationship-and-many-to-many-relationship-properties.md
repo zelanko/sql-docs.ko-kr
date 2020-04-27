@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f679387dd1282dba3a4521f40bd11a2e0ba4b26f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075777"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>다 대 다 관계 및 다 대 다 관계 속성 정의
@@ -93,8 +93,7 @@ ms.locfileid: "66075777"
   
 3.  기존 Fact Internet Sales 테이블을 기반으로 두 번째 차원을 만듭니다. 이 테이블은 팩트 테이블이지만 Sales Order 정보를 포함하고 있습니다. 이 정보를 사용하여 Sales Order 차원을 만들 것입니다.  
   
-4.  원본 정보 지정에서 이름 열을 지정해야 한다는 경고가 표시됩니다. 
-  **SalesOrderNumber** 를 이름으로 선택합니다.  
+4.  원본 정보 지정에서 이름 열을 지정해야 한다는 경고가 표시됩니다. **SalesOrderNumber** 를 이름으로 선택합니다.  
   
      ![이름 열을 표시하는 Sales Order 차원](../media/ssas-m2m-dimsalesordersource.PNG "이름 열을 표시하는 Sales Order 차원")  
   
@@ -106,19 +105,15 @@ ms.locfileid: "66075777"
   
      ![차원 이름 바꾸기를 표시하는 마법사 페이지](../media/ssas-m2m-dimsalesorders.PNG "차원 이름 바꾸기를 표시하는 마법사 페이지")  
   
-7.  
-  **큐브** 를 마우스 오른쪽 단추로 클릭하고 **새 큐브**를 선택하세요.  
+7.  **큐브** 를 마우스 오른쪽 단추로 클릭하고 **새 큐브**를 선택하세요.  
   
 8.  측정값 그룹 테이블에서 **FactInternetSales** 및 **FactInternetSalesReason**을 선택합니다.  
   
-     
-  **FactInternetSales** 는 큐브에서 사용하려는 측정값을 포함하고 있기 때문에 선택하고, 
-  **FactInternetSalesReason** 은 판매 주문과 판매 이유의 관계를 설정하는 멤버 연결 데이터를 제공하는 중간 측정값 그룹이기 때문에 선택합니다.  
+     **FactInternetSales** 는 큐브에서 사용하려는 측정값을 포함하고 있기 때문에 선택하고, **FactInternetSalesReason** 은 판매 주문과 판매 이유의 관계를 설정하는 멤버 연결 데이터를 제공하는 중간 측정값 그룹이기 때문에 선택합니다.  
   
 9. 각 팩트 테이블의 측정값을 선택합니다.  
   
-     모델을 단순하게 만들기 위해 모든 측정값을 지운 다음 목록 아래쪽에서 **Sales Amount** 및 **Fact Internet Sales Count** 만 선택합니다. 
-  **FactInternetSalesReason** 은 측정값을 하나만 포함하므로 자동으로 선택됩니다.  
+     모델을 단순하게 만들기 위해 모든 측정값을 지운 다음 목록 아래쪽에서 **Sales Amount** 및 **Fact Internet Sales Count** 만 선택합니다. **FactInternetSalesReason** 은 측정값을 하나만 포함하므로 자동으로 선택됩니다.  
   
 10. 차원 목록에 **Dim Sales Reason** 및 **Dim Sales Orders**가 표시됩니다.  
   
@@ -132,8 +127,7 @@ ms.locfileid: "66075777"
   
      ![차원 용도의 다 대 다 아이콘](../media/ssas-m2m-icondimusage.png "차원 용도의 다 대 다 아이콘")  
   
-2.  
-  **Dim Sales Reason** 과 **Fact Internet Sales**간의 교집합 셀을 클릭한 다음 단추를 클릭하여 관계 정의 대화 상자를 엽니다.  
+2.  **Dim Sales Reason** 과 **Fact Internet Sales**간의 교집합 셀을 클릭한 다음 단추를 클릭하여 관계 정의 대화 상자를 엽니다.  
   
      이 대화 상자가 다 대 다 관계를 지정하는 데 사용됨을 확인할 수 있습니다. 일반 관계가 있는 차원을 대신 추가한 경우에는 이 대화 상자를 사용하여 다 대 다로 변경할 수 있습니다.  
   
@@ -152,11 +146,11 @@ ms.locfileid: "66075777"
   
 3.  다음과 같은 피벗 테이블을 만듭니다.  
   
-    -   **Sales Amount** 를 값으로  
+    -   **Sales Amount** 를 값으로 사용함  
   
-    -   열의 **Sales Reason Name**  
+    -   열에서**Sales Reason Name** 을 사용함  
   
-    -   행의 **판매 주문 번호**  
+    -   행에서**Sales Order Number** 를 사용함  
   
 4.  결과를 분석합니다. 예제 데이터를 사용하고 있기 때문에 처음에는 모든 판매 주문에 동일한 값이 있는 것처럼 보입니다. 그러나 아래로 스크롤하면 데이터 변화를 확인할 수 있습니다.  
   
@@ -164,8 +158,7 @@ ms.locfileid: "66075777"
   
      ![다 대 다 집계를 표시하는 Excel 워크시트](../media/ssas-m2m-excel.png "다 대 다 집계를 표시하는 Excel 워크시트")  
   
-     주문의 판매액은 올바르게 계산되었습니다. 즉, 전체 주문의 판매액은 **539.99** 입니다. 
-  **539.99** 가 각 이유에 표시되어 있지만 모든 세 이유의 값에 대한 합계가 계산되지 않아서 총합계가 잘못된 값으로 커지지 않았습니다.  
+     주문의 판매액은 올바르게 계산되었습니다. 즉, 전체 주문의 판매액은 **539.99** 입니다. **539.99** 가 각 이유에 표시되어 있지만 모든 세 이유의 값에 대한 합계가 계산되지 않아서 총합계가 잘못된 값으로 커지지 않았습니다.  
   
      왜 처음부터 판매액을 각 판매 이유 아래에 넣지 않았을까요? 그것은 바로 각 이유에 할당할 수 있는 판매액을 식별할 수 있도록 하기 위해서입니다.  
   
@@ -183,14 +176,14 @@ ms.locfileid: "66075777"
   
 4.  연결된 측정값 그룹을 여러 다 대 다 관계에서 사용하지 마십시오. 특히 해당 관계가 서로 다른 큐브에 있는 경우에 사용하지 마십시오. 사용하면 모호한 집계가 발생할 수 있습니다. 자세한 내용은 [다 대 다 관계가 포함된 큐브의 연결된 측정값에 대한 잘못된 집계](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)를 참조하세요.  
   
-##  <a name="bkmk_Learn"></a>더 알아보세요  
+##  <a name="learn-more"></a><a name="bkmk_Learn"></a>더 알아보세요  
  개념을 완전히 이해하는 데 유용한 추가 정보를 얻으려면 다음 링크를 사용하십시오.  
   
  [Analysis Services에서 다 대 다 차원을 정의하는 방법](../lesson-5-3-defining-a-many-to-many-relationship.md)  
   
  [다 대 다 혁명 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [자습서: SQL Server Analysis Services에 대 한 다 대 다 차원 예제](https://go.microsoft.com/fwlink/?LinkId=324761)  
+ [자습서: SQL Server Analysis Services의 다 대 다 차원 예제](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## <a name="see-also"></a>참고 항목  
  [차원 관계](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

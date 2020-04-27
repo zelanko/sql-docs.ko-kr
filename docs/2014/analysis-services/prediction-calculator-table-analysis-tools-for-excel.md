@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e57aee7142da5c256a213ddd2eb0390a0f3b042a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070856"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>예측 계산기(Excel용 테이블 분석 도구)
@@ -135,7 +135,7 @@ ms.locfileid: "66070856"
 |Children|0|157|  
 |교육|Bachelors|22|  
 |Occupation|Skilled Manual|33|  
-|Home Owner|yes|8|  
+|Home Owner|예|8|  
 |Cars|2|50|  
 |Commute Distance|0-1 Miles|99|  
 |지역|북아메리카|0|  
@@ -175,8 +175,7 @@ ms.locfileid: "66070856"
 8.  시트의 **합계** 행 바로 다음에 인쇄 된 조건을 사용 하 여 점수를 예측 된 결과로 변환 합니다.  
   
 ## <a name="related-tools"></a>관련 도구  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에는 이러한 종류의 분석에 사용할 수 있는 Microsoft 로지스틱 회귀 알고리즘이 제공됩니다. 로지스틱 회귀를 이미 잘 알고 있는 경우 Excel 용 데이터 마이닝 클라이언트의 **고급** 옵션을 사용 하 여 로지스틱 회귀 모델을 쉽게 만들 수 있습니다. 자세한 내용은 [고급 모델링 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)을 참조 하세요. 로지스틱 회귀 모델에 대 한 옵션 및 매개 변수에 대 한 자세한 내용은 온라인 설명서의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] "Microsoft 로지스틱 회귀 알고리즘" 항목을 참조 하십시오.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에는 이러한 종류의 분석에 사용할 수 있는 Microsoft 로지스틱 회귀 알고리즘이 제공됩니다. 로지스틱 회귀를 이미 잘 알고 있는 경우 Excel 용 데이터 마이닝 클라이언트의 **고급** 옵션을 사용 하 여 로지스틱 회귀 모델을 쉽게 만들 수 있습니다. 자세한 내용은 [고급 모델링 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)을 참조 하세요. 로지스틱 회귀 모델에 대 한 옵션 및 매개 변수에 대 한 자세한 내용은 온라인 설명서의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] "Microsoft 로지스틱 회귀 알고리즘" 항목을 참조 하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [Excel용 테이블 분석 도구](table-analysis-tools-for-excel.md)  

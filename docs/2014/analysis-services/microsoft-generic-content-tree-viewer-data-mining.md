@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ba3b64847e2f63a96533a0f57cee41208176a7b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077806"
 ---
 # <a name="microsoft-generic-content-tree-viewer-data-mining"></a>Microsoft 일반 콘텐츠 트리 뷰어(데이터 마이닝)
-  
   **Microsoft 일반 콘텐츠 트리 뷰어** 에는 표준화된 HTML 테이블 형식으로 데이터 마이닝 모드의 콘텐츠에 대한 세부 정보가 표시됩니다. 이 뷰는 모델의 기본 구조뿐만 아니라 계수, 값 분포 등에 대한 세부 정보를 표시하기 때문에 유용합니다.  
   
  이 테이블에 표시되는 실제 콘텐츠는 사용된 알고리즘에 따라 달라지며 열, 규칙, 속성, 특성, 노드 및 수식을 포함할 수 있습니다. 모델 콘텐츠 및 각 모델 유형에 대한 정보를 해석하는 방법에 대한 자세한 내용은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  

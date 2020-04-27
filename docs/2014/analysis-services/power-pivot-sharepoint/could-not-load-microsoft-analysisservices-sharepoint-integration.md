@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b33e09d4dc7471f6447f1205f5c39746bc247ae7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071625"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>파일이 나 어셈블리 &#39;b77a5c561934e089, Version = 3.5.0.0, Culture = 중립, PublicKeyToken =&#39; 또는 해당 종속성 중 하나를 로드할 수 없습니다. 시스템은 지정된 파일을 찾을 수 없습니다.
@@ -38,8 +38,7 @@ ms.locfileid: "66071625"
   
 1.  SharePoint 2010에 대 한 하드웨어 및 소프트웨어 요구 사항 설명서 [하드웨어 및 소프트웨어 요구 사항 확인 (SharePoint 2010)](https://go.microsoft.com/fwlink/?LinkId=169734) (https://go.microsoft.com/fwlink/?LinkId=169734))으로 이동 합니다.  
   
-2.  
-  **소프트웨어 필수 구성 요소 설치**에서 현재 사용 중인 운영 체제(Windows Server 2008 SP2 또는 Windows Server 2008 R2)에 맞는 ADO.NET Data Services 3.5의 링크를 찾습니다.  
+2.  **소프트웨어 필수 구성 요소 설치**에서 현재 사용 중인 운영 체제(Windows Server 2008 SP2 또는 Windows Server 2008 R2)에 맞는 ADO.NET Data Services 3.5의 링크를 찾습니다.  
   
 3.  링크를 클릭하여 서비스를 설치하는 설치 프로그램을 실행합니다.  
   

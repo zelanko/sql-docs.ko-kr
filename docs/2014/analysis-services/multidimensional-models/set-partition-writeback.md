@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3359e26ace467bbf8446aac6b68a0ef2716d09a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072900"
 ---
 # <a name="set-partition-writeback"></a>파티션 쓰기 저장(writeback) 설정
@@ -33,13 +33,11 @@ ms.locfileid: "66072900"
 >  쓰기 저장은 SQL Server 관계형 데이터베이스 및 데이터 마트, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다차원 모델에 대해서만 지원됩니다.  
   
 ## <a name="how-to-write-enable-a-partition"></a>파티션을 쓰기 가능으로 설정하는 방법  
- 
-  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 큐브 디자이너에서 파티션 자체를 쓰기 가능으로 설정하여 파티션의 측정값 그룹을 쓰기 가능하게 할 수 있습니다.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 큐브 디자이너에서 파티션 자체를 쓰기 가능으로 설정하여 파티션의 측정값 그룹을 쓰기 가능하게 할 수 있습니다.  
   
 -   큐브 디자이너의 파티션 탭에서 파티션을 마우스 오른쪽 단추로 클릭하고 **쓰기 저장 설정**을 선택합니다.  
   
--   
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 데이터베이스 |큐브| 측정값 그룹을 확장한 다음 **쓰기 저장** 을 마우스 오른쪽 단추로 클릭하고 **쓰기 저장 사용**을 선택합니다.  
+-   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 데이터베이스 |큐브| 측정값 그룹을 확장한 다음 **쓰기 저장** 을 마우스 오른쪽 단추로 클릭하고 **쓰기 저장 사용**을 선택합니다.  
   
  쓰기 저장은 SUM 집계를 사용하는 측정값에서만 지원됩니다. AdventureWorks 샘플 데이터베이스에서 Sales Targets 측정값 그룹을 사용하여 쓰기 저장 동작을 테스트할 수 있습니다.  
   
@@ -64,6 +62,6 @@ ms.locfileid: "66072900"
 ## <a name="see-also"></a>참고 항목  
  [쓰기 가능 파티션](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [Excel 2010의 셀 수준에서 OLAP 큐브에 쓰기 다시 쓰기 설정](https://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [Analysis Services 쓰기 저장 (Writeback)을 사용 하 여 데이터 입력 설정 및 보안](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [Analysis Services 쓰기 저장으로 데이터 엔트리 활성화 및 보안](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

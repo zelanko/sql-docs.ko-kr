@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6efccad47f0d6670c87aeb1e9cc9ef9ec654a138
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070911"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>데이터 피드 사용(SharePoint용 PowerPivot)
@@ -34,14 +34,14 @@ ms.locfileid: "66070911"
   
  [데이터 서비스 문서에서 데이터 피드 만들기](#dsdoc)  
   
-##  <a name="prereq"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="prereq"></a> 필수 조건  
  데이터 피드를 Excel 2010으로 가져오려면 PowerPivot for Excel이 있어야 합니다.  
   
  Atom 1.0 형식으로 데이터를 제공하는 웹 서비스나 데이터 서비스가 필요합니다. 및 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 2010는 모두이 형식의 데이터를 제공할 수 있습니다.  
   
  SharePoint 목록을 데이터 피드로 내보낼 수 있으려면 SharePoint 서버에 ADO.NET Data Services를 설치해야 합니다. 자세한 내용은 [ADO.NET Data Services를 설치하여 SharePoint 목록의 데이터 피드 내보내기 지원](../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)을 참조하세요.  
   
-##  <a name="sharepointlist"></a>SharePoint 목록에서 데이터 피드 만들기  
+##  <a name="create-a-data-feed-from-a-sharepoint-list"></a><a name="sharepointlist"></a>SharePoint 목록에서 데이터 피드 만들기  
  SharePoint 2010 팜에서 SharePoint 목록의 목록 리본에는 데이터 피드로 내보내기 단추가 있습니다. 이 단추를 클릭하여 목록을 피드로 내보낼 수 있습니다. 최상의 결과를 얻으려면 Excel 2010과 PowerPivot 클라이언트 애플리케이션이 워크스테이션에 설치되어 있어야 합니다. 데이터 피드 내보내기에 응답하여 PowerPivot 클라이언트 애플리케이션이 시작되고 목록을 포함하는 새 PowerPivot 테이블을 만듭니다.  
   
 1.  SharePoint 사이트에서 목록을 엽니다.  
@@ -55,29 +55,26 @@ ms.locfileid: "66070911"
   
 4.  PowerPivot for Excel이 로컬로 설치 되어 있으면 **열기** 를 클릭 하 고, 나중에 가져오기 작업을 위해 .atomsvc 문서를 하드 드라이브에 저장 하려면 **저장** 을 클릭 합니다.  
   
-5.  
-  **열기**를 선택한 경우 테이블 가져오기 마법사를 사용하여 데이터 피드를 워크시트로 가져옵니다. 데이터 피드가 PowerPivot 창에 새 테이블로 추가됩니다.  
+5.  **열기**를 선택한 경우 테이블 가져오기 마법사를 사용하여 데이터 피드를 워크시트로 가져옵니다. 데이터 피드가 PowerPivot 창에 새 테이블로 추가됩니다.  
   
  ADO.NET Data Services 3.5.1이 SharePoint 서버에 설치되어 있지 않으면 오류가 발생합니다. 오류 및 오류 해결 방법에 대한 자세한 내용은 [ADO.NET Data Services를 설치하여 SharePoint 목록의 데이터 피드 내보내기 지원](../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)을 참조하세요.  
   
-##  <a name="rsreport"></a>Reporting Services 보고서에서 데이터 피드 만들기  
+##  <a name="create-a-data-feed-from-a-reporting-services-report"></a><a name="rsreport"></a>Reporting Services 보고서에서 데이터 피드 만들기  
  SQL Server 2008 R2 Reporting Services가 배포되어 있는 경우 새로운 Atom 렌더링 확장을 사용하여 기존 보고서에서 데이터 피드를 생성할 수 있습니다. 최상의 결과를 얻으려면 Excel 2010과 PowerPivot for Excel이 워크스테이션에 설치되어 있어야 합니다. 데이터 피드 내보내기에 응답하여 PowerPivot 클라이언트 애플리케이션이 시작되고 테이블과 열이 스트리밍될 때 자동으로 이를 추가하고 연결합니다.  
   
- 보고서에서 데이터 피드를 내보내는 방법에 대한 자세한 내용은 [보고서 작성기 도움말 파일](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)에서 [보고서에서 데이터 피드 생성&#40;보고서 작성기 및 SSRS&#41;](https://go.microsoft.com/fwlink/?LinkId=154494)을 참조하세요.  
+ 보고서에서 데이터 피드를 내보내는 방법에 대한 자세한 내용은 [보고서 작성기 도움말 파일](https://go.microsoft.com/fwlink/?LinkId=154494)에서 [보고서에서 데이터 피드 생성&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)을 참조하세요.  
   
 > [!NOTE]  
 >  SharePoint 라이브러리에 게시되는 PowerPivot 통합 문서에 보고서 데이터를 다시 가져오는 데이터 새로 고침 되풀이 일정을 설정하려면 보고서 서버를 SharePoint 통합용으로 구성해야 합니다. SharePoint용 PowerPivot 및 Reporting Services를 함께 사용 하는 방법에 대 한 자세한 내용은 [SharePoint 모드&#41;Reporting Services 보고서 &#40;서버의 구성 및 관리 ](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md)를 참조 하세요.  
   
-##  <a name="dsdoc"></a>데이터 서비스 문서에서 데이터 피드 만들기  
- Atom 피드를 생성하는 사용자 지정 데이터 서비스가 있는 경우 사용자와 애플리케이션에서 데이터를 사용할 수 있게 하는 방법으로 데이터 서비스 문서를 설정할 수 있습니다. 
-  *데이터 서비스 문서* 파일(.atomsvc)에서는 Atom 연결 형식으로 데이터를 게시하는 온라인 원본에 대해 하나 이상의 연결을 지정합니다. 데이터 서비스 문서는 SharePoint 서버에 게시된 데이터 서비스 문서를 찾아보기 위한 공용 액세스 지점을 제공하는 특수한 용도의 라이브러리인 *데이터 피드 라이브러리*에서 만들 수 있습니다. 데이터 피드 라이브러리에 있는 데이터 서비스 문서에 액세스할 수 있는 정보 작업자는 문서의 SharePoint URL을 참조하여 데이터 피드를 해당 통합 문서 및 애플리케이션으로 가져올 수 있습니다.  
+##  <a name="create-a-data-feed-from-a-data-service-document"></a><a name="dsdoc"></a>데이터 서비스 문서에서 데이터 피드 만들기  
+ Atom 피드를 생성하는 사용자 지정 데이터 서비스가 있는 경우 사용자와 애플리케이션에서 데이터를 사용할 수 있게 하는 방법으로 데이터 서비스 문서를 설정할 수 있습니다. *데이터 서비스 문서* 파일(.atomsvc)에서는 Atom 연결 형식으로 데이터를 게시하는 온라인 원본에 대해 하나 이상의 연결을 지정합니다. 데이터 서비스 문서는 SharePoint 서버에 게시된 데이터 서비스 문서를 찾아보기 위한 공용 액세스 지점을 제공하는 특수한 용도의 라이브러리인 *데이터 피드 라이브러리*에서 만들 수 있습니다. 데이터 피드 라이브러리에 있는 데이터 서비스 문서에 액세스할 수 있는 정보 작업자는 문서의 SharePoint URL을 참조하여 데이터 피드를 해당 통합 문서 및 애플리케이션으로 가져올 수 있습니다.  
   
 1.  사이트 관리자가 만든 데이터 피드 라이브러리를 엽니다. 자세한 내용은 [데이터 피드 라이브러리 만들기 또는 사용자 지정 &#40;SharePoint용 PowerPivot&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md)를 참조 하세요.  
   
 2.  라이브러리 도구에서 **문서**를 클릭합니다.  
   
-3.  
-  **새 문서**를 클릭합니다.  
+3.  **새 문서**를 클릭합니다.  
   
 4.  파일 이름과 설명을 제공합니다.  
   
@@ -85,7 +82,7 @@ ms.locfileid: "66070911"
   
     1.  **기준 URL** 은 선택 사항입니다. 데이터 서비스 문서에서 여러 피드를 제공하는 경우 기준 URL을 지정해야 합니다. 기준 URL에서는 모든 피드에 공통되는 URL 부분(예: 서버 이름 및 사이트)을 지정해야 합니다. Reporting Services 보고서에 대한 데이터 서비스 문서를 만들 경우 기준 URL은 보고서 서버 URL 및 보고서입니다.  
   
-    2.  **웹 서비스 URL** 이 필요 합니다. 기준 URL이 없을 경우 이 값은 http:// 또는 https://를 주소에 포함해야 합니다. 기준 URL을 지정한 경우 웹 서비스 URL은 기준 URL 다음에 오는 부분입니다. 예를 들어 전체 URL이 인 경우 http://adventure-works/inventory/today.aspx기본 url http://adventure-works/inventory은이 고 웹 서비스 url은/today.aspx입니다.  
+    2.  **웹 서비스 URL** 은 필수입니다. 기준 URL이 없을 경우 이 값은 http:// 또는 https://를 주소에 포함해야 합니다. 기준 URL을 지정한 경우 웹 서비스 URL은 기준 URL 다음에 오는 부분입니다. 예를 들어 전체 URL이 인 경우 http://adventure-works/inventory/today.aspx기본 url http://adventure-works/inventory은이 고 웹 서비스 url은/today.aspx입니다.  
   
          웹 서비스 URL은 데이터 하위 집합을 필터링하거나 선택하는 매개 변수를 포함할 수 있습니다. 피드를 제공하는 애플리케이션이나 서비스는 URL에 지정된 매개 변수를 지원해야 합니다.  
   

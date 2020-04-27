@@ -20,17 +20,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35482dc6206f0ad8807cb0f9a3e46902d14061ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074802"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>다차원 모델의 KPI(핵심 성과 지표)
   비즈니스 용어에서 KPI(핵심 성과 지표)는 비즈니스 성취도를 평가하기 위한 정량 측정값을 나타냅니다.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 KPI는 큐브의 비즈니스 성취도 평가에 사용되는 큐브의 측정값 그룹과 관련된 계산의 모음입니다. 일반적으로 이러한 계산은 MDX(Multidimensional Expression) 식 또는 계산 멤버의 조합입니다. 또한 KPI에는 클라이언트 애플리케이션의 KPI 계산 결과 표시 방법에 대한 정보를 제공하는 추가적인 메타데이터가 포함됩니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 KPI는 큐브의 비즈니스 성취도 평가에 사용되는 큐브의 측정값 그룹과 관련된 계산의 모음입니다. 일반적으로 이러한 계산은 MDX(Multidimensional Expression) 식 또는 계산 멤버의 조합입니다. 또한 KPI에는 클라이언트 애플리케이션의 KPI 계산 결과 표시 방법에 대한 정보를 제공하는 추가적인 메타데이터가 포함됩니다.  
   
  KPI는 목표 집합에 대한 정보, 큐브에 기록된 성능의 실제 수식 및 성능의 추세와 상태를 보여 주는 측정값을 처리합니다. AMO는 KPI 값에 대한 수식 및 기타 정의를 정의하는 데 사용됩니다. ADOMD.NET과 같은 쿼리 인터페이스는 클라이언트 애플리케이션에서 KPI 값을 검색하여 최종 사용자에게 노출하는 데 사용됩니다. 자세한 내용은 [ADOMD.NET을 사용하여 개발](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)을 참조하세요.  
   
@@ -40,18 +39,17 @@ ms.locfileid: "66074802"
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]KPI는 큐브의 측정값 그룹과 관련 된 계산 모음으로, 비즈니스 성공을 평가 하는 데 사용 됩니다. 일반적으로 이러한 계산은 MDX(Multidimensional Expression) 식 및 계산 멤버의 조합입니다. 또한 KPI에는 클라이언트 애플리케이션의 KPI 계산 결과 표시 방법에 대한 정보를 제공하는 추가적인 메타데이터가 포함됩니다.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 KPI는 여러 클라이언트 애플리케이션에서 사용할 수 있는 서버 기반 KPI라는 주요 이점이 있습니다. 여러 클라이언트 애플리케이션에서 생성되는 여러 사실 버전과 달리 서버 기반 KPI는 단일 사실 버전을 제공합니다. 또한 각 클라이언트 컴퓨터 대신 서버에서 복잡한 계산을 수행하므로 성능상의 이점이 있습니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 KPI는 여러 클라이언트 애플리케이션에서 사용할 수 있는 서버 기반 KPI라는 주요 이점이 있습니다. 여러 클라이언트 애플리케이션에서 생성되는 여러 사실 버전과 달리 서버 기반 KPI는 단일 사실 버전을 제공합니다. 또한 각 클라이언트 컴퓨터 대신 서버에서 복잡한 계산을 수행하므로 성능상의 이점이 있습니다.  
   
 ## <a name="common-kpi-terms"></a>일반적인 KPI 용어  
  다음 표에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 일반적인 KPI 용어에 대한 정의를 제공합니다.  
   
 |용어|정의|  
 |----------|----------------|  
-|목표|KPI의 목표값을 반환하는 MDX 숫자 식 또는 계산.|  
-|값|KPI의 실제 값을 반환하는 MDX 숫자 식.|  
-|상태|특정 시점에 지정한 KPI의 상태를 나타내는 MDX 식.<br /><br /> 상태 MDX 식은 -1과 1 사이의 정규화된 값을 반환해야 합니다. 값이 -1 이하이면 "불량"이나 "낮음"으로 해석됩니다. 값 영(0)은 "허용됨"이나 "보통"으로 해석됩니다. 1 이상의 값은 "양호"나 "높음"으로 해석됩니다.<br /><br /> 중간 값을 제한 없이 선택적으로 반환할 수 있으며 클라이언트 애플리케이션에서 지원하는 경우 이러한 값을 사용하여 추가 상태를 원하는 만큼 표시할 수 있습니다.|  
-|추세|시간이 지남에 따라 KPI 값을 계산하는 MDX 식.  특정 비즈니스 컨텍스트에서 유용한 시간 기반 조건이 추세가 될 수 있습니다.<br /><br /> 추세 MDX 식을 사용하여 비즈니스 사용자는 KPI가 시간에 따라 향상되는지 또는 저하되는지 여부를 확인할 수 있습니다.|  
+|목표|KPI의 목표 값을 반환하는 MDX 숫자 식 또는 계산입니다.|  
+|값|KPI의 실제 값을 반환하는 MDX 숫자 식입니다.|  
+|상태|지정된 기간의 KPI 상태를 나타내는 MDX 식입니다.<br /><br /> 상태 MDX 식은 -1과 1 사이의 정규화된 값을 반환해야 합니다. 값이 -1 이하이면 "불량"이나 "낮음"으로 해석됩니다. 값 영(0)은 "허용됨"이나 "보통"으로 해석됩니다. 1 이상의 값은 "양호"나 "높음"으로 해석됩니다.<br /><br /> 중간 값을 제한 없이 선택적으로 반환할 수 있으며 클라이언트 애플리케이션에서 지원하는 경우 이러한 값을 사용하여 추가 상태를 원하는 만큼 표시할 수 있습니다.|  
+|추세|시간이 지남에 따라 KPI 값을 계산하는 MDX 식. 추세는 특정 비즈니스 컨텍스트에서 유용한 시간 기반 조건입니다.<br /><br /> 추세 MDX 식을 사용하여 비즈니스 사용자는 KPI가 시간에 따라 향상되는지 또는 저하되는지 여부를 확인할 수 있습니다.|  
 |상태 표시|KPI의 상태를 빠르게 보여 주는 시각적 요소입니다. 요소 표시 방법은 상태를 평가하는 MDX 식의 값에 의해 결정됩니다.|  
 |추세 표시|KPI의 추세를 빠르게 보여 주는 시각적 요소입니다. 요소 표시 방법은 추세를 평가하는 MDX 식의 값에 의해 결정됩니다.|  
 |표시 폴더|사용자가 큐브를 검색할 때 KPI가 나타나는 폴더입니다.|  
@@ -62,10 +60,9 @@ ms.locfileid: "66074802"
 ## <a name="parent-kpis"></a>부모 KPI  
  조직의 여러 비즈니스 메트릭을 다양한 수준에서 추적할 수 있습니다. 예를 들어 2-3개의 KPI만으로 회사 전체의 비즈니스 성공 여부를 평가하되 이러한 회사 차원 KPI의 기반으로 회사 전체의 비즈니스 단위에서 추적하는 3-4개의 다른 KPI를 사용할 수 있습니다. 또한 회사의 비즈니스 단위에서 동일한 KPI를 계산하는 데 여러 다른 통계를 사용할 수 있습니다. 계산된 KPI의 결과는 회사 차원 KPI로 롤업됩니다.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 KPI 간에 부모-자식 관계를 정의할 수 있습니다. 이러한 부모-자식 관계를 통해 자식 KPI의 결과를 사용하여 부모 KPI의 결과를 계산할 수 있습니다. 또한 클라이언트 애플리케이션에서 이 관계를 사용하여 부모 및 자식 KPI를 적절히 표시할 수 있습니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 KPI 간에 부모-자식 관계를 정의할 수 있습니다. 이러한 부모-자식 관계를 통해 자식 KPI의 결과를 사용하여 부모 KPI의 결과를 계산할 수 있습니다. 또한 클라이언트 애플리케이션에서 이 관계를 사용하여 부모 및 자식 KPI를 적절히 표시할 수 있습니다.  
   
-## <a name="weights"></a>Weights  
+## <a name="weights"></a>가중치  
  자식 KPI에 가중치를 할당할 수도 있습니다. 가중치를 사용하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 부모 KPI의 값을 계산할 때 자식 KPI의 결과가 그에 따라 조정됩니다.  
   
 ## <a name="retrieving-and-displaying-kpis"></a>KPI 검색 및 표시  

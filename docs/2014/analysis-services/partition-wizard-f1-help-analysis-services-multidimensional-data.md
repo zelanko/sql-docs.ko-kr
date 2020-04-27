@@ -13,18 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 86976ac183fc592deab50ebdf5599ef3e7231c28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072128"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>파티션 마법사 F1 도움말(Analysis Services - 다차원 데이터)
   파티션 마법사를 사용하여 측정값 그룹에 대한 파티션을 큐브에 정의할 수 있습니다. 기본적으로 큐브의 각 측정값 그룹에 대해 단일 파티션이 정의됩니다. 그러나 파티션이 크면 액세스 및 처리 성능이 저하될 수 있습니다. 각각 측정값 그룹의 일부 데이터를 포함하는 여러 파티션을 만들면 측정값 그룹의 액세스 및 처리 성능을 향상시킬 수 있습니다.  
   
 > [!CAUTION]  
->  
-  **원본 정보 지정** 또는 **행 제한** 페이지에 중복 행을 포함하면 잘못된 데이터가 포함된 파티션이 생성될 수 있습니다.  
+>  **원본 정보 지정** 또는 **행 제한** 페이지에 중복 행을 포함하면 잘못된 데이터가 포함된 파티션이 생성될 수 있습니다.  
   
  파티션 마법사는 다음 단계로 이루어져 있습니다.  
   
@@ -49,6 +48,6 @@ ms.locfileid: "66072128"
 -   [원격 폴더 찾아보기 대화 상자 &#40;Analysis Services 다차원 데이터&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [파티션 &#40;Analysis Services 다차원 데이터&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [파티션&#40;Analysis Services - 다차원 데이터&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

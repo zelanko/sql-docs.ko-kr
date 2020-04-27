@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 03419c570b4982a19cf1a958ac6e0391de02fef9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076095"
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>다차원 모델의 데이터 원본 뷰
@@ -31,29 +31,29 @@ ms.locfileid: "66076095"
  하나 이상의 데이터 원본에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트나 데이터베이스에 여러 개의 데이터 원본 뷰를 작성하고 각각 서로 다른 솔루션의 요구 사항을 만족하도록 생성할 수 있습니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
- [Analysis Services&#41;&#40;데이터 원본 뷰 정의](defining-a-data-source-view-analysis-services.md)  
+ [데이터 원본 뷰 정의&#40;Analysis Services&#41;](defining-a-data-source-view-analysis-services.md)  
   
- [데이터 원본 뷰에서 테이블이 나 뷰 추가 또는 제거 &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
+ [데이터 원본 뷰에서 테이블이나 뷰 추가 또는 제거&#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
- [데이터 원본 뷰에서 속성 변경 &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
+ [데이터 원본 뷰에서 속성 변경&#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   
- [데이터 원본 뷰에서 논리적 관계 정의 Analysis Services &#40;&#41;](define-logical-relationships-in-a-data-source-view-analysis-services.md)  
+ [데이터 원본 뷰에서 논리적 관계 정의&#40;Analysis Services&#41;](define-logical-relationships-in-a-data-source-view-analysis-services.md)  
   
- [데이터 원본 뷰에서 논리적 기본 키 정의 Analysis Services &#40;&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)  
+ [데이터 원본 뷰에서 논리적 기본 키 정의&#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)  
   
- [데이터 원본 뷰에서 명명 된 계산을 정의 하 여 Analysis Services &#40;&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [데이터 원본 뷰에서 명명된 계산 정의&#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
- [데이터 원본 뷰에서 명명 된 쿼리 정의 &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
+ [데이터 원본 뷰에서 명명된 쿼리 정의&#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
   
- [데이터 원본 뷰의 테이블 또는 명명 된 쿼리를 Analysis Services &#40;&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)  
+ [데이터 원본 뷰의 테이블 또는 명명된 쿼리 바꾸기&#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)  
   
- [데이터 원본 뷰 디자이너에서 다이어그램 사용 &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [데이터 원본 뷰 디자이너에서의 다이어그램 작업&#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
- [데이터 원본 뷰에서 데이터 탐색 &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)  
+ [데이터 원본 뷰에서 데이터 탐색&#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)  
   
- [데이터 원본 뷰를 삭제 &#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)  
+ [데이터 원본 뷰 삭제&#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)  
   
- [데이터 원본 뷰에서 스키마를 새로 고쳐 Analysis Services &#40;&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
+ [데이터 원본 뷰에서 스키마 새로 고침&#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [스키마 생성 마법사 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)   

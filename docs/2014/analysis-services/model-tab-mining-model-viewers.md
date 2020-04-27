@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05c0a25ceded07264e4dbe10467e9dc6f093f6c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077617"
 ---
 # <a name="model-tab-mining-model-viewers"></a>모델 탭(마이닝 모델 뷰어)
@@ -24,7 +24,7 @@ ms.locfileid: "66077617"
   
  이 시계열 모델 뷰를 사용하여 그래프에 대한 수식, ARIMA 항, 계수 등, 시계열 분석에 대한 유용한 정보를 추출할 수 있습니다.  
   
- **자세한 내용:** Microsoft 시계열 [알고리즘](data-mining/microsoft-time-series-algorithm.md), Microsoft 시계열 [뷰어를 사용 하 여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), [microsoft 시계열 알고리즘](data-mining/microsoft-time-series-algorithm.md)  
+ **자세한 내용:** [Microsoft Time Series 알고리즘](data-mining/microsoft-time-series-algorithm.md), [Microsoft 시계열 뷰어를 사용하여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), [Microsoft Time Series 알고리즘](data-mining/microsoft-time-series-algorithm.md)  
   
 ## <a name="options"></a>옵션  
  **뷰어 내용 새로 고침**  

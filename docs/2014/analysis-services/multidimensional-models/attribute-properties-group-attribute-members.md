@@ -23,10 +23,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3cc874831f9f96c2540d58f2ffe3b89f8c4dc7aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077273"
 ---
 # <a name="group-attribute-members-discretization"></a>특성 멤버 그룹화(불연속화)
@@ -34,11 +34,10 @@ ms.locfileid: "66077273"
   
  특성에 대한 `DiscretizationMethod` 속성은 멤버의 그룹화 방식을 제어합니다.  
   
-|`DiscretizationMethod`설정|Description|  
+|`DiscretizationMethod` 설정|설명|  
 |--------------------------------------|-----------------|  
 |`None`|멤버를 표시합니다.|  
-|`Automatic`|
-  `EqualAreas` 메서드 또는 `Clusters` 메서드 중에서 데이터를 가장 잘 표현하는 메서드를 선택합니다.|  
+|`Automatic`|`EqualAreas` 메서드 또는 `Clusters` 메서드 중에서 데이터를 가장 잘 표현하는 메서드를 선택합니다.|  
 |`EqualAreas`|특성의 멤버를 동일한 수의 멤버를 포함하는 그룹으로 나눕니다.|  
 |`Clusters`|학습 데이터를 샘플링하여 임의의 지점 수로 초기화하고 EM(Expectation-Maximization) 클러스터링 알고리즘을 몇 차례 반복 실행하여 특성의 멤버를 그룹으로 나눕니다.<br /><br /> 이 방법은 모든 분포 곡선에 대해 작동하므로 유용하지만 처리 시간 면에서는 비용이 더 듭니다.|  
   
@@ -48,14 +47,12 @@ ms.locfileid: "66077273"
   
  멤버 그룹의 일반적인 용도는 멤버 수가 적은 수준에서 멤버 수가 많은 수준으로 드릴다운하는 것입니다. 사용자가 수준 간에 드릴다운할 수 있도록 하려면 멤버 수를 많이 포함하는 수준에 대해 특성의 `DiscretizationMethod` 속성을 `None`에서 앞 표에서 설명한 불연속화 메서드 중 하나로 변경합니다. 예를 들어 Client 차원에는 멤버가 500,000개인 Client Name이라는 특성 계층이 포함되어 있습니다. 이 특성의 이름을 Client Groups로 바꾸고 `DiscretizationMethod` 속성을 `Automatic`으로 변경하여 특성 계층 멤버 수준에서 멤버 그룹을 표시할 수 있습니다.  
   
- 각 그룹의 개별 클라이언트로 드릴다운하려면 동일한 테이블 열에 바인딩된 Client Name이라는 특성 계층을 새로 만듭니다. 그런 다음 두 특성을 기반으로 새로운 사용자 계층을 만듭니다. 상위 수준은 Client Groups 특성을 기반으로 하고 하위 수준은 Client Name 특성을 기반으로 하면 됩니다. 
-  `IsAggregatable` 속성은 두 특성 모두에 대해 `True`가 됩니다. 그런 다음 사용자는 계층의 (All) 수준을 확장하여 그룹 멤버를 보고 그룹 멤버를 확장하여 계층의 리프 멤버를 볼 수 있습니다. 그룹이나 클라이언트 수준을 숨기려면 해당 특성의 `AttributeHierarchyVisible` 속성을 `False`로 설정합니다.  
+ 각 그룹의 개별 클라이언트로 드릴다운하려면 동일한 테이블 열에 바인딩된 Client Name이라는 특성 계층을 새로 만듭니다. 그런 다음 두 특성을 기반으로 새로운 사용자 계층을 만듭니다. 상위 수준은 Client Groups 특성을 기반으로 하고 하위 수준은 Client Name 특성을 기반으로 하면 됩니다. `IsAggregatable` 속성은 두 특성 모두에 대해 `True`가 됩니다. 그런 다음 사용자는 계층의 (All) 수준을 확장하여 그룹 멤버를 보고 그룹 멤버를 확장하여 계층의 리프 멤버를 볼 수 있습니다. 그룹이나 클라이언트 수준을 숨기려면 해당 특성의 `AttributeHierarchyVisible` 속성을 `False`로 설정합니다.  
   
 ## <a name="naming-template"></a>명명 템플릿  
  멤버 그룹 이름은 멤버 그룹이 생성될 때 자동으로 생성됩니다. 명명 템플릿을 지정하지 않으면 기본 명명 템플릿이 사용됩니다. 특성의 `Format` 속성에 대한 `NameColumn` 옵션에 대해 명명 템플릿을 지정하여 이러한 명명 방법을 변경할 수 있습니다. 특성의 `Translations` 속성에 사용된 열 바인딩의 `NameColumn` 모음에 지정된 모든 언어에 대해 다양한 명명 템플릿을 다시 정의할 수 있습니다.  
   
- 
-  `Format` 설정은 다음 문자열 식을 사용하여 명명 템플릿을 정의합니다.  
+ `Format` 설정은 다음 문자열 식을 사용하여 명명 템플릿을 정의합니다.  
   
  `<Naming template> ::= <First definition> [;<Intermediate definition>;<Last definition>]`  
   
@@ -65,17 +62,13 @@ ms.locfileid: "66077273"
   
  `<Last definition> ::= <Name expression>`  
   
- 
-  `<First definition>` 매개 변수는 분할 메서드에 의해 생성된 첫 번째 또는 존재하는 유일한 멤버 그룹에만 적용됩니다. 선택적 매개 변수인 `<Intermediate definition>` 과 `<Last definition>` 을 제공하지 않으면 해당 특성에 대해 생성된 모든 측정값 그룹에 대해 `<First definition>` 매개 변수가 사용됩니다.  
+ `<First definition>` 매개 변수는 분할 메서드에 의해 생성된 첫 번째 또는 존재하는 유일한 멤버 그룹에만 적용됩니다. 선택적 매개 변수인 `<Intermediate definition>` 과 `<Last definition>` 을 제공하지 않으면 해당 특성에 대해 생성된 모든 측정값 그룹에 대해 `<First definition>` 매개 변수가 사용됩니다.  
   
- 
-  `<Last definition>` 매개 변수는 분할 메서드에 의해 생성된 마지막 멤버 그룹에만 적용됩니다.  
+ `<Last definition>` 매개 변수는 분할 메서드에 의해 생성된 마지막 멤버 그룹에만 적용됩니다.  
   
- 
-  `<Intermediate bucket name>` 매개 변수는 분할 메서드에 의해 생성된 첫 번째 또는 마지막 멤버 그룹을 제외한 모든 멤버 그룹에 적용됩니다. 둘 이하의 그룹이 생성된 경우에는 이 매개 변수가 무시됩니다.  
+ `<Intermediate bucket name>` 매개 변수는 분할 메서드에 의해 생성된 첫 번째 또는 마지막 멤버 그룹을 제외한 모든 멤버 그룹에 적용됩니다. 둘 이하의 그룹이 생성된 경우에는 이 매개 변수가 무시됩니다.  
   
- 
-  `<Bucket name>` 매개 변수는 멤버 또는 멤버 그룹 정보를 멤버 그룹 이름의 일부로 나타내기 위해 일련의 변수를 통합할 수 있는 문자열 식입니다.  
+ `<Bucket name>` 매개 변수는 멤버 또는 멤버 그룹 정보를 멤버 그룹 이름의 일부로 나타내기 위해 일련의 변수를 통합할 수 있는 문자열 식입니다.  
   
 |변수|Description|  
 |--------------|-----------------|  
@@ -94,8 +87,7 @@ ms.locfileid: "66077273"
 >  세미콜론(;)을 리터럴 문자로 명명 템플릿에 포함하려면 앞에 백분율(%) 문자를 붙입니다.  
   
 ### <a name="example"></a>예제  
- 
-  [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] 예제 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 있는 Customer 차원의 Yearly Income 특성을 분류하는 데 다음 문자열 식을 사용할 수 있습니다. 여기서 Yearly Income 특성은 멤버 그룹화를 사용합니다.  
+ [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] 예제 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 있는 Customer 차원의 Yearly Income 특성을 분류하는 데 다음 문자열 식을 사용할 수 있습니다. 여기서 Yearly Income 특성은 멤버 그룹화를 사용합니다.  
   
  "Less than %{Next Bucket Min};Between %{First bucket member} and %{Last bucket member};Greater than %{Previous Bucket Max}"  
   

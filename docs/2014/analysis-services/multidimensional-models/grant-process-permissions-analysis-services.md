@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49b8a1c8ce566b18143b6b693a227fba4a5bd094
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074884"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>처리 권한 부여(Analysis Services)
@@ -28,32 +28,27 @@ ms.locfileid: "66074884"
 > [!IMPORTANT]  
 >  처리 권한만 가진 역할의 사용자는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 사용해서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 연결하여 개체를 처리할 수 없습니다. 이러한 도구를 사용하려면 개체 메타데이터에 액세스할 수 있는 `Read Definition` 권한이 있어야 합니다. 두 가지 도구를 사용할 수 없는 경우 처리 작업을 실행하려면 XMLA 스크립트를 사용해야 합니다.  
 >   
->  테스트를 위해 `Read Definition` 권한을 부여하는 것도 좋습니다. 
-  `Read Definition` 및 `Process Database` 권한을 모두 가진 사용자는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체를 대화형으로 처리할 수 있습니다. 자세한 내용은 [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) 를 참조하세요.  
+>  테스트를 위해 `Read Definition` 권한을 부여하는 것도 좋습니다. `Read Definition` 및 `Process Database` 권한을 모두 가진 사용자는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체를 대화형으로 처리할 수 있습니다. 자세한 내용은 [개체 메타데이터에 대한 정의 읽기 권한 부여&#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) 를 참조하세요.  
   
 ## <a name="set-processing-permissions-at-the-database-level"></a>데이터베이스 수준에서 처리 권한 설정  
  이 섹션에서는 데이터베이스의 모든 큐브, 차원, 마이닝 구조 및 마이닝 모델에 대해 관리자가 아닌 사용자의 처리를 사용하도록 설정하는 방법을 설명합니다.  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결하고 데이터베이스 폴더를 열고 데이터베이스를 선택합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결하고 데이터베이스 폴더를 열고 데이터베이스를 선택합니다.  
   
 2.  **역할** | **새 역할**을 마우스 오른쪽 단추로 클릭 합니다. 이름 및 설명을 입력합니다.  
   
 3.  **일반** 창에서 `Process Database` 확인란을 선택 합니다. 또한를 선택 `Read Definition` 하 여와 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]같은 SQL Server 도구 중 하나를 통해 대화형 처리를 사용 하도록 설정 합니다.  
   
-4.  
-  **멤버 자격** 창에서 이 데이터베이스의 모든 개체를 처리할 수 있는 권한을 가진 Windows 사용자 및 그룹 계정을 추가합니다.  
+4.  **멤버 자격** 창에서 이 데이터베이스의 모든 개체를 처리할 수 있는 권한을 가진 Windows 사용자 및 그룹 계정을 추가합니다.  
   
-5.  
-  **확인** 을 클릭하여 역할 정의를 완료합니다.  
+5.  **확인** 을 클릭하여 역할 정의를 완료합니다.  
   
 ## <a name="set-processing-permissions-on-individual-objects"></a>개별 개체에 대한 처리 권한 설정  
  개별 큐브, 차원, 데이터 마이닝 구조 또는 모델에 대한 처리 권한을 설정할 수 있습니다.  
   
  함께 처리해야 하는 개체를 실수로 제외하는 경우(예를 들어 관련 차원은 제외하고 큐브에 대한 처리를 사용하도록 설정하는 경우) 처리가 실패할 수 있습니다. 개체 종속성은 놓치기 쉬우므로 개별 개체에 대한 처리 권한을 설정할 때 철저한 테스트가 중요합니다.  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결하고 데이터베이스 폴더를 열고 데이터베이스를 선택합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결하고 데이터베이스 폴더를 열고 데이터베이스를 선택합니다.  
   
 2.  **역할** | **새 역할**을 마우스 오른쪽 단추로 클릭 합니다. 이름 및 설명을 입력합니다.  
   
@@ -63,17 +58,13 @@ ms.locfileid: "66074884"
   
 4.  처리할 개별 개체를 선택합니다.  
   
-    -   
-  **큐브** 창에서 각 큐브에 대한 **처리** 확인란을 선택합니다.  
+    -   **큐브** 창에서 각 큐브에 대한 **처리** 확인란을 선택합니다.  
   
-    -   
-  **차원** 창에서 **모든 데이터베이스 차원**을 선택한 다음 각 차원에 대한 **처리** 확인란을 선택합니다. 또는 모든 행을 선택한 다음 Shift를 클릭하여 확인란 선택을 전환합니다.  
+    -   **차원** 창에서 **모든 데이터베이스 차원**을 선택한 다음 각 차원에 대한 **처리** 확인란을 선택합니다. 또는 모든 행을 선택한 다음 Shift를 클릭하여 확인란 선택을 전환합니다.  
   
-5.  
-  **멤버 자격** 창에서 이러한 개체를 처리할 수 있는 권한을 가진 Windows 사용자 및 그룹 계정을 추가합니다.  
+5.  **멤버 자격** 창에서 이러한 개체를 처리할 수 있는 권한을 가진 Windows 사용자 및 그룹 계정을 추가합니다.  
   
-6.  
-  **확인** 을 클릭하여 역할 정의를 완료합니다.  
+6.  **확인** 을 클릭하여 역할 정의를 완료합니다.  
   
 ## <a name="test-processing"></a>테스트 처리  
   
@@ -86,27 +77,22 @@ ms.locfileid: "66074884"
 ## <a name="set-processing-permissions-on-a-data-mining-structure"></a>데이터 마이닝 구조에 대한 처리 권한 설정  
  데이터 마이닝 구조를 처리할 수 있는 권한을 부여하는 역할을 만들 수 있습니다. 여기에는 모든 마이닝 모델의 처리가 포함됩니다.  
   
- **** 마이닝 모델 및 `Read Definition` 구조를 검색 하는 데 사용 되는 드릴스루 및 사용 권한은 원자성 이며 동일한 역할에 추가 하거나 다른 역할로 구분할 수 있습니다.  
+ **Drill Through** 마이닝 모델 및 `Read Definition` 구조를 검색 하는 데 사용 되는 드릴스루 및 사용 권한은 원자성 이며 동일한 역할에 추가 하거나 다른 역할로 구분할 수 있습니다.  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결하고 데이터베이스 폴더를 열고 데이터베이스를 선택합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결하고 데이터베이스 폴더를 열고 데이터베이스를 선택합니다.  
   
-2.  **역할** | **새 역할**을 마우스 오른쪽 단추로 클릭 합니다. 이름 및 설명을 입력합니다. 
-  **일반** 창에서 데이터베이스 권한 확인란을 선택 취소합니다. 데이터베이스 권한은 역할 옵션을 회색으로 표시하거나 선택하지 못하도록 설정하여 하위 수준의 개체에 대한 권한을 설정하는 기능을 재정의합니다.  
+2.  **역할** | **새 역할**을 마우스 오른쪽 단추로 클릭 합니다. 이름 및 설명을 입력합니다. **일반** 창에서 데이터베이스 권한 확인란을 선택 취소합니다. 데이터베이스 권한은 역할 옵션을 회색으로 표시하거나 선택하지 못하도록 설정하여 하위 수준의 개체에 대한 권한을 설정하는 기능을 재정의합니다.  
   
-3.  
-  **마이닝 구조** 창에서 각 마이닝 구조에 대한 **처리** 확인란을 선택합니다.  
+3.  **마이닝 구조** 창에서 각 마이닝 구조에 대한 **처리** 확인란을 선택합니다.  
   
-4.  
-  **멤버 자격** 창에서 이 데이터베이스의 모든 개체를 처리할 수 있는 권한을 가진 Windows 사용자 및 그룹 계정을 추가합니다.  
+4.  **멤버 자격** 창에서 이 데이터베이스의 모든 개체를 처리할 수 있는 권한을 가진 Windows 사용자 및 그룹 계정을 추가합니다.  
   
-5.  
-  **확인** 을 클릭하여 역할 정의를 완료합니다.  
+5.  **확인** 을 클릭하여 역할 정의를 완료합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스, 테이블 또는 파티션 처리](../tabular-models/process-database-table-or-partition-analysis-services.md)   
  [다차원 모델 개체 처리](processing-a-multidimensional-model-analysis-services.md)   
  [Analysis Services&#41;&#40;데이터베이스 사용 권한 부여](grant-database-permissions-analysis-services.md)   
- [개체 메타 데이터에 대 한 정의 읽기 권한 부여 &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+ [개체 메타데이터에 대한 정의 읽기 권한 부여&#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

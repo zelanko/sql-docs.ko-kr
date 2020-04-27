@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 52ba9afd78722d53bad32a6c918a98dbc2279ffa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072684"
 ---
 # <a name="use-a-template-to-create-an-action"></a>템플릿을 사용하여 동작 만들기
@@ -27,12 +27,11 @@ ms.locfileid: "66072684"
   
 -   동작을 만들 큐브를 열고 **디자인**에서 **동작** 탭을 클릭합니다.  
   
--   
-  **계산 도구**에서 **템플릿** 탭을 클릭하고 만들 동작 유형이 포함된 노드를 확장한 다음 사용할 템플릿을 두 번 클릭합니다.  
+-   **계산 도구**에서 **템플릿** 탭을 클릭하고 만들 동작 유형이 포함된 노드를 확장한 다음 사용할 템플릿을 두 번 클릭합니다.  
   
 -   필수 정보를 입력하여 템플릿 기반의 동작 작성을 완료합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [작업 &#40;Analysis Services 다차원 데이터&#41;](actions-analysis-services-multidimensional-data.md)  
+ [동작&#40;Analysis Services - 다차원 데이터&#41;](actions-analysis-services-multidimensional-data.md)  
   
   

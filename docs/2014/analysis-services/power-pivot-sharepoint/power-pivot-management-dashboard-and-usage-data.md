@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ece3d8a1e9a66ecc6ad05508c975e617c523a9c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071115"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot 관리 대시보드 및 사용량 현황 데이터
@@ -32,13 +32,13 @@ ms.locfileid: "66071115"
   
  [PowerPivot 관리 대시보드에 대한 사용자 지정 보고서 만들기](#reports)  
   
-##  <a name="prereq"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="prereq"></a> 필수 조건  
  관리하는 PowerPivot 서비스 애플리케이션에 대해 PowerPivot 관리 대시보드를 열려면 서비스 관리자여야 합니다.  
   
-##  <a name="items"></a>대시보드 섹션 개요  
+##  <a name="overview-of-the-sections-of-the-dashboard"></a><a name="items"></a> 대시보드 섹션 개요  
  PowerPivot 관리 대시보드에는 웹 파트 및 특정 정보 카테고리로 드릴다운하는 포함된 보고서가 있어야 합니다. 다음 목록에서는 대시보드의 각 부분에 대해 설명합니다.  
   
-|대시보드|Description|  
+|대시보드|설명|  
 |---------------|-----------------|  
 |인프라 - 서버 상태|시간의 경과에 따른 CPU 사용량, 메모리 사용 및 쿼리 응답 시간 추세를 표시하여 시스템 리소스가 최대 용량에서 실행되는지 또는 사용률이 낮은지를 평가할 수 있습니다.|  
 |동작|현재 서비스 애플리케이션, 서비스 애플리케이션 목록 및 사용 현황 로깅과 같은 중앙 관리의 다른 페이지에 대한 링크가 들어 있습니다.|  
@@ -48,7 +48,7 @@ ms.locfileid: "66071115"
 |데이터 새로 고침 - 최근 실패|데이터 새로 고침을 제대로 완료하지 못한 PowerPivot 통합 문서를 나열합니다.|  
 |보고서|Excel에서 열 수 있는 보고서에 대한 링크가 포함되어 있습니다.|  
   
-##  <a name="open"></a>PowerPivot 관리 대시보드 열기  
+##  <a name="open-powerpivot-management-dashboard"></a><a name="open"></a>PowerPivot 관리 대시보드 열기  
  대시보드에는 한 번에 하나의 PowerPivot 서비스 애플리케이션에 대한 정보가 표시됩니다. 서로 다른 두 위치에서 관리 대시보드를 열 수 있습니다.  
   
 ### <a name="open-the-dashboard-from-general-application-settings"></a>일반 애플리케이션 설정에서 대시보드 열기  
@@ -68,12 +68,11 @@ ms.locfileid: "66071115"
   
 1.  PowerPivot 관리 대시보드의 맨 위에서 현재 서비스 응용 프로그램의 이름 (예: **기본 Powerpivot 서비스 응용 프로그램**)을 기록해 둡니다.  
   
-2.  
-  **동작** 대시보드에서 **서비스 애플리케이션을 나열합니다.** 를 클릭합니다.  
+2.  **동작** 대시보드에서 **서비스 애플리케이션을 나열합니다.** 를 클릭합니다.  
   
 3.  관리 대시보드 보고서를 보려는 PowerPivot 서비스 애플리케이션의 이름을 클릭합니다.  
   
-##  <a name="sourcedata"></a>대시보드의 원본 데이터  
+##  <a name="source-data-in-dashboards"></a><a name="sourcedata"></a> 대시보드의 원본 데이터  
  대시보드, 보고서 및 웹 파트에는 시스템과 PowerPivot 애플리케이션 데이터베이스에서 데이터를 가져오는 내부 데이터 모델의 데이터가 표시됩니다. 내부 데이터 모델은 중앙 관리 사이트에서 호스팅되는 PowerPivot 통합 문서에 포함됩니다. 데이터 모델의 구조는 고정되어 있습니다. PowertPivot 통합 문서를 데이터 원본으로 사용할 수 있지만 데이터 원본을 사용하는 미리 정의된 보고서를 나누는 방식으로 구조를 수정해서는 안 됩니다.  
   
  데이터 수집 방법에 대한 자세한 내용은 다음을 참조하세요.  
@@ -82,12 +81,12 @@ ms.locfileid: "66071115"
   
 -   [&#40;SharePoint용 PowerPivot에 대 한 사용 현황 데이터 수집 구성](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- PowerPivot 서버 시스템에 대한 데이터를 캡처하려면 이벤트 메시징, 데이터 새로 고침 기록 및 기타 사용 기록이 각 PowerPivot 서비스 애플리케이션에 대해 설정되어 있는지 확인하십시오. 정상적인 서버 작업 중에 수집된 서버 데이터 및 사용량 현황 데이터는 원본 데이터가 되며 최종적으로 내부 데이터 모델에 저장됩니다. **참고:** 이벤트 또는 사용 기록을 끄면 복합 보고서가 불완전 하거나 잘못 된 것입니다.  
+ PowerPivot 서버 시스템에 대한 데이터를 캡처하려면 이벤트 메시징, 데이터 새로 고침 기록 및 기타 사용 기록이 각 PowerPivot 서비스 애플리케이션에 대해 설정되어 있는지 확인하십시오. 정상적인 서버 작업 중에 수집된 서버 데이터 및 사용량 현황 데이터는 원본 데이터가 되며 최종적으로 내부 데이터 모델에 저장됩니다. **참고:** 이벤트나 사용 기록을 해제하면 불완전하거나 오류가 있는 복합 보고서가 생성됩니다.  
   
-##  <a name="edit"></a>PowerPivot 대시보드 편집  
+##  <a name="edit-powerpivot-dashboard"></a><a name="edit"></a>PowerPivot 대시보드 편집  
  대시보드 개발이나 사용자 지정에 대한 전문 지식이 있는 경우 대시보드를 편집하여 새 웹 파트를 포함할 수 있습니다. 대시보드에 포함되는 웹 파트의 속성을 편집할 수도 있습니다.  
   
-##  <a name="reports"></a>PowerPivot 관리 대시보드에 대 한 사용자 지정 보고서 만들기  
+##  <a name="create-custom-reports-for-powerpivot-management-dashboard"></a><a name="reports"></a>PowerPivot 관리 대시보드에 대 한 사용자 지정 보고서 만들기  
  보고를 위해 PowerPivot 사용량 현황 데이터와 기록은 대시보드와 함께 만들어지고 구성되는 내부 PowerPivot 통합 문서에 보관됩니다. 기본 보고서에서 필요한 정보를 제공하지 않을 경우 통합 문서를 기반으로 Excel에서 사용자 지정 보고서를 만들 수 있습니다. 나중에 PowerPivot 솔루션 파일을 업그레이드하거나 제거하더라도 통합 문서와 사용자 지정 보고서는 모두 유지됩니다. 통합 문서와 보고서는 중앙 관리 사이트의 PowerPivot 관리 라이브러리에 저장됩니다. 이 라이브러리는 기본적으로 표시되지 않지만 사이트 작업의 모든 사이트 콘텐츠 보기 작업을 사용하여 라이브러리를 볼 수 있습니다.  
   
  사용자 보고를 시작할 때 PowerPivot 관리 대시보드에서는 원본 통합 문서 연결을 위한 Office 데이터 연결 파일(.odc)을 제공합니다. 예를 들어, .Excel에서 odc 파일을 사용하여 추가 보고서를 만들 수 있습니다.  
@@ -101,25 +100,21 @@ ms.locfileid: "66071115"
   
 2.  페이지 아래쪽의 **보고서** 섹션으로 스크롤합니다.  
   
-3.  
-  **PowerPivot 관리 데이터**를 클릭합니다.  
+3.  **PowerPivot 관리 데이터**를 클릭합니다.  
   
 4.  .odc 파일을 로컬 폴더에 저장합니다.  
   
 5.  텍스트 편집기에서 .odc 파일을 엽니다.  
   
-6.  
-  `<odc:ConnectionString>` 요소에서 줄의 끝으로 스크롤한 다음 `Embedded Data=False`를 제거하고 `Edit Mode=0`을 제거합니다. 문자열의 마지막 문자가 세미콜론인 경우 지금 제거합니다.  
+6.  `<odc:ConnectionString>` 요소에서 줄의 끝으로 스크롤한 다음 `Embedded Data=False`를 제거하고 `Edit Mode=0`을 제거합니다. 문자열의 마지막 문자가 세미콜론인 경우 지금 제거합니다.  
   
 7.  파일을 저장합니다. 나머지 단계는 사용 중인 PowerPivot 및 Excel의 버전에 따라 달라집니다.  
   
 8.  1.  Excel 2013 시작  
   
-    2.  
-  **PowerPivot** 리본에서 **관리**를 클릭합니다.  
+    2.  **PowerPivot** 리본에서 **관리**를 클릭합니다.  
   
-    3.  
-  **외부 데이터 가져오기** 를 클릭하고 **기존 연결**을 클릭합니다.  
+    3.  **외부 데이터 가져오기** 를 클릭하고 **기존 연결**을 클릭합니다.  
   
     4.  표시되는 .ODC 파일을 클릭합니다. .ODC 파일이 표시되지 않으면 **더 찾아보기** 를 클릭하고 파일 경로에 .odc 파일을 지정합니다.  
   
@@ -141,15 +136,13 @@ ms.locfileid: "66071115"
   
     3.  PowerPivot 창의 디자인 리본에서 **기존 연결**을 클릭합니다.  
   
-    4.  
-  **더 찾아보기**를 클릭합니다.  
+    4.  **더 찾아보기**를 클릭합니다.  
   
     5.  파일 경로에 .odc 파일을 지정합니다.  
   
     6.  **열기**를 클릭합니다. 사용량 현황 데이터가 포함된 PowerPivot 통합 문서에 대한 연결 문자열을 사용하여 테이블 가져오기 마법사가 시작됩니다.  
   
-    7.  
-  **연결 테스트** 를 클릭하여 액세스 권한이 있는지 확인합니다.  
+    7.  **연결 테스트** 를 클릭하여 액세스 권한이 있는지 확인합니다.  
   
     8.  연결에 대한 이름을 입력하고 **다음**을 클릭합니다.  
   

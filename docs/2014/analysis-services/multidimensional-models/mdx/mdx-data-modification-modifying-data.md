@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81d1df159944b96d0945bb45d2c331922d0f46e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074227"
 ---
 # <a name="modifying-data-mdx"></a>데이터 수정(MDX)
@@ -36,6 +36,6 @@ ms.locfileid: "66074227"
  자세한 내용은 [큐브 쓰기 저장 사용&#40;MDX&#41;](mdx-data-modification-using-cube-writebacks.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [MDX 쿼리 기본 사항 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

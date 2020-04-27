@@ -15,14 +15,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44c109694f0a3263ff1ad40d1c343a1af91ce630
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077772"
 ---
 # <a name="mining-legend-dialog-box-mining-model-viewer"></a>마이닝 범례 대화 상자(마이닝 모델 뷰어)
-  
   **마이닝 범례** 대화 상자를 사용하여 마이닝 모델 뷰어에서 선택한 노드 또는 항목에 대한 세부 정보를 볼 수 있습니다.  
   
  마이닝 범례에는 모델 유형에 따라 다른 유형의 정보가 표시됩니다. 예를 들어 시계열 모델에서 기록 데이터를 보여 주는 꺾은선형 그래프의 점을 클릭하면 **마이닝 범례** 에 숫자 값이 표시됩니다. 그러나 클러스터링 모델에 사용되는 뷰어에서는 **마이닝 범례** 에 특성 프로필에 사용되는 색상 키가 표시됩니다. 마이닝 범례가 각 컨텍스트에서 사용되는 방법에 대한 설명은 **옵션** 섹션의 링크를 참조하십시오.  

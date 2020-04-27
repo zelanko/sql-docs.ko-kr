@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e5a24a158681c3f596355b1b9abca6ada990531
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080942"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>데이터 마이닝 시작하기(Excel용 데이터 마이닝 추가 기능)
@@ -32,7 +32,7 @@ ms.locfileid: "66080942"
   
  분석 방법 선택은 목표에 따라 달라집니다. 데이터 마이닝 추가 기능은 다음과 같은 유형의 분석을 지원합니다.  
   
--   감독 학습 및 자율 학습  
+-   감독 및 자율 학습  
   
 -   클러스터링(세그먼트화)  
   

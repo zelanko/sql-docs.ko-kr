@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072846"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Analysis Services 데이터베이스 동기화
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에는 원본 서버의 데이터베이스에 있는 데이터 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 와 메타 데이터를 대상 서버의 데이터베이스로 복사 하 여 두 데이터베이스를 동일 하 게 만드는 데이터베이스 동기화 기능이 포함 되어 있습니다. 데이터베이스 동기화 기능을 사용하여 다음 작업을 수행할 수 있습니다.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에는 원본 서버의 데이터베이스에 있는 데이터와 메타데이터를 대상 서버의 데이터베이스로 복사하여 두 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 동일하게 만드는 데이터베이스 동기화 기능이 포함되어 있습니다. 데이터베이스 동기화 기능을 사용하여 다음 작업을 수행할 수 있습니다.  
   
 -   준비 서버에서 프로덕션 서버로 데이터베이스를 배포합니다.  
   
@@ -47,8 +47,7 @@ ms.locfileid: "66072846"
   
  TCP 포트 2383이 기본 인스턴스 간의 원격 연결을 허용하기 위해 두 서버에서 열려 있어야 합니다. Windows 방화벽에서 예외를 만드는 방법은 [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하십시오.  
   
- 원본 서버와 대상 서버는 모두 같은 버전 및 Service Pack 이어야 합니다. 모델 메타 데이터도 동기화 되기 때문에 호환성을 보장 하기 위해 두 서버에 대 한 빌드 번호가 동일 해야 합니다. 각 설치 버전이 데이터베이스 동기화를 지원해야 합니다. 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 데이터베이스 동기화가 Enterprise, Developer 및 Business Intelligence 버전에서 지원됩니다. 각 버전의 기능에 대 한 자세한 내용은 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
+ 원본 서버와 대상 서버는 모두 같은 버전 및 Service Pack 이어야 합니다. 모델 메타 데이터도 동기화 되기 때문에 호환성을 보장 하기 위해 두 서버에 대 한 빌드 번호가 동일 해야 합니다. 각 설치 버전이 데이터베이스 동기화를 지원해야 합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 데이터베이스 동기화가 Enterprise, Developer 및 Business Intelligence 버전에서 지원됩니다. 각 버전의 기능에 대 한 자세한 내용은 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
   
  서버 배포 모드는 각 서버에서 동일해야 합니다. 동기화할 데이터베이스가 다차원인 경우 원본 서버와 대상 서버가 다차원 서버 모드에 대해 구성되어야 합니다. 배포 모드에 대한 자세한 내용은 [Determine the Server Mode of an Analysis Services Instance](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)을 참조하십시오.  
   
@@ -76,27 +75,24 @@ ms.locfileid: "66072846"
   
 #### <a name="run-the-wizard"></a>마법사 실행  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 대상 데이터베이스를 실행할 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 연결합니다. 예를 들어 프로덕션 서버에 데이터베이스를 배포하는 경우 프로덕션 서버에서 마법사를 실행합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 대상 데이터베이스를 실행할 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 연결합니다. 예를 들어 프로덕션 서버에 데이터베이스를 배포하는 경우 프로덕션 서버에서 마법사를 실행합니다.  
   
 2.  개체 탐색기에서 **데이터베이스** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **동기화**를 클릭합니다.  
   
 3.  원본 서버와 원본 데이터베이스를 지정합니다. 동기화할 데이터베이스 선택 페이지의 **원본 서버** 및 **원본 데이터베이스**에 원본 서버와 원본 데이터베이스의 이름을 입력합니다. 예를 들어 테스트 환경에서 프로덕션 서버로 배포하는 경우 원본은 준비 서버의 데이터베이스입니다.  
   
-     **대상 서버** **원본 데이터베이스** 에서 선택한 데이터베이스 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 데이터와 메타 데이터가 동기화 되는 인스턴스의 이름을 표시 합니다.  
+     **대상 서버** 에는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 원본 데이터베이스 **에서 선택한 데이터베이스의 데이터 및 메타데이터와 동기화되는** 인스턴스의 이름이 표시됩니다.  
   
      이름이 같은 원본 및 대상 데이터베이스에 대해 동기화가 수행됩니다. 대상 서버에 원본 데이터베이스와 이름이 동일한 데이터베이스가 이미 있을 경우 대상 데이터베이스는 원본의 메타데이터와 데이터를 사용하여 업데이트됩니다. 데이터베이스가 존재하지 않을 경우 대상 서버에 생성됩니다.  
   
-4.  (옵션) 로컬 파티션의 위치를 변경합니다. 
-  **로컬 파티션의 위치 지정** 페이지를 사용하여 로컬 파티션이 대상 서버에 저장될 위치를 나타냅니다.  
+4.  (옵션) 로컬 파티션의 위치를 변경합니다. **로컬 파티션의 위치 지정** 페이지를 사용하여 로컬 파티션이 대상 서버에 저장될 위치를 나타냅니다.  
   
     > [!NOTE]  
     >  이 페이지는 지정한 데이터베이스에 하나 이상의 로컬 파티션이 있는 경우에만 나타납니다.  
   
      원본 서버의 C 드라이브에 일련의 파티션이 설치된 경우 마법사를 사용하여 이 일련의 파티션을 대상 서버의 다른 위치에 복사할 수 있습니다. 기본 위치를 변경하지 않으면 마법사가 원본 서버의 각 큐브 내에 있는 측정값 그룹 파티션을 대상 서버의 동일 위치에 배포합니다. 이와 비슷하게 원본 서버에서 원격 파티션이 사용되는 경우 대상 서버에서도 동일한 원격 파티션이 사용됩니다.  
   
-     
-  **위치** 옵션은 대상 인스턴스에 저장될 로컬 파티션의 원본 폴더, 대상 폴더, 예상 크기 등을 표 형태로 표시합니다. 표에는 다음 열이 있습니다.  
+     **위치** 옵션은 대상 인스턴스에 저장될 로컬 파티션의 원본 폴더, 대상 폴더, 예상 크기 등을 표 형태로 표시합니다. 표에는 다음 열이 있습니다.  
   
      **원본 폴더**  
      로컬 파티션을 포함하는 원본 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 폴더 이름을 표시합니다. 열에 "(기본값)" 값이 있으면 원본 인스턴스의 기본 위치에 로컬 파티션이 포함됩니다.  
@@ -104,8 +100,7 @@ ms.locfileid: "66072846"
      **대상 폴더**  
      로컬 파티션을 동기화할 대상 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 폴더 이름을 표시합니다. 열에 "(기본값)" 값이 있으면 대상 인스턴스의 기본 위치에 로컬 파티션이 포함됩니다.  
   
-     
-  **원격 폴더 찾아보기**대화 상자를 표시하고 선택한 위치에 저장된 로컬 파티션을 동기화할 대상 인스턴스의 폴더를 지정하려면 줄임표( **...** ) 단추를 클릭합니다.  
+     **원격 폴더 찾아보기**대화 상자를 표시하고 선택한 위치에 저장된 로컬 파티션을 동기화할 대상 인스턴스의 폴더를 지정하려면 줄임표( **...** ) 단추를 클릭합니다.  
   
     > [!NOTE]  
     >  원본 인스턴스의 기본 위치에 저장된 로컬 파티션에 대해서는 이 열을 변경할 수 없습니다.  
@@ -113,8 +108,7 @@ ms.locfileid: "66072846"
      **크기**  
      로컬 파티션의 예상 크기를 표시합니다.  
   
-     
-  **선택한 위치의 파티션** 옵션은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 위치 **에서 선택한 열의** 원본 폴더 **에서 지정한 원본**인스턴스의 위치에 저장된 로컬 파티션을 설명하는 표를 표시합니다.  
+     **선택한 위치의 파티션** 옵션은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 위치 **에서 선택한 열의** 원본 폴더 **에서 지정한 원본**인스턴스의 위치에 저장된 로컬 파티션을 설명하는 표를 표시합니다.  
   
      **큐브**  
      파티션이 포함된 큐브의 이름을 표시합니다.  
@@ -133,8 +127,7 @@ ms.locfileid: "66072846"
     > [!NOTE]  
     >  이 페이지는 원본 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 지정된 데이터베이스에서 하나 이상의 원격 파티션을 관리하는 경우에만 표시됩니다.  
   
-     
-  **위치** 옵션은 선택한 데이터베이스에서 사용할 수 있는 원본 및 대상 정보와 각 위치에서 사용하는 스토리지 크기를 포함하여 원본 데이터베이스의 원격 파티션이 저장된 위치와 관련한 세부 정보를 나열하는 표를 표시합니다. 표에는 다음 열이 있습니다.  
+     **위치** 옵션은 선택한 데이터베이스에서 사용할 수 있는 원본 및 대상 정보와 각 위치에서 사용하는 스토리지 크기를 포함하여 원본 데이터베이스의 원격 파티션이 저장된 위치와 관련한 세부 정보를 나열하는 표를 표시합니다. 표에는 다음 열이 있습니다.  
   
      **동기화**  
      원격 파티션이 있는 해당 위치를 동기화에 포함시키려면 선택합니다.  
@@ -149,23 +142,19 @@ ms.locfileid: "66072846"
      원격 파티션을 포함하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 폴더 이름을 표시합니다. 열에 "(기본값)"이 있으면 **원본 서버** 에 표시되는 인스턴스에 대한 기본 위치에 원격 파티션이 포함됩니다.  
   
      **대상 서버**  
-     
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 원본 서버 **및** 원본 폴더 **에서 지정한 위치에 저장된 원격 파티션이 동기화될** 인스턴스의 이름을 표시합니다.  
+     [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 원본 서버 **및** 원본 폴더 **에서 지정한 위치에 저장된 원격 파티션이 동기화될** 인스턴스의 이름을 표시합니다.  
   
-     
-  **연결 관리자**대화 상자를 표시하고 선택한 위치에 저장된 원격 파티션을 동기화할 **인스턴스를 지정하려면 줄임표(** ... [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ) 단추를 클릭합니다.  
+     **연결 관리자**대화 상자를 표시하고 선택한 위치에 저장된 원격 파티션을 동기화할 **인스턴스를 지정하려면 줄임표(** ... [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ) 단추를 클릭합니다.  
   
      **대상 폴더**  
      원격 파티션을 동기화할 대상 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 폴더 이름을 표시합니다. 열에 "(기본값)"이 있으면 대상 인스턴스에 대한 기본 위치에 원격 파티션이 포함됩니다.  
   
-     
-  **원격 폴더 찾아보기**대화 상자를 표시하고 선택한 위치에 저장된 원격 파티션을 동기화할 대상 인스턴스의 폴더를 지정하려면 줄임표( **...** ) 단추를 클릭합니다.  
+     **원격 폴더 찾아보기**대화 상자를 표시하고 선택한 위치에 저장된 원격 파티션을 동기화할 대상 인스턴스의 폴더를 지정하려면 줄임표( **...** ) 단추를 클릭합니다.  
   
      **크기**  
      위치에 저장된 원격 파티션의 예상 크기를 표시합니다.  
   
-     
-  **선택한 위치의 파티션** 은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 위치 **에서 선택한 행의** 원본 폴더 **열에서 지정한 원본**인스턴스의 위치에 저장된 원격 파티션을 설명하는 표를 표시합니다. 표에는 다음 열이 있습니다.  
+     **선택한 위치의 파티션** 은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 위치 **에서 선택한 행의** 원본 폴더 **열에서 지정한 원본**인스턴스의 위치에 저장된 원격 파티션을 설명하는 표를 표시합니다. 표에는 다음 열이 있습니다.  
   
      **큐브**  
      파티션이 포함된 큐브의 이름을 표시합니다.  
@@ -184,7 +173,7 @@ ms.locfileid: "66072846"
      **모두 복사**  
      동기화 중에 보안 정의 및 멤버 등록 정보를 포함하려면 선택합니다.  
   
-     **멤버 등록 건너뛰기**  
+     **멤버 등록 생략**  
      동기화 중에 멤버 등록 정보는 제외하고 보안 정의만 포함하려면 선택합니다.  
   
      **모두 무시**  
@@ -192,9 +181,7 @@ ms.locfileid: "66072846"
   
 7.  동기화 방법을 선택합니다. 즉시 동기화하거나 파일에 저장된 스크립트를 생성할 수 있습니다. 기본적으로 파일은 .xmla 확장명으로 저장되고 Documents 폴더에 배치됩니다.  
   
-8.  
-  **마침** 을 클릭하여 동기화를 시작합니다. 
-  **마법사 완료** 페이지의 옵션을 확인하고 **마침** 을 다시 클릭합니다.  
+8.  **마침** 을 클릭하여 동기화를 시작합니다. **마법사 완료** 페이지의 옵션을 확인하고 **마침** 을 다시 클릭합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
  역할 또는 멤버 자격을 동기화하지 않은 경우 지금 대상 데이터베이스에 대한 사용자 액세스 권한을 지정해야 합니다.  

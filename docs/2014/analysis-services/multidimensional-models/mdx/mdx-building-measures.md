@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7587e3304d1464beb7ef94cd7d3093982f394bcc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074584"
 ---
 # <a name="building-measures-in-mdx"></a>MDX로 측정값 만들기
@@ -45,6 +45,6 @@ from [Model]
 ## <a name="see-also"></a>참고 항목  
  [CREATE MEMBER 문 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
  [Mdx 함수 참조 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
- [SELECT 문 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
+ [SELECT 문&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
   
   

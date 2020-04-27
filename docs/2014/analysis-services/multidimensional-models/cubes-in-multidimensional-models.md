@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7ce00bc87ca17c97996023d7cb9a4745b9882f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076113"
 ---
 # <a name="cubes-in-multidimensional-models"></a>다차원 모델의 큐브
@@ -31,7 +31,7 @@ ms.locfileid: "66076113"
 ## <a name="components-of-cubes"></a>큐브의 구성 요소  
  큐브는 다음 요소로 구성됩니다.  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |차원|[다차원 모델의 차원](dimensions-in-multidimensional-models.md)|  
 |측정값 및 측정값 그룹|[다차원 모델의 측정값 및 측정값 그룹 만들기](create-measures-and-measure-groups-in-multidimensional-models.md)|  
@@ -39,13 +39,13 @@ ms.locfileid: "66076113"
 |큐브 뷰|[다차원 모델의 큐브 뷰](perspectives-in-multidimensional-models.md)|  
 |계층 구조|[사용자 정의 계층 만들기](user-defined-hierarchies-create.md)|  
 |동작|[다차원 모델의 동작](actions-in-multidimensional-models.md)|  
-|KPI(핵심 성과 지표)|[다차원 모델의 Kpi&#41; &#40;핵심 성과 지표](key-performance-indicators-kpis-in-multidimensional-models.md)|  
+|KPI(핵심 성과 지표)|[다차원 모델의 KPI&#40;핵심 성과 지표&#41;](key-performance-indicators-kpis-in-multidimensional-models.md)|  
 |새 명명된 집합|[다차원 모델의 계산](calculations-in-multidimensional-models.md)|  
 |Translations|[다차원 모델의 번역](translations-in-multidimensional-models-analysis-services.md)|  
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[큐브 마법사를 사용하여 큐브 만들기](create-a-cube-using-the-cube-wizard.md)|큐브 마법사를 사용하여 큐브, 차원, 차원 특성 및 사용자 정의 계층을 정의하는 방법에 대해 설명합니다.|  
 |[다차원 모델의 측정값 및 측정값 그룹 만들기](create-measures-and-measure-groups-in-multidimensional-models.md)|측정값 그룹을 정의하는 방법에 대해 설명합니다.|  

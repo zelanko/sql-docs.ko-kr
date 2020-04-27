@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5025d76d439933f7392d55661ca52d3f33992db8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073773"
 ---
 # <a name="tuples"></a>튜플
@@ -66,6 +66,6 @@ FROM [Adventure Works]
  [MDX의 주요 개념 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [큐브 공간](cube-space.md)   
  [Autoexist](autoexists.md)   
- [MDX &#40;멤버, 튜플 및 집합을 사용 하 여 작업&#41;](working-with-members-tuples-and-sets-mdx.md)  
+ [멤버, 튜플 및 집합 작업&#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)  
   
   

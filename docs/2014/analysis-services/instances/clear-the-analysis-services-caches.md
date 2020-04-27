@@ -11,29 +11,28 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e35ee4b59c77c3d1b47db360d11a9b838106c1b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080297"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Analysis Services 캐시 지우기
   Analysis Services는 데이터를 캐시하여 쿼리 성능을 향상시킵니다. 이 항목에서는 XMLA ClearCache 명령을 사용하여 MDX 쿼리에 대한 응답으로 만들어진 캐시를 지우는 데 대한 권장 사항을 제공합니다. ClearCache의 실행 효과는 테이블 형식 모델을 사용하는지 다차원 모델을 사용하는지에 따라 달라집니다.  
   
- **다차원 모델에 대 한 캐시를 지우는 경우**  
+ **다차원 모델에 대한 캐시를 지우는 경우**  
   
  다차원 데이터베이스의 경우 Analysis Services는 계산을 평가할 때의 수식 엔진과 차원 쿼리 및 측정값 그룹 쿼리의 결과를 위한 스토리지 엔진에 캐시를 작성합니다. 측정값 그룹 쿼리는 수식 엔진에 셀 좌표 또는 하위 큐브에 대한 측정값 데이터가 필요한 경우 발생합니다. 차원 쿼리는 비자연 계층을 쿼리할 때와 Autoexists를 적용할 때 발생합니다.  
   
  성능 테스트를 수행할 때 캐시를 지우는 것이 좋습니다. 테스트 실행 간에 캐시를 지움으로써 쿼리 디자인 변경으로 인한 영향을 측정한 테스트 결과가 캐시 때문에 왜곡되지 않도록 할 수 있습니다.  
   
- **테이블 형식 모델에 대 한 캐시를 지우는 경우**  
+ **테이블 형식 모델에 대한 캐시를 지우는 경우**  
   
  테이블 형식 모델은 일반적으로 메모리에 저장되며, 쿼리가 실행될 때 집계 및 기타 계산이 수행됩니다. 따라서 ClearCache 명령을 사용할 경우 테이블 형식 모델에 대한 효과는 제한적입니다. 테이블 형식 모델에 대해 MDX 쿼리를 실행할 경우 Analysis Services 캐시에 데이터가 추가될 수 있습니다. 특히 MDX 및 Autoexists 작업에서 참조하는 DAX 측정값은 수식 캐시와 차원 캐시 각각의 결과를 캐시할 수 있습니다. 그러나 비자연 계층 및 측정값 그룹 쿼리는 스토리지 엔진의 결과를 캐시하지 않습니다. 또한 DAX 쿼리는 수식 엔진 및 스토리지 엔진의 결과를 캐시하지 않습니다. MDX 쿼리 결과로 캐시가 존재하는 범위까지는 테이블 형식 모델에 대해 ClearCache를 실행하면 시스템에서 캐시된 데이터가 모두 무효화됩니다.  
   
  ClearCache를 실행하면 xVelocity 메모리 내 분석 엔진(VertiPaq)의 메모리 내 캐시도 지워집니다. xVelocity 엔진에서는 작은 캐시 결과 집합을 유지합니다. ClearCache를 실행하면 xVelocity 엔진의 이러한 캐시가 무효화됩니다.  
   
- 마지막으로, ClearCache를 실행하면 `DirectQuery` 모드용으로 테이블 형식 모델이 다시 구성될 때 메모리에 남아 있던 잔여 데이터도 제거됩니다. 이 사실은 모델에 포함되어 있는 중요한 데이터가 엄격하게 제어될 수 있는 경우에 특히 중요합니다. 이 경우에는 중요한 데이터가 필요한 위치에만 존재하도록 하기 위해 수행할 수 있는 예방 조치로 ClearCache를 실행합니다. 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 모델을 배포하고 쿼리 모드를 변경하는 경우에는 캐시를 수동으로 지워야 합니다. 반대로 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]를 사용하여 모델과 파티션에 `DirectQuery`를 지정하면 해당 쿼리 모드를 사용하도록 모드를 전환할 때 캐시가 자동으로 지워집니다.  
+ 마지막으로, ClearCache를 실행하면 `DirectQuery` 모드용으로 테이블 형식 모델이 다시 구성될 때 메모리에 남아 있던 잔여 데이터도 제거됩니다. 이 사실은 모델에 포함되어 있는 중요한 데이터가 엄격하게 제어될 수 있는 경우에 특히 중요합니다. 이 경우에는 중요한 데이터가 필요한 위치에만 존재하도록 하기 위해 수행할 수 있는 예방 조치로 ClearCache를 실행합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 모델을 배포하고 쿼리 모드를 변경하는 경우에는 캐시를 수동으로 지워야 합니다. 반대로 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]를 사용하여 모델과 파티션에 `DirectQuery`를 지정하면 해당 쿼리 모드를 사용하도록 모드를 전환할 때 캐시가 자동으로 지워집니다.  
   
  성능을 테스트하는 중에 다차원 모델 캐시를 지우기 위한 권장 사항과 비교했을 때 테이블 형식 모델 캐시를 지우기 위한 광범위한 권장 사항은 없습니다. 중요한 데이터가 포함된 테이블 형식 모델에 대한 배포를 관리하는 경우가 아니면 캐시를 지우는 특정 관리 태스크가 없습니다.  
   
@@ -49,19 +48,15 @@ ms.locfileid: "66080297"
   
 #### <a name="step-1-get-the-object-identifier"></a>1단계: 개체 식별자 가져오기  
   
-1.  
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 개체를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택한 다음 **속성** 창에서 ID 속성 값을 복사합니다. 이 방법은 데이터베이스, 큐브, 차원 또는 테이블에 사용할 수 있습니다.  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 개체를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택한 다음 **속성** 창에서 ID 속성 값을 복사합니다. 이 방법은 데이터베이스, 큐브, 차원 또는 테이블에 사용할 수 있습니다.  
   
-2.  측정값 그룹 ID를 가져오려면 측정값 그룹을 마우스 오른쪽 단추로 클릭하고 **측정값 그룹 스크립팅**을 선택합니다. 
-  **만들기** 또는 **변경**을 선택하고 창에 쿼리를 보냅니다. 측정값 그룹의 ID가 개체 정의에 표시됩니다. 개체 정의의 ID를 복사합니다.  
+2.  측정값 그룹 ID를 가져오려면 측정값 그룹을 마우스 오른쪽 단추로 클릭하고 **측정값 그룹 스크립팅**을 선택합니다. **만들기** 또는 **변경**을 선택하고 창에 쿼리를 보냅니다. 측정값 그룹의 ID가 개체 정의에 표시됩니다. 개체 정의의 ID를 복사합니다.  
   
 #### <a name="step-2-run-the-query"></a>2단계: 쿼리 실행  
   
-1.  
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **XMLA**를 선택합니다.  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **XMLA**를 선택합니다.  
   
-2.  다음 코드 예제를 XMLA 쿼리 창에 복사합니다. 
-  `DatabaseID`를 현재 연결 데이터베이스의 ID로 변경합니다.  
+2.  다음 코드 예제를 XMLA 쿼리 창에 복사합니다. `DatabaseID`를 현재 연결 데이터베이스의 ID로 변경합니다.  
   
     ```  
     <ClearCache xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  

@@ -13,20 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 79dfdc1534820d3637dfc06e42bd696e26db3501
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081774"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>차원 디자이너(Analysis Services - 다차원 데이터)
-  
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 의 차원 디자이너를 사용하여 차원에 포함된 데이터를 찾아보고 특성, 계층, 수준, 특성 관계, 번역 등을 포함하여 기존 차원의 다양한 속성을 수정할 수 있습니다.  
   
  **차원 디자이너를 표시하려면**  
   
--   
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 **솔루션 탐색기**에서 다음 절차 중 하나를 사용합니다.  
+-   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 **솔루션 탐색기**에서 다음 절차 중 하나를 사용합니다.  
   
     -   차원을 마우스 오른쪽 단추로 클릭한 다음 **열기** 또는 **디자이너 보기**를 클릭합니다.  
   

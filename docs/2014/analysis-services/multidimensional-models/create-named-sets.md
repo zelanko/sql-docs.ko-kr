@@ -15,17 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1fc4ab5d778535fdc4e2186c5bc88741b4367f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076136"
 ---
 # <a name="create-named-sets"></a>명명된 집합 만들기
   명명된 집합은 MDX(Multidimensional Expressions) 쿼리 등에서 다시 사용할 수 있도록 생성되는 집합 식이나 차원 멤버 집합입니다. 큐브 데이터, 산술 연산자, 숫자 및 함수를 조합하여 명명된 집합을 만들 수 있습니다. 예를 들어 Production 측정값에 대한 최상위 값을 갖는 Factories 차원의 10개 멤버가 포함된 명명된 집합을 Top Ten Factories라는 이름으로 만들 수 있습니다. 이 Top Ten Factories를 최종 사용자가 쿼리에서 사용할 수 있습니다. 예를 들어 최종 사용자는 Top Ten Factories를 한 축에 배치하고 다른 축에는 Production을 포함하여 Measures 차원을 배치할 수 있습니다. 자세한 내용은 [다차원 모델의 계산](calculations-in-multidimensional-models.md) 및 [명명된 집합을 MDX로 작성&#40;MDX&#41;](mdx/mdx-named-sets-building-named-sets.md)을 참조하세요.  
   
- 명명된 집합을 만들려면 큐브 디자이너의 **계산** 탭에 있는 **새 명명된 집합** 명령을 사용합니다. 
-  **계산** 탭 도구 모음의 **큐브** 메뉴에서 이 명령을 호출할 수 있습니다. 이 명령은 명명된 집합에 대해 다음과 같은 옵션을 지정할 수 있는 폼을 표시합니다.  
+ 명명된 집합을 만들려면 큐브 디자이너의 **계산** 탭에 있는 **새 명명된 집합** 명령을 사용합니다. **계산** 탭 도구 모음의 **큐브** 메뉴에서 이 명령을 호출할 수 있습니다. 이 명령은 명명된 집합에 대해 다음과 같은 옵션을 지정할 수 있는 폼을 표시합니다.  
   
  **이름**  
  명명된 집합의 이름을 선택합니다. 이 이름은 큐브를 찾아볼 때 최종 사용자에게 표시됩니다.  
@@ -41,9 +40,7 @@ ms.locfileid: "66076136"
   
 -   함수  
   
- 
-  **계산 도구** 창의 **메타데이터** 탭에서 큐브 구성 요소를 복사하거나 **명명된 집합 폼 편집기** 창의 **식** 상자로 끌 수 있습니다. 
-  **계산 도구** 창의 **함수** 탭에서 함수를 복사하거나 **명명된 집합 폼 편집기** 창의 **식** 상자로 끌 수 있습니다.  
+ **계산 도구** 창의 **메타데이터** 탭에서 큐브 구성 요소를 복사하거나 **명명된 집합 폼 편집기** 창의 **식** 상자로 끌 수 있습니다. **계산 도구** 창의 **함수** 탭에서 함수를 복사하거나 **명명된 집합 폼 편집기** 창의 **식** 상자로 끌 수 있습니다.  
   
 > [!IMPORTANT]  
 >  집합에 있는 멤버의 이름을 명시적으로 지정 하 여 집합 식을 만드는 경우 멤버 목록을 중괄호 ({}) 쌍으로 묶습니다.  

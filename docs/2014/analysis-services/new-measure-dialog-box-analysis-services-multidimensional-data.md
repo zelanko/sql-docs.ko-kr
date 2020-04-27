@@ -15,14 +15,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 07970f55cea06e319ed937aa3937d49bc45363b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072336"
 ---
 # <a name="new-measure-dialog-box-analysis-services---multidimensional-data"></a>새 측정값 대화 상자(Analysis Services - 다차원 데이터)
-  
   **의** 새 측정값 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 큐브 디자이너에서 새 측정값을 측정값 그룹에 추가할 수 있습니다. 다음을 수행하여 **새 측정값** 대화 상자를 표시할 수 있습니다.  
   
 -   큐브 디자이너의 **큐브 구조** 탭에 있는 **도구 모음** 창에서 **새 측정값** 을 클릭합니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "66072336"
 -   큐브 디자이너의 **큐브 구조** 탭에 있는 **측정값** 창에서 측정값 그룹 또는 측정값을 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **새 측정값** 을 선택합니다.  
   
 ## <a name="options"></a>옵션  
- **사용 현황**  
+ **사용법**  
  새 측정값에서 사용할 집계 함수를 선택합니다.  
   
  **원본 테이블**  

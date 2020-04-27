@@ -23,10 +23,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9b36013f13360a2afcf9546cd1e286b35ae4acd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075347"
 ---
 # <a name="specifying-partition-and-role-deployment-options"></a>파티션 및 역할 배포 옵션 지정
@@ -50,7 +50,7 @@ ms.locfileid: "66075347"
   
 -   대상 데이터베이스의 기존 역할 및 역할 멤버가 유지되고 새 역할이 배포되지 않습니다.  
   
--   **참고** 기존 역할 및 멤버가 유지 되 면 해당 역할과 연결 된 사용 권한이 없음으로 다시 설정 됩니다. 보안 권한은 관련된 보안 역할이 아닌 보안을 설정하는 개체에 포함됩니다. Analysis Service 배포 마법사를 사용 하 여이 동작을 수행 하는 방법에 대 한 자세한 내용은 Microsoft 기술 자료에서 ' 역할 및 멤버 유지 '를 참조 하십시오.  
+-   **참고** 기존 역할과 멤버가 보존되는 경우 해당 역할과 관련된 권한은 없음으로 다시 설정됩니다. 보안 권한은 관련된 보안 역할이 아닌 보안을 설정하는 개체에 포함됩니다. Analysis Service 배포 마법사를 사용 하 여이 동작을 수행 하는 방법에 대 한 자세한 내용은 Microsoft 기술 자료에서 ' 역할 및 멤버 유지 '를 참조 하십시오.  
   
 ## <a name="modifying-the-partition-and-role-deployment-options"></a>파티션 및 역할 배포 옵션 수정  
  \< *프로젝트 이름*> deploymentoptions 파일 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 저장 된 것과 다른 파티션 및 역할 옵션을 사용 하 여 프로젝트를 배포 해야 할 수 있습니다. 예를 들어 \< *프로젝트 이름*> deploymentoptions 파일에 표시 된 대로 기존 파티션, 역할 및 멤버를 모두 대체 하는 대신 기존 파티션, 역할 및 역할 멤버를 유지 하려고 할 수 있습니다.  
@@ -59,12 +59,11 @@ ms.locfileid: "66075347"
   
 #### <a name="to-change-the-deployment-of-partitions-or-roles-after-the-input-files-have-been-generated"></a>입력 파일을 생성한 다음 파티션 또는 역할 배포를 변경하려면  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사를 대화식으로 실행하고 **파티션 및 역할 배포 옵션** 페이지에서 파티션 및 역할에 대한 새 배포 옵션을 지정합니다.  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사를 대화식으로 실행하고 **파티션 및 역할 배포 옵션** 페이지에서 파티션 및 역할에 대한 새 배포 옵션을 지정합니다.  
   
      또는  
   
--   명령 프롬프트에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사를 실행하여 응답 파일 모드에서 마법사를 실행하도록 설정합니다. 응답 파일 모드에 대한 자세한 내용은 [Analysis Services 배포 마법사 실행](running-the-analysis-services-deployment-wizard.md)을 참조하세요.  
+-   명령 프롬프트에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사를 실행하여 응답 파일 모드에서 마법사를 실행하도록 설정합니다. 응답 파일 모드에 대 한 자세한 내용은 [Analysis Services 배포 마법사 실행](running-the-analysis-services-deployment-wizard.md)을 참조 하세요.  
   
      또는  
   

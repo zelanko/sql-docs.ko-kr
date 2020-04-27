@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2839ecff951a9f1547a05b60f6957ed5976bee9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073489"
 ---
 # <a name="multidimensional-modeling-ssas"></a>다차원 모델링(SSAS)
@@ -26,13 +26,13 @@ ms.locfileid: "66073489"
  Analysis Services 다차원 데이터베이스를 사용할 경우 또 하나의 중요한 이점은 Excel, Reporting Services 및 PerformancePoint처럼 공통적으로 사용되는 BI 보고 도구는 물론 사용자 지정 애플리케이션 및 타사 솔루션과의 통합이 가능하다는 것입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [SSAS&#41;&#40;다차원 모델 솔루션](multidimensional-model-solutions-ssas.md)  
+ [다차원 모델 솔루션&#40;SSAS&#41;](multidimensional-model-solutions-ssas.md)  
   
- [SSAS&#41;&#40;다차원 모델 데이터베이스](multidimensional-model-databases-ssas.md)  
+ [다차원 model 데이터베이스&#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
   
  [다차원 모델 개체 처리](processing-a-multidimensional-model-analysis-services.md)  
   
- [역할 및 사용 권한 &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)  
+ [역할 및 권한&#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)  
   
  [다차원 모델용 파워 뷰](power-view-for-multidimensional-models.md)  
   

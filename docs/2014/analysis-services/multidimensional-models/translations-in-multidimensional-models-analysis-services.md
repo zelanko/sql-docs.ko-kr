@@ -13,25 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a80c7950ec4079021bbcf03d9ccee6970d68786b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072738"
 ---
 # <a name="translations-in-multidimensional-models"></a>다차원 모델의 번역
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다국어 지원은 번역을 사용 하 여 수행 됩니다. 번역에는 다국어로 제공할 수 있는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 속성의 언어 식별자와 바인딩이 포함됩니다. 예를 들어 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 대해 번역을 정의하여 지정한 언어로 해당 데이터베이스의 캡션과 설명을 제공할 수 있습니다. 번역에 대 한 자세한 내용은 [큐브 번역](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)을 참조 하세요.  
   
 ## <a name="defining-translations"></a>번역 정의  
- 번역할 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 개체에 적절한 디자이너를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 번역을 정의할 수 있습니다. 번역을 정의하면 해당 `Translation` 개체와 연결된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체의 속성에 대해 지정한 언어로 지정한 명시적 리터럴 값을 가진 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체가 생성됩니다.  
+ 번역할 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 개체에 적절한 디자이너를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 번역을 정의할 수 있습니다. 번역을 정의하면 해당 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체와 연결된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체의 속성에 대해 지정한 언어로 지정한 명시적 리터럴 값을 가진 `Translation` 개체가 생성됩니다.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 번역이 연결될 수 있는 개체와 속성은 다음과 같습니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 번역이 연결될 수 있는 개체와 속성은 다음과 같습니다.  
   
-|Object|속성|디자이너|  
+|Object|속성|Designer|  
 |------------|----------------|--------------|  
 |데이터베이스|`Caption`, `Description`|[일반 &#40;데이터베이스 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](../general-database-designer-analysis-services-multidimensional-data.md)|  
-|Perspective|`Caption`, `Description`|[큐브 디자이너&#41; &#40;Analysis Services 다차원&#41;데이터를 &#40;번역](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
+|Cube|`Caption`, `Description`|[큐브 디자이너&#41; &#40;Analysis Services 다차원&#41;데이터를 &#40;번역](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |측정값 그룹|`Caption`|[큐브 디자이너&#41; &#40;Analysis Services 다차원&#41;데이터를 &#40;번역](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |측정값|`Caption`, `DisplayFolder`|[큐브 디자이너&#41; &#40;Analysis Services 다차원&#41;데이터를 &#40;번역](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |큐브 차원|`Caption`|[큐브 디자이너&#41; &#40;Analysis Services 다차원&#41;데이터를 &#40;번역](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
@@ -79,6 +78,6 @@ ms.locfileid: "66072738"
   
 ## <a name="see-also"></a>참고 항목  
  [Analysis Services Multiidimensional에 대 한 세계화 시나리오](../globalization-scenarios-for-analysis-services-multiidimensional.md)   
- [언어 및 데이터 정렬 &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md)  
+ [언어 및 데이터 정렬&#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md)  
   
   

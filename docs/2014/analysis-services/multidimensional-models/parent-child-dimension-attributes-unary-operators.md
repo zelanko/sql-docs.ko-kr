@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25c1acf7a1fadbc79b7781488143ce57881c81fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073453"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>부모-자식 차원의 단항 연산자
@@ -30,7 +30,7 @@ ms.locfileid: "66073453"
   
  부모 특성에서 **UnaryOperatorColumn** 속성의 기본 설정은 (none)이며 사용자 지정 롤업 연산자를 해제합니다. 다음 표에서는 단항 연산자를 나열하며 각 연산자가 수준에 적용될 때 어떻게 동작하는지 설명합니다.  
   
-|단항 연산자|Description|  
+|단항 연산자|설명|  
 |--------------------|-----------------|  
 |+(더하기 기호)|멤버 값을 멤버 이전에 발생하는 형제 멤버의 집계 값에 추가합니다. 이 연산자는 특성에 단항 연산자 열이 정의되지 않은 경우의 기본 연산자입니다.|  
 |-(빼기 기호)|멤버 값을 멤버 이전에 발생하는 형제 멤버의 집계 값에서 뺍니다.|  
@@ -40,8 +40,7 @@ ms.locfileid: "66073453"
   
  빈 값과 표에 없는 값은 더하기 기호(+) 단항 연산자와 같은 것으로 처리됩니다. 연산자 선행 규칙이 없으므로 단항 연산자 열에 저장된 멤버 순서에 따라 계산 순서가 결정됩니다. 계산 순서를 변경하려면 새 특성을 만들고 해당 **Type** 속성을 **Sequence**로 설정한 다음 **Source Column** 속성의 계산 순서에 해당하는 시퀀스 번호를 할당합니다. 또한 해당 특성을 기준으로 특성의 멤버 순서를 지정해야 합니다. 비즈니스 인텔리전스 마법사를 사용하여 특성의 멤버 순서를 지정하는 방법은 [차원 순서 정의](bi-wizard-define-the-ordering-for-a-dimension.md)를 참조하세요.  
   
- 
-  **UnaryOperatorColumn** 속성을 사용하여 특성의 모든 멤버에 대해 리터럴 문자로 단항 연산자를 반환하도록 명명된 계산을 지정할 수 있습니다. 명명된 계산에 `'*'` 와 같은 리터럴 문자를 입력하기만 하면 됩니다. 이 경우 특성의 모든 멤버에 대해 기본 연산자인 더하기 기호(+)가 곱하기 연산자인 별표(*)로 변경됩니다. 자세한 내용은 [데이터 원본 뷰에서 명명 된 계산 정의 &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)를 참조 하세요.  
+ **UnaryOperatorColumn** 속성을 사용하여 특성의 모든 멤버에 대해 리터럴 문자로 단항 연산자를 반환하도록 명명된 계산을 지정할 수 있습니다. 명명된 계산에 `'*'` 와 같은 리터럴 문자를 입력하기만 하면 됩니다. 이 경우 특성의 모든 멤버에 대해 기본 연산자인 더하기 기호(+)가 곱하기 연산자인 별표(*)로 변경됩니다. 자세한 내용은 [데이터 원본 뷰에서 명명 된 계산 정의 &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)를 참조 하세요.  
   
  차원 디자이너의 **찾아보기** 탭에서 계층의 각 멤버 옆에 있는 단항 연산자를 볼 수 있습니다. 쓰기 가능 차원으로 작업할 때 단항 연산자를 변경할 수도 있습니다. 쓰기 가능한 차원이 아니면 도구를 사용하여 데이터 원본을 직접 수정해야 합니다.  
   

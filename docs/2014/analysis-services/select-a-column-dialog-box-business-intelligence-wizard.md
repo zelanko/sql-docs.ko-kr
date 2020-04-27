@@ -13,18 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a8feb2b80a629d51c7447843ff5a8b41f0700b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069836"
 ---
 # <a name="select-a-column-dialog-box-business-intelligence-wizard"></a>열 선택 대화 상자(비즈니스 인텔리전스 마법사)
-  
   **열 선택** 대화 상자를 사용하여 트리 뷰로 표시된 테이블 목록에서 열을 선택할 수 있습니다. 비즈니스 인텔리전스 마법사에서 이 대화 상자를 열 수 있습니다.  
   
 ## <a name="options"></a>옵션  
- **트리 보기**  
+ **트리 뷰**  
  열을 클릭하여 비즈니스 인텔리전스 마법사에 대한 열을 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  

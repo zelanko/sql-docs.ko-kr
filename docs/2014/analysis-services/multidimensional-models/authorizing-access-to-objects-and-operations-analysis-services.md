@@ -20,22 +20,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d6962452b5615b9b2607007ed86c09eed495f6f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077017"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>개체 및 작업에 대한 액세스 승인(Analysis Services)
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 내의 큐브, 차원 및 마이닝 모델에 대한 비관리자 사용자 액세스는 하나 이상의 데이터베이스 역할의 구성원 자격을 통해 부여됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리자는 이러한 데이터베이스 역할을 만들고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체에 대한 읽기 또는 읽기/쓰기 권한을 부여한 다음 각 역할에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 및 그룹을 추가합니다.  
   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 내의 큐브, 차원 및 마이닝 모델에 대한 비관리자 사용자 액세스는 하나 이상의 데이터베이스 역할의 구성원 자격을 통해 부여됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]관리자는 이러한 데이터베이스 역할을 만들고 개체에 대 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 한 읽기 또는 읽기/쓰기 권한을 부여한 다음 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 각 역할에 Windows 사용자 및 그룹을 할당 합니다.  
-  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 사용자나 그룹이 속한 각 데이터베이스 역할과 연관된 사용 권한을 결합하여 특정 Windows 사용자나 그룹에 대한 유효 사용 권한을 결정합니다. 따라서 한 데이터베이스 역할은 사용자나 그룹에 차원, 측정값 또는 특성을 볼 수 있는 사용 권한을 부여하지 않지만 다른 데이터베이스 역할이 이 사용자나 그룹에 사용 권한을 부여하는 경우 해당 사용자나 그룹은 개체를 볼 수 있게 됩니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 사용자나 그룹이 속한 각 데이터베이스 역할과 연관된 사용 권한을 결합하여 특정 Windows 사용자나 그룹에 대한 유효 사용 권한을 결정합니다. 따라서 한 데이터베이스 역할은 사용자나 그룹에 차원, 측정값 또는 특성을 볼 수 있는 사용 권한을 부여하지 않지만 다른 데이터베이스 역할이 이 사용자나 그룹에 사용 권한을 부여하는 경우 해당 사용자나 그룹은 개체를 볼 수 있게 됩니다.  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버 관리자 역할의 멤버와 모든 권한(관리자)한을 가진 데이터베이스 역할의 멤버는 데이터베이스의 모든 데이터와 메타데이터에 액세스할 수 있으며 추가 사용 권한 없이 특정 개체를 볼 수 있습니다. 또한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버 역할의 멤버는 데이터베이스의 모든 개체에 제한 없이 액세스할 수 있고 데이터베이스 내에서 모든 권한(관리자)을 가진 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 역할의 멤버는 해당 데이터베이스의 모든 개체에 제한 없이 액세스할 수 있습니다. 처리처럼 특별한 관리 작업은 낮은 수준의 권한을 가진 별도의 역할을 통해 승인될 수 있습니다. 자세한 내용은 [처리 권한 부여&#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)를 참조하세요.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버 관리자 역할의 멤버와 모든 권한(관리자)한을 가진 데이터베이스 역할의 멤버는 데이터베이스의 모든 데이터와 메타데이터에 액세스할 수 있으며 추가 사용 권한 없이 특정 개체를 볼 수 있습니다. 또한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버 역할의 멤버는 데이터베이스의 모든 개체에 제한 없이 액세스할 수 있고 데이터베이스 내에서 모든 권한(관리자)을 가진 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 역할의 멤버는 해당 데이터베이스의 모든 개체에 제한 없이 액세스할 수 있습니다. 처리처럼 특별한 관리 작업은 낮은 수준의 권한을 가진 별도의 역할을 통해 승인될 수 있습니다. 자세한 내용은 [처리 권한 부여&#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)를 참조하세요.  
   
 ## <a name="list-roles-defined-for-your-database"></a>데이터베이스에 대해 정의된 역할 나열  
  관리자는 SQL Server Management Studio에서 간단한 DMV 쿼리를 실행하여 서버에 정의된 모든 역할의 목록을 가져올 수 있습니다.  
@@ -53,11 +50,11 @@ ms.locfileid: "66077017"
 ## <a name="top-down-overview-of-analysis-services-authorization"></a>Analysis Services 권한에 대한 하향식 개요  
  이 섹션에서는 권한 구성에 대한 기본적인 워크플로를 설명합니다.  
   
- **1 단계: 서버 관리**  
+ **1단계: 서버 관리**  
   
  첫 번째 단계로, 서버 수준에서 관리자 권한을 가질 사람을 결정합니다. 설치 중 SQL Server를 설치하는 로컬 관리자는 하나 이상의 Windows 계정을 Analysis Services 서버 관리자로 지정해야 합니다. 서버 관리자는 서버의 개체 보기, 수정, 삭제 권한 또는 연결된 데이터 보기 권한을 포함하여 서버에 대해 가능한 모든 권한을 가집니다. 설치가 완료된 후 서버 관리자는 계정을 추가하거나 제거하여 이 역할에 대한 구성원 자격을 변경할 수 있습니다. 이 권한 수준에 대 한 자세한 내용은 [서버 관리자 권한 부여 &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) 를 참조 하세요.  
   
- **2 단계: 데이터베이스 관리**  
+ **2단계: 데이터베이스 관리**  
   
  다음으로, 테이블 형식 또는 다차원 솔루션이 생성된 후 서버에 데이터베이스로 배포됩니다. 서버 관리자는 해당 데이터베이스에 대해 모든 권한을 지닌 역할을 정의하여 데이터베이스 관리 작업을 위임할 수 있습니다. 이 역할의 구성원은 데이터베이스의 개체를 처리하거나 쿼리할 뿐만 아니라 데이터베이스 자체 내의 큐브, 차원 및 기타 개체에 대해 추가 역할을 만들 수 있습니다. 자세한 내용은 [데이터베이스 권한 부여&#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)를 참조하세요.  
   
@@ -70,10 +67,9 @@ ms.locfileid: "66077017"
 > [!NOTE]  
 >  사용자는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 데이터를 로드하는 기본 관계형 데이터베이스에 있는 관계형 테이블에 대해 사용 권한이 필요하지 않으며 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스가 실행되고 있는 컴퓨터에서 파일 수준의 사용 권한도 필요로 하지 않습니다.  
   
- **4 단계 (선택 사항): 내부 큐브 개체에 대 한 액세스를 허용 하거나 거부 합니다.**  
+ **4단계: 내부 큐브 개체에 대한 액세스를 허용하거나 거부합니다.**  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 데이터 모델 내의 차원 구성원 및 셀을 포함하여 각 개체에 대한 권한을 설정하는 보안 설정을 제공합니다. 자세한 내용은 [차원 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) 및 [셀 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)를 참조하세요.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 데이터 모델 내의 차원 구성원 및 셀을 포함하여 각 개체에 대한 권한을 설정하는 보안 설정을 제공합니다. 자세한 내용은 [차원 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) 및 [셀 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)를 참조하세요.  
   
  사용자 ID에 따라 권한을 다르게 설정할 수도 있습니다. 이를 종종 동적 보안이라고 하며, [UserName&#40;MDX&#41;](/sql/mdx/username-mdx) 함수를 사용하여 구현됩니다.  
   

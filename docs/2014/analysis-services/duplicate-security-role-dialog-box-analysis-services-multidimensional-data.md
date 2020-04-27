@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 596011e40eb6ed7ca2276da58dbbc1379e5b032c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081494"
 ---
 # <a name="analysis-services-duplicate-security-role-dialog-box-analysis-services---multidimensional-data"></a>Analysis Services 중복 보안 역할 대화 상자(Analysis Services - 다차원 데이터)
@@ -30,6 +30,6 @@ ms.locfileid: "66081494"
   
 ## <a name="see-also"></a>참고 항목  
  [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [보안 역할 &#40;Analysis Services 다차원 데이터&#41;](multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+ [보안 역할&#40;Analysis Services - 다차원 데이터&#41;](multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
   

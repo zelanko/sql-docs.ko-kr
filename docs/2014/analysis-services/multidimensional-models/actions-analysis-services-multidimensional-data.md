@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ff4e330950a3fca54ba8ab08456157156836c0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077586"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>동작(Analysis Services - 다차원 데이터)
@@ -28,8 +28,7 @@ ms.locfileid: "66077586"
   
 -   동작이 발생하는 큐브에서 선택된 셀에 대한 기본 데이터를 나타내는 행 집합을 반환하는 드릴스루 동작  
   
--   
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 동작이 발생하는 큐브에서 선택된 섹션과 연관된 보고서를 반환하는 보고 동작  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 동작이 발생하는 큐브에서 선택된 섹션과 연관된 보고서를 반환하는 보고 동작  
   
 -   동작이 발생하는 큐브에서 선택된 섹션과 연관된 동작 요소(URL, HTML, DataSet, RowSet 및 기타 요소)를 반환하는 표준 동작.  
   
@@ -41,8 +40,7 @@ ms.locfileid: "66077586"
   
  조건은 동작 이벤트에서 평가되는 `Boolean` MDX 식입니다. 조건이 `true`로 평가되면 동작이 실행되고, 그렇지 않으면 동작이 실행되지 않습니다.  
   
- 유형은 실행할 동작의 종류입니다. 
-  <xref:Microsoft.AnalysisServices.Action> 은 추상 클래스이므로 이 동작을 실행하려면 파생 클래스 중 하나를 사용해야 합니다. 두 가지 동작, 드릴스루와 보고는 미리 정의되어 있는데 해당 파생 클래스로 각각 <xref:Microsoft.AnalysisServices.DrillThroughAction> 및 <xref:Microsoft.AnalysisServices.ReportAction>을 참조하세요. 나머지 동작은 <xref:Microsoft.AnalysisServices.StandardAction> 클래스에서 처리됩니다.  
+ 유형은 실행할 동작의 종류입니다. <xref:Microsoft.AnalysisServices.Action> 은 추상 클래스이므로 이 동작을 실행하려면 파생 클래스 중 하나를 사용해야 합니다. 두 가지 동작, 드릴스루와 보고는 미리 정의되어 있는데 해당 파생 클래스로 각각 <xref:Microsoft.AnalysisServices.DrillThroughAction> 및 <xref:Microsoft.AnalysisServices.ReportAction>을 참조하세요. 나머지 동작은 <xref:Microsoft.AnalysisServices.StandardAction> 클래스에서 처리됩니다.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]작업은 클라이언트 응용 프로그램에 제공 되어 사용 될 수 있는 저장 된 MDX 문입니다. 즉, 동작은 서버에 정의되고 저장되는 클라이언트 명령입니다. 동작에는 클라이언트 애플리케이션에서 MDX 문을 표시하고 처리해야 하는 시기 및 방법을 지정하는 정보도 들어 있습니다. 작업이 지정하는 동작은 작업의 정보를 매개 변수로 사용하여 애플리케이션을 시작하거나 작업이 제공하는 조건을 기반으로 정보를 검색할 수 있습니다.  
   
@@ -58,7 +56,7 @@ ms.locfileid: "66077586"
 ## <a name="types-of-actions"></a>동작 유형  
  다음 표에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 포함된 동작의 유형을 나열합니다.  
   
-|작업 유형|Description|  
+|액션 유형|설명|  
 |-----------------|-----------------|  
 |명령줄|명령 프롬프트에서 명령을 실행합니다.|  
 |데이터 세트|데이터 세트를 클라이언트 애플리케이션으로 반환합니다.|  

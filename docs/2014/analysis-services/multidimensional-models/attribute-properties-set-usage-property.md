@@ -14,14 +14,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: def616b09e6d5378257c3e5c377f2724c9d09676
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077171"
 ---
 # <a name="set-usage-property"></a>Usage 속성 설정
-  
   **에서 액세스하는 차원 디자이너의** 차원 구조 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]뷰를 사용하여 특성 사용법을 설정할 수 있습니다.  
   
  특성 사용법을 설정할 때 변경 내용은 차원을 처리할 때까지 반영되지 않습니다. 자세한 내용은 [다차원 모델 개체 처리](processing-a-multidimensional-model-analysis-services.md)를 참조 하세요.  
@@ -32,12 +31,11 @@ ms.locfileid: "66077171"
   
      기본적으로 **차원 구조** 뷰가 열립니다.  
   
-2.  
-  **특성**에서 사용법을 설정할 특성을 마우스 오른쪽 단추로 클릭하고 **특성 사용법 설정**을 가리킨 다음 아래 옵션 중 하나를 클릭합니다.  
+2.  **특성**에서 사용법을 설정할 특성을 마우스 오른쪽 단추로 클릭하고 **특성 사용법 설정**을 가리킨 다음 아래 옵션 중 하나를 클릭합니다.  
   
     -   **정규식**  
   
-    -   **Key**  
+    -   **키**  
   
     -   **Parent**  
   

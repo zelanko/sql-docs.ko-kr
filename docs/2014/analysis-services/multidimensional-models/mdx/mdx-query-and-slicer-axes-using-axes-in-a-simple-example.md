@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 53f48d8f23ef8809f9392b1a2c7ede65239e4985
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074033"
 ---
 # <a name="using-query-and-slicer-axes-in-a-simple-example-mdx"></a>간단한 예에서 쿼리 및 Slicer 축 사용(MDX)
@@ -29,9 +29,7 @@ ms.locfileid: "66074033"
 ## <a name="the-query"></a>쿼리  
  쿼리는 Packages 측정값을 경로와 횟수를 기준으로 비교할 수 있는 매트릭스를 제공합니다.  
   
- 다음 MDX 쿼리 예에서 Route와 Time 계층은 쿼리 축이며 Measures 차원은 slicer 축입니다. 
-  [Members](/sql/mdx/members-set-mdx) 함수는 MDX가 계층 또는 수준의 멤버를 사용하여 집합을 만들 것임을 나타냅니다. 
-  `Members` 함수를 사용하면 MDX 쿼리에서 특정 계층 또는 수준의 각 멤버를 명시적으로 지정할 필요가 없습니다.  
+ 다음 MDX 쿼리 예에서 Route와 Time 계층은 쿼리 축이며 Measures 차원은 slicer 축입니다. [Members](/sql/mdx/members-set-mdx) 함수는 MDX가 계층 또는 수준의 멤버를 사용하여 집합을 만들 것임을 나타냅니다. `Members` 함수를 사용하면 MDX 쿼리에서 특정 계층 또는 수준의 각 멤버를 명시적으로 지정할 필요가 없습니다.  
   
 ```  
 SELECT  
@@ -51,6 +49,6 @@ WHERE ( [Measures].[Packages] )
   
 ## <a name="see-also"></a>참고 항목  
  [MDX&#41;&#40;쿼리 축의 내용 지정](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
- [MDX &#40;슬라이서 축의 내용 지정&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [Slicer 축의 내용 지정&#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

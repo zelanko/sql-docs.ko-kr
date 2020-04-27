@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c065e36dd20646312d04379ea61b96d37a47a262
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081490"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>드릴스루 대화 상자(마이닝 모델 뷰어)
@@ -34,7 +34,7 @@ ms.locfileid: "66081490"
  **열 목록**  
  모델 열과 구조 열을 차례로 표시합니다.  
   
- **참고** 구조 열은 마이닝 구조에서 드릴스루를 사용 하도록 설정한 경우와 **모델 및 구조 열**옵션을 선택한 경우에만 표시 됩니다. 또한 마이닝 모델과 마이닝 구조 모두에 대해 열을 볼 수 있는 드릴스루 권한이 있어야 합니다.  
+ **참고** 구조 열은 마이닝 구조에서 드릴스루를 사용할 수 있고 **모델 및 구조 열**옵션을 선택한 경우에만 표시됩니다. 또한 마이닝 모델과 마이닝 구조 모두에 대해 열을 볼 수 있는 드릴스루 권한이 있어야 합니다.  
   
  모델에 포함 되지 않은 구조 열은 구조로 표시 됩니다 **.\< 열 이름>** 입니다.  
   

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 892198c217918fd2b2a374261c6eac5e31d0a428
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074080"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>쿼리 축의 내용 지정(MDX)
@@ -40,8 +40,7 @@ ms.locfileid: "66074080"
   
 ```  
   
- 각 쿼리 축에는 번호가 있습니다. 즉, x-축에는 0, y-축에는 1, z-축에는 2 등과 같은 번호가 지정됩니다. 
-  `<SELECT query axis clause>`구문에서 `Integer_Expression` 값은 축 번호를 지정합니다. MDX 쿼리는 지정된 축을 128개까지 지원할 수 있지만, 6개 이상의 축을 사용하는 MDX 쿼리는 극소수입니다. 처음 5개의 축에 대해서는 COLUMNS, ROWS, PAGES, SECTIONS 및 CHAPTERS와 같은 별칭을 대신 사용할 수 있습니다.  
+ 각 쿼리 축에는 번호가 있습니다. 즉, x-축에는 0, y-축에는 1, z-축에는 2 등과 같은 번호가 지정됩니다. `<SELECT query axis clause>`구문에서 `Integer_Expression` 값은 축 번호를 지정합니다. MDX 쿼리는 지정된 축을 128개까지 지원할 수 있지만, 6개 이상의 축을 사용하는 MDX 쿼리는 극소수입니다. 처음 5개의 축에 대해서는 COLUMNS, ROWS, PAGES, SECTIONS 및 CHAPTERS와 같은 별칭을 대신 사용할 수 있습니다.  
   
  MDX 쿼리는 쿼리 축을 건너뛸 수 없습니다. 즉, 한 개 이상의 쿼리 축이 포함된 쿼리는 하위 번호 또는 중간 축을 제외해서는 안 됩니다. 예를 들어 COLUMNS 축 없이는 쿼리에 ROWS 축을 사용할 수 없습니다. 또는 ROWS 축 없이는 COLUMNS와 PAGES 축을 사용할 수 없습니다.  
   
@@ -116,6 +115,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [MDX &#40;슬라이서 축의 내용 지정&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [Slicer 축의 내용 지정&#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

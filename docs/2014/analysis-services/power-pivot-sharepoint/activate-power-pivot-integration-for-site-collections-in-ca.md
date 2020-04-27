@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c5a8e3f2930d7975f8c75c8f89ab90b78461a650
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072004"
 ---
 # <a name="activate-powerpivot-feature-integration-for-site-collections-in-central-administration"></a>중앙 관리에서 사이트 모음에 대해 PowerPivot 기능 통합 활성화
@@ -33,7 +33,7 @@ ms.locfileid: "66072004"
   
      기본적으로 SharePoint 웹 애플리케이션은 포트 80을 통해 액세스됩니다. 즉, http://\<컴퓨터 이름> 입력 하 여 루트 사이트 모음을 열면 SharePoint 사이트에 자주 액세스할 수 있습니다.  
   
-2.  **사이트 설정**을 클릭 합니다.  
+2.  **사이트 설정**을 클릭합니다.  
   
 3.  사이트 컬렉션 관리에서 **사이트 컬렉션 기능**을 클릭합니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66072004"
   
 5.  **활성화**를 클릭합니다.  
   
-6.  각 사이트를 열고 **사이트 작업**을 클릭 하 여 추가 사이트 모음에 대해이 작업을 반복 합니다.  
+6.  각 사이트를 열고 **사이트 작업**을 클릭하여 추가 사이트 모음에 대해 위 단계를 반복합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [중앙 관리에서 PowerPivot 서버 관리 및 구성](power-pivot-server-administration-and-configuration-in-central-administration.md)   

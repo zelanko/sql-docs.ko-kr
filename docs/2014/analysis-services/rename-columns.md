@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070314"
 ---
 # <a name="lesson-3-rename-columns"></a>3단원: 열 이름 바꾸기
@@ -41,8 +41,7 @@ ms.locfileid: "66070314"
     > [!TIP]  
     >  열의 **속성** 창이 나 다이어그램 뷰에서 열 **이름** 속성의 열 이름을 바꿀 수도 있습니다.  
   
-3.  
-  **Customer** 테이블의 나머지 열과 나머지 테이블에 있는 열의 이름을 바꿔 원본 이름을 알아보기 쉬운 이름으로 변경합니다.  
+3.  **Customer** 테이블의 나머지 열과 나머지 테이블에 있는 열의 이름을 바꿔 원본 이름을 알아보기 쉬운 이름으로 변경합니다.  
   
      **Customer 테이블**  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66070314"
     |MiddleName|Middle Name|  
     |LastName|성|  
     |NameStyle|Name Style|  
-    |BirthDate|생년월일|  
+    |BirthDate|Birth Date|  
     |MaritalStatus|Marital Status|  
     |EmailAddress|메일 주소|  
     |YearlyIncome|Yearly Income|  
@@ -70,18 +69,18 @@ ms.locfileid: "66070314"
     |DateFirstPurchase|Date of First Purchase|  
     |CommuteDistance|Commute Distance|  
   
-     **Date**  
+     **날짜**  
   
     |원본 이름|친숙한 이름|  
     |-----------------|-------------------|  
-    |FullDateAlternateKey|Date|  
+    |FullDateAlternateKey|날짜|  
     |DayNumberOfWeek|Day Number of Week|  
     |EnglishDayNameOfWeek|Day Name|  
     |DayNumberOfMonth|Day of Month|  
     |DayNumberOfYear|Day of Year|  
     |WeekNumberOfYear|Week Number of Year|  
     |EnglishMonthName|Month Name|  
-    |MonthNumberOfYear|Month|  
+    |MonthNumberOfYear|월|  
     |CalendarQuarter|Calendar Quarter|  
     |CalendarYear|Calendar Year|  
     |CalendarSemester|Calendar Semester|  
@@ -89,7 +88,7 @@ ms.locfileid: "66070314"
     |FiscalYear|Fiscal Year|  
     |FiscalSemester|Fiscal Semester|  
   
-     **요인**  
+     **지리**  
   
     |원본 이름|친숙한 이름|  
     |-----------------|-------------------|  
@@ -101,7 +100,7 @@ ms.locfileid: "66070314"
     |PostalCode|우편 번호|  
     |SalesTerritoryKey|Sales Territory Id|  
   
-     **Product**  
+     **제품은**  
   
     |원본 이름|친숙한 이름|  
     |-----------------|-------------------|  
@@ -122,7 +121,7 @@ ms.locfileid: "66070314"
     |Dealer Price|Dealer Price|  
     |ModelName|모델 이름|  
     |LargePhoto|Large Photo|  
-    |EnglishDescription|Description|  
+    |EnglishDescription|설명|  
     |StartDate|Product Start Date|  
     |EndDate|Product End Date|  
     |상태|Product Status|  
@@ -144,7 +143,7 @@ ms.locfileid: "66070314"
     |EnglishProductSubcategoryName|Product Subcategory Name|  
     |ProductCategoryKey|Product Category Id|  
   
-     **인터넷 판매**  
+     **Internet Sales**  
   
     |원본 이름|친숙한 이름|  
     |-----------------|-------------------|  

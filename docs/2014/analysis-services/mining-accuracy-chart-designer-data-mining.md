@@ -13,18 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b27f1b3ae063cd1a464169f4ab5dbc85a4ce7466
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077777"
 ---
 # <a name="mining-accuracy-chart-designer-data-mining"></a>마이닝 정확도 차트 디자이너(데이터 마이닝)
-  
   **마이닝 정확도 차트** 뷰를 사용하여 선택한 마이닝 구조를 기반으로 작성된 마이닝 모델의 성능을 비교할 수 있습니다.  
   
- 
-  **마이닝 정확도 차트** 뷰에는 다음과 같은 탭이 들어 있습니다.  
+ **마이닝 정확도 차트** 뷰에는 다음과 같은 탭이 들어 있습니다.  
   
 -   [마이닝 정확도 차트 뷰의 입력 선택 탭 &#40;&#41;](input-selection-tab-mining-accuracy-chart-view.md)  
   
@@ -32,15 +30,13 @@ ms.locfileid: "66077777"
   
 -   [리프트 차트 탭 &#40;마이닝 정확도 차트 뷰&#41;](lift-chart-tab-mining-accuracy-chart-view.md)  
   
-     
-  `Input Selection` 탭에서 선택한 모델에 대한 리프트 차트, 수익 차트 또는 산점도를 생성합니다.  
+     `Input Selection` 탭에서 선택한 모델에 대한 리프트 차트, 수익 차트 또는 산점도를 생성합니다.  
   
 -   [마이닝 정확도 차트 뷰를 &#40;분류표 탭&#41;](classification-matrix-tab-mining-accuracy-chart-view.md)  
   
-     
-  `Input Selection` 탭에서 선택한 모델에 대한 분류 행렬을 표시합니다.  
+     `Input Selection` 탭에서 선택한 모델에 대한 분류 행렬을 표시합니다.  
   
--   [교차 유효성 검사 탭 &#40;마이닝 정확도 차트 뷰&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
+-   [교차 유효성 검사 탭&#40;마이닝 정확도 차트 뷰&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
   
      선택한 마이닝 구조에 대해 교차 유효성 검사 옵션을 설정하고 결과를 생성합니다.  
   
@@ -64,6 +60,6 @@ ms.locfileid: "66077777"
  [마이닝 구조 뷰 &#40;데이터 마이닝 모델 디자이너&#41;](mining-structure-view-data-mining-model-designer.md)   
  [마이닝 모델 뷰 &#40;데이터 마이닝 모델 디자이너&#41;](mining-models-view-data-mining-model-designer.md)   
  [마이닝 모델 뷰어 &#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
- [예측 쿼리 작성기 &#40;데이터 마이닝&#41;](prediction-query-builder-data-mining.md)  
+ [예측 쿼리 작성기&#40;데이터 마이닝&#41;](prediction-query-builder-data-mining.md)  
   
   

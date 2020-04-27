@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d547c52bc5d4cb02870fc647469b5f63af9ab7cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080734"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>목표 검색 시나리오(Excel용 테이블 분석 도구)

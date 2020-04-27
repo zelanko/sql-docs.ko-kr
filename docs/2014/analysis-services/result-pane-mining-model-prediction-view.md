@@ -13,28 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41579af945bcf546eb2c32b5a337ba10bd59510a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070178"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>결과 창(마이닝 모델 예측 뷰)
-  
   **결과** 창에서는 예측 쿼리 작성기의 **디자인** 뷰에서 디자인한 데이터 마이닝 예측 쿼리의 결과를 표시합니다. 표의 선택 부분 또는 전체 결과 표를 클립보드에 복사할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
  **쿼리 디자인 보기로 전환**  
- 
-  **디자인**, **쿼리**및 **결과** 창 사이를 전환하려면 클릭합니다.  
+ **디자인**, **쿼리**및 **결과** 창 사이를 전환하려면 클릭합니다.  
   
  **쿼리 결과 저장**  
- 
-  **데이터 마이닝 쿼리 결과 저장** 대화 상자를 엽니다.  
+ **데이터 마이닝 쿼리 결과 저장** 대화 상자를 엽니다.  
   
  **단일 쿼리**  
- 단일 쿼리를 만들 수 있습니다. 
-  **입력 테이블 선택** 테이블이 **단일 쿼리 입력** 테이블로 바뀝니다. 단일 쿼리로 전환하면 현재 예측 쿼리의 결과는 손실됩니다.  
+ 단일 쿼리를 만들 수 있습니다. **입력 테이블 선택** 테이블이 **단일 쿼리 입력** 테이블로 바뀝니다. 단일 쿼리로 전환하면 현재 예측 쿼리의 결과는 손실됩니다.  
   
  **쿼리 결과 새로 고침**  
  예측 쿼리를 다시 처리합니다.  
@@ -42,6 +38,6 @@ ms.locfileid: "66070178"
 ## <a name="see-also"></a>참고 항목  
  [예측 쿼리 작성기 &#40;데이터 마이닝&#41;](prediction-query-builder-data-mining.md)   
  [데이터 마이닝 쿼리 인터페이스](data-mining/data-mining-query-tools.md)   
- [데이터 마이닝 확장 &#40;DMX&#41; 문 참조](/sql/dmx/data-mining-extensions-dmx-statements)  
+ [DMX&#40;Data Mining Extensions&#41; 문 참조](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

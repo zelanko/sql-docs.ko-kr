@@ -13,24 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 901d8e0adc923ec5f70fbf1097cc806b30318809
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069746"
 ---
 # <a name="select-a-data-source-view-cube-wizard"></a>데이터 원본 뷰 선택(큐브 마법사)
-  
   **데이터 원본 뷰 선택** 페이지를 사용하여 빈 큐브에 사용할 데이터 원본 뷰를 선택할 수 있습니다.  
   
 > [!NOTE]  
->  이 페이지는 **생성 방법 선택** 페이지에서 **빈 큐브 만들기** 를 선택한 경우에만 나타납니다.  
+>   이 페이지는 **생성 방법 선택** 페이지에서 **빈 큐브 만들기** 를 선택한 경우에만 나타납니다.  
   
 ## <a name="options"></a>옵션  
  **데이터 원본 뷰**  
  빈 큐브에 사용할 데이터 원본 뷰를 선택합니다.  
   
- **없음을**  
+ **없음**  
  데이터 원본 뷰를 사용하지 않으려면 이 옵션을 선택합니다. 이 옵션은 데이터 원본 뷰를 나중에 생성하거나 측정값 그룹이 연결되어 있는 큐브만 사용하려는 경우에 유용합니다.  
   
 ## <a name="see-also"></a>참고 항목  

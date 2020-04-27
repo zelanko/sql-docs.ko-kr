@@ -18,18 +18,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5223444f58326b7530388f3fe2fc06d72488a5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077405"
 ---
 # <a name="configure-attribute-types"></a>특성 유형 구성
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]특성 유형은 비즈니스 기능 측면에서 특성을 분류 하는 데 도움이 됩니다. 다양한 특성 유형이 있으며 이들 대부분은 클라이언트 애플리케이션에서 특성을 표시하거나 지원하는 용도로 사용됩니다. 하지만 일부 특성 유형이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 특정한 의미를 지니기도 합니다. 예를 들어 일부 특성 유형은 시간 차원에 대한 다양한 달력의 기간을 나타내는 특성을 식별합니다.  
   
-##  <a name="setting_attibute_types"></a>특성 유형 설정  
- 특성에 대한 `Type` 속성의 값이 해당 특성에 대한 특성 유형을 결정합니다. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 여러 마법사는 차원이나 특성을 정의할 때 특성 유형을 설정합니다. 이러한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 마법사는 차원에 기능을 추가할 때도 특성 유형을 설정합니다. 예를 들어 비즈니스 인텔리전스 마법사는 차원에 있는 계정의 이름, 코드, 번호 및 구조가 포함된 특성을 식별하기 위해 계정 인텔리전스를 추가할 때 차원의 특성에 여러 특성 유형을 적용합니다. 비즈니스 인텔리전스 마법사에서도 통화 변환 등에 특성 유형을 사용합니다. 자세한 내용은 [통화 유형 차원 만들기](database-dimensions-create-a-currency-type-dimension.md)를 참조하세요.  
+##  <a name="setting-attribute-types"></a><a name="setting_attibute_types"></a> 특성 유형 설정  
+ 특성에 대한 `Type` 속성의 값이 해당 특성에 대한 특성 유형을 결정합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 여러 마법사는 차원이나 특성을 정의할 때 특성 유형을 설정합니다. 이러한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 마법사는 차원에 기능을 추가할 때도 특성 유형을 설정합니다. 예를 들어 비즈니스 인텔리전스 마법사는 차원에 있는 계정의 이름, 코드, 번호 및 구조가 포함된 특성을 식별하기 위해 계정 인텔리전스를 추가할 때 차원의 특성에 여러 특성 유형을 적용합니다. 비즈니스 인텔리전스 마법사에서도 통화 변환 등에 특성 유형을 사용합니다. 자세한 내용은 [통화 유형 차원 만들기](database-dimensions-create-a-currency-type-dimension.md)를 참조하세요.  
   
  다음 표에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 지원되는 특성 유형을 나열합니다. 이러한 표는 특성 유형을 다음 범주로 구분합니다.  
   
@@ -41,9 +40,9 @@ ms.locfileid: "66077405"
 |[느린 변경 차원 특성](#slowly_changing_dimension_attribute_types)|이러한 값은 느린 변경 차원에 속한 특성을 식별합니다.|  
 |[시간 차원 특성](#time_dimension_attribute_types)|이러한 값은 시간 차원에 속한 특성을 식별합니다. 시간 차원에 대한 자세한 내용은 [날짜 유형 차원 만들기](database-dimensions-create-a-date-type-dimension.md)를 참조하세요.|  
   
-###  <a name="general_attribute_types"></a>일반 특성 유형  
+###  <a name="general-attribute-types"></a><a name="general_attribute_types"></a>일반 특성 유형  
   
-|특성 유형 값|Description|  
+|특성 유형 값|설명|  
 |--------------------------|-----------------|  
 |`Address`|주소를 나타냅니다.|  
 |`AddressBuilding`|주소의 건물 식별자를 나타냅니다.|  
@@ -76,7 +75,7 @@ ms.locfileid: "66077405"
 |`DateEnded`|종료 날짜를 나타냅니다.|  
 |`DateModified`|수정한 날짜를 나타냅니다.|  
 |`DateStart`|시작 날짜를 나타냅니다.|  
-|**Deletedflag 유형의**|(업무 기능에 따라) 멤버가 삭제되었는지 또는 삭제되어야 할지 여부를 나타냅니다.<br /><br /> 참고: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 이 특성 유형을 사용하여 멤버가 삭제되어야 할지 여부를 결정하지 않습니다. 대신에 이 특성 유형은 클라이언트 애플리케이션에서 표시하는 용도로만 사용됩니다.|  
+|**DeletedFlag**|(업무 기능에 따라) 멤버가 삭제되었는지 또는 삭제되어야 할지 여부를 나타냅니다.<br /><br /> 참고: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 이 특성 유형을 사용하여 멤버가 삭제되어야 할지 여부를 결정하지 않습니다. 대신에 이 특성 유형은 클라이언트 애플리케이션에서 표시하는 용도로만 사용됩니다.|  
 |`FormattingColor`|서식 지정에 사용된 색을 나타냅니다.|  
 |`FormattingFont`|서식 지정에 사용된 글꼴을 나타냅니다.|  
 |`FormattingFontEffects`|서식 지정에 사용된 글꼴 효과를 나타냅니다.|  
@@ -153,36 +152,36 @@ ms.locfileid: "66077405"
 |`WebUrl`|URL 주소를 나타냅니다.|  
 |`WebXmlOrXsl`|XML 또는 XSL 콘텐츠를 나타냅니다.|  
   
-###  <a name="account_dimension_attribute_types"></a>계정 차원 특성 유형  
+###  <a name="account-dimension-attribute-types"></a><a name="account_dimension_attribute_types"></a> Account Dimension Attribute Types  
   
-|특성 유형 값|Description|  
+|특성 유형 값|설명|  
 |--------------------------|-----------------|  
 |`Account`|계정 부모를 나타냅니다. 이 특성 유형은 대개 계정 차원의 부모 특성에 적용됩니다.|  
 |`AccountName`|계정 이름을 나타냅니다. 이 특성 유형은 대개 계정 차원의 키 특성에 적용됩니다.|  
 |`AccountNumber`|계정 번호를 나타냅니다.|  
 |`AccountType`|계정 유형을 나타냅니다. 이 특성 유형은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 계정 유형 차원에 있는 계정 멤버의 집계 함수를 식별합니다.|  
   
-###  <a name="currency_dimension_attribute_types"></a>통화 차원 특성 유형  
+###  <a name="currency-dimension-attribute-types"></a><a name="currency_dimension_attribute_types"></a> 통화 차원 특성 유형  
   
-|특성 유형 값|Description|  
+|특성 유형 값|설명|  
 |--------------------------|-----------------|  
 |`CurrencyDestination`|통화 환율의 대상 통화를 나타냅니다. 이 특성 유형은 대개 통화 변환에서 사용하기 위해 보고 차원의 키 특성에 적용됩니다. 통화 변환에 대한 자세한 내용은 [통화 변환&#40;Analysis Services&#41;](../currency-conversions-analysis-services.md)을 참조하세요.|  
 |`CurrencyIsoCode`|통화 ISO(International Standards Organization) 코드를 나타냅니다. 통화 변환에 대한 자세한 내용은 [통화 변환&#40;Analysis Services&#41;](../currency-conversions-analysis-services.md)을 참조하세요.|  
 |`CurrencyName`|통화 이름을 나타냅니다. 통화 변환에 대한 자세한 내용은 [통화 변환&#40;Analysis Services&#41;](../currency-conversions-analysis-services.md)을 참조하세요.|  
 |`CurrencySource`|통화 환율의 원본 통화를 나타냅니다. 이 특성 유형은 대개 통화 변환에서 사용하기 위해 통화 차원의 키 특성에 적용됩니다. 통화 변환에 대한 자세한 내용은 [통화 변환&#40;Analysis Services&#41;](../currency-conversions-analysis-services.md)을 참조하세요.|  
   
-###  <a name="slowly_changing_dimension_attribute_types"></a>느린 변경 차원 특성 유형  
+###  <a name="slowly-changing-dimension-attribute-types"></a><a name="slowly_changing_dimension_attribute_types"></a> 느린 변경 차원 특성 유형  
   
-|특성 유형 값|Description|  
+|특성 유형 값|설명|  
 |--------------------------|-----------------|  
-|**Scdenddate 유형의**|느린 변경 차원에 속한 멤버의 유효한 종료 날짜를 나타냅니다.|  
-|**Scdoriginalid 유형의**|느린 변경 차원에 속한 멤버의 원래 식별자를 나타냅니다.|  
+|**ScdEndDate**|느린 변경 차원에 속한 멤버의 유효한 종료 날짜를 나타냅니다.|  
+|**ScdOriginalID**|느린 변경 차원에 속한 멤버의 원래 식별자를 나타냅니다.|  
 |**ScdStartDate**|느린 변경 차원에 속한 멤버의 유효한 시작 날짜를 나타냅니다.|  
 |`ScdStatus`|느린 변경 차원에 속한 멤버의 유효한 상태를 나타냅니다.|  
   
-###  <a name="time_dimension_attribute_types"></a>시간 차원 특성 유형  
+###  <a name="time-dimension-attribute-types"></a><a name="time_dimension_attribute_types"></a> 시간 차원 특성 유형  
   
-|특성 유형 값|Description|  
+|특성 유형 값|설명|  
 |--------------------------|-----------------|  
 |`Date`|날짜를 나타냅니다. 이 특성 유형은 대개 시간 차원이나 서버 시간 차원의 키 특성에 적용됩니다.|  
 |`DayOfHalfYear`|반기 일자 서수를 나타냅니다.|  
@@ -303,7 +302,7 @@ ms.locfileid: "66077405"
 |`UndefinedTime`|정의되지 않은 시간을 나타냅니다.|  
 |`WeekOfYear`|연간 주 서수를 나타냅니다.|  
 |`Weeks`|주를 나타냅니다.|  
-|**Wintersummerseason 유형의**|겨울철/여름철에 속한 날인지 여부를 나타냅니다.|  
+|**WinterSummerSeason**|겨울철/여름철에 속한 날인지 여부를 나타냅니다.|  
 |`Years`|연도를 나타냅니다.|  
   
 ## <a name="see-also"></a>참고 항목  

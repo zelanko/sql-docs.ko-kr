@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ef94fc86c78e896eab03bffb318b58e4b328245
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079616"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Analysis Services 인스턴스 이름 바꾸기
@@ -28,22 +28,18 @@ ms.locfileid: "66079616"
 > [!IMPORTANT]  
 >  인스턴스의 이름을 바꾸는 동안 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 이름 바꾸기 도구는 승격된 권한으로 실행되어 해당 인스턴스와 연결된 레지스트리 항목, Windows 서비스 이름 및 보안 계정을 업데이트합니다. 이러한 동작이 수행되도록 하려면 이 도구를 로컬 시스템 관리자로 실행하십시오.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 이름 바꾸기 도구는 원래 인스턴스에 대해 생성된 프로그램 폴더를 수정하지 않습니다. 이름을 바꾸는 인스턴스와 일치하도록 프로그램 폴더 이름을 수정하지 마십시오. 프로그램 폴더 이름을 변경하면 설치 프로그램이 설치를 복구하거나 제거할 수 없습니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 이름 바꾸기 도구는 원래 인스턴스에 대해 생성된 프로그램 폴더를 수정하지 않습니다. 이름을 바꾸는 인스턴스와 일치하도록 프로그램 폴더 이름을 수정하지 마십시오. 프로그램 폴더 이름을 변경하면 설치 프로그램이 설치를 복구하거나 제거할 수 없습니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 이름 바꾸기 도구는 클러스터 환경에서 사용할 수 없습니다.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 이름 바꾸기 도구는 클러스터 환경에서 사용할 수 없습니다.  
   
 ### <a name="to-rename-an-instance-of-analysis-services"></a>Analysis Services의 인스턴스 이름을 변경하려면  
   
 1.  C:\Program Files\Microsoft SQL Server\110\tools\binn\managementstudio에서 **인스턴스 이름 바꾸기** 도구인 asinstancerename.exe를 시작 합니다 **.**  
   
-2.  
-  **인스턴스 이름 바꾸기** 대화 상자의 **이름을 바꿀 인스턴스** 목록에서 이름을 바꿀 인스턴스를 선택합니다.  
+2.  **인스턴스 이름 바꾸기** 대화 상자의 **이름을 바꿀 인스턴스** 목록에서 이름을 바꿀 인스턴스를 선택합니다.  
   
-3.  
-  **새 인스턴스 이름** 입력란에 인스턴스의 새 이름을 입력합니다.  
+3.  **새 인스턴스 이름** 입력란에 인스턴스의 새 이름을 입력합니다.  
   
 4.  사용자 이름과 암호가 올바른지 확인하고 **이름 바꾸기**를 클릭합니다.  
   
@@ -55,14 +51,13 @@ ms.locfileid: "66079616"
   
 2.  데이터베이스를 백업, 동기화 또는 처리하는 데 일상적으로 사용하는 PowerShell 스크립트 또는 AMO 스크립트를 업데이트합니다.  
   
-3.  
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 사용하는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]프로젝트의 프로젝트 속성을 업데이트합니다. 테이블 형식 모드 서버 인스턴스의 경우 model.bim 파일의 작업 영역 서버 속성과 프로젝트의 서버 속성을 업데이트해야 합니다.  
+3.  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 사용하는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]프로젝트의 프로젝트 속성을 업데이트합니다. 테이블 형식 모드 서버 인스턴스의 경우 model.bim 파일의 작업 영역 서버 속성과 프로젝트의 서버 속성을 업데이트해야 합니다.  
   
 4.  서비스 계정을 지정한 방법에 따라 서비스에 데이터 액세스 권한을 부여하는 데이터베이스 로그인 또는 파일 사용 권한을 업데이트해야 할 수도 있습니다. 예를 들어 서비스 계정을 사용하여 데이터를 처리하거나 다른 서버의 연결된 개체에 액세스 하는 경우가 여기에 해당합니다.  
   
      가상 계정을 사용하여 서비스를 프로비전하는 경우 데이터베이스 로그인 또는 파일 사용 권한을 업데이트해야 합니다. 가상 계정은 인스턴스 이름을 사용하여 생성되므로 인스턴스의 이름을 바꾸는 경우 가상 계정도 동시에 업데이트됩니다. 즉 이전 인스턴스에 대해 만든 이전 로그인 또는 사용 권한은 더 이상 유효하지 않습니다.  
   
-     다음 예에서는 이러한 내용을 보여 줍니다. 기본 가상 계정을 사용 하 여 "Tabular" 라는 인스턴스로 테이블 형식 모드 서버를 설치 했다고 가정 합니다. 그러면 다음과 같은 구성이 생성 됩니다.  
+     다음 예제에서 이에 대해 설명합니다. 기본 가상 계정을 사용 하 여 "Tabular" 라는 인스턴스로 테이블 형식 모드 서버를 설치 했다고 가정 합니다. 그러면 다음과 같은 구성이 생성 됩니다.  
   
     1.  인스턴스 이름 = \<서버> \tabular  
   

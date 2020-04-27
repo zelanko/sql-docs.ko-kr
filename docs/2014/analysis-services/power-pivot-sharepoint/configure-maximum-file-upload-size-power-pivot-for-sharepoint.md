@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b6e367d0bc73de31f46b8533cded824bdb19504
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071818"
 ---
 # <a name="configure-maximum-file-upload-size-powerpivot-for-sharepoint"></a>최대 파일 업로드 크기 구성(SharePoint용 PowerPivot)
@@ -32,13 +32,11 @@ ms.locfileid: "66071818"
   
 2.  Excel 서비스 애플리케이션의 이름을 클릭합니다.  
   
-3.  
-  **신뢰할 수 있는 파일 위치**를 클릭합니다.  
+3.  **신뢰할 수 있는 파일 위치**를 클릭합니다.  
   
 4.  속성을 편집할 위치를 클릭합니다. 기본적으로 Excel 서비스는 기본 웹 애플리케이션을 신뢰할 수 있는 사이트로 간주합니다. 기본 웹 애플리케이션을 사용 중인 경우 **http://** 를 클릭하여 해당 위치의 구성 페이지를 엽니다.  
   
-5.  
-  **통합 문서 속성**으로 스크롤합니다.  
+5.  **통합 문서 속성**으로 스크롤합니다.  
   
 6.  최대 통합 문서 크기에서 파일 크기를 10(기본값)에서 50 또는 작업 중인 파일에 맞는 더 큰 값으로 늘립니다.  
   
@@ -50,7 +48,7 @@ ms.locfileid: "66071818"
   
 ### <a name="configure-maximum-file-size-for-a-sharepoint-web-application"></a>SharePoint 웹 애플리케이션의 최대 파일 크기 구성  
   
-1.  중앙 관리의 애플리케이션 관리에서 **웹 애플리케이션 관리**를 클릭합니다.  
+1.  중앙 관리의 응용 프로그램 관리에서 **웹 응용 프로그램 관리**를 클릭 합니다.  
   
     > [!NOTE]  
     >  Excel 서비스의 최대 통합 문서 크기를 증가시킨 경우에만 다음 단계를 수행합니다.  
@@ -61,8 +59,7 @@ ms.locfileid: "66071818"
   
 4.  **일반 설정**을 클릭 합니다.  
   
-5.  
-  **최대 업로드 크기**로 스크롤합니다.  
+5.  **최대 업로드 크기**로 스크롤합니다.  
   
 6.  속성을 Excel 서비스의 최대 통합 문서 크기와 같은 값 또는 더 큰 값으로 설정합니다.  
   

@@ -17,22 +17,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b46e9e42d212ca8f92f905c241915fdccec679f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075892"
 ---
 # <a name="modify-or-delete-a-database-dimension-in-solution-explorer"></a>솔루션 탐색기에서 데이터베이스 차원 수정 또는 삭제
-  
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 차원 디자이너를 사용하여 차원을 수정하거나 삭제할 수 있습니다. 차원을 수정하는 경우 해당 차원을 처리해야 사용자가 변경 내용을 사용할 수 있습니다. 자세한 내용은 [다차원 모델 개체 처리](processing-a-multidimensional-model-analysis-services.md)를 참조 하세요.  
   
 ### <a name="to-modify-a-dimension-in-sql-server-data-tools"></a>SQL Server Data Tools에서 차원을 수정하려면  
   
 1.  솔루션 탐색기에서 수정할 차원을 마우스 오른쪽 단추로 클릭한 다음 **열기**를 클릭합니다.  
   
-2.  
-  **차원 구조** 탭의 **특성**, **계층**또는 **데이터 원본 뷰** 창에서 수정할 항목을 클릭한 다음 변경합니다.  
+2.  **차원 구조** 탭의 **특성**, **계층**또는 **데이터 원본 뷰** 창에서 수정할 항목을 클릭한 다음 변경합니다.  
   
      변경할 수 있는 변경 내용 유형에 대 한 자세한 내용은 [다차원 모델 개체 처리](processing-a-multidimensional-model-analysis-services.md)를 참조 하세요.  
   

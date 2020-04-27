@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1aa03174d82c7319ce0c7b1cf455916e37a1b117
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072377"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>데이터 원본 뷰 디자이너에서의 다이어그램 작업(Analysis Services)
@@ -39,9 +39,9 @@ ms.locfileid: "66072377"
   
  [다이어그램에서 개체 정렬](#bkmk_arrangeobjects)  
   
- [개체 배열 유지](#bkmk_preserve)  
+ [개체 정렬 유지](#bkmk_preserve)  
   
-##  <a name="bkmk_add"></a>다이어그램 추가  
+##  <a name="add-a-diagram"></a><a name="bkmk_add"></a>다이어그램 추가  
  DSV를 만들면 자동으로 DSV 다이어그램이 생성됩니다. 기존의 DSV에서 다이어그램을 추가하거나 특정 개체를 숨겨 DSV의 표현을 보다 관리하기 쉽게 만들 수도 있습니다.  
   
  새 다이어그램을 만들려면 **다이어그램 구성 도우미** 창을 마우스 오른쪽 단추로 클릭하고 **새 다이어그램**을 클릭합니다.  
@@ -52,18 +52,17 @@ ms.locfileid: "66072377"
   
  비즈니스를 목적으로 그리고 많은 테이블, 뷰 및 명명된 쿼리가 포함된 데이터 원본 뷰를 보다 쉽게 이해할 수 있도록 관련 테이블 및 명명된 쿼리를 별도의 다이어그램에 그룹화할 수 있습니다. \<모든 테이블> 다이어그램을 제외 하 고 동일한 테이블 또는 명명 된 쿼리를 여러 다이어그램에 포함할 수 있습니다. \<모든 테이블> 다이어그램에서 데이터 원본 뷰에 포함 된 모든 개체는 정확히 한 번 표시 됩니다.  
   
-##  <a name="bkmk_edit"></a>다이어그램 편집 또는 삭제  
+##  <a name="edit-or-delete-a-diagram"></a><a name="bkmk_edit"></a>다이어그램 편집 또는 삭제  
  다이어그램으로 작업할 경우 개체를 추가 및 삭제하는 데 사용되는 명령에 특히 주의해야 합니다. 예를 들어 다이어그램에서 개체를 삭제하면 DSV에서도 해당 개제가 삭제됩니다. 다이어그램에서만 삭제하려면 **테이블 숨기기** 명령을 사용해야 합니다.  
   
  ![다이어그램 작업 영역, 마우스 오른쪽 단추 클릭 메뉴의 스크린 샷](../media/ssas-olapdsv-diagram.gif "다이어그램 작업 영역, 마우스 오른쪽 단추 클릭 메뉴의 스크린 샷")  
   
  개체를 개별적으로 숨길 수 있지만, 숨겨진 개체를 관련 테이블 표시 명령을 사용하여 다시 표시하면 관련된 모든 개체가 다이어그램에 반환됩니다. 작업 영역에 원하는 개체만 반환되게 하려면 테이블 창에서 직접 끌어 와야 합니다.  
   
-##  <a name="bkmk_findtables"></a>다이어그램에서 테이블 찾기  
+##  <a name="find-tables-in-a-diagram"></a><a name="bkmk_findtables"></a>다이어그램에서 테이블 찾기  
  스키마가 큰 경우 **다이어그램** 창에서 특정 테이블을 찾아 스크롤하기가 어려울 수 있습니다. 그러나 다음 도구를 사용하면 다이어그램에서 테이블을 쉽게 찾을 수 있습니다.  
   
--   
-  **테이블** 창에서 테이블 목록을 스크롤합니다.  
+-   **테이블** 창에서 테이블 목록을 스크롤합니다.  
   
      현재 표시된 다이어그램에 테이블을 포함하려면 **테이블** 창에서 다이어그램 창으로 테이블을 끌어 옵니다.  
   
@@ -75,14 +74,14 @@ ms.locfileid: "66072377"
   
      필터 입력란에 문자열 및 와일드카드 문자를 입력하여 다이어그램에 있는 테이블의 하위 집합을 볼 수 있습니다.  
   
-##  <a name="bkmk_arrangeobjects"></a>다이어그램에서 개체 정렬  
+##  <a name="arrange-objects-in-a-diagram"></a><a name="bkmk_arrangeobjects"></a>다이어그램에서 개체 정렬  
  데이터 원본 뷰 디자이너에서 여러 다이어그램을 정의하여 DSV를 이해하기 쉽게 만들 수 있지만 많은 테이블을 포함하는 다이어그램은 읽기 어려울 수 있으며 수동으로 테이블 레이아웃을 다시 정렬해야 할 경우 시간이 오래 걸릴 수 있습니다. 데이터 원본 뷰 디자이너에서는 현재 다이어그램에 있는 테이블간 관계를 기반으로 사각형 또는 대각선 레이아웃을 사용하여 현재 다이어그램에서 테이블을 자동으로 다시 정렬할 수 있습니다.  
   
 -   사각형 레이아웃에서 관계선은 열 사이 대신 테이블 사이에 그려집니다. 테이블 사이에서는 관계선이 가로와 세로로 그려집니다.  
   
 -   대각선 레이아웃에서 관계선은 테이블의 관련 열 사이에서 가능한 직선으로 그려집니다. 여러 열에 대한 관계는 테이블의 첫 번째 관련 열에 연결됩니다. 테이블의 열이 표시되지 않는 경우 선은 테이블의 맨 위에 그려집니다.  
   
-##  <a name="bkmk_preserve"></a>개체 정렬 유지  
+##  <a name="preserve-object-arrangement"></a><a name="bkmk_preserve"></a>개체 정렬 유지  
  원하는 방식으로 테이블을 수동 정렬한 후 다이어그램에 테이블을 추가하면 다이어그램 새로 고침이 발생하여 개체 레이아웃에 대한 최근 수정 내용이 모두 제거될 수 있습니다.  
   
  이 동작은 테이블을 추가하여 다이어그램 구성 도우미가 새 테이블을 수용하기 위해 다른 테이블을 이동할 때 발생할 가능성이 높습니다. 그런 후 모든 테이블 및 연결 선이 올바르게 표시되도록 다이어그램을 다시 그립니다. 이 시점에서 수동으로 조정한 특정 개체의 배치가 손실될 수 있습니다.  
@@ -91,6 +90,6 @@ ms.locfileid: "66072377"
   
 ## <a name="see-also"></a>참고 항목  
  [다차원 모델의 데이터 원본 뷰](data-source-views-in-multidimensional-models.md)   
- [데이터 원본 뷰 디자이너 &#40;Analysis Services 다차원 데이터&#41;](../data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [데이터 원본 뷰 디자이너&#40;Analysis Services - 다차원 데이터&#41;](../data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

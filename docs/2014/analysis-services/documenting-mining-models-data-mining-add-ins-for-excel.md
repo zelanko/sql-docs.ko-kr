@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: afe304e3fa76be805a64e9bd662bc21500ac2fa7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081586"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>마이닝 모델 문서화(Excel용 데이터 마이닝 추가 기능)
@@ -70,8 +70,8 @@ ms.locfileid: "66081586"
 ||||  
 |-|-|-|  
 |**메타데이터**|모델 메타데이터|알고리즘 매개 변수 및 값|  
-||열 메타데이터|열 이름<br /><br /> 사용<br /><br /> 데이터 형식<br /><br /> 콘텐츠 형식<br /><br /> 값(불연속 값 목록 또는 값 범위)|  
-|**모델 통계**|연속 열|평균값<br /><br /> 최솟값<br /><br /> 최댓값<br /><br /> 제곱 평균 오차<br /><br /> 절대 평균 오차<br /><br /> 로그 점수<br /><br /> 회귀 수식(선형 회귀 모델만 해당)|  
+||열 메타데이터|열 이름<br /><br /> 사용법<br /><br /> 데이터 형식<br /><br /> 콘텐츠 유형<br /><br /> 값(불연속 값 목록 또는 값 범위)|  
+|**모델 통계**|연속 열|평균값<br /><br /> 최소값<br /><br /> 최대값<br /><br /> 제곱 평균 오차<br /><br /> 절대 평균 오차<br /><br /> 로그 점수<br /><br /> 회귀 수식(선형 회귀 모델만 해당)|  
 ||불연속 열|전달 횟수<br /><br /> 실패 횟수<br /><br /> 로그 점수<br /><br /> 리프트|  
   
 > [!NOTE]  

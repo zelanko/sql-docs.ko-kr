@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 76b5027f19eade18aa07187c1673f6ad27079391
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075935"
 ---
 # <a name="create-a-date-type-dimension"></a>날짜 유형 차원 만들기
@@ -40,8 +40,7 @@ ms.locfileid: "66075935"
  서버 시간 차원  
  시간 관련 특성을 바인딩할 차원 테이블이 없으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 기간에 따라 서버 시간 차원을 정의하도록 할 수 있습니다. 서버 시간 차원에서 나타낼 계층, 수준 및 멤버를 정의하려면 차원을 만들 때 표준 기간을 선택합니다.  
   
- 서버 시간 차원의 특성에는 특수한 시간-특성 바인딩이 있습니다. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 Year, Month 또는 Day와 같이 날짜와 관련된 특성 유형을 사용하여 시간 차원에서 특성의 멤버를 정의합니다.  
+ 서버 시간 차원의 특성에는 특수한 시간-특성 바인딩이 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 Year, Month 또는 Day와 같이 날짜와 관련된 특성 유형을 사용하여 시간 차원에서 특성의 멤버를 정의합니다.  
   
  큐브에 서버 시간 차원을 포함한 후 큐브 마법사의 **차원 용도 정의** 페이지에서 관계를 지정하여 측정값 그룹과 서버 시간 차원 간의 관계를 설정합니다.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66075935"
   
  이와 같이 다양한 달력을 차원 디자이너에서 직접 구성할 수 있습니다. 그러나 시간 차원이나 서버 시간 차원을 만들 때 차원 마법사가 제공하는 여러 계층 템플릿을 사용하면 다양한 유형의 달력이 자동으로 생성됩니다. 다음 표에서는 차원 마법사가 생성할 수 있는 다양한 달력을 설명합니다.  
   
-|Calendar|Description|  
+|일정|설명|  
 |--------------|-----------------|  
 |표준 달력|1월 1일로 시작하여 12월 31일로 끝나는 12개월 일반 달력입니다.<br /><br /> 차원 마법사를 사용하여 시간 차원을 만드는지 서버 시간 차원을 만드는지 여부에 관계없이 차원에 대한 기간을 나타내는 특성을 정의하면 마법사가 표준 달력에 대한 계층을 생성합니다. 차원 마법사를 사용하여 서버 시간 차원을 만들 경우 표준 달력의 시작 날짜를 1월 1일이 아닌 다른 날짜로 조정할 수 있습니다.|  
 |회계 달력|12개월 회계 달력입니다. 이 달력을 선택할 경우 조직에서 사용하는 회계 연도의 시작 월과 일을 지정해야 합니다.<br /><br /> 참고: 이 달력은 차원 마법사를 사용하여 서버 시간 차원을 만드는 경우에만 사용할 수 있습니다.|  

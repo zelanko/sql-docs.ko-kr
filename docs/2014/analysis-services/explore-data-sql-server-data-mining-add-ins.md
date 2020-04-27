@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0bad2a2e65a65bbafa8218a3e0afbedd4b9f13b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081317"
 ---
 # <a name="explore-data-sql-server-data-mining-add-ins"></a>데이터 탐색(SQL Server 데이터 마이닝 추가 기능)
@@ -28,7 +28,7 @@ ms.locfileid: "66081317"
   
  데이터에 연속 숫자 데이터가 포함된 경우 다음 두 뷰 사이를 전환할 수 있습니다.  
   
--   **선 그래프.** 이 그래프는 X축에는 데이터 값이 Y축에는 사례 수가 있는 그래프입니다.  
+-   **선 그래프입니다.** 이 그래프는 X축에는 데이터 값이 Y축에는 사례 수가 있는 그래프입니다.  
   
 -   **가로 막대형 차트입니다.** 이 그래프는 각 값에 대한 사례 수로 값을 그룹화합니다.  
   

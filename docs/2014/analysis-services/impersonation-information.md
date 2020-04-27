@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9314494230469cca5e8db9926ddf71cb790b96ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080650"
 ---
 # <a name="impersonation-information"></a>가장 정보
-  
   **가장 정보** 페이지를 사용하여 Analysis Services에서 데이터 원본에 연결하는 데 사용할 자격 증명을 지정할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
@@ -41,8 +40,7 @@ ms.locfileid: "66080650"
  개체를 관리하는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 서비스와 연결된 보안 자격 증명을 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체에 사용하려면 이 옵션을 선택합니다. 서비스 계정 자격 증명은 처리, ROLAP 쿼리, 원격 파티션, 연결된 개체, 대상과 원본 간의 동기화 등에 사용됩니다. 그러나 DMX(Data Mining Extensions) OPENQUERY 문, 로컬 큐브 및 마이닝 모델의 경우 현재 사용자의 자격 증명이 사용됩니다. 아웃오브 라인 바인딩에 대해서는 이 옵션이 지원되지 않습니다.  
   
  **현재 사용자의 자격 증명 사용**  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체에서 아웃오브 라인 바인딩, DMX OPENQUERY, 로컬 큐브 및 마이닝 모델에 대해 현재 사용자의 보안 자격 증명을 사용하려면 이 옵션을 선택합니다. 처리, ROLAP 쿼리, 원격 파티션, 연결된 개체 및 대상과 원본 간의 동기화에 대해서는 이 옵션이 지원되지 않습니다.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체에서 아웃오브 라인 바인딩, DMX OPENQUERY, 로컬 큐브 및 마이닝 모델에 대해 현재 사용자의 보안 자격 증명을 사용하려면 이 옵션을 선택합니다. 처리, ROLAP 쿼리, 원격 파티션, 연결된 개체 및 대상과 원본 간의 동기화에 대해서는 이 옵션이 지원되지 않습니다.  
   
  **계승**  
  데이터베이스 수준에서 정의된 가장 동작을 사용하려면 이 옵션을 선택합니다. 가장 동작은 서버 관리자가 `DataSourceImpersonation` 데이터베이스 속성을 사용하여 설정합니다.  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4712aba656fa111400e41566964cbd9719f778db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071964"
 ---
 # <a name="add-a-bi-semantic-model-connection-content-type-to-a-library-powerpivot-for-sharepoint"></a>라이브러리에 BI 의미 체계 모델 연결 콘텐츠 형식 추가(SharePoint용 PowerPivot)
@@ -23,7 +23,7 @@ ms.locfileid: "66071964"
 > [!NOTE]  
 >  이미 SharePoint 데이터 연결 라이브러리를 사용하는 경우 BI 의미 체계 모델 연결 콘텐츠 형식이 해당 라이브러리 템플릿에 자동으로 추가됩니다. 이미 새 BI 의미 체계 모델 연결 문서를 만들 수 있게 하는 데이터 연결 라이브러리를 사용하는 경우에는 이 섹션의 단계를 건너뛸 수 있습니다.  
   
-##  <a name="bkmk_addtype"></a>문서 라이브러리에 콘텐츠 형식 추가  
+##  <a name="add-the-content-type-to-a-document-library"></a><a name="bkmk_addtype"></a> 문서 라이브러리에 콘텐츠 형식 추가  
  콘텐츠 형식을 추가하고 구성하려면 최소한 목록 관리 권한이 있어야 합니다. 이 권한은 디자인 권한 수준 이상에 포함되어 있습니다.  
   
  문서 라이브러리가 포함된 사이트에서는 SharePoint용 PowerPivot에 대한 기능이 활성화되어 있어야 합니다. 자세한 내용은 [중앙 관리에서 사이트 모음에 대 한 PowerPivot 기능 통합 활성화](activate-power-pivot-integration-for-site-collections-in-ca.md)를 참조 하세요.  
@@ -32,8 +32,7 @@ ms.locfileid: "66071964"
   
 2.  SharePoint 리본의 라이브러리 도구에서 **라이브러리**를 클릭합니다.  
   
-3.  
-  **라이브러리 설정**을 클릭합니다.  
+3.  **라이브러리 설정**을 클릭합니다.  
   
 4.  일반 설정에서 **고급 설정**을 클릭합니다.  
   

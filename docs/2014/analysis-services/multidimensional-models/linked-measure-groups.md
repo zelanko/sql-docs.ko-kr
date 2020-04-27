@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec38404a32751330d7fefd974fafe3d571d3b11b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074775"
 ---
 # <a name="linked-measure-groups"></a>연결된 측정값 그룹
@@ -51,8 +51,7 @@ ms.locfileid: "66074775"
  연결된 측정값 그룹에 포함된 측정값은 동일한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에서 검색한 연결된 차원과만 직접 구성이 가능합니다. 그러나 계산 멤버를 사용하면 연결된 측정값 그룹의 정보를 큐브 내의 연결되지 않은 다른 차원과 연결할 수 있습니다. 또한 참조 또는 다 대 다 관계 등의 간접 관계를 사용하여 연결되지 않은 차원을 연결된 측정값 그룹에 연결할 수 있습니다.  
   
 ## <a name="create-or-modify-a-linked-measure"></a>연결된 측정값 만들기 또는 수정  
- 
-  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 를 사용하여 연결된 측정값 그룹을 만들 수 있습니다.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 를 사용하여 연결된 측정값 그룹을 만들 수 있습니다.  
   
 1.  이제 원본 큐브에서 원래 측정값 그룹에 대한 수정을 모두 완료합니다. 이에 따라 나중에 이후 큐브에서 연결된 측정값 그룹을 다시 만들 필요가 없습니다. 연결된 개체의 이름을 바꿀 수 있지만 다른 속성을 변경할 수는 없습니다.  
   
@@ -64,8 +63,7 @@ ms.locfileid: "66074775"
   
 5.  다음 페이지에서 연결할 측정값 그룹 또는 차원을 선택합니다. 측정값 그룹 등의 큐브 개체 및 차원이 별도로 나열됩니다. 현재 큐브에 없는 개체만 사용할 수 있습니다.  
   
-6.  
-  **마침** 을 클릭하여 연결된 개체를 만듭니다. 연결된 개체가 측정값 및 차원 창에서 링크 아이콘으로 표시되어 나타납니다.  
+6.  **마침** 을 클릭하여 연결된 개체를 만듭니다. 연결된 개체가 측정값 및 차원 창에서 링크 아이콘으로 표시되어 나타납니다.  
   
 ## <a name="secure-a-linked-measure"></a>연결된 측정값 보안  
  연결이 정의된 다음에는 연결된 측정값 그룹의 측정값에 대한 액세스가 다른 측정값 그룹에 대한 액세스와 동일한 방법으로 관리됩니다. 연결된 개체가 역할 디자이너에서 연결되지 않은 해당 항목과 함께 나타납니다. 측정값 그룹의 보안 관리에 대한 자세한 내용은 [큐브 또는 모델 권한 부여&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)를 참조하세요.  

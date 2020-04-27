@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6e43196f5bc318630a52073e22969dc58a0e64a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079228"
 ---
 # <a name="modifying-default-table-names"></a>기본 테이블 이름 수정
@@ -27,34 +27,29 @@ ms.locfileid: "66079228"
   
 ### <a name="to-modify-the-default-name-of-a-table"></a>테이블의 기본 이름을 수정하려면  
   
-1.  
-  **데이터 원본 뷰 디자이너** 의 **테이블**창에서 **FactInternetSales** 테이블을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+1.  **데이터 원본 뷰 디자이너** 의 **테이블**창에서 **FactInternetSales** 테이블을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
 2.  Microsoft Visual Studio 창의 오른쪽에 속성 창이 표시되지 않으면 속성 창의 제목 표시줄에서 **자동 숨기기** 를 클릭하여 속성 창이 계속 표시되도록 합니다.  
   
-     속성 창이 계속 열려 있으면 데이터 원본 뷰에 있는 각 테이블에 대한 속성을 보다 쉽게 변경할 수 있습니다. 
-  **자동 숨기기** 단추를 사용하여 속성 창을 계속 열어 놓지 않으면 **다이어그램** 창에서 다른 개체를 클릭할 때 창이 닫힙니다.  
+     속성 창이 계속 열려 있으면 데이터 원본 뷰에 있는 각 테이블에 대한 속성을 보다 쉽게 변경할 수 있습니다. **자동 숨기기** 단추를 사용하여 속성 창을 계속 열어 놓지 않으면 **다이어그램** 창에서 다른 개체를 클릭할 때 창이 닫힙니다.  
   
 3.  **FactInternetSales** 개체에 대 한 **FriendlyName** 속성을로 *`InternetSales`* 변경 합니다.  
   
-     
-  **FriendlyName** 속성의 셀에서 떨어진 곳을 클릭하면 변경 내용이 적용됩니다. 다음 단원에서는 이 팩트 테이블을 기반으로 하는 측정값 그룹을 정의합니다. 이 단원에서 수행한 변경 작업으로 인해 팩트 테이블의 이름은 FactInternetSales가 아닌 InternetSales가 됩니다.  
+     **FriendlyName** 속성의 셀에서 떨어진 곳을 클릭하면 변경 내용이 적용됩니다. 다음 단원에서는 이 팩트 테이블을 기반으로 하는 측정값 그룹을 정의합니다. 이 단원에서 수행한 변경 작업으로 인해 팩트 테이블의 이름은 FactInternetSales가 아닌 InternetSales가 됩니다.  
   
-4.  
-  **테이블** 창에서 **DimProduct** 를 클릭합니다. 속성 창에서 **FriendlyName** 속성을로 *`Product`* 변경 합니다.  
+4.  **테이블** 창에서 **DimProduct** 를 클릭합니다. 속성 창에서 **FriendlyName** 속성을로 *`Product`* 변경 합니다.  
   
 5.  데이터 원본 뷰에 있는 나머지 테이블 각각의 **FriendlyName** 속성도 같은 방법으로 변경합니다. 즉 "**Dim**" 접두사를 제거합니다.  
   
 6.  다 변경했으면 **자동 숨기기** 단추를 클릭하여 속성 창을 다시 숨깁니다.  
   
-7.  
-  **파일** 메뉴 또는 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]의 도구 모음에서 **모두 저장** 을 클릭하여 지금까지의 변경 내용을 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트에 저장합니다. 원할 경우 여기에서 자습서를 중지했다가 나중에 계속 진행할 수 있습니다.  
+7.  **파일** 메뉴 또는 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]의 도구 모음에서 **모두 저장** 을 클릭하여 지금까지의 변경 내용을 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트에 저장합니다. 원할 경우 여기에서 자습서를 중지했다가 나중에 계속 진행할 수 있습니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
  [2단원: 큐브 정의 및 배포](lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [다차원 모델의 데이터 원본 뷰](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [데이터 원본 뷰에서 속성 변경 &#40;Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
+ [데이터 원본 뷰에서 속성 변경&#40;Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   
   

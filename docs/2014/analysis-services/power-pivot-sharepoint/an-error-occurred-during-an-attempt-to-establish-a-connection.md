@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c09c8984e964b4bdfa93b0fcebae2e613d484892
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071948"
 ---
-# <a name="an-error-occurred-during-an-attempt-to-establish-a-connection-to-the-external-data-source-the-following-connections-failed-to-refresh-powerpivot-data"></a>외부 데이터 원본에 대한 연결을 설정하는 동안 오류가 발생했습니다. PowerPivot 데이터 연결을 새로 고치지 못했습니다.
+# <a name="an-error-occurred-during-an-attempt-to-establish-a-connection-to-the-external-data-source-the-following-connections-failed-to-refresh-powerpivot-data"></a>외부 데이터 원본에 대한 연결을 설정하는 동안 오류가 발생했습니다. PowerPivot 데이터 연결을: PowerPivot 데이터
   이 오류는 SharePoint용 PowerPivot이 설치되어 있지 않은 서버에서 PowerPivot 데이터를 쿼리하면 발생합니다. 이 오류는 SQL Server Analysis Services(PowerPivot) 서비스가 중지되었거나 이전 버전에서 PowerPivot 데이터를 보려고 시도하는 경우에도 발생합니다.  
   
 ## <a name="details"></a>세부 정보  
@@ -27,7 +27,7 @@ ms.locfileid: "66071948"
 |적용 대상|SharePoint용 PowerPivot|  
 |제품 버전|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |원인|데이터 연결이 실패했습니다.|  
-|메시지 텍스트|외부 데이터 원본에 대한 연결을 설정하는 동안 오류가 발생했습니다. PowerPivot 데이터 연결을 새로 고치지 못했습니다.|  
+|메시지 텍스트|외부 데이터 원본에 대한 연결을 설정하는 동안 오류가 발생했습니다. PowerPivot 데이터 연결을: PowerPivot 데이터|  
   
 ## <a name="explanation"></a>설명  
  SharePoint에 게시된 Excel 통합 문서에서 PowerPivot 데이터를 쿼리할 때 SharePoint 환경에 SharePoint용 PowerPivot 서버가 없거나 SQL Server Analysis Services(PowerPivot) 서비스가 중지된 경우 Excel Services가 이 오류를 반환합니다.  

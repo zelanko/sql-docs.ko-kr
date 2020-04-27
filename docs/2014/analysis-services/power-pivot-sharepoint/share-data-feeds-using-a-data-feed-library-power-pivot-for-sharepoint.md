@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00ecb4487119251f1b86c2daf29b7481966f09f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071149"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint"></a>데이터 피드 라이브러리를 사용하여 데이터 피드 공유(SharePoint용 PowerPivot)
@@ -39,7 +39,7 @@ ms.locfileid: "66071149"
 > [!NOTE]  
 >  데이터 피드는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서 만든 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]데이터 원본에 웹 데이터를 추가하는 데 사용되지만 Atom 피드를 읽을 수 있는 모든 클라이언트 애플리케이션에서 데이터 서비스 문서를 처리할 수 있습니다.  
   
-##  <a name="prereq"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="prereq"></a> 필수 조건  
  SharePoint 팜에 쿼리 처리를 추가 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 하는 SharePoint용 PowerPivot 배포가 있어야 합니다. 데이터 피드 지원은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 솔루션 패키지를 통해 배포됩니다.  
   
  데이터 서비스 문서 콘텐츠 형식을 지원하는 SharePoint 라이브러리가 있어야 합니다. 이 경우 기본 데이터 피드 라이브러리를 사용하는 것이 좋지만, 콘텐츠 형식을 라이브러리에 수동으로 추가할 수 있습니다. 자세한 내용은 [데이터 피드 라이브러리 만들기 또는 사용자 지정 &#40;SharePoint용 PowerPivot&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md)를 참조 하세요.  
@@ -48,7 +48,7 @@ ms.locfileid: "66071149"
   
  SharePoint 라이브러리에서 데이터 서비스 문서를 만들거나 관리하려면 SharePoint 사이트에 대한 참가 권한이 있어야 합니다.  
   
-##  <a name="createdsdoc"></a>데이터 서비스 문서 만들기  
+##  <a name="create-a-data-service-document"></a><a name="createdsdoc"></a> 데이터 서비스 문서 만들기  
  데이터 서비스 문서는 데이터를 피드 형식으로 제공하는 온라인 데이터 원본 또는 애플리케이션의 요청에 따라 데이터를 스트리밍하라는 요청입니다. 데이터 서비스 문서를 만들 때 Atom 배포 형식으로 XML 테이블 형식을 제공하는 하나 이상의 URL 주소 지정 가능 데이터 서비스에 대한 포인터를 지정합니다.  
   
  단일 문서에서 여러 데이터 피드를 지정할 수 있습니다. 이 기능은 하나의 가져오기 작업에서 동일한 서비스나 다른 서비스의 데이터 페이로드 집합을 검색하려는 경우에 유용합니다.  
@@ -57,8 +57,7 @@ ms.locfileid: "66071149"
   
 2.  페이지 맨 위에 있는 리본의 문서 도구에서 **문서**를 클릭합니다.  
   
-3.  
-  **새 문서** 를 클릭한 다음 **데이터 서비스 문서**를 선택합니다.  
+3.  **새 문서** 를 클릭한 다음 **데이터 서비스 문서**를 선택합니다.  
   
 4.  새 데이터 서비스 문서 페이지에 다음 정보를 입력합니다.  
   
@@ -72,8 +71,7 @@ ms.locfileid: "66071149"
   
          데이터 피드 URL에는 매개 변수가 포함될 수 있습니다. 사용할 데이터를 정확하게 선택할 수 있는 고급 URL 주소 지정 체계를 지원하는 다양한 유형의 데이터 서비스 기술이 있습니다. 예를 들어 ADO.NET Data Service는 기본 데이터에서 엔터티, 연결 및 탐색 경로를 지정하는 URL 매개 변수를 제공합니다. 복잡한 URL을 데이터 피드 원본으로 지정하여 사용할 데이터 세트를 정확하게 지정할 수 있습니다.  
   
-    3.  동일한 데이터 피드에 대해 클라이언트 애플리케이션의 데이터 세트를 식별하는 테이블 이름을 입력합니다. 
-  [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]에서 가져오는 각 데이터 피드는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본의 자체 테이블 컨트롤에 배치됩니다. 데이터 피드를 설정할 때 가져온 데이터를 수신하는 테이블의 이름을 지정해야 합니다.  
+    3.  동일한 데이터 피드에 대해 클라이언트 애플리케이션의 데이터 세트를 식별하는 테이블 이름을 입력합니다. [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]에서 가져오는 각 데이터 피드는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본의 자체 테이블 컨트롤에 배치됩니다. 데이터 피드를 설정할 때 가져온 데이터를 수신하는 테이블의 이름을 지정해야 합니다.  
   
 5.  동일한 서비스 또는 다른 서비스에서 추가 피드를 지정하려면 "다른 데이터 피드 추가"를 클릭하여 이전 단계를 반복합니다.  
   
@@ -85,7 +83,7 @@ ms.locfileid: "66071149"
   
  데이터 서비스 문서를 사용하려면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 통합 문서를 열고 데이터 가져오기 마법사에서 **데이터 피드** 옵션을 선택할 수 있습니다. 메시지가 표시되면 데이터 가져오기 작업을 시작할 데이터 서비스 문서의 SharePoint URL을 지정합니다. 자세한 내용은 [데이터 피드 사용 &#40;SharePoint용 PowerPivot&#41;](use-data-feeds-power-pivot-for-sharepoint.md)를 참조 하세요.  
   
-##  <a name="securedsdoc"></a>데이터 서비스 문서 보안  
+##  <a name="secure-a-data-service-document"></a><a name="securedsdoc"></a>데이터 서비스 문서 보안  
  데이터 서비스 문서는 해당 문서가 속해 있는 라이브러리의 권한을 상속합니다. 항목에 대해 설정한 권한에 따라 사용자가 데이터 서비스 문서를 열거나 수정하거나 삭제할 수 있는지 여부가 결정됩니다.  
   
  PowerPivot 클라이언트 애플리케이션에서 데이터 피드를 가져올 때 데이터 서비스 문서를 사용하려면 문서에 대한 보기 권한만 있으면 됩니다. 보기 권한만 있으면 가져오기 마법사에서 URL을 확인할 수 있습니다.  
@@ -94,25 +92,24 @@ ms.locfileid: "66071149"
   
  마찬가지로 이후에 예약하는 모든 데이터 새로 고침 작업에서도 데이터 서비스 문서가 제외됩니다. 가져오기를 수행하는 시점의 각 피드에 대한 연결 정보가 새로 고침을 위해 PowerPivot 데이터 원본에 복사됩니다. 따라서 문서가 새로 고침 작업에서 참조되지 않기 때문에 데이터 서비스 문서에 대한 권한은 데이터 새로 고침에서 확인되지 않습니다.  
   
-|Task|SharePoint 사용 권한 요구 사항|  
+|작업|SharePoint 사용 권한 요구 사항|  
 |----------|----------------------------------------|  
 |PowerPivot 사용 통합 문서로 데이터 피드를 가져옵니다.|라이브러리의 데이터 서비스 문서에 대한 보기 권한이 필요합니다.|  
-|PowerPivot 클라이언트 애플리케이션에서 피드를 통해 이전에 검색된 데이터를 새로 고칩니다.|해당 사항 없음 PowerPivot 클라이언트 애플리케이션에서는 포함된 HTTP 연결 정보를 사용하여 피드를 제공하는 데이터 서비스 및 애플리케이션에 직접 연결합니다. PowerPivot 클라이언트 애플리케이션에서 데이터 서비스 문서를 사용하지 않습니다.|  
-|SharePoint 팜에서 사용자의 입력을 요구하지 않고 데이터를 예약된 태스크로 새로 고칩니다.|해당 사항 없음 PowerPivot 서비스에서는 포함된 HTTP 연결 정보를 사용하여 피드를 제공하는 데이터 서비스 및 애플리케이션에 직접 연결합니다. PowerPivot 서비스에서 데이터 서비스 문서를 사용하지 않습니다.|  
+|PowerPivot 클라이언트 애플리케이션에서 피드를 통해 이전에 검색된 데이터를 새로 고칩니다.|해당 없음 PowerPivot 클라이언트 애플리케이션에서는 포함된 HTTP 연결 정보를 사용하여 피드를 제공하는 데이터 서비스 및 애플리케이션에 직접 연결합니다. PowerPivot 클라이언트 애플리케이션에서 데이터 서비스 문서를 사용하지 않습니다.|  
+|SharePoint 팜에서 사용자의 입력을 요구하지 않고 데이터를 예약된 태스크로 새로 고칩니다.|해당 없음 PowerPivot 서비스에서는 포함된 HTTP 연결 정보를 사용하여 피드를 제공하는 데이터 서비스 및 애플리케이션에 직접 연결합니다. PowerPivot 서비스에서 데이터 서비스 문서를 사용하지 않습니다.|  
 |라이브러리에서 데이터 서비스 문서를 삭제합니다.|라이브러리에 대한 참가 권한이 필요합니다.|  
   
-##  <a name="modifydsdoc"></a>데이터 서비스 문서 수정  
+##  <a name="modify-a-data-service-document"></a><a name="modifydsdoc"></a> 데이터 서비스 문서 수정  
  데이터 서비스 문서에서 개별 URL 테이블 항목을 추가, 편집 또는 제거할 수 있습니다. 변경 내용을 저장한 후 사용자가 새 가져오기 작업에서 서비스 문서를 선택하면 지정된 데이터 피드가 수신됩니다.  
   
- 
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서는 변경에 따른 영향을 받지 않습니다. 데이터 서비스 문서는 처음 가져오기 작업 중에 한 번만 읽기 때문입니다. 가져오기를 수행하는 동안 서비스 URL과 테이블 이름이 통합 문서에 복사되어 내부적으로 저장됩니다. 이후의 새로 고침 작업에서는 이 내부 값을 사용하여 업데이트된 데이터를 가져옵니다.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서는 변경에 따른 영향을 받지 않습니다. 데이터 서비스 문서는 처음 가져오기 작업 중에 한 번만 읽기 때문입니다. 가져오기를 수행하는 동안 서비스 URL과 테이블 이름이 통합 문서에 복사되어 내부적으로 저장됩니다. 이후의 새로 고침 작업에서는 이 내부 값을 사용하여 업데이트된 데이터를 가져옵니다.  
   
  SharePoint 사이트의 데이터 서비스 문서와 가져온 피드를 포함하는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 사이의 영구 링크가 없기 때문에 데이터 서비스 문서의 일부를 수정해도 기존 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에는 영향을 주지 않습니다.  
   
 > [!IMPORTANT]  
 >  데이터 서비스 문서를 한 번만 읽지만 실제 데이터를 제공하는 데이터 서비스를 정기적으로 액세스하여 새 피드를 가져올 수 있습니다. 데이터를 새로 고치는 방법에 대 한 자세한 내용은 [PowerPivot 데이터 새로 고침](power-pivot-data-refresh.md)을 참조 하세요.  
   
-##  <a name="usedsdoc"></a>다음 단계: 데이터 서비스 문서 사용  
+##  <a name="next-step-use-a-data-service-document"></a><a name="usedsdoc"></a> 다음 단계: 데이터 서비스 문서 사용  
  SharePoint 라이브러리에서 만든 데이터 서비스 문서를 사용 하려면 PowerPivot 데이터 원본에서 **데이터 피드** 가져오기 옵션을 사용 합니다. 지침은 [데이터 피드 사용 &#40;SharePoint용 PowerPivot&#41;](use-data-feeds-power-pivot-for-sharepoint.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  

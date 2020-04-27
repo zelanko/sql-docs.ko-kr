@@ -15,26 +15,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8e3cca216f7c2312b4e7b54f2236a5d1f7bafd9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080104"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Management Studio에서 Analysis Services 스크립트 만들기
-  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에는 Analysis Services 개체 및 태스크를 스크립팅하는 데 사용할 수 있는 스크립트 생성 기능, 템플릿 및 편집기가 포함되어 있습니다.  
   
 ## <a name="script-analysis-services-tasks-in-management-studio"></a>Management Studio에서 Analysis Services 태스크 스크립팅  
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 태스크 지향 대화 상자에서 스크립트 옵션 중 하나를 클릭하여 태스크를 스크립팅합니다. 데이터베이스 백업 또는 복원, 개체 처리, 집계 디자인과 같은 태스크를 수행하는 데 사용하는 모든 대화 상자에는 맨 위에 스크립트 옵션이 포함되어 있습니다. 이러한 옵션 중 하나를 선택하면 대화 상자의 정보 및 설정을 기반으로 XMLA 스크립트가 생성됩니다.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 태스크 지향 대화 상자에서 스크립트 옵션 중 하나를 클릭하여 태스크를 스크립팅합니다. 데이터베이스 백업 또는 복원, 개체 처리, 집계 디자인과 같은 태스크를 수행하는 데 사용하는 모든 대화 상자에는 맨 위에 스크립트 옵션이 포함되어 있습니다. 이러한 옵션 중 하나를 선택하면 대화 상자의 정보 및 설정을 기반으로 XMLA 스크립트가 생성됩니다.  
   
  기본적으로 스크립트는 생성된 후 XMLA 쿼리 편집기에 배치되지만 스크립트 옵션 목록을 확장하여 스크립트를 Windows 클립보드 또는 파일로 보낼 수도 있습니다.  
   
 #### <a name="to-script-an-analysis-services-task"></a>Analysis Services 태스크를 스크립팅하려면  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결합니다.  
   
 2.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **백업**을 클릭합니다. 데이터베이스 백업 대화 상자가 열립니다. 백업 파일 이름을 지정하고 이 백업에 사용할 옵션을 선택합니다.  
   
@@ -47,8 +44,7 @@ ms.locfileid: "66080104"
      이제 데이터베이스 백업 대화 상자를 닫고 XMLA 스크립트를 직접 편집하거나 실행할 수 있습니다.  
   
 ## <a name="script-analysis-services-objects-in-management-studio"></a>Management Studio에서 Analysis Services 개체 스크립팅  
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 마우스 오른쪽 단추로 클릭하고 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE **,** ALTER **또는**DELETE **를 선택하여**의 개체를 스크립팅합니다. 이러한 각 옵션을 창이나 파일로 전송할 수 있지만 스크립트는 전송되는 위치에 관계없이 XMLA 래퍼의 DDL 스크립트 형태를 갖습니다. 이러한 스크립트의 가장 큰 장점은 모든 대상 서버에서 스크립트를 실행할 수 있다는 것입니다. 또한 스크립트에서 이름을 변경할 수 있고 반복적으로 실행하여 개체를 대량으로 생성, 변경 또는 삭제할 수 있습니다.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 마우스 오른쪽 단추로 클릭하고 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE **,** ALTER **또는**DELETE **를 선택하여**의 개체를 스크립팅합니다. 이러한 각 옵션을 창이나 파일로 전송할 수 있지만 스크립트는 전송되는 위치에 관계없이 XMLA 래퍼의 DDL 스크립트 형태를 갖습니다. 이러한 스크립트의 가장 큰 장점은 모든 대상 서버에서 스크립트를 실행할 수 있다는 것입니다. 또한 스크립트에서 이름을 변경할 수 있고 반복적으로 실행하여 개체를 대량으로 생성, 변경 또는 삭제할 수 있습니다.  
   
  스크립팅할 수 있는 개체에는 데이터 원본, 데이터 원본 뷰, 큐브, 차원, 마이닝 구조 및 역할 등의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 요소가 포함됩니다.  
   
@@ -59,8 +55,7 @@ ms.locfileid: "66080104"
   
 #### <a name="to-script-analysis-services-objects"></a>Analysis Services 개체를 스크립팅하려면  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결합니다.  
   
 2.  개체 작성, 변경 또는 삭제 스크립트를 만들 개체를 찾습니다.  
   
@@ -71,6 +66,6 @@ ms.locfileid: "66080104"
   
 ## <a name="see-also"></a>참고 항목  
  [Analysis Services에서 관리 태스크 스크립팅](../script-administrative-tasks-in-analysis-services.md)   
- [XMLA 쿼리 편집기 &#40;Analysis Services 다차원 데이터&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
+ [XMLA 쿼리 편집기&#40;Analysis Services - 다차원 데이터&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
   
   

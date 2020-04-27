@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0d80a58d33cd6475940afaf08de2d251c5646bec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075396"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>데이터 원본 뷰 정의(Analysis Services)
@@ -37,15 +37,15 @@ ms.locfileid: "66075396"
   
  이 항목에는 다음 섹션이 포함되어 있습니다.  
   
- [데이터 원본 뷰 컴퍼지션](#bkmk_dsvdef)  
+ [데이터 원본 뷰 작성](#bkmk_dsvdef)  
   
- [데이터 원본 뷰 마법사를 사용 하 여 DSV 만들기](#bkmk_startWiz)  
+ [데이터 원본 뷰 마법사를 사용하여 DSV 만들기](#bkmk_startWiz)  
   
- [관계에 대 한 이름 일치 조건 지정](#bkmk_NameMatch)  
+ [관계에 대한 이름 일치 조건 지정](#bkmk_NameMatch)  
   
  [보조 데이터 원본 추가](#bkmk_secondaryDS)  
   
-##  <a name="bkmk_dsvdef"></a>데이터 원본 뷰 컴퍼지션  
+##  <a name="data-source-view-composition"></a><a name="bkmk_dsvdef"></a>데이터 원본 뷰 컴퍼지션  
  데이터 원본 뷰는 다음 항목으로 이루어집니다.  
   
 -   이름 및 설명  
@@ -78,7 +78,7 @@ ms.locfileid: "66075396"
   
     -   논리적 기본 키 - 테이블, 뷰 및 명명된 쿼리 간의 외래 키 관계  
   
-##  <a name="bkmk_startWiz"></a>데이터 원본 뷰 마법사를 사용 하 여 DSV 만들기  
+##  <a name="create-a-dsv-using-the-data-source-view-wizard"></a><a name="bkmk_startWiz"></a>데이터 원본 뷰 마법사를 사용 하 여 DSV 만들기  
  DSV를 만들려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 서버 탐색기에서 데이터 원본 뷰 마법사를 실행합니다.  
   
 > [!NOTE]  
@@ -98,21 +98,20 @@ ms.locfileid: "66075396"
   
      고급 데이터 원본 뷰 옵션 대화 상자에서 **관계 검색** 확인란을 선택 취소해서 테이블 관계 정보를 의도적으로 생략하여 데이터 원본 뷰 디자이너의 각 테이블 간의 관계를 수동으로 만들 수 있습니다.  
   
-4.  **사용 가능한 개체 필터링**  
+4.  **사용 가능한 개체 필터**  
   
      사용 가능한 개체 목록에 많은 개체가 포함된 경우 문자열을 선택 조건으로 지정하는 간단한 필터를 적용하여 목록을 줄일 수 있습니다. 예를 들어 **dbo** 를 입력하고 **필터** 단추를 클릭하면 "dbo"로 시작하는 항목만 **사용 가능한 개체** 목록에 표시됩니다. 필터는 부분 문자열 (예: "sal"은 판매 및 급여를 반환)이 될 수 있지만 여러 문자열 또는 연산자를 포함할 수는 없습니다.  
   
 5.  테이블 관계가 정의되지 않은 관계형 데이터 원본에 대해서는 적절한 이름 일치 방법을 선택할 수 있도록 **이름 일치** 페이지가 표시됩니다. 자세한 내용은 이 항목의 [관계에 대한 이름 일치 조건 지정](#bkmk_NameMatch) 섹션을 참조하세요.  
   
-##  <a name="bkmk_secondaryDS"></a>보조 데이터 원본 추가  
+##  <a name="add-a-secondary-data-source"></a><a name="bkmk_secondaryDS"></a>보조 데이터 원본 추가  
  여러 데이터 원본의 테이블, 뷰 또는 열이 포함된 데이터 원본 뷰를 정의하는 경우 데이터 원본 뷰에 개체를 추가하는 첫 번째 데이터 원본이 주 데이터 원본으로 지정됩니다. 정의한 후에는 주 데이터 원본을 변경할 수 없습니다. 단일 데이터 원본의 개체를 기반으로 데이터 원본 뷰를 정의한 후 다른 데이터 원본의 개체를 추가할 수 있습니다.  
   
- OLAP 처리나 데이터 마이닝 쿼리에 여러 데이터 원본의 데이터가 단일 쿼리로 필요한 경우 주 데이터 원본에서 `OpenRowset`을 사용하여 원격 쿼리를 지원해야 합니다. 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본이 여기에 해당합니다. 예를 들어 여러 데이터 원본의 열에 바인딩된 특성이 포함된 OLAP 차원을 지정하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 `OpenRowset` 쿼리를 생성하여 처리 중에 이 차원을 채웁니다. 그러나 단일 데이터 원본에서 OLAP 개체를 채우거나 데이터 마이닝 쿼리를 해결할 수 있는 경우에는 `OpenRowset` 쿼리가 생성되지 않습니다. 
-  `OpenRowset` 쿼리가 필요하지 않도록 특성 간에 특성 관계를 정의할 수 있는 경우도 있습니다. 특성 관계에 대한 자세한 내용은 [특성 관계](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [데이터 원본 뷰에서 테이블이나 뷰 추가 또는 제거&#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) 및 [특성 관계 정의](attribute-relationships-define.md)의 서버 탐색기에서 데이터 원본 뷰 마법사를 실행합니다.  
+ OLAP 처리나 데이터 마이닝 쿼리에 여러 데이터 원본의 데이터가 단일 쿼리로 필요한 경우 주 데이터 원본에서 `OpenRowset`을 사용하여 원격 쿼리를 지원해야 합니다. 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본이 여기에 해당합니다. 예를 들어 여러 데이터 원본의 열에 바인딩된 특성이 포함된 OLAP 차원을 지정하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 `OpenRowset` 쿼리를 생성하여 처리 중에 이 차원을 채웁니다. 그러나 단일 데이터 원본에서 OLAP 개체를 채우거나 데이터 마이닝 쿼리를 해결할 수 있는 경우에는 `OpenRowset` 쿼리가 생성되지 않습니다. `OpenRowset` 쿼리가 필요하지 않도록 특성 간에 특성 관계를 정의할 수 있는 경우도 있습니다. 특성 관계에 대한 자세한 내용은 [특성 관계](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [데이터 원본 뷰에서 테이블이나 뷰 추가 또는 제거&#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) 및 [특성 관계 정의](attribute-relationships-define.md)의 서버 탐색기에서 데이터 원본 뷰 마법사를 실행합니다.  
   
  보조 데이터 원본에서 테이블과 열을 추가하려면 솔루션 탐색기에서 DSV를 두 번 클릭하여 데이터 원본 뷰 디자이너에서 DSV를 연 다음 테이블 추가/제거 대화 상자를 사용하여 프로젝트에 정의된 다른 데이터 원본에서 개체를 포함합니다. 자세한 내용은 [데이터 원본 뷰에서 테이블이나 뷰 추가 또는 제거&#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)의 서버 탐색기에서 데이터 원본 뷰 마법사를 실행합니다.  
   
-##  <a name="bkmk_NameMatch"></a>관계에 대 한 이름 일치 조건 지정  
+##  <a name="specify-name-matching-criteria-for-relationships"></a><a name="bkmk_NameMatch"></a>관계에 대 한 이름 일치 조건 지정  
  DSV를 만들 때 데이터 원본의 외래 키 제약 조건을 기반으로 테이블 간의 관계가 생성됩니다. 이러한 관계는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 엔진에서 적절한 OLAP 처리 및 데이터 마이닝 쿼리를 구성하는 데 필요합니다. 그러나 여러 개의 테이블이 포함된 데이터 원본에 FOREIGN KEY 제약 조건이 없을 수도 있습니다. 데이터 원본에 FOREIGN KEY 제약 조건이 없으면 데이터 원본 뷰 마법사에서 여러 테이블의 열 이름을 일치시키는 방법을 정의하라는 메시지가 표시됩니다.  
   
 > [!NOTE]  
@@ -120,7 +119,7 @@ ms.locfileid: "66075396"
   
  데이터 원본 뷰 마법사는 사용자 응답을 사용하여 열 이름을 일치시키고 DSV의 여러 테이블 간에 관계를 만듭니다. 다음 표에 나열된 조건 중 하나를 지정할 수 있습니다.  
   
-|이름 일치 조건|Description|  
+|이름 일치 조건|설명|  
 |----------------------------|-----------------|  
 |**기본 키와 같은 이름**|원본 테이블의 외래 키 열 이름이 대상 테이블의 기본 키 열 이름과 같습니다. 예를 들어 외래 키 열인 `Order.CustomerID` 는 기본 키 열인 `Customer.CustomerID`와 같습니다.|  
 |**대상 테이블 이름과 같은 이름**|원본 테이블의 외래 키 열 이름이 대상 테이블의 이름과 같습니다. 예를 들어 외래 키 열인 `Order.Customer` 는 기본 키 열인 `Customer.CustomerID`와 같습니다.|  
@@ -140,6 +139,6 @@ ms.locfileid: "66075396"
  [데이터 원본 뷰 디자이너에서 다이어그램 사용 &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
  [데이터 원본 뷰에서 데이터 탐색 &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)   
  [데이터 원본 뷰를 삭제 &#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)   
- [데이터 원본 뷰에서 스키마를 새로 고쳐 Analysis Services &#40;&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
+ [데이터 원본 뷰에서 스키마 새로 고침&#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
   

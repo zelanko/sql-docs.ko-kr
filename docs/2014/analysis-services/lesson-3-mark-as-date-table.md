@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26877c4892b050cbf9c8dcc6553530dff513f8fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078793"
 ---
 # <a name="lesson-4-mark-as-date-table"></a>4단원: 날짜 테이블로 표시
@@ -24,7 +24,7 @@ ms.locfileid: "66078793"
   
  이 단원에서는 가져와 이름을 바꾼 Date 테이블을 *날짜 테이블* 로 표시하고 Date 테이블의 Date 열을 *날짜 열* (고유 식별자)로 표시합니다. 모든 이름 날짜를 사용 하면 혼란 스 러 울 수 있지만 곧 아이디어를 얻을 수 있습니다.  
   
- 이 단원을 완료하기 위한 예상 시간: **3분**  
+ 이 단원에 소요되는 예상 시간: **3분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 항목은 테이블 형식 모델링 자습서에 포함되며 순서대로 완료해야 합니다. 이 단원의 태스크를 수행하려면 이전 단원인 [3단원: 열 이름 바꾸기](rename-columns.md)를 완료해야 합니다.  
@@ -33,11 +33,9 @@ ms.locfileid: "66078793"
   
 1.  모델 디자이너에서 **Date** 테이블(탭)을 클릭합니다.  
   
-2.  
-  **테이블** 메뉴를 클릭한 다음 **날짜**를 클릭하고 **날짜 테이블로 표시**를 클릭합니다.  
+2.  **테이블** 메뉴를 클릭 하 고 **날짜**를 클릭 한 다음 **날짜 테이블로 표시**를 클릭 합니다.  
   
-3.  
-  **날짜 테이블로 표시** 대화 상자의 **날짜** 목록 상자에서 **날짜** 열을 고유 식별자로 선택합니다.  
+3.  **날짜 테이블로 표시** 대화 상자의 **날짜** 목록 상자에서 **Date** 열을 고유 식별자로 선택합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
  이 자습서를 계속하려면 다음 단원인 [5단원: 관계 만들기](lesson-4-create-relationships.md)로 이동하세요.  

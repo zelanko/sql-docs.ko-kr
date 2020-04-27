@@ -15,14 +15,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7ee69724fbcacad78c6053c1bbdf9c3465482665
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069922"
 ---
 # <a name="select-a-column-dialog-box-mining-structure-view"></a>열 선택 대화 상자(마이닝 구조 뷰)
-  
   **열 선택** 대화 상자를 사용하여 마이닝 구조에 열을 추가할 수 있습니다. 이 대화 상자는 OLAP 마이닝 모델로 작업을 수행하는지, 아니면 관계형 마이닝 모델로 작업을 수행하는지에 따라 옵션이 달라집니다.  
   
 ## <a name="options"></a>옵션  
@@ -37,8 +36,7 @@ ms.locfileid: "66069922"
  이 옵션은 관계형 마이닝 모델에만 사용됩니다.  
   
  **열 유형 표시**  
- 사용 가능한 열 데이터 형식의 목록입니다. 
-  **원본 열**의 열 목록을 필터링할 데이터 형식을 선택하거나 선택 취소합니다. 선택한 데이터 형식과 일치하는 열만 **원본 열** 목록에 표시됩니다.  
+ 사용 가능한 열 데이터 형식의 목록입니다. **원본 열**의 열 목록을 필터링할 데이터 형식을 선택하거나 선택 취소합니다. 선택한 데이터 형식과 일치하는 열만 **원본 열** 목록에 표시됩니다.  
   
  이 옵션은 관계형 마이닝 모델에만 사용됩니다.  
   

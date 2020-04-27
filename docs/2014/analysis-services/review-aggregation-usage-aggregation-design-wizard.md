@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f52ec05ddadc6bb23968f6b5f8ee7fda9adc65a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070215"
 ---
 # <a name="review-aggregation-usage-aggregation-design-wizard"></a>집계 사용 검토(집계 디자인 마법사)
-  
   **집계 사용 검토** 페이지를 사용하여 집계 사용 설정을 구성할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
@@ -30,7 +29,7 @@ ms.locfileid: "66070215"
  `Full`  
  특성의 집계 사용 설정을 `Full`로 설정하려면 선택합니다. 이 설정을 사용하면 큐브의 모든 집계에 이 특성이나 특성 체인에서 이 특성 아래에 있는 관련 특성이 포함되어야 합니다. 특성에 많은 멤버가 포함되어 있는 경우에는 `Full` 집계 사용 설정을 사용하면 안 됩니다. 이 특성을 여러 특성이나 많은 멤버가 포함된 특성에 지정하면 크기가 너무 커지기 때문에 집계를 디자인할 수 없습니다.  
   
- **없음을**  
+ **없음**  
  특성의 집계 사용 설정을 없음으로 설정하려면 선택합니다. 이 설정을 사용하면 큐브의 집계에 이 특성을 포함할 수 없습니다.  
   
  `Unrestricted`  

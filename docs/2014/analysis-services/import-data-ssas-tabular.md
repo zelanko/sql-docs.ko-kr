@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7eb3fe1157ba40466cc619f504255084aa845fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080623"
 ---
 # <a name="import-data-ssas-tabular"></a>데이터 가져오기(SSAS 테이블 형식)
@@ -36,12 +36,12 @@ ms.locfileid: "66080623"
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[관계형 데이터 원본에서 가져오기 &#40;SSAS 테이블 형식&#41;](import-from-a-relational-data-source-ssas-tabular.md)|Microsoft SQL Server, Oracle, Teradata 데이터베이스 등의 관계형 데이터 원본에서 데이터를 가져오는 방법을 설명합니다.|  
 |[다차원 데이터 원본에서 가져오기 &#40;SSAS 테이블 형식&#41;](import-from-a-multidimensional-data-source-ssas-tabular.md)|다차원 SQL Server Analysis Services 큐브에서 데이터를 가져오는 방법을 설명합니다.|  
 |[SSAS 테이블 형식&#41;&#40;데이터 피드에서 가져오기](import-from-a-data-feed-ssas-tabular.md)|Microsoft Reporting Services 보고서나 Azure Data Market 데이터 세트 등의 데이터 피드에서 데이터를 가져오는 방법을 설명합니다.|  
 |[SSAS 테이블 형식&#41;&#40;텍스트 파일에서 가져오기](import-from-a-text-file-ssas-tabular.md)|Microsoft Excel 통합 문서 또는 텍스트 파일에서 데이터를 가져오는 방법을 설명합니다.|  
-|[SSAS 테이블 형식&#41;&#40;데이터 복사 및 붙여넣기](copy-and-paste-data-ssas-tabular.md)|붙여넣기 및 추가하여 붙여넣기를 사용하여 모델 디자이너의 기존 테이블에 데이터를 추가하는 방법을 설명합니다.|  
+|[데이터 복사 및 붙여넣기&#40;SSAS 테이블 형식&#41;](copy-and-paste-data-ssas-tabular.md)|붙여넣기 및 추가하여 붙여넣기를 사용하여 모델 디자이너의 기존 테이블에 데이터를 추가하는 방법을 설명합니다.|  
   
   

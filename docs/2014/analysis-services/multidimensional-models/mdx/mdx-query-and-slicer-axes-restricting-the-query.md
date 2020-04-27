@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3290bc5892280cda5e8042de79ff581b305e8ec3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074036"
 ---
 # <a name="restricting-the-query-with-query-and-slicer-axes-mdx"></a>쿼리 및 Slicer 축으로 쿼리 제한(MDX)
@@ -35,6 +35,6 @@ ms.locfileid: "66074036"
   
 ## <a name="see-also"></a>참고 항목  
  [MDX &#40;멤버, 튜플 및 집합을 사용 하 여 작업&#41;](working-with-members-tuples-and-sets-mdx.md)   
- [MDX 쿼리 기본 사항 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a21ca5383d63d14908df0e7b08fb8419c0ff94a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081701"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>차원(큐브 구조 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
@@ -37,9 +37,7 @@ ms.locfileid: "66081701"
  다음 옵션은 **차원** 창을 마우스 오른쪽 단추로 클릭하면 표시되는 상황에 맞는 메뉴를 통해 사용할 수 있습니다.  
   
  **큐브 차원 추가**  
- 
-  **큐브 차원 추가** 대화 상자를 표시하고 큐브의 기존 또는 새 데이터베이스 차원에 참조를 추가하려면 클릭합니다. 
-  **큐브 차원 추가** 대화 상자에 대한 자세한 내용은 [큐브 차원 추가 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](add-cube-dimension-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.  
+ **큐브 차원 추가** 대화 상자를 표시하고 큐브의 기존 또는 새 데이터베이스 차원에 참조를 추가하려면 클릭합니다. **큐브 차원 추가** 대화 상자에 대한 자세한 내용은 [큐브 차원 추가 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](add-cube-dimension-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.  
   
 > [!NOTE]  
 >  이 옵션은 차원을 선택한 경우에만 표시됩니다.  
@@ -47,12 +45,11 @@ ms.locfileid: "66081701"
  **차원 편집**  
  차원 디자이너를 표시하고 큐브 차원의 기반이 되는 데이터베이스 차원을 편집하려면 클릭합니다. 차원 디자이너에 대한 자세한 내용은 [차원 디자이너&#40;Analysis Services - 다차원 데이터&#41;](dimension-designer-analysis-services-multidimensional-data.md)를 참조하세요.  
   
- **바꾸면**  
+ **이름 바꾸기**  
  큐브에 대해 선택한 큐브 차원의 이름을 바꾸려면 클릭합니다.  
   
 > [!NOTE]  
->  
-  **차원** 창에서 큐브 차원의 이름을 바꿔도 큐브 차원의 기반이 되는 데이터베이스 차원의 이름은 바뀌지 않습니다.  
+>  **차원** 창에서 큐브 차원의 이름을 바꿔도 큐브 차원의 기반이 되는 데이터베이스 차원의 이름은 바뀌지 않습니다.  
   
 > [!NOTE]  
 >  이 옵션은 차원을 선택한 경우에만 표시됩니다.  
@@ -61,8 +58,7 @@ ms.locfileid: "66081701"
  큐브에서 선택한 큐브 차원을 제거하려면 클릭합니다.  
   
 > [!NOTE]  
->  
-  **차원** 창에서 큐브 차원을 제거해도 큐브 차원의 기반이 되는 데이터베이스 차원은 삭제되지 않습니다.  
+>  **차원** 창에서 큐브 차원을 제거해도 큐브 차원의 기반이 되는 데이터베이스 차원은 삭제되지 않습니다.  
   
 > [!NOTE]  
 >  이 옵션은 차원을 선택한 경우에만 표시됩니다.  
@@ -80,9 +76,7 @@ ms.locfileid: "66081701"
 >  이 옵션은 차원을 선택한 경우에만 표시됩니다.  
   
  **새 연결된 개체**  
- 
-  **연결된 개체 마법사** 를 표시하여 다른 큐브의 측정값 그룹 및 차원을 연결하고 선택한 큐브로 동작, KPI 및 계산을 가져오려면 클릭합니다. 
-  **연결된 개체 마법사**에 대한 자세한 내용은 [연결된 개체 마법사 F1 도움말](linked-object-wizard-f1-help.md)을 참조하세요.  
+ **연결된 개체 마법사** 를 표시하여 다른 큐브의 측정값 그룹 및 차원을 연결하고 선택한 큐브로 동작, KPI 및 계산을 가져오려면 클릭합니다. **연결된 개체 마법사**에 대한 자세한 내용은 [연결된 개체 마법사 F1 도움말](linked-object-wizard-f1-help.md)을 참조하세요.  
   
 > [!NOTE]  
 >  이 옵션은 차원을 선택한 경우에만 표시됩니다.  

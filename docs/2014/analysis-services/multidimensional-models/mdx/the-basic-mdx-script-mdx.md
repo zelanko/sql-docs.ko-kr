@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8793fe2e63d6867e8e5c12fef6ec73a6f7a27882
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073807"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>기본 MDX 스크립트(MDX)
@@ -36,8 +36,7 @@ ms.locfileid: "66073807"
   
  또한 기본 MDX 스크립트에는 큐브 디자이너에서 만든 명명된 집합, 대입 식 및 계산 멤버를 만드는 스크립트 명령도 포함됩니다.  
   
--   
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 기본 MDX 스크립트에 스크립트 명령을 직접 추가합니다.  
+-   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 기본 MDX 스크립트에 스크립트 명령을 직접 추가합니다.  
   
 -   큐브에 있는 각각의 명명된 집합의 경우 해당 CREATE SET 문이 기본 MDX 스크립트에 존재합니다.  
   
@@ -53,18 +52,18 @@ ms.locfileid: "66073807"
  모든 MDX 스크립팅 문  
  MDX 스크립트에서 MDX 스크립팅 문은 계산의 컨텍스트 및 범위를 제어하고 MDX 스크립트에 있는 다른 문의 동작을 관리합니다. 이 범주에는 다음 문이 포함됩니다.  
   
--   [승수로](/sql/mdx/mdx-scripting-calculate)  
+-   [CALCULATE](/sql/mdx/mdx-scripting-calculate)  
   
--   [고정](/sql/mdx/mdx-scripting-freeze)  
+-   [FREEZE](/sql/mdx/mdx-scripting-freeze)  
   
--   [SCOPE](/sql/mdx/mdx-scripting-scope)  
+-   [범위](/sql/mdx/mdx-scripting-scope)  
   
  MDX 스크립팅 문에 대한 자세한 내용은 [MDX 스크립팅 문&#40;MDX&#41;](/sql/mdx/mdx-scripting-statements-mdx)을 참조하세요.  
   
  [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member)  
  CREATE MEMBER 문은 계산 멤버를 만듭니다. 계산 멤버 작성 방법에 대한 자세한 내용은 [계산 멤버를 MDX로 작성&#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md)을 참조하세요.  
   
- [집합 만들기](/sql/mdx/mdx-data-definition-create-set)  
+ [CREATE SET](/sql/mdx/mdx-data-definition-create-set)  
  CREATE SET 문은 명명된 집합을 만듭니다. 명명된 집합을 만드는 방법에 대한 자세한 내용은 [명명된 집합을 MDX로 작성&#40;MDX&#41;](mdx-named-sets-building-named-sets.md)을 참조하세요.  
   
  조건문  
@@ -92,6 +91,6 @@ ms.locfileid: "66073807"
   
 ## <a name="see-also"></a>참고 항목  
  [Mdx 언어 참조 &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [MDX 스크립팅 기본 사항 &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
+ [MDX 스크립팅 기본 사항&#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
   

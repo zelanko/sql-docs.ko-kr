@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 18bf54b7b97598c6c61d7e282ad5791d926cc25a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080759"
 ---
 # <a name="highlight-exceptions-table-analysis-tools-for-excel"></a>예외 강조 표시(Excel용 테이블 분석 도구)
@@ -63,8 +63,7 @@ ms.locfileid: "66080759"
   
 -   테이블의 현재 데이터를 기반으로 데이터 마이닝 구조를 만듭니다.  
   
--   
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 클러스터링 알고리즘을 사용하여 새 데이터 마이닝 모델을 만듭니다.  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] 클러스터링 알고리즘을 사용하여 새 데이터 마이닝 모델을 만듭니다.  
   
 -   패턴을 기반으로 워크시트에 비정상적인 값이 있는지 확인하는 예측 쿼리를 만듭니다.  
   
@@ -79,8 +78,7 @@ ms.locfileid: "66080759"
   
  **예외 강조 표시** 도구는 클러스터링 [!INCLUDE[msCoName](../includes/msconame-md.md)] 알고리즘을 사용 합니다. 클러스터링 모델은 비슷한 특성을 공유하는 행 그룹을 검색합니다. Excel 용 데이터 마이닝 클라이언트는 그래프 및 특성 프로필을 사용 하 여 클러스터링으로 만든 데이터 마이닝 모델을 탐색할 수 있는 **찾아보기** 창을 제공 합니다. **예외 강조 표시** 도구에서 만든 클러스터링 모델을 검색 하는 방법에 대 한 자세한 내용은 [모델 찾아보기 (Excel 용 데이터 마이닝 클라이언트)](highlight-exceptions-table-analysis-tools-for-excel.md)를 참조 하세요.  
   
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 클러스터링 알고리즘에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서의 "Microsoft 클러스터링 알고리즘" 항목을 참조하십시오.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 클러스터링 알고리즘에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서의 "Microsoft 클러스터링 알고리즘" 항목을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [Excel용 테이블 분석 도구](table-analysis-tools-for-excel.md)  

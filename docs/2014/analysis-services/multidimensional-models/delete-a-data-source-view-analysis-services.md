@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9750751a23e4322a4a48ec0c1c227cf2df16f1c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075426"
 ---
 # <a name="delete-a-data-source-view-analysis-services"></a>데이터 원본 뷰 삭제(Analysis Services)
@@ -34,6 +34,6 @@ ms.locfileid: "66075426"
   
 ## <a name="see-also"></a>참고 항목  
  [다차원 모델의 데이터 원본 뷰](data-source-views-in-multidimensional-models.md)   
- [데이터 원본 뷰에서 속성 변경 &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
+ [데이터 원본 뷰에서 속성 변경&#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   
   
