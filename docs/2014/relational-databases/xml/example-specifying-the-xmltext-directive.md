@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 56ccb1e8a25b7d9f138c2900422d301919fef039
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67597550"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>예: XMLTEXT 지시어 지정
-  이 예에서는 EXPLICIT 모드를 사용하는 `XMLTEXT` 문에서 `SELECT` 지시어를 사용하여 오버플로 열의 데이터 주소를 지정하는 방법을 보여 줍니다.  
+  이 예에서는 EXPLICIT 모드를 사용하는 `SELECT` 문에서 `XMLTEXT` 지시어를 사용하여 오버플로 열의 데이터 주소를 지정하는 방법을 보여 줍니다.  
   
  `Person` 테이블을 검토해 보면 이 테이블에는 XML 문서 중 사용되지 않은 부분을 저장하는 `Overflow` 열이 있는 것을 볼 수 있습니다.  
   

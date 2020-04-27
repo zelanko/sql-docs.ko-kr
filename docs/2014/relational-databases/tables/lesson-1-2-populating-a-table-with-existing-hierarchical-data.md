@@ -13,23 +13,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7b2614d090bce0ecf0c61db5c9a5222ec6b10951
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110172"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>기존 계층적 데이터로 테이블 채우기
-  이 태스크에서는 새 테이블을 만들고 이를 **EmployeeDemo** 테이블의 데이터로 채웁니다. 이 태스크의 단계는 다음과 같습니다.  
+   이 태스크에서는 새 테이블을 만들고 이를 **EmployeeDemo** 테이블의 데이터로 채웁니다. 이 태스크의 단계는 다음과 같습니다.  
   
--   
-  `hierarchyid` 열이 포함된 새 테이블을 만듭니다. 이 열로 기존 **EmployeeID** 및 **ManagerID** 열을 대체할 수도 있지만 여기서는 해당 열을 유지합니다. 이는 기존 애플리케이션에서 해당 열을 참조할 수 있으며 해당 열을 유지하는 것이 전송 후에 데이터를 이해하는 데 도움이 되기 때문입니다. 테이블 정의에서 **OrgNode** 를 기본 키로 지정하므로 해당 열에 고유 값을 포함해야 합니다. 
-  **OrgNode** 열의 클러스터형 인덱스는 **OrgNode** 시퀀스의 날짜를 저장합니다.  
+-   `hierarchyid` 열이 포함된 새 테이블을 만듭니다. 이 열로 기존 **EmployeeID** 및 **ManagerID** 열을 대체할 수도 있지만 여기서는 해당 열을 유지합니다. 이는 기존 애플리케이션에서 해당 열을 참조할 수 있으며 해당 열을 유지하는 것이 전송 후에 데이터를 이해하는 데 도움이 되기 때문입니다. 테이블 정의에서 **OrgNode** 를 기본 키로 지정하므로 해당 열에 고유 값을 포함해야 합니다. **OrgNode** 열의 클러스터형 인덱스는 **OrgNode** 시퀀스의 날짜를 저장합니다.  
   
 -   각 관리자에게 직접 보고하는 직원 수를 추적하는 데 사용되는 임시 테이블을 만듭니다.  
   
--   
-  **EmployeeDemo** 테이블의 데이터를 사용하여 새 테이블을 채웁니다.  
+-   **EmployeeDemo** 테이블의 데이터를 사용하여 새 테이블을 채웁니다.  
   
 ### <a name="to-create-a-new-table-named-neworg"></a>NewOrg라는 새 테이블을 만들려면  
   
@@ -62,8 +59,7 @@ ms.locfileid: "66110172"
     GO  
     ```  
   
-2.  
-  **NewOrg** 테이블을 채우는 쿼리의 속도를 상당히 높일 인덱스를 추가합니다.  
+2.  **NewOrg** 테이블을 채우는 쿼리의 속도를 상당히 높일 인덱스를 추가합니다.  
   
     ```  
     CREATE CLUSTERED INDEX tmpind ON #Children(ManagerID, EmployeeID);  
@@ -83,9 +79,7 @@ ms.locfileid: "66110172"
   
     ```  
   
-2.  
-  **#Children** 테이블을 검토합니다. 
-  **Num** 열에 각 관리자에 대한 일련 번호가 포함되는 방식을 확인합니다.  
+2.  **#Children** 테이블을 검토합니다. **Num** 열에 각 관리자에 대한 일련 번호가 포함되는 방식을 확인합니다.  
   
     ```  
     SELECT * FROM #Children ORDER BY ManagerID, Num  
@@ -147,9 +141,7 @@ ms.locfileid: "66110172"
   
     ```  
   
-4.  
-  `hierarchyid` 열을 문자 형식으로 변환하면 이해하기가 더 쉬워집니다. 
-  **OrgNode** 열의 두 가지 표현이 포함된 다음 코드를 실행하여 **NewOrg** 테이블의 데이터를 검토합니다.  
+4.  `hierarchyid` 열을 문자 형식으로 변환하면 이해하기가 더 쉬워집니다. **OrgNode** 열의 두 가지 표현이 포함된 다음 코드를 실행하여 **NewOrg** 테이블의 데이터를 검토합니다.  
   
     ```  
     SELECT OrgNode.ToString() AS LogicalNode, *   

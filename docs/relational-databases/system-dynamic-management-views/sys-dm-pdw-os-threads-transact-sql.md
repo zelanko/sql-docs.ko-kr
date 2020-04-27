@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: a4b9028d30db3c36157ef3db628dcb7c1cbeda00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899223"
 ---
 # <a name="sysdm_pdw_os_threads-transact-sql"></a>sys. dm_pdw_os_threads (Transact-sql)
@@ -24,16 +24,16 @@ ms.locfileid: "67899223"
 
   
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|영향을 받는 노드의 ID입니다.<br /><br /> pdw_node_id 및 thread_id이 보기의 키를 구성 합니다.|[Dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)에서 node_id를 참조 하세요.|  
 |thread_id|**int**|pdw_node_id 및 thread_id이 보기의 키를 구성 합니다.||  
 |process_id|**int**|||  
 |name|**nvarchar(255)**|||  
-|우선 순위|**int**|||  
+|priority|**int**|||  
 |start_time|**datetime**|||  
-|state|**nvarchar (32)**|||  
-|wait_reason|**nvarchar (32)**|||  
+|state|**nvarchar(32)**|||  
+|wait_reason|**nvarchar(32)**|||  
 |total_processor_elapsed_time|**bigint**|스레드에서 사용 하는 총 커널 시간입니다.||  
 |total_user_elapsed_time|**bigint**|스레드에서 사용 하는 총 사용자 시간||  
   

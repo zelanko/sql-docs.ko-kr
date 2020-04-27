@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8f275d48131ef7011307f39f38d37a8bfff4ea18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899321"
 ---
 # <a name="sysdm_pdw_os_performance_counters-transact-sql"></a>sys. dm_pdw_os_performance_counters (Transact-sql)
@@ -24,7 +24,7 @@ ms.locfileid: "67899321"
 
   의 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]노드에 대 한 Windows 성능 카운터에 대 한 정보를 포함 합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|카운터를 포함 하는 노드의 ID입니다.<br /><br /> pdw_node_id 및 counter_name이 보기의 키를 구성 합니다.|[Dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)에서 node_id를 참조 하세요.|  
 |counter_name|**nvarchar(255)**|Windows 성능 카운터의 이름입니다.||  

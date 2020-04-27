@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c81ac6c0c8dcf7e24c80b426654164c668fcf3a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62468610"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>해석된 Transact-SQL을 사용하여 메모리 액세스에 최적화된 테이블에 액세스
@@ -42,8 +42,7 @@ ms.locfileid: "62468610"
 |데이터베이스 간|데이터베이스 간 쿼리<br /><br /> 데이터베이스 간 트랜잭션<br /><br /> 연결된 서버|  
   
 ## <a name="table-hints"></a>테이블 힌트  
- 테이블 힌트에 대한 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)를 참조하세요. 
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)]를 지원하기 위해 SNAPSHOT 격리가 추가되었습니다.  
+ 테이블 힌트에 대한 자세한 내용은 [테이블 힌트는 transact-sql&#41;를 &#40;](/sql/t-sql/queries/hints-transact-sql-table)합니다. [!INCLUDE[hek_2](../../includes/hek-2-md.md)]를 지원하기 위해 SNAPSHOT 격리가 추가되었습니다.  
   
  다음 테이블 힌트는 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 메모리 최적화 테이블에 액세스하는 경우 지원되지 않습니다.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62468610"
 >  자동 커밋 모드에서 실행되는 쿼리에서 액세스하는 메모리 최적화 테이블에는 격리 수준 테이블 힌트가 필요하지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 내 OLTP에 대한 Transact-SQL 지원](transact-sql-support-for-in-memory-oltp.md)   
+ [메모리 내 OLTP에 대 한 transact-sql 지원](transact-sql-support-for-in-memory-oltp.md)   
  [메모리 내 OLTP로 마이그레이션](migrating-to-in-memory-oltp.md)  
   
   

@@ -10,38 +10,38 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/27/2017
 ms.openlocfilehash: 54358529577061ad99c634fa6cc4ce9d98792e0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67412688"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>외부 데이터 원본의 데이터 추가(SSRS)
 
 외부 데이터 원본에서 데이터를 검색하려면 데이터 연결을 사용합니다. 일반적으로 데이터 연결 정보는 사용 권한을 부여하고 사용할 자격 증명 유형을 지정하는 외부 데이터 원본의 소유자가 제공합니다. 데이터 연결 정보는 보고서 데이터 원본으로 저장됩니다. 데이터 원본 유형에 따라 데이터를 검색하는 데 사용할 데이터 확장 프로그램이 결정됩니다.  
 
-##  <a name="DataAccess"></a>데이터 액세스 기술 이해  
+##  <a name="understanding-data-access-technology"></a><a name="DataAccess"></a>데이터 액세스 기술 이해  
 
 보고서 데이터 세트의 데이터를 검색하려면 여러 계층의 데이터 액세스 소프트웨어가 필요합니다. 다음 목록에서는 보고서에서 데이터 액세스 기술을 사용하는 방법을 간략하게 설명합니다.  
 
--   **응용 프로그램 및 사용자 인터페이스** 데이터 원본을 만들거나, 공유 데이터 원본에 대 한 참조를 추가 하거나, 공유 데이터 집합을 추가 하거나, 데이터 원본이 종속 된 데이터 원본 및 데이터 집합이 포함 된 보고서 파트를 추가 하는 데 사용 하는 보고서 작성기 응용 프로그램입니다.  
+-   **애플리케이션 및 사용자 인터페이스** 데이터 원본을 만들거나, 공유 데이터 원본에 대한 참조를 추가하거나, 공유 데이터 세트를 추가하거나, 자신이 종속된 데이터 원본과 데이터 세트를 포함하는 보고서 파트를 추가하는 데 사용되는 보고서 작성기 애플리케이션입니다.  
 
--   **보고서 정의 요소** 데이터 원본 및 데이터 집합은 보고서 정의의 일부입니다. 보고서 서버에 보고서를 게시하고 나면 공유 데이터 원본과 공유 데이터 세트가 보고서 정의와 독립적으로 관리됩니다.  
+-   **보고서 정의 요소** 데이터 원본과 데이터 세트는 보고서 정의의 일부입니다. 보고서 서버에 보고서를 게시하고 나면 공유 데이터 원본과 공유 데이터 세트가 보고서 정의와 독립적으로 관리됩니다.  
 
-  -   **데이터 원본 및 공유 데이터 원본** 데이터 처리 확장 프로그램의 유형, 연결 정보 및 인증에 대 한 정보를 포함 하는 보고서 정의의 일부입니다.  
+  -   **데이터 원본 및 공유 데이터 원본** 데이터 처리 확장 프로그램, 연결 정보 및 인증의 유형에 대한 정보를 포함하는 보고서 정의의 일부입니다.  
 
-  -   **데이터 집합 및 필드 컬렉션** 쿼리, 필드 컬렉션 및 필드 데이터 형식을 포함 하는 보고서 정의의 일부입니다.  
+  -   **데이터 세트 및 필드 컬렉션** 쿼리, 필드 컬렉션 및 필드 데이터 유형을 포함하는 보고서 정의의 일부입니다.  
 
--   **데이터 확장 프로그램 Reporting Services** 보고서 작성기와 함께 설치 되는 기본 제공 데이터 확장 프로그램입니다. 데이터 확장 프로그램은 인증, 서버 집계 및 다중 값 매개 변수를 처리하는 기능을 제공합니다.  
+-   **Reporting Services 데이터 확장 프로그램** 보고서 작성기와 함께 설치되는 기본 제공 데이터 확장 프로그램입니다. 데이터 확장 프로그램은 인증, 서버 집계 및 다중 값 매개 변수를 처리하는 기능을 제공합니다.  
 
--   **데이터 공급자** 외부 데이터 원본의 데이터에 대 한 연결 및 검색을 관리 하는 소프트웨어입니다. 데이터 공급자는 연결 문자열 구문을 정의합니다. 대부분의 데이터 확장 프로그램은 데이터 공급자 계층 위에 빌드됩니다.  
+-   **데이터 공급자** 외부 데이터 원본의 데이터에 대한 연결 및 검색을 관리하는 소프트웨어입니다. 데이터 공급자는 연결 문자열 구문을 정의합니다. 대부분의 데이터 확장 프로그램은 데이터 공급자 계층 위에 빌드됩니다.  
 
--   **외부 데이터 원본** 보고서 데이터를 검색할 위치 (예: 데이터베이스, 파일, 큐브 또는 웹 서비스)입니다.  
+-   **외부 데이터 원본** 보고서 데이터를 검색할 대상 위치(예: 데이터베이스, 파일, 큐브 또는 웹 서비스)입니다.  
 
 > [!NOTE]  
 >  보고서 서버에 연결되어 있지 않을 때는 보고서 작성기와 함께 설치되는 데이터 확장 프로그램에서 선택할 수 있습니다. 이 경우 컴퓨터의 자격 증명을 사용하여 단일 사용자로 데이터에 액세스합니다. 보고서 서버에 연결되어 있을 때는 보고서 서버에 설치되는 데이터 확장 프로그램에서 선택할 수 있습니다. 이 경우 보고서를 실행하는 여러 사용자 중 한 명으로 데이터에 액세스하고 보고서 서버의 자격 증명을 사용합니다. 자세한 내용은 [보고서 작성기에 자격 증명 지정](../specify-credentials-in-report-builder.md)을 참조하세요.  
 
-##  <a name="ReportData"></a>보고서 데이터 이해  
+##  <a name="understanding-report-data"></a><a name="ReportData"></a> 보고서 데이터 이해  
 가장 단순한 형태의 보고서는 보고서 페이지의 데이터 영역(예: 단일 테이블, 차트, 행렬 등)에 보고서 데이터 세트의 데이터를 표시합니다. 보고서 데이터 세트의 데이터는 외부 데이터 원본에 대한 읽기 전용 액세스를 통해 실행되는 단일 쿼리 명령이 반환하는 첫 번째 결과 집합에서 제공됩니다. 각 데이터 영역은 데이터 세트의 모든 데이터가 표시되도록 확장됩니다.  
 
 기본적으로 데이터 세트의 데이터는 테이블 형식으로 되어 있습니다. 열은 데이터 세트 쿼리에서 가져온 필드입니다. 행은 결과 집합의 행에서 가져옵니다. 다음과 같은 일반화된 형식의 데이터를 보고서에서 사용할 수 있습니다.  
@@ -60,52 +60,52 @@ ms.locfileid: "67412688"
 
 
 
-##  <a name="DataTypes"></a>데이터 형식 작업  
+##  <a name="working-with-data-types"></a><a name="DataTypes"></a>데이터 형식 작업  
 데이터 세트를 만들 때 필드의 데이터 형식이 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]에서 CLR(공용 언어 런타임) 데이터 형식의 하위 세트로 매핑됩니다. 명확하게 매핑될 수 없는 데이터 형식은 문자열로 반환됩니다. 필드 데이터 형식 작업에 대한 자세한 내용은 [데이터 세트 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)을 참조하십시오. 매개 변수를 만들 때 데이터 형식은 지원되는 보고서 정의 데이터 형식이어야 합니다. 데이터 공급자에서 보고서 매개 변수로 데이터 형식을 매핑하는 방법은 [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)을 참조하세요.  
 
 
 
-##  <a name="HowTo"></a> 방법 도움말 항목  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>방법 도움말 항목  
 이 섹션에서는 데이터 연결, 데이터 원본 및 데이터 세트를 사용하는 방법을 단계별로 설명합니다.  
 
 [데이터 연결이 나 데이터 원본 &#40;보고서 작성기 및 SSRS를 추가 하 고 확인&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
 
-[공유 데이터 집합 또는 포함 된 데이터 집합 &#40;보고서 작성기 및 SSRS를 만듭니다&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
+[공유 데이터 세트 또는 포함된 데이터 세트 만들기&#40;보고서 작성기 및 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
 
-[데이터 집합 &#40;보고서 작성기 및 SSRS에 필터를 추가&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+[데이터 세트에 필터 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
 
-## <a name="InThisSection"></a> 섹션 내용  
+## <a name="in-this-section"></a><a name="InThisSection"></a>섹션 항목  
 
 다음 항목에서는 각 기본 제공 데이터 확장 프로그램에 대한 정보를 제공합니다.  
 
 |항목|데이터 원본 유형|  
 |-----------|----------------------|  
-|[SSRS &#40;SQL Server 연결 유형&#41;](sql-server-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|[MDX &#40;SSRS에 대 한 Analysis Services 연결 유형&#41;](analysis-services-connection-type-for-mdx-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|  
+|[SQL Server 연결 형식&#40;SSRS&#41;](sql-server-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|[MDX용 Analysis Services 연결 형식&#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|  
 |[SSRS &#40;PowerPivot 연결 유형&#41;](power-pivot-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|  
-|[SharePoint 목록 연결 유형 &#40;SSRS&#41;](sharepoint-list-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)]SharePoint 목록|  
-|[SSRS &#40;SQL Azure 연결 유형&#41;](sql-azure-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
-|[SQL Server 병렬 데이터 웨어하우스 연결 유형 &#40;SSRS&#41;](sql-server-parallel-data-warehouse-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|  
-|[&#40;SSRS&#41;SAP NetWeaver BI 연결 형식](sap-netweaver-bi-connection-type-ssrs.md)|SAP NetWeaver BI|  
-|[Hyperion Essbase 연결 유형 &#40;SSRS&#41;](hyperion-essbase-connection-type-ssrs.md)|Hyperion Essbase|  
-|[SSRS &#40;OLE DB 연결 유형&#41;](ole-db-connection-type-ssrs.md)|OLE DB|  
-|[SSRS&#41;&#40;ODBC 연결 유형](odbc-connection-type-ssrs.md)|ODBC|  
+|[SharePoint 목록 연결 형식&#40;SSRS&#41;](sharepoint-list-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 목록|  
+|[SQL Azure 연결 형식&#40;SSRS&#41;](sql-azure-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
+|[SQL Server 병렬 데이터 웨어하우스 연결 형식&#40;SSRS&#41;](sql-server-parallel-data-warehouse-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|  
+|[SAP NetWeaver BI 연결 형식&#40;SSRS&#41;](sap-netweaver-bi-connection-type-ssrs.md)|SAP NetWeaver BI|  
+|[Hyperion Essbase 연결 형식&#40;SSRS&#41;](hyperion-essbase-connection-type-ssrs.md)|Hyperion Essbase|  
+|[OLE DB 연결 형식&#40;SSRS&#41;](ole-db-connection-type-ssrs.md)|OLE DB|  
+|[ODBC 연결 형식&#40;SSRS&#41;](odbc-connection-type-ssrs.md)|ODBC|  
 |[XML 연결 형식&#40;SSRS&#41;](xml-connection-type-ssrs.md)|XML|  
 
-## <a name="Related"></a>관련 섹션  
+## <a name="related-sections"></a><a name="Related"></a> 관련 섹션  
 
 설명서의 다음 섹션에서는 보고서 데이터에 대한 깊이 있는 개념 정보를 제공하며, 데이터와 관련된 보고서 부분을 정의, 사용자 지정 및 사용하는 방법을 절차적인 측면에서 소개합니다.  
 
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[보고서 &#40;보고서 작성기 및 SSRS&#41;에 데이터를 추가 합니다.](report-datasets-ssrs.md)|보고서의 데이터 액세스에 대한 개요를 제공합니다.|  
 |[보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](../data-connections-data-sources-and-connection-strings-in-report-builder.md)|데이터 연결 및 데이터 원본에 대한 정보를 제공합니다.|  
 |[보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|포함된 데이터 세트 및 공유 데이터 세트에 대한 정보를 제공합니다.|  
 |[데이터 세트 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)|쿼리에 의해 생성되는 데이터 세트 필드 컬렉션에 대한 정보를 제공합니다.|  
-|[Reporting Services &#40;SSRS에서 지 원하는 데이터 원본은](../create-deploy-and-manage-mobile-and-paginated-reports.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 의 설명서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [](https://go.microsoft.com/fwlink/?linkid=121312)에서&#41;.|각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인](https://go.microsoft.com/fwlink/?linkid=121312)설명서의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서에서 [데이터 처리 확장 프로그램 개요](../extensions/data-processing/data-processing-extensions-overview.md) 를 참조 하십시오.|고급 사용자를 위해 데이터 확장 프로그램에 대한 자세한 정보를 제공합니다.|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).|각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서에서 [데이터 처리 확장 프로그램 개요](../extensions/data-processing/data-processing-extensions-overview.md)를 참조하세요.|고급 사용자를 위해 데이터 확장 프로그램에 대한 자세한 정보를 제공합니다.|  
 
 ## <a name="see-also"></a>참고 항목  
 
 - [보고서 &#40;보고서 작성기 및 SSRS&#41;에 데이터를 추가 합니다.](report-datasets-ssrs.md)
-- [쿼리 디자이너 &#40;보고서 작성기&#41;](../query-designers-report-builder.md)
+- [쿼리 디자이너&#40;보고서 작성기&#41;](../query-designers-report-builder.md)

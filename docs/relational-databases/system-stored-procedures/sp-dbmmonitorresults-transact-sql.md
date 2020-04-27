@@ -19,10 +19,10 @@ ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e46116111e9f1e85cdaad48e9742e62fba187e74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899169"
 ---
 # <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults(Transact-SQL)
@@ -76,15 +76,15 @@ sp_dbmmonitorresults database_name
  1 = 결과를 계산 하기 전에 **sp_dbmmonitorupdate** 를 호출 하 여 데이터베이스의 상태를 업데이트 합니다. 그러나 상태 테이블이 이전 15 초 내에 업데이트 되었거나 사용자가 **sysadmin** 고정 서버 역할의 멤버가 아닌 경우에는 상태를 업데이트 하지 않고 **sp_dbmmonitorresults** 실행 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- None  
+ 없음  
   
 ## <a name="result-sets"></a>결과 집합  
  지정한 데이터베이스에 대해 요청된 개수의 기록 상태 행을 반환합니다. 각 행에는 다음 정보가 들어 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|미러된 데이터베이스의 이름입니다.|  
-|**역할**|**int**|서버 인스턴스의 현재 미러링 역할입니다.<br /><br /> 1 = 주 서버<br /><br /> 2 = 미러 서버|  
+|**role**|**int**|서버 인스턴스의 현재 미러링 역할입니다.<br /><br /> 1 = 주 서버<br /><br /> 2 = 미러 서버|  
 |**mirroring_state**|**int**|데이터베이스의 상태입니다.<br /><br /> 0 = 일시 중지됨<br /><br /> 1 = 연결 끊김<br /><br /> 2 = 동기화 중<br /><br /> 3 = 장애 조치(Failover) 보류 중<br /><br /> 4 = 동기화됨|  
 |**witness_status**|**int**|데이터베이스의 데이터베이스 미러링 세션에서 미러링 모니터 서버의 연결 상태로, 다음 값을 가질 수 있습니다.<br /><br /> 0 = 알 수 없음<br /><br /> 1 = 연결됨<br /><br /> 2 = 연결 끊김|  
 |**log_generation_rate**|**int**|이 데이터베이스의 이전 미러링 상태 업데이트 이후 생성된 로그의 양(KB/초)입니다.|  

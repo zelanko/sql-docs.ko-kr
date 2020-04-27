@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9ee3228eea9970563540be9bc6a4c3b9a3677112
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189324"
 ---
 # <a name="edit-an-operator"></a>운영자 편집
@@ -33,35 +33,32 @@ ms.locfileid: "68189324"
   
      [보안](#Security)  
   
--   **다음을 사용 하 여 운영자를 편집 합니다.**  
+-   **다음을 사용하여 운영자를 편집합니다.**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)]의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이후 버전에서는 에이전트에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 호출기 및 **net send** 옵션이 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 말고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.  
   
 -   SQL Server 에이전트는 데이터베이스 메일을 사용하여 운영자에게 전자 메일 및 호출기 알림을 보내도록 구성해야 합니다. 자세한 내용은 [경고를 운영자에게 할당](assign-alerts-to-an-operator.md)을 참조하세요.  
   
--   
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 작업 구조를 만들고 관리할 수 있는 바람직한 방법을 제공하는데 이는 그래픽을 사용하여 쉽게 작업을 관리할 수 있는 방법입니다.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 작업 구조를 만들고 관리할 수 있는 바람직한 방법을 제공하는데 이는 그래픽을 사용하여 쉽게 작업을 관리할 수 있는 방법입니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
- 
-  **sysadmin** 고정 서버 역할의 멤버만이 운영자를 편집할 수 있습니다.  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
+ **sysadmin** 고정 서버 역할의 멤버만이 운영자를 편집할 수 있습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-edit-an-operator"></a>운영자를 편집하려면  
   
-1.  
-  **개체 탐색기**에서 더하기 기호를 클릭하여 편집하려는 운영자가 들어 있는 서버를 확장합니다.  
+1.  **개체 탐색기**에서 더하기 기호를 클릭하여 편집하려는 운영자가 들어 있는 서버를 확장합니다.  
   
 2.  더하기 기호를 클릭하여 **SQL Server 에이전트**를 확장합니다.  
   
@@ -75,11 +72,11 @@ ms.locfileid: "68189324"
   
     -   [운영자 속성: 새 운영자 &#40;알림 페이지&#41;](operator-properties-new-operator-notifications-page.md)  
   
-    -   [운영자 속성 &#40;기록 페이지&#41;](operator-properties-history-page.md)  
+    -   [운영자 속성&#40;기록 페이지&#41;](operator-properties-history-page.md)  
   
-5.  완료되었으면 **확인**을 클릭합니다.  
+5.  작업을 완료한 후 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-edit-an-operator"></a>운영자를 편집하려면  
   

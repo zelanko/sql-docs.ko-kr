@@ -16,10 +16,10 @@ helpviewer_keywords:
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 00b1caa2f68da0a3a38d98cf35f959f83257b99e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67413113"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>보고서 기록에 스냅샷 추가(보고서 관리자)
@@ -34,8 +34,7 @@ ms.locfileid: "67413113"
   
 2. 드롭다운 메뉴에서 **보고서 기록 보기**를 클릭합니다.  
   
-3. **새 스냅샷**을 클릭합니다. 
-  **실행 날짜** 열에 새 스냅샷이 생성됩니다.  
+3. **새 스냅샷**을 클릭합니다. **실행 날짜** 열에 새 스냅샷이 생성됩니다.  
   
     > [!NOTE]
     > 이를 위해 관리자는 보고서 기록을 **수동으로 기록 작성 허용**상태로 구성해야 합니다. 자세한 내용은 [보고서 기록 제한&#40;보고서 관리자&#41;](../reports/limit-report-history-report-manager.md)를 클릭합니다.
@@ -50,11 +49,9 @@ ms.locfileid: "67413113"
   
 3. 드롭다운 메뉴에서 **관리**를 클릭합니다.  
   
-4. 
-  **스냅샷 옵션**을 클릭합니다.  
+4. **스냅샷 옵션**을 클릭합니다.  
   
-5. 
-  **모든 보고서 실행 스냅샷을 기록에 저장**확인란을 선택합니다.  
+5. **모든 보고서 실행 스냅샷을 기록에 저장**확인란을 선택합니다.  
   
 6. **적용**을 클릭합니다.  
   
@@ -64,24 +61,20 @@ ms.locfileid: "67413113"
   
 2. 드롭다운 메뉴에서 **관리**를 클릭합니다.  
   
-3. 
-  **스냅샷 옵션**을 클릭합니다.  
+3. **스냅샷 옵션**을 클릭합니다.  
   
-4. 
-  **다음 일정을 사용하여 스냅샷을 보고서 기록에 추가**확인란을 선택합니다. 다음 중 하나를 수행합니다.  
+4. **다음 일정을 사용하여 스냅샷을 보고서 기록에 추가**확인란을 선택합니다. 다음 중 하나를 수행합니다.  
   
-    - 
-  **보고서별 일정**을 선택합니다. 일정 정보를 채우고 일정의 시작일과 종료일을 선택한 후 **확인**을 클릭합니다.  
+    - **보고서별 일정**을 선택합니다. 일정 정보를 채우고 일정의 시작일과 종료일을 선택한 후 **확인**을 클릭합니다.  
   
-    - 
-  **공유 일정**을 선택합니다. 목록에서 원하는 일정을 선택합니다.  
+    - **공유 일정**을 선택합니다. 목록에서 원하는 일정을 선택합니다.  
   
 5. **적용**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [보고서 &#40;보고서 관리자&#41;실행 속성 구성](../reports/configure-execution-properties-for-a-report-report-manager.md)
-- [보고서 &#40;보고서 관리자을 열고 닫습니다&#41;](../reports/open-and-close-a-report-report-manager.md)
+- [보고서에 실행 속성 구성&#40;보고서 관리자&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)
+- [보고서 열기 및 닫기&#40;보고서 관리자&#41;](../reports/open-and-close-a-report-report-manager.md)
 - [보고서 기록 제한&#40;보고서 관리자&#41;](../reports/limit-report-history-report-manager.md)
 - [일정](../subscriptions/schedules.md)   
 - [보고서 관리자&#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)

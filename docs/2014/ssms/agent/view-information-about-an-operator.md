@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9d1cab01b6fc496de90975966bfcf29b70e041fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68188750"
 ---
 # <a name="view-information-about-an-operator"></a>View Information About an Operator
@@ -33,18 +33,18 @@ ms.locfileid: "68188750"
   
      [보안](#Security)  
   
--   **다음을 사용 하 여 운영자에 대 한 정보를 보려면**  
+-   **다음을 사용하여 운영자에 대한 정보를 봅니다.**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
- 기본적으로 **sysadmin** 고정 서버 역할의 멤버는이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
+ 기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
   
@@ -54,12 +54,11 @@ ms.locfileid: "68188750"
   
  이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](sql-server-agent-fixed-database-roles.md)을 참조하세요.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-view-information-about-an-operator"></a>운영자에 대한 정보를 보려면  
   
-1.  
-  **개체 탐색기**에서 더하기 기호를 클릭하여 보려는 운영자가 들어 있는 서버를 확장합니다.  
+1.  **개체 탐색기**에서 더하기 기호를 클릭하여 보려는 운영자가 들어 있는 서버를 확장합니다.  
   
 2.  더하기 기호를 클릭하여 **SQL Server 에이전트**를 확장합니다.  
   
@@ -73,11 +72,11 @@ ms.locfileid: "68188750"
   
     -   [운영자 속성: 새 운영자 &#40;알림 페이지&#41;](operator-properties-new-operator-notifications-page.md)  
   
-    -   [운영자 속성 &#40;기록 페이지&#41;](operator-properties-history-page.md)  
+    -   [운영자 속성&#40;기록 페이지&#41;](operator-properties-history-page.md)  
   
-5.  완료되었으면 **확인**을 클릭합니다.  
+5.  작업을 완료한 후 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-view-information-about-an-operator"></a>운영자에 대한 정보를 보려면  
   

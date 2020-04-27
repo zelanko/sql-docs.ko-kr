@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 514774acc7255f2f499bfe7fdd6e731944ab67fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67285053"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Reporting Services와 인터넷 정보 서비스 함께 설치(SSRS 기본 모드)
@@ -46,24 +46,21 @@ ms.locfileid: "67285053"
 |http:\//123.234.345.456:80/reports|도메인 이름 서비스가 해당 호스트 이름에 대 한\/IP 주소를\<확인할 수 있는 경우 http:/123.234.345.456/reports 또는 http://computername>/reports로 전송 되는 모든 요청을 받습니다.|  
 |http://+:80/reports|URL에 "reports" 가상 디렉터리 이름이 포함되어 있는 한 해당 컴퓨터에 대해 유효한 IP 주소 또는 호스트 이름으로 전송된 모든 요청을 받습니다.|  
 |http:\//123.234.345.456:80|도메인 이름 서비스가 해당 호스트 이름에\/대 한 IP 주소\<를 확인할 수 있는 경우 http:/123.234.345.456 또는 http://computername>를 지정 하는 모든 요청을 받습니다.|  
-|http://+:80|
-  **모두 할당됨**에 매핑된 애플리케이션 엔드포인트에 대해 다른 애플리케이션이 아직 받지 않은 요청을 받습니다.|  
-|http://*:80|
-  **모두 할당되지 않음**에 매핑된 애플리케이션 엔드포인트에 대해 다른 애플리케이션이 아직 받지 않은 요청을 받습니다.|  
+|http://+:80|**모두 할당됨**에 매핑된 애플리케이션 엔드포인트에 대해 다른 애플리케이션이 아직 받지 않은 요청을 받습니다.|  
+|http://*:80|**모두 할당되지 않음**에 매핑된 애플리케이션 엔드포인트에 대해 다른 애플리케이션이 아직 받지 않은 요청을 받습니다.|  
   
  'System.IO.FileLoadException: 파일이 다른 프로세스에서 사용되고 있으므로 프로세스에서 파일에 액세스할 수 없습니다 (예외가 발생한 HRESULT: 0x80070020)'.라는 오류 메시지가 표시되면 포트 충돌이 발생한 것입니다.  
   
-## <a name="url-reservations-for-iis-60-70-80-85-with-includesssql14includessssql14-mdmd-reporting-services"></a>
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services가 있는 IIS 6.0, 7.0, 8.0, 8.5에 대한 URL 예약  
+## <a name="url-reservations-for-iis-60-70-80-85-with-sssql14-reporting-services"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services가 있는 IIS 6.0, 7.0, 8.0, 8.5에 대한 URL 예약  
  이전 섹션에 요약된 우선 순위 규칙을 기반으로 Reporting Services 및 IIS에 대해 정의된 URL 예약이 상호 운용성을 향상시키는 방식을 이해할 수 있습니다. Reporting Services는 해당 애플리케이션의 가상 디렉터리 이름을 명시적으로 지정하는 요청을 받습니다. IIS는 나머지 요청을 모두 받은 다음 이를 IIS 프로세스 모델 내에서 실행되는 애플리케이션으로 전송할 수 있습니다.  
   
-|애플리케이션|URL 예약|Description|요청 수신|  
+|애플리케이션|URL 예약|설명|요청 수신|  
 |-----------------|---------------------|-----------------|---------------------|  
 |보고서 서버|http://+:80/ReportServer|포트 80에서 ReportServer 가상 디렉터리가 있는 강력한 와일드카드입니다.|포트 80에서 ReportServer 가상 디렉터리를 지정하는 모든 요청을 받습니다. 보고서 서버 웹 서비스는 http://\<computername>/reportserver에 대한 모든 요청을 받습니다.|  
 |보고서 관리자|http://+:80/Reports|포트 80에서 Reports 가상 디렉터리가 있는 강력한 와일드카드입니다.|포트 80에서 Reports 가상 디렉터리를 지정하는 모든 요청을 받습니다. 보고서 관리자 http://\<computername>/reports에 대 한 모든 요청을 받습니다.|  
 |IIS|http://*:80/|포트 80의 약한 와일드카드입니다.|포트 80에서 다른 애플리케이션이 받지 않은 모든 나머지 요청을 받습니다.|  
   
-## <a name="side-by-side-deployments-of-includesscurrentincludessscurrent-mdmd-and-sql-server-2005-reporting-services-on-iis-60-70-80-85"></a>IIS 6.0, 7.0, 8.0, 8.5에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]와 SQL Server 2005 Reporting Services 함께 배포  
+## <a name="side-by-side-deployments-of-sscurrent-and-sql-server-2005-reporting-services-on-iis-60-70-80-85"></a>IIS 6.0, 7.0, 8.0, 8.5에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]와 SQL Server 2005 Reporting Services 함께 배포  
  IIS와 Reporting Services 간 상호 운용성 문제는 IIS 웹 사이트의 가상 디렉터리 이름이 Reporting Services에 사용되는 가상 디렉터리 이름과 같을 경우 발생합니다. 예를 들어 다음과 같은 구성이 있다고 가정합니다.  
   
 -   포트 80에 할당된 IIS의 웹 사이트 및 "Reports"라는 가상 디렉터리  
@@ -78,12 +75,11 @@ ms.locfileid: "67285053"
   
 -   Reporting Services 설치의 경우 Reporting Services와 동일한 포트에서 IIS 웹 사이트에 아직 사용되지 않은 가상 디렉터리 이름을 사용합니다. 충돌이 발생하면 설치 완료 후 가상 디렉터리를 구성할 수 있도록 Reporting Services를 "파일만" 모드로 설치합니다(설치를 사용하지만 설치 마법사에서 서버 옵션 구성 안 함). System.IO.FileLoadException: 파일이 다른 프로세스에서 사용되고 있으므로 프로세스에서 파일에 액세스할 수 없습니다. (예외가 발생한 HRESULT: 0x80070020).라는 오류 메시지가 표시되면 구성 충돌이 발생한 것입니다.  
   
--   수동으로 구성하는 설치의 경우 구성하는 URL에 기본 명명 규칙을 적용합니다. 
-  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 를 명명된 인스턴스로 설치하는 경우 가상 디렉터리를 만들 때 인스턴스 이름을 포함합니다.  
+-   수동으로 구성하는 설치의 경우 구성하는 URL에 기본 명명 규칙을 적용합니다. [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 를 명명된 인스턴스로 설치하는 경우 가상 디렉터리를 만들 때 인스턴스 이름을 포함합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
- [URL 구성&#40;SSRS 구성 관리자&#41;](configure-a-url-ssrs-configuration-manager.md)   
+ [SSRS Configuration Manager &#40;URL 구성&#41;](configure-a-url-ssrs-configuration-manager.md)   
  [Reporting Services 기본 모드 보고서 서버 설치](install-reporting-services-native-mode-report-server.md)  
   
   

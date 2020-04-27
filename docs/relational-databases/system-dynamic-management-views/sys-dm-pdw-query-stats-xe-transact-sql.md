@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8cb9980f74bdb37b1fab43db352e35c43151c390
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899149"
 ---
 # <a name="sysdm_pdw_query_stats_xe-transact-sql"></a>sys. dm_pdw_query_stats_xe (Transact-sql)
@@ -24,9 +24,9 @@ ms.locfileid: "67899149"
 
   이 DMV는 더 이상 사용 되지 않으며 이후 릴리스에서 제거 될 예정입니다. 이 릴리스에서는 0 개의 행을 반환 합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|이벤트|**nvarchar (60)**|이 보기의 키입니다.||  
+|event|**nvarchar(60)**|이 보기의 키입니다.||  
 |event_id|**nvarchar (36)**|||  
 |create_time|**datetime**|||  
 |session_id|**int**|세션의 id입니다.|[Dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)에서 session_id를 참조 하세요.|  

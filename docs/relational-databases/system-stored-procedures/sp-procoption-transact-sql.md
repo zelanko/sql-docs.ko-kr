@@ -18,10 +18,10 @@ ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bc004c611c218324ce2d2d8b764b3ab05cb73e5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67896590"
 ---
 # <a name="sp_procoption-transact-sql"></a>sp_procoption(Transact-SQL)

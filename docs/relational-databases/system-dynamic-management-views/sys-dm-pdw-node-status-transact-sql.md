@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4cd8788d19b06329d0280efc43a13a9a218e056c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899365"
 ---
 # <a name="sysdm_pdw_node_status-transact-sql"></a>sys. dm_pdw_node_status (Transact-sql)
@@ -24,7 +24,7 @@ ms.locfileid: "67899365"
 
   모든 어플라이언스 노드의 성능 및 상태에 대 한 추가 정보 ( [dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md))를 포함 합니다. 어플라이언스의 노드당 하나의 행을 나열 합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|노드와 연결 된 고유 숫자 id입니다.<br /><br /> 이 보기의 키입니다.|형식에 관계 없이 어플라이언스 전체에서 고유 합니다.|  
 |process_id|**int**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  

@@ -18,10 +18,10 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2b3af47a1c09160faab97494d9749fd67c051cd4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67898404"
 ---
 # <a name="xp_logininfo-transact-sql"></a>xp_logininfo(Transact-SQL)
@@ -56,12 +56,11 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**계정 이름**|**sysname**|정규화된 Windows 계정 이름입니다.|  
 |**type**|**char (8)**|Windows 계정의 유형입니다. 유효한 값은 **사용자** 또는 **그룹**입니다.|  
-|**권한과**|**char (9)**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 액세스 권한입니다. 유효한 값은 **admin**, **user**또는 **null**입니다.|  
+|**권한과**|**char(9)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 액세스 권한입니다. 유효한 값은 **admin**, **user**또는 **null**입니다.|  
 |**mapped login name**|**sysname**|사용자 권한이 있는 사용자 계정의 경우, **매핑된 로그인 이름** 에는 이전에 추가 된 도메인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이름으로 매핑된 규칙을 사용 하 여이 계정으로 로그인 할 때 사용을 시도 하는 매핑된 로그인 이름이 표시 됩니다.|  
 |**permission path**|**sysname**|계정 액세스 권한을 부여한 그룹 멤버 자격입니다.|  
   
@@ -90,7 +89,7 @@ EXEC xp_logininfo 'BUILTIN\Administrators';
  [Transact-sql&#41;sp_denylogin &#40;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [Transact-sql&#41;sp_grantlogin &#40;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [Transact-sql&#41;sp_revokelogin &#40;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;일반 확장 저장 프로시저 &#40;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

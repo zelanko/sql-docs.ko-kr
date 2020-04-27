@@ -19,10 +19,10 @@ ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fc850c8be9b5222fe178563de78e34e2ba263c12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899187"
 ---
 # <a name="sp_dbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert(Transact-SQL)
@@ -60,12 +60,12 @@ sp_dbmmonitorhelpalert database_name
  경고에 해당 하는 이벤트 Id에 대 한 자세한 내용은 [SQL Server&#41;&#40;미러링 성능 메트릭에 대해 경고 임계값 및 경고 사용 ](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)을 참조 하세요.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- None  
+ 없음  
   
 ## <a name="result-sets"></a>결과 집합  
  반환되는 각 경고에 대해 다음 열이 포함된 행을 반환합니다.  
   
-|열|데이터 형식|Description|  
+|열|데이터 형식|설명|  
 |------------|---------------|-----------------|  
 |**alert_id**|**int**|아래 표에서는 각 성능 메트릭에 대 한 **alert_id** 값과 **sp_dbmmonitorresults** 결과 집합에 표시 되는 메트릭의 측정 단위를 나열 합니다.|  
 |**고대비**|**int**|경고에 대한 임계값입니다. 미러링 상태를 업데이트할 때 이 임계값 위의 값이 반환되면 Windows 이벤트 로그에 항목이 입력됩니다. 이 값은 경고에 따라 KB, 분 또는 밀리초를 나타냅니다. 임계값이 현재 설정되어 있지 않으면 이 값은 NULL입니다.<br /><br /> **참고:** 현재 값을 보려면 [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) 저장 프로시저를 실행 합니다.|  

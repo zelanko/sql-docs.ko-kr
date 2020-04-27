@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1853281863fe3d1e6f4fcc6b36f228f7df523bda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189276"
 ---
 # <a name="job-properties-new-job-alerts-page"></a>작업 속성: 새 작업(경고 페이지)
@@ -36,7 +36,7 @@ ms.locfileid: "68189276"
  작업에서 선택한 경고를 제거하고 경고를 삭제합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Alerts](alerts.md)   
+ [알립니다](alerts.md)   
  [작업 구현](implement-jobs.md)  
   
   

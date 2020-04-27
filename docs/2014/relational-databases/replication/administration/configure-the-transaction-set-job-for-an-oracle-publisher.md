@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48282f08df588f54b6f03a0b99c58a2f0cf039ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67793538"
 ---
 # <a name="configure-the-transaction-set-job-for-an-oracle-publisher-replication-transact-sql-programming"></a>Oracle 게시자에 대한 트랜잭션 세트 작업 구성(복제 Transact-SQL 프로그래밍)
-  **Xactset** 작업은 게시자에 연결 되어 있지 않을 로그 판독기 에이전트 때 트랜잭션 집합을 만들기 위해 oracle 게시자에서 실행 되는 복제를 통해 만들어지는 oracle 데이터베이스 작업입니다. 배포자에서 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 이 작업을 사용하도록 설정하고 구성할 수 있습니다. 자세한 내용은 [Oracle 게시자를 위한 성능 튜닝](../non-sql/performance-tuning-for-oracle-publishers.md)을 참조하세요.  
+  **Xactset** 작업은 로그 판독기 에이전트가 Oracle 게시자에 연결되어 있지 않을 때 해당 게시자에서 트랜잭션 세트를 만들기 위해 실행되는 복제를 통해 만들어지는 Oracle 데이터베이스 작업입니다. 배포자에서 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 이 작업을 사용하도록 설정하고 구성할 수 있습니다. 자세한 내용은 [Oracle 게시자를 위한 성능 튜닝](../non-sql/performance-tuning-for-oracle-publishers.md)을 참조하세요.  
   
 ### <a name="to-enable-the-transaction-set-job"></a>트랜잭션 세트 작업을 사용하도록 설정하려면  
   

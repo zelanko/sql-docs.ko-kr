@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/06/2017
 ms.openlocfilehash: 762cf7e67a9983c345b58d2afd1c47da93306bd0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67413145"
 ---
 # <a name="activate-the-report-server-file-sync-feature-in-sharepoint-central-administration"></a>SharePoint 중앙 관리에서 보고서 서버 파일 동기화 기능 활성화
@@ -44,7 +44,7 @@ ms.locfileid: "67413145"
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 파트 &#40;보고서 작성기 및 SSRS에 대 한 문제 해결&#41;](report-parts-report-builder-and-ssrs.md)   
- [SharePoint에서 보고서 서버 및 파워 뷰 통합 사이트 모음 기능 활성화](activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)   
+ [SharePoint에서 보고서 서버 활성화 및 통합 기능 파워 뷰](activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)   
  [Sharepoint 2010 및 SharePoint 2013 &#40;Reporting Services 추가 기능을 설치 하거나 제거&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
  [Sharepoint 2010 및 SharePoint 2013 &#40;Reporting Services 추가 기능을 설치 하거나 제거&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   

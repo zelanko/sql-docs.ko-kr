@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a5525984fa4b1f1823f526097d271780a072bd4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284807"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 Analysis Services 기능의 동작 변경 내용
@@ -31,21 +31,18 @@ ms.locfileid: "67284807"
   
 -   [SQL Server 2012의 동작 변경 내용](#bkmk_sql2012)  
   
-##  <a name="bkmk_sql2014"></a>의 동작 변경 내용[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+##  <a name="behavior-changes-in-sssql14"></a><a name="bkmk_sql2014"></a>의 동작 변경 내용[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  이 릴리스에는 테이블 형식, 다차원, 데이터 마이닝 또는 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 기능에 대해 발표된 새로운 동작 변경 내용이 없습니다.  그러나  [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] 이(가) [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 및 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 버전과 아주 유사하므로 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]에서 업그레이드하는 경우의 편의를 위해 두 이전 릴리스의 동작 변경 내용을 여기에 제공합니다.  
   
-##  <a name="bkmk_sql2012sp1"></a>의 동작 변경 내용[!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]  
+##  <a name="behavior-changes-in-sssql11sp1"></a><a name="bkmk_sql2012sp1"></a>의 동작 변경 내용[!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]  
  이 섹션에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 의 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]기능에 대해 보고된 동작 변경 내용을 설명합니다. 이러한 변경 내용은 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에도 적용됩니다.  
   
 |문제|Description|  
 |-----------|-----------------|  
-|SQL Server 2008 R2 PowerPivot 통합 문서가 SQL Server 2012 SP1 SharePoint 2013용 PowerPivot에서 사용 시 자동으로 업그레이드되지 않고 모델을 새로 고치지 않습니다. 따라서 예약된 데이터 새로 고침이 SQL Server 2008 R2 PowerPivot 통합 문서에 대해 작동하지 않습니다.|2008 R2 통합 문서가 [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)]에서 열리지만 예약된 새로 고침이 작동하지 않습니다. 새로 고침 기록을 검토하면 다음과 유사한 오류 메시지가 표시됩니다.<br /> "통합 문서에 지원 되지 않는 PowerPivot 모델이 포함 되어 있습니다. 통합 문서에서 PowerPivot 모델은 SQL Server 2008 R2 PowerPivot for Excel 2010 형식으로 되어 있습니다. 지원되는 PowerPivot 모델은 다음과 같습니다. <br />SQL Server 2012 PowerPivot for Excel 2010<br />SQL Server 2012 PowerPivot for Excel 2013 "<br /><br /> **통합 문서를 업그레이드 하는 방법:** 통합 문서를 2012 통합 문서로 업그레이드할 때까지 예약 된 새로 고침이 작동 하지 않습니다. 통합 문서와 통합 문서에 포함된 모델을 업그레이드하려면 다음 중 하나를 수행하세요.<br /><br /> 통합 문서를 다운로드하고 SQL Server 2012 PowerPivot for Excel 추가 기능이 설치된 Microsoft Excel 2010에서 통합 문서를 엽니다. 그런 다음 통합 문서를 저장하고 SharePoint 서버에 게시합니다.<br /><br /> 통합 문서를 다운로드하고 Microsoft Excel 2013에서 엽니다. 그런 다음 통합 문서를 저장하고 SharePoint 서버에 게시합니다.<br /><br /> <br /><br /> 통합 문서 업그레이드에 대 한 자세한 내용은 [통합 문서 업그레이드 및 예약 된 데이터 새로 고침 &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)를 참조 하세요.|  
-|DAX [ALL Function](/dax/all-function-dax)의 동작 변경 내용입니다.|
-  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]이전에는 시간 인텔리전스에 사용하기 위해 날짜 테이블로 표시에서 [Date] 열을 지정할 때 해당 [Date] 열이 ALL 함수에 대한 인수로 전달되고, 그 후 CALCULATE 함수에 대한 필터로 전달되는 경우 날짜 열의 슬라이서에 관계 없이 테이블의 모든 열에 대한 모든 필터가 무시됩니다<br /><br /> 예를 들면 다음과 같습니다.<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> 
-  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]이전에는 ALL에 대해 인수로 전달되는 [Date] 열에 관계 없이 DateTable의 모든 열에 대해 모든 필터가 무시됩니다.<br /><br /> 
-  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 및 Excel 2013의 PowerPivot에서 동작은 ALL에 대해 인수로 전달된 특정 열에 대해서만 필터를 무시합니다.<br /><br /> 새로운 동작의 문제를 해결하려면 사실상 모든 열을 전체 테이블의 필터로 무시하고 인수에서 [Date] 열을 제외할 수 있습니다. 예를 들어<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> 이렇게 하면 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]이전의 동작과 동일한 결과가 반환됩니다.|  
+|SQL Server 2008 R2 PowerPivot 통합 문서가 SQL Server 2012 SP1 SharePoint 2013용 PowerPivot에서 사용 시 자동으로 업그레이드되지 않고 모델을 새로 고치지 않습니다. 따라서 예약된 데이터 새로 고침이 SQL Server 2008 R2 PowerPivot 통합 문서에 대해 작동하지 않습니다.|2008 R2 통합 문서가 [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)]에서 열리지만 예약된 새로 고침이 작동하지 않습니다. 새로 고침 기록을 검토하면 다음과 유사한 오류 메시지가 표시됩니다.<br /> "통합 문서에 지원 되지 않는 PowerPivot 모델이 포함 되어 있습니다. 통합 문서에서 PowerPivot 모델은 SQL Server 2008 R2 PowerPivot for Excel 2010 형식으로 되어 있습니다. 지원되는 PowerPivot 모델은 다음과 같습니다. <br />SQL Server 2012 PowerPivot for Excel 2010<br />SQL Server 2012 PowerPivot for Excel 2013 "<br /><br /> **통합 문서를 업그레이드하는 방법:** 통합 문서를 2012 통합 문서로 업그레이드할 때까지 예약된 새로 고침이 작동하지 않습니다. 통합 문서와 통합 문서에 포함된 모델을 업그레이드하려면 다음 중 하나를 수행하세요.<br /><br /> 통합 문서를 다운로드하고 SQL Server 2012 PowerPivot for Excel 추가 기능이 설치된 Microsoft Excel 2010에서 통합 문서를 엽니다. 그런 다음 통합 문서를 저장하고 SharePoint 서버에 게시합니다.<br /><br /> 통합 문서를 다운로드하고 Microsoft Excel 2013에서 엽니다. 그런 다음 통합 문서를 저장하고 SharePoint 서버에 게시합니다.<br /><br /> <br /><br /> 통합 문서 업그레이드에 대 한 자세한 내용은 [통합 문서 업그레이드 및 예약 된 데이터 새로 고침 &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)를 참조 하세요.|  
+|DAX [ALL Function](/dax/all-function-dax)의 동작 변경 내용입니다.|[!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]이전에는 시간 인텔리전스에 사용하기 위해 날짜 테이블로 표시에서 [Date] 열을 지정할 때 해당 [Date] 열이 ALL 함수에 대한 인수로 전달되고, 그 후 CALCULATE 함수에 대한 필터로 전달되는 경우 날짜 열의 슬라이서에 관계 없이 테이블의 모든 열에 대한 모든 필터가 무시됩니다<br /><br /> 예를 들면 다음과 같습니다.<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]이전에는 ALL에 대해 인수로 전달되는 [Date] 열에 관계 없이 DateTable의 모든 열에 대해 모든 필터가 무시됩니다.<br /><br /> [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 및 Excel 2013의 PowerPivot에서 동작은 ALL에 대해 인수로 전달된 특정 열에 대해서만 필터를 무시합니다.<br /><br /> 새로운 동작의 문제를 해결하려면 사실상 모든 열을 전체 테이블의 필터로 무시하고 인수에서 [Date] 열을 제외할 수 있습니다. 예를 들어<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> 이렇게 하면 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]이전의 동작과 동일한 결과가 반환됩니다.|  
   
-##  <a name="bkmk_sql2012"></a>의 동작 변경 내용[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+##  <a name="behavior-changes-in-sssql11"></a><a name="bkmk_sql2012"></a>의 동작 변경 내용[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  이 섹션에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 의 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]기능에 대해 보고된 동작 변경 내용을 설명합니다. 이러한 변경 내용은 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에도 적용됩니다.  
   
 ### <a name="analysis-services-multidimensional-mode"></a>Analysis Services, 다차원 모드  
@@ -79,18 +76,15 @@ ms.locfileid: "67284807"
   
 1.  개별 문서의 메뉴를 열려면 아래쪽 화살표를 클릭합니다.  
   
-2.  
-  **사용 권한 관리**를 클릭합니다.  
+2.  **사용 권한 관리**를 클릭합니다.  
   
 3.  기본적으로 라이브러리는 사용 권한을 상속합니다. 이 라이브러리에서 개별 통합 문서의 사용 권한을 변경하려면 **권한 상속 중지**를 클릭합니다.  
   
 4.  PowerPivot 통합 문서에 대한 추가 사용 권한이 필요한 사용자 또는 그룹 이름에 해당하는 확인란을 선택합니다. 추가 사용 권한은 이러한 사용자가 포함된 PowerPivot 데이터에 연결하고 해당 데이터를 다른 문서에서 외부 데이터 원본으로 사용할 수 있도록 허용합니다.  
   
-5.  
-  **사용자의 사용 권한 편집**을 클릭합니다.  
+5.  **사용자의 사용 권한 편집**을 클릭합니다.  
   
-6.  
-  **읽기** 권한을 선택한 다음 **확인**을 클릭합니다.  
+6.  **읽기** 권한을 선택한 다음 **확인**을 클릭합니다.  
   
 #### <a name="powerpivot-gallery-new-rules-for-snapshot-generation-for-some-powerpivot-workbooks"></a>PowerPivot 갤러리: 일부 PowerPivot 통합 문서에 대한 새로운 스냅샷 생성 규칙  
  이 릴리스에는 PowerPivot 갤러리에서 스냅샷 이미지를 생성하고, 정보 출처를 노출할 가능성(즉, 보기 권한이 없는 데이터 원본의 데이터 스냅샷을 표시할 수 있는 가능성)을 없애기 위한 새로운 요구 사항이 도입되었습니다. 이러한 요구 사항은 통합 문서를 볼 때마다 외부 데이터 원본에 연결하는 PowerPivot 통합 문서에만 적용됩니다. 포함된 PowerPivot 데이터를 시각화하는 통합 문서만 사용할 경우 PowerPivot 갤러리에서 스냅샷이 생성되는 방식에서 변경된 점을 확인할 수 없습니다.  
@@ -108,8 +102,7 @@ ms.locfileid: "67284807"
 #### <a name="new-default-setting-for-load-balancing-requests-changed-from-round-robin-to-health-based"></a>부하 분산 요청에 대한 새 기본 설정이 라운드 로빈에서 상태 기반으로 변경됨  
  PowerPivot 서비스 애플리케이션에는 PowerPivot 데이터에 대한 요청이 팜의 여러 SharePoint용 PowerPivot 서비스에서 분산되는 방식을 결정하는 기본 설정이 포함됩니다. 이전 릴리스에서 기본 설정은 요청이 사용 가능한 서버 간에 순차적으로 분산되는 **라운드 로빈**이었습니다. 이 릴리스에서는 기본값이 **상태 기반**입니다. PowerPivot 서비스 애플리케이션에서는 사용 가능한 메모리 또는 CPU와 같은 서버 상태 통계를 사용하여 xt 요청을 가져올 서버 인스턴스를 결정합니다.  
   
- 서버를 이전 릴리스로부터 업그레이드한 경우 PowerPivot 서비스 애플리케이션에는 이전의 기본 설정(**라운드 로빈**)이 보존됩니다. 
-  **상태 기반** 할당 방법을 사용하려면 구성 설정을 수정해야 합니다. 자세한 내용은 [Create and Configure a PowerPivot Service Application in Central Administration](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)을 참조하세요.  
+ 서버를 이전 릴리스로부터 업그레이드한 경우 PowerPivot 서비스 애플리케이션에는 이전의 기본 설정(**라운드 로빈**)이 보존됩니다. **상태 기반** 할당 방법을 사용하려면 구성 설정을 수정해야 합니다. 자세한 내용은 [Create and Configure a PowerPivot Service Application in Central Administration](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [이전 버전과의 호환성](../../2014/getting-started/backward-compatibility.md)   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27a03aaf94d518caa6b649b7ccd826e08798dacb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284878"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>시간 인텔리전스에 사용할 날짜 테이블로 표시 지정(SSAS 테이블 형식)
@@ -28,8 +28,7 @@ ms.locfileid: "67284878"
   
 -   날짜 테이블의 datetime 열은 세분성이 하루여야 하며 더 세부적으로 나뉘지 않아야 합니다.  
   
--   
-  **날짜 테이블로 표시** 대화 상자를 사용하여 날짜 테이블 및 고유 식별자 열을 지정해야 합니다.  
+-   **날짜 테이블로 표시** 대화 상자를 사용하여 날짜 테이블 및 고유 식별자 열을 지정해야 합니다.  
   
 -   팩트 테이블 및 날짜 테이블에 있는 날짜 데이터 형식의 열 간에 관계를 만드십시오.  
   
@@ -37,12 +36,11 @@ ms.locfileid: "67284878"
   
 1.  모델 디자이너에서 날짜 테이블을 클릭합니다.  
   
-2.  **테이블** 메뉴를 클릭 하 고 **날짜**를 클릭 한 다음 **날짜 테이블로 표시** 를 클릭 합니다.  
+2.  **테이블** 메뉴를 클릭한 다음 **날짜**, **Mark as 날짜 테이블**를 차례로 클릭합니다.  
   
-3.  
-  **날짜 테이블로 표시** 대화 상자의 **날짜** 목록 상자에서 고유 식별자로 사용할 열을 선택합니다. 이 열은 고유 값을 포함해야 하며 날짜 데이터 형식이어야 합니다. 다음은 그 예입니다.  
+3.  **날짜 테이블로 표시** 대화 상자의 **날짜** 목록 상자에서 고유 식별자로 사용할 열을 선택합니다. 이 열은 고유 값을 포함해야 하며 날짜 데이터 형식이어야 합니다. 예를 들어:  
   
-    |Date|  
+    |날짜|  
     |----------|  
     |2010/7/1 오전 12:00:00|  
     |2010/7/2 오전 12:00:00|  

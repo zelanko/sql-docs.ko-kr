@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9412d01809402dfa23c116c93c80e0ab32bee747
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284911"
 ---
 # <a name="calculations-ssas-tabular"></a>계산(SSAS 테이블 형식)
@@ -22,9 +22,9 @@ ms.locfileid: "67284911"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
-|[테이블 형식 모델의 DAX 이해 SSAS 테이블 형식&#41;&#40;](understanding-dax-in-tabular-models-ssas-tabular.md)|테이블 형식 모델에서 계산 열, 측정값 및 행 필터에 대한 계산을 만드는 데 사용되는 DAX(Data Analysis Expressions) 수식 언어에 대해 설명합니다.|  
+|[테이블 형식 모델의 DAX 이해&#40;SSAS 테이블 형식&#41;](understanding-dax-in-tabular-models-ssas-tabular.md)|테이블 형식 모델에서 계산 열, 측정값 및 행 필터에 대한 계산을 만드는 데 사용되는 DAX(Data Analysis Expressions) 수식 언어에 대해 설명합니다.|  
 |[DirectQuery 모드에서의 수식 호환성](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)|차이점을 설명하고, DirectQuery 모드에서 지원되지 않는 함수와 지원은 되지만 다른 결과를 반환할 수 있는 함수의 목록을 제공합니다.|  
 |[DAX&#41; 참조 &#40;데이터 분석 식](/dax/data-analysis-expressions-dax-reference)|이 섹션에서는 DAX 구문, 연산자 및 함수에 대해 자세히 설명합니다.|  
   

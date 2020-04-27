@@ -13,18 +13,17 @@ ms.author: rortloff
 ms.reviewer: ''
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 323b7602fd375bc393828663f1d2c749332dc9ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67463472"
 ---
 # <a name="sp_pdw_database_encryption_regenerate_system_keys-sql-data-warehouse"></a>sp_pdw_database_encryption_regenerate_system_keys (SQL Data Warehouse)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  어플라이언스에서 TDE를 사용 하는 경우 암호화 된 내부 데이터베이스에 대 한 인증서 및 데이터베이스 암호화 키를 회전 하려면 **sp_pdw_database_encryption_regenerate_system_keys** 을 사용 합니다. 
-  `tempdb`가 포함됩니다. TDE가 사용 하도록 설정 된 경우에만 성공 합니다.  
+  어플라이언스에서 TDE를 사용 하는 경우 암호화 된 내부 데이터베이스에 대 한 인증서 및 데이터베이스 암호화 키를 회전 하려면 **sp_pdw_database_encryption_regenerate_system_keys** 을 사용 합니다. 여기에는 `tempdb`도 포함됩니다. TDE가 사용 하도록 설정 된 경우에만 성공 합니다.  
   
 ## <a name="syntax"></a>구문  
   

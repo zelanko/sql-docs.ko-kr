@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 582e7afef033aac6fdc281e8fc310760a77949a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67793424"
 ---
 # <a name="enable-coordinated-backups-for-transactional-replication-replication-transact-sql-programming"></a>트랜잭션 복제에 대해 통합 백업 사용(복제 Transact-SQL 프로그래밍)
@@ -32,13 +32,10 @@ ms.locfileid: "67793424"
   
 1.  게시자에서 [DATABASEPROPERTYEX&#40;Transact-SQL&#41;](/sql/t-sql/functions/databasepropertyex-transact-sql) 함수를 사용하여 게시 데이터베이스의 **IsSyncWithBackup** 속성을 반환합니다. 해당 함수에서 **1**을 반환하면 게시된 데이터베이스에 대해 통합 백업이 이미 사용되고 있는 것입니다.  
   
-2.  1단계의 해당 함수에서 **0**을 반환하면 게시 데이터베이스의 게시자에서 [sp_replicationdboption&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql)을 실행합니다. 
-  **
-  **optname**에 \@sync with backup** 값을 지정하고 **** value**에 \@true** 값을 지정합니다.  
+2.  1단계의 해당 함수에서 **0**을 반환하면 게시 데이터베이스의 게시자에서 [sp_replicationdboption&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql)을 실행합니다. **\@optname**에 **sync with backup** 값을 지정하고 **\@value**에 **true** 값을 지정합니다.  
   
     > [!NOTE]  
-    >  
-  **sync with backup** 옵션을 **false**로 변경하면 로그 판독기 에이전트가 실행된 후 또는 한 번의 간격이 지난 후(로그 판독기 에이전트가 계속 실행되는 경우) 게시 데이터베이스의 잘린 부분이 업데이트됩니다. 최대 간격은 기본값이 30초인 **MessageInterval** 에이전트 매개 변수로 제어됩니다.  
+    >  **sync with backup** 옵션을 **false**로 변경하면 로그 판독기 에이전트가 실행된 후 또는 한 번의 간격이 지난 후(로그 판독기 에이전트가 계속 실행되는 경우) 게시 데이터베이스의 잘린 부분이 업데이트됩니다. 최대 간격은 기본값이 30초인 **MessageInterval** 에이전트 매개 변수로 제어됩니다.  
   
 ### <a name="to-enable-coordinated-backups-for-a-distribution-database"></a>배포 데이터베이스에 통합 백업을 사용하도록 설정하려면  
   
@@ -48,8 +45,6 @@ ms.locfileid: "67793424"
   
 ### <a name="to-disable-coordinated-backups"></a>통합 백업을 사용하지 않도록 설정하려면  
   
-1.  게시 데이터베이스의 게시자 또는 배포 데이터베이스의 배포자에서 [sp_replicationdboption&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql)을 실행합니다. 
-  **
-  **optname**에 \@sync with backup** 값을 지정하고 **** value**에 \@false** 값을 지정합니다.  
+1.  게시 데이터베이스의 게시자 또는 배포 데이터베이스의 배포자에서 [sp_replicationdboption&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql)을 실행합니다. **\@optname**에 **sync with backup** 값을 지정하고 **\@value**에 **false** 값을 지정합니다.  
   
   

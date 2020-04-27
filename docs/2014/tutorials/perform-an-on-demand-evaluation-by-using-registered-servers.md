@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a3a79a6ec655e91264d6fcc00db5a920ad82a21e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66822373"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>등록된 서버를 사용하여 요청 시 평가 수행
@@ -22,8 +22,7 @@ ms.locfileid: "66822373"
   등록된 서버를 사용하여 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 대해 최선의 구현 방법 정책의 요청 시 평가를 수행할 수 있습니다. 로컬 서버 그룹 또는 중앙 관리 서버를 사용할 수 있습니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이상 버전이 실행되는 서버 그룹 멤버에 대해 최선의 구현 방법 정책의 요청 시 평가를 수행할 수 있습니다. 그러나 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 또는 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]에서 지원되지 않는 정책에서 참조하는 속성이 있는 경우 예외 오류가 발생할 수 있습니다.  
+>  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이상 버전이 실행되는 서버 그룹 멤버에 대해 최선의 구현 방법 정책의 요청 시 평가를 수행할 수 있습니다. 그러나 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 또는 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]에서 지원되지 않는 정책에서 참조하는 속성이 있는 경우 예외 오류가 발생할 수 있습니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  등록된 서버에서 하나 이상의 서버 등록을 구성한 경우에만 이 태스크를 수행할 수 있습니다. 자세한 내용은 아래 항목을 참조하세요.  
@@ -51,7 +50,7 @@ ms.locfileid: "66822373"
   
 4.  **정책 평가** 대화 상자에서 **원본** 상자 옆의 줄임표 (**...**) 단추를 클릭 합니다.  
   
-5.  **원본 선택** 대화 상자에서 평가할 정책 파일의 원본으로 **파일** 또는 **서버** 를 선택할 수 있습니다. **서버**를 클릭 하면 로컬 또는 원격 서버에서 정책 기반 관리로 이전에 가져온 모범 사례 정책에 대 한 요청 시 평가를 수행할 수 있습니다. 이 자습서에서는 **파일**을 클릭 한 다음 평가할 개별 정책 파일을 선택 합니다. 이렇게 하려면 다음 단계를 수행하세요.  
+5.  **원본 선택** 대화 상자에서 평가할 정책 파일의 원본으로 **파일** 또는 **서버** 를 선택할 수 있습니다. **서버**를 클릭 하면 로컬 또는 원격 서버에서 정책 기반 관리로 이전에 가져온 모범 사례 정책에 대 한 요청 시 평가를 수행할 수 있습니다. 이 자습서에서는 **파일**을 클릭 한 다음 평가할 개별 정책 파일을 선택 합니다. 이렇게 하려면 다음 단계를 따르십시오.  
   
     1.  **파일**을 클릭 합니다.  
   

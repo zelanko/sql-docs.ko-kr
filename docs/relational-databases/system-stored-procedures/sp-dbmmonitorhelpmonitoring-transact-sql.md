@@ -19,10 +19,10 @@ ms.assetid: a085cf87-269f-454a-a146-21f80a113b72
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 91668795513969c9c0bda7a2a1a7203e557f1819
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899201"
 ---
 # <a name="sp_dbmmonitorhelpmonitoring-transact-sql"></a>sp_dbmmonitorhelpmonitoring(Transact-SQL)
@@ -40,10 +40,10 @@ sp_dbmmonitorhelpmonitoring
 ```  
   
 ## <a name="arguments"></a>인수  
- None  
+ 없음  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- None  
+ 없음  
   
 ## <a name="result-sets"></a>결과 집합  
  현재 업데이트 기간, 즉 데이터베이스 미러링 상태 테이블에 대한 업데이트 간격(분)을 반환합니다. 1분에서 120분 사이의 값입니다.  

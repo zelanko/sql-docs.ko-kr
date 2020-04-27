@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c7020cacbb8466b1113e514162337befae358549
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67792607"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Windows 인증을 사용하여 데이터베이스 미러링 모니터 추가(Transact-SQL)
@@ -52,7 +52,7 @@ ms.locfileid: "67792607"
   
 3.  주 서버에 연결하여 다음 문을 실행합니다.  
   
-     ALTER database *<database_name>* 미러링 모니터 **=** 서버 _<server_network_address>_  
+     ALTER DATABASE *<database_name>* SET WITNESS **=** _<server_network_address>_  
   
      여기서 *<database_name>* 은 미러링할 데이터베이스의 이름(두 파트너에서 이 이름은 동일함)이고 *<server_network_address>* 는 미러링 모니터 서버 인스턴스의 서버 네트워크 주소입니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "67792607"
   
      여기서 \<*system-address&gt;* 는 대상 컴퓨터 시스템을 명확하게 식별하는 문자열이고, \<*포트&gt;* 는 파트너 서버 인스턴스의 미러링 엔드포인트에서 사용되는 포트 번호입니다. 자세햔 내용은 [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](specify-a-server-network-address-database-mirroring.md)을 사용합니다.  
   
-     예를 들어 주 서버 인스턴스에서 다음 ALTER DATABASE 문은 미러링 모니터를 설정합니다. 데이터베이스 이름은 **AdventureWorks**이고 시스템 주소는 DBSERVER3(미러링 모니터 시스템의 이름)이며 미러링 모니터의 데이터베이스 미러링 엔드포인트에 사용되는 포트는 `7022`입니다.  
+     예를 들어 주 서버 인스턴스에서 다음 ALTER DATABASE 문은 미러링 모니터를 설정합니다. 데이터베이스 이름은 **AdventureWorks**이 고 시스템 주소는 DBSERVER3-감시 시스템의 이름이 며 미러링 모니터의 데이터베이스 미러링 끝점에 사용 되는 포트는 `7022`다음과 같습니다.  
   
     ```  
     ALTER DATABASE AdventureWorks   
@@ -127,11 +127,11 @@ ms.locfileid: "67792607"
  보안 설정 표시, 미러 데이터베이스 준비, 파트너 설정 및 미러링 모니터 서버 추가 등의 작업을 수행하는 전체 예제는 [데이터베이스 미러링 설정&#40;SQL Server&#41;](database-mirroring-sql-server.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [ALTER DATABASE &#40;Transact-SQL &#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Windows 인증 &#40;SQL Server를 사용 하 여 데이터베이스 미러링 끝점에 대 한 네트워크 액세스 허용&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
- [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
+ [Transact-sql&#41;&#40;Windows 인증에 대 한 데이터베이스 미러링 끝점 만들기](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
  [Transact-sql&#41;&#40;Windows 인증을 사용 하 여 데이터베이스 미러링 세션 설정](database-mirroring-establish-session-windows-authentication.md)   
  [데이터베이스 미러링 세션에서 미러링 모니터 서버를 제거 &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)   
- [데이터베이스 미러링 모니터 서버](database-mirroring-witness.md)  
+ [Database Mirroring Witness](database-mirroring-witness.md)  
   
   

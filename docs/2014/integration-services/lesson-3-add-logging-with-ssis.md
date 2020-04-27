@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e716b808d5d9ada8aeaf50d92006cc6453c6e47d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67046767"
 ---
 # <a name="lesson-3-adding-logging"></a>3단원: 로깅 추가
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 태스크 및 컨테이너 이벤트 추적을 제공 하 여 패키지 실행 문제를 해결 하 고 모니터링할 수 있는 로깅 기능이 포함 되어 있습니다. 로깅 기능은 융통성이 있으므로 패키지 수준 또는 패키지 내의 개별 태스크와 컨테이너에서 사용할 수 있습니다. 로깅하려는 이벤트를 선택하고 단일 패키지에 대해 여러 개의 로그를 만들 수 있습니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 태스크 및 컨테이너 이벤트 추적을 제공하여 패키지 실행을 모니터링하고 문제를 해결할 수 있는 로깅 기능이 포함되어 있습니다. 로깅 기능은 융통성이 있으므로 패키지 수준 또는 패키지 내의 개별 태스크와 컨테이너에서 사용할 수 있습니다. 로깅하려는 이벤트를 선택하고 단일 패키지에 대해 여러 개의 로그를 만들 수 있습니다.  
   
- 로깅은 로그 공급자가 제공합니다. 각 로그 공급자는 다양한 형식과 대상 유형으로 로깅 정보를 작성할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 다음 로그 공급자를 제공 합니다.  
+ 로깅은 로그 공급자가 제공합니다. 각 로그 공급자는 다양한 형식과 대상 유형으로 로깅 정보를 작성할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 다음 로그 공급자를 제공합니다.  
   
 -   텍스트 파일  
   

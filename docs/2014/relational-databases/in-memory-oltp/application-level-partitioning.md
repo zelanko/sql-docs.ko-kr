@@ -11,15 +11,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3b1bc12baf31a0e1d5edb344c538341cf2ad1be0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62468339"
 ---
 # <a name="application-level-partitioning"></a>애플리케이션 수준 분할
-  이 샘플은 날짜 지정 전 또는 후에 내려진 명령에 따라 메모리 최적화 테이블 또는 디스크 기반 테이블에 데이터가 저장되는 애플리케이션 수준의 파티션을 보여줍니다. 
-  *hotDate* 이후의 모든 명령은 메모리 최적화 테이블에 저장되며, *hotDate* 보다 앞선 날짜의 모든 명령은 디스크 기반 테이블에 저장됩니다. 동시 트랜잭션이 많이 있는 극단적인 OLTP 작업을 가정합니다. 여러 개의 동시 트랜잭션이 *hotDate*를 변경하려고 하는 경우에도 이 비즈니스 규칙(메모리 최적화 테이블에 있는 최근 주문)을 적용해야 합니다.  
+  이 샘플은 날짜 지정 전 또는 후에 내려진 명령에 따라 메모리 최적화 테이블 또는 디스크 기반 테이블에 데이터가 저장되는 애플리케이션 수준의 파티션을 보여줍니다. *hotDate* 이후의 모든 명령은 메모리 최적화 테이블에 저장되며, *hotDate* 보다 앞선 날짜의 모든 명령은 디스크 기반 테이블에 저장됩니다. 동시 트랜잭션이 많이 있는 극단적인 OLTP 작업을 가정합니다. 여러 개의 동시 트랜잭션이 *hotDate*를 변경하려고 하는 경우에도 이 비즈니스 규칙(메모리 최적화 테이블에 있는 최근 주문)을 적용해야 합니다.  
   
  이 예제에서는 디스크 기반 테이블에 [분할된 테이블](../partitions/partitioned-tables-and-indexes.md) 을 사용하지 않지만 제 3의 테이블을 사용하여 두 테이블 간의 명시적 분할 지점을 추적합니다. 분할 지점을 사용하여 새로 삽입된 데이터가 날짜에 따라 적절한 테이블에 항상 삽입되도록 할 수 있으며 데이터를 찾을 위치를 결정할 수도 있습니다. 늦게 도착하는 데이터가 여전히 적절한 테이블로 이동합니다.  
   

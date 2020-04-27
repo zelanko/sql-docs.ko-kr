@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67793920"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
@@ -61,7 +61,7 @@ ms.locfileid: "67793920"
   
 -   왼쪽 그림에서 업데이트는 두 서버 사이에 분할됩니다. 예를 들어 데이터베이스에 제품 카탈로그가 포함된 경우 사용자 지정 애플리케이션을 지정하여 A-M으로 시작하는 제품 이름에 대해서는 노드 **A** 로, N-Z로 시작하는 제품 이름에 대해서는 노드 **B** 로 업데이트를 전송하도록 할 수 있습니다. 그러면 이후 업데이트가 노드 간에 상호 복제됩니다.  
   
--   오른쪽에 모든 업데이트가 노드 **B**로 전달 됩니다. 여기에서 업데이트는 노드 **A**로 복제 됩니다. **B** 가 유지 관리를 위해 오프 라인 상태인 경우 응용 프로그램 서버는 모든 작업을에 보낼 수 **있습니다.** **B** 가 다시 온라인 상태가 되 면 업데이트를 전달할 수 있으며, 응용 프로그램 서버는 모든 업데이트를 다시 **B** 로 이동 하거나로 **계속 전달할 수 있습니다.**  
+-   오른쪽 그림에서는 업데이트 내용이 모두 노드 **B**로 전송된 다음 여기에서 노드 **A**로 복제됩니다. **B**가 유지 관리 등의 이유로 오프라인 상태인 경우 애플리케이션 서버는 모든 작업을 **A**로 전달할 수 있습니다. **B**가 다시 온라인 상태가 되면 업데이트 내용을 이동할 수 있으며, 애플리케이션 서버는 모든 업데이트 내용을 다시 **B**로 옮기거나 계속해서 **A**로 전송할 수 있습니다.  
   
  피어 투 피어 복제에는 두 가지 방법이 모두 지원되지만 표준 트랜잭션 복제에서는 오른쪽의 중앙 업데이트 예가 주로 사용됩니다.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "67793920"
   
  각 위치에는 데이터베이스와 애플리케이션 서버가 있어 기술 지원 엔지니어가 고객 통화에 대한 정보를 입력하고 업데이트할 때 사용할 수 있습니다. 토폴로지는 시간별로 분할되므로 현재 업무를 진행 중인 노드에서만 업데이트가 발생하며 이후 다른 참여 데이터베이스로 업데이트 내용이 이동됩니다. 이러한 토폴로지를 사용하면 다음과 같은 이점이 있습니다.  
   
--   지사를 격리하지 않고도 독립적으로 운영할 수 있습니다. 각 지사에서는 데이터를 독립적으로 삽입, 업데이트 또는 삭제할 수 있을 뿐 아니라, 참여하는 다른 모든 데이터베이스에 데이터가 복제되므로 데이터를 공유할 수도 있습니다.  
+-   격리하지 않아도 독립적으로 운영될 수 있습니다. 각 지사에서는 데이터를 독립적으로 삽입, 업데이트 또는 삭제할 수 있지만 참여하는 다른 모든 데이터베이스에 데이터가 복제되므로 데이터를 공유할 수 있습니다.  
   
 -   참여하는 데이터베이스 중 하나 이상에서 오류가 발생하거나 유지 관리가 필요한 경우에도 높은 가용성을 제공합니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67793920"
   
     -   개체 이름, 개체 스키마 및 게시 이름이 동일해야 합니다.  
   
-    -   게시에서 스키마 변경 내용의 복제를 허용해야 합니다(게시 속성 (기본 설정인 **replicate_ddl**게시 속성의 **1** 에 대 한 설정입니다.) 자세한 내용은 [게시 데이터베이스의 스키마 변경](../publish/make-schema-changes-on-publication-databases.md)을 참조 하세요.  
+    -   게시에서 스키마 변경 내용의 복제를 허용해야 합니다(게시 속성 **replicate_ddl**에 대해 기본값인 **1** 설정. 자세한 내용은 [게시 데이터베이스의 스키마 변경](../publish/make-schema-changes-on-publication-databases.md)을 참조하세요.  
   
     -   행 및 열 필터링은 지원되지 않습니다.  
   
@@ -123,8 +123,7 @@ ms.locfileid: "67793920"
   
 -   타임스탬프 열  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 게시자 및 구독자  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 게시자 및 구독자  
   
 -   즉시 업데이트 구독 및 지연 업데이트 구독  
   
@@ -170,8 +169,8 @@ ms.locfileid: "67793920"
 -   피어 투 피어 토폴로지에서 구독을 다시 초기화할 수 없습니다. 노드에 새로운 데이터 복사본을 유지하려면 해당 노드에서 백업을 복원합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [피어 투 피어 토폴로지 관리&#40;복제 Transact-SQL 프로그래밍&#41;](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+ [피어 투 피어 토폴로지 관리 &#40;복제 Transact-sql 프로그래밍&#41;](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [스냅숏 및 트랜잭션 복제의 백업 및 복원을 위한 전략](../administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
- [트랜잭션 복제에 대 한 게시 유형](transactional-replication.md)  
+ [트랜잭션 복제에 대한 게시 유형](transactional-replication.md)  
   
   

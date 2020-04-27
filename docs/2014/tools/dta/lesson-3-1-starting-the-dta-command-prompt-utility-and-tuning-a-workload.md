@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf882bc731c8e435de808092e990b35ad23ce57e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110163"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>dta 명령 프롬프트 유틸리티 시작 및 작업 튜닝
-  이 작업은 **dta** 유틸리티를 시작 하 고 도움말을 본 다음 명령 프롬프트에서 작업을 튜닝 하는 데 사용 하는 과정을 안내 합니다. 이 MyScript 작업을 [튜닝](lesson-1-1-tuning-a-workload.md)하는 GUI (그래픽 사용자 인터페이스)를 데이터베이스 엔진 튜닝 관리자 위해 만든 작업 인를 사용 합니다.  
+   이 태스크에서는 **dta** 유틸리티를 시작하고 도움말을 본 다음, 이 유틸리티를 사용하여 명령 프롬프트에서 작업을 튜닝하는 과정을 안내합니다. 이 MyScript 작업을 [튜닝](lesson-1-1-tuning-a-workload.md)하는 GUI (그래픽 사용자 인터페이스)를 데이터베이스 엔진 튜닝 관리자 위해 만든 작업 인를 사용 합니다.  
   
  이 자습서에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스를 사용합니다. 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다. 예제 데이터베이스를 설치하려면 [SQL Server 예제 및 예제 데이터베이스](http://sqlserversamples.codeplex.com)를 참조하세요.  
   
@@ -28,8 +28,7 @@ ms.locfileid: "66110163"
   
 ### <a name="to-start-the-dta-command-prompt-utility-and-view-help"></a>dta 명령 프롬프트 유틸리티를 시작하고 도움말을 보려면  
   
-1.  
-  **시작** 메뉴에서 **모든 프로그램**, **보조프로그램**을 차례로 가리킨 다음 **명령 프롬프트**를 클릭합니다.  
+1.  **시작** 메뉴에서 **모든 프로그램**, **보조프로그램**을 차례로 가리킨 다음 **명령 프롬프트**를 클릭합니다.  
   
 2.  명령 프롬프트에 다음을 입력하고 Enter 키를 누릅니다.  
   
@@ -49,16 +48,12 @@ ms.locfileid: "66110163"
     dta -S YourServerName\YourSQLServerInstanceName -E -D AdventureWorks2012 -if MyScript.sql -s MySession2 -of MySession2OutputScript.sql -ox MySession2Output.xml -fa IDX_IV -fp NONE -fk NONE  
     ```  
   
-     여기서 `-S` 는 사용 중인 서버 이름과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스가 설치된 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 인스턴스를 지정합니다. 
-  `-E` 설정은 인스턴스에 대해 트러스트된 연결을 사용하도록 지정하는데 이는 Windows 도메인 계정으로 연결할 경우에 적합합니다. 
-  `-D` 설정은 튜닝하려는 데이터베이스를, `-if` 설정은 작업 파일을, `-s` 설정은 세션 이름을, `-of` 설정은 도구에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 권장 구성 스크립트를 작성하려는 파일을, `-ox` 설정은 도구에서 권장 구성을 XML 형식으로 작성하려는 파일을 지정합니다. 마지막 스위치 세 개는 튜닝 옵션을 지정합니다. 즉, `-fa IDX_IV` 는 데이터베이스 엔진 튜닝 관리자가 인덱스(클러스터형과 비클러스터형 모두)와 인덱싱된 뷰만 추가할 것을 고려하도록 지정하고 `-fp NONE` 은 분석하는 동안 어떠한 분할 전략도 고려하지 않도록 지정하며 `-fk NONE` 은 데이터베이스 엔진 튜닝 관리자가 해당 권장 구성을 만들 때 데이터베이스의 어떠한 기존 물리적 디자인 구조도 유지되지 않도록 지정합니다.  
+     여기서 `-S` 는 사용 중인 서버 이름과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스가 설치된 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 인스턴스를 지정합니다. `-E` 설정은 인스턴스에 대해 트러스트된 연결을 사용하도록 지정하는데 이는 Windows 도메인 계정으로 연결할 경우에 적합합니다. `-D` 설정은 튜닝하려는 데이터베이스를, `-if` 설정은 작업 파일을, `-s` 설정은 세션 이름을, `-of` 설정은 도구에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 권장 구성 스크립트를 작성하려는 파일을, `-ox` 설정은 도구에서 권장 구성을 XML 형식으로 작성하려는 파일을 지정합니다. 마지막 스위치 세 개는 튜닝 옵션을 지정합니다. 즉, `-fa IDX_IV` 는 데이터베이스 엔진 튜닝 관리자가 인덱스(클러스터형과 비클러스터형 모두)와 인덱싱된 뷰만 추가할 것을 고려하도록 지정하고 `-fp NONE` 은 분석하는 동안 어떠한 분할 전략도 고려하지 않도록 지정하며 `-fk NONE` 은 데이터베이스 엔진 튜닝 관리자가 해당 권장 구성을 만들 때 데이터베이스의 어떠한 기존 물리적 디자인 구조도 유지되지 않도록 지정합니다.  
   
-3.  데이터베이스 엔진 튜닝 관리자에서 작업 튜닝을 마치면 튜닝 세션이 완료되었다는 메시지가 표시됩니다. 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 로 MySession2OutputScript.sql 및 MySession2Output.xml 파일을 열어서 튜닝 결과를 볼 수 있습니다. 또는 [Viewing Tuning Recommendations](lesson-1-2-viewing-tuning-recommendations.md) 및 [Viewing Tuning Reports](lesson-1-3-viewing-tuning-reports.md)에서와 같은 방법으로 데이터베이스 엔진 튜닝 관리자 GUI에서 MySession2 튜닝 세션을 열고 해당 권장 구성과 보고서를 볼 수도 있습니다.  
+3.  데이터베이스 엔진 튜닝 관리자에서 작업 튜닝을 마치면 튜닝 세션이 완료되었다는 메시지가 표시됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 로 MySession2OutputScript.sql 및 MySession2Output.xml 파일을 열어서 튜닝 결과를 볼 수 있습니다. 또는 [Viewing Tuning Recommendations](lesson-1-2-viewing-tuning-recommendations.md) 및 [Viewing Tuning Reports](lesson-1-3-viewing-tuning-reports.md)에서와 같은 방법으로 데이터베이스 엔진 튜닝 관리자 GUI에서 MySession2 튜닝 세션을 열고 해당 권장 구성과 보고서를 볼 수도 있습니다.  
   
 ## <a name="summary"></a>요약  
- 
-  **dta** 유틸리티를 사용하여 명령 프롬프트에서 단순 작업 튜닝을 완료했습니다. 이 도구는 다른 많은 튜닝 옵션을 제공합니다. 자세한 내용은 도구 도움말(**dta -?**)과 참조 항목 [dta 유틸리티](dta-utility.md) 를 참조하세요.  
+ **dta** 유틸리티를 사용하여 명령 프롬프트에서 단순 작업 튜닝을 완료했습니다. 이 도구는 다른 많은 튜닝 옵션을 제공합니다. 자세한 내용은 도구 도움말(**dta -?**)과 참조 항목 [dta 유틸리티](dta-utility.md) 를 참조하세요.  
   
 ## <a name="after-you-finish-this-tutorial"></a>이 자습서를 마친 후  
  이 자습서의 학습을 마친 후에는 다음 항목을 참조하여 데이터베이스 엔진 튜닝 관리자에 대한 자세한 내용을 보십시오.  

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bdda14df5463fc9bd2a90d990d7c2be35f910d4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189827"
 ---
 # <a name="alert-properties-history-page"></a>경고 속성(기록 페이지)
@@ -32,7 +32,7 @@ ms.locfileid: "68189827"
  **발생 횟수**  
  경고가 생성된 이후 또는 카운트가 마지막으로 다시 설정된 이후에 이벤트가 발생한 총 횟수입니다.  
   
- **카운트 다시 설정**  
+ **카운트 원래대로**  
  이 페이지의 정보를 다시 설정합니다.  
   
 ## <a name="see-also"></a>참고 항목  

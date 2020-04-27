@@ -16,10 +16,10 @@ ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899027"
 ---
 # <a name="functions-on-string-values---contains"></a>문자열 값 함수 - contains
@@ -35,10 +35,10 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
 ```  
   
 ## <a name="arguments"></a>인수  
- *$arg 1*  
+ *$arg1*  
  테스트할 문자열 값입니다.  
   
- *$arg 2*  
+ *$arg2*  
  검색할 하위 문자열입니다.  
   
 ## <a name="remarks"></a>설명  
@@ -48,8 +48,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
   
  contains() 함수는 문자열 비교를 위해 XQuery의 기본 유니코드 코드 포인트 데이터 정렬을 사용합니다.  
   
- *$Arg 2* 에 대해 지정 된 부분 문자열 값은 4000 자 보다 작거나 같아야 합니다. 지정 된 값이 4000 자를 초과 하는 경우 동적 오류 조건이 발생 하 고 contains () 함수는 **true** 또는 **False**의 부울 값 대신 빈 시퀀스를 반환 합니다. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 XQuery 식에서 동적 오류를 발생시키지 않습니다.  
+ *$Arg 2* 에 대해 지정 된 부분 문자열 값은 4000 자 보다 작거나 같아야 합니다. 지정 된 값이 4000 자를 초과 하는 경우 동적 오류 조건이 발생 하 고 contains () 함수는 **true** 또는 **False**의 부울 값 대신 빈 시퀀스를 반환 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 XQuery 식에서 동적 오류를 발생시키지 않습니다.  
   
  대/소문자를 구분 하지 않는 비교를 가져오기 위해 [대문자](../xquery/functions-on-string-values-upper-case.md) 또는 소문자 함수를 사용할 수 있습니다.  
   

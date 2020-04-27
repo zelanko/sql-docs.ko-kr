@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 638ce62d8dd12764681c2b65a271d9ae13bb5d83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189335"
 ---
 # <a name="disable-or-reactivate-an-alert"></a>Disable or Reactivate an Alert
@@ -36,25 +36,24 @@ ms.locfileid: "68189335"
   
      [보안](#Security)  
   
--   **다음을 사용 하 여 경고를 비활성화 하거나 다시 활성화 합니다.**  
+-   **다음을 사용하여 경고를 비활성화하거나 다시 활성화합니다.**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버가 경고의 정보를 편집할 수 있습니다. 다른 사용자는 **msdb** 데이터베이스의 **SQLAgentOperatorRole** 고정 데이터베이스 역할을 부여 받아야 합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-disable-or-reactivate-an-alert"></a>경고를 비활성화하거나 다시 활성화하려면  
   
-1.  
-  **개체 탐색기**에서 더하기 기호를 클릭하여 비활성화하거나 다시 활성화하려는 경고가 포함된 서버를 확장합니다.  
+1.  **개체 탐색기**에서 더하기 기호를 클릭하여 비활성화하거나 다시 활성화하려는 경고가 포함된 서버를 확장합니다.  
   
 2.  더하기 기호를 클릭하여 **SQL Server 에이전트**를 확장합니다.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "68189335"
   
 5.  프로세스의 상태를 나타내는 **경고 비활성화** 또는 **경고 활성화** 대화 상자가 표시됩니다. 완료되면 **닫기**를 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-disable-or-reactivate-an-alert"></a>경고를 비활성화하거나 다시 활성화하려면  
   

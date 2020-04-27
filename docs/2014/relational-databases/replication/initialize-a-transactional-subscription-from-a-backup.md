@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7e7fb32de254729c4173fab260e5797db5f2cc2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67793301"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup-replication-transact-sql-programming"></a>백업에서 트랜잭션 구독 초기화(복제 Transact-SQL 프로그래밍)
@@ -36,7 +36,7 @@ ms.locfileid: "67793301"
   
     -   값이 **0**이면 게시 데이터베이스의 게시자에서 [sp_changepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)을 실행합니다. ** \@속성** 에 **allow_initialize_from_backup** 값을 지정 하 ** \@고 값** `true` 에 값을 지정 합니다.  
   
-2.  새 게시의 경우 게시 데이터베이스의 게시자에서 [sp_addpublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)을 실행합니다. `true` **Allow_initialize_from_backup**에 값을 지정 합니다. 자세한 내용은 [게시 만들기](publish/create-a-publication.md)를 참조하세요.  
+2.  새 게시의 경우 게시 데이터베이스의 게시자에서 [sp_addpublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)을 실행합니다. `true` **Allow_initialize_from_backup**에 값을 지정 합니다. 자세한 내용은 [게시 만들기](publish/create-a-publication.md)를 참조 하세요.  
   
     > [!WARNING]  
     >  구독자 데이터가 누락되는 것을 방지하려면 **에서** sp_addpublication `@allow_initialize_from_backup = N'true'`을 사용할 때 항상 `@immediate_sync = N'true'`를 사용하십시오.  
@@ -70,7 +70,7 @@ ms.locfileid: "67793301"
 7.  (옵션) 배포 에이전트를 시작합니다. 자세한 내용은 [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) 또는 [Synchronize a Push Subscription](synchronize-a-push-subscription.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [백업 및 복원으로 데이터베이스 복사](../databases/copy-databases-with-backup-and-restore.md)   
+ [백업 및 복원을 사용 하 여 데이터베이스 복사](../databases/copy-databases-with-backup-and-restore.md)   
  [SQL Server 데이터베이스 백업 및 복원](../backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
   

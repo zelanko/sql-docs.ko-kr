@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0d9486134e0a9103239853d8378e29aea688c7fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67046659"
 ---
 # <a name="drop-a-sql-server-2014-installation"></a>SQL Server 2014 설치 삭제
@@ -46,7 +46,7 @@ ms.locfileid: "67046659"
   
 -   준비 작업에 실패한 후 장애 조치(Failover) 클러스터 노드를 복구하려면 **노드 제거** 를 사용한 다음 준비 단계를 다시 수행합니다. 자세한 내용은 [SQL Server 장애 조치(failover) 클러스터에서 노드 추가 또는 제거&#40;설치 프로그램&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)을 참조하세요.  
   
-### <a name="to-repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-from-the-installation-center"></a>설치 센터에서 실패한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치를 복구하려면  
+### <a name="to-repair-a-failed-installation-of-ssnoversion-from-the-installation-center"></a>설치 센터에서 실패한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치를 복구하려면  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 미디어를 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램(setup.exe)을 실행합니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "67046659"
   
 8.  복구 진행률 페이지에 복구 작업 상태가 표시됩니다. 완료 페이지에서 작업이 완료되었음을 알려 줍니다.  
   
-### <a name="to-repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-using-command-prompt"></a>명령 프롬프트를 사용하여 실패한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치를 복구하려면  
+### <a name="to-repair-a-failed-installation-of-ssnoversion-using-command-prompt"></a>명령 프롬프트를 사용하여 실패한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치를 복구하려면  
   
 1.  명령 프롬프트에서 다음 명령을 실행합니다.  
   

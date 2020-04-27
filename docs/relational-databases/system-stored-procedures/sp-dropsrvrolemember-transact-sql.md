@@ -18,10 +18,10 @@ ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: 2624ed4800a247b0847adc5839346758aa50f140
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67463569"
 ---
 # <a name="sp_dropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember(Transact-SQL)
@@ -91,5 +91,5 @@ EXEC sp_dropsrvrolemember 'JackO', 'sysadmin';
  [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_addsrvrolemember &#40;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [Transact-sql&#41;sp_droprolemember &#40;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [보안 함수&#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  

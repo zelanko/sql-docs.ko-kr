@@ -13,14 +13,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5b9396ab5a25bba979859ac685c4759b8b01c24d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66428803"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Foreach 루프 편집기(컬렉션 페이지)
-  
   **Foreach 루프 편집기** 대화 상자의 **컬렉션** 페이지를 사용하여 열거자 유형을 지정하고 열거자를 구성할 수 있습니다.  
   
  Foreach 루프 컨테이너와 이를 구성하는 방법은 [Foreach 루프 컨테이너](control-flow/foreach-loop-container.md) 및 [Foreach 루프 컨테이너 구성](../../2014/integration-services/configure-a-foreach-loop-container.md)을 참조하세요.  
@@ -29,7 +28,7 @@ ms.locfileid: "66428803"
  **Enumerator**  
  목록에서 열거자 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**Foreach File 열거자**|파일을 열거합니다. 이 값을 선택하면 아래의 **Foreach File 열거자**섹션에 설명된 동적 옵션이 표시됩니다.|  
 |**Foreach Item 열거자**|항목의 값을 열거합니다. 이 값을 선택하면 아래의 **Foreach Item 열거자**섹션에 설명된 동적 옵션이 표시됩니다.|  
@@ -42,9 +41,9 @@ ms.locfileid: "66428803"
 |**Foreach ADLS File 열거자**|필터를 사용 하 여 ADLS에서 파일을 열거 합니다. 이 값을 선택하면 **Foreach ADLS File 열거자**섹션에 동적 옵션이 표시됩니다.|
   
  **식**  
- 기존 속성 식 목록을 보려면 **식** 을 클릭 또는 확장합니다. 줄임표 단추 **(...)** 를 클릭하여 열거자 속성에 대한 속성 식을 추가하거나 기존 속성 식을 편집 및 평가합니다.  
+ 기존 속성 식 목록을 보려면 **식** 을 클릭 또는 확장합니다. 줄임표 단추 **(...)** 를 클릭 하 여 열거자 속성에 대 한 속성 식을 추가 하거나 기존 속성 식을 편집 및 평가 합니다.  
   
- **관련 항목:**  [Integration Services &#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md), [속성 식 편집기](expressions/property-expressions-editor.md), [식 작성기](expressions/expression-builder.md)  
+ **관련 항목:**  [Integration Services&#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md), [속성 식 편집기](expressions/property-expressions-editor.md), [식 작성기](expressions/expression-builder.md)  
   
 ## <a name="enumerator-dynamic-options"></a>Enumerator 동적 옵션  
   
@@ -75,7 +74,7 @@ ms.locfileid: "66428803"
 >   
 >  식을 사용하여 컬렉션에 포함할 파일을 지정할 수 있습니다. **컬렉션** 페이지에서 **식**을 확장하고 **FileSpec** 속성을 선택한 다음, 줄임표 단추(...)를 클릭하여 속성 식을 추가합니다. 지정 된 파일을 동적으로 선택 하는 방법에 대 한 자세한 내용은 [SSIS-동적으로 파일 마스크 설정: FileSpec](https://rajsudeep.blogspot.com/2010/09/ssisdynamically-set-file-mask-filespec.html) 을 참조 하세요.  
   
- **정규화 된**  
+ **정규화된 이름**  
  파일 이름의 정규화된 경로를 검색하려면 선택합니다. 파일 옵션에서 와일드카드 문자를 지정한 경우 반환된 정규화된 경로가 필터와 일치합니다.  
   
  **이름만**  
@@ -92,7 +91,7 @@ ms.locfileid: "66428803"
   
  프로세스 실행 태스크의 속성을 업데이트하려면 열의 인덱스를 사용하여 변수를 항목 열에 매핑합니다. 인덱스 값은 열거자 항목에 정의된 첫 번째 열에 0, 두 번째 열에 1과 같이 열에 순서대로 지정됩니다. 변수 값은 루프가 반복될 때마다 업데이트됩니다. 그런 다음 프로세스 실행 태스크의 `Executable` 및 `WorkingDirectory` 속성은 이러한 변수를 사용하는 속성 식으로 업데이트할 수 있습니다.  
   
- **For Each Item 컬렉션의 항목 정의**  
+ **For Each Item 컬렉션에 항목 정의**  
  테이블의 각 열에 대한 값을 입력합니다.  
   
 > [!NOTE]  
@@ -116,7 +115,7 @@ ms.locfileid: "66428803"
  변수에 저장된 ADO 또는 ADO.NET 개체의 행이나 테이블을 열거하는 데 Foreach ADO 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 변수에 데이터 세트를 기록하는 스크립트 태스크를 포함하는 경우 Foreach ADO 열거자를 사용하여 데이터 세트의 행을 열거할 수 있습니다. 변수가 ADO.NET 데이터 세트를 포함하는 경우 여러 테이블의 행을 열거하거나 테이블을 열거하도록 열거자를 구성할 수 있습니다.  
   
  **ADO 개체 원본 변수**  
- 목록에서 사용자 정의 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
+ 목록에서 사용자 정의 변수를 선택 하거나 \< **새 변수** ...>를 클릭 하 여 새 변수를 만듭니다.  
   
 > [!NOTE]  
 >  변수에 Object 데이터 형식이 있어야 합니다. 그렇지 않으면 오류가 발생합니다.  
@@ -126,22 +125,22 @@ ms.locfileid: "66428803"
  **첫 번째 테이블의 행**  
  첫 번째 테이블의 행만 열거하려면 선택합니다.  
   
- **모든 테이블의 행 (ADO.NET 데이터 집합에만 해당)**  
+ **모든 테이블의 행(ADO.NET 데이터 세트에만 해당)**  
  모든 테이블의 행을 열거하려면 선택합니다. 이 옵션은 열거할 모든 개체가 같은 ADO.NET 데이터 세트의 멤버인 경우에만 사용할 수 있습니다.  
   
- **모든 테이블 (ADO.NET 데이터 집합에만 해당)**  
+ **모든 테이블(ADO.NET 데이터 세트에만 해당)**  
  테이블만 열거하려면 선택합니다.  
   
 ### <a name="enumerator--foreach-adonet-schema-rowset-enumerator"></a>Enumerator = Foreach ADO.NET 스키마 행 집합 열거자  
  지정한 데이터 원본에 대한 스키마를 열거하는 데 Foreach ADO.NET 스키마 행 집합 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 SQL 실행 태스크를 포함하는 경우 Foreach ADO.NET 스키마 행 집합 열거자를 사용하여 **AdventureWorks** 데이터베이스의 열과 같은 스키마를 열거하고 SQL 실행 태스크를 사용하여 스키마 사용 권한을 가져올 수 있습니다.  
   
  **연결**  
- 목록에서 ADO.NET 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 ADO.NET 연결 관리자를 만듭니다.  
+ 목록에서 ADO.NET 연결 관리자를 선택 하거나 \< **새 연결 ...**>을 클릭 하 여 새 ADO.NET 연결 관리자를 만듭니다.  
   
 > [!IMPORTANT]  
 >  ADO.NET 연결 관리자는 OLE DB용 .NET 공급자를 사용해야 합니다. SQL Server에 연결하는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 연결 관리자 **대화 상자의** OleDb용 .NET 공급자 **섹션에 나열된** Native Client를 공급자로 사용하는 것이 좋습니다.  
   
- **관련 항목:** [ADO 연결 관리자](connection-manager/ado-connection-manager.md), [ADO.NET 연결 관리자 구성](configure-ado-net-connection-manager.md)  
+ **관련 항목:** [ADO Connection Manager](connection-manager/ado-connection-manager.md), [Configure ADO.NET Connection Manager](configure-ado-net-connection-manager.md)  
   
  **스키마**  
  열거할 스키마를 선택합니다.  
@@ -169,58 +168,52 @@ ms.locfileid: "66428803"
  **DocumentSourceType**  
  XML 문서의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
   
  **DocumentSource**  
- 
-  **DocumentSourceType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표(...) 단추를 클릭하고 **문서 원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
+ **DocumentSourceType** 을 **직접 입력**으로 설정한 경우 xml 코드를 입력 하거나 줄임표 (...) 단추를 클릭 하 여 **문서 원본 편집기**대화 상자를 사용 하 여 xml을 제공 합니다.  
   
- 
-  **DocumentSourceType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ **DocumentSourceType** 을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택 하거나 \< **새 연결** ...>을 클릭 하 여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
+ **관련 항목:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- 
-  **DocumentSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
+ **DocumentSourceType** 을 **변수**로 설정한 경우 기존 변수를 선택 하거나 \< **새 변수** ...>를 클릭 하 여 새 변수를 만듭니다.  
   
- **관련 항목:** [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
+ **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
  **EnumerationType**  
  목록에서 열거 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|**탐색기**|XPathNavigator를 사용하여 열거합니다.|  
-|**노드로**|XPath 작업에서 반환한 노드를 열거합니다.|  
+|**Navigator**|XPathNavigator를 사용하여 열거합니다.|  
+|**노드**|XPath 작업에서 반환한 노드를 열거합니다.|  
 |**NodeText**|XPath 작업에서 반환한 텍스트 노드를 열거합니다.|  
 |`ElementCollection`|XPath 작업에서 반환한 요소 노드를 열거합니다.|  
   
  **OuterXPathStringSourceType**  
  XPath 문자열의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
   
  `OuterXPathString`  
- 
-  **OuterXPathStringSourceType** 을 **직접 입력**으로 설정한 경우 XPath 문자열을 입력합니다.  
+ **OuterXPathStringSourceType**을 **직접 입력**으로 설정한 경우 XPath 문자열을 입력합니다.  
   
- 
-  **OuterXPathStringSourceType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ **OuterXPathStringSourceType** 을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택 하거나 \< **새 연결** ...>을 클릭 하 여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
+ **관련 항목:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- 
-  **OuterXPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
+ **OuterXPathStringSourceType** 을 **변수**로 설정한 경우 기존 변수를 선택 하거나 \< **새 변수** ...>를 클릭 하 여 새 변수를 만듭니다.  
   
- **관련 항목:** [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
+ **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
  **InnerElementType**  
  **EnumerationType** 가로 `ElementCollection`설정 된 경우 목록에서 내부 요소의 유형을 선택 합니다.  
@@ -228,35 +221,32 @@ ms.locfileid: "66428803"
  **InnerXPathStringSourceType**  
  내부 XPath 문자열의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
   
  `InnerXPathString`  
- 
-  **InnerXPathStringSourceType** 을 **직접 입력**으로 설정한 경우 XPath 문자열을 입력합니다.  
+ **InnerXPathStringSourceType**을 **직접 입력**으로 설정한 경우 XPath 문자열을 입력합니다.  
   
- 
-  **InnerXPathStringSourceType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ **InnerXPathStringSourceType** 을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택 하거나 \< **새 연결** ...>을 클릭 하 여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
+ **관련 항목:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- 
-  **InnerXPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
+ **InnerXPathStringSourceType** 을 **변수**로 설정한 경우 기존 변수를 선택 하거나 \< **새 변수** ...>를 클릭 하 여 새 변수를 만듭니다.  
   
- **관련 항목:** [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
+ **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
 ### <a name="enumerator--foreach-smo-enumerator"></a>Enumerator = Foreach SMO 열거자  
  SMO(SQL Server Management Objects) 개체를 열거하는 데 Foreach SMO 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 SQL 실행 태스크를 포함하는 경우 Foreach SMO 열거자를 사용하여 **AdventureWorks** 데이터베이스의 테이블을 열거하고 각 테이블의 행 수를 계산하는 쿼리를 실행할 수 있습니다.  
   
  **연결**  
- 기존 ADO.NET 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ 기존 ADO.NET 연결 관리자를 선택 하거나 \< **새 연결 ...**>을 클릭 하 여 새 연결 관리자를 만듭니다.  
   
  관련 항목: [ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](configure-ado-net-connection-manager.md)  
   
- **목록을**  
+ **열거**  
  열거할 SMO 개체를 지정합니다.  
   
  **찾아보기**  
@@ -265,8 +255,7 @@ ms.locfileid: "66428803"
  **관련 항목:** [SMO 열거 선택 대화 상자](../../2014/integration-services/select-smo-enumeration-dialog-box.md)  
   
 ### <a name="enumerator--foreach-azure-blob-enumerator"></a>열거자 = Foreach Azure Blob 열거자  
- 
-  **Azure Blob 열거자**를 사용하면 SSIS 패키지에서 지정된 Blob 위치에 있는 Blob 파일을 열거할 수 있습니다. 열거된 Blob 파일의 이름을 변수에 저장하여 Foreach 루프 컨테이너 내의 작업에서 사용할 수 있습니다.  
+ **Azure Blob 열거자**를 사용하면 SSIS 패키지에서 지정된 Blob 위치에 있는 Blob 파일을 열거할 수 있습니다. 열거된 Blob 파일의 이름을 변수에 저장하여 Foreach 루프 컨테이너 내의 작업에서 사용할 수 있습니다.  
   
  **Azure storage 연결 관리자**  
  기존 Azure Storage 연결 관리자를 선택하거나 Azure Storage 계정을 참조하는 연결 관리자 하나를 새로 만듭니다.  
@@ -282,9 +271,8 @@ ms.locfileid: "66428803"
  **Blob 이름 필터**  
  특정 이름 패턴의 파일을 열거하려면 이름 필터를 지정합니다. 예를 들어 MySheet*.xls\* 는 MySheet001.xls 및 MySheetABC.xlsx와 같은 파일을 포함합니다.  
   
- **Blob 시간 범위 from/to filter**  
- 시간 범위 필터를 지정합니다. 
-  **TimeRangeFrom** 에서 **TimeRangeTo** 사이에 수정된 파일이 열거됩니다.  
+ **Blob 시간 범위 시작/끝 필터**  
+ 시간 범위 필터를 지정합니다. **TimeRangeFrom** 에서 **TimeRangeTo** 사이에 수정된 파일이 열거됩니다.  
 ### <a name="enumerator--foreach-adls-file-enumerator"></a> 열거자 = Foreach ADLS File 열거자  
 **ADLS File 열거자** 를 사용 하면 SSIS 패키지에서 ADLS의 파일을 필터로 열거할 수 있습니다. 슬래시 (`/`)-앞에 열거 된 파일의 전체 경로를 변수에 저장 하 고 Foreach 루프 컨테이너 내의 태스크에서 사용할 수 있습니다.
   

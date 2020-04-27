@@ -16,14 +16,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a557d3dfddf5989c580b0ba78f9b5d930c548617
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67316671"
 ---
 # <a name="custom-messages-for-logging"></a>로깅할 메시지 사용자 지정
-  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]는 패키지 및 여러 태스크에 대한 로그 항목 기록을 위해 다양한 사용자 지정 이벤트 집합을 제공합니다. 이러한 항목을 사용하면 나중에 분석할 수 있도록 미리 정의된 이벤트나 사용자가 정의한 메시지를 기록하여 실행 진행률, 결과 및 문제에 대한 세부 정보를 저장할 수 있습니다. 예를 들면 대량 삽입이 시작되고 끝나는 시간을 기록하여 패키지 실행 시 성능 문제를 식별할 수 있습니다.  
   
  사용자 지정 로그 항목은 패키지 및 모든 컨테이너와 태스크에 사용할 수 있는 표준 로깅 이벤트 집합과는 다른 항목 집합입니다. 사용자 지정 로그 항목은 패키지의 특정 태스크에 대한 유용한 정보를 캡처하도록 조정되어 있습니다. 예를 들어 SQL 실행 태스크에 대한 사용자 지정 로그 항목 중 하나는 해당 태스크에서 실행한 SQL 문을 로그에 기록합니다.  
@@ -76,86 +75,84 @@ ms.locfileid: "67316671"
   
 ## <a name="log-entries"></a>로그 항목  
   
-###  <a name="Package"></a> 패키지  
+###  <a name="package"></a><a name="Package"></a>패키지  
  다음 표에서는 패키지에 대한 사용자 지정 로그 항목을 나열합니다.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |`PackageStart`|패키지 실행이 시작되었음을 나타냅니다.<br /><br /> 참고: 이 로그 항목은 로그에 자동으로 기록되며 제외할 수 없습니다.|  
 |`PackageEnd`|패키지가 완료되었음을 나타냅니다.<br /><br /> 참고: 이 로그 항목은 로그에 자동으로 기록되며 제외할 수 없습니다.|  
-|`Diagnostic`|동시에 실행될 수 있는 실행 파일 수처럼 패키지 실행에 영향을 주는 시스템 구성에 대한 정보를 제공합니다.<br /><br /> 
-  `Diagnostic` 로그 항목에는 외부 데이터 공급자에 대한 호출 전후 항목도 포함됩니다. 자세한 내용은 [패키지 연결 문제 해결 도구](troubleshooting/troubleshooting-tools-for-package-connectivity.md)을 참조하세요.|  
+|`Diagnostic`|동시에 실행될 수 있는 실행 파일 수처럼 패키지 실행에 영향을 주는 시스템 구성에 대한 정보를 제공합니다.<br /><br /> `Diagnostic` 로그 항목에는 외부 데이터 공급자에 대한 호출 전후 항목도 포함됩니다. 자세한 내용은 [패키지 연결 문제 해결 도구](troubleshooting/troubleshooting-tools-for-package-connectivity.md)을 참조하세요.|  
   
-###  <a name="BulkInsert"></a>대량 삽입 태스크  
+###  <a name="bulk-insert-task"></a><a name="BulkInsert"></a>대량 삽입 태스크  
  다음 표에서는 대량 삽입 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |`DTSBulkInsertTaskBegin`|대량 삽입이 시작되었음을 나타냅니다.|  
 |`DTSBulkInsertTaskEnd`|대량 삽입이 완료되었음을 나타냅니다.|  
 |`DTSBulkInsertTaskInfos`|태스크에 대한 설명 정보를 제공합니다.|  
   
-###  <a name="DataFlow"></a>데이터 흐름 태스크  
+###  <a name="data-flow-task"></a><a name="DataFlow"></a>데이터 흐름 태스크  
  다음 표에서는 데이터 흐름 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|데이터 흐름 태스크로 인해 버퍼 크기가 변경되었음을 나타냅니다. 로그 항목은 크기가 변경된 이유를 설명하고 임시 새 버퍼 크기를 나열합니다.|  
 |`OnPipelinePostEndOfRowset`|구성 요소에 `ProcessInput` 메서드의 마지막 호출로 설정된 해당 행 집합 끝 신호를 제공했음을 나타냅니다. 입력을 처리하는 데이터 흐름의 각 구성 요소에 대한 항목이 기록됩니다. 이 항목은 구성 요소의 이름을 포함합니다.|  
 |`OnPipelinePostPrimeOutput`|구성 요소가 `PrimeOutput` 메서드에 대한 마지막 호출을 완료했음을 나타냅니다. 데이터 흐름에 따라 여러 로그 항목이 기록될 수 있습니다. 구성 요소가 원본일 경우에는 구성 요소가 행 처리를 완료했음을 의미합니다.|  
 |`OnPipelinePreEndOfRowset`|구성 요소가 `ProcessInput` 메서드의 마지막 호출로 설정된 해당 행 집합 끝 신호를 수신하려고 함을 나타냅니다. 입력을 처리하는 데이터 흐름의 각 구성 요소에 대한 항목이 기록됩니다. 이 항목은 구성 요소의 이름을 포함합니다.|  
 |`OnPipelinePrePrimeOutput`|구성 요소가 `PrimeOutput` 메서드에서 해당 호출을 수신하려고 함을 나타냅니다. 데이터 흐름에 따라 여러 로그 항목이 기록될 수 있습니다.|  
-|`OnPipelineRowsSent`|
-  `ProcessInput` 메서드 호출로 구성 요소 입력에 제공한 행 수를 보고합니다. 이 로그 항목은 구성 요소 이름을 포함합니다.|  
+|`OnPipelineRowsSent`|`ProcessInput` 메서드 호출로 구성 요소 입력에 제공한 행 수를 보고합니다. 이 로그 항목은 구성 요소 이름을 포함합니다.|  
 |`PipelineBufferLeak`|버퍼 관리자가 없어진 후에 버퍼를 활성 상태로 유지하는 모든 구성 요소에 대한 정보를 제공합니다. 즉, 버퍼 리소스가 릴리스되지 않았기 때문에 메모리 손실이 발생할 수 있음을 나타냅니다. 로그 항목은 구성 요소 이름과 버퍼 ID를 제공합니다.|  
 |`PipelineExecutionPlan`|데이터 흐름의 실행 계획을 보고합니다. 버퍼를 구성 요소로 전송하는 방법에 대한 정보를 제공합니다. 이 정보는 PipelineExecutionTrees 항목과 함께 태스크에서 발생하는 사항에 대해 설명합니다.|  
 |`PipelineExecutionTrees`|데이터 흐름에서 레이아웃 실행 트리를 보고합니다. 데이터 흐름 엔진 스케줄러는 이 트리를 사용하여 데이터 흐름의 실행 계획을 작성합니다.|  
 |`PipelineInitialization`|태스크에 대한 초기화 정보를 제공합니다. 이 정보에 BLOB 데이터의 임시 스토리지에 사용할 디렉터리, 기본 버퍼 크기 및 버퍼의 행 수가 포함됩니다. 데이터 흐름 태스크의 구성에 따라 여러 로그 항목이 기록될 수 있습니다.|  
   
-###  <a name="ExecuteDTS200"></a>DTS 2000 작업 실행  
+###  <a name="execute-dts-2000-task"></a><a name="ExecuteDTS200"></a> DTS 2000 실행 태스크  
  다음 표에서는 DTS 2000 실행 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |`ExecuteDTS80PackageTaskBegin`|태스크에서 DTS 2000 패키지 실행을 시작했음을 나타냅니다.|  
 |`ExecuteDTS80PackageTaskEnd`|태스크가 완료되었음을 나타냅니다.<br /><br /> 참고: DTS 2000 패키지는 태스크가 끝난 후에도 계속 실행됩니다.|  
 |`ExecuteDTS80PackageTaskTaskInfo`|태스크에 대한 설명 정보를 제공합니다.|  
 |`ExecuteDTS80PackageTaskTaskResult`|태스크에서 실행한 DTS 2000 패키지의 실행 결과를 보고합니다.|  
   
-###  <a name="ExecuteProcess"></a>프로세스 실행 태스크  
+###  <a name="execute-process-task"></a><a name="ExecuteProcess"></a>프로세스 실행 태스크  
  다음 표에서는 프로세스 실행 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |`ExecuteProcessExecutingProcess`|태스크에서 실행하도록 구성된 실행 파일의 실행 프로세스에 대한 정보를 제공합니다.<br /><br /> 두 개의 로그 항목이 기록됩니다. 한 항목에는 태스크가 실행하는 실행 파일의 이름과 위치에 대한 정보가 들어 있고 다른 항목은 실행 파일의 종료를 기록합니다.|  
 |`ExecuteProcessVariableRouting`|실행 파일의 입력 및 출력으로 라우팅되는 변수에 대한 정보를 제공합니다. stdin(입력), stdout(출력) 및 stderr(오류 출력)에 대한 로그 항목이 기록됩니다.|  
   
-###  <a name="ExecuteSQL"></a>SQL 실행 태스크  
+###  <a name="execute-sql-task"></a><a name="ExecuteSQL"></a>SQL 실행 태스크  
  다음 표에서는 SQL 실행 태스크에 대한 사용자 지정 로그 항목을 설명합니다.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |`ExecuteSQLExecutingQuery`|SQL 문의 실행 단계에 대한 정보를 제공합니다. 로그 항목은 태스크에서 데이터베이스에 대한 연결을 설정할 때, 태스크에서 SQL 문 준비를 시작할 때 또는 SQL 문 실행이 완료된 후에 기록됩니다. 준비 단계에 대한 로그 항목은 태스크에서 사용하는 SQL 문을 포함합니다.|  
   
-###  <a name="FileSystem"></a>파일 시스템 태스크  
+###  <a name="file-system-task"></a><a name="FileSystem"></a>파일 시스템 태스크  
  다음 표에서는 파일 시스템 태스크에 대한 사용자 지정 로그 항목을 설명합니다.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |`FileSystemOperation`|태스크에서 수행하는 작업을 보고합니다. 이 로그 항목은 파일 시스템 작업이 시작될 때 기록되며 원본 및 대상에 대한 정보를 포함합니다.|  
   
-###  <a name="FTP"></a>FTP 태스크  
+###  <a name="ftp-task"></a><a name="FTP"></a>FTP 태스크  
  다음 표에서는 FTP 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |`FTPConnectingToServer`|태스크에서 FTP 서버에 대한 연결을 시작했음을 나타냅니다.|  
 |`FTPOperation`|태스크에서 수행하는 FTP 작업의 시작 부분과 유형을 보고합니다.|  
   
-###  <a name="MessageQueue"></a>메시지 큐 태스크  
+###  <a name="message-queue-task"></a><a name="MessageQueue"></a>메시지 큐 태스크  
  다음 표에서는 메시지 큐 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |`MSMQAfterOpen`|태스크에서 메시지 큐 열기를 완료했음을 나타냅니다.|  
 |`MSMQBeforeOpen`|태스크에서 메시지 큐 열기를 시작했음을 나타냅니다.|  
@@ -166,101 +163,100 @@ ms.locfileid: "67316671"
 |`MSMQTaskInfo`|태스크에 대한 설명 정보를 제공합니다.|  
 |`MSMQTaskTimeOut`|태스크 시간이 초과되었음을 나타냅니다.|  
   
-###  <a name="Script"></a>스크립트 태스크  
+###  <a name="script-task"></a><a name="Script"></a>스크립트 태스크  
  다음 표에서는 스크립트 태스크에 대한 사용자 지정 로그 항목을 설명합니다.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
-|`ScriptTaskLogEntry`|스크립트에서 로깅을 구현한 결과를 보고합니다. 
-  `Log` 개체의 `Dts` 메서드 호출에 대해 각각 로그 항목이 기록됩니다. 이 항목은 코드가 실행되면 기록됩니다. 자세한 내용은 [Logging in the Script Task](extending-packages-scripting/task/logging-in-the-script-task.md)을 참조하세요.|  
+|`ScriptTaskLogEntry`|스크립트에서 로깅을 구현한 결과를 보고합니다. `Log` 개체의 `Dts` 메서드 호출에 대해 각각 로그 항목이 기록됩니다. 이 항목은 코드가 실행되면 기록됩니다. 자세한 내용은 [Logging in the Script Task](extending-packages-scripting/task/logging-in-the-script-task.md)을 참조하세요.|  
   
-###  <a name="SendMail"></a>메일 보내기 태스크  
+###  <a name="send-mail-task"></a><a name="SendMail"></a>메일 보내기 태스크  
  다음 표에서는 메일 보내기 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |`SendMailTaskBegin`|태스크에서 전자 메일 메시지 보내기를 시작했음을 나타냅니다.|  
 |`SendMailTaskEnd`|태스크에서 전자 메일 메시지 보내기를 완료했음을 나타냅니다.|  
 |`SendMailTaskInfo`|태스크에 대한 설명 정보를 제공합니다.|  
   
-###  <a name="TransferDatabase"></a>데이터베이스 전송 태스크  
+###  <a name="transfer-database-task"></a><a name="TransferDatabase"></a>데이터베이스 전송 태스크  
  다음 표에서는 데이터베이스 전송 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |`SourceDB`|태스크에서 복사한 데이터베이스를 지정합니다.|  
 |`SourceSQLServer`|데이터베이스를 복사한 컴퓨터를 지정합니다.|  
   
-###  <a name="TransferErrorMessages"></a>오류 메시지 전송 태스크  
+###  <a name="transfer-error-messages-task"></a><a name="TransferErrorMessages"></a>오류 메시지 전송 태스크  
  다음 표에서는 오류 메시지 전송 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |`TransferErrorMessagesTaskFinishedTransferringObjects`|태스크에서 오류 메시지 전송을 완료했음을 나타냅니다.|  
 |`TransferErrorMessagesTaskStartTransferringObjects`|태스크에서 오류 메시지 전송을 시작했음을 나타냅니다.|  
   
-###  <a name="TransferJobs"></a>작업 전송 태스크  
+###  <a name="transfer-jobs-task"></a><a name="TransferJobs"></a>작업 전송 태스크  
  다음 표에서는 작업 전송 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |`TransferJobsTaskFinishedTransferringObjects`|태스크에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 작업 전송을 완료했음을 나타냅니다.|  
 |`TransferJobsTaskStartTransferringObjects`|태스크에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 작업 전송을 시작했음을 나타냅니다.|  
   
-###  <a name="TransferLogins"></a>로그인 전송 태스크  
+###  <a name="transfer-logins-task"></a><a name="TransferLogins"></a>로그인 전송 태스크  
  다음 표에서는 로그인 전송 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |`TransferLoginsTaskFinishedTransferringObjects`|태스크에서 로그인 전송을 완료했음을 나타냅니다.|  
 |`TransferLoginsTaskStartTransferringObjects`|태스크에서 로그인 전송을 시작했음을 나타냅니다.|  
   
-###  <a name="TransferMasterStoredProcedures"></a>Master 저장 프로시저 전송 태스크  
+###  <a name="transfer-master-stored-procedures-task"></a><a name="TransferMasterStoredProcedures"></a>Master 저장 프로시저 전송 태스크  
  다음 표에서는 Master 저장 프로시저 전송 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |`TransferStoredProceduresTaskFinishedTransferringObjects`|태스크에서 **master** 데이터베이스에 저장된 사용자 정의 저장 프로시저 전송을 완료했음을 나타냅니다.|  
 |`TransferStoredProceduresTaskStartTransferringObjects`|태스크에서 **master** 데이터베이스에 저장된 사용자 정의 저장 프로시저 전송을 시작했음을 나타냅니다.|  
   
-###  <a name="TransferSQLServerObjects"></a>SQL Server 개체 전송 태스크  
+###  <a name="transfer-sql-server-objects-task"></a><a name="TransferSQLServerObjects"></a>SQL Server 개체 전송 태스크  
  다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체 전송 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |`TransferSqlServerObjectsTaskFinishedTransferringObjects`|태스크에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 개체 전송을 완료했음을 나타냅니다.|  
 |`TransferSqlServerObjectsTaskStartTransferringObjects`|태스크에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 개체 전송을 시작했음을 나타냅니다.|  
   
-###  <a name="WebServices"></a>웹 서비스 태스크  
+###  <a name="web-services-task"></a><a name="WebServices"></a> 웹 서비스 태스크  
  다음 표에서는 웹 서비스 태스크에 사용할 수 있는 사용자 지정 로그 항목을 나열합니다.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |`WSTaskBegin`|태스크에서 웹 서비스 액세스를 시작했습니다.|  
 |`WSTaskEnd`|태스크에서 웹 서비스 메서드를 완료했습니다.|  
 |`WSTaskInfo`|태스크에 대한 설명 정보입니다.|  
   
-###  <a name="WMIDataReader"></a>WMI 데이터 판독기 태스크  
+###  <a name="wmi-data-reader-task"></a><a name="WMIDataReader"></a>WMI 데이터 판독기 태스크  
  다음 표에서는 WMI 데이터 판독기 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |`WMIDataReaderGettingWMIData`|태스크에서 WMI 데이터 읽기를 시작했음을 나타냅니다.|  
 |`WMIDataReaderOperation`|태스크에서 실행한 WQL 쿼리를 보고합니다.|  
   
-###  <a name="WMIEventWatcher"></a>WMI 이벤트 감시자 태스크  
+###  <a name="wmi-event-watcher-task"></a><a name="WMIEventWatcher"></a>WMI 이벤트 감시자 태스크  
  다음 표에서는 WMI 이벤트 감시자 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |`WMIEventWatcherEventOccurred`|태스크에서 모니터링하고 있는 이벤트가 발생했음을 나타냅니다.|  
 |`WMIEventWatcherTimedout`|태스크 시간이 초과되었음을 나타냅니다.|  
 |`WMIEventWatcherWatchingForWMIEvents`|태스크에서 WQL 쿼리 실행을 시작했음을 나타냅니다. 이 항목은 해당 쿼리를 포함합니다.|  
   
-###  <a name="XML"></a>XML 태스크  
+###  <a name="xml-task"></a><a name="XML"></a>XML 태스크  
  다음 표에서는 XML 태스크에 대한 사용자 지정 로그 항목을 설명합니다.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |`XMLOperation`|태스크에서 수행한 작업에 대한 정보를 제공합니다.|   
   

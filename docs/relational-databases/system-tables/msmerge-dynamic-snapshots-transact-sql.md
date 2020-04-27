@@ -18,10 +18,10 @@ ms.assetid: a5592b3c-731b-4fc9-ae4b-2602ed78248e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5a6b0660635812a216525665832b0f16f64538b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67894940"
 ---
 # <a name="msmerge_dynamic_snapshots-transact-sql"></a>MSmerge_dynamic_snapshots(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67894940"
 
   **MSmerge_dynamic_snapshots** 테이블은 매개 변수가 있는 행 필터를 사용 하 여 병합 게시에 대해 정의 된 각 파티션에 대해 필터링 된 데이터 스냅숏의 위치를 추적 합니다. 이 테이블은 **게시** 데이터베이스에 저장 됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**int**|병합 파티션의 ID입니다.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|파티션에 대한 필터링된 데이터 스냅샷의 위치입니다.|  

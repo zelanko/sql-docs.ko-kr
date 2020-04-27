@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b79da95e2709e2bb5ff3a3d76cac06b2a4268f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189391"
 ---
 # <a name="designate-an-events-forwarding-server-sql-server-management-studio"></a>Designate an Events Forwarding Server (SQL Server Management Studio)
@@ -30,42 +30,37 @@ ms.locfileid: "68189391"
   
      [보안](#Security)  
   
--   **다음을 사용 하 여 이벤트 전달 서버를 지정 합니다.**  
+-   **다음을 사용하여 이벤트 전달 서버를 지정합니다.**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-designate-an-events-forwarding-server"></a>이벤트 전달 서버를 지정하려면  
   
-1.  
-  **개체 탐색기** 에서 더하기 기호를 클릭하여 이벤트를 다른 서버로 전달하려는 서버를 확장합니다.  
+1.  **개체 탐색기** 에서 더하기 기호를 클릭하여 이벤트를 다른 서버로 전달하려는 서버를 확장합니다.  
   
 2.  **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.  
 
-3.  
-  **SQL Server 에이전트 속성 -**_server_name_ 대화 상자의 **페이지 선택** 아래에서 **고급**을 선택합니다.  
+3.  **SQL Server 에이전트 속성 -**_server_name_ 대화 상자의 **페이지 선택** 아래에서 **고급**을 선택합니다.  
 
-4.  
-  **SQL Server 이벤트 전달**아래에서 **다른 서버로 이벤트 전달** 확인란을 선택합니다.  
+4.  **SQL Server 이벤트 전달**아래에서 **다른 서버로 이벤트 전달** 확인란을 선택합니다.  
   
-5.  
-  **서버** 목록에서 서버를 선택하고 **이벤트**에서 다음 중 하나를 수행합니다.  
+5.  **서버** 목록에서 서버를 선택하고 **이벤트**에서 다음 중 하나를 수행합니다.  
   
     -   로컬 경고로 처리되지 않은 이벤트만 전달하려면 **처리되지 않은 이벤트** 를 선택합니다.  
   
     -   로컬 경고로 처리되었는지 여부에 관계 없이 모든 이벤트를 전달하려면 **모든 이벤트** 를 선택합니다.  
   
-6.  
-  **이벤트의 심각도가 다음 이상인 경우** 목록에서 선택한 서버로 이벤트가 전달되는 심각도 수준을 클릭합니다.  
+6.  **이벤트의 심각도가 다음 이상인 경우** 목록에서 선택한 서버로 이벤트가 전달되는 심각도 수준을 클릭합니다.  
   
-7.  완료되었으면 **확인**을 클릭합니다.  
+7.  작업을 완료한 후 **확인**을 클릭합니다.  
   
   

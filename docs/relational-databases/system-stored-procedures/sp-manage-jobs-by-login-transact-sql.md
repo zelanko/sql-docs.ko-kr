@@ -18,10 +18,10 @@ ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ebc71c304939a977ac34cc2fad819edd463614fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67894990"
 ---
 # <a name="sp_manage_jobs_by_login-transact-sql"></a>sp_manage_jobs_by_login(Transact-SQL)
@@ -52,7 +52,7 @@ sp_manage_jobs_by_login
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- None  
+ 없음  
   
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행 하려면 사용자에 게 **sysadmin** 고정 서버 역할을 부여 해야 합니다.  
