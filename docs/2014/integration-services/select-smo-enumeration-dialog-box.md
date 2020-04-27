@@ -15,33 +15,32 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3b9166e26129710a342411ab1da71b1c44c76239
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055947"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>SMO 열거 선택 대화 상자
-  
   **SMO 열거 선택** 대화 상자를 사용하여 지정한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 열거할 SMO( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects) 개체를 지정할 수 있고 열거형을 선택할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
- **목록을**  
+ **열거**  
  서버를 확장한 다음 SMO 개체를 선택합니다.  
   
  **개체**  
  Objects 열거형을 사용합니다.  
   
- **미리**  
+ **미리 채우기**  
  Objects 열거형과 함께 **미리 채우기** 옵션을 사용합니다.  
   
- **이름**  
+ **이름을**  
  Names 열거형을 사용합니다.  
   
- **Urn**  
+ **URN**  
  URNs 열거형을 사용합니다.  
   
- **위치도**  
+ **위치**  
  Locations 열거형을 사용합니다. 이 옵션은 파일에 대해서만 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

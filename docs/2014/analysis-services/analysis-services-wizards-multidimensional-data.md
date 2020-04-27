@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b922581c657bc45a1bb404a1f803e7a525bb8d42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062384"
 ---
 # <a name="analysis-services-wizards-multidimensional-data"></a>Analysis Services 마법사(다차원 데이터)
@@ -24,7 +24,7 @@ ms.locfileid: "66062384"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[집계 디자인 마법사 F1 도움말](aggregation-design-wizard-f1-help.md)|집계 디자인 마법사를 사용하여 측정값 그룹의 파티션에 대한 집계 인스턴스를 만드는 데 사용되는 집계 디자인에 대한 집계를 정의할 수 있습니다.|  
 |[비즈니스 인텔리전스 마법사 F1 도움말](business-intelligence-wizard-f1-help.md)|비즈니스 인텔리전스 마법사를 사용하여 계정 인텔리전스 및 통화 변환과 같은 고급 비즈니스 인텔리전스 기능을 큐브 또는 차원에 추가할 수 있습니다.|  

@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0838367ad699c1278bb6ec42f28161ba76c6fd5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064785"
 ---
 # <a name="get-the-fields-for-all-events"></a>모든 이벤트에 대한 필드 가져오기
@@ -38,8 +38,7 @@ ms.locfileid: "66064785"
  위의 정보는 버킷팅 대상을 사용하는 이벤트 세션을 구성하는 경우 사용할 수 있습니다. 자세한 내용은 [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md)을 참조하세요.  
   
 ## <a name="before-you-begin"></a>시작하기 전에  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 확장 이벤트 세션을 만들기 전에 이벤트와 연관된 필드에 대한 정보를 얻는 것이 좋습니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 확장 이벤트 세션을 만들기 전에 이벤트와 연관된 필드에 대한 정보를 얻는 것이 좋습니다.  
   
 ## <a name="to-get-the-fields-for-all-events-using-query-editor"></a>쿼리 편집기를 사용하여 모든 이벤트에 대한 필드를 가져오려면  
   

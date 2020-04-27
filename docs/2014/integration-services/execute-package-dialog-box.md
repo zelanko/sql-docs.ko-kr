@@ -14,18 +14,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b4b920b17e960059e1212be7dd15c176c0b25a47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059191"
 ---
 # <a name="execute-package-dialog-box"></a>Execute Package Dialog Box
-  
   **패키지 실행** 대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 저장된 패키지를 실행할 수 있습니다.  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지는 환경 변수에 값이 저장된 매개 변수를 포함할 수 있습니다. 이러한 패키지를 실행하려면 먼저 환경 변수 값을 제공하는 데 사용할 환경을 지정해야 합니다. 프로젝트에 여러 환경을 포함할 수는 있지만 실행할 때는 하나의 환경만 사용하여 환경 변수 값을 바인딩할 수 있습니다. 패키지에 사용되는 환경 변수가 없는 경우에는 환경이 필요하지 않습니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지는 환경 변수에 값이 저장된 매개 변수를 포함할 수 있습니다. 이러한 패키지를 실행하려면 먼저 환경 변수 값을 제공하는 데 사용할 환경을 지정해야 합니다. 프로젝트에 여러 환경을 포함할 수는 있지만 실행할 때는 하나의 환경만 사용하여 환경 변수 값을 바인딩할 수 있습니다. 패키지에 사용되는 환경 변수가 없는 경우에는 환경이 필요하지 않습니다.  
   
  수행 작업  
   
@@ -41,7 +39,7 @@ ms.locfileid: "66059191"
   
 -   [패키지 실행 대화 상자의 옵션 스크립팅](#script)  
   
-##  <a name="open_dialog"></a>패키지 실행 대화 상자 열기  
+##  <a name="open-the-execute-package-dialog-box"></a><a name="open_dialog"></a>패키지 실행 대화 상자 열기  
   
 1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 연결합니다.  
   
@@ -55,18 +53,16 @@ ms.locfileid: "66059191"
   
 5.  패키지를 마우스 오른쪽 단추로 클릭하고 **실행**을 클릭합니다.  
   
-##  <a name="general"></a>일반 페이지에서 옵션 설정  
- 
-  **환경** 을 선택하여 패키지 실행 시 적용할 환경을 지정합니다.  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a>일반 페이지에서 옵션 설정  
+ **환경** 을 선택하여 패키지 실행 시 적용할 환경을 지정합니다.  
   
-##  <a name="parameters"></a>매개 변수 탭에서 옵션 설정  
- 
-  **매개 변수** 탭에서 패키지 실행 시 사용되는 매개 변수 값을 수정합니다.  
+##  <a name="set-the-options-on-the-parameters-tab"></a><a name="parameters"></a>매개 변수 탭에서 옵션 설정  
+ **매개 변수** 탭에서 패키지 실행 시 사용되는 매개 변수 값을 수정합니다.  
   
-##  <a name="connection"></a>연결 관리자 탭에서 옵션 설정  
+##  <a name="set-the-options-on-the-connection-managers-tab"></a><a name="connection"></a>연결 관리자 탭에서 옵션 설정  
  연결 관리자 탭에서 패키지 연결 관리자 속성을 설정합니다.  
   
-##  <a name="advanced"></a>고급 탭에서 옵션 설정  
+##  <a name="set-the-options-on-the-advanced-tab"></a><a name="advanced"></a>고급 탭에서 옵션 설정  
  고급 탭에서 속성 및 기타 패키지 설정을 관리합니다.  
   
  **추가**, **편집**, **제거**  
@@ -81,8 +77,7 @@ ms.locfileid: "66059191"
  **32비트 런타임**  
  패키지가 32비트 시스템에서 실행되도록 지정합니다.  
   
-##  <a name="script"></a>패키지 실행 대화 상자의 옵션 스크립팅  
- 
-  **패키지 실행** 대화 상자에 있는 동안 도구 모음의 **스크립트** 단추를 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 코드를 작성할 수도 있습니다. 생성된 스크립트는 [패키지 실행](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database) 대화 상자에서 선택한 것과 동일한 옵션으로 **catalog.start_execution&#40;SSISDB 데이터베이스&#41;** 저장 프로시저를 호출합니다. 이 스크립트는 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]의 새 스크립트 창에 표시됩니다.  
+##  <a name="scripting-the-options-in-the-execute-package-dialog-box"></a><a name="script"></a>패키지 실행 대화 상자의 옵션 스크립팅  
+ **패키지 실행** 대화 상자에 있는 동안 도구 모음의 **스크립트** 단추를 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 코드를 작성할 수도 있습니다. 생성된 스크립트는 **패키지 실행** 대화 상자에서 선택한 것과 동일한 옵션으로 [catalog.start_execution&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database) 저장 프로시저를 호출합니다. 이 스크립트는 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]의 새 스크립트 창에 표시됩니다.  
   
   

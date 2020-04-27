@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 431e01df40ab3a531af21977b85253d84768118f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059748"
 ---
 # <a name="data-mining-query-transformation-editor-query-tab"></a>데이터 마이닝 쿼리 변환 편집기(쿼리 탭)
-  
   **데이터 마이닝 쿼리 변환 편집기** 대화 상자의 **쿼리** 탭을 사용하여 예측 쿼리를 만들 수 있습니다.  
   
  데이터 마이닝 쿼리 변환에 대한 자세한 내용은 [Data Mining Query Transformation](data-flow/transformations/data-mining-query-transformation.md)을 참조하십시오.  
@@ -36,6 +35,6 @@ ms.locfileid: "66059748"
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [데이터 마이닝 쿼리 변환 편집기 &#40;마이닝 모델 탭&#41;](../../2014/integration-services/data-mining-query-transformation-editor-mining-model-tab.md)  
+ [데이터 마이닝 쿼리 변환 편집기&#40;마이닝 모델 탭&#41;](../../2014/integration-services/data-mining-query-transformation-editor-mining-model-tab.md)  
   
   

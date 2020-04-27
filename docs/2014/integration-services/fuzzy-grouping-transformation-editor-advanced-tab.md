@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dcebe499eb80fbe01b9aa36a4e07785846eaf621
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058367"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>유사 항목 그룹화 변환 편집기(고급 탭)
-  
   **유사 항목 그룹화 변환 편집기** 대화 상자의 **고급** 탭을 사용하여 입/출력 열을 지정하고, 유사성 임계값을 설정하고, 구분 기호를 정의할 수 있습니다.  
   
 > [!NOTE]  
@@ -32,12 +31,10 @@ ms.locfileid: "66058367"
   
 ## <a name="options"></a>옵션  
  **입력 키 열 이름**  
- 각 입력 행에 대한 고유 식별자를 포함하는 출력 열의 이름을 지정합니다. 
-  `_key_in` 열에는 각 행을 고유하게 식별하는 값이 있습니다.  
+ 각 입력 행에 대한 고유 식별자를 포함하는 출력 열의 이름을 지정합니다. `_key_in` 열에는 각 행을 고유하게 식별하는 값이 있습니다.  
   
  **출력 키 열 이름**  
- 중복 행 그룹의 정식 행에 대한 고유 식별자를 포함하는 출력 열의 이름을 지정합니다. 
-  `_key_out` 열은 정식 데이터 행의 `_key_in` 값에 해당합니다.  
+ 중복 행 그룹의 정식 행에 대한 고유 식별자를 포함하는 출력 열의 이름을 지정합니다. `_key_out` 열은 정식 데이터 행의 `_key_in` 값에 해당합니다.  
   
  **유사성 점수 열 이름**  
  유사성 점수를 포함하는 열의 이름을 지정합니다. 유사성 점수는 입력 행과 정식 행의 유사성을 나타내는 0과 1 사이의 값입니다. 정식 행과 더 비슷하게 일치할수록 점수가 1에 가까워집니다.  

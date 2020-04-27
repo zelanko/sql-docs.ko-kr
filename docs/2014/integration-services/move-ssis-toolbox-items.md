@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7bcb7001f9be0812d369a0c1c8db6689d736be1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057556"
 ---
 # <a name="move-ssis-toolbox-items"></a>SSIS 도구 상자 항목 이동
@@ -26,7 +26,7 @@ ms.locfileid: "66057556"
   
     -   **즐겨찾기로 이동**  
   
-    -   **일반으로 이동**  
+    -   **공용으로 이동**  
   
     -   **다른 원본으로 이동**  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66057556"
   
     -   **다른 변환으로 이동**  
   
-    -   **다른 작업으로 이동**  
+    -   **다른 태스크로 이동**  
   
 ### <a name="to-refresh-the-ssis-toolbox"></a>SSIS 도구 상자를 새로 고치려면  
   

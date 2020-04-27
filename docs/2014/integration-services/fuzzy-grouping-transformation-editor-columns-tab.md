@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a97225797380294968f1af595f1299e478d548d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058363"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>유사 항목 그룹화 변환 편집기(열 탭)
-  
   **유사 항목 그룹화 변환 편집기** 대화 상자의 **열** 탭을 사용하여 중복 값을 가진 행을 그룹화하는 데 사용할 열을 지정할 수 있습니다.  
   
  유사 항목 그룹화 변환에 대한 자세한 내용은 [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md)을 참조하십시오.  
@@ -38,8 +37,7 @@ ms.locfileid: "66058363"
  입력 열을 변환의 출력에 포함할지 여부를 선택합니다. 그룹화에 사용되는 모든 열이 자동으로 출력에 복사됩니다. 이 열을 선택하여 추가 열을 포함할 수 있습니다.  
   
  **입력 열**  
- 
-  **사용 가능한 입력 열** 목록에서 이전에 선택한 입력 열 중 하나를 선택합니다.  
+ **사용 가능한 입력 열** 목록에서 이전에 선택한 입력 열 중 하나를 선택합니다.  
   
  **출력 별칭**  
  해당 출력 열을 설명하는 이름을 입력합니다. 기본적으로 출력 열 이름은 입력 열 이름과 같습니다.  
@@ -59,11 +57,11 @@ ms.locfileid: "66058363"
  **숫자**  
  열 데이터 비교 시 선행 및 후행 숫자의 의미를 지정합니다. 예를 들어 선행 숫자가 의미가 있을 경우 "123 Main Street"는 "456 Main Street"와 그룹화되지 않습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|**아니면**|선행 및 후행 숫자 모두 의미가 없습니다.|  
+|**Neither**|선행 및 후행 숫자 모두 의미가 없습니다.|  
 |**붙지**|선행 숫자만 의미가 있습니다.|  
-|**붙이지**|후행 숫자만 의미가 있습니다.|  
+|**Trailing**|후행 숫자만 의미가 있습니다.|  
 |**LeadingAndTrailing**|선행 및 후행 숫자 모두 의미가 있습니다.|  
   
  **비교 플래그**  

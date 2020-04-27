@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97e44dc259c79c7bb1aef5cc5cbff8b06dc6c48e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068753"
 ---
 # <a name="set-currency-conversion-options-business-intelligence-wizard"></a>통화 변환 옵션 설정(비즈니스 인텔리전스 마법사)
-  
   **통화 변환 옵션 설정** 페이지를 사용하여 환율이 포함된 측정값 그룹에 대해 통화 변환 계산을 정의할 수 있습니다.  
   
 > [!NOTE]  

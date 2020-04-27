@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: becd97e843909a5d7bc181dfdf1060988836ee3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055487"
 ---
 # <a name="sort-transformation-editor"></a>정렬 변환 편집기
-  
   **정렬 변환 편집기** 대화 상자를 사용하여 정렬할 열을 선택하고, 정렬 순서를 설정하고, 중복을 제거할지 여부를 지정할 수 있습니다.  
   
  정렬 변환에 대한 자세한 내용은 [Sort Transformation](data-flow/transformations/sort-transformation.md)을 참조하십시오.  
@@ -52,7 +51,7 @@ ms.locfileid: "66055487"
  **비교 플래그**  
  문자열 비교 옵션에 대한 자세한 내용은 [문자열 데이터 비교](data-flow/comparing-string-data.md)를 참조하세요.  
   
- **중복 된 정렬 값이 있는 행 제거**  
+ **중복되는 정렬 값이 있는 행 제거**  
  지정한 문자열 비교 옵션을 기반으로 변환에서 중복 행을 변환 출력에 복사할 것인지, 아니면 모든 중복에 대한 단일 항목을 만들 것인지를 나타냅니다.  
   
 ## <a name="see-also"></a>참고 항목  

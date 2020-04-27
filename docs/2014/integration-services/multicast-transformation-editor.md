@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c4013483838f81e9147eb45c84598c9cc73016fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057618"
 ---
 # <a name="multicast-transformation-editor"></a>멀티캐스트 변환 편집기
@@ -27,7 +27,7 @@ ms.locfileid: "66057618"
  멀티캐스트 변환에 대한 자세한 내용은 [Multicast Transformation](data-flow/transformations/multicast-transformation.md)을 참조하십시오.  
   
 ## <a name="options"></a>옵션  
- **Outputs**  
+ **outputs**  
  왼쪽에서 출력을 선택하여 오른쪽에 있는 테이블에서 해당 속성을 확인합니다.  
   
  **속성**  

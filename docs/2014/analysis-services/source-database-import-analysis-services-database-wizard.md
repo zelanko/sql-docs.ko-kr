@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7af29b6a9ea8decb6739052ed1cb06f62547b46f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068569"
 ---
 # <a name="source-database-import-analysis-services-database-wizard"></a>원본 데이터베이스(Analysis Services 데이터베이스 가져오기 마법사)
-  
   **원본 데이터베이스** 페이지를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 만들 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스 및 데이터베이스를 선택할 수 있습니다.  
   
 ## <a name="options"></a>옵션  

@@ -18,15 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 68455f23f5d05895af8f0cfb4d7b1e12e3d65b16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061903"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>선행 제약 조건에 식 추가
-  선행 제약 조건에서는 식을 사용하여 선행 실행 개체 및 제약 조건이 지정된 실행 개체 간의 제약 조건을 정의할 수 있습니다. 실행 개체는 태스크 또는 컨테이너일 수 있습니다. 식은 단독으로 사용되거나 선행 실행 개체의 실행 결과와 함께 사용될 수 있습니다. 실행 개체의 실행 결과는 성공 또는 실패입니다. 선행 제약 조건의 실행 결과를 구성할 경우 `Success`, `Failure` 또는 `Completion`으로 실행 결과를 지정할 수 있습니다. 
-  `Success`로 설정하려면 선행 실행 개체가 성공해야 하며, `Failure`는 선행 실행 개체가 실패해야 하며, `Completion`은 선행 태스크의 성공 또는 실패 여부에 관계없이 제약 조건이 지정된 실행 개체가 실행되어야 함을 나타냅니다. 자세한 내용은 [Precedence Constraints](control-flow/precedence-constraints.md)을(를) 참조하세요.  
+  선행 제약 조건에서는 식을 사용하여 선행 실행 개체 및 제약 조건이 지정된 실행 개체 간의 제약 조건을 정의할 수 있습니다. 실행 개체는 태스크 또는 컨테이너일 수 있습니다. 식은 단독으로 사용되거나 선행 실행 개체의 실행 결과와 함께 사용될 수 있습니다. 실행 개체의 실행 결과는 성공 또는 실패입니다. 선행 제약 조건의 실행 결과를 구성할 경우 `Success`, `Failure` 또는 `Completion`으로 실행 결과를 지정할 수 있습니다. `Success`로 설정하려면 선행 실행 개체가 성공해야 하며, `Failure`는 선행 실행 개체가 실패해야 하며, `Completion`은 선행 태스크의 성공 또는 실패 여부에 관계없이 제약 조건이 지정된 실행 개체가 실행되어야 함을 나타냅니다. 자세한 내용은 [Precedence Constraints](control-flow/precedence-constraints.md)을(를) 참조하세요.  
   
  식은 `True` 또는 `False`로 계산되어야 하며 유효한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 식이어야 합니다. 식에서는 문자, 시스템 및 사용자 지정 변수와 [!INCLUDE[ssIS](../includes/ssis-md.md)] 식 문법에서 제공하는 함수와 연산자를 사용할 수 있습니다. 예를 들어 `@Count == SQRT(144) + 10` 식에서는 `Count` 변수, SQRT 함수 및 등호(==)와 더하기(+) 연산자가 사용되었습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md)가 될 때까지 워크플로를 반복합니다.  
   
@@ -38,8 +37,7 @@ ms.locfileid: "66061903"
   
  ![선행 제약 조건의 식](media/mw-dts-04.gif "선행 제약 조건의 식")  
   
- 
-  **디자이너에서** 선행 제약 조건 편집기 [!INCLUDE[ssIS](../includes/ssis-md.md)] 를 사용하거나 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에서 제공하는 속성 창을 사용하여 식을 추가하거나 수정할 수 있습니다. 하지만 속성 창에는 식 구문에 대한 검사 기능이 제공되지 않습니다.  
+ **디자이너에서** 선행 제약 조건 편집기 [!INCLUDE[ssIS](../includes/ssis-md.md)] 를 사용하거나 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에서 제공하는 속성 창을 사용하여 식을 추가하거나 수정할 수 있습니다. 하지만 속성 창에는 식 구문에 대한 검사 기능이 제공되지 않습니다.  
   
  선행 제약 조건에 식이 포함되는 경우 **제어 흐름** 탭의 디자인 화면에서 선행 제약 조건 옆에 아이콘이 표시되고 아이콘의 도구 설명에 해당 식이 표시됩니다.  
   

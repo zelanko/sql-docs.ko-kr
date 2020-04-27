@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b62fb5e33311f1011911c40fc858723b218bac55
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054828"
 ---
 # <a name="union-all-transformation-editor"></a>UNION ALL 변환 편집기
@@ -40,6 +40,6 @@ ms.locfileid: "66054828"
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Union All 변환을 사용 하 여 데이터 병합](data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)   
  [병합 변환](data-flow/transformations/merge-transformation.md)   
- [병합 조인 변환](data-flow/transformations/merge-join-transformation.md)  
+ [Merge Join Transformation](data-flow/transformations/merge-join-transformation.md)  
   
   

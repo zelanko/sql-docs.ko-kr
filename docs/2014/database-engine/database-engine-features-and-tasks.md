@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 43aa8a23a7d9322e6865b83e3aee4d77fa40e49e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064975"
 ---
 # <a name="database-engine-features-and-tasks"></a>데이터베이스 엔진 기능 및 태스크
@@ -30,7 +30,7 @@ ms.locfileid: "66064975"
   
  [데이터베이스 엔진 인스턴스 간 기능](../../2014/database-engine/database-engine-cross-instance-features.md)  
   
- [고가용성 솔루션 &#40;SQL Server&#41;](../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  
+ [고가용성 솔루션&#40;SQL Server&#41;](../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  
   
  [SQL Server 데이터베이스 엔진 및 Azure SQL Database 보안 센터](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   

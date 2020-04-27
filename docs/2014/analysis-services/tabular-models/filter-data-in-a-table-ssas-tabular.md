@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 869185e56db9a4ffb07282d3ce51ced191a6bac8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067126"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>테이블의 데이터 필터링(SSAS 테이블 형식)
@@ -37,8 +37,7 @@ ms.locfileid: "66067126"
   
          값의 수가 너무 많은 경우 개별 항목이 목록에 표시되지 않을 수 있습니다. 대신 "표시할 항목이 너무 많음"이라는 메시지가 나타납니다.  
   
-    -   열 형식에 따라 **숫자 필터** 또는 **텍스트 필터** 를 클릭 한 다음 비교 연산자 명령 (예: **Equals**) 중 하나을 클릭 하거나 **사용자 지정 필터**를 클릭 합니다. 
-  **사용자 지정 필터** 대화 상자에서 필터를 만든 다음 **확인**을 클릭합니다.  
+    -   열 형식에 따라 **숫자 필터** 또는 **텍스트 필터** 를 클릭 한 다음 비교 연산자 명령 (예: **Equals**) 중 하나을 클릭 하거나 **사용자 지정 필터**를 클릭 합니다. **사용자 지정 필터** 대화 상자에서 필터를 만든 다음 **확인**을 클릭합니다.  
   
 ### <a name="to-clear-a-filter-for-a-column"></a>열에 대한 필터를 지우려면  
   
@@ -50,12 +49,11 @@ ms.locfileid: "66067126"
   
 1.  모델 디자이너에서 필터를 지우려는 테이블을 선택합니다.  
   
-2.  
-  **열** 메뉴에서 **필터 모두 지우기**를 클릭합니다.  
+2.  **열** 메뉴에서 **필터 모두 지우기**를 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SSAS 테이블 형식&#41;&#40;데이터 필터링 및 정렬](../filter-and-sort-data-ssas-tabular.md)   
  [SSAS 테이블 형식&#41;&#40;큐브 뷰](perspectives-ssas-tabular.md)   
- [SSAS 테이블 형식&#41;역할 &#40;](roles-ssas-tabular.md)  
+ [역할&#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)  
   
   

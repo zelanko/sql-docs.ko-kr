@@ -13,20 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 08d01bb328bcf3e693724475532b6c9a39c79be2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66063184"
 ---
 # <a name="attribute-relationships-dimension-designer-analysis-services---multidimensional-data"></a>특성 관계(차원 디자이너)(Analysis Services - 다차원 데이터)
   차원 디자이너의 **특성 관계** 탭을 사용하여 선택한 차원의 특성 관계를 만들거나 수정하거나 삭제할 수 있습니다.  
   
 ## <a name="panes"></a>창  
- 
-  **특성 관계** 페이지에는 다음과 같은 창이 있습니다.  
+ **특성 관계** 페이지에는 다음과 같은 창이 있습니다.  
   
- [도구 모음](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)  
+ []](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)  
  도구 모음을 사용하여 차원 디자이너의 **특성 관계** 탭에서 작업을 수행할 수 있습니다.  
   
  [특성 관계 다이어그램](attribute-relationship-diagram-analysis-services-multidimensional-data.md)  

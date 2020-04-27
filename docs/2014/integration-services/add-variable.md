@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6799bc899a7e65082d83398f79996bea8d9dd2d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061793"
 ---
 # <a name="add-variable"></a>변수 추가
-  
   **변수 추가** 대화 상자를 사용하여 새 변수의 속성을 지정할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
@@ -32,10 +31,10 @@ ms.locfileid: "66061793"
  **이름**  
  변수 이름을 입력합니다.  
   
- **네임스페이스**  
+ **Namespace**  
  변수의 네임스페이스를 지정합니다. 기본적으로 사용자 정의 변수는 **User** 네임스페이스에 있습니다.  
   
- **값 형식**  
+ **값 유형**  
  데이터 형식을 선택합니다.  
   
  **값**  
@@ -45,7 +44,7 @@ ms.locfileid: "66061793"
  변수를 읽기 전용으로 만들려면 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)   
  [Integration Services 데이터 형식](data-flow/integration-services-data-types.md)   
  [패키지에서 변수 사용](../../2014/integration-services/use-variables-in-packages.md)  
   

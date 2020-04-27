@@ -13,33 +13,30 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0802ed589813a43ffac516c05a3a52de382d36c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061082"
 ---
 # <a name="cache-connection-manager-editor"></a>캐시 연결 관리자 편집기
   캐시 연결 관리자는 캐시 변환이나 캐시 파일(.caw)에서 참조 데이터 세트를 읽고 데이터를 캐시 파일에 저장할 수 있습니다. 데이터는 항상 메모리에 저장됩니다.  
   
 > [!NOTE]  
->  캐시 연결 관리자는 BLOB(Binary Large Object) 데이터 형식 DT_TEXT, DT_NTEXT 및 DT_IMAGE를 지원하지 않습니다. 참조 데이터 세트에 BLOB 데이터 형식이 있으면 패키지를 실행할 때 구성 요소가 실패합니다. 
-  **캐시 연결 관리자 편집기** 를 사용하여 열 데이터 형식을 수정할 수 있습니다.  
+>  캐시 연결 관리자는 BLOB(Binary Large Object) 데이터 형식 DT_TEXT, DT_NTEXT 및 DT_IMAGE를 지원하지 않습니다. 참조 데이터 세트에 BLOB 데이터 형식이 있으면 패키지를 실행할 때 구성 요소가 실패합니다. **캐시 연결 관리자 편집기** 를 사용하여 열 데이터 형식을 수정할 수 있습니다.  
   
  조회 변환은 참조 데이터 세트에 대해 조회를 수행합니다.  
   
- 
-  **캐시 연결 관리자 편집기** 대화 상자에는 다음과 같은 탭이 있습니다.  
+ **캐시 연결 관리자 편집기** 대화 상자에는 다음과 같은 탭이 있습니다.  
   
 -   [일반 탭](#generaltab)  
   
 -   [열 탭](#columnstab)  
   
- 캐시 연결 관리자에 대한 자세한 내용은 [Cache Connection Manager](connection-manager/cache-connection-manager.md)를 참조하세요.  
+ 캐시 연결 관리자에 대 한 자세한 내용은 [Cache Connection manager](connection-manager/cache-connection-manager.md)를 참조 하십시오.  
   
-##  <a name="generaltab"></a>일반 탭  
- 
-  **캐시 연결 관리자 편집기** 대화 상자의 **일반** 탭을 사용하여 파일에서 캐시를 읽을지 아니면 파일에 캐시를 저장할지 여부를 나타낼 수 있습니다.  
+##  <a name="general-tab"></a><a name="generaltab"></a>일반 탭  
+ **캐시 연결 관리자 편집기** 대화 상자의 **일반** 탭을 사용하여 파일에서 캐시를 읽을지 아니면 파일에 캐시를 저장할지 여부를 나타낼 수 있습니다.  
   
 ### <a name="options"></a>옵션  
  **연결 관리자 이름**  
@@ -66,15 +63,14 @@ ms.locfileid: "66061082"
  **찾아보기**  
  캐시 파일을 찾습니다.  
   
- **메타 데이터 새로 고침**  
+ **메타데이터 새로 고침**  
  캐시 연결 관리자에서 열 메타데이터를 삭제하고 선택한 캐시 파일의 열 메타데이터로 캐시 연결 관리자를 채웁니다.  
   
-##  <a name="columnstab"></a>열 탭  
- 
-  **캐시 연결 관리자 편집기** 대화 상자의 **열** 탭을 사용하여 캐시에 있는 각 열의 속성을 구성할 수 있습니다.  
+##  <a name="columns-tab"></a><a name="columnstab"></a>열 탭  
+ **캐시 연결 관리자 편집기** 대화 상자의 **열** 탭을 사용하여 캐시에 있는 각 열의 속성을 구성할 수 있습니다.  
   
 ### <a name="options"></a>옵션  
- **열**  
+ **열의**  
  열 이름을 지정합니다.  
   
  **인덱스 위치**  
@@ -87,7 +83,7 @@ ms.locfileid: "66061082"
 > [!NOTE]  
 >  조회 변환은 캐시 연결 관리자를 사용하도록 구성된 경우 참조 데이터 세트의 인덱스 열만 입력 열에 매핑할 수 있습니다. 또한 모든 인덱스 열을 매핑해야 합니다.  
   
- **형식**  
+ **Type**  
  열의 데이터 형식을 지정합니다.  
   
  `Length`  

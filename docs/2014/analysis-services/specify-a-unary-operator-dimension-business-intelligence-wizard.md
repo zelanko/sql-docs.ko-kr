@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72807eca5fb43c81bf51c20a93cd69f4d618c241
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068611"
 ---
 # <a name="specify-a-unary-operator-dimension-business-intelligence-wizard"></a>단항 연산자 지정(차원)(비즈니스 인텔리전스 마법사)
-  
   **단항 연산자 지정** 페이지를 사용하여 부모 특성이 정의되어 있고 비즈니스 인텔리전스 마법사에서 단항 연산자를 적용할 차원을 선택할 수 있습니다. 부모 특성에 대한 자세한 내용은 [특성 및 특성 계층](multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)을 참조하세요.  
   
 > [!NOTE]  

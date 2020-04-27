@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1172143ebfa44deb19d15bf596db1df0e9399ed0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055729"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>데이터 흐름 경로 편집기를 사용하여 경로의 속성 설정
@@ -28,11 +28,9 @@ ms.locfileid: "66055729"
   
 2.  솔루션 탐색기에서 패키지를 두 번 클릭하여 엽니다.  
   
-3.  
-  **데이터 흐름** 탭을 클릭한 후 경로를 두 번 클릭합니다.  
+3.  **데이터 흐름** 탭을 클릭한 후 경로를 두 번 클릭합니다.  
   
-4.  
-  **데이터 흐름 경로 편집기**에서 **일반**을 클릭합니다. 그러면 경로의 기본 이름을 편집하고 경로에 대한 설명을 제공할 수 있습니다. 또한 PathAnnotation 속성을 수정할 수 있습니다.  
+4.  **데이터 흐름 경로 편집기**에서 **일반**을 클릭합니다. 그러면 경로의 기본 이름을 편집하고 경로에 대한 설명을 제공할 수 있습니다. 또한 PathAnnotation 속성을 수정할 수 있습니다.  
   
 5.  **확인**을 클릭합니다.  
   

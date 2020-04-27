@@ -48,10 +48,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e902272c58f1e841a3108199e53d51ac12f8ae4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062594"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>알고리즘 매개 변수(SQL Server 데이터 마이닝 추가 기능)
@@ -70,7 +70,7 @@ ms.locfileid: "66062594"
   
  다음 표에서는 매개 변수를 나열하고 매개 변수의 기능에 대해 설명하며 자세한 기술 정보에 대한 링크를 제공합니다.  
   
-|매개 변수 이름|사용 위치|Description|  
+|매개 변수 이름|사용 대상|설명|  
 |--------------------|-------------|-----------------|  
 |AUTO_DETECT_PERIODICITY|Microsoft Time Series 알고리즘|주기성을 찾는 데 사용되는 0과 1 사이의 숫자 값을 지정합니다. 이 값을 1에 가깝게 설정하면 거의 주기적인 패턴을 다양하게 검색하고 주기 힌트를 자동으로 생성할 수 있습니다. 많은 주기 힌트를 처리할수록 모델 학습 시간은 현저하게 길어지지만 보다 정확한 모델을 만들 수 있습니다. 이 값을 0에 가깝게 설정하면 주기성이 강한 데이터에 대해서만 주기성을 검색합니다.<br /><br /> 기본값은 0.6입니다.|  
 |CLUSTER_COUNT|Microsoft Clustering Algorithm<br /><br /> Microsoft 시퀀스 클러스터링 알고리즘|알고리즘에서 작성할 클러스터의 대략적인 개수를 지정합니다. 데이터에서 대략적인 개수의 클러스터를 작성할 수 없는 경우 알고리즘은 가능한 한 많은 클러스터를 작성합니다. CLUSTER_COUNT를 0으로 설정하면 알고리즘은 추론을 사용하여 작성할 클러스터의 수를 정확하게 결정합니다.<br /><br /> 기본값은 10입니다.|  
@@ -113,7 +113,7 @@ ms.locfileid: "66062594"
 |SPLIT_METHOD|Microsoft 의사 결정 트리 알고리즘|노드를 분할하는 데 사용되는 메서드를 결정합니다. 다음 옵션을 사용할 수 있습니다. Binary (1), Complete (2) 또는 Both (3).<br /><br /> 기본값은 3입니다.|  
 |STOPPING_TOLERANCE|Microsoft 클러스터링 알고리즘 기술 참조|일치 상태에 도달하고 알고리즘이 모델 작성을 마치는 시기를 결정하는 데 사용되는 값을 지정합니다. 클러스터 확률의 전체 변경 비율이 STOPPING_TOLERANCE  매개 변수를 모델 크기로 나눈 비율보다 작으면 일치 상태에 도달합니다.<br /><br /> 기본값은 10입니다.|  
   
-### <a name="comments"></a>주석  
+### <a name="comments"></a>설명  
  알고리즘에 대한 자세한 내용은 SQL Server 온라인 설명서를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  

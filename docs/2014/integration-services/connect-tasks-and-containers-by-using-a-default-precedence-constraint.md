@@ -16,18 +16,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e5c0ad2405c0d62b703dcb7fa668837e7e47386
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060427"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>기본 선행 제약 조건을 사용하여 태스크 및 컨테이너 연결
   선행 제약 조건은 두 실행 개체를 연결합니다. 실행 개체는 임의의 태스크, For 루프, Foreach 루프 또는 시퀀스 컨테이너일 수 있습니다. 이 절차에서는 선행 제약 조건에 대한 기본 동작을 설정하는 방법과 기본 선행 제약 조건을 사용하여 실행 개체를 연결하는 방법에 대해 설명합니다.  
   
 ## <a name="creating-default-precedence-constraints"></a>기본 선행 제약 조건 만들기  
- 
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 처음 사용할 때 선행 제약 조건의 기본값은 `Success`입니다. 다음 단계에 따라 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 구성하고 선행 제약 조건에 대해 다른 기본값을 사용하십시오.  
+ [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 처음 사용할 때 선행 제약 조건의 기본값은 `Success`입니다. 다음 단계에 따라 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 구성하고 선행 제약 조건에 대해 다른 기본값을 사용하십시오.  
   
 #### <a name="to-set-the-default-value-for-precedence-constraints"></a>선행 제약 조건에 대한 기본값을 설정하려면  
   
@@ -35,11 +34,9 @@ ms.locfileid: "66060427"
   
 2.  **도구** 메뉴에서 **옵션**을 클릭합니다.  
   
-3.  
-  **옵션** 대화 상자에서 **비즈니스 인텔리전스 디자이너** 를 확장한 후 **Integration Services 디자이너**를 확장합니다.  
+3.  **옵션** 대화 상자에서 **비즈니스 인텔리전스 디자이너** 를 확장한 후 **Integration Services 디자이너**를 확장합니다.  
   
-4.  
-  **제어 흐름 자동 연결** 을 클릭하고 **기본적으로 선택한 셰이프에 새 셰이프 연결**을 선택합니다.  
+4.  **제어 흐름 자동 연결** 을 클릭하고 **기본적으로 선택한 셰이프에 새 셰이프 연결**을 선택합니다.  
   
 5.  드롭다운 목록에서 **새 셰이프에 Failure 제약 조건 사용** 또는 **새 셰이프에 Completion 제약 조건 사용**을 선택합니다.  
   
@@ -53,8 +50,7 @@ ms.locfileid: "66060427"
   
 3.  **제어 흐름** 탭을 클릭합니다.  
   
-4.  
-  **제어 흐름** 탭의 디자인 화면에서 태스크 또는 컨테이너를 클릭하고 선행 제약 조건을 적용하려는 실행 개체에 해당 연결선을 끌어 옵니다.  
+4.  **제어 흐름** 탭의 디자인 화면에서 태스크 또는 컨테이너를 클릭하고 선행 제약 조건을 적용하려는 실행 개체에 해당 연결선을 끌어 옵니다.  
   
 5.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 941155a5e434457cdf9c79bd25c653c7207937a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067021"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>PowerPivot에서 가져오기(SSAS 테이블 형식)
@@ -38,18 +38,16 @@ ms.locfileid: "66067021"
   
 #### <a name="to-create-a-new-tabular-model-project-from-a-powerpivot-for-excel-file"></a>PowerPivot for Excel 파일에서 새 테이블 형식 모델 프로젝트를 만들려면  
   
-1.  
-  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 **파일** 메뉴에서 **새로 만들기**를 클릭한 다음 **프로젝트**를 클릭합니다.  
+1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 **파일** 메뉴에서 **새로 만들기**를 클릭한 다음 **프로젝트**를 클릭합니다.  
   
 2.  **새 프로젝트** 대화 상자의 **설치 된 템플릿**에서 **비즈니스 인텔리전스**를 클릭 한 다음 **PowerPivot에서 가져오기**를 클릭 합니다.  
   
 3.  **이름**에 프로젝트의 이름을 입력 하 고 위치 및 솔루션 이름을 지정한 다음 **확인**을 클릭 합니다.  
   
-4.  
-  **열기** 대화 상자에서 가져올 모델 메타데이터 및 데이터가 포함된 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 파일을 선택한 다음 **열기**를 클릭합니다.  
+4.  **열기** 대화 상자에서 가져올 모델 메타데이터 및 데이터가 포함된 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 파일을 선택한 다음 **열기**를 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SSAS 테이블 형식&#41;&#40;작업 영역 데이터베이스](workspace-database-ssas-tabular.md)   
- [SSAS 테이블 형식&#41;&#40;데이터 복사 및 붙여넣기](../copy-and-paste-data-ssas-tabular.md)  
+ [데이터 복사 및 붙여넣기&#40;SSAS 테이블 형식&#41;](../copy-and-paste-data-ssas-tabular.md)  
   
   

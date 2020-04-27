@@ -24,14 +24,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a88e2c1508ec849437d90b3de7c66705299dafc1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068888"
 ---
 # <a name="memory-properties"></a>메모리 속성
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 다음 표에 나열된 서버 메모리 속성을 사용할 수 있습니다. 이 속성 설정에 대한 지침을 보려면 [SQL Server 2008 R2 Analysis Services 작업 가이드](https://go.microsoft.com/fwlink/?LinkID=225539)를 참조하세요.  
   
  1과 100 사이의 값은 **실제 총 메모리** 또는 **가상 주소 공간**중 더 작은 쪽의 백분율을 나타냅니다. 100을 초과하는 값은 메모리 제한(바이트)을 나타냅니다.  
@@ -45,26 +44,22 @@ ms.locfileid: "66068888"
  `TotalMemoryLimit`  
  서버가 더 적극적으로 메모리 할당을 취소하기 시작하는 임계값을 정의합니다. 기본값은 실제 메모리 또는 가상 주소 공간의 80% 중 더 작은 쪽입니다.  
   
- 
-  `TotalMemoryLimit`는 항상 `HardMemoryLimit`보다 작아야 합니다.  
+ `TotalMemoryLimit`는 항상 `HardMemoryLimit`보다 작아야 합니다.  
   
  `HardMemoryLimit`  
  인스턴스가 메모리 사용량을 줄이기 위해 활성 사용자 세션을 적극적으로 종료하기 시작하는 메모리 임계값을 지정합니다. 종료된 모든 세션은 메모리 부족으로 인해 취소되고 있다는 오류를 수신합니다. 기본값 영(0)은 `HardMemoryLimit`이 `TotalMemoryLimit`과 시스템의 실제 총 메모리 사이의 중간 값으로 설정됨을 의미합니다. 시스템의 실제 메모리가 프로세스의 가상 주소 공간보다 큰 경우 `HardMemoryLimit`을 계산할 때 가상 주소 공간이 대신 사용됩니다.  
   
  `VirtualMemoryLimit`  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  `VertiPaqPagingPolicy`  
  서버의 메모리가 부족한 경우에 발생하는 페이징 동작을 지정합니다. 유효한 값은 다음과 같습니다.  
   
  0(**0**)은 페이징을 사용하지 않도록 설정합니다. 메모리가 부족하면 메모리 부족 오류로 처리가 실패합니다. 페이징을 사용하지 않도록 설정한 경우 서비스 계정에 대한 권한을 Windows에 부여해야 합니다. 자세한 내용은 [서비스 계정 구성&#40;Analysis Services&#41;](../instances/configure-service-accounts-analysis-services.md)을 참조하세요.  
   
- 기본값은 **1** 입니다. 운영 체제 페이지 파일(pagefile.sys)을 통해 디스크로의 페이징을 사용하도록 설정합니다.  
+ **1** 은 기본값이며 운영 체제 페이지 파일(pagefile.sys)을 통해 디스크로의 페이징을 사용하도록 설정합니다.  
   
- 
-  `VertiPaqPagingPolicy`가 1로 설정될 경우 서버는 지정된 방법을 사용하여 디스크로 페이징을 시도하기 때문에 메모리 제약 조건으로 인해 처리가 실패할 가능성이 적습니다. 
-  `VertiPaqPagingPolicy`속성을 설정한다고 해서 메모리 오류가 절대로 발생하지 않는 것은 아닙니다. 다음과 같은 상황에서 메모리 부족 오류가 여전히 발생할 수 있습니다.  
+ `VertiPaqPagingPolicy`가 1로 설정될 경우 서버는 지정된 방법을 사용하여 디스크로 페이징을 시도하기 때문에 메모리 제약 조건으로 인해 처리가 실패할 가능성이 적습니다. `VertiPaqPagingPolicy`속성을 설정한다고 해서 메모리 오류가 절대로 발생하지 않는 것은 아닙니다. 다음과 같은 상황에서 메모리 부족 오류가 여전히 발생할 수 있습니다.  
   
 -   모든 사전에 대해 메모리가 충분하지 않습니다. 처리 중 Analysis Services는 메모리의 각 열에 대해 사전을 잠그며 이 모든 합은 `VertiPaqMemoryLimit`에 대해 지정된 값보다 클 수 없습니다.  
   
@@ -82,48 +77,38 @@ ms.locfileid: "66068888"
  테이블 형식 서버 모드에만 적용됩니다.  
   
  `HighMemoryPrice`  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  `MemoryHeapType`  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  다차원 서버 모드에만 적용됩니다.  
   
  `HeapTypeForObjects`  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  다차원 서버 모드에만 적용됩니다.  
   
  `DefaultPagesCountToReuse`  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  `HandleIA64AlignmentFaults`  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  `MidMemoryPrice`  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  `MinimumAllocatedMemory`  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  `PreAllocate`  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  `SessionMemoryLimit`  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  `WaitCountIfHighMemory`  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Analysis Services에서 서버 속성 구성](server-properties-in-analysis-services.md)   

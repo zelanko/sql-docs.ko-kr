@@ -13,14 +13,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8319699dd58039b918f0715e5b2293a7990108f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057381"
 ---
 # <a name="odata-connection-manager-editor"></a>OData 연결 관리자 편집기
-  
   **OData 연결 관리자 편집기** 대화 상자를 사용하여 OData 원본에 연결을 추가하거나 기존 연결을 편집할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
@@ -28,13 +27,12 @@ ms.locfileid: "66057381"
  연결 관리자의 이름입니다.  
   
  **서비스 문서 위치**  
- OData 서비스의 URL입니다. 예: http://services.odata.org/V3/Northwind/Northwind.svc/  
+ OData 서비스의 URL입니다. 예를 들면 http://services.odata.org/V3/Northwind/Northwind.svc/와 같습니다.  
   
  **인증**  
- 
-  **인증**에 대해 **Windows 인증**을 선택하거나 **이 사용자 이름 및 암호**를 사용합니다. 두 번째 옵션을 선택할 경우 **사용자 이름** 및 **암호**를 입력합니다.  
+ **인증**에 대해 **Windows 인증**을 선택하거나 **이 사용자 이름 및 암호**를 사용합니다. 두 번째 옵션을 선택할 경우 **사용자 이름** 및 **암호**를 입력합니다.  
   
- **연결 테스트**  
+ **연결을 테스트**  
  OData 원본에 대한 연결을 테스트하려면 이 단추를 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  

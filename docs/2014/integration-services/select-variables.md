@@ -15,16 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89e166be7ee2100945cc430a78e725630b1e8f6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055923"
 ---
 # <a name="select-variables"></a>변수 선택
-  
-  **변수 선택** 대화 상자를 사용하여 메시지 큐 태스크의 메시지 보내기 작업에 사용할 변수를 지정할 수 있습니다. 
-  **사용 가능한 변수** 목록에는 메시지 큐 태스크 또는 해당 부모 컨테이너의 범위에 있는 시스템 및 사용자 정의 변수가 포함되어 있습니다. 이 태스크에서는 **선택한 변수** 목록의 변수를 사용합니다.  
+  **변수 선택** 대화 상자를 사용하여 메시지 큐 태스크의 메시지 보내기 작업에 사용할 변수를 지정할 수 있습니다. **사용 가능한 변수** 목록에는 메시지 큐 태스크 또는 해당 부모 컨테이너의 범위에 있는 시스템 및 사용자 정의 변수가 포함되어 있습니다. 이 태스크에서는 **선택한 변수** 목록의 변수를 사용합니다.  
   
 ## <a name="options"></a>옵션  
  **사용 가능한 변수**  

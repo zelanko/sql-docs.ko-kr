@@ -13,16 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: baf3349bc72a6d6baff4defd9a9cd4799397b716
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068505"
 ---
 # <a name="specify-a-sql-or-mdx-query-ssas"></a>SQL 또는 MDX 쿼리 지정(SSAS)
-  
-  **테이블 가져오기 마법사** 의 이 페이지에서는 SQL 또는 MDX 쿼리를 사용하여 데이터를 가져올 수 있습니다. 
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
+  **테이블 가져오기 마법사** 의 이 페이지에서는 SQL 또는 MDX 쿼리를 사용하여 데이터를 가져올 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
   
  가져올 데이터를 쿼리를 통해 조작할 수 있습니다. 예를 들어 서로 다른 테이블의 데이터를 조인하거나 특정 조건에 맞는 행만 선택할 수 있습니다.  
   

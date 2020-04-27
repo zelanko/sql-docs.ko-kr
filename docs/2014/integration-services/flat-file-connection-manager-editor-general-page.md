@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b378d7257ddd57e97407d82feb817aa70965f598
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058747"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>플랫 파일 연결 관리자 편집기(일반 페이지)
-  
   **플랫 파일 연결 관리자 편집기** 대화 상자의 **일반** 페이지를 사용하여 파일과 데이터 형식을 선택할 수 있습니다. 플랫 파일 연결을 사용하면 패키지를 텍스트 파일에 연결할 수 있습니다.  
   
  플랫 파일 연결 관리자에 대한 자세한 내용은 [Flat File Connection Manager](connection-manager/file-connection-manager.md)를 참조하십시오.  
@@ -40,10 +39,10 @@ ms.locfileid: "66058747"
  **찾아보기**  
  플랫 파일 연결에 사용할 파일 이름을 찾습니다.  
   
- **로캘**  
+ **로캘을**  
  정렬과 날짜 및 시간 형식에 사용할 언어별 정보를 제공하는 로캘을 지정합니다.  
   
- **유니코드**  
+ **유니코드(Unicode)**  
  유니코드를 사용할지 여부를 나타냅니다. 유니코드를 사용하면 코드 페이지를 지정할 수 없습니다.  
   
  **코드 페이지**  
@@ -52,10 +51,9 @@ ms.locfileid: "66058747"
  **형식과**  
  구분 기호로 분리됨, 고정 폭, 왼쪽 정렬 중 어떤 형식을 사용할지를 지정합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|구분됨|
-  **열** 페이지에 지정된 구분 기호로 열을 구분합니다.|  
+|구분됨|**열** 페이지에 지정된 구분 기호로 열을 구분합니다.|  
 |고정 폭|열에 고정 폭이 지정됩니다.|  
 |왼쪽 정렬|왼쪽 정렬 파일은 마지막 열을 제외한 모든 열에 고정 폭이 지정된 파일입니다. 마지막 열은 행 구분 기호로 구분됩니다.|  
   
@@ -68,11 +66,11 @@ ms.locfileid: "66058747"
  **머리글 행 구분 기호**  
  구분 기호 목록에서 머리글 행 구분 기호를 선택하거나 구분 기호 텍스트를 입력합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|**CR LF**|머리글 행을 캐리지 리턴-줄 바꿈 조합으로 구분합니다.|  
-|**CR**|머리글 행을 캐리지 리턴으로 구분합니다.|  
-|**LF**|머리글 행을 줄 바꿈으로 구분합니다.|  
+|**{CR}{LF}**|머리글 행을 캐리지 리턴-줄 바꿈 조합으로 구분합니다.|  
+|**{CR}**|머리글 행을 캐리지 리턴으로 구분합니다.|  
+|**{LF}**|머리글 행을 줄 바꿈으로 구분합니다.|  
 |**세미콜론 {;}**|머리글 행을 세미콜론으로 구분합니다.|  
 |**콜론 {:}**|머리글 행을 콜론으로 구분합니다.|  
 |**쉼표로{,}**|머리글 행을 쉼표로 구분합니다.|  
@@ -89,6 +87,6 @@ ms.locfileid: "66058747"
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [플랫 파일 연결 관리자 편집기 &#40;열 페이지&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
  [플랫 파일 연결 관리자 편집기 &#40;고급 페이지&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   
- [플랫 파일 연결 관리자 편집기 &#40;미리 보기 페이지&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
+ [플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
   
   

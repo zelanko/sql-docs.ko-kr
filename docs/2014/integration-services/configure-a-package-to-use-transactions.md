@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 16d1f0f4c24f18327ee31da1fb85a74d19588384
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060857"
 ---
 # <a name="configure-a-package-to-use-transactions"></a>트랜잭션을 사용하도록 패키지 구성
@@ -35,8 +35,7 @@ ms.locfileid: "66060857"
   
 #### <a name="to-configure-a-package-to-use-a-single-transaction"></a>단일 트랜잭션을 사용하도록 패키지를 구성하려면  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 트랜잭션을 사용하도록 구성할 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 트랜잭션을 사용하도록 구성할 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
 2.  솔루션 탐색기에서 패키지를 두 번 클릭하여 엽니다.  
   
@@ -46,8 +45,7 @@ ms.locfileid: "66060857"
   
 5.  **속성** 창에서 TransactionOption 속성을로 `Required`설정 합니다.  
   
-6.  
-  **제어 흐름** 탭의 디자인 화면에서 트랜잭션에 등록할 태스크 또는 컨테이너를 마우스 오른쪽 단추로 클릭한 후 **속성**을 클릭합니다.  
+6.  **제어 흐름** 탭의 디자인 화면에서 트랜잭션에 등록할 태스크 또는 컨테이너를 마우스 오른쪽 단추로 클릭한 후 **속성**을 클릭합니다.  
   
 7.  **속성** 창에서 TransactionOption 속성을로 `Supported`설정 합니다.  
   
@@ -63,8 +61,7 @@ ms.locfileid: "66060857"
   
 #### <a name="to-configure-a-package-to-use-multiple-transactions"></a>여러 트랜잭션을 사용하도록 패키지를 구성하려면  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 트랜잭션을 사용하도록 구성할 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 트랜잭션을 사용하도록 구성할 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
 2.  솔루션 탐색기에서 패키지를 두 번 클릭하여 엽니다.  
   
@@ -77,8 +74,7 @@ ms.locfileid: "66060857"
     > [!NOTE]  
     >  패키지는 트랜잭션을 지원하지만 트랜잭션은 패키지의 태스크나 컨테이너에 의해 시작됩니다.  
   
-6.  
-  **제어 흐름** 탭의 디자인 화면에서 트랜잭션을 시작할 패키지에서 태스크 또는 컨테이너를 마우스 오른쪽 단추로 클릭한 후 **속성**을 클릭합니다.  
+6.  **제어 흐름** 탭의 디자인 화면에서 트랜잭션을 시작할 패키지에서 태스크 또는 컨테이너를 마우스 오른쪽 단추로 클릭한 후 **속성**을 클릭합니다.  
   
 7.  **속성** 창에서 TransactionOption 속성을로 `Required`설정 합니다.  
   

@@ -15,18 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e044d001c88edef9d1e8d4ab453b85853994cf7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059958"
 ---
 # <a name="data-flow-path-editor-general-page"></a>데이터 흐름 경로 편집기(일반 페이지)
-  
   **데이터 흐름 경로 편집기** 대화 상자를 사용하여 경로 속성을 설정하고, 열 메타데이터를 보고, 경로에 연결된 데이터 뷰어를 관리할 수 있습니다.  
   
- 
-  **데이터 흐름 경로 편집기** 대화 상자의 **일반** 노드를 사용하여 경로의 이름을 지정하고 경로를 설명할 수 있을 뿐만 아니라 경로 주석 옵션을 지정할 수 있습니다.  
+ **데이터 흐름 경로 편집기** 대화 상자의 **일반** 노드를 사용하여 경로의 이름을 지정하고 경로를 설명할 수 있을 뿐만 아니라 경로 주석 옵션을 지정할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
  **이름**  

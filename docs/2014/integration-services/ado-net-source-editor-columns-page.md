@@ -13,28 +13,24 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1eba4cb2f1f5c8825e9cae5751fe230fbe45a835
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061697"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>ADO NET 원본 편집기(열 페이지)
-  
   **ADO NET 원본 편집기** 대화 상자의 **열** 페이지를 사용하여 출력 열을 각 외부(원본) 열에 매핑할 수 있습니다.  
   
  ADO NET 원본에 대한 자세한 내용은 [ADO NET Source](data-flow/ado-net-source.md)을 참조하십시오.  
   
  **열 페이지를 열려면**  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 ADO NET 원본이 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 엽니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 ADO NET 원본이 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 엽니다.  
   
-2.  
-  **데이터 흐름** 탭에서 ADO NET 원본을 두 번 클릭합니다.  
+2.  **데이터 흐름** 탭에서 ADO NET 원본을 두 번 클릭합니다.  
   
-3.  
-  **ADO NET 원본 편집기**에서 **열**을 클릭합니다.  
+3.  **ADO NET 원본 편집기**에서 **열**을 클릭합니다.  
   
 ## <a name="options"></a>옵션  
  **사용 가능한 외부 열**  

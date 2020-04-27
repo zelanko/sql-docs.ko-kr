@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c13cdec19ac961a3126b4220895498c7c7a049f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065536"
 ---
 # <a name="user-interface-reference-analysis-services"></a>사용자 인터페이스 참조(Analysis Services)
@@ -24,15 +24,10 @@ ms.locfileid: "66065536"
   
 |섹션|포함|  
 |-------------|--------------|  
-|[다차원 데이터를 &#40;마법사 Analysis Services&#41;](analysis-services-wizards-multidimensional-data.md)|
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 마법사에 대한 도움말 항목(다차원)|  
-|[데이터 마이닝 디자이너 및 대화 상자](data-mining-designers-and-dialog-boxes.md)|
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 마법사에 대한 도움말 항목(데이터 마이닝)|  
-|[Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)|
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]디자이너 및 대화 상자에 대한 도움말 항목 (다차원)|  
-|[Analysis Services 디자이너 및 대화 상자 &#40;테이블 형식&#41;](analysis-services-designers-and-dialog-boxes-tabular.md)|
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 테이블 형식 모델링의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 디자이너 및 대화 상자에 대한 도움말 항목|  
-|[데이터 마이닝 디자이너 및 대화 상자](data-mining-designers-and-dialog-boxes.md)|
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]디자이너 및 대화 상자에 대한 도움말 항목 (데이터 마이닝)|  
+|[다차원 데이터를 &#40;마법사 Analysis Services&#41;](analysis-services-wizards-multidimensional-data.md)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 마법사에 대한 도움말 항목(다차원)|  
+|[데이터 마이닝 디자이너 및 대화 상자](data-mining-designers-and-dialog-boxes.md)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 마법사에 대한 도움말 항목(데이터 마이닝)|  
+|[Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]디자이너 및 대화 상자에 대한 도움말 항목 (다차원)|  
+|[Analysis Services 디자이너 및 대화 상자 &#40;테이블 형식&#41;](analysis-services-designers-and-dialog-boxes-tabular.md)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 테이블 형식 모델링의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 디자이너 및 대화 상자에 대한 도움말 항목|  
+|[데이터 마이닝 디자이너 및 대화 상자](data-mining-designers-and-dialog-boxes.md)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]디자이너 및 대화 상자에 대한 도움말 항목 (데이터 마이닝)|  
   
   

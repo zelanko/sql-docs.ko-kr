@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b1032a0fc11ab07069309b7053e756d28329b77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055224"
 ---
 # <a name="term-extraction-transformation-editor-exclusion-tab"></a>용어 추출 변환 편집기(제외 탭)
-  
   **용어 추출 변환 편집기** 대화 상자의 **제외** 탭을 사용하여 제외 테이블에 대한 연결을 설정하고 제외 용어를 포함하는 열을 지정할 수 있습니다.  
   
  용어 추출 변환에 대한 자세한 내용은 [Term Extraction Transformation](data-flow/transformations/term-extraction-transformation.md)을 참조하십시오.  
@@ -34,19 +33,17 @@ ms.locfileid: "66055224"
  **OLE DB 연결 관리자**  
  기존 OLE DB 연결 관리자를 선택하거나 **새로 만들기**를 클릭하여 새 연결을 설정합니다.  
   
- **새로 만들기**  
- 
-  **OLE DB 연결 관리자 구성** 대화 상자를 사용하여 데이터베이스에 대한 새 연결을 설정합니다.  
+ **신규**  
+ **OLE DB 연결 관리자 구성** 대화 상자를 사용하여 데이터베이스에 대한 새 연결을 설정합니다.  
   
  **테이블 또는 뷰**  
  제외 용어를 포함하는 테이블 또는 뷰를 선택합니다.  
   
- **열**  
+ **열의**  
  제외 용어를 포함하는 테이블 또는 뷰의 열을 선택합니다.  
   
  **오류 출력 구성**  
- 
-  [오류 출력 구성](../../2014/integration-services/configure-error-output.md) 대화 상자를 사용하여 오류 발생의 원인이 되는 행에 대한 오류 처리를 지정할 수 있습니다.  
+ [오류 출력 구성](../../2014/integration-services/configure-error-output.md) 대화 상자를 사용하여 오류 발생의 원인이 되는 행에 대한 오류 처리를 지정할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   

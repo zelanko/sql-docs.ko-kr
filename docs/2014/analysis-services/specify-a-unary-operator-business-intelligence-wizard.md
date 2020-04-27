@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6343f26e6aa54fa6206c739d3d7b52b632e1519
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068533"
 ---
 # <a name="specify-a-unary-operator-business-intelligence-wizard"></a>단항 연산자 지정(비즈니스 인텔리전스 마법사)
-  
   **단항 연산자 지정** 페이지를 사용하여 단항 연산자(일반 집계의 경우) 또는 가중치 요인을 나타내는 값(가중 집계의 경우)이 포함된 열의 부모-자식 관계를 식별할 수 있습니다. 일반 집계 및 가중 집계에 대한 자세한 내용은 [집계 및 집계 디자인](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)을 참조하세요.  
   
 > [!NOTE]  

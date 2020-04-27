@@ -13,15 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cba1fb860d884b568fe132fc2b38ff50fbd480d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055423"
 ---
 # <a name="ssis-package-essentials"></a>SSIS 패키지 주요 사항
-  패키지는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 기능을 구현하여 데이터를 추출, 변환 및 로드하는 개체입니다. 패키지는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 의 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]디자이너를 사용하여 만들거나 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사나 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 연결 프로젝트 마법사를 사용하여 만들 수도 있습니다. 자세한 내용은 SSIS 디자이너 및 [프로젝트 가져오기 마법사](../../2014/integration-services/import-project-wizard.md)의 [SQL Server Data Tools에서 패키지를 만듭니다](create-packages-in-sql-server-data-tools.md) .  
+  패키지는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 기능을 구현하여 데이터를 추출, 변환 및 로드하는 개체입니다. 패키지는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 의 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]디자이너를 사용하여 만들거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사나 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 연결 프로젝트 마법사를 사용하여 만들 수도 있습니다. 자세한 내용은 SSIS 디자이너 및 [프로젝트 가져오기 마법사](../../2014/integration-services/import-project-wizard.md)의 [SQL Server Data Tools에서 패키지를 만듭니다](create-packages-in-sql-server-data-tools.md) .  
   
  기본 패키지에는 다음 요소가 포함됩니다.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66055423"
 1.  MSDN.Microsoft.com의 비디오, [기본 패키지 만들기(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=131023)  
   
 ## <a name="see-also"></a>참고 항목  
- [Integration Services&#40;SSIS&#41; 패키지](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [SSIS&#41; 패키지 Integration Services &#40;](../../2014/integration-services/integration-services-ssis-packages.md)   
  [선행 제약 조건](control-flow/precedence-constraints.md)  
   
   

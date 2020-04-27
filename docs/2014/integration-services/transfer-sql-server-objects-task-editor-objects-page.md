@@ -15,19 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3ae231e933e30613d45fe00eaa99d6a2d5c9c772
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054872"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>SQL Server 개체 전송 태스크 편집기(개체 페이지)
-  
   **SQL Server 개체 전송 태스크 편집기** 대화 상자의 **개체** 페이지를 사용하여 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 한 인스턴스에서 다른 인스턴스로 복사하기 위한 속성을 지정할 수 있습니다. 테이블, 뷰, 저장 프로시저 및 사용자 정의 함수와 같은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체를 복사할 수 있습니다. 이 태스크에 대한 자세한 내용은 [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md)를 참조하십시오.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체 전송 태스크를 만드는 사용자에게는 원본 서버 개체를 복사용으로 선택하기 위한 충분한 권한이 있어야 하며 해당 개체를 전송할 대상 서버 데이터베이스에 대한 액세스 권한도 있어야 합니다.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체 전송 태스크를 만드는 사용자에게는 원본 서버 개체를 복사용으로 선택하기 위한 충분한 권한이 있어야 하며 해당 개체를 전송할 대상 서버 데이터베이스에 대한 액세스 권한도 있어야 합니다.  
   
 ## <a name="static-options"></a>정적 옵션  
  **SourceConnection**  
@@ -54,21 +52,19 @@ ms.locfileid: "66054872"
  **ExistingData**  
  데이터를 대상 서버로 복사하는 방법을 지정합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**바꾸십시오**|대상 서버의 데이터를 덮어씁니다.|  
-|**추가**|원본 서버에서 복사한 데이터를 대상 서버의 기존 데이터에 추가합니다.|  
+|**추가할**|원본 서버에서 복사한 데이터를 대상 서버의 기존 데이터에 추가합니다.|  
   
 > [!NOTE]  
->  
-  **ExistingData** 옵션은 **CopyData** 를 **True**로 설정한 경우에만 사용할 수 있습니다.  
+>  **ExistingData** 옵션은 **CopyData** 를 **True**로 설정한 경우에만 사용할 수 있습니다.  
   
  **CopySchema**  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체 전송 태스크를 수행하는 동안 스키마를 복사할지 여부를 선택합니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체 전송 태스크를 수행하는 동안 스키마를 복사할지 여부를 선택합니다.  
   
 > [!NOTE]  
->  **Copyschema** 는 에서만 사용할 수 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]있습니다.  
+>  **CopySchema** 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서만 사용할 수 있습니다.  
   
  **UseCollation**  
  개체 전송에 원본 서버에서 지정한 데이터 정렬을 포함시킬지 여부를 선택합니다.  
@@ -83,7 +79,7 @@ ms.locfileid: "66054872"
  원본 데이터베이스에서 대상 데이터베이스로 복사할 개체를 지정하려면 **ObjectsToCopy** 를 확장합니다.  
   
 > [!NOTE]  
->  **Objectstocopy** 는 **CopyAllObjects** 이 **False**로 설정 된 경우에만 사용할 수 있습니다.  
+>  **ObjectsToCopy** 는 **CopyAllObjects** 를 **False**로 설정한 경우에만 사용할 수 있습니다.  
   
  다음 유형의 개체를 복사하는 옵션은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서만 지원됩니다.  
   
@@ -108,8 +104,7 @@ ms.locfileid: "66054872"
  데이터베이스 역할을 전송에 포함시킬지 여부를 지정합니다.  
   
  **CopySqlServerLogins**  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그인을 전송에 포함시킬지 여부를 지정합니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그인을 전송에 포함시킬지 여부를 지정합니다.  
   
  **CopyObjectLevelPermissions**  
  개체 수준 사용 권한을 전송에 포함시킬지 여부를 지정합니다.  
@@ -139,106 +134,86 @@ ms.locfileid: "66054872"
  지정한 원본 데이터베이스의 모든 테이블을 복사할지, 아니면 선택한 테이블만 복사할지를 선택합니다.  
   
  **TablesList**  
- 
-  **테이블 선택** 대화 상자를 열려면 클릭합니다.  
+ **테이블 선택** 대화 상자를 열려면 클릭합니다.  
   
  **CopyAllViews**  
  지정한 원본 데이터베이스의 모든 뷰를 복사할지, 아니면 선택한 뷰만 복사할지를 선택합니다.  
   
  **ViewsList**  
- 
-  **뷰 선택** 대화 상자를 열려면 클릭합니다.  
+ **뷰 선택** 대화 상자를 열려면 클릭합니다.  
   
  **CopyAllStoredProcedures**  
  지정한 원본 데이터베이스의 모든 사용자 정의 저장 프로시저를 복사할지, 아니면 선택한 프로시저만 복사할지를 선택합니다.  
   
  **StoredProceduresList**  
- 
-  **저장 프로시저 선택** 대화 상자를 열려면 클릭합니다.  
+ **저장 프로시저 선택** 대화 상자를 열려면 클릭합니다.  
   
  **CopyAllUserDefinedFunctions**  
  지정한 원본 데이터베이스의 모든 사용자 정의 함수를 복사할지, 아니면 선택한 UDF만 복사할지를 선택합니다.  
   
  **UserDefinedFunctionsList**  
- 
-  **사용자 정의 함수 선택** 대화 상자를 열려면 클릭합니다.  
+ **사용자 정의 함수 선택** 대화 상자를 열려면 클릭합니다.  
   
  **CopyAllDefaults**  
  지정한 원본 데이터베이스의 모든 기본값을 복사할지, 아니면 선택한 기본값만 복사할지를 선택합니다.  
   
  **DefaultsList**  
- 
-  **기본값 선택** 대화 상자를 열려면 클릭합니다.  
+ **기본값 선택** 대화 상자를 열려면 클릭합니다.  
   
  **CopyAllUserDefinedDataTypes**  
  지정한 원본 데이터베이스의 모든 사용자 정의 데이터 형식을 복사할지, 아니면 선택한 사용자 정의 데이터 형식만 복사할지를 선택합니다.  
   
  **UserDefinedDataTypesList**  
- 
-  **사용자 정의 데이터 형식 선택** 대화 상자를 열려면 클릭합니다.  
+ **사용자 정의 데이터 형식 선택** 대화 상자를 열려면 클릭합니다.  
   
- **Copyall파티션 함수**  
- 지정한 원본 데이터베이스의 모든 사용자 정의 파티션 함수를 복사할지, 아니면 선택한 파티션 함수만 복사할지를 선택합니다. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서만 지원됩니다.  
+ **CopyAllPartitionFunctions**  
+ 지정한 원본 데이터베이스의 모든 사용자 정의 파티션 함수를 복사할지, 아니면 선택한 파티션 함수만 복사할지를 선택합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서만 지원됩니다.  
   
  **PartitionFunctionsList**  
- 
-  **파티션 함수 선택** 대화 상자를 열려면 클릭합니다.  
+ **파티션 함수 선택** 대화 상자를 열려면 클릭합니다.  
   
- **Copyall파티션 구성표**  
- 지정한 원본 데이터베이스의 모든 파티션 구성표를 복사할지, 아니면 선택한 파티션 구성표만 복사할지를 선택합니다. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서만 지원됩니다.  
+ **CopyAllPartitionSchemes**  
+ 지정한 원본 데이터베이스의 모든 파티션 구성표를 복사할지, 아니면 선택한 파티션 구성표만 복사할지를 선택합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서만 지원됩니다.  
   
- **파티션 구성표 목록**  
- 
-  **파티션 구성표 선택** 대화 상자를 열려면 클릭합니다.  
+ **PartitionSchemesList**  
+ **파티션 구성표 선택** 대화 상자를 열려면 클릭합니다.  
   
  **CopyAllSchemas**  
- 지정한 원본 데이터베이스의 모든 스키마를 복사할지, 아니면 선택한 스키마만 복사할지를 선택합니다. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서만 지원됩니다.  
+ 지정한 원본 데이터베이스의 모든 스키마를 복사할지, 아니면 선택한 스키마만 복사할지를 선택합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서만 지원됩니다.  
   
  **SchemasList**  
- 
-  **스키마 선택** 대화 상자를 열려면 클릭합니다.  
+ **스키마 선택** 대화 상자를 열려면 클릭합니다.  
   
  **CopyAllSqlAssemblies**  
- 지정한 원본 데이터베이스의 모든 SQL 어셈블리를 복사할지, 아니면 선택한 SQL 어셈블리만 복사할지를 선택합니다. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서만 지원됩니다.  
+ 지정한 원본 데이터베이스의 모든 SQL 어셈블리를 복사할지, 아니면 선택한 SQL 어셈블리만 복사할지를 선택합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서만 지원됩니다.  
   
  **SqlAssembliesList**  
- 
-  **SQL 어셈블리 선택** 대화 상자를 열려면 클릭합니다.  
+ **SQL 어셈블리 선택** 대화 상자를 열려면 클릭합니다.  
   
  **CopyAllUserDefinedAggregates**  
- 지정한 원본 데이터베이스의 모든 사용자 정의 집계를 복사할지, 아니면 선택한 사용자 정의 집계만 복사할지를 선택합니다. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서만 지원됩니다.  
+ 지정한 원본 데이터베이스의 모든 사용자 정의 집계를 복사할지, 아니면 선택한 사용자 정의 집계만 복사할지를 선택합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서만 지원됩니다.  
   
  **UserDefinedAggregatesList**  
- 
-  **사용자 정의 집계 선택** 대화 상자를 열려면 클릭합니다.  
+ **사용자 정의 집계 선택** 대화 상자를 열려면 클릭합니다.  
   
  **CopyAllUserDefinedTypes**  
- 지정한 원본 데이터베이스의 모든 사용자 정의 유형을 복사할지, 아니면 선택한 UDT만 복사할지를 선택합니다. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서만 지원됩니다.  
+ 지정한 원본 데이터베이스의 모든 사용자 정의 유형을 복사할지, 아니면 선택한 UDT만 복사할지를 선택합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서만 지원됩니다.  
   
  **UserDefinedTypes**  
- 
-  **사용자 정의 유형 선택** 대화 상자를 열려면 클릭합니다.  
+ **사용자 정의 유형 선택** 대화 상자를 열려면 클릭합니다.  
   
  **CopyAllXmlSchemaCollections**  
- 지정한 원본 데이터베이스의 모든 XML 스키마 컬렉션을 복사할지, 아니면 선택한 XML 스키마 컬렉션만 복사할지를 선택합니다. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서만 지원됩니다.  
+ 지정한 원본 데이터베이스의 모든 XML 스키마 컬렉션을 복사할지, 아니면 선택한 XML 스키마 컬렉션만 복사할지를 선택합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서만 지원됩니다.  
   
  **XmlSchemaCollectionsList**  
- 
-  **XML 스키마 컬렉션 선택** 대화 상자를 열려면 클릭합니다.  
+ **XML 스키마 컬렉션 선택** 대화 상자를 열려면 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Integration Services 태스크](control-flow/integration-services-tasks.md)   
+ [작업 Integration Services](control-flow/integration-services-tasks.md)   
  [SQL Server 개체 전송 태스크 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
  [식 페이지](expressions/expressions-page.md)   
- [대량 가져오기 또는 대량 내보내기를 위한 데이터 형식 &#40;SQL Server&#41;](../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
+ [대량 가져오기 또는 대량 내보내기를 위한 데이터 형식&#40;SQL Server&#41;](../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [SQL Server 설치에 대한 보안 고려 사항](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
   

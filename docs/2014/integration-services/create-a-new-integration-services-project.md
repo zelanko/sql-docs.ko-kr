@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3a1d8542ba5cc689cef60fc81641c37c96ea790
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060220"
 ---
 # <a name="create-a-new-integration-services-project"></a>새 Integration Services 프로젝트 만들기
@@ -31,11 +31,9 @@ ms.locfileid: "66060220"
   
 2.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
   
-3.  
-  **새 프로젝트** 대화 상자의 **템플릿** 창에서 **Integration Services 프로젝트** 템플릿을 선택합니다.  
+3.  **새 프로젝트** 대화 상자의 **템플릿** 창에서 **Integration Services 프로젝트** 템플릿을 선택합니다.  
   
-     
-  **Integration Services 프로젝트** 템플릿은 비어 있는 단일 패키지가 포함되어 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만듭니다.  
+     **Integration Services 프로젝트** 템플릿은 비어 있는 단일 패키지가 포함되어 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만듭니다.  
   
 4.  (선택 사항) 프로젝트 이름과 위치를 편집합니다.  
   
@@ -45,8 +43,7 @@ ms.locfileid: "66060220"
   
 6.  컴퓨터에 원본 제어 소프트웨어가 설치된 경우 **원본 제어에 추가**  를 선택하여 프로젝트와 원본 제어를 연결합니다.  
   
-7.  원본 제어 소프트웨어가 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe인 경우 **Visual SourceSafe 로그인** 대화 상자가 열립니다. 
-  **Visual SourceSafe 로그인**에서 사용자 이름, 암호 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 데이터베이스의 이름을 제공합니다. 데이터베이스를 찾으려면 **찾아보기** 를 클릭합니다.  
+7.  원본 제어 소프트웨어가 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe인 경우 **Visual SourceSafe 로그인** 대화 상자가 열립니다. **Visual SourceSafe 로그인**에서 사용자 이름, 암호 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 데이터베이스의 이름을 제공합니다. 데이터베이스를 찾으려면 **찾아보기** 를 클릭합니다.  
   
     > [!NOTE]  
     >  선택한 원본 제어 플러그 인을 확인 및 변경하고 원본 제어 환경을 구성하려면 **도구** 메뉴에서 **옵션**을 클릭한 후 **원본 제어** 노드를 확장합니다.  

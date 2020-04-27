@@ -15,54 +15,42 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4be91309e4feb34bd8dfd85aee8e3e0cd1f82ffd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054670"
 ---
 # <a name="view-events-for-the-integration-services-service"></a>Integration Services 서비스의 뷰 이벤트
-  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스의 이벤트는 다음 두 도구를 사용하여 볼 수 있습니다.  
   
--   
-  **의** 로그 파일 뷰어 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]대화 상자. 
-  **로그 파일 뷰어** 대화 상자에는 로그를 내보내고 필터링하고 검색하는 옵션이 포함되어 있습니다. 
-  **로그 파일 뷰어**의 옵션에 대한 자세한 내용은 [로그 파일 뷰어 F1 도움말](../relational-databases/logs/log-file-viewer-f1-help.md)을 참조하세요.  
+-   **의** 로그 파일 뷰어 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]대화 상자. **로그 파일 뷰어** 대화 상자에는 로그를 내보내고 필터링하고 검색하는 옵션이 포함되어 있습니다. **로그 파일 뷰어**의 옵션에 대한 자세한 내용은 [로그 파일 뷰어 F1 도움말](../relational-databases/logs/log-file-viewer-f1-help.md)을 참조하세요.  
   
 -   Windows 이벤트 뷰어  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스에 의해 기록된 이벤트에 대한 설명은 [Integration Services 서비스에서 기록하는 이벤트](service/events-logged-by-the-integration-services-service.md)를 참조하세요.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스에 의해 기록된 이벤트에 대한 설명은 [Integration Services 서비스에서 기록하는 이벤트](service/events-logged-by-the-integration-services-service.md)를 참조하세요.  
   
 ### <a name="to-view-service-events-for-integration-services-in-sql-server-management-studio"></a>SQL Server Management Studio에서 Integration Services의 서비스 이벤트를 보려면  
   
 1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 엽니다.  
   
-2.  
-  **파일** 메뉴에서 **개체 탐색기 연결**을 클릭합니다.  
+2.  **파일** 메뉴에서 **개체 탐색기 연결**을 클릭합니다.  
   
-3.  
-  **서버에 연결** 대화 상자에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버 유형을 선택하고 연결할 서버를 선택하거나 찾은 다음 **연결**을 클릭합니다.  
+3.  **서버에 연결** 대화 상자에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버 유형을 선택하고 연결할 서버를 선택하거나 찾은 다음 **연결**을 클릭합니다.  
   
 4.  개체 탐색기에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 를 마우스 오른쪽 단추로 클릭하고 **로그 보기**를 선택합니다.  
   
-5.  
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 이벤트를 보려면 **SQL Server Integration Services**를 선택합니다. 
-  **NT 이벤트** 옵션은 **SQL Server Integration Services** 옵션에 따라 자동으로 선택 및 선택 취소됩니다.  
+5.  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 이벤트를 보려면 **SQL Server Integration Services**를 선택합니다. **NT 이벤트** 옵션은 **SQL Server Integration Services** 옵션에 따라 자동으로 선택 및 선택 취소됩니다.  
   
 ### <a name="to-view-service-events-for-integration-services-in-windows-event-viewer"></a>Windows 이벤트 뷰어에서 Integration Services의 서비스 이벤트를 보려면  
   
 1.  클래식 보기를 사용할 경우에는 **제어판**에서 **관리 도구**를 클릭하고 종류별 보기를 사용할 경우에는 제어판에서 **성능 및 유지 관리** 를 클릭한 후 **관리 도구**를 클릭합니다.  
   
-2.  
-  **이벤트 뷰어**를 클릭합니다.  
+2.  **이벤트 뷰어**를 클릭합니다.  
   
-3.  
-  **이벤트 뷰어** 대화 상자에서 **애플리케이션**을 클릭합니다.  
+3.  **이벤트 뷰어** 대화 상자에서 **애플리케이션**을 클릭합니다.  
   
-4.  
-  **애플리케이션** 스냅인의 **원본** 열 값이 **SQLISService**인 항목을 찾아 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+4.  **애플리케이션** 스냅인의 **원본** 열 값이 **SQLISService**인 항목을 찾아 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
 5.  필요에 따라 위쪽 또는 아래쪽 화살표를 클릭하여 이전 또는 다음 이벤트를 표시합니다.  
   
@@ -72,8 +60,7 @@ ms.locfileid: "66054670"
   
 8.  **확인**을 클릭합니다.  
   
-9. 
-  **파일** 메뉴에서 **끝내기** 를 클릭하여 **이벤트 뷰어** 대화 상자를 닫습니다.  
+9. **파일** 메뉴에서 **끝내기** 를 클릭하여 **이벤트 뷰어** 대화 상자를 닫습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 서비스 관리](../../2014/integration-services/manage-the-integration-services-service.md)   

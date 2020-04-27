@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 53cf3aa4b23484bb22f4237fbf61874990381067
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064857"
 ---
 # <a name="event-file-target"></a>Event File Target
@@ -26,7 +26,7 @@ ms.locfileid: "66064857"
   
  다음 표에서는 이벤트 파일 대상을 구성하는 데 사용할 수 있는 옵션에 대해 설명합니다.  
   
-|옵션|허용되는 값|Description|  
+|옵션|허용되는 값|설명|  
 |------------|--------------------|-----------------|  
 |filename|최대 260자까지의 모든 문자열. 이 값은 필수입니다.|파일 위치 및 파일 이름입니다.<br /><br /> 원하는 파일 확장명을 사용할 수 있습니다.|  
 |max_file_size|64비트 정수. 이 값은 선택 사항입니다.|최대 파일 크기(MB)입니다. max_file_size가 지정되지 않은 경우 파일 크기는 디스크가 꽉 찰 때까지 증가합니다. 기본 파일 크기는 1GB입니다.<br /><br /> max_file_size는 세션 버퍼의 현재 크기보다 커야 합니다. 그렇지 않으면 파일 대상은 초기화에 실패하고 max_file_size가 잘못되었다고 보고합니다. 버퍼의 현재 크기를 보려면 [sys.dm_xe_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-sessions-transact-sql) 동적 관리 뷰의 buffer_size 열을 쿼리합니다.<br /><br /> 기본 파일 크기가 세션 버퍼 크기보다 작으면 max_file_size를 [sys.server_event_sessions](/sql/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql) 카탈로그 뷰의 max_memory 열에 지정된 값으로 설정하는 것이 좋습니다.<br /><br /> max_file_size가 세션 버퍼보다 크게 설정된 경우 세션 버퍼 크기의 배수 중에서 가장 가까운 값으로 반내림될 수 있습니다. 그러면 지정된 max_file_size 값보다 작은 대상 파일이 생성될 수 있습니다. 예를 들어 버퍼 크기가 100MB이고 max_file_size가 150MB로 설정된 경우 두 번째 버퍼가 남은 50MB 공간에 들어가지 않기 때문에 결과 파일 크기는 100MB로 반내림됩니다.<br /><br /> 기본 파일 크기가 세션 버퍼 크기보다 작으면 max_file_size를 [sys.server_event_sessions](/sql/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql) 카탈로그 뷰의 max_memory 열에 있는 값으로 설정하는 것이 좋습니다.|  
@@ -58,9 +58,9 @@ FROM sys.fn_xe_file_target_read_file('file_name*.xel', NULL, NULL, NULL)
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 확장 이벤트 대상](../../2014/database-engine/sql-server-extended-events-targets.md)   
+ [확장 이벤트 대상 SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [fn_xe_file_target_read_file &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)   
- [CREATE EVENT SESSION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [Transact-sql&#41;&#40;이벤트 세션 만들기](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)  
   
   

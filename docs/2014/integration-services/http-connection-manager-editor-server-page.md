@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 197a2668beb60acf2473a1f53786d7b553e08cf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058251"
 ---
 # <a name="http-connection-manager-editor-server-page"></a>HTTP 연결 관리자 편집기(서버 페이지)
-  
   **HTTP 연결 관리자 편집기** 대화 상자의 **서버** 탭에서 URL이나 보안 자격 증명 등의 속성을 지정하여 HTTP 연결 관리자를 구성할 수 있습니다. HTTP 연결을 사용하면 패키지에서 HTTP를 통해 웹 서버에 액세스하고 파일을 보내거나 받을 수 있습니다. HTTP 연결 관리자를 구성했으면 연결을 테스트할 수도 있습니다.  
   
 > [!IMPORTANT]  
@@ -34,8 +33,7 @@ ms.locfileid: "66058251"
  **서버 URL**  
  서버의 URL을 입력합니다.  
   
- 
-  **웹 서비스 태스크 편집기** 의 **일반** 페이지에 있는 **WSDL 다운로드** 단추를 사용하여 WSDL 파일을 다운로드하려면 WSDL 파일의 URL을 입력합니다. 이 URL은 "?wsdl"로 끝납니다.  
+ **웹 서비스 태스크 편집기** 의 **일반** 페이지에 있는 **WSDL 다운로드** 단추를 사용하여 WSDL 파일을 다운로드하려면 WSDL 파일의 URL을 입력합니다. 이 URL은 "?wsdl"로 끝납니다.  
   
  **자격 증명 사용**  
  HTTP 연결 관리자에서 사용자의 보안 자격 증명을 인증에 사용할지 여부를 지정합니다.  
@@ -53,20 +51,19 @@ ms.locfileid: "66058251"
  HTTP 연결 관리자에서 클라이언트 인증서를 인증에 사용할지 여부를 지정합니다.  
   
  **인증서**  
- 
-  **인증서 선택** 대화 상자를 사용하여 목록에서 인증서를 선택합니다. 입력란에 해당 인증서와 연결된 이름이 표시됩니다.  
+ **인증서 선택** 대화 상자를 사용하여 목록에서 인증서를 선택합니다. 입력란에 해당 인증서와 연결된 이름이 표시됩니다.  
   
- **제한 시간 (초)**  
+ **제한 시간(초)**  
  웹 서버에 연결하기 위한 제한 시간을 제공합니다. 이 속성의 기본값은 30초입니다.  
   
- **청크 크기 (KB)**  
+ **청크 크기(KB)**  
  데이터를 쓰기 위한 청크 크기를 제공합니다.  
   
- **연결 테스트**  
+ **연결을 테스트**  
  HTTP 연결 관리자를 구성했으면 **연결 테스트**를 클릭하여 연결이 실행 가능한지 확인합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [HTTP 연결 관리자 편집기 &#40;프록시 페이지&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)  
+ [HTTP 연결 관리자 편집기&#40;프록시 페이지&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)  
   
   

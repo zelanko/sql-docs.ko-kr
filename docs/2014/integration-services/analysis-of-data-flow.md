@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e67c5448a6625b37c7fb17bc24ea6bdd7cb879ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061597"
 ---
 # <a name="analysis-of-data-flow"></a>데이터 흐름 분석
@@ -36,11 +36,11 @@ order by source_component_name, destination_component_name
   
  다음 예에서는 특정 실행 중 각 구성 요소가 보낸 밀리초당 행 수를 계산합니다. 계산되는 값은 다음과 같습니다.  
   
--   **total_rows** -구성 요소가 보낸 모든 행의 합계입니다.  
+-   **total_rows** - 구성 요소가 보낸 모든 행의 합계  
   
--   **wall_clock_time_ms** -각 구성 요소에 대해 경과 된 총 실행 시간 (밀리초)입니다.  
+-   **wall_clock_time_ms** - 각 구성 요소에 대한 총 실행 경과 시간(밀리초)  
   
--   **num_rows_per_millisecond** -각 구성 요소가 보낸 밀리초 당 행 수  
+-   **num_rows_per_millisecond** - 각 구성 요소가 보낸 밀리초당 행 수  
   
  `HAVING` 절은 계산에서 0으로 나누기 오류를 방지 하는 데 사용 됩니다.  
   

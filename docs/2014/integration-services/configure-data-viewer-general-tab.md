@@ -15,23 +15,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a482a4d615c12023cceb6995eb9f261b6dd86a98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060664"
 ---
 # <a name="configure-data-viewer-general-tab"></a>데이터 뷰어 구성(일반 탭)
   데이터 뷰어에서는 패키지를 실행하는 동안 두 개의 데이터 흐름 구성 요소를 연결하는 경로를 통해 이동하면서 데이터를 표시합니다.  
   
- 
-  **데이터 뷰어 구성** 대화 상자의 **일반** 탭을 사용하여 데이터 뷰어의 이름을 지정하고 데이터를 표시할 차트 유형을 지정할 수 있습니다.  
+ **데이터 뷰어 구성** 대화 상자의 **일반** 탭을 사용하여 데이터 뷰어의 이름을 지정하고 데이터를 표시할 차트 유형을 지정할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
  **이름**  
  데이터 뷰어에 사용할 고유 이름을 제공합니다.  
   
- **형식**  
+ **Type**  
  데이터 뷰어의 유형을 나열합니다. 예제 차트를 표시하려면 유형을 클릭합니다.  
   
  **설명**  

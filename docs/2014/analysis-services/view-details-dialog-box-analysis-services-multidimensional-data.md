@@ -13,21 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 45ad2e961c9f53067b3e998dc2efcec8fb31b51d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065453"
 ---
 # <a name="view-details-dialog-box-analysis-services---multidimensional-data"></a>자세히 보기 대화 상자(Analysis Services - 다차원 데이터)
-  
   **및** 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 자세히 보기 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 메시지 또는 작업에 대한 자세한 정보를 볼 수 있습니다. 다음을 수행하여 **자세히 보기** 대화 상자를 표시할 수 있습니다.  
   
--   
-  **처리 진행률** 대화 상자의 **상태 트리 뷰** 에서 항목을 두 번 클릭하거나 **처리 진행률** 대화 상자의 **상태 트리 뷰** 에서 항목을 선택하고 **자세히 보기**를 클릭합니다.  
+-   **처리 진행률** 대화 상자의 **상태 트리 뷰** 에서 항목을 두 번 클릭하거나 **처리 진행률** 대화 상자의 **상태 트리 뷰** 에서 항목을 선택하고 **자세히 보기**를 클릭합니다.  
   
--   
-  **의** 배포 진행률 **창에서** 상태 트리 뷰 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 항목을 두 번 클릭합니다.  
+-   **의** 배포 진행률 **창에서** 상태 트리 뷰 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 항목을 두 번 클릭합니다.  
   
 ## <a name="options"></a>옵션  
  **세부 정보**  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0881624f421cba5bda5d2b0ba8f9d3732efd2497
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059264"
 ---
 # <a name="excel-connection-manager-editor"></a>Excel 연결 관리자 편집기
@@ -37,12 +37,12 @@ ms.locfileid: "66059264"
 >  새/존재 하지 않는 파일을 가리키는 **Excel 연결** 을 선택한 다음 **Excel 시트의 이름**에서 **새로 만들기** 를 클릭 하면 Excel **대상 편집기** 에서 자동으로 excel 파일을 만듭니다.  
   
  **찾아보기**  
- **열기** 대화 상자를 사용 하 여 excel 파일이 있는 폴더 또는 새 파일을 만들려는 폴더로 이동 합니다.  
+ **열기** 대화 상자를 사용하여 Excel 파일이 있는 폴더 또는 새 파일을 만들려는 폴더로 이동합니다.  
   
  **Excel 버전**  
  파일을 만드는 데 사용된 Microsoft Excel 버전을 지정합니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |Excel 97-2003|Excel 97 이상을 사용하여 파일을 만들었습니다.|  
 |Excel 3.0|파일이 Excel 3.0를 사용 하 여 만들어졌습니다.|  

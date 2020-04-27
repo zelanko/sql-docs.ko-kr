@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3df1a27d94c3da63e1760e890654dba4045b2f94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060705"
 ---
 # <a name="configure-data-viewer-histogram-tab"></a>데이터 뷰어 구성(히스토그램 탭)
-  
   **데이터 뷰어 구성** 대화 상자의 **히스토그램** 탭을 사용하여 표시할 열을 지정할 수 있습니다. 히스토그램은 특정 숫자 열의 데이터 값을 값의 분산으로 표시합니다. 차트는 한 버퍼의 내용만 반영합니다.  
   
 ## <a name="options"></a>옵션  

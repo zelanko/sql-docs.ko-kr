@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f753aaddbd2647b1d8874b0d34db415f75aa99b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055034"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>오류 메시지 전송 태스크 편집기(메시지 페이지)
-  
   **오류 메시지 전송 태스크 편집기** 대화 상자의 **메시지** 페이지를 사용하여 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용자 정의 오류 메시지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 한 인스턴스에서 다른 인스턴스로 복사하기 위한 속성을 지정할 수 있습니다. 이 태스크에 대한 자세한 내용은 [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md)를 참조하십시오.  
   
 ## <a name="options"></a>옵션  
@@ -35,31 +34,31 @@ ms.locfileid: "66055034"
  **IfObjectExists**  
  이름이 동일한 오류 메시지가 이미 대상 서버에 있는 경우 기존 사용자 정의 오류 메시지를 덮어쓸지, 기존 메시지를 건너뛸지, 아니면 태스크가 실패하도록 할지를 선택합니다.  
   
- **전송자 Allerrormessages**  
+ **TransferAllErrorMessages**  
  원본 서버에서 대상 서버로 모든 사용자 정의 메시지를 복사할지, 아니면 지정한 사용자 정의 메시지만 복사할지를 선택합니다.  
   
  이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**True**|모든 사용자 정의 메시지를 복사합니다.|  
 |**허위**|지정한 사용자 정의 메시지만 복사합니다.|  
   
  **ErrorMessagesList**  
- 복사할 오류 메시지를 선택하려면 찾아보기 단추 **(…)** 를 클릭합니다.  
+ 복사할 오류 메시지를 선택 하려면 찾아보기 단추 **(...)** 를 클릭 합니다.  
   
 > [!NOTE]  
 >  복사할 오류 메시지를 선택하려면 **SourceConnection** 을 지정해야 합니다.  
   
  **ErrorMessageLanguagesList**  
- 사용자 정의 오류 메시지를 대상 서버로 복사할 언어를 선택하려면 찾아보기 단추 **(…)** 를 클릭합니다. 다른 언어 버전의 메시지를 대상 서버로 전송하려면 us_english(코드 페이지 1033) 버전의 메시지가 해당 서버에 있어야 합니다.  
+ 사용자 정의 오류 메시지를 대상 서버로 복사할 언어를 선택 하려면 찾아보기 단추 **(...)** 를 클릭 합니다. 다른 언어 버전의 메시지를 대상 서버로 전송하려면 us_english(코드 페이지 1033) 버전의 메시지가 해당 서버에 있어야 합니다.  
   
 > [!NOTE]  
 >  복사할 오류 메시지를 선택하려면 **SourceConnection** 을 지정해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Integration Services 태스크](control-flow/integration-services-tasks.md)   
+ [작업 Integration Services](control-flow/integration-services-tasks.md)   
  [오류 메시지 전송 태스크 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
  [SMO 연결 관리자](connection-manager/smo-connection-manager.md)   
  [오류 메시지 전송 태스크 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   

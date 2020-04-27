@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3e36fae15f6f4220565bcc3d14c0e125ca6818f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058074"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>패키지 가져오기 대화 상자 UI 참조
-  
   **에서 사용 가능한** 패키지 가져오기 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 가져오고 해당 패키지의 보호 수준을 설정 또는 수정할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
@@ -66,6 +65,6 @@ ms.locfileid: "66058074"
  [패키지 복사본 저장](../../2014/integration-services/save-copy-of-package.md)   
  [패키지 내보내기 대화 상자 UI 참조](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [패키지 저장](save-packages.md)   
- [SSIS 서비스&#41;&#40;패키지 가져오기 및 내보내기](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
+ [패키지 가져오기 및 내보내기&#40;SSIS 서비스&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

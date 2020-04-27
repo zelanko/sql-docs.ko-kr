@@ -13,19 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3a9121129ab0f7e4e185e35418132a4f1aa663f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069173"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>시퀀스 클러스터링 클러스터 특징 탭(마이닝 모델 뷰어)
-  
   **Microsoft 시퀀스 클러스터링 뷰어** 의 **클러스터 특징** 탭에서는 시퀀스 클러스터를 정의하는 특징의 세부 목록을 제공합니다. 이러한 특징에는 간단한 특성-값 쌍뿐만 아니라 상태 간 전환도 포함될 수 있습니다.  
   
  이 시퀀스 클러스터링 모델 뷰를 사용하여 클러스터 콘텐츠로 드릴다운하고 클러스터의 특징을 나타내는 시퀀스를 확인할 수 있습니다.  
   
- **자세한 내용:** [Microsoft 시퀀스 클러스터링 알고리즘](data-mining/microsoft-sequence-clustering-algorithm.md), [Microsoft 시퀀스 클러스터 뷰어를 사용 하 여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **자세한 내용:** [Microsoft 시퀀스 클러스터링 알고리즘](data-mining/microsoft-sequence-clustering-algorithm.md), [Microsoft 시퀀스 클러스터 뷰어를 사용하여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>옵션  
  **뷰어 내용 새로 고침**  
@@ -45,11 +44,11 @@ ms.locfileid: "66069173"
   
  예를 들어 시장 바구니 분석 기반의 시퀀스 클러스터링 모델에서 한 클러스터의 최상위 특징은 판매 품목을 선택한 다음 더 이상 구매하지 않고 거래를 끝내는 고객일 수 있습니다. 서버 오류를 분석하려는 시퀀스 클러스터링 모델에서 클러스터의 기본 특징은 너무 자주 발생하는 일련의 오류 이벤트일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**변수**|이 열은 특징이 값인지 아니면 전환인지를 나타냅니다.<br /><br /> 특징이 값인 경우 **변수** 열에 특성 이름이 포함 됩니다.<br /><br /> 특징이 상태 전환을 나타내는 경우 **변수** 열에는 "전환" 텍스트가 포함 됩니다.|  
 |**값**|이 열의 값은 특징이 간단한 특성-값 쌍인지, 아니면 항목이나 이벤트의 일반 시퀀스를 나타내는 상태 전환인지에 따라 달라집니다.<br /><br /> 특징이 값인 경우 **값** 열에 상태가 포함 됩니다.<br /><br /> 특징이 상태 전환을 나타내는 경우 **값** 열에 상태 전환에 대 한 설명이 포함 됩니다.|  
-|**따르는**|이 열에는 이 특징(간단한 특성-값 쌍 또는 상태의 조합)이 현재 클러스터의 멤버일 상대적인 확률을 나타내는 막대가 표시됩니다.<br /><br /> 마우스를 막대 위로 이동하여 특징의 빈도 값을 표시할 수 있습니다.|  
+|**Probability**|이 열에는 이 특징(간단한 특성-값 쌍 또는 상태의 조합)이 현재 클러스터의 멤버일 상대적인 확률을 나타내는 막대가 표시됩니다.<br /><br /> 마우스를 막대 위로 이동하여 특징의 빈도 값을 표시할 수 있습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

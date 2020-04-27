@@ -11,53 +11,45 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7db4849a71644772f055059d18faa9f964603913
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066007"
 ---
 # <a name="toolbar-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>도구 모음(KPI 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
-  
   **도구 모음** 창을 사용하여 큐브 디자이너의 **KPI** 탭에서 일반 동작을 수행할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
  **비즈니스 인텔리전스 추가**  
- 
-  **비즈니스 인텔리전스 마법사** 를 표시하고 비즈니스 인텔리전스 기능을 큐브에 추가하려면 클릭합니다.  
+ **비즈니스 인텔리전스 마법사** 를 표시하고 비즈니스 인텔리전스 기능을 큐브에 추가하려면 클릭합니다.  
   
  **프로세스**  
- 
-  **처리** 대화 상자를 표시하고 큐브를 처리하려면 클릭합니다.  
+ **처리** 대화 상자를 표시하고 큐브를 처리하려면 클릭합니다.  
   
  **연결할**  
- 
-  **KPI** 탭 세션의 연결이 끊기거나 시간이 초과되어 연결이 해제된 경우 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] KPI **탭을 큐브가 포함된** 인스턴스 및 데이터베이스에 다시 연결하려면 클릭합니다.  
+ **KPI** 탭 세션의 연결이 끊기거나 시간이 초과되어 연결이 해제된 경우 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] KPI **탭을 큐브가 포함된** 인스턴스 및 데이터베이스에 다시 연결하려면 클릭합니다.  
   
  **새 KPI**  
- 
-  **KPI 폼 편집기** 를 표시하여 새 KPI(핵심 성과 지표)를 만들려면 클릭합니다.  
+ **KPI 폼 편집기** 를 표시하여 새 KPI(핵심 성과 지표)를 만들려면 클릭합니다.  
   
 > [!NOTE]  
 >  이 옵션은 폼 보기에서만 사용할 수 있습니다.  
   
  **Delete**  
- 
-  **개체 삭제** 대화 상자를 표시하고 선택한 KPI를 삭제하려면 클릭합니다.  
+ **개체 삭제** 대화 상자를 표시하고 선택한 KPI를 삭제하려면 클릭합니다.  
   
 > [!NOTE]  
 >  이 옵션은 폼 보기에서만 사용할 수 있습니다.  
   
  **위로 이동**  
- 
-  **KPI 구성 도우미** 창에서 선택한 KPI를 한 칸 위로 이동하려면 클릭합니다.  
+ **KPI 구성 도우미** 창에서 선택한 KPI를 한 칸 위로 이동하려면 클릭합니다.  
   
 > [!NOTE]  
 >  이 옵션은 폼 보기에서만 사용할 수 있습니다.  
   
  **아래로 이동**  
- 
-  **KPI 구성 도우미** 창에서 선택한 KPI를 한 칸 아래로 이동하려면 클릭합니다.  
+ **KPI 구성 도우미** 창에서 선택한 KPI를 한 칸 아래로 이동하려면 클릭합니다.  
   
 > [!NOTE]  
 >  이 옵션은 폼 보기에서만 사용할 수 있습니다.  
@@ -69,8 +61,7 @@ ms.locfileid: "66066007"
  브라우저 보기에서 **KPI** 탭을 사용하려면 선택합니다.  
   
  **구문 검사**  
- 
-  **KPI 구성 도우미** 창에서 선택한 KPI의 구문을 검사하려면 클릭합니다.  
+ **KPI 구성 도우미** 창에서 선택한 KPI의 구문을 검사하려면 클릭합니다.  
   
 > [!NOTE]  
 >  이 옵션은 폼 보기에서만 사용할 수 있습니다.  

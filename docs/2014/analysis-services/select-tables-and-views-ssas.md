@@ -13,16 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ff8ada00af8b70659a19f863a52a5f1005e20b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069236"
 ---
 # <a name="select-tables-and-views-ssas"></a>테이블 및 뷰 선택(SSAS)
-  
-  **테이블 가져오기 마법사** 의 이 페이지에서는 가져올 데이터가 포함되어 있는 테이블과 뷰를 선택할 수 있습니다. 
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
+  **테이블 가져오기 마법사** 의 이 페이지에서는 가져올 데이터가 포함되어 있는 테이블과 뷰를 선택할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
   
  이 페이지에 테이블과 뷰가 표시되었다고 해서 가져오기 작업이 반드시 성공하는 것은 아닙니다. 가장 정보 페이지에 지정된 사용자에게 선택한 데이터베이스를 읽을 수 있는 권한이 없는 경우 가져오기 작업이 실패합니다.  
   
@@ -44,7 +42,7 @@ ms.locfileid: "66069236"
  **스키마**  
  원본 테이블이 포함된 스키마를 지정합니다. 데이터베이스 유형에 따라 스키마는 테이블과 같은 다른 개체의 컨테이너로 작동하며 해당 개체의 소유권을 나타낼 수도 있습니다.  
   
- **친숙한 이름**  
+ **식별 이름**  
  원본 테이블의 이름을 지정합니다. 기본적으로 이 열에는 **원본 테이블** 열에 나타나는 원본 테이블의 이름이 표시됩니다. 원본 데이터베이스에 사용된 것과 다른 이름을 사용하려면 이름을 변경하십시오.  
   
  **필터 세부 정보**  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a0a1527ed97570c715ff383837ebd5a9d5a3354
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066694"
 ---
 # <a name="relationships-ssas-tabular"></a>관계(SSAS 테이블 형식)
@@ -29,7 +29,7 @@ ms.locfileid: "66066694"
   
  이 항목의 섹션:  
   
--   [아니라](#what)  
+-   [이점](#what)  
   
 -   [관계에 대 한 요구 사항](#requirements)  
   
@@ -43,10 +43,10 @@ ms.locfileid: "66066694"
   
 -   [관련 작업](#bkmk_related_tasks)  
   
-##  <a name="what"></a> 이점  
+##  <a name="benefits"></a><a name="what"></a>아니라  
  관계는 각 테이블에 있는 하나 이상의 열에 기반을 둔 두 데이터 테이블 간의 연결입니다. 관계가 어떤 점에서 유용한지 궁금하다면 여러분이 기업에서 고객 주문 데이터를 추적하는 업무를 담당하고 있다고 가정해 보십시오. 관계를 사용하면 다음과 같은 구조를 지닌 단일 테이블에서 모든 데이터를 추적할 수 있습니다.  
   
-|CustomerID|속성|EMail|DiscountRate|OrderID|OrderDate|Product|수량|  
+|CustomerID|이름|EMail|DiscountRate|OrderID|OrderDate|Product|수량|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
@@ -56,7 +56,7 @@ ms.locfileid: "66066694"
   
 ### <a name="customers"></a>고객  
   
-|[CustomerID]|속성|Email|  
+|[CustomerID]|이름|메일|  
 |--------------------|----------|-----------|  
 |1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
@@ -68,7 +68,7 @@ ms.locfileid: "66066694"
 |1|.05|  
 |2|.10|  
   
-### <a name="orders"></a>주문  
+### <a name="orders"></a>Orders  
   
 |[CustomerID]|OrderID|OrderDate|Product|수량|  
 |--------------------|-------------|---------------|-------------|--------------|  
@@ -83,13 +83,13 @@ ms.locfileid: "66066694"
   
  관계형 데이터베이스에는 일반적으로 특수 속성을 가진 열로 나타나는 여러 가지 유형의 *키*가 있습니다. 관계형 데이터베이스에는 다음 네 가지 유형의 키를 사용할 수 있습니다.  
   
--   *기본 키*: 테이블의 행을 고유 하 게 식별 합니다 (예: Customers 테이블의 CustomerID).  
+-   *기본 키*: 테이블의 행을 고유하게 식별합니다(예: Customers 테이블의 CustomerID).  
   
 -   *대체 키* (또는 *후보 키*): 기본 키가 아닌 고유 열입니다. 예를 들어 Employees 테이블에 직원 ID와 주민 등록 번호가 저장될 수 있으며 둘 모두 고유합니다.  
   
--   *외래 키*: Customers 테이블의 customerid를 참조 하는 Orders 테이블의 customerid와 같은 다른 테이블의 고유 열을 참조 하는 열입니다.  
+-   *외래 키*: 다른 테이블의 고유 열을 참조하는 열입니다(예: Customers 테이블의 CustomerID를 참조하는 Orders 테이블의 CustomerID).  
   
--   *복합 키*: 두 개 이상의 열로 구성 된 키입니다. 테이블 형식 모델에서는 복합 키가 지원되지 않습니다. 자세한 내용은 이 항목의 "복합 키 및 조회 열"을 참조하십시오.  
+-   *복합 키*: 두 개 이상의 열로 구성된 키입니다. 테이블 형식 모델에서는 복합 키가 지원되지 않습니다. 자세한 내용은 이 항목의 "복합 키 및 조회 열"을 참조하십시오.  
   
  테이블 형식 모델에서는 기본 키 또는 대체 키를 *관련 조회 열*또는 그냥 *조회 열*이라고 합니다. 테이블에 기본 키와 대체 키가 둘 다 있으면 둘 중 하나를 조회 열로 사용할 수 있습니다. 외래 키는 *원본 열* 또는 그냥 *열*이라고 합니다. 이 항목의 예에서는 Orders 테이블의 CustomerID(열)와 Customers 테이블의 CustomerID(조회 열) 간에 관계가 정의됩니다. 관계형 데이터베이스에서 데이터를 가져오는 경우 기본적으로 모델 디자이너에서는 한 테이블에서 외래 키를 선택하고 다른 테이블에서 해당되는 기본 키를 선택합니다. 그러나 조회 열에 대한 고유 값을 가지는 열이면 모두 사용할 수 있습니다.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66066694"
   
  다음 표에서는 세 테이블 간의 관계를 보여 줍니다.  
   
-|관계|Type|조회 열|열|  
+|관계|유형|조회 열|열|  
 |------------------|----------|-------------------|------------|  
 |Customers-CustomerDiscounts|일 대 일|Customers.CustomerID|CustomerDiscounts.CustomerID|  
 |Customers-Orders|일 대 다|Customers.CustomerID|Orders.CustomerID|  
@@ -106,7 +106,7 @@ ms.locfileid: "66066694"
 ### <a name="relationships-and-performance"></a>관계와 성능  
  관계를 만든 후에 모델 디자이너에서는 일반적으로 새로 만든 관계의 테이블에 있는 열을 사용하는 모든 수식을 다시 계산해야 합니다. 데이터의 양이 많거나 관계가 복잡하면 처리에 시간이 걸릴 수 있습니다.  
   
-##  <a name="requirements"></a>관계에 대 한 요구 사항  
+##  <a name="requirements-for-relationships"></a><a name="requirements"></a> 관계를 정의하기 위한 요구 사항  
  모델 디자이너에서 관계를 만들 때 따라야 할 몇 가지 요구 사항이 있습니다.  
   
 ### <a name="single-active-relationship-between-tables"></a>테이블 간 단일 활성 관계  
@@ -137,7 +137,7 @@ ms.locfileid: "66066694"
   
  모델 디자이너에서 두 테이블 간의 관계를 만들려고 하고 기본 키 및 외래 키를 정의하는 열이 여러 개 있는 경우 먼저 이들 값을 결합하여 단일 키 열을 만든 후 관계를 만들어야 합니다. 이 작업을 데이터를 가져오기 전에 수행하거나 모델 디자이너에서 계산 열을 만들어 수행할 수 있습니다.  
   
-###  <a name="bkmk_many_to_many"></a>다 대 다 관계  
+###  <a name="many-to-many-relationships"></a><a name="bkmk_many_to_many"></a>다 대 다 관계  
  테이블 형식 모델에서는 다 대 다 관계를 지원하지 않으므로 모델 디자이너에서 *접합 테이블* 을 추가할 수 없습니다. 하지만 DAX 함수를 사용하여 다 대 다 관계를 모델링할 수 있습니다.  
   
 ### <a name="self-joins-and-loops"></a>자체 조인 및 루프  
@@ -153,7 +153,7 @@ ms.locfileid: "66066694"
   
  루프를 초래하는 관계를 만들려고 하면 오류가 발생합니다.  
   
-##  <a name="detection"></a>관계 유추  
+##  <a name="inference-of-relationships"></a><a name="detection"></a>관계 유추  
  경우에 따라 테이블 간의 관계가 자동으로 연결됩니다. 예를 들어 아래에서 처음 두 테이블 집합 간에 관계를 만들면 다른 두 테이블 간에 관계가 존재하는 것으로 유추되어 관계가 자동으로 만들어집니다.  
   
  Products와 Category -- 수동으로 관계 생성  
@@ -164,17 +164,17 @@ ms.locfileid: "66066694"
   
  관계가 자동으로 연결되려면 위와 같이 관계가 한 방향으로 형성되어야 합니다. 예를 들어 처음에 Sales와 Products 간에 관계를 만들고 Sales와 Customers 간에 관계를 만들었다면 관계는 유추되지 않습니다. 이는 Products와 Customers 간의 관계가 다 대 다 관계이기 때문입니다.  
   
-##  <a name="bkmk_detection"></a>데이터를 가져올 때 관계 검색  
+##  <a name="detection-of-relationships-when-importing-data"></a><a name="bkmk_detection"></a> 데이터를 가져올 때 관계 검색  
  관계형 데이터 원본 테이블에서 가져오는 경우 테이블 가져오기 마법사는 원본 스키마 데이터를 기반으로 원본 테이블에서 기존 관계를 검색합니다. 관련 테이블을 가져오는 경우 해당 관계가 모델에서 중복됩니다.  
   
-##  <a name="bkmk_manually_create"></a>수동으로 관계 만들기  
+##  <a name="manually-create-relationships"></a><a name="bkmk_manually_create"></a> 수동으로 관계 만들기  
  단일 관계형 데이터 원본의 테이블 간 대부분의 관계는 자동으로 검색되고 테이블 형식 모델에 만들어지는 데 반해 모델 테이블 간 관계를 수동으로 만들어야 하는 인스턴스도 많습니다.  
   
  모델에 있는 데이터의 원본이 여러 개인 경우 수동으로 관계를 만들어야 할 가능성이 많습니다. 예를 들어 관계형 데이터 원본에서 Customers, CustomerDiscounts 및 Orders 테이블을 가져올 수 있습니다. 원본의 이러한 테이블 간에 있는 관계는 자동으로 모델에 만들어집니다. 그런 다음 다른 원본의 다른 테이블을 추가할 수 있습니다. 예를 들어 icrosoft Excel 통합 문서의 Geography 테이블에서 영역 데이터를 가져올 수 있습니다. 그런 다음 Customers 테이블의 열과 Geography 테이블 간 관계를 수동으로 만들 수 있습니다.  
   
  다이어그램 뷰의 모델 디자이너나 관계 관리 대화 상자를 사용하여 테이블 형식 모델에 관계를 수동으로 만들 수 있습니다. 다이어그램 뷰는 테이블을 그래픽 형식의 관계도와 함께 표시합니다. 한 테이블의 열을 클릭한 다음 다른 테이블로 커서를 끌어 테이블 간에 올바른 순서로 쉽게 관계를 만들 수 있습니다. 관계 관리 대화 상자에는 간단한 테이블 형식으로 테이블 간의 관계가 표시됩니다. 수동으로 관계를 만드는 방법에 대한 자세한 내용은 [두 테이블 간에 관계 만들기&#40;SSAS 테이블 형식&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)에서 사용하는 방법입니다.  
   
-##  <a name="bkmk_dupl_errors"></a>중복 값 및 기타 오류  
+##  <a name="duplicate-values-and-other-errors"></a><a name="bkmk_dupl_errors"></a>중복 값 및 기타 오류  
  관계에 사용할 수 없는 열을 선택하면 열 옆에 빨간색 X가 나타납니다. 오류 아이콘 위에 커서를 두면 문제에 대한 자세한 정보를 제공하는 메시지가 표시됩니다. 다음과 같은 문제로 인해 선택된 열 간에 관계를 만들지 못할 수 있습니다.  
   
 |문제 또는 메시지|해결 방법|  
@@ -182,15 +182,15 @@ ms.locfileid: "66066694"
 |선택한 두 열 모두에 중복되는 값이 들어 있기 때문에 관계를 만들 수 없습니다.|올바른 관계를 만들려면 선택한 한 쌍의 열 중 최소 하나의 열에 고유 값만 들어 있어야 합니다.<br /><br /> 열을 편집하여 중복을 제거하거나 고유 값이 들어 있는 열이 **관련 조회 열**로 사용되도록 열의 순서를 반대로 할 수 있습니다.|  
 |열에 null 또는 빈 값이 포함되어 있습니다.|null 값이 있으면 데이터 열을 서로 조인할 수 없습니다. 모든 행에 대해 관계에서 사용되는 두 열 모두에 값이 있어야 합니다.|  
   
-##  <a name="bkmk_related_tasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> 관련 작업  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
-|[SSAS 테이블 형식&#41;&#40;두 테이블 간에 관계를 만듭니다.](create-a-relationship-between-two-tables-ssas-tabular.md)|두 테이블 간의 관계를 수동으로 만드는 방법을 설명합니다.|  
-|[SSAS 테이블 형식&#41;&#40;관계 삭제](relationships-ssas-tabular.md)|관계를 삭제하는 방법과 관계를 삭제할 경우에 발생하는 결과를 설명합니다.|  
+|[두 테이블 간에 관계 만들기&#40;SSAS 테이블 형식&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|두 테이블 간의 관계를 수동으로 만드는 방법을 설명합니다.|  
+|[관계 삭제&#40;SSAS 테이블 형식&#41;](relationships-ssas-tabular.md)|관계를 삭제하는 방법과 관계를 삭제할 경우에 발생하는 결과를 설명합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [SSAS 테이블 형식&#41;&#40;테이블 및 열](tables-and-columns-ssas-tabular.md)   
- [SSAS 테이블 형식&#41;&#40;데이터 가져오기](../import-data-ssas-tabular.md)  
+ [데이터 가져오기&#40;SSAS 테이블 형식&#41;](../import-data-ssas-tabular.md)  
   
   

@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a0222627860b70059163bff1dd989e230c1cb66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054835"
 ---
 # <a name="unpivot-transformation-editor"></a>피벗 해제 변환 편집기
-  
   **피벗 해제 변환 편집기** 대화 상자를 사용하여 행에 피벗할 열을 선택하고 데이터 열 및 새 피벗 값 출력 열을 지정할 수 있습니다.  
   
 > [!NOTE]  
@@ -43,28 +42,24 @@ ms.locfileid: "66054835"
  **입력 열**  
  각 행에 대해 사용 가능한 입력 열 목록에서 선택합니다. 선택 내용에 따라 **사용 가능한 입력 열** 테이블의 확인란이 달라집니다.  
   
- 
-  [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md)에 설명된 피벗 해제 시나리오에서 입력 열은 **햄**, **탄산음료**, **우유**, **맥주**및 **칩** 열입니다.  
+ [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md)에 설명된 피벗 해제 시나리오에서 입력 열은 **햄**, **탄산음료**, **우유**, **맥주**및 **칩** 열입니다.  
   
  **대상 열**  
  데이터 열에 사용할 이름을 제공합니다.  
   
- 
-  [피벗 해제 변환](data-flow/transformations/unpivot-transformation.md)에 설명된 피벗 해제 시나리오에서 대상 열은 수량(**Qty**) 열입니다.  
+ [피벗 해제 변환](data-flow/transformations/unpivot-transformation.md)에 설명된 피벗 해제 시나리오에서 대상 열은 수량(**Qty**) 열입니다.  
   
  **피벗 키 값**  
  피벗 값에 사용할 이름을 제공합니다. 기본값은 입력 열의 이름이지만 설명이 포함된 고유 이름을 임의로 선택할 수 있습니다.  
   
  이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.  
   
- 
-  [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md)에 설명된 피벗 해제 시나리오에서 피벗 값은 **피벗 키 값 열 이름** 옵션으로 지정한 새 제품 열에 **햄**, **탄산음료**, **우유**, **맥주**및 **칩**과 같은 텍스트 값으로 나타납니다.  
+ [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md)에 설명된 피벗 해제 시나리오에서 피벗 값은 **피벗 키 값 열 이름** 옵션으로 지정한 새 제품 열에 **햄**, **탄산음료**, **우유**, **맥주**및 **칩**과 같은 텍스트 값으로 나타납니다.  
   
  **피벗 키 값 열 이름**  
  피벗 값 열에 사용할 이름을 제공합니다. 기본값은 "피벗 키 값"이지만 알기 쉬운 임의의 고유 이름을 선택할 수 있습니다.  
   
- 
-  [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md)에 설명된 피벗 해제 시나리오에서 피벗 키 값 열 이름은 **제품** 이며 **제품** , **탄산음료**, **우유**, **맥주**, **칩**열이 피벗 해제되는 새 **제품** 열을 지정합니다.  
+ [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md)에 설명된 피벗 해제 시나리오에서 피벗 키 값 열 이름은 **제품** 이며 **제품** , **탄산음료**, **우유**, **맥주**, **칩**열이 피벗 해제되는 새 **제품** 열을 지정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   

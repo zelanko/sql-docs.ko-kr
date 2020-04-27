@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0da11d8f49c1de88297a9bf8876588c8b5aeb81b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056278"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>SAP BW 연결 관리자 편집기
@@ -59,7 +59,7 @@ ms.locfileid: "66056278"
   
  부하 분산 서버 그룹에 연결하려면 **부하 분산 사용** 옵션을 사용합니다.  
   
- **Host**  
+ **호스트**  
  단일 애플리케이션 서버에 연결하는 경우 호스트 이름을 지정합니다.  
   
 > [!NOTE]  
@@ -88,7 +88,7 @@ ms.locfileid: "66056278"
 > [!NOTE]  
 >  이 옵션은 **부하 분산 사용** 옵션을 선택한 경우에만 사용할 수 있습니다.  
   
- **SID**  
+ **S**  
  부하 분산된 서버 그룹에 연결하는 경우 연결에 대한 시스템 ID를 지정합니다.  
   
 > [!NOTE]  
@@ -109,7 +109,7 @@ ms.locfileid: "66056278"
  **찾아보기**  
  로그 디렉터리로 사용할 폴더를 찾아봅니다.  
   
- **연결 테스트**  
+ **연결을 테스트**  
  사용자가 제공한 값을 사용하여 연결을 테스트합니다. **연결 테스트**를 클릭하면 메시지 상자가 표시되고 연결이 성공했는지 여부가 표시됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

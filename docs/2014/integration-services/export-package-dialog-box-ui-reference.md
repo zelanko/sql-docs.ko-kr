@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c1cca0a2761f87d6f4f3837df1e9a0bdcc5b91a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058906"
 ---
 # <a name="export-package-dialog-box-ui-reference"></a>패키지 내보내기 대화 상자 UI 참조
-  
   **에서 사용 가능한** 패키지 내보내기 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 다른 위치로 내보내고 필요에 따라 패키지의 보호 수준을 수정할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
@@ -54,15 +53,15 @@ ms.locfileid: "66058906"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하는 경우 암호를 입력합니다.  
   
  **패키지 경로**  
- 패키지 경로를 입력하거나 찾아보기 단추 **(...)** 를 클릭한 다음, 패키지를 저장할 폴더를 찾습니다.  
+ 패키지 경로를 입력 하거나 찾아보기 단추 **(...)** 를 클릭 한 다음 패키지를 저장할 폴더를 찾습니다.  
   
  **보호 수준**  
- 찾아보기 단추 **(...)** 를 클릭한 다음, **패키지 보호 수준** 대화 상자에서 보호 수준을 업데이트합니다. 자세한 내용은 [패키지 및 프로젝트 보호 수준 대화 상자](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)를 참조하세요.  
+ 찾아보기 단추 **(...)** 를 클릭 하 고 **패키지 보호 수준** 대화 상자에서 보호 수준을 업데이트 합니다. 자세한 내용은 [패키지 및 프로젝트 보호 수준 대화 상자](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [패키지 복사본 저장](../../2014/integration-services/save-copy-of-package.md)   
  [패키지 가져오기 대화 상자 UI 참조](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [패키지 저장](save-packages.md)   
- [SSIS 서비스&#41;&#40;패키지 가져오기 및 내보내기](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
+ [패키지 가져오기 및 내보내기&#40;SSIS 서비스&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

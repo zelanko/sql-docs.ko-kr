@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85d085472a8d904efb2b33b942ba9f0a67326fed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067247"
 ---
 # <a name="delete-a-table-ssas-tabular"></a>테이블 삭제(SSAS 테이블 형식)
@@ -33,6 +33,6 @@ ms.locfileid: "66067247"
 -   해당 테이블을 사용하여 계산 열을 만든 경우 해당 테이블의 열도 삭제됩니다. 다른 테이블에서 삭제된 테이블의 열을 사용하는 계산 열에서는 오류가 표시됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SSAS 테이블 형식&#41;&#40;테이블 및 열](tables-and-columns-ssas-tabular.md)  
+ [테이블 및 열&#40;SSAS 테이블 형식&#41;](tables-and-columns-ssas-tabular.md)  
   
   

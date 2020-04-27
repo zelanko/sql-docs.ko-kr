@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a541c86029be9a438492a851c0eb16d18120f75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065026"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>쿼리 편집기를 사용하여 확장 이벤트 세션 만들기
@@ -35,7 +35,7 @@ ms.locfileid: "66065026"
   
  새 세션 마법사를 사용하여 확장 이벤트 세션을 만드는 방법은 [마법사를 사용하여 확장 이벤트 세션 만들기&#40;개체 탐색기&#41;](../ssms/object/object-explorer.md)를 참조하세요. 새 세션 UI를 사용하여 확장 이벤트 세션을 만드는 방법은 [새 세션 대화 상자를 사용하여 확장 이벤트 세션 만들기](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)를 참조하세요.  
   
-##  <a name="BeforeYouBegin"></a> 권한  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> 권한  
  확장 이벤트 세션을 만들려면 ALTER ANY EVENT SESSION 권한이 있어야 합니다.  
   
 ## <a name="creating-an-extended-events-session-using-query-editor"></a>쿼리 편집기를 사용하여 확장 이벤트 세션 만들기  
@@ -92,7 +92,7 @@ ms.locfileid: "66065026"
     ADD EVENT package_name.event_name  
     ```  
   
-     다음은 그 예입니다.  
+     예를 들어:  
   
     ```  
     ADD EVENT sqlserver.file_read_completed,  
@@ -129,7 +129,7 @@ ms.locfileid: "66065026"
         AND column_type = 'data'  
         ```  
   
-         다음은 그 예입니다.  
+         예를 들어:  
   
         ```  
         SELECT *   
@@ -219,8 +219,8 @@ ADD TARGET package0.asynchronous_file_target
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [CREATE EVENT SESSION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
- [SQL Server 확장 이벤트 대상](../../2014/database-engine/sql-server-extended-events-targets.md)   
+ [Transact-sql&#41;&#40;이벤트 세션 만들기](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [확장 이벤트 대상 SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [SQL Server 확장 이벤트 패키지](../relational-databases/extended-events/sql-server-extended-events-packages.md)  
   
   

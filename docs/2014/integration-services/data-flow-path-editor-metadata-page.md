@@ -15,18 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0a1897ded7e3d266d701bd4a587c03c252105bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059986"
 ---
 # <a name="data-flow-path-editor-metadata-page"></a>데이터 흐름 경로 편집기(메타데이터 페이지)
-  
   **데이터 흐름 경로 편집기** 대화 상자의 **메타데이터** 페이지를 사용하여 경로 열의 메타데이터를 볼 수 있습니다.  
   
 ## <a name="options"></a>옵션  
- **경로 메타 데이터**  
+ **경로 메타데이터**  
  열 메타데이터를 나열합니다. 열 데이터를 정렬하려면 열 제목을 클릭합니다.  
   
  **이름**  
@@ -59,7 +58,7 @@ ms.locfileid: "66059986"
  **원본 구성 요소**  
  열의 원본인 데이터 흐름 구성 요소를 나열합니다.  
   
- **클립보드에 복사**  
+ **클립보드로 복사**  
  열 메타데이터를 클립보드로 복사합니다. 기본적으로 모든 메타데이터 행은 현재 표시된 순서대로 정렬되어 복사됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

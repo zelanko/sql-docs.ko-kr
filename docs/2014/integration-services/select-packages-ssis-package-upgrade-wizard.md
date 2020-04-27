@@ -13,14 +13,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ccf14ace0a160be4ca9ecc5287ca45f077ba7e16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056015"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>패키지 선택(SSIS 패키지 업그레이드 마법사)
-  
   **패키지 선택** 페이지를 사용하여 업그레이드할 패키지를 선택할 수 있습니다. 이 페이지에는 마법사의 **원본 위치 선택** 페이지에서 지정한 위치에 저장된 패키지가 나열됩니다.  
   
  **SSIS 패키지 업그레이드 마법사를 실행하려면**  
@@ -35,8 +34,7 @@ ms.locfileid: "66056015"
  대상 패키지 이름을 입력하거나 마법사에서 제공하는 기본 이름을 사용합니다.  
   
 > [!NOTE]  
->  패키지를 업그레이드한 후 대상 패키지 이름을 변경할 수도 있습니다. 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 또는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 업그레이드된 패키지를 열고 패키지 이름을 변경합니다.  
+>  패키지를 업그레이드한 후 대상 패키지 이름을 변경할 수도 있습니다. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 또는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 업그레이드된 패키지를 열고 패키지 이름을 변경합니다.  
   
  **암호**  
  선택한 업그레이드 패키지의 암호를 해독하는 데 사용되는 암호를 지정합니다.  

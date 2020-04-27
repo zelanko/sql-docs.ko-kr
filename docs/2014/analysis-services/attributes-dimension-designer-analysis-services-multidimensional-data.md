@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9eab7de49abaf06446fbd03f7b80c381d102f20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064397"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>특성(차원 구조 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
@@ -26,8 +26,7 @@ ms.locfileid: "66064397"
   
  **특성 창을 표시하려면**  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 연 다음 원하는 차원을 엽니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 연 다음 원하는 차원을 엽니다.  
   
 2.  차원이 선택되지 않은 경우에는 **차원 구조** 탭을 클릭합니다.  
   
@@ -53,25 +52,24 @@ ms.locfileid: "66064397"
  **이름**  
  특성 이름을 표시합니다.  
   
- **사용 현황**  
+ **사용법**  
  선택한 특성의 사용법을 설정합니다. 아래쪽 화살표를 클릭하여 다음 선택 항목 중에서 선택합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |일반|일반 특성을 식별합니다.|  
-|키|차원의 키 특성을 식별합니다. 이는 차원의 리프 멤버에 해당합니다. 차원 하나에 키 특성이 하나씩만 있을 수 있습니다. 수정하려면**속성**창의 **KeyColumns** 속성 옆에 있는 줄임표 단추( **...** )를 클릭합니다.|  
+|Key|차원의 키 특성을 식별합니다. 이는 차원의 리프 멤버에 해당합니다. 차원 하나에 키 특성이 하나씩만 있을 수 있습니다. 수정하려면**속성**창의 **KeyColumns** 속성 옆에 있는 줄임표 단추( **...** )를 클릭합니다.|  
 |Parent|부모-자식 관계의 부모 특성을 나타냅니다. 이 관계에서 자식 특성은 항상 키 특성이어야 합니다.|  
 |AccountType|계정 유형 특성을 나타냅니다. 이 값은 측정값에 대한 집계 함수를 "by account"로 설정한 경우 서버 또는 엔진에 사용됩니다.|  
   
- **형식**  
+ **Type**  
  특성 유형을 설정합니다. 아래쪽 화살표를 클릭하여 사용 가능한 선택 항목 중에서 선택합니다.  
   
  **키 열**  
  기본 열의 데이터 형식을 표시합니다. 새 특성을 만들 때는 아래쪽 화살표를 클릭하여 사용 가능한 선택 항목 중에서 선택합니다.  
   
  **이름 열**  
- 기본 열의 위치를 표시합니다. 새 특성을 만들 때는 아래쪽 화살표를 클릭하여 **키와 같음** 또는 **개별 열**중 하나를 선택합니다. 
-  **개별 열** 을 선택하면 **속성** 창의 **NameColumn** 속성이 특성에 사용할 이름을 저장하는 열을 설정합니다.  
+ 기본 열의 위치를 표시합니다. 새 특성을 만들 때는 아래쪽 화살표를 클릭하여 **키와 같음** 또는 **개별 열**중 하나를 선택합니다. **개별 열** 을 선택하면 **속성** 창의 **NameColumn** 속성이 특성에 사용할 이름을 저장하는 열을 설정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [차원 구조 &#40;차원 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   

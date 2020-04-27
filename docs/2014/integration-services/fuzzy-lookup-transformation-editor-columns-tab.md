@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 063248c6b91aebf6198323487aa30ddd1c9cb6ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058325"
 ---
 # <a name="fuzzy-lookup-transformation-editor-columns-tab"></a>유사 항목 조회 변환 편집기(열 탭)
-  
   **유사 항목 조회 변환 편집기** 대화 상자의 **열** 탭을 사용하여 입력 및 출력 열의 속성을 설정할 수 있습니다.  
   
  유사 항목 조회 변환에 대한 자세한 내용은 [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md)을 참조하십시오.  
@@ -41,8 +40,7 @@ ms.locfileid: "66058325"
  확인란을 사용하여 유사 항목 조회 작업을 수행할 열을 선택합니다.  
   
  **조회 열**  
- 사용 가능한 참조 테이블 열 목록에서 조회 열을 선택합니다. 선택 내용에 따라 **사용 가능한 조회 열** 테이블의 확인란이 달라집니다. 
-  **사용 가능한 조회 열** 테이블에서 열을 선택하면 반환된 일치하는 각 행에 대한 참조 테이블 열 값이 포함된 출력 열이 생성됩니다.  
+ 사용 가능한 참조 테이블 열 목록에서 조회 열을 선택합니다. 선택 내용에 따라 **사용 가능한 조회 열** 테이블의 확인란이 달라집니다. **사용 가능한 조회 열** 테이블에서 열을 선택하면 반환된 일치하는 각 행에 대한 참조 테이블 열 값이 포함된 출력 열이 생성됩니다.  
   
  **출력 별칭**  
  각 조회 열에 대한 출력의 별칭을 입력합니다. 기본값은 추가된 숫자 인덱스 값이 있는 조회 열의 이름이지만 설명이 포함된 고유 이름을 임의로 선택할 수 있습니다.  
@@ -50,6 +48,6 @@ ms.locfileid: "66058325"
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [유사 항목 조회 변환 편집기 &#40;참조 테이블 탭&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-reference-table-tab.md)   
- [유사 항목 조회 변환 편집기 &#40;고급 탭&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
+ [유사 항목 조회 변환 편집기&#40;고급 탭&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
   

@@ -20,14 +20,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9316827245adfbcf64bd798869f570dc5f0af14c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068905"
 ---
 # <a name="security-properties"></a>보안 속성
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 보안 서버 속성을 지원합니다. 추가 서버 속성 및 해당 속성 설정 방법은 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)을 참조하세요.  
   
  **적용 대상:** 다차원 및 테이블 형식 서버 모드  
@@ -55,8 +54,7 @@ ms.locfileid: "66068905"
  이 속성의 기본값은 True이며, 이 경우 서비스 계정이 서버 관리자입니다.  
   
  `ErrorMessageMode`  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  `DataProtection\ RequiredProtectionLevel`  
  모든 클라이언트 요청에 대해 필요한 보호 수준을 정의하는 부호 있는 32비트 정수 속성입니다. 이 속성은 다음 표에 나열된 값 중 하나를 취합니다.  
@@ -68,8 +66,7 @@ ms.locfileid: "66068905"
 |*2*|일반 텍스트 요청이 허용되지만 반드시 서명이 있어야 합니다(암호화보다 약한 보호 수준).|  
   
  `AdministrativeDataProtection\ RequiredProtectionLevel`  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Analysis Services에서 서버 속성 구성](server-properties-in-analysis-services.md)   

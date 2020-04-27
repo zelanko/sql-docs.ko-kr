@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f70a956834108c21dd7b17bb9f3e04db38f29bfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059938"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>식을 사용하여 설정할 수 있는 데이터 흐름 속성
@@ -33,12 +33,9 @@ ms.locfileid: "66059938"
   
  속성 식을 사용하여 배포된 패키지의 각 인스턴스 구성을 사용자 지정할 수 있습니다. 또한 속성 식을 사용하여 **dtexec** 명령 프롬프트 유틸리티로 **/set** 옵션을 사용해 패키지의 런타임 제약 조건을 지정할 수도 있습니다. 예를 들어 정렬 변환에 사용된 `MaximumThreads` 또는 유사 항목 그룹화 및 유사 항목 조회 변환의 `MaxMemoryUsage`를 제약할 수 있습니다. 제약 받지 않을 경우 이러한 변환은 메모리에 대량의 데이터를 캐시할 수 있습니다.  
   
- 이 항목에 나열된 데이터 흐름 개체의 속성 중 하나에 대한 속성 식을 지정하려면 디자이너의 **제어 흐름** 화면에서 데이터 흐름 태스크를 선택하거나 개별 구성 요소나 경로를 선택하지 않고 디자이너의 **데이터 흐름** 탭을 선택하여 데이터 흐름 태스크에 대한 **속성** 창을 표시합니다. 
-  **식** 속성을 선택하고 줄임표(...)를 클릭하여 **속성 식 편집기** 대화 상자를 표시합니다. 
-  **속성** 목록을 드롭다운하여 속성을 선택한 다음 **식** 입력란에 식을 입력하거나 줄임표(...)를 클릭하여 **식 작성기** 대화 상자를 표시합니다.  
+ 이 항목에 나열된 데이터 흐름 개체의 속성 중 하나에 대한 속성 식을 지정하려면 디자이너의 **제어 흐름** 화면에서 데이터 흐름 태스크를 선택하거나 개별 구성 요소나 경로를 선택하지 않고 디자이너의 **데이터 흐름** 탭을 선택하여 데이터 흐름 태스크에 대한 **속성** 창을 표시합니다. **식** 속성을 선택하고 줄임표(...)를 클릭하여 **속성 식 편집기** 대화 상자를 표시합니다. **속성** 목록을 드롭다운하여 속성을 선택한 다음 **식** 입력란에 식을 입력하거나 줄임표(...)를 클릭하여 **식 작성기** 대화 상자를 표시합니다.  
   
- 
-  **속성** 목록에는 디자이너의 **데이터 흐름** 화면에 이미 배치한 이러한 데이터 흐름 개체에 사용할 수 있는 속성만 표시됩니다. 따라서 **속성** 목록을 사용하여 속성 식을 지원하는 데이터 흐름 개체의 가능한 모든 속성을 확인할 수는 없습니다. 예를 들어 ADO NET 원본을 디자이너 화면에 배치한 경우 **속성** 목록에는 `[ADO NET Source].[SqlCommand]` 속성에 대 한 항목이 포함 됩니다. 목록에는 데이터 흐름 태스크 자체의 수많은 속성도 표시됩니다.  
+ **속성** 목록에는 디자이너의 **데이터 흐름** 화면에 이미 배치한 이러한 데이터 흐름 개체에 사용할 수 있는 속성만 표시됩니다. 따라서 **속성** 목록을 사용하여 속성 식을 지원하는 데이터 흐름 개체의 가능한 모든 속성을 확인할 수는 없습니다. 예를 들어 ADO NET 원본을 디자이너 화면에 배치한 경우 **속성** 목록에는 `[ADO NET Source].[SqlCommand]` 속성에 대 한 항목이 포함 됩니다. 목록에는 데이터 흐름 태스크 자체의 수많은 속성도 표시됩니다.  
   
 ## <a name="properties-of-data-flow-objects-that-support-property-expressions"></a>속성 식을 지원하는 데이터 흐름 개체의 속성  
  다음 목록의 속성 값은 속성 식을 사용하여 지정할 수 있습니다.  
@@ -73,8 +70,8 @@ ms.locfileid: "66059938"
 |----------------------|--------------|  
 |ADO.NET 대상|TableOrViewName 속성<br /><br /> BatchSize 속성<br /><br /> CommandTimeout 속성|  
 |플랫 파일 대상|Header 속성|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]압축 대상|TableName 속성|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]대상이|BulkInsertTableName 속성<br /><br /> BulkInsertFirstRow 속성<br /><br /> BulkInsertLastRow 속성<br /><br /> BulkInsertOrder 속성<br /><br /> Timeout 속성|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 대상|TableName 속성|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 대상|BulkInsertTableName 속성<br /><br /> BulkInsertFirstRow 속성<br /><br /> BulkInsertLastRow 속성<br /><br /> BulkInsertOrder 속성<br /><br /> Timeout 속성|  
   
 ## <a name="related-tasks"></a>관련 작업  
   

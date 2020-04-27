@@ -13,14 +13,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12f1a73c1d21986d2089878bfe9d29dd4450f222
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057845"
 ---
 # <a name="lookup-transformation-editor-error-output-page"></a>조회 변환 편집기(오류 출력 페이지)
-  
   **조회 변환 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 지정할 수 있습니다.  
   
  조회 변환에 대한 자세한 내용은 [Lookup Transformation](data-flow/transformations/lookup-transformation.md)을 참조하십시오.  
@@ -29,7 +28,7 @@ ms.locfileid: "66057845"
  **입/출력**  
  입력 이름을 표시합니다.  
   
- **열**  
+ **열의**  
  사용되지 않습니다.  
   
  **오류**  
@@ -41,10 +40,9 @@ ms.locfileid: "66057845"
   
 -   구성 요소가 실패합니다.  
   
- 
-  **일치하는 항목이 없는 행 처리 방법 지정** 목록에서 **일치하는 항목이 없는 출력으로 행 리디렉션** 을 선택하는 경우 이 옵션을 사용할 수 없습니다. 이 목록은 **조회 변환 편집기** 대화 상자의 **일반** 페이지에 있습니다.  
+ **일치하는 항목이 없는 행 처리 방법 지정** 목록에서 **일치하는 항목이 없는 출력으로 행 리디렉션** 을 선택하는 경우 이 옵션을 사용할 수 없습니다. 이 목록은 **조회 변환 편집기** 대화 상자의 **일반** 페이지에 있습니다.  
   
- **관련 항목:** [데이터의 오류 처리](data-flow/error-handling-in-data.md)  
+ **관련 항목:** [데이터 오류 처리](data-flow/error-handling-in-data.md)  
   
  **잘림**  
  데이터 잘림이 발생할 경우 수행할 동작을 지정합니다.  
@@ -58,7 +56,7 @@ ms.locfileid: "66057845"
  **설명**  
  작업에 대한 설명을 표시합니다.  
   
- **선택한 셀을이 값으로 설정**  
+ **이 값을 선택한 셀에 설정**  
  오류나 잘림 발생 시 선택한 모든 셀에 수행할 동작을 지정합니다.  
   
 -   오류를 무시합니다.  

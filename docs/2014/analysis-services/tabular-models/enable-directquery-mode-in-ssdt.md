@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 965a3a7c1bfa9549793690e92760ce39f147e0d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067203"
 ---
 # <a name="enable-directquery-design-mode-ssas-tabular"></a>DirectQuery 디자인 모드를 사용하도록 설정(SSAS 테이블 형식)
@@ -32,17 +32,15 @@ ms.locfileid: "66067203"
   
 ### <a name="to-enable-use-of-directquery-in-a-model"></a>모델에서 DirectQuery를 사용하도록 설정하려면  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 솔루션 파일을 엽니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 솔루션 파일을 엽니다.  
   
 2.  개체 탐색기에서 Model.bim 파일을 두 번 클릭합니다.  
   
-3.  
-  **속성** 창에서 **DirectQueryMode**속성을 **On**으로 변경합니다.  
+3.  **속성** 창에서 **DirectQueryMode**속성을 **On**으로 변경합니다.  
   
 4.  오류가 발생하면 Visual Studio에서 **오류 목록** 을 열고 모델을 DirectQuery 모드로 전환할 수 없도록 하는 문제를 해결합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [DirectQuery 모드 &#40;SSAS 테이블 형식&#41;](directquery-mode-ssas-tabular.md)  
+ [DirectQuery 모드&#40;SSAS 테이블 형식&#41;](directquery-mode-ssas-tabular.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76f2c5e517ca81ae667df3efa6ccd2f49384f090
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060977"
 ---
 # <a name="character-map-transformation-editor"></a>문자표 변환 편집기
@@ -36,7 +36,7 @@ ms.locfileid: "66060977"
  **대상**  
  문자열 작업 결과를 기존 열을 사용하여 내부에 저장할지, 아니면 수정된 데이터를 새 열로 저장할지를 지정합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |새 열|새 열에 데이터를 저장합니다. **출력 별칭**의 열 이름을 할당합니다.|  
 |내부 변경|수정된 데이터를 기존 열에 저장합니다.|  
@@ -44,7 +44,7 @@ ms.locfileid: "66060977"
  **연산**  
  열 데이터에 적용할 문자열 함수를 목록에서 선택합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |소문자|소문자로 변환합니다.|  
 |대문자|대문자로 변환합니다.|  
@@ -55,7 +55,7 @@ ms.locfileid: "66060977"
 |전자|반자 문자를 전자로 변환합니다.|  
 |대/소문자 구분 기능|시스템 규칙 대신 대/소문자 구분 규칙(터키어 및 다른 로캘의 유니코드 단순 대/소문자 구분 매핑)을 적용합니다.|  
 |중국어(간체)|중국어 번체 문자를 간체로 변환합니다.|  
-|중국어 번체|중국어 간체 문자를 번체로 변환합니다.|  
+|중국어(번체)|중국어 간체 문자를 번체로 변환합니다.|  
   
  **출력 별칭**  
  각 출력 열의 별칭을 입력합니다. 기본값은 **Copy of** 뒤에 입력 열 이름이 오는 형식이지만 설명이 포함된 고유 이름을 선택할 수 있습니다.  

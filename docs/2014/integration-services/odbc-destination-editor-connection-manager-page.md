@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 281bbda38a6711efd4e2ffae7afbfa17d689254b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057212"
 ---
 # <a name="odbc-destination-editor-connection-manager-page"></a>ODBC 대상 편집기(연결 관리자 페이지)
@@ -45,7 +45,7 @@ ms.locfileid: "66057212"
 ### <a name="data-access-mode"></a>데이터 액세스 모드  
  대상으로 데이터를 로드하는 방법을 선택합니다. 옵션은 다음 표에 표시되어 있습니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |테이블 이름 - 일괄 처리|일괄 처리 모드에서 작업하도록 ODBC 대상을 구성하려면 이 옵션을 선택합니다. 이 옵션을 선택하면 다음 옵션을 사용할 수 있습니다.|  
 ||**테이블 또는 뷰 이름**: 목록에서 사용 가능한 테이블이나 뷰를 선택합니다.<br /><br /> 이 목록에는 처음 1000개의 테이블만 포함되어 있습니다. 데이터베이스에 포함되어 있는 테이블이 1000개를 넘는 경우 테이블 이름의 시작 부분을 입력하거나 와일드카드(\*)를 통해 이름의 일부를 입력하여 사용할 테이블을 표시합니다.<br /><br /> **일괄 처리 크기**: 대량 로드에 대한 일괄 처리 크기를 입력합니다. 일괄 처리로 로드되는 행의 개수입니다.|  
@@ -57,7 +57,7 @@ ms.locfileid: "66057212"
   
 ## <a name="see-also"></a>참고 항목  
  [ODBC 대상 사용자 지정 속성](data-flow/odbc-destination-custom-properties.md)   
- [ODBC 대상 편집기&#40;매핑 페이지&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)   
+ [ODBC 대상 편집기 &#40;매핑 페이지&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)   
  [ODBC 대상 편집기&#40;오류 출력 페이지&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
   
   

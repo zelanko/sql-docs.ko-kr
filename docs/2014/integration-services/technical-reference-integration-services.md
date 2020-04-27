@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e66a3465c543879b2ff6115e9ea45a53f97312
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055279"
 ---
 # <a name="technical-reference-integration-services"></a>기술 참조(Integration Services)
@@ -26,7 +26,7 @@ ms.locfileid: "66055279"
  ![작은 파일 폴더 아이콘](media/filefolder-small.gif "작은 파일 폴더 아이콘") **변경 데이터 캡처 서비스 및 디자이너**  
  [Attunity Oracle CDC Service](change-data-capture/change-data-capture-service-for-oracle-by-attunity.md)  
   
- [Attunity Oracle CDC Designer](change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
+ [Change Data Capture Designer for Oracle by Attunity](change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
   
  ![작은 파일 폴더 아이콘](media/filefolder-small.gif "작은 파일 폴더 아이콘") **오류 및 이벤트**  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)  

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 26bd117cb63ccc623ee54f3370e1d07237de9c52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059652"
 ---
 # <a name="date-and-time-formats"></a>날짜 및 시간 형식
@@ -126,7 +126,7 @@ ms.locfileid: "66059652"
 |분|00:00을 추가합니다.|  
 |Hour|00:00:00을 추가합니다.|  
 |일|해당 월의 일에 대해 01을 추가합니다.|  
-|Month|해당 연도의 월에 대해 01을 추가합니다.|  
+|월|해당 연도의 월에 대해 01을 추가합니다.|  
   
  자세한 내용은 [Integration Services 데이터 형식](data-flow/integration-services-data-types.md)을 참조 하세요.  
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 972357372fe6d0281aedb57d49dd8d50682085b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057197"
 ---
 # <a name="odbc-destination-editor-error-output-page"></a>ODBC 대상 편집기(오류 출력 페이지)
@@ -48,7 +48,7 @@ ms.locfileid: "66057197"
 ### <a name="truncation"></a>잘림  
  ODBC 대상에서 흐름 잘림을 처리하는 방법을 선택합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>설명  
  오류에 대한 설명을 표시합니다.  
   
 ### <a name="set-this-value-to-selected-cells"></a>이 값을 선택한 셀에 설정  
@@ -70,7 +70,7 @@ ms.locfileid: "66057197"
  오류 또는 잘림을 발생시키는 행이 ODBC 대상의 오류 출력으로 전송됩니다. 자세한 내용은 ODBC 대상을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC 대상 편집기&#40;연결 관리자 페이지&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
+ [ODBC 대상 편집기 &#40;연결 관리자 페이지&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
  [ODBC 대상 편집기&#40;매핑 페이지&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)  
   
   

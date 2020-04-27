@@ -15,16 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7e676368ccdd28a195f3a50208e3ca1c0703214
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059444"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>디지털 서명 대화 상자 UI 참조
-  
-  **디지털 서명** 대화 상자를 사용하여 패키지를 디지털 서명으로 서명하거나 서명을 제거할 수 있습니다. 
-  **디지털 서명** 대화 상자는 **의** SSIS **메뉴에 있는** 디지털 서명 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]옵션에서 사용할 수 있습니다.  
+  **디지털 서명** 대화 상자를 사용하여 패키지를 디지털 서명으로 서명하거나 서명을 제거할 수 있습니다. **디지털 서명** 대화 상자는 **의** SSIS **메뉴에 있는** 디지털 서명 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]옵션에서 사용할 수 있습니다.  
   
  자세한 내용은 [디지털 서명을 사용하여 패키지 원본 확인](security/identify-the-source-of-packages-with-digital-signatures.md) 및 [디지털 인증서를 사용하여 패키지 서명](../../2014/integration-services/sign-a-package-by-using-a-digital-certificate.md)을 참조하세요.  
   

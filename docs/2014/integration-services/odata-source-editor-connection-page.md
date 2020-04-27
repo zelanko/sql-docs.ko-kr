@@ -13,28 +13,26 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e36c0a3449566db9a2acee360243c77ee548f92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057323"
 ---
 # <a name="odata-source-editor-connection-page"></a>OData 원본 편집기(연결 페이지)
-  
   **OData 원본 편집기** 대화 상자의 **연결** 페이지를 사용하여 OData 원본의 OData 연결 관리자를 선택할 수 있습니다. 또한 이 페이지에서 컬렉션 또는 리소스 경로와 쿼리 옵션을 지정하여 OData 원본에서 검색해야 하는 데이터를 나타낼 수 있습니다. OData 원본에 대한 자세한 내용은 [OData Source](data-flow/odata-source.md)을 참조하십시오.  
   
 ## <a name="static-options"></a>정적 옵션  
  **OData 연결 관리자**  
  목록에서 기존 연결 관리자를 선택하거나 **새로 만들기**를 클릭하여 새 연결을 만듭니다.  
   
- **새로 만들기**  
- 
-  **OData 연결 관리자 편집기** 대화 상자를 사용하여 새 연결 관리자를 만듭니다.  
+ **신규**  
+ **OData 연결 관리자 편집기** 대화 상자를 사용하여 새 연결 관리자를 만듭니다.  
   
  **컬렉션 또는 리소스 경로 사용**  
  원본에서 데이터를 선택하는 방법을 지정합니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |컬렉션|컬렉션 이름을 사용하여 OData 원본에서 데이터를 검색합니다.|  
 |리소스 경로|리소스 경로를 사용하여 OData 원본에서 데이터를 검색합니다.|  
@@ -46,8 +44,7 @@ ms.locfileid: "66057323"
  이 대화 상자에서 선택한 옵션에 따라 읽기 전용 피드 URL을 표시합니다.  
   
  **미리 보기**  
- 
-  **미리 보기** 대화 상자를 사용하여 결과를 미리 봅니다. **미리 보기** 에는 최대 20 개의 행이 표시 될 수 있습니다.  
+ **미리 보기** 대화 상자를 사용하여 결과를 미리 봅니다. **미리 보기** 에는 최대 20개의 행이 표시될 수 있습니다.  
   
 ## <a name="dynamic-options"></a>동적 옵션  
   
@@ -56,7 +53,7 @@ ms.locfileid: "66057323"
  드롭다운 목록에서 컬렉션을 선택합니다.  
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>컬렉션 또는 리소스 경로 사용 = 리소스 경로  
- **리소스 경로**  
+ **Resource path**  
  리소스 경로를 입력합니다. 예: Employees  
   
 ## <a name="see-also"></a>참고 항목  

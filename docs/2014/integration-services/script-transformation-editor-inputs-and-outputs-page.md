@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 33ad9ddda5b40abaafddbd6e31272ece1f8edaee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056071"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>스크립트 변환 편집기(입/출력 페이지)
-  
   **스크립트 변환 편집기** 대화 상자의 **입/출력** 페이지를 사용하여 스크립트 변환에 대한 입력 및 출력을 추가, 제거 및 구성할 수 있습니다.  
   
 > [!NOTE]  
@@ -34,9 +33,9 @@ ms.locfileid: "66056071"
  **입력 및 출력**  
  왼쪽에서 입력 또는 출력을 선택하여 오른쪽에 있는 테이블에서 해당 속성을 확인합니다. 편집할 수 있는 속성은 선택하는 입력 또는 출력에 따라 다릅니다. 표시된 속성 중 다수는 읽기 전용입니다. 개별 속성에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
- [Common Properties](../../2014/integration-services/common-properties.md)  
+ [공용 속성](../../2014/integration-services/common-properties.md)  
   
- [변환 사용자 지정 속성](data-flow/transformations/transformation-custom-properties.md)  
+ [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)  
   
  **출력 추가**  
  목록에 출력을 추가합니다.  

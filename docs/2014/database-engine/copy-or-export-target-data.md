@@ -11,18 +11,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 610c9d33ecb2423a64ae76708d2f38d1f8fd88a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065097"
 ---
 # <a name="copy-or-export-target-data"></a>대상 데이터 복사 또는 내보내기
   대상 데이터를 복사하고 대상 데이터를 .CSV 파일로 내보낼 수도 있습니다.  
   
 > [!NOTE]  
->  
-  **ring_buffer** 대상에 대한 대상 데이터는 복사하거나 내보낼 수 없습니다.  
+>  **ring_buffer** 대상에 대한 대상 데이터는 복사하거나 내보낼 수 없습니다.  
   
 ## <a name="to-copy-target-data"></a>대상 데이터를 복사하려면  
   
@@ -32,10 +31,8 @@ ms.locfileid: "66065097"
   
 1.  대상 데이터 창에서 내보낼 행을 선택하고 선택 항목을 마우스 오른쪽 단추로 클릭한 다음 **CSV로 내보내기**를 선택합니다.  
   
-2.  
-  **다른 이름으로 저장** 대화 상자에서 파일 폴더 및 이름을 지정합니다.  
+2.  **다른 이름으로 저장** 대화 상자에서 파일 폴더 및 이름을 지정합니다.  
   
-3.  
-  **확인** 을 클릭하여 대상 데이터를 CSV 파일로 저장합니다.  
+3.  **확인** 을 클릭하여 대상 데이터를 CSV 파일로 저장합니다.  
   
   

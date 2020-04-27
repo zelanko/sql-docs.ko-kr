@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f59ed0eee86f17fdda568caa5c1a1dc7252c6d9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055347"
 ---
 # <a name="ssis-package-format"></a>SSIS 패키지 형식
@@ -30,8 +30,7 @@ ms.locfileid: "66055347"
   
 -   다른 개체에서 참조할 수 있는 패키지 내의 개체가 대부분 패키지 XML에 정의된 `refId` 특성을 가집니다. 지속적인 계보 ID 대신 이제 `refID`가 유지됩니다. 계보 ID는 런타임 내에서 계속 사용되며 패키지가 로드될 때 다시 생성됩니다.  
   
-     
-  `refId` 값은 읽고 이해할 수 있는 고유 문자열로서, GUID 또는 정수 값과 비교됩니다. 문자열은 이전 버전의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 패키지 구성에 사용되는 경로 값과 유사합니다.  
+     `refId` 값은 읽고 이해할 수 있는 고유 문자열로서, GUID 또는 정수 값과 비교됩니다. 문자열은 이전 버전의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 패키지 구성에 사용되는 경로 값과 유사합니다.  
   
      두 가지 패키지 버전 간의 변경 내용을 병합할 경우 찾기/바꾸기 작업에서 `refId`를 사용하여 해당 개체에 대한 모든 참조를 올바르게 업데이트할 수 있습니다.  
   

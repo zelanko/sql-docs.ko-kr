@@ -13,19 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f277abea585715f6a3656fffe7672f347233507
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069102"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>시퀀스 클러스터링 클러스터 프로필 탭(마이닝 모델 뷰어
-  
   **Microsoft 시퀀스 클러스터링 뷰어** 의 **클러스터 프로필** 탭에는 각 클러스터에 포함된 시퀀스가 색으로 지정되어 표시됩니다.  
   
  이 시퀀스 클러스터링 모델 뷰를 사용하여 모델이 검색한 시퀀스가 그룹화되는 방법을 신속하게 확인할 수 있습니다. 긴 시퀀스의 수와 짧은 시퀀스의 수를 한눈에 볼 수 있습니다. 또한 클러스터를 클릭하고 **마이닝 범례** 를 표시하여 각 시퀀스의 색이 나타내는 상태를 정확히 확인할 수 있습니다.  
   
- **자세한 내용:**  [Microsoft 시퀀스 클러스터링 알고리즘](data-mining/microsoft-sequence-clustering-algorithm.md), [Microsoft 시퀀스 클러스터 뷰어를 사용 하 여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **자세한 내용:**  [Microsoft 시퀀스 클러스터링 알고리즘](data-mining/microsoft-sequence-clustering-algorithm.md), [Microsoft 시퀀스 클러스터 뷰어를 사용하여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>옵션  
  **뷰어 내용 새로 고침**  
@@ -52,12 +51,10 @@ ms.locfileid: "66069102"
   
 -   **특성 이름>. 예제:이 행의 히스토그램은 각 클러스터를 대표 하는 항목의 시퀀스를 보여 줍니다. \<** DMX 측면에서 이러한 항목은 각 클러스터에 대한 샘플 사례입니다.  
   
--   특성 이름>:이 행의 히스토그램은 클러스터에 포함 된 모든 항목과 전체적인 분포를 설명 합니다. ** \< ** 
-  **마이닝 범례** 가 표시될 때 히스토그램을 클릭하면 각각의 숫자 값을 볼 수 있습니다.  
+-   특성 이름>:이 행의 히스토그램은 클러스터에 포함 된 모든 항목과 전체적인 분포를 설명 합니다. ** \< ** **마이닝 범례** 가 표시될 때 히스토그램을 클릭하면 각각의 숫자 값을 볼 수 있습니다.  
   
  **상태**  
- 차트의 이 열은 선택 사항이며 **범례 표시** 옵션을 선택하여 표시하거나 제거할 수 있습니다. 
-  **상태** 열은 해당 클러스터 히스토그램에서 어떤 색이 어떤 상태를 나타내는지를 안내합니다.  
+ 차트의 이 열은 선택 사항이며 **범례 표시** 옵션을 선택하여 표시하거나 제거할 수 있습니다. **상태** 열은 해당 클러스터 히스토그램에서 어떤 색이 어떤 상태를 나타내는지를 안내합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

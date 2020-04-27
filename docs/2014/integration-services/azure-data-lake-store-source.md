@@ -14,10 +14,10 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07ca2a75fa3f7e6329443bb4f71a23f52662f0f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061349"
 ---
 # <a name="azure-data-lake-store-source"></a>Azure Data Lake Store 원본
@@ -33,6 +33,6 @@ ms.locfileid: "66061349"
   
     2.  **파일 형식** 필드에서는 원본 파일의 파일 형식을 지정합니다.  
   
-        파일 형식이 Text이면 **열 구분 기호 문자** 값을 지정해야 합니다. 파일의 첫 행에 열 이름을 포함하려는 경우에는 **첫 번째 데이터 행의 열 이름** 도 선택합니다.  
+        파일 형식이 Text이면 **열 구분 기호 문자** 값을 지정해야 합니다. 또한 파일의 첫 번째 행에 열 이름이 포함 된 경우 **첫 번째 데이터 행에서 열 이름을** 선택 합니다.  
   
 3.  연결 정보를 지정한 다음 **열** 페이지로 전환하여 SSI 데이터 흐름에 대해 원본 열을 대상 열에 매핑합니다.  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2677d0dd1f4697177171ba0edd4641ec02110310
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056573"
 ---
 # <a name="raw-file-destination-editor-connection-manager-page"></a>원시 파일 대상 편집기(연결 관리자 페이지)
@@ -30,13 +30,13 @@ ms.locfileid: "66056573"
   
 -   [열 탭에서 옵션 설정](#mapping)  
   
-##  <a name="open"></a> 원시 파일 대상 편집기 열기  
+##  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a>원시 파일 대상 편집기 열기  
   
 1.  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 원시 파일 대상을 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]패키지에 추가합니다.  
   
 2.  구성 요소를 마우스 오른쪽 단추로 클릭한 다음 **편집**을 클릭합니다.  
   
-##  <a name="connection"></a> 연결 관리자 탭에서 옵션 설정  
+##  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> 연결 관리자 탭에서 옵션 설정  
  **액세스 모드**  
  파일 이름 지정 방법을 선택합니다. **파일 이름** 을 선택하여 파일 이름 및 경로를 직접 입력하고 **변수를 사용한 파일 이름** 을 선택하여 파일 이름이 포함된 변수를 지정합니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66056573"
   
  **초기 원시 파일 생성**을 누르면 메시지 상자가 표시됩니다. **확인** 을 클릭하여 파일 만들기를 계속합니다. **열** 페이지의 서로 다른 열 목록을 선택하려면 **취소** 를 클릭합니다.  
   
-##  <a name="mapping"></a> 열 탭에서 옵션 설정  
+##  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a>열 탭에서 옵션 설정  
  **사용 가능한 입력 열**  
  원시 파일에 쓸 하나 이상의 입력 열을 선택합니다.  
   

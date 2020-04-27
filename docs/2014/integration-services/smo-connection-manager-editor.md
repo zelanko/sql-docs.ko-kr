@@ -15,22 +15,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dff18b4aac5a97e7bfa12daed107662790fa854a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055602"
 ---
 # <a name="smo-connection-manager-editor"></a>SMO 연결 관리자 편집기
-  
   **SMO 연결 관리자 편집기** 를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체를 전송하는 여러 태스크에 사용하도록 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 연결을 구성할 수 있습니다.  
   
  SMO 연결 관리자에 대한 자세한 내용은 [SMO Connection Manager](connection-manager/smo-connection-manager.md)를 참조하십시오.  
   
 ## <a name="options"></a>옵션  
  **서버 이름**  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 이름을 입력하거나 목록에서 서버 이름을 선택합니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 이름을 입력하거나 목록에서 서버 이름을 선택합니다.  
   
  **새로 고침**  
  네트워크에서 검색할 수 있는 사용 가능한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스 목록을 새로 고칩니다.  
@@ -39,18 +37,15 @@ ms.locfileid: "66055602"
  Windows 인증을 사용하여 선택한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
   
  **SQL Server 인증 사용**  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하여 선택한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하여 선택한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
   
  **사용자 이름**  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 선택한 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용자 이름을 입력합니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 선택한 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용자 이름을 입력합니다.  
   
  **암호**  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 선택한 경우 암호를 입력합니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 선택한 경우 암호를 입력합니다.  
   
- **연결 테스트**  
+ **연결을 테스트**  
  구성한 연결을 테스트합니다.  
   
 ## <a name="see-also"></a>참고 항목  

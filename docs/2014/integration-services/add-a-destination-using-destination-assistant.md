@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66e48903776824b0e540b854a5704ceef3a9782e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062066"
 ---
 # <a name="add-a-destination-using-destination-assistant"></a>대상 길잡이를 사용하여 대상 추가
@@ -22,16 +22,13 @@ ms.locfileid: "66062066"
   
 ### <a name="to-use-destination-assistant-to-add-a-destination"></a>대상 길잡이를 사용하여 대상을 추가하려면  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 대상 구성 요소를 추가할 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 엽니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 대상 구성 요소를 추가할 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 엽니다.  
   
 2.  SSIS 도구 상자에서 **데이터 흐름** 탭으로 **대상 길잡이** 구성 요소를 끌어 옵니다. **새 대상 추가** 대화 상자가 표시 됩니다. 다음 섹션에서는 대화 상자에서 사용할 수 있는 옵션에 대해 자세히 설명합니다.  
   
-3.  
-  **유형** 목록에서 대상의 유형을 선택합니다.  
+3.  **유형** 목록에서 대상의 유형을 선택합니다.  
   
-4.  
-  **연결 관리자** 목록에서 기존 연결 관리자를 선택하거나 **\<새로 만들기>** 를 선택하여 새 연결 관리자를 만듭니다.  
+4.  **연결** 관리자 목록에서 기존 연결 관리자를 선택 하거나 ** \<새>** 를 선택 하 여 새 연결 관리자를 만듭니다.  
   
 5.  기본 연결 관리자를 선택한 경우 **확인** 을 클릭하여 **새 대상 추가** 대화 상자를 닫습니다. 데이터 흐름에 추가된 대상 및 연결 관리자가 표시됩니다.  
   

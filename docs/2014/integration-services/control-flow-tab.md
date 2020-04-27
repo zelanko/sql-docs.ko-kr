@@ -13,18 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dd46efd60d81134f04a6bbc44e47c1fe8b5f342e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060357"
 ---
 # <a name="control-flow-tab"></a>제어 흐름 탭
-  
   **디자이너의** 제어 흐름 [!INCLUDE[ssIS](../includes/ssis-md.md)] 탭을 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에 제어 흐름을 작성할 수 있습니다.  
   
- 
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] 태스크 및 컨테이너를 나타내는 그래픽 개체를 **도구 상자** 에서 **제어 흐름** 탭의 디자인 화면으로 끌고 개체의 연결선을 다른 개체로 끌어 개체를 연결하는 방법으로 제어 흐름을 만듭니다. 각 연결선은 태스크 및 컨테이너가 실행되는 순서를 지정하는 선행 제약 조건을 나타냅니다.  
+ [!INCLUDE[ssIS](../includes/ssis-md.md)] 태스크 및 컨테이너를 나타내는 그래픽 개체를 **도구 상자** 에서 **제어 흐름** 탭의 디자인 화면으로 끌고 개체의 연결선을 다른 개체로 끌어 개체를 연결하는 방법으로 제어 흐름을 만듭니다. 각 연결선은 태스크 및 컨테이너가 실행되는 순서를 지정하는 선행 제약 조건을 나타냅니다.  
   
  또한 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 사용하여 **제어 흐름** 탭에서 다음 기능을 추가할 수 있습니다.  
   

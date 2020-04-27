@@ -13,17 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44245b7e64a1ccb16180fd0ceaa0f1dde0937133
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060397"
 ---
 # <a name="connection-managers-area"></a>연결 관리자 영역
   패키지는 연결 관리자를 사용하여 파일, 관계형 데이터베이스 및 서버와 같은 데이터 원본에 연결합니다.  
   
- 
-  **디자이너의** 연결 관리자 [!INCLUDE[ssIS](../includes/ssis-md.md)] 영역을 사용하여 연결 관리자에 대한 추가, 삭제, 수정, 이름 바꾸기, 복사하여 붙여넣기 작업을 수행할 수 있습니다.  
+ **디자이너의** 연결 관리자 [!INCLUDE[ssIS](../includes/ssis-md.md)] 영역을 사용하여 연결 관리자에 대한 추가, 삭제, 수정, 이름 바꾸기, 복사하여 붙여넣기 작업을 수행할 수 있습니다.  
   
  이 영역을 마우스 오른쪽 단추로 클릭한 다음 메뉴에서 수행하려는 태스크에 대한 옵션을 클릭합니다.  
   

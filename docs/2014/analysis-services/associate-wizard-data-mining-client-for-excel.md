@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15a86cc55e67b2000eabee62d02fa04de4874f59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062313"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>연결 마법사(Excel용 데이터 마이닝 클라이언트)
@@ -79,13 +79,12 @@ ms.locfileid: "66062313"
   
          드릴스루는 특정 항목 집합을 클릭해서 원본 데이터를 보고 싶은 경우에 유용합니다.  
   
-    -   **임시 모델을 사용**합니다. 서버에 모델을 저장 하지 않으려면이 옵션을 선택 합니다. 임시 모델은 Excel을 닫을 때 삭제됩니다.  
+    -   **임시 모델 사용**. 서버에 모델을 저장 하지 않으려면이 옵션을 선택 합니다. 임시 모델은 Excel을 닫을 때 삭제됩니다.  
   
 9. 마법사는 가능한 모든 조합을 분석하고 항목 집합 및 규칙이 포함된 보고서를 만듭니다.  
   
 ## <a name="more-about-association-models"></a>연결 모델에 대한 추가 정보  
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 연결 규칙 알고리즘은 학습 데이터를 검사하여 트랜잭션에 함께 나타나는 항목을 찾습니다. 항목의 각 그룹은 항목 *집합*을 구성 합니다. 그런 다음 알고리즘에서 각 항목 집합이 나타나는 횟수를 세고 전체 트랜잭션에서 각 항목 집합의 상대적 중요도를 계산합니다.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 연결 규칙 알고리즘은 학습 데이터를 검사하여 트랜잭션에 함께 나타나는 항목을 찾습니다. 항목의 각 그룹은 항목 *집합*을 구성 합니다. 그런 다음 알고리즘에서 각 항목 집합이 나타나는 횟수를 세고 전체 트랜잭션에서 각 항목 집합의 상대적 중요도를 계산합니다.  
   
  알고리즘은 이 항목 집합 정보를 사용하여 연결을 예측하거나 권장 사항을 만드는 데 사용할 수 있는 규칙을 생성합니다. 예를 들어 "저자 1과 저자 2의 책을 구매한 사용자는 저자 3의 책을 구매할 가능성이 높다"라는 규칙을 만들 수 있습니다. 각 권장 사항에는 연결의 강도를 기반으로 확률이 할당됩니다.  
   

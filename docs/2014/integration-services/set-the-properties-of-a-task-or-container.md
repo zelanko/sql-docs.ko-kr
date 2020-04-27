@@ -13,14 +13,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 05e98e0a735cc54e129b82c65841c6db688953de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055667"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>태스크 또는 컨테이너의 속성 설정
-  
   **속성** 창을 사용하여 태스크 및 컨테이너의 속성을 대부분 설정할 수 있습니다. 태스크 컬렉션의 속성과 **속성** 창을 사용해서 설정하기에 너무 복잡한 속성은 예외입니다. 예를 들어 Foreach 루프 컨테이너에서 사용되는 열거자는 **속성** 창에서 구성할 수 없습니다. 이러한 복잡한 속성을 설정하려면 태스크 또는 컨테이너 편집기를 사용해야 합니다. 대부분의 태스크 및 컨테이너 편집기에는 여러 개의 노드가 포함되어 있으며, 각 노드에는 관련 속성이 들어 있습니다. 노드의 이름은 노드에 들어 있는 속성의 내용을 나타냅니다.  
   
  다음 절차에서는 **속성** 창이나 해당 태스크 또는 컨테이너 편집기를 사용하여 태스크 또는 컨테이너의 속성을 설정하는 방법에 대해 설명합니다.  
@@ -33,11 +32,9 @@ ms.locfileid: "66055667"
   
 3.  **제어 흐름** 탭을 클릭합니다.  
   
-4.  
-  **제어 흐름** 탭의 디자인 화면에서 태스크 또는 컨테이너를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+4.  **제어 흐름** 탭의 디자인 화면에서 태스크 또는 컨테이너를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-5.  
-  **속성** 창에서 속성 값을 업데이트합니다.  
+5.  **속성** 창에서 속성 값을 업데이트합니다.  
   
     > [!NOTE]  
     >  대부분의 속성은 입력란에 직접 값을 입력하거나 목록에서 값을 선택하는 방법으로 설정할 수 있습니다. 그러나 일부 속성은 보다 복잡하므로 사용자 지정 속성 편집기를 사용해야 합니다. 속성을 설정하려면 입력란을 클릭하고 작성 **(...)** 단추를 클릭하여 사용자 지정 편집기를 엽니다.  
@@ -54,12 +51,11 @@ ms.locfileid: "66055667"
   
 3.  **제어 흐름** 탭을 클릭합니다.  
   
-4.  
-  **제어 흐름** 탭의 디자인 화면에서 태스크 또는 컨테이너를 마우스 오른쪽 단추로 클릭한 다음 **편집** 을 클릭하여 해당 태스크 또는 컨테이너 편집기를 엽니다.  
+4.  **제어 흐름** 탭의 디자인 화면에서 태스크 또는 컨테이너를 마우스 오른쪽 단추로 클릭한 다음 **편집** 을 클릭하여 해당 태스크 또는 컨테이너 편집기를 엽니다.  
   
      For 루프 컨테이너를 구성하는 방법에 대한 자세한 내용은 [For 루프 컨테이너 구성](control-flow/for-loop-container.md)을 참조하세요.  
   
-     Foreach 루프 컨테이너를 구성 하는 방법에 대 한 자세한 내용은 [Foreach 루프 컨테이너 구성](control-flow/foreach-loop-container.md)을 참조 하세요.  
+     Foreach 루프 컨테이너를 구성하는 방법에 대한 자세한 내용은 [Foreach 루프 컨테이너 구성](control-flow/foreach-loop-container.md)을 참조하세요.  
   
     > [!NOTE]  
     >  시퀀스 컨테이너에는 사용자 지정 편집기가 없습니다.  
@@ -73,7 +69,7 @@ ms.locfileid: "66055667"
 8.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Integration Services 태스크](control-flow/integration-services-tasks.md)   
+ [작업 Integration Services](control-flow/integration-services-tasks.md)   
  [Integration Services 컨테이너](control-flow/integration-services-containers.md)  
   
   

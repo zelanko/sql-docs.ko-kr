@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057803"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>쿼리 매개 변수를 SQL 실행 태스크의 변수에 매핑
@@ -32,8 +32,7 @@ ms.locfileid: "66057803"
   
 ### <a name="to-map-a-query-parameter-to-a-variable"></a>쿼리 매개 변수를 변수에 매핑하려면  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 작업하려는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 엽니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 작업하려는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 엽니다.  
   
 2.  솔루션 탐색기에서 패키지를 두 번 클릭하여 엽니다.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66057803"
   
      매개 변수가 있는 SQL 문에서 사용하는 매개 변수 표식은 SQL 실행 태스크에서 사용하는 연결 형식에 따라 다릅니다.  
   
-    |연결 형식|매개 변수 표식|  
+    |연결 유형|매개 변수 표식|  
     |---------------------|----------------------|  
     |ADO|?|  
     |ADO.NET 및 SQLMOBILE|@\<매개 변수 이름>|  
@@ -65,7 +64,7 @@ ms.locfileid: "66057803"
   
      다음 표에서는 연결 관리자 유형별 SELECT 명령의 예를 나열합니다. 매개 변수는 WHERE 절에 필터 값을 제공합니다. 이 예에서는 SELECT를 사용하여 **의** Product [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)] 테이블에서 **ProductID** 가 두 매개 변수로 지정된 값보다 크고 작은 제품을 반환합니다.  
   
-    |연결 형식|SELECT 구문|  
+    |연결 유형|SELECT 구문|  
     |---------------------|-------------------|  
     |EXCEL, ODBC 및 OLEDB|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
     |ADO|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
@@ -73,31 +72,26 @@ ms.locfileid: "66057803"
   
      저장 프로시저에서 매개 변수를 사용하는 예는 [Parameters and Return Codes in the Execute SQL Task](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)를 참조하십시오.  
   
-7.  
-  **매개 변수 매핑**을 클릭합니다.  
+7.  **매개 변수 매핑**을 클릭합니다.  
   
 8.  매개 변수 매핑을 추가하려면 **추가**를 클릭합니다.  
   
-9. 
-  **매개 변수 이름** 상자에 이름을 제공합니다.  
+9. **매개 변수 이름** 상자에 이름을 제공합니다.  
   
      사용하는 매개 변수 이름은 SQL 실행 태스크에 사용하는 연결 형식에 따라 다릅니다.  
   
-    |연결 형식|매개 변수 이름|  
+    |연결 유형|매개 변수 이름|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, ...|  
     |ADO.NET 및 SQLMOBILE|@\<매개 변수 이름>|  
     |ODBC|1, 2, 3, ...|  
     |EXCEL 및 OLE DB|0, 1, 2, 3, ...|  
   
-10. 
-  **변수 이름** 목록에서 변수를 선택합니다. 자세한 내용은 [패키지에서 사용자 정의 변수의 범위 추가, 삭제, 변경](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)을 참조하세요.  
+10. **변수 이름** 목록에서 변수를 선택합니다. 자세한 내용은 [패키지에서 사용자 정의 변수의 범위 추가, 삭제, 변경](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)을 참조하세요.  
   
-11. 
-  **방향** 목록에서 매개 변수가 입력, 출력 또는 반환 값인지 여부를 지정합니다.  
+11. **방향** 목록에서 매개 변수가 입력, 출력 또는 반환 값인지 여부를 지정합니다.  
   
-12. 
-  **데이터 형식** 목록에서 매개 변수의 데이터 형식을 설정합니다.  
+12. **데이터 형식** 목록에서 매개 변수의 데이터 형식을 설정합니다.  
   
     > [!IMPORTANT]  
     >  매개 변수의 데이터 형식은 변수의 데이터 형식과 호환되어야 합니다.  

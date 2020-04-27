@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ae8ebf56e4ae7c4fce3566cb7688d203b8ceb318
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054929"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>로그인 전송 태스크 편집기(로그인 페이지)
-  
   **로그인 전송 태스크 편집기** 대화 상자의 **로그인** 페이지를 사용하여 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그인을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 한 인스턴스에서 다른 인스턴스로 복사하는 속성을 지정할 수 있습니다. 이 태스크에 대한 자세한 내용은 [Transfer Logins Task](control-flow/transfer-logins-task.md)를 참조하십시오.  
   
 > [!IMPORTANT]  
@@ -38,13 +37,11 @@ ms.locfileid: "66054929"
  **LoginsToTransfer**  
  원본 서버에서 대상 서버로 복사할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그인을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**AllLogins**|원본 서버의 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그인이 대상 서버로 복사됩니다.|  
-|**SelectedLogins**|
-  **LoginsList** 로 지정된 로그인만 대상 서버로 복사됩니다.|  
-|**AllLoginsFromSelectedDatabases**|
-  **DatabasesList** 로 지정된 데이터베이스의 모든 로그인이 대상 서버로 복사됩니다.|  
+|**대해 selectedlogins**|**LoginsList** 로 지정된 로그인만 대상 서버로 복사됩니다.|  
+|**AllLoginsFromSelectedDatabases**|**DatabasesList** 로 지정된 데이터베이스의 모든 로그인이 대상 서버로 복사됩니다.|  
   
  **LoginsList**  
  대상 서버로 복사할 원본 서버의 로그인을 선택합니다. 이 옵션은 **LoginsToTransfer** 에 대해 **SelectedLogins**를 선택한 경우에만 사용할 수 있습니다.  
@@ -57,18 +54,18 @@ ms.locfileid: "66054929"
   
  이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**FailTask**|대상 서버에 이름이 동일한 로그인이 이미 있는 경우 태스크가 실패합니다.|  
-|**Overwrite**|대상 서버에 이름이 동일한 로그인이 있는 경우 이를 덮어씁니다.|  
-|**Skip**|대상 서버에 이름이 동일한 로그인이 있는 경우 이를 건너뜁니다.|  
+|**언제**|대상 서버에 이름이 동일한 로그인이 있는 경우 이를 덮어씁니다.|  
+|**킵**|대상 서버에 이름이 동일한 로그인이 있는 경우 이를 건너뜁니다.|  
   
  **CopySids**  
- 로그인에 연결된 보안 식별자를 대상 서버로 복사할지 여부를 선택합니다. 로그인 전송 태스크를 데이터베이스 전송 태스크와 함께 사용 하는 경우 **Copysids** 를 **True** 로 설정 해야 합니다. 그렇게 하지 않으면 복사된 로그인을 전송된 데이터베이스에서 인식하지 않습니다.  
+ 로그인에 연결된 보안 식별자를 대상 서버로 복사할지 여부를 선택합니다. 로그인 전송 태스크를 데이터베이스 전송 동작과 함께 사용하는 경우에는**CopySids** 를 **True** 로 설정해야 합니다. 그렇게 하지 않으면 복사된 로그인을 전송된 데이터베이스에서 인식하지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Integration Services 태스크](control-flow/integration-services-tasks.md)   
+ [작업 Integration Services](control-flow/integration-services-tasks.md)   
  [로그인 전송 태스크 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
  [식 페이지](expressions/expressions-page.md)   
  [SMO 연결 관리자](connection-manager/smo-connection-manager.md)   

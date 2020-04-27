@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cef2c37c2775b1b5bd46e04f214d8ae77ee7b56d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060547"
 ---
 # <a name="configure-ole-db-connection-manager"></a>OLE DB 연결 관리자 구성
-  
   **OLE DB 연결 관리자 구성** 대화 상자를 사용하면 새 연결을 만들거나 기존 연결을 복사하여 데이터 원본에 대한 연결을 추가할 수 있습니다.  
   
  OLE DB 연결 관리자에 대한 자세한 내용은 [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md)를 참조하십시오.  
@@ -34,7 +33,7 @@ ms.locfileid: "66060547"
  **데이터 연결 속성**  
  선택한 OLE DB 데이터 연결의 속성과 값을 표시합니다.  
   
- **새로 만들기**  
+ **신규**  
  **연결 관리자** 대화 상자를 사용하여 OLE DB 데이터 연결을 만듭니다.  
   
  **Delete**  

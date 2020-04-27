@@ -16,16 +16,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b2662a08974c0eee0eed58b21d77421b3b75749
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064676"
 ---
 # <a name="browsing-a-clustering-model"></a>클러스터링 모델 찾아보기
   **찾아보기**를 사용 하 여 클러스터링 모델을 열면의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]클러스터링 뷰어와 비슷한 대화형 뷰어에 모델이 표시 됩니다. 이 뷰어는 만들어진 클러스터를 탐색하고 클러스터의 특징을 이해하는 데 도움이 됩니다. 또한 개별 세그먼트를 다른 세그먼트 또는 모집단과 비교하고 대조할 수도 있습니다.  
   
-##  <a name="BKMK_Tabs"></a>모델 탐색  
+##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>모델 탐색  
  **찾아보기** 창에는 클러스터링 모델을 이해 하 고 기본 데이터 그룹의 특성을 탐색 하는 데 도움이 되는 다음과 같은 도구가 포함 되어 있습니다.  
   
 -   [클러스터 다이어그램](#BKMK_ClusterDiagram)  
@@ -38,7 +38,7 @@ ms.locfileid: "66064676"
   
  클러스터링 모델을 사용 하 여 시험해 보려면 샘플 데이터 통합 문서의 학습 탭에 있는 샘플 데이터를 사용 하 고, [&#41;Excel 용 데이터 마이닝 추가 기능](cluster-wizard-data-mining-add-ins-for-excel.md) 및 모든 기본값을 &#40;클러스터 마법사를 사용 하 여 클러스터링 모델을 작성할 수 있습니다.  
   
-###  <a name="BKMK_ClusterDiagram"></a>클러스터 다이어그램  
+###  <a name="cluster-diagram"></a><a name="BKMK_ClusterDiagram"></a>클러스터 다이어그램  
  **클러스터 다이어그램** 탭은 마이닝 모델에 있는 모든 클러스터를 표시 합니다. 데이터 집합에서 검색된 그룹 수와 이러한 그룹이 서로 얼마나 가깝거나 멀게 떨어져 있는지를 확인할 수 있습니다.  
   
 ##### <a name="explore-the-cluster-diagram"></a>클러스터 다이어그램 탐색  
@@ -85,7 +85,7 @@ ms.locfileid: "66064676"
   
  [맨 위로 이동](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterProfiles"></a>클러스터 프로필  
+###  <a name="cluster-profiles"></a><a name="BKMK_ClusterProfiles"></a>클러스터 프로필  
  **클러스터 프로필** 탭을 사용 하 여 모든 클러스터의 구성을를 한눈에 비교할 수 있습니다. 모델에 익숙해지면 이곳에서 시작하는 것이 좋습니다. 이 뷰는 특정 클러스터를 탐색하다가 관련 클러스터를 찾아야 한다고 이후에 결정하는 경우에도 유용합니다.  
   
  **클러스터 프로필** 은 클러스터가 서로 어떻게 다른 지에 대 한 유용한 개요도 제공 합니다. 따라서 이 뷰를 사용하여 각 클러스터에 설명이 포함된 이름을 간편하게 지정할 수 있습니다.  
@@ -148,7 +148,7 @@ ms.locfileid: "66064676"
   
  [맨 위로 이동](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterCharacteristics"></a>클러스터 특징  
+###  <a name="cluster-characteristics"></a><a name="BKMK_ClusterCharacteristics"></a> 클러스터 특징  
  클러스터 특징 뷰를 사용하면 단일 클러스터를 실제로 탐색하여 이 데이터 그룹의 가장 큰 특징을 결정하는 특성을 찾을 수 있습니다.  
   
 ##### <a name="explore-the-cluster-characteristics"></a>클러스터 특징 탐색  
@@ -185,15 +185,14 @@ ms.locfileid: "66064676"
   
  [맨 위로 이동](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterDiscrimination"></a>클러스터 판별  
+###  <a name="cluster-discrimination"></a><a name="BKMK_ClusterDiscrimination"></a>클러스터 판별  
  **클러스터 판별** 탭을 사용 하 여 두 클러스터의 특성을 비교 하거나 클러스터와 데이터 집합의 다른 모든 사례 간에 특성을 비교할 수 있습니다.  
   
  이 뷰어의 기능을 강조 하기 위해 **클러스터 특징** 보기를 기반으로 만든 Excel의 side-by-side 테이블과 비교해 보겠습니다.  
   
 ##### <a name="explore-cluster-discrimination"></a>클러스터 판별 탐색  
   
-1.  
-  **클러스터 1** 및 **클러스터 2** 목록을 사용하여 비교할 클러스터를 선택합니다.  
+1.  **클러스터 1** 및 **클러스터 2** 목록을 사용하여 비교할 클러스터를 선택합니다.  
   
     -   클러스터 1에서 Over 65를 선택합니다.  
   

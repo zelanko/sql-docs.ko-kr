@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3c220fc87f726d8ba3d8e8cc92904ce42e3baeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056890"
 ---
 # <a name="package-configurations"></a>패키지 구성
@@ -44,21 +44,18 @@ ms.locfileid: "66056890"
   
 -   구성은 패키지를 좀 더 융통성 있게 만듭니다. 예를 들어 구성으로 속성 식에서 사용되는 변수의 값을 업데이트할 수 있습니다.  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 XML 파일, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 테이블, 환경 변수 및 패키지 변수와 같은 여러 가지 패키지 구성 저장 방식을 지원합니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 XML 파일, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 테이블, 환경 변수 및 패키지 변수와 같은 여러 가지 패키지 구성 저장 방식을 지원합니다.  
   
  각 구성은 한 개의 속성/값 쌍입니다. XML 구성 파일 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 유형은 여러 구성을 포함할 수 있습니다.  
   
  패키지 설치를 위한 패키지 배포 유틸리티를 만드는 경우 구성이 포함됩니다. 패키지를 설치하는 경우 패키지 설치 단계의 하나로 구성이 업데이트됩니다.  
   
 ## <a name="understanding-how-package-configurations-are-applied-at-run-time"></a>런타임에 패키지 구성이 적용되는 방법 이해  
- 
-  **dtexec** 명령 프롬프트 유틸리티(dtexec.exe)를 사용하여 배포된 패키지를 실행할 때 유틸리티에서는 패키지 구성을 두 번 적용합니다. 즉, 명령줄에서 지정한 옵션을 적용하기 전과 후 모두에 구성을 적용합니다.  
+ **dtexec** 명령 프롬프트 유틸리티(dtexec.exe)를 사용하여 배포된 패키지를 실행할 때 유틸리티에서는 패키지 구성을 두 번 적용합니다. 즉, 명령줄에서 지정한 옵션을 적용하기 전과 후 모두에 구성을 적용합니다.  
   
  유틸리티에서 패키지를 로드 및 실행할 때 이벤트가 다음과 같은 순서로 발생됩니다.  
   
-1.  
-  **dtexec** 유틸리티가 패키지를 로드합니다.  
+1.  **dtexec** 유틸리티가 패키지를 로드합니다.  
   
 2.  유틸리티가 패키지에서 디자인 타임에 지정한 구성을 패키지에 지정된 순서로 적용합니다. 부모 패키지 변수 구성만은 예외적으로 프로세스의 후반에 한 번만 적용됩니다.  
   
@@ -70,38 +67,33 @@ ms.locfileid: "66056890"
   
 6.  유틸리티가 패키지를 실행합니다.  
   
- 
-  **dtexec** 유틸리티가 구성을 적용하는 방법은 다음과 같은 명령줄 옵션에 영향을 줍니다.  
+ **dtexec** 유틸리티가 구성을 적용하는 방법은 다음과 같은 명령줄 옵션에 영향을 줍니다.  
   
 -   런타임에 **/Connection** 또는 **/Set** 옵션을 사용하면 디자인 타임에 지정한 위치와 다른 위치에서 패키지 구성을 로드할 수 있습니다.  
   
--   
-  **/ConfigFile** 옵션을 사용하면 디자인 타임에 지정하지 않은 추가 구성을 로드할 수 있습니다.  
+-   **/ConfigFile** 옵션을 사용하면 디자인 타임에 지정하지 않은 추가 구성을 로드할 수 있습니다.  
   
  그러나 이러한 명령줄 옵션에는 몇 가지 제한 사항이 있습니다.  
   
--   
-  **/Set** 또는 **/Connection** 옵션을 사용하여 구성에서도 설정된 단일 값을 재정의할 수는 없습니다.  
+-   **/Set** 또는 **/Connection** 옵션을 사용하여 구성에서도 설정된 단일 값을 재정의할 수는 없습니다.  
   
--   
-  **/ConfigFile** 옵션을 사용하여 디자인 타임에 지정한 구성을 대체하는 구성을 로드할 수는 없습니다.  
+-   **/ConfigFile** 옵션을 사용하여 디자인 타임에 지정한 구성을 대체하는 구성을 로드할 수는 없습니다.  
   
  이러한 옵션에 대 한 자세한 내용과 이러한 옵션의 동작이 및 이전 버전 간에 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 어떻게 다른 지에 대 한 자세한 내용은 [SQL Server 2014의 Integration Services 기능에 대 한 동작 변경 내용](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)을 참조 하세요.  
   
 ## <a name="package-configuration-types"></a>패키지 구성 유형  
  다음 표에서는 패키지 구성 유형에 대해 설명합니다.  
   
-|Type|Description|  
+|유형|설명|  
 |----------|-----------------|  
 |XML 구성 파일|구성을 포함하는 XML 파일입니다. XML 파일은 여러 구성을 포함할 수 있습니다.|  
 |환경 변수|환경 변수는 구성을 포함합니다.|  
 |레지스트리 항목|레지스트리 항목은 구성을 포함합니다.|  
 |부모 패키지 변수|패키지 변수는 구성을 포함합니다. 이 구성 유형은 일반적으로 자식 패키지에서 속성을 업데이트하기 위해 사용됩니다.|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]테이블|구성을 포함하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 테이블입니다. 테이블은 여러 구성을 포함할 수 있습니다.|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블|구성을 포함하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 테이블입니다. 테이블은 여러 구성을 포함할 수 있습니다.|  
   
 ### <a name="xml-configuration-files"></a>XML 구성 파일  
- 
-  **XML 구성 파일** 의 구성 유형을 선택한 경우 새 구성 파일을 만들고 기존의 파일을 다시 사용하면서 새 구성을 추가하거나 또는 기존의 파일을 다시 사용하지만 기존의 파일 내용을 덮어쓸 수 있습니다.  
+ **XML 구성 파일** 의 구성 유형을 선택한 경우 새 구성 파일을 만들고 기존의 파일을 다시 사용하면서 새 구성을 추가하거나 또는 기존의 파일을 다시 사용하지만 기존의 파일 내용을 덮어쓸 수 있습니다.  
   
  XML 구성 파일은 두 개의 부분으로 이루어집니다.  
   
@@ -129,15 +121,12 @@ ms.locfileid: "66056890"
 ```  
   
 ### <a name="registry-entry"></a>레지스트리 항목  
- 레지스트리 항목을 사용하여 구성을 저장하려면 기존 키를 사용하거나 HKEY_CURRENT_USER에서 새 키를 만들 수 있습니다. 
-  `Value` 값이 있는 레지스트리 키를 사용해야 합니다. 값은 DWORD 또는 문자열이 될 수 있습니다.  
+ 레지스트리 항목을 사용하여 구성을 저장하려면 기존 키를 사용하거나 HKEY_CURRENT_USER에서 새 키를 만들 수 있습니다. `Value` 값이 있는 레지스트리 키를 사용해야 합니다. 값은 DWORD 또는 문자열이 될 수 있습니다.  
   
- 
-  **레지스트리 항목** 구성 유형을 선택할 경우 레지스트리 항목 상자에 레지스트리 키의 이름을 입력합니다. 형식은 \<레지스트리 키>입니다. HKEY_CURRENT_USER의 루트에 없는 레지스트리 키를 사용하려면 \<레지스트리 키\레지스트리 키\\...> 형식을 사용하여 키를 식별합니다. 예를 들어 SSISPackages에 있는 MyPackage 키를 사용하려면 `SSISPackages\MyPackage`를 입력합니다.  
+ **레지스트리 항목** 구성 유형을 선택할 경우 레지스트리 항목 상자에 레지스트리 키의 이름을 입력합니다. 형식은 \<레지스트리 키>입니다. HKEY_CURRENT_USER의 루트에 없는 레지스트리 키를 사용하려면 \<레지스트리 키\레지스트리 키\\...> 형식을 사용하여 키를 식별합니다. 예를 들어 SSISPackages에 있는 MyPackage 키를 사용하려면 `SSISPackages\MyPackage`를 입력합니다.  
   
 ### <a name="sql-server"></a>SQL Server  
- 
-  **SQL Server** 구성 유형을 선택한 경우 구성을 저장할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스에 대한 연결을 지정하십시오. 기존 테이블에 구성을 저장하거나 지정한 데이터베이스에 새 테이블을 만들 수 있습니다.  
+ **SQL Server** 구성 유형을 선택한 경우 구성을 저장할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스에 대한 연결을 지정하십시오. 기존 테이블에 구성을 저장하거나 지정한 데이터베이스에 새 테이블을 만들 수 있습니다.  
   
  다음 SQL 문에서는 패키지 구성 마법사가 제공하는 기본 CREATE TABLE 문을 보여 줍니다.  
   
@@ -155,8 +144,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  구성에 지정한 이름은 **ConfigurationFilter** 열에 저장된 값입니다.  
   
 ## <a name="direct-and-indirect-configurations"></a>직접 및 간접 구성  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 직접 및 간접 구성을 제공합니다. 구성을 직접으로 지정한 경우 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 구성 항목 및 패키지 개체 속성 간에 직접 연결을 만듭니다. 직접 구성은 원본의 위치가 변경되지 않는 경우에 적합합니다. 예를 들어 패키지의 모든 배포가 동일한 파일 경로를 사용하는 경우 XML 구성 파일을 지정할 수 있습니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 직접 및 간접 구성을 제공합니다. 구성을 직접으로 지정한 경우 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 구성 항목 및 패키지 개체 속성 간에 직접 연결을 만듭니다. 직접 구성은 원본의 위치가 변경되지 않는 경우에 적합합니다. 예를 들어 패키지의 모든 배포가 동일한 파일 경로를 사용하는 경우 XML 구성 파일을 지정할 수 있습니다.  
   
  간접 구성은 환경 변수를 사용합니다. 구성 설정을 직접 지정하는 대신 구성이 구성 값을 포함하는 환경 변수를 가리킵니다. 간접 구성은 각 패키지의 배포에 대해 구성 위치가 변경될 수 있는 경우에 적합합니다.  
   

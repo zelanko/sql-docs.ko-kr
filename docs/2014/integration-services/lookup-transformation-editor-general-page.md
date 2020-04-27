@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cb83e95bd13b566f46386cf10676ee882a954762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057837"
 ---
 # <a name="lookup-transformation-editor-general-page"></a>조회 변환 편집기(일반 페이지)
@@ -40,15 +40,12 @@ ms.locfileid: "66057837"
  **OLE DB 연결 관리자**  
  조회 변환이 OLE DB 연결 관리자를 사용하도록 구성합니다.  
   
- **일치 하는 항목이 없는 행 처리 방법 지정**  
+ **일치하는 항목이 없는 행 처리 방법 지정**  
  참조 데이터 세트에서 하나 이상의 항목과 일치하지 않는 행을 처리하기 위한 옵션을 선택합니다.  
   
- 
-  **일치하는 항목이 없는 출력으로 행 리디렉션**을 선택하면 행이 일치하는 항목이 없는 출력으로 리디렉션되고 오류로 처리되지 않습니다. 이 경우 **조회 변환 편집기** 대화 상자의 **오류 출력** 페이지에 있는 **오류** 옵션을 사용할 수 없습니다.  
+ **일치하는 항목이 없는 출력으로 행 리디렉션**을 선택하면 행이 일치하는 항목이 없는 출력으로 리디렉션되고 오류로 처리되지 않습니다. 이 경우 **조회 변환 편집기** 대화 상자의 **오류 출력** 페이지에 있는 **오류** 옵션을 사용할 수 없습니다.  
   
- 
-  **일치하는 항목이 없는 행 처리 방법 지정** 목록 상자에서 다른 옵션을 선택하면 행이 오류로 처리되며 
-  **오류 출력** 페이지에 있는 **오류** 옵션을 사용할 수 있습니다.  
+ **일치하는 항목이 없는 행 처리 방법 지정** 목록 상자에서 다른 옵션을 선택하면 행이 오류로 처리되며 **오류 출력** 페이지에 있는 **오류** 옵션을 사용할 수 있습니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
  blogs.msdn.com의 블로그 항목 - [조회 캐시 모드](https://go.microsoft.com/fwlink/?LinkId=219518)  
@@ -56,8 +53,8 @@ ms.locfileid: "66057837"
 ## <a name="see-also"></a>참고 항목  
  [캐시 연결 관리자](connection-manager/cache-connection-manager.md)   
  [조회 변환 편집기 &#40;연결 페이지&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
- [조회 변환 편집기&#40;열 페이지&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
+ [조회 변환 편집기 &#40;열 페이지&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
  [조회 변환 편집기 &#40;고급 페이지&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
- [조회 변환 편집기 &#40;오류 출력 페이지&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)  
+ [조회 변환 편집기&#40;오류 출력 페이지&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)  
   
   

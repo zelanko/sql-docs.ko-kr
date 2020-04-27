@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e02b4da19c3fe8cef9d31b304b1aeecdaa906bdd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069522"
 ---
 # <a name="select-existing-dimensions-cube-wizard"></a>기존 차원 선택(큐브 마법사)
-  
   **기존 차원 선택** 페이지를 사용하여 큐브에 포함할 기존 차원을 선택할 수 있습니다.  
   
 ## <a name="options"></a>옵션  

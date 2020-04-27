@@ -11,18 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 323c98b56e2d77c529fb2adf913b15e51bd77900
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062435"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services Tutorial 시나리오
-  이 자습서는 가상 회사인 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]를 기반으로 합니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]는 금속 및 복합 자전거를 생산 하 고 북아메리카, 유럽 및 아시아의 상용 시장에 배포 하는 다국적 다국적 제조 회사입니다. 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 의 본사는 워싱턴 주 보셀에 위치하고 있으며 직원 수는 500명입니다. 또한 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 판매 시장에 전반에 걸쳐 몇몇 지역에 영업 팀을 운영하고 있습니다.  
+  이 자습서는 가상 회사인 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]를 기반으로 합니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 북아메리카, 유럽 및 아시아 시장에서 금속 및 합성 소재 자전거를 생산하고 판매하는 대규모 다국적 제조 회사입니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 의 본사는 워싱턴 주 보셀에 위치하고 있으며 직원 수는 500명입니다. 또한 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 판매 시장에 전반에 걸쳐 몇몇 지역에 영업 팀을 운영하고 있습니다.  
   
- 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 최근에 멕시코에 위치한 소규모 제조업체인 Importadores Neptuno를 인수했습니다. Importadores Neptuno는 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 제품 라인에서 중요한 여러 가지 하위 구성 요소를 제조합니다. 이러한 하위 구성 요소는 Bothell로 운송된 후 최종 제품 조립에 사용됩니다. 2005년에 Importadores Neptuno는 여행용 자전거 제품 그룹의 유일한 제조업체이자 유통업체가 되었습니다.  
+ [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 최근에 멕시코에 위치한 소규모 제조업체인 Importadores Neptuno를 인수했습니다. Importadores Neptuno는 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 제품 라인에서 중요한 여러 가지 하위 구성 요소를 제조합니다. 이러한 하위 구성 요소는 Bothell로 운송된 후 최종 제품 조립에 사용됩니다. 2005년에 Importadores Neptuno는 여행용 자전거 제품 그룹의 유일한 제조업체이자 유통업체가 되었습니다.  
   
  회계 연도를 성공적으로 마무리한 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 우수 고객 중심으로 광고를 제공해 시장 점유율을 높이고 외부 웹 사이트를 통해 제품 사용 가능성을 높이며 생산 비용을 절감하여 판매 비용을 낮추려고 합니다.  
   
@@ -33,8 +31,7 @@ ms.locfileid: "66062435"
   
 -   쿼리 성능은 크게 다릅니다. 예를 들어 일부 쿼리는 몇 초만에 빠르게 결과를 반환하지만 다른 쿼리는 결과 반환에 몇 분이 걸립니다.  
   
--   집계 테이블은 관리하기가 어렵습니다. 
-  [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 의 데이터 웨어하우스 팀은 쿼리 응답 시간을 향상시키기 위해 **AdventureWorksDW2012** 데이터베이스에 몇 개의 집계 테이블을 작성했습니다. 예를 들어 월간 판매를 요약하는 테이블을 작성했습니다. 그러나 이러한 집계 테이블은 쿼리 성능을 크게 향상시키는 반면 시간에 따라 테이블을 유지하기 위해 구축한 인프라는 오류가 쉽게 발생합니다.  
+-   집계 테이블은 관리하기가 어렵습니다. [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 의 데이터 웨어하우스 팀은 쿼리 응답 시간을 향상시키기 위해 **AdventureWorksDW2012** 데이터베이스에 몇 개의 집계 테이블을 작성했습니다. 예를 들어 월간 판매를 요약하는 테이블을 작성했습니다. 그러나 이러한 집계 테이블은 쿼리 성능을 크게 향상시키는 반면 시간에 따라 테이블을 유지하기 위해 구축한 인프라는 오류가 쉽게 발생합니다.  
   
 -   복잡한 계산 논리가 보고서 정의에 포함되어 있고 보고서 간에 공유되기가 어렵습니다. 이 비즈니스 논리는 각 보고서마다 별도로 생성되므로 보고서 간 요약 정보가 다를 수도 있습니다. 따라서 경영진의 데이터 웨어하우스 보고서에 대한 신뢰성이 제한적이었습니다.  
   
@@ -66,6 +63,6 @@ ms.locfileid: "66062435"
  Analysis Services 자습서의 단원에서는 이러한 모든 목표에 맞는 큐브 데이터베이스를 작성하는 데 필요한 지침을 제공합니다. 시작하려면 첫 번째 단원인 [1단원: 새 테이블 형식 모델 프로젝트를 만들기](lesson-1-create-a-new-tabular-model-project.md)로 이동하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [&#40;의 다차원 모델링은 놀이 Works 자습서&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [다차원 모델링&#40;Adventure Works 자습서&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

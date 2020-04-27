@@ -13,19 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8a236805ac047b351aa49c2486b8acac84818017
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069075"
 ---
 # <a name="sequence-clustering-cluster-transition-tab-mining-model-viewer"></a>시퀀스 클러스터링 클러스터 전환 탭(마이닝 모델 뷰어)
-  
   **Microsoft 시퀀스 클러스터링 뷰어** 의 **상태 전환** 탭에는 선택한 클러스터의 특성-값 쌍 또는 상태 간의 전환이 자세히 표시됩니다.  
   
  이 시퀀스 클러스터링 모델 뷰를 사용하여 패턴을 볼 수 있습니다. 다이어그램에서 링크는 전환 확률을 나타내고 노드는 시퀀스 상태를 나타냅니다.  
   
- **자세한 내용:** [Microsoft 시퀀스 클러스터링 알고리즘](data-mining/microsoft-sequence-clustering-algorithm.md), [Microsoft 시퀀스 클러스터 뷰어를 사용 하 여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **자세한 내용:** [Microsoft 시퀀스 클러스터링 알고리즘](data-mining/microsoft-sequence-clustering-algorithm.md), [Microsoft 시퀀스 클러스터 뷰어를 사용하여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>옵션  
  **뷰어 내용 새로 고침**  

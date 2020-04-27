@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1bfe78e7ac5cb497a39ab0b0679bcb2bd9a43a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068063"
 ---
 # <a name="standard-view-aggregations-tab-cube-designer"></a>표준 뷰(집계 탭, 큐브 디자이너)
@@ -24,13 +24,11 @@ ms.locfileid: "66068063"
   
 ## <a name="options"></a>옵션  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
-|**집계 디자인**|
-  **집계 디자인 마법사**를 표시하려면 클릭합니다.|  
+|**집계 디자인**|**집계 디자인 마법사**를 표시하려면 클릭합니다.|  
 |**사용 빈도 기반 최적화**|**사용 빈도 기반 최적화** 마법사를 표시 하려면 클릭 합니다.|  
-|**집계 디자인 할당**|
-  **집계 디자인 할당** 대화 상자를 표시하려면 클릭합니다.|  
+|**집계 디자인 할당**|**집계 디자인 할당** 대화 상자를 표시하려면 클릭합니다.|  
 |**Delete**|선택한 집계 디자인을 삭제하려면 클릭합니다.|  
 |**속성**|집계의 속성을 보려면 클릭합니다.|  
   

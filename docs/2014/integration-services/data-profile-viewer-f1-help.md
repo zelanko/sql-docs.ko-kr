@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8572feb3e9eb3ac5ba7ba8a3d61abb2ad2dc1b5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059715"
 ---
 # <a name="data-profile-viewer-f1-help"></a>데이터 프로필 뷰어 F1 도움말
@@ -37,7 +37,7 @@ ms.locfileid: "66059715"
  **메시지** 창  
  상태 메시지를 표시합니다.  
   
- **드릴 다운** 창  
+ **드릴다운** 창  
  데이터 프로파일링 태스크에 사용되는 데이터 원본을 사용할 수 있는 경우 출력의 값과 일치하는 데이터의 행을 표시합니다.  
   
  예를 들어 US State 열에 대한 열 값 분포 프로필의 출력을 보는 경우 **세부 값 분포** 창에 "WA"에 대한 행이 포함될 수 있습니다. 드릴다운 창에서 주 열의 값이 "WA"인 데이터의 행을 보려면 **세부 값 분포** 창에서 해당 행을 두 번 클릭합니다.  
@@ -66,10 +66,10 @@ ms.locfileid: "66059715"
  **길이**  
  프로파일링된 열에서 찾은 열 길이를 표시합니다.  
   
- **수**  
+ **Count**  
  프로파일링된 열의 값에 **길이** 열에 표시된 길이가 지정된 행 수를 표시합니다.  
   
- **나타낸**  
+ **백분율**  
  프로파일링된 열의 값에 **길이** 열에 표시된 길이가 지정된 행의 비율을 표시합니다.  
   
 ### <a name="profile-type--column-null-ratio-profile"></a>프로필 유형 = 열 Null 비율 프로필  
@@ -91,16 +91,16 @@ ms.locfileid: "66059715"
  테이블 또는 뷰의 행 수를 표시합니다.  
   
 #### <a name="pattern-distribution-pane"></a>패턴 분포 창  
- **되풀이**  
+ **패턴**  
  프로파일링된 열에 대해 계산된 패턴을 표시합니다.  
   
- **나타낸**  
+ **백분율**  
  값이 **패턴** 열에 표시된 패턴과 일치하는 행의 비율을 표시합니다.  
   
 ### <a name="profile-type--column-statistics-profile"></a>프로필 유형 = 열 통계 프로필  
   
 #### <a name="column-statistics-profile---column-pane"></a>열 통계 프로필 - \<column> 창  
- **최소**  
+ **최대**  
  프로파일링된 열에서 찾은 최소값을 표시합니다.  
   
  **최대화**  
@@ -125,10 +125,10 @@ ms.locfileid: "66059715"
  **값**  
  프로파일링된 열에서 찾은 고유 값을 표시합니다.  
   
- **수**  
+ **Count**  
  프로파일링된 열에 **값** 열에 표시된 값이 있는 행 수를 표시합니다.  
   
- **나타낸**  
+ **백분율**  
  프로파일링된 열에 **값** 열에 표시된 값이 있는 행의 비율을 표시합니다.  
   
 ### <a name="profile-type--candidate-key-profile"></a>프로필 유형 = 후보 키 프로필  
@@ -144,7 +144,7 @@ ms.locfileid: "66059715"
  **\<column1>, \<column2> 등**  
  프로파일링된 열에서 찾은 중복 값을 표시합니다.  
   
- **수**  
+ **Count**  
  지정된 열에 첫 번째 열에 표시된 값이 있는 행 수를 표시합니다.  
   
 ### <a name="profile-type--functional-dependency-profile"></a>프로필 유형 = 함수 종속성 프로필  
@@ -173,7 +173,7 @@ ms.locfileid: "66059715"
  **지원 개수**  
  결정 열 값이 종속 열을 결정하는 행 수를 표시합니다.  
   
- **위반 수**  
+ **위반 개수**  
  결정 열 값이 종속 열을 결정하지 않는 행 수를 표시합니다. 종속 값이 ** \<종속 열 이름>** 열에 표시 된 값인 행입니다.  
   
  **지원 백분율**  
@@ -182,10 +182,10 @@ ms.locfileid: "66059715"
 ### <a name="profile-type--value-inclusion-profile"></a>프로필 유형 = 값 포함 프로필  
   
 #### <a name="value-inclusion-profile-pane"></a>값 포함 프로필 창  
- **하위 집합 측 열**  
+ **하위 집합측 열**  
  상위 집합 열에 있는지 여부를 확인하기 위해 프로파일링된 열 또는 열 조합을 표시합니다.  
   
- **상위 집합 측 열**  
+ **상위 집합측 열**  
  하위 집합 열의 값을 포함하는지 여부를 확인하기 위해 프로파일링된 열 또는 열 조합을 표시합니다.  
   
  **포함 수준**  
@@ -195,7 +195,7 @@ ms.locfileid: "66059715"
  **\<column1>, \<column2> 등**  
  상위 집합 열에서 찾지 못한 하위 집합 열의 값을 표시합니다.  
   
- **수**  
+ **Count**  
  지정된 열에 첫 번째 열에 표시된 값이 있는 행 수를 표시합니다.  
   
 ## <a name="see-also"></a>참고 항목  

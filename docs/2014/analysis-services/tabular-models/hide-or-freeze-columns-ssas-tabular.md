@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c506b72f48206f5a68dc10d0b236aa7fb934435
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067087"
 ---
 # <a name="hide-or-freeze-columns-ssas-tabular"></a>열 숨기기 또는 고정(SSAS 테이블 형식)
@@ -28,7 +28,7 @@ ms.locfileid: "66067087"
  열을 숨길 때 모델 디자이너 또는 보고서에서 작업할 동안에만 열을 숨기는 방법도 있습니다. 모든 열을 숨기면 모델 디자이너에서 전체 테이블이 공백으로 나타납니다.  
   
 > [!NOTE]  
->  숨겨야 하는 열이 많은 경우 열을 숨기거나 숨김을 해제하는 대신 큐브 뷰를 만들 수 있습니다. 큐브 뷰는 관련 데이터의 하위 집합을 보다 쉽게 사용할 수 있는 사용자 지정 데이터 뷰입니다. 자세한 내용은 [SSAS 테이블 형식 &#40;큐브 뷰 만들기 및 관리](perspectives-ssas-tabular.md) 를 참조 하세요&#41;  
+>  숨겨야 하는 열이 많은 경우 열을 숨기거나 숨김을 해제하는 대신 큐브 뷰를 만들 수 있습니다. 큐브 뷰는 관련 데이터의 하위 집합을 보다 쉽게 사용할 수 있는 사용자 지정 데이터 뷰입니다. 자세한 내용은 [큐브 뷰 만들기 및 관리&#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)를 참조하세요.  
   
 ### <a name="to-hide-an-individual-column"></a>개별 열을 숨기려면  
   
@@ -40,11 +40,9 @@ ms.locfileid: "66067087"
   
 1.  모델 디자이너에서 숨기려는 열이 포함된 테이블을 선택합니다.  
   
-2.  
-  **열** 메뉴에서 **숨기기 및 숨기기 취소**를 클릭합니다.  
+2.  **열** 메뉴에서 **숨기기 및 숨기기 취소**를 클릭합니다.  
   
-3.  
-  **열 숨기기 및 숨기기 취소** 대화 상자에서 숨기려는 각 열을 찾은 다음 **디자이너** 및 **보고서**중 하나 또는 둘 다 선택을 취소합니다.  
+3.  **열 숨기기 및 숨기기 취소** 대화 상자에서 숨기려는 각 열을 찾은 다음 **디자이너** 및 **보고서**중 하나 또는 둘 다 선택을 취소합니다.  
   
 4.  **확인**을 클릭합니다.  
   
@@ -54,8 +52,7 @@ ms.locfileid: "66067087"
   
 2.  고정할 열을 하나 이상 선택합니다.  
   
-3.  
-  **열** 메뉴에서 **고정**을 클릭합니다.  
+3.  **열** 메뉴에서 **고정**을 클릭합니다.  
   
     > [!NOTE]  
     >  열이 고정되면 디자이너에서 테이블의 왼쪽(또는 앞)으로 이동합니다. 나중에 열의 고정을 취소해도 다시 원래 위치로 이동하지 않습니다.  
@@ -63,6 +60,6 @@ ms.locfileid: "66067087"
 ## <a name="see-also"></a>참고 항목  
  [SSAS 테이블 형식&#41;&#40;테이블 및 열](tables-and-columns-ssas-tabular.md)   
  [SSAS 테이블 형식&#41;&#40;큐브 뷰](perspectives-ssas-tabular.md)   
- [SSAS 테이블 형식&#41;역할 &#40;](roles-ssas-tabular.md)  
+ [역할&#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)  
   
   

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07077fabaca18170496a1b4e972da7b7e34cd4fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056262"
 ---
 # <a name="save-a-package-to-the-file-system"></a>파일 시스템에 패키지 저장
@@ -28,19 +28,17 @@ ms.locfileid: "66056262"
   
 ### <a name="to-save-a-package-to-the-file-system"></a>패키지를 파일 시스템으로 저장하려면  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 파일로 저장하려는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 파일로 저장하려는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
 2.  솔루션 탐색기에서 저장할 패키지를 클릭합니다.  
   
-3.  
-  **파일** 메뉴에서 **선택한 항목 저장**을 클릭합니다.  
+3.  **파일** 메뉴에서 **선택한 항목 저장**을 클릭합니다.  
   
     > [!NOTE]  
     >  속성 창에서 패키지가 저장된 경로와 파일 이름을 확인할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Integration Services&#40;SSIS&#41; 패키지](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [SSIS&#41; 패키지 Integration Services &#40;](../../2014/integration-services/integration-services-ssis-packages.md)   
  [패키지의 복사본 저장](../../2014/integration-services/save-a-copy-of-a-package.md)  
   
   

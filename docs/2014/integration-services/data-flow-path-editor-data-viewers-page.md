@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 39d263d85b8956da4366134393d48405ebe104ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060077"
 ---
 # <a name="data-flow-path-editor-data-viewers-page"></a>데이터 흐름 경로 편집기(데이터 뷰어 페이지)
-  
   **데이터 흐름 경로 편집기** 대화 상자의 **데이터 뷰어** 페이지를 사용하여 경로에 연결된 데이터 뷰어를 관리할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
@@ -33,15 +32,13 @@ ms.locfileid: "66060077"
  데이터 뷰어의 유형을 나열합니다.  
   
  **추가**  
- 
-  **데이터 뷰어 구성** 대화 상자를 사용하여 데이터 뷰어를 추가하려면 클릭합니다.  
+ **데이터 뷰어 구성** 대화 상자를 사용하여 데이터 뷰어를 추가하려면 클릭합니다.  
   
  **Delete**  
  선택한 데이터 뷰어를 삭제하려면 클릭합니다.  
   
  **구성**  
- 
-  **데이터 뷰어 구성** 대화 상자를 사용하여 선택한 데이터 뷰어를 구성하려면 클릭합니다.  
+ **데이터 뷰어 구성** 대화 상자를 사용하여 선택한 데이터 뷰어를 구성하려면 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 흐름 경로 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   

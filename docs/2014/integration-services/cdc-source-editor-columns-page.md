@@ -13,14 +13,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 980b9cf22e2c50cd1de3eb90a06e6496c01cc093
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061027"
 ---
 # <a name="cdc-source-editor-columns-page"></a>CDC 원본 편집기(열 페이지)
-  
   **CDC 원본 편집기** 대화 상자의 **열** 페이지를 사용하여 출력 열을 각 외부(원본) 열에 매핑할 수 있습니다.  
   
  CDC 원본에 대한 자세한 내용은 [CDC Source](data-flow/cdc-source.md)을 참조하십시오.  
@@ -28,14 +27,11 @@ ms.locfileid: "66061027"
 ## <a name="task-list"></a>작업 목록  
  **CDC 원본 편집기의 열 페이지를 열려면**  
   
-1.  
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 CDC 원본이 있는 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 패키지를 엽니다.  
+1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 CDC 원본이 있는 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 패키지를 엽니다.  
   
-2.  
-  **데이터 흐름** 탭에서 CDC 원본을 두 번 클릭합니다.  
+2.  **데이터 흐름** 탭에서 CDC 원본을 두 번 클릭합니다.  
   
-3.  
-  **CDC 원본 편집기**에서 **열**을 클릭합니다.  
+3.  **CDC 원본 편집기**에서 **열**을 클릭합니다.  
   
 ## <a name="options"></a>옵션  
  **사용 가능한 외부 열**  
@@ -48,7 +44,7 @@ ms.locfileid: "66061027"
  각 출력 열의 고유 이름을 입력합니다. 기본값은 선택한 외부(원본) 열의 이름이지만 설명이 포함된 고유 이름을 임의로 선택할 수 있습니다. 입력한 이름은 SSIS 디자이너에 표시됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [CDC 원본 편집기&#40;연결 관리자 페이지&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
+ [CDC 원본 편집기 &#40;연결 관리자 페이지&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
  [CDC 원본 편집기&#40;오류 출력 페이지&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   
   

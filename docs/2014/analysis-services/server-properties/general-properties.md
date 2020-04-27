@@ -39,22 +39,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b833fe2710ce04cb4a0c8b08fedc9a882c19add
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069026"
 ---
 # <a name="general-properties"></a>일반 속성
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 서버 속성을 사용할 수 있습니다. 이 항목에서는 msmdsrv.ini 파일의 서버 속성 중 보안, 네트워크, ThreadPool 등 특정 섹션에 포함되지 않은 속성에 대해 설명됩니다. 추가 서버 속성 및 해당 속성 설정 방법은 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)을 참조하세요.  
   
- **적용 대상:** 다차원 및 테이블 형식 서버 모드 (다르게 표시 되지 않은 경우)  
+ **적용 대상:** 다차원 및 테이블 형식 서버 모드(다르게 표시되지 않은 경우)  
   
 ## <a name="non-specific-category"></a>일반 범주  
  `AdminTimeout`  
- 관리자 제한 시간(초)을 정의하는 부호 있는 32비트 정수 속성입니다. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 이 고급 속성을 변경하면 안 됩니다.  
+ 관리자 제한 시간(초)을 정의하는 부호 있는 32비트 정수 속성입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 이 고급 속성을 변경하면 안 됩니다.  
   
  이 속성의 기본값은 0으로 제한 시간이 없음을 나타냅니다.  
   
@@ -91,8 +89,7 @@ ms.locfileid: "66069026"
  쿼리 해결 중 파티션 세그먼트당 최대 스레드 수를 정의하는 부호 있는 32비트 정수 속성입니다. 동시 사용자 수가 적을수록 메모리 사용량이 높은 대신 이 값을 높일 수 있습니다. 반대로 동시 사용자 수가 많으면 값을 줄여야 합니다.  
   
  `CoordinatorShutdownMode`  
- 코디네이터 종료 모드를 정의하는 부울 속성입니다. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 이 고급 속성을 변경하면 안 됩니다.  
+ 코디네이터 종료 모드를 정의하는 부울 속성입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 이 고급 속성을 변경하면 안 됩니다.  
   
  `DataDir`  
  데이터가 저장되는 디렉터리의 이름을 식별하는 문자열 속성입니다.  
@@ -102,17 +99,16 @@ ms.locfileid: "66069026"
   
  이 속성에 유효한 값은 다음과 같습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|0|이것은 기본값입니다. 이 설정은 MOLAP, HOLAP 및 ROLAP 스토리지를 사용하는 다차원 데이터베이스와 데이터 마이닝 모델에 서비스를 제공하는 데 사용되는 다차원 모드를 지정합니다.|  
+|0|기본값입니다. 이 설정은 MOLAP, HOLAP 및 ROLAP 스토리지를 사용하는 다차원 데이터베이스와 데이터 마이닝 모델에 서비스를 제공하는 데 사용되는 다차원 모드를 지정합니다.|  
 |1|SharePoint용 PowerPivot 배포의 일부로 설치된 Analysis Services 인스턴스를 지정합니다. SharePoint용 PowerPivot 설치의 일부인 Analysis Services 인스턴스의 배포 모드 속성은 변경하지 마십시오. 모드를 변경하면 PowerPivot 데이터가 서버에서 더 이상 실행되지 않습니다.|  
 |2|메모리 내 스토리지나 DirectQuery 스토리지를 사용하는 테이블 형식 model 데이터베이스를 호스팅하는 데 사용되는 테이블 형식 모드를 지정합니다.|  
   
  각 모드는 다른 모드와 함께 사용할 수 없습니다. 테이블 형식 모드용으로 구성된 서버는 큐브 및 차원이 포함된 기본 Analysis Services 데이터베이스를 실행할 수 없습니다. 기본 컴퓨터 하드웨어에서 지원하는 경우 같은 컴퓨터에 Analysis Services 인스턴스를 여러 개 설치하고 각 인스턴스가 다른 배포 모드를 사용하도록 구성할 수 있습니다. Analysis Services는 리소스를 많이 사용하는 애플리케이션이므로 고성능 서버인 경우에만 한 시스템에 여러 개의 인스턴스를 배포하는 것이 좋습니다.  
   
  `EnableFast1033Locale`  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  `ExternalCommandTimeout`  
  관계형 데이터 원본 및 외부 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버를 포함하여 외부 서버에 실행된 명령의 제한 시간(초)을 정의하는 정수 속성입니다.  
@@ -135,8 +131,7 @@ ms.locfileid: "66069026"
  이 속성에 대한 자세한 내용은 [SQL Server 2008 R2 Analysis Services 작업 가이드](https://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오.  
   
 > [!IMPORTANT]  
->  
-  `ForceCommitTimeout`은 큐브 처리 명령과 쓰기 저장 작업에 적용됩니다.  
+>  `ForceCommitTimeout`은 큐브 처리 명령과 쓰기 저장 작업에 적용됩니다.  
   
  `IdleConnectionTimeout`  
  비활성 상태의 연결에 대한 제한 시간(초)을 지정하는 정수 속성입니다.  
@@ -166,7 +161,7 @@ ms.locfileid: "66069026"
  `Port`  
  서버에서 클라이언트 연결을 수신할 포트 번호를 정의하는 정수 속성입니다. 설정하지 않으면 서버가 사용되지 않은 첫 번째 포트를 동적으로 검색합니다.  
   
- 이 속성의 기본값은 0으로 이후 포트 2383이 기본값이 됩니다. 포트 구성에 대한 자세한 내용은 [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하십시오.  
+ 이 속성의 기본값은 0으로 이후 포트 2383이 기본값이 됩니다. 포트 구성에 대한 자세한 내용은 [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
  `ServerTimeout`  
  쿼리에 대한 제한 시간(초)을 정의하는 정수입니다. 기본값은 3600초(또는 60분)입니다. 0을 지정하면 쿼리가 시간 초과되지 않습니다.  
@@ -176,12 +171,10 @@ ms.locfileid: "66069026"
   
 ## <a name="requestprioritization-category"></a>RequestPrioritization 범주  
  `Enabled`  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  `StatisticsStoreSize`  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Analysis Services에서 서버 속성 구성](server-properties-in-analysis-services.md)   

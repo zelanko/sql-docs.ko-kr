@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5346c808c7d724ae630bb3dd25016a9977af363e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060048"
 ---
 # <a name="data-conversion-transformation-editor"></a>데이터 변환 편집기
-  
   **데이터 변환 편집기** 대화 상자를 사용하여 변환할 열을 선택하고, 열이 변환될 데이터 형식을 선택하고, 변환 특성을 설정할 수 있습니다.  
   
 > [!NOTE]  
@@ -56,8 +55,7 @@ ms.locfileid: "66060048"
  DT_STR 유형의 열에 적절한 코드 페이지를 선택합니다.  
   
  **오류 출력 구성**  
- 
-  [오류 출력 구성](../../2014/integration-services/configure-error-output.md) 대화 상자를 사용하여 하위 수준 오류를 처리하는 방법을 지정합니다.  
+ [오류 출력 구성](../../2014/integration-services/configure-error-output.md) 대화 상자를 사용하여 하위 수준 오류를 처리하는 방법을 지정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   

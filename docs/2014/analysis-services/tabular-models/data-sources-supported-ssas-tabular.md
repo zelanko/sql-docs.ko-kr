@@ -11,26 +11,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 345e733e5c1e90f637efab02a9942e307c2fb9f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067376"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>지원되는 데이터 원본 (SSAS 테이블 형식)
   이 항목에서는 테이블 형식 모델에서 사용할 수 있는 데이터 원본의 유형에 대해 설명합니다.  
   
- 이 문서에는 다음 섹션이 포함되어 있습니다.  
+ 이 문서에는 다음과 같은 섹션이 포함되어 있습니다.  
   
 -   [지원되는 데이터 원본](#bkmk_supported_ds)  
   
--   [지원되지 않는 원본](#bkmk_unsupported_ds)  
+-   [지원 되지 않는 원본](#bkmk_unsupported_ds)  
   
 -   [데이터 원본 선택을 위한 팁](#bkmk_tips)  
   
-##  <a name="bkmk_supported_ds"></a>지원 되는 데이터 원본  
- 다음 표에 나와 있는 데이터 원본에서 데이터를 가져올 수 있습니다. 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 설치할 경우 각 데이터 원본에 대해 나열된 공급자는 설치되지 않습니다. 일부 공급자는 컴퓨터의 다른 애플리케이션과 함께 이미 설치되어 있을 수 있습니다. 그렇지 않은 경우에는 공급자를 다운로드하여 설치해야 합니다.  
+##  <a name="supported-data-sources"></a><a name="bkmk_supported_ds"></a>지원 되는 데이터 원본  
+ 다음 표에 나와 있는 데이터 원본에서 데이터를 가져올 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 설치할 경우 각 데이터 원본에 대해 나열된 공급자는 설치되지 않습니다. 일부 공급자는 컴퓨터의 다른 애플리케이션과 함께 이미 설치되어 있을 수 있습니다. 그렇지 않은 경우에는 공급자를 다운로드하여 설치해야 합니다.  
   
 |||||  
 |-|-|-|-|  
@@ -38,7 +37,7 @@ ms.locfileid: "66067376"
 |Access 데이터베이스|Microsoft Access 2003, 2007, 2010|.accdb 또는 .mdb|ACE 14 OLE DB 공급자|  
 |SQL Server 관계형 데이터베이스|Microsoft SQL Server2005, 2008, 2008 R2; SQL Server 2012, Microsoft SQL Azure 데이터베이스 <sup>2</sup>|(해당 사항 없음)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 공급자<br /><br /> SQL Server Native 10.0 Client OLE DB 공급자<br /><br /> .NET Framework Data Provider for SQL Client|  
 |PDW (병렬 데이터 웨어하우스) <sup>3</sup> SQL Server|2008 R2|(해당 사항 없음)|SQL Server PDW용 OLE DB 공급자|  
-|Oracle 관계형 데이터베이스|Oracle 9i, 10g, 11g|(해당 사항 없음)|Oracle OLE DB 공급자<br /><br /> .NET Framework Data Provider for Oracle Client<br /><br /> SQL Server용 .NET Framework 데이터 공급자<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
+|Oracle 관계형 데이터베이스|Oracle 9i, 10g, 11g|(해당 사항 없음)|Oracle OLE DB 공급자<br /><br /> .NET Framework Data Provider for Oracle Client<br /><br /> .NET Framework Data Provider for SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Teradata 관계형 데이터베이스|Teradata V2R6, V12|(해당 사항 없음)|TDOLEDB OLE DB 공급자<br /><br /> .Net Data Provider for Teradata|  
 |Informix 관계형 데이터베이스||(해당 사항 없음)|Informix OLE DB 공급자|  
 |IBM DB2 관계형 데이터베이스|8.1|(해당 사항 없음)|DB2OLEDB|  
@@ -46,7 +45,7 @@ ms.locfileid: "66067376"
 |기타 관계형 데이터베이스|(해당 사항 없음)|(해당 사항 없음)|OLE DB 공급자 또는 ODBC 드라이버|  
 |텍스트 파일|(해당 사항 없음)|.txt, .tab, .csv|ACE 14 OLE DB provider for Microsoft Access|  
 |Microsoft Excel 파일|Excel 97-2003, 2007, 2010|.xlsx, xlsm, .xlsb, .xltx, .xltm|ACE 14 OLE DB 공급자|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]문서나|Microsoft SQL Server 2008 R2 Analysis Services|.xlsx, xlsm, .xlsb, .xltx, .xltm|ASOLEDB 10.5<br /><br /> ( [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 가 설치된 SharePoint 팜에 게시된 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 통합 문서에만 사용)|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서(workbook)|Microsoft SQL Server 2008 R2 Analysis Services|.xlsx, xlsm, .xlsb, .xltx, .xltm|ASOLEDB 10.5<br /><br /> ( [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 가 설치된 SharePoint 팜에 게시된 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 통합 문서에만 사용)|  
 |Analysis Services 큐브|Microsoft SQL Server 2005, 2008, 2008 R2 Analysis Services|(해당 사항 없음)|ASOLEDB 10|  
 |데이터 피드<br /><br /> (Reporting Services 보고서, Atom 서비스 문서, Microsoft Azure Marketplace DataMarket 및 단일 데이터 피드에서 데이터를 가져오는 데 사용됨)|Atom 1.0 형식<br /><br /> 모든 데이터베이스 또는 WCF(Windows Communication Foundation) 데이터 서비스(이전 ADO.NET Data Services)로 노출되는 문서입니다.|하나 이상의 피드를 정의하는 서비스 문서용 .atomsvc<br /><br /> Atom 웹 피드 문서용 .atom|Microsoft Data Feed Provider for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> .NET Framework 데이터 피드 데이터 공급자 - [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
 |Office 데이터베이스 연결 파일||.odc||  
@@ -59,12 +58,12 @@ ms.locfileid: "66067376"
   
  <sup>4</sup> 경우에 따라 MSDAORA OLE DB 공급자를 사용 하면 특히 최신 버전의 Oracle을 사용 하는 연결 오류가 발생할 수 있습니다. 오류가 발생할 경우 Oracle용으로 제시된 다른 공급자 중 하나를 사용해 보세요.  
   
-##  <a name="bkmk_unsupported_ds"></a>지원 되지 않는 원본  
+##  <a name="unsupported-sources"></a><a name="bkmk_unsupported_ds"></a>지원 되지 않는 원본  
  다음 데이터 원본은 현재 지원되지 않습니다.  
   
 -   이미 SharePoint에 게시된 Access 데이터베이스와 같은 서버 문서는 가져올 수 없습니다.  
   
-##  <a name="bkmk_tips"></a>데이터 원본 선택을 위한 팁  
+##  <a name="tips-for-choosing-data-sources"></a><a name="bkmk_tips"></a>데이터 원본 선택을 위한 팁  
   
 1.  모델 디자이너에서 테이블 간의 관계를 만들기 위해 가져오기를 수행하는 동안 *외래 키* 관계를 사용하기 때문에 관계형 데이터베이스에서 테이블을 가져오면 작업 단계가 줄어듭니다.  
   
@@ -76,6 +75,6 @@ ms.locfileid: "66067376"
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 원본 &#40;SSAS 테이블 형식&#41;](../data-sources-ssas-tabular.md)   
- [SSAS 테이블 형식&#41;&#40;데이터 가져오기](../import-data-ssas-tabular.md)  
+ [데이터 가져오기&#40;SSAS 테이블 형식&#41;](../import-data-ssas-tabular.md)  
   
   

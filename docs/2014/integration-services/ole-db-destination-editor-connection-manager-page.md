@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 436b758abdde0c05539bc17aabd2c11b240642df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057142"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>OLE DB 대상 편집기(연결 관리자 페이지)
-  
   **OLE DB 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 대상에 대한 OLE DB 연결을 선택할 수 있습니다. 이 페이지를 사용하면 데이터베이스에서 테이블이나 뷰를 선택할 수도 있습니다.  
   
 > [!NOTE]  
@@ -34,14 +33,13 @@ ms.locfileid: "66057142"
  **OLE DB 연결 관리자**  
  목록에서 기존 연결 관리자를 선택하거나 **새로 만들기**를 클릭하여 새 연결을 만듭니다.  
   
- **새로 만들기**  
- 
-  **OLE DB 연결 관리자 구성** 대화 상자를 사용하여 새 연결 관리자를 만듭니다.  
+ **신규**  
+ **OLE DB 연결 관리자 구성** 대화 상자를 사용하여 새 연결 관리자를 만듭니다.  
   
  **데이터 액세스 모드**  
  대상으로 데이터를 로드하는 방법을 지정합니다. DBCS(더블바이트 문자 집합) 데이터는 빠른 로드 옵션 중 하나를 사용하여 로드해야 합니다. 대량 삽입에 최적화된 빠른 로드 데이터 액세스 모드에 대한 자세한 내용은 [OLE DB Destination](data-flow/ole-db-destination.md)을 참조하십시오.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |테이블 또는 뷰|OLE DB 대상의 테이블 또는 뷰로 데이터를 로드합니다.|  
 |테이블 또는 뷰 - 빠른 로드|빠른 로드 옵션을 사용하여 OLE DB 대상의 테이블 또는 뷰로 데이터를 로드합니다. 대량 삽입에 최적화된 빠른 로드 데이터 액세스 모드에 대한 자세한 내용은 [OLE DB Destination](data-flow/ole-db-destination.md)을 참조하십시오.|  
@@ -50,8 +48,7 @@ ms.locfileid: "66057142"
 |SQL 명령|SQL 쿼리를 사용하여 OLE DB 대상으로 데이터를 로드합니다.|  
   
  **미리 보기**  
- 
-  **쿼리 결과 미리 보기** 대화 상자를 사용하여 결과를 미리 봅니다. 미리 보기에는 행이 최대 200개까지 표시될 수 있습니다.  
+ **쿼리 결과 미리 보기** 대화 상자를 사용하여 결과를 미리 봅니다. 미리 보기에는 최대 200개의 행이 표시될 수 있습니다.  
   
 ## <a name="data-access-mode-dynamic-options"></a>데이터 액세스 모드 동적 옵션  
  각 **데이터 액세스 모드** 설정은 해당 설정에 따라 동적 옵션 집합이 표시됩니다. 다음 섹션에서는 각 **데이터 액세스 모드** 설정에 따라 사용할 수 있는 동적 옵션에 대해 설명합니다.  
@@ -60,20 +57,18 @@ ms.locfileid: "66057142"
  **테이블 또는 뷰 이름**  
  데이터 원본의 사용 가능한 테이블 또는 뷰 목록에서 테이블 또는 뷰 이름을 선택합니다.  
   
- **새로 만들기**  
- 
-  **테이블 만들기** 대화 상자를 사용하여 새 테이블을 만듭니다.  
+ **신규**  
+ **테이블 만들기** 대화 상자를 사용하여 새 테이블을 만듭니다.  
   
 > [!NOTE]  
 >  **새로 만들기**를 클릭 하면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 연결 된 데이터 원본을 기반으로 기본 CREATE TABLE 문을 생성 합니다. 원본 테이블에 선언된 FILESTREAM 특성이 포함된 열이 있어도 기본 CREATE TABLE 문은 FILESTREAM 특성을 포함하지 않습니다. FILESTREAM 특성이 포함된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 구성 요소를 실행하려면 먼저 대상 데이터베이스에서 FILESTREAM 스토리지를 구현하십시오. 그런 다음 **테이블 만들기** 대화 상자에서 FILESTREAM 특성을 CREATE TABLE 문에 추가하십시오. 자세한 내용은 [Blob&#40;Binary Large Object&#41; 데이터&#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)를 참조하세요.  
   
 ### <a name="data-access-mode--table-or-view---fast-load"></a>데이터 액세스 모드 = 테이블 또는 뷰 - 빠른 로드  
- **테이블 또는 뷰의 이름입니다.**  
+ **테이블 또는 뷰 이름**  
  이 목록을 사용하여 데이터베이스에서 테이블 또는 뷰를 선택하거나 **새로 만들기**를 클릭하여 새 테이블을 만듭니다.  
   
- **새로 만들기**  
- 
-  **테이블 만들기** 대화 상자를 사용하여 새 테이블을 만듭니다.  
+ **신규**  
+ **테이블 만들기** 대화 상자를 사용하여 새 테이블을 만듭니다.  
   
 > [!NOTE]  
 >  **새로 만들기**를 클릭 하면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 연결 된 데이터 원본을 기반으로 기본 CREATE TABLE 문을 생성 합니다. 원본 테이블에 선언된 FILESTREAM 특성이 포함된 열이 있어도 기본 CREATE TABLE 문은 FILESTREAM 특성을 포함하지 않습니다. FILESTREAM 특성이 포함된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 구성 요소를 실행하려면 먼저 대상 데이터베이스에서 FILESTREAM 스토리지를 구현하십시오. 그런 다음 **테이블 만들기** 대화 상자에서 FILESTREAM 특성을 CREATE TABLE 문에 추가하십시오. 자세한 내용은 [Blob&#40;Binary Large Object&#41; 데이터&#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)를 참조하세요.  
@@ -105,7 +100,7 @@ ms.locfileid: "66057142"
  이 속성에 값을 지정하면 대상에서 (1) **최대 삽입 커밋 크기**보다 작은 일괄 처리의 행이나 (2) 현재 처리 중인 버퍼에 남아 있는 행이 커밋됩니다.  
   
 > [!NOTE]  
->  대상에서 제약 조건에 맞지 않아 오류가 발생하면 **최대 삽입 커밋 크기** 에 의해 정의된 행에 대한 전체 일괄 처리가 실패하게 됩니다.  
+>   대상에서 제약 조건에 맞지 않아 오류가 발생하면 **최대 삽입 커밋 크기** 에 의해 정의된 행에 대한 전체 일괄 처리가 실패하게 됩니다.  
   
 ### <a name="data-access-mode--table-name-or-view-name-variable"></a>데이터 액세스 모드 = 테이블 이름 또는 뷰 이름 변수  
  **변수 이름**  
@@ -115,9 +110,8 @@ ms.locfileid: "66057142"
  **변수 이름**  
  테이블 또는 뷰 이름이 포함된 변수를 선택합니다.  
   
- **새로 만들기**  
- 
-  **테이블 만들기** 대화 상자를 사용하여 새 테이블을 만듭니다.  
+ **신규**  
+ **테이블 만들기** 대화 상자를 사용하여 새 테이블을 만듭니다.  
   
 > [!NOTE]  
 >  **새로 만들기**를 클릭 하면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 연결 된 데이터 원본을 기반으로 기본 CREATE TABLE 문을 생성 합니다. 원본 테이블에 선언된 FILESTREAM 특성이 포함된 열이 있어도 기본 CREATE TABLE 문은 FILESTREAM 특성을 포함하지 않습니다. FILESTREAM 특성이 포함된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 구성 요소를 실행하려면 먼저 대상 데이터베이스에서 FILESTREAM 스토리지를 구현하십시오. 그런 다음 **테이블 만들기** 대화 상자에서 FILESTREAM 특성을 CREATE TABLE 문에 추가하십시오. 자세한 내용은 [Blob&#40;Binary Large Object&#41; 데이터&#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)를 참조하세요.  
@@ -154,12 +148,10 @@ ms.locfileid: "66057142"
 >  OLE DB 대상은 매개 변수를 지원하지 않습니다. 매개 변수가 있는 INSERT 문을 실행해야 하는 경우 OLE DB 명령 변환을 사용하십시오. 자세한 내용은 [OLE DB Command Transformation](data-flow/transformations/ole-db-command-transformation.md)을 참조하세요.  
   
  **쿼리 작성**  
- 
-  **쿼리 작성기** 대화 상자를 사용하여 시각적으로 SQL 쿼리를 생성할 수 있습니다.  
+ **쿼리 작성기** 대화 상자를 사용하여 시각적으로 SQL 쿼리를 생성할 수 있습니다.  
   
  **찾아보기**  
- 
-  **열기** 대화 상자를 사용하여 SQL 쿼리 텍스트가 포함된 파일을 찾을 수 있습니다.  
+ **열기** 대화 상자를 사용하여 SQL 쿼리 텍스트가 포함된 파일을 찾을 수 있습니다.  
   
  **쿼리 구문 분석**  
  쿼리 텍스트의 구문을 확인합니다.  

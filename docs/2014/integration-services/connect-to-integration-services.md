@@ -11,27 +11,24 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f355527002ed6d3637a3d1d895eb776c620c971d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060364"
 ---
 # <a name="connect-to-integration-services"></a>Integration Services에 연결
-  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스에 연결하려면 먼저 관리자가 해당 서비스에 대한 액세스 권한을 부여해야 합니다. 자세한 내용은 [Grant Permissions to Integration Services Service](../../2014/integration-services/grant-permissions-to-integration-services-service.md)을(를) 참조하세요.  
   
 ### <a name="to-open-connect-to-integration-services-service"></a>Integration Services 서비스에 대한 연결을 열려면  
   
 1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 엽니다.  
   
-2.  
-  **보기** 메뉴에서 **개체 탐색기** 를 클릭합니다.  
+2.  **보기** 메뉴에서 **개체 탐색기** 를 클릭합니다.  
   
 3.  개체 탐색기 도구 상자에서 **연결**을 클릭하고 **Integration Services**를 클릭합니다.  
   
-4.  
-  **서버에 연결** 대화 상자에 서버 이름을 입력합니다. 마침표(.), (local) 또는 `localhost`을 사용하여 로컬 서버를 지정할 수 있습니다.  
+4.  **서버에 연결** 대화 상자에 서버 이름을 입력합니다. 마침표(.), (local) 또는 `localhost`을 사용하여 로컬 서버를 지정할 수 있습니다.  
   
 5.  **연결**을 클릭합니다.  
   

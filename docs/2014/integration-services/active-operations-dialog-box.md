@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f930a2e6f3ce84c330a4b7292ebaaba3b2ab871e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062217"
 ---
 # <a name="active-operations-dialog-box"></a>활성 작업 대화 상자
@@ -31,7 +31,7 @@ ms.locfileid: "66062217"
   
 2.  [옵션 구성](#options)  
   
-##  <a name="open_dialog"></a> 활성 작업 대화 상자 열기  
+##  <a name="open-the-active-operations-dialog-box"></a><a name="open_dialog"></a>활성 작업 대화 상자 열기  
   
 1.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]열기  
   
@@ -39,10 +39,10 @@ ms.locfileid: "66062217"
   
 3.  개체 탐색기에서 **Integration Services** 노드를 확장하고 **SSISDB**를 마우스 오른쪽 단추로 클릭한 다음 **활성 작업**을 클릭합니다.  
   
-##  <a name="options"></a> 옵션 구성  
+##  <a name="configure-the-options"></a><a name="options"></a>옵션 구성  
   
 ### <a name="options"></a>옵션  
- **형식**  
+ **Type**  
  작업 유형을 지정합니다. 다음은 **형식** 필드에 사용할 수 있는 값과 transact-sql `catalog.operations` 뷰의 operations_type 열에 있는 해당 값입니다.  
   
 |||  

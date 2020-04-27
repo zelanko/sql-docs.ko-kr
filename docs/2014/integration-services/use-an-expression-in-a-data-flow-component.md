@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc9f6c28e775cdbd21806172d7074e655fdd1545
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054816"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>데이터 흐름 구성 요소에서 식 사용
@@ -38,11 +38,9 @@ ms.locfileid: "66054816"
   
 2.  솔루션 탐색기에서 패키지를 두 번 클릭하여 엽니다.  
   
-3.  
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 **제어 흐름** 탭을 클릭하고 식을 구현할 데이터 흐름이 포함된 데이터 흐름 태스크를 클릭합니다.  
+3.  [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 **제어 흐름** 탭을 클릭하고 식을 구현할 데이터 흐름이 포함된 데이터 흐름 태스크를 클릭합니다.  
   
-4.  
-  **데이터 흐름** 탭을 클릭하고 **도구 상자** 에서 조건부 분할 변환 또는 파생 열 변환을 디자인 화면으로 끌어 옵니다.  
+4.  **데이터 흐름** 탭을 클릭하고 **도구 상자** 에서 조건부 분할 변환 또는 파생 열 변환을 디자인 화면으로 끌어 옵니다.  
   
 5.  원본 또는 변환의 녹색 연결선을 조건부 분할 변환 또는 파생 열 변환으로 끌어 옵니다.  
   
@@ -54,26 +52,22 @@ ms.locfileid: "66054816"
   
 9. 변환에 따라 다음 중 하나를 수행하여 식을 작성합니다.  
   
-    -   
-  **조건부 분할 변환 편집기** 대화 상자에서 변수, 열, 함수, 연산자 및 캐스트를 **조건** 열로 끌어 옵니다. 또는 **조건** 열에 직접 식을 입력할 수 있습니다.  
+    -   **조건부 분할 변환 편집기** 대화 상자에서 변수, 열, 함수, 연산자 및 캐스트를 **조건** 열로 끌어 옵니다. 또는 **조건** 열에 직접 식을 입력할 수 있습니다.  
   
-    -   
-  **파생 열 변환 편집기** 대화 상자에서 변수, 열, 함수, 연산자 및 캐스트를 **식** 열로 끌어 옵니다. 또는 **식** 열에 직접 식을 입력할 수 있습니다.  
+    -   **파생 열 변환 편집기** 대화 상자에서 변수, 열, 함수, 연산자 및 캐스트를 **식** 열로 끌어 옵니다. 또는 **식** 열에 직접 식을 입력할 수 있습니다.  
   
         > [!NOTE]  
-        >  
-  **조건** 열이나 **식** 열에서 포커스가 제거될 때 식 구문이 유효하지 않은 경우 식 텍스트가 강조 표시될 수 있습니다.  
+        >  **조건** 열이나 **식** 열에서 포커스가 제거될 때 식 구문이 유효하지 않은 경우 식 텍스트가 강조 표시될 수 있습니다.  
   
-10. 
-  **확인**을 클릭하여 대화 상자를 닫습니다.  
+10. **확인**을 클릭하여 대화 상자를 닫습니다.  
   
     > [!NOTE]  
     >  식이 유효하지 않으면 식의 구문 오류를 설명하는 경고가 나타납니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Integration Services&#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md)   
- [Conditional Split Transformation](data-flow/transformations/conditional-split-transformation.md)   
- [Derived Column Transformation](data-flow/transformations/derived-column-transformation.md)   
+ [Integration Services &#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md)   
+ [조건부 분할 변환](data-flow/transformations/conditional-split-transformation.md)   
+ [파생 열 변환](data-flow/transformations/derived-column-transformation.md)   
  [데이터 흐름 태스크](control-flow/data-flow-task.md)   
  [데이터 흐름](data-flow/data-flow.md)  
   

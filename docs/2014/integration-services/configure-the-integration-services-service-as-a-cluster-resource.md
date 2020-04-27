@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a9597686f4c9ca5a90a8344b425b6808cd96477a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060567"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Integration Services 서비스를 클러스터 리소스로 구성
@@ -100,8 +100,7 @@ ms.locfileid: "66060567"
   
 2.  공유 디스크에서 패키지 저장소로 사용할 **Packages** 라는 새 폴더를 만듭니다. 해당 사용자 및 그룹에 새 폴더에 대한 폴더 보기 및 쓰기 권한을 부여합니다.  
   
-3.  공유 디스크에서 텍스트 편집기나 XML 편집기로 구성 파일을 엽니다. 
-  `ServerName` 요소의 값을 같은 리소스 그룹에 있는 가상 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이름으로 변경합니다.  
+3.  공유 디스크에서 텍스트 편집기나 XML 편집기로 구성 파일을 엽니다. `ServerName` 요소의 값을 같은 리소스 그룹에 있는 가상 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이름으로 변경합니다.  
   
 4.  `StorePath` 요소의 값을 이전 단계에서 공유 디스크에 만든 **패키지** 폴더의 정규화 된 경로로 변경 합니다.  
   

@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a584311061a24d674eed114f37d9cbbbda43909
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064695"
 ---
 # <a name="histogram-target"></a>히스토그램 대상
@@ -26,7 +26,7 @@ ms.locfileid: "66064695"
   
  다음 표에서는 히스토그램 대상을 구성하는 데 사용할 수 있는 옵션을 설명합니다.  
   
-|옵션|허용되는 값|Description|  
+|옵션|허용되는 값|설명|  
 |------------|--------------------|-----------------|  
 |slots|임의의 정수 값을 사용할 수 있습니다. 이 값은 선택 사항입니다.|유지할 최대 그룹화 수를 나타내는 사용자 지정 값입니다. 이 값에 도달하면 기존 그룹에 속하지 않는 새 이벤트는 무시됩니다.<br /><br /> 성능 향상을 위해 슬롯 번호는 2의 다음 거듭제곱으로 반올림됩니다.|  
 |filtering_event_name|확장 이벤트 세션에 있는 이벤트입니다. 이 값은 선택 사항입니다.|이벤트의 클래스를 식별하는 데 사용되는 사용자 지정 값입니다. 지정된 이벤트의 인스턴스만 버킷팅되고 다른 이벤트는 모두 무시됩니다.<br /><br /> 이 값을 지정하는 경우 *package_name*.*event_name*형식을 사용해야 합니다(예: `'sqlserver.checkpoint_end'`). 다음 쿼리를 사용하여 패키지 이름을 확인할 수 있습니다.<br /><br /> P.name, se event_name를 선택 합니다.<br />Sys. dm_xe_session_events se<br />Dm_xe_packages p를 조인 합니다.<br />ON se_event_package_guid = p. guid<br />ORDER BY p.name, se. event_name<br /><br /> <br /><br /> filtering_event_name 값을 지정하지 않는 경우 source_type을 기본값인 1로 설정해야 합니다.|  
@@ -102,9 +102,9 @@ WHERE xe.name = 'session_name'
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 확장 이벤트 대상](../../2014/database-engine/sql-server-extended-events-targets.md)   
- [sys.dm_xe_session_targets&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
- [CREATE EVENT SESSION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [확장 이벤트 대상 SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
+ [dm_xe_session_targets &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
+ [Transact-sql&#41;&#40;이벤트 세션 만들기](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)  
   
   

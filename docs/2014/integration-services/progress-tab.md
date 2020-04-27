@@ -13,16 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3e1c4e5ac4bf399a2c839c7e8cc71b2d378e268a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056632"
 ---
 # <a name="progress-tab"></a>진행률 탭
-  
-  **디자이너의** 진행률 [!INCLUDE[ssIS](../includes/ssis-md.md)] 탭을 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지를 실행하는 경우 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]패키지의 실행 진행률을 볼 수 있습니다. 
-  **진행률** 탭에는 패키지와 패키지 실행 파일의 유효성 검사와 실행에 대한 시작/완료/경과 시간, 패키지에 대한 정보나 경고, 진행률 알림, 패키지의 성공 여부, 패키지 실행 중 생성된 모든 오류 메시지가 나열됩니다.  
+  **디자이너의** 진행률 [!INCLUDE[ssIS](../includes/ssis-md.md)] 탭을 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지를 실행하는 경우 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]패키지의 실행 진행률을 볼 수 있습니다. **진행률** 탭에는 패키지와 패키지 실행 파일의 유효성 검사와 실행에 대한 시작/완료/경과 시간, 패키지에 대한 정보나 경고, 진행률 알림, 패키지의 성공 여부, 패키지 실행 중 생성된 모든 오류 메시지가 나열됩니다.  
   
  **진행률** 탭에 메시지를 표시할지 여부는 **SSIS** 메뉴의 **디버그 진행률 보고** 옵션을 선택 또는 선택 취소하여 설정합니다. 진행률 보고를 사용하지 않으면 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 복잡한 패키지를 실행하는 동안 성능을 높일 수 있습니다.  
   

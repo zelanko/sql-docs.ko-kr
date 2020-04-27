@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fc13943df93acf2227b089b177cdca6c86ee1831
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056659"
 ---
 # <a name="path-properties"></a>경로 속성
@@ -28,12 +28,11 @@ ms.locfileid: "66056659"
  이 항목은 데이터 흐름 개체를 연결하는 경로의 사용자 지정 속성을 나열하고 설명합니다.  
   
 ## <a name="path-properties"></a>경로 속성  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체 모델에서 데이터 흐름 구성 요소를 연결하는 경로는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 인터페이스를 구현합니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체 모델에서 데이터 흐름 구성 요소를 연결하는 경로는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 인터페이스를 구현합니다.  
   
  다음 표에서는 데이터 흐름 경로의 구성 가능한 속성에 대해 설명합니다. 데이터 흐름 엔진은 여기에 나열되지 않은 추가 읽기 전용 속성에도 값을 할당합니다.  
   
-|속성 이름|데이터 형식|Description|  
+|속성 이름|데이터 형식|설명|  
 |-------------------|---------------|-----------------|  
 |PathAnnotation|Integer(열거형)|디자이너 화면에 주석을 경로와 함께 표시할지 여부를 나타내는 값입니다. 가능한 값은 `AsNeeded`, `SourceName`, `PathName` 및 `Never`입니다. 기본값은 `AsNeeded`입니다.|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|경로에 연결된 입력입니다.|  

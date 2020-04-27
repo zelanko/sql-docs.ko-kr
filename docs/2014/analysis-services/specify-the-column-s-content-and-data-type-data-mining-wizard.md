@@ -13,17 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00113df9f330a2edfce0c75f69d45c1fcd9274ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068160"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>열&#39;s 내용 및 데이터 형식 지정 (데이터 마이닝 마법사)
-  
   **열 내용 및 데이터 형식 지정** 페이지를 사용하여 마법사에서 이미 설정한 열 및 내용 유형을 수정할 수 있습니다. 마법사에서는 원본 열의 데이터 형식 및 선택한 알고리즘의 기능을 사용하여 각 열에 대한 기본 데이터 및 내용 유형을 결정합니다.  
   
- **자세한 내용:** [데이터 마이닝 마법사 &#40;Analysis Services 데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md)  
+ **자세한 내용:** [데이터 마이닝 마법사&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>옵션  
  **열**  

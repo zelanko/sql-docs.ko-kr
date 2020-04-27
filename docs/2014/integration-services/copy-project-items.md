@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef503e88e66bd6f89cac8d235f7175fb4cefe4e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060334"
 ---
 # <a name="copy-project-items"></a>프로젝트 항목 복사
@@ -29,8 +29,7 @@ ms.locfileid: "66060334"
   
 ### <a name="to-copy-project-level-items"></a>프로젝트 수준 항목을 복사하려면  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 작업할 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트 또는 솔루션을 엽니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 작업할 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트 또는 솔루션을 엽니다.  
   
 2.  복사할 프로젝트 및 항목 폴더를 확장합니다.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "66060334"
      항목은 올바른 폴더에 자동으로 복사됩니다. 패키지가 아닌 항목을 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 복사하려는 경우 항목이 **기타** 폴더로 복사됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Integration Services&#40;SSIS&#41; 패키지](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [SSIS&#41; 패키지 Integration Services &#40;](../../2014/integration-services/integration-services-ssis-packages.md)   
  [패키지 개체 복사](../../2014/integration-services/copy-package-objects.md)  
   
   

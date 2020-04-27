@@ -13,25 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5f361679d7e2e57024f0ac6859dbc3b0aac32a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065792"
 ---
 # <a name="translations-cube-designer-analysis-services---multidimensional-data"></a>번역(큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **번역** 탭을 사용하여 선택한 큐브에 대한 큐브 뷰를 생성 및 수정할 수 있습니다.  
   
- 
-  **번역** 탭에는 다음과 같은 창이 있습니다.  
+ **번역** 탭에는 다음과 같은 창이 있습니다.  
   
 ## <a name="panes"></a>창  
- **도구 모음**  
+ **]**  
  도구 모음을 사용 하 여 탭에서 일반 동작을 수행할 수 있습니다. 이 창에 대 한 자세한 내용은 [도구 모음 &#40;번역 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](toolbar-translations-tab-cube-designer-analysis-services-multidimensional-data.md)를 참조 하세요.  
   
  **번역 세부 정보**  
- 
-  **번역 세부 정보** 창을 사용하여 선택한 큐브에 대한 번역을 생성 및 수정할 수 있습니다.  
+ **번역 세부 정보** 창을 사용하여 선택한 큐브에 대한 번역을 생성 및 수정할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [큐브 번역](multidimensional-models-olap-logical-cube-objects/cube-translations.md)   

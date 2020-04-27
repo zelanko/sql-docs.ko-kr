@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2cdd3c2e8e903de90871b096d24cda17fe490d1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057625"
 ---
 # <a name="message-queue-task-editor-general-page"></a>메시지 큐 태스크 편집기(일반 페이지)
-  
   **메시지 큐 태스크 편집기** 대화 상자의 **일반 페이지** 를 사용하여 메시지 큐 태스크의 이름을 지정하고 설명하며 메시지 형식을 지정하고 태스크에서 메시지를 보내거나 받을지를 나타낼 수 있습니다.  
   
  이 태스크에 대한 자세한 내용은 [Message Queue Task](control-flow/message-queue-task.md)를 참조하십시오.  
@@ -41,13 +40,12 @@ ms.locfileid: "66057625"
  2000 형식의 MSMQ(메시지 큐)를 사용할지 여부를 나타냅니다. 기본값은 `False`입니다.  
   
  **MSMQConnection**  
- 기존 MSMQ 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ 기존 MSMQ 연결 관리자를 선택 하거나 \< **새 연결** ...>을 클릭 하 여 새 연결 관리자를 만듭니다.  
   
- **관련 항목**: [msmq 연결 관리자](connection-manager/msmq-connection-manager.md), [msmq 연결 관리자 편집기](../../2014/integration-services/msmq-connection-manager-editor.md)  
+ **관련 항목**: [MSMQ 연결 관리자](connection-manager/msmq-connection-manager.md), [MSMQ 연결 관리자 편집기](../../2014/integration-services/msmq-connection-manager-editor.md)  
   
  **메시지**  
- 메시지 큐 태스크에서 메시지를 보내거나 받을지를 지정합니다. 
-  **메시지 보내기**를 선택하면 대화 상자의 왼쪽 창에 보내기 페이지가 표시되고 **메시지 받기**를 선택하면 받기 페이지가 표시됩니다. 기본적으로 이 값은 **메시지 보내기**로 설정됩니다.  
+ 메시지 큐 태스크에서 메시지를 보내거나 받을지를 지정합니다. **메시지 보내기**를 선택하면 대화 상자의 왼쪽 창에 보내기 페이지가 표시되고 **메시지 받기**를 선택하면 받기 페이지가 표시됩니다. 기본적으로 이 값은 **메시지 보내기**로 설정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   

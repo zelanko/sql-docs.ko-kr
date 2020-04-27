@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 037b176dfacd9420fba64a405d8c851c558e93e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056184"
 ---
 # <a name="script-task-editor-script-page"></a>스크립트 태스크 편집기(스크립트 페이지)
@@ -37,19 +37,19 @@ ms.locfileid: "66056184"
   
  스크립트 태스크에 대한 스크립트 언어를 설정하려면 **옵션** 대화 상자의 **일반** 페이지에서 **스크립트 언어** 옵션을 사용하십시오. 자세한 내용은 [General Page](general-page-of-integration-services-designers-options.md)을 참조하세요.  
   
- **EntryPoint**  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 런타임이 스크립트 태스크 코드에 대한 진입점으로 호출하는 메서드를 지정합니다. 지정된 메서드는 [!INCLUDE[msCoName](../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications) 프로젝트의 ScriptMain 클래스에 있어야 합니다. ScriptMain 클래스는 스크립트 템플릿에서 생성하는 기본 클래스입니다.  
+ **진입점**  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 런타임이 스크립트 태스크 코드에 대한 진입점으로 호출하는 메서드를 지정합니다. 지정한 메서드는 VSTA ( [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications) 프로젝트의 scriptmain 클래스에 있어야 합니다. scriptmain 클래스는 스크립트 템플릿에 의해 생성 된 기본 클래스입니다.  
   
  VSTA 프로젝트에서 메서드 이름을 변경한 경우 **EntryPoint** 속성의 값을 변경해야 합니다.  
   
  **ReadOnlyVariables**  
- 스크립트에 사용할 수 있는 읽기 전용 변수 목록을 쉼표로 구분하여 입력하거나 줄임표 단추( **...** )를 클릭하고 **변수 선택** 대화 상자에서 변수를 선택합니다.  
+ 스크립트에 사용할 수 있는 읽기 전용 변수 목록을 쉼표로 구분하여 입력하거나 줄임표 단추(**...**)를 클릭하고 **변수 선택** 대화 상자에서 변수를 선택합니다.  
   
 > [!NOTE]  
 >  변수 이름은 대/소문자를 구분합니다.  
   
  **ReadWriteVariables**  
- 스크립트에 사용할 수 있는 읽기/쓰기 변수 목록을 쉼표로 구분하여 입력하거나 줄임표 단추( **...** )를 클릭하고 **변수 선택** 대화 상자에서 변수를 선택합니다.  
+ 스크립트에 사용할 수 있는 읽기/쓰기 변수 목록을 쉼표로 구분하여 입력하거나 줄임표 단추(**...**)를 클릭하고 **변수 선택** 대화 상자에서 변수를 선택합니다.  
   
 > [!NOTE]  
 >  변수 이름은 대/소문자를 구분합니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "66056184"
  [스크립트 태스크 편집기 &#40;일반 페이지&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
  [식 페이지](expressions/expressions-page.md)   
  [스크립트 태스크 예제](extending-packages-scripting-task-examples/script-task-examples.md)   
- [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)   
  [패키지에서 사용자 정의 변수의 범위 추가, 삭제, 변경](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
   

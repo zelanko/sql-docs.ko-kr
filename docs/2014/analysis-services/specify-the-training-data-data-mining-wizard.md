@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c3bbeb708cdb0c2882b85d55081446b3dc12b56b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068073"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>학습 데이터 지정(데이터 마이닝 마법사)
-  
   **학습 데이터 지정** 페이지를 사용하여 마이닝 구조에 포함할 열을 확인할 수 있습니다. 모든 모델에서 열을 사용하지 않는 경우에도 열을 선택하여 구조에 포함할 수 있습니다. 예를 들어 마이닝 모델에서 열로 드릴스루하려는 경우 모델이 아닌 구조에 열을 포함할 수 있습니다.  
   
  구조에 포함되는 각 테이블에 적어도 하나의 키 열이 필요합니다. 키로 선택하는 열은 테이블이 사례 테이블인지 중첩 테이블인지에 따라 달라집니다. 중첩 테이블인 경우 키는 관계형 외래 키가 아니라 주로 예측 열이 되기도 합니다. 중첩 키에 대한 자세한 내용은 [중첩 테이블&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/nested-tables-analysis-services-data-mining.md)을 참조하세요.  
@@ -28,7 +27,7 @@ ms.locfileid: "66068073"
 > [!NOTE]  
 >  다른 마이닝 알고리즘은 키를 다르게 사용합니다. 다른 종류의 키에 대한 자세한 내용은 [콘텐츠 형식&#40;데이터 마이닝&#41;](data-mining/content-types-data-mining.md)을 참조하세요.  
   
- **자세한 내용:** [마이닝 구조 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [마이닝 모델 열](data-mining/mining-model-columns.md), [데이터 마이닝 마법사 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md)  
+ **자세한 내용:** [마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [마이닝 모델 열](data-mining/mining-model-columns.md), [데이터 마이닝 마법사&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>옵션  
  **테이블/열**  
@@ -39,14 +38,14 @@ ms.locfileid: "66068073"
   
  데이터 원본에 중첩 테이블 또는 여러 뷰가 포함된 경우 열 목록을 확장하여 중첩 테이블을 볼 수 있습니다.  
   
- **Key**  
+ **키**  
  열을 데이터의 고유 식별자로 사용하려면 선택합니다.  
   
  사례 테이블에서 키는 일반적으로 고유 식별자입니다.  
   
  중첩 테이블에서 **키** 는 연결된 사례의 컨텍스트에 있는 행 식별자를 나타냅니다.  
   
- **Input**  
+ **입력**  
  열을 예측 생성 시 사용하려면 선택합니다.  
   
 > [!NOTE]  

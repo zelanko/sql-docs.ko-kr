@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39e444077c3dbe27ae243e4292b7a047e21de2b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064844"
 ---
 # <a name="event-pairing-target"></a>이벤트 쌍 대상
@@ -30,7 +30,7 @@ ms.locfileid: "66064844"
   
  다음 표에는 이벤트 쌍을 구성하는 데 사용할 수 있는 옵션이 나와 있습니다.  
   
-|옵션|허용되는 값|Description|  
+|옵션|허용되는 값|설명|  
 |------------|--------------------|-----------------|  
 |begin_event|현재 세션에 있는 이벤트 이름입니다.|시퀀스 쌍의 시작 이벤트를 지정하는 이벤트 이름입니다.|  
 |end_event|현재 세션에 있는 이벤트 이름입니다.|시퀀스 쌍의 종료 이벤트를 나타내는 이벤트 이름입니다.|  
@@ -38,7 +38,7 @@ ms.locfileid: "66064844"
 |end_matching_columns|쉼표로 구분하여 순서대로 나열된 열 이름 목록입니다.|연결 작업을 수행할 열입니다.|  
 |begin_matching_actions|쉼표로 구분하여 순서대로 나열한 동작 목록입니다.|연결 작업을 수행할 동작입니다.|  
 |end_matching_actions|쉼표로 구분하여 순서대로 나열한 동작 목록입니다.|연결 작업을 수행할 동작입니다.|  
-|respond_to_memory_pressure|해당 값은<br /><br /> 0 = 응답하지 않습니다.<br /><br /> 1 = 메모리가 부족하면 목록에 새 고아를 추가하지 않습니다.|대상이 메모리 이벤트에 응답합니다. 1로 설정되어 있고 서버에 메모리가 부족하면 유지되고 있는 짝이 없는 정보가 제거됩니다.|  
+|respond_to_memory_pressure|다음 값 중 하나입니다.<br /><br /> 0 = 응답하지 않습니다.<br /><br /> 1 = 메모리가 부족하면 목록에 새 고아를 추가하지 않습니다.|대상이 메모리 이벤트에 응답합니다. 1로 설정되어 있고 서버에 메모리가 부족하면 유지되고 있는 짝이 없는 정보가 제거됩니다.|  
 |max_orphans||대상에 수집되는 쌍을 이루지 않는 이벤트의 총 개수를 지정합니다. 한도에 도달하면 쌍을 이루지 않는 이벤트가 FIFO(선입선출) 기준에 따라 제거됩니다. 기본값 = 10,000|  
   
  이벤트와 연결된 모든 데이터는 캡처된 후 나중에 쌍을 이루기 위해 저장됩니다. 또한 동작에 의해 추가된 데이터도 수집됩니다. 수집된 이벤트 데이터는 메모리에 저장되므로 일정한 제한이 따릅니다. 이러한 제한은 시스템 용량 및 활동에 따라 달라집니다. 사용 가능한 시스템 리소스의 기준은 매개 변수로 사용 가능한 최대 메모리 양이 아니라 사용된 메모리 양이며 시스템 리소스를 사용할 수 없는 경우 저장된 짝이 없는 이벤트가 삭제됩니다. 이벤트가 짝이 없어 삭제된 경우 연결 이벤트는 짝이 없는 이벤트로 표시됩니다.  
@@ -90,9 +90,9 @@ WHERE xe.name = 'session_name'
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 확장 이벤트 대상](../../2014/database-engine/sql-server-extended-events-targets.md)   
- [sys.dm_xe_session_targets&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
- [CREATE EVENT SESSION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [확장 이벤트 대상 SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
+ [dm_xe_session_targets &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
+ [Transact-sql&#41;&#40;이벤트 세션 만들기](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)  
   
   
