@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 156a8e765812c14da0888148505311d52c267916
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62782386"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>시스템 관리자가 잠겨 있는 경우 SQL Server에 연결
@@ -116,7 +116,7 @@ ms.locfileid: "62782386"
  이제 `sysadmin` 고정 서버 역할의 멤버인 계정 중 하나에 정상적으로 연결할 수 있어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [단일 사용자 모드로 SQL Server 시작](start-sql-server-in-single-user-mode.md)   
+ [단일 사용자 모드에서 SQL Server 시작](start-sql-server-in-single-user-mode.md)   
  [데이터베이스 엔진 서비스 시작 옵션](database-engine-service-startup-options.md)  
   
   

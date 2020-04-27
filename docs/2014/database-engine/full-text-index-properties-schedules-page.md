@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 067c77839a852965c7684359acf50fb328d21a6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779033"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>전체 텍스트 인덱스 속성(일정 페이지)
@@ -36,13 +36,13 @@ ms.locfileid: "62779033"
  **채우기 유형**  
  예약된 각 채우기의 유형을 표시합니다.  
   
- **Enabled**  
+ **사용**  
  예약된 채우기가 현재 사용되는지 여부를 나타냅니다.  
   
  **설명**  
  예약을 만들 때 지정한 설명을 표시합니다.  
   
- **새로 만들기**  
+ **신규**  
  전체 텍스트 인덱스를 채우는 일정을 새로 만들려면 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  

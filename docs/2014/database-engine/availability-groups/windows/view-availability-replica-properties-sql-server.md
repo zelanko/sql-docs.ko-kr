@@ -13,23 +13,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a1ca87fc977ee97900be9e821cab4918064c7a44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62788009"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>가용성 복제본 속성 보기(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 의 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 사용하여 AlwaysOn 가용성 그룹에 대한 가용성 복제본 속성을 보는 방법에 대해 설명합니다.  
   
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **가용성 복제본의 속성을 보고 변경하려면**  
   
 1.  개체 탐색기에서 주 복제본을 호스팅하는 서버 인스턴스에 연결하고 서버 트리를 확장합니다.  
   
-2.  
-  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
+2.  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
   
 3.  가용성 복제본이 속하는 가용성 그룹을 확장하고 **가용성 복제본** 노드를 확장합니다.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "62788009"
 5.  **가용성 복제본 속성** 대화 상자에서 **일반** 페이지를 사용하여 이 복제본의 속성을 봅니다. 주 복제본에 연결된 경우 가용성 모드, 장애 조치(failover) 모드, 주 역할에 대한 연결 액세스, 보조 역할에 대한 읽기 액세스(읽기 가능 보조), 세션 제한 시간 값 등의 속성을 변경할 수 있습니다. 자세한 내용은 [가용성 복제본 속성 &#40;일반 페이지&#41;](availability-replica-properties-general-page.md)를 참조 하세요.  
   
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **가용성 복제본의 속성 및 상태를 보려면**  
   
  가용성 복제본의 속성 및 상태를 보려면 다음 뷰와 시스템 함수를 사용합니다.  
@@ -53,12 +52,12 @@ ms.locfileid: "62788009"
   
  **열 이름:** replica_id, routing_priority, read_only_replica_id  
   
- [sys.dm_hadr_availability_replica_cluster_nodes](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-nodes-transact-sql)  
+ [가용성 복제본 모니터링](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-nodes-transact-sql)  
  WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터에 있는 AlwaysOn 가용성 그룹의 모든 가용성 복제본(조인 상태에 상관없음)에 대해 하나의 행을 반환합니다.  
   
  **열 이름:** group_name, replica_server_name, node_name  
   
- [sys.dm_hadr_availability_replica_cluster_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-states-transact-sql)  
+ [sys.dm_hadr_availability_replica_cluster_nodes](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-states-transact-sql)  
  WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터에 있는 모든 AlwaysOn 가용성 그룹(복제본 위치에 상관없음)의 각 복제본(조인 상태에 상관없음)에 대해 하나의 행을 반환합니다.  
   
  **열 이름:** replica_id, replica_server_name, group_id, join_state, join_state_desc  
@@ -75,7 +74,7 @@ ms.locfileid: "62788009"
 >  가용성 복제본의 성능 카운터( **SQLServer:가용성 복제본**  성능 개체)에 대한 자세한 내용은 [SQL Server, 가용성 복제본](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)을 참조하세요.  
   
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **가용성 그룹에 대한 자세한 내용을 보려면**  
   
 -   [가용성 그룹 속성 보기&#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)  
@@ -84,7 +83,7 @@ ms.locfileid: "62788009"
   
 -   [AlwaysOn 가용성 그룹 &#40;SQL Server의 운영 문제에 대 한 AlwaysOn 정책&#41;](always-on-policies-for-operational-issues-always-on-availability.md)
   
--   [AlwaysOn 대시보드 &#40;SQL Server Management Studio를 사용&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [AlwaysOn 대시보드 사용&#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 -   [가용성 그룹 모니터링&#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   
@@ -121,7 +120,7 @@ ms.locfileid: "62788009"
   
 ## <a name="see-also"></a>참고 항목  
  [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [가용성 그룹 모니터링&#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)   
+ [Transact-sql&#41;&#40;가용성 그룹 모니터링](monitor-availability-groups-transact-sql.md)   
  [AlwaysOn 가용성 그룹 &#40;SQL Server의 운영 문제에 대 한 AlwaysOn 정책&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [가용성 그룹 관리&#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)  
   

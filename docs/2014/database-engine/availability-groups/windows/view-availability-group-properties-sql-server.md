@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 102b3defa150707412012d506e0e9e542d80b9a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813254"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>가용성 그룹 속성 보기(SQL Server)
@@ -24,13 +24,12 @@ ms.locfileid: "62813254"
   
 
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **가용성 그룹의 속성을 보고 변경하려면**  
   
 1.  개체 탐색기에서 주 복제본을 호스팅하는 서버 인스턴스에 연결하고 서버 트리를 확장합니다.  
   
-2.  
-  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
+2.  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
   
 3.  속성을 보려는 가용성 그룹을 마우스 오른쪽 단추로 클릭하고 **속성** 명령을 선택합니다.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "62813254"
   
 
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **가용성 그룹의 속성 및 상태를 보려면**  
   
  서버 인스턴스가 가용성 복제본을 호스팅하는 가용성 그룹의 속성 및 상태를 쿼리하려면 다음 뷰를 사용합니다.  
@@ -62,7 +61,7 @@ ms.locfileid: "62813254"
   
 
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **가용성 그룹에 대한 자세한 내용을 보려면**  
   
 -   [가용성 복제본 속성 보기&#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
@@ -71,7 +70,7 @@ ms.locfileid: "62813254"
   
 -   [AlwaysOn 가용성 그룹 &#40;SQL Server의 운영 문제에 대 한 AlwaysOn 정책&#41;](always-on-policies-for-operational-issues-always-on-availability.md)
   
--   [AlwaysOn 대시보드 &#40;SQL Server Management Studio를 사용&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [AlwaysOn 대시보드 사용&#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 -   [가용성 그룹 모니터링&#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   
@@ -85,7 +84,7 @@ ms.locfileid: "62813254"
   
 -   [가용성 그룹에서 보조 데이터베이스 제거&#40;SQL Server&#41;](remove-a-secondary-database-from-an-availability-group-sql-server.md)  
   
--   [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [SQL Server&#41;&#40;가용성 그룹 수신기 만들기 또는 구성](create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [가용성 그룹 수신기 제거&#40;SQL Server&#41;](remove-an-availability-group-listener-sql-server.md)  
   

@@ -13,22 +13,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 248ffe57906052c0d7dafcd187bb1b2b34cd6e64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815656"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>가용성 그룹 속성 및 새 가용성 그룹(일반 페이지)
-  이 항목은 **새 가용성 그룹** 대화 상자 및 **가용성 그룹 속성** 대화 상자의 **일반** 탭에 적용 됩니다.  
-  **를 사용하지 않고** 새 가용성 그룹 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]대화 상자를 사용하여 새 가용성 그룹을 만들 수 있으며, 
-  **가용성 그룹 속성** 대화 상자를 사용하여 기존 가용성 그룹의 구성을 확인하고 변경할 수 있습니다.  
+   이 항목은 **새 가용성 그룹** 대화 상자 및 **가용성 그룹 속성** 대화 상자의 **일반** 탭에 적용됩니다.  **를 사용하지 않고** 새 가용성 그룹 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]대화 상자를 사용하여 새 가용성 그룹을 만들 수 있으며, **가용성 그룹 속성** 대화 상자를 사용하여 기존 가용성 그룹의 구성을 확인하고 변경할 수 있습니다.  
   
  **가용성 그룹 속성을 보려면**  
   
 -   [가용성 그룹 속성 보기&#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)  
   
--   [AlwaysOn 대시보드 &#40;SQL Server Management Studio를 사용&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [AlwaysOn 대시보드 사용&#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="uielement-list"></a>UIElement 목록  
  **가용성 그룹 이름**  
@@ -55,7 +53,7 @@ ms.locfileid: "62815656"
  **보조**  
  현재 보조 복제본입니다.  
   
- **해결**  
+ **확인**  
  현재 복제본 역할이 주 역할 또는 보조 역할로 확인 중입니다.  
   
  **가용성 모드**  
@@ -85,7 +83,7 @@ ms.locfileid: "62815656"
  주 복제본의 데이터베이스에 대한 모든 연결이 허용됩니다. 이 값은 기본 설정입니다.  
   
  **읽기/쓰기 연결 허용**  
- 애플리케이션 의도 연결 속성이 **ReadOnly** 로 설정된 연결은 허용되지 않습니다. 응용 프로그램 의도 속성이 **ReadWrite** 로 설정 되었거나 응용 프로그램 의도 연결 속성이 설정 되지 않은 경우에는 연결이 허용 됩니다. 애플리케이션 의도 연결 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하십시오.  
+ 응용 프로그램 의도 연결 속성이 **ReadOnly** 로 설정 된 연결은 허용 되지 않습니다. 응용 프로그램 의도 속성이 **ReadWrite** 로 설정 되었거나 응용 프로그램 의도 연결 속성이 설정 되지 않은 경우에는 연결이 허용 됩니다. 애플리케이션 의도 연결 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하십시오.  
   
  **읽을 수 있는 보조**  
  보조 역할을 수행하는 가용성 복제본,  즉 보조 복제본이 클라이언트로부터의 연결을 허용할 수 있는지 여부를 나타내며,  다음 중 하나입니다.  
@@ -102,7 +100,7 @@ ms.locfileid: "62815656"
  **세션 제한 시간 (초)**  
  이 복제본에 대한 세션 제한 시간(초)입니다.  
   
- **끝점 URL**  
+ **엔드포인트 URL**  
  엔드포인트의 URL입니다. 이러한 URL 형식에 대한 자세한 내용은 [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
   
  **추가**  

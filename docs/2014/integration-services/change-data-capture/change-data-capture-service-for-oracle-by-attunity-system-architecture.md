@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 84ac0e6065fa3fb4845e0e3a47ce56816705e80d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771493"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-system-architecture"></a>Attunity Oracle CDC Service 시스템 아키텍처
@@ -28,8 +28,7 @@ ms.locfileid: "62771493"
   
 -   Oracle 데이터베이스: 이 플랫폼은 지원되는 버전의 Oracle 데이터베이스가 실행되는 컴퓨터일 수 있습니다. 여기에는 Windows, Linux 또는 설치된 버전의 Oracle 데이터베이스에서 지원되는 기타 운영 체제를 실행하는 컴퓨터가 포함됩니다. 단일 Oracle CDC Service가 여러 원본 Oracle 데이터베이스에서 변경 내용을 캡처할 수 있으므로 다이어그램에는 이 플랫폼이 복수로 표시됩니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 이 플랫폼은 대상 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스( [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 지원되는 SKU)를 실행하는 컴퓨터일 수 있습니다. Oracle CDC Service는 변경 테이블과 서비스 구성을 저장하는 하나의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 대상을 지원합니다. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 플랫폼은 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] AlwaysOn [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 기능을 사용하는 **의 클러스터형 인스턴스 또는** 의 미러된 인스턴스일 수도 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 이 플랫폼은 대상 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스( [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 지원되는 SKU)를 실행하는 컴퓨터일 수 있습니다. Oracle CDC Service는 변경 테이블과 서비스 구성을 저장하는 하나의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 대상을 지원합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 플랫폼은 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] AlwaysOn [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 기능을 사용하는 **의 클러스터형 인스턴스 또는** 의 미러된 인스턴스일 수도 있습니다.  
   
 -   Oracle CDC Designer: 이 플랫폼은 원본 Oracle 데이터베이스와 대상 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 액세스할 수 있는 지원되는 Windows 컴퓨터일 수 있습니다.  
   

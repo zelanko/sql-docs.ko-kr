@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8094d481af3fef9db8bb7ef9ab45fc5c66ff7e11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62778825"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>전체 텍스트 카탈로그 속성(채우기 일정 페이지)
@@ -31,13 +31,13 @@ ms.locfileid: "62778825"
  **채우기 유형**  
  전체, 증분 또는 최적화 등의 채우기 작업을 표시하거나 수정합니다.  
   
- **Enabled**  
+ **사용**  
  예약된 작업을 사용하려면 이 확인란을 선택하고 사용하지 않으려면 이 확인란의 선택을 취소합니다.  
   
  **설명**  
  예약된 작업에 대한 설명입니다.  
   
- **새로 만들기**  
+ **신규**  
  새 인덱싱 일정을 만들려면 이 단추를 클릭합니다. 이 단추를 클릭하면 **새 전체 텍스트 인덱싱 카탈로그 일정** 대화 상자가 표시됩니다.  
   
  **편집**  

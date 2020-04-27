@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 98a8476ef317a0ddfa6f7fc27c0c9572ed12817a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770200"
 ---
 # <a name="unpivot-transformation"></a>피벗 해제 변환
@@ -29,11 +29,11 @@ ms.locfileid: "62770200"
   
  다음 다이어그램에서는 Product 열로 데이터를 피벗 해제하기 전의 데이터 집합을 보여 줍니다.  
   
- ![피벗 해제 후의 데이터 집합](../../media/mw-dts-18.gif "피벗 해제 후의 데이터 집합")  
+ ![피벗 해제 후의 데이터 세트](../../media/mw-dts-18.gif "피벗 해제 후의 데이터 세트")  
   
  다음 다이어그램에서는 Product 열로 데이터를 피벗 해제한 후의 데이터 집합을 보여 줍니다.  
   
- ![피벗 해제 전의 데이터 집합](../../media/mw-dts-17.gif "피벗 해제 전의 데이터 집합")  
+ ![피벗 해제 전의 데이터 세트](../../media/mw-dts-17.gif "피벗 해제 전의 데이터 세트")  
   
  일부 경우에는 피벗 해제된 결과에 예기치 않은 값이 있는 행이 포함될 수 있습니다. 예를 들어 다이어그램에 표시된 피벗 해제할 예제 데이터에서 Fred의 모든 Qty 열에 null 값이 있으면 출력에는 Fred에 대한 행이 다섯 개가 아니라 한 개만 포함될 수 있습니다. Qty 열에는 해당 열 데이터 형식에 따라 null이나 0이 포함됩니다.  
   
@@ -44,16 +44,15 @@ ms.locfileid: "62770200"
   
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- 
-  **피벗 해제 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ **피벗 해제 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
 -   [피벗 해제 변환 편집기](../../unpivot-transformation-editor.md)  
   
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](../../common-properties.md)  
+-   [공용 속성](../../common-properties.md)  
   
--   [변환 사용자 지정 속성](transformation-custom-properties.md)  
+-   [Transformation Custom Properties](transformation-custom-properties.md)  
   
  속성을 설정하는 방법에 대한 자세한 내용은 [데이터 흐름 구성 요소의 속성 설정](../set-the-properties-of-a-data-flow-component.md)을 참조하세요.  
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 35d8f9cdda7c3b85c77d290f9c793640705438e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815426"
 ---
 # <a name="availability-group-is-offline"></a>가용성 그룹이 오프라인 상태임
@@ -28,17 +28,17 @@ ms.locfileid: "62815426"
 |||  
 |-|-|  
 |**정책 이름**|가용성 그룹 온라인 상태|  
-|**문제점**|가용성 그룹이 오프라인 상태임|  
-|**범주**|**심각**|  
-|**패싯**|가용성 그룹|  
+|**문제**|가용성 그룹이 오프라인 상태임|  
+|**범주**|**위험**|  
+|**패싯에**|가용성 그룹|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
  이 정책은 가용성 그룹의 온라인 또는 오프라인 상태를 확인합니다. 가용성 그룹의 클러스터 리소스가 오프라인이거나 가용성 그룹에 주 복제본이 없으면 정책이 비정상 상태이며 경고가 발생합니다.  
   
  가용성 그룹의 클러스터 리소스가 온라인이고 가용성 그룹에 주 복제본이 있으면 정책 상태가 정상입니다.  
   
 > [!NOTE]  
->  이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]릴리스의 경우 가능한 원인 및 해결 방법에 대한 자세한 내용은 TechNet Wiki에서 [가용성 그룹이 오프라인 상태임](https://go.microsoft.com/fwlink/p/?LinkId=220850) 을 참조하세요.  
+>   이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]릴리스의 경우 가능한 원인 및 해결 방법에 대한 자세한 내용은 TechNet Wiki의 [가용성 그룹이 오프라인 상태임](https://go.microsoft.com/fwlink/p/?LinkId=220850) 을 참조하십시오.  
   
 ## <a name="possible-causes"></a>가능한 원인  
  이 문제는 주 복제본을 호스팅하는 서버 인스턴스에 장애가 있거나 WSFC(Windows Server 장애 조치(Failover) 클러스터) 가용성 그룹 리소스가 오프라인 상태가 되어 발생할 수 있습니다. 다음과 같은 경우 가용성 그룹이 오프라인 상태가 될 수 있습니다.  
@@ -74,6 +74,6 @@ ms.locfileid: "62815426"
   
 ## <a name="see-also"></a>참고 항목  
  [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 대시보드 &#40;SQL Server Management Studio를 사용&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [AlwaysOn 대시보드 사용&#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

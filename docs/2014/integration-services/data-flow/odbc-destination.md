@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9de91ba98533e82fbf63376ed6d9c56ad73a000c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771029"
 ---
 # <a name="odbc-destination"></a>ODBC 대상
@@ -26,7 +26,7 @@ ms.locfileid: "62771029"
   
  ODBC 대상에는 하나의 일반 출력과 하나의 오류 출력이 있습니다.  
   
-##  <a name="BKMK_odbcdestination_loadoptions"></a> 로드 옵션  
+##  <a name="load-options"></a><a name="BKMK_odbcdestination_loadoptions"></a> 로드 옵션  
  ODBC 대상은 두 액세스 로드 모듈 중 하나를 사용할 수 있습니다. [ODBC 원본 편집기&#40;연결 관리자 페이지&#41;](../odbc-source-editor-connection-manager-page.md)에서 모드를 설정합니다. 두 모드는 다음과 같습니다.  
   
 -   **일괄 처리**: 이 모드에서는 ODBC 대상이 인식된 ODBC 공급자 기능을 기반으로 가장 효율적인 삽입 메서드를 사용하려고 합니다. 대부분의 요즘 ODBC 공급자에게 이는 매개 변수가 포함된 INSERT 문을 준비한 다음 행 단위 배열 매개 변수 바인딩을 사용해야 함을 의미할 수 있습니다(배열 크기는 **BatchSize** 속성으로 제어됨). **일괄 처리** 를 선택했는데 공급자가 이 메서드를 지원하지 않으면 ODBC 대상이 **행 단위** 모드로 자동 전환됩니다.  
@@ -83,6 +83,6 @@ ms.locfileid: "62771029"
   
 -   [ODBC 대상을 사용하여 데이터 로드](odbc-destination.md)  
   
--   [ODBC 대상 사용자 지정 속성](odbc-destination-custom-properties.md)  
+-   [ODBC Destination Custom Properties](odbc-destination-custom-properties.md)  
   
   

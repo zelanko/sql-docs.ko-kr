@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4ceedcedae64bf2ec8f8ede0ccbb99350b979fd7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773383"
 ---
 # <a name="understanding-transactions-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 트랜잭션 이해
@@ -38,6 +38,6 @@ ms.locfileid: "62773383"
  자세한 내용은 [트랜잭션 내구성 제어](../relational-databases/logs/control-transaction-durability.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 최적화 테이블](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ [메모리 액세스에 최적화 된 테이블](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

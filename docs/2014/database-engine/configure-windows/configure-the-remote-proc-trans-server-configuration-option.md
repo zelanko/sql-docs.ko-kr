@@ -14,18 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 106f4ca8951200110349809065b35ba65a7f8411
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62811339"
 ---
 # <a name="configure-the-remote-proc-trans-server-configuration-option"></a>remote proc trans 서버 구성 옵션 구성
-  이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 원격 프로시저 트랜잭션 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. 
-  **remote proc trans** 옵션을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] MS DTC(Distributed Transaction Coordinator) 트랜잭션을 통한 서버 간 프로시저 동작을 보호할 수 있습니다.  
+  이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 원격 프로시저 트랜잭션 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **remote proc trans** 옵션을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] MS DTC(Distributed Transaction Coordinator) 트랜잭션을 통한 서버 간 프로시저 동작을 보호할 수 있습니다.  
   
- 
-  **remote proc trans** 값을 1로 설정하면 트랜잭션의 ACID(원자성, 일관성, 격리성 및 내구성) 속성이 보호되는 MS DTC 통합 분산 트랜잭션을 이용할 수 있습니다. 이 옵션을 1로 설정한 후에 세션을 시작하면 이 구성 설정이 기본값으로 상속됩니다.  
+ **remote proc trans** 값을 1로 설정하면 트랜잭션의 ACID(원자성, 일관성, 격리성 및 내구성) 속성이 보호되는 MS DTC 통합 분산 트랜잭션을 이용할 수 있습니다. 이 옵션을 1로 설정한 후에 세션을 시작하면 이 구성 설정이 기본값으로 상속됩니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
@@ -40,7 +38,7 @@ ms.locfileid: "62811339"
   
      [보안](#Security)  
   
--   **원격 프로시저 트랜잭션 옵션을 구성 하려면:**  
+-   **원격 프로시저 트랜잭션 옵션을 구성하려면:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -48,34 +46,32 @@ ms.locfileid: "62811339"
   
 -   **후속 작업:**  [원격 프로시저 트랜잭션 옵션을 구성한 후](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 조건  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
   
 -   이 값을 설정하려면 먼저 원격 서버 연결이 가능해야 합니다.  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
--   이 옵션은 원격 저장 프로시저를 사용 하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 응용 프로그램에 대 한 이전 버전의와의 호환성을 위해 제공 됩니다. 원격 저장 프로시저 호출을 실행하는 대신 [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)를 사용하여 정의되는 연결된 서버를 참조하는 분산 쿼리를 사용합니다.  
+-   이 옵션은 원격 저장 프로시저를 사용하는 애플리케이션에 대해 이전 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전과의 호환성을 위해 제공됩니다. 원격 저장 프로시저 호출을 실행하는 대신 [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)를 사용하여 정의되는 연결된 서버를 참조하는 분산 쿼리를 사용합니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경하거나 RECONFIGURE 문을 실행하는 두 매개 변수를 사용하여 **sp_configure** 를 실행하려면 사용자에게 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-configure-the-remote-proc-trans-option"></a>원격 프로시저 트랜잭션 옵션을 구성하려면  
   
 1.  개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-2.  
-  **연결** 노드를 클릭합니다.  
+2.  **연결** 노드를 클릭합니다.  
   
-3.  
-  **원격 서버 연결**에서 **서버 간 통신에 분산 트랜잭션 필요** 확인란을 선택합니다.  
+3.  **원격 서버 연결**에서 **서버 간 통신에 분산 트랜잭션 필요** 확인란을 선택합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-configure-the-remote-proc-trans-option"></a>원격 프로시저 트랜잭션 옵션을 구성하려면  
   
@@ -97,7 +93,7 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a>후속 작업: 원격 프로시저 트랜잭션 옵션을 구성한 후  
+##  <a name="follow-up-after-you-configure-the-remote-proc-trans-option"></a><a name="FollowUp"></a> 후속 작업: 원격 프로시저 트랜잭션 옵션을 구성한 후  
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

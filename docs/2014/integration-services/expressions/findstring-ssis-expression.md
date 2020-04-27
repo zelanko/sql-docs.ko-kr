@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7efc711e97abde1d33a7dd4194bd2953b959ef6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62769179"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING(SSIS 식)
@@ -64,8 +64,7 @@ FINDSTRING("New York, NY, NY", "NY", 1)
 FINDSTRING("New York, NY, NY", "NY", 3)   
 ```  
   
- 이 예에서는 **Name** 열을 사용합니다. 
-  **Name** 열에서 값 n의 위치가 반환됩니다. 반환 결과는 **Name**열의 값에 따라 달라집니다. **Name** 열에 Anderson이 포함된 경우 함수는 8을 반환합니다.  
+ 이 예에서는 **Name** 열을 사용합니다. **Name** 열에서 값 n의 위치가 반환됩니다. 반환 결과는 **Name**열의 값에 따라 달라집니다. **Name** 열에 Anderson이 포함된 경우 함수는 8을 반환합니다.  
   
 ```  
 FINDSTRING(Name,"n", 2)   

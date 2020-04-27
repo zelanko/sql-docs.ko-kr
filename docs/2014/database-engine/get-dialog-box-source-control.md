@@ -15,25 +15,23 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 051e3b93761511db07a2f381be5c94ea3247e76a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779010"
 ---
 # <a name="get-dialog-box-source-control"></a>가져오기 대화 상자(소스 제어)
   선택한 항목의 읽기 전용 복사본을 원본 제어 데이터베이스에서 작업 폴더나 지정한 다른 폴더로 가져옵니다.  
   
 ## <a name="dialog-box-access"></a>대화 상자 액세스  
- 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 솔루션 탐색기의 항목을 선택합니다. 
-  **파일** 메뉴에서 **소스 제어** 를 클릭한 다음 **가져오기**를 클릭합니다.  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 솔루션 탐색기의 항목을 선택합니다. **파일** 메뉴에서 **소스 제어** 를 클릭한 다음 **가져오기**를 클릭합니다.  
   
 > [!NOTE]  
 >  이 대화 상자는 솔루션 탐색기의 항목을 마우스 오른쪽 단추로 클릭해도 나타납니다.  
   
 ## <a name="options"></a>옵션  
- **동작**  
+ **작업**  
  가져올 항목에 대해 수행할 동작을 지정합니다.  
   
  **열**  

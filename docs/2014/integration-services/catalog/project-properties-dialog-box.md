@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b27a3cc8a768f60a5e2d430fe04ca514aafe1f37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771659"
 ---
 # <a name="project-properties-dialog-box"></a>프로젝트 속성 대화 상자
@@ -33,7 +33,7 @@ ms.locfileid: "62771659"
   
 -   [권한 페이지의 옵션 설정](#permissions)  
   
-##  <a name="open_dialog"></a> 프로젝트 속성 대화 상자 열기  
+##  <a name="open-the-project-properties-dialog-box"></a><a name="open_dialog"></a> 프로젝트 속성 대화 상자 열기  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 연결합니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62771659"
   
 5.  프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-##  <a name="general"></a> 일반 페이지의 옵션 설정  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> 일반 페이지의 옵션 설정  
  일반 페이지를 사용하여 프로젝트 속성을 봅니다.  
   
  **이름**  
@@ -65,7 +65,7 @@ ms.locfileid: "62771659"
  **배포 날짜**  
  프로젝트를 마지막으로 배포하거나 다시 배포한 날짜 및 시간을 나열합니다.  
   
-##  <a name="permissions"></a> 권한 페이지의 옵션 설정  
+##  <a name="set-the-options-on-the-permissions-page"></a><a name="permissions"></a> 권한 페이지의 옵션 설정  
  **권한** 페이지를 사용하여 프로젝트에 대한 명시적 권한을 보고 설정합니다.  
   
  찾아보기  

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775326"
 ---
 # <a name="upgrade-replicated-databases"></a>복제된 데이터베이스 업그레이드
@@ -40,8 +40,7 @@ ms.locfileid: "62775326"
 >  이 항목은 설치 도움말 설명서와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 사용할 수 있습니다. 설치 도움말 설명서에서 굵게 표시된 항목 링크는 온라인 설명서에만 제공되는 항목을 나타냅니다.  
   
 ## <a name="run-the-log-reader-agent-for-transactional-replication-before-upgrade"></a>업그레이드 전에 트랜잭션 복제용 로그 판독기 에이전트 실행  
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하기 전에 게시된 테이블의 커밋된 모든 트랜잭션을 로그 판독기 에이전트가 처리했는지 확인해야 합니다. 모든 트랜잭션이 처리되었는지 확인하려면 트랜잭션 게시를 포함하는 각 데이터베이스에 대해 다음 단계를 수행하십시오.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하기 전에 게시된 테이블의 커밋된 모든 트랜잭션을 로그 판독기 에이전트가 처리했는지 확인해야 합니다. 모든 트랜잭션이 처리되었는지 확인하려면 트랜잭션 게시를 포함하는 각 데이터베이스에 대해 다음 단계를 수행하십시오.  
   
 1.  데이터베이스에서 로그 판독기 에이전트가 실행 중인지 확인합니다. 기본적으로 에이전트는 계속 실행됩니다.  
   
@@ -53,8 +52,7 @@ ms.locfileid: "62775326"
   
 5.  [sp_replflush](/sql/relational-databases/system-stored-procedures/sp-replflush-transact-sql) 를 실행하여 sp_replcmds의 연결을 닫습니다.  
   
-6.  
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 서버를 업그레이드합니다.  
+6.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 서버를 업그레이드합니다.  
   
 7.  업그레이드 후에 자동으로 시작되지 않는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 및 로그 판독기 에이전트를 다시 시작합니다.  
   
@@ -93,7 +91,7 @@ ms.locfileid: "62775326"
 ## <a name="see-also"></a>참고 항목  
  [복제 관리 FAQ](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [복제의 이전 버전과의 호환성](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
- [지원되는 버전 및 에디션 업그레이드](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
+ [지원 되는 버전 및 에디션 업그레이드](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [SQL Server 2014로 업그레이드](upgrade-sql-server.md)  
   
   

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a89632ad5502cee9599d1eea6e1cd0a0bebe7d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770999"
 ---
 # <a name="ole-db-source"></a>OLE DB 원본
@@ -62,8 +62,7 @@ ms.locfileid: "62770999"
 ### <a name="specifying-parameters-by-using-ordinal-positions"></a>서수 위치를 사용하여 매개 변수 지정  
  매개 변수 이름이 반환되지 않는 경우 매개 변수가 **쿼리 매개 변수 설정** 대화 상자의 **매개 변수** 목록에 나열되는 순서에 따라 런타임에 매핑되는 대상 매개 변수 표식이 결정됩니다. 목록의 첫 번째 매개 변수는 SQL 문의 첫 번째 ?에 매핑되고 두 번째 매개 변수는 두 번째 ?에 매핑되는 식입니다.  
   
- 다음 SQL 문은 **데이터베이스의** Product [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 테이블에서 행을 선택합니다. 
-  **매핑** 목록의 첫 번째 매개 변수는 **Color** 열의 첫 번째 매개 변수에 매핑되고 두 번째 매개 변수는 **Size** 열에 매핑됩니다.  
+ 다음 SQL 문은 **데이터베이스의** Product [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 테이블에서 행을 선택합니다. **매핑** 목록의 첫 번째 매개 변수는 **Color** 열의 첫 번째 매개 변수에 매핑되고 두 번째 매개 변수는 **Size** 열에 매핑됩니다.  
   
  `SELECT * FROM Production.Product WHERE Color = ? AND Size = ?`  
   
@@ -78,9 +77,7 @@ ms.locfileid: "62770999"
   
  `EXEC uspGetWhereUsedProductID ?, ?`  
   
- 이 저장 프로시저에는 매개 변수 값을 제공할 변수 `@StartProductID` 및 `@CheckDate`가 필요합니다. 
-  **매핑** 목록에 매개 변수가 나타나는 순서는 상관없으며 
-  \@ 기호를 포함한 매개 변수 이름이 저장 프로시저의 변수 이름과 일치하기만 하면 됩니다.  
+ 이 저장 프로시저에는 매개 변수 값을 제공할 변수 `@StartProductID` 및 `@CheckDate`가 필요합니다. **매핑** 목록에 매개 변수가 나타나는 순서는 상관없으며 \@ 기호를 포함한 매개 변수 이름이 저장 프로시저의 변수 이름과 일치하기만 하면 됩니다.  
   
 ### <a name="mapping-parameters-to-variables"></a>변수에 매개 변수 매핑  
  매개 변수는 런타임에 매개 변수 값을 제공하는 변수에 매핑됩니다. 변수는 일반적으로 사용자 정의 변수이지만 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 제공하는 시스템 변수를 사용할 수도 있습니다. 사용자 정의 변수를 사용하는 경우에는 매핑된 매개 변수가 참조하는 열의 데이터 형식과 호환되는 형식으로 데이터 형식을 설정합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md)을 참조하세요.  
@@ -91,18 +88,17 @@ ms.locfileid: "62770999"
 ## <a name="configuring-the-ole-db-source"></a>OLE DB 원본 구성  
  프로그래밍 방식을 통해 또는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하여 속성을 설정할 수 있습니다.  
   
- 
-  **OLE DB 원본 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ **OLE DB 원본 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [OLE DB 원본 편집기 &#40;연결 관리자 페이지&#41;](../ole-db-source-editor-connection-manager-page.md)  
+-   [OLE DB 원본 편집기&#40;연결 관리자 페이지&#41;](../ole-db-source-editor-connection-manager-page.md)  
   
--   [OLE DB 원본 편집기 &#40;열 페이지&#41;](../ole-db-source-editor-columns-page.md)  
+-   [OLE DB 원본 편집기&#40;열 페이지&#41;](../ole-db-source-editor-columns-page.md)  
   
--   [원본 편집기 &#40;오류 출력 페이지를 OLE DB&#41;](../ole-db-source-editor-error-output-page.md)  
+-   [OLE DB 원본 편집기&#40;오류 출력 페이지&#41;](../ole-db-source-editor-error-output-page.md)  
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](../common-properties.md)  
+-   [공용 속성](../common-properties.md)  
   
 -   [OLE DB 사용자 지정 속성](ole-db-custom-properties.md)  
   
@@ -117,11 +113,11 @@ ms.locfileid: "62770999"
 -   [병합 및 병합 조인 변환을 위한 데이터 정렬](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>관련 내용  
- social.technet.microsoft.com의 Wiki 문서 - [Oracle 커넥터가 있는 SSIS](https://go.microsoft.com/fwlink/?LinkId=220670)  
+ Social.technet.microsoft.com의 Wiki 문서, [Oracle 커넥터를 사용](https://go.microsoft.com/fwlink/?LinkId=220670)하는 SSIS.  
   
 ## <a name="see-also"></a>참고 항목  
  [OLE DB 대상](ole-db-destination.md)   
- [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; 변수](../integration-services-ssis-variables.md)   
  [데이터 흐름](data-flow.md)  
   
   

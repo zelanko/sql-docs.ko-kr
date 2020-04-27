@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 22f1fbc9470eb4002bb40f0e4e513f35134c442e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774363"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>로그 전달 구성에 보조 데이터베이스 추가(SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "62774363"
   
      [보안](#Security)  
   
--   **다음을 사용 하 여 로그 전달 보조 데이터베이스를 추가 합니다.**  
+-   **로그 전달 보조 데이터베이스를 추가하려면:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -39,14 +39,14 @@ ms.locfileid: "62774363"
   
 -   [관련 작업](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  로그 전달 저장 프로시저를 사용하려면 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-add-a-log-shipping-secondary-database"></a>로그 전달 보조 데이터베이스를 추가하려면  
   
@@ -58,11 +58,11 @@ ms.locfileid: "62774363"
   
 4.  **연결** 을 클릭하여 보조 서버로 사용하려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
   
-5.  **보조 데이터베이스** 상자의 목록에서 데이터베이스를 선택 하거나 만들려는 데이터베이스의 이름을 입력 합니다.  
+5.  **보조 데이터베이스** 상자의 목록에서 데이터베이스를 선택하거나 만들려는 데이터베이스의 이름을 입력합니다.  
   
 6.  **보조 데이터베이스 초기화** 탭에서 보조 데이터베이스 초기화에 사용하려는 옵션을 선택합니다.  
   
-7.  **파일 복사 탭**의 **복사한 파일의 대상 폴더** 입력란에 트랜잭션 로그 백업을 복사할 대상 폴더의 경로를 입력 합니다. 이 폴더는 대개 보조 서버에 위치합니다.  
+7.  **파일 복사**탭의 **복사한 파일의 대상 폴더** 입력란에 트랜잭션 로그 백업을 복사할 대상 폴더의 경로를 입력합니다. 이 폴더는 대개 보조 서버에 위치합니다.  
   
 8.  복사 일정은 **복사 작업** 의 **일정**상자에 나열됩니다. 설치 일정을 사용자 지정하려면 **일정** 을 클릭한 다음 필요에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 일정을 조정합니다. 이 일정은 백업 일정과 비슷해야 합니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62774363"
   
 15. 데이터베이스 속성 대화 상자에서 **확인** 을 클릭하여 구성 프로세스를 시작합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-add-a-log-shipping-secondary-database"></a>로그 전달 보조 데이터베이스를 추가하려면  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62774363"
   
 5.  보조 서버에서 복사 및 복원 작업을 활성화합니다. 자세한 내용은 [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [SQL Server 2014 &#40;Transact-sql&#41;로그 전달 업그레이드](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
@@ -111,7 +111,7 @@ ms.locfileid: "62774363"
 -   [로그 전달 보조 데이터베이스로 장애 조치(failover)&#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [로그 전달 정보&#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
- [로그 전달 테이블 및 저장 프로시저](log-shipping-tables-and-stored-procedures.md)  
+ [로그 전달 &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
   
   

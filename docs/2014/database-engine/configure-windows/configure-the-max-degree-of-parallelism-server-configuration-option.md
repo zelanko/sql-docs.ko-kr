@@ -16,17 +16,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46598cf66c80d07383fb033436bbe1792b1eec64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62786948"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>max degree of parallelism 서버 구성 옵션 구성
-  이 `max degree of parallelism` 항목에서는 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용 하 여에서 서버 구성 옵션을 구성 하는 방법에 대해 설명 합니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 마이크로프로세서나 CPU가 둘 이상인 컴퓨터에서 실행될 경우 최적 병렬 처리 수준, 즉 각 병렬 계획 실행에 대해 단일 문을 실행하는 데 사용된 프로세서 수를 검색합니다. 
-  `max degree of parallelism` 옵션을 사용하여 병렬 계획 실행에 사용되도록 프로세서 수를 제한할 수 있습니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 쿼리에 대한 병렬 실행 계획, 인덱스 DDL(데이터 정의 언어) 작업 및 정적 커서와 키 집합 커서 채우기를 고려합니다.  
+  이 `max degree of parallelism` 항목에서는 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용 하 여에서 서버 구성 옵션을 구성 하는 방법에 대해 설명 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 마이크로프로세서나 CPU가 둘 이상인 컴퓨터에서 실행될 경우 최적 병렬 처리 수준, 즉 각 병렬 계획 실행에 대해 단일 문을 실행하는 데 사용된 프로세서 수를 검색합니다. `max degree of parallelism` 옵션을 사용하여 병렬 계획 실행에 사용되도록 프로세서 수를 제한할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 쿼리에 대한 병렬 실행 계획, 인덱스 DDL(데이터 정의 언어) 작업 및 정적 커서와 키 집합 커서 채우기를 고려합니다.  
   
  **항목 내용**  
   
@@ -46,13 +43,13 @@ ms.locfileid: "62786948"
   
 -   **후속 작업:**  [최대 병렬 처리 수준 옵션을 구성한 후](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   affinity mask 옵션을 기본값으로 설정하지 않으면 SMP(대칭적 다중 처리) 시스템에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 사용 가능한 프로세서 수가 제한될 수도 있습니다.  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   이 옵션은 고급 옵션으로, 숙련된 데이터베이스 관리자나 공인된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기술 지원 담당자만 변경해야 합니다.  
   
@@ -64,24 +61,22 @@ ms.locfileid: "62786948"
   
 -   쿼리 및 인덱스 작업과 함께 이 옵션은 DBCC CHECKTABLE, DBCC CHECKDB 및 DBCC CHECKFILEGROUP의 병렬 처리도 제어합니다. 추적 플래그 2528을 사용하여 이러한 문의 병렬 실행 계획을 비활성화할 수 있습니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)를 참조하세요.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경하거나 RECONFIGURE 문을 실행하는 두 매개 변수를 사용하여 **sp_configure** 를 실행하려면 사용자에게 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-configure-the-max-degree-of-parallelism-option"></a>최대 병렬 처리 수준 옵션을 구성하려면  
   
 1.  **개체 탐색기**에서 서버를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.  
   
-2.  
-  **고급** 노드를 클릭합니다.  
+2.  **고급** 노드를 클릭합니다.  
   
-3.  
-  **최대 병렬 처리 수준** 상자에서 병렬 계획 실행에 사용할 프로세서의 최대 개수를 선택합니다.  
+3.  **최대 병렬 처리 수준** 상자에서 병렬 계획 실행에 사용할 프로세서의 최대 개수를 선택합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-configure-the-max-degree-of-parallelism-option"></a>최대 병렬 처리 수준 옵션을 구성하려면  
   
@@ -106,16 +101,16 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a>후속 작업: 최대 병렬 처리 수준 옵션을 구성한 후  
+##  <a name="follow-up-after-you-configure-the-max-degree-of-parallelism-option"></a><a name="FollowUp"></a>후속 작업: 최대 병렬 처리 수준 옵션을 구성한 후  
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [선호도 마스크 서버 구성 옵션](affinity-mask-server-configuration-option.md)   
+ [affinity mask 서버 구성 옵션](affinity-mask-server-configuration-option.md)   
  [RECONFIGURE&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [CREATE INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
- [ALTER INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
+ [ALTER INDEX &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [ALTER TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [DBCC CHECKTABLE &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql)   
  [DBCC CHECKDB &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)   

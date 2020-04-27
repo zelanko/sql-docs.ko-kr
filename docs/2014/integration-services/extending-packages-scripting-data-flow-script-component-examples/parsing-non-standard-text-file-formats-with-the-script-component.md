@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 381f616ec0732616a7c9c1a5d181e5d1ea002ce6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62769019"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>스크립트 구성 요소를 사용하여 비표준 텍스트 파일 형식의 구문 분석
@@ -32,7 +32,7 @@ ms.locfileid: "62769019"
 > [!NOTE]  
 >  여러 데이터 흐름 태스크 및 여러 패키지에서 쉽게 다시 사용할 수 있는 구성 요소를 만들려면 이 스크립트 구성 요소 예제에 있는 코드를 바탕으로 사용자 지정 데이터 흐름 구성 요소를 만들어 보십시오. 자세한 내용은 [사용자 지정 데이터 흐름 구성 요소 개발](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)을 참조하세요.  
   
-##  <a name="example1"></a> 예 1: 행으로 구분된 레코드에 대한 구문 분석  
+##  <a name="example-1-parsing-row-delimited-records"></a><a name="example1"></a> 예 1: 행으로 구분된 레코드에 대한 구문 분석  
  이 예에서는 각 데이터 열이 별도의 줄에 나타나는 텍스트 파일을 가져오고 스크립트 구성 요소를 사용하여 이를 대상 테이블로 구문 분석하는 방법을 보여 줍니다.  
   
  데이터 흐름에서 변환으로 사용할 스크립트 구성 요소를 구성 하는 방법에 대 한 자세한 내용은 스크립트 구성 요소 [를 사용 하 여 동기 변환 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)및 [스크립트 구성 요소를 사용 하 여 비동기 변환 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)를 참조 하세요.  
@@ -187,7 +187,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-##  <a name="example2"></a> 예제 2: 부모 레코드와 자식 레코드 분할  
+##  <a name="example-2-splitting-parent-and-child-records"></a><a name="example2"></a> 예제 2: 부모 레코드와 자식 레코드 분할  
  이 예에서는 구분 행 뒤에 부모 레코드 행이 있고 그 뒤에 불특정 개수의 자식 레코드 행이 있는 텍스트 파일을 가져오고 스크립트 구성 요소를 사용하여 이를 올바르게 정규화된 부모 및 자식 대상 테이블로 구문 분석하는 방법을 보여 줍니다. 이 간단한 예는 각각의 부모 및 자식 레코드에 둘 이상의 행 또는 열을 사용하는 원본 파일에 맞게 쉽게 조정할 수 있습니다. 단, 각 레코드의 시작 부분과 끝 부분을 식별할 수 있어야 합니다.  
   
 > [!CAUTION]  
@@ -267,8 +267,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
     -   길이가 50인 문자열 [DT_STR] 형식의 ChildRecord  
   
-14. **스크립트 변환 편집기**의 **스크립트** 페이지에서 **스크립트 편집**을 클릭합니다. 
-  `ScriptMain` 클래스에서 이 예에 표시된 코드를 입력합니다. 스크립트 개발 환경과 **스크립트 변환 편집기**를 닫습니다.  
+14. **스크립트 변환 편집기**의 **스크립트** 페이지에서 **스크립트 편집**을 클릭합니다. `ScriptMain` 클래스에서 이 예에 표시된 코드를 입력합니다. 스크립트 개발 환경과 **스크립트 변환 편집기**를 닫습니다.  
   
 15. 데이트 흐름에 SQL Server 대상을 추가합니다. 이 대상에 스크립트 구성 요소의 ParentRecords 출력을 연결하고 해당 대상이 OLE DB 연결 관리자와 Parents 테이블을 사용하도록 구성합니다.  
   
@@ -347,7 +346,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [스크립트 구성 요소를 사용하여 동기 변환 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  

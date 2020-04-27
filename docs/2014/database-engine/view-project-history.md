@@ -16,21 +16,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8be44100e733833c0982f46965544f8e34e57db0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773499"
 ---
 # <a name="view-project-history"></a>프로젝트 기록 보기
-  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] VSS(Visual SourceSafe) 프로젝트의 기록에는 파일 작성, 추가, 삭제, 복구 등을 비롯하여 각 프로젝트 파일에서 수행된 모든 동작의 목록이 포함됩니다.  
   
 > [!NOTE]  
 >  Visual SourceSaf 프로젝트는 일반적으로 원본 제어 서버 폴더라 불립니다. 이 폴더는 원본 제어 파일의 서버 버전이 서버에 저장되는 위치입니다.  
   
- 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 현재 로드된 솔루션이 속하는 Visual SourceSafe 프로젝트의 기록을 검사할 수 있습니다. 프로젝트 기록의 일부로 표시되는 정보에 기초하여 파일 버전의 로컬 복사본을 검색하거나 삭제된 버전을 복원하거나 프로젝트 간에 파일 버전을 공유할 수 있습니다.  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 현재 로드된 솔루션이 속하는 Visual SourceSafe 프로젝트의 기록을 검사할 수 있습니다. 프로젝트 기록의 일부로 표시되는 정보에 기초하여 파일 버전의 로컬 복사본을 검색하거나 삭제된 버전을 복원하거나 프로젝트 간에 파일 버전을 공유할 수 있습니다.  
   
 ### <a name="to-view-the-history-of-a-vss-project"></a>VSS 프로젝트의 기록을 보려면  
   

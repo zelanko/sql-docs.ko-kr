@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8672a9ea9eab9cda291576cf2336f8f3e7ba6f2a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789249"
 ---
 # <a name="options-sql-server-alwayson-dashboard-page"></a>옵션(SQL Server AlwaysOn, 대시보드 페이지)
@@ -24,8 +24,7 @@ ms.locfileid: "62789249"
   
  **이 페이지에 액세스하려면**  
   
- 
-  **도구** 메뉴에서 **옵션**을 클릭하고 **SQL Server AlwaysOn** 폴더를 확장한 다음 **대시보드**를 클릭합니다.  
+ **도구** 메뉴에서 **옵션**을 클릭하고 **SQL Server AlwaysOn** 폴더를 확장한 다음 **대시보드**를 클릭합니다.  
   
 ## <a name="on-this-page"></a>이 페이지에서  
  **자동 새로 고침 설정**  
@@ -39,6 +38,6 @@ ms.locfileid: "62789249"
  AlwaysOn 정책을 직접 정의한 경우 이 옵션을 클릭하여 정책을 사용하도록 설정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [AlwaysOn 대시보드 &#40;SQL Server Management Studio를 사용&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [AlwaysOn 대시보드 사용&#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

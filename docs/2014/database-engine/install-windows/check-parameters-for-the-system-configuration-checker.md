@@ -23,10 +23,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a1d08730c8fd4ec5a750c0cf2c70e0498be602e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779446"
 ---
 # <a name="check-parameters-for-the-system-configuration-checker"></a>시스템 구성 검사기의 검사 매개 변수
@@ -36,7 +36,7 @@ ms.locfileid: "62779446"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 2014를 설치 하기 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
- [SQL Server 설치에 대한 보안 고려 사항](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
+ [SQL Server 설치에 대 한 보안 고려 사항](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [지원되는 버전 및 에디션 업그레이드](supported-version-and-edition-upgrades.md)  
   
   

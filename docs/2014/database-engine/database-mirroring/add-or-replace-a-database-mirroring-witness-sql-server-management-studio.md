@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4bc9f0865ed5ff00099f121f254d17aafc298f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807462"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>데이터베이스 미러링 모니터 서버 추가 또는 바꾸기(SQL Server Management Studio)
@@ -32,7 +32,7 @@ ms.locfileid: "62807462"
   
 2.  **데이터베이스**를 확장한 다음 미러링 모니터 서버를 추가하거나 바꿀 세션의 주 데이터베이스를 선택합니다.  
   
-3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 선택한 다음 **미러**를 클릭합니다. **데이터베이스 속성** 대화 상자의 **미러링** 페이지가 열립니다.  
+3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 선택한 다음 **미러**를 클릭합니다. 그러면 **데이터베이스 속성** 대화 상자의 **미러링** 페이지가 열립니다.  
   
 4.  **보안 구성**을 클릭합니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62807462"
   
     -   미러링 모니터 서버 인스턴스에서 파트너 중 하나와 다른 서비스 계정을 사용하는 경우에는 **주 서버**, **미러 서버**및 **미러링 모니터 서버** 필드에 계정 이름을 입력합니다.  
   
-         *DOMAINNAME* **\\** *username*  
+         *DOMAINNAME* **\\** *사용자 이름*  
   
          도메인 이름은 대문자로 입력해야 합니다.  
   
@@ -70,9 +70,9 @@ ms.locfileid: "62807462"
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 모니터 서버](database-mirroring-witness.md)   
- [데이터베이스 미러링&#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [데이터베이스 속성&#40;미러링 페이지&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)   
- [데이터베이스 미러링 모니터 서버](database-mirroring-witness.md)  
+ [데이터베이스 미러링 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [데이터베이스 속성 &#40;미러링 페이지&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [Windows 인증 &#40;SQL Server Management Studio&#41;사용 하 여 데이터베이스 미러링 세션을 설정 합니다.](establish-database-mirroring-session-windows-authentication.md)   
+ [Database Mirroring Witness](database-mirroring-witness.md)  
   
   

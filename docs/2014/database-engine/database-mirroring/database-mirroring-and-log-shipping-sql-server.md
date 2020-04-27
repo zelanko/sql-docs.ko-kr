@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ca584a81b8ba70073ee833d8033cd5f664747741
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807475"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>데이터베이스 미러링 및 로그 전달(SQL Server)
@@ -61,7 +61,7 @@ ms.locfileid: "62807475"
  로컬 로그 전달 모니터를 사용할 때 이 시나리오에 따르기 위해 특별히 고려해야 할 사항은 없습니다. 이 시나리오에서 원격 모니터링 인스턴스를 사용하는 방법은 이 항목의 뒷부분에 나오는 "원격 모니터링 인스턴스에서 데이터베이스 미러링의 영향"을 참조하십시오.  
   
 ## <a name="failing-over-from-the-principal-to-the-mirror-database"></a>주 데이터베이스에서 미러 데이터베이스로 장애 조치  
- 다음 그림은 미러링이 자동 장애 조치(Failover)가 있는 보호 우선 모드로 실행 중일 때 로그 전달 및 데이터베이스 미러링이 함께 작동하는 방법을 보여 줍니다. 처음에 **Server_A** 는 미러링용 주 서버이자 로그 전달용 기본 서버입니다. **Server_B** 미러 서버 이며 현재 비활성 상태인 주 서버로도 구성 됩니다. **Server_C** 및 **Server_D** 는 로그 전달 보조 서버입니다. 로그 전달 세션의 가용성을 극대화하려면 백업 위치가 별도의 호스트 컴퓨터에 있는 공유 디렉터리여야 합니다.  
+ 다음 그림은 미러링이 자동 장애 조치(Failover)가 있는 보호 우선 모드로 실행 중일 때 로그 전달 및 데이터베이스 미러링이 함께 작동하는 방법을 보여 줍니다. 처음에 **Server_A** 는 미러링용 주 서버이자 로그 전달용 기본 서버입니다. **Server_B** 는 미러 서버이며 현재 비활성화되어 있는 기본 서버로 구성되어 있습니다. **Server_C** 및 **Server_D** 는 로그 전달 보조 서버입니다. 로그 전달 세션의 가용성을 극대화하려면 백업 위치가 별도의 호스트 컴퓨터에 있는 공유 디렉터리여야 합니다.  
   
  ![로그 전달 및 데이터베이스 미러링](../media/logshipping-and-dbm-automatic-failover.gif "로그 전달 및 데이터베이스 미러링")  
   
@@ -102,8 +102,7 @@ ms.locfileid: "62807475"
   
      4단계에서 사용한 것과 동일한 백업 공유를 사용해야 합니다.  
   
-     
-  **의** 트랜잭션 로그 전달 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 인터페이스는 로그 전달 구성별로 하나의 기본 데이터베이스만 지원합니다. 따라서 새로운 주 서버를 기본 데이터베이스로 설정하려면 저장 프로시저를 사용해야 합니다.  
+     **의** 트랜잭션 로그 전달 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 인터페이스는 로그 전달 구성별로 하나의 기본 데이터베이스만 지원합니다. 따라서 새로운 주 서버를 기본 데이터베이스로 설정하려면 저장 프로시저를 사용해야 합니다.  
   
 7.  원래의 주 서버로 되돌리면 수동 장애 조치를 추가로 수행합니다.  
   

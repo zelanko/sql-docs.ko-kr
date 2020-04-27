@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0626ce7dee34ed21aad3e902e3c3f555f27ab97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813560"
 ---
 # <a name="start-data-movement-on-an-alwayson-secondary-database-sql-server"></a>AlwaysOn 보조 데이터베이스에서 데이터 이동 시작(SQL Server)
@@ -31,16 +31,16 @@ ms.locfileid: "62813560"
   
     -   RESTORE WITH NORECOVERY를 사용하여 주 데이터베이스의 최신 데이터베이스 백업을 수동으로 복원한 다음 RESTORE WITH NORECOVERY를 사용하여 각 후속 로그 백업을 복원합니다. 가용성 그룹의 보조 복제본을 호스팅하는 모든 서버 인스턴스에서 이 복원 시퀀스를 수행합니다.  
   
-         **자세한 내용은 다음을 참조하세요.**  
+         **자세한 내용:**  
   
-         [가용성 그룹에 대한 보조 데이터베이스 준비&#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+         [가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
     -   하나 이상의 로그 전달 주 데이터베이스를 가용성 그룹에 추가하는 경우 로그 전달에서 하나 이상의 해당 보조 데이터베이스를 AlwaysOn 가용성 그룹으로 마이그레이션할 수 있습니다. 로그 전달 보조 데이터베이스를 마이그레이션하려면 해당 데이터베이스가 주 데이터베이스와 동일한 이름을 사용하고 가용성 그룹에 대한 보조 복제본을 호스팅하는 서버 인스턴스에 있어야 합니다. 또한 주 복제본이 백업에 기본적으로 사용되고 백업 수행 대상이 되도록, 즉 백업 우선 순위가 0보다 크도록 가용성 그룹을 구성해야 합니다. 주 데이터베이스에서 백업 작업이 실행되고 나면 백업 작업을 사용하지 않도록 설정하고, 지정된 보조 데이터베이스에서 복원 작업이 실행되고 나면 복원 작업을 사용하지 않도록 설정해야 합니다.  
   
         > [!NOTE]  
         >  가용성 그룹에 대해 모든 보조 데이터베이스를 만든 후에는 보조 복제본에서 백업을 수행할 경우 가용성 그룹의 자동화된 백업 기본 설정을 다시 구성해야 합니다.  
   
-         **자세한 내용은 다음을 참조하세요.**  
+         **자세한 내용:**  
   
          [로그 전달에서 AlwaysOn 가용성 그룹 &#40;SQL Server로 마이그레이션하기 위한 필수 구성 요소&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
@@ -48,11 +48,11 @@ ms.locfileid: "62813560"
   
 2.  새로 준비된 각 보조 데이터베이스를 최대한 빨리 가용성 그룹에 조인합니다.  
   
-     **자세한 내용은 다음을 참조하세요.**  
+     **자세한 내용:**  
   
      [가용성 그룹에 보조 데이터베이스 조인&#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
-##  <a name="LaunchWiz"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> 관련 작업  
   
 -   [새 가용성 그룹 대화 상자 사용&#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

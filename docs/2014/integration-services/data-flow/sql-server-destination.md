@@ -19,26 +19,24 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 818f78cd0b38aba0a7201eb28f49eb573ba32672
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770716"
 ---
 # <a name="sql-server-destination"></a>SQL Server 대상
   SQL Server 대상은 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 및 뷰로 데이터를 대량 로드합니다. 원격 서버의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 액세스하는 패키지에서는 SQL Server 대상을 사용할 수 없습니다. 이러한 패키지에서는 대신 OLE DB 대상을 사용해야 합니다. 자세한 내용은 [OLE DB Destination](ole-db-destination.md)을 참조하세요.  
   
 ## <a name="permissions"></a>사용 권한  
- SQL Server 대상이 포함된 패키지를 실행하는 사용자는 "전역 개체 만들기" 권한이 있어야 합니다. 
-  **관리 도구** 메뉴에서 연 로컬 보안 정책 도구를 사용하여 사용자에게 이 사용 권한을 부여할 수 있습니다. SQL Server 대상을 사용하는 패키지를 실행할 때 오류 메시지가 표시되면 패키지를 실행 중인 계정에 "전역 개체 만들기" 권한이 있는지 확인합니다.  
+ SQL Server 대상이 포함된 패키지를 실행하는 사용자는 "전역 개체 만들기" 권한이 있어야 합니다. **관리 도구** 메뉴에서 연 로컬 보안 정책 도구를 사용하여 사용자에게 이 사용 권한을 부여할 수 있습니다. SQL Server 대상을 사용하는 패키지를 실행할 때 오류 메시지가 표시되면 패키지를 실행 중인 계정에 "전역 개체 만들기" 권한이 있는지 확인합니다.  
   
 ## <a name="bulk-inserts"></a>대량 삽입  
  SQL Server 대상을 사용하여 원격 SQL Server 데이터베이스에 데이터를 대량으로 로드하려고 하면 "OLE DB 레코드를 사용할 수 있습니다. 원본: "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult: 0x80040E14 설명: "SSIS 파일 매핑 개체 'Global\DTSQLIMPORT'을(를) 열 수 없으므로 대량 로드할 수 없습니다. 운영 체제 오류 코드 2(시스템에서 지정한 파일을 찾을 수 없습니다.)입니다. Windows 보안을 통해 로컬 서버에 액세스하고 있는지 확인하십시오.""와 유사한 오류 메시지가 나타납니다.  
   
  SQL Server 대상은 대량 삽입 태스크가 제공하는 것과 동일하게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 고속 데이터 삽입 기능을 제공하지만 SQL Server 대상을 사용하면 데이터가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 로드되기 전에 패키지에서 열 데이터에 변환을 적용할 수 있습니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 데이터를 로드하려면 OLE DB 대상 대신 SQL Server 대상을 사용하는 것이 좋습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 데이터를 로드하려면 OLE DB 대상 대신 SQL Server 대상을 사용하는 것이 좋습니다.  
   
 ### <a name="bulk-insert-options"></a>대량 삽입 옵션  
  SQL Server 대상이 빠른 로드 데이터 액세스 모드를 사용할 경우 다음과 같은 빠른 로드 옵션을 지정할 수 있습니다.  
@@ -85,25 +83,23 @@ ms.locfileid: "62770716"
   
  이 대상은 OLE DB 연결 관리자를 사용하여 데이터 원본에 연결하며 연결 관리자가 사용할 OLE DB Provider를 지정합니다. 자세한 내용은 [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md)를 참조하세요.  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트는 또한 OLE DB 연결 관리자를 만들 수 있는 데이터 원본 개체를 제공합니다. 그러면 SQL Server 대상에서 데이터 원본과 데이터 원본 뷰를 사용할 수 있습니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트는 또한 OLE DB 연결 관리자를 만들 수 있는 데이터 원본 개체를 제공합니다. 그러면 SQL Server 대상에서 데이터 원본과 데이터 원본 뷰를 사용할 수 있습니다.  
   
  SQL Server 대상은 하나의 입력을 갖습니다. 오류 출력은 지원하지 않습니다.  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- 
-  **SQL Server 대상 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ **SQL Server 대상 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [SQL 대상 편집기 &#40;연결 관리자 페이지&#41;](../sql-destination-editor-connection-manager-page.md)  
+-   [SQL 대상 편집기&#40;연결 관리자 페이지&#41;](../sql-destination-editor-connection-manager-page.md)  
   
--   [SQL 대상 편집기 &#40;매핑 페이지&#41;](../sql-destination-editor-mappings-page.md)  
+-   [SQL 대상 편집기&#40;매핑 페이지&#41;](../sql-destination-editor-mappings-page.md)  
   
--   [SQL 대상 편집기 &#40;고급 페이지&#41;](../sql-destination-editor-advanced-page.md)  
+-   [SQL 대상 편집기&#40;고급 페이지&#41;](../sql-destination-editor-advanced-page.md)  
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](../common-properties.md)  
+-   [공용 속성](../common-properties.md)  
   
 -   [SQL Server 대상 사용자 지정 속성](sql-server-destination-custom-properties.md)  
   

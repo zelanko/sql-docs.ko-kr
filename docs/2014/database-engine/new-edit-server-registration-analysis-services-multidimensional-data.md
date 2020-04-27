@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9d3d13ac64edbdbec4f131a09949e5724ab2932b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774917"
 ---
 # <a name="new-or-edit-server-registration-general-tab-analysis-services---multidimensional-data"></a>새 서버 등록 또는 서버 등록 편집(일반 탭)(Analysis Services - 다차원 데이터)
@@ -43,17 +43,16 @@ ms.locfileid: "62774917"
  **암호 기억**  
  이 릴리스에서는 이 옵션을 사용할 수 없습니다.  
   
- **등록 된 서버 이름**  
+ **등록된 서버 이름**  
  등록된 서버에 표시할 이름입니다. 이 이름은 **서버 이름** 상자와 일치할 필요가 없습니다.  
   
- **등록 된 서버 설명**  
+ **등록된 서버 설명**  
  서버에 대한 선택적 설명을 입력합니다.  
   
- **테스트할**  
- 
-  **서버 이름**에서 선택한 서버 연결을 테스트하려면 클릭합니다.  
+ **테스트**  
+ **서버 이름**에서 선택한 서버 연결을 테스트하려면 클릭합니다.  
   
- **Save**  
+ **저장**  
  등록된 서버 설정을 저장하려면 클릭합니다.  
   
   

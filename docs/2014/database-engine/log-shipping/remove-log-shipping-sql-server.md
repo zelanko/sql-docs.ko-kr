@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 270ca92b723aa67938dc1f56d72425d7e1c98040
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774997"
 ---
 # <a name="remove-log-shipping-sql-server"></a>로그 전달 제거(SQL Server)
@@ -38,14 +38,14 @@ ms.locfileid: "62774997"
   
 -   [관련 작업](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  로그 전달 저장 프로시저를 사용하려면 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-remove-log-shipping"></a>로그 전달을 제거하려면  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62774997"
   
 5.  **확인** 을 클릭하여 주 데이터베이스의 로그 전달을 제거합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-remove-log-shipping"></a>로그 전달을 제거하려면  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62774997"
   
 6.  로그 전달 보조 데이터베이스를 더 이상 사용하지 않으려는 경우 선택적으로 보조 서버에서 해당 로그 전달 보조 데이터베이스를 삭제할 수 있습니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [SQL Server 2014 &#40;Transact-sql&#41;로그 전달 업그레이드](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 147fe717919035c365ef2e3507e46a4323694570
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779374"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-2014-setup"></a>SQL Server 2014 인스턴스에 기능 추가(설치 프로그램)
@@ -37,7 +37,7 @@ ms.locfileid: "62779374"
   
 ## <a name="procedures"></a>프로시저  
   
-#### <a name="to-add-features-to-an-instance-of-includesscurrentincludessscurrent-mdmd"></a>명령 프롬프트에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#### <a name="to-add-features-to-an-instance-of-sscurrent"></a>명령 프롬프트에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 미디어를 넣고 루트 폴더에서 setup.exe를 두 번 클릭합니다. 네트워크 공유에서 설치하려면 공유에서 루트 폴더로 이동한 다음 setup.exe를 두 번 클릭합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 설치 대화 상자가 나타나면 [!INCLUDE[clickOK](../../includes/clickok-md.md)] . 필수 구성 요소를 설치한 다음 **취소** 를 클릭해서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치를 종료합니다.  
   

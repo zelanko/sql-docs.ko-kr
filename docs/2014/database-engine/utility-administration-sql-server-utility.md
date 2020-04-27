@@ -11,15 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773755"
 ---
 # <a name="utility-administration-sql-server-utility"></a>유틸리티 관리(SQL Server 유틸리티)
-  유틸리티 관리 탭을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티의 정책, 보안 및 데이터 웨어하우스 설정을 관리할 수 있습니다. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 개념에 대한 자세한 내용은 [SQL Server 유틸리티 기능 및 태스크](../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요.  
+  유틸리티 관리 탭을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티의 정책, 보안 및 데이터 웨어하우스 설정을 관리할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 개념에 대한 자세한 내용은 [SQL Server 유틸리티 기능 및 태스크](../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
  정책 탭 - 정책 탭을 사용하여 전역 모니터링 정책을 보거나 지정할 수 있습니다.  
@@ -63,7 +62,7 @@ ms.locfileid: "62773755"
 -   컴퓨터 볼륨 공간 사용률의 기본 최소값은 0%입니다.  
   
  매우 불안정한 리소스에 의해 발생하는 정책 위반 노이즈를 줄입니다. 이 기능의 컨트롤을 확장하려면 오른쪽에 표시되는 아래쪽 화살표를 클릭합니다.  
- 자세한 내용은 [CPU 사용 정책에서 노이즈 줄이기&#40;SQL Server 유틸리티&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)를 참조하세요.  
+ 자세한 내용은 [CPU 사용 정책에서 노이즈 줄이기 &#40;SQL Server 유틸리티](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md) 를 참조 하세요&#41;  
   
 ## <a name="uielement-list"></a>UIElement 목록  
  보안 탭 - UCP를 관리하거나 읽을 수 있는 권한이 있는 로그인 이름을 표시합니다.  
@@ -71,8 +70,7 @@ ms.locfileid: "62773755"
  Utility 읽기 역할에 추가될 UCP에서 로그인을 선택합니다.  
  Utility 읽기 권한이 있는 사용자 계정으로 다음과 같은 작업을 할 수 있습니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티에 연결합니다.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티에 연결합니다.  
   
 -   SSMS의 유틸리티 탐색기에서 모든 뷰포인트를 봅니다.  
   
@@ -80,15 +78,13 @@ ms.locfileid: "62773755"
   
  유틸리티 관리자는 SQL Server Utility에 SQL Server 인스턴스를 등록하거나 제거할 수 있으며 관리되는 인스턴스의 정책을 수정하고 UCP의 관리 설정을 수정할 수 있습니다.  
   
- 유틸리티 관리자가 되려면 SQL Server 인스턴스에 대한 sysadmin 권한이 있어야 합니다. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP에 대한 사용자 계정을 추가하거나 변경하려면 SSMS의 개체 탐색기를 사용하여 SQL Server UCP 인스턴스의 서버 로그인에 사용자를 추가합니다. 자세한 내용은 [sp_addlogin&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql)을 참조하세요.  
+ 유틸리티 관리자가 되려면 SQL Server 인스턴스에 대한 sysadmin 권한이 있어야 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP에 대한 사용자 계정을 추가하거나 변경하려면 SSMS의 개체 탐색기를 사용하여 SQL Server UCP 인스턴스의 서버 로그인에 사용자를 추가합니다. 자세한 내용은 [sp_addlogin&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql)을 참조하세요.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
  데이터 웨어하우스 탭 - 유틸리티 관리 데이터 웨어하우스에 대한 구성 세부 정보를 표시합니다.  
   
  데이터 보존  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 관리되는 인스턴스에 대해 수집된 사용률 정보의 데이터 보존 기간을 지정합니다. 기본 기간은 1년입니다. 최소값은 1개월입니다. 지원되는 가장 긴 기간은 2년입니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 관리되는 인스턴스에 대해 수집된 사용률 정보의 데이터 보존 기간을 지정합니다. 기본 기간은 1년입니다. 최소값은 1개월입니다. 지원되는 가장 긴 기간은 2년입니다.  
   
  유틸리티 데이터 웨어하우스 구성 정보  
  다음 구성 설정은 이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]릴리스에서 구성할 수 없습니다.  
@@ -107,8 +103,8 @@ ms.locfileid: "62773755"
   
 ## <a name="see-also"></a>참고 항목  
  [유틸리티 대시보드 &#40;SQL Server 유틸리티&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
- [배포된 데이터 계층 애플리케이션 세부 정보&#40;SQL Server 유틸리티&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
- [관리되는 인스턴스 세부 정보&#40;SQL Server 유틸리티&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
+ [배포 된 데이터 계층 응용 프로그램 세부 정보 &#40;SQL Server 유틸리티&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
+ [Managed Instance 세부 정보 &#40;SQL Server 유틸리티&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [SQL Server 유틸리티에서 SQL Server 인스턴스 모니터링](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)  
   
   

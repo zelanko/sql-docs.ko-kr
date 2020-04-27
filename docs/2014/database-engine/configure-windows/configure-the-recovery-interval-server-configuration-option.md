@@ -20,15 +20,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 89449cbc31e1ec36fa37a5bb36b1f505cdd2e14d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62787151"
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>recovery interval 서버 구성 옵션 구성
-  이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 복구 간격 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **복구 간격** 옵션은 데이터베이스를 복구하는 데 필요한 시간의 상한값을 정의합니다. 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서는 이 옵션에 지정된 값을 사용하여 지정된 데이터베이스에 대해 [자동 검사점](../../relational-databases/logs/database-checkpoints-sql-server.md) 을 실행하는 대략적인 빈도를 결정합니다.  
+  이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 복구 간격 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **복구 간격** 옵션은 데이터베이스를 복구하는 데 필요한 시간의 상한값을 정의합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서는 이 옵션에 지정된 값을 사용하여 지정된 데이터베이스에 대해 [자동 검사점](../../relational-databases/logs/database-checkpoints-sql-server.md) 을 실행하는 대략적인 빈도를 결정합니다.  
   
  기본 복구 간격 값은 0이며 이는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 복구 간격을 자동으로 구성함을 의미합니다. 일반적으로 기본 복구 간격을 사용하면 활성 데이터베이스의 경우 자동 검사점의 실행 간격은 약 1분이고 복구 시간은 1분 미만입니다. 값이 높을수록 최대 복구 시간(분)의 근사치가 더 커집니다. 예를 들어 복구 간격으로 3을 설정하면 최대 복구 시간이 약 3분이 됩니다.  
   
@@ -50,13 +49,13 @@ ms.locfileid: "62787151"
   
 -   **후속 작업:**  [복구 간격 옵션을 구성한 후](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   복구 간격은 기본 대상 복구 시간(0)을 사용하는 데이터베이스에만 영향을 줍니다. 데이터베이스에 대한 서버 복구 간격을 재정의하려면 데이터베이스에 기본이 아닌 대상 복구 시간을 구성합니다. 자세한 내용은 [데이터베이스의 대상 복구 시간 변경&#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)서버 구성 옵션을 구성하는 방법에 대해 설명합니다.  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   이 옵션은 고급 옵션으로, 숙련된 데이터베이스 관리자나 공인된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기술 지원 담당자만 변경해야 합니다.  
   
@@ -64,12 +63,12 @@ ms.locfileid: "62787151"
   
 -   **sp_configure** 를 사용하여 **복구 간격** 옵션 값을 60분 이상으로 변경하는 경우 RECONFIGURE WITH OVERRIDE를 지정하세요. WITH OVERRIDE를 지정하면 유효하지 않은 값 또는 권장되지 않는 값이 있는지 확인하는 구성 값 검사가 수행되지 않습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경하거나 RECONFIGURE 문을 실행하는 두 매개 변수를 사용하여 **sp_configure** 를 실행하려면 사용자에게 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **복구 간격을 설정하려면**  
   
 1.  개체 탐색기에서 서버 인스턴스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
@@ -78,7 +77,7 @@ ms.locfileid: "62787151"
   
 3.  **복구**의 **복구 간격(분)** 입력란에 0부터 32767까지 범위의 값을 입력하거나 선택하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시작 시 각 데이터베이스를 복구하는 데 걸리는 최대 시간을 분으로 설정합니다. 기본값 0을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 구성합니다. 기본값을 설정하면 실제 운영 시 1분 이하의 복구 시간이 사용되고 활성 데이터베이스의 경우 약 1분 간격으로 검사점이 실행됩니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-set-the-recovery-interval"></a>복구 간격을 설정하려면  
   
@@ -104,7 +103,7 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: recovery internal 옵션을 구성한 후  
+##  <a name="follow-up-after-you-configure-the-recovery-internal-option"></a><a name="FollowUp"></a> 후속 작업: recovery internal 옵션을 구성한 후  
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 752796caafa86ece1b471beb25a77ea381497409
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774418"
 ---
 # <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)
@@ -31,20 +31,19 @@ ms.locfileid: "62774418"
   
      [보안](#Security)  
   
--   [SQL Server Management Studio를 사용 하 여 SQL Server 에이전트 서비스의 SQL Server 별칭을 설정 하려면](#SSMSProcedure)  
+-   [SQL Server Management Studio를 사용하여 SQL Server 에이전트 서비스에 대한 SQL Server 별칭을 설정하려면](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 로컬 인스턴스를 참조하는 별칭을 선택하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에이전트가 제대로 작동하지 않습니다.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 로컬 인스턴스를 참조하는 별칭을 선택하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에이전트가 제대로 작동하지 않습니다.  
   
 -   사용 권한이 있는 경우에만 개체 탐색기에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 노드가 표시됩니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  해당 기능을 수행하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 **sysadmin** 고정 서버 역할 멤버인 계정의 자격 증명을 사용하도록 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에이전트를 구성해야 합니다. 이 계정에는 다음과 같은 Windows 사용 권한이 필요합니다.  
   
 -   서비스로 로그온(SeServiceLogonRight)  
@@ -57,19 +56,17 @@ ms.locfileid: "62774418"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 서비스 계정에 필요한 windows 사용 권한에 대 한 자세한 내용은 [SQL Server 에이전트 서비스에 대 한 계정 선택](../ssms/agent/select-an-account-for-the-sql-server-agent-service.md) 및 [Windows 서비스 계정 및 권한 구성](configure-windows/configure-windows-service-accounts-and-permissions.md)을 참조 하세요.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-set-a-sql-server-alias-for-the-sql-server-agent-service"></a>SQL Server 에이전트 서비스에 대한 SQL Server 별칭을 설정하려면  
   
-1.  
-  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
 2.  **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
 3.  **SQL Server 에이전트 속성**_server_name_ 대화 상자의 **페이지 선택**에서 **연결**을 선택 하 고  
   
-4.  
-  **로컬 호스트 서버 별칭** 상자에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트에서 연결할 서버의 별칭을 입력합니다.  
+4.  **로컬 호스트 서버 별칭** 상자에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트에서 연결할 서버의 별칭을 입력합니다.  
   
 5.  **확인**을 클릭합니다.  
   

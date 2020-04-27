@@ -21,14 +21,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dccae9216609e80b0eb87582a78b94cd6e7b2f0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62767693"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services(SSIS) 패키지
-  패키지는 연결, 제어 흐름 요소, 데이터 흐름 요소, 이벤트 처리기, 변수, 매개 변수 및 구성으로 구성 된 컬렉션으로,에서 제공 하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 그래픽 디자인 도구를 사용 하 여 조합 하거나 프로그래밍 방식으로 작성 합니다.  그런 다음 완성된 패키지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소 또는 파일 시스템에 저장하거나, ssISnoversion 프로젝트를 [!INCLUDE[ssIS](../includes/ssis-md.md)] 서버에 배포할 수 있습니다. 패키지는 검색, 실행 및 저장되는 작업 단위입니다.  
+  패키지는 연결, 제어 흐름 요소, 데이터 흐름 요소, 이벤트 처리기, 변수, 매개 변수 및 구성으로 이루어진 컬렉션으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 제공하는 그래픽 디자인 도구를 사용하여 조합하거나 프로그래밍 방식으로 작성합니다.  그런 다음 완성된 패키지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소 또는 파일 시스템에 저장하거나, ssISnoversion 프로젝트를 [!INCLUDE[ssIS](../includes/ssis-md.md)] 서버에 배포할 수 있습니다. 패키지는 검색, 실행 및 저장되는 작업 단위입니다.  
   
  처음으로 패키지를 만들면 아무 것도 포함되어 있지 않은 빈 개체입니다. 패키지에 기능을 추가하려면 하나의 제어 흐름과 선택적으로 하나 이상의 데이터 흐름을 패키지에 추가합니다.  
   
@@ -45,8 +45,7 @@ ms.locfileid: "62767693"
   
  데이터 흐름은 데이터를 추출 및 로드하는 원본과 대상, 데이터를 수정 및 확장하는 변환, 원본, 변환 및 대상을 연결하는 경로로 구성됩니다. 패키지에 데이터 흐름을 추가하려면 패키지 제어 흐름에 데이터 흐름 태스크가 포함되어 있어야 합니다. 데이터 흐름 태스크는 데이터 흐름을 만들고 순서를 지정하고 실행하는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지의 실행 파일입니다. 패키지의 각 데이터 흐름 태스크에 대해 데이터 흐름 엔진의 별도 인스턴스가 열립니다. 자세한 내용은 [Data Flow Task](control-flow/data-flow-task.md) 및 [Data Flow](data-flow/data-flow.md)를 참조하세요.  
   
- 패키지는 일반적으로 하나 이상의 연결 관리자를 포함합니다. 연결 관리자는 패키지의 태스크, 변환 및 이벤트 처리기에 사용되는 데이터에 액세스하기 위한 연결 문자열을 정의하는 패키지와 데이터 원본 간의 연결입니다. 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 텍스트 및 XML 파일과 같은 데이터 원본, 관계형 데이터베이스, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스 및 프로젝트에 대한 연결 형식이 포함되어 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](connection-manager/integration-services-ssis-connections.md)을 참조하세요.  
+ 패키지는 일반적으로 하나 이상의 연결 관리자를 포함합니다. 연결 관리자는 패키지의 태스크, 변환 및 이벤트 처리기에 사용되는 데이터에 액세스하기 위한 연결 문자열을 정의하는 패키지와 데이터 원본 간의 연결입니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 텍스트 및 XML 파일과 같은 데이터 원본, 관계형 데이터베이스, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스 및 프로젝트에 대한 연결 형식이 포함되어 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](connection-manager/integration-services-ssis-connections.md)을 참조하세요.  
   
 ## <a name="package-templates"></a>패키지 템플릿  
  패키지는 기본 기능을 공유하는 패키지를 작성하는 템플릿으로 자주 사용됩니다. 기본 패키지를 작성한 다음 복사하거나 해당 패키지가 템플릿이 되도록 지정할 수 있습니다. 예를 들어 파일을 다운로드하고 복사한 다음 데이터를 추출하는 패키지에 한 폴더에 있는 파일을 열거하는 Foreach 루프의 FTP 및 파일 시스템 태스크가 포함될 수 있습니다. 또한 데이터에 액세스할 플랫 파일 연결 관리자 및 데이터를 추출할 플랫 파일 원본이 포함될 수 있습니다. 데이터의 대상은 다양하며 기본 패키지에서 복사된 후 각각의 새 패키지에 추가됩니다. 또한 패키지를 만든 다음 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 추가할 새 패키지의 템플릿으로 사용할 수 있습니다. 자세한 내용은 [Create Packages in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md)을 참조하세요.  
@@ -67,15 +66,15 @@ ms.locfileid: "62767693"
  다른 컴퓨터에 패키지를 설치하면 구성이 저장되어 패키지와 함께 배포됩니다. 패키지를 설치할 때 구성의 값을 업데이트하여 다른 환경에서 패키지를 지원할 수 있습니다. 자세한 내용은 [패키지 구성 만들기](../../2014/integration-services/create-package-configurations.md)를 참조하세요.  
   
 ### <a name="logging-and-log-providers"></a>로깅 및 로그 공급자  
- 로그는 패키지 실행 시 수집되는 패키지에 대한 정보 컬렉션입니다. 예를 들어 로그는 패키지 실행의 시작 시간과 종료 시간을 제공할 수 있습니다. 로그 공급자는 패키지와 해당 컨테이너 및 태스크가 런타임 정보를 기록하는 데 사용할 수 있는 대상 유형과 형식을 정의합니다. 로그는 패키지와 연결되지만 패키지의 태스크와 컨테이너는 임의의 패키지 로그에 정보를 기록할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 로깅을 위한 다양 한 기본 제공 로그 공급자가 포함 되어 있습니다. 예를 들어 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 대한 로그 공급자와 텍스트 파일이 있습니다. 사용자 지정 로그 공급자를 만들어 로깅에 사용할 수도 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](performance/integration-services-ssis-logging.md)을 참조하세요.  
+ 로그는 패키지 실행 시 수집되는 패키지에 대한 정보 컬렉션입니다. 예를 들어 로그는 패키지 실행의 시작 시간과 종료 시간을 제공할 수 있습니다. 로그 공급자는 패키지와 해당 컨테이너 및 태스크가 런타임 정보를 기록하는 데 사용할 수 있는 대상 유형과 형식을 정의합니다. 로그는 패키지와 연결되지만 패키지의 태스크와 컨테이너는 임의의 패키지 로그에 정보를 기록할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 로깅을 위한 다양한 기본 제공 로그 공급자가 포함되어 있습니다. 예를 들어 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 대한 로그 공급자와 텍스트 파일이 있습니다. 사용자 지정 로그 공급자를 만들어 로깅에 사용할 수도 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](performance/integration-services-ssis-logging.md)을 참조하세요.  
   
-### <a name="variables"></a>variables  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]는 시스템 변수와 사용자 정의 변수를 지원 합니다. 시스템 변수는 런타임 시 패키지 개체에 대한 유용한 정보를 제공하며 사용자 정의 변수는 패키지의 사용자 지정 시나리오를 지원합니다. 식, 스크립트 및 구성에 두 유형의 변수를 모두 사용할 수 있습니다.  
+### <a name="variables"></a>변수  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 시스템 변수와 사용자 정의 변수를 지원합니다. 시스템 변수는 런타임 시 패키지 개체에 대한 유용한 정보를 제공하며 사용자 정의 변수는 패키지의 사용자 지정 시나리오를 지원합니다. 식, 스크립트 및 구성에 두 유형의 변수를 모두 사용할 수 있습니다.  
   
  패키지 수준 변수에는 패키지에 사용 가능한 미리 정의된 시스템 변수와 패키지 범위 내의 사용자 정의 변수가 포함됩니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)을 참조하세요.  
   
 ### <a name="parameters"></a>매개 변수  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]매개 변수를 사용 하 여 패키지 실행 시 패키지 내의 속성에 값을 할당할 수 있습니다. 프로젝트 수준에서 *프로젝트 매개 변수* 를 만들고 패키지 수준에서 *패키지 매개 변수* 를 만들 수 있습니다. 프로젝트 매개 변수는 프로젝트가 수신하는 외부 입력을 프로젝트 내 하나 이상의 패키지에 제공하기 위해 사용됩니다. 패키지 매개 변수를 사용하면 패키지를 편집하여 다시 배포할 필요 없이 패키지 실행을 수정할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 매개 변수](integration-services-ssis-package-and-project-parameters.md)를 참조하세요.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 매개 변수를 사용하여 패키지 실행 시 패키지 내의 속성에 값을 할당할 수 있습니다. 프로젝트 수준에서 *프로젝트 매개 변수* 를 만들고 패키지 수준에서 *패키지 매개 변수* 를 만들 수 있습니다. 프로젝트 매개 변수는 프로젝트가 수신하는 외부 입력을 프로젝트 내 하나 이상의 패키지에 제공하기 위해 사용됩니다. 패키지 매개 변수를 사용하면 패키지를 편집하여 다시 배포할 필요 없이 패키지 실행을 수정할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 매개 변수](integration-services-ssis-package-and-project-parameters.md)를 참조하세요.  
   
 ## <a name="package-properties-that-support-extended-features"></a>확장 기능을 지원하는 패키지 속성  
  패키지 개체를 구성하여 검사점에서 패키지 다시 시작, 디지털 인증서로 패키지 서명, 패키지 보호 수준 설정, 트랜잭션을 사용하여 데이터 무결성 보장 등의 기능을 지원할 수 있습니다.  
@@ -92,22 +91,21 @@ ms.locfileid: "62767693"
 ## <a name="custom-log-entries-available-on-the-package"></a>패키지에 사용할 수 있는 사용자 지정 로그 항목  
  다음 표에서는 패키지에 대한 사용자 지정 로그 항목을 나열합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](performance/integration-services-ssis-logging.md) 및 [로깅할 메시지 사용자 지정](../../2014/integration-services/custom-messages-for-logging.md)을 참조하세요.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |`PackageStart`|패키지 실행이 시작되었음을 나타냅니다.<br /><br /> 참고: 이 로그 항목은 로그에 자동으로 기록되며 제외할 수 없습니다.|  
 |`PackageEnd`|패키지가 완료되었음을 나타냅니다.<br /><br /> 참고: 이 로그 항목은 로그에 자동으로 기록되며 제외할 수 없습니다.|  
 |`Diagnostic`|동시에 실행될 수 있는 실행 파일 수처럼 패키지 실행에 영향을 주는 시스템 구성에 대한 정보를 제공합니다.|  
   
 ## <a name="configuration-of-packages"></a>패키지 구성  
- **의**속성[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 창을 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 의 **속성** 창을 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]를 사용하여 이러한 속성을 설정하는 방법은 [패키지 속성 설정](set-package-properties.md)을 참조하세요.  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]를 사용하여 이러한 속성을 설정하는 방법은 [패키지 속성 설정](set-package-properties.md)을 참조하세요.  
   
  이러한 속성을 프로그래밍 방식으로 설정하는 방법은 <xref:Microsoft.SqlServer.Dts.Runtime.Package>을 참조하세요.  
   
 ## <a name="related-tasks"></a>관련 작업  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 패키지를 만들기 [!INCLUDE[ssIS](../includes/ssis-md.md)] 위한 [!INCLUDE[ssIS](../includes/ssis-md.md)] 개체 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 모델 외에도 두 개의 그래픽 도구인 디자이너와 가져오기 및 내보내기 마법사가 포함 되어 있습니다. 자세한 내용은 다음 항목을 참조하십시오.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 개체 모델 외에도 두 개의 패키지 작성용 그래픽 도구인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 디자이너와 [!INCLUDE[ssIS](../includes/ssis-md.md)] 가져오기 및 내보내기 마법사가 포함되어 있습니다. 자세한 내용은 다음 항목을 참조하십시오.  
   
 -   [SQL Server 가져오기 및 내보내기 마법사 실행](import-export-data/start-the-sql-server-import-and-export-wizard.md)  
   

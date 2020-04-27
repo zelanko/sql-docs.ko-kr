@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9a7bdca770bccaac50da1ac6a7688eabd335e20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791867"
 ---
 # <a name="availability-group-is-not-ready-for-automatic-failover"></a>가용성 그룹에 대해 자동 장애 조치(Failover)가 준비되지 않음
@@ -28,17 +28,17 @@ ms.locfileid: "62791867"
 |||  
 |-|-|  
 |**정책 이름**|가용성 그룹 자동 장애 조치(Failover) 준비|  
-|**문제점**|가용성 그룹에 대해 자동 장애 조치(Failover)가 준비되지 않음|  
-|**범주**|**심각**|  
-|**패싯**|가용성 그룹|  
+|**문제**|가용성 그룹에 대해 자동 장애 조치(Failover)가 준비되지 않음|  
+|**범주**|**위험**|  
+|**패싯에**|가용성 그룹|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
  이 정책은 가용성 그룹에 장애 조치(failover)가 준비된 보조 복제본이 하나 이상 있는지 확인합니다. 주 복제본의 장애 조치(Failover) 모드가 자동이지만 가용성 그룹에 장애 조치(Failover)가 준비된 보조 복제본이 하나도 없는 경우 이 정책은 비정상 상태이며 경고가 발생합니다.  
   
  적어도 하나의 보조 복제본이 자동 장애 조치(Failover)가 준비된 상태이면 정책은 정상 상태입니다.  
   
 > [!NOTE]  
->  이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]릴리스의 경우 가능한 원인 및 해결 방법에 대한 자세한 내용은 TechNet Wiki의 [가용성 그룹에 대해 자동 장애 조치(Failover)가 준비되지 않음](https://go.microsoft.com/fwlink/p/?LinkId=220851) 을 참조하세요.  
+>   이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]릴리스의 경우 가능한 원인 및 해결 방법에 대한 자세한 내용은 TechNet Wiki의 [가용성 그룹에 대해 자동 장애 조치(Failover)가 준비되지 않음](https://go.microsoft.com/fwlink/p/?LinkId=220851) 을 참조하십시오.  
   
 ## <a name="possible-causes"></a>가능한 원인  
  가용성 그룹에 대해 자동 장애 조치(Failover)가 준비되지 않았습니다. 주 복제본은 자동 장애 조치(Failover)를 사용하도록 구성되어 있지만 보조 복제본은 자동 장애 조치(Failover)를 사용하도록 구성되어 있지 않습니다. 자동 장애 조치(Failover)를 사용하도록 구성된 보조 복제본을 사용할 수 없거나 해당 데이터 동기화 상태가 현재 SYNCHRONIZED가 아닙니다.  
@@ -52,6 +52,6 @@ ms.locfileid: "62791867"
   
 ## <a name="see-also"></a>참고 항목  
  [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 대시보드 &#40;SQL Server Management Studio를 사용&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [AlwaysOn 대시보드 사용&#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

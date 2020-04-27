@@ -15,25 +15,23 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813196"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>전체 텍스트 검색의 동작 변경
   이 항목에서는 전체 텍스트 검색의 동작 변경 내용에 대해 설명합니다. 동작 변경 내용은 이전 버전의 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 와 비교해서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기능이 작동하고 상호 작용하는 방법에 영향을 줍니다.  
   
-## <a name="behavior-changes-in-full-text-search-in-includesssql14includessssql14-mdmd"></a>전체 텍스트 검색의 동작 변경 내용[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="behavior-changes-in-full-text-search-in-sssql14"></a>전체 텍스트 검색의 동작 변경 내용[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  향후 정보 제공 예정  
   
-## <a name="behavior-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>전체 텍스트 검색의 동작 변경 내용[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
- 
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]는 미국 영어(LCID 1033) 및 영국 영어(LCID 2057)에 대해 새로운 버전의 단어 분리기 및 형태소 분석기를 설치합니다. 하지만 이전 동작을 유지하려는 경우 이러한 구성 요소의 이전 버전으로 전환할 수 있습니다. 자세한 내용은 [미국 영어 및 영국 영어에 사용되는 단어 분리기 변경](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)을 참조하세요.  
+## <a name="behavior-changes-in-full-text-search-in-sssql11"></a>전체 텍스트 검색의 동작 변경 내용[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]는 미국 영어(LCID 1033) 및 영국 영어(LCID 2057)에 대해 새로운 버전의 단어 분리기 및 형태소 분석기를 설치합니다. 하지만 이전 동작을 유지하려는 경우 이러한 구성 요소의 이전 버전으로 전환할 수 있습니다. 자세한 내용은 [미국 영어 및 영국 영어에 사용되는 단어 분리기 변경](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)을 참조하세요.  
   
 ### <a name="new-word-breakers-and-stemmers-installed"></a>새 단어 분리기 및 형태소 분석기 설치됨  
- 
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]는 전체 텍스트 검색 및 의미 체계 검색에서 사용되는 모든 단어 분리기 및 형태소 분석기를 업데이트합니다. 인덱스 내용과 쿼리 결과 사이에 일관성을 유지하기 위해 기존 전체 텍스트 인덱스를 다시 채우는 것이 좋습니다.  
+ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]는 전체 텍스트 검색 및 의미 체계 검색에서 사용되는 모든 단어 분리기 및 형태소 분석기를 업데이트합니다. 인덱스 내용과 쿼리 결과 사이에 일관성을 유지하기 위해 기존 전체 텍스트 인덱스를 다시 채우는 것이 좋습니다.  
   
 1.  영어에 대한 새로운 단어 분리기가 있습니다. 이전 동작을 유지해야 하는 경우 [Change the Word Breaker Used for US English and UK English](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)을 참조하십시오.  
   
@@ -96,8 +94,7 @@ ms.locfileid: "62813196"
   
 -   의미 없는 단어 및 의미 없는 단어 파일 대신 중지 단어 및 중지 목록이 사용됩니다. 중지 목록은 중지 단어에 대한 관리 태스크를 지원하고 서로 다른 서버 인스턴스와 환경 사이의 무결성을 높여 주는 데이터베이스 개체입니다. 자세한 내용은 [전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)를 참조하세요.  
   
--   
-  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 및 이후 버전에는 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]에 있는 언어 중 다수에 대한 새로운 단어 분리기가 포함되어 있습니다. 영어, 한국어, 태국어 및 중국어(모든 형태 포함)에 대한 단어 분리기만 동일하게 유지됩니다. 다른 언어의 경우에는 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 데이터베이스를 이상 버전으로 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 업그레이드할 때 전체 텍스트 카탈로그를 가져온 경우 전체 텍스트 카탈로그의 전체 텍스트 인덱스에 사용 되는 하나 이상의 언어를 가져온 단어 분리기와 약간 다르게 동작할 수 있는 새로운 단어 분리기와 연결할 수 있습니다. 쿼리와 전체 텍스트 인덱스 내용 간에 일관성을 유지 하는 방법에 대 한 자세한 내용은 [전체 텍스트 검색 업그레이드](../relational-databases/search/upgrade-full-text-search.md)를 참조 하세요.  
+-   [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 및 이후 버전에는 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]에 있는 언어 중 다수에 대한 새로운 단어 분리기가 포함되어 있습니다. 영어, 한국어, 태국어 및 중국어(모든 형태 포함)에 대한 단어 분리기만 동일하게 유지됩니다. 다른 언어의 경우에는 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 데이터베이스를 이상 버전으로 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 업그레이드할 때 전체 텍스트 카탈로그를 가져온 경우 전체 텍스트 카탈로그의 전체 텍스트 인덱스에 사용 되는 하나 이상의 언어를 가져온 단어 분리기와 약간 다르게 동작할 수 있는 새로운 단어 분리기와 연결할 수 있습니다. 쿼리와 전체 텍스트 인덱스 내용 간에 일관성을 유지 하는 방법에 대 한 자세한 내용은 [전체 텍스트 검색 업그레이드](../relational-databases/search/upgrade-full-text-search.md)를 참조 하세요.  
   
 -   새로운 FDHOST Launcher(MSSQLFDLauncher) 서비스가 추가되었습니다. 자세한 내용은 [전체 텍스트 검색 시작](../relational-databases/search/get-started-with-full-text-search.md)을 참조 하세요.  
   

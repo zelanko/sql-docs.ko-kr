@@ -15,25 +15,23 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812759"
 ---
 # <a name="change-source-control"></a>소스 제어 변경
   로컬에 저장된 솔루션 또는 프로젝트를 원본 제어 데이터베이스 폴더로 연결하는 연결 및 바인딩을 만들고 관리합니다.  
   
 ## <a name="dialog-box-access"></a>대화 상자 액세스  
- 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 솔루션 탐색기의 항목을 선택합니다. 
-  **파일** 메뉴에서 **소스 제어**를 클릭한 다음 **소스 제어 변경**을 클릭합니다.  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 솔루션 탐색기의 항목을 선택합니다. **파일** 메뉴에서 **소스 제어**를 클릭한 다음 **소스 제어 변경**을 클릭합니다.  
   
 > [!NOTE]  
 >  이 대화 상자는 솔루션 탐색기의 항목을 마우스 오른쪽 단추로 클릭해도 나타납니다.  
   
 ## <a name="options"></a>옵션  
- **바인딩**  
+ **바인딩하며**  
  선택한 항목을 지정한 원본 제어 서버 위치에 연결합니다. 예를 들어 이 단추를 사용하여 마지막으로 알려진 원본 제어 서버 폴더 및 데이터베이스에 바인딩할 수 있습니다. 최근에 사용한 서버 폴더 또는 데이터베이스를 찾을 수 없는 경우 다른 서버 폴더 또는 데이터베이스를 지정하라는 메시지가 나타납니다.  
   
  **찾아보기**  
@@ -79,7 +77,7 @@ ms.locfileid: "62812759"
 |----------------|---------------------|  
 |Valid|항목이 올바르게 바인딩되었으며 항목이 속하는 서버 폴더에 제대로 연결되었습니다.|  
 |올바르지 않음|항목이 잘못 바인딩되었거나 항목이 속하는 폴더에서 연결이 끊어졌습니다. 이 항목에 대해 **바인딩** 대신 **소스 제어에 추가** 명령을 사용하십시오.|  
-|알 수 없음|소스 제어 항목의 상태를 아직 확인하지 못했습니다.|  
+|Unknown|소스 제어 항목의 상태를 아직 확인하지 못했습니다.|  
 |제어 안 함|소스 제어에서 항목을 사용하고 있지 않습니다.|  
   
  **바인딩 해제**  

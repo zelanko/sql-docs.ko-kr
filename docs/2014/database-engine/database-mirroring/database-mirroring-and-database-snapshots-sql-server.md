@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3c643ad9a84c6afe5b6ff08fd6716753ef42f79e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807277"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>데이터베이스 미러링 및 데이터베이스 스냅샷(SQL Server)
@@ -69,7 +69,7 @@ ms.locfileid: "62807277"
   
      이 시점에서 프로그래밍 방식으로 새 클라이언트 연결을 최신 스냅샷으로 지정할 수 있습니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [데이터베이스 스냅샷 만들기&#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "62807277"
 
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 스냅샷&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
+ [데이터베이스 스냅숏은 SQL Server를 &#40;&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [데이터베이스 미러링 세션에 클라이언트 연결&#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0611b37de9af37e5ae8442514ac0720e5eb89e01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62772249"
 ---
 # <a name="add-copy-of-existing-package"></a>기존 패키지의 복사본 추가
@@ -48,6 +48,6 @@ ms.locfileid: "62772249"
  [패키지 가져오기 대화 상자 UI 참조](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [패키지 내보내기 대화 상자 UI 참조](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [패키지 저장](save-packages.md)   
- [SSIS 서비스&#41;&#40;패키지 가져오기 및 내보내기](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
+ [패키지 가져오기 및 내보내기&#40;SSIS 서비스&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

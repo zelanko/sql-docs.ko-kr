@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 263fdcd4b09c4acc6c2bba4d67629f867d64c6b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779495"
 ---
 # <a name="hash-indexes"></a>해시 인덱스
@@ -26,8 +26,7 @@ ms.locfileid: "62779495"
   
  해시 인덱스에 사용되는 해시 함수의 특징은 다음과 같습니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에는 모든 해시 인덱스에 사용되는 하나의 해시 함수가 있습니다.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에는 모든 해시 인덱스에 사용되는 하나의 해시 함수가 있습니다.  
   
 -   해시 함수는 결정적입니다. 동일한 인덱스 키가 항상 해시 인덱스의 동일한 버킷에 매핑됩니다.  
   

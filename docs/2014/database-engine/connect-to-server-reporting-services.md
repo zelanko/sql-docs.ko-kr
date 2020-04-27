@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 41e0ca3ee7ccaa7bb57e5667092c0660e35c4c52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808681"
 ---
 # <a name="connect-to-server-reporting-services"></a>서버에 연결(Reporting Services)
-  에 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]연결할 때이 대화 상자를 사용 하 여 옵션을 확인 하거나 지정할 수 있습니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에 연결할 때 이 대화 상자를 사용하여 옵션을 확인하거나 지정할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
  **서버 유형**  
@@ -31,17 +31,13 @@ ms.locfileid: "62808681"
   
  기본 모드로 실행되는 보고서 서버의 경우 연결할 보고서 서버 인스턴스를 지정합니다. 기본 인스턴스를 사용하는 경우 서버 이름은 대개 컴퓨터 이름입니다. 명명 된 인스턴스를 설치한 경우 서버 이름에 \<servername>\\<InstanceName\>형식으로 인스턴스 이름을 추가 합니다. Reporting Services는 백슬래시 문자를 사용하여 인스턴스 이름을 구분합니다.  
   
- SharePoint 통합 모드로 실행되는 보고서 서버의 경우 SharePoint 사이트를 지정해야 합니다. 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]와 통합된 사이트 컬렉션에 있는 아무 사이트나 지정할 수 있습니다. URL을 지정할 때는 HTTP 또는 HTTPS 접두사를 포함해야 합니다. Management Studio에서 보고서 서버 인스턴스에 연결하려면 SharePoint에 액세스할 수 있는 권한이 있어야 합니다. 할당 받은 권한 수준에 따라 보고 관리할 수 있는 항목이 결정됩니다. 자세한 내용은 [Management Studio에서 보고서 서버에 연결](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)을 참조하세요.  
+ SharePoint 통합 모드로 실행되는 보고서 서버의 경우 SharePoint 사이트를 지정해야 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]와 통합된 사이트 컬렉션에 있는 아무 사이트나 지정할 수 있습니다. URL을 지정할 때는 HTTP 또는 HTTPS 접두사를 포함해야 합니다. Management Studio에서 보고서 서버 인스턴스에 연결하려면 SharePoint에 액세스할 수 있는 권한이 있어야 합니다. 할당 받은 권한 수준에 따라 보고 관리할 수 있는 항목이 결정됩니다. 자세한 내용은 [Management Studio에서 보고서 서버에 연결](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)을 참조하세요.  
   
  **인증**  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 제공한 사용자 지정 인증 확장 프로그램이 처리하는 Windows 인증 요청 또는 폼 인증 요청을 받아들이도록 구성할 수 있습니다. 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에 연결할 때는 다음 인증 모드 중 하나를 선택합니다.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 제공한 사용자 지정 인증 확장 프로그램이 처리하는 Windows 인증 요청 또는 폼 인증 요청을 받아들이도록 구성할 수 있습니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에 연결할 때는 다음 인증 모드 중 하나를 선택합니다.  
   
  **Windows 인증 모드(Windows 인증)**  
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 자격 증명을 사용하여 보고서 서버 인스턴스에 연결합니다.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 자격 증명을 사용하여 보고서 서버 인스턴스에 연결합니다.  
   
  **기본 인증**  
  Reporting Services 설치에서 기본 인증을 사용하도록 구성되어 있는 경우 **기본 인증** 을 사용하여 연결합니다.  
@@ -53,7 +49,7 @@ ms.locfileid: "62808681"
  연결에 사용할 로그인 이름을 입력합니다. 이 옵션은 **기본 인증** 또는 **폼 인증**을 선택한 경우에만 사용할 수 있습니다.  
   
  **암호**  
- 사용자 이름 암호를 입력합니다. 이 옵션은 **기본 인증** 또는 **폼 인증**을 선택한 경우에만 편집할 수 있습니다.  
+ 사용자 이름에 대한 암호를 입력합니다. 이 옵션은 **기본 인증** 또는 **폼 인증**을 선택한 경우에만 편집할 수 있습니다.  
   
  **연결**  
  위에서 선택한 서버에 연결하려면 클릭합니다.  

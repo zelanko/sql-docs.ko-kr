@@ -20,21 +20,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9db5352c80cfc45fd6856339e2aaf680b631a47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62805893"
 ---
 # <a name="enhance-merge-replication-performance"></a>병합 복제 성능 향상
-  
   [일반적인 복제 성능 향상](enhance-general-replication-performance.md)에서 설명하는 일반적인 성능 팁을 고려한 후 병합 복제에 대한 다음 영역을 추가로 고려해 보십시오.  
   
 ## <a name="database-design"></a>데이터베이스 디자인  
   
 -   행 필터 및 조인 필터에 사용된 열을 인덱싱합니다.  
   
-     게시된 아티클에 행 필터를 사용하는 경우 필터의 WHERE 절에 사용되는 각 열에 인덱스를 만듭니다. 인덱스가 없으면에서는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블의 각 행을 읽어 파티션에 행을 포함할지 여부를 결정 해야 합니다. 인덱스가 있다면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 어떤 행을 포함해야 하는지를 빨리 찾을 수 있습니다. 복제가 인덱스에서만 필터의 WHERE 절을 모두 확인하면 가장 빠른 처리가 이루어집니다.  
+     게시된 아티클에 행 필터를 사용하는 경우 필터의 WHERE 절에 사용되는 각 열에 인덱스를 만듭니다. 인덱스가 없으면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 테이블의 각 행을 읽은 후 해당 행을 파티션에 포함할 것인지 아닌지를 결정합니다. 인덱스가 있다면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 어떤 행을 포함해야 하는지를 빨리 찾을 수 있습니다. 복제가 인덱스에서만 필터의 WHERE 절을 모두 확인하면 가장 빠른 처리가 이루어집니다.  
   
      조인 필터에 사용되는 모든 열에 인덱스를 만드는 것도 중요합니다. 병합 에이전트는 실행될 때마다 기본 테이블의 어떤 열과 관련 테이블의 어떤 열을 파티션에 포함할 것인지를 결정하기 위해 부모 테이블을 검색합니다. 조인된 열에 인덱스를 만들면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 병합 에이전트가 실행될 때마다 테이블의 각 행을 읽지 않아도 됩니다.  
   
@@ -42,8 +41,7 @@ ms.locfileid: "62805893"
   
 -   LOB(Large Object) 데이터 형식을 포함하는 테이블을 너무 많이 정규화한 경우를 고려해 보십시오.  
   
-     동기화가 발생할 때 병합 에이전트는 게시자 또는 구독자에서 전체 데이터 행을 읽고 전송해야 합니다. 이 행에 LOB를 사용하는 열이 있다면 추가 메모리 할당이 필요하고 이러한 열이 업데이트되지 않았어도 성능에 부정적 영향을 미칠 수 있습니다. 이렇게 성능에 미칠 영향을 줄이려면 나머지 행 데이터에 대해 일 대 일 관계를 사용하여 LOB 열을 별개의 테이블에 두도록 합니다. 
-  `text`, `ntext` 및 `image` 데이터 형식은 사용되지 않습니다. LOB를 포함시킬 경우 데이터 형식 `varchar(max)`, `nvarchar(max)`, `varbinary(max)`를 각각 사용하는 것이 좋습니다.  
+     동기화가 발생할 때 병합 에이전트는 게시자 또는 구독자에서 전체 데이터 행을 읽고 전송해야 합니다. 이 행에 LOB를 사용하는 열이 있다면 추가 메모리 할당이 필요하고 이러한 열이 업데이트되지 않았어도 성능에 부정적 영향을 미칠 수 있습니다. 이렇게 성능에 미칠 영향을 줄이려면 나머지 행 데이터에 대해 일 대 일 관계를 사용하여 LOB 열을 별개의 테이블에 두도록 합니다. `text`, `ntext` 및 `image` 데이터 형식은 사용되지 않습니다. LOB를 포함시킬 경우 데이터 형식 `varchar(max)`, `nvarchar(max)`, `varbinary(max)`를 각각 사용하는 것이 좋습니다.  
   
 ## <a name="publication-design"></a>게시 디자인  
   
@@ -93,7 +91,7 @@ ms.locfileid: "62805893"
   
 -   구독 동기화 일정은 엇갈리게 설정합니다.  
   
-     많은 구독자가 게시자와 동기화하는 경우 각각의 병합 에이전트가 서로 다른 시간에 실행되도록 일정을 엇갈리게 설정해 봅니다. 자세한 내용은 [동기화 일정 지정](../specify-synchronization-schedules.md)을 참조 하세요.  
+     많은 구독자가 게시자와 동기화하는 경우 각각의 병합 에이전트가 서로 다른 시간에 실행되도록 일정을 엇갈리게 설정해 봅니다. 자세한 내용은 [Specify Synchronization Schedules](../specify-synchronization-schedules.md)을 참조하세요.  
   
 ## <a name="merge-agent-parameters"></a>병합 에이전트 매개 변수  
  병합 에이전트와 해당 매개 변수에 대한 자세한 내용은 [Replication Merge Agent](../agents/replication-merge-agent.md)를 참조하십시오.  
@@ -104,11 +102,11 @@ ms.locfileid: "62805893"
   
 -   구독이 빠른 연결을 통해 동기화되고 게시자에서 구독자로 변경 내용이 전송되면 병합 에이전트에 대해 **–ParallelUploadDownload** 매개 변수를 사용합니다.  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에는 새 병합 에이전트 매개 변수가 도입 되었습니다. **-ParallelUploadDownload**. 이 매개 변수를 설정하면 병합 에이전트가 게시자로 업로드되는 변경 내용과 구독자로 다운로드되는 변경 내용을 병렬로 처리할 수 있습니다. 이것은 네트워크 대역폭이 높은 대규모 환경에서 유용합니다. 에이전트 프로필 및 명령줄에서 에이전트 매개 변수를 지정할 수 있습니다. 자세한 내용은 다음을 참조하세요.  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에는 새로운 병합 에이전트 매개 변수인 **–ParallelUploadDownload**가 도입되었습니다. 이 매개 변수를 설정하면 병합 에이전트가 게시자로 업로드되는 변경 내용과 구독자로 다운로드되는 변경 내용을 병렬로 처리할 수 있습니다. 이것은 네트워크 대역폭이 높은 대규모 환경에서 유용합니다. 에이전트 프로필 및 명령줄에서 에이전트 매개 변수를 지정할 수 있습니다. 자세한 내용은 다음을 참조하세요.  
   
     -   [복제 에이전트 프로필 작업](../agents/replication-agent-profiles.md)  
   
-    -   [복제 에이전트의 명령 프롬프트 매개 변수를 보고 수정 &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [복제 에이전트의 명령 프롬프트 매개 변수 보기 및 수정&#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
     -   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
   
@@ -146,6 +144,6 @@ ms.locfileid: "62805893"
   
 -   복제 모니터의 **동기화 기록** 탭을 사용하여 동기화 성능을 모니터링합니다.  
   
-     병합 복제의 경우 복제 모니터는 각 처리 단계(변경 내용 업로드, 변경 내용 다운로드 등)에 소요된 시간을 포함하여 동기화 중에 처리된 각 아티클에 대한 자세한 통계를 **동기화 기록** 탭에 표시합니다. 이 통계는 속도 저하의 원인이 되고 병합 구독의 성능 문제를 해결하기에 가장 적합한 특정 테이블을 정확히 찾아내는 데 도움이 될 수 있습니다. 자세한 통계를 보는 방법에 대 한 자세한 내용은 [정보 보기 및 복제 모니터를 사용 하 여 태스크 수행](../monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조 하세요.  
+     병합 복제의 경우 복제 모니터는 각 처리 단계(변경 내용 업로드, 변경 내용 다운로드 등)에 소요된 시간을 포함하여 동기화 중에 처리된 각 아티클에 대한 자세한 통계를 **동기화 기록** 탭에 표시합니다. 이 통계는 속도 저하의 원인이 되고 병합 구독의 성능 문제를 해결하기에 가장 적합한 특정 테이블을 정확히 찾아내는 데 도움이 될 수 있습니다. 자세한 통계 보기에 대한 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
   

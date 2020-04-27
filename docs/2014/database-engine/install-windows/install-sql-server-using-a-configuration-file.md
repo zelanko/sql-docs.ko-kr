@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38cd8aeb157a94a28b1cfd831bcfacfb3e93ea6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775286"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>구성 파일을 사용하여 SQL Server 2014 설치
@@ -63,35 +63,35 @@ FEATURES=SQL,Tools
     > [!NOTE]  
     >  설치 프로그램은 암호 등과 같은 기밀 정보를 제외하고 수행했던 동작에 적합한 모든 매개 변수를 기록합니다. /IAcceptSQLServerLicenseTerms 매개 변수도 구성 파일에 기록되지 않기 때문에 구성 파일을 수정하거나 명령 프롬프트에서 값을 제공해야 합니다. 자세한 내용은 [명령 프롬프트에서 SQL Server 2014 설치](install-sql-server-from-the-command-prompt.md)를 참조하세요. 또한 일반적으로 명령 프롬프트에서 값을 입력하지 않는 부울 매개 변수에 대한 값도 포함됩니다.  
   
-## <a name="using-the-configuration-file-to-install-includessnoversionincludesssnoversion-mdmd"></a>구성 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="using-the-configuration-file-to-install-ssnoversion"></a>구성 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  구성 파일은 명령줄 설치에서만 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  구성 파일을 변경해야 할 경우 구성 파일을 복사한 후 이 복사본을 변경하는 것이 좋습니다.  
   
-#### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance"></a>구성 파일을 사용하여 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 설치하는 방법  
+#### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-ssnoversion-instance"></a>구성 파일을 사용하여 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 설치하는 방법  
   
 -   명령 프롬프트에서 설치를 실행하고 *ConfigurationFile* 매개 변수를 사용하여 ConfigurationFile.ini를 입력합니다.  
   
-#### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance-sysprep"></a>구성 파일을 사용하여 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스(SysPrep)의 이미지를 준비하고 완료하는 방법  
+#### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-ssnoversion-instance-sysprep"></a>구성 파일을 사용하여 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스(SysPrep)의 이미지를 준비하고 완료하는 방법  
   
 1.  같은 시스템에 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 준비하고 구성하려면  
   
-    -   설치 센터의 **고급[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지에서** 독립 실행형  **인스턴스의 이미지 준비**를 실행하고 이미지 준비 구성 파일을 캡처합니다.  
+    -   설치 센터의 **고급** 페이지에서 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이미지 준비**를 실행하고 이미지 준비 구성 파일을 캡처합니다.  
   
     -   템플릿과 동일한 이미지 준비 구성 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 준비합니다.  
   
-    -   설치 센터의 **고급[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지에서** 독립 실행형  **준비 인스턴스의 이미지 완료**를 실행하여 시스템에서 준비 인스턴스를 구성합니다.  
+    -   설치 센터의 **고급** 페이지에서 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스의 이미지 완료**를 실행하여 시스템에서 준비 인스턴스를 구성합니다.  
   
 2.  Windows SysPrep 도구를 사용하여 구성되지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스를 포함한 운영 체제 이미지를 준비하려면  
   
     -   설치 센터의 고급 페이지에서 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이미지 준비**를 실행하고 이미지 준비 구성 파일을 캡처합니다.  
   
-    -   설치 센터의 **고급[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지에서** 독립 실행형  **준비 인스턴스의 이미지 완료**를 실행하지만 완료된 구성 파일을 캡처한 다음 **완료 준비** 페이지에서 취소합니다.  
+    -   설치 센터의 **고급** 페이지에서 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스의 이미지 완료**를 실행하지만 완료된 구성 파일을 캡처한 다음 **완료 준비** 페이지에서 취소합니다.  
   
     -   이미지 완료 구성 파일은 Windows 이미지와 함께 저장하여 준비 인스턴스의 구성을 자동화할 수 있습니다.  
   
-#### <a name="how-to-install-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>구성 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치하는 방법  
+#### <a name="how-to-install-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>구성 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치하는 방법  
   
 1.  통합 설치 옵션(한 노드에 하나의 노드 장애 조치(Failover) 클러스터를 만들고, 추가할 노드에서 AddNode를 실행하여 노드를 추가함):  
   
@@ -113,11 +113,11 @@ FEATURES=SQL,Tools
   
     -   그런 다음 이 ConfigurationFile.ini 파일을 입력하여 장애 조치(Failover) 클러스터를 완료할 수 있습니다.  
   
-#### <a name="how-to-add-or-remove-a-node-to-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>구성 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 대해 노드를 추가하거나 제거하는 방법  
+#### <a name="how-to-add-or-remove-a-node-to-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>구성 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 대해 노드를 추가하거나 제거하는 방법  
   
 -   이전에 장애 조치(Failover) 클러스터에 대해 노드를 추가하거나 제거할 때 사용했던 구성 파일이 있을 경우 이 파일을 다시 사용하여 노드를 추가하거나 제거할 수 있습니다.  
   
-#### <a name="how-to-upgrade-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>구성 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 업그레이드하는 방법  
+#### <a name="how-to-upgrade-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>구성 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 업그레이드하는 방법  
   
 1.  패시브 노드에서 업그레이드를 실행하고 ConfigurationFile.ini 파일을 캡처합니다. 실제 업그레이드를 수행하거나, 실제 업그레이드를 수행하지 않고 종료 시 끝내는 방법을 사용할 수 있습니다.  
   
@@ -141,6 +141,6 @@ Setup.exe /SQLSVCPASSWORD="************" /AGTSVCPASSWORD="************" /ASSVCPA
 ## <a name="see-also"></a>참고 항목  
  [명령 프롬프트에서 SQL Server 2014 설치](install-sql-server-from-the-command-prompt.md)   
  [SQL Server 장애 조치(Failover) 클러스터 설치](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
- [SQL Server 장애 조치 (Failover) 클러스터 업그레이드](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
+ [SQL Server 장애 조치(Failover) 클러스터 업그레이드](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
   
   

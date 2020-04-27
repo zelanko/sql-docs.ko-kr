@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a041171d9639429196b09b7a1f9254a30907ab2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62814037"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>affinity mask 서버 구성 옵션
@@ -59,11 +59,9 @@ ms.locfileid: "62814037"
   
  존재하지 않는 CPU로 매핑을 시도하는 선호도 마스크를 지정하면 RECONFIGURE 명령은 클라이언트 세션과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 모두 오류 메시지를 보고합니다. 이 경우 RECONFIGURE WITH OVERRIDE 옵션을 사용해도 영향을 미치지 않으며 동일한 구성 오류가 다시 보고됩니다.  
   
- Windows 2000 또는 Windows Server 2003 운영 체제에 의해 특정 작업이 할당된 프로세서에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업을 제외할 수도 있습니다. 프로세서를 나타내는 비트를 1로 설정하면 스레드를 할당하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 엔진이 해당 프로세서를 선택합니다. 를 0 ( `affinity mask` 기본값)으로 설정 하면 Microsoft windows 2000 또는 windows Server 2003 일정 알고리즘이 스레드의 선호도를 설정 합니다. 
-  `affinity mask`를 0이 아닌 값으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 선호도가 이 값을 선택에 맞는 프로세서를 지정하는 비트 마스크로 해석합니다.  
+ Windows 2000 또는 Windows Server 2003 운영 체제에 의해 특정 작업이 할당된 프로세서에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업을 제외할 수도 있습니다. 프로세서를 나타내는 비트를 1로 설정하면 스레드를 할당하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 엔진이 해당 프로세서를 선택합니다. 를 0 ( `affinity mask` 기본값)으로 설정 하면 Microsoft windows 2000 또는 windows Server 2003 일정 알고리즘이 스레드의 선호도를 설정 합니다. `affinity mask`를 0이 아닌 값으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 선호도가 이 값을 선택에 맞는 프로세서를 지정하는 비트 마스크로 해석합니다.  
   
- 특정 프로세서에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스레드를 분리하면 Microsoft Windows 2000 또는 Windows Server 2003에서는 시스템의 Windows 관련 프로세스 처리를 보다 잘 평가할 수 있습니다. 예를 들어 인스턴스 A와 인스턴스 B라는 두 개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하고 CPU가 8개인 서버에서 시스템 관리자는 선호도 마스크 옵션을 사용하여 CPU 4개로 이루어진 첫째 집합을 인스턴스 A에 할당하고 둘째 집합을 인스턴스 B에 할당할 수 있습니다. 32개보다 많은 프로세서를 구성하려면 affinity mask 및 affinity64 mask를 모두 설정해야 합니다. 
-  `affinity mask`의 값은 다음과 같습니다.  
+ 특정 프로세서에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스레드를 분리하면 Microsoft Windows 2000 또는 Windows Server 2003에서는 시스템의 Windows 관련 프로세스 처리를 보다 잘 평가할 수 있습니다. 예를 들어 인스턴스 A와 인스턴스 B라는 두 개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하고 CPU가 8개인 서버에서 시스템 관리자는 선호도 마스크 옵션을 사용하여 CPU 4개로 이루어진 첫째 집합을 인스턴스 A에 할당하고 둘째 집합을 인스턴스 B에 할당할 수 있습니다. 32개보다 많은 프로세서를 구성하려면 affinity mask 및 affinity64 mask를 모두 설정해야 합니다. `affinity mask`의 값은 다음과 같습니다.  
   
 -   1바이트 `affinity mask`의 경우 하나의 다중 프로세서 컴퓨터에서 CPU가 8개까지 허용됩니다.  
   
@@ -80,8 +78,7 @@ ms.locfileid: "62814037"
 > [!NOTE]  
 >  Windows 시스템 모니터를 사용하여 각 프로세서 사용량을 확인 및 분석할 수 있습니다.  
   
- 선호도 I/O 마스크 옵션을 지정할 경우에는 선호도 마스크 구성 옵션과 연결하여 사용해야 합니다. 
-  `affinity mask` 스위치와 affinity I/O mask 옵션에서 모두 동일한 CPU를 활성화하지 마십시오. 각 CPU에 해당하는 비트 상태는 다음과 같은 상태 중 하나여야 합니다.  
+ 선호도 I/O 마스크 옵션을 지정할 경우에는 선호도 마스크 구성 옵션과 연결하여 사용해야 합니다. `affinity mask` 스위치와 affinity I/O mask 옵션에서 모두 동일한 CPU를 활성화하지 마십시오. 각 CPU에 해당하는 비트 상태는 다음과 같은 상태 중 하나여야 합니다.  
   
 -   affinity mask 옵션과 affinity I/O mask 옵션에서 모두 0입니다.  
   

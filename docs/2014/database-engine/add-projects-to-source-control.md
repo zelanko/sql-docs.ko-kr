@@ -14,14 +14,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0936af9b97d08c6bcd5033e61d9fa1c9153272e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791795"
 ---
 # <a name="add-projects-to-source-control"></a>원본 제어에 프로젝트 추가
-  
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 솔루션은 여러 스크립트 프로젝트를 호스팅할 수 있습니다. 프로젝트를 원본 제어에 추가하는 방법은 프로젝트가 속하는 솔루션이 원본 제어에서 사용 중인지 여부에 따라 다릅니다. 솔루션이 원본 제어에서 사용 중일 경우 솔루션을 체크 인하면 프로젝트가 원본 제어에 자동으로 추가됩니다. 솔루션 체크 인에 대 한 자세한 내용은 [파일 체크](../../2014/database-engine/check-in-files.md)인을 참조 하세요.  
   
  이 프로젝트가 속하는 솔루션이 원본 제어에서 사용 중이 아니면 해당 솔루션을 원본 제어에 추가할 수 있습니다. 이렇게 하면 솔루션의 프로젝트가 자동으로 추가됩니다. 소스 제어에 솔루션을 추가 하는 방법에 대 한 자세한 내용은 [소스 제어에 솔루션 추가](../../2014/database-engine/add-solutions-to-source-control.md)를 참조 하세요.  

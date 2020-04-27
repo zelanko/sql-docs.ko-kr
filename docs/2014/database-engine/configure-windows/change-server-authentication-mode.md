@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43919e335700a23a4174eb1bdf42c36c0c08fe2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812302"
 ---
 # <a name="change-server-authentication-mode"></a>서버 인증 모드 변경
@@ -39,12 +39,12 @@ ms.locfileid: "62812302"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
  sa 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정으로 잘 알려져 있으며 종종 악의적인 사용자의 대상이 됩니다. 애플리케이션에서 요청하지 않는 한 sa 계정을 사용하지 마십시오. sa 로그인에 대해 강력한 암호를 사용하는 것이 중요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-change-security-authentication-mode"></a>보안 인증 모드를 변경하려면  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62812302"
   
 3.  **상태** 페이지의 **로그인** 섹션에서 **사용**을 클릭한 다음 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **sa 로그인을 사용하려면**  
   
 1.  개체 탐색기에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
@@ -83,8 +83,8 @@ ms.locfileid: "62812302"
   
 ## <a name="see-also"></a>참고 항목  
  [강력한 암호](../../relational-databases/security/strong-passwords.md)   
- [SQL Server 설치에 대한 보안 고려 사항](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
- [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)   
+ [SQL Server 설치에 대 한 보안 고려 사항](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
+ [ALTER LOGIN &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-login-transact-sql)   
  [시스템 관리자가 잠겨 있는 경우 SQL Server에 연결](connect-to-sql-server-when-system-administrators-are-locked-out.md)  
   
   

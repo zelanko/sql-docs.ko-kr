@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e44b755748dcbda6af30e0570b667f9ba3ee75a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62767893"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>SSIS 패키지 업그레이드 마법사를 사용하여 Integration Services 패키지 업그레이드
@@ -42,8 +42,7 @@ ms.locfileid: "62767893"
 2.  솔루션 탐색기에서 **SSIS 패키지** 노드를 마우스 오른쪽 단추로 클릭하고 **모든 패키지 업그레이드** 를 클릭하여 이 노드의 모든 패키지를 업그레이드합니다.  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 또는 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 패키지가 포함된 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 프로젝트를 열면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 자동으로 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 업그레이드 마법사를 엽니다.  
+    >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 또는 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 패키지가 포함된 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 프로젝트를 열면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 자동으로 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 업그레이드 마법사를 엽니다.  
   
 #### <a name="to-run-the-wizard-from-sql-server-management-studio"></a>SQL Server Management Studio에서 마법사를 실행하려면  
   

@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774346"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>관리되는 인스턴스 세부 정보(SQL Server 유틸리티)
@@ -38,11 +38,11 @@ ms.locfileid: "62774346"
   
  기본적으로 각 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 관리되는 인스턴스 상태 정보가 다음과 같은 열에 표시됩니다.  
   
--   인스턴스 CPU – 이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에 할당된 프로세서 사용률의 성능 상태가 표시됩니다. 이 매개 변수의 상태는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 설정된 CPU 사용 정책과 일시적 리소스 평가 정책의 구성 설정에 따라 결정됩니다. 자세한 내용은 [CPU 사용 정책에서 노이즈 줄이기 &#40;SQL Server 유틸리티&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)를 참조 하세요.  
+-   인스턴스 CPU – 이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에 할당된 프로세서 사용률의 성능 상태가 표시됩니다. 이 매개 변수의 상태는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 설정된 CPU 사용 정책과 일시적 리소스 평가 정책의 구성 설정에 따라 결정됩니다. 자세한 내용은 [CPU 사용 정책에서 노이즈 줄이기&#40;SQL Server 유틸리티&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)를 참조하세요.  
   
      이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스의 프로세서 사용 기록을 보거나 정책 제한을 확인 또는 변경하려면 **CPU 사용** 탭을 클릭합니다.  
   
--   컴퓨터 CPU - 컴퓨터 프로세서 사용 상태가 표시됩니다. 이 매개 변수의 상태는 컴퓨터에 설정된 CPU 사용 정책과 일시적 리소스 평가 정책의 구성 설정에 따라 결정됩니다. 자세한 내용은 [CPU 사용 정책에서 노이즈 줄이기 &#40;SQL Server 유틸리티&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)를 참조 하세요.  
+-   컴퓨터 CPU - 컴퓨터 프로세서 사용 상태가 표시됩니다. 이 매개 변수의 상태는 컴퓨터에 설정된 CPU 사용 정책과 일시적 리소스 평가 정책의 구성 설정에 따라 결정됩니다. 자세한 내용은 [CPU 사용 정책에서 노이즈 줄이기&#40;SQL Server 유틸리티&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)를 참조하세요.  
   
      이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스의 프로세서 사용 기록을 보거나 정책 제한을 확인 또는 변경하려면 **CPU 사용** 탭을 클릭합니다.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62774346"
   
 -   언어:  
   
--   마지막 보고 시간: 이 열에는 날짜 및 시간 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간이 표시됩니다. 자세한 내용은 SQL Server 온라인 설명서의 [datetime(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 SQL Server 온라인 설명서의 [datetimeoffset(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713)을 참조하세요.  
+-   마지막 보고 시간: 이 열에는 날짜 및 시간 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간이 표시됩니다. 자세한 내용은 SQL Server 온라인 설명서의 [datetime(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 SQL Server 온라인 설명서의 [datetimeoffset(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 을 참조하세요.  
   
  CPU 사용 탭  
  CPU 사용 탭에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스와 컴퓨터 CPU 사용의 기록 데이터 그래프가 함께 표시됩니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "62774346"
 -   1년, 1개월 간격으로 표시  
   
  스토리지 사용 탭  
- 스토리지 사용 탭에는 스토리지 사용 세부 정보를 표시하는 트리 뷰가 있습니다. 시간 데이터는 datetime 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간을 보여 줍니다. 자세한 내용은 SQL Server 온라인 설명서의 [datetime(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 SQL Server 온라인 설명서의 [datetimeoffset(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713)을 참조하세요.  
+ 스토리지 사용 탭에는 스토리지 사용 세부 정보를 표시하는 트리 뷰가 있습니다. 시간 데이터는 datetime 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간을 보여 줍니다. 자세한 내용은 SQL Server 온라인 설명서의 [datetime(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 SQL Server 온라인 설명서의 [datetimeoffset(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 을 참조하세요.  
   
  표시는 데이터베이스별 또는 볼륨별로 그룹화할 수 있습니다. 데이터베이스 트리 뷰를 사용하려면 **파일 그룹화 방법:** 선택에서 **데이터베이스** 라디오 단추를 선택합니다. 개별 데이터베이스 파일의 스토리지 사용 상태를 보려면 트리 뷰에서 데이터베이스 이름 옆에 있는 더하기 기호를 클릭합니다. 나열되는 데이터베이스 파일에는 목록 뷰에서 선택한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에 속한 모든 시스템 및 사용자 데이터베이스가 포함됩니다.  
   
@@ -149,8 +149,7 @@ ms.locfileid: "62774346"
  정책 위반에 대한 허용 오차를 변경하는 방법에 대한 자세한 내용은 [CPU 사용 정책에서 노이즈 줄이기&#40;SQL Server 유틸리티&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)를 참조하세요.  
   
  속성 정보 탭  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 대한 속성 정보에는 다음 범주가 포함됩니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 대한 속성 정보에는 다음 범주가 포함됩니다.  
   
 -   프로세서 이름:  
   
@@ -177,10 +176,10 @@ ms.locfileid: "62774346"
 -   언어:  
   
 ## <a name="see-also"></a>참고 항목  
- [배포된 데이터 계층 애플리케이션 세부 정보&#40;SQL Server 유틸리티&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
+ [배포 된 데이터 계층 응용 프로그램 세부 정보 &#40;SQL Server 유틸리티&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
  [유틸리티 대시보드 &#40;SQL Server 유틸리티&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [SQL Server 유틸리티에서 SQL Server 인스턴스 모니터링](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [SQL Server 유틸리티 기능 및 태스크](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
+ [SQL Server 유틸리티 기능 및 작업](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [SQL Server 유틸리티 문제 해결](../../2014/database-engine/troubleshoot-the-sql-server-utility.md)  
   
   

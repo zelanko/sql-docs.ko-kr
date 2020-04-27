@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 21731b1b99c29257700393b5b7713a723c35dbac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809535"
 ---
 # <a name="server-properties-database-settings-page"></a>서버 속성(데이터베이스 설정 페이지)
@@ -59,15 +59,13 @@ ms.locfileid: "62809535"
  **복구 간격(분)**  
  데이터베이스당 최대 복구 시간을 분 단위로 설정합니다. 기본값 0을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 구성합니다. 기본값을 설정하면 실제 운영 시 1분 이하의 복구 시간이 사용되고 활성 데이터베이스의 경우 약 1분 간격으로 검사점이 실행됩니다. 자세한 내용은 [Configure the recovery interval Server Configuration Option](configure-the-recovery-interval-server-configuration-option.md)을(를) 참조하세요.  
   
- **data**  
- 데이터 파일의 기본 위치를 지정합니다. 새 기본 위치로 이동하려면 찾아보기 단추를 클릭합니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 다시 시작할 때까지는 적용되지 않습니다.  
+ **Data**  
+ 데이터 파일의 기본 위치를 지정합니다. 새 기본 위치로 이동하려면 찾아보기 단추를 클릭합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 다시 시작할 때까지는 적용되지 않습니다.  
   
- **로그**  
- 로그 파일의 기본 위치를 지정합니다. 새 기본 위치로 이동하려면 찾아보기 단추를 클릭합니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 다시 시작할 때까지는 적용되지 않습니다.  
+ **Log**  
+ 로그 파일의 기본 위치를 지정합니다. 새 기본 위치로 이동하려면 찾아보기 단추를 클릭합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 다시 시작할 때까지는 적용되지 않습니다.  
   
- **구성 값**  
+ **구성 된 값**  
  이 창의 옵션에 대해 구성된 값을 표시합니다. 이러한 값을 변경한 후에는 **실행 값** 을 클릭하여 변경 사항이 적용되었는지 여부를 확인합니다. 변경 내용이 적용되지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작해야 합니다.  
   
  **실행 값**  

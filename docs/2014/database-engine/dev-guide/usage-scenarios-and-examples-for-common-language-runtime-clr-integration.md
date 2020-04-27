@@ -18,19 +18,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3718a084211e7c3b2b7a14973e195a4b1c3b6b1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780726"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>CLR(공용 언어 런타임) 통합에 대한 사용 시나리오 및 예
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 CLR(공용 언어 런타임) 통합의 프로그래밍 기능을 알아보는 데 사용할 수 있는 예제 애플리케이션, 패키지 예제 및 여러 코딩 예제가 포함되어 있습니다.  
   
  이러한 샘플과 추가 자료를 구현 하는 전체 Visual Studio 프로젝트에 대해서는 [CodePlex의 샘플 & 커뮤니티 프로젝트 Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=193935)를 참조 하세요.  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[CLR UDF에서 네이티브 코드 액세스](../../../2014/database-engine/dev-guide/accessing-native-code-from-a-clr-udf.md)|데이터베이스의 어셈블리에 있는 사용자 정의 함수에서 네이티브(비관리) C++ 코드의 함수를 호출하는 방법을 보여 줍니다.|  
 |[배열 매개 변수 예제](../../../2014/database-engine/dev-guide/array-parameter-sample.md)|클라이언트에서 서버의 CLR 통합 저장 프로시저로 정보 배열을 전달하여 데이터베이스에 행 집합을 만들거나 업데이트 또는 삭제하는 방법을 보여 줍니다. 이 작업은 UDT를 사용하여 수행합니다.|  

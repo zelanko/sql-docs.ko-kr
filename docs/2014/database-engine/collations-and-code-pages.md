@@ -11,14 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62786738"
 ---
 # <a name="collations-and-code-pages"></a>데이터 정렬 및 코드 페이지
-  
   [!INCLUDE[hek_2](../includes/hek-2-md.md)]에는 메모리 최적화 테이블의 (var)char 열에 대해 지원되는 코드 페이지와 인덱스 및 고유하게 컴파일된 저장 프로시저에 사용되는 지원되는 데이터 정렬에 대한 제한 사항이 있습니다.  
   
  (var)char 값에 대한 코드 페이지는 테이블에 저장되는 문자와 바이트 표현 간의 매핑을 결정합니다. 예를 들어 Windows 라틴어 1 코드 페이지(1252, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기본값)를 사용하는 경우 문자 'a'는 바이트 0x61에 해당합니다.  

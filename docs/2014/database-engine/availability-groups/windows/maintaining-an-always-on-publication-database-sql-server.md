@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791994"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>AlwaysOn 게시 데이터베이스 유지 관리(SQL Server)
@@ -25,7 +25,7 @@ ms.locfileid: "62791994"
   
  
   
-##  <a name="MaintainPublDb"></a> 가용성 그룹에서 게시된 데이터베이스 유지 관리  
+##  <a name="maintaining-a-published-database-in-an-availability-group"></a><a name="MaintainPublDb"></a>가용성 그룹에서 게시 된 데이터베이스 유지 관리  
  AlwaysOn 게시 데이터베이스를 유지 관리하는 작업은 표준 게시 데이터베이스를 유지 관리하는 작업과 기본적으로 동일하지만 다음 사항을 고려해야 합니다.  
   
 -   관리는 주 복제본 호스트에서 수행되어야 합니다. [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 게시는 **로컬 게시** 폴더 아래에 주 복제본 호스트 및 읽을 수 있는 보조 복제본을 표시됩니다. 읽을 수 없는 보조 복제본이 주 복제본으로 승격된 경우 장애 조치(failover) 후 수동으로 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 를 새로 고쳐 변경 내용을 반영해야 합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "62791994"
   
 -   장애 조치 후 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 에서 구독을 동기화하려면 구독자에서 끌어오기 구독을 동기화하고 활성 게시자에서 밀어넣기 구독을 동기화합니다.  
   
-##  <a name="RemovePublDb"></a> 가용성 그룹에서 게시된 데이터베이스 제거  
+##  <a name="removing-a-published-database-from-an-availability-group"></a><a name="RemovePublDb"></a>가용성 그룹에서 게시 된 데이터베이스 제거  
  게시된 데이터베이스를 가용성 그룹에서 제거하거나 게시된 멤버 데이터베이스가 있는 가용성 그룹을 삭제할 경우 다음 문제를 고려하세요.  
   
 -   원본 게시자의 게시 데이터베이스가 가용성 그룹 주 복제본에서 제거 된 경우에는 게시자/데이터베이스 쌍에 `sp_redirect_publisher` 대 한 리디렉션을 제거 하기 위해 *@redirected_publisher* 매개 변수의 값을 지정 하지 않고를 실행 해야 합니다.  
@@ -68,8 +68,7 @@ ms.locfileid: "62791994"
     > [!NOTE]  
     >  게시된 멤버 데이터베이스가 있는 가용성 그룹을 제거하거나 게시된 데이터베이스를 가용성 그룹에서 제거하면 게시된 데이터베이스의 모든 복사본이 복구 중 상태로 남게 됩니다. 데이터베이스를 복원하면 각각이 게시된 데이터베이스로 표시됩니다. 한 복사본에만 게시 메타데이터를 유지해야 합니다. 게시된 데이터베이스 복사본에 대해 복제를 비활성화하려면 먼저 모든 구독 및 게시를 데이터베이스에서 제거합니다.  
   
-     
-  `sp_dropsubscription`을 실행하여 게시의 구독을 제거합니다. 배포자에서 활성 게시 데이터베이스에 *@ignore_distributributor* 대 한 메타 데이터를 유지 하려면 매개 변수를 1로 설정 해야 합니다.  
+     `sp_dropsubscription`을 실행하여 게시의 구독을 제거합니다. 배포자에서 활성 게시 데이터베이스에 *@ignore_distributributor* 대 한 메타 데이터를 유지 하려면 매개 변수를 1로 설정 해야 합니다.  
   
     ```  
     USE MyDBName;  
@@ -82,8 +81,7 @@ ms.locfileid: "62791994"
         @ignore_distributor = 1;  
     ```  
   
-     
-  `sp_droppublication`을 실행하여 모든 게시를 제거합니다. 다시 매개 변수 *@ignore_distributor* 를 1로 설정 하 여 배포자의 활성 게시 데이터베이스에 대 한 메타 데이터를 유지 합니다.  
+     `sp_droppublication`을 실행하여 모든 게시를 제거합니다. 다시 매개 변수 *@ignore_distributor* 를 1로 설정 하 여 배포자의 활성 게시 데이터베이스에 대 한 메타 데이터를 유지 합니다.  
   
     ```  
     EXEC sys.sp_droppublication   
@@ -91,8 +89,7 @@ ms.locfileid: "62791994"
         @ignore_distributor = 1;  
     ```  
   
-     
-  `sp_replicationdboption`을 실행하여 데이터베이스에 대해 복제를 비활성화합니다.  
+     `sp_replicationdboption`을 실행하여 데이터베이스에 대해 복제를 비활성화합니다.  
   
     ```  
     EXEC sys.sp_replicationdboption  
@@ -103,7 +100,7 @@ ms.locfileid: "62791994"
   
      이때 게시된 데이터베이스의 복사본을 유지하거나 삭제할 수 있습니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [AlwaysOn 가용성 그룹에 대한 복제 구성(SQL Server)](always-on-availability-groups-sql-server.md)  
   

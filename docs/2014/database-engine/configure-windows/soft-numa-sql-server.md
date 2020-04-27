@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6ad0e30c0db83daf7e0cae4f7353d1f0a96a96d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809043"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>소프트 NUMA를 사용하도록 SQL Server 구성(SQL Server)
@@ -47,9 +47,7 @@ SQL Server 2014 서비스 팩 2부터 시작 시 데이터베이스 엔진 서�
   
  [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
- 아래 예제를 고려해 보세요. 8개의 CPU가 있고 하드웨어 NUMA가 없는 컴퓨터가 있습니다. 3개의 소프트 NUMA 노드가 구성되어 있습니다. 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 A는 CPU를 0부터 3까지 사용하도록 구성됩니다. 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 두 번째 인스턴스가 설치되고 CPU 4에서 7까지 사용하도록 구성되었습니다. 이 예는 시각적으로 다음과 같이 나타낼 수 있습니다.  
+ 아래 예제를 고려해 보세요. 8개의 CPU가 있고 하드웨어 NUMA가 없는 컴퓨터가 있습니다. 3개의 소프트 NUMA 노드가 구성되어 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 A는 CPU를 0부터 3까지 사용하도록 구성됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 두 번째 인스턴스가 설치되고 CPU 4에서 7까지 사용하도록 구성되었습니다. 이 예는 시각적으로 다음과 같이 나타낼 수 있습니다.  
   
  `CPUs          0  1  2  3  4  5  6  7`  
   
@@ -62,8 +60,7 @@ SQL Server 2014 서비스 팩 2부터 시작 시 데이터베이스 엔진 서�
  지연 기록기 스레드는 물리적 NUMA 메모리 노드의 SQL OS 보기와 연결되어 있습니다. 따라서, 물리적 NUMA 노드로 표시되는 하드웨어는 생성되는 지연 기록기 스레드의 수와 같습니다. 자세한 내용은 [작동 방식: 소프트 NUMA, I/O 완료 스레드, 지연 기록기 작업자 및 메모리 노드](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx)를 참조하세요.  
   
 > [!NOTE]  
->  
-  **Soft-NUMA** 레지스트리 키는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 업그레이드할 때 복사되지 않습니다.  
+>  **Soft-NUMA** 레지스트리 키는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 업그레이드할 때 복사되지 않습니다.  
   
 ### <a name="set-the-cpu-affinity-mask"></a>CPU 선호도 마스크 설정  
   
@@ -87,7 +84,7 @@ SQL Server 2014 서비스 팩 2부터 시작 시 데이터베이스 엔진 서�
   
      다음 예제에서는 DL580 G9 서버가 있고 4개의 소켓에서 소켓당 18개의 코어가 있으며 각 소켓은 자체 K 그룹에 있다고 가정합니다. 만들 수 있는 소프트 NUMA 구성은 다음과 유사할 것입니다. (노드당 6개의 코어, 그룹당 3개의 노드, 4개의 그룹).  
   
-    |K 그룹이 여러 개인 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 서버의 예|Type|값 이름|값 데이터|  
+    |K 그룹이 여러 개인 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 서버의 예|유형|값 이름|값 데이터|  
     |------------------------------------------------------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|CPUMask|0x3F|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|그룹|0|  
@@ -116,7 +113,7 @@ SQL Server 2014 서비스 팩 2부터 시작 시 데이터베이스 엔진 서�
   
      추가 예:  
   
-    |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Type|값 이름|값 데이터|  
+    |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|유형|값 이름|값 데이터|  
     |---------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|그룹|0|  
@@ -128,7 +125,7 @@ SQL Server 2014 서비스 팩 2부터 시작 시 데이터베이스 엔진 서�
     > [!TIP]  
     >  CPU 60 - 63을 지정하려면 QWORD 값 F000000000000000 또는 BINARY 값 1111000000000000000000000000000000000000000000000000000000000000을 사용합니다.  
   
-    |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Type|값 이름|값 데이터|  
+    |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|유형|값 이름|값 데이터|  
     |---------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node0|DWORD|그룹|0|  
@@ -137,7 +134,7 @@ SQL Server 2014 서비스 팩 2부터 시작 시 데이터베이스 엔진 서�
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node2|DWORD|그룹|0|  
   
-    |SQL Server 2008 R2|Type|값 이름|값 데이터|  
+    |SQL Server 2008 R2|유형|값 이름|값 데이터|  
     |------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|그룹|0|  
@@ -146,13 +143,13 @@ SQL Server 2014 서비스 팩 2부터 시작 시 데이터베이스 엔진 서�
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|그룹|0|  
   
-    |SQL Server 2008|Type|값 이름|값 데이터|  
+    |SQL Server 2008|유형|값 이름|값 데이터|  
     |---------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node1|DWORD|CPUMask|0x0c|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
   
-    |SQL Server 2005|Type|값 이름|값 데이터|  
+    |SQL Server 2005|유형|값 이름|값 데이터|  
     |---------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\90\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\90\NodeConfiguration\Node1|DWORD|CPUMask|0x0c|  
@@ -160,7 +157,7 @@ SQL Server 2014 서비스 팩 2부터 시작 시 데이터베이스 엔진 서�
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server&#41;&#40;NUMA 노드에 TCP IP 포트 매핑](map-tcp-ip-ports-to-numa-nodes-sql-server.md)   
- [선호도 마스크 서버 구성 옵션](affinity-mask-server-configuration-option.md)   
+ [affinity mask 서버 구성 옵션](affinity-mask-server-configuration-option.md)   
  [ALTER SERVER CONFIGURATION&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)  
   
   

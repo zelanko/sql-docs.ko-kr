@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d98194f5dead58b738c39503445923d9df49be06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62787069"
 ---
 # <a name="configure-the-default-full-text-language-server-configuration-option"></a>default full-text language 서버 구성 옵션 구성
@@ -41,24 +41,24 @@ ms.locfileid: "62787069"
   
 -   **후속 작업:**  [기본 전체 텍스트 언어 옵션을 구성한 후](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   `default full-text language` 옵션 값은 전체 텍스트 인덱스에 사용 됩니다 .이 옵션은 전체 텍스트 인덱스 만들기 또는 ALTER 전체 텍스트 인덱스 문에 language **language_term** 옵션을 통해 지정 된 언어가 없습니다. 기본 전체 텍스트 언어가 지원되지 않거나 언어 분석 패키지를 사용할 수 없으면 CREATE 또는 ALTER 작업이 실패하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 지정된 언어가 올바르지 않다는 내용의 오류 메시지를 반환합니다.  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   이 옵션은 고급 옵션으로, 숙련된 데이터베이스 관리자나 공인된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기술 지원 담당자만 변경해야 합니다.  
   
 -   옵션 `default full-text language` 에는 LCID 값이 필요 합니다. 지원되는 LCID 및 해당 관련 언어 목록을 보려면 [sys.fulltext_languages&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)서버 구성 옵션을 구성하는 방법을 설명합니다. ISV(Independent Software Vendor) 등에서 제공하는 다른 언어를 사용할 수도 있습니다. 특정 언어를 찾을 수 없으면 전체 텍스트 검색 엔진에서 주 언어로 자동 전환합니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경하거나 RECONFIGURE 문을 실행하는 두 매개 변수를 사용하여 **sp_configure** 를 실행하려면 사용자에게 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-configure-the-default-full-text-language-option"></a>기본 전체 텍스트 언어 옵션을 구성하려면  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62787069"
   
 3.  기타의 **기본 전체 텍스트 언어** 를 사용하여 전체 텍스트가 인덱싱된 열의 기본 언어 값을 지정할 수 있습니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-configure-the-default-full-text-language-option"></a>기본 전체 텍스트 언어 옵션을 구성하려면  
   
@@ -94,7 +94,7 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 기본 전체 텍스트 언어 옵션을 구성한 후  
+##  <a name="follow-up-after-you-configure-the-default-full-text-language-option"></a><a name="FollowUp"></a> 후속 작업: 기본 전체 텍스트 언어 옵션을 구성한 후  
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

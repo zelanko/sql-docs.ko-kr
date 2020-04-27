@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8645cf56a37e41d681daed2c05c3db9bf34c98e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780988"
 ---
 # <a name="managing-text-and-image-columns-how-to-topics-odbc"></a>text 및 image 열 관리 방법 도움말 항목(ODBC)
@@ -27,6 +27,6 @@ ms.locfileid: "62780988"
 -   [ODBC&#41;&#40;실행 시 데이터 열 사용](../../relational-databases/native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-columns.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC How-to Topics](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
+ [ODBC 방법 도움말 항목](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

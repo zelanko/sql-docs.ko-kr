@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1cac8403327ecf3888439290554f059bb00bce2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770871"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 대상
@@ -33,7 +33,7 @@ ms.locfileid: "62770871"
   
 -   [SAP BW 대상 구성](#bkmk_Configure_Destination)  
   
-##  <a name="bkmk_Prepare_Objects"></a> 대상에 필요한 SAP Netweaver BW 개체 준비  
+##  <a name="preparing-the-sap-netweaver-bw-objects-that-the-destination-requires"></a><a name="bkmk_Prepare_Objects"></a> 대상에 필요한 SAP Netweaver BW 개체 준비  
  SAP BW 대상이 작동하려면 특정 개체가 SAP Netweaver BW 시스템에 있어야 합니다. 이러한 개체가 없는 경우 다음 단계를 수행하여 SAP Netweaver BW 시스템에서 이러한 개체를 만들고 구성해야 합니다.  
   
 > [!NOTE]  
@@ -55,20 +55,19 @@ ms.locfileid: "62770871"
   
  SAP Netweaver BW 시스템으로의 데이터 로드를 지원하는 데 필요한 InfoObject, InfoCube, InfoSource 및 InfoPackage를 추가로 만들 수도 있습니다.  
   
-##  <a name="bkmk_Connect_Database"></a> SAP Netweaver BW 시스템에 연결  
+##  <a name="connecting-to-the-sap-netweaver-bw-system"></a><a name="bkmk_Connect_Database"></a> SAP Netweaver BW 시스템에 연결  
  SAP Netweaver BW 버전 7 시스템에 연결하기 위해 SAP BW 대상은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 패키지의 일부인 SAP BW 연결 관리자를 사용합니다. SAP BW 연결 관리자는 SAP BW 대상이 사용할 수 있는 유일한 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 연결 관리자입니다.  
   
  SAP BW 연결 관리자에 대한 자세한 내용은 [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md)를 참조하십시오.  
   
-##  <a name="bkmk_Configure_Destination"></a> SAP BW 대상 구성  
+##  <a name="configuring-the-sap-bw-destination"></a><a name="bkmk_Configure_Destination"></a> SAP BW 대상 구성  
  다음과 같은 방법으로 SAP BW 대상을 구성할 수 있습니다.  
   
 -   데이터를 로드하는 데 사용할 InfoPackage를 조회하고 선택합니다.  
   
 -   데이터 흐름의 각 열을 InfoPackage의 적절한 InfoObject에 매핑합니다.  
   
--   
-  `PackageSize` 속성을 구성하여 한 번에 전송될 데이터 행 수를 지정합니다.  
+-   `PackageSize` 속성을 구성하여 한 번에 전송될 데이터 행 수를 지정합니다.  
   
 -   SAP Netweaver BW 시스템에서 데이터 로드가 완료될 때까지 대기하도록 선택합니다.  
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779227"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 인덱스 사용 지침
@@ -69,11 +69,11 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
 |작업(Operation)|메모리 액세스에 최적화된 비클러스터형 해시, 인덱스|메모리 액세스에 최적화된 비클러스터형 인덱스|디스크 기반 인덱스|  
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
-|색인 검색은 모든 테이블 행을 검색합니다.|yes|yes|yes|  
-|같음 조건자(=)의 인덱스 검색.|yes<br /><br /> (전체 키 필요)|예 <sup>1</sup>|yes|  
-|같지 않음 조건자에 대 한 Index seek (> \<, <, =, >=, BETWEEN).|아니요(인덱스 검색의 결과)|예 <sup>1</sup>|yes|  
-|인덱스 정의와 일치하는 정렬 순서로 행을 검색합니다.|예|yes|yes|  
-|인덱스 정의의 역순과 일치하는 정렬 순서로 행을 검색합니다.|예|예|yes|  
+|색인 검색은 모든 테이블 행을 검색합니다.|예|예|예|  
+|같음 조건자(=)의 인덱스 검색.|예<br /><br /> (전체 키 필요)|예 <sup>1</sup>|예|  
+|같지 않음 조건자에 대 한 Index seek (> \<, <, =, >=, BETWEEN).|아니요(인덱스 검색의 결과)|예 <sup>1</sup>|예|  
+|인덱스 정의와 일치하는 정렬 순서로 행을 검색합니다.|예|예|예|  
+|인덱스 정의의 역순과 일치하는 정렬 순서로 행을 검색합니다.|아니요|예|예|  
   
  이 표에서 테이블에서 "예"는 인덱스가 요청을 적절히 처리할 수 있음을 의미하며 "아니요"는 인덱스를 사용하여 요청을 충족할 수 없음을 의미합니다.  
   

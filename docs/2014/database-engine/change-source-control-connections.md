@@ -14,22 +14,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d57f5938cb888a955645f5a9e0b01eeacfc1142b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812792"
 ---
 # <a name="change-source-control-connections"></a>원본 제어 연결 변경
   소스 제어에서 솔루션을 처음 추가하거나 열면 원본 제어 공급자는 로컬 솔루션 디렉터리의 루트 폴더와 해당 서버 폴더 간에 연결을 설정합니다.  
   
- 루트 폴더(통합 루트라고도 함)는 클라이언트에 상주합니다. 루트 폴더는 솔루션이나 프로젝트가 참조하는 모든 파일을 그 아래에서 찾을 수 있는 폴더입니다. 최신 버전의 솔루션, 기록 및 상태 정보를 찾으려면 소스 제어 서버에 상주하는 서버 폴더를 찾습니다. 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe에서는 서버 폴더를 프로젝트라고 합니다.  
+ 루트 폴더(통합 루트라고도 함)는 클라이언트에 상주합니다. 루트 폴더는 솔루션이나 프로젝트가 참조하는 모든 파일을 그 아래에서 찾을 수 있는 폴더입니다. 최신 버전의 솔루션, 기록 및 상태 정보를 찾으려면 소스 제어 서버에 상주하는 서버 폴더를 찾습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe에서는 서버 폴더를 프로젝트라고 합니다.  
   
  대부분의 상황에서는 해당 서버 폴더에서 솔루션을 언바인딩하거나 솔루션 연결을 끊어야 합니다. 예를 들어 소스 제어 공급자가 상주하는 컴퓨터를 사용할 수 없는 경우 백업 컴퓨터에 연결하여 솔루션을 백업된 서버 폴더에 다시 바인딩하고 작업을 정상적으로 재개할 수 있습니다. 또한 소스 제어 프로젝트가 분기된 경우 새 프로젝트 버전이 상주하는 서버 폴더에 솔루션을 바인딩해야 할 수 있습니다.  
   
- 소스 제어 공급자의 사용자 인터페이스를 사용하여 솔루션이 바인딩되는 서버 폴더를 변경할 수 있습니다. 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 환경 내에서 소스 제어 사용자 인터페이스를 열 수 있습니다.  
+ 소스 제어 공급자의 사용자 인터페이스를 사용하여 솔루션이 바인딩되는 서버 폴더를 변경할 수 있습니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 환경 내에서 소스 제어 사용자 인터페이스를 열 수 있습니다.  
   
 #### <a name="to-open-the-source-control-user-interface-from-the-studio-environment"></a>Studio 환경에서 소스 제어 사용자 인터페이스를 열려면  
   
@@ -38,6 +36,6 @@ ms.locfileid: "62812792"
 ## <a name="see-also"></a>참고 항목  
  [원본 제어 기본 사항](../../2014/database-engine/source-control-basics.md)   
  [원본 제어 옵션 설정](../../2014/database-engine/set-source-control-options.md)   
- [원본 제어에서 파일 제외](../../2014/database-engine/exclude-files-from-source-control.md)  
+ [소스 제어에서 파일 제외](../../2014/database-engine/exclude-files-from-source-control.md)  
   
   

@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 818e1176cb5a4f81205a36dc7be6fd9fded286ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773671"
 ---
 # <a name="search-property-list-editor"></a>검색 속성 목록 편집기
@@ -27,8 +27,7 @@ ms.locfileid: "62773671"
   
 ## <a name="options"></a>옵션  
  **속성 이름**  
- 전체 텍스트 쿼리에서 속성을 식별하는 데 사용할 이름을 지정합니다. 속성 이름은 내부에 공백을 포함할 수 있습니다. 
-  **속성 이름** 의 최대 길이는 255자입니다. "작성자"나 "집 주소"와 같은 친숙한 단어 또는 `System.Author`나 `System.Contact.HomeAddress`와 같은 Windows 정식 속성 이름을 이 이름에 사용할 수 있습니다. 속성 **이름** 은 속성 집합 내에서 속성을 고유 하 게 식별 해야 합니다.  
+ 전체 텍스트 쿼리에서 속성을 식별하는 데 사용할 이름을 지정합니다. 속성 이름은 내부에 공백을 포함할 수 있습니다. **속성 이름** 의 최대 길이는 255자입니다. "작성자"나 "집 주소"와 같은 친숙한 단어 또는 `System.Author`나 `System.Contact.HomeAddress`와 같은 Windows 정식 속성 이름을 이 이름에 사용할 수 있습니다. **속성 이름** 은 속성 집합 내에서 해당 속성을 고유하게 식별해야 합니다.  
   
  개발자는 속성 이름을 사용하여 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 조건자에 있는 속성을 식별합니다. 따라서 속성을 추가할 때는 속성을 의미 있게 나타내는 값을 지정해야 합니다.  
   
@@ -57,8 +56,8 @@ ms.locfileid: "62773671"
  [ALTER SEARCH PROPERTY LIST &#40;transact-sql&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql)   
- [검색 속성 목록을 사용하여 문서 속성 검색](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
+ [ALTER SEARCH PROPERTY LIST &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql)   
+ [검색 속성 목록을 사용 하 여 문서 속성 검색](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [sys.registered_search_property_lists&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  
   
   

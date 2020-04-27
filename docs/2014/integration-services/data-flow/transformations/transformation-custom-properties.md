@@ -42,14 +42,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a3e999975f13654a5f3c2f34a2325324c5a36ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770740"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 개체 모델의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 대부분의 데이터 흐름 개체에 공통 되는 속성 외에도 많은 데이터 흐름 개체에는 해당 개체와 관련 된 사용자 지정 속성이 있습니다. 이러한 사용자 지정 속성은 런타임에만 사용할 수 있으며 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 관리 프로그래밍 참조 설명서에서 설명하지 않습니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 개체 모델에 있는 대부분의 데이터 흐름 개체에 공통된 속성 이외에 많은 데이터 흐름 개체에는 해당 개체와 관련된 사용자 지정 속성이 있습니다. 이러한 사용자 지정 속성은 런타임에만 사용할 수 있으며 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 관리 프로그래밍 참조 설명서에서 설명하지 않습니다.  
   
  이 항목에서는 다양한 데이터 흐름 변환의 사용자 지정 속성을 나열하고 설명합니다. 대부분의 데이터 흐름 개체에 공통되는 속성에 대한 자세한 내용은 [Common Properties](../../common-properties.md)을 참조하십시오.  
   
@@ -59,21 +59,20 @@ ms.locfileid: "62770740"
   
 ||||  
 |-|-|-|  
-|[합계](#aggregate)|[열 내보내기](#extract)|[행 개수](#rowcount)|  
+|[집계](#aggregate)|[열 내보내기](#extract)|[행 개수](#rowcount)|  
 |[감사](#audit)|[유사 항목 그룹화](#fgroup)|[행 샘플링](#rowsamp)|  
-|[캐시 변환](#cachetransform)|[유사 항목 조회](#flookup)|[스크립트 구성 요소](#script)|  
+|[캐시 변환](#cachetransform)|[유사 항목 조회](#flookup)|[S스크립트 구성 요소](#script)|  
 |[문자표 변환](#charmap)|[열 가져오기](#insert)|[느린 변경 차원](#scd)|  
-|[조건부 분할](#condsplit)|[조회](#lookup)|[정렬](#sort)|  
+|[조건부 분할](#condsplit)|[조회](#lookup)|[Sort](#sort)|  
 |[열 복사](#copymap)|[병합 조인](#mjoin)|[용어 추출](#textract)|  
 |[데이터 변환](#dataconv)|[OLE DB 명령](#oledbcmd)|[용어 조회](#tlookup)|  
 |[데이터 마이닝 쿼리](#dmquery)|[비율 샘플링](#percent)|[피벗 해제](#unpivot)|  
 |[파생 열](#derived)|[피벗](#pivot)||  
   
 ### <a name="transformations-without-custom-properties"></a>사용자 지정 속성이 없는 변환  
- 
-  [Merge Transformation](merge-transformation.md), [Multicast Transformation](multicast-transformation.md)및 [Union All Transformation](union-all-transformation.md)변환은 구성 요소, 입력 또는 출력 수준의 사용자 지정 속성을 포함하지 않습니다. 이러한 변환은 모든 데이터 흐름 구성 요소에 공통된 속성만 사용합니다.  
+ 구성 요소, 입력 또는 출력 수준에서 [병합 변환](merge-transformation.md), [멀티캐스트 변환](multicast-transformation.md) 및 [Union All 변환](union-all-transformation.md) 변환은 사용자 지정 속성을 포함하지 않습니다. 이러한 변환은 모든 데이터 흐름 구성 요소에 공통된 속성만 사용합니다.  
   
-##  <a name="aggregate"></a>집계 변환 사용자 지정 속성  
+##  <a name="aggregate-transformation-custom-properties"></a><a name="aggregate"></a> 집계 변환 사용자 지정 속성  
  집계 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 집계 변환의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -82,47 +81,46 @@ ms.locfileid: "62770740"
 |--------------|---------------|-----------------|  
 |AutoExtendFactor|정수|집계 중에 메모리를 확장할 수 있는 비율을 지정하는 1에서 100 사이의 값입니다. 이 속성의 기본값은 **25**입니다.|  
 |CountDistinctKeys|정수|집계에서 쓸 수 있는 정확한 고유 카운트 수를 지정하는 값입니다. CountDistinctScale 값이 지정되어 있으면 CountDistinctKeys의 값이 우선 순위를 갖습니다.|  
-|CountDistinctScale|Integer(열거형)|집계에서 셀 수 있는 열의 대략적인 고유 값 수를 설명하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **Low** (1)-최대 50만 키 값을 나타냅니다.<br /><br /> **Medium** (2)-최대 500만 키 값을 나타냅니다.<br /><br /> **High** (3)-2500만 보다 큰 키 값을 나타냅니다.<br /><br /> **지정 되지 않음** (0)-CountDistinctScale 값이 사용 되지 않음을 나타냅니다. 
-  **Unspecified** (0) 옵션을 사용하면 대량 데이터 집합의 성능에 영향을 줄 수 있습니다.|  
+|CountDistinctScale|Integer(열거형)|집계에서 셀 수 있는 열의 대략적인 고유 값 수를 설명하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **Low** (1) - 최대 50만 개의 키 값을 나타냅니다.<br /><br /> **Medium** (2) - 최대 500만 개의 키 값을 나타냅니다.<br /><br /> **High** (3) - 2,500만 개 이상의 키 값을 나타냅니다.<br /><br /> **Unspecified** (0) - CountDistinctScale 값이 사용되지 않음을 나타냅니다. **Unspecified** (0) 옵션을 사용하면 대량 데이터 집합의 성능에 영향을 줄 수 있습니다.|  
 |구성|정수|집계에서 쓰는 정확한 Group By 키 수를 지정하는 값입니다. KeyScalevalue가 지정되어 있으면 Keys의 값이 우선 순위를 갖습니다.|  
-|KeyScale|Integer(열거형)|집계에서 쓸 수 있는 대략적인 Group By 키 값 수를 설명하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **Low** (1)-최대 50만 키 값을 나타냅니다.<br /><br /> **Medium** (2)-최대 500만 키 값을 나타냅니다.<br /><br /> **High** (3)-2500만 보다 큰 키 값을 나타냅니다.<br /><br /> **지정 되지 않음** (0)-KeyScale 값이 사용 되지 않음을 나타냅니다.|  
+|KeyScale|Integer(열거형)|집계에서 쓸 수 있는 대략적인 Group By 키 값 수를 설명하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **Low** (1) - 최대 50만 개의 키 값을 나타냅니다.<br /><br /> **Medium** (2) - 최대 500만 개의 키 값을 나타냅니다.<br /><br /> **High** (3) - 2,500만 개 이상의 키 값을 나타냅니다.<br /><br /> **Unspecified** (0) - KeyScale 값이 사용되지 않음을 나타냅니다.|  
   
  다음 표에서는 집계 변환 출력의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
 |구성|정수|집계에서 쓸 수 있는 정확한 Group By 키 수를 지정하는 값입니다. KeyScale 값이 지정되어 있으면 Keys의 값이 우선 순위를 갖습니다.|  
-|KeyScale|Integer(열거형)|집계에서 쓸 수 있는 대략적인 Group By 키 값 수를 설명하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **Low** (1)-최대 50만 키 값을 나타냅니다.<br /><br /> **Medium** (2)-최대 500만 키 값을 나타냅니다.<br /><br /> **High** (3)-2500만 보다 큰 키 값을 나타냅니다.<br /><br /> **지정 되지 않음** (0)-KeyScale 값이 사용 되지 않음을 나타냅니다.|  
+|KeyScale|Integer(열거형)|집계에서 쓸 수 있는 대략적인 Group By 키 값 수를 설명하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **Low** (1) - 최대 50만 개의 키 값을 나타냅니다.<br /><br /> **Medium** (2) - 최대 500만 개의 키 값을 나타냅니다.<br /><br /> **High** (3) - 2,500만 개 이상의 키 값을 나타냅니다.<br /><br /> **Unspecified** (0) - KeyScale 값이 사용되지 않음을 나타냅니다.|  
   
  다음 표에서는 집계 변환 출력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
 |AggregationColumnId|정수|GROUP BY 또는 집계 함수에 참여하는 열의 `LineageID`입니다.|  
-|AggregationComparisonFlags|정수|집계 변환에서 열의 문자열 데이터를 비교하는 방법을 지정하는 값입니다. 자세한 내용은 [Comparing String Data](../comparing-string-data.md)을(를) 참조하세요.|  
-|AggregationType|Integer(열거형)|열에서 수행할 집계 연산을 지정하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **개수** (1)<br /><br /> **모두 계산** (2)<br /><br /> **Countdistinct** (3)<br /><br /> **합계** (4)<br /><br /> **평균** (5)<br /><br /> **최대** (7)<br /><br /> **최소** (6)<br /><br /> **그룹화 방법** (0)|  
+|AggregationComparisonFlags|정수|집계 변환에서 열의 문자열 데이터를 비교하는 방법을 지정하는 값입니다. 자세한 내용은 [Comparing String Data](../comparing-string-data.md)을 참조하세요.|  
+|AggregationType|Integer(열거형)|열에서 수행할 집계 연산을 지정하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **Count** (1)<br /><br /> **Count all** (2)<br /><br /> **Countdistinct** (3)<br /><br /> **Sum** (4)<br /><br /> **Average** (5)<br /><br /> **Maximum** (7)<br /><br /> **Minimum** (6)<br /><br /> **Group by** (0)|  
 |CountDistinctKeys|정수|집계 유형이 **Count distinct**인 경우 집계에서 쓸 수 있는 정확한 키 수를 지정하는 값입니다. CountDistinctScale 값이 지정되어 있으면 CountDistinctKeys의 값이 우선 순위를 갖습니다.|  
-|CountDistinctScale|Integer(열거형)|집계 유형이 **Count distinct**인 경우 집계에서 쓸 수 있는 대략적인 키 값 수를 설명하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **Low** (1)-최대 50만 키 값을 나타냅니다.<br /><br /> **Medium** (2)-최대 500만 키 값을 나타냅니다.<br /><br /> **High** (3)-2500만 보다 큰 키 값을 나타냅니다.<br /><br /> **지정 되지 않음** (0)-CountDistinctScale 값이 사용 되지 않음을 나타냅니다.|  
+|CountDistinctScale|Integer(열거형)|집계 유형이 **Count distinct**인 경우 집계에서 쓸 수 있는 대략적인 키 값 수를 설명하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **Low** (1) - 최대 50만 개의 키 값을 나타냅니다.<br /><br /> **Medium** (2) - 최대 500만 개의 키 값을 나타냅니다.<br /><br /> **High** (3) - 2,500만 개 이상의 키 값을 나타냅니다.<br /><br /> **Unspecified** (0) - CountDistinctScale 값이 사용되지 않음을 나타냅니다.|  
 |IsBig|부울|열에 40억을 초과하는 값 또는 배정밀도 부동 소수점 값보다 전체 자릿수가 큰 값이 포함되어 있는지 여부를 나타내는 값입니다. 값은 0 또는 1일 수 있습니다. 0은 IsBig이이 `False` 고 열에 큰 값 또는 정확한 값이 포함 되지 않음을 나타냅니다. 이 속성의 기본값은 1입니다.|  
   
  집계 변환의 입력 및 입력 열에는 사용자 지정 속성이 없습니다.  
   
  자세한 내용은 [Aggregate Transformation](aggregate-transformation.md)을 참조하세요.  
   
-##  <a name="audit"></a>감사 변환 사용자 지정 속성  
+##  <a name="audit-transformation-custom-properties"></a><a name="audit"></a> 감사 변환 사용자 지정 속성  
  감사 변환에는 구성 요소 수준의 모든 데이터 흐름 구성 요소에 공통된 속성만 있습니다.  
   
  다음 표에서는 감사 변환 출력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
 |속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
-|LineageItemSelected|Integer(열거형)|출력에 대해 선택된 감사 항목입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **실행 인스턴스 GUID** (0)<br /><br /> **실행 시작 시간** (4)<br /><br /> **컴퓨터 이름** (5)<br /><br /> **패키지 ID** (1)<br /><br /> **패키지 이름** (2)<br /><br /> **작업 ID** (8)<br /><br /> **작업 이름** (7)<br /><br /> **사용자 이름** (6)<br /><br /> **버전 ID** (3)|  
+|LineageItemSelected|Integer(열거형)|출력에 대해 선택된 감사 항목입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **실행 인스턴스 GUID** (0)<br /><br /> **실행 시작 시간** (4)<br /><br /> **컴퓨터 이름** (5)<br /><br /> **패키지 ID** (1)<br /><br /> **패키지 이름** (2)<br /><br /> **태스크 ID** (8)<br /><br /> **태스크 이름** (7)<br /><br /> **사용자 이름** (6)<br /><br /> **버전 ID** (3)|  
   
  감사 변환의 입력, 입력 열 및 출력에는 사용자 지정 속성이 없습니다.  
   
  자세한 내용은 [감사 변환](audit-transformation.md)을 참조하세요.  
   
-##  <a name="cachetransform"></a>캐시 변환 사용자 지정 속성  
+##  <a name="cache-transform-transformation-custom-properties"></a><a name="cachetransform"></a> 캐시 변환 사용자 지정 속성  
  캐시 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 캐시 변환의 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -133,9 +131,9 @@ ms.locfileid: "62770740"
 |ValidateExternalMetadata|부울|디자인 타임에 외부 데이터 원본을 사용하여 캐시 변환의 유효성을 검사하는지 여부를 나타냅니다. 속성이 `False`로 설정된 경우 런타임에 외부 데이터 원본에 대한 유효성 검사가 수행됩니다.<br /><br /> 기본값은 `True`입니다.|  
 |AvailableInputColumns|String|사용 가능한 입력 열 목록입니다.|  
 |InputColumns|String|선택된 입력 열 목록입니다.|  
-|CacheColumnName|String|선택된 입력 열에 매핑된 열의 이름을 지정합니다.<br /><br /> CacheColumnName 속성의 열 이름은 **캐시 연결 관리자 편집기** 의 **열**페이지에 나열된 해당 열 이름과 일치해야 합니다.<br /><br /> 자세한 내용은 [Cache Connection Manager Editor](../../cache-connection-manager-editor.md) 을 참조 하세요.|  
+|CacheColumnName|String|선택된 입력 열에 매핑된 열의 이름을 지정합니다.<br /><br /> CacheColumnName 속성의 열 이름은 **캐시 연결 관리자 편집기** 의 **열**페이지에 나열된 해당 열 이름과 일치해야 합니다.<br /><br /> 자세한 내용은 [Cache Connection Manager Editor](../../cache-connection-manager-editor.md)를 참조하세요.|  
   
-##  <a name="charmap"></a>문자표 변환 사용자 지정 속성  
+##  <a name="character-map-transformation-custom-properties"></a><a name="charmap"></a> 문자표 변환 사용자 지정 속성  
  문자표 변환에는 구성 요소 수준의 모든 데이터 흐름 구성 요소에 공통된 속성만 있습니다.  
   
  다음 표에서는 문자표 변환 출력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -143,13 +141,13 @@ ms.locfileid: "62770740"
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
 |InputColumnLineageId|정수|출력 열의 원본인 입력 열의 `LineageID`를 지정하는 값입니다.|  
-|MapFlags|Integer(열거형)|열에서 문자표 변환이 수행하는 문자열 연산을 지정하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **바이트 반전** (2)<br /><br /> **전자 (6** )<br /><br /> **반자** (5)<br /><br /> **히라가나** (3)<br /><br /> **가타카나** (4)<br /><br /> **언어적 대/소문자 구분** (7)<br /><br /> **소문자** (0)<br /><br /> **중국어 간체** (8)<br /><br /> **중국어 번체**(9)<br /><br /> **대문자** (1)|  
+|MapFlags|Integer(열거형)|열에서 문자표 변환이 수행하는 문자열 연산을 지정하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **바이트 반전** (2)<br /><br /> **전자** (6)<br /><br /> **반자** (5)<br /><br /> **히라가나** (3)<br /><br /> **가타카나** (4)<br /><br /> **대/소문자 구분 기능** (7)<br /><br /> **소문자** (0)<br /><br /> **중국어(간체)** (8)<br /><br /> **중국어(번체)** (9)<br /><br /> **대문자** (1)|  
   
  문자표 변환의 입력, 입력 열 및 출력에는 사용자 지정 속성이 없습니다.  
   
  자세한 내용은 [Character Map Transformation](character-map-transformation.md)을 참조하세요.  
   
-##  <a name="condsplit"></a>조건부 분할 변환 사용자 지정 속성  
+##  <a name="conditional-split-transformation-custom-properties"></a><a name="condsplit"></a> 조건부 분할 변환 사용자 지정 속성  
  조건부 분할 변환에는 구성 요소 수준의 모든 데이터 흐름 구성 요소에 공통된 속성만 있습니다.  
   
  다음 표에서는 조건부 분할 변환 출력의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -165,7 +163,7 @@ ms.locfileid: "62770740"
   
  자세한 내용은 [Conditional Split Transformation](conditional-split-transformation.md)을 참조하세요.  
   
-##  <a name="copymap"></a>열 복사 변환 사용자 지정 속성  
+##  <a name="copy-column-transformation-custom-properties"></a><a name="copymap"></a> 열 복사 변환 사용자 지정 속성  
  열 복사 변환에는 구성 요소 수준의 모든 데이터 흐름 구성 요소에 공통된 속성만 있습니다.  
   
  다음 표에서는 열 복사 변환 출력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -178,21 +176,21 @@ ms.locfileid: "62770740"
   
  자세한 내용은 [Copy Column Transformation](copy-column-transformation.md)을 참조하세요.  
   
-##  <a name="dataconv"></a>데이터 변환 사용자 지정 속성  
+##  <a name="data-conversion-transformation-custom-properties"></a><a name="dataconv"></a> 데이터 변환 사용자 지정 속성  
  데이터 변환에는 구성 요소 수준의 모든 데이터 흐름 구성 요소에 공통된 속성만 있습니다.  
   
  다음 표에서는 데이터 변환 출력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
-|FastParse|부울|열이 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에서 제공하는 더 빠르지만 로캘을 구분하지 않는 빠른 구문 분석 루틴을 사용하는지, 아니면 로캘을 구분하는 표준 구문 분석 루틴을 사용하는지를 나타내는 값입니다. 이 속성의 기본값은 `False`입니다. 자세한 내용은 [Fast Parse](../../fast-parse.md) 및 [Standard Parse](../../standard-parse.md)를 참조하세요. .<br /><br /> 참고: 이 속성은 **데이터 변환 편집기**에서는 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수는 있습니다.|  
+|FastParse|부울|열이 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에서 제공하는 더 빠르지만 로캘을 구분하지 않는 빠른 구문 분석 루틴을 사용하는지, 아니면 로캘을 구분하는 표준 구문 분석 루틴을 사용하는지를 나타내는 값입니다. 이 속성의 기본값은 `False`입니다. 자세한 내용은 [Fast Parse](../../fast-parse.md) 및 [Standard Parse](../../standard-parse.md)를 참조하세요. .<br /><br /> 참고: 이 속성은 **데이터 변환 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
 |SourceInputColumnLineageId|정수|출력 열의 원본인 입력 열의 `LineageID`입니다.|  
   
  데이터 변환의 입력, 입력 열 및 출력에는 사용자 지정 속성이 없습니다.  
   
  자세한 내용은 [Data Conversion Transformation](data-conversion-transformation.md)을 참조하세요.  
   
-##  <a name="dmquery"></a>데이터 마이닝 쿼리 변환 사용자 지정 속성  
+##  <a name="data-mining-query-transformation-custom-properties"></a><a name="dmquery"></a> 데이터 마이닝 쿼리 변환 사용자 지정 속성  
  데이터 마이닝 쿼리 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 데이터 마이닝 쿼리 변환의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -200,10 +198,8 @@ ms.locfileid: "62770740"
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
 |ASConnectionId|String|연결 개체의 고유 식별자입니다.|  
-|ASConnectionString|String|
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 프로젝트 또는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터베이스에 대한 연결 문자열입니다.|  
-|CatalogName|String|
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터베이스의 이름입니다.|  
+|ASConnectionString|String|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 프로젝트 또는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터베이스에 대한 연결 문자열입니다.|  
+|CatalogName|String|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터베이스의 이름입니다.|  
 |ModelName|String|데이터 마이닝 모델의 이름입니다.|  
 |ModelStructureName|String|마이닝 구조의 이름입니다.|  
 |ObjectRef|String|변환에서 사용하는 데이터 마이닝 구조를 식별하는 XML 태그입니다.|  
@@ -213,7 +209,7 @@ ms.locfileid: "62770740"
   
  자세한 내용은 [Data Mining Query Transformation](data-mining-query-transformation.md)을 참조하세요.  
   
-##  <a name="derived"></a>파생 열 변환 사용자 지정 속성  
+##  <a name="derived-column-transformation-custom-properties"></a><a name="derived"></a> 파생 열 변환 사용자 지정 속성  
  파생 열 변환에는 구성 요소 수준의 모든 데이터 흐름 구성 요소에 공통된 속성만 있습니다.  
   
  다음 표에서는 파생 열 변환 입력 열 및 출력 열의 사용자 지정 속성을 설명합니다. 파생 열을 새 열로 추가하는 경우 이러한 사용자 지정 속성이 새 출력 열에 적용됩니다. 기존 입력 열의 내용을 파생 결과로 바꾸는 경우에는 이러한 사용자 지정 속성이 기존 입력 열에 적용됩니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -227,7 +223,7 @@ ms.locfileid: "62770740"
   
  자세한 내용은 [파생 열 변환](derived-column-transformation.md)을 참조하세요.  
   
-##  <a name="extract"></a>열 내보내기 변환 사용자 지정 속성  
+##  <a name="export-column-transformation-custom-properties"></a><a name="extract"></a> 열 내보내기 변환 사용자 지정 속성  
  열 내보내기 변환에는 구성 요소 수준의 모든 데이터 흐름 구성 요소에 공통된 속성만 있습니다.  
   
  다음 표에서는 열 내보내기 변환 입력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -243,7 +239,7 @@ ms.locfileid: "62770740"
   
  자세한 내용은 [Export Column Transformation](export-column-transformation.md)을 참조하세요.  
   
-##  <a name="insert"></a>열 가져오기 변환 사용자 지정 속성  
+##  <a name="import-column-transformation-custom-properties"></a><a name="insert"></a> 열 가져오기 변환 사용자 지정 속성  
  열 가져오기 변환에는 구성 요소 수준의 모든 데이터 흐름 구성 요소에 공통된 속성만 있습니다.  
   
  다음 표에서는 열 가져오기 변환 입력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -257,7 +253,7 @@ ms.locfileid: "62770740"
   
  자세한 내용은 [Import Column Transformation](import-column-transformation.md)을 참조하세요.  
   
-##  <a name="fgroup"></a>유사 항목 그룹화 변환 사용자 지정 속성  
+##  <a name="fuzzy-grouping-transformation-custom-properties"></a><a name="fgroup"></a> 유사 항목 그룹화 변환 사용자 지정 속성  
  유사 항목 그룹화 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 유사 항목 그룹화 변환의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -265,8 +261,8 @@ ms.locfileid: "62770740"
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
 |구분 기호|String|변환에서 사용하는 토큰 구분 기호입니다. 기본 구분 기호에는 공백( ), 쉼표(,), 마침표(.), 세미콜론(;), 콜론(:), 하이픈(-), 큰따옴표("), 작은따옴표('), 앰퍼샌드(&), 슬래시 기호(/), 백슬래시(\\), @ 기호, 느낌표(!), 물음표(?), 여는 괄호((), 닫는 괄호()), 보다 작음(\<), 보다 큼(>), 여는 대괄호([), 닫는 대괄호(]), 여는 중괄호({), 닫는 중괄호(}), 파이프(&#124;), 숫자 기호(#), 별표(*), 캐럿(^) 및 백분율(%) 문자가 포함됩니다.|  
-|Exhaustive|부울|각 입력 레코드를 다른 모든 입력 레코드와 비교할지 여부를 지정하는 값입니다. 값 `True`는 대개 디버깅용으로 사용됩니다. 이 속성의 기본값은 `False`입니다.<br /><br /> 참고: 이 속성은 **유사 항목 그룹화 변환 편집기**에서는 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수는 있습니다.|  
-|MaxMemoryUsage|정수|변환에서 사용할 최대 메모리 양입니다. 이 속성의 기본값은 동적 메모리 사용을 가능하게 하는 **0**입니다.<br /><br /> 이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.<br /><br /> 참고: 이 속성은 **유사 항목 그룹화 변환 편집기**에서는 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수는 있습니다.|  
+|Exhaustive|부울|각 입력 레코드를 다른 모든 입력 레코드와 비교할지 여부를 지정하는 값입니다. 값 `True`는 대개 디버깅용으로 사용됩니다. 이 속성의 기본값은 `False`입니다.<br /><br /> 참고: 이 속성은 **유사 항목 그룹화 변환 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
+|MaxMemoryUsage|정수|변환에서 사용할 최대 메모리 양입니다. 이 속성의 기본값은 동적 메모리 사용을 가능하게 하는 **0**입니다.<br /><br /> 이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.<br /><br /> 참고: 이 속성은 **유사 항목 그룹화 변환 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
 |MinSimilarity|Double|중복을 식별하기 위해 변환에서 사용하는 유사성 임계값으로, 0에서 1 사이의 값으로 나타납니다.  이 속성의 기본값은 0.8입니다.|  
   
  다음 표에서는 유사 항목 그룹화 변환 입력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -274,7 +270,7 @@ ms.locfileid: "62770740"
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
 |ExactFuzzy|Integer(열거형)|변환에서 유사 일치를 수행하는지, 아니면 정확히 일치를 수행하는지를 지정하는 값입니다. 유효한 값은 **정확** 및 **유사**입니다. 이 속성의 기본값은 **유사**입니다.|  
-|FuzzyComparisonFlags|Integer(열거형)|변환에서 열의 문자열 데이터를 비교하는 방법을 지정하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **FullySensitive**<br /><br /> **IgnoreCase**<br /><br /> **IgnoreKanaType**<br /><br /> **IgnoreNonSpace**<br /><br /> **IgnoreSymbols**<br /><br /> **IgnoreWidth**<br /><br /> <br /><br /> 자세한 내용은 [Comparing String Data](../comparing-string-data.md)을(를) 참조하세요.|  
+|FuzzyComparisonFlags|Integer(열거형)|변환에서 열의 문자열 데이터를 비교하는 방법을 지정하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **FullySensitive**<br /><br /> **IgnoreCase**<br /><br /> **IgnoreKanaType**<br /><br /> **IgnoreNonSpace**<br /><br /> **IgnoreSymbols**<br /><br /> **IgnoreWidth**<br /><br /> <br /><br /> 자세한 내용은 [Comparing String Data](../comparing-string-data.md)을 참조하세요.|  
 |LeadingTrailingNumeralsSignificant|Integer(열거형)|숫자의 의미를 지정하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **LeadingNumeralsSignificant** (1)-선행 숫자에 의미가 있는 경우 사용 합니다.<br /><br /> **TrailingNumeralsSignificant** (2)-후행 숫자에 의미가 있는 경우 사용 합니다.<br /><br /> **LeadingAndTrailingNumeralsSignificant** (3)-선행 및 후행 숫자 모두에 의미가 있는 경우 사용 합니다.<br /><br /> **NumeralsNotSpecial** (0)-숫자에 의미가 없는 경우 사용 합니다.|  
 |MinSimilarity|Double|열의 조인에 사용되는 유사성 임계값으로, 0에서 1 사이의 값으로 지정됩니다. 임계값보다 큰 행만 일치하는 것으로 간주됩니다.|  
 |ToBeCleaned|부울|열이 중복을 식별하는 데 사용되는지, 즉 이 열이 그룹화하는 열인지 여부를 지정하는 값입니다. 이 속성의 기본값은 `False`입니다.|  
@@ -283,29 +279,28 @@ ms.locfileid: "62770740"
   
 |속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
-|ColumnType|Integer(열거형)|출력 열의 유형을 식별하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **Keyin** (1)<br /><br /> **KeyOut** (2)<br /><br /> **유사성** (3)<br /><br /> **Columnsimilarity** (4)<br /><br /> **PassThru** (5)<br /><br /> **Canonical**l (6)<br /><br /> **Undefined** (0)|  
+|ColumnType|Integer(열거형)|출력 열의 유형을 식별하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **KeyIn** (1)<br /><br /> **KeyOut** (2)<br /><br /> **Similarity** (3)<br /><br /> **ColumnSimilarity** (4)<br /><br /> **PassThru** (5)<br /><br /> **Canonical**(6)<br /><br /> **Undefined** (0)|  
 |InputID|정수|해당 입력 열의 `LineageID`입니다.|  
   
  유사 항목 그룹화 변환의 입력 및 출력에는 사용자 지정 속성이 없습니다.  
   
  자세한 내용은 [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md)을 참조하세요.  
   
-##  <a name="flookup"></a>유사 항목 조회 변환 사용자 지정 속성  
+##  <a name="fuzzy-lookup-transformation-custom-properties"></a><a name="flookup"></a> 유사 항목 조회 변환 사용자 지정 속성  
  유사 항목 조회 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
- 다음 표에서는 유사 항목 조회 변환의 사용자 지정 속성을 설명합니다. 
-  `ReferenceMetadataXML`를 제외한 모든 속성은 읽기/쓰기가 가능합니다.  
+ 다음 표에서는 유사 항목 조회 변환의 사용자 지정 속성을 설명합니다. `ReferenceMetadataXML`를 제외한 모든 속성은 읽기/쓰기가 가능합니다.  
   
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|부울|유사 항목 조회 인덱스 생성 및 후속 조회를 위해 참조 테이블의 복사본을 만들지 여부를 지정합니다. 이 속성의 기본값은 `True`입니다.|  
 |구분 기호|String|변환에서 열 값을 토큰화하는 데 사용하는 구분 기호입니다. 기본 구분 기호에는 공백( ), 쉼표(,), 마침표(.), 세미콜론(;), 콜론(:), 하이픈(-), 큰따옴표("), 작은따옴표('), 앰퍼샌드(&), 슬래시 기호(/), 백슬래시(\\), @ 기호, 느낌표(!), 물음표(?), 여는 괄호((), 닫는 괄호()), 보다 작음(\<), 보다 큼(>), 여는 대괄호([), 닫는 대괄호(]), 여는 중괄호({), 닫는 중괄호(}), 파이프(&#124;) 문자가 포함됩니다. 숫자 기호(#), 별표(*), 캐럿(^) 및 백분율(%) 문자가 포함됩니다.|  
 |DropExistingMatchIndex|부울|MatchIndexOptions가 ReuseExistingIndex로 설정되지 않은 경우 MatchIndexName에 지정된 일치 인덱스가 삭제되는지 여부를 지정하는 값입니다. 이 속성의 기본값은 `True`입니다.|  
-|Exhaustive|부울|각 입력 레코드를 다른 모든 입력 레코드와 비교할지 여부를 지정하는 값입니다. 값 `True`는 대개 디버깅용으로 사용됩니다. 이 속성의 기본값은 `False`입니다.<br /><br /> 참고: 이 속성은 **유사 항목 조회 변환 편집기**에서는 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수는 있습니다.|  
+|Exhaustive|부울|각 입력 레코드를 다른 모든 입력 레코드와 비교할지 여부를 지정하는 값입니다. 값 `True`는 대개 디버깅용으로 사용됩니다. 이 속성의 기본값은 `False`입니다.<br /><br /> 참고: 이 속성은 **유사 항목 조회 변환 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
 |MatchIndexName|String|일치 인덱스의 이름입니다. 일치 인덱스는 변환에서 만들어 사용 인덱스를 저장하는 테이블입니다. 일치 인덱스가 다시 사용되는 경우 MatchIndexName에서 다시 사용할 인덱스를 지정합니다. MatchIndexName은 유효한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 식별자 이름이어야 합니다. 예를 들어 이름에 공백이 포함된 경우 이름을 대괄호로 묶어야 합니다.|  
-|MatchIndexOptions|Integer(열거형)|변환에서 일치 인덱스를 관리하는 방법을 지정하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> `ReuseExistingIndex`8000<br /><br /> **GenerateNewIndex** (1)<br /><br /> **GenerateAndPersistNewIndex** (2)<br /><br /> **GenerateAndMaintainNewIndex** (3)|  
-|MaxMemoryUsage|정수|조회 테이블의 최대 캐시 크기입니다. 이 속성의 기본값은 캐시 크기에 제한이 없음을 의미하는 **0**입니다.<br /><br /> 이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.<br /><br /> 참고: 이 속성은 **유사 항목 조회 변환 편집기**에서는 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수는 있습니다.|  
-|MaxOutputMatchesPerInput|정수|변환에서 각 입력 행에 대해 반환할 수 있는 최대 일치 항목 수입니다. 이 속성의 기본값은 **1**입니다.<br /><br /> 참고: 100보다 큰 값은 **고급 편집기**를 사용해야 지정할 수 있습니다.|  
+|MatchIndexOptions|Integer(열거형)|변환에서 일치 인덱스를 관리하는 방법을 지정하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> `ReuseExistingIndex` (0)<br /><br /> **GenerateNewIndex** (1)<br /><br /> **GenerateAndPersistNewIndex** (2)<br /><br /> **GenerateAndMaintainNewIndex** (3)|  
+|MaxMemoryUsage|정수|조회 테이블의 최대 캐시 크기입니다. 이 속성의 기본값은 캐시 크기에 제한이 없음을 의미하는 **0**입니다.<br /><br /> 이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.<br /><br /> 참고: 이 속성은 **유사 항목 조회 변환 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
+|MaxOutputMatchesPerInput|정수|변환에서 각 입력 행에 대해 반환할 수 있는 최대 일치 항목 수입니다. 이 속성의 기본값은 **1**입니다.<br /><br /> 참고: 100보다 큰 값은 **고급 편집기**를 사용해야만 지정할 수 있습니다.|  
 |MinSimilarity|정수|변환이 구성 요소 수준에서 사용하는 유사성 임계값으로, 0에서 1 사이의 값으로 지정됩니다. 임계값보다 큰 행만 일치하는 것으로 간주됩니다.|  
 |ReferenceMetadataXML|String|[!INCLUDE[ssInternalOnly](../../../includes/ssinternalonly-md.md)]|  
 |ReferenceTableName|String|조회 테이블의 이름입니다. 이 이름은 유효한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 식별자 이름이어야 합니다. 예를 들어 이름에 공백이 포함된 경우 이름을 대괄호로 묶어야 합니다.|  
@@ -315,8 +310,8 @@ ms.locfileid: "62770740"
   
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
-|FuzzyComparisonFlags|정수|변환에서 열의 문자열 데이터를 비교하는 방법을 지정하는 값입니다. 자세한 내용은 [Comparing String Data](../comparing-string-data.md)을(를) 참조하세요.|  
-|FuzzyComparisonFlagsEx|Integer(열거형)|변환에서 사용하는 확장 비교 플래그를 지정하는 값입니다. 이 값에는 **MapExpandLigatures, MapFoldCZone**, **MapFoldDigits**, **MapPrecomposed**및 **NoMapping**이 포함될 수 있습니다. **Nomapping** 은 다른 플래그와 함께 사용할 수 없습니다.|  
+|FuzzyComparisonFlags|정수|변환에서 열의 문자열 데이터를 비교하는 방법을 지정하는 값입니다. 자세한 내용은 [Comparing String Data](../comparing-string-data.md)을 참조하세요.|  
+|FuzzyComparisonFlagsEx|Integer(열거형)|변환에서 사용하는 확장 비교 플래그를 지정하는 값입니다. 이 값에는 **MapExpandLigatures, MapFoldCZone**, **MapFoldDigits**, **MapPrecomposed**및 **NoMapping**이 포함될 수 있습니다. **NoMapping** 은 다른 플래그와 함께 사용할 수 없습니다.|  
 |JoinToReferenceColumn|String|열이 조인된 참조 테이블의 열 이름을 지정하는 값입니다.|  
 |JoinType|정수|변환에서 유사 일치를 수행하는지, 아니면 정확히 일치를 수행하는지를 지정하는 값입니다. 이 속성의 기본값은 **유사**입니다. 정확히 조인 유형의 정수 값은 **1** 이며 유사 항목 조인 유형의 값은 **2**입니다.|  
 |MinSimilarity|Double|변환이 열 수준에서 사용하는 유사성 임계값으로, 0에서 1 사이의 값으로 지정됩니다. 임계값보다 큰 행만 일치하는 것으로 간주됩니다.|  
@@ -328,7 +323,7 @@ ms.locfileid: "62770740"
   
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
-|ColumnType|Integer(열거형)|변환에서 출력에 추가하는 열에 대한 출력 열의 유형을 식별하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **유사성** (1)<br /><br /> **신뢰도** (2)<br /><br /> **Columnsimilarity** (3)<br /><br /> **Undefined** (0)|  
+|ColumnType|Integer(열거형)|변환에서 출력에 추가하는 열에 대한 출력 열의 유형을 식별하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **Similarity** (1)<br /><br /> **Confidence** (2)<br /><br /> **ColumnSimilarity** (3)<br /><br /> **Undefined** (0)|  
 |CopyFromReferenceColumn|String|출력 열의 값을 제공하는 참조 테이블의 열 이름을 지정하는 값입니다.|  
 |SourceInputColumnLineageId|정수|이 출력 열에 값을 제공하는 입력 열을 식별하는 값입니다.|  
   
@@ -336,11 +331,10 @@ ms.locfileid: "62770740"
   
  자세한 내용은 [Fuzzy Lookup Transformation](lookup-transformation.md)을 참조하세요.  
   
-##  <a name="lookup"></a>조회 변환 사용자 지정 속성  
+##  <a name="lookup-transformation-custom-properties"></a><a name="lookup"></a> 조회 변환 사용자 지정 속성  
  조회 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
- 다음 표에서는 조회 변환의 사용자 지정 속성을 설명합니다. 
-  `ReferenceMetadataXML`를 제외한 모든 속성은 읽기/쓰기가 가능합니다.  
+ 다음 표에서는 조회 변환의 사용자 지정 속성을 설명합니다. `ReferenceMetadataXML`를 제외한 모든 속성은 읽기/쓰기가 가능합니다.  
   
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
@@ -348,10 +342,8 @@ ms.locfileid: "62770740"
 |DefaultCodePage|정수|데이터 원본에서 코드 페이지 정보를 사용할 수 없을 경우 사용할 기본 코드 페이지입니다.|  
 |MaxMemoryUsage|정수|조회 테이블의 최대 캐시 크기입니다. 이 속성의 기본값은 캐시 크기에 제한이 없음을 의미하는 **25**입니다.|  
 |MaxMemoryUsage64|정수|64비트 컴퓨터에서 조회 테이블의 최대 캐시 크기입니다.|  
-|NoMatchBehavior|Integer(열거형)|참조 데이터 세트에서 일치 항목이 없는 열을 오류로 처리할지 여부를 지정하는 값입니다.<br /><br /> 이 속성이 `Treat rows with no matching entries as errors`(0)로 설정된 경우 일치 항목이 없는 행이 오류로 처리됩니다. 
-  **조회 변환 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 이러한 유형의 오류가 발생할 때 수행할 작업을 지정할 수 있습니다. 자세한 내용은 [조회 변환 편집기&#40;오류 출력 페이지&#41;](../../lookup-transformation-editor-error-output-page.md)를 참조하세요.<br /><br /> 이 속성이 `Send rows with no matching entries to the no match output`(1)으로 설정된 경우에는 해당 행이 오류로 처리되지 않습니다.<br /><br /> 기본값은 `Treat rows with no matching entries as errors`(0)입니다.|  
-|ParameterMap|String|
-  `SqlCommand` 문에 사용된 매개 변수에 매핑되는 계보 ID를 세미콜론으로 구분한 목록입니다.|  
+|NoMatchBehavior|Integer(열거형)|참조 데이터 세트에서 일치 항목이 없는 열을 오류로 처리할지 여부를 지정하는 값입니다.<br /><br /> 이 속성이 `Treat rows with no matching entries as errors`(0)로 설정된 경우 일치 항목이 없는 행이 오류로 처리됩니다. **조회 변환 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 이러한 유형의 오류가 발생할 때 수행할 작업을 지정할 수 있습니다. 자세한 내용은 [조회 변환 편집기&#40;오류 출력 페이지&#41;](../../lookup-transformation-editor-error-output-page.md)를 참조하세요.<br /><br /> 이 속성이 `Send rows with no matching entries to the no match output`(1)으로 설정된 경우에는 해당 행이 오류로 처리되지 않습니다.<br /><br /> 기본값은 `Treat rows with no matching entries as errors`(0)입니다.|  
+|ParameterMap|String|`SqlCommand` 문에 사용된 매개 변수에 매핑되는 계보 ID를 세미콜론으로 구분한 목록입니다.|  
 |ReferenceMetadataXML|String|변환에서 해당 출력에 복사하는 조회 테이블의 열에 대한 메타데이터입니다.|  
 |SqlCommand|String|조회 테이블을 채우는 SELECT 문입니다.|  
 |SqlCommandParam|String|조회 테이블을 채우는 매개 변수가 있는 SQL 문입니다.|  
@@ -371,9 +363,9 @@ ms.locfileid: "62770740"
   
  조회 변환의 입력 및 출력에는 사용자 지정 속성이 없습니다.  
   
- 자세한 내용은 [조회 변환](lookup-transformation.md)을 참조 하세요.  
+ 자세한 내용은 [Lookup Transformation](lookup-transformation.md)을(를) 참조하세요.  
   
-##  <a name="mjoin"></a>병합 조인 변환 사용자 지정 속성  
+##  <a name="merge-join-transformation-custom-properties"></a><a name="mjoin"></a> 병합 조인 변환 사용자 지정 속성  
  병합 조인 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 병합 조인 변환의 사용자 지정 속성을 설명합니다.  
@@ -395,14 +387,14 @@ ms.locfileid: "62770740"
   
  자세한 내용은 [Merge Join Transformation](merge-join-transformation.md)을 참조하세요.  
   
-##  <a name="oledbcmd"></a>OLE DB 명령 변환 사용자 지정 속성  
+##  <a name="ole-db-command-transformation-custom-properties"></a><a name="oledbcmd"></a> OLE DB 명령 변환 사용자 지정 속성  
  OLE DB 명령 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 OLE DB 명령 변환의 사용자 지정 속성을 설명합니다.  
   
 |속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
-|CommandTimeout|정수|시간 제한이 초과 되기 전에 SQL 명령을 실행할 수 있는 최대 시간 (초)입니다. 값 **0** 은 시간 제한이 없음을 나타냅니다. 이 속성의 기본값은 **0**입니다.|  
+|CommandTimeout|정수|제한 시간이 초과될 때까지 SQL 명령을 실행할 수 있는 최대 시간(초)입니다. 값 **0** 은 제한 시간이 없음을 의미합니다. 이 속성의 기본값은 **0**입니다.|  
 |DefaultCodePage|정수|데이터 원본에서 코드 페이지 정보를 사용할 수 없을 경우 사용할 코드 페이지입니다.|  
 |SqlCommand|String|데이터 흐름의 각 행에 대해 변환에서 실행하는 Transact-SQL 문입니다.<br /><br /> 이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.|  
   
@@ -416,7 +408,7 @@ ms.locfileid: "62770740"
   
  자세한 내용은 [OLE DB Command Transformation](ole-db-command-transformation.md)을 참조하세요.  
   
-##  <a name="percent"></a>비율 샘플링 변환 사용자 지정 속성  
+##  <a name="percentage-sampling-transformation-custom-properties"></a><a name="percent"></a> 비율 샘플링 변환 사용자 지정 속성  
  비율 샘플링 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 비율 샘플링 변환의 사용자 지정 속성을 설명합니다.  
@@ -436,7 +428,7 @@ ms.locfileid: "62770740"
   
  자세한 내용은 [Percentage Sampling Transformation](percentage-sampling-transformation.md)을 참조하세요.  
   
-##  <a name="pivot"></a>피벗 변환 사용자 지정 속성  
+##  <a name="pivot-transformation-custom-properties"></a><a name="pivot"></a> 피벗 변환 사용자 지정 속성  
  다음 표에서는 피벗 변환을 위한 사용자 지정 구성 요소 속성을 설명합니다.  
   
 |속성|데이터 형식|Description|  
@@ -451,19 +443,19 @@ ms.locfileid: "62770740"
   
  다음 표에서는 피벗 변환 출력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성|데이터 형식|Description|  
+|속성|데이터 형식|설명|  
 |--------------|---------------|-----------------|  
 |PivotKeyValue|String|해당 PivotUsage 속성의 값에 따라 피벗 키로 표시되는 열에서 가능한 값 중 하나입니다.<br /><br /> 이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.|  
 |SourceColumn|정수|피벗된 값이 포함된 입력 열의 `LineageID` 또는 -1입니다. 값 -1은 해당 열이 피벗 작업에 사용되지 않음을 나타냅니다.|  
   
  자세한 내용은 [Pivot Transformation](pivot-transformation.md)을 참조하세요.  
   
-##  <a name="rowcount"></a>행 개수 변환 사용자 지정 속성  
+##  <a name="row-count-transformation-custom-properties"></a><a name="rowcount"></a> 행 개수 변환 사용자 지정 속성  
  행 개수 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 행 개수 변환의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성 이름|데이터 형식|Description|  
+|속성 이름|데이터 형식|설명|  
 |-------------------|---------------|-----------------|  
 |VariableName|String|행 개수를 보유하는 변수의 이름입니다.|  
   
@@ -471,25 +463,25 @@ ms.locfileid: "62770740"
   
  자세한 내용은 [Row Count Transformation](row-count-transformation.md)을 참조하세요.  
   
-##  <a name="rowsamp"></a>행 샘플링 변환 사용자 지정 속성  
+##  <a name="row-sampling-transformation-custom-properties"></a><a name="rowsamp"></a> 행 샘플링 변환 사용자 지정 속성  
  행 샘플링 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 행 샘플링 변환의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성|데이터 형식|Description|  
+|속성|데이터 형식|설명|  
 |--------------|---------------|-----------------|  
 |SamplingSeed|정수|난수 생성기에서 사용하는 초기값입니다. 이 속성의 기본값은 변환에서 틱 수를 사용함을 나타내는 **0**입니다.|  
 |SamplingValue|정수|샘플의 행 수입니다.<br /><br /> 이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.|  
   
  다음 표에서는 행 샘플링 변환 출력의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성 이름|데이터 형식|Description|  
+|속성 이름|데이터 형식|설명|  
 |-------------------|---------------|-----------------|  
 |선택|부울|샘플링된 행을 전송할 출력을 지정합니다. 선택한 출력에서 선택 됨은로 `True`설정 되 고 선택 되지 않은 출력에서 선택 됨은로 `False`설정 됩니다.|  
   
  다음 표에서는 행 샘플링 변환 출력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성|데이터 형식|Description|  
+|속성|데이터 형식|설명|  
 |--------------|---------------|-----------------|  
 |InputColumnLineageId|정수|출력 열의 원본인 입력 열의 `LineageID`를 지정하는 값입니다.|  
   
@@ -497,12 +489,12 @@ ms.locfileid: "62770740"
   
  자세한 내용은 [Row Sampling Transformation](row-sampling-transformation.md)을(를) 참조하세요.  
   
-##  <a name="script"></a>스크립트 구성 요소 사용자 지정 속성  
+##  <a name="script-component-custom-properties"></a><a name="script"></a> 스크립트 구성 요소 사용자 지정 속성  
  스크립트 구성 요소에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다. 스크립트 구성 요소가 원본, 변환, 대상 중 어느 것으로 사용되는지 여부에 관계없이 같은 사용자 지정 속성을 사용할 수 있습니다.  
   
  다음 표에서는 스크립트 구성 요소의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성 이름|데이터 형식|Description|  
+|속성 이름|데이터 형식|설명|  
 |-------------------|---------------|-----------------|  
 |ReadOnlyVariables|String|읽기 전용 액세스 권한으로 스크립트 구성 요소에 대해 사용할 수 있는 쉼표로 구분된 변수 목록입니다.|  
 |ReadWriteVariables|String|읽기/쓰기 액세스 권한으로 스크립트 구성 요소에 대해 사용할 수 있는 쉼표로 구분된 변수 목록입니다.|  
@@ -511,12 +503,12 @@ ms.locfileid: "62770740"
   
  자세한 내용은 [Script Component](script-component.md)를 참조하세요.  
   
-##  <a name="scd"></a>느린 변경 차원 변환 사용자 지정 속성  
+##  <a name="slowly-changing-dimension-transformation-custom-properties"></a><a name="scd"></a> 느린 변경 차원 변환 사용자 지정 속성  
  느린 변경 차원 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 느린 변경 차원 변환의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성|데이터 형식|Description|  
+|속성|데이터 형식|설명|  
 |--------------|---------------|-----------------|  
 |CurrentRowWhere|String|비즈니스 키가 같은 행 중 현재 행을 선택하는 SELECT 문의 WHERE 절입니다.|  
 |EnableInferredMember|부울|유추 멤버 업데이트를 검색할지 여부를 지정하는 값입니다. 이 속성의 기본값은 `True`입니다.|  
@@ -529,7 +521,7 @@ ms.locfileid: "62770740"
   
  다음 표에서는 느린 변경 차원 변환 입력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성|데이터 형식|Description|  
+|속성|데이터 형식|설명|  
 |--------------|---------------|-----------------|  
 |ColumnType|Integer(열거형)|열의 업데이트 유형입니다. 값으로는 **변경 특성** (2), **고정 특성** (4), **기록 특성** (3), **키** (1) 및 **기타** (0)가 있습니다.|  
   
@@ -537,26 +529,26 @@ ms.locfileid: "62770740"
   
  자세한 내용은 [Slowly Changing Dimension Transformation](slowly-changing-dimension-transformation.md)을 참조하세요.  
   
-##  <a name="sort"></a>정렬 변환 사용자 지정 속성  
+##  <a name="sort-transformation-custom-properties"></a><a name="sort"></a> 정렬 변환 사용자 지정 속성  
  정렬 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 정렬 변환의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성|데이터 형식|Description|  
+|속성|데이터 형식|설명|  
 |--------------|---------------|-----------------|  
 |EliminateDuplicates|부울|변환이 변환 출력에서 중복 행을 제거하는지 여부를 지정합니다. 이 속성의 기본값은 `False`입니다.|  
 |MaximumThreads|정수|변환에서 정렬에 사용할 수 있는 최대 스레드 수를 포함합니다. 값 **0** 은 스레드 수 제한이 없음을 의미합니다. 이 속성의 기본값은 **0**입니다.<br /><br /> 이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.|  
   
  다음 표에서는 정렬 변환 입력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성|데이터 형식|Description|  
+|속성|데이터 형식|설명|  
 |--------------|---------------|-----------------|  
-|NewComparisonFlags|Integer(비트 마스크)|변환에서 열의 문자열 데이터를 비교하는 방법을 지정하는 값입니다. 자세한 내용은 [Comparing String Data](../comparing-string-data.md)을(를) 참조하세요.|  
+|NewComparisonFlags|Integer(비트 마스크)|변환에서 열의 문자열 데이터를 비교하는 방법을 지정하는 값입니다. 자세한 내용은 [Comparing String Data](../comparing-string-data.md)을 참조하세요.|  
 |NewSortKeyPosition|정수|열의 정렬 순서를 지정하는 값입니다. 값 0은 이 열에서 데이터가 정렬되지 않음을 나타냅니다.|  
   
  다음 표에서는 정렬 변환 출력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성|데이터 형식|Description|  
+|속성|데이터 형식|설명|  
 |--------------|---------------|-----------------|  
 |SortColumnID|정수|정렬 열의 `LineageID`입니다.|  
   
@@ -564,12 +556,12 @@ ms.locfileid: "62770740"
   
  자세한 내용은 [Sort Transformation](sort-transformation.md)을 참조하세요.  
   
-##  <a name="textract"></a>용어 추출 변환 사용자 지정 속성  
+##  <a name="term-extraction-transformation-custom-properties"></a><a name="textract"></a> 용어 추출 변환 사용자 지정 속성  
  용어 추출 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 용어 추출 변환의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성|데이터 형식|Description|  
+|속성|데이터 형식|설명|  
 |--------------|--------------|-----------------|  
 |FrequencyThreshold|정수|용어가 추출되기 전에 발생해야 하는 횟수를 나타내는 숫자 값입니다. 이 속성의 기본값은 **2**입니다.|  
 |IsCaseSensitive|부울|명사 및 명사구를 추출할 때 대/소문자 구분을 사용할지 여부를 지정하는 값입니다. 이 속성의 기본값은 `False`입니다.|  
@@ -584,12 +576,12 @@ ms.locfileid: "62770740"
   
  자세한 내용은 [Term Extraction Transformation](term-extraction-transformation.md)을 참조하세요.  
   
-##  <a name="tlookup"></a>용어 조회 변환 사용자 지정 속성  
+##  <a name="term-lookup-transformation-custom-properties"></a><a name="tlookup"></a> 용어 조회 변환 사용자 지정 속성  
  용어 조회 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 용어 조회 변환의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성|데이터 형식|Description|  
+|속성|데이터 형식|설명|  
 |--------------|---------------|-----------------|  
 |IsCaseSensitive|부울|입력 열 텍스트와 조회 용어를 비교할 때 대/소문자 구분 비교를 적용할지 여부를 지정하는 값입니다. 이 속성의 기본값은 `False`입니다.|  
 |RefTermColumn|String|조회 용어가 포함된 열의 이름입니다.|  
@@ -597,13 +589,13 @@ ms.locfileid: "62770740"
   
  다음 표에서는 용어 조회 변환 입력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성|데이터 형식|Description|  
+|속성|데이터 형식|설명|  
 |--------------|---------------|-----------------|  
 |InputColumnType|정수|열 사용을 지정하는 값입니다. 유효한 값으로는 통과 열의 경우 0, 조회 열의 경우 1 및 통과 열이면서 조회 열인 열의 경우 2가 있습니다.|  
   
  다음 표에서는 용어 조회 변환 출력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성 이름|데이터 형식|Description|  
+|속성 이름|데이터 형식|설명|  
 |-------------------|---------------|-----------------|  
 |CustomLineageID|정수|해당 열의 `LineageID`이 0 또는 2인 경우 해당 입력 열의 `InputColumnType`입니다.|  
   
@@ -611,7 +603,7 @@ ms.locfileid: "62770740"
   
  자세한 내용은 [Term Lookup Transformation](term-lookup-transformation.md)을 참조하세요.  
   
-##  <a name="unpivot"></a>피벗 해제 변환 사용자 지정 속성  
+##  <a name="unpivot-transformation-custom-properties"></a><a name="unpivot"></a> 피벗 해제 변환 사용자 지정 속성  
  피벗 해제 변환에는 구성 요소 수준의 모든 데이터 흐름 구성 요소에 공통된 속성만 있습니다.  
   
 > [!NOTE]  
@@ -619,18 +611,16 @@ ms.locfileid: "62770740"
   
  다음 표에서는 피벗 해제 변환 입력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성|데이터 형식|Description|  
+|속성|데이터 형식|설명|  
 |--------------|---------------|-----------------|  
 |DestinationColumn|정수|입력 열이 매핑되는 출력 열의 `LineageID`입니다. 값 -1은 입력 열이 출력 열에 매핑되지 않음을 나타냅니다.|  
-|PivotKeyValue|String|변환 출력 열에 복사되는 값입니다.<br /><br /> 이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.<br /><br /> 
-  [Unpivot Transformation](unpivot-transformation.md)에 설명된 피벗 해제 시나리오에서 Pivot Value는 Ham, Coke, Milk, Beer 및 Chips와 같은 텍스트 값입니다. 이러한 값은 **피벗 키 값 열 이름** 옵션으로 지정한 새 Product 열에 텍스트 값으로 나타납니다.|  
+|PivotKeyValue|String|변환 출력 열에 복사되는 값입니다.<br /><br /> 이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.<br /><br /> [Unpivot Transformation](unpivot-transformation.md)에 설명된 피벗 해제 시나리오에서 Pivot Value는 Ham, Coke, Milk, Beer 및 Chips와 같은 텍스트 값입니다. 이러한 값은 **피벗 키 값 열 이름** 옵션으로 지정한 새 Product 열에 텍스트 값으로 나타납니다.|  
   
  다음 표에서는 피벗 해제 변환 출력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성 이름|데이터 형식|Description|  
+|속성 이름|데이터 형식|설명|  
 |-------------------|---------------|-----------------|  
-|PivotKey|부울|입력 열의 `PivotKeyValue` 속성에 있는 값을 이 출력 열에 쓸지 여부를 나타냅니다.<br /><br /> 
-  [Unpivot Transformation](unpivot-transformation.md)에 설명된 피벗 해제 시나리오에서 Pivot Value 열 이름은 **Product** 이며 Ham, Coke, Milk, Beer 및 Chips 열이 피벗 해제되는 새 **Product** 열을 지정합니다.|  
+|PivotKey|부울|입력 열의 `PivotKeyValue` 속성에 있는 값을 이 출력 열에 쓸지 여부를 나타냅니다.<br /><br /> [Unpivot Transformation](unpivot-transformation.md)에 설명된 피벗 해제 시나리오에서 Pivot Value 열 이름은 **Product** 이며 Ham, Coke, Milk, Beer 및 Chips 열이 피벗 해제되는 새 **Product** 열을 지정합니다.|  
   
  피벗 해제 변환의 입력 및 출력에는 사용자 지정 속성이 없습니다.  
   

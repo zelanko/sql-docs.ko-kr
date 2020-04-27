@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6950199a5da1f4aa773eaa12fee80edb98aba04f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809420"
 ---
 # <a name="server-properties-memory-page"></a>서버 속성(메모리 페이지)
@@ -38,7 +38,7 @@ ms.locfileid: "62809420"
  **쿼리당 최소 메모리(KB)**  
  쿼리 실행에 할당되는 메모리의 크기(KB)를 지정합니다. 512 ~ 2147483647KB 사이의 값을 설정할 수 있습니다. 기본값은 1024KB입니다.  
   
- **구성 값**  
+ **구성 된 값**  
  이 창의 옵션에 대해 구성된 값을 표시합니다. 이러한 값을 변경한 후에는 **실행 값** 을 클릭하여 변경 사항이 적용되었는지 여부를 확인합니다. 변경 사항이 적용되지 않은 경우 먼저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작해야 합니다.  
   
  **실행 값**  

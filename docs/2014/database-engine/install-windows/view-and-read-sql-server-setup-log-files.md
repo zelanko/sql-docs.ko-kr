@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6a81258e87bf2422f3ae5a55afc5eb6429856b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774325"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>SQL Server 설치 로그 파일 보기 및 읽기
@@ -57,11 +57,9 @@ ms.locfileid: "62774325"
   
 -   전반적인 실행 요약  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램이 실행된 컴퓨터의 속성 및 구성  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램이 실행된 컴퓨터의 속성 및 구성  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품 기능  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품 기능  
   
 -   설치 버전 및 설치 패키지 속성에 대한 설명  
   
@@ -143,14 +141,11 @@ ms.locfileid: "62774325"
   
  MSI 로그 파일의 유형:  
   
--   
-  \<Feature>_\<Architecture>\_\<Interaction>.log  
+-   \<Feature>_\<Architecture>\_\<Interaction>.log  
   
--   
-  \<Feature>_\<Architecture>\_\<Language>\_\<Interaction>.log  
+-   \<Feature>_\<Architecture>\_\<Language>\_\<Interaction>.log  
   
--   
-  \<Feature>_\<Architecture>\_\<Interaction>\_\<workflow>.log  
+-   \<Feature>_\<Architecture>\_\<Interaction>\_\<workflow>.log  
   
 ### <a name="location"></a>위치  
  MSI 로그 파일 은% programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<이름\>.log에 있습니다.  

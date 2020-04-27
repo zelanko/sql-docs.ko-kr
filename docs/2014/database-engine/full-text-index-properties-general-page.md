@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a240ed4e3788d65ab795d8680dc93f253cfde059
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62778944"
 ---
 # <a name="full-text-index-properties-general-page"></a>전체 텍스트 인덱스 속성(일반 페이지)
@@ -86,7 +86,7 @@ ms.locfileid: "62778944"
  **테이블 전체 텍스트 항목 수**  
  전체 텍스트 인덱싱 작업이 성공적으로 완료된 행의 수를 나타냅니다.  
   
- 이 속성은 OBJECTPROPERTYEX `TableFulltextItemCount` 함수에서 반환하는 [!INCLUDE[tsql](../includes/tsql-md.md)] 속성에 해당합니다.  
+ 이 속성은 OBJECTPROPERTYEX [!INCLUDE[tsql](../includes/tsql-md.md)] 함수에서 반환하는 `TableFulltextItemCount` 속성에 해당합니다.  
   
  **테이블 전체 텍스트 처리된 문서**  
  전체 텍스트 인덱싱이 시작된 이후에 처리된 행의 수를 표시합니다. 전체 텍스트 검색을 위해 인덱싱 중인 테이블에서 한 행의 모든 열은 인덱싱할 한 문서의 일부로 간주됩니다. 삭제된 행은 계산되지 않습니다.  
@@ -125,8 +125,7 @@ ms.locfileid: "62778944"
  **변경 내용 추적**  
  테이블에서 전체 텍스트 변경 내용 추적을 사용할지 여부를 지정하고, 사용할 경우 종류를 지정합니다. 전체 텍스트 변경 내용 추적은 전체 텍스트 인덱싱이 설정된 테이블과 인덱싱된 뷰에서 수정된 행의 레코드를 유지 관리합니다. 이러한 변경 내용은 전체 텍스트 인덱스로 전파할 수 있습니다.  
   
- 
-  **변경 내용 추적** 값은 다음과 같습니다.  
+ **변경 내용 추적** 값은 다음과 같습니다.  
   
 |||  
 |-|-|  
@@ -139,9 +138,9 @@ ms.locfileid: "62778944"
   
 |||  
 |-|-|  
-|**전체**|테이블에 대해 전체 채우기를 수행하는 동안 모든 행에 대해 인덱스 항목이 작성됩니다.|  
+|**차지**|테이블에 대해 전체 채우기를 수행하는 동안 모든 행에 대해 인덱스 항목이 작성됩니다.|  
 |**대비**|증분 채우기는 마지막 채우기 후 또는 마지막 채우기를 진행 중인 동안 추가, 삭제 또는 수정된 행에 대해 전체 텍스트 인덱스를 업데이트합니다. 증분 채우기를 수행하려면 기본 테이블에 `timestamp` 데이터 형식의 열이 포함되어 있어야 합니다.|  
-|**고침**|기본 테이블의 데이터가 수정될 때마다 전체 텍스트 인덱스가 업데이트됩니다.|  
+|**업데이트**|기본 테이블의 데이터가 수정될 때마다 전체 텍스트 인덱스가 업데이트됩니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [전체 텍스트 검색 시작](../relational-databases/search/get-started-with-full-text-search.md)  

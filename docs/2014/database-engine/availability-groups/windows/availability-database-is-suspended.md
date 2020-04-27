@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 21d788db62fe39b86eb801c028450c16cf845845
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815768"
 ---
 # <a name="availability-database-is-suspended"></a>가용성 데이터베이스가 일시 중지됨
@@ -28,15 +28,15 @@ ms.locfileid: "62815768"
 |||  
 |-|-|  
 |**정책 이름**|가용성 데이터베이스 일시 중지 상태|  
-|**문제점**|가용성 데이터베이스가 일시 중지됨|  
-|**범주**|**경고**|  
-|**패싯**|가용성 데이터베이스|  
+|**문제**|가용성 데이터베이스가 일시 중지됨|  
+|**범주**|**Warning**|  
+|**패싯에**|가용성 데이터베이스|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
  이 정책은 보조 데이터베이스("보조 데이터베이스 복제본"이라고도 함)의 데이터 이동 상태를 확인합니다. 데이터 이동이 일시 중지되는 경우 정책은 비정상 상태에 있습니다. 그렇지 않으면 정책은 정상 상태입니다.  
   
 > [!NOTE]  
->  이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]릴리스의 경우 가능한 원인 및 해결 방법은 TechNet Wiki의 [가용성 데이터베이스가 일시 중지됨](https://go.microsoft.com/fwlink/p/?LinkId=220860) 을 참조하세요.  
+>   이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]릴리스의 경우 가능한 원인 및 해결 방법에 대한 자세한 내용은 TechNet Wiki의 [가용성 데이터베이스가 일시 중지됨](https://go.microsoft.com/fwlink/p/?LinkId=220860) 을 참조하십시오.  
   
 ## <a name="possible-causes"></a>가능한 원인  
  이 가용성 데이터베이스의 데이터 동기화는 다음과 같은 이유로 일시 중지되었을 수 있습니다.  
@@ -50,6 +50,6 @@ ms.locfileid: "62815768"
   
 ## <a name="see-also"></a>참고 항목  
  [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 대시보드 &#40;SQL Server Management Studio를 사용&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [AlwaysOn 대시보드 사용&#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

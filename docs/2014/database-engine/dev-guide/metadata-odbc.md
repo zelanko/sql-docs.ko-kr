@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48f2fde8280a4b309c43e292bda452091d46ee02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781233"
 ---
 # <a name="metadata-odbc"></a>메타데이터(ODBC)
@@ -28,8 +28,7 @@ ms.locfileid: "62781233"
  날짜 및 시간 데이터 형식에 대해 IPD 및 IRD 필드에 반환되는 내용에 대해 설명합니다.  
   
  [카탈로그 메타데이터](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)  
- 
-  `SQLColumns` 및 `SQLProcedureColumns`에서 반환하는 열 메타데이터와 `SQLGetTypeInfo`에서 반환하는 데이터 형식 메타데이터에 대해 설명합니다.  
+ `SQLColumns` 및 `SQLProcedureColumns`에서 반환하는 열 메타데이터와 `SQLGetTypeInfo`에서 반환하는 데이터 형식 메타데이터에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [ODBC&#41;&#40;날짜 및 시간 기능 향상](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

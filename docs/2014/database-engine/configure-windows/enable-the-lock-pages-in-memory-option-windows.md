@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6e938e3212e519ab51be1faf3f18e28957ef3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62782281"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>Lock Pages in Memory 옵션 설정(Windows)
@@ -43,8 +43,7 @@ ms.locfileid: "62782281"
   
 6.  **로컬 보안 설정 – 메모리의 페이지 잠그기** 대화 상자에서 **사용자 또는 그룹 추가**를 클릭합니다.  
   
-7.  
-  **사용자, 서비스 계정 또는 그룹 선택** 대화 상자에서 sqlservr.exe를 실행할 권한이 있는 계정을 추가합니다.  
+7.  **사용자, 서비스 계정 또는 그룹 선택** 대화 상자에서 sqlservr.exe를 실행할 권한이 있는 계정을 추가합니다.  
   
 8.  이 변경 사항을 적용하려면 로그아웃한 다음 다시 로그인합니다.  
   

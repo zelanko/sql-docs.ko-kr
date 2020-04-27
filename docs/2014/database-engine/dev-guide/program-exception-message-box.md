@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780701"
 ---
 # <a name="program-exception-message-box"></a>프로그램 예외 메시지 상자
@@ -33,8 +33,7 @@ ms.locfileid: "62780701"
   
 3.  예상되는 예외를 처리할 try-catch 블록을 만듭니다.  
   
-4.  
-  `catch` 블록 안에 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 클래스의 인스턴스를 만듭니다. 블록에서 <xref:System.Exception> 처리 하 `try` - 는 개체를 전달 합니다. `catch`  
+4.  `catch` 블록 안에 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 클래스의 인스턴스를 만듭니다. 블록에서 <xref:System.Exception> 처리 하 `try` - 는 개체를 전달 합니다. `catch`  
   
 5.  (옵션) <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>에 다음 속성 중 하나 이상을 설정합니다.  
   
@@ -62,8 +61,7 @@ ms.locfileid: "62780701"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons>예외 메시지 상자에 표시할 단추를 지정 하는 열거형입니다.  
   
-    -   
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Caption%2A> - 예외 메시지 상자의 대화 상자 캡션입니다.  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Caption%2A> - 예외 메시지 상자의 대화 상자 캡션입니다.  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.DefaultButton%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton>예외 메시지 상자의 대화 상자에 대 한 기본 단추를 지정 하는 열거형입니다.  
   
@@ -87,13 +85,11 @@ ms.locfileid: "62780701"
   
     -   메시지 텍스트를 <xref:System.String> 값으로 전달합니다.  
   
-4.  
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A>에 다음 값 중 하나를 설정합니다.  
+4.  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A>에 다음 값 중 하나를 설정합니다.  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.AbortRetryIgnore>- **중단**, **다시 시도**및 **무시** 단추를 표시 합니다.  
   
-    -   
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.Custom> - 사용자 지정 단추를 표시합니다.  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.Custom> - 사용자 지정 단추를 표시합니다.  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.OK>- **확인** 단추를 표시 합니다.  
   
@@ -123,8 +119,7 @@ ms.locfileid: "62780701"
   
     -   메시지 텍스트를 <xref:System.String> 값으로 전달합니다.  
   
-4.  
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.ShowCheckbox%2A> 속성을 `true`로 설정합니다.  
+4.  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.ShowCheckbox%2A> 속성을 `true`로 설정합니다.  
   
 5.  (옵션) 예외 메시지 상자를 다시 표시할지 여부를 사용자에게 묻는 텍스트를 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxText%2A>에 지정합니다. 기본 텍스트는 "이 메시지를 다시 표시 안 함"입니다.  
   
@@ -134,11 +129,9 @@ ms.locfileid: "62780701"
   
     1.  CreateSubKey 메서드를 호출하여 애플리케이션에서 사용하는 사용자 지정 레지스트리 키를 열고, <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryKey%2A>를 반환되는 CreateSubKey 개체로 설정합니다.  
   
-    2.  
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryValue%2A>를 사용되는 레지스트리 값의 이름으로 설정합니다.  
+    2.  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryValue%2A>를 사용되는 레지스트리 값의 이름으로 설정합니다.  
   
-    3.  
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryMeansDoNotShowDialog%2A>을 `true`로 설정합니다.  
+    3.  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryMeansDoNotShowDialog%2A>를 `true`로 설정합니다.  
   
     4.  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> 메서드를 호출합니다. 지정된 레지스트리 키가 확인되고, 레지스트리 키에 저장된 데이터가 0인 경우에만 예외 메시지 상자가 표시됩니다. 대화 상자가 표시되고 사용자가 단추를 클릭하기 전에 확인란을 선택하면 레지스트리 키의 데이터가 1로 설정됩니다.  
   

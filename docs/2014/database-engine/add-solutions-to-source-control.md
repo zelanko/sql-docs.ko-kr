@@ -14,18 +14,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7dc540b21000766cd6e33ecb1811536993857f00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815705"
 ---
 # <a name="add-solutions-to-source-control"></a>원본 제어에 솔루션 추가
-  소스 제어에 솔루션을 추가할 경우 일반적으로 전체 솔루션과 솔루션에 포함된 모든 프로젝트를 추가하고 싶을 것입니다. 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 솔루션을 원본 제어에 추가할 수 있습니다.  
+  소스 제어에 솔루션을 추가할 경우 일반적으로 전체 솔루션과 솔루션에 포함된 모든 프로젝트를 추가하고 싶을 것입니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 솔루션을 원본 제어에 추가할 수 있습니다.  
   
- 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 프로젝트는 완전하게 로컬 디스크에 상주하므로 프로젝트를 로컬로 편집, 저장 및 작성할 수 있습니다. 프로젝트를 소스 제어에 추가한 후 **체크 아웃** 명령을 사용 하 여 프로젝트의 파일을 원본 제어에서 체크 아웃할 수 있습니다.  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 프로젝트는 완전하게 로컬 디스크에 상주하므로 프로젝트를 로컬로 편집, 저장 및 작성할 수 있습니다. 프로젝트를 소스 제어에 추가한 후 **체크 아웃** 명령을 사용 하 여 프로젝트의 파일을 원본 제어에서 체크 아웃할 수 있습니다.  
   
 ### <a name="to-add-a-solution-to-source-control"></a>원본 제어에 솔루션을 추가하려면  
   

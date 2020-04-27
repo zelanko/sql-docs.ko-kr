@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e90e2386fcd6c6d2f71e1cea31f253f8baac9195
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807298"
 ---
 # <a name="database-mirroring-and-full-text-catalogs-sql-server"></a>데이터베이스 미러링 및 전체 텍스트 카탈로그(SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "62807298"
   
 -   변경 추적이 전체 텍스트 인덱스에서 해제되어 있으면 다음 문을 사용하여 해당 인덱스에서 전체 탐색을 시작해야 합니다.  
   
-     ALTER FULLTEXT INDEX ON *table_name* START FULL POPULATION  
+     전체 채우기 *table_name* 시작 하는 전체 텍스트 인덱스 변경  
   
 -   전체 텍스트 인덱스가 변경 내용을 자동으로 추적하도록 구성되어 있으면 전체 텍스트 인덱스가 자동으로 동기화됩니다. 그러나 동기화로 인해 전체 텍스트 성능이 저하될 수 있습니다. 성능이 너무 저하될 경우에는 다음과 같이 변경 내용 추적을 해제하여 전체 탐색을 수행한 후 자동 추적을 다시 설정할 수 있습니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62807298"
          ALTER FULLTEXT INDEX ON *table_name* SET CHANGE_TRACKING AUTO  
   
     > [!NOTE]  
-    >  자동 변경 추적이 설정되어 있는지 확인하려면 [OBJECTPROPERTYEX](/sql/t-sql/functions/objectproperty-transact-sql) 함수를 사용하여 테이블의 **TableFullTextBackgroundUpdateIndexOn** 속성을 쿼리하세요.  
+    >   자동 변경 추적이 설정되어 있는지 확인하려면 [OBJECTPROPERTYEX](/sql/t-sql/functions/objectproperty-transact-sql) 함수를 사용하여 테이블의 **TableFullTextBackgroundUpdateIndexOn** 속성을 쿼리하십시오.  
   
  자세한 내용은 [ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)를 참조하세요.  
   
@@ -56,10 +56,10 @@ ms.locfileid: "62807298"
  미러 서버에 대해 서비스를 강제(데이터 손실 가능)한 후 전체 탐색을 시작합니다. 전체 탐색을 시작할 때 사용할 방법은 전체 텍스트 인덱스의 변경 내용 추적 여부에 따라 달라집니다. 자세한 내용은 이 항목의 앞부분에 나오는 "장애 조치 이후의 전체 텍스트 인덱스"를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)   
+ [Transact-sql&#41;&#40;ALTER 전체 텍스트 인덱스](/sql/t-sql/statements/alter-fulltext-index-transact-sql)   
  [CREATE FULLTEXT INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
- [DROP FULLTEXT INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-index-transact-sql)   
- [데이터베이스 미러링&#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [Transact-sql&#41;&#40;전체 텍스트 인덱스 삭제](/sql/t-sql/statements/drop-fulltext-index-transact-sql)   
+ [데이터베이스 미러링 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [전체 텍스트 카탈로그와 인덱스 백업 및 복원](../../relational-databases/indexes/indexes.md)  
   
   

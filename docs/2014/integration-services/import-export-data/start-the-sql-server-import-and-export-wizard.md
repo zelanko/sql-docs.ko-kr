@@ -16,14 +16,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768035"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사 실행
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사는 데이터 원본 간에 데이터를 복사하고 기본 패키지를 구성하는 가장 간단한 방법을 제공합니다. 마법사에 대 한 자세한 내용은 [SQL Server 가져오기 및 내보내기 마법사](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)를 참조 하세요.  
   
  SQL Server 가져오기 및 내보내기 마법사를 사용 하 여 SQL Server 데이터베이스에서 Microsoft Excel 스프레드시트로 데이터를 내보내는 패키지를 만드는 방법을 보여 주는 비디오는 [Excel로 SQL Server 데이터 내보내기 (SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=131024)를 참조 하십시오.  
@@ -53,8 +52,7 @@ ms.locfileid: "62768035"
   
 ### <a name="to-import-or-export-data-by-using-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터를 가져오거나 내보내려면  
   
-1.  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사를 시작합니다.  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사를 시작합니다.  
   
 2.  해당 마법사 페이지에서 데이터 원본 및 데이터 대상을 선택합니다.  
   
@@ -119,17 +117,14 @@ ms.locfileid: "62768035"
   
 6.  패키지를 저장하고 실행합니다.  
   
-     
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 명령 프롬프트에서 마법사를 시작한 경우 패키지를 즉시 실행할 수 있습니다. 필요에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** 데이터베이스 또는 파일 시스템에 패키지를 저장할 수 있습니다. **Msdb** 데이터베이스에 대 한 자세한 내용은 [SSIS 서비스&#41;패키지 관리 &#40;](../service/package-management-ssis-service.md)를 참조 하세요.  
+     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 명령 프롬프트에서 마법사를 시작한 경우 패키지를 즉시 실행할 수 있습니다. 필요에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** 데이터베이스 또는 파일 시스템에 패키지를 저장할 수 있습니다. **Msdb** 데이터베이스에 대 한 자세한 내용은 [SSIS 서비스&#41;패키지 관리 &#40;](../service/package-management-ssis-service.md)를 참조 하세요.  
   
      패키지를 저장할 때 패키지 보호 수준을 설정할 수 있으며 설정한 보호 수준에서 암호가 사용되는 경우 암호를 제공할 수 있습니다. 패키지 보호 수준에 대 한 자세한 내용은 [패키지의 중요 한 데이터에 대 한 Access Control](../security/access-control-for-sensitive-data-in-packages.md)를 참조 하세요.  
   
-     
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 프로젝트에서 마법사를 시작한 경우 마법사에서 패키지를 실행할 수 없습니다. 대신 마법사를 시작한 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에 패키지가 추가됩니다. 그런 다음 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지를 실행할 수 있습니다.  
+     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 프로젝트에서 마법사를 시작한 경우 마법사에서 패키지를 실행할 수 없습니다. 대신 마법사를 시작한 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에 패키지가 추가됩니다. 그런 다음 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지를 실행할 수 있습니다.  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]에서는 마법사가 만든 패키지를 저장하는 옵션을 사용할 수 없습니다.  
+    >  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]에서는 마법사가 만든 패키지를 저장하는 옵션을 사용할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 가져오기 및 내보내기 마법사](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   

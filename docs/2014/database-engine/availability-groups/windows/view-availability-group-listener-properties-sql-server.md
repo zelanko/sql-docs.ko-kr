@@ -15,28 +15,27 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bdec432699b7d0a6152509ec6a53ddf452376d5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62788029"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>가용성 그룹 수신기 속성 보기(SQL Server)
   이 항목에서는 *또는* 의 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)] AlwaysOn 가용성 그룹 수신기 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 속성을 보는 방법에 대해 설명합니다.  
   
--   **다음을 사용 하 여 수신기 속성을 보려면**  
+-   **수신기 속성을 보려면:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **수신기 속성을 보려면**  
   
 1.  개체 탐색기에서 수신기를 볼 가용성 그룹의 가용성 복제본을 호스팅하는 서버 인스턴스에 연결합니다. 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
-2.  
-  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
+2.  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
   
 3.  가용성 그룹의 노드를 확장하고 **가용성 그룹 수신기** 노드를 확장합니다.  
   
@@ -44,7 +43,7 @@ ms.locfileid: "62788029"
   
 5.  **가용성 그룹 수신기 속성** 대화 상자가 열립니다. 자세한 내용은 이 항목의 뒷부분에 나와 있는 [가용성 그룹 수신기 속성(대화 상자)](#AgListenerPropertiesDialog)을 참조하세요.  
   
-###  <a name="AgListenerPropertiesDialog"></a> 가용성 그룹 수신기 속성(대화 상자)  
+###  <a name="availability-group-listener-properties-dialog-box"></a><a name="AgListenerPropertiesDialog"></a> 가용성 그룹 수신기 속성(대화 상자)  
  **수신기 DNS 이름**  
  가용성 그룹 수신기의 네트워크 이름입니다.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "62788029"
  **네트워크 모드**  
  수신기에 사용되는 TCP 프로토콜을 나타내며 다음 중 하나입니다.  
   
- **DHCP**  
+ **인터페이스**  
  수신기는 DHCP(동적 호스트 구성 프로토콜)를 실행하는 서버에 의해 할당되는 동적 IP 주소를 사용합니다.  
   
  **고정 IP**  
@@ -65,7 +64,7 @@ ms.locfileid: "62788029"
   
  표에는 수신기가 수신하는 각 서브넷 및 해당 서브넷과 연결된 IP 주소가 표시됩니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **수신기 속성을 보려면**  
   
  가용성 그룹 수신기를 모니터링하려면 다음 뷰를 사용합니다.  
@@ -88,15 +87,15 @@ ms.locfileid: "62788029"
 > [!NOTE]  
 >  [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 환경을 모니터링하는 방법은 [가용성 그룹 모니터링&#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
--   [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [SQL Server&#41;&#40;가용성 그룹 수신기 만들기 또는 구성](create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [가용성 그룹 수신기 제거&#40;SQL Server&#41;](remove-an-availability-group-listener-sql-server.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치 (Failover) &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [가용성 그룹 모니터링&#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   
   

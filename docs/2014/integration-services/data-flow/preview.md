@@ -11,17 +11,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b0b0f81c5de267d6e85525714d19999920ba9c71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770969"
 ---
 # <a name="preview"></a>미리 보기
   **미리 보기** 대화 상자를 사용하여 SAP BW 원본이 추출할 데이터를 미리 볼 수 있습니다.  
   
 > [!IMPORTANT]  
->  **SAP BW 원본 편집기** 의 **연결 관리자** 페이지에서 사용할 수 있는 **미리 보기**옵션은 데이터를 실제로 추출합니다. 이전 추출 이후에 변경된 데이터만 추출하도록 SAP Netweaver BW를 구성한 경우 **미리 보기** 를 선택하면 미리 본 데이터가 다음 추출에서 제외됩니다.  
+>  **SAP BW 원본 편집기**의 **연결 관리자** 페이지에서 사용할 수 있는 **미리 보기** 옵션은 데이터를 실제로 추출 합니다. 이전 추출 이후에 변경된 데이터만 추출하도록 SAP Netweaver BW를 구성한 경우 **미리 보기** 를 선택하면 미리 본 데이터가 다음 추출에서 제외됩니다.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW의 SAP BW 원본 구성 요소에 대한 자세한 내용은 [SAP BW 원본](sap-bw-source.md)을 참조하세요.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62770969"
  이 대화 상자에 다른 옵션은 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SAP BW 원본 편집기&#40;연결 관리자 페이지&#41;](sap-bw-source-editor-connection-manager-page.md)   
+ [SAP BW 원본 편집기 &#40;연결 관리자 페이지&#41;](sap-bw-source-editor-connection-manager-page.md)   
  [Microsoft Connector 1.1 for SAP BW F1 도움말](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

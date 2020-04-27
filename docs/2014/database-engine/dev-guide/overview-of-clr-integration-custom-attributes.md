@@ -17,18 +17,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8df7881dd5f38935628cb6653d57763a8846e60f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781108"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>CLR 통합 사용자 지정 특성 개요
-  
   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 CLR(공용 언어 런타임)에서는 특성이라고 하는 설명적 키워드를 사용할 수 있습니다. 이러한 특성은 메서드와 클래스 같은 많은 요소에 대한 추가적인 정보를 제공합니다. 특성은 개체의 메타데이터와 함께 어셈블리에 저장되며 다른 개발 도구를 위한 코드 설명이나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내의 런타임 동작 제어에 사용될 수 있습니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 CLR 루틴을 등록할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 루틴에 대한 속성 집합이 파생됩니다. 이러한 루틴 속성은 루틴에 대한 인덱싱 여부를 비롯한 루틴의 여러 가지 기능을 결정합니다. 예를 들어 `DataAccess` 속성을 `DataAccessKind.Read`로 설정하면 CLR 함수 내에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 테이블의 데이터에 액세스할 수 있습니다. 다음 예에서는 `DataAccess` 속성을 설정 하 여 사용자 테이블 **table1**의 데이터에 쉽게 액세스할 수 있는 간단한 사례를 보여 줍니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 CLR 루틴을 등록할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 루틴에 대한 속성 집합이 파생됩니다. 이러한 루틴 속성은 루틴에 대한 인덱싱 여부를 비롯한 루틴의 여러 가지 기능을 결정합니다. 예를 들어 `DataAccess` 속성을 `DataAccessKind.Read`로 설정하면 CLR 함수 내에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 테이블의 데이터에 액세스할 수 있습니다. 다음 예에서는 `DataAccess` 속성을 설정 하 여 사용자 테이블 **table1**의 데이터에 쉽게 액세스할 수 있는 간단한 사례를 보여 줍니다.  
   
 ```csharp  
 using System;  
@@ -86,8 +84,7 @@ Public partial Class UserDefinedFunctions
 End Class  
 ```  
   
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 루틴의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 루틴 정의에서 직접 루틴 속성을 파생합니다. CLR 루틴의 경우에는 이러한 속성을 파생하기 위해 서버가 루틴 본문을 분석하지 않습니다. 대신 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 언어로 구현된 클래스와 클래스 멤버의 사용자 지정 속성을 사용할 수 있습니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 루틴의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 루틴 정의에서 직접 루틴 속성을 파생합니다. CLR 루틴의 경우에는 이러한 속성을 파생하기 위해 서버가 루틴 본문을 분석하지 않습니다. 대신 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 언어로 구현된 클래스와 클래스 멤버의 사용자 지정 속성을 사용할 수 있습니다.  
   
  CLR 루틴, 사용자 정의 형식 및 집계에 필요한 사용자 지정 특성은 `Microsoft.SqlServer.Server` 네임스페이스에 정의됩니다.  
   

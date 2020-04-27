@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f34631e979ded7a329939c23a758ccc0c9aea959
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773479"
 ---
 # <a name="specify-a-version-as-the-latest-version"></a>최신 버전으로 버전 지정
@@ -34,22 +34,19 @@ ms.locfileid: "62773479"
   
 ### <a name="to-pin-a-version"></a>버전을 고정하려면  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 솔루션을 엽니다.  
+1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 솔루션을 엽니다.  
   
 2.  솔루션 탐색기에서 최신 버전으로 지정할 파일을 선택합니다.  
   
 3.  **파일** 메뉴에서 **원본 제어** 를 가리킨 다음 **ViewHistory**를 클릭 합니다.  
   
-4.  파일> **기록** 대화 상자에서 최신 버전으로 지정할 버전을 선택 하 고 고정을 클릭 합니다. **** \<  
+4.  파일> **기록** 대화 상자에서 최신 버전으로 지정할 버전을 선택 하 고 고정을 클릭 합니다. **Pin** \<  
   
-     최신 파일 버전이라는 것을 나타내는 고정 기호가 선택한 버전 옆에 나타납니다. 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 로드된 다른 버전이 있을 경우 파일을 다시 로드하라는 메시지가 나타납니다.  
+     최신 파일 버전이라는 것을 나타내는 고정 기호가 선택한 버전 옆에 나타납니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 로드된 다른 버전이 있을 경우 파일을 다시 로드하라는 메시지가 나타납니다.  
   
 ### <a name="to-roll-back-to-a-version"></a>특정 버전으로 롤백하려면  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 솔루션을 엽니다.  
+1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 솔루션을 엽니다.  
   
 2.  솔루션 탐색기에서 최신 버전으로 지정할 항목을 선택합니다.  
   

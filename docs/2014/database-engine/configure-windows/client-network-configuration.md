@@ -19,20 +19,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 862c13e61513b46b44ce55df9e66170bbb1ac219
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62787107"
 ---
 # <a name="client-network-configuration"></a>클라이언트 네트워크 구성
-  클라이언트 소프트웨어를 사용 하면 클라이언트 컴퓨터를 네트워크의 인스턴스에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결할 수 있습니다. "클라이언트"는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]과 같은 서버에서 제공하는 서비스를 사용하는 프런트 엔드 애플리케이션입니다. 이 애플리케이션을 호스팅하는 컴퓨터를 *클라이언트 컴퓨터*라고 합니다.  
+  클라이언트 소프트웨어를 사용하면 클라이언트 컴퓨터를 네트워크상에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 있습니다. "클라이언트"는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]과 같은 서버에서 제공하는 서비스를 사용하는 프런트 엔드 애플리케이션입니다. 이 애플리케이션을 호스팅하는 컴퓨터를 *클라이언트 컴퓨터*라고 합니다.  
   
- 가장 간단한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스와 동일한 시스템에 있을 수 있습니다. 그러나 대개 클라이언트는 네트워크를 통해 하나 이상의 원격 서버에 연결합니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 클라이언트/서버 아키텍처를 사용하여 네트워크 상의 여러 클라이언트 및 서버를 원활하게 관리할 수 있습니다. 대부분의 상황에서는 기본 클라이언트 구성으로 충분합니다.  
+ 가장 간단한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스와 동일한 시스템에 있을 수 있습니다. 그러나 대개 클라이언트는 네트워크를 통해 하나 이상의 원격 서버에 연결합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 클라이언트/서버 아키텍처를 사용하여 네트워크 상의 여러 클라이언트 및 서버를 원활하게 관리할 수 있습니다. 대부분의 상황에서는 기본 클라이언트 구성으로 충분합니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트에는 다음과 같은 다양한 유형의 애플리케이션이 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트에는 다음과 같은 다양한 유형의 애플리케이션이 있습니다.  
   
 -   OLE DB 소비자  
   
@@ -44,29 +42,22 @@ ms.locfileid: "62787107"
   
 -   DB-Library 클라이언트  
   
-     이러한 애플리케이션에는 DB-Library에 기록된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **isql** 명령 프롬프트 유틸리티 및 클라이언트가 포함됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]db-library를 사용 하는 클라이언트 응용 프로그램에 대 한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지원은 7.0 기능으로 제한 됩니다.  
+     해당 애플리케이션에는 DB-Library에 기록된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **isql** 명령 프롬프트 유틸리티 및 클라이언트가 포함됩니다. DB-Library를 사용하는 클라이언트 애플리케이션에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지원은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 기능으로 제한됩니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 DB-Library 및 Embedded SQL API를 사용한 기존 애플리케이션과의 연결을 계속 지원하지만 이들 API를 사용하는 애플리케이션에서 프로그래밍 작업을 수행하는 데 필요한 파일 또는 문서는 포함되지 않습니다. 이후 버전의 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서는 DB-Library 또는 Embedded SQL 애플리케이션과의 연결이 더 이상 지원되지 않습니다. DB-Library 또는 Embedded SQL을 사용하여 새 애플리케이션을 개발하지 마십시오. 기존의 애플리케이션을 수정할 때 DB-Library 또는 Embedded SQL에 대한 모든 종속 관계를 제거하십시오. 이러한 API 대신 SQLClient 네임스페이스 또는 OLE DB, ODBC 등의 API를 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 이러한 애플리케이션을 실행하는 데 필요한 DB-Library DLL이 없습니다. DB-Library 또는 Embedded SQL 애플리케이션을 실행하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 6.5, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 또는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]에서 사용 가능한 DB-Library DLL이 있어야 합니다.  
+>  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 DB-Library 및 Embedded SQL API를 사용한 기존 애플리케이션과의 연결을 계속 지원하지만 이들 API를 사용하는 애플리케이션에서 프로그래밍 작업을 수행하는 데 필요한 파일 또는 문서는 포함되지 않습니다. 이후 버전의 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서는 DB-Library 또는 Embedded SQL 애플리케이션과의 연결이 더 이상 지원되지 않습니다. DB-Library 또는 Embedded SQL을 사용하여 새 애플리케이션을 개발하지 마십시오. 기존의 애플리케이션을 수정할 때 DB-Library 또는 Embedded SQL에 대한 모든 종속 관계를 제거하십시오. 이러한 API 대신 SQLClient 네임스페이스 또는 OLE DB, ODBC 등의 API를 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 이러한 애플리케이션을 실행하는 데 필요한 DB-Library DLL이 없습니다. DB-Library 또는 Embedded SQL 애플리케이션을 실행하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 6.5, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 또는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]에서 사용 가능한 DB-Library DLL이 있어야 합니다.  
   
  애플리케이션의 유형에 관계없이 클라이언트 관리는 주로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]서버 구성 요소와의 연결 구성으로 이루어집니다. 사용자 측의 요구 사항에 따라 클라이언트 관리 범위는 서버 컴퓨터의 이름 입력과 같은 간단한 작업부터 여러 가지 다중 서버 환경을 수용하기 위한 사용자 지정 구성 항목의 라이브러리 작성에까지 이릅니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client DLL은 네트워크 라이브러리를 포함하며 설치 프로그램에 의해 설치됩니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 새로 설치하는 동안 네트워크 프로토콜은 설정되지 않으므로 업그레이드된 설치는 이전에 설정된 프로토콜을 사용합니다. 기본 네트워크 프로토콜은 Windows 설치 프로그램의 일부로 설치되거나 제어판의 네트워크를 사용하여 설치됩니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트를 관리하는 데 사용할 수 있는 도구는 다음과 같습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client DLL은 네트워크 라이브러리를 포함하며 설치 프로그램에 의해 설치됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 새로 설치하는 동안 네트워크 프로토콜은 설정되지 않으므로 업그레이드된 설치는 이전에 설정된 프로토콜을 사용합니다. 기본 네트워크 프로토콜은 Windows 설치 프로그램의 일부로 설치되거나 제어판의 네트워크를 사용하여 설치됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트를 관리하는 데 사용할 수 있는 도구는 다음과 같습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자  
   
-     클라이언트 및 서버 네트워크 구성 요소 모두 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자로 관리합니다. 구성 관리자는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워크 유틸리티, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 네트워크 유틸리티 및 서비스 관리자를 결합한 것입니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 MMC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console) 스냅인이며 Windows 컴퓨터 관리 스냅인에도 노드로 나타납니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 개별 네트워크 라이브러리를 설정, 해제, 구성 및 우선 순위 지정을 수행할 수 있습니다.  
+     클라이언트 및 서버 네트워크 구성 요소 모두 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자로 관리합니다. 구성 관리자는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워크 유틸리티, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 네트워크 유틸리티 및 서비스 관리자를 결합한 것입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 MMC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console) 스냅인이며 Windows 컴퓨터 관리 스냅인에도 노드로 나타납니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 개별 네트워크 라이브러리를 설정, 해제, 구성 및 우선 순위 지정을 수행할 수 있습니다.  
   
--   설치  
+-   설치 프로그램  
   
-     
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하여 클라이언트 컴퓨터에 네트워크 구성 요소를 설치할 수 있습니다. 명령 프롬프트에서 설치 프로그램을 시작한 경우 설치 중 개별 네트워크 라이브러리를 설정 또는 해제할 수 있습니다.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하여 클라이언트 컴퓨터에 네트워크 구성 요소를 설치할 수 있습니다. 명령 프롬프트에서 설치 프로그램을 시작한 경우 설치 중 개별 네트워크 라이브러리를 설정 또는 해제할 수 있습니다.  
   
 -   ODBC 데이터 원본 관리자  
   
@@ -75,7 +66,7 @@ ms.locfileid: "62787107"
 ## <a name="in-this-section"></a>섹션 내용  
  [클라이언트 프로토콜 구성](configure-client-protocols.md)  
   
- [클라이언트 &#40;SQL Server 구성 관리자에서 사용할 서버 별칭을 만들거나 삭제&#41;](create-or-delete-a-server-alias-for-use-by-a-client.md)  
+ [클라이언트에서 사용할 서버 별칭 만들기 또는 삭제&#40;SQL Server 구성 관리자&#41;](create-or-delete-a-server-alias-for-use-by-a-client.md)  
   
  [SQL Server로 로그인](logging-in-to-sql-server.md)  
   

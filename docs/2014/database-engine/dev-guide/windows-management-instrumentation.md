@@ -11,13 +11,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 36e07550b4a6990f8d4f4cfeb00400440f98ee7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779699"
 ---
-# <a name="windows-management-instrumentation"></a>Windows Management Instrumentation
+# <a name="windows-management-instrumentation"></a>WMI(Windows Management Instrumentation)
   이 섹션에서는 다음과 같은 주제를 다룹니다.  
   
 -   [구성 관리용 WMI 공급자 개념](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4305438285ae5f3b51ab8ac51ec2b1d0699aee64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62810351"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>다른 컴퓨터에 연결(SQL Server 구성 관리자)
@@ -31,11 +31,9 @@ ms.locfileid: "62810351"
   
 #### <a name="to-connect-to-another-computer-with-windows-computer-management"></a>Windows 컴퓨터 관리에서 다른 컴퓨터에 연결하려면  
   
-1.  
-  **시작** 메뉴에서 **내 컴퓨터**를 마우스 오른쪽 단추로 클릭하고 **관리**를 클릭합니다.  
+1.  **시작** 메뉴에서 **내 컴퓨터**를 마우스 오른쪽 단추로 클릭 한 다음 관리를 클릭 **합니다.**  
   
-2.  
-  **컴퓨터 관리**에서 **컴퓨터 관리(로컬)** 를 마우스 오른쪽 단추로 클릭하고 **다른 컴퓨터로 연결**을 클릭합니다.  
+2.  **컴퓨터 관리**에서 **컴퓨터 관리(로컬)** 를 마우스 오른쪽 단추로 클릭하고 **다른 컴퓨터로 연결**을 클릭합니다.  
   
 3.  **컴퓨터 선택** 대화 상자의 **다른 컴퓨터** 입력란에 관리할 컴퓨터의 이름을 입력하고 **확인**을 클릭합니다.  
   

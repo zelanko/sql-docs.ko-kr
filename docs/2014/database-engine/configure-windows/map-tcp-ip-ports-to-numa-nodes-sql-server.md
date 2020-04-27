@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 138e5743e18ba6e39aa55aaec6931413dd21175b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781747"
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>NUMA 노드에 TCP IP 포트 매핑(SQL Server)
@@ -42,20 +42,17 @@ ms.locfileid: "62781747"
  포트가 둘 이상의 NUMA 노드에 매핑되어 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 노드에서 로드 균형을 조정하지 않고 라운드 로빈 방식으로 노드에 연결을 할당합니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 각 IP 주소에 대해 여러 TCP 포트에서 수신할 수 있게 하려면 [여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성](configure-the-database-engine-to-listen-on-multiple-tcp-ports.md)을 참조하세요.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 각 IP 주소에 대해 여러 TCP 포트에서 수신할 수 있게 하려면 [여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성](configure-the-database-engine-to-listen-on-multiple-tcp-ports.md)을 참조하세요.  
   
-##  <a name="SSMSProcedure"></a> SQL Server 구성 관리자 사용  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> SQL Server 구성 관리자 사용  
   
 #### <a name="to-map-a-tcpip-port-to-a-numa-node"></a>NUMA 노드에 TCP/IP 포트를 매핑하려면  
   
-1.  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 **SQL Server 네트워크 구성**을 펼친 다음 **인스턴스 이름>** *\<에 대한 프로토콜*을 클릭합니다.  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 **SQL Server 네트워크 구성**을 확장한 다음 ‘**인스턴스 이름>’** 에 대한 프로토콜*을 클릭합니다.\<*  
   
 2.  세부 정보 창에서 **TCP/IP**를 두 번 클릭합니다.  
   
-3.  
-  **IP 주소** 탭을 선택하여 구성할 IP 주소에 해당하는 섹션의 **TCP 포트** 입력란에서 포트 번호 뒤에 NUMA 노드 식별자를 대괄호 안에 추가합니다. 예를 들어 TCP 포트 1500과 노드 0, 2, 5의 경우 `1500[37]` 또는 `1500[0x25]`를 사용합니다.  
+3.  **IP 주소** 탭을 선택하여 구성할 IP 주소에 해당하는 섹션의 **TCP 포트** 입력란에서 포트 번호 뒤에 NUMA 노드 식별자를 대괄호 안에 추가합니다. 예를 들어 TCP 포트 1500과 노드 0, 2, 5의 경우 `1500[37]` 또는 `1500[0x25]`를 사용합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [소프트 NUMA &#40;SQL Server를 사용 하도록 SQL Server 구성&#41;](soft-numa-sql-server.md)  

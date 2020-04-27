@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b6b4aeb4059ba659a3188712b1ce76f10efd030
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771039"
 ---
 # <a name="odata-source"></a>OData 원본
@@ -45,11 +45,11 @@ ms.locfileid: "62771039"
   
 -   [런타임에 OData 원본 쿼리 수정](modify-odata-source-query-at-runtime.md)  
   
--   [OData 원본 편집기 &#40;연결 페이지&#41;](../odata-source-editor-connection-page.md)  
+-   [OData 원본 편집기&#40;연결 페이지&#41;](../odata-source-editor-connection-page.md)  
   
--   [OData 원본 편집기 &#40;열 페이지&#41;](../odata-source-editor-columns-page.md)  
+-   [OData 원본 편집기&#40;열 페이지&#41;](../odata-source-editor-columns-page.md)  
   
--   [OData 원본 편집기 &#40;오류 출력 페이지&#41;](../odata-source-editor-error-output-page.md)  
+-   [OData 원본 편집기&#40;오류 출력 페이지&#41;](../odata-source-editor-error-output-page.md)  
   
 -   [OData 원본 속성](odata-source-properties.md)  
   

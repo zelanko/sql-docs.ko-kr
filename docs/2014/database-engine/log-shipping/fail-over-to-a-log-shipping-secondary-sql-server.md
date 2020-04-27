@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64fa315457361e8d160735f38156e79ea667a4da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774194"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>로그 전달 보조 데이터베이스로 장애 조치(Failover)(SQL Server)
@@ -46,13 +46,13 @@ ms.locfileid: "62774194"
 4.  보조 서버가 동기화된 후 해당 보조 데이터베이스를 복구하고 해당 서버 인스턴스로 리디렉션하여 원하는 데이터베이스로 장애 조치(Failover)할 수 있습니다. 복구하면 데이터베이스가 일관성 있는 온라인 상태가 됩니다.  
   
     > [!NOTE]  
-    >  보조 데이터베이스를 사용하는 경우 메타데이터가 원래 주 데이터베이스의 메타데이터와 일치하는지 확인해야 합니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)을 참조하세요.  
+    >  보조 데이터베이스를 사용하는 경우 메타데이터가 원래 주 데이터베이스의 메타데이터와 일치하는지 확인해야 합니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타 데이터 관리 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)를 참조 하세요.  
   
 5.  보조 데이터베이스를 복구한 후에는 다른 보조 데이터베이스에 대해 주 데이터베이스의 역할을 하도록 다시 구성할 수 있습니다.  
   
      다른 보조 데이터베이스를 사용하는 경우 [로그 전달 구성&#40;SQL Server&#41;](configure-log-shipping-sql-server.md)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [주 로그 전달 서버와 보조 로그 전달 서버 간 역할 변경&#40;SQL Server&#41;](change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62774194"
   
 ## <a name="see-also"></a>참고 항목  
  [로그 전달 테이블 및 저장 프로시저](log-shipping-tables-and-stored-procedures.md)   
- [로그 전달 정보&#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
+ [로그 전달 &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
  [비상 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)  
   
   

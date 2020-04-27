@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8aefce0d5afe7bec37c5fe49ba63c3fec61f3747
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771547"
 ---
 # <a name="project-versions-dialog-box"></a>프로젝트 버전 대화 상자
@@ -30,7 +30,7 @@ ms.locfileid: "62771547"
   
 -   [프로젝트 버전 복원](#restore)  
   
-##  <a name="open_dialog"></a> 프로젝트 버전 대화 상자 열기  
+##  <a name="open-the-project-versions-dialog-box"></a><a name="open_dialog"></a> 프로젝트 버전 대화 상자 열기  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 서버에 연결합니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62771547"
   
  **프로젝트 버전** 대화 상자에서 **버전** 테이블에는 서버에 배포된 프로젝트의 버전 목록이 표시되고, 해당 버전이 배포된 날짜 및 시간, 버전이 복원된 날짜 및 시간(복원된 경우), 버전 설명 및 버전 식별자가 함께 표시됩니다. 현재 활성 버전은 테이블의 **현재** 열에 확인 표시가 되어 있습니다.  
   
-##  <a name="restore"></a> 프로젝트 버전 복원  
+##  <a name="restore-a-project-version"></a><a name="restore"></a> 프로젝트 버전 복원  
  프로젝트의 이전 버전을 복원하려면 **버전** 테이블에서 버전을 선택하고 **선택한 버전으로 복원**을 클릭합니다. 프로젝트가 선택한 버전으로 복원되고 해당 버전은 **버전** 테이블의 **현재** 열에 확인 표시가 표시됩니다.  
   
   

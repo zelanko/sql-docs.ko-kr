@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3c87b2a3c6ac2156a4d52ece48efa2982bb4ca2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789113"
 ---
 # <a name="progress-page-alwayson-availability-group-wizards"></a>진행률 페이지(AlwaysOn 가용성 그룹 마법사)
@@ -39,19 +39,19 @@ ms.locfileid: "62789113"
  **상태**  
  완료된 단계의 결과와 현재 단계의 완료 비율을 다음과 같이 나타냅니다.  
   
-|결과|Description|  
+|결과|설명|  
 |------------|-----------------|  
 |**오류**|이 단계의 작업에서 오류가 발생했음을 나타냅니다. 오류를 설명하는 메시지 대화 상자를 표시하려면 링크를 클릭합니다.|  
 |**진행 중 (** *% 완료* **)**|작업이 지금 수행되고 있음을 나타내고 이 단계의 완료율을 추정합니다.|  
 |**Success**|이 단계에서 완료된 작업을 나타냅니다.|  
   
- **보다 자세한 정보**  
+ **간략 정보**  
  진행률 표를 숨기려면 클릭합니다.  
   
  **취소**  
  나머지 작업을 건너뛰고 마법사를 종료하려면 클릭합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [새 가용성 그룹 대화 상자 사용&#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

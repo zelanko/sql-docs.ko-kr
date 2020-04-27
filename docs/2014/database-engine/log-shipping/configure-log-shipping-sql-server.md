@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774587"
 ---
 # <a name="configure-log-shipping-sql-server"></a>로그 전달 구성(SQL Server)
@@ -42,20 +42,20 @@ ms.locfileid: "62774587"
   
 -   [관련 작업](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 조건  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
   
 -   주 데이터베이스는 전체 또는 대량 로그 복구 모델이어야 합니다. 데이터베이스를 단순 복구로 전환하면 로그 전달이 작동하지 않습니다.  
   
 -   로그 전달을 구성하려면 먼저 공유를 만들어 트랜잭션 로그 백업을 보조 서버에서 사용할 수 있도록 설정해야 합니다. 이 공유는 트랜잭션 로그 백업이 생성될 디렉터리의 공유입니다. 예를 들어 트랜잭션 로그를 c:\data\tlogs\\디렉터리로 백업할 경우 이 디렉터리의 \\\\*primaryserver*\tlogs 공유를 만들 수 있습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  로그 전달 저장 프로시저를 사용하려면 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-configure-log-shipping"></a>로그 전달을 구성하려면  
   
@@ -124,7 +124,7 @@ ms.locfileid: "62774587"
   
 28. **데이터베이스 속성** 대화 상자에서 **확인** 을 눌러 구성 프로세스를 시작합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-configure-log-shipping"></a>로그 전달을 구성하려면  
   
@@ -148,7 +148,7 @@ ms.locfileid: "62774587"
   
 10. 보조 서버에서 복사 및 복원 작업을 활성화합니다. 자세한 내용은 [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [SQL Server 2014 &#40;Transact-sql&#41;로그 전달 업그레이드](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
@@ -165,7 +165,7 @@ ms.locfileid: "62774587"
 -   [로그 전달 보조 데이터베이스로 장애 조치(failover)&#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [로그 전달 정보&#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
- [로그 전달 테이블 및 저장 프로시저](log-shipping-tables-and-stored-procedures.md)  
+ [로그 전달 &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
   
   

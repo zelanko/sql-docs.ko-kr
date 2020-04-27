@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62811287"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>확장된 보호를 사용하여 데이터베이스 엔진에 연결
@@ -85,8 +85,7 @@ ms.locfileid: "62811287"
   
 1.  **시작** 메뉴에서 **모든 프로그램**을 선택하고 **Microsoft SQL Server** 를 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-2.  
-  **SQL Server 네트워크 구성**을 펼치고 **** *InstanceName\<**>에 대한 프로토콜*을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+2.  **SQL Server 네트워크 구성**을 확장 한 다음 InstanceName *\<**>* **에 대 한 프로토콜** 을 마우스 오른쪽 단추로 클릭 하 고 **속성**을 클릭 합니다.  
   
 3.  채널 바인딩과 서비스 바인딩 둘 다에 대해 **고급** 탭에서 **확장된 보호** 를 적절한 설정으로 지정합니다.  
   

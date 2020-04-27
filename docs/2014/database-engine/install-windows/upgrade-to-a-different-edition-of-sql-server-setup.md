@@ -11,15 +11,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774577"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>다른 SQL Server 2014 버전으로 업그레이드(설치 프로그램)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치 프로그램은 다양한 버전의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 간에 버전 업그레이드를 지원합니다. 지원되는 버전 업그레이드 경로에 대한 자세한 내용은 [지원되는 버전 및 에디션 업그레이드](supported-version-and-edition-upgrades.md)를 참조하세요. 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 인스턴스 버전 업그레이드를 시작하기 전에 다음 항목을 검토하십시오.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치 프로그램은 다양한 버전의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 간에 버전 업그레이드를 지원합니다. 지원되는 버전 업그레이드 경로에 대한 자세한 내용은 [지원되는 버전 및 에디션 업그레이드](supported-version-and-edition-upgrades.md)를 참조하세요. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 인스턴스 버전 업그레이드를 시작하기 전에 다음 항목을 검토하십시오.  
   
 -   [SQL Server 2014 버전에서 지원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
@@ -27,7 +26,7 @@ ms.locfileid: "62774577"
   
 -   [SQL Server의 버전별 컴퓨팅 용량 제한](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
--   [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [SQL Server 2014 설치에 대한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
 >  **클러스터 된 환경에서: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** 클러스터의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 노드 중 하나에서 버전 업그레이드를 실행 하는 것 만으로도 충분 합니다. 이 노드는 Active 또는 Passive일 수 있으며 엔진은 버전 업그레이드 중에 리소스를 오프라인으로 설정하지 않습니다. 버전 업그레이드 후에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작하거나 다른 노드에 대한 장애 조치(failover)를 다시 시작해야 합니다.  
@@ -40,7 +39,7 @@ ms.locfileid: "62774577"
   
 ## <a name="procedure"></a>절차  
   
-#### <a name="to-upgrade-to-a-different-edition-of-includesscurrentincludessscurrent-mdmd"></a>다른 버전의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하려면  
+#### <a name="to-upgrade-to-a-different-edition-of-sscurrent"></a>다른 버전의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하려면  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 미디어를 넣고 루트 폴더에서 setup.exe를 두 번 클릭하거나, 구성 도구에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 센터를 시작합니다. 네트워크 공유에서 설치하려면 공유에서 루트 폴더를 찾은 다음 Setup.exe를 두 번 클릭합니다.  
   

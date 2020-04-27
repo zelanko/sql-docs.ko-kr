@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3f6123f66d687327ba56601419328e44fd920a2a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815753"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On 가용성 그룹: 상호 운용성(SQL Server)
@@ -25,9 +25,8 @@ ms.locfileid: "62815753"
   
 
   
-##  <a name="Interop"></a>AlwaysOn 가용성 그룹와 상호 운용 하는 기능  
- 다음 표에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 과 상호 운용하는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]기능이 나와 있습니다. 
-  **추가 정보** 열의 링크는 해당 기능에 대해 상호 운용성 고려 사항이 있음을 나타냅니다.  
+##  <a name="features-that-interoperate-with-alwayson-availability-groups"></a><a name="Interop"></a>AlwaysOn 가용성 그룹와 상호 운용 하는 기능  
+ 다음 표에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 과 상호 운용하는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]기능이 나와 있습니다. **추가 정보** 열의 링크는 해당 기능에 대해 상호 운용성 고려 사항이 있음을 나타냅니다.  
   
 |기능|추가 정보|  
 |-------------|----------------------|  
@@ -46,9 +45,8 @@ ms.locfileid: "62815753"
 |Service Broker|[AlwaysOn 가용성 그룹 &#40;SQL Server를 사용 하 여 Service Broker&#41;](service-broker-with-always-on-availability-groups-sql-server.md)|  
 |SQL Server 에이전트||  
   
-##  <a name="NoInterop"></a>AlwaysOn 가용성 그룹와 상호 운용 되지 않는 기능  
- 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 다음 기능과 상호 운용되지 않습니다.  
+##  <a name="features-that-do-not-interoperate-with-alwayson-availability-groups"></a><a name="NoInterop"></a>AlwaysOn 가용성 그룹와 상호 운용 되지 않는 기능  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 다음 기능과 상호 운용되지 않습니다.  
   
 -   데이터베이스 간 트랜잭션/분산 트랜잭션  
   
@@ -56,23 +54,23 @@ ms.locfileid: "62815753"
   
 -   데이터베이스 미러링  
   
-##  <a name="RelatedContent"></a> 관련 내용  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
   
--   **블로그**  
+-   **블로그:**  
   
-     [마이그레이션 가이드: 이전 클러스터링 및 미러링 배포에서 SQL Server 2012 장애 조치 (Failover) 클러스터링 및 가용성 그룹으로 마이그레이션](https://blogs.msdn.com/b/sqlalwayson/archive/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments.aspx)  
+     [마이그레이션 가이드: 이전 클러스터링 및 미러링 배포에서 SQL Server 2012 장애 조치(Failover) 클러스터링 및 가용성 그룹으로 마이그레이션](https://blogs.msdn.com/b/sqlalwayson/archive/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments.aspx)  
   
      [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](https://blogs.msdn.com/b/sqlalwayson/)  
   
      [CSS SQL Server 엔지니어 블로그](https://blogs.msdn.com/b/psssql/)  
   
--   **백서**  
+-   **백서:**  
   
      [마이그레이션 가이드: 데이터베이스 미러링 및 로그 전달을 조합하는 이전 배포에서 AlwaysOn 가용성 그룹으로 마이그레이션](https://msdn.microsoft.com/library/jj635217)  
   
      [고가용성 및 재해 복구를 위한 Microsoft SQL Server AlwaysOn 솔루션 가이드](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [SQL Server 2012에 대 한 Microsoft 백서](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [SQL Server 2012에 대한 Microsoft 백서](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server 고객 자문 팀 백서](http://sqlcat.com/)  
   

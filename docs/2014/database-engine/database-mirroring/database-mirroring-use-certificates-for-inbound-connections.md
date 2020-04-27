@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3f70ddfc241a902a59dff989323a75b17f7af55e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807562"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용(Transact-SQL)
@@ -164,9 +164,9 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 및 AlwaysOn 가용성 그룹 &#40;SQL Server에 대 한 전송 보안&#41;](transport-security-database-mirroring-always-on-availability.md)   
- [GRANT 엔드포인트 사용 권한&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
- [암호화된 미러 데이터베이스 설정](set-up-an-encrypted-mirror-database.md)   
- [데이터베이스 미러링 엔드포인트&#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
+ [Transact-sql&#41;&#40;끝점 권한 부여](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
+ [암호화 된 미러 데이터베이스 설정](set-up-an-encrypted-mirror-database.md)   
+ [데이터베이스 미러링 끝점은 SQL Server을 &#40;&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [데이터베이스 미러링 구성 문제 해결&#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   

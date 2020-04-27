@@ -13,18 +13,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779666"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>전체 텍스트 카탈로그 속성(일반 페이지)
   이 섹션에서는 **전체 텍스트 카탈로그 속성** 대화 상자의 **일반** 페이지에서 사용할 수 있는 옵션과 기능을 보여 줍니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 데이터베이스에서 전체 텍스트 카탈로그는 전체 텍스트 인덱스 그룹을 나타내는 논리적 개념입니다. 전체 텍스트 카탈로그는 어떠한 파일 그룹에도 속하지 않는 가상 개체입니다.  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 데이터베이스에서 전체 텍스트 카탈로그는 전체 텍스트 인덱스 그룹을 나타내는 논리적 개념입니다. 전체 텍스트 카탈로그는 어떠한 파일 그룹에도 속하지 않는 가상 개체입니다.  
   
 ## <a name="options"></a>옵션  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62779666"
   
 -   **복구**  
   
--   **시스템이**  
+-   **시스템 종료**  
   
 -   **증분 채우기 진행 중**  
   
@@ -86,8 +85,7 @@ ms.locfileid: "62779666"
   
 |||  
 |-|-|  
-|**없음을**|
-  **카탈로그 최적화**, **카탈로그 다시 작성**또는 **카탈로그 다시 채우기** 작업을 수행하지 않습니다.|  
+|**없음**|**카탈로그 최적화**, **카탈로그 다시 작성**또는 **카탈로그 다시 채우기** 작업을 수행하지 않습니다.|  
 |**카탈로그 최적화**|카탈로그의 공간 사용률을 최적화하고 쿼리 성능을 향상시킵니다. 카탈로그를 최적화하면 검색 결과의 검색 순위 정확도도 향상됩니다.<br /><br /> 이 동작은 ALTER FULLTEXT CATALOG *catalog_name* REORGANIZE를 실행합니다.|  
 |**카탈로그 다시 작성**|전체 텍스트 카탈로그를 삭제하고 다시 작성합니다. 악센트 구분과 같은 기본 카탈로그 속성이 변경된 경우에는 이 작업을 반드시 수행해야 합니다.<br /><br /> 카탈로그를 다시 작성하려면 전체 텍스트 카탈로그가 있는 파일 그룹이 온라인 상태 또는 읽고 쓸 수 있는 상태여야 합니다. 다시 작성 후 전체 텍스트 인덱스가 다시 채워집니다.<br /><br /> 이 동작은 ALTER FULLTEXT CATALOG *catalog_name* REBUILD를 실행합니다.|  
 |**카탈로그 다시 채우기**|데이터의 최근 변경 내용을 적용하여 카탈로그를 업데이트합니다. 이 작업을 수행하는 동안에는 카탈로그를 사용하지 않아야 합니다.|  

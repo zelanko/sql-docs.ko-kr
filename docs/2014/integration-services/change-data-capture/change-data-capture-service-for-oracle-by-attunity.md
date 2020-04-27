@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a01524acf4fc72cb50732650f1f2e6f58b4ff74d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771529"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Attunity Oracle CDC Service
@@ -32,13 +32,13 @@ ms.locfileid: "62771529"
 ## <a name="supported-windows-environments"></a>지원되는 Windows 환경  
  Attunity Oracle CDC Service는 다음 Windows 환경에서 실행할 수 있습니다.  
   
--   Windows 8  
+-   Windows 8  
   
 -   Windows 7 32비트(x86) 및 64비트(x64)  
   
 -   Windows Server 2012  
   
--   • Windows Server 2008 R2 서비스 팩 1  
+-   Windows Server 2008 R2(서비스 팩 1)  
   
 -   Windows Server 2008 32비트(x86) 및 64비트(x64) 서비스 팩 2  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62771529"
   
 -   [Oracle CDC Service](the-oracle-cdc-service.md)  
   
--   [Change Data Capture Service for Oracle by Attunity F1 도움말](change-data-capture-service-for-oracle-by-attunity-f1-help.md)  
+-   [Attunity Oracle CDC Service F1 도움말](change-data-capture-service-for-oracle-by-attunity-f1-help.md)  
   
 -   [Attunity Oracle CDC Service 방법 가이드](change-data-capture-service-for-oracle-by-attunity-how-to-guide.md)  
   

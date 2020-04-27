@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774430"
 ---
 # <a name="memory-optimized-table-variables"></a>메모리 액세스에 최적화된 테이블 변수
@@ -60,8 +60,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
  이 예제에서는 다음 사항을 제외하고 메모리 최적화 테이블 형식의 구문이 디스크 기반 테이블 형식과 비슷함을 보여 줍니다.  
   
--   
-  `MEMORY_OPTIMIZED=ON`은 테이블 형식이 메모리 최적화 형식인지 여부를 나타냅니다.  
+-   `MEMORY_OPTIMIZED=ON`은 테이블 형식이 메모리 최적화 형식인지 여부를 나타냅니다.  
   
 -   이 형식에 적어도 한 개의 인덱스가 있어야 합니다. 메모리 최적화 테이블과 마찬가지로 해시 및 비클러스터형 인덱스를 사용할 수 있습니다.  
   

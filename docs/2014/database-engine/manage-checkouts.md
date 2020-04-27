@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9de9a1f8ceca0fbb05ab2b6680c5fcc34c951109
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774537"
 ---
 # <a name="manage-checkouts"></a>체크 아웃 관리
@@ -30,7 +30,7 @@ ms.locfileid: "62774537"
   
  다음 표에서는 이 섹션에서 다루는 항목에 대해 설명합니다.  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[파일 체크 아웃](../../2014/database-engine/check-out-files.md)|파일을 수정할 수 있도록 체크 아웃하는 방법에 대한 지침을 제공합니다.|  
 |[체크 아웃 취소](../../2014/database-engine/undo-checkouts.md)|기존 체크 아웃을 취소하는 방법에 대해 설명합니다.|  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b4aa1420edc1cb627940aca6c6c2aed9d18a390
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771429"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>변경 데이터의 준비 여부 확인
@@ -197,8 +197,7 @@ ms.locfileid: "62771429"
         ```  
   
         > [!NOTE]  
-        >  
-  `Thread.Sleep` 메서드는 밀리초 단위로 지정된 인수를 필요로 합니다.  
+        >  `Thread.Sleep` 메서드는 밀리초 단위로 지정된 인수를 필요로 합니다.  
   
 7.  스크립트 실행에서 `DtsExecResult.Success`를 반환하는 기본 코드 행을 그대로 둡니다.  
   

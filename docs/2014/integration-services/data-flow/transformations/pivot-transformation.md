@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4bf9e58296b70f29e3e328782b463ecbbf7f6aab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770347"
 ---
 # <a name="pivot-transformation"></a>피벗 변환
@@ -45,7 +45,7 @@ ms.locfileid: "62770347"
   
  입력 데이터에는 중복 행이 포함될 수 있는데 이 경우 피벗 변환이 실패합니다. "중복 행"은 집합 키 열과 피벗 열에 동일한 값이 있는 행을 의미합니다. 오류를 방지하려면 오류 행이 오류 출력으로 리디렉션되도록 변환을 구성하거나 중복 행이 없도록 값을 미리 집계합니다.  
   
-##  <a name="options"></a> 피벗 대화 상자의 옵션  
+##  <a name="options-in-the-pivot-dialog-box"></a><a name="options"></a> 피벗 대화 상자의 옵션  
  **피벗** 대화 상자에서 옵션을 설정하여 피벗 작업을 구성합니다. **피벗** 대화 상자를 열려면 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 피벗 변환을 패키지에 추가한 후 구성 요소를 마우스 오른쪽 단추로 클릭하고 **편집**을 클릭합니다.  
   
  다음 목록에서는 **피벗** 대화 상자의 옵션에 대해 설명합니다.  
@@ -62,8 +62,7 @@ ms.locfileid: "62770347"
  **일치하지 않는 피벗 키 값을 무시하고 DataFlow 실행 후 보고**  
  패키지를 실행할 때 **피벗 키** 열에서 인식되지 않은 값이 포함된 행을 무시하고 모든 피벗 키 값을 로그 메시지로 출력하도록 피벗 변환을 구성하려면 이 옵션을 선택합니다.  
   
- 
-  `PassThroughUnmatchedPivotKeys` 사용자 지정 속성을 `True`로 설정하여 값을 출력하도록 변환을 구성할 수도 있습니다.  
+ `PassThroughUnmatchedPivotKeys` 사용자 지정 속성을 `True`로 설정하여 값을 출력하도록 변환을 구성할 수도 있습니다.  
   
  **값에서 피벗 출력 열 생성**  
  각 값에 대해 출력 열을 만들기 위해 피벗 변환을 설정하려면 이 상자에 피벗 키 값을 입력합니다. 패키지를 실행하기 전 값을 입력하거나 다음을 수행할 수 있습니다.  

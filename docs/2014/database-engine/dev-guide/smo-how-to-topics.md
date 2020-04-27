@@ -11,21 +11,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b100c23c1600a9c5fe4af9a39e16f8bd861656f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781942"
 ---
 # <a name="smo-how-to-topics"></a>SMO 방법 도움말 항목
   SMO 방법 도움말 항목에서는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET 프로그래밍 환경을 설정하여 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 또는 C#으로 프로그램을 만드는 방법에 대한 정보를 제공합니다.  
   
  [Visual Studio .NET에서 Visual Basic SMO 프로젝트 만들기](../../../2014/database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)  
- 
-  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET 프로그래밍 환경을 설정하여 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]으로 SMO 콘솔 애플리케이션을 만드는 방법에 대해 설명합니다.  
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET 프로그래밍 환경을 설정하여 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]으로 SMO 콘솔 애플리케이션을 만드는 방법에 대해 설명합니다.  
   
  [Visual Studio .NET에서 Visual C&#35; SMO 프로젝트 만들기](../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)  
- 
-  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET 프로그래밍 환경을 설정하여 Visual C#으로 SMO 콘솔 애플리케이션을 만드는 방법에 대해 설명합니다.  
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET 프로그래밍 환경을 설정하여 Visual C#으로 SMO 콘솔 애플리케이션을 만드는 방법에 대해 설명합니다.  
   
   

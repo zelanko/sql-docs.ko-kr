@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bd2040199aa2f24f0ae794bda9d13255a4e1d583
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807507"
 ---
 # <a name="create-history-and-status-reports"></a>기록 및 상태 보고서 만들기
@@ -29,7 +29,7 @@ ms.locfileid: "62807507"
   
 2.  **파일** 메뉴에서 **원본 제어**를 가리킨 다음 **기록**을 클릭 합니다.  
   
-3.  파일 또는 프로젝트> **기록** 대화 상자에서 보고서를 클릭 합니다. **** \<  
+3.  파일 또는 프로젝트> **기록** 대화 상자에서 보고서를 클릭 합니다. **Report** \<  
   
 4.  **기록 보고서** 대화 상자에서 적절 한 옵션을 선택한 다음 **확인**을 클릭 합니다.  
   
