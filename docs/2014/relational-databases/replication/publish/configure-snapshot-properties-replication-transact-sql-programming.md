@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b03dd7f886cee5816d591034d1be63ece45d8d1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021334"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>스냅샷 속성 구성(복제 Transact-SQL 프로그래밍)
@@ -30,7 +30,7 @@ ms.locfileid: "63021334"
   
     -   **@alt_snapshot_folder**-이 게시에 대 한 스냅숏이 스냅숏 기본 폴더 대신 또는 해당 위치에서 액세스 되는 경우 경로를 지정 합니다.  
   
-    -   **@compress_snapshot**-대체 스냅숏 폴더의 **** 스냅숏 파일이 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CAB 파일 형식으로 압축 되는 경우 true 값을 지정 합니다.  
+    -   **@compress_snapshot**-대체 스냅숏 폴더의 **true** 스냅숏 파일이 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CAB 파일 형식으로 압축 되는 경우 true 값을 지정 합니다.  
   
     -   **@pre_snapshot_script**-초기 스냅숏을 적용 하기 전에 초기화 하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정 합니다.  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3b49fc242eb8b2242269c5af33cc094937bbe0de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312105"
 ---
 # <a name="lesson-4-executing-market-basket-predictions"></a>4단원: Market Basket 예측 실행
@@ -30,8 +30,7 @@ ms.locfileid: "63312105"
   
  예측 함수를 사용하여 쿼리를 개선할 수 있습니다. 예측 함수는 예측 사항의 발생 확률과 같은 추가 정보를 제공하거나 학습 데이터 세트의 예측에 대한 지원을 제공합니다. 예측 함수에 대 한 자세한 내용은 [함수 &#40;DMX&#41;](/sql/dmx/functions-dmx)를 참조 하세요.  
   
- 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 예측 쿼리 작성기를 사용하여 예측 쿼리를 만들 수도 있습니다.  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 예측 쿼리 작성기를 사용하여 예측 쿼리를 만들 수도 있습니다.  
   
 ## <a name="singleton-prediction-join-statement"></a>단일 PREDICTION JOIN 문  
  첫 번째 단계는 **SELECT FROM \<MODEL> 예측 조인** 구문을 사용 하 고 단일 값 집합을 입력으로 제공 하 여 단일 쿼리를 만드는 것입니다. 다음은 단일 문의 일반적인 예입니다.  
@@ -81,8 +80,7 @@ SELECT <select list> FROM [<mining model>]
   
 1.  **개체 탐색기**에서 인스턴스 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 마우스 오른쪽 단추로 클릭 하 고 **새 쿼리**를 가리킨 다음 **DMX** 를 클릭 하 여 쿼리 편집기를 엽니다.  
   
-2.  
-  `PREDICTION JOIN` 문의 일반적인 예를 빈 쿼리에 복사합니다.  
+2.  `PREDICTION JOIN` 문의 일반적인 예를 빈 쿼리에 복사합니다.  
   
 3.  다음 내용을  
   
@@ -90,7 +88,7 @@ SELECT <select list> FROM [<mining model>]
     <select list>   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     PREDICT([Default Association].[Products],INCLUDE_STATISTICS,3)  
@@ -104,7 +102,7 @@ SELECT <select list> FROM [<mining model>]
     [<mining model>]   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     [Default Association]  
@@ -119,7 +117,7 @@ SELECT <select list> FROM [<mining model>]
         AS [<nested table>])  
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     (SELECT (SELECT 'Mountain Bottle Cage' AS [Model]  
@@ -127,8 +125,7 @@ SELECT <select list> FROM [<mining model>]
       UNION SELECT 'Mountain-200' AS [Model]) AS [Products]) AS t  
     ```  
   
-     이 문은 `UNION` 문을 사용하여 예측된 제품과 함께 시장 바구니에 포함되어야 하는 세 가지 제품을 지정합니다. 
-  `SELECT` 문의 Model 열은 중첩된 제품 테이블에 포함된 모델 열에 해당합니다.  
+     이 문은 `UNION` 문을 사용하여 예측된 제품과 함께 시장 바구니에 포함되어야 하는 세 가지 제품을 지정합니다. `SELECT` 문의 Model 열은 중첩된 제품 테이블에 포함된 모델 열에 해당합니다.  
   
      이제 전체 문이 다음과 같아야 합니다.  
   
@@ -143,8 +140,7 @@ SELECT <select list> FROM [<mining model>]
       UNION SELECT 'Mountain-200' AS [Model]) AS [Products]) AS t  
     ```  
   
-6.  
-  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
+6.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
 7.  다른 이름 **으로 저장** 대화 상자에서 해당 폴더로 이동한 다음 파일 `Association Prediction.dmx`이름을로 합니다.  
   
@@ -158,8 +154,7 @@ SELECT <select list> FROM [<mining model>]
   
 1.  **개체 탐색기**에서 인스턴스 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 마우스 오른쪽 단추로 클릭 하 고 **새 쿼리**를 가리킨 다음 **DMX** 를 클릭 하 여 쿼리 편집기를 엽니다.  
   
-2.  
-  `PREDICTION JOIN` 문의 일반적인 예를 빈 쿼리에 복사합니다.  
+2.  `PREDICTION JOIN` 문의 일반적인 예를 빈 쿼리에 복사합니다.  
   
 3.  다음 내용을  
   
@@ -167,7 +162,7 @@ SELECT <select list> FROM [<mining model>]
     <select list>   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     PREDICT([Modified Association].[Products],INCLUDE_STATISTICS,3)  
@@ -179,7 +174,7 @@ SELECT <select list> FROM [<mining model>]
     [<mining model>]   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     [Modified Association]  
@@ -194,7 +189,7 @@ SELECT <select list> FROM [<mining model>]
         AS [<nested table>])  
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     (SELECT (SELECT 'Mountain Bottle Cage' AS [Model]  
@@ -202,8 +197,7 @@ SELECT <select list> FROM [<mining model>]
       UNION SELECT 'Mountain-200' AS [Model]) AS [Products]) AS t  
     ```  
   
-     이 문은 `UNION` 문을 사용하여 예측된 제품과 함께 시장 바구니에 포함되어야 하는 세 가지 제품을 지정합니다. 
-  `[Model]` 문의 `SELECT` 열은 중첩된 제품 테이블의 열에 해당합니다.  
+     이 문은 `UNION` 문을 사용하여 예측된 제품과 함께 시장 바구니에 포함되어야 하는 세 가지 제품을 지정합니다. `SELECT` 문의 `[Model]` 열은 중첩된 제품 테이블의 열에 해당합니다.  
   
      이제 전체 문이 다음과 같아야 합니다.  
   
@@ -218,8 +212,7 @@ SELECT <select list> FROM [<mining model>]
       UNION SELECT 'Mountain-200' AS [Model]) AS [Products]) AS t  
     ```  
   
-6.  
-  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
+6.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
 7.  다른 이름 **으로 저장** 대화 상자에서 해당 폴더로 이동한 다음 파일 `Modified Association Prediction.dmx`이름을로 합니다.  
   

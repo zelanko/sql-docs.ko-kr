@@ -21,20 +21,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca92258bb764014b6f985ea08aa1a2606037a019
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316064"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>쿼리 및 뷰 디자인 방법 도움말 항목(Visual Database Tools)
   쿼리 및 뷰 디자이너를 사용하면 애플리케이션의 데이터 검색 및 데이터 조작 부분을 쉽게 만들고 유지 관리할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [Visual Database Tools를 &#40;쿼리 및 뷰 디자이너를 엽니다&#41;](visual-database-tools.md)  
+ [쿼리 및 뷰 디자이너 열기&#40;Visual Database Tools&#41;](visual-database-tools.md)  
  쿼리 및 뷰 디자이너에서 새 쿼리나 뷰 또는 기존 쿼리나 뷰를 여는 방법에 대해 설명합니다.  
   
- [쿼리 및 뷰 디자이너 &#40;Visual Database Tools로 이동&#41;](navigate-in-the-query-and-view-designer-visual-database-tools.md)  
+ [쿼리 및 뷰 디자이너에서 탐색&#40;Visual Database Tools&#41;](navigate-in-the-query-and-view-designer-visual-database-tools.md)  
  쿼리 및 뷰 디자이너에서 사용할 수 있는 키 조합과 마우스 작업의 목록을 제공합니다.  
   
  [쿼리 및 뷰 디자이너 도구&#40;Visual Database Tools&#41;](query-and-view-designer-tools-visual-database-tools.md)  

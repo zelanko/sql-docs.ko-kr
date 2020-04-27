@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df796e2dd4e132164f00716a9cb12f7b498d8984
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108076"
 ---
 # <a name="plan-for-map-report-support"></a>지도 보고서 지원 계획
@@ -26,7 +26,7 @@ ms.locfileid: "66108076"
  보고서 작성자는 각 보고서에서 SSL(Secure Sockets Layer) 연결을 사용하여 타일 서버에서 타일을 검색할지 여부를 지정할 수 있습니다. 이렇게 하려면 타일 계층의 속성 창에서 부울 속성 UseSecureConnection을로 `true`설정 해야 합니다.  
   
 > [!NOTE]  
->  보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](https://go.microsoft.com/fwlink/?LinkId=151371) 및 [개인 정보 취급 방침](https://go.microsoft.com/fwlink/?LinkId=151372)을 참조하십시오.  
+>   보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](https://go.microsoft.com/fwlink/?LinkId=151371) 및 [개인 정보 취급 방침](https://go.microsoft.com/fwlink/?LinkId=151372)을 참조하세요.  
   
 ## <a name="report-design-recommendations"></a>보고서 디자인 권장 구성  
  지도 보고서를 효과적으로 디자인하려면 보고서 작성자가 정적 공간 데이터와 동적 공간 데이터의 장단점을 평가하고 보고서 사용자를 위해 균형점을 찾아야 합니다. 포함된 지도 요소를 사용하면 보고서 정의의 크기가 매우 증가할 수 있지만 지도 보고서를 보는 데 필요한 시간을 줄일 수 있습니다. 동적 지도 요소를 사용하면 보고서 정의의 크기는 줄일 수 있지만 지도를 처리하고 보는 데 필요한 시간이 늘어날 수 있습니다. 보고서 작성자는 이렇게 서로 반대되는 문제점을 고려하여 적절한 균형점을 찾아야 합니다.  
@@ -41,8 +41,7 @@ ms.locfileid: "66108076"
   
  지도를 포함하는 보고서 정의의 크기를 줄이기 위해 보고서 작성자는 다음과 같은 옵션을 하나 이상 사용할 수 있습니다.  
   
--   
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에서 공간 데이터 원본, 즉 ESRI 셰이프 파일을 보고서 서버 프로젝트에 추가합니다. 프로젝트를 배포하면 보고서와 함께 ESRI 셰이프 파일이 보고서 서버에 게시됩니다. 보고서 작성자가 지도 마법사를 실행하면 보고서 서버 프로젝트에서 공간 데이터 원본을 지정할 수 있으며 기본적으로 지도 요소는 보고서 정의에 포함되지 않습니다.  
+-   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에서 공간 데이터 원본, 즉 ESRI 셰이프 파일을 보고서 서버 프로젝트에 추가합니다. 프로젝트를 배포하면 보고서와 함께 ESRI 셰이프 파일이 보고서 서버에 게시됩니다. 보고서 작성자가 지도 마법사를 실행하면 보고서 서버 프로젝트에서 공간 데이터 원본을 지정할 수 있으며 기본적으로 지도 요소는 보고서 정의에 포함되지 않습니다.  
   
 -   보고서 작성기를 실행한 후 보고서 서버에서 셰이프 파일을 선택하여 공간 데이터 원본, 즉 ESRI 셰이프 파일을 추가합니다. 보고서 작성자가 지도 마법사를 실행하면 보고서 서버에서 공간 데이터 원본을 찾아 선택할 수 있으며 기본적으로 지도 요소는 보고서 정의에 포함되지 않습니다.  
   
@@ -51,6 +50,6 @@ ms.locfileid: "66108076"
  자세한 내용은 [&#40;보고서 작성기 및 SSRS&#41;를 매핑합니다 ](report-design/maps-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 문제 해결: 보고서 작성기 및 SSRS&#41;&#40;지도 보고서](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [보고서 문제 해결: 맵 보고서&#40;보고서 작성기 및 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

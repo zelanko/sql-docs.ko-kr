@@ -16,23 +16,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c4fc4d98eb32fb07def2fd317ebb7f5a6f6332cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63282144"
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services의 인증
   인증은 사용자의 권한을 ID에 설정하는 과정입니다. 사용자를 인증하는 데 사용할 수 있는 많은 방법이 있습니다. 가장 일반적인 방법은 암호를 사용하는 것입니다. 예를 들어 폼 인증을 구현하는 경우 사용자에게 자격 증명을 요구(대개 로그인 이름과 암호를 요구하는 인터페이스를 통해 이루어짐)한 다음 데이터베이스 테이블이나 구성 파일과 같은 데이터 저장소와 대조하여 사용자를 검사하도록 구현합니다. 자격 증명을 확인할 수 없는 경우 인증 프로세스가 실패하고 사용자는 익명 ID를 가집니다.  
   
 ## <a name="custom-authentication-in-reporting-services"></a>Reporting Services의 사용자 지정 인증  
- 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 Windows 운영 체제는 통합 보안을 통해 또는 사용자 자격 증명의 명시적인 수신과 검사를 통해 사용자 인증을 처리합니다. 사용자 지정 인증은 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 개발하여 추가 인증 체계를 지원할 수 있습니다. 보안 확장 프로그램 인터페이스 <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension>을 통해 이 작업을 수행할 수 있습니다. 모든 확장 프로그램은 보고서 서버에서 배포되고 사용되는 모든 확장 프로그램에 대한 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 기본 인터페이스에서 상속됩니다. 
-  <xref:Microsoft.ReportingServices.Interfaces.IExtension> 및 <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension>은 <xref:Microsoft.ReportingServices.Interfaces> 네임스페이스의 멤버입니다.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 Windows 운영 체제는 통합 보안을 통해 또는 사용자 자격 증명의 명시적인 수신과 검사를 통해 사용자 인증을 처리합니다. 사용자 지정 인증은 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 개발하여 추가 인증 체계를 지원할 수 있습니다. 보안 확장 프로그램 인터페이스 <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension>을 통해 이 작업을 수행할 수 있습니다. 모든 확장 프로그램은 보고서 서버에서 배포되고 사용되는 모든 확장 프로그램에 대한 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 기본 인터페이스에서 상속됩니다. <xref:Microsoft.ReportingServices.Interfaces.IExtension> 및 <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension>은 <xref:Microsoft.ReportingServices.Interfaces> 네임스페이스의 멤버입니다.  
   
- 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 보고서 서버와 대조하여 인증하는 기본적인 방법은 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 메서드입니다. Reporting Services 웹 서비스의 이 멤버는 확인을 위해 사용자 자격 증명을 보고서 서버에 전달하는 데 사용할 수 있습니다. 기본 보안 확장 프로그램은 사용자 지정 인증 코드를 포함 하는 **Iauthenticationextension** 을 구현 합니다. 폼 인증 예제에서는 제공된 자격 증명 및 데이터베이스의 사용자 지정 사용자 저장소와 대조하여 인증 검사를 수행하는 **LogonUser**가 있습니다. 
-  **LogonUser**의 구현 예는 다음과 같습니다.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 보고서 서버와 대조하여 인증하는 기본적인 방법은 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 메서드입니다. Reporting Services 웹 서비스의 이 멤버는 확인을 위해 사용자 자격 증명을 보고서 서버에 전달하는 데 사용할 수 있습니다. 기본 보안 확장 프로그램은 사용자 지정 인증 코드를 포함 하는 **Iauthenticationextension** 을 구현 합니다. 폼 인증 예제에서는 제공된 자격 증명 및 데이터베이스의 사용자 지정 사용자 저장소와 대조하여 인증 검사를 수행하는 **LogonUser**가 있습니다. **LogonUser**의 구현 예는 다음과 같습니다.  
   
 ```  
 public bool LogonUser(string userName, string password, string authority)  
@@ -114,8 +110,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 2.  웹 서비스는 보안 확장 프로그램의 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 메서드를 호출 합니다. 특히 **iauthenticationextension**을 구현 하는 클래스입니다.  
   
-3.  
-  <xref:ReportService2010.ReportingService2010.LogonUser%2A> 구현에서 사용자 저장소 또는 보안 기관에 있는 사용자 이름과 암호를 검사합니다.  
+3.  <xref:ReportService2010.ReportingService2010.LogonUser%2A> 구현에서 사용자 저장소 또는 보안 기관에 있는 사용자 이름과 암호를 검사합니다.  
   
 4.  인증이 성공하면 웹 서비스에서 쿠키를 만들고 세션을 위해 관리합니다.  
   
@@ -131,9 +126,7 @@ internal static bool VerifyPassword(string suppliedUserName,
 ## <a name="forms-authentication"></a>폼 인증  
  폼 인증은 인증되지 않은 사용자를 HTML 양식으로 지정하는 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 인증 유형입니다. 사용자가 자격 증명을 제공하면 인증 티켓이 포함된 쿠키가 발행됩니다. 이후에 요청이 있으면 먼저 쿠키 검사를 통해 사용자가 보고서 서버에서 이미 인증되었는지 여부에 대한 확인이 이루어집니다.  
   
- 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 Reporting Services API를 통해 사용 가능한 보안 확장성 인터페이스를 사용하여 폼 인증을 지원하도록 확장할 수 있습니다. 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]를 확장하여 폼 인증을 사용할 경우 보고서 서버와의 모든 통신에 대해 SSL(Secure Sockets Layer)을 사용하여 악의적인 사용자가 다른 사용자의 쿠키에 액세스하지 못하도록 해야 합니다. SSL을 사용하면 클라이언트와 보고서 서버 간의 상호 인증이 가능하며 이 두 컴퓨터 간의 통신 내용을 다른 컴퓨터에서 읽지 못하도록 할 수 있습니다. SSL 연결을 통해 클라이언트에서 전송되는 모든 데이터는 암호화되므로 악의적인 사용자가 보고서 서버로 전송된 암호나 데이터를 가로챌 수 없습니다.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 Reporting Services API를 통해 사용 가능한 보안 확장성 인터페이스를 사용하여 폼 인증을 지원하도록 확장할 수 있습니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]를 확장하여 폼 인증을 사용할 경우 보고서 서버와의 모든 통신에 대해 SSL(Secure Sockets Layer)을 사용하여 악의적인 사용자가 다른 사용자의 쿠키에 액세스하지 못하도록 해야 합니다. SSL을 사용하면 클라이언트와 보고서 서버 간의 상호 인증이 가능하며 이 두 컴퓨터 간의 통신 내용을 다른 컴퓨터에서 읽지 못하도록 할 수 있습니다. SSL 연결을 통해 클라이언트에서 전송되는 모든 데이터는 암호화되므로 악의적인 사용자가 보고서 서버로 전송된 암호나 데이터를 가로챌 수 없습니다.  
   
  폼 인증은 일반적으로 Windows 이외의 플랫폼에 대한 계정 및 인증을 지원하기 위해 구현됩니다. 보고서 서버 액세스를 요청하는 사용자는 그래픽 인터페이스를 볼 수 있으며, 제공된 자격 증명은 인증을 위해 보안 기관에 제출됩니다.  
   
@@ -141,8 +134,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
  폼 인증은 다음의 경우 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에 적합합니다.  
   
--   
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 계정이 없는 사용자를 저장하고 인증해야 하는 경우 및  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 계정이 없는 사용자를 저장하고 인증해야 하는 경우 및  
   
 -   웹 사이트의 다양한 페이지 사이에서 고유의 사용자 인터페이스 양식을 로그온 페이지로 제공해야 하는 경우  
   
@@ -150,12 +142,9 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 -   폼 인증을 사용하는 경우 IIS(인터넷 정보 서비스)에서 보고서 서버 가상 디렉터리에 대해 익명 액세스를 사용하도록 설정해야 합니다.  
   
--   
-  [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 인증은 폼 인증으로 설정해야 합니다. 보고서 서버의 경우 Web.config 파일에서 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 인증을 구성합니다.  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 인증은 폼 인증으로 설정해야 합니다. 보고서 서버의 경우 Web.config 파일에서 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 인증을 구성합니다.  
   
--   
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 Windows 인증 또는 사용자 지정 인증으로 사용자를 인증하고 권한을 부여할 수 있으며, 두 가지 인증을 모두 사용할 수는 없습니다. 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서는 여러 보안 확장 프로그램을 동시에 사용할 수 없습니다.  
+-   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 Windows 인증 또는 사용자 지정 인증으로 사용자를 인증하고 권한을 부여할 수 있으며, 두 가지 인증을 모두 사용할 수는 없습니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서는 여러 보안 확장 프로그램을 동시에 사용할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [보안 확장 프로그램 구현](../security-extension/implementing-a-security-extension.md)  

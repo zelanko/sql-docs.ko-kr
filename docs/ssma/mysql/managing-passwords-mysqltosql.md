@@ -13,10 +13,10 @@ ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: eda3f15f0d9ca1cfe04c25bfee5f2ece827e8b83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67909000"
 ---
 # <a name="managing-passwords-mysqltosql"></a>암호 관리(MySQLToSQL)
@@ -73,7 +73,7 @@ SSMA를 사용 하면 데이터베이스의 암호를 보호할 수 있습니다
   
         를 `SSMAforMySQLConsole.exe` 사용 하 여`-securepassword` 를 `-remove` 실행 하 고 명령줄에서 서버 id를 전달 하는 스위치를 사용 하 여 로컬 컴퓨터에 있는 보호 된 저장소 파일에서 암호화 된 암호를 제거 합니다.  
   
-        예제:  
+        예:  
 
             C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -remove all
             C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -remove "source_1,target_1"  
@@ -82,7 +82,7 @@ SSMA를 사용 하면 데이터베이스의 암호를 보호할 수 있습니다
   
         를 `SSMAforMySQLConsole.exe` 사용 하 여 `-securepassword` 를 `-list` 실행 하 고 명령줄에서 스위치를 사용 하 여 암호가 암호화 된 모든 서버 id를 나열 합니다.  
   
-        예제:  
+        예:  
         
             C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -list  
   
@@ -93,7 +93,7 @@ SSMA를 사용 하면 데이터베이스의 암호를 보호할 수 있습니다
 ## <a name="exporting-or-importing-encrypted-passwords"></a>암호화 된 암호 내보내기 또는 가져오기  
 SSMA 콘솔 응용 프로그램을 사용 하면 로컬 컴퓨터의 파일에 있는 암호화 된 데이터베이스 암호를 보안 파일로 내보낼 수 있으며 그 반대의 경우도 마찬가지입니다. 암호화 된 암호를 컴퓨터와 독립적으로 만드는 데 도움이 됩니다. 내보내기 기능은 로컬에서 보호 되는 저장소에서 서버 id와 암호를 읽고 암호화 된 파일에 정보를 저장 합니다. 사용자에 게 보안 파일에 대 한 암호를 입력 하 라는 메시지가 표시 됩니다. 입력 한 암호가 8 자 길이 이상 인지 확인 합니다. 이 보안 파일은 여러 컴퓨터에서 이식할 수 있습니다. 가져오기 기능은 보안 파일에서 서버 id와 암호 정보를 읽습니다. 사용자에 게 보안 파일에 대 한 암호를 입력 하 라는 메시지가 표시 되 면 보호 된 로컬 저장소에 정보가 추가 됩니다.  
   
-예제:  
+예:  
 
     Export password
     
@@ -111,7 +111,7 @@ SSMA 콘솔 응용 프로그램을 사용 하면 로컬 컴퓨터의 파일에 �
     
     Please confirm password: xxxxxxxx  
   
-예제:  
+예:  
 
     Import an encrypted password
     

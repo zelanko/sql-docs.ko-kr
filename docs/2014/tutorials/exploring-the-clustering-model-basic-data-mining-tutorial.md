@@ -11,21 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 9bb2c6457122a5ea49824ca178b6950d88f75563
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63280427"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>클러스터링 모델 탐색(기본 데이터 마이닝 자습서)
   클러스터링 [!INCLUDE[msCoName](../includes/msconame-md.md)] 알고리즘은 사례를 유사한 특성을 포함 하는 클러스터로 그룹화 합니다. 이러한 그룹화는 데이터 탐색, 데이터 내 잘못된 부분 식별, 예측 만들기 등에 유용합니다.  
   
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 클러스터 뷰어는 클러스터링 마이닝 모델 탐색 시 사용할 수 있는 다음과 같은 탭을 제공합니다.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 클러스터 뷰어는 클러스터링 마이닝 모델 탐색 시 사용할 수 있는 다음과 같은 탭을 제공합니다.  
   
 
   
-##  <a name="ClusterDiagramTab"></a>클러스터 다이어그램 탭  
+##  <a name="cluster-diagram-tab"></a><a name="ClusterDiagramTab"></a>클러스터 다이어그램 탭  
  클러스터 다이어그램 탭에서는 마이닝 모델에 있는 클러스터를 모두 표시합니다. 클러스터 사이의 선은 "일치 정도"를 나타내며 클러스터가 얼마나 비슷한지에 따라 음영 처리됩니다. 각 클러스터의 실제 색은 클러스터에 있는 변수와 상태의 빈도를 나타냅니다.  
   
 #### <a name="to-explore-the-model-in-the-cluster-diagram-tab"></a>클러스터 다이어그램 탭에서 모델을 탐색하려면  
@@ -54,12 +53,11 @@ ms.locfileid: "63280427"
   
      클러스터를 선택하면 이 클러스터를 다른 클러스터에 연결하는 선이 강조 표시되므로 이 클러스터에 대한 모든 관계를 쉽게 볼 수 있습니다. 클러스터를 선택하지 않은 경우 다이어그램에 있는 모든 클러스터 간 관계의 밀접도는 선이 짙은 정도로 알 수 있습니다. 음영이 옅거나 없으면 두 클러스터가 그다지 유사하지 않은 것입니다.  
   
-9. 네트워크 왼쪽의 슬라이더를 사용하여 약한 링크를 필터로 제외시키고 가장 밀접한 관계가 있는 클러스터를 찾을 수 있습니다. 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 마케팅 부서에서 대상 메일을 배달하기 위한 최상의 방법을 결정할 때 유사한 클러스터를 함께 결합할 수 있습니다.  
+9. 네트워크 왼쪽의 슬라이더를 사용하여 약한 링크를 필터로 제외시키고 가장 밀접한 관계가 있는 클러스터를 찾을 수 있습니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 마케팅 부서에서 대상 메일을 배달하기 위한 최상의 방법을 결정할 때 유사한 클러스터를 함께 결합할 수 있습니다.  
   
 
   
-##  <a name="ClusterProfilesTab"></a>클러스터 프로필 탭  
+##  <a name="cluster-profiles-tab"></a><a name="ClusterProfilesTab"></a>클러스터 프로필 탭  
  **클러스터 프로필** 탭에서는 `TM_Clustering` 모델의 전체 보기를 제공 합니다. **클러스터 프로필** 탭에는 모델의 각 클러스터에 대 한 열이 포함 되어 있습니다. 첫 번째 열에는 적어도 하나의 클러스터와 연결된 특성이 나열됩니다. 뷰어의 나머지 부분에는 각 클러스터에 대한 특성의 상태 분포가 있습니다. 불연속 변수의 분포는 **히스토그램 막대** 목록에 표시 되는 최대 막대 수가 있는 색이 지정 된 막대로 표시 됩니다. 연속 특성은 각 클러스터의 평균과 표준 편차를 나타내는 다이아몬드 차트를 사용하여 표시됩니다.  
   
 #### <a name="to-explore-the-model-in-the-cluster-profiles-tab"></a>클러스터 프로필 탭에서 모델을 탐색하려면  
@@ -86,7 +84,7 @@ ms.locfileid: "63280427"
   
 
   
-##  <a name="ClusterCharacteristicsTab"></a>클러스터 특징 탭  
+##  <a name="cluster-characteristics-tab"></a><a name="ClusterCharacteristicsTab"></a>클러스터 특징 탭  
  **클러스터 특징** 탭을 사용 하 여 클러스터를 구성 하는 특성을 자세히 검토할 수 있습니다. 클러스터 프로필 탭에서 모든 클러스터의 특징을 비교하는 대신 한 번에 하나의 클러스터를 탐색할 수 있습니다. 예를 들어 **클러스터** 목록에서 **자전거 구매자** 를 선택 하는 경우이 클러스터의 고객 특징을 볼 수 있습니다. 클러스터 프로필 뷰어와 다르게 표시되지만 결과는 동일합니다.  
   
 > [!NOTE]  
@@ -94,7 +92,7 @@ ms.locfileid: "63280427"
   
 
   
-##  <a name="ClusterDiscriminationTab"></a>클러스터 판별 탭  
+##  <a name="cluster-discrimination-tab"></a><a name="ClusterDiscriminationTab"></a>클러스터 판별 탭  
  **클러스터 판별** 탭을 사용 하 여 한 클러스터를 다른 클러스터와 구별 하는 특성을 탐색할 수 있습니다. **클러스터 1** 목록에서 두 개의 클러스터를 선택 하 고 클러스터 **2** 목록에서 클러스터를 선택 하면 뷰어는 클러스터 간의 차이점을 계산 하 고 클러스터를 가장 많이 구분 하는 특성 목록을 표시 합니다.  
   
 #### <a name="to-explore-the-model-in-the-cluster-discrimination-tab"></a>클러스터 판별 탭에서 모델을 탐색하려면  

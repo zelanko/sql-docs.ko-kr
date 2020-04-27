@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 968362b2835c0e76f2a44c44e6cd427af863e8e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108136"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>새 구독 또는 구독 편집 페이지(보고서 관리자)
@@ -36,11 +36,9 @@ ms.locfileid: "66108136"
   
 3.  드롭다운 메뉴에서 다음 중 하나를 수행하십시오.  
   
-    -   
-  **관리**를 클릭합니다. 보고서의 일반 속성 페이지가 열립니다. 그런 다음 **구독** 탭을 선택 합니다. 도구 모음에서 **새 구독**을 클릭 하거나 기존 구독을 선택 하 고 **편집**을 클릭 합니다.  
+    -   **관리**를 클릭합니다. 보고서의 일반 속성 페이지가 열립니다. 그런 다음 **구독** 탭을 선택 합니다. 도구 모음에서 **새 구독**을 클릭 하거나 기존 구독을 선택 하 고 **편집**을 클릭 합니다.  
   
-    -   
-  **구독**을 클릭합니다. 보고서의 **새 구독** 페이지가 열립니다.  
+    -   **구독**을 클릭합니다. 보고서의 **새 구독** 페이지가 열립니다.  
   
 ## <a name="options"></a>옵션  
  **배달 방법**  

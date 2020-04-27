@@ -13,17 +13,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5cdd19895a1cf91e1c5c8608013cb52482f946c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046538"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB 테이블 반환 매개 변수 형식 지원(속성)
   이 항목에서는 테이블 반환 매개 변수 행 집합 개체와 연관된 OLE DB 속성 및 속성 집합에 대한 정보를 제공합니다.  
   
 ## <a name="properties"></a>속성  
- 다음은 테이블 반환 매개 변수 행 집합 개체에 대한 IRowsetInfo::GetProperties 메서드를 통해 표시되는 속성 목록입니다. 모든 테이블 반환 매개 변수 행 집합 속성은 읽기 전용입니다. 따라서 IOpenRowset:: OpenRowset 또는 ITableDefinitionWithConstraints:: CreateTableWithConstraints 메서드를 통해 기본값이 아닌 값으로 속성을 설정 하려고 하면 오류가 발생 하 고 개체가 생성 되지 않습니다.  
+ 다음은 테이블 반환 매개 변수 행 집합 개체에 대한 IRowsetInfo::GetProperties 메서드를 통해 표시되는 속성 목록입니다. 모든 테이블 반환 매개 변수 행 집합 속성은 읽기 전용입니다. 따라서 IOpenRowset::OpenRowset 또는 ITableDefinitionWithConstraints::CreateTableWithConstraints 메서드를 통해 기본값이 아닌 값을 속성으로 설정하려고 하면 오류가 발생하고 개체가 생성되지 않습니다.  
   
  테이블 반환 매개 변수 행 집합 개체에 구현되지 않은 속성은 다음 목록에 없습니다. 전체 속성 목록을 보려면 Windows Data Access Components의 OLE DB 설명서를 참조하십시오.  
   
@@ -74,14 +74,14 @@ ms.locfileid: "63046538"
  다음 속성 집합은 테이블 반환 매개 변수를 지원합니다.  
   
 ### <a name="dbpropset_sqlservercolumn"></a>DBPROPSET_SQLSERVERCOLUMN  
- 필요한 경우이 속성은 소비자가 DBCOLUMNDESC structure를 통해 각 열에 대해 ITableDefinitionWithConstraints:: CreateTableWithConstraints를 사용 하 여 테이블 반환 매개 변수 행 집합 개체를 만드는 과정에서 사용 됩니다.  
+ 이 속성은 소비자가 필요한 경우 DBCOLUMNDESC 구조체를 통해 각 열에 대해 ITableDefinitionWithConstraints::CreateTableWithConstraints를 사용하여 테이블 반환 매개 변수 행 집합 개체를 만드는 프로세스에서 사용합니다.  
   
 |속성 ID|속성 값|  
 |-----------------|--------------------|  
 |SSPROP_COL_COMPUTED|R/W: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 형식: VT_BOOL<br /><br /> 설명: VARIANT_TRUE로 설정된 경우 열이 계산 열임을 나타냅니다. VARIANT_FALSE는 열이 계산 열이 아님을 나타냅니다.|  
   
 ### <a name="dbpropset_sqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- 이러한 속성은 소비자가 ISSCommandWithParameters:: GetParameterProperties에 대 한 호출에서 테이블 반환 매개 변수 형식 정보를 검색 하 고, 소비자가 설정 하는 동안 테이블 반환 매개 변수에 대 한 특정 속성을 설정 하는 동안 읽습니다. ISSCommandWithParameters:: SetParameterProperties를 통해.  
+ 이러한 속성은 소비자가 ISSCommandWithParameters::GetParameterProperties에 대한 호출에서 테이블 반환 매개 변수 형식 정보를 검색하는 동안 읽혀지고, 소비자가 ISSCommandWithParameters::SetParameterProperties를 통해 테이블 반환 매개 변수에 대한 특정 속성을 설정하는 동안 설정됩니다.  
   
  다음 표에서는 이러한 속성에 대해 자세히 설명합니다.  
   

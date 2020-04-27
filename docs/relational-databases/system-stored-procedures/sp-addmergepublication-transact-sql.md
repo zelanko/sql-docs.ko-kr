@@ -16,10 +16,10 @@ ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a296f5b4cb20768d5aa244646e584bede110d26a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72278355"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication(Transact-SQL)
@@ -86,10 +86,10 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @sync_mode = ] 'sync_mode'`게시에 대 한 구독자의 초기 동기화 모드입니다. *sync_mode* 은 **nvarchar (10)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**native** (기본값)|모든 테이블의 기본 모드 대량 복사 프로그램 출력을 생성합니다.|  
-|**character**|모든 테이블의 문자 모드 대량 복사 프로그램 출력을 생성합니다. 및 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자를 지 원하는 데 필요 합니다.|  
+|**자의**|모든 테이블의 문자 모드 대량 복사 프로그램 출력을 생성합니다. 및 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자를 지 원하는 데 필요 합니다.|  
   
 `[ @allow_push = ] 'allow_push'`지정 된 게시에 대해 밀어넣기 구독을 만들 수 있는지 여부를 지정 합니다. *allow_push* 은 **nvarchar (5)** 이며 기본값은 게시에 대 한 밀어넣기 구독을 허용 하는 TRUE입니다.  
   
@@ -162,10 +162,10 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @use_partition_groups = ] 'use_partition_groups'`동기화 프로세스를 최적화 하는 데 사전 계산 파티션을 사용 하도록 지정 합니다. *use_partition_groups* 은 **nvarchar (5)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**true**|게시에서 사전 계산 파티션을 사용합니다.|  
-|**허위**|게시에서 사전 계산 파티션을 사용하지 않습니다.|  
+|**false**|게시에서 사전 계산 파티션을 사용하지 않습니다.|  
 |NULL (기본값)|시스템이 분할 전략을 결정합니다.|  
   
  기본적으로 사전 계산 파티션이 사용됩니다. 사전 계산 파티션을 사용 하지 않으려면 *use_partition_groups* 을 **false**로 설정 해야 합니다. NULL인 경우 사전 계산 파티션을 사용할지 여부를 시스템이 결정합니다. 사전 계산 파티션을 사용할 수 없는 경우이 값은 오류를 생성 하지 않고 사실상 **false** 가 됩니다. 이러한 경우에는 *keep_partition_changes* 를 **true** 로 설정 하 여 최적화를 제공할 수 있습니다. 자세한 내용은 [매개 변수가 있는 행 필터](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) 및 [사전 계산 파티션을 사용 하 여 매개 변수가 있는 필터 성능 최적화](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)를 참조 하세요.  
@@ -203,7 +203,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 |값|버전|  
 |-----------|-------------|  
 |**일** (기본값)|보존 기간(일)을 지정합니다.|  
-|**주별로**|보존 기간(주)을 지정합니다.|  
+|**week**|보존 기간(주)을 지정합니다.|  
 |**month**|보존 기간(월)을 지정합니다.|  
 |**year**|보존 기간(년)을 지정합니다.|  
   
@@ -216,11 +216,10 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @conflict_logging = ] 'conflict_logging'`충돌 레코드가 저장 되는 위치를 지정 합니다. *conflict_logging* 은 **nvarchar (15)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**발행자**|충돌 레코드가 게시자에 저장됩니다.|  
-|**구독자**|충돌 레코드가 충돌을 발생시킨 구독자에 저장됩니다. 
-  [!INCLUDE[ssEW](../../includes/ssew-md.md)] 구독자에 대해서는 지원되지 않습니다.|  
+|**구독자**|충돌 레코드가 충돌을 발생시킨 구독자에 저장됩니다. [!INCLUDE[ssEW](../../includes/ssew-md.md)] 구독자에 대해서는 지원되지 않습니다.|  
 |**양방향**|충돌 레코드가 게시자와 구독자 둘 다에 저장됩니다.|  
 |NULL(기본값)|*Backward_comp_level* 값이 **90rtm** 이 고 다른 모든 경우에는 **게시자** **에 대 한** *conflict_logging* 자동으로 설정 됩니다.|  
   

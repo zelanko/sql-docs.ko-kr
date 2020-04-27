@@ -11,30 +11,25 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6b46b7d020e7a9ebd8bd0ac96d0971b63230c2b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480759"
 ---
 # <a name="data-quality-client-application"></a>데이터 품질 클라이언트 애플리케이션
-  
   [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션을 사용하면 독립형 도구를 사용하여 데이터 품질 작업을 수행할 수 있습니다. 이 애플리케이션을 사용하면 기술 자료를 만들고, 데이터 품질 프로젝트를 생성 및 실행하고, 관리 태스크를 수행할 수 있습니다.  
   
  데이터 자산 관리 및 높은 데이터 품질 표준 유지 관리 책임이 있는 데이터 관리자, 데이터 전문가 또는 IT 전문가는 세 가지 역할로 클라이언트 애플리케이션을 사용할 수 있습니다. DQS KB 운영자 역할은 데이터 품질 프로젝트를 편집 및 실행할 수 있습니다. DQS KB 편집자 역할은 프로젝트 기능을 수행하고 기술 자료를 생성 및 편집할 수 있습니다. DQS 관리자는 프로젝트 및 기술 자료 기능을 수행하고 시스템을 관리할 수 있습니다. 자세한 내용은 [DQS Security](../../2014/data-quality-services/dqs-security.md)을(를) 참조하세요.  
   
 ## <a name="installing-the-data-quality-client-application"></a>데이터 품질 클라이언트 애플리케이션 설치  
- 
-  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션은 SQL Server 설치 프로그램을 사용하여 설치됩니다. 
-  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]와 동일한 컴퓨터 또는 원격 컴퓨터에 클라이언트 애플리케이션을 설치할 수 있습니다. 
-  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션 설치에 대한 자세한 내용은 [Data Quality Services 설치](install-windows/install-data-quality-services.md)를 참조하세요.  
+ [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션은 SQL Server 설치 프로그램을 사용하여 설치됩니다. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]와 동일한 컴퓨터 또는 원격 컴퓨터에 클라이언트 애플리케이션을 설치할 수 있습니다. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션 설치에 대한 자세한 내용은 [Data Quality Services 설치](install-windows/install-data-quality-services.md)를 참조하세요.  
   
 ## <a name="related-tasks"></a>관련 작업  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|
-  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션을 사용하는 방법에 대해 설명합니다.|[데이터 품질 클라이언트 애플리케이션 실행](../../2014/data-quality-services/run-the-data-quality-client-application.md)|  
+|[!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션을 사용하는 방법에 대해 설명합니다.|[데이터 품질 클라이언트 애플리케이션 실행](../../2014/data-quality-services/run-the-data-quality-client-application.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   

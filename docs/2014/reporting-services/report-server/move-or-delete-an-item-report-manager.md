@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aafd2ff32e8c554186d18a6329649081e8babe6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103733"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>항목 이동 또는 삭제(보고서 관리자)
@@ -30,11 +30,11 @@ ms.locfileid: "66103733"
   
 |아이콘|이동 가능한 항목|  
 |----------|-------------------|  
-|![보고서 아이콘](../media/hlp-16doc.gif "보고서 아이콘")|보고서|  
+|![Report icon](../media/hlp-16doc.gif "보고서 아이콘")|보고서|  
 |![링크된 보고서 아이콘](../media/hlp-16linked.gif "링크된 보고서 아이콘")|링크된 보고서|  
 |![폴더 아이콘](../media/hlp-16folder.gif "폴더 아이콘")|폴더|  
 |![일반 리소스 아이콘](../media/hlp-16file.gif "일반 리소스 아이콘")|일반 리소스|  
-|![공유 데이터 원본 아이콘](../media/hlp-16datasource.png "공유 데이터 원본 아이콘")|공유 데이터 원본|  
+|![Shared data source icon](../media/hlp-16datasource.png "공유 데이터 원본 아이콘")|공유 데이터 원본|  
 ||공유 데이터 세트|  
   
  작업하는 모든 항목을 이동할 수 있는 것은 아닙니다. 구독이나 보고서 기록과 같이 보고서와 연결된 항목은 이동할 수 없습니다. 이러한 항목은 연결된 보고서와 함께 이동됩니다. 마찬가지로 공유 일정과 같이 폴더 계층 밖에 있는 항목도 이동할 수 없습니다. 항목 이동 권한이 없으면 항목을 이동할 수 없습니다. 항목 이동 권한은 해당 항목에 대한 역할 할당에서 "보고서 관리," "모델 관리," "폴더 관리" 및 "데이터 원본 관리" 태스크를 선택한 경우에만 부여됩니다.  
@@ -51,8 +51,7 @@ ms.locfileid: "66103733"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  
-  **위치**에서 항목을 이동할 폴더를 지정합니다. 정규화된 폴더 이름을 입력하거나 트리 컨트롤을 사용하여 해당 폴더로 이동합니다.  
+6.  **위치**에서 항목을 이동할 폴더를 지정합니다. 정규화된 폴더 이름을 입력하거나 트리 컨트롤을 사용하여 해당 폴더로 이동합니다.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

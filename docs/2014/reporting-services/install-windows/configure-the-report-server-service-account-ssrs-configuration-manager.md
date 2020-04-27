@@ -10,33 +10,30 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
 ms.openlocfilehash: cb867bfdfc8d9ecb686d3ecc52c48c80bc60d9cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63261079"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>보고서 서버 서비스 계정 구성(SSRS 구성 관리자)
 
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 예약된 보고서 처리와 구독 배달에 사용되는 백그라운드 처리 애플리케이션, 보고서 서버 웹 서비스 및 보고서 관리자를 포함하는 단일 서비스로 구현됩니다. 이 항목에서는 서비스 계정을 처음 구성하는 방법 Reporting Services 구성 도구를 사용하는 계정이나 암호를 수정하는 방법에 대해 설명합니다.  
   
 ## <a name="initial-configuration"></a>초기 구성
 
- 설치하는 동안 보고서 서버 서비스 계정이 정의됩니다. 
-  `NetworkService` 계정과 같은 도메인 사용자 계정이나 기본 제공 계정으로 보고서 서버 서비스를 실행할 수 있습니다. 기본 계정이 없습니다. 설치 마법사의 [서버 구성-서비스 계정](../../sql-server/install/server-configuration-service-accounts.md) 페이지에서 지정한 계정이 보고서 서버 서비스의 초기 계정이 됩니다.  
+ 설치하는 동안 보고서 서버 서비스 계정이 정의됩니다. `NetworkService` 계정과 같은 도메인 사용자 계정이나 기본 제공 계정으로 보고서 서버 서비스를 실행할 수 있습니다. 기본 계정이 없습니다. 설치 마법사의 [서버 구성-서비스 계정](../../sql-server/install/server-configuration-service-accounts.md) 페이지에서 지정한 계정이 보고서 서버 서비스의 초기 계정이 됩니다.  
   
 > [!IMPORTANT]
 > 보고서 서버 웹 서비스 및 보고서 관리자가 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 애플리케이션이더라도 이들은 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 계정에서 실행되지 않습니다. 단일 서비스 아키텍처는 동일한 보고서 서버 프로세스 ID 내에서 두 ASP.NET 애플리케이션을 모두 실행합니다. 이것은 이전 버전에서의 중요한 변경 사항으로 보고서 서버 웹 서비스 및 보고서 관리자는 IIS에서 지정된 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 작업자 프로세스 ID에서 실행됩니다.
   
 ## <a name="changing-the-service-account"></a>서비스 계정 변경
 
- 서비스 계정 정보를 보고 다시 구성하려면 항상 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용합니다. 서비스 ID 정보는 내부적으로 여러 위치에 저장됩니다. 이 도구를 사용하면 계정 또는 암호를 변경할 때마다 모든 참조가 적절히 업데이트됩니다. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구는 보고서 서버를 사용 가능한 상태로 유지하기 위한 다음과 같은 추가 단계를 수행합니다.  
+ 서비스 계정 정보를 보고 다시 구성하려면 항상 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용합니다. 서비스 ID 정보는 내부적으로 여러 위치에 저장됩니다. 이 도구를 사용하면 계정 또는 암호를 변경할 때마다 모든 참조가 적절히 업데이트됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구는 보고서 서버를 사용 가능한 상태로 유지하기 위한 다음과 같은 추가 단계를 수행합니다.  
   
 - 로컬 컴퓨터에서 생성된 보고서 서버 그룹에 새 계정을 자동으로 추가합니다. 이 그룹은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 파일의 보안을 유지하는 ACL(액세스 제어 목록)에 지정됩니다.  
   
-- 는 보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 데 사용 되는 인스턴스에 대 한 로그인 권한을 자동으로 업데이트 합니다. 새 계정이 **RSExecRole**에 추가됩니다.  
+- 보고서 서버 데이터베이스 호스팅에 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 대한 로그인 권한을 자동으로 업데이트합니다. 새 계정이 **RSExecRole**에 추가됩니다.  
   
      이전 계정에 대한 데이터베이스 로그인은 자동으로 제거되지 않습니다. 더 이상 사용하지 않는 계정을 제거해야 합니다. 자세한 내용은 SQL Server 온라인 설명서의 [보고서 서버 데이터베이스 관리&#40;SSRS 기본 모드&#41;](../report-server/report-server-database-ssrs-native-mode.md)를 참조하세요.  
   
@@ -67,9 +64,9 @@ ms.locfileid: "63261079"
   
 - [서비스 계정은 SSRS 기본 모드&#41;&#40;](../../sql-server/install/service-account-ssrs-native-mode.md)합니다.  
   
-- SQL Server 온라인 설명서에서 [Windows 서비스 계정 및 사용 권한을 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) 합니다.  
+- SQL Server 온라인 설명서의[Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
   
-- [서비스 및 서비스 계정 보안 계획 가이드를 참조](http://usergroup.doubletake.com/file_cabinet/download/0x000021733)하세요.  
+- [서비스 및 서비스 계정 보안 계획 가이드](http://usergroup.doubletake.com/file_cabinet/download/0x000021733).  
   
 ## <a name="updating-an-expired-password"></a>만료된 암호 업데이트
 
@@ -77,36 +74,29 @@ ms.locfileid: "63261079"
   
  암호를 다시 설정하려면 다음을 수행합니다.  
   
-1. 
-  **시작** 메뉴에서 **제어판**, **관리 도구**를 차례로 가리킨 다음 **서비스**를 클릭합니다.  
+1. **시작** 메뉴에서 **제어판**, **관리 도구**를 차례로 가리킨 다음 **서비스**를 클릭합니다.  
   
-2. 
-  **SQL Server Reporting Services**를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+2. **SQL Server Reporting Services**를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-3. 
-  **로그온**을 클릭하고 새 암호를 입력합니다.  
+3. **로그온**을 클릭하고 새 암호를 입력합니다.  
   
 4. 암호를 업데이트한 후 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 시작하고 서비스 계정 페이지에서 암호를 업데이트합니다. 이 추가 단계는 보고서 서버에서 내부적으로 저장한 계정 정보를 업데이트하는 데 필요합니다.  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 서비스 계정 암호가 만료된 경우에는 보고서 서버에 연결하려고 할 때 `rsReportServerDatabaseUnavailable` 오류가 발생합니다. 이 오류를 해결하려면 암호를 다시 설정합니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 서비스 계정 암호가 만료된 경우에는 보고서 서버에 연결하려고 할 때 `rsReportServerDatabaseUnavailable` 오류가 발생합니다. 이 오류를 해결하려면 암호를 다시 설정합니다.  
   
 ## <a name="configuring-the-report-server-service-for-a-sharepoint-integrated-report-server"></a>SharePoint 통합 보고서 서버를 위한 보고서 서버 서비스 구성
 
  SharePoint 통합 모드에서 보고서 서버를 실행 중이며 다음 조건 중 하나가 참인 경우 SharePoint 구성 데이터베이스에 저장된 서비스 계정 정보를 업데이트해야 합니다.  
   
-- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 계정이 수정된 경우(예: NetworkService에서 도메인 사용자 계정으로 전환).  
+- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 계정이 수정된 경우(예: NetworkService에서 도메인 사용자 계정으로 전환).  
   
 - SharePoint 팜이 추가 SharePoint 웹 애플리케이션을 포함하도록 확장된 경우. 서버 팜이 보고서 서버 통합을 위해 구성되고 새로 추가된 애플리케이션이 팜에 있는 다른 애플리케이션과 다른 사용자 계정에서 실행되도록 구성된 경우 데이터베이스 액세스 정보를 업데이트해야 합니다.  
   
  데이터베이스 액세스 정보를 다시 설정한 다음에는 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 서비스를 다시 시작하여 기존 연결이 더 이상 사용되지 않도록 해야 합니다.  
   
-1. 
-  **관리 도구**에서 **SharePoint 2010 중앙 관리**를 클릭합니다.  
+1. **관리 도구**에서 **SharePoint 2010 중앙 관리**를 클릭합니다.  
   
-2. 
-  **애플리케이션 관리**를 클릭합니다.  
+2. **애플리케이션 관리**를 클릭합니다.  
   
 3. Reporting Services 섹션에서 **데이터베이스 액세스 권한 부여**를 클릭합니다.  
   
@@ -122,8 +112,7 @@ ms.locfileid: "63261079"
   
 9. 서비스가 중지될 때까지 기다립니다.  
   
-10. 
-  **시작**을 클릭합니다.  
+10. **시작**을 클릭합니다.  
   
 > [!NOTE]  
 > SharePoint 제품 및 기술을 사용하려면 Reporting Services SharePoint 모드 같은 서비스 구성에 사용할 도메인 계정이 필요합니다.  

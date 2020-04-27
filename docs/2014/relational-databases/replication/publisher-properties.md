@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2ea467b00223e31ec7672d4d54a49150cf05368c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63261982"
 ---
 # <a name="sql-server-replication-publisher-properties"></a>게시자 속성 SQL Server 복제
@@ -61,16 +61,16 @@ ms.locfileid: "63261982"
  **트랜잭션**  
  **db_owner** 고정 데이터베이스 역할의 사용자가 데이터베이스에 스냅샷 게시 또는 트랜잭션 게시를 만들 수 있게 하려면 이 확인란을 선택합니다. 
   
- **병합**  
+ **결합**  
  **db_owner** 고정 데이터베이스 역할의 사용자가 데이터베이스에 병합 게시를 만들 수 있게 하려면 이 확인란을 선택합니다.  
 
 ## <a name="subscribers"></a>게시자 속성
 
-  **게시자 속성** 대화 상자의 **구독자** 페이지는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]를 실행하는 게시자에 사용됩니다. 이 페이지를 사용하여 구독자가 이 게시자의 게시에서 데이터를 받도록 설정할 수 있습니다. 구독자가 이 게시자에서 데이터를 받도록 설정해도 이 게시자의 게시에 대한 구독이 생성되지 않습니다. 구독을 만들려면 새 구독 마법사를 사용해야 합니다.  
+  **게시자 속성** 대화 상자의 **구독자** 페이지는  이전 버전의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 게시자에 사용됩니다. 이 페이지를 사용하여 구독자가 이 게시자의 게시에서 데이터를 받도록 설정할 수 있습니다. 구독자가 이 게시자에서 데이터를 받도록 설정해도 이 게시자의 게시에 대한 구독이 생성되지 않습니다. 구독을 만들려면 새 구독 마법사를 사용해야 합니다.  
   
 ### <a name="options"></a>옵션  
  **게시자 속성**  
- **구독자** 속성 표에서는 이 게시자의 게시에서 데이터를 받도록 설정된 구독자를 표시합니다. 추가 속성을 보고 설정하려면 구독자 옆에 있는 속성 단추 ( **...** )를 클릭합니다.  
+ **구독자** 속성 표에서는 이 게시자의 게시에서 데이터를 받도록 설정된 구독자를 표시합니다. 추가 속성을 보고 설정하려면 구독자 옆에 있는 속성 단추 (**...**)를 클릭합니다.  
   
  **추가**  
  구독자를 추가하려면 **추가** 를 클릭한 다음 **SQL Server 구독자 추가** 또는 **SQL Server 이외 구독자 추가**를 클릭합니다.  

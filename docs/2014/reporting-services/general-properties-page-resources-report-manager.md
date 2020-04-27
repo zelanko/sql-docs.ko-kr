@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 23c920f436ae48c8eb4abd8ccd69097a06557907
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109123"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>일반 속성 페이지, 리소스(보고서 관리자)
@@ -43,7 +43,7 @@ ms.locfileid: "66109123"
  **목록 뷰에서 숨기기**  
  보고서 관리자에서 목록 뷰 모드를 사용하는 사용자가 볼 수 없게 리소스를 숨기려면 이 옵션을 선택합니다. 목록 뷰 모드는 보고서 서버 폴더 계층을 검색할 때 표시되는 기본 뷰 형식입니다. 목록 뷰에서 항목 이름과 설명은 페이지에 가로로 표시됩니다. 이 외에도 자세히 보기를 사용할 수 있습니다. 자세히 보기는 설명을 표시하지 않지만 항목에 대한 다른 정보는 포함합니다. 목록 뷰에서는 항목을 숨길 수 있지만 자세히 보기에서는 항목을 숨길 수 없습니다. 항목에 대한 액세스를 제한하려면 역할 할당을 만들어야 합니다.  
   
- **형식**  
+ **Type**  
  리소스의 MIME 형식을 지정합니다. 이 속성은 읽기 전용입니다.  
   
  **적용**  
@@ -52,7 +52,7 @@ ms.locfileid: "66109123"
  **Delete**  
  클릭하여 보고서 서버 데이터베이스에서 리소스를 제거합니다.  
   
- **이동**  
+ **옮기고**  
  보고서 서버 폴더 계층 구조 내에서 리소스의 위치를 다시 지정하려면 클릭합니다. 이 단추를 클릭하면 폴더를 검색하여 새 폴더 위치를 찾을 수 있는 항목 이동 페이지가 열립니다.  
   
  **바꾸십시오**  
@@ -62,6 +62,6 @@ ms.locfileid: "66109123"
  [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [보기 페이지, 리소스 &#40;보고서 관리자&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
  [F1 도움말 보고서 관리자](../../2014/reporting-services/report-manager-f1-help.md)   
- [보안 속성 페이지, 항목 &#40;보고서 관리자&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
+ [보안 속성 페이지, 항목&#40;보고서 관리자&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
   
   

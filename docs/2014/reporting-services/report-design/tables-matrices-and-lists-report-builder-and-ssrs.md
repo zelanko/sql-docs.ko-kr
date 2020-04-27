@@ -36,10 +36,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff294adb9108156e08c1d0053d301c0f4cafb0fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104747"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>테이블, 행렬 및 목록(보고서 작성기 및 SSRS)
@@ -63,7 +63,7 @@ ms.locfileid: "66104747"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Table"></a>테이블  
+##  <a name="table"></a><a name="Table"></a>테이블  
  세부 데이터를 표시하거나, 데이터를 행 그룹으로 구성하거나, 두 가지 모두를 수행할 때 테이블을 사용합니다. 테이블 템플릿에는 테이블 머리글 행 및 데이터를 위한 정보 행이 있는 세 열이 들어 있습니다. 다음 그림에서는 디자인 화면에서 선택한 초기 테이블 템플릿을 보여 줍니다.  
   
  ![디자인 화면에서 테이블 템플릿이 선택됨](../media/rs-tabletemplatenewselected.gif "디자인 화면에서 테이블 템플릿이 선택됨")  
@@ -76,7 +76,7 @@ ms.locfileid: "66104747"
   
 
   
-##  <a name="Matrix"></a>행렬  
+##  <a name="matrix"></a><a name="Matrix"></a>행렬  
  피벗 테이블 또는 크로스탭처럼 집계된 데이터 요약을 행 및 열로 그룹화하여 표시할 때 행렬을 사용합니다. 그룹의 행과 열 수는 각 행 및 열 그룹의 고유 값 수에 따라 결정됩니다. 다음 그림에서는 디자인 화면에서 선택한 초기 행렬 템플릿을 보여 줍니다.  
   
  ![도구 상자에서 추가된 새 행렬이 선택됨](../media/rs-matrixtemplatenewselected.gif "도구 상자에서 추가된 새 행렬이 선택됨")  
@@ -91,7 +91,7 @@ ms.locfileid: "66104747"
   
 
   
-##  <a name="List"></a>은  
+##  <a name="list"></a><a name="List"></a>은  
  자유 형식 레이아웃을 만들 때 목록을 사용합니다. 이를 사용하면 모눈 레이아웃에 제한되지 않고 목록 안에서 필드를 자유롭게 배치할 수 있습니다. 목록을 사용하여 여러 데이터 세트 필드를 표시하는 폼을 디자인할 수 있으며, 그룹화된 데이터를 위해 여러 데이터 영역을 나란히 표시하기 위한 컨테이너로 목록을 사용할 수도 있습니다. 예를 들어 직원 레코드나 환자 레코드에서 목록에 대한 그룹을 정의하고, 테이블, 차트 및 이미지를 추가하고, 각 그룹 값에 대해 테이블 및 그래픽 형식으로 값을 표시할 수 있습니다.  
   
  ![도구 상자에서 추가된 새 목록이 선택됨](../media/rs-listtemplatenewselected.gif "도구 상자에서 추가된 새 목록이 선택됨")  
@@ -100,7 +100,7 @@ ms.locfileid: "66104747"
   
 
   
-##  <a name="PreparingData"></a>데이터 준비  
+##  <a name="preparing-data"></a><a name="PreparingData"></a> 데이터 준비  
  테이블, 행렬 및 목록 데이터 영역에는 데이터 세트의 데이터가 표시됩니다. 데이터 세트의 데이터를 검색하는 쿼리를 사용하거나 테이블, 행렬 또는 목록의 속성을 설정하여 데이터를 준비할 수 있습니다.  
   
  보고서 데이터 세트의 데이터를 검색하는 데 사용하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 등의 쿼리 언어는 데이터 하위 세트만 포함하도록 필터를 적용하고, 보고서를 좀 더 쉽게 읽을 수 있도록 null 값이나 공백을 상수로 바꾸고, 데이터를 정렬 및 그룹화하여 데이터를 준비할 수 있습니다.  
@@ -111,14 +111,14 @@ ms.locfileid: "66104747"
   
 
   
-##  <a name="BuildingConfiguringTableMatrixList"></a>테이블, 행렬 또는 목록 작성 및 구성  
+##  <a name="building-and-configuring-a-table-matrix-or-list"></a><a name="BuildingConfiguringTableMatrixList"></a>테이블, 행렬 또는 목록 작성 및 구성  
  보고서에 테이블 또는 행렬을 추가할 때는 테이블 및 행렬 마법사를 사용하거나 보고서 작성기 및 보고서 디자이너가 제공하는 템플릿에서 수동으로 테이블 또는 행렬을 작성합니다. 목록은 목록 템플릿에서 수동으로 작성합니다.  
   
  마법사는 테이블 또는 행렬을 빠르게 작성 및 구성하는 과정을 단계별로 안내합니다. 마법사를 완료한 후 또는 테이블릭스 데이터 영역을 처음부터 작성하는 경우에는 테이블 또는 행렬을 보다 자세하게 구성하고 상세하게 설정할 수 있습니다. 데이터 영역에서 마우스 오른쪽 단추를 클릭하면 표시되는 대화 상자를 사용하면 페이지 나누기, 머리글/바닥글 반복 및 표시 여부, 표시 옵션, 필터 및 정렬에 가장 일반적으로 사용되는 속성을 쉽게 설정할 수 있습니다. 그러나 테이블릭스 데이터 영역에서는 보다 많은 속성이 추가로 제공되는데, 이들 속성은 보고서 작성기의 속성 창에서만 설정할 수 있습니다. 예를 들어 테이블, 행렬 또는 목록의 데이터 세트가 비어 있을 때 메시지를 표시하려면 속성 창의 NoRowsMessage 테이블릭스 속성에서 메시지 텍스트를 지정할 수 있습니다.  
   
 
   
-##  <a name="ChangingBetweenTablixTemplates"></a>테이블 릭 스 템플릿 간 변경  
+##  <a name="changing-between-tablix-templates"></a><a name="ChangingBetweenTablixTemplates"></a>테이블 릭 스 템플릿 간 변경  
  초기 테이블릭스 템플릿만 선택할 수 있는 것은 아닙니다. 그룹, 합계 및 레이블을 추가하다 보면 테이블릭스 디자인의 수정이 필요할 수 있습니다. 예를 들어 테이블로 시작했지만 나중에 정보 행을 삭제하고 열 그룹을 추가할 수 있습니다. 자세한 내용은 [테이블릭스 데이터 영역의 유연성 살펴보기&#40;보고서 작성기 및 SSRS&#41;](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)를 참조하세요.  
   
  원하는 테이블릭스 기능을 추가하여 테이블, 행렬 또는 목록을 계속 개발할 수 있습니다. 테이블릭스 기능에는 세부 데이터를 표시하는 기능이나 그룹화된 데이터의 집계를 행과 열에 표시하는 기능이 포함됩니다. 중첩된 그룹, 독립적인 인접 그룹 또는 재귀적 그룹을 만들 수 있습니다. 그룹화된 데이터를 필터링하고 정렬할 수 있으며 그룹 정의에 여러 개의 그룹 식을 포함하여 그룹을 쉽게 결합할 수 있습니다.  
@@ -127,48 +127,48 @@ ms.locfileid: "66104747"
   
 
   
-##  <a name="HowTo"></a> 방법 도움말 항목  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>방법 도움말 항목  
  이 섹션에는 보고서에서 테이블, 행렬 및 목록을 사용하는 방법, 행 및 열에 데이터를 표시하는 방법, 열을 추가/삭제하고 셀을 병합하고 행 및 열 그룹의 부분합을 포함하는 방법을 단계별로 보여 주는 절차가 나열되어 있습니다.  
   
--   [세부 정보 그룹 &#40;보고서 작성기 및 SSRS에 추가&#41;](add-a-details-group-report-builder-and-ssrs.md)  
+-   [세부 정보 그룹 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-details-group-report-builder-and-ssrs.md)  
   
--   [그룹 또는 테이블 릭 스 데이터 영역 &#40;보고서 작성기 및 SSRS에 합계를 추가&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
+-   [그룹 또는 테이블릭스 데이터 영역에 합계 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
--   [셀 &#40;보고서 작성기 및 SSRS에 항목을 변경&#41;](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
+-   [셀 내 항목 변경&#40;보고서 작성기 및 SSRS&#41;](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
   
--   [행 높이 또는 열 너비 &#40;보고서 작성기 및 SSRS&#41;변경](change-row-height-or-column-width-report-builder-and-ssrs.md)  
+-   [행 높이 또는 열 너비 변경&#40;보고서 작성기 및 SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)  
   
--   [열 &#40;보고서 작성기 및 SSRS&#41;삽입 또는 삭제](insert-or-delete-a-column-report-builder-and-ssrs.md)  
+-   [열 삽입 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](insert-or-delete-a-column-report-builder-and-ssrs.md)  
   
--   [행 &#40;보고서 작성기 및 SSRS&#41;삽입 또는 삭제](insert-or-delete-a-row-report-builder-and-ssrs.md)  
+-   [행 삽입 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](insert-or-delete-a-row-report-builder-and-ssrs.md)  
   
--   [데이터 영역의 셀 병합 &#40;보고서 작성기 및 SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)  
+-   [데이터 영역의 셀 병합&#40;보고서 작성기 및 SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)  
   
--   [보고서 작성기 및 SSRS를 &#40;재귀 계층 구조 그룹을 만듭니다&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
+-   [재귀 계층 구조 그룹 만들기&#40;보고서 작성기 및 SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   
--   [데이터 영역에서 그룹 추가 또는 삭제 &#40;보고서 작성기 및 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
+-   [데이터 영역에서 그룹 추가 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
 -   [그룹과 함께 머리글 및 바닥글 표시&#40;보고서 작성기 및 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
--   [단계별 보고서 &#40;보고서 작성기 및 SSRS를 만듭니다&#41;](create-a-stepped-report-report-builder-and-ssrs.md)  
+-   [단계별 보고서 만들기&#40;보고서 작성기 및 SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md)  
   
--   [테이블, 행렬 또는 목록 &#40;보고서 작성기 및 SSRS를 추가, 이동 또는 삭제&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
+-   [테이블, 행렬 또는 목록 추가, 이동 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
   
 
   
-##  <a name="InThisSection"></a> 섹션 내용  
+##  <a name="in-this-section"></a><a name="InThisSection"></a>섹션 항목  
  다음 항목에서는 테이블릭스 데이터 영역 작업에 대한 추가 정보를 제공합니다.  
   
  [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
  테이블릭스의 영역, 세부 데이터 및 그룹화된 데이터, 열 및 행 그룹, 정적/동적 행 및 열과 같은 테이블릭스 데이터 영역과 관련된 주요 개념에 대해 설명합니다.  
   
- [테이블 릭 스 데이터 영역에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
+ [테이블릭스 데이터 영역에 데이터 추가&#40;보고서 작성기 및 SSRS&#41;](adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
  세부 데이터/그룹화된 데이터, 부분합/합계, 및 레이블을 테이블릭스 데이터 영역에 추가하는 방법에 대한 자세한 정보를 제공합니다.  
   
  [보고서 페이지에서 테이블릭스 데이터 영역 표시 제어&#40;보고서 작성기 및 SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)  
  보고서에서 테이블릭스 데이터 영역이 표시되는 방법을 변경할 수 있는 테이블릭스 데이터 영역의 속성에 대해 설명합니다.  
   
- [행 및 열 머리글 제어 &#40;보고서 작성기 및 SSRS&#41;](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
+ [행 및 열 제목 제어&#40;보고서 작성기 및 SSRS&#41;](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
  테이블, 행렬 또는 목록 데이터 영역이 가로 또는 세로로 여러 페이지에 걸쳐 있는 경우 행 및 열 머리글을 제어하는 방법에 대해 설명합니다.  
   
  [재귀 계층 구조 그룹 생성&#40;보고서 작성기 및 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
@@ -180,13 +180,13 @@ ms.locfileid: "66104747"
 
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
- [중첩된 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
- [동일한 데이터 세트에 여러 데이터 영역 연결&#40;보고서 작성기 및 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터를 추가 하 여 보고서 작성기 및 SSRS &#40;&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [중첩 된 데이터 영역 &#40;보고서 작성기 및 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
+ [동일한 데이터 집합에 여러 데이터 영역 연결 &#40;보고서 작성기 및 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](report-parameters-report-builder-and-report-designer.md)   
- [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [데이터 필터링, 그룹화 및 정렬 &#40;보고서 작성기 및 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [보고서 매개 변수 &#40;보고서 작성기 및 보고서 디자이너&#41;](report-parameters-report-builder-and-report-designer.md)   
+ [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [계기&#40;보고서 작성기 및 SSRS&#41;](gauges-report-builder-and-ssrs.md)  
   
   

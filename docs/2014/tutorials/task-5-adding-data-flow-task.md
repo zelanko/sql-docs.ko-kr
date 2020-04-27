@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aaccdd5d4f84f5bdba240fadc7d4d0729476f215
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489142"
 ---
-# <a name="task-5-adding-data-flow-task"></a>태스크 5: 데이터 흐름 태스크 추가
+# <a name="task-5-adding-data-flow-task"></a>태스크 5: Data Flow Task 추가
   이 작업에서는 SSIS 패키지의 제어 흐름에 데이터 흐름 태스크를 추가합니다.  
   
 1.  Ssis 디자이너의 **데이터 흐름 태스크** 를 **ssis 도구 상자** 에서 **제어 흐름** 탭으로 끌어서 놓습니다. **Ssis 도구 상자가**표시 되지 않으면 **제어 흐름** 탭의 아무 곳 이나 클릭 하 고 메뉴 모음에서 **Ssis** 를 클릭 한 다음 **ssis 도구 상자**를 클릭 합니다.  
@@ -31,6 +31,6 @@ ms.locfileid: "65489142"
 4.  데이터 흐름 **태스크** 를 두 번 클릭 하 여 **데이터 흐름** 탭으로 전환 합니다.  
   
 ## <a name="next-step"></a>다음 단계  
- [태스크 6: 데이터 흐름에 Excel 원본 추가](task-6-adding-excel-source-to-the-data-flow.md)  
+ [태스크 6: Data Flow에 Excel 원본 추가](task-6-adding-excel-source-to-the-data-flow.md)  
   
   

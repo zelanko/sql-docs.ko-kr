@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 976e8452e50d293fb8125bfbdde1bd17a8f3be07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63283485"
 ---
 # <a name="report-server-web-service-endpoints"></a>보고서 서버 웹 서비스 엔드포인트
@@ -63,7 +63,7 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
 ## <a name="sharepoint-proxy-endpoints"></a>SharePoint 프록시 엔드포인트  
  보고서 서버가 SharePoint 통합 모드로 구성되고 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 추가 기능이 설치된 경우 프록시 엔드포인트 집합이 SharePoint 서버에 설치됩니다. 프록시 엔드포인트는 보고서 서버가 SharePoint 통합 모드로 구성된 경우 보고서 솔루션을 개발하기 위한 기본 API입니다. 프록시 엔드포인트에 대해 개발할 때 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 추가 기능은 SharePoint 서버와 트러스트된 계정 인증 모드 보고서 서버 간의 자격 증명 교환을 관리합니다. 보고서 서버 엔드포인트에 대해 개발할 때는 호출하는 애플리케이션이 트러스트된 계정 인증 모드에서 자격 증명 교환을 관리해야 합니다. 다음 표는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 추가 기능과 함께 설치되는 엔드포인트를 나열합니다.  
   
-|프록시 엔드포인트|Description|  
+|프록시 엔드포인트|설명|  
 |--------------------|-----------------|  
 |<xref:ReportService2006>|SharePoint 통합 모드로 구성된 보고서 서버를 관리하기 위한 API를 제공합니다. **참고:**  이 끝점은에서 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]더 이상 사용 되지 않습니다.|  
 |<xref:ReportService2010>|기본 모드 또는 SharePoint 통합 모드로 구성된 보고서 서버를 관리하기 위한 API를 제공합니다.|  
@@ -85,6 +85,6 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportServiceAuthenticati
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [웹 서비스 및 .NET Framework를 사용하여 애플리케이션 빌드](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
+ [웹 서비스와 .NET Framework를 사용하여 애플리케이션 빌드](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

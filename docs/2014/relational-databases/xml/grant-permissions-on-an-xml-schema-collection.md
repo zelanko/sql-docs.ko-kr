@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e009f0fe22156f9a652dd19fceddf02bbc48c247
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63288762"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>XML 스키마 컬렉션에 대한 사용 권한 부여
@@ -61,8 +61,7 @@ ms.locfileid: "63288762"
   
 -   보안 주체가 컬렉션에 대해 ALTER, REFERENCES 또는 CONTROL 권한 중 하나를 가진 경우 VIEW DEFINITION 권한을 사용하면 보안 주체가 XML_SCHEMA_NAMESPACE 또는 카탈로그 뷰를 통해 XML 스키마 컬렉션의 내용을 쿼리할 수 있습니다.  
   
--   
-  `xml` 유형 열, 변수 및 매개 변수를 형식화하거나 제약하는 XML 스키마 컬렉션에 대해 보안 주체가 삽입하거나 업데이트한 값의 유효성을 검사하려면 EXECUTE 권한이 필요합니다. 이 권한은 이러한 열 및 변수에 저장된 XML을 쿼리할 때도 필요합니다.  
+-   `xml` 유형 열, 변수 및 매개 변수를 형식화하거나 제약하는 XML 스키마 컬렉션에 대해 보안 주체가 삽입하거나 업데이트한 값의 유효성을 검사하려면 EXECUTE 권한이 필요합니다. 이 권한은 이러한 열 및 변수에 저장된 XML을 쿼리할 때도 필요합니다.  
   
 ## <a name="examples"></a>예  
  다음 예의 시나리오에서는 XML 스키마 권한의 작동 방식을 보여 줍니다. 각 예에서는 필요한 테스트 데이터베이스, 관계형 스키마 및 로그인을 만듭니다. 이러한 로그인에는 필요한 XML 스키마 컬렉션 권한이 부여됩니다. 각 예에서는 종료 시 필요한 정리를 수행합니다.  

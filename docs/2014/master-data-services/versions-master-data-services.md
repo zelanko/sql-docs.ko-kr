@@ -16,14 +16,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 07ba6990049c5ad3bff2e93b06aac0023dedbfe8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481353"
 ---
 # <a name="versions-master-data-services"></a>버전(Master Data Services)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 모델 내에 여러 버전의 마스터 데이터를 만들 수 있습니다. 버전은 데이터 유효성을 검사하는 동안 잠그고 데이터 유효성 검사 이후에 커밋할 수 있습니다. 커밋된 버전은 감사 가능한 변경 사항 레코드를 형성합니다. 이러한 각 버전에는 모델의 모든 멤버, 특성 값, 계층 멤버, 계층 관계 및 컬렉션이 포함됩니다.  
   
 ## <a name="when-to-use-versions"></a>버전을 사용하는 경우  
@@ -48,7 +47,7 @@ ms.locfileid: "65481353"
   
 1.  초기 버전은 모델을 만들고 회사의 마스터 데이터로 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 채우면 자동으로 만들어집니다. 사용 권한에 따라 사용자는 필요한 경우 이 버전을 변경할 수 있습니다.  
   
-2.  모델의 버전을 커밋하려면 모델 관리자만 데이터를 업데이트할 수 있도록 버전을 잠급니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다. 알림이 구성된 경우 버전의 상태가 변경될 때마다 전자 메일 알림이 모델 관리자에게 전송됩니다. 자세한 내용은 [메일 알림 구성&#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md)을 참조하세요.  
+2.  모델의 버전을 커밋하려면 모델 관리자만 데이터를 업데이트할 수 있도록 버전을 잠급니다. 자세한 내용은 [관리자 &#40;MDS(Master Data Services)&#41;](administrators-master-data-services.md)를 참조 하세요. 알림이 구성된 경우 버전의 상태가 변경될 때마다 전자 메일 알림이 모델 관리자에게 전송됩니다. 자세한 내용은 [메일 알림 구성&#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md)을 참조하세요.  
   
 3.  잠긴 버전의 데이터에 비즈니스 규칙을 적용하고 유효성 검사 문제를 검토합니다. 필요한 경우 누락된 정보를 채우거나 문제의 원인이 되는 트랜잭션을 되돌릴 수 있습니다. 또한 사용자가 변경할 수 있도록 버전의 잠금을 해제할 수 있습니다.  
   
@@ -70,22 +69,22 @@ ms.locfileid: "65481353"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|기존 버전의 이름을 변경합니다.|[MDS(Master Data Services) &#40;버전 이름을 변경&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)|  
-|관리자만 데이터를 편집할 수 있도록 버전을 잠급니다.|[버전 &#40;MDS(Master Data Services) 잠그기&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)|  
-|사용자가 데이터를 편집할 수 있도록 버전을 잠금 해제합니다.|[버전 &#40;MDS(Master Data Services)&#41;의 잠금을 해제 합니다.](../../2014/master-data-services/unlock-a-version-master-data-services.md)|  
-|모든 데이터의 유효성 검사를 마친 후 버전을 커밋합니다.|[버전 &#40;MDS(Master Data Services) 커밋&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)|  
-|버전을 표시하는 새 플래그를 만듭니다.|[MDS(Master Data Services) &#40;버전 플래그를 만듭니다&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)|  
-|기존 버전 플래그의 이름을 변경합니다.|[버전 플래그 이름을 MDS(Master Data Services) &#40;변경&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)|  
-|기존 플래그를 버전에 할당합니다.|[버전 &#40;MDS(Master Data Services)에 플래그를 할당&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
-|기존 버전의 새 복사본을 만듭니다.|[버전 &#40;MDS(Master Data Services)&#41;복사](../../2014/master-data-services/copy-a-version-master-data-services.md)|  
-|기존 버전을 삭제합니다.|[MDS(Master Data Services)&#41;&#40;버전을 삭제 합니다.](../../2014/master-data-services/delete-a-version-master-data-services.md)|  
+|기존 버전의 이름을 변경합니다.|[버전 이름 변경&#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)|  
+|관리자만 데이터를 편집할 수 있도록 버전을 잠급니다.|[버전 잠금&#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)|  
+|사용자가 데이터를 편집할 수 있도록 버전을 잠금 해제합니다.|[버전 잠금 해제&#40;Master Data Services&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)|  
+|모든 데이터의 유효성 검사를 마친 후 버전을 커밋합니다.|[버전 커밋&#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)|  
+|버전을 표시하는 새 플래그를 만듭니다.|[버전 플래그 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)|  
+|기존 버전 플래그의 이름을 변경합니다.|[버전 플래그 이름 변경&#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)|  
+|기존 플래그를 버전에 할당합니다.|[버전에 플래그 할당&#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
+|기존 버전의 새 복사본을 만듭니다.|[버전 복사&#40;Master Data Services&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)|  
+|기존 버전을 삭제합니다.|[버전 삭제&#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-version-master-data-services.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   
--   [트랜잭션 &#40;MDS(Master Data Services)를 되돌립니다&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)  
+-   [트랜잭션 되돌리기&#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)  
   
--   [알림 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
+-   [알림&#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
   
--   [비즈니스 규칙 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [비즈니스 규칙&#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

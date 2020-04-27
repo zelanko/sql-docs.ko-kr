@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14d0a9f95ea3abccd2d50f469fe068459baa9364
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101958"
 ---
 # <a name="modify-or-delete-a-role-assignment-report-manager"></a>역할 할당 수정 또는 삭제(보고서 관리자)
@@ -38,7 +38,7 @@ ms.locfileid: "66101958"
   
 1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)를 시작합니다.  
   
-2.  **사이트 설정**을 클릭 합니다.  
+2.  **사이트 설정**을 클릭합니다.  
   
 3.  **보안**을 클릭합니다. 서버 또는 스케일 아웃 배포에 대해 현재 정의된 모든 시스템 수준 역할 할당이 계정 이름별로 나열됩니다.  
   
@@ -50,8 +50,7 @@ ms.locfileid: "66101958"
   
 ### <a name="to-modify-or-delete-an-item-role-assignment"></a>항목 역할 할당을 수정하거나 삭제하려면  
   
-1.  
-  **보고서 관리자** 를 시작하고 역할 할당을 편집하거나 삭제하려는 항목을 찾습니다.  
+1.  **보고서 관리자** 를 시작하고 역할 할당을 편집하거나 삭제하려는 항목을 찾습니다.  
   
 2.  항목 위로 마우스를 이동하여 드롭다운 화살표를 클릭합니다.  
   
@@ -67,6 +66,6 @@ ms.locfileid: "66101958"
  (create-and-manage-role-assignments.md)   
  [역할 할당](role-assignments.md)   
  [사이트 설정 페이지 &#40;보고서 관리자&#41;](../site-settings-page-report-manager.md)   
- [새 시스템 역할 할당: 시스템 역할 할당 편집 페이지 &#40;보고서 관리자&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
+ [새 시스템 역할 할당: 시스템 역할 할당 편집 페이지&#40;보고서 관리자&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
   

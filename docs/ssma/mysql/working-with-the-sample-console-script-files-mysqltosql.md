@@ -12,10 +12,10 @@ ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6dacba33ecbaa7bdeb51d0a31438c3cbdb21969f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67904891"
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>샘플 콘솔 스크립트 파일 작업 (MySQLToSQL)
@@ -48,13 +48,13 @@ ms.locfileid: "67904891"
   
 -   **AssessmentReportGenerationSample:** 이 샘플을 사용 하면 사용자가 데이터 변환 및 마이그레이션을 시작 하기 전에 분석을 위해 사용자가 사용할 수 있는 xml 평가 보고서를 생성할 수 있습니다.  
   
-    명령에서 사용자가 `object-name` 특성의 변수 값 (VariableValueFileSample 참조)을 사용자가 사용 중인 데이터베이스 이름으로 mandatorily 변경 해야 합니다. **** `generate-assessment-report` 지정 된 개체의 종류에 따라 `object-type` 값도 변경 해야 합니다.  
+    명령에서 사용자가 `object-name` 특성의 변수 값 (VariableValueFileSample 참조)을 사용자가 사용 중인 데이터베이스 이름으로 mandatorily 변경 해야 합니다. **VariableValueFileSample.xml** `generate-assessment-report` 지정 된 개체의 종류에 따라 `object-type` 값도 변경 해야 합니다.  
   
     사용자가 여러 개체/데이터베이스를 평가 해야 하는 경우 샘플 콘솔 `metabase-object` 스크립트 파일의 `generate-assessment-report` 명령 예제 4에 나와 있는 것 처럼 여러 노드를 지정할 수 있습니다.  
   
     보고서를 생성 하는 방법에 대 한 자세한 내용은 [MySQLToSQL&#41;&#40;보고서 생성 ](../../ssma/mysql/generating-reports-mysqltosql.md)을 참조 하세요.  
   
-    **메모란**  
+    **참고:**  
   
     -   변수 값 파일 명령줄 인수가 콘솔 응용 프로그램에 전달 되 고 VariableValueFileSample이 사용자 지정 값으로 업데이트 되었는지 확인 합니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "67904891"
 -   **SqlStatementConversionSample:**  
     이 샘플을 사용 하면 사용자가 입력으로 `t-sql` 제공 된 원본 데이터베이스 `sql` 명령에 대해 해당 스크립트를 생성할 수 있습니다.  
   
-    명령에서 사용자가 `context` 특성의 변수 값 (VariableValueFileSample 참조)을 사용자가 사용 중인 데이터베이스 이름으로 mandatorily 변경 해야 합니다. **** `convert-sql-statement` 또한 사용자는 `sql` 특성 값을 변환 해야 하는 원본 데이터베이스 `sql` 명령으로 변경 해야 합니다.  
+    명령에서 사용자가 `context` 특성의 변수 값 (VariableValueFileSample 참조)을 사용자가 사용 중인 데이터베이스 이름으로 mandatorily 변경 해야 합니다. **VariableValueFileSample.xml** `convert-sql-statement` 또한 사용자는 `sql` 특성 값을 변환 해야 하는 원본 데이터베이스 `sql` 명령으로 변경 해야 합니다.  
   
     사용자는 변환할 sql 파일도 제공할 수 있습니다. 이는 샘플 콘솔 스크립트 파일 `convert-sql-statement` 의 명령 예제 4에 설명 되어 있습니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "67904891"
   
     원본 데이터베이스와 대상 스키마의 스키마 매핑  
   
-    **Attribute**  
+    **특성도**  
   
     -   `source-schema:`변환 해야 하는 원본 데이터베이스를 지정 합니다.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "67904891"
   
     2.  사용자가 여러 개체/데이터베이스를 평가 해야 하는 경우 샘플 콘솔 `metabase-object` 스크립트 파일의 `convert-schema` 명령 예제 4에 나와 있는 것 처럼 여러 노드를 지정할 수 있습니다.  
   
-    **Attribute**  
+    **특성도**  
   
     `object-name`: 변환 해야 하는 원본 데이터베이스/개체 이름을 지정 합니다. 에 지정 된 개체 `object-type` 의 형식에 따라 해당이 변경 되었는지 확인 합니다.`object-name`  
   
@@ -105,7 +105,7 @@ ms.locfileid: "67904891"
   
     2.  사용자가 여러 개체/데이터베이스를 평가 해야 하는 경우 샘플 콘솔 `metabase-object` 스크립트 파일의 `synchronize-target` 명령 예제 3에 나와 있는 것 처럼 여러 노드를 지정할 수 있습니다.  
   
-    **Attribute**  
+    **특성도**  
   
     `object-name:`만들어야 하는 sql server 데이터베이스/개체 이름을 지정 합니다. 에 지정 된 개체 `object-type` 의 형식에 따라 해당이 변경 되었는지 확인 합니다.`object-name`  
   
@@ -117,7 +117,7 @@ ms.locfileid: "67904891"
   
     2.  사용자가 여러 개체/데이터베이스를 평가 해야 하는 경우 샘플 콘솔 `metabase-object` 스크립트 파일의 명령 예제 `migrate-data` 2에 설명 된 대로 여러 노드를 지정할 수 있습니다.  
   
-    **Attribute**  
+    **특성도**  
   
     `object-name:`마이그레이션해야 하는 원본 데이터베이스/테이블 이름을 지정 합니다. 에 지정 된 개체 `object-type` 의 형식에 따라 해당이 변경 되었는지 확인 합니다.`object-name`  
   

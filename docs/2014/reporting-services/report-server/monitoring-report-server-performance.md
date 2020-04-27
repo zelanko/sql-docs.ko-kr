@@ -19,18 +19,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f020dd812b53e531a3f4634ccba0d2cba980b89e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103794"
 ---
 # <a name="monitoring-report-server-performance"></a>보고서 서버 성능 모니터링
   성능 모니터링 도구를 통해 보고서 서버 성능을 모니터링하여 서버 작업을 평가하고, 추세를 살피고, 시스템 병목 현상을 진단하고, 현재 시스템 구성이 충분한지 여부를 결정하는 데 도움이 되는 데이터를 수집할 수 있습니다. 서버 성능을 튜닝하기 위해 보고서 서버 애플리케이션 도메인의 재활용 빈도를 지정할 수 있습니다. 자세한 내용은 [보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../report-server/configure-available-memory-for-report-server-applications.md)을 참조하세요.  
   
 ## <a name="sources-of-performance-data"></a>성능 데이터의 원본  
- 기술과 도구를 함께 사용하여 시스템 수행 방법에 대한 포괄적인 정보를 얻을 수 있습니다. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Server 운영 체제는 다음 도구를 통해 성능 정보를 제공합니다.  
+ 기술과 도구를 함께 사용하여 시스템 수행 방법에 대한 포괄적인 정보를 얻을 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Server 운영 체제는 다음 도구를 통해 성능 정보를 제공합니다.  
   
 -   작업 관리자  
   
@@ -40,11 +39,9 @@ ms.locfileid: "66103794"
   
  작업 관리자는 컴퓨터에서 실행되는 프로그램 및 프로세스에 대한 정보를 제공합니다. 작업 관리자를 사용하여 보고서 서버의 성능을 나타내는 주요 표시기를 모니터링할 수 있습니다. 또한 실행 중인 프로세스의 활동을 평가하고 CPU 및 메모리 사용량에 대한 그래프와 데이터를 볼 수 있습니다. 작업 관리자를 사용하는 방법은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 제품 설명서를 참조하십시오.  
   
- 성능 콘솔과 이벤트 뷰어를 사용하여 보고서 처리 및 리소스 소비량에 대한 로그와 경고를 만들 수 있습니다. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 생성된 Windows 이벤트에 대한 자세한 내용은 [Windows 애플리케이션 로그](windows-application-log.md)를 참조하세요. 성능 콘솔에 대한 자세한 내용은 이 항목 뒷부분에서 "Windows 성능 카운터"를 참조하십시오.  
+ 성능 콘솔과 이벤트 뷰어를 사용하여 보고서 처리 및 리소스 소비량에 대한 로그와 경고를 만들 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 생성된 Windows 이벤트에 대한 자세한 내용은 [Windows 애플리케이션 로그](windows-application-log.md)를 참조하세요. 성능 콘솔에 대한 자세한 내용은 이 항목 뒷부분에서 "Windows 성능 카운터"를 참조하십시오.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티는 캐싱 및 세션 관리에 사용되는 보고서 서버 데이터베이스 및 임시 데이터베이스에 대한 정보를 제공합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티는 캐싱 및 세션 관리에 사용되는 보고서 서버 데이터베이스 및 임시 데이터베이스에 대한 정보를 제공합니다.  
   
 ## <a name="windows-performance-counters"></a>Windows 성능 카운터  
  특정 성능 카운터를 모니터링하여 다음을 수행할 수 있습니다.  
@@ -60,8 +57,7 @@ ms.locfileid: "66103794"
 -   시스템 구성 변경을 통해 원하는 성능 효과를 얻었는지 확인합니다.  
   
 ## <a name="reporting-services-performance-objects"></a>Reporting Services 성능 개체  
- 
-  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 에는 다음과 같은 성능 개체가 포함됩니다.  
+ [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 에는 다음과 같은 성능 개체가 포함됩니다.  
   
 -   **MSRS 2011 웹 서비스** 및 `MSRS 2011 SharePoint Mode Web Service` 보고서 서버 성능을 모니터링 합니다. 이러한 성능 개체에는 일반적으로 대화형 보고서 보기 작업을 통해 시작된 보고서 서버 처리를 추적하는 데 사용되는 카운터 모음이 들어 있습니다. 이러한 카운터는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 이 보고서 서버 웹 서비스를 중지할 때마다 다시 설정됩니다.  
   
@@ -80,8 +76,7 @@ ms.locfileid: "66103794"
 |`Process`|ReportingServicesService 인스턴스에 대한 `Elapsed Time` 및 `ID Process` 성능 카운터를 추가하여 프로세스 ID별로 프로세스 작동 시간을 추적합니다.|  
   
 ## <a name="sharepoint-events"></a>SharePoint 이벤트  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 성능 개체 이외에도 SharePoint 통합 모드로 보고서 서버를 실행하고 SharePoint 제품을 사용하도록 보고 환경을 구성한 경우 SharePoint 이벤트를 구성할 수도 있습니다. 이 섹션에서는 SharePoint 통합 모드의 보고서 서버 이벤트를 사용하여 보고 환경이 SharePoint와 통합되는 경우에 유용한 정보를 제공할 수 있는 진단 이벤트를 검토합니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 성능 개체 이외에도 SharePoint 통합 모드로 보고서 서버를 실행하고 SharePoint 제품을 사용하도록 보고 환경을 구성한 경우 SharePoint 이벤트를 구성할 수도 있습니다. 이 섹션에서는 SharePoint 통합 모드의 보고서 서버 이벤트를 사용하여 보고 환경이 SharePoint와 통합되는 경우에 유용한 정보를 제공할 수 있는 진단 이벤트를 검토합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [MSRS 2014 웹 서비스 및 MSRS 2014 Windows 서비스 성능 개체에 대 한 성능 카운터는 기본 모드 &#40;&#41;](performance-counters-msrs-2011-web-service-performance-objects.md)  
@@ -91,15 +86,14 @@ ms.locfileid: "66103794"
  보고서 서버 Windows 서비스에 사용된 성능 카운터를 설명합니다.  
   
  [ReportServer:Service 및 ReportServerSharePoint:Service 성능 개체에 대한 성능 카운터](performance-counters-reportserver-service-performance-objects.md)  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 HTTP 관련 성능 카운터 및 메모리 관련 성능 카운터를 설명합니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 HTTP 관련 성능 카운터 및 메모리 관련 성능 카운터를 설명합니다.  
   
  SharePoint 통합 모드의 보고서 서버 이벤트  
  SharePoint 제품을 사용하여 보고 환경을 실행할 때 기록할 유용한 진단 이벤트를 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 서버 응용 프로그램에 사용할 수 있는 메모리 구성](../report-server/configure-available-memory-for-report-server-applications.md)   
- [보고서 서버 &#40;기본 모드를 Reporting Services&#41;](reporting-services-report-server-native-mode.md)   
+ [보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../report-server/configure-available-memory-for-report-server-applications.md)   
+ [Reporting Services 보고서 서버&#40;기본 모드&#41;](reporting-services-report-server-native-mode.md)   
  [Reporting Services 도구](../tools/reporting-services-tools.md)  
   
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0945dd4bd2897cd0dba7425f98700b05237c6b96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63298294"
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>다이어그램의 글꼴 색, 크기 및 스타일 변경(Visual Database Tools)
@@ -28,11 +28,9 @@ ms.locfileid: "63298294"
   
 1.  **도구** 메뉴에서 **옵션**을 클릭합니다.  
   
-2.  
-  **환경**을 확장한 다음 **글꼴 및 색**을 클릭합니다.  
+2.  **환경**을 확장한 다음 **글꼴 및 색**을 클릭합니다.  
   
-3.  
-  **설정 표시** 목록에서 **테이블 및 데이터베이스 디자이너**를 선택합니다.  
+3.  **설정 표시** 목록에서 **테이블 및 데이터베이스 디자이너**를 선택합니다.  
   
 4.  글꼴, 크기, 표시 항목, 전경색 및 배경색을 변경합니다.  
   

@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b9200880a9581b3903985c16fc2af129d19aceec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481201"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>옵션(쿼리 결과 및 종속성 서비스 페이지)
@@ -28,14 +28,13 @@ ms.locfileid: "65481201"
   
 2.  [옵션 구성](#options)  
   
-##  <a name="open_dialog"></a>옵션 (쿼리 결과/종속성 서비스 페이지) 대화 상자 열기  
+##  <a name="open-the-options-query-resultsdependency-services-page-dialog-box"></a><a name="open_dialog"></a>옵션 (쿼리 결과/종속성 서비스 페이지) 대화 상자 열기  
   
 1.  의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] **도구** 메뉴에서 **옵션** 을 클릭 합니다.  
   
-2.  
-  **쿼리 결과**를 확장하고 **종속성 서비스**를 클릭합니다.  
+2.  **쿼리 결과**를 확장하고 **종속성 서비스**를 클릭합니다.  
   
-##  <a name="options"></a> 옵션 구성  
+##  <a name="configure-the-options"></a><a name="options"></a>옵션 구성  
   
 ### <a name="options"></a>옵션  
  **종속성 서비스 서버**  
@@ -52,5 +51,5 @@ ms.locfileid: "65481201"
  **암호**  
  SQL Server 인증을 사용하는 경우 암호를 입력합니다.  
   
- **테스트할**  
+ **테스트**  
  연결을 테스트하려면 클릭합니다.

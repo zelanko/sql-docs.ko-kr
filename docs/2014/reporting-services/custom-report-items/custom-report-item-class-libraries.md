@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7fc20f857f42c854fcf01947c39ea88206bb5b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264888"
 ---
 # <a name="custom-report-item-class-libraries"></a>사용자 지정 보고서 항목 클래스 라이브러리
@@ -60,8 +60,7 @@ ms.locfileid: "63264888"
 |`InitializeNewComponent`|새 사용자 지정 보고서 항목이 만들어질 때 호출됩니다.|  
 |`Invalidate`|컨트롤의 전체 화면을 다시 표시합니다.|  
 |`OnDragEnter`<br /><br /> `OnDragDrop`|개체를 컨트롤로 끌어올 때 호출됩니다.|  
-|`OnPaint`|
-  `Paint` 이벤트에 대한 응답으로 호출됩니다.|  
+|`OnPaint`|`Paint` 이벤트에 대한 응답으로 호출됩니다.|  
   
 ### <a name="microsoftreportdesignercustomreportitemattribute"></a>Microsoft.ReportDesigner.CustomReportItemAttribute  
  사용자 지정 보고서 항목의 유형을 식별하는 데 사용되는 특성입니다. 이름은 보고서 디자이너 구성 파일에 있는 `Name` `ReportItem` 요소의 <> 특성 값과 일치 해야 합니다.  
@@ -88,12 +87,9 @@ ms.locfileid: "63264888"
   
 |||  
 |-|-|  
-|`OnShow`|
-  `Adornment`가 활성화될 때 호출됩니다.|  
-|`OnHide`|
-  `Adornment`가 비활성화될 때 호출됩니다.|  
-|`Paint`|
-  `Paint` 이벤트에 대한 응답으로 호출됩니다.|  
+|`OnShow`|`Adornment`가 활성화될 때 호출됩니다.|  
+|`OnHide`|`Adornment`가 비활성화될 때 호출됩니다.|  
+|`Paint`|`Paint` 이벤트에 대한 응답으로 호출됩니다.|  
 |`OnDragEnter`<br /><br /> `OnDragOver`<br /><br /> `OnDragLeave`<br /><br /> `OnDragDrop`|개체를 `Adornment`로 끌어올 때 호출됩니다.|  
   
 ### <a name="microsoftreportdesigneradornerservice"></a>Microsoft.ReportDesigner.AdornerService  
@@ -125,8 +121,7 @@ ms.locfileid: "63264888"
 |`EditValue`|주어진 개체 값으로 초기화된 식 편집기를 호출합니다.|  
   
 ### <a name="microsoftreportdesignerifieldsdataobject"></a>Microsoft.ReportDesigner.IFieldsDataObject  
- 이 클래스는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 필드 컬렉션이며 디자인 환경에서 끌어서 놓기 이벤트를 지원하는 데 사용됩니다. 
-  `IReportItemDataObject`에서 상속됩니다.  
+ 이 클래스는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 필드 컬렉션이며 디자인 환경에서 끌어서 놓기 이벤트를 지원하는 데 사용됩니다. `IReportItemDataObject`에서 상속됩니다.  
   
 #### <a name="public-properties"></a>Public 속성  
   

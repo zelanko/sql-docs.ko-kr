@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 30e46515fda5bf03a96e9f1168b470f635698d07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211113"
 ---
 # <a name="eventstring-element-dta"></a>EventString 요소(DTA)
@@ -39,26 +39,21 @@ ms.locfileid: "68211113"
   
 |attribute|Description|  
 |---------------|-----------------|  
-|`Weight`|(선택 사항) 지정한 이벤트에 대한 쿼리 가중치 요인(중요도 요인)을 지정합니다. 
-  `float` 데이터 형식을 사용하여 가중치를 지정할 수 있습니다(예: 
-  `Weight`="100.01"). 
-  `Weight`에 지정할 수 있는 최소값은 "0"입니다.|  
+|`Weight`|선택 사항입니다. 지정한 이벤트에 대한 쿼리 가중치 요인(중요도 요인)을 지정합니다. `float` 데이터 형식을 사용하여 가중치를 지정할 수 있습니다(예: `Weight`="100.01"). `Weight`에 지정할 수 있는 최소값은 "0"입니다.|  
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특성|Description|  
+|특성|설명|  
 |--------------------|-----------------|  
-|**데이터 형식 및 길이**|
-  `string`, 길이 제한 없음|  
+|**데이터 형식 및 길이**|`string`, 길이 제한 없음|  
 |**기본값**|없음|  
-|**발생 빈도**|다른 작업 유형이 지정되지 않은 경우 한 번만 지정해야 합니다. 
-  `EventString` 부모에 대해 `File`, `Database` 또는 `Workload` 자식 요소를 지정해야 하지만 한 유형만 사용할 수 있습니다. 예를 들어 `EventString` 요소로 작업을 지정할 경우 동일한 XML 입력 파일에서 `File` 요소로 작업을 지정할 수 없습니다.|  
+|**내용과**|다른 작업 유형이 지정되지 않은 경우 한 번만 지정해야 합니다. `EventString` 부모에 대해 `File`, `Database` 또는 `Workload` 자식 요소를 지정해야 하지만 한 유형만 사용할 수 있습니다. 예를 들어 `EventString` 요소로 작업을 지정할 경우 동일한 XML 입력 파일에서 `File` 요소로 작업을 지정할 수 없습니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
 |관계|요소|  
 |------------------|--------------|  
-|**부모 요소**|[DTA&#41;&#40;작업 요소](workload-element-dta.md)|  
+|**부모 요소**|[Workload 요소&#40;DTA&#41;](workload-element-dta.md)|  
 |**자식 요소**|없음|  
   
 ## <a name="example"></a>예제  

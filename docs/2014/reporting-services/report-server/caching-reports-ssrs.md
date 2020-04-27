@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58785d54954278d2dcb839ef3e707859682a9d37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104106"
 ---
 # <a name="caching-reports-ssrs"></a>보고서 캐시(SSRS)
@@ -76,6 +76,6 @@ ms.locfileid: "66104106"
  [캐시를 미리 로드 보고서 관리자 &#40;&#41;](preload-the-cache-report-manager.md)   
  [일정](../subscriptions/schedules.md)   
  [SSRS&#41;&#40;공유 데이터 집합 캐시](cache-shared-datasets-ssrs.md)   
- [캐시 새로 고침 옵션을 보고서 관리자 &#40;&#41;](../cache-refresh-options-report-manager.md)  
+ [캐시 새로 고침 옵션&#40;보고서 관리자&#41;](../cache-refresh-options-report-manager.md)  
   
   

@@ -11,18 +11,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7efb713b5dbf9a3f19118bb3572ccd35778aad19
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109646"
 ---
 # <a name="create-a-drillthrough-rdlc-report-with-parameters-using-reportviewer-ssrs-tutorial"></a>ReportViewer를 사용하여 매개 변수가 있는 드릴스루(RDLC) 보고서 만들기(SSRS 자습서)
   [드릴스루](https://technet.microsoft.com/library/ff519554.aspx) 보고서는 다른 보고서 내에서 링크를 클릭했을 때 열리는 보고서입니다. 드릴스루 보고서는 원본 요약 보고서에 포함된 항목에 대한 세부 정보를 포함합니다. 이 자습서에서는 [로컬 모드 보고](local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)에서 매개 변수 및 쿼리가 있는 드릴스루 보고서를 만드는 다음과 같은 단원을 설명합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- 이 연습을 사용하려면 **AdventureWorks2008** 예제 데이터베이스에 대한 액세스 권한이 있어야 합니다. 이 연습에서 사용하는 쿼리는 **AdventureWorks2012** 데이터베이스에서도 작동합니다. 
-  **AdventureWorks2008** 예제 데이터베이스를 가져오는 방법에 대한 자세한 내용은 Microsoft Visual Studio 2010을 위한 [연습: AdventureWorks 데이터베이스 설치](https://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx) 를 참조하십시오.  
+ 이 연습을 사용하려면 **AdventureWorks2008** 예제 데이터베이스에 대한 액세스 권한이 있어야 합니다. 이 연습에서 사용하는 쿼리는 **AdventureWorks2012** 데이터베이스에서도 작동합니다. **AdventureWorks2008** 예제 데이터베이스를 가져오는 방법에 대한 자세한 내용은 Microsoft Visual Studio 2010을 위한 [연습: AdventureWorks 데이터베이스 설치](https://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx) 를 참조하십시오.  
   
  이 연습에서는 Transaction-SQL 쿼리와 ADO.NET [DataSet](https://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) 및 [DataTable](https://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx) 개체를 잘 알고 있다고 가정합니다.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66109646"
  [9단원: 애플리케이션 빌드 및 실행](../reporting-services/lesson-9-build-and-run-the-application.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [Reporting Services 자습서 &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [SSRS를 &#40;Reporting Services 자습서&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)   
  [보고서 디자이너로 보고서 디자인&#40;SSRS&#41;](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   
   

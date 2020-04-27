@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e3aec7e136b656b7f33646d50b746e410263059a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284995"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>통합 관리 기능 영역(마스터 데이터 관리자)
@@ -29,14 +29,14 @@ ms.locfileid: "67284995"
   
  [준비 프로세스 중에 발생 하는 오류를 보려면 MDS(Master Data Services) &#40;&#41;](view-errors-that-occur-during-staging-master-data-services.md)  
   
- [준비 프로세스 문제 해결 (MDS(Master Data Services))](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
+ [준비 프로세스 문제 해결(Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   
 ## <a name="export-data"></a>데이터 내보내기  
  [데이터 &#40;MDS(Master Data Services)&#41;내보내기](overview-exporting-data-master-data-services.md)  
   
  [MDS(Master Data Services) &#40;구독 뷰를 만듭니다&#41;](create-a-subscription-view-to-export-data-master-data-services.md)  
   
- [구독 뷰를 삭제 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)  
+ [구독 뷰 삭제&#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [마스터 데이터 관리자 웹 애플리케이션](../../2014/master-data-services/master-data-manager-web-application.md)  

@@ -18,10 +18,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 88f1f0909e667db38c3b9b5d13bf11a2262b405b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480151"
 ---
 # <a name="attributes-master-data-services"></a>특성(Master Data Services)
@@ -78,25 +78,25 @@ ms.locfileid: "65480151"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|새 자유 형식 텍스트 특성을 만듭니다.|[텍스트 특성 &#40;MDS(Master Data Services)를 만듭니다&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)|  
-|새 자유 형식 숫자 특성을 만듭니다.|[숫자 특성 &#40;MDS(Master Data Services)를 만듭니다&#41;](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)|  
-|새 자유 형식 링크 특성을 만듭니다.|[MDS(Master Data Services) &#40;링크 특성을 만듭니다&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
-|새 파일 특성을 만듭니다.|[MDS(Master Data Services)&#41;&#40;파일 특성을 만듭니다.](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
-|새 도메인 기반 특성을 만듭니다.|[도메인 기반 특성 &#40;MDS(Master Data Services)를 만듭니다&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
+|새 자유 형식 텍스트 특성을 만듭니다.|[텍스트 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)|  
+|새 자유 형식 숫자 특성을 만듭니다.|[숫자 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)|  
+|새 자유 형식 링크 특성을 만듭니다.|[링크 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
+|새 파일 특성을 만듭니다.|[파일 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
+|새 도메인 기반 특성을 만듭니다.|[도메인 기반 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
 |기존 특성의 이름을 변경합니다.|[특성 이름을 MDS(Master Data Services) &#40;변경&#41;](change-an-attribute-name-and-data-type-master-data-services.md)|  
-|추적 그룹을 변경하는 기존 특성을 추가합니다.|[특성을 변경 내용 추적 그룹 &#40;MDS(Master Data Services)에 추가&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
-|기존 특성을 삭제합니다.|[MDS(Master Data Services) &#40;특성을 삭제&#41;](../../2014/master-data-services/delete-an-attribute-master-data-services.md)|  
+|추적 그룹을 변경하는 기존 특성을 추가합니다.|[변경 내용 추적 그룹에 특성 추가&#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|기존 특성을 삭제합니다.|[특성 삭제&#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-master-data-services.md)|  
 |특성 순서를 변경합니다.|[특성 순서 변경](../../2014/master-data-services/change-the-order-of-attributes.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   
--   [도메인 기반 특성 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
+-   [도메인 기반 특성&#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [특성 그룹 &#40;MDS(Master Data Services)&#41;](attribute-groups-master-data-services.md)  
+-   [특성 그룹&#40;Master Data Services&#41;](attribute-groups-master-data-services.md)  
   
--   [멤버가 MDS(Master Data Services)를 &#40;&#41;](../../2014/master-data-services/members-master-data-services.md)  
+-   [멤버&#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
--   [리프 권한 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
+-   [리프 권한&#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
   
 -   [MDS(Master Data Services)&#41;&#40;통합 된 사용 권한](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   

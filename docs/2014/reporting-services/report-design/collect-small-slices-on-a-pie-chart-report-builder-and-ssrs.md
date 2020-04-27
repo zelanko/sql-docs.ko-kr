@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 517f5c5dddd809ee71037a95d04109a005968132
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106217"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>원형 차트에서 작은 조각 수집(보고서 작성기 및 SSRS)
@@ -76,8 +76,8 @@ ms.locfileid: "66106217"
 >  보조 원형 차트의 서식은 지정할 수 없습니다. 이러한 이유로 원형 조각을 수집할 때는 첫 번째 방법을 사용하는 것이 좋습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [원형 차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [차트의 데이터 요소에 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [원형 차트는 보고서 작성기 및 SSRS를 &#40;&#41;](charts-report-builder-and-ssrs.md)   
+ [차트의 데이터 요소에 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [원형 차트 외부에 데이터 요소 레이블을 표시 하 고 보고서 작성기 및 SSRS를 &#40;&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [원형 차트 &#40;보고서 작성기 및 SSRS에 백분율 값을 표시&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [차트에 3D 효과 추가&#40;보고서 작성기 및 SSRS&#41;](chart-effects-add-3d-effects-report-builder.md)  

@@ -11,15 +11,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316004"
 ---
 # <a name="lesson-2-adding-a-web-reference"></a>2단원: 웹 참조 추가
-  웹 서비스 검색은 클라이언트에서 웹 서비스를 찾고 해당 서비스에 대한 설명을 얻는 과정입니다. 
-  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]의 웹 서비스 검색 과정에는 미리 결정된 알고리즘을 따르는 웹 사이트를 질의하는 과정이 포함됩니다. 이러한 과정의 목적은 WSDL(웹 서비스 설명 언어)을 사용하는 XML 문서인 서비스 설명을 찾는 것입니다.  
+  웹 서비스 검색은 클라이언트에서 웹 서비스를 찾고 해당 서비스에 대한 설명을 얻는 과정입니다. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]의 웹 서비스 검색 과정에는 미리 결정된 알고리즘을 따르는 웹 사이트를 질의하는 과정이 포함됩니다. 이러한 과정의 목적은 WSDL(웹 서비스 설명 언어)을 사용하는 XML 문서인 서비스 설명을 찾는 것입니다.  
   
  서비스 설명은 사용할 수 있는 서비스 및 이러한 서비스와 상호 작용하는 방법을 설명합니다. 서비스 설명이 없으면 웹 서비스와 프로그래밍 방식으로 상호 작용할 수 없습니다.  
   
@@ -43,13 +42,11 @@ ms.locfileid: "63316004"
   
 6.  **참조 추가** 를 클릭 하 여 대상 웹 서비스에 대 한 웹 참조를 추가 합니다.  
   
-     
-  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]는 서비스 설명을 다운로드하고 사용자 애플리케이션과 보고서 서버 웹 서비스 간에 상호 작용할 프록시 클래스를 생성합니다. 웹 참조가 작동할 수 있도록 <xref:System.Web.Services> 네임스페이스에 대한 참조도 추가해야 합니다.  
+     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]는 서비스 설명을 다운로드하고 사용자 애플리케이션과 보고서 서버 웹 서비스 간에 상호 작용할 프록시 클래스를 생성합니다. 웹 참조가 작동할 수 있도록 <xref:System.Web.Services> 네임스페이스에 대한 참조도 추가해야 합니다.  
   
 7.  프로젝트 메뉴에서 **참조 추가**를 클릭합니다.  
   
-8.  
-  **참조 추가** 대화 상자의 **.NET** 탭에서 **System.Web.Services**를 선택하고 **확인**을 클릭합니다.  
+8.  **참조 추가** 대화 상자의 **.NET** 탭에서 **System.Web.Services**를 선택하고 **확인**을 클릭합니다.  
   
  자세한 내용은 [SOAP API 액세스](../reporting-services/report-server-web-service/accessing-the-soap-api.md)를 참조하세요.  
   

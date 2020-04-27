@@ -11,14 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7ee7e06829f72ab44fd036766907be94c95b7d90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483690"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>코드 자동 생성(Master Data Services)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 코드 특성 또는 기타 숫자 특성에 대해 숫자 값을 자동으로 생성할 수 있습니다. 코드가 자동으로 생성될 때 코드에 다른 값을 입력할 수 없는 것은 아니지만 초기 값이 자동으로 설정됩니다.  
   
 ## <a name="generating-code-values"></a>코드 값 생성  
@@ -34,8 +33,7 @@ ms.locfileid: "65483690"
 ## <a name="deleting-automatically-generated-values"></a>자동으로 생성된 값 삭제  
  관리자가 코드 특성에 대해 자동 생성 값을 설정한 후 사용자가 다시 사용하려는 코드 값이 포함된 멤버를 실수로 삭제할 수 있습니다. "삭제 된 멤버에서 이미 멤버 코드를 사용 하 고 있습니다." 라는 오류 메시지가 표시 됩니다. 가능한 해결 방법으로 다음 두 가지가 있습니다.  
   
--   
-  **버전 관리** 기능 영역에서 관리자가 멤버가 삭제될 때 발생한 트랜잭션을 되돌릴 수 있습니다. 그러나이는 계층 및 컬렉션에서 이전 멤버의 모든 특성 및 멤버 자격이 복원 됨을 의미 합니다. 자세한 내용은 [역방향 a Transaction &#40;MDS(Master Data Services)&#41;](reverse-a-transaction-master-data-services.md)를 참조 하세요.  
+-   **버전 관리** 기능 영역에서 관리자가 멤버가 삭제될 때 발생한 트랜잭션을 되돌릴 수 있습니다. 그러나이는 계층 및 컬렉션에서 이전 멤버의 모든 특성 및 멤버 자격이 복원 됨을 의미 합니다. 자세한 내용은 [역방향 a Transaction &#40;MDS(Master Data Services)&#41;](reverse-a-transaction-master-data-services.md)를 참조 하세요.  
   
 -   관리자는 준비 프로세스를 사용하여 멤버를 영구적으로 삭제할 수 있습니다. 자세한 내용은 [준비 프로세스를 사용 하 여 멤버 비활성화 또는 삭제 &#40;MDS(Master Data Services)&#41;](add-update-and-delete-data-master-data-services.md)를 참조 하세요.  
   
@@ -43,15 +41,15 @@ ms.locfileid: "65483690"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|코드 특성 값 자동 생성|[MDS(Master Data Services) &#40;코드 특성 값을 자동으로 생성&#41;](../../2014/master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
-|다른 특성 값 자동 생성|[코드 &#40;MDS(Master Data Services) 이외의 특성 값을 자동으로 생성&#41;](../../2014/master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
+|코드 특성 값 자동 생성|[코드 특성 값 자동 생성&#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
+|다른 특성 값 자동 생성|[코드 외의 특성 값 자동 생성&#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   
--   [Master Data Services 개요](master-data-services-overview-mds.md)  
+-   [MDS(Master Data Services) 개요](master-data-services-overview-mds.md)  
   
--   [비즈니스 규칙 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [비즈니스 규칙&#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
--   [엔터티 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/entities-master-data-services.md)  
+-   [엔터티&#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1f634c206a2128369d8eee92a6355d26a620c3c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104305"
 ---
 # <a name="report-sections-dialog-box"></a>보고서 섹션 대화 상자
@@ -24,7 +24,6 @@ ms.locfileid: "66104305"
   
  보고서, 보고서 서버, 프로젝트 또는 보고서 작성 환경에 대한 현재 보고서 정의 형식을 식별하려면 [보고서 정의 스키마 버전 찾기&#40;SSRS&#41;](reports/find-the-report-definition-schema-version-ssrs.md)를 참조하세요.  
   
- 
-  **확인**을 클릭하여 계속합니다.  
+ **확인**을 클릭하여 계속합니다.  
   
   

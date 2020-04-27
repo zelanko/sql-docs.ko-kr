@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 056e96963c9e8f6450861fb6a54e496b406d0daa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109277"
 ---
 # <a name="design-the-table-report-wizard"></a>테이블 디자인(보고서 마법사)
@@ -24,13 +24,12 @@ ms.locfileid: "66109277"
   
 ## <a name="options"></a>옵션  
  **사용 가능한 필드**  
- 테이블 위에 있는 페이지, 테이블 그룹화, 테이블 정보에 나타날 필드를 선택합니다. 
-  **사용 가능한 필드** 의 필드를 **페이지**, **그룹**또는 **자세히**로 이동하려면 해당 필드를 선택한 다음 **페이지**, **그룹**또는 **자세히**를 클릭합니다. 또는 필드를 적합한 상자로 끌어다 놓을 수 있습니다.  
+ 테이블 위에 있는 페이지, 테이블 그룹화, 테이블 정보에 나타날 필드를 선택합니다. **사용 가능한 필드** 의 필드를 **페이지**, **그룹**또는 **자세히**로 이동하려면 해당 필드를 선택한 다음 **페이지**, **그룹**또는 **자세히**를 클릭합니다. 또는 필드를 적합한 상자로 끌어다 놓을 수 있습니다.  
   
  **표시된 필드**  
  페이지, 그룹 또는 자세히에 할당된 필드를 표시합니다. 목록에서 필드를 삭제하려면 **제거** 를 클릭합니다.  
   
- **호출**  
+ **페이지**  
  페이지 수준에 나타날 필드 목록을 확인합니다. 필드 순서를 변경하려면 필드를 선택한 다음 위로 단추 또는 아래로 단추를 클릭합니다.  
   
  **그룹**  
@@ -40,7 +39,7 @@ ms.locfileid: "66109277"
  테이블의 자세히 섹션에 나타날 필드 목록을 확인합니다. 필드 순서를 변경하려면 필드를 선택한 다음 위로 단추 또는 아래로 단추를 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [테이블&#40;보고서 작성기 및 SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
+ [테이블 &#40;보고서 작성기 및 SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
  [보고서 마법사 도움말](../../2014/reporting-services/report-wizard-help.md)  
   
   

@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f9bcb5e7818c4125b81d715d7e74f120a07449d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108734"
 ---
 # <a name="initialize-a-report-server-ssrs-configuration-manager"></a>보고서 서버 초기화(SSRS 구성 관리자)
@@ -68,10 +68,9 @@ ms.locfileid: "66108734"
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI(Windows Management Instrumentation) 공급자를 사용하여 보고서 서버를 프로그래밍 방식으로 초기화할 수도 있습니다. 자세한 내용은 [온라인 설명서의](../tools/access-the-reporting-services-wmi-provider.md) Reporting Services WMI 공급자 액세스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 참조하세요.  
   
 ## <a name="how-to-confirm-a-report-server-initialization"></a>보고서 서버 초기화를 확인하는 방법  
- 보고서 서버 초기화를 확인하려면 명령 창에 **http://\<servername>/reportserver**을 입력하여 보고서 서버 웹 서비스를 ping합니다. 
-  `RSReportServerNotActivated` 오류가 발생하면 초기화가 실패한 것입니다.  
+ 보고서 서버 초기화를 확인 하려면 명령 창에 **http://\<servername>/reportserver** 를 입력 하 여 보고서 서버 웹 서비스에 대해 ping을 수행 합니다. `RSReportServerNotActivated` 오류가 발생하면 초기화가 실패한 것입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SSRS Configuration Manager &#40;암호화 된 보고서 서버 데이터 저장&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [암호화된 보고서 서버 데이터 저장&#40;SSRS 구성 관리자&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

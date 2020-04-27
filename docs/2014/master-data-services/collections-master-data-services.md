@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0dbf84d6fd3253a3b4d945693090fdad00d077ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483540"
 ---
 # <a name="collections-master-data-services"></a>컬렉션(Master Data Services)
@@ -36,9 +36,7 @@ ms.locfileid: "65483540"
 >  컬렉션을 만들려면 먼저 엔터티가 명시적 계층을 사용하도록 설정되어 있어야 합니다. 자세한 내용은 [&#41;MDS(Master Data Services) &#40;명시적 계층 및 컬렉션에 엔터티 사용 ](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)을 참조 하세요.  
   
 ## <a name="subscription-views-for-collections"></a>컬렉션의 구독 뷰  
- 컬렉션을 표시하는 두 가지 유형의 구독 뷰가 있습니다. 
-  **컬렉션 특성** 형식은 컬렉션 목록 및 컬렉션과 관련된 모든 특성(설명 또는 소유자 등)을 표시합니다. 
-  **컬렉션** 형식은 모든 컬렉션의 모든 멤버와 각 멤버의 가중치 및 정렬 순서를 표시합니다. 자세한 내용은 [데이터 내보내기 &#40;MDS(Master Data Services)&#41;](overview-exporting-data-master-data-services.md)를 참조 하세요.  
+ 컬렉션을 표시하는 두 가지 유형의 구독 뷰가 있습니다. **컬렉션 특성** 형식은 컬렉션 목록 및 컬렉션과 관련된 모든 특성(설명 또는 소유자 등)을 표시합니다. **컬렉션** 형식은 모든 컬렉션의 모든 멤버와 각 멤버의 가중치 및 정렬 순서를 표시합니다. 자세한 내용은 [데이터 내보내기 &#40;MDS(Master Data Services)&#41;](overview-exporting-data-master-data-services.md)를 참조 하세요.  
   
  컬렉션의 특정 멤버에 대해 가중치를 설정하는 경우 이러한 값을 관련 구독 뷰에서 사용할 수 있습니다.  
   
@@ -47,12 +45,12 @@ ms.locfileid: "65483540"
 |태스크 설명|항목|  
 |----------------------|-----------|  
 |명시적 계층 및 컬렉션에 엔터티를 사용합니다.|[명시적 계층 및 컬렉션에 대해 엔터티를 사용 하도록 설정 &#40;MDS(Master Data Services)&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|새 컬렉션을 만듭니다.|[MDS(Master Data Services) &#40;컬렉션을 만듭니다&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
-|기존 컬렉션에 멤버를 추가합니다.|[컬렉션에 멤버 추가 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
+|새 컬렉션을 만듭니다.|[컬렉션 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
+|기존 컬렉션에 멤버를 추가합니다.|[컬렉션에 멤버 추가&#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   
--   [명시적 계층 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [명시적 계층&#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
 -   [데이터 &#40;MDS(Master Data Services)&#41;내보내기](overview-exporting-data-master-data-services.md)  
   

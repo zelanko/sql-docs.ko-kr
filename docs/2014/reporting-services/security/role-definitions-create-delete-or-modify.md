@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 066c69298126cbc635d388d75659b98dcff95917
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101805"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>역할 만들기, 삭제 또는 수정(Management Studio)
@@ -47,8 +47,7 @@ ms.locfileid: "66101805"
   
 4.  역할의 고유 이름을 입력합니다. 이름은 한 글자 이상이어야 합니다. 공백 및 특정 기호도 포함할 수 있지만 ; ? : \@ & = +, $/* \< > | "또는/입니다.  
   
-5.  설명을 입력합니다(옵션). 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 이 설명은 이 페이지에만 표시됩니다. 보고자 관리자를 통해 이 항목을 보는 사용자는 해당 도구에서 이 설명을 볼 수 있습니다.  
+5.  설명을 입력합니다(옵션). [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 이 설명은 이 페이지에만 표시됩니다. 보고자 관리자를 통해 이 항목을 보는 사용자는 해당 도구에서 이 설명을 볼 수 있습니다.  
   
 6.  이 역할의 멤버가 수행할 수 있는 태스크를 선택합니다.  
   
@@ -62,8 +61,7 @@ ms.locfileid: "66101805"
   
 3.  항목 수준의 역할 정의를 삭제하거나 수정하려면 역할 폴더를 확장합니다. 다음 중 하나를 수행합니다.  
   
-    1.  역할 정의를 삭제하려면 항목을 마우스 오른쪽 단추로 클릭하고 **삭제**를 클릭합니다. 
-  **개체 삭제** 대화 상자가 표시됩니다. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+    1.  역할 정의를 삭제하려면 항목을 마우스 오른쪽 단추로 클릭하고 **삭제**를 클릭합니다. **개체 삭제** 대화 상자가 표시됩니다. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
     2.  역할 정의를 수정하려면 항목을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다. **사용자 역할 속성** 대화 상자의 일반 페이지가 표시됩니다.  
   
@@ -71,17 +69,15 @@ ms.locfileid: "66101805"
   
 4.  시스템 수준의 역할 정의를 삭제하거나 수정하려면 **시스템 역할** 폴더를 확장합니다. 다음 중 하나를 수행합니다.  
   
-    1.  시스템 역할 정의를 삭제하려면 항목을 마우스 오른쪽 단추로 클릭하고 **삭제**를 클릭합니다. 
-  **개체 삭제** 대화 상자가 표시됩니다. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+    1.  시스템 역할 정의를 삭제하려면 항목을 마우스 오른쪽 단추로 클릭하고 **삭제**를 클릭합니다. **개체 삭제** 대화 상자가 표시됩니다. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-    2.  시스템 역할 정의를 수정하려면 항목을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다. 
-  **시스템 역할 속성** 대화 상자의 일반 페이지가 표시됩니다.  
+    2.  시스템 역할 정의를 수정하려면 항목을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다. **시스템 역할 속성** 대화 상자의 일반 페이지가 표시됩니다.  
   
          이 역할의 멤버가 수행할 수 있는 태스크를 선택하고 **확인** 을 클릭하여 변경 내용을 적용합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Management Studio에서 보고서 서버에 연결](../tools/connect-to-a-report-server-in-management-studio.md)   
  (create-and-manage-role-assignments.md)   
- [SSRS&#41;SQL Server Management Studio &#40;Reporting Services](../tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [SQL Server Management Studio의 Reporting Services&#40;SSRS&#41;](../tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

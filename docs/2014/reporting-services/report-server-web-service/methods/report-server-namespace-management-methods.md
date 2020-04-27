@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 64827063e6e406f91307e7db1b33d6b42a196168
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63283983"
 ---
 # <a name="report-server-namespace-management-methods"></a>보고서 서버 네임스페이스 관리 메서드
@@ -60,8 +60,7 @@ ms.locfileid: "63283983"
 |<xref:ReportService2010.ReportingService2010.SetProperties%2A>|항목 속성을 하나 이상 설정합니다.|  
 |<xref:ReportService2010.ReportingService2010.SetItemDefinition%2A>|지정된 항목의 정의 또는 콘텐츠를 설정합니다. 이 메서드는 `Report`, `Model`, `Dataset`, `Component`, `Resource` 및 `DataSource` 항목 유형에 적용됩니다.|  
 |<xref:ReportService2010.ReportingService2010.SetSystemProperties%2A>|보고서 서버 또는 SharePoint 팜에서 시스템 속성을 하나 이상 설정합니다.|  
-|<xref:ReportService2010.ReportingService2010.ValidateExtensionSettings%2A>|
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 확장 프로그램 설정의 유효성을 검사합니다.|  
+|<xref:ReportService2010.ReportingService2010.ValidateExtensionSettings%2A>|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 확장 프로그램 설정의 유효성을 검사합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [웹 서비스와 .NET Framework를 사용하여 애플리케이션 빌드](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

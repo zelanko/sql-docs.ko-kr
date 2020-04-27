@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a7d336e777f4f6bf00310cbadfed75987ba45252
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478945"
 ---
 # <a name="connections-mds-add-in-for-excel"></a>연결(Excel용 MDS 추가 기능)
@@ -32,8 +32,7 @@ ms.locfileid: "65478945"
  항상 동일한 서버에 연결하고 동일한 데이터 집합을 로드하려는 경우 연결 및 필터 정보를 포함하는 바로 가기 쿼리 파일을 만들 수 있습니다. 쿼리 파일에 대한 자세한 내용은 [바로 가기 쿼리 파일&#40;Excel용 MDS 추가 기능&#41;](shortcut-query-files-mds-add-in-for-excel.md)을 클릭합니다.  
   
 ## <a name="data-quality-services"></a>데이터베이스 엔진 서비스  
- 
-  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 에는 데이터를 MDS 저장소에 게시하기 전에 일치하는지 확인할 수 있게 해주는 Data Quality Services 기능이 있습니다. 연결을 설정할 때는 DQS 데이터베이스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 동일 인스턴스에 MDS 데이터베이스로 설치된 경우 리본 메뉴에 DQS 단추를 표시할 수 있습니다. DQS_Main 데이터베이스가 인스턴스에 없으면 이러한 단추가 표시되지 않으며 데이터 품질 기능을 사용할 수 없습니다.  
+ [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 에는 데이터를 MDS 저장소에 게시하기 전에 일치하는지 확인할 수 있게 해주는 Data Quality Services 기능이 있습니다. 연결을 설정할 때는 DQS 데이터베이스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 동일 인스턴스에 MDS 데이터베이스로 설치된 경우 리본 메뉴에 DQS 단추를 표시할 수 있습니다. DQS_Main 데이터베이스가 인스턴스에 없으면 이러한 단추가 표시되지 않으며 데이터 품질 기능을 사용할 수 없습니다.  
   
 ## <a name="troubleshooting-connections"></a>연결 문제 해결  
  MDS에 연결 하는 경우 문제가 발생 하면 문제 해결 팁 [https://social.technet.microsoft.com/wiki/contents/articles/4520.aspx](https://social.technet.microsoft.com/wiki/contents/articles/4520.aspx) 을 참조 하십시오.  
@@ -42,8 +41,7 @@ ms.locfileid: "65478945"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스에 대한 연결을 만듭니다.|[MDS 저장소 &#40;Excel용 MDS 추가 기능에 연결&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
+|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스에 대한 연결을 만듭니다.|[MDS 리포지토리에 연결&#40;Excel용 MDS 추가 기능&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
 |MDS 데이터를 Excel로 로드합니다.|[MDS에서 Excel로 데이터 로드](export-data-to-excel-from-master-data-services.md)|  
 |MDS 데이터를 Excel에 로드하기 전에 필터링합니다.|[&#40;Excel용 MDS 추가 기능를 로드 하기 전에 데이터를 필터링&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)|  
   
@@ -51,7 +49,7 @@ ms.locfileid: "65478945"
   
 -   [데이터 &#40;Excel용 MDS 추가 기능&#41;로드](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
--   [바로 가기 쿼리 파일 &#40;Excel용 MDS 추가 기능&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
+-   [바로 가기 쿼리 파일&#40;Excel용 MDS 추가 기능&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
 -   [Microsoft Excel용 Master Data Services 추가 기능](master-data-services-add-in-for-microsoft-excel.md)  
   

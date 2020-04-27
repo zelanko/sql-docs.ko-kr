@@ -18,10 +18,10 @@ ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 45088122cfb6824598aaf40486264d41216d3c39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68771317"
 ---
 # <a name="sp_adddistributor-transact-sql"></a>sp_adddistributor(Transact-SQL)
@@ -70,7 +70,7 @@ sp_adddistributor [ @distributor= ] 'distributor'
  [Transact-sql&#41;sp_changedistributor_property &#40;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
  [Transact-sql&#41;sp_dropdistributor &#40;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
  [Transact-sql&#41;sp_helpdistributor &#40;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [배포 구성](../../relational-databases/replication/configure-distribution.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84f01e85a0a93ef1f2a14b2b01b4180143153865
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107546"
 ---
 # <a name="work-around-the-excel-row-limitation"></a>Excel 행 제한 해결
@@ -24,15 +24,13 @@ ms.locfileid: "66107546"
   
 ### <a name="to-create-an-explicit-page-break"></a>명시적 페이지 나누기를 만들려면  
   
-1.  
-  [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 또는 보고서 관리자에서 보고서를 엽니다.  
+1.  [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 또는 보고서 관리자에서 보고서를 엽니다.  
   
 2.  테이블에서 데이터 행을 마우스 오른쪽 단추로 클릭 한 다음 **그룹** > 추가**상위 그룹** 을 클릭 하 여 외부 테이블 그룹을 추가 합니다.  
   
      ![부모 그룹 선택](../media/datarow-selectparentgroup.png "부모 그룹 선택")  
   
-3.  
-  **그룹화 방법** 식 상자에 다음 수식을 입력한 다음 **확인** 을 클릭하여 상위 그룹을 추가합니다.  
+3.  **그룹화 방법** 식 상자에 다음 수식을 입력한 다음 **확인** 을 클릭하여 상위 그룹을 추가합니다.  
   
      =Int((RowNumber(Nothing)-1)/65000)  
   
@@ -44,18 +42,15 @@ ms.locfileid: "66107546"
   
      ![그룹 열 삭제](../media/groupcolumn-delete-updated.png "그룹 열 삭제")  
   
-5.  
-  **행 그룹** 섹션에서 **그룹 1** 을 마우스 오른쪽 단추로 클릭한 다음 **그룹 속성**을 클릭합니다.  
+5.  **행 그룹** 섹션에서 **그룹 1** 을 마우스 오른쪽 단추로 클릭한 다음 **그룹 속성**을 클릭합니다.  
   
      ![그룹 속성 보기](../media/groupproperties-updated.png "그룹 속성 보기")  
   
-6.  
-  **그룹 속성** 대화 상자의 **정렬** 페이지에서 기본 정렬 옵션을 선택하고 **삭제**를 클릭합니다.  
+6.  **그룹 속성** 대화 상자의 **정렬** 페이지에서 기본 정렬 옵션을 선택하고 **삭제**를 클릭합니다.  
   
      ![기본 정렬 삭제](../media/groupproperties-sorting-updated.png "기본 정렬 삭제")  
   
-7.  
-  **페이지 나누기** 페이지에서 **각 그룹 인스턴스 사이** 를 클릭한 다음 **확인**을 클릭합니다.  
+7.  **페이지 나누기** 페이지에서 **각 그룹 인스턴스 사이** 를 클릭한 다음 **확인**을 클릭합니다.  
   
      ![페이지 나누기 설정](../media/groupproperties-pagebreaks-updated.png "페이지 나누기 설정")  
   

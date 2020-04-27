@@ -11,31 +11,28 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b47503e9a7a2b09ea6e4d9f7f3ce309fd1b99f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106432"
 ---
 # <a name="datasources-and-datasets-collection-references-report-builder-and-ssrs"></a>DataSources 및 DataSets 컬렉션 참조(보고서 작성기 및 SSRS)
-  
   `DataSources` 컬렉션은 보고서에 사용되는 모든 데이터 원본을 나타냅니다. 마찬가지로 `DataSets` 컬렉션은 보고서의 모든 데이터 원본에 대한 모든 데이터 세트을 나타냅니다. **보고서 데이터** 창을 사용하여 참조하는 데이터 원본 아래에 구성된 보고서 데이터 세트를 계층적으로 볼 수 있습니다. 이러한 컬렉션에 대한 참조를 추가할 경우 보고서를 미리 볼 때 값이 표시되지 않습니다. 이러한 컬렉션은 보고서가 보고서 서버에 게시된 다음에만 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="datasources"></a>DataSources  
- 
-  `DataSources` 컬렉션은 게시된 보고서 정의에 참조되는 데이터 원본을 나타냅니다. 이 정보를 보고서에 포함하도록 선택하여 보고서 데이터의 원본을 문서화할 수 있습니다. 이 컬렉션은 **미리 보기** 모드에서는 사용할 수 없습니다. 다음 표에서는 `DataSources` 컬렉션 내의 변수를 설명합니다.  
+ `DataSources` 컬렉션은 게시된 보고서 정의에 참조되는 데이터 원본을 나타냅니다. 이 정보를 보고서에 포함하도록 선택하여 보고서 데이터의 원본을 문서화할 수 있습니다. 이 컬렉션은 **미리 보기** 모드에서는 사용할 수 없습니다. 다음 표에서는 `DataSources` 컬렉션 내의 변수를 설명합니다.  
   
 |**변수**|`Type`|**설명**|  
 |------------------|--------------|---------------------|  
 |`DataSourceReference`|`String`|보고서 서버에 있는 데이터 원본 정의의 전체 경로입니다. 예를 들어 보고서 기록의 일부로 보고서에 사용된 모든 데이터 원본 목록을 포함할 수 있습니다. 다음 예에서는 AdventureWorks2012라는 데이터 원본의 전체 경로를 보여 줍니다.<br /><br /> `/DataSources/AdventureWorks2012`.|  
-|`Type`|`String`|데이터 원본의 데이터 공급자 유형입니다. `SQL`)을 입력합니다.|  
+|`Type`|`String`|데이터 원본의 데이터 공급자 유형입니다. 예: `SQL`.|  
   
 ## <a name="datasets"></a>DataSets  
- 
-  `DataSets` 컬렉션은 보고서 정의에 참조되는 데이터 세트을 나타냅니다. 보고서에 입력란으로 쿼리를 포함하면 보고서에 정확히 어떤 데이터가 있는지 알고자 하는 사용자가 원본 명령 텍스트를 볼 수 있습니다. 이 컬렉션은 **미리 보기** 모드에서는 사용할 수 없습니다. 다음 표에서는 `DataSets` 컬렉션의 멤버를 설명합니다.  
+ `DataSets` 컬렉션은 보고서 정의에 참조되는 데이터 세트을 나타냅니다. 보고서에 입력란으로 쿼리를 포함하면 보고서에 정확히 어떤 데이터가 있는지 알고자 하는 사용자가 원본 명령 텍스트를 볼 수 있습니다. 이 컬렉션은 **미리 보기** 모드에서는 사용할 수 없습니다. 다음 표에서는 `DataSets` 컬렉션의 멤버를 설명합니다.  
   
 |**멤버**|`Type`|**설명**|  
 |----------------|--------------|---------------------|  

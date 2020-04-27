@@ -16,10 +16,10 @@ ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1b0a20e2bc7a167698353db31e7c0411fb1a6961
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68769138"
 ---
 # <a name="sp_addmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription(Transact-SQL)
@@ -49,8 +49,7 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
   
 `[ @publisher_db = ] 'publisher_db'`게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @subscriber_type = ] 'subscriber_type'`구독자의 유형입니다. *subscriber_type* 은 **nvarchar (15)** 이며 **전역**, **로컬** 또는 **익명**일 수 있습니다. 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서 로컬 구독은 클라이언트 구독이라고 하며 전역 구독은 서버 구독이라고 합니다.  
+`[ @subscriber_type = ] 'subscriber_type'`구독자의 유형입니다. *subscriber_type* 은 **nvarchar (15)** 이며 **전역**, **로컬** 또는 **익명**일 수 있습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서 로컬 구독은 클라이언트 구독이라고 하며 전역 구독은 서버 구독이라고 합니다.  
   
 `[ @subscription_priority = ] subscription_priority`구독 우선 순위입니다. *subscription_priority*은 **실제**이며 기본값은 NULL입니다. 로컬 및 익명 구독의 경우 우선 순위는 **0.0**입니다. 우선 순위는 기본 해결 프로그램이 충돌을 감지했을 때 먼저 적용할 항목을 선택하는 데 사용합니다. 전역 구독자인 경우 구독 우선 순위는 100 미만이어야 합니다. 100은 게시자의 우선 순위입니다.  
   
@@ -84,6 +83,6 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
  [Transact-sql&#41;sp_changemergepullsubscription &#40;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
  [Transact-sql&#41;sp_dropmergepullsubscription &#40;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
  [Transact-sql&#41;sp_helpmergepullsubscription &#40;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
- [Transact-sql&#41;sp_helpsubscription_properties &#40;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+ [sp_helpsubscription_properties&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

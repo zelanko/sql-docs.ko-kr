@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1c3caf606e8cbf551d7b865b30996ae0f16450a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480725"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Data Quality Services 기능 및 태스크
@@ -25,7 +25,7 @@ ms.locfileid: "65480725"
   
  [DQS 기술 자료 및 도메인](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
- [DQS&#41;&#40;데이터 품질 프로젝트](../../2014/data-quality-services/data-quality-projects-dqs.md)  
+ [데이터 품질 프로젝트&#40;DQS&#41;](../../2014/data-quality-services/data-quality-projects-dqs.md)  
   
  [Data Cleansing](../../2014/data-quality-services/data-cleansing.md)  
   

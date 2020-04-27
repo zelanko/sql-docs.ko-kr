@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d356bc1cb981479de8a4b1baa3bdaaf45b6145ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63260745"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Reporting Services 배달 확장 프로그램 설정
@@ -40,16 +40,15 @@ ms.locfileid: "63260745"
   
 |설정|값|  
 |-------------|-----------|  
-|**TO**|전자 메일 메시지의 `To` 줄에 표시되는 전자 메일 주소입니다. 여러 개의 전자 메일 주소는 세미콜론으로 구분됩니다. 필수 사항입니다.|  
-|**CC**|전자 메일 메시지의 `Cc` 줄에 표시되는 전자 메일 주소입니다. 여러 개의 전자 메일 주소는 세미콜론으로 구분됩니다. (선택 사항)|  
-|**BCC**|전자 메일 메시지의 `Bcc` 줄에 표시되는 전자 메일 주소입니다. 여러 개의 전자 메일 주소는 세미콜론으로 구분됩니다. (선택 사항)|  
-|**ReplyTo**|전자 메일 메시지의 `Reply-To` 머리글에 표시되는 전자 메일 주소입니다. 값은 단일 전자 메일 주소여야 합니다. (선택 사항)|  
-|`IncludeReport`|전자 메일 배달에 보고서를 포함시킬지 여부를 나타내는 값입니다. 
-  `true` 값은 보고서가 전자 메일 메시지의 본문으로 배달됨을 나타냅니다.|  
+|**받는 사람**|전자 메일 메시지의 `To` 줄에 표시되는 전자 메일 주소입니다. 여러 개의 전자 메일 주소는 세미콜론으로 구분됩니다. 필수 사항입니다.|  
+|**사람과**|전자 메일 메시지의 `Cc` 줄에 표시되는 전자 메일 주소입니다. 여러 개의 전자 메일 주소는 세미콜론으로 구분됩니다. 선택 사항입니다.|  
+|**BCC**|전자 메일 메시지의 `Bcc` 줄에 표시되는 전자 메일 주소입니다. 여러 개의 전자 메일 주소는 세미콜론으로 구분됩니다. 선택 사항입니다.|  
+|**ReplyTo**|전자 메일 메시지의 `Reply-To` 머리글에 표시되는 전자 메일 주소입니다. 값은 단일 전자 메일 주소여야 합니다. 선택 사항입니다.|  
+|`IncludeReport`|전자 메일 배달에 보고서를 포함시킬지 여부를 나타내는 값입니다. `true` 값은 보고서가 전자 메일 메시지의 본문으로 배달됨을 나타냅니다.|  
 |**RenderFormat**|렌더링된 보고서를 생성하는 데 사용할 렌더링 확장 프로그램의 이름입니다. 이름은 보고서 서버에 설치되었으며 표시되는 렌더링 확장 프로그램의 이름과 일치해야 합니다. 이 값은 `IncludeReport` 설정이 `true` 값으로 설정된 경우에 필요합니다.|  
 |**Priority**|전자 메일 메시지를 전송하는 우선 순위입니다. 유효한 값은 `LOW`, `NORMAL` 및 `HIGH`입니다. 기본값은 `NORMAL`입니다.|  
-|**제목**|전자 메일 메시지의 제목 줄 텍스트입니다.|  
-|**주석**|전자 메일 메시지의 본문에 포함된 텍스트입니다.|  
+|**Subject**|전자 메일 메시지의 제목 줄 텍스트입니다.|  
+|**설명**|전자 메일 메시지의 본문에 포함된 텍스트입니다.|  
 |**IncludeLink**|전자 메일 본문에 보고서에 대한 링크를 포함시킬지 여부를 나타내는 값입니다.|  
   
 ## <a name="file-share-delivery-settings"></a>파일 공유 배달 설정  
@@ -66,7 +65,7 @@ ms.locfileid: "63260745"
 |**WRITEMODE**|디스크에 액세스할 때 사용할 쓰기 모드입니다. 유효한 값은 `None`, `Overwrite` 및 `AutoIncrement`입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [기술 참조&#40;SSRS&#41;](../../technical-reference-ssrs.md)   
- [웹 서비스 및 .NET Framework를 사용하여 애플리케이션 빌드](building-applications-using-the-web-service-and-the-net-framework.md)  
+ [SSRS&#41;&#40;기술 참조](../../technical-reference-ssrs.md)   
+ [웹 서비스와 .NET Framework를 사용하여 애플리케이션 빌드](building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

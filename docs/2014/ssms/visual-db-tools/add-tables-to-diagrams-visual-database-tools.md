@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26c13eb6c9cb142cac3ba0981177fb2c605ab5fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63297903"
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>다이어그램에 테이블 추가(Visual Database Tools)
@@ -33,15 +33,13 @@ ms.locfileid: "63297903"
   
      다이어그램 내부를 마우스 오른쪽 단추로 클릭하고 **새 테이블**을 선택합니다.  
   
-2.  
-  **이름 선택** 대화 상자에서 시스템 할당 테이블 이름을 그대로 사용하거나 수정한 다음 **확인**을 선택합니다.  
+2.  **이름 선택** 대화 상자에서 시스템 할당 테이블 이름을 그대로 사용하거나 수정한 다음 **확인**을 선택합니다.  
   
      다이어그램에 새 테이블이 표준 뷰로 나타납니다.  
   
 3.  새 테이블의 첫째 셀에 열 이름을 입력합니다. 그런 다음 Tab 키를 눌러 다음 셀로 이동합니다.  
   
-4.  
-  **데이터 형식**에서 해당 열의 데이터 형식을 선택합니다. 각 열에는 이름과 데이터 형식이 있어야 합니다.  
+4.  **데이터 형식**에서 해당 열의 데이터 형식을 선택합니다. 각 열에는 이름과 데이터 형식이 있어야 합니다.  
   
      테이블 디자이너에서 열의 다른 속성을 설정할 수 있습니다.  
   
@@ -54,8 +52,7 @@ ms.locfileid: "63297903"
   
 1.  편집할 테이블이 있는 데이터베이스에 연결되어 있는지 확인합니다.  
   
-2.  
-  **테이블** 폴더에서 테이블을 선택합니다.  
+2.  **테이블** 폴더에서 테이블을 선택합니다.  
   
 3.  데이터베이스 다이어그램으로 테이블을 끕니다.  
   

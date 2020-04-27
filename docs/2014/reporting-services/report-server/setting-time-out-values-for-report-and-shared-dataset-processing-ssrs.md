@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fdbca5818e3430c0445444f3fb98b426e5f8a79c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103206"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>보고서 및 공유 데이터 세트 처리에 대한 시간 제한 값 설정(SSRS)
@@ -55,8 +55,8 @@ ms.locfileid: "66103206"
 >  RSReportServer.config 파일에서 `RunningRequestsDbCycle`을 설정하여 실행 작업의 평가 빈도를 변경할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [처리 옵션 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [보고서 서버 &#40;기본 모드를 Reporting Services&#41;](reporting-services-report-server-native-mode.md)   
+ [SharePoint 통합 모드에서 처리 옵션을 Reporting Services &#40;설정&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Reporting Services 보고서 서버&#40;기본 모드&#41;](reporting-services-report-server-native-mode.md)   
  [실행 중인 프로세스 관리](../subscriptions/manage-a-running-process.md)   
  [보고서 관리자&#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)  
   

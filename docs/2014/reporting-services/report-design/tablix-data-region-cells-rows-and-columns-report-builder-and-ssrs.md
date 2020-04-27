@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f372bd5bcc538d861ddd556b3bb420c181d59717
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104645"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>테이블릭스 데이터 영역 셀, 행 및 열(보고서 작성기 및 SSRS)
@@ -38,12 +38,12 @@ ms.locfileid: "66104645"
 ### <a name="row-and-column-handles"></a>행 및 열 핸들  
  테이블릭스 데이터 영역을 선택할 때 행 및 열 핸들 그래픽은 각 행 및 열의 용도를 나타냅니다. 핸들은 행 및 열이 그룹 내부 또는 외부에 있음을 나타냅니다. 다음 표에서는 핸들의 다양한 표시 모양을 보여 줍니다.  
   
-|아이콘|Description|  
+|아이콘|설명|  
 |----------|-----------------|  
 |![3개의 평행선이 있는 정보 행에 대한 행 핸들](../media/rs-icontablix-detailsrow.gif "3개의 평행선이 있는 정보 행에 대한 행 핸들")|행 그룹 계층에서 유일한 세부 정보 그룹|  
 |![정보 행과 1개의 외부 그룹이 있는 행 핸들](../media/rs-icontablix-groupwithdetails.gif "정보 행과 1개의 외부 그룹이 있는 행 핸들")|한 개의 외부 그룹 및 자식 세부 정보 그룹|  
 |![중첩된 그룹을 보여 주는 2개의 평행 대괄호](../media/rs-icontablix-nestedgroupnodetails.gif "중첩된 그룹을 보여 주는 2개의 평행 대괄호")|한 개의 외부 그룹, 한 개의 내부 그룹, 세부 정보 그룹 없음|  
-|![중첩 된 & 세부 정보에 대 한 2 개의 대괄호 & 3 개의 누적 선](../media/rs-icontablix-nestedgroupwithdetails.gif "중첩 및 세부 정보에 대한 2개의 대괄호 및 3개의 누적 선")|한 개의 외부 그룹, 한 개의 내부 그룹 및 자식 세부 정보 그룹|  
+|![중첩 및 세부 정보에 대한 2개의 대괄호와 누적된 3개의 선](../media/rs-icontablix-nestedgroupwithdetails.gif "중첩 및 세부 정보에 대한 2개의 대괄호와 누적된 3개의 선")|한 개의 외부 그룹, 한 개의 내부 그룹 및 자식 세부 정보 그룹|  
 |![바닥글 행이 있는 1개의 외부 그룹 및 1개의 내부 그룹](../media/rs-icontablix-nestedgroupwithparentfooter.gif "바닥글 행이 있는 1개의 외부 그룹 및 1개의 내부 그룹")|바닥글 행이 있는 한 개의 외부 그룹 및 한 개의 내부 그룹|  
 |![외부 그룹 대괄호, 내부 그룹 대괄호, 세부 정보](../media/rs-icontablix-nestedgroupwithdetailsandtotals.gif "외부 그룹 대괄호, 내부 그룹 대괄호, 세부 정보")|합계에 대한 바닥글 행이 있는 한 개의 외부 그룹, 합계에 대한 바닥글 행이 있는 한 개의 내부 그룹 및 한 개의 정보 행|  
 |![부모 머리글과 바닥글 및 자식 그룹](../media/rs-icontablix-nestedgroupwithparentheaderandfooter.gif "부모 머리글과 바닥글 및 자식 그룹")|레이블에 대한 머리글과 합계에 대한 바닥글이 있는 한 개의 외부 그룹, 한 개의 내부 그룹, 자식 그룹 없음|  

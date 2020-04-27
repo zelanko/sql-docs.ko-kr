@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8245c048d4c1a1314835ad70fc7305c7afabd3f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63284468"
 ---
 # <a name="save-queries-visual-database-tools"></a>쿼리 저장(Visual Database Tools)
@@ -27,8 +27,7 @@ ms.locfileid: "63284468"
   
 1.  쿼리를 만듭니다.  
   
-2.  
-  **파일** 메뉴에서 **<query_name> 저장**을 클릭합니다.  
+2.  **파일** 메뉴에서 **<query_name> 저장**을 클릭합니다.  
   
     > [!NOTE]  
     >  시스템에서 자동으로 선택된 이름이 새로 만든 쿼리에 지정됩니다. 쿼리의 고유 이름을 직접 선택하려면 **다른 이름으로 <query_name> 저장**을 선택합니다.  

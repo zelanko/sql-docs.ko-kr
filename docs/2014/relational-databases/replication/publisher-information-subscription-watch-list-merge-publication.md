@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2fcff4e55ca4a2935f90b360965a1bc5fefe5656
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63261797"
 ---
 # <a name="publisher-information-subscription-watch-list-merge-publication-sql-server-2005-and-later"></a>게시자 정보, 구독 조사 목록(병합 게시, SQL Server 2005 이상)
@@ -64,17 +64,15 @@ ms.locfileid: "63261797"
   
  정렬 순서는 지정한 구독의 상태가 두 가지 이상일 경우에 표시할 값도 결정합니다. 예를 들어 구독에 오류가 있고 곧 만료될 예정이면 **상태** 열에 **오류**가 표시됩니다.  
   
- 
-  **성능 심각**, **장기 실행 트랜잭션 병합**, **곧 만료됨/만료됨**및 **초기화되지 않은 구독** 상태 값은 경고입니다. 경고를 표시할 때 **상태** 열은 에이전트가 동기화 중인지 여부도 표시합니다. 예를 들어 상태가 **동기화 중, 성능 심각**과 같이 표시될 수 있습니다.  
+ **성능 심각**, **장기 실행 트랜잭션 병합**, **곧 만료됨/만료됨**및 **초기화되지 않은 구독** 상태 값은 경고입니다. 경고를 표시할 때 **상태** 열은 에이전트가 동기화 중인지 여부도 표시합니다. 예를 들어 상태가 **동기화 중, 성능 심각**과 같이 표시될 수 있습니다.  
   
- 
-  **곧 만료됨/만료됨** 및 **장기 실행 트랜잭션 병합** 상태 값은 임계값이 설정된 경우에만 표시할 수 있습니다. 상태 값 **성능 심각** 은 동일한 연결 유형(전화 접속 또는 LAN)으로 구독을 5회 동기화한 후에만 표시할 수 있습니다. 성능 측정 및 임계값 설정에 대한 자세한 내용은 [복제 모니터로 성능 모니터링](monitor/monitor-performance-with-replication-monitor.md) 및 [복제 모니터에 임계값 및 경고 설정](monitor/set-thresholds-and-warnings-in-replication-monitor.md)을 참조하세요.  
+ **곧 만료됨/만료됨** 및 **장기 실행 트랜잭션 병합** 상태 값은 임계값이 설정된 경우에만 표시할 수 있습니다. 상태 값 **성능 심각** 은 동일한 연결 유형(전화 접속 또는 LAN)으로 구독을 5회 동기화한 후에만 표시할 수 있습니다. 성능 측정 및 임계값 설정에 대한 자세한 내용은 [복제 모니터로 성능 모니터링](monitor/monitor-performance-with-replication-monitor.md) 및 [복제 모니터에 임계값 및 경고 설정](monitor/set-thresholds-and-warnings-in-replication-monitor.md)을 참조하세요.  
   
  **구독**  
  각 구독의 이름으로, 형식은*SubscriberName: SubscriptionDatabaseName*입니다.  
   
- **친숙한 이름**  
- 각 구독에 대한 설명입니다. 설명은 **구독 속성** 대화 상자에 입력 되거나 **@description** [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) 또는 [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)의 매개 변수로 지정 됩니다. 설명을 구독의 "이름" 또는 애칭으로 사용하기도 합니다.  
+ **식별 이름**  
+ 각 구독에 대한 설명입니다. 설명은 **구독 속성** 대화 상자에서 입력하거나 **@description** 또는 [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) 의 [@description](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)가 표시됩니다. 설명을 구독의 "이름" 또는 애칭으로 사용하기도 합니다.  
   
  **게시**  
  구독을 동기화할 게시의 이름이며 *PublicationDatabaseName: PublicationName*형식입니다.  
@@ -103,16 +101,15 @@ ms.locfileid: "63261797"
  **마지막 동기화**  
  병합 에이전트가 마지막으로 실행된 시간입니다. 마지막 동기화 중에 변경 내용이 처리될 수도 있고 처리되지 않을 수도 있습니다. 동기화가 진행 중이면 백분율로 진행 상황을 표시합니다.  
   
- **Duration**  
+ **작업**  
  마지막 동기화 중에 병합 에이전트가 실행된 시간입니다. 병합 에이전트가 현재 동기화 중이면 이 시간은 경과된 시간을 나타내고 병합 에이전트가 이전에 동기화된 경우에는 총 시간을 나타냅니다.  
   
  **연결**  
- 구독자와 게시자 간의 연결 유형입니다. 가능한 값은 **LAN**, **전화 접속**및 **인터넷**입니다. 
-  **인터넷** 값은 구독에서 웹 동기화를 사용하는 경우에 표시됩니다.  
+ 구독자와 게시자 간의 연결 유형입니다. 가능한 값은 **LAN**, **전화 접속**및 **인터넷**입니다. **인터넷** 값은 구독에서 웹 동기화를 사용하는 경우에 표시됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [복제 모니터 시작](monitor/start-the-replication-monitor.md)   
- [복제 모니터를 사용하여 정보 보기 및 태스크 수행](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [복제 모니터를 사용 하 여 정보 보기 및 태스크 수행](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [복제 모니터링](monitoring-replication.md)   
  [병합 복제에 대한 웹 동기화](web-synchronization-for-merge-replication.md)  
   

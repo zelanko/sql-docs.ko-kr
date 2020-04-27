@@ -14,14 +14,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5435c2a48417156abd6d4f831bf61c9ba6440fab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482572"
 ---
 # <a name="reserved-words-master-data-services"></a>예약어(Master Data Services)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 모델 개체 또는 멤버를 만들 때 일부 단어를 사용할 수 없습니다. 이러한 단어를 사용하면 오류가 발생할 수 있습니다.  
   
 > [!NOTE]  
@@ -29,36 +28,36 @@ ms.locfileid: "65482572"
   
 -   [모델](#models)  
   
--   [엔터티](#entities)  
+-   [Entities](#entities)  
   
 -   [명시적 계층](#exhierarchies)  
   
 -   [특성](#attributes)  
   
--   [구성원](#members)  
+-   [멤버](#members)  
   
-##  <a name="models"></a>모델인  
+##  <a name="models"></a><a name="models"></a>모델인  
  이름으로 설정 된 모델을 만드는 경우 **이름을** 엔터티 **이름으로 사용할**수 없으므로 **모델과 이름이 같은 엔터티 만들기** 를 선택 하지 마십시오.  
   
-##  <a name="entities"></a>엔터티  
+##  <a name="entities"></a><a name="entities"></a>엔터티  
  엔터티 이름의 경우 **Name** 또는 **Code**를 사용할 수 없습니다.  
   
-##  <a name="exhierarchies"></a>명시적 계층  
+##  <a name="explicit-hierarchies"></a><a name="exhierarchies"></a>명시적 계층  
  명시적 계층 이름의 경우 **Name** 또는 **Code**를 사용할 수 없습니다.  
   
-##  <a name="attributes"></a>특성  
+##  <a name="attributes"></a><a name="attributes"></a>특성  
   
 -   **ID**  
   
--   **코드**  
+-   **Code**  
   
 -   **이름**  
   
 -   **EnterDTM**  
   
--   **사용자 Id**  
+-   **EnterUserID**  
   
--   **사용자 이름**  
+-   **EnterUserName**  
   
 -   **LastChgDTM**  
   
@@ -70,10 +69,10 @@ ms.locfileid: "65482572"
   
 -   **Version_ID**  
   
-##  <a name="members"></a>멤버  
+##  <a name="members"></a><a name="members"></a>멤버  
  멤버의 경우 **코드** 특성 값으로 **MDMMemberStatus** 또는 **ROOT** 를 사용할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Master Data Services 개요](master-data-services-overview-mds.md)  
+ [MDS(Master Data Services) 개요](master-data-services-overview-mds.md)  
   
   

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dacfbba3ea17a46f68745850f2d51b3e016a2e08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483778"
 ---
 # <a name="add-a-user-master-data-services"></a>사용자 추가(Master Data Services)
@@ -26,16 +26,13 @@ ms.locfileid: "65483778"
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
--   
-  **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
+-   **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
 ### <a name="to-add-a-user"></a>사용자를 추가하려면  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **사용자 및 그룹 권한**을 클릭합니다.  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **사용자 및 그룹 권한**을 클릭합니다.  
   
-2.  
-  **사용자** 페이지에서 **사용자 추가**를 클릭합니다.  
+2.  **사용자** 페이지에서 **사용자 추가**를 클릭합니다.  
   
 3.  *도메인*\\*user_name* 또는 *computer \ user_name*와 같이 Active Directory 도메인 이름이 나 서버 컴퓨터 이름으로 앞에 사용자 이름을 입력 합니다.  
   
@@ -45,9 +42,9 @@ ms.locfileid: "65483778"
   
 ## <a name="next-steps"></a>다음 단계  
   
--   [MDS(Master Data Services)&#41;&#40;기능 영역 권한 할당](assign-functional-area-permissions-master-data-services.md)  
+-   [기능 영역 권한 할당&#40;Master Data Services&#41;](assign-functional-area-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [보안 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/security-master-data-services.md)  
+ [보안&#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
   
   

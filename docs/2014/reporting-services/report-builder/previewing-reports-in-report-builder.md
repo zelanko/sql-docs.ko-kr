@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cdb19ba96bc6c324614b7b24ccd77d66213fed3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107791"
 ---
 # <a name="previewing-reports-in-report-builder"></a>보고서 작성기에서 보고서 미리 보기
@@ -77,10 +77,10 @@ ms.locfileid: "66107791"
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 &#40;보고서 작성기 및 SSRS&#41;에 데이터를 추가 합니다.](../report-data/report-datasets-ssrs.md)   
- [보고서 항목 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [차트&#40;보고서 작성기 및 SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)   
- [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [보고서 항목 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](../report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [테이블, 행렬 및 목록 &#40;보고서 작성기 및 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [차트 &#40;보고서 작성기 및 SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)   
+ [테이블, 행렬 및 목록 &#40;보고서 작성기 및 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [보고서 저장&#40;보고서 작성기&#41;](saving-reports-report-builder.md)  
   
   

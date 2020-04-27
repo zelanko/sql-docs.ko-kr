@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 54a899036513854d8a091165646b6fb4a955c962
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480822"
 ---
 # <a name="create-term-based-relations"></a>용어 기반 관계 만들기
@@ -50,65 +50,56 @@ ms.locfileid: "65480822"
   
  정리 프로세스 중에 수집된 데이터 품질 기술 자료를 도메인으로 가져올 경우 TBR에 의해 변경된 값은 올바른 값으로 가져오게 됩니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 조건  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
  용어 기반 관계를 만들려면 도메인 관리 작업에서 도메인을 열어 두어야 합니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  용어 기반 관계를 만들려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="Create"></a>용어 기반 관계 만들기  
+##  <a name="create-term-based-relations"></a><a name="Create"></a>용어 기반 관계 만들기  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 응용 프로그램을 실행](../../2014/data-quality-services/run-the-data-quality-client-application.md)합니다.  
   
-2.  
-  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 기술 자료를 열거나 만듭니다. 
-  **도메인 관리** 를 작업으로 선택한 다음 **열기** 또는 **만들기**를 클릭합니다. 자세한 내용은 [기술 자료 만들기](../../2014/data-quality-services/create-a-knowledge-base.md) 또는 [기술 자료 열기](../../2014/data-quality-services/open-a-knowledge-base.md)를 참조하세요.  
+2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 기술 자료를 열거나 만듭니다. **도메인 관리** 를 작업으로 선택한 다음 **열기** 또는 **만들기**를 클릭합니다. 자세한 내용은 [기술 자료 만들기](../../2014/data-quality-services/create-a-knowledge-base.md) 또는 [기술 자료 열기](../../2014/data-quality-services/open-a-knowledge-base.md)를 참조하세요.  
   
     > [!NOTE]  
     >  도메인 관리는 별도의 도메인 관리 작업을 위한 5개 탭이 포함된 Data Quality Services 클라이언트의 페이지에서 수행됩니다. 도메인 관리는 마법사 기반 프로세스가 아닙니다. 모든 관리 작업은 별도로 수행할 수 있습니다.  
   
-3.  
-  **도메인 관리** 페이지의 **도메인 목록** 에서 도메인 규칙을 만들 도메인을 선택하거나 새 도메인을 만듭니다. 새 도메인을 만들어야 하는 경우 [도메인 만들기](../../2014/data-quality-services/create-a-domain.md)를 참조하세요.  
+3.  **도메인 관리** 페이지의 **도메인 목록** 에서 도메인 규칙을 만들 도메인을 선택하거나 새 도메인을 만듭니다. 새 도메인을 만들어야 하는 경우 [도메인 만들기](../../2014/data-quality-services/create-a-domain.md)를 참조하세요.  
   
-4.  
-  **용어 기반 관계** 탭을 클릭합니다.  
+4.  **용어 기반 관계** 탭을 클릭합니다.  
   
 5.  다음과 같이 용어 기반 관계를 만듭니다.  
   
-    1.  
-  **새 관계 추가** 를 클릭하여 관계 테이블에 행을 추가합니다.  
+    1.  **새 관계 추가** 를 클릭하여 관계 테이블에 행을 추가합니다.  
   
     2.  추가된 행의 **값** 열에 선택된 도메인의 값에서 발생할 때마다 변경할 용어를 입력합니다.  
   
         > [!NOTE]  
         >  도메인에서 해당 용어가 전체 값으로 존재하거나 수정 값으로 이미 존재하는 경우 오류가 발생합니다.  
   
-    3.  
-  **다음으로 수정** 열에 **값** 열의 용어를 어떤 용어로 변경할지 입력합니다.  
+    3.  **다음으로 수정** 열에 **값** 열의 용어를 어떤 용어로 변경할지 입력합니다.  
   
     4.  또 다른 용어 기반 관계를 추가하려면 **새 관계 추가** 를 다시 클릭합니다.  
   
     5.  선택한 하나 이상의 행을 관계 테이블에서 삭제하려면 **선택한 관계 삭제** 를 클릭합니다. Ctrl 단추를 누르고 선택되지 않은 행을 클릭하면 여러 행을 선택할 수 있습니다.  
   
-    6.  
-  **찾기** 입력란에 하나 이상의 자릿수를 입력하여 관계 테이블의 값을 찾습니다. 문자열의 일치 항목이 강조 표시됩니다. 위쪽, 아래쪽 화살표를 사용하여 테이블의 여러 문자열 인스턴스로 이동할 수 있습니다.  
+    6.  **찾기** 입력란에 하나 이상의 자릿수를 입력하여 관계 테이블의 값을 찾습니다. 문자열의 일치 항목이 강조 표시됩니다. 위쪽, 아래쪽 화살표를 사용하여 테이블의 여러 문자열 인스턴스로 이동할 수 있습니다.  
   
-    7.  **맞춤법 검사기**: 값 또는 다음 **으로 수정** **열 값에** 빨간색 물결선 밑줄이 있는 경우 맞춤법 검사기에서 값에 대 한 수정 사항을 제안 하는 것입니다. 밑줄이 있는 값을 마우스 오른쪽 단추로 클릭한 후 맞춤법 검사기에서 제안하는 값 중 하나를 선택합니다. 또는 바로 가기 메뉴에서 **추가** 를 클릭하여 원래 값으로 진행할 수도 있습니다. 자세한 내용은 [DQS 맞춤법 검사기 사용](../../2014/data-quality-services/use-the-dqs-speller.md) 및 [도메인 속성 설정](../../2014/data-quality-services/set-domain-properties.md)를 참조하세요.  
+    7.  **맞춤법 검사기**: **값** 또는 **다음으로 수정** 열 값에 빨간색 물결선 밑줄이 있는 경우 맞춤법 검사기에서 값의 수정 사항을 제안하는 것입니다. 밑줄이 있는 값을 마우스 오른쪽 단추로 클릭한 후 맞춤법 검사기에서 제안하는 값 중 하나를 선택합니다. 또는 바로 가기 메뉴에서 **추가** 를 클릭하여 원래 값으로 진행할 수도 있습니다. 자세한 내용은 [DQS 맞춤법 검사기 사용](../../2014/data-quality-services/use-the-dqs-speller.md) 및 [도메인 속성 설정](../../2014/data-quality-services/set-domain-properties.md)를 참조하세요.  
   
         > [!NOTE]  
         >  맞춤법 검사기를 사용하려면 **도메인 속성** 페이지에서 맞춤법 검사기를 설정하면 됩니다. **도메인 속성** 페이지에서 맞춤법 검사기가 해제된 경우 **용어 기반 관계** 페이지에서 **맞춤법 검사기를 설정/해제합니다** 아이콘을 클릭하여 설정할 수 있습니다.  
   
-6.  
-  **변경 사항 적용** 을 클릭하여 도메인에 용어 기반 관계를 적용합니다.  
+6.  **변경 사항 적용** 을 클릭하여 도메인에 용어 기반 관계를 적용합니다.  
   
-7.  
-  **마침** 을 클릭하여 [도메인 관리 작업 종료](../../2014/data-quality-services/end-the-domain-management-activity.md)에 설명된 대로 도메인 관리 작업을 완료합니다.  
+7.  **마침** 을 클릭하여 [도메인 관리 작업 종료](../../2014/data-quality-services/end-the-domain-management-activity.md)에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
-##  <a name="FollowUp"></a>후속 작업: 용어 기반 관계를 만든 후  
+##  <a name="follow-up-after-creating-term-based-relations"></a><a name="FollowUp"></a>후속 작업: 용어 기반 관계를 만든 후  
  용어 기반 관계를 만든 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../../2014/data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../../2014/data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../../2014/data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
   

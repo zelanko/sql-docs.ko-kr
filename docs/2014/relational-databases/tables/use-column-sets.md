@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63298632"
 ---
 # <a name="use-column-sets"></a>열 집합 사용
@@ -25,7 +25,7 @@ ms.locfileid: "63298632"
   
  테이블의 열 수가 많고 이러한 열을 개별적으로 작업하는 것이 복잡한 경우 열 집합을 사용하는 것이 좋습니다. 애플리케이션에서 열이 많은 테이블의 열 집합을 사용하여 데이터를 선택하고 삽입하는 경우 성능이 약간 향상될 수도 있습니다. 그러나 테이블의 열에 많은 인덱스가 정의되어 있는 경우 열 집합의 성능이 저하될 수 있습니다. 왜냐하면 실행 계획에 필요한 메모리 양이 늘어나기 때문입니다.  
   
- 열 집합을 정의하려면 *CREATE TABLE* 또는 [ALTER TABLE](/sql/t-sql/statements/create-table-transact-sql) 문에 [<column_set_name>](/sql/t-sql/statements/alter-table-transact-sql) FOR ALL_SPARSE_COLUMNS 키워드를 사용합니다.  
+ 열 집합을 정의하려면 [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) 또는 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) 문에 *<column_set_name>* FOR ALL_SPARSE_COLUMNS 키워드를 사용합니다.  
   
 ## <a name="guidelines-for-using-column-sets"></a>열 집합 사용 지침  
  열 집합을 사용하는 경우 다음 지침을 고려합니다.  
@@ -107,8 +107,7 @@ GO
  이 예에서는 열 `i`에 값이 지정되지 않았지만 값 `0` 이 삽입되었습니다.  
   
 ## <a name="using-the-sql_variant-data-type"></a>sql_variant 데이터 형식 사용  
- 
-  `sql_variant` 데이터 형식은 `int`, `char` 및 `date`와 같은 여러 다른 데이터 형식을 저장할 수 있습니다. 열 집합은 `sql_variant` 값에 연결된 소수 자릿수, 전체 자릿수 및 로캘 정보와 같은 데이터 형식 정보를 생성된 XML 열에서 특성으로 출력합니다. 사용자 지정하여 생성된 XML 문에 있는 이러한 특성을 열 집합의 삽입 또는 업데이트 작업에 대한 입력으로 제공하려는 경우에는 이 특성 중 일부가 필요하여 이러한 일부 특성에 기본값이 할당됩니다. 다음 표에서는 데이터 형식과 값이 제공되지 않은 경우 서버에서 생성하는 기본값을 나열합니다.  
+ `sql_variant` 데이터 형식은 `int`, `char` 및 `date`와 같은 여러 다른 데이터 형식을 저장할 수 있습니다. 열 집합은 `sql_variant` 값에 연결된 소수 자릿수, 전체 자릿수 및 로캘 정보와 같은 데이터 형식 정보를 생성된 XML 열에서 특성으로 출력합니다. 사용자 지정하여 생성된 XML 문에 있는 이러한 특성을 열 집합의 삽입 또는 업데이트 작업에 대한 입력으로 제공하려는 경우에는 이 특성 중 일부가 필요하여 이러한 일부 특성에 기본값이 할당됩니다. 다음 표에서는 데이터 형식과 값이 제공되지 않은 경우 서버에서 생성하는 기본값을 나열합니다.  
   
 |데이터 형식|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|최대 길이|자릿수|확장|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
@@ -122,8 +121,7 @@ GO
 |`money`, `smallmoney`|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|  
 |`time`|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|7|  
   
- 
-  \*  localeID -1은 기본 로캘을 의미합니다. 영어 로캘은 1033입니다.  
+ \*  localeID -1은 기본 로캘을 의미합니다. 영어 로캘은 1033입니다.  
   
  **  해당 사항 없음 = 열 집합에서 선택 작업을 수행하는 동안 이 특성에 대해 값이 출력되지 않습니다. 삽입 또는 업데이트 작업에서 열 집합에 대해 제공된 XML 표현의 호출자에 의해 이 특성에 대한 값이 지정된 경우 오류를 생성합니다.  
   

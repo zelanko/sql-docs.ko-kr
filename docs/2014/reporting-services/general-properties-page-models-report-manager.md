@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 815b8594977321ea8223c16fed166e110008a8b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109106"
 ---
 # <a name="general-properties-page-models-report-manager"></a>일반 속성 페이지, 모델(보고서 관리자)
@@ -43,8 +43,7 @@ ms.locfileid: "66109106"
  모델에 대한 설명을 입력합니다. 이 설명은 해당 모델 액세스 권한이 있는 사용자의 내용 페이지에 표시됩니다.  
   
  **목록 뷰에서 숨기기**  
- 폴더의 뷰 모드가 목록 뷰인 경우 항목을 숨기려면 이 확인란을 선택합니다. 목록 뷰는 보고서 관리자에서 지원되는 폴더 내용을 보기 위한 모드입니다. 
-  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 에서 이 옵션을 설정하여 해당 항목이 보고서 관리자에 표시되는 방법을 정의할 수 있습니다. 보고서 관리자의 보기 모드에 대 한 자세한 내용은 [내용 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)를 참조 하세요.  
+ 폴더의 뷰 모드가 목록 뷰인 경우 항목을 숨기려면 이 확인란을 선택합니다. 목록 뷰는 보고서 관리자에서 지원되는 폴더 내용을 보기 위한 모드입니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 에서 이 옵션을 설정하여 해당 항목이 보고서 관리자에 표시되는 방법을 정의할 수 있습니다. 보고서 관리자의 보기 모드에 대 한 자세한 내용은 [내용 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)를 참조 하세요.  
   
  **적용**  
  클릭하여 변경 내용을 저장합니다.  
@@ -52,10 +51,10 @@ ms.locfileid: "66109106"
  **Delete**  
  클릭하여 보고서 서버 데이터베이스에서 모델을 제거합니다. 모델을 삭제해도 연결 정보를 제공하는 종속 공유 데이터 원본과 해당 모델을 데이터 원본으로 사용하는 보고서는 삭제되지 않습니다. 단, 모델이 삭제된 후 해당 모델을 사용하는 보고서는 더 이상 실행되지 않습니다.  
   
- **이동**  
+ **옮기고**  
  클릭하여 보고서 서버 폴더 계층 구조 내의 다른 위치로 모델을 옮깁니다. 이 단추를 클릭하면 폴더를 검색하여 새 폴더 위치를 찾을 수 있는 항목 이동 페이지가 열립니다. 자세한 내용은 [항목 이동 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/move-items-page-report-manager.md)를 참조 하세요.  
   
- **Save**  
+ **저장**  
  모델 정의의 읽기 전용 복사본을 저장하려면 클릭합니다. 컴퓨터에 정의된 파일 연결에 따라 파일이 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 또는 다른 애플리케이션에서 열립니다. 대부분의 경우 모델은 XML 파일로 열립니다.  
   
  사용자가 여는 복사본은 보고서 서버에 초기에 게시된 원래 모델 정의와 동일합니다. 모델이 게시된 후 모델에 설정된 모든 속성(예: 데이터 원본 속성)은 여는 파일에 반영되지 않습니다.  

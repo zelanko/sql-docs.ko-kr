@@ -22,16 +22,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5ed0a510a6b74e3c33e9cb7ed9d789ad8242a499
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63270222"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>변경 내용 추적 사용(SQL Server)
   변경 내용 추적을 사용하는 애플리케이션은 추적된 변경 내용을 가져와서 다른 데이터 저장소에 적용하고 원본 데이터베이스를 업데이트할 수 있어야 합니다. 이 항목에서는 이러한 태스크를 수행하는 방법과 장애 조치(Failover)가 발생하여 백업에서 데이터베이스를 복원해야 할 때 변경 내용 추적이 수행하는 역할에 대해 설명합니다.  
   
-##  <a name="Obtain"></a> 변경 내용 추적 함수를 사용하여 변경 내용 가져오기  
+##  <a name="obtain-changes-by-using-change-tracking-functions"></a><a name="Obtain"></a> 변경 내용 추적 함수를 사용하여 변경 내용 가져오기  
  변경 내용 추적 함수를 사용하여 변경 내용과 데이터베이스에 수행된 변경에 대한 정보를 가져오는 방법에 대해 설명합니다.  
   
 ### <a name="about-the-change-tracking-functions"></a>변경 내용 추적 함수 정보  
@@ -285,7 +285,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  변경 내용 추적 또는 사용자 지정 추적 메커니즘을 사용할 때 애플리케이션에 적합한 접근 방식을 선택하려면 상당한 분석 작업이 필요합니다. 따라서 스냅샷 격리를 사용하는 것이 훨씬 간단합니다.  
   
-##  <a name="Handles"></a> 변경 내용 추적에서 데이터베이스에 대한 변경 내용을 처리하는 방법  
+##  <a name="how-change-tracking-handles-changes-to-a-database"></a><a name="Handles"></a>변경 내용 추적에서 데이터베이스의 변경 내용을 처리 하는 방법  
  변경 내용 추적을 사용하는 일부 애플리케이션에서는 다른 데이터 저장소와 양방향 동기화를 수행합니다. 즉, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 적용된 변경 내용은 다른 데이터 저장소에서 업데이트되고 다른 저장소에서 적용된 변경 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 업데이트됩니다.  
   
  애플리케이션에서 다른 데이터 저장소의 변경 내용으로 로컬 데이터베이스를 업데이트하는 경우에는 다음 작업을 수행해야 합니다.  
@@ -404,7 +404,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  스냅샷 트랜잭션 내에서 업데이트되는 행이 스냅샷 트랜잭션이 시작된 후 다른 트랜잭션에서 업데이트되었을 수도 있습니다. 이런 경우에 스냅샷 격리 업데이트 충돌이 발생하고 해당 트랜잭션이 종료됩니다. 이러한 경우가 발생하면 업데이트를 다시 시도하세요. 그러면 변경 내용 추적 충돌이 검색되고 행이 변경되지 않습니다.  
   
-##  <a name="DataRestore"></a> 변경 내용 추적 및 데이터 복원  
+##  <a name="change-tracking-and-data-restore"></a><a name="DataRestore"></a>변경 내용 추적 및 데이터 복원  
  동기화가 필요한 애플리케이션에서는 변경 내용 추적이 설정된 데이터베이스를 이전 버전의 데이터로 되돌리는 경우를 고려해야 합니다. 이런 경우는 백업에서 데이터베이스가 복원된 후, 비동기 데이터베이스 미러링에 장애 조치가 있는 경우 또는 로그 전달을 사용할 때 실패한 경우에 발생할 수 있습니다. 다음 시나리오에서는 이러한 문제를 보여 줍니다.  
   
 1.  테이블 T1는 변경 내용이 추적되고 테이블의 유효한 최소 버전 50입니다.  
@@ -432,13 +432,13 @@ COMMIT TRAN
 -   클라이언트가 변경 내용에 대해 쿼리할 때 서버의 각 클라이언트에 대한 마지막 동기화 버전을 기록합니다. 데이터에 문제가 있으면 마지막으로 동기화된 버전 번호가 일치하지 않습니다. 이것은 다시 동기화해야 한다는 것을 나타냅니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 변경 내용 추적&#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)   
- [변경 내용 추적 정보&#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)   
- [변경 내용 추적 관리&#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
- [변경 내용 추적 설정 및 해제&#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
- [CHANGETABLE&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/changetable-transact-sql)   
- [CHANGE_TRACKING_MIN_VALID_VERSION&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-tracking-min-valid-version-transact-sql)   
- [CHANGE_TRACKING_CURRENT_VERSION&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-tracking-current-version-transact-sql)   
+ [SQL Server&#41;&#40;데이터 변경 내용 추적](../track-changes/track-data-changes-sql-server.md)   
+ [변경 내용 추적 &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)   
+ [변경 내용 추적 &#40;SQL Server 관리&#41;](../track-changes/manage-change-tracking-sql-server.md)   
+ [변경 내용 추적 &#40;SQL Server 사용 및 사용 안 함&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
+ [CHANGETABLE &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/changetable-transact-sql)   
+ [Transact-sql&#41;CHANGE_TRACKING_MIN_VALID_VERSION &#40;](/sql/relational-databases/system-functions/change-tracking-min-valid-version-transact-sql)   
+ [Transact-sql&#41;CHANGE_TRACKING_CURRENT_VERSION &#40;](/sql/relational-databases/system-functions/change-tracking-current-version-transact-sql)   
  [WITH CHANGE_TRACKING_CONTEXT&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/with-change-tracking-context-transact-sql)  
   
   

@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 62fd4cd78beaeff479fc7cc9ec3abbd79e227e04
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63273544"
 ---
 # <a name="topologies-for-web-synchronization"></a>Topologies for Web Synchronization
-  다양 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 한 웹 동기화 복제 토폴로지에서 선택할 수 있습니다. 웹 동기화를 구성하는 일반적인 방법은 다음과 같습니다.  
+  다양한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 웹 동기화 복제 토폴로지를 선택할 수 있습니다. 웹 동기화를 구성하는 일반적인 방법은 다음과 같습니다.  
   
 -   단일 서버  
   
@@ -49,8 +49,7 @@ ms.locfileid: "63273544"
   
  ![여러 대의 IIS 서버를 사용한 웹 동기화](media/web-sync04.gif "여러 대의 IIS 서버를 사용한 웹 동기화")  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 컴퓨터에서 로드 균형 조정이 필요한 경우 여러 컴퓨터에 재게시 계층을 만들 수 있습니다. 최상위 게시자에서 데이터를 구독자에 게시하면 구독자에서는 데이터를 다시 게시하고 최상위 게시자에서는 구독자의 로드 균형 조정 요청을 게시합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 컴퓨터에서 로드 균형 조정이 필요한 경우 여러 컴퓨터에 재게시 계층을 만들 수 있습니다. 최상위 게시자에서 데이터를 구독자에 게시하면 구독자에서는 데이터를 다시 게시하고 최상위 게시자에서는 구독자의 로드 균형 조정 요청을 게시합니다.  
   
 > [!NOTE]  
 >  구독자는 특정 게시자하고만 동기화될 수 있습니다. 예를 들어 재게시자 A의 구독자는 A를 사용할 수 없는 경우 재게시자 B와도 동기화될 수 없습니다.  
@@ -58,7 +57,7 @@ ms.locfileid: "63273544"
  ![다시 게시를 사용한 웹 동기화](media/web-sync05.gif "다시 게시를 사용한 웹 동기화")  
   
 ## <a name="see-also"></a>참고 항목  
- [웹 동기화 구성](configure-web-synchronization.md)   
+ [Configure Web Synchronization](configure-web-synchronization.md)   
  [병합 복제에 대한 웹 동기화](web-synchronization-for-merge-replication.md)  
   
   

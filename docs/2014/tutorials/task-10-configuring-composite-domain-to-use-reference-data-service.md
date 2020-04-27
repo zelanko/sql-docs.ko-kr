@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 525e0286d8d82f501981c9e936caca581886b9b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481234"
 ---
 # <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>태스크 10: 참조 데이터 서비스를 사용하도록 복합 도메인 구성
@@ -46,7 +46,7 @@ ms.locfileid: "65481234"
   
      ![도메인에 RDS 스키마 항목 매핑](../../2014/tutorials/media/et-configuringcdtouserds-05.jpg "도메인에 RDS 스키마 항목 매핑")  
   
-9. **확인** 을 클릭하여 대화 상자를 닫습니다.  
+9. **확인**을 클릭하여 대화 상자를 닫습니다.  
   
 ## <a name="next-step"></a>다음 단계  
  [태스크 11: 기술 자료 게시](../../2014/tutorials/task-11-publishing-the-knowledge-base.md)  

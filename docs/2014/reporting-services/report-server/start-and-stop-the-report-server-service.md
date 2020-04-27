@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bef23ec8291be1a1eeab8796a00e45487b82f60c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103173"
 ---
 # <a name="start-and-stop-the-report-server-service"></a>보고서 서버 서비스 시작 및 중지
@@ -47,8 +47,7 @@ ms.locfileid: "66103173"
   
 ### <a name="to-start-or-stop-the-service-using-sql-server-configuration-manager"></a>SQL Server 구성 관리자를 사용하여 서비스를 시작하거나 중지하려면  
   
-1.  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 시작합니다.  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 시작합니다.  
   
 2.  SQL Server 서비스를 선택하고 **SQL Server Reporting Services**를 마우스 오른쪽 단추로 클릭한 다음 **중지** 또는 **다시 시작**을 클릭합니다.  
   

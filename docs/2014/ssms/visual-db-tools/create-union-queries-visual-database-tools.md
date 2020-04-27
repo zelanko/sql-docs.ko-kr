@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 34e06960274c7e16ef4f6efc31f1b7ca55a7d48c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63270587"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>통합 쿼리 만들기(Visual Database Tools)
@@ -45,8 +45,7 @@ ms.locfileid: "63270587"
     FROM dbo.Gloves;  
     ```  
   
-3.  
-  **쿼리 디자이너** 메뉴에서 **SQL 실행** 을 클릭하여 쿼리를 실행합니다.  
+3.  **쿼리 디자이너** 메뉴에서 **SQL 실행** 을 클릭하여 쿼리를 실행합니다.  
   
      쿼리 디자이너에서 통합 쿼리의 서식이 지정됩니다.  
   
@@ -54,6 +53,6 @@ ms.locfileid: "63270587"
  [Visual Database Tools를 &#40;지원 되는 쿼리 유형&#41;](visual-database-tools.md)   
  [쿼리 및 뷰 디자인 방법 도움말 항목 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [Visual Database Tools를 &#40;쿼리를 사용 하 여 기본 작업을 수행&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
- [UNION &#40;Transact-sql&#41;](/sql/t-sql/language-elements/set-operators-union-transact-sql)  
+ [UNION&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/set-operators-union-transact-sql)  
   
   

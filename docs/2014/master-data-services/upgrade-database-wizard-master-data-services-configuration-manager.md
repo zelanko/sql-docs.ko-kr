@@ -11,14 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 977c96b625ecb62f9f02d19e71df57cd17d8660f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478490"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>데이터베이스 업그레이드 마법사(Master Data Services 구성 관리자)
-  
   **데이터베이스 업그레이드 마법사** 를 사용하여 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 업그레이드합니다.  
   
 ## <a name="action"></a>작업  
@@ -27,7 +26,7 @@ ms.locfileid: "65478490"
 ## <a name="upgrade-review"></a>업그레이드 검토  
  이 페이지에 지정된 정보를 검토합니다. 정보가 정확하면 **다음** 을 클릭하여 지정된 데이터베이스를 업그레이드합니다.  
   
-|컨트롤 이름|Description|  
+|컨트롤 이름|설명|  
 |------------------|-----------------|  
 |**SQL Server 인스턴스**|현재 선택한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스의 이름입니다.|  
 |**MDS(Master Data Services) 데이터베이스**|현재 선택한 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 이름입니다.|  
@@ -38,6 +37,6 @@ ms.locfileid: "65478490"
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 구성 페이지 &#40;Master Data Services 구성 관리자&#41;](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
  [MDS(Master Data Services)에 대 한 데이터베이스 및 웹 사이트 설정](set-up-the-database-and-website-for-master-data-services.md)   
- [MDS(Master Data Services) 업그레이드](../database-engine/install-windows/upgrade-master-data-services.md)  
+ [Master Data Services 업그레이드](../database-engine/install-windows/upgrade-master-data-services.md)  
   
   

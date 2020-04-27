@@ -18,10 +18,10 @@ ms.assetid: 4f36a325-0e3c-46c4-aeeb-416346cce0bc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f8822b0e7c56fe109a251365050f5aed9cdef178
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907365"
 ---
 # <a name="msdynamicsnapshotjobs-transact-sql"></a>MSdynamicsnapshotjobs(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67907365"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**a-id**|**int**|필터링된 데이터 스냅샷 작업의 ID입니다.|  
+|**id**|**int**|필터링된 데이터 스냅샷 작업의 ID입니다.|  
 |**name**|**sysname**|필터링된 데이터 스냅샷 작업의 이름입니다.|  
 |**pubid**|**uniqueidentifier**|이 게시의 고유한 ID입니다.|  
 |**job_id**|**uniqueidentifier**|배포자에서 SQL Server 에이전트 작업의 ID입니다.|  

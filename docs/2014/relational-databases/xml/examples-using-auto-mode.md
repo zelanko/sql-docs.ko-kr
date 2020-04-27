@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63287806"
 ---
 # <a name="examples-using-auto-mode"></a>예제: AUTO 모드 사용
@@ -167,8 +167,7 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
  `...`  
   
 ## <a name="example-returning-binary-data"></a>예제: 이진 데이터 반환  
- 이 쿼리는 `ProductPhoto` 테이블에서 제품 사진을 반환합니다. 
-  `ThumbNailPhoto`는 `varbinary(max)` 테이블의 `ProductPhoto` 열입니다. 기본적으로 `AUTO` 모드는 이진 데이터에 대해 쿼리가 실행되는 데이터베이스의 가상 루트에 대한 상대 URL인 참조를 반환합니다. 이미지를 식별하기 위해서는 `ProductPhotoID` 키 특성을 지정해야 합니다. 이 예에서 설명된 것과 같이 이미지 참조를 검색할 때 테이블의 기본 키도 행을 고유하게 식별할 수 있도록 `SELECT` 절에서 지정되어야 합니다.  
+ 이 쿼리는 `ProductPhoto` 테이블에서 제품 사진을 반환합니다. `ThumbNailPhoto`는 `ProductPhoto` 테이블의 `varbinary(max)` 열입니다. 기본적으로 `AUTO` 모드는 이진 데이터에 대해 쿼리가 실행되는 데이터베이스의 가상 루트에 대한 상대 URL인 참조를 반환합니다. 이미지를 식별하기 위해서는 `ProductPhotoID` 키 특성을 지정해야 합니다. 이 예에서 설명된 것과 같이 이미지 참조를 검색할 때 테이블의 기본 키도 행을 고유하게 식별할 수 있도록 `SELECT` 절에서 지정되어야 합니다.  
   
 ```  
 SELECT ProductPhotoID, ThumbNailPhoto  

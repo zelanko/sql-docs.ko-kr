@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9fb4893304a17be264a0d5bdcb8add2732c7c271
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103278"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 구성 파일
@@ -75,15 +75,14 @@ ms.locfileid: "66103278"
 |-------------|-----------------|  
 |**RStrace**|오류 및 추적에 사용되는 네임스페이스를 지정합니다.|  
 |**DefaultTraceSwitch**|ReportServerService 추적 로그에 보고되는 정보의 수준을 지정합니다. 각 수준에는 낮은 번호가 매겨진 모든 수준별로 보고된 정보가 들어 있습니다. 추적을 설정하는 것이 좋습니다. 유효한 값은 다음과 같습니다.<br /><br /> 0= 추적 해제<br /><br /> 1= 예외 및 다시 시작<br /><br /> 2= 예외, 다시 시작, 경고<br /><br /> 3= 예외, 다시 시작, 경고, 상태 메시지(기본값)<br /><br /> 4= 세부 정보 표시 모드|  
-|**이름도**|로그 파일 이름의 첫 번째 부분을 지정합니다. 
-  `Prefix`에 지정된 값으로 이름의 나머지 부분을 완성합니다. 기본적으로 이름은 ReportServerService_가 됩니다.|  
+|**FileName**|로그 파일 이름의 첫 번째 부분을 지정합니다. `Prefix`에 지정된 값으로 이름의 나머지 부분을 완성합니다. 기본적으로 이름은 ReportServerService_가 됩니다.|  
 |**FileSizeLimitMb**|추적 로그 크기에 대한 상한값을 지정합니다. 파일은 메가바이트(MB) 단위로 측정됩니다. 유효한 값은 0에서 최대 정수 사이입니다. 기본값은 32입니다.|  
 |**KeepFilesForDays**|추적 로그 파일을 몇 일 후에 삭제할지 지정합니다. 유효한 값은 0에서 최대 정수 사이입니다. 기본값은 14입니다.|  
 |`Prefix`|로그 인스턴스를 구분하는 생성 값을 지정합니다. 기본적으로 타임스탬프 값이 추적 로그 파일 이름에 추가됩니다. 이 값은 " tid, time"으로 설정됩니다. 이 설정은 수정하지 마세요.|  
-|**Tracelistenercollection**|추적 로그 내용을 출력할 대상을 지정합니다. 대상이 여러 개일 경우 쉼표로 구분하여 지정할 수 있습니다. 유효한 값은 다음과 같습니다.<br /><br /> DebugWindow(기본값)<br /><br /> File(기본값)<br /><br /> StdOut|  
+|**TraceListeners**|추적 로그 내용을 출력할 대상을 지정합니다. 대상이 여러 개일 경우 쉼표로 구분하여 지정할 수 있습니다. 유효한 값은 다음과 같습니다.<br /><br /> DebugWindow(기본값)<br /><br /> File(기본값)<br /><br /> StdOut|  
 |**TraceFileMode**|추적 로그에 24시간 동안의 데이터를 포함할지 여부를 지정합니다. 일별로 각 구성 요소마다 고유한 추적 로그가 하나씩 있어야 합니다. 이 값은 "Unique(기본값)"로 설정됩니다. 이 값은 수정하지 마세요.|  
 |**구성 요소**|추적 로그를 생성할 구성 요소를 지정합니다. 기본값은 `all`입니다. 이 설정에 대한 기타 유효한 값에는 내부 구성 요소의 이름이 포함됩니다. 이 값은 수정하지 마세요.|  
-|**런타임에서**|이전 버전과의 호환성을 지원하는 구성 설정을 지정합니다. 런타임 설정은 이전 버전의 Microsoft.ReportingServices.Interfaces를 대상으로 하는 요청을 새 버전으로 리디렉션하는 데 사용됩니다.<br /><br /> 이 섹션의 모든 구성 설정은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 제품 설명서에 설명되어 있습니다. 자세한 내용을 보려면 MSDN 웹 사이트 또는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 설명서에서 "Runtime Schema Settings"를 검색하십시오.|  
+|**런타임**|이전 버전과의 호환성을 지원하는 구성 설정을 지정합니다. 런타임 설정은 이전 버전의 Microsoft.ReportingServices.Interfaces를 대상으로 하는 요청을 새 버전으로 리디렉션하는 데 사용됩니다.<br /><br /> 이 섹션의 모든 구성 설정은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 제품 설명서에 설명되어 있습니다. 자세한 내용을 보려면 MSDN 웹 사이트 또는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 설명서에서 "Runtime Schema Settings"를 검색하십시오.|  
   
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services 구성 파일](reporting-services-configuration-files.md)   

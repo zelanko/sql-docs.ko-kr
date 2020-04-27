@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 209659609c2cf19196cc35050fb32e39e079d1c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65488939"
 ---
-# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>태스크 7: 데이터 흐름에 DQS 정리 변환 추가
+# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>태스크 7: Data Flow에 DQS 정리 변환 추가
   이 작업에서는 데이터 흐름에 DQS 정리 변환을 추가하여 DQS를 사용해서 입력 공급자 데이터를 정리합니다. 변환에 대 한 자세한 내용은 **[Dqs 정리 변환](https://msdn.microsoft.com/library/ee677619.aspx)** 을 참조 하세요.  
   
 1.  **데이터 흐름** 탭에서 **DQS 정리** 를 마우스 오른쪽 단추로 클릭 하 고 **이름 바꾸기**를 클릭 합니다. **정리 공급자 데이터**를 입력 하 고 **enter**키를 누릅니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "65488939"
   
 6.  **연결 테스트** 를 클릭 하 여 DQS 서버에 대 한 연결을 테스트 합니다.  
   
-7.  **확인** 을 클릭하여 대화 상자를 닫습니다.  
+7.  **확인**을 클릭하여 대화 상자를 닫습니다.  
   
 8.  **데이터 품질 기술 자료**에 대해 **Suppliers** 를 선택 합니다.  
   
@@ -61,6 +61,6 @@ ms.locfileid: "65488939"
 12. **확인** 을 클릭 하 여 **DQS 정리 변환 편집기** 대화 상자를 닫습니다.  
   
 ## <a name="next-step"></a>다음 단계  
- [태스크 8: 조건부 분할 변환을 추가하여 정리 출력 분할](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
+ [태스크 8: 분할 정리 출력에 조건부 분할 변환 추가](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
   
   

@@ -11,17 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d2b4fbb59c21c66c7b6157a1ed06ce5bf040858a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479373"
 ---
 # <a name="import-statuses-master-data-services"></a>가져오기 상태(Master Data Services)
-  
   **준비 일괄 처리** 페이지의 **통합 관리** 기능 영역에서는 다음 상태가 표시될 수 있습니다.  
   
-|상태|Description|Status_ID|  
+|상태|설명|Status_ID|  
 |------------|-----------------|----------------|  
 |실행을 위해 대기|일괄 처리가 시작되지 않았습니다.|1|  
 |실행 중|일괄 처리가 진행 중입니다.|2|  

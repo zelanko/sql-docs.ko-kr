@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9106ff624c9a8e50bd292166690fc220eaea527e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108572"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Reporting Services 설치 확인
@@ -34,7 +34,7 @@ ms.locfileid: "66108572"
   
 -   [기본 모드 설치 확인](#bkmk_nativemode)  
   
-##  <a name="bkmk_sharepointmode"></a> SharePoint 모드 설치 확인  
+##  <a name="verify-sharepoint-mode-installation"></a><a name="bkmk_sharepointmode"></a> SharePoint 모드 설치 확인  
   
 #### <a name="to-verify-the-reporting-services-service"></a>Reporting Services 서비스를 확인하려면  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66108572"
   
 1.  SharePoint 문서 라이브러리에서 텍스트 상자(예: 제목)만 포함된 기본 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 만듭니다. 이 보고서에는 어떠한 데이터 원본 또는 데이터 세트도 포함되지 않습니다. 이 보고서의 목적은 보고서 작성기를 열고 기본 보고서를 미리 볼 수 있는지 확인하기 위한 것입니다.  
   
-2.  보고서를 문서 라이브러리에 저장하고 라이브러리에서 보고서를 실행합니다. 보고서 작성기로 보고서를 만드는 방법에 대한 자세한 내용은 [보고서 작성기 시작(보고서 작성기)](https://technet.microsoft.com/library/ms159221.aspx)을 참조하세요.  
+2.  보고서를 문서 라이브러리에 저장하고 라이브러리에서 보고서를 실행합니다. 보고서 작성기로 보고서를 만드는 방법은 [보고서 작성기 시작(보고서 작성기)](https://technet.microsoft.com/library/ms159221.aspx)을 참조하세요.  
   
 #### <a name="reporting-services-samples"></a>Reporting Services 예제  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66108572"
   
 2.  Adventure Works 예제 데이터베이스 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 예제 보고서를 CodePlex에서 다운로드합니다. 자세한 내용은 [AdventureWorks 보고서 예제](https://msftrsprodsamples.codeplex.com/wikipage?title=SS2012!AdventureWorks2012%20Report%20Samples&referringTitle=Home)를 참조하세요.  
   
-##  <a name="bkmk_nativemode"></a> 기본 모드 설치 확인  
+##  <a name="verify-a-native-mode-installation"></a><a name="bkmk_nativemode"></a> 기본 모드 설치 확인  
  기본 구성을 사용하여 기본 모드 보고서 서버를 설치하는 경우 설치 프로그램은 서버를 설치하고 배포합니다. 몇 가지 간단한 테스트를 수행하여 보고서 서버의 배포 여부를 확인할 수 있습니다. 이러한 단계를 수행하기 위해서는 로컬 관리자여야 합니다. 다른 사용자가 테스트를 수행할 수 있도록 하려면 해당 사용자에 대한 보고서 서버 액세스 권한을 구성해야 합니다.  
   
 #### <a name="to-verify-that-the-report-server-is-installed-and-running"></a>보고서 서버가 설치되어 실행 중인지 확인하려면  

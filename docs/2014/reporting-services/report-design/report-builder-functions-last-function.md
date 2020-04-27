@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fcaad5c420af766d6c43bd5d57adeb6ce444257f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105257"
 ---
 # <a name="last-function-report-builder-and-ssrs"></a>Last 함수(보고서 작성기 및 SSRS)
@@ -41,11 +41,9 @@ Last(expression, scope)
  식 유형에 따라 결정됩니다.  
   
 ## <a name="remarks"></a>설명  
- 
-  `Last` 함수는 지정된 범위에 모든 정렬 및 필터링을 적용한 후 데이터 집합에서 마지막 값을 반환합니다.  
+ `Last` 함수는 지정된 범위에 모든 정렬 및 필터링을 적용한 후 데이터 집합에서 마지막 값을 반환합니다.  
   
- 
-  `Last` 함수는 그룹 필터 식에서 현재(기본) 범위 외에는 사용할 수 없습니다.  
+ `Last` 함수는 그룹 필터 식에서 현재(기본) 범위 외에는 사용할 수 없습니다.  
   
  페이지의 첫 번째와 마지막 항목을 표시하는 사전 스타일의 머리글을 만들기 위해 페이지 머리글에 `Last`를 사용하여 페이지에 대한 `ReportItems` 컬렉션의 마지막 값을 반환할 수도 있습니다.  
   

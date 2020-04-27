@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6dd54475ee63b2f6ef5e1b56b94c11aafd5996ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484680"
 ---
 # <a name="task-12-discovering-knowledge-knowledge-discovery"></a>태스크 12: 지식 검색(기술 자료 검색)
@@ -32,7 +32,7 @@ ms.locfileid: "65484680"
   
 4.  검색할 **공급자를** **워크시트**에 대해 선택 합니다.  
   
-5.  **매핑** 섹션에서 **드롭다운 목록을**사용 하 여 **Excel** 파일 **의 공급 업체 열을** 공급자 **ID** 도메인 **및 공급자 이름 열** 에 **** 매핑합니다. Excel 파일에는 **공급자 ID** 및 **공급자 이름** 도메인에 대 한 샘플 데이터가 있습니다. 검색 프로세스에서 값을 검색하려는 도메인을 선택할 수 있습니다. 이 페이지에서 도메인을 만들고 원본 열을 이러한 도메인에 매핑할 수 있습니다. 도메인 관리 작업 중에 도메인을 만들지 않고 기술 자료 검색 작업 중에 도메인을 만드는 것은 드문 일이 아닙니다.  
+5.  **매핑** 섹션에서 **드롭다운 목록을**사용 하 여 **Excel** 파일 **의 공급 업체 열을** 공급자 **ID** 도메인 **및 공급자 이름 열** 에 **Supplier Name** 매핑합니다. Excel 파일에는 **공급자 ID** 및 **공급자 이름** 도메인에 대 한 샘플 데이터가 있습니다. 검색 프로세스에서 값을 검색하려는 도메인을 선택할 수 있습니다. 이 페이지에서 도메인을 만들고 원본 열을 이러한 도메인에 매핑할 수 있습니다. 도메인 관리 작업 중에 도메인을 만들지 않고 기술 자료 검색 작업 중에 도메인을 만드는 것은 드문 일이 아닙니다.  
   
      ![검색 프로세스의 맵 페이지](../../2014/tutorials/media/et-discoveringknowledge-02.jpg "검색 프로세스의 맵 페이지")  
   

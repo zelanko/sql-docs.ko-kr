@@ -11,14 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b3c722c5774a333773f4bcffc41c408d19ae28be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480525"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>DQS 작업을 위해 데이터 액세스
-  
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 작업에 원본 데이터를 사용하고 처리된 데이터를 내보내려면 다음 중 하나를 수행할 수 있습니다.  
   
 -   원본 데이터를 DQS_STAGING_DATA 데이터베이스의 테이블/뷰로 복사한 다음 이를 DQS 작업에 사용합니다. 처리된 데이터를 DQS_STAGING_DATA 데이터베이스의 새 테이블로 내보낼 수도 있습니다. 이렇게 하려면 Windows 사용자 계정에 DQS_STAGING_DATA 데이터베이스에 대한 읽기/쓰기 액세스 권한을 부여해야 합니다.  
@@ -39,19 +38,17 @@ ms.locfileid: "65480525"
   
 3.  SQL 로그인을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
   
-4.  
-  **로그인 속성** 대화 상자의 왼쪽 창에서 **사용자 매핑** 페이지를 클릭합니다.  
+4.  **로그인 속성** 대화 상자의 왼쪽 창에서 **사용자 매핑** 페이지를 클릭합니다.  
   
 5.  오른쪽 창에서 **DQS_STAGING_DATA** 데이터베이스에 대한 **매핑** 열 아래의 확인란을 선택한 후 **데이터베이스 역할 멤버 자격: DQS_STAGING_DATA** 창에서 다음 역할을 선택합니다.  
   
     -   **db_datareader**: 테이블/뷰에서 데이터를 읽습니다.  
   
-    -   **db_datawriter**: 테이블에서 데이터를 추가, 삭제 또는 변경 합니다.  
+    -   **db_datawriter**: 테이블에서 데이터를 추가, 삭제 또는 변경합니다.  
   
-    -   **db_ddladmin**: 테이블/뷰를 만들거나, 수정 하거나, 삭제 합니다.  
+    -   **db_ddladmin**: 테이블/뷰를 만들기, 수정 또는 삭제합니다.  
   
-6.  
-  **로그인 속성** 대화 상자에서 **확인** 을 클릭하여 변경 내용을 적용합니다.  
+6.  **로그인 속성** 대화 상자에서 **확인** 을 클릭하여 변경 내용을 적용합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
  DQS 작업을 위한 데이터 원본으로 데이터베이스에 액세스하는 DQS 작업을 수행한 다음 처리된 데이터를 데이터베이스로 내보냅니다.  

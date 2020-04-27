@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 556abc4ff00df4393c756f62072254e417653f40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101872"
 ---
 # <a name="role-assignments"></a>역할 할당
@@ -61,8 +61,8 @@ ms.locfileid: "66101872"
  기본 보안을 제공하는 미리 정의된 역할 할당에 대한 자세한 내용은 [미리 정의된 역할](role-definitions-predefined-roles.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [역할 만들기, 삭제 또는 수정&#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
- [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](grant-user-access-to-a-report-server.md)   
+ [Management Studio &#40;역할을 만들거나, 삭제 하거나, 수정&#41;](role-definitions-create-delete-or-modify.md)   
+ [보고서 관리자&#41;&#40;보고서 서버에 대 한 사용자 액세스 권한 부여](grant-user-access-to-a-report-server.md)   
  [역할 할당을 수정 하거나 삭제 &#40;보고서 관리자&#41;](role-assignments-modify-or-delete.md)   
  [Sharepoint 사이트의 보고서 서버 항목에 대 한 사용 권한은 SharePoint 통합 모드에서 Reporting Services &#40;설정&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [기본 모드 보고서 서버에 대한 사용 권한 부여](granting-permissions-on-a-native-mode-report-server.md)  

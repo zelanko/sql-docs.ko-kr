@@ -16,10 +16,10 @@ ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: ef595adcf3772dcac92c58764d99bca4374aeb0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68771348"
 ---
 # <a name="sp_adddistributiondb-transact-sql"></a>sp_adddistributiondb(Transact-SQL)
@@ -75,7 +75,7 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @security_mode = ] security_mode`배포자에 연결할 때 사용 하는 보안 모드입니다. *security_mode* 은 **int**이며 기본값은 1입니다. **0** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 지정 합니다. **1** 은 Windows 통합 인증을 지정 합니다.  
   
-`[ @login = ] 'login'`배포 데이터베이스를 만들기 위해 배포자에 연결할 때 사용 되는 로그인 이름입니다. *Security_mode* 가 **0**으로 설정 된 경우에 필요 합니다. *login* 은 **sysname**이며 기본값은 NULL입니다.  
+`[ @login = ] 'login'`배포 데이터베이스를 만들기 위해 배포자에 연결할 때 사용 되는 로그인 이름입니다. *Security_mode* 가 **0**으로 설정 된 경우에 필요 합니다. *login*은 **sysname**이며 기본값은 NULL입니다.  
   
 `[ @password = ] 'password'`배포자에 연결할 때 사용 되는 암호입니다. *Security_mode* 가 **0**으로 설정 된 경우에 필요 합니다. *password* 는 **sysname**이며 기본값은 NULL입니다.  
   
@@ -168,7 +168,7 @@ GO
  [Transact-sql&#41;sp_changedistributiondb &#40;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
  [Transact-sql&#41;sp_dropdistributiondb &#40;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [Transact-sql&#41;sp_helpdistributiondb &#40;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [배포 구성](../../relational-databases/replication/configure-distribution.md)  
   
   

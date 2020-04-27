@@ -17,10 +17,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 4350badedcaf2a4e2b977b57cf9e6cfde6c1b275
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63032228"
 ---
 # <a name="localdbgetversioninfo-function"></a>LocalDBGetVersionInfo 함수
@@ -49,7 +49,7 @@ typedef struct _LocalDBVersionInfo
   
 ```  
   
- **헤더 파일:** sqlncli  
+ **헤더 파일:** sqlncli.h  
   
 ## <a name="syntax"></a>구문  
   
@@ -85,7 +85,7 @@ HRESULT LocalDBGetVersionInfo(
  예기치 않은 오류가 발생했습니다. 자세한 내용은 이벤트 로그를 참조하십시오.  
   
 ## <a name="details"></a>세부 정보  
- 크기 인수 (*lpVersionInfoSize*)를 도입 하는 이유는 API에서 다른 버전의 LocalDBVersionInfostruct를 반환할 수 있도록 하 여 전달 및 이전 버전과의 호환성을 효과적으로 설정 하는 것입니다. **** `struct`  
+ 크기 인수 (*lpVersionInfoSize*)를 도입 하는 이유는 API에서 다른 버전의 LocalDBVersionInfostruct를 반환할 수 있도록 하 여 전달 및 이전 버전과의 호환성을 효과적으로 설정 하는 것입니다. **LocalDBVersionInfostruct** `struct`  
   
  Size 인수 (*lpVersionInfoSize*)가 알려진 버전의 **LocalDBVersionInfostruct**크기와 일치 하면 해당 버전의 `struct` 이 반환 됩니다. `struct` 그렇지 않으면 LOCALDB_ERROR_INVALID_PARAMETER가 반환됩니다.  
   

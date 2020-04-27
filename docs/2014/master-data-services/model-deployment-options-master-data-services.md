@@ -11,14 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0dbc88c186e5f8f92c943c3e0d766ab6d8846941
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479021"
 ---
 # <a name="model-deployment-options-master-data-services"></a>모델 배포 옵션(Master Data Services)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델 패키지 파일을 배포할 때 새 모델이나 복제된 모델을 배포할지 또는 이전에 복제된 모델을 업데이트할지 여부를 결정해야 합니다.  
   
 ## <a name="workflows"></a>워크플로  
@@ -42,6 +41,6 @@ ms.locfileid: "65479021"
 ## <a name="see-also"></a>참고 항목  
  [MDSModelDeploy를 사용 하 여 모델 배포 패키지 배포](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)   
  [마법사를 사용 하 여 모델 배포 패키지 배포](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)   
- [모델 &#40;MDS(Master Data Services)&#41;배포](deploying-models-master-data-services.md)  
+ [모델 배포&#40;Master Data Services&#41;](deploying-models-master-data-services.md)  
   
   

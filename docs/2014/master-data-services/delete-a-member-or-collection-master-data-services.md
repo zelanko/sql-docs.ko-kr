@@ -17,14 +17,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f3164bca23e709fd434c6ba7850ec21179a076ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479711"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>멤버 또는 컬렉션 삭제(Master Data Services)
-  
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서는 멤버나 컬렉션이 더 이상 필요하지 않으면 삭제할 수 있습니다. 멤버를 대량으로 삭제하려면 준비 프로세스를 대신 사용합니다. 자세한 내용은 [준비 프로세스를 사용 하 여 멤버 비활성화 또는 삭제 &#40;MDS(Master Data Services)&#41;](add-update-and-delete-data-master-data-services.md)를 참조 하세요.  
   
 > [!NOTE]  
@@ -33,8 +32,7 @@ ms.locfileid: "65479711"
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
--   
-  **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
+-   **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
 -   멤버의 경우 멤버를 삭제할 리프 모델 개체에 대 한 **업데이트** 이상의 권한이 있어야 합니다.  
   
@@ -42,14 +40,11 @@ ms.locfileid: "65479711"
   
 ### <a name="to-delete-a-member-or-collection"></a>멤버 또는 컬렉션을 삭제하려면  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 홈 페이지의 **모델** 목록에서 모델을 선택합니다.  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 홈 페이지의 **모델** 목록에서 모델을 선택합니다.  
   
-2.  
-  **버전** 목록에서 버전을 선택합니다.  
+2.  **버전** 목록에서 버전을 선택합니다.  
   
-3.  
-  **탐색기**를 클릭합니다.  
+3.  **탐색기**를 클릭합니다.  
   
 4.  삭제하려면  
   
@@ -61,14 +56,13 @@ ms.locfileid: "65479711"
   
 5.  표에서 삭제할 멤버 또는 컬렉션의 행을 선택합니다.  
   
-6.  
-  **멤버 삭제**또는 **삭제**또는 **컬렉션 삭제**를 클릭합니다.  
+6.  **멤버 삭제**또는 **삭제**또는 **컬렉션 삭제**를 클릭합니다.  
   
 7.  확인 대화 상자에서 **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [MDS(Master Data Services) &#40;멤버 또는 컬렉션을 다시 활성화&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
  [멤버가 MDS(Master Data Services)를 &#40;&#41;](../../2014/master-data-services/members-master-data-services.md)   
- [컬렉션 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/collections-master-data-services.md)  
+ [컬렉션&#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
   

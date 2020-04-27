@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a943d0ed7cfb0932f7eec757b40fef4d8de6504c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63306009"
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>다 대 다 관계 매핑(Visual Database Tools)
@@ -34,8 +34,7 @@ ms.locfileid: "63306009"
   
 2.  다이어그램을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **새 테이블** 을 선택하여 세 번째 테이블을 만듭니다. 이 테이블이 병합 테이블로 사용됩니다.  
   
-3.  
-  **이름 선택** 대화 상자에서 시스템 할당 테이블 이름을 변경합니다. 예를 들어, `titles` 테이블과 `authors` 테이블 사이의 병합 테이블 이름으로 `titleauthors`를 지정할 수 있습니다.  
+3.  **이름 선택** 대화 상자에서 시스템 할당 테이블 이름을 변경합니다. 예를 들어, `titles` 테이블과 `authors` 테이블 사이의 병합 테이블 이름으로 `titleauthors`를 지정할 수 있습니다.  
   
 4.  다른 두 테이블 각각의 기본 키 열을 병합 테이블에 복사합니다. 일반적인 테이블 작업의 경우와 마찬가지로 다른 열을 이 테이블에 추가할 수 있습니다.  
   
