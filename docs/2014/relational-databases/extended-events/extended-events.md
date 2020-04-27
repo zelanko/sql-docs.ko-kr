@@ -14,28 +14,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990698"
 ---
 # <a name="extended-events"></a>확장 이벤트
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트는 확장성이 높고 다양하게 구성 가능한 인프라를 갖추고 있으므로 사용자는 이를 통해 문제를 해결하거나 성능 문제를 파악하는 데 필요한 만큼의 정보만 수집할 수 있습니다.  
   
  확장 이벤트에 대한 자세한 내용은 [SQL Server 확장 이벤트](https://blogs.msdn.com/b/extended_events/)에서 찾을 수 있습니다.  
   
-## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트의 이점  
- 확장 이벤트는 성능 리소스를 적게 사용하는 간단한 성능 모니터링 시스템입니다. 확장 이벤트는 세션 데이터를 생성, 수정, 표시 및 분석 하는 두 가지 그래픽 사용자 인터페이스 (**새 세션 마법사** 와 **새 세션**)를 제공 합니다.  
+## <a name="benefits-of-ssnoversion-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트의 이점  
+ 확장 이벤트는 성능 리소스를 적게 사용하는 간단한 성능 모니터링 시스템입니다. 확장 이벤트에서는**새 세션 마법사** 와 **새 세션**이라는 두 가지 그래픽 사용자 인터페이스가 제공되므로 세션 데이터를 작성, 수정, 표시 및 분석할 수 있습니다.  
   
 ## <a name="extended-events-concepts"></a>확장 이벤트 개념  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트(Extended Event)는 이벤트나 이벤트 소비자와 같은 기존 개념을 바탕으로 하고 Windows용 이벤트 추적의 개념을 사용하며 여기에 새로운 개념을 도입했습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트(Extended Event)는 이벤트나 이벤트 소비자와 같은 기존 개념을 바탕으로 하고 Windows용 이벤트 추적의 개념을 사용하며 여기에 새로운 개념을 도입했습니다.  
   
  다음 표는 확장 이벤트의 개념에 대해 설명합니다.  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[SQL Server 확장 이벤트 패키지](sql-server-extended-events-packages.md)|확장 이벤트 세션이 실행 중일 때 데이터를 얻거나 처리하는 데 사용되는 개체가 포함된 확장 이벤트 패키지에 대해 설명합니다.|  
 |[SQL Server 확장 이벤트 대상](../../database-engine/sql-server-extended-events-targets.md)|이벤트 세션이 지속되는 동안 데이터를 수신할 수 있는 이벤트 소비자에 대해 설명합니다.|  
@@ -75,7 +73,7 @@ ms.locfileid: "62990698"
   
 -   활성 프로세스에 거의 영향을 주지 않고 동적으로 이를 모니터링할 수 있는 기능  
   
--   성능에 크게 영향을 주지 않고 실행되는 기본 시스템 상태 세션. 이 세션은 성능 문제를 해결하는 데 사용할 수 있는 시스템 데이터를 수집합니다. 자세한 내용은 [system_health 세션 사용](use-the-ssms-xe-profiler.md)을 참조하세요.  
+-   성능에 크게 영향을 주지 않고 실행되는 기본 시스템 상태 세션. 이 세션은 성능 문제를 해결하는 데 사용할 수 있는 시스템 데이터를 수집합니다. 자세한 내용은 [System_health 세션 사용](use-the-ssms-xe-profiler.md)을 참조 하세요.  
   
 ## <a name="extended-events-tasks"></a>확장 이벤트 태스크  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL(데이터 정의 언어) 문, 동적 관리 뷰와 함수 또는 카탈로그 뷰를 실행하면 사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경에 맞는 간단하거나 복잡한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트 문제 해결 솔루션을 만들 수 있습니다.  
@@ -95,7 +93,7 @@ ms.locfileid: "62990698"
 |각 SQL 추적 이벤트 및 관련 열에 해당하는 확장 이벤트의 이벤트 및 동작을 확인하는 방법에 대해 설명합니다.|[SQL 추적 이벤트 클래스에 해당하는 확장 이벤트 항목 확인](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
 |CREATE EVENT SESSION 또는 ALTER EVENT SESSION에 ADD TARGET 인수를 사용할 경우에 설정할 수 있는 매개 변수를 확인하는 방법에 대해 설명합니다.|[ADD TARGET 인수에 대한 구성 가능한 매개 변수 가져오기](../../database-engine/get-the-configurable-parameters-for-the-add-target-argument.md)|  
 |기존 SQL 추적 스크립트를 확장 이벤트 세션으로 변환하는 방법에 대해 설명합니다.|[기존 SQL 추적 스크립트를 확장 이벤트 세션으로 변환](convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
-|잠금을 보유 중인 쿼리, 쿼리 계획 및 잠긴 시점의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스택을 확인하는 방법에 대해 설명합니다.|[잠금을 보유한 쿼리 파악](determine-which-queries-are-holding-locks.md)|  
+|잠금을 보유 중인 쿼리, 쿼리 계획 및 잠긴 시점의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스택을 확인하는 방법에 대해 설명합니다.|[잠금을 보유 하 고 있는 쿼리 확인](determine-which-queries-are-holding-locks.md)|  
 |데이터베이스 성능을 저하시키는 잠금의 원인을 파악하는 방법에 대해 설명합니다.|[가장 많은 잠금이 발생한 개체 찾기](find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |확장 이벤트를 Windows용 이벤트 추적과 함께 사용하여 시스템 작업을 모니터링하는 방법에 대해 설명합니다.|[확장 이벤트를 사용하여 시스템 작업 모니터링](monitor-system-activity-using-extended-events.md)|  
   

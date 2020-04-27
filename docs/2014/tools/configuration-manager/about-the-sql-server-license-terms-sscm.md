@@ -11,19 +11,18 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 04231d0020d44107f9c8136aad9f26e8c098df47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035322"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>SQL Server 사용 조건 정보 (SSCM)
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]소프트웨어 사용 조건은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치할 때 로컬 컴퓨터에 복사됩니다. 동일한 버전 및 언어의 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 같은 컴퓨터에 설치하는 경우 해당 버전 및 언어의 모든 인스턴스에 단일 사용 조건 복사본이 적용됩니다. 파일은 다음에 기록 됩니다.:%ProgramFiles%\Microsoft SQL Server\110\license terms\ ts\ 또는% ProgramFiles (x86)% \ Microsoft SQL\\server\110\license terms\ 약관.  
   
  버전 및 언어가 같은 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 같은 컴퓨터에 설치하는 경우 해당 버전 및 언어의 모든 인스턴스에 단일 사용 조건 복사본이 적용됩니다.  
   
- 사용 조건 파일 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 버전과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 언어 버전을 나타냅니다. 다음은 그 예입니다.  
+ 사용 조건 파일 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 버전과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 언어 버전을 나타냅니다. 예를 들어:  
   
 -   License_DEV_ENU.txt: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer, 영어 버전  
   
@@ -76,8 +75,7 @@ ms.locfileid: "63035322"
 -   RUS - 러시아어  
   
 ## <a name="sql-server-licensing-options"></a>SQL Server 라이선스 옵션  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가격 및 라이선스 옵션에 대한 자세한 내용은 [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=190955) 웹 사이트를 참조하십시오.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가격 및 라이선스 옵션에 대한 자세한 내용은 [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=190955) 웹 사이트를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [Microsoft SQL Server 개인 정보 취급 방침](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   

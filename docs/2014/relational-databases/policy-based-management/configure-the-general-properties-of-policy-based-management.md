@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 249b338148dc762e091d0be47bc081fe87c72fcd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162398"
 ---
 # <a name="configure-the-general-properties-of-policy-based-management"></a>정책 기반 관리의 일반 속성 구성
@@ -36,14 +36,14 @@ ms.locfileid: "63162398"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  PolicyAdministratorRole 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-configure-policy-based-management"></a>정책 기반 관리를 구성하려면  
   
@@ -55,7 +55,7 @@ ms.locfileid: "63162398"
   
      다음 옵션은 **정책 관리 속성** 대화 상자에서 사용할 수 있습니다.  
   
-     **Enabled**  
+     **사용**  
      정책 기반 관리 사용 여부를 지정합니다.  
   
      **HistoryRetentionInDays**  
@@ -68,9 +68,9 @@ ms.locfileid: "63162398"
   
     -   이 값이 true이면 성공한 정책 평가와 실패한 정책 평가가 모두 기록됩니다.  
   
-4.  완료되었으면 **확인**을 클릭합니다.  
+4.  작업을 완료한 후 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-configure-policy-based-management"></a>정책 기반 관리를 구성하려면  
   

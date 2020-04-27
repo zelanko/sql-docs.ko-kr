@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47b8e4b87ab3150ae7bf67d3c3a2f9c5e0732294
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015588"
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>저장 프로시저에 대한 사용 권한 부여
@@ -36,18 +36,18 @@ ms.locfileid: "63015588"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 시스템 프로시저나 시스템 함수에 대한 사용 권한을 부여할 수 없습니다. 이 경우 [GRANT Object Permissions](/sql/t-sql/statements/grant-object-permissions-transact-sql) 를 사용하세요.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  사용 권한을 부여한 사용자 또는 AS 옵션으로 지정한 보안 주체에게 GRANT OPTION을 통한 사용 권한이 있거나 부여할 사용 권한을 포함하는 상위 사용 권한이 있어야 합니다. 프로시저가 속한 스키마에 대한 ALTER 권한 또는 프로시저에 대한 CONTROL 권한이 필요합니다. 자세한 내용은 [GRANT 개체 사용 권한&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-object-permissions-transact-sql)을 사용하여 저장 프로시저에 대한 사용 권한을 부여하는 방법에 대해 설명합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-grant-permissions-on-a-stored-procedure"></a>저장 프로시저에 대한 사용 권한을 부여하려면  
   
@@ -69,7 +69,7 @@ ms.locfileid: "63015588"
   
  **허용** 을 선택하면 지정된 사용 권한이 피부여자에게 제공됩니다. **허용 권한 소유** 를 선택하면 피부여자가 지정된 사용 권한을 다른 보안 주체에 부여할 수도 있습니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-grant-permissions-on-a-stored-procedure"></a>저장 프로시저에 대한 사용 권한을 부여하려면  
   

@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 33e447048f7058ee81b0b144f0aa94a370f6d670
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046266"
 ---
 # <a name="filestream-support"></a>FILESTREAM 지원
-  FILESTREAM은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 Windows 파일 시스템에 대한 직접 액세스를 통해 큰 이진 값을 저장하고 액세스하는 방법을 제공합니다. 큰 이진 값은 2GB보다 큰 값입니다. 향상 된 FILESTREAM 지원에 대 한 자세한 내용은 [filestream &#40;SQL Server&#41;](../../blob/filestream-sql-server.md)를 참조 하세요.  
+  FILESTREAM은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 Windows 파일 시스템에 대한 직접 액세스를 통해 큰 이진 값을 저장하고 액세스하는 방법을 제공합니다. 큰 이진 값은 2GB보다 큰 값입니다. 향상된 FILESTREAM 지원에 대한 자세한 내용은 [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md)를 참조하세요.  
   
  데이터베이스 연결을 열면 `@@TEXTSIZE`가 기본적으로 -1("제한 없음")로 설정됩니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63046266"
   
  FILESTREAM 열을 만들거나 FILESTREAM 열이 있는 기존 열을 검색 하려면 [sys. columns](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql) 카탈로그 뷰의 `is_filestream` 열을 사용 하면 됩니다.  
   
- 다음은 예제입니다.  
+ 다음은 이에 대한 예입니다.  
   
 ```  
 -- Create a table with a FILESTREAM column.  

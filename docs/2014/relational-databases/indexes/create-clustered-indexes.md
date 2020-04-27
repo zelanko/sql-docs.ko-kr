@@ -17,14 +17,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3cea4731ee665e401429679d764832247b2a2242
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155375"
 ---
 # <a name="create-clustered-indexes"></a>클러스터형 인덱스 만들기
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 테이블에 클러스터형 인덱스를 만들 수 있습니다. 몇 가지 경우를 제외하고 모든 테이블에는 클러스터형 인덱스가 있어야 합니다. 쿼리 성능을 향상시키는 것 외에도 요청 시 클러스터형 인덱스를 다시 작성하거나 다시 구성하여 테이블 조각화를 제어할 수 있습니다. 뷰에서 클러스터형 인덱스를 만들 수도 있습니다. 클러스터형된 인덱스는 [클러스터형 및 비클러스터형 인덱스 소개](clustered-and-nonclustered-indexes-described.md)항목에 정의되어 있습니다.  
   
  **항목 내용**  
@@ -43,9 +42,9 @@ ms.locfileid: "63155375"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Implementations"></a> 일반적인 구현 방법  
+###  <a name="typical-implementations"></a><a name="Implementations"></a> 일반적인 구현 방법  
  클러스터형 인덱스는 다음과 같은 방법으로 구현됩니다.  
   
 -   **PRIMARY KEY 및 UNIQUE 제약 조건**  
@@ -60,7 +59,7 @@ ms.locfileid: "63155375"
   
      비클러스터형 PRIMARY KEY 제약 조건이 지정된 경우 기본 키 열이 아닌 열의 클러스터형 인덱스를 만들 수 있습니다.  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   클러스터형 인덱스 구조를 만들 때는 각 파일과 파일 그룹에서 기존(원본) 구조와 새(대상) 구조를 위한 디스크 공간이 모두 필요합니다. 기존 구조는 인덱스 생성 트랜잭션이 커밋된 후 할당 취소됩니다. 정렬에 사용할 임시 디스크 공간이 추가로 필요할 수도 있습니다. 자세한 내용은 [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)을 참조하세요.  
   
@@ -68,15 +67,14 @@ ms.locfileid: "63155375"
   
      대형 테이블에 인덱스를 만들 경우 클러스터형 인덱스로 시작하고 비클러스터형 인덱스를 작성하는 것이 좋습니다. 기존 테이블에 인덱스를 만들 때는 ONLINE 옵션을 ON으로 설정하는 것이 좋습니다. 이 옵션을 ON으로 설정하면 장기 테이블 잠금이 보유되지 않습니다. 따라서 기본 테이블에 대한 쿼리나 업데이트를 계속할 수 있습니다. 자세한 내용은 [Perform Index Operations Online](perform-index-operations-online.md)을 참조하세요.  
   
--   클러스터형 인덱스의 인덱스 키는 ROW_OVERFLOW_DATA 할당 단위에 기존 데이터가 있는 `varchar` 열을 포함할 수 없습니다. 
-  `varchar` 열에 대한 클러스터형 인덱스를 만들고 기존 데이터가 IN_ROW_DATA 할당 단위에 있는 경우에는 데이터를 행 외부로 밀어넣는 열에 대한 후속 삽입 또는 업데이트 동작이 실패합니다. 행 오버플로 데이터가 포함될 수 있는 테이블에 대한 정보를 얻으려면 [sys.dm_db_index_physical_stats&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql) 동적 관리 함수를 사용합니다.  
+-   클러스터형 인덱스의 인덱스 키는 ROW_OVERFLOW_DATA 할당 단위에 기존 데이터가 있는 `varchar` 열을 포함할 수 없습니다. `varchar` 열에 대한 클러스터형 인덱스를 만들고 기존 데이터가 IN_ROW_DATA 할당 단위에 있는 경우에는 데이터를 행 외부로 밀어넣는 열에 대한 후속 삽입 또는 업데이트 동작이 실패합니다. 행 오버플로 데이터가 포함될 수 있는 테이블에 대한 정보를 얻으려면 [sys.dm_db_index_physical_stats&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql) 동적 관리 함수를 사용합니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-create-a-clustered-index-by-using-object-explorer"></a>개체 탐색기를 사용하여 클러스터형 인덱스를 만들려면  
   
@@ -114,9 +112,9 @@ ms.locfileid: "63155375"
   
 9. **닫기**를 클릭합니다.  
   
-10. **파일** 메뉴에서_table_name_ **저장**을 클릭 합니다.  
+10. **파일** 메뉴에서 _table name_**저장**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-create-a-clustered-index"></a>클러스터형 인덱스를 만들려면  
   

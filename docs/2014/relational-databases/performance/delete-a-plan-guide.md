@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38065b8cc27526cccc8c1554b25a288662fef8a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151162"
 ---
 # <a name="delete-a-plan-guide"></a>계획 지침 삭제
@@ -34,14 +34,14 @@ ms.locfileid: "63151162"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  OBJECT 계획 지침을 삭제하려면 계획 지침에서 참조되는 개체(예: 함수, 저장 프로시저)에 대한 변경 권한이 있어야 합니다. 다른 모든 계획 지침에는 ALTER DATABASE 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-delete-a-plan-guide"></a>계획 지침을 삭제하려면  
   
@@ -53,7 +53,7 @@ ms.locfileid: "63151162"
   
 4.  **개체 삭제** 대화 상자에서 올바른 계획 지침을 선택했는지 확인한 다음 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-delete-a-single-plan-guide"></a>단일 계획 지침을 삭제하려면  
   

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b18643f97a328dfee94bc5bfe125d6eddeae4efe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150437"
 ---
 # <a name="view-the-windows-application-log-windows"></a>Windows 애플리케이션 로그 보기(Windows)
@@ -31,14 +31,13 @@ ms.locfileid: "63150437"
   
 ### <a name="to-view-the-windows-application-log"></a>Windows 애플리케이션 로그를 보려면  
   
-1.  
-  **시작** 메뉴에서 **모든 프로그램**, **관리 도구**를 차례로 가리킨 다음 **이벤트 뷰어**를 클릭합니다.  
+1.  **시작** 메뉴에서 **모든 프로그램**, **관리 도구**를 차례로 가리킨 다음 **이벤트 뷰어**를 클릭합니다.  
   
 2.  이벤트 뷰어에서 **애플리케이션**을 클릭합니다.  
   
 3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트는 **원본** 열에서 **MSSQLSERVER** 항목으로 식별됩니다(명명된 인스턴스는 _MSSQL$_ **<instance_name>** 으로 식별됨). SQL Server 에이전트 이벤트는 SQLSERVERAGENT 항목으로 식별됩니다. 명명된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 이벤트는 **SQLAgent$** \<*instance_name*>으로 식별됩니다. Microsoft Search 서비스 이벤트는 **Microsoft Search**항목으로 식별됩니다.  
   
-4.  다른 컴퓨터의 로그를 표시하려면 **이벤트 뷰어**를 마우스 오른쪽 단추로 클릭하고 **다른 컴퓨터에 연결** 을 클릭한 다음 **컴퓨터 선택**대화 상자에서 다른 컴퓨터를 선택합니다.  
+4.  다른 컴퓨터의 로그를 보려면 **이벤트 뷰어**를 마우스 오른쪽 단추로 클릭 하 고 **다른 컴퓨터에 연결을** 클릭 한 다음 **컴퓨터 선택**대화 상자를 완료 합니다.  
   
 5.  선택적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트만 표시하려면 **보기** 메뉴에서 **필터**를 클릭한 후 **이벤트 원본** 목록에서 **MSSQLSERVER**를 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 이벤트만 표시하려면 **이벤트 원본** 목록에서 **SQLSERVERAGENT** 를 선택합니다.  
   

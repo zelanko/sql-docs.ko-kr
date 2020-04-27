@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 607f300fbf2138796bb02c66c62386fcc93e6a45
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62992261"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>예측 모델 탐색(중급 데이터 마이닝 자습서)
@@ -28,7 +28,7 @@ ms.locfileid: "62992261"
   
 -   [Microsoft 일반 콘텐츠 뷰어](#bkmk_Content)  
   
-##  <a name="bkmk_Charts"></a>차트 탭  
+##  <a name="charts-tab"></a><a name="bkmk_Charts"></a>차트 탭  
  시계열 뷰어의 **차트** 탭 [!INCLUDE[msCoName](../includes/msconame-md.md)] 은 기록 데이터 및 예측을 포함 하 여 각 계열을 그래픽으로 표시 합니다. 시계열 그래프의 각 선은 제품, 지역 및 예측 가능한 특성의 고유한 조합을 나타냅니다.  
   
  뷰어 오른쪽의 범례에는 드롭다운 목록에서 선택한 항목을 기준으로 사용 가능한 시계열이 나열됩니다. 범례에서 확인란을 선택하거나 확인란의 선택을 취소하여 그래프에 표시되는 시계열을 제어할 수 있습니다.  
@@ -87,8 +87,8 @@ ms.locfileid: "62992261"
   
  [맨 위로 이동](#bkmk_Charts)  
   
-##  <a name="bkmk_Model"></a>모델 탭  
- 데이터 **** 마이닝 디자이너에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시계열 뷰어의 모델 탭을 사용 하 여 예측 모델을 트리 그래프 형식으로 볼 수 있습니다.  
+##  <a name="model-tab"></a><a name="bkmk_Model"></a>모델 탭  
+ 데이터 **Model** 마이닝 디자이너에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시계열 뷰어의 모델 탭을 사용 하 여 예측 모델을 트리 그래프 형식으로 볼 수 있습니다.  
   
  우선 데이터는 유럽, 북미 및 태평양(Europe, North America, Pacific)의 세 지역에서 여러 제품 라인(T1000 등)의 판매에 대한 금액과 수량(Amount, Quantity)의 두 가지 측정값을 나타내므로, 구축한 모델에는 실제 24개의 서로 다른 트리가 포함되며 각 트리는 지역, 제품 및 예측 가능한 특성의 서로 다른 조합에 대한 판매 패턴 모델을 나타냅니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62992261"
   
 -   시계열의 트리 그래프에 여러 분기가 있는 경우 검색된 시계열이 너무 복잡하여 단일 수식으로 나타낼 수 없음을 의미합니다. 대신 트리 그래프에는 트리의 *분할*을 일으킨 조건으로 레이블이 지정 된 분기가 여러 개 있을 수 있습니다. 트리가 분할될 때 각 분기는 서로 다른 시간 세그먼트를 나타내며 내부의 추세는 단일 수식으로 표현될 수 있습니다.  
   
-     예를 들어 차트 그래프를 살펴보면 9 월에 시작 하 여 판매 볼륨에서 갑자기 이동 하는 것을 확인 하 고 연말 휴일을 계속 진행 하면 **모델** 뷰로 전환 하 여 추세가 변경 된 정확한 날짜를 확인할 수 있습니다. "9 월 전" 및 "9 월 이후"를 나타내는 트리의 분기는 서로 다른 수식을 포함 합니다. 즉, 분할에 대 한 판매 추세를 수학적으로 설명 하는 수식과 9 월부터 판매 추세를 설명 하는 다른 수식을 포함 합니다. 연말 휴일입니다.  
+     예를 들어 차트 그래프를 살펴보면 9 월에 시작 하 여 판매 볼륨에서 갑자기 이동 하는 것을 확인 하 고 연말 휴일을 계속 진행 하면 **모델** 뷰로 전환 하 여 추세가 변경 된 정확한 날짜를 확인할 수 있습니다. "9 월 전" 및 "9 월 이후"를 나타내는 트리의 분기는 서로 다른 수식을 포함 합니다. 즉, 분할에 대 한 판매 추세를 수학적으로 설명 하는 수식과 년 9 월을 기준으로 9 월 판매 추세를 설명 하는 다른 수식이 포함 되어 있습니다.  
   
 #### <a name="to-explore-the-decision-tree-for-a-time-series-model"></a>시계열 모델의 의사 결정 트리를 탐색하려면  
   
@@ -130,7 +130,7 @@ ms.locfileid: "62992261"
   
  [맨 위로 이동](#bkmk_Charts)  
   
-##  <a name="bkmk_Content"></a>필드 일반 콘텐츠 트리 뷰어  
+##  <a name="optional-generic-content-tree-viewer"></a><a name="bkmk_Content"></a>필드 일반 콘텐츠 트리 뷰어  
  시계열에 대 한 사용자 지정 뷰어 외에도 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 모든 데이터 마이닝 모델에 사용할 수 있는 **MicrosoftGeneric 콘텐츠 트리 뷰어** 를 제공 합니다. 이 뷰어는 다음과 같은 이점을 제공합니다.  
   
 -   **Microsoft 시계열 뷰어**:이 보기는 두 알고리즘의 결과를 병합 합니다. 각 계열을 개별적으로 볼 수는 있지만 각 알고리즘의 결과가 결합된 방법을 확인할 수는 없습니다. 또한 이 뷰에서 도구 설명 및 마이닝 범례에는 가장 중요한 통계만 표시됩니다.  

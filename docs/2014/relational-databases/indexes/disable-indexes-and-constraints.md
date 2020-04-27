@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 047fffdc729b276979720e9d245862a692a86be0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162407"
 ---
 # <a name="disable-indexes-and-constraints"></a>인덱스 및 제약 조건 비활성화
@@ -47,9 +47,9 @@ ms.locfileid: "63162407"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   비활성화된 인덱스는 유지 관리되지 않습니다.  
   
@@ -85,12 +85,12 @@ ms.locfileid: "63162407"
   
 -   새 클러스터형 인덱스를 만들면 이전에 비활성화된 비클러스터형 인덱스를 사용할 수 있습니다. 자세한 내용은 [Enable Indexes and Constraints](enable-indexes-and-constraints.md)을 참조하세요.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  ALTER INDEX를 실행하려면 최소한 테이블이나 뷰에 대한 ALTER 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-disable-an-index"></a>인덱스를 비활성화하려면  
   
@@ -159,7 +159,7 @@ ms.locfileid: "63162407"
   
 -   하이퍼링크를 클릭하여 전체 오류 메시지가 있는 대화 상자를 표시합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-disable-an-index"></a>인덱스를 비활성화하려면  
   

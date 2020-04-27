@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a23d307cc33e5b8e59111819b245bc9df1df67df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63063123"
 ---
 # <a name="deleting-database-objects"></a>데이터베이스 개체 삭제
@@ -103,13 +103,13 @@ ms.locfileid: "63063123"
  [자습서: Transact-SQL 문 작성](tutorial-writing-transact-sql-statements.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [REVOKE&#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   
+ [REVOKE &#40;Transact-sql&#41;](/sql/t-sql/statements/revoke-transact-sql)   
  [DROP USER &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-user-transact-sql)   
  [DROP LOGIN &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-login-transact-sql)   
  [DROP PROCEDURE &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)   
  [DROP VIEW &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-view-transact-sql)   
  [DELETE&#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql)   
- [DROP TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-table-transact-sql)   
+ [DROP TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-table-transact-sql)   
  [DROP DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-audit-specification-transact-sql)  
   
   

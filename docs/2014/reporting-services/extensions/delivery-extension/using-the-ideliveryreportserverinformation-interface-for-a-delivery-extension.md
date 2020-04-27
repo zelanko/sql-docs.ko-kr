@@ -14,16 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a94b6da8536ee0269a448b8a446fc0da3f3f576
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164048"
 ---
 # <a name="using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension"></a>배달 확장 프로그램에 대해 IDeliveryReportServerInformation 인터페이스 사용
-  
-  <xref:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation> 인터페이스는 보고서 서버에 대한 정보를 검색하는 데 사용할 수 있는 여러 가지 속성을 표시합니다. 이 정보를 사용하여 알림 및 보고서를 배달할 수 있습니다. 배달 확장 프로그램 클래스를 구현하는 경우 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ReportServerInformation%2A> 인터페이스에서 필요한 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 속성을 구현합니다. 
-  <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ReportServerInformation%2A> 속성은 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation> 인터페이스를 구현하는 개체를 반환합니다. 이 개체로부터 보고서 서버에서 현재 지원하는 렌더링 확장 프로그램 목록을 구할 수 있습니다.  
+  <xref:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation> 인터페이스는 보고서 서버에 대한 정보를 검색하는 데 사용할 수 있는 여러 가지 속성을 표시합니다. 이 정보를 사용하여 알림 및 보고서를 배달할 수 있습니다. 배달 확장 프로그램 클래스를 구현하는 경우 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ReportServerInformation%2A> 인터페이스에서 필요한 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 속성을 구현합니다. <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ReportServerInformation%2A> 속성은 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation> 인터페이스를 구현하는 개체를 반환합니다. 이 개체로부터 보고서 서버에서 현재 지원하는 렌더링 확장 프로그램 목록을 구할 수 있습니다.  
   
  다음 `for` 루프를 사용 하 여 보고서 서버에서 현재 사용 가능한 렌더링 확장 프로그램 목록을 **ArrayList** 개체로 저장할 수 있습니다.  
   
@@ -48,12 +46,11 @@ foreach (Microsoft.ReportingServices.Interfaces.Extension e in ReportServerInfor
 }  
 ```  
   
- 
-  <xref:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation> 인터페이스에 대한 자세한 내용은 [배달 확장 프로그램에 대해 IDeliveryReportServerInformation 인터페이스 사용](using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)을 참조하세요.  
+ <xref:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation> 인터페이스에 대한 자세한 내용은 [배달 확장 프로그램에 대해 IDeliveryReportServerInformation 인터페이스 사용](using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.ReportingServices.Interfaces>   
  [배달 확장 프로그램 구현](implementing-a-delivery-extension.md)   
- [Reporting Services 확장 라이브러리](../reporting-services-extension-library.md)  
+ [Reporting Services 확장 프로그램 라이브러리](../reporting-services-extension-library.md)  
   
   

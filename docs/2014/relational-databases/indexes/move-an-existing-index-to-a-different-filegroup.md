@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd3c7f0bb394025581e4a2dffc8eb79a43acb498
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63036235"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>다른 파일 그룹으로 기존 인덱스 이동
@@ -34,27 +34,26 @@ ms.locfileid: "63036235"
   
      [보안](#Security)  
   
--   **다음을 사용 하 여 기존 인덱스를 다른 파일 그룹으로 이동 합니다.**  
+-   **기존 인덱스를 다른 파일 그룹으로 이동하려면**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   테이블에 클러스터형 인덱스가 있는 경우 클러스터형 인덱스를 새 파일 그룹으로 이동하면 테이블도 해당 파일 그룹으로 이동합니다.  
   
--   
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 UNIQUE 또는 PRIMARY KEY 제약 조건을 사용하여 만든 인덱스를 이동할 수 없습니다. 이러한 인덱스를 이동하려면 [에서](/sql/t-sql/statements/create-index-transact-sql) CREATE INDEX [!INCLUDE[tsql](../../includes/tsql-md.md)]문을 (DROP_EXISTING=ON) 옵션과 함께 사용합니다.  
+-   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 UNIQUE 또는 PRIMARY KEY 제약 조건을 사용하여 만든 인덱스를 이동할 수 없습니다. 이러한 인덱스를 이동하려면 [에서](/sql/t-sql/statements/create-index-transact-sql) CREATE INDEX [!INCLUDE[tsql](../../includes/tsql-md.md)]문을 (DROP_EXISTING=ON) 옵션과 함께 사용합니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-using-table-designer"></a>테이블 디자이너를 사용하여 기존 인덱스를 다른 파일 그룹으로 이동하려면  
   
@@ -64,18 +63,17 @@ ms.locfileid: "63036235"
   
 3.  이동할 인덱스가 포함된 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인**을 선택합니다.  
   
-4.  **테이블 디자이너** 메뉴에서 **인덱스/키**를 클릭 합니다.  
+4.  **테이블 디자이너** 메뉴에서 **인덱스/키**를 클릭합니다.  
   
 5.  이동할 인덱스를 선택합니다.  
   
 6.  주 표에서 **데이터 공간 사양**을 확장합니다.  
   
-7.  
-  **파일 그룹 또는 파티션 구성표 이름** 을 선택하고 목록에서 인덱스를 이동할 파일 그룹 또는 파티션 구성표를 선택합니다.  
+7.  **파일 그룹 또는 파티션 구성표 이름** 을 선택하고 목록에서 인덱스를 이동할 파일 그룹 또는 파티션 구성표를 선택합니다.  
   
 8.  **닫기**를 클릭합니다.  
   
-9. **파일** 메뉴에서_table_name_ **저장**을 선택 합니다.  
+9. **파일** 메뉴에서 **table_name**_저장_을 선택합니다.  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>개체 탐색기에서 기존 인덱스를 다른 파일 그룹으로 이동하려면  
   
@@ -89,8 +87,7 @@ ms.locfileid: "63036235"
   
 5.  이동할 인덱스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-6.  
-  **페이지 선택** 아래에서 **스토리지**를 선택합니다.  
+6.  **페이지 선택**아래에서 **스토리지**를 선택합니다.  
   
 7.  인덱스를 이동할 파일 그룹을 선택합니다.  
   
@@ -98,22 +95,20 @@ ms.locfileid: "63036235"
   
      클러스터형 인덱스를 이동할 경우 온라인 처리를 사용할 수 있습니다. 온라인 처리는 인덱스 작업 중 기본 데이터 및 비클러스터형 인덱스에 대한 동시 사용자 액세스를 허용합니다. 자세한 내용은 [Perform Index Operations Online](perform-index-operations-online.md)을 참조하세요.  
   
-     
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 사용하는 다중 프로세서 컴퓨터에서는 최대 병렬 처리 값을 지정하여 인덱스 문 실행에 사용되는 프로세서 수를 구성할 수 있습니다. 병렬 인덱스 작업 기능은 일부 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요. 병렬 인덱스 작업에 대한 자세한 내용은 [병렬 인덱스 작업 구성](configure-parallel-index-operations.md)을 참조하세요.  
+     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 사용하는 다중 프로세서 컴퓨터에서는 최대 병렬 처리 값을 지정하여 인덱스 문 실행에 사용되는 프로세서 수를 구성할 수 있습니다. 병렬 인덱스 작업 기능은 일부 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요. 병렬 인덱스 작업에 대한 자세한 내용은 [병렬 인덱스 작업 구성](configure-parallel-index-operations.md)을 참조하세요.  
   
 8.  **확인**을 클릭합니다.  
   
- **인덱스 속성-** _Index_name_ 대화 상자의 **저장소** 페이지에서 다음 정보를 사용할 수 있습니다.  
+ **인덱스 속성 –** **index_name** 대화 상자의 _스토리지_ 페이지에서 다음 정보를 사용할 수 있습니다.  
   
- **그룹별로**  
+ **파일 그룹**  
  지정한 파일 그룹에 인덱스를 저장합니다. 목록에는 표준(행) 파일 그룹만 표시됩니다. 목록에서는 기본적으로 데이터베이스의 PRIMARY 파일 그룹이 선택됩니다.  
   
  **Filestream 파일 그룹**  
  FILESTREAM 데이터의 파일 그룹을 지정합니다. 이 목록에는 FILESTREAM 파일 그룹만 표시됩니다. 목록에서는 기본적으로 PRIMARY FILESTREAM 파일 그룹이 선택됩니다.  
   
  **파티션 구성표**  
- 파티션 구성표에 인덱스를 저장합니다. 
-  **파티션 구성표** 를 클릭하면 아래의 표가 활성화됩니다. 목록에서는 기본적으로 테이블 데이터를 저장하는 데 사용되는 파티션 구성표가 선택됩니다. 목록에서 다른 파티션 구성표를 선택하면 표의 정보가 업데이트됩니다.  
+ 파티션 구성표에 인덱스를 저장합니다. **파티션 구성표** 를 클릭하면 아래의 표가 활성화됩니다. 목록에서는 기본적으로 테이블 데이터를 저장하는 데 사용되는 파티션 구성표가 선택됩니다. 목록에서 다른 파티션 구성표를 선택하면 표의 정보가 업데이트됩니다.  
   
  데이터베이스에 파티션 구성표가 없으면 파티션 구성표 옵션을 사용할 수 없습니다.  
   
@@ -134,7 +129,7 @@ ms.locfileid: "63036235"
 > [!NOTE]  
 >  테이블 열이 계산 열이면 **열 데이터 형식** 에 "계산 열"이 표시됩니다.  
   
- **인덱스를 이동 하는 동안 DML 문의 온라인 처리 허용**  
+ **인덱스를 이동하는 동안 DML 문의 온라인 처리 허용**  
  이 옵션을 사용하면 사용자는 인덱스 작업 중에 기본 테이블이나 클러스터형 인덱스 데이터 및 연관된 모든 비클러스터형 인덱스에 액세스할 수 있습니다.  
   
 > [!NOTE]  
@@ -146,7 +141,7 @@ ms.locfileid: "63036235"
 > [!NOTE]  
 >  사용 가능한 CPU 수보다 더 큰 수를 지정하면 사용 가능한 실제 CPU 수가 사용됩니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>기존 인덱스를 다른 파일 그룹으로 이동하려면  
   

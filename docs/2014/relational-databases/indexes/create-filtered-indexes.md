@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de9a9d71a90f33db85636b1bd0344023f1a86c91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155396"
 ---
 # <a name="create-filtered-indexes"></a>필터링된 인덱스 만들기
@@ -56,15 +56,15 @@ ms.locfileid: "63155396"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Design"></a> 디자인 고려 사항  
+###  <a name="design-considerations"></a><a name="Design"></a> 디자인 고려 사항  
   
 -   열에 적은 수의 쿼리 관련 값만 있는 경우 값의 하위 집합에 필터링된 인덱스를 만들 수 있습니다. 예를 들어 열에 있는 값이 대부분 NULL이고 쿼리는 NULL이 아닌 값에서만 선택하는 경우 NULL이 아닌 데이터 행에 대한 필터링된 인덱스를 만들 수 잇습니다. 결과 인덱스는 같은 키 열에서 정의된 전체 테이블 비클러스터형 인덱스에 비해 크기가 더 작고 유지 관리하는 비용이 더 적게 듭니다.  
   
 -   테이블에 다른 유형의 데이터 행이 있는 경우 하나 이상의 데이터 범주에 대한 필터링된 인덱스를 만들 수 있습니다. 이렇게 하면 쿼리의 초점이 테이블의 특정 영역으로 제한되므로 이러한 데이터에 대한 쿼리 성능이 향상될 수 있습니다. 결과 인덱스는 전체 테이블 비클러스터형 인덱스에 비해 크기가 더 작고 유지 관리하는 비용이 더 적게 듭니다.  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   뷰에서 필터링된 인덱스를 만들 수 없습니다. 그러나 쿼리 최적화 프로그램에는 뷰에서 참조되는 테이블에 정의되는 필터링된 인덱스에 성능상 이점이 있습니다. 쿼리 최적화 프로그램에서는 쿼리 결과가 수정될 경우 뷰에서 선택하는 쿼리에 대한 필터링된 인덱스를 검토합니다.  
   
@@ -90,12 +90,12 @@ ms.locfileid: "63155396"
   
 -   필터링된 인덱스의 필터링된 인덱스 식에 지정된 비교 연산자로 인해 암시적 또는 명시적 데이터 변환이 발생할 경우 비교 연산자의 왼쪽에서 변환이 일어나면 오류가 발생합니다. 이에 대한 해결 방법은 비교 연산자의 오른쪽에 데이터 변환 연산자(CAST 또는 CONVERT)를 사용하여 필터링된 인덱스 식을 작성하는 것입니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다. 필터링된 인덱스를 수정하려면 CREATE INDEX WITH DROP_EXISTING을 사용합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-create-a-filtered-index"></a>필터링된 인덱스를 만들려면  
   
@@ -105,22 +105,21 @@ ms.locfileid: "63155396"
   
 3.  더하기 기호를 클릭하여 필터링된 인덱스를 만들 테이블을 확장합니다.  
   
-4.  **인덱스** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 인덱스**를 가리킨 다음, **비클러스터형 인덱스...** 를 선택합니다.  
+4.  **인덱스** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **새 인덱스**를 가리킨 다음 **비클러스터형 인덱스**...를 선택 합니다.  
   
 5.  **새 인덱스** 대화 상자의 **일반** 페이지에서 **인덱스 이름** 상자에 새 인덱스의 이름을 입력합니다.  
   
-6.  **인덱스 키 열** 아래에서 **추가...** 를 클릭합니다.  
+6.  **인덱스 키 열**아래에서 **추가 ...** 를 클릭 합니다.  
   
-7.  _Table_name_ **에서 열 선택**대화 상자에서 고유 인덱스에 추가할 테이블 열의 확인란을 선택 합니다.  
+7.  **table_name**_에서 열 선택_ 대화 상자에서 고유 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
   
 8.  **확인**을 클릭합니다.  
   
-9. 
-  **필터** 페이지의 **필터 식**에 필터링된 인덱스를 만드는 데 사용할 SQL 식을 입력합니다.  
+9. **필터** 페이지의 **필터 식**에 필터링된 인덱스를 만드는 데 사용할 SQL 식을 입력합니다.  
   
 10. **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-create-a-filtered-index"></a>필터링된 인덱스를 만들려면  
   

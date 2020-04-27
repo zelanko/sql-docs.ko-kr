@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62989074"
 ---
 # <a name="filter-published-data"></a>게시된 데이터 필터링
@@ -63,8 +63,7 @@ ms.locfileid: "62989074"
   
  ![행 필터링](../media/repl-16.gif "행 필터링")  
   
- 정적 행 필터는 WHERE 절을 사용하여 게시에 적합한 데이터를 선택합니다. WHERE 절의 마지막 부분은 사용자가 지정합니다. 
-  **ProductLine** 열이 포함된 Adventure Works 예제 데이터베이스의 **Product 테이블**을 참조하십시오. 산악 자전거 관련 제품에 대한 데이터가 있는 행만 게시하려면 `ProductLine = 'M'`을 지정합니다.  
+ 정적 행 필터는 WHERE 절을 사용하여 게시에 적합한 데이터를 선택합니다. WHERE 절의 마지막 부분은 사용자가 지정합니다. **ProductLine** 열이 포함된 Adventure Works 예제 데이터베이스의 **Product 테이블**을 참조하십시오. 산악 자전거 관련 제품에 대한 데이터가 있는 행만 게시하려면 `ProductLine = 'M'`을 지정합니다.  
   
  정적 행 필터를 사용하면 각 게시에 대해 단일 데이터 집합이 생성됩니다. 위의 예에서는 모든 구독자가 산악 자전거 관련 제품에 대한 데이터가 있는 행만 받게 됩니다. 일반 자전거 관련 제품에 대한 데이터가 있는 행만을 필요로 하는 다른 구독자가 있는 경우 다음을 수행하십시오.  
   
@@ -94,10 +93,8 @@ ms.locfileid: "62989074"
 |-----------------|-------------------------------------|  
 |기본 키 열|기본 키 열은 트랜잭션 게시의 모든 테이블에 필요합니다. 기본 키는 병합 게시의 테이블에 필요하지 않지만 기본 키 열이 있는 경우 필터링할 수 없습니다.|  
 |외래 키 열|새 게시 마법사를 사용하여 생성된 모든 게시입니다. Transact-SQL 저장 프로시저를 사용하여 외래 키 열을 필터링할 수 있습니다. 자세한 내용은 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)을 참조하십시오.|  
-|
-  **rowguid** 열|병합 게시<sup>1</sup>|  
-|
-  **msrepl_tran_version** 열|업데이트할 수 있는 구독을 허용하는 스냅샷 게시나 트랜잭션 게시|  
+|**rowguid** 열|병합 게시<sup>1</sup>|  
+|**msrepl_tran_version** 열|업데이트할 수 있는 구독을 허용하는 스냅샷 게시나 트랜잭션 게시|  
 |NULL을 허용하지 않고 기본값 또는 IDENTITY 속성 설정이 없는 열|업데이트할 수 있는 구독을 허용하는 스냅샷 게시나 트랜잭션 게시|  
 |UNIQUE 제약 조건 또는 인덱스가 있는 열|업데이트할 수 있는 구독을 허용하는 스냅샷 게시나 트랜잭션 게시|  
 |SQL Server 7.0 병합 게시의 모든 열|SQL Server 7.0 병합 게시에서는 열을 필터링할 수 없습니다.|  
@@ -132,10 +129,7 @@ ms.locfileid: "62989074"
   
 -   트랜잭션 복제를 사용하면 인덱싱된 뷰를 뷰나 테이블로 복제할 수 있습니다. 뷰를 테이블로 복제하면 테이블의 열을 필터링할 수 없습니다.  
   
- 행 필터는 데이터베이스에서 작동하도록 설계되지 않았습니다. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 `sp_replcmds` 실행(필터 실행 대상)을 의도적으로 데이터베이스 소유자(`dbo`)로 제한합니다. 
-  `dbo`에는 데이터베이스 간 권한이 없습니다. 
-  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 논리는 `sp_replcmds`에 CDC(변경 데이터 캡처)를 추가하여 변경 내용 추적 테이블을 사용자가 반환하고 쿼리할 수 있는 정보로 채웁니다. 보안상의 이유로는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 악성 `dbo` 이 실행 경로를 활용할 수 없도록이 논리의 실행을 제한 합니다. 예를 들어, 악성 `dbo`는 `sp_replcmds`를 호출하는 사용자의 컨텍스트에서 실행될 수 있는 트리거를 CDC 테이블에 추가할 수 있으며, 이 경우 logreader 에이전트입니다.  에이전트가 실행 중인 계정의 권한이 더 높은 경우 악성 `dbo`가 자신의 권한을 에스컬레이션할 수 있습니다.  
+ 행 필터는 데이터베이스에서 작동하도록 설계되지 않았습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 `sp_replcmds` 실행(필터 실행 대상)을 의도적으로 데이터베이스 소유자(`dbo`)로 제한합니다. `dbo`에는 데이터베이스 간 권한이 없습니다. `sp_replcmds` 논리는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]에 CDC(변경 데이터 캡처)를 추가하여 변경 내용 추적 테이블을 사용자가 반환하고 쿼리할 수 있는 정보로 채웁니다. 보안상의 이유로는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 악성 `dbo` 이 실행 경로를 활용할 수 없도록이 논리의 실행을 제한 합니다. 예를 들어, 악성 `dbo`는 `sp_replcmds`를 호출하는 사용자의 컨텍스트에서 실행될 수 있는 트리거를 CDC 테이블에 추가할 수 있으며, 이 경우 logreader 에이전트입니다.  에이전트가 실행 중인 계정의 권한이 더 높은 경우 악성 `dbo`가 자신의 권한을 에스컬레이션할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 및 데이터베이스 개체 게시](publish-data-and-database-objects.md)  

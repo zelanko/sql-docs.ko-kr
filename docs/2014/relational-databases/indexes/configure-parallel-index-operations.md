@@ -17,16 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3a70d58caba2b2a443f0017c52611331e9257972
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157484"
 ---
 # <a name="configure-parallel-index-operations"></a>병렬 인덱스 작업 구성
-  이 항목에서는 최대 병렬 처리 수준을 정의하고 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 이 설정을 수정하는 방법에 대해 설명합니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 이상을 실행하는 다중 프로세서 컴퓨터에서는 다른 쿼리와 마찬가지로 인덱스 문이 여러 프로세서를 사용하여 인덱스 문과 관련된 검색, 정렬 및 인덱스 작업을 수행할 수 있습니다. 단일 인덱스 문 실행에 사용되는 프로세서 수는 [max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 구성 옵션, 현재 작업 및 인덱스 통계에 따라 결정됩니다. max degree of parallelism 옵션은 병렬 계획 실행에 사용할 프로세서의 최대 개수를 결정합니다. 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 시스템에서 진행 중인 작업이 많음을 감지하면 문이 실행되기 전에 인덱스 작업의 병렬 처리 수준이 자동으로 감소됩니다. 분할되지 않은 인덱스의 선행 키 열의 고유 값 수가 제한되거나 각 고유 값의 빈도가 상당히 다양한 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 병렬 처리 수준을 줄일 수도 있습니다.  
+  이 항목에서는 최대 병렬 처리 수준을 정의하고 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 이 설정을 수정하는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 이상을 실행하는 다중 프로세서 컴퓨터에서는 다른 쿼리와 마찬가지로 인덱스 문이 여러 프로세서를 사용하여 인덱스 문과 관련된 검색, 정렬 및 인덱스 작업을 수행할 수 있습니다. 단일 인덱스 문 실행에 사용되는 프로세서 수는 [max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 구성 옵션, 현재 작업 및 인덱스 통계에 따라 결정됩니다. max degree of parallelism 옵션은 병렬 계획 실행에 사용할 프로세서의 최대 개수를 결정합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 시스템에서 진행 중인 작업이 많음을 감지하면 문이 실행되기 전에 인덱스 작업의 병렬 처리 수준이 자동으로 감소됩니다. 분할되지 않은 인덱스의 선행 키 열의 고유 값 수가 제한되거나 각 고유 값의 빈도가 상당히 다양한 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 병렬 처리 수준을 줄일 수도 있습니다.  
   
 > [!NOTE]  
 >  병렬 인덱스 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서만 사용할 수 있습니다. 자세한 내용은 [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조하세요.  
@@ -39,21 +37,21 @@ ms.locfileid: "63157484"
   
      [보안](#Security)  
   
--   **최대 병렬 처리 수준을 설정 하려면:**  
+-   **최대 병렬 처리 수준을 설정하려면:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   쿼리 최적화 프로그램에서 사용하는 프로세서 수는 대개 최적의 성능을 제공합니다. 그러나 매우 큰 인덱스를 생성, 다시 작성 및 삭제하는 작업에서는 리소스가 많이 소모되므로 인덱스 작업 중 다른 애플리케이션 및 데이터베이스 작업에 사용할 리소스가 부족할 수 있습니다. 이 문제가 발생하면 인덱스 작업에 사용할 프로세서 수를 제한하여 인덱스 문 실행에 사용되는 최대 프로세서 수를 직접 구성할 수 있습니다.  
   
 -   MAXDOP 인덱스 옵션을 지정한 쿼리에 대해서만 max degree of parallelism 구성 옵션이 무시됩니다. 다음 표에서는 최대 병렬 처리 수준 구성 옵션 및 MAXDOP 인덱스 옵션에 지정할 수 있는 유효한 정수 값을 보여 줍니다.  
   
-    |값|Description|  
+    |값|설명|  
     |-----------|-----------------|  
     |0|서버가 현재 시스템 작업에 따라 사용되는 CPU의 수를 결정하도록 지정합니다. 이 값은 기본값이며 권장 설정입니다.|  
     |1|병렬 계획이 생성되지 않습니다. 작업이 직렬로 실행됩니다.|  
@@ -75,12 +73,12 @@ ms.locfileid: "63157484"
   
 -   쿼리 최적화 프로그램에서 작성 작업에 병렬 처리 수준을 적용할 경우 정렬이 필요한 분할 인덱스 작업의 메모리 요구 사항이 늘어날 수 있습니다. 병렬 처리 수준이 높을수록 메모리 요구 사항이 늘어납니다. 자세한 내용은 [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md)을 참조하세요.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-index"></a>인덱스에 대한 최대 병렬 처리 수준을 설정하려면  
   
@@ -90,20 +88,17 @@ ms.locfileid: "63157484"
   
 3.  더하기 기호를 클릭하여 인덱스에 대한 최대 병렬 처리 수준을 설정할 테이블을 확장합니다.  
   
-4.  
-  **인덱스** 폴더를 확장합니다.  
+4.  **인덱스** 폴더를 확장합니다.  
   
 5.  최대 병렬 처리 수준을 설정할 인덱스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-6.  
-  **페이지 선택**아래에서 **옵션**을 선택합니다.  
+6.  **페이지 선택**아래에서 **옵션**을 선택합니다.  
   
-7.  
-  **최대 병렬 처리 수준**을 선택하고 1에서 64 사이의 값을 입력합니다.  
+7.  **최대 병렬 처리 수준**을 선택하고 1에서 64 사이의 값을 입력합니다.  
   
 8.  **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-existing-index"></a>기존 인덱스에 대한 최대 병렬 처리 수준을 설정하려면  
   
@@ -123,7 +118,7 @@ ms.locfileid: "63157484"
     GO  
     ```  
   
- 자세한 내용은 [ALTER INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)를 참조 하세요.  
+ 자세한 내용은 [ALTER INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)를 참조하세요.  
   
 #### <a name="set-max-degree-of-parallelism-on-a-new-index"></a>새 인덱스에 대한 최대 병렬 처리 수준 설정  
   

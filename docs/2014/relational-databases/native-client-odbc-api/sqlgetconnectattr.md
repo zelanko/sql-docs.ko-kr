@@ -15,14 +15,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 818c136814062c94491cfa02b84d2fff443a1f0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63128661"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 드라이버별 연결 특성을 정의합니다. 일부 특성은에 `SQLGetConnectAttr`사용할 수 있으며 함수는 현재 설정을 보고 하는 데 사용 됩니다. 이러한 특성에 대해 보고되는 값은 연결을 설정하거나 [SQLSetConnectAttr](sqlsetconnectattr.md)을 사용하여 특성을 설정할 때까지 보장되지 않습니다.  
   
  이 항목에서는 읽기 전용 특성을 나열합니다. 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 드라이버별 연결 특성에 대 한 자세한 내용은 [SQLSetConnectAttr](sqlsetconnectattr.md)를 참조 하세요.  
@@ -33,7 +32,7 @@ ms.locfileid: "63128661"
 > [!NOTE]  
 >  표준 ODBC 연결 특성 SQL_ATTR_CONNECTION_DEAD는 가장 최근 연결 상태를 반환합니다. 이 상태는 현재 연결 상태가 아닐 수도 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|서버에 대한 연결이 손실되었습니다.|  
 |SQL_CD_FALSE|연결이 열려 있으며 문 처리에 사용할 수 있습니다.|  
@@ -49,7 +48,7 @@ ms.locfileid: "63128661"
   
  자세한 내용은 [확장 이벤트 로그에서 진단 정보에 액세스](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)를 참조 하세요.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SQL_ERROR|연결하지 못했습니다.|  
 |SQL_SUCCESS|연결이 성공했습니다. 출력 버퍼에서 클라이언트 연결 ID를 찾습니다.|  
@@ -68,7 +67,7 @@ ms.locfileid: "63128661"
 ## <a name="sql_copt_ss_user_data"></a>SQL_COPT_SS_USER_DATA  
  SQL_COPT_SS_USER_DATA 특성은 사용자 데이터 포인터를 검색합니다. 사용자 데이터는 클라이언트 소유의 메모리에 저장되고 연결별로 기록됩니다. 사용자 데이터 포인터가 설정되지 않은 경우 NULL 포인터인 SQL_UD_NOTSET가 반환됩니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|사용자 데이터 포인터가 설정되어 있지 않습니다.|  
 |다른 모든 값|사용자 데이터에 대한 포인터입니다.|  
@@ -86,8 +85,8 @@ ms.locfileid: "63128661"
  [SQLGetConnectAttr 함수](https://go.microsoft.com/fwlink/?LinkId=59347)   
  [ODBC API 구현 세부 정보](odbc-api-implementation-details.md)   
  [Transact-sql&#41;&#40;QUOTED_IDENTIFIER 설정](/sql/t-sql/statements/set-quoted-identifier-transact-sql)   
- [SET ANSI_NULLS&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
- [SET ANSI_PADDING&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
+ [Transact-sql&#41;&#40;ANSI_NULLS 설정](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
+ [Transact-sql&#41;&#40;ANSI_PADDING 설정](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
  [SET ANSI_WARNINGS&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)  
   
   

@@ -16,14 +16,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: c2f1c5a8ae897284f07c3fd6c65d9735099a41fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63042789"
 ---
 # <a name="lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial"></a>3단원: 시장 바구니 시나리오 구축(중급 데이터 마이닝 자습서)
-  
   [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 의 마케팅 부서에서 회사 웹 사이트를 개선하여 교차 판매 기회를 늘리고자 합니다. 사이트 업데이트의 일부로 이 부서에서는 고객의 온라인 시장 바구니에 이미 있는 다른 제품을 기반으로 고객이 구매할 제품을 예측하려고 합니다. 또한 구매될 가능성이 높은 항목이 함께 배열되도록 웹 사이트를 디자인하여 고객의 구매 행동을 더 잘 파악하고자 합니다. 이 부서에서는 데이터 마이닝이 이러한 종류의 *시장 바구니 분석* 에 특히 유용하다는 것을 알게 되었으며 데이터 마이닝 모델 개발을 요구해 왔습니다.  
   
  이 단원의 태스크를 마치면 고객의 거래 내역에서 항목 그룹을 보여 주는 마이닝 모델이 마련됩니다. 또한 이 마이닝 모델을 사용하여 고객이 구매할 수 있는 추가 항목을 예측할 수 있습니다.  
@@ -56,7 +55,7 @@ ms.locfileid: "63042789"
   
  [4 단원: 중간 데이터 마이닝 자습서 &#40;시퀀스 클러스터링 시나리오 빌드&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
- [5 단원: 중간 데이터 마이닝 자습서 &#40;신경망 및 로지스틱 회귀 모델 작성&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [5단원: 신경망 및 로지스틱 회귀 모델 작성&#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [기본 데이터 마이닝 자습서](../../2014/tutorials/basic-data-mining-tutorial.md)   

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e15353cd9f4c4a837fe5978d00259ad5460d50d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046628"
 ---
 # <a name="sqlputdata"></a>SQLPutData
@@ -31,8 +31,7 @@ ms.locfileid: "63046628"
  을 실행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하는 서버에 블록의 데이터를 제공 하는 SQLPutData 호출의 시퀀스를 취소 하면 버전 6.5 또는 이전 버전을 사용할 때 열의 값이 부분적으로 업데이트 됩니다. Sqlcancel `ntext`이 호출 `image` 될 때 참조 된 `text`, 또는 열은 중간 자리 표시자 값으로 설정 됩니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 및 이전 버전에 대한 연결을 지원하지 않습니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 및 이전 버전에 대한 연결을 지원하지 않습니다.  
   
 ## <a name="diagnostics"></a>진단  
  SQLPutData [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대해 하나의 Native CLIENT 특정 SQLSTATE가 있습니다.  
@@ -62,8 +61,7 @@ ms.locfileid: "63046628"
  자세한 내용은 [ODBC&#41;&#40;날짜 및 시간 향상 ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
   
 ## <a name="sqlputdata-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLPutData 지원  
- 
-  `SQLPutData`는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [ODBC&#41;&#40;LARGE CLR 사용자 정의 형식 ](../native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
+ `SQLPutData`는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [ODBC&#41;&#40;LARGE CLR 사용자 정의 형식 ](../native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLPutData 함수](https://go.microsoft.com/fwlink/?LinkId=59365)   

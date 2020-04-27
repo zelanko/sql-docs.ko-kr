@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 947ad59b8ac20862a8ef6da8ea527e2befb1be57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164322"
 ---
 # <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>방법: 보고서 디자이너에 데이터 처리 확장 프로그램 배포
@@ -27,7 +27,7 @@ ms.locfileid: "63164322"
   
 1.  준비 위치에서 보고서 디자이너 디렉터리로 어셈블리를 복사합니다. 보고서 디자이너 디렉터리의 기본 위치는 C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies입니다.  
   
-2.  어셈블리 파일이 복사된 후 RSReportDesigner.config 파일을 엽니다. RSReportDesigner.config 파일도 보고서 디자이너 디렉터리에 있습니다. 구성 파일에서 데이터 처리 확장 프로그램 어셈블리 파일에 대한 항목을 만들어야 합니다. 또는 메모장과 같은 간단한 텍스트 편집기를 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 사용 하 여 구성 파일을 열 수 있습니다. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]  
+2.  어셈블리 파일이 복사된 후 RSReportDesigner.config 파일을 엽니다. RSReportDesigner.config 파일도 보고서 디자이너 디렉터리에 있습니다. 구성 파일에서 데이터 처리 확장 프로그램 어셈블리 파일에 대한 항목을 만들어야 합니다. 구성 파일은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서 열거나 메모장과 같은 간단한 텍스트 편집기를 사용하여 열 수 있습니다.  
   
 3.  RSReportDesigner.config 파일에서 **Data** 요소를 찾습니다. 새로 만든 데이터 처리 확장 프로그램에 대한 항목이 다음 위치에 만들어져 있습니다.  
   
@@ -45,9 +45,7 @@ ms.locfileid: "63164322"
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, AssemblyName" />  
     ```  
   
-     
-  `Name`의 값은 데이터 처리 확장 프로그램의 고유한 이름입니다. 
-  `Type`의 값은 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 및 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 인터페이스를 구현하는 클래스의 정규화된 네임스페이스에 대한 항목과 그 다음에 어셈블리의 이름(.dll 파일 확장명 포함 안 함)이 따라오는 형태가 포함되며 쉼표로 구분된 목록입니다. 기본적으로 데이터 처리 확장 프로그램은 표시됩니다. 보고서 디자이너와 같은 사용자 인터페이스에서 확장을 숨기려면 특성을 `Visible` **extension** 요소에 추가 하 고로 `false`설정 합니다.  
+     `Name`의 값은 데이터 처리 확장 프로그램의 고유한 이름입니다. `Type`의 값은 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 및 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 인터페이스를 구현하는 클래스의 정규화된 네임스페이스에 대한 항목과 그 다음에 어셈블리의 이름(.dll 파일 확장명 포함 안 함)이 따라오는 형태가 포함되며 쉼표로 구분된 목록입니다. 기본적으로 데이터 처리 확장 프로그램은 표시됩니다. 보고서 디자이너와 같은 사용자 인터페이스에서 확장을 숨기려면 특성을 `Visible` **extension** 요소에 추가 하 고로 `false`설정 합니다.  
   
 5.  마지막으로 확장 프로그램에 대해 **FullTrust** 권한을 부여하는 사용자 지정 어셈블리에 대한 코드 그룹을 추가합니다. 기본 위치가 C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies인 rspreviewpolicy.config 파일에 코드 그룹을 추가하면 됩니다. 코드 그룹은 다음과 같습니다.  
   
@@ -64,8 +62,7 @@ ms.locfileid: "63164322"
     </CodeGroup>  
     ```  
   
- URL 멤버 자격은 데이터 처리 확장 프로그램에 대해 선택할 수 있는 다수의 멤버 자격 조건 중 하나일 뿐입니다. 
-  [!INCLUDE[ssRSversion2005](../../../includes/ssrsversion2005-md.md)]의 코드 액세스 보안에 대한 자세한 내용은 [보안 개발&#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)을 참조하세요.  
+ URL 멤버 자격은 데이터 처리 확장 프로그램에 대해 선택할 수 있는 다수의 멤버 자격 조건 중 하나일 뿐입니다. [!INCLUDE[ssRSversion2005](../../../includes/ssrsversion2005-md.md)]의 코드 액세스 보안에 대한 자세한 내용은 [보안 개발&#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)을 참조하세요.  
   
 ## <a name="generic-query-designer"></a>일반 쿼리 디자이너  
  보고서 디자이너는 사용자 지정 데이터 처리 확장 프로그램에서 사용할 수 있는 일반 쿼리 디자이너를 제공합니다. 이 디자이너는 쿼리 창과 결과 창의 두 창으로 구성되어 있습니다. 일반 디자이너를 사용하여 그래픽 인터페이스에서 지원되지 않는 쿼리를 작성할 수 있습니다. 일반 쿼리 디자이너는 그래픽 쿼리 디자이너와 달리 쿼리 구문을 확인하거나 쿼리를 재구성하지 않습니다.  

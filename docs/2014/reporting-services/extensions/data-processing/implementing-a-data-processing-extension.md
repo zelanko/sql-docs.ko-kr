@@ -16,28 +16,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2efc74fa2ba84335fcb5e03b42125fb9c6782f43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164114"
 ---
 # <a name="implementing-a-data-processing-extension"></a>데이터 처리 확장 프로그램 구현
-  
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 데이터 처리 확장 프로그램을 통해 데이터 원본에 연결하고 데이터를 검색할 수 있습니다. 이 프로그램은 데이터 원본과 데이터 세트을 연결하는 역할도 합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]데이터 처리 확장 프로그램은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 데이터 공급자 인터페이스의 하위 집합 다음에 모델링 됩니다.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 데이터 처리 확장 프로그램을 통해 데이터 원본에 연결하고 데이터를 검색할 수 있습니다. 이 프로그램은 데이터 원본과 데이터 세트을 연결하는 역할도 합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 데이터 공급자 인터페이스의 하위 집합을 본떠서 만든 것입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [데이터 처리 확장 프로그램 개요](data-processing-extensions-overview.md)  
- 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]용 사용자 지정 데이터 처리 확장 프로그램을 작성하는 방법을 소개합니다.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]용 사용자 지정 데이터 처리 확장 프로그램을 작성하는 방법을 소개합니다.  
   
  [데이터 처리 확장 프로그램 구현 준비](preparing-to-implement-a-data-processing-extension.md)  
- 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램을 구현할 때 및 특정 인터페이스를 구현해야 할 때 사용할 수 있는 인터페이스에 대해 설명합니다.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램을 구현할 때 및 특정 인터페이스를 구현해야 할 때 사용할 수 있는 인터페이스에 대해 설명합니다.  
   
- [데이터 처리 확장 프로그램 라이브러리 만들기](creating-a-data-processing-extension-library.md)  
- 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램에 대한 네임스페이스 할당에 대해 설명하고 데이터 처리 확장 프로그램을 라이브러리 DLL로 컴파일하는 방법에 대해 설명합니다.  
+ [데이터 처리 확장 라이브러리 만들기](creating-a-data-processing-extension-library.md)  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램에 대한 네임스페이스 할당에 대해 설명하고 데이터 처리 확장 프로그램을 라이브러리 DLL로 컴파일하는 방법에 대해 설명합니다.  
   
  [데이터 처리 확장 프로그램에 대한 Connection 클래스 구현](implementing-a-connection-class-for-a-data-processing-extension.md)  
  연결의 특성 및 데이터 처리 확장 프로그램에 대해 고유의 **Connection** 클래스를 구현하는 방법을 설명합니다.  
@@ -63,7 +59,7 @@ ms.locfileid: "63164114"
  완전히 구현된 데이터 처리 확장 프로그램 예는 [SQL Server Reporting Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=177889)를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [Reporting Services 확장 프로그램](../reporting-services-extensions.md)   
- [Reporting Services 확장 라이브러리](../reporting-services-extension-library.md)  
+ [Reporting Services 확장](../reporting-services-extensions.md)   
+ [Reporting Services 확장 프로그램 라이브러리](../reporting-services-extension-library.md)  
   
   

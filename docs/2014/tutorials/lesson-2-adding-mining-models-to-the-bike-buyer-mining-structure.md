@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: de65fb7a85154f607cd8f266faec4621cdc41476
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63131740"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>2단원: Bike Buyer 마이닝 구조에 마이닝 모델 추가
@@ -91,11 +91,9 @@ ADD MINING MODEL [<mining model name>]
 ## <a name="lesson-tasks"></a>단원 태스크  
  이 단원에서는 다음 태스크를 수행합니다.  
   
--   
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 의사 결정 트리 알고리즘을 사용하여 Bike Buyer 구조에 의사 결정 트리 마이닝 모델 추가  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] 의사 결정 트리 알고리즘을 사용하여 Bike Buyer 구조에 의사 결정 트리 마이닝 모델 추가  
   
--   
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 클러스터링 알고리즘을 사용하여 Bike Buyer 구조에 클러스터링 마이닝 모델 추가  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] 클러스터링 알고리즘을 사용하여 Bike Buyer 구조에 클러스터링 마이닝 모델 추가  
   
 -   모든 경우에 대한 결과를 보기 위해 두 모델에 아직 필터를 추가하지 않습니다.  
   
@@ -104,8 +102,7 @@ ADD MINING MODEL [<mining model name>]
   
 #### <a name="to-add-a-decision-tree-mining-model"></a>의사 결정 트리 마이닝 모델을 추가하려면  
   
-1.  
-  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX** 를 클릭하여 쿼리 편집기와 비어 있는 새 쿼리를 엽니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX** 를 클릭하여 쿼리 편집기와 비어 있는 새 쿼리를 엽니다.  
   
 2.  ALTER MINING STRUCTURE 문의 일반적인 예를 빈 쿼리에 복사합니다.  
   
@@ -115,7 +112,7 @@ ADD MINING MODEL [<mining model name>]
     <mining structure name>   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     [Bike Buyer]  
@@ -127,7 +124,7 @@ ADD MINING MODEL [<mining model name>]
     <mining model name>   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     Decision Tree  
@@ -139,7 +136,7 @@ ADD MINING MODEL [<mining model name>]
     <mining model columns>,  
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     (  
@@ -167,7 +164,7 @@ ADD MINING MODEL [<mining model name>]
     USING <algorithm name>( <algorithm parameters> )   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     Using Microsoft_Decision_Trees  
@@ -200,8 +197,7 @@ ADD MINING MODEL [<mining model name>]
     WITH DRILLTHROUGH  
     ```  
   
-7.  
-  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
+7.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
 8.  다른 이름 **으로 저장** 대화 상자에서 해당 폴더로 이동한 다음 파일 `DT_Model.dmx`이름을로 합니다.  
   
@@ -222,7 +218,7 @@ ADD MINING MODEL [<mining model name>]
     <mining structure name>   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     [Bike Buyer]  
@@ -234,7 +230,7 @@ ADD MINING MODEL [<mining model name>]
     <mining model>   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     Clustering Model  
@@ -255,7 +251,7 @@ ADD MINING MODEL [<mining model name>]
     USING <algorithm name>( <algorithm parameters> )  
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     USING Microsoft_Clustering  
@@ -269,8 +265,7 @@ ADD MINING MODEL [<mining model name>]
     USING Microsoft_Clustering   
     ```  
   
-7.  
-  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
+7.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
 8.  다른 이름 **으로 저장** 대화 상자에서 해당 폴더로 이동한 다음 파일 `Clustering_Model.dmx`이름을로 합니다.  
   

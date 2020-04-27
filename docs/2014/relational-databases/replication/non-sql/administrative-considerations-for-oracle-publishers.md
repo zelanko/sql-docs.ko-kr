@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42791ed9e60ad633ee1331dfc8326d58c0546000
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022560"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Oracle 게시자에 대한 관리 고려 사항
@@ -64,7 +64,7 @@ ms.locfileid: "63022560"
   
 ## <a name="see-also"></a>참고 항목  
  [Oracle 게시자 구성](configure-an-oracle-publisher.md)   
- [Oracle 게시자에 대한 디자인 고려 사항 및 제한 사항](design-considerations-and-limitations-for-oracle-publishers.md)   
+ [Oracle 게시자에 대 한 디자인 고려 사항 및 제한 사항](design-considerations-and-limitations-for-oracle-publishers.md)   
  [Oracle 게시 개요](oracle-publishing-overview.md)  
   
   

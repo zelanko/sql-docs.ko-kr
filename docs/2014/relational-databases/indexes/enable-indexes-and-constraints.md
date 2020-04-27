@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7d68f329aecdd1284bac311db4139470bba55e41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162386"
 ---
 # <a name="enable-indexes-and-constraints"></a>인덱스 및 제약 조건 활성화
@@ -41,9 +41,9 @@ ms.locfileid: "63162386"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   인덱스를 다시 작성한 후에 해당 인덱스를 비활성화하여 비활성화된 제약 조건은 수동으로 활성화해야 합니다. 연관된 인덱스를 다시 작성하여 PRIMARY KEY 및 UNIQUE 제약 조건을 활성화합니다. PRIMARY KEY 또는 UNIQUE 제약 조건을 참조하는 FOREIGN KEY 제약 조건을 활성화하기 전에 이 인덱스를 다시 작성(활성화)해야 합니다. ALTER TABLE CHECK CONSTRAINT 문을 사용하여 FOREIGN KEY 제약 조건을 활성화합니다.  
   
@@ -68,12 +68,12 @@ ms.locfileid: "63162386"
     |DROP INDEX|동작이 성공합니다.|동작이 성공합니다.|  
     |CREATE INDEX WITH DROP_EXISTING|동작이 실패합니다.|동작이 성공합니다.|  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다. DBCC DBREINDEX를 사용하는 경우 사용자는 테이블의 소유자이거나 **sysadmin** 고정 서버 역할 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-enable-a-disabled-index"></a>비활성화된 인덱스를 활성화하려면  
   
@@ -103,7 +103,7 @@ ms.locfileid: "63162386"
   
  **인덱스 다시 작성** 대화 상자에는 다음 정보가 표시됩니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-enable-a-disabled-index-using-alter-index"></a>ALTER INDEX를 사용하여 비활성화된 인덱스를 활성화하려면  
   

@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9525ef65973baa38ae19ba4681e4a93f949c004a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63071824"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저 만들기
@@ -24,8 +24,7 @@ ms.locfileid: "63071824"
   
 -   ATOMIC 블록 자세한 내용은 [Atomic Blocks](atomic-blocks-in-native-procedures.md)을(를) 참조하십시오.  
   
--   고유하게 컴파일된 저장 프로시저에서 매개 변수와 변수에 대한 `NOT NULL` 제약 조건. 
-  `NULL` 값을 `NOT NULL`로 선언된 매개 변수 또는 변수에 할당할 수 없습니다. 자세한 내용은 [DECLARE @local_variable&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)을 참조하세요.  
+-   고유하게 컴파일된 저장 프로시저에서 매개 변수와 변수에 대한 `NOT NULL` 제약 조건. `NULL` 값을 `NOT NULL`로 선언된 매개 변수 또는 변수에 할당할 수 없습니다. 자세한 내용은 [DECLARE @local_variable&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)을 참조하세요.  
   
 -   고유하게 컴파일된 저장 프로시저의 스키마 바인딩  
   
@@ -54,25 +53,21 @@ go
   
  코드 샘플에서 `NATIVE_COMPILATION`은 이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저가 고유하게 컴파일된 저장 프로시저임을 나타냅니다. 다음 옵션이 필요합니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
-|`SCHEMABINDING`|고유하게 컴파일된 저장 프로시저는 참조하는 개체의 스키마에 바인딩되어야 합니다. 이는 프로시저에서 참조하는 테이블을 삭제할 수 없음을 의미합니다. 프로시저에서 참조 되는 테이블은 해당 스키마 이름을 포함 해야 하며 쿼리에\*와일드 카드 ()를 사용할 수 없습니다. 
-  `SCHEMABINDING`은 이 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 고유하게 컴파일된 저장 프로시저에 대해서만 지원됩니다.|  
+|`SCHEMABINDING`|고유하게 컴파일된 저장 프로시저는 참조하는 개체의 스키마에 바인딩되어야 합니다. 이는 프로시저에서 참조하는 테이블을 삭제할 수 없음을 의미합니다. 프로시저에서 참조 되는 테이블은 해당 스키마 이름을 포함 해야 하며 쿼리에\*와일드 카드 ()를 사용할 수 없습니다. `SCHEMABINDING`은 이 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 고유하게 컴파일된 저장 프로시저에 대해서만 지원됩니다.|  
 |`EXECUTE AS`|고유하게 컴파일된 저장 프로시저는 기본 실행 컨텍스트인 `EXECUTE AS CALLER`를 지원하지 않습니다. 따라서 실행 컨텍스트를 지정해야 합니다. `EXECUTE AS OWNER` `EXECUTE AS` *사용자*및 `EXECUTE AS SELF` 옵션이 지원 됩니다.|  
 |`BEGIN ATOMIC`|고유하게 컴파일된 저장 프로시저의 본문은 단 하나의 ATOMIC 블록으로 구성되어야 합니다. ATOMIC 블록은 저장 프로시저의 원자성 실행을 보장합니다. 프로시저가 활성 트랜잭션의 컨텍스트 외부에서 호출되면 새 트랜잭션을 시작하며 ATOMIC 블록의 끝에서 커밋합니다. 고유하게 컴파일된 저장 프로시저의 ATOMIC 블록에는 다음과 같은 두 가지 필수 옵션이 있습니다.<br /><br /> `TRANSACTION ISOLATION LEVEL`. 지원 되는 격리 수준에 대 한 [트랜잭션 격리 수준](../../database-engine/transaction-isolation-levels.md) 을 참조 하세요.<br /><br /> `LANGUAGE`. 저장 프로시저의 언어는 사용 가능한 언어 또는 언어 별칭 중 하나로 설정되어야 합니다.|  
   
- 
-  `EXECUTE AS` 및 Windows 로그인과 관련하여 `EXECUTE AS`를 통해 수행된 가장 때문에 오류가 발생할 수 있습니다. 사용자 계정이 Windows 인증을 사용하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 사용되는 서비스 계정과 Windows 로그인의 도메인 간에는 완전 신뢰 관계가 있어야 합니다. 완전 신뢰가 없는 경우 고유 하 게 컴파일된 저장 프로시저를 만들 때 다음과 같은 오류 메시지가 반환 됩니다. 메시지 15404, Windows NT 그룹/사용자 ' 사용자 이름 '에 대 한 정보를 가져올 수 없습니다. 오류 코드 0x5.  
+ `EXECUTE AS` 및 Windows 로그인과 관련하여 `EXECUTE AS`를 통해 수행된 가장 때문에 오류가 발생할 수 있습니다. 사용자 계정이 Windows 인증을 사용하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 사용되는 서비스 계정과 Windows 로그인의 도메인 간에는 완전 신뢰 관계가 있어야 합니다. 완전 신뢰가 없는 경우 고유 하 게 컴파일된 저장 프로시저를 만들 때 다음과 같은 오류 메시지가 반환 됩니다. 메시지 15404, Windows NT 그룹/사용자 ' 사용자 이름 '에 대 한 정보를 가져올 수 없습니다. 오류 코드 0x5.  
   
  이 오류를 해결하려면 다음 중 하나를 사용합니다.  
   
 -   Windows 사용자와 동일한 도메인에 있는 계정을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스에 사용합니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 네트워크 서비스 또는 로컬 시스템과 같은 시스템 계정을 사용하는 경우 해당 컴퓨터가 Windows 사용자가 포함된 도메인에서 트러스트되어야 합니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 네트워크 서비스 또는 로컬 시스템과 같은 시스템 계정을 사용하는 경우 해당 컴퓨터가 Windows 사용자가 포함된 도메인에서 트러스트되어야 합니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용합니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용합니다.  
   
  고유하게 컴파일된 저장 프로시저를 만들 때 오류 15517이 나타날 수도 있습니다. 자세한 내용은 [MSSQLSERVER_15517](../errors-events/mssqlserver-15517-database-engine-error.md)를 참조 하세요.  
   
@@ -115,6 +110,6 @@ go
  이 방법의 장점은 애플리케이션이 오프라인으로 전환되지 않는다는 것입니다. 하지만 참조를 유지하고 참조가 항상 최신 버전의 저장 프로시저를 가리키는지 확인하는 데 더 많은 작업이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [고유하게 컴파일된 저장 프로시저](natively-compiled-stored-procedures.md)  
+ [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)  
   
   

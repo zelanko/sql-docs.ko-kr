@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 93698be4738ef2a28c79581d0957f695b036c911
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990635"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 스토리지 구성
@@ -24,8 +24,7 @@ ms.locfileid: "62990635"
  데이터베이스의 메모리 최적화 내구성 있는 테이블의 메모리 내 크기를 측정하려면 [메모리 최적화 테이블에 필요한 메모리 예측](memory-optimized-tables.md) 의 정보를 사용합니다. 인덱스가 메모리 최적화 테이블에 유지되지 않으므로 인덱스 크기를 포함하지 마세요. 크기를 결정했으면 내구성이 있는 메모리 내 테이블 크기의 4배에 해당하는 디스크 공간을 제공해야 합니다.  
   
 ## <a name="storage-performance"></a>스토리지 성능  
- 
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 는 작업 처리량을 크게 증가시킬 수 있습니다. 따라서 IO가 병목 상태가 아니어야 합니다.  
+ [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 는 작업 처리량을 크게 증가시킬 수 있습니다. 따라서 IO가 병목 상태가 아니어야 합니다.  
   
 -   디스크 기반 테이블을 메모리 최적화 테이블에 마이그레이션하는 경우 트랜잭션 로그가 증가된 트랜잭션 로그 작업을 지원할 수 있는 스토리지 미디어에 있어야 합니다. 예를 들어 스토리지 미디어가 100MB/초로 트랜잭션 로그 작업을 지원하고 메모리 최적화 테이블이 5배 뛰어난 성능을 발휘하는 경우 트랜잭션 로그의 스토리지 미디어는 트랜잭션 로그 작업에 성능 병목 상태가 발생하지 않도록 5배의 성능 향상을 지원할 수 있어야 합니다.  
   
@@ -38,6 +37,6 @@ ms.locfileid: "62990635"
 -   짝수 개의 스핀들이 있는 경우 컨테이너 개수의 두 배를 만들어야 하고 각 쌍은 같은 스핀들에 매핑되어야 합니다. 이는 IOPS 및 스토리지를 전파하는 데 필요합니다. 자세한 내용은 메모리 액세스에 [최적화 된 파일 그룹](the-memory-optimized-filegroup.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 최적화 개체에 대한 스토리지 만들기 및 관리](creating-and-managing-storage-for-memory-optimized-objects.md)  
+ [메모리 액세스에 최적화된 개체의 스토리지 만들기 및 관리](creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

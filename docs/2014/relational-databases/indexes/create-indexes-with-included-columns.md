@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c0c6449082f1c5ca016cfdb0a0f18430cf74731
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63156816"
 ---
 # <a name="create-indexes-with-included-columns"></a>포괄 열을 사용하여 인덱스 만들기
@@ -43,37 +43,35 @@ ms.locfileid: "63156816"
   
 -   **시작하기 전 주의 사항:**  
   
-     [디자인 권장 사항](#DesignRecs)  
+     [디자인 권장 구성](#DesignRecs)  
   
      [제한 사항](#Restrictions)  
   
      [보안](#Security)  
   
--   **다음을 사용 하 여 키가 아닌 열이 있는 인덱스를 만들려면**  
+-   **키가 아닌 열이 있는 인덱스를 만들려면:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="DesignRecs"></a> 디자인 권장 구성  
+###  <a name="design-recommendations"></a><a name="DesignRecs"></a>디자인 권장 사항  
   
 -   검색 및 조회에 사용된 열만 키 열이 되도록 인덱스 키 크기가 큰 비클러스터형 인덱스를 다시 디자인합니다. 쿼리를 포함한 다른 모든 열을 키가 아닌 열로 만듭니다. 이 방법을 통해 쿼리를 포함하는 데 필요한 모든 열을 가지게 되지만 인덱스 키 자체는 작으며 효과적입니다.  
   
 -   비클러스터형 인덱스에 키가 아닌 열을 포함하여 현재 인덱스 크기 제한인 최대 16개의 키 열 및 최대 900바이트의 인덱스 키 크기를 초과하지 않게 할 수 있습니다. 인덱스 키 열의 수 또는 인덱스 키 크기를 계산할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 키가 아닌 열은 계산하지 않습니다.  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   키가 아닌 열은 비클러스터형 인덱스에 대해서만 정의할 수 있습니다.  
   
--   
-  `text`, `ntext` 및 `image`를 제외한 모든 데이터 형식을 키가 아닌 열로 사용할 수 있습니다.  
+-   `text`, `ntext` 및 `image`를 제외한 모든 데이터 형식을 키가 아닌 열로 사용할 수 있습니다.  
   
 -   결정적이면서 정확하거나 정확하지 않은 계산 열은 키가 아닌 열이 될 수 있습니다. 자세한 내용은 [Indexes on Computed Columns](indexes-on-computed-columns.md)을 참조하세요.  
   
--   
-  `image`, `ntext` 및 `text` 데이터 형식에서 파생된 계산 열은 계산 열 데이터 형식이 키가 아닌 인덱스 열로 허용되는 한 키가 아닌 열이 될 수 있습니다.  
+-   `image`, `ntext` 및 `text` 데이터 형식에서 파생된 계산 열은 계산 열 데이터 형식이 키가 아닌 인덱스 열로 허용되는 한 키가 아닌 열이 될 수 있습니다.  
   
 -   해당 테이블의 인덱스를 먼저 삭제하지 않는 경우 키가 아닌 열을 테이블에서 삭제할 수 없습니다.  
   
@@ -81,15 +79,14 @@ ms.locfileid: "63156816"
   
     -   열의 Null 허용 여부를 NOT NULL에서 NULL로 변경합니다.  
   
-    -   
-  `varchar`, `nvarchar` 또는 `varbinary` 열의 길이를 늘립니다.  
+    -   `varchar`, `nvarchar` 또는 `varbinary` 열의 길이를 늘립니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>키가 아닌 열이 있는 인덱스를 만들려면  
   
@@ -99,7 +96,7 @@ ms.locfileid: "63156816"
   
 3.  더하기 기호를 클릭하여 키가 아닌 열이 있는 인덱스를 만들 테이블을 확장합니다.  
   
-4.  **인덱스** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 인덱스**를 가리킨 다음, **비클러스터형 인덱스...** 를 선택합니다.  
+4.  **인덱스** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **새 인덱스**를 가리킨 다음 **비클러스터형 인덱스**...를 선택 합니다.  
   
 5.  **새 인덱스** 대화 상자의 **일반** 페이지에서 **인덱스 이름** 상자에 새 인덱스의 이름을 입력합니다.  
   
@@ -117,7 +114,7 @@ ms.locfileid: "63156816"
   
 12. **새 인덱스** 대화 상자에서 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>키가 아닌 열이 있는 인덱스를 만들려면  
   

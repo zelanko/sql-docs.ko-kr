@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 744e7a10c9c4dcd776d58b6234749f2be5aa1479
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63036236"
 ---
 # <a name="rename-indexes"></a>인덱스 이름 바꾸기
@@ -38,17 +38,17 @@ ms.locfileid: "63036236"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
  테이블에서 PRIMARY KEY 또는 UNIQUE 제약 조건을 만들 때 제약 조건과 이름이 같은 인덱스가 테이블에 자동으로 만들어집니다. 인덱스 이름은 테이블에서 고유해야 하므로 테이블에서 기존의 PRIMARY KEY 또는 UNIQUE 제약 조건과 같은 이름으로 인덱스를 만들거나 인덱스 이름을 같은 이름으로 바꿀 수 없습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  인덱스에 대한 ALTER 사용 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-rename-an-index-by-using-the-table-designer"></a>테이블 디자이너를 사용하여 인덱스 이름을 바꾸려면  
   
@@ -82,7 +82,7 @@ ms.locfileid: "63036236"
   
 6.  인덱스의 새 이름을 입력하고 Enter 키를 누릅니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-rename-an-index"></a>인덱스 이름을 바꾸려면  
   

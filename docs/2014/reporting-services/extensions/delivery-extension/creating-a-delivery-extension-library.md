@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 133d97cc2d4c04e147d5f4a88c13674429f5c784
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164902"
 ---
 # <a name="creating-a-delivery-extension-library"></a>배달 확장 프로그램 라이브러리 만들기
@@ -43,16 +43,14 @@ namespace CompanyName.ExtensionName
    ...  
 ```  
   
- 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 배달 확장 프로그램을 컴파일할 때 배달 확장 프로그램 인터페이스 및 클래스가 포함된 Microsoft.ReportingServices.Interfaces.dll에 대한 참조를 컴파일러에 제공해야 합니다. 
-  <xref:Microsoft.ReportingServices.Interfaces> 네임스페이스는 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 인터페이스, <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 인터페이스 등을 구현하는 데 필요합니다. 예를 들어 C#으로 작성된 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 배달 확장 프로그램을 구현할 코드가 포함된 모든 파일이 확장명 .cs로 단일 디렉터리에 있는 경우 해당 디렉터리에서 다음 명령을 실행하여 CompanyName.ExtensionName.dll에 저장된 파일을 컴파일합니다.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 배달 확장 프로그램을 컴파일할 때 배달 확장 프로그램 인터페이스 및 클래스가 포함된 Microsoft.ReportingServices.Interfaces.dll에 대한 참조를 컴파일러에 제공해야 합니다. <xref:Microsoft.ReportingServices.Interfaces> 네임스페이스는 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 인터페이스, <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 인터페이스 등을 구현하는 데 필요합니다. 예를 들어 C#으로 작성된 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 배달 확장 프로그램을 구현할 코드가 포함된 모든 파일이 확장명 .cs로 단일 디렉터리에 있는 경우 해당 디렉터리에서 다음 명령을 실행하여 CompanyName.ExtensionName.dll에 저장된 파일을 컴파일합니다.  
   
 ```csharp  
 csc /t:library /out:CompanyName.ExtensionName.dll *.cs /r:System.dll   
 /r:Microsoft.ReportingServices.Interfaces.dll  
 ```  
   
- 다음 코드 예제에서는 확장명이 .vb 인 파일에 대해 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 사용 되는 명령을 보여 줍니다.  
+ 다음 코드 예제에서는 확장명 .vb인 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 파일에 대해 사용되는 명령을 보여 줍니다.  
   
 ```vb  
 vbc /t:library /out:CompanyName.ExtensionName.dll *.vb /r:System.dll   
@@ -60,9 +58,7 @@ vbc /t:library /out:CompanyName.ExtensionName.dll *.vb /r:System.dll
 ```  
   
 > [!NOTE]  
->  
-  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]를 사용하여 배달 확장 프로그램을 디자인, 개발 및 빌드할 수도 있습니다. 
-  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서 어셈블리를 개발하는 방법은 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 설명서를 참조하십시오.  
+>  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]를 사용하여 배달 확장 프로그램을 디자인, 개발 및 빌드할 수도 있습니다. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서 어셈블리를 개발하는 방법은 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 설명서를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services 확장 프로그램](../reporting-services-extensions.md)   

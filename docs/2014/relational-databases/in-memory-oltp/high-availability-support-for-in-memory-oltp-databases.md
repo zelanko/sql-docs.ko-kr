@@ -11,19 +11,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 37c719beb625a533c2d8f279a8500365c4786c05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990580"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>메모리 내 OLTP 데이터베이스에 대한 고가용성 지원
-  원시 컴파일 저장 프로시저가 있거나 없이 메모리 최적화 테이블을 포함하는 데이터베이스는 AlwaysOn 가용성 그룹에서 완전히 지원됩니다.  
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 개체를 포함하는 데이터베이스의 구성과 지원 방식은 이러한 개체를 포함하지 않는 데이터베이스의 경우와 차이가 없습니다.  
+  원시 컴파일 저장 프로시저가 있거나 없이 메모리 최적화 테이블을 포함하는 데이터베이스는 AlwaysOn 가용성 그룹에서 완전히 지원됩니다.  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 개체를 포함하는 데이터베이스의 구성과 지원 방식은 이러한 개체를 포함하지 않는 데이터베이스의 경우와 차이가 없습니다.  
   
 ## <a name="alwayson-availability-groups-and-in-memory-oltp-databases"></a>AlwaysOn 가용성 그룹 및 메모리 내 OLTP 데이터베이스  
- 
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 구성 요소를 통한 데이터베이스 구성에는 다음과 같은 장점이 있습니다.  
+ [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 구성 요소를 통한 데이터베이스 구성에는 다음과 같은 장점이 있습니다.  
   
 -   **완전히 통합 된 환경**   
     동기 및 비동기 보조 복제본에 대해 동일한 지원 수준으로 동일한 마법사를 사용하여 메모리 최적화 테이블을 포함하는 데이터베이스를 구성할 수 있습니다. 또한 SQL Server Management Studio의 친숙한 AlwaysOn 대시보드를 사용하여 상태 모니터링이 제공됩니다.  

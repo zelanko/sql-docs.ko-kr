@@ -11,15 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b66a0c9efc94d648eba2f4d4f8cff779def413fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63131802"
 ---
 # <a name="overview-smo"></a>개요(SMO)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SMO (management Objects)는의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]프로그래밍 방식 관리를 위해 디자인 된 개체입니다. SMO를 사용하면 사용자 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 애플리케이션을 빌드할 수 있습니다. 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 관리할 수 있는 강력하고 확장성 있는 애플리케이션이지만 SMO 애플리케이션을 사용할 때 더 나은 결과를 얻을 수 있는 경우도 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SMO (management Objects)는의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]프로그래밍 방식 관리를 위해 디자인 된 개체입니다. SMO를 사용하면 사용자 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 애플리케이션을 빌드할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 관리할 수 있는 강력하고 확장성 있는 애플리케이션이지만 SMO 애플리케이션을 사용할 때 더 나은 결과를 얻을 수 있는 경우도 있습니다.  
   
  예를 들어 새로운 사용자의 요구 사항을 충족하고 교육 비용을 줄이기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 태스크를 제어하는 사용자 애플리케이션을 단순하게 만들어야 하는 경우, 또는 사용자 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 만들어야 하거나 인덱스를 효율적으로 생성하고 모니터링하는 애플리케이션을 만들어야 하는 경우 SMO 애플리케이션을 사용할 수 있습니다. 또한 타사 하드웨어나 소프트웨어를 데이터베이스 관리 애플리케이션에 원활하게 통합하기 위해 SMO 애플리케이션을 사용할 수도 있습니다.  
   
@@ -31,18 +30,13 @@ ms.locfileid: "63131802"
   
 -   캐시된 개체 모델 및 최적화된 개체 인스턴스 생성. 개체가 명확하게 참조될 때만 로드됩니다. 개체 속성은 개체가 만들어질 때 부분적으로 로드되며 로드되지 않은 나머지 개체와 속성은 직접 참조될 때 로드됩니다.  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 일괄 처리 실행. 문을 일괄 처리하므로 네트워크 성능이 향상됩니다.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 일괄 처리 실행. 문을 일괄 처리하므로 네트워크 성능이 향상됩니다.  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 캡처. 모든 작업을 캡처하여 스크립트로 저장할 수 있습니다. 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 이 기능을 사용하면 작업을 바로 실행하는 대신 스크립트로 만들 수 있습니다.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 캡처. 모든 작업을 캡처하여 스크립트로 저장할 수 있습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 이 기능을 사용하면 작업을 바로 실행하는 대신 스크립트로 만들 수 있습니다.  
   
--   WMI 공급자로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 관리. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 프로그래밍 방식으로 시작, 중지 및 일시 중지할 수 있습니다.  
+-   WMI 공급자로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 관리. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 프로그래밍 방식으로 시작, 중지 및 일시 중지할 수 있습니다.  
   
--   고급 스크립팅. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 인스턴스에 다른 개체에 대한 관계를 설명하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 다시 만들기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스크립트를 생성할 수 있습니다.  
+-   고급 스크립팅. [!INCLUDE[tsql](../../includes/tsql-md.md)] 인스턴스에 다른 개체에 대한 관계를 설명하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 다시 만들기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스크립트를 생성할 수 있습니다.  
   
 -   URN(Unique Resource Names) 사용. URN을 사용하여 SMO 개체의 인스턴스를 만들거나 참조할 수 있습니다.  
   
@@ -58,33 +52,28 @@ ms.locfileid: "63131802"
   
 -   데이터베이스의 읽기 전용 복사본을 만들기 위한 스냅샷 데이터베이스  
   
--   
-  [!INCLUDE[ssSB](../../includes/sssb-md.md)]의 메시지 기반 통신 지원. 자세한 내용은 [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)을 참조하세요.  
+-   [!INCLUDE[ssSB](../../includes/sssb-md.md)]의 메시지 기반 통신 지원. 자세한 내용은 [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)을 참조하세요.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 개체의 복수 이름에 대한 동의어 지원. 자세한 내용은 [동의어 &#40;데이터베이스 엔진&#41;](../synonyms/synonyms-database-engine.md)를 참조 하세요.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 개체의 복수 이름에 대한 동의어 지원. 자세한 내용은 [동의어 &#40;데이터베이스 엔진&#41;](../synonyms/synonyms-database-engine.md)를 참조 하세요.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 전자 메일 서버, 전자 메일 프로필 및 전자 메일 계정을 생성하는 데이터베이스 메일 관리 기능. 자세한 내용은 [데이터베이스 메일](../database-mail/database-mail.md)을 참조하세요.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 전자 메일 서버, 전자 메일 프로필 및 전자 메일 계정을 생성하는 데이터베이스 메일 관리 기능. 자세한 내용은 [데이터베이스 메일](../database-mail/database-mail.md)을 참조하세요.  
   
 -   연결 정보를 등록하기 위한 등록된 서버 지원. 자세한 내용은 [Register Servers](../../ssms/register-servers/register-servers.md)을 참조하세요.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트의 추적 및 재생. 자세한 내용은 [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md), [SQL Trace](../sql-trace/sql-trace.md), [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)및 [Extended Events](../extended-events/extended-events.md)를 참조하세요.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트의 추적 및 재생. 자세한 내용은 [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md), [SQL Trace](../sql-trace/sql-trace.md), [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)및 [Extended Events](../extended-events/extended-events.md)를 참조하세요.  
   
 -   보안 제어를 위한 인증서와 키 지원. 자세한 내용은 [Encryption Hierarchy](../security/encryption/encryption-hierarchy.md)을 참조하세요.  
   
 -   DDL 이벤트 발생 시 기능을 추가하기 위한 DDL 트리거. 자세한 내용은 [DDL Triggers](../triggers/ddl-triggers.md)을(를) 참조하세요.  
   
- SMO 네임스페이스는 <xref:Microsoft.SqlServer.Management.Smo>입니다. SMO는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리로 구현됩니다. 이것은 SMO 개체를 사용하려면 먼저 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 버전 2.0의 공용 언어 런타임을 설치해야 한다는 의미입니다. 기본적으로 SMO 어셈블리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SDK 옵션과 함께 GAC(전역 어셈블리 캐시)에 설치됩니다. 어셈블리는 [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]에 있습니다. 자세한 내용은 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 설명서를 참조하십시오.  
+ SMO 네임스페이스는 <xref:Microsoft.SqlServer.Management.Smo>입니다. SMO는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리로 구현됩니다. 이것은 SMO 개체를 사용하려면 먼저 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 버전 2.0의 공용 언어 런타임을 설치해야 한다는 의미입니다. 기본적으로 SMO 어셈블리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SDK 옵션과 함께 GAC(전역 어셈블리 캐시)에 설치됩니다. 어셈블리는 [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]에 있습니다. 자세한 내용은 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 설명서를 참조하세요.  
   
 ## <a name="smo-classes"></a>SMO 클래스  
  SMO 클래스에는 인스턴스 클래스 및 유틸리티 클래스라는 두 개의 범주가 포함되어 있습니다.  
   
  **인스턴스 클래스**  
   
- 인스턴스 클래스는 서버, 데이터베이스, 테이블, 트리거 및 저장 프로시저와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 나타냅니다. 
-  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 인스턴스에 대한 연결을 설정하고 해당 인스턴스에 전송된 명령에 대한 캡처 모드를 제어하는 데 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클래스가 사용됩니다.  
+ 인스턴스 클래스는 서버, 데이터베이스, 테이블, 트리거 및 저장 프로시저와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 나타냅니다. <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 인스턴스에 대한 연결을 설정하고 해당 인스턴스에 전송된 명령에 대한 캡처 모드를 제어하는 데 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클래스가 사용됩니다.  
   
  SMO 인스턴스 개체는 데이터베이스 서버의 계층을 나타내는 계층을 형성합니다. 이 계층의 맨 위에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스가 있으며 그 아래에 데이터베이스가 있고 데이터베이스 아래에 테이블, 열, 트리거 등이 있습니다. 둘 이상의 열이 있는 테이블과 같이 한 부모가 여러 자식을 갖는 논리적 관계가 있는 경우 자식은 개체 컬렉션으로 나타납니다. 그렇지 않은 경우에는 자식이 개체로만 나타납니다.  
   
@@ -123,8 +112,7 @@ ms.locfileid: "63131802"
   
  SMO에서는 스크립팅 기능이 향상되어 `Scripter` 클래스로 이전되었습니다. 클래스 `Scripter` 는 종속성을 검색 하 고, 개체 간의 관계를 파악 하 고, 종속성 계층을 조작할 수 있도록 합니다. 기본 스크립팅 개체는 `Scripter` 개체입니다. 또한 종속성을 처리하고 진행 상태나 오류 이벤트에 응답하는 다양한 지원 개체가 있습니다.  
   
- 
-  `Scripter` 개체는 다음과 같은 고급 스크립팅 옵션을 지원합니다.  
+ `Scripter` 개체는 다음과 같은 고급 스크립팅 옵션을 지원합니다.  
   
 -   간단한 1단계 스크립팅(1단계로 스크립트 작성)  
   
@@ -171,18 +159,15 @@ ms.locfileid: "63131802"
   
  **페이지 확인**  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.DatabaseOptions.PageVerify%2A> 개체는 데이터베이스 페이지 확인 옵션을 나타냅니다.  
+ <xref:Microsoft.SqlServer.Management.Smo.DatabaseOptions.PageVerify%2A> 개체는 데이터베이스 페이지 확인 옵션을 나타냅니다.  
   
  **스냅샷 데이터베이스**  
   
- 스냅샷 데이터베이스는 특정 시점에 대한 지정된 데이터베이스의 읽기 전용 복사본입니다. 
-  <xref:Microsoft.SqlServer.Management.Smo.Database.IsDatabaseSnapshot%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Database> 속성을 사용하여 스냅샷 데이터베이스를 지정할 수 있습니다.  
+ 스냅샷 데이터베이스는 특정 시점에 대한 지정된 데이터베이스의 읽기 전용 복사본입니다. <xref:Microsoft.SqlServer.Management.Smo.Database.IsDatabaseSnapshot%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Database> 속성을 사용하여 스냅샷 데이터베이스를 지정할 수 있습니다.  
   
  **Service Broker**  
   
- 
-  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 및 해당 기능은 개체 그룹으로 나타납니다.  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] 및 해당 기능은 개체 그룹으로 나타납니다.  
   
  **향상된 인덱스 기능**  
   
@@ -191,12 +176,9 @@ ms.locfileid: "63131802"
 ## <a name="smo-and-sql-dmo"></a>SMO 및 SQL-DMO  
  SMO 개체 모델은 SQL-DMO를 대체합니다. SMO는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전을 지원합니다. 또한 SMO는 더 많은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 태스크를 지원하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 많은 새로운 기능을 포함합니다. SMO는 보다 효율적으로 디자인되었으며 더 많은 제어 기능을 제공합니다.  
   
- DMO 라이브러리는 COM 개체 모델이지만 SMO는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리로 구현됩니다. COM 구성 요소는 애플리케이션에 재사용 가능한 기능을 제공하는 라이브러리로서 관리되지 않는 애플리케이션 프로그래밍에서 사용됩니다. 
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 에 관리 코드 애플리케이션을 만들 수 있는 재사용 가능한 기능을 제공합니다.  
+ DMO 라이브러리는 COM 개체 모델이지만 SMO는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리로 구현됩니다. COM 구성 요소는 애플리케이션에 재사용 가능한 기능을 제공하는 라이브러리로서 관리되지 않는 애플리케이션 프로그래밍에서 사용됩니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 에 관리 코드 애플리케이션을 만들 수 있는 재사용 가능한 기능을 제공합니다.  
   
- 
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 기술로 전환되는 동안 애플리케이션 일부는 관리 코드로 작성하고 다른 일부는 비관리 코드로 작성할 수 있습니다. 
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 를 사용하면 주 Interop 어셈블리를 필요로 하는 COM 구성 요소와 상호 연결할 수 있습니다. SQL-DMO의 경우 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]기반 애플리케이션에서 호출될 수 있도록 런타임 래퍼가 필요합니다.  
+ [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 기술로 전환되는 동안 애플리케이션 일부는 관리 코드로 작성하고 다른 일부는 비관리 코드로 작성할 수 있습니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 를 사용하면 주 Interop 어셈블리를 필요로 하는 COM 구성 요소와 상호 연결할 수 있습니다. SQL-DMO의 경우 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]기반 애플리케이션에서 호출될 수 있도록 런타임 래퍼가 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [복제 관리 개체 개념](../replication/concepts/replication-management-objects-concepts.md)  

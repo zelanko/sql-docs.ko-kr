@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067731"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
@@ -27,17 +27,15 @@ ms.locfileid: "63067731"
 > [!NOTE]  
 >  큰 값 형식의 경우 모든 길이 매개 변수는 SQL_SS_LENGTH_UNLIMITED 값으로 반환됩니다.  
   
- 
-  `SQLColumns`는 정적 서버 커서에 대해 실행할 수 있습니다. 업데이트할 수 있는(동적 또는 키 집합) 커서에 대해 `SQLColumns`를 실행하려고 하면 커서 유형이 변경되었음을 나타내는 SQL_SUCCESS_WITH_INFO가 반환됩니다.  
+ `SQLColumns`는 정적 서버 커서에 대해 실행할 수 있습니다. 업데이트할 수 있는(동적 또는 키 집합) 커서에 대해 `SQLColumns`를 실행하려고 하면 커서 유형이 변경되었음을 나타내는 SQL_SUCCESS_WITH_INFO가 반환됩니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 *CatalogName* 매개 변수의 두 부분으로 구성된 이름인 *Linked_Server_Name.Catalog_Name*을 사용하여 연결된 서버의 테이블에 대한 정보를 보고할 수 있도록 지원합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 *CatalogName* 매개 변수의 두 부분으로 구성된 이름인 *Linked_Server_Name.Catalog_Name*을 사용하여 연결된 서버의 테이블에 대한 정보를 보고할 수 있도록 지원합니다.  
   
- ODBC 2의 경우. *x* 응용 프로그램은 *tablename*에서 와일드 카드 `SQLColumns` 를 사용 하지 않으며 이름이 *tablename* 과 일치 하 고 현재 사용자가 소유 하 고 있는 모든 테이블에 대 한 정보를 반환 합니다. 현재 사용자가 이름이 *tablename* 매개 변수와 일치 하는 테이블을 소유 하지 `SQLColumns` 않는 경우는 테이블 이름이 *tablename* 매개 변수와 일치 하는 다른 사용자가 소유 하는 모든 테이블에 대 한 정보를 반환 합니다. ODBC 2의 경우. ** 와일드 카드를 사용 하 `SQLColumns` 는 x 응용 프로그램은 이름이 *TableName*과 일치 하는 모든 테이블을 반환 합니다. ODBC 3의 경우. *x* 응용 `SQLColumns` 프로그램은 소유자 또는 와일드 카드 사용 여부에 관계 없이 이름이 *TableName* 과 일치 하는 모든 테이블을 반환 합니다.  
+ ODBC 2의 경우. *x* 응용 프로그램은 *tablename*에서 와일드 카드 `SQLColumns` 를 사용 하지 않으며 이름이 *tablename* 과 일치 하 고 현재 사용자가 소유 하 고 있는 모든 테이블에 대 한 정보를 반환 합니다. 현재 사용자가 이름이 *tablename* 매개 변수와 일치 하는 테이블을 소유 하지 `SQLColumns` 않는 경우는 테이블 이름이 *tablename* 매개 변수와 일치 하는 다른 사용자가 소유 하는 모든 테이블에 대 한 정보를 반환 합니다. ODBC 2의 경우. *x* 와일드 카드를 사용 하 `SQLColumns` 는 x 응용 프로그램은 이름이 *TableName*과 일치 하는 모든 테이블을 반환 합니다. ODBC 3의 경우. *x* 응용 `SQLColumns` 프로그램은 소유자 또는 와일드 카드 사용 여부에 관계 없이 이름이 *TableName* 과 일치 하는 모든 테이블을 반환 합니다.  
   
  다음 표에서는 결과 집합에서 반환되는 열을 나열합니다.  
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
 |DATA_TYPE|**VARCHAR (max)** 데이터 형식에 대 한 SQL_VARCHAR, SQL_VARBINARY 또는 SQL_WVARCHAR를 반환 합니다.|  
 |TYPE_NAME|**Varchar (max)**, **varbinary (max)** 및 **nvarchar (max)** 데이터 형식에 대해 "varchar", "varbinary" 또는 "nvarchar"를 반환 합니다.|  
@@ -74,13 +72,12 @@ ms.locfileid: "63067731"
  자세한 내용은 [ODBC&#41;&#40;날짜 및 시간 향상 ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
   
 ## <a name="sqlcolumns-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLColumns 지원  
- 
-  `SQLColumns`는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [ODBC&#41;&#40;LARGE CLR 사용자 정의 형식 ](../native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
+ `SQLColumns`는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [ODBC&#41;&#40;LARGE CLR 사용자 정의 형식 ](../native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>스파스 열에 대한 SQLColumns 지원  
  SQLColumns의 결과 집합에는 두 개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 특정 열이 추가 되었습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|`Smallint`|열이 스파스 열이면 SQL_TRUE이며 그렇지 않으면 SQL_FALSE입니다.|  
 |SS_IS_COLUMN_SET|`Smallint`|열이 `column_set` 열이면 SQL_TRUE이며 그렇지 않으면 SQL_FALSE입니다.|  

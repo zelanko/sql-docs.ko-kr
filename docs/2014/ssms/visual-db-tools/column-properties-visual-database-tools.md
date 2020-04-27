@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990200"
 ---
 # <a name="column-properties-visual-database-tools"></a>열 속성(Visual Database Tools)
-  열 속성 집합에는 테이블 디자이너(**** 데이터베이스에서만 사용 가능) 내 열 속성[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 탭에서 볼 수 있는 전체 집합과 서버 탐색기를 사용하여 속성 창에서 볼 수 있는 하위 집합이 있습니다.  
+  열 속성 집합에는 테이블 디자이너([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서만 사용 가능) 내 **열 속성** 탭에서 볼 수 있는 전체 집합과 서버 탐색기를 사용하여 속성 창에서 볼 수 있는 하위 집합이 있습니다.  
   
 > [!NOTE]  
 >  이 항목의 속성은 사전순 대신 범주별로 정렬됩니다.  
@@ -185,7 +185,6 @@ ms.locfileid: "62990200"
  열의 데이터 형식에 허용되는 크기(바이트)를 표시합니다. 예를 들어 `nchar` 데이터 형식의 길이가 10(문자 수)까지 허용되면 유니코드 문자 집합 크기는 20까지 허용됩니다.  
   
 > [!NOTE]  
->  
-  `varchar(max)` 데이터 형식의 길이는 각 행별로 다릅니다. sp_help은 `varchar(max)` 열 길이로 (-1)을 반환 합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 는 열 크기로 -1을 표시합니다.  
+>  `varchar(max)` 데이터 형식의 길이는 각 행별로 다릅니다. sp_help은 `varchar(max)` 열 길이로 (-1)을 반환 합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 는 열 크기로 -1을 표시합니다.  
   
   

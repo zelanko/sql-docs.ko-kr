@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63156838"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>데이터 액세스 애플리케이션에서 고유하게 컴파일된 저장 프로시저 호출
@@ -32,29 +32,23 @@ ms.locfileid: "63156838"
  SqlClient는 고유하게 컴파일된 저장 프로시저(CommandType.SchemaOnly)에서 반환되는 결과 집합에 대한 스키마 전용 정보 검색(메타데이터 검색)을 지원하지 않습니다. 대신 [sp_describe_first_result_set&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)를 사용하세요.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보다 이전 버전의 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client는 고유하게 컴파일된 저장 프로시저에서 반환되는 결과 집합에 대한 스키마 전용 정보 검색(메타데이터 검색)을 지원하지 않습니다. 대신 [sp_describe_first_result_set&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)를 사용하세요.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보다 이전 버전의 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client는 고유하게 컴파일된 저장 프로시저에서 반환되는 결과 집합에 대한 스키마 전용 정보 검색(메타데이터 검색)을 지원하지 않습니다. 대신 [sp_describe_first_result_set&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)를 사용하세요.  
   
  다음은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 ODBC 드라이버를 사용하여 고유하게 컴파일된 저장 프로시저를 호출할 때 적용되는 권장 사항입니다.  
   
  저장 프로시저를 한 번 호출하는 가장 효율적인 방법은 `SQLExecDirect` 및 ODBC CALL 절을 사용하여 직접 RPC 호출을 실행하는 것입니다. `EXECUTE` 문을 사용 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 하지 마십시오. 저장 프로시저를 두 번 이상 호출하는 경우에는 준비된 실행이 더 효율적입니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 저장 프로시저를 두 번 이상 호출하는 가장 효율적인 방법은 준비된 RPC 프로시저 호출을 사용하는 것입니다. 다음은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 ODBC 드라이버를 사용하여 준비된 RPC 호출을 수행하는 방법입니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 저장 프로시저를 두 번 이상 호출하는 가장 효율적인 방법은 준비된 RPC 프로시저 호출을 사용하는 것입니다. 다음은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 ODBC 드라이버를 사용하여 준비된 RPC 호출을 수행하는 방법입니다.  
   
 -   데이터베이스에 대한 연결을 엽니다.  
   
--   
-  `SQLBindParameter`를 사용하여 매개 변수를 바인딩합니다.  
+-   `SQLBindParameter`를 사용하여 매개 변수를 바인딩합니다.  
   
--   
-  `SQLPrepare.`을 사용하여 프로시저 호출을 준비합니다.  
+-   `SQLPrepare.`을 사용하여 프로시저 호출을 준비합니다.  
   
--   
-  `SQLExecute`를 사용하여 저장 프로시저를 여러 번 실행합니다.  
+-   `SQLExecute`를 사용하여 저장 프로시저를 여러 번 실행합니다.  
   
- 다음 코드 조각에서는 주문에 품목을 추가하는 저장 프로시저의 준비된 실행을 보여 줍니다. 
-  `SQLPrepare`는 한 번만 호출되고 `SQLExecute`는 프로시저가 실행될 때마다 한 번씩 여러 번 호출됩니다.  
+ 다음 코드 조각에서는 주문에 품목을 추가하는 저장 프로시저의 준비된 실행을 보여 줍니다. `SQLPrepare`는 한 번만 호출되고 `SQLExecute`는 프로시저가 실행될 때마다 한 번씩 여러 번 호출됩니다.  
   
 ```  
 // Bind parameters  
@@ -399,6 +393,6 @@ int _tmain() {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [고유하게 컴파일된 저장 프로시저](natively-compiled-stored-procedures.md)  
+ [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)  
   
   

@@ -15,14 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7a8d5f04808582bd56c106adce0df2c1f66aa77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62913728"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster"></a>SQL Server 장애 조치(Failover) 클러스터 업그레이드
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 모든 장애 조치(Failover) 클러스터 노드에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 및 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 장애 조치(Failover) 클러스터의 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 및 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]를 개별적으로 업그레이드할 수 있도록 지원합니다.  
   
  자세한 내용은 다음과 같습니다.  
@@ -43,12 +42,11 @@ ms.locfileid: "62913728"
   
 -   자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)](always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
   
-## <a name="upgrading-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다중 서브넷 장애 조치(Failover) 클러스터로 업그레이드  
+## <a name="upgrading-a-ssnoversion-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다중 서브넷 장애 조치(Failover) 클러스터로 업그레이드  
  다중 서브넷 장애 조치 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (failover) 클러스터를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다중 서브넷 장애 조치 (failover) 클러스터로 직접 업그레이드할 수 없습니다. 자세한 내용은 [SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드&#40;설치 프로그램&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [지원되는 버전 및 에디션 업그레이드](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
+ [지원 되는 버전 및 에디션 업그레이드](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [SQL Server 장애 조치 (Failover) 클러스터 인스턴스를 업그레이드 &#40;설정&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)   
  [Install SQL Server 2014 from the Command Prompt](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
   

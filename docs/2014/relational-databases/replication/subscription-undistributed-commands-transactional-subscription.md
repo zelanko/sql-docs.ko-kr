@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a1f957c417c5c63766dfbffa923edd6935d1eb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151487"
 ---
 # <a name="subscription-undistributed-commands-transactional-subscription-sql-server-2005-and-later"></a>구독, 배포되지 않은 명령(트랜잭션 구독, SQL Server 2005 이상)
@@ -31,7 +31,7 @@ ms.locfileid: "63151487"
   
 ## <a name="see-also"></a>참고 항목  
  [복제 모니터 시작](monitor/start-the-replication-monitor.md)   
- [복제 모니터로 성능 모니터링](monitor/monitor-performance-with-replication-monitor.md)   
+ [복제 모니터를 사용 하 여 성능 모니터링](monitor/monitor-performance-with-replication-monitor.md)   
  [복제 모니터링](monitoring-replication.md)  
   
   

@@ -18,21 +18,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3dd8d60c975efa1e0a230a08cc6b1ab1a9ce149b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62985747"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Reporting Services의 코드 액세스 보안
-  코드 액세스 보안은 증명 정보, 코드 그룹 및 명명된 권한 집합 등의 핵심 개념을 기반으로 합니다. 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 보고서 관리자, 보고서 디자이너 및 보고서 서버 구성 요소에는 각각 데이터, 배달, 렌더링 및 보안 확장 프로그램뿐만 아니라 사용자 지정 어셈블리에 대한 코드 액세스 보안을 구성하는 정책 파일이 있습니다. 다음 섹션에서는 코드 액세스 보안에 대한 개요를 제공합니다. 이 섹션에서 설명 하는 항목에 대 한 자세한 내용은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 설명서의 "보안 정책 모델"을 참조 하십시오.  
+  코드 액세스 보안은 증명 정보, 코드 그룹 및 명명된 권한 집합 등의 핵심 개념을 기반으로 합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 보고서 관리자, 보고서 디자이너 및 보고서 서버 구성 요소에는 각각 데이터, 배달, 렌더링 및 보안 확장 프로그램뿐만 아니라 사용자 지정 어셈블리에 대한 코드 액세스 보안을 구성하는 정책 파일이 있습니다. 다음 섹션에서는 코드 액세스 보안에 대한 개요를 제공합니다. 이 섹션에서 다루는 항목에 대한 자세한 내용은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 설명서의 “보안 정책 모델”을 참조하세요.  
   
  보고서 서버가 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 기술을 기반으로 빌드되어도 일반적인 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 애플리케이션과 보고서 서버는 상당히 다르기 때문에 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]는 코드 액세스 보안을 사용합니다. 일반적인 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 애플리케이션은 사용자 코드를 실행하지 않습니다. 반면 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 사용자가 보고서 정의 언어의 **Code** 요소를 사용하여 보고서 정의 파일에 대해 프로그래밍 작업을 수행하고 보고서에 사용할 특수화된 기능을 사용자 지정 어셈블리로 개발해 넣을 수 있도록 하는 확장 가능한 개방형 아키텍처를 사용합니다. 또한 개발자는 보고서 서버의 기능을 향상시키는 강력한 확장 프로그램을 설계하고 배포할 수 있습니다. 이러한 기능과 유연성으로 인해 가능한 한 강력한 보호 및 보안을 제공해야 합니다.  
   
- 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 개발자는 자신의 보고서에 임의의 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 어셈블리를 사용하고 전역 어셈블리 캐시에 배포된 어셈블리의 모든 기능을 기본적으로 호출할 수 있습니다. 보고서 서버에서는 보고서 식 및 로드된 사용자 지정 어셈블리에 대해 부여할 사용 권한만 제어할 수 있습니다. 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 사용자 지정 어셈블리에는 기본적으로 **실행** 전용 권한만 부여됩니다.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 개발자는 자신의 보고서에 임의의 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 어셈블리를 사용하고 전역 어셈블리 캐시에 배포된 어셈블리의 모든 기능을 기본적으로 호출할 수 있습니다. 보고서 서버에서는 보고서 식 및 로드된 사용자 지정 어셈블리에 대해 부여할 사용 권한만 제어할 수 있습니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 사용자 지정 어셈블리에는 기본적으로 **실행** 전용 권한만 부여됩니다.  
   
 ## <a name="evidence"></a>증명 정보  
  증명 정보는 CLR(공용 언어 런타임)이 코드 어셈블리에 대한 보안 정책을 확인하기 위해 사용하는 정보입니다. 증명 정보는 코드에 특정한 특징이 있음을 런타임에 알립니다. 증명 정보의 일반적인 형식에는 디지털 서명 및 어셈블리의 위치가 포함됩니다. 애플리케이션에 의미가 있는 다른 정보를 나타내도록 증명 정보를 사용자 지정 설계할 수도 있습니다.  
@@ -63,8 +60,7 @@ ms.locfileid: "62985747"
  명명된 권한 집합은 관리자가 코드 그룹에 연결할 수 있는 권한 집합입니다. 대부분의 명명된 권한 집합은 하나 이상의 권한, 이름 및 해당 권한 집합에 대한 설명으로 구성됩니다. 관리자는 명명된 권한 집합을 사용하여 코드 그룹에 대한 보안 정책을 설정하거나 수정할 수 있습니다. 둘 이상의 코드 그룹을 이름이 같은 명명된 권한 집합에 연결할 수 있습니다. CLR은 **Nothing**, **Execution**, **Internet**, **LocalIntranet**, **Everything** 및 **FullTrust** 등의 명명된 기본 제공 권한 집합을 제공합니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 사용자 지정 데이터, 배달, 렌더링 및 보안 확장 프로그램은 **FullTrust** 권한 집합으로 실행해야 합니다. 시스템 관리자와 협력하여 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 확장 프로그램에 적합한 코드 그룹 및 멤버 자격 조건을 추가하십시오.  
+>  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 사용자 지정 데이터, 배달, 렌더링 및 보안 확장 프로그램은 **FullTrust** 권한 집합으로 실행해야 합니다. 시스템 관리자와 협력하여 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 확장 프로그램에 적합한 코드 그룹 및 멤버 자격 조건을 추가하십시오.  
   
  사용하는 사용자 지정 어셈블리에 대한 고유한 사용자 지정 권한 수준을 보고서에 연결할 수 있습니다. 예를 들어 어셈블리가 특정 파일에 액세스할 수 있도록 하려면 특정 파일 I/O 액세스 권한으로 명명된 권한 집합을 새로 만든 다음 코드 그룹에 이 권한 집합을 할당할 수 있습니다. 다음 권한 집합은 파일 MyFile.xml에 읽기 전용 액세스 권한을 부여합니다.  
   
@@ -97,6 +93,6 @@ ms.locfileid: "62985747"
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [보안 개발 &#40;Reporting Services&#41;](secure-development-reporting-services.md)  
+ [안전한 개발&#40;Reporting Services&#41;](secure-development-reporting-services.md)  
   
   

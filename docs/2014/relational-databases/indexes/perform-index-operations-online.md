@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b9eceaff8ea7fee16eac3afef8bdc560d7fb1642
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63036220"
 ---
 # <a name="perform-index-operations-online"></a>온라인으로 인덱스 작업 수행
@@ -41,9 +41,9 @@ ms.locfileid: "63036220"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   온라인 인덱스 작업은 인덱스 작업 동안 동시 사용자 작업이 필수적인 1년 365일, 하루 24시간 운영되는 비즈니스 환경에 적합합니다.  
   
@@ -59,12 +59,12 @@ ms.locfileid: "63036220"
   
 -   온라인으로 인덱스를 만들거나, 다시 작성하거나, 삭제하는 작업과 관련된 제한 사항은 [온라인 인덱스 작업에 대한 지침](guidelines-for-online-index-operations.md)을 참조하세요.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-rebuild-an-index-online"></a>온라인으로 인덱스를 다시 작성하려면  
   
@@ -88,7 +88,7 @@ ms.locfileid: "63036220"
   
 10. **인덱스 다시 작성** 대화 상자에서 **다시 작성할 인덱스** 표에 올바른 인덱스가 있는지 확인한 다음 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-create-rebuild-or-drop-an-index-online"></a>온라인으로 인덱스를 만들거나, 다시 작성하거나, 삭제하려면  
   

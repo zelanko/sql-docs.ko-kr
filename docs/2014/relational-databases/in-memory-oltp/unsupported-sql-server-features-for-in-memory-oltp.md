@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157238"
 ---
 # <a name="supported-sql-server-features"></a>지원되는 SQL Server 기능
   이 항목에서는 메모리 최적화 개체와 함께 사용할 수 있거나 사용할 수 없는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능에 대해 설명합니다.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-features-supported-for-in-memory-oltp"></a>메모리 내 OLTP에 지원되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능  
+## <a name="ssnoversion-features-supported-for-in-memory-oltp"></a>메모리 내 OLTP에 지원되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능  
  다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능은 메모리 최적화 파일 그룹을 비롯해서 메모리 최적화 개체가 포함된 데이터베이스에서 지원됩니다.  
   
  지원되는 데이터 형식에 대한 자세한 내용은 [Supported Data Types](supported-data-types-for-in-memory-oltp.md)을 참조하세요.  
@@ -37,11 +37,11 @@ ms.locfileid: "63157238"
   
 -   지원 가능성을 위해 제공되는 카탈로그 뷰, 동적 관리 뷰 및 확장 이벤트. 자세한 내용은 [메모리 내 OLTP에 대한 시스템 뷰, 저장 프로시저, DMV 및 대기 유형](../../database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md)을 참조하세요.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]관리 개체. 자세한 내용은 [메모리 내 OLTP에 대한 SQL Server 관리 개체 지원](sql-server-management-objects-support-for-in-memory-oltp.md)을 참조하세요.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 개체. 자세한 내용은 [메모리 내 OLTP에 대한 SQL Server 관리 개체 지원](sql-server-management-objects-support-for-in-memory-oltp.md)을 참조하세요.  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 자세한 내용은 [메모리 내 OLTP에 대한 SQL Server Management Studio 지원](sql-server-management-studio-support-for-in-memory-oltp.md)을 참조하세요.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]슬래시. 자세한 내용은 [SQL Server PowerShell 개요](https://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx)를 참조하세요.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. 자세한 내용은 [SQL Server PowerShell 개요](https://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx)를 참조하세요.  
   
 -   bcp 유틸리티를 사용하여 대량 데이터 가져오기 및 내보내기. 자세한 내용은 [bcp 유틸리티를 사용하여 대량 데이터 가져오기 및 내보내기&#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)를 참조하세요.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "63157238"
   
 -   로그 전달: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 전달을 사용하면 주 서버 인스턴스의 주 데이터베이스에서 별도의 보조 서버 인스턴스에 있는 하나 이상의 보조 데이터베이스로 트랜잭션 로그 백업을 자동으로 보낼 수 있습니다. 자세한 내용은 [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)를 참조하세요.  
   
--   구독자에서 메모리 최적화 테이블에 대한 트랜잭션 복제가 지원되지만 몇 가지 제한 사항이 있습니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블 구독자로 복제](../replication/replication-to-memory-optimized-table-subscribers.md)를 참조하세요.  
+-   구독자에서 메모리 최적화 테이블에 대한 트랜잭션 복제가 지원되지만 몇 가지 제한 사항이 있습니다. 자세한 내용은 [메모리 액세스에 최적화 된 테이블 구독자로 복제를](../replication/replication-to-memory-optimized-table-subscribers.md)참조 하세요.  
   
 -   리소스 관리자: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업 및 시스템 리소스 소비량을 관리하는 데 사용할 수 있는 기능입니다. Resource Governor를 사용하면 CPU, 물리적 IO, 들어오는 애플리케이션 요청에 사용할 수 있는 메모리 양의 한도를 지정할 수 있습니다. 자세한 내용은 [Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md) 및 [Resource Governor](../resource-governor/resource-governor.md)를 참조하세요.  
   
@@ -73,8 +73,7 @@ ms.locfileid: "63157238"
   
 -   BACPAC 지원.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-features-not-supported-for-in-memory-oltp"></a>
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 내 OLTP에 지원되지 않는 기능  
+## <a name="ssnoversion-features-not-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 내 OLTP에 지원되지 않는 기능  
  다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능은 메모리 최적화 데이터 파일 그룹과 같은 메모리 최적화 개체가 포함된 데이터베이스에서 지원되지 않습니다.  
   
 |지원되지 않는 기능|기능 설명|  
@@ -82,7 +81,7 @@ ms.locfileid: "63157238"
 |메모리 최적화 테이블에 대한 데이터 압축|데이터 압축 기능을 사용하여 데이터베이스 내의 데이터를 압축하고 데이터베이스의 크기를 줄일 수 있습니다. 자세한 내용은 [Data Compression](../data-compression/data-compression.md)을 참조하세요.|  
 |메모리 최적화 테이블 및 HASH 인덱스의 분할|분할 테이블 및 인덱스의 데이터는 데이터베이스에서 두 개 이상의 파일 그룹으로 분할될 수 있는 단위로 나뉩니다. 자세한 내용은 [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md)을 참조하세요.|  
 |데이터베이스의 메모리 최적화 데이터 파일 그룹에 대한 TDE(투명한 데이터 암호화)|TDE(투명한 데이터 암호화)를 통해 데이터 및 로그 파일의 실시간 I/O 암호화 및 암호 해독을 수행합니다. 자세한 내용은 [TDE&#40;투명한 데이터 암호화&#41;](../security/encryption/transparent-data-encryption.md)를 참조하세요.<br /><br /> TDE는 메모리 내 OLTP 개체가 포함된 데이터베이스에서 사용할 수 있습니다. TDE가 사용하도록 설정된 경우에는 메모리 내 OLTP 로그 레코드가 암호화됩니다. 영구 테이블에 대한 검사점 파일은 데이터베이스에서 TDE가 사용하도록 설정된 경우에도 암호화되지 않습니다.|  
-|복제|구독자에서 메모리 최적화 테이블에 대한 트랜잭션 복제 이외의 복제 구성은 메모리 최적화 테이블을 참조하는 탭 또는 뷰와 호환되지 않습니다. 메모리 최적화 파일 그룹이 있는 경우에는 sync_mode = ' database snapshot '을 사용 하는 복제가 지원 되지 않습니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블 구독자로 복제](../replication/replication-to-memory-optimized-table-subscribers.md)를 참조하세요.|  
+|복제|구독자에서 메모리 최적화 테이블에 대한 트랜잭션 복제 이외의 복제 구성은 메모리 최적화 테이블을 참조하는 탭 또는 뷰와 호환되지 않습니다. 메모리 최적화 파일 그룹이 있는 경우에는 sync_mode = ' database snapshot '을 사용 하는 복제가 지원 되지 않습니다. 자세한 내용은 [메모리 액세스에 최적화 된 테이블 구독자로 복제를](../replication/replication-to-memory-optimized-table-subscribers.md)참조 하세요.|  
 |MARS(Multiple Active Result Sets)|MARS(Multiple Active Result Set)는 메모리 최적화 테이블에 지원되지 않습니다. 이 오류는 연결된 서버 사용을 나타낼 수도 있습니다. 연결된 서버는 MARS를 사용할 수 있습니다. 연결된 서버는 메모리 최적화 테이블에 지원되지 않습니다. 그 대신 메모리 최적화 테이블을 호스팅하는 서버와 데이터베이스에 직접 연결합니다.|  
 |미러링|데이터베이스 미러링은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 가용성을 높이기 위한 솔루션입니다. 자세한 내용은 [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.|  
 |로그를 다시 작성|연결을 통해 로그를 다시 작성 하거나 ALTER DATABASE 데이터베이스는 MEMORY_OPTIMIZED_DATA 파일 그룹에 대해 지원 되지 않습니다.|  
@@ -92,7 +91,7 @@ ms.locfileid: "63157238"
 |변경 내용 추적|변경 내용 추적은 메모리 내 OLTP 개체가 포함된 데이터베이스에서 사용할 수 있습니다. 그러나 메모리 최적화 테이블의 변경 내용은 추적되지 않습니다.|  
 |DDL 트리거|데이터베이스 수준 및 서버 수준 DDL 트리거는 둘 다 메모리 내 OLTP 테이블과 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다.|  
 |CDC(변경 데이터 캡처)|CDC는 DROP과 같은 특정 작업을 수행할 수 없도록 하므로 메모리 내 OLTP 개체가 포함된 데이터베이스에서 사용하도록 설정하면 안 됩니다.|  
-|데이터베이스 포함|데이터베이스 포함은 고유하게 컴파일된 저장 프로시저와 메모리 최적화 테이블이 포함된 데이터베이스에서 지원되지 않습니다. 자세한 내용은 [포함 된 데이터베이스](../databases/contained-databases.md) 를 참조 하세요.|  
+|데이터베이스 포함|데이터베이스 포함은 고유하게 컴파일된 저장 프로시저와 메모리 최적화 테이블이 포함된 데이터베이스에서 지원되지 않습니다. 자세한 내용은 [Contained Databases](../databases/contained-databases.md)를 참조하세요.|  
 |컨텍스트 연결|CLR 저장 프로시저 내부에서 컨텍스트 연결을 사용하여 메모리 최적화 테이블에 액세스는 지원되지 않습니다.|  
 |커서|메모리 최적화 테이블에 액세스하는 쿼리의 키 집합 및 동적 커서. 이러한 쿼리는 정적 쿼리로 강등되어 읽기 전용이 됩니다.|  
 |TABLESTAMP|TABLESTAMP는 지원되지 않습니다. 자세한 내용은 [FROM&#40;Transact-SQL&#41;](/sql/t-sql/queries/from-transact-sql)을 참조하세요.|  
@@ -106,10 +105,10 @@ ms.locfileid: "63157238"
   
  몇 가지 예외를 제외하고 데이터베이스간 트랜잭션은 지원되지 않습니다. 다음 테이블에서는 지원되는 경우 및 해당 제한 사항에 대해 설명합니다. (참고 항목: [데이터베이스 간 쿼리](cross-database-queries.md))  
   
-|데이터베이스|허용됨|Description|  
+|데이터베이스|허용됨|설명|  
 |---------------|-------------|-----------------|  
-|사용자 데이터베이스, 모델 및 msdb|예|데이터베이스 간 쿼리 및 트랜잭션은 지원되지 않습니다.<br /><br /> 메모리 최적화 테이블이나 고유하게 컴파일된 저장 프로시저에 액세스하는 쿼리와 트랜잭션은 시스템 데이터베이스 master(읽기 전용 액세스) 및 tempdb를 제외하고 다른 데이터베이스에 액세스할 수 없습니다.|  
-|리소스 데이터베이스 및 tempdb|yes|단일 사용자 데이터베이스를 제외하고 리소스 데이터베이스 및 tempdb를 사용하는 데이터베이스 간 트랜잭션에는 제한 사항이 없습니다.|  
+|사용자 데이터베이스, 모델 및 msdb|아니요|데이터베이스 간 쿼리 및 트랜잭션은 지원되지 않습니다.<br /><br /> 메모리 최적화 테이블이나 고유하게 컴파일된 저장 프로시저에 액세스하는 쿼리와 트랜잭션은 시스템 데이터베이스 master(읽기 전용 액세스) 및 tempdb를 제외하고 다른 데이터베이스에 액세스할 수 없습니다.|  
+|리소스 데이터베이스 및 tempdb|예|단일 사용자 데이터베이스를 제외하고 리소스 데이터베이스 및 tempdb를 사용하는 데이터베이스 간 트랜잭션에는 제한 사항이 없습니다.|  
 |master|읽기 전용|메모리 내 OLTP 및 master 데이터베이스와 관련된 데이터베이스 간 트랜잭션은 master 데이터베이스에 대한 쓰기가 포함된 경우 커밋에 실패합니다. master 데이터베이스에서 읽기만 하고 하나의 사용자 데이터베이스만 사용하는 데이터베이스 간 트랜잭션은 허용됩니다.|  
   
 ## <a name="see-also"></a>참고 항목  

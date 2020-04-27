@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4fe48814f8d707b0feeacf7a9a84c79df0ffe71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63036237"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>인덱스의 채우기 비율 지정
@@ -44,9 +44,9 @@ ms.locfileid: "63036237"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Performance"></a> 성능 고려 사항  
+###  <a name="performance-considerations"></a><a name="Performance"></a> 성능 고려 사항  
   
 #### <a name="page-splits"></a>페이지 분할  
  채우기 비율 값을 적절히 선택하여 기본 테이블에 데이터가 추가될 때 인덱스 확장을 위한 충분한 공간을 제공함으로써 페이지 분할 가능성을 줄일 수 있습니다. 가득찬 인덱스 페이지에 새 행이 추가되면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 행의 절반 정도를 새 페이지로 옮겨 새 행을 위한 공간을 만듭니다. 이러한 재구성을 페이지 분할이라고 합니다. 페이지 분할은 새 레코드를 위한 공간을 만들지만 수행하는 데 시간이 걸리고 리소스를 많이 사용하는 작업입니다. 또한 I/O 작업을 늘리는 조각화의 원인이 되기도 합니다. 페이지가 자주 분할되면 새 채우기 비율 값이나 기존 채우기 비율 값으로 데이터를 재배포하여 인덱스를 다시 작성할 수 있습니다. 자세한 내용은 [인덱스 다시 구성 및 다시 작성](reorganize-and-rebuild-indexes.md)을 참조하세요.  
@@ -56,12 +56,12 @@ ms.locfileid: "63036237"
 #### <a name="adding-data-to-the-end-of-the-table"></a>테이블 끝에 데이터 추가  
  새 데이터가 테이블에 균일하게 분포된 경우 0이나 100이 아닌 채우기 비율을 지정하면 성능이 향상될 수 있습니다. 그러나 모든 데이터를 테이블 끝에 추가한 경우 인덱스 페이지의 빈 공간이 꽉 채워지지 않습니다. 예를 들어 인덱스 키 열이 IDENTITY 열이면 새 행의 키는 항상 증가하며 인덱스 행은 인덱스 끝에 논리적으로 추가됩니다. 행의 크기를 늘리는 데이터로 기존 행을 업데이트하려는 경우 100 미만의 채우기 비율을 사용합니다. 각 페이지에 추가 바이트를 설정하면 길어지는 행으로 인해 발생하는 페이지 분할을 최소화하는 데 도움이 됩니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-specify-a-fill-factor-by-using-table-designer"></a>테이블 디자이너를 사용하여 채우기 비율을 지정하려면  
   
@@ -99,7 +99,7 @@ ms.locfileid: "63036237"
   
 8.  **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>기존 인덱스의 채우기 비율을 지정하려면  
   

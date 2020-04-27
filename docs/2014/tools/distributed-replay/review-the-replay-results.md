@@ -11,19 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149706"
 ---
 # <a name="review-the-replay-results"></a>재생 결과 검토
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Replay 기능이 분산 재생을 완료 하면 각 클라이언트에 대 한 재생 작업을 캡처하여 각 클라이언트의 결과 추적 파일에 저장할 수 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 있습니다. 이 작업을 캡처하려면 **replay** 옵션을 사용하여 관리 도구를 실행할 때 **-o** 매개 변수를 사용해야 합니다. 재생 옵션에 대한 자세한 내용은 [재생 옵션&#40;Distributed Replay Administration Tool&#41;](replay-option-distributed-replay-administration-tool.md)을 참조하세요.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 기능이 분산 재생을 완료하면 각 클라이언트에 대한 재생 작업을 캡처하여 각 클라이언트의 결과 추적 파일에 저장할 수 있습니다. 이 작업을 캡처하려면 **replay** 옵션을 사용하여 관리 도구를 실행할 때 **-o** 매개 변수를 사용해야 합니다. 재생 옵션에 대한 자세한 내용은 [재생 옵션&#40;Distributed Replay Administration Tool&#41;](replay-option-distributed-replay-administration-tool.md)을 참조하세요.  
   
  결과 추적 파일이 저장되는 위치는 각 클라이언트에 있는 클라이언트 구성 파일 `<ResultDirectory>` 의 `DReplayClient.xml`XML 요소에 지정됩니다. 클라이언트 결과 디렉터리의 추적 파일은 각 재생 시 덮어씁니다.  
   
- 결과 추적 파일에 캡처할 출력의 종류를 지정하려면 재생 구성 파일 `DReplay.exe.replay.config`를 수정합니다. 
-  `<OutputOptions>` XML 요소를 사용하여 행 개수나 결과 집합의 내용을 기록할지 여부를 지정할 수 있습니다.  
+ 결과 추적 파일에 캡처할 출력의 종류를 지정하려면 재생 구성 파일 `DReplay.exe.replay.config`를 수정합니다. `<OutputOptions>` XML 요소를 사용하여 행 개수나 결과 집합의 내용을 기록할지 여부를 지정할 수 있습니다.  
   
  이러한 구성 설정에 대한 자세한 내용은 [Distributed Replay 구성](configure-distributed-replay.md)을 참조하세요.  
   
@@ -67,9 +66,7 @@ ms.locfileid: "63149706"
 |SubmitTime|`datetime`|이벤트가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 전송된 시간입니다.|6|  
 |IsSuccessful|`int`|특정 이벤트가 성공적으로 실행되었는지 여부 및 결과 집합이 클라이언트 쪽에 반환되었는지 여부를 나타내는 부울 플래그입니다.<br /><br /> 경고를 생성하는 이벤트(예: Attention 또는 사용자가 지정한 제한 시간으로 인해 이벤트가 취소되는 경우)는 성공한 것으로 간주됩니다.<br /><br /> IsSuccessful은 다음 중 하나일 수 있습니다.<br /><br /> 1 = 성공<br /><br /> 0 = 실패|7|  
 |Duration [microsec]|`bigint`|이벤트의 응답 기간(마이크로초)입니다. 측정은 logon/log off/RPC/Language 이벤트가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]로 전송될 때 시작됩니다.<br /><br /> 이벤트가 이어지는 경우 전체 결과 집합이 모두 사용되었을 때 측정이 끝납니다.<br /><br /> 이벤트가 이어지지 않는 경우 이벤트가 실패하거나 취소될 때 측정이 끝납니다.|8|  
-|RowCount|`bigint`|재생 구성 파일의 `<RecordRowCount>` 값에 따라 채워집니다.<br /><br /> 
-  `<RecordRowCount>` 가 Yes이면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 반환한 결과 집합의 행 수가 이 셀에 포함됩니다.<br /><br /> 
-  `<RecordRowCount>` 가 No이면 이 셀이 채워지지 않습니다(Null).|9|  
+|RowCount|`bigint`|재생 구성 파일의 `<RecordRowCount>` 값에 따라 채워집니다.<br /><br /> `<RecordRowCount>` 가 Yes이면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 반환한 결과 집합의 행 수가 이 셀에 포함됩니다.<br /><br /> `<RecordRowCount>` 가 No이면 이 셀이 채워지지 않습니다(Null).|9|  
 |CaptureSPID|`int`|이벤트 캡처 세션의 ID입니다.|10|  
 |ConnectionID|`int`|이벤트 캡처 연결의 ID입니다.|11|  
 |ReplaySPID|`int`|이벤트 재생 세션의 ID입니다.|12|  

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3dc2de6d8dc1967986162f2a468d0edf7266730a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015805"
 ---
 # <a name="sqlfetch"></a>SQLFetch
@@ -25,8 +25,7 @@ ms.locfileid: "63015805"
  날짜/시간 형식의 결과 열 값을 변환 하는 방법에 대 한 자세한 내용은 [SQL에서 C로 변환](../native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)을 참조 하세요.  
   
 ## <a name="sqlfetch-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLFetch 지원  
- 
-  `SQLFetch`는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [ODBC&#41;&#40;LARGE CLR 사용자 정의 형식 ](../native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
+ `SQLFetch`는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [ODBC&#41;&#40;LARGE CLR 사용자 정의 형식 ](../native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=80703)   

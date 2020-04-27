@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6cc3ae7c4c39517f40b49d2ddd98ccdc397ee345
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021814"
 ---
 # <a name="publication-information-all-subscriptions-transactional-publication"></a>게시 정보, 모든 구독(트랜잭션 게시)
@@ -36,7 +36,7 @@ ms.locfileid: "63021814"
  필터 설정은 각 표에 대해 지정됩니다. 열 선택 및 정렬은 각 게시자에 대한 게시 표와 같이 동일한 유형의 모든 표에 적용됩니다.  
   
  **표시**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당됩니다. 선택한 구독 유형에 대해 표시할 구독 상태를 선택합니다. 예를 들어 오류가 있는 구독만 표시하도록 선택할 수 있습니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당 됩니다. 선택한 구독 유형에 대해 표시할 구독 상태를 선택합니다. 예를 들어 오류가 있는 구독만 표시하도록 선택할 수 있습니다.  
   
  **상태**  
  배포 에이전트 또는 로그 판독기 에이전트의 상태로 파악할 수 있는 각 구독의 상태입니다. 우선 순위가 높은 상태가 표시되며 지연 업데이트 구독을 사용하는 경우 큐 판독기 에이전트로 상태를 파악할 수도 있습니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "63021814"
   
 ## <a name="see-also"></a>참고 항목  
  [복제 모니터 시작](monitor/start-the-replication-monitor.md)   
- [복제 모니터를 사용하여 정보 보기 및 태스크 수행](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [복제 모니터를 사용 하 여 정보 보기 및 태스크 수행](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [복제 모니터링](monitoring-replication.md)  
   
   

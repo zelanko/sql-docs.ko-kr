@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 81f0169f8235d94ef2d12753c3164462fcbad44c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63032262"
 ---
 # <a name="monitor-disk-usage"></a>디스크 사용량 모니터링
@@ -39,6 +39,6 @@ ms.locfileid: "63032262"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 만드는 디스크 작업 격리  
   
- 자세한 내용은 [디스크 사용 모니터링](https://social.technet.microsoft.com/wiki/contents/articles/monitoring-disk-usage.aspx) 을 참조 하세요.  
+ 자세한 내용은 [디스크 사용 모니터링](https://social.technet.microsoft.com/wiki/contents/articles/monitoring-disk-usage.aspx)을 참조하십시오.  
   
   

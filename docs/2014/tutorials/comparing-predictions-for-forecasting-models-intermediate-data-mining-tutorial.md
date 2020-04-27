@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 26cc445d3bad5c628628353d5c0c84ffa4755e97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63066340"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>예측 모델에 대한 예측 비교(중급 데이터 마이닝 자습서)
@@ -26,7 +26,7 @@ ms.locfileid: "63066340"
   
 -   집계 데이터를 기반으로 하는 전세계 기준의 모든 모델에 대한 예측  
   
--   집계 모델을 기반으로 하는 북미 지역의 M200 모델에 대한 예측  
+-   집계 모델을 기반으로 하는 북아메리카 지역의 M200 모델에 대한 예측  
   
  시계열 예측에 대한 특징을 요약하기 위해 변경 사항을 검토하여 데이터를 확장하거나 바꾸기 위해 옵션을 사용하는 것이 결과 예측에 어떤 영향을 미쳤는지 알아봅니다.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "63066340"
   
  [REPLACE_MODEL_CASES](#bkmk_REPLACE)  
   
-##  <a name="bkmk_EXTEND"></a>데이터를 추가한 후 결과와 원래 결과 비교  
+##  <a name="comparing-the-original-results-with-results-after-adding-data"></a><a name="bkmk_EXTEND"></a>데이터를 추가한 후 결과와 원래 결과 비교  
  새 데이터로 모델을 업데이트 하면 결과에 어떤 영향을 주는지 확인 하려면 태평양 지역의 M200 제품 라인에 대 한 데이터를 살펴보겠습니다. 원래 데이터 계열은 2004년 6월에 끝나고 7, 8, 9월에 대한 새 데이터를 얻었음을 기억해 두십시오.  
   
 -   첫 번째 열에는 추가된 새 데이터가 표시됩니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "63066340"
   
  일반적으로 알고리즘은 모델 데이터의 시작 부분 데이터보다 새 데이터의 변경에 큰 가중치를 둡니다. 그러나 이 경우 새 판매 수치는 이전 기간에 비해 겨우 20~30퍼센트의 증가만 나타내므로, 예상 판매량에는 약간의 상승만 있었으며 이후에는 예상 판매량이 다시 떨어지고 새 데이터 이전 개월 동안의 추세와 더 비슷해집니다.  
   
-##  <a name="bkmk_REPLACE"></a>원본 및 교차 예측 결과 비교  
+##  <a name="comparing-the-original-and-cross-prediction-results"></a><a name="bkmk_REPLACE"></a>원본 및 교차 예측 결과 비교  
  원래 마이닝 모델에서는 지역 간 및 제품 라인 간에 큰 차이를 보였음을 기억하십시오. 예를 들어 M200 모델의 판매량이 매우 높았던 반면 T1000 모델의 판매량은 모든 지역에 걸쳐 상당히 낮았습니다. 또한 일부 계열에는 많은 데이터가 없습니다. 계열이 비정형 것은 아닙니다. 즉, 동일한 시작점이 없는 것입니다.  
   
  ![M200 및 T1000 수량을 예측하는 계열](../../2014/tutorials/media/6series-defaultforecasting.gif "M200 및 T1000 수량을 예측하는 계열")  

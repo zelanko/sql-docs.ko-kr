@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2f7a25a4a6a4bb6b8f153a8b04b47aeb542265c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162488"
 ---
 # <a name="guidelines-for-online-index-operations"></a>온라인 인덱스 작업에 대한 지침
@@ -32,7 +32,7 @@ ms.locfileid: "63162488"
 -   로컬 임시 테이블의 인덱스를 온라인 상태로 만들거나 다시 작성하거나 삭제할 수 없습니다. 이 제한 사항은 전역 임시 테이블의 인덱스에는 적용되지 않습니다.  
   
 > [!NOTE]  
->  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
+>  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
   
  다음 테이블은 온라인으로 수행할 수 있는 인덱스 작업 및 이러한 온라인 작업에서 제외되는 인덱스를 보여 줍니다. 추가 제한 사항도 포함됩니다.  
   
@@ -67,8 +67,7 @@ ms.locfileid: "63162488"
   
  온라인 작업을 권장하지만 사용 환경 및 특정 요구 사항도 고려해야 합니다. 인덱스 작업을 오프라인 상태에서 실행하는 것이 가장 좋을 수도 있습니다. 이 경우 사용자가 작업 수행 동안 데이터 액세스를 제한하지만 작업은 더욱 빨리 끝나고 보다 적은 리소스를 사용합니다.  
   
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 실행하는 다중 프로세서 컴퓨터에서는 다른 쿼리와 마찬가지로 인덱스 문이 추가 프로세스를 사용하여 인덱스 문과 관련된 검색 및 정렬 작업을 수행할 수 있습니다. MAXDOP 인덱스 옵션을 사용하여 온라인 인덱스 작업에만 사용되는 프로세서 수를 제어할 수 있습니다. 이 방법으로 인덱스 작업에서 사용하는 리소스와 동시 사용자가 사용하는 리소스의 균형을 맞출 수 있습니다. 자세한 내용은 [병렬 인덱스 작업 구성](configure-parallel-index-operations.md)을 참조하세요. 병렬 인덱스 작업을 지 원하는 SQL Server 버전에 대 한 자세한 내용은 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 실행하는 다중 프로세서 컴퓨터에서는 다른 쿼리와 마찬가지로 인덱스 문이 추가 프로세스를 사용하여 인덱스 문과 관련된 검색 및 정렬 작업을 수행할 수 있습니다. MAXDOP 인덱스 옵션을 사용하여 온라인 인덱스 작업에만 사용되는 프로세서 수를 제어할 수 있습니다. 이 방법으로 인덱스 작업에서 사용하는 리소스와 동시 사용자가 사용하는 리소스의 균형을 맞출 수 있습니다. 자세한 내용은 [병렬 인덱스 작업 구성](configure-parallel-index-operations.md)을 참조하세요. 병렬 인덱스 작업을 지 원하는 SQL Server 버전에 대 한 자세한 내용은 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
   
  인덱스 작업의 마지막 단계에 S  잠금 또는 Sch-M  잠금이 보유되므로 BEGIN  TRANSACTION...COMMIT  블록 등의 명시적 사용자 트랜잭션 내에서 온라인 인덱스 작업을 실행할 때는 주의해야 합니다. 이 작업을 실행하면 트랜잭션이 끝날 때까지 잠금이 보유되어 사용자 동시성을 방해할 수 있습니다.  
   
@@ -78,7 +77,7 @@ ms.locfileid: "63162488"
  오프라인 상태 또는 온라인 상태에서 수행되는 대규모 인덱스 작업은 트랜잭션 로그를 빨리 채워 대용량 데이터 로드를 생성할 수 있습니다. 인덱스 작업을 확실히 롤백하려면 인덱스 작업이 완료될 때까지 트랜잭션 로그를 자를 수 없지만,  인덱스 작업 중에 이 로그를 백업할 수 있습니다. 따라서 트랜잭션 로그에는 인덱스 작업을 수행하는 동안 인덱스 작업 트랜잭션 및 동시 사용자 트랜잭션을 모두 저장할 수 있는 충분한 공간이 있어야 합니다. 자세한 내용은 [Transaction Log Disk Space for Index Operations](transaction-log-disk-space-for-index-operations.md)을 참조하세요.  
   
 ## <a name="related-content"></a>관련 내용  
- [온라인 인덱스 작업 작동 방식](how-online-index-operations-work.md)  
+ [온라인 인덱스 작동 방식](how-online-index-operations-work.md)  
   
  [온라인으로 인덱스 작업 수행](perform-index-operations-online.md)  
   

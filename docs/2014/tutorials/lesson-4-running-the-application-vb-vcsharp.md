@@ -13,14 +13,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 85dc3fc5d38db71cd30600f84d3ab3cfd739aeea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137481"
 ---
 # <a name="lesson-4-running-the-application-vb-vc"></a>4 단원: 응용 프로그램 실행 (VB-VC #)
-  
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]에서는 다음과 같이 IDE에서 콘솔 애플리케이션을 작성하고 실행하는 여러 가지 방법을 제공합니다.  
   
 -   디버깅으로 시작  
@@ -29,8 +28,7 @@ ms.locfileid: "63137481"
   
 ### <a name="to-build-and-run-the-getpropertiessample"></a>GetPropertiesSample을 작성하고 실행하려면  
   
-1.  
-  **디버그** 메뉴에서 **디버깅하지 않고 시작**을 클릭합니다. 이렇게 하면 프로그램이 실행을 마친 후에도 콘솔 창이 열린 채로 있게 됩니다.  
+1.  **디버그** 메뉴에서 **디버깅하지 않고 시작**을 클릭합니다. 이렇게 하면 프로그램이 실행을 마친 후에도 콘솔 창이 열린 채로 있게 됩니다.  
   
      애플리케이션은 다음 결과를 콘솔로 출력합니다.  
   

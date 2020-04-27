@@ -19,17 +19,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38a33b34b64cf285e94f66c547b2309b8daf1ae8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035684"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>분리된 사용자 문제 해결(SQL Server)
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 로그인하려면 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 사용자에게 있어야 합니다. 이 로그인은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 사용자 연결이 허용되는지 여부를 확인하는 인증 프로세스에서 사용됩니다. 서버 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 로그인은 **server_principals** 카탈로그 뷰와 **sys.** s a s.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 매핑된 데이터베이스 사용자를 사용하여 개별 데이터베이스에 액세스합니다. 이 규칙에는 두 가지 예외가 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 매핑된 데이터베이스 사용자를 사용하여 개별 데이터베이스에 액세스합니다. 이 규칙에는 두 가지 예외가 있습니다.  
   
 -   게스트 계정  
   
@@ -89,7 +88,7 @@ GO;
     >  ALTER ANY LOGIN 사용 권한이 있는 로그인으로만 다른 사용자의 로그인 암호를 변경할 수 있습니다. 그러나 **sysadmin** 역할의 멤버만 **sysadmin** 역할 멤버의 암호를 수정할 수 있습니다.  
   
     > [!NOTE]  
-    >  **** Windows 계정에는 sp_password [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용할 수 없습니다. Windows 네트워크 계정을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하는 사용자는 Windows에 의해 인증되므로 암호는 Windows에서만 변경할 수 있습니다.  
+    >  **sp_password** Windows 계정에는 sp_password [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용할 수 없습니다. Windows 네트워크 계정을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하는 사용자는 Windows에 의해 인증되므로 암호는 Windows에서만 변경할 수 있습니다.  
   
      자세한 내용은 [sp_password &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql)를 참조 하세요.  
   

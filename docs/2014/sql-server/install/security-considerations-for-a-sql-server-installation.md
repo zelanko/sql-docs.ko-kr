@@ -27,16 +27,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eec38b5ecc524f0d3decd02c0832efd1909e8f00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127884"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>SQL Server 설치에 대한 보안 고려 사항
   보안은 모든 제품과 모든 비즈니스에서 중요합니다. 간단한 권장 사항을 따르면 많은 보안상의 취약점을 방지할 수 있습니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하기 전과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치한 후에 모두 고려해야 하는 보안 권장 사항에 대해 설명합니다. 특정 기능에 대한 보안 지침은 해당 기능에 대한 참조 항목에 포함되어 있습니다.  
   
-## <a name="before-installing-includessnoversionincludesssnoversion-mdmd"></a>다음 설치 전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="before-installing-ssnoversion"></a>다음 설치 전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  서버 환경을 설정하는 경우 다음 권장 사항을 따르십시오.  
   
 -   [물리적 보안 강화](#physical_security)  
@@ -51,7 +51,7 @@ ms.locfileid: "63127884"
   
 -   [도메인 컨트롤러에 SQL Server 설치](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md#Install_DC)  
   
-###  <a name="physical_security"></a> Enhance Physical Security  
+###  <a name="enhance-physical-security"></a><a name="physical_security"></a> Enhance Physical Security  
  물리적 및 논리적 격리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안의 기반이 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 물리적 보안을 강화하려면 다음 태스크를 수행하십시오.  
   
 -   허가받은 사람만 출입할 수 있는 공간에 서버를 둡니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "63127884"
   
 -   모든 데이터를 정기적으로 백업하고 멀리 떨어진 지역에 백업을 안전하게 보관합니다.  
   
-###  <a name="firewalls"></a> Use Firewalls  
+###  <a name="use-firewalls"></a><a name="firewalls"></a> Use Firewalls  
  방화벽은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 보안에 중요합니다. 방화벽의 효율적인 작동을 위해 지켜야 할 지침은 다음과 같습니다.  
   
 -   방화벽을 서버와 인터넷 사이에 둡니다. 방화벽을 설정합니다. 방화벽이 해제되어 있으면 설정하고 방화벽이 설정되어 있으면 해제하지 마십시오.  
@@ -77,12 +77,12 @@ ms.locfileid: "63127884"
   
  기본 Windows 방화벽 설정 방법과 [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]및 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 영향을 주는 TCP 포트에 대한 자세한 내용은 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)을 참조하세요.  
   
-###  <a name="isolated_services"></a> Isolate Services  
+###  <a name="isolate-services"></a><a name="isolated_services"></a> Isolate Services  
  서비스를 격리하면 하나의 손상된 서비스가 다른 서비스를 손상시키는 위험을 줄일 수 있습니다. 서비스를 격리하려면 다음 지침을 따르십시오.  
   
 -   별도의 Windows 계정으로 별도의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 실행합니다. 가능하면 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 별도의 낮은 권한의 Windows 또는 로컬 사용자 계정을 사용합니다. 자세한 내용은 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)를 참조하세요.  
   
-###  <a name="sa_with_least_privileges"></a> Configure a Secure File System  
+###  <a name="configure-a-secure-file-system"></a><a name="sa_with_least_privileges"></a> Configure a Secure File System  
  올바른 파일 시스템을 사용하면 보안이 강화됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 경우 다음 태스크를 수행해야 합니다.  
   
 -   NTFS 파일 시스템(NTFS)을 사용합니다. NTFS는 FAT 파일 시스템에 비해 안정적이고 복구 가능하기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 적합한 파일 시스템입니다. NTFS에서는 또한 파일 및 디렉터리 ACL(액세스 제어 목록) 및 EFS(파일 시스템 암호화) 파일 암호화와 같은 보안 옵션도 사용할 수 있습니다. 설치 중 NTFS가 감지되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 적절한 ACL을 레지스트리 키와 파일에 설정합니다. 이러한 사용 권한은 변경할 수 없습니다. 이후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 릴리스에서는 FAT 파일 시스템이 있는 컴퓨터에 대한 설치를 지원하지 않을 수 있습니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "63127884"
   
 -   중요한 데이터 파일에는 RAID(Redundant Array of Independent Disks)를 사용합니다.  
   
-###  <a name="disabled_protocols"></a> Disable NetBIOS and Server Message Block  
+###  <a name="disable-netbios-and-server-message-block"></a><a name="disabled_protocols"></a> Disable NetBIOS and Server Message Block  
  경계 네트워크에 있는 서버에는 NetBIOS 및 SMB(서버 메시지 블록) 등의 불필요한 모든 프로토콜이 비활성화되어 있어야 합니다.  
   
  NetBIOS는 다음 포트를 사용합니다.  
@@ -111,7 +111,7 @@ ms.locfileid: "63127884"
   
  웹 서버 및 DNS(Domain Name System) 서버에는 NetBIOS 또는 SMB가 필요 없습니다. 이러한 서버에서 두 프로토콜을 모두 비활성화하여 사용자 목록 노출 위협을 줄이십시오.  
   
-###  <a name="Install_DC"></a> 도메인 컨트롤러에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치  
+###  <a name="installing-ssnoversion-on-a-domain-controller"></a><a name="Install_DC"></a> 도메인 컨트롤러에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치  
  보안상의 이유로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 도메인 컨트롤러에 설치하지 않는 것이 좋습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 도메인 컨트롤러 컴퓨터에 설치하는 것을 차단하지는 않지만 다음과 같은 제한 사항을 적용합니다.  
   
 -   도메인 컨트롤러에서는 로컬 서비스 계정으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 실행할 수 없습니다.  
@@ -124,7 +124,7 @@ ms.locfileid: "63127884"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 읽기 전용 도메인 컨트롤러에서 보안 그룹을 만들거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정을 프로비전할 수 없습니다. 이 경우 설치 프로그램에서 오류가 발생합니다.  
   
-## <a name="during-or-after-installation-of-includessnoversionincludesssnoversion-mdmd"></a>다음 설치 도중 또는 설치 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="during-or-after-installation-of-ssnoversion"></a>다음 설치 도중 또는 설치 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  설치 후에도 계정 및 인증 모드에 대한 권장 사항을 수행하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 보안을 강화할 수 있습니다.  
   
  **서비스 계정**  
@@ -143,8 +143,7 @@ ms.locfileid: "63127884"
   
  **강력한 암호**  
   
--   
-  `sa` 계정에는 항상 강력한 암호를 지정합니다.  
+-   `sa` 계정에는 항상 강력한 암호를 지정합니다.  
   
 -   암호 강도 및 만료를 검사하는 암호 정책을 항상 사용하도록 설정합니다.  
   

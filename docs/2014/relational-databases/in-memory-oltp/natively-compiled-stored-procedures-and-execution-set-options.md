@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: eaf7057130cc3d13c0025b92b207efbace339e74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63131482"
 ---
 # <a name="natively-compiled-stored-procedures-and-execution-set-options"></a>고유하게 컴파일된 저장 프로시저 및 Execution Set 옵션
@@ -22,12 +22,9 @@ ms.locfileid: "63131482"
   
  STATISTICS 옵션을 사용하도록 설정한 상태에서 고유하게 컴파일된 저장 프로시저를 실행하면 프로시저에 대한 통계가 문별로 수집되지 않고 전체적으로 수집됩니다. 자세한 내용은 [SET STATISTICS IO&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-io-transact-sql), [STATISTICS PROFILE&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-profile-transact-sql), [STATISTICS TIME&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-time-transact-sql) 및 [STATISTICS XML&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-xml-transact-sql)을 참조하세요. 고유하게 컴파일된 저장 프로시저의 문별 수준에 대한 실행 통계를 구하려면 저장 프로시저의 각 개별 쿼리 실행이 완료될 때 시작되는 sp_statement_completed 이벤트에 확장 이벤트 세션을 사용합니다. 확장 이벤트 세션을 만드는 방법은 [CREATE EVENT SESSION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)을 참조하세요.  
   
- 
-  `SHOWPLAN_XML`은 고유하게 컴파일된 저장 프로시저에서 지원됩니다. 
-  `SHOWPLAN_ALL` 및 `SHOWPLAN_TEXT`는 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다.  
+ `SHOWPLAN_XML`은 고유하게 컴파일된 저장 프로시저에서 지원됩니다. `SHOWPLAN_ALL` 및 `SHOWPLAN_TEXT`는 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다.  
   
- 
-  `SET FMTONLY`는 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다. 대신 [sp_describe_first_result_set&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)를 사용하세요.  
+ `SET FMTONLY`는 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다. 대신 [sp_describe_first_result_set&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)를 사용하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [고유하게 컴파일된 저장 프로시저](natively-compiled-stored-procedures.md)  

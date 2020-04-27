@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ea11c177533a6101bb0654ca0450e85ea855d9a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150825"
 ---
 # <a name="plan-guides"></a>계획 지침
@@ -41,8 +41,7 @@ ms.locfileid: "63150825"
  OBJECT 계획 지침  
  OBJECT 계획 지침은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저, 사용자 정의 스칼라 함수, 다중 문 사용자 정의 테이블 반환 함수 및 DML 트리거의 컨텍스트에서 실행되는 쿼리와 일치합니다.  
   
- 
-  `@Country`데이터베이스에 대해 배포되는 데이터베이스 애플리케이션에`region` _ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 매개 변수를 가져오는 다음 저장 프로시저가 있다고 가정합니다.  
+ `@Country`데이터베이스에 대해 배포되는 데이터베이스 애플리케이션에`region` _ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 매개 변수를 가져오는 다음 저장 프로시저가 있다고 가정합니다.  
   
 ```  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
@@ -98,8 +97,7 @@ sp_create_plan_guide
 ```  
   
 > [!IMPORTANT]  
->  
-  `@module_or_batch` 문의 `@params` 및 `sp_create_plan guide` 인수에 대해 제공되는 값은 실제 쿼리에서 전송되는 해당 텍스트와 일치해야 합니다. 자세한 내용은 [sp_create_plan_guide&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql) 문의 [SQL Server Profiler를 사용하여 계획 지침 작성 및 테스트](plan-guides.md)에서 실제 쿼리의 텍스트를 직접 변경할 수 없거나 직접 변경하지 않으려는 경우 계획 지침에 따라 쿼리 성능을 최적화할 수 있습니다.  
+>  `@module_or_batch` 문의 `@params` 및 `sp_create_plan guide` 인수에 대해 제공되는 값은 실제 쿼리에서 전송되는 해당 텍스트와 일치해야 합니다. 자세한 내용은 [sp_create_plan_guide&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql) 문의 [SQL Server Profiler를 사용하여 계획 지침 작성 및 테스트](plan-guides.md)에서 실제 쿼리의 텍스트를 직접 변경할 수 없거나 직접 변경하지 않으려는 경우 계획 지침에 따라 쿼리 성능을 최적화할 수 있습니다.  
   
  PARAMETERIZATION 데이터베이스 옵션을 FORCED로 설정했거나 쿼리 클래스를 매개 변수화하도록 지정하는 TEMPLATE 계획 지침을 만든 경우에 같은 형식으로 매개 변수화된 쿼리에 대해서도 SQL 계획 지침을 만들 수 있습니다.  
   
@@ -117,8 +115,7 @@ sp_create_plan_guide
   
  `SELECT FirstName, LastName FROM Person.Person;`  
   
- 
-  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 계획 지침만 이 쿼리에 일치될 수 있습니다. 그러나 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 가 현재 데이터베이스이면 다음 문이 실행됩니다.  
+ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 계획 지침만 이 쿼리에 일치될 수 있습니다. 그러나 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 가 현재 데이터베이스이면 다음 문이 실행됩니다.  
   
  `USE DB1;`  
   
@@ -133,14 +130,14 @@ sp_create_plan_guide
  일반(SQL 또는 OBJECT) 계획 지침 및 TEMPLATE 계획 지침 모두 문에 적용할 수 있을 경우 일반 계획 지침만 사용됩니다.  
   
 > [!NOTE]  
->  계획 지침을 만들려는 문이 포함된 일괄 처리는 USE *database* 문을 포함할 수 없습니다.  
+>   계획 지침을 만들려는 문이 포함된 일괄 처리는 USE *database* 문을 포함할 수 없습니다.  
   
 ## <a name="plan-guide-effect-on-the-plan-cache"></a>계획 캐시의 계획 지침 효과  
  모듈에 대한 계획 지침을 만들면 계획 캐시에서 해당 모듈에 대한 쿼리 계획이 제거되고, 일괄 처리에 OBJECT 또는 SQL 유형의 계획 지침을 만들면 같은 해시 값을 가진 일괄 처리에 대한 쿼리 계획이 제거되며, TEMPLATE 유형의 계획 지침을 만들면 해당 데이터베이스 내의 계획 캐시에서 단일 문 일괄 처리가 모두 제거됩니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|Task|항목|  
+|작업|항목|  
 |----------|-----------|  
 |계획 지침을 만드는 방법에 대해 설명합니다.|[새 계획 지침 만들기](create-a-new-plan-guide.md)|  
 |매개 변수가 있는 쿼리에 대한 계획 지침을 만드는 방법에 대해 설명합니다.|[매개 변수가 있는 쿼리를 위한 계획 지침 만들기](create-a-plan-guide-for-parameterized-queries.md)|  
@@ -156,6 +153,6 @@ sp_create_plan_guide
  [Transact-sql&#41;sp_create_plan_guide_from_handle &#40;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)   
  [Transact-sql&#41;sp_control_plan_guide &#40;](/sql/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql)   
  [plan_guides &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   
- [fn_validate_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)  
+ [sys.fn_validate_plan_guide&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)  
   
   

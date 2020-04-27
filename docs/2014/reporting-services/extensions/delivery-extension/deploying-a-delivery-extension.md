@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b95fbb99affb91743d5b922f748cae5554736f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164418"
 ---
 # <a name="deploying-a-delivery-extension"></a>배달 확장 프로그램 배포
@@ -26,7 +26,7 @@ ms.locfileid: "63164418"
   
  배달 확장 프로그램이 교체되거나 업그레이드되어도 배달 확장 프로그램을 참조하는 모든 구독은 유효합니다.  
   
- 배달 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 확장 프로그램을 작성 하 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 고 라이브러리에 컴파일한 후에는 확장을 적절 한 디렉터리에 복사 하 고 적절 한 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 파일에 항목을 추가 하 여 보고서 서버에서 찾을 수 있도록 해야 합니다.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 배달 확장 프로그램을 작성하고 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 라이브러리에 컴파일한 후 확장 프로그램을 적절한 디렉터리에 복사하고 해당하는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 파일에 항목을 추가하여 보고서 서버에서 찾을 수 있도록 해야 합니다.  
   
 ## <a name="configuration-file-extension-element"></a>구성 파일 확장 프로그램 요소  
  보고서 서버에 배포하는 배달 확장 프로그램은 구성 파일에서 `Extension` 요소로 입력되어야 합니다. 보고서 서버에 대한 구성 파일은 RSReportServer.config입니다.  
@@ -35,11 +35,9 @@ ms.locfileid: "63164418"
   
 |attribute|Description|  
 |---------------|-----------------|  
-|`Name`|확장 프로그램에 대한 고유한 이름으로서 예를 들면 전자 메일 배달 확장 프로그램의 경우 "Report Server E-Mail", 파일 공유 배달 확장 프로그램의 경우 "Report Server FileShare" 등입니다. 
-  `Name` 특성의 최대 길이는 255자입니다. 이름은 구성 파일의 `Extension` 요소에 있는 모든 항목 중에서 고유해야 합니다. 중복된 이름이 있을 경우 보고서 서버에서 오류를 반환합니다.|  
+|`Name`|확장 프로그램에 대한 고유한 이름으로서 예를 들면 전자 메일 배달 확장 프로그램의 경우 "Report Server E-Mail", 파일 공유 배달 확장 프로그램의 경우 "Report Server FileShare" 등입니다. `Name` 특성의 최대 길이는 255자입니다. 이름은 구성 파일의 `Extension` 요소에 있는 모든 항목 중에서 고유해야 합니다. 중복된 이름이 있을 경우 보고서 서버에서 오류를 반환합니다.|  
 |`Type`|정규화된 네임스페이스와 어셈블리 이름을 포함하는 쉼표로 구분된 목록입니다.|  
-|`Visible`|
-  `false` 값은 배달 확장 프로그램이 사용자 인터페이스에 표시되지 않음을 나타냅니다. 이 특성이 포함되지 않을 경우 기본값은 `true`입니다.|  
+|`Visible`|`false` 값은 배달 확장 프로그램이 사용자 인터페이스에 표시되지 않음을 나타냅니다. 이 특성이 포함되지 않을 경우 기본값은 `true`입니다.|  
   
  RSReportServer.config 파일에 대한 자세한 내용은 [Reporting Services 구성 파일](../../report-server/reporting-services-configuration-files.md)을 참조하세요.  
   
@@ -71,9 +69,7 @@ ms.locfileid: "63164418"
     <Extension Name="My Delivery Extension Name" Type="CompanyName.ExtensionName.MyDeliveryExtensionClass, AssemblyName" />  
     ```  
   
-     
-  `Name`에 대한 값은 배달 확장 프로그램의 고유한 이름입니다. 
-  `Type`의 값은 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 인터페이스를 구현하는 클래스의 정규화된 네임스페이스에 대한 항목과 그 다음에 어셈블리의 이름(.dll 파일 확장명 포함 안 함)이 따라오는 형태가 포함되며 쉼표로 구분된 목록입니다. 기본적으로 배달 확장 프로그램은 표시됩니다. 보고서 관리자와 같은 사용자 인터페이스에서 확장 프로그램을 숨기려면 `Visible` 특성을 `Extension` 요소에 추가하고 `false`로 설정합니다.  
+     `Name`에 대한 값은 배달 확장 프로그램의 고유한 이름입니다. `Type`의 값은 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 인터페이스를 구현하는 클래스의 정규화된 네임스페이스에 대한 항목과 그 다음에 어셈블리의 이름(.dll 파일 확장명 포함 안 함)이 따라오는 형태가 포함되며 쉼표로 구분된 목록입니다. 기본적으로 배달 확장 프로그램은 표시됩니다. 보고서 관리자와 같은 사용자 인터페이스에서 확장 프로그램을 숨기려면 `Visible` 특성을 `Extension` 요소에 추가하고 `false`로 설정합니다.  
   
 5.  마지막으로 배달 확장 프로그램에 대해 `FullTrust` 권한을 부여하는 사용자 지정 어셈블리에 대한 코드 그룹을 추가합니다. 기본적 으로%ProgramFiles%\Microsoft SQL Server \ MSRS10_50에 있는 rssrvpolicy .config 파일에 코드 그룹을 추가 하 여이 작업을 수행 합니다. \<InstanceName> \Reporting services\reportserver 코드 그룹은 다음과 같습니다.  
   
@@ -90,8 +86,7 @@ ms.locfileid: "63164418"
     </CodeGroup>  
     ```  
   
-     URL 멤버 자격은 배달 확장 프로그램에 대해 선택할 수 있는 많은 멤버 자격 조건 중 하나일 뿐입니다. 
-  [!INCLUDE[ssRS](../../../includes/ssrs.md)]의 코드 액세스 보안에 대한 자세한 내용은 [보안 개발&#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)을 참조하세요.  
+     URL 멤버 자격은 배달 확장 프로그램에 대해 선택할 수 있는 많은 멤버 자격 조건 중 하나일 뿐입니다. [!INCLUDE[ssRS](../../../includes/ssrs.md)]의 코드 액세스 보안에 대한 자세한 내용은 [보안 개발&#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)을 참조하세요.  
   
 ## <a name="deploying-the-extension-to-report-manager"></a>보고서 관리자에 확장 프로그램 배포  
  배달 확장 프로그램에서 <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> 인터페이스를 구현하는 경우 배달 확장 프로그램을 보고서 관리자 구독 페이지에 사용할 수 있습니다. 구독 사용자 인터페이스를 사용할 수 있도록 하려면 확장 프로그램을 보고서 관리자에 배포해야 합니다.  
@@ -118,13 +113,10 @@ ms.locfileid: "63164418"
     <Extension Name="My Delivery Extension Name" Type="CompanyName.ExtensionName.MyDeliveryUIExtensionClass, AssemblyName" />  
     ```  
   
-     
-  `Name`에 대한 값은 배달 확장 프로그램의 고유한 이름입니다. 
-  `Type`의 값은 <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> 인터페이스를 구현하는 클래스의 정규화된 네임스페이스에 대한 항목과 그 다음에 어셈블리의 이름(.dll 파일 확장명 포함 안 함)이 따라오는 형태가 포함되며 쉼표로 구분된 목록입니다.  
+     `Name`에 대한 값은 배달 확장 프로그램의 고유한 이름입니다. `Type`의 값은 <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> 인터페이스를 구현하는 클래스의 정규화된 네임스페이스에 대한 항목과 그 다음에 어셈블리의 이름(.dll 파일 확장명 포함 안 함)이 따라오는 형태가 포함되며 쉼표로 구분된 목록입니다.  
   
     > [!IMPORTANT]  
-    >  
-  `Name` 특성의 값은 보고서 서버와 보고서 관리자 구성 파일 항목에 대해 동일해야 합니다. 동일하지 않은 경우 서버 구성이 잘못된 것입니다.  
+    >  `Name` 특성의 값은 보고서 서버와 보고서 관리자 구성 파일 항목에 대해 동일해야 합니다. 동일하지 않은 경우 서버 구성이 잘못된 것입니다.  
   
      마지막으로 배달 확장 프로그램에 대해 `FullTrust` 권한을 부여하는 사용자 지정 어셈블리에 대한 코드 그룹을 추가합니다. 기본적으로 C:\Program Files\Microsoft SQL Server \ MSRS10_50에 있는 Rsmgrpolicy.config 파일에 코드 그룹을 추가 하 여이 작업을 수행할 수 있습니다. \<InstanceName> \Reporting services\reportmanager 코드 그룹은 다음과 같습니다.  
   
@@ -141,14 +133,13 @@ ms.locfileid: "63164418"
     </CodeGroup>  
     ```  
   
-     URL 멤버 자격은 배달 확장 프로그램에 대해 선택할 수 있는 많은 멤버 자격 조건 중 하나일 뿐입니다. 
-  [!INCLUDE[ssRS](../../../includes/ssrs.md)]의 코드 액세스 보안에 대한 자세한 내용은 [보안 개발&#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)을 참조하세요.  
+     URL 멤버 자격은 배달 확장 프로그램에 대해 선택할 수 있는 많은 멤버 자격 조건 중 하나일 뿐입니다. 의 [!INCLUDE[ssRS](../../../includes/ssrs.md)]코드 액세스 보안에 대 한 자세한 내용은 [보안 개발 &#40;Reporting Services](../secure-development/secure-development-reporting-services.md) 를 참조 하세요&#41;  
   
 ## <a name="verifying-the-deployment"></a>배포 확인  
  웹 서비스 <xref:ReportService2010.ReportingService2010.ListExtensions%2A> 메서드를 사용하여 배달 확장 프로그램이 보고서 서버에 성공적으로 배포되었는지 여부를 확인할 수 있습니다. 보고서 관리자를 열고 확장 프로그램이 구독에 대해 사용 가능한 배달 확장 프로그램 목록에 포함되어 있는지 확인할 수도 있습니다. 보고서 관리자 및 구독에 대 한 자세한 내용은 [구독 및 배달 &#40;Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [배달 확장 프로그램 구현](implementing-a-delivery-extension.md)   
- [Reporting Services 확장 라이브러리](../reporting-services-extension-library.md)  
+ [Reporting Services 확장 프로그램 라이브러리](../reporting-services-extension-library.md)  
   
   

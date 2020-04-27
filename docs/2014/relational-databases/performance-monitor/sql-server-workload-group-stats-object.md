@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 06651ffcfee30d538c8ede09914133a2ed818b3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151096"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQL Server, Workload Group Stats 개체
@@ -40,8 +40,8 @@ ms.locfileid: "63151096"
 |Active parallel threads|병렬 스레드 사용량의 현재 개수입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [리소스 사용 모니터링&#40;시스템 모니터&#41;](monitor-resource-usage-system-monitor.md)   
- [SQLServer, Resource Pool Stats 개체](sql-server-resource-pool-stats-object.md)   
+ [시스템 모니터 &#40;리소스 사용량 모니터링&#41;](monitor-resource-usage-system-monitor.md)   
+ [SQL Server, Resource Pool Stats 개체](sql-server-resource-pool-stats-object.md)   
  [리소스 관리자](../resource-governor/resource-governor.md)  
   
   

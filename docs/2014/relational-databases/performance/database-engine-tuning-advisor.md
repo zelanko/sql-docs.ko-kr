@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b021cb21df1b3c27e7f43c3ef92650eda4c2cf86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151207"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
@@ -63,7 +63,7 @@ ms.locfileid: "63151207"
  데이터베이스 엔진 튜닝 관리자 그래픽 사용자 인터페이스  
  작업을 지정하고 다양한 튜닝 옵션을 선택할 수 있는 사용하기 쉬운 인터페이스입니다.  
   
- **dta** 유틸리티  
+ **dta** 유틸리티나  
  데이터베이스 엔진 튜닝 관리자의 명령 프롬프트 버전입니다. **dta** 유틸리티를 통해 애플리케이션과 스크립트에서 데이터베이스 엔진 튜닝 관리자의 기능을 사용할 수 있습니다.  
   
  workload  
@@ -95,8 +95,7 @@ ms.locfileid: "63151207"
   
     3.  데이터베이스 엔진 튜닝 관리자를 실행하는 사용자가 `db_owner` 데이터베이스 역할 또는 `sysadmin` 고정 서버 역할의 멤버가 아닙니다. 작업의 쿼리는 데이터베이스 엔진 튜닝 관리자를 실행하는 사용자의 보안 컨텍스트에서 분석됩니다. 사용자는 `db_owner` 데이터베이스 역할의 멤버여야 합니다.  
   
--   데이터베이스 엔진 튜닝 관리자는 튜닝 세션 데이터 및 기타 정보를 `msdb` 데이터베이스에 저장합니다. 
-  `msdb` 데이터베이스를 변경하면 튜닝 세션 데이터가 손실될 수 있습니다. 이 위험을 제거하려면 `msdb` 데이터베이스에 적합한 백업 전략을 구현합니다.  
+-   데이터베이스 엔진 튜닝 관리자는 튜닝 세션 데이터 및 기타 정보를 `msdb` 데이터베이스에 저장합니다. `msdb` 데이터베이스를 변경하면 튜닝 세션 데이터가 손실될 수 있습니다. 이 위험을 제거하려면 `msdb` 데이터베이스에 적합한 백업 전략을 구현합니다.  
   
 ## <a name="performance-considerations"></a>성능 고려 사항  
  데이터베이스 엔진 튜닝 관리자는 분석할 때 상당한 양의 프로세서와 메모리 리소스를 사용합니다. 프로덕션 서버의 속도가 느려지는 것을 피하려면 다음 전략 중 하나를 따르십시오.  

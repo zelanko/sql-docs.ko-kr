@@ -11,22 +11,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 49fce70b4fc01f77fe7ca54e3951f0372ba18489
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067649"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 장애 조치(Failover) 클러스터 설치
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하여 장애 조치(Failover) 클러스터 인스턴스를 만들고 구성해야 합니다.  
   
 ## <a name="installing-a-failover-cluster"></a>장애 조치(Failover) 클러스터 설치  
- 장애 조치(Failover) 클러스터를 설치하려면 서비스로 로그온할 수 있고 장애 조치(Failover) 클러스터의 모든 노드에서 운영 체제의 일부로 실행할 수 있는 로컬 관리자 권한이 있는 도메인 계정을 사용해야 합니다. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 사용하여 장애 조치(Failover) 클러스터를 설치하려면 다음 단계를 따르십시오.  
+ 장애 조치(Failover) 클러스터를 설치하려면 서비스로 로그온할 수 있고 장애 조치(Failover) 클러스터의 모든 노드에서 운영 체제의 일부로 실행할 수 있는 로컬 관리자 권한이 있는 도메인 계정을 사용해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 사용하여 장애 조치(Failover) 클러스터를 설치하려면 다음 단계를 따르십시오.  
   
-1.  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치, 구성 및 유지 관리하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 사용합니다.  
+1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치, 구성 및 유지 관리하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 사용합니다.  
   
     -   우선 장애 조치(Failover) 클러스터 인스턴스를 만드는 데 필요한 정보(예: 클러스터 디스크 리소스, IP 주소 및 네트워크 이름) 및 장애 조치(Failover)에 사용할 수 있는 노드를 확인합니다. 자세한 내용은 다음을 참조하세요.  
   
@@ -34,10 +31,9 @@ ms.locfileid: "63067649"
   
         -   [SQL Server 설치에 대한 보안 고려 사항](../../install/security-considerations-for-a-sql-server-installation.md)  
   
-    -   구성 단계는 설치 프로그램을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 실행 하기 전에 수행 해야 합니다. Windows 클러스터 관리자를 사용 하 여이를 수행 합니다. 구성 하려는 각 장애 조치 (failover) 클러스터 인스턴스에 대해 하나의 WSFC 그룹이 있어야 합니다.  
+    -   구성 단계는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하기 전에 수행해야 합니다. Windows 클러스터 관리자를 사용하여 작업을 수행하십시오. 구성할 각 장애 조치(Failover) 클러스터 인스턴스당 하나의 WSFC 그룹이 있어야 합니다.  
   
-    -   시스템이 최소 요구 사항을 충족하는지 확인해야 합니다. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터의 특정 요구 사항에 대한 자세한 내용은 [장애 조치(failover) 클러스터링을 설치하기 전에](before-installing-failover-clustering.md)를 참조하세요.  
+    -   시스템이 최소 요구 사항을 충족하는지 확인해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터의 특정 요구 사항에 대한 자세한 내용은 [장애 조치(failover) 클러스터링을 설치하기 전에](before-installing-failover-clustering.md)를 참조하세요.  
   
 2.  다른 클러스터 노드에 영향을 주지 않고 장애 조치(Failover) 클러스터 구성에 노드를 추가하거나 제거할 수 있습니다. 자세한 내용은 [SQL Server 장애 조치(failover) 클러스터에서 노드 추가 또는 제거&#40;설치 프로그램&#41;](add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)을 참조하세요.  
   
@@ -45,24 +41,19 @@ ms.locfileid: "63067649"
   
 3.  각 장애 조치(Failover) 클러스터 인스턴스에 대해 IP 주소를 여러 개 지정할 수 있습니다. 각 서브넷에 대해 여러 IP 주소를 지정할 수 있습니다. 같은 서브넷에 여러 IP 주소가 있는 경우에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램에서 종속성을 AND로 설정하고, 여러 서브넷의 노드를 클러스터링하는 경우에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램에서 종속성을 OR로 설정합니다.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 설치 옵션  
+## <a name="ssnoversion-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 설치 옵션  
   
 ##### <a name="option-1-integrated-installation-with-add-node"></a>옵션 1: 통합 설치 - 노드 추가  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 통합 장애 조치(Failover) 클러스터 설치는 두 단계로 구성됩니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 통합 장애 조치(Failover) 클러스터 설치는 두 단계로 구성됩니다.  
   
 1.  단일 노드 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스를 만들고 구성합니다. 노드 구성을 완료하면 완벽하게 작동하는 장애 조치(Failover) 클러스터 인스턴스가 만들어집니다. 이 시점에서는 장애 조치(Failover) 클러스터에 노드가 하나뿐이므로 고가용성은 지원되지 않습니다.  
   
-2.  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 추가할 각 노드에서 노드 추가 기능으로 설치를 실행하여 해당 노드를 추가합니다.  
+2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 추가할 각 노드에서 노드 추가 기능으로 설치를 실행하여 해당 노드를 추가합니다.  
   
 ##### <a name="option-2-advancedenterprise-installation"></a>옵션 2: 고급/엔터프라이즈 설치  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 고급/엔터프라이즈 장애 조치(failover) 클러스터 설치는 두 단계로 구성됩니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 고급/엔터프라이즈 장애 조치(failover) 클러스터 설치는 두 단계로 구성됩니다.  
   
-1.  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 속한 각 노드에서 장애 조치(Failover) 클러스터 준비 기능으로 설치를 실행합니다. 이 단계는 노드를 클러스터링할 수 있도록 준비하지만 이 시점에서는 작동하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 없습니다.  
+1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 속한 각 노드에서 장애 조치(Failover) 클러스터 준비 기능으로 설치를 실행합니다. 이 단계는 노드를 클러스터링할 수 있도록 준비하지만 이 시점에서는 작동하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 없습니다.  
   
 2.  노드를 클러스터링할 수 있도록 준비했으면 공유 디스크를 소유하는 노드에서 장애 조치(Failover) 클러스터 완료 기능으로 설치를 실행합니다. 이 단계는 장애 조치(Failover) 클러스터 인스턴스를 구성하고 완료합니다. 이 단계를 마치면 정상적으로 작동하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스가 만들어집니다.  
   
@@ -70,12 +61,10 @@ ms.locfileid: "63067649"
     >  다중 노드 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 설치의 경우 어떤 옵션을 사용해도 됩니다. 어떤 옵션을 사용하든지 간에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 만든 후 노드 추가 기능을 사용하여 노드를 추가할 수 있습니다.  
   
     > [!IMPORTANT]  
-    >  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 위치에 대한 운영 체제 드라이브 문자는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 추가된 모든 노드와 일치해야 합니다.  
+    >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 위치에 대한 운영 체제 드라이브 문자는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 추가된 모든 노드와 일치해야 합니다.  
   
 #### <a name="ip-address-configuration-during-setup"></a>설치 중 IP 주소 구성  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 통해 다음 작업 중에 IP 리소스 종속성 설정을 설정하거나 변경할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 통해 다음 작업 중에 IP 리소스 종속성 설정을 설정하거나 변경할 수 있습니다.  
   
 -   통합 설치 - [새 SQL Server 장애 조치(failover) 클러스터 만들기&#40;설치 프로그램&#41;](create-a-new-sql-server-failover-cluster-setup.md)  
   
@@ -85,16 +74,15 @@ ms.locfileid: "63067649"
   
 -   노드 제거 - [SQL Server 장애 조치(failover) 클러스터에서 노드 추가 또는 제거&#40;설치 프로그램&#41;](add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
   
- **참고** IPV6 IP 주소는 지원 됩니다.  IPV4와 IPV6을 둘 다 구성하면 서로 다른 서브넷으로 처리되고 IPV6이 먼저 온라인 상태가 됩니다.  
+ **참고** IPV6 IP 주소는 지원되지 않습니다.  IPV4와 IPV6을 둘 다 구성하면 서로 다른 서브넷으로 처리되고 IPV6이 먼저 온라인 상태가 됩니다.  
   
-##### <a name="includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다중 서브넷 장애 조치(failover) 클러스터  
+##### <a name="ssnoversion-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다중 서브넷 장애 조치(failover) 클러스터  
  클러스터의 노드가 서로 다른 서브넷에 있는 경우 종속성을 OR로 설정할 수 있습니다. 그러나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다중 서브넷 장애 조치(Failover) 클러스터의 각 노드가 지정된 IP 주소를 하나 이상 소유할 수 있어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [장애 조치 (Failover) 클러스터링을 설치 하기 전에](before-installing-failover-clustering.md)   
  [설치 &#40;SQL Server 장애 조치 (Failover) 클러스터를 새로 만듭니다&#41;](create-a-new-sql-server-failover-cluster-setup.md)   
  [명령 프롬프트에서 SQL Server 2014 설치](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
- [SQL Server 장애 조치 (Failover) 클러스터 업그레이드](../windows/upgrade-a-sql-server-failover-cluster-instance.md)  
+ [SQL Server 장애 조치(Failover) 클러스터 업그레이드](../windows/upgrade-a-sql-server-failover-cluster-instance.md)  
   
   

@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6f28abbf9871d5f4e512e9c9ee0cfb5c7ad9db59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63135278"
 ---
 # <a name="localdbstopinstance-function"></a>LocalDBStopInstance 함수
   지정한 SQL Server Express LocalDB 인스턴스의 실행을 중지합니다.  
   
- **헤더 파일:** sqlncli  
+ **헤더 파일:** sqlncli.h  
   
 ## <a name="syntax"></a>구문  
   

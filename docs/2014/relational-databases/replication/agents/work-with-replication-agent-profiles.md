@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6f66d1bab70619db1631117268e5d62c24c943f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157119"
 ---
 # <a name="work-with-replication-agent-profiles"></a>복제 에이전트 프로필 작업
@@ -63,9 +63,9 @@ ms.locfileid: "63157119"
   
 -   **후속 작업:**  [에이전트 매개 변수 변경 후](#FollowUp)  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-###  <a name="Access_SSMS"></a> SQL Server Management Studio에서 에이전트 프로필 대화 상자에 액세스하려면  
+###  <a name="to-access-the-agent-profiles-dialog-box-from-sql-server-management-studio"></a><a name="Access_SSMS"></a> SQL Server Management Studio에서 에이전트 프로필 대화 상자에 액세스하려면  
   
 1.  **배포자 속성 - \<Distributor>** 대화 상자의 **일반** 페이지에서 **프로필 기본값**을 클릭합니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "63157119"
   
     2.  배포 에이전트 및 병합 에이전트 프로필의 경우 **모든 구독** 탭에서 구독을 마우스 오른쪽 단추로 클릭한 다음 **에이전트 프로필**을 클릭합니다. 다른 에이전트의 경우 **에이전트** 탭에서 에이전트를 마우스 오른쪽 단추로 클릭하고 **에이전트 프로필**을 클릭합니다.  
   
-###  <a name="Specify_SSMS"></a> 에이전트에 대해 프로필을 지정하려면  
+###  <a name="to-specify-a-profile-for-an-agent"></a><a name="Specify_SSMS"></a> 에이전트에 대해 프로필을 지정하려면  
   
 1.  **에이전트 프로필** 대화 상자에 둘 이상의 에이전트에 대한 프로필이 표시되면 에이전트를 선택합니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "63157119"
   
 3.  기존 게시 또는 구독에 대해 선택한 유형의 모든 에이전트에서 이 프로필을 사용하려면 **기존 에이전트 변경**을 클릭합니다.  
   
-###  <a name="Modify_SSMS"></a> 프로필과 연결된 매개 변수를 보고 편집하려면  
+###  <a name="to-view-and-edit-the-parameters-associated-with-a-profile"></a><a name="Modify_SSMS"></a> 프로필과 연결된 매개 변수를 보고 편집하려면  
   
 1.  **에이전트 프로필** 대화 상자에 둘 이상의 에이전트에 대한 프로필이 표시되면 에이전트를 선택합니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "63157119"
   
 4.  **닫기**를 클릭합니다.  
   
-###  <a name="Create_SSMS"></a> 사용자 정의 프로필을 만들려면  
+###  <a name="to-create-a-user-defined-profile"></a><a name="Create_SSMS"></a> 사용자 정의 프로필을 만들려면  
   
 1.  **에이전트 프로필** 대화 상자에 둘 이상의 에이전트에 대한 프로필이 표시되면 에이전트를 선택합니다.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "63157119"
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-###  <a name="Delete_SSMS"></a> 사용자 정의 프로필을 삭제하려면  
+###  <a name="to-delete-a-user-defined-profile"></a><a name="Delete_SSMS"></a> 사용자 정의 프로필을 삭제하려면  
   
 1.  **에이전트 프로필** 대화 상자에 둘 이상의 에이전트에 대한 프로필이 표시되면 에이전트를 선택합니다.  
   
@@ -132,9 +132,9 @@ ms.locfileid: "63157119"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-###  <a name="Create_tsql"></a> 새 에이전트 프로필을 만들려면  
+###  <a name="to-create-a-new-agent-profile"></a><a name="Create_tsql"></a> 새 에이전트 프로필을 만들려면  
   
 1.  배포자에서 [sp_add_agent_profile&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql)을 실행합니다. 을 **@name**지정 하 고에 값으로 **@profile_type** **1** 을 지정 하 고에 **@agent_type**다음 값 중 하나를 지정 합니다.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "63157119"
   
 2.  새 프로필이 만들어진 후 기본 매개 변수를 추가, 제거 또는 수정하여 프로필을 사용자 지정합니다.  
   
-###  <a name="Modify_tsql"></a> 기존 에이전트 프로필을 수정하려면  
+###  <a name="to-modify-an-existing-agent-profile"></a><a name="Modify_tsql"></a> 기존 에이전트 프로필을 수정하려면  
   
 1.  배포자에서 [sp_help_agent_profile&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql)을 실행합니다. 에 **@agent_type**다음 값 중 하나를 지정 합니다.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "63157119"
   
     -   배포자에서 [sp_add_agent_parameter&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql)를 실행합니다. 에 **@profile_id**1 단계에서 가져온 프로필 식별자를 지정 하 고,에 **@parameter_name**추가할 유효한 매개 변수의 이름을 지정 하 고, 매개 변수의 값을 **@parameter_value**지정 합니다.  
   
-###  <a name="Delete_tsql"></a> 에이전트 프로필을 삭제하려면  
+###  <a name="to-delete-an-agent-profile"></a><a name="Delete_tsql"></a> 에이전트 프로필을 삭제하려면  
   
 1.  배포자에서 [sp_help_agent_profile&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql)을 실행합니다. 에 **@agent_type**다음 값 중 하나를 지정 합니다.  
   
@@ -201,7 +201,7 @@ ms.locfileid: "63157119"
   
 2.  배포자에서 [sp_drop_agent_profile&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql)을 실행합니다. 에 대해 **@profile_id**1 단계에서 가져온 프로필 식별자를 지정 합니다.  
   
-###  <a name="Synch_tsql"></a> 동기화 중 에이전트 프로필을 사용하려면  
+###  <a name="to-use-agent-profiles-during-synchronization"></a><a name="Synch_tsql"></a> 동기화 중 에이전트 프로필을 사용하려면  
   
 1.  배포자에서 [sp_help_agent_profile&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql)을 실행합니다. 에 **@agent_type**다음 값 중 하나를 지정 합니다.  
   
@@ -221,14 +221,14 @@ ms.locfileid: "63157119"
   
 3.  명령 프롬프트에서 에이전트를 시작할 때 **-ProfileName** 명령줄 매개 변수 뒤 `profile_name` 에 1 단계에서 얻은 값을 지정 합니다.  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  이 예제에서는 **custom_merge**라는 병합 에이전트의 사용자 지정 프로필을 만들고, **-UploadReadChangesPerBatch** 매개 변수의 값을 변경하고, 새 **-ExchangeType** 매개 변수를 추가하고, 만들어진 프로필에 대한 정보를 반환합니다.  
   
  [!code-sql[HowTo#sp_addagentprofileparam](../../../snippets/tsql/SQL15/replication/howto/tsql/createperfparammerge.sql#sp_addagentprofileparam)]  
   
-##  <a name="RMOProcedure"></a> RMO 사용  
+##  <a name="using-rmo"></a><a name="RMOProcedure"></a> RMO 사용  
   
-###  <a name="Create_RMO"></a> 새 에이전트 프로필을 만들려면  
+###  <a name="to-create-a-new-agent-profile"></a><a name="Create_RMO"></a> 새 에이전트 프로필을 만들려면  
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스의 인스턴스를 사용하여 배포자에 대한 연결을 만듭니다.  
   
@@ -244,8 +244,7 @@ ms.locfileid: "63157119"
   
     -   <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> (옵션) - 프로필에 대한 설명입니다.  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A>(옵션) - 이 `true`의 모든 새 에이전트 작업에서 기본적으로 이 프로필이 사용되는 경우 이 속성을 <xref:Microsoft.SqlServer.Replication.AgentType>로 설정합니다.  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A>(옵션) - 이 <xref:Microsoft.SqlServer.Replication.AgentType>의 모든 새 에이전트 작업에서 기본적으로 이 프로필이 사용되는 경우 이 속성을 `true`로 설정합니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> 메서드를 호출하여 서버에 프로필을 만듭니다.  
   
@@ -253,7 +252,7 @@ ms.locfileid: "63157119"
   
 6.  기존 복제 에이전트 작업에 프로필을 할당하려면 <xref:Microsoft.SqlServer.Replication.AgentProfile.AssignToAgent%2A> 메서드를 호출합니다. *distributionDBName* 에 대한 배포 데이터베이스 이름 및 *agentID*에 대한 작업 ID를 전달합니다.  
   
-###  <a name="Modify_RMO"></a> 기존 에이전트 프로필을 수정하려면  
+###  <a name="to-modify-an-existing-agent-profile"></a><a name="Modify_RMO"></a> 기존 에이전트 프로필을 수정하려면  
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스의 인스턴스를 사용하여 배포자에 대한 연결을 만듭니다.  
   
@@ -273,7 +272,7 @@ ms.locfileid: "63157119"
   
     -   <xref:Microsoft.SqlServer.Replication.AgentProfile.ChangeParameter%2A> - 프로필의 기존 매개 변수 설정을 변경합니다. 여기서 *name* 은 에이전트 매개 변수의 이름이고 *newValue* 는 매개 변수를 변경할 값입니다. 프로필에 대해 정의된 현재의 모든 에이전트 매개 변수를 열거하려면 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> 메서드를 호출합니다. 이 메서드는 이 프로필의 기존 매개 변수를 나타내는 <xref:System.Collections.ArrayList> 개체의 <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> 를 반환합니다. 지원되는 모든 에이전트 매개 변수 설정을 열거하려면 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> 메서드를 호출합니다. 이 메서드는 모든 매개 변수에 대해 지원되는 값을 나타내는 <xref:System.Collections.ArrayList> 개체의 <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> 를 반환합니다.  
   
-###  <a name="Delete_RMO"></a> 에이전트 프로필을 삭제하려면  
+###  <a name="to-delete-an-agent-profile"></a><a name="Delete_RMO"></a> 에이전트 프로필을 삭제하려면  
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스의 인스턴스를 사용하여 배포자에 대한 연결을 만듭니다.  
   
@@ -285,7 +284,7 @@ ms.locfileid: "63157119"
   
 5.  <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> 메서드를 호출하여 이 개체가 나타내는 사용자 정의 프로필을 서버에서 제거합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 에이전트 매개 변수 변경 후  
+##  <a name="follow-up-after-changing-agent-parameters"></a><a name="FollowUp"></a> 후속 작업: 에이전트 매개 변수 변경 후  
  에이전트 매개 변수에 대한 변경 사항은 다음에 에이전트가 시작될 때 적용됩니다. 에이전트가 연속적으로 실행되는 경우에는 에이전트를 중단했다가 다시 시작해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
@@ -294,6 +293,6 @@ ms.locfileid: "63157119"
  [복제 로그 판독기 에이전트](replication-log-reader-agent.md)   
  [복제 배포 에이전트](replication-distribution-agent.md)   
  [복제 병합 에이전트](replication-merge-agent.md)   
- [Replication Queue Reader Agent](replication-queue-reader-agent.md)  
+ [복제 큐 판독기 에이전트](replication-queue-reader-agent.md)  
   
   

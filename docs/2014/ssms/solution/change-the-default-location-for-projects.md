@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a772a80e6cb0e51682880c0579ec07914948372b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62956137"
 ---
 # <a name="change-the-default-location-for-projects"></a>프로젝트 기본 위치 변경
@@ -25,7 +25,7 @@ ms.locfileid: "62956137"
   
 ### <a name="to-change-the-default-location-for-projects"></a>프로젝트의 기본 위치를 변경하려면  
   
-1.  다른 위치에서 파일 또는 프로젝트를 열거나 저장하여 기본 위치를 변경합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 이전에 열린 프로젝트의 위치를 저장 하 고 다음에 프로젝트를 열거나 저장할 때 해당 위치를 사용 합니다.  
+1.  다른 위치에서 파일 또는 프로젝트를 열거나 저장하여 기본 위치를 변경합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 이전에 열린 프로젝트의 위치를 저장하였다가 다음에 프로젝트를 열거나 저장할 때 해당 위치를 사용합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [솔루션 탐색기](solution-explorer.md)  

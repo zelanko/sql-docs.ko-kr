@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: da60ceee93802b14b7d09392740a1f6b471e4ab1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150605"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>계획 지침을 사용하여 쿼리 매개 변수화 동작 지정
@@ -35,8 +35,7 @@ ms.locfileid: "63150605"
   
 -   PARAMETERIZATION 데이터베이스 옵션을 FORCED로 설정하면 특정 쿼리 클래스에 대해 강제 매개 변수화가 아닌 단순 매개 변수화만 시도되도록 지정할 수 있습니다. 이렇게 하려면 매개 변수가 강제로 지정된 쿼리 형식에 대한 TEMPLATE 계획 지침을 만들고 PARAMETERIZATION SIMPLE 쿼리 힌트를 **sp_create_plan_guide**에 지정합니다.  
   
- 
-  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 다음 쿼리를 검토하십시오.  
+ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 다음 쿼리를 검토하십시오.  
   
 ```  
 SELECT pi.ProductID, SUM(pi.Quantity) AS Total  
@@ -49,8 +48,7 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
   
  데이터베이스 관리자는 데이터베이스의 모든 쿼리에 대해 강제 매개 변수화를 사용하지 않기로 결정했습니다. 그러나 구문상으로는 위의 쿼리와 동일하지만 해당 상수 리터럴 값만 다른 모든 쿼리에 대해 컴파일 비용이 발생하지 않기를 바랍니다. 즉, 이러한 종류의 쿼리에 대한 쿼리 계획을 다시 사용할 수 있도록 쿼리를 매개 변수화하려고 합니다. 이 경우 다음 단계를 완료합니다.  
   
-1.  매개 변수가 있는 쿼리 형식을 검색합니다. 
-  **sp_create_plan_guide** 에서 사용하기 위해 이 값을 얻는 안정적인 한 가지 방법은 [sp_get_query_template](/sql/relational-databases/system-stored-procedures/sp-get-query-template-transact-sql) 시스템 저장 프로시저를 사용하는 것입니다.  
+1.  매개 변수가 있는 쿼리 형식을 검색합니다. **sp_create_plan_guide** 에서 사용하기 위해 이 값을 얻는 안정적인 한 가지 방법은 [sp_get_query_template](/sql/relational-databases/system-stored-procedures/sp-get-query-template-transact-sql) 시스템 저장 프로시저를 사용하는 것입니다.  
   
 2.  PARAMETERIZATION FORCED 쿼리 힌트를 지정하여 매개 변수가 있는 쿼리 형식에 대한 계획 지침을 만듭니다.  
   

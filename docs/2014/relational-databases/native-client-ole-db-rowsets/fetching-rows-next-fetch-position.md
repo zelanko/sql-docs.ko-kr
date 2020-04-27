@@ -1,5 +1,5 @@
 ---
-title: 다음 인출 위치 | Microsoft Docs
+title: 다음 페치 위치 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c47f1a8692cf7d2e3fb4f00c64770b3b0c69e5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63183642"
 ---
 # <a name="next-fetch-position"></a>다음 인출 위치
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 다음 인출 위치를 추적 하 여 **GetNextRows** 메서드 (건너뛴 경우, 방향 변경 또는 **findnextrow**, **Seek**또는 **RestartPosition** 메서드에 대 한 중간 호출)에 대 한 호출 시퀀스에서 행을 건너뛰거나 반복 하지 않고 전체 행 집합을 읽습니다. 
-  **IRowset::GetNextRows**, **IRowset::RestartPosition** 또는 **IRowsetIndex::Seek**을 호출하거나 null **pBookmark** 값을 사용해 *FindNextRow*를 호출하여 다음 인출 위치를 변경할 수 있습니다. null이 아닌 **pBookmark** 값을 사용해 *FindNextRow*를 호출하면 다음 인출 위치가 변경되지 않습니다.  
+  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 다음 인출 위치를 추적 하 여 **GetNextRows** 메서드 (건너뛴 경우, 방향 변경 또는 **findnextrow**, **Seek**또는 **RestartPosition** 메서드에 대 한 중간 호출)에 대 한 호출 시퀀스에서 행을 건너뛰거나 반복 하지 않고 전체 행 집합을 읽습니다. **IRowset::GetNextRows**, **IRowset::RestartPosition** 또는 **IRowsetIndex::Seek**을 호출하거나 null *pBookmark* 값을 사용해 **FindNextRow**를 호출하여 다음 인출 위치를 변경할 수 있습니다. null이 아닌 *pBookmark* 값을 사용해 **FindNextRow**를 호출하면 다음 인출 위치가 변경되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [행 인출](fetching-rows.md)  

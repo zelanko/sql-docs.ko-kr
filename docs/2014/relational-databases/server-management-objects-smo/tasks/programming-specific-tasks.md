@@ -19,29 +19,27 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e69a3ecab06b800ef1295c8c638b574135bf7b41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63158713"
 ---
 # <a name="programming-specific-tasks"></a>프로그래밍 관련 태스크
   SMO 개체를 사용하는 프로그래밍 관련 태스크에는 백업, 통계 모니터링, 복제, 인스턴스 개체 관리, 구성 옵션 설정 등 특정 기능이 있는 프로그램에만 필요한 복잡한 작업이 포함됩니다.  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[SMO에서 연결된 서버 사용](using-linked-servers-in-smo.md)|SMO가 <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> 개체를 사용하여 OLE-DB 서버에 연결하는 방법에 대해 설명합니다.|  
 |[SMO에서 SQL Server 구성](configuring-sql-server-in-smo.md)|SMO에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 구성 설정을 보고 수정하는 방법에 대해 설명합니다.|  
 |[테이블 및 인덱스 분할 사용](using-table-and-index-partitioning.md)|SMO에서 인덱스 및 테이블 분할을 사용하는 방법에 대해 설명합니다.|  
 |[파일 그룹 및 파일을 사용하여 데이터 저장](using-filegroups-and-files-to-store-data.md)|SMO에서 파일 그룹을 사용하는 방법에 대해 설명합니다.|  
-|[WMI 공급자를 사용하여 서비스 및 네트워크 설정 관리](managing-services-and-network-settings-by-using-wmi-provider.md)|구성 관리용 WMI 공급자를 나타내는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개체를 사용하여 <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 인스턴스를 추적하는 여러 가지 방법에 대해 설명합니다.|  
-|[데이터베이스 개체 작업](creating-altering-and-removing-database-objects.md)|
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 개체를 나타내는 인스턴스 클래스를 만드는 방법에 대해 설명합니다.|  
+|[WMI 공급자를 사용하여 서비스 및 네트워크 설정 관리](managing-services-and-network-settings-by-using-wmi-provider.md)|구성 관리용 WMI 공급자를 나타내는 <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 개체를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 추적하는 여러 가지 방법에 대해 설명합니다.|  
+|[데이터베이스 개체 작업](creating-altering-and-removing-database-objects.md)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 개체를 나타내는 인스턴스 클래스를 만드는 방법에 대해 설명합니다.|  
 |[사용자, 역할 및 로그인 관리](managing-users-roles-and-logins.md)|SMO에서 보안 역할을 사용하는 방법에 대해 설명합니다.|  
 |[권한 부여, 취소 및 거부](granting-revoking-and-denying-permissions.md)|SMO를 사용하여 사용자 또는 역할 멤버에게 권한을 부여하고 취소하고 거부하는 방법에 대해 설명합니다.|  
 |[암호화 사용](using-encryption.md)|SMO에서 암호화를 사용하여 데이터를 보호하는 방법에 대해 설명합니다.|  
-|[SQL Server 에이전트에서 자동 관리 태스크 예약](../../../ssms/agent/sql-server-agent.md)|
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 사용하여 SMO에서 작업을 모니터링하고 보고하고 예약하는 방법에 대해 설명합니다.|  
+|[SQL Server 에이전트에서 자동 관리 태스크 예약](../../../ssms/agent/sql-server-agent.md)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 사용하여 SMO에서 작업을 모니터링하고 보고하고 예약하는 방법에 대해 설명합니다.|  
 |[데이터베이스 및 트랜잭션 로그 백업 및 복원](backing-up-and-restoring-databases-and-transaction-logs.md)|SMO에서 데이터베이스 및 트랜잭션 로그를 백업하고 복원하는 방법에 대해 설명합니다.|  
 |[스크립팅](scripting.md)|SMO에서 개체를 스크립팅하고 개체 간 종속성을 검색하는 방법에 대해 설명합니다.|  
 |[데이터 전송](transferring-data.md)|SMO에서 데이터를 전송하는 방법에 대해 설명합니다.|  

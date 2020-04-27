@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9666e611b9f0a0a4348cc75a2adb1e8b711c60fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63130269"
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>쿼리 변경 내용 취소(Visual Database Tools)
@@ -31,8 +31,7 @@ ms.locfileid: "63130269"
   
 1.  쿼리 및 뷰 디자이너에 쿼리가 열려 있는 상태로 **파일** 메뉴에서 **닫기**를 클릭합니다.  
   
-2.  
-  **Microsoft SQL Server Management Studio** 대화 상자에서 **아니요**를 클릭합니다.  
+2.  **Microsoft SQL Server Management Studio** 대화 상자에서 **아니요**를 클릭합니다.  
   
      마지막 저장 상태로 쿼리 정의가 되돌아갑니다.  
   

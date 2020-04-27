@@ -17,16 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b6fffd65b22900d7c505c4b50ec290b95fe9ab4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63126194"
 ---
 # <a name="integrating-reporting-services-using-soap"></a>SOAP을 사용하여 Reporting Services 통합
-  SOAP [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API는 사용자 지정 보고 솔루션을 개발 하기 위한 여러 웹 서비스 끝점을 제공 합니다. 엔드포인트는 현재 관리와 실행의 두 범주로 나누어집니다. 관리 기능은 <xref:ReportService2005>, <xref:ReportService2006> 및 <xref:ReportService2010> 엔드포인트를 통해 표시됩니다. 
-  <xref:ReportService2005> 엔드포인트는 기본 모드로 구성된 보고서 서버를 관리하는 데 사용되고, <xref:ReportService2006> 엔드포인트는 SharePoint 통합 모드에 대해 구성된 보고서 서버를 관리하는 데 사용됩니다. 
-  <xref:ReportService2010>은 <xref:ReportService2005> 및 <xref:ReportService2006>의 기능을 병합하며, 기본 모드 또는 SharePoint 통합 모드용으로 구성된 보고서 서버를 관리할 수 있습니다.  
+  SOAP [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API는 사용자 지정 보고 솔루션을 개발 하기 위한 여러 웹 서비스 끝점을 제공 합니다. 엔드포인트는 현재 관리와 실행의 두 범주로 나누어집니다. 관리 기능은 <xref:ReportService2005>, <xref:ReportService2006> 및 <xref:ReportService2010> 엔드포인트를 통해 표시됩니다. <xref:ReportService2005> 엔드포인트는 기본 모드로 구성된 보고서 서버를 관리하는 데 사용되고, <xref:ReportService2006> 엔드포인트는 SharePoint 통합 모드에 대해 구성된 보고서 서버를 관리하는 데 사용됩니다. <xref:ReportService2010>은 <xref:ReportService2005> 및 <xref:ReportService2006>의 기능을 병합하며, 기본 모드 또는 SharePoint 통합 모드용으로 구성된 보고서 서버를 관리할 수 있습니다.  
   
 > [!NOTE]  
 >  <xref:ReportService2005> 및 <xref:ReportService2006> 엔드포인트는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]에서 더 이상 사용되지 않습니다. <xref:ReportService2010>엔드포인트에는 두 엔드포인트의 기능이 모두 포함되어 있으며 추가 관리 기능도 포함되어 있습니다.  
@@ -43,6 +41,6 @@ ms.locfileid: "63126194"
 ## <a name="see-also"></a>참고 항목  
  [응용 프로그램에 Reporting Services 통합](../application-integration/integrating-reporting-services-into-applications.md)   
  [보고서 서버 웹 서비스](../report-server-web-service/report-server-web-service.md)   
- [웹 서비스 및 .NET Framework를 사용하여 애플리케이션 빌드](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
+ [웹 서비스와 .NET Framework를 사용하여 애플리케이션 빌드](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

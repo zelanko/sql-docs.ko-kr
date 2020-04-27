@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 135d317d74a720d51c966ed92f1c305f8c04b838
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021942"
 ---
 # <a name="other-non-sql-server-subscribers"></a>다른 SQL Server 이외 구독자
-  에서[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)]지 원하는 이외 구독자 목록은 [SQL Server 이외 구독자](non-sql-server-subscribers.md)를 참조 하세요. 이 항목에는 ODBC 드라이버 및 OLE DB 공급자에 대한 요구 사항 정보가 포함되어 있습니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]에서 지원하는 -[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자 목록은 [SQL Server 이외 구독자](non-sql-server-subscribers.md)를 참조하세요. 이 항목에는 ODBC 드라이버 및 OLE DB 공급자에 대한 요구 사항 정보가 포함되어 있습니다.  
   
 ## <a name="odbc-driver-requirements"></a>ODBC 드라이버 요구 사항  
  ODBC 드라이버는  
@@ -35,8 +35,7 @@ ms.locfileid: "63021942"
   
 -   읽기 전용이 될 수 없습니다.  
   
--   
-  **MSreplication_subscriptions**와 같은 긴 테이블 이름을 지원해야 합니다.  
+-   **MSreplication_subscriptions**와 같은 긴 테이블 이름을 지원해야 합니다.  
   
 ## <a name="replicating-using-ole-db-interfaces"></a>OLE DB 인터페이스를 통한 복제  
  OLE DB 공급자는 트랜잭션 복제에 대해 다음과 같은 개체를 지원해야 합니다.  
@@ -60,7 +59,7 @@ ms.locfileid: "63021942"
   
 -   `IDBProperties`  
   
- 공급자가 **IDBInfo** 인터페이스를 지원하는 경우 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 이 인터페이스를 사용하여 따옴표 붙은 식별 문자, 최대 SQL 문 길이, 테이블과 열 이름의 최대 문자 수 등의 정보를 검색합니다.  
+ 공급자가 **IDBInfo** 인터페이스를 지원하는 경우 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 이 인터페이스를 사용하여 따옴테이블 붙은 식별 문자, 최대 SQL 문 길이, 테이블과 열 이름의 최대 문자 수 등의 정보를 검색합니다.  
   
 ### <a name="session-object-interfaces"></a>Session 개체 인터페이스  
  필요한 인터페이스는 다음과 같습니다.  
@@ -90,7 +89,7 @@ ms.locfileid: "63021942"
   
 -   **ICommandWithParameters**  
   
- **IAccessor** 는 매개 변수 접근자를 만드는 데 필요 합니다. 공급자가 **IColumnRowset**를 지 원하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 경우는 해당 인터페이스를 사용 하 여 열이 id 열인지 여부를 확인 합니다.  
+ **IAccessor** 는 매개 변수 접근자를 만들기 위해 필요합니다. 공급자가 **IColumnRowset**를 지 원하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 경우는 해당 인터페이스를 사용 하 여 열이 id 열인지 여부를 확인 합니다.  
   
 ### <a name="rowset-object-interfaces"></a>Rowset 개체 인터페이스  
  필요한 인터페이스는 다음과 같습니다.  
@@ -101,7 +100,7 @@ ms.locfileid: "63021942"
   
 -   **IColumnsInfo**  
   
- 애플리케이션은 구독 데이터베이스에서 생성된 복제된 테이블의 행 집합을 열어야 합니다. 행 집합의 데이터에 액세스 하려면 **IColumnsInfo** 및 **IAccessor** 가 필요 합니다.  
+ 애플리케이션은 구독 데이터베이스에서 생성된 복제된 테이블의 행 집합을 열어야 합니다. **IColumnsInfo** 와 **IAccessor** 는 이 행 집합의 데이터에 액세스하기 위해 필요합니다.  
   
 ### <a name="error-object-interfaces"></a>Error 개체 인터페이스  
  다음 인터페이스를 사용하여 오류를 관리합니다.  

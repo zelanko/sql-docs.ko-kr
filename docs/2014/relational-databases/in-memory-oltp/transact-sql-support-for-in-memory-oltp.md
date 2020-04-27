@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1db4c6895fb499458c198008319302a25b8cd34b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63156219"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 Transact-SQL 지원
@@ -42,7 +42,7 @@ ms.locfileid: "63156219"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [지원되는 데이터 형식](supported-data-types-for-in-memory-oltp.md)  
+-   [지원 되는 데이터 형식](supported-data-types-for-in-memory-oltp.md)  
   
 -   [해석된 Transact-SQL을 사용하여 메모리 액세스에 최적화된 테이블에 액세스](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)  
   
@@ -50,8 +50,8 @@ ms.locfileid: "63156219"
   
 ## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP는 메모리 내 최적화를 &#40;&#41;](in-memory-oltp-in-memory-optimization.md)   
- [고유하게 컴파일된 저장 프로시저의 마이그레이션 문제](migration-issues-for-natively-compiled-stored-procedures.md)   
+ [고유 하 게 컴파일된 저장 프로시저의 마이그레이션 문제](migration-issues-for-natively-compiled-stored-procedures.md)   
  [지원 되는 SQL Server 기능](unsupported-sql-server-features-for-in-memory-oltp.md)   
- [고유하게 컴파일된 저장 프로시저](natively-compiled-stored-procedures.md)  
+ [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)  
   
   

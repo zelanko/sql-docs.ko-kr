@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 44f3f5bbfe183136ee8bf1a8d602a50e638b89b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63028416"
 ---
 # <a name="generalflags-property-serversettings-class"></a>GeneralFlags 속성(ServerSettings 클래스)
@@ -37,13 +37,11 @@ object
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
- 
-  [인스턴스의 서버 설정을 나타내는](serversettings-class.md) ServerSettings 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]개체입니다.  
+ *object*  
+ [인스턴스의 서버 설정을 나타내는](serversettings-class.md) ServerSettings 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
- 
-  [인스턴스와 연결된 일반 플래그를 지정하는](../serversettingsgeneralflag-class/serversettingsgeneralflag-class.md) ServerSettingsGeneralFlag 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]개체의 배열입니다.  
+ [인스턴스와 연결된 일반 플래그를 지정하는](../serversettingsgeneralflag-class/serversettingsgeneralflag-class.md) ServerSettingsGeneralFlag 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]개체의 배열입니다.  
   
 ## <a name="remarks"></a>설명  
   

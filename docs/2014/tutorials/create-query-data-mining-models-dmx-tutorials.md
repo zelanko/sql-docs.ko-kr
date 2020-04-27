@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63180534"
 ---
 # <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>DMX를 사용하여 데이터 마이닝 모델 만들기 및 쿼리: 자습서(Analysis Services - 데이터 마이닝)
@@ -38,12 +38,12 @@ ms.locfileid: "63180534"
   
      이 자습서에서는 예측 모델을 만들어 CREATE MODEL (DMX) 문 사용을 설명합니다. 그런 다음 관련 모델을 추가하고 Microsoft Time Series 알고리즘의 매개 변수를 변경하여 각 모델의 동작을 사용자 지정합니다. 마지막으로 예측을 만들고 새 데이터를 사용하여 해당 예측을 업데이트합니다. 예측을 만들면서 시계열을 업데이트하는 기능은 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]부터 추가되었습니다.  
   
-## <a name="reference"></a>참조  
- [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+## <a name="reference"></a>참고  
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [DMX&#41; 참조 &#40;데이터 마이닝 확장](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [DMX&#40;Data Mining Extensions&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
   
 -   [기본 데이터 마이닝 자습서](../../2014/tutorials/basic-data-mining-tutorial.md)  
   

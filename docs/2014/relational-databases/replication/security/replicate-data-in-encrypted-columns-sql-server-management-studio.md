@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97fd1ef113ec76a00394da298f1def188168a37d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62955846"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>암호화된 열의 데이터 복제(SQL Server Management Studio)
@@ -56,7 +56,7 @@ ms.locfileid: "62955846"
   
 4.  [CLOSE SYMMETRIC KEY](/sql/t-sql/statements/close-symmetric-key-transact-sql) 를 실행하여 키를 닫습니다.  
   
-5.  암호화된 열이 있는 테이블을 게시합니다. 자세한 내용은 [게시 만들기](../publish/create-a-publication.md)를 참조하세요.  
+5.  암호화된 열이 있는 테이블을 게시합니다. 자세한 내용은 [게시 만들기](../publish/create-a-publication.md)를 참조 하세요.  
   
 6.  게시를 구독합니다. 자세한 내용은 [끌어오기 구독 만들기](../create-a-pull-subscription.md) 또는 [밀어넣기 구독 만들기](../create-a-push-subscription.md)를 참조하세요.  
   

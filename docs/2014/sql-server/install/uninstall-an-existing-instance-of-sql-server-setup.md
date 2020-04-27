@@ -17,33 +17,28 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 484ef7dead58a6e8ae35639cdc6218d5c8223bd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990189"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>SQL Server의 기존 인스턴스 제거(설치)
   이 문서에서는 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 제거하는 방법에 대해 설명합니다. 이 항목의 단계를 수행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 설치할 수 있도록 시스템을 준비할 수도 있습니다.  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 제거하려면 서비스로 로그온할 수 있는 권한을 가진 로컬 관리자여야 합니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 제거하려면 서비스로 로그온할 수 있는 권한을 가진 로컬 관리자여야 합니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 제거하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램이 제공하는 노드 제거 기능을 사용하여 각 노드를 개별적으로 제거합니다. 자세한 내용은 [SQL Server 장애 조치 (Failover) 클러스터에서 노드 추가 또는 제거 &#40;설치](../failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md) 를 참조 하세요&#41;  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 제거하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램이 제공하는 노드 제거 기능을 사용하여 각 노드를 개별적으로 제거합니다. 자세한 내용은 [SQL Server 장애 조치 (Failover) 클러스터에서 노드 추가 또는 제거 &#40;설치](../failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md) 를 참조 하세요&#41;  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 제거하기 전에 다음의 중요 정보를 고려하십시오.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 제거하기 전에 다음의 중요 정보를 고려하십시오.  
   
 -   필요한 최소한의 실제 메모리를 갖춘 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 제거하려면 먼저 페이지 파일 크기가 충분한지 확인해야 합니다. 페이지 파일 크기는 실제 메모리의 두 배여야 합니다. 가상 메모리가 부족하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 완전히 제거되지 않을 수도 있습니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스가 여러 개인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 마지막 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스가 제거될 때 자동으로 제거됩니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스가 여러 개인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 마지막 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스가 제거될 때 자동으로 제거됩니다.  
   
-     
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 모든 구성 요소를 제거하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제어판 **의** 프로그램 및 기능 **에서**Browser 구성 요소를 수동으로 제거해야 합니다.  
+     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 모든 구성 요소를 제거하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제어판 **의** 프로그램 및 기능 **에서**Browser 구성 요소를 수동으로 제거해야 합니다.  
   
 ### <a name="before-you-uninstall"></a>제거하기 전에  
   
@@ -75,22 +70,17 @@ ms.locfileid: "62990189"
   
     -   ReportServer[$InstanceName]TempDB( [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 임시 데이터베이스)  
   
-2.  **로컬 보안 그룹을 삭제 합니다.** 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 제거하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소에 대한 로컬 보안 그룹을 삭제합니다.  
+2.  **로컬 보안 그룹을 삭제합니다.** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 제거하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소에 대한 로컬 보안 그룹을 삭제합니다.  
   
-3.  **모든** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **서비스를 중지 합니다.**   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 제거하기 전에 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 중지하는 것이 좋습니다. 활성 연결로 인해 제거 작업이 실패할 수 있습니다.  
+3.  **서비스를**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **모두 중지합니다.** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 제거하기 전에 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 중지하는 것이 좋습니다. 활성 연결로 인해 제거 작업이 실패할 수 있습니다.  
   
-4.  **적절 한 권한이 있는 계정을 사용 합니다.** 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정 또는 동등한 권한을 가진 계정을 사용하여 서버에 로그온합니다. 예를 들어 로컬 Administrators 그룹의 멤버 계정을 사용하여 서버에 로그온할 수 있습니다.  
+4.  **적합한 권한을 가진 계정을 사용합니다.** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정 또는 동등한 권한을 가진 계정을 사용하여 서버에 로그온합니다. 예를 들어 로컬 Administrators 그룹의 멤버 계정을 사용하여 서버에 로그온할 수 있습니다.  
   
-### <a name="to-uninstall-an-instance-of-includessnoversionincludesssnoversion-mdmd"></a>기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="to-uninstall-an-instance-of-ssnoversion"></a>기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  제거 프로세스를 시작하려면 **제어판** , **프로그램 및 기능**으로 차례로 이동합니다.  
   
-2.  마우스 오른쪽 ** [!INCLUDE[msCoName](../../includes/msconame-md.md)] ** 단추를 클릭 하 고 **제거**를 선택 합니다. 
-  **제거**를 클릭합니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 시작합니다.  
+2.  마우스 오른쪽 ** [!INCLUDE[msCoName](../../includes/msconame-md.md)] ** 단추를 클릭 하 고 **제거**를 선택 합니다. **제거**를 클릭합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 시작합니다.  
   
      컴퓨터 구성을 확인하기 위해 설치 지원 규칙이 실행됩니다. 계속하려면 **다음**을 클릭합니다.  
   
@@ -100,9 +90,7 @@ ms.locfileid: "62990189"
   
      작업을 성공적으로 완료할 수 있는지 확인하기 위해 제거 규칙이 실행됩니다.  
   
-5.  
-  **제거 준비** 페이지에서 제거할 구성 요소 및 기능 목록을 검토합니다. 
-  **제거** 를 클릭하여 제거를 시작합니다.  
+5.  **제거 준비** 페이지에서 제거할 구성 요소 및 기능 목록을 검토합니다. **제거** 를 클릭하여 제거를 시작합니다.  
   
 6.  마지막 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 제거한 직후에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로그램 및 기능 **의 프로그램 목록에**와 연결된 다른 프로그램이 계속 표시됩니다. 그러나 **프로그램 및 기능**을 닫은 후 다음에 **프로그램 및 기능**을 열면 프로그램 목록이 새로 고쳐져서 실제로 설치된 프로그램만 표시됩니다.  
   
@@ -110,7 +98,7 @@ ms.locfileid: "62990189"
   
 1.  제거 프로세스가 성공적으로 완료되지 않은 경우 제거 실패 원인이 된 문제를 해결하십시오. 다음 문서는 제거 실패의 원인을 파악하는 데 도움이 될 수 있습니다.  
   
-    -   [설치 로그 파일에서 SQL Server 2008 설치 문제를 확인 하는 방법](https://support.microsoft.com/kb/955396/en-us)  
+    -   [설치 로그 파일에서 SQL Server 2008 설치 문제를 확인하는 방법](https://support.microsoft.com/kb/955396/en-us)  
   
     -   [SQL Server 설치 로그 파일 보기 및 읽기](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   

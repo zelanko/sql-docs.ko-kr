@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63071788"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>데모: 메모리 내 OLTP 성능 향상
@@ -25,8 +25,7 @@ ms.locfileid: "63071788"
   
  이 샘플을 완료하려면 다음을 수행합니다.  
   
-1.  
-  **imoltp** 라는 데이터베이스를 만들고 메모리 내 OLTP를 사용하여 설정하려는 파일 세부 정보를 변경합니다.  
+1.  **imoltp** 라는 데이터베이스를 만들고 메모리 내 OLTP를 사용하여 설정하려는 파일 세부 정보를 변경합니다.  
   
 2.  샘플에 대한 데이터베이스 개체 즉, 세 테이블 및 고유하게 컴파일된 저장 프로시저를 만듭니다.  
   
@@ -189,7 +188,7 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
  [고유 하 게 컴파일된 저장 프로시저](natively-compiled-stored-procedures.md)   
  [메모리 액세스에 최적화 된 테이블 사용을 위한 요구 사항](requirements-for-using-memory-optimized-tables.md)   
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
- [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
+ [Transact-sql&#41;&#40;ALTER DATABASE 파일 및 파일 그룹 옵션](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
  [프로시저 및 메모리 액세스에 최적화 된 테이블 만들기](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

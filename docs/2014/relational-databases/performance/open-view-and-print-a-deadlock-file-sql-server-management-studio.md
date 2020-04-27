@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3ac5ac362522bed3102da25bff580e317202e0d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150690"
 ---
 # <a name="open-view-and-print-a-deadlock-file-sql-server-management-studio"></a>교착 상태 파일 열기, 보기 및 인쇄(SQL Server Management Studio)
@@ -27,21 +27,19 @@ ms.locfileid: "63150690"
   
 ### <a name="to-open-and-view-a-deadlock-file"></a>교착 상태 파일을 열고 보려면  
   
-1.  
-  **의** 파일 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]메뉴에서 **열기**를 가리킨 다음 **파일**을 클릭합니다.  
+1.  의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **파일** 메뉴에서 **열기**를 가리킨 다음 **파일**을 클릭 합니다.  
   
 2.  **파일 열기** 대화 상자의 **파일 유형** 확인란에서 .xdl 파일 유형을 선택합니다. 교착 상태 파일만 필터링한 목록이 남아 있을 것입니다.  
   
 ### <a name="to-print-a-deadlock-file"></a>교착 상태 파일을 인쇄하려면  
   
-1.  의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **파일** 메뉴에서 **열기** 를 가리킨 다음 **파일**을 클릭 합니다.  
+1.  **의** 파일 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]메뉴에서 **열기** 를 가리킨 다음 **파일**을 클릭합니다.  
   
 2.  **파일 열기** 대화 상자의 **파일 유형** 확인란에서 .xdl 파일 유형을 선택합니다. 교착 상태 파일만 필터링한 목록이 남아 있을 것입니다.  
   
 3.  인쇄할 교착 상태 파일을 선택하고 **열기**를 클릭합니다.  
   
-4.  
-  **파일** 메뉴에서 **인쇄**를 클릭합니다.  
+4.  **파일** 메뉴에서 **인쇄**를 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Profiler &#40;교착 상태 그래프를 저장&#41;](save-deadlock-graphs-sql-server-profiler.md)  

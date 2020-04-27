@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f09d6099ea9c80e9ce237e3462cec93fa66626b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164029"
 ---
 # <a name="using-comments"></a>주석 사용
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]스크립트의 일부를 쉽게 주석으로 처리할 수 있습니다.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 스크립트의 일부를 쉽게 주석으로 처리할 수 있습니다.  
   
 ## <a name="commenting-out-part-of-a-script"></a>스크립트의 일부를 주석으로 처리  
   
@@ -26,11 +26,9 @@ ms.locfileid: "63164029"
   
 1.  마우스를 사용하여 `WHERE LastName = 'Sanchez'`텍스트를 선택합니다.  
   
-2.  
-  **편집** 메뉴에서 **고급**을 가리킨 다음 **선택 영역을 주석으로 처리**를 클릭합니다. 선택한 텍스트가 대시(--)를 통해 주석으로 처리됩니다.  
+2.  **편집** 메뉴에서 **고급**을 가리킨 다음 **선택 영역을 주석으로 처리**를 클릭합니다. 선택한 텍스트가 대시(--)를 통해 주석으로 처리됩니다.  
   
- 
-  **편집** 메뉴를 사용하는 방법 외에도 다음 방법 중 하나를 사용하여 스크립트의 선택된 부분을 주석으로 처리하거나 해당 부분의 주석 처리를 제거할 수 있습니다.  
+ **편집** 메뉴를 사용하는 방법 외에도 다음 방법 중 하나를 사용하여 스크립트의 선택된 부분을 주석으로 처리하거나 해당 부분의 주석 처리를 제거할 수 있습니다.  
   
 -   SQL 편집기 도구 모음에서 단추를 클릭합니다.  
   

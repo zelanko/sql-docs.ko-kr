@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6fe7d2bf1ef6b8932704242e94c377a2b11c0619
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137240"
 ---
 # <a name="numberofflags-property-sinstance-class"></a>NumberOfFlags 속성(SInstance 클래스)
@@ -37,12 +37,11 @@ object
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
+ *object*  
  서버 인스턴스를 나타내는 [Sinstance 클래스](sinstance-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
- 
-  `uint32` 인스턴스에 대한 플래그 수를 지정하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 값입니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 플래그 수를 지정하는 `uint32` 값입니다.  
   
 ## <a name="remarks"></a>설명  
   

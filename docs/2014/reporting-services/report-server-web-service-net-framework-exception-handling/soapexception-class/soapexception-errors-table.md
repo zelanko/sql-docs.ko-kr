@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f58f6a181d1c3bda8556d0ac07fd0f983cb8b52f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63045995"
 ---
 # <a name="soapexception-errors-table"></a>SoapException 오류 테이블
@@ -100,8 +100,8 @@ ms.locfileid: "63045995"
 |**ListSecureMethods**|**rsServerConfigurationError**|  
   
 ## <a name="see-also"></a>참고 항목  
- [Reporting Services의 예외 처리 소개](../introducing-exception-handling-in-reporting-services.md)   
- [오류 및 이벤트 참조&#40;Reporting Services&#41;](../../troubleshooting/errors-and-events-reference-reporting-services.md)   
+ [Reporting Services에서 예외 처리 소개](../introducing-exception-handling-in-reporting-services.md)   
+ [오류 및 이벤트 참조 &#40;Reporting Services&#41;](../../troubleshooting/errors-and-events-reference-reporting-services.md)   
  [Reporting Services SoapException 클래스](reporting-services-soapexception-class.md)   
  [Detail 속성을 사용하여 특정 오류 처리](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
   

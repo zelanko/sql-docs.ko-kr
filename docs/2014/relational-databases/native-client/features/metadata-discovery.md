@@ -1,5 +1,5 @@
 ---
-title: 메타 데이터 검색 | Microsoft Docs
+title: 메타데이터 검색 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e808f1fc82dfe0a9fd6fa96999e6e2c5320ee452
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162014"
 ---
 # <a name="metadata-discovery"></a>메타데이터 검색
@@ -25,8 +25,7 @@ ms.locfileid: "63162014"
  에서 Native Client를 사용 하 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 여 응용 프로그램 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 을 개발 하지만 이전 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]버전의 서버에 연결 하는 경우 메타 데이터 검색 기능은 서버 버전에 해당 합니다.  
   
 ## <a name="remarks"></a>설명  
- 
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 다음 bcp 함수의 기능이 개선되어 메타데이터 검색 기능이 향상되었습니다.  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 다음 bcp 함수의 기능이 개선되어 메타데이터 검색 기능이 향상되었습니다.  
   
 -   [bcp_columns](../../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)  
   
@@ -42,8 +41,7 @@ ms.locfileid: "63162014"
   
  [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) 에는 bcp_readfmt `BCPDELAYREADFMT`의 동작을 제어 하는 새로운 *eoption* 가 있습니다.  
   
- 
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 다음 ODBC 함수의 기능이 개선되어 메타데이터 검색 기능이 향상되었습니다.  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 다음 ODBC 함수의 기능이 개선되어 메타데이터 검색 기능이 향상되었습니다.  
   
 -   [SQLNumResultCols](../../native-client-odbc-api/sqlnumresultcols.md)  
   
@@ -53,19 +51,17 @@ ms.locfileid: "63162014"
   
 -   [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md)  
   
- 
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 다음 OLE DB 멤버 함수의 기능이 개선되어 메타데이터 검색 기능이 향상되었습니다.  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 다음 OLE DB 멤버 함수의 기능이 개선되어 메타데이터 검색 기능이 향상되었습니다.  
   
 -   IColumnsInfo::GetColumnInfo  
   
 -   IColumnsRowset::GetColumnsRowset  
   
--   ICommandWithParameters:: GetParameterInfo (자세한 내용은 [ICommandWithParameters](../../native-client-ole-db-interfaces/icommandwithparameters.md) 참조)  
+-   ICommandWithParameters::GetParameterInfo(자세한 내용은 [ICommandWithParameters](../../native-client-ole-db-interfaces/icommandwithparameters.md) 참조)  
   
  또한 IBCPSession::BCPSetBulkMode를 사용하여 메타데이터 형식을 지정하는 경우 향상된 성능을 경험할 수 있습니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 다음과 같은 두 개의 저장 프로시저가 추가되어 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client에서 메타데이터 검색 기능이 향상되었습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 다음과 같은 두 개의 저장 프로시저가 추가되어 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client에서 메타데이터 검색 기능이 향상되었습니다.  
   
 -   sp_describe_first_result_set  
   

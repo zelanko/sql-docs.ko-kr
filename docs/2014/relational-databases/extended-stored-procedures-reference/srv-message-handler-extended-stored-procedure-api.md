@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f597aa6c9ba9759b606501b0bd72a2166b1805e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127403"
 ---
 # <a name="srv_message_handler-extended-stored-procedure-api"></a>srv_message_handler(확장 저장 프로시저 API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 CLR 통합을 사용 하세요.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
   
  설치된 확장 저장 프로시저 API 메시지 처리기를 호출합니다. 이 함수는 일반적으로 확장 저장 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로시저에서를 호출 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그 파일이 나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 응용 프로그램 로그에 확장 저장 프로시저에 정의 된 오류를 기록 하는 데 사용 됩니다.  
   
@@ -71,16 +71,15 @@ oserrtextlen
   
 ## <a name="arguments"></a>인수  
  *srvproc*  
- 특정 클라이언트 연결에 대한 핸들인 SRV_PROC 구조에 대한 포인터입니다. 
-  *srvproc* 매개 변수에는 애플리케이션과 클라이언트 간 통신 및 데이터를 관리하는 데 사용되는 정보가 들어 있습니다.  
+ 특정 클라이언트 연결에 대한 핸들인 SRV_PROC 구조에 대한 포인터입니다. *srvproc* 매개 변수에는 애플리케이션과 클라이언트 간 통신 및 데이터를 관리하는 데 사용되는 정보가 들어 있습니다.  
   
  *errornum*  
  확장 저장 프로시저에 정의된 오류 번호입니다. 이 숫자는 50,001과 2,147,483,647 사이여야 합니다.  
   
- *등급*  
+ *severity*  
  오류의 표준 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 심각도 값입니다. 이 숫자는 0과 24 사이여야 합니다.  
   
- *상태일*  
+ *state*  
  오류의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 상태 값입니다.  
   
  *oserrnum*  
@@ -102,8 +101,7 @@ oserrtextlen
  SUCCEED 또는 FAIL  
   
 ## <a name="remarks"></a>설명  
- 
-  **srv_message_handler** 함수를 사용하면 확장 저장 프로시저가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 중앙 집중식 오류 로깅 및 보고 기능과 통합될 수 있습니다. 확장 저장 프로시저의 이벤트에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 경고를 설정할 수 있으며, SQL Server 에이전트가 이러한 경고 조건을 모니터링합니다.  
+ **srv_message_handler** 함수를 사용하면 확장 저장 프로시저가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 중앙 집중식 오류 로깅 및 보고 기능과 통합될 수 있습니다. 확장 저장 프로시저의 이벤트에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 경고를 설정할 수 있으며, SQL Server 에이전트가 이러한 경고 조건을 모니터링합니다.  
   
  오류 메시지가 더 길면 412바이트로 잘립니다.  
   

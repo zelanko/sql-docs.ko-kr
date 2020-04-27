@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151040"
 ---
 # <a name="cardinality-estimation-sql-server"></a>카디널리티 추정(SQL Server)
@@ -45,9 +45,9 @@ ms.locfileid: "63151040"
 ## <a name="new-xevents"></a>새로운 XEvent  
  새 쿼리 계획을 지원하는 두 개의 새로운 query_optimizer_estimate_cardinality XEvent가 있습니다.  
   
--   쿼리 최적화 프로그램이 관계형 식에 대 한 카디널리티를 추정할 때 *query_optimizer_estimate_cardinality* 발생 합니다.  
+-   *query_optimizer_estimate_cardinality* 는 쿼리 최적화 프로그램이 관계형 식의 카디널리티를 예측할 때 발생합니다.  
   
--   _behaviors *query_optimizer_force_both_cardinality_estimation*은 추적 플래그 2312과 9481를 모두 사용 하도록 설정 하 여 이전 및 새 카디널리티 추정 동작을 동시에 강제 실행 하려고 할 때 발생 합니다.  
+-   *query_optimizer_force_both_cardinality_estimation*_behaviors는 두 추적 플래그 2312 및 9481이 모두 설정되어 이전 카디널리티 추정 동작과 새 카디널리티 추정 동작 모두를 동시에 적용하려고 시도할 때 발생합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 새 카디널리티 예상치의 변경 내용 중 일부를 보여 줍니다. 카디널리티를 예측하기 위한 코드는 다시 작성되었습니다. 논리는 복잡하며, 모든 변경 내용의 전체 목록을 제공할 수는 없습니다.  

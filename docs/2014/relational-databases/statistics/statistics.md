@@ -24,18 +24,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cc9657d8db84b67abe324aea9614dd27c2d9df83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033732"
 ---
 # <a name="statistics"></a>통계
   쿼리 최적화 프로그램에서는 통계를 사용하여 쿼리 성능을 향상시키는 쿼리 계획을 만듭니다. 대부분의 쿼리에서 쿼리 최적화 프로그램은 고품질의 쿼리 계획에 필요한 통계를 이미 생성하므로 경우에 따라서 최상의 결과를 위해 추가 통계를 만들거나 쿼리 설계를 수정해야 합니다. 이 항목에서는 통계 개념에 대해 설명하고 쿼리 최적화 통계를 효율적으로 사용하기 위한 지침을 제공합니다.  
   
-##  <a name="DefinitionQOStatistics"></a> 구성 요소 및 개념  
+##  <a name="components-and-concepts"></a><a name="DefinitionQOStatistics"></a> 구성 요소 및 개념  
  통계  
- 쿼리 최적화 통계는 테이블이나 인덱싱된 뷰에서 하나 이상의 열에 있는 값의 분포에 대한 통계 정보를 포함하는 개체입니다. 쿼리 최적화 프로그램은 이러한 통계를 사용 하 여 쿼리 결과에서 *카디널리티*또는 행 수를 계산 합니다. 이러한 *카디널리티 예상치* 를 통해 쿼리 최적화 프로그램은 고품질의 쿼리 계획을 만들 수 있습니다. 예를 들어 쿼리 최적화 프로그램은 카디널리티 예상치를 사용하여 리소스를 많이 사용하는 index scan 연산자 대신 index seek 연산자를 선택할 수 있으며 이렇게 하면 쿼리 성능이 향상됩니다.  
+ 쿼리 최적화 통계는 테이블이나 인덱싱된 뷰에서 하나 이상의 열에 있는 값의 분포에 대한 통계 정보를 포함하는 개체입니다. 쿼리 최적화 프로그램은 이러한 통계를 사용하여 쿼리 결과에서 *카디널리티*또는 행 수를 계산합니다. 쿼리 최적화 프로그램은 이러한 *카디널리티 예상치* 를 통해 고품질의 쿼리 계획을 만듭니다. 예를 들어 쿼리 최적화 프로그램은 카디널리티 예상치를 사용하여 리소스를 많이 사용하는 index scan 연산자 대신 index seek 연산자를 선택할 수 있으며 이렇게 하면 쿼리 성능이 향상됩니다.  
   
  각 통계 개체는 하나 이상의 테이블 열 목록에 대해 작성되며 첫 번째 열의 값 분포를 나타내는 히스토그램을 포함합니다. 여러 열에 대한 통계 개체는 또한 열 사이의 값의 상관 관계에 대한 통계 정보도 저장합니다. 이러한 상관 관계 통계 또는 *밀도*는 열 값의 개별 행 수에서 생성됩니다. 통계 개체에 대한 자세한 내용은 [DBCC SHOW_STATISTICS&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)를 참조하세요.  
   
@@ -63,8 +63,7 @@ ORDER BY s.name;
  AUTO_UPDATE_STATISTICS 옵션  
  자동 통계 업데이트 옵션 AUTO_UPDATE_STATISTICS가 ON으로 설정되면 쿼리 최적화 프로그램은 통계가 최신이 아닌 통계가 되는 시점을 확인한 다음 쿼리에서 사용될 때 이를 업데이트합니다. 삽입, 업데이트, 삭제 또는 병합 작업을 통해 테이블이나 인덱싱된 뷰의 데이터 분포가 변경되면 통계 내용이 더 이상 최신이 아니게 됩니다. 쿼리 최적화 프로그램은 마지막 통계 업데이트 이후 데이터 수정 개수를 계산한 다음 이 수를 임계값과 비교하여 통계가 최신이 아니게 된 시점을 결정합니다. 임계값은 테이블 또는 인덱싱된 뷰의 행 수를 기준으로 합니다.  
   
- 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전과 캐시된 쿼리 계획을 실행하기 전에 최신이 아닌 통계가 있는지를 확인합니다. 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전에 쿼리 조건자의 열, 테이블 및 인덱싱된 뷰를 사용하여 어떤 통계가 최신이 아닌지 결정합니다. 
-  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 에서는 캐시된 쿼리 계획을 실행하기 전에 쿼리 계획에서 최신 통계가 참조되는지 확인합니다.  
+ 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전과 캐시된 쿼리 계획을 실행하기 전에 최신이 아닌 통계가 있는지를 확인합니다. 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전에 쿼리 조건자의 열, 테이블 및 인덱싱된 뷰를 사용하여 어떤 통계가 최신이 아닌지 결정합니다. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 에서는 캐시된 쿼리 계획을 실행하기 전에 쿼리 계획에서 최신 통계가 참조되는지 확인합니다.  
   
  AUTO_UPDATE_STATISTICS 옵션은 인덱스에 대해 작성된 통계 개체, 쿼리 조건자의 단일 열 및 [CREATE STATISTICS](/sql/t-sql/statements/create-statistics-transact-sql) 문으로 작성된 통계에 적용됩니다. 이 옵션은 또한 필터링된 통계에도 적용됩니다.  
   
@@ -104,9 +103,9 @@ ORDER BY s.name;
   
 ||  
 |-|  
-|**적용**대상: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|  
+|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|  
   
-##  <a name="CreateStatistics"></a>통계를 만들어야 하는 경우  
+##  <a name="when-to-create-statistics"></a><a name="CreateStatistics"></a> 통계 작성 시기  
  쿼리 최적화 프로그램은 다음과 같은 방법으로 통계를 작성합니다.  
   
 1.  인덱스가 만들어진 경우 쿼리 최적화 프로그램에서 테이블 또는 뷰의 인덱스에 대한 통계를 작성합니다. 이러한 통계는 인덱스의 키 열에 대해 만들어집니다. 인덱스가 필터링된 인덱스인 경우 쿼리 최적화 프로그램은 필터링된 인덱스로 지정된 행의 동일한 하위 집합에 대해 필터링된 통계를 작성합니다. 필터링된 인덱스에 대한 자세한 내용은 [필터링된 인덱스 만들기](../indexes/create-filtered-indexes.md) 및 [CREATE INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)를 참조하세요.  
@@ -119,8 +118,7 @@ ORDER BY s.name;
   
  다음 중 한 가지가 적용되는 경우 CREATE STATISTICS 문으로 통계를 작성하십시오.  
   
--   
-  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 튜닝 관리자가 통계 작성을 제안하는 경우  
+-   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 튜닝 관리자가 통계 작성을 제안하는 경우  
   
 -   쿼리 조건자에 동일한 인덱스에 없는 관련된 여러 열이 포함된 경우  
   
@@ -177,8 +175,7 @@ GO
 ### <a name="query-identifies-missing-statistics"></a>쿼리에서 누락된 통계를 확인한 경우  
  오류 또는 기타 이벤트로 인해 쿼리 최적화 프로그램에서 통계를 작성하지 못하는 경우 쿼리 최적화 프로그램은 통계를 사용하지 않고 쿼리 계획을 만듭니다. 쿼리 최적화 프로그램은 통계가 누락된 것으로 표시하며 다음에 쿼리가 다시 실행될 때 통계를 다시 생성하려고 합니다.  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 쿼리 실행 계획을 그래픽으로 표시할 때 누락된 통계는 테이블 이름을 빨간 문자열로 나타내어 경고로 표시합니다. 또한 **를 사용하여** Missing Column Statistics [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 이벤트 클래스를 모니터링하면 통계가 누락되는 시기를 나타냅니다. 자세한 내용은 [오류 및 경고 이벤트 범주&#40;데이터베이스 엔진&#41;](../event-classes/errors-and-warnings-event-category-database-engine.md)를 참조하세요.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 쿼리 실행 계획을 그래픽으로 표시할 때 누락된 통계는 테이블 이름을 빨간 문자열로 나타내어 경고로 표시합니다. 또한 **를 사용하여** Missing Column Statistics [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 이벤트 클래스를 모니터링하면 통계가 누락되는 시기를 나타냅니다. 자세한 내용은 [오류 및 경고 이벤트 범주&#40;데이터베이스 엔진&#41;](../event-classes/errors-and-warnings-event-category-database-engine.md)를 참조하세요.  
   
  통계가 누락된 경우 다음 단계를 수행하십시오.  
   
@@ -188,22 +185,17 @@ GO
   
 -   CREATE STATISTICS 문을 사용하여 누락된 통계를 작성합니다.  
   
- 읽기 전용 데이터베이스 또는 읽기 전용 스냅샷에 대한 통계가 없거나 유효하지 않을 경우 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]은 `tempdb`에서 임시 통계를 만들어 유지 관리합니다. 
-  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 에서 임시 통계를 만드는 경우 통계 이름에는 접미사 _readonly_database_statistic이 추가되므로 영구적 통계와 임시 통계를 구별할 수 있습니다. 접미사 _readonly_database_statistic은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 생성하는 통계용으로 예약되어 있습니다. 읽기/쓰기 데이터베이스에서 임시 통계에 대한 스크립트를 만들어 재현할 수 있습니다. 스크립팅된 경우 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서는 통계 이름의 접미사를 _readonly_database_statistic에서 _readonly_database_statistic_scripted로 변경합니다.  
+ 읽기 전용 데이터베이스 또는 읽기 전용 스냅샷에 대한 통계가 없거나 유효하지 않을 경우 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]은 `tempdb`에서 임시 통계를 만들어 유지 관리합니다. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 에서 임시 통계를 만드는 경우 통계 이름에는 접미사 _readonly_database_statistic이 추가되므로 영구적 통계와 임시 통계를 구별할 수 있습니다. 접미사 _readonly_database_statistic은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 생성하는 통계용으로 예약되어 있습니다. 읽기/쓰기 데이터베이스에서 임시 통계에 대한 스크립트를 만들어 재현할 수 있습니다. 스크립팅된 경우 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서는 통계 이름의 접미사를 _readonly_database_statistic에서 _readonly_database_statistic_scripted로 변경합니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서만 임시 통계를 만들고 업데이트할 수 있습니다. 그러나 임시 통계를 삭제하고 통계 속성을 모니터링하는 데는 영구적 통계에 사용하는 것과 동일한 도구를 사용할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서만 임시 통계를 만들고 업데이트할 수 있습니다. 그러나 임시 통계를 삭제하고 통계 속성을 모니터링하는 데는 영구적 통계에 사용하는 것과 동일한 도구를 사용할 수 있습니다.  
   
--   
-  [DROP STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-statistics-transact-sql) 문으로 작성된 통계에 적용됩니다.  
+-   [DROP STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-statistics-transact-sql) 문으로 작성된 통계에 적용됩니다.  
   
--   
-  
-  **sys.stats** 및 **sys.stats_columns** 카탈로그 뷰를 사용하여 통계를 모니터링합니다. **sys_stats** 에는 영구적이 고 일시적인 통계를 나타내는 **is_temporary** 열이 포함 되어 있습니다.  
+-   **sys.stats** 및 **sys.stats_columns** 카탈로그 뷰를 사용하여 통계를 모니터링합니다. **sys_stats** 에는 영구적 통계와 임시 통계를 나타내는 **is_temporary** 열이 포함되어 있습니다.  
   
  임시 통계는 `tempdb`에 저장되므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스를 다시 시작하면 모든 임시 통계가 사라집니다.  
   
-##  <a name="UpdateStatistics"></a>통계를 업데이트 하는 경우  
+##  <a name="when-to-update-statistics"></a><a name="UpdateStatistics"></a> 통계 업데이트 시기  
  쿼리 최적화 프로그램은 통계가 최신이 아닌 통계가 되는 시점을 확인한 다음 쿼리 계획에 필요할 때 통계를 업데이트합니다. 경우에 따라 AUTO_UPDATE_STATISTICS를 ON으로 설정할 때보다 더 자주 통계를 업데이트하여 쿼리 계획을 향상시키고 쿼리 성능을 높일 수 있습니다. UPDATE STATISTICS 문 또는 저장 프로시저 sp_updatestats를 사용하여 통계를 업데이트할 수 있습니다.  
   
  통계를 업데이트하면 쿼리가 최신 통계로 컴파일되지만 쿼리도 다시 컴파일됩니다. 쿼리 계획 향상과 쿼리 재컴파일 소요 시간 간의 성능 균형을 유지해야 하므로 통계를 너무 자주 업데이트하지 않는 것이 좋습니다. 구체적인 성능 균형 유지의 정도는 애플리케이션에 따라 달라집니다.  
@@ -233,7 +225,7 @@ GO
   
  인덱스 다시 작성, 다시 구성, 조각 모음 등의 작업은 데이터 분포를 변경하지 않습니다. 따라서 ALTER INDEX REBUILD, DBCC REINDEX, DBCC INDEXDEFRAG 또는 ALTER INDEX REORGANIZE 작업을 수행한 후에는 통계를 업데이트할 필요가 없습니다. ALTER INDEX REBUILD 또는 DBCC DBREINDEX를 사용하여 테이블 또는 뷰에 대한 인덱스를 다시 작성하는 경우 쿼리 최적화 프로그램에서 통계를 업데이트하지만 이 통계 업데이트는 인덱스를 다시 만드는 과정에서 생성됩니다. DBCC INDEXDEFRAG 또는 ALTER INDEX REORGANIZE 작업 이후에는 쿼리 최적화 프로그램에서 통계를 업데이트하지 않습니다.  
   
-##  <a name="DesignStatistics"></a>통계를 효과적으로 사용 하는 쿼리  
+##  <a name="queries-that-use-statistics-effectively"></a><a name="DesignStatistics"></a> 통계를 효율적으로 사용하는 쿼리  
  쿼리 조건자에서 지역 변수, 복잡한 식 등의 일부 쿼리 구현은 만족스럽지 못한 쿼리 계획을 만들 수 있습니다. 이를 방지하려면 효율적인 통계 사용을 위한 쿼리 설계 지침을 따르는 것이 좋습니다. 쿼리 조건자에 대한 자세한 내용은 [검색 조건&#40;Transact-SQL&#41;](/sql/t-sql/queries/search-condition-transact-sql)을 참조하세요.  
   
  쿼리 조건자에 사용된 식, 변수 및 함수에 대한 *카디널리티 예상치* 정확도를 높이기 위해 효율적으로 통계를 사용하는 쿼리 설계 지침을 적용하여 쿼리 계획을 향상시킬 수 있습니다. 쿼리 최적화 프로그램에서 식, 변수 또는 함수 값을 알지 못하는 경우 히스토그램에서 조회할 값을 알 수 없으므로 히스토그램에서 최상의 카디널리티 예상치를 검색할 수 없습니다. 대신 쿼리 최적화 프로그램은 히스토그램에서 샘플링된 모든 행에 대한 고유한 값마다 평균 행 수에 대한 카디널리티 예상치를 예측합니다. 이로 인해 카디널리티 예상치가 만족스럽지 못하고 쿼리 성능이 저하될 수 있습니다.  
@@ -332,11 +324,11 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;통계 만들기](/sql/t-sql/statements/create-statistics-transact-sql)   
- [UPDATE STATISTICS&#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)   
- [sp_updatestats&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)   
- [DBCC SHOW_STATISTICS&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)   
- [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
- [DROP STATISTICS&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-statistics-transact-sql)   
+ [Transact-sql&#41;&#40;통계 업데이트](/sql/t-sql/statements/update-statistics-transact-sql)   
+ [Transact-sql&#41;sp_updatestats &#40;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)   
+ [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)   
+ [ALTER DATABASE SET 옵션 &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
+ [DROP STATISTICS &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-statistics-transact-sql)   
  [CREATE INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
- [ALTER INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
+ [ALTER INDEX &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [필터링된 인덱스 만들기](../indexes/create-filtered-indexes.md)  

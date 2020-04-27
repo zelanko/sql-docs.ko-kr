@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de5f805a9d722974adf7975f713436bc7b1ca4d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155154"
 ---
 # <a name="supported-data-types"></a>지원되는 데이터 형식
@@ -30,8 +30,8 @@ ms.locfileid: "63155154"
 |tinyint|[int, bigint, smallint 및 tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
 |decimal|[decimal 및 numeric&#40;Transact-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
 |numeric|[decimal 및 numeric&#40;Transact-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
-|float|[float 및 real&#40;Transact-SQL&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)|  
-|real|[float 및 real&#40;Transact-SQL&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)|  
+|float|[float 및 real &#40;Transact-SQL&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)|  
+|real|[float 및 real &#40;Transact-SQL&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)|  
 |money|[money 및 smallmoney&#40;Transact-SQL&#41;](/sql/t-sql/data-types/money-and-smallmoney-transact-sql)|  
 |smallmoney|[money 및 smallmoney&#40;Transact-SQL&#41;](/sql/t-sql/data-types/money-and-smallmoney-transact-sql)|  
   
@@ -73,9 +73,9 @@ ms.locfileid: "63155154"
   
 |데이터 형식|참조 항목|  
 |---------------|--------------------------|  
-|uniqueidentifier|[uniqueidentifier &#40;Transact-sql&#41;](/sql/t-sql/data-types/uniqueidentifier-transact-sql)|  
+|uniqueidentifier|[uniqueidentifier&#40;Transact-SQL&#41;](/sql/t-sql/data-types/uniqueidentifier-transact-sql)|  
   
- **지원되지 않는 데이터 형식**  
+ **지원 되지 않는 데이터 형식**  
   
  다음 데이터 형식은 지원되지 않습니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "63155154"
 |sql_variant|CLR 함수|UDT(사용자 정의 형식)|  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 내 OLTP에 대한 Transact-SQL 지원](transact-sql-support-for-in-memory-oltp.md)   
+ [메모리 내 OLTP에 대 한 transact-sql 지원](transact-sql-support-for-in-memory-oltp.md)   
  [메모리 액세스에 최적화 된 테이블에서 LOB 열 구현](../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)   
  [메모리 액세스에 최적화된 테이블에서 SQL_VARIANT 구현](implementing-sql-variant-in-a-memory-optimized-table.md)  
   

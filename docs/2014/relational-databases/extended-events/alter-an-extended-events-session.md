@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 99984df84d2eb24ebf3d58f3fa697d11c5ad4a1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63128603"
 ---
 # <a name="alter-an-extended-events-session"></a>확장 이벤트 세션 변경
@@ -49,7 +49,7 @@ ms.locfileid: "63128603"
 -   **속성** 대화 상자에서 적절한 변경 작업을 수행한 다음 **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ALTER EVENT SESSION&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)   
+ [ALTER EVENT SESSION &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)   
  [쿼리 편집기를 사용하여 확장 이벤트 세션 만들기](../../database-engine/create-an-extended-events-session-using-query-editor.md)  
   
   

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b4e7650f6b36ddbfb8c06ebe6c9f776cfee5ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63032332"
 ---
 # <a name="parameter-and-result-metadata"></a>매개 변수 및 결과 메타데이터
@@ -44,12 +44,11 @@ ms.locfileid: "63032332"
   
  값 범위가 연속되지 않을 수도 있습니다. 예를 들어 8,10..16에서는 9가 누락되어 있습니다. 이러한 경우는 소수 부분 자릿수가 0보다 커서 소수점을 추가했을 때 발생합니다.  
   
- 
-  `datetime2`는 드라이버에서 모든 `smalldatetime` 값을 서버에 전달하기 위한 일반 형식으로 사용되므로 `datetime` 및 `SQL_TYPE_TIMESTAMP`의 typename으로 반환됩니다.  
+ `datetime2`는 드라이버에서 모든 `smalldatetime` 값을 서버에 전달하기 위한 일반 형식으로 사용되므로 `datetime` 및 `SQL_TYPE_TIMESTAMP`의 typename으로 반환됩니다.  
   
  SQL_CA_SS_VARIANT_SQL_TYPE은 새 설명자 필드입니다. 이 필드는 애플리케이션에서 `sqlvariant`(SQL_SSVARIANT) 열 및 매개 변수와 연관된 값 형식을 지정하는 데 사용하기 위해 IRD 및 IPD에 추가되었습니다.  
   
- SQL_CA_SS_SERVER_TYPE은 새로운 IPD 전용 필드로, 애플리케이션에서 SQL_TYPE_TYPETIMESTAMP나 C 형식의 SQL_C_TYPE_TIMESTAMP를 갖는 SQL_SS_VARIANT로 바인딩된 매개 변수 값을 서버로 전송하는 방법을 제어하는 데 사용할 수 있습니다. SQLExecute 또는 SQLExecDirect가 호출 될 때 SQL_DESC_CONCISE_TYPE가 SQL_TYPE_TIMESTAMP SQL_SS_VARIANT 이거나 C 형식이 SQL_C_TYPE_TIMESTAMP 인 경우 SQL_CA_SS_SERVER_TYPE 값은 매개 변수 값의 TDS (tabular data stream) 형식을 결정 합니다. 는 다음과 같습니다.  
+ SQL_CA_SS_SERVER_TYPE은 새로운 IPD 전용 필드로, 애플리케이션에서 SQL_TYPE_TYPETIMESTAMP나 C 형식의 SQL_C_TYPE_TIMESTAMP를 갖는 SQL_SS_VARIANT로 바인딩된 매개 변수 값을 서버로 전송하는 방법을 제어하는 데 사용할 수 있습니다. SQLExecute 또는 SQLExecDirect가 호출 될 때 SQL_DESC_CONCISE_TYPE가 SQL_TYPE_TIMESTAMP SQL_SS_VARIANT 이거나 C 형식이 SQL_C_TYPE_TIMESTAMP 인 경우 SQL_CA_SS_SERVER_TYPE 값은 다음과 같이 매개 변수 값의 TDS (tabular data stream) 형식을 결정 합니다.  
   
 |SQL_CA_SS_SERVER_TYPE 값|SQL_DESC_PRECISION에 대한 유효한 값|SQL_DESC_LENGTH에 대한 유효한 값|TDS 유형|  
 |----------------------------------------|-------------------------------------------|----------------------------------------|--------------|  

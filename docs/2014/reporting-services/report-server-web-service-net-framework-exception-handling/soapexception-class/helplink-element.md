@@ -14,14 +14,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bdd18641663003a1878fe0af0ac1d39a16eda1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046028"
 ---
 # <a name="helplink-element"></a>HelpLink 요소
-  
   **Detail** 속성의 **HelpLink** 요소는 보고서 서버에서 생성되는 URL 문자열입니다. 이 URL은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 도움말 및 지원에서 관리되는 웹 페이지를 대상으로 하며 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 발생하는 특정 오류에 대한 추가 도움말 및 기술 자료 문서를 제공합니다. URL의 구문은 다음과 같습니다.  
   
  **http://** www.microsoft.com**/** products**/** ee**/****? Evtsrc**=_값_ **&evtid**=_값_ **&ProdName**=_value_ **&ProdVer**=_값_  
@@ -33,10 +32,9 @@ ms.locfileid: "63046028"
 |**EvtSrc**|"Microsoft.ReportingServices.Diagnostics.ErrorStrings.resources.Strings"|  
 |**EvtID**|보고서 서버 오류 코드입니다(예: rsReservedItem).|  
 |**ProdName**|"Microsoft SQL%20Server%20Reporting%20Services". 제품 이름 값은 URL로 인코딩됩니다.|  
-|**ProdVer**|
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 버전 번호입니다. "8.00" 값은를 나타냅니다 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
+|**ProdVer**|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 버전 번호입니다. "8.00" 값은를 나타냅니다 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
   
- 다음 예제에서는 오류 코드 **** `rsReservedItem`에 대해 반환 되는 HelpLink URL을 보여 줍니다. 이 오류는 사용자가 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 예약된 항목을 수정하거나 삭제하려고 시도할 때 발생합니다.  
+ 다음 예제에서는 오류 코드 **HelpLink** `rsReservedItem`에 대해 반환 되는 HelpLink URL을 보여 줍니다. 이 오류는 사용자가 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 예약된 항목을 수정하거나 삭제하려고 시도할 때 발생합니다.  
   
 ```  
 https://www.microsoft.com/products/ee/transform.aspx?  
@@ -68,7 +66,7 @@ catch (SoapException e)
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Reporting Services의 예외 처리 소개](../introducing-exception-handling-in-reporting-services.md)   
+ [Reporting Services에서 예외 처리 소개](../introducing-exception-handling-in-reporting-services.md)   
  [Reporting Services SoapException 클래스](reporting-services-soapexception-class.md)   
  [Detail 속성을 사용하여 특정 오류 처리](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
   

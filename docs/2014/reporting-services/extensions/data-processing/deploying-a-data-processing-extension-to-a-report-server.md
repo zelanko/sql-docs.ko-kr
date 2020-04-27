@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0f593b2488d9bb7226edad1f8d98a244f4df191
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164073"
 ---
 # <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>방법: 보고서 서버에 데이터 처리 확장 프로그램 배포
@@ -50,9 +50,7 @@ ms.locfileid: "63164073"
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, MyExtensionAssembly" />  
     ```  
   
-     
-  `Name`의 값은 데이터 처리 확장 프로그램의 고유한 이름입니다. 
-  `Type`의 값은 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 및 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 인터페이스를 구현하는 클래스의 정규화된 네임스페이스에 대한 항목과 그 다음에 어셈블리의 이름(.dll 파일 확장명 포함 안 함)이 따라오는 형태가 포함되며 쉼표로 구분된 목록입니다. 기본적으로 데이터 처리 확장 프로그램은 표시됩니다. 보고서 관리자와 같은 사용자 인터페이스에서 확장 프로그램을 숨기려면 `Visible` 특성을 `Extension` 요소에 추가하고 `false`로 설정합니다.  
+     `Name`의 값은 데이터 처리 확장 프로그램의 고유한 이름입니다. `Type`의 값은 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 및 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 인터페이스를 구현하는 클래스의 정규화된 네임스페이스에 대한 항목과 그 다음에 어셈블리의 이름(.dll 파일 확장명 포함 안 함)이 따라오는 형태가 포함되며 쉼표로 구분된 목록입니다. 기본적으로 데이터 처리 확장 프로그램은 표시됩니다. 보고서 관리자와 같은 사용자 인터페이스에서 확장 프로그램을 숨기려면 `Visible` 특성을 `Extension` 요소에 추가하고 `false`로 설정합니다.  
   
 5.  확장 프로그램에 대해 `FullTrust` 권한을 부여하는 사용자 지정 어셈블리에 대한 코드 그룹을 추가합니다. 기본적으로 %ProgramFiles%\Microsoft SQL Server\\<MSRS10_50.\<*Instance Name*>\Reporting Services\ReportServer에 있는 rssrvpolicy.config 파일에 코드 그룹을 추가하여 이 작업을 수행할 수 있습니다. 코드 그룹은 다음과 같습니다.  
   
@@ -69,7 +67,7 @@ ms.locfileid: "63164073"
     </CodeGroup>  
     ```  
   
- URL 멤버 자격은 데이터 처리 확장 프로그램에 대해 선택할 수 있는 다수의 멤버 자격 조건 중 하나일 뿐입니다. 의 [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]코드 액세스 보안에 대 한 자세한 내용은 [보안 개발 &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)를 참조 하세요.  
+ URL 멤버 자격은 데이터 처리 확장 프로그램에 대해 선택할 수 있는 다수의 멤버 자격 조건 중 하나일 뿐입니다. [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 코드 액세스 보안에 대한 자세한 내용은 [보안 개발&#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)을 참조하세요.  
   
 ## <a name="verifying-the-deployment"></a>배포 확인  
  웹 서비스 <xref:ReportService2010.ReportingService2010.ListExtensions%2A> 메서드를 사용하여 데이터 처리 확장 프로그램이 보고서 서버에 성공적으로 배포되었는지 여부를 확인할 수 있습니다. 보고서 관리자를 열고 확장 프로그램이 사용 가능한 데이터 원본 목록에 포함되어 있는지 확인할 수도 있습니다. 보고서 관리자 및 데이터 원본에 대한 자세한 내용은 [공유 데이터 원본 만들기, 수정 및 삭제&#40;SSRS&#41;](../../report-data/create-modify-and-delete-shared-data-sources-ssrs.md)를 참조하세요.  

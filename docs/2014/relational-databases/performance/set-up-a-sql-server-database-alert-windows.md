@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3342af1de84e922ce63848c8fdffe5aa30ec309a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150496"
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>SQL Server 데이터베이스 경고 설정(Windows)
@@ -26,14 +26,11 @@ ms.locfileid: "63150496"
   
 ### <a name="to-set-up-a-sql-server-database-alert"></a>SQL Server 데이터베이스 경고를 설정하려면  
   
-1.  
-  성능 창의 탐색 트리에서 **성능 로그 및 경고**를 확장합니다.  
+1.  성능 창의 탐색 트리에서 **성능 로그 및 경고**를 확장합니다.  
   
-2.  
-  **경고**를 마우스 오른쪽 단추로 클릭한 다음 **새 경고 설정**을 클릭합니다.  
+2.  **경고**를 마우스 오른쪽 단추로 클릭한 다음 **새 경고 설정**을 클릭합니다.  
   
-3.  
-  **새 경고 설정** 대화 상자에서 새 경고의 이름을 입력한 다음 **확인**을 클릭합니다.  
+3.  **새 경고 설정** 대화 상자에서 새 경고의 이름을 입력한 다음 **확인**을 클릭합니다.  
   
 4.  새 경고에 대한 대화 상자의 **일반** 탭에서 **설명**을 추가하고 **추가** 를 클릭하여 카운터를 경고에 추가합니다.  
   
@@ -47,14 +44,11 @@ ms.locfileid: "63150496"
   
      카운터의 값이 이 임계값보다 크거나 작으면 **초과** 또는 **미만**선택 여부에 따라 경고가 생성됩니다.  
   
-8.  
-  **데이터 샘플 간격** 상자에서 샘플 빈도를 설정합니다.  
+8.  **데이터 샘플 간격** 상자에서 샘플 빈도를 설정합니다.  
   
-9. 
-  **동작** 탭에서 경고가 트리거될 때마다 일어날 동작을 설정합니다.  
+9. **동작** 탭에서 경고가 트리거될 때마다 일어날 동작을 설정합니다.  
   
-10. 
-  **일정** 탭에서 경고 검사의 시작 및 중지 예약을 설정합니다.  
+10. **일정** 탭에서 경고 검사의 시작 및 중지 예약을 설정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 데이터베이스 경고 만들기](../performance-monitor/create-a-sql-server-database-alert.md)  

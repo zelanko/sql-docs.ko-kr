@@ -11,14 +11,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ddb50c8993de72230e97cdde729416258272bb1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046379"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>확장 이벤트 로그의 진단 정보 액세스
-  
   [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]부터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client와 데이터 액세스 추적([데이터 액세스 추적](https://go.microsoft.com/fwlink/?LinkId=125805))은 연결 링 버퍼에서 연결 실패에 대한 진단 정보를 쉽게 얻을 수 있고 확장 이벤트 로그에서 애플리케이션 성능 정보를 쉽게 얻을 수 있도록 업데이트되었습니다.  
   
  확장 이벤트 로그를 읽는 방법에 대한 자세한 내용은 [View Event Session Data](../../../database-engine/view-event-session-data.md)를 참조하십시오.  
@@ -31,8 +30,7 @@ ms.locfileid: "63046379"
   
  Native Client에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC를 사용 하 고 연결에 성공 하면 `SQL_COPT_SS_CLIENT_CONNECTION_ID` [SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md)를 사용 하 여 특성을 사용 하 여 클라이언트 연결 ID를 가져올 수 있습니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 스레드별 작업 ID도 전송합니다. TRACK_CAUSAILITY 옵션이 활성화된 상태에서 세션을 시작한 경우 작업 ID는 확장 이벤트 세션에서 캡처됩니다. 활성 연결에 성능 문제가 발생할 경우 클라이언트의 데이터 액세스 추적(`ActivityID` 필드)에서 작업 ID를 가져온 다음 확장 이벤트 출력에서 작업 ID를 찾을 수 있습니다. 확장 이벤트의 작업 ID는 4바이트 시퀀스 번호가 추가된 16바이트 GUID(클라이언트 연결 ID의 GUID와 동일하지 않음)입니다. 시퀀스 번호는 스레드 내의 요청 순서를 나타내며 스레드에 대한 일괄 처리 및 RPC 문의 상대적인 순서를 표시합니다. 데이터 액세스 추적을 활성화하고 데이터 액세스 추적 구성 단어의 18번째 비트를 ON으로 전환하면 SQL 일괄 처리 문과 RPC 요청에 대해 `ActivityID`가 선택적으로 전송됩니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 스레드별 작업 ID도 전송합니다. TRACK_CAUSAILITY 옵션이 활성화된 상태에서 세션을 시작한 경우 작업 ID는 확장 이벤트 세션에서 캡처됩니다. 활성 연결에 성능 문제가 발생할 경우 클라이언트의 데이터 액세스 추적(`ActivityID` 필드)에서 작업 ID를 가져온 다음 확장 이벤트 출력에서 작업 ID를 찾을 수 있습니다. 확장 이벤트의 작업 ID는 4바이트 시퀀스 번호가 추가된 16바이트 GUID(클라이언트 연결 ID의 GUID와 동일하지 않음)입니다. 시퀀스 번호는 스레드 내의 요청 순서를 나타내며 스레드에 대한 일괄 처리 및 RPC 문의 상대적인 순서를 표시합니다. 데이터 액세스 추적을 활성화하고 데이터 액세스 추적 구성 단어의 18번째 비트를 ON으로 전환하면 SQL 일괄 처리 문과 RPC 요청에 대해 `ActivityID`가 선택적으로 전송됩니다.  
   
  다음 예제에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 을 사용하여 링 버퍼에 저장되고 RPC 및 일괄 처리 작업 시 클라이언트에서 전송된 작업 ID를 기록하는 확장 이벤트 세션을 시작합니다.  
   
@@ -48,8 +46,7 @@ add target ring_buffer with (track_causality=on)
 ```  
   
 ## <a name="control-file"></a>제어 파일  
- 
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 SQL Server Native Client 제어 파일(ctrl.guid.snac11)의 내용은 다음과 같습니다.  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 SQL Server Native Client 제어 파일(ctrl.guid.snac11)의 내용은 다음과 같습니다.  
   
 ```  
 {8B98D3F2-3CC6-0B9C-6651-9649CCE5C752}  0x00000000  0   MSDADIAG.ETW  
@@ -57,8 +54,7 @@ add target ring_buffer with (track_causality=on)
 ```  
   
 ## <a name="mof-file"></a>MOF 파일  
- 
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 SQL Server Native Client mof 파일의 내용은 다음과 같습니다.  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 SQL Server Native Client mof 파일의 내용은 다음과 같습니다.  
   
 ```  
 #pragma classflags("forceupdate")  

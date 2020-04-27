@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 709df371d840d4b24e420b4fcd08750fd31e8075
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63070895"
 ---
 # <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>4단원: Bike Buyer 마이닝 모델 찾아보기
@@ -67,8 +67,7 @@ WHERE NODE_SUPPORT > 100
   
 #### <a name="to-return-the-content-of-the-clustering-mining-model"></a>클러스터링 마이닝 모델의 내용을 반환하려면  
   
-1.  
-  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
@@ -80,7 +79,7 @@ WHERE NODE_SUPPORT > 100
     <select list>   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     *  
@@ -94,7 +93,7 @@ WHERE NODE_SUPPORT > 100
     [<mining model>]   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     [Clustering]  
@@ -106,8 +105,7 @@ WHERE NODE_SUPPORT > 100
     SELECT * FROM [Clustering].CONTENT  
     ```  
   
-5.  
-  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
+5.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
 6.  다른 이름 **으로 저장** 대화 상자에서 해당 폴더로 이동한 다음 파일 `SELECT_CONTENT.dmx`이름을로 합니다.  
   
@@ -144,8 +142,7 @@ WHERE IsInNode('<node id>')
   
 #### <a name="to-return-the-cases-that-were-used-to-train-the-mining-model"></a>마이닝 모델의 학습에 사용된 사례를 반환하려면  
   
-1.  
-  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
@@ -157,7 +154,7 @@ WHERE IsInNode('<node id>')
     <select list>   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     *  
@@ -171,7 +168,7 @@ WHERE IsInNode('<node id>')
     [<mining model>]   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     [Decision Tree]  
@@ -184,8 +181,7 @@ WHERE IsInNode('<node id>')
     FROM [Decision Tree].CASES  
     ```  
   
-5.  
-  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
+5.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
 6.  다른 이름 **으로 저장** 대화 상자에서 해당 폴더로 이동한 다음 파일 `SELECT_DRILLTHROUGH.dmx`이름을로 합니다.  
   
@@ -213,8 +209,7 @@ SELECT DISTINCT [<column>]
   
 #### <a name="to-return-the-states-of-a-discrete-column"></a>불연속 열의 상태를 반환하려면  
   
-1.  
-  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
@@ -226,7 +221,7 @@ SELECT DISTINCT [<column>]
     [<column,name>   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     [Bike Buyer]  
@@ -238,7 +233,7 @@ SELECT DISTINCT [<column>]
     [<mining model>]   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     [Decision Tree]  
@@ -251,8 +246,7 @@ SELECT DISTINCT [<column>]
     FROM [Decision Tree]  
     ```  
   
-5.  
-  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
+5.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
 6.  다른 이름 **으로 저장** 대화 상자에서 해당 폴더로 이동한 다음 파일 `SELECT_DISCRETE.dmx`이름을로 합니다.  
   

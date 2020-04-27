@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 34744bedb701155d2695f6efc5aab3c493e6cf48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011266"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>OLE Automation 반환 코드 및 오류 정보
@@ -26,8 +26,7 @@ ms.locfileid: "63011266"
   
  예를 들어 잘못 된 개체 이름 (SQLDMO)을 전달 합니다. Sqldmo.xyzzy)로 sp_OACreate 하면 프로시저에서 2147221005의 `int` HRESULT를 반환 합니다 .이 HRESULT는 16 진수의 0x800401f3입니다.  
   
- 
-  `CONVERT(binary(4), @hresult)`를 사용하여 `int` HRESULT를 `binary` 값으로 변환할 수 있습니다. 그러나 `CONVERT(char(10), CONVERT(binary(4), @hresult))` 를 사용하면 HRESULT의 각 바이트가 하나의 ASCII 문자로 변환되어 알아볼 수 없는 문자열이 됩니다. 다음 샘플 HexToChar 저장 프로시저를 사용 하 여 `int` HRESULT를 읽을 수 있는 16 `char` 진수 문자열을 포함 하는 값으로 변환할 수 있습니다.  
+ `CONVERT(binary(4), @hresult)`를 사용하여 `int` HRESULT를 `binary` 값으로 변환할 수 있습니다. 그러나 `CONVERT(char(10), CONVERT(binary(4), @hresult))` 를 사용하면 HRESULT의 각 바이트가 하나의 ASCII 문자로 변환되어 알아볼 수 없는 문자열이 됩니다. 다음 샘플 HexToChar 저장 프로시저를 사용 하 여 `int` HRESULT를 읽을 수 있는 16 `char` 진수 문자열을 포함 하는 값으로 변환할 수 있습니다.  
   
 ```  
 USE AdventureWorks2012;  

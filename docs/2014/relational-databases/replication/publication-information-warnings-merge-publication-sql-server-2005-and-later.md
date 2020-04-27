@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f849394a4a77091f92ee66857b4d5263875fdea3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021681"
 ---
 # <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>게시 정보, 경고(병합 게시, SQL Server 2005 이상)
@@ -52,16 +52,16 @@ ms.locfileid: "63021681"
  임계값에 도달하면 복제 모니터에 경고가 표시되는 것은 물론 알림 신호가 트리거될 수 있습니다. 알림 신호는 **경고 구성** 을 클릭하고 **복제 경고 구성** 대화 상자에서 정보를 제공하여 정의합니다.  
   
 ## <a name="options"></a>옵션  
- **Enabled**  
+ **사용**  
  경고를 설정하고 임계값을 지정하려면 선택합니다.  
   
  **경고**  
  지정된 복제 경고에 대한 경고 설정을 사용하도록 설정하려면 선택합니다.  
   
- **경고**  
+ **Warning**  
  임계값과 연결된 경고에 대한 설명입니다.  
   
- **임계값**  
+ **고대비**  
  임계값을 지정합니다.  
   
  **경고 구성**  
@@ -78,8 +78,8 @@ ms.locfileid: "63021681"
   
 ## <a name="see-also"></a>참고 항목  
  [복제 모니터 시작](monitor/start-the-replication-monitor.md)   
- [복제 모니터를 사용하여 정보 보기 및 태스크 수행](monitor/view-information-and-perform-tasks-replication-monitor.md)   
- [복제 모니터로 성능 모니터링](monitor/monitor-performance-with-replication-monitor.md)   
+ [복제 모니터를 사용 하 여 정보 보기 및 태스크 수행](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [복제 모니터를 사용 하 여 성능 모니터링](monitor/monitor-performance-with-replication-monitor.md)   
  [복제 모니터링](monitoring-replication.md)   
  [Set Thresholds and Warnings in Replication Monitor](monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   

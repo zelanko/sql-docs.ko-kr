@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e027ece4576907b9543c7fc6eb9cbe161b3c4323
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157700"
 ---
 # <a name="getcurrentcertificate-method-securitycertificate-class"></a>GetCurrentCertificate 메서드(SecurityCertificate 클래스)
@@ -40,19 +40,18 @@ SHA , SQLInstance
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
+ *object*  
  보안 인증서를 나타내는 [SecurityCertificate 클래스](securitycertificate-class.md) 개체입니다.  
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---------------|-----------------|  
 |*S*|메서드가 완료된 후 현재 보안 인증서 SHA 지문을 지정하는 문자열 값(출력 매개 변수)입니다.|  
 |*SQLInstance*|인증서가 필요한 인스턴스를 지정하는 문자열 값입니다.|  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
- 
-  `uint32` 값으로, 0은 서비스가 수정되었음을 나타내고 1은 요청이 지원되지 않음을 나타내며 다른 모든 숫자는 오류를 나타냅니다.  
+ `uint32` 값으로, 0은 서비스가 수정되었음을 나타내고 1은 요청이 지원되지 않음을 나타내며 다른 모든 숫자는 오류를 나타냅니다.  
   
 ## <a name="remarks"></a>설명  
   

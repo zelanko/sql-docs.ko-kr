@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d64b5bf6b60f37bf386840031c304dd5b13faaeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63158805"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩
@@ -125,7 +125,7 @@ GO
   
 2.  `ALTER RESURCE GOVERNOR` 를 사용하여 새 값으로 리소스 관리자를 다시 구성합니다.  
   
- **예제 코드**  
+ **샘플 코드**  
   
 ```sql  
 ALTER RESOURCE POOL Pool_IMOLTP  
@@ -142,7 +142,7 @@ GO
 ## <a name="percent-of-memory-available-for-memory-optimized-tables-and-indexes"></a>메모리 최적화 테이블 및 인덱스에 사용 가능한 메모리 비율  
  메모리 최적화 테이블과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업을 동일한 리소스 풀에 매핑하면 리소스 관리자는 풀 사용자가 풀 사용에서 충돌을 일으키지 않도록 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 사용에 대한 내부 임계값을 설정합니다. 일반적으로 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 사용에 대한 임계값은 풀의 약 80%입니다. 다음 표에서는 다양한 메모리 크기에 대한 실제 임계값을 보여 줍니다.  
   
- [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 데이터베이스의 전용 리소스 풀을 만드는 경우 행 버전과 데이터 증가율을 고려한 후 메모리 내 테이블에 필요한 물리적 메모리 양을 추정해야 합니다. 필요한 메모리를 추정했으면 DMV `sys.dm_os_sys_info`에서 ‘committed_target_kb’ 열에 반영된 대로 SQL 인스턴스의 커밋 대상 메모리 비율을 사용하여 리소스 풀을 만듭니다([sys.dm_os_sys_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql) 참조). 예를 들어, 인스턴스에 사용할 수 있는 총 메모리의 40%로 리소스 풀 P1을 만들 수 있습니다. 이 40%에서 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 엔진은 더 적은 비율을 사용하여 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 데이터를 저장합니다.  이는 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 에서 이 풀의 메모리를 모두 사용하지 않도록 하기 위한 것입니다.  이 비율 값은 대상에 커밋된 메모리에 따라 다릅니다. 다음 테이블은 OOM 오류가 발생하기 전 리소스 풀(명명된 또는 기본값)의 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 데이터베이스에서 사용할 수 있는 메모리에 대해 설명합니다.  
+ [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 데이터베이스의 전용 리소스 풀을 만드는 경우 행 버전과 데이터 증가율을 고려한 후 메모리 내 테이블에 필요한 물리적 메모리 양을 추정해야 합니다. 필요한 메모리를 예측 한 후에는 DMV `sys.dm_os_sys_info` 의 ' committed_target_kb ' 열에 반영 되는 SQL 인스턴스의 커밋 대상 메모리 비율을 사용 하 여 리소스 풀을 만듭니다 ( [dm_os_sys_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql)참조). 예를 들어, 인스턴스에 사용할 수 있는 총 메모리의 40%로 리소스 풀 P1을 만들 수 있습니다. 이 40%에서 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 엔진은 더 적은 비율을 사용하여 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 데이터를 저장합니다.  이는 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 에서 이 풀의 메모리를 모두 사용하지 않도록 하기 위한 것입니다.  이 비율 값은 대상에 커밋된 메모리에 따라 다릅니다. 다음 테이블은 OOM 오류가 발생하기 전 리소스 풀(명명된 또는 기본값)의 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 데이터베이스에서 사용할 수 있는 메모리에 대해 설명합니다.  
   
 |대상에 커밋된 메모리|메모리 내 테이블에서 사용할 수 있는 비율|  
 |-----------------------------|---------------------------------------------|  
@@ -185,10 +185,10 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
  데이터베이스를 명명된 리소스 풀에 바인딩하지 않으면 ‘기본’ 풀에 바인딩됩니다. 기본 리소스 풀은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 대다수의 다른 할당에 사용되므로 DMV sys.dm_resource_governor_resource_pools를 사용하여 원하는 데이터베이스에 대해 메모리 최적화 테이블에서 사용하는 메모리를 모니터링할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [sys.sp_xtp_bind_db_resource_pool&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)   
- [sys.sp_xtp_unbind_db_resource_pool&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)   
- [리소스 관리자](../resource-governor/resource-governor.md)   
- [리소스 관리자 리소스 풀](../resource-governor/resource-governor-resource-pool.md)   
+ [sp_xtp_bind_db_resource_pool &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)   
+ [sp_xtp_unbind_db_resource_pool &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)   
+ [Resource Governor](../resource-governor/resource-governor.md)   
+ [Resource Governor 리소스 풀](../resource-governor/resource-governor-resource-pool.md)   
  [리소스 풀 만들기](../resource-governor/create-a-resource-pool.md)   
  [리소스 풀 설정 변경](../resource-governor/change-resource-pool-settings.md)   
  [리소스 풀 삭제](../resource-governor/delete-a-resource-pool.md)  

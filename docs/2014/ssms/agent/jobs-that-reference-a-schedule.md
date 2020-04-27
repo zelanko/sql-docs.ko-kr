@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efba2e73c3043ddbf25fef06b57ef039f6eacea5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63183474"
 ---
 # <a name="jobs-that-reference-a-schedule"></a>일정 참조 작업
@@ -35,7 +35,7 @@ ms.locfileid: "63183474"
  **이름**  
  이 일정을 사용하는 작업의 이름입니다.  
   
- **Enabled**  
+ **사용**  
  읽기 전용입니다. 이 작업이 현재 사용하도록 설정되어 있는지 여부를 나타냅니다.  
   
  **범주**  

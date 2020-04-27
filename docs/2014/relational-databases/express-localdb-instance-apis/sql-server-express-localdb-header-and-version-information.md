@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6e390430115daf394c5e94267dad30a87851375d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63128692"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>SQL Server Express LocalDB 헤더 및 버전 정보
@@ -53,7 +53,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12E.LOCALDB\ MSS
 "InstanceAPIPath"="C:\\Program Files\\Microsoft SQL Server\\120\\LocalDB\\Binn\\SqlUserInstance.dll"]  
 ```  
   
- 클라이언트 공급자는 설치 된 모든 버전 중에서 최신 버전을 찾고, 연결 **** `InstanceAPIPath` 된 값에서 sqluserinstance.dll DLL 파일을 로드 해야 합니다.  
+ 클라이언트 공급자는 설치 된 모든 버전 중에서 최신 버전을 찾고, 연결 **SQLUserInstance** `InstanceAPIPath` 된 값에서 sqluserinstance.dll DLL 파일을 로드 해야 합니다.  
   
 ### <a name="wow64-mode-on-64-bit-windows"></a>64비트 Windows의 WOW64 모드  
  64비트 LocalDB 설치에는 WOW64(Windows-32-on-Windows-64) 모드에서 실행 중인 32비트 애플리케이션에서 LocalDB를 사용할 수 있도록 해주는 추가 레지스트리 키 집합이 있습니다. 특히 64비트 Windows에서 LocalDB MSI는 다음과 같은 레지스트리 키를 만듭니다.  

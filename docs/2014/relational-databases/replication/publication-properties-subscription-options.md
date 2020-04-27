@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9c630646aa81ebaeccf49f729299394419b7099a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021730"
 ---
 # <a name="publication-properties-subscription-options"></a>게시 속성, 구독 옵션
-  **게시 속성** 대화 상자의 **구독 옵션** 페이지를 사용 하 여 구독과 연결 된 게시 수준 속성을 보고 설정할 수 있습니다. 속성은 다음 범주로 그룹화됩니다.  
+  **게시 속성** 대화 상자의 **구독 옵션** 페이지를 사용하여 구독과 연결된 게시 수준 속성을 보고 설정할 수 있습니다. 속성은 다음 범주로 그룹화됩니다.  
   
 -   모든 게시에 적용되는 속성  
   
@@ -35,9 +35,9 @@ ms.locfileid: "63021730"
   
 ### <a name="creation-and-synchronization"></a>생성 및 동기화  
  **익명 구독 허용**  
- 익명 끌어오기 구독을 허용할지 여부를 결정합니다. 익명 구독은 Windows CE에 대해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)]및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대해 지원 됩니다. 스냅샷 및 트랜잭션 게시에 대해 이 옵션을 사용하려면 **스냅샷을 항상 사용할 수 있음** 옵션을 **True**로 설정해야 합니다.  
+ 익명 끌어오기 구독을 허용할지 여부를 결정합니다. 익명 구독은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)] 및 Windows CE용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 지원됩니다. 스냅샷 및 트랜잭션 게시에 대해 이 옵션을 사용하려면 **스냅샷을 항상 사용할 수 있음** 옵션을 **True**로 설정해야 합니다.  
   
- **연결 가능한 구독 데이터베이스**  
+ **연결할 수 있는 구독 데이터베이스**  
  구독 데이터베이스의 복사본을 연결하여 구독을 만들 수 있는지 여부를 결정합니다. 스냅샷 및 트랜잭션 게시의 경우 **스냅샷을 항상 사용할 수 있음** 옵션을 **True** 로 설정해야 합니다.  
   
 > [!IMPORTANT]  
@@ -56,10 +56,10 @@ ms.locfileid: "63021730"
  **독립 배포 에이전트**  
  이 데이터베이스의 다른 게시에 대해 독립적인 에이전트의 사용 여부를 결정합니다. 이 옵션은 읽기 전용입니다. 새 게시 마법사를 사용하여 만든 게시에 대해 이 옵션은 기본적으로 **True** 로 설정되어 있으며 게시를 만든 후에는 이를 변경할 수 없습니다. 자세한 내용은 [복제 에이전트 관리](agents/replication-agent-administration.md)를 참조하세요.  
   
- **스냅숏을 항상 사용할 수 있음**  
+ **스냅샷을 항상 사용할 수 있음**  
  스냅샷 에이전트를 실행할 때마다 스냅샷 파일을 만들지 여부를 결정합니다( **독립 배포 에이전트**필요). 이 옵션은 읽기 전용입니다. 새 게시 마법사의 **스냅샷 에이전트** 페이지에서 **즉시 스냅샷을 만들고 구독 초기화에 사용할 수 있도록 유지합니다** (기본값)를 선택하면 이 옵션이 **True** 로 설정됩니다. 자세한 내용은 [스냅샷 만들기 및 적용](create-and-apply-the-snapshot.md)을 참조하세요.  
   
- **백업 파일에서 초기화 허용**  
+ **백업 파일로 초기화 허용**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당됩니다. 백업 파일을 사용하여 구독을 초기화할 수 있도록 허용할지 여부를 결정합니다. 자세한 내용은 [스냅샷 없이 트랜잭션 구독 초기화](initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
   
  **SQL Server 이외 구독자 허용**  
@@ -73,43 +73,36 @@ ms.locfileid: "63021730"
 >  후속 릴리스에서는 변환 가능한 구독을 사용할 수 없습니다. 이 기능은 더 이상 사용되지 않습니다.  
   
 ### <a name="peer-to-peer-replication"></a>피어 투 피어 복제  
- **피어 투 피어 구독 허용**  
- 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 적용됩니다. 게시에서 피어 투 피어 복제를 지원할지 여부를 결정합니다. 이 옵션을 **True** 로 설정하면 다른 게시 속성도 피어 투 피어 복제를 지원하도록 설정됩니다. 구독이 있으면 이 옵션을 읽기 전용입니다. 
-  **즉시 업데이트 구독 허용** , **지연 업데이트 구독 허용** 또는 **SQL Server 이외 구독자 허용**이 **True** 로 설정된 경우에는 이 옵션을 **True**로 설정할 수 없습니다. 자세한 내용은 [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)을 참조하세요.  
+ **True**  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 적용됩니다. 게시에서 피어 투 피어 복제를 지원할지 여부를 결정합니다. 이 옵션을 **True** 로 설정하면 다른 게시 속성도 피어 투 피어 복제를 지원하도록 설정됩니다. 구독이 있으면 이 옵션을 읽기 전용입니다. **즉시 업데이트 구독 허용** , **지연 업데이트 구독 허용** 또는 **SQL Server 이외 구독자 허용**이 **True** 로 설정된 경우에는 이 옵션을 **True**로 설정할 수 없습니다. 자세한 내용은 [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)을 참조하세요.  
   
  **피어 투 피어 충돌 검색 허용**  
- 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에만 적용됩니다. 이 게시에 대해 충돌 검색을 사용할지 여부를 지정합니다. 충돌 검색을 사용하려면 모든 노드에서 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전이 실행되어야 하고 모든 노드에 대해 충돌 검색을 사용하도록 설정되어 있어야 합니다. 충돌 검색을 사용 하려면 **피어 송신자 id**값도 지정 해야 합니다. 자세한 내용은 [피어 투 피어 복제에서 충돌 검색](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)을 참조 하세요.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에만 적용됩니다. 이 게시에 대해 충돌 검색을 사용할지 여부를 지정합니다. 충돌 검색을 사용하려면 모든 노드에서 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전이 실행되어야 하고 모든 노드에 대해 충돌 검색을 사용하도록 설정되어 있어야 합니다. 충돌 검색을 사용하려면 **피어 송신자 ID**값도 지정해야 합니다. 자세한 내용은 [Conflict Detection in Peer-to-Peer Replication](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)을 참조하세요.  
   
- **피어 송신자 id**  
- 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에만 적용됩니다. 피어 투 피어 토폴로지에 있는 노드의 ID를 지정합니다. 이 ID는 **피어 투 피어 충돌 검색 허용** 이 **True**로 설정된 경우 충돌 검색에 사용됩니다. 토폴로지에 사용되지 않은 0이 아닌 양수 ID를 지정합니다. 이미 사용된 ID 목록을 보려면 [Mspeer_originatorid_history](/sql/relational-databases/system-tables/mspeer-originatorid-history-transact-sql) 시스템 테이블을 쿼리하십시오.  
+ **피어 송신자 ID**  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에만 적용됩니다. 피어 투 피어 토폴로지에 있는 노드의 ID를 지정합니다. 이 ID는 **피어 투 피어 충돌 검색 허용** 이 **True**로 설정된 경우 충돌 검색에 사용됩니다. 토폴로지에 사용되지 않은 0이 아닌 양수 ID를 지정합니다. 이미 사용된 ID 목록을 보려면 [Mspeer_originatorid_history](/sql/relational-databases/system-tables/mspeer-originatorid-history-transact-sql) 시스템 테이블을 쿼리하십시오.  
   
 ### <a name="updatable-subscriptions"></a>업데이트할 수 있는 구독  
- **즉시 업데이트 구독 허용**  
+ **지연 업데이트 구독 허용**  
  구독자 변경 내용을 즉시 게시자로 복제할 수 있는지 여부를 결정합니다. 이 옵션은 읽기 전용입니다. 게시를 만들 때만 구독 업데이트를 설정할 수 있습니다. 자세한 내용은 [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)를 참조하세요.  
   
- **지연 업데이트 구독 허용**  
+ **피어 투 피어 구독 허용**  
  구독자 변경 내용을 지연하고 나중에 게시자로 복제할 수 있는지 여부를 결정합니다. 이 옵션은 읽기 전용입니다. 게시를 만들 때만 구독 업데이트를 설정할 수 있습니다. 자세한 내용은 [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)를 참조하세요.  
   
- **중앙에서 충돌 보고**  
- 충돌하는 데이터 변경 내용을 게시자에서만 보고할 것인지, 아니면 게시자와 구독자 모두에서 보고할 것인지 여부를 결정합니다( **지연 업데이트 구독 허용**옵션 필요). 이 옵션은 읽기 전용입니다. 새 게시 마법사를 사용하여 만든 게시에 대해 이 옵션은 기본적으로 **True** 로 설정되어 있으며 게시를 만든 후에는 이를 변경할 수 없습니다. 
-  **True** 값은 게시자에서만 충돌이 보고됨을 의미합니다. 보고된 위치에서만 충돌을 볼 수 있습니다.  
+ **한 곳에서만 충돌 보고**  
+ 충돌하는 데이터 변경 내용을 게시자에서만 보고할 것인지, 아니면 게시자와 구독자 모두에서 보고할 것인지 여부를 결정합니다( **지연 업데이트 구독 허용**옵션 필요). 이 옵션은 읽기 전용입니다. 새 게시 마법사를 사용하여 만든 게시에 대해 이 옵션은 기본적으로 **True** 로 설정되어 있으며 게시를 만든 후에는 이를 변경할 수 없습니다. **True** 값은 게시자에서만 충돌이 보고됨을 의미합니다. 보고된 위치에서만 충돌을 볼 수 있습니다.  
   
  **충돌 해결 정책**  
  구독자 변경 내용이 게시자 변경 내용과 충돌할 때 수행할 동작을 지정합니다( **지연 업데이트 구독 허용**옵션 필요). 자세한 내용은 [Queued Updating Conflict Detection and Resolution](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)을(를) 참조하세요.  
   
  **큐 유형**  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 큐 또는 MSMQ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing)를 사용하여 게시자에 적용할 수 있을 때까지 구독자에서 변경 내용을 유지할지 여부를 결정합니다( **지연 업데이트 구독 허용**옵션 필요). 이 옵션은 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]에만 적용됩니다. 그 이상 버전에서는 큐 서비스에 항상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블을 사용합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 큐 또는 MSMQ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing)를 사용하여 게시자에 적용할 수 있을 때까지 구독자에서 변경 내용을 유지할지 여부를 결정합니다( **지연 업데이트 구독 허용**옵션 필요). 이 옵션은 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]에만 적용됩니다. 그 이상 버전에서는 큐 서비스에 항상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블을 사용합니다.  
   
 ## <a name="options-for-merge-publications"></a>병합 게시에 대한 옵션  
   
 ### <a name="conflict-reporting"></a>충돌 보고  
- **중앙에서 충돌 보고**  
- 충돌하는 데이터 변경 내용을 게시자에서만 보고할 것인지, 아니면 게시자와 구독자 모두에서 보고할 것인지 여부를 결정합니다. 이 옵션은 읽기 전용입니다. 새 게시 마법사를 사용하여 만든 게시에 대해 이 옵션은 기본적으로 **True** 로 설정되어 있으며 게시를 만든 후에는 이를 변경할 수 없습니다. 
-  **True** 값은 게시자에서만 충돌이 보고됨을 의미합니다. 보고된 위치에서만 충돌을 볼 수 있습니다. 자세한 내용은 [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)의 "충돌 보기" 섹션을 참조하십시오.  
+ **한 곳에서만 충돌 보고**  
+ 충돌하는 데이터 변경 내용을 게시자에서만 보고할 것인지, 아니면 게시자와 구독자 모두에서 보고할 것인지 여부를 결정합니다. 이 옵션은 읽기 전용입니다. 새 게시 마법사를 사용하여 만든 게시에 대해 이 옵션은 기본적으로 **True** 로 설정되어 있으며 게시를 만든 후에는 이를 변경할 수 없습니다. **True** 값은 게시자에서만 충돌이 보고됨을 의미합니다. 보고된 위치에서만 충돌을 볼 수 있습니다. 자세한 내용은 [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)의 "충돌 보기" 섹션을 참조하십시오.  
   
 ### <a name="filtering"></a>Filtering  
  **매개 변수가 있는 필터 허용**  
@@ -128,7 +121,7 @@ ms.locfileid: "63021730"
  **동시 프로세스 제한**  
  동시에 실행할 수 있는 병합 에이전트 수의 제한 여부를 결정합니다. 이 옵션은 일반적으로 게시에 동시 동기화가 가능한 밀어넣기 구독의 수가 많은 경우에 사용됩니다.  
   
- **최대 동시 프로세스**  
+ **최대 동시 프로세스 수**  
  동시에 실행될 수 있는 최대 병합 에이전트 수입니다( **동시 프로세스 제한**필요). 동기화 중인 에이전트 수가 이 최대값을 초과하면 개수가 최대값 밑으로 감소할 때까지 에이전트가 큐에 저장됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

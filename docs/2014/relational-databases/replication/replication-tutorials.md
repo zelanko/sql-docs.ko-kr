@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61e6b3d1682ba746f74f22413e49afa1ea585591
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62960801"
 ---
 # <a name="replication-tutorials"></a>복제 자습서
@@ -33,10 +33,10 @@ ms.locfileid: "62960801"
  [복제용 서버 준비](tutorial-preparing-the-server-for-replication.md)  
  최소의 권한을 사용하여 복제를 실행할 수 있도록 서버를 준비하는 방법을 배웁니다. 다른 복제 자습서로 넘어가기 전에 이 자습서를 마쳐야 합니다.  
   
- [계속 연결 된 서버 간 데이터 복제](tutorial-replicating-data-between-continuously-connected-servers.md)  
+ [계속 연결된 서버 간 데이터 복제](tutorial-replicating-data-between-continuously-connected-servers.md)  
  트랜잭션 복제를 사용하여 완전히 연결된 서버 간에 데이터를 복제하는 방법을 배웁니다.  
   
- [모바일 클라이언트를 사용 하 여 데이터 복제](tutorial-replicating-data-with-mobile-clients.md)  
+ [모바일 클라이언트와의 데이터 복제](tutorial-replicating-data-with-mobile-clients.md)  
  병합 복제를 사용하여 한 서버와 가끔만 연결되는 하나 이상의 클라이언트 간에 데이터를 교환하는 방법을 배웁니다.  
   
 ## <a name="see-also"></a>참고 항목  

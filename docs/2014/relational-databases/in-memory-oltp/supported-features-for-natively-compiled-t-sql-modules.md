@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155722"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저에서 지원되는 구문
@@ -22,7 +22,7 @@ ms.locfileid: "63155722"
   
 -   [고유하게 컴파일된 저장 프로시저의 프로그래밍 기능](#pncsp)  
   
--   [지원 되는 연산자](#so)  
+-   [지원되는 연산자](#so)  
   
 -   [고유하게 컴파일된 저장 프로시저의 기본 제공 함수](#bfncsp)  
   
@@ -32,13 +32,13 @@ ms.locfileid: "63155722"
   
 -   [테이블, 쿼리 및 조인 힌트](#tqh)  
   
--   [정렬에 대 한 제한 사항](#los)  
+-   [정렬의 제한 사항](#los)  
   
  기본적으로 컴파일된 저장 프로시저에서 지원되는 데이터 형식에 대한 자세한 내용은 [Supported Data Types](supported-data-types-for-in-memory-oltp.md)을 참조하세요.  
   
  고유하게 컴파일된 저장 프로시저에서 지원되지 않는 구문에 대한 자세한 내용과 지원되지 않는 일부 기능을 해결하는 방법은 [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md)를 참조하세요. 지원되지 않는 기능에 대한 자세한 내용은 [메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문](transact-sql-constructs-not-supported-by-in-memory-oltp.md)을 참조하세요.  
   
-##  <a name="pncsp"></a>고유 하 게 컴파일된 저장 프로시저의 프로그래밍 기능  
+##  <a name="programmability-in-natively-compiled-stored-procedures"></a><a name="pncsp"></a>고유 하 게 컴파일된 저장 프로시저의 프로그래밍 기능  
  다음 항목이 지원됩니다.  
   
 -   BEGIN ATOMIC(저장 프로시저의 외부 수준), LANGUAGE, ISOLATION LEVEL, DATEFORMAT 및 DATEFIRST  
@@ -55,7 +55,7 @@ ms.locfileid: "63155722"
   
 -   RETURN  
   
--   SELECT  
+-   선택  
   
 -   SET  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63155722"
   
      성능을 최적화하기 위해서는 전체 고유하게 컴파일된 저장 프로시저에 대해 단일 TRY/CATCH 블록을 사용합니다.  
   
-##  <a name="so"></a>지원 되는 연산자  
+##  <a name="supported-operators"></a><a name="so"></a>지원 되는 연산자  
  지원되는 연산자는 다음과 같습니다.  
   
 -   [Transact-sql&#41;&#40;비교 연산자](/sql/t-sql/language-elements/comparison-operators-transact-sql) (예: >, \<, >= 및 <=)는 조건 (IF, WHILE)에서 지원 됩니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "63155722"
   
 -   비트 연산자 ~, &, | 및 ^  
   
-##  <a name="bfncsp"></a>고유 하 게 컴파일된 저장 프로시저의 기본 제공 함수  
+##  <a name="built-in-functions-in-natively-compiled-stored-procedures"></a><a name="bfncsp"></a>고유 하 게 컴파일된 저장 프로시저의 기본 제공 함수  
  다음 함수는 메모리 최적화 테이블에 대한 기본 제약 조건과 고유하게 컴파일된 저장 프로시저에서 지원됩니다.  
   
 -   수식 함수: ACOS, ASIN, ATAN, ATN2, COS, COT, DEGREES, EXP, LOG, LOG10, PI, POWER, RADIANS, RAND, SIN, SQRT, SQUARE 및 TAN  
@@ -99,7 +99,7 @@ ms.locfileid: "63155722"
   
 -   시스템 함수: @@rowcount 고유하게 컴파일된 저장 프로시저 내의 문은 @@rowcount를 업데이트합니다. 고유하게 컴파일된 저장 프로시저에서 @@rowcount를 사용하여 고유하게 컴파일된 저장 프로시저 내에서 실행된 마지막 문의 영향을 받는 행의 수를 확인할 수 있습니다. 그러나 @@rowcount는 고유하게 컴파일된 저장 프로시저의 실행이 시작될 때와 끝날 때 0으로 다시 설정됩니다.  
   
-##  <a name="qsancsp"></a>고유 하 게 컴파일된 저장 프로시저의 쿼리 노출 영역  
+##  <a name="query-surface-area-in-natively-compiled-stored-procedures"></a><a name="qsancsp"></a>고유 하 게 컴파일된 저장 프로시저의 쿼리 노출 영역  
  다음 항목이 지원됩니다.  
   
 -   BETWEEN  
@@ -134,14 +134,11 @@ ms.locfileid: "63155722"
   
  <sup>1</sup> ORDER BY 및 TOP은 몇 가지 제한 사항이 있지만 고유 하 게 컴파일된 저장 프로시저에서 지원 됩니다.  
   
--   
-  `DISTINCT` 또는 `SELECT` 절에서는 `ORDER BY`가 지원되지 않습니다.  
+-   `DISTINCT` 또는 `SELECT` 절에서는 `ORDER BY`가 지원되지 않습니다.  
   
--   
-  `WITH TIES` 절에서는 `PERCENT` 또는 `TOP`가 지원되지 않습니다.  
+-   `WITH TIES` 절에서는 `PERCENT` 또는 `TOP`가 지원되지 않습니다.  
   
--   
-  `TOP` 절에서 상수를 사용할 때 `ORDER BY`과 `TOP`를 함께 사용할 경우 8,192개 이상은 지원되지 않습니다. 쿼리에 조인 또는 집계 함수가 포함되어 있으면 이 제한이 더 낮아질 수 있습니다. 예를 들어, 조인이 하나 있고 테이블이 두 개 있으면 4,096개의 행으로 제한되고, 조인이 두 개 있고 테이블이 세 개 있으면 2,730개의 행으로 제한됩니다.  
+-   `TOP` 절에서 상수를 사용할 때 `ORDER BY`과 `TOP`를 함께 사용할 경우 8,192개 이상은 지원되지 않습니다. 쿼리에 조인 또는 집계 함수가 포함되어 있으면 이 제한이 더 낮아질 수 있습니다. 예를 들어, 조인이 하나 있고 테이블이 두 개 있으면 4,096개의 행으로 제한되고, 조인이 두 개 있고 테이블이 세 개 있으면 2,730개의 행으로 제한됩니다.  
   
      변수에 행 수를 저장하여 8,192개 이상의 결과를 가져올 수 있습니다.  
   
@@ -154,12 +151,12 @@ ms.locfileid: "63155722"
   
  이러한 제한 사항은 메모리 최적화 테이블에 대한 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스에는 적용되지 않습니다.  
   
-##  <a name="auditing"></a>거쳐야  
+##  <a name="auditing"></a><a name="auditing"></a>거쳐야  
  프로시저 수준 감사는 고유하게 컴파일된 저장 프로시저에서 지원됩니다. 문 수준 감사는 지원되지 않습니다.  
   
  감사에 대한 자세한 내용은 [Create a Server Audit and Database Audit Specification](../security/auditing/create-a-server-audit-and-database-audit-specification.md)를 참조하세요.  
   
-##  <a name="tqh"></a>테이블, 쿼리 및 조인 힌트  
+##  <a name="table-query-and-join-hints"></a><a name="tqh"></a>테이블, 쿼리 및 조인 힌트  
  다음 항목이 지원됩니다.  
   
 -   테이블 힌트 구문 또는 쿼리의 [OPTION 절&#40;Transact-SQL&#41;](/sql/t-sql/queries/option-clause-transact-sql)에 있는 INDEX, FORCESCAN 및 FORCESEEK 힌트.  
@@ -172,9 +169,8 @@ ms.locfileid: "63155722"
   
  자세한 내용은 [&#40;t-sql&#41;힌트 ](/sql/t-sql/queries/hints-transact-sql)를 참조 하세요.  
   
-##  <a name="los"></a>정렬에 대 한 제한 사항  
- 
-  [TOP&#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 및 [ORDER BY 절&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)을 사용하는 쿼리에서는 8,000개 이상의 행을 정렬할 수 있습니다. 하지만 [ORDER BY 절&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)이 없을 경우, [TOP&#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql)은 최대 8,000개까지만 행을 정렬할 수 있습니다. 조인이 있으면 이러한 행 수가 더 줄어듭니다.  
+##  <a name="limitations-on-sorting"></a><a name="los"></a>정렬에 대 한 제한 사항  
+ [TOP&#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 및 [ORDER BY 절&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)을 사용하는 쿼리에서는 8,000개 이상의 행을 정렬할 수 있습니다. 하지만 [ORDER BY 절&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)이 없을 경우, [TOP&#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql)은 최대 8,000개까지만 행을 정렬할 수 있습니다. 조인이 있으면 이러한 행 수가 더 줄어듭니다.  
   
  쿼리에서 [TOP&#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 연산자와 [ORDER BY 절&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)을 모두 사용하는 경우 TOP 연산자에 대해 최대 8192행을 지정할 수 있습니다. 8192행보다 더 많이 지정하면 다음 오류 메시지가 나타납니다. **메시지 41398, 수준 16, 상태 1, 프로시저 *\<procedureName>*, 줄 *\<lineNumber>* TOP 연산자는 최대 8192개의 행을 반환할 수 있습니다. *\<number>* 개가 요청되었습니다.**  
   
@@ -224,7 +220,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- **반환 되는 행에 대 한 제한 사항:** TOP 연산자에서 반환할 수 있는 행 수를 잠재적으로 줄일 수 있는 두 가지 경우는 다음과 같습니다.  
+ **반환된 행에 대한 제한:** TOP 연산자에서 반환할 수 있는 행 수를 잠재적으로 줄일 수 있는 두 가지 경우는 다음과 같습니다.  
   
 -   쿼리에서 JOIN 사용.  JOIN이 제한에 미치는 영향은 쿼리 계획에 따라 다릅니다.  
   

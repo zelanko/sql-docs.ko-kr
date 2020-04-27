@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d4c51002c8c829417c63a0dd6c59a3538604fd81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63042519"
 ---
 # <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>3단원: 보고서 서버에서 보고서 정의 로드
@@ -32,7 +32,7 @@ ms.locfileid: "63042519"
     Private m_report As Report  
     ```  
   
-2.  Program.cs 파일(`LoadReportDefinition()`의 경우 Module1.vb)에서 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 메서드의 코드를 다음 코드로 바꿉니다.  
+2.  Program.cs 파일([!INCLUDE[vbprvb](../includes/vbprvb-md.md)]의 경우 Module1.vb)에서 `LoadReportDefinition()` 메서드의 코드를 다음 코드로 바꿉니다.  
   
     ```csharp  
     private void LoadReportDefinition()  
@@ -101,6 +101,6 @@ ms.locfileid: "63042519"
   
 ## <a name="see-also"></a>참고 항목  
  [RDL 스키마 &#40;생성 된 클래스를 사용 하 여 보고서 업데이트 (SSRS 자습서&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
- [SSRS&#41;&#40;보고서 정의 언어](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [보고서 정의 언어&#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

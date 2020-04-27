@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 89cdfa63bff88c4f4bb5954402034b31ad7f77ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63060989"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>ErrorControl 속성(SqlService 클래스)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
+ *object*  
  서비스를 나타내는 [SqlService 클래스](sqlservice-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
@@ -55,7 +55,7 @@ object
  위험  
  올바른 구성으로 시스템을 다시 시작합니다.  
   
- 알 수 없음  
+ Unknown  
  심각도를 알 수 없습니다.  
   
 ## <a name="remarks"></a>설명  
