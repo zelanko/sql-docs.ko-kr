@@ -16,22 +16,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62814059"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>복제, 변경 내용 추적, 변경 데이터 캡처 및 AlwaysOn 가용성 그룹(SQL Server)
-  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제, CDC(변경 데이터 캡처) 및 CT(변경 내용 추적)는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 지원됩니다. 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하면 고가용성 및 추가 데이터베이스 복구 기능을 제공할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제, CDC(변경 데이터 캡처) 및 CT(변경 내용 추적)는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 지원됩니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하면 고가용성 및 추가 데이터베이스 복구 기능을 제공할 수 있습니다.  
   
  
   
-##  <a name="Overview"></a>AlwaysOn 가용성 그룹의 복제 개요  
+##  <a name="overview-of-replication-on-alwayson-availability-groups"></a><a name="Overview"></a>AlwaysOn 가용성 그룹의 복제 개요  
   
-###  <a name="PublisherRedirect"></a>게시자 리디렉션  
+###  <a name="publisher-redirection"></a><a name="PublisherRedirect"></a>게시자 리디렉션  
  게시된 데이터베이스가 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 인식하는 경우 에이전트에 게시 데이터베이스에 대한 액세스 권한을 제공하는 배포자가 redirected_publishers 항목으로 구성됩니다. 이러한 항목은 가용성 그룹 수신기 이름을 사용하여 게시자 및 게시 데이터베이스에 연결함으로써 원래 구성되어 있는 게시자/데이터베이스 쌍을 리디렉션합니다. 가용성 그룹 수신기 이름을 통해 설정된 연결은 장애 조치(Failover) 시 실패합니다. 장애 조치(Failover) 후 복제 에이전트가 다시 시작되면 연결이 새 주 데이터베이스에 자동으로 리디렉션됩니다.  
   
  AlwaysOn 가용성 그룹에서 보조 데이터베이스는 게시자가 될 수 없습니다. 복제가 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]과 결합된 경우 복제가 지원되지 않습니다.  
@@ -39,12 +37,10 @@ ms.locfileid: "62814059"
  게시된 데이터베이스가 가용성 그룹의 구성원이고 게시자가 리디렉션되는 경우 가용성 그룹에 연결된 가용성 그룹 수신기 이름으로 리디렉션되어야 합니다. 게시자를 명시적 노드로 리디렉션할 수 없습니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 보조 복제본에 대한 장애 조치(Failover) 후에 복제 모니터는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 게시 인스턴스 이름을 조정할 수 없으며 계속해서 원래 주 인스턴스 이름으로 복제 정보를 표시합니다. 장애 조치(Failover) 후 복제 모니터를 사용하여 추적 프로그램 토큰을 입력할 수 없지만 새 게시자가 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 입력한 추적 프로그램 토큰은 복제 모니터에 표시됩니다.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 보조 복제본에 대한 장애 조치(Failover) 후에 복제 모니터는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 게시 인스턴스 이름을 조정할 수 없으며 계속해서 원래 주 인스턴스 이름으로 복제 정보를 표시합니다. 장애 조치(Failover) 후 복제 모니터를 사용하여 추적 프로그램 토큰을 입력할 수 없지만 새 게시자가 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 입력한 추적 프로그램 토큰은 복제 모니터에 표시됩니다.  
   
-###  <a name="Changes"></a>AlwaysOn 가용성 그룹를 지원 하기 위해 복제 에이전트에 대 한 일반적인 변경 내용  
- 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 지원하도록 세 가지 복제 에이전트가 수정되었습니다. 로그 판독기, 스냅샷 및 병합 에이전트는 배포 데이터베이스에서 리디렉션된 게시자를 쿼리하고 리디렉션된 게시자가 선언된 경우 반환된 가용성 그룹 수신기 이름을 사용하여 데이터베이스 게시자에 연결합니다.  
+###  <a name="general-changes-to-replication-agents-to-support-alwayson-availability-groups"></a><a name="Changes"></a>AlwaysOn 가용성 그룹를 지원 하기 위해 복제 에이전트에 대 한 일반적인 변경 내용  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 지원하도록 세 가지 복제 에이전트가 수정되었습니다. 로그 판독기, 스냅샷 및 병합 에이전트는 배포 데이터베이스에서 리디렉션된 게시자를 쿼리하고 리디렉션된 게시자가 선언된 경우 반환된 가용성 그룹 수신기 이름을 사용하여 데이터베이스 게시자에 연결합니다.  
   
  기본적으로 원본 게시자가 리디렉션되었는지 확인하기 위해 에이전트가 배포자를 쿼리할 때는 리디렉션된 호스트를 에이전트에 반환하기 전에 현재 대상 또는 리디렉션의 적합성이 확인됩니다. 이 동작은 수행하는 것이 좋습니다. 하지만 에이전트 시작이 매우 자주 수행되는 경우 유효성 검사 저장 프로시저와 연결된 오버헤드의 비용이 너무 높은 것으로 간주될 수 있습니다. 로그 판독기, 스냅샷 및 병합 에이전트에는 새로운 명령줄 스위치인 *BypassPublisherValidation*이 추가되었습니다. 이 스위치를 사용하면 리디렉션된 게시자가 에이전트에 즉시 반환되고 유효성 검사 저장 프로시저의 실행이 무시됩니다.  
   
@@ -53,7 +49,7 @@ ms.locfileid: "62814059"
 #### <a name="log-reader-agent-modifications"></a>로그 판독기 에이전트 수정 사항  
  로그 판독기 에이전트에는 다음과 같은 변경 사항이 포함됩니다.  
   
--   **복제 된 데이터베이스 일관성**  
+-   **복제된 데이터베이스 일관성**  
   
      게시된 데이터베이스가 AlwaysOn 가용성 그룹의 구성원인 경우 기본적으로 로그 판독기는 모든 가용성 그룹 보조 복제본에서 아직 확정되지 않은 로그 레코드를 처리하지 않습니다. 따라서 장애 조치 시에 구독자에 복제되는 모든 행이 새 주 복제본에도 있습니다.  
   
@@ -63,7 +59,7 @@ ms.locfileid: "62814059"
   
      추적 플래그 1448를 사용하면 비동기 보조 복제본이 변경 내용 수신을 확인하지 않은 경우에도 복제 로그 판독기가 앞으로 진행할 수 있습니다. 이 추적 플래그를 설정하면 로그 판독기가 항상 동기 보조 복제본을 기다립니다. 로그 판독기는 동기 보조 복제본에 대한 최소 승인을 넘지 않습니다. 이 추적 플래그는 단순히 가용성 그룹, 가용성 데이터베이스 또는 로그 판독기 인스턴스가 아니라 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 적용됩니다. 이 추적 플래그는 다시 시작하지 않고 즉시 적용됩니다. 비동기 보조 복제본이 실패할 때 또는 미리 활성화할 수 있습니다.  
   
-###  <a name="StoredProcs"></a>AlwaysOn을 지 원하는 저장 프로시저  
+###  <a name="stored-procedures-supporting-alwayson"></a><a name="StoredProcs"></a>AlwaysOn을 지 원하는 저장 프로시저  
   
 -   **sp_redirect_publisher**  
   
@@ -85,10 +81,10 @@ ms.locfileid: "62814059"
   
      이 저장 프로시저는 항상 수동으로 실행됩니다. 호출자는 배포자의 **sysadmin** 이거나, 배포 데이터베이스의 **dbowner** 이거나, 게시자 데이터베이스 게시의 **게시 액세스 목록** 의 멤버여야 합니다. 또한 호출자의 로그인이 모든 가용성 복제본 호스트에 유효한 로그인이고 게시자 데이터베이스에 연결된 가용성 데이터베이스에 대한 선택 권한이 있어야 합니다.  
   
-###  <a name="CDC"></a> 변경 데이터 캡처  
+###  <a name="change-data-capture"></a><a name="CDC"></a>변경 데이터 캡처  
  CDC(변경 데이터 캡처)에 사용되는 데이터베이스는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 활용하여 장애가 발생하더라도 데이터베이스가 사용 가능한 상태로 유지되도록 보장하고 데이터베이스 테이블 변경 사항을 계속 모니터링하여 CDC 변경 테이블에 보관할 수 있습니다. CDC 및 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 이 구성되는 순서는 중요하지 않습니다. CDC 사용 데이터베이스는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 추가될 수 있으며 AlwaysOn 가용성 그룹의 멤버인 데이터베이스는 CDC를 사용하도록 설정될 수 있습니다. 그러나 두 경우 모두 CDC 구성은 항상 현재 또는 의도된 주 복제본에 대해 수행됩니다. CDC는 로그 판독기 에이전트를 사용하여 이 항목의 이전 **로그 판독기 에이전트 수정** 섹션에 설명된 대로 동일한 제한을 가집니다.  
   
--   **복제를 사용 하지 않고 변경 데이터 캡처에 대 한 변경 내용 수집**  
+-   **복제를 사용하지 않는 변경 데이터 캡처를 위한 변경 사항 수집**  
   
      CDC는 데이터베이스에 사용되지만 복제는 사용되지 않는 경우 로그에서 변경 사항을 수집하여 CDC 변경 테이블에 보관하는 데 사용되는 캡처 프로세스는 SQL 에이전트 작업을 소유한 CDC 호스트에서 실행됩니다.  
   
@@ -100,7 +96,7 @@ ms.locfileid: "62814059"
     EXEC sys.sp_cdc_add_job @job_type = 'capture';  
     ```  
   
--   **복제를 사용 하 여 변경 데이터 캡처에 대 한 변경 내용 수집**  
+-   **복제를 사용하는 변경 데이터 캡처를 위한 변경 사항 수집**  
   
      데이터베이스에서 CDC와 복제를 모두 사용하는 경우 로그 판독기가 CDC 변경 테이블을 채웁니다. 이 경우 복제에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 활용하는 데 사용되는 기술을 통해 로그에서 변경 사항을 계속 수집하여 장애 조치(Failover) 후 CDC 변경 테이블에 보관합니다. 이 구성에서는 변경 테이블이 채워지도록 보장하기 위해 CDC에 대해 어떠한 추가 작업도 수행할 필요가 없습니다.  
   
@@ -119,7 +115,7 @@ ms.locfileid: "62814059"
   
      CDC에 대해 테이블이 사용하도록 설정된 경우 데이터베이스 역할을 캡처 인스턴스와 연결할 수 있습니다. 역할이 지정된 경우 테이블 변경 사항에 액세스하기 위해 CDC 테이블 반환 함수를 사용하려는 사용자는 추적된 테이블 열에 대한 액세스를 선택해야 할 뿐만 아니라 명명된 역할의 멤버여야 합니다. 지정된 역할이 아직 없으면 역할이 만들어집니다. AlwaysOn 주 데이터베이스에 데이터베이스 역할이 자동으로 추가된 경우 가용성 그룹의 보조 데이터베이스에도 해당 역할이 전파됩니다.  
   
--   **CDC 변경 데이터 및 Always On에 액세스 하는 클라이언트 응용 프로그램**  
+-   **CDC 변경 데이터 및 Always On에 액세스하는 클라이언트 애플리케이션**  
   
      또한 TVF(테이블 반환 함수) 또는 연결된 서버를 사용하여 변경 테이블 데이터에 액세스하는 클라이언트 애플리케이션은 장애 조치(Failover) 후 적합한 CDC 호스트를 찾는 기능이 필요합니다. 가용성 그룹 수신기 이름은 연결 대상을 다른 호스트로 투명하게 다시 지정할 수 있도록 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에서 제공하는 메커니즘입니다. 가용성 그룹 수신기 이름을 가용성 그룹에 연결한 다음에는 TCP 연결 문자열에서 이를 사용할 수 있습니다. 가용성 그룹 수신기 이름은 서로 다른 두 가지 연결 시나리오에서 사용할 수 있습니다.  
   
@@ -146,7 +142,7 @@ ms.locfileid: "62814059"
   
      대부분의 경우 클라이언트 애플리케이션은 항상 현재 주 복제본에 연결하려고 하지만 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 활용하기 위해 현재 주 복제본만 사용할 수 있는 것은 아닙니다. 가용성 그룹이 읽기 가능한 보조 복제본을 지원하도록 구성된 경우 보조 노드에서도 변경 데이터를 수집할 수 있습니다.  
   
-     가용성 그룹이 구성된 경우 SECONDARY_ROLE과 연결된 ALLOW_CONNECTIONS 특성을 사용하여 지원되는 보조 액세스 유형을 지정합니다. ALL로 구성된 경우 보조 복제본에 대한 모든 연결이 허용되지만 읽기 전용 액세스가 필요한 연결만 성공합니다. READ_ONLY로 구성된 경우 연결이 성공하려면 보조 데이터베이스에 연결할 때 읽기 전용 의도를 지정해야 합니다. 자세한 내용은 [가용성 복제본에 대한 읽기 전용 액세스 구성&#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)가 있어야 합니다.  
+     가용성 그룹이 구성된 경우 SECONDARY_ROLE과 연결된 ALLOW_CONNECTIONS 특성을 사용하여 지원되는 보조 액세스 유형을 지정합니다. ALL로 구성된 경우 보조 복제본에 대한 모든 연결이 허용되지만 읽기 전용 액세스가 필요한 연결만 성공합니다. READ_ONLY로 구성된 경우 연결이 성공하려면 보조 데이터베이스에 연결할 때 읽기 전용 의도를 지정해야 합니다. 자세한 내용은 [&#40;SQL Server&#41;가용성 복제본에 대 한 읽기 전용 액세스 구성 ](configure-read-only-access-on-an-availability-replica-sql-server.md)을 참조 하세요.  
   
      다음 쿼리를 사용하면 읽기 가능한 보조 복제본에 연결하기 위해 읽기 전용 의도가 필요한지 여부를 확인할 수 있습니다.  
   
@@ -172,12 +168,11 @@ ms.locfileid: "62814059"
     @catalog=N'MY_DB_NAME';  
     ```  
   
--   **CDC 변경 데이터 및 도메인 로그인에 대 한 클라이언트 액세스**  
+-   **CDC 변경 데이터에 대한 클라이언트 액세스 및 도메인 로그인**  
   
-     일반적으로 AlwaysOn 가용성 그룹의 멤버인 데이터베이스에 있는 데이터를 변경하기 위해서는 클라이언트 액세스에 대해 도메인 로그인을 사용해야 합니다. 장애 조치(Failover) 후 데이터 변경을 위해 계속 액세스할 수 있도록 하려면 도메인 사용자에게 가용성 그룹 복제본을 지원하는 모든 호스트에 대한 액세스 권한이 필요합니다. 데이터베이스 사용자를 주 복제본의 데이터베이스에 추가하고 사용자를 도메인 로그인과 연결하면 데이터베이스 사용자가 보조 데이터베이스에 전파되고 지정된 도메인 로그인과 계속 연결된 상태로 유지됩니다. 새 데이터베이스 사용자를 SQL Server 인증 로그인과 연결하면 로그인 없이도 보조 데이터베이스에서 해당 사용자가 전파됩니다. 데이터베이스 사용자가 원래 정의된 주 복제본에서 연결된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 로그인을 사용하여 변경 데이터를 액세스할 수 있지만 이 노드는 액세스가 가능한 유일한 노드입니다. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 로그인은 모든 보조 데이터베이스의 데이터에 액세스할 수 없으며 데이터베이스 사용자가 정의된 원래 데이터베이스가 아닌 다른 모든 새 주 데이터베이스의 데이터에 액세스할 수 없습니다.  
+     일반적으로 AlwaysOn 가용성 그룹의 멤버인 데이터베이스에 있는 데이터를 변경하기 위해서는 클라이언트 액세스에 대해 도메인 로그인을 사용해야 합니다. 장애 조치(Failover) 후 데이터 변경을 위해 계속 액세스할 수 있도록 하려면 도메인 사용자에게 가용성 그룹 복제본을 지원하는 모든 호스트에 대한 액세스 권한이 필요합니다. 데이터베이스 사용자를 주 복제본의 데이터베이스에 추가하고 사용자를 도메인 로그인과 연결하면 데이터베이스 사용자가 보조 데이터베이스에 전파되고 지정된 도메인 로그인과 계속 연결된 상태로 유지됩니다. 새 데이터베이스 사용자를 SQL Server 인증 로그인과 연결하면 로그인 없이도 보조 데이터베이스에서 해당 사용자가 전파됩니다. 데이터베이스 사용자가 원래 정의된 주 복제본에서 연결된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 로그인을 사용하여 변경 데이터를 액세스할 수 있지만 이 노드는 액세스가 가능한 유일한 노드입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 로그인은 모든 보조 데이터베이스의 데이터에 액세스할 수 없으며 데이터베이스 사용자가 정의된 원래 데이터베이스가 아닌 다른 모든 새 주 데이터베이스의 데이터에 액세스할 수 없습니다.  
   
-###  <a name="CT"></a> 변경 내용 추적  
+###  <a name="change-tracking"></a><a name="CT"></a>변경 내용 추적  
  CT(변경 내용 추적)에 사용되는 데이터베이스는 AlwaysOn 가용성 그룹의 일부가 될 수 있습니다. 추가 구성은 필요하지 않습니다. 변경 데이터에 액세스하기 위해 CDC TVF(테이블 반환 함수)를 사용하는 변경 추적 클라이언트 애플리케이션은 장애 조치(Failover) 후 주 복제본을 찾는 기능이 필요합니다. 클라이언트 애플리케이션이 가용성 그룹 수신기 이름을 통해 연결할 경우 연결 요청이 항상 현재 주 복제본으로 올바르게 전송됩니다.  
   
 > [!NOTE]  
@@ -187,7 +182,7 @@ ms.locfileid: "62814059"
 >   
 >  보조 가용성 복제본의 멤버인 데이터베이스(즉, 보조 데이터베이스)에서는 변경 내용 추적이 지원되지 않습니다. 주 복제본에서 데이터베이스에 대해 변경 내용 추적 쿼리를 실행하세요.  
   
-##  <a name="Prereqs"></a>복제 사용을 위한 사전 요구 사항, 제한 사항 및 고려 사항  
+##  <a name="prerequisites-restrictions-and-considerations-for-using-replication"></a><a name="Prereqs"></a> 복제 사용을 위한 필수 구성 요소, 제한 사항 및 고려 사항  
  이 섹션에서는 필수 구성 요소, 제한 사항 및 권장 사항을 비롯하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 사용하여 복제를 배포할 때의 고려 사항에 대해 설명합니다.  
   
 ### <a name="prerequisites"></a>사전 요구 사항  
@@ -205,16 +200,15 @@ ms.locfileid: "62814059"
 -   게시자 인스턴스는 AlwaysOn 가용성 그룹에 참여하는 데 필요한 모든 사전 요구 사항을 충족합니다. 자세한 내용은 [AlwaysOn 가용성 그룹 &#40;SQL Server&#41;에 대 한 필수 조건, 제한 사항 및 권장 사항 ](prereqs-restrictions-recommendations-always-on-availability.md)을 참조 하세요.  
   
 ### <a name="restrictions"></a>제한  
- 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 지원되는 복제 조합은 다음과 같습니다.  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 지원되는 복제 조합은 다음과 같습니다.  
   
 |||||  
 |-|-|-|-|  
-||**게시자**|**배포자** <sup>3</sup>|**구독자**|  
-|**트랜잭션**|예<sup>1</sup>|예|예<sup>2</sup>|  
-|**P2P**|예|예|예|  
-|**병합**|yes|예|예<sup>2</sup>|  
-|**스냅숏에**|yes|예|예<sup>2</sup>|  
+||**게시자**|**배포자** <sup>3</sup>|**가입자**|  
+|**트랜잭션**|예<sup>1</sup>|아니요|예<sup>2</sup>|  
+|**P2P**|아니요|아니요|아니요|  
+|**결합**|yes|아니요|예<sup>2</sup>|  
+|**스냅샷**|예|아니요|예<sup>2</sup>|  
   
  <sup>1</sup> 양방향 및 상호 트랜잭션 복제에 대 한 지원을 포함 하지 않습니다.  
   
@@ -230,7 +224,7 @@ ms.locfileid: "62814059"
   
 -   로그인, 작업, 연결된 서버를 포함하여 데이터베이스 외부에 있는 메타데이터 및 개체는 보조 복제본에 전파되지 않습니다. 장애 조치(Failover) 후 새로운 주 데이터베이스에 메타데이터 및 개체가 필요한 경우 이를 수동으로 복사해야 합니다. 자세한 내용은 [가용성 그룹의 데이터베이스에 대한 로그인 및 작업 관리&#40;SQL Server&#41;](../../logins-and-jobs-for-availability-group-databases.md)라는 프로세스에서 서로 바꿀 수 있습니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **복제**  
   
 -   [AlwaysOn 가용성 그룹에 대한 복제 구성(SQL Server)](always-on-availability-groups-sql-server.md)  
@@ -260,10 +254,10 @@ ms.locfileid: "62814059"
  [AlwaysOn 가용성 그룹 &#40;SQL Server에 대 한 필수 조건, 제한 사항 및 권장 사항&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 가용성 그룹: 상호 운용성 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [AlwaysOn 장애 조치 (Failover) 클러스터 인스턴스 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
- [변경 데이터 캡처 정보&#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
- [변경 내용 추적 정보&#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
+ [변경 데이터 캡처 &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
+ [변경 내용 추적 &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [SQL Server 복제](../../../relational-databases/replication/sql-server-replication.md)   
- [데이터 변경 내용 추적&#40;SQL Server&#41;](../../../relational-databases/track-changes/track-data-changes-sql-server.md)   
- [sp_cdc_add_job &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)  
+ [SQL Server&#41;&#40;데이터 변경 내용 추적](../../../relational-databases/track-changes/track-data-changes-sql-server.md)   
+ [sys.sp_cdc_add_job&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)  
   
   
