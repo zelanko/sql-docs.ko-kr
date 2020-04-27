@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e406b42346e936fe72c70e5cb13b75ffb3f1f8fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098317"
 ---
 # <a name="listipaddresses-method-wmi-msreportserver_configurationsetting"></a>ListIPAddresses 메서드(WMI MSReportServer_ConfigurationSetting)
@@ -37,13 +37,13 @@ public void ListIPAddresses (out string[] IPAddress,
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- *IPAddress []*  
+ *IPAddress[]*  
  [out] 컴퓨터의 IP 주소 목록입니다.  
   
- *IPVersion []*  
+ *IPVersion[]*  
  [out] IP 주소의 버전입니다.  
   
- *IsDhcpEnabled []*  
+ *IsDhcpEnabled[]*  
  [out] IP 주소에 DHCP를 사용할 수 있는지 여부를 나타냅니다.  
   
  *길이*  
@@ -56,12 +56,12 @@ public void ListIPAddresses (out string[] IPAddress,
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타내고 오류 코드는 호출이 실패했음을 나타냅니다.  
   
 ## <a name="remarks"></a>설명  
- *Ipversion* 문자열은 V4, V6입니다.  
+ *IPVersion* 문자열은 V4, V6입니다.  
   
  *Isdhcpenabled* 가 `True`이면 IPAddress는 동적 *IPAddress* 입니다. SSL 바인딩에 사용해서는 안 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  

@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d08e9900453fe259d727e202489d728e0dce47e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097882"
 ---
 # <a name="setwindowsserviceidentity-method-wmi-msreportserver_configurationsetting"></a>SetWindowsServiceIdentity 메서드(WMI MSReportServer_ConfigurationSetting)
@@ -44,7 +44,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
  *UseBuiltInAccount*  
  지정된 계정이 기본 제공 Windows 계정인지 여부를 나타냅니다.  
   
- *계정일*  
+ *계정*  
  Windows 서비스를 실행하는 데 사용할 "DOMAIN\alias" 형식의 Windows 계정입니다.  
   
  *암호*  
@@ -66,7 +66,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
  *계정* 매개 변수에 지정 된 계정에는 `LogonAsService` Windows의 권한이 필요 합니다. 이 권한은 메서드를 통해 지정된 계정에 부여됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 695515ddefa550d6d20476e681088d6bcd926a3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104381"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>보고서 속성 대화 상자, 페이지 설정
@@ -40,17 +40,15 @@ ms.locfileid: "66104381"
  목록에서 크기를 선택하면 너비 및 높이 컨트롤에 자동으로 치수가 입력됩니다. 또는 **사용자 지정 크기** 를 선택한 다음 사용하려는 크기에 맞게 너비와 높이 컨트롤을 변경합니다.  
   
  **너비**  
- 
-  **용지 종류** 목록에서 선택한 용지 크기의 너비를 표시합니다.  
+ **용지 종류** 목록에서 선택한 용지 크기의 너비를 표시합니다.  
   
  **높이로**  
- 
-  **용지 종류** 목록에서 선택한 용지 크기의 높이를 표시합니다.  
+ **용지 종류** 목록에서 선택한 용지 크기의 높이를 표시합니다.  
   
  **맨 위로**  
  보고서의 위쪽과 보고서 첫 줄의 위쪽 간 거리를 설정합니다.  
   
- **아래쪽**  
+ **하위별**  
  보고서의 아래쪽과 보고서 마지막 줄의 아래쪽 간 거리를 설정합니다.  
   
  **비어**  
@@ -60,7 +58,7 @@ ms.locfileid: "66104381"
  보고서의 오른쪽 가장자리와 보고서 행의 오른쪽 가장자리 간 거리를 설정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Reporting Services &#40;보고서 작성기 및 SSRS의 페이지 매김&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [보고서 디자인 팁&#40;보고서 작성기 및 SSRS&#41;](report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   

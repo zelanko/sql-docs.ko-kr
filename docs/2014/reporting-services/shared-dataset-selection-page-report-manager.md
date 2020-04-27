@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9b597f8aab58d2fd9a4dd44e9361469656bec32c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101266"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>공유 데이터 세트 선택 페이지(보고서 관리자)
@@ -33,8 +33,7 @@ ms.locfileid: "66101266"
   
 3.  드롭다운 메뉴에서 **관리**를 클릭합니다. 보고서의 일반 속성 페이지가 열립니다.  
   
-4.  
-  **공유 데이터 세트** 탭을 선택합니다.  
+4.  **공유 데이터 세트** 탭을 선택합니다.  
   
 ## <a name="options"></a>옵션  
  **찾아보기**  
@@ -42,9 +41,7 @@ ms.locfileid: "66101266"
   
  데이터 세트 이름에서 참조하는 공유 데이터 세트를 변경하려면 **찾아보기** 단추를 클릭합니다.  
   
- 
-  **찾아보기** 단추를 누르면 보고서 서버의 폴더 구조가 열립니다. 
-  **위치** 필드에 전체 경로를 추가할 공유 데이터 세트를 클릭합니다.  
+ **찾아보기** 단추를 누르면 보고서 서버의 폴더 구조가 열립니다. **위치** 필드에 전체 경로를 추가할 공유 데이터 세트를 클릭합니다.  
   
  공유 데이터 세트 선택을 마치려면 **확인** 단추를 누르고, 공유 데이터 세트 찾아보기를 취소하려면 **취소**를 클릭합니다.  
   
@@ -54,9 +51,9 @@ ms.locfileid: "66101266"
 ## <a name="see-also"></a>참고 항목  
  [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [내용 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [공유 데이터 세트 관리](report-data/manage-shared-datasets.md)   
+ [공유 데이터 집합 관리](report-data/manage-shared-datasets.md)   
  [F1 도움말 보고서 관리자](../../2014/reporting-services/report-manager-f1-help.md)   
- [보고서 작성기의 보고서 파트 및 데이터 세트](report-data/report-parts-and-datasets-in-report-builder.md)   
- [포함 된 데이터 집합 및 공유 데이터 집합 &#40;보고서 작성기 및 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [보고서 작성기의 보고서 파트 및 데이터 집합](report-data/report-parts-and-datasets-in-report-builder.md)   
+ [포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf33e467e54fda5c29d81e3437730f0ce9547cad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098506"
 ---
 # <a name="generatedatabasecreationscript-method-wmi-msreportserver_configurationsetting"></a>GenerateDatabaseCreationScript 메서드(WMI MSReportServer_ConfigurationSetting)
@@ -54,7 +54,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 sharepoint 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는가 sharepoint 공유 서비스 이며 WMI 공급자에 의해 제어 되지 않으므로 *IsSharePointMode* = `True` 은 지원 되지 않습니다. 항상 이 매개 변수를 `False`로 설정해야 합니다.  
   
- *스크립트도*  
+ *스크립트*  
  [out] 생성된 SQL 스크립트가 들어 있는 문자열입니다.  
   
  *HRESULT*  
@@ -66,8 +66,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
 ## <a name="remarks"></a>설명  
  이 메서드는 현재 연결되어 있는 보고서 서버 버전에 대한 보고서 서버 데이터베이스를 만드는 SQL 스크립트를 생성합니다.  
   
- 
-  *DatabaseName* 매개 변수에 제공되는 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 명명 규칙을 따라야 합니다.  
+ *DatabaseName* 매개 변수에 제공되는 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 명명 규칙을 따라야 합니다.  
   
  이 메서드는 스크립트를 생성할 때 데이터베이스가 있는지 확인하지 않습니다.  
   
@@ -76,7 +75,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  생성된 스크립트는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 및 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]을(를) 지원합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  

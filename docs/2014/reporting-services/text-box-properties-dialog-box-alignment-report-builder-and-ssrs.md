@@ -14,18 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 750a4cefffe2baaefadf7266e94800374834ad85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100527"
 ---
 # <a name="text-box-properties-dialog-box-alignment-report-builder-and-ssrs"></a>입력란 속성 대화 상자, 맞춤(보고서 작성기 및 SSRS)
-  
   **입력란 속성** 대화 상자의 **맞춤** 을 선택하여 선택한 셀 또는 데이터 영역 내 값의 위치를 지정할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
- **수평적 크기 조정**  
+ **쓰기**  
  선택한 셀 또는 데이터 영역 내에서 값의 가로 위치를 지정합니다. 기본적으로 **기본값** 이 선택되어 있습니다. 기본값에 해당하는 값은 **일반**입니다. 일반 텍스트 맞춤이 계산되는 방법에 대한 자세한 내용은 [텍스트 및 자리 표시자 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)을 참조하세요. 식을 편집 하려면 **식** 단추 (*fx*)를 클릭 합니다.  
   
  **Vertical**  
@@ -40,11 +39,11 @@ ms.locfileid: "66100527"
  **맨 위로**  
  셀의 위쪽 가장자리와 셀 내에 표시되는 값 사이의 안쪽 여백 또는 공간을 지정합니다. 기본값은 2포인트입니다. 식을 편집 하려면 **식** 단추 (*fx*)를 클릭 합니다.  
   
- **아래쪽**  
+ **하위별**  
  셀의 아래쪽 가장자리와 셀 내에 표시되는 값 사이의 안쪽 여백 또는 공간을 지정합니다. 기본값은 2포인트입니다. 식을 편집 하려면 **식** 단추 (*fx*)를 클릭 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 항목 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [보고서 항목 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [식&#40;보고서 작성기 및 SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)  
   
   

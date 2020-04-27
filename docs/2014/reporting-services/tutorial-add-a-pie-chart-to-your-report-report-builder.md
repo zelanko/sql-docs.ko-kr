@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f004241f078a9fb23acbca392f687a9b7c20ae84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099044"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>자습서: 보고서에 원형 차트 추가(보고서 작성기)
@@ -26,8 +26,8 @@ ms.locfileid: "66099044"
   
  ![rs_TutorialPieChartConcave](../../2014/tutorials/media/rs-tutorialpiechartconcave.gif "rs_TutorialPieChartConcave")  
   
-##  <a name="BackToTop"></a>학습 내용  
- 이 자습서에서는 다음 방법을 알아봅니다.  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>학습 내용  
+ 이 자습서에서는 다음 작업 방법을 배웁니다.  
   
 1.  [차트 마법사에서 원형 차트 만들기](#Chart)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66099044"
 ## <a name="requirements"></a>요구 사항  
  요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/report-builder-tutorials.md)을 참조하세요.  
   
-##  <a name="Chart"></a>1. 차트 마법사에서 원형 차트 만들기  
+##  <a name="1-create-a-pie-chart-from-the-chart-wizard"></a><a name="Chart"></a>1. 차트 마법사에서 원형 차트 만들기  
  시작 대화 상자에서 차트 마법사를 사용하여 포함된 데이터 세트을 만들고, 공유 데이터 원본을 선택하고, 원형 차트를 만듭니다.  
   
 > [!NOTE]  
@@ -59,14 +59,12 @@ ms.locfileid: "66099044"
   
 #### <a name="to-create-a-new-chart-report"></a>새 차트 보고서를 만들려면  
   
-1.  
-  **시작**을 클릭하고 **프로그램**, **Microsoft SQL Server 2012 보고서 작성기**를 차례로 가리킨 다음 **보고서 작성기**를 클릭합니다.  
+1.  **시작**을 클릭하고 **프로그램**, **Microsoft SQL Server 2012 보고서 작성기**를 차례로 가리킨 다음 **보고서 작성기**를 클릭합니다.  
   
      시작 대화 상자가 나타납니다.  
   
     > [!NOTE]  
-    >  
-  시작 대화 상자가 나타나지 않으면 보고서 작성기 단추에서 **새로 만들기**를 클릭합니다.  
+    >  시작 대화 상자가 나타나지 않으면 보고서 작성기 단추에서 **새로 만들기**를 클릭합니다.  
   
 2.  왼쪽 창에 **새 보고서** 가 선택되어 있는지 확인합니다.  
   
@@ -79,7 +77,7 @@ ms.locfileid: "66099044"
     > [!NOTE]  
     >  적절한 권한만 가지고 있으면 선택하는 데이터 원본은 중요하지 않습니다. 데이터를 데이터 원본에서 가져오는 것은 아니기 때문입니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)를 참조하세요.  
   
-6.  **쿼리 디자인** 페이지에서 **텍스트로 편집**을 클릭합니다.  
+6.  **쿼리 디자인** 페이지에서 **텍스트로 편집**을 클릭 합니다.  
   
 7.  쿼리 창에 다음 쿼리를 붙여 넣습니다.  
   
@@ -94,11 +92,11 @@ ms.locfileid: "66099044"
     UNION SELECT 'Full Frame Digital Camera' AS Product, CAST(247250.85 AS money) AS Sales  
     ```  
   
-8.  (옵션) 실행 단추( **!** )를 클릭하여 차트의 기반으로 사용될 데이터를 확인합니다.  
+8.  (옵션) 실행 단추(**!**)를 클릭하여 차트의 기반으로 사용될 데이터를 확인합니다.  
   
 9. **다음**을 클릭합니다.  
   
-##  <a name="ChartType"></a>2. 차트 종류 선택  
+##  <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. 차트 종류 선택  
  미리 정의된 다양한 차트 종류 중에서 선택할 수 있습니다.  
   
 #### <a name="to-add-a-pie-chart"></a>원형 차트를 추가하려면  
@@ -125,7 +123,7 @@ ms.locfileid: "66099044"
   
  각 제품에 대해 하나씩 총 8개 조각으로 구성된 원형 차트가 보고서에 표시됩니다. 각 조각의 크기는 해당 제품의 판매량을 나타냅니다. 전체 조각 중 3개는 폭이 좁습니다.  
   
-##  <a name="Percentages"></a>3. 각 조각에 백분율 표시  
+##  <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3. 각 조각에 백분율 표시  
  원형 차트의 각 조각에 원형 전체에 대한 해당 조각의 백분율을 표시할 수 있습니다.  
   
 #### <a name="to-display-percentages-in-each-slice-of-the-pie-chart"></a>원형 차트의 각 조각에 백분율을 표시하려면  
@@ -151,7 +149,7 @@ ms.locfileid: "66099044"
   
  각 원형 조각이 전체에서 나타내는 백분율이 보고서에 표시됩니다.  
   
-##  <a name="CombineSlices"></a>4. 작은 조각 들을 하나의 조각으로 결합  
+##  <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4. 작은 조각 들을 하나의 조각으로 결합  
  원형 차트의 조각 중 3개는 폭이 좁습니다. 여러 개의 작은 조각을 해당 조각 모두를 나타내는 하나의 큰 조각으로 결합할 수 있습니다.  
   
 #### <a name="to-combine-any-slices-on-the-pie-chart-smaller-than-5-percent-into-one-slice"></a>원형 차트에서 5% 미만의 조각을 하나의 조각으로 결합하려면  
@@ -174,7 +172,7 @@ ms.locfileid: "66099044"
   
  이제 범례에 "기타"라는 범주가 나타납니다. 새 원형 조각은 5% 미만인 모든 조각을 전체 원형의 6%를 차지하는 조각 하나로 결합합니다.  
   
-##  <a name="DrawingEffect"></a>5. 그리기 효과 사용자 지정  
+##  <a name="5-customize-the-drawing-effect"></a><a name="DrawingEffect"></a>5. 그리기 효과 사용자 지정  
  차트 마법사에서 원형 차트의 기본 스타일은 오목 그리기 효과가 적용된 바다입니다. 마법사를 실행한 후 이러한 스타일을 변경할 수 있습니다.  
   
 #### <a name="to-add-a-drawing-effect-to-the-pie-chart"></a>원형 차트에 그리기 효과를 추가하려면  
@@ -198,7 +196,7 @@ ms.locfileid: "66099044"
   
  ![rs_TutorialPieChartSoftEdge](../../2014/tutorials/media/rs-tutorialpiechartsoftedge.gif "rs_TutorialPieChartSoftEdge")  
   
-##  <a name="Title"></a>6. 보고서 제목 추가  
+##  <a name="6-add-a-report-title"></a><a name="Title"></a>6. 보고서 제목 추가  
   
 #### <a name="to-add-a-report-title"></a>보고서 제목을 추가하려면  
   
@@ -220,14 +218,13 @@ ms.locfileid: "66099044"
   
 6.  **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
-##  <a name="Save"></a>7. 보고서 저장  
+##  <a name="7-save-the-report"></a><a name="Save"></a>7. 보고서 저장  
   
 #### <a name="to-save-the-report"></a>보고서를 저장하려면  
   
 1.  보고서 디자인 뷰로 전환합니다.  
   
-2.  
-  보고서 작성기 단추에서 **다른 이름으로 저장**을 클릭합니다.  
+2.  보고서 작성기 단추에서 **다른 이름으로 저장**을 클릭합니다.  
   
 3.  **이름**에 **Sales Pie Chart**를 입력합니다.  
   

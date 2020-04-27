@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 575eab878e0ef9b4357c09a0a3deedf143c237b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098477"
 ---
 # <a name="generatedatabaserightsscript-method-wmi-msreportserver_configurationsetting"></a>GenerateDatabaseRightsScript 메서드(WMI MSReportServer_ConfigurationSetting)
@@ -43,7 +43,7 @@ out Int32 HRESULT);
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- *이름*  
+ *UserName*  
  스크립트에서 권한을 부여할 사용자의 이름 또는 Windows SID(보안 식별자)입니다.  
   
  *DatabaseName*  
@@ -55,7 +55,7 @@ out Int32 HRESULT);
  *IsWindowsUser*  
  지정된 사용자 이름이 Windows 사용자인지 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자인지를 나타내는 부울 값입니다.  
   
- *스크립트도*  
+ *스크립트*  
  [out] 생성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스크립트가 들어 있는 문자열입니다.  
   
  *HRESULT*  
@@ -65,8 +65,7 @@ out Int32 HRESULT);
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.  
   
 ## <a name="remarks"></a>설명  
- 
-  *DatabaseName* 이 비어 있으면 *IsRemote* 는 무시되고 데이터베이스 이름에 보고서 서버 구성 파일 값이 사용됩니다.  
+ *DatabaseName* 이 비어 있으면 *IsRemote* 는 무시되고 데이터베이스 이름에 보고서 서버 구성 파일 값이 사용됩니다.  
   
  *Iswindowsuser* 가로 `true`설정 된 경우 *사용자 이름은* 도메인>\< \\<사용자 이름\>형식 이어야 합니다.  
   
@@ -78,29 +77,20 @@ out Int32 HRESULT);
   
 |변환된 계정/SID|일반 이름|원격 이름|  
 |---------------------------------------|-----------------|-----------------|  
-|(S-1-5-18)|로컬 시스템|
-  \<Domain>\\<ComputerName\>$|  
-|.\LocalSystem|로컬 시스템|
-  \<Domain>\\<ComputerName\>$|  
-|ComputerName\LocalSystem|로컬 시스템|
-  \<Domain>\\<ComputerName\>$|  
-|LocalSystem|로컬 시스템|
-  \<Domain>\\<ComputerName\>$|  
-|(S-1-5-20)|네트워크 서비스|
-  \<Domain>\\<ComputerName\>$|  
-|NT AUTHORITY\NetworkService|네트워크 서비스|
-  \<Domain>\\<ComputerName\>$|  
+|(S-1-5-18)|로컬 시스템|\<Domain>\\<ComputerName\>$|  
+|.\LocalSystem|로컬 시스템|\<Domain>\\<ComputerName\>$|  
+|ComputerName\LocalSystem|로컬 시스템|\<Domain>\\<ComputerName\>$|  
+|LocalSystem|로컬 시스템|\<Domain>\\<ComputerName\>$|  
+|(S-1-5-20)|네트워크 서비스|\<Domain>\\<ComputerName\>$|  
+|NT AUTHORITY\NetworkService|네트워크 서비스|\<Domain>\\<ComputerName\>$|  
 |(S-1-5-19)|로컬 서비스|오류 - 아래를 참조하십시오.|  
 |NT AUTHORITY\LocalService|로컬 서비스|오류 - 아래를 참조하십시오.|  
   
- 
-  [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]에서 기본 제공 계정을 사용하고 있고 보고서 서버 데이터베이스가 원격이면 오류가 반환됩니다.  
+ [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]에서 기본 제공 계정을 사용하고 있고 보고서 서버 데이터베이스가 원격이면 오류가 반환됩니다.  
   
- 
-  `LocalService` 기본 제공 계정이 지정되어 있고 보고서 서버 데이터베이스가 원격이면 오류가 반환됩니다.  
+ `LocalService` 기본 제공 계정이 지정되어 있고 보고서 서버 데이터베이스가 원격이면 오류가 반환됩니다.  
   
- 
-  *IsWindowsUser* 가 true이고 *UserName* 에 제공된 값을 변환해야 하는 경우, WMI 공급자는 보고서 서버 데이터베이스가 같은 컴퓨터에 있는지 또는 원격 컴퓨터에 있는지를 확인합니다. WMI 공급자는 로컬 설치 여부를 확인하기 위해 다음 값 목록에 대해 DatabaseServerName 속성을 평가합니다. 일치 항목이 있으면 로컬 데이터베이스이고, 그렇지 않으면 원격 데이터베이스입니다. 비교는 대/소문자를 구분합니다.  
+ *IsWindowsUser* 가 true이고 *UserName* 에 제공된 값을 변환해야 하는 경우, WMI 공급자는 보고서 서버 데이터베이스가 같은 컴퓨터에 있는지 또는 원격 컴퓨터에 있는지를 확인합니다. WMI 공급자는 로컬 설치 여부를 확인하기 위해 다음 값 목록에 대해 DatabaseServerName 속성을 평가합니다. 일치 항목이 있으면 로컬 데이터베이스이고, 그렇지 않으면 원격 데이터베이스입니다. 비교는 대/소문자를 구분합니다.  
   
 |DatabaseServerName 값|예제|  
 |---------------------------------|-------------|  
@@ -109,8 +99,7 @@ out Int32 HRESULT);
 |"LOCAL"||  
 |localhost||  
 |\<Machinename>|testlab14|  
-|
-  \<MachineFQDN>|example.redmond.microsoft.com|  
+|\<MachineFQDN>|example.redmond.microsoft.com|  
 |\<IPAddress>|180.012.345,678|  
   
  *Iswindowsuser* 를로 `true`설정 하면 WMI 공급자는 LookupAccountName를 호출 하 여 계정의 SID를 가져온 다음 LookupAccountSID를 호출 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스크립트에 넣을 이름을 가져옵니다. 이렇게 하면 사용되는 계정 이름이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유효성 검사를 통과합니다.  
@@ -124,7 +113,7 @@ out Int32 HRESULT);
  생성된 스크립트는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 및 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]을(를) 지원합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  

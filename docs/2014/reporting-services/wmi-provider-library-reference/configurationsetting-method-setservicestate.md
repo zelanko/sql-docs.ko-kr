@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 21c8de3e6903a28ad8358431f5e455df31d3044e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097946"
 ---
 # <a name="setservicestate-method-wmi-msreportserver_configurationsetting"></a>SetServiceState 메서드(WMI MSReportServer_ConfigurationSetting)
@@ -43,12 +43,10 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
   
 ## <a name="parameters"></a>매개 변수  
  *EnableWindowsService*  
- Windows 서비스의 상태를 나타내는 `Boolean` 값입니다. 
-  `true` 값은 보고서 서버 Windows 서비스를 시작하고 `false` 값은 Windows 서비스를 중지합니다.  
+ Windows 서비스의 상태를 나타내는 `Boolean` 값입니다. `true` 값은 보고서 서버 Windows 서비스를 시작하고 `false` 값은 Windows 서비스를 중지합니다.  
   
  *EnableWebService*  
- 웹 서비스의 상태를 나타내는 `Boolean` 값입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 
-  `true` 값은 보고서 서버 웹 서비스를 시작하고 `false` 값은 웹 서비스를 중지합니다.  
+ 웹 서비스의 상태를 나타내는 `Boolean` 값입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `true` 값은 보고서 서버 웹 서비스를 시작하고 `false` 값은 웹 서비스를 중지합니다.  
   
  *EnableReportManager*  
  보고서 관리자의 필요한 상태를 나타내는 `Boolean` 값입니다.  
@@ -62,7 +60,7 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
 ## <a name="remarks"></a>설명  
   
 ## <a name="requirements"></a>요구 사항  
- **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eec92d7c58b68b14374666f65489f145fa863422
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101085"
 ---
 # <a name="subscriptions-page-report-manager"></a>구독 페이지(보고서 관리자)
@@ -41,8 +41,7 @@ ms.locfileid: "66101085"
   
 3.  드롭다운 메뉴에서 **관리**를 클릭합니다. 보고서의 일반 속성 페이지가 열립니다.  
   
-4.  
-  **구독** 탭을 선택합니다.  
+4.  **구독** 탭을 선택합니다.  
   
 ## <a name="options"></a>옵션  
  **Delete**  
@@ -57,17 +56,14 @@ ms.locfileid: "66101085"
  **편집**  
  설명을 보거나 편집하려면 클릭합니다.  
   
- **Report**  
- 공유 데이터 원본에서 이 페이지를 열면 이 열은 구독이 정의된 보고서를 식별합니다. 
-  **폴더** 열은 보고서 위치를 식별합니다.  
+ **보고서**  
+ 공유 데이터 원본에서 이 페이지를 열면 이 열은 구독이 정의된 보고서를 식별합니다. **폴더** 열은 보고서 위치를 식별합니다.  
   
  **설명**  
  보고서에 대한 설명을 표시합니다.  
   
- **트리거되도록**  
- 구독을 실행하는 조건을 식별합니다. 
-  **TimedSubscription** 트리거는 구독이 실행되는 시기를 정의하는 일정을 기반으로 합니다. 
-  **SnapshotUpdated** 트리거는 보고서 스냅샷에 대한 업데이트를 기반으로 합니다.  
+ **트리거**  
+ 구독을 실행하는 조건을 식별합니다. **TimedSubscription** 트리거는 구독이 실행되는 시기를 정의하는 일정을 기반으로 합니다. **SnapshotUpdated** 트리거는 보고서 스냅샷에 대한 업데이트를 기반으로 합니다.  
   
  **소유자**  
  구독을 만든 사용자 이름을 표시합니다.  

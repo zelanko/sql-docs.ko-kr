@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a2a33d7aa992fd434b29fd519c805f57b2b46fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098359"
 ---
 # <a name="listsslcertificatebindings-method-wmi-msreportserver_configurationsetting"></a>ListSSLCertificateBindings 메서드(WMI MSReportServer_ConfigurationSetting)
@@ -42,19 +42,19 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
  *LCID*  
  반환되는 오류 메시지에 사용할 로캘입니다.  
   
- *응용 프로그램 []*  
+ *Application[]*  
  [out] 인증서 바인딩이 있는 애플리케이션입니다.  
   
- *CertificateHash []*  
+ *CertificateHash[]*  
  [out] 인증서에 대한 해시입니다.  
   
- *IPAddress []*  
+ *IPAddress[]*  
  [out] 애플리케이션의 IP 주소입니다.  
   
- *포트 []*  
+ *Port[]*  
  [out] rsreportserver.config의 바인딩에 저장되는 포트 번호입니다.  
   
- *오류 []*  
+ *Errors[]*  
  [out] 발생한 오류에 대한 설명입니다.  
   
  *길이*  
@@ -69,7 +69,7 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
 ## <a name="remarks"></a>설명  
   
 ## <a name="requirements"></a>요구 사항  
- **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  

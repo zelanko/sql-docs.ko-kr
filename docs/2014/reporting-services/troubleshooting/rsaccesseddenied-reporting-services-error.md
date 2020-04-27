@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bfaad65431cc71c8fa7a6ec5ba24e13fa7692e99
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099228"
 ---
 # <a name="rsaccesseddenied---reporting-services-error"></a>rsAccessedDenied - Reporting Services 오류
@@ -24,7 +24,7 @@ ms.locfileid: "66099228"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]기본 모드 &#124; SharePoint 모드|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 &#124; SharePoint 모드|  
   
 -   URL을 통해 보고서 서버에 직접 액세스하는 동안 오류가 발생한 경우 예외가 HTTP 401 오류에 매핑됩니다.  
   
@@ -50,6 +50,6 @@ ms.locfileid: "66099228"
 ## <a name="see-also"></a>참고 항목  
  [역할 할당](../security/role-assignments.md)   
  [기본 모드 보고서 서버에 대한 사용 권한 부여](../security/granting-permissions-on-a-native-mode-report-server.md)   
- [역할 및 사용 권한 &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)  
+ [역할 및 권한&#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)  
   
   

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c9d14f27e1b41bf2a636f53ecb13c4fd88a9e4bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100610"
 ---
 # <a name="technical-reference-ssrs"></a>기술 참조(SSRS)
@@ -43,9 +43,9 @@ ms.locfileid: "66100610"
  [렌더링 확장 프로그램에 대한 디바이스 정보 설정&#40;Reporting Services&#41;](device-information-settings-for-rendering-extensions-reporting-services.md)  
   
  ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **보고서 서버 명령 프롬프트 유틸리티**  
- [RS 유틸리티 &#40;SSRS&#41;](tools/rs-exe-utility-ssrs.md)  
+ [RS.exe 유틸리티&#40;SSRS&#41;](tools/rs-exe-utility-ssrs.md)  
   
- [rsconfig 유틸리티 &#40;SSRS&#41;](tools/rsconfig-utility-ssrs.md)  
+ [rsconfig 유틸리티&#40;SSRS&#41;](tools/rsconfig-utility-ssrs.md)  
   
  [rskeymgmt 유틸리티&#40;SSRS&#41;](tools/rskeymgmt-utility-ssrs.md)  
   
@@ -54,6 +54,6 @@ ms.locfileid: "66100610"
   
 ## <a name="see-also"></a>참고 항목  
  [문제 해결 Reporting Services에 대 한 TechNet wiki 문서](https://go.microsoft.com/fwlink/?LinkID=209153)   
- [문제 해결 Reporting Services SharePoint 모드에 대 한 TechNet wiki 문서](https://go.microsoft.com/fwlink/?LinkID=209158)  
+ [Reporting Services SharePoint 모드 문제 해결에 대한 TechNet wiki 문서](https://go.microsoft.com/fwlink/?LinkID=209158)  
   
   

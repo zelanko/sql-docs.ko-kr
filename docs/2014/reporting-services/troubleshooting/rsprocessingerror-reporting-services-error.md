@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 46b8f7326578b9d8276c164577adf691accdd48e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099138"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services 오류
@@ -55,7 +55,7 @@ ms.locfileid: "66099138"
   
 -   Nullable 속성이로 `False` 설정 된 매개 변수가 매개 변수에서 null 값을 발견 했습니다.  
   
--   데이터 영역의 Hidden 속성에 대한 식에 다음 오류가 있습니다. 개체의 인스턴스에 개체 참조가 설정되지 않았습니다.  
+-   데이터 영역의 Hidden 속성에 대한 식에 다음 오류가 있습니다. 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.  
   
 -   식에 잘못된 함수 호출 또는 구문 오류가 있습니다.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66099138"
   
 -   보고서 서버에서 보고서를 보고 있으며 보고서 서버에서 로컬 관리자로 실행 중인 경우 페이지를 마우스 오른쪽 단추로 클릭하고 **소스 보기**를 선택하면 호출 스택을 볼 수 있습니다. 호출 스택에 세부 정보가 제공됩니다.  
   
--   보고서 서버의 로컬 관리자로 실행 중인 경우 로그 파일에서 `ReportProcessingException`을 검색합니다. 로그 항목에 자세한 정보가 있습니다. 보고서 서버 로그 파일은 일반적으로 \<*drive*>:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*datetimestamp*.log에 있습니다. 자세한 내용은 [Reporting Services 로그 파일 및 소스](../report-server/reporting-services-log-files-and-sources.md)를 참조 하세요.  
+-   보고서 서버의 로컬 관리자로 실행 중인 경우 로그 파일에서 `ReportProcessingException`을 검색합니다. 로그 항목에 자세한 정보가 있습니다. 보고서 서버 로그 파일은 일반적으로 \<*drive*>:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*datetimestamp*.log에 있습니다. 자세한 내용은 [Reporting Services 로그 파일 및 소스](../report-server/reporting-services-log-files-and-sources.md)를 참조하세요.  
   
 ### <a name="failed-to-load-expression-host-assembly"></a>식 호스트 어셈블리 로드 실패  
  사용자 지정 어셈블리에는 강력한 이름 서명 및 AllowPartiallyTrustedCallers 특성 집합이 있어야 합니다. 자세한 내용은 [Using Custom Assemblies with Reports](../custom-assemblies/using-custom-assemblies-with-reports.md) 및 [Understanding Security Policies](../extensions/secure-development/understanding-security-policies.md)를 참조하세요.  
@@ -84,26 +84,25 @@ ms.locfileid: "66099138"
  다중값 매개 변수는 Null이 될 수 없습니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)에 대해 자세히 알아봅니다.  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>하위 보고서가 있는 주 보고서를 처리할 수 없음  
- 하위 보고서가 있는 보고서는 동일한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 프로세서 버전으로 처리해야 합니다. 보고서를 현재 버전의 보고서 정의 스키마로 업그레이드할 때 주 보고서와 하위 보고서는 동시에 업데이트될 수도 있고 업데이트되지 않을 수도 있습니다. 보고서와 하위 보고서 간에 버전이 호환되지 않는 경우 "하위 보고서를 처리할 수 없습니다." 메시지가 나타납니다.  
+ 하위 보고서가 있는 보고서는 동일한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 프로세서 버전으로 처리해야 합니다. 보고서를 현재 버전의 보고서 정의 스키마로 업그레이드할 때 주 보고서와 하위 보고서는 동시에 업데이트될 수도 있고 업데이트되지 않을 수도 있습니다. 보고서와 하위 보고서 간에 버전이 호환되지 않는 경우 “하위 보고서를 처리할 수 없습니다.” 메시지가 나타납니다.  
   
  주 보고서 또는 하위 보고서 중 하나를 변경하여 동일한 보고서 프로세서 버전으로 두 보고서를 처리할 수 있도록 해야 합니다. 보고서 업그레이드가 실패하는 이유에 대한 자세한 내용은 [보고서 업그레이드](../install-windows/upgrade-reports.md)를 참조하세요.  
   
 ### <a name="verify-function-calls-are-visual-basic-and-not-sql"></a>함수 호출이 Visual Basic이며 SQL이 아닌지 확인  
  관계형 데이터베이스에서는 쿼리 텍스트에 SQL 함수를 사용할 수 있지만 쿼리 텍스트에 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 함수를 사용할 수 없습니다.  
   
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 식은 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 함수, System.Math 또는 System.String 함수, 정규화된 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 함수를 사용할 수 있으며 사용자 지정 코드나 사용자 지정 어셈블리에 제공한 사용자 지정 함수를 사용할 수 있습니다. 식에서 SQL 함수는 사용할 수 없습니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 식은 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 함수, System.Math 또는 System.String 함수, 정규화된 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 함수를 사용할 수 있으며 사용자 지정 코드나 사용자 지정 어셈블리에 제공한 사용자 지정 함수를 사용할 수 있습니다. 식에서 SQL 함수는 사용할 수 없습니다.  
   
  쿼리와 식에서 만든 함수 호출이 유효한지 확인합니다.  
   
 ### <a name="cannot-compare-data-types-for-a-filter"></a>필터에 대한 데이터 형식을 비교할 수 없음  
  필터 수식에서 필터링 대상을 정의하는 필터 식과 필터 값은 데이터 형식이 같아야 비교할 수 있습니다. 다음 오류가 발생할 경우 데이터 형식이 일치하도록 필드 식 또는 필터 값을 수정하세요.  
   
--   보고서 항목 이름 * \<>>보고서 항목 유형* 처리를 수행할 수 없습니다. * \<* 형식 * \<>* 형식의 데이터와 * \<>유형을 *비교할 수 없습니다. * \<>보고서 항목 이름 *으로 반환 되는 데이터 형식을 확인 하십시오.  
+-   *\<report item name>* 에 대한 *\<report item type>* 처리를 수행할 수 없습니다. 형식이 *\<type>* 인 데이터와 *\<type>* 인 데이터를 비교할 수 없습니다. *\<report item name>* 에서 반환되는 데이터 형식을 확인하세요.  
   
--   속성 이름>을 (를) 평가 하지 못했습니다. * \< *  
+-   *\<property name>* 을 계산하지 못했습니다.  
   
--   속성 이름>을 (를) 평가 하지 못했습니다. * \< * 오류 * \<문자열>* 오류가 있는 데이터 집합 필드를 참조 합니다.  
+-   *\<property name>* 을 계산하지 못했습니다. *\<error string&gt;* 오류가 있는 데이터 세트 필드를 참조합니다.  
   
  자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -112,9 +111,9 @@ ms.locfileid: "66099138"
   
  집계 함수에 특정 범위의 이름을 전달할 수도 있습니다. 범위는 데이터 영역, 데이터 세트의 이름 또는 데이터 계층에서 높은 범위의 이름을 참조할 수 있습니다. 다음과 같은 메시지가 이에 해당합니다.  
   
--   보고서 항목 유형>' * \<* *\<보고서 항목 이름>*'에 잘못 된 범위 "*\<범위 이름>*"이 (가) 있습니다. 범위는 현재 범위이거나 현재 범위 내에 포함되어야 합니다.  
+-   *\<report item type>* ' *\<report item name>* '에 잘못된 범위 " *\<scope name>* "이 있습니다. 범위는 현재 범위이거나 현재 범위 내에 포함되어야 합니다.  
   
--   보고서 항목 유형에 대 한 * \<속성 이름>* 식>'*\<보고서 항목 이름>*'에 집계 함수에 사용할 수 없는 범위 매개 변수가 있습니다. * \<* 범위 매개 변수는 포함 그룹의 이름, 포함 데이터 영역의 이름 또는 데이터 세트의 이름 중 하나와 동일한 문자열 상수로 설정되어야 합니다.  
+-   *\<report item type>* ' *\<report item name>* '에 대한 *\<property name>* 식에 집계 함수에 유효하지 않은 범위 매개 변수가 있습니다. 범위 매개 변수는 포함 그룹의 이름, 포함 데이터 영역의 이름 또는 데이터 세트의 이름 중 하나와 동일한 문자열 상수로 설정되어야 합니다.  
   
  누계를 계산하는 집계 함수의 경우(`Previous`, `RunningValue` 또는 `RowNumber`) 행 그룹 이름 또는 열 그룹 이름 중 하나인 범위 매개 변수를 지정할 수 있습니다. 다음과 같은 오류 메시지가 이에 해당합니다.  
   
@@ -130,9 +129,9 @@ ms.locfileid: "66099138"
  [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)   
  [보고서 &#40;보고서 작성기 및 SSRS&#41;에 데이터를 추가 합니다.](../report-data/report-datasets-ssrs.md)   
- [일반적으로 사용 되는 필터는 보고서 작성기 및 SSRS를 &#40;&#41;](../report-design/commonly-used-filters-report-builder-and-ssrs.md)   
+ [일반적으로 사용되는 필터&#40;보고서 작성기 및 SSRS&#41;](../report-design/commonly-used-filters-report-builder-and-ssrs.md)   
  [데이터 세트 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [보고서 디자이너 &#40;SSRS&#41;의 식에 있는 사용자 지정 코드 및 어셈블리 참조](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
+ [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
  [매개 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

@@ -18,30 +18,26 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cef2943b2d7805a9738662bcd85c9602430a7e6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103536"
 ---
 # <a name="report-and-snapshot-size-limits"></a>보고서 및 스냅샷 크기 제한
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 배포를 관리하는 관리자는 이 항목의 정보를 통해 보고서가 보고서 서버에 게시되고, 런타임에 렌더링되고, 파일 시스템에 저장될 때 적용되는 보고서 크기 제한을 이해할 수 있습니다. 이 항목에서는 보고서 서버 데이터베이스의 크기를 측정하는 방법에 대한 지침을 제공하고 스냅샷 크기가 서버 성능에 미치는 영향에 대해 설명합니다.  
   
 ## <a name="maximum-size-for-published-reports-and-models"></a>게시된 보고서 및 모델의 최대 크기  
- 보고서 서버에서 보고서 및 모델 크기는 보고서 서버에 게시하는 보고서 정의 파일(.rdl) 및 보고서 모델 파일(.smdl)의 크기를 기반으로 합니다. 보고서 서버에서는 사용자가 게시하는 보고서나 모델의 크기를 제한하지 않습니다. 그러나에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 서버에 게시 되는 항목에 대해 최대 크기를 적용 합니다. 기본적으로 이 제한은 4MB입니다. 이 제한을 초과하는 파일을 보고서 서버에 업로드하거나 게시하면 HTTP 예외가 발생합니다. 이런 경우 Machine.config 파일에서 `maxRequestLength` 요소의 값을 늘려 기본값을 수정할 수 있습니다.  
+ 보고서 서버에서 보고서 및 모델 크기는 보고서 서버에 게시하는 보고서 정의 파일(.rdl) 및 보고서 모델 파일(.smdl)의 크기를 기반으로 합니다. 보고서 서버에서는 사용자가 게시하는 보고서나 모델의 크기를 제한하지 않습니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]에서는 서버에 게시되는 항목에 대한 최대 크기를 제한합니다. 기본적으로 이 제한은 4MB입니다. 이 제한을 초과하는 파일을 보고서 서버에 업로드하거나 게시하면 HTTP 예외가 발생합니다. 이런 경우 Machine.config 파일에서 `maxRequestLength` 요소의 값을 늘려 기본값을 수정할 수 있습니다.  
   
  보고서 모델은 매우 클 수 있지만 보고서 정의는 대부분 4MB를 초과하지 않습니다. 일반적인 보고서 크기는 KB 단위입니다. 그러나 포함 이미지를 포함시키면 해당 이미지에 대한 인코딩으로 인해 보고서 정의가 4MB의 기본값을 초과할 수 있습니다.  
   
- 
-  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 에서는 게시되는 파일에 대한 최대 제한을 적용하여 서버에 대한 서비스 거부 공격 위협을 줄입니다. 상한값을 늘리면 이 제한에 따른 보호 기능이 손상됩니다. 따라서 추가 보안 위험을 능가하는 이점이 있다는 확신이 있는 경우에만 이 값을 늘리십시오.  
+ [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 에서는 게시되는 파일에 대한 최대 제한을 적용하여 서버에 대한 서비스 거부 공격 위협을 줄입니다. 상한값을 늘리면 이 제한에 따른 보호 기능이 손상됩니다. 따라서 추가 보안 위험을 능가하는 이점이 있다는 확신이 있는 경우에만 이 값을 늘리십시오.  
   
- 
-  `maxRequestLength` 요소에 대해 설정하는 값은 적용하려는 실제 크기 제한보다 커야 합니다. 모든 매개 변수가 SOAP Envelope에 캡슐화되고 Base64 인코딩이 <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> 및 <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> 메서드의 Definition 매개 변수와 같은 특정 매개 변수에 적용된 후 발생하는 HTTP 요청 크기의 불가피한 증가를 수용하기 위해 더 큰 값을 설정해야 합니다. Base64 인코딩은 원래 데이터의 크기를 33% 정도 증가시킵니다. 따라서 `maxRequestLength` 요소에 대해 지정하는 값은 실제로 사용 가능한 항목 크기보다 33% 정도 커야 합니다. 예를 들어 `maxRequestLength`의 값으로 64MB를 지정하는 경우, 실제로 보고서 서버에 게시되는 보고서 파일의 최대 크기를 48MB 정도로 예상할 수 있습니다.  
+ `maxRequestLength` 요소에 대해 설정하는 값은 적용하려는 실제 크기 제한보다 커야 합니다. 모든 매개 변수가 SOAP Envelope에 캡슐화되고 Base64 인코딩이 <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> 및 <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> 메서드의 Definition 매개 변수와 같은 특정 매개 변수에 적용된 후 발생하는 HTTP 요청 크기의 불가피한 증가를 수용하기 위해 더 큰 값을 설정해야 합니다. Base64 인코딩은 원래 데이터의 크기를 33% 정도 증가시킵니다. 따라서 `maxRequestLength` 요소에 대해 지정하는 값은 실제로 사용 가능한 항목 크기보다 33% 정도 커야 합니다. 예를 들어 `maxRequestLength`의 값으로 64MB를 지정하는 경우, 실제로 보고서 서버에 게시되는 보고서 파일의 최대 크기를 48MB 정도로 예상할 수 있습니다.  
   
 ## <a name="report-size-in-memory"></a>메모리의 보고서 크기  
- 보고서를 실행하면 보고서 크기는 출력 스트림 크기와 보고서에 반환된 데이터 양을 더한 크기가 됩니다. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 렌더링되는 보고서의 크기에 대한 최대 제한을 적용하지 않습니다. 최대 크기 제한은 시스템 메모리에 따라 결정됩니다. 기본적으로 보고서 서버에서는 보고서를 렌더링할 때 사용 가능한 구성 메모리를 모두 사용하지만 구성 설정을 지정하여 메모리 임계값과 메모리 관리 정책을 지정할 수 있습니다. 자세한 내용은 [보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../report-server/configure-available-memory-for-report-server-applications.md)을 참조하세요.  
+ 보고서를 실행하면 보고서 크기는 출력 스트림 크기와 보고서에 반환된 데이터 양을 더한 크기가 됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 렌더링되는 보고서의 크기에 대한 최대 제한을 적용하지 않습니다. 최대 크기 제한은 시스템 메모리에 따라 결정됩니다. 기본적으로 보고서 서버에서는 보고서를 렌더링할 때 사용 가능한 구성 메모리를 모두 사용하지만 구성 설정을 지정하여 메모리 임계값과 메모리 관리 정책을 지정할 수 있습니다. 자세한 내용은 [보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../report-server/configure-available-memory-for-report-server-applications.md)을 참조하세요.  
   
  모든 보고서의 크기는 반환되는 데이터 양과 보고서에 사용된 렌더링 형식에 따라 크게 달라질 수 있습니다. 매개 변수가 있는 보고서의 크기는 매개 변수 값이 쿼리 결과에 미치는 영향에 따라 커지거나 작아질 수 있습니다. 선택한 보고서 출력 형식은 다음과 같은 방식으로 보고서 크기에 영향을 줍니다.  
   
@@ -85,7 +81,7 @@ EXEC sp_spaceused
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 처리 속성 설정](set-report-processing-properties.md)   
- [보고서 서버 데이터베이스&#40;SSRS 기본 모드&#41;](report-server-database-ssrs-native-mode.md)   
+ [SSRS 기본 모드의 보고서 서버 데이터베이스 &#40;&#41;](report-server-database-ssrs-native-mode.md)   
  [큰 보고서 처리](process-large-reports.md)  
   
   

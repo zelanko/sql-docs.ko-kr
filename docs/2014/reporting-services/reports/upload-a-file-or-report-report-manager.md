@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 56a9c380b8cc88202cdcb4c4dca54aab2d1fa4a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102401"
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>파일 또는 보고서 업로드(보고서 관리자)
@@ -38,11 +38,9 @@ ms.locfileid: "66102401"
   
 2.  보고서 관리자에서 **내용** 페이지로 이동합니다. 항목을 추가할 폴더로 이동합니다.  
   
-3.  
-  **파일 업로드**를 클릭합니다.  
+3.  **파일 업로드**를 클릭합니다.  
   
-4.  
-  **찾아보기** 를 클릭하여 업로드할 파일을 선택합니다. 보고서 정의 파일, 이미지, 문서 등 보고서 서버에서 사용할 수 있는 모든 파일을 업로드할 수 있습니다.  
+4.  **찾아보기** 를 클릭하여 업로드할 파일을 선택합니다. 보고서 정의 파일, 이미지, 문서 등 보고서 서버에서 사용할 수 있는 모든 파일을 업로드할 수 있습니다.  
   
 5.  새 항목의 이름을 입력합니다. 항목 이름에 공백을 사용할 수 있지만 다음과 같은 예약 문자는 사용할 수 없습니다. ; ? : \@ & = +, $/* \< > |.  
   

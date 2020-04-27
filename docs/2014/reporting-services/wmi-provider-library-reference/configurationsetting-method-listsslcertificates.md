@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f65926bf982574ee2ae856b5bc4138d065b534bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098328"
 ---
 # <a name="listsslcertificates-method-wmi-msreportserver_configurationsetting"></a>ListSSLCertificates 메서드(WMI MSReportServer_ConfigurationSetting)
@@ -37,13 +37,13 @@ public void ListSSLCertificates(out string[] CertificateHash,
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- *CertificateHash []*  
+ *CertificateHash[]*  
  [out] 인증서 해시입니다.  
   
  *CertName[]*  
  [out] 인증서 이름입니다.  
   
- *호스트 이름 []*  
+ *HostName[]*  
  [out] 인증서의 호스트 이름입니다.  
   
  *길이*  
@@ -58,7 +58,7 @@ public void ListSSLCertificates(out string[] CertificateHash,
 ## <a name="remarks"></a>설명  
   
 ## <a name="requirements"></a>요구 사항  
- **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  

@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a9d66e6e5317bef72be6bba254ccca0cc82aa026
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100035"
 ---
 # <a name="project-property-pages-dialog-box"></a>프로젝트 속성 페이지 대화 상자
-  프로젝트 속성 페이지를 사용하여 보고서 서버 프로젝트의 배포 속성을 구성할 수 있습니다. 이 대화 상자를 열려면 **프로젝트** 메뉴에서 _\<Report Project Name>_**속성**을 클릭합니다.  
+  프로젝트 속성 페이지를 사용하여 보고서 서버 프로젝트의 배포 속성을 구성할 수 있습니다. 이 대화 상자를 열려면 **프로젝트** 메뉴에서 _\<Report Project Name>_ **속성**을 클릭합니다.  
   
  구성 속성을 정의한 후 도구 모음의 **솔루션 구성** 드롭다운 목록에서 구성을 선택할 수 있습니다.  
   
@@ -34,8 +34,8 @@ ms.locfileid: "66100035"
   
  추가 구성을 만들려면 도구 모음의 **구성 관리자** 를 클릭합니다.  
   
- **구성 관리자**  
- 다른 구성을 추가하거나 전체 솔루션의 구성을 관리합니다. 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 설명서를 참조 하세요.  
+ **Configuration Manager**  
+ 다른 구성을 추가하거나 전체 솔루션의 구성을 관리합니다. 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 설명서를 참조하세요.  
   
  **OutputPath**  
  보고서의 빌드 확인, 배포 및 미리 보기에 사용되는 보고서 정의를 저장할 경로를 입력하거나 붙여 넣습니다. 이 경로는 프로젝트에 사용하는 경로 및 프로젝트 경로 아래의 자식 폴더인 상대 경로와 달라야 합니다.  
@@ -43,9 +43,8 @@ ms.locfileid: "66100035"
 > [!NOTE]  
 >  여러 구성을 사용하여 수행하는 태스크에 따라 경로 간을 전환할 수 있습니다.  
   
- **수준은**  
- 오류로 보고되는 빌드 문제의 심각도를 입력합니다. 
-  **ErrorLevel** 값보다 작거나 같은 심각도 수준을 가진 문제는 오류로 보고되고 그렇지 않은 문제는 경고로 보고됩니다. 오류가 발생하면 빌드 태스크가 실패합니다. 유효한 심각도 수준은 0에서 4까지입니다. 기본값은 2입니다.  
+ **ErrorLevel**  
+ 오류로 보고되는 빌드 문제의 심각도를 입력합니다. **ErrorLevel** 값보다 작거나 같은 심각도 수준을 가진 문제는 오류로 보고되고 그렇지 않은 문제는 경고로 보고됩니다. 오류가 발생하면 빌드 태스크가 실패합니다. 유효한 심각도 수준은 0에서 4까지입니다. 기본값은 2입니다.  
   
  **StartItem**  
  프로젝트가 보고서 서버에 게시된 후 웹 브라우저에 표시될 보고서를 선택하거나 프로젝트를 로컬로 실행하는 경우 미리 보기 창에 표시될 보고서를 선택합니다. 시작 항목은 프로젝트를 배포하지 않고 빌드하는 구성과 **디버그** 명령(**F5**)을 사용하는 경우 반드시 지정해야 합니다. 프로젝트를 배포하는 구성에서는 필수입니다.  
@@ -80,7 +79,7 @@ ms.locfileid: "66100035"
 ## <a name="see-also"></a>참고 항목  
  [보고서 게시](../publish-reports.md)   
  [SharePoint 라이브러리에 보고서 게시](../reports/publish-a-report-to-a-sharepoint-library.md)   
- [배포 속성 설정&#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)   
+ [배포 속성 &#40;Reporting Services&#41;설정](set-deployment-properties-reporting-services.md)   
  [보고서 디자이너 F1 도움말](report-designer-f1-help.md)  
   
   

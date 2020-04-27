@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ede290f794ab61dac62c39bc47b80516385474fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097963"
 ---
 # <a name="setsecureconnectionlevel-method-wmi-msreportserver_configurationsetting"></a>SetSecureConnectionLevel 메서드(WMI MSReportServer_ConfigurationSetting)
@@ -55,11 +55,10 @@ public void SetSecureConnectionLevel(Int32 Level,
   
 -   값을 설정 하면 보고서 서버 구성 파일의 SecureConnectionLevel 요소가 변경 되 고 구성 파일의 `URLRoot` 요소는 지정 된 *수준이* 1 보다 크거나 같은 경우 "https://"를 사용 하도록 설정 되 고, 지정 된 *수준이* 0 인 경우에는 "http://"로 설정 됩니다.  
   
- 
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]에서 SecureConnectionLevel은 설정/해제가 전환되며 기본값은 0입니다. SetSecureConnectionLevel 메서드 API를 통해 전달되는 값이 1보다 크거나 같으면 SSL이 설정된 것으로 간주하고 그에 따라 구성 속성 SecureConnectionLevel이 rsreportserver.config 파일에서 설정됩니다. 값 2와 3도 이전 버전과의 호환성을 위해 계속 허용됩니다.  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]에서 SecureConnectionLevel은 설정/해제가 전환되며 기본값은 0입니다. SetSecureConnectionLevel 메서드 API를 통해 전달되는 값이 1보다 크거나 같으면 SSL이 설정된 것으로 간주하고 그에 따라 구성 속성 SecureConnectionLevel이 rsreportserver.config 파일에서 설정됩니다. 값 2와 3도 이전 버전과의 호환성을 위해 계속 허용됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  

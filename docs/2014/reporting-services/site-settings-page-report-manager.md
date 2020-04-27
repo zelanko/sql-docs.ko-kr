@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07fc0207020887d7e3ceb8716ee76c78a55d2bac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101117"
 ---
 # <a name="site-settings-page-report-manager"></a>사이트 설정 페이지(보고서 관리자)
@@ -36,8 +36,7 @@ ms.locfileid: "66101117"
   
 ## <a name="options"></a>옵션  
  **이름**  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 보고서 관리자의 이 인스턴스에 사용할 제목을 지정합니다. 기본적으로 제목은 "[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]"입니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 보고서 관리자의 이 인스턴스에 사용할 제목을 지정합니다. 기본적으로 제목은 "[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]"입니다.  
   
  **보고서 기록의 기본 설정 선택**  
  보관할 보고서 기록 복사본 수로 기본값을 선택합니다. 이 기본값은 보고서 기록 제한을 설정하는 초기 설정이 됩니다. 보고서 수준에서 이 설정을 변경할 수 있습니다. 자세한 내용은 [스냅샷 옵션 속성 페이지&#40;보고서 관리자&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)를 참조하세요.  
@@ -70,7 +69,7 @@ ms.locfileid: "66101117"
 ## <a name="see-also"></a>참고 항목  
  [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [기본 모드 보고서 서버에 대한 사용 권한 부여](security/granting-permissions-on-a-native-mode-report-server.md)   
- [미리 정의된 역할](security/role-definitions-predefined-roles.md)   
+ [미리 정의 된 역할](security/role-definitions-predefined-roles.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

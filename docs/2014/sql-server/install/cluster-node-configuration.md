@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd1abb5a1bdce0e758d4f36c861917064b20fee9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096426"
 ---
 # <a name="cluster-node-configuration"></a>클러스터 노드 구성
@@ -26,6 +26,6 @@ ms.locfileid: "66096426"
 ## <a name="options"></a>옵션  
  인스턴스 이름-드롭다운 목록을 사용 하 여 수정할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치 (failover) 클러스터 인스턴스를 선택 합니다. ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **  
   
- **이 노드의 이름** -이 필드는 설치 프로그램을 실행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하는 컴퓨터의 이름으로 채워집니다. 이 노드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스에서 추가하거나 제거할 장애 조치(Failover) 클러스터 노드입니다.  
+ **이 노드의 이름** - 이 필드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하는 컴퓨터의 이름으로 채워집니다. 이 노드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스에서 추가하거나 제거할 장애 조치(Failover) 클러스터 노드입니다.  
   
   

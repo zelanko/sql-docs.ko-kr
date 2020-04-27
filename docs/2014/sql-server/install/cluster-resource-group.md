@@ -13,18 +13,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c6599a087efa16a1fa83a37e1a26b362b971cbc6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096462"
 ---
 # <a name="cluster-resource-group"></a>클러스터 리소스 그룹
   클러스터 리소스 그룹 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가상 서버 리소스를 저장할 디스크를 지정할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클러스터 리소스 그룹 이름을 지정합니다. 다음 두 가지 옵션을 사용할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클러스터 리소스 그룹 이름을 지정합니다. 다음 두 가지 옵션을 사용할 수 있습니다.  
   
 -   드롭다운 상자에서 사용할 기존 그룹을 지정합니다.  
   

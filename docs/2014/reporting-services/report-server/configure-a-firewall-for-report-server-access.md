@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 00590faa3ef5fb63338465d85202f4010cd3b72d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104158"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>보고서 서버에 액세스할 수 있도록 방화벽 구성
@@ -45,7 +45,7 @@ ms.locfileid: "66104158"
   
 3.  **인바운드 규칙**을 클릭합니다.  
   
-4.  **작업** 창에서 **새 규칙** 을 클릭**합니다.**  
+4.  **동작** 창의 **새 규칙** 을 클릭합니다 **.**  
   
 5.  **포트** 의 **규칙 종류**를 클릭합니다.  
   
@@ -75,11 +75,9 @@ ms.locfileid: "66104158"
   
 1.  **시작** 메뉴에서 **제어판**을 클릭 하 고 **보안**을 클릭 한 다음 **Windows 방화벽**을 클릭 합니다.  
   
-2.  
-  **Windows 방화벽을 통한 프로그램 실행 허용**을 클릭합니다.  
+2.  **Windows 방화벽을 통한 프로그램 실행 허용**을 클릭합니다.  
   
-3.  
-  **계속**을 클릭합니다.  
+3.  **계속**을 클릭합니다.  
   
 4.  예외 탭에서 **포트 추가**를 클릭 합니다.  
   
@@ -89,24 +87,23 @@ ms.locfileid: "66104158"
   
 7.  **TCP** 가 선택 되어 있는지 확인 합니다.  
   
-8.  
-  **범위 변경**을 클릭합니다.  
+8.  **범위 변경**을 클릭합니다.  
   
 9. **내 네트워크 (서브넷)만**을 클릭 한 다음 **확인**을 클릭 합니다.  
   
-10. **확인** 을 클릭하여 대화 상자를 닫습니다.  
+10. **확인**을 클릭하여 대화 상자를 닫습니다.  
   
 11. 컴퓨터를 다시 시작합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 포트를 연 다음 원격 사용자가 이 포트에서 보고서 서버에 액세스할 수 있는지 확인하기 전에 홈 및 사이트 수준에서 역할 할당을 통해 사용자에게 보고서 서버에 대한 액세스 권한을 부여해야 합니다. 사용자에게 충분한 권한이 없는 경우 포트는 제대로 열리지만 보고서 서버에는 연결할 수 없습니다. 자세한 내용은 [ 온라인 설명서에서 ](../security/grant-user-access-to-a-report-server.md)사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조하세요.  
+ 포트를 연 다음 원격 사용자가 이 포트에서 보고서 서버에 액세스할 수 있는지 확인하기 전에 홈 및 사이트 수준에서 역할 할당을 통해 사용자에게 보고서 서버에 대한 액세스 권한을 부여해야 합니다. 사용자에게 충분한 권한이 없는 경우 포트는 제대로 열리지만 보고서 서버에는 연결할 수 없습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](../security/grant-user-access-to-a-report-server.md)를 참조하세요.  
   
- 다른 컴퓨터에서 보고서 관리자를 시작하여 포트가 제대로 열리는지 확인할 수도 있습니다. 자세한 내용은 [ 온라인 설명서에서 ](../report-manager-ssrs-native-mode.md)보고서 관리자&#40;SSRS 기본 모드&#41;[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조하세요.  
+ 다른 컴퓨터에서 보고서 관리자를 시작하여 포트가 제대로 열리는지 확인할 수도 있습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 [보고서 관리자&#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [SSRS Configuration Manager &#40;보고서 서버 데이터베이스를 만듭니다&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Reporting Services 기본 모드 보고서 서버 관리](manage-a-reporting-services-native-mode-report-server.md)  
   

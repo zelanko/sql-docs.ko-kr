@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f16b86b1343d83c44819427b8ba6c43726798e93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098537"
 ---
 # <a name="createsslcertificatebinding-method-wmi-msreportserver_configurationsetting"></a>CreateSSLCertificateBinding 메서드(WMI MSReportServer_ConfigurationSetting)
@@ -38,13 +38,13 @@ public void CreateSSLCertificateBinding(string application,
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- *프로그램별*  
+ *애플리케이션*  
  인증서 바인딩을 만들어야 하는 애플리케이션의 이름입니다.  
   
  *CertificateHash*  
  인증서에 대한 해시입니다.  
   
- *IP 주소*  
+ *IPAddress*  
  애플리케이션의 IP 주소입니다.  
   
  *포트*  
@@ -80,7 +80,7 @@ public void CreateSSLCertificateBinding(string application,
 5.  호스트 이름을 지정하는 URL 예약이 있으나 해당 호스트 이름이 인증서의 호스트 이름과 일치하지 않는 경우  
   
 ## <a name="requirements"></a>요구 사항  
- **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  

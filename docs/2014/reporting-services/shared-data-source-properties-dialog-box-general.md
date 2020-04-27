@@ -13,26 +13,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb7e3caa1fedf1e8a398a1c5abd91fdaa2263ba2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101314"
 ---
 # <a name="shared-data-source-properties-dialog-box-general"></a>공유 데이터 원본 속성 대화 상자, 일반
-  
   **공유 데이터 원본 속성** 대화 상자를 사용하여 보고서의 공유 데이터 원본에 대한 연결 정보를 표시하고 수정할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
  **이름**  
  데이터 원본의 이름을 입력합니다. 데이터 원본 이름은 보고서 내에서 중복되지 않아야 합니다. 기본적으로 DataSource1 또는 DataSource2 같은 일반 이름이 데이터 원본에 지정됩니다.  
   
- **형식**  
+ **Type**  
  데이터 처리 확장 프로그램을 선택합니다. 등록된 확장 프로그램이 목록에 모두 표시됩니다.  
   
  **연결 문자열**  
- 데이터 원본에 대한 연결 문자열을 입력합니다. 
-  **연결 속성** 대화 상자를 사용하여 연결 문자열을 작성하려면 **편집** 을 클릭합니다. 식을 편집하려면 식 단추(**fx**)를 클릭합니다.  
+ 데이터 원본에 대한 연결 문자열을 입력합니다. **연결 속성** 대화 상자를 사용하여 연결 문자열을 작성하려면 **편집** 을 클릭합니다. 식을 편집하려면 식 (**fx**) 단추를 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 &#40;보고서 작성기 및 SSRS&#41;에 데이터를 추가 합니다.](report-data/report-datasets-ssrs.md)   

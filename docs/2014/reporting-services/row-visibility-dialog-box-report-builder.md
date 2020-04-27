@@ -13,14 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d5ad7e47457aa2d1f1d5e36adec7e988de7b8bbb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102345"
 ---
 # <a name="row-visibility-dialog-box-report-builder"></a>행 표시 유형 대화 상자(보고서 작성기)
-  
   **행 표시 유형** 대화 상자를 사용하면 보고서를 처음 실행할 때 선택된 행을 표시하거나 숨길 수 있고 다른 보고서 항목을 사용하여 행의 표시 유형을 전환할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
@@ -36,8 +35,7 @@ ms.locfileid: "66102345"
  **식에 따라 표시 또는 숨기기**  
  식을 사용하여 초기 표시 유형을 변경하려면 이 옵션을 선택합니다.  
   
- 
-  `Boolean` 값을 반환하는 식을 입력합니다. `True`는 항목을 숨기고 `False`는 항목을 표시합니다. 식을 편집 하려면 **식** 단추 (*fx*)를 클릭 합니다.  
+ `Boolean` 값을 반환하는 식을 입력합니다. `True`는 항목을 숨기고 `False`는 항목을 표시합니다. 식을 편집 하려면 **식** 단추 (*fx*)를 클릭 합니다.  
   
  **이 보고서 항목으로 표시 또는 숨기기 가능**  
  사용자가 이 행을 HTML 보고서 뷰어에 표시하거나 숨길 수 있도록 토글 이미지를 표시하려면 이 옵션을 선택합니다.  
@@ -47,7 +45,7 @@ ms.locfileid: "66102345"
 ## <a name="see-also"></a>참고 항목  
  [식 예&#40;보고서 작성기 및 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [항목 &#40;보고서 작성기 및 SSRS에 확장 또는 축소 작업을 추가&#41;](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [이미지&#40;보고서 작성기 및 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [이미지 &#40;보고서 작성기 및 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [대화 상자, 창 및 마법사에 대 한 보고서 작성기 도움말](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [이미지 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ad98fe533caefa937d969754fa1278354e5c6e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102161"
 ---
 # <a name="security-properties-page-items-report-manager"></a>보안 속성 페이지, 항목(보고서 관리자)
@@ -37,9 +37,7 @@ ms.locfileid: "66102161"
   
     -   **보안**을 클릭합니다. 항목의 보안 속성 페이지가 열립니다.  
   
-    -   
-  **관리** 를 클릭하여 항목의 일반 속성 페이지를 연 다음 
-  **보안** 탭을 선택합니다.  
+    -   **관리** 를 클릭하여 항목의 일반 속성 페이지를 연 다음 **보안** 탭을 선택합니다.  
   
  **항목 보안 편집**  
  현재 항목에 대한 보안 정의 방법을 변경하려면 클릭합니다. 폴더의 보안을 편집하면 변경 내용은 현재 폴더와 모든 하위 폴더의 내용에 적용됩니다.  
@@ -65,7 +63,7 @@ ms.locfileid: "66102161"
   
 ## <a name="see-also"></a>참고 항목  
  [F1 도움말 보고서 관리자](../../2014/reporting-services/report-manager-f1-help.md)   
- [미리 정의된 역할](security/role-definitions-predefined-roles.md)   
+ [미리 정의 된 역할](security/role-definitions-predefined-roles.md)   
  [기본 모드 보고서 서버에 대한 사용 권한 부여](security/granting-permissions-on-a-native-mode-report-server.md)   
  [역할 할당](security/role-assignments.md)   
  [역할 정의](security/role-definitions.md)  

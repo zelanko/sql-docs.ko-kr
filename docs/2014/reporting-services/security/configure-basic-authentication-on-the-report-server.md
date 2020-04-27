@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32b46265b5da376bc974b55c48bf54bad88917d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102154"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>보고서 서버에서 기본 인증 구성
@@ -27,7 +27,7 @@ ms.locfileid: "66102154"
   
  기본 인증을 설정하기 전에 보안 인프라에서 기본 인증을 지원하는지 확인하십시오. 기본 인증에서 보고서 서버 웹 서비스는 로컬 보안 기관에 자격 증명을 전달합니다. 자격 증명이 로컬 사용자 계정을 지정하는 경우 사용자는 보고서 서버 컴퓨터의 로컬 보안 기관에 의해 인증되며 로컬 리소스에 대해 유효한 보안 토큰을 받게 됩니다. 도메인 사용자 계정에 대한 자격 증명은 도메인 컨트롤러로 전달되어 인증됩니다. 인증 후 발급되는 티켓은 네트워크 리소스에 대해 유효합니다.  
   
- 자격 증명이 네트워크의 도메인 컨트롤러로 전송되는 동안 도청될 위험을 완화하려면 SSL(Secure Sockets Layer)과 같은 채널 암호화가 필요합니다. 기본 인증은 자체적으로 사용자 이름을 일반 텍스트로, 암호는 Base-64 인코딩으로 전송합니다. 채널 암호화를 추가하면 패킷을 읽기가 불가능하게 됩니다. 자세한 내용은 [기본 모드 보고서 서버에서 SSL 연결 구성](configure-ssl-connections-on-a-native-mode-report-server.md)을 참조하세요.  
+ 자격 증명이 네트워크의 도메인 컨트롤러로 전송되는 동안 도청될 위험을 완화하려면 SSL(Secure Sockets Layer)과 같은 채널 암호화가 필요합니다. 기본 인증은 자체적으로 사용자 이름을 일반 텍스트로, 암호는 Base-64 인코딩으로 전송합니다. 채널 암호화를 추가하면 패킷을 읽기가 불가능하게 됩니다. 자세한 내용은 [기본 모드 보고서 서버에서 SSL 연결 구성](configure-ssl-connections-on-a-native-mode-report-server.md)을 참조 하세요.  
   
  기본 인증을 설정한 다음에는 보고서에 데이터를 제공하는 외부 데이터 원본에 대한 연결 속성을 설정할 때 사용자가 **Windows 통합 보안** 옵션을 선택할 수 없다는 점을 유의하십시오. 이 옵션은 데이터 원본 속성 페이지에서 회색으로 나타납니다.  
   
@@ -69,11 +69,9 @@ ms.locfileid: "66102154"
   
      여러 인증 유형을 사용하는 경우 `RSWindowsBasic` 요소만 추가하고 `RSWindowsNegotiate`, `RSWindowsNTLM` 또는 `RSWindowsKerberos`에 대한 요소는 삭제하지 마십시오.  
   
-     Safari 브라우저를 지원하려는 경우에는 여러 인증 유형을 사용하도록 보고서 서버를 구성할 수 없습니다. 
-  `RSWindowsBasic`만 지정하고 다른 항목은 삭제해야 합니다.  
+     Safari 브라우저를 지원하려는 경우에는 여러 인증 유형을 사용하도록 보고서 서버를 구성할 수 없습니다. `RSWindowsBasic`만 지정하고 다른 항목은 삭제해야 합니다.  
   
-     
-  `Custom`은 다른 인증 유형과 함께 사용할 수 없습니다.  
+     `Custom`은 다른 인증 유형과 함께 사용할 수 없습니다.  
   
 5.  <`Realm`> 또는 <`DefaultDomain`>에 대 한 빈 값을 사용자 환경에 유효한 값으로 바꿉니다.  
   
@@ -88,10 +86,8 @@ ms.locfileid: "66102154"
   
 |요소|필수|유효한 값|  
 |-------------|--------------|------------------|  
-|LogonMethod|yes<br /><br /> 값을 지정하지 않으면 3이 사용됩니다.|
-  `2` = 일반 텍스트 암호를 인증하는 고성능 서버를 위한 네트워크 로그온입니다.<br /><br /> 
-  `3` = 각 HTTP 요청과 함께 전송되는 인증 패키지에 로그온 자격 증명을 유지하여 서버가 네트워크의 다른 서버에 연결할 때 사용자를 가장할 수 있도록 하는 일반 텍스트 로그온입니다. (기본값)<br /><br /> 참고: 값 0(대화형 로그온) 및 1(일괄 처리 로그온)은 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]에서 지원되지 않습니다.|  
-|Realm|옵션|조직의 보호된 리소스에 대한 액세스를 제어하는 데 사용되는 권한 부여 및 인증 기능이 포함된 리소스 파티션을 지정합니다.|  
+|LogonMethod|예<br /><br /> 값을 지정하지 않으면 3이 사용됩니다.|`2` = 일반 텍스트 암호를 인증하는 고성능 서버를 위한 네트워크 로그온입니다.<br /><br /> `3` = 각 HTTP 요청과 함께 전송되는 인증 패키지에 로그온 자격 증명을 유지하여 서버가 네트워크의 다른 서버에 연결할 때 사용자를 가장할 수 있도록 하는 일반 텍스트 로그온입니다. (기본값)<br /><br /> 참고: 값 0(대화형 로그온) 및 1(일괄 처리 로그온)은 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]에서 지원되지 않습니다.|  
+|Realm|Optional|조직의 보호된 리소스에 대한 액세스를 제어하는 데 사용되는 권한 부여 및 인증 기능이 포함된 리소스 파티션을 지정합니다.|  
 |DefaultDomain|옵션|사용자를 인증할 때 서버가 사용하는 도메인을 지정합니다. 이 값은 선택 사항이지만 생략하면 보고서 서버가 컴퓨터 이름을 도메인으로 사용합니다. 컴퓨터가 도메인 멤버인 경우 해당 도메인이 기본 도메인입니다. 도메인 컨트롤러에 보고서 서버를 설치한 경우에는 컴퓨터에서 제어되는 도메인이 사용됩니다.|  
   
 ## <a name="enabling-anonymous-access-to-report-builder-application-files"></a>보고서 작성기 애플리케이션 파일에 대한 익명 액세스 사용  
@@ -141,12 +137,11 @@ ms.locfileid: "66102154"
   
      Web.config 파일을 포함하는 경우 인증 모드가 `Windows`로 설정되어 있어야 합니다.  
   
-     `Identity impersonate`은 또는 `True` `False`일 수 있습니다.  
+     `Identity impersonate`은 `True` 또는 `False`이 될 수 있습니다.  
   
     -   ASP.NET에서 보안 토큰을 읽지 않도록 하려면 `False`로 설정합니다. 요청은 보고서 서버 서비스의 보안 컨텍스트에서 실행됩니다.  
   
-    -   ASP.NET이 호스트 계층에서 보안 토큰을 읽도록 하려면 `True`로 설정합니다. 
-  `True`로 설정하는 경우 `userName` 및 `password`도 지정하여 익명 계정을 지정해야 합니다. 지정하는 자격 증명은 요청이 실행되는 보안 컨텍스트를 결정합니다.  
+    -   ASP.NET이 호스트 계층에서 보안 토큰을 읽도록 하려면 `True`로 설정합니다. `True`로 설정하는 경우 `userName` 및 `password`도 지정하여 익명 계정을 지정해야 합니다. 지정하는 자격 증명은 요청이 실행되는 보안 컨텍스트를 결정합니다.  
   
 5.  Web.config 파일을 ReportBuilder\bin 폴더에 저장합니다.  
   
@@ -161,7 +156,7 @@ ms.locfileid: "66102154"
 8.  보고서 서버를 다시 시작합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 서버 응용 프로그램의 응용 프로그램 도메인](../report-server/application-domains-for-report-server-applications.md)   
+ [보고서 서버 애플리케이션의 애플리케이션 도메인](../report-server/application-domains-for-report-server-applications.md)   
  [Reporting Services 보안 및 보호](reporting-services-security-and-protection.md)  
   
   

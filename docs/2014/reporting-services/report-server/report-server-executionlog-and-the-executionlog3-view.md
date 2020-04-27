@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 649795e5e142563b64014f2ccf970f0df5de134b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103467"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>보고서 서버 실행 로그 및 ExecutionLog3 뷰
@@ -25,7 +25,7 @@ ms.locfileid: "66103467"
   
  SharePoint 모드용으로 구성된 보고서 서버는 또한 SharePoint ULS 로그를 활용할 수 있습니다. 자세한 내용은 [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
-##  <a name="bkmk_top"></a> 로그 정보 보기  
+##  <a name="viewing-log-information"></a><a name="bkmk_top"></a> 로그 정보 보기  
  보고서 서버 실행은 내부 데이터베이스 테이블에 보고서 실행에 대한 데이터를 기록합니다. 테이블의 정보는 SQL Server 뷰에서 확인할 수 있습니다.  
   
  보고서 실행 로그는 기본적으로 이름이 **ReportServer**로 지정되는 보고서 서버 데이터베이스에 저장됩니다. SQL 뷰는 실행 로그 정보를 제공합니다. 최신 릴리스에는 "2"번과 "3"번 뷰가 추가되었으며, 이러한 뷰에는 새로운 필드 또는 이전 릴리스보다 친숙한 이름의 필드가 포함됩니다. 이전 뷰도 제품에 그대로 유지되므로 이러한 뷰를 사용하는 사용자 지정 애플리케이션에는 영향을 주지 않습니다. 이전 뷰에 대한 종속성이 없는 경우(예: ExecutionLog) 최신 뷰인 ExecutionLog**3**를 사용하는 것이 좋습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "66103467"
   
 -   [로그 필드(ExecutionLog)](#bkmk_executionlog)  
   
-##  <a name="bkmk_sharepoint"></a> SharePoint 모드 보고서 서버에 대한 구성 설정  
+##  <a name="configuration-settings-for-a-sharepoint-mode-report-server"></a><a name="bkmk_sharepoint"></a> SharePoint 모드 보고서 서버에 대한 구성 설정  
  보고서 실행 로깅은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션의 시스템 설정에서 설정 또는 해제할 수 있습니다.  
   
  기본적으로 로그 항목은 60일 동안 보관됩니다. 이 날짜를 초과한 항목은 매일 오전 2시에 제거됩니다. 제대로 된 설치에서는 항상 60일 동안의 정보만 사용할 수 있게 됩니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "66103467"
   
 2.  **ExecutionLogLevel** 을 **자세히**로 변경합니다. 이 필드는 텍스트 입력 필드이며 **자세히** 및 **보통**중에서 값을 선택할 수 있습니다.  
   
-##  <a name="bkmk_native"></a> 기본 모드 보고서 서버에 대한 구성 설정  
+##  <a name="configuration-settings-for-a-native-mode-report-server"></a><a name="bkmk_native"></a> 기본 모드 보고서 서버에 대한 구성 설정  
  SQL Server Management Studio의 서버 속성 페이지에서 보고서 실행 로깅을 설정하거나 해제할 수 있습니다. **EnableExecutionLogging** 은 고급 속성입니다.  
   
  기본적으로 로그 항목은 60일 동안 보관됩니다. 이 날짜를 초과한 항목은 매일 오전 2시에 제거됩니다. 제대로 된 설치에서는 항상 60일 동안의 정보만 사용할 수 있게 됩니다.  
@@ -98,7 +98,7 @@ ms.locfileid: "66103467"
   
 2.  **사용자 정의** 섹션에서 **ExecutionLogLevel** 을 **자세히**로 변경합니다. 이 필드는 텍스트 입력 필드이며 **자세히** 및 **보통**중에서 값을 선택할 수 있습니다.  
   
-##  <a name="bkmk_executionlog3"></a> 로그 필드(ExecutionLog3)  
+##  <a name="log-fields-executionlog3"></a><a name="bkmk_executionlog3"></a> 로그 필드(ExecutionLog3)  
  이 뷰에는 XML 기반 **AdditionalInfo** 열 안에 추가 성능 진단 노드가 추가되었습니다. AdditionalInfo 열에는 여러 추가 정보 필드에 대한 1의 XML 구조가 포함되어 있습니다. 다음은 ExecutionLog3 뷰에서 행을 검색하는 샘플 Transact SQL 문입니다. 이 샘플에서는 보고서 서버 데이터베이스 이름이 **ReportServer**라고 가정합니다.  
   
 ```  
@@ -114,22 +114,22 @@ select * from ExecutionLog3 order by TimeStart DESC
 |ItemPath|보고서 또는 보고서 항목이 저장된 위치의 경로|  
 |UserName|사용자 식별자|  
 |ExecutionID|요청과 연결된 내부 식별자입니다. 동일한 사용자 세션에 대한 요청은 같은 실행 ID를 공유합니다.|  
-|RequestType|가능한 값은 다음과 같습니다.<br />**대화형**<br />**구독**<br /><br /> <br /><br /> RequestType=Subscription으로 필터링되고 TimeStart로 정렬된 로그 데이터를 분석하면 구독 사용량이 많은 기간을 확인할 수 있으며, 그에 따라 보고서 구독 중 일부를 다른 시간으로 수정해야 할 수 있습니다.|  
+|RequestType|가능한 값은 다음과 같습니다.<br />**Interactive (대화형)**<br />**구독**<br /><br /> <br /><br /> RequestType=Subscription으로 필터링되고 TimeStart로 정렬된 로그 데이터를 분석하면 구독 사용량이 많은 기간을 확인할 수 있으며, 그에 따라 보고서 구독 중 일부를 다른 시간으로 수정해야 할 수 있습니다.|  
 |형식|렌더링 형식|  
 |매개 변수|보고서 실행에 사용된 매개 변수 값|  
-|ItemAction|가능한 값은 다음과 같습니다.<br /><br /> **Render**<br /><br /> **정렬**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **실행할**<br /><br /> **RenderEdit**|  
+|ItemAction|가능한 값은 다음과 같습니다.<br /><br /> **Render**<br /><br /> **정렬**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **Execute**<br /><br /> **RenderEdit**|  
 |TimeStart|보고서 처리 기간을 나타내는 시작 및 중지 시간|  
 |TimeEnd||  
 |TimeDataRetrieval|데이터를 검색하는 데 걸린 시간(밀리초)|  
 |TimeProcessing|보고서를 처리하는 데 걸린 시간(밀리초)|  
 |TimeRendering|보고서를 렌더링하는 데 걸린 시간(밀리초)|  
-|원본|보고서 실행의 원본입니다. 가능한 값은 다음과 같습니다.<br /><br /> **라이브**<br /><br /> **Cache**: 캐시 된 실행을 나타냅니다. 예를 들어 데이터 집합 쿼리는 실시간으로 실행 되지 않습니다.<br /><br /> **스냅숏에**<br /><br /> **History**<br /><br /> **임시** : 동적으로 생성 된 보고서 모델 기반 드릴스루 보고서 또는 처리 및 렌더링을 위해 보고서 서버를 활용 하는 클라이언트에서 미리 본 보고서 작성기 보고서를 나타냅니다.<br /><br /> **세션**: 이미 설정 된 세션 내에서 후속 요청을 나타냅니다.  예를 들어 초기 요청은 1페이지를 보는 것이고 후속 요청은 현재 세션 상태로 Excel로 내보내는 것입니다.<br /><br /> **Rdce**: 보고서 정의 사용자 지정 확장 프로그램을 나타냅니다. RDCE 사용자 지정 확장 프로그램에서는 보고서 실행 시 보고서 정의가 처리 엔진에 전달되기 전에 보고서 정의를 동적으로 사용자 지정할 수 있습니다.|  
+|원본|보고서 실행의 원본입니다. 가능한 값은 다음과 같습니다.<br /><br /> **라이브**<br /><br /> **Cache**: 캐시 된 실행을 나타냅니다. 예를 들어 데이터 집합 쿼리는 실시간으로 실행 되지 않습니다.<br /><br /> **스냅샷**<br /><br /> **History**<br /><br /> **임시** : 동적으로 생성 된 보고서 모델 기반 드릴스루 보고서 또는 처리 및 렌더링을 위해 보고서 서버를 활용 하는 클라이언트에서 미리 본 보고서 작성기 보고서를 나타냅니다.<br /><br /> **세션**: 이미 설정 된 세션 내에서 후속 요청을 나타냅니다.  예를 들어 초기 요청은 1페이지를 보는 것이고 후속 요청은 현재 세션 상태로 Excel로 내보내는 것입니다.<br /><br /> **Rdce**: 보고서 정의 사용자 지정 확장 프로그램을 나타냅니다. RDCE 사용자 지정 확장 프로그램에서는 보고서 실행 시 보고서 정의가 처리 엔진에 전달되기 전에 보고서 정의를 동적으로 사용자 지정할 수 있습니다.|  
 |상태|상태(rsSuccess 또는 오류 코드: 여러 개의 오류가 발생하면 첫 번째 오류만 기록됨)|  
 |ByteCount|렌더링된 보고서 크기(바이트)|  
 |RowCount|쿼리에서 반환된 행 수|  
 |AdditionalInfo|실행에 대한 추가 정보가 포함된 XML 속성 모음 콘텐츠는 각 행마다 서로 다를 수 있습니다.|  
   
-##  <a name="bkmk_additionalinfo"></a> AdditionalInfo 필드  
+##  <a name="the-additionalinfo-field"></a><a name="bkmk_additionalinfo"></a> AdditionalInfo 필드  
  AdditionalInfo 필드는 실행에 대한 추가 정보가 포함된 XML 속성 모음 또는 구조입니다. 콘텐츠는 로그에서 각 행마다 서로 다를 수 있습니다.  
   
  다음 표는 표준 및 자세한 로깅에 대한 AddtionalInfo 필드 내용의 예입니다.  
@@ -297,7 +297,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
     ```  
   
-##  <a name="bkmk_executionlog2"></a> 로그 필드(ExecutionLog2)  
+##  <a name="log-fields-executionlog2"></a><a name="bkmk_executionlog2"></a> 로그 필드(ExecutionLog2)  
  이 뷰에는 몇 가지 새로운 필드가 추가되었으며, 다른 일부 필드는 이름이 바뀌었습니다. 다음은 ExecutionLog2 뷰에서 행을 검색하는 샘플 Transact SQL 문입니다. 이 샘플에서는 보고서 서버 데이터베이스 이름이 **ReportServer**라고 가정합니다.  
   
 ```  
@@ -328,7 +328,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |RowCount|쿼리에서 반환된 행 수|  
 |AdditionalInfo|실행에 대한 추가 정보가 포함된 XML 속성 모음|  
   
-##  <a name="bkmk_executionlog"></a> 로그 필드(ExecutionLog)  
+##  <a name="log-fields-executionlog"></a><a name="bkmk_executionlog"></a> 로그 필드(ExecutionLog)  
  다음은 ExecutionLog 뷰에서 행을 검색하는 샘플 Transact SQL 문입니다. 이 샘플에서는 보고서 서버 데이터베이스 이름이 **ReportServer**라고 가정합니다.  
   
 ```  
@@ -358,7 +358,7 @@ select * from ExecutionLog order by TimeStart DESC
 |RowCount|쿼리에서 반환된 행 수|  
   
 ## <a name="see-also"></a>참고 항목  
- [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
+ [SharePoint 추적 로그 &#40;ULS에 대 한 Reporting Services 이벤트 설정&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [Reporting Services 로그 파일 및 소스](../report-server/reporting-services-log-files-and-sources.md)   
  [오류 및 이벤트 참조&#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   

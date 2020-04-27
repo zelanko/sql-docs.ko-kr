@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63ac5bf29ca441a18be4bc5e46448475b56104bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100295"
 ---
 # <a name="design-view"></a>디자인 뷰
@@ -51,7 +51,7 @@ ms.locfileid: "66100295"
  속성 창을 사용하여 디자인 화면의 현재 선택된 보고서 항목 또는 그룹화 창의 선택된 그룹에 대한 속성을 볼 수 있습니다. 또는 선택한 보고서 항목 또는 그룹을 마우스 오른쪽 단추로 클릭한 후 **속성** 을 클릭하여 보고서 항목 또는 그룹에 대한 해당 **속성** 대화 상자를 열 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [페이지 머리글 및 바닥글&#40;보고서 작성기 및 SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [페이지 머리글 및 바닥글 &#40;보고서 작성기 및 SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [보고서 디자인 팁&#40;보고서 작성기 및 SSRS&#41;](../report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   

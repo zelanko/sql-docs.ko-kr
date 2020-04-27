@@ -28,17 +28,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0c465a50547d8ca45947dc5db5c56221a8a4538
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100816"
 ---
 # <a name="manage-a-running-process"></a>실행 중인 프로세스 관리
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 실행 중인 작업의 상태를 모니터링 합니다. 보고서 서버는 진행 중인 작업을 정기적으로 검색하고 SharePoint 모드용 서비스 애플리케이션 데이터베이스 또는 보고서 서버 데이터베이스에 상태 정보를 씁니다. 원격 또는 로컬 데이터베이스 서버에서 쿼리가 실행되거나 보고서가 처리되거나 보고서가 렌더링되는 경우 작업이 진행 중인 것입니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 보고서 서버에서 실행 중인 작업의 상태를 모니터링합니다. 보고서 서버는 진행 중인 작업을 정기적으로 검색하고 SharePoint 모드용 서비스 애플리케이션 데이터베이스 또는 보고서 서버 데이터베이스에 상태 정보를 씁니다. 원격 또는 로컬 데이터베이스 서버에서 쿼리가 실행되거나 보고서가 처리되거나 보고서가 렌더링되는 경우 작업이 진행 중인 것입니다.  
   
- 
-  *사용자 작업* 과 *시스템 작업*을 모두 관리할 수 있습니다.  
+ *사용자 작업* 과 *시스템 작업*을 모두 관리할 수 있습니다.  
   
 -   사용자 작업은 개별 사용자나 구독에 의해 시작됩니다. 여기에는 요청 시 보고서 실행, 보고서 기록 스냅샷 요청, 보고서 스냅샷의 수동 생성 및 표준 구독 처리 작업이 포함됩니다.  
   
@@ -61,29 +60,24 @@ ms.locfileid: "66100816"
   
  항목 내용  
   
--   [작업 보기 및 취소 (기본 모드)](#bkmk_native)  
+-   [작업 보기 및 취소(기본 모드)](#bkmk_native)  
   
--   [작업 보기 및 취소 (SharePoint 모드)](#bkmk_sharepoint)  
+-   [작업 보기 및 취소(SharePoint 모드)](#bkmk_sharepoint)  
   
 -   [프로그래밍 방식으로 작업 관리](#bkmk_programmatically)  
   
-##  <a name="bkmk_native"></a>작업 보기 및 취소 (기본 모드)  
- 를 사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 하 여 보고서 서버에서 실행 중인 작업을 보거나 취소할 수 있습니다. 현재 실행 중인 작업 목록을 검색하거나 보고서 서버 데이터베이스에서 최신 작업 상태를 가져오려면 페이지를 새로 고쳐야 합니다. 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 보고서 서버에 연결하면 작업 폴더를 열어 보고서 서버 컴퓨터에서 현재 처리 중인 보고서 목록을 볼 수 있습니다. 각 작업에 대한 상태 정보는 작업 속성 페이지에 표시됩니다. 보고서 서버 작업 취소 대화 상자를 열어 모든 작업에 대한 상태 정보를 볼 수 있습니다.  
+##  <a name="view-and-cancel-jobs-native-mode"></a><a name="bkmk_native"></a> 작업 보기 및 취소(기본 모드)  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하여 보고서 서버에서 실행 중인 작업을 보거나 취소할 수 있습니다. 현재 실행 중인 작업 목록을 검색하거나 보고서 서버 데이터베이스에서 최신 작업 상태를 가져오려면 페이지를 새로 고쳐야 합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 보고서 서버에 연결하면 작업 폴더를 열어 보고서 서버 컴퓨터에서 현재 처리 중인 보고서 목록을 볼 수 있습니다. 각 작업에 대한 상태 정보는 작업 속성 페이지에 표시됩니다. 보고서 서버 작업 취소 대화 상자를 열어 모든 작업에 대한 상태 정보를 볼 수 있습니다.  
   
- 를 사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 하 여 보고서 서버에서 실행 중인 작업을 보거나 취소할 수 있습니다. 현재 실행 중인 작업 목록을 검색하거나 보고서 서버 데이터베이스에서 최신 작업 상태를 가져오려면 페이지를 새로 고쳐야 합니다. 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 보고서 서버에 연결하면 작업 폴더를 열어 보고서 서버 컴퓨터에서 현재 처리 중인 보고서 목록을 볼 수 있습니다. 각 작업에 대한 상태 정보는 작업 속성 페이지에 표시됩니다. 보고서 서버 작업 취소 대화 상자를 열어 모든 작업에 대한 상태 정보를 볼 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하여 보고서 서버에서 실행 중인 작업을 보거나 취소할 수 있습니다. 현재 실행 중인 작업 목록을 검색하거나 보고서 서버 데이터베이스에서 최신 작업 상태를 가져오려면 페이지를 새로 고쳐야 합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 보고서 서버에 연결하면 작업 폴더를 열어 보고서 서버 컴퓨터에서 현재 처리 중인 보고서 목록을 볼 수 있습니다. 각 작업에 대한 상태 정보는 작업 속성 페이지에 표시됩니다. 보고서 서버 작업 취소 대화 상자를 열어 모든 작업에 대한 상태 정보를 볼 수 있습니다.  
   
- 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 모델 생성, 모델 처리 또는 데이터 기반 구독을 나열하거나 취소할 수 없습니다. Reporting Services는 모델 생성 또는 처리를 취소하는 방법을 제공하지 않습니다. 그러나 이 항목에 제공된 지침에 따라 데이터 기반 구독을 취소할 수 있습니다.  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 모델 생성, 모델 처리 또는 데이터 기반 구독을 나열하거나 취소할 수 없습니다. Reporting Services는 모델 생성 또는 처리를 취소하는 방법을 제공하지 않습니다. 그러나 이 항목에 제공된 지침에 따라 데이터 기반 구독을 취소할 수 있습니다.  
   
 ### <a name="how-to-cancel-report-processing-or-subscription"></a>보고서 처리 또는 구독을 취소하는 방법  
   
-1.  
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 보고서 서버에 연결합니다. 자세한 내용은 [Management Studio에서 보고서 서버에 연결](../tools/connect-to-a-report-server-in-management-studio.md)을 참조하세요.  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 보고서 서버에 연결합니다. 자세한 내용은 [Management Studio에서 보고서 서버에 연결](../tools/connect-to-a-report-server-in-management-studio.md)을 참조하세요.  
   
-2.  
-  **작업** 폴더를 엽니다.  
+2.  **작업** 폴더를 엽니다.  
   
 3.  보고서를 마우스 오른쪽 단추로 클릭한 다음 **작업 취소**를 클릭합니다.  
   
@@ -91,11 +85,9 @@ ms.locfileid: "66100816"
   
 1.  텍스트 편집기에서 RSReportServer.config 파일을 엽니다.  
   
-2.  
-  `IsNotificationService` 찾기.  
+2.  `IsNotificationService` 찾기.  
   
-3.  
-  `False`로 설정합니다.  
+3.  `False`로 설정합니다.  
   
 4.  파일을 저장합니다.  
   
@@ -106,33 +98,30 @@ ms.locfileid: "66100816"
 7.  파일을 저장합니다.  
   
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>작업 상태 검색을 위한 빈도 설정 구성  
- 실행 중인 작업은 보고서 서버 임시 데이터베이스에 저장됩니다. RSReportServer.config 파일에서 구성 설정을 수정하여 보고서 서버가 진행 중인 작업을 검색하는 빈도 및 실행 작업의 상태가 새 작업에서 실행 중인 작업으로 변경되는 간격을 제어할 수 있습니다. 
-  `RunningRequestsDbCycle` 설정은 보고서 서버가 실행 중인 프로세스를 검색하는 빈도를 지정합니다. 기본적으로 상태 정보는 60초마다 기록됩니다. 
-  `RunningRequestsAge` 설정은 작업이 새 작업에서 실행 중인 작업으로 전환되는 간격을 지정합니다.  
+ 실행 중인 작업은 보고서 서버 임시 데이터베이스에 저장됩니다. RSReportServer.config 파일에서 구성 설정을 수정하여 보고서 서버가 진행 중인 작업을 검색하는 빈도 및 실행 작업의 상태가 새 작업에서 실행 중인 작업으로 변경되는 간격을 제어할 수 있습니다. `RunningRequestsDbCycle` 설정은 보고서 서버가 실행 중인 프로세스를 검색하는 빈도를 지정합니다. 기본적으로 상태 정보는 60초마다 기록됩니다. `RunningRequestsAge` 설정은 작업이 새 작업에서 실행 중인 작업으로 전환되는 간격을 지정합니다.  
   
-##  <a name="bkmk_sharepoint"></a>작업 보기 및 취소 (SharePoint 모드)  
+##  <a name="view-and-cancel-jobs-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> 작업 보기 및 취소(SharePoint 모드)  
  SharePoint 모드 배포에서 작업 관리는 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대해 SharePoint 중앙 관리를 사용하여 완료됩니다.  
   
 #### <a name="to-manage-jobs-in-sharepoint-mode"></a>SharePoint 모드에서 작업을 관리하려면  
   
-1.  SharePoint 중앙 관리에서 **서비스 응용 프로그램 관리**를 클릭 합니다.  
+1.  SharePoint 중앙 관리에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   
-2.  
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션의 이름을 찾아서 클릭하여 애플리케이션 관리 페이지를 엽니다.  
+2.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션의 이름을 찾아서 클릭하여 애플리케이션 관리 페이지를 엽니다.  
   
-3.  **작업 관리** 클릭  
+3.  **작업 관리**를 클릭합니다.  
   
 4.  작업 세부 정보를 보려면 **작업 ID** 를 클릭합니다.  
   
 5.  또는 작업에 대한 상자를 클릭하고 **삭제** 를 클릭하여 작업을 취소합니다. 작업을 삭제해도 구독은 삭제되지 않습니다.  
   
-##  <a name="bkmk_programmatically"></a>프로그래밍 방식으로 작업 관리  
+##  <a name="managing-jobs-programmatically"></a><a name="bkmk_programmatically"></a> 프로그래밍 방식으로 작업 관리  
  프로그래밍 방식으로 또는 스크립트를 사용하여 작업을 관리할 수 있습니다. 자세한 내용은 <xref:ReportService2010.ReportingService2010.ListJobs%2A>, <xref:ReportService2010.ReportingService2010.CancelJob%2A>을 모두 관리할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Management Studio&#41;&#40;보고서 서버 작업 취소](../tools/cancel-report-server-jobs-management-studio.md)   
- [작업 속성 &#40;Management Studio&#41;](../tools/job-properties-management-studio.md)   
- [Rsreportserver.config&#41;&#40;Reporting Services 구성 파일을 수정 합니다.](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [보고서 서버 작업 취소&#40;Management Studio&#41;](../tools/cancel-report-server-jobs-management-studio.md)   
+ [작업 속성&#40;Management Studio&#41;](../tools/job-properties-management-studio.md)   
+ [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Rsreportserver.config 구성 파일](../report-server/rsreportserver-config-configuration-file.md)   
  [보고서 관리자&#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
  [보고서 서버 성능 모니터링](../report-server/monitoring-report-server-performance.md)  

@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93a62ec076b9dc61cd01d18796f04bbaa04eb93b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100702"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services의 SharePoint 라이브러리 배달
   SharePoint 통합용으로 구성된 보고서 서버는 보고서를 SharePoint 라이브러리로 보내는 데 사용할 수 있는 배달 확장 프로그램이 포함되어 있습니다.  
   
- SharePoint 배달 확장 프로그램을 사용하려면 SharePoint 사이트의 애플리케이션 페이지에서 구독을 만든 다음 배달 유형으로 **SharePoint 문서 라이브러리** 를 선택해야 합니다. 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 만들거나 보고서 관리자 하는 구독에 대해서는 SharePoint 배달 확장 프로그램을 사용할 수 없습니다.  
+ SharePoint 배달 확장 프로그램을 사용하려면 SharePoint 사이트의 애플리케이션 페이지에서 구독을 만든 다음 배달 유형으로 **SharePoint 문서 라이브러리** 를 선택해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 보고서 관리자에서 만든 구독에 대해서는 SharePoint 배달 확장 프로그램을 사용할 수 없습니다.  
   
 > [!NOTE]  
 >  배달 확장 프로그램은 보고서 서버가 기본 모드로 실행되고 있는 경우 SharePoint 사이트로의 보고서 배달을 지원하지 않습니다. 기본 모드 보고서 서버에 대해 프로그래밍 방식으로 배달 확장 프로그램을 호출하려고 하면 서버에서 `rsDeliveryExtensionNotFound` 오류를 반환하고 보고서 서버 로그 파일에 `rsOperationNotSupportedSharePointMode` 오류를 기록합니다.  
@@ -53,8 +53,7 @@ ms.locfileid: "66100702"
   
 2.  보고서를 선택하고 보고서 옆의 아래쪽 화살표를 클릭한 다음 **구독 관리**를 선택합니다.  
   
-3.  
-  **만들기**, **편집**또는 **삭제**를 클릭합니다.  
+3.  **만들기**, **편집**또는 **삭제**를 클릭합니다.  
   
  구독 관리 목록의 상태 메시지에 구독 성공 여부 및 구독이 마지막으로 실행된 날짜/시간을 비롯하여 구독에 대한 현재 정보가 표시됩니다.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66100702"
  자동 복사 기능을 사용하여 파일의 최신 버전을 자동으로 여러 위치에 복사하는 경우 **덮어쓰기** 가 설정되어 있으면 파일이 복사됩니다. **Autoincrement** 또는 **None**을 사용 하는 경우 배달이 실패 하 고 `rsDeliveryError` 오류가 발생 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SharePoint 모드 보고서 서버에 대 한 구독 만들기 및 관리](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [SharePoint 모드 보고서 서버 구독 만들기 및 관리](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [구독 및 배달&#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   

@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d187fbe95a75091b0cbcf4bf09225c5f60a9af01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096887"
 ---
 # <a name="after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers"></a>업그레이드 후 새 예약 키워드는 식별자로 사용할 수 없습니다.
@@ -27,7 +27,7 @@ ms.locfileid: "66096887"
 ## <a name="component"></a>구성 요소  
  데이터베이스 엔진  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
  호환성 수준 90 이하에서는 다음 단어가 예약 키워드가 아니며 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에서 식별자나 개체 이름으로 사용될 수 없습니다. 호환성 수준 100에서는 다음 단어가 완전 예약 키워드며 식별자나 개체 이름으로 사용될 수 없습니다.  
   
 -   EXTERNAL  
@@ -52,7 +52,7 @@ ms.locfileid: "66096887"
 -   구분 기호로 구분 식별자를 사용하여 개체를 참조합니다. 예를 들어 문은 `CREATE TABLE [MERGE] ([MERGE] int);` 대괄호를 사용 하 여 개체 이름 MERGE를 구분 합니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
- [Transact-sql&#41;&#40;예약 된 키워드](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  
+ [예약 키워드&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  
   
  [MERGE&#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)  
   

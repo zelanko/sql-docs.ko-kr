@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4c3e943bcf63f4bcdff22d5425bf474d8aa4d80d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098181"
 ---
 # <a name="removesslcertificatebindings-method-wmi-msreportserver_configurationsetting"></a>RemoveSSLCertificateBindings 메서드(WMI MSReportServer_ConfigurationSetting)
@@ -38,13 +38,13 @@ public void RemoveSSLCertificateBindings(string Application,
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- *프로그램별*  
+ *애플리케이션*  
  인증서 바인딩을 제거해야 하는 애플리케이션의 이름입니다.  
   
  *CertificateHash*  
  인증서에 대한 해시입니다.  
   
- *IP 주소*  
+ *IPAddress*  
  애플리케이션의 IP 주소입니다.  
   
  *포트*  
@@ -66,7 +66,7 @@ public void RemoveSSLCertificateBindings(string Application,
  이 메서드는 rsreportserver.config 파일에서 특정 바인딩을 제거하고 HTTP.SYS 파일에서 특정 바인딩을 선택적으로 제거합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  

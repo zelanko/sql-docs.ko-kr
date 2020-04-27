@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a1c799ec4fc37fa5cdbd6f3bcc72fad7f4c45ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102586"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>보고서 열기 및 닫기(보고서 관리자)
@@ -28,8 +28,7 @@ ms.locfileid: "66102586"
   
 1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)를 시작합니다.  
   
-2.  폴더에서 직접 찾아보거나 이름으로 검색하여 보고서를 찾습니다. 
-  **내용** 페이지에서 폴더 이름이나 폴더 아이콘을 클릭하여 폴더 내용을 찾습니다. 페이지 맨 위에 있는 **검색 대상** 입력란에 보고서 이름 전체 또는 일부를 입력하여 보고서를 검색합니다.  
+2.  폴더에서 직접 찾아보거나 이름으로 검색하여 보고서를 찾습니다. **내용** 페이지에서 폴더 이름이나 폴더 아이콘을 클릭하여 폴더 내용을 찾습니다. 페이지 맨 위에 있는 **검색 대상** 입력란에 보고서 이름 전체 또는 일부를 입력하여 보고서를 검색합니다.  
   
 3.  보고서를 보려면 보고서 이름이나 아이콘을 클릭합니다. 다음 아이콘은 보고서를 나타냅니다.  
   
@@ -44,7 +43,7 @@ ms.locfileid: "66102586"
 ## <a name="see-also"></a>참고 항목  
  [보고서 작성기 및 SSRS &#40;보고서 및 기타 항목 검색&#41;](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
  [내용 페이지 &#40;보고서 관리자&#41;](../contents-page-report-manager.md)   
- [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [보고서 작성기 및 SSRS &#40;보고서 찾기, 보기 및 관리 &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

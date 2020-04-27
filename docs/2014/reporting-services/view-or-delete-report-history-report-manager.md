@@ -26,10 +26,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a05c9dccabcf9b937ebd67fb264022761b1ca249
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098712"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>보고서 기록 보기 또는 삭제(보고서 관리자)
@@ -54,7 +54,7 @@ ms.locfileid: "66098712"
 3.  삭제 하려는 기록 스냅숏 옆의 확인란을 선택 하 고 **삭제**를 클릭 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 기록에 스냅샷 추가&#40;보고서 관리자&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [보고서 기록에 스냅숏을 추가 &#40;보고서 관리자&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [보고서 기록 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
  [보고서 처리 속성 설정](report-server/set-report-processing-properties.md)   
  [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   

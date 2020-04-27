@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7602ce0ef0e75c3c2eb1ee5a5a47e3fe56b87f44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102139"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>보고서 서버에서 사용자 지정 또는 폼 인증 구성
@@ -49,22 +49,19 @@ ms.locfileid: "66102139"
   
 4.  <`Authentication`>의 기존 항목 위에 붙여넣습니다.  
   
-     
-  `Custom`은 다른 인증 유형과 함께 사용할 수 없습니다.  
+     `Custom`은 다른 인증 유형과 함께 사용할 수 없습니다.  
   
 5.  파일을 저장합니다.  
   
 6.  보고서 서버의 Web.config 파일을 엽니다. 기본적으로 이 파일은 \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportServer에 있습니다.  
   
-7.  
-  `authentication mode`를 찾아 `Forms`로 설정합니다.  
+7.  `authentication mode`를 찾아 `Forms`로 설정합니다.  
   
     ```  
     <authentication mode = "Forms" />  
     ```  
   
-8.  
-  `identity impersonate`를 찾아 `False`로 설정합니다.  
+8.  `identity impersonate`를 찾아 `False`로 설정합니다.  
   
     ```  
     <identity impersonate = "false" />  
@@ -72,15 +69,13 @@ ms.locfileid: "66102139"
   
 9. 보고서 관리자의 Web.config 파일을 엽니다. 기본적으로 이 파일은 \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportManager에 있습니다.  
   
-10. 
-  `authentication mode`를 찾아 `Forms`로 설정합니다.  
+10. `authentication mode`를 찾아 `Forms`로 설정합니다.  
   
     ```  
     <authentication mode = "Forms" />  
     ```  
   
-11. 
-  `identity impersonate`를 찾아 `False`로 설정합니다.  
+11. `identity impersonate`를 찾아 `False`로 설정합니다.  
   
     ```  
     <identity impersonate = "false" />  
@@ -98,7 +93,7 @@ ms.locfileid: "66102139"
  [보안 확장 프로그램 구현](../extensions/security-extension/implementing-a-security-extension.md)   
  [보고서 서버 인증](authentication-with-the-report-server.md)   
  [Rsreportserver.config 구성 파일](../report-server/rsreportserver-config-configuration-file.md)   
- [보고서 서버의 기본 인증 구성](configure-basic-authentication-on-the-report-server.md)   
+ [보고서 서버에서 기본 인증 구성](configure-basic-authentication-on-the-report-server.md)   
  [보고서 서버의 Windows 인증 구성](configure-windows-authentication-on-the-report-server.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aae8b41dbd3751b21a7dc015b0a8157cf650185a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099338"
 ---
 # <a name="troubleshoot-report-builder"></a>보고서 작성기 문제 해결
@@ -25,13 +25,13 @@ ms.locfileid: "66099338"
  다음 항목은 보고서 작성자인지, 보고서 서버 관리자인지에 따라 보고서 문제를 해결하는 데 도움이 될 수 있습니다.  
   
 ## <a name="report-authors"></a>보고서 작성자  
- [보고서 문제 해결: 보고서 작성기 및 SSRS&#41;&#40;지도 보고서](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [보고서 문제 해결: 맵 보고서&#40;보고서 작성기 및 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
  [보고서 파트 &#40;보고서 작성기 및 SSRS에 대 한 문제 해결&#41;](report-parts-report-builder-and-ssrs.md)  
   
  [차트 문제 해결&#40;보고서 작성기 및 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
   
-## <a name="administrators"></a>관리자  
+## <a name="administrators"></a>Administrators  
  [설치, 제거 및 보고서 작성기 지원](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
   
  또한 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [온라인](https://go.microsoft.com/fwlink/?linkid=121312)설명서의 설명서에서 다음 항목을 참조 하세요.  

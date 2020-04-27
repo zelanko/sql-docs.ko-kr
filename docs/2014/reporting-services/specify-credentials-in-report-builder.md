@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 432b41216418cd1ad1bae70557c95a589f5e78dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101134"
 ---
 # <a name="specify-credentials-in-report-builder"></a>보고서 작성기에 자격 증명 지정
@@ -31,8 +31,7 @@ ms.locfileid: "66101134"
 ## <a name="understanding-when-credentials-are-used"></a>자격 증명이 사용되는 경우 이해  
  보고서 작성기에서 자격 증명은 주로 보고서 서버에 연결할 때 또는 포함된 데이터 원본 작성, 데이터 세트 쿼리 실행 또는 보고서 미리 보기와 같은 데이터 관련 태스크를 위해 사용됩니다. 자격 증명은 보고서에 저장되지 않습니다. 자격 증명은 보고서 서버나 로컬 클라이언트에서 별도로 관리됩니다. 다음 목록에서는 제공해야 하는 자격 증명 유형, 자격 증명이 저장되는 위치 및 사용 방법을 설명합니다.  
   
--   
-  [Reporting Services 로그인 대화 상자&#40;보고서 작성기&#41;](report-builder/reporting-services-login-dialog-box-report-builder.md)에 입력하는 보고서 서버 자격 증명  
+-   [Reporting Services 로그인 대화 상자&#40;보고서 작성기&#41;](report-builder/reporting-services-login-dialog-box-report-builder.md)에 입력하는 보고서 서버 자격 증명  
   
      보고서 서버나 SharePoint 사이트로 처음 저장, 게시 또는 이동할 때 자격 증명을 입력해야 할 수도 있습니다. 입력한 자격 증명은 보고서 작성기 세션이 종료될 때까지 사용됩니다. 이러한 자격 증명을 저장하도록 선택한 경우에는 해당 자격 증명이 사용자 설정과 함께 컴퓨터에 안전하게 저장됩니다. 이후의 보고서 작성기 세션에서 저장된 자격 증명은 같은 보고서 서버나 SharePoint 사이트에 연결하는 데 사용됩니다. 보고서 서버 관리자나 SharePoint 관리자는 사용할 자격 증명 유형을 지정합니다.  
   
@@ -60,16 +59,13 @@ ms.locfileid: "66101134"
   
 -   사용자에게 자격 증명을 입력하도록 메시지 표시  
   
--   자격 증명 필요 없음  
+-   자격 증명 필요 없음.  
   
 ### <a name="windows-integrated-security"></a>Windows 통합 보안  
- 
-  **Windows 인증 사용(통합 보안)** 을 선택하면 현재 사용자의 보안 토큰이 데이터 원본으로 전달됩니다. 이 경우 사용자 이름이나 암호를 입력하라는 메시지가 표시되지 않습니다. 이 옵션을 사용하려면 일반적으로 위임 기능을 사용할 수 있어야 합니다. 이러한 기능을 사용할 수 없으면 동일한 컴퓨터에 있는 데이터 원본을 액세스할 때만 이 옵션을 사용할 수 있습니다.  
+ **Windows 인증 사용(통합 보안)** 을 선택하면 현재 사용자의 보안 토큰이 데이터 원본으로 전달됩니다. 이 경우 사용자 이름이나 암호를 입력하라는 메시지가 표시되지 않습니다. 이 옵션을 사용하려면 일반적으로 위임 기능을 사용할 수 있어야 합니다. 이러한 기능을 사용할 수 없으면 동일한 컴퓨터에 있는 데이터 원본을 액세스할 때만 이 옵션을 사용할 수 있습니다.  
   
 ### <a name="user-name-and-password-login"></a>사용자 이름 및 암호 로그인  
- 
-  **이 사용자 이름 및 암호 사용**을 선택할 경우 사용자 이름과 암호를 제공해야 데이터 원본에 액세스할 수 있습니다. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 경우 데이터베이스 로그인에 대해 자격 증명을 사용할 수 있습니다. 자격 증명은 인증을 위해 데이터 원본으로 전달됩니다.  
+ **이 사용자 이름 및 암호 사용**을 선택할 경우 사용자 이름과 암호를 제공해야 데이터 원본에 액세스할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 경우 데이터베이스 로그인에 대해 자격 증명을 사용할 수 있습니다. 자격 증명은 인증을 위해 데이터 원본으로 전달됩니다.  
   
 ### <a name="prompted-credentials"></a>입력 정보를 요청하는 자격 증명  
  입력 정보를 요청하는 자격 증명을 지정하면 보고서에 액세스하는 각 사용자가 데이터를 검색할 때 사용자 이름과 암호를 입력해야 합니다. 이 옵션은 기밀 데이터를 포함하는 보고서에 사용하는 것이 좋습니다. 입력 정보를 요청하는 자격 증명은 Windows 계정이거나 데이터베이스 로그인에 사용할 수 있습니다. 사용자가 입력한 자격 증명을 데이터베이스 서버에서 인식하지 못하거나, 지정한 사용자가 데이터를 검색할 수 있는 권한이 없는 경우 연결이 실패합니다.  

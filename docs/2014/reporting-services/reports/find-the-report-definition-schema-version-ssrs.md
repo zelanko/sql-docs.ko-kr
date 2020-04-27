@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 395392908055a41a8418f02ce3510c050a3447f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102653"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>보고서 정의 스키마 버전 찾기(SSRS)
@@ -39,22 +39,17 @@ ms.locfileid: "66102653"
   
 ### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>방법: 보고서 디자이너의 RDL 스키마 버전 확인  
   
-1.  새 프로젝트를 엽니다. 선택한 프로젝트의 버전에 따라 RDL 스키마 버전이 결정됩니다. 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 둘 이상의 스키마 버전이 지원됩니다. 자세한 내용은 [SQL Server Data Tools의 배포 및 버전 지원&#40;SSRS&#41;](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)에 포함되지 않습니다.  
+1.  새 프로젝트를 엽니다. 선택한 프로젝트의 버전에 따라 RDL 스키마 버전이 결정됩니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 둘 이상의 스키마 버전이 지원됩니다. 자세한 내용은 [SQL Server Data Tools의 배포 및 버전 지원&#40;SSRS&#41;](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)에 포함되지 않습니다.  
   
-2.  **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다. 
-  **새 항목 추가** 대화 상자가 열립니다.  
+2.  **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다. **새 항목 추가** 대화 상자가 열립니다.  
   
-3.  
-  **템플릿** 창에서 **보고서**를 클릭합니다.  
+3.  **템플릿** 창에서 **보고서**를 클릭합니다.  
   
-4.  
-  **이름**에 보고서 이름을 입력하거나 기본 이름을 적용합니다.  
+4.  **이름**에 보고서 이름을 입력하거나 기본 이름을 적용합니다.  
   
 5.  **추가**를 클릭합니다. 보고서 디자이너의 디자인 뷰에 새 보고서가 열립니다.  
   
-6.  
-  **보기** 메뉴에서 **코드**를 클릭합니다. 보고서 정의가 XML 파일로 표시됩니다.  
+6.  **보기** 메뉴에서 **코드**를 클릭합니다. 보고서 정의가 XML 파일로 표시됩니다.  
   
      XML 보고서 요소는 스키마 네임스페이스를 지정합니다. 예를 들어 다음 보고서 요소는 보고서 디자이너에 대한 네임스페이스와 보고서 정의에 대한 네임스페이스를 지정합니다.  
   
@@ -86,7 +81,7 @@ ms.locfileid: "66102653"
      보고서 정의 네임스페이스는 다음 URL `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
 ## <a name="see-also"></a>참고 항목  
- [업그레이드 보고서](../install-windows/upgrade-reports.md)   
- [SSRS&#41;&#40;보고서 정의 언어](report-definition-language-ssrs.md)  
+ [보고서 업그레이드](../install-windows/upgrade-reports.md)   
+ [보고서 정의 언어&#40;SSRS&#41;](report-definition-language-ssrs.md)  
   
   

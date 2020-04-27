@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e6d4cf7f550db88a56b7906fb4487b6c33935636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098272"
 ---
 # <a name="listreservedurls-method-wmi-msreportserver_configurationsetting"></a>ListReservedURLs 메서드(WMI MSReportServer_ConfigurationSetting)
@@ -37,16 +37,16 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- *응용 프로그램 []*  
+ *Application[]*  
  [out] URL 예약이 있는 애플리케이션입니다.  
   
- *UrlString []*  
+ *UrlString[]*  
  [out] 예약된 URL입니다.  
   
- *계정 []*  
+ *Account[]*  
  [out] URL 예약에 대한 계정에 연결된 계정 이름입니다.  
   
- *AccountSID []*  
+ *AccountSID[]*  
  [out] URL 예약에 대한 계정에 연결된 계정 SID입니다.  
   
  *길이*  
@@ -61,7 +61,7 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
 ## <a name="remarks"></a>설명  
   
 ## <a name="requirements"></a>요구 사항  
- **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  

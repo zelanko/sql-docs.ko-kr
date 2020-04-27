@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: be19f42fa5e8a154d8f29e359b6a52395c6504d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104025"
 ---
 # <a name="configure-report-builder-access"></a>보고서 작성기 액세스 구성
-  보고서 작성기는 기본 모드 또는 SharePoint 통합 모드용으로 구성 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버와 함께 설치 되는 임시 보고 도구입니다.  
+  보고서 작성기는 기본 모드 또는 SharePoint 통합 모드용으로 구성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버와 함께 설치되는 임시 보고 도구입니다.  
   
  보고서 작성기에 대한 액세스 권한은 다음 요소에 따라 달라집니다.  
   
@@ -37,11 +37,9 @@ ms.locfileid: "66104025"
 ## <a name="prerequisites"></a>사전 요구 사항  
  일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 보고서 작성기를 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
   
- 클라이언트 컴퓨터에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0가 설치 되어 있어야 합니다. 
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 는 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 애플리케이션을 실행하기 위한 인프라를 제공합니다.  
+ 클라이언트 컴퓨터에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0가 설치 되어 있어야 합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 는 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 애플리케이션을 실행하기 위한 인프라를 제공합니다.  
   
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 6.0 이상을 사용해야 합니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 6.0 이상을 사용해야 합니다.  
   
  보고서 작성기는 항상 완전 신뢰 수준에서 실행되며 부분 신뢰 수준에서 실행되도록 구성할 수 없습니다. 이전 릴리스에서는 보고서 작성기를 부분 신뢰 수준에서 실행할 수 있었지만 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상의 버전에서는 해당 옵션이 지원되지 않습니다.  
   
@@ -73,52 +71,37 @@ ms.locfileid: "66104025"
   
 1.  Management Studio를 열고 보고서 서버에 연결합니다.  
   
-2.  
-  **보안** 폴더를 엽니다.  
+2.  **보안** 폴더를 엽니다.  
   
-3.  
-  **시스템 역할** 폴더를 엽니다.  
+3.  **시스템 역할** 폴더를 엽니다.  
   
-4.  
-  **시스템 관리자**를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+4.  **시스템 관리자**를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-5.  
-  **보고서 정의 실행** 을 선택하고 **확인**을 클릭합니다.  
+5.  **보고서 정의 실행** 을 선택하고 **확인**을 클릭합니다.  
   
-6.  
-  **시스템 사용자**를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+6.  **시스템 사용자**를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-7.  
-  **보고서 정의 실행** 을 선택하고 **확인**을 클릭합니다.  
+7.  **보고서 정의 실행** 을 선택하고 **확인**을 클릭합니다.  
   
-8.  
-  **역할** 폴더를 엽니다.  
+8.  **역할** 폴더를 엽니다.  
   
-9. 
-  **브라우저**를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+9. **브라우저**를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-10. 
-  **모델 보기** 를 선택하고 **확인**을 클릭합니다.  
+10. **모델 보기** 를 선택하고 **확인**을 클릭합니다.  
   
-11. 
-  **내용 관리자**를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+11. **내용 관리자**를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-12. 
-  **모델 보기**, **모델 관리**, **보고서 사용**을 선택하고 **확인**을 클릭합니다.  
+12. **모델 보기**, **모델 관리**, **보고서 사용**을 선택하고 **확인**을 클릭합니다.  
   
-13. 
-  **게시자**를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+13. **게시자**를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-14. 
-  **모델 관리** 를 선택하고 **확인**을 클릭합니다.  
+14. **모델 관리** 를 선택하고 **확인**을 클릭합니다.  
   
 15. 보고서 작성기 역할이 없는 경우 해당 역할을 만듭니다.  
   
-    1.  
-  **보안** 폴더를 엽니다.  
+    1.  **보안** 폴더를 엽니다.  
   
-    2.  
-  **역할**을 마우스 오른쪽 단추로 클릭하고 **새 역할**을 선택합니다.  
+    2.  **역할**을 마우스 오른쪽 단추로 클릭하고 **새 역할**을 선택합니다.  
   
     3.  이름에 **Report Builder**를 입력합니다.  
   
@@ -126,13 +109,13 @@ ms.locfileid: "66104025"
   
     5.  이 역할에 **보고서 사용**, **보고서 보기**, **모델 보기**, **리소스 보기**, **폴더 보기**및 **개별 구독 관리**태스크를 추가합니다.  
   
-    6.  **확인** 을 클릭 하 여 역할을 저장 합니다.  
+    6.  **확인** 을 클릭하여 역할을 저장합니다.  
   
 #### <a name="to-create-role-assignments-that-grant-access-to-report-builder"></a>보고서 작성기에 대한 액세스 권한을 부여하는 역할 할당을 만들려면  
   
 1.  보고서 관리자를 시작합니다.  
   
-2.  **사이트 설정**을 클릭 합니다.  
+2.  **사이트 설정**을 클릭합니다.  
   
 3.  **보안**을 클릭합니다.  
   
@@ -140,24 +123,19 @@ ms.locfileid: "66104025"
   
      그렇지 않으면 **새 역할 할당**을 클릭합니다. 그룹 또는 사용자에 Windows 도메인 사용자 또는 그룹 계정을 \<domain>\\<account\> 형식으로 입력합니다. 폼 인증 또는 사용자 지정 보안을 사용하는 경우에는 해당 배포에 적절한 형식으로 사용자 또는 그룹 계정을 지정합니다.  
   
-5.  
-  **시스템 사용자**를 선택한 다음 **확인**을 클릭합니다.  
+5.  **시스템 사용자**를 선택한 다음 **확인**을 클릭합니다.  
   
-6.  
-  **홈**을 클릭합니다.  
+6.  **홈**을 클릭합니다.  
   
-7.  
-  **폴더 설정** 탭을 클릭합니다.  
+7.  **폴더 설정** 탭을 클릭합니다.  
   
-8.  
-  **보안** 탭을 클릭합니다.  
+8.  **보안** 탭을 클릭합니다.  
   
 9. 보고서 작성기 액세스 권한을 구성할 사용자 또는 그룹에 대한 역할 할당이 이미 있는 경우 **편집**을 클릭합니다.  
   
      그렇지 않으면 **새 역할 할당**을 클릭합니다. 그룹 또는 사용자에 Windows 도메인 사용자 또는 그룹 계정을 \<domain>\\<account\> 형식으로 입력합니다. 폼 인증 또는 사용자 지정 보안을 사용하는 경우에는 해당 배포에 적절한 형식으로 사용자 또는 그룹 계정을 지정합니다.  
   
-10. 
-  **보고서 작성기**를 선택한 다음 **적용**을 클릭합니다.  
+10. **보고서 작성기**를 선택한 다음 **적용**을 클릭합니다.  
   
 11. 위의 단계를 반복하여 추가 사용자 또는 그룹에 대한 역할 할당을 만들거나 수정합니다.  
   

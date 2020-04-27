@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df37de909461ace62edbbf3cfe9e7b9dd8448b56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099386"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>보고서 파트 문제 해결(보고서 작성기 및 SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "66099386"
   
  사용자와 사용자의 동료가 갖고 있는 사용 권한을 보려면 보고서 서버 관리자에게 문의하십시오.  
   
-## <a name="when-i-search-for-report-parts-that-i-uploaded-to-a-sharepoint-server-i-do-not-see-them-why-not"></a>SharePoint 서버로 업로드한 보고서 파트가 검색되지 않는 왜 그런가요?  
+## <a name="when-i-search-for-report-parts-that-i-uploaded-to-a-sharepoint-server-i-do-not-see-them-why-not"></a>SharePoint 서버로 업로드한 보고서 파트가 검색되지 않는 이유는 무엇입니까?  
  보고서 작성기를 사용하여 게시하는 대신 SharePoint 문서 라이브러리로 수동 업로드한 보고서 파트는 보고서 파트 갤러리에 표시되지 않을 수 있습니다. 갤러리 검색에 사용되는 보고서 서버를 SharePoint 문서 라이브러리의 내용과 동기화해야 할 수 있습니다. 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?LinkId=154888) 에서 [SharePoint 중앙 관리의 보고서 서버 파일 동기화 기능 활성화](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md) 를 참조 하세요.  
   
 ## <a name="why-cant-others-see-the-image-in-their-reports"></a>다른 사용자가 자신의 보고서에서 이미지를 볼 수 없는 이유는 무엇입니까?  

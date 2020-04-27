@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4f86c02acfcefba4972769367649cfd6b2075107
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103617"
 ---
 # <a name="process-large-reports"></a>큰 보고서 처리
@@ -71,8 +71,8 @@ ms.locfileid: "66103617"
 ## <a name="see-also"></a>참고 항목  
  [구독 및 배달&#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [보고서 처리 속성 설정](set-report-processing-properties.md)   
- [보고서 데이터 원본에 대 한 자격 증명 및 연결 정보 지정](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](report-server-content-management-ssrs-native-mode.md)   
- [캐시를 미리 로드 보고서 관리자 &#40;&#41;](preload-the-cache-report-manager.md)  
+ [캐시 사전 로드&#40;보고서 관리자&#41;](preload-the-cache-report-manager.md)  
   
   

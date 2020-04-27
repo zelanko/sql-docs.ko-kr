@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 90733af47898116236d94c9b9f6ccc6d9fc542ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100873"
 ---
 # <a name="data-driven-subscriptions"></a>데이터 기반 구독
@@ -46,7 +46,7 @@ ms.locfileid: "66100873"
   
 -   데이터 기반 구독 기능을 지 원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 대 한 자세한 내용은 [SQL Server 2012 버전에서 지 원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473) 을 참조 하세요https://go.microsoft.com/fwlink/?linkid=232473).  
   
--   구독 데이터의 경우 보고서 서버에 대한 스키마 정보를 제공할 수 있는 데이터 원본을 선택합니다. 지원 되는 데이터 원본 유형의 예로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 관계형 데이터, Oracle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , 데이터베이스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , 패키지 데이터, ODBC 데이터 원본 및 OLE DB 데이터 원본이 있습니다. 구독자 데이터 원본 요구 사항에 대한 자세한 내용은 [구독자 데이터에 외부 데이터 원본 사용&#40;데이터 기반 구독&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)을 참조하세요.  
+-   구독 데이터의 경우 보고서 서버에 대한 스키마 정보를 제공할 수 있는 데이터 원본을 선택합니다. 지원되는 데이터 원본 유형의 예로는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터, Oracle, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 데이터, ODBC 데이터 원본 및 OLE DB 데이터 원본이 있습니다. 구독자 데이터 원본 요구 사항에 대한 자세한 내용은 [구독자 데이터에 외부 데이터 원본 사용&#40;데이터 기반 구독&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)을 참조하세요.  
   
 ## <a name="working-with-data-driven-subscriptions"></a>데이터 기반 구독 작업  
  다음 항목은 데이터 기반 구독에 대한 추가 정보를 제공합니다.  
@@ -54,13 +54,13 @@ ms.locfileid: "66100873"
 |토픽|Description|  
 |------------|-----------------|  
 |[Create, Modify, and Delete a Data-Driven Subscription](data-driven-subscriptions.md)|데이터 기반 구독을 만들고, 수정하고, 삭제하는 방법을 설명합니다.|  
-|[구독자 데이터에 외부 데이터 원본을 사용 하 여 데이터 기반 구독 &#40;&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|데이터 기반 구독에 사용할 수 있는 데이터 원본에 대한 정보를 제공합니다.|  
-|[SSRS 자습서 &#40;데이터 기반 구독 만들기&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)|데이터 기반 구독을 만드는 방법에 대한 단계별 학습 지침을 제공합니다.|  
+|[구독자 데이터에 외부 데이터 원본 사용&#40;데이터 기반 구독&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|데이터 기반 구독에 사용할 수 있는 데이터 원본에 대한 정보를 제공합니다.|  
+|[데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)|데이터 기반 구독을 만드는 방법에 대한 단계별 학습 지침을 제공합니다.|  
 |[보고서 캐시&#40;SSRS&#41;](../report-server/caching-reports-ssrs.md)|데이터 기반 구독과 함께 Null 배달 공급자를 사용하여 캐시를 미리 로드하는 방법을 설명합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [구독 및 배달&#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [데이터 기반 구독 만들기 페이지 &#40;보고서 관리자&#41;](../create-data-driven-subscription-page-report-manager.md)   
- [캐시를 미리 로드 보고서 관리자 &#40;&#41;](../report-server/preload-the-cache-report-manager.md)  
+ [캐시 사전 로드&#40;보고서 관리자&#41;](../report-server/preload-the-cache-report-manager.md)  
   
   

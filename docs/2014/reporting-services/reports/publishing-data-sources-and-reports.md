@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bf5b7cd9ea96adf4dc2bab781b087f7c5a117ccb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102505"
 ---
 # <a name="publishing-data-sources-and-reports"></a>데이터 원본 및 보고서 게시
@@ -43,7 +43,7 @@ ms.locfileid: "66102505"
  [보고서 &#40;보고서 작성기 및 SSRS&#41;에 데이터를 추가 합니다.](../report-data/report-datasets-ssrs.md)   
  [페이지 레이아웃 및 렌더링 &#40;보고서 작성기 및 SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [보고서 &#40;보고서 작성기 및 SSRS&#41;에 데이터를 추가 합니다.](../report-data/report-datasets-ssrs.md)   
- [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [보고서 작성기 및 SSRS &#40;보고서 찾기, 보기 및 관리 &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [보고서 &#40;보고서 작성기 및 SSRS&#41;내보내기](../report-builder/export-reports-report-builder-and-ssrs.md)   
  [보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md)  
   

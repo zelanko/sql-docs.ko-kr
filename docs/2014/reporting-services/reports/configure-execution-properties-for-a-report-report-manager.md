@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3de8f9e708149669a65b8abf4114227392aa15a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102705"
 ---
 # <a name="configure-execution-properties-for-a-report--report-manager"></a>보고서에 실행 속성 구성(보고서 관리자)
@@ -38,8 +38,7 @@ ms.locfileid: "66102705"
   
 1.  드롭다운 메뉴에서 **관리** 를 클릭한 다음 **처리 옵션** 탭을 선택합니다.  
   
-2.  
-  **보고서 실행 스냅샷에서 이 보고서 렌더링**을 클릭하고 다음 옵션 중 하나를 선택합니다.  
+2.  **보고서 실행 스냅샷에서 이 보고서 렌더링**을 클릭하고 다음 옵션 중 하나를 선택합니다.  
   
     -   스냅샷을 만들려면 **다음 일정을 사용하여 보고서 실행 스냅샷 만들기**를 선택한 다음 보고서별 일정을 정의하거나 **공유 일정** 목록에서 선택합니다.  
   
@@ -50,8 +49,8 @@ ms.locfileid: "66102705"
 ## <a name="see-also"></a>참고 항목  
  [보고서 처리 속성 설정](../report-server/set-report-processing-properties.md)   
  [보고서 &#40;보고서 관리자을 열고 닫습니다&#41;](../reports/open-and-close-a-report-report-manager.md)   
- [내용 페이지 &#40;보고서 관리자&#41;](../contents-page-report-manager.md)   
+ [내용 페이지&#40;보고서 관리자&#41;](../contents-page-report-manager.md)   
  [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [처리 옵션 속성 페이지 &#40;보고서 관리자&#41;](../processing-options-properties-page-report-manager.md)  
+ [처리 옵션 속성 페이지&#40;보고서 관리자&#41;](../processing-options-properties-page-report-manager.md)  
   
   

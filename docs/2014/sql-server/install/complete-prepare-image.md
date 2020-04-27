@@ -11,14 +11,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 23dbdd4449a72737fd0929a4243ed093013ae643
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096235"
 ---
 # <a name="complete---prepare-image"></a>완료 - 이미지 준비
-  
   **완료** 페이지를 사용하여 이미지 준비가 완료되었음을 확인할 수 있습니다.  
   
 ## <a name="options"></a>옵션  

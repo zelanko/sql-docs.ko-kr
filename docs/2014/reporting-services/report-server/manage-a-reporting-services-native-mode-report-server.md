@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: da2eb97e5ce57a2e6a82dda3e264b33e1e3a3b11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103786"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Reporting Services 기본 모드 보고서 서버 관리
@@ -54,8 +54,7 @@ ms.locfileid: "66103786"
  보고서 서버의 인바운드 요청과 아웃바운드 응답에 사용되는 포트를 여는 방법에 대해 설명합니다.  
   
  [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
- 
-  http://localhost를 사용하여 보고서 서버 또는 보고서 관리자에 연결할 때 필요한 추가 단계에 대해 설명합니다.  
+ http://localhost를 사용하여 보고서 서버 또는 보고서 관리자에 연결할 때 필요한 추가 단계에 대해 설명합니다.  
   
  [원격 관리를 위한 보고서 서버 구성](configure-a-report-server-for-remote-administration.md)  
  다른 컴퓨터에서 연결하여 구성할 수 있도록 원격 보고서 서버 인스턴스를 구성하는 방법에 대해 설명합니다.  

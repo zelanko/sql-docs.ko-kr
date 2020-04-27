@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d4cb556e127fa23f5b16506abdcc8e04ed433878
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098133"
 ---
 # <a name="restoreencryptionkey-method-wmi-msreportserver_configurationsetting"></a>RestoreEncryptionKey 메서드(WMI MSReportServer_ConfigurationSetting)
@@ -42,7 +42,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- *KeyFile []*  
+ *KeyFile[]*  
  [out] 암호화된 암호화 키를 포함하는 배열입니다.  
   
  *길이*  
@@ -54,7 +54,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
- *ExtendedErrors []*  
+ *ExtendedErrors[]*  
  [out] 호출에서 반환되는 추가 오류가 들어 있는 문자열 배열입니다.  
   
 ## <a name="return-value"></a>Return Value  
@@ -66,7 +66,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
  이 메서드는 암호화 키 목록을 지우는 [DeleteEncryptionKey](configurationsetting-method-deleteencryptionkey.md) 메서드 다음에 호출하는 것이 가장 효과적입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  

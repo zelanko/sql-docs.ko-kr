@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c7a57987a5d1cd0ac7984db3b716521d9c7a09af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101153"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>이미지를 계기의 포인터로 지정(보고서 작성기 및 SSRS)
@@ -37,8 +37,7 @@ ms.locfileid: "66101153"
   
 2.  필드 계기에 포인터가 없는 경우 계기를 마우스 오른쪽 단추로 클릭 하 고 **포인터 추가**를 선택 합니다. 포인터가 계기에 추가됩니다.  
   
-3.  리본 메뉴에서 **삽입** 탭을 클릭 하 고 이미지 아이콘을 두 번 클릭 합니다. 
-  **이미지 속성** 대화 상자가 열립니다.  
+3.  리본 메뉴에서 **삽입** 탭을 클릭 하 고 이미지 아이콘을 두 번 클릭 합니다. **이미지 속성** 대화 상자가 열립니다.  
   
 4.  보고서에 이미지를 추가합니다. 자세한 내용은 [보고서에 이미지 포함 &#40;보고서 작성기 및 SSRS&#41;](report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)를 참조 하세요.  
   
@@ -58,9 +57,9 @@ ms.locfileid: "66101153"
 10. **TransparentColor**에서 이미지에서 제거 하려는 색 값을 선택 합니다. 이렇게 하면 계기에 포인터의 모양이 깔끔하게 만들어집니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [계기의 포인터 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [계기 &#40;보고서 작성기 및 SSRS에 대 한 형식 지정&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [보고서 &#40;보고서 작성기 및 SSRS에 계기를 추가&#41;](report-design/add-a-gauge-to-a-report-report-builder-and-ssrs.md)   
- [선, 색 및 이미지 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [선, 색 및 이미지 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [계기&#40;보고서 작성기 및 SSRS&#41;](report-design/gauges-report-builder-and-ssrs.md)  
   
   

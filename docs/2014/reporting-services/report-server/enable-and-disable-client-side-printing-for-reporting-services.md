@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea5016aa51a25bd296d2e77516b30b84a7a28cec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103926"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제
@@ -47,44 +47,35 @@ ms.locfileid: "66103926"
 ## <a name="enabling-and-disabling-client-side-printing"></a>클라이언트 쪽 인쇄 기능 설정 및 해제  
  보고서 서버 관리자는 보고서 서버 시스템 속성 **EnableClientPrinting** 을로 `false`설정 하 여 인쇄 기능을 해제 하는 옵션을 사용할 수 있습니다. 이렇게 하면 해당 서버에서 관리하는 모든 보고서에 대한 클라이언트 쪽 인쇄 기능이 해제됩니다. 기본적으로 **EnableClientPrinting** 는로 `true`설정 됩니다. 다음과 같은 방법으로 클라이언트 쪽 인쇄 기능을 해제할 수 있습니다.  
   
--   
-  **기본 모드 보고서 서버**:  
+-   **기본 모드 보고서 서버**:  
   
     1.  관리자 권한으로 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 시작합니다.  
   
-    2.  
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 보고서 서버 인스턴스에 연결합니다.  
+    2.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 보고서 서버 인스턴스에 연결합니다.  
   
-    3.  보고서 서버 노드를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다. 
-  **속성** 옵션이 해제되어 있으면 관리자 권한으로 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 실행했는지 확인합니다.  
+    3.  보고서 서버 노드를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다. **속성** 옵션이 해제되어 있으면 관리자 권한으로 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 실행했는지 확인합니다.  
   
     4.  **ActiveX 클라이언트 인쇄 컨트롤에 대해 다운로드 사용을**선택 합니다.  
   
     5.  **확인**을 클릭합니다.  
   
--   
-  **SharePoint 모드 보고서 서버**:  
+-   **SharePoint 모드 보고서 서버**:  
   
     1.  SharePoint 중앙 관리에서 **애플리케이션 관리**를 클릭합니다.  
   
-    2.  
-  **서비스 애플리케이션 관리**를 클릭합니다.  
+    2.  **서비스 애플리케이션 관리**를 클릭합니다.  
   
-    3.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램의 이름을 클릭 한 다음 SharePoint 리본에서 **관리** 를 클릭 합니다.  
+    3.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션의 이름을 클릭하고 SharePoint 리본 메뉴에서 **관리** 를 클릭합니다.  
   
     4.  **시스템 설정**을 클릭합니다.  
   
-    5.  
-  **클라이언트 인쇄 사용**을 선택합니다. 
-  **클라이언트 인쇄 사용** 옵션은 페이지 아래쪽에 있습니다.  
+    5.  **클라이언트 인쇄 사용**을 선택합니다. **클라이언트 인쇄 사용** 옵션은 페이지 아래쪽에 있습니다.  
   
     6.  **확인**을 클릭합니다.  
   
 -   보고서 서버 시스템 속성 **EnableClientPrinting** 를 설정 하는 스크립트 또는 코드를 작성 합니다.`false.`  
   
- 다음 예제 스크립트에서는 클라이언트 쪽 인쇄 기능을 해제하는 한 가지 방법을 보여 줍니다. 
-  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 속성을 **EnableClientPrinting** 로 설정하려면 다음 **False**를 클릭하여 다운로드를 강제로 다시 실행할 수 있습니다. 코드를 실행한 후에는 IIS를 다시 시작합니다.  
+ 다음 예제 스크립트에서는 클라이언트 쪽 인쇄 기능을 해제하는 한 가지 방법을 보여 줍니다. 다음 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 코드를 컴파일한 후 실행하여 **EnableClientPrinting** 속성을 **False**로 설정합니다. 코드를 실행한 후에는 IIS를 다시 시작합니다.  
   
 ### <a name="sample-script"></a>예제 스크립트  
   

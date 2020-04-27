@@ -11,22 +11,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d29d41069d5daca25d53477326e864720aa87ca1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101200"
 ---
 # <a name="sharepoint-integration-with-2008-and-2008-r2--report-servers"></a>2008 및 2008 R2 보고서 서버와 SharePoint 통합
-  
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 릴리스에서는 SharePoint 모드가 SharePoint 공유 서비스를 기반으로 하는 아키텍처를 도입했습니다. 새 기능에 대한 관리는 **서비스 관리** 및 **관리자 서비스 애플리케이션** 페이지의 SharePoint 중앙 관리에서 완료됩니다. Sharepoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 통합에 대 한 이전 아키텍처는 sharepoint 2010 제품용 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능에서 계속 지원 되므로 sharepoint 2010을 이전 버전의 보고서 서버와 통합할 수 있습니다.  
   
  이전 아키텍처를 관리하는 데 사용되는 SharePoint 중앙 관리 페이지는 다음 위치에 있습니다.  
   
 1.  SharePoint 중앙 관리에서 **일반 애플리케이션 설정**을 클릭합니다.  
   
-2.  
-  **SQL Server Reporting Services(2008 및 2008 R2)** 그룹에는 이전 아키텍처에 대한 링크와 관리 페이지가 포함되어 있습니다.  
+2.  **SQL Server Reporting Services(2008 및 2008 R2)** 그룹에는 이전 아키텍처에 대한 링크와 관리 페이지가 포함되어 있습니다.  
   
 ## <a name="server-integration-architecture"></a>서버 통합 아키텍처  
  보고서 서버를 SharePoint 제품 인스턴스와 통합하면 항목과 속성이 SharePoint 콘텐츠 데이터베이스에 저장됩니다. 이로 인해 콘텐츠가 저장, 보안 유지 및 액세스되는 방법에 영향을 주는 서버 기술이 더욱 폭넓게 통합됩니다.  

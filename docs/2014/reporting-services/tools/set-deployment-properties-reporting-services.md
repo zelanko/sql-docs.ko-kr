@@ -16,16 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85ddbe528734e5824c80bd5cc00a15d3b32c9bec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099547"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>배포 속성 설정(Reporting Services)
-  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서는 보고서 서버 프로젝트의 항목을 보고서 서버에 게시할 수 있도록 보고서 서버를 지정하고 필요에 따라 보고서 및 공유 데이터 원본의 폴더를 지정해야 합니다. 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 보고서를 빌드, 미리 보기 및 배포하는 데 필요한 속성과 값은 보고서 서버 프로젝트의 프로젝트 구성에 저장됩니다. 속성 집합을 편리하게 전환할 수 있도록 이러한 프로젝트 속성에 대한 명명된 집합을 여러 개 만들 수 있습니다. 각 속성 집합은 하나의 구성입니다. 예를 들어 테스트 서버에 보고서를 게시하는 구성과 프로덕션 서버에 보고서를 게시하는 구성이 각각 존재할 수 있습니다.  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서는 보고서 서버 프로젝트의 항목을 보고서 서버에 게시할 수 있도록 보고서 서버를 지정하고 필요에 따라 보고서 및 공유 데이터 원본의 폴더를 지정해야 합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 보고서를 빌드, 미리 보기 및 배포하는 데 필요한 속성과 값은 보고서 서버 프로젝트의 프로젝트 구성에 저장됩니다. 속성 집합을 편리하게 전환할 수 있도록 이러한 프로젝트 속성에 대한 명명된 집합을 여러 개 만들 수 있습니다. 각 속성 집합은 하나의 구성입니다. 예를 들어 테스트 서버에 보고서를 게시하는 구성과 프로덕션 서버에 보고서를 게시하는 구성이 각각 존재할 수 있습니다.  
   
  구성 관리자를 사용하여 프로젝트 구성에서 프로젝트 속성 집합을 만들고 관리할 수 있습니다. 구성 관리자는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]의 기반이 되는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 에서 지원하는 기능입니다.  
   
@@ -67,7 +65,7 @@ ms.locfileid: "66099547"
   
 10. **TargetServerURL** 입력란에 대상 보고서 서버의 URL을 입력합니다. 보고서를 게시하기 전에 이 속성을 유효한 보고서 서버 URL로 설정해야 합니다. 기본 모드로 실행 중인 보고서 서버에 게시하는 경우 보고서 서버의 가상 디렉터리 URL(예: http: *//server/reportserver* 또는 https: *//server/reportserver*)을 사용합니다. 이는 보고서 관리자가 아닌 보고서 서버의 가상 디렉터리입니다.  
   
-     SharePoint 통합 모드로 실행 중인 보고서 서버에 게시하는 경우 SharePoint 최상위 사이트나 하위 사이트에 대한 URL을 사용합니다. 사이트를 지정하지 않으면 기본 최상위 사이트(예: http://*servername*, http://*servername*/*site* 또는 http://*servername*/*site*/*subsite*)가 사용됩니다.  
+     SharePoint 통합 모드로 실행 중인 보고서 서버에 게시하는 경우 SharePoint 최상위 사이트나 하위 사이트에 대한 URL을 사용합니다. 사이트를 지정 하지 않으면 기본 최상위 사이트 (예: http://*servername*, http://*servername*/*site* 또는 http://*servername*/*site*/*하위*사이트)가 사용 됩니다.  
   
 ### <a name="to-set-configuration-manager-properties"></a>구성 관리자 속성을 설정하려면  
   
@@ -86,7 +84,7 @@ ms.locfileid: "66099547"
  [데이터 원본 및 보고서 게시](../reports/publishing-data-sources-and-reports.md)   
  [보고서 미리 보기](../reports/previewing-reports.md)   
  [F1 도움말 보고서 디자이너](report-designer-f1-help.md)   
- [SharePoint 모드의 보고서 서버에 게시된 보고서 항목에 대한 URL 예&#40;SSRS&#41;](url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
+ [SharePoint 모드의 보고서 서버에 게시 된 보고서 항목에 대 한 URL 예 &#40;SSRS&#41;](url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [프로젝트 속성 페이지 대화 상자](project-property-pages-dialog-box.md)   
  [보고서 서버에 보고서 게시](../reports/publishing-reports-to-a-report-server.md)  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3e2a35e4d6fefb6830774ffd7b2c3bc13a5e097c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101373"
 ---
 # <a name="set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs"></a>계기의 맞춤 간격 설정(보고서 작성기 및 SSRS)
@@ -39,8 +39,8 @@ ms.locfileid: "66101373"
 5.  맞춤 간격을 나타내는 값으로 **SnappingInterval** 을 설정 합니다. 포인터가 지정한 값의 가장 근사한 반올림 배수로 맞춰집니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [계기의 눈금 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [계기의 포인터 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [계기의 눈금 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
+ [계기 &#40;보고서 작성기 및 SSRS에 대 한 형식 지정&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [계기&#40;보고서 작성기 및 SSRS&#41;](report-design/gauges-report-builder-and-ssrs.md)  
   
   

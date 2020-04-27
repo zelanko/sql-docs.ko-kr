@@ -13,22 +13,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3991618e6f77eab9ae96b2879098f91dab5a748a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099663"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>서버 속성(고급 페이지) - Reporting Services
   이 페이지를 사용하여 보고서 서버의 시스템 속성을 설정할 수 있습니다. 시스템 속성을 설정하는 데에는 여러 가지 방법이 있습니다. 이 도구는 그래픽 사용자 인터페이스를 제공하므로 코드를 작성하지 않고도 속성을 설정할 수 있습니다.  
   
- 이 페이지를 열려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 시작하고 보고서 서버 인스턴스에 연결한 다음 보고서 서버 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 
-  **고급** 을 클릭하여 이 페이지를 엽니다.  
+ 이 페이지를 열려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 시작하고 보고서 서버 인스턴스에 연결한 다음 보고서 서버 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **고급** 을 클릭하여 이 페이지를 엽니다.  
   
 ## <a name="options"></a>옵션  
  **EnableMyReports**  
- 내 보고서 기능이 설정되어 있는지 여부를 나타냅니다. 
-  `true` 값은 이 기능이 설정되어 있음을 나타냅니다.  
+ 내 보고서 기능이 설정되어 있는지 여부를 나타냅니다. `true` 값은 이 기능이 설정되어 있음을 나타냅니다.  
   
  **MyReportsRole**  
  사용자의 내 보고서 폴더에서 보안 정책을 만들 때 사용된 역할의 이름입니다. 기본값은 `My Reports Role`입니다.  
@@ -66,11 +64,11 @@ ms.locfileid: "66099663"
  **SnapshotCompression**  
  스냅샷의 압축 방식을 정의합니다. 기본값은 `SQL`입니다. 유효한 값은 다음과 같습니다.  
   
- **SQL =** 스냅숏은 보고서 서버 데이터베이스에 저장 될 때 압축 됩니다. 이것은 현재 동작입니다.  
+ **SQL =** 보고서 서버 데이터베이스에 저장될 때 스냅샷이 압축됩니다. 이것은 현재 동작입니다.  
   
- **없음** = 스냅숏이 압축 되지 않습니다.  
+ **None =** 스냅샷이 압축되지 않습니다.  
   
- **모두 =** 스냅숏은 보고서 서버 데이터베이스 또는 파일 시스템을 포함 하는 모든 저장소 옵션에 대해 압축 됩니다.  
+ **All =** 보고서 서버 데이터베이스, 파일 시스템을 포함한 모든 스토리지 옵션에 대해 스냅샷이 압축됩니다.  
   
  **SystemReportTimeout**  
  보고서 서버 네임스페이스에서 관리되는 모든 보고서에 대한 기본 보고서 처리 제한 시간 값(초)입니다. 이 값은 보고서 수준에서 무시할 수 있습니다. 이 속성을 설정하면 지정된 시간이 만료될 경우 보고서 서버가 보고서 처리를 중지합니다. 유효한 값은 `-1`부터 `2`,`147`,`483`,`647`까지입니다. 값이 `-1`이면 네임스페이스의 보고서 처리 중 시간 제한으로 인한 중지가 발생하지 않습니다. 기본값은 `1800`입니다.  
@@ -81,11 +79,9 @@ ms.locfileid: "66099663"
  **EnableIntegratedSecurity**  
  보고서 데이터 원본 연결에 Windows 통합 보안이 지원되는지 여부를 지정합니다. 기본값은 `True`입니다. 유효한 값은 다음과 같습니다.  
   
- 
-  `True` = Windows 통합 보안이 사용됩니다.  
+ `True` = Windows 통합 보안이 사용됩니다.  
   
- 
-  `False` = Windows 통합 보안이 사용되지 않습니다. Windows 통합 보안을 사용하도록 구성된 보고서 데이터 원본은 실행되지 않습니다.  
+ `False` = Windows 통합 보안이 사용되지 않습니다. Windows 통합 보안을 사용하도록 구성된 보고서 데이터 원본은 실행되지 않습니다.  
   
  `EnableLoadReportDefinition`  
  이 옵션을 선택하면 사용자가 보고서 작성기 보고서에서 임시 보고서 실행을 수행할 수 있는지 여부를 지정할 수 있습니다. 이 옵션 설정에 따라 보고서 서버의 `EnableLoadReportDefinition` 속성 값이 결정됩니다.  
@@ -94,7 +90,7 @@ ms.locfileid: "66099663"
   
  이 옵션을 끄면 악의적인 사용자가 LoadReportDefinition 요청으로 보고서 서버에 오버로드를 가하여 서비스 거부 공격을 실행할 수 있는 위협이 완화됩니다.  
   
- **Enableremoteerrors&lt**  
+ **EnableRemoteErrors**  
  원격 컴퓨터에서 보고서를 요청하는 사용자에 대해 반환되는 오류 메시지에 외부 오류 정보(예: 보고서 데이터 원본에 대한 오류 정보)를 포함합니다. 유효한 값은 `true` 및 `false`입니다. 기본값은 `false`입니다. 자세한 내용은 [원격 오류 사용&#40;Reporting Services&#41;](../report-server/enable-remote-errors-reporting-services.md)을 참조하세요.  
   
  **EnableReportDesignClientDownload**  
@@ -110,10 +106,10 @@ ms.locfileid: "66099663"
  사용자가 보고서 서버를 사용하여 데이터 원본 연결을 테스트할 때 클라이언트 컴퓨터로 자세한 오류 메시지를 보낼지 여부를 나타냅니다. 기본값은 `true`입니다. 이 옵션이 `false`로 설정되어 있으면 일반 오류 메시지만 보냅니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 서버 속성 설정&#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
+ [보고서 서버 속성 &#40;Management Studio&#41;설정](set-report-server-properties-management-studio.md)   
  [Management Studio에서 보고서 서버에 연결](connect-to-a-report-server-in-management-studio.md)   
  [Reporting Services 속성](../report-server-web-service/net-framework/reporting-services-properties.md)   
- [Management Studio의 보고서 서버 F1 도움말](report-server-in-management-studio-f1-help.md)   
+ [Management Studio F1 도움말의 보고서 서버](report-server-in-management-studio-f1-help.md)   
  [보고서 서버 시스템 속성](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)   
  [배포 및 관리 태스크 스크립팅](script-deployment-and-administrative-tasks.md)   
  [내 보고서 설정 및 해제](../report-server/enable-and-disable-my-reports.md)  

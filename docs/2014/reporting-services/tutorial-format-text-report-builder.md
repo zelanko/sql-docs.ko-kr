@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dc58232ed3025063fb329392b58895ed667465f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098899"
 ---
 # <a name="tutorial-format-text-report-builder"></a>자습서: 텍스트 서식 지정(보고서 작성기)
@@ -28,23 +28,23 @@ ms.locfileid: "66098899"
   
  이 자습서에서 만드는 향상된 버전의 보고서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 보고서 작성기의 예제 보고서로 제공됩니다. 이 예제 보고서 및 기타 보고서를 다운로드하는 방법은 [보고서 작성기 예제 보고서(Report Builder sample reports)](https://go.microsoft.com/fwlink/?LinkId=184851)를 참조하십시오.  
   
-##  <a name="BackToTop"></a>학습 내용  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>학습 내용  
   
 ### <a name="set-up-the-report"></a>보고서 설정  
- 1. [데이터 원본 및 데이터 집합을 사용 하 여 빈 보고서 만들기](#CreateReport)  
+ 1. [빈 보고서와 함께 데이터 원본 및 데이터 세트 만들기](#CreateReport)  
   
  2. [보고서 디자인 화면에 필드 추가(잘못 추가한 후 올바르게 추가)](#AddField)  
   
- 3. [보고서에 테이블을 추가 Design Surface](#AddTable)  
+ 3. [보고서 디자인 화면에 테이블 추가](#AddTable)  
   
 ### <a name="pick-and-choose"></a>선택  
  [보고서에 하이퍼링크 추가](#AddHyperlink)  
   
  [보고서의 텍스트 회전](#RotateText)  
   
- [HTML 서식을 사용 하 여 텍스트 표시](#FormatHTML)  
+ [HTML 서식을 사용하여 텍스트 표시](#FormatHTML)  
   
- [통화 형식 지정](#FormatCurrency)  
+ [통화 서식 지정](#FormatCurrency)  
   
  [보고서 저장](#Save)  
   
@@ -53,18 +53,16 @@ ms.locfileid: "66098899"
 ## <a name="requirements"></a>요구 사항  
  요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/report-builder-tutorials.md)을 참조하세요.  
   
-##  <a name="CreateReport"></a>데이터 원본 및 데이터 집합을 사용 하 여 빈 보고서 만들기  
+##  <a name="create-a-blank-report-with-a-data-source-and-dataset"></a><a name="CreateReport"></a>데이터 원본 및 데이터 집합을 사용 하 여 빈 보고서 만들기  
   
 #### <a name="to-create-a-blank-report"></a>빈 보고서를 만들려면  
   
 1.  **시작**을 클릭 하 고 **프로그램**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **보고서 작성기**을 차례로 가리킨 다음 **보고서 작성기**를 클릭 합니다.  
   
     > [!NOTE]  
-    >  
-  **시작** 대화 상자가 나타나야 합니다. 이 대화 상자가 나타나지 않으면 보고서 작성기 단추에서 **새로 만들기**를 클릭합니다.  
+    >  **시작** 대화 상자가 나타나야 합니다. 이 대화 상자가 나타나지 않으면 보고서 작성기 단추에서 **새로 만들기**를 클릭합니다.  
   
-2.  
-  **시작** 대화 상자의 왼쪽 창에서 **새 보고서** 가 선택되어 있는지 확인합니다.  
+2.  **시작** 대화 상자의 왼쪽 창에서 **새 보고서** 가 선택되어 있는지 확인합니다.  
   
 3.  오른쪽 창에서 **빈 보고서**를 클릭합니다.  
   
@@ -72,17 +70,14 @@ ms.locfileid: "66098899"
   
 1.  보고서 데이터 창에서 **새로 만들기**를 클릭 한 다음 **데이터 원본**을 클릭 합니다.  
   
-2.  
-  **이름** 상자에 **TextDataSource**를 입력합니다.  
+2.  **이름** 상자에 **TextDataSource**를 입력합니다.  
   
-3.  
-  **내 보고서에 포함된 연결 사용**을 클릭합니다.  
+3.  **내 보고서에 포함된 연결 사용**을 클릭합니다.  
   
 4.  연결 형식이 Microsoft SQL Server인지 확인한 다음 **연결 문자열** 상자에 **Data Source = \<servername>** 을 입력합니다.  
   
     > [!NOTE]  
-    >  \<서버 이름> (예:: report001))는 SQL Server 데이터베이스 엔진 인스턴스가 설치 된 컴퓨터를 지정 합니다. 이 자습서를 사용하기 위해 특정 데이터가 필요하지는 않습니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 데이터베이스에 연결하기만 하면 됩니다. 
-  **데이터 원본 연결**에 나열된 데이터 원본 연결이 이미 있는 경우 해당 데이터 원본 연결을 선택하고 다음 절차인 "데이터 세트를 만들려면"으로 이동할 수 있습니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)를 참조하세요.  
+    >  \<서버 이름> (예:: report001))는 SQL Server 데이터베이스 엔진 인스턴스가 설치 된 컴퓨터를 지정 합니다. 이 자습서를 사용하기 위해 특정 데이터가 필요하지는 않습니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 데이터베이스에 연결하기만 하면 됩니다. **데이터 원본 연결**에 나열된 데이터 원본 연결이 이미 있는 경우 해당 데이터 원본 연결을 선택하고 다음 절차인 "데이터 세트를 만들려면"으로 이동할 수 있습니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)를 참조하세요.  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -92,13 +87,11 @@ ms.locfileid: "66098899"
   
 2.  데이터 원본이 **TextDataSource**인지 확인합니다.  
   
-3.  
-  **이름** 상자에 **TextDataset**를 입력합니다.  
+3.  **이름** 상자에 **TextDataset**를 입력합니다.  
   
-4.  
-  **텍스트** 쿼리 유형이 선택되어 있는지 확인한 다음 **쿼리 디자이너**를 클릭합니다.  
+4.  **텍스트** 쿼리 유형이 선택되어 있는지 확인한 다음 **쿼리 디자이너**를 클릭합니다.  
   
-5.  **텍스트로 편집을**클릭 합니다.  
+5.  **텍스트로 편집**을 클릭합니다.  
   
 6.  쿼리 창에 다음 쿼리를 붙여 넣습니다.  
   
@@ -135,14 +128,13 @@ ms.locfileid: "66098899"
     UNION SELECT CAST('2009-01-06' AS date) as SalesDate, 'Fernando Ross' as FullName,'South' as Territory, 'Digital' as Subcategory, 'Slim Digital' as Product, CAST(6648.25 AS money) AS Sales, 35 as Quantity, 'What is New in Report Builder' as Link, 'https://go.microsoft.com/fwlink/?LinkId=165064' AS URL  
     ```  
   
-7.  
-  실행 (**!**)을 클릭하여 쿼리를 실행합니다.  
+7.  실행(**!**)을 클릭하여 쿼리를 실행합니다.  
   
      쿼리 결과는 보고서에 표시할 수 있는 데이터입니다.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="AddField"></a>보고서에 필드 추가 Design Surface  
+##  <a name="add-a-field-to-the-report-design-surface"></a><a name="AddField"></a>보고서에 필드 추가 Design Surface  
  데이터 세트의 필드가 보고서에 나타나도록 하려는 경우 먼저 해당 필드를 디자인 화면으로 직접 끌 수 있습니다. 이 연습에서는 이러한 방법이 올바르지 않은 이유와 대신 사용할 수 있는 방법을 보여 줍니다.  
   
 #### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>보고서에 필드를 추가하려면(잘못된 결과)  
@@ -155,20 +147,17 @@ ms.locfileid: "66098899"
   
      쿼리의 첫 번째 레코드 **김철수 Ross**레코드는 하나 뿐입니다. 즉, 이 필드가 반복되어 해당 필드의 다른 레코드가 표시되지 않습니다.  
   
-3.  
-  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
+3.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
   
 4.  텍스트 상자에서 \<식> 식을 선택 합니다.  
   
-5.  
-  **값** 속성에 대한 속성 창에서 다음을 확인합니다. 속성 창이 표시되지 않으면 **보기** 탭에서 **속성**을 선택합니다.  
+5.  **값** 속성에 대한 속성 창에서 다음을 확인합니다. 속성 창이 표시되지 않으면 **보기** 탭에서 **속성**을 선택합니다.  
   
     ```  
     =First(Fields!FullName.Value, "TextDataSet")  
     ```  
   
-     
-  `First` 함수는 필드의 첫 번째 값만 검색하도록 디자인되었으므로 첫 번째 값만 검색되었습니다.  
+     `First` 함수는 필드의 첫 번째 값만 검색하도록 디자인되었으므로 첫 번째 값만 검색되었습니다.  
   
      필드를 디자인 화면으로 직접 끌어 올 때 입력란이 만들어졌습니다. 입력란 자체는 데이터 영역이 아니므로 보고서 데이터 세트의 데이터가 표시되지 않습니다. 테이블, 행렬 및 목록과 같은 데이터 영역의 입력란에는 데이터가 표시됩니다.  
   
@@ -186,13 +175,11 @@ ms.locfileid: "66098899"
   
      이번에는 입력란이 반복되어 쿼리의 모든 레코드가 표시됩니다.  
   
-4.  
-  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
+4.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
   
 5.  입력란에서 식을 선택합니다.  
   
-6.  
-  **값** 속성에 대한 속성 창에서 다음을 확인합니다.  
+6.  **값** 속성에 대한 속성 창에서 다음을 확인합니다.  
   
     ```  
     =Fields!FullName.Value  
@@ -202,7 +189,7 @@ ms.locfileid: "66098899"
   
 7.  목록 상자를 선택하고 Delete 키를 누릅니다.  
   
-##  <a name="AddTable"></a>보고서에 테이블을 추가 Design Surface  
+##  <a name="add-a-table-to-the-report-design-surface"></a><a name="AddTable"></a>보고서에 테이블을 추가 Design Surface  
  하이퍼링크와 회전된 텍스트를 배치할 수 있도록 테이블을 만듭니다.  
   
 #### <a name="to-add-a-table-to-the-report"></a>보고서에 테이블을 추가하려면  
@@ -223,8 +210,7 @@ ms.locfileid: "66098899"
   
      테이블에 이상이 없어 보이지만 두 개의 합계 행이 있습니다. **T** 필드에는 합계 행이 필요 하지 않습니다.  
   
-8.  
-  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
+8.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
   
 9. 이 들어 `[LinkText]`있는 입력란을 마우스 오른쪽 단추로 클릭 하 고 **셀 분할**을 클릭 합니다.  
   
@@ -234,16 +220,14 @@ ms.locfileid: "66098899"
   
 12. **실행**을 클릭합니다.  
   
-##  <a name="AddHyperlink"></a>보고서에 하이퍼링크 추가  
+##  <a name="add-a-hyperlink-to-the-report"></a><a name="AddHyperlink"></a>보고서에 하이퍼링크 추가  
  이 섹션에서는 이전 섹션의 테이블에 있는 텍스트에 하이퍼링크를 추가합니다.  
   
 #### <a name="to-add-a-hyperlink-to-the-report"></a>보고서에 하이퍼링크를 추가하려면  
   
-1.  
-  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
+1.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
   
-2.  
-  `[LinkText]`가 들어 있는 셀을 마우스 오른쪽 단추로 클릭하고 **입력란 속성**을 클릭합니다.  
+2.  `[LinkText]`가 들어 있는 셀을 마우스 오른쪽 단추로 클릭하고 **입력란 속성**을 클릭합니다.  
   
 3.  **텍스트 상자 속성** 상자에서 **동작**을 클릭 합니다.  
   
@@ -253,8 +237,7 @@ ms.locfileid: "66098899"
   
 6.  텍스트가 다르게 표시되지 않습니다. 텍스트가 링크 텍스트처럼 표시되도록 해야 합니다.  
   
-7.  
-  `[LinkText]`를 선택합니다.  
+7.  `[LinkText]`를 선택합니다.  
   
 8.  **홈** 탭의 **글꼴** 섹션에서 **밑줄** 단추를 클릭 하 고 **색** 단추 옆에 있는 드롭다운 화살표를 클릭 한 다음 **Blue**를 클릭 합니다.  
   
@@ -264,18 +247,16 @@ ms.locfileid: "66098899"
   
 10. 링크를 클릭합니다. 컴퓨터가 인터넷에 연결되어 있으면 보고서 작성기 도움말 항목이 브라우저에서 열립니다.  
   
-##  <a name="RotateText"></a>보고서의 텍스트 회전  
+##  <a name="rotate-text-in-the-report"></a><a name="RotateText"></a>보고서의 텍스트 회전  
  이 섹션에서는 이전 섹션의 테이블에 있는 텍스트 일부를 회전합니다.  
   
 #### <a name="to-rotate-text"></a>텍스트를 회전하려면  
   
-1.  
-  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
+1.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
   
 2.  가 들어 있는 셀을 클릭합니다.(!!) `[Territory].`  
   
-3.  
-  **홈** 탭의 **글꼴** 섹션에서 **굵게** 단추를 클릭합니다.  
+3.  **홈** 탭의 **글꼴** 섹션에서 **굵게** 단추를 클릭합니다.  
   
 4.  속성 창이 열려 있지 않으면 **보기** 탭에서 **속성** 확인란을 선택합니다.  
   
@@ -288,18 +269,17 @@ ms.locfileid: "66098899"
   
 7.  **단락** 섹션의 **홈** 탭에서 **가운데** 및 **가운데** 단추를 클릭 하 여 셀 가운데에서 세로 및 가로로 가운데에 있는 텍스트를 찾습니다.  
   
-8.  실행 (**!**)을 클릭 합니다.  
+8.  실행 (**!**)을 클릭합니다.  
   
  이제 `[Territory]` 셀에 있는 텍스트가 셀의 아래쪽에서 위쪽으로 세로로 움직입니다.  
   
-##  <a name="FormatHTML"></a>HTML 서식을 사용 하 여 텍스트 표시  
+##  <a name="displaying-text-with-html-formatting"></a><a name="FormatHTML"></a>HTML 서식을 사용 하 여 텍스트 표시  
   
 #### <a name="to-display-text-formatted-as-html"></a>HTML로 서식이 지정된 텍스트를 표시하려면  
   
 1.  디자인 **을 클릭 하 여 디자인** 뷰로 전환 합니다.  
   
-2.  
-  **삽입** 탭에서 **입력란**을 클릭하고 디자인 화면에서 마우스 단추를 클릭한 다음 끌어서 테이블 아래에 약 4인치 너비와 3인치 높이의 입력란을 만듭니다.  
+2.  **삽입** 탭에서 **입력란**을 클릭하고 디자인 화면에서 마우스 단추를 클릭한 다음 끌어서 테이블 아래에 약 4인치 너비와 3인치 높이의 입력란을 만듭니다.  
   
 3.  이 텍스트를 복사하여 입력란에 붙여 넣습니다.  
   
@@ -333,17 +313,15 @@ ms.locfileid: "66098899"
   
  입력란의 텍스트가 머리글, 단락 및 글머리 기호 목록으로 표시됩니다.  
   
-##  <a name="FormatCurrency"></a>통화 형식 지정  
+##  <a name="format-currency"></a><a name="FormatCurrency"></a>통화 형식 지정  
   
 #### <a name="to-format-numbers-as-currency"></a>숫자를 통화 서식으로 지정하려면  
   
 1.  디자인 **을 클릭 하 여 디자인** 뷰로 전환 합니다.  
   
-2.  
-  `[Sum(Sales)]`이 들어 있는 위쪽 테이블 셀을 클릭하고 Shift 키를 누른 상태로 `[Sum(Sales)]`이 들어 있는 아래쪽 테이블 셀을 클릭합니다.  
+2.  `[Sum(Sales)]`이 들어 있는 위쪽 테이블 셀을 클릭하고 Shift 키를 누른 상태로 `[Sum(Sales)]`이 들어 있는 아래쪽 테이블 셀을 클릭합니다.  
   
-3.  
-  **홈** 탭의 **숫자** 그룹에서 **통화** 단추를 클릭합니다.  
+3.  **홈** 탭의 **숫자** 그룹에서 **통화** 단추를 클릭합니다.  
   
 4.  필드 **홈** 탭의 **숫자** 그룹에서 **자리 표시자 스타일** 단추를 클릭 하 고 **샘플 값** 을 클릭 하 여 숫자의 서식을 지정 하는 방법을 확인 합니다.  
   
@@ -353,25 +331,22 @@ ms.locfileid: "66098899"
   
  이제 보고서에 서식이 지정된 데이터가 표시되므로 보다 쉽게 읽을 수 있습니다.  
   
-##  <a name="Save"></a>보고서 저장  
+##  <a name="save-the-report"></a><a name="Save"></a>보고서 저장  
  보고서를 보고서 서버, SharePoint 라이브러리 또는 컴퓨터에 저장할 수 있습니다.  
   
  이 자습서에서는 보고서를 보고서 서버에 저장합니다. 보고서 서버에 액세스할 수 없는 경우에는 보고서를 컴퓨터에 저장하십시오.  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>보고서를 보고서 서버에 저장하려면  
   
-1.  
-  **보고서 작성기** 단추에서 **다른 이름으로 저장**을 클릭합니다.  
+1.  **보고서 작성기** 단추에서 다른 **이름으로 저장**을 클릭 합니다.  
   
-2.  
-  **최근에 사용한 사이트 및 서버**를 클릭합니다.  
+2.  **최근에 사용한 사이트 및 서버**를 클릭합니다.  
   
 3.  보고서를 저장할 수 있는 권한을 가진 보고서 서버의 이름을 선택하거나 입력합니다.  
   
      "보고서 서버에 연결하는 중"이라는 메시지가 나타납니다. 연결되면 보고서 서버 관리자가 보고서의 기본 위치로 지정한 보고서 폴더의 내용이 표시됩니다.  
   
-4.  
-  **이름**에서 기본 이름을 선택한 이름으로 대체합니다.  
+4.  **이름**에서 기본 이름을 선택한 이름으로 대체합니다.  
   
 5.  **저장**을 클릭합니다.  
   
@@ -379,14 +354,11 @@ ms.locfileid: "66098899"
   
 #### <a name="to-save-the-report-on-your-computer"></a>컴퓨터에 보고서를 저장하려면  
   
-1.  
-  **보고서 작성기** 단추에서 **다른 이름으로 저장**을 클릭합니다.  
+1.  **보고서 작성기** 단추에서 다른 **이름으로 저장**을 클릭 합니다.  
   
-2.  
-  **바탕 화면**, **내 문서**또는 **내 컴퓨터**를 클릭한 다음 보고서를 저장할 폴더를 찾습니다.  
+2.  **바탕 화면**, **내 문서**또는 **내 컴퓨터**를 클릭한 다음 보고서를 저장할 폴더를 찾습니다.  
   
-3.  
-  **이름**에서 기본 이름을 선택한 이름으로 대체합니다.  
+3.  **이름**에서 기본 이름을 선택한 이름으로 대체합니다.  
   
 4.  **저장**을 클릭합니다.  
   
@@ -395,7 +367,7 @@ ms.locfileid: "66098899"
   
 ## <a name="see-also"></a>참고 항목  
  [자습서 &#40;보고서 작성기&#41;](report-builder-tutorials.md)   
- [보고서 항목 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [보고서 항목 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [SQL Server 2014의 보고서 작성기](report-builder/report-builder-in-sql-server-2016.md)  
   
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93365925d412f672b9e8d3e5a9b5f67a850e508a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100007"
 ---
 # <a name="server-properties-general-page"></a>서버 속성(일반 페이지)
@@ -33,7 +33,7 @@ ms.locfileid: "66100007"
  **버전**  
  이 속성은 읽기 전용입니다. 사용 중인의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 버전을 지정 합니다.  
   
- **에디션이**  
+ **버전(Edition)**  
  이 속성은 읽기 전용입니다. 현재 보고서 서버 인스턴스를 지정합니다. 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 보고서 관리자를 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
   
  **인증 모드**  
@@ -42,21 +42,20 @@ ms.locfileid: "66100007"
  **URL**  
  이 속성은 읽기 전용입니다. 보고서 서버 웹 서비스에 대한 URL을 지정합니다. 이 값은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구에 지정됩니다. 자세한 내용은 [URL 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)을 참조하세요.  
   
- **각 사용자에 대해 내 보고서 폴더를 사용 하도록 설정**  
+ **각 사용자에 대해 내 보고서 폴더 설정**  
  사용자가 내 보고서를 사용할 수 있도록 합니다. 이 옵션은 기본 모드 보고서 서버에서만 사용할 수 있습니다.  
   
- **각 내 보고서 폴더에 적용할 역할을 선택 하십시오.**  
+ **각 내 보고서 폴더에 적용할 역할을 선택하십시오.**  
  내 보고서의 보안에 사용할 역할 정의를 지정합니다. 역할 정의는 각 내 보고서 폴더에서 지원되는 태스크 집합을 식별합니다.  
   
  **ActiveX 클라이언트 인쇄 컨트롤에 대한 다운로드 설정**  
- 
-  `EnableClientPrinting` 보고서 서버 시스템 속성을 설정합니다. 클라이언트 인쇄를 설정하는 경우 로컬 관리자 권한을 가진 사용자는 HTML 보고서 인쇄를 위한 서명된 ActiveX 컨트롤을 다운로드할 수 있습니다. 자세한 내용은 [Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)를 참조하세요.  
+ `EnableClientPrinting` 보고서 서버 시스템 속성을 설정합니다. 클라이언트 인쇄를 설정하는 경우 로컬 관리자 권한을 가진 사용자는 HTML 보고서 인쇄를 위한 서명된 ActiveX 컨트롤을 다운로드할 수 있습니다. 자세한 내용은 [Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 서버 속성 설정&#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
+ [보고서 서버 속성 &#40;Management Studio&#41;설정](set-report-server-properties-management-studio.md)   
  [Management Studio에서 보고서 서버에 연결](connect-to-a-report-server-in-management-studio.md)   
  [내 보고서 사용 및 사용 안 함](../report-server/enable-and-disable-my-reports.md)   
- [Management Studio의 보고서 서버 F1 도움말](report-server-in-management-studio-f1-help.md)   
+ [Management Studio F1 도움말의 보고서 서버](report-server-in-management-studio-f1-help.md)   
  [내 보고서 보안 설정](../security/secure-my-reports.md)  
   
   

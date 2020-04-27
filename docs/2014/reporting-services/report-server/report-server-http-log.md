@@ -13,14 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca3437315803ff8435640bf58219fe93f96e242a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103401"
 ---
 # <a name="report-server-http-log"></a>보고서 서버 HTTP 로그
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 HTTP 로그 파일은 보고서 서버에서 처리하는 모든 HTTP 요청 및 응답에 대한 기록을 유지합니다. 요청 오버플로 및 제한 시간 오류는 보고서 서버에 도달하지 않으므로 로그 파일에 기록되지 않습니다.  
   
  HTTP 로깅은 기본적으로 사용되지 않습니다. HTTP 로깅을 사용하려면 설치에서 이 기능을 사용하도록 **ReportingServicesService.exe.config** 구성 파일을 수정합니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "66103401"
 |**파일 생성 및 보존**|HTTP 로그는 구성 파일에서 사용하도록 설정하고, 서비스를 다시 시작하고, 보고서 서버가 HTTP 요청을 처리한 후에 만들어집니다. 설정을 구성했지만 로그 파일이 표시되지 않을 경우 보고서를 열거나 보고서 관리자와 같은 보고서 서버 애플리케이션을 시작하여 해당 파일을 만들기 위한 HTTP 요청을 생성합니다.<br /><br /> 로그 파일의 새 인스턴스는 각 서비스 다시 시작 작업 및 보고서 서버에 대한 이후 HTTP 요청 후에 만들어집니다.<br /><br /> 기본적으로 추적 로그는 32MB로 제한되며 14일 후 삭제됩니다.|  
   
 ## <a name="configuration-settings-for-report-server-http-log"></a>보고서 서버 HTTP 로그에 대한 구성 설정  
- 보고서 서버 HTTP 로그를 구성 하려면 메모장을 사용 하 여 **ReportingServicesService** 파일을 수정 합니다. 구성 파일은 \Program Files\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin 폴더에 있습니다.  
+ 보고서 서버 HTTP 로그를 구성하려면 메모장을 사용하여 **ReportingServicesService.exe.config** 파일을 수정합니다. 구성 파일은 \Program Files\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin 폴더에 있습니다.  
   
  HTTP 서버를 사용하려면 ReportingServicesService.exe.config 파일의 RStrace 섹션에 `http:4`를 추가합니다. 다른 모든 HTTP 로그 파일 항목은 선택 사항입니다. 다음 예에는 모든 설정이 포함되어 있으므로 RStrace 섹션에 전체 섹션을 붙여 넣은 다음 필요하지 않은 설정을 삭제할 수 있습니다.  
   

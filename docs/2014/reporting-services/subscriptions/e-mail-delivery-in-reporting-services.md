@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68024e36dd5f8188097ebcc673056c1b6d11e59b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100891"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services의 전자 메일 배달
@@ -28,7 +28,7 @@ ms.locfileid: "66100891"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Sharepoint 모드 &#124; SharePoint 2010 및 SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]기본 모드|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Sharepoint 모드 &#124; SharePoint 2010 및 SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드|  
   
 ## <a name="e-mail-delivery-options"></a>전자 메일 배달 옵션  
  보고서 서버 전자 메일 배달에서는 다음과 같은 방법으로 보고서를 배달할 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "66100891"
   
      브라우저에서 HTML 4.0 및 MHTML을 지원하고 웹 보관 파일 렌더링 형식을 선택한 경우 보고서는 메시지의 일부로 포함됩니다. CSV, PDF를 비롯한 다른 렌더링 형식은 모두 보고서를 첨부 파일로 배달합니다. 이 기능은 RSReportServer 구성 파일에서 해제할 수 있습니다.  
   
-     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 보고서를 보내기 전에 첨부 파일 또는 메시지의 크기를 확인 하지 않습니다. 첨부 파일 또는 메시지가 메일 서버에서 허용하는 최대 제한을 초과할 경우 보고서가 배달되지 않습니다. 큰 보고서의 경우 URL, 알림 등과 같은 다른 배달 옵션 중 하나를 선택하십시오.  
+     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서를 보내기 전에 첨부 파일 또는 메시지의 크기를 확인하지 않습니다. 첨부 파일 또는 메시지가 메일 서버에서 허용하는 최대 제한을 초과할 경우 보고서가 배달되지 않습니다. 큰 보고서의 경우 URL, 알림 등과 같은 다른 배달 옵션 중 하나를 선택하십시오.  
   
  구독을 생성할 때 보고서 배달 방식을 결정하는 배달 옵션을 설정합니다. 예를 들어 구독에서 **링크 포함** 을 선택하면 메일 메시지에 보고서에 대한 하이퍼링크가 포함됩니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66100891"
   
  SharePoint 모드 보고서 서버를 구성하는 방법에 대한 자세한 내용은 다음을 참조하십시오.  
   
--   [Reporting Services 서비스 응용 프로그램에 대 한 전자 메일 구성 &#40;SharePoint 2010 및 SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+-   [Reporting Services 서비스 애플리케이션에 대한 메일 구성&#40;SharePoint 2010 및 SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [태스크 및 권한](../security/tasks-and-permissions.md)   

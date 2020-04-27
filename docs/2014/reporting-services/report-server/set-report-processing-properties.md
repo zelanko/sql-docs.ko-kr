@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a793fa513ef13c9cafc210a411971a0363f5976d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103236"
 ---
 # <a name="set-report-processing-properties"></a>보고서 처리 속성 설정
@@ -56,9 +56,9 @@ ms.locfileid: "66103236"
  이러한 조건이 발생할 경우 보고서 서버는 구독이 실행되도록 예약된 다음 번에 구독을 해제합니다. 구독을 다시 활성화하려면 구독을 열어서 저장합니다. 구독을 열면 보고서 서버에서 구독 매개 변수 값을 스냅샷에 대해 지정한 값으로 업데이트합니다. 구독에 대한 자세한 내용은 [구독 및 배달&#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [처리 옵션 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [SharePoint 통합 모드에서 처리 옵션을 Reporting Services &#40;설정&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [보고서 &#40;보고서 관리자&#41;실행 속성 구성](../reports/configure-execution-properties-for-a-report-report-manager.md)   
- [Reporting Services 개념&#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
+ [SSRS &#40;Reporting Services 개념&#41;](../reporting-services-concepts-ssrs.md)   
  [방법: 보고서 기록에 스냅숏 추가](add-a-snapshot-to-report-history-report-manager.md)   
  [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   

@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c73e75bbdf458b27d0f879a91e72ececc832b88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102488"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>보고서 서버에 보고서 게시
@@ -35,9 +35,7 @@ ms.locfileid: "66102488"
   
  보고서를 게시하려면 보고서를 게시할 권한이 있어야 합니다. 사용 권한은 보고서 서버 관리자가 정의하는 역할 기반 보안을 통해 결정됩니다. 게시 작업은 일반적으로 게시자 역할을 통해 허가됩니다.  
   
- 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 보고서 게시 관리를 위한 프로젝트 구성을 제공합니다. 이 구성은 보고서 서버의 위치, 보고서 서버에 설치된 SQL Server Reporting Services의 버전, 보고서 서버에 게시된 데이터 원본을 덮어쓰는지 여부 등을 지정합니다. 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 제공하는 구성을 사용하는 것 외에도 추가 구성을 만들 수 있습니다.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 보고서 게시 관리를 위한 프로젝트 구성을 제공합니다. 이 구성은 보고서 서버의 위치, 보고서 서버에 설치된 SQL Server Reporting Services의 버전, 보고서 서버에 게시된 데이터 원본을 덮어쓰는지 여부 등을 지정합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 제공하는 구성을 사용하는 것 외에도 추가 구성을 만들 수 있습니다.  
   
 ## <a name="project-configurations"></a>프로젝트 구성  
  유효한 보고서 정의만 보고서 서버에 게시되도록 하기 위해 보고서는 게시되기 전에 빌드됩니다. 프로젝트 구성에는 빌드된 보고서를 임시로 저장하는 폴더, 빌드 문제를 처리하는 방법 등과 같은 보고서 빌드를 위한 속성이 포함됩니다. 또한 보고서 서버의 위치 및 버전과 보고서 서버의 폴더를 지정하는 데 사용되는 속성도 포함됩니다.  
@@ -62,6 +60,6 @@ ms.locfileid: "66102488"
 ## <a name="see-also"></a>참고 항목  
  [프로젝트 속성 페이지 대화 상자](../tools/project-property-pages-dialog-box.md)   
  [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [Upgrade Reports](../install-windows/upgrade-reports.md)  
+ [보고서 업그레이드](../install-windows/upgrade-reports.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a73f3be75a7f0cadf633943aeafffb7217d8e29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101157"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>스냅샷 옵션 속성 페이지(보고서 관리자)
@@ -34,8 +34,7 @@ ms.locfileid: "66101157"
   
 3.  드롭다운 메뉴에서 **관리**를 클릭합니다. 보고서의 일반 속성 페이지가 열립니다.  
   
-4.  
-  **스냅샷 옵션** 탭을 선택합니다.  
+4.  **스냅샷 옵션** 탭을 선택합니다.  
   
 ## <a name="options"></a>옵션  
  **수동으로 보고서 기록 작성 허용**  
@@ -62,7 +61,7 @@ ms.locfileid: "66101157"
  클릭하여 변경 내용을 저장합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 기록에 스냅샷 추가&#40;보고서 관리자&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [보고서 기록에 스냅숏을 추가 &#40;보고서 관리자&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [보고서 기록에서 스냅샷 만들기, 수정 및 삭제](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  

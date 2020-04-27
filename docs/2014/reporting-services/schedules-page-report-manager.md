@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 927a9fc96e11bffdcacf7a12f09ee93d25f153fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102322"
 ---
 # <a name="schedules-page-report-manager"></a>일정 페이지(보고서 관리자)
@@ -34,8 +34,7 @@ ms.locfileid: "66102322"
   
 2.  페이지 맨 위에서 오른쪽 모퉁이에 있는 **사이트 설정**을 클릭합니다. 사이트의 일반 속성 페이지가 열립니다.  
   
-3.  
-  **일정** 탭을 선택합니다.  
+3.  **일정** 탭을 선택합니다.  
   
 ## <a name="options"></a>옵션  
  **새 일정**  
@@ -47,13 +46,13 @@ ms.locfileid: "66102322"
  **일시 중지**  
  공유 일정 실행을 임시 중지하려면 클릭합니다. 일정을 일시 중지하면 구독 및 예약된 기타 프로세스가 실행되지 않습니다.  
   
- **재개**  
+ **진행할**  
  공유 일정을 다시 시작하려면 클릭합니다. 일정이 일시 중지된 동안에 실행되도록 예약되었지만 실효된 프로세스는 실행되지 않습니다.  
   
  **일정**  
  현재 정의된 공유 일정을 표시합니다. 빈도 정보를 보거나 편집하려면 공유 일정을 클릭하십시오.  
   
- **만든**  
+ **작성자**  
  공유 일정을 만든 사용자의 이름을 표시합니다.  
   
  **마지막 실행, 다음 실행**  

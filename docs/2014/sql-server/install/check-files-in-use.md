@@ -11,14 +11,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34b51b26454766498ee601baae3ccc52cd1c5768
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096527"
 ---
 # <a name="check-files-in-use"></a>사용 중인 파일 확인
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트를 설치한 후 Windows가 다시 시작되지 않도록 하려면 사용 중인 파일 검사 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트 설치 프로그램에 필요한 파일을 사용 중인 프로세스를 확인합니다.  
   
  업데이트할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결된 애플리케이션 및 서비스를 모두 중지합니다. 이때 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 와 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]도 중지해야 합니다.  
@@ -33,8 +32,7 @@ ms.locfileid: "66096527"
   
 -   프로세스 이름  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능 이름  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능 이름  
   
 -   프로세스 유형  
   
@@ -46,11 +44,11 @@ ms.locfileid: "66096527"
   
 ## <a name="uielement-list"></a>UIElement 목록  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
-|프로세스|업데이트해야 할 파일을 사용하고 있는 프로세스의 전체 이름을 표시합니다.|  
-|Type|프로세스의 유형을 표시합니다.|  
-|계좌|프로세스를 실행하는 데 사용된 계정을 표시합니다.|  
+|Process|업데이트해야 할 파일을 사용하고 있는 프로세스의 전체 이름을 표시합니다.|  
+|유형|프로세스의 유형을 표시합니다.|  
+|계정|프로세스를 실행하는 데 사용된 계정을 표시합니다.|  
 |프로세스 ID|프로세스 ID를 표시합니다.|  
   
   
