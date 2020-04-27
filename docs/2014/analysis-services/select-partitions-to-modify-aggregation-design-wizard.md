@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f33066c622e3d1d736b1e8b800db96b0e9c35fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069296"
 ---
 # <a name="select-partitions-to-modify-aggregation-design-wizard"></a>수정할 파티션 선택(집계 디자인 마법사)
-  
   **수정할 파티션 선택** 페이지를 사용하여 집계를 디자인할 파티션을 선택할 수 있습니다.  
   
 ## <a name="options"></a>옵션  

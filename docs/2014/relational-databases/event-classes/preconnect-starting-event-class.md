@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0986e654430a47cc494bf1646c222b4888fc105b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033515"
 ---
 # <a name="preconnectstarting-event-class"></a>PreConnect:Starting 이벤트 클래스
@@ -29,9 +29,9 @@ ms.locfileid: "63033515"
 |데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |EventClass|`int`|215|27|예|  
-|SPID|`int`|이 이벤트를 발생시키는 서버 프로세스의 ID입니다.|12|yes|  
-|EventSubClass|`int`|사용자 정의 분류자 함수의 경우 1입니다.|21|yes|  
-|StartTime|`datetime`|사용자 정의 분류자 함수가 시작되는 시간입니다.|14|yes|  
+|SPID|`int`|이 이벤트를 발생시키는 서버 프로세스의 ID입니다.|12|예|  
+|EventSubClass|`int`|사용자 정의 분류자 함수의 경우 1입니다.|21|예|  
+|StartTime|`datetime`|사용자 정의 분류자 함수가 시작되는 시간입니다.|14|예|  
 |ObjectID|`int`|사용자 정의 분류자 개체의 ID입니다.|22|yes|  
 |ObjectName|`nvarchar(256)`|분류자 사용자 정의 함수의 두 부분으로 이루어진 이름입니다(예: dbo.classifier).|34|yes|  
   

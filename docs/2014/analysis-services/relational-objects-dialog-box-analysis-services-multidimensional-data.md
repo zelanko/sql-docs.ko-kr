@@ -13,16 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0571271f347c2aebcc2a0e0e25f2fff09b98fa89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070350"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>관계형 개체 대화 상자(Analysis Services - 다차원 데이터)
-  
-  **의** 관계형 개체 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 데이터 원본에서 자동 관리 캐싱을 설정할 테이블, 뷰 또는 다른 개체를 선택할 수 있습니다. 
-  **스토리지 옵션** 대화 상자의 **알림** 탭에서 **추적 테이블 지정** 옵션 중 하나에 대한 줄임표 단추 (**...**)를 클릭하면 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에 이 대화 상자가 표시됩니다.  
+  **의** 관계형 개체 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 데이터 원본에서 자동 관리 캐싱을 설정할 테이블, 뷰 또는 다른 개체를 선택할 수 있습니다. **스토리지 옵션** 대화 상자의 **알림** 탭에서 **추적 테이블 지정** 옵션 중 하나에 대한 줄임표 단추 (**...**)를 클릭하면 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에 이 대화 상자가 표시됩니다.  
   
 ## <a name="options"></a>옵션  
  **자동 관리 캐싱을 설정할 관계형 개체를 선택하십시오.**  
@@ -32,8 +30,7 @@ ms.locfileid: "66070350"
  나열된 개체를 제한하는 데 사용되는 필터를 입력한 다음 **자동 관리 캐싱을 설정할 관계형 개체를 선택하십시오.** 에 나열된 테이블을 필터링하려면 이 단추를 클릭합니다.  
   
  **Show system objects**  
- 
-  **자동 관리 캐싱을 설정할 관계형 개체를 선택하십시오.** 에 데이터 원본에 대한 시스템 개체를 표시하려면 선택합니다.  
+ **자동 관리 캐싱을 설정할 관계형 개체를 선택하십시오.** 에 데이터 원본에 대한 시스템 개체를 표시하려면 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

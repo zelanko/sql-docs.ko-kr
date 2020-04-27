@@ -13,16 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0948fda951bb415d9fe3f457729200752a8afaaf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080492"
 ---
 # <a name="incremental-update-dialog-box-analysis-services---multidimensional-data"></a>증분 업데이트 대화 상자(Analysis Services - 다차원 데이터)
-  
-  **및** 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 증분 업데이트 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 측정값 그룹과 파티션을 증분 업데이트할 때 사용할 설정을 정의할 수 있습니다. 
-  **처리** 대화 상자에서 **개체 목록** 표의 **설정** 열에 있는 **구성** 을 클릭하여 **증분 업데이트** 대화 상자를 표시할 수 있습니다.  
+  **및** 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 증분 업데이트 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 측정값 그룹과 파티션을 증분 업데이트할 때 사용할 설정을 정의할 수 있습니다. **처리** 대화 상자에서 **개체 목록** 표의 **설정** 열에 있는 **구성** 을 클릭하여 **증분 업데이트** 대화 상자를 표시할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
   

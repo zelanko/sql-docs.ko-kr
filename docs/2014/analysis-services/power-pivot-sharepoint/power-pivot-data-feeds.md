@@ -15,15 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b3080996eca3395e8be3cab5e17eaea7305dbfa2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071265"
 ---
 # <a name="powerpivot-data-feeds"></a>PowerPivot 데이터 피드
-  데이터 피드는 요청에 따라 온라인 데이터 원본에서 클라이언트 애플리케이션으로 데이터 스트림을 제공합니다. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 데이터 피드를 사용하여 Atom 인식 웹 서비스나 애플리케이션의 데이터를 Excel 통합 문서의 PowerPivot 데이터 원본에 추가할 수 있습니다.  
+  데이터 피드는 요청에 따라 온라인 데이터 원본에서 클라이언트 애플리케이션으로 데이터 스트림을 제공합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 데이터 피드를 사용하여 Atom 인식 웹 서비스나 애플리케이션의 데이터를 Excel 통합 문서의 PowerPivot 데이터 원본에 추가할 수 있습니다.  
   
  이 섹션에서는 데이터 피드를 사용하여 기존 회사 또는 작업 그룹 데이터를 PowerPivot 통합 문서로 효율적으로 가져오는 데 도움이 되는 정보를 제공합니다. 또한 조직의 다른 사용자와 데이터 피드를 공유하는 방법과 문제를 해결하는 데 필요한 경우에 데이터 피드를 구성하여 사용하는 방법에 대한 정보를 제공합니다.  
   

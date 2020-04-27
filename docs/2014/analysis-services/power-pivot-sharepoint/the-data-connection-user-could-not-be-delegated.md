@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0b11e1510213aefa98c6bf2c0c779cebaeed85e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071027"
 ---
-# <a name="the-data-connection-uses-windows-authentication-and-user-credentials-could-not-be-delegated-the-following-connections-failed-to-refresh-powerpivot-data"></a>데이터 연결은 Windows 인증을 사용하지만 사용자 자격 증명을 위임할 수 없습니다. PowerPivot 데이터 연결을 새로 고치지 못했습니다.
+# <a name="the-data-connection-uses-windows-authentication-and-user-credentials-could-not-be-delegated-the-following-connections-failed-to-refresh-powerpivot-data"></a>데이터 연결은 Windows 인증을 사용하지만 사용자 자격 증명을 위임할 수 없습니다. PowerPivot 데이터 연결을: PowerPivot 데이터
   Excel 서비스는 SharePoint의 PowerPivot 서버 인스턴스에 연결할 수 없는 경우 PowerPivot 데이터를 포함하는 Excel 통합 문서에 대해 이 오류를 반환합니다.  
   
 ## <a name="details"></a>세부 정보  
@@ -27,7 +27,7 @@ ms.locfileid: "66071027"
 |적용 대상|SharePoint용 PowerPivot|  
 |제품 버전|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |원인|PowerPoint 데이터 공급자 사용을 시도할 때 연결하지 못했습니다.|  
-|메시지 텍스트|데이터 연결은 Windows 인증을 사용하지만 사용자 자격 증명을 위임할 수 없습니다. PowerPivot 데이터 연결을 새로 고치지 못했습니다.|  
+|메시지 텍스트|데이터 연결은 Windows 인증을 사용하지만 사용자 자격 증명을 위임할 수 없습니다. PowerPivot 데이터 연결을: PowerPivot 데이터|  
   
 ## <a name="explanation"></a>설명  
  이 오류 메시지는 여러 가지 원인으로 인해 표시됩니다. 이러한 모든 원인에 공통적으로 적용되는 요인은 Excel 서비스가 SharePoint의 클레임 토큰에서 유효한 Windows 사용자 ID를 가져올 수 없다는 것입니다. PowerPivot 데이터가 포함된 Excel 통합 문서의 경우 이 오류는 다음 조건 중 하나라도 해당하는 경우 발생합니다.  
@@ -51,8 +51,7 @@ ms.locfileid: "66071027"
   
 1.  중앙 관리의 시스템 설정에서 **서버의 서비스 관리**를 클릭 합니다.  
   
-2.  
-  **Windows 토큰 서비스에 대한 클레임**을 선택하고 **시작**을 클릭합니다.  
+2.  **Windows 토큰 서비스에 대한 클레임**을 선택하고 **시작**을 클릭합니다.  
   
 3.  서비스가 서비스 콘솔에서도 실행되고 있는지 확인합니다.  
   

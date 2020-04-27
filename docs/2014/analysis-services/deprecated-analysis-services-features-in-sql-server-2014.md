@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04d12aab677e38d17d4e869e6885eb470854d824
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081917"
 ---
 # <a name="deprecated-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014에서 사용 되지 않는 Analysis Services 기능
@@ -28,7 +28,7 @@ ms.locfileid: "66081917"
 ## <a name="features-not-supported-in-the-next-version-of-sql-server"></a>다음 버전의 SQL Server에서 지원되지 않는 기능  
  아래의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 기능은 다음 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 지원되지 않습니다. 새 개발 작업에서는 이러한 기능을 사용하지 말고, 현재 이러한 기능을 사용하는 애플리케이션은 가능한 한 빨리 수정하십시오.  
   
-|Category|사용되지 않는 기능|대체 기능|  
+|범주|사용되지 않는 기능|대체 기능|  
 |--------------|------------------------|-----------------|  
 |MDX 함수|CalculationPassValue 함수|없음 계산 패스는 OLAP 엔진에서 관리됩니다. 이 함수는 더 이상 필요하지 않습니다.|  
 |MDX 함수|CalculationCurrentPass 함수|없음 계산 패스는 OLAP 엔진에서 관리됩니다. 이 함수는 더 이상 필요하지 않습니다.|  
@@ -39,7 +39,7 @@ ms.locfileid: "66081917"
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>이후 버전의 SQL Server에서 지원되지 않는 기능  
  아래의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 기능은 다음 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 지원되지만 이후 버전에서는 제거될 예정입니다. 어떤 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 제거될지는 결정되지 않았습니다.  
   
-|Category|사용되지 않는 기능|대체 기능|  
+|범주|사용되지 않는 기능|대체 기능|  
 |--------------|------------------------|-----------------|  
 |다차원 모델|원격 파티션|없음 대신 로컬 파티션을 사용합니다. 자세한 내용은 [로컬 파티션 만들기 및 관리 &#40;Analysis Services&#41;](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md) 를 참조 하세요.|  
 |다차원 모델|원격으로 연결된 측정값 그룹|원격으로 연결된 측정값 그룹은 원격 서버에서 데이터 원본을 사용하여 연결된 측정값 그룹입니다. 연결된 측정값 그룹에 대해 원격 데이터 원본을 사용하는 기능은 현재 사용 중단될 예정입니다.<br /><br /> 이 기능을 대체할 기능은 없습니다. 대신 로컬로 연결된 측정값 그룹을 사용하는 것이 좋습니다. 자세한 내용은 [Linked Measure Groups](multidimensional-models/linked-measure-groups.md) 을 참조하세요.|  

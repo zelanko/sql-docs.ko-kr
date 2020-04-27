@@ -18,41 +18,35 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0bcc06655333dfef073757218d9a740c1dfb0dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080361"
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>SQL Server Management Studio의 Analysis Services 스크립트 프로젝트
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에 분석 서버 스크립트 프로젝트를 만들어 개발, 관리 및 원본 제어를 위해 관련 스크립트를 그룹화할 수 있습니다. 현재 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 솔루션이 로드되어 있지 않은 경우 새 분석 서버 스크립트 프로젝트를 만들면 자동으로 새 솔루션이 생성됩니다. 그렇지 않은 경우 새 분석 서버 스크립트 프로젝트를 기존 솔루션에 추가하거나 새 솔루션에 만들 수 있습니다.  
   
  다음 기본 단계를 수행하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 분석 서버 스크립트 프로젝트를 만들 수 있습니다.  
   
 1.  파일 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
   
-     
-  **분석 서버 스크립트** 프로젝트 템플릿을 선택한 다음 새 프로젝트의 이름과 위치를 지정합니다.  
+     **분석 서버 스크립트** 프로젝트 템플릿을 선택한 다음 새 프로젝트의 이름과 위치를 지정합니다.  
   
-2.  
-  **연결** 을 마우스 오른쪽 단추로 클릭하여 솔루션 탐색기에 있는 Analysis Server 스크립트 프로젝트의 연결 폴더에 새 연결을 만듭니다.  
+2.  **연결** 을 마우스 오른쪽 단추로 클릭하여 솔루션 탐색기에 있는 Analysis Server 스크립트 프로젝트의 연결 폴더에 새 연결을 만듭니다.  
   
      이 폴더는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 연결 문자열을 포함하며 분석 서버 스크립트 프로젝트에 포함된 스크립트를 이에 대해 실행할 수 있습니다. 하나의 분석 서버 스크립트 프로젝트에 대해 여러 연결을 설정할 수 있으며 이러한 연결 중 프로젝트에 포함된 스크립트를 실행할 연결을 실행 시 선택할 수 있습니다.  
   
-3.  
-  **쿼리** 를 마우스 오른쪽 단추로 클릭하여 솔루션 탐색기에 있는 Analysis Server 스크립트 프로젝트의 스크립트 폴더에 MDX(Multidimensional Expressions), DMX(Data Mining Extensions) 및 XMLA(XML for Analysis) 스크립트를 만듭니다. 자세한 내용은 [Script Administrative Tasks in Analysis Services](../script-administrative-tasks-in-analysis-services.md)을 참조하세요.  
+3.  **쿼리** 를 마우스 오른쪽 단추로 클릭하여 솔루션 탐색기에 있는 Analysis Server 스크립트 프로젝트의 스크립트 폴더에 MDX(Multidimensional Expressions), DMX(Data Mining Extensions) 및 XMLA(XML for Analysis) 스크립트를 만듭니다. 자세한 내용은 [Script Administrative Tasks in Analysis Services](../script-administrative-tasks-in-analysis-services.md)을 참조하세요.  
   
 4.  프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가**를 가리킨 다음 **기존 항목** 을 선택하여 프로젝트에 대한 메모를 포함하는 텍스트 파일과 같은 기타 파일을 솔루션 탐색기에 있는 Analysis Server 스크립트 프로젝트의 **기타** 폴더에 추가합니다. 이러한 파일은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 무시됩니다.  
   
-## <a name="file-types"></a>파일 형식  
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 솔루션은 솔루션에 포함시킨 프로젝트에 따라 그리고 해당 솔루션의 각 프로젝트에 포함시킨 항목에 따라 여러 파일 형식을 포함할 수 있습니다. 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 솔루션 파일 유형에 대한 자세한 내용은 [솔루션 및 프로젝트 관리 파일](../../ssms/solution/files-that-manage-solutions-and-projects.md)을 참조하세요. 일반적으로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 솔루션의 각 프로젝트에 대한 파일은 솔루션 폴더에 저장되며 각 프로젝트에 대해 별도의 폴더에 저장됩니다.  
+## <a name="file-types"></a>파일 유형  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 솔루션은 솔루션에 포함시킨 프로젝트에 따라 그리고 해당 솔루션의 각 프로젝트에 포함시킨 항목에 따라 여러 파일 형식을 포함할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 솔루션 파일 유형에 대한 자세한 내용은 [솔루션 및 프로젝트 관리 파일](../../ssms/solution/files-that-manage-solutions-and-projects.md)을 참조하세요. 일반적으로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 솔루션의 각 프로젝트에 대한 파일은 솔루션 폴더에 저장되며 각 프로젝트에 대해 별도의 폴더에 저장됩니다.  
   
  분석 서버 스크립트 프로젝트에 대한 프로젝트 폴더는 다음 표에 나열된 파일 유형을 포함할 수 있습니다.  
   
-|파일 형식|Description|  
+|파일 형식|설명|  
 |---------------|-----------------|  
 |분석 서버 스크립트 프로젝트 정의 파일(.ssmsasproj)|프로젝트에 포함된 파일을 표시할 폴더를 나타내는 정보를 비롯하여 솔루션 탐색기에 표시되는 폴더에 대한 메타데이터를 포함합니다.<br /><br /> 또한 프로젝트 정의 파일은 연결을 프로젝트에 포함된 스크립트 파일과 연결하는 메타데이터를 비롯하여 프로젝트에 포함된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결에 대한 메타데이터를 포함합니다.|  
 |DMX 스크립트 파일(.dmx)|프로젝트에 포함된 DMX 스크립트를 포함합니다.|  

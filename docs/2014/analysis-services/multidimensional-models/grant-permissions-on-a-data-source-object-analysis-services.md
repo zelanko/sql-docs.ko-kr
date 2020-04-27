@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a869d2033adaa57be0ace522787332c03a69bcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074997"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>데이터 원본 개체에 대한 권한 부여(Analysis Services)
@@ -36,11 +36,9 @@ ms.locfileid: "66074997"
 ## <a name="set-read-permissions-to-a-data-source"></a>데이터 원본에 대한 읽기 권한 설정  
  데이터베이스 역할에는 데이터 원본 개체에 대한 액세스 권한 또는 읽기 권한이 부여되지 않을 수 있습니다.  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결하고 개체 탐색기에서 해당 데이터베이스에 대한 **역할** 을 확장한 다음 데이터베이스 역할을 클릭하거나 새 데이터베이스 역할을 만듭니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결하고 개체 탐색기에서 해당 데이터베이스에 대한 **역할** 을 확장한 다음 데이터베이스 역할을 클릭하거나 새 데이터베이스 역할을 만듭니다.  
   
-2.  
-  **데이터 원본 액세스** 창의 **데이터 원본** 목록에서 데이터 원본 개체를 찾은 다음 데이터 원본에 대한 **액세스 권한** 목록에서 **읽기** 를 선택합니다. 이 옵션을 사용할 수 없는 경우 **일반** 창을 확인하여 모든 권한을 선택했는지 확인합니다. 모든 권한은 이미 권한을 제공하므로, 데이터 원본에 대한 권한을 재정의할 수 없습니다.  
+2.  **데이터 원본 액세스** 창의 **데이터 원본** 목록에서 데이터 원본 개체를 찾은 다음 데이터 원본에 대한 **액세스 권한** 목록에서 **읽기** 를 선택합니다. 이 옵션을 사용할 수 없는 경우 **일반** 창을 확인하여 모든 권한을 선택했는지 확인합니다. 모든 권한은 이미 권한을 제공하므로, 데이터 원본에 대한 권한을 재정의할 수 없습니다.  
   
 ## <a name="working-with-the-connection-string-used-by-a-data-source-object"></a>데이터 원본 개체에서 사용하는 연결 문자열 작업  
  데이터 원본 개체에는 기본 데이터 원본에 연결하는 데 사용되는 연결 문자열이 포함되어 있습니다. 이 연결 문자열을 사용하여 다음 중 하나를 지정할 수 있습니다.  
@@ -61,6 +59,6 @@ ms.locfileid: "66074997"
  [Analysis Services에서 지 원하는 인증 방법](../instances/authentication-methodologies-supported-by-analysis-services.md)   
  [차원 데이터 &#40;Analysis Services&#41;에 대 한 사용자 지정 액세스 권한 부여](grant-custom-access-to-dimension-data-analysis-services.md)   
  [큐브 또는 모델 권한 부여 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [셀 데이터 &#40;Analysis Services&#41;에 대 한 사용자 지정 액세스 권한 부여](grant-custom-access-to-cell-data-analysis-services.md)  
+ [셀 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

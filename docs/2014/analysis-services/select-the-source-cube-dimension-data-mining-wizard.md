@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bdb61763a49bad7eae1a49a01633ec8f45e27642
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069227"
 ---
 # <a name="select-the-source-cube-dimension-data-mining-wizard"></a>원본 큐브 차원 선택(데이터 마이닝 마법사)
-  
   **원본 큐브 차원 선택** 페이지를 사용하여 분석할 사례를 포함하는 큐브의 차원을 선택할 수 있습니다. 예를 들어 인구 통계를 기반으로 하여 고객의 구매 행동을 분석하는 모델을 작성하는 경우 일반적으로 각 고객 및 성별, 위치 또는 수입과 같은 인구 통계를 나타내는 여러 특성에 대해 고유한 레코드를 포함하는 Customer 차원을 선택합니다. 마법사의 뒷부분에서는 이 사례 테이블과 관련된 테이블을 추가할 수 있습니다. 예를 들어 고객이 구매한 제품을 보여 주는 중첩 테이블을 추가할 수 있습니다.  
   
 > [!NOTE]  

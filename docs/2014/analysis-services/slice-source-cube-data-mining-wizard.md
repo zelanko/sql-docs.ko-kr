@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bcb156d5c0a3c1332e748878ddebda1772b80696
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068601"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>원본 큐브 조각화(데이터 마이닝 마법사)
-  
   **원본 큐브 조각화** 대화 상자를 사용하여 모델의 학습에 사용되는 데이터를 제한할 수 있습니다. 일반적으로 큐브는 모든 상점, 모든 지역 및 모든 제품 등 여러 다른 차원 및 특성과 관련된 데이터를 포함합니다. 제한 없는 특성 조합의 모델 학습은 실용적이지 않으므로 이 대화 상자를 사용하여 모델 학습에 사용할 특정 집합을 선택하십시오.  
   
  예를 들어 AdventureWorks 큐브에서 특정 제품 라인, 지역 또는 연도별로 조각화하여 일부 데이터를 가져올 수 있습니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66068601"
   
 -   [파티션 조각 속성 &#40;Analysis Services 설정&#41;](multidimensional-models/set-the-partition-slice-property-analysis-services.md)  
   
--   [Analysis Services&#41;&#40;로컬 파티션 만들기 및 관리](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
+-   [로컬 파티션 만들기 및 관리&#40;Analysis Services&#41;](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
 > [!NOTE]  
 >  동적 MDX 함수(예: [Generate&#40;MDX&#41;](/sql/mdx/generate-mdx) 또는 [Except&#40;MDX&#41;](/sql/mdx/except-mdx-function))는 파티션에 대한 Slice 속성에서 지원되지 않습니다. 명시적 튜플 또는 멤버 참조를 사용하여 조각을 정의해야 합니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "66068601"
 >   
 >  복잡한 조각을 정의해야 하는 경우 XMLA Alter 스크립트를 사용하여 조각에서 튜플을 정의하는 것이 좋습니다. 그런 다음 ascmd 명령줄 도구 또는 SSIS [Analysis Services Execute DDL Task](../integration-services/control-flow/analysis-services-execute-ddl-task.md) 를 사용하여 스크립트를 실행하고 지정된 멤버 집합을 만든 후 곧바로 파티션을 처리할 수 있습니다.  
   
- **자세한 내용:** [데이터 마이닝 마법사 &#40;Analysis Services 데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md)  
+ **자세한 내용:** [데이터 마이닝 마법사&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>옵션  
  **차원**  

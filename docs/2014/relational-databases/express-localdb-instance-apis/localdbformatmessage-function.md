@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d287a7ceff1c38c829da91a8ae2e530f664fb4ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63128749"
 ---
 # <a name="localdbformatmessage-function"></a>LocalDBFormatMessage 함수
   지정한 SQL Server Express LocalDB 오류에 대해 해당 언어의 텍스트 설명을 반환합니다.  
   
- **헤더 파일:** sqlncli  
+ **헤더 파일:** sqlncli.h  
   
 ## <a name="syntax"></a>구문  
   

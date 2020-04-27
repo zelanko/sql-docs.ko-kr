@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 29513ec37a946b9ec613ccc483048396149dd15a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63042670"
 ---
 # <a name="lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis"></a>2단원: 일정에 따라 최선의 구현 방법 정책 평가
@@ -23,7 +23,7 @@ ms.locfileid: "63042670"
  예약된 정책을 여러 서버에 배포하려면 정책을 하나의 인스턴스로 가져와 각 정책에 대한 일정을 구성하고 예약된 정책을 폴더로 내보낸 다음 등록된 서버를 통해 예약된 정책을 대상 인스턴스에 배포합니다.  
   
 > [!IMPORTANT]  
->  대상 인스턴스는 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 이상 버전을 실행 중이어야 합니다. Automation을 수행하려면 정책을 인스턴스에 로컬로 저장해야 합니다. 이 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이전 버전인 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]에서는 지원되지 않습니다.  
+>  대상 인스턴스는 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 이상 버전을 실행 중이어야 합니다. 자동화를 수행하려면 정책을 인스턴스에 로컬로 저장해야 합니다. 이 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이전 버전인 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]에서는 지원되지 않습니다.  
   
  이 단원에서는 다음을 수행합니다.  
   

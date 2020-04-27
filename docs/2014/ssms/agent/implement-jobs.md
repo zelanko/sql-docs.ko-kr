@@ -16,14 +16,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cef657960da876b25003a6fc1017a372abe410a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63074018"
 ---
 # <a name="implement-jobs"></a>작업 구현
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 사용하여 일상적인 관리 태스크를 자동화하고 정기적으로 실행함으로써 좀 더 효율적인 관리를 할 수 있습니다.  
   
  작업이란 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 순차적으로 수행하는 일련의 지정된 작업입니다. 작업은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트, 명령줄 애플리케이션, Microsoft ActiveX 스크립트, Integration Services 패키지, Analysis Services 명령 및 쿼리 또는 복제 태스크를 실행하는 등 광범위한 활동을 수행합니다. 작업은 반복적인 태스크나 예약 가능한 작업을 실행하고, 경고를 생성하여 작업 상태를 사용자에게 자동으로 알림으로써 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리를 간단하게 만들어 줍니다.  
@@ -40,8 +39,7 @@ ms.locfileid: "63074018"
 |사용자가 만들 수 있는 작업 단계의 여러 가지 종류와 관리하는 방법에 대해 설명합니다.|[작업 단계 관리](manage-job-steps.md)|  
 |작업의 실행 시작 시간 및 실행 빈도를 정의하는 방법에 대해 설명합니다.|[일정을 만들고 작업에 연결](create-and-attach-schedules-to-jobs.md)|  
 |예약 없이 작업을 수동으로 실행하는 방법에 대해 설명합니다.|[작업 실행](run-jobs.md)|  
-|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 작업에 응답하도록 구성하는 방법에 대해 설명합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 구성하여 작업이 끝났을 때 관리자에게 통보하도록 구성할 수 있습니다.|[작업 응답 지정](specify-job-responses.md)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 작업에 응답하도록 구성하는 방법에 대해 설명합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 구성하여 작업이 끝났을 때 관리자에게 통보하도록 구성할 수 있습니다.|[작업 응답 지정](specify-job-responses.md)|  
 |기존 작업을 보거나 실행 시 작업 기록을 보거나 작업을 수정하는 방법에 대해 설명합니다.|[작업 보기 또는 수정](view-or-modify-jobs.md)|  
 |작업을 삭제하는 방법에 대해 설명합니다.|[작업 삭제](delete-jobs.md)|  
   

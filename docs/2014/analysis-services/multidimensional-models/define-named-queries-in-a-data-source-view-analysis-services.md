@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bbb792ac4e86ae563f80f35f04854f16501b34a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075557"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 명명된 쿼리 정의(Analysis Services)
@@ -35,28 +35,23 @@ ms.locfileid: "66075557"
   
  SQL 쿼리에서 참조되는 테이블 및 열은 한정되어서는 안 되며 한정할 경우 테이블 이름으로만 한정해야 합니다. 예를 들어 테이블의 SaleAmount 열을 참조하려면 `SaleAmount` 나 `Sales.SaleAmount` 는 유효하지만 `dbo.Sales.SaleAmount` 는 오류를 생성합니다.  
   
- **참고** [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 데이터 원본을 쿼리 하는 명명 된 쿼리를 정의할 때 상관 하위 쿼리 및 GROUP BY 절이 포함 된 명명 된 쿼리가 실패 합니다. 자세한 내용은 [기술 문서에서](https://support.microsoft.com/kb/274729) 버그: 상관 하위 쿼리 및 GROUP BY를 포함하는 SELECT 문의 내부 오류(BUG: Internal Error with SELECT Statement Containing Correlated Subquery and GROUP BY) [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 참조하십시오.  
+ **참고**[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 데이터 원본을 쿼리하는 명명된 쿼리를 정의할 때 상관 하위 쿼리 및 GROUP BY 절을 포함하는 명명된 쿼리는 실패합니다. 자세한 내용은 [기술 문서에서](https://support.microsoft.com/kb/274729) 버그: 상관 하위 쿼리 및 GROUP BY를 포함하는 SELECT 문의 내부 오류(BUG: Internal Error with SELECT Statement Containing Correlated Subquery and GROUP BY) [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 참조하십시오.  
   
 ## <a name="add-or-edit-a-named-query"></a>명명된 쿼리 추가 또는 편집  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 명명된 쿼리를 추가할 데이터 원본 뷰가 포함된 프로젝트를 열거나 데이터베이스에 연결합니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 명명된 쿼리를 추가할 데이터 원본 뷰가 포함된 프로젝트를 열거나 데이터베이스에 연결합니다.  
   
 2.  솔루션 탐색기에서 **데이터 원본 뷰** 폴더를 확장한 다음 해당 데이터 원본 뷰를 두 번 클릭합니다.  
   
-3.  
-  **테이블** 또는 **다이어그램** 창에서 열린 영역을 마우스 오른쪽 단추로 클릭한 다음 **새 명명된 쿼리**를 클릭합니다.  
+3.  **테이블** 또는 **다이어그램** 창에서 열린 영역을 마우스 오른쪽 단추로 클릭한 다음 **새 명명된 쿼리**를 클릭합니다.  
   
-4.  
-  **명명된 쿼리 만들기** 대화 상자에서 다음을 수행하십시오.  
+4.  **명명된 쿼리 만들기** 대화 상자에서 다음을 수행하십시오.  
   
-    1.  
-  **이름** 입력란에 쿼리 이름을 입력합니다.  
+    1.  **이름** 입력란에 쿼리 이름을 입력합니다.  
   
     2.  필요에 따라 **설명** 입력란에 쿼리에 대한 설명을 입력합니다.  
   
-    3.  
-  **데이터 원본** 목록 상자에서 명명된 쿼리가 실행될 데이터 원본을 선택합니다.  
+    3.  **데이터 원본** 목록 상자에서 명명된 쿼리가 실행될 데이터 원본을 선택합니다.  
   
     4.  아래쪽 창에 쿼리를 입력하거나 그래픽 쿼리 작성 도구를 사용하여 쿼리를 만듭니다.  
   
@@ -67,6 +62,6 @@ ms.locfileid: "66075557"
   
 ## <a name="see-also"></a>참고 항목  
  [다차원 모델의 데이터 원본 뷰](data-source-views-in-multidimensional-models.md)   
- [데이터 원본 뷰에서 명명 된 계산을 정의 하 여 Analysis Services &#40;&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [데이터 원본 뷰에서 명명된 계산 정의&#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

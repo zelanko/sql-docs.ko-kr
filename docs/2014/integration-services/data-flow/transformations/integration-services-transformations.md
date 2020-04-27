@@ -22,14 +22,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b283f179a6d9ad79e90e4abdfc2e5af0c199d4dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900295"
 ---
 # <a name="integration-services-transformations"></a>Integration Services 변환
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 변환은 패키지의 데이터 흐름에서 데이터를 집계, 병합, 배포 및 수정 하는 구성 요소입니다. 변환은 조회 작업을 수행하고 예제 데이터 세트를 생성할 수도 있습니다. 이 섹션에서는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에 포함되는 변환과 이러한 변환의 작동 방식에 대해 설명합니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 변환은 패키지의 데이터 흐름에서 데이터를 집계, 병합, 배포 및 수정하는 구성 요소입니다. 변환은 조회 작업을 수행하고 예제 데이터 세트를 생성할 수도 있습니다. 이 섹션에서는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에 포함되는 변환과 이러한 변환의 작동 방식에 대해 설명합니다.  
   
 ## <a name="business-intelligence-transformations"></a>비즈니스 인텔리전스 변환  
  다음 변환은 데이터 정리, 텍스트 마이닝 및 데이터 마이닝 예측 쿼리 실행과 같은 비즈니스 인텔리전스 작업을 수행합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "62900295"
 |[파생 열 변환](derived-column-transformation.md)|열에 식 결과를 채우는 변환입니다.|  
 |[열 내보내기 변환](export-column-transformation.md)|데이터 흐름의 데이터를 파일에 삽입하는 변환입니다.|  
 |[열 가져오기 변환](import-column-transformation.md)|파일에서 데이터를 읽고 이를 데이터 흐름에 추가하는 변환입니다.|  
-|[스크립트 구성 요소](script-component.md)|스크립트를 사용하여 데이터를 추출, 변환 또는 로드하는 변환입니다.|  
+|[S스크립트 구성 요소](script-component.md)|스크립트를 사용하여 데이터를 추출, 변환 또는 로드하는 변환입니다.|  
 |[OLE DB 명령 변환](ole-db-command-transformation.md)|데이터 흐름의 각 행에 대해 SQL 명령을 실행하는 변환입니다.|  
   
 ## <a name="rowset-transformations"></a>행 집합 변환  
@@ -79,14 +79,13 @@ ms.locfileid: "62900295"
 |[멀티캐스트 변환](multicast-transformation.md)|데이터 집합을 여러 출력에 배포하는 변환입니다.|  
 |[UNION ALL 변환](union-all-transformation.md)|여러 데이터 집합을 병합하는 변환입니다.|  
 |[병합 변환](merge-transformation.md)|두 개의 정렬된 데이터 집합을 병합하는 변환입니다.|  
-|[Merge Join Transformation](merge-join-transformation.md)|FULL, LEFT 또는 INNER 조인을 사용하여 두 데이터 집합을 조인하는 변환입니다.|  
+|[병합 조인 변환](merge-join-transformation.md)|FULL, LEFT 또는 INNER 조인을 사용하여 두 데이터 집합을 조인하는 변환입니다.|  
 |[조회 변환](lookup-transformation.md)|정확한 일치 항목을 사용하여 참조 테이블의 값을 조회하는 변환입니다.|  
 |[캐시 변환](cache-transform.md)|데이터 흐름에 있는 연결된 데이터 원본에서 캐시 파일에 데이터를 저장하는 캐시 연결 관리자에 데이터를 기록하는 변환입니다. 조회 변환은 캐시 파일의 데이터에 대한 조회를 수행합니다.|  
 |[분산 데이터 배포자 변환](balanced-data-distributor-transformation.md)|변환을 통해 들어오는 행의 버퍼를 여러 스레드의 출력에 균일하게 분산하여 다중 코어 및 다중 프로세서 서버에서 실행되는 SSIS 패키지의 성능을 향상시킵니다.|  
   
 ## <a name="auditing-transformations"></a>변환 감사  
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에는 감사 정보를 추가하고 행 개수를 세기 위한 다음과 같은 변환이 포함됩니다.  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에는 감사 정보를 추가하고 행 개수를 세기 위한 다음과 같은 변환이 포함됩니다.  
   
 |변환|Description|  
 |--------------------|-----------------|  

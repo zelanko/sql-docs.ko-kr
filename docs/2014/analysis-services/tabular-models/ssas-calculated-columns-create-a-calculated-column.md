@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 60218cb5f50777ac07e9a2805d224d80bef7975d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066516"
 ---
 # <a name="create-a-calculated-column-ssas-tabular"></a>계산 열 만들기(SSAS 테이블 형식)
@@ -26,7 +26,7 @@ ms.locfileid: "66066516"
   
 1.  모델 디자이너의 데이터 뷰에서 계산 열을 추가하려는 테이블을 선택한 다음 **열** 메뉴를 클릭하고 **열 추가**를 클릭합니다.  
   
-     비어 있는 가장 오른쪽 열에서 **열 추가** 가 강조 표시 되 고 커서가 수식 입력줄로 이동 합니다.  
+     비어 있는 가장 오른쪽 열에서**열 추가** 가 강조 표시되고 커서가 수식 입력줄로 이동합니다.  
   
      기존의 두 열 사이에 새 열을 만들려면 기존 열을 마우스 오른쪽 단추로 클릭하고 **열 삽입**을 클릭합니다.  
   
@@ -47,6 +47,6 @@ ms.locfileid: "66066516"
   
 ## <a name="see-also"></a>참고 항목  
  [SSAS 테이블 형식&#41;&#40;계산 열](ssas-calculated-columns.md)   
- [SSAS 테이블 형식&#41;&#40;측정값](measures-ssas-tabular.md)  
+ [측정값&#40;SSAS 테이블 형식&#41;](measures-ssas-tabular.md)  
   
   

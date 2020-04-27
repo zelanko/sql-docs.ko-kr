@@ -20,14 +20,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f2c16e66c03eee8c5e1616fdaa0f0d1b154b85e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63143590"
 ---
 # <a name="profiling-odbc-driver-performance"></a>ODBC 드라이버 성능 프로파일링
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 다음과 같은 두 가지 유형의 성능 데이터를 프로파일링할 수 있습니다.  
   
 -   장기 실행 쿼리  
@@ -59,8 +58,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
    the log file, logging disabled.  
 ```  
   
- 드라이버는 환경 핸들이 닫히면 성능 데이터 수집을 중지합니다. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 애플리케이션에 각각 고유의 환경 핸들이 있는 여러 개의 연결이 사용되는 경우 드라이버는 관련된 환경 핸들 중 하나가 닫히면 성능 데이터 수집을 중지합니다.  
+ 드라이버는 환경 핸들이 닫히면 성능 데이터 수집을 중지합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 애플리케이션에 각각 고유의 환경 핸들이 있는 여러 개의 연결이 사용되는 경우 드라이버는 관련된 환경 핸들 중 하나가 닫히면 성능 데이터 수집을 중지합니다.  
   
  드라이버의 성능 데이터는 SQLPERF 데이터 구조에 저장되거나 탭으로 구분된 파일에 기록될 수 있습니다. 데이터에는 다음 통계 범주가 포함됩니다.  
   
@@ -70,20 +68,20 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   네트워크  
   
--   Time  
+-   시간  
   
  다음 표에서 SQLPERF 데이터 구조의 필드에 대한 설명은 성능 로그 파일에 기록되는 통계에도 적용됩니다.  
   
 ### <a name="application-profile-statistics"></a>애플리케이션 프로필 통계  
   
-|SQLPERF 필드|Description|  
+|SQLPERF 필드|설명|  
 |-------------------|-----------------|  
 |TimerResolution|서버 클럭 시간의 최소 인식 값(밀리초)입니다. 일반적으로 0으로 보고되며, 보고된 수가 큰 경우에만 고려되어야 합니다. 서버 클럭의 최소 인식 값이 시간 기반 통계의 적정 간격보다 클 경우 해당 통계는 과장될 수 있습니다.|  
 |SQLidu|SQL_PERF_START 이후의 INSERT, DELETE 또는 UPDATE 문의 수입니다.|  
 |SQLiduRows|SQL_PERF_START 이후의 INSERT, DELETE 또는 UPDATE 문의 수입니다.|  
 |SQLSelects|SQL_PERF_START 이후 처리된 SELECT 문의 수입니다.|  
 |SQLSelectRows|SQL_PERF_START 이후에 선택된 행의 수입니다.|  
-|트랜잭션|SQL_PERF_START 이후 롤백을 포함한 사용자 트랜잭션의 수입니다. ODBC 애플리케이션이 SQL_AUTOCOMMIT_ON 상태로 실행 중인 경우 각 명령은 트랜잭션으로 간주됩니다.|  
+|의|SQL_PERF_START 이후 롤백을 포함한 사용자 트랜잭션의 수입니다. ODBC 애플리케이션이 SQL_AUTOCOMMIT_ON 상태로 실행 중인 경우 각 명령은 트랜잭션으로 간주됩니다.|  
 |SQLPrepares|SQL_PERF_START 후 [Sqlprepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360) 호출 수입니다.|  
 |ExecDirects|SQL_PERF_START 후 **Sqlexecdirect** 호출 수입니다.|  
 |SQLExecutes|SQL_PERF_START 후의 **Sqlexecute** 호출 수입니다.|  
@@ -114,7 +112,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>시간 통계  
   
-|SQLPERF 필드|Description|  
+|SQLPERF 필드|설명|  
 |-------------------|-----------------|  
 |msExecutionTime|SQL_PERF_START 이후 드라이버가 처리를 위해 소요한 누적 시간으로, 서버의 응답을 대기하는 데 보낸 시간도 포함됩니다.|  
 |msNetworkServerTime|드라이버가 서버의 응답을 대기하는 데 보낸 누적 시간입니다.|  

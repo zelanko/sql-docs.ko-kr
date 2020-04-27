@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fca78578046122a1598df096e45965367b7880ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070096"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>규칙 탭(마이닝 모델 뷰어)
@@ -27,7 +27,7 @@ ms.locfileid: "66070096"
 > [!WARNING]  
 >  기본적으로 **최소 확률** 에 정의된 확률 임계값을 초과하는 규칙만 뷰어에 표시됩니다. 규칙 출력의 확률 임계값은 모델이 만들어질 때 결정되기 때문에 뷰어를 사용하여 이 값을 작게 만들 수 없습니다. 자세한 내용은 [Microsoft 연결 알고리즘 기술 참조](data-mining/microsoft-association-algorithm-technical-reference.md)를 참조하세요.  
   
- **자세한 내용:** [microsoft 연결 알고리즘](data-mining/microsoft-association-algorithm.md), [Microsoft 연결 규칙 뷰어를 사용 하 여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **관련 항목:** [Microsoft 연결 알고리즘](data-mining/microsoft-association-algorithm.md), [Microsoft 연결 규칙 뷰어를 사용하여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>옵션  
  **뷰어 내용 새로 고침**  
@@ -52,11 +52,9 @@ ms.locfileid: "66070096"
   
  `\bRoad\b.\bBottle\b.\bCage\b.*->.*`  
   
- 필터 조건이 적용되는 것을 확인하려면 뷰를 새로 고쳐야 할 수 있습니다. 
-  **긴 이름 표시** 옵션을 설정하거나 해제하여 목록을 새로 고칠 수도 있습니다.  
+ 필터 조건이 적용되는 것을 확인하려면 뷰를 새로 고쳐야 할 수 있습니다. **긴 이름 표시** 옵션을 설정하거나 해제하여 목록을 새로 고칠 수도 있습니다.  
   
- 기본적으로 필터 조건은 특성-값 조합의 전체 이름에 적용되므로 특성 이름만 보는 경우에는 필터 조건이 올바르게 적용되었는지가 명확하지 않을 수도 있습니다. 
-  **표시** 드롭다운 목록을 사용하여 **특성 이름 및 값 표시**를 선택하고 항목 집합의 목록이 올바르게 필터링되었는지 확인할 수 있습니다.  
+ 기본적으로 필터 조건은 특성-값 조합의 전체 이름에 적용되므로 특성 이름만 보는 경우에는 필터 조건이 올바르게 적용되었는지가 명확하지 않을 수도 있습니다. **표시** 드롭다운 목록을 사용하여 **특성 이름 및 값 표시**를 선택하고 항목 집합의 목록이 올바르게 필터링되었는지 확인할 수 있습니다.  
   
  **표시**  
  규칙이 뷰어에 표시되는 방법을 조정합니다. 다음 3가지 옵션 중 하나를 선택할 수 있습니다.  
@@ -70,10 +68,10 @@ ms.locfileid: "66070096"
  **긴 이름 표시**  
  마이닝 모델 콘텐츠에 나타나는 규칙의 전체 이름을 표시합니다.  
   
- **최대 행**  
+ **최대 행 수**  
  뷰어에 표시되는 규칙 수를 제한합니다.  
   
- **따르는**  
+ **Probability**  
  차트의 이 열에 각 규칙에 대한 확률이 표시됩니다.  
   
  열 머리글을 클릭하여 확률별로 정렬할 수 있습니다.  
@@ -83,7 +81,7 @@ ms.locfileid: "66070096"
   
  열 머리글을 클릭하여 중요도별로 정렬할 수 있습니다.  
   
- **노트**  
+ **규칙**  
  차트의 이 열에 **표시** 및 **긴 이름 표시**옵션을 사용하여 지정된 형식에 따라 각 규칙에 대한 텍스트 설명이 표시됩니다.  
   
  열 머리글을 클릭하여 규칙의 텍스트별로 정렬할 수 있습니다.  

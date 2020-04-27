@@ -14,29 +14,25 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 637d4e648d4d2b5c64d4635af8f96d0f2258b2f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479930"
 ---
 # <a name="create-a-model-master-data-services"></a>모델 만들기(Master Data Services)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델 개체를 포함할 모델을 만듭니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
--   
-  **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
+-   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
 ### <a name="to-create-a-model"></a>모델을 만들려면  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **시스템 관리**를 클릭합니다.  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **시스템 관리**를 클릭합니다.  
   
-2.  
-  **모델 뷰** 페이지의 메뉴 모음에서 **관리** 를 가리키고 **모델**을 클릭합니다.  
+2.  **모델 뷰** 페이지의 메뉴 모음에서 **관리** 를 가리키고 **모델**을 클릭합니다.  
   
 3.  **모델 유지 관리** 페이지에서 **모델 추가**를 클릭 합니다.  
   
@@ -48,12 +44,11 @@ ms.locfileid: "65479930"
   
 7.  필요에 따라 **필수 계층 (모든 리프 멤버 포함)** 을 선택 하 여 명시적 계층을 필수 계층으로 만듭니다.  
   
-8.  
-  **모델 저장**을 클릭합니다.  
+8.  **모델 저장**을 클릭합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
   
--   [엔터티 &#40;MDS(Master Data Services)를 만듭니다&#41;](create-an-entity-master-data-services.md)  
+-   [엔터티 만들기&#40;Master Data Services&#41;](create-an-entity-master-data-services.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [모델 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/models-master-data-services.md)   

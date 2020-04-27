@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca4b3c0b2f2a6c63e62a44499d6e33e651ca9bae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075583"
 ---
 # <a name="define-linked-dimensions"></a>연결된 차원 정의
@@ -41,25 +41,21 @@ ms.locfileid: "66075583"
   
 1.  SQL Server Management Studio에서 Analysis Services 서버에 연결합니다. 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭한 다음 **패싯**을 선택합니다.  
   
-2.  
-  **LinkedObjectsLinksFromOtherInstancesEnabled** 를 **True** 로 설정하여 서버에서 다른 인스턴스에서 실행 중인 데이터베이스에 있는 연결된 개체에 대한 요청을 실행할 수 있도록 합니다.  
+2.  **LinkedObjectsLinksFromOtherInstancesEnabled** 를 **True** 로 설정하여 서버에서 다른 인스턴스에서 실행 중인 데이터베이스에 있는 연결된 개체에 대한 요청을 실행할 수 있도록 합니다.  
   
-3.  
-  **LinkedObjectsLinksToOtherInstances** 를 **True** 로 설정하여 서버에서 다른 인스턴스에서 실행 중인 데이터베이스에 있는 연결된 개체에 대한 데이터를 요청할 수 있도록 합니다.  
+3.  **LinkedObjectsLinksToOtherInstances** 를 **True** 로 설정하여 서버에서 다른 인스턴스에서 실행 중인 데이터베이스에 있는 연결된 개체에 대한 데이터를 요청할 수 있도록 합니다.  
   
 ## <a name="create-a-linked-dimension-in-sql-server-data-tools"></a>SQL Server Data Tools에서 연결된 차원 만들기  
   
-1.  마법사를 시작합니다. 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 **데이터베이스 또는 프로젝트의** 차원 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 연결된 차원**을 클릭합니다.  
+1.  마법사를 시작합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 **데이터베이스 또는 프로젝트의** 차원 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 연결된 차원**을 클릭합니다.  
   
 2.  차원을 제공하는 Analysis Services 데이터베이스에 연결합니다. 연결된 개체 마법사의 **데이터 원본 선택** 페이지에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본을 선택하거나 새로 만듭니다.  
   
 3.  마법사의 **개체 선택** 페이지에서 원격 데이터베이스에 있는 연결할 차원을 선택합니다.  
   
-4.  
-  **마법사 완료** 페이지에서 연결된 개체를 미리 볼 수 있습니다. 이미 있는 것과 이름이 같은 차원을 연결하면 이름에 서수 번호(중복된 첫 번째 이름의 경우 '1'로 시작)가 추가됩니다. 마법사를 완료하면 **차원** 폴더에 차원이 추가됩니다.  
+4.  **마법사 완료** 페이지에서 연결된 개체를 미리 볼 수 있습니다. 이미 있는 것과 이름이 같은 차원을 연결하면 이름에 서수 번호(중복된 첫 번째 이름의 경우 '1'로 시작)가 추가됩니다. 마법사를 완료하면 **차원** 폴더에 차원이 추가됩니다.  
   
-##  <a name="bkmk_CreateNew"></a>Analysis Services 데이터베이스에 대 한 새 데이터 원본 연결 만들기  
+##  <a name="create-a-new-data-source-connection-to-an-analysis-services-database"></a><a name="bkmk_CreateNew"></a> Analysis Services 데이터베이스에 대한 새 데이터 원본 연결 만들기  
  새 데이터 원본 마법사를 사용하여 차원을 제공하는 Analysis Services 데이터베이스에 대한 프로젝트 연결 정보를 추가할 수 있습니다. 연결된 개체 마법사의 데이터 원본 선택 페이지에서 **새 데이터 원본** 을 클릭하여 마법사를 시작할 수 있습니다.  
   
 1.  데이터 원본 마법사 시작의 연결 정의 방법 선택 페이지에서 **새로 만들기**를 클릭합니다.  
@@ -70,13 +66,11 @@ ms.locfileid: "66075583"
   
 4.  연결을 위해 Windows 인증을 사용합니다.  
   
-5.  
-  **초기 카탈로그**에서 아래쪽 화살표를 클릭하여 이 서버의 데이터베이스를 선택합니다.  
+5.  **초기 카탈로그**에서 아래쪽 화살표를 클릭하여 이 서버의 데이터베이스를 선택합니다.  
   
 6.  데이터 원본 마법사에서 **다음** 을 클릭하여 계속합니다.  
   
-7.  가장 정보 페이지에서 **서비스 계정 사용**을 클릭합니다. 
-  **다음**을 클릭한 다음 마법사를 끝냅니다. 방금 정의한 연결이 연결된 개체 마법사에서 선택됩니다.  
+7.  가장 정보 페이지에서 **서비스 계정 사용**을 클릭합니다. **다음**을 클릭한 다음 마법사를 끝냅니다. 방금 정의한 연결이 연결된 개체 마법사에서 선택됩니다.  
   
 ## <a name="next-steps"></a>다음 단계  
  연결된 차원의 구조는 변경할 수 없으므로 차원 디자이너의 **차원 구조** 탭에서 볼 수 없습니다. 연결 된 차원을 처리 한 후에는 **브라우저** 탭에서 볼 수 있습니다. 이름을 변경 하 고 이름에 대 한 번역을 만들 수도 있습니다.  

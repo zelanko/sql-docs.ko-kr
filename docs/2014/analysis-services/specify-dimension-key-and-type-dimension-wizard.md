@@ -13,18 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95ff2c99f01361f82b0ec29ee404958ca076d6ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068386"
 ---
 # <a name="specify-dimension-key-and-type-dimension-wizard"></a>차원 키 및 유형 지정(차원 마법사)
-  
   **차원 키 및 유형 지정** 페이지를 사용하여 차원의 키 특성을 정의하고 차원이 SCD(느린 변경 차원)인지 여부를 나타낼 수 있습니다.  
   
 > [!NOTE]  
->  이 페이지는 **생성 방법 선택** 페이지에서 **데이터 원본을 사용하지 않고 차원 생성** 을 선택하고 **차원 유형 선택** 페이지에서 **표준 차원** 을 선택한 경우에만 표시됩니다.  
+>   이 페이지는 **생성 방법 선택** 페이지에서 **데이터 원본을 사용하지 않고 차원 생성** 을 선택하고 **차원 유형 선택** 페이지에서 **표준 차원** 을 선택한 경우에만 표시됩니다.  
   
 ## <a name="options"></a>옵션  
  **키 특성**  

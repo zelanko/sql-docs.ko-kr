@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 188f47efe73edde0ed2e534bd19787c8546e7c18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990371"
 ---
 # <a name="creating-and-accessing-tables-in-tempdb-from-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저의 TempDB에서 테이블 만들기 및 액세스
-  고유하게 컴파일된 저장 프로시저의 TempDB에서 테이블을 만들거나 액세스하는 것은 지원되지 않습니다. 그 대신 테이블 형식과 테이블 변수를 사용합니다. 다음은 그 예입니다.  
+  고유하게 컴파일된 저장 프로시저의 TempDB에서 테이블을 만들거나 액세스하는 것은 지원되지 않습니다. 그 대신 테이블 형식과 테이블 변수를 사용합니다. 예를 들어:  
   
 ```sql  
 CREATE TYPE dbo.OrderQuantityByProduct   
@@ -43,7 +43,7 @@ AS BEGIN ATOMIC WITH
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [고유하게 컴파일된 저장 프로시저의 마이그레이션 문제](migration-issues-for-natively-compiled-stored-procedures.md)   
+ [고유 하 게 컴파일된 저장 프로시저의 마이그레이션 문제](migration-issues-for-natively-compiled-stored-procedures.md)   
  [메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   

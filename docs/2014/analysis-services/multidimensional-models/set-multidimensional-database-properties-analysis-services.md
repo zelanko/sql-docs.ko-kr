@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aa3e1544f625183df3240359aa22b117144244d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072999"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>다차원 데이터베이스 속성 설정(Analysis Services)
@@ -35,20 +35,17 @@ ms.locfileid: "66072999"
 ## <a name="database-properties"></a>데이터베이스 속성  
  위의 기능 외에도 속성 창에서 다양한 데이터베이스 속성을 구성할 수 있습니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
-|Aggregation Prefix|데이터베이스의 모든 파티션에 대한 집계 이름에 사용할 수 있는 공통 접두사입니다. 자세한 내용은 [AggregationPrefix 요소&#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/aggregationprefix-element-assl)를 참조하세요.|  
-|데이터 정렬|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 배포하면 다른 값을 제공하지 않는 한 데이터베이스는 Collation 서버 속성에서 상속합니다.|  
+|집계 접두사|데이터베이스의 모든 파티션에 대한 집계 이름에 사용할 수 있는 공통 접두사입니다. 자세한 내용은 [AggregationPrefix 요소&#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/aggregationprefix-element-assl)를 참조하세요.|  
+|데이터 정렬|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 배포하면 다른 값을 제공하지 않는 한 데이터베이스는 Collation 서버 속성에서 상속합니다.|  
 |DataSourceImpersonationInfo|데이터베이스의 모든 데이터 원본 개체에 대한 기본 가장 모드를 지정합니다. 이 모드는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스에서 개체를 처리하고 서버를 동기화하며 OpenQuery 및 SystemOpenSchema 데이터 마이닝 문을 실행할 때 사용합니다.|  
-|예상 크기|디스크의 데이터베이스 파일에 대한 예상 크기를 제공합니다. 데이터가 여러 위치에 저장된 경우 이 예상 값은 데이터베이스 폴더 아래에 저장된 데이터 파일로만 제한됩니다.<br /><br /> 
-  `EstimatedSize`는 메모리 예측을 위한 기초로 사용할 수도 있습니다. 일반적으로 데이터베이스를 메모리에 로드할 때 발생하는 추가적인 데이터 구조로 인해 메모리 요구 사항이 디스크 상의 데이터 크기보다 큽니다.<br /><br /> 메모리 요구 사항을 보다 세부적으로 예측하기 위해서는 데이터베이스 처리 전 및 후에 작업 관리자를 사용하여 Analysis Services 프로세스 메모리를 조사하고 데이터베이스의 메모리 요구 사항을 이해할 수 있도록 메서드로 활용되는 메모리를 관측할 수도 있습니다.|  
-|언어|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 배포하면 다른 값을 제공하지 않는 한 데이터베이스는 Language 서버 속성에서 상속합니다.|  
+|예상 크기|디스크의 데이터베이스 파일에 대한 예상 크기를 제공합니다. 데이터가 여러 위치에 저장된 경우 이 예상 값은 데이터베이스 폴더 아래에 저장된 데이터 파일로만 제한됩니다.<br /><br /> `EstimatedSize`는 메모리 예측을 위한 기초로 사용할 수도 있습니다. 일반적으로 데이터베이스를 메모리에 로드할 때 발생하는 추가적인 데이터 구조로 인해 메모리 요구 사항이 디스크 상의 데이터 크기보다 큽니다.<br /><br /> 메모리 요구 사항을 보다 세부적으로 예측하기 위해서는 데이터베이스 처리 전 및 후에 작업 관리자를 사용하여 Analysis Services 프로세스 메모리를 조사하고 데이터베이스의 메모리 요구 사항을 이해할 수 있도록 메서드로 활용되는 메모리를 관측할 수도 있습니다.|  
+|언어|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 배포하면 다른 값을 제공하지 않는 한 데이터베이스는 Language 서버 속성에서 상속합니다.|  
 |MasterDataSource ID|원격 파티션에 사용됩니다. 자세한 내용은 [Remote Partitions](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)을 참조하세요.|  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 속성 대화 상자 &#40;SSAS-다차원&#41;](../database-properties-dialog-box-ssas-multidimensional.md)   
- [SSDT&#41;&#40;Analysis Services 프로젝트 속성 구성](configure-analysis-services-project-properties-ssdt.md)  
+ [Analysis Services 프로젝트 속성 구성&#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)  
   
   

@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 4d559f7fb03b632fc5cfca573b2fedc72506fead
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899404"
 ---
 # <a name="sysdm_pdw_exec_sessions-transact-sql"></a>sys. dm_pdw_exec_sessions (Transact-sql)
@@ -24,12 +24,12 @@ ms.locfileid: "67899404"
 
   어플라이언스에서 현재 또는 최근에 열려 있는 모든 세션에 대 한 정보를 보관 합니다. 세션 마다 하나의 행을 나열 합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|session_id|**nvarchar (32)**|현재 쿼리 또는 마지막 쿼리 실행의 id입니다 (세션이 종료 되 고 종료 시 쿼리가 실행 되는 경우). 이 보기의 키입니다.|시스템의 모든 세션에서 고유 합니다.|  
+|session_id|**nvarchar(32)**|현재 쿼리 또는 마지막 쿼리 실행의 id입니다 (세션이 종료 되 고 종료 시 쿼리가 실행 되는 경우). 이 보기의 키입니다.|시스템의 모든 세션에서 고유 합니다.|  
 |상태|**nvarchar (10)**|현재 세션의 경우 세션이 현재 활성 상태 인지 아니면 유휴 상태 인지를 식별 합니다. 이전 세션의 경우 세션 상태는 종료 됨 또는 중단 됨으로 표시 될 수 있습니다 (세션이 강제로 닫혀 있는 경우).|' ACTIVE ', ' CLOSED ', ' IDLE ', ' 종료 됨 '|  
-|request_id|**nvarchar (32)**|현재 쿼리 또는 마지막 쿼리 실행의 id입니다.|시스템의 모든 요청에 대해 고유 합니다. 실행 된 항목이 없으면 Null입니다.|  
-|security_id|**varbinary (85)**|세션을 실행 하는 보안 주체의 보안 ID입니다.||  
+|request_id|**nvarchar(32)**|현재 쿼리 또는 마지막 쿼리 실행의 id입니다.|시스템의 모든 요청에 대해 고유 합니다. 실행 된 항목이 없으면 Null입니다.|  
+|security_id|**varbinary(85)**|세션을 실행 하는 보안 주체의 보안 ID입니다.||  
 |login_name|**nvarchar(128)**|세션을 실행 하는 보안 주체의 로그인 이름입니다.|사용자 명명 규칙을 준수 하는 문자열입니다.|  
 |login_time|**datetime**|사용자가 로그인 하 고이 세션을 만든 날짜 및 시간입니다.|현재 시간 이전의 유효한 **날짜/** 시간입니다.|  
 |query_count|**int**|생성 이후 실행 된 쿼리 수를 캡처합니다.|0 보다 크거나 같습니다.|  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 18cc4dfd6f1d17340cc06803367737b841bade70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075609"
 ---
 # <a name="define-database-dimensions"></a>데이터베이스 차원 정의
@@ -40,7 +40,7 @@ ms.locfileid: "66075609"
   
  차원 디자이너에는 다음 표에 설명된 3개의 탭이 있습니다.  
   
-|탭|Description|  
+|탭|설명|  
 |---------|-----------------|  
 |**차원 구조**|이 탭을 사용 하 여 차원의 데이터 원본 뷰 스키마를 검토 하거나 만들고 특성 작업을 수행 하 고 사용자 정의 계층의 특성을 구성 하는 등의 차원 구조 작업을 수행할 수 있습니다.|  
 |**의 차원 디자이너에 있는 차원 구조 뷰의**|이 탭을 사용하여 차원의 특성 관계를 만들거나 수정하거나 삭제할 수 있습니다.|  

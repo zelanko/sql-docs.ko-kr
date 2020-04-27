@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6592d81e91e0582c79bc1a8bb1264b6ab9a7b733
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080703"
 ---
 # <a name="impersonation-information-dialog-box-table-import-wizard"></a>가장 정보 대화 상자(테이블 가져오기 마법사)
-  
   **가장 정보** 페이지를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 데이터 원본에 연결하는 데 사용할 자격 증명을 지정할 수 있습니다. 자격 증명 가장에 대 한 자세한 내용은 [가장 &#40;SSAS 테이블 형식&#41;](tabular-models/impersonation-ssas-tabular.md)를 참조 하세요.  
   
 ## <a name="options"></a>옵션  
@@ -43,6 +42,6 @@ ms.locfileid: "66080703"
  모델을 관리하는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 서비스와 연결된 보안 자격 증명을 사용하려면 이 옵션을 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [가장 &#40;SSAS 테이블 형식&#41;](tabular-models/impersonation-ssas-tabular.md)  
+ [가장&#40;SSAS 테이블 형식&#41;](tabular-models/impersonation-ssas-tabular.md)  
   
   

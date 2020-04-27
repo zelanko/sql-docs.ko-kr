@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f0717d8a81cc89897de005144dd631d23da42137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081028"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>예측 마법사(Excel용 데이터 마이닝 추가 기능)
@@ -63,7 +63,7 @@ ms.locfileid: "66081028"
   
     -   **드릴스루를 사용 하도록 설정**합니다. 완료된 모델에서 기본 데이터를 보려면 이 옵션을 선택합니다. 이 옵션은 의사 결정 트리 모델을 작성하는 경우에만 사용할 수 있습니다.  
   
-    -   **임시 모델을 사용**합니다. 이 옵션을 선택하면 모델이 서버에 저장되지 않습니다. 임시 모델은 Excel을 닫을 때 삭제됩니다.  
+    -   **임시 모델 사용**. 이 옵션을 선택하면 모델이 서버에 저장되지 않습니다. 임시 모델은 Excel을 닫을 때 삭제됩니다.  
   
 ### <a name="requirements"></a>요구 사항  
  데이터에 시계열로 사용할 수 있는 열이 하나 이상 포함되어야 합니다. 이 열의 값은 고유 하 고 연속 되어야 합니다. 즉, 간격이 없어야 합니다. 마법사를 실행하기 전에 시계열 열을 기준으로 데이터를 오름차순으로 정렬합니다.  

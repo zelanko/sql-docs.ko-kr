@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5af4f85652fc1a8a333912c741f96df014655ebe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144313"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>큰 CLR 사용자 정의 형식(ODBC)
@@ -130,7 +130,7 @@ ms.locfileid: "63144313"
 |변환 원본 및 대상|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|되지|  
-|SQL_C_BINARY|지원됨|  
+|SQL_C_BINARY|지원 여부|  
 |SQL_C_CHAR|되지|  
   
  \*이진 데이터가 16 진수 문자열로 변환 됩니다.  
@@ -140,7 +140,7 @@ ms.locfileid: "63144313"
 |변환 원본 및 대상|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|되지|  
-|SQL_C_BINARY|지원됨|  
+|SQL_C_BINARY|지원 여부|  
 |SQL_C_CHAR|되지|  
   
  \*16 진수 문자열에서 이진 데이터로의 변환이 발생 합니다.  
@@ -210,7 +210,7 @@ ms.locfileid: "63144313"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  UDT에 대해 반환되는 값은 다음과 같습니다.  
   
-|SQL 데이터 형식|Type|하위 유형|길이|자릿수|확장|  
+|SQL 데이터 형식|유형|하위 유형|길이|자릿수|확장|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (8,000바이트 이하 길이)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (8,000바이트를 초과하는 길이)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -230,7 +230,7 @@ ms.locfileid: "63144313"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  UDT에 허용되는 값은 다음과 같습니다.  
   
-|SQL 데이터 형식|Type|하위 유형|길이|자릿수|확장|  
+|SQL 데이터 형식|유형|하위 유형|길이|자릿수|확장|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (8,000바이트 이하 길이)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (8,000바이트를 초과하는 길이)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900562"
 ---
 # <a name="fuzzy-grouping-transformation"></a>유사 항목 그룹화 변환
@@ -81,20 +81,19 @@ ms.locfileid: "62900562"
 ## <a name="configuration-of-the-fuzzy-grouping-transformation"></a>유사 항목 그룹화 변환 구성  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- 
-  **유사 항목 그룹화 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ **유사 항목 그룹화 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [유사 항목 그룹화 변환 편집기 &#40;연결 관리자 탭&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
+-   [유사 항목 그룹화 변환 편집기&#40;연결 관리자 탭&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
--   [유사 항목 그룹화 변환 편집기 &#40;열 탭&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
+-   [유사 항목 그룹화 변환 편집기&#40;열 탭&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
   
--   [유사 항목 그룹화 변환 편집기 &#40;고급 탭&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
+-   [유사 항목 그룹화 변환 편집기&#40;고급 탭&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
   
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](../../common-properties.md)  
+-   [공용 속성](../../common-properties.md)  
   
--   [변환 사용자 지정 속성](transformation-custom-properties.md)  
+-   [Transformation Custom Properties](transformation-custom-properties.md)  
   
 ## <a name="related-tasks"></a>관련 작업  
  이 태스크의 속성 설정 방법에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  

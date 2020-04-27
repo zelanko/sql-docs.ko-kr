@@ -13,24 +13,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cb0f104d1555b18d18df38027c240a392d2ac66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918730"
 ---
 # <a name="view-collation-information"></a>데이터 정렬 정보 보기
     
-##  <a name="Top"></a> 개체 탐색기 메뉴 옵션을 사용하거나 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 서버, 데이터베이스 또는 열의 데이터 정렬을 볼 수 있습니다.  
+##  <a name="you-can-view-the-collation-of-a-server-database-or-column-in-ssmanstudiofull-using-object-explorer-menu-options-or-by-using-tsql"></a><a name="Top"></a> 개체 탐색기 메뉴 옵션을 사용하거나 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 서버, 데이터베이스 또는 열의 데이터 정렬을 볼 수 있습니다.  
   
-##  <a name="Procedures"></a> 데이터 정렬 설정을 보는 방법  
+##  <a name="how-to-view-a-collation-setting"></a><a name="Procedures"></a> 데이터 정렬 설정을 보는 방법  
  다음 중 하나를 사용할 수 있습니다.  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **개체 탐색기에서 서버(SQL Server의 인스턴스)에 대한 데이터 정렬 설정을 보려면**  
   
 1.  개체 탐색기에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "62918730"
   
 4.  열을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 데이터 정렬 속성이 비어 있는 경우 열은 문자 데이터 유형이 아닙니다.  
   
-###  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **서버의 데이터 정렬 설정을 보려면**  
   
 1.  개체 탐색기에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결하고 도구 모음에서 **새 쿼리**를 클릭합니다.  
@@ -112,6 +112,6 @@ ms.locfileid: "62918730"
  [sys.databases&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
  [&#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql)   
  [데이터 정렬 선행 규칙&#40;Transact-SQL&#41;](/sql/t-sql/statements/collation-precedence-transact-sql)   
- [Transact-sql&#41;sp_helpsort &#40;](/sql/relational-databases/system-stored-procedures/sp-helpsort-transact-sql)  
+ [sp_helpsort&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsort-transact-sql)  
   
   

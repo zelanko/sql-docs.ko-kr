@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d9d7b41de3505c3b6e3ccf3886254958ee71e456
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072939"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>파티션 조각 속성 설정(Analysis Services)
@@ -46,6 +46,6 @@ ms.locfileid: "66072939"
 >  복잡한 조각을 정의해야 하는 경우 XMLA Alter 스크립트를 사용하여 조각에서 튜플을 정의하는 것이 좋습니다. 그런 다음 ascmd 명령줄 도구 또는 SSIS [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) 를 사용하여 스크립트를 실행하고 지정된 멤버 집합을 만든 후 곧바로 파티션을 처리할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Analysis Services&#41;&#40;로컬 파티션 만들기 및 관리](create-and-manage-a-local-partition-analysis-services.md)  
+ [로컬 파티션 만들기 및 관리&#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
   
   

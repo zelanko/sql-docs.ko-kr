@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3a1022770526386640f0ad2aa114a2161ba16dc8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140371"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>조건 창의 검색 조건 결합 규칙(Visual Database Tools)
@@ -139,7 +139,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
  쿼리 및 뷰 디자이너는 아래와 같이 조건 창에 이 WHERE 문을 나타냅니다.  
   
- ![조건 창의 OR 절 선행 조건](../../database-engine/media//vs-criteriapane1.gif "조건 창의 OR 절 선행 조건")  
+ ![조건 창의 OR 절 우선 순위](../../database-engine/media//vs-criteriapane1.gif "조건 창의 OR 절 우선 순위")  
   
  그러나 연결된 OR 절이 AND 절보다 우선 순위가 높으면 AND 절은 각 OR 절에 대해 반복됩니다. 이렇게 하면 AND 절이 각 OR 절에 분배됩니다. 예를 들어, SQL 창에서 다음과 같은 WHERE 절을 만들 수 있습니다.  
   

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 08db0d81ac198795386391f977d09d20ff8d22ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076874"
 ---
 # <a name="set-custom-member-formulas-for-attributes-in-a-dimension"></a>차원에 특성의 사용자 지정 멤버 수식 설정
@@ -35,9 +35,7 @@ ms.locfileid: "66076874"
  마법사의 첫 번째 **사용자 지정 멤버 수식 만들기** 페이지에서 사용자 지정 멤버 수식을 적용할 차원을 지정합니다. 선택한 차원에 사용자 지정 멤버 수식 기능을 추가하면 차원이 변경됩니다. 이러한 변경 내용은 선택된 차원을 포함하는 모든 큐브에 상속됩니다.  
   
 ## <a name="enabling-a-custom-member-formula"></a>사용자 지정 멤버 수식 사용 설정  
- 두 번째 **사용자 지정 멤버 수식 만들기** 페이지에서 사용자 지정 멤버 수식이 포함된 원본 열을 차원에 있는 하나 이상의 특성과 연결합니다. 
-  **특성** 열에서 사용자 지정 멤버 수식 열과 연결할 특성 옆에 있는 확인란을 선택합니다. 특성을 선택할 때마다 **열 선택** 대화 상자가 표시됩니다. 이 대화 상자에서 수식이 포함된 차원 테이블의 열을 클릭합니다. 
-  **열 선택** 대화 상자를 닫은 후에 선택 사항을 변경하려면 변경할 **원본 열** 셀을 클릭한 다음 줄임표(**...**)를 클릭하여 **열 선택** 대화 상자를 다시 엽니다.  
+ 두 번째 **사용자 지정 멤버 수식 만들기** 페이지에서 사용자 지정 멤버 수식이 포함된 원본 열을 차원에 있는 하나 이상의 특성과 연결합니다. **특성** 열에서 사용자 지정 멤버 수식 열과 연결할 특성 옆에 있는 확인란을 선택합니다. 특성을 선택할 때마다 **열 선택** 대화 상자가 표시됩니다. 이 대화 상자에서 수식이 포함된 차원 테이블의 열을 클릭합니다. **열 선택** 대화 상자를 닫은 후에 선택 사항을 변경하려면 변경할 **원본 열** 셀을 클릭한 다음 줄임표(**...**)를 클릭하여 **열 선택** 대화 상자를 다시 엽니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [비즈니스 인텔리전스 마법사를 사용하여 차원 향상](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  

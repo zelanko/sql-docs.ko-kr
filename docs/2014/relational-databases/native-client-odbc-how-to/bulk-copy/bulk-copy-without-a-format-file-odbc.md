@@ -16,17 +16,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d5ff1d19e6ead1cb24ebe666a7bab2187ddaa13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63126180"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>서식 파일 없이 대량 복사(ODBC)
   이 예제에서는 대량 복사 함수를 사용하여 서식 파일 없이 기본 모드 데이터 파일을 만드는 방법을 보여 줍니다. 이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  
   
 > [!IMPORTANT]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지 해야 하는 경우에는 [Win32 CRYPTO API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용 하 여 자격 증명을 암호화 해야 합니다.  
   
 ### <a name="to-bulk-copy-without-a-format-file"></a>서식 파일 없이 대량 복사하려면  
   
@@ -36,8 +36,7 @@ ms.locfileid: "63126180"
   
 3.  SQL Server에 연결합니다.  
   
-4.  
-  [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 를 호출하여 다음 정보를 설정합니다.  
+4.  [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 를 호출하여 다음 정보를 설정합니다.  
   
     -   대량 복사를 수행할 원본 또는 대상 테이블/뷰의 이름을 지정합니다.  
   
@@ -47,8 +46,7 @@ ms.locfileid: "63126180"
   
     -   복사 방향: 파일에서 뷰 또는 테이블로 DB_IN 하거나 테이블이 나 뷰의 파일에 DB_OUT 합니다.  
   
-5.  
-  [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) 를 호출하여 대량 복사 작업을 실행합니다.  
+5.  [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) 를 호출하여 대량 복사 작업을 실행합니다.  
   
  이러한 단계를 사용하여 DB_OUT을 설정하면 기본 형식으로 파일이 만들어집니다. 그런 다음 DB_IN 대신 DB_OUT을 설정한다는 것을 제외하고 동일한 단계에 따라 파일을 서버에 대량 복사할 수 있습니다. 이 작업은 원본 테이블과 대상 테이블의 구조가 정확히 일치하는 경우에만 수행할 수 있습니다.  
   

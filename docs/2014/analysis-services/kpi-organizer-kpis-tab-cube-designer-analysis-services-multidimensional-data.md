@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85046febbaa348216a48e51860f7dbcf604f9f8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079399"
 ---
 # <a name="kpi-organizer-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 구성 도우미(KPI 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
@@ -26,23 +26,19 @@ ms.locfileid: "66079399"
 >  이 창은 폼 보기에 표시되지 않습니다.  
   
 ## <a name="options"></a>옵션  
- **목록**  
+ **은**  
  KPI 이름을 표시합니다.  
   
- 
-  **KPI 폼 편집기** 를 표시하려면 폼 보기에서 KPI를 선택합니다.  
+ **KPI 폼 편집기** 를 표시하려면 폼 보기에서 KPI를 선택합니다.  
   
 ## <a name="context-menu"></a>상황에 맞는 메뉴  
  다음 옵션은 **KPI 구성 도우미** 창에서 KPI를 마우스 오른쪽 단추로 클릭하면 표시되는 상황에 맞는 메뉴를 통해 사용할 수 있습니다.  
   
 |옵션|정의|  
 |------------|----------------|  
-|**새 KPI**|
-  **KPI 폼 편집기** 를 표시하고 새 KPI를 만들려면 선택합니다. **Kpi 폼 편집기**에 대 한 자세한 내용은 Kpi [폼 편집기 &#40;Kpi 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)를 참조 하세요.|  
-|**위로 이동**|
-  **KPI 구성 도우미** 에서 선택한 KPI를 한 단계 위로 이동하고 **KPI 브라우저**에서 KPI가 표시되는 순서를 결정하려면 선택합니다.<br /><br /> 참고: 선택한 KPI를 더 이상 이동할 수 없는 경우 이 옵션을 사용할 수 없습니다.|  
-|**아래로 이동**|
-  **KPI 구성 도우미** 에서 선택한 KPI를 한 단계 아래로 이동하고 **KPI 브라우저**에서 KPI가 표시되는 순서를 결정하려면 선택합니다.<br /><br /> 참고: 선택한 KPI를 더 이상 이동할 수 없는 경우 이 옵션을 사용할 수 없습니다.|  
+|**새 KPI**|**KPI 폼 편집기** 를 표시하고 새 KPI를 만들려면 선택합니다. **Kpi 폼 편집기**에 대 한 자세한 내용은 Kpi [폼 편집기 &#40;Kpi 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)를 참조 하세요.|  
+|**위로 이동**|**KPI 구성 도우미** 에서 선택한 KPI를 한 단계 위로 이동하고 **KPI 브라우저**에서 KPI가 표시되는 순서를 결정하려면 선택합니다.<br /><br /> 참고: 선택한 KPI를 더 이상 이동할 수 없는 경우 이 옵션을 사용할 수 없습니다.|  
+|**아래로 이동**|**KPI 구성 도우미** 에서 선택한 KPI를 한 단계 아래로 이동하고 **KPI 브라우저**에서 KPI가 표시되는 순서를 결정하려면 선택합니다.<br /><br /> 참고: 선택한 KPI를 더 이상 이동할 수 없는 경우 이 옵션을 사용할 수 없습니다.|  
 |**Delete**|선택한 KPI를 삭제하려면 선택합니다.|  
   
 ## <a name="see-also"></a>참고 항목  

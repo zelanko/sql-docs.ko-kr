@@ -20,17 +20,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 14ead76661b6818ac2daf6a3aa250dddb348745d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876145"
 ---
 # <a name="full-file-backups-sql-server"></a>전체 파일 백업(SQL Server)
   이 항목에서는 여러 개의 파일 및 파일 그룹을 포함하고 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 관련된 내용을 다룹니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스의 파일을 개별적으로 백업하고 복원할 수 있습니다. 또한 각 구성 파일을 개별적으로 지정하는 대신 전체 파일 그룹을 지정할 수 있습니다. 이때 파일 그룹에 오프라인 상태인 파일이 있다면(예: 복원 중인 파일) 전체 파일 그룹이 오프라인 상태가 되고 이를 백업할 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스의 파일을 개별적으로 백업하고 복원할 수 있습니다. 또한 각 구성 파일을 개별적으로 지정하는 대신 전체 파일 그룹을 지정할 수 있습니다. 이때 파일 그룹에 오프라인 상태인 파일이 있다면(예: 복원 중인 파일) 전체 파일 그룹이 오프라인 상태가 되고 이를 백업할 수 없습니다.  
   
  읽기 전용 파일 그룹의 파일 백업을 부분 백업과 결합할 수 있습니다. 부분 백업은 모든 읽기/쓰기 파일 그룹과 필요에 따라 하나 이상의 읽기 전용 파일 그룹을 포함합니다. 자세한 내용은 [부분 백업&#40;SQL Server&#41;](partial-backups-sql-server.md)을 참조하세요.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "62876145"
 > [!NOTE]  
 >  전체 파일 백업은 *차등 파일 백업*과 명시적으로 비교하는 경우를 제외하고 일반적으로 *파일 백업*이라고 합니다.  
   
- **항목 내용**  
+ **항목 내용:**  
   
 -   [파일 백업의 이점](#Benefits)  
   
@@ -49,7 +48,7 @@ ms.locfileid: "62876145"
   
 -   [관련 작업](#RelatedTasks)  
   
-##  <a name="Benefits"></a>파일 백업의 이점  
+##  <a name="benefits-of-file-backups"></a><a name="Benefits"></a> 파일 백업의 이점  
  파일 백업은 데이터베이스 백업에 비해 다음과 같은 장점이 있습니다.  
   
 -   파일 백업을 사용하면 데이터베이스의 나머지 부분을 복원하지 않고 손상된 파일만 복원할 수 있으므로 복구 속도를 높일 수 있습니다.  
@@ -58,13 +57,13 @@ ms.locfileid: "62876145"
   
 -   파일 백업은 초대형 데이터베이스의 경우 관리가 힘든 전체 데이터베이스 백업에 비해 일정 예약 및 미디어 처리의 유연성이 뛰어납니다. 파일 또는 파일 그룹 백업의 뛰어난 유연성은 다양한 업데이트 특성을 가진 데이터가 포함된 대형 데이터베이스에도 유용합니다.  
   
-##  <a name="Disadvantages"></a>파일 백업의 단점  
+##  <a name="disadvantages-of-file-backups"></a><a name="Disadvantages"></a> 파일 백업의 단점  
   
 -   전체 데이터베이스 백업과 비교하여 파일 백업의 주요 단점은 관리가 더 복잡하다는 점입니다. 이렇게 전체 백업을 유지 관리하고 추적하는 태스크는 많은 시간이 소모되므로 전체 데이터베이스 백업의 공간 요구 사항 문제보다 더욱 부담이 될 수 있습니다.  
   
 -   미디어 실패가 발생했을 때 손상된 파일이 백업되지 않은 경우 전체 데이터베이스를 복구하지 못할 수도 있습니다. 따라서 완전한 파일 백업 세트를 유지 관리해야 하며 전체 복구 모델 및 대량 로그 복구 모델의 경우 첫 번째 전체 파일 백업과 마지막 전체 파일 백업 사이의 최소 간격을 포함하는 하나 이상의 로그 백업을 유지 관리해야 합니다.  
   
-##  <a name="Overview"></a>파일 백업 개요  
+##  <a name="overview-of-file-backups"></a><a name="Overview"></a> 파일 백업 개요  
  전체 파일 백업은 하나 이상의 파일 또는 파일 그룹에 있는 모든 데이터를 백업합니다. 기본적으로 파일 백업은 충분한 로그 레코드를 포함하여 백업 작업의 끝으로 파일을 롤포워드합니다.  
   
  읽기 전용 파일이나 파일 그룹 백업은 모든 복구 모델에 대해 동일합니다. 전체 복구 모델에서 완전한 전체 파일 백업 세트를 모든 파일 백업을 포함하기에 충분한 로그 백업과 함께 사용하는 것은 전체 데이터베이스 백업을 수행하는 것과 같습니다.  
@@ -87,7 +86,7 @@ ms.locfileid: "62876145"
 > [!NOTE]  
 >  전체 복구 모델에서는 파일이 나머지 데이터베이스와 일치하도록 읽기/쓰기 파일 백업을 복원할 때 트랜잭션 로그를 롤포워드해야 합니다. 여러 트랜잭션 로그 백업을 롤포워드하지 않으려면 차등 파일 백업을 사용하세요. 자세한 내용은 [차등 백업&#40;SQL Server&#41;](differential-backups-sql-server.md)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **파일 또는 파일 그룹 백업을 만들려면**  
   
 -   [파일 및 파일 그룹 백업&#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)  

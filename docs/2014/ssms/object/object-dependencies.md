@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bba5156d159c87ad6ad0e011268bc655b45a5c37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63032413"
 ---
 # <a name="object-dependencies"></a>개체 종속성
@@ -27,14 +27,14 @@ ms.locfileid: "63032413"
  선택한 개체를 변경하거나 삭제하기 전에 개체의 종속성을 파악하려면 이 대화 상자를 사용하십시오.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
- ****_\<선택한 개체에 종속 된 개체>_    
+ **Objects that depend on**_\<선택한 개체에 종속 된 개체>_    
  이 단추를 클릭하면 종속성이 추적되고 선택한 개체에 종속된 개체의 목록이 표시됩니다.  
   
- ****_\<선택한 개체가 _ **종속** 된 개체>     
+ **Objects on which**_\<선택한 개체가 _ **종속** 된 개체>     
  이 단추를 클릭하면 종속성이 추적되고 선택한 개체가 종속된 개체의 목록이 표시됩니다.  
   
- **관계도**  
- _ \<선택한 개체>_ **에 종속 된 개체** 를 클릭 하면 선택한 개체에 종속 된 개체의 계층 뷰가 표시 됩니다. **** _선택한 개체>종속 된 개체를 클릭 하면 선택한 개체가 종속 된 개체의 계층 뷰가 표시 \<_ 됩니다. ****  
+ **종속성**  
+ _ \<선택한 개체>_ **에 종속 된 개체** 를 클릭 하면 선택한 개체에 종속 된 개체의 계층 뷰가 표시 됩니다. **Objects on which** _선택한 개체>종속 된 개체를 클릭 하면 선택한 개체가 종속 된 개체의 계층 뷰가 표시 \<_ 됩니다. **depends**  
   
  **이름**  
  위의 **종속성** 트리 뷰에서 선택한 개체의 이름을 표시합니다.  

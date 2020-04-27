@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac1aa0c45e8201d50ead862dd1631bbb3324c8e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891591"
 ---
 # <a name="step-3-testing-the-lesson-3-tutorial-package"></a>3단계: 3단원 자습서 패키지 테스트
@@ -46,6 +46,6 @@ ms.locfileid: "62891591"
 -   `PipelineExecutionPlan` 및 `PipelineExecutionTrees` 이벤트에 대해 생성 된 정보의 의미 체계가이 자습서의 범위를 벗어나기는 하지만 **SSIS 로그 구성** 대화 상자의 **자세히** 탭에 지정 된 정보 필드가 첫 번째 줄에 표시 되는 것을 확인할 수 있습니다. 또한 Foreach 루프가 반복될 때마다 선택한 두 이벤트 PipelineExecutionPlan과 PipelineExecutionTrees가 로그되어 있는 것을 확인할 수 있습니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [4단원: 오류 흐름 리디렉션 추가](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
+ [4단원: 오류 Flow 리디렉션 추가](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
   
   

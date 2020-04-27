@@ -18,10 +18,10 @@ ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5c138f2e97bf80f00f77c519bb4b9467c715f95b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907410"
 ---
 # <a name="msdistribution_agents-transact-sql"></a>MSdistribution_agents(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67907410"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**a-id**|**int**|배포 에이전트의 ID입니다.|  
+|**id**|**int**|배포 에이전트의 ID입니다.|  
 |**name**|**nvarchar (100)**|배포 에이전트의 이름입니다.|  
 |**publisher_database_id**|**int**|게시자 데이터베이스의 ID입니다.|  
 |**publisher_id**|**smallint**|게시자의 ID입니다.|  
@@ -41,8 +41,8 @@ ms.locfileid: "67907410"
 |**subscriber_db**|**sysname**|구독 데이터베이스의 이름입니다.|  
 |**subscription_type**|**int**|구독 유형은 다음과 같습니다.<br /><br /> **0** = 푸시합니다.<br /><br /> **1** = 끌어오기<br /><br /> **2** = 익명.|  
 |**local_job**|**bit**|로컬 배포자에 SQL Server 에이전트 작업이 있는지 여부를 나타냅니다.|  
-|**job_id**|**binary (16)**|작업 ID입니다.|  
-|**subscription_guid**|**binary (16)**|이 에이전트의 구독 ID입니다.|  
+|**job_id**|**binary(16)**|작업 ID입니다.|  
+|**subscription_guid**|**binary(16)**|이 에이전트의 구독 ID입니다.|  
 |**profile_id**|**int**|[Transact-sql&#41;테이블 &#40;MSagent_profiles](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) 구성 ID입니다.|  
 |**anonymous_subid**|**uniqueidentifier**|익명 에이전트의 ID입니다.|  
 |**subscriber_name**|**sysname**|익명 에이전트에서만 사용하는 구독자의 이름입니다.|  
@@ -56,9 +56,9 @@ ms.locfileid: "67907410"
 |**dts_package_name**|**sysname**|DTS 패키지의 이름입니다. 예를 들어 **DTSPub_Package**패키지의 경우를 지정 `@dts_package_name = N'DTSPub_Package'`합니다.|  
 |**dts_package_password**|**nvarchar (524)**|패키지의 암호입니다.|  
 |**dts_package_location**|**int**|패키지 위치입니다. 패키지의 위치는 **배포자** 또는 **구독자**일 수 있습니다.|  
-|**s**|**varbinary (85)**|첫 번째 실행 시 배포 에이전트 또는 병합 에이전트의 SID(보안 ID)입니다.|  
+|**sid**|**varbinary(85)**|첫 번째 실행 시 배포 에이전트 또는 병합 에이전트의 SID(보안 ID)입니다.|  
 |**queue_server**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**subscriber_security_mode**|**smallint**|에이전트가 구독자에 연결할 때 사용하는 보안 모드로 다음 중 하나일 수 있습니다.<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 인증<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증입니다.|  
+|**subscriber_security_mode**|**smallint**|에이전트가 구독자에 연결할 때 사용하는 보안 모드로 다음 중 하나일 수 있습니다.<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 인증<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증입니다.|  
 |**subscriber_login**|**sysname**|구독자에 연결할 때 사용하는 로그인입니다.|  
 |**subscriber_password**|**nvarchar (524)**|구독자에 연결할 때 사용하는 암호의 암호화된 값입니다.|  
 |**reset_partial_snapshot_progress**|**bit**|스냅샷이 일부분만 다운로드된 경우 이를 삭제하여 전체 스냅샷 과정을 다시 시작하도록 할지 여부입니다.|  

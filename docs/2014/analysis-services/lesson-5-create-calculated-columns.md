@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58ba761f3e32f13ddcf81dc9875057195298c705
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078557"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>6단원: 계산 열 만들기
-  이 단원에서는 계산된 열을 추가하여 모델에서 새 데이터를 만듭니다. 계산 열은 모델에 이미 있는 데이터를 기반으로 합니다. 자세한 내용은 [계산 열&#40;SSAS 테이블 형식&#41;](tabular-models/ssas-calculated-columns.md)을 참조하세요.  
+  이 단원에서는 계산 열을 추가하여 모델에 새 데이터를 만듭니다. 계산 열은 모델에 이미 있는 데이터를 기반으로 합니다. 자세한 내용은 [계산 열&#40;SSAS 테이블 형식&#41;](tabular-models/ssas-calculated-columns.md)을 참조하세요.  
   
- 서로 다른 세 테이블에 5개의 새 계산된 열을 만들겠습니다. 단계는 작업마다 약간 다릅니다. 이것은 새로운 열을 생성하고 이름을 바꾸며 테이블의 여러 위치에 배치하는 여러 가지 방법이 있음을 보여줍니다.  
+ 서로 다른 세 테이블에 5개의 새 계산된 열을 만들겠습니다. 태스크마다 단계가 조금씩 다릅니다. 이는 새 열을 만들고 열의 이름을 바꾸고 테이블의 다양한 위치에 열을 배치하는 데 여러 가지 방법이 있음을 보여 주기 위한 것입니다.  
   
  이 단원을 완료하기 위한 예상 시간: **15분**  
   
@@ -31,10 +31,9 @@ ms.locfileid: "66078557"
   
 #### <a name="create-a-month-calendar-calculated-column-in-the-date-table"></a>Date 테이블에서 Month Calendar 계산 열 만들기  
   
-1.  
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 **모델** 메뉴를 클릭하고 **모델 뷰**를 가리킨 다음 **데이터 보기**를 클릭합니다.  
+1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 **모델** 메뉴를 클릭하고 **모델 뷰**를 가리킨 다음 **데이터 보기**를 클릭합니다.  
   
-     데이터 뷰에서는 모델 디자이너를 사용하여 계산된 열만 만들 수 있습니다.  
+     데이터 뷰에서는 모델 디자이너를 사용하여 계산 열만 만들 수 있습니다.  
   
 2.  모델 디자이너에서 **Date** 테이블(탭)을 클릭합니다.  
   
@@ -59,8 +58,7 @@ ms.locfileid: "66078557"
   
 #### <a name="create-a-day-of-week-calculated-column-in-the-date-table"></a>Date 테이블에서 Day of Week 계산 열 만들기  
   
-1.  
-  **Date** 테이블을 활성화한 상태로 **열** 메뉴를 클릭한 다음 **열 추가**를 클릭합니다.  
+1.  **Date** 테이블을 활성화한 상태로 **열** 메뉴를 클릭한 다음 **열 추가**를 클릭합니다.  
   
      새 열이 테이블의 맨 오른쪽에 추가됩니다.  
   
@@ -97,8 +95,7 @@ ms.locfileid: "66078557"
   
 #### <a name="create-a-product-category-name-calculated-column-in-the-product-table"></a>Product 테이블에서 Product Category Name 계산 열 만들기  
   
-1.  
-  **Product** 테이블을 활성화한 상태로 **열** 메뉴를 클릭한 다음 **열 추가**를 클릭합니다.  
+1.  **Product** 테이블을 활성화한 상태로 **열** 메뉴를 클릭한 다음 **열 추가**를 클릭합니다.  
   
 2.  수식 입력줄에 다음 수식을 입력합니다.  
   

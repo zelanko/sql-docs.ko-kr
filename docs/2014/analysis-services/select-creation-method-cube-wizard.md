@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 793c83dba01be84fb468b0be54bb7d0405e39467
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069627"
 ---
 # <a name="select-creation-method-cube-wizard"></a>생성 방법 선택(큐브 마법사)
-  
   **생성 방법 선택** 페이지를 사용하여 큐브를 만드는 방법을 지정할 수 있습니다.  
   
 ## <a name="options"></a>옵션  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: da816635ab978e7baadfb810aed78fa0f3258dd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071674"
 ---
 # <a name="connect-a-powerpivot-service-application-to-a-sharepoint-web-application-in-central-administration"></a>중앙 관리에서 SharePoint 웹 애플리케이션에 PowerPivot 서비스 애플리케이션 연결
@@ -29,7 +29,7 @@ ms.locfileid: "66071674"
   
  [사용자 지정 서비스 연결 목록에 PowerPivot 서비스 애플리케이션 추가](#custom)  
   
-##  <a name="default"></a>기본 그룹에 PowerPivot 서비스 응용 프로그램 추가  
+##  <a name="add-powerpivot-services-application-to-the-default-group"></a><a name="default"></a>기본 그룹에 PowerPivot 서비스 응용 프로그램 추가  
  서비스 연결 목록은 팜의 다른 SharePoint 웹 애플리케이션에 리소스를 제공하는 공유 서비스의 목록입니다. 팜에는 하나의 기본 서비스 연결 그룹이 있습니다.  
   
  PowerPivot 서비스 애플리케이션을 목록에 추가하려면 애플리케이션을 만들 때 또는 나중에 다음 단계를 사용하여 추가할 수 있습니다.  
@@ -42,17 +42,16 @@ ms.locfileid: "66071674"
   
 4.  **확인**을 클릭합니다.  
   
-##  <a name="custom"></a>사용자 지정 서비스 연결 목록에 PowerPivot 서비스 응용 프로그램 추가  
+##  <a name="add-powerpivot-services-application-a-custom-service-association-list"></a><a name="custom"></a>사용자 지정 서비스 연결 목록에 PowerPivot 서비스 응용 프로그램 추가  
  기본 그룹을 사용자 지정 목록으로 바꿀 수 있습니다. 특히 하나의 SharePoint 웹 애플리케이션에 대해 사용자 지정 목록이 작성됩니다. 기본 그룹이 무시되고 팜 또는 서비스 관리자가 지정한 서비스 연결만으로 기본 그룹이 대체됩니다. 여러 PowerPivot 서비스 애플리케이션을 만든 경우 사용자 지정 목록을 사용하여 사용할 애플리케이션을 지정해야 합니다. 사용자 지정 목록을 다른 웹 애플리케이션에서 다시 사용할 수 없습니다. 이는 작성된 웹 애플리케이션에만 적용됩니다.  
   
-1.  중앙 관리의 **응용 프로그램 관리**에서 **웹 응용 프로그램 관리**를 클릭 합니다.  
+1.  중앙 관리의 **애플리케이션 관리**에서 **웹 애플리케이션 관리**를 클릭합니다.  
   
 2.  애플리케이션(예: SharePoint -80)을 선택합니다.  
   
 3.  웹 애플리케이션의 관리에서 **서비스 연결**을 클릭합니다.  
   
-4.  
-  **다음 연결 그룹 편집**에서 **[사용자 지정]** 을 선택합니다.  
+4.  **다음 연결 그룹 편집**에서 **[사용자 지정]** 을 선택합니다.  
   
 5.  사용할 각 서비스 애플리케이션 연결 옆에 있는 확인란을 선택합니다. 여러 PowerPivot 서비스 애플리케이션이 있는 경우(`PowerPivot Service Application Proxy` 유형 설정으로 표시) 하나만 선택해야 합니다.  
   

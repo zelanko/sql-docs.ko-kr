@@ -13,21 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fefc72d81129ac4691f35209f25c4f348272c81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081443"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>테이블 속성 편집 대화 상자(SSAS)
-  
   **테이블 속성 편집** 대화 상자에서는 테이블 가져오기 마법사를 사용하여 모델 디자이너로 가져온 테이블의 속성을 보고 수정할 수 있습니다. 모델 디자이너에서 이 대화 상자를 열려면 가져온 데이터의 테이블을 선택한 다음 **테이블** 메뉴를 클릭하고 **테이블 속성**을 클릭합니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
  이 대화 상자의 옵션은 데이터를 가져올 때 목록에서 테이블을 선택하는 방법을 사용했는지 SQL 쿼리를 사용했는지에 따라 다릅니다.  
   
 ## <a name="table-preview-mode"></a>테이블 미리 보기 모드  
- **테이블 이름**  
+ **표 이름**  
  모델에 데이터 테이블의 이름을 표시합니다.  
   
 > [!NOTE]  
@@ -72,7 +71,7 @@ ms.locfileid: "66081443"
  열 바꾸기를 비롯한 모든 변경 내용을 적용하려면 클릭합니다.  
   
 ## <a name="query-design-mode"></a>쿼리 디자인 모드  
- **테이블 이름**  
+ **표 이름**  
  모델에 데이터 테이블의 이름을 표시합니다.  
   
 > [!NOTE]  
@@ -100,6 +99,6 @@ ms.locfileid: "66081443"
  열 바꾸기를 비롯한 모든 변경 내용을 적용하려면 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SSAS 테이블 형식&#41;&#40;테이블 및 열](tabular-models/tables-and-columns-ssas-tabular.md)  
+ [테이블 및 열&#40;SSAS 테이블 형식&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

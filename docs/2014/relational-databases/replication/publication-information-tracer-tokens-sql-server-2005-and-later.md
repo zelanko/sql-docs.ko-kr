@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 287d565947a13621fd3ba39cff6437ff76894c03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021695"
 ---
 # <a name="publication-information-tracer-tokens-transactional-publication-sql-server-2005-and-later"></a>게시 정보, 추적 프로그램 토큰(트랜잭션 게시, SQL Server 2005 이상)
@@ -67,10 +67,10 @@ ms.locfileid: "63021695"
  게시자에서 트랜잭션이 커밋되는 시점과 구독자에서 해당 트랜잭션이 커밋되는 시점 간에 경과한 시간입니다. 이 시간은 현재 이 구독자에 대한 복제 시스템의 엔드투엔드 대기 시간을 나타냅니다. 값 **보류 중** 은 토큰이 구독자에 아직 도달하지 않았음을 나타냅니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [복제 에이전트 시작 및 중지&#40;SQL Server Management Studio&#41;](agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
+ [복제 에이전트를 시작 및 중지 &#40;SQL Server Management Studio&#41;](agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
  [복제 모니터 시작](monitor/start-the-replication-monitor.md)   
- [트랜잭션 복제에 대한 대기 시간 측정 및 연결 유효성 검사](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
- [복제 모니터로 성능 모니터링](monitor/monitor-performance-with-replication-monitor.md)   
+ [트랜잭션 복제에 대 한 대기 시간 측정 및 연결 유효성 검사](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
+ [복제 모니터를 사용 하 여 성능 모니터링](monitor/monitor-performance-with-replication-monitor.md)   
  [복제 모니터링](monitoring-replication.md)   
  [복제 에이전트 개요](agents/replication-agents-overview.md)  
   

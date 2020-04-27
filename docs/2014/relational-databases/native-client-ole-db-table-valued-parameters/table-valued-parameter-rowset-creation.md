@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de130ef821551383ada1a6df3574404cd3518e88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046518"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>테이블 반환 매개 변수 행 집합 만들기
@@ -25,13 +25,11 @@ ms.locfileid: "63046518"
  테이블 반환 매개 변수 행 집합 개체는 소비자가 여러 세션 수준 인터페이스를 통해 입력 매개 변수에 대해서 명시적으로 생성합니다. 테이블 반환 매개 변수 행 집합 개체의 인스턴스는 테이블 반환 매개 변수당 하나씩 생성됩니다. 소비자는 이미 알려진 메타데이터 정보를 제공(정적 시나리오)하거나 공급자 인터페이스를 통해 해당 정보를 검색(동적 시나리오)하는 방법으로 테이블 반환 매개 변수 행 집합 개체를 만들 수 있습니다. 다음 섹션에서는 이러한 두 시나리오에 대해 설명합니다.  
   
 ## <a name="static-scenario"></a>정적 시나리오  
- 형식 정보를 알고 있으면 소비자는 ITableDefinitionWithConstraints:: CreateTableWithConstraints를 사용 하 여 테이블 반환 매개 변수에 해당 하는 테이블 반환 매개 변수 행 집합 개체를 인스턴스화합니다.  
+ 형식 정보가 알려져 있는 경우, 소비자는 ITableDefinitionWithConstraints::CreateTableWithConstraints를 사용하여 테이블 반환 매개 변수에 해당하는 테이블 반환 매개 변수 행 집합 개체를 인스턴스화합니다.  
   
- *Guid* 필드 (*pTableID* 매개 변수)는 특수 guid (CLSID_ROWSET_TVP)를 포함 합니다. 
-  *pwszName* 멤버에는 소비자가 인스턴스화할 테이블 반환 매개 변수 형식의 이름이 포함되어 있습니다. 
-  *eKind* 필드는 DBKIND_GUID_NAME으로 설정됩니다. 이 이름은 문이 임시 SQL일 때 필요하며 문이 프로시저 호출일 때는 선택 사항입니다.  
+ *guid* 필드(*pTableID* 매개 변수)에는 특별한 GUID(CLSID_ROWSET_TVP)가 포함되어 있습니다. *pwszName* 멤버에는 소비자가 인스턴스화할 테이블 반환 매개 변수 형식의 이름이 포함되어 있습니다. *eKind* 필드는 DBKIND_GUID_NAME으로 설정됩니다. 이 이름은 문이 임시 SQL일 때 필요하며 문이 프로시저 호출일 때는 선택 사항입니다.  
   
- 집계의 경우 소비자는 *pUnkOuter* 매개 변수를 제어용 IUnknown으로 전달 합니다.  
+ 소비자는 집계를 위해 제어용 IUnknown을 사용하여 *pUnkOuter* 매개 변수를 전달합니다.  
   
  테이블 반환 매개 변수 행 집합 개체 속성은 읽기 전용 이므로 소비자는 *rgPropertySets*에서 속성을 설정 하지 않아도 됩니다.  
   
@@ -48,10 +46,10 @@ ms.locfileid: "63046518"
   
  이 시나리오에서는 공급자가 소비자 대신 서버에서 테이블 반환 매개 변수 행 집합 개체에 대한 유형 정보를 가져옵니다.  
   
- *PTableID* 및 *pUnkOuter* 매개 변수는 정적 시나리오에서로 설정 되어야 합니다. 그런 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 Native Client OLE DB 공급자는 서버에서 유형 정보 (열 정보 및 제약 조건)를 가져오고 *ppRowset* 매개 변수를 통해 테이블 반환 매개 변수 행 집합 개체를 반환 합니다. 이 경우 서버와의 통신이 필요하므로 이 작업은 정적 시나리오와 같은 방식으로 수행되지 않습니다. 동적 시나리오는 매개 변수가 있는 프로시저 호출의 경우에만 사용할 수 있습니다.  
+ *pTableID* 및 *pUnkOuter* 매개 변수는 정적 시나리오의 경우와 마찬가지로 설정해야 합니다. 그런 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 Native Client OLE DB 공급자는 서버에서 유형 정보 (열 정보 및 제약 조건)를 가져오고 *ppRowset* 매개 변수를 통해 테이블 반환 매개 변수 행 집합 개체를 반환 합니다. 이 경우 서버와의 통신이 필요하므로 이 작업은 정적 시나리오와 같은 방식으로 수행되지 않습니다. 동적 시나리오는 매개 변수가 있는 프로시저 호출의 경우에만 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [테이블 반환 매개 변수&#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   
+ [테이블 반환 매개 변수 OLE DB &#40;&#41;](table-valued-parameters-ole-db.md)   
  [테이블 반환 매개 변수&#40;OLE DB&#41; 사용](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

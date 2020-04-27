@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eeb258266c489056994d8f78f80a6856602a174a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073707"
 ---
 # <a name="using-variables-and-parameters-mdx"></a>변수 및 매개 변수 사용(MDX)
@@ -59,6 +59,6 @@ from [Adventure Works]
  OLE DB와 함께 이 기능을 사용하려면 `ICommandWithParameters` 인터페이스를 사용하십시오. ADOMD.Net과 함께 이 기능을 사용하려면 **AdomdCommand.Parameters** 컬렉션을 사용하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [MDX 스크립팅 기본 사항 &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
+ [MDX 스크립팅 기본 사항&#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
   

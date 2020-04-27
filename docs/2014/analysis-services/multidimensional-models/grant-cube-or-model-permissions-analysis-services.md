@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12eb2a2f6ea7501e03830724b24c5808375db7c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075033"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>큐브 또는 모델 권한 부여(Analysis Services)
@@ -42,28 +42,25 @@ ms.locfileid: "66075033"
   
 2.  개체 탐색기에서 **데이터베이스** 폴더를 열고 데이터베이스를 선택합니다.  
   
-3.  
-  **역할** 을 마우스 오른쪽 단추로 클릭하고 **새 역할**을 선택합니다. 역할이 데이터베이스 수준에서 생성되고 해당 데이터베이스 내 개체에 적용됩니다. 데이터베이스 간에 역할을 공유할 수 없습니다.  
+3.  **역할** 을 마우스 오른쪽 단추로 클릭하고 **새 역할**을 선택합니다. 역할이 데이터베이스 수준에서 생성되고 해당 데이터베이스 내 개체에 적용됩니다. 데이터베이스 간에 역할을 공유할 수 없습니다.  
   
-4.  
-  **일반** 창에서 이름 및 설명(옵션)을 입력합니다. 이 창에는 모든 권한, 데이터베이스 처리 및 정의 읽기와 같은 몇 가지 데이터베이스 사용 권한도 포함되어 있습니다. 이러한 사용 권한은 큐브 또는 테이블 형식 모델을 쿼리하는 데 필요하지 않습니다. 이러한 권한에 대한 자세한 내용은 [데이터베이스 권한 부여&#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)를 참조하세요.  
+4.  **일반** 창에서 이름 및 설명(옵션)을 입력합니다. 이 창에는 모든 권한, 데이터베이스 처리 및 정의 읽기와 같은 몇 가지 데이터베이스 사용 권한도 포함되어 있습니다. 이러한 사용 권한은 큐브 또는 테이블 형식 모델을 쿼리하는 데 필요하지 않습니다. 이러한 권한에 대한 자세한 내용은 [데이터베이스 권한 부여&#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)를 참조하세요.  
   
 5.  이름 및 설명(옵션)을 입력한 후 다음 단계를 계속 진행합니다.  
   
 #### <a name="step-2-assign-membership"></a>2단계: 멤버 자격 할당  
   
-1.  
-  **멤버 자격** 창에서 **추가** 를 클릭하여 이 역할을 사용하는 큐브에 액세스할 Windows 사용자 또는 그룹 계정을 입력합니다. Analysis Services만 Windows 보안 ID를 지원합니다. 이 단계에서는 데이터베이스 로그인을 만들지 않습니다. Analysis Services에서 사용자는 Windows 계정을 통해 연결합니다.  
+1.  **멤버 자격** 창에서 **추가** 를 클릭하여 이 역할을 사용하는 큐브에 액세스할 Windows 사용자 또는 그룹 계정을 입력합니다. Analysis Services만 Windows 보안 ID를 지원합니다. 이 단계에서는 데이터베이스 로그인을 만들지 않습니다. Analysis Services에서 사용자는 Windows 계정을 통해 연결합니다.  
   
 2.  다음 단계인 큐브 사용 권한 설정을 계속 진행합니다.  
   
-     데이터 소스 창은 건너뜁니다. 대부분 Analysis Services 데이터에의 일반 소비자에게는 데이터 소스 개체에 대한 사용 권한이 필요하지 않습니다. 이러한 권한 수준에 대한 자세한 내용은 [Grant permissions on a data source object &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md) 를 참조하세요.  
+     데이터 소스 창은 건너뜁니다. 대부분 Analysis Services 데이터에의 일반 소비자에게는 데이터 소스 개체에 대한 사용 권한이 필요하지 않습니다. 이러한 권한 수준에 대한 자세한 내용은 [데이터 원본 개체에 대한 권한 부여&#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md) 를 참조하세요.  
   
 #### <a name="step-3-set-cube-permissions"></a>3단계: 큐브 사용 권한 설정  
   
 1.  **큐브 창에서** 큐브를 선택한 다음 또는 **읽기/쓰기** 액세스 `Read` 를 클릭 합니다.  
   
-     `Read`대부분의 작업에는 액세스 만으로도 충분 합니다. **읽기/쓰기** 는 쓰기 저장에만 사용 되며 처리에는 사용 되지 않습니다. 이 기능에 대한 자세한 내용은 [Set Partition Writeback](set-partition-writeback.md) 을 참조하세요.  
+     `Read`대부분의 작업에는 액세스 만으로도 충분 합니다. **읽기/쓰기** 권한은 쓰기 저장에만 사용되며 처리에는 사용되지 않습니다. 이 기능에 대한 자세한 내용은 [Set Partition Writeback](set-partition-writeback.md) 을 참조하세요.  
   
      여러 큐브는 물론 역할 만들기 대화 상자에서 만들 수 있는 다른 개체도 선택할 수 있습니다. 큐브에 대한 사용 권한을 부여하면 해당 큐브와 연결된 차원 및 큐브 뷰에 대한 액세스 권한도 부여됩니다. 이미 큐브에 있는 개체를 수동으로 추가할 필요는 없습니다.  
   
@@ -71,8 +68,7 @@ ms.locfileid: "66075033"
   
 2.  여기서 **확인**을 클릭하면 이 역할의 모든 구성원은 지정한 사용 권한 수준으로 큐브에 액세스할 수 있습니다.  
   
-     
-  **큐브** 창에서 **드릴스루 및 로컬 큐브**를 통해 또는 드릴스루만 허용된 경우 **드릴스루** 권한을 통해 서버 큐브에서 로컬 큐브를 만들 수 있는 권한을 사용자에게 부여할 수 있습니다.  
+     **큐브** 창에서 **드릴스루 및 로컬 큐브**를 통해 또는 드릴스루만 허용된 경우 **드릴스루** 권한을 통해 서버 큐브에서 로컬 큐브를 만들 수 있는 권한을 사용자에게 부여할 수 있습니다.  
   
      마지막으로, 이 창을 통해 큐브에 대한 **데이터베이스 처리** 권한을 부여하여 이 역할의 모든 구성원에게 이 큐브의 데이터를 처리할 권한을 제공할 수 있습니다. 일반적으로 처리는 제한된 작업이므로 해당 작업을 관리자에게만 부여하거나 해당 작업에 대해 구체적으로 별도의 역할을 정의하는 것이 좋습니다. 처리 권한의 모범 사례에 대한 자세한 내용은 [처리 권한 부여&#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)를 참조하세요.  
   
@@ -93,8 +89,7 @@ ms.locfileid: "66075033"
   
 1.  마지막 단계로 방금 만든 역할 정의를 캡처하는 스크립트를 생성해야 합니다.  
   
-     
-  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 에서 프로젝트를 재배포하면 프로젝트 내부에서 정의되지 않은 역할 또는 역할 멤버 자격을 덮어씁니다. 재배포 이후 역할 및 역할 멤버 자격을 다시 빌드하는 가장 빠른 방법은 스크립트를 이용하는 것입니다.  
+     [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 에서 프로젝트를 재배포하면 프로젝트 내부에서 정의되지 않은 역할 또는 역할 멤버 자격을 덮어씁니다. 재배포 이후 역할 및 역할 멤버 자격을 다시 빌드하는 가장 빠른 방법은 스크립트를 이용하는 것입니다.  
   
 2.  SSMS에서 **역할** 폴더로 이동한 후 기존 역할을 마우스 오른쪽 단추로 클릭합니다.  
   
@@ -108,6 +103,6 @@ ms.locfileid: "66075033"
 ## <a name="see-also"></a>참고 항목  
  [Analysis Services에서 지 원하는 인증 방법](../instances/authentication-methodologies-supported-by-analysis-services.md)   
  [데이터 마이닝 구조 및 모델 &#40;Analysis Services&#41;에 대 한 권한을 부여 합니다.](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Analysis Services&#41;&#40;데이터 원본 개체에 대 한 사용 권한 부여](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [데이터 원본 개체에 대한 권한 부여&#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

@@ -13,15 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 716ade5265c2bb3325ad08005c98a1e67c474419
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63130642"
 ---
 # <a name="smo-object-model-diagram"></a>SMO 개체 모델 다이어그램
-  이 다이어그램은 SMO 개체 계층 구조와 개체 형식 간의 관계를 보여 줍니다. 
-  <xref:Microsoft.SqlServer.Management.Smo.Server> 개체가 최상위 개체입니다.  
+  이 다이어그램은 SMO 개체 계층 구조와 개체 형식 간의 관계를 보여 줍니다. <xref:Microsoft.SqlServer.Management.Smo.Server> 개체가 최상위 개체입니다.  
   
  ![계층 관계를 보여 주는 다이어그램](../../../2014/database-engine/dev-guide/media/object-diagram.gif "계층 관계를 보여 주는 다이어그램")  
   

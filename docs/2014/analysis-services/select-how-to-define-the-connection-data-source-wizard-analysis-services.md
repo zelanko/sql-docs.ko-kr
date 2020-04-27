@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30e727a207c0aeec93f945cc6f550b0e8f1f56f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069495"
 ---
 # <a name="select-how-to-define-the-connection-data-source-wizard-analysis-services"></a>연결 정의 방법 선택(데이터 원본 마법사)(Analysis Services)
-  
   **연결 정의 방법 선택** 페이지를 사용하여 데이터 원본에 대한 데이터 연결을 생성 또는 선택할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
@@ -31,12 +30,10 @@ ms.locfileid: "66069495"
  이 목록에서 기존 데이터 연결을 선택합니다.  
   
  **데이터 연결 속성**  
- 
-  **데이터 연결**에서 선택한 데이터 연결의 연결 속성 설정을 표시합니다.  
+ **데이터 연결**에서 선택한 데이터 연결의 연결 속성 설정을 표시합니다.  
   
  **새로운...**  
- 
-  **연결 관리자** 대화 상자를 사용하여 새 데이터 원본을 만들려면 클릭합니다.  
+ **연결 관리자** 대화 상자를 사용하여 새 데이터 원본을 만들려면 클릭합니다.  
   
  **Delete**  
  기존 데이터 원본을 삭제하려면 이 옵션을 선택합니다.  

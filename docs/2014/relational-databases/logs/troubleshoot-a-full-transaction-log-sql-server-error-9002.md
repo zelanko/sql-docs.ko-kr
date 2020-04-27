@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c0dc1566693ad8d8c86d7efe47403248788b076
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144720"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>꽉 찬 트랜잭션 로그 문제 해결(SQL Server 오류 9002)
@@ -51,7 +51,7 @@ ms.locfileid: "63144720"
  이러한 방법에 대해서는 다음 섹션에서 설명합니다. 해당 상황에 가장 적합한 대처 방법을 선택하십시오.  
   
 ### <a name="backing-up-the-log"></a>로그 백업  
- 전체 복구 모델 또는 대량 로그 복구 모델에서 트랜잭션 로그가 최근에 백업되지 않은 경우 백업하면 로그 잘림이 방지될 수 있습니다. 로그가 백업된 적이 없으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 로그를 마지막 백업 시점까지 자를 수 있도록 두 개의 로그 백업을 만들어야 합니다. 로그를 자르면 새 로그 레코드를 위한 공간이 늘어납니다. 로그가 다시 꽉 차지 않게 하려면 자주 로그 백업을 수행합니다.  
+ 전체 복구 모델 또는 대량 로그 복구 모델에서 트랜잭션 로그가 최근에 백업되지 않은 경우 백업하면 로그 잘림이 방지될 수 있습니다. 로그가 백업된 적이 없으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 로그를 마지막 백업 시점까지 자를 수 있도록 두 개의 로그 백업을 만들어야 합니다. 로그를 자르면 새 로그 레코드를 위한 공간이 늘어납니다. 로그가 다시 꽉 차지 않게 하려면 자주 로그 백업을 수행합니다.  
   
  **트랜잭션 로그 백업을 만들려면**  
   
@@ -97,9 +97,9 @@ ms.locfileid: "63144720"
 -   [데이터베이스에 데이터 또는 로그 파일 추가](../databases/add-data-or-log-files-to-a-database.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [ALTER DATABASE &#40;Transact-SQL &#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [트랜잭션 로그 파일의 크기 관리](manage-the-size-of-the-transaction-log-file.md)   
- [트랜잭션 로그 백업&#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md)   
- [Transact-sql&#41;sp_add_log_file_recover_suspect_db &#40;](/sql/relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql)  
+ [트랜잭션 로그 백업은 SQL Server를 &#40;&#41;](../backup-restore/transaction-log-backups-sql-server.md)   
+ [sp_add_log_file_recover_suspect_db&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql)  
   
   

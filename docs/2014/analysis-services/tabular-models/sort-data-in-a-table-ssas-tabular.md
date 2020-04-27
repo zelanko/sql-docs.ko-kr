@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc53b6ccc800e2986bf7a6bfdd01c0ef3c3208df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066656"
 ---
 # <a name="sort-data-in-a-table-ssas-tabular"></a>테이블의 데이터 정렬(SSAS 테이블 형식)
@@ -49,6 +49,6 @@ ms.locfileid: "66066656"
 ## <a name="see-also"></a>참고 항목  
  [SSAS 테이블 형식&#41;&#40;데이터 필터링 및 정렬](../filter-and-sort-data-ssas-tabular.md)   
  [SSAS 테이블 형식&#41;&#40;큐브 뷰](perspectives-ssas-tabular.md)   
- [SSAS 테이블 형식&#41;역할 &#40;](roles-ssas-tabular.md)  
+ [역할&#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)  
   
   

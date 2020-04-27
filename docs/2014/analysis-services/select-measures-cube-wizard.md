@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c8ea7af0102e9525eac15420a960ec357f9062e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069444"
 ---
 # <a name="select-measures-cube-wizard"></a>측정값 선택(큐브 마법사)
-  
   **측정값 선택** 페이지를 사용하여 만들 측정값 그룹과 측정값을 선택할 수 있습니다.  
   
 ## <a name="options"></a>옵션  

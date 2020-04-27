@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63072386"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인
@@ -31,7 +31,7 @@ ms.locfileid: "63072386"
   
 -   트랜잭션 성능 분석 보고서를 생성하여 성능이 중요한 테이블 및 저장 프로시저를 확인하십시오.  
   
- 마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 작업 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)을 참조하세요.  
+ 마이그레이션 방법에 대 한 자세한 내용은 [메모리 내 OLTP-일반적인 작업 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)을 참조 하세요.  
   
  트랜잭션 성능 수집기 및 트랜잭션 성능 분석 보고서를 사용하여 다음과 같은 작업을 수행할 수 있습니다.  
   
@@ -53,14 +53,11 @@ ms.locfileid: "63072386"
   
  성능 카운터 로그나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 작업 모니터를 사용하는 등의 다양한 방법으로 성능 기준을 설정할 수 있습니다. 성능 기준과 비교에 사용되는 정보는 다음과 같습니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 CPU 사용량  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 CPU 사용량  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 메모리 사용량  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 메모리 사용량  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 I/O 작업  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 I/O 작업  
   
 -   트랜잭션을 처리하는 동안 인스턴스의 트랜잭션 처리량  
   
@@ -98,12 +95,11 @@ ms.locfileid: "63072386"
   
 5.  마법사의 다음 단계에서 사용자와 로그인을 추가할 수 있습니다. 로그인을 MDW 인스턴스에 대한 역할 멤버 자격에 매핑할 수도 있습니다. 이 역할 멤버 자격은 로컬 인스턴스에서 데이터를 수집하는 데 필요하지 않습니다. 로컬 인스턴스에서 데이터를 수집하지 않는 경우 프로파일링할 트랜잭션을 실행할 계정에 데이터베이스 역할 멤버 자격 `mdw_admin`을 부여해도 됩니다. 완료 되 면 **다음**을 클릭 합니다.  
   
-6.  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트가 실행 중인지 확인합니다.  
+6.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트가 실행 중인지 확인합니다.  
   
 7.  다음 화면에서 **마침** 을 클릭 하 여 마법사를 종료 합니다.  
   
-### <a name="configure-data-collection-on-a-local-includessnoversionincludesssnoversion-mdmd-instance"></a>로컬 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 데이터 컬렉션 구성  
+### <a name="configure-data-collection-on-a-local-ssnoversion-instance"></a>로컬 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 데이터 컬렉션 구성  
  데이터 컬렉션을 사용하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 시작해야 합니다. 데이터 수집기는 서버에 하나만 구성하면 됩니다.  
   
  데이터 수집기는 SQL Server 2012 이상 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 구성할 수 있습니다.  
@@ -122,13 +118,12 @@ ms.locfileid: "63072386"
   
 6.  선택 내용을 확인합니다. 설정을 수정 하려면 **뒤로** 를 클릭 합니다. 완료되었으면 **마침** 을 클릭합니다.  
   
-###  <a name="xxx"></a>원격 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 데이터 수집 구성  
+###  <a name="configure-data-collection-on-a-remote-ssnoversion-instance"></a><a name="xxx"></a>원격 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 데이터 수집 구성  
  데이터를 수집하려면 데이터를 수집하는 인스턴스에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 시작해야 합니다.  
   
  데이터 수집기는 SQL Server 2012 이상 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 구성할 수 있습니다.  
   
- 트랜잭션이 프로파일링된 인스턴스와 다른 인스턴스에 있는 관리 데이터 웨어하우스 데이터베이스에 데이터를 업로드하려면 데이터 수집기에 대한 올바른 자격 증명으로 설정된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 프록시가 필요합니다. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 프록시를 사용하도록 설정하려면 먼저 도메인이 활성화된 로그인을 사용하여 자격 증명을 설정해야 합니다. 도메인이 활성화된 로그인은 관리 데이터 웨어하우스 데이터베이스에 대한 `mdw_admin` 그룹의 멤버여야 합니다. 자격 증명을 만드는 방법에 대 한 자세한 내용은 [방법: 자격 증명 만들기 (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) 를 참조 하세요.  
+ 트랜잭션이 프로파일링된 인스턴스와 다른 인스턴스에 있는 관리 데이터 웨어하우스 데이터베이스에 데이터를 업로드하려면 데이터 수집기에 대한 올바른 자격 증명으로 설정된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 프록시가 필요합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 프록시를 사용하도록 설정하려면 먼저 도메인이 활성화된 로그인을 사용하여 자격 증명을 설정해야 합니다. 도메인이 활성화된 로그인은 관리 데이터 웨어하우스 데이터베이스에 대한 `mdw_admin` 그룹의 멤버여야 합니다. 자격 증명을 만드는 방법에 대 한 자세한 내용은 [방법: 자격 증명 만들기 (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) 를 참조 하세요.  
   
  다른 인스턴스에서 관리 데이터 웨어하우스 데이터베이스로 업로드하기 위해 데이터 컬렉션을 구성하려면  
   

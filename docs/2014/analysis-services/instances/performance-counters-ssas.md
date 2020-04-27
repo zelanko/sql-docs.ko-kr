@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aa9d5a5352afd10617358a032824d275b14b6c5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079706"
 ---
 # <a name="performance-counters-ssas"></a>성능 카운터(SSAS)
@@ -24,15 +24,13 @@ ms.locfileid: "66079706"
   
  성능 모니터는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 원격 및 로컬 인스턴스를 모니터링할 수 있습니다. 자세한 내용은 [성능 모니터 사용](https://technet.microsoft.com/library/cc749115.aspx)을 참조하십시오.  
   
- 
-  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]와 함께 사용할 수 있는 카운터에 대한 설명을 보려면 성능에서 **카운터 추가** 대화 상자를 열고 성능 개체를 선택한 다음 **설명 표시**를 클릭하십시오. 가장 중요한 카운터는 CPU  사용량,  메모리 사용량,  디스크 IO  속도입니다. 이 중요한 카운터부터 사용해 보고 모니터링을 통해 향상될 수 있는 다른 사항에 대해 더 나은 생각이 떠오를 때 보다 세부적인 카운터를 시도하는 것이 좋습니다. 포함할 카운터에 대한 자세한 내용은 [SQL  Server  2008  R2작업 가이드](https://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]와 함께 사용할 수 있는 카운터에 대한 설명을 보려면 성능에서 **카운터 추가** 대화 상자를 열고 성능 개체를 선택한 다음 **설명 표시**를 클릭하십시오. 가장 중요한 카운터는 CPU  사용량,  메모리 사용량,  디스크 IO  속도입니다. 이 중요한 카운터부터 사용해 보고 모니터링을 통해 향상될 수 있는 다른 사항에 대해 더 나은 생각이 떠오를 때 보다 세부적인 카운터를 시도하는 것이 좋습니다. 포함할 카운터에 대한 자세한 내용은 [SQL  Server  2008  R2작업 가이드](https://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오.  
   
  카운터는 관련된 카운터를 더 쉽게 찾을 수 있도록 그룹화되어 있습니다.  
   
 ## <a name="counters-by-groups"></a>그룹별 카운터  
   
-|그룹|Description|  
+|그룹|설명|  
 |-----------|-----------------|  
 |[캐시](#bkmk_Cache)|Analysis  Services  집계 캐시와 관련된 통계입니다.|  
 |[연결](#bkmk_Connection)|Microsoft  Analysis  Services  연결과 관련된 통계입니다.|  
@@ -44,14 +42,14 @@ ms.locfileid: "66079706"
 |[자동 관리 캐싱](#bkmk_ProactiveCaching)|Microsoft  Analysis  Services  자동 관리 캐싱과 관련된 통계입니다.|  
 |[집계 처리](#bkmk_ProcAggregations)|MOLAP  데이터 파일의 집계 처리와 관련된 통계입니다.|  
 |[인덱스 처리](#bkmk_ProcIndexes)|MOLAP  데이터 파일의 인덱스 처리와 관련된 통계입니다.|  
-|[프로세스가](#bkmk_Processing)|데이터 처리와 관련된 통계입니다.|  
-|[저장소 엔진 쿼리](#bkmk_StorageEngineQuery)|Microsoft Analysis Services 스토리지 엔진 쿼리와 관련된 통계입니다.|  
-|[임계값](#bkmk_Threads)|Microsoft  Analysis  Services  스레드와 관련된 통계입니다.|  
+|[처리 중](#bkmk_Processing)|데이터 처리와 관련된 통계입니다.|  
+|[스토리지 엔진 쿼리](#bkmk_StorageEngineQuery)|Microsoft Analysis Services 스토리지 엔진 쿼리와 관련된 통계입니다.|  
+|[스레드](#bkmk_Threads)|Microsoft  Analysis  Services  스레드와 관련된 통계입니다.|  
   
-###  <a name="bkmk_Cache"></a>캐시  
+###  <a name="cache"></a><a name="bkmk_Cache"></a>캐시  
  Microsoft  Analysis  Services  집계 캐시와 관련된 통계입니다.  
   
-|카운터|Description|  
+|카운터|설명|  
 |-------------|-----------------|  
 |Current  KB|집계 캐시에서 사용하는 현재 메모리(KB)입니다.|  
 |KB  added/sec|캐시에 추가된 메모리 속도(KB/초)입니다.|  
@@ -70,32 +68,32 @@ ms.locfileid: "66079706"
 |Total  filtered  iterator  cache  hits|필터링된 결과에서 인덱싱된 반복자를 반환하는 총 캐시 적중 수입니다.|  
 |Total  filtered  iterator  cache  misses|필터링된 결과에서 인덱싱된 반복자를 작성할 수 없어서 필터링된 결과로 새 캐시를 작성해야 하는 총 캐시 적중 수입니다.|  
   
-###  <a name="bkmk_Connection"></a>연결  
+###  <a name="connection"></a><a name="bkmk_Connection"></a>연결  
  Microsoft  Analysis  Services  연결과 관련된 통계입니다.  
   
-|카운터|Description|  
+|카운터|설명|  
 |-------------|-----------------|  
 |현재 연결|현재 설정된 클라이언트 연결 수입니다.|  
 |요청/초|도착한 연결 요청  연결 요청 수입니다.|  
-|Total  requests|도착한 총  연결 요청 수입니다.|  
+|총 요청 수|도착한 총  연결 요청 수입니다.|  
 |Successes/sec|성공적으로 완료된 연결 비율입니다.|  
 |Total  successes|성공한 총 연결 수입니다.|  
 |Failures/sec|실패한 연결 비율입니다.|  
 |Total  failures|실패한 총 연결 시도 수입니다.|  
 |Current  user  sessions|현재 설정된 사용자 세션 수입니다.|  
   
-###  <a name="bkmk_DataMiningModelProcessing"></a>데이터 마이닝 모델 처리  
+###  <a name="data-mining-model-processing"></a><a name="bkmk_DataMiningModelProcessing"></a>데이터 마이닝 모델 처리  
  Microsoft  Analysis  Services  데이터 마이닝 모델 처리와 관련된 통계입니다.  
   
-|카운터|Description|  
+|카운터|설명|  
 |-------------|-----------------|  
 |Cases/sec|사례가 처리되는 속도입니다.|  
 |Current  models  processing|현재 처리 중인 모델 수입니다.|  
   
-###  <a name="bkmk_DataMiningPrediction"></a>데이터 마이닝 예측  
+###  <a name="data-mining-prediction"></a><a name="bkmk_DataMiningPrediction"></a>데이터 마이닝 예측  
  Microsoft  Analysis  Services  데이터 마이닝 예측과 관련된 통계입니다.  
   
-|카운터|Description|  
+|카운터|설명|  
 |-------------|-----------------|  
 |Concurrent  DM  queries|현재 수행 중인 데이터 마이닝 쿼리 수입니다.|  
 |Predictions/sec|데이터 마이닝 쿼리에서 생성되는 예측 수입니다.|  
@@ -105,10 +103,10 @@ ms.locfileid: "66079706"
 |Total  Rows|데이터 마이닝 쿼리에서 반환되는 총 행 수입니다.|  
 |Total  Predictions|서버에서 받는 총 데이터 마이닝 예측 쿼리 수입니다.|  
   
-###  <a name="bkmk_Locks"></a>중지  
+###  <a name="locks"></a><a name="bkmk_Locks"></a>중지  
  Microsoft  Analysis  Services  내부 서버 잠금과 관련된 통계입니다.  
   
-|카운터|Description|  
+|카운터|설명|  
 |-------------|-----------------|  
 |Current  latch  waits|현재 래치를 대기하는 스레드 수입니다.  즉시 허가를 받을 수 없어 대기 상태에 놓인 래치 요청이 포함됩니다.|  
 |Latch  waits/sec|즉시 허용될 수 없어 허용될 때까지 기다려야 하는 래치 요청 비율입니다.|  
@@ -121,10 +119,10 @@ ms.locfileid: "66079706"
 |Unlock requests/sec|초당 잠금 해제 요청 수입니다.|  
 |Total  deadlocks  detected|발견된 교착 상태의 총 수입니다.|  
   
-###  <a name="bkmk_MDX"></a>MDX  
+###  <a name="mdx"></a><a name="bkmk_MDX"></a>MDX  
  Microsoft  Analysis  Services  MDX  계산과 관련된 통계입니다.  
   
-|카운터|Description|  
+|카운터|설명|  
 |-------------|-----------------|  
 |Number  of  calculation  covers|활성 노드 및 캐시된 노드를 포함하여 MDX  실행 계획으로 작성된 총 계산 노드 수입니다.|  
 |현재 계산 노드 수|활성 노드 및 캐시된 노드를 포함하여 MDX  실행 계획으로 작성된 현재 계산 노드 수(근사치)입니다.|  
@@ -154,10 +152,10 @@ ms.locfileid: "66079706"
 |Total  Autoexist|AUTOEXIST를 수행한 총 횟수입니다.|  
 |Total  EXISTING|EXISTING  집합 연산을 수행한 총 횟수입니다.|  
   
-###  <a name="bkmk_Memory"></a>Ram  
+###  <a name="memory"></a><a name="bkmk_Memory"></a>Ram  
  Microsoft  Analysis  Services  내부 서버 메모리와 관련된 통계입니다.  
   
-|카운터|Description|  
+|카운터|설명|  
 |-------------|-----------------|  
 |Page  Pool  64  Alloc  KB|시스템에서 빌려 온 메모리(KB)입니다.  이 메모리는 서버의 다른 부분에 제공됩니다.|  
 |Page  Pool  64  Lookaside  KB|64KB  할당 준비 목록에 있는 현재 메모리(KB)입니다.  메모리 페이지를 사용할 준비가 되었습니다.|  
@@ -231,20 +229,20 @@ ms.locfileid: "66079706"
 |Memory Limit Hard KB|하드 메모리 제한, 구성 파일 원본입니다.|  
 |Memory Limit VertiPaq KB|메모리 내 제한, 구성 파일 원본입니다.|  
   
-###  <a name="bkmk_ProactiveCaching"></a>자동 관리 캐싱  
+###  <a name="proactive-caching"></a><a name="bkmk_ProactiveCaching"></a> 자동 관리 캐싱  
  Microsoft  Analysis  Services  자동 관리 캐싱과 관련된 통계입니다.  
   
-|카운터|Description|  
+|카운터|설명|  
 |-------------|-----------------|  
 |Notifications/sec|관계형 데이터베이스의 알림 비율입니다.|  
 |Processing Cancellations/sec|알림에 의해 처리가 취소된 비율입니다.|  
 |Proactive Caching Begin/sec|자동 관리 캐싱 시작 비율입니다.|  
 |Proactive Caching Completion/sec|자동 관리 캐싱 완료 비율입니다.|  
   
-###  <a name="bkmk_ProcAggregations"></a>집계 처리  
+###  <a name="processing-aggregations"></a><a name="bkmk_ProcAggregations"></a>집계 처리  
  MOLAP  데이터 파일의 Microsoft  Analysis  Services  집계 처리와 관련된 통계입니다.  
   
-|카운터|Description|  
+|카운터|설명|  
 |-------------|-----------------|  
 |Current  partitions|현재 처리 중인 파티션 수입니다.|  
 |Total  partitions|성공 여부에 관계없이 처리된 파티션의 총 수입니다.|  
@@ -255,20 +253,20 @@ ms.locfileid: "66079706"
 |Temp  file  rows  written/sec|임시 파일에 쓰는 행의 비율입니다.  이 작업은 집계가 메모리 한계를 초과할 때 발생합니다.|  
 |Temp  file  bytes  written/sec|임시 파일에 쓰는 바이트의 비율입니다.  이 작업은 집계가 메모리 한계를 초과할 때 발생합니다.|  
   
-###  <a name="bkmk_ProcIndexes"></a>인덱스 처리  
+###  <a name="processing-indexes"></a><a name="bkmk_ProcIndexes"></a>인덱스 처리  
  MOLAP  데이터 파일의 Microsoft  Analysis  Services  인덱스 처리와 관련된 통계입니다.  
   
-|카운터|Description|  
+|카운터|설명|  
 |-------------|-----------------|  
 |Current  partitions|현재 처리 중인 파티션 수입니다.|  
 |Total  partitions|성공 여부에 관계없이 처리된 파티션의 총 수입니다.|  
 |Rows/sec|인덱스를 만드는 데 사용한 MOLAP  파일의 행 비율입니다.|  
 |Total  Rows|인덱스를 만드는 데 사용한 MOLAP  파일의 총 행 수입니다.|  
   
-###  <a name="bkmk_Processing"></a>프로세스가  
+###  <a name="processing"></a><a name="bkmk_Processing"></a>프로세스가  
  Microsoft  Analysis  Services  데이터 처리와 관련된 통계입니다.  
   
-|카운터|Description|  
+|카운터|설명|  
 |-------------|-----------------|  
 |Rows read/sec|모든 관계형 데이터베이스에서 읽은 행의 비율입니다.|  
 |Total  rows  read|모든 관계형 데이터베이스에서 읽은 행 수입니다.|  
@@ -277,10 +275,10 @@ ms.locfileid: "66079706"
 |Rows  written/sec|처리하는 동안 작성된 행의 비율입니다.|  
 |Total  rows  written|처리하는 동안 쓴 행 수입니다.|  
   
-###  <a name="bkmk_StorageEngineQuery"></a>저장소 엔진 쿼리  
+###  <a name="storage-engine-query"></a><a name="bkmk_StorageEngineQuery"></a>저장소 엔진 쿼리  
  Microsoft Analysis Services 스토리지 엔진 쿼리와 관련된 통계입니다.  
   
-|카운터|Description|  
+|카운터|설명|  
 |-------------|-----------------|  
 |Current  measure  group  queries|현재 수행 중인 측정값 그룹 쿼리 수입니다.|  
 |Measure group queries/sec|측정값 그룹 쿼리의 비율입니다.|  
@@ -320,10 +318,10 @@ ms.locfileid: "66079706"
 |Aggregation  lookups/sec|집계 조회 비율입니다.|  
 |Aggregation  hits/sec|집계 적중 비율입니다.|  
   
-###  <a name="bkmk_Threads"></a>임계값  
+###  <a name="threads"></a><a name="bkmk_Threads"></a>임계값  
  Microsoft  Analysis  Services  스레드와 관련된 통계입니다.  
   
-|카운터|Description|  
+|카운터|설명|  
 |-------------|-----------------|  
 |짧은 구문 분석 유휴 상태 스레드|짧은 구문 분석 스레드 풀에서 유휴 상태 스레드 수입니다.|  
 |짧은 구문 분석 사용 중인 스레드|짧은 구문 분석 스레드 풀에서 사용 중인 스레드 수입니다.|  

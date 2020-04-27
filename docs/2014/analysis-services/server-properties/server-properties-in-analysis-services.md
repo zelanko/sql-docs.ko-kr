@@ -19,14 +19,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31c05bbc1be8376144eb191ff28a9cdc6eebdd8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068895"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Analysis Services에서 서버 속성 구성
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리자가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 기본 서버 구성 속성을 수정할 수 있습니다. 각 인스턴스에는 동일한 서버의 다른 인스턴스와 독립적으로 설정할 수 있는 자체 구성 속성이 있습니다.  
   
  서버 속성을 설정하려면 SQL Server Management Studio를 사용하거나 특정 인스턴스의 msmdsrv.ini 파일을 편집합니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "66068895"
   
  [서버 속성 참조](#bkmk_ref)  
   
-##  <a name="bkmk_config"></a>서버 (인스턴스) 속성 구성  
+##  <a name="configure-server-instance-properties"></a><a name="bkmk_config"></a>서버 (인스턴스) 속성 구성  
  SQL Server Management Studio의 속성 페이지에는 사용 가능한 속성의 하위 집합이 포함되어 있으며 수정할 가능성이 높은 속성만 표시됩니다. 전체 속성 집합은 msmdsrv.ini 파일에 있습니다.  
   
 > [!NOTE]  
@@ -45,15 +44,13 @@ ms.locfileid: "66068895"
   
 #### <a name="view-or-set-configuration-properties-in-management-studio"></a>Management Studio에서 구성 속성 보기 또는 설정  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 연결합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 연결합니다.  
   
      개체 탐색기에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 일반 페이지가 표시되고 더 일반적으로 사용되는 속성이 표시됩니다.  
   
 2.  추가 속성을 보려면 페이지 맨 아래의 **고급 속성 모두 표시** 확인란을 클릭합니다.  
   
-     테이블 형식 모드 및 다차원 모드 서버에 대해서만 서버 속성을 수정할 수 있습니다. 
-  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]을 설치한 경우 Microsoft 제품 지원 담당자가 다르게 지시한 경우가 아니라면 항상 기본값을 사용하십시오.  
+     테이블 형식 모드 및 다차원 모드 서버에 대해서만 서버 속성을 수정할 수 있습니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]을 설치한 경우 Microsoft 제품 지원 담당자가 다르게 지시한 경우가 아니라면 항상 기본값을 사용하십시오.  
   
      서버 속성을 통해 운영 또는 성능 문제를 해결하는 방법은 [SQL Server 2008 R2 Analysis Services 작업 가이드](https://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오.  
   
@@ -75,13 +72,12 @@ ms.locfileid: "66068895"
   
 4.  파일을 저장한 후 서비스를 다시 시작해야 합니다.  
   
-##  <a name="bkmk_ref"></a>서버 속성 참조  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 구성 속성은 시스템을 제대로 튜닝하기 위해 중요합니다. 예를 들어 요구 사항과 일관적으로 쿼리 로그 동작을 만들기 위해 관련 속성들을 설정할 수 있습니다.  
+##  <a name="server-property-reference"></a><a name="bkmk_ref"></a> 서버 속성 참조  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 구성 속성은 시스템을 제대로 튜닝하기 위해 중요합니다. 예를 들어 요구 사항과 일관적으로 쿼리 로그 동작을 만들기 위해 관련 속성들을 설정할 수 있습니다.  
   
  다음 항목에서는 여러 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 구성 속성에 대해 설명합니다.  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[일반 속성](general-properties.md)|일반 속성에는 데이터 디렉터리, 백업 디렉터리 및 기타 서버 동작을 정의하는 속성을 비롯한 기본 및 고급 속성이 모두 포함됩니다.|  
 |[데이터 마이닝 속성](data-mining-properties.md)|데이터 마이닝 속성은 설정 및 해제할 데이터 마이닝 알고리즘을 제어합니다. 기본적으로 모든 알고리즘이 설정됩니다.|  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fd38e382cc0b34de0498dd5ed9ce0237a5a1e07f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046135"
 ---
 # <a name="best-practices-for-reporting-services-exception-handling"></a>Reporting Services 예외 처리를 위한 최상의 방법
@@ -32,7 +32,7 @@ ms.locfileid: "63046135"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[잘못된 요청 방지](preventing-invalid-requests.md)|잘못된 요청이 보고서 서버에 전송되지 않도록 하기 위한 기술에 대해 설명합니다.|  
 |[Try 및 Catch 블록 사용](using-try-and-catch-blocks.md)|try/catch 블록으로 애플리케이션의 안정성을 향상시킬 수 있는 방법을 설명합니다.|  
@@ -41,7 +41,7 @@ ms.locfileid: "63046135"
   
 ## <a name="see-also"></a>참고 항목  
  [Detail 속성](../soapexception-class/detail-property.md)   
- [Reporting Services의 예외 처리 소개](../introducing-exception-handling-in-reporting-services.md)   
+ [Reporting Services에서 예외 처리 소개](../introducing-exception-handling-in-reporting-services.md)   
  [Reporting Services SoapException 클래스](../soapexception-class/reporting-services-soapexception-class.md)  
   
   

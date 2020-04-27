@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a116be708dd714a48d1cc936a08350237ca98ddf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074395"
 ---
 # <a name="language-and-format_string-on-formated_value"></a>FORMATED_VALUE에 대한 LANGUAGE 및 FORMAT_STRING
@@ -85,7 +85,7 @@ ms.locfileid: "66074395"
 |E|5,04E+03|FORMAT_STRING이 `Scientific` 으로 설정되었고 LANGUAGE가 명시적으로 `1034,` 로 설정되었으므로 `,` (쉼표)가 소수 구분 기호입니다.|  
 |F|50.40%|FORMAT_STRING이 `Percent` 로 설정되었고 LANGUAGE가 `1033`(시스템 로캘 값에서 상속)으로 설정되었으므로 `.` (점)이 소수 구분 기호입니다.<br /><br /> VALUE가 5040에서 0.5040으로 변경되었습니다.|  
 |G|50,40%|FORMAT_STRING이 `Percent`(F에서 상속)로 설정되었고 LANGUAGE가 명시적으로 `1034` 로 설정되었으므로 `,` (쉼표)가 소수 구분 기호입니다.<br /><br /> VALUE가 F 값에서 상속되었습니다.|  
-|H|예|FORMAT_STRING이 `YES/NO`로 설정되었고 VALUE가 0으로 설정되었고 LANGUAGE가 명시적으로 `1034`로 설정되었습니다. 영어 NO와 스페인어 NO 사이의 차이가 없으므로 사용자는 FORMATTED_VALUE의 차이점을 발견할 수 없습니다.|  
+|H|아니요|FORMAT_STRING이 `YES/NO`로 설정되었고 VALUE가 0으로 설정되었고 LANGUAGE가 명시적으로 `1034`로 설정되었습니다. 영어 NO와 스페인어 NO 사이의 차이가 없으므로 사용자는 FORMATTED_VALUE의 차이점을 발견할 수 없습니다.|  
 |I|SI|FORMAT_STRING이 `YES/NO`로 설정되었고 VALUE가 59로 설정되었고 LANGUAGE가 명시적으로 `1034`로 설정되었습니다. YES/NO 형식 지정에 대해 정의된 대로 0과 다른 값은 YES이고 언어가 스페인어로 설정되었으므로 FORMATTED_VALUE가 SI입니다.|  
 |J|Desactivado|FORMAT_STRING이 `ON/OFF`로 설정되었고 VALUE가 0으로 설정되었고 LANGUAGE가 명시적으로 `1034`로 설정되었습니다. ON/OFF 형식 지정에 대해 정의된 대로 0과 같은 값은 OFF이고 언어가 스페인어로 설정되었으므로 FORMATTED_VALUE가 Desactivado입니다.|  
 |K|Activado|FORMAT_STRING이 `ON/OFF`로 설정되었고 VALUE가 -312로 설정되었고 LANGUAGE가 명시적으로 `1034`로 설정되었습니다. ON/OFF 형식 지정에 대해 정의된 대로 0과 다른 값은 ON이고 언어가 스페인어로 설정되었으므로 FORMATTED_VALUE가 Activado입니다.|  
@@ -145,6 +145,6 @@ ms.locfileid: "66074395"
  [MDX &#40;FORMAT_STRING 내용&#41;](mdx-cell-properties-format-string-contents.md)   
  [MDX &#40;셀 속성 사용&#41;](mdx-cell-properties-using-cell-properties.md)   
  [MDX&#41;&#40;속성 값 만들기 및 사용](../../creating-and-using-property-values-mdx.md)   
- [MDX 쿼리 기본 사항 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873104"
 ---
 # <a name="data-tier-applications"></a>데이터 계층 애플리케이션
@@ -47,8 +47,7 @@ ms.locfileid: "62873104"
   
     -   DAC 작업은 SQL Server 2008 R2에 소개되었습니다. 이 도구는 SQL Server 2008 R2 데이터베이스 외에도 SQL Server 2008, SQL Server 2005 및 SQL Server 2000 데이터베이스에서 DACPAC 파일을 생성할 수 있도록 지원합니다.  
   
-    -   
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에 제공되는 도구는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 데이터베이스 외에도 SQL Server 2008 R2 또는 SQL Server 2012에 제공된 DAC 도구로 생성된 DACPAC 파일을 읽을 수 있습니다. 여기에는 SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 및 SQL Server 2005의 데이터베이스가 포함되지만 SQL Server 2000은 포함되지 않습니다.  
+    -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에 제공되는 도구는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 데이터베이스 외에도 SQL Server 2008 R2 또는 SQL Server 2012에 제공된 DAC 도구로 생성된 DACPAC 파일을 읽을 수 있습니다. 여기에는 SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 및 SQL Server 2005의 데이터베이스가 포함되지만 SQL Server 2000은 포함되지 않습니다.  
   
     -   SQL Server 2008 R2의 DAC 도구는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 도구로 생성된 DACPAC 파일을 읽을 수 없습니다.  
   
@@ -119,7 +118,7 @@ ms.locfileid: "62873104"
 |태스크 설명|항목|  
 |----------------------|-----------|  
 |DAC 패키지 파일을 사용하여 새 DAC 인스턴스를 만드는 방법에 대해 설명합니다.|[데이터 계층 애플리케이션 배포](deploy-a-data-tier-application.md)|  
-|새 DAC 패키지 파일을 사용하여 인스턴스를 새 DAC 버전으로 업그레이드하는 방법에 대해 설명합니다.|[데이터 계층 애플리케이션 업그레이드](upgrade-a-data-tier-application.md)|  
+|새 DAC 패키지 파일을 사용하여 인스턴스를 새 DAC 버전으로 업그레이드하는 방법에 대해 설명합니다.|[데이터 계층 응용 프로그램 업그레이드](upgrade-a-data-tier-application.md)|  
 |DAC 인스턴스를 제거하는 방법에 대해 설명합니다. 연결된 데이터베이스를 선택하여 분리 또는 삭제하거나 데이터베이스를 그대로 둘 수도 있습니다.|[데이터 계층 애플리케이션 삭제](delete-a-data-tier-application.md)|  
 |SQL Server 유틸리티를 사용하여 현재 배포된 DAC의 상태를 확인하는 방법에 대해 설명합니다.|[데이터 계층 애플리케이션 모니터링](data-tier-applications.md)|  
 |DAC의 데이터 및 메타데이터 보관 파일을 포함하는 .bacpac 파일을 만드는 방법에 대해 설명합니다.|[데이터 계층 애플리케이션 내보내기](export-a-data-tier-application.md)|  
@@ -128,7 +127,7 @@ ms.locfileid: "62873104"
 |기존 데이터베이스를 DAC 인스턴스로 승격하는 방법에 대해 설명합니다. DAC 정의는 작성된 후 시스템 데이터베이스에 저장됩니다.|[DAC로 데이터베이스 등록](register-a-database-as-a-dac.md)|  
 |프로덕션 시스템에서 DAC 패키지를 사용하기 전에 DAC 패키지의 내용 및 DAC 업그레이드에서 수행할 동작을 검토하는 방법에 대해 설명합니다.|[DAC 패키지 유효성 검사](validate-a-dac-package.md)|  
 |패키지를 프로덕션 서버에 배포하기 전에 데이터베이스 관리자가 DAC에서 수행하는 작업을 검토할 수 있도록 DAC 패키지 내용을 폴더에 넣는 방법에 대해 설명합니다.|[DAC 패키지 압축 풀기](unpack-a-dac-package.md)|  
-|마법사를 사용하여 기존 데이터베이스를 배포하는 방법에 대해 설명합니다. 마법사는 DAC를 사용하여 배포를 수행합니다.|[DAC를 사용하여 데이터베이스 배포](deploy-a-database-by-using-a-dac.md)|  
+|마법사를 사용하여 기존 데이터베이스를 배포하는 방법에 대해 설명합니다. 마법사는 DAC를 사용하여 배포를 수행합니다.|[DAC를 사용 하 여 데이터베이스 배포](deploy-a-database-by-using-a-dac.md)|  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 개체 및 버전에 대한 DAC 지원](dac-support-for-sql-server-objects-and-versions.md)  

@@ -18,10 +18,10 @@ ms.assetid: 78b7e220-445b-4fdf-811b-7253f4f2b058
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4cec490522f8bacc774213ec1af5cce1af0eefef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910248"
 ---
 # <a name="getpathlocator-transact-sql"></a>GetPathLocator(Transact-SQL)

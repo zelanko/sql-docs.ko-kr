@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bec0dc51a4f91ba4ca8f71a0a3caba387d37bf1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074639"
 ---
 # <a name="managing-scope-and-context-mdx"></a>범위 및 컨텍스트 관리(MDX)
@@ -41,9 +41,7 @@ ms.locfileid: "66074639"
 >  스크립트에 CALCULATE 문을 포함한 SCOPE 문이 들어 있는 경우 MDX는 전체 큐브에 대해서가 아니라 SCOPE 문으로 정의되는 하위 큐브의 컨텍스트 내에서 CALCULATE 문을 계산합니다.  
   
 ## <a name="using-the-this-function"></a>This 함수 사용  
- 
-  `This` 함수를 사용하면 MDX 스크립트 내의 현재 하위 큐브를 검색할 수 있습니다. 
-  `This` 함수를 사용하여 현재 하위 큐브 내에 있는 셀의 값을 MDX 식으로 빠르게 설정할 수 있습니다. SCOPE 문과 함께 `This` 함수를 사용하여 특정 계산 패스 중에 특정 하위 큐브의 내용을 변경하는 경우도 있습니다.  
+ `This` 함수를 사용하면 MDX 스크립트 내의 현재 하위 큐브를 검색할 수 있습니다. `This` 함수를 사용하여 현재 하위 큐브 내에 있는 셀의 값을 MDX 식으로 빠르게 설정할 수 있습니다. SCOPE 문과 함께 `This` 함수를 사용하여 특정 계산 패스 중에 특정 하위 큐브의 내용을 변경하는 경우도 있습니다.  
   
 > [!NOTE]  
 >  스크립트에 `This` 함수를 포함한 SCOPE 문이 들어 있는 경우 MDX는 전체 큐브에 대해서가 아니라 SCOPE 문으로 정의되는 하위 큐브의 컨텍스트 내에서 `This` 함수를 계산합니다.  
@@ -118,6 +116,6 @@ END SCOPE;
 ## <a name="see-also"></a>참고 항목  
  [Mdx 언어 참조 &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
  [MDX &#40;기본 MDX 스크립트&#41;](the-basic-mdx-script-mdx.md)   
- [MDX 쿼리 기본 사항 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

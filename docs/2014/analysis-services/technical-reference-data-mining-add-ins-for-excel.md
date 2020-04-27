@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cdf32878788bd68f9f0da36500be75fed5b96691
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066223"
 ---
 # <a name="technical-reference-data-mining-add-ins-for-excel"></a>기술 참조(Excel용 데이터 마이닝 추가 기능)
@@ -43,5 +43,5 @@ ms.locfileid: "66066223"
   
  [Excel 용 데이터 마이닝 추가 기능&#41;서버 구성 유틸리티 &#40;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
   

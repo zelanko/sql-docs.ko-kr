@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93ad2deb67e1b8526e14ea34eb165659f96fa066
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072056"
 ---
 # <a name="perspective-details-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>큐브 뷰 세부 정보(큐브 뷰 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
@@ -26,7 +26,7 @@ ms.locfileid: "66072056"
  **큐브 개체**  
  큐브 뷰에 포함할 수 있는 큐브의 개체 및 속성에 대한 계층적 목록을 표시합니다.  
   
- **개체 유형**  
+ **개체 형식**  
  큐브 뷰에 포함할 수 있는 큐브의 개체 유형 또는 속성 이름을 표시합니다.  
   
  **큐브 뷰 이름**  
@@ -41,7 +41,7 @@ ms.locfileid: "66072056"
 ## <a name="context-menu"></a>상황에 맞는 메뉴  
  다음 옵션은 **큐브 뷰 세부 정보** 창에 표시되는 큐브 뷰의 임의의 셀을 마우스 오른쪽 단추로 클릭하면 표시되는 상황에 맞는 메뉴를 통해 사용할 수 있습니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |**새 큐브 뷰**|선택한 큐브에 새 큐브 뷰를 만들려면 클릭합니다.|  
 |**큐브 뷰 삭제**|**개체 삭제** 대화 상자를 표시 하 고 선택한 큐브 뷰를 삭제 하려면 클릭 합니다.|  

@@ -17,27 +17,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14d63345020fbe76b727d9276585b17bb3406846
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072586"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>사용자 정의 계층 추가 또는 삭제
-  
   **의 차원 디자이너에 있는** 차원 구조 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭의 차원에서 사용자 정의 계층을 추가하거나 제거할 수 있습니다.  
   
  사용자 정의 계층을 추가하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 계층이 인스턴스화되고 해당 차원이 처리되어야만 사용자가 계층을 사용할 수 있습니다. 자세한 내용은 [SSAS&#41;&#40;다차원 모델 데이터베이스](multidimensional-model-databases-ssas.md) 및 [다차원 모델 개체 처리](processing-a-multidimensional-model-analysis-services.md)를 참조 하세요.  
   
 ### <a name="to-add-a-user-defined-hierarchy-to-a-dimension"></a>차원에 사용자 정의 계층을 추가하려면  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 해당 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 연 다음 작업할 차원을 엽니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 해당 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 연 다음 작업할 차원을 엽니다.  
   
      차원은 차원 디자이너의 **차원 구조** 탭에서 열립니다.  
   
-2.  
-  **특성** 창에서 사용자 정의 계층에 사용할 특성을 **계층** 창으로 끕니다.  
+2.  **특성** 창에서 사용자 정의 계층에 사용할 특성을 **계층** 창으로 끕니다.  
   
 3.  사용자 정의 계층에서 수준을 형성할 추가 특성을 끕니다.  
   
@@ -54,13 +51,11 @@ ms.locfileid: "66072586"
   
 ### <a name="to-remove-a-user-defined-hierarchy-from-a-dimension"></a>차원에서 사용자 정의 계층을 제거하려면  
   
--   
-  **차원 구조** 탭의 **계층** 창에서 제거할 사용자 정의 계층을 클릭합니다. 도구 모음에서 **삭제**를 클릭합니다.  
+-   **차원 구조** 탭의 **계층** 창에서 제거할 사용자 정의 계층을 클릭합니다. 도구 모음에서 **삭제**를 클릭합니다.  
   
      - 또는-  
   
--   
-  **계층** 창에서 제거할 사용자 정의 계층을 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
+-   **계층** 창에서 제거할 사용자 정의 계층을 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
   
      - 또는-  
   

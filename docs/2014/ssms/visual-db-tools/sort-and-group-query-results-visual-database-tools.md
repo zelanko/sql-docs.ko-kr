@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2bf1b08abe58c8f46cc8f48d87115281d3d72bad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63070883"
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>쿼리 결과 정렬 및 그룹화(Visual Database Tools)
@@ -35,28 +35,28 @@ ms.locfileid: "63070883"
  그와 같은 쿼리를 만드는 방법에 대한 자세한 내용은 아래 표에 나와 있는 항목을 참조하십시오.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [Visual Database Tools&#41;&#40;행 정렬](visual-database-tools.md)  
+ [행 정렬&#40;Visual Database Tools&#41;](visual-database-tools.md)  
  행을 정렬하는 다양한 방법과 그러한 방법을 사용하는 이유에 대해 설명합니다.  
   
- [Visual Database Tools를 &#40;행 그룹 축소&#41;](collapse-groups-of-rows-visual-database-tools.md)  
+ [행 그룹 축소&#40;Visual Database Tools&#41;](collapse-groups-of-rows-visual-database-tools.md)  
  중복 제거나 계산 등과 같이 행의 데이터를 정렬하는 다양한 방법에 대해 설명합니다.  
   
- [Visual Database Tools를 &#40;ORDER BY를 사용 하 여 정렬&#41;](sort-with-order-by-visual-database-tools.md)  
+ [ORDER BY를 사용하여 정렬&#40;Visual Database Tools&#41;](sort-with-order-by-visual-database-tools.md)  
  지정된 순서로 결과를 반환하는 방법에 대해 설명합니다.  
   
- [Visual Database Tools를 &#40;오름차순 이나 내림차순으로 정렬&#41;](sort-in-ascending-or-descending-order-visual-database-tools.md)  
+ [오름차순 또는 내림차순으로 정렬&#40;Visual Database Tools&#41;](sort-in-ascending-or-descending-order-visual-database-tools.md)  
  정렬 방향을 변경하거나 설정하는 방법에 대해 설명합니다.  
   
- [쿼리에서 여러 열 정렬 Visual Database Tools &#40;&#41;](sort-multiple-columns-in-queries-visual-database-tools.md)  
+ [쿼리에서 여러 열 정렬&#40;Visual Database Tools&#41;](sort-multiple-columns-in-queries-visual-database-tools.md)  
  여러 열에 대한 결과 집합의 순서를 설정하는 방법에 대해 설명합니다.  
   
- [Visual Database Tools를 &#40;쿼리 결과의 행을 그룹화&#41;](group-rows-in-query-results-visual-database-tools.md)  
+ [쿼리 결과 행 그룹화&#40;Visual Database Tools&#41;](group-rows-in-query-results-visual-database-tools.md)  
  데이터를 그룹으로 구성하여 요약 정보의 하위 집합을 만드는 방법에 대해 설명합니다.  
   
- [Visual Database Tools를 &#40;그룹에 대 한 조건 지정&#41;](specify-conditions-for-groups-visual-database-tools.md)  
+ [그룹 조건 지정&#40;Visual Database Tools&#41;](specify-conditions-for-groups-visual-database-tools.md)  
  행 그룹에 적용되는 검색 조건을 만드는 방법에 대해 설명합니다.  
   
- [Visual Database Tools&#41;&#40;출력 열 다시 정렬](reorder-output-columns-visual-database-tools.md)  
+ [출력 열 다시 정렬&#40;Visual Database Tools&#41;](reorder-output-columns-visual-database-tools.md)  
  현재 정렬 설정을 변경하는 방법에 대해 설명합니다.  
   
 ## <a name="related-sections"></a>관련 섹션  

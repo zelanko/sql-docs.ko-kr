@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9f1863fc3d707614b7c957dc5ef49561272d6e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073125"
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰의 테이블 또는 명명된 쿼리 바꾸기(Analysis Services)
@@ -33,38 +33,29 @@ ms.locfileid: "66073125"
 > [!IMPORTANT]  
 >  데이터 원본의 테이블 이름을 바꾸는 경우 테이블 바꾸기 단계를 수행한 다음 DSV를 새로 고치기 전에 이름을 바꾼 테이블을 DSV의 해당 테이블 원본으로 지정합니다. 바꾸기 및 이름 바꾸기 프로세스를 완료하면 DSV의 테이블, 테이블 참조 및 테이블 관계가 그대로 유지됩니다. 그렇게 하지 않으면 DSV를 새로 고칠 때 데이터 원본에서 이름을 바꾼 테이블이 삭제된 것으로 해석됩니다. 자세한 내용은 [데이터 원본 뷰에서 스키마 새로 고침&#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)을 참조하세요.  
   
-##  <a name="bkmk_nq"></a>테이블을 명명 된 쿼리로 바꾸기  
+##  <a name="replace-a-table-with-a-named-query"></a><a name="bkmk_nq"></a> 테이블을 명명된 쿼리로 바꾸기  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 테이블이나 명명된 쿼리를 바꿀 데이터 원본 뷰가 포함된 프로젝트를 열거나 데이터베이스에 연결합니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 테이블이나 명명된 쿼리를 바꿀 데이터 원본 뷰가 포함된 프로젝트를 열거나 데이터베이스에 연결합니다.  
   
 2.  솔루션 탐색기에서 **데이터 원본 뷰** 폴더를 확장한 다음 해당 데이터 원본 뷰를 두 번 클릭합니다.  
   
-3.  
-  **명명된 쿼리 만들기** 대화 상자가 열립니다. 
-  **테이블** 또는 **다이어그램** 창에서 바꿀 테이블을 마우스 오른쪽 단추로 클릭하고 **테이블 바꾸기** 를 가리킨 다음 **새 명명된 쿼리로**를 클릭합니다.  
+3.  **명명된 쿼리 만들기** 대화 상자가 열립니다. **테이블** 또는 **다이어그램** 창에서 바꿀 테이블을 마우스 오른쪽 단추로 클릭하고 **테이블 바꾸기** 를 가리킨 다음 **새 명명된 쿼리로**를 클릭합니다.  
   
-4.  
-  **명명된 쿼리 만들기** 대화 상자에서 명명된 쿼리를 정의한 다음 **확인**을 클릭합니다.  
+4.  **명명된 쿼리 만들기** 대화 상자에서 명명된 쿼리를 정의한 다음 **확인**을 클릭합니다.  
   
 5.  수정된 데이터 원본 뷰를 저장합니다.  
   
 ## <a name="replace-a-table-or-named-query-with-a-table"></a>테이블이나 명명된 쿼리를 테이블로 바꾸기  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 테이블이나 명명된 쿼리를 바꿀 데이터 원본 뷰가 포함된 프로젝트를 열거나 데이터베이스에 연결합니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 테이블이나 명명된 쿼리를 바꿀 데이터 원본 뷰가 포함된 프로젝트를 열거나 데이터베이스에 연결합니다.  
   
 2.  솔루션 탐색기에서 **데이터 원본 뷰** 폴더를 확장한 다음 해당 데이터 원본 뷰를 두 번 클릭합니다.  
   
-3.  
-  **다른 테이블로 테이블 바꾸기** 대화 상자가 열립니다. 
-  **테이블** 또는 **다이어그램** 창에서 바꿀 테이블이나 명명된 쿼리를 마우스 오른쪽 단추로 클릭하고 **테이블 바꾸기** 를 가리킨 다음 **다른 테이블로**를 클릭합니다.  
+3.  **다른 테이블로 테이블 바꾸기** 대화 상자가 열립니다. **테이블** 또는 **다이어그램** 창에서 바꿀 테이블이나 명명된 쿼리를 마우스 오른쪽 단추로 클릭하고 **테이블 바꾸기** 를 가리킨 다음 **다른 테이블로**를 클릭합니다.  
   
-4.  
-  **다른 테이블로 테이블 바꾸기** 대화 상자에서 다음을 수행합니다.  
+4.  **다른 테이블로 테이블 바꾸기** 대화 상자에서 다음을 수행합니다.  
   
-    1.  
-  **데이터 원본** 드롭다운 목록 상자에서 원하는 데이터 원본을 선택합니다.  
+    1.  **데이터 원본** 드롭다운 목록 상자에서 원하는 데이터 원본을 선택합니다.  
   
     2.  테이블이나 명명된 쿼리를 바꿀 테이블을 선택합니다.  
   

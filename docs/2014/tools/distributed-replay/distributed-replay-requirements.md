@@ -11,16 +11,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0e7a87ad14dbe1b12abb4ca4fe0af6b0a439c57b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149754"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
-  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능을 사용하기 전에 이 항목에서 설명하는 제품 요구 사항을 검토하세요.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능을 사용하기 전에 이 항목에서 설명하는 제품 요구 사항을 검토하세요.  
   
 ## <a name="input-trace-requirements"></a>입력 추적 요구 사항  
  추적 데이터를 재생하려면 데이터가 버전 및 형식 요구 사항을 충족해야 하고 필요한 이벤트 및 열을 포함해야 합니다.  
@@ -46,12 +44,10 @@ ms.locfileid: "63149754"
 -   파일 롤오버 명명 규칙을 따르는 일련의 롤오버 추적 파일은 예를 들면 `<TraceFile>.trc`, `<TraceFile>_1.trc`, `<TraceFile>_2.trc`, `<TraceFile>_3.trc`, `<TraceFile>_n.trc`와 같습니다.  
   
 ### <a name="input-trace-events-and-columns"></a>입력 추적 이벤트 및 열  
- Distributed Replay에서 입력 추적 데이터를 재생하려면 데이터가 특정 이벤트 및 열을 포함해야 합니다. 
-  **의** TSQL_Replay [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 템플릿에 필요한 모든 이벤트 및 열과 추가 정보가 포함되어 있습니다. 이 템플릿에 대한 자세한 내용은 [Replay Requirements](../sql-server-profiler/replay-requirements.md)을 참조하십시오.  
+ Distributed Replay에서 입력 추적 데이터를 재생하려면 데이터가 특정 이벤트 및 열을 포함해야 합니다. **의** TSQL_Replay [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 템플릿에 필요한 모든 이벤트 및 열과 추가 정보가 포함되어 있습니다. 이 템플릿에 대한 자세한 내용은 [Replay Requirements](../sql-server-profiler/replay-requirements.md)을 참조하십시오.  
   
 > [!WARNING]  
->  
-  **TSQL_Replay** 템플릿을 사용하여 입력 추적 데이터를 캡처하지 않거나 입력 추적 요구 사항이 충족되지 않은 경우 예기치 않은 재생 결과가 수신될 수 있습니다.  
+>  **TSQL_Replay** 템플릿을 사용하여 입력 추적 데이터를 캡처하지 않거나 입력 추적 요구 사항이 충족되지 않은 경우 예기치 않은 재생 결과가 수신될 수 있습니다.  
   
  사용자 지정 추적 템플릿을 만들고 이를 통해 Distributed Replay를 사용하여 이벤트를 재생할 수도 있습니다. 이 경우 사용자 지정 추적 템플릿에 다음 이벤트가 포함되어 있어야 합니다.  
   
@@ -111,7 +107,7 @@ ms.locfileid: "63149754"
   
 -   SPID  
   
--   시작 시간  
+-   Start Time  
   
 -   EndTime  
   
@@ -138,11 +134,9 @@ ms.locfileid: "63149754"
   
 |Distributed Replay 기능|재생 환경당 최대 설치 횟수|  
 |--------------------------------|--------------------------------------------------|  
-|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 서비스|1|  
-|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 서비스|16(실제 또는 가상 컴퓨터)|  
-|Administration Tool|Unlimited|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 서비스|1|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 서비스|16(실제 또는 가상 컴퓨터)|  
+|Administration Tool|제한 없음|  
   
 > [!NOTE]  
 >  관리 도구는 단일 컴퓨터에 한 번만 설치할 수 있지만 관리 도구의 여러 인스턴스를 시작할 수 있습니다. 여러 관리 도구에서 실행한 명령은 명령을 받은 순서대로 확인됩니다.  

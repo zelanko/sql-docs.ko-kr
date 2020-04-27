@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 45db581de7b7aef2822597ef60d3b43ebad3acbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074272"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>RollupChildren 함수 작업(MDX)
@@ -28,8 +28,7 @@ ms.locfileid: "66074272"
 ## <a name="rollupchildren-function-examples"></a>RollupChildren 함수 예  
  MDX 문에서 `RollupChildren` 함수를 사용하는 방법을 설명하기는 쉽지만 MDX 쿼리에 미치는 이 함수의 효과는 매우 다양할 수 있습니다.  
   
- 
-  `RollupChildren` 함수의 효과는 기존의 큐브 데이터에 대한 선택적인 분석을 수행하도록 디자인된 MDX 쿼리에서 발생합니다. 예를 들어 다음 테이블에는 괄호로 표시된 단항 연산자(`UNARY_OPERATOR` 멤버 속성에 의해 표현됨)와 함께 Net Sales 부모 멤버에 대한 자식 멤버 목록이 들어 있습니다.  
+ `RollupChildren` 함수의 효과는 기존의 큐브 데이터에 대한 선택적인 분석을 수행하도록 디자인된 MDX 쿼리에서 발생합니다. 예를 들어 다음 테이블에는 괄호로 표시된 단항 연산자(`UNARY_OPERATOR` 멤버 속성에 의해 표현됨)와 함께 Net Sales 부모 멤버에 대한 자식 멤버 목록이 들어 있습니다.  
   
 |부모 멤버|자식 멤버|  
 |-------------------|------------------|  
@@ -37,8 +36,7 @@ ms.locfileid: "66074272"
   
  Net Sales 부모 멤버는 현재 롤업의 일부로서 국내 및 해외 수입을 뺀 상태에서 순매출액 합계에서 국내 및 해외 총 판매액을 뺀 값을 제공합니다.  
   
- 하지만 국내 및 해외 수입을 무시하고 국내 및 해외 총 판매액에 10%를 더한 값으로 빠르고 쉽게 전망치를 제공하려고 합니다. 
-  `RollupChildren` 함수를 사용하여 이 값을 계산할 수 있는 방법에는 사용자 지정 멤버 속성으로 계산하거나 `IIf` 함수로 계산하는 두 가지 방법이 있습니다.  
+ 하지만 국내 및 해외 수입을 무시하고 국내 및 해외 총 판매액에 10%를 더한 값으로 빠르고 쉽게 전망치를 제공하려고 합니다. `RollupChildren` 함수를 사용하여 이 값을 계산할 수 있는 방법에는 사용자 지정 멤버 속성으로 계산하거나 `IIf` 함수로 계산하는 두 가지 방법이 있습니다.  
   
 ### <a name="using-a-custom-member-property"></a>사용자 지정 멤버 속성 사용  
  롤업 계산이 자주 수행되는 연산인 경우에는 특정 함수에 대한 각 자식에 사용될 연산자를 저장하는 멤버 속성을 만드는 것이 한 가지 방법입니다. 다음 테이블에서는 유효한 단항 연산자를 표시하고 예상 결과를 설명합니다.  
@@ -75,6 +73,6 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
  이 MDX 문은 자식 멤버의 단항 연산자를 검사합니다. 국내 및 해외 수입 멤버의 경우에서와 같이 단항 연산자를 빼기에 사용하는 경우 `IIf` 함수가 물결표(~) 단항 연산자를 대체합니다. 그렇지 않으면 `IIf` 함수는 자식 멤버의 단항 연산자를 사용합니다. 마지막으로 반환된 롤업 합계에 1.1을 곱하면 국내 및 해외 총 판매 예측 값이 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [MDX&#41;데이터 &#40;조작](mdx-data-manipulation-manipulating-data.md)  
+ [데이터 조작&#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
   
   

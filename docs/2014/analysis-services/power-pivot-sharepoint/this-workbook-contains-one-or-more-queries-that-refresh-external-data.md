@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 925821cba91a8a62076f0dcfa327453d035671d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070965"
 ---
 # <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>이 통합 문서에는 외부 데이터를 새로 고치는 쿼리가 하나 이상 포함되어 있습니다.
@@ -41,14 +41,11 @@ ms.locfileid: "66070965"
   
 1.  중앙 관리의 응용 프로그램 관리에서 **서비스 응용 프로그램 관리**를 클릭 합니다.  
   
-2.  
-  **Excel 서비스 애플리케이션**을 클릭합니다.  
+2.  **Excel 서비스 애플리케이션**을 클릭합니다.  
   
-3.  
-  **신뢰할 수 있는 파일 위치**를 클릭합니다.  
+3.  **신뢰할 수 있는 파일 위치**를 클릭합니다.  
   
-4.  
-  **http://** 또는 구성할 위치를 클릭합니다.  
+4.  **http://** 또는 구성할 위치를 클릭합니다.  
   
 5.  외부 데이터에서 **새로 고칠 때 경고**확인란의 선택을 취소합니다.  
   

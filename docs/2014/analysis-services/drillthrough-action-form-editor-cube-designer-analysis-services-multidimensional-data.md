@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 33d20da736308b4436c40a50b8b01da7445663c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081462"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>드릴스루 동작 폼 편집기(동작 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
@@ -38,8 +38,7 @@ ms.locfileid: "66081462"
  **조건(옵션)**  
  선택적 조건을 기술하는 MDX(Multidimensional Expression) 식을 입력합니다. 이 옵션은 **측정값 그룹 멤버**와 함께 사용되어 동작의 가용성을 추가로 제한합니다. 식은 부울 값을 반환해야 합니다. True인 경우 동작을 사용할 수 있습니다.  
   
- 
-  **계산 도구** 창에서 선택한 요소를 이 옵션으로 끌어서 놓으면 선택한 요소의 MDX 구문을 포함시킬 수 있습니다.  
+ **계산 도구** 창에서 선택한 요소를 이 옵션으로 끌어서 놓으면 선택한 요소의 MDX 구문을 포함시킬 수 있습니다.  
   
  **드릴스루 열**  
  확장하면 사용자가 이 동작을 실행할 때 반환되는 특성을 나타내는 표가 표시됩니다.  
@@ -65,7 +64,7 @@ ms.locfileid: "66081462"
 > [!NOTE]  
 >  이 옵션은 이전 버전과의 호환성을 위해 사용됩니다.  
   
- **최대 행**  
+ **최대 행 수**  
  드릴스루 동작에서 반환할 최대 행 수를 입력합니다. 이 옵션을 0 또는 빈 값으로 설정하면 드릴스루 동작은 검색된 모든 행을 클라이언트 애플리케이션으로 반환합니다.  
   
  **호출**  
@@ -76,13 +75,13 @@ ms.locfileid: "66081462"
   
  다음 표에서는 사용 가능한 설정에 대해 설명합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |Batch|동작이 일괄 처리 작업이나 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 태스크의 일부로 실행됩니다.|  
-|대화형|사용자가 작업을 호출할 때 동작이 실행됩니다.|  
+|Interactive (대화형)|사용자가 작업을 호출할 때 동작이 실행됩니다.|  
 |열 때|큐브를 처음으로 열 때 동작이 실행됩니다.|  
   
- **프로그램별**  
+ **응용 프로그램**  
  드릴스루 동작을 실행할 수 있는 애플리케이션 이름을 입력합니다.  
   
  이 옵션을 사용하여 이 동작을 가장 많이 사용하는 클라이언트 애플리케이션을 식별하고 팝업 메뉴에서 해당 작업 옆에 적절한 아이콘을 표시할 수도 있습니다.  
@@ -93,12 +92,10 @@ ms.locfileid: "66081462"
  **설명**  
  동작에 대한 선택적 설명을 입력합니다.  
   
- **Caption**  
- 
-  **MDX 캡션** 이 **False**로 설정된 경우 클라이언트 애플리케이션에서 동작에 대해 표시할 캡션을 입력합니다.  
+ **캡션의**  
+ **MDX 캡션** 이 **False**로 설정된 경우 클라이언트 애플리케이션에서 동작에 대해 표시할 캡션을 입력합니다.  
   
- 
-  **MDX 캡션** 이 **True**로 설정된 경우 캡션 문자열을 반환하는 MDX(Multidimensional Expression) 식을 입력합니다.  
+ **MDX 캡션** 이 **True**로 설정된 경우 캡션 문자열을 반환하는 MDX(Multidimensional Expression) 식을 입력합니다.  
   
  **MDX 캡션**  
  클라이언트 애플리케이션에서 동작에 대해 표시할 캡션을 나타내는 리터럴 문자열이 **캡션** 에 포함되어 있음을 나타내려면 **False** 를 선택합니다.  

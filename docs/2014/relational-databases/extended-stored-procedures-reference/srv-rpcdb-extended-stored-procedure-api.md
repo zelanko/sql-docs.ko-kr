@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7eb462881ab9ae5d6221498a84fc2b79e0524bc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046658"
 ---
 # <a name="srv_rpcdb-extended-stored-procedure-api"></a>srv_rpcdb(확장 저장 프로시저 API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 CLR 통합을 사용 하세요.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
   
  현재 원격 저장 프로시저에 대한 데이터베이스 이름 구성 요소를 반환합니다.  
   
@@ -47,8 +47,7 @@ SRV_PROC * srvproc,int *len );
  특정 클라이언트 연결에 대한 핸들인 SRV_PROC 구조에 대한 포인터입니다. 이 구조에는 확장 저장 프로시저 API 라이브러리가 애플리케이션과 클라이언트 간 통신 및 데이터를 관리하는 데 사용하는 정보가 들어 있습니다.  
   
  *길이가*  
- 데이터베이스 이름의 길이를 받는 `int` 변수에 대한 포인터입니다. 
-  *len*이 NULL이면 데이터베이스 이름의 길이가 반환되지 않습니다.  
+ 데이터베이스 이름의 길이를 받는 `int` 변수에 대한 포인터입니다. *len*이 NULL이면 데이터베이스 이름의 길이가 반환되지 않습니다.  
   
 ## <a name="returns"></a>반환  
  현재 원격 저장 프로시저의 데이터베이스 이름 부분에서 null로 끝나는 문자열에 대한 DBCHAR 포인터입니다. 현재 원격 저장 프로시저가 없으면 NULL이 반환되고 *len* 매개 변수가 -1로 설정됩니다.  

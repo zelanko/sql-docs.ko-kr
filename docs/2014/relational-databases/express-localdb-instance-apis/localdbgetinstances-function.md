@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 92aa65bd2d3aad71f2467efaa7a09f75f20d8f63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63032246"
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances 함수
   지정된 버전의 모든 SQL Server Express LocalDB 인스턴스를 반환합니다.  
   
- **헤더 파일:** sqlncli  
+ **헤더 파일:** sqlncli.h  
   
 ## <a name="syntax"></a>구문  
   

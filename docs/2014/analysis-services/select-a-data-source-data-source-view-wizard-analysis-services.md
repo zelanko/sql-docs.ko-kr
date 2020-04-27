@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: be1ceb4135118197317e7b8a320c7a82d09ffda5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069856"
 ---
 # <a name="select-a-data-source-data-source-view-wizard-analysis-services"></a>데이터 원본 선택(데이터 원본 뷰 마법사)(Analysis Services)
-  
   **데이터 원본 선택** 페이지를 사용하여 데이터 원본 뷰에 대한 데이터 원본을 선택할 수 있습니다.  
   
 ## <a name="options"></a>옵션  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fe22de3cc0718647de84345260017a4dd4e477e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067304"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>파티션 및 DirectQuery 모드(SSAS 테이블 형식)
@@ -48,6 +48,6 @@ ms.locfileid: "66067304"
 |InMemory With DirectQuery|파티션을 처리하도록 허용|모델이 혼합 모드를 사용 중인 경우 메모리 내 모델에 대한 쿼리와 DirectQuery 데이터 원본에 대한 쿼리에 대해 동일한 파티션을 사용해야 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [SSAS 테이블 형식&#41;&#40;파티션](partitions-ssas-tabular.md)  
+ [파티션&#40;SSAS 테이블 형식&#41;](partitions-ssas-tabular.md)  
   
   

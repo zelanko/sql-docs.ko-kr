@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f0a95e8580aa30ce34ada1c77e198eb40d767304
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067267"
 ---
 # <a name="delete-a-column-ssas-tabular"></a>열 삭제(SSAS 테이블 형식)
@@ -33,14 +33,12 @@ ms.locfileid: "66067267"
   
 1.  모델 디자이너에서 삭제할 열이 포함된 테이블을 클릭하고 **테이블** 메뉴를 클릭한 다음  **테이블 속성**을 클릭합니다.  
   
-2.  
-  **열 이름 원본**에서 **모델** 을 선택합니다(*원본과 다를 경우 모델 테이블 열 이름 사용*).  
+2.  **열 이름 원본**에서 **모델** 을 선택합니다(*원본과 다를 경우 모델 테이블 열 이름 사용*).  
   
-3.  
-  **테이블 속성 편집** 대화 상자의 테이블 미리 보기 창에서 삭제할 열을 선택 취소한 다음 **확인**을 클릭합니다.  
+3.  **테이블 속성 편집** 대화 상자의 테이블 미리 보기 창에서 삭제할 열을 선택 취소한 다음 **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [테이블에 열 추가 &#40;SSAS 테이블 형식&#41;](add-columns-to-a-table-ssas-tabular.md)   
- [SSAS 테이블 형식&#41;&#40;파티션](partitions-ssas-tabular.md)  
+ [파티션&#40;SSAS 테이블 형식&#41;](partitions-ssas-tabular.md)  
   
   

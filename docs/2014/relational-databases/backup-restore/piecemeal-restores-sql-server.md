@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 55520388424e110420ad96d329081ee7a61fe028
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876087"
 ---
 # <a name="piecemeal-restores-sql-server"></a>증분 복원(SQL Server)
@@ -173,10 +173,10 @@ ms.locfileid: "62876087"
 4.  데이터를 원래 복구 지점으로 복원하기 위한 원래 증분 복원으로 다른 모든 백업이 복원된 후 이어지는 차등 백업  
   
 ## <a name="see-also"></a>참고 항목  
- [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [SQL Server&#41;&#40;트랜잭션 로그 백업 적용](transaction-log-backups-sql-server.md)   
  [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
+ [SQL Server 데이터베이스를 지정 시간 &#40;전체 복구 모델로 복원&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [복원 및 복구 개요&#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
- [복원 시퀀스 계획 및 수행&#40;전체 복구 모델&#41;](plan-and-perform-restore-sequences-full-recovery-model.md)  
+ [복원 시퀀스 계획 및 수행 &#40;전체 복구 모델&#41;](plan-and-perform-restore-sequences-full-recovery-model.md)  
   
   

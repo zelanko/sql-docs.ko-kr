@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8ad75e136c4bef59f24b451b84f03e06d71a32ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62912547"
 ---
 # <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
@@ -30,7 +30,7 @@ ms.locfileid: "62912547"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DBCC3_CHECK_CATALOG|  
-|메시지 텍스트|카탈로그 검사 메시지 ERROR 수준 LEVEL 상태 STATE: MESSAGE을(를) 확인하십시오.|  
+|메시지 텍스트|카탈로그 메시지 ERROR, 수준 LEVEL, 상태 STATE: MESSAGE를 확인하세요.|  
   
 ## <a name="explanation"></a>설명  
  DBCC CHECKCATALOG 또는 DBCC CHECKDB에서 지정된 개체에 대한 시스템 메타데이터 테이블 간의 불일치를 발견했습니다. 즉, 오류 메시지에 지정된 개체와 기록된 개체 ID가 일치하지 않습니다.  

@@ -14,14 +14,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cdf37ab5b61e74ab04b9b58162325b580675c493
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63070783"
 ---
 # <a name="sort-in-ascending-or-descending-order-visual-database-tools"></a>오름차순 또는 내림차순으로 정렬(Visual Database Tools)
-  
   `ASC` 또는 `DESC` 키워드를 `ORDER BY` 절과 함께 사용하면 결과 집합에 있는 하나 이상의 열에 대해 쿼리 결과를 오름차순이나 내림차순으로 정렬할 수 있습니다.  
   
 > [!NOTE]  

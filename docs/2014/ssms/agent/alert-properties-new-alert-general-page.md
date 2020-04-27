@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca5b07a0cd6e6282e4d61075d86ca6af6a2abd70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63062151"
 ---
 # <a name="alert-properties-new-alert-general-page"></a>경고 속성-새 경고 (일반 페이지)
@@ -29,14 +29,14 @@ ms.locfileid: "63062151"
  **사용**  
  경고를 설정합니다. 경고를 설정하지 않으면 경고에 지정된 동작이 수행되지 않습니다.  
   
- **형식**  
+ **Type**  
  경고 유형을 선택합니다.  
   
--   **SQL Server 이벤트 경고** 는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 이벤트 로그의 메시지에 응답 합니다.  
+-   **SQL Server 이벤트 경고** - [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 이벤트 로그의 메시지에 응답합니다.  
   
--   **SQL Server 성능 조건 경고** 는 성능 카운터의 특정 조건에 응답 합니다.  
+-   **SQL Server 성능 조건 경고** - 성능 카운터의 특정 조건에 응답합니다.  
   
--   **Wmi 이벤트 경고** 는 WMI(WINDOWS MANAGEMENT INSTRUMENTATION) (wmi) 이벤트에 응답 합니다.  
+-   **WMI 이벤트 경고** - WMI(Windows Management Instrumentation) 이벤트에 응답합니다.  
   
 ## <a name="sql-server-event-alert-options"></a>SQL Server 이벤트 경고 옵션  
  **데이터베이스 이름**  
@@ -48,14 +48,14 @@ ms.locfileid: "63062151"
  **심각도**  
  이 이벤트가 특정 심각도를 지닌 메시지에 응답하도록 지정하고 심각도를 지정합니다.  
   
- **메시지에 다음이 포함 될 때 경고 발생**  
+ **메시지에 다음 텍스트가 포함될 때 경고 발생**  
  특정 문자열로 이벤트를 필터링합니다. 이 옵션을 선택하면 경고가 특정 문자열을 포함하는 이벤트에 대해서만 응답합니다.  
   
  **메시지 텍스트**  
  이벤트를 필터링할 때 사용할 문자열을 지정합니다.  
   
 ## <a name="sql-server-performance-condition-alerts"></a>SQL Server 성능 조건 경고  
- **Object**  
+ **개체가**  
  모니터링할 성능 개체를 지정합니다.  
   
  **카운터**  
@@ -71,15 +71,14 @@ ms.locfileid: "63062151"
  카운터에 대한 값을 지정합니다.  
   
 ## <a name="wmi-event-alert-options"></a>WMI 이벤트 경고 옵션  
- **네임스페이스**  
- WQL(WMI Query Language) 문에 사용할 네임스페이스를 지정합니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 실행하는 컴퓨터의 네임스페이스만 지원됩니다.  
+ **Namespace**  
+ WQL(WMI Query Language) 문에 사용할 네임스페이스를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 실행하는 컴퓨터의 네임스페이스만 지원됩니다.  
   
  **쿼리**  
  경고 응답 이벤트를 식별하는 WQL 문을 지정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Alerts](alerts.md)   
+ [알립니다](alerts.md)   
  [서버 이벤트 용 WMI 공급자에 WQL 사용](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)   
  [오류 번호를 사용 하 여 경고 만들기](create-an-alert-using-an-error-number.md)   
  [Create an Alert Using Severity Level](create-an-alert-using-severity-level.md)  

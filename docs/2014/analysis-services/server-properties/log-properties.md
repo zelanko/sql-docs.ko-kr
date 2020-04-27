@@ -54,14 +54,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81653d9b93a7dc8ec71a88e70cee8b2d68f33a8e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068915"
 ---
 # <a name="log-properties"></a>로그 속성
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 로그 서버 속성을 사용할 수 있습니다. 추가 서버 속성 및 해당 속성 설정 방법은 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)을 참조하세요.  
   
 ## <a name="general"></a>일반  
@@ -71,12 +70,10 @@ ms.locfileid: "66068915"
  이 속성의 기본값은 msmdsrv.log입니다.  
   
  `FileBufferSize`  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  `MessageLogs`  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
 ## <a name="error-log"></a>오류 로그  
  서버 인스턴스 수준에서 이러한 속성을 설정하여 다른 도구 및 디자이너에 나타나는 오류 구성에 대한 기본값을 수정할 수 있습니다. 자세한 내용은 [&#41;&#40;큐브, 파티션 및 차원 처리에 대 한 오류 구성](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> 을 참조 하세요.  
@@ -88,14 +85,11 @@ ms.locfileid: "66068915"
  서버가 수행한 작업을 처리하는 동안 속성이 기본값으로 사용되었습니다.  
   
  **ErrorLog\KeyErrorAction**  
- 
-  `KeyNotFound` 오류가 발생할 때 서버에서 수행하는 동작을 지정합니다. 이 오류에 대한 유효한 응답은 다음과 같습니다.  
+ `KeyNotFound` 오류가 발생할 때 서버에서 수행하는 동작을 지정합니다. 이 오류에 대한 유효한 응답은 다음과 같습니다.  
   
--   
-  `ConvertToUnknown`은 오류 키 값을 알 수 없는 멤버에 할당하도록 서버에 지시합니다.  
+-   `ConvertToUnknown`은 오류 키 값을 알 수 없는 멤버에 할당하도록 서버에 지시합니다.  
   
--   
-  `DiscardRecord`는 레코드를 제외하도록 서버에 지시합니다.  
+-   `DiscardRecord`는 레코드를 제외하도록 서버에 지시합니다.  
   
  **ErrorLog\KeyErrorLogFile**  
  서비스 계정이 읽기-쓰기 권한을 가지고 있는 폴더에 있는 사용자 정의 파일 이름이며, 이 파일의 확장명은 .log여야 합니다. 이 로그 파일에는 처리 중에 생성된 오류만 포함됩니다. 보다 자세한 정보가 필요한 경우 비행 레코더를 사용하십시오.  
@@ -106,35 +100,29 @@ ms.locfileid: "66068915"
  **ErrorLog\KeyErrorLimitAction**  
  키 오류 수가 상한에 도달한 경우 서버에서 수행하는 동작을 지정합니다. 이 동작에 대한 유효한 응답은 다음과 같습니다.  
   
--   
-  `StopProcessing`은 오류 제한에 도달하는 경우 처리를 중지하도록 서버에 알려 줍니다.  
+-   `StopProcessing`은 오류 제한에 도달하는 경우 처리를 중지하도록 서버에 알려 줍니다.  
   
--   
-  `StopLogging`은 오류 제한에 도달하는 경우 오류 기록을 중지하되 처리를 계속하도록 서버에 알려 줍니다.  
+-   `StopLogging`은 오류 제한에 도달하는 경우 오류 기록을 중지하되 처리를 계속하도록 서버에 알려 줍니다.  
   
- **오류 로그 \ LogErrorTypes\KeyNotFound**  
- 
-  `KeyNotFound` 오류가 발생할 때 서버에서 수행하는 동작을 지정합니다. 이 오류에 대한 유효한 응답은 다음과 같습니다.  
+ **ErrorLog\ LogErrorTypes\KeyNotFound**  
+ `KeyNotFound` 오류가 발생할 때 서버에서 수행하는 동작을 지정합니다. 이 오류에 대한 유효한 응답은 다음과 같습니다.  
   
--   
-  `IgnoreError`는 오류를 기록하거나 키 오류 제한에 대해 오류 개수를 계산하지 않고 처리를 계속하도록 서버에 지시합니다. 오류를 무시하기만 하면 오류 개수에 추가하거나 화면 또는 로그 파일에 기록하지 않고 처리가 계속됩니다. 문제의 레코드에 데이터 무결성 문제가 있어서 데이터베이스에 레코드를 추가할 수 없습니다. 레코드는 `KeyErrorAction` 속성으로 결정된 대로 삭제되거나 알 수 없는 멤버에 집계됩니다.  
+-   `IgnoreError`는 오류를 기록하거나 키 오류 제한에 대해 오류 개수를 계산하지 않고 처리를 계속하도록 서버에 지시합니다. 오류를 무시하기만 하면 오류 개수에 추가하거나 화면 또는 로그 파일에 기록하지 않고 처리가 계속됩니다. 문제의 레코드에 데이터 무결성 문제가 있어서 데이터베이스에 레코드를 추가할 수 없습니다. 레코드는 `KeyErrorAction` 속성으로 결정된 대로 삭제되거나 알 수 없는 멤버에 집계됩니다.  
   
--   
-  `ReportAndContinue`는 오류를 기록하고 키 오류 제한에 오류 수를 계산하고 처리를 계속하도록 서버에 알려 줍니다. 오류를 발생시키는 레코드는 삭제되거나 알 수 없는 멤버로 변환됩니다.  
+-   `ReportAndContinue`는 오류를 기록하고 키 오류 제한에 오류 수를 계산하고 처리를 계속하도록 서버에 알려 줍니다. 오류를 발생시키는 레코드는 삭제되거나 알 수 없는 멤버로 변환됩니다.  
   
--   
-  `ReportAndStop`은 키 오류 제한에 관계없이 오류를 기록하고 즉시 처리를 중지하도록 서버에 알려 줍니다. 오류를 발생시키는 레코드는 삭제되거나 알 수 없는 멤버로 변환됩니다.  
+-   `ReportAndStop`은 키 오류 제한에 관계없이 오류를 기록하고 즉시 처리를 중지하도록 서버에 알려 줍니다. 오류를 발생시키는 레코드는 삭제되거나 알 수 없는 멤버로 변환됩니다.  
   
- **오류 로그 \ LogErrorTypes\KeyDuplicate**  
+ **ErrorLog\ LogErrorTypes\KeyDuplicate**  
  중복 키가 있을 때 서버가 수행하는 동작을 지정합니다. 유효한 값에는 오류가 발생하지 않은 것처럼 처리를 계속하는 `IgnoreError`, 오류를 기록하고 처리를 계속하는 `ReportAndContinue`, 오류를 기록하고 오류 개수가 오류 제한에 못 미치더라도 처리를 즉시 중지하는 `ReportAndStop`이 포함됩니다.  
   
- **오류 로그 \ LogErrorTypes\NullKeyConvertedToUnknown**  
+ **ErrorLog\ LogErrorTypes\NullKeyConvertedToUnknown**  
  null 키가 알 수 없는 멤버로 변환된 경우 서버에서 수행하는 동작을 지정합니다. 유효한 값에는 오류가 발생하지 않은 것처럼 처리를 계속하는 `IgnoreError`, 오류를 기록하고 처리를 계속하는 `ReportAndContinue`, 오류를 기록하고 오류 개수가 오류 제한에 못 미치더라도 처리를 즉시 중지하는 `ReportAndStop`이 포함됩니다.  
   
- **오류 로그 \ LogErrorTypes\NullKeyNotAllowed**  
+ **ErrorLog\ LogErrorTypes\NullKeyNotAllowed**  
  차원 특성에 대해 `NullProcessing`이 `Error`로 설정된 경우 서버에서 수행하는 동작을 지정합니다. null 값이 지정된 특성에서 허용되지 않는 경우 오류가 생성됩니다. 이 오류 구성 속성은 오류를 보고하고 오류 제한에 도달할 때까지 처리를 계속하는 다음 단계를 알려줍니다. 유효한 값에는 오류가 발생하지 않은 것처럼 처리를 계속하는 `IgnoreError`, 오류를 기록하고 처리를 계속하는 `ReportAndContinue`, 오류를 기록하고 오류 개수가 오류 제한에 못 미치더라도 처리를 즉시 중지하는 `ReportAndStop`이 포함됩니다.  
   
- **오류 로그 \ LogErrorTypes\CalculationError**  
+ **ErrorLog\ LogErrorTypes\CalculationError**  
  서버가 수행한 작업을 처리하는 동안 속성이 기본값으로 사용되었습니다.  
   
  **ErrorLog\IgnoreDataTruncation**  
@@ -142,28 +130,22 @@ ms.locfileid: "66068915"
   
 ## <a name="exception"></a>예외  
  **Exception\CreateAndSendCrashReports**  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  **Exception\CrashReportsFolder**  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  **Exception\SQLDumperFlagsOn**  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  **Exception\SQLDumperFlagsOff**  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  **Exception\MiniDumpFlagsOn**  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  **Exception\MinidumpErrorList**  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
 ## <a name="flight-recorder"></a>비행 레코더  
  **FlightRecorder\Enabled**  
@@ -200,8 +182,7 @@ ms.locfileid: "66068915"
  이 속성의 기본값은 10으로 서버 쿼리 10개마다 1개가 기록됩니다.  
   
  **QueryLog\QueryLogFileSize**  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  **QueryLog\QueryLogConnectionString**  
  쿼리 로그 데이터베이스에 대한 연결을 지정하는 문자열 속성입니다.  
@@ -219,46 +200,36 @@ ms.locfileid: "66068915"
 > [!NOTE]  
 >  쿼리 로그를 구성 하는 방법에 대 한 자세한 내용은 [Analysis Services의 로그 작업](../instances/log-operations-in-analysis-services.md)을 참조 하세요.  
   
-## <a name="trace"></a>추적  
+## <a name="trace"></a>Trace  
  **Trace\TraceBackgroundDistributionPeriod**  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  **Trace\TraceBackgroundFlushPeriod**  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  **Trace\TraceFileBufferSize**  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  **Trace\TraceFileWriteTrailerPeriod**  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  **Trace\TraceMaxRowsetSize**  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  **Trace\TraceProtocolTraffic**  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  **Trace\TraceQueryResponseTextChunkSize**  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  **Trace\TraceReportFQDN**  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  **Trace\TraceRequestParameters**  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  **Trace\TraceRowsetBackgroundFlushPeriod**  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Analysis Services에서 서버 속성 구성](server-properties-in-analysis-services.md)   

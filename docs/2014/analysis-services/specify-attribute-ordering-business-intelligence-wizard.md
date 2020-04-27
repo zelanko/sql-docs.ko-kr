@@ -13,18 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0bc5468fed5c25b472be0bb5306b9da1b7e68eb1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068539"
 ---
 # <a name="specify-attribute-ordering-business-intelligence-wizard"></a>특성 순서 지정(비즈니스 인텔리전스 마법사)
-  
   **특성 순서 지정** 페이지를 사용하여 선택한 차원 내 특성의 순서 특성 및 순서 조건을 지정할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
- **Attribute**  
+ **특성도**  
  차원에 사용 가능한 특성을 표시합니다.  
   
  **순서 특성**  
@@ -35,12 +34,10 @@ ms.locfileid: "66068539"
  **조건**  
  해당 **특성** 내 멤버의 순서를 지정하는 데 사용할 조건을 **순서 특성**에서 지정합니다. 다음 표에서는 사용 가능한 조건을 나열합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|**이름**|
-  **특성** 을 **순서 특성**내 특성의 멤버 이름을 기준으로 정렬합니다.|  
-|**Key**|
-  **특성** 을 **순서 특성**내 특성의 멤버 키를 기준으로 정렬합니다.|  
+|**이름**|**특성** 을 **순서 특성**내 특성의 멤버 이름을 기준으로 정렬합니다.|  
+|**키**|**특성** 을 **순서 특성**내 특성의 멤버 키를 기준으로 정렬합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [비즈니스 인텔리전스 마법사 F1 도움말](business-intelligence-wizard-f1-help.md)   

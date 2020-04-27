@@ -20,16 +20,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2ca5e816d3068b0607a8ab30e949040df0187db9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874536"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>.NET Framework의 SQL Server 데이터 형식
-  
-  `SqlTypes` 라이브러리는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 기본 클래스 라이브러리의 일부로, 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 포함된 데이터 형식과 의미 체계 및 전체 자릿수가 동일한 데이터 형식을 제공하도록 디자인되었습니다. 이 항목에서는 .NET Framework 프로그래머를 대상으로 새로운 의미 체계에 대해 설명하고 `System.Data.SqlTypes` 라이브러리에 포함된 `System.Data` 네임스페이스에서 구현하는 형식을 소개합니다.  
+  `SqlTypes` 라이브러리는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 기본 클래스 라이브러리의 일부로, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 포함된 데이터 형식과 의미 체계 및 전체 자릿수가 동일한 데이터 형식을 제공하도록 디자인되었습니다. 이 항목에서는 .NET Framework 프로그래머를 대상으로 새로운 의미 체계에 대해 설명하고 `System.Data.SqlTypes` 라이브러리에 포함된 `System.Data` 네임스페이스에서 구현하는 형식을 소개합니다.  
   
  다음 표에서는 이 섹션에서 다루는 항목을 나열합니다.  
   
@@ -40,11 +38,9 @@ ms.locfileid: "62874536"
  CLR 통합에서 데이터 정렬이 처리되는 방법에 대해 설명합니다.  
   
  [CLR에서 LOB&#41; 매개 변수 &#40;큰 개체 처리](handling-large-object-lob-parameters-in-the-clr.md)  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 CLR 사이에서 LOB 형식을 전달하는 방법에 대해 설명합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 CLR 사이에서 LOB 형식을 전달하는 방법에 대해 설명합니다.  
   
  [CLR 매개 변수 데이터 매핑](mapping-clr-parameter-data.md)  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], CLR 통합 및 .NET Framework 사이의 데이터 형식 매핑을 보여 줍니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], CLR 통합 및 .NET Framework 사이의 데이터 형식 매핑을 보여 줍니다.  
   
   

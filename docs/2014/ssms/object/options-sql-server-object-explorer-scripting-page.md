@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63031937"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>옵션 (SQL Server 개체 탐색기 스크립팅 페이지)
@@ -39,12 +39,12 @@ ms.locfileid: "63031937"
   
 ### <a name="general-scripting-options"></a>일반 스크립팅 옵션  
  **개별 문 구분**  
- 일괄 처리 구분 기호를 사용하여 개별 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 구분합니다. **쿼리 편집기**에 대한 기본 일괄 처리 구분 기호를 변경하려면 **도구**/**옵션**/**쿼리 실행**/**SQL Server**/**일반**/**일괄 처리 구분 기호**를 선택합니다. 기본값은 False입니다. 자세한 내용은 [GO &#40;transact-sql&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go)을 참조 하세요.  
+ 일괄 처리 구분 기호를 사용하여 개별 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 구분합니다. **쿼리 편집기**에 대 한 기본 일괄 처리 구분 기호를 변경 하려면 **도구**/**옵션**/**쿼리 실행**/**SQL Server**/**일반**/**일괄 처리 구분 기호**를 선택 합니다. 기본값은 False입니다. 자세한 내용은 [GO &#40;transact-sql&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go)을 참조 하세요.  
   
  **설명 머리글 포함**  
  스크립트를 개체별 섹션으로 구분하여 스크립트에 설명을 추가합니다. 기본값은 True입니다. 자세한 내용은 [설명 &#40;transact-sql&#41;](/sql/t-sql/language-elements/comment-transact-sql)를 참조 하세요.  
   
- **Vardecimal 옵션 포함**  
+ **VarDecimal 옵션 포함**  
  VarDecimal 스토리지 옵션을 포함합니다. 기본값은 False입니다. 자세한 내용은 및 [sp_db_vardecimal_storage_format &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql)을 참조 하십시오.  
   
  **변경 내용 추적 스크립팅**  
@@ -63,7 +63,7 @@ ms.locfileid: "63031937"
  **종속 개체에 대해 스크립트 생성**  
  선택한 개체에 대한 스크립트가 실행될 때 필요한 추가 개체에 대한 스크립트를 생성합니다. 기본값은 False입니다.  
   
- **If NOT EXISTS 절 포함**  
+ **IF NOT EXISTS 절 포함**  
  개체를 만들기 전에 데이터베이스에 해당 개체가 없는지 확인하는 문을 포함합니다. 기본값은 False입니다. 자세한 내용은 다음 [을 참조 하세요. Transact-sql&#41;&#40;](/sql/t-sql/language-elements/if-else-transact-sql) transact-sql [&#41;&#40;](/sql/t-sql/language-elements/exists-transact-sql)있습니다.  
   
  **개체 이름 스키마 한정**  

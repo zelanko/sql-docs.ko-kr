@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 42c7b7e876f244831920be390d97c88412eed63f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071673"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftanalysisservicessharepointintegration39"></a>Microsoft.analysisservices.sharepoint.integration.dll &#39;파일 또는 어셈블리를 로드할 수 없습니다.&#39;
@@ -37,11 +37,9 @@ ms.locfileid: "66071673"
   
 1.  중앙 관리의 시스템 설정에서 **팜 솔루션 관리**를 클릭합니다.  
   
-2.  
-  **Powerpivotwebapp**를 클릭합니다.  
+2.  **Powerpivotwebapp**를 클릭합니다.  
   
-3.  
-  **솔루션 배포**를 클릭합니다.  
+3.  **솔루션 배포**를 클릭합니다.  
   
 4.  이 오류가 발생하는 웹 애플리케이션을 선택합니다. 웹 애플리케이션이 여러 개인 경우에는 모든 웹 애플리케이션에 대해 솔루션을 다시 배포합니다.  
   

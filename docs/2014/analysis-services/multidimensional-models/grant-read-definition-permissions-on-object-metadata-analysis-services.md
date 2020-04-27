@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e03e55451c2340b5f0773e2873127c3551a82aab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074902"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>개체 메타데이터에 대한 정의 읽기 권한 부여(Analysis Services)
@@ -36,16 +36,13 @@ ms.locfileid: "66074902"
   
 2.  **일반** 탭에서 `Read Definition` 옵션을 선택 합니다.  
   
-3.  
-  **멤버 자격** 창에서 이 역할을 사용하여 Analysis Services에 연결하는 Windows 사용자 및 그룹 계정을 입력합니다.  
+3.  **멤버 자격** 창에서 이 역할을 사용하여 Analysis Services에 연결하는 Windows 사용자 및 그룹 계정을 입력합니다.  
   
-4.  
-  **확인** 을 클릭하여 역할 만들기를 마칩니다.  
+4.  **확인** 을 클릭하여 역할 만들기를 마칩니다.  
   
 ## <a name="set-read-definition-permissions-on-individual-objects"></a>개별 개체에 대한 정의 읽기 권한 설정  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결하고 **데이터베이스** 폴더를 열고 데이터베이스를 선택하고 개체 탐색기에서 해당 데이터베이스에 대한 **역할** 을 확장한 다음 데이터베이스 역할을 클릭하거나 새 데이터베이스 역할을 만듭니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결하고 **데이터베이스** 폴더를 열고 데이터베이스를 선택하고 개체 탐색기에서 해당 데이터베이스에 대한 **역할** 을 확장한 다음 데이터베이스 역할을 클릭하거나 새 데이터베이스 역할을 만듭니다.  
   
 2.  **일반** 창에서에 대 한 `Read Definition`데이터베이스 권한을 선택 취소 합니다. 이 단계는 사용 권한 상속을 제거하므로, 개별 개체에 대한 사용 권한을 설정할 수 있습니다.  
   
@@ -57,14 +54,12 @@ ms.locfileid: "66074902"
   
     -   마이닝 구조 창에서 데이터 마이닝 구조 또는 `Read Definition` 모델에 대 한 확인란을 클릭 합니다. `Read Definition`는 데이터 모델을 검색 하는 데 필요 합니다. 자세한 내용은 [데이터 마이닝 구조 및 모델에 대한 권한 부여&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)를 참조하세요.  
   
-4.  
-  **멤버 자격** 창에서 이 역할을 사용하여 Analysis Services에 연결하는 Windows 사용자 및 그룹 계정을 입력합니다.  
+4.  **멤버 자격** 창에서 이 역할을 사용하여 Analysis Services에 연결하는 Windows 사용자 및 그룹 계정을 입력합니다.  
   
-5.  
-  **확인** 을 클릭하여 역할 만들기를 마칩니다.  
+5.  **확인** 을 클릭하여 역할 만들기를 마칩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Analysis Services&#41;&#40;데이터베이스 사용 권한 부여](grant-database-permissions-analysis-services.md)   
- [Analysis Services&#41;&#40;처리 권한 부여](grant-process-permissions-analysis-services.md)  
+ [처리 권한 부여&#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
   

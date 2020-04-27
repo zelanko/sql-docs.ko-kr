@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7eea2aaca722ed2621127120f21b2ec350392606
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069465"
 ---
 # <a name="select-measure-group-tables-cube-wizard"></a>측정값 그룹 테이블 선택(큐브 마법사)
-  
   **측정값 그룹 테이블 선택** 페이지를 사용하여 데이터 원본 뷰를 식별하고 큐브에 사용할 측정값 그룹 테이블을 선택할 수 있습니다.  
   
 ## <a name="options"></a>옵션  

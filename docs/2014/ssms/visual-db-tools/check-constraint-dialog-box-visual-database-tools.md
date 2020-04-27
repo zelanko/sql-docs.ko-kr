@@ -13,20 +13,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d41cc9f3b52c0c5e70ead6b93c0b929ef521f673
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067459"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>CHECK 제약 조건 대화 상자(Visual Database Tools)
-  이 대화 상자는 테이블 디자이너에서 테이블 정의 표를 마우스 오른쪽 단추로 클릭 한 다음 **Check 제약 조건**을 클릭 하면 나타납니다. 이 대화 상자에는 데이터베이스의 테이블에 연결된 비 UNIQUE 제약 조건에 대한 속성 집합이 포함되어 있습니다. UNIQUE 제약 조건에 적용되는 속성은 **인덱스/키** 대화 상자에 표시됩니다.  
+  이 대화 상자는 테이블 디자이너에서 테이블 정의 표를 마우스 오른쪽 단추로 클릭한 다음 **CHECK 제약 조건**을 클릭하면 나타납니다. 이 대화 상자에는 데이터베이스의 테이블에 연결된 비 UNIQUE 제약 조건에 대한 속성 집합이 포함되어 있습니다. UNIQUE 제약 조건에 적용되는 속성은 **인덱스/키** 대화 상자에 표시됩니다.  
   
 > [!NOTE]  
 >  테이블이 복제용으로 게시된 경우 Transact-SQL 문 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) 또는 SMO(SQL Server 관리 개체)를 사용하여 스키마를 변경해야 합니다. 테이블 디자이너 또는 데이터베이스 다이어그램 디자이너를 사용하여 스키마를 변경하면 테이블 삭제 및 재생성이 시도됩니다. 게시된 개체를 삭제할 수 없으므로 스키마가 변경되지 않습니다.  
   
 ## <a name="options"></a>옵션  
- **선택한 Check 제약 조건**  
+ **선택한 CHECK 제약 조건**  
  사용할 수 있는 CHECK 제약 조건을 나열합니다. 제약 조건의 속성을 보려면 목록에서 제약 조건을 선택합니다.  
   
  **추가**  
@@ -48,15 +48,15 @@ ms.locfileid: "63067459"
  선택한 CHECK 제약 조건의 이름을 표시합니다. 이 제약 조건의 이름을 변경하려면 속성 필드에 직접 텍스트를 입력합니다.  
   
  **설명**  
- CHECK 제약 조건에 대해 설명합니다. 속성 필드에 직접 텍스트를 입력하여 설명을 편집할 수 있고, 속성 필드의 오른쪽에 있는 줄임표(**...**)를 클릭한 다음, **설명 속성** 대화 상자에서 설명을 편집할 수도 있습니다.  
+ CHECK 제약 조건에 대해 설명합니다. 속성 필드에 직접 텍스트를 입력하여 설명을 편집할 수 있고, 속성 필드의 오른쪽에 있는 줄임표( **...** )를 클릭한 다음, **설명 속성** 대화 상자에서 설명을 편집할 수도 있습니다.  
   
  **테이블 디자이너 범주**  
  확장하면 **만들거나 다시 활성화할 때 기존 데이터 검사**, **INSERT 및 UPDATE에 적용**, **복제에 적용**에 대한 속성이 표시됩니다.  
   
- **만들거나 다시 활성화할 때 기존 데이터 검사**  
+ **Check Existing Data On Creation or Re-Enabling**  
  조건 제약에 대해 기존의 모든 데이터 즉, 제약 조건을 만들기 전부터 테이블에 있던 데이터를 검사할지 여부를 지정합니다.  
   
- **삽입 및 업데이트에 대해 적용**  
+ **INSERT 및 UPDATE에 적용**  
  데이터를 테이블에 삽입하거나 테이블에서 업데이트할 때 제약 조건을 적용할지 여부를 지정합니다.  
   
  **복제에 적용**  

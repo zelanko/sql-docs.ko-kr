@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d1546f9f708a32f6467b0f01c8b0644b610505e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069973"
 ---
 # <a name="script-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>스크립트 편집기(계산 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
@@ -26,9 +26,7 @@ ms.locfileid: "66069973"
   
 |용어|정의|  
 |----------|----------------|  
-|**식**|
-  **메타데이터** 창에서 선택한 스크립트 명령에 대한 MDX(Multidimensional Expression) 식 및 문을 폼 보기에서 입력하거나 스크립트 보기에서 전체 큐브 스크립트를 입력합니다.<br /><br /> 
-  **계산 도구** 창에서 선택한 요소를 이 옵션으로 끌어서 놓으면 선택한 요소의 MDX 구문을 포함시킬 수 있습니다.|  
+|**식**|**메타데이터** 창에서 선택한 스크립트 명령에 대한 MDX(Multidimensional Expression) 식 및 문을 폼 보기에서 입력하거나 스크립트 보기에서 전체 큐브 스크립트를 입력합니다.<br /><br /> **계산 도구** 창에서 선택한 요소를 이 옵션으로 끌어서 놓으면 선택한 요소의 MDX 구문을 포함시킬 수 있습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [MDX&#41; 참조 &#40;다차원 식](/sql/mdx/multidimensional-expressions-mdx-reference)   

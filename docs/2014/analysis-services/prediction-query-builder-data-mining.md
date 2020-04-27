@@ -11,28 +11,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 61f0f7c62c6c3f245a87e7e8ce37153f08226a7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070778"
 ---
 # <a name="prediction-query-builder-data-mining"></a>예측 쿼리 작성기(데이터 마이닝)
-  
   **마이닝 모델 예측** 뷰를 사용하여 마이닝 구조에 포함된 마이닝 모델을 기반으로 예측을 만들 수 있습니다.  
   
  예측 쿼리 작성기를 사용하여 데이터 마이닝 쿼리를 만드는 방법을 연습하려면 다음 자습서 및 항목을 참조하십시오.  
   
 -   [기본 데이터 마이닝 자습서](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
--   [DMX를 사용 하 여 데이터 마이닝 모델 만들기 및 쿼리: 자습서 &#40;Analysis Services 데이터 마이닝&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+-   [DMX를 사용하여 데이터 마이닝 모델 만들기 및 쿼리: 자습서&#40;Analysis Services - 데이터 마이닝&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
 -   [데이터 마이닝 쿼리](data-mining/data-mining-queries.md)  
   
 -   [데이터 마이닝 쿼리 태스크 및 방법](data-mining/data-mining-query-tasks-and-how-tos.md)  
   
- 
-  **마이닝 모델 예측** 뷰에는 다음과 같은 도구 및 대화 상자가 있습니다.  
+ **마이닝 모델 예측** 뷰에는 다음과 같은 도구 및 대화 상자가 있습니다.  
   
 -   [디자인 창 &#40;마이닝 모델 예측 뷰&#41;](design-pane-mining-model-prediction-view.md)  
   

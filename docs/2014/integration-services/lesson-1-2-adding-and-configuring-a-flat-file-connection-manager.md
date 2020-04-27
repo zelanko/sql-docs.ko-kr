@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c6cd41be722d80baf442db907d6fdab9f334859
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891795"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>2단계: 플랫 파일 연결 관리자 추가 및 구성
@@ -26,29 +26,25 @@ ms.locfileid: "62891795"
   
 -   **열 이름:** 플랫 파일에는 열 이름이 없으므로 플랫 파일 연결 관리자가 기본 열 이름을 만듭니다. 이러한 기본 이름은 각 열이 나타내는 내용을 식별하는 데 유용하지 않습니다. 이러한 기본 이름을 보다 유용하게 만들려면 기본 이름을 플랫 파일 데이터가 로드될 팩트 테이블과 일치하는 이름으로 변경해야 합니다.  
   
--   **데이터 매핑:** 플랫 파일 연결 관리자에 대해 지정 하는 데이터 형식 매핑은 연결 관리자를 참조 하는 모든 플랫 파일 데이터 원본 구성 요소에서 사용 됩니다. 플랫 파일 연결 관리자를 사용하여 데이터 형식을 수동으로 매핑하거나 **열 유형 제안** 대화 상자를 사용할 수 있습니다. 이 자습서에서는 **열 유형 제안** 대화 상자에 제안된 매핑을 표시한 다음 **플랫 파일 연결 관리자 편집기** 대화 상자에서 필요한 매핑을 수동으로 만드는 과정을 다룹니다.  
+-   **데이터 매핑:** 플랫 파일 연결 관리자에서 지정하는 데이터 형식 매핑은 연결 관리자를 참조하는 모든 플랫 파일 데이터 원본 구성 요소에서 사용됩니다. 플랫 파일 연결 관리자를 사용하여 데이터 형식을 수동으로 매핑하거나 **열 유형 제안** 대화 상자를 사용할 수 있습니다. 이 자습서에서는 **열 유형 제안** 대화 상자에 제안된 매핑을 표시한 다음 **플랫 파일 연결 관리자 편집기** 대화 상자에서 필요한 매핑을 수동으로 만드는 과정을 다룹니다.  
   
  플랫 파일 연결 관리자는 데이터 파일에 대한 로캘 정보를 제공합니다. 컴퓨터가 국가별 옵션 영어 (미국)를 사용 하도록 구성 되어 있지 않은 경우 **플랫 파일 연결 관리자 편집기** 대화 상자에서 추가 속성을 설정 해야 합니다.  
   
 ### <a name="to-add-a-flat-file-connection-manager-to-the-ssis-package"></a>SSIS 패키지에 플랫 파일 연결 관리자를 추가하려면  
   
-1.  
-  **연결 관리자** 영역의 아무 곳이나 마우스 오른쪽 단추로 클릭한 다음 **새 플랫 파일 연결**을 클릭합니다.  
+1.  **연결 관리자** 영역의 아무 곳이나 마우스 오른쪽 단추로 클릭한 다음 **새 플랫 파일 연결**을 클릭합니다.  
   
-2.  
-  **플랫 파일 연결 관리자 편집기** 대화 상자에서 **연결 관리자 이름**에 **Sample Flat File Source Data**를 입력합니다.  
+2.  **플랫 파일 연결 관리자 편집기** 대화 상자에서 **연결 관리자 이름**에 **Sample Flat File Source Data**를 입력합니다.  
   
 3.  **찾아보기**를 클릭합니다.  
   
-4.  
-  **열기** 대화 상자에서 컴퓨터에 있는 SampleCurrencyData.txt 파일을 찾습니다.  
+4.  **열기** 대화 상자에서 컴퓨터에 있는 SampleCurrencyData.txt 파일을 찾습니다.  
   
      예제 데이터는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 단원 패키지에 포함되어 있습니다. 예제 데이터 및 단원 패키지를 다운로드하려면 다음을 수행합니다.  
   
-    1.  [Integration Services 제품 샘플](https://go.microsoft.com/fwlink/?LinkId=275027) 로 이동 합니다.  
+    1.  [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=275027)로 이동합니다.  
   
-    2.  
-  **DOWNLOADS** 탭을 클릭합니다.  
+    2.  **다운로드** 탭을 클릭 합니다.  
   
     3.  SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 파일을 클릭합니다.  
   
@@ -56,15 +52,13 @@ ms.locfileid: "62891795"
   
 ### <a name="to-set-locale-sensitive-properties"></a>로캘 구분 속성을 설정하려면  
   
-1.  
-  **플랫 파일 연결 관리자 편집기** 대화 상자에서 **일반**을 클릭합니다.  
+1.  **플랫 파일 연결 관리자 편집기** 대화 상자에서 **일반**을 클릭합니다.  
   
 2.  **로캘** 을 영어 (미국)로 설정 하 고 **코드 페이지** 를 1252으로 설정 합니다.  
   
 ### <a name="to-rename-columns-in-the-flat-file-connection-manager"></a>플랫 파일 연결 관리자에서 열 이름을 바꾸려면  
   
-1.  
-  **플랫 파일 연결 관리자 편집기** 대화 상자에서 **고급**을 클릭합니다.  
+1.  **플랫 파일 연결 관리자 편집기** 대화 상자에서 **고급**을 클릭합니다.  
   
 2.  속성 창에서 다음 내용을 변경합니다.  
   
@@ -81,13 +75,11 @@ ms.locfileid: "62891795"
   
 ### <a name="to-remap-column-data-types"></a>열 데이터 형식을 다시 매핑하려면  
   
-1.  
-  **플랫 파일 연결 관리자 편집기** 대화 상자에서 **유형 제안**을 클릭합니다.  
+1.  **플랫 파일 연결 관리자 편집기** 대화 상자에서 **유형 제안**을 클릭합니다.  
   
-     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 처음 200 개의 데이터 행을 기반으로 가장 적합 한 데이터 형식을 자동으로 제안 합니다. 또한 이러한 제안 옵션을 변경하여 더 많거나 적은 데이터를 샘플링하거나 정수 또는 부울 데이터의 기본 데이터 형식을 지정하거나 공백을 안쪽 여백으로 문자열 열에 추가할 수 있습니다.  
+     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 처음 200개의 데이터 행에 기초하여 가장 적합한 데이터 형식을 자동으로 제안합니다. 또한 이러한 제안 옵션을 변경하여 더 많거나 적은 데이터를 샘플링하거나 정수 또는 부울 데이터의 기본 데이터 형식을 지정하거나 공백을 안쪽 여백으로 문자열 열에 추가할 수 있습니다.  
   
-     여기에서는 **열 유형 제안** 대화 상자의 옵션을 변경하지 않고 **확인** 을 클릭하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 열의 데이터 형식을 제안하게 합니다. 이렇게 하면 **에서 제안하는 열 데이터 형식을 볼 수 있는** 플랫 파일 연결 관리자 편집기 **대화 상자의** 고급 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]창으로 돌아갑니다. 
-  **취소**를 클릭하면 열 메타데이터에 대한 제안이 생성되지 않고 기본 문자열(DT_STR) 데이터 형식이 사용됩니다.  
+     여기에서는 **열 유형 제안** 대화 상자의 옵션을 변경하지 않고 **확인** 을 클릭하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 열의 데이터 형식을 제안하게 합니다. 이렇게 하면 **에서 제안하는 열 데이터 형식을 볼 수 있는** 플랫 파일 연결 관리자 편집기 **대화 상자의** 고급 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]창으로 돌아갑니다. **취소**를 클릭하면 열 메타데이터에 대한 제안이 생성되지 않고 기본 문자열(DT_STR) 데이터 형식이 사용됩니다.  
   
      이 자습서에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 SampleCurrencyData.txt 파일 데이터에 대해 다음 테이블의 두 번째 열에 표시된 데이터 형식을 제안합니다. 그러나 이후 단계에서 정의할 대상 열에 필요한 데이터 형식은 다음 표의 마지막 열에서 확인할 수 있습니다.  
   

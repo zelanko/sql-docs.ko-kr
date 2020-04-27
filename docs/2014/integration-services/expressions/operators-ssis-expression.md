@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7689110600b7c4cded50572828ab469dd51c1432
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62897362"
 ---
 # <a name="operators-ssis-expression"></a>연산자(SSIS 식)
@@ -36,7 +36,7 @@ ms.locfileid: "62897362"
 |[-&#40;빼기&#41;&#40;SSIS 식&#41;](subtract-ssis-expression.md)|첫 번째 숫자 식에서 두 번째 식을 뺍니다.|  
 |[-&#40;부정&#41; &#40;SSIS 식&#41;](negate-ssis-expression.md)|숫자 식을 부정합니다.|  
 |[&#42;&#40;곱하기&#41;&#40;SSIS 식&#41;](multiply-ssis-expression.md)|두 숫자 식을 곱합니다.|  
-|[&#40;SSIS 식&#41;나눕니다.](divide-ssis-expression.md)|첫 번째 숫자 식을 두 번째 숫자 식으로 나눕니다.|  
+|[나누기&#40;SSIS 식&#41;](divide-ssis-expression.md)|첫 번째 숫자 식을 두 번째 숫자 식으로 나눕니다.|  
 |[&#40;모듈로&#41; &#40;SSIS 식&#41;](modulo-ssis-expression.md)|첫 번째 숫자 식을 두 번째 식으로 나눈 다음 나머지의 정수 부분을 제공합니다.|  
 |[&#124;&#124;&#40;논리적 OR&#41;&#40;SSIS 식&#41;](logical-or-ssis-expression.md)|논리적 OR 연산을 수행합니다.|  
 |[&&&#40;논리적 AND&#41;&#40;SSIS 식&#41;](logical-and-ssis-expression.md)|논리적 AND 연산을 수행합니다.|  
@@ -44,7 +44,7 @@ ms.locfileid: "62897362"
 |[&#124;&#40;포괄적 비트 OR&#41;&#40;SSIS 식&#41;](bitwise-inclusive-or-ssis-expression.md)|두 정수 값의 비트 OR 연산을 수행합니다.|  
 |[^&#40;배타적 비트 OR&#41;&#40;SSIS 식&#41;](bitwise-exclusive-or-ssis-expression.md)|두 정수 값의 배타적 비트 OR 연산을 수행합니다.|  
 |[&&#40;비트 AND&#41;&#40;SSIS 식&#41;](bitwise-and-ssis-expression.md)|두 정수 값의 비트 AND 연산을 수행합니다.|  
-|[~ &#40;비트 Not&#41; &#40;SSIS 식&#41;](bitwise-not-ssis-expression.md)|정수의 비트 부정을 수행합니다.|  
+|[~&#40;비트 Not&#41;&#40;SSIS 식&#41;](bitwise-not-ssis-expression.md)|정수의 비트 부정을 수행합니다.|  
 |[== &#40;같음&#41;&#40;SSIS 식&#41;](equal-ssis-expression.md)|두 식이 같은지 비교합니다.|  
 |[\!=&#40;같지 않음&#41;&#40;SSIS 식&#41;](unequal-ssis-expression.md)|두 식이 같지 않은지 비교합니다.|  
 |[&#62;&#40;보다 큼&#41;&#40;SSIS 식&#41;](greater-than-ssis-expression.md)|비교를 수행하여 첫 번째 식이 두 번째 식보다 큰지 확인합니다.|  

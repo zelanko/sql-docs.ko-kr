@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c583ffad2267a82c39d4ab6c7cd71a1852c7cb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63065471"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
@@ -72,18 +72,15 @@ idxServerCol
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서는 *Euserdatatype* 매개 변수의 SQLXML 및 sqludt 데이터 형식 토큰에 대 한 지원이 도입 되었습니다.  
   
- 
-  *eUserDataType* 매개 변수는 ODBC C 데이터 형식 열거자가 아닌 sqlncli.h의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 토큰에 의해 열거됩니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 관련된 SQLCHARACTER 형식을 사용하여 ODBC 유형 SQL_C_CHAR라는 문자열을 지정할 수 있습니다.  
+ *eUserDataType* 매개 변수는 ODBC C 데이터 형식 열거자가 아닌 sqlncli.h의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 토큰에 의해 열거됩니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 관련된 SQLCHARACTER 형식을 사용하여 ODBC 유형 SQL_C_CHAR라는 문자열을 지정할 수 있습니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 대한 기본 데이터 표현을 지정하려면 이 매개 변수를 0으로 설정합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 대한 기본 데이터 표현을 지정하려면 이 매개 변수를 0으로 설정합니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 파일로의 대량 복사에서 *eUserDataType* 이 SQLDECIMAL 또는 SQLNUMERIC인 경우  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 파일로의 대량 복사에서 *eUserDataType* 이 SQLDECIMAL 또는 SQLNUMERIC인 경우  
   
--   원본 열이 **decimal** 또는 **numeric**이 아니면 기본 전체 자릿수 및 소수 자릿수가 사용됩니다.  
+-   원본 열이 **decimal** 또는 **numeric**이 아니면 기본 전체 자릿수 및 소수 자릿수가 사용 됩니다.  
   
--   원본 열이 **decimal** 또는 **numeric**이면 원본 열의 전체 자릿수 및 소수 자릿수가 사용됩니다.  
+-   원본 열이 **decimal** 또는 **numeric**이면 원본 열의 전체 자릿수와 소수 자릿수가 사용 됩니다.  
   
  *cbIndicator*  
  열 데이터의 길이 또는 Null 표시기의 길이(바이트)입니다. 올바른 표시기 길이 값은 0(표시기를 사용하지 않을 경우), 1, 2, 4 또는 8입니다.  
@@ -99,22 +96,15 @@ idxServerCol
  *cbUserData*  
  길이 표시기나 종결자의 길이를 제외한 사용자 파일에 있는 이 열 데이터의 최대 길이(바이트)입니다.  
   
- 
-  *cbUserData* 를 SQL_NULL_DATA로 설정하면 데이터 파일 열의 모든 값이 NULL이거나 NULL로 설정해야 함을 나타냅니다.  
+ *cbUserData* 를 SQL_NULL_DATA로 설정하면 데이터 파일 열의 모든 값이 NULL이거나 NULL로 설정해야 함을 나타냅니다.  
   
- 
-  *cbUserData* 를 SQL_VARLEN_DATA로 설정하면 시스템에서 각 열의 데이터 길이를 확인함을 나타냅니다. 일부 열의 경우 이 설정은 길이 또는 Null 표시기가 생성되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 복사되는 복사본의 데이터 앞에 추가됨을 의미하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 복사되는 데이터에 표시기가 필요함을 나타냅니다.  
+ *cbUserData* 를 SQL_VARLEN_DATA로 설정하면 시스템에서 각 열의 데이터 길이를 확인함을 나타냅니다. 일부 열의 경우 이 설정은 길이 또는 Null 표시기가 생성되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 복사되는 복사본의 데이터 앞에 추가됨을 의미하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 복사되는 데이터에 표시기가 필요함을 나타냅니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 및 이진 데이터 형식의 경우 *cbUserData* 는 SQL_VARLEN_DATA, SQL_NULL_DATA, 0 또는 양수 값일 수 있습니다. 
-  *cbUserData* 가 SQL_VARLEN_DATA이면 시스템에서 길이 표시기(있는 경우)나 종결자 시퀀스를 사용하여 데이터 길이를 확인합니다. 길이 표시기와 종결자 시퀀스를 모두 지정하는 경우 대량 복사에는 복사되는 데이터 크기가 가장 작은 방법이 사용됩니다. 
-  *cbUserData* 가 SQL_VARLEN_DATA인 경우 열의 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 또는 이진 형식이며 길이 표시기나 종결자 시퀀스를 모두 지정하지 않으면 시스템에서 오류 메시지를 반환합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 및 이진 데이터 형식의 경우 *cbUserData* 는 SQL_VARLEN_DATA, SQL_NULL_DATA, 0 또는 양수 값일 수 있습니다. *cbUserData* 가 SQL_VARLEN_DATA이면 시스템에서 길이 표시기(있는 경우)나 종결자 시퀀스를 사용하여 데이터 길이를 확인합니다. 길이 표시기와 종결자 시퀀스를 모두 지정하는 경우 대량 복사에는 복사되는 데이터 크기가 가장 작은 방법이 사용됩니다. *cbUserData* 가 SQL_VARLEN_DATA인 경우 열의 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 또는 이진 형식이며 길이 표시기나 종결자 시퀀스를 모두 지정하지 않으면 시스템에서 오류 메시지를 반환합니다.  
   
- 
-  *cbUserData* 가 0이거나 양수 값이면 시스템은 *cbUserData* 를 최대 데이터 길이로 사용합니다. 그러나 *cbUserData*가 양수이고 길이 표시자 또는 종결자 시퀀스도 제공되는 경우 시스템은 복사할 데이터가 적은 방법을 사용하여 데이터 길이를 확인합니다.  
+ *cbUserData* 가 0이거나 양수 값이면 시스템은 *cbUserData* 를 최대 데이터 길이로 사용합니다. 그러나 *cbUserData*가 양수이고 길이 표시자 또는 종결자 시퀀스도 제공되는 경우 시스템은 복사할 데이터가 적은 방법을 사용하여 데이터 길이를 확인합니다.  
   
- 
-  *cbUserData* 값은 데이터의 바이트 수를 나타냅니다. 문자 데이터가 유니코드 와이드 문자로 표현되는 경우 양수 *cbUserData* 매개 변수 값은 문자 수와 각 문자의 바이트 크기를 곱한 값을 나타냅니다.  
+ *cbUserData* 값은 데이터의 바이트 수를 나타냅니다. 문자 데이터가 유니코드 와이드 문자로 표현되는 경우 양수 *cbUserData* 매개 변수 값은 문자 수와 각 문자의 바이트 크기를 곱한 값을 나타냅니다.  
   
  *pUserDataTerm*  
  이 열에 사용할 종결자 시퀀스입니다. 이 매개 변수는 주로 문자 데이터 형식에 유용한데 그 이유는 다른 모든 형식은 길이가 고정되어 있거나 이진 데이터의 경우 현재 바이트 수를 정확하게 기록하기 위해 길이 표시기가 필요하기 때문입니다.  
@@ -137,8 +127,7 @@ idxServerCol
  SUCCEED 또는 FAIL  
   
 ## <a name="remarks"></a>설명  
- 
-  **bcp_colfmt** 함수를 사용하여 대량 복사에 사용할 사용자 파일 형식을 지정할 수 있습니다. 대량 복사의 경우 형식에는 다음과 같은 부분이 포함됩니다.  
+ **bcp_colfmt** 함수를 사용하여 대량 복사에 사용할 사용자 파일 형식을 지정할 수 있습니다. 대량 복사의 경우 형식에는 다음과 같은 부분이 포함됩니다.  
   
 -   사용자 파일 열에서 데이터베이스 열로의 매핑  
   
@@ -152,23 +141,19 @@ idxServerCol
   
 -   선택 사항인 종결 바이트 시퀀스의 길이  
   
- 
-  **bcp_colfmt** 에 대한 각 호출에서는 사용자 파일의 한 열에 대한 서식을 지정합니다. 예를 들어 다섯 개의 열로 구성된 사용자 데이터 파일의 세 열에 대해 기본 설정을 변경하려면 먼저 [bcp_columns](bcp-columns.md)**(5)** 를 호출한 다음 **bcp_colfmt** 를 다섯 번 호출합니다. 이 중 세 번의 호출에서 사용자 지정 형식을 설정합니다. 나머지 두 번의 호출에서는 *eUserDataType* 을 0으로 설정하고 *cbIndicator*, *cbUserData*및 *cbUserDataTerm* 을 각각 0, SQL_VARLEN_DATA 및 0으로 설정합니다. 이 프로시저는 다섯 개의 열을 모두 복사하는데 이 중 세 개는 사용자 지정된 형식으로, 두 개는 기본 형식으로 복사합니다.  
+ **bcp_colfmt** 에 대한 각 호출에서는 사용자 파일의 한 열에 대한 서식을 지정합니다. 예를 들어 다섯 개의 열로 구성된 사용자 데이터 파일의 세 열에 대해 기본 설정을 변경하려면 먼저 [bcp_columns](bcp-columns.md)**(5)** 를 호출한 다음 **bcp_colfmt** 를 다섯 번 호출합니다. 이 중 세 번의 호출에서 사용자 지정 형식을 설정합니다. 나머지 두 번의 호출에서는 *eUserDataType* 을 0으로 설정하고 *cbIndicator*, *cbUserData*및 *cbUserDataTerm* 을 각각 0, SQL_VARLEN_DATA 및 0으로 설정합니다. 이 프로시저는 다섯 개의 열을 모두 복사하는데 이 중 세 개는 사용자 지정된 형식으로, 두 개는 기본 형식으로 복사합니다.  
   
- 
-  *cbIndicator*의 경우 이제 큰 값 형식을 나타내는 값 8이 유효합니다. 해당 열이 새로운 최대 유형인 필드에 접두사가 지정되어 있으면 필드 값을 8로만 설정할 수 있습니다. 자세한 내용은 [bcp_bind](bcp-bind.md)를 참조 하세요.  
+ *cbIndicator*의 경우 이제 큰 값 형식을 나타내는 값 8이 유효합니다. 해당 열이 새로운 최대 유형인 필드에 접두사가 지정되어 있으면 필드 값을 8로만 설정할 수 있습니다. 자세한 내용은 [bcp_bind](bcp-bind.md)를 참조 하세요.  
   
- 
-  **bcp_colfmt** 를 호출하기 전에 **bcp_columns**함수를 호출해야 합니다.  
+ **bcp_colfmt** 를 호출하기 전에 **bcp_columns**함수를 호출해야 합니다.  
   
- 사용자 파일에 있는 각 열에 대해 **bcp_colfmt** 를 한 번씩 호출해야 합니다.  
+ 사용자 파일의 각 열에 대해 **bcp_colfmt** 를 한 번씩 호출 해야 합니다.  
   
- 사용자 파일의 열에 대해 **bcp_colfmt** 를 두 번 이상 호출하면 오류가 발생합니다.  
+ 사용자 파일 열에 대해 **bcp_colfmt** 를 두 번 이상 호출 하면 오류가 발생 합니다.  
   
  사용자 파일의 모든 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로 복사할 필요가 없습니다. 열을 건너뛰려면 *idxServerCol* 매개 변수를 0으로 설정하여 해당 열의 데이터 형식을 지정합니다. 열을 건너뛰려면 열 형식을 지정해야 합니다.  
   
- 
-  [bcp_writefmt](bcp-writefmt.md) 함수는 형식 사양을 유지하는 데 사용할 수 있습니다.  
+ [bcp_writefmt](bcp-writefmt.md) 함수는 형식 사양을 유지하는 데 사용할 수 있습니다.  
   
 ## <a name="bcp_colfmt-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 bcp_colfmt 지원  
  에서에 대 한 자세한 내용은 날짜/시간 형식에 대 한 *Euserdatatype* 매개 변수와 함께 사용 되는 형식에 대 한 [대량 복사 변경&#41;OLE DB &#40;내용 ](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)을 참조 하세요.  

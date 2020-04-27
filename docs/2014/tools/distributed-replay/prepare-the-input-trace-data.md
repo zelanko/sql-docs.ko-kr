@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7af5d166ec3bc059bc2628512564d92fd4cc6cad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149984"
 ---
 # <a name="prepare-the-input-trace-data"></a>입력 추적 데이터 준비
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 기능을 사용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 하 여 분산 재생을 시작 하려면 distributed replay administration tool에서 전처리 단계를 시작 하 여 입력 추적 데이터를 준비 해야 합니다. 전처리 단계에서는 Distributed Replay Controller가 추적 데이터를 전처리하고 중간 파일을 생성합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 기능을 사용하여 분산 재생을 시작하려면 Distributed Replay Administration Tool에서 전처리 단계를 시작하여 입력 추적 데이터를 준비해야 합니다. 전처리 단계에서는 Distributed Replay Controller가 추적 데이터를 전처리하고 중간 파일을 생성합니다.  
   
  ![Distributed Replay 전처리 단계](../../database-engine/media/preprocess.gif "Distributed Replay 전처리 단계")  
   
@@ -29,7 +29,7 @@ ms.locfileid: "63149984"
   
 ### <a name="to-prepare-the-input-trace-data"></a>입력 추적 데이터를 준비하려면  
   
-1.  **(선택 사항) 전처리 구성 설정 수정**: 시스템 세션 필터링 여부 또는 최대 유휴 시간 구성 여부 등의 전처리 구성 설정을 수정 하려면 XML 기반 전처리 구성 파일의 `<PreprocessModifiers>` 요소를 `DReplay.exe.preprocess.config`수정 해야 합니다. 전처리 구성 파일을 수정하는 경우 원래 파일 대신 복사본을 수정하는 것이 좋습니다. 설정을 수정하려면 다음 단계를 수행합니다.  
+1.  **(선택 사항) 전처리 구성 설정 수정**: 시스템 세션 필터링 여부 또는 최대 유휴 시간 구성 여부 등의 전처리 구성 설정을 수정하려면 XML 기반 전처리 구성 파일인 `<PreprocessModifiers>` 의 `DReplay.exe.preprocess.config`요소를 수정해야 합니다. 전처리 구성 파일을 수정하는 경우 원래 파일 대신 복사본을 수정하는 것이 좋습니다. 설정을 수정하려면 다음 단계를 수행합니다.  
   
     1.  기본 전처리 구성 파일인 `DReplay.exe.preprocess.config`를 복사한 후 복사한 파일의 이름을 바꿉니다. 기본 전처리 구성 파일은 관리 도구 설치 폴더에 있습니다.  
   
@@ -39,17 +39,15 @@ ms.locfileid: "63149984"
   
      전처리 구성 파일에 대한 자세한 내용은 [Distributed Replay 구성](configure-distributed-replay.md)을 참조하세요.  
   
-2.  **전처리 단계 시작**: 입력 추적 데이터를 준비 하려면 **전처리** 옵션을 사용 하 여 관리 도구를 실행 해야 합니다. 자세한 내용은 [전처리 옵션&#40;Distributed Replay Administration Tool&#41;](preprocess-option-distributed-replay-administration-tool.md)을 참조하세요.  
+2.  **전처리 단계 시작**: 입력 추적 데이터를 준비하려면 **preprocess** 옵션을 사용하여 관리 도구를 실행해야 합니다.하 자세한 내용은 [전처리 옵션&#40;Distributed Replay Administration Tool&#41;](preprocess-option-distributed-replay-administration-tool.md)을 참조하세요.  
   
     1.  Windows 명령 프롬프트 유틸리티(`CMD.exe`)를 열고 Distributed Replay Administration Tool의 설치 위치(`DReplay.exe`)로 이동합니다.  
   
     2.  (선택 사항) 컨트롤러 서비스가 관리 도구와 다른 컴퓨터에서 실행 중인 경우 *controller* 매개 변수 **-m**을 사용하여 컨트롤러를 지정합니다.  
   
-    3.  
-  *input_trace_file* 매개 변수 **-i**를 사용하여 입력 추적 파일의 위치와 이름을 지정합니다.  
+    3.  *input_trace_file* 매개 변수 **-i**를 사용하여 입력 추적 파일의 위치와 이름을 지정합니다.  
   
-    4.  
-  *controller_working_directory* 매개 변수 **-d**를 사용하여 컨트롤러에서 중간 파일을 저장할 위치를 지정합니다.  
+    4.  *controller_working_directory* 매개 변수 **-d**를 사용하여 컨트롤러에서 중간 파일을 저장할 위치를 지정합니다.  
   
     5.  (선택 사항) *config_file* 매개 변수 **-c**를 사용하여 전처리 구성 파일의 위치를 지정합니다. 기본 전처리 구성 파일을 복사하고 복사본을 수정한 경우 이 매개 변수를 사용하여 새 구성 파일을 가리킬 수 있습니다.  
   
@@ -61,8 +59,8 @@ ms.locfileid: "63149984"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
- [Distributed Replay 요구 사항](distributed-replay-requirements.md)   
- [Distributed Replay 유틸리티를 &#40;관리 도구 명령줄 옵션&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configure Distributed Replay](configure-distributed-replay.md)  
+ [Distributed Replay Requirements](distributed-replay-requirements.md)   
+ [관리 도구 명령줄 옵션&#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Distributed Replay 구성](configure-distributed-replay.md)  
   
   

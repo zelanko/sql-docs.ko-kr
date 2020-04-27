@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e647b32d8f94ebd545a9d8d85d066a25dde6e77c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076905"
 ---
 # <a name="add-a-custom-aggregation-to-a-dimension"></a>차원에 사용자 지정 집계 추가
@@ -40,7 +40,6 @@ ms.locfileid: "66076905"
 ## <a name="adding-custom-aggregation-unary-operator"></a>사용자 지정 집계 추가(단항 연산자)  
  두 번째 **단항 연산자 지정** 페이지에서 사용자 지정 집계에 대한 부모 특성과 단항 연산자에 대한 차원 테이블의 원본 열을 지정합니다. **부모 특성** `Usage` 속성이로 `Parent`설정 된 특성을 나열 합니다. 부모 특성이 여러 개 있는 경우 사용할 부모-자식 관계에 해당하는 부모 특성을 선택합니다. 나열된 부모 특성이 없는 경우에는 차원에 유효한 부모-자식 계층이 없는 것입니다.  
   
- 
-  **원본 열**에서 단항 연산자가 있는 문자열 열을 선택합니다. 이 선택 항목은 부모 `UnaryOperatorColumn` 특성에 대 한 속성을 설정 합니다. 또한 차원 테이블에는 단항 rollup 연산자를 지정 하는 문자열 열이 있어야 합니다. 이 열의 문자열 값에는 올바른 집계 연산자가 포함되어야 합니다. 행이 비어 있으면 해당 멤버가 정상적으로 계산됩니다. 열의 수식이 유효하지 않으면 멤버를 사용하는 셀 값이 검색될 때마다 런타임 오류가 발생합니다. 자세한 내용은 [부모-자식 차원의 단항 연산자](parent-child-dimension-attributes-unary-operators.md)를 참조하세요.  
+ **원본 열**에서 단항 연산자가 있는 문자열 열을 선택합니다. 이 선택 항목은 부모 `UnaryOperatorColumn` 특성에 대 한 속성을 설정 합니다. 또한 차원 테이블에는 단항 rollup 연산자를 지정 하는 문자열 열이 있어야 합니다. 이 열의 문자열 값에는 올바른 집계 연산자가 포함되어야 합니다. 행이 비어 있으면 해당 멤버가 정상적으로 계산됩니다. 열의 수식이 유효하지 않으면 멤버를 사용하는 셀 값이 검색될 때마다 런타임 오류가 발생합니다. 자세한 내용은 [부모-자식 차원의 단항 연산자](parent-child-dimension-attributes-unary-operators.md)를 참조하세요.  
   
   

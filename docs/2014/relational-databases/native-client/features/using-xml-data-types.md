@@ -31,15 +31,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e640f495d216495141131519e0b9aa51d48de4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63136669"
 ---
 # <a name="using-xml-data-types"></a>XML 데이터 형식 사용
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에는 **** xml 문서와 조각을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 저장할 수 있는 xml 데이터 형식이 도입 되었습니다. 
-  **xml** 데이터 형식은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 기본 제공 데이터 형식이며 **int** 및 **varchar**와 같은 다른 기본 제공 형식과 비슷합니다. 다른 기본 제공 형식과 마찬가지로 **xml** 데이터 형식도 변수 유형, 매개 변수 유형, 함수 반환 유형 또는 테이블을 만드는 경우 열 유형으로 사용하거나 CAST 및 CONVERT 함수에 사용할 수 있습니다.  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에는 XML 문서와 조각을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 저장할 수 있는 **xml** 데이터 형식이 도입되었습니다. **xml** 데이터 형식은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 기본 제공 데이터 형식이며 **int** 및 **varchar**와 같은 다른 기본 제공 형식과 비슷합니다. 다른 기본 제공 형식과 마찬가지로 **xml** 데이터 형식도 변수 유형, 매개 변수 유형, 함수 반환 유형 또는 테이블을 만드는 경우 열 유형으로 사용하거나 CAST 및 CONVERT 함수에 사용할 수 있습니다.  
   
 ## <a name="programming-considerations"></a>프로그래밍 고려 사항  
  XML은 원하는 경우 문서의 인코딩을 지정하는 XML 헤더를 포함할 수 있다는 점에서 자체 설명적 데이터 형식이라고 할 수 있습니다. 예를 들면 다음과 같습니다.  
@@ -59,18 +58,17 @@ ms.locfileid: "63136669"
   
 -   텍스트 문자열  
   
--   
-  **ISequentialStream**  
+-   **ISequentialStream**  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에는 sax 판독기가 포함 되어 있지 않지만 **ISequentialStream** 는 MSXML의 sax 및 DOM 개체에 쉽게 전달할 수 있습니다.  
   
- **ISequentialStream** 는 대량 XML 문서를 검색 하는 데 사용 해야 합니다. 다른 큰 값 유형에 사용되는 방법이 XML에도 적용됩니다. 자세한 내용은 [Large Value Types 사용](using-large-value-types.md)을 참조 하세요.  
+ **ISequentialStream** 는 대량 XML 문서를 검색 하는 데 사용 해야 합니다. 다른 큰 값 유형에 사용되는 방법이 XML에도 적용됩니다. 자세한 내용은 [큰 값 형식 사용](using-large-value-types.md)을 참조하세요.  
   
  행 집합의 XML 형식 열에 저장된 데이터는 **IRow::GetColumns**, **IRowChange::SetColumns** 및 **ICommand::Execute** 같은 일반 인터페이스를 통해 애플리케이션에 의해서도 검색, 삽입 또는 업데이트될 수 있습니다. 검색 사례와 마찬가지로 응용 프로그램은 텍스트 문자열이 나 **ISequentialStream** 를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에 전달할 수 있습니다.  
   
 > [!NOTE]  
->  문자열 형식의 XML 데이터를 **ISequentialStream** 인터페이스를 통해 보내려면 바인딩에서 DBTYPE_IUNKNOWN을 지정하고 해당 **pObject** 인수를 null로 설정하여 *ISequentialStream*을 가져와야 합니다.  
+>  문자열 형식의 XML 데이터를 **ISequentialStream** 인터페이스를 통해 보내려면 바인딩에서 DBTYPE_IUNKNOWN을 지정하고 해당 *pObject* 인수를 null로 설정하여 **ISequentialStream**을 가져와야 합니다.  
   
  소비자 버퍼가 너무 작아 검색된 XML 데이터가 잘린 경우 길이가 알 수 없는 길이를 나타내는 0xffffffff로 반환될 수 있습니다. 이는 실제 데이터를 보내기 전에 길이 정보를 보내지 않고 클라이언트로 스트리밍되는 데이터 형식으로 구현하는 것과 같습니다. 경우에 따라 공급자가 전체 값 (예: **IRowset:: GetData** )을 버퍼링 했을 때 데이터 변환이 수행 될 때 실제 길이가 반환 될 수 있습니다.  
   
@@ -81,16 +79,14 @@ ms.locfileid: "63136669"
 ### <a name="data-bindings-and-coercions"></a>데이터 바인딩 및 강제 변환  
  다음 표에서는 표에 나열된 데이터 형식을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **xml** 데이터 형식과 함께 사용할 때 발생하는 바인딩 및 강제 변환에 대해 설명합니다.  
   
-|데이터 형식|SQL Server의<br /><br /> **XML**|SQL Server의<br /><br /> **비 XML**|SQL Server의<br /><br /> **XML**|SQL Server의<br /><br /> **비 XML**|  
+|데이터 형식|SQL Server의<br /><br /> **XML**|SQL Server의<br /><br /> **비XML**|SQL Server의<br /><br /> **XML**|SQL Server의<br /><br /> **비XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_XML|통과<sup>6,7</sup>|오류<sup>1</sup>|확인<sup>11, 6</sup>|오류<sup>8</sup>|  
 |DBTYPE_BYTES|통과<sup>6,7</sup>|해당 없음<sup>2</sup>|확인<sup>11, 6</sup>|해당 없음<sup>2</sup>|  
 |DBTYPE_WSTR|통과<sup>6,10</sup>|해당 없음<sup>2</sup>|OK<sup>4, 6, 12</sup>|해당 없음<sup>2</sup>|  
 |DBTYPE_BSTR|통과<sup>6,10</sup>|해당 없음<sup>2</sup>|확인<sup>3</sup>|해당 없음<sup>2</sup>|  
 |DBTYPE_STR|확인<sup>6, 9, 10</sup>|해당 없음<sup>2</sup>|확인<sup>5, 6, 12</sup>|해당 없음<sup>2</sup>|  
-|DBTYPE_IUNKNOWN|
-  **ISequentialStream**을 통한 바이트 스트림<sup>7</sup>|해당 없음<sup>2</sup>|
-  **ISequentialStream**을 통한 바이트 스트림<sup>11</sup>|해당 없음<sup>2</sup>|  
+|DBTYPE_IUNKNOWN|**ISequentialStream**을 통한 바이트 스트림<sup>7</sup>|해당 없음<sup>2</sup>|**ISequentialStream**을 통한 바이트 스트림<sup>11</sup>|해당 없음<sup>2</sup>|  
 |DBTYPE_VARIANT(VT_UI1 &#124; VT_ARRAY)|통과<sup>6,7</sup>|해당 없음<sup>2</sup>|해당 없음|해당 없음<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|통과<sup>6,10</sup>|해당 없음<sup>2</sup>|확인<sup>3</sup>|해당 없음<sup>2</sup>|  
   
@@ -98,23 +94,23 @@ ms.locfileid: "63136669"
   
  <sup>2</sup> 이 항목의 범위를 벗어났습니다.  
   
- <sup>3</sup> Format은 u t f-16 이며, BOM (bye 주문 표시)이 없고, 인코딩 사양이 없으며, null 종료는 없습니다.  
+ <sup>3</sup>형식이 UTF-16이고 BOM(바이트 순서 표시), 인코딩 사양 및 null 종결을 포함하지 않습니다.  
   
- <sup>4</sup> Format은 u t f-16, BOM 없음, 인코딩 사양, null 종료입니다.  
+ <sup>4</sup>형식이 UTF-16이고 BOM, 인코딩 사양을 포함하지 않지만 null 종결은 포함합니다.  
   
- <sup>5</sup> Format은 클라이언트 코드 페이지에서 null 종결자로 인코딩된 멀티 바이트 문자입니다. 서버에서 제공하는 유니코드에서 변환되면 데이터가 손상될 수 있으므로 이 바인딩은 사용하지 않는 것이 좋습니다.  
+ <sup>5</sup>형식이 클라이언트 코드 페이지로 인코딩된 멀티바이트 문자이고 null 종결자를 포함합니다. 서버에서 제공하는 유니코드에서 변환되면 데이터가 손상될 수 있으므로 이 바인딩은 사용하지 않는 것이 좋습니다.  
   
- <sup>6</sup> BY_REF를 사용할 수 있습니다.  
+ <sup>6</sup>BY_REF가 사용될 수 있습니다.  
   
- <sup>7</sup> UTF-16 데이터는 BOM으로 시작 해야 합니다. 그렇지 않으면 서버에서 인코딩을 올바르게 인식할 수 없습니다.  
+ <sup>7</sup>UTF-16 데이터는 BOM으로 시작해야 합니다. 그렇지 않으면 서버에서 인코딩을 올바르게 인식할 수 없습니다.  
   
- <sup>8</sup> 유효성 검사는 create 접근자 시간 또는 인출 시간에 발생할 수 있습니다. 오류는 DB_E_ERRORSOCCURRED이고 바인딩 상태는 DBBINDSTATUS_UNSUPPORTEDCONVERSION으로 설정됩니다.  
+ <sup>8</sup>접근자 생성 시간 또는 인출 시간에 유효성 검사가 수행될 수 있습니다. 오류는 DB_E_ERRORSOCCURRED이고 바인딩 상태는 DBBINDSTATUS_UNSUPPORTEDCONVERSION으로 설정됩니다.  
   
- <sup>9</sup> 데이터는 서버에 전송 되기 전에 클라이언트 코드 페이지를 사용 하 여 유니코드로 변환 됩니다. 문서 인코딩이 클라이언트 코드 페이지와 일치하지 않으면 데이터가 손상될 수 있으므로 이 바인딩은 사용하지 않는 것이 좋습니다.  
+ <sup>9</sup>데이터가 서버로 전송되기 전에 클라이언트 코드 페이지를 사용하여 유니코드로 변환됩니다. 문서 인코딩이 클라이언트 코드 페이지와 일치하지 않으면 데이터가 손상될 수 있으므로 이 바인딩은 사용하지 않는 것이 좋습니다.  
   
- <sup>10</sup> BOM은 항상 서버로 전송 되는 데이터에 추가 됩니다. 데이터의 시작 부분에 이미 BOM이 있는 경우 결과적으로 버퍼 시작 부분에 두 개의 BOM이 오게 됩니다. 서버에서는 첫 번째 BOM을 통해 인코딩을 UTF-16으로 인식한 다음 이 BOM을 삭제합니다. 두 번째 BOM은 너비가 0인 줄 바꿈하지 않는 공백 문자로 해석됩니다.  
+ <sup>10</sup>서버로 전송된 데이터에 항상 BOM이 추가됩니다. 데이터의 시작 부분에 이미 BOM이 있는 경우 결과적으로 버퍼 시작 부분에 두 개의 BOM이 오게 됩니다. 서버에서는 첫 번째 BOM을 통해 인코딩을 UTF-16으로 인식한 다음 이 BOM을 삭제합니다. 두 번째 BOM은 너비가 0인 줄 바꿈하지 않는 공백 문자로 해석됩니다.  
   
- <sup>11</sup> Format은 u t f-16이 고 인코딩 사양에서는 서버에서 받은 데이터에 BOM이 추가 됩니다. 서버에서 빈 문자열을 반환하더라도 BOM이 애플리케이션에 반환됩니다. 버퍼 길이가 홀수 바이트이면 데이터가 올바르게 잘립니다. 전체 값이 청크로 반환되면 연결해서 올바른 값으로 다시 구성할 수 있습니다.  
+ <sup>11</sup>형식이 UTF-16이고 인코딩 사양을 포함하지 않으며 서버에서 받은 데이터에 BOM이 추가됩니다. 서버에서 빈 문자열을 반환하더라도 BOM이 애플리케이션에 반환됩니다. 버퍼 길이가 홀수 바이트이면 데이터가 올바르게 잘립니다. 전체 값이 청크로 반환되면 연결해서 올바른 값으로 다시 구성할 수 있습니다.  
   
  <sup>12</sup> 버퍼 길이가 두 문자 보다 작은 경우 즉, null 종결을 위한 공간이 충분 하지 않은 경우 오버플로 오류가 보고 됩니다.  
   
@@ -139,7 +135,7 @@ ms.locfileid: "63136669"
 #### <a name="the-columns-and-procedure_parameters-schema-rowsets"></a>COLUMNS 및 PROCEDURE_PARAMETERS 스키마 행 집합  
  COLUMNS 및 PROCEDURE_PARAMETERS 스키마 행 집합에 추가된 열은 다음과 같습니다.  
   
-|열 이름|Type|Description|  
+|열 이름|유형|설명|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 스키마 컬렉션이 정의된 카탈로그의 이름입니다. 비XML 열 또는 형식화되지 않은 XML 열에 대해서는 NULL입니다.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 스키마 컬렉션이 정의된 스키마의 이름입니다. 비XML 열 또는 형식화되지 않은 XML 열에 대해서는 NULL입니다.|  
@@ -151,7 +147,7 @@ ms.locfileid: "63136669"
 #### <a name="the-ss_xmlschema-schema-rowset"></a>SS_XMLSCHEMA 스키마 행 집합  
  새로운 스키마 행 집합인 SS_XMLSCHEMA는 클라이언트가 XML 스키마 정보를 검색할 수 있도록 도입되었습니다. SS_XMLSCHEMA 행 집합에는 다음 열이 포함됩니다.  
   
-|열 이름|Type|Description|  
+|열 이름|유형|설명|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 컬렉션이 속한 카탈로그입니다.|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 컬렉션이 속한 스키마입니다.|  
@@ -171,7 +167,7 @@ ms.locfileid: "63136669"
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 속성 집합  
  OLE DB를 통해 **xml** 데이터 형식을 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 다음 값을 포함 하는 새 DBPROPSET_SQLSERVERPARAMETER 속성 집합을 구현 합니다.  
   
-|속성|Type|Description|  
+|이름|유형|설명|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 스키마 컬렉션이 정의된 카탈로그(데이터베이스)의 이름입니다. SQL의 세 부분으로 구성된 이름 식별자의 일부입니다.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|스키마 컬렉션 내 XML 스키마의 이름입니다. SQL의 세 부분으로 구성된 이름 식별자의 일부입니다.|  
@@ -180,7 +176,7 @@ ms.locfileid: "63136669"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 속성 집합  
  **Itabledefinition** 인터페이스에서 테이블 생성을 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 DBPROPSET_SQLSERVERCOLUMN 속성 집합에 세 개의 새 열을 추가 합니다.  
   
-|속성|Type|Description|  
+|이름|유형|설명|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|형식화된 XML 열에 대해서는 이 속성이 XML 스키마가 저장된 카탈로그의 이름을 지정하는 문자열입니다. 다른 열 유형에 대해서는 이 속성이 빈 문자열을 반환합니다.|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|형식화된 XML 열에 대해서는 이 속성이 이 열을 정의하는 XML 스키마의 이름을 지정하는 문자열입니다.|  
@@ -200,7 +196,7 @@ ms.locfileid: "63136669"
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset 인터페이스  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **IColumnRowset:: GetColumnsRowset** 메서드에서 반환 된 행 집합에 다음의 특정 열을 추가 합니다. 이러한 열에는 XML 스키마 컬렉션의 세 부분으로 구성된 이름이 포함됩니다. 비XML 열이나 형식화되지 않은 XML 열에 대해서는 이 세 열 모두 기본값인 NULL을 사용합니다.  
   
-|열 이름|Type|Description|  
+|열 이름|유형|설명|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 스키마 컬렉션이 속한 카탈로그입니다.<br /><br /> 그렇지 않으면 NULL입니다.|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 스키마 컬렉션이 속한 스키마입니다. 그렇지 않으면 NULL입니다.|  
@@ -209,7 +205,7 @@ ms.locfileid: "63136669"
 #### <a name="the-irowset-interface"></a>IRowset 인터페이스  
  XML 열의 XML 인스턴스는 **IRowset::GetData** 메서드를 통해 검색됩니다. 클라이언트에서 지정한 바인딩에 따라 XML 인스턴스가 DBTYPE_BSTR, DBTYPE_WSTR, DBTYPE_VARIANT, DBTYPE_XML, DBTYPE_STR, DBTYPE_BYTES로 검색되거나 DBTYPE_IUNKNOWN을 통해 인터페이스로 검색될 수 있습니다. 소비자가 DBTYPE_BSTR, DBTYPE_WSTR 또는 DBTYPE_VARIANT를 지정하면 공급자는 XML 인스턴스를 사용자가 요청한 형식으로 변환한 후 해당 바인딩에 지정된 위치에 가져다 놓습니다.  
   
- 소비자가 DBTYPE_IUNKNOWN을 지정하고 *pObject* 인수를 NULL로 설정하거나 *pObject* 인수를 IID_ISequentialStream으로 설정하면 소비자가 열에서 XML 데이터를 스트리밍할 수 있도록 공급자가 **ISequentialStream** 인터페이스를 소비자에게 반환합니다. 그런 다음 **ISequentialStream** 는 XML 데이터를 유니코드 문자 스트림으로 반환 합니다.  
+ 소비자가 DBTYPE_IUNKNOWN을 지정하고 *pObject* 인수를 NULL로 설정하거나 *pObject* 인수를 IID_ISequentialStream으로 설정하면 소비자가 열에서 XML 데이터를 스트리밍할 수 있도록 공급자가 **ISequentialStream** 인터페이스를 소비자에게 반환합니다. 그러면 **ISequentialStream**이 XML 데이터를 유니코드 문자 스트림으로 반환합니다.  
   
  DBTYPE_IUNKNOWN에 바인딩된 XML 값을 반환할 때 공급자는 `sizeof (IUnknown *)`의 크기 값을 보고합니다. 이는 열이 DBTYPE_IUnknown 또는 DBTYPE_IDISPATCH로 바인딩되어 있는데 정확한 열 크기를 확인할 수 없는 경우 DBTYPE_IUNKNOWN/ISequentialStream이 취하는 방법과 같습니다.  
   
@@ -223,12 +219,10 @@ ms.locfileid: "63136669"
  DBTYPE_IUNKNOWN/ISequentialStream의 경우 소비자가 저장소 개체를 지정 하지 않은 경우 소비자는 사전에 **ISequentialStream** 개체를 만들고 XML 문서를 개체에 바인딩한 다음 **IRowsetChange:: SetData** 메서드를 통해 개체를 공급자에 게 전달 해야 합니다. 소비자는 스토리지 개체를 만들고 pObject 인수를 IID_ISequentialStream으로 설정하고 **ISequentialStream** 개체를 만든 다음, 이 **ISequentialStream** 개체를 **IRowsetChange::SetData** 메서드에 전달할 수도 있습니다. 두 경우 모두 공급자는 **ISequentialStream** 개체를 통해 XML 개체를 검색하여 적절한 열에 삽입할 수 있습니다.  
   
 #### <a name="the-irowsetupdate-interface"></a>IRowsetUpdate 인터페이스  
- **IRowsetUpdate** 인터페이스는 지연 된 업데이트에 대 한 기능을 제공 합니다. 소비자가 **IRowsetUpdate: Update** 메서드를 호출할 때까지 행 집합에 사용할 수 있는 데이터를 다른 트랜잭션에서 사용할 수 없습니다.  
+ **IRowsetUpdate** 인터페이스는 지연된 업데이트에 사용할 수 있는 기능을 제공합니다. 소비자가 **IRowsetUpdate: Update** 메서드를 호출할 때까지 행 집합에 사용할 수 있는 데이터를 다른 트랜잭션에서 사용할 수 없습니다.  
   
 #### <a name="the-irowsetfind-interface"></a>IRowsetFind 인터페이스  
- 
-  **IRowsetFind::FindNextRow** 메서드는 **xml** 데이터 형식에 사용할 수 없습니다. 
-  **hAccessor** 인수에 DBTYPE_XML 열이 지정되어 *IRowsetFind::FindNextRow*가 호출되면 DB_E_BADBINDINFO가 반환되며 이는 검색하는 열의 유형에 관계없이 발생합니다. 이외 다른 바인딩 유형의 경우 검색하는 열이 **xml** 데이터 형식이면 **FindNextRow**가 실패하며 DB_E_BADCOMPAREOP가 반환됩니다.  
+ **IRowsetFind::FindNextRow** 메서드는 **xml** 데이터 형식에 사용할 수 없습니다. *hAccessor* 인수에 DBTYPE_XML 열이 지정되어 **IRowsetFind::FindNextRow**가 호출되면 DB_E_BADBINDINFO가 반환되며 이는 검색하는 열의 유형에 관계없이 발생합니다. 이외 다른 바인딩 유형의 경우 검색하는 열이 **xml** 데이터 형식이면 **FindNextRow**가 실패하며 DB_E_BADCOMPAREOP가 반환됩니다.  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 드라이버  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 드라이버에서 **xml** 데이터 형식을 지원 하기 위해 다양 한 함수에 많은 변경 내용이 적용 되었습니다.  
@@ -275,6 +269,6 @@ ms.locfileid: "63136669"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client 기능](sql-server-native-client-features.md)   
- [ISSCommandWithParameters &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters&#40;OLE DB&#41;](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

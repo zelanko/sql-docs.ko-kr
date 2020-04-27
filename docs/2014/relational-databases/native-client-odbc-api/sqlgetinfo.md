@@ -15,24 +15,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f4a17b9b6599a57275524308608ac6ef18a8e18e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63128652"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
   테이블은 **SQLGetInfo**에서 반환 되는 값을 보여 줍니다. 값은 연결된 서버의 버전 번호에 따라 다를 수 있습니다.  
   
- **** Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 sqlgetinfo는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버 (SQLSRV32)의 **sqlgetinfo** 와 다릅니다. DLL)를 사용 하 여 **SQLGetInfo** 를 호출 하면 SQL_KEYWORDS 및 0 버퍼 길이가 사용 됩니다.  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 드라이버는 SQL_SUCCESS를 반환하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버는 SQL_SUCCESS_WITH_INFO를 반환합니다.  그러나 output 키워드 문자열 보다 작은 0이 아닌 버퍼 길이를 사용 하 여 호출 하는 **** 경우 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client의 SQLGetInfo는 SQL_SUCCESS_WITH_INFO 및 SQLState 01004을 반환 합니다.  
+ **SQLGetInfo** Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 sqlgetinfo는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버 (SQLSRV32)의 **sqlgetinfo** 와 다릅니다. DLL)를 사용 하 여 **SQLGetInfo** 를 호출 하면 SQL_KEYWORDS 및 0 버퍼 길이가 사용 됩니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 드라이버는 SQL_SUCCESS를 반환하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버는 SQL_SUCCESS_WITH_INFO를 반환합니다.  그러나 output 키워드 문자열 보다 작은 0이 아닌 버퍼 길이를 사용 하 여 호출 하는 **SQLGetInfo** 경우 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client의 SQLGetInfo는 SQL_SUCCESS_WITH_INFO 및 SQLState 01004을 반환 합니다.  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"Y"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
-|SQL_ACTIVE_CONNECTIONS|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 연결 수가 제한됩니다. 드라이버는이 **SQLGetInfo** 요청에 대해 0을 반환 합니다.|  
+|SQL_ACTIVE_CONNECTIONS|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 연결 수가 제한됩니다. 드라이버는이 **SQLGetInfo** 요청에 대해 0을 반환 합니다.|  
 |SQL_ACTIVE_ENVIRONMENTS|환경 수는 드라이버에서 제한되지 않습니다. 드라이버는이 **SQLGetInfo** 요청에 대해 0을 반환 합니다.|  
 |SQL_ACTIVE_STATEMENTS|이 **SQLGetInfo** 요청에 대해 드라이버가 1을 반환 합니다. 애플리케이션에 사용할 수 있는 문 핸들 수는 드라이버에서 제한되지 않지만 문 핸들이 기본 실행될 때는 다른 핸들의 실행이 차단됩니다.|  
 |SQL_ALTER_DOMAIN|FALSE|  
@@ -119,8 +117,7 @@ ms.locfileid: "63128652"
 |SQL_IDENTIFIER_QUOTE_CHAR|"(큰따옴표)|  
 |SQL_INDEX_KEYWORDS|SQL_IK_ASC SQL_IK_DESC|  
 |SQL_INFO_SCHEMA_VIEWS|드라이버에서 지원하지 않는 요청입니다.|  
-|SQL_INFO_SS_NETLIB_NAME|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 관련 특성입니다. 연결에서 사용하는 네트워크 라이브러리의 이름입니다.<br /><br /> 기본적으로 DBNETLIB이 반환 됩니다.  이 경우 DBNETLIB는 네트워크 라이브러리를 참조 하 고 DBNETLIB와는 관련이 없습니다.|  
+|SQL_INFO_SS_NETLIB_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 관련 특성입니다. 연결에서 사용하는 네트워크 라이브러리의 이름입니다.<br /><br /> 기본적으로 DBNETLIB이 반환 됩니다.  이 경우 DBNETLIB는 네트워크 라이브러리를 참조 하 고 DBNETLIB와는 관련이 없습니다.|  
 |SQL_INTEGRITY|"Y"|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES1|SQL_CA1_ABSOLUTE SQL_CA1_BOOKMARK SQL_CA1_BULK_ADD SQL_CA1_BULK_DELETE_BY_BOOKMARK SQL_CA1_BULK_FETCH_BY_BOOKMARK SQL_CA1_BULK_UPDATE_BY_BOOKMARK SQL_CA1_LOCK_NO_CHANGE SQL_CA1_NEXT SQL_CA1_POS_DELETE SQL_CA1_POS_POSITION SQL_CA1_POS_REFRESH SQL_CA1_POS_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_POSITIONED_UPDATE SQL_CA1_RELATIVE SQL_CA1_SELECT_FOR_UPDATE|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES2|SQL_CA2_CRC_EXACT SQL_CA2_LOCK_CONCURRENCY SQL_CA2_MAX_ROWS_CATALOG SQL_CA2_MAX_ROWS_DELETE SQL_CA2_MAX_ROWS_INSERT SQL_CA2_MAX_ROWS_SELECT SQL_CA2_MAX_ROWS_UPDATE SQL_CA2_OPT_ROWVER_CONCURRENCY SQL_CA2_OPT_VALUES_CONCURRENCY SQL_CA2_READ_ONLY_CONCURRENCY SQL_CA2_SENSITIVITY_ADDITIONS SQL_CA2_SENSITIVITY_UPDATES SQL_CA2_SIMULATE_UNIQUE|  
@@ -182,8 +179,7 @@ ms.locfileid: "63128652"
 |SQL_SCROLL_CONCURRENCY|SQL_SCCO_LOCK SQL_SCCO_OPT_ROWVER SQL_SCCO_OPT_VALUES SQL_SCCO_READ_ONLY|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|연결의 서버 이름입니다.|  
-|SQL_SPECIAL_CHARACTERS|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 설치한 문자 집합에 따라 결정됩니다.|  
+|SQL_SPECIAL_CHARACTERS|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 설치한 문자 집합에 따라 결정됩니다.|  
 |SQL_SQL92_DATETIME_FUNCTIONS|FALSE|  
 |SQL_SQL92_FOREIGN_KEY_DELETE_RULE|FALSE|  
 |SQL_SQL92_FOREIGN_KEY_UPDATE_RULE|FALSE|  

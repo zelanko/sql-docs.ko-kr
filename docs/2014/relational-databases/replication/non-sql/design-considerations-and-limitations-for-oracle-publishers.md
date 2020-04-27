@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022520"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle 게시자에 대한 디자인 고려 사항 및 제한 사항
-  Oracle 데이터베이스에서 게시는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에서 게시와 거의 동일하게 작동하도록 설계되었습니다. 그러나 Oracle 데이터베이스에서의 게시 작업에 대한 다음과 같은 제한 사항 및 문제점을 알고 있어야 합니다.  
+  Oracle 데이터베이스에서의 게시는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에서 게시 하는 것과 거의 동일 하 게 작동 하도록 설계 되었습니다. 그러나 Oracle 데이터베이스에서의 게시 작업에 대한 다음과 같은 제한 사항 및 문제점을 알고 있어야 합니다.  
   
 -   Oracle Gateway 옵션은 Oracle Complete 옵션을 사용할 때보다 더 나은 성능을 제공하지만 여러 트랜잭션 게시에서 동일한 테이블을 게시할 때는 사용할 수 없습니다. 트랜잭션 게시의 경우 특정 테이블이 한 번만 나타날 수 있지만 스냅샷 게시의 경우에는 이러한 제한이 없습니다. 여러 트랜잭션 게시에서 동일한 테이블을 게시해야 할 경우에는 Oracle Complete 옵션을 선택하십시오.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "63022520"
   
 -   중첩 테이블  
   
--   뷰  
+-   보기  
   
 -   패키지, 패키지 본문, 프로시저 및 트리거  
   
@@ -166,7 +166,7 @@ ms.locfileid: "63022520"
  복제 보안에 대 한 자세한 내용은 [SQL Server 복제 보안](../security/view-and-modify-replication-security-settings.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Oracle 게시자에 대한 관리 고려 사항](administrative-considerations-for-oracle-publishers.md)   
+ [Oracle 게시자에 대 한 관리 고려 사항](administrative-considerations-for-oracle-publishers.md)   
  [Oracle 게시자 구성](configure-an-oracle-publisher.md)   
  [Oracle 게시 개요](oracle-publishing-overview.md)  
   

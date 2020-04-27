@@ -15,25 +15,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 20106b002eba07a3eb9e2877c84dacb9a98b87b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068315"
 ---
 # <a name="specify-nested-join-dialog-box-mining-accuracy-chart-view"></a>중첩 조인 지정 대화 상자(마이닝 정확도 차트 뷰)
-  
-  **중첩 조인 지정** 대화 상자에서는 중첩 테이블과 사례 테이블 간의 관계를 만듭니다. 
-  **중첩 조인 지정** 대화 상자를 열려면 중첩 테이블을 선택하고 **조인 수정**을 클릭합니다.  
+  **중첩 조인 지정** 대화 상자에서는 중첩 테이블과 사례 테이블 간의 관계를 만듭니다. **중첩 조인 지정** 대화 상자를 열려면 중첩 테이블을 선택하고 **조인 수정**을 클릭합니다.  
   
 ## <a name="options"></a>옵션  
  **관계 추가**  
- 
-  **관계 만들기** 대화 상자를 열려면 클릭합니다.  
+ **관계 만들기** 대화 상자를 열려면 클릭합니다.  
   
  **관계 제거**  
- 
-  **다이어그램** 창에서 선택한 관계를 삭제하려면 클릭합니다.  
+ **다이어그램** 창에서 선택한 관계를 삭제하려면 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [마이닝 정확도 차트 디자이너 &#40;데이터 마이닝&#41;](mining-accuracy-chart-designer-data-mining.md)   

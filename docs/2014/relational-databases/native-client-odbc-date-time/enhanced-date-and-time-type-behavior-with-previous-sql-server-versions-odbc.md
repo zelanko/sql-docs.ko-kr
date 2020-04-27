@@ -13,18 +13,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44ac9cecce81f7873ca5ef42ba414bd4528e05b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140629"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>이전 버전 SQL Server에 대한 향상된 날짜 및 시간 형식 동작(ODBC)
   이 항목에서는 향상된 날짜 및 시간 기능을 사용하는 클라이언트 애플리케이션이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]와 통신할 경우 및 Microsoft Data Access Components, Windows Data Access Components 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client를 사용하는 클라이언트 애플리케이션이 향상된 날짜 및 시간 기능을 지원하는 서버에 명령을 보낼 경우 예상되는 동작에 대해 설명합니다.  
   
 ## <a name="down-level-client-behavior"></a>하위 수준 클라이언트 동작  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client를 사용하여 컴파일된 클라이언트 애플리케이션에서는 새로운 날짜/시간 형식을 nvarchar 열로 인식합니다. 열 내용은 [ODBC 날짜 및 시간 향상을 위한 데이터 형식 지원](data-type-support-for-odbc-date-and-time-improvements.md)의 "데이터 형식: 문자열 및 리터럴" 섹션에 설명 된 대로 리터럴 표현입니다. 열 크기는 열에 지정된 초 소수 부분 자릿수에 대한 최대 리터럴 길이입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client를 사용하여 컴파일된 클라이언트 애플리케이션에서는 새로운 날짜/시간 형식을 nvarchar 열로 인식합니다. 열 내용은 [ODBC 날짜 및 시간 향상을 위한 데이터 형식 지원](data-type-support-for-odbc-date-and-time-improvements.md)의 "데이터 형식: 문자열 및 리터럴" 섹션에 설명 된 대로 리터럴 표현입니다. 열 크기는 열에 지정된 초 소수 부분 자릿수에 대한 최대 리터럴 길이입니다.  
   
  카탈로그 API는 클라이언트에 반환된 하위 수준 데이터 형식 코드(예: nvarchar)와 일관된 메타데이터 및 관련된 하위 수준 표현(예: 적절한 리터럴 형식)을 반환합니다. 그러나 반환되는 데이터 형식의 이름은 실제 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 형식 이름입니다.  
   
@@ -34,32 +33,26 @@ ms.locfileid: "63140629"
   
 |SQL Server 2005 형식|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)](또는 이후 버전) 형식|ODBC 클라이언트 형식|결과 변환(SQL에서 C로 변환)|매개 변수 변환(C에서 SQL로 변환)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|DateTime|Date|SQL_C_TYPE_DATE|확인|확인 (1)|  
-|||SQL_C_TYPE_TIMESTAMP|시간 필드가 0으로 설정됩니다.|정상(2)<br /><br /> 시간 필드가 0 이외의 값이면 실패합니다. 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
+|DateTime|날짜|SQL_C_TYPE_DATE|확인|확인 (1)|  
+|||SQL_C_TYPE_TIMESTAMP|시간 필드가 0으로 설정됩니다.|정상(2)<br /><br /> 시간 필드가 0 이외의 값이면 실패합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
 ||Time(0)|SQL_C_TYPE_TIME|확인|확인 (1)|  
-|||SQL_C_TYPE_TIMESTAMP|날짜 필드가 현재 날짜로 설정됩니다.|정상(2)<br /><br /> 날짜가 무시됩니다. 초 소수 부분이 0 이외의 값이면 실패합니다. 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
+|||SQL_C_TYPE_TIMESTAMP|날짜 필드가 현재 날짜로 설정됩니다.|정상(2)<br /><br /> 날짜가 무시됩니다. 초 소수 부분이 0 이외의 값이면 실패합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
 ||Time(7)|SQL_C_TIME|실패-시간 리터럴이 잘못 되었습니다.|확인 (1)|  
 |||SQL_C_TYPE_TIMESTAMP|실패-시간 리터럴이 잘못 되었습니다.|확인 (1)|  
 ||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|확인|확인 (1)|  
 ||Datetime2 (7)|SQL_C_TYPE_TIMESTAMP|확인|클라이언트 변환 시 값이 1/300초로 반올림됩니다.|  
-|Smalldatetime|Date|SQL_C_TYPE_DATE|확인|확인|  
-|||SQL_C_TYPE_TIMESTAMP|시간 필드가 0으로 설정됩니다.|정상(2)<br /><br /> 시간 필드가 0 이외의 값이면 실패합니다. 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
+|Smalldatetime|날짜|SQL_C_TYPE_DATE|확인|확인|  
+|||SQL_C_TYPE_TIMESTAMP|시간 필드가 0으로 설정됩니다.|정상(2)<br /><br /> 시간 필드가 0 이외의 값이면 실패합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
 ||Time(0)|SQL_C_TYPE_TIME|확인|확인|  
-|||SQL_C_TYPE_TIMESTAMP|날짜 필드가 현재 날짜로 설정됩니다.|정상(2)<br /><br /> 날짜가 무시됩니다. 초 소수 부분이 0 이외의 값이면 실패합니다.<br /><br /> 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
+|||SQL_C_TYPE_TIMESTAMP|날짜 필드가 현재 날짜로 설정됩니다.|정상(2)<br /><br /> 날짜가 무시됩니다. 초 소수 부분이 0 이외의 값이면 실패합니다.<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
 ||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|확인|확인|  
   
 ## <a name="key-to-symbols"></a>기호 설명  
   
 |기호|의미|  
 |------------|-------------|  
-|1|
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 동작하는 경우 그보다 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서도 계속 동작합니다.|  
-|2|
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동한 애플리케이션이 그보다 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 작동하지 않을 수 있습니다.|  
+|1|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 동작하는 경우 그보다 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서도 계속 동작합니다.|  
+|2|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동한 애플리케이션이 그보다 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 작동하지 않을 수 있습니다.|  
   
  여기서는 다음과 같이 일반적인 스키마 변경 사항만 고려되었습니다.  
   
@@ -113,8 +106,7 @@ ms.locfileid: "63140629"
 |USERTYPE|0|0|12|22|0|0|  
   
 ## <a name="down-level-server-behavior"></a>하위 수준 서버 동작  
- 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]보다 이전 버전의 서버 인스턴스에 연결되어 있는 경우 새로운 서버 형식 또는 관련된 메타데이터 코드 및 설명자 필드를 사용하려고 하면 SQL_ERROR가 반환됩니다. SQLSTATE HY004 및 "연결에서 서버 버전의 SQL 데이터 형식이 잘못되었습니다."라는 메시지가 포함된 진단 레코드 또는 07006 및 "제한된 데이터 형식 특성을 위반했습니다."라는 메시지가 포함된 진단 레코드가 생성됩니다.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]보다 이전 버전의 서버 인스턴스에 연결되어 있는 경우 새로운 서버 형식 또는 관련된 메타데이터 코드 및 설명자 필드를 사용하려고 하면 SQL_ERROR가 반환됩니다. SQLSTATE HY004 및 "연결에서 서버 버전의 SQL 데이터 형식이 잘못되었습니다."라는 메시지가 포함된 진단 레코드 또는 07006 및 "제한된 데이터 형식 특성을 위반했습니다."라는 메시지가 포함된 진단 레코드가 생성됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [ODBC&#41;&#40;날짜 및 시간 기능 향상](date-and-time-improvements-odbc.md)  

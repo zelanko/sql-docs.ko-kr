@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0192e3b4bf295ad0590b26a6f3e77d94d76acd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63075189"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>데이터 원본에 연결(ODBC)
@@ -61,7 +61,7 @@ ms.locfileid: "63075189"
   
 -   애플리케이션 대화 상자  
   
-     연결 정보를 묻는 메시지를 표시 하는 응용 프로그램 대화 상자를 만든 다음 NULL 창 핸들 및 *Drivercompletion* 가 SQL_DRIVER_NOPROMPT로 설정 된 상태에서 **** 를 호출할 수 있습니다. 매개 변수를 이렇게 설정하면 ODBC 드라이버가 자체 대화 상자를 열지 않습니다. 이 방법은 애플리케이션의 사용자 인터페이스를 제어해야 하는 경우 사용합니다.  
+     연결 정보를 묻는 메시지를 표시 하는 응용 프로그램 대화 상자를 만든 다음 NULL 창 핸들 및 *Drivercompletion* 가 SQL_DRIVER_NOPROMPT로 설정 된 상태에서 **SQLDriverConnect** 를 호출할 수 있습니다. 매개 변수를 이렇게 설정하면 ODBC 드라이버가 자체 대화 상자를 열지 않습니다. 이 방법은 애플리케이션의 사용자 인터페이스를 제어해야 하는 경우 사용합니다.  
   
 -   드라이버 대화 상자  
   
@@ -81,8 +81,7 @@ ms.locfileid: "63075189"
  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC 드라이버는 항상 성공적인 **SQLConnect**, **SQLDriverConnect**또는 **SQLBrowseConnect**에 대 한 SQL_SUCCESS_WITH_INFO를 반환 합니다. SQL_SUCCESS_WITH_INFO 가져온 후 ODBC 응용 프로그램이 **SQLGetDiagRec** 를 호출 하면 다음과 같은 메시지가 표시 될 수 있습니다.  
   
  5701  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터 원본에 정의된 기본 데이터베이스 또는 데이터 원본에 기본 데이터베이스가 없는 경우 연결에 사용된 로그인 ID에 대해 정의된 기본 데이터베이스에 사용자의 컨텍스트를 가져옴을 나타냅니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터 원본에 정의된 기본 데이터베이스 또는 데이터 원본에 기본 데이터베이스가 없는 경우 연결에 사용된 로그인 ID에 대해 정의된 기본 데이터베이스에 사용자의 컨텍스트를 가져옴을 나타냅니다.  
   
  5703  
  서버에서 사용 중인 언어를 나타냅니다.  

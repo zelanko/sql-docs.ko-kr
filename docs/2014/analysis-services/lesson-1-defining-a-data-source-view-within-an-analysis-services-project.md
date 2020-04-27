@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 08d4d24f9049c2fd68e827664ecb07393262d8bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079204"
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>1단원: Analysis Services 프로젝트 내의 데이터 원본 뷰 정의
-  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 비즈니스 인텔리전스 애플리케이션 디자인은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]프로젝트를 만드는 것부터 시작됩니다. 이 프로젝트에서 솔루션의 모든 요소를 정의하고 데이터 원본 뷰를 사용하여 시작합니다.  
   
  이 단원에서는 다음 태스크를 다룹니다.  
@@ -45,6 +44,6 @@ ms.locfileid: "66079204"
  [SSAS 다차원&#41;&#40;지원 되는 데이터 원본](multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [다차원 모델의 데이터 원본 뷰](multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Analysis Services 자습서 시나리오](analysis-services-tutorial-scenario.md)   
- [&#40;의 다차원 모델링은 놀이 Works 자습서&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [다차원 모델링&#40;Adventure Works 자습서&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

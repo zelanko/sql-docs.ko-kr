@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b11f924ce5692378896f1fd7d50186861abf223
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140438"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>저장 프로시저에서 데이터 반환
@@ -27,8 +27,7 @@ ms.locfileid: "63140438"
  프로시저 정의에서 매개 변수에 OUTPUT 키워드를 지정하면 해당 프로시저는 종료될 때 매개 변수의 현재 값을 호출 프로그램에 반환할 수 있습니다. 호출 프로그램에서 사용할 수 있는 변수에 매개 변수 값을 저장하려면 호출 프로그램이 프로시저를 실행할 때 OUTPUT 키워드를 사용해야 합니다. 출력 매개 변수로 사용될 수 있는 데이터 형식에 대한 자세한 내용은 [CREATE PROCEDURE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)를 참조하세요.  
   
 ### <a name="examples-of-output-parameter"></a>출력 매개 변수의 예  
- 다음 예에서는 입력 및 출력 매개 변수가 있는 프로시저를 보여 줍니다. 
-  `@SalesPerson` 매개 변수는 호출 프로그램이 지정한 입력 값을 받습니다. SELECT 문은 입력 매개 변수에 전달된 값을 사용하여 정확한 `SalesYTD` 값을 가져옵니다. 또한 SELECT 문은 `@SalesYTD` 출력 매개 변수에 값을 할당하여 해당 프로시저가 종료될 때 호출 프로그램으로 값을 반환합니다.  
+ 다음 예에서는 입력 및 출력 매개 변수가 있는 프로시저를 보여 줍니다. `@SalesPerson` 매개 변수는 호출 프로그램이 지정한 입력 값을 받습니다. SELECT 문은 입력 매개 변수에 전달된 값을 사용하여 정확한 `SalesYTD` 값을 가져옵니다. 또한 SELECT 문은 `@SalesYTD` 출력 매개 변수에 값을 할당하여 해당 프로시저가 종료될 때 호출 프로그램으로 값을 반환합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -75,8 +74,7 @@ GO
  [!INCLUDE[tsql](../../../includes/tsql-md.md)]프로시저는 `cursor` 출력 매개 변수에만 데이터 형식을 사용할 수 있습니다. 매개 변수에 `cursor` 대해 데이터 형식이 지정 된 경우 프로시저 정의에서 해당 매개 변수에 대해 다양 한 키워드와 출력 키워드를 모두 지정 해야 합니다. 매개 변수는 OUTPUT 으로만 지정 될 수 있지만 매개 변수 선언에 가변 키워드가 지정 된 경우에는 데이터 형식이 여야 `cursor` 하 고 OUTPUT 키워드도 지정 해야 합니다.  
   
 > [!NOTE]  
->  
-  `cursor` 데이터 형식은 OLE DB, ODBC, ADO, DB-Library 등의 데이터베이스 API를 통해 애플리케이션 변수에 바인딩할 수 없습니다. OUTPUT 매개 변수는 애플리케이션이 프로시저를 실행하기 전에 바인딩되어야 하므로 `cursor` OUTPUT 매개 변수가 있는 프로시저는 데이터베이스 API에서 호출할 수 없습니다. 이러한 프로시저는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 로컬 `cursor` 변수에 [!INCLUDE[tsql](../../../includes/tsql-md.md)] OUTPUT 변수가 할당된 경우에만 `cursor` 일괄 처리, 프로시저 또는 트리거에서 호출할 수 있습니다.  
+>  `cursor` 데이터 형식은 OLE DB, ODBC, ADO, DB-Library 등의 데이터베이스 API를 통해 애플리케이션 변수에 바인딩할 수 없습니다. OUTPUT 매개 변수는 애플리케이션이 프로시저를 실행하기 전에 바인딩되어야 하므로 `cursor` OUTPUT 매개 변수가 있는 프로시저는 데이터베이스 API에서 호출할 수 없습니다. 이러한 프로시저는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 로컬 `cursor` 변수에 `cursor` OUTPUT 변수가 할당된 경우에만 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 일괄 처리, 프로시저 또는 트리거에서 호출할 수 있습니다.  
   
 ### <a name="rules-for-cursor-output-parameters"></a>Cursor Output 매개 변수 규칙  
  프로시저 실행 시 `cursor` Output 매개 변수에는 다음 규칙이 적용됩니다.  
@@ -154,8 +152,7 @@ DECLARE @result int;
 EXECUTE @result = my_proc;  
 ```  
   
- 반환 코드는 대개 프로시저의 흐름 제어 블록에서 발생 가능한 각 오류 상태의 반환 코드 값을 설정하는 데 사용됩니다. 
-  @ERROR 문 다음에 @[!INCLUDE[tsql](../../../includes/tsql-md.md)] 함수를 사용하면 문이 실행될 때 오류가 발생했는지 여부를 알 수 있습니다.  
+ 반환 코드는 대개 프로시저의 흐름 제어 블록에서 발생 가능한 각 오류 상태의 반환 코드 값을 설정하는 데 사용됩니다. [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문 다음에 @@ERROR 함수를 사용하면 문이 실행될 때 오류가 발생했는지 여부를 알 수 있습니다.  
   
 ### <a name="examples-of-return-codes"></a>반환 코드의 예  
  다음 예에서는 여러 오류에 대한 특정 반환 코드 값을 설정하는 오류 처리가 포함된 `usp_GetSalesYTD` 프로시저를 보여 줍니다. 다음 표에서는 발생 가능한 각 오류에 프로시저에서 할당한 정수 값 및 각 값에 해당하는 의미를 보여 줍니다.  
@@ -257,10 +254,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql @local_variable&#41;&#40;선언](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
- [Transact-sql&#41;&#40;인쇄](/sql/t-sql/language-elements/print-transact-sql)   
- [SET @local_variable&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/set-local-variable-transact-sql)   
- [커서](../cursors.md)   
+ [DECLARE @local_variable&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
+ [PRINT&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/print-transact-sql)   
+ [Transact-sql @local_variable&#41;&#40;설정](/sql/t-sql/language-elements/set-local-variable-transact-sql)   
+ [커서로](../cursors.md)   
  [Transact-sql&#41;&#40;반환](/sql/t-sql/language-elements/return-transact-sql)   
  [@@ERROR&#40;Transact-SQL&#41;](/sql/t-sql/functions/error-transact-sql)  
   

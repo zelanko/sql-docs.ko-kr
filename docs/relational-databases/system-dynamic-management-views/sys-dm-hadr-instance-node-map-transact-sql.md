@@ -21,10 +21,10 @@ ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: edd2ea7a215f01c25539753dff4bd170cf9d422f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900416"
 ---
 # <a name="sysdm_hadr_instance_node_map-transact-sql"></a>sys.dm_hadr_instance_node_map(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67900416"
   
 -   여러 SQL Server 인스턴스가 동일한 WSFC 노드에 호스팅되는 경우 리소스 DLL이 이 동적 관리 뷰를 사용하여 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 확인합니다.  
    
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**ag_resource_id**|**nvarchar(256)**|WSFC의 리소스로 서의 가용성 그룹에 대 한 고유 ID입니다.|  
 |**instance_name**|**nvarchar(256)**|이름-*서버*/*인스턴스*-가용성 그룹의 복제본을 호스팅하는 서버 인스턴스의 이름입니다.|  
@@ -48,7 +48,7 @@ ms.locfileid: "67900416"
 ## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 동적 관리 뷰 및 함수 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [Transact-sql&#41;&#40;Always On 가용성 그룹 카탈로그 뷰](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [가용성 그룹 모니터링&#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Transact-sql&#41;&#40;가용성 그룹 모니터링](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Always On 가용성 그룹&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

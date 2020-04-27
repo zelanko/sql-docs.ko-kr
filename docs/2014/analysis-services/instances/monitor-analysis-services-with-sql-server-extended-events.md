@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d6abfca98386ef691add200d433af827ed44836
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079742"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>SQL Server 확장 이벤트(XEvent)를 사용하여 Analysis Services 모니터링
@@ -63,8 +63,7 @@ ms.locfileid: "66079742"
  이 추적의 고유 식별자를 정의합니다.  
   
  *trace_name*  
- 이 추적에 지정된 이름으로, 대개 사람이 읽을 수 있는 추적에 대한 정의입니다. 
-  *trace_id* 값을 이름으로 사용하는 것이 일반적입니다.  
+ 이 추적에 지정된 이름으로, 대개 사람이 읽을 수 있는 추적에 대한 정의입니다. *trace_id* 값을 이름으로 사용하는 것이 일반적입니다.  
   
  *AS_event*  
  노출할 Analysis Services 이벤트입니다. 이벤트의 이름은 [Analysis Services 추적 이벤트](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events) 를 참조하세요.  

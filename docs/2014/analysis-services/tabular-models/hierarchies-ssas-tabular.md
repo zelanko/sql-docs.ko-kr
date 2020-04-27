@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ed315372dce4b6de69da389e88bbcb95166e6e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067076"
 ---
 # <a name="hierarchies-ssas-tabular"></a>계층(SSAS 테이블 형식)
@@ -22,13 +22,13 @@ ms.locfileid: "66067076"
   
  이 항목의 섹션:  
   
--   [아니라](#bkmk_benefits)  
+-   [이점](#bkmk_benefits)  
   
 -   [계층 정의](#bkmk_define)  
   
 -   [관련 작업](#bkmk_related_tasks)  
   
-##  <a name="bkmk_benefits"></a> 이점  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>아니라  
  테이블에는 비정상적인 열 이름을 갖는 수십 또는 수백 개의 열이 일정한 순서 없이 포함될 수 있습니다. 따라서 보고 클라이언트 필드 목록이 순서 없이 표시되므로 사용자가 데이터를 찾아서 보고서에 포함하기가 어려울 수 있습니다. 계층을 통해 복잡한 데이터 구조를 간단하고 직관적으로 볼 수 있습니다.  
   
  예를 들어 날짜 테이블에서 달력 계층을 만들 수 있습니다. 이때 역년이 최상위 부모 수준으로 사용되고 월, 주 및 일은 자식 수준으로 포함됩니다(역년->월->주->일). 이 계층은 역년에서 일까지의 논리적 관계를 보여 줍니다. 클라이언트 사용자는 필드 목록에서 Calendar Year를 선택하여 피벗 테이블에 모든 수준을 포함하거나, 계층을 확장하고 피벗 테이블에 포함할 특정 수준만 선택할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "66067076"
   
  계층은 보안 수단이 아니라 보다 나은 사용자 환경을 제공하기 위한 도구입니다. 특정 계층에 대한 모든 보안은 기본 모델에서 상속됩니다. 계층에서 사용자에게 액세스 권한이 없는 모델 개체에 대한 액세스 권한을 부여할 수는 없습니다. 계층을 통해 모델의 개체에 대한 액세스를 제공하려면 먼저 model 데이터베이스에 대한 보안을 해결해야 합니다. 보안 역할을 사용하여 모델 메타데이터 및 데이터에 보안을 설정할 수 있습니다. 자세한 내용은 [역할&#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)를 참조하세요.  
   
-##  <a name="bkmk_define"></a>계층 정의  
+##  <a name="defining-hierarchies"></a><a name="bkmk_define"></a>계층 정의  
  다이어그램 뷰에서 모델 디자이너를 사용하여 계층을 만들고 관리합니다. 계층 만들기 및 관리는 데이터 뷰의 모델 디자이너에서는 지원되지 않습니다. 다이어그램 뷰에서 모델 디자이너를 보려면 **모델** 메뉴를 클릭하고 **모델 뷰**를 가리킨 다음 **다이어그램 뷰**를 클릭합니다.  
   
  계층을 만들려면 부모 수준으로 지정할 열을 마우스 오른쪽 단추로 클릭한 다음 **계층 만들기**를 클릭합니다. 단일 테이블에서 포함할 열을 다중 선택하거나, 나중에 열을 클릭한 후 부모 수준으로 끌어서 열을 자식 수준으로 추가할 수 있습니다. 여러 열을 선택하면 열이 카디널리티 기반 순서대로 자동으로 배치 됩니다. 열(수준)을 클릭한 후 다른 순서로 끌어 놓거나 상황에 맞는 메뉴에서 위로 및 아래로 탐색 컨트롤을 사용하여 순서를 변경할 수 있습니다. 열을 자식 수준으로 추가할 때 열을 부모 수준으로 끌어서 놓아 자동 검색을 사용할 수 있습니다.  
@@ -50,15 +50,15 @@ ms.locfileid: "66067076"
   
  계층을 만든 후 Excel에서 분석 기능을 사용하여 효율성을 테스트할 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [Excel에서 분석&#40;SSAS 테이블 형식&#41;](analyze-in-excel-ssas-tabular.md)에서 역할 관리자 대화 상자를 사용하여 역할을 정의하는 테이블 형식 모델 작성자를 위한 것입니다.  
   
-##  <a name="bkmk_related_tasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> 관련 작업  
   
-|Task|Description|  
+|작업|설명|  
 |----------|-----------------|  
-|[SSAS 테이블 형식&#41;&#40;계층 만들기 및 관리](hierarchies-ssas-tabular.md)|다이어그램 뷰에서 모델 디자이너를 사용하여 계층을 만들고 관리하는 방법에 대해 설명합니다.|  
+|[계층 만들기 및 관리&#40;SSAS 테이블 형식&#41;](hierarchies-ssas-tabular.md)|다이어그램 뷰에서 모델 디자이너를 사용하여 계층을 만들고 관리하는 방법에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [테이블 형식 모델 디자이너 &#40;SSAS 테이블 형식&#41;](../tabular-model-designer-ssas-tabular.md)   
  [SSAS 테이블 형식&#41;&#40;큐브 뷰](perspectives-ssas-tabular.md)   
- [SSAS 테이블 형식&#41;역할 &#40;](roles-ssas-tabular.md)  
+ [역할&#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)  
   
   

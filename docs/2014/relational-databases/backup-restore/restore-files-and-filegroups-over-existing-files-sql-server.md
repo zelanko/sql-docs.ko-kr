@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 90269bc6fab7cd496561b9dfe5cae6bf0ff36bbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62875039"
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>기존 파일에서 파일 및 파일 그룹 복원(SQL Server)
@@ -42,9 +42,9 @@ ms.locfileid: "62875039"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   파일과 파일 그룹을 복원하는 시스템 관리자가 현재 복원될 데이터베이스를 사용하고 있는 유일한 사용자여야 합니다.  
   
@@ -54,14 +54,14 @@ ms.locfileid: "62875039"
   
 -   암호화된 데이터베이스를 복원하려면 데이터베이스를 암호화하는 데 사용된 인증서 또는 비대칭 키에 대한 액세스 권한이 있어야 합니다. 인증서 또는 비대칭 키가 없으면 데이터베이스를 복원할 수 없습니다. 따라서 데이터베이스 암호화 키를 암호화하는 데 사용되는 인증서는 백업이 필요한 동안에는 유지되어야 합니다. 자세한 내용은 [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md)을 참조하세요.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  복원할 데이터베이스가 없으면 CREATE DATABASE 권한이 있어야 RESTORE를 실행할 수 있습니다. 데이터베이스가 있으면 RESTORE 권한은 기본적으로 **sysadmin** 및 **dbcreator** 고정 서버 역할의 멤버와 데이터베이스의 소유자(**dbo**)에 설정됩니다. FROM DATABASE_SNAPSHOT 옵션의 경우 데이터베이스가 항상 있습니다.  
   
  멤버 자격 정보를 서버에서 항상 사용할 수 있는 역할에 RESTORE 권한이 제공됩니다. 고정 데이터베이스 역할의 멤버 자격은 데이터베이스가 액세스 가능한 상태이며 손상되지 않은 경우에만 확인할 수 있는데, RESTORE 실행 시 데이터베이스가 항상 이러한 상태인 것은 아니므로 **db_owner** 고정 데이터베이스 역할의 멤버에게는 RESTORE 권한이 없습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-restore-files-and-filegroups-over-existing-files"></a>기존 파일에서 파일과 파일 그룹을 복원하려면  
   
@@ -105,7 +105,7 @@ ms.locfileid: "62875039"
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-restore-files-and-filegroups-over-existing-files"></a>기존 파일에서 파일과 파일 그룹을 복원하려면  
   
@@ -136,7 +136,7 @@ ms.locfileid: "62875039"
   
          트랜잭션 로그 백업이 적용되는 경우 파일과 파일 그룹을 백업한 시점이 포함되어야 합니다.  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 예에서는 `MyNwind` 데이터베이스의 파일과 파일 그룹을 복원하고 같은 이름의 기존 파일을 모두 바꿉니다. 또한 현재 시간으로 데이터베이스를 복원하기 위한 두 개의 트랜잭션 로그가 적용됩니다.  
   
 ```sql  

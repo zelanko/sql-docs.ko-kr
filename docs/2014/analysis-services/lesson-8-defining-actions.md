@@ -11,20 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8293bb8d1f0465d09b296cbd18702b569f073766
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078226"
 ---
-# <a name="lesson-8-defining-actions"></a>8단원: 동작 정의
+# <a name="lesson-8-defining-actions"></a>8단원: 작업 정의
   이 단원에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트에 동작을 정의하는 방법을 알아봅니다. 동작은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에 저장되며 클라이언트 애플리케이션에 통합되고 사용자가 시작할 수 있는 MDX(Multidimensional Expressions) 문입니다.  
   
 > [!NOTE]  
->  이 자습서의 모든 단원에 대한 완료된 프로젝트를 온라인으로 사용할 수 있습니다. 이전 단원에서 완료된 프로젝트를 시작 지점으로 사용하여 어떠한 단원으로든 이동할 수 있습니다. 이 자습서와 함께 사용 되는 샘플 프로젝트를 다운로드 하려면 [여기를 클릭](https://go.microsoft.com/fwlink/?LinkID=221866) 하세요.  
+>  이 자습서의 모든 단원에 대한 완료된 프로젝트를 온라인으로 사용할 수 있습니다. 이전 단원에서 완료된 프로젝트를 시작 지점으로 사용하여 어떠한 단원으로든 이동할 수 있습니다. 이 자습서와 함께 제공되는 샘플 프로젝트를 다운로드하려면[여기를 클릭](https://go.microsoft.com/fwlink/?LinkID=221866) 하십시오.  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 다음 표에 설명된 동작 유형을 지원합니다.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 다음 표에 설명된 동작 유형을 지원합니다.  
   
 |||  
 |-|-|  

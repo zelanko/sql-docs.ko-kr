@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c8c8484089bf3aa1f9c88b3b2163a49b445bf8d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069928"
 ---
 # <a name="script-organizer-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>스크립트 구성 도우미(계산 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
@@ -31,7 +31,7 @@ ms.locfileid: "66069928"
   
  계산의 실행 순서를 변경하려면 **도구 모음** 창 또는 상황에 맞는 메뉴에서 **위로 이동** 또는 **아래로 이동** 을 클릭합니다.  
   
- **형식**  
+ **Type**  
  계산을 계산 멤버, 명명된 집합 또는 스크립트 명령으로 식별하는 아이콘을 표시합니다.  
   
  **명령**  
@@ -44,12 +44,9 @@ ms.locfileid: "66069928"
   
 |옵션|정의|  
 |------------|----------------|  
-|**새 계산 멤버**|
-  **계산 멤버 폼 편집기** 를 표시하고 새 계산 멤버를 만들려면 선택합니다. **계산 멤버 폼 편집기**에 대 한 자세한 내용은 계산 [멤버 폼 편집기 &#40;계산 탭, 큐브 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)를 참조 하세요.|  
-|**새 명명된 집합**|
-  **명명된 집합 폼 편집기** 를 표시하고 새 명명된 집합을 만들려면 선택합니다. **명명 된 집합 폼 편집기**에 대 한 자세한 내용은 [명명 된 집합 폼 편집기 &#40;계산 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)를 참조 하세요.|  
-|**새 스크립트 명령**|
-  **스크립트 편집기** 를 표시하고 새 스크립트 명령을 만들려면 선택합니다. **스크립트 편집기**에 대 한 자세한 내용은 [스크립트 편집기 &#40;계산 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)를 참조 하세요.|  
+|**새 계산 멤버**|**계산 멤버 폼 편집기** 를 표시하고 새 계산 멤버를 만들려면 선택합니다. **계산 멤버 폼 편집기**에 대 한 자세한 내용은 계산 [멤버 폼 편집기 &#40;계산 탭, 큐브 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)를 참조 하세요.|  
+|**새 명명된 집합**|**명명된 집합 폼 편집기** 를 표시하고 새 명명된 집합을 만들려면 선택합니다. **명명 된 집합 폼 편집기**에 대 한 자세한 내용은 [명명 된 집합 폼 편집기 &#40;계산 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)를 참조 하세요.|  
+|**새 스크립트 명령**|**스크립트 편집기** 를 표시하고 새 스크립트 명령을 만들려면 선택합니다. **스크립트 편집기**에 대 한 자세한 내용은 [스크립트 편집기 &#40;계산 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)를 참조 하세요.|  
 |**위로 이동**|선택한 계산을 한 단계 위로 이동하려면 선택합니다.<br /><br /> 참고: 선택한 계산을 더 이상 이동할 수 없는 경우 이 옵션을 사용할 수 없습니다.|  
 |**아래로 이동**|선택한 계산을 한 단계 아래로 이동하려면 선택합니다.<br /><br /> 참고: 선택한 계산을 더 이상 이동할 수 없는 경우 이 옵션을 사용할 수 없습니다.|  
 |**Delete**|선택한 계산을 삭제하려면 선택합니다.|  

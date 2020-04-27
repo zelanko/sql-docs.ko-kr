@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f4649f6a5abd9726a1b01e3ed30d6cabf88aef9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067701"
 ---
 # <a name="network-protocols-and-network-libraries"></a>네트워크 프로토콜 및 네트워크 라이브러리
@@ -81,8 +81,7 @@ ms.locfileid: "63067701"
   
  엔드포인트에 대한 자세한 내용은 [여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) 및 [엔드포인트 카탈로그 뷰&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql)를 참조하세요.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워크 구성에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 다음 항목을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워크 구성에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 다음 항목을 참조하세요.  
   
 -   [서버 네트워크 구성](../../database-engine/configure-windows/server-network-configuration.md)  
   

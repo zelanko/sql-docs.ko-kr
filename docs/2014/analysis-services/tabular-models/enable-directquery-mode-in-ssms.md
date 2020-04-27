@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 55a1a296e6a7b2a2155dea590be9321b22e73451
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067190"
 ---
 # <a name="configure-in-memory-or-directquery-access-for-a-tabular-model-database"></a>테이블 형식 모델 데이터베이스에 대해 메모리 내 또는 DirectQuery 액세스 구성
@@ -43,8 +43,7 @@ ms.locfileid: "66067190"
   
 2.  개체 탐색기에서 모델 데이터베이스 이름을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-3.  
-  **DirectQueryMode**속성을 찾습니다. 관계형 데이터 원본을 사용하려면 이 속성을 다음 값 중 하나로 설정해야 합니다.  
+3.  **DirectQueryMode**속성을 찾습니다. 관계형 데이터 원본을 사용하려면 이 속성을 다음 값 중 하나로 설정해야 합니다.  
   
     -   **DirectQuery**  
   

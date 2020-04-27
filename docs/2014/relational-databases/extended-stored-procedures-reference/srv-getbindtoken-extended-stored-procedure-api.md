@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dec2e73de3c4c3525b29b44b7c4563a7fd6887ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127309"
 ---
 # <a name="srv_getbindtoken-extended-stored-procedure-api"></a>srv_getbindtoken(확장 저장 프로시저 API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 CLR 통합을 사용 하세요.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
   
  현재 클라이언트 세션의 트랜잭션에서 확장 저장 프로시저를 호출하는 바인드 토큰을 가져옵니다.  
   
@@ -54,7 +54,7 @@ bindtoken
  *srvproc*  
  특정 클라이언트 연결에 대한 핸들인 SRV_PROC 구조에 대한 포인터입니다. 이 구조에는 확장 저장 프로시저 API 라이브러리가 애플리케이션과 클라이언트 간 통신 및 데이터를 관리하는 데 사용하는 모든 정보가 들어 있습니다.  
   
- *bindtoken은*  
+ *bindtoken*  
  바인드 토큰이 복사될 버퍼에 대한 포인터입니다. 바인드 토큰은 null로 끝나는 문자열로 표현됩니다. 지정하는 버퍼의 길이는 255바이트 이상이어야 합니다.  
   
 ## <a name="returns"></a>반환  
@@ -78,6 +78,6 @@ bindtoken
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_bindsession &#40;](/sql/relational-databases/system-stored-procedures/sp-bindsession-transact-sql)   
- [Transact-sql&#41;sp_getbindtoken &#40;](/sql/relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql)  
+ [sp_getbindtoken&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql)  
   
   

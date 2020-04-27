@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9240218b05af2c642ff374cb7e14d2a6c5dd616
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066607"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>열 데이터 형식 설정(SSAS 테이블 형식)
@@ -26,11 +26,9 @@ ms.locfileid: "66066607"
   
 2.  열 **속성** 창에서 다음 중 하나를 수행합니다.  
   
-    -   
-  **데이터 서식** 속성에서 다른 데이터 서식을 선택합니다.  
+    -   **데이터 서식** 속성에서 다른 데이터 서식을 선택합니다.  
   
-    -   
-  **데이터 형식** 속성에서 다른 데이터 형식을 선택합니다.  
+    -   **데이터 형식** 속성에서 다른 데이터 형식을 선택합니다.  
   
 ## <a name="considerations-when-changing-data-types"></a>데이터 형식을 변경할 때의 고려 사항  
  열의 데이터 형식을 변경하거나 데이터 변환을 선택할 때 다음 오류 중 하나가 발생할 수도 있습니다.  
@@ -52,7 +50,7 @@ ms.locfileid: "66066607"
   
 |모델 데이터 형식|  
 |----------------------|  
-|텍스트<br /><br /> 10진수<br /><br /> 정수<br /><br /> 통화<br /><br /> TRUE/FALSE<br /><br /> Date|  
+|텍스트<br /><br /> 10진수<br /><br /> 정수<br /><br /> Currency<br /><br /> TRUE/FALSE<br /><br /> 날짜|  
   
  데이터의 데이터 형식이 잘못되었거나 적어도 하나 이상의 데이터 형식이 원하는 형식과 다를 경우 다음과 같은 여러 가지 옵션 중에서 선택할 수 있습니다.  
   
@@ -70,6 +68,6 @@ ms.locfileid: "66066607"
  비즈니스 인텔리전스 의미 체계 모델에서 사용되는 데이터 형식, 이러한 데이터 형식이 암시적으로 변환되는 방법 및 수식에서 다양한 데이터 형식이 사용되는 방법에 대한 자세한 내용은 [지원되는 데이터 형식&#40;SSAS 테이블 형식&#41;](data-types-supported-ssas-tabular.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [SSAS 테이블 형식&#41;&#40;지원 되는 데이터 형식](data-types-supported-ssas-tabular.md)  
+ [지원되는 데이터 형식&#40;SSAS 테이블 형식&#41;](data-types-supported-ssas-tabular.md)  
   
   

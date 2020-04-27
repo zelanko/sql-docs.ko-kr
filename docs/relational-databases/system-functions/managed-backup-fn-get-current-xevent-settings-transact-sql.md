@@ -21,10 +21,10 @@ ms.assetid: 95d3adaa-bb9d-4833-b8b4-3d9fd4f9c82a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4133f8bb64d5d7e2e2b511c2128b9ddbca1fa550
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910241"
 ---
 # <a name="managed_backupfn_get_current_xevent_settings-transact-sql"></a>managed_backup. fn_get_current_xevent_settings (Transact-sql)
@@ -42,13 +42,13 @@ ms.locfileid: "67910241"
 smart_admin.fn_get_current_xevent_settings ()   
 ```  
   
-##  <a name="Arguments"></a> 인수  
+##  <a name="arguments"></a><a name="Arguments"></a>인수의  
  이 함수에는 인수가 없습니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
  확장 이벤트의 Admin, Analytic 및 Operational 채널은 기본적으로 사용하도록 설정되며 구성할 수 없습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |Event_name|NVARCHAR(128)|확장 이벤트 유형|  
 |is_configurable|NVARCHAR(128)|이 이벤트는 이벤트를 구성할 수 있는 경우 **True** 로 설정 되 고, 그렇지 않으면 **False**로 설정 됩니다.|  

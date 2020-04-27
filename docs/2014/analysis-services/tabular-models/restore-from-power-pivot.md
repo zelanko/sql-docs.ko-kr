@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f90ea08269e79e57c623af41fc2f0fbc09e2fb42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066642"
 ---
 # <a name="restore-from-powerpivot"></a>PowerPivot에서 복원
@@ -39,17 +39,13 @@ ms.locfileid: "66066642"
   
 1.  SSMS의 복원 하려는 Active Directory 인스턴스에서 **데이터베이스**를 마우스 오른쪽 단추로 클릭 한 다음 **PowerPivot에서 복원**을 클릭 합니다.  
   
-2.  
-  **PowerPivot에서 복원** 대화 상자의 **복원 원본**에 있는 **백업 파일**에서 **찾아보기**를 클릭한 다음 복원할 .abf 또는 .xslx 파일을 선택합니다.  
+2.  **PowerPivot에서 복원** 대화 상자의 **복원 원본**에 있는 **백업 파일**에서 **찾아보기**를 클릭한 다음 복원할 .abf 또는 .xslx 파일을 선택합니다.  
   
-3.  
-  **대상 복원**의 **데이터베이스 복원**에 새 데이터베이스 또는 기존 데이터베이스의 이름을 입력합니다. 이름을 지정하지 않으면 통합 문서의 이름이 사용됩니다.  
+3.  **대상 복원**의 **데이터베이스 복원**에 새 데이터베이스 또는 기존 데이터베이스의 이름을 입력합니다. 이름을 지정하지 않으면 통합 문서의 이름이 사용됩니다.  
   
-4.  
-  **스토리지 위치**에서 **찾아보기**를 클릭한 다음 데이터베이스를 저장할 위치를 선택합니다.  
+4.  **스토리지 위치**에서 **찾아보기**를 클릭한 다음 데이터베이스를 저장할 위치를 선택합니다.  
   
-5.  
-  **옵션**에서 **보안 정보 포함** 을 선택합니다. PowerPivot 통합 문서에서 복원할 때 이 설정은 적용되지 않습니다.  
+5.  **옵션**에서 **보안 정보 포함** 을 선택합니다. PowerPivot 통합 문서에서 복원할 때 이 설정은 적용되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [테이블 형식 모델 데이터베이스 &#40;SSAS 테이블 형식&#41;](tabular-model-databases-ssas-tabular.md)   
