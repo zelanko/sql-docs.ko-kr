@@ -13,14 +13,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2828316739e53a94b248a8fffcf020ed16692241
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089776"
 ---
 # <a name="sql-server-profiler---edit-filter"></a>SQL Server Profiler - 필터 편집
-  
   **필터 편집** 대화 상자를 사용하여 추적에서 데이터 열 필터를 만들고 수정할 수 있습니다. 목록에서 데이터 열 이름을 클릭하면 해당 데이터 열에 사용할 수 있는 필터 조건이 인접한 창에 표시됩니다. 필터 조건을 입력하고 **확인** 을 클릭하면 해당 조건이 선택한 데이터 열에 적용됩니다. 목록의 데이터 열 이름 왼쪽에 필터 아이콘이 나타나면 이미 해당 열에 대해 구성된 필터가 있는 것입니다.  
   
 > [!NOTE]  

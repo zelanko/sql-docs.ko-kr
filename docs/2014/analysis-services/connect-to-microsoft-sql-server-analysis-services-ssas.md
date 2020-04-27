@@ -13,15 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe8eee02d019b5cf68e257b3fac4266a18ead795
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087031"
 ---
 # <a name="connect-to-microsoft-sql-server-analysis-services-ssas"></a>Microsoft SQL Server Analysis Services에 연결(SSAS)
-  **테이블 가져오기 마법사** 의이 페이지에서는 SharePoint에서 호스팅되는 PowerPivot 통합 문서나 Microsoft SQL Server Analysis Services 큐브에서 데이터를 가져오기 위한 설정을 지정할 수 있습니다. 
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
+  **테이블 가져오기 마법사** 의이 페이지에서는 SharePoint에서 호스팅되는 PowerPivot 통합 문서나 Microsoft SQL Server Analysis Services 큐브에서 데이터를 가져오기 위한 설정을 지정할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
   
  데이터 원본에 연결하려면 컴퓨터에 적절한 공급자를 설치해야 합니다.  
   
@@ -62,17 +61,15 @@ ms.locfileid: "66087031"
  데이터베이스 연결의 암호를 지정합니다. 이 옵션은 SQL Server 인증을 사용하여 연결하도록 선택한 경우에만 편집할 수 있습니다.  
   
  **암호 저장**  
- 
-  **암호** 상자에 입력한 암호를 저장할지 여부를 지정합니다. 이 옵션은 SQL Server 인증을 사용하여 연결하도록 선택한 경우에만 사용할 수 있습니다.  
+ **암호** 상자에 입력한 암호를 저장할지 여부를 지정합니다. 이 옵션은 SQL Server 인증을 사용하여 연결하도록 선택한 경우에만 사용할 수 있습니다.  
   
  **데이터베이스 이름**  
  데이터베이스 목록에서 데이터베이스를 선택합니다.  
   
  **고급**  
- 
-  **고급 속성 설정** 대화 상자를 사용하여 추가 연결 속성을 설정합니다. 자세한 내용은 [고급 속성 설정&#40;SSAS&#41;](set-advanced-properties-ssas.md)을 참조하세요.  
+ **고급 속성 설정** 대화 상자를 사용하여 추가 연결 속성을 설정합니다. 자세한 내용은 [고급 속성 설정&#40;SSAS&#41;](set-advanced-properties-ssas.md)을 참조하세요.  
   
- **연결 테스트**  
+ **연결을 테스트**  
  현재 설정을 사용하여 데이터 원본에 대한 연결을 설정해 봅니다. 연결이 성공적인지 여부를 나타내는 메시지가 표시됩니다.  
   
   

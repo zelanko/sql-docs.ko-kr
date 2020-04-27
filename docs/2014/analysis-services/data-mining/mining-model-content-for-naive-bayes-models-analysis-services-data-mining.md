@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9b899ef4daba73237490d06df58c3447f6b2356d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083644"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Naive Bayes 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
@@ -51,7 +51,7 @@ ms.locfileid: "66083644"
   
  **모델 루트** 예측 가능한 특성의 이름입니다.  
   
- **한계 통계** 해당 없음  
+ **한계 통계** 해당 사항이 없습니다.  
   
  **예측 가능한 특성** 예측 가능한 특성의 이름입니다.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66083644"
  NODE_TYPE  
  Naive Bayes 모델이 출력하는 노드 유형은 다음과 같습니다.  
   
-|노드 유형 ID|Description|  
+|노드 유형 ID|설명|  
 |------------------|-----------------|  
 |26(NaiveBayesMarginalStatNode)|모델의 전체 학습 사례 집합을 설명하는 통계를 포함합니다.|  
 |9(예측 가능한 특성)|예측 가능한 특성의 이름을 포함합니다.|  
@@ -92,20 +92,20 @@ ms.locfileid: "66083644"
   
  Bike Buyer -> Age  
   
- **입력 특성 상태** 예측 가능한 특성 및 현재 입력 특성의 이름에 입력 값을 더한 값입니다. 예:  
+ **입력 특성 상태** 예측 가능한 특성 및 현재 입력 특성의 이름에 입력 값을 추가한 것입니다. 예:  
   
  Bike Buyer -> Age = Missing  
   
  CHILDREN_CARDINALITY  
  노드에 있는 자식 수입니다.  
   
- **모델 루트** 모델의 예측 가능한 특성 수에 한계 통계 노드에 대 한 1을 더한 값입니다.  
+ **모델 루트** 모델에 있는 예측 가능한 특성 수에 한계 통계 노드에 해당하는 1을 더한 것입니다.  
   
- **한계 통계** 정의에 따라 자식이 없습니다.  
+ **한계 통계** 정의에 따르면 자식이 없습니다.  
   
- **예측 가능한 특성**  현재 예측 가능한 특성과 관련 된 입력 특성의 수입니다.  
+ **예측 가능한 특성**  현재 예측 가능한 특성과 관련된 입력 특성의 수입니다.  
   
- **입력 특성** 현재 입력 특성에 대 한 불연속 또는 불연속화 된 값의 수입니다.  
+ **입력 특성** 현재 입력 특성에 대한 불연속 또는 불연속화된 값의 수입니다.  
   
  **입력 특성 상태** 항상 0입니다.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "66083644"
   
  **입력 특성** 항상 1입니다.  
   
- **입력 특성 상태** 현재 값의 확률을 나타내는 10 진수입니다. 부모 입력 특성 노드 아래에 있는 모든 입력 특성 상태의 값을 더하면 1이 됩니다.  
+ **입력 특성 상태** 현재 값의 확률을 나타내는 10진수입니다. 부모 입력 특성 노드 아래에 있는 모든 입력 특성 상태의 값을 더하면 1이 됩니다.  
   
  MARGINAL_PROBABILITY  
  노드 확률과 같습니다.  
@@ -151,7 +151,7 @@ ms.locfileid: "66083644"
   
  **입력 특성** 학습 데이터의 모든 사례 수입니다.  
   
- **입력 특성 상태** 이 특정 값만 포함 하는 학습 데이터의 사례 수입니다.  
+ **입력 특성 상태** 학습 데이터에서 이 특정 값만 포함된 사례 수입니다.  
   
  MSOLAP_MODEL_COLUMN  
  표시용 레이블입니다. 일반적으로 ATTRIBUTE_NAME과 같습니다.  
@@ -165,7 +165,7 @@ ms.locfileid: "66083644"
   
  **예측 가능한 특성**  항상 0입니다.  
   
- **입력 특성** 현재 예측 가능한 특성과 관련 된 현재 입력 특성의 흥미도 점수입니다.  
+ **입력 특성** 현재 예측 가능한 특성과 관련된 현재 입력 특성의 흥미도 점수입니다.  
   
  **입력 특성 상태** 항상 0입니다.  
   
@@ -174,15 +174,15 @@ ms.locfileid: "66083644"
   
  **모델 루트** 공백을  
   
- **한계 통계** 공백을  
+ **한계 통계** 비어 있습니다.  
   
  **예측 가능한 특성**  예측 가능한 특성의 이름입니다.  
   
  **입력 특성** 입력 특성의 이름입니다.  
   
- **입력 특성 상태** 입력 특성의 값 또는 불연속화 된 값입니다.  
+ **입력 특성 상태** 입력 특성의 값 또는 불연속화된 값입니다.  
   
-##  <a name="bkmk_nodenames"></a>노드 이름 및 Id 사용  
+##  <a name="using-node-names-and-ids"></a><a name="bkmk_nodenames"></a> 노드 이름 및 ID 사용  
  Naive Bayes 모델의 노드 이름은 노드 유형에 대한 추가 정보를 제공하므로 이를 통해 모델에 있는 정보 간의 관계를 쉽게 이해할 수 있습니다. 다음 표에서는 다른 노드 유형에 할당되는 ID의 규칙을 보여 줍니다.  
   
 |노드 유형|노드 ID의 규칙|  
@@ -233,7 +233,7 @@ AND [PARENT_UNIQUE_NAME] = '20000000000000009'
 |3000000000000000900000001|Bike Buyer -> Marital Status = S|0.457504004|  
 |3000000000000000900000002|Bike Buyer -> Marital Status = M|0.542495996|  
   
-##  <a name="bkmk_nodedist"></a>NODE_DISTRIBUTION 테이블  
+##  <a name="node_distribution-table"></a><a name="bkmk_nodedist"></a>NODE_DISTRIBUTION 테이블  
  중첩 테이블 열 NODE_DISTRIBUTION은 일반적으로 노드의 값 배포에 대한 통계를 포함합니다. Naive Bayes 모델에서 이 테이블은 다음 노드에 대해서만 채워집니다.  
   
 |노드 유형|중첩 테이블의 내용|  
@@ -265,10 +265,10 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  이러한 결과에서 SUPPORT 열의 값은 자전거를 구매한 고객 수를 결혼 여부와 함께 알려 줍니다. PROBABILITY 열에는 이 노드에 대해서만 계산되는 각 특성 값의 확률이 포함됩니다. NODE_DISTRIBUTION 테이블에서 사용되는 용어의 일반적인 정의는 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
   
-###  <a name="bkmk_margstats"></a>한계 통계 노드의 정보  
+###  <a name="information-in-the-marginal-statistics-node"></a><a name="bkmk_margstats"></a> 한계 통계 노드의 정보  
  Naive Bayes 모델에서 한계 통계 노드의 중첩 테이블에는 전체 학습 데이터 집합의 값 분포가 포함됩니다. 예를 들어 다음 표에서는 `TM_NaiveBayes`모델에 대한 NODE_DISTRIBUTION 중첩 테이블의 통계 목록을 일부 보여 줍니다.  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|지원|PROBABILITY|분산|VALUETYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|별칭|PROBABILITY|분산|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
 |Bike Buyer|Missing|0|0|0|1|  
 |Bike Buyer|0|8869|0.507263784|0|4|  
@@ -285,8 +285,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  Naive Bayes 모델에는 연속 특성이 있을 수 없으므로 모든 숫자 데이터는 Discrete(VALUE_TYPE = 4) 또는 Discretized(VALUE_TYPE = 5)로 표현됩니다.  
   
- 
-  `Missing` 값(VALUE_TYPE = 1)은 모든 입력 및 출력 특성에 추가되어 학습 데이터에 없었던 잠재적인 값을 나타냅니다. 문자열 "missing"과 기본 `Missing` 값을 주의해서 구별해야 합니다. 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](missing-values-analysis-services-data-mining.md)에서 미리 정의한 모델링 플래그 외에 다른 모델링 플래그를 사용할 수 있습니다.  
+ `Missing` 값(VALUE_TYPE = 1)은 모든 입력 및 출력 특성에 추가되어 학습 데이터에 없었던 잠재적인 값을 나타냅니다. 문자열 "missing"과 기본 `Missing` 값을 주의해서 구별해야 합니다. 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](missing-values-analysis-services-data-mining.md)에서 미리 정의한 모델링 플래그 외에 다른 모델링 플래그를 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)   

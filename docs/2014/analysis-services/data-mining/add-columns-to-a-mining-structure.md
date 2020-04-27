@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85a713bb9da24a67ebe8fdd097535c5a9d5ac98e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086233"
 ---
 # <a name="add-columns-to-a-mining-structure"></a>마이닝 구조에 열 추가
@@ -33,14 +33,11 @@ ms.locfileid: "66086233"
   
 2.  마이닝 구조를 마우스 오른쪽 단추로 클릭하고 **열 추가**를 선택합니다.  
   
-     
-  **열 선택** 대화 상자가 열립니다.  
+     **열 선택** 대화 상자가 열립니다.  
   
-3.  
-  **원본 테이블**에서 열이 있는 데이터 원본 뷰의 테이블을 선택합니다.  
+3.  **원본 테이블**에서 열이 있는 데이터 원본 뷰의 테이블을 선택합니다.  
   
-4.  
-  **원본 열**에서 마이닝 구조에 추가할 열을 선택합니다.  
+4.  **원본 열**에서 마이닝 구조에 추가할 열을 선택합니다.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

@@ -24,21 +24,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a7330fab8b4c0ecdff296e0daa5e529442fd8b94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083867"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
   에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]신경망 알고리즘 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 은 입력 특성의 가능한 각 상태를 예측 가능한 특성의 가능한 각 상태와 결합 하 고 학습 데이터를 사용 하 여 확률을 계산 합니다. 나중에 이러한 확률을 분류 또는 회귀에 사용하여 입력 특성을 기반으로 예측 특성의 결과를 예측할 수 있습니다.  
   
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘을 사용하여 생성된 마이닝 모델은 입력 및 예측에 모두 사용되는 열 개수나 예측에만 사용되는 열 개수에 따라 여러 네트워크를 포함할 수 있습니다. 단일 마이닝 모델이 포함할 수 있는 네트워크 수는 마이닝 모델이 사용하는 입력 열 및 예측 가능한 열에 포함된 상태 수에 따라 달라집니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘을 사용하여 생성된 마이닝 모델은 입력 및 예측에 모두 사용되는 열 개수나 예측에만 사용되는 열 개수에 따라 여러 네트워크를 포함할 수 있습니다. 단일 마이닝 모델이 포함할 수 있는 네트워크 수는 마이닝 모델이 사용하는 입력 열 및 예측 가능한 열에 포함된 상태 수에 따라 달라집니다.  
   
 ## <a name="example"></a>예제  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘은 제조 또는 상업 프로세스와 같은 프로세스에서 사용되는 복잡한 입력 데이터를 분석하거나 상당한 양의 학습 데이터가 있지만 다른 알고리즘으로 쉽게 규칙을 이끌어 낼 수 없는 비즈니스 문제를 분석하는 데 유용합니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘은 제조 또는 상업 프로세스와 같은 프로세스에서 사용되는 복잡한 입력 데이터를 분석하거나 상당한 양의 학습 데이터가 있지만 다른 알고리즘으로 쉽게 규칙을 이끌어 낼 수 없는 비즈니스 문제를 분석하는 데 유용합니다.  
   
  다음과 같은 시나리오에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘을 사용할 수 있습니다.  
   
@@ -53,8 +51,7 @@ ms.locfileid: "66083867"
 -   많은 입력과 비교적 적은 출력 간의 복잡한 관계를 분석하는 모든 예측 모델  
   
 ## <a name="how-the-algorithm-works"></a>알고리즘 작동 방법  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘은 최대 3개의 뉴런 계층으로 구성된 신경망을 만듭니다. 이러한 3개의 계층은 입력 계층, 출력 계층 및 숨겨진 계층(옵션)입니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘은 최대 3개의 뉴런 계층으로 구성된 신경망을 만듭니다. 이러한 3개의 계층은 입력 계층, 출력 계층 및 숨겨진 계층(옵션)입니다.  
   
  **입력 계층:** 입력 뉴런는 데이터 마이닝 모델에 대 한 모든 입력 특성 값과 해당 확률을 정의 합니다.  
   
@@ -67,8 +64,7 @@ ms.locfileid: "66083867"
 ## <a name="data-required-for-neural-network-models"></a>신경망 모델에 필요한 데이터  
  신경망 모델은 하나의 키 열, 하나 이상의 입력 열, 하나 이상의 예측 가능한 열을 포함해야 합니다.  
   
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘을 사용하는 데이터 마이닝 모델은 알고리즘에 사용 가능한 매개 변수에 대해 사용자가 지정한 값의 영향을 크게 받습니다. 이러한 매개 변수는 데이터가 샘플링되는 방식, 데이터가 각 열에 배포되거나 배포될 것으로 예상되는 방식 및 기능 선택이 실행되어 최종 모델에 사용되는 값을 제한하는 시기를 정의합니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘을 사용하는 데이터 마이닝 모델은 알고리즘에 사용 가능한 매개 변수에 대해 사용자가 지정한 값의 영향을 크게 받습니다. 이러한 매개 변수는 데이터가 샘플링되는 방식, 데이터가 각 열에 배포되거나 배포될 것으로 예상되는 방식 및 기능 선택이 실행되어 최종 모델에 사용되는 값을 제한하는 시기를 정의합니다.  
   
  매개 변수를 설정하여 모델의 동작을 사용자 지정하는 방법에 대한 자세한 내용은 [Microsoft 신경망 알고리즘 기술 참조](microsoft-neural-network-algorithm-technical-reference.md)를 참조하세요.  
   

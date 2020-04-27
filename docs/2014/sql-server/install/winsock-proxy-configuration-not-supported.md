@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e7d5daa8042e53b9bf26ad507c4be1f361821909
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66090982"
 ---
 # <a name="winsock-proxy-configuration-not-supported"></a>Winsock Proxy 구성은 지원되지 않습니다.
@@ -26,8 +26,7 @@ ms.locfileid: "66090982"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Description  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 사용하여 Windows 구성 요소를 구성할 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 사용하여 Windows 구성 요소를 구성할 수 없습니다.  
   
 ## <a name="corrective-action"></a>수정 동작  
  Microsoft ISA(Internet Security and Acceleration) Server를 사용하여 컴퓨터를 게시합니다. Winsock 프록시를 구성하는 방법은 프록시 서버 설명서를 참조하십시오.  

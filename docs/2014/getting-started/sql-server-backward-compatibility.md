@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dd93707ef139b1751d918af43efed72574d58aa5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088513"
 ---
 # <a name="sql-server-backward-compatibility"></a>이전 SQL Server 버전과의 호환성
@@ -22,7 +22,7 @@ ms.locfileid: "66088513"
   
  이 항목에 포함되어 있는 기능에는 데이터 프로그래밍 기능, 노출 영역 구성 도구, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치 프로그램, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스 및 기타 광범위한 기능 변경 내용이 있습니다.  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[SQL Server 2014 이후에는 사용되지 않는 SQL Server 기능](../../2014/getting-started/deprecated-sql-server-features-in-sql-server-2014.md)|이 릴리스에서 더 이상 지원되지 않는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기능. 이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 및 설치 기능을 설명합니다.|  
 |[SQL Server 2014에서 지원되지 않는 SQL Server 기능](../../2014/getting-started/discontinued-sql-server-features-in-sql-server-2014.md)|이 릴리스에서 더 이상 지원되지 않는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기능. 이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 및 설치 기능을 설명합니다.|  

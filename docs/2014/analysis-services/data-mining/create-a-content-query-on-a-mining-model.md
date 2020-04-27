@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2e3607426ecbc51b1d04dfc97b12f83faf328b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085577"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>마이닝 모델에 내용 쿼리 만들기
@@ -30,16 +30,13 @@ ms.locfileid: "66085577"
   
 #### <a name="to-create-a-dmx-model-content-query"></a>DMX 모델 내용 쿼리를 만들려면  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **보기** 메뉴에서 **템플릿 탐색기**를 클릭합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **보기** 메뉴에서 **템플릿 탐색기**를 클릭합니다.  
   
-2.  
-  **템플릿 탐색기** 창에서 큐브 아이콘을 클릭하여 목록을 변경하고 Analysis Services 템플릿을 표시합니다.  
+2.  **템플릿 탐색기** 창에서 큐브 아이콘을 클릭하여 목록을 변경하고 Analysis Services 템플릿을 표시합니다.  
   
 3.  템플릿 범주 목록에서 **DMX**, **모델 콘텐츠**를 차례로 확장하고 **내용 쿼리**를 두 번 클릭합니다.  
   
-4.  
-  **Analysis Services에 연결** 대화 상자에서 쿼리할 마이닝 모델이 포함된 인스턴스를 선택하고 **연결**을 클릭합니다.  
+4.  **Analysis Services에 연결** 대화 상자에서 쿼리할 마이닝 모델이 포함된 인스턴스를 선택하고 **연결**을 클릭합니다.  
   
      적절한 코드 편집기에서 **내용 쿼리** 템플릿이 열립니다. 메타데이터 창에는 현재 데이터베이스에서 사용할 수 있는 모델의 목록이 표시됩니다. 데이터베이스를 변경하려면 **사용 가능한 데이터베이스** 목록에서 다른 데이터베이스를 선택합니다.  
   
@@ -59,11 +56,9 @@ ms.locfileid: "66085577"
   
 #### <a name="to-create-a-query-against-the-data-mining-schema-rowset"></a>데이터 마이닝 스키마 행 집합에 대한 쿼리를 만들려면  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **새 쿼리** 도구 모음에서 **Analysis Services DMX 쿼리**또는 **Analysis Services MDX 쿼리**를 클릭합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **새 쿼리** 도구 모음에서 **Analysis Services DMX 쿼리**또는 **Analysis Services MDX 쿼리**를 클릭합니다.  
   
-2.  
-  **Analysis Services에 연결** 대화 상자에서 쿼리할 개체가 포함된 인스턴스를 선택하고 **연결**을 클릭합니다.  
+2.  **Analysis Services에 연결** 대화 상자에서 쿼리할 개체가 포함된 인스턴스를 선택하고 **연결**을 클릭합니다.  
   
      적절한 코드 편집기에서 **내용 쿼리** 템플릿이 열립니다. 메타데이터 창에는 현재 데이터베이스에서 사용할 수 있는 개체의 목록이 표시됩니다. 데이터베이스를 변경하려면 **사용 가능한 데이터베이스** 목록에서 다른 데이터베이스를 선택합니다.  
   

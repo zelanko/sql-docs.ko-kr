@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e4d9b0eaa65eada55fec398b058d8e17aaa53a03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084366"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Analysis Services 가져오기 마법사를 사용하여 데이터 마이닝 프로젝트 가져오기
@@ -31,44 +31,34 @@ ms.locfileid: "66084366"
   
 -   기본적으로 프로젝트를 가져올 때 작업 영역 데이터베이스가 localhost로 설정되거나 모든 기본 인스턴스가 **에서** 기본 대상 서버 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]로 구성됩니다. 이 속성을 설정하려면 **옵션** 메뉴에서 **비즈니스 인텔리전스 디자이너**, **Analysis Services**, **일반**을 차례로 선택합니다.  
   
-     
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델 프로젝트에 대한 기본 배포 서버를 구성하기 위해 설정할 수 있는 또 다른 별도의 옵션이 있습니다. 
-  **기본 배포 서버**설정은 테이블 형식 프로젝트에 대한 기본 작업 영역 데이터베이스를 결정합니다. 테이블 형식 모델을 지원하는 인스턴스는 데이터 마이닝 프로젝트에 사용할 수 없습니다.  
+     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델 프로젝트에 대한 기본 배포 서버를 구성하기 위해 설정할 수 있는 또 다른 별도의 옵션이 있습니다. **기본 배포 서버**설정은 테이블 형식 프로젝트에 대한 기본 작업 영역 데이터베이스를 결정합니다. 테이블 형식 모델을 지원하는 인스턴스는 데이터 마이닝 프로젝트에 사용할 수 없습니다.  
   
      다차원 또는 데이터 마이닝 모드로 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 인스턴스를 사용하도록 기본 배포 데이터베이스를 변경할 수 없는 경우 항상 **프로젝트 속성** 대화 상자를 사용하여 배포 데이터베이스를 지정할 수 있습니다.  
   
 #### <a name="to-create-a-new-data-mining-project-by-importing-an-existing-data-mining-project"></a>기존 데이터 마이닝 프로젝트를 가져와 새 데이터 마이닝 프로젝트를 만들려면  
   
-1.  
-  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 **파일** 메뉴에서 **새로 만들기**를 클릭한 다음 **프로젝트**를 클릭합니다.  
+1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 **파일** 메뉴에서 **새로 만들기**를 클릭한 다음 **프로젝트**를 클릭합니다.  
   
-2.  
-  **새 프로젝트** 대화 상자의 **설치된 템플릿**에서 **비즈니스 인텔리전스**, **Analysis Services**, **서버에서 가져오기(다차원 및 데이터 마이닝)** 를 차례로 클릭합니다.  
+2.  **새 프로젝트** 대화 상자의 **설치된 템플릿**에서 **비즈니스 인텔리전스**, **Analysis Services**, **서버에서 가져오기(다차원 및 데이터 마이닝)** 를 차례로 클릭합니다.  
   
-3.  
-  **이름**에 프로젝트의 이름을 입력하고 위치 및 솔루션 이름을 지정한 다음 **확인**을 클릭합니다.  
+3.  **이름**에 프로젝트의 이름을 입력하고 위치 및 솔루션 이름을 지정한 다음 **확인**을 클릭합니다.  
   
-     
-  **Analysis Services 데이터베이스 가져오기 마법사** 가 시작됩니다. 시작 페이지에서 확인을 클릭하여 계속 진행합니다.  
+     **Analysis Services 데이터베이스 가져오기 마법사** 가 시작됩니다. 시작 페이지에서 확인을 클릭하여 계속 진행합니다.  
   
-4.  
-  **원본 데이터베이스 선택**페이지의 **서버**에서 가져올 솔루션이 포함된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 지정합니다.  
+4.  **원본 데이터베이스 선택**페이지의 **서버**에서 가져올 솔루션이 포함된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 지정합니다.  
   
-     
-  **데이터베이스**에서 가져올 데이터 마이닝 개체가 포함된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 선택합니다.  
+     **데이터베이스**에서 가져올 데이터 마이닝 개체가 포함된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 선택합니다.  
   
     > [!WARNING]  
     >  가져올 개체는 지정할 수 없습니다. 기존 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 선택한 경우 모든 다차원 및 데이터 마이닝 개체를 가져옵니다.  
   
      **다음**을 클릭합니다.  
   
-5.  
-  **마법사 완료**페이지에 가져오기 작업의 진행률이 표시됩니다. 작업을 취소하거나 가져오는 개체를 변경할 수 없습니다. 완료되었으면 **마침** 을 클릭합니다.  
+5.  **마법사 완료**페이지에 가져오기 작업의 진행률이 표시됩니다. 작업을 취소하거나 가져오는 개체를 변경할 수 없습니다. 완료되었으면 **마침** 을 클릭합니다.  
   
-     
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 새 프로젝트가 자동으로 열립니다.  
+     [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 새 프로젝트가 자동으로 열립니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [프로젝트 속성 &#40;SSAS 테이블 형식&#41;](../tabular-models/properties-ssas-tabular.md)  
+ [프로젝트 속성&#40;SSAS 테이블 형식&#41;](../tabular-models/properties-ssas-tabular.md)  
   
   

@@ -13,16 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6eeb17662c0cac290a7a455d0925cd05560e5e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087356"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>플랫 파일에 연결(SSAS)
-  
-  **테이블 가져오기 마법사** 의 이 페이지를 사용하면 플랫 파일(.txt), 탭으로 구분된 파일(.tab) 또는 쉼표로 구분된 파일(.csv)에 연결할 수 있습니다. 
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
+  **테이블 가져오기 마법사** 의 이 페이지를 사용하면 플랫 파일(.txt), 탭으로 구분된 파일(.tab) 또는 쉼표로 구분된 파일(.csv)에 연결할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
   
  플랫 파일에 연결하려면 컴퓨터에 적절한 ACE 공급자를 설치해야 합니다. 자세한 내용은 [지원되는 데이터 원본&#40;SSAS 테이블 형식&#41;](tabular-models/data-sources-supported-ssas-tabular.md)을 참조하세요.  
   
@@ -42,7 +40,7 @@ ms.locfileid: "66087356"
  **열 구분 기호**  
  사용 가능한 열 구분 기호의 목록에서 선택합니다. 텍스트에 거의 사용되지 않는 구분 기호를 선택합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |탭(t)|열이 탭(t)으로 구분됩니다.|  
 |쉼표(,)|열이 쉼표(,)로 구분됩니다.|  

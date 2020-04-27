@@ -13,17 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 127ff0c386a1f93c00178624b54499e33cf9042a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088013"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>클러스터 다이어그램 탭(마이닝 모델 뷰어)
-  
   **클러스터 다이어그램** 탭은 클러스터링 모델에 포함된 모든 클러스터를 그래픽으로 표시합니다.  
   
- **자세한 내용:** Microsoft [클러스터링 알고리즘](data-mining/microsoft-clustering-algorithm.md), [Microsoft 클러스터 뷰어를 사용 하 여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **자세한 내용:** [Microsoft 클러스터링 알고리즘](data-mining/microsoft-clustering-algorithm.md), [Microsoft 클러스터 뷰어를 사용하여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>옵션  
  **뷰어 내용 새로 고침**  
@@ -51,22 +50,20 @@ ms.locfileid: "66088013"
  전체 다이어그램이 화면에 표시될 때까지 다이어그램을 축소합니다.  
   
  **노드 찾기**  
- 
-  **노드 찾기** 대화 상자를 엽니다. 이 기능은 원하는 특성을 찾기 어려울 수 있는 큰 모델에서 유용합니다. 대화 상자에 검색 조건을 입력할 수 있으며 검색 문자열이 포함된 클러스터만 표시하도록 클러스터 뷰가 필터링됩니다.  
+ **노드 찾기** 대화 상자를 엽니다. 이 기능은 원하는 특성을 찾기 어려울 수 있는 큰 모델에서 유용합니다. 대화 상자에 검색 조건을 입력할 수 있으며 검색 문자열이 포함된 클러스터만 표시하도록 클러스터 뷰가 필터링됩니다.  
   
  **레이아웃 개선**  
  다이어그램에서 클러스터를 다시 정렬하여 레이아웃을 개선합니다.  
   
- **농도가**  
+ **밀도**  
  클러스터 다이어그램에서 표시되는 특성-값 쌍을 변경하려면 이 옵션을 사용합니다. 특성을 선택하려면 **음영 변수** 옵션을 사용하고 값을 선택하려면 **상태** 를 사용합니다. 그래프의 음영은 클러스터 내의 해당 특성-값 쌍의 밀도를 나타냅니다.  
   
- 
-  **모집단** 을 선택한 경우 다이어그램에 각 클러스터에 대한 지지도가 표시되어 특성을 선택하지 않은 이후의 사례 수를 나타냅니다.  
+ **모집단** 을 선택한 경우 다이어그램에 각 클러스터에 대한 지지도가 표시되어 특성을 선택하지 않은 이후의 사례 수를 나타냅니다.  
   
  **음영 변수**  
  클러스터 다이어그램에 나타낼 특성을 선택합니다.  
   
- **시스템 상태**  
+ **State**  
  클러스터 다이어그램에서 사용할 **음영 변수** 의 단일 상태를 선택합니다.  
   
  **링크**  

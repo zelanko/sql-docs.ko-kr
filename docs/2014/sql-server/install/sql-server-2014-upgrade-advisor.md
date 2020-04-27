@@ -11,19 +11,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bd865b3bf80c930fe2bb8e23f5ea807717f2b1d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092047"
 ---
 # <a name="sql-server-2014-upgrade-advisor"></a>SQL Server 2014 업그레이드 관리자
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업그레이드 관리자는 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소의 구성을 분석한 다음 업그레이드를 성공적으로 수행하기 위해 해결해야 하는 문제에 대한 보고서를 생성합니다.  
   
  설치 미디어의 재배포 가능 패키지 폴더에서 업그레이드 관리자 설치 파일(sqlua.msi)을 사용하거나, 이 파일이 포함된 [SQL 2014 기능 팩을 다운로드](https://www.microsoft.com/download/details.aspx?id=42295)하십시오.  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[업그레이드 관리자 설치](../../../2014/sql-server/install/installing-upgrade-advisor.md)|업그레이드 관리자를 설치할 수 있는 여러 가지 방법에 대해 설명합니다.|  
 |[업그레이드 관리자 작업](../../../2014/sql-server/install/working-with-upgrade-advisor.md)|업그레이드 관리자 기능에 대한 개요를 제공하고 업그레이드 관리자를 설치 및 사용하는 방법과 업그레이드 관리자 보고서를 사용하는 방법에 대해 설명합니다.|  

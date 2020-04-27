@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d683c9dc9a201b1f4351ee00d718ad0d7917606
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084608"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>마이닝 모델에서 사례 데이터로 드릴스루
@@ -25,8 +25,7 @@ ms.locfileid: "66084608"
  기본 데이터로의 드릴스루가 마이닝 구조에서는 허용되지 않지만 마이닝 모델에서는 허용되는 경우 마이닝 구조가 아닌 모델 사례에서 정보를 볼 수 있습니다.  
   
 > [!NOTE]  
->  
-  `AllowDrillthrough` 속성을 `True`로 설정하여 기존 마이닝 모델에 드릴스루 기능을 추가할 수 있습니다. 그러나 드릴스루를 사용하도록 설정한 후에는 모델을 다시 처리해야 사례 데이터를 볼 수 있습니다. 자세한 내용은 [마이닝 모델에 드릴스루 사용](enable-drillthrough-for-a-mining-model.md)을 참조하세요.  
+>  `AllowDrillthrough` 속성을 `True`로 설정하여 기존 마이닝 모델에 드릴스루 기능을 추가할 수 있습니다. 그러나 드릴스루를 사용하도록 설정한 후에는 모델을 다시 처리해야 사례 데이터를 볼 수 있습니다. 자세한 내용은 [마이닝 모델에 드릴스루 사용](enable-drillthrough-for-a-mining-model.md)을 참조하세요.  
   
  사용하는 뷰어 유형에 따라 다음과 같은 방법으로 드릴스루할 노드를 선택할 수 있습니다.  
   
@@ -45,23 +44,19 @@ ms.locfileid: "66084608"
   
 ### <a name="to-view-drillthrough-data-from-a-mining-model"></a>마이닝 모델에서 드릴스루 데이터를 보려면  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 원하는 마이닝 모델을 포함하는 마이닝 구조를 엽니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 원하는 마이닝 모델을 포함하는 마이닝 구조를 엽니다.  
   
 2.  데이터 마이닝 디자이너에서 **마이닝 모델 뷰어** 탭을 클릭합니다.  
   
-3.  
-  **마이닝 모델** 드롭다운 목록에서 모델을 선택합니다.  
+3.  **마이닝 모델** 드롭다운 목록에서 모델을 선택합니다.  
   
-4.  
-  **뷰어** 드롭다운 목록에서 뷰어를 선택하고 특정 노드를 마우스 오른쪽 단추로 클릭합니다.  
+4.  **뷰어** 드롭다운 목록에서 뷰어를 선택하고 특정 노드를 마우스 오른쪽 단추로 클릭합니다.  
   
-5.  
-  **드릴스루**를 선택한 다음 **모델 열만**또는 **모델 및 구조 열** 을 선택하여 **드릴스루** 창을 엽니다.  
+5.  **드릴스루**를 선택한 다음 **모델 열만**또는 **모델 및 구조 열** 을 선택하여 **드릴스루** 창을 엽니다.  
   
 6.  데이터를 클립보드에 복사하려면 테이블에서 임의의 행을 마우스 오른쪽 단추로 클릭하고 **모두 복사**를 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [드릴스루 쿼리 &#40;데이터 마이닝&#41;](drillthrough-queries-data-mining.md)  
+ [드릴스루 쿼리&#40;데이터 마이닝&#41;](drillthrough-queries-data-mining.md)  
   
   

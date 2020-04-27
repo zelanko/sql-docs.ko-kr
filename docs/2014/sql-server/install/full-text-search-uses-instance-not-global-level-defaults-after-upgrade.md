@@ -14,22 +14,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9c81892d6b83cef87a27a836d9691779a841104a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095056"
 ---
 # <a name="upgrading-will-cause-full-text-search-to-use-instance-level-not-global-word-breakers-and-filters-by-default"></a>업그레이드하면 기본적으로 전체 텍스트 Search에서 전역 수준이 아닌 인스턴스 수준의 단어 분리기와 필터를 사용하게 됩니다.
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 새 단어 분리기와 필터를 인스턴스 수준에서 등록할 수 있습니다.  
   
 ## <a name="component"></a>구성 요소  
  전체 텍스트 검색  
   
-## <a name="description"></a>Description  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 새 단어 분리기와 필터를 인스턴스 수준에서 등록할 수 있으므로 인스턴스 간에 기능과 보안이 분리됩니다.  
+## <a name="description"></a>설명  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 새 단어 분리기와 필터를 인스턴스 수준에서 등록할 수 있으므로 인스턴스 간에 기능과 보안이 분리됩니다.  
   
 ## <a name="corrective-action"></a>수정 동작  
  업그레이드한 후 `sp_fulltext_service`를 사용하여 구성 요소를 로드할 수 있도록 서비스 속성 및 `load_os_resources`를 설정합니다. 다음을 실행해야 합니다.  

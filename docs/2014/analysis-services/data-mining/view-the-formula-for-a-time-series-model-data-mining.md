@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43382b5dd8a20de1454bfc3d6a16aa68c99e34a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082595"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>시계열 모델에 대한 수식 보기(데이터 마이닝)
@@ -35,16 +35,13 @@ ms.locfileid: "66082595"
   
 ### <a name="to-view-the-artxp-regression-formula-for-a-time-series-model"></a>시계열 모델의 ARTXP 회귀 수식을 보려면  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 보려는 시계열 모델을 선택하고 **찾아보기**를 클릭합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 보려는 시계열 모델을 선택하고 **찾아보기**를 클릭합니다.  
   
      -- 또는 --  
   
-     
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 시계열 모델을 선택한 다음 **마이닝 모델 뷰어** 탭을 클릭합니다.  
+     [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 시계열 모델을 선택한 다음 **마이닝 모델 뷰어** 탭을 클릭합니다.  
   
-2.  
-  **모델** 탭을 클릭합니다.  
+2.  **모델** 탭을 클릭합니다.  
   
 3.  모델에 여러 개의 트리가 있는 경우 **트리** 드롭다운 목록에서 단일 트리를 선택합니다.  
   
@@ -53,27 +50,21 @@ ms.locfileid: "66082595"
   
 4.  트리의 리프 노드를 클릭합니다.  
   
-     
-  **데이터 계열** 이라는 레이블이 붙는 노드는 항상 리프 노드이며 수식을 포함할 수 있습니다. 
-  **(All)** 노드에 자식 노드가 없는 경우 이 노드도 수식을 포함할 수 있습니다.  
+     **데이터 계열** 이라는 레이블이 붙는 노드는 항상 리프 노드이며 수식을 포함할 수 있습니다. **(All)** 노드에 자식 노드가 없는 경우 이 노드도 수식을 포함할 수 있습니다.  
   
-5.  
-  **마이닝 범례** 를 사용할 수 없는 경우 노드를 마우스 오른쪽 단추로 클릭하고 **범례 표시**를 선택합니다.  
+5.  **마이닝 범례** 를 사용할 수 없는 경우 노드를 마우스 오른쪽 단추로 클릭하고 **범례 표시**를 선택합니다.  
   
      ARTXP 수식은 **마이닝 범례**의 첫 번째 부분에 **트리 노드 수식**으로 표시됩니다.  
   
 ### <a name="to-view-the-arima-formula-for-a-time-series-model"></a>시계열 모델의 ARIMA 수식을 보려면  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 보려는 시계열 모델을 선택하고 **찾아보기**를 클릭합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 보려는 시계열 모델을 선택하고 **찾아보기**를 클릭합니다.  
   
      -- 또는 --  
   
-     
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 시계열 모델을 선택한 다음 **마이닝 모델 뷰어** 탭을 클릭합니다.  
+     [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 시계열 모델을 선택한 다음 **마이닝 모델 뷰어** 탭을 클릭합니다.  
   
-2.  
-  **모델** 탭을 클릭합니다.  
+2.  **모델** 탭을 클릭합니다.  
   
 3.  모델에 여러 개의 트리가 있는 경우 **트리** 드롭다운 목록에서 단일 트리를 선택합니다.  
   
@@ -84,8 +75,7 @@ ms.locfileid: "66082595"
   
      ARIMA 수식은 **마이닝 범례**의 두 번째 부분에 **ARIMA 수식**으로 표시됩니다.  
   
-5.  
-  **마이닝 범례** 를 사용할 수 없는 경우 노드를 마우스 오른쪽 단추로 클릭하고 **범례 표시**를 선택합니다.  
+5.  **마이닝 범례** 를 사용할 수 없는 경우 노드를 마우스 오른쪽 단추로 클릭하고 **범례 표시**를 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [마이닝 모델 뷰어 태스크 및 방법](mining-model-viewer-tasks-and-how-tos.md)   

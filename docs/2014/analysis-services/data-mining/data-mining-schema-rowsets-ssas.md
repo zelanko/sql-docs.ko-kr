@@ -18,14 +18,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30a4a503b16693a3774aa7f68771fb0f9dd70810
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084905"
 ---
 # <a name="querying-the-data-mining-schema-rowsets-analysis-services---data-mining"></a>데이터 마이닝 스키마 행 집합 쿼리(Analysis Services - 데이터 마이닝)
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에는 기존 OLE DB 데이터 마이닝 스키마 행 집합 대부분이 DMX(Data Mining Extensions) 문을 사용하여 쿼리할 수 있는 시스템 테이블 집합으로 노출됩니다. 데이터 마이닝 스키마 행 집합을 대상으로 쿼리를 작성하면 사용할 수 있는 서비스를 식별하고, 모델과 구조의 상태에 대한 업데이트를 가져오고, 모델 콘텐츠나 매개 변수에 대한 정보를 찾을 수 있습니다. 데이터 마이닝 스키마 행 집합에 대한 설명은 [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)을 참조하십시오.  
   
 > [!NOTE]  
@@ -34,7 +33,7 @@ ms.locfileid: "66084905"
 ## <a name="list-of-data-mining-schema-rowsets"></a>데이터 마이닝 스키마 행 집합 목록  
  다음 표에서는 쿼리 및 모니터링하는 데 유용한 데이터 마이닝 스키마 행 집합의 목록을 보여 줍니다.  
   
-|행 집합 이름|Description|  
+|행 집합 이름|설명|  
 |-----------------|-----------------|  
 |DMSCHEMA_MINING_MODELS|현재 컨텍스트의 모든 마이닝 모델을 나열합니다.<br /><br /> 여기에는 만든 날짜, 모델을 만드는 데 사용된 매개 변수 및 학습 집합의 크기와 같은 정보가 포함됩니다.|  
 |DMSCHEMA_MINING_COLUMNS|현재 컨텍스트의 마이닝 모델에 사용된 모든 열을 나열합니다.<br /><br /> 마이닝 구조 원본 열에 대한 매핑, 데이터 형식, 전체 자릿수, 열에 사용할 수 있는 예측 함수 등의 정보가 포함됩니다.|  

@@ -11,15 +11,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 385380e6e51c3b8519e7dbc6ec3d934e1ef14846
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089244"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>옵션(텍스트 편집기 - 모든 언어 - 일반 페이지)
-  이 대화 상자를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 포함된 5개 편집기 모두의 일반 편집 옵션을 설정할 수 있습니다. 이 옵션을 표시하려면 **도구** 메뉴에서 **옵션** 을 클릭하고 
-  **텍스트 편집기** 폴더를 선택한 다음 **모든 언어** 폴더를 확장하고 **일반**을 클릭합니다.  
+  이 대화 상자를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 포함된 5개 편집기 모두의 일반 편집 옵션을 설정할 수 있습니다. 이 옵션을 표시하려면 **도구** 메뉴에서 **옵션** 을 클릭하고 **텍스트 편집기** 폴더를 선택한 다음 **모든 언어** 폴더를 확장하고 **일반**을 클릭합니다.  
   
 ## <a name="option-settings-by-editor"></a>편집기별 옵션 설정  
  DMX, MDX 및 SQL Server Compact 편집기에 대해 옵션을 설정하려면 **모든 언어** 대화 상자를 사용해야 합니다. 여기서 설정한 옵션은 일반 텍스트, Transact-SQL 및 XML 편집기에도 적용되지만 이러한 언어에 대한 하위 폴더를 확장하고 해당 옵션 페이지를 선택하여 각 편집기에 대해 옵션을 별도로 설정할 수도 있습니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "66089244"
  **가상 공간 활성화**  
  주석을 코드 옆의 일정한 위치에 배치합니다. 이 확인란을 선택하면 행의 마지막 문자 뒤에 커서를 배치할 수 있습니다. 입력 시 행을 완성하기 위해 탭이나 공백이 자동으로 삽입 지점에 추가됩니다.  
   
- **자동 줄 바꿈**  
+ **단어 줄 바꿈**  
  가로 방향으로 표시 가능한 편집기 영역을 넘어가는 줄 부분을 다음 줄에 표시합니다. 이 확인란을 선택하면 **자동 줄 바꿈 시각 문자 표시** 옵션이 활성화됩니다.  
   
  **자동 줄 바꿈 시각 문자 표시**  

@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cb44a7b635e24c0c2e3266c1cca98a9c4f6a347c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093991"
 ---
 # <a name="migrate-scripts-to-vsta"></a>VSTA로 스크립트 마이그레이션
@@ -34,15 +34,13 @@ ms.locfileid: "66093991"
   
 -   VSA 스크립트의 진입점 이름이 바뀐 경우  
   
-     진입점은 `ScriptMain` 런타임이 VSTA 프로젝트의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 클래스에서 스크립트 태스크 코드에 대한 진입점으로 호출하는 메서드를 지정합니다. 
-  `ScriptMain` 클래스는 스크립트 템플릿이 생성하는 기본 클래스입니다.  
+     진입점은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임이 VSTA 프로젝트의 `ScriptMain` 클래스에서 스크립트 태스크 코드에 대한 진입점으로 호출하는 메서드를 지정합니다. `ScriptMain` 클래스는 스크립트 템플릿이 생성하는 기본 클래스입니다.  
   
 -   VSA 스크립트에 진입점이 없거나 여러 개 있는 경우  
   
 -   어셈블리 참조를 추가할 수 없는 경우  
   
--   
-  `ScriptMain` 클래스는 `ScriptObjectModelSSIS` 클래스뿐만 아니라 다른 클래스에서도 상속되도록 수정되었습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 는 다중 상속을 지원 하지 않습니다.  
+-   `ScriptMain` 클래스는 `ScriptObjectModelSSIS` 클래스뿐만 아니라 다른 클래스에서도 상속되도록 수정되었습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 는 다중 상속을 지원 하지 않습니다.  
   
  에서 사용 [!INCLUDE[vbprvblong](../../includes/vbprvblong-md.md)] 하는 VSA 스크립트를에서 사용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csharp_orcas_long](../../includes/csharp-orcas-long-md.md)]하는 VSTA 스크립트로 변환할 수 없습니다. 그러나를 사용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csharp_orcas_long](../../includes/csharp-orcas-long-md.md)]하는 새 VSTA 스크립트를 만들 수 있습니다. 자세한 내용은은 [스크립트 태스크 코딩 및 디버깅](../../integration-services/control-flow/script-task.md) 및 [스크립트 구성 요소 코딩 및 디버깅](../../integration-services/data-flow/transformations/script-component.md)을 참조하십시오.  
   

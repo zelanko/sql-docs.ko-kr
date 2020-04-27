@@ -15,14 +15,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8b80e11ffdf12037b466531b0d5b10a2b9f3a2e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66090961"
 ---
 # <a name="working-with-upgrade-advisor"></a>업그레이드 관리자 작업
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로의 성공적인 업그레이드를 위해 업그레이드 관리자는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하기 전에 설치에서 해결해야 하는 문제를 식별하는 중앙 콘솔을 제공합니다.  
   
  업그레이드 관리자를 사용하여 다음 태스크를 수행할 수 있습니다.  
@@ -30,8 +29,7 @@ ms.locfileid: "66090961"
 -   로컬 또는 원격 서버에서 이전 버전의 구성 요소 분석  
   
     > [!IMPORTANT]  
-    >  
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 원격 인스턴스는 분석할 수 없습니다.  
+    >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 원격 인스턴스는 분석할 수 없습니다.  
   
 -   분석 결과 보기  
   
@@ -41,7 +39,7 @@ ms.locfileid: "66090961"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[업그레이드 관리자 개요](../../../2014/sql-server/install/overview-of-upgrade-advisor.md)|업그레이드 프로세스, 업그레이드 관리자 분석 마법사 및 업그레이드 관리자 보고서 뷰어에 대한 개요를 제공합니다.|  
 |[업그레이드 관리자 방법 도움말 항목](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)|일반적인 업그레이드 관리자 절차를 수행하는 방법에 대한 지침을 제공합니다.|  

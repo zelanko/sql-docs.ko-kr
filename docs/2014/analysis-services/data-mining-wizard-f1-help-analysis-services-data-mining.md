@@ -15,14 +15,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44fd7290f48c995ae9cfc92476f1a33fbdc0e8be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086297"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>데이터 마이닝 마법사 F1 도움말(Analysis Services - 데이터 마이닝)
-  
   **데이터 마이닝 마법사** 를 사용하여 새 마이닝 구조 및 선택적으로 연결된 마이닝 모델을 만들 수 있습니다.  
   
 -   마이닝 구조는 해결하려는 비즈니스 문제에 대한 정보를 나타냅니다. 여기에는 특성 및 열에 있는 데이터의 원본에 대한 바인딩을 설명하는 열이 포함됩니다. 관계형 데이터 또는 큐브의 데이터를 기반으로 마이닝 구조를 만들 수 있습니다.  
@@ -31,8 +30,7 @@ ms.locfileid: "66086297"
   
  자세한 내용은 데이터 [마이닝 마법사 &#40;Analysis Services 데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)를 참조 하세요.  
   
- 
-  **데이터 마이닝 마법사** 는 다음 단계로 이루어져 있습니다.  
+ **데이터 마이닝 마법사** 는 다음 단계로 이루어져 있습니다.  
   
 -   마이닝 모델의 기반으로 사용할 데이터 원본의 유형을 선택합니다.  
   
@@ -54,8 +52,7 @@ ms.locfileid: "66086297"
   
 -   데이터를 학습 집합과 테스트 집합으로 분할합니다.  
   
--   
-  **데이터 마이닝 마법사**를 완료합니다.  
+-   **데이터 마이닝 마법사**를 완료합니다.  
   
  마이닝 구조와 선택적 마이닝 모델을 만든 후에는 **데이터 마이닝 디자이너** 를 사용하여 해당 속성을 수정할 수 있습니다.  
   

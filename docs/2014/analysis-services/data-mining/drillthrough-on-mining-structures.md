@@ -11,21 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 71212f81a2f42fbbff28e04b4632bc2120362089
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084575"
 ---
 # <a name="drillthrough-on-mining-structures"></a>마이닝 구조에서의 드릴스루
-  *드릴스루* 는 마이닝 모델이 나 마이닝 구조를 쿼리하고 모델에 노출 되지 않는 세부 데이터를 가져오는 기능을 의미 합니다.  
+  *드릴스루* 는 마이닝 모델이나 마이닝 구조를 쿼리하고 모델에 표시되지 않는 세부 데이터를 가져오는 기능입니다.  
   
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 사례 데이터로 드릴스루하는 두 가지 옵션을 제공합니다. 마이닝 모델을 작성하는 데 사용된 데이터로 드릴스루하거나 마이닝 구조의 원본 데이터로 드릴스루할 수 있습니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 사례 데이터로 드릴스루하는 두 가지 옵션을 제공합니다. 마이닝 모델을 작성하는 데 사용된 데이터로 드릴스루하거나 마이닝 구조의 원본 데이터로 드릴스루할 수 있습니다.  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>모델 사례로 드릴스루 및 구조로 드릴스루  
- 
-  **모델 사례** 로 드릴스루하는 기능은 모델의 규칙, 패턴 또는 클러스터에 대한 추가 세부 정보를 찾으려는 경우에 유용합니다.  
+ **모델 사례** 로 드릴스루하는 기능은 모델의 규칙, 패턴 또는 클러스터에 대한 추가 세부 정보를 찾으려는 경우에 유용합니다.  
   
  반면 **구조 데이터로 드릴스루** 하는 기능은 모델에서 사용할 수 없었던 정보에 액세스하기 위한 것입니다. 예를 들어 적절한 사용 권한이 있는 경우 모델 학습 및 테스트에 사용된 데이터 행을 찾을 수 있습니다.  
   
@@ -57,7 +55,7 @@ ms.locfileid: "66084575"
 |-|-|  
 |마이닝 모델 뷰어에서 구조로의 드릴스루 사용|[모델 뷰어에서 드릴스루 사용](use-drillthrough-from-the-model-viewers.md)|  
 |특정 모델 유형에 대한 드릴스루 쿼리의 예 참조|[데이터 마이닝 쿼리](data-mining-queries.md)|  
-|특정 마이닝 구조 및 마이닝 모델에 적용되는 사용 권한에 대한 정보 보기|[데이터 마이닝 구조 및 모델 &#40;Analysis Services&#41;에 대 한 권한을 부여 합니다.](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|특정 마이닝 구조 및 마이닝 모델에 적용되는 사용 권한에 대한 정보 보기|[데이터 마이닝 구조 및 모델에 대한 권한 부여&#40;Analysis Services&#41;](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>참고 항목  
  [마이닝 모델에서의 드릴스루](drillthrough-on-mining-models.md)  

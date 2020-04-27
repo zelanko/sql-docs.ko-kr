@@ -13,18 +13,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e075de106a66ffee63c02ead06a3fc68548111a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089374"
 ---
 # <a name="options-query-execution-sql-server-ansi-page"></a>옵션 (쿼리 실행-SQL Server-ANSI 페이지)
-  이러한 ANSI(ISO) 표준 SET 옵션은 사용자 쿼리 실행 기간, 실행 중인 트리거, 저장 프로시저에 대해 쿼리 처리 환경을 정의합니다. 그러나 이러한 SET 옵션에 ISO 표준을 준수하는 데 필요한 모든 옵션이 포함되지는 않습니다. 이 페이지를 사용 하 여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 ISO 표준에 지정 된 설정의 일부 또는 전부를 사용 하 여 쿼리를 실행 하도록 지정할 수 있습니다. 이러한 옵션의 변경 내용은 새로운 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리에만 적용됩니다. 현재 쿼리에 대한 옵션을 변경하려면 **쿼리** 메뉴에서 **쿼리 옵션**을 클릭하거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 창에서 마우스 오른쪽 단추를 클릭한 다음 **쿼리 옵션**을 선택합니다. 
-  **쿼리 옵션** 대화 상자의 **실행**아래에서 **ANSI**를 클릭합니다.  
+  이러한 ANSI(ISO) 표준 SET 옵션은 사용자 쿼리 실행 기간, 실행 중인 트리거, 저장 프로시저에 대해 쿼리 처리 환경을 정의합니다. 그러나 이러한 SET 옵션에 ISO 표준을 준수하는 데 필요한 모든 옵션이 포함되지는 않습니다. 이 페이지를 사용 하 여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 ISO 표준에 지정 된 설정의 일부 또는 전부를 사용 하 여 쿼리를 실행 하도록 지정할 수 있습니다. 이러한 옵션의 변경 내용은 새로운 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리에만 적용됩니다. 현재 쿼리에 대 한 옵션을 변경 하려면 **쿼리 메뉴에서** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **쿼리 옵션** 을 클릭 하거나 쿼리 창에서 마우스 오른쪽 단추를 클릭 한 다음 **쿼리 옵션**을 선택 합니다. **쿼리 옵션** 대화 상자의 **실행**아래에서 **ANSI**를 클릭합니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
- **ANSI_DEFAULTS 설정**  
+ **SET ANSI_DEFAULTS**  
  기본 ISO 설정을 모두 선택하려면 이 확인란을 선택합니다. 기본적으로 모든 ISO 옵션이 선택되지는 않습니다.  
   
  **SET QUOTED_IDENTIFIER**  
@@ -34,10 +33,10 @@ ms.locfileid: "66089374"
  이 값을 설정하면 CREATE TABLE 또는 ALTER TABLE 문에서 명시적으로 NOT NULL로 정의되지 않은 모든 사용자 정의 데이터 형식 또는 열에 기본적으로 Null 값이 허용됩니다. 이 확인란은 기본적으로 선택되어 있습니다.  
   
  **SET IMPLICIT_TRANSACTIONS**  
- SET IMPLICIT_TRANSACTIONS 확인란을 선택하면 연결이 암시적 트랜잭션 모드로 설정됩니다. 이 확인란의 선택을 취소하면 연결은 다시 자동 커밋 트랜잭션 모드로 돌아갑니다. 선택 시 암시적 트랜잭션을 시작하는 문을 보려면 [SET IMPLICIT_TRANSACTIONS&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-implicit-transactions-transact-sql)를 참조하세요. 이 확인란은 기본적으로 선택 취소되어 있습니다.  
+ SET IMPLICIT_TRANSACTIONS 확인란을 선택하면 연결이 암시적 트랜잭션 모드로 설정됩니다. 이 확인란의 선택을 취소하면 연결은 다시 자동 커밋 트랜잭션 모드로 돌아갑니다. 선택 시 암시적 트랜잭션을 시작하는 문을 보려면 [SET IMPLICIT_TRANSACTIONS&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-implicit-transactions-transact-sql)를 참조하세요. 이 확인란은 기본적으로 선택되어 있지 않습니다.  
   
  **SET CURSOR_CLOSE_ON_COMMIT**  
- 이 확인란을 선택하면 트랜잭션이 커밋될 때 열려 있던 모든 커서가 ISO에 따라 자동으로 닫힙니다. 이 값을 OFF로 설정하면 커서는 트랜잭션이 바뀌어도 계속 열려 있으며 연결이 닫히거나 커서를 명시적으로 닫아야만 닫힙니다. 이 확인란은 기본적으로 선택 취소되어 있습니다.  
+ 이 확인란을 선택하면 트랜잭션이 커밋될 때 열려 있던 모든 커서가 ISO에 따라 자동으로 닫힙니다. 이 값을 OFF로 설정하면 커서는 트랜잭션이 바뀌어도 계속 열려 있으며 연결이 닫히거나 커서를 명시적으로 닫아야만 닫힙니다. 이 확인란은 기본적으로 선택되어 있지 않습니다.  
   
  **SET ANSI_PADDING**  
  열이 정의된 열 크기보다 짧은 값 이름을 저장하는 방법과 **char**, **varchar**, **binary**및 **varbinary** 데이터에 후행 공백이 있는 값을 저장하는 방법을 제어합니다. 이 설정은 새 열의 정의에만 영향을 줍니다. 열이 생성된 다음에는 열을 만들 때의 설정에 따라 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 값을 저장합니다. 나중에 이 설정을 변경해도 기존의 열은 영향을 받지 않습니다. 이 확인란은 기본적으로 선택되어 있습니다.  

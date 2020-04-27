@@ -14,14 +14,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 01098f2181085f17788429608afb7bdda15fb504
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089238"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>옵션(텍스트 편집기: 편집기 탭 및 상태 표시줄 페이지)
-  
   **편집기 탭 및 상태 표시줄** 페이지를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 쿼리 편집기에 표시되는 정보를 사용자 지정할 수 있습니다. 쿼리 편집기 창의 탭 및 상태 표시줄에 표시되는 정보의 수준을 지정하고 상태 표시줄을 편집기 창의 위쪽에 표시할지, 아래쪽에 표시할지를 지정할 수 있습니다.  
   
 ## <a name="option-settings-by-editor"></a>편집기별 옵션 설정  
@@ -35,10 +34,10 @@ ms.locfileid: "66089238"
  **실행 시간 표시**  
  스크립트 실행 시간을 포함합니다. 설정은 다음과 같습니다.  
   
- **없음을**  
+ **없음**  
  상태 표시줄에서 시간 정보를 표시하지 않습니다.  
   
- **끝**  
+ **종단**  
  상태 표시줄에서 스크립트가 실행 중인 현재 시간을 표시합니다. 스크립트가 완료되면 스크립트가 완료된 시간을 표시합니다.  
   
  **시간**  
@@ -71,7 +70,7 @@ ms.locfileid: "66089238"
  **맨 위로**  
  상태 표시줄이 쿼리 편집기 창 위쪽에 표시됩니다.  
   
- **아래쪽**  
+ **하위별**  
  상태 표시줄이 쿼리 편집기 창 아래쪽에 표시됩니다.  
   
 ## <a name="tab-text"></a>탭 텍스트  

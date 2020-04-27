@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1cfc630ffc943a989348e350c3668452a2777298
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083374"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>마이닝 구조(Analysis Services - 데이터 마이닝)
@@ -35,11 +35,11 @@ ms.locfileid: "66083374"
   
  다이어그램의 마이닝 구조는 CustomerID 필드에 조인된 여러 개의 테이블 또는 뷰가 들어 있는 데이터 원본을 기반으로 합니다. 한 테이블에는 지리적 영역, 나이, 수입 및 성별과 같은 고객에 대한 정보가 들어 있고, 관련된 중첩 테이블에는 고객이 구매한 제품과 같은 각 고객에 대한 추가 정보가 여러 행으로 들어 있습니다. 이 다이어그램에서는 한 마이닝 구조에서 여러 개의 모델이 만들어질 수 있으며 각 모델이 구조에서 사용하는 열이 서로 다를 수 있다는 것을 보여 줍니다.  
   
- **모델 1** CustomerID, 소득, Age, Region을 사용 하 고 Region의 데이터를 필터링 합니다.  
+ **모델 1** CustomerID, Income, Age, Region을 사용하고 Region의 데이터를 필터링합니다.  
   
- **모델 2** CustomerID, 소득, Age, Region을 사용 하 고 Age의 데이터를 필터링 합니다.  
+ **모델 2** CustomerID, Income, Age, Region을 사용하고 Age의 데이터를 필터링합니다.  
   
- **모델 3** 는 CustomerID, Age, 성별 및 중첩 테이블을 사용 하며 필터를 사용 하지 않습니다.  
+ **모델 3** CustomerID, Age, Gender 및 중첩 테이블을 사용하고 필터는 적용하지 않습니다.  
   
  각 모델에서는 입력에 서로 다른 열을 사용하고 두 개의 모델에서는 추가적으로 필터를 적용하여 모델에 사용되는 데이터를 제한하므로 세 모델이 모두 동일한 데이터를 기반으로 함에도 불구하고 결과는 매우 다를 수 있습니다. 사례 키로 사용할 수 있는 열은 CustomerID 열뿐이므로 모든 모델에서 이 열이 필요합니다.  
   
@@ -54,11 +54,11 @@ ms.locfileid: "66083374"
   
 -   해당될 경우 bested 테이블의 키를 포함하여 구조에 대한 키를 정의합니다.  
   
--   학습 집합 및 테스트 집합에 별도의 원본 데이터를 설정할지 여부를 지정합니다. 이 단계는 옵션입니다.  
+-   학습 집합 및 테스트 집합에 별도의 원본 데이터를 설정할지 여부를 지정합니다. 이 단계는 선택 사항입니다.  
   
 -   구조를 처리합니다.  
   
- 이러한 단계는 다음 섹션에 자세히 설명되어 있습니다.  
+ 각 단계에 대해서는 다음 섹션에서 자세하게 설명합니다.  
   
 ### <a name="data-sources-for-mining-structures"></a>마이닝 구조를 위한 데이터 원본  
  마이닝 구조를 정의할 때는 기존 데이터 원본 뷰에서 제공하는 열을 사용합니다. 데이터 원본 뷰는 여러 데이터 원본을 결합하여 단일 원본으로 사용할 수 있는 공유 개체입니다. 원래의 데이터 원본은 클라이언트 애플리케이션에서 볼 수 없으며, 데이터 원본 뷰의 속성을 사용하여 데이터 유형을 수정하거나 집계를 만들거나 열의 별칭을 지정할 수 있습니다.  
@@ -74,8 +74,7 @@ ms.locfileid: "66083374"
   
  마이닝 구조는 중첩 테이블을 포함할 수도 있습니다. 중첩 테이블은 사례 엔터티 및 관련 특성 간의 일 대 다 관계를 나타냅니다. 예를 들어 고객을 설명하는 정보가 한 테이블에 있고 이 고객의 구매 내용이 다른 테이블에 있으면 중첩 테이블을 사용하여 정보를 단일 사례로 결합할 수 있습니다. 고객 식별자는 엔터티이고 구매 내용은 관련 특성입니다. 중첩 테이블을 사용하는 경우에 대한 자세한 내용은 [중첩 테이블&#40;Analysis Services - 데이터 마이닝&#41;](nested-tables-analysis-services-data-mining.md)을 참조하세요.  
   
- 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 데이터 마이닝 모델을 만들려면 먼저 데이터 마이닝 구조를 만들어야 합니다. 데이터 마이닝 마법사는 마이닝 구조를 만들고 데이터를 선택하고 마이닝 모델을 추가하는 과정을 안내해 줍니다.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 데이터 마이닝 모델을 만들려면 먼저 데이터 마이닝 구조를 만들어야 합니다. 데이터 마이닝 마법사는 마이닝 구조를 만들고 데이터를 선택하고 마이닝 모델을 추가하는 과정을 안내해 줍니다.  
   
  DMX(Data Mining Extensions)를 사용하여 마이닝 모델을 만드는 경우 모델과 해당 모델의 열을 지정할 수 있으며 DMX에서는 필요한 마이닝 구조를 자동으로 만듭니다. 자세한 내용은 [CREATE MINING MODEL&#40;DMX&#41;](/sql/dmx/create-mining-model-dmx)을 참조하세요.  
   
@@ -94,19 +93,16 @@ ms.locfileid: "66083374"
 ### <a name="processing-mining-structures"></a>마이닝 구조 처리  
  마이닝 구조는 처리되기 전까지는 단순한 메타데이터 컨테이너입니다. 마이닝 구조를 처리할 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 데이터에 대한 통계, 연속 특성을 불연속화하는 방법 및 나중에 마이닝 모델에서 사용되는 기타 정보를 저장하는 캐시를 만듭니다. 마이닝 모델은 이 요약 정보를 저장하지 않지만, 대신 마이닝 구조가 처리될 때 캐시된 요약 정보를 참조합니다. 따라서 기존 구조에 새 모델을 추가할 때마다 구조를 다시 처리할 필요가 없으며 해당 모델만 처리하면 됩니다.  
   
- 캐시가 매우 큰 경우 또는 세부 데이터를 제거하려는 경우에는 캐시를 처리 후에 삭제하도록 지정할 수 있습니다. 데이터를 캐시하지 않으려면 마이닝 구조의 `CacheMode` 속성을 `ClearAfterProcessing`으로 변경하면 됩니다. 이렇게 하면 모델이 처리된 후 캐시가 삭제됩니다. 
-  `CacheMode` 속성을 `ClearAfterProcessing`으로 설정하면 마이닝 모델에서 드릴스루 기능을 사용할 수 없게 됩니다.  
+ 캐시가 매우 큰 경우 또는 세부 데이터를 제거하려는 경우에는 캐시를 처리 후에 삭제하도록 지정할 수 있습니다. 데이터를 캐시하지 않으려면 마이닝 구조의 `CacheMode` 속성을 `ClearAfterProcessing`으로 변경하면 됩니다. 이렇게 하면 모델이 처리된 후 캐시가 삭제됩니다. `CacheMode` 속성을 `ClearAfterProcessing`으로 설정하면 마이닝 모델에서 드릴스루 기능을 사용할 수 없게 됩니다.  
   
  그러나 캐시를 삭제한 후에는 마이닝 구조에 새 모델을 추가할 수 없습니다. 구조에 새 마이닝 모델을 추가하거나 기존 모델의 속성을 변경하려면 먼저 마이닝 구조를 다시 처리해야 합니다. 자세한 내용은 [처리 요구 사항 및 고려 사항&#40;데이터 마이닝&#41;](processing-requirements-and-considerations-data-mining.md)을 참조하세요.  
   
 ### <a name="viewing-mining-structures"></a>마이닝 구조 보기  
- 뷰어를 사용하여 마이닝 구조의 데이터를 탐색할 수 있습니다. 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서는 데이터 마이닝 디자이너의 **마이닝 구조** 탭을 사용하여 구조 열 및 해당 정의를 볼 수 있습니다. 자세한 내용은 [Data Mining Designer](data-mining-designer.md)을(를) 참조하세요.  
+ 뷰어를 사용하여 마이닝 구조의 데이터를 탐색할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서는 데이터 마이닝 디자이너의 **마이닝 구조** 탭을 사용하여 구조 열 및 해당 정의를 볼 수 있습니다. 자세한 내용은 [Data Mining Designer](data-mining-designer.md)을(를) 참조하세요.  
   
  마이닝 구조의 데이터를 검토하려면 DMX(Data Mining Extensions)를 사용하여 쿼리를 만들면 됩니다. 예를 들어 `SELECT * FROM <structure>.CASES` 문은 마이닝 구조의 모든 데이터를 반환합니다. 이 정보를 검토하려면 먼저 마이닝 구조가 처리되어 있고 처리 결과가 캐시되어 있어야 합니다.  
   
- 
-  `SELECT * FROM <model>.CASES` 문은 이와 동일하지만 해당 모델의 사례에 대한 열만 반환합니다. 자세한 내용은 [SELECT FROM &#60;structure&#62;.CASES](/sql/dmx/select-from-structure-cases) 및 [SELECT FROM &#60;model&#62;.CASES&#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)를 참조하세요.  
+ `SELECT * FROM <model>.CASES` 문은 이와 동일하지만 해당 모델의 사례에 대한 열만 반환합니다. 자세한 내용은 [SELECT FROM &#60;structure&#62;.CASES](/sql/dmx/select-from-structure-cases) 및 [SELECT FROM &#60;model&#62;.CASES&#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)를 참조하세요.  
   
 ## <a name="using-data-mining-models-with-mining-structures"></a>마이닝 구조에서 데이터 마이닝 모델 사용  
  데이터 마이닝 모델은 마이닝 구조가 나타나는 데이터에 마이닝 모델 알고리즘을 적용합니다. 마이닝 모델은 특정 마이닝 구조에 속하는 개체로서, 마이닝 구조에서 정의한 속성의 모든 값을 상속받습니다. 모델은 마이닝 구조에 포함된 모든 열이나 이 열의 하위 집합을 사용할 수 있습니다. 하나의 구조에 여러 구조 열 복사본을 추가할 수 있습니다. 또한 하나의 모델에 여러 구조 열 복사본을 추가한 다음 모델의 각 구조 열에 다른 이름이나 *별칭*을 할당할 수 있습니다. 구조 열의 별칭을 지정하는 방법에 대한 자세한 내용은 [모델 열의 별칭 만들기](create-an-alias-for-a-model-column.md) 및 [마이닝 모델 속성](mining-model-properties.md)을 참조하세요.  
@@ -126,6 +122,6 @@ ms.locfileid: "66083374"
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 개체 &#40;Analysis Services 다차원 데이터&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [마이닝 모델 &#40;Analysis Services 데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)  
+ [마이닝 모델&#40;Analysis Services - 데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)  
   
   

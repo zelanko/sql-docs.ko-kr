@@ -11,14 +11,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f8d3ab415fbeedd26fa0c560c10eeff809787bca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091443"
 ---
 # <a name="upgrade-progress"></a>업그레이드 진행률
-  
   **설치 마법사의** 업그레이드 진행률 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업그레이드 상태를 모니터링할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

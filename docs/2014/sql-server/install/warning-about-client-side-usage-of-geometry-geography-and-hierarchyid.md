@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 524400e9c9420fb54447220215d4660874ec6d69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091086"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>GEOMETRY, GEOGRAPHY 및 HIERARCHYID의 클라이언트 쪽 사용에 대한 경고
@@ -26,24 +26,19 @@ ms.locfileid: "66091086"
 ## <a name="description"></a>Description  
  공간 데이터 형식을 포함하는 **Microsoft.SqlServer.Types.dll**어셈블리가 버전 10.0에서 버전 11.0으로 업그레이드되었습니다. 이 어셈블리를 참조하는 사용자 지정 애플리케이션에서는 다음 조건에 해당될 때 오류가 발생할 수 있습니다.  
   
--   가 설치 된 컴퓨터에가 설치 되어 있는 컴퓨터에서 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 사용자 지정 응용 프로그램을 이동 하는 경우 SqlTypes 어셈블리의 참조 된 버전 10.0이 없기 때문에 응용 프로그램이 실패 합니다. **** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
-  `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`라는 오류 메시지가 나타날 수 있습니다.  
+-   가 설치 된 컴퓨터에가 설치 되어 있는 컴퓨터에서 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 사용자 지정 응용 프로그램을 이동 하는 경우 SqlTypes 어셈블리의 참조 된 버전 10.0이 없기 때문에 응용 프로그램이 실패 합니다. **SqlTypes** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`라는 오류 메시지가 나타날 수 있습니다.  
   
 -   **SqlTypes** 어셈블리 버전 11.0을 참조 하 고 버전 10.0도 설치 되 면 다음 오류 메시지가 표시 될 수 있습니다.`"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
   
 -   .NET 3.5, 4 또는 4.5를 대상으로 하는 사용자 지정 애플리케이션에서 **SqlTypes** 어셈블리 버전 11.0을 참조하는 경우 SqlClient는 기본적으로 이 어셈블리의 버전 10.0을 로드하므로 애플리케이션 오류가 발생합니다. 이 오류는 애플리케이션이 다음 메서드 중 하나를 호출할 때 발생합니다.  
   
-    -   
-  `GetValue` 클래스의 `SqlDataReader` 메서드  
+    -   `GetValue` 클래스의 `SqlDataReader` 메서드  
   
-    -   
-  `GetValues` 클래스의 `SqlDataReader` 메서드  
+    -   `GetValues` 클래스의 `SqlDataReader` 메서드  
   
-    -   
-  `SqlDataReader` 클래스의 대괄호 인덱스 연산자 []  
+    -   `SqlDataReader` 클래스의 대괄호 인덱스 연산자 []  
   
-    -   
-  `ExecuteScalar` 클래스의 `SqlCommand` 메서드  
+    -   `ExecuteScalar` 클래스의 `SqlCommand` 메서드  
   
 ## <a name="corrective-action"></a>수정 동작  
  다음 메서드 중 하나를 사용하여 이 문제를 해결할 수 있습니다.  

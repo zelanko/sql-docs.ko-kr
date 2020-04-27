@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b713d9918dabcbaabba2085710dfaa5ed5d3a33b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083274"
 ---
 # <a name="naive-bayes-model-query-examples"></a>Naive Bayes 모델 쿼리 예제
@@ -30,22 +30,22 @@ ms.locfileid: "66083274"
   
  [학습 데이터의 요약 검색](#bkmk_Query2)  
   
- [특성에 대 한 추가 정보 찾기](#bkmk_Query3)  
+ [특성에 대한 추가 정보 찾기](#bkmk_Query3)  
   
  [시스템 저장 프로시저 사용](#bkmk_Query4)  
   
  **예측 쿼리**  
   
- [단일 쿼리를 사용 하 여 결과 예측](#bkmk_Query5)  
+ [단일 쿼리를 사용하여 결과 예측](#bkmk_Query5)  
   
- [확률 및 지원 값으로 예측 가져오기](#bkmk_Query6)  
+ [확률 및 지지도 값과 함께 예측 가져오기](#bkmk_Query6)  
   
  [연결 예측](#bkmk_Query7)  
   
 ## <a name="finding-information-about-a-naive-bayes-model"></a>Naive Bayes 모델에 대한 정보 찾기  
  Naive Bayes 모델의 모델 콘텐츠는 학습 데이터의 값 분포에 대한 집계 정보를 제공합니다. 데이터 마이닝 스키마 행 집합에 대한 쿼리를 만들어 모델의 메타데이터에 대한 정보를 검색할 수도 있습니다.  
   
-###  <a name="bkmk_Query1"></a>예제 쿼리 1: DMX를 사용 하 여 모델 메타 데이터 가져오기  
+###  <a name="sample-query-1-getting-model-metadata-by-using-dmx"></a><a name="bkmk_Query1"></a> 예제 쿼리 1: DMX를 사용하여 모델 메타데이터 가져오기  
  데이터 마이닝 스키마 행 집합을 쿼리하면 모델에 대한 메타데이터를 찾을 수 있습니다. 이러한 메타데이터로는 모델이 만들어진 시기, 모델이 마지막으로 처리된 시기, 모델의 기반이 되는 마이닝 구조의 이름, 예측 가능한 특성으로 사용된 열 이름 등이 포함됩니다. 모델을 만들 때 사용된 매개 변수를 반환할 수도 있습니다.  
   
 ```  
@@ -69,7 +69,7 @@ WHERE MODEL_NAME = 'TM_NaiveBayes_Filtered'
   
  이 예에 사용된 모델은 [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md)에서 만드는 Naive Bayes 모델을 기반으로 하되 여기에 두 번째 예측 가능한 특성을 추가하고 학습 데이터에 필터를 적용하여 수정한 것입니다.  
   
-###  <a name="bkmk_Query2"></a>예제 쿼리 2: 학습 데이터의 요약 검색  
+###  <a name="sample-query-2-retrieving-a-summary-of-training-data"></a><a name="bkmk_Query2"></a> 예제 쿼리 2: 학습 데이터의 요약 검색  
  Naive Bayes 모델에서 한계 통계 노드에는 학습 데이터의 값 분포에 대한 집계 정보가 저장됩니다. 따라서 이와 같은 요약 정보를 찾기 위해 학습 데이터에 대한 SQL 쿼리를 만들지 않아도 되므로 편리합니다.  
   
  다음 예에서는 DMX 내용 쿼리를 사용하여 노드(NODE_TYPE = 24)에서 데이터를 검색합니다. 통계는 중첩 테이블에 저장되어 있으므로 결과를 보기 쉽게 만들기 위해 FLATTENED 키워드가 사용됩니다.  
@@ -99,7 +99,7 @@ WHERE NODE_TYPE = 26
   
  Naive Bayes 모델의 NODE_DISTRIBUTION 테이블에 제공되는 값에 대한 정의는 [Naive Bayes 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)를 참조하세요. 누락 값이 지지도 및 확률 계산에 주는 영향에 대한 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](missing-values-analysis-services-data-mining.md)을 참조하세요.  
   
-###  <a name="bkmk_Query3"></a>예제 쿼리 3: 특성에 대 한 추가 정보 찾기  
+###  <a name="sample-query-3-finding-more-information-about-attributes"></a><a name="bkmk_Query3"></a> 예제 쿼리 3: 특성에 대한 추가 정보 찾기  
  Naive Bayes 모델에는 서로 다른 특성 간의 관계에 대한 복잡한 정보가 들어 있는 경우도 있으므로 이러한 관계를 가장 쉽게 보는 방법은 [Microsoft Naive Bayes 뷰어](browse-a-model-using-the-microsoft-naive-bayes-viewer.md)를 사용하는 것입니다. 그러나 DMX 쿼리를 만들어 데이터를 반환할 수도 있습니다.  
   
  다음 예에서는 모델에서 특정 특성 `Region`에 대한 정보를 반환하는 방법을 보여 줍니다.  
@@ -144,10 +144,9 @@ ORDER BY MSOLAP_NODE_SCORE DESC
 |Bike Buyer -> Marital Status|23.13297354|  
 |Bike Buyer -> English Occupation|2.832069191|  
   
- 
-  [Microsoft 일반 콘텐츠 트리 뷰어](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)에서 모델 콘텐츠를 찾아보면 주목할 만한 통계를 보다 잘 확인할 수 있습니다. 여기에서는 몇 개의 간단한 예를 보여 주지만 여러 쿼리를 실행하거나 결과를 저장하고 클라이언트에서 처리해야 하는 경우는 보다 많이 있습니다.  
+ [Microsoft 일반 콘텐츠 트리 뷰어](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)에서 모델 콘텐츠를 찾아보면 주목할 만한 통계를 보다 잘 확인할 수 있습니다. 여기에서는 몇 개의 간단한 예를 보여 주지만 여러 쿼리를 실행하거나 결과를 저장하고 클라이언트에서 처리해야 하는 경우는 보다 많이 있습니다.  
   
-###  <a name="bkmk_Query4"></a>예제 쿼리 4: 시스템 저장 프로시저 사용  
+###  <a name="sample-query-4-using-system-stored-procedures"></a><a name="bkmk_Query4"></a> 예제 쿼리 4: 시스템 저장 프로시저 사용  
  사용자가 직접 내용 쿼리를 작성할 수 있을 뿐 아니라 몇 가지 Analysis Services 시스템 저장 프로시저를 사용하여 결과를 탐색할 수도 있습니다. 시스템 저장 프로시저를 사용하려면 저장 프로시저 이름 앞에 CALL 키워드를 붙입니다.  
   
 ```  
@@ -168,7 +167,7 @@ CALL GetPredictableAttributes ('TM_NaiveBayes')
 ## <a name="using-a-naive-bayes-model-to-make-predictions"></a>Naive Bayes 모델을 사용하여 예측 만들기  
  Microsoft Naive Bayes 알고리즘은 일반적으로 예측에 사용되는 경우보다 입력 및 예측 가능한 특성 간의 관계를 탐색하는 데 사용되는 경우가 더 많습니다. 그러나 이 모델에서는 예측 및 연결 모두에 대해 예측 함수를 사용할 수 있습니다.  
   
-###  <a name="bkmk_Query5"></a>예제 쿼리 5: 단일 쿼리를 사용 하 여 결과 예측  
+###  <a name="sample-query-5-predicting-outcomes-using-a-singleton-query"></a><a name="bkmk_Query5"></a> 예제 쿼리 5: 단일 쿼리를 사용하여 결과 예측  
  다음 쿼리에서는 단일 쿼리를 사용하여 새 값을 제공하고 모델을 기반으로 해당 특성을 갖는 고객이 자전거를 구입할 가능성이 있는지를 예측합니다. 회귀 모델에서 단일 쿼리를 만드는 가장 쉬운 방법은 **단일 쿼리 입력** 대화 상자를 사용하는 것입니다. 예를 들어 `TM_NaiveBayes` 모델을 선택하고 **단일 쿼리**를 선택한 다음 드롭다운 목록에서 `[Commute Distance]` 및 `Gender`의 값을 선택하여 다음과 같은 DMX 쿼리를 작성할 수 있습니다.  
   
 ```  
@@ -189,7 +188,7 @@ NATURAL PREDICTION JOIN
   
  이 예측 함수는 가장 가능성이 높은 값(이 경우 0)을 반환합니다. 이 값은 이 유형의 고객이 자전거를 구입할 가능성이 없다는 것을 의미합니다.  
   
-###  <a name="bkmk_Query6"></a>예제 쿼리 6: 확률 및 지원 값으로 예측 가져오기  
+###  <a name="sample-query-6-getting-predictions-with-probability-and-support-values"></a><a name="bkmk_Query6"></a>예제 쿼리 6: 확률 및 지원 값으로 예측 가져오기  
  결과를 예측하는 것 외에도 예측의 정확도를 알고 싶은 경우가 있습니다. 다음 쿼리에서는 앞의 예와 동일한 단일 쿼리를 사용하되 예측 함수 [PredictHistogram&#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)을 추가하여 해당 예측을 지원하는 통계가 들어 있는 중첩 테이블을 반환합니다.  
   
 ```  
@@ -213,7 +212,7 @@ NATURAL PREDICTION JOIN
   
  표의 마지막 행에서는 누락 값의 지지도 및 확률에 대한 조정을 보여 줍니다. 분산 및 표준 편차 값은 항상 0이지만 Naive Bayes 모델에서는 연속 값을 모델링할 수 없습니다.  
   
-###  <a name="bkmk_Query7"></a>예제 쿼리 7: 연결 예측  
+###  <a name="sample-query-7-predicting-associations"></a><a name="bkmk_Query7"></a>예제 쿼리 7: 연결 예측  
  마이닝 구조에 예측 가능한 특성을 키로 사용하는 중첩 테이블이 들어 있는 경우 연결 분석에 Microsoft Naive Bayes 알고리즘을 사용할 수 있습니다. 예를 들어 데이터 마이닝 자습서의 [3단원: 시장 바구니 시나리오 구축&#40;중급 데이터 마이닝 자습서&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)에서 만든 마이닝 구조를 사용하여 Naive Bayes 모델을 작성할 수 있습니다. 이 예에 사용된 모델을 수정하여 사례 테이블에 수입 및 고객 지역에 대한 정보를 추가했습니다.  
   
  다음 쿼리 예에서는 `'Road Tire Tube'`제품의 구매와 관련된 제품을 예측하는 단일 쿼리를 보여 줍니다. 이 정보를 사용하여 특정 유형의 고객에게 제품을 추천할 수 있습니다.  
@@ -244,20 +243,20 @@ AS t
   
 |||  
 |-|-|  
-|예측 함수|사용|  
-|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|한 노드가 모델에서 다른 노드의 자식인지 여부를 확인합니다.|  
-|[&#40;DMX&#41;예측](/sql/dmx/predict-dmx)|지정한 열에 대한 예측 값을 반환합니다.|  
-|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|가중치 확률을 반환합니다.|  
-|[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|연관 데이터 세트에서의 멤버 자격을 예측합니다.|  
-|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|각 사례에 대한 Node_ID를 반환합니다.|  
-|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|예측 값의 확률을 반환합니다.|  
-|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|지정한 상태에 대한 지원 값을 반환합니다.|  
+|예측 함수|사용법|  
+|[IsDescendant&#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|한 노드가 모델에서 다른 노드의 자식인지 여부를 확인합니다.|  
+|[예측&#40;DMX&#41;](/sql/dmx/predict-dmx)|지정한 열에 대한 예측 값을 반환합니다.|  
+|[PredictAdjustedProbability&#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|가중치 확률을 반환합니다.|  
+|[PredictAssociation&#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|연관 데이터 세트에서의 멤버 자격을 예측합니다.|  
+|[PredictNodeId&#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|각 사례에 대한 Node_ID를 반환합니다.|  
+|[PredictProbability&#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|예측 값의 확률을 반환합니다.|  
+|[PredictSupport&#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|지정한 상태에 대한 지원 값을 반환합니다.|  
   
  특정 함수의 구문을 보려면 [DMX&#40;Data Mining Extensions&#41; 함수 참조](/sql/dmx/data-mining-extensions-dmx-function-reference)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Microsoft Naive Bayes 알고리즘 기술 참조](microsoft-naive-bayes-algorithm-technical-reference.md)   
  [Microsoft Naive Bayes 알고리즘](microsoft-naive-bayes-algorithm.md)   
- [Naive Bayes 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Naive Bayes 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

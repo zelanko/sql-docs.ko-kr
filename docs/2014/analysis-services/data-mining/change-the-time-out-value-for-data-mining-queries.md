@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 640d07115e2a071bb5d57e87955c11670f4c38b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085887"
 ---
 # <a name="change-the-time-out-value-for-data-mining-queries"></a>데이터 마이닝 쿼리에 대한 제한 시간 값 변경
@@ -28,14 +28,11 @@ ms.locfileid: "66085887"
   
 ### <a name="configure-the-time-out-value-for-data-mining-queries"></a>데이터 마이닝 쿼리에 대한 제한 시간 값 구성  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 **도구** 메뉴에서 **옵션**을 선택합니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 **도구** 메뉴에서 **옵션**을 선택합니다.  
   
-2.  
-  **옵션** 창에서 **비즈니스 인텔리전스 디자이너**를 확장합니다.  
+2.  **옵션** 창에서 **비즈니스 인텔리전스 디자이너**를 확장합니다.  
   
-3.  
-  **쿼리 제한 시간** 입력란을 클릭하고 시간(초) 값을 입력합니다.  
+3.  **쿼리 제한 시간** 입력란을 클릭하고 시간(초) 값을 입력합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 쿼리 태스크 및 방법](data-mining-query-tasks-and-how-tos.md)   

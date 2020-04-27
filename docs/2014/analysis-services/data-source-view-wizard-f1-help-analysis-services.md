@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01074111cd4944f9b74137dd371e00343e37f15b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082513"
 ---
 # <a name="data-source-view-wizard-f1-help-analysis-services"></a>데이터 원본 뷰 마법사 F1 도움말(Analysis Services)
@@ -38,8 +38,7 @@ ms.locfileid: "66082513"
   
 -   데이터 원본 뷰 이름 지정 및 저장  
   
- 데이터 원본 뷰를 만든 후 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 데이터 원본 뷰 디자이너를 사용하여 해당 뷰의 속성을 변경할 수 있습니다. 
-  데이터 원본 뷰 디자이너에 대한 자세한 내용은 [데이터 원본 뷰 디자이너&#40;Analysis Services - 다차원 데이터&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)를 참조하세요.  
+ 데이터 원본 뷰를 만든 후 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 데이터 원본 뷰 디자이너를 사용하여 해당 뷰의 속성을 변경할 수 있습니다. 데이터 원본 뷰 디자이너에 대한 자세한 내용은 [데이터 원본 뷰 디자이너&#40;Analysis Services - 다차원 데이터&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)를 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

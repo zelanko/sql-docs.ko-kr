@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 830aea002e8000feeda061f42af9084696ed6fe8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088485"
 ---
 # <a name="browsing-a-forecasting-model"></a>예측 모델 찾아보기
   **찾아보기**를 사용 하 여 예측 모델을 열면의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]시계열 모델 뷰어와 비슷한 대화형 뷰어에 모델이 표시 됩니다. 이 뷰어에서는 추세를 살펴보고, 계열을 비교하고, 예측을 만들고, 모델 및 기본 데이터에 대한 정보를 확인할 수 있습니다.  
   
-##  <a name="bkmk_Top"></a>모델 탐색  
+##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>모델 탐색  
  예측 모델에 대 한 **찾아보기** 뷰어는 시간에 따른 추세를 표시 하 고 예측을 만들 수 있도록 하는 차트 뷰와 시계열을 의사 결정 트리 또는 회귀 트리로 나타내는 모델 뷰를 제공 합니다.  
   
 -   [차트 보기](#bkmk_charts)  
@@ -35,7 +35,7 @@ ms.locfileid: "66088485"
   
  예측 모델을 시험해 보려면 샘플 데이터 통합 문서의 예측 탭에서 예제 데이터를 사용 하 고, 예측 마법사를 사용 하 여 데이터 **마이닝** 리본의 [&#41;Excel 용 데이터 마이닝 추가 기능을 &#40;](forecast-wizard-data-mining-add-ins-for-excel.md) 하 고, **분석** 리본에서 [&#41;excel 용 &#40;테이블 분석 도구](forecast-table-analysis-tools-for-excel.md) 를 사용 하 여 시계열 모델을 작성할 수 있습니다.  
   
-###  <a name="bkmk_charts"></a>차트  
+###  <a name="chart"></a><a name="bkmk_charts"></a>차트  
  **차트** 탭에서는 시간에 따른 데이터 계열의 추세를 예측 값과 함께 표시 합니다. 차트의 세로 축은 계열 값을 나타내고 가로 축은 시간을 나타냅니다.  
   
 ##### <a name="explore-the-forecasting-chart"></a>예측 차트 탐색  
@@ -44,7 +44,7 @@ ms.locfileid: "66088485"
   
      ![예측 모델의 기록 예측](media/dm13-forecast-chart-historicpredictions.gif "예측 모델의 기록 예측")  
   
-     확인란을 사용해서 북미 지역 및 판매 금액에 대한 예측만 선택합니다.  
+     확인란을 사용해서 북아메리카 지역 및 판매 금액에 대한 예측만 선택합니다.  
   
 2.  **예측 단계** 를 클릭 하 고 새 값을 입력 하 여 차트에 표시할 이후 시간 값의 수를 제어 합니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66088485"
   
  [모델 탐색](#bkmk_Top)  
   
-###  <a name="bkmk_Model"></a>모델링  
+###  <a name="model"></a><a name="bkmk_Model"></a>모델링  
  예측 모델은 또한 의사 결정 트리로 나타내거나, 계열이 대부분 선형인 경우 회귀 모델로 나타낼 수도 있습니다.  
   
  예를 들어 이 모델에서는 특정 조건에 따라 회귀 수식에 차이가 있으므로 트리가 서로 다른 회귀 수식을 포함하는 두 개의 분기로 분할됩니다.  
@@ -97,7 +97,7 @@ ms.locfileid: "66088485"
   
 1.  **트리** 드롭다운 목록을 클릭 하 고 표시할 모델을 선택 합니다.  
   
-     각 예측 가능한 특성에 대해 별도의 트리 또는 회귀 노드가 표시됩니다. 예를 들어 데이터에 유럽, 북미 및 태평양 지역의 판매가 포함된 경우, 각 데이터 계열당 하나씩 세 개의 서로 다른 모델이 생성됩니다.  
+     각 예측 가능한 특성에 대해 별도의 트리 또는 회귀 노드가 표시됩니다. 예를 들어 데이터에 유럽, 북아메리카 및 태평양 지역의 판매가 포함된 경우, 각 데이터 계열당 하나씩 세 개의 서로 다른 모델이 생성됩니다.  
   
 2.  **수준 표시** 슬라이더를 끌어 트리의 하위 수준을 필터링 하 고 가장 중요 한 분할에 초점을 맞출 수 있습니다.  
   

@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d60e8cae564886109409eed2595a7ce1247b61a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089834"
 ---
 # <a name="server-properties-f1-help"></a>서버 속성 F1 도움말
@@ -34,7 +34,7 @@ ms.locfileid: "66089834"
   
  [서버 속성 &#40;프로세서 페이지&#41;](configure-windows/server-properties-processors-page.md)  
   
- [서버 속성 &#40;보안 페이지&#41;](configure-windows/server-properties-security-page.md)  
+ [서버 속성&#40;보안 페이지&#41;](configure-windows/server-properties-security-page.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [서버 구성 옵션&#40;SQL Server&#41;](configure-windows/server-configuration-options-sql-server.md)  

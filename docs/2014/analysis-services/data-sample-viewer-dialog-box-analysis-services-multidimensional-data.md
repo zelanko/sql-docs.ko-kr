@@ -15,18 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f406885d607827c4ed29102164c6fe89ea621508
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082617"
 ---
 # <a name="data-sample-viewer-dialog-box-analysis-services---multidimensional-data"></a>데이터 샘플 뷰어 대화 상자(Analysis Services - 다차원 데이터)
-  
   **의** 데이터 샘플 뷰어 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 새 큐브에 대한 측정값을 제공하는 데 사용될 팩트 테이블의 처음 1000개의 레코드를 볼 수 있습니다.  
   
- 
-  **데이터 샘플 뷰어** 대화 상자를 열려면 **큐브 마법사** 의 **측정값 선택** 페이지에서 **사용 가능한 측정값**에 나열된 측정값을 마우스 오른쪽 단추로 클릭한 다음 **샘플 데이터 보기**를 클릭합니다.  
+ **데이터 샘플 뷰어** 대화 상자를 열려면 **큐브 마법사** 의 **측정값 선택** 페이지에서 **사용 가능한 측정값**에 나열된 측정값을 마우스 오른쪽 단추로 클릭한 다음 **샘플 데이터 보기**를 클릭합니다.  
   
 ## <a name="options"></a>옵션  
  테이블 표  

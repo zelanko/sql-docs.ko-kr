@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3975bee14daad82291b5d343999ef4ebca7e6fbc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085075"
 ---
 # <a name="data-mining-architecture"></a>데이터 마이닝 아키텍처
@@ -33,15 +33,15 @@ ms.locfileid: "66085075"
  비즈니스 인텔리전스 솔루션에서 데이터 마이닝을 구현하는 방법은 MSDN Library의 솔루션 가이드를 참조하십시오.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [논리적 아키텍처 &#40;Analysis Services 데이터 마이닝&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [논리적 아키텍처&#40;Analysis Services - 데이터 마이닝&#41;](logical-architecture-analysis-services-data-mining.md)  
   
- [물리적 아키텍처 &#40;Analysis Services 데이터 마이닝&#41;](physical-architecture-analysis-services-data-mining.md)  
+ [물리적 아키텍처&#40;Analysis Services - 데이터 마이닝&#41;](physical-architecture-analysis-services-data-mining.md)  
   
  [데이터 마이닝 서비스 및 데이터 원본](data-mining-services-and-data-sources.md)  
   
  [데이터 마이닝 솔루션 및 개체 관리](management-of-data-mining-solutions-and-objects.md)  
   
- [데이터 마이닝 &#40;보안 개요&#41;](security-overview-data-mining.md)  
+ [보안 개요&#40;데이터 마이닝&#41;](security-overview-data-mining.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [다차원 모델 프로그래밍](../multidimensional-models/multidimensional-model-programming.md)   

@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee2142c117a2e46b024a7e2bd639e6739ffd00ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083667"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>의사 결정 트리 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠에 대한 일반적인 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)를 참조하세요. Microsoft 의사 결정 트리 알고리즘은 매우 다양한 함수로 모델을 만들 수 있는 하이브리드 알고리즘이라는 사실을 기억해야 합니다. 의사 결정 트리는 연결, 규칙 또는 선형 회귀를 나타낼 수 있습니다. 트리의 구조는 기본적으로 동일하지만 정보를 해석하는 방법은 모델을 만든 목적에 따라 달라집니다.  
   
-##  <a name="bkmk_Top"></a>의사 결정 트리 모델의 구조 이해  
+##  <a name="understanding-the-structure-of-a-decision-trees-model"></a><a name="bkmk_Top"></a>의사 결정 트리 모델의 구조 이해  
  의사 결정 트리 모델에는 모델 및 해당 메타데이터를 나타내는 단일 부모 노드가 있습니다. 이 부모 노드 아래에는 선택한 예측 가능 특성을 나타내는 독립적인 트리가 있습니다. 예를 들어 고객이 제품을 구매할지 여부를 예측하도록 의사 결정 트리 모델을 설정하고 성별 및 수입에 대한 입력을 제공할 경우, 해당 모델은 성별 및 수입과 관련된 조건에 따라 나뉘는 여러 분기를 사용하여 구매 특성에 대한 단일 트리를 만듭니다.  
   
  그러나 그 후에 고객 보상 프로그램 참여에 대한 별도의 예측 가능한 특성을 추가하면 해당 알고리즘은 부모 노드 아래에 두 개의 개별 트리를 만듭니다. 한 트리에는 구매에 대한 분석이 들어 있고 다른 트리에는 고객 보상 프로그램에 대한 분석이 들어 있습니다.  의사 결정 트리 알고리즘을 사용하여 연결 모델을 만드는 경우 이 알고리즘은 예측할 각 제품에 대해 별도의 트리를 만들며, 이 트리에는 대상 특성을 선택하는 데 영향을 주는 다른 모든 제품 조합이 포함됩니다.  
@@ -45,10 +45,9 @@ ms.locfileid: "66083667"
  Microsoft 의사 결정 트리 알고리즘에서는 연속 데이터 형식을 입력으로 사용할 수 없으므로 열에 연속 숫자 데이터 형식이 있는 경우 해당 값은 불연속화됩니다. 알고리즘은 모든 연속 특성에 대해 분할 지점에서 해당 알고리즘 방식의 분할을 수행합니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 연속 특성을 버킷팅하기 위한 방법을 자동으로 선택합니다. 그러나 사용자가 마이닝 구조 열의 내용 유형을 `Discretized`로 설정한 다음 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 또는 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 속성을 설정하여 입력의 연속 값이 불연속화되는 방식을 제어할 수도 있습니다.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 연속 특성을 버킷팅하기 위한 방법을 자동으로 선택합니다. 그러나 사용자가 마이닝 구조 열의 내용 유형을 `Discretized`로 설정한 다음 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 또는 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 속성을 설정하여 입력의 연속 값이 불연속화되는 방식을 제어할 수도 있습니다.  
   
-##  <a name="bkmk_ModelContent"></a>의사 결정 트리 모델에 대 한 모델 콘텐츠  
+##  <a name="model-content-for-a-decision-trees-model"></a><a name="bkmk_ModelContent"></a> 의사 결정 트리 모델에 대한 모델 콘텐츠  
  이 섹션에서는 의사 결정 트리 모델과 특별히 관련된 마이닝 모델 콘텐츠 열에 대한 세부 정보 및 예만 제공합니다. 스키마 행 집합의 범용 열에 대한 자세한 내용 및 마이닝 모델 용어에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
   
  MODEL_CATALOG  
@@ -73,15 +72,13 @@ ms.locfileid: "66083667"
  NODE_TYPE  
  의사 결정 트리 모델에서는 다음과 같은 노드 유형이 만들어집니다.  
   
-|노드 유형|Description|  
+|노드 유형|설명|  
 |---------------|-----------------|  
 |1(모델)|모델의 루트 노드입니다.|  
-|2(트리)|모델의 분류 트리에 대한 부모 노드입니다. 
-  **"All"** 이라는 레이블이 표시됩니다.|  
+|2(트리)|모델의 분류 트리에 대한 부모 노드입니다. **"All"** 이라는 레이블이 표시됩니다.|  
 |3(내부)|내부 분기의 헤드로서, 분류 트리 또는 회귀 트리 내에 있습니다.|  
 |4(분포)|리프 노드로서, 분류 트리 또는 회귀 트리 내에 있습니다.|  
-|25(회귀 트리)|모델 내에 있는 회귀 트리의 부모 노드입니다. 
-  **"All"** 이라는 레이블이 표시됩니다.|  
+|25(회귀 트리)|모델 내에 있는 회귀 트리의 부모 노드입니다. **"All"** 이라는 레이블이 표시됩니다.|  
   
  NODE_CAPTION  
  표시 이름입니다.  
@@ -93,9 +90,9 @@ ms.locfileid: "66083667"
  CHILDREN_CARDINALITY  
  노드에 있는 예상 자식 수입니다.  
   
- **부모 노드** 모델링 된 예측 가능한 특성의 수를 나타냅니다. 예측 가능한 각 특성에 대해 트리가 하나씩 만들어집니다.  
+ **부모 노드** 모델링된 예측 가능한 특성의 수를 나타냅니다. 예측 가능한 각 특성에 대해 트리가 하나씩 만들어집니다.  
   
- **트리 노드** 각 트리의 **All** 노드는 대상 특성에 사용 된 값의 수를 나타냅니다.  
+ **트리 노드** 각 트리의 **All** 노드는 대상 특성에 사용된 값의 수를 나타냅니다.  
   
 -   대상 특성이 불연속 특성이면 해당 값은 고유 값의 수에 `Missing` 상태에 대한 1을 더한 값과 같습니다.  
   
@@ -138,13 +135,13 @@ ms.locfileid: "66083667"
   
  **모델 루트 노드** 이 테이블은 비어 있습니다.  
   
- **(All) 노드** 모델 전체에 대 한 요약을 포함 합니다.  
+ **(All) 노드** 모델 전체에 대한 요약을 포함합니다.  
   
- **내부 노드** 리프 노드에 대해 집계 된 통계를 포함 합니다.  
+ **내부 노드** 리프 노드에 대해 집계된 통계를 포함합니다.  
   
- **리프 노드** 경로의 모든 조건이 현재 리프 노드로 이어지는 경우 예측 된 결과에 대 한 지원 및 확률을 포함 합니다.  
+ **리프 노드** 경로의 모든 조건이 현재 리프 노드를 가리키는 경우 예측된 결과에 대한 지지도 및 확률을 포함합니다.  
   
- **회귀 노드** 입력과 예측 가능한 특성 간의 관계를 나타내는 회귀 수식을 포함 합니다.  
+ **회귀 노드** 입력과 예측 가능한 특성 간의 관계를 나타내는 회귀 수식을 포함합니다.  
   
  자세한 내용은 [불연속 특성의 노드 분포](#bkmk_NodeDist_Discrete) 및 [연속 특성의 노드 분포](#bkmk_RegressionNodes)를 참조하세요.  
   
@@ -187,7 +184,7 @@ ms.locfileid: "66083667"
   
  예측 가능한 특성이 연속 숫자인 경우 알고리즘에서는 예측 가능한 특성과 입력 간의 관계를 모델링하는 회귀 수식을 만듭니다.  
   
-###  <a name="NodeCaption"></a>노드 캡션 및 노드 설명  
+###  <a name="node-caption-and-node-description"></a><a name="NodeCaption"></a>노드 캡션 및 노드 설명  
  의사 결정 트리 모델에서 노드 캡션과 노드 설명에는 비슷한 정보가 포함됩니다. 그러나 노드 설명은 보다 완전하며 리프 노드에 근접하게 이동할수록 더 많은 정보를 포함합니다. 노드 캡션과 노드 설명은 모두 지역화된 문자열입니다.  
   
 |||  
@@ -195,7 +192,7 @@ ms.locfileid: "66083667"
 |**NODE_CAPTION**|특정 노드를 부모 노드를 기준으로 구별하는 특성을 표시합니다. 노드 캡션은 분할 조건을 기반으로 모집단의 하위 세그먼트를 정의합니다. 예를 들어 분할이 [Age]이 고 3 방향 분할 인 경우 세 개의 자식 노드에 대 한 노드 캡션은 "[Age] < 40", "40 <= [Age] \< 50", "[age] >= 50"이 될 수 있습니다.|  
 |**NODE_DESCRIPTION**|모델 부모 노드에서 시작하여 해당 노드를 다른 노드와 구별해 주는 특성의 전체 목록을 포함합니다. 예를 들어 Product name = Apple 및 Color = Red 특성이 있습니다.|  
   
-###  <a name="NodeRule"></a>노드 규칙 및 한계 규칙  
+###  <a name="node-rule-and-marginal-rule"></a><a name="NodeRule"></a> 노드 규칙 및 한계 규칙  
  NODE_RULE 및 MARGINAL_RULE 열은 NODE_CAPTION 및 NODE_DESCRIPTION 열과 동일한 정보를 포함하지만 정보는 XML 조각으로 표현됩니다. 노드 규칙은 전체 경로의 XML 버전인 반면 한계 규칙은 가장 최근의 분할을 나타냅니다.  
   
  XML 조각으로 표현되는 특성은 단순한 특성이거나 복잡한 특성일 수 있습니다. 단순한 특성에는 모델 열의 이름과 특성 값이 포함됩니다. 모델 열에 중첩 테이블이 들어 있는 경우 중첩 테이블 특성은 테이블 이름, 키 값 및 특성의 연결로 표현됩니다.  
@@ -203,7 +200,7 @@ ms.locfileid: "66083667"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 중첩 테이블 사용을 지원 하기 위한 확장과 함께 PMML 표준 버전 2.0을 지원 합니다. 데이터에 중첩 테이블이 들어 있는 경우 PMML 버전의 모델을 생성하면 해당 모델에서 조건자가 포함된 모든 요소는 확장으로 표시됩니다.  
   
-###  <a name="bkmk_NodeDist_Discrete"></a>불연속 특성에 대 한 노드 분포  
+###  <a name="node-distribution-for-discrete-attributes"></a><a name="bkmk_NodeDist_Discrete"></a>불연속 특성에 대 한 노드 분포  
  의사 결정 트리 모델에서 NODE_DISTRIBUTION 테이블에는 유용한 통계가 들어 있습니다. 그러나 통계의 유형은 트리가 불연속 특성을 예측하는지 연속 특성을 예측하는지에 따라 달라집니다. 이 섹션에서는 불연속 특성에 대한 노드 분포 통계의 의미를 설명합니다.  
   
 #### <a name="attribute-name-and-attribute-value"></a>특성 이름 및 특성 값  
@@ -211,12 +208,12 @@ ms.locfileid: "66083667"
   
  불연속 데이터 형식의 경우 특성 값 필드에는 예측 가능한 열의 가능한 값과 `Missing` 값이 나열됩니다.  
   
-#### <a name="support"></a>지원  
+#### <a name="support"></a>고객 지원팀  
  각 노드의 지지도 값은 이 노드에 포함된 사례 수를 나타냅니다. (All) 수준에서는 모델을 학습하는 데 사용된 사례의 총 수가 표시됩니다. 트리에 있는 각 분할의 경우 지지도 값은 트리의 해당 노드로 그룹화된 사례 수입니다. 리프 노드에 있는 사례의 합계는 반드시 트리의 부모 노드에 있는 사례 수와 같습니다.  
   
  연속 특성을 나타내는 노드의 경우 데이터에 Null이 있으면 예상치 않은 결과가 발생할 수 있습니다. 예를 들어 m개의 사례가 있는 경우 평균값은 합계(모든 사례)/n으로 계산됩니다. 여기서 n은 m보다 작은 숫자이고 m-n은 누락 값이 있는 사례의 수를 나타냅니다. 지지도는 n으로도 표현됩니다.  
   
-#### <a name="probability"></a>확률  
+#### <a name="probability"></a>Probability  
  각 노드와 관련된 확률은 전체 데이터 집합의 사례가 해당 노드에 포함될 확률을 나타냅니다. 확률 점수는 트리 전체와 바로 아래의 분할 모두에 대해 계산됩니다.  
   
  예를 들어 다음 표에서는 100개의 사례가 있는 매우 간단한 모델을 보여 줍니다.  
@@ -234,7 +231,7 @@ ms.locfileid: "66083667"
   
  확률 = (상태에 대한 지지도 + 이전 상태에 대한 지지도) / (노드 지지도 + 이전 노드 지지도)  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 각 노드에 대해 확률을 사용 하 여 저장 된 확률과 이전 확률을 비교 하 여 부모에서 자식 노드로의 경로가 강력한 유추를 표시 하는지 여부를 결정 합니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 각 노드에 대한 확률을 사용하여 저장된 확률과 이전 확률을 비교함으로써 부모 노드에서 자식 노드까지의 경로가 강한 유추를 나타내는지 확인합니다.  
   
  예측을 만들 때는 분포 확률과 노드 확률의 균형이 맞도록 확률을 조정해야 합니다. 예를 들어 트리의 분할이 사례를 9000/1000 비율로 나누는 경우 이 트리는 매우 불균형적입니다. 따라서 작은 분기에서 얻은 예측과 여러 사례가 있는 분기에서 얻은 예측에 동일한 가중치가 적용되어서는 안 됩니다.  
   
@@ -246,17 +243,16 @@ ms.locfileid: "66083667"
 #### <a name="value-type"></a>값 형식  
  값 유형 열에서는 NODE_DISTRIBUTION 테이블의 다른 열에 제공된 숫자 값의 의미에 대한 정보를 제공합니다. 쿼리에 값 유형을 사용하여 중첩 테이블에서 특정 행을 검색할 수 있습니다. 예를 들어 [의사 결정 트리 모델 쿼리 예제](decision-trees-model-query-examples.md)를 참조하세요.  
   
- 
-  <xref:Microsoft.AnalysisServices.AdomdClient.MiningValueType> 열거형의 유형 중 다음 유형이 분류 트리에 사용됩니다.  
+ <xref:Microsoft.AnalysisServices.AdomdClient.MiningValueType> 열거형의 유형 중 다음 유형이 분류 트리에 사용됩니다.  
   
-|값 형식|Description|  
+|값 유형|설명|  
 |----------------|-----------------|  
 |1(누락)|누락 값과 관련된 개수, 확률 또는 기타 통계를 나타냅니다.|  
 |4 (Discrete)|불연속 또는 불연속화된 값과 관련된 개수, 확률 또는 기타 통계를 나타냅니다.|  
   
  모델에 예측 가능한 연속 특성이 포함된 경우 트리에도 회귀 수식에 고유한 값 유형이 포함될 수 있습니다. 회귀 트리에서 사용되는 값 형식 목록은 [선형 회귀 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)를 참조하세요.  
   
-###  <a name="NodeScore"></a>노드 점수  
+###  <a name="node-score"></a><a name="NodeScore"></a> 노드 점수  
  노드 점수는 트리의 각 수준에서 조금씩 다른 정보를 나타냅니다. 일반적으로 점수는 조건에 따라 분할함으로써 분할이 얼마나 적절하게 이루어졌는지를 나타내는 숫자 값입니다. 값은 double 형식으로 나타나며 값이 높을수록 분할이 적절한 것입니다.  
   
  정의에 따라 모델 노드와 모든 리프 노드의 노드 점수는 0입니다.  
@@ -270,7 +266,7 @@ ms.locfileid: "66083667"
 > [!NOTE]  
 >  연속 및 불연속 예측 가능 특성이 모두 있는 의사 결정 트리 모델을 만드는 경우 각 트리 유형을 나타내는 (All) 노드에는 완전히 다른 점수가 표시됩니다. 각 모델은 독립적으로 간주되며 회귀 평가에 사용되는 방법은 분류 평가에 사용되는 방법과 완전히 다릅니다. 따라서 노드 점수 값을 비교할 수 없습니다.  
   
-##  <a name="bkmk_RegressionNodes"></a>의사 결정 트리 모델 내의 회귀 노드  
+##  <a name="regression-nodes-within-a-decision-tree-model"></a><a name="bkmk_RegressionNodes"></a>의사 결정 트리 모델 내의 회귀 노드  
  의사 결정 트리 모델에 예측 가능한 특성과 연속 숫자 데이터가 있는 경우 Microsoft 의사 결정 트리 알고리즘은 데이터에서 예측된 상태와 입력 변수 간의 관계가 선형적인 영역을 찾으려고 합니다. 선형 관계를 찾는 데 성공할 경우 알고리즘은 선형 회귀를 나타내는 특수한 트리(NODE_TYPE = 25)를 만듭니다. 이러한 회귀 트리 노드는 불연속 값을 나타내는 노드보다 복잡합니다.  
   
  일반적으로 회귀는 연속 종속 변수(예측 가능한 변수)의 변화를 입력의 변화에 대한 함수로 매핑합니다. 종속 변수에 연속 입력이 있고 입력과 예측된 값 간의 관계가 꺾은선형 그래프로 처리할 수 있을 만큼 안정적이면 회귀의 노드에 수식이 포함됩니다.  

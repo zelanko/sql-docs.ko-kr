@@ -13,20 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 801dbaaa8f267c2936f86644cc4a7ad3de6549a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086957"
 ---
 # <a name="create-data-mining-dimension-dialog"></a>데이터 마이닝 차원 만들기 대화 상자
-  
   **데이터 마이닝 차원 만들기** 대화 상자를 사용하여 OLAP 마이닝 모델을 기반으로 하는 새 데이터 마이닝 차원을 만들 수 있습니다.  
   
 ## <a name="options"></a>옵션  
  **모델 이름**  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트의 OLAP 마이닝 모델 목록에서 데이터 마이닝 차원이 기반으로 할 OLAP 마이닝 모델을 선택합니다.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트의 OLAP 마이닝 모델 목록에서 데이터 마이닝 차원이 기반으로 할 OLAP 마이닝 모델을 선택합니다.  
   
  **차원 이름**  
  새 차원의 이름을 입력합니다.  

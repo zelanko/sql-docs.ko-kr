@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f99a2dc218543faa4d862fa7520c1618ec307ba7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083711"
 ---
 # <a name="mining-model-columns"></a>마이닝 모델 열
@@ -30,9 +30,9 @@ ms.locfileid: "66083711"
   
  마이닝 모델 열에는 사용법 및 모델링 플래그 정보를 추가로 정의할 수 있습니다.  
   
--   **사용법** 은 모델이 열을 사용 하는 방법을 정의 하는 속성입니다. 열은 입력 열, 키 열 또는 예측 가능한 열로 사용될 수 있습니다.  
+-   **사용법** 은 모델이 열을 사용하는 방법을 정의하는 속성입니다. 열은 입력 열, 키 열 또는 예측 가능한 열로 사용될 수 있습니다.  
   
--   **모델링 플래그** 는 사례 테이블에 정의 된 데이터에 대 한 추가 정보를 알고리즘에 제공 하므로 알고리즘이 보다 정확한 모델을 만들 수 있습니다. 모델링 플래그는 DMX(Data Mining Extensions) 언어를 사용하여 프로그래밍 방식으로 정의하거나 **의** 데이터 마이닝 디자이너 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 정의할 수 있습니다.  
+-   **모델링 플래그** 는 사례 테이블에 정의된 데이터에 대한 추가 정보를 알고리즘에 제공하므로 알고리즘이 보다 정확한 모델을 작성할 수 있습니다. 모델링 플래그는 DMX(Data Mining Extensions) 언어를 사용하여 프로그래밍 방식으로 정의하거나 **의** 데이터 마이닝 디자이너 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 정의할 수 있습니다.  
   
  다음 목록에서는 마이닝 모델 열에 정의할 수 있는 모델링 플래그를 설명합니다.  
   
@@ -42,8 +42,7 @@ ms.locfileid: "66083711"
  `REGRESSOR`  
  회귀 알고리즘의 회귀 수식에 지정된 열을 사용할 수 있음을 나타냅니다. 이 플래그는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘에 사용할 수 있습니다.  
   
- 사용법 속성을 설정하고 DMX를 사용하여 프로그래밍 방식으로 모델링 플래그를 정의하는 방법은 [CREATE MINING MODEL&#40;DMX&#41;](/sql/dmx/create-mining-model-dmx)을 참조하세요. 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 사용법 속성을 설정하고 모델링 플래그를 정의하는 방법은 [데이터 마이닝 개체 이동](moving-data-mining-objects.md)을 참조하세요.  
+ 사용법 속성을 설정하고 DMX를 사용하여 프로그래밍 방식으로 모델링 플래그를 정의하는 방법은 [CREATE MINING MODEL&#40;DMX&#41;](/sql/dmx/create-mining-model-dmx)을 참조하세요. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 사용법 속성을 설정하고 모델링 플래그를 정의하는 방법은 [데이터 마이닝 개체 이동](moving-data-mining-objects.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   

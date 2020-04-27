@@ -13,14 +13,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e5e74eba3479bdc722fdd45c99eb78592d6e8007
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092347"
 ---
 # <a name="select-instance"></a>인스턴스 선택
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 인스턴스 선택 페이지를 사용하여 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]로 업그레이드하려는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]인스턴스를 지정할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
@@ -40,8 +39,7 @@ ms.locfileid: "66092347"
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   
--   
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
   
 -   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]  
   
@@ -49,6 +47,6 @@ ms.locfileid: "66092347"
   
 ## <a name="see-also"></a>참고 항목  
  [업그레이드 관리자를 사용 하 여 업그레이드 준비](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)   
- [여러 버전 및 인스턴스의 SQL Server 작업](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
+ [SQL Server의 여러 버전 및 인스턴스 작업](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
   
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f27398948ed2c89578921bf6404244bcf5072652
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084383"
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>종속성 네트워크에서 특정 노드 찾기
@@ -26,14 +26,11 @@ ms.locfileid: "66084383"
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>종속성 네트워크에서 특정 노드를 찾으려면  
   
-1.  
-  **에 있는** 데이터 마이닝 디자이너 **의** 마이닝 모델 뷰어 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭에서 **종속성 네트워크** 탭의 도구 모음에 있는 **노드 찾기** 를 클릭합니다.  
+1.  **에 있는** 데이터 마이닝 디자이너 **의** 마이닝 모델 뷰어 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭에서 **종속성 네트워크** 탭의 도구 모음에 있는 **노드 찾기** 를 클릭합니다.  
   
-     
-  **노드 찾기** 대화 상자가 열립니다.  
+     **노드 찾기** 대화 상자가 열립니다.  
   
-2.  
-  **노드 이름** 입력란에 검색할 노드 이름의 일부를 입력합니다.  
+2.  **노드 이름** 입력란에 검색할 노드 이름의 일부를 입력합니다.  
   
      노드 목록이 필터링되어 검색 경로의 일부를 포함하는 노드만 표시됩니다.  
   

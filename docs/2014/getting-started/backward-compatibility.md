@@ -26,10 +26,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4619eeea35df4de16c3b980ecc0ea685488970eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088583"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
@@ -37,7 +37,7 @@ ms.locfileid: "66088583"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[이전 SQL Server 버전과의 호환성](../../2014/getting-started/sql-server-backward-compatibility.md)|사용 중인 애플리케이션을 변경해야 할 수도 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 변경 내용을 설명하는 항목이 포함되어 있습니다. 이 항목에 포함되어 있는 기능에는 데이터 프로그래밍 기능, 노출 영역 구성 도구, 설치 프로그램, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스 및 기타 광범위한 기능 변경 내용이 있습니다.|  
 |[SQL Server 데이터베이스 엔진의 이전 버전과의 호환성](../database-engine/sql-server-database-engine-backward-compatibility.md)|사용 중인 애플리케이션을 변경해야 할 수도 있는 [!INCLUDE[ssDE](../includes/ssde-md.md)]의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 변경 내용을 설명하는 항목이 포함되어 있습니다.|  

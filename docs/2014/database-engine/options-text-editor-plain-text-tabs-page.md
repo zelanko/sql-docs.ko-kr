@@ -13,21 +13,20 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 0e060f1bccb544edd4e82c759b737e05c4bb980b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089857"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Options (Text Editor - Plain Text - Tabs Page)
   이 대화 상자를 사용하여 특정 개발 언어와 연관되지 않은 문서를 편집하는 데 사용되는 텍스트 편집기의 탭 이동 동작을 변경할 수 있습니다. 이 설정을 표시하려면 **도구** 메뉴의 **옵션** 을 클릭한 다음 **텍스트 편집기**를 확장하고 **일반 텍스트**를 확장한 다음 **탭**을 클릭합니다.  
   
 ## <a name="setting-options-in-multiple-locations"></a>여러 위치에서 옵션 설정  
- 일반 텍스트 편집기에 대한 옵션은 **모든 언어** 대화 상자(일반)에서도 설정할 수 있습니다. 
-  **모든 언어** 대화 상자를 사용하여 DMX 또는 MDX 편집기 등의 다른 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 편집기에 대해 다른 옵션을 설정하는 경우에는 이 대화 상자를 사용하여 일반 텍스트 편집기 옵션을 다시 설정해야 합니다.  
+ 일반 텍스트 편집기에 대한 옵션은 **모든 언어** 대화 상자(일반)에서도 설정할 수 있습니다. **모든 언어** 대화 상자를 사용하여 DMX 또는 MDX 편집기 등의 다른 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 편집기에 대해 다른 옵션을 설정하는 경우에는 이 대화 상자를 사용하여 일반 텍스트 편집기 옵션을 다시 설정해야 합니다.  
   
 ## <a name="indenting"></a>들여쓰기  
- **없음을**  
+ **없음**  
  Enter 키를 눌러 새 줄을 만들 때 들여쓰지 않습니다. 커서는 새 줄의 첫 번째 열에 배치됩니다.  
   
  **거부**  
@@ -47,7 +46,6 @@ ms.locfileid: "66089857"
  탭 문자가 아닌 공백 문자만 사용하여 들여씁니다. 예를 들어 **들여쓰기 크기** 를 5로 설정하면 Tab 키를 누르거나 **서식** 도구 모음의 **들여쓰기** 단추를 누를 때마다 5개의 공백 문자가 삽입됩니다.  
   
  **탭 유지**  
- 들여쓸 때 가능한 한 많은 탭 문자를 삽입합니다. 각 탭 문자는 **탭 크기**에 지정된 공백 수를 채웁니다. 
-  **들여쓰기 크기** 가 **탭 크기**의 짝수 배수가 아니면 공백 문자가 추가되어 차이를 메웁니다.  
+ 들여쓸 때 가능한 한 많은 탭 문자를 삽입합니다. 각 탭 문자는 **탭 크기**에 지정된 공백 수를 채웁니다. **들여쓰기 크기** 가 **탭 크기**의 짝수 배수가 아니면 공백 문자가 추가되어 차이를 메웁니다.  
   
   

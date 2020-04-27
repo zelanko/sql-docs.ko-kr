@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f0e4d1a384995c0c49c346102f8fddbcdf47f68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086785"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>테스트 집합 만들기(데이터 마이닝 마법사)
-  
   **테스트 집합 만들기** 페이지를 사용하여 학습에 사용할 데이터 양과 테스트 집합으로 사용하기 위해 예약할 양을 지정할 수 있습니다. 마이닝 구조를 만들 때 학습 집합과 테스트 집합으로 데이터를 분리하면 나중에 만드는 마이닝 모델의 정확도를 보다 편리하게 평가할 수 있습니다.  
   
  테스트 데이터 양을 비율로 지정하거나 테스트에 사용되는 사례 수를 제한하는 수를 지정할 수 있습니다. 테스트에 사용할 사례의 최대 수와 비율을 모두 지정하면 두 설정이 모두 사용되어 테스트 데이터 집합에 적은 수의 사례가 포함됩니다. 기본적으로 데이터의 30%는 테스트에 사용되고 70%는 학습에 사용되며 테스트 사례의 최대 수는 없습니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "66086785"
   
 -   중첩 테이블에 저장되는 값을 예측하려는 경우 데이터를 분할할 수 없습니다.  
   
- **자세한 내용:** [데이터 마이닝&#41;&#40;테스트 및 유효성 검사 ](data-mining/testing-and-validation-data-mining.md), [관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md), [기본 데이터 마이닝 자습서](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ **자세한 내용:** [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](data-mining/testing-and-validation-data-mining.md), [관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md), [기본 데이터 마이닝 자습서](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
 ## <a name="options"></a>옵션  
  **테스트용 데이터 비율**  

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6ae48fe00fb9c24e2d6d0ddde61302cff3ceba0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083843"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft 시퀀스 클러스터링 알고리즘 기술 참조
@@ -46,7 +46,7 @@ ms.locfileid: "66083843"
 ### <a name="feature-selection-in-a-sequence-clustering-model"></a>시퀀스 클러스터링 모델의 기능 선택  
  시퀀스를 작성할 때는 기능 선택이 호출되지 않지만 클러스터링 단계에서 기능 선택이 적용됩니다.  
   
-|모델 형식|기능 선택 방법|주석|  
+|모델 형식|기능 선택 방법|설명|  
 |----------------|------------------------------|--------------|  
 |시퀀스 클러스터링|사용되지 않음|기능 선택이 호출되지 않습니다. 그러나 MINIMUM_SUPPORT 및 MINIMUM_PROBABILIITY 매개 변수의 값을 설정하여 알고리즘의 동작을 제어할 수 있습니다.|  
 |클러스터링|흥미도 점수|클러스터링 알고리즘은 불연속 또는 불연속화된 알고리즘을 사용할 수 있지만 각 특성의 점수는 거리로 계산되며 연속적입니다. 따라서 흥미도 점수가 사용됩니다.|  
@@ -73,8 +73,7 @@ ms.locfileid: "66083843"
  이러한 방법에 대한 자세한 설명은 이 항목에서는 다루지 않습니다.  
   
 ## <a name="customizing-the-sequence-clustering-algorithm"></a>시퀀스 클러스터링 알고리즘 사용자 지정  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘은 결과 마이닝 모델의 동작, 성능 및 정확도에 영향을 주는 매개 변수를 지원합니다. 알고리즘의 학습 데이터 처리 방식을 제어하는 모델링 플래그를 설정하여 완성된 모델의 동작을 수정할 수도 있습니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘은 결과 마이닝 모델의 동작, 성능 및 정확도에 영향을 주는 매개 변수를 지원합니다. 알고리즘의 학습 데이터 처리 방식을 제어하는 모델링 플래그를 설정하여 완성된 모델의 동작을 수정할 수도 있습니다.  
   
 ### <a name="setting-algorithm-parameters"></a>알고리즘 매개 변수 설정  
  다음 표에서는 Microsoft 시퀀스 클러스터링 알고리즘에서 사용할 수 있는 매개 변수에 대해 설명합니다.  
@@ -105,11 +104,10 @@ ms.locfileid: "66083843"
  기본값은 100입니다.  
   
 ### <a name="modeling-flags"></a>모델링 플래그  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘에서 지원되는 모델링 플래그는 다음과 같습니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘에서 지원되는 모델링 플래그는 다음과 같습니다.  
   
  NOT NULL  
- 열에 null이 포함될 수 없음을 나타냅니다. 따라서 Analysis  Services가 모델 학습 중 Null을 발견할 경우 오류가 발생합니다.  
+ 열에 null이 포함될 수 없음을 나타냅니다. 따라서 Analysis Services가 모델 학습 중 Null을 발견할 경우 오류가 발생합니다.  
   
  마이닝 구조 열에 적용됩니다.  
   
@@ -123,15 +121,13 @@ ms.locfileid: "66083843"
 ## <a name="requirements"></a>요구 사항  
  사례 테이블에는 사례 ID 열이 있어야 합니다. 필요에 따라 사례에 대한 특성을 저장하는 다른 열도 사례 테이블에 포함될 수 있습니다.  
   
- Microsoft 시퀀스 클러스터링 알고리즘을 사용하려면 중첩 테이블로 저장된 시퀀스 정보가 필요합니다. 중첩 테이블에는 단일 Key Sequence 열이 있어야 합니다. 
-  `Key Sequence` 열에는 문자열 데이터 형식을 비롯하여 정렬 가능한 모든 형식의 데이터가 포함될 수 있지만 각 사례에 대해 고유한 값이 포함되어야 합니다. 또한 모델을 처리하기 전에 사례 테이블과 중첩 테이블이 모두 해당 테이블과 관련된 키를 기준으로 오름차순으로 정렬되도록 해야 합니다.  
+ Microsoft 시퀀스 클러스터링 알고리즘을 사용하려면 중첩 테이블로 저장된 시퀀스 정보가 필요합니다. 중첩 테이블에는 단일 Key Sequence 열이 있어야 합니다. `Key Sequence` 열에는 문자열 데이터 형식을 비롯하여 정렬 가능한 모든 형식의 데이터가 포함될 수 있지만 각 사례에 대해 고유한 값이 포함되어야 합니다. 또한 모델을 처리하기 전에 사례 테이블과 중첩 테이블이 모두 해당 테이블과 관련된 키를 기준으로 오름차순으로 정렬되도록 해야 합니다.  
   
 > [!NOTE]  
 >  Microsoft 시퀀스 알고리즘을 사용하는 모델을 만들면서 시퀀스 열은 사용하지 않을 경우 결과 모델은 시퀀스를 포함하지 않고 단지 모델에 포함된 다른 특성에 따라 사례를 클러스터링하기만 합니다.  
   
 ### <a name="input-and-predictable-columns"></a>입력 열과 예측 가능한 열  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘은 다음 표에 나열된 특정 입력 열과 예측 가능한 열을 지원합니다. 마이닝 모델에 사용되는 경우 콘텐츠 형식의 의미에 대한 자세한 내용은 [콘텐츠 형식&#40;데이터 마이닝&#41;](content-types-data-mining.md)을 참조하세요.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘은 다음 표에 나열된 특정 입력 열과 예측 가능한 열을 지원합니다. 마이닝 모델에 사용되는 경우 콘텐츠 형식의 의미에 대한 자세한 내용은 [콘텐츠 형식&#40;데이터 마이닝&#41;](content-types-data-mining.md)을 참조하세요.  
   
 |열|내용 유형|  
 |------------|-------------------|  
@@ -142,15 +138,13 @@ ms.locfileid: "66083843"
   
 -   시퀀스 예측에 대한 [PredictSequence&#40;DMX&#41;](/sql/dmx/predictsequence-dmx) 함수를 사용합니다. 시퀀스 예측을 지 원하는 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대 한 자세한 내용은 [SQL Server 2012 버전에서 지 원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473) 을 참조 하세요.https://go.microsoft.com/fwlink/?linkid=232473)  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘에서는 PMML(Predictive Model Markup Language)을 사용하여 마이닝 모델을 만들 수 없습니다.  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘에서는 PMML(Predictive Model Markup Language)을 사용하여 마이닝 모델을 만들 수 없습니다.  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘에서는 드릴스루, OLAP 마이닝 모델 사용 및 데이터 마이닝 차원 사용을 지원합니다.  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘에서는 드릴스루, OLAP 마이닝 모델 사용 및 데이터 마이닝 차원 사용을 지원합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Microsoft 시퀀스 클러스터링 알고리즘](microsoft-sequence-clustering-algorithm.md)   
  [시퀀스 클러스터링 모델 쿼리 예제](clustering-model-query-examples.md)   
- [시퀀스 클러스터링 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [시퀀스 클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

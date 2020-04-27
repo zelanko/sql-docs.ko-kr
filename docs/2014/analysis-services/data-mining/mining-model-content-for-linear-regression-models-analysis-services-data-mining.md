@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 933b56aaa6e364ce55cac8832fc577acc061d510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083637"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>선형 회귀 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
@@ -45,7 +45,7 @@ ms.locfileid: "66083637"
  모델의 이름입니다.  
   
  ATTRIBUTE_NAME  
- **루트 노드:** 공백을  
+ **루트 노드:** 비어 있습니다.  
   
  **회귀 노드:** 예측 가능한 특성의 이름입니다.  
   
@@ -58,21 +58,21 @@ ms.locfileid: "66083637"
  NODE_TYPE  
  선형 회귀 모델이 출력하는 노드 유형은 다음과 같습니다.  
   
-|노드 유형 ID|Type|Description|  
+|노드 유형 ID|유형|설명|  
 |------------------|----------|-----------------|  
 |25|회귀 트리 루트|입력 및 출력 변수 간의 관계를 설명하는 수식을 포함합니다.|  
   
  NODE_CAPTION  
  노드와 연결된 레이블 또는 캡션입니다. 이 속성은 주로 표시용으로 사용됩니다.  
   
- **루트 노드:** 공백을  
+ **루트 노드:** 비어 있습니다.  
   
- **회귀 노드:** 모두가.  
+ **회귀 노드:** 모든 항목을 포함합니다.  
   
  CHILDREN_CARDINALITY  
  노드에 있는 예상 자식 수입니다.  
   
- **루트 노드:** 회귀 노드 수를 나타냅니다. 모델의 예측 가능한 각 특성에 대해 하나씩의 회귀 노드가 만들어집니다.  
+ **루트 노드:** 회귀 노드의 수를 나타냅니다. 모델의 예측 가능한 각 특성에 대해 하나씩의 회귀 노드가 만들어집니다.  
   
  **회귀 노드:** 항상 0입니다.  
   
@@ -82,9 +82,9 @@ ms.locfileid: "66083637"
  NODE_DESCRIPTION  
  노드에 대한 설명입니다.  
   
- **루트 노드:** 공백을  
+ **루트 노드:** 비어 있습니다.  
   
- **회귀 노드:** 모두가.  
+ **회귀 노드:** 모든 항목을 포함합니다.  
   
  NODE_RULE  
  선형 회귀 모델에는 사용되지 않습니다.  
@@ -95,23 +95,23 @@ ms.locfileid: "66083637"
  NODE_PROBABILITY  
  이 노드와 관련된 확률입니다.  
   
- **루트 노드:** 0  
+ **루트 노드:** 0입니다.  
   
- **회귀 노드:** 1  
+ **회귀 노드:** 1입니다.  
   
  MARGINAL_PROBABILITY  
  부모 노드에서 해당 노드에 도달할 확률입니다.  
   
- **루트 노드:** 0  
+ **루트 노드:** 0입니다.  
   
- **회귀 노드:** 1  
+ **회귀 노드:** 1입니다.  
   
  NODE_DISTRIBUTION  
  노드의 값에 대한 통계를 제공하는 중첩 테이블입니다.  
   
- **루트 노드:** 0  
+ **루트 노드:** 0입니다.  
   
- **회귀 노드:** 회귀 수식을 작성 하는 데 사용 된 요소가 들어 있는 테이블입니다. 회귀 노드에는 다음과 같은 값 유형이 들어 있습니다.  
+ **회귀 노드:** 회귀 수식을 작성하는 데 사용된 요소가 들어 있는 테이블입니다. 회귀 노드에는 다음과 같은 값 유형이 들어 있습니다.  
   
 |VALUETYPE|  
 |---------------|  
@@ -125,7 +125,7 @@ ms.locfileid: "66083637"
  NODE_SUPPORT  
  이 노드를 지지하는 사례 수입니다.  
   
- **루트 노드:** 0  
+ **루트 노드:** 0입니다.  
   
  **회귀 노드:** 학습 사례의 수입니다.  
   
@@ -139,18 +139,16 @@ ms.locfileid: "66083637"
  표시용 레이블입니다.  
   
 ## <a name="remarks"></a>설명  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘을 사용하여 모델을 만드는 경우 데이터 마이닝 엔진은 의사 결정 트리 모델의 특수한 인스턴스를 만들고 단일 노드의 모든 학습 데이트를 포함하도록 트리를 제한하는 매개 변수를 제공합니다. 모든 연속 입력은 잠재적인 회귀 변수로 플래그가 지정되고 계산되지만 최종 모델에서는 데이터에 맞는 회귀 변수만 회귀 변수로 유지됩니다. 분석에서는 각 회귀 변수에 대해 회귀 수식이 하나씩 생성되거나 회귀 수식이 전혀 생성되지 않습니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘을 사용하여 모델을 만드는 경우 데이터 마이닝 엔진은 의사 결정 트리 모델의 특수한 인스턴스를 만들고 단일 노드의 모든 학습 데이트를 포함하도록 트리를 제한하는 매개 변수를 제공합니다. 모든 연속 입력은 잠재적인 회귀 변수로 플래그가 지정되고 계산되지만 최종 모델에서는 데이터에 맞는 회귀 변수만 회귀 변수로 유지됩니다. 분석에서는 각 회귀 변수에 대해 회귀 수식이 하나씩 생성되거나 회귀 수식이 전혀 생성되지 않습니다.  
   
- 
-  **Microsoft 트리 뷰어**의 **(All)** 노드를 클릭하여 [마이닝 범례](browse-a-model-using-the-microsoft-tree-viewer.md)에서 전체 회귀 수식을 볼 수 있습니다.  
+ **Microsoft 트리 뷰어**의 **(All)** 노드를 클릭하여 [마이닝 범례](browse-a-model-using-the-microsoft-tree-viewer.md)에서 전체 회귀 수식을 볼 수 있습니다.  
   
  또한 예측 가능한 연속 특성을 포함하는 의사 결정 트리 모델을 만들 때 일부 경우에는 트리에 회귀 트리 노드의 속성을 공유하는 회귀 노드가 포함됩니다.  
   
-##  <a name="NodeDist_Regression"></a>연속 특성에 대 한 노드 분포  
+##  <a name="node-distribution-for-continuous-attributes"></a><a name="NodeDist_Regression"></a>연속 특성에 대 한 노드 분포  
  회귀 노드의 중요한 정보는 대부분 NODE_DISTRIBUTION 테이블에 들어 있습니다. 다음 예에서는 NODE_DISTRIBUTION 테이블의 레이아웃을 보여 줍니다. 이 예에서 Targeted Mailing 마이닝 구조는 연령별 고객 수입을 예측하는 선형 회귀 모델을 만드는 데 사용되었습니다. 이 모델은 기존의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 예제 데이터 및 마이닝 구조를 사용하여 쉽게 작성할 수 있는 것으로, 여기에는 단지 설명을 위해 포함되었습니다.  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|지원|PROBABILITY|분산|VALUETYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|별칭|PROBABILITY|분산|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
 |Yearly Income|Missing|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
@@ -164,8 +162,7 @@ ms.locfileid: "66083637"
 ### <a name="elements-of-the-regression-formula"></a>회귀 수식의 요소  
  NODE_DISTRIBUTION 중첩 테이블의 개별 행에는 회귀 수식의 각 요소가 들어 있습니다. 예의 결과에 있는 처음 두 개의 데이터 행에는 종속 변수를 모델링하는 예측 가능한 특성 **Yearly Income**에 대한 정보가 들어 있습니다. SUPPORT 열에는 이 특성의 두 가지 상태( **Yearly Income** 값이 사용 가능함, 또는 **Yearly Income** 값이 누락됨)를 지원하는 사례 수가 표시됩니다.  
   
- VARIANCE 열은 예측 가능한 특성의 계산된 분산을 알려 줍니다. *분산* 은 예상 분포를 기준으로 샘플에서 값이 분산 되는 방식을 측정 한 것입니다. 분산은 평균과의 제곱 편차에 대한 평균을 사용하여 계산됩니다. 분산의 제곱근을 표준 편차라고도 합니다. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 표준 편차를 제공하지 않지만 표준 편차도 쉽게 계산할 수 있습니다.  
+ VARIANCE 열은 예측 가능한 특성의 계산된 분산을 알려 줍니다. *분산* 은 샘플의 값이 예상 분포를 기준으로 얼마나 넓게 분산되어 있는지를 측정한 것입니다. 분산은 평균과의 제곱 편차에 대한 평균을 사용하여 계산됩니다. 분산의 제곱근을 표준 편차라고도 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 표준 편차를 제공하지 않지만 표준 편차도 쉽게 계산할 수 있습니다.  
   
  각 회귀 변수에 대해 세 개씩의 행이 출력됩니다. 이 세 행에는 계수, 득점 및 회귀 변수 통계가 포함됩니다.  
   

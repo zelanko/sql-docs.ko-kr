@@ -13,28 +13,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 69301cf56a4102acd54d11b9f5849ea58b141e03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083041"
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>마이닝 모델을 만드는 데 사용한 매개 변수 쿼리
   마이닝 모델의 컴퍼지션은 학습 사례의 영향을 받을 뿐만 아니라 모델을 만들 때 설정한 매개 변수의 영향도 받습니다. 따라서 기존 모델의 매개 변수 설정을 검색하면 모델의 동작을 보다 잘 이해할 수 있습니다. 매개 변수 검색은 해당 모델의 특정 버전을 문서화하는 데도 유용합니다.  
   
- 모델을 만들 때 사용한 매개 변수를 찾으려면 마이닝 모델 스키마 행 집합 중 하나에 대한 쿼리를 만듭니다. 
-  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]에서 이러한 스키마 행 집합은 Transact-SQL 구문을 사용하여 쉽게 쿼리할 수 있는 시스템 뷰 집합으로 표시됩니다. 이 절차에서는 지정된 마이닝 모델을 만드는 데 사용한 매개 변수를 반환하는 쿼리를 만드는 방법에 대해 설명합니다.  
+ 모델을 만들 때 사용한 매개 변수를 찾으려면 마이닝 모델 스키마 행 집합 중 하나에 대한 쿼리를 만듭니다. [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]에서 이러한 스키마 행 집합은 Transact-SQL 구문을 사용하여 쉽게 쿼리할 수 있는 시스템 뷰 집합으로 표시됩니다. 이 절차에서는 지정된 마이닝 모델을 만드는 데 사용한 매개 변수를 반환하는 쿼리를 만드는 방법에 대해 설명합니다.  
   
 ### <a name="to-open-a-query-window-for-a-schema-rowset-query"></a>스키마 행 집합 쿼리에 대한 쿼리 창을 열려면  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 쿼리할 모델이 들어 있는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 엽니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 쿼리할 모델이 들어 있는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 엽니다.  
   
 2.  인스턴스 이름을 마우스 오른쪽 단추로 클릭하여 **새 쿼리**를 선택한 다음 **DMX**를 선택합니다.  
   
     > [!NOTE]  
-    >  
-  **MDX** 템플릿을 사용하여 데이터 마이닝 모델에 대한 쿼리를 만들 수도 있습니다.  
+    >  **MDX** 템플릿을 사용하여 데이터 마이닝 모델에 대한 쿼리를 만들 수도 있습니다.  
   
 3.  인스턴스에 여러 개의 데이터베이스가 포함되어 있는 경우 도구 모음의 **사용 가능한 데이터베이스** 목록에서 쿼리할 모델을 포함하는 데이터베이스를 선택합니다.  
   

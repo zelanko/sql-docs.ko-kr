@@ -15,20 +15,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 79976111570e2f9cb153c853567f0f2091f77eb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088736"
 ---
 # <a name="trace-table-properties-general-tab"></a>추적 테이블 속성(일반 탭)
-  
   **추적 테이블 속성** 대화 상자의 **일반** 탭을 사용하여 추적 테이블의 속성을 볼 수 있습니다.  
   
  이 창을 보려면 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 를 사용하여 추적 테이블을 연 다음 **파일** 메뉴에서 **속성**을 클릭합니다.  
   
 ## <a name="options"></a>옵션  
- **테이블 이름**  
+ **표 이름**  
  표시되는 추적 테이블의 이름, 서버, 데이터베이스, 스키마를 표시합니다.  
   
  **추적 공급자 이름**  
@@ -37,18 +36,18 @@ ms.locfileid: "66088736"
  **추적 공급자 유형**  
  추적을 제공한 서버 유형을 표시합니다.  
   
- **버전**  
+ **version**  
  추적을 제공한 서버 버전을 표시합니다.  
   
- **열**  
+ **행**  
  추적 테이블의 행 수를 표시합니다.  
   
  **데이터 크기(페이지)**  
  추적 테이블의 데이터 페이지 수를 표시합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [추적 테이블 열기&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
- [SQL Server 프로파일러](../tools/sql-server-profiler/sql-server-profiler.md)   
+ [SQL Server Profiler &#40;추적 테이블을 엽니다&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
+ [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server Profiler 템플릿 및 권한](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   
   

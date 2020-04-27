@@ -11,16 +11,15 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: f96625c9658c3bd9864f0928e738357b6e14311e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089852"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>옵션(텍스트 편집기 - XML - 서식 페이지)
 
-이 대화 상자를 사용하여 XML 편집기의 서식 설정을 지정할 수 있습니다. 
-  **옵션** 대화 상자는 **도구** 메뉴에서 액세스할 수 있습니다.  
+이 대화 상자를 사용하여 XML 편집기의 서식 설정을 지정할 수 있습니다. **옵션** 대화 상자는 **도구** 메뉴에서 액세스할 수 있습니다.  
   
 > [!NOTE]  
 > 이러한 설정은 **옵션** 대화 상자에서 **텍스트 편집기** 폴더,**XML** 폴더, **서식** 옵션을 차례로 선택할 때 사용할 수 있습니다.  
@@ -51,8 +50,7 @@ ms.locfileid: "66089852"
   
 ## <a name="mixed-content"></a>혼합된 콘텐츠  
  **기본값으로 혼합된 콘텐츠 서식 지정**  
- 
-  `xml:space="preserve"` 범위에 콘텐츠가 있을 때를 제외하고 혼합된 콘텐츠 서식을 다시 설정하려고 합니다. 이것이 기본값입니다.  
+ `xml:space="preserve"` 범위에 콘텐츠가 있을 때를 제외하고 혼합된 콘텐츠 서식을 다시 설정하려고 합니다. 이것이 기본값입니다.  
   
  요소에 텍스트와 마크업이 혼합되어 있으면 콘텐츠가 혼합된 콘텐츠로 간주됩니다. 다음은 혼합된 콘텐츠가 있는 요소의 예입니다.  
   
@@ -65,4 +63,4 @@ ms.locfileid: "66089852"
  \</dir>  
   
 ## <a name="see-also"></a>참고 항목  
- [XML 편집기 &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  
+ [XML 편집기&#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  

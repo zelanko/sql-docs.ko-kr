@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d2296eadc16d5ca1745fe940d1f5e7582ef30db6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085903"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>마이닝 모델에서 열의 분할 변경
@@ -31,13 +31,11 @@ ms.locfileid: "66085903"
   
 1.  데이터 마이닝 디자이너의 **마이닝 모델** 탭에서 마이닝 모델의 이름이 포함된 열 머리글 또는 마이닝 알고리즘의 이름이 포함된 표의 행을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-     
-  **속성** 창에 마이닝 모델과 연관된 모든 속성이 표시됩니다.  
+     **속성** 창에 마이닝 모델과 연관된 모든 속성이 표시됩니다.  
   
 2.  화면 왼쪽에 가까이 있는 **구조** 열에서 불연속화하려는 연속 숫자 데이터가 포함된 열을 클릭합니다.  
   
-     
-  **속성** 창에 선택한 열과 연관된 속성만 표시됩니다.  
+     **속성** 창에 선택한 열과 연관된 속성만 표시됩니다.  
   
 ### <a name="to-change-the-discretization-method"></a>분할 메서드를 변경하려면  
   

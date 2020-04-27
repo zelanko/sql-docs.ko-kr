@@ -11,16 +11,15 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eb3422b859ce4e58fc05564357876c5fe09fcdff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089204"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>옵션(텍스트 편집기 - XML - 기타 페이지)
 
-
-  **옵션** 대화 상자를 사용하여 XML 편집기의 자동 완성 및 스키마 설정을 변경할 수 있습니다. 이러한 설정은 **도구** 메뉴에서 **옵션**을 클릭하고 **텍스트 편집기** 폴더를 확장한 다음 **XML** 과 **기타** 를 차례로 클릭하면 볼 수 있습니다.  
+**옵션** 대화 상자를 사용하여 XML 편집기의 자동 완성 및 스키마 설정을 변경할 수 있습니다. 이러한 설정은 **도구** 메뉴에서 **옵션**을 클릭하고 **텍스트 편집기** 폴더를 확장한 다음 **XML** 과 **기타** 를 차례로 클릭하면 볼 수 있습니다.  
   
 ## <a name="auto-insert"></a>자동 삽입  
  **닫기 태그**  
@@ -29,7 +28,7 @@ ms.locfileid: "66089204"
  **특성 따옴표**  
  XML 특성을 작성할 때 편집기에서 `="``"` 문자를 삽입하고 따옴표 안에 캐럿(**^** )을 넣습니다. 이 확인란은 기본적으로 선택되어 있습니다.  
   
- **네임 스페이스 선언**  
+ **네임스페이스 선언**  
  필요할 때마다 네임스페이스 선언이 자동으로 삽입됩니다. 이 확인란은 기본적으로 선택되어 있습니다.  
   
  **기타 태그(주석, CDATA)**  
@@ -43,6 +42,6 @@ ms.locfileid: "66089204"
  **개요 모드로 파일 열기**  
  파일을 열 때 개요 기능을 설정합니다. 이 확인란은 기본적으로 선택되어 있습니다.  
   
-## <a name="caching"></a>구성  
+## <a name="caching"></a>캐싱  
  **스키마**  
  스키마 캐시의 위치를 지정합니다. 찾아보기 단추(...)를 클릭하면 현재 스키마 캐시 위치가 새 창에서 열립니다. 기본 위치는 * \<Management Studio 설치 디렉터리>* \xml\schemas.입니다.  

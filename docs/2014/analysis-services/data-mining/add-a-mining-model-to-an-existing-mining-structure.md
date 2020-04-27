@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b550291b06918cce7adb430b0b05d1f37018fd78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086376"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>기존 마이닝 구조에 마이닝 모델 추가
@@ -26,17 +26,13 @@ ms.locfileid: "66086376"
   
 ### <a name="to-add-a-mining-model-to-the-structure"></a>구조에 마이닝 모델을 추가하려면  
   
-1.  
-  **의** 마이닝 모델 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]메뉴 항목에서 **새 마이닝 모델**을 선택합니다.  
+1.  **의** 마이닝 모델 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]메뉴 항목에서 **새 마이닝 모델**을 선택합니다.  
   
-     
-  **새 마이닝 모델** 대화 상자가 열립니다.  
+     **새 마이닝 모델** 대화 상자가 열립니다.  
   
-2.  
-  **모델 이름**에 새 마이닝 모델의 이름을 입력합니다.  
+2.  **모델 이름**에 새 마이닝 모델의 이름을 입력합니다.  
   
-3.  
-  **알고리즘 이름**에서 마이닝 모델을 작성하는 데 사용할 알고리즘을 선택합니다.  
+3.  **알고리즘 이름**에서 마이닝 모델을 작성하는 데 사용할 알고리즘을 선택합니다.  
   
 4.  **확인**을 클릭합니다.  
   

@@ -13,28 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 28b623333adaced772f85572091543f124894f4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084818"
 ---
 # <a name="data-mining-ssas"></a>데이터 마이닝(SSAS)
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 데이터 마이닝을 통합하는 솔루션을 위한 통합 플랫폼을 제공합니다. 관계형 또는 큐브 데이터를 사용하여 예측 분석이 포함된 비즈니스 인텔리전스 솔루션을 만들 수 있습니다.  
   
 ## <a name="benefits-of-data-mining"></a>데이터 마이닝의 장점  
- 데이터 마이닝은 다양한 연구 결과를 기반으로 하는 통계 원칙을 사용하여 데이터에서 패턴을 검색하므로 복잡한 문제에 대해 지능형 의사 결정을 수행하는 데 도움이 됩니다. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 데이터 마이닝 알고리즘을 데이터에 적용하면 추세를 예측하고 패턴을 식별하여 규칙과 권장 사항을 만들 수 있으며 복잡한 데이터 집합에서 이벤트의 시퀀스를 분석하여 새로운 통찰력을 얻을 수 있습니다.  
+ 데이터 마이닝은 다양한 연구 결과를 기반으로 하는 통계 원칙을 사용하여 데이터에서 패턴을 검색하므로 복잡한 문제에 대해 지능형 의사 결정을 수행하는 데 도움이 됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 데이터 마이닝 알고리즘을 데이터에 적용하면 추세를 예측하고 패턴을 식별하여 규칙과 권장 사항을 만들 수 있으며 복잡한 데이터 집합에서 이벤트의 시퀀스를 분석하여 새로운 통찰력을 얻을 수 있습니다.  
   
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터 마이닝은 강력하고도 사용하기 쉬우며, 많은 사용자들이 분석 및 보고에 자주 사용하는 도구와 통합되어 있습니다. 데이터 마이닝을 시작하기에 앞서 포괄적인 배경 지식을 얻으려면 이 섹션의 링크를 참조하십시오.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터 마이닝은 강력하고도 사용하기 쉬우며, 많은 사용자들이 분석 및 보고에 자주 사용하는 도구와 통합되어 있습니다. 데이터 마이닝을 시작하기에 앞서 포괄적인 배경 지식을 얻으려면 이 섹션의 링크를 참조하십시오.  
   
 ## <a name="key-data-mining-features"></a>주요 데이터 마이닝 기능  
  SQL 서버는 통합 데이터 마이닝 솔루션을 지원하여 다음과 같은 기능을 제공합니다.  
   
--   여러 데이터 원본: 데이터 마이닝을 수행하기 위해 데이터 웨어하우스나 OLAP 큐브를 만들 필요가 없습니다. 외부 공급자, 스프레드시트 및 텍스트 파일에서도 테이블 형식 데이터를 사용할 수 있습니다. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 만든 OLAP 큐브를 쉽게 마이닝할 수도 있습니다. 그러나 메모리 내 데이터베이스에서 데이터를 사용할 수 없습니다.  
+-   여러 데이터 원본: 데이터 마이닝을 수행하기 위해 데이터 웨어하우스나 OLAP 큐브를 만들 필요가 없습니다. 외부 공급자, 스프레드시트 및 텍스트 파일에서도 테이블 형식 데이터를 사용할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 만든 OLAP 큐브를 쉽게 마이닝할 수도 있습니다. 그러나 메모리 내 데이터베이스에서 데이터를 사용할 수 없습니다.  
   
 -   통합 데이터 정리, 데이터 관리 및 ETL: Data Quality Services는 데이터 프로파일링 및 정리를 위한 고급 도구를 제공합니다. Integration Services는 데이터 정리와 모델 작성, 처리, 학습 및 업데이트를 위한 ETL 프로세스를 작성하는 데 사용할 수 있습니다.  
   
@@ -55,13 +51,13 @@ ms.locfileid: "66084818"
   
 -   [데이터 마이닝 개념](data-mining-concepts.md)  
   
--   [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+-   [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
--   [마이닝 구조 &#40;Analysis Services 데이터 마이닝&#41;](mining-structures-analysis-services-data-mining.md)  
+-   [마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](mining-structures-analysis-services-data-mining.md)  
   
--   [마이닝 모델 &#40;Analysis Services 데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)  
+-   [마이닝 모델&#40;Analysis Services - 데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)  
   
--   [데이터 마이닝&#41;&#40;테스트 및 유효성 검사](testing-and-validation-data-mining.md)  
+-   [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md)  
   
 -   [데이터 마이닝 쿼리](data-mining-queries.md)  
   
@@ -71,6 +67,6 @@ ms.locfileid: "66084818"
   
 -   [데이터 마이닝 아키텍처](data-mining-architecture.md)  
   
--   [데이터 마이닝 &#40;보안 개요&#41;](security-overview-data-mining.md)  
+-   [보안 개요&#40;데이터 마이닝&#41;](security-overview-data-mining.md)  
   
   

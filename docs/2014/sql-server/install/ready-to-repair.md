@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d1dcc44c8d9892bb6dee31b5cebd4be73037cf0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093296"
 ---
 # <a name="ready-to-repair"></a>복구 준비
@@ -27,7 +27,7 @@ ms.locfileid: "66093296"
   
 -   설치 설정을 변경하려면 **뒤로**를 클릭합니다.  
   
--   설치를 종료 하려면 **취소** 를 클릭 합니다.  
+-   설치 프로그램을 끝내려면 **취소**를 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 설치 로그 파일 보기 및 읽기](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  

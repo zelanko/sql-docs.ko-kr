@@ -13,20 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 544fc09037c0670c7ba44adf7b270e46899621a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086936"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>특성 관계 만들기 및 특성 관계 편집 대화 상자(특성 관계 디자이너 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
-  
   **특성 관계 만들기** 대화 상자를 사용하여 새 특성 관계를 정의하고, **특성 관계 편집** 대화 상자를 사용하여 특성 관계를 변경할 수 있습니다. 자세한 내용은 [특성 관계 정의](multidimensional-models/attribute-relationships-define.md)를 참조하세요.  
   
  **특성 관계 만들기 대화 상자를 보려면**  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 솔루션 탐색기에서 차원을 두 번 클릭하여 차원 디자이너를 연 다음 **특성 관계** 탭을 클릭합니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 솔루션 탐색기에서 차원을 두 번 클릭하여 차원 디자이너를 연 다음 **특성 관계** 탭을 클릭합니다.  
   
 2.  도구 모음에서 새 특성 관계 아이콘을 클릭합니다.  
   
@@ -36,18 +34,15 @@ ms.locfileid: "66086936"
   
  **특성 관계 편집 대화 상자를 보려면**  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 솔루션 탐색기에서 차원을 두 번 클릭하여 차원 디자이너를 연 다음 **특성 관계** 탭을 클릭합니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 솔루션 탐색기에서 차원을 두 번 클릭하여 차원 디자이너를 연 다음 **특성 관계** 탭을 클릭합니다.  
   
 2.  특성 관계 다이어그램 또는 **특성 관계** 목록에서 특성 관계를 마우스 오른쪽 단추로 클릭한 다음 **특성 관계 편집**을 클릭합니다.  
   
 ## <a name="options"></a>옵션  
  **이름**  
- 
-  **원본 특성** 그룹에서 관계가 시작되는 특성의 이름을 지정합니다.  
+ **원본 특성** 그룹에서 관계가 시작되는 특성의 이름을 지정합니다.  
   
- 
-  **관련된 특성** 그룹에서 관계가 전달되는 특성의 이름을 지정합니다.  
+ **관련된 특성** 그룹에서 관계가 전달되는 특성의 이름을 지정합니다.  
   
  **멤버 수**  
  지정된 특성의 예상 멤버 수를 지정합니다.  

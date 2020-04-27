@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d48dd57d71d04611947e0ec6158b29c97a6b7646
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084028"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft 클러스터링 알고리즘 기술 참조
@@ -35,16 +35,14 @@ ms.locfileid: "66084028"
   
  클러스터링 모델 사용 방법은 다음 항목을 참조하십시오.  
   
--   [클러스터링 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [클러스터링 모델 쿼리 예제](clustering-model-query-examples.md)  
   
 ## <a name="implementation-of-the-microsoft-clustering-algorithm"></a>Microsoft  클러스터링 알고리즘 구현  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 두 가지 메서드를 통해 클러스터를 만들고 데이터 요소를 해당 클러스터에 할당합니다. 첫 번째는 하드 클러스터링 메서드인 *K-means* 알고리즘으로, 한 개의 데이터 요소는 한 개의 클러스터에만 속할 수 있으며 해당 클러스터에 있는 각 데이터 요소의 멤버 자격에 대해 단일 확률이 계산됩니다. 두 번째는 *소프트 클러스터링* 메서드인 EM( *Expectation Maximization* ) 메서드로, 한 개의 데이터 요소는 항상 여러 개의 클러스터에 속해 있으며 데이터 요소와 클러스터의 각 조합에 대해 확률이 계산됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 두 가지 메서드를 통해 클러스터를 만들고 데이터 요소를 해당 클러스터에 할당합니다. 첫 번째는 하드 클러스터링 메서드인 *K-means* 알고리즘으로, 한 개의 데이터 요소는 한 개의 클러스터에만 속할 수 있으며 해당 클러스터에 있는 각 데이터 요소의 멤버 자격에 대해 단일 확률이 계산됩니다. 두 번째는 *소프트 클러스터링* 메서드인 EM( *Expectation Maximization* ) 메서드로, 한 개의 데이터 요소는 항상 여러 개의 클러스터에 속해 있으며 데이터 요소와 클러스터의 각 조합에 대해 확률이 계산됩니다.  
   
- 
-  *CLUSTERING_METHOD* 매개 변수를 설정하여 사용할 알고리즘을 선택할 수 있습니다. 기본 클러스터링 메서드는 Scalable  EM입니다.  
+ *CLUSTERING_METHOD* 매개 변수를 설정하여 사용할 알고리즘을 선택할 수 있습니다. 기본 클러스터링 메서드는 Scalable  EM입니다.  
   
 ### <a name="em-clustering"></a>EM  클러스터링  
  EM  클러스터링에서 알고리즘은 초기 클러스터 모델을 반복적으로 구체화하여 데이터에 적합하게 맞추며 데이터 요소가 클러스터에 존재할 확률을 결정합니다. 알고리즘은 확률 모델이 데이터에 적합할 경우 프로세스를 끝냅니다. 모델이 제공될 경우 적합도를 결정하는 데 사용되는 함수는 데이터의 로그 유사도입니다.  
@@ -65,8 +63,7 @@ ms.locfileid: "66084028"
   
  Microsoft 구현은 Scalable EM과 Non-scalable EM을 제공합니다. 기본적으로 Scalable  EM에서는 처음 50,000개의 레코드를 사용하여 초기 검색을 시드합니다. 이 작업이 성공할 경우 모델은 이 데이터만 사용합니다. 50,000개의 레코드를 사용해도 모델이 적합하지 않을 경우 50,000개의 레코드를 추가로 읽습니다. Non-scalable EM에서는 크기에 관계없이 전체 데이터 세트를 읽습니다. 이 메서드를 사용하면 보다 정확한 클러스터를 만들 수는 있지만 메모리 요구 사항이 상당히 증가될 수 있습니다. Scalable  EM은 로컬 버퍼에서 작동하기 때문에 Non-scalable  EM에 비해 데이터를 보다 빨리 반복 처리할 수 있으며 알고리즘은 CPU  메모리 캐시를 보다 효율적으로 사용할 수 있습니다. 또한 모든 데이터가 주 메모리에 저장될 수 있어도 Scalable  EM은 Non-scalable  EM보다 3배 이상 빠릅니다. 대부분의 경우 성능이 향상되었다고 해서 전체 모델의 품질이 저하되는 것은 아닙니다.  
   
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘의 EM 구현에 대해 설명하는 기술 보고서는 [Scaling EM (Expectation Maximization) Clustering to Large Databases](https://go.microsoft.com/fwlink/?LinkId=45964)(EM(Expectation Maximization) 클러스터링을 큰 데이터베이스로 크기 조정)를 참조하세요.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘의 EM 구현에 대해 설명하는 기술 보고서는 [Scaling EM (Expectation Maximization) Clustering to Large Databases](https://go.microsoft.com/fwlink/?LinkId=45964)(EM(Expectation Maximization) 클러스터링을 큰 데이터베이스로 크기 조정)를 참조하세요.  
   
 ### <a name="k-means-clustering"></a>K-평균 클러스터링  
  K-Means  클러스터링은 클러스터에 포함된 항목 간의 차이는 최소화하면서 클러스터 간의 거리는 최대화하여 클러스터 멤버 자격을 할당하는 잘 알려진 메서드입니다. K-Means의 "means"는 클러스터의 *중심* 을 의미하는데, 이 중심은 임의로 선택된 다음 클러스터에 포함된 모든 데이터 요소의 정확한 평균을 나타낼 때까지 반복적으로 구체화되는 데이터 요소입니다. "K"는 클러스터링 프로세스를 시드하는 데 사용되는 임의의 데이터 요소 수를 의미합니다. K-Means  알고리즘은 클러스터에 포함된 데이터 레코드와 클러스터 평균을 나타내는 벡터 간의 유클리드 제곱 거리를 계산하여 해당 합계가 최소값에 도달할 경우 최종 K  클러스터 집합에 수렴합니다.  
@@ -78,8 +75,7 @@ ms.locfileid: "66084028"
  1 - P(data point, cluster)  
   
 > [!NOTE]  
->  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 K-Means  계산에 사용된 거리 함수를 표시하지 않으므로 완성된 모델에서는 거리 측정값을 사용할 수 없습니다. 그러나 예측 함수를 사용하여 거리에 해당하는 값을 반환할 수 있습니다.  이때 거리는 클러스터에 속하는 데이터 요소의 확률로 계산됩니다. 자세한 내용은 [ClusterProbability&#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)를 참조하세요.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 K-Means  계산에 사용된 거리 함수를 표시하지 않으므로 완성된 모델에서는 거리 측정값을 사용할 수 없습니다. 그러나 예측 함수를 사용하여 거리에 해당하는 값을 반환할 수 있습니다.  이때 거리는 클러스터에 속하는 데이터 요소의 확률로 계산됩니다. 자세한 내용은 [ClusterProbability&#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)를 참조하세요.  
   
  K-Means 알고리즘은 데이터 집합을 샘플링하는 두 가지 메서드를 제공합니다. Non-scalable K-Means는 전체 데이터 집합을 로드한 다음 하나의 클러스터링 패스를 만들며, Scalable K-Means 알고리즘은 처음 50,000개의 사례를 사용하며 데이터에 적합한 모델을 얻기 위해 더 많은 데이터가 필요한 경우에만 사례를 추가로 읽습니다.  
   
@@ -90,8 +86,7 @@ ms.locfileid: "66084028"
 >  NORMALIZATION  매개 변수는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘의 내부 속성이며 지원되지 않습니다. 일반적으로 모델 결과를 향상시키기 위해 클러스터링 모델에서 정규화를 사용하는 것이 좋습니다.  
   
 ## <a name="customizing-the-microsoft-clustering-algorithm"></a>Microsoft  클러스터링 알고리즘 사용자 지정  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 결과 마이닝 모델의 동작,  성능 및 정확도에 영향을 주는 여러 매개 변수를 지원합니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 결과 마이닝 모델의 동작,  성능 및 정확도에 영향을 주는 여러 매개 변수를 지원합니다.  
   
 ### <a name="setting-algorithm-parameters"></a>알고리즘 매개 변수 설정  
  다음 표에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘에서 사용할 수 있는 매개 변수에 대해 설명합니다. 이러한 매개 변수는 결과 마이닝 모델의 성능과 정확도에 영향을 줍니다.  
@@ -99,7 +94,7 @@ ms.locfileid: "66084028"
  CLUSTERING_METHOD  
  알고리즘에서 사용할 클러스터링 메서드를 지정합니다. 사용할 수 있는 클러스터링 메서드에는  
   
-|ID|방법|  
+|ID|메서드|  
 |--------|------------|  
 |1|Scalable  EM|  
 |2|Non-scalable  EM|  
@@ -164,18 +159,16 @@ ms.locfileid: "66084028"
 ### <a name="modeling-flags"></a>모델링 플래그  
  알고리즘은 다음과 같은 모델링 플래그를 지원합니다. 모델링 플래그는 마이닝 구조나 마이닝 모델을 만들 때 정의할 수 있으며, 분석 중 각 열의 값이 처리되는 방식을 지정합니다.  
   
-|모델링 플래그|Description|  
+|모델링 플래그|설명|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|열이 Missing 및 Existing 상태를 갖는 것으로 간주됩니다. Null은 누락 값입니다.<br /><br /> 마이닝 모델 열에 적용됩니다.|  
-|NOT NULL|이 열에는 Null이 포함될 수 없습니다. 따라서 Analysis  Services가 모델 학습 중 Null을 발견할 경우 오류가 발생합니다.<br /><br /> 마이닝 구조 열에 적용됩니다.|  
+|NOT NULL|이 열에는 Null이 포함될 수 없습니다. 따라서 Analysis Services가 모델 학습 중 Null을 발견할 경우 오류가 발생합니다.<br /><br /> 마이닝 구조 열에 적용됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- 클러스터링 모델은 키 열 및 입력 열을 포함해야 합니다. 입력 열을 예측 가능한 열로 정의할 수도 있습니다. 
-  `Predict Only`로 설정된 열은 클러스터를 작성하는 데 사용되지 않습니다. 클러스터의 이러한 값 분포는 클러스터가 작성된 다음에 계산됩니다.  
+ 클러스터링 모델은 키 열 및 입력 열을 포함해야 합니다. 입력 열을 예측 가능한 열로 정의할 수도 있습니다. `Predict Only`로 설정된 열은 클러스터를 작성하는 데 사용되지 않습니다. 클러스터의 이러한 값 분포는 클러스터가 작성된 다음에 계산됩니다.  
   
 ### <a name="input-and-predictable-columns"></a>입력 열과 예측 가능한 열  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 다음 표에 나열된 특정 입력 열과 예측 가능한 열을 지원합니다. 마이닝 모델에 사용되는 경우 콘텐츠 형식의 의미에 대한 자세한 내용은 [콘텐츠 형식&#40;데이터 마이닝&#41;](content-types-data-mining.md)을 참조하세요.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 다음 표에 나열된 특정 입력 열과 예측 가능한 열을 지원합니다. 마이닝 모델에 사용되는 경우 콘텐츠 형식의 의미에 대한 자세한 내용은 [콘텐츠 형식&#40;데이터 마이닝&#41;](content-types-data-mining.md)을 참조하세요.  
   
 |열|내용 유형|  
 |------------|-------------------|  
@@ -188,6 +181,6 @@ ms.locfileid: "66084028"
 ## <a name="see-also"></a>참고 항목  
  [Microsoft 클러스터링 알고리즘](microsoft-clustering-algorithm.md)   
  [클러스터링 모델 쿼리 예제](clustering-model-query-examples.md)   
- [클러스터링 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

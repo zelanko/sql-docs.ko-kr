@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 99624a05ba543e59e6c85ea616c200c246371488
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087565"
 ---
 # <a name="completing-the-wizard-import-analysis-services-database-wizard"></a>마법사 완료(Analysis Services 데이터베이스 가져오기 마법사)
-  
   **마법사 완료** 페이지를 사용하여 선택한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스의 데이터 및 메타데이터를 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트로 가져올 때 마법사 진행률을 표시할 수 있습니다.  
   
 ## <a name="options"></a>옵션  

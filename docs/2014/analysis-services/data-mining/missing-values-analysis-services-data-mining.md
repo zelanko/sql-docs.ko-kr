@@ -18,14 +18,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85968aef6452acb6aac75c5c6d4a093964e8d923
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083363"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>누락 값(Analysis Services - 데이터 마이닝)
-  
   *누락 값* 을 올바르게 처리하는 것은 효과적인 모델링을 위해 매우 중요합니다. 이 섹션에서는 누락 값의 정의를 알아보고, 데이터 마이닝 구조와 마이닝 모델을 빌드할 때 누락 값을 처리하기 위한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 기능을 설명합니다.  
   
 ## <a name="definition-of-missing-values-in-data-mining"></a>데이터 마이닝에서 누락 값의 정의  
@@ -63,11 +62,9 @@ ms.locfileid: "66083363"
 >  중첩 테이블에 있는 특성의 경우에는 누락 값이 정보를 제공하지 못합니다. 예를 들어 고객이 제품을 구입하지 않은 경우 중첩 **Products** 테이블에는 해당 제품에 해당하는 행이 없으며 마이닝 모델에서 누락 제품에 대한 특성을 만들지 않습니다. 그러나 특정 제품을 구입하지 않은 고객에게 관심이 있는 경우 모델 필터에 NOT EXISTS 문을 사용하여 중첩 테이블에 존재하지 않는 제품을 기준으로 필터링된 모델을 만들 수 있습니다. 자세한 내용은 [마이닝 모델에 필터 적용](apply-a-filter-to-a-mining-model.md)을 참조하세요.  
   
 ## <a name="adjusting-probability-for-missing-states"></a>누락 상태에 대한 확률 조정  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 값의 개수를 계산할 뿐 아니라 데이터 집합 값의 확률도 계산합니다. 
-  `Missing` 값의 경우에도 마찬가지입니다. 예를 들어 다음 표에서는 위의 예에 있는 사례에 대한 확률을 보여 줍니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 값의 개수를 계산할 뿐 아니라 데이터 집합 값의 확률도 계산합니다. `Missing` 값의 경우에도 마찬가지입니다. 예를 들어 다음 표에서는 위의 예에 있는 사례에 대한 확률을 보여 줍니다.  
   
-|값|사례|확률|  
+|값|사례|Probability|  
 |-----------|-----------|-----------------|  
 |0|9296|50.55%|  
 |1|9098|49.42%|  
@@ -96,8 +93,7 @@ ms.locfileid: "66083363"
   
  또한 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]에서 의사 결정 트리 알고리즘은 모델에 필터가 있을 때 알고리즘으로 보정할 수 있는 추가 조정 기능을 제공하므로 학습 중에 많은 상태가 제외될 수도 있습니다.  
   
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 학습 중에는 있는 상태가 특정 노드에서 지지도가 0인 경우 표준 조정이 이루어집니다. 그러나 학습 중에 상태가 발생하지 않으면 알고리즘은 확률을 정확히 0으로 설정합니다. 이러한 조정은 `Missing` 상태뿐만 아니라 학습 데이터에는 있지만 모델 필터링 결과 지지도가 0인 다른 상태에도 적용됩니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 학습 중에는 있는 상태가 특정 노드에서 지지도가 0인 경우 표준 조정이 이루어집니다. 그러나 학습 중에 상태가 발생하지 않으면 알고리즘은 확률을 정확히 0으로 설정합니다. 이러한 조정은 `Missing` 상태뿐만 아니라 학습 데이터에는 있지만 모델 필터링 결과 지지도가 0인 다른 상태에도 적용됩니다.  
   
  이 추가 조정을 통해 다음과 같은 수식이 발생합니다.  
   
@@ -112,13 +108,13 @@ ms.locfileid: "66083363"
   
 |작업|링크|  
 |-----------|-----------|  
-|개별 모델 열에 누락 값의 처리를 제어하는 플래그를 추가|[데이터 마이닝&#41;&#40;모델링 플래그 보기 또는 변경](modeling-flags-data-mining.md)|  
+|개별 모델 열에 누락 값의 처리를 제어하는 플래그를 추가|[모델링 플래그 확인 또는 변경&#40;데이터 마이닝&#41;](modeling-flags-data-mining.md)|  
 |마이닝 모델에 누락 값의 처리를 제어하는 속성을 설정|[마이닝 모델의 속성 변경](change-the-properties-of-a-mining-model.md)|  
-|DMX에서 모델링 플래그를 지정하는 방법|[DMX&#41;&#40;모델링 플래그](/sql/dmx/modeling-flags-dmx)|  
+|DMX에서 모델링 플래그를 지정하는 방법|[모델링 플래그&#40;DMX&#41;](/sql/dmx/modeling-flags-dmx)|  
 |마이닝 구조에서 누락 값을 처리하는 방법 변경|[마이닝 구조 속성 변경](change-the-properties-of-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>참고 항목  
  [마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)   
- [데이터 마이닝&#41;&#40;모델링 플래그](modeling-flags-data-mining.md)  
+ [모델링 플래그&#40;데이터 마이닝&#41;](modeling-flags-data-mining.md)  
   
   

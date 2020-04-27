@@ -15,20 +15,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: f32377fffb26ac622dc4045d108e491adc2b0342
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089167"
 ---
 # <a name="options-text-editor---transact-sql--general-page"></a>옵션 (텍스트 편집기-Transact-sql-일반 페이지)
-  
-  **일반 옵션** 대화 상자를 사용하여 [!INCLUDE[ssDE](../includes/ssde-md.md)] 스크립트를 편집하는 데 사용되는 [!INCLUDE[tsql](../includes/tsql-md.md)] 쿼리 편집기의 일반 편집 동작을 변경할 수 있습니다. 이러한 설정을 표시하려면 **도구** 메뉴에서 **옵션** 을 클릭하고 **Transact-SQL** 하위 폴더를 확장한 다음 **일반**을 클릭합니다.  
+  **일반 옵션** 대화 상자를 사용하여 [!INCLUDE[ssDE](../includes/ssde-md.md)] 스크립트를 편집하는 데 사용되는 [!INCLUDE[tsql](../includes/tsql-md.md)] 쿼리 편집기의 일반 편집 동작을 변경할 수 있습니다. 이러한 설정을 표시하려면 **도구** 메뉴에서 **옵션**을 클릭하고 **Transact-SQL** 하위 폴더를 확장한 다음 **일반**을 클릭합니다.  
   
 ## <a name="setting-options-in-multiple-locations"></a>여러 위치에서 옵션 설정  
- 
-  [!INCLUDE[ssDE](../includes/ssde-md.md)] 쿼리 편집기에 대한 옵션은 **모든 언어** 대화 상자(일반)에서도 설정할 수 있습니다. 
-  **모든 언어** 대화 상자를 사용하여 DMX 또는 MDX 편집기 등의 다른 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 편집기에 대해 다른 옵션을 설정하는 경우에는 이 대화 상자를 사용하여 [!INCLUDE[ssDE](../includes/ssde-md.md)] 쿼리 편집기 옵션을 다시 설정해야 합니다.  
+ [!INCLUDE[ssDE](../includes/ssde-md.md)] 쿼리 편집기에 대한 옵션은 **모든 언어** 대화 상자(일반)에서도 설정할 수 있습니다. **모든 언어** 대화 상자를 사용 하 여 DMX 또는 MDX 편집기 등의 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 다른 편집기에 대해 다른 옵션을 설정 하는 경우에는이 [!INCLUDE[ssDE](../includes/ssde-md.md)] 대화 상자를 사용 하 여 쿼리 편집기 옵션을 다시 설정 해야 합니다.  
   
 ## <a name="statement-completion"></a>문 완성  
  **멤버 목록 자동 표시**  
@@ -44,7 +41,7 @@ ms.locfileid: "66089167"
  **가상 공간 활성화**  
  이 확인란을 선택하면 코드 줄 끝 뒤에 있는 어느 위치든 클릭하여 내용을 입력할 수 있습니다. 이 확인란을 선택하면 코드 옆의 일정한 위치에 설명을 배치할 수 있습니다. 이 확인란을 선택하면 **자동 줄 바꿈** 확인란이 비활성화됩니다.  
   
- **자동 줄 바꿈**  
+ **단어 줄 바꿈**  
  이 확인란을 선택하면 가로로 표시되는 편집기 영역을 벗어나는 줄 부분이 자동으로 다음 줄에 표시됩니다. 이 확인란을 선택하면 **자동 줄 바꿈 시각 문자 표시** 확인란이 활성화되고 **가상 공간 활성화** 확인란이 비활성화됩니다.  
   
  **자동 줄 바꿈 시각 문자 표시**  

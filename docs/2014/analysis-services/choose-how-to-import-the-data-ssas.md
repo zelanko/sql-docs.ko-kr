@@ -13,16 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 482d3b072eaa4db2c3aee84986590dd9d505b347
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088135"
 ---
 # <a name="choose-how-to-import-the-data-ssas"></a>데이터를 가져오는 방법 선택(SSAS)
-  
-  **테이블 가져오기 마법사** 의 이 페이지에서는 선택된 데이터 원본으로부터 데이터를 가져오는 방법을 선택할 수 있습니다. 
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
+  **테이블 가져오기 마법사** 의 이 페이지에서는 선택된 데이터 원본으로부터 데이터를 가져오는 방법을 선택할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
  **데이터를 가져올 테이블 및 뷰를 목록에서 선택**  

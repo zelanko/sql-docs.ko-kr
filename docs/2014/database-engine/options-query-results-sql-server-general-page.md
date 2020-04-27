@@ -17,10 +17,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 48261d5ff0290dd5042b6604d9e492871bf6da38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089331"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>옵션 (쿼리 결과-SQL Server-일반 페이지)

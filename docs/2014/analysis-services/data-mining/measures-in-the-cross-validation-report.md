@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30f8daab91172863ba18c6b75529063555b61afc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084154"
 ---
 # <a name="measures-in-the-cross-validation-report"></a>교차 유효성 검사 보고서의 측정값
@@ -28,8 +28,7 @@ ms.locfileid: "66084154"
   
  보고서에는 데이터의 접기 수 및 각 접기의 데이터 양에 대한 기본 정보와, 데이터 분포를 설명하는 일반 메트릭 집합이 포함됩니다. 각 교집합 영역에 대한 일반 메트릭을 비교하여 구조 또는 모델의 안정성을 평가할 수 있습니다.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 마이닝 모델에 대한 자세한 측정값 집합도 표시합니다. 이 측정값은 모델 유형 및 분석되는 특성의 유형(예: 특성이 불연속 특성인지 아니면 연속 특성인지)에 따라 달라집니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 마이닝 모델에 대한 자세한 측정값 집합도 표시합니다. 이 측정값은 모델 유형 및 분석되는 특성의 유형(예: 특성이 불연속 특성인지 아니면 연속 특성인지)에 따라 달라집니다.  
   
  이 섹션에서는 **교차 유효성 검사** 보고서에 포함되는 측정값의 목록과 의미를 제공합니다. 각 측정값을 계산하는 방법에 대한 자세한 내용은 [교차 유효성 검사 수식](cross-validation-formulas.md)을 참조하세요.  
   
@@ -46,6 +45,6 @@ ms.locfileid: "66084154"
 |집계|집계 측정값은 각 파티션에 대 한 결과의 분산을 나타냅니다.<br /><br /> **Mean**: 특정 측정값에 대 한 파티션 값의 평균입니다.<br /><br /> **표준 편차**: 모델의 모든 파티션에서 특정 측정값에 대 한 평균과의 편차에 대 한 평균입니다. 교차 유효성 검사의 경우 이 점수의 값이 높으면 접기 사이에 상당한 변형이 있음을 의미합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 마이닝&#41;&#40;테스트 및 유효성 검사](testing-and-validation-data-mining.md)  
+ [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md)  
   
   

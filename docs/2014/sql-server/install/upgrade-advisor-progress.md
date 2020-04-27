@@ -18,26 +18,24 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 697f70d4435213a991e55adecb51a98120d8df1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091557"
 ---
 # <a name="upgrade-advisor-progress"></a>업그레이드 관리자 진행률
   업그레이드 관리자 분석은 선택된 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소의 분석을 수행하는 전용 분석기를 통해 시작됩니다. 구성 요소가 분석 되 면 **진행률 대화 상자에 진행률이 보고** 됩니다.  
   
 ## <a name="options"></a>옵션  
- **동작**  
+ **작업**  
  분석할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 지정합니다.  
   
  **상태**  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소 진행률 인터페이스에서 반환된 상태 값을 표시합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소 진행률 인터페이스에서 반환된 상태 값을 표시합니다.  
   
  **메시지**  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개별 분석기에서 반환된 오류, 실패 또는 성공 메시지를 표시합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개별 분석기에서 반환된 오류, 실패 또는 성공 메시지를 표시합니다.  
   
 > [!NOTE]  
 >  분석이 너무 오래 걸리면 분석을 중지하고 업그레이드 관리자 분석 마법사를 종료한 다음 마법사를 다시 실행할 수 있습니다. 분석 시간을 줄이려면 분석할 구성 요소 수를 줄이십시오.  

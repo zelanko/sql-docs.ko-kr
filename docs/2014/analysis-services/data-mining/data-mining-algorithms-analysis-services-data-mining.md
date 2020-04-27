@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 082241af377c8817c3adbc394a46f1ebc7d6a4e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085138"
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>데이터 마이닝 알고리즘(Analysis Services - 데이터 마이닝)
@@ -49,16 +49,15 @@ ms.locfileid: "66085138"
  특정 분석 태스크에 적합한 알고리즘을 선택하는 것은 결코 쉽지 않습니다. 동일한 비즈니스 태스크를 수행하기 위해 여러 알고리즘을 사용할 수 있지만 이렇게 하면 각 알고리즘에서 다른 결과를 생성하며 일부 알고리즘에서는 두 개 이상의 결과 유형을 생성할 수 있습니다. 예를 들어 의사 결정 트리가 최종 마이닝 모델에 영향을 미치지 않는 열을 식별할 수 있기 때문에 예측하거나 데이터 세트의 열 수를 줄이는 데 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘을 사용할 수 있습니다.  
   
 ### <a name="choosing-an-algorithm-by-type"></a>유형별 알고리즘 선택  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에는 다음과 같은 알고리즘 유형이 포함되어 있습니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에는 다음과 같은 알고리즘 유형이 포함되어 있습니다.  
   
--   **분류 알고리즘** 은 데이터 집합의 다른 특성을 기반으로 하나 이상의 불연속 변수를 예측 합니다.  
+-   데이터 세트의 다른 특성을 기반으로 하나 이상의 불연속 변수를 예측하는**분류 알고리즘** .  
   
 -   **회귀 알고리즘** 은 데이터 집합의 다른 특성을 기반으로 수익 또는 손실과 같은 하나 이상의 연속 변수를 예측 합니다.  
   
--   **조각화 알고리즘** 은 속성이 유사한 항목의 그룹 또는 클러스터로 데이터를 나눕니다.  
+-   데이터를 속성이 유사한 항목의 그룹 또는 클러스터로 나누는**세그먼트화 알고리즘** .  
   
--   **연결 알고리즘** 은 데이터 집합에 있는 여러 특성 간의 상관 관계를 찾습니다. 이러한 종류의 알고리즘은 시장 바구니 분석에 사용할 수 있는 연결 규칙을 만드는 데 가장 일반적으로 적용됩니다.  
+-   데이터 세트에 있는 여러 특성 사이의 상관 관계를 찾는 **연결 알고리즘** . 이러한 종류의 알고리즘은 시장 바구니 분석에 사용할 수 있는 연결 규칙을 만드는 데 가장 일반적으로 적용됩니다.  
   
 -   **시퀀스 분석 알고리즘** 은 웹 경로 흐름과 같이 데이터에서 자주 발생 하는 시퀀스 또는 에피소드를 요약 합니다.  
   
@@ -80,12 +79,12 @@ ms.locfileid: "66085138"
   
 |||  
 |-|-|  
-|**기본 알고리즘 설명**|알고리즘에서 수행하는 작업과 작업 방법을 설명하고 알고리즘이 유용할 수 있는 비즈니스 시나리오를 간략하게 설명합니다.|  
+|**알고리즘 기본 사항 설명**|알고리즘에서 수행하는 작업과 작업 방법을 설명하고 알고리즘이 유용할 수 있는 비즈니스 시나리오를 간략하게 설명합니다.|  
 ||[Microsoft 연결 알고리즘](microsoft-association-algorithm.md)<br /><br /> [Microsoft Clustering Algorithm](microsoft-clustering-algorithm.md)<br /><br /> [Microsoft 의사 결정 트리 알고리즘](microsoft-decision-trees-algorithm.md)<br /><br /> [Microsoft 선형 회귀 알고리즘](microsoft-linear-regression-algorithm.md)<br /><br /> [Microsoft 로지스틱 회귀 알고리즘](microsoft-logistic-regression-algorithm.md)<br /><br /> [Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md)<br /><br /> [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)<br /><br /> [Microsoft 시퀀스 클러스터링 알고리즘](microsoft-sequence-clustering-algorithm.md)<br /><br /> [Microsoft Time Series 알고리즘](microsoft-time-series-algorithm.md)|  
 |**기술 참조**|알고리즘 구현에 대한 기술 정보를 제공하고 필요한 경우 학술 참조를 제공합니다. 알고리즘의 동작을 제어하고 모델 결과를 사용자 지정하기 위해 설정할 수 있는 매개 변수를 나열합니다. 데이터 요구 사항에 설명하고 가능한 경우 성능 팁을 제공합니다.|  
 ||[Microsoft 연결 알고리즘 기술 참조](microsoft-association-algorithm-technical-reference.md)<br /><br /> [Microsoft 클러스터링 알고리즘 기술 참조](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 의사 결정 트리 알고리즘 기술 참조](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 선형 회귀 알고리즘 기술 참조](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 로지스틱 회귀 알고리즘 기술 참조](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft Naive Bayes 알고리즘 기술 참조](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Microsoft 신경망 알고리즘 기술 참조](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Microsoft 시퀀스 클러스터링 알고리즘 기술 참조](microsoft-sequence-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft Time Series 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
 |**모델 콘텐츠**|각 데이터 마이닝 모델 유형에서 정보가 구성되는 방법과 각 노드에 저장된 정보를 해석하는 방법을 설명합니다.|  
-||[연결 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)<br /><br /> [클러스터링 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)<br /><br /> [의사 결정 트리 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)<br /><br /> [선형 회귀 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)<br /><br /> [로지스틱 회귀 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](mining-model-content-for-logistic-regression-models.md)<br /><br /> [Naive Bayes 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)<br /><br /> [신경망 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)<br /><br /> [시퀀스 클러스터링 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](mining-model-content-for-sequence-clustering-models.md)<br /><br /> [시계열 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|  
+||[연결 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)<br /><br /> [클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)<br /><br /> [의사 결정 트리 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)<br /><br /> [선형 회귀 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)<br /><br /> [로지스틱 회귀 분석 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-logistic-regression-models.md)<br /><br /> [Naive Bayes 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)<br /><br /> [신경망 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)<br /><br /> [시퀀스 클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-sequence-clustering-models.md)<br /><br /> [시계열 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|  
 |**데이터 마이닝 쿼리**|각 모델 유형과 함께 사용할 수 있는 여러 쿼리를 제공합니다. 모델의 패턴에 대해 알아 볼 수 있는 내용 쿼리 및 패턴을 기반으로 예측을 작성하는 데 도움이 되는 예측 쿼리 등을 예로 들 수 있습니다.|  
 ||[연결 모델 쿼리 예제](association-model-query-examples.md)<br /><br /> [클러스터링 모델 쿼리 예제](clustering-model-query-examples.md)<br /><br /> [의사 결정 트리 모델 쿼리 예제](decision-trees-model-query-examples.md)<br /><br /> [선형 회귀 모델 쿼리 예제](linear-regression-model-query-examples.md)<br /><br /> [로지스틱 회귀 모델 쿼리 예제](logistic-regression-model-query-examples.md)<br /><br /> [Naive Bayes 모델 쿼리 예제](naive-bayes-model-query-examples.md)<br /><br /> [신경망 모델 쿼리 예제](neural-network-model-query-examples.md)<br /><br /> [시퀀스 클러스터링 모델 쿼리 예제](sequence-clustering-model-query-examples.md)<br /><br /> [시계열 모델 쿼리 예제](time-series-model-query-examples.md)|  
   
@@ -97,7 +96,7 @@ ms.locfileid: "66085138"
 |사용자 지정 플러그 인 알고리즘 만들기|[플러그 인 알고리즘](plugin-algorithms.md)|  
 |알고리즘별 뷰어를 사용하여 모델 탐색|[데이터 마이닝 모델 뷰어](data-mining-model-viewers.md)|  
 |일반 테이블 형식을 사용하여 모델 내용 보기|[Microsoft 일반 콘텐츠 트리 뷰어를 사용하여 모델 찾아보기](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)|  
-|데이터를 설정하고 알고리즘을 사용하여 모델을 만드는 방법에 대해 알아봅니다|[마이닝 구조 &#40;Analysis Services 데이터 마이닝&#41;](mining-structures-analysis-services-data-mining.md)<br /><br /> [마이닝 모델 &#40;Analysis Services 데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)|  
+|데이터를 설정하고 알고리즘을 사용하여 모델을 만드는 방법에 대해 알아봅니다|[마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](mining-structures-analysis-services-data-mining.md)<br /><br /> [마이닝 모델&#40;Analysis Services - 데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 도구](data-mining-tools.md)  

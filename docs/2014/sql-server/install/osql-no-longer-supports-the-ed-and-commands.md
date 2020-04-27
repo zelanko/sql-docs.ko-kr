@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ce7bfa0bbeec5c5ca83b7139f0ff28e3994021d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093723"
 ---
 # <a name="osql-no-longer-supports-the-ed-and--commands"></a>osql은 더 이상 ED 및 !! 명령
@@ -27,7 +27,7 @@ ms.locfileid: "66093723"
 ## <a name="corrective-action"></a>수정 동작  
  **ED** 및!!에 대 한 참조를 제거 합니다 **.** 명령에 대한 참조를 제거합니다.  
   
- **을 사용** 하려는 경우 **** 명령을 사용 합니다. **osql**대신 **sqlcmd** 유틸리티를 사용 합니다.  
+ **을 사용** 하려는 경우 **!!** 명령을 사용 합니다. **osql**대신 **sqlcmd** 유틸리티를 사용 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [업그레이드 문제 데이터베이스 엔진](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

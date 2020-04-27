@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d5a5126048928e66fd8351bc00226cadb2de54d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084885"
 ---
 # <a name="data-mining-solutions"></a>데이터 마이닝 솔루션
@@ -33,7 +33,7 @@ ms.locfileid: "66084885"
   
  [솔루션 연습](#bkmk_Walkthru)  
   
-##  <a name="bkmk_RelMD"></a>관계형 솔루션 및 다차원 솔루션  
+##  <a name="relational-vs-multidimensional-solutions"></a><a name="bkmk_RelMD"></a>관계형 솔루션 및 다차원 솔루션  
  데이터 마이닝 솔루션은 다차원 데이터 (즉, 기존 큐브) 또는 순수 관계형 데이터 (예: 데이터 웨어하우스의 테이블 및 뷰) 또는 텍스트 파일, Excel 통합 문서 또는 기타 외부 데이터 원본 중 하나를 기반으로 할 수 있습니다.  
   
 -   기존 다차원 데이터베이스 솔루션 내에 데이터 마이닝 개체를 만들 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "66084885"
   
      이는 일반적으로 관계형 데이터 원본에 대해 처리 및 쿼리가 가장 빠르기 때문에 데이터 마이닝 모델을 만들 때 가장 선호되는 방법입니다. 또한 EXPORT 및 IMPORT 명령을 사용하여 서버 간에 모델을 쉽게 이동 및 백업할 수 있습니다.  
   
-##  <a name="bkmk_Deploy"></a>데이터 마이닝 솔루션 배포  
+##  <a name="deploying-data-mining-solutions"></a><a name="bkmk_Deploy"></a>데이터 마이닝 솔루션 배포  
  솔루션을 배포하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스는 다차원 개체 및 데이터 마이닝 개체를 지원하는 모드에서 실행되고 있어야 합니다. 즉 데이터 마이닝 개체를 테이블 형식 모델 또는 PowerPivot 데이터를 호스팅하는 인스턴스에 배포할 수는 없습니다.  
   
  따라서 Visual Studio에서 데이터 마이닝 솔루션을 만드는 경우 반드시 **Analysis Services 다차원 및 데이터 마이닝 프로젝트**템플릿을 사용하십시오.  
@@ -53,7 +53,7 @@ ms.locfileid: "66084885"
   
  관계형 솔루션 및 다차원 솔루션을 배포하는 방법에 대한 자세한 내용은 [데이터 마이닝 솔루션 배포](deployment-of-data-mining-solutions.md)를 참조하세요.  
   
-##  <a name="bkmk_Walkthru"></a>솔루션 연습  
+##  <a name="solution-walkthrough"></a><a name="bkmk_Walkthru"></a>솔루션 연습  
  데이터 마이닝 마법사를 사용하여 데이터 마이닝 솔루션을 만드는 방법에 대해 간략하게 설명합니다.  
   
  [관계형 마이닝 구조 만들기](create-a-relational-mining-structure.md)  
@@ -78,13 +78,13 @@ ms.locfileid: "66084885"
   
 |작업|토픽|  
 |-----------|------------|  
-|만든 모델을 테스트하고, 학습 데이터의 품질에 대한 유효성을 검사하고, 데이터 마이닝 모델의 정확도를 나타내는 차트를 만듭니다.|[데이터 마이닝&#41;&#40;테스트 및 유효성 검사](testing-and-validation-data-mining.md)|  
+|만든 모델을 테스트하고, 학습 데이터의 품질에 대한 유효성을 검사하고, 데이터 마이닝 모델의 정확도를 나타내는 차트를 만듭니다.|[테스트 및 유효성 검사&#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md)|  
 |구조 및 관련 모델을 데이터로 채워 모델을 학습합니다. 모델을 새 데이터로 업데이트 및 확장합니다.|[데이터 마이닝 개체 처리](processing-data-mining-objects.md)|  
 |학습 데이터에 필터를 적용하거나, 다른 알고리즘을 선택하거나, 고급 알고리즘 매개 변수를 설정하여 마이닝 모델을 사용자 지정합니다.|[마이닝 모델 및 구조 사용자 지정](customize-mining-models-and-structure.md)|  
-|모델을 학습하는 데 사용되는 데이터에 필터를 적용하여 마이닝 모델을 사용자 지정합니다.|[Analysis Services 데이터 마이닝 &#40;구조에 마이닝 모델을 추가&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|모델을 학습하는 데 사용되는 데이터에 필터를 적용하여 마이닝 모델을 사용자 지정합니다.|[구조에 마이닝 모델 추가&#40;Analysis Services - 데이터 마이닝&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |데이터 마이닝 솔루션을 업데이트하고 관리합니다.|Link TBD|  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 마이닝 자습서 &#40;Analysis Services&#41;](../data-mining-tutorials-analysis-services.md)  
+ [데이터 마이닝 자습서&#40;Analysis Services&#41;](../data-mining-tutorials-analysis-services.md)  
   
   

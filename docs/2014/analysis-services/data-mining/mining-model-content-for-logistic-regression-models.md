@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b463035cc83fafd2b283d85a577616fa962fcd1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083619"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>로지스틱 회귀 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
@@ -72,7 +72,7 @@ ms.locfileid: "66083619"
  NODE_TYPE  
  로지스틱 회귀 모델이 출력하는 노드 유형은 다음과 같습니다.  
   
-|노드 유형 ID|Description|  
+|노드 유형 ID|설명|  
 |------------------|-----------------|  
 |1|모델|  
 |17|하위 네트워크의 구성 도우미 노드|  
@@ -167,7 +167,7 @@ ms.locfileid: "66083619"
  MSOLAP_NODE_SHORT_CAPTION  
  로지스틱 회귀 모델에서는 항상 비어 있습니다.  
   
-##  <a name="bkmk_NodeIDs"></a>노드 이름 및 Id 사용  
+##  <a name="using-node-names-and-ids"></a><a name="bkmk_NodeIDs"></a> 노드 이름 및 ID 사용  
  로지스틱 회귀 모델의 노드 이름은 모델에 있는 노드 간의 관계에 대한 추가 정보를 제공합니다. 다음 표에서는 각 계층의 노드에 할당되는 ID의 규칙을 보여 줍니다.  
   
 |노드 유형|노드 ID의 규칙|  

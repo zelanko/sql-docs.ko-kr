@@ -13,17 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cee721aca66f5266a29d3bf61babf9060e9aef32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082297"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>의사 결정 트리 탭(마이닝 모델 뷰어)
-  
   **의사 결정 트리** 창에서는 의사 결정 트리 모델에서 만들어진 의사 결정 규칙을 시각적으로 표현합니다. 의사 결정 규칙은 특정 결과로 가는 경로를 설명합니다.  
   
- **자세한 내용:** [Microsoft 의사 결정 트리 알고리즘](data-mining/microsoft-decision-trees-algorithm.md), [Microsoft 트리 뷰어를 사용 하 여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ **자세한 내용:** [Microsoft 의사 결정 트리 알고리즘](data-mining/microsoft-decision-trees-algorithm.md), [Microsoft 트리 뷰어를 사용하여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## <a name="options"></a>옵션  
  **뷰어 내용 새로 고침**  

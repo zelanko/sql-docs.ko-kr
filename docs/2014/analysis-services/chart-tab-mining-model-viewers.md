@@ -13,17 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57efea3fb5134312ac1ec3e7e9c719bb49872c5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088182"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>차트 탭(마이닝 모델 뷰어)
-  
   **차트** 창을 사용하여 예측 값과 함께 시계열 모델의 학습에 사용되는 기록 데이터를 표시할 수 있습니다. 차트의 세로 축은 계열 값을 나타내고 가로 축은 시간을 나타냅니다. 미래 예측은 점선으로 나타납니다.  
   
- **자세한 내용:** [microsoft 시계열 알고리즘](data-mining/microsoft-time-series-algorithm.md), [Microsoft 시계열 뷰어를 사용 하 여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ **자세한 내용:** [Microsoft Time Series 알고리즘](data-mining/microsoft-time-series-algorithm.md), [Microsoft 시계열 뷰어를 사용하여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
 ## <a name="options"></a>옵션  
  **뷰어 내용 새로 고침**  
@@ -45,8 +44,7 @@ ms.locfileid: "66088182"
  전체 차트가 화면에 표시될 때까지 차트를 축소합니다.  
   
  **Abs**  
- 두 차트 뷰 간을 전환합니다. 기본 뷰에서 숫자는 전체 분포에 상대적으로(백분율로) 그래프로 표현됩니다. 
-  **Abs**를 클릭하면 숫자가 절대 값으로 그래프로 표현됩니다.  
+ 두 차트 뷰 간을 전환합니다. 기본 뷰에서 숫자는 전체 분포에 상대적으로(백분율로) 그래프로 표현됩니다. **Abs**를 클릭하면 숫자가 절대 값으로 그래프로 표현됩니다.  
   
  **클립보드에 차트를 복사합니다.**  
  전체 차트를 클립보드로 복사합니다.  

@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084423"
 ---
 # <a name="feature-selection-data-mining"></a>기능 선택(데이터 마이닝)
@@ -44,8 +44,7 @@ ms.locfileid: "66084423"
 ## <a name="feature-selection-in-analysis-services-data-mining"></a>Analysis Services 데이터 마이닝의 기능 선택  
  일반적으로 기능 선택은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 자동으로 수행되며 각 알고리즘에는 기능 축소를 지능형으로 적용하기 위한 기본 기술 집합이 있습니다. 기능 선택은 모델에 사용될 가능성이 가장 높은 특성을 데이터 세트에서 자동으로 선택하기 위해 모델을 학습하기 전에 항상 수행됩니다. 하지만 기능 선택 동작에 영향을 주는 매개 변수를 수동으로 설정할 수도 있습니다.  
   
- 일반적으로 기능 선택은 각 특성에 대한 점수를 계산한 다음 점수가 가장 높은 특성만 선택하는 방식으로 작동합니다. 최고 점수에 대한 임계값도 조정할 수 있습니다. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 이러한 점수를 계산하기 위한 여러 방법을 제공하며 특정 모델에 적용되는 정확한 방법은 다음 요소에 따라 결정됩니다.  
+ 일반적으로 기능 선택은 각 특성에 대한 점수를 계산한 다음 점수가 가장 높은 특성만 선택하는 방식으로 작동합니다. 최고 점수에 대한 임계값도 조정할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 이러한 점수를 계산하기 위한 여러 방법을 제공하며 특정 모델에 적용되는 정확한 방법은 다음 요소에 따라 결정됩니다.  
   
 -   모델에 사용되는 알고리즘  
   
@@ -61,10 +60,9 @@ ms.locfileid: "66084423"
 ### <a name="definition-of-feature-selection-methods"></a>기능 선택 방법 정의  
  기능 선택을 구현하는 방법에는 여러 가지가 있는데 작업 중인 데이터의 형식과 분석을 위해 선택한 알고리즘에 따라 이 방법이 달라집니다. SQL Server Analysis Services는 널리 사용되고 잘 알려진 특성 점수 매기기 메서드를 여러 개 제공합니다. 알고리즘 또는 데이터 집합에 적용되는 방법은 데이터 형식 및 열 사용법에 따라 다릅니다.  
   
- 
-  *흥미도* 점수는 이진이 아닌 연속 숫자 데이터를 포함하는 열의 특성에 순위를 매기고 정렬하는 데 사용됩니다.  
+ *흥미도* 점수는 이진이 아닌 연속 숫자 데이터를 포함하는 열의 특성에 순위를 매기고 정렬하는 데 사용됩니다.  
   
- 불연속 및 분할 된 데이터를 포함 하는 열에 대해 *Shannon의 엔트로피* 및 두 개의 *Bayesian* 점수를 사용할 수 있습니다. 하지만 모델에 연속 열이 포함된 경우 일관성을 보장하기 위해 흥미도 점수를 사용하여 모든 입력 열을 평가합니다.  
+ 불연속 데이터와 분할된 데이터가 들어 있는 열에는*Shannon Entropy* 및 두 가지 *Bayesian* 점수를 사용할 수 있습니다. 하지만 모델에 연속 열이 포함된 경우 일관성을 보장하기 위해 흥미도 점수를 사용하여 모든 입력 열을 평가합니다.  
   
  다음 섹션에서는 기능 선택의 각 방법에 대해 설명합니다.  
   
@@ -105,7 +103,7 @@ ms.locfileid: "66084423"
 ### <a name="feature-selection-methods-used-by-analysis-services-algorithms"></a>Analysis Services 알고리즘에서 사용하는 기능 선택 방법  
  다음 표에서는 기능 선택을 지원하는 알고리즘, 알고리즘에서 사용하는 기능 선택 방법 및 기능 선택 동작을 제어하기 위해 설정하는 매개 변수를 보여 줍니다.  
   
-|알고리즘|분석 방법|주석|  
+|알고리즘|분석 방법|설명|  
 |---------------|------------------------|--------------|  
 |Naive Bayes|Shannon Entropy<br /><br /> Bayesian with K2 Prior<br /><br /> Bayesian Dirichlet with uniform prior(기본값)|Microsoft Naïve Bayes 알고리즘은 불연속 특성 또는 불연속화된 특성을 허용하므로 흥미도 점수를 사용할 수 없습니다.<br /><br /> 이 알고리즘에 대한 자세한 내용은 [Microsoft Naive Bayes Algorithm Technical Reference](microsoft-naive-bayes-algorithm-technical-reference.md)를 참조하십시오.|  
 |의사 결정 트리|흥미도 점수<br /><br /> Shannon Entropy<br /><br /> Bayesian with K2 Prior<br /><br /> Bayesian Dirichlet with uniform prior(기본값)|이진이 아닌 연속 값이 열에 포함되어 있는 경우 일관성을 보장하기 위해 모든 열에 흥미도 점수가 사용됩니다. 그렇지 않으면 기본 기능 선택 방법이 사용되거나 모델을 만들 때 지정한 방법이 사용됩니다.<br /><br /> 이 알고리즘에 대한 자세한 내용은 [Microsoft Decision Trees Algorithm Technical Reference](microsoft-decision-trees-algorithm-technical-reference.md)를 참조하십시오.|  
@@ -120,15 +118,13 @@ ms.locfileid: "66084423"
  기능 선택을 지원하는 알고리즘에서 다음 매개 변수를 사용하여 기능 선택 사용 시기를 제어할 수 있습니다. 각 알고리즘에는 허용되는 입력 수에 대한 기본값이 있지만, 이 기본값을 재정의하거나 특성 수를 지정할 수 있습니다. 이 섹션에서는 기능 선택을 관리하기 위해 제공되는 매개 변수를 나열합니다.  
   
 #### <a name="maximum_input_attributes"></a>MAXIMUM_INPUT_ATTRIBUTES  
- 
-  *MAXIMUM_INPUT_ATTRIBUTES* 매개 변수에서 지정한 수보다 더 많은 열이 모델에 있는 경우 알고리즘은 필요 없다고 판단되는 모든 열을 무시합니다.  
+ *MAXIMUM_INPUT_ATTRIBUTES* 매개 변수에서 지정한 수보다 더 많은 열이 모델에 있는 경우 알고리즘은 필요 없다고 판단되는 모든 열을 무시합니다.  
   
 #### <a name="maximum_output_attributes"></a>MAXIMUM_OUTPUT_ATTRIBUTES  
  마찬가지로 *MAXIMUM_OUTPUT_ATTRIBUTES* 매개 변수에서 지정한 수보다 더 많은 예측 가능한 열이 모델에 있는 경우 알고리즘은 필요 없다고 판단되는 모든 열을 무시합니다.  
   
 #### <a name="maximum_states"></a>MAXIMUM_STATES  
- 
-  *MAXIMUM_STATES* 매개 변수에서 지정한 수보다 더 많은 사례가 모델에 있으면 가장 인기가 없는 상태를 함께 그룹화하여 없는 것으로 처리합니다. 이러한 매개 변수 중 하나를 0으로 설정할 경우 기능 선택이 해제되고 처리 시간 및 성능에 영향을 미칩니다.  
+ *MAXIMUM_STATES* 매개 변수에서 지정한 수보다 더 많은 사례가 모델에 있으면 가장 인기가 없는 상태를 함께 그룹화하여 없는 것으로 처리합니다. 이러한 매개 변수 중 하나를 0으로 설정할 경우 기능 선택이 해제되고 처리 시간 및 성능에 영향을 미칩니다.  
   
  기능 선택에 대한 이러한 방법 외에도, 모델에 *모델링 플래그* 를 설정하거나 구조에 *분산 플래그* 를 설정함으로써 의미 있는 특성을 식별하거나 승격시키는 알고리즘 기능을 강화할 수 있습니다. 이러한 개념에 대한 자세한 내용은 [모델링 플래그&#40;데이터 마이닝&#41;](modeling-flags-data-mining.md) 및 [열 배포&#40;데이터 마이닝&#41;](column-distributions-data-mining.md)를 참조하세요.  
   

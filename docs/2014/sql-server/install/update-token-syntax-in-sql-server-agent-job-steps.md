@@ -14,22 +14,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b69d3e84938f93828a908141a4a05365bd0f07a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091672"
 ---
 # <a name="update-token-syntax-in-sql-server-agent-job-steps"></a>SQL Server 에이전트 작업 단계의 토큰 구문을 업데이트합니다.
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서 사용된 토큰 구문이 변경되었습니다.  
   
 ## <a name="component"></a>구성 요소  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에이전트  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트  
   
-## <a name="description"></a>Description  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 [DATE]와 같이 대괄호 대신 $(DATE)와 같이 괄호를 사용합니다.  
+## <a name="description"></a>설명  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 [DATE]와 같이 대괄호 대신 $(DATE)와 같이 괄호를 사용합니다.  
   
  자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 "작업 단계에서 토큰 사용"을 참조하십시오.  
   

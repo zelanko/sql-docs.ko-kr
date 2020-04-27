@@ -13,19 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 812a08d00fca0b3a61f5cb038e1585fee08c06d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086756"
 ---
 # <a name="create-the-data-mining-structure-data-mining-wizard"></a>데이터 마이닝 구조 만들기(데이터 마이닝 마법사)
-  
   **데이터 마이닝 구조 만들기** 페이지를 사용하여 데이터 마이닝 구조를 만들고 선택적으로 연결된 마이닝 모델을 만들 수 있습니다.  
   
  마이닝 모델을 만들도록 선택한 경우 사용할 데이터 마이닝 알고리즘도 지정해야 합니다. 지금은 구조만 만들고 나중에 이 구조에 마이닝 모델을 추가할 수 있습니다.  
   
- **자세한 내용:** 데이터 마이닝 [알고리즘 &#40;Analysis Services ](data-mining/data-mining-algorithms-analysis-services-data-mining.md)데이터 마이닝&#41;, [데이터 마이닝 마법사 &#40;Analysis Services 데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md)  
+ **자세한 내용:** [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md), [데이터 마이닝 마법사&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>옵션  
  **마이닝 모델이 포함된 마이닝 구조 만들기**  

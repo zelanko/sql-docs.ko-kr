@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65b8bb26a72903644b5985d69efc8adb362fe412
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088476"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>Naive Bayes 모델 찾아보기
@@ -28,14 +28,14 @@ ms.locfileid: "66088476"
   
 -   [특성 판별](#bkmk_AttDisc)  
   
-##  <a name="BKMK_Tabs"></a>모델 탐색  
+##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>모델 탐색  
  뷰어는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes 모델에서 발견된 입력 특성과 출력 특성(입력과 종속 변수) 간의 상호 작용을 탐색하는 데 유용합니다.  
   
  Naive Bayes viewer를 사용 하 여 실험 하려는 경우 데이터 마이닝 리본에서 [&#41;Excel 용 데이터 마이닝 추가 기능 마법사 &#40;분류 마법사](classify-wizard-data-mining-add-ins-for-excel.md) 를 사용 하 고 **고급** 옵션을 클릭 한 다음 naive Bayes 알고리즘을 사용 하도록 알고리즘을 변경 합니다.  
   
  이러한 예에서는 샘플 통합 문서에서 원본 데이터를 사용 하 고 **연간 소득**열을 **매우 낮은** 수준에서 **매우 높은 수준**으로 5 개의 수입 그룹으로 그룹화 했습니다. 그런 다음 Naïve Bayes 모델을 통해 각 소득 범주와 상관 관계가 있는 요인을 분석했습니다.  
   
-###  <a name="bkmk_DepNet"></a>종속성 네트워크  
+###  <a name="dependency-network"></a><a name="bkmk_DepNet"></a>종속성 네트워크  
  사용할 첫 번째 창은 **종속성 네트워크**입니다. 이 창에서는 선택한 결과와 밀접한 상관 관계가 있는 입력을 한눈에 볼 수 있습니다.  
   
  ![Naive Bayes 뷰어의 종속성 네트워크](media/dm13-nb.gif "Naive Bayes 뷰어의 종속성 네트워크")  
@@ -56,7 +56,7 @@ ms.locfileid: "66088476"
   
  [맨 위로 이동](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttProf"></a>특성 프로필  
+###  <a name="attribute-profiles"></a><a name="bkmk_AttProf"></a> 특성 프로필  
  **특성 프로필** 창에서는 다른 모든 변수가 개별 결과와 관련 되는 방식을 시각적으로 보여 줍니다.  
   
 ##### <a name="explore-the-profiles"></a>프로필 탐색  
@@ -73,7 +73,7 @@ ms.locfileid: "66088476"
   
  [맨 위로 이동](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttChar"></a>특성 특징  
+###  <a name="attribute-characteristics"></a><a name="bkmk_AttChar"></a> 특성 특징  
  **특성 특징** 보기는 특정 결과 변수와 영향 요인을 자세히 검사 하는 데 유용 합니다.  
   
  ![Naive Bayes 뷰어의 특성 특징](media/dm13-nb-viewer.gif "Naive Bayes 뷰어의 특성 특징")  
@@ -90,7 +90,7 @@ ms.locfileid: "66088476"
   
  [맨 위로 이동](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttDisc"></a>특성 판별  
+###  <a name="attribute-discrimination"></a><a name="bkmk_AttDisc"></a> 특성 판별  
  **특성 판별** 뷰를 사용 하 여 두 결과 또는 한 결과와 다른 결과를 비교할 수 있습니다.  
   
  ![Naive Bayes 뷰어의 특성 판별](media/dm13-nb-attdisc.gif "Naive Bayes 뷰어의 특성 판별")  

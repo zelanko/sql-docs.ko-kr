@@ -15,30 +15,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84abbb855673183910099f0a34d70702d34da7fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085595"
 ---
 # <a name="copy-a-view-of-a-mining-model"></a>마이닝 모델의 뷰 복사
-  
   **데이터 마이닝 디자이너의** 마이닝 모델 뷰어 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 탭에서는 마이닝 모델 유형마다 별도의 뷰어가 사용됩니다. 이 중 몇몇 뷰어에는 내용을 클립보드로 복사하고 문서나 이미지 조작 소프트웨어에 붙여넣을 수 있는 구성 요소가 있습니다. 다음 구성 요소에서 이 기능을 사용할 수 있습니다.  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터 뷰어와 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터 뷰어의 클러스터 다이어그램  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터 뷰어와 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터 뷰어의 클러스터 다이어그램  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 뷰어와 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 트리 뷰어의 의사 결정 트리  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 뷰어와 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 트리 뷰어의 의사 결정 트리  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터 뷰어의 상태 전환  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터 뷰어의 상태 전환  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 트리 뷰어, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 뷰어 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 뷰어의 종속성 네트워크  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 트리 뷰어, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 뷰어 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 뷰어의 종속성 네트워크  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 일반 콘텐츠 트리 뷰어의 Node Details 창의 마이닝 모델 콘텐츠  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 일반 콘텐츠 트리 뷰어의 Node Details 창의 마이닝 모델 콘텐츠  
   
  전체 마이닝 모델 표현을 복사하거나 뷰어에 표시할 일부만 복사할 수 있습니다.  
   
@@ -47,38 +41,29 @@ ms.locfileid: "66085595"
   
 ### <a name="to-copy-the-complete-model-to-the-clipboard"></a>전체 모델을 클립보드로 복사하려면  
   
-1.  
-  **마이닝 모델 뷰어** 탭의 **마이닝 모델** 목록에서 보려는 마이닝 모델을 선택합니다.  
+1.  **마이닝 모델 뷰어** 탭의 **마이닝 모델** 목록에서 보려는 마이닝 모델을 선택합니다.  
   
-2.  
-  **종속성 네트워크** 등의 적절한 탭을 선택하고 해당 탭의 도구 모음에서 **전체 그래프 복사** 를 클릭합니다.  
+2.  **종속성 네트워크** 등의 적절한 탭을 선택하고 해당 탭의 도구 모음에서 **전체 그래프 복사** 를 클릭합니다.  
   
 ### <a name="to-copy-the-visible-piece-of-the-model-to-the-clipboard"></a>모델의 표시되는 부분을 클립보드로 복사하려면  
   
-1.  
-  **마이닝 모델 뷰어** 탭의 **마이닝 모델** 목록에서 보려는 마이닝 모델을 선택합니다.  
+1.  **마이닝 모델 뷰어** 탭의 **마이닝 모델** 목록에서 보려는 마이닝 모델을 선택합니다.  
   
-2.  
-  **종속성 네트워크** 등의 적절한 탭을 선택하고 확대 또는 축소하여 원하는 수준으로 모델을 표시합니다.  
+2.  **종속성 네트워크** 등의 적절한 탭을 선택하고 확대 또는 축소하여 원하는 수준으로 모델을 표시합니다.  
   
 3.  선택한 탭의 도구 모음에서 **그래프 뷰 복사** 를 클릭합니다.  
   
 ### <a name="to-copy-the-mining-model-content-to-the-clipboard"></a>마이닝 모델 콘텐츠를 클립보드로 복사하려면  
   
-1.  
-  **마이닝 모델 뷰어** 탭의 **마이닝 모델** 목록에서 보려는 마이닝 모델을 선택합니다.  
+1.  **마이닝 모델 뷰어** 탭의 **마이닝 모델** 목록에서 보려는 마이닝 모델을 선택합니다.  
   
-2.  
-  **뷰어** 드롭다운 목록에서 **Microsoft 일반 콘텐츠 트리 뷰어**를 선택합니다.  
+2.  **뷰어** 드롭다운 목록에서 **Microsoft 일반 콘텐츠 트리 뷰어**를 선택합니다.  
   
-3.  
-  **노드 캡션(고유 ID)** 창에서 노드를 클릭합니다.  
+3.  **노드 캡션(고유 ID)** 창에서 노드를 클릭합니다.  
   
-4.  
-  **노드 정보** 창을 마우스 오른쪽 단추로 클릭한 다음 **모두 선택**을 선택합니다.  
+4.  **노드 정보** 창을 마우스 오른쪽 단추로 클릭한 다음 **모두 선택**을 선택합니다.  
   
-5.  
-  **노드 정보** 창을 마우스 오른쪽 단추로 다시 클릭한 다음 **복사**를 선택합니다.  
+5.  **노드 정보** 창을 마우스 오른쪽 단추로 다시 클릭한 다음 **복사**를 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [마이닝 모델 뷰어 태스크 및 방법](mining-model-viewer-tasks-and-how-tos.md)  

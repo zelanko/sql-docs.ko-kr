@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 86894159dd702466823bed8f2185caaa4295b3ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086359"
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>마이닝 구조에 중첩 테이블 추가
@@ -31,17 +31,13 @@ ms.locfileid: "66086359"
   
 2.  테이블 열을 추가할 마이닝 구조를 마우스 오른쪽 단추로 클릭합니다.  
   
-3.  
-  **중첩 테이블 추가**를 선택합니다.  
+3.  **중첩 테이블 추가**를 선택합니다.  
   
-     
-  **중첩 테이블 키 열 선택** 대화 상자가 열립니다.  
+     **중첩 테이블 키 열 선택** 대화 상자가 열립니다.  
   
-4.  
-  **중첩 테이블**에서 마이닝 구조에 중첩시킬 테이블을 선택합니다.  
+4.  **중첩 테이블**에서 마이닝 구조에 중첩시킬 테이블을 선택합니다.  
   
-5.  
-  **원본 열**에서 중첩 테이블의 키 열을 선택합니다.  
+5.  **원본 열**에서 중첩 테이블의 키 열을 선택합니다.  
   
 6.  **확인**을 클릭합니다.  
   

@@ -13,26 +13,24 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 100e796bb27d1e60db000a364a0432273dd5cafb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094243"
 ---
 # <a name="integration-services-parameters"></a>Integration Services 매개 변수
   의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]경우 컴퓨터의 패키지나 파일 시스템 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 파일을 분석 하도록 결정할 수 있습니다. 파일 시스템에 있는 파일을 분석할 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지가 들어 있는 폴더의 경로를 제공합니다.  
   
 ## <a name="options"></a>옵션  
- 
-  **컴퓨터에 있는 SSIS 패키지 분석**  
- 컴퓨터에 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 분석하려면 이 옵션을 선택합니다. 기본적으로 이 옵션은 선택되어 있습니다.  
+ **컴퓨터에 있는 SSIS 패키지 분석**  
+ 컴퓨터에 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 분석하려면 이 옵션을 선택합니다. 이 옵션은 기본적으로 선택됩니다.  
   
  **SSIS 패키지 파일 분석**  
  파일 시스템에 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 분석하려면 이 옵션을 선택합니다.  
   
  **SSIS 패키지의 경로**  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지가 들어 있는 UNC 또는 로컬 경로를 찾습니다. 파일 이름을 포함할 필요는 없습니다. 입력 한 경로에 액세스할 수 없으면 **다음**을 클릭할 수 없습니다. 기본적으로 경로는 비어 있습니다. 이 필드는 **SSIS 패키지 파일 분석**을 선택한 경우에만 사용할 수 있습니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지가 들어 있는 UNC 또는 로컬 경로를 찾습니다. 파일 이름을 포함할 필요는 없습니다. 입력 한 경로에 액세스할 수 없으면 **다음**을 클릭할 수 없습니다. 기본적으로 경로는 비어 있습니다. 이 필드는 **SSIS 패키지 파일 분석**을 선택한 경우에만 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [업그레이드 관리자 작업](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   

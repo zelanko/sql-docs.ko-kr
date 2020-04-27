@@ -15,14 +15,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 802d39742b932b3721941e3d3c314b209b4e823c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088925"
 ---
 # <a name="sql-server-profiler---destination-table"></a>SQL Server 프로파일러 - 대상 테이블
-  
   **대상 테이블** 대화 상자를 사용하여 추적을 저장할 테이블을 지정할 수 있습니다.  
   
 ## <a name="options"></a>옵션  

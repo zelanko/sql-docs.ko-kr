@@ -18,14 +18,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3c99733ca6853a2e0a5503868e2270fa6585eae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083478"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>마이닝 모델 뷰어 태스크 및 방법
-  
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 데이터 마이닝 디자이너에는 마이닝 모델 탐색에 사용할 수 있는 여러 도구가 있습니다. 다음 항목에서는 데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 탭 사용과 관련하여 태스크를 수행하는 방법에 대한 단계별 지침을 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
@@ -42,12 +41,12 @@ ms.locfileid: "66083478"
   
 -   [마이닝 모델에서 사례 데이터로 드릴스루](drill-through-to-case-data-from-a-mining-model.md)  
   
--   [데이터 마이닝 &#40;시계열 모델에 대 한 수식 보기&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [시계열 모델에 대한 수식 보기&#40;데이터 마이닝&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
   
 -   [데이터 마이닝 뷰어에서 사용되는 색 변경](change-the-colors-used-in-the-data-mining-viewer.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [기본 데이터 마이닝 자습서](../../tutorials/basic-data-mining-tutorial.md)   
- [마이닝 모델 뷰어 &#40;데이터 마이닝 모델 디자이너&#41;](../mining-model-viewers-data-mining-model-designer.md)  
+ [마이닝 모델 뷰어&#40;데이터 마이닝 모델 디자이너&#41;](../mining-model-viewers-data-mining-model-designer.md)  
   
   

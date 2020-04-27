@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5a8508218ed6a2b4407943fe962959e3cd4f97d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086621"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>교차 유효성 검사 탭(마이닝 정확도 차트 뷰)
@@ -25,8 +25,7 @@ ms.locfileid: "66086621"
  자세한 내용은 [교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/cross-validation-analysis-services-data-mining.md)를 참조하세요.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 시계열 알고리즘 또는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘을 사용하여 작성한 모델에는 교차 유효성 검사를 사용할 수 없습니다. 이러한 모델 유형을 포함하는 마이닝 구조에서 보고서를 실행하면 해당 모델이 보고서에 포함되지 않습니다.  
+>  [!INCLUDE[msCoName](../includes/msconame-md.md)] 시계열 알고리즘 또는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘을 사용하여 작성한 모델에는 교차 유효성 검사를 사용할 수 없습니다. 이러한 모델 유형을 포함하는 마이닝 구조에서 보고서를 실행하면 해당 모델이 보고서에 포함되지 않습니다.  
   
 ## <a name="task-list"></a>작업 목록  
   
@@ -40,8 +39,7 @@ ms.locfileid: "66086621"
   
 -   필요에 따라 예측의 정확도 평가 방법을 제어하는 매개 변수를 설정합니다.  
   
--   
-  **결과 가져오기** 를 클릭하여 교차 유효성 검사의 결과를 표시합니다.  
+-   **결과 가져오기** 를 클릭하여 교차 유효성 검사의 결과를 표시합니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
  **접기 개수**  
@@ -57,10 +55,9 @@ ms.locfileid: "66086621"
  **최대 사례**  
  교차 유효성 검사에 사용할 최대 사례 수를 지정합니다. 특정 접기의 사례 수는 **최대 사례** 값을 **접기 개수** 값으로 나눈 값과 같습니다.  
   
- 
-  **0**을 사용하면 원본 데이터의 모든 사례가 교차 유효성 검사에 사용됩니다.  
+ **0**을 사용하면 원본 데이터의 모든 사례가 교차 유효성 검사에 사용됩니다.  
   
- 기본값이 없습니다.  
+ 기본값은 없습니다.  
   
 > [!NOTE]  
 >  사례 수를 늘리면 처리 시간도 증가합니다.  
@@ -93,14 +90,11 @@ ms.locfileid: "66086621"
  교차 유효성 검사 보고서의 결과를 해석하는 방법은 [교차 유효성 검사 보고서의 측정값](data-mining/measures-in-the-cross-validation-report.md)을 참조하세요.  
   
 ## <a name="setting-the-accuracy-threshold"></a>정확도 임계값 설정  
- 
-  **대상** **임계값**을 설정하여 예측 정확도를 측정하기 위한 표준을 제어할 수 있습니다. 임계값은 일종의 정확도 막대를 나타냅니다. 각 예측에는 예측 값이 정확할 확률이 할당됩니다. 따라서 **대상** **임계값** 을 1에 가깝게 설정하면 특정 예측의 확률이 매우 높아야 예측이 올바른 예측으로 간주됩니다. 반대로 **대상** **임계값** 을 0에 가깝게 설정하면 확률 값이 낮은 예측도 "올바른" 예측으로 간주됩니다.  
+ **대상** **임계값**을 설정하여 예측 정확도를 측정하기 위한 표준을 제어할 수 있습니다. 임계값은 일종의 정확도 막대를 나타냅니다. 각 예측에는 예측 값이 정확할 확률이 할당됩니다. 따라서 **대상** **임계값** 을 1에 가깝게 설정하면 특정 예측의 확률이 매우 높아야 예측이 올바른 예측으로 간주됩니다. 반대로 **대상** **임계값** 을 0에 가깝게 설정하면 확률 값이 낮은 예측도 "올바른" 예측으로 간주됩니다.  
   
- 예측의 확률은 만드는 예측의 유형과 데이터의 양에 따라 달라지므로 권장되는 임계값은 없습니다. 확률 수준이 다른 몇 가지 예측을 검토하여 데이터에 적합한 정확도 막대를 결정해야 합니다. 
-  **대상** **임계값** 에 설정하는 값은 측정된 모델의 정확도에 영향을 주므로 이 작업을 수행하는 것이 중요합니다.  
+ 예측의 확률은 만드는 예측의 유형과 데이터의 양에 따라 달라지므로 권장되는 임계값은 없습니다. 확률 수준이 다른 몇 가지 예측을 검토하여 데이터에 적합한 정확도 막대를 결정해야 합니다. **대상** **임계값** 에 설정하는 값은 측정된 모델의 정확도에 영향을 주므로 이 작업을 수행하는 것이 중요합니다.  
   
- 예를 들어 특정 대상 상태에 대해 세 개의 예측을 만들었으며 각 예측의 확률이 0.05, 0.15 및 0.8이라고 가정합니다. 임계값을 0.5로 설정하면 한 예측만 올바른 것으로 간주됩니다. 
-  **대상** **임계값** 을 0.10으로 설정하면 두 예측이 올바른 것으로 간주됩니다.  
+ 예를 들어 특정 대상 상태에 대해 세 개의 예측을 만들었으며 각 예측의 확률이 0.05, 0.15 및 0.8이라고 가정합니다. 임계값을 0.5로 설정하면 한 예측만 올바른 것으로 간주됩니다. **대상** **임계값** 을 0.10으로 설정하면 두 예측이 올바른 것으로 간주됩니다.  
   
  **대상** **임계값** 을 기본값인로 `null`설정 하면 각 사례에 대해 가장 가능성이 높은 예측이 올바른 것으로 간주 됩니다. 위의 예에서 0.05, 0.15 및 0.8은 세 개의 사례에서 예측에 대한 확률입니다. 확률이 서로 많이 다르지만 각 사례는 하나의 예측만 생성하고 이러한 예측은 사례에 대한 최상의 예측이므로 각 예측은 올바른 것으로 간주됩니다.  
   
@@ -108,6 +102,6 @@ ms.locfileid: "66086621"
  [데이터 마이닝&#41;&#40;테스트 및 유효성 검사](data-mining/testing-and-validation-data-mining.md)   
  [교차 유효성 검사 &#40;Analysis Services 데이터 마이닝&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
  [교차 유효성 검사 보고서의 측정값](data-mining/measures-in-the-cross-validation-report.md)   
- [데이터 마이닝 저장 프로시저 &#40;Analysis Services 데이터 마이닝&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [데이터 마이닝 저장 프로시저&#40;Analysis Services - 데이터 마이닝&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

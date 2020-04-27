@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 920cc72a9d99da61575249559661c01826b0e89b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088955"
 ---
 # <a name="ring-buffer-target"></a>링 버퍼 대상
@@ -29,11 +29,11 @@ ms.locfileid: "66088955"
   
  다음 표에서는 링 버퍼 대상을 구성하는 데 사용할 수 있는 옵션에 대해 설명합니다.  
   
-|옵션|허용되는 값|Description|  
+|옵션|허용되는 값|설명|  
 |------------|--------------------|-----------------|  
 |max_memory|모든 32 비트 정수입니다. 이 값은 선택 사항입니다.|사용 가능한 최대 메모리 크기(KB)입니다. 기존 이벤트는 처음 도달한 제한인 max_event_limit 또는 max_memory에 따라 삭제됩니다. 최대값은 4194303 KB입니다. 에서 다른 메모리 소비자에 게 영향을 줄 수 있으므로 링 버퍼 크기를 GB 범위에 대 한 제한으로 설정 하기 전에 신중 하 게 고려해 야 합니다 SQL Server|  
 |max_event_limit|모든 32 비트 정수입니다. 이 값은 선택 사항입니다.|ring_buffer에 보관되는 최대 이벤트 수입니다. 기존 이벤트는 처음 도달한 제한인 max_event_limit 또는 max_memory에 따라 삭제됩니다. 기본값 = 1000입니다.|  
-|occurrence_number|해당 값은<br /><br /> 0(기본값) = 대상에 할당된 모든 메모리가 사용되면 가장 오래된 이벤트가 삭제됩니다.<br /><br /> 모든 32 비트 정수 = 이벤트 FIFO 기준에 따라 삭제 되기 전에 유지할 각 유형의 이벤트 수입니다.<br /><br /> <br /><br /> 이 값은 선택 사항입니다.|사용할 FIFO 모드 및 각 유형별로 버퍼에 기본적으로 보존할 이벤트의 수(0보다 큰 값을 설정한 경우)입니다.|
+|occurrence_number|다음 값 중 하나입니다.<br /><br /> 0(기본값) = 대상에 할당된 모든 메모리가 사용되면 가장 오래된 이벤트가 삭제됩니다.<br /><br /> 모든 32 비트 정수 = 이벤트 FIFO 기준에 따라 삭제 되기 전에 유지할 각 유형의 이벤트 수입니다.<br /><br /> <br /><br /> 이 값은 선택 사항입니다.|사용할 FIFO 모드 및 각 유형별로 버퍼에 기본적으로 보존할 이벤트의 수(0보다 큰 값을 설정한 경우)입니다.|
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="adding-the-target-to-a-session"></a>세션에 대상 추가  

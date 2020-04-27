@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e528b94e51238a06a9776e58693c3093f4bfb831
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091876"
 ---
 # <a name="sql-server-parameters"></a>SQL Server 매개 변수
@@ -49,8 +49,7 @@ ms.locfileid: "66091876"
  **SQL 배치 파일 분석**을 사용 하도록 설정 하는 경우 경로 이름과 파일 이름을 입력할 때까지 **다음** 단추를 사용할 수 없습니다.  
   
  **SQL 일괄 처리 구분 기호**  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 일괄 처리를 구분하는 데 사용되는 텍스트입니다. 기본값은 **GO**입니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 일괄 처리를 구분하는 데 사용되는 텍스트입니다. 기본값은 **GO**입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [업그레이드 관리자 작업](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   

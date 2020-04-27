@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95d1ca08bcc92a8eeeebfcfbd1f8646cf5add4c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093536"
 ---
 # <a name="overview-of-upgrade-advisor"></a>업그레이드 관리자 개요
@@ -25,12 +25,10 @@ ms.locfileid: "66093536"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
-|[업그레이드 프로세스 개요](../../../2014/sql-server/install/upgrade-process-overview.md)|
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하기 위한 권장 프로세스에 대해 설명합니다.|  
-|[업그레이드 관리자 개요](../../../2014/sql-server/install/upgrade-advisor-overview.md)|
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 새로운 도구인 업그레이드 관리자에 대해 간략하게 설명합니다.|  
+|[업그레이드 프로세스 개요](../../../2014/sql-server/install/upgrade-process-overview.md)|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하기 위한 권장 프로세스에 대해 설명합니다.|  
+|[업그레이드 관리자 개요](../../../2014/sql-server/install/upgrade-advisor-overview.md)|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 새로운 도구인 업그레이드 관리자에 대해 간략하게 설명합니다.|  
 |[업그레이드 관리자 &#40;사용자 인터페이스를 실행 하는 중&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)|업그레이드 관리자 분석 마법사와 업그레이드 관리자 보고서 뷰어를 시작하고 실행하는 방법에 대해 설명합니다.|  
 |[보고서 사용](../../../2014/sql-server/install/using-reports.md)|업그레이드 관리자 보고서 뷰어가 생성한 보고서를 보고 분석하는 방법에 대해 설명합니다.|  
   

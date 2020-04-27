@@ -31,10 +31,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85de606ecea93aba80714d4266e9897dd856879f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092495"
 ---
 # <a name="resolving-upgrade-issues"></a>업그레이드 문제 해결
@@ -55,13 +55,12 @@ ms.locfileid: "66092495"
 -   [SQL Server 에이전트 업그레이드 문제](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
 ## <a name="issues-that-prevent-upgrading"></a>업그레이드를 방해하는 문제  
- 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 일부 구성 또는 설정이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하는 것을 방해할 수 있습니다. 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 설치할 때 이러한 문제가 검색되면 설치 프로그램에서는 업그레이드 프로세스가 중지되고 업그레이드 관리자를 실행하고 차단 문제를 모두 해결하도록 요청합니다.  
+ 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 일부 구성 또는 설정이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하는 것을 방해할 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 설치할 때 이러한 문제가 검색되면 설치 프로그램에서는 업그레이드 프로세스가 중지되고 업그레이드 관리자를 실행하고 차단 문제를 모두 해결하도록 요청합니다.  
   
 ### [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
  다음 태스크가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 업그레이드 보고서에 나열되면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하기 전에 필요한 동작을 수행해야 합니다.  
   
--   [데이터베이스 ID 32767을 분리합니다.](../../../2014/sql-server/install/detach-database-id-32767.md)  
+-   [데이터베이스 ID 32767 분리](../../../2014/sql-server/install/detach-database-id-32767.md)  
   
 -   [고정 서버 역할 이름과 일치하는 로그인 이름을 바꿉니다.](../../../2014/sql-server/install/rename-logins-matching-fixed-server-role-names.md)  
   

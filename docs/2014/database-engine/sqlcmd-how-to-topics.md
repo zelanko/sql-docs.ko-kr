@@ -11,14 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd9f9a5b786c5e1a928655276641e841cb3f43c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089598"
 ---
 # <a name="sqlcmd-how-to-topics"></a>sqlcmd 방법 도움말 항목
-  [Sqlcmd 유틸리티](../tools/sqlcmd-utility.md) 를 사용 하면 명령 [!INCLUDE[tsql](../includes/tsql-md.md)] 프롬프트, Sqlcmd 모드의 쿼리 편집기, Windows 스크립트 파일 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 작업의 운영 체제 (cmd.exe) 작업 단계에서 문, 시스템 프로시저 및 스크립트 파일을 입력할 수 있습니다.  
+  [sqlcmd 유틸리티](../tools/sqlcmd-utility.md)를 사용하면 명령 프롬프트, SQLCMD 모드의 쿼리 편집기, Windows 스크립트 파일 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 작업의 운영 체제(Cmd.exe) 작업 단계에서 [!INCLUDE[tsql](../includes/tsql-md.md)] 문, 시스템 프로시저 및 스크립트 파일을 입력할 수 있습니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
  다음 항목에서는 [sqlcmd Utility](../tools/sqlcmd-utility.md)를 사용하는 방법에 대해 설명합니다.  

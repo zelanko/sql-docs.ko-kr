@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 78f8581839b6b4bdd761c25a1a207e942ae37f62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087964"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>분류표(SQL Server 데이터 마이닝 추가 기능)
@@ -36,10 +36,10 @@ ms.locfileid: "66087964"
   
 ||동(실제)|금(실제)|은(실제)|  
 |-|-----------------------|---------------------|-----------------------|  
-|Bronze|**94.45%**|15.18%|1.70%|  
-|Gold|2.72%|**84.82%**|0.00%|  
-|Silver|1.84%|0.00%|**93.80%**|  
-|*맞음*|*95.45%*|*84.82%*|*98.30%*|  
+|동|**94.45%**|15.18%|1.70%|  
+|금|2.72%|**84.82%**|0.00%|  
+|은|1.84%|0.00%|**93.80%**|  
+|*맞는*|*95.45%*|*84.82%*|*98.30%*|  
 |*오분류*|*4.55%*|*15.18%*|*1.70%*|  
   
 -   각 열에는 테스트 데이터 세트의 실제 값이 표시됩니다.  

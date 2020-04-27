@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf63755b657ae55085decc9c84e25ee1dd51c553
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082405"
 ---
 # <a name="database-designer-analysis-services---multidimensional-data"></a>데이터베이스 디자이너(Analysis Services - 다차원 데이터)
@@ -24,15 +24,13 @@ ms.locfileid: "66082405"
  데이터베이스 디자이너에는 다음과 같은 탭이 있습니다.  
   
  [일반](general-database-designer-analysis-services-multidimensional-data.md)  
- 
-  **일반** 탭을 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스의 속성을 변경할 수 있습니다.  
+ **일반** 탭을 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스의 속성을 변경할 수 있습니다.  
   
  [경고](warnings-database-designer-analysis-services-multidimensional-data.md)  
- 
-  **경고** 탭을 사용하여 규칙을 전역적으로 확인 및 해제하고 해제된 경고의 특정 인스턴스를 확인 및 다시 설정할 수 있습니다.  
+ **경고** 탭을 사용하여 규칙을 전역적으로 확인 및 해제하고 해제된 경고의 특정 인스턴스를 확인 및 다시 설정할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [SSAS&#41;&#40;다차원 모델 데이터베이스](multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [다차원 model 데이터베이스&#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

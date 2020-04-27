@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15dcb2c8241b8b4cf7cdb2780ed532e863cf52ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085487"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>템플릿에서 단일 예측 쿼리 작성
@@ -35,21 +35,17 @@ AS [t]
   
 ### <a name="to-open-the-analysis-services-templates-in-sql-server-management-studio"></a>SQL Server Management Studio에서 Analysis Services 템플릿을 열려면  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **보기** 메뉴에서 **템플릿 탐색기**를 클릭합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **보기** 메뉴에서 **템플릿 탐색기**를 클릭합니다.  
   
 2.  큐브 아이콘을 클릭하여 **Analysis Services**템플릿을 엽니다.  
   
 ### <a name="to-open-a-prediction-query-template"></a>예측 쿼리 템플릿을 열려면  
   
-1.  
-  **템플릿 탐색기**의 Analysis Server 템플릿 목록에서 **DMX**, **예측 쿼리**를 차례로 확장합니다.  
+1.  **템플릿 탐색기**의 Analysis Server 템플릿 목록에서 **DMX**, **예측 쿼리**를 차례로 확장합니다.  
   
-2.  
-  **단일 예측**을 두 번 클릭합니다.  
+2.  **단일 예측**을 두 번 클릭합니다.  
   
-3.  
-  **Analysis Services에 연결** 대화 상자에서 쿼리할 마이닝 모델을 포함하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스가 있는 서버의 이름을 입력합니다.  
+3.  **Analysis Services에 연결** 대화 상자에서 쿼리할 마이닝 모델을 포함하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스가 있는 서버의 이름을 입력합니다.  
   
 4.  **연결**을 클릭합니다.  
   
@@ -59,39 +55,32 @@ AS [t]
   
 1.  템플릿에서 **사용 가능한 데이터베이스** 드롭다운 목록을 클릭한 다음 목록에서 Analysis Services 인스턴스를 선택합니다.  
   
-2.  
-  **마이닝 모델** 목록에서 쿼리할 마이닝 모델을 선택합니다.  
+2.  **마이닝 모델** 목록에서 쿼리할 마이닝 모델을 선택합니다.  
   
      마이닝 모델의 열 목록이 개체 브라우저의 **메타데이터** 창에 나타납니다.  
   
-3.  
-  **쿼리** 메뉴에서 **템플릿 매개 변수 값 지정**을 선택합니다.  
+3.  **쿼리** 메뉴에서 **템플릿 매개 변수 값 지정**을 선택합니다.  
   
-4.  
-  **select list** 행에 *를 입력하여 모든 열을 반환하거나 쉼표로 구분된 열과 식의 목록을 입력하여 특정 열을 반환합니다.  
+4.  **select list** 행에 *를 입력하여 모든 열을 반환하거나 쉼표로 구분된 열과 식의 목록을 입력하여 특정 열을 반환합니다.  
   
      *를 입력하는 경우 6단계에서 새 값을 제공하는 열과 함께 예측 가능한 열이 반환됩니다.  
   
      이 항목의 시작 부분에 표시된 샘플 코드의 경우 **select list** 행이 *로 설정되었습니다.  
   
-5.  
-  **mining model** 행에 **개체 탐색기**에 나타나는 마이닝 모델 목록에 있는 마이닝 모델의 이름을 입력합니다.  
+5.  **mining model** 행에 **개체 탐색기**에 나타나는 마이닝 모델 목록에 있는 마이닝 모델의 이름을 입력합니다.  
   
      이 항목의 시작 부분에 표시 된 예제 코드의 경우 **마이닝 모델** 행이 이름으로 설정 되었습니다 `TM_Decision_Tree`.  
   
-6.  
-  **value** 행에 예측을 수행할 새 데이터 값을 입력합니다.  
+6.  **value** 행에 예측을 수행할 새 데이터 값을 입력합니다.  
   
-     이 항목의 시작 부분에 표시 된 샘플 코드의 경우, **** 홈의 자녀 수를 `2` 기반으로 자전거 구매 동작을 예측 하기 위해 value 행이로 설정 되었습니다.  
+     이 항목의 시작 부분에 표시 된 샘플 코드의 경우, **value** 홈의 자녀 수를 `2` 기반으로 자전거 구매 동작을 예측 하기 위해 value 행이로 설정 되었습니다.  
   
-7.  
-  **column** 행에 새 데이터가 매핑되어야 하는 마이닝 모델의 열 이름을 입력합니다.  
+7.  **column** 행에 새 데이터가 매핑되어야 하는 마이닝 모델의 열 이름을 입력합니다.  
   
      이 항목의 시작 부분에 표시 된 예제 코드의 경우 **column** 행이로 `Number Children at Home`설정 되었습니다.  
   
     > [!NOTE]  
-    >  
-  **템플릿 매개 변수 값 지정** 대화 상자를 사용할 때는 열 이름을 대괄호로 묶을 필요가 없습니다. 대괄호는 자동으로 추가됩니다.  
+    >  **템플릿 매개 변수 값 지정** 대화 상자를 사용할 때는 열 이름을 대괄호로 묶을 필요가 없습니다. 대괄호는 자동으로 추가됩니다.  
   
 8.  **입력 별칭** 을로 `t`그대로 둡니다.  
   
@@ -104,6 +93,6 @@ AS [t]
 11. **실행**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [&#40;기본 데이터 마이닝 자습서&#41;예측 만들기](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [예측 만들기&#40;기본 데이터 마이닝 자습서&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
   

@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 784032205f081e340e30203314e96a3b2dbf640e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089195"
 ---
 # <a name="options-text-editor---xml---general-page"></a>Options (Text Editor - XML - General Page)
@@ -37,7 +37,7 @@ ms.locfileid: "66089195"
  **가상 공간 활성화**  
  이 확인란을 선택하면 각 코드 줄의 끝에 공백이 삽입됩니다. 이 확인란을 선택하면 코드 옆의 일정한 위치에 설명을 배치할 수 있습니다.  
   
- **자동 줄 바꿈**  
+ **단어 줄 바꿈**  
  이 확인란을 선택하면 가로로 표시되는 편집기 영역을 벗어나는 줄 부분이 자동으로 다음 줄에 표시됩니다. 이 확인란을 선택하면 **자동 줄 바꿈 시각 문자 표시** 확인란이 활성화됩니다.  
   
  **자동 줄 바꿈 시각 문자 표시**  

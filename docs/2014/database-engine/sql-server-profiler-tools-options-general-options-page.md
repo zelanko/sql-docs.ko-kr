@@ -15,14 +15,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9da36f49927acd2a313bcb9f8647655731006d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089616"
 ---
 # <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler - Tools-Options (General Options Page)
-  
   **일반 옵션** 대화 상자를 사용하여 다음 옵션을 확인하거나 지정할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
@@ -54,32 +53,31 @@ ms.locfileid: "66089616"
  공급자가 업데이트된 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 최신 추적 정의를 적용합니다. 이 옵션은 기본적으로 선택되지 않습니다. 이 옵션을 선택하면 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 가 서버에서 추적 정의를 쿼리하여 정의가 있으면 디스크에 파일을 다시 만듭니다.  
   
 ### <a name="file-rollover-options"></a>파일 롤오버 옵션  
- **메시지를 표시 하지 않고 모든 롤오버 파일을 순서 대로 로드**  
+ **확인하지 않고 모든 롤오버 파일을 순서대로 로드**  
  추적 파일이 열리면 롤오버 파일을 자동으로 로드합니다. 이 옵션을 선택하면 추적하는 동안 두 개 이상의 파일이 생성된 경우 자동으로 모든 롤오버 파일이 로드됩니다.  
   
  **롤오버 파일 로드 전에 확인**  
  추적 파일을 열면 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 가 롤오버 파일을 추가하기 전에 사용자에게 확인 메시지를 표시합니다.  
   
- **후속 롤오버 파일 로드 안 함**  
- 
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 에서 다음 롤오버 파일을 로드하지 않습니다.  
+ **다음 롤오버 파일 로드 안 함**  
+ [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 에서 다음 롤오버 파일을 로드하지 않습니다.  
   
 ### <a name="replay-options"></a>재생 옵션  
  **기본 재생 스레드 수**  
  동시에 사용할 재생 스레드 수를 지정합니다. 이 값을 높게 설정할수록 재생하는 동안 리소스가 더 많이 사용되지만 재생 동시성은 향상됩니다.  
   
- **기본 상태 모니터 대기 간격 (초)**  
+ **기본 상태 모니터 대기 간격(초)**  
  재생하기 전에 대기하는 간격(초)을 지정합니다. 기본값은 3600초(1시간)입니다. 이 설정은 상태 모니터에서 스레드를 종료하기 전까지 스레드가 실행되는 시간을 결정합니다.  
   
- **기본 상태 모니터 폴링 간격 (초)**  
+ **기본 상태 모니터 폴링 간격(초)**  
  재생 중 상태 모니터 폴링 간격(초)을 지정합니다. 기본값은 60초입니다. 이 값을 사용하면 상태 모니터에서 종료 후보에 대해 폴링하는 주기를 구성할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [서버에 연결한 후 추적을 자동으로 시작 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
- [추적 표시 기본값 설정&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
+ [추적 표시 기본값 설정 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
  [SQL Server Profiler &#40;추적 테이블 재생&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [SQL Server Profiler &#40;추적 파일 재생&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
- [추적 재생](../tools/sql-server-profiler/replay-traces.md)   
+ [재생 추적](../tools/sql-server-profiler/replay-traces.md)   
  [전역 추적 옵션 설정 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)   
  [SQL Server Profiler 템플릿 및 권한](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  

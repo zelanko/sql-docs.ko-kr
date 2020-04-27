@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6491d0a73aa28d8dd396bf1befa321ed6f1cb9b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087735"
 ---
 # <a name="completing-the-wizard-schema-generation-wizard-analysis-services---multidimensional-data"></a>마법사 완료(스키마 생성 마법사)(Analysis Services - 다차원 데이터)
-  
   **마법사 완료** 페이지를 사용하여 선택한 항목을 확인하고 새 프로젝트 및 데이터 원본 뷰를 만들 수 있습니다.  
   
 ## <a name="options"></a>옵션  

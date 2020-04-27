@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f526c1327f67bdcf84dce44e670eb195de9a96a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082109"
 ---
 # <a name="define-new-measures-cube-wizard"></a>새 측정값 정의(큐브 마법사)
-  
   **새 측정값 정의** 페이지를 사용하여 데이터 원본을 사용하지 않고 만드는 큐브에 대한 새 측정값을 만들 수 있습니다.  
   
 > [!NOTE]  
@@ -56,7 +55,7 @@ ms.locfileid: "66082109"
   
  데이터 형식을 변경하려면 해당 데이터 형식을 클릭한 다음 목록에서 데이터 형식을 선택합니다.  
   
- **요약**  
+ **집계**  
  측정값에 대한 집계를 나열합니다.  
   
  집계를 변경하려면 해당 집계를 클릭한 다음 목록에서 집계를 선택합니다.  
@@ -84,12 +83,12 @@ ms.locfileid: "66082109"
   
  데이터 형식을 변경하려면 해당 데이터 형식을 클릭한 다음 목록에서 데이터 형식을 선택합니다.  
   
- **요약**  
+ **집계**  
  측정값에 대한 집계를 나열합니다.  
   
  집계를 변경하려면 해당 집계를 클릭한 다음 목록에서 집계를 선택합니다.  
   
- **.X**  
+ **X**  
  큐브에서 새 측정값을 삭제합니다.  
   
  큐브에서 새 측정값을 제거하려면 해당 측정값의 **X** 단추를 클릭합니다.  

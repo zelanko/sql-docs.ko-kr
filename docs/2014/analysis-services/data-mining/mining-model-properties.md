@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 030ebd318b310b2c7ca4f85d1f736d168a7adda8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083509"
 ---
 # <a name="mining-model-properties"></a>마이닝 모델 속성
@@ -39,9 +39,9 @@ ms.locfileid: "66083509"
 ## <a name="properties-of-models"></a>모델의 속성  
  다음 표에서는 마이닝 모델에 특정한 속성에 대해 설명합니다. 또한 마이닝 시 개별 열에 대해 설정할 수 있는 속성도 나와 있습니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
-|**알고리즘과**|마이닝 모델에 대한 알고리즘 유형을 설정합니다.|  
+|**알고리즘**|마이닝 모델에 대한 알고리즘 유형을 설정합니다.|  
 |**AlgorithmParameters**|각 알고리즘 유형에 사용할 수 있는 알고리즘 매개 변수의 값을 설정합니다.|  
 |**Filter**|마이닝 모델을 학습하고 테스트할 때 사용하는 데이터에 적용되는 필터를 설정합니다. 필터 정의는 모델에 저장되며 예측 쿼리를 만들거나 모델의 정확도를 테스트할 때 선택적으로 사용할 수 있습니다.<br /><br /> 모델을 학습할 경우 모델 필터는 선택 사항이 아닙니다.|  
 |**이름**|마이닝 모델의 이름을 설정합니다.|  
@@ -50,13 +50,13 @@ ms.locfileid: "66083509"
 ## <a name="properties-of-model-columns"></a>모델 열의 속성  
  마이닝 모델의 각 열에 대해 다음 데이터 마이닝 속성을 설정할 수 있습니다. 마이닝 구조의 각 마이닝 모델에 대해 이러한 속성을 서로 다른 값으로 설정할 수 있습니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |**설명**|마이닝 열의 목적을 설명합니다.|  
 |**이름**|마이닝 모델 열의 이름을 설정합니다. 새 이름을 입력하여 마이닝 모델 열의 별칭을 제공할 수 있습니다.|  
 |**ModelingFlags**|열에 대해 알고리즘별 플래그를 설정합니다.|  
 |**SourceColumnID**|모델 열의 기반이 되는 마이닝 구조 열의 이름을 나타냅니다.<br /><br /> 이 속성은 읽기 전용입니다.|  
-|**사용 현황**|마이닝 모델에서 열을 사용하는 방법을 설정합니다.|  
+|**사용법**|마이닝 모델에서 열을 사용하는 방법을 설정합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [마이닝 모델 열](mining-model-columns.md)   

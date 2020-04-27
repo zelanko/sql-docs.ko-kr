@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0cc3a132792cca8ecdf5a33a2fe4e4d40116c497
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086647"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>교차 유효성 검사(SQL Server 데이터 마이닝 추가 기능)
@@ -103,7 +103,7 @@ ms.locfileid: "66086647"
 #### <a name="classification-true-or-false-positives-and-negatives"></a>분류: True 또는 False 긍정 및 네거티브  
  이 테스트는 지정된 대상이 있는 모든 분류 모델에 사용됩니다. 측정값은 이러한 질문에 대 한 응답으로 각 사례를 분류 하는 방법, 즉 모델이 예측 한 내용과 실제 결과를 나타냅니다.  
   
-|측정값|Description|  
+|측정값|설명|  
 |-------------|-----------------|  
 |참 긍정|다음 조건을 충족하는 사례의 수입니다.<br /><br /> 사례에 대상 값이 포함되어 있습니다.<br /><br /> 사례에 대상 값이 포함되어 있을 것으로 모델이 예측했습니다.|  
 |거짓 긍정|다음 조건을 충족하는 사례의 수입니다.<br /><br /> 실제 값이 대상 값과 같습니다.<br /><br /> 사례에 대상 값이 포함되어 있을 것으로 모델이 예측했습니다.|  
@@ -125,7 +125,7 @@ ms.locfileid: "66086647"
   
  RMSE는 실제 값과 비교한 예측 값의 평균 오차를 나타냅니다. 이 값은 대상 특성의 값이 누락된 행을 제외하고 모든 파티션 사례에 대한 평균 오차의 제곱근을 파티션의 사례 수로 나누어 계산합니다.  
   
-#### <a name="mean-absolute-error"></a>평균 절대 오류  
+#### <a name="mean-absolute-error"></a>절대 평균 오차  
  *절대 평균 오차* 는 실제 값에 대 한 예측 값의 평균 오차입니다. 이 값은 오차의 절대값 합계를 구한 다음 해당 오차의 평균을 찾아서 계산됩니다.  
   
  이 값을 사용하면 점수가 평균에서 얼마나 떨어져 있는지 알 수 있습니다.  

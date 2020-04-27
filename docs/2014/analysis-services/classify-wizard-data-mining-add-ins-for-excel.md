@@ -14,17 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a62d937a733ea41b85a83224a043ff4ad7ecdd29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087928"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>분류 마법사(Excel용 데이터 마이닝 추가 기능)
   ![데이터 마이닝 리본의 분류 마법사](media/dmc-classify.gif "데이터 마이닝 리본의 분류 마법사")  
   
- 
-  **분류** 마법사를 사용하면 Excel 테이블, Excel 범위 또는 외부 데이터 원본의 기존 데이터를 기반으로 분류 모델을 만들 수 있습니다.  
+ **분류** 마법사를 사용하면 Excel 테이블, Excel 범위 또는 외부 데이터 원본의 기존 데이터를 기반으로 분류 모델을 만들 수 있습니다.  
   
  분류 모델을 사용하면 유사성을 나타내는 데이터의 패턴을 추출하여 값 그룹에 따라 예측할 수 있습니다. 예를 들어 수입 또는 지출 패턴을 기반으로 위험을 예측하는 데 분류 모델을 사용할 수 있습니다.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66087928"
   
     -   **드릴스루를 사용 하도록 설정**합니다. 완료된 모델에서 기본 데이터를 보려면 이 옵션을 선택합니다. 이 옵션은 의사 결정 트리 모델을 작성하는 경우에만 사용할 수 있습니다.  
   
-    -   **임시 모델을 사용**합니다. 이 옵션을 선택하면 모델이 서버에 저장되지 않습니다. 임시 모델은 Excel을 닫을 때 삭제됩니다.  
+    -   **임시 모델 사용**. 이 옵션을 선택하면 모델이 서버에 저장되지 않습니다. 임시 모델은 Excel을 닫을 때 삭제됩니다.  
   
 ## <a name="more-about-classification-models"></a>분류 모델에 대한 추가 정보  
  **알고리즘 매개 변수** 대화 상자에서 Analysis Services에서 제공 하는 이러한 알고리즘 중에서 분류 방법을 선택할 수도 있습니다.  

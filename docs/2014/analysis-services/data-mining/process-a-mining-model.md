@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fd2506e835f634937d5bf135ed7eec7cfa259b5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083103"
 ---
 # <a name="process-a-mining-model"></a>마이닝 모델 처리
-  
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 있는 데이터 마이닝 디자이너의 마이닝 모델 탭에서는 마이닝 구조와 연관된 특정 마이닝 모델을 처리하거나 구조와 연관된 모든 모델을 처리할 수 있습니다.  
   
  다음 도구를 사용하여 마이닝 모델을 처리할 수 있습니다.  
@@ -29,21 +28,19 @@ ms.locfileid: "66083103"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
- XMLA Process 명령도 사용할 수 있습니다. 자세한 내용은 [도구 및 처리 접근 방법&#40;Analysis Services&#41;](../multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)을 참조하세요.  
+ XMLA Process 명령도 사용할 수 있습니다. 자세한 내용은 [도구 및 처리 방법 &#40;Analysis Services&#41;](../multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)를 참조 하세요.  
   
 ### <a name="process-a-single-mining-model-using-sql-server-data-tools"></a>SQL Server Data Tools를 사용하여 단일 마이닝 모델 처리  
   
 1.  데이터 마이닝 디자이너의 **마이닝 모델** 탭에서 표에 있는 하나 이상의 모델 열에서 마이닝 모델을 선택합니다.  
   
-2.  
-  **마이닝 모델** 메뉴에서 **모델 처리**를 선택합니다.  
+2.  **마이닝 모델** 메뉴에서 **모델 처리**를 선택합니다.  
   
      마이닝 구조를 변경한 경우 모델을 처리하기 전에 구조를 다시 배포할지 묻는 메시지가 표시됩니다. **예**를 클릭합니다.  
   
 3.  **마이닝 모델 처리- \<모델>** 대화 상자에서 **실행**을 클릭 합니다.  
   
-     
-  **처리 진행률** 대화 상자가 열리고 모델 처리 세부 정보를 표시합니다.  
+     **처리 진행률** 대화 상자가 열리고 모델 처리 세부 정보를 표시합니다.  
   
 4.  모델이 성공적으로 처리되면 **처리 진행률** 대화 상자에서 **닫기** 를 클릭합니다.  
   
@@ -59,8 +56,7 @@ ms.locfileid: "66083103"
   
 3.  **마이닝 구조 처리- \<구조>** 대화 상자에서 **실행**을 클릭 합니다.  
   
-4.  
-  **처리 진행률** 대화 상자가 열리고 모델 처리 세부 정보를 표시합니다.  
+4.  **처리 진행률** 대화 상자가 열리고 모델 처리 세부 정보를 표시합니다.  
   
 5.  모델이 성공적으로 처리되면 **처리 진행률** 대화 상자에서 **닫기** 를 클릭합니다.  
   

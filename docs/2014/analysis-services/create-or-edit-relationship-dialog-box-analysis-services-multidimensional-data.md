@@ -15,28 +15,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de19592ec5a94e99cc87c40dac476e75546c7968
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086783"
 ---
 # <a name="create-or-edit-relationship-dialog-box-analysis-services---multidimensional-data"></a>관계 만들기 또는 편집 대화 상자(Analysis Services - 다차원 데이터)
-  
   **의** 관계 만들기/편집 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 데이터 원본 뷰에서 관계를 정의하거나 수정할 수 있습니다. 다음과 같은 방법으로 **관계 만들기/편집** 대화 상자를 표시할 수 있습니다.  
   
--   
-  **데이터 원본 뷰 디자이너** 의 **도구 모음** 창에서 **새 관계**를 클릭합니다.  
+-   **데이터 원본 뷰 디자이너** 의 **도구 모음** 창에서 **새 관계**를 클릭합니다.  
   
--   
-  **데이터 원본 뷰 디자이너** 의 **테이블** 또는 **다이어그램** 창에서 테이블을 마우스 오른쪽 단추로 클릭한 다음 **새 관계**을 선택합니다.  
+-   **데이터 원본 뷰 디자이너** 의 **테이블** 또는 **다이어그램** 창에서 테이블을 마우스 오른쪽 단추로 클릭한 다음 **새 관계**을 선택합니다.  
   
--   
-  **데이터 원본 뷰 디자이너** 의 **다이어그램** 창에서 관계를 마우스 오른쪽 단추로 클릭한 다음 **관계 편집**을 선택합니다.  
+-   **데이터 원본 뷰 디자이너** 의 **다이어그램** 창에서 관계를 마우스 오른쪽 단추로 클릭한 다음 **관계 편집**을 선택합니다.  
   
 > [!NOTE]  
->  
-  **데이터 원본 뷰 디자이너** 에서 기본 데이터 원본에 없는 관계를 만들고 기본 데이터 원본에 있는 기존 외래 키 관계에서 **데이터 원본 뷰 디자이너** 로 만든 관계를 제거할 수 있습니다.  
+>  **데이터 원본 뷰 디자이너** 에서 기본 데이터 원본에 없는 관계를 만들고 기본 데이터 원본에 있는 기존 외래 키 관계에서 **데이터 원본 뷰 디자이너** 로 만든 관계를 제거할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
  **원본(외래 키) 테이블**  
@@ -59,6 +54,6 @@ ms.locfileid: "66086783"
   
 ## <a name="see-also"></a>참고 항목  
  [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [데이터 원본 뷰 디자이너 &#40;Analysis Services 다차원 데이터&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [데이터 원본 뷰 디자이너&#40;Analysis Services - 다차원 데이터&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

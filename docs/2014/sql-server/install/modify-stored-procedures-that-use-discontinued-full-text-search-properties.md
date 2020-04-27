@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5204b27fb4745f8005a328dc62503f7db418387d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093845"
 ---
 # <a name="modify-stored-procedures-that-use-discontinued-full-text-search-properties"></a>지원되지 않는 전체 텍스트 검색 속성을 사용하는 저장 프로시저를 수정합니다.
@@ -26,7 +26,7 @@ ms.locfileid: "66093845"
 ## <a name="component"></a>구성 요소  
  전체 텍스트 검색  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
  제거된 전체 텍스트 검색 관련 속성 및 설정은 다음과 같습니다.  
   
 -   **DataTimeout**  

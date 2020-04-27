@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 894e7d4fb5a0234643cf237e767a8ae999e67496
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087416"
 ---
 # <a name="configure-the-powerpivot-unattended-data-refresh-account-powerpivot-for-sharepoint"></a>PowerPivot 무인 데이터 새로 고침 계정 구성(SharePoint용 PowerPivot)
@@ -46,7 +46,7 @@ ms.locfileid: "66087416"
   
  [기존의 PowerPivot 무인 데이터 새로 고침 계정에 사용되는 자격 증명 업데이트](#bkmk_editUA)  
   
-##  <a name="bkmk_prereq"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 필수 조건  
  보안 저장소 서비스를 사용하도록 설정하고 구성해야 하며 마스터 키를 생성해야 합니다. 이 작업을 수행 하는 방법에 대 한 지침은 [SharePoint 2010에서 PowerPivot 데이터 새로 고침](powerpivot-data-refresh-with-sharepoint-2010.md) 을 참조 하세요.  
   
  PowerPivot 무인 데이터 새로 고침 계정으로 사용할 Windows 도메인 사용자 계정을 미리 결정해야 합니다. 무인 데이터 새로 고침 용도로 만들어진 계정이어야 합니다. 그래야 계정이 사용되는 방식을 모니터링할 수 있습니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "66087416"
   
 -   게시된 PowerPivot 통합 문서에 대한 데이터 새로 고침 관리 일정 페이지에서 계정이 사용 가능한지 확인합니다.  
   
-###  <a name="bkmk_create"></a>1 단계: 대상 응용 프로그램 만들기 및 자격 증명 설정  
+###  <a name="step-1-create-a-target-application-and-set-the-credentials"></a><a name="bkmk_create"></a>1 단계: 대상 응용 프로그램 만들기 및 자격 증명 설정  
   
 1.  중앙 관리의 응용 프로그램 관리에서 **서비스 응용 프로그램 관리**를 클릭 합니다.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66087416"
   
 16. **확인**을 클릭합니다.  
   
-###  <a name="bkmk_specifyUA"></a>2 단계: PowerPivot 서버 구성 페이지에서 무인 계정 지정  
+###  <a name="step-2-specify-the-unattended-account-in-powerpivot-server-configuration-pages"></a><a name="bkmk_specifyUA"></a>2 단계: PowerPivot 서버 구성 페이지에서 무인 계정 지정  
   
 1.  중앙 관리의 응용 프로그램 관리에서 **서비스 응용 프로그램 관리**를 클릭 합니다.  
   
@@ -122,15 +122,14 @@ ms.locfileid: "66087416"
   
 6.  **확인**을 클릭합니다.  
   
-###  <a name="bkmk_grant"></a>3 단계: 계정에 참가 권한 부여  
+###  <a name="step-3-grant-contribute-permissions-to-the-account"></a><a name="bkmk_grant"></a>3 단계: 계정에 참가 권한 부여  
  PowerPivot 무인 데이터 새로 고침 계정을 사용하려면 먼저 해당 계정으로 사용할 PowerPivot 통합 문서에 대한 참가 권한을 계정에 할당해야 합니다. 이 권한 수준은 라이브러리에서 통합 문서를 열고 데이터를 새로 고친 후 다시 라이브러리에 저장하는 데 필요합니다.  
   
  사용 권한 할당은 사이트 모음 관리자가 수행하는 단계입니다. SharePoint 사용 권한은 루트 사이트 모음이나 개별 문서 및 항목을 포함하여 루트 사이트 모음 아래의 모든 수준에서 할당할 수 있습니다. 사용 권한 설정 방법은 사용 권한의 세분화 정도에 따라 달라집니다. 다음 단계에서는 사용 권한을 부여하는 한 가지 방법을 보여 줍니다.  
   
 1.  SharePoint 사이트의 사이트 작업에서 **사이트 사용 권한**을 클릭 합니다.  
   
-2.  
-  **권한 부여**를 클릭합니다.  
+2.  **권한 부여**를 클릭합니다.  
   
 3.  사용자 선택에서 PowerPivot 무인 계정으로 지정한 Windows 도메인 사용자 계정의 이름을 입력합니다. 이 이름은 보안 스토리지 서비스에서 대상 애플리케이션에 지정한 Windows 도메인 사용자 계정의 이름입니다.  
   
@@ -138,7 +137,7 @@ ms.locfileid: "66087416"
   
 5.  **참가**를 선택 하 고 **확인**을 클릭 합니다.  
   
-###  <a name="bkmk_dbread"></a>4 단계: 데이터 새로 고침에 사용 되는 외부 데이터 원본에 액세스할 수 있는 읽기 권한 부여  
+###  <a name="step-4-grant-read-permissions-to-access-external-data-sources-used-in-data-refresh"></a><a name="bkmk_dbread"></a>4 단계: 데이터 새로 고침에 사용 되는 외부 데이터 원본에 액세스할 수 있는 읽기 권한 부여  
  PowerPivot 통합 문서로 데이터를 가져올 때 외부 데이터에 대한 연결은 현재 사용자의 ID를 데이터 원본에 연결하는 데 사용하는 가장된 연결이나 트러스트된 연결을 기반으로 하는 경우가 많습니다. 이러한 유형의 연결은 현재 사용자에게 자신이 가져오는 데이터를 읽을 수 있는 권한이 있는 경우에만 작동합니다.  
   
  데이터 새로 고침 시나리오에서는 데이터를 가져오는 데 사용된 것과 같은 연결 문자열이 데이터를 새로 고치는 데 다시 사용됩니다. 연결 문자열이 현재 사용자를 가정하는 경우(예를 들어 Integrated_Security=SSPI를 포함하는 문자열의 경우), PowerPivot 시스템 서비스에서는 PowerPivot 무인 데이터 새로 고침 계정의 사용자 ID를 현재 사용자로 전달합니다. 이 연결은 PowerPivot 무인 데이터 새로 고침 계정에 외부 데이터 원본에 대한 읽기 권한이 있는 경우에만 성공합니다.  
@@ -147,7 +146,7 @@ ms.locfileid: "66087416"
   
  조직에서 사용하는 데이터 원본의 관리자인 경우 로그인을 만들고 필요한 사용 권한을 할당할 수 있습니다. 그렇지 않은 경우에는 데이터 소유자에게 문의하여 계정 정보를 제공해야 합니다. PowerPivot 무인 데이터 새로 고침 계정에 매핑할 Windows 도메인 사용자 계정을 지정해야 합니다. 이는이 항목의 "(1 단계): 대상 응용 프로그램 만들기 및 자격 증명 설정"에서 지정한 계정입니다.  
   
-###  <a name="bkmk_verify"></a>5 단계: 데이터 새로 고침 구성 페이지에서 계정 가용성 확인  
+###  <a name="step-5-verify-account-availability-in-data-refresh-configuration-pages"></a><a name="bkmk_verify"></a>5 단계: 데이터 새로 고침 구성 페이지에서 계정 가용성 확인  
   
 1.  PowerPivot 데이터가 포함되어 있는 게시된 통합 문서에 대한 데이터 새로 고침 구성 페이지를 엽니다. 페이지를 여는 방법에 대 한 지침은 [데이터 새로 고침 예약 &#40;SharePoint용 PowerPivot&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)를 참조 하세요.  
   
@@ -161,14 +160,14 @@ ms.locfileid: "66087416"
   
  문제 해결에 대 한 자세한 내용은 TechNet Wiki의 [PowerPivot 데이터 새로 고침 문제 해결](https://go.microsoft.com/fwlink/p/?LinkID=223279) 을 참조 하십시오.  
   
-##  <a name="bkmk_use"></a>PowerPivot 무인 데이터 새로 고침 계정 사용  
+##  <a name="using-the-powerpivot-unattended-data-refresh-account"></a><a name="bkmk_use"></a>PowerPivot 무인 데이터 새로 고침 계정 사용  
  PowerPivot 무인 데이터 새로 고침 일정 예약 페이지의 세 가지 자격 증명 옵션 중 첫 번째 옵션만 무인 데이터 새로 고침 계정에 해당합니다. 데이터 새로 고침 일정을 설정할 때에는 이 옵션을 선택해야 합니다.  
   
  ![SSAS_PowerpivotKJ_DataRefreshCreds](media/ssas-powerpivotkj-datarefreshcreds.gif "SSAS_PowerpivotKJ_DataRefreshCreds")  
   
  PowerPivot 무인 데이터 새로 고침 계정에 액세스하는 데 세 번째 자격 증명 옵션(대상 애플리케이션 ID를 입력해야 함)을 사용하지 마십시오. 이 옵션의 경우 추가 가장 검사가 수행되므로 이 옵션을 PowerPivot 무인 데이터 새로 고침 계정(또는 개별 계정 유형에 기반한 임의의 대상 애플리케이션)에 사용하려고 하면 유효성 검사 오류가 발생합니다. 세 번째 옵션을 사용 하는 방법에 대 한 자세한 내용은 [PowerPivot 데이터 새로 고침을 위한 저장 된 자격 증명 구성 &#40;SharePoint용 PowerPivot&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)을 참조 하십시오.  
   
-##  <a name="bkmk_editUA"></a>기존 PowerPivot 무인 데이터 새로 고침 계정에서 사용 하는 자격 증명 업데이트  
+##  <a name="update-the-credentials-used-by-an-existing-powerpivot-unattended-data-refresh-account"></a><a name="bkmk_editUA"></a>기존 PowerPivot 무인 데이터 새로 고침 계정에서 사용 하는 자격 증명 업데이트  
  설치 중 또는 관리자를 통해 무인 데이터 새로 고침 계정이 이미 구성되어 있는 경우 해당 자격 증명이 저장된 대상 애플리케이션을 편집하여 사용자 이름이나 암호를 업데이트할 수 있습니다. 보안 저장소 서비스에서 자격 증명을 수정하면 이전에 PowerPivot 무인 데이터 새로 고침 계정과 관련되어 있던 원래 Windows ID가 표시되지 않습니다. 만료된 암호를 업데이트하거나 다른 계정을 지정할 경우 보안 스토리지 서비스에서 해당 대상 애플리케이션에 사용할 사용자 이름과 암호를 항상 다시 입력해야 합니다.  
   
 1.  중앙 관리의 응용 프로그램 관리에서 **서비스 응용 프로그램 관리**를 클릭 합니다.  

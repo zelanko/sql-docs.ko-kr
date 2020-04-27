@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: daa647673653280bfc4cf52398751aedfd65b9c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083056"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>마이닝 구조 및 구조 열의 속성
@@ -37,29 +37,26 @@ ms.locfileid: "66083056"
   
 ### <a name="properties-of-the-mining-structure"></a>마이닝 구조 속성  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |**CacheMode**|학습이 완료된 다음 학습에 사용된 사례를 캐시할지, 아니면 삭제할지를 지정합니다.<br /><br /> 참고: 드릴스루 및 홀드 아웃을 사용 `KeepTrainingCases` 하려면이 속성을로 설정 해야 합니다.|  
 |**데이터 정렬**|열의 기본 데이터 정렬을 지정합니다. 데이터 정렬을 지정하지 않으면 서버의 데이터 정렬이 사용됩니다.|  
 |**설명**|마이닝 구조를 설명합니다. 설명에는 구조에 있는 데이터의 용도와 컴퍼지션을 명시하는 것이 가장 좋습니다.|  
-|**ErrorConfiguration (기본값)**|오류(있는 경우)의 특수 처리 옵션을 지정합니다.|  
-|**HoldoutMaxCases**|테스트 데이터 집합으로 예약할 수 있는 최대 구조 사례 수를 지정합니다.  
-  **HoldoutMaxCases** 와 **HoldoutPercent**모두에 대한 값을 지정하면 조건이 결합됩니다.<br /><br /> 참고:이 속성을 설정 하려면 <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> 를로 `KeepTrainingCases`설정 해야 합니다.|  
-|**HoldoutPercent**|테스트 데이터 집합으로 예약할 구조 사례의 비율을 지정합니다. 
-  **HoldoutMaxCases** 와 **HoldoutPercent**모두에 대한 값을 지정하면 조건이 결합됩니다.<br /><br /> 참고:이 속성을 설정 하려면 <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> 를로 `KeepTrainingCases`설정 해야 합니다.|  
+|**ErrorConfiguration(기본값)**|오류(있는 경우)의 특수 처리 옵션을 지정합니다.|  
+|**HoldoutMaxCases**|테스트 데이터 집합으로 예약할 수 있는 최대 구조 사례 수를 지정합니다.  **HoldoutMaxCases** 와 **HoldoutPercent**모두에 대한 값을 지정하면 조건이 결합됩니다.<br /><br /> 참고:이 속성을 설정 하려면 <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> 를로 `KeepTrainingCases`설정 해야 합니다.|  
+|**HoldoutPercent**|테스트 데이터 집합으로 예약할 구조 사례의 비율을 지정합니다. **HoldoutMaxCases** 와 **HoldoutPercent**모두에 대한 값을 지정하면 조건이 결합됩니다.<br /><br /> 참고:이 속성을 설정 하려면 <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> 를로 `KeepTrainingCases`설정 해야 합니다.|  
 |**HoldoutSeed**|테스트 데이터 집합을 다시 만들 수 있도록 홀드아웃 테스트 집합의 분할을 초기화하는 초기값을 지정합니다.<br /><br /> 참고:이 속성을 설정 하려면 <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> 를로 `KeepTrainingCases`설정 해야 합니다.|  
-|**ID**|마이닝 구조의 고유 식별자를 표시합니다.<br /><br /> 구조를 만들 때 마이닝 구조에 할당한 이름이 ID로 사용됩니다. 
-  `Name` 속성에 대해 새 값을 입력하여 나중에 이름을 변경하면 새 이름이 별칭으로만 사용되며 ID는 변경되지 않습니다.|  
+|**ID**|마이닝 구조의 고유 식별자를 표시합니다.<br /><br /> 구조를 만들 때 마이닝 구조에 할당한 이름이 ID로 사용됩니다. `Name` 속성에 대해 새 값을 입력하여 나중에 이름을 변경하면 새 이름이 별칭으로만 사용되며 ID는 변경되지 않습니다.|  
 |**언어**|마이닝 구조의 캡션에 대한 언어를 지정합니다.|  
 |`Name`|마이닝 구조의 이름이나 별칭을 지정합니다.<br /><br /> Name 속성의 값을 변경하면 새 이름이 캡션이나 별칭으로만 사용되며 마이닝 구조의 식별자는 변경되지 않습니다.|  
 |**원본**|데이터 원본의 이름과 유형을 표시합니다.|  
   
 ### <a name="properties-of-the-mining-structure-columns"></a>마이닝 구조 열 속성  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
-|**Classifiedcolumns&lt**|분류된 열이 설명하는 열을 식별합니다.|  
-|**콘텐트가**|열의 내용 유형입니다.|  
+|**ClassifiedColumns**|분류된 열이 설명하는 열을 식별합니다.|  
+|**콘텐츠**|열의 내용 유형입니다.|  
 |**설명**|열에 대해 설명합니다. 열 설명은 열의 데이터가 데이터 마이닝에 대해 파생되거나 변경된 방식에 대한 정보를 제공하는 것이 가장 좋습니다.|  
 |**DiscretizationBucketCount**|불연속화된 열의 버킷 수를 표시합니다.<br /><br /> 내용 유형이 `Discretized`로 설정된 경우에만 사용할 수 있습니다.<br /><br /> 이 속성은 읽기 전용입니다.|  
 |**DiscretizationMethod**|열을 불연속화하는 데 사용된 방법을 표시합니다.<br /><br /> 내용 유형이 `Discretized`로 설정된 경우에만 사용할 수 있습니다.<br /><br /> 이 속성은 읽기 전용입니다.|  
@@ -72,7 +69,7 @@ ms.locfileid: "66083056"
 |**NameColumn**|부모 요소의 이름을 제공하는 열을 식별합니다.|  
 |**원본**|열의 원본을 표시합니다.<br /><br /> 관계형 데이터 원본의 경우 값은 항상 **(없음)** 입니다.<br /><br /> OLAP 큐브를 기반으로 하는 구조의 경우 값은 중첩 테이블의 원본으로 사용되는 조각을 정의하는 MDX 문입니다.|  
 |**SourceMeasureGroup**|측정값 그룹의 원본을 표시합니다.<br /><br /> 관계형 데이터 원본의 경우 값은 항상 **(없음)** 입니다.<br /><br /> OLAP 큐브를 기반으로 하는 구조의 경우 값은 중첩 테이블의 원본으로 사용되는 조각을 정의하는 MDX 문입니다.|  
-|**형식**|열에 있는 내용의 데이터 형식입니다.|  
+|**Type**|열에 있는 내용의 데이터 형식입니다.|  
   
  속성을 설정하거나 변경하는 방법은 [마이닝 구조 태스크 및 방법](mining-structure-tasks-and-how-tos.md)을 참조하세요.  
   

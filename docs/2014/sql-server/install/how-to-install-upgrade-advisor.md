@@ -16,16 +16,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0de86b9690f0647803938218ce566508662da20e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094919"
 ---
 # <a name="how-to-install-upgrade-advisor"></a>방법: 업그레이드 관리자 설치
-  업그레이드 관리자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 제외하고 지원되는 모든 구성 요소의 원격 분석을 지원합니다. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 검색하지 않는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 있는 모든 컴퓨터에 업그레이드 관리자를 설치할 수 있습니다. 컴퓨터에는 업그레이드 관리자의 필수 구성 요소가 있어야 합니다. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 인스턴스를 검색하는 경우에는 보고서 서버에 업그레이드 관리자를 설치해야 합니다.  
+  업그레이드 관리자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 제외하고 지원되는 모든 구성 요소의 원격 분석을 지원합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 검색하지 않는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 있는 모든 컴퓨터에 업그레이드 관리자를 설치할 수 있습니다. 컴퓨터에는 업그레이드 관리자의 필수 구성 요소가 있어야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 인스턴스를 검색하는 경우에는 보고서 서버에 업그레이드 관리자를 설치해야 합니다.  
   
  자세한 내용은 [업그레이드 관리자 설치](../../../2014/sql-server/install/installing-upgrade-advisor.md)를 참조 하세요.  
   
@@ -33,7 +31,7 @@ ms.locfileid: "66094919"
   
 1.  다음 방법 중 하나를 사용하여 설치를 시작합니다.  
   
-    -   웹 사이트에서 설치 하는 경우 **다운로드** 링크를 클릭 한 다음 실행 단추를 클릭 하 여 설치를 시작 합니다. **** [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
+    -   웹 사이트에서 설치 하는 경우 **다운로드** 링크를 클릭 한 다음 실행 단추를 클릭 하 여 설치를 시작 합니다. **Run** [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
     -   제품 미디어에서 설치 하는 경우 **redist** 폴더를 열고 **업그레이드 관리자** 폴더를 연 다음 **sqlua .msi**를 두 번 클릭 합니다.  
   

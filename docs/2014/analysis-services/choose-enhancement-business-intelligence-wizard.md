@@ -13,21 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 687f7fb96ee5a2b96d80562c20d536eeeb308379
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088123"
 ---
 # <a name="choose-enhancement-business-intelligence-wizard"></a>기능 선택(비즈니스 인텔리전스 마법사)
-  
   **기능 선택** 페이지를 사용하여 큐브 또는 차원에 추가할 비즈니스 인텔리전스 기능을 선택할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
  **사용 가능한 기능**  
  추가할 비즈니스 인텔리전스 기능을 선택합니다. 다음 표에서는 사용 가능한 기능을 나열합니다.  
   
-|기능|Description|  
+|기능|설명|  
 |-----------------|-----------------|  
 |**시간 인텔리전스 정의**|선택한 계층에 대한 시간 보기를 추가합니다. 여기에는 월간 누계 보기, 이동 평균 보기 및 기간별 누계 보기가 포함됩니다.<br /><br /> 참고: 이 옵션은 큐브에 대해서만 사용할 수 있습니다.|  
 |**계정 인텔리전스 정의**|계정 특성의 멤버에 대해 수입 및 지출과 같은 표준 계정 분류를 할당합니다.<br /><br /> 측정값에 대한 집계 함수를 *ByAccount*로 설정하면 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스는 계정 분류를 사용하여 시간별 계정 특성 멤버의 측정값을 집계합니다.|  

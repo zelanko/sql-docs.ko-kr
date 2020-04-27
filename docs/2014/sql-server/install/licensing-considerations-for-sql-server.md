@@ -13,14 +13,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 714dcdef73a48d80166b1888bc67e13e66303a44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093948"
 ---
 # <a name="licensing-considerations-for-sql-server"></a>SQL Server의 라이선스 고려 사항
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 라이선스 옵션에 대한 자세한 내용은 [Microsoft SQL Server 웹 사이트](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  

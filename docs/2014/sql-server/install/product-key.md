@@ -11,21 +11,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5a7a59c14cbc5fc3bf3742d8a53e8cf3f92076a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093376"
 ---
 # <a name="product-key"></a>제품 키
   제품 키 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 유효성을 검사하거나 설치할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 무료 버전을 지정할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 무료 버전을 지정하려면 무료 설치 라디오 단추를 선택한 다음 드롭다운 상자에서 설치할 버전을 지정합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 무료 버전을 지정하려면 무료 설치 라디오 단추를 선택한 다음 드롭다운 상자에서 설치할 버전을 지정합니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]유료 버전의 유효성을 검사하려면 제품 키 라디오 단추를 선택한 다음 빈 칸에 키를 입력합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]유료 버전의 유효성을 검사하려면 제품 키 라디오 단추를 선택한 다음 빈 칸에 키를 입력합니다.  
   
  장애 조치(Failover) 클러스터 설치의 경우 각 장애 조치 클러스터 노드에 대해 동일한 제품 키를 사용합니다. 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 제품 키를 사용할 경우 오류가 발생합니다.  
   

@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06249aa1849a1be9af40e183724e85b0f318f3dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093151"
 ---
 # <a name="remove-references-to-undocumented-system-tables"></a>문서화되지 않은 시스템 테이블에 대한 참조를 제거합니다.
@@ -80,12 +80,12 @@ ms.locfileid: "66093151"
 ## <a name="corrective-action"></a>수정 동작  
  다음 표에 따라 애플리케이션을 수정합니다.  
   
-|이전|사용|  
+|이전|Windows Server Update Services와 함께|  
 |----------------|---------|  
-|**sysfulltextnotify**|OBJECTPROPERTYEX 함수의 **objectpropertyex 함수의 tablefulltextpendingchanges** 속성입니다.|  
-|**syslocks**|**sys. dm_tran_locks** 동적 관리 뷰 또는 sp_lock 또는 **syslockinfo** 호환성 뷰입니다.|  
-|**sysproperties**|**sys. extended_properties** 카탈로그 뷰 또는 **fn_listextendedproperty** 함수|  
-|**sysxlogins**|**sys. server_principals** 카탈로그 뷰 또는 **syslogins** compatibility view를 참조 하십시오.|  
+|**sysfulltextnotify**|OBJECTPROPERTYEX 함수의**TableFulltextPendingChanges** 속성|  
+|**syslocks**|**sys.dm_tran_locks** 동적 관리 뷰, sp_lock 또는 **sys.syslockinfo** 호환성 뷰|  
+|**sysproperties**|**sys.extended_properties** 카탈로그 뷰 또는 **fn_listextendedproperty** 함수|  
+|**sysxlogins**|**sys.server_principals** 카탈로그 뷰 또는 **syslogins** 호환성 뷰|  
 |모든 **spt_** 테이블|사용 가능한 대체 항목 없음|  
   
 ## <a name="see-also"></a>참고 항목  

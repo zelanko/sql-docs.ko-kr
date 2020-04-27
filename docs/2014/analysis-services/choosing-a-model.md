@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd75efa13d6761c058b9e3b1f1878036d3d3e928
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088087"
 ---
 # <a name="choosing-a-model"></a>모델 선택
@@ -104,7 +104,7 @@ ms.locfileid: "66088087"
 ## <a name="list-of-supported-algorithms"></a>지원되는 알고리즘 목록  
  다음은 기본적으로 제공되는 알고리즘입니다.  
   
-|알고리즘 이름|Description|사용 위치|  
+|알고리즘 이름|설명|사용 대상|  
 |--------------------|-----------------|-------------|  
 |Microsoft 연결 규칙|트랜잭션 내에 함께 나타날 가능성이 높은 항목을 설명하는 규칙을 작성합니다.|[Excel 용 데이터 마이닝 클라이언트 &#40;마법사 연결&#41;](associate-wizard-data-mining-client-for-excel.md)<br /><br /> [시장 바구니 분석 &#40;Table AnalysisTools for Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md)|  
 |Microsoft 클러스터링|일시적인 관찰만으로는 논리적으로 이끌어 내지 못할 수 있는 데이터 세트 내 관계를 식별합니다. 반복 기술을 사용하여 비슷한 특징을 가진 클러스터로 레코드를 그룹화합니다.|[Excel 용 테이블 분석 도구 &#40;범주 검색&#41;](detect-categories-table-analysis-tools-for-excel.md)<br /><br /> [클러스터 마법사는 Excel 용 데이터 마이닝 추가 기능을 &#40;&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)|  

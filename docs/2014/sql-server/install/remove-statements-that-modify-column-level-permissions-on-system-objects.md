@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b377ac0b9baacdab6461a0e62174538902939bd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093026"
 ---
 # <a name="remove-statements-that-modify-column-level-permissions-on-system-objects"></a>시스템 개체에 대한 열 수준 사용 권한을 수정하는 문을 제거합니다.

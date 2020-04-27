@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebc79ed1221b729cfac3fb3d34ed5d9683dc6875
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082955"
 ---
 # <a name="remove-columns-from-a-mining-structure"></a>마이닝 구조에서 열 제거
@@ -41,8 +41,7 @@ ms.locfileid: "66082955"
   
 3.  삭제할 열을 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다.  
   
-4.  
-  **개체 삭제** 대화 상자에서 **확인**을 클릭합니다.  
+4.  **개체 삭제** 대화 상자에서 **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [마이닝 구조 태스크 및 방법](mining-structure-tasks-and-how-tos.md)  

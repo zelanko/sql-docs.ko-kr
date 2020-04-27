@@ -11,29 +11,25 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2070ff33a17aaf690c3154a2aa16343e55405f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093478"
 ---
 # <a name="prepare-image-type"></a>이미지 유형 준비
-  
   **설치 마법사의** 이미지 유형 준비 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 새 인스턴스를 설치할지 아니면 기존 인스턴스에 기능을 추가할지 지정할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
  원하는 항목을 지정하는 라디오 단추를 선택합니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 새 인스턴스를 준비합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 새 인스턴스를 준비합니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기존 준비 인스턴스에 기능을 추가합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기존 준비 인스턴스에 기능을 추가합니다.  
   
      기존 인스턴스에 기능을 추가하는 옵션을 선택하는 경우에는 드롭다운 목록에서 업데이트할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스를 선택합니다.  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 준비 이미지에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SysPrep 지원 기능을 추가할 수 있습니다.  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 준비 이미지에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SysPrep 지원 기능을 추가할 수 있습니다.  
   
   

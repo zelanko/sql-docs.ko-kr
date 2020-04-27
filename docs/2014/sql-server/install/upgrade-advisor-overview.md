@@ -21,10 +21,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c78630764a26bb8fe281446c1bb997f18d965db7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091601"
 ---
 # <a name="upgrade-advisor-overview"></a>업그레이드 관리자 개요
@@ -73,13 +73,11 @@ ms.locfileid: "66091601"
 ## <a name="upgrade-advisor-report-viewer"></a>업그레이드 관리자 보고서 뷰어  
  업그레이드 관리자 보고서를 보려면 업그레이드 관리자 시작 페이지에서 **업그레이드 관리자 보고서 뷰어 시작** 을 클릭 합니다. 업그레이드 관리자 보고서 뷰어를 시작하면 기본 디렉터리의 보고서가 로드됩니다. 업그레이드 관리자 보고서 뷰어가 기본 디렉터리에서 보고서를 찾지 못한 경우 보고서는 표시되지 않습니다. 기본 디렉터리에 보고서가 없는 경우에는 업그레이드 관리자 분석 마법사를 실행하여 보고서를 작성하거나 다른 서버 또는 하위 디렉터리에서 기존 보고서를 로드할 수 있습니다.  
   
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업그레이드 관리자는 기존 보고서를 덮어쓰지 않습니다. 그러나 보고서 뷰어에는 가장 최근의 다섯 개 보고서만 표시됩니다. 이전 보고서를 보려면 **보고서** 드롭다운 목록 상자에서 보고서를 선택 합니다. 타임스탬프는 보고서가 생성된 날짜와 시간을 나타냅니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업그레이드 관리자는 기존 보고서를 덮어쓰지 않습니다. 그러나 보고서 뷰어에는 가장 최근의 다섯 개 보고서만 표시됩니다. 이전 보고서를 보려면 **보고서** 드롭다운 목록 상자에서 보고서를 선택 합니다. 타임스탬프는 보고서가 생성된 날짜와 시간을 나타냅니다.  
   
  업그레이드 관리자 분석 마법사를 통해 작성된 XML 파일이 업그레이드 관리자 보고서 뷰어에 로드되면 각 구성 요소에 대한 보고서가 표시됩니다. 이 보고서에는 처리해야 할 모든 알려진 문제가 포함됩니다(검색 가능한 문제와 검색 불가능한 문제 모두). 각 문제에는 중요도를 나타내는 아이콘, 문제를 처리해야 하는 시기를 알려 주는 레이블, 그리고 간단한 설명이 표시됩니다. 문제를 확장하면 보다 자세한 설명, 문제 세부 정보로 연결되는 링크, 도움말 파일로 연결되는 링크가 표시됩니다. 각 문제에 대한 정보는 문제 해결을 위해 필요한 정보를 충분히 제공하도록 고안되었습니다.  
   
- 대부분의 구성 요소에는 검색되지 않는 문제가 있습니다. 이러한 문제를 보려면 해당 구성 요소에 대 한 **기타 업그레이드 문제** 항목을 확장 한 다음 링크를 클릭 하 여 설명서의 문제에 대 한 추가 정보를 확인 합니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전과의 호환성 문제에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서를 참조하십시오.  
+ 대부분의 구성 요소에는 검색되지 않는 문제가 있습니다. 이러한 문제를 보려면 해당 구성 요소에 대 한 **기타 업그레이드 문제** 항목을 확장 한 다음 링크를 클릭 하 여 설명서의 문제에 대 한 추가 정보를 확인 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전과의 호환성 문제에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [업그레이드 관리자 작업](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

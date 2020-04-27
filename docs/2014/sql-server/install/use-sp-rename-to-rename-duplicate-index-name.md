@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3ca4efb2a16f615af57e89fa56a4dcb8bdb3bf5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091354"
 ---
 # <a name="use-sp_rename-to-rename-duplicate-index-name"></a>sp_rename을 사용하여 중복 인덱스 이름을 바꿉니다.
@@ -42,8 +42,7 @@ ms.locfileid: "66091354"
           AND i.name = o.name and i.indid < o.indid);  
     ```  
   
-2.  
-  **sp_rename** 을 사용하여 인덱스 이름 중 하나를 변경합니다. 인덱스 이름이 같기 때문에 이름이 변경될 인덱스를 결정할 수는 없습니다. 이 단계로 인덱스를 구분할 수 있습니다.  
+2.  **sp_rename** 을 사용하여 인덱스 이름 중 하나를 변경합니다. 인덱스 이름이 같기 때문에 이름이 변경될 인덱스를 결정할 수는 없습니다. 이 단계로 인덱스를 구분할 수 있습니다.  
   
     ```  
     EXEC sp_rename N'table_name.index_name', N'new_index_name', N'INDEX'  

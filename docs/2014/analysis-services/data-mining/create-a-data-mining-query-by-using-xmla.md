@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec69c7225d4c509d93787e667612269c4de91e23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085551"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>XMLA를 사용하여 데이터 마이닝 쿼리 만들기
@@ -30,21 +30,17 @@ ms.locfileid: "66085551"
   
 #### <a name="to-open-an-xmla-template"></a>XML/A 템플릿을 열려면  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **보기** 메뉴에서 **템플릿 탐색기**를 클릭합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **보기** 메뉴에서 **템플릿 탐색기**를 클릭합니다.  
   
 2.  큐브 아이콘을 클릭하여 Analysis Services 템플릿 목록을 엽니다.  
   
 3.  템플릿 범주 목록에서 **XMLA**, **스키마 행 집합**을 차례로 확장하고 **스키마 행 집합 검색** 을 두 번 클릭하여 해당 템플릿을 적절한 코드 편집기에서 엽니다.  
   
-4.  
-  **Analysis Services에 연결** 대화 상자에서 연결 정보를 지정한 다음 **연결**을 클릭합니다. 
-  **스키마 행 집합 검색** 템플릿으로 채워진 새 쿼리 편집기 창이 열립니다.  
+4.  **Analysis Services에 연결** 대화 상자에서 연결 정보를 지정한 다음 **연결**을 클릭합니다. **스키마 행 집합 검색** 템플릿으로 채워진 새 쿼리 편집기 창이 열립니다.  
   
 #### <a name="to-discover-column-names-from-the-mining-model-content-schema-rowset"></a>MINING MODEL CONTENT 스키마 행 집합에서 열 이름을 검색하려면  
   
-1.  
-  **스키마 행 집합 검색** 템플릿이 열려 있는 상태에서 **실행**을 클릭합니다.  
+1.  **스키마 행 집합 검색** 템플릿이 열려 있는 상태에서 **실행**을 클릭합니다.  
   
      현재 인스턴스에서 사용할 수 있는 모든 행 집합에 대한 행 집합 이름 및 행 집합 열이 포함된 스키마 행 집합 목록이 **결과** 창에 반환됩니다.  
   
@@ -66,13 +62,11 @@ ms.locfileid: "66085551"
   
 4.  **실행**을 클릭합니다.  
   
-     
-  **결과** 창에 지정한 스키마 행 집합의 열 이름 목록이 표시됩니다.  
+     **결과** 창에 지정한 스키마 행 집합의 열 이름 목록이 표시됩니다.  
   
 #### <a name="to-create-a-content-query-using-the-mining-model-content-schema-rowset"></a>MINING MODEL CONTENT 스키마 행 집합을 사용하여 내용 쿼리를 만들려면  
   
-1.  
-  **스키마 행 집합 검색** 템플릿에서 요청 유형 태그 내의 텍스트를 바꿔서 요청 유형을 변경합니다.  
+1.  **스키마 행 집합 검색** 템플릿에서 요청 유형 태그 내의 텍스트를 바꿔서 요청 유형을 변경합니다.  
   
      다음 줄을  
   

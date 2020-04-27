@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7c9ca227753b8ebbd80d4de0c672fc8cab5c1b56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085858"
 ---
 # <a name="change-the-properties-of-a-mining-structure"></a>마이닝 구조 속성 변경
@@ -26,7 +26,7 @@ ms.locfileid: "66085858"
   
 -   구조의 개별 열에 대한 속성  
   
- 일부 속성은 다른 속성 설정에 종속됩니다. 예를 들어 열의 데이터 형식을 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>로 설정하기 전에는 범주화 동작을 제어하는 속성(예: <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 또는 `Discretized`)을 설정할 수 없습니다.  
+ 일부 속성은 다른 속성 설정에 종속됩니다. 예를 들어 열의 데이터 형식을 `Discretized`로 설정하기 전에는 범주화 동작을 제어하는 속성(예: <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 또는 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A>)을 설정할 수 없습니다.  
   
  마이닝 구조 속성에 대한 자세한 내용은 [마이닝 구조 열](mining-structure-columns.md)을 참조하세요.  
   
@@ -36,8 +36,7 @@ ms.locfileid: "66085858"
   
      화면 오른쪽에 **속성** 창이 열립니다. 이 창이 이미 열려 있는 경우도 있습니다.  
   
-2.  
-  **속성** 창에서 변경할 속성에 해당하는 값을 선택하고 새 값을 입력합니다.  
+2.  **속성** 창에서 변경할 속성에 해당하는 값을 선택하고 새 값을 입력합니다.  
   
      디자이너에서 다른 요소를 선택하면 새 값이 적용됩니다.  
   

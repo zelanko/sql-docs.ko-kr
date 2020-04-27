@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3c9abd1b891d47f1711db21eec017ec755526e02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087353"
 ---
 # <a name="connect-to-a-data-mining-server"></a>데이터 마이닝 서버에 연결
@@ -94,8 +94,7 @@ ms.locfileid: "66087353"
   
  Excel용 데이터 마이닝 클라이언트에서 마법사를 완료하면 모델이 서버에 기본적으로 저장되지만, 각 마법사의 마지막 페이지에는 임시 모델을 사용하는 옵션이 있습니다. 이 옵션을 선택하면 사용자가 만든 데이터 마이닝 구조 및 모델이 임시 파일에 저장됩니다. Excel이 열려 있는 동안 구조 및 모델을 찾아보기, 관리 및 수정할 수 있지만 Excel을 닫으면 구조와 관련 모델이 삭제됩니다.  
   
- **데이터 마이닝 고급 쿼리 편집기** 를 사용 하 고 DMX 템플릿 중 하나를 선택 하 여 임시 구조 또는 모델을 명시적으로 만들 수도 있습니다. 
-  `USE SESSION MODELS` 절을 추가하여 해당 개체를 임시로 지정합니다.   
+ **데이터 마이닝 고급 쿼리 편집기** 를 사용 하 고 DMX 템플릿 중 하나를 선택 하 여 임시 구조 또는 모델을 명시적으로 만들 수도 있습니다. `USE SESSION MODELS` 절을 추가하여 해당 개체를 임시로 지정합니다.   
   
 ### <a name="creating-backups-of-mining-models-and-structures"></a>마이닝 모델 및 구조 백업 만들기  
  모델 또는 구조의 백업을 만들려면 Excel 용 데이터 마이닝 클라이언트에서 모델 [관리 &#40;SQL Server 데이터 마이닝 추가 기능&#41;](manage-models-sql-server-data-mining-add-ins.md)을 사용 하 여 내보낼 수 있습니다.  

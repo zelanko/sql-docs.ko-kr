@@ -13,18 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 07138beba90f3f863d81a24c7c92b2d9fd4a4276
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088286"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>계산(큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **계산** 탭을 사용하여 선택한 큐브에 대한 계산 멤버, 명명된 집합 및 MDX(Multidimensional Expressions) 스크립트 명령을 포함한 계산을 보고 편집할 수 있습니다.  
   
 ## <a name="form-view-and-script-view"></a>폼 보기 및 스크립트 보기  
- 
-  **계산** 탭에서는 계산을 보거나 편집할 때 다음 두 가지 보기를 사용할 수 있습니다.  
+ **계산** 탭에서는 계산을 보거나 편집할 때 다음 두 가지 보기를 사용할 수 있습니다.  
   
 -   폼 보기  
   
@@ -35,7 +34,7 @@ ms.locfileid: "66088286"
      고급 사용자를 위해 이 보기에서는 큐브에 사용 가능한 메타데이터, 함수 및 도구를 표시할 뿐만 아니라 큐브에 연결된 전체 MDX 스크립트를 표시합니다.  
   
 ## <a name="panes"></a>창  
- **도구 모음**  
+ **]**  
  폼 보기와 스크립트 보기 모두의 도구 모음을 사용 하 여이 탭에서 일반적인 작업을 수행할 수 있습니다. 이 창에 대 한 자세한 내용은 [도구 모음 &#40;계산 탭, 큐브 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)를 참조 하세요.  
   
  **스크립트 구성 도우미**  

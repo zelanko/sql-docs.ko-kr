@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7f41394c2adb8cbaaee2011e52ba6155a24e2e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082687"
 ---
 # <a name="view-or-change-algorithm-parameters"></a>알고리즘 매개 변수 확인 또는 변경
@@ -39,18 +39,13 @@ ms.locfileid: "66082687"
   
 ### <a name="change-an-algorithm-parameter"></a>알고리즘 매개 변수 변경  
   
-1.  
-  **의 데이터 마이닝 디자이너에 있는** 마이닝 모델 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭에서 알고리즘을 조정할 마이닝 모델의 알고리즘 유형을 마우스 오른쪽 단추로 클릭하고 **알고리즘 매개 변수 설정**을 선택합니다.  
+1.  **의 데이터 마이닝 디자이너에 있는** 마이닝 모델 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭에서 알고리즘을 조정할 마이닝 모델의 알고리즘 유형을 마우스 오른쪽 단추로 클릭하고 **알고리즘 매개 변수 설정**을 선택합니다.  
   
-     
-  **알고리즘 매개 변수** 대화 상자가 열립니다.  
+     **알고리즘 매개 변수** 대화 상자가 열립니다.  
   
-2.  
-  **값** 열에서 변경할 알고리즘의 새 값을 설정합니다.  
+2.  **값** 열에서 변경할 알고리즘의 새 값을 설정합니다.  
   
-     
-  **값** 열에 값을 입력하지 않으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 기본 매개 변수 값이 사용됩니다. 
-  **범위** 열에서 입력할 수 있는 값을 확인할 수 있습니다.  
+     **값** 열에 값을 입력하지 않으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 기본 매개 변수 값이 사용됩니다. **범위** 열에서 입력할 수 있는 값을 확인할 수 있습니다.  
   
 3.  **확인**을 클릭합니다.  
   
@@ -58,8 +53,7 @@ ms.locfileid: "66082687"
   
 ### <a name="view-the-parameters-used-in-an-existing-model"></a>기존 모델에 사용되는 매개 변수 보기  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 DMX 쿼리 창을 엽니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 DMX 쿼리 창을 엽니다.  
   
 2.  다음과 같은 쿼리를 입력합니다.  
   

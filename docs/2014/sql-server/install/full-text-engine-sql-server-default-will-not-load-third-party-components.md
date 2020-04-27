@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fe7f1359b55f2a488a58c37b9f3045a31dbc0778
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095163"
 ---
 # <a name="the-microsoft-full-text-engine-for-sql-server-will-not-load-unsigned-third-party-components-by-default"></a>SQL Server용 Microsoft 전체 텍스트 엔진은 기본적으로 서명되지 않은 타사 구성 요소를 로드하지 않습니다.
@@ -26,7 +26,7 @@ ms.locfileid: "66095163"
 ## <a name="component"></a>구성 요소  
  전체 텍스트 검색  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
  업그레이드 후에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)]용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 엔진이 현재 서버에 설치된 PDF 필터 등의 타사 필터를 기본적으로 로드하지 않습니다.  
   
 ## <a name="corrective-action"></a>수정 동작  

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7db22d59ffa9ce2fcb8b4875bd1dafcf7018e567
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086312"
 ---
 # <a name="data-mining-wizards"></a>데이터 마이닝 마법사
@@ -25,7 +25,7 @@ ms.locfileid: "66086312"
   
  다음 표에서는 데이터 마이닝 원본, 뷰 및 개체를 만드는 데 사용할 수 있는 마법사에 대해 설명합니다.  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[데이터 원본 마법사 F1 도움말 &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)|데이터 원본 마법사를 사용하여 새 데이터 원본을 정의할 수 있습니다.|  
 |[데이터 원본 뷰 마법사 F1 도움말 &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)|데이터 원본 뷰 마법사를 사용하여 새 데이터 원본 뷰를 정의할 수 있습니다.|  

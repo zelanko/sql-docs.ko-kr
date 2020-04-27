@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a8b19c9c23857013796885eb8d2d3469607eae17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084727"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>마이닝 모델에서 필터 삭제
@@ -26,28 +26,23 @@ ms.locfileid: "66084727"
   
 ### <a name="to-delete-a-condition-from-a-filter-on-a-mining-model"></a>마이닝 모델의 필터에서 조건을 삭제하려면  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 솔루션 탐색기에서 필터링할 마이닝 모델이 포함된 마이닝 구조를 클릭합니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 솔루션 탐색기에서 필터링할 마이닝 모델이 포함된 마이닝 구조를 클릭합니다.  
   
-2.  
-  **마이닝 모델** 탭을 클릭합니다.  
+2.  **마이닝 모델** 탭을 클릭합니다.  
   
 3.  모델을 선택하고 마우스 오른쪽 단추를 클릭하여 바로 가기 메뉴를 엽니다.  
   
      또는  
   
-     모델을 선택합니다. 
-  **마이닝 모델** 메뉴에서 **모델 필터 설정**을 선택합니다.  
+     모델을 선택합니다. **마이닝 모델** 메뉴에서 **모델 필터 설정**을 선택합니다.  
   
-4.  
-  **모델 필터** 대화 상자에서 삭제할 조건이 포함된 표의 행을 마우스 오른쪽 단추로 클릭합니다.  
+4.  **모델 필터** 대화 상자에서 삭제할 조건이 포함된 표의 행을 마우스 오른쪽 단추로 클릭합니다.  
   
-5.  **삭제**를 선택 합니다.  
+5.  **삭제**를 선택합니다.  
   
 ### <a name="to-clear-the-filter-on-a-mining-model-in-the-filter-editor-dialog-box"></a>필터 편집기 대화 상자에서 마이닝 모델의 필터를 지우려면  
   
--   
-  **필터 편집기** 대화 상자에서 표의 아무 행이나 마우스 오른쪽 단추로 클릭하고 **모두 삭제**를 선택합니다.  
+-   **필터 편집기** 대화 상자에서 표의 아무 행이나 마우스 오른쪽 단추로 클릭하고 **모두 삭제**를 선택합니다.  
   
 ## <a name="working-with-model-filters-using-the-properties-window"></a>속성 창을 사용하여 모델 필터 작업  
  전체 필터를 삭제하는 경우에는 필터 편집기 대화 상자를 열지 않아도 됩니다. 만든 필터 조건은 마이닝 모델의 `Filter` 속성에서 사용할 수 있습니다.  
@@ -66,6 +61,6 @@ ms.locfileid: "66084727"
 ## <a name="see-also"></a>참고 항목  
  [마이닝 모델에서 사례 데이터로 드릴스루](drill-through-to-case-data-from-a-mining-model.md)   
  [마이닝 모델 태스크 및 방법](mining-model-tasks-and-how-tos.md)   
- [마이닝 모델 &#40;Analysis Services 데이터 마이닝&#41;필터](mining-models-analysis-services-data-mining.md)  
+ [마이닝 모델에 대한 필터&#40;Analysis Services - 데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)  
   
   

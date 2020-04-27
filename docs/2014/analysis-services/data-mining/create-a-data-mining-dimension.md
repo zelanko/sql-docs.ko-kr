@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b642d7a0bdf552d8944602761aa76eec1cf35306
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085498"
 ---
 # <a name="create-a-data-mining-dimension"></a>데이터 마이닝 차원 만들기
@@ -26,28 +26,21 @@ ms.locfileid: "66085498"
   
 ### <a name="to-create-a-data-mining-dimension"></a>데이터 마이닝 차원을 만들려면  
   
-1.  
-  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 데이터 마이닝 디자이너에서 **마이닝 구조** 탭이나 **마이닝 모델** 탭을 선택합니다.  
+1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 데이터 마이닝 디자이너에서 **마이닝 구조** 탭이나 **마이닝 모델** 탭을 선택합니다.  
   
-2.  
-  **마이닝 모델** 메뉴에서 **데이터 마이닝 차원 만들기**를 선택합니다.  
+2.  **마이닝 모델** 메뉴에서 **데이터 마이닝 차원 만들기**를 선택합니다.  
   
-     
-  **데이터 마이닝 차원 만들기** 대화 상자가 열립니다.  
+     **데이터 마이닝 차원 만들기** 대화 상자가 열립니다.  
   
-3.  
-  **데이터 마이닝 차원 만들기** 대화 상자의 **모델 이름** 목록에서 OLAP 마이닝 모델을 선택합니다.  
+3.  **데이터 마이닝 차원 만들기** 대화 상자의 **모델 이름** 목록에서 OLAP 마이닝 모델을 선택합니다.  
   
-4.  
-  **차원 이름** 입력란에 새 데이터 마이닝 차원의 이름을 입력합니다.  
+4.  **차원 이름** 입력란에 새 데이터 마이닝 차원의 이름을 입력합니다.  
   
-5.  새 데이터 마이닝 차원을 포함하는 큐브를 만들려면 **큐브 만들기**를 선택합니다. 
-  **큐브 만들기**를 선택한 후에는 큐브의 새 이름을 입력할 수 있습니다.  
+5.  새 데이터 마이닝 차원을 포함하는 큐브를 만들려면 **큐브 만들기**를 선택합니다. **큐브 만들기**를 선택한 후에는 큐브의 새 이름을 입력할 수 있습니다.  
   
 6.  **확인**을 클릭합니다.  
   
-     데이터 마이닝 차원이 생성되어 솔루션 탐색기의 **차원** 폴더에 추가됩니다. 
-  **큐브 만들기**를 선택한 경우에는 새 큐브도 생성되어 **큐브** 폴더에 추가됩니다.  
+     데이터 마이닝 차원이 생성되어 솔루션 탐색기의 **차원** 폴더에 추가됩니다. **큐브 만들기**를 선택한 경우에는 새 큐브도 생성되어 **큐브** 폴더에 추가됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [마이닝 구조 태스크 및 방법](mining-structure-tasks-and-how-tos.md)  

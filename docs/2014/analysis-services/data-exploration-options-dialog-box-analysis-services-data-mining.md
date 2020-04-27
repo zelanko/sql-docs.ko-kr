@@ -15,27 +15,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b327a0a350e88fd197a52c710f8a991c892a0aea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086541"
 ---
 # <a name="data-exploration-options-dialog-box-analysis-services---data-mining"></a>데이터 탐색 옵션 대화 상자(Analysis Services - 데이터 마이닝)
-  
-  **의** 데이터 탐색 옵션 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 **데이터 탐색** 대화 상자의 샘플링 및 차트 옵션을 설정할 수 있습니다. 
-  **데이터 탐색** 대화 상자에서 **샘플링 옵션** 을 클릭하여 **데이터 탐색 옵션** 대화 상자를 표시할 수 있습니다.  
+  **의** 데이터 탐색 옵션 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 **데이터 탐색** 대화 상자의 샘플링 및 차트 옵션을 설정할 수 있습니다. **데이터 탐색** 대화 상자에서 **샘플링 옵션** 을 클릭하여 **데이터 탐색 옵션** 대화 상자를 표시할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
   
 |용어|정의|  
 |----------|----------------|  
-|**최대 개수**|
-  **샘플 개수** 에서 예제 데이터로 지정한 최상위 행 수를 검색하려면 선택합니다.|  
-|**무작위 샘플링**|
-  **샘플 개수** 에서 예제 데이터로 지정한 행 수를 무작위로 샘플링 및 검색하려면 선택합니다.|  
+|**최대 개수**|**샘플 개수** 에서 예제 데이터로 지정한 최상위 행 수를 검색하려면 선택합니다.|  
+|**무작위 샘플링**|**샘플 개수** 에서 예제 데이터로 지정한 행 수를 무작위로 샘플링 및 검색하려면 선택합니다.|  
 |**샘플 개수**|예제 데이터로 반환할 행 수를 선택합니다.|  
-|**차트별 상태**|
-  **데이터 탐색** 대화 상자의 **차트** 탭에 표시할 상태의 수를 선택합니다.|  
+|**차트별 상태**|**데이터 탐색** 대화 상자의 **차트** 탭에 표시할 상태의 수를 선택합니다.|  
   
   

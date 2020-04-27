@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 865eea502ecc7e807533b75501634fb6d3356583
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083245"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>중첩 테이블(Analysis Services - 데이터 마이닝)
-  에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]데이터는 사례 테이블에 포함 된 일련의 사례로 데이터 마이닝 알고리즘에 공급 되어야 합니다. 그러나 한 개의 데이터 행으로 설명할 수 없는 사례도 있습니다. 예를 들어 한 사례가 두 테이블, 즉 고객 정보가 포함된 한 테이블과 고객 구매 내용이 포함된 다른 테이블에서 파생될 수 있습니다. 고객 정보 테이블의 단일 고객이 고객 구매 테이블에서 여러 항목을 가질 수 있으므로 단일 행을 사용하여 데이터를 설명하기 어렵습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 *중첩 테이블*을 사용 하 여 이러한 경우를 처리 하는 고유한 방법을 제공 합니다. 다음 그림에서는 중첩 테이블의 개념을 보여 줍니다.  
+  에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]데이터는 사례 테이블에 포함 된 일련의 사례로 데이터 마이닝 알고리즘에 공급 되어야 합니다. 그러나 한 개의 데이터 행으로 설명할 수 없는 사례도 있습니다. 예를 들어 한 사례가 두 테이블, 즉 고객 정보가 포함된 한 테이블과 고객 구매 내용이 포함된 다른 테이블에서 파생될 수 있습니다. 고객 정보 테이블의 단일 고객이 고객 구매 테이블에서 여러 항목을 가질 수 있으므로 단일 행을 사용하여 데이터를 설명하기 어렵습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 *중첩 테이블*을 사용하여 이러한 사례를 처리하는 고유한 방법을 제공합니다. 다음 그림에서는 중첩 테이블의 개념을 보여 줍니다.  
   
  ![중첩 테이블을 사용하여 결합한 두 테이블](../media/nested-tables.gif "중첩 테이블을 사용하여 결합한 두 테이블")  
   
@@ -33,12 +33,10 @@ ms.locfileid: "66083245"
  중첩된 테이블의 데이터는 예측이나 입력 또는 둘 다에 사용할 수 있습니다. 예를 들어 모델에 두 개의 중첩된 테이블 열이 있을 수 있으며 이 중 하나의 중첩된 테이블 열에는 고객이 구매한 제품의 목록이 포함되어 있고 다른 하나의 중첩된 테이블 열에는 설문 조사를 통해 얻은 고객의 취미와 관심사에 대한 정보가 포함되어 있을 수 있습니다. 이 시나리오에서 고객의 취미와 관심사를 입력으로 사용하여 구매 행동을 분석하고 구매할 가능성이 높은 제품을 예측할 수 있습니다.  
   
 ## <a name="joining-case-tables-and-nested-tables"></a>사례 테이블 및 중첩 테이블 조인  
- 중첩 테이블을 만들려면 한 테이블의 항목이 다른 테이블에 연결될 수 있도록 두 원본 테이블이 정의된 관계를 포함해야 합니다. 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서는 데이터 원본 뷰에서 이러한 관계를 정의할 수 있습니다.  
+ 중첩 테이블을 만들려면 한 테이블의 항목이 다른 테이블에 연결될 수 있도록 두 원본 테이블이 정의된 관계를 포함해야 합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서는 데이터 원본 뷰에서 이러한 관계를 정의할 수 있습니다.  
   
 > [!NOTE]  
->  
-  **CustomerKey** 필드는 데이터 원본 뷰 정의 내에서 사례 테이블과 중첩 테이블을 연결하고 마이닝 구조 내에서 열의 관계를 설정하는 데 사용되는 관계형 키입니다. 그러나 일반적으로 해당 구조에서 만들어진 마이닝 모델에는 이 관계형 키를 사용해서는 안 됩니다. 관계형 키 열이 테이블 조인을 위한 목적으로만 사용되어 분석에 유용한 정보를 제공하지 않는 경우 마이닝 모델에서 관계형 키 열을 생략하는 것이 가장 좋습니다.  
+>  **CustomerKey** 필드는 데이터 원본 뷰 정의 내에서 사례 테이블과 중첩 테이블을 연결하고 마이닝 구조 내에서 열의 관계를 설정하는 데 사용되는 관계형 키입니다. 그러나 일반적으로 해당 구조에서 만들어진 마이닝 모델에는 이 관계형 키를 사용해서는 안 됩니다. 관계형 키 열이 테이블 조인을 위한 목적으로만 사용되어 분석에 유용한 정보를 제공하지 않는 경우 마이닝 모델에서 관계형 키 열을 생략하는 것이 가장 좋습니다.  
   
  DMX(Data Mining Extensions) 또는 AMO(Analysis Management Objects)를 사용하여 프로그래밍 방식으로 중첩 테이블을 만들거나 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 데이터 마이닝 마법사 및 데이터 마이닝 디자이너를 사용할 수 있습니다.  
   
@@ -59,8 +57,7 @@ ms.locfileid: "66083245"
  예를 들어 중첩 테이블에 **Product**, **ProductQuantity**및 **ProductPrice**열이 포함되어 있는 경우 **Product** 는 중첩 테이블 키로 선택하고 **ProductQuantity** 는 마이닝 구조에 추가하여 입력으로 사용할 수 있습니다.  
   
 ## <a name="filtering-nested-table-data"></a>중첩 테이블 데이터 필터링  
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 데이터 마이닝 모델 학습 또는 테스트에 사용되는 데이터에 대한 필터를 만들 수 있습니다. 필터를 사용하여 모델 컴퍼지션에 영향을 주거나 사례 하위 집합에서 모델을 테스트할 수 있습니다. 필터를 중첩 테이블에 적용할 수도 있습니다. 그러나 중첩 테이블에서 사용할 수 있는 구문에는 제한이 있습니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 데이터 마이닝 모델 학습 또는 테스트에 사용되는 데이터에 대한 필터를 만들 수 있습니다. 필터를 사용하여 모델 컴퍼지션에 영향을 주거나 사례 하위 집합에서 모델을 테스트할 수 있습니다. 필터를 중첩 테이블에 적용할 수도 있습니다. 그러나 중첩 테이블에서 사용할 수 있는 구문에는 제한이 있습니다.  
   
  대개 특성의 존재 여부를 테스트할 때 필터를 중첩 테이블에 적용합니다. 예를 들어 모델에 사용된 사례를 중첩 테이블에 지정된 값을 갖는 사례로 제한하는 필터를 적용할 수 있습니다. 또는 모델에 사용된 사례를 특정 항목을 구매하지 않은 고객으로 제한할 수도 있습니다.  
   
@@ -70,6 +67,6 @@ ms.locfileid: "66083245"
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [마이닝 구조 &#40;Analysis Services 데이터 마이닝&#41;](mining-structures-analysis-services-data-mining.md)  
+ [마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](mining-structures-analysis-services-data-mining.md)  
   
   

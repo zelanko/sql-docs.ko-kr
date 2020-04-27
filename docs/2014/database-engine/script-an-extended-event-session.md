@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 072a3220ba5c6997c463031733bbbe0ce2587fe1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088913"
 ---
 # <a name="script-an-extended-event-session"></a>확장 이벤트 세션 스크립팅
@@ -22,7 +22,7 @@ ms.locfileid: "66088913"
   
 -   **새 쿼리 편집기 창**  
   
--   **파일**  
+-   **최근에 사용한 파일**  
   
 -   **클립보드**  
   
@@ -38,11 +38,9 @@ ms.locfileid: "66088913"
   
 1.  개체 탐색기에서 **관리** 노드를 확장하고 **확장 이벤트**를 확장합니다.  
   
-2.  
-  **세션**을 마우스 오른쪽 단추로 클릭하고 **새 세션**을 클릭합니다.  
+2.  **세션**을 마우스 오른쪽 단추로 클릭하고 **새 세션**을 클릭합니다.  
   
-3.  
-  **새 세션** UI에서 이벤트 세션을 만들고 **스크립트** 드롭다운 목록에서 이벤트 세션을 스크립팅할 위치를 선택합니다.  
+3.  **새 세션** UI에서 이벤트 세션을 만들고 **스크립트** 드롭다운 목록에서 이벤트 세션을 스크립팅할 위치를 선택합니다.  
   
 ### <a name="to-script-a-modified-event-session"></a>수정한 이벤트 세션을 스크립팅하려면  
   
@@ -50,8 +48,7 @@ ms.locfileid: "66088913"
   
 2.  수정할 세션을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
   
-3.  
-  **세션 속성** 대화 상자에서 이벤트 세션을 수정하고 **스크립트** 드롭다운 목록에서 수정한 세션을 스크립팅할 위치를 선택합니다.  
+3.  **세션 속성** 대화 상자에서 이벤트 세션을 수정하고 **스크립트** 드롭다운 목록에서 수정한 세션을 스크립팅할 위치를 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [확장 이벤트](../relational-databases/extended-events/extended-events.md)  

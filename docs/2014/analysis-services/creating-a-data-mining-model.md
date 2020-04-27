@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a8893960b5177563ccf98dbd21cb528ce399ea3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086733"
 ---
 # <a name="creating-a-data-mining-model"></a>데이터 마이닝 모델 만들기
@@ -120,7 +120,7 @@ ms.locfileid: "66086733"
   
  **목표 검색** 도구는 Microsoft 로지스틱 회귀 알고리즘을 사용 합니다.  
   
- 세부 정보  
+ 자세히  
   
  [Excel 용 테이블 분석 도구 &#40;목표 검색 시나리오&#41;](goal-seek-scenario-table-analysis-tools-for-excel.md)  
   

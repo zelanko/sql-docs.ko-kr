@@ -11,18 +11,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: fd68ebe406fc7168746c804e585fa7465ee8c527
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089274"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Options (Text Editor - Plain Text - General Page)
   이 대화 상자를 사용하여 특정 개발 언어와 연관되지 않은 문서를 편집하는 데 사용되는 텍스트 편집기의 일반 편집 동작을 변경할 수 있습니다. 이 설정을 표시하려면 **도구** 메뉴의 **옵션** 을 클릭한 다음 **텍스트 편집기**를 확장하고 **일반 텍스트** 를 확장한 다음 **일반**을 클릭합니다.  
   
 ## <a name="setting-options-in-multiple-locations"></a>여러 위치에서 옵션 설정  
- 일반 텍스트 편집기에 대한 옵션은 **모든 언어** 대화 상자(일반)에서도 설정할 수 있습니다. 
-  **모든 언어** 대화 상자를 사용하여 DMX 또는 MDX 편집기 등의 다른 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 편집기에 대해 다른 옵션을 설정하는 경우에는 이 대화 상자를 사용하여 일반 텍스트 편집기 옵션을 다시 설정해야 합니다.  
+ 일반 텍스트 편집기에 대한 옵션은 **모든 언어** 대화 상자(일반)에서도 설정할 수 있습니다. **모든 언어** 대화 상자를 사용하여 DMX 또는 MDX 편집기 등의 다른 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 편집기에 대해 다른 옵션을 설정하는 경우에는 이 대화 상자를 사용하여 일반 텍스트 편집기 옵션을 다시 설정해야 합니다.  
   
 ## <a name="statement-completion"></a>문 완성  
  **멤버 목록 자동 표시**  
@@ -38,7 +37,7 @@ ms.locfileid: "66089274"
  **가상 공간 활성화**  
  각 텍스트 줄 끝에 공백을 삽입합니다. 텍스트 옆의 일정한 위치에 설명을 배치하려면 이 확인란을 선택합니다.  
   
- **자동 줄 바꿈**  
+ **단어 줄 바꿈**  
  가로 방향으로 표시 가능한 편집기 영역을 넘어가는 줄 부분을 다음 줄에 표시합니다. 이 확인란을 선택하면 **자동 줄 바꿈 시각 문자 표시** 옵션이 활성화됩니다.  
   
  **자동 줄 바꿈 시각 문자 표시**  

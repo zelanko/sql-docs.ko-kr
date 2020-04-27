@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9abaf092d00a8acaf6c0b3ef963c940199068ce9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082709"
 ---
 # <a name="view-and-save-the-results-of-a-prediction-query"></a>예측 쿼리 결과 보기 및 저장
@@ -29,8 +29,7 @@ ms.locfileid: "66082709"
   
 ### <a name="run-a-query-and-view-the-results"></a>쿼리 실행 및 결과 확인  
   
-1.  
-  **의 데이터 마이닝 디자이너에 있는** 마이닝 모델 예측 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭의 도구 모음에서 **결과** 를 클릭합니다.  
+1.  **의 데이터 마이닝 디자이너에 있는** 마이닝 모델 예측 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭의 도구 모음에서 **결과** 를 클릭합니다.  
   
      쿼리 결과 보기가 열리고 쿼리가 실행됩니다. 쿼리 결과가 뷰어에 표로 표시됩니다.  
   
@@ -38,14 +37,11 @@ ms.locfileid: "66082709"
   
 1.  데이터 마이닝 디자이너에 있는 **마이닝 모델 예측** 탭의 도구 모음에서 **쿼리 결과 저장**을 클릭합니다.  
   
-     
-  **데이터 마이닝 쿼리 결과 저장** 대화 상자가 열립니다.  
+     **데이터 마이닝 쿼리 결과 저장** 대화 상자가 열립니다.  
   
-2.  
-  **데이터 원본** 목록에서 데이터 원본을 선택하거나 **새로 만들기** 를 클릭하여 새 데이터 원본을 만듭니다.  
+2.  **데이터 원본** 목록에서 데이터 원본을 선택하거나 **새로 만들기** 를 클릭하여 새 데이터 원본을 만듭니다.  
   
-3.  
-  **테이블 이름** 입력란에 테이블 이름을 입력합니다. 이미 테이블이 있을 경우 테이블 내용을 쿼리 결과로 바꾸려면 **기존 항목 덮어쓰기** 를 선택합니다. 테이블 내용을 덮어쓰지 않으려면 이 확인란을 선택하지 마십시오. 그러면 테이블의 기존 데이터에 새 쿼리 결과가 추가됩니다.  
+3.  **테이블 이름** 입력란에 테이블 이름을 입력합니다. 이미 테이블이 있을 경우 테이블 내용을 쿼리 결과로 바꾸려면 **기존 항목 덮어쓰기** 를 선택합니다. 테이블 내용을 덮어쓰지 않으려면 이 확인란을 선택하지 마십시오. 그러면 테이블의 기존 데이터에 새 쿼리 결과가 추가됩니다.  
   
 4.  데이터 원본 뷰에 테이블을 추가하려면 **DSV에 추가** 에서 데이터 원본 뷰를 선택합니다.  
   

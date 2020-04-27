@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc810f56d552fa17cb027598a25bde114a696375
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084795"
 ---
 # <a name="data-types-data-mining"></a>데이터 형식(데이터 마이닝)
@@ -28,8 +28,7 @@ ms.locfileid: "66084795"
   
  예를 들어 열에 숫자 데이터가 있는 경우 해당 데이터를 숫자 데이터 형식 또는 텍스트 데이터 형식으로 처리하도록 선택할 수 있습니다. 숫자 데이터 형식을 선택하는 경우 여러 개의 서로 다른 내용 유형을 설정할 수 있습니다. 즉, 숫자를 분할하거나 숫자를 연속 값으로 처리할 수 있습니다. 모든 콘텐츠 형식의 목록을 보려면 [콘텐츠 형식&#40;데이터 마이닝&#41;](content-types-data-mining.md)을 참조하세요.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 마이닝 구조 열에 대해 다음과 같은 데이터 형식을 지원합니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 마이닝 구조 열에 대해 다음과 같은 데이터 형식을 지원합니다.  
   
 |데이터 형식|지원하는 내용 유형|  
 |---------------|-----------------------------|  

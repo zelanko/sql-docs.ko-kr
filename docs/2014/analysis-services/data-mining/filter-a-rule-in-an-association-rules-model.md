@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b63a6d6da0cb1d489ecac418e2682590ea2164e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084406"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>연결 규칙 모델에서 규칙 필터링
@@ -31,30 +31,21 @@ ms.locfileid: "66084406"
   
 ### <a name="filter-a-rule-in-an-association-model"></a>연결 모델에서 규칙 필터링  
   
-1.  
-  **연결 규칙 뷰어**를 사용하여 마이닝 모델을 엽니다. SQL Server Management Studio에서 마이닝 모델을 열려면 모델 이름을 마우스 오른쪽 단추로 클릭하고 **찾아보기**를 선택합니다. 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 마이닝 모델을 열려면 모델이 들어 있는 마이닝 구조를 두 번 클릭한 다음 **데이터 마이닝 디자이너** 의 **마이닝 모델 뷰어**탭을 클릭합니다.  
+1.  **연결 규칙 뷰어**를 사용하여 마이닝 모델을 엽니다. SQL Server Management Studio에서 마이닝 모델을 열려면 모델 이름을 마우스 오른쪽 단추로 클릭하고 **찾아보기**를 선택합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 마이닝 모델을 열려면 모델이 들어 있는 마이닝 구조를 두 번 클릭한 다음 **데이터 마이닝 디자이너** 의 **마이닝 모델 뷰어**탭을 클릭합니다.  
   
-2.  
-  **연결 규칙 뷰어** 에서 **규칙**탭을 클릭합니다.  
+2.  **연결 규칙 뷰어** 에서 **규칙**탭을 클릭합니다.  
   
-3.  
-  **규칙 필터** 상자에 규칙 조건을 입력합니다. 예를 들어 "Bike Stand"와 같은 규칙 조건을 입력합니다. 이 규칙 조건은 "Bike Stands"도 반환합니다.  
+3.  **규칙 필터** 상자에 규칙 조건을 입력합니다. 예를 들어 "Bike Stand"와 같은 규칙 조건을 입력합니다. 이 규칙 조건은 "Bike Stands"도 반환합니다.  
   
-     
-  **규칙 필터** 입력란에는 .NET 언어에서 정의하는 정규식을 입력할 수 있습니다. 따라서 `((.Helmets.*Fenders.*)|(.*Fenders.*Helmets.*))`와 같은 식을 사용할 수 있습니다. 이 식은 순서에 관계없이 Helmets와 Fenders라는 단어가 있는 특성이 포함된 모든 항목 집합을 반환합니다.  
+     **규칙 필터** 입력란에는 .NET 언어에서 정의하는 정규식을 입력할 수 있습니다. 따라서 `((.Helmets.*Fenders.*)|(.*Fenders.*Helmets.*))`와 같은 식을 사용할 수 있습니다. 이 식은 순서에 관계없이 Helmets와 Fenders라는 단어가 있는 특성이 포함된 모든 항목 집합을 반환합니다.  
   
-4.  
-  **최소 확률**에서 결과 규칙 수를 줄이려면 확률 값을 늘리고 결과 규칙 수를 늘리려면 확률 값을 줄입니다.  
+4.  **최소 확률**에서 결과 규칙 수를 줄이려면 확률 값을 늘리고 결과 규칙 수를 늘리려면 확률 값을 줄입니다.  
   
-5.  
-  **최소 중요도**에서 결과 규칙 수를 줄이려면 중요도 값을 늘리고 결과 규칙 수를 늘리려면 중요도 값을 줄입니다.  
+5.  **최소 중요도**에서 결과 규칙 수를 줄이려면 중요도 값을 늘리고 결과 규칙 수를 늘리려면 중요도 값을 줄입니다.  
   
-6.  
-  **표시**에서 **특성 이름 및 값 표시**, **특성 이름만 표시**또는 **특성 값만 표시**옵션 중 하나를 선택합니다.  
+6.  **표시**에서 **특성 이름 및 값 표시**, **특성 이름만 표시**또는 **특성 값만 표시**옵션 중 하나를 선택합니다.  
   
-7.  
-  **최대 행 수**에서 지정한 조건을 만족하는 총 규칙 수를 늘리려면 값을 늘리고 반환되는 규칙 수를 제한하려면 값을 줄입니다. 확률을 기준으로 규칙이 정렬되므로 확률 또는 중요도에 대해 지정한 조건을 만족하는 추가 규칙을 제거할 수도 있습니다.  
+7.  **최대 행 수**에서 지정한 조건을 만족하는 총 규칙 수를 늘리려면 값을 늘리고 반환되는 규칙 수를 제한하려면 값을 줄입니다. 확률을 기준으로 규칙이 정렬되므로 확률 또는 중요도에 대해 지정한 조건을 만족하는 추가 규칙을 제거할 수도 있습니다.  
   
 8.  규칙 이름의 표시 방법을 전환하려면 **긴 이름 표시** 확인란을 선택하거나 취소합니다.  
   
@@ -70,6 +61,6 @@ ms.locfileid: "66084406"
 ## <a name="see-also"></a>참고 항목  
  [마이닝 모델 뷰어 태스크 및 방법](mining-model-viewer-tasks-and-how-tos.md)   
  [Microsoft 연결 규칙 뷰어를 사용 하 여 모델 찾아보기](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [3 단원: 중급 데이터 마이닝 자습서 &#40;시장 바구니 시나리오 구축&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [3단원: 시장 바구니 시나리오 구축&#40;중급 데이터 마이닝 자습서&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

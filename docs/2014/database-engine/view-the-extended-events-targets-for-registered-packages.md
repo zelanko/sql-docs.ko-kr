@@ -15,14 +15,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ae927a281db54697bbda49e28a58ea4c6e60326a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088724"
 ---
 # <a name="view-the-extended-events-targets-for-registered-packages"></a>등록된 패키지의 확장 이벤트 대상 보기
-  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 확장 이벤트 세션을 만들기 전에 사용 가능한 확장 이벤트 대상을 확인하는 것이 좋습니다. 이 태스크를 수행하려면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에서 쿼리 편집기를 사용하여 다음 절차를 수행해야 합니다.  
   
  이 프로시저의 문이 끝나면 쿼리 편집기의 **결과** 탭에 다음 두 개의 열이 표시됩니다.  
@@ -45,7 +44,7 @@ ms.locfileid: "66088724"
     ```  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 확장 이벤트 대상](../../2014/database-engine/sql-server-extended-events-targets.md)   
+ [확장 이벤트 대상 SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [dm_xe_objects &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)   
  [sys.dm_xe_packages&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql)  
   

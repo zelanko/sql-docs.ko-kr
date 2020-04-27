@@ -13,16 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 952a47eaa2028819908ef7e93326c31a289a0cc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093978"
 ---
 # <a name="log-shipping-will-not-run-after-upgrading"></a>업그레이드한 후에 로그 전달이 실행되지 않습니다.
-  업그레이드 관리자가 로그 전달을 사용하고 있음을 발견했습니다. 
-  [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 로그 전달은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 로그 전달과 호환되지 않으므로 직접 업그레이드할 수 없습니다. 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드한 후 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 저장 프로시저를 사용하여 로그 전달을 다시 구성합니다.  
+  업그레이드 관리자가 로그 전달을 사용하고 있음을 발견했습니다. [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 로그 전달은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 로그 전달과 호환되지 않으므로 직접 업그레이드할 수 없습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드한 후 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 저장 프로시저를 사용하여 로그 전달을 다시 구성합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [로그 전달 작업 범주 SQL Server 에이전트 업그레이드 실패](../../../2014/sql-server/install/sql-server-agent-log-shipping-job-category-causes-upgrade-to-fail.md)   
