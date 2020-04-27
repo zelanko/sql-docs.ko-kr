@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 55da8efd6ee5b330e259ed78bdd152720403f310
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63186907"
 ---
 # <a name="diagnosticinformation-element-ssbdiagnose"></a>DiagnosticInformation 요소(ssbdiagnose)
@@ -41,12 +41,11 @@ ms.locfileid: "63186907"
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특성|Description|  
+|특성|설명|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|없음|  
 |**기본값**|없음|  
-|**발생 빈도**|
-  **ssbdiagnose** XML 출력 파일당 한 번|  
+|**내용과**|**ssbdiagnose** XML 출력 파일당 한 번|  
   
 ## <a name="element-relationships"></a>요소 관계  
   

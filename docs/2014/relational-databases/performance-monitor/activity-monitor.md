@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f2420a4df5b971ae2190b2a66f24b226f472fee2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63249335"
 ---
 # <a name="activity-monitor"></a>작업 모니터
@@ -25,8 +25,7 @@ ms.locfileid: "63249335"
 ## <a name="benefits-of-activity-monitor"></a>작업 모니터의 이점  
  작업 모니터는 **개요**, **활성 사용자 태스크**, **리소스 대기**, **데이터 파일 I/O**및 **비용이 드는 최근 쿼리**와 같은 확장 및 축소 가능한 창이 있는 탭 문서 창입니다. 창을 확장하면 작업 모니터는 인스턴스에서 정보를 쿼리합니다. 창을 축소하면 해당 창에 대한 모든 쿼리 작업이 중지됩니다. 또한 하나 이상의 창을 동시에 확장하여 인스턴스에 대한 여러 종류의 작업을 볼 수도 있습니다.  
   
- 
-  **활성 사용자 태스크**, **리소스 대기**, **데이터 파일 I/O**및 **비용이 드는 최근 쿼리** 창에 포함된 열의 경우 다음과 같은 방법으로 표시를 사용자 지정할 수 있습니다.  
+ **활성 사용자 태스크**, **리소스 대기**, **데이터 파일 I/O**및 **비용이 드는 최근 쿼리** 창에 포함된 열의 경우 다음과 같은 방법으로 표시를 사용자 지정할 수 있습니다.  
   
 1.  열 순서를 다시 정렬하려면 열 머리글을 클릭한 다음 머리글 리본의 다른 위치로 끕니다.  
   

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cccb676574fe4b767d567fbe48cdb887baddf8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63205061"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>FOR XML 쿼리와 중첩 FOR XML 쿼리 비교
@@ -118,8 +118,7 @@ FOR XML AUTO, TYPE
   
 -   내부 `FOR XML` 쿼리는 제품 하위 범주 정보를 검색합니다. `ELEMENTS` 지시어는 외부 쿼리에 의해 생성되는 XML에 추가된 요소 중심 XML을 생성하기 위해 내부 `FOR XML` 에 추가되어 있습니다. 기본적으로 외부 쿼리는 특성 중심 XML을 생성합니다.  
   
--   내부 쿼리에서 결과가 `TYPE` xml **유형이 되도록** 지시어를 지정합니다. 
-  `TYPE`을 지정하지 않으면 결과가 `nvarchar(max)` 유형으로 반환되고 XML 데이터는 엔터티로 반환됩니다.  
+-   내부 쿼리에서 결과가 `TYPE` xml **유형이 되도록** 지시어를 지정합니다. `TYPE`을 지정하지 않으면 결과가 `nvarchar(max)` 유형으로 반환되고 XML 데이터는 엔터티로 반환됩니다.  
   
 -   외부 쿼리도 `TYPE` 지시어를 지정합니다. 따라서 이 쿼리의 결과는 클라이언트에 **xml** 유형으로 반환됩니다.  
   

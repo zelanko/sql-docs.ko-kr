@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1b729c5652258deb0780ec129592e1a0f14217c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63195044"
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>쿼리 및 뷰 디자이너 열기(Visual Database Tools)
@@ -41,9 +41,7 @@ ms.locfileid: "63195044"
   
 1.  개체 탐색기에서 열려는 뷰를 마우스 오른쪽 단추로 클릭한 다음 **디자인** 또는 **뷰 열기**를 클릭합니다.  
   
-     
-  **디자인**을 선택한 경우 **옵션** 대화 상자에서 선택한 옵션에 따라 쿼리 및 뷰 디자이너 창이 열립니다. 
-  **뷰 열기**를 선택한 경우에는 기본적으로 결과 창만 열립니다.  
+     **디자인**을 선택한 경우 **옵션** 대화 상자에서 선택한 옵션에 따라 쿼리 및 뷰 디자이너 창이 열립니다. **뷰 열기**를 선택한 경우에는 기본적으로 결과 창만 열립니다.  
   
 ### <a name="to-open-the-query-and-view-designer-for-an-existing-query"></a>기존 쿼리에 대해 쿼리 및 뷰 디자이너를 열려면  
   

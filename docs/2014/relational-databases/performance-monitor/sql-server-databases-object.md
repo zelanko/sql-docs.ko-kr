@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b4c0c7a5626f3eb48509d7a4cfbf239f7cb931da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250648"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, Databases 개체
@@ -32,37 +32,36 @@ ms.locfileid: "63250648"
 |SQL Server Databases 카운터|Description|  
 |-----------------------------------|-----------------|  
 |**Active Transactions**|데이터베이스에 대한 활성 트랜잭션 수입니다.|  
-|**백업/복원 처리량/초**|데이터베이스 백업 및 복원 작업에 대한 초당 읽기/쓰기 처리량입니다. 예를 들어 백업 디바이스를 병렬로 추가해 사용하거나 속도가 더 빠른 디바이스를 사용할 때 데이터베이스 백업 성능이 어떻게 변하는지 측정할 수 있습니다. 데이터베이스 백업 및 복원 작업의 처리량으로 사용자의 백업 및 복원 작업의 진행 상태와 성능을 확인할 수 있습니다.|  
-|**대량 복사 행/초**|초당 대량 복사되는 행 수입니다.|  
-|**대량 복사 처리량/초**|초당 대량 복사되는 데이터 양(KB)입니다.|  
-|**커밋 테이블 항목**|데이터베이스의 커밋 테이블에 대한 메모리 내 부분의 크기입니다. 자세한 내용은 [sys.dm_tran_commit_table&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table)을 참조하세요.|  
-|**데이터 파일 크기 (KB)**|모든 자동 증가를 포함한 데이터베이스에 있는 모든 데이터 파일의 총 크기(KB)입니다. 이 카운터를 모니터링하면 **tempdb**의 크기 등을 확인할 때 유용합니다.|  
+|**Backup/Restore Throughput/sec**|데이터베이스 백업 및 복원 작업에 대한 초당 읽기/쓰기 처리량입니다. 예를 들어 백업 디바이스를 병렬로 추가해 사용하거나 속도가 더 빠른 디바이스를 사용할 때 데이터베이스 백업 성능이 어떻게 변하는지 측정할 수 있습니다. 데이터베이스 백업 및 복원 작업의 처리량으로 사용자의 백업 및 복원 작업의 진행 상태와 성능을 확인할 수 있습니다.|  
+|**Bulk Copy Rows/sec**|초당 대량 복사되는 행 수입니다.|  
+|**Bulk Copy Throughput/sec**|초당 대량 복사되는 데이터 양(KB)입니다.|  
+|**Commit table entries**|데이터베이스의 커밋 테이블에 대한 메모리 내 부분의 크기입니다. 자세한 내용은 [sys.dm_tran_commit_table&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table)을 참조하세요.|  
+|**Data File(s) Size (KB)**|모든 자동 증가를 포함한 데이터베이스에 있는 모든 데이터 파일의 총 크기(KB)입니다. 이 카운터를 모니터링하면 **tempdb**의 크기 등을 확인할 때 유용합니다.|  
 |**DBCC Logical Scan Bytes/sec**|DBCC(데이터베이스 콘솔 명령)의 초당 논리적 읽기 검색 바이트 수입니다.|  
-|**로그 캐시 적중률**|로그 캐시에서 충족된 로그 캐시 읽기 비율입니다.|  
-|**초당 로그 캐시 읽기**|로그 관리자 캐시를 통해 수행된 초당 읽기입니다.|  
-|**로그 파일 크기 (KB)**|데이터베이스에 있는 모든 트랜잭션 로그 파일의 총 크기(KB)입니다.|  
-|**사용 된 로그 파일 크기 (KB)**|데이터베이스에서 사용된 모든 로그 파일의 총 크기입니다.|  
-|**로그 플러시 대기 시간**|로그를 플러시하는 총 대기 시간(밀리초)입니다. AlwaysOn 보조 데이터베이스에서 이 값은 로그 레코드가 디스크에 확정될 때까지의 대기 시간을 나타냅니다.|  
-|**로그 플러시 대기/초**|로그 플러시를 기다리는 초당 커밋 수입니다.|  
-|**로그 플러시 쓰기 시간 (밀리초)**|마지막 1초 동안 완료된 로그 플러시의 쓰기를 수행하는 데 소요된 시간(밀리초)입니다.|  
-|**로그 플러시/초**|초당 로그 플러시 수입니다.|  
-|**로그 증가**|데이터베이스에 대한 트랜잭션 로그가 확장된 총 횟수입니다.|  
-|**로그 축소**|데이터베이스에 대한 트랜잭션 로그가 축소된 총 횟수입니다.|  
-|**로그 풀 캐시 누락/초**|로그 풀에서 로그 블록을 사용할 수 없었던 요청 수입니다. 
-  *로그 풀* 은 트랜잭션 로그의 메모리 내 캐시입니다. 이 캐시는 복구, 트랜잭션 복제, 롤백 및 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]용 로그 읽기를 최적화하는 데 사용됩니다.|  
-|**로그 풀 디스크 읽기/초**|논리 블록을 인출하기 위해 로그 풀에서 실행한 디스크 읽기 수입니다.|  
-|**로그 풀 요청/초**|로그 풀에서 처리된 로그 블록 요청 수입니다.|  
-|**로그 잘림**|트랜잭션 로그가 축소된 횟수입니다.|  
-|**사용 되는 로그 비율**|사용 중인 로그에 있는 공백의 비율입니다.|  
+|**Log Cache Hit Ratio**|로그 캐시에서 충족된 로그 캐시 읽기 비율입니다.|  
+|**Log Cache Reads/sec**|로그 관리자 캐시를 통해 수행된 초당 읽기입니다.|  
+|**Log File(s) Size (KB)**|데이터베이스에 있는 모든 트랜잭션 로그 파일의 총 크기(KB)입니다.|  
+|**Log File(s) Used Size (KB)**|데이터베이스에서 사용된 모든 로그 파일의 총 크기입니다.|  
+|**Log Flush Wait Time**|로그를 플러시하는 총 대기 시간(밀리초)입니다. AlwaysOn 보조 데이터베이스에서 이 값은 로그 레코드가 디스크에 확정될 때까지의 대기 시간을 나타냅니다.|  
+|**Log Flush Waits/sec**|로그 플러시를 기다리는 초당 커밋 수입니다.|  
+|**Log Flush Write Time (ms)**|마지막 1초 동안 완료된 로그 플러시의 쓰기를 수행하는 데 소요된 시간(밀리초)입니다.|  
+|**Log Flushes/sec**|초당 로그 플러시 수입니다.|  
+|**Log Growths**|데이터베이스에 대한 트랜잭션 로그가 확장된 총 횟수입니다.|  
+|**Log Shrinks**|데이터베이스에 대한 트랜잭션 로그가 축소된 총 횟수입니다.|  
+|**Log Pool Cache Misses/sec**|로그 풀에서 로그 블록을 사용할 수 없었던 요청 수입니다. *로그 풀* 은 트랜잭션 로그의 메모리 내 캐시입니다. 이 캐시는 복구, 트랜잭션 복제, 롤백 및 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]용 로그 읽기를 최적화하는 데 사용됩니다.|  
+|**Log Pool Disk Reads/sec**|논리 블록을 인출하기 위해 로그 풀에서 실행한 디스크 읽기 수입니다.|  
+|**Log Pool Requests/sec**|로그 풀에서 처리된 로그 블록 요청 수입니다.|  
+|**Log Truncations**|트랜잭션 로그가 축소된 횟수입니다.|  
+|**Percent Log Used**|사용 중인 로그에 있는 공백의 비율입니다.|  
 |**Repl. 보류 중인 개 트랜잭션**|복제하도록 표시되었지만 배포 데이터베이스에는 아직 배달되지 않은 게시 데이터베이스의 트랜잭션 로그에 있는 트랜잭션 수입니다.|  
 |**Repl. Trans. Rate**|게시 데이터베이스의 트랜잭션 로그에서 읽어서 배포 데이터베이스로 배달된 트랜잭션 수입니다.|  
-|**축소 데이터 이동 바이트/초**|자동 축소 작업이나 DBCC SHRINKDATABASE 또는 DBCC SHRINKFILE 문에 의해 이동된 초당 데이터 양입니다.|  
-|**추적 된 트랜잭션/초**|데이터베이스의 커밋 테이블에 기록된 커밋된 트랜잭션의 수입니다.|  
-|**트랜잭션/초**|데이터베이스에 대해 시작된 초당 트랜잭션 수입니다.<br /><br /> **트랜잭션/초** 는 XTP 전용 트랜잭션 (고유 하 게 컴파일된 저장 프로시저에 의해 시작 된 트랜잭션)을 계산 하지 않습니다.|  
-|**쓰기 트랜잭션/초**|마지막 1초 동안 데이터베이스에 쓰고 커밋된 트랜잭션 수입니다.|  
+|**Shrink Data Movement Bytes/sec**|자동 축소 작업이나 DBCC SHRINKDATABASE 또는 DBCC SHRINKFILE 문에 의해 이동된 초당 데이터 양입니다.|  
+|**Tracked transactions/sec**|데이터베이스의 커밋 테이블에 기록된 커밋된 트랜잭션의 수입니다.|  
+|**Transactions/sec**|데이터베이스에 대해 시작된 초당 트랜잭션 수입니다.<br /><br /> **Transactions/sec** 는 XTP 전용 트랜잭션(고유하게 컴파일된 저장 프로시저를 통해 시작된 트랜잭션)을 계산하지 않습니다.|  
+|**Write Transactions/sec**|마지막 1초 동안 데이터베이스에 쓰고 커밋된 트랜잭션 수입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [리소스 사용 모니터링&#40;시스템 모니터&#41;](monitor-resource-usage-system-monitor.md)   
- [SQL Serve, 데이터베이스 복제본](sql-server-database-replica.md)  
+ [시스템 모니터 &#40;리소스 사용량 모니터링&#41;](monitor-resource-usage-system-monitor.md)   
+ [SQL Server, 데이터베이스 복제본](sql-server-database-replica.md)  
   
   

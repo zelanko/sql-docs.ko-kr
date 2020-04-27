@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aec0ec20c9bd46a06560f5ce6ebd374e937f0343
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63193241"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>FOR XML에서 RAW 모드 사용
@@ -39,7 +39,7 @@ ms.locfileid: "63193241"
   
 -   [예제: ELEMENTS 지시어를 사용하여 XSINIL 지정](example-specifying-xsinil-with-the-elements-directive.md)  
   
--   [예: XMLDATA 및 XMLSCHEMA 옵션을 사용하여 결과로 스키마 요청](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
+-   [예제: XMLDATA 및 XMLSCHEMA 옵션을 사용하여 결과로 스키마 요청](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
 -   [예제: 이진 데이터 검색](example-retrieving-binary-data.md)  
   

@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a90937eafc531612968ac4248b329ba7a0a47d83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225516"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>SELECT 결과 집합 대량 복사(ODBC)
   이 예제에서는 대량 복사 함수를 사용하여 SELECT 문의 결과 집합을 대량 복사하는 방법을 보여 줍니다. 이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  
   
 > [!IMPORTANT]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지 해야 하는 경우에는 [Win32 CRYPTO API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용 하 여 자격 증명을 암호화 해야 합니다.  
   
 ### <a name="to-bulk-copy-out-the-result-set-of-a-select-statement"></a>SELECT 문의 결과 집합을 대량 복사하려면  
   
@@ -35,8 +35,7 @@ ms.locfileid: "63225516"
   
 3.  SQL Server에 연결합니다.  
   
-4.  
-  [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 를 호출하여 다음 정보를 설정합니다.  
+4.  [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 를 호출하여 다음 정보를 설정합니다.  
   
     -   *Sztable* 매개 변수에 대해 NULL을 지정 합니다.  
   
@@ -48,8 +47,7 @@ ms.locfileid: "63225516"
   
 5.  [Bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)를 호출 하 고 EOPTION을 BCPHINTS로 설정 하 고 IVALUE에 SELECT 문을 포함 하는 sql96array에 대 한 포인터를 놓습니다.  
   
-6.  
-  [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) 를 호출하여 대량 복사 작업을 실행합니다.  
+6.  [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) 를 호출하여 대량 복사 작업을 실행합니다.  
   
  이러한 단계를 사용하면 기본 형식으로 파일이 만들어집니다. [Bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)를 사용 하 여 데이터 값을 다른 데이터 형식으로 변환할 수 있습니다. 자세한 내용은 [ODBC&#41;&#40;대량 복사 서식 파일 만들기 ](create-a-bulk-copy-format-file-odbc.md)를 참조 하세요.  
   

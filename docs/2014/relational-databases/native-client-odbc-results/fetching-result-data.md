@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b803ca3742f9cb831e51105aab9d0ed75ad78e16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200077"
 ---
 # <a name="fetching-result-data"></a>결과 데이터 인출
@@ -42,7 +42,7 @@ ms.locfileid: "63200077"
   
  **SQLBindCol** 에서 ODBC 드라이버가 메모리를 할당 하기 때문에 **SQLBindCol** 를 과도 하 게 사용 하면 결과 집합 열을 프로그램 변수에 바인딩할 수 있습니다. 결과 열을 변수에 바인딩하는 경우 [Sqlfreehandle](../native-client-odbc-api/sqlfreehandle.md) 을 호출 하 여 문 핸들을 해제 하거나 *foption* 이 SQL_UNBIND로 설정 된 [SQLFreeStmt](../native-client-odbc-api/sqlfreestmt.md) 를 호출할 때까지 해당 바인딩은 적용 된 상태로 유지 됩니다. 바인딩은 문이 완료될 때 자동으로 취소되지 않습니다.  
   
- 이 논리를 이용해 서로 다른 매개 변수를 사용하는 동일 SELECT 문의 복수 실행을 효과적으로 처리할 수 있습니다. 결과 집합이 동일한 구조를 유지 하기 때문에 결과 집합을 한 번 바인딩하고, 모든 SELECT 문을 처리 한 다음, 마지막 실행 후 SQL_UNBIND으로 *Foption* 을 설정 하 여 **SQLFreeStmt** 를 호출할 수 있습니다. **SQLBindCol** SQL_UNBIND를 호출 하 여 SQLFreeStmt로 설정 된 *Foption* 이 있는 **** 를 먼저 호출 하지 않고 결과 집합의 열을 바인딩하려면 먼저 이전 바인딩을 해제 해야 합니다.  
+ 이 논리를 이용해 서로 다른 매개 변수를 사용하는 동일 SELECT 문의 복수 실행을 효과적으로 처리할 수 있습니다. 결과 집합이 동일한 구조를 유지 하기 때문에 결과 집합을 한 번 바인딩하고, 모든 SELECT 문을 처리 한 다음, 마지막 실행 후 SQL_UNBIND으로 *Foption* 을 설정 하 여 **SQLFreeStmt** 를 호출할 수 있습니다. **SQLBindCol** SQL_UNBIND를 호출 하 여 SQLFreeStmt로 설정 된 *Foption* 이 있는 **SQLFreeStmt** 를 먼저 호출 하지 않고 결과 집합의 열을 바인딩하려면 먼저 이전 바인딩을 해제 해야 합니다.  
   
  **SQLBindCol**를 사용 하는 경우 행 단위 또는 열 단위 바인딩을 수행할 수 있습니다. 행 단위 바인딩은 열 단위 바인딩보다 빠릅니다.  
   
@@ -50,8 +50,7 @@ ms.locfileid: "63200077"
   
  **SQLGetData**, **SQLBindCol**및 [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md)와 같이 프로그램 변수로 데이터를 이동 하거나 외부로 이동 하는 것을 처리 하는 ODBC 함수는 암시적 데이터 형식 변환을 지원 합니다. 예를 들어 애플리케이션이 정수 열을 문자열 프로그램 변수에 바인딩할 경우 드라이버는 해당 데이터를 자동으로 정수에서 문자로 변환한 후 이를 프로그램 변수에 전달합니다.  
   
- 애플리케이션에서의 데이터 변환은 최소화해야 합니다. 애플리케이션에서 수행하는 처리에 데이터 변환이 반드시 필요한 경우가 아니면 애플리케이션은 열과 매개 변수를 동일한 형식의 프로그램 변수에 바인딩해야 합니다. 데이터 형식 변환이 반드시 필요한 경우에는 애플리케이션에서가 아니라 드라이버가 변환을 수행하도록 하는 것이 효율적입니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 일반적으로 네트워크 버퍼에서 애플리케이션의 변수에 직접 데이터를 전달합니다. 데이터 변환을 수행하도록 드라이버에 요청하면 드라이버는 데이터를 버퍼링한 후 CPU 주기를 사용하여 데이터를 변환합니다.  
+ 애플리케이션에서의 데이터 변환은 최소화해야 합니다. 애플리케이션에서 수행하는 처리에 데이터 변환이 반드시 필요한 경우가 아니면 애플리케이션은 열과 매개 변수를 동일한 형식의 프로그램 변수에 바인딩해야 합니다. 데이터 형식 변환이 반드시 필요한 경우에는 애플리케이션에서가 아니라 드라이버가 변환을 수행하도록 하는 것이 효율적입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 일반적으로 네트워크 버퍼에서 애플리케이션의 변수에 직접 데이터를 전달합니다. 데이터 변환을 수행하도록 드라이버에 요청하면 드라이버는 데이터를 버퍼링한 후 CPU 주기를 사용하여 데이터를 변환합니다.  
   
  프로그램 변수는 **text**, **ntext**및 **image** 데이터를 제외 하 고 열에서 전송 된 데이터를 저장할 수 있을 만큼 커야 합니다. 애플리케이션이 결과 집합 데이터를 검색한 후 해당 데이터를 수용하기에 너무 작은 변수에 데이터를 삽입하려고 하면 드라이버가 경고를 생성합니다. 이 경우 드라이버는 메시지에 사용할 메모리를 할당하게 되고 드라이버와 애플리케이션 모두 메시지 및 오류 처리를 위해 CPU 주기를 사용해야 합니다. 애플리케이션은 검색된 데이터를 수용할 수 있을 만큼 큰 변수를 할당하거나 SELECT 목록에서 SUBSTRING 함수를 사용하여 결과 집합의 열 크기를 줄여야 합니다.  
   

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a942136314702d5fe87c1997f20dcb19a74df13d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63184412"
 ---
 # <a name="sequence-numbers"></a>시퀀스 번호
@@ -54,7 +54,7 @@ ms.locfileid: "63184412"
   
  시퀀스 개체는 정의에 따라 번호를 생성하지만 어떻게 사용되는지는 제어하지 않습니다. 트랜잭션이 롤백되거나, 시퀀스 개체를 여러 테이블에서 공유하거나, 테이블에서 사용하지 않고 시퀀스 번호를 할당하는 경우 테이블에 삽입된 시퀀스 번호에 간격이 있을 수 있습니다. CACHE 옵션을 사용하여 만들 경우 전원 오류와 같은 예기치 않은 종료로 인해 캐시의 시퀀스 번호가 손실될 수 있습니다.  
   
- 하나의 `NEXT VALUE FOR` 문 내에 동일한 시퀀스 생성기를 지정하는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 함수 인스턴스가 여러 개 있는 경우 모든 인스턴스에서 해당 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문으로 처리되는 지정된 행에 대해 동일한 값을 반환합니다. 이 동작은 ANSI 표준을 따릅니다.  
+ 하나의 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문 내에 동일한 시퀀스 생성기를 지정하는 `NEXT VALUE FOR` 함수 인스턴스가 여러 개 있는 경우 모든 인스턴스에서 해당 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문으로 처리되는 지정된 행에 대해 동일한 값을 반환합니다. 이 동작은 ANSI 표준을 따릅니다.  
   
 ## <a name="typical-use"></a>일반적인 용도  
  -2,147,483,648에서 2,147,483,647까지 1씩 증가하는 정수 시퀀스 번호를 만들려면 다음 문을 사용합니다.  
@@ -387,14 +387,14 @@ GO
   
 ```  
   
- [!INCLUDE[tsql](../../../includes/tsql-md.md)]를 사용하는 `SELECT *` 문은 새 열을 첫 번째 열이 아니라 마지막 열로 받습니다. 이렇게 되지 않도록 하려면 완전히 새로운 테이블을 만들고 데이터를 이 테이블로 이동한 다음 새 테이블에서 사용 권한을 다시 만들어야 합니다.  
+ `SELECT *`를 사용하는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은 새 열을 첫 번째 열이 아니라 마지막 열로 받습니다. 이렇게 되지 않도록 하려면 완전히 새로운 테이블을 만들고 데이터를 이 테이블로 이동한 다음 새 테이블에서 사용 권한을 다시 만들어야 합니다.  
   
 ## <a name="related-content"></a>관련 내용  
  [CREATE SEQUENCE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-sequence-transact-sql)  
   
  [ALTER SEQUENCE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-sequence-transact-sql)  
   
- [DROP SEQUENCE&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-sequence-transact-sql)  
+ [DROP SEQUENCE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-sequence-transact-sql)  
   
  [IDENTITY&#40;속성&#41;&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)  
   

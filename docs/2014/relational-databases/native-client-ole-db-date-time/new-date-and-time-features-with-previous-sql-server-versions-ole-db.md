@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc810ced25733ce77d80c7bec38b03e3aaf3753a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63233073"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>이전 SQL Server 버전 관련 새로운 날짜 및 시간 기능(OLE DB)
@@ -31,7 +31,7 @@ ms.locfileid: "63233073"
   
 |OLE DB 클라이언트 형식|SQL Server 2005 형식|SQL Server 2008(또는 이후 버전) 형식|결과 변환(서버에서 클라이언트로)|매개 변수 변환(클라이언트에서 서버로)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|DateTime|Date|확인|확인|  
+|DBTYPE_DBDATE|DateTime|날짜|확인|확인|  
 |DBTYPE_DBTIMESTAMP|||시간 필드가 0으로 설정됩니다.|시간 필드가 0이 아닌 경우 문자열 잘림이 발생 하 여 IRowsetChange가 실패 합니다.|  
 |DBTYPE_DBTIME||Time(0)|확인|확인|  
 |DBTYPE_DBTIMESTAMP|||날짜 필드가 현재 날짜로 설정됩니다.|소수 자릿수 초가 0이 아닌 경우 문자열 잘림이 발생 하 여 IRowsetChange가 실패 합니다.<br /><br /> 날짜는 무시됩니다.|  
@@ -39,7 +39,7 @@ ms.locfileid: "63233073"
 |DBTYPE_DBTIMESTAMP|||실패-시간 리터럴이 잘못 되었습니다.|확인|  
 |DBTYPE_DBTIMESTAMP||Datetime2 (3)|확인|확인|  
 |DBTYPE_DBTIMESTAMP||Datetime2 (7)|확인|확인|  
-|DBTYPE_DBDATE|Smalldatetime|Date|확인|확인|  
+|DBTYPE_DBDATE|Smalldatetime|날짜|확인|확인|  
 |DBTYPE_DBTIMESTAMP|||시간 필드가 0으로 설정됩니다.|시간 필드가 0이 아닌 경우 문자열 잘림 때문에 IRowsetChange가 실패 합니다.|  
 |DBTYPE_DBTIME||Time(0)|확인|확인|  
 |DBTYPE_DBTIMESTAMP|||날짜 필드가 현재 날짜로 설정됩니다.|소수 자릿수 초가 0이 아닌 경우 문자열 잘림이 발생 하 여 IRowsetChange가 실패 합니다.<br /><br /> 날짜는 무시됩니다.|  
@@ -55,7 +55,7 @@ ms.locfileid: "63233073"
   
 -   날짜 및 `datetime2` 시간에 대 한 기본 데이터 형식 이므로로 전환 합니다.  
   
- ICommandWithParameters:: GetParameterInfo 또는 스키마 행 집합을 통해 얻은 서버 메타 데이터를 사용 하 여 ICommandWithParameters:: SetParameterInfo를 통해 매개 변수 형식 정보를 설정 하는 응용 프로그램은 문자열이 원본 형식의 표현이 대상 형식의 문자열 표현 보다 큽니다. 예를 들어 클라이언트 바인딩에서 DBTYPE_DBTIMESTAMP를 사용 하 고 서버 열이 날짜인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client는 값을 "yyyy-mm-dd-mm hh: mm: ss"로 변환 하지만 서버 메타 데이터는로 `nvarchar(10)`반환 됩니다. 결과 오버플로는 DBSTATUS_E_CATCONVERTVALUE를 유발합니다. 행 집합 메타 데이터는 결과 집합 메타 데이터에서 설정 되므로 IRowsetChange으로 데이터를 변환 하는 경우에도 유사한 문제가 발생 합니다.  
+ ICommandWithParameters:: GetParameterInfo 또는 스키마 행 집합을 통해 얻은 서버 메타 데이터를 사용 하 여 ICommandWithParameters:: SetParameterInfo를 통해 매개 변수 형식 정보를 설정 하는 응용 프로그램은 원본 형식의 문자열 표현이 대상 형식의 문자열 표현 보다 큰 클라이언트를 변환 하는 동안 실패 합니다. 예를 들어 클라이언트 바인딩에서 DBTYPE_DBTIMESTAMP를 사용 하 고 서버 열이 날짜인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client는 값을 "yyyy-mm-dd-mm hh: mm: ss"로 변환 하지만 서버 메타 데이터는로 `nvarchar(10)`반환 됩니다. 결과 오버플로는 DBSTATUS_E_CATCONVERTVALUE를 유발합니다. 행 집합 메타 데이터는 결과 집합 메타 데이터에서 설정 되므로 IRowsetChange으로 데이터를 변환 하는 경우에도 유사한 문제가 발생 합니다.  
   
 ### <a name="parameter-and-rowset-metadata"></a>매개 변수 및 행 집합 메타데이터  
  이 섹션에서는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용 하 여 컴파일된 클라이언트의 매개 변수, 결과 열 및 스키마 행 집합에 대 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]한 메타 데이터에 대해 설명 합니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "63233073"
 #### <a name="columnsinfogetcolumninfo"></a>ColumnsInfo::GetColumnInfo  
  DBCOLUMNINFO 구조는 다음 정보를 반환합니다.  
   
-|매개 변수 형식|wType|ulColumnSize|bPrecision|bScale|  
+|매개 변수 유형|wType|ulColumnSize|bPrecision|bScale|  
 |--------------------|-----------|------------------|----------------|------------|  
 |date|DBTYPE_WSTR|10|~0|~0|  
 |time(1..7)|DBTYPE_WSTR|8, 10..16|~0|~0|  
@@ -166,6 +166,6 @@ ms.locfileid: "63233073"
  새 날짜/시간 형식은 날짜/시간 형식이 아니라 문자열 형식으로 표시되기 때문에 이러한 형식에 대해서는 모든 비교 연산자를 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [OLE DB &#40;날짜 및 시간 기능 향상&#41;](date-and-time-improvements-ole-db.md)  
+ [날짜 및 시간 기능 향상&#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

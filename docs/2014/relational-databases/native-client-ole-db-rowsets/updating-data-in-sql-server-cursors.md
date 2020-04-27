@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5c0b188d8fd45c1177cab77501bdf80fc550987
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63242915"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>SQL Server 커서의 데이터 업데이트
@@ -34,11 +34,11 @@ ms.locfileid: "63242915"
 ## <a name="immediate-and-delayed-update-modes"></a>즉시 및 지연 업데이트 모드  
  즉시 업데이트 모드에서는 **IRowsetChange::SetData**를 호출할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 왕복이 발생합니다. 소비자가 단일 행을 여러 번 변경한 경우 **SetData**를 한 번 호출하여 모든 변경 내용을 전송하는 것이 효율적입니다.  
   
- 지연 업데이트 모드에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]IRowsetUpdate::Update*의 *cRows* 및 *rghRows** 매개 변수에 지정된 각 행에 대해 **로의 왕복이 수행됩니다.  
+ 지연 업데이트 모드에서는 **IRowsetUpdate::Update**의 *cRows* 및 *rghRows* 매개 변수에 지정된 각 행에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로의 왕복이 수행됩니다.  
   
  두 모드 모두 왕복은 행 집합에 대해 열려 있는 트랜잭션 개체가 없는 경우 고유한 트랜잭션을 나타냅니다.  
   
- **IRowsetUpdate:: Update**를 사용 하는 경우 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 표시 된 각 행을 처리 하려고 합니다. 모든 행에 대해 잘못 된 데이터, 길이 또는 상태 값 때문에 오류가 발생 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 처리를 중지 하지 않습니다. 업데이트에 참여하는 행은 모두 수정되거나 전혀 수정되지 않습니다. Native Client OLE DB 공급자가 DB_S_ERRORSOCCURRED ** 반환 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 경우 소비자는 반환 된 prgRowStatus 배열을 검사 하 여 특정 행에 대 한 실패를 확인 해야 합니다.  
+ **IRowsetUpdate:: Update**를 사용 하는 경우 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 표시 된 각 행을 처리 하려고 합니다. 모든 행에 대해 잘못 된 데이터, 길이 또는 상태 값 때문에 오류가 발생 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 처리를 중지 하지 않습니다. 업데이트에 참여하는 행은 모두 수정되거나 전혀 수정되지 않습니다. Native Client OLE DB 공급자가 DB_S_ERRORSOCCURRED *prgRowStatus* 반환 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 경우 소비자는 반환 된 prgRowStatus 배열을 검사 하 여 특정 행에 대 한 실패를 확인 해야 합니다.  
   
  소비자는 행이 특정한 순서로 처리된다고 가정해서는 안 됩니다. 소비자가 두 개 이상의 행에서 수정된 데이터를 순서대로 처리해야 하는 경우에는 애플리케이션 논리에서 이러한 순서를 설정하고 트랜잭션을 열어 여기에 프로세스를 넣어야 합니다.  
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa1b5f0cc1e4952523f53f02e219db42aa5b3c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238212"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>WebForms ReportViewer 컨트롤 사용
@@ -26,23 +26,19 @@ ms.locfileid: "63238212"
   
 1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 또는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]중 하나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 를 사용 하 여 새 ASP.NET 웹 사이트를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 만듭니다.  
   
-     \-디스크나  
+     \- 또는 -  
   
      기존 ASP.NET 웹 사이트를 열고 새 Web Form을 추가합니다.  
   
-2.  
-  **도구 모음** 창의 **AJAX 확장** 그룹에서 **ScriptManager** 컨트롤을 찾아 웹 폼의 디자인 화면으로 끌어옵니다.  
+2.  **도구 모음** 창의 **AJAX 확장** 그룹에서 **ScriptManager** 컨트롤을 찾아 웹 폼의 디자인 화면으로 끌어옵니다.  
   
-     
-  **도구 상자**가 보이지 않을 경우 **보기** 메뉴에서 **도구 상자**를 선택하여 액세스할 수 있습니다.  
+     **도구 상자**가 보이지 않을 경우 **보기** 메뉴에서 **도구 상자**를 선택하여 액세스할 수 있습니다.  
   
-3.  
-  **도구 모음**에서 **ReportViewer** 컨트롤을 찾아 **ScriptManager** 컨트롤 아래의 디자인 화면으로 끌어옵니다.  
+3.  **도구 모음**에서 **ReportViewer** 컨트롤을 찾아 **ScriptManager** 컨트롤 아래의 디자인 화면으로 끌어옵니다.  
   
      이름이 reportViewer1인 **ReportViewer** 컨트롤이 폼에 추가됩니다.  
   
- 컨트롤이 폼에 추가되면 **ReportViewer 태스크** 스마트 태그가 나타나 보고서를 선택하도록 알립니다. 보려는 보고서가 보고서 서버에 배포 된 경우 **보고서 선택** 드롭다운 목록에서 ** \<서버 보고서>** 옵션을 선택 합니다. ** \<서버 보고서>** 옵션이 선택 되 면 **보고서 서버 Url** 및 **보고서 경로**의 두 가지 추가 속성이 표시 됩니다. 
-  **보고서 서버 URL**은 보고서 서버에 대한 주소이고 **보고서 경로**는 렌더링하려는 보고서의 전체 경로입니다.  
+ 컨트롤이 폼에 추가되면 **ReportViewer 태스크** 스마트 태그가 나타나 보고서를 선택하도록 알립니다. 보려는 보고서가 보고서 서버에 배포 된 경우 **보고서 선택** 드롭다운 목록에서 ** \<서버 보고서>** 옵션을 선택 합니다. ** \<서버 보고서>** 옵션이 선택 되 면 **보고서 서버 Url** 및 **보고서 경로**의 두 가지 추가 속성이 표시 됩니다. **보고서 서버 URL**은 보고서 서버에 대한 주소이고 **보고서 경로**는 렌더링하려는 보고서의 전체 경로입니다.  
   
  로컬 모드로 보고서를 보려는 경우 **새 보고서 디자인** 옵션을 선택하여 보고서 디자이너를 시작하거나 기존 프로젝트에 속한 보고서를 선택합니다. 보고서를 선택한 후 ReportViewer 컨트롤의 **ReportPath** 속성에 보고서 RDLC 파일의 이름을 입력합니다. 이 속성이 **속성** 창의 **LocalReport** 노드 아래에 나타납니다.  
   
@@ -149,8 +145,7 @@ End Class
   
 1.  보고서를 추가할 웹 사이트를 엽니다.  
   
-2.  
-  **웹 사이트** 메뉴에서 **기존 항목 추가**를 선택합니다.  
+2.  **웹 사이트** 메뉴에서 **기존 항목 추가**를 선택합니다.  
   
 3.  AdventureWorks 보고서 예제 프로젝트가 설치된 위치를 찾습니다.  
   
@@ -162,7 +157,7 @@ End Class
   
 5.  솔루션 탐색기에서 Sales Order Detail.rdl 파일을 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 선택합니다. 보고서 이름을 **Sales Order Detail.rdlc**로 바꾸고 ENTER 키를 누릅니다.  
   
-     솔루션 탐색기가 보이지 않으면 **보기** 메뉴에서 솔루션 탐색기를 선택하여 열 수 있습니다.  
+     솔루션 탐색기 표시 되지 않으면 **보기** 메뉴에서 솔루션 탐색기를 선택 하 여 열 수 있습니다.  
   
  다음 코드 예에서는 판매 주문 데이터에 대한 데이터 세트을 만든 다음 Sales Order Detail 보고서를 로컬 모드에서 렌더링합니다.  
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 311285545abae9ae9f80b264204b88485aac71aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63205709"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>이전 버전에서 데이터베이스 다이어그램 업그레이드(Visual Database Tools)
@@ -40,6 +40,6 @@ ms.locfileid: "63205709"
   
 ## <a name="see-also"></a>참고 항목  
  [Visual Database Tools를 &#40;데이터베이스 다이어그램 소유권 이해&#41;](understand-database-diagram-ownership-visual-database-tools.md)   
- [Visual Database Tools를 &#40;데이터베이스 다이어그램 디자이너 설정&#41;](visual-database-tools.md)  
+ [데이터베이스 다이어그램 디자이너 설정&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

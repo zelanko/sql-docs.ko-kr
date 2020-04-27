@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33d44b48571839d9695893021f6cdc1c8bb63f06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204613"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>테이블에 있는 모든 행의 값 요약 또는 집계(Visual Database Tools)
@@ -51,7 +51,7 @@ FROM titles
   
 1.  집계하려는 테이블이 다이어그램 창에 표시되어 있어야 합니다.  
   
-2.  다이어그램 창의 배경을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 **그룹화 방법** 을 선택합니다. [쿼리 및 뷰 디자이너](query-and-view-designer-tools-visual-database-tools.md) 에서 **그룹화 방법** 열이 조건 창의 표에 추가됩니다.  
+2.  다이어그램 창의 배경을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 **그룹화 방법** 을 선택합니다. [쿼리 및 뷰 디자이너](query-and-view-designer-tools-visual-database-tools.md) 에서 **그룹화** 방법 열이 조건 창의 표에 추가 됩니다.  
   
 3.  집계하려는 열을 조건 창에 추가합니다. 열을 출력하도록 선택되어 있어야 합니다.  
   

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3a3f5a8214c2966b1958c3a4ea08edbee5af6a2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225481"
 ---
 # <a name="sql-server-native-client-support-for-localdb"></a>LocalDB에 대한 SQL Server Native Client 지원
@@ -29,11 +29,9 @@ ms.locfileid: "63225481"
   
  요약하자면, LocalDB를 통해 다음과 같은 기능을 수행할 수 있습니다.  
   
--   
-  `sqllocaldb.exe i`를 사용하여 기본 인스턴스의 이름을 확인할 수 있습니다.  
+-   `sqllocaldb.exe i`를 사용하여 기본 인스턴스의 이름을 확인할 수 있습니다.  
   
--   
-  `AttachDBFilename` 연결 문자열 키워드를 사용하여 서버가 연결해야 하는 데이터베이스 파일을 지정할 수 있습니다. 를 사용 `AttachDBFilename` **하는 경우 데이터베이스 연결 문자열** 키워드를 사용 하 여 데이터베이스 이름을 지정 하지 않으면 응용 프로그램이 닫힐 때 LocalDB 인스턴스에서 데이터베이스가 제거 됩니다.  
+-   `AttachDBFilename` 연결 문자열 키워드를 사용하여 서버가 연결해야 하는 데이터베이스 파일을 지정할 수 있습니다. 를 사용 `AttachDBFilename` **하는 경우 데이터베이스 연결 문자열** 키워드를 사용 하 여 데이터베이스 이름을 지정 하지 않으면 응용 프로그램이 닫힐 때 LocalDB 인스턴스에서 데이터베이스가 제거 됩니다.  
   
 -   연결 문자열에 LocalDB 인스턴스를 지정합니다.  
   

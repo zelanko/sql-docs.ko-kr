@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6056a5136d8aceab338a18b32ecfac35a1af0364
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204702"
 ---
 # <a name="understand-database-diagram-ownership-visual-database-tools"></a>데이터베이스 다이어그램 소유권 이해(Visual Database Tools)
-  데이터베이스 다이어그램 디자이너를 사용하려면 먼저 db_owner 역할([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 역할)의 멤버로 설정하여 다이어그램에 대한 액세스를 제어해야 합니다. 각 다이어그램에는 반드시 한 명의 소유자(다이어그램을 만든 사용자)가 있어야 합니다. 다이어그램 설정에 대 한 자세한 내용은 [Visual Database Tools&#41;&#40;데이터베이스 다이어그램 디자이너 설정 ](visual-database-tools.md)을 참조 하세요.  
+  데이터베이스 다이어그램 디자이너를 사용하려면 먼저 db_owner 역할( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 역할)의 멤버로 설정하여 다이어그램에 대한 액세스를 제어해야 합니다. 각 다이어그램에는 반드시 한 명의 소유자(다이어그램을 만든 사용자)가 있어야 합니다. 다이어그램 설정에 대 한 자세한 내용은 [Visual Database Tools&#41;&#40;데이터베이스 다이어그램 디자이너 설정 ](visual-database-tools.md)을 참조 하세요.  
   
  다이어그램 소유권과 관련하여 유의할 점은 다음과 같습니다.  
   
@@ -36,6 +36,6 @@ ms.locfileid: "63204702"
   
 ## <a name="see-also"></a>참고 항목  
  [Visual Database Tools를 &#40;데이터베이스 다이어그램 작업&#41;](work-with-database-diagrams-visual-database-tools.md)   
- [Visual Database Tools를 &#40;데이터베이스 다이어그램 디자이너 설정&#41;](visual-database-tools.md)  
+ [데이터베이스 다이어그램 디자이너 설정&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

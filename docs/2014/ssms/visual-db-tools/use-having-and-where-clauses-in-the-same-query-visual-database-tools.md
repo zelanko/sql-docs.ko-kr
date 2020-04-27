@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f7aafcd72eff1d21dfe02c8957496398d327cf38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204633"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>동일한 쿼리에서 HAVING 및 WHERE 절 사용(Visual Database Tools)
@@ -61,8 +61,7 @@ HAVING AVG(price) > 10
   
 3.  데이터 열이 GROUP BY 절의 일부가 아니거나 집계 함수에 포함되지 않은 경우 **출력** 열을 지웁니다.  
   
-4.  
-  **필터** 열에서 WHERE 조건을 지정합니다. 쿼리 및 뷰 디자이너에서 SQL 문의 HAVING 절에 조건을 추가합니다.  
+4.  **필터** 열에서 WHERE 조건을 지정합니다. 쿼리 및 뷰 디자이너에서 SQL 문의 HAVING 절에 조건을 추가합니다.  
   
     > [!NOTE]  
     >  이 절차의 예제로 나와 있는 쿼리에서는 `titles` 테이블과 `publishers`테이블을 조인합니다.  
@@ -77,8 +76,7 @@ HAVING AVG(price) > 10
     HAVING publishers.state = 'CA'  
     ```  
   
-5.  
-  **그룹화 방법** 열의 그룹 및 요약 옵션 목록에서 **Where** 를 선택합니다. 쿼리 및 뷰 디자이너에서 SQL 문의 HAVING 절에 있던 조건이 제거되고 WHERE 절에 조건이 추가됩니다.  
+5.  **그룹화 방법** 열의 그룹 및 요약 옵션 목록에서 **Where** 를 선택합니다. 쿼리 및 뷰 디자이너에서 SQL 문의 HAVING 절에 있던 조건이 제거되고 WHERE 절에 조건이 추가됩니다.  
   
      다음과 같이 WHERE 절이 대신 포함되도록 SQL 문이 변경됩니다.  
   

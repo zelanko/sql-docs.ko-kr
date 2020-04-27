@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0b24a9c02e38ba8165e015cdf8d1b107e64cbaf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63193079"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>&lt;xsd:simpleType&gt; 선언의 값
@@ -36,7 +36,7 @@ ms.locfileid: "63193079"
 |`gMonth`|월 부분은 1에서 12 사이여야 합니다.|  
 |`decimal`|이 유형의 값은 SQL 숫자 유형에 대한 형식을 따라야 합니다. 이 유형은 내부적으로 10개 자릿수가 소수 자릿수에 사용되도록 예약된 총 38개 자릿수까지의 숫자에 대한 지원을 나타냅니다.|  
 |`float`|이 유형의 값은 SQL `real` 유형에 대한 형식을 따라야 합니다.|  
-|**차례로**|이 유형의 값은 SQL `float` 유형에 대한 형식을 따라야 합니다.|  
+|**double**|이 유형의 값은 SQL `float` 유형에 대한 형식을 따라야 합니다.|  
 |`string`|이 유형의 값은 SQL `nvarchar(max)` 유형에 대한 형식을 따라야 합니다.|  
 |`anyURI`|이 유형의 값은 길이가 4000자(유니코드)를 초과할 수 없습니다.|  
   

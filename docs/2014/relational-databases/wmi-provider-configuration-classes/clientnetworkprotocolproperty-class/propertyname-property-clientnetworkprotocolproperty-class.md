@@ -19,14 +19,13 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bcbe0d14d95d7ba003969a31b8a87d692edb7435
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63246023"
 ---
 # <a name="propertyname-property-clientnetworkprotocolproperty-class"></a>PropertyName 속성(ClientNetworkProtocolProperty 클래스)
-  
   [PropertyIdx 속성(ClientNetworkProtocolProperty 클래스)](clientnetworkprotocolproperty-class.md) 값에서 참조하는 현재 속성의 이름을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -38,9 +37,8 @@ object
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
- 
-  [클라이언트에서 사용하는 네트워크 프로토콜의 특성을 나타내는](clientnetworkprotocolproperty-class.md) ClientNetworkProtocolProperty 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개체입니다.  
+ *object*  
+ [클라이언트에서 사용하는 네트워크 프로토콜의 특성을 나타내는](clientnetworkprotocolproperty-class.md) ClientNetworkProtocolProperty 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  현재 속성의 이름을 지정하는 문자열 값입니다.  

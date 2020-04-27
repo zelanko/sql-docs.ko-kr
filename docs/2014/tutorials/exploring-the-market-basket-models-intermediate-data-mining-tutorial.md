@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63224605"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>시장 바구니 모델 탐색(중급 데이터 마이닝 자습서)
@@ -32,7 +32,7 @@ ms.locfileid: "63224605"
   
  이 자습서에서는 **종속성 네트워크** 탭에서 시작 하 고 **규칙** 탭 및 **항목 집합** 탭을 사용 하 여 뷰어에 표시 되는 관계에 대 한 이해를 활용 합니다. 또한 **Microsoft 일반 콘텐츠 트리 뷰어** 를 사용 하 여 개별 규칙 또는 항목 집합에 대 한 자세한 통계를 검색 합니다.  
   
-##  <a name="bkmk_DepNet"></a>종속성 네트워크 탭  
+##  <a name="dependency-network-tab"></a><a name="bkmk_DepNet"></a>종속성 네트워크 탭  
  **종속성 네트워크** 탭을 사용 하 여 모델의 여러 항목에 대 한 상호 작용을 조사할 수 있습니다. 뷰어의 각 노드는 항목을 나타내고 항목 사이의 선은 규칙을 나타냅니다. 노드를 선택하면 선택된 항목을 예측하는 다른 노드나 현재 항목이 예측하는 항목을 확인할 수 있습니다. 항목 간에 양방향 연결이 있는 경우(같은 트랜잭션에 자주 나타남)도 있습니다. 탭 아래쪽에 있는 색 범례를 참조하여 연결의 방향을 확인할 수 있습니다.  
   
  두 항목을 연결하는 선은 이러한 항목이 트랜잭션에 함께 나타날 가능성이 높음을 의미합니다. 즉, 고객이 이러한 항목을 함께 구매할 가능성이 높음을 의미합니다. 슬라이더는 규칙의 확률과 연결됩니다. 슬라이더를 위나 아래로 이동하여 필터로 약한 연결(확률이 낮은 규칙)을 제외할 수 있습니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "63224605"
   
  [맨 위로 이동](#bkmk_DepNet)  
   
-##  <a name="bkmk_Itemsets"></a>항목 집합 탭  
+##  <a name="itemsets-tab"></a><a name="bkmk_Itemsets"></a>항목 집합 탭  
  다음으로 Touring Tire 및 Touring Tire Tube 제품에 대한 모델로 생성된 규칙 및 항목 집합에 대해 좀 더 자세히 배웁니다. **항목 집합** 탭은 [!INCLUDE[msCoName](../includes/msconame-md.md)] 연결 알고리즘이 검색 하는 항목 집합와 관련 된 세 가지 중요 한 정보를 표시 합니다.  
   
 -   **지원:** 항목 집합이 발생 하는 트랜잭션 수입니다.  
@@ -134,7 +134,7 @@ ms.locfileid: "63224605"
   
  [맨 위로 이동](#bkmk_DepNet)  
   
-##  <a name="bkmk_Rules"></a>규칙 탭  
+##  <a name="rules-tab"></a><a name="bkmk_Rules"></a>규칙 탭  
  **규칙** 탭에는 알고리즘이 검색 하는 규칙과 관련 된 다음 정보가 표시 됩니다.  
   
 -   **확률:** 왼쪽 항목이 지정 된 경우 오른쪽 항목의 확률로 정의 되는 규칙의 *가능성* 입니다.  
@@ -171,7 +171,7 @@ ms.locfileid: "63224605"
   
  [맨 위로 이동](#bkmk_DepNet)  
   
-##  <a name="bkmk_ContentViewer"></a>일반 콘텐츠 트리 뷰어  
+##  <a name="generic-content-tree-viewer"></a><a name="bkmk_ContentViewer"></a>일반 콘텐츠 트리 뷰어  
  이 뷰어는 알고리즘이나 모델 유형에 관계없이 모든 모델에 사용할 수 있습니다. **Microsoft 일반 콘텐츠 트리 뷰어** 는 **뷰어** 드롭다운 목록에서 사용할 수 있습니다.  
   
  콘텐츠 트리는 마이닝 모델을 일련의 노드로 표시합니다. 여기서 각 노드는 데이터의 일부 하위 집합에 대해 배운 정보를 나타냅니다. 노드에는 패턴, 일련의 규칙, 클러스터 또는 일부 특징을 공유하는 날짜 범위의 정의가 포함될 수 있습니다. 노드의 정확한 콘텐츠는 예측 가능한 특성의 유형 및 알고리즘에 따라 다르지만 콘텐츠의 일반적인 표시는 동일합니다. 각 노드를 확장하여 세부 수준을 높이고 노드의 콘텐츠를 클립보드로 복사할 수 있습니다.  

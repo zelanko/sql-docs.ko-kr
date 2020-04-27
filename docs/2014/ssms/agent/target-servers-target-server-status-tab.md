@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0fc22cd7489294e8623596c1ce1e4f38c90706aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245723"
 ---
 # <a name="target-servers-target-server-status-tab"></a>대상 서버(대상 서버 상태 탭)
@@ -47,7 +47,7 @@ ms.locfileid: "63245723"
  **명령 게시**  
  선택한 대상 서버에 명령을 게시합니다.  
   
- **자동 새로 고침 사용**  
+ **자동 새로 고침 설정**  
  화면의 정보를 자동으로 새로 고치려면 이 옵션을 선택합니다.  
   
  **새로 고침 간격**  

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1bda0167e1e55c3ded715de96027a153ec5a65de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63231251"
 ---
 # <a name="use-the-binary-base64-option"></a>BINARY BASE64 옵션 사용
@@ -24,7 +24,7 @@ ms.locfileid: "63231251"
   
  쿼리를 지정할 때 뷰의 이진 열에 대해 별칭이 사용되는 경우 별칭은 이진 데이터의 URL 인코딩으로 반환됩니다. 후속 작업에서 별칭은 아무 의미도 없으며 URL 인코딩은 이미지를 검색하는 데 사용할 수 없습니다. 따라서 FOR XML AUTO 모드를 사용하여 뷰를 쿼리할 때는 별칭을 사용하지 않아야 합니다.  
   
- 예를 들어 SELECT 쿼리에서 모든 열에 BLOB에 대한 캐스트를 지정하면 임시 엔터티가 되어 관련 테이블 이름과 열 이름이 손실됩니다. 이것은 XML 계층 구조에서 이 값을 둘 위치를 알 수 없으므로, 이로 인해 AUTO 모드 쿼리에서 오류가 발생하게 됩니다. 다음은 그 예입니다.  
+ 예를 들어 SELECT 쿼리에서 모든 열에 BLOB에 대한 캐스트를 지정하면 임시 엔터티가 되어 관련 테이블 이름과 열 이름이 손실됩니다. 이것은 XML 계층 구조에서 이 값을 둘 위치를 알 수 없으므로, 이로 인해 AUTO 모드 쿼리에서 오류가 발생하게 됩니다. 예를 들어:  
   
 ```  
 CREATE TABLE MyTable (Col1 int PRIMARY KEY, Col2 binary)  

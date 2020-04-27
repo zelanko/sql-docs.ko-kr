@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db71e2ca03cbefdccf0bdf879fdb43d775125064
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63205270"
 ---
 # <a name="creating-a-sql-server-native-client-odbc-driver-application"></a>SQL Server Native Client ODBC 드라이버 애플리케이션 만들기
@@ -82,21 +82,17 @@ ms.locfileid: "63205270"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 드라이버별 열 특성입니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]별 데이터 형식  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]별 데이터 형식  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]별 사용자 정의 데이터 형식  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]별 사용자 정의 데이터 형식  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 드라이버별 [SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md) 형식입니다.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 드라이버 진단 필드입니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]별 진단 동적 함수 코드  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]별 진단 동적 함수 코드  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]별 네이티브 C 데이터 형식용 C/C++ 형식 정의(C 데이터 형식 SQL_C_BINARY에 열이 바인딩된 경우 반환됨)  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]별 네이티브 C 데이터 형식용 C/C++ 형식 정의(C 데이터 형식 SQL_C_BINARY에 열이 바인딩된 경우 반환됨)  
   
 -   SQLPERF 데이터 구조용 형식 정의  
   
@@ -104,8 +100,7 @@ ms.locfileid: "63205270"
   
 -   연결된 서버와 해당 카탈로그의 목록을 위해 분산 쿼리 메타데이터 API 함수 호출  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 드라이버의 대량 복사 기능을 사용 하는 모든 C 또는 c + + odbc 응용 프로그램은 sqlncli11 파일에 연결 되어야 합니다. 또한 분산 쿼리 메타데이터 API 함수를 호출하는 애플리케이션도 sqlncli11.lib 파일에 연결되어야 합니다. Sqlncli 및 sqlncli11 파일은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개발자 도구의 일부로 배포 됩니다. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Include 및 Lib 디렉터리는 다음과 같이 컴파일러의 INCLUDE 및 LIB 경로에 있습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 드라이버의 대량 복사 기능을 사용 하는 모든 C 또는 c + + odbc 응용 프로그램은 sqlncli11 파일에 연결 되어야 합니다. 또한 분산 쿼리 메타데이터 API 함수를 호출하는 애플리케이션도 sqlncli11.lib 파일에 연결되어야 합니다. Sqlncli 및 sqlncli11 파일은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개발자 도구의 일부로 배포 됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Include 및 Lib 디렉터리는 다음과 같이 컴파일러의 INCLUDE 및 LIB 경로에 있습니다.  
   
 ```  
 LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Lib;  
@@ -121,6 +116,6 @@ INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Micr
 -   [다중 스레드 애플리케이션](creating-a-driver-application-multithreaded-applications.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;SQL Server Native Client &#40;](sql-server-native-client-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)  
   
   

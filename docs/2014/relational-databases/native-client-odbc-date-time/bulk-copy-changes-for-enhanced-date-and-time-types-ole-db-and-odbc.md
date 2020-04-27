@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 855d0baf0b0b890b9343378f8060919979d5f206
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63207108"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>향상된 날짜 및 시간 형식에 대한 대량 복사 변경 사항(OLE DB 및 ODBC)
@@ -30,8 +30,8 @@ ms.locfileid: "63207108"
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |DateTime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
-|Date|SQLDATE|de|  
-|Time|SQLTIME|te|  
+|날짜|SQLDATE|de|  
+|시간|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
   
@@ -88,26 +88,26 @@ ms.locfileid: "63207108"
 |datetimeoffset(do)|11|TDS|  
   
 ## <a name="bcp-types-in-sqlnclih"></a>sqlncli.h의 BCP 형식  
- 다음 형식은 ODBC에 대한 BCP API 확장에 사용할 수 있도록 sqlncli.h에 정의됩니다. 이러한 형식은 OLE DB에서 IBCPSession:: BCPColFmt의 *Euserdatatype* 매개 변수와 함께 전달 됩니다.  
+ 다음 형식은 ODBC에 대한 BCP API 확장에 사용할 수 있도록 sqlncli.h에 정의됩니다. 이러한 형식은 OLE DB에서 IBCPSession::BCPColFmt의 *eUserDataType* 매개 변수와 함께 전달됩니다.  
   
 |파일 스토리지 유형|호스트 파일 데이터 형식|IBCPSession:: BCPColFmt에 사용할 sqlncli을 입력 합니다.|값|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |DateTime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
-|Date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
-|Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
+|날짜|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
+|시간|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
   
 ## <a name="bcp-data-type-conversions"></a>BCP 데이터 형식 변환  
  다음 표에서는 변환 정보를 보여 줍니다.  
   
- **OLE DB 참고** IBCPSession에 의해 수행 되는 변환은 다음과 같습니다. IRowsetFastLoad는 [클라이언트에서 서버로 수행](../native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)되는 변환에 정의 된 대로 OLE DB 변환을 사용 합니다. datetime 값은 1/300초로 반올림되며 smalldatetime 값은 아래에 설명된 클라이언트 변환이 수행된 후 0초로 설정됩니다. datetime 반올림은 시간 및 분까지만 전파되고 날짜에는 전파되지 않습니다.  
+ **OLE DB 참고 사항** 다음 변환은 IBCPSession에 의해 수행됩니다. IRowsetFastLoad는 [클라이언트에서 서버로 수행되는 변환](../native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)에 정의된 OLE DB 변환을 사용합니다. datetime 값은 1/300초로 반올림되며 smalldatetime 값은 아래에 설명된 클라이언트 변환이 수행된 후 0초로 설정됩니다. datetime 반올림은 시간 및 분까지만 전파되고 날짜에는 전파되지 않습니다.  
   
-|대상 --><br /><br /> 원본|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|char|wchar|  
+|대상 --><br /><br /> 시작|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|Date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
-|Time|해당 없음|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
+|날짜|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
+|시간|해당 없음|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
 |DateTime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10(ODBC)1,12(OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
@@ -124,7 +124,7 @@ ms.locfileid: "63207108"
 |-|변환이 지원되지 않습니다.<br /><br /> SQLSTATE 07006 및 "제한된 데이터 형식 특성을 위반했습니다."라는 메시지가 포함된 ODBC 진단 레코드가 생성됩니다.|  
 |1|제공된 데이터가 유효하지 않으면 SQLSTATE 22007 및 "잘못된 날짜 시간 형식입니다."라는 메시지가 포함된 ODBC 진단 레코드가 생성됩니다. datetimeoffset 값에서 시간 부분은 UTC 변환이 요청되지 않았더라도 UTC로 변환된 후의 범위 안에 포함되어야 합니다. 이는 TDS와 서버에서는 UTC에 맞게 datetimeoffset 값의 시간을 항상 정규화하기 때문입니다. 따라서 클라이언트에서는 UTC로의 변환 후 시간 구성 요소가 지원 범위에 포함되는지 확인해야 합니다.|  
 |2|시간 구성 요소가 무시됩니다.|  
-|3|ODBC의 경우 데이터 손실이 있는 잘림이 발생 하면 SQLSTATE 22001 및 메시지의 문자열 데이터를 사용 하 여 진단 레코드가 생성 되 고, 오른쪽으로 잘린 ' 소수 자릿수 초의 자릿수 (소수 자릿수)는 다음에 따라 대상 열의 크기에 따라 결정 됩니다. 다음 표 테이블의 범위보다 열 크기가 큰 경우 소수 자릿수가 7인 것으로 간주됩니다. 이 변환은 소수 자릿수 초의 자릿수를 ODBC에서 허용하는 최대값인 9자리까지 허용합니다.<br /><br /> **유형:** DBTIME2<br /><br /> **암시 된 소수 자릿수 0** 8<br /><br /> **암시 된 소수 자릿수 1 ... 7** 10, 16<br /><br /> <br /><br /> **유형:** DBTIMESTAMP<br /><br /> **암시 된 소수 자릿수 0:** 19<br /><br /> **암시 된 소수 자릿수 1 ... 7:** 21.27<br /><br /> <br /><br /> **유형:** DBTIMESTAMPOFFSET<br /><br /> **암시 된 소수 자릿수 0:** 26<br /><br /> **암시 된 소수 자릿수 1 ... 7:** 28.34<br /><br /> OLE DB의 경우 잘림을 수행하여 데이터 손실이 발생하면 오류가 게시됩니다. datetime2의 경우 소수 자릿수 초의 자릿수(소수 자릿수)는 다음 표를 기준으로 대상 열의 크기에 따라 결정됩니다. 테이블의 범위보다 열 크기가 큰 경우 소수 자릿수가 9인 것으로 간주됩니다. 이 변환은 소수 자릿수 초의 자릿수를 OLE DB에서 허용하는 최대값인 9자리까지 허용합니다.<br /><br /> **유형:** DBTIME2<br /><br /> **암시 된 소수 자릿수 0** 8<br /><br /> **암시 된 소수 자릿수 1.9** 1 ... 9<br /><br /> <br /><br /> **유형:** DBTIMESTAMP<br /><br /> **암시 된 소수 자릿수 0:** 19<br /><br /> **암시 된 소수 자릿수 1.9:** 21 ... 29<br /><br /> <br /><br /> **유형:** DBTIMESTAMPOFFSET<br /><br /> **암시 된 소수 자릿수 0:** 26<br /><br /> **암시 된 소수 자릿수 1.9:** 28 ... 36|  
+|3|ODBC의 경우 데이터 손실이 있는 잘림이 발생 하면 SQLSTATE 22001 및 메시지의 문자열 데이터를 사용 하 여 진단 레코드가 생성 되 고, 오른쪽이 잘린 경우 소수 자릿수 초의 자릿수 (소수 자릿수)는 다음 표에 따라 대상 열의 크기에 따라 결정 됩니다. 테이블의 범위보다 열 크기가 큰 경우 소수 자릿수가 7인 것으로 간주됩니다. 이 변환은 소수 자릿수 초의 자릿수를 ODBC에서 허용하는 최대값인 9자리까지 허용합니다.<br /><br /> **형식** : DBTIME2<br /><br /> **암시된 소수 자릿수 0** 8<br /><br /> **암시된 소수 자릿수 1..7** 10,16<br /><br /> <br /><br /> **형식** : DBTIMESTAMP<br /><br /> **암시된 소수 자릿수 0:** 19<br /><br /> **암시된 소수 자릿수 1..7:** 21..27<br /><br /> <br /><br /> **형식** : DBTIMESTAMPOFFSET<br /><br /> **암시된 소수 자릿수 0:** 26<br /><br /> **암시된 소수 자릿수 1..7:** 28..34<br /><br /> OLE DB의 경우 잘림을 수행하여 데이터 손실이 발생하면 오류가 게시됩니다. datetime2의 경우 소수 자릿수 초의 자릿수(소수 자릿수)는 다음 표를 기준으로 대상 열의 크기에 따라 결정됩니다. 테이블의 범위보다 열 크기가 큰 경우 소수 자릿수가 9인 것으로 간주됩니다. 이 변환은 소수 자릿수 초의 자릿수를 OLE DB에서 허용하는 최대값인 9자리까지 허용합니다.<br /><br /> **형식** : DBTIME2<br /><br /> **암시된 소수 자릿수 0** 8<br /><br /> **암시된 소수 자릿수 1..9** 1..9<br /><br /> <br /><br /> **형식** : DBTIMESTAMP<br /><br /> **암시된 소수 자릿수 0:** 19<br /><br /> **암시된 소수 자릿수 1..9:** 21..29<br /><br /> <br /><br /> **형식** : DBTIMESTAMPOFFSET<br /><br /> **암시된 소수 자릿수 0:** 26<br /><br /> **암시된 소수 자릿수 1..9:** 28..36|  
 |4|날짜 구성 요소가 무시됩니다.|  
 |5|표준 시간대가 UTC로 설정됩니다(예: 00:00).|  
 |6|시간이 0으로 설정됩니다.|  
@@ -138,6 +138,6 @@ ms.locfileid: "63207108"
   
 ## <a name="see-also"></a>참고 항목  
  [ODBC&#41;&#40;날짜 및 시간 기능 향상](date-and-time-improvements-odbc.md)   
- [OLE DB &#40;날짜 및 시간 기능 향상&#41;](../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [날짜 및 시간 기능 향상&#40;OLE DB&#41;](../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

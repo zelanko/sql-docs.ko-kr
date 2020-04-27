@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 755685601bb97f7e0b8980024df07e27967f3cd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63193070"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 데이터 형식 및 열(SQL Server)
@@ -57,8 +57,7 @@ ms.locfileid: "63193070"
 ## <a name="xml-storage-options"></a>XML 스토리지 옵션  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 XML 스토리지 옵션에는 다음이 포함됩니다.  
   
--   
-  `xml` 데이터 형식의 네이티브 스토리지  
+-   `xml` 데이터 형식의 네이티브 스토리지  
   
      데이터의 XML 내용을 보존하는 내부 표현으로 데이터가 저장됩니다. 이러한 내부 표현에는 포함 계층, 문서 순서, 요소 및 특성 값에 대한 정보가 포함됩니다. 특히 XML 데이터의 InfoSet 내용이 보존됩니다. InfoSet에 대한 자세한 내용을 보려면 [http://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843)를 방문하세요. InfoSet 내용은 다음 정보가 포함되지 않기 때문에 테스트 XML의 동일 복사본이 될 수 없습니다. 제외되는 정보는 중요하지 않은 공백, 특성 순서, 네임스페이스 접두사 및 XML 선언입니다.  
   
@@ -167,8 +166,7 @@ ms.locfileid: "63193070"
   
 -   **sql_variant** 인스턴스의 하위 유형으로 사용될 수 없습니다.  
   
--   
-  `text` 또는 `ntext`로의 캐스트 또는 변환을 지원하지 않습니다. 대신 `varchar(max)` 또는 `nvarchar(max)`를 사용합니다.  
+-   `text` 또는 `ntext`로의 캐스트 또는 변환을 지원하지 않습니다. 대신 `varchar(max)` 또는 `nvarchar(max)`를 사용합니다.  
   
 -   비교 또는 정렬할 수 없습니다. 즉, `xml` 데이터 형식은 GROUP BY 문에서 사용할 수 없습니다.  
   

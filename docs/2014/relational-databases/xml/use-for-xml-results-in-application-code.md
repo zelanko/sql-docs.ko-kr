@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63193336"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>애플리케이션 코드에서 FOR XML 결과 사용
@@ -201,8 +201,7 @@ ms.locfileid: "63193336"
   
  이 예에서는 다음 Microsoft .NET Framework 관리 API를 사용하여 FOR XML 쿼리 결과를 반환 및 렌더링합니다.  
   
-1.  
-  `SqlConnection`을 사용하여 지정된 연결 문자열 변수인 strConn의 내용에 따라 SQL Server에 대한 연결을 엽니다.  
+1.  `SqlConnection`을 사용하여 지정된 연결 문자열 변수인 strConn의 내용에 따라 SQL Server에 대한 연결을 엽니다.  
   
 2.  그런 다음 `SqlDataAdapter`를 데이터 어댑터로 사용하고 SQL 연결 및 지정된 SQL 쿼리 문자열을 사용하여 FOR XML 쿼리를 실행합니다.  
   

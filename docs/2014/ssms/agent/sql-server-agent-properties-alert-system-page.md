@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00e3643a1beb3f69f8b370715001317e536c42e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245748"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server 에이전트 속성(경고 시스템 페이지)
@@ -26,9 +26,8 @@ ms.locfileid: "63245748"
  **메일 세션**  
  이 섹션의 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 메일을 구성합니다.  
   
- **메일 프로필 사용**  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 메일을 설정합니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 메일은 설정되지 않습니다.  
+ **메일 프로필 설정**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 메일을 설정합니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 메일은 설정되지 않습니다.  
   
  **메일 시스템**  
  사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 메일 시스템을 설정합니다. 데이터베이스 메일  
@@ -45,7 +44,7 @@ ms.locfileid: "63245748"
  **호출기 전자 메일 주소 형식**  
  이 섹션에서는 호출기 전자 메일의 주소 형식과 전자 메일에 포함되는 제목 줄을 지정할 수 있습니다.  
   
- **대상 줄**  
+ **받는 사람 줄**  
  메시지의 **받는 사람** 줄에 대한 옵션을 지정합니다.  
   
  **접두사**  
@@ -54,7 +53,7 @@ ms.locfileid: "63245748"
  **호출기**  
  접두사와 접미사 사이에 메시지의 전자 메일 주소를 포함합니다.  
   
- **접미사**  
+ **접미어**  
  호출기로 전송되는 메시지의 **받는 사람** 줄 끝 부분에 표시되어야 할 고정 텍스트를 입력합니다.  
   
  **참조 줄**  
@@ -66,16 +65,16 @@ ms.locfileid: "63245748"
  **호출기**  
  접두사와 접미사 사이에 메시지의 전자 메일 주소를 포함합니다.  
   
- **접미사**  
+ **접미어**  
  호출기로 전송되는 메시지의 **참조** 줄 끝 부분에 표시되어야 할 고정 텍스트를 입력합니다.  
   
- **제목**  
+ **Subject**  
  메시지의 제목에 대한 옵션을 지정합니다.  
   
  **접두사**  
  호출기로 전송되는 메시지의 **제목** 줄 시작 부분에 표시되어야 할 고정 텍스트를 입력합니다.  
   
- **접미사**  
+ **접미어**  
  호출기로 전송되는 메시지의 **제목** 줄 끝 부분에 표시되어야 할 고정 텍스트를 입력합니다.  
   
  **알림 메시지에 전자 메일 본문 포함**  
@@ -84,13 +83,13 @@ ms.locfileid: "63245748"
  **유사 시 대기 운영자**  
  이 섹션에서는 유사 시 대기 운영자에 대한 옵션을 지정할 수 있습니다.  
   
- **유사 시 대기 운영자 사용**  
+ **유사 시 대기 운영자 설정**  
  유사 시 대기 운영자를 지정합니다.  
   
  **연산자**  
  유사 시 대기 알림을 받을 운영자의 이름을 설정합니다.  
   
- **알림 사용**  
+ **알림 방법**  
  유사 시 대기 운영자에게 알릴 때 사용할 방법을 설정합니다.  
   
  **토큰 바꾸기**  
@@ -101,9 +100,8 @@ ms.locfileid: "63245748"
 >   
 >  이러한 토큰을 사용해야 하는 경우 토큰을 설정하기 전에 Administrators 그룹과 같은 트러스트된 Windows 보안 그룹의 멤버만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 컴퓨터의 이벤트 로그에 대한 쓰기 권한을 가지도록 합니다.  
   
- **경고에 대 한 모든 응답 작업에 대 한 토큰 바꾸기**  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 경고로 활성화되는 작업에 대해 토큰 바꾸기를 설정하려면 이 확인란을 선택합니다.  
+ **경고에 대한 모든 응답 작업에 대해 토큰 바꾸기**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 경고로 활성화되는 작업에 대해 토큰 바꾸기를 설정하려면 이 확인란을 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [작업자](operators.md)   

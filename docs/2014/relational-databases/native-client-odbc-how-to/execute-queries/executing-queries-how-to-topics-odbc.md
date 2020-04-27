@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b892adaf02f13ec7de150ae1de9966a65ac1d7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200381"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>쿼리 실행 방법 도움말 항목(ODBC)
@@ -33,6 +33,6 @@ ms.locfileid: "63200381"
 -   [ODBC&#41;&#40;문을 준비 하 고 실행 합니다.](prepare-and-execute-a-statement-odbc.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC How-to Topics](../odbc-how-to-topics.md)  
+ [ODBC 방법 도움말 항목](../odbc-how-to-topics.md)  
   
   

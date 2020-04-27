@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63231286"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>FOR XML에서 EXPLICIT 모드 사용
-  [FOR xml을 사용 하 여 Xml 생성](../xml/for-xml-sql-server.md)항목에 설명 된 대로 RAW 및 AUTO 모드는 쿼리 결과에서 생성 되는 xml의 모양을 많이 제어 하지 않습니다. 하지만 EXPLICIT 모드에서는 쿼리 결과로 생성되는 XML의 모양을 좀 더 상세하게 조정할 수 있습니다.  
+  [FOR XML을 사용하는 XML 생성](../xml/for-xml-sql-server.md)항목에 설명된 것과 같이 RAW 및 AUTO 모드에서는 쿼리 결과로 생성되는 XML의 모양을 상세하게 조정할 수 없습니다. 하지만 EXPLICIT 모드에서는 쿼리 결과로 생성되는 XML의 모양을 좀 더 상세하게 조정할 수 있습니다.  
   
  XML에 예상되는 중첩과 같은 필수 XML에 대한 추가 정보는 쿼리의 일부로 명시적으로 지정하는 방식으로 EXPLICIT 모드 쿼리를 작성해야 합니다. 요청한 XML에 따라 EXPLICIT 모드 쿼리를 작성하는 작업은 복잡할 수 있습니다. EXPLICIT 모드 쿼리를 작성하는 것보다는 [PATH 모드 사용](../xml/use-path-mode-with-for-xml.md) 의 설명에 따라 중첩을 사용하는 것이 더 간단합니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63231286"
   
  쿼리에 의해 생성된 범용 열이 XML 결과를 생성하도록 처리되는 방법을 이해하려면 이 범용 테이블을 생성하는 쿼리를 작성했다고 가정해 보십시오.  
   
- ![예제 범용 테이블](../../database-engine/media/xmlutable.gif "예제 범용 테이블")  
+ ![샘플 범용 테이블](../../database-engine/media/xmlutable.gif "샘플 범용 테이블")  
   
  이 범용 테이블에 대해 다음 사항을 유의하십시오.  
   
@@ -53,11 +53,9 @@ ms.locfileid: "63231286"
   
     -   첫 번째 행에 있는 **Tag** 열 값 1에 대해 이름에 동일한 태그 번호 **Customer!1!cid** 및 **Customer!1!name**이 포함된 열은 하나의 그룹을 형성합니다. 이러한 열은 행을 처리하는 데 사용되며 생성된 요소의 모양은 <`Customer id=... name=...`>임을 알 수 있습니다. 열 이름 형식은 이 항목의 후반에 설명됩니다.  
   
-    -   
-  **Tag** 열 값이 2인 행에 대해 **Order!2!id** 및 **Order!2!date** 열은 이후에 <`Order id=... date=... /`> 요소를 생성하는 데 사용되는 그룹을 형성합니다.  
+    -   **Tag** 열 값이 2인 행에 대해 **Order!2!id** 및 **Order!2!date** 열은 이후에 <`Order id=... date=... /`> 요소를 생성하는 데 사용되는 그룹을 형성합니다.  
   
-    -   
-  **Tag** 열 값이 3인 행에 대해 **OrderDetail!3!id!id** 및 **OrderDetail!3!pid!idref** 열은 그룹을 형성합니다. 이러한 각 행은 이러한 열로부터 <`OrderDetail id=... pid=...`> 요소를 생성합니다.  
+    -   **Tag** 열 값이 3인 행에 대해 **OrderDetail!3!id!id** 및 **OrderDetail!3!pid!idref** 열은 그룹을 형성합니다. 이러한 각 행은 이러한 열로부터 <`OrderDetail id=... pid=...`> 요소를 생성합니다.  
   
 -   XML 계층을 생성할 때 행은 순서대로 처리됩니다. XML 계층은 다음과 같이 결정됩니다.  
   
@@ -121,42 +119,30 @@ ElementName!TagNumber!AttributeName!Directive
  *AttributeName*  
  지정된 *ElementName*을 생성하기 위해 특성 이름을 제공합니다. 이 동작은 *Directive* 가 지정되지 않은 경우의 동작입니다.  
   
- 
-  *Directive* 가 지정되어 있고 **xml**, **cdata**또는 **element**인 경우 이 값은 *ElementName*의 요소 자식을 생성하는 데 사용되고 열 값이 여기에 추가됩니다.  
+ *Directive* 가 지정되어 있고 **xml**, **cdata**또는 **element**인 경우 이 값은 *ElementName*의 요소 자식을 생성하는 데 사용되고 열 값이 여기에 추가됩니다.  
   
- 
-  *Directive*를 지정하면 *AttributeName* 을 비워 둘 수 있습니다. 예를 들면 ElementName!TagNumber!!Directive와 같습니다. 이 경우 열 값은 *ElementName*에 직접 포함됩니다.  
+ *Directive*를 지정하면 *AttributeName* 을 비워 둘 수 있습니다. 예를 들면 ElementName!TagNumber!!Directive와 같습니다. 이 경우 열 값은 *ElementName*에 직접 포함됩니다.  
   
- *지시문*  
- *지시어* 는 선택 사항이 며 XML 생성을 위한 추가 정보를 제공 하는 데 사용할 수 있습니다. *지시문* 은 두 가지 용도로 사용 됩니다.  
+ *Directive*  
+ *Directive* 는 선택 항목으로서 XML 생성을 위한 추가 정보를 제공하는 데 사용할 수 있습니다. *Directive* 에는 두 가지 용도가 있습니다.  
   
- 하나는 값을 ID, IDREF 및 IDREFS로 인코딩하는 것입니다. 
-  **ID**, **IDREF**및 **IDREFS** 키워드를 *Directive*로 지정할 수 있습니다. 이러한 지시어는 특성 유형을 덮어씁니다. 이렇게 하면 문서 간 연결을 만들 수 있습니다.  
+ 하나는 값을 ID, IDREF 및 IDREFS로 인코딩하는 것입니다. **ID**, **IDREF**및 **IDREFS** 키워드를 *Directive*로 지정할 수 있습니다. 이러한 지시어는 특성 유형을 덮어씁니다. 이렇게 하면 문서 간 연결을 만들 수 있습니다.  
   
- 또한 *Directive* 를 사용하여 문자열 데이터를 XML로 매핑하는 방법을 나타낼 수 있습니다. 
-  **hide**, **element, elementxsinil**, **xml**, **xmltext**및 **cdata** 키워드는 *Directive*로 사용될 수 있습니다. 
-  **hide** 지시어는 노드를 숨깁니다. 이 키워드는 정렬 목적으로만 값을 검색하고 결과 XML에는 표시되지 않도록 하려는 경우에 유용합니다.  
+ 또한 *Directive* 를 사용하여 문자열 데이터를 XML로 매핑하는 방법을 나타낼 수 있습니다. **hide**, **element, elementxsinil**, **xml**, **xmltext**및 **cdata** 키워드는 *Directive*로 사용될 수 있습니다. **hide** 지시어는 노드를 숨깁니다. 이 키워드는 정렬 목적으로만 값을 검색하고 결과 XML에는 표시되지 않도록 하려는 경우에 유용합니다.  
   
- 
-  **element** 지시어는 특성 대신 포함된 요소를 생성합니다. 포함된 데이터는 엔터티로 인코딩됩니다. 예를 들어, **<** 문자는 &lt;가 됩니다. NULL 열 값에 대해 경우 요소가 생성되지 않습니다. Null 열 값에 대해 요소를 생성하려면 **elementxsinil** 지시어를 지정합니다. 이렇게 하면 특성이 xsi:nil=TRUE인 요소가 생성됩니다.  
+ **element** 지시어는 특성 대신 포함된 요소를 생성합니다. 포함된 데이터는 엔터티로 인코딩됩니다. 예를 들어 **<** 문자는 &lt;가 됩니다. NULL 열 값에 대해 경우 요소가 생성되지 않습니다. Null 열 값에 대해 요소를 생성하려면 **elementxsinil** 지시어를 지정합니다. 이렇게 하면 특성이 xsi:nil=TRUE인 요소가 생성됩니다.  
   
- 
-  **xml** 지시어는 **element** 지시어와 비슷하지만 엔터티 인코딩이 발생하지 않는다는 점이 다릅니다. 
-  **element** 지시어는 **ID**, **IDREF**또는 **IDREFS**와 조합될 수 있지만 **xml** 지시어는 **hide**를 제외한 다른 지시어와는 조합될 수 없습니다.  
+ **xml** 지시어는 **element** 지시어와 비슷하지만 엔터티 인코딩이 발생하지 않는다는 점이 다릅니다. **element** 지시어는 **ID**, **IDREF**또는 **IDREFS**와 조합될 수 있지만 **xml** 지시어는 **hide**를 제외한 다른 지시어와는 조합될 수 없습니다.  
   
- 
-  **cdata** 지시어는 CDATA 섹션으로 데이터를 묶어서 포함시킵니다. 내용은 인코딩된 엔터티가 아닙니다. 원래 데이터 형식은 **varchar**, **nvarchar**, **text**또는 **ntext**와 같은 텍스트 유형이어야 합니다. 이 지시어와 함께 사용할 수 있는 것은 **hide**뿐입니다. 이 지시어를 사용할 때는 *AttributeName* 을 지정하지 말아야 합니다.  
+ **cdata** 지시어는 CDATA 섹션으로 데이터를 묶어서 포함시킵니다. 내용은 인코딩된 엔터티가 아닙니다. 원래 데이터 형식은 **varchar**, **nvarchar**, **text**또는 **ntext**와 같은 텍스트 유형이어야 합니다. 이 지시어와 함께 사용할 수 있는 것은 **hide**뿐입니다. 이 지시어를 사용할 때는 *AttributeName* 을 지정하지 말아야 합니다.  
   
  이러한 두 그룹 간 지시어 조합은 대부분의 경우 허용되지만 자체 그룹에서 지시어를 조합하는 것은 허용되지 않습니다.  
   
- 
-  *Customer!1* 과 같은 *Directive* 및 **AttributeName**이 지정되지 않은 경우 **Customer!1!!element** 와 같은 **element**지시어가 내포되고 열 데이터가 *ElementName*에 포함됩니다.  
+ *Customer!1* 과 같은 *Directive* 및 **AttributeName**이 지정되지 않은 경우 **Customer!1!!element** 와 같은 **element**지시어가 내포되고 열 데이터가 *ElementName*에 포함됩니다.  
   
- 
-  **xmltext** 지시어가 지정된 경우 열 내용은 문서의 나머지 부분에 통합된 단일 태그로 묶입니다. 이 지시어는 OPENXML에 의해 열에 저장된 사용되지 않은 오버플로 XML 데이터를 인출하는 데 유용합니다. 자세한 내용은 [OPENXML&#40;SQL Server&#41;](../xml/openxml-sql-server.md)을 참조하세요.  
+ **xmltext** 지시어가 지정된 경우 열 내용은 문서의 나머지 부분에 통합된 단일 태그로 묶입니다. 이 지시어는 OPENXML에 의해 열에 저장된 사용되지 않은 오버플로 XML 데이터를 인출하는 데 유용합니다. 자세한 내용은 [OPENXML&#40;SQL Server&#41;](../xml/openxml-sql-server.md)을 참조하세요.  
   
- 
-  *AttributeName* 이 지정된 경우 태그 이름이 지정된 이름으로 바뀝니다. 그렇지 않으면 엔터티 인코딩 없이 포함 내용의 시작 위치에 내용을 배치하여 묶는 요소의 현재 특성 목록에 특성이 포함됩니다. 이 지시어가 있는 열은 **varchar**, **nvarchar**, **char**, **nchar**, **text**또는 **ntext**와 같은 텍스트 유형이어야 합니다. 이 지시어와 함께 사용할 수 있는 것은 **hide**뿐입니다. 이 지시어는 열에 저장된 오버플로 데이터를 인출하는 데 유용합니다. 내용이 잘 작성된 XML이 아니면 동작이 정의되지 않습니다.  
+ *AttributeName* 이 지정된 경우 태그 이름이 지정된 이름으로 바뀝니다. 그렇지 않으면 엔터티 인코딩 없이 포함 내용의 시작 위치에 내용을 배치하여 묶는 요소의 현재 특성 목록에 특성이 포함됩니다. 이 지시어가 있는 열은 **varchar**, **nvarchar**, **char**, **nchar**, **text**또는 **ntext**와 같은 텍스트 유형이어야 합니다. 이 지시어와 함께 사용할 수 있는 것은 **hide**뿐입니다. 이 지시어는 열에 저장된 오버플로 데이터를 인출하는 데 유용합니다. 내용이 잘 작성된 XML이 아니면 동작이 정의되지 않습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  다음 예에서는 EXPLICIT 모드를 사용하는 방법을 보여 줍니다.  
@@ -179,7 +165,7 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [예제: CDATA 지시어 지정](../xml/example-specifying-the-cdata-directive.md)  
   
--   [예: XMLTEXT 지시어 지정](../xml/example-specifying-the-xmltext-directive.md)  
+-   [예제: XMLTEXT 지시어 지정](../xml/example-specifying-the-xmltext-directive.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [FOR XML에서 RAW 모드 사용](../xml/use-raw-mode-with-for-xml.md)   

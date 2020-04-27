@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3580f6365866ce752191e285b14f7d793be0cad0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204950"
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>여러 열에 여러 검색 조건 지정(Visual Database Tools)
@@ -37,13 +37,11 @@ ms.locfileid: "63204950"
   
 #### <a name="to-specify-an-or-condition-for-two-different-columns"></a>두 개의 서로 다른 열에 OR 조건을 지정하려면  
   
-1.  
-  [조건 창](visual-database-tools.md)에서 검색할 열을 추가합니다.  
+1.  [조건 창](visual-database-tools.md)에서 검색할 열을 추가합니다.  
   
 2.  검색할 첫 번째 열의 **필터** 열에서 첫째 조건을 지정합니다.  
   
-3.  
-  **필터** 열은 비워 두고 검색할 두 번째 데이터 열의 **또는...** 열에서 둘째 조건을 지정합니다.  
+3.  **필터** 열은 비워 두고 검색할 두 번째 데이터 열의 **또는...** 열에서 둘째 조건을 지정합니다.  
   
      쿼리 및 뷰 디자이너는 다음과 같이 OR 조건을 포함하는 WHERE 절을 만듭니다.  
   
@@ -61,8 +59,7 @@ ms.locfileid: "63204950"
   
 #### <a name="to-specify-an-and-condition-for-two-different-columns"></a>두 개의 서로 다른 열에 AND 조건을 지정하려면  
   
-1.  
-  [조건 창](visual-database-tools.md)에서 검색할 열을 추가합니다.  
+1.  [조건 창](visual-database-tools.md)에서 검색할 열을 추가합니다.  
   
 2.  검색할 첫 번째 데이터 열의 **필터** 열에서 첫째 조건을 지정합니다.  
   

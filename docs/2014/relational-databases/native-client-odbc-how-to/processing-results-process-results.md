@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21474aed83aac1fe86e2242b1238affa11ae64a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200320"
 ---
 # <a name="process-results-odbc"></a>결과 처리(ODBC)
@@ -29,19 +29,15 @@ ms.locfileid: "63200320"
   
 3.  결과 집합의 각 행에 대해 다음을 수행합니다.  
   
-    -   
-  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)를 호출하여 다음 행을 가져옵니다.  
+    -   [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)를 호출하여 다음 행을 가져옵니다.  
   
     -   바인딩된 열을 사용하는 경우 이제 바인딩된 열 버퍼에서 사용할 수 있는 데이터를 사용합니다.  
   
-    -   바인딩되지 않은 열을 사용하는 경우 [SQLGetData](../native-client-odbc-api/sqlgetdata.md)를 한 번 이상 호출하여 바인딩된 마지막 열 다음의 바인딩되지 않은 열 데이터를 가져옵니다. 
-  `SQLGetData`는 번호가 가장 작은 열부터 차례로 호출해야 합니다.  
+    -   바인딩되지 않은 열을 사용하는 경우 [SQLGetData](../native-client-odbc-api/sqlgetdata.md)를 한 번 이상 호출하여 바인딩된 마지막 열 다음의 바인딩되지 않은 열 데이터를 가져옵니다. `SQLGetData`는 번호가 가장 작은 열부터 차례로 호출해야 합니다.  
   
-    -   
-  `SQLGetData`를 여러 번 호출하여 텍스트나 이미지 열에서 데이터를 가져옵니다.  
+    -   `SQLGetData`를 여러 번 호출하여 텍스트나 이미지 열에서 데이터를 가져옵니다.  
   
-4.  
-  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)에서 SQL_NO_DATA를 반환하여 결과 집합의 끝을 알리면 [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md)를 호출하여 다른 결과 집합을 사용할 수 있는지 여부를 확인합니다.  
+4.  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)에서 SQL_NO_DATA를 반환하여 결과 집합의 끝을 알리면 [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md)를 호출하여 다른 결과 집합을 사용할 수 있는지 여부를 확인합니다.  
   
     -   다른 결과 집합이 있으면 SQL_SUCCESS가 반환됩니다.  
   
@@ -59,8 +55,7 @@ ms.locfileid: "63200320"
 6.  다른 결과 집합을 사용할 수 있는 경우 1단계로 이동합니다.  
   
 > [!NOTE]  
->  
-  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)에서 SQL_NO_DATA를 반환하기 전에 결과 집합 처리를 취소하려면 [SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md)를 호출합니다.  
+>  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)에서 SQL_NO_DATA를 반환하기 전에 결과 집합 처리를 취소하려면 [SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md)를 호출합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [결과 처리 방법 도움말 항목 &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  

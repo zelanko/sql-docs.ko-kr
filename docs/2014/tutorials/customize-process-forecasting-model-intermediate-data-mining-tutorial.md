@@ -11,21 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d2d0e73d1d9a4058ff63320552604b2bfa1bca8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63249399"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>예측 모델 사용자 지정 및 처리(중급 데이터 마이닝 자습서)
-  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 시계열 알고리즘은 모델을 만들고 시간 데이터를 분석하는 방법에 영향을 주는 여러 매개 변수를 제공합니다. 이러한 속성을 변경하면 마이닝 모델이 예측을 수행하는 방식에 큰 영향을 줄 수 있습니다.  
   
  자습서에서 이러한 태스크를 위해 다음 작업을 수행하여 모델을 변경합니다.  
   
 1.  *PERIODICITY_HINT* 매개 변수에 대 한 새 값을 추가 하 여 모델이 기간을 처리 하는 방식을 사용자 지정 합니다.  
   
-2.  Microsoft 시계열 알고리즘에 대 한 두 가지 중요 한 매개 변수, 즉 예측에 사용 되는 메서드를 제어할 수 있는 FORECAST_METHOD 및 장기 및 단기의 blend를 사용자 지정할 수 있는 PREDICTION_SMOOTHING에 대해 알아봅니다. 예측할.  
+2.  Microsoft 시계열 알고리즘에 대 한 두 가지 중요 한 매개 변수, 즉 예측에 사용 되는 방법을 제어할 수 있는 FORECAST_METHOD 및 장기 및 단기 예측의 혼합을 사용자 지정할 수 있는 PREDICTION_SMOOTHING에 대해 알아봅니다.  
   
 3.  필요에 따라 귀속되는 누락된 값의 처리 방식을 알고리즘에 알려 줍니다.  
   
@@ -107,6 +106,6 @@ ms.locfileid: "63249399"
 ## <a name="see-also"></a>참고 항목  
  [Microsoft 시계열 알고리즘 기술 참조](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Microsoft 시계열 알고리즘](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [데이터 마이닝&#41;&#40;처리 요구 사항 및 고려 사항](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [처리 요구 사항 및 고려 사항&#40;데이터 마이닝&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

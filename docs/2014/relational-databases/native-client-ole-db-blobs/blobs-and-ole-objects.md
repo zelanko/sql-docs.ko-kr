@@ -1,5 +1,5 @@
 ---
-title: Blob 및 OLE 개체 | Microsoft Docs
+title: BLOB 및 OLE 개체 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,17 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e459682da63bac8359fa8310233c234e456f4e5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63195221"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 및 OLE 개체
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar (max)**, **nvarchar (max**), **varbinary (max)** 및 xml 데이터 형식에 대 한 소비자 액세스를 blob (binary large object)로 지원 하기 위해 **ISequentialStream** 인터페이스를 노출 합니다. 
-  **ISequentialStream**에서 **Read** 메서드를 사용하면 소비자가 많은 양의 데이터를 관리하기 쉬운 청크로 가져올 수 있습니다.  
+  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar (max)**, **nvarchar (max**), **varbinary (max)** 및 xml 데이터 형식에 대 한 소비자 액세스를 blob (binary large object)로 지원 하기 위해 **ISequentialStream** 인터페이스를 노출 합니다. **ISequentialStream**에서 **Read** 메서드를 사용하면 소비자가 많은 양의 데이터를 관리하기 쉬운 청크로 가져올 수 있습니다.  
   
- 이 기능을 보여 주는 샘플은 [&#41;OLE DB Large Data &#40;설정 ](../native-client-ole-db-how-to/set-large-data-ole-db.md)을 참조 하세요.  
+ 이 기능을 보여주는 샘플을 보려면 [큰 데이터 설정&#40;OLE DB&#41;](../native-client-ole-db-how-to/set-large-data-ole-db.md)을 참조하세요.  
   
  소비자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 데이터 수정에 바인딩된 접근자에 인터페이스 포인터를 제공 하는 경우 Native Client OLE DB 공급자는 소비자가 구현한 **IStorage** 인터페이스를 사용할 수 있습니다.  
   

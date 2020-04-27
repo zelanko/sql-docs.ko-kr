@@ -23,29 +23,29 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 752467d058a6618ccfa44d7e2f75ac33b632878e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204651"
 ---
 # <a name="supported-query-types-visual-database-tools"></a>지원되는 쿼리 형식(Visual Database Tools)
-  [쿼리 및 뷰 디자이너](visual-database-tools.md)의 다이어그램 창과 조건 창 (그래픽 창)에서 다음과 같은 쿼리 형식을 만들 수 있습니다.  
+  [쿼리 및 뷰 디자이너](visual-database-tools.md)의 다이어그램 창과 조건 창(그래픽 창)에서 다음과 같은 쿼리 형식을 만들 수 있습니다.  
   
--   **쿼리 선택** 하나 이상의 테이블 또는 뷰에서 데이터를 검색 합니다. 이 쿼리 형식은 SQL SELECT 문을 만듭니다.  
+-   **선택 쿼리** 하나 이상의 테이블 또는 뷰에서 데이터를 검색합니다. 이 쿼리 형식은 SQL SELECT 문을 만듭니다.  
   
--   **결과 삽입** 기존 행을 한 테이블에서 다른 테이블에 복사 하거나 동일한 테이블에 새 행으로 복사 하 여 새 행을 만듭니다. 이 쿼리 형식은 SQL INSERT INTO...SELECT 문을 만듭니다.  
+-   **결과 삽입** 기존 행을 한 테이블에서 다른 테이블에 복사하거나 동일한 테이블에 새 행으로 복사하여 새 행을 만듭니다. 이 쿼리 형식은 SQL INSERT INTO...SELECT 문을 만듭니다.  
   
--   **값 삽입** 새 행을 만들고 지정 된 열에 값을 삽입 합니다. 이 쿼리 형식은 SQL INSERT INTO...VALUES 문을 만듭니다.  
+-   **값 삽입** 새 행을 만들고 지정된 열에 값을 삽입합니다. 이 쿼리 형식은 SQL INSERT INTO...VALUES 문을 만듭니다.  
   
--   **업데이트 쿼리** 테이블에서 하나 이상의 기존 행에 있는 개별 열의 값을 변경 합니다. 이 쿼리 형식은 SQL UPDATE...SET 문을 만듭니다.  
+-   **업데이트 쿼리** 테이블에서 하나 이상의 기존 행에 있는 개별 열의 값을 변경합니다. 이 쿼리 형식은 SQL UPDATE...SET 문을 만듭니다.  
   
--   **쿼리 삭제** 테이블에서 하나 이상의 행을 제거 합니다. 이 쿼리 형식은 SQL DELETE 문을 만듭니다.  
+-   **삭제 쿼리** 테이블에서 하나 이상의 행을 제거합니다. 이 쿼리 형식은 SQL DELETE 문을 만듭니다.  
   
     > [!NOTE]  
     >  삭제 쿼리는 테이블의 전체 행을 제거합니다. 따라서 개별 데이터 열의 값을 삭제하려면 업데이트 쿼리를 사용하십시오.  
   
--   **테이블 만들기 쿼리** 새 테이블을 만들고이 테이블에 쿼리 결과를 복사 하 여 행을 만듭니다. 이 쿼리 형식은 SQL SELECT...INTO 문을 만듭니다.  
+-   **테이블 만들기 쿼리** 새 테이블을 만들고 이 테이블에 쿼리 결과를 복사하여 행을 만듭니다. 이 쿼리 형식은 SQL SELECT...INTO 문을 만듭니다.  
   
  그래픽 창을 사용하여 만들 수 있는 쿼리 외에 Union 쿼리를 포함하여 어떤 SQL 문이든지 SQL 창에 입력할 수 있습니다.  
   

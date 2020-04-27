@@ -13,17 +13,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 842e862dff7eca85a05df0222989c6ee6390ab89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200328"
 ---
 # <a name="use-a-statement-odbc"></a>문 사용(ODBC)
     
 ### <a name="to-use-a-statement"></a>문을 사용하려면  
   
-1.  SQL_HANDLE_STMT의 [HandleType](https://go.microsoft.com/fwlink/?LinkId=58396)으로 *SQLAllocHandle*을 호출하여 문 핸들을 할당합니다.  
+1.  SQL_HANDLE_STMT의 *HandleType*으로 [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)을 호출하여 문 핸들을 할당합니다.  
   
 2.  필요에 따라 [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)을 호출하여 문 옵션을 설정하거나 [SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md)을 호출하여 문 특성을 가져옵니다.  
   
@@ -53,8 +53,7 @@ ms.locfileid: "63200328"
   
      \- 또는-  
   
-     
-  [SQLRowCount](../../native-client-odbc-api/sqlrowcount.md)를 호출하여 INSERT, UPDATE 또는 DELETE 문의 영향을 받는 행 수를 확인합니다.  
+     [SQLRowCount](../../native-client-odbc-api/sqlrowcount.md)를 호출하여 INSERT, UPDATE 또는 DELETE 문의 영향을 받는 행 수를 확인합니다.  
   
      SQL 문의 결과 집합이 여러 개이면 각 결과 집합의 끝에서 [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md)를 호출하여 추가로 처리할 결과 집합이 있는지 확인합니다.  
   
@@ -62,13 +61,13 @@ ms.locfileid: "63200328"
   
     -   SQL_NO_DATA가 반환될 때까지 [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md)를 호출하지 않은 경우 [SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md)를 호출하여 커서를 닫습니다.  
   
-    -   매개 변수 표식을 프로그램 변수에 바인딩한 경우 [Option](../../native-client-odbc-api/sqlfreestmt.md)을 SQL_RESET_PARAMS로 설정한 상태로 *SQLFreeStmt*를 호출하여 바인딩된 매개 변수를 해제합니다.  
+    -   매개 변수 표식을 프로그램 변수에 바인딩한 경우 *Option*을 SQL_RESET_PARAMS로 설정한 상태로 [SQLFreeStmt](../../native-client-odbc-api/sqlfreestmt.md)를 호출하여 바인딩된 매개 변수를 해제합니다.  
   
-    -   결과 집합 열을 프로그램 변수에 바인딩한 경우 [Option](../../native-client-odbc-api/sqlfreestmt.md)을 SQL_UNBIND로 설정한 상태로 *SQLFreeStmt*를 호출하여 바인딩된 열을 해제합니다.  
+    -   결과 집합 열을 프로그램 변수에 바인딩한 경우 *Option*을 SQL_UNBIND로 설정한 상태로 [SQLFreeStmt](../../native-client-odbc-api/sqlfreestmt.md)를 호출하여 바인딩된 열을 해제합니다.  
   
     -   문 핸들을 다시 사용하려면 2단계로 이동합니다.  
   
-8.  SQL_HANDLE_STMT의 [HandleType](../../native-client-odbc-api/sqlfreehandle.md)으로 *SQLFreeHandle*을 호출하여 문 핸들을 해제합니다.  
+8.  SQL_HANDLE_STMT의 *HandleType*으로 [SQLFreeHandle](../../native-client-odbc-api/sqlfreehandle.md)을 호출하여 문 핸들을 해제합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [쿼리 실행 방법 도움말 항목 &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  

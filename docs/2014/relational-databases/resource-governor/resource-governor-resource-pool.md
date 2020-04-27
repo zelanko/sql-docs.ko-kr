@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4177d7e8ebc96e40e831a6558c7d8b5073c86bc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63209873"
 ---
 # <a name="resource-governor-resource-pool"></a>리소스 관리자 리소스 풀
@@ -63,10 +63,10 @@ ms.locfileid: "63209873"
   
 -   공유 % = 유효한 MAX % - MIN %  
   
-|풀 이름|MIN % 설정|MAX % 설정|계산된 유효한 MAX %|계산된 공유 %|주석|  
+|풀 이름|MIN % 설정|MAX % 설정|계산된 유효한 MAX %|계산된 공유 %|설명|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
-|내부|0|100|100|0|유효 MAX % 및 공유 %는 내부 풀에 적용할 수 없습니다.|  
-|기본값|0|100|30|30|유효 MAX 값은 min(100,100-(20+50)) = 30으로 계산됩니다. 계산된 공유 백분율(%)은 유효 MAX - MIN = 30입니다.|  
+|internal|0|100|100|0|유효 MAX % 및 공유 %는 내부 풀에 적용할 수 없습니다.|  
+|default|0|100|30|30|유효 MAX 값은 min(100,100-(20+50)) = 30으로 계산됩니다. 계산된 공유 백분율(%)은 유효 MAX - MIN = 30입니다.|  
 |풀 1|20|100|50|30|유효 MAX 값은 min(100,100-50) = 50으로 계산됩니다. 계산된 공유 백분율(%)은 유효 MAX - MIN = 30입니다.|  
 |풀 2|50|70|70|20|유효 MAX 값은 min(70,100-20) = 70으로 계산됩니다. 계산된 공유 백분율(%)은 유효 MAX - MIN = 20입니다.|  
   
@@ -117,8 +117,8 @@ ms.locfileid: "63209873"
 |리소스 풀을 삭제하는 방법에 대해 설명합니다.|[리소스 풀 삭제](delete-a-resource-pool.md)|  
   
 ## <a name="see-also"></a>참고 항목  
- [리소스 관리자](resource-governor.md)   
- [리소스 관리자 작업 그룹](resource-governor-workload-group.md)   
+ [Resource Governor](resource-governor.md)   
+ [작업 그룹 Resource Governor](resource-governor-workload-group.md)   
  [Resource Governor 분류자 함수](resource-governor-classifier-function.md)   
  [템플릿을 사용 하 여 Resource Governor 구성](configure-resource-governor-using-a-template.md)   
  [리소스 관리자 속성 보기](view-resource-governor-properties.md)  

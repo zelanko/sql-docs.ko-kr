@@ -14,15 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 015c52194ce17e70a25bfe627aaf6822acda3ce3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63205005"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml 데이터 형식에 대한 FOR XML 지원
-  FOR XML 쿼리가 SELECT 절에서 `xml` 유형의 열을 지정하는 경우 ELEMENTS 지시어를 지정했는지 여부에 관계없이 열 값은 반환된 XML의 요소로 매핑됩니다. 
-  `xml` 유형의 열에 있는 XML 선언은 직렬화되지 않습니다.  
+  FOR XML 쿼리가 SELECT 절에서 `xml` 유형의 열을 지정하는 경우 ELEMENTS 지시어를 지정했는지 여부에 관계없이 열 값은 반환된 XML의 요소로 매핑됩니다. `xml` 유형의 열에 있는 XML 선언은 직렬화되지 않습니다.  
   
  예를 들어 다음 쿼리 `BusinessEntityID`는, `FirstName`, 및 `LastName` 열과 같은 고객 연락처 정보 및 `AdditionalContactInfo` `xml` 유형의 열에서 전화 번호를 검색 합니다.  
   
@@ -147,8 +146,7 @@ for xml auto;
   
 -   단일 `xml` 유형 열이 포함된 테이블  
   
--   
-  `xml` 유형의 인스턴스  
+-   `xml` 유형의 인스턴스  
   
  예를 들어 다음 사용자 정의 함수는 `xm` 유형의 단일 열이 포함된 테이블을 반환합니다.  
   

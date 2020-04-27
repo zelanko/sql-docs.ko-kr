@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63207056"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>복제 관리자를 위한 질문과 대답
@@ -103,7 +103,7 @@ ms.locfileid: "63207056"
   
 -   병합 복제를 위한 웹 동기화 옵션. 자세한 내용은 [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md)를 참조하세요.  
   
- 모든 유형의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 시 VPN을 통해 데이터를 복제할 수 있지만 병합 복제를 사용할 경우 웹 동기화를 고려해야 합니다.  
+ 모든 유형의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제는 VPN을 통해 데이터를 복제할 수 있지만 병합 복제를 사용 하는 경우에는 웹 동기화를 고려해 야 합니다.  
   
 ### <a name="does-replication-resume-if-a-connection-is-dropped"></a>연결이 끊어진 경우 복제를 재개할 수 있습니까?  
  예. 연결이 끊어지면 중단된 시점에서부터 복제 처리가 재개됩니다. 불안정한 네트워크에서 병합 복제를 사용하는 경우 관련 변경 내용이 한 단위로 처리되는 논리적 레코드를 사용해 보십시오. 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](../merge/group-changes-to-related-rows-with-logical-records.md)를 참조하세요.  
@@ -121,7 +121,7 @@ ms.locfileid: "63207056"
   
 -   CREATE TABLE 문과 같은 개체의 정의입니다. 기본적으로 복제는 복제된 모든 개체의 정의를 구독자로 복사합니다.  
   
--   개체가 만들어진 다음과 같은 네임스페이스입니다. \<데이터베이스>.\<스키마>.\<개체>. 스키마는 CREATE SCHEMA 문을 사용하여 정의됩니다.  
+-   개체가 만들어진 네임스페이스 \<Database>.\<Schema>.\<Object>입니다. 스키마는 CREATE SCHEMA 문을 사용하여 정의됩니다.  
   
 -   복제는 새 게시 마법사에서 스키마 및 개체 소유권에 대해 기본적으로 다음과 같이 작동합니다.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "63207056"
   
     -   [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) 또는 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행할 때 매개 변수에 ' pre_creation_cmd ' (**sp_changearticle**) 또는 ' pre_creation_command ' (**sp_changemergearticle**) 값을 지정 **@property** 하 고 매개 변수에 **@value**' none ', ' delete ' 또는 ' truncate ' 값을 지정 합니다.  
   
-    -   **아티클 속성 - \<Article>** 대화 상자의 **대상 개체** 섹션에서 **기존 개체를 변경하지 않고 유지**, **데이터를 삭제합니다. 아티클에 행 필터가 있으면 필터에 대응하는 데이터만 삭제합니다.** 또는 **기존 개체의 모든 데이터를 잘라냅니다.** 값을 **이름이 사용 중일 때 수행할 동작**를 참조하세요. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../publish/view-and-modify-publication-properties.md)을 참조하세요.  
+    -   **아티클 속성- \<article>** 대화 상자의 **대상 개체** 섹션에서 **기존 개체를 변경 하지 않고 유지**, 데이터 삭제 값을 선택 합니다 **. 아티클에 행 필터가 있는 경우 필터와 일치 하는 데이터만 삭제 합니다.** 또는 **기존 개체의 모든 데이터를 잘라냅니다.** 값을 **이름이 사용 중일 때 수행할 동작**를 참조하세요. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 ## <a name="database-maintenance"></a>데이터베이스 유지 관리  
   
@@ -230,6 +230,6 @@ ms.locfileid: "63207056"
   
 ## <a name="see-also"></a>참고 항목  
  [복제 관리 FAQ](frequently-asked-questions-for-replication-administrators.md)   
- [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
+ [복제 관리에 대 한 모범 사례](best-practices-for-replication-administration.md)  
   
   

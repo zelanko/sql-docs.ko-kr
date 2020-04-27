@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63193033"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 스키마 컬렉션 [SQL Server]
@@ -47,7 +47,7 @@ ms.locfileid: "63193033"
   
  또한 XML 스키마 컬렉션을 사용하여 XML 변수, 매개 변수 및 열을 형식화할 수 있습니다.  
   
-##  <a name="ddl"></a> 스키마 컬렉션 관리 DDL  
+##  <a name="ddl-for-managing-schema-collections"></a><a name="ddl"></a> 스키마 컬렉션 관리 DDL  
  데이터베이스에서 XML 스키마 컬렉션을 만들고 이를 `xml` 유형의 변수 및 열과 연결할 수 있습니다. 데이터베이스에 있는 스키마 컬렉션을 관리하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 다음 DDL 문을 제공합니다.  
   
 -   [CREATE XML SCHEMA COLLECTION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)은 데이터베이스에 스키마 구성 요소를 가져옵니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "63193033"
   
  스키마 컬렉션을 삭제하려면 DROP XML SCHEMA COLLECTION 문을 사용합니다. 이렇게 하면 컬렉션에 포함된 모든 스키마가 삭제되고 컬렉션 개체가 제거됩니다. 스키마 컬렉션을 삭제하려면 [DROP XML SCHEMA COLLECTION&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql)에 기술된 조건을 충족해야 합니다.  
   
-##  <a name="components"></a> 스키마 구성 요소 이해  
+##  <a name="understanding-schema-components"></a><a name="components"></a> 스키마 구성 요소 이해  
  CREATE XML SCHEMA COLLECTION 문을 사용하면 여러 스키마 구성 요소를 데이터베이스로 가져옵니다. 스키마 구성 요소에는 스키마 요소, 특성 및 유형 정의가 포함됩니다. DROP XML SCHEMA COLLECTION 문을 사용하면 전체 컬렉션을 제거합니다.  
   
  CREATE XML SCHEMA COLLECTION은 여러 시스템 테이블에 스키마 구성 요소를 저장합니다.  
@@ -129,7 +129,7 @@ ms.locfileid: "63193033"
 |**finalDefault**|아직 제공되지 않았고 값이 **finalDefault** 특성의 값으로 설정된 모든 요소 선언 및 유형 정의에 적용된 **final** 특성입니다.|  
 |**targetNamespace**|대상 네임스페이스에 속하는 구성 요소에 대한 정보는 메타데이터에 저장됩니다.|  
   
-##  <a name="perms"></a> XML 스키마 컬렉션에 대한 사용 권한  
+##  <a name="permissions-on-an-xml-schema-collection"></a><a name="perms"></a> XML 스키마 컬렉션에 대한 사용 권한  
  다음을 수행하는 데 필요한 권한이 있어야 합니다.  
   
 -   XML 스키마 컬렉션 생성/로드  
@@ -158,7 +158,7 @@ ms.locfileid: "63193033"
   
      이 항목에서는 XML 스키마 컬렉션을 만들기 위한 사용 권한을 거부하고 XML 스키마 컬렉션 개체에 대한 사용 권한을 거부하는 방법에 대해 설명합니다.  
   
-##  <a name="info"></a> XML 스키마 및 스키마 컬렉션에 대한 정보 가져오기  
+##  <a name="getting-information-about-xml-schemas-and-schema-collections"></a><a name="info"></a> XML 스키마 및 스키마 컬렉션에 대한 정보 가져오기  
  XML 스키마 컬렉션은 sys.xml_schema_collections 카탈로그 뷰에 열거됩니다. XML 스키마 컬렉션 "sys"는 시스템에 의해 정의됩니다. 여기에는 명시적으로 로드할 필요 없이 모든 사용자 정의 XML 스키마 컬렉션에서 사용할 수 있는 미리 정의된 네임스페이스가 포함됩니다. 이 목록에는 xml, xs, xsi, fn 및 xdt에 대한 네임스페이스가 포함됩니다. 두 개의 다른 카탈로그 뷰는 각 XML 스키마 컬렉션 내에서 모든 네임스페이스를 열거하는 sys.xml_schema_namespaces와 각 XML 스키마 내에서 모든 XML 스키마 구성 요소를 열거하는 sys.xml_components입니다.  
   
  기본 제공 **XML_SCHEMA_NAMESPACE**함수인 *XmlSchemacollectionName, schemaName,, NAMESPACE uri*는 `xml` 데이터 형식 인스턴스를 생성 합니다. 이 인스턴스에는 미리 정의된 XML 스키마를 제외하고 XML 스키마 컬렉션에 포함된 스키마에 대한 XML 스키마 조각이 들어 있습니다.  
@@ -203,9 +203,7 @@ N'https://www.microsoft.com/books')
   
 -   XML 스키마 네임스페이스에 대한 카탈로그 뷰에서 Transact-SQL 쿼리를 작성합니다.  
   
--   
-  `xml` 데이터 형식의 열이 포함된 테이블을 만들어서 XML 스키마를 저장하고 이를 XML 유형의 시스템으로 로드합니다. 
-  `xml` 데이터 형식의 메서드를 사용하여 XML 열을 쿼리할 수 있습니다. 또한 이 열에서 XML 인덱스를 작성할 수 있습니다. 하지만 이 접근 방식에서는 애플리케이션이 XML 열에 저장된 XML 스키마와 XML 유형 시스템 간의 일관성을 유지 관리해야 합니다. 예를 들어 XML 유형 시스템으로부터 XML 스키마 네임스페이스를 삭제하면 일관성 유지를 위해 테이블에서도 삭제해야 합니다.  
+-   `xml` 데이터 형식의 열이 포함된 테이블을 만들어서 XML 스키마를 저장하고 이를 XML 유형의 시스템으로 로드합니다. `xml` 데이터 형식의 메서드를 사용하여 XML 열을 쿼리할 수 있습니다. 또한 이 열에서 XML 인덱스를 작성할 수 있습니다. 하지만 이 접근 방식에서는 애플리케이션이 XML 열에 저장된 XML 스키마와 XML 유형 시스템 간의 일관성을 유지 관리해야 합니다. 예를 들어 XML 유형 시스템으로부터 XML 스키마 네임스페이스를 삭제하면 일관성 유지를 위해 테이블에서도 삭제해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [저장된 XML 스키마 컬렉션 보기](../xml/view-a-stored-xml-schema-collection.md)   

@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b75104940cca183005f8a465ea19d0a517247c25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63213811"
 ---
 # <a name="supporting-local-transactions"></a>로컬 트랜잭션 지원
@@ -33,26 +33,26 @@ ms.locfileid: "63213811"
   
  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 다음과 같이 **ITransactionLocal:: starttransaction** 매개 변수를 지원 합니다.  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---------------|-----------------|  
-|*isoLevel*[in]|이 트랜잭션에 사용할 격리 수준입니다. 로컬 트랜잭션에서 Native Client OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공급자는 다음을 지원 합니다.<br /><br /> -ISOLATIONLEVEL_UNSPECIFIED<br />-ISOLATIONLEVEL_CHAOS<br />-ISOLATIONLEVEL_READUNCOMMITTED<br />-ISOLATIONLEVEL_READCOMMITTED<br />-ISOLATIONLEVEL_REPEATABLEREAD<br />-ISOLATIONLEVEL_CURSORSTABILITY<br />-ISOLATIONLEVEL_REPEATABLEREAD<br />-ISOLATIONLEVEL_SERIALIZABLE<br />-ISOLATIONLEVEL_ISOLATED<br />-ISOLATIONLEVEL_SNAPSHOT **Note:** 부터 데이터베이스 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에 대해 버전 관리가 사용 되는지 여부에 관계 없이 *isoLevel* 인수에 ISOLATIONLEVEL_SNAPSHOT를 사용할 수 있습니다. 그러나 버전 관리가 설정되어 있지 않거나 데이터베이스가 읽기 전용이 아닌 상태에서 사용자가 문을 실행하려고 하면 오류가 발생합니다. 또한 * 이전의 * 버전에 연결할 때 ISOLATIONLEVEL_SNAPSHOT을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]isoLevel[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]로 지정하면 XACT_E_ISOLATIONLEVEL 오류가 발생합니다.|  
+|*isoLevel*[in]|이 트랜잭션에 사용할 격리 수준입니다. 로컬 트랜잭션에서 Native Client OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공급자는 다음을 지원 합니다.<br /><br /> -ISOLATIONLEVEL_UNSPECIFIED<br />-ISOLATIONLEVEL_CHAOS<br />-ISOLATIONLEVEL_READUNCOMMITTED<br />-ISOLATIONLEVEL_READCOMMITTED<br />-ISOLATIONLEVEL_REPEATABLEREAD<br />-ISOLATIONLEVEL_CURSORSTABILITY<br />-ISOLATIONLEVEL_REPEATABLEREAD<br />-ISOLATIONLEVEL_SERIALIZABLE<br />-ISOLATIONLEVEL_ISOLATED<br />-ISOLATIONLEVEL_SNAPSHOT **Note:** 부터 데이터베이스 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에 대해 버전 관리가 사용 되는지 여부에 관계 없이 *isoLevel* 인수에 ISOLATIONLEVEL_SNAPSHOT를 사용할 수 있습니다. 그러나 버전 관리가 설정되어 있지 않거나 데이터베이스가 읽기 전용이 아닌 상태에서 사용자가 문을 실행하려고 하면 오류가 발생합니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 버전에 연결할 때 ISOLATIONLEVEL_SNAPSHOT을 *isoLevel*로 지정하면 XACT_E_ISOLATIONLEVEL 오류가 발생합니다.|  
 |*isoFlags*[in]|Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 0 이외의 값에 대해 오류를 반환 합니다.|  
-|*Potheroptions*[in]|NULL이 아닌 경우 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 인터페이스에서 options 개체를 요청 합니다. 옵션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체의 *ultimeout* 멤버가 0이 아니면 Native Client OLE DB 공급자가 XACT_E_NOTIMEOUT을 반환 합니다. Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 *szdescription* 멤버의 값을 무시 합니다.|  
+|*pOtherOptions*[in]|NULL이 아닌 경우 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 인터페이스에서 options 개체를 요청 합니다. 옵션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체의 *ultimeout* 멤버가 0이 아니면 Native Client OLE DB 공급자가 XACT_E_NOTIMEOUT을 반환 합니다. Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 *szdescription* 멤버의 값을 무시 합니다.|  
 |*pulTransactionLevel*[out]|NULL이 아닌 경우 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 트랜잭션 중첩 수준을 반환 합니다.|  
   
  로컬 트랜잭션의 경우 Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB 공급자는 다음과 같이 **ITransaction:: Abort** 매개 변수를 구현 합니다.  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---------------|-----------------|  
-|*Pboidreason*[in]|설정된 경우 무시됩니다. NULL이어도 안전합니다.|  
-|*Fretaining*[in]|TRUE인 경우 해당 세션을 위한 새 트랜잭션이 암시적으로 시작됩니다. 이 트랜잭션은 소비자가 커밋 또는 종료해야 합니다. FALSE 이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 세션에 대해 자동 커밋 모드로 되돌립니다.|  
-|*Fasync*[in]|Native Client OLE DB 공급자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 비동기 중단을 지원 하지 않습니다. Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 값이 FALSE가 아닌 경우 XACT_E_NOTSUPPORTED을 반환 합니다.|  
+|*pboidReason*[in]|설정된 경우 무시됩니다. NULL이어도 안전합니다.|  
+|*fRetaining*[in]|TRUE인 경우 해당 세션을 위한 새 트랜잭션이 암시적으로 시작됩니다. 이 트랜잭션은 소비자가 커밋 또는 종료해야 합니다. FALSE 이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 세션에 대해 자동 커밋 모드로 되돌립니다.|  
+|*fAsync*[in]|Native Client OLE DB 공급자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 비동기 중단을 지원 하지 않습니다. Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 값이 FALSE가 아닌 경우 XACT_E_NOTSUPPORTED을 반환 합니다.|  
   
  로컬 트랜잭션의 경우 Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB 공급자는 다음과 같이 **ITransaction:: Commit** 매개 변수를 구현 합니다.  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---------------|-----------------|  
-|*Fretaining*[in]|TRUE인 경우 해당 세션을 위한 새 트랜잭션이 암시적으로 시작됩니다. 이 트랜잭션은 소비자가 커밋 또는 종료해야 합니다. FALSE 이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 세션에 대해 자동 커밋 모드로 되돌립니다.|  
+|*fRetaining*[in]|TRUE인 경우 해당 세션을 위한 새 트랜잭션이 암시적으로 시작됩니다. 이 트랜잭션은 소비자가 커밋 또는 종료해야 합니다. FALSE 이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 세션에 대해 자동 커밋 모드로 되돌립니다.|  
 |*grfTC*[in]|Native Client OLE DB 공급자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 비동기 및 1 단계 반환을 지원 하지 않습니다. Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 XACTTC_SYNC 이외의 값에 대해 XACT_E_NOTSUPPORTED을 반환 합니다.|  
 |*grfRM*[in]|0이어야 합니다.|  
   

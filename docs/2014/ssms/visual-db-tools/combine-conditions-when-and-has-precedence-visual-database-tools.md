@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4d0a0bcb7115255c3c6b3750cd930e7d06b9e2df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225810"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>AND에 우선 순위가 있는 조건 조합(Visual Database Tools)
@@ -38,8 +38,7 @@ ms.locfileid: "63225810"
   
 1.  [조건 창](visual-database-tools.md)에서 검색할 데이터 열을 추가합니다. AND로 연결된 둘 이상의 조건을 사용하여 동일한 열을 검색하려면 검색할 각 값에 대하여 한 번씩 데이터 열 이름을 표에 추가해야 합니다.  
   
-2.  
-  **필터** 열에 AND로 연결할 모든 조건을 입력합니다. 예를 들어, `hire_date` 열과 `job_lvl` 열을 검색하는 조건을 AND로 연결하려면 필터 열에 각각 `< '1/1/91'` 값과 `= 100`값을 입력합니다.  
+2.  **필터** 열에 AND로 연결할 모든 조건을 입력합니다. 예를 들어, `hire_date` 열과 `job_lvl` 열을 검색하는 조건을 AND로 연결하려면 필터 열에 각각 `< '1/1/91'` 값과 `= 100`값을 입력합니다.  
   
      이런 표 형태 엔트리는 [SQL 창](sql-pane-visual-database-tools.md)에서 문에 다음과 같은 WHERE 절을 만듭니다.  
   
@@ -50,8 +49,7 @@ ms.locfileid: "63225810"
   
 3.  표 형태의 **또는...** 열에 OR로 연결할 조건을 입력합니다. 예를 들어 `job_lvl` 열에서 다른 값을 검색하는 조건을 추가하려면 **또는...** 열에 다른 값(예: `= 200`)을 추가합니다.  
   
-     
-  **또는...** 열에 값을 추가하면 SQL 창에 있는 문의 WHERE 절에 또 다른 조건이 추가됩니다.  
+     **또는...** 열에 값을 추가하면 SQL 창에 있는 문의 WHERE 절에 또 다른 조건이 추가됩니다.  
   
     ```  
     WHERE (hire_date < '01/01/91' ) AND  

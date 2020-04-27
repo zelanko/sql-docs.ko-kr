@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f28c72a291c145171f7084524fe5dd5cce7c12a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63223266"
 ---
 # <a name="acceptpause-property-sqlservice-class"></a>AcceptPause 속성(SqlService 클래스)
@@ -37,12 +37,11 @@ object
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
+ *object*  
  서비스를 나타내는 [SqlService 클래스](sqlservice-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
- 서비스를 일시 중지할 수 있는지 여부를 지정하는 부울 값입니다. 
-  `true`인 경우 서비스를 일시 중지할 수 있고 `false`인 경우 서비스를 일시 중지할 수 없습니다.  
+ 서비스를 일시 중지할 수 있는지 여부를 지정하는 부울 값입니다. `true`인 경우 서비스를 일시 중지할 수 있고 `false`인 경우 서비스를 일시 중지할 수 없습니다.  
   
 ## <a name="remarks"></a>설명  
   

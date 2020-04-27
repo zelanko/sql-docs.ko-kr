@@ -13,17 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26bcf31c2d4e0d188e93587dd9bdec1a9ff382e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63199955"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>테이블 반환 매개 변수 및 열 값에 대한 바인딩 및 데이터 전송
   테이블 반환 매개 변수는 다른 매개 변수처럼 서버에 전달되기 전에 바인딩되어야 합니다. 응용 프로그램은 SQLSetDescField 또는 SQLSetDescRec에 대 한 SQLBindParameter 또는 동등한 호출을 사용 하 여 다른 매개 변수를 바인딩하는 것과 동일한 방식으로 테이블 반환 매개 변수를 바인딩합니다. 테이블 반환 매개 변수의 서버 데이터 형식은 SQL_SS_TABLE입니다. C 형식은 SQL_C_DEFAULT 또는 SQL_C_BINARY로 지정할 수 있습니다.  
   
- 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서는 입력 테이블 반환 매개 변수만 지원됩니다. 따라서 DESC_PARAMETER_TYPE을 SQL_PARAM_INPUT 이외의 값으로 설정하면 SQLSTATE=HY105 및 "매개 변수 유형이 잘못되었습니다"라는 메시지가 포함된 SQL_ERROR가 반환됩니다.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서는 입력 테이블 반환 매개 변수만 지원됩니다. 따라서 DESC_PARAMETER_TYPE을 SQL_PARAM_INPUT 이외의 값으로 설정하면 SQLSTATE=HY105 및 "매개 변수 유형이 잘못되었습니다"라는 메시지가 포함된 SQL_ERROR가 반환됩니다.  
   
  SQL_CA_SS_COL_HAS_DEFAULT_VALUE 특성을 사용하여 전체 테이블 반환 매개 변수 열에 기본값을 할당할 수 있습니다. 그러나 SQLBindParameter와 *StrLen_or_IndPtr* 에서 SQL_DEFAULT_PARAM를 사용 하 여 개별 테이블 반환 매개 변수 열 값에 기본값을 할당할 수는 없습니다. SQLBindParameter와 함께 *StrLen_or_IndPtr* 에서 SQL_DEFAULT_PARAM를 사용 하 여 전체 테이블 반환 매개 변수를 기본값으로 설정할 수 없습니다. 이러한 규칙을 따르지 않는 경우 SQLExecute 또는 SQLExecDirect는 SQL_ERROR을 반환 합니다. SQLSTATE = 07S01 및 "매개 변수 \<p>에 대 한 기본 매개 변수 사용이 잘못 되었습니다" 라는 메시지가 포함 된 진단 레코드가 \<생성 됩니다. 여기서 p>는 쿼리 문에서 TVP의 서 수입니다.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "63199955"
 |매개 변수|열을 포함 하 여 비 테이블 반환 매개 변수 형식에 대 한 관련 특성|테이블 반환 매개 변수에 대한 관련 특성|  
 |---------------|--------------------------------------------------------------------------------|----------------------------------------------------|  
 |*InputOutputType*|IPD의 SQL_DESC_PARAMETER_TYPE<br /><br /> 테이블 반환 매개 변수 열의 경우 이 값은 테이블 반환 매개 변수 자체에 대한 설정과 같습니다.|IPD의 SQL_DESC_PARAMETER_TYPE<br /><br /> SQL_PARAM_INPUT이여야 합니다.|  
-|*ValueType*|APD의 SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE|APD의 SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE<br /><br /> SQL_C_DEFAULT 또는 SQL_C_BINARY여야 합니다.|  
+|*System.valuetype*|APD의 SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE|APD의 SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE<br /><br /> SQL_C_DEFAULT 또는 SQL_C_BINARY여야 합니다.|  
 |*ParameterType*|IPD의 SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE|IPD의 SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE<br /><br /> SQL_SS_TABLE이여야 합니다.|  
 |*ColumnSize*|IPD의 SQL_DESC_LENGTH 또는 SQL_DESC_PRECISION<br /><br /> 이는 *ParameterType*의 값에 따라 달라 집니다.|SQL_DESC_ARRAY_SIZE<br /><br /> 매개 변수 포커스를 테이블 반환 매개 변수로 설정할 때 SQL_ATTR_PARAM_SET_SIZE를 사용하여 설정할 수도 있습니다.<br /><br /> 테이블 반환 매개 변수의 경우 이 값은 테이블 반환 매개 변수 열 버퍼의 행 수입니다.|  
 |*DecimalDigits*|IPD의 SQL_DESC_PRECISION 또는 SQL_DESC_SCALE|사용되지 않습니다. 0이어야 합니다.<br /><br /> 이 매개 변수가 0이 아닌 경우 SQLBindParameter는 SQL_ERROR를 반환 하 고 SQLSTATE = HY104 및 "잘못 된 전체 자릿수 또는 소수 자릿수가 있습니다." 라는 메시지가 포함 된 진단 레코드가 생성 됩니다.|  

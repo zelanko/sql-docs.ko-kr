@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63232401"
 ---
 # <a name="use-nested-for-xml-queries"></a>중첩 FOR XML 쿼리 사용
@@ -39,7 +39,7 @@ SELECT @x
 --<row ProductModelID="119" Name="Bike Wash" />  
 ```  
   
- 또한 `@x` 데이터 형식 메서드 중 하나를 사용하여 `xml` 변수에 반환된 XML을 처리할 수 있습니다. 예를 들어 `ProductModelID` value() 메서드 [를 사용하여](/sql/t-sql/xml/value-method-xml-data-type)특성 값을 검색할 수 있습니다.  
+ 또한 `xml` 데이터 형식 메서드 중 하나를 사용하여 `@x` 변수에 반환된 XML을 처리할 수 있습니다. 예를 들어 `ProductModelID` value() 메서드 [를 사용하여](/sql/t-sql/xml/value-method-xml-data-type)특성 값을 검색할 수 있습니다.  
   
 ```  
 DECLARE @i int;  
@@ -47,7 +47,7 @@ SET @i = (SELECT @x.value('/row[1]/@ProductModelID[1]', 'int'));
 SELECT @i;  
 ```  
   
- 다음 예에서 `FOR XML` 지시어가 `xml` 절에 지정되어 있기 때문에 `TYPE` 쿼리 결과는 `FOR XML` 유형으로 반환됩니다.  
+ 다음 예에서 `FOR XML` 지시어가 `TYPE` 절에 지정되어 있기 때문에 `FOR XML` 쿼리 결과는 `xml` 유형으로 반환됩니다.  
   
 ```  
 SELECT ProductModelID, Name  
@@ -83,7 +83,7 @@ SELECT  (SELECT ProductModelID, Name
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>내부 FOR XML 쿼리 결과를 외부 쿼리에 xml 유형 인스턴스로 반환  
- 내부 쿼리 결과가 `FOR XML` 유형으로 외부 쿼리로 반환되는 중첩 `xml` 쿼리를 작성할 수 있습니다. 다음은 그 예입니다.  
+ 내부 쿼리 결과가 `xml` 유형으로 외부 쿼리로 반환되는 중첩 `FOR XML` 쿼리를 작성할 수 있습니다. 다음은 그 예입니다.  
   
 ```  
 SELECT Col1,   

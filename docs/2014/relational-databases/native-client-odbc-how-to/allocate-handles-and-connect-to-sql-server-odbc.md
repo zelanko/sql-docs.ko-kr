@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 322120624c612371b56029c2cf29c9ab457c81b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225501"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>핸들 할당 및 SQL Server에 연결(ODBC)
@@ -27,22 +27,21 @@ ms.locfileid: "63225501"
   
 1.  ODBC 헤더 파일 Sql.h, Sqlext.h, Sqltypes.h을 포함합니다.  
   
-2.  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 드라이버별 헤더 파일인 Odbcss.h를 포함합니다.  
+2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 드라이버별 헤더 파일인 Odbcss.h를 포함합니다.  
   
-3.  SQL_HANDLE_ENV [](https://go.microsoft.com/fwlink/?LinkId=58396) 를 `HandleType` 사용 하 여 SQLAllocHandle를 호출 하 여 ODBC를 초기화 하 고 환경 핸들을 할당 합니다.  
+3.  SQL_HANDLE_ENV [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) 를 `HandleType` 사용 하 여 SQLAllocHandle를 호출 하 여 ODBC를 초기화 하 고 환경 핸들을 할당 합니다.  
   
-4.  SQL_ATTR_ODBC_VERSION [](../native-client-odbc-api/sqlsetenvattr.md) 로 설정 `Attribute` 된 SQLSetEnvAttr를 호출 `ValuePtr` 하 고를 SQL_OV_ODBC3으로 설정 하 여 응용 프로그램에서 ODBC 3. x 형식의 함수 호출을 사용 하도록 지정 합니다.  
+4.  SQL_ATTR_ODBC_VERSION [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md) 로 설정 `Attribute` 된 SQLSetEnvAttr를 호출 `ValuePtr` 하 고를 SQL_OV_ODBC3으로 설정 하 여 응용 프로그램에서 ODBC 3. x 형식의 함수 호출을 사용 하도록 지정 합니다.  
   
 5.  필요에 따라 [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md) 를 호출 하 여 다른 환경 옵션을 설정 하거나 [SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403) 를 호출 하 여 환경 옵션을 가져옵니다.  
   
-6.  SQL_HANDLE_DBC [](https://go.microsoft.com/fwlink/?LinkId=58396) 의를 `HandleType` 사용 하 여 SQLAllocHandle를 호출 하 여 연결 핸들을 할당 합니다.  
+6.  SQL_HANDLE_DBC [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) 의를 `HandleType` 사용 하 여 SQLAllocHandle를 호출 하 여 연결 핸들을 할당 합니다.  
   
 7.  필요에 따라 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) 를 호출 하 여 연결 옵션을 설정 하거나 [SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) 를 호출 하 여 연결 옵션을 가져옵니다.  
   
 8.  SQLConnect를 호출 하 여 기존 데이터 원본을 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결 합니다.  
   
-     또는  
+     Or  
   
      [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md) 를 호출 하 여 연결 문자열을 사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "63225501"
 13. SQL_HANDLE_ENV라는 `SQLFreeHandle`으로 `HandleType`을 호출하여 환경 핸들을 해제합니다.  
   
 > [!IMPORTANT]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지 해야 하는 경우에는 [Win32 CRYPTO API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용 하 여 자격 증명을 암호화 해야 합니다.  
   
 ## <a name="example"></a>예제  
  이 예에서는 `SQLDriverConnect` 호출을 통해 ODBC 데이터 원본을 요구하지 않고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하는 방법을 보여 줍니다. 불완전한 연결 문자열을 `SQLDriverConnect`에 전달하면 ODBC 드라이버에서 누락된 정보를 입력하라는 메시지를 사용자에게 표시합니다.  

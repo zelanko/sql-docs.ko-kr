@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192967"
 ---
 # <a name="create-a-multiserver-environment"></a>다중 서버 환경 만들기
@@ -37,13 +37,13 @@ ms.locfileid: "63192967"
   
 ||**TSX = 7.0**|**TSX = 8.0 < SP3**|**TSX = 8.0 SP3 이상**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
-|**MSX = 7.0**|yes|yes|예|예|예|예|예|  
-|**MSX = 8.0 < SP3**|yes|yes|예|예|예|예|예|  
-|**MSX = 8.0 SP3 이상**|예|예|yes|yes|yes|yes|yes|  
-|**MSX = 9.0**|예|예|예|yes|yes|yes|yes|  
-|**MSX = 10.0**|예|예|예|예|yes|yes|yes|  
-|**MSX = 10.5**|예|예|예|예|예|yes|yes|  
-|**MSX = 11.0**|예|예|예|예|예|예|yes|  
+|**MSX = 7.0**|예|예|아니요|아니요|아니요|아니요|아니요|  
+|**MSX = 8.0 < SP3**|예|예|아니요|아니요|아니요|아니요|아니요|  
+|**MSX = 8.0 SP3 이상**|아니요|예|예|예|예|예|예|  
+|**MSX = 9.0**|아니요|아니요|예|예|예|예|예|  
+|**MSX = 10.0**|아니요|아니요|아니요|예|예|예|예|  
+|**MSX = 10.5**|아니요|아니요|아니요|아니요|예|예|예|  
+|**MSX = 11.0**|아니요|아니요|아니요|아니요|아니요|예|예|  
   
  다중 서버 환경을 만들 때에는 다음 사항을 고려하십시오.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63192967"
 ## <a name="related-tasks"></a>관련 작업  
  다음 항목에서는 다중 서버 환경을 만들기 위한 공통적인 태스크에 대해 설명합니다.  
   
-|Description|항목|  
+|설명|항목|  
 |-----------------|-----------|  
 |마스터 서버를 만드는 방법에 대해 설명합니다.|[Make a Master Server](make-a-master-server.md)|  
 |대상 서버를 만드는 방법에 대해 설명합니다.|[대상 서버 만들기](make-a-target-server.md)|  

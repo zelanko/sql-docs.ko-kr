@@ -19,14 +19,13 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d6c2dbfb1254260f5c92df5f1da33ba26e368aa7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192046"
 ---
 # <a name="properties-property-clientnetworkprotocol-class"></a>Properties 속성(ClientNetworkProtocol 클래스)
-  
   [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)에서 지정한 현재 클라이언트 네트워크 프로토콜과 연결된 속성을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -38,9 +37,8 @@ object
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
- 
-  [클라이언트에서 사용하는 네트워크 프로토콜을 나타내는](clientnetworkprotocol-class.md) ClientNetworkProtocol 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개체입니다.  
+ *object*  
+ [클라이언트에서 사용하는 네트워크 프로토콜을 나타내는](clientnetworkprotocol-class.md) ClientNetworkProtocol 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  `OrderValue` 속성에서 참조 하는 현재 클라이언트 네트워크 프로토콜에서 지 원하는 속성을 나타내는 [Clientnetworkprotocolproperty 클래스](../clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) 개체의 배열입니다.  

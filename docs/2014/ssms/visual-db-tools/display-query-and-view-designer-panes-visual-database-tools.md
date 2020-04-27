@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8116f8a80a1fd614974d79516be2d4cd33eb660a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204979"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>쿼리 및 뷰 디자이너 창 표시(Visual Database Tools)
@@ -31,11 +31,10 @@ ms.locfileid: "63204979"
   
 1.  뷰를 열거나 새 쿼리를 만들어 쿼리 및 뷰 디자이너를 엽니다.  
   
-2.  
-  **쿼리 디자이너** 메뉴에서 **창** 을 가리킨 다음 열려는 창의 이름을 클릭합니다.  
+2.  **쿼리 디자이너** 메뉴에서 **창** 을 가리킨 다음 열려는 창의 이름을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Visual Database Tools를 &#40;쿼리 만들기&#41;](visual-database-tools.md)   
- [Visual Database Tools를 &#40;쿼리 및 뷰 디자이너를 엽니다&#41;](open-the-query-and-view-designer-visual-database-tools.md)  
+ [쿼리 및 뷰 디자이너 열기&#40;Visual Database Tools&#41;](open-the-query-and-view-designer-visual-database-tools.md)  
   
   

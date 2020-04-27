@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 30f24ab457669f572189d2eb13deca3f672f5e18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63217880"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>콜 센터 모델에 대한 예측 만들기(중급 데이터 마이닝 자습서)
@@ -27,8 +27,7 @@ ms.locfileid: "63217880"
   
 #### <a name="to-create-a-singleton-query-by-using-the-neural-network-model"></a>신경망 모델을 사용하여 단일 쿼리를 만들려면  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 사용할 모델이 들어 있는 솔루션을 엽니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 사용할 모델이 들어 있는 솔루션을 엽니다.  
   
 2.  데이터 마이닝 디자이너에서 **마이닝 모델 예측** 탭을 클릭 합니다.  
   
@@ -38,8 +37,7 @@ ms.locfileid: "63217880"
   
 5.  Call Center Default 마이닝 구조를 확장하고 신경망 모델 Call Center - LR을 선택합니다.  
   
-6.  
-  **마이닝 모델** 메뉴에서 **단일 쿼리**를 선택합니다.  
+6.  **마이닝 모델** 메뉴에서 **단일 쿼리**를 선택합니다.  
   
      **단일 쿼리 입력** 대화 상자가 나타나고 열이 마이닝 모델의 열에 매핑됩니다.  
   
@@ -118,8 +116,7 @@ ms.locfileid: "63217880"
   
      **단일 쿼리 입력** 대화 상자는 **입력 테이블 선택** 대화 상자로 바뀝니다.  
   
-4.  
-  **사례 테이블 선택**을 클릭합니다.  
+4.  **사례 테이블 선택**을 클릭합니다.  
   
 5.  **테이블 선택** 대화 상자에서 데이터 원본 목록에서 이동을 선택 합니다. **테이블/뷰 이름** 목록에서 호출 센터 (자동으로 선택 될 수 있음)에 대해 이동을 선택 하 고 확인을 클릭 **합니다.**  
   
@@ -131,8 +128,7 @@ ms.locfileid: "63217880"
   
 7.  LevelTwoOperators 옆에 있는 빈 셀을 클릭 하 고 **Call Center. AvgOperators에 대해 이동**을 선택 합니다.  
   
-8.  호출 옆에 있는 빈 셀을 클릭 하 고 **Call Center. AvgCalls에 대해 이동**을 선택 합니다. 
-  **확인**을 클릭합니다.  
+8.  호출 옆에 있는 빈 셀을 클릭 하 고 **Call Center. AvgCalls에 대해 이동**을 선택 합니다. **확인**을 클릭합니다.  
   
 ##### <a name="to-create-the-predictions-for-each-shift"></a>각 교대조에 대한 예측을 만들려면  
   
@@ -154,7 +150,7 @@ ms.locfileid: "63217880"
   
  다음 표에서는 각 교대조에 대한 결과 예를 보여 줍니다.  
   
-|Shift|WageType|Predicted Service Grade|확률|  
+|Shift|WageType|Predicted Service Grade|Probability|  
 |-----------|--------------|-----------------------------|-----------------|  
 |AM|holiday|0.165|0.377520666|  
 |midnight|holiday|0.105|0.364105573|  

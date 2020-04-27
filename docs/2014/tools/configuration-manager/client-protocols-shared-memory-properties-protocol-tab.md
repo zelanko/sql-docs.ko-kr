@@ -14,15 +14,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3d5f15222caab52732dff3d6c5faf37b11d4a057
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192912"
 ---
 # <a name="client-protocols---shared-memory-properties-protocol-tab"></a>클라이언트 프로토콜 - 공유 메모리 속성(프로토콜 탭)
-  
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 **공유 메모리 속성** 대화 상자의 **프로토콜** 탭을 사용하여 공유 메모리를 확인하거나 수정할 수 있습니다. 연결 문자열에 대한 자세한 내용은 [공유 메모리 프로토콜을 사용하여 유효한 연결 문자열 만들기](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)을 참조하십시오.  
   
 ## <a name="options"></a>옵션  

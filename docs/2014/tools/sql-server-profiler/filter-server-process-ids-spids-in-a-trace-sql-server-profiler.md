@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c6e740159d06a18d1ae2ef4fa9788246a4ca60e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250873"
 ---
 # <a name="filter-server-process-ids-spids-in-a-trace-sql-server-profiler"></a>추적의 SPID(서버 프로세스 ID) 필터링(SQL Server Profiler)
@@ -26,13 +26,12 @@ ms.locfileid: "63250873"
   
 ### <a name="to-filter-system-ids-in-a-trace"></a>추적에서 시스템 ID를 필터링하려면  
   
-1.  
-  **파일** 메뉴에서 **새 추적**을 클릭한 다음 SQL Server 인스턴스에 연결합니다.  
+1.  **파일** 메뉴에서 **새 추적**을 클릭한 다음 SQL Server 인스턴스에 연결합니다.  
   
      **추적 속성**대화 상자가 표시됩니다.  
   
     > [!NOTE]  
-    >  연결한 **후 즉시 추적 시작**을 선택한 경우에는 **추적 속성**대화 상자가 나타나지 않고 추적이 시작 됩니다. 이 설정을 해제하려면 **도구**메뉴에서 **옵션**을 클릭한 다음 **연결한 후 즉시 추적 시작** 확인란의 선택을 취소합니다.  
+    >  **연결한 후 즉시 추적 시작**을 선택한 경우에는 **추적 속성**대화 상자가 나타나지 않고 추적이 시작됩니다. 이 설정을 해제하려면 **도구**메뉴에서 **옵션**을 클릭한 다음 **연결한 후 즉시 추적 시작** 확인란의 선택을 취소합니다.  
   
 2.  **추적 이름** 입력란에 추적의 이름을 입력합니다.  
   
@@ -40,12 +39,9 @@ ms.locfileid: "63250873"
   
 4.  필요에 따라 추적 결과를 저장할 대상 파일이나 테이블을 지정합니다.  
   
-5.  
-  **이벤트 선택**탭에서 **SPID**열 머리글을 클릭하여 **필터 편집** 대화 상자를 엽니다. 또는 열 머리글을 마우스 오른쪽 단추로 클릭하고 **열 필터 편집**을 클릭할 수도 있습니다. 
-  **SPID** 열이 표시되지 않는 경우에는 **모든 열 표시** 확인란을 선택합니다.  
+5.  **이벤트 선택**탭에서 **SPID**열 머리글을 클릭하여 **필터 편집** 대화 상자를 엽니다. 또는 열 머리글을 마우스 오른쪽 단추로 클릭하고 **열 필터 편집**을 클릭할 수도 있습니다. **SPID** 열이 표시되지 않는 경우에는 **모든 열 표시** 확인란을 선택합니다.  
   
-6.  
-  **필터 편집** 대화 상자에서 적절한 비교 연산자를 확장한 다음 비교할 값으로 SPID를 입력합니다.  
+6.  **필터 편집** 대화 상자에서 적절한 비교 연산자를 확장한 다음 비교할 값으로 SPID를 입력합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Profiler](sql-server-profiler.md)  

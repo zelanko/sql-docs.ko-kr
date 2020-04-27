@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d323b1b92ba02e55064d2f86c62ee36a4a38d904
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188774"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
@@ -29,7 +29,7 @@ ms.locfileid: "63188774"
   
 |매개 변수|테이블 반환 매개 변수 열을 포함 하 여 비 테이블 반환 매개 변수 형식에 대 한 관련 특성|테이블 반환 매개 변수에 대한 관련 특성|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
-|*형식*|SQL_DESC_TYPE|SQL_SS_TABLE|  
+|*Type*|SQL_DESC_TYPE|SQL_SS_TABLE|  
 |*하위 형식*|무시됨|SQL_DATETIME 또는 SQL_INTERVAL 유형의 레코드에 대해 이 값을 SQL_DESC_DATETIME_INTERVAL_CODE로 설정합니다.|  
 |*길이*|SQL_DESC_OCTET_LENGTH|테이블 반환 매개 변수 유형 이름의 길이입니다. 유형 이름이 null로 끝나는 경우 SQL_NTS이고, 테이블 반환 매개 변수 유형 이름이 필요하지 않은 경우 0입니다.|  
 |*정밀도*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
@@ -43,7 +43,7 @@ ms.locfileid: "63188774"
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 SQLSetDescRec 지원  
  날짜/시간 유형에 대해 허용되는 값은 다음과 같습니다.  
   
-||*형식*|*하위 형식*|*길이*|*정밀도*|*규모*|  
+||*Type*|*하위 형식*|*길이*|*정밀도*|*규모*|  
 |-|------------|---------------|--------------|-----------------|-------------|  
 |Datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
@@ -55,8 +55,7 @@ ms.locfileid: "63188774"
  자세한 내용은 [ODBC&#41;&#40;날짜 및 시간 향상 ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
   
 ## <a name="sqlsetdescrec-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLSetDescRec 지원  
- 
-  `SQLSetDescRec`는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [ODBC&#41;&#40;LARGE CLR 사용자 정의 형식 ](../native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
+ `SQLSetDescRec`는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [ODBC&#41;&#40;LARGE CLR 사용자 정의 형식 ](../native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLSetDescRec](https://go.microsoft.com/fwlink/?LinkId=80704)   

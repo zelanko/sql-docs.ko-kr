@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d434df95a26485d4d7795d3ab960b8d2457b8ff6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185577"
 ---
 # <a name="basic-data-mining-tutorial"></a>기본 데이터 마이닝 자습서
@@ -34,11 +34,11 @@ ms.locfileid: "63185577"
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 마이닝에는 여러 예측 모델을 쉽게 개발 하 고 비교한 다음 결과에 대 한 작업을 수행 하는 데 도움이 되는 다음과 같은 기능이 포함 되어 있습니다.  
   
--   *홀드 아웃 테스트 집합-* 마이닝 구조를 만들 때 이제는 마이닝 구조의 데이터를 학습 집합과 테스트 집합으로 나눌 수 있습니다. 이렇게 하면 비슷한 데이터 집합에서 모델을 테스트하고 관련 모델의 정확도를 비교할 수 있습니다.  
+-   *홀드아웃 테스트 집합 -* 마이닝 구조를 만들 때 이제는 마이닝 구조의 데이터를 학습 집합과 테스트 집합으로 나눌 수 있습니다. 이렇게 하면 비슷한 데이터 집합에서 모델을 테스트하고 관련 모델의 정확도를 비교할 수 있습니다.  
   
--   *마이닝 모델 필터-* 이제 마이닝 모델에 필터를 연결 하 고 학습 및 테스트 중에 필터를 적용할 수 있습니다. 이렇게 하면 데이터의 여러 하위 집합을 기반으로 관련 모델을 쉽게 작성할 수 있습니다.  
+-   *마이닝 모델 필터 -* 이제 마이닝 모델에 필터를 연결하고 학습 및 테스트 중에 해당 필터를 적용할 수 있습니다. 이렇게 하면 데이터의 여러 하위 집합을 기반으로 관련 모델을 쉽게 작성할 수 있습니다.  
   
--   *구조 사례 및 구조 열로 드릴스루-* 이제 마이닝 모델의 일반적인 패턴에서 데이터 원본의 조치 가능한 세부 정보로 쉽게 이동할 수 있습니다.  
+-   *구조 사례 및 구조 열로 드릴스루 -* 이제 마이닝 모델의 일반적인 패턴에서 데이터 원본의 후속 조치 가능한 세부 정보로 쉽게 전환할 수 있습니다.  
   
  이 자습서는 다음 단원으로 이루어져 있습니다.  
   
@@ -51,11 +51,11 @@ ms.locfileid: "63185577"
  [3단원: 모델 추가 및 처리](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
  이 단원에서는 구조에 모델을 추가하는 방법을 배웁니다. 사용자가 만드는 모델은 다음 알고리즘을 사용하여 생성됩니다.  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]의사 결정 트리  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] 의사 결정 트리  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]클러스터링  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] 클러스터링  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]Naive Bayes  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes  
   
  [4 단원: 기본 데이터 마이닝 자습서 &#40;대상 메일링 모델 탐색&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
  이 단원에서는 뷰어를 사용하여 각 모델의 결과를 탐색하고 해석하는 방법을 배웁니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "63185577"
  [5 단원: 모델 테스트 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
  이 단원에서는 대상 메일 모델 중 하나의 복사본을 만들고, 마이닝 모델 필터를 추가하여 학습 데이터를 특정 고객 집합으로 제한한 다음 모델의 실행 가능성을 평가합니다.  
   
- [6 단원: 예측 만들기 및 작업 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [6단원: 예측 만들기 및 작업&#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
  기본 데이터 마이닝 자습서의 이 마지막 단원에서는 모델을 사용하여 자전거를 구매할 가능성이 가장 높은 고객을 예측합니다. 그런 다음 기본 사례로 드릴스루하여 연락처 정보를 얻습니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -73,19 +73,16 @@ ms.locfileid: "63185577"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다차원 모드  
   
--   
-  [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 데이터베이스.  
+-   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 데이터베이스.  
   
- 보안을 위해 예제 데이터베이스는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]과 함께 설치되지 않습니다. 
-  
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 공식 데이터베이스를 설치하려면 [Microsoft SQL 예제 데이터베이스](https://go.microsoft.com/fwlink/?LinkId=88417) 페이지에서 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]를 선택합니다.  
+ 보안을 위해 예제 데이터베이스는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]과 함께 설치되지 않습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 공식 데이터베이스를 설치하려면 [Microsoft SQL 예제 데이터베이스](https://go.microsoft.com/fwlink/?LinkId=88417) 페이지에서 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]를 선택합니다.  
   
 > [!NOTE]  
->  문서 뷰어 도구 모음에 **다음 항목** 단추 및 **이전 항목** 단추를 추가하면 단계의 앞뒤로 편리하게 이동할 수 있어 자습서를 더 쉽게 진행할 수 있습니다.  
+>   문서 뷰어 도구 모음에 **다음 항목** 단추 및 **이전 항목** 단추를 추가하면 단계의 앞뒤로 편리하게 이동할 수 있어 자습서를 더 쉽게 진행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 솔루션](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
  [마이닝 모델 태스크 및 방법](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [DMX를 사용 하 여 데이터 마이닝 모델 만들기 및 쿼리: 자습서 &#40;Analysis Services 데이터 마이닝&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [DMX를 사용하여 데이터 마이닝 모델 만들기 및 쿼리: 자습서&#40;Analysis Services - 데이터 마이닝&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

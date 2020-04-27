@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7b041dc07afb30fff0c03d96fec9cd8a5d62f965
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63229016"
 ---
 # <a name="resynchronizing-rows"></a>행 다시 동기화
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 커서 지원 행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 집합에 대해서만 **IRowsetResynch** 을 지원 합니다. **IRowsetResynch** 는 요청 시 사용할 수 없습니다. 소비자가 행 집합을 열기 전에 이 인터페이스를 요청해야 합니다.  
+  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 커서 지원 행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 집합에 대해서만 **IRowsetResynch** 을 지원 합니다. **IRowsetResynch**는 요청 시 사용할 수 없으며 소비자가 행 집합을 열기 전에 이 인터페이스를 요청해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [행 집합의 데이터 업데이트](updating-data-in-rowsets.md)  

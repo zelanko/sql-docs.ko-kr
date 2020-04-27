@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d5d777686bd40fa1b405f20da6173fc2de82640
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63226240"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
@@ -59,19 +59,17 @@ cbValue
  *hdbc*  
  대량 복사가 가능한 ODBC 연결 핸들입니다.  
   
- *필드가*  
+ *필드(field)*  
  속성을 설정할 서수 열 번호입니다.  
   
- *속성*  
+ *property*  
  속성 상수 중 하나입니다. 다음 표에는 속성 상수가 정의되어 있습니다.  
   
-|속성|값|Description|  
+|속성|값|설명|  
 |--------------|-----------|-----------------|  
-|BCP_FMT_TYPE|BYTE|사용자 파일에 있는 이 열의 데이터 형식입니다. 데이터베이스 테이블에 있는 해당 열의 데이터 형식과 다를 경우 대량 복사에서 가능한 경우 데이터를 변환합니다.<br /><br /> BCP_FMT_TYPE 매개 변수는 ODBC C 데이터 형식 열거자가 아닌 sqlncli.h의 SQL Server 데이터 형식 토큰에 의해 열거됩니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 SQLCHARACTER 형식을 사용하여 ODBC 형식의 SQL_C_CHAR라는 문자열을 지정할 수 있습니다.<br /><br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 대한 기본 데이터 표현을 지정하려면 이 매개 변수를 0으로 설정합니다.<br /><br /> SQL Server에서 파일로의 대량 복사에서 BCP_FMT_TYPE이 SQLDECIMAL 또는 SQLNUMERIC인 경우<br /><br /> -원본 열이 **decimal** 또는 **numeric**이 아니면 기본 전체 자릿수 및 소수 자릿수가 사용 됩니다.<br />-원본 열이 **decimal** 또는 **numeric**이면 원본 열의 전체 자릿수와 소수 자릿수가 사용 됩니다.|  
+|BCP_FMT_TYPE|BYTE|사용자 파일에 있는 이 열의 데이터 형식입니다. 데이터베이스 테이블에 있는 해당 열의 데이터 형식과 다를 경우 대량 복사에서 가능한 경우 데이터를 변환합니다.<br /><br /> BCP_FMT_TYPE 매개 변수는 ODBC C 데이터 형식 열거자가 아닌 sqlncli.h의 SQL Server 데이터 형식 토큰에 의해 열거됩니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 SQLCHARACTER 형식을 사용하여 ODBC 형식의 SQL_C_CHAR라는 문자열을 지정할 수 있습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 대한 기본 데이터 표현을 지정하려면 이 매개 변수를 0으로 설정합니다.<br /><br /> SQL Server에서 파일로의 대량 복사에서 BCP_FMT_TYPE이 SQLDECIMAL 또는 SQLNUMERIC인 경우<br /><br /> -원본 열이 **decimal** 또는 **numeric**이 아니면 기본 전체 자릿수 및 소수 자릿수가 사용 됩니다.<br />-원본 열이 **decimal** 또는 **numeric**이면 원본 열의 전체 자릿수와 소수 자릿수가 사용 됩니다.|  
 |BCP_FMT_INDICATOR_LEN|INT|표시기(접두사)의 길이(바이트)입니다.<br /><br /> 열 데이터의 길이 또는 null 표시기의 길이(바이트)입니다. 올바른 표시기 길이 값은 0(표시기를 사용하지 않을 경우), 1, 2 또는 4입니다.<br /><br /> 기본 대량 복사 표시기를 사용하도록 지정하려면 이 매개 변수를 SQL_VARLEN_DATA로 설정합니다.<br /><br /> 표시기는 메모리에서는 임의의 데이터 바로 앞에 나타나고 데이터 파일에서는 표시기가 적용되는 데이터 바로 앞에 나타납니다.<br /><br /> 표시기와 최대 열 길이를 사용하거나 표시기와 종결자 시퀀스를 사용하는 등 두 가지 이상의 방법을 사용하여 데이터 파일 열 길이를 지정하는 경우 대량 복사에는 복사되는 데이터 크기가 가장 작은 방법이 선택됩니다.<br /><br /> 사용자 개입을 통해 데이터 형식이 조정되지 않는 대량 복사로 생성된 데이터 파일에는 열 데이터의 길이가 변경될 수 있거나 열이 NULL 값을 허용할 수 있는 경우 표시기가 포함됩니다.|  
-|BCP_FMT_DATA_LEN|DBINT|데이터의 길이(바이트), 즉 열 길이입니다.<br /><br /> 길이 표시기나 종결자의 길이를 제외한 사용자 파일에 있는 이 열 데이터의 최대 길이(바이트)입니다.<br /><br /> BCP_FMT_DATA_LEN을 SQL_NULL_DATA로 설정하면 데이터 파일 열의 모든 값이 NULL이거나 NULL로 설정됨을 나타냅니다.<br /><br /> BCP_FMT_DATA_LEN을 SQL_VARLEN_DATA로 설정하면 시스템에서 각 열의 데이터 길이를 확인함을 나타냅니다. 일부 열의 경우 이 설정은 길이 또는 Null 표시기가 생성되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 복사되는 복사본의 데이터 앞에 추가됨을 의미하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 복사되는 데이터에 표시기가 필요함을 나타냅니다.<br /><br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 및 이진 데이터 형식에 대해서는 BCP_FMT_DATA_LEN이 SQL_VARLEN_DATA, SQL_NULL_DATA, 0 또는 양수 값일 수 있습니다. BCP_FMT_DATA_LEN이 SQL_VARLEN_DATA이면 시스템에서 길이 표시기(있는 경우)나 종결자 시퀀스를 사용하여 데이터 길이를 확인합니다. 길이 표시기와 종결자 시퀀스를 모두 지정하는 경우 대량 복사에는 복사되는 데이터 크기가 가장 작은 방법이 사용됩니다. BCP_FMT_DATA_LEN이 SQL_VARLEN_DATA인 경우 데이터 형식이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 또는 이진 형식이며 길이 표시기나 종결자 시퀀스를 모두 지정하지 않으면 시스템에서 오류 메시지를 반환합니다.<br /><br /> BCP_FMT_DATA_LEN이 0이나 양수 값이면 시스템에서 BCP_FMT_DATA_LEN을 최대 데이터 길이로 사용합니다. 그러나 양수 BCP_FMT_DATA_LEN과 함께 길이 표시기 또는 종결자 시퀀스도 지정하는 경우 시스템에서는 복사되는 데이터가 적은 방법을 사용하여 데이터 길이를 확인합니다.<br /><br /> BCP_FMT_DATA_LEN 값은 데이터의 바이트 수를 나타냅니다. 문자 데이터가 유니코드 와이드 문자로 표현되는 경우 양수 BCP_FMT_DATA_LEN 매개 변수 값은 문자 수에 각 문자의 크기(바이트)를 곱한 값을 나타냅니다.|  
+|BCP_FMT_DATA_LEN|DBINT|데이터의 길이(바이트), 즉 열 길이입니다.<br /><br /> 길이 표시기나 종결자의 길이를 제외한 사용자 파일에 있는 이 열 데이터의 최대 길이(바이트)입니다.<br /><br /> BCP_FMT_DATA_LEN을 SQL_NULL_DATA로 설정하면 데이터 파일 열의 모든 값이 NULL이거나 NULL로 설정됨을 나타냅니다.<br /><br /> BCP_FMT_DATA_LEN을 SQL_VARLEN_DATA로 설정하면 시스템에서 각 열의 데이터 길이를 확인함을 나타냅니다. 일부 열의 경우 이 설정은 길이 또는 Null 표시기가 생성되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 복사되는 복사본의 데이터 앞에 추가됨을 의미하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 복사되는 데이터에 표시기가 필요함을 나타냅니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 및 이진 데이터 형식에 대해서는 BCP_FMT_DATA_LEN이 SQL_VARLEN_DATA, SQL_NULL_DATA, 0 또는 양수 값일 수 있습니다. BCP_FMT_DATA_LEN이 SQL_VARLEN_DATA이면 시스템에서 길이 표시기(있는 경우)나 종결자 시퀀스를 사용하여 데이터 길이를 확인합니다. 길이 표시기와 종결자 시퀀스를 모두 지정하는 경우 대량 복사에는 복사되는 데이터 크기가 가장 작은 방법이 사용됩니다. BCP_FMT_DATA_LEN이 SQL_VARLEN_DATA인 경우 데이터 형식이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 또는 이진 형식이며 길이 표시기나 종결자 시퀀스를 모두 지정하지 않으면 시스템에서 오류 메시지를 반환합니다.<br /><br /> BCP_FMT_DATA_LEN이 0이나 양수 값이면 시스템에서 BCP_FMT_DATA_LEN을 최대 데이터 길이로 사용합니다. 그러나 양수 BCP_FMT_DATA_LEN과 함께 길이 표시기 또는 종결자 시퀀스도 지정하는 경우 시스템에서는 복사되는 데이터가 적은 방법을 사용하여 데이터 길이를 확인합니다.<br /><br /> BCP_FMT_DATA_LEN 값은 데이터의 바이트 수를 나타냅니다. 문자 데이터가 유니코드 와이드 문자로 표현되는 경우 양수 BCP_FMT_DATA_LEN 매개 변수 값은 문자 수에 각 문자의 크기(바이트)를 곱한 값을 나타냅니다.|  
 |BCP_FMT_TERMINATOR|LPCBYTE|이 열에 사용할 종결자 시퀀스(ANSI 또는 유니코드)에 대한 포인터입니다. 이 매개 변수는 주로 문자 데이터 형식에 유용한데 그 이유는 다른 모든 형식은 길이가 고정되어 있거나 이진 데이터의 경우 현재 바이트 수를 정확하게 기록하기 위해 길이 표시기가 필요하기 때문입니다.<br /><br /> 추출한 데이터가 종결되지 않도록 하거나 사용자 파일의 데이터가 종결되지 않았음을 나타내려면 이 매개 변수를 NULL로 설정하십시오.<br /><br /> 종결자와 길이 표시기를 사용하거나 종결자와 최대 열 길이를 사용하는 등 두 가지 이상의 방법을 사용하여 사용자 파일 열 길이를 지정하는 경우 대량 복사에는 복사되는 데이터 크기가 가장 작은 방법이 선택됩니다.<br /><br /> 대량 복사 API는 필요한 경우 유니코드에서 MBCS로의 문자 변환을 수행합니다. 종결자 바이트 문자열 및 바이트 문자열 길이가 모두 올바르게 설정되도록 주의해야 합니다.|  
 |BCP_FMT_SERVER_COL|INT|데이터베이스에서 열의 서수 위치입니다.|  
 |BCP_FMT_COLLATION|LPCSTR|데이터 정렬 이름입니다.|  
@@ -116,8 +114,7 @@ cbValue
   
  사용자 파일의 모든 데이터를 SQL Server 테이블로 복사할 필요는 없습니다. 열을 건너뛰려면 BCP_FMT_SERVER_COL 매개 변수를 0으로 설정하여 해당 열의 데이터 형식을 지정합니다. 열을 건너뛰려면 열 형식을 지정해야 합니다.  
   
- 
-  [bcp_writefmt](bcp-writefmt.md) 함수는 형식 사양을 유지하는 데 사용할 수 있습니다.  
+ [bcp_writefmt](bcp-writefmt.md) 함수는 형식 사양을 유지하는 데 사용할 수 있습니다.  
   
 ## <a name="bcp_setcolfmt-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 bcp_setcolfmt 지원  
  날짜/시간 형식에 대 한 BCP_FMT_TYPE 속성과 함께 사용 되는 형식은 [OLE DB 및 ODBC&#41;&#40;향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 내용 ](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)에 지정 되어 있습니다.  
