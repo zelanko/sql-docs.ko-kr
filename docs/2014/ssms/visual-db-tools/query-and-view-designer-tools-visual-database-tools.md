@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 639e6b7640f3463bfe100345d044437d619a5546
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63460007"
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>쿼리 및 뷰 디자이너 도구(Visual Database Tools)
@@ -50,6 +50,6 @@ ms.locfileid: "63460007"
 ## <a name="see-also"></a>참고 항목  
  [쿼리 및 뷰 디자인 방법 도움말 항목 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [Visual Database Tools를 &#40;쿼리 및 뷰 디자이너를 엽니다&#41;](open-the-query-and-view-designer-visual-database-tools.md)   
- [SQL 편집기 &#40;Visual Database Tools&#41;](sql-editor-visual-database-tools.md)  
+ [SQL 편집기&#40;Visual Database Tools&#41;](sql-editor-visual-database-tools.md)  
   
   

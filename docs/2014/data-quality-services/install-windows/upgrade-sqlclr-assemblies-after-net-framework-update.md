@@ -11,14 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aa4cd8349846a5c00f62f6cbf115b4cc3a1614ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480471"
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>.NET Framework 업데이트 후 SQLCLR 어셈블리 업그레이드
-  
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS)는 Microsoft .NET Framework 4 어셈블리를 참조하는 SQLCR(SQL 공용 언어 런타임)의 컬렉션입니다. 참조되는 이러한 .NET Framework 어셈블리에 영향을 주는 .NET Framework 업데이트를 컴퓨터에 설치하면 GAC(전역 어셈블리 캐시)의 어셈블리 MVID(모듈 버전 ID)가 변경될 수 있습니다. 이렇게 되면 GAC의 참조되는 어셈블리 MVID와 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 어셈블리 MVID 간에 불일치가 발생합니다.  
   
  .NET Framework 업데이트를 위해 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 컴퓨터를 다시 시작해야 하는 경우 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 컴퓨터를 다시 시작하면 영향을 받는 SQLCLR 어셈블리가 자동으로 업그레이드되어 MVID 불일치 문제가 해결됩니다. 그러나 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 서버 컴퓨터를 다시 시작할 필요가 없는 .NET Framework 업데이트의 경우 어셈블리 MVID의 불일치로 인해 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 를 사용하여 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]에 연결하려고 할 때 오류가 발생합니다.  

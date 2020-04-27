@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4b247efb895f037965620c7430a3dc41c33fe550
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013652"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>sql:max-depth를 사용하여 재귀 관계의 깊이 지정
@@ -93,8 +93,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 </xsd:schema>  
 ```  
   
- 관계가 재귀적이므로 스키마에서 재귀 깊이를 지정할 방법이 필요합니다. 그렇지 않으면 무한 재귀(직원이 직원에게 보고하고 이 직원은 또 다른 직원에게 보고하는 등)가 생성됩니다. 
-  `sql:max-depth` 주석을 사용하면 재귀가 계속되는 깊이를 지정할 수 있습니다. 다음의 특정 예제에서 `sql:max-depth` 값을 지정하려면 회사에서 관리 계층 구조가 어떠한 깊이로 이루어져 있는지 알아야 합니다.  
+ 관계가 재귀적이므로 스키마에서 재귀 깊이를 지정할 방법이 필요합니다. 그렇지 않으면 무한 재귀(직원이 직원에게 보고하고 이 직원은 또 다른 직원에게 보고하는 등)가 생성됩니다. `sql:max-depth` 주석을 사용하면 재귀가 계속되는 깊이를 지정할 수 있습니다. 다음의 특정 예제에서 `sql:max-depth` 값을 지정하려면 회사에서 관리 계층 구조가 어떠한 깊이로 이루어져 있는지 알아야 합니다.  
   
 > [!NOTE]  
 >  이 스키마에서는 `sql:limit-field` 주석은 지정하지만 `sql:limit-value` 주석은 지정하지 않습니다. 따라서 결과 계층 구조에서 최상위 노드는 누구에게도 보고하지 않는 직원 (ReportsTo은 NULL입니다.) 을 `sql:limit-field` 지정 하 고 `sql:limit-value` (기본값은 NULL 임) 주석은이를 수행 하지 않습니다. 결과 XML에 가능한 모든 보고 트리(테이블의 모든 직원에 대한 보고 트리)를 포함하려면 스키마에서 `sql:limit-field` 주석을 제거합니다.  
@@ -233,8 +232,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  스키마에서 `sql:max-depth` 주석을 사용하여 스키마에 설명된 재귀 관계의 재귀 깊이를 지정할 수 있습니다. `sql:max-depth` 주석의 값은 재귀의 수를 나타내는 양의 정수 (1-50)입니다. 값 1은 `sql:max-depth` 주석이 지정 된 요소에서 재귀를 중지 합니다. 값 `sql:max-depth` 이 2 이면가 지정 된 요소의 다음 수준에서 재귀가 중지 됩니다. 합니다.  
   
 > [!NOTE]  
->  기본 구현에서는 매핑 스키마에 대해 지정 된 XPath 쿼리를 SELECT ...로 변환 합니다. FOR XML EXPLICIT 쿼리입니다. 이 쿼리에서는 한정된 재귀 깊이를 지정해야 합니다. 
-  `sql:max-depth`에 지정하는 값이 높을수록 생성되는 FOR XML EXPLICIT 쿼리가 커집니다. 그러면 검색 시간이 느려질 수 있습니다.  
+>  기본 구현에서는 매핑 스키마에 대해 지정 된 XPath 쿼리를 SELECT ...로 변환 합니다. FOR XML EXPLICIT 쿼리입니다. 이 쿼리에서는 한정된 재귀 깊이를 지정해야 합니다. `sql:max-depth`에 지정하는 값이 높을수록 생성되는 FOR XML EXPLICIT 쿼리가 커집니다. 그러면 검색 시간이 느려질 수 있습니다.  
   
 > [!NOTE]  
 >  Updategrams 및 XML 대량 로드에서는 max-depth 주석을 무시합니다. 따라서 max-depth에 지정하는 값에 상관없이 재귀 업데이트 또는 삽입이 수행됩니다.  

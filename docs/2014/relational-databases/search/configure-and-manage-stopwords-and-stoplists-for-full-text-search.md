@@ -18,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fe48b26960db591ce803b1f110e9293fd22d6554
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011521"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리
   전체 텍스트 인덱스가 너무 확장되지 않도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 검색에 도움이 되지 않지만 자주 사용되는 문자열을 무시하는 메커니즘이 있습니다. 이렇게 무시된 문자열을 *중지 단어*라고 합니다. 인덱스를 만드는 동안 전체 텍스트 엔진은 전체 텍스트 인덱스에서 중지 단어를 생략합니다. 즉, 전체 텍스트 쿼리는 중지 단어에서 검색하지 않습니다.  
   
-##  <a name="understand"></a>중지 단어 및 중지 목록 이해  
+##  <a name="understanding-stopwords-and-stoplists"></a><a name="understand"></a>중지 단어 및 중지 목록 이해  
  중지 단어는 특정 언어에서 의미 있는 단어이거나 언어적 의미가 없는 *토큰* 일 수 있습니다. 예를 들어 영어의 경우 "a", "and", "is" 및 "the"와 같은 단어는 검색에 도움이 되지 않으므로 전체 텍스트 인덱스에서 제외됩니다.  
   
  전체 텍스트 인덱스는 중지 단어의 포함을 무시하지만 위치를 고려합니다. 예를 들어 "Instructions are applicable to these Adventure Works Cycles models"라는 구를 가정합니다. 다음 표에서는 이 구에서의 단어 위치를 설명합니다.  
@@ -49,11 +49,10 @@ ms.locfileid: "66011521"
  중지 단어는 데이터베이스에서 중지 목록이라는 개체를 사용하여 관리됩니다. *중지 목록* 은 전체 텍스트 인덱스와 연결된 경우 해당 인덱스의 전체 텍스트 쿼리에 적용되는 중지 단어 목록입니다.  
   
   
-##  <a name="creating"></a>중지 목록 만들기  
+##  <a name="creating-a-stoplist"></a><a name="creating"></a>중지 목록 만들기  
  다음과 같은 방법으로 중지 목록을 만들 수 있습니다.  
   
--   데이터베이스에서 시스템 제공 중지 목록을 사용합니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 지원되는 각 언어, 즉 기본적으로 지정된 단어 분리기와 연결된 모든 언어에서 가장 일반적으로 사용되는 중지 단어가 포함된 시스템 중지 목록을 제공합니다. 시스템 중지 목록에는 지원되는 모든 언어의 일반적인 중지 단어가 포함됩니다.  시스템 중지 목록 사본을 만들고 여기에서 중지 단어를 추가 및 제거하여 사본을 사용자 지정할 수 있습니다.  
+-   데이터베이스에서 시스템 제공 중지 목록을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 지원되는 각 언어, 즉 기본적으로 지정된 단어 분리기와 연결된 모든 언어에서 가장 일반적으로 사용되는 중지 단어가 포함된 시스템 중지 목록을 제공합니다. 시스템 중지 목록에는 지원되는 모든 언어의 일반적인 중지 단어가 포함됩니다.  시스템 중지 목록 사본을 만들고 여기에서 중지 단어를 추가 및 제거하여 사본을 사용자 지정할 수 있습니다.  
   
      시스템 중지 목록은 [리소스](../databases/resource-database.md) 데이터베이스에 설치됩니다.  
   
@@ -96,7 +95,7 @@ ms.locfileid: "66011521"
 -   [DROP FULLTEXT STOPLIST&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)  
   
   
-##  <a name="queries"></a>전체 텍스트 쿼리에서 중지 목록 사용  
+##  <a name="using-a-stoplist-in-full-text-queries"></a><a name="queries"></a>전체 텍스트 쿼리에서 중지 목록 사용  
  쿼리에서 중지 목록을 사용하려면 해당 중지 목록을 전체 텍스트 인덱스와 연결해야 합니다. 인덱스를 만들 때 중지 목록을 전체 텍스트 인덱스에 연결하거나 나중에 인덱스를 변경하여 중지 목록을 추가할 수 있습니다.  
   
  **전체 텍스트 인덱스를 만들고 중지 목록과 연결하려면**  
@@ -112,26 +111,26 @@ ms.locfileid: "66011521"
 -   [transform noise words 서버 구성 옵션](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)  
   
   
-##  <a name="viewing"></a>중지 목록 및 중지 목록 메타 데이터 보기  
+##  <a name="viewing-stoplists-and-stoplist-metadata"></a><a name="viewing"></a>중지 목록 및 중지 목록 메타 데이터 보기  
  **중지 목록의 모든 중지 단어를 보려면**  
   
--   [sys.fulltext_stopwords&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
+-   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
   
  **현재 데이터베이스에 있는 모든 중지 목록에 대한 정보를 얻으려면**  
   
--   [sys.fulltext_stoplists&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql)  
+-   [sys.fulltext_stoplists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql)  
   
--   [sys.fulltext_stopwords&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
+-   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
   
  **단어 분리기, 동의어 사전 및 중지 목록 조합의 토큰화 결과를 보려면**  
   
--   [sys.dm_fts_parser&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
+-   [dm_fts_parser &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
   
   
-##  <a name="change"></a>중지 목록에서 중지 단어 변경  
+##  <a name="changing-the-stopwords-in-a-stoplist"></a><a name="change"></a>중지 목록에서 중지 단어 변경  
  **중지 목록에서 중지 단어를 추가 또는 삭제하려면**  
   
--   [ALTER FULLTEXT STOPLIST&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)  
+-   [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)  
   
 #### <a name="to-change-the-stopwords-in-a-stoplist-in-management-studio"></a>Management Studio에서 중지 목록의 중지 단어를 변경하려면  
   
@@ -154,7 +153,7 @@ ms.locfileid: "66011521"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
   
-##  <a name="upgrade"></a>SQL Server 2005에서 의미 없는 단어 업그레이드  
+##  <a name="upgrading-noise-words-from-sql-server-2005"></a><a name="upgrade"></a>SQL Server 2005에서 의미 없는 단어 업그레이드  
  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 의 의미 없는 단어가 중지 단어로 바뀌었습니다. 데이터베이스를 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 업그레이드하면 의미 없는 단어 파일이 더 이상 사용되지 않습니다. 그러나 의미 없는 단어 파일이 FTDATA\ FTNoiseThesaurusBak 폴더에 저장되므로 나중에 해당 중지 목록을 업데이트하거나 새로 작성할 때 사용할 수 있습니다. 의미 없는 단어 파일을 중지 목록으로 업그레이드하는 방법은 [전체 텍스트 검색 업그레이드](upgrade-full-text-search.md)를 참조하세요.  
   
   

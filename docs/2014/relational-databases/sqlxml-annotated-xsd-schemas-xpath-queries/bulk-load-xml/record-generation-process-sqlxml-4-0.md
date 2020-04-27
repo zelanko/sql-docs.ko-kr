@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b43765b03ba42cede8c6879e749f1701f306d1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013343"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>레코드 생성 프로세스(SQLXML 4.0)
@@ -100,8 +100,7 @@ ms.locfileid: "66013343"
 >  이 모델에서는 끝 태그에 도달할 때(또는 노드가 범위를 벗어날 때) 레코드가 삽입되므로 레코드와 관련된 모든 데이터를 노드 범위 내에 정의해야 합니다.  
   
 ## <a name="record-subset-and-the-key-ordering-rule"></a>레코드 하위 집합 및 키 순서 지정 규칙  
- 
-  `<sql:relationship>`을 사용하는 매핑 스키마를 지정할 때 하위 집합이라는 용어는 관계의 외래 쪽에서 생성되는 레코드 집합을 나타냅니다. 다음 예에서는 CustOrder 레코드가 `<sql:relationship>`의 외래 쪽에 있습니다.  
+ `<sql:relationship>`을 사용하는 매핑 스키마를 지정할 때 하위 집합이라는 용어는 관계의 외래 쪽에서 생성되는 레코드 집합을 나타냅니다. 다음 예에서는 CustOrder 레코드가 `<sql:relationship>`의 외래 쪽에 있습니다.  
   
  예를 들어 데이터베이스에 다음과 같은 테이블이 포함된다고 가정합니다.  
   
@@ -219,8 +218,7 @@ ms.locfileid: "66013343"
 ## <a name="exceptions-to-the-record-generation-rule"></a>레코드 생성 규칙의 예외  
  노드가 IDREF 또는 IDREFS 형식인 경우 XML 대량 로드는 범위가 시작될 때 노드에 대한 레코드를 생성하지 않습니다. 따라서 스키마의 특정 위치에 레코드의 완전한 설명이 존재해야 합니다. IDREFS 형식이 무시되는 것처럼 `dt:type="nmtokens"` 주석이 무시됩니다.  
   
- 예를 들어 ** \<고객>** 및 ** \<주문>** 요소를 설명 하는 다음 XSD 스키마를 살펴보세요. ** \<Customer>** 요소는 IDREFS 유형의 **orderlist** 특성을 포함 합니다. 
-  `<sql:relationship>` 태그는 고객과 주문 목록 간의 일 대 다 관계를 지정합니다.  
+ 예를 들어 ** \<고객>** 및 ** \<주문>** 요소를 설명 하는 다음 XSD 스키마를 살펴보세요. ** \<Customer>** 요소는 IDREFS 유형의 **orderlist** 특성을 포함 합니다. `<sql:relationship>` 태그는 고객과 주문 목록 간의 일 대 다 관계를 지정합니다.  
   
  스키마는 다음과 같습니다.  
   

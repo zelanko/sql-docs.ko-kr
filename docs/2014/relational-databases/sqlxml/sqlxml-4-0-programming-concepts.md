@@ -14,17 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03d6069358c1591233aa892a723b7367a21be569
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012229"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0 프로그래밍 개념
   SQLXML 3.0은 웹 릴리스로 제공되어 추가 클라이언트 쪽 XML 기능과 주석이 추가된 XSD 스키마, XML 대량 로드, 웹 서비스(SOAP) 지원, Updategram 등 기존 기능에 대한 향상된 기능을 제공했습니다.  
   
- 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서는 SQLXML 3.0과 동일한 기능뿐 아니라 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입된 새로운 기능을 수용하기 위해 제공된 추가 업데이트를 제공하는 SQLXML 4.0을 소개했습니다.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서는 SQLXML 3.0과 동일한 기능뿐 아니라 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입된 새로운 기능을 수용하기 위해 제공된 추가 업데이트를 제공하는 SQLXML 4.0을 소개했습니다.  
   
  이 섹션에서는 SQLXML 4.0에 대한 정보를 제공합니다.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "66012229"
  [SQLXML 4.0에서 updategram을 사용하여 데이터 수정](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
  주석이 추가된 XSD(또는 XDR) 스키마가 제공하는 XML 뷰에서 작업하여 데이터베이스의 데이터를 수정하는 Updategram에 대한 정보를 제공합니다.  
   
- [SQLXML 4.0&#41;&#40;XML 데이터 대량 로드를 수행 하는 중](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [XML 데이터 대량 로드 수행&#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
  SQLXML 4.0에서 XML을 대량 로드하는 방법에 대해 설명합니다.  
   
  [SQLXML 4.0 데이터 액세스 구성 요소](../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  

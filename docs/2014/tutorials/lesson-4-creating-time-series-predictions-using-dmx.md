@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 772e5f5f71ca82dd18fec48730522c80e907414f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312086"
 ---
 # <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>4단원: DMX를 사용하여 시계열 예측 만들기
@@ -69,8 +69,7 @@ WHERE [<criteria>]
   
 #### <a name="to-create-a-simple-time-series-prediction-query"></a>간단한 시계열 예측 쿼리를 만들려면  
   
-1.  
-  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
@@ -82,7 +81,7 @@ WHERE [<criteria>]
     <select list>   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     [Forecasting_MIXED].[ModelRegion],  
@@ -94,8 +93,7 @@ WHERE [<criteria>]
   
      두 번째 및 세 번째 줄에서는 `PredictTimeSeries` 함수를 사용합니다. 각 줄에서는 `[Quantity]` 또는 `[Amount]`등 서로 다른 특성을 예측합니다. 예측 가능한 특성 이름 뒤의 숫자는 예측할 시간 단계 수를 지정합니다.  
   
-     
-  `AS` 절은 각 예측 함수에 의해 반환되는 열에 이름을 제공하는 데 사용됩니다. 별칭을 제공하지 않으면 기본적으로 두 열 모두 레이블 `Expression`이 지정되어 반환됩니다.  
+     `AS` 절은 각 예측 함수에 의해 반환되는 열에 이름을 제공하는 데 사용됩니다. 별칭을 제공하지 않으면 기본적으로 두 열 모두 레이블 `Expression`이 지정되어 반환됩니다.  
   
 4.  다음 내용을  
   
@@ -103,7 +101,7 @@ WHERE [<criteria>]
     [<mining model>]   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     [Forecasting_MIXED]  
@@ -115,7 +113,7 @@ WHERE [<criteria>]
     WHERE [criteria>]   
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     WHERE [ModelRegion] = 'M200 Europe' OR  
@@ -135,8 +133,7 @@ WHERE [<criteria>]
     [ModelRegion] = 'M200 Pacific'  
     ```  
   
-6.  
-  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
+6.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
 7.  다른 이름 **으로 저장** 대화 상자에서 해당 폴더로 이동한 다음 파일 `SimpleTimeSeriesPrediction.dmx`이름을로 합니다.  
   

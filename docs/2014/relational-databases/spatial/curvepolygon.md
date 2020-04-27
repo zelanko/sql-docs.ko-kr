@@ -10,14 +10,13 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: ddd07c68d5549ed4cfc7cc3f421168ad968dadda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014247"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
-  
   `CurvePolygon`은 외부 경계 링과 0개 이상의 내부 링에서 정의하는 토폴로지 방식으로 닫힌 표면입니다.  
   
 > [!IMPORTANT]  
@@ -25,21 +24,17 @@ ms.locfileid: "66014247"
   
  다음 조건은 `CurvePolygon` 인스턴스의 특성을 정의 합니다.  
   
--   
-  `CurvePolygon` 인스턴스의 경계는 외부 링과 모든 내부 링으로 정의됩니다.  
+-   `CurvePolygon` 인스턴스의 경계는 외부 링과 모든 내부 링으로 정의됩니다.  
   
--   
-  `CurvePolygon` 인스턴스의 내부는 외부 링과 모든 내부 링 사이의 공간입니다.  
+-   `CurvePolygon` 인스턴스의 내부는 외부 링과 모든 내부 링 사이의 공간입니다.  
   
- 
-  `CurvePolygon` 인스턴스는 `Polygon` 인스턴스와 다릅니다. `CurvePolygon` 인스턴스에는 원호 세그먼트인 `CircularString` 및 `CompoundCurve`가 포함될 수 있습니다.  
+ `CurvePolygon` 인스턴스는 `Polygon` 인스턴스와 다릅니다. `CurvePolygon` 인스턴스에는 원호 세그먼트인 `CircularString` 및 `CompoundCurve`가 포함될 수 있습니다.  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve 인스턴스  
  다음 그림에서는 유효한 `CurvePolygon` 그림을 보여 줍니다.  
   
 ### <a name="accepted-instances"></a>허용되는 인스턴스  
- 
-  `CurvePolygon` 인스턴스가 허용되려면 해당 인스턴스가 비어 있거나 허용된 원호 링만 포함해야 합니다. 허용되는 원호 링은 다음 요구 사항을 충족합니다.  
+ `CurvePolygon` 인스턴스가 허용되려면 해당 인스턴스가 비어 있거나 허용된 원호 링만 포함해야 합니다. 허용되는 원호 링은 다음 요구 사항을 충족합니다.  
   
 1.  허용되는 `LineString`, `CircularString` 또는 `CompoundCurve` 인스턴스여야 합니다. 허용되는 인스턴스에 대한 자세한 내용은 [LineString](linestring.md), [CircularString](circularstring.md)및 [CompoundCurve](compoundcurve.md)를 참조하십시오.  
   
@@ -60,8 +55,7 @@ DECLARE @g4 geometry = 'CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))';
 DECLARE @g5 geography = 'CURVEPOLYGON((-122.3 47, 122.3 -47, 125.7 -49, 121 -38, -122.3 47))';  
 ```  
   
- `@g3` 이 허용됩니다. 
-  `@g5` 유형 인스턴스가 유효하지 않아도 `geography`가 허용됩니다.  
+ `@g3` 이 허용됩니다. `geography` 유형 인스턴스가 유효하지 않아도 `@g5`가 허용됩니다.  
   
  다음 예에서는 `System.FormatException`이 발생합니다.  
   
@@ -73,8 +67,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
  `@g1` 이 허용되지 않습니다. `@g2` 가 허용되지 않습니다.  
   
 ### <a name="valid-instances"></a>유효한 인스턴스  
- 
-  `CurvePolygon` 인스턴스가 유효하려면 외부 링과 내부 링이 모두 다음 조건을 충족해야 합니다.  
+ `CurvePolygon` 인스턴스가 유효하려면 외부 링과 내부 링이 모두 다음 조건을 충족해야 합니다.  
   
 1.  이 두 링은 단일 탄젠트 점에서만 접할 수 있습니다.  
   

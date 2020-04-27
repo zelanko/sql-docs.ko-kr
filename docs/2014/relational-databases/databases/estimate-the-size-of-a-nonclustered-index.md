@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aa4b0d73d1cba3d612da9f666bb548dfbc54102f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054116"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>비클러스터형 인덱스의 크기 예측
@@ -181,7 +181,7 @@ ms.locfileid: "66054116"
   
 5.  인덱스 행 크기를 계산합니다.  
   
-     ***Leaf_Row_Size***  = ****** Fixed_Leaf_Size + ****** Variable_Leaf_Size + ***Leaf_Null_Bitmap*** + 1 (인덱스 행의 행 머리글 오버 헤드) + 6 (자식 페이지 ID 포인터)  
+     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size***Fixed_Leaf_Size + ***Variable_Leaf_Size***Variable_Leaf_Size + ***Leaf_Null_Bitmap*** + 1 (인덱스 행의 행 머리글 오버 헤드) + 6 (자식 페이지 ID 포인터)  
   
 6.  페이지당 인덱스 행 수를 계산합니다. 페이지당 사용 가능한 바이트 수는 8,096바이트입니다.  
   

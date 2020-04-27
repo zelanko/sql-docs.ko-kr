@@ -22,43 +22,37 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2c4d515540f144052214627b3d6b08211358bb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013950"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>데이터 형식 강제 변환 및 sql:datatype 주석(SQLXML 4.0)
   XSD 스키마에서 `xsd:type` 특성은 요소 또는 특성의 XSD 데이터 형식을 지정합니다. XSD 스키마를 사용하여 데이터베이스에서 데이터를 추출할 경우 지정된 데이터 형식이 데이터 서식 지정에 사용됩니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 주석을 사용하면 스키마에 XSD 형식을 지정할 수 있을 뿐만 아니라 Microsoft `sql:datatype` 데이터 형식도 지정할 수 있습니다. 
-  `xsd:type` 및 `sql:datatype` 특성은 XSD 데이터 형식과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 간의 매핑을 제어합니다.  
+ `sql:datatype` 주석을 사용하면 스키마에 XSD 형식을 지정할 수 있을 뿐만 아니라 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식도 지정할 수 있습니다. `xsd:type` 및 `sql:datatype` 특성은 XSD 데이터 형식과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 간의 매핑을 제어합니다.  
   
 ## <a name="xsdtype-attribute"></a>xsd:type 특성  
- 
-  `xsd:type` 특성을 사용하여 열에 매핑되는 특성이나 요소의 XML 데이터 형식을 지정할 수 있습니다. 
-  `xsd:type`은 서버에서 반환되는 문서뿐만 아니라 실행되는 XPath 쿼리에도 영향을 미칩니다. 
-  `xsd:type`이 포함된 매핑 스키마를 기준으로 XPath 쿼리가 실행될 때 XPath는 지정된 데이터 형식을 사용하여 쿼리를 처리합니다. XPath를 사용 `xsd:type`하는 방법에 대 한 자세한 내용은 [&#40;SQLXML 4.0&#41;XSD 데이터 형식을 xpath 데이터 형식에 매핑 ](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)을 참조 하세요.  
+ `xsd:type` 특성을 사용하여 열에 매핑되는 특성이나 요소의 XML 데이터 형식을 지정할 수 있습니다. `xsd:type`은 서버에서 반환되는 문서뿐만 아니라 실행되는 XPath 쿼리에도 영향을 미칩니다. `xsd:type`이 포함된 매핑 스키마를 기준으로 XPath 쿼리가 실행될 때 XPath는 지정된 데이터 형식을 사용하여 쿼리를 처리합니다. XPath를 사용 `xsd:type`하는 방법에 대 한 자세한 내용은 [&#40;SQLXML 4.0&#41;XSD 데이터 형식을 xpath 데이터 형식에 매핑 ](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)을 참조 하세요.  
   
  반환된 문서에서 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식은 문자열 표현으로 변환됩니다. 일부 데이터 형식에는 추가적인 변환이 필요합니다. 다음 표에서는 다양한 `xsd:type` 값에 사용되는 변환을 보여 줍니다.  
   
 |XSD 데이터 형식|SQL Server 변환|  
 |-------------------|---------------------------|  
 |부울|CONVERT(bit, COLUMN)|  
-|Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
+|날짜|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
 |decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
-|Time|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
+|시간|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
 |나머지|추가 변환 없음|  
   
 > [!NOTE]  
->  "XYZ"를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식으로 변환하는 경우처럼 변환이 가능하지 않거나 -100000을 `xsd:type` XSD 형식으로 변환하는 경우처럼 값이 데이터 형식의 범위를 초과하는 경우와 같이, `decimal`에서 반환되는 일부 값이 `UnsignedShort`을 사용하여 지정한 XML 데이터 형식과 호환되지 않을 수 있습니다. 호환되지 않는 형식 변환은 XML 문서를 유효하지 않게 만들거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류를 발생시킬 수 있습니다.  
+>  "XYZ"를 `xsd:type` 데이터 형식으로 변환하는 경우처럼 변환이 가능하지 않거나 -100000을 `decimal` XSD 형식으로 변환하는 경우처럼 값이 데이터 형식의 범위를 초과하는 경우와 같이, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 반환되는 일부 값이 `UnsignedShort`을 사용하여 지정한 XML 데이터 형식과 호환되지 않을 수 있습니다. 호환되지 않는 형식 변환은 XML 문서를 유효하지 않게 만들거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류를 발생시킬 수 있습니다.  
   
 ## <a name="mapping-from-sql-server-data-types-to-xsd-data-types"></a>SQL Server 데이터 형식에서 XSD 데이터 형식으로의 매핑  
- 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에서 XSD 데이터 형식으로의 명확한 매핑을 보여 줍니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식을 아는 경우 이 표를 통해 XSD 스키마에 지정할 수 있는 해당 XSD 형식을 확인할 수 있습니다.  
+ 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에서 XSD 데이터 형식으로의 명확한 매핑을 보여 줍니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식을 아는 경우 이 표를 통해 XSD 스키마에 지정할 수 있는 해당 XSD 형식을 확인할 수 있습니다.  
   
 |SQL Server 데이터 형식|XSD 데이터 형식|  
 |--------------------------|-------------------|  
@@ -90,17 +84,13 @@ ms.locfileid: "66013950"
 |`uniqueidentifier`|`string`|  
   
 ## <a name="sqldatatype-annotation"></a>sql:datatype 주석  
- 
-  `sql:datatype` 데이터 형식을 지정하는 데에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 주석이 사용됩니다. 다음 경우에 이 주석을 지정해야 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지정하는 데에는 `sql:datatype` 주석이 사용됩니다. 다음 경우에 이 주석을 지정해야 합니다.  
   
--   `dateTime` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XSD `dateTime`, `date`또는 `time` 형식에서 열로 대량 로드 하 고 있습니다. 이 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 사용하여 `sql:datatype="dateTime"` 열 데이터 형식을 식별해야 합니다. 이 규칙은 updategram에도 적용됩니다.  
+-   `dateTime` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XSD `dateTime`, `date`또는 `time` 형식에서 열로 대량 로드 하 고 있습니다. 이 경우에는 `sql:datatype="dateTime"`을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열 데이터 형식을 식별해야 합니다. 이 규칙은 updategram에도 적용됩니다.  
   
--   `uniqueidentifier` 형식의 열 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대량 로드 하 고 XSD 값이 중괄호 ({및})를 포함 하는 GUID 인 경우 
-  `sql:datatype="uniqueidentifier"`를 지정하면 열에 값을 삽입하기 전에 중괄호가 제거됩니다. 
-  `sql:datatype`을 지정하지 않으면 값이 중괄호와 함께 보내지므로 삽입이나 업데이트가 실패합니다.  
+-   `uniqueidentifier` 형식의 열 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대량 로드 하 고 XSD 값이 중괄호 ({및})를 포함 하는 GUID 인 경우 `sql:datatype="uniqueidentifier"`를 지정하면 열에 값을 삽입하기 전에 중괄호가 제거됩니다. `sql:datatype`을 지정하지 않으면 값이 중괄호와 함께 보내지므로 삽입이나 업데이트가 실패합니다.  
   
--   XML 데이터 형식 `base64Binary`는 다양한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식(`binary`, `image` 또는 `varbinary`)에 매핑됩니다. XML 데이터 형식 `base64Binary`를 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 매핑하려면 `sql:datatype` 주석을 사용합니다. 이 주석은 특성이 매핑될 열의 명시적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지정합니다. 데이터가 데이터베이스에 저장될 경우 이 주석을 사용하는 것이 좋습니다. 
-  `sql:datatype` 주석을 지정하면 명시적 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 식별할 수 있습니다.  
+-   XML 데이터 형식 `base64Binary`는 다양한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식(`binary`, `image` 또는 `varbinary`)에 매핑됩니다. XML 데이터 형식 `base64Binary`를 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 매핑하려면 `sql:datatype` 주석을 사용합니다. 이 주석은 특성이 매핑될 열의 명시적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지정합니다. 데이터가 데이터베이스에 저장될 경우 이 주석을 사용하는 것이 좋습니다. `sql:datatype` 주석을 지정하면 명시적 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 식별할 수 있습니다.  
   
  일반적으로 스키마에 `sql:datatype`을 지정하는 것이 좋습니다.  
   
@@ -127,11 +117,11 @@ ms.locfileid: "66013950"
   
  이 XSD 스키마에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 날짜 값을 반환하는 세 가지 특성이 있습니다. 스키마에서 다음을 확인하십시오.  
   
--   Orderdate `xsd:type=date` 특성을 **** 지정 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **orderdate** 특성에 대해에서 반환 된 값의 날짜 부분을 표시 합니다.  
+-   Orderdate `xsd:type=date` 특성을 **OrderDate** 지정 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **orderdate** 특성에 대해에서 반환 된 값의 날짜 부분을 표시 합니다.  
   
--   ShipDate `xsd:type=time` 특성을 **** 지정 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ShipDate** 특성에 대해에서 반환 하는 값의 시간 부분이 표시 됩니다.  
+-   ShipDate `xsd:type=time` 특성을 **ShipDate** 지정 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ShipDate** 특성에 대해에서 반환 하는 값의 시간 부분이 표시 됩니다.  
   
--   DueDate 특성에 `xsd:type` 을 지정 **** 하지 않으면에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 하는 것과 동일한 값이 표시 됩니다.  
+-   DueDate 특성에 `xsd:type` 을 지정 **DueDate** 하지 않으면에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 하는 것과 동일한 값이 표시 됩니다.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>스키마에 대해 예제 XPath 쿼리를 테스트하려면  
   

@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4eaa4667db1e8b6ed789e2adb90bc8d72c1b02e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012346"
 ---
-# <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>클라이언트 쪽 XML 서식과 서버 쪽 XML 서식(SQLXML 4.0)
+# <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>클라이언트 쪽 vs. 서버 쪽 XML 서식 지정(SQLXML 4.0)
   이 항목에서는 SQL XML의 클라이언트 쪽 XML 서식과 서버 쪽 XML 서식의 일반적인 차이점에 대해 설명합니다.  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>클라이언트 쪽 서식에서 지원되지 않는 여러 행 집합 쿼리  

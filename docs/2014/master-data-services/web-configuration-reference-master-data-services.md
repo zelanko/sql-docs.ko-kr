@@ -13,23 +13,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ee3582e7de37b99cd7f665f563e789259954b722
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478480"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>웹 구성 참조(Master Data Services)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에서는 IIS(인터넷 정보 서비스)가 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션 및 웹 서비스를 호스트할 수 있도록 하는 구성 설정이 Web.config 파일에 포함됩니다. 이 Web.config 파일은 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 설치 경로의 WebApplication 폴더에 있습니다. 경로 및 사용 권한에 대한 자세한 내용은 [폴더 및 파일 사용 권한&#40;Master Data Services&#41;](folder-and-file-permissions-master-data-services.md)을 참조하세요.  
   
 ## <a name="webconfig-elements"></a>Web.Config 요소  
  Web.config 파일에는 표준 IIS, .NET Framework [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , ASP.NET 및 Windows Communication Foundation (WCF) 구성 요소 외에도 사용자 지정 요소인 ** \<masterDataServices>** 이 포함 되어 있습니다. 다음 표에서는 Web.config 파일에 포함된 요소에 대해 설명합니다.  
   
-|구성 요소|Description|  
+|구성 요소|설명|  
 |---------------------------|-----------------|  
-|`masterDataServices`|사용자 지정 요소. 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 서비스를 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에 연결합니다.|  
+|`masterDataServices`|사용자 지정 요소. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 서비스를 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에 연결합니다.|  
 |`connectionStrings`|ASP.NET 요소. 자세한 내용은 MSDN Library에서 [connectionStrings 요소(ASP.NET 설정 스키마)](https://go.microsoft.com/fwlink/?LinkId=178347) 를 참조하세요.|  
 |`system.web`|ASP.NET 요소. 자세한 내용은 MSDN Library에서 [system.web 요소(ASP.NET 설정 스키마)](https://go.microsoft.com/fwlink/?LinkId=178348) 를 참조하세요.|  
 |`startup`|.NET Framework 요소. 자세한 내용은 MSDN Library의 [ \<startup> 요소](https://go.microsoft.com/fwlink/?LinkId=178349) 를 참조 하십시오.|  
@@ -54,13 +52,11 @@ ms.locfileid: "65478480"
   
 ### <a name="elements-and-attributes"></a>요소 및 특성  
   
-|항목|Description|  
+|항목|설명|  
 |----------|-----------------|  
 |`instance`|자식 요소. 웹 서비스와 데이터베이스 연결 문자열에 대한 정보를 지정하는 특성을 포함합니다.|  
-|`virtualPath`|특성. 
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션 및 서비스의 가상 경로를 지정합니다. 이는 IIS applicationhost.config `path` 파일의 ** \<site>** 요소 아래에 있는 ** \<응용 프로그램>** 요소의 특성에 해당 합니다.|  
-|`siteName`|특성. 
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션과 서비스를 호스트하는 사이트의 이름을 지정합니다. 이는 IIS applicationhost.config `name` 파일의 사이트 ** \<>** 에 있는 ** \<사이트>** 요소의 특성에 해당 합니다.|  
+|`virtualPath`|특성. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션 및 서비스의 가상 경로를 지정합니다. 이는 IIS applicationhost.config `path` 파일의 ** \<site>** 요소 아래에 있는 ** \<응용 프로그램>** 요소의 특성에 해당 합니다.|  
+|`siteName`|특성. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션과 서비스를 호스트하는 사이트의 이름을 지정합니다. 이는 IIS applicationhost.config `name` 파일의 사이트 ** \<>** 에 있는 ** \<사이트>** 요소의 특성에 해당 합니다.|  
 |`connectionName`|특성. 사용할 연결 이름을 지정합니다. 이는 web.config의 `name` ** \<connectionStrings>** 요소 아래에 있는 ** \<add>** 요소의 특성에 해당 합니다.|  
 |`serviceName`|특성. 웹 서비스의 이름을 지정합니다. 이는 web.config의 `name` ** \<services>** 요소 아래에 있는 ** \<서비스>** 요소의 특성에 해당 합니다.|  
   

@@ -13,14 +13,13 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: b5027eb9be355348e00b6f17128b821a2bfc2af4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014147"
 ---
 # <a name="point"></a>Point
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공간 데이터에서 `Point`는 단일 위치를 나타내는 0차원 개체 이며 Z(높이) 및 M(측정값) 값을 포함할 수 있습니다.  
   
 ## <a name="geography-data-type"></a>geography 데이터 형식  
@@ -61,9 +60,9 @@ SET @g = geometry::Parse('POINT(3 4 NULL NULL)');
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [MultiPoint](multipoint.md)   
- [STX&#40;geometry 데이터 형식&#41;](/sql/t-sql/spatial-geometry/stx-geometry-data-type)   
- [STY&#40;geometry 데이터 형식&#41;](/sql/t-sql/spatial-geometry/sty-geometry-data-type)   
+ [다](multipoint.md)   
+ [STX &#40;geometry 데이터 형식&#41;](/sql/t-sql/spatial-geometry/stx-geometry-data-type)   
+ [STY &#40;geometry 데이터 형식&#41;](/sql/t-sql/spatial-geometry/sty-geometry-data-type)   
  [공간 데이터&#40;SQL Server&#41;](spatial-data-sql-server.md)  
   
   

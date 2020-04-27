@@ -23,27 +23,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 865a9af892f948e77aa593d3713766e7860349b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013867"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>sql:mapped를 사용하여 결과 XML 문서에서 스키마 요소 제외(SQLXML 4.0)
   기본 매핑 때문에 XSD 스키마의 모든 요소와 특성은 데이터베이스 테이블/뷰 및 열에 매핑됩니다. 그러나 어느 데이터베이스 테이블(뷰) 또는 열에도 매핑되지 않고 XML에 표시되지 않는 요소를 XSD 스키마에 만들려면 `sql:mapped` 주석을 지정할 수 있습니다.  
   
- 
-  `sql:mapped` 주석은 스키마를 수정할 수 없는 경우 또는 스키마가 데이터베이스에 저장되어 있지 않은 데이터를 포함하지만 다른 원본에서 XML의 유효성을 검사하는 데 사용되는 경우에 특히 유용합니다. 
-  `sql:mapped` 주석은 매핑되지 않은 요소 및 특성이 XML 문서에서 나타나지 않는다는 점에서 `sql:is-constant`와는 다릅니다.  
+ `sql:mapped` 주석은 스키마를 수정할 수 없는 경우 또는 스키마가 데이터베이스에 저장되어 있지 않은 데이터를 포함하지만 다른 원본에서 XML의 유효성을 검사하는 데 사용되는 경우에 특히 유용합니다. `sql:mapped` 주석은 매핑되지 않은 요소 및 특성이 XML 문서에서 나타나지 않는다는 점에서 `sql:is-constant`와는 다릅니다.  
   
- 
-  `sql:mapped` 주석은 부울 값(0=false, 1=true)을 사용합니다. 허용되는 값은 0, 1, true 및 false입니다.  
+ `sql:mapped` 주석은 부울 값(0=false, 1=true)을 사용합니다. 허용되는 값은 0, 1, true 및 false입니다.  
   
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. sql:mapped 주석 지정  
- 다른 원본의 XSD 스키마가 있고, 이 XSD 스키마는 **** **** **** **** ** \<Person** 으로 구성 됩니다. ContactID, FirstName, LastName 및 HomeAddress 특성을 사용 하 여>요소에 문의 하세요.  
+ 다른 원본의 XSD 스키마가 있고, 이 XSD 스키마는 **HomeAddress** **ContactID** **LastName** **FirstName** ** \<Person** 으로 구성 됩니다. ContactID, FirstName, LastName 및 HomeAddress 특성을 사용 하 여>요소에 문의 하세요.  
   
  이 XSD 스키마를 AdventureWorks 데이터베이스의 Person. Contact 테이블에 매핑하면 Employees 테이블에 `sql:mapped` 직원의 홈 주소가 저장 되지 않기 때문에 **HomeAddress** 특성에이 지정 됩니다. 따라서 매핑 스키마에 대해 XPath 쿼리를 지정할 경우 이 특성은 데이터베이스에 매핑되지 않으며 결과 XML 문서에 반환되지 않습니다.  
   

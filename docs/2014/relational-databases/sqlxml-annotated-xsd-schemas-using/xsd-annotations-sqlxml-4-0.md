@@ -14,20 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b9e50cc418ef1fa2076b3207d7d3429694f160a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013552"
 ---
 # <a name="xsd-annotations-sqlxml-40"></a>XSD 주석(SQLXML 4.0)
   다음 표에서는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에 도입된 XSD 주석과 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]에 도입된 XDR 주석을 비교하여 보여 줍니다.  
   
-|XSD 주석|Description|항목 링크|XDR 주석|  
+|XSD 주석|설명|항목 링크|XDR 주석|  
 |--------------------|-----------------|----------------|--------------------|  
 |`sql:encode`|XML 요소나 특성이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] BLOB 열에 매핑된 경우 참조 URI를 요청할 수 있습니다. 이 URI는 나중에 BLOB 데이터를 반환하는 데 사용할 수 있습니다.|[Sql: encoding &#40;SQLXML 4.0&#41;를 사용 하 여 BLOB 데이터에 대 한 URL 참조 요청](requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md)|`url-encode`|  
-|`sql:guid`|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 생성된 GUID 값을 사용할지 아니면 해당 열의 updategram에 제공된 값을 사용할지를 지정할 수 있습니다.|[sql:identity 및 sql:guid 주석 사용](using-the-sql-identity-and-sql-guid-annotations.md)|지원되지 않음|  
+|`sql:guid`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 생성된 GUID 값을 사용할지 아니면 해당 열의 updategram에 제공된 값을 사용할지를 지정할 수 있습니다.|[sql:identity 및 sql:guid 주석 사용](using-the-sql-identity-and-sql-guid-annotations.md)|지원되지 않음|  
 |`sql:hide`|스키마에 지정된 요소나 특성을 결과 XML 문서에서 숨깁니다.|[sql:hide를 사용하여 요소 및 특성 숨기기](hiding-elements-and-attributes-by-using-sql-hide.md)|지원되지 않음|  
 |`sql:identity`|IDENTITY 형식의 데이터베이스 열에 매핑되는 모든 노드에 지정할 수 있습니다. 이 주석에 지정하는 값은 데이터베이스의 해당되는 IDENTITY 형식 열이 업데이트되는 방법을 정의합니다.|[sql:identity 및 sql:guid 주석 사용](using-the-sql-identity-and-sql-guid-annotations.md)|지원되지 않음|  
 |`sql:inverse`|Updategram 논리에 ** \<sql: relationship>** 를 사용 하 여 지정 된 부모-자식 관계의 해석을 반전 하도록 지시 합니다.|[Sql: relationship에 sql: 역 특성 지정 &#40;SQLXML 4.0&#41;](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)|지원되지 않음|  
@@ -42,7 +41,7 @@ ms.locfileid: "66013552"
 |`sql:use-cdata`|XML 문서의 특정 요소에 사용될 CDATA 섹션을 지정할 수 있습니다.|[Sql: use-cdata &#40;SQLXML 4.0&#41;를 사용 하 여 CDATA 섹션 만들기](creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md)|동일|  
   
 > [!NOTE]  
->  XSD 기본 `targetNamespace` 특성은 `target-namespace` XDR 매핑 스키마에 도입된 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 주석을 대체합니다.  
+>  XSD 기본 `targetNamespace` 특성은 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] XDR 매핑 스키마에 도입된 `target-namespace` 주석을 대체합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [TargetNamespace 특성 &#40;사용 하 여 대상 네임 스페이스 지정&#41;SQLXML 4.0](specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md)  

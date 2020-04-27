@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39860a2b147a2db392219552ebfd18cbbf7b7992
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264779"
 ---
 # <a name="custom-report-items"></a>사용자 지정 보고서 항목
@@ -48,8 +48,7 @@ ms.locfileid: "63264779"
  사용자 지정 보고서 항목을 배포하는 방법을 설명합니다.  
   
  [사용자 지정 보고서 항목 클래스 라이브러리](custom-report-item-class-libraries.md)  
- 
-  `Microsoft.ReportDesigner` 네임스페이스의 사용자 지정 보고서 항목 인프라 클래스 및 관리되는 래퍼 클래스를 설명합니다.  
+ `Microsoft.ReportDesigner` 네임스페이스의 사용자 지정 보고서 항목 인프라 클래스 및 관리되는 래퍼 클래스를 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [기술 참조&#40;SSRS&#41;](../technical-reference-ssrs.md)  

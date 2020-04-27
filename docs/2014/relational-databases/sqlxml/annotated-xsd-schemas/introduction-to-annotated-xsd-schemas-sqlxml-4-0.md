@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d8813d34f2c669e9646b899230388fca649e4488
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014455"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>주석이 추가된 XSD 스키마 소개(SQLXML 4.0)
@@ -50,8 +50,7 @@ ms.locfileid: "66014455"
  데이터베이스에 대한 매핑을 설명하는 주석을 XSD 스키마에 추가하여 데이터베이스를 쿼리하고 결과를 XML 문서 형식으로 반환할 수 있습니다. 주석을 사용하여 XSD 스키마를 데이터베이스 테이블 및 열에 매핑할 수 있습니다. XSD 스키마로 생성된 XML 뷰에 대해 XPath 쿼리를 지정하여 데이터베이스를 쿼리하고 결과를 XML 형식으로 얻을 수 있습니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0의 XSD 스키마 언어는 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]에서 주석이 추가된 XDR(XML-Data Reduced) 스키마 언어에 도입된 주석을 지원합니다. 주석이 추가된 XDR은 SQLXML 4.0에서 더 이상 사용되지 않습니다.  
+>  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0의 XSD 스키마 언어는 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]에서 주석이 추가된 XDR(XML-Data Reduced) 스키마 언어에 도입된 주석을 지원합니다. 주석이 추가된 XDR은 SQLXML 4.0에서 더 이상 사용되지 않습니다.  
   
  관계형 데이터베이스 컨텍스트에서는 임의의 XSD 스키마를 관계형 저장소에 매핑하는 것이 유용합니다. 이를 수행하는 한 가지 방법은 XSD 스키마에 주석을 추가하는 것입니다. 주석을 포함 하는 XSD 스키마를 *매핑 스키마*라고 하며,이 스키마는 XML 데이터가 관계형 저장소에 매핑되는 방법과 관련 된 정보를 제공 합니다. 매핑 스키마는 궁극적으로 관계형 데이터에 대한 XML 뷰로 생각할 수 있습니다. 이러한 매핑을 사용하여 관계형 데이터를 XML 문서로 검색할 수 있습니다.  
   

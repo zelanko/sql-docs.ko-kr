@@ -16,14 +16,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2bbb98653dbbaad577f9a48d7a778b41d19fbf37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054042"
 ---
 # <a name="metadata-master-data-services"></a>메타데이터(MDS(Master Data Services))
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 사용자 정의 메타데이터는 모델 개체를 설명하는 데 사용되는 정보입니다. 예를 들어 특정 모델이나 엔터티의 소유자를 추적하거나 엔터티에 데이터를 제공하는 원본 시스템을 추적해야 하는 경우가 있을 수 있습니다.  
   
  사용자 정의 메타 데이터는 **메타 데이터**라는 모델로 관리 됩니다. 이 모델은가 설치 될 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 때 자동으로 포함 되며,이 모델의 버전을 만들 수 없다는 점을 제외 하 고 다른 모든 MDS 모델과 유사 합니다.  

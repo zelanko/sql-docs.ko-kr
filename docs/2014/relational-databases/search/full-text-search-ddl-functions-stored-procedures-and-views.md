@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7db9b0b31d619dc77b537989bfbf281c276e95e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011306"
 ---
 # <a name="full-text-search-ddl-functions-stored-procedures-and-views"></a>전체 텍스트 검색 DDL, 함수, 저장 프로시저 및 뷰
@@ -24,7 +24,7 @@ ms.locfileid: "66011306"
   
  의미 체계 검색을 지원하는 데이터베이스 개체 목록은 [Semantic Search DDL, Functions, Stored Procedures, and Views](../views/views.md)를 참조하세요.  
   
-##  <a name="ddl"></a> Transact-SQL DDL(데이터 정의 언어) 문  
+##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Transact-SQL DDL(데이터 정의 언어) 문  
   
 -   [CREATE FULLTEXT CATALOG&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66011306"
   
 -   [DROP SEARCH PROPERTY LIST&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-search-property-list-transact-sql)  
   
-##  <a name="func"></a> 시스템 조건자 및 함수  
+##  <a name="system-predicates-and-functions"></a><a name="func"></a> 시스템 조건자 및 함수  
   
 -   [CONTAINS&#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66011306"
   
 -   [FREETEXTTABLE&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)  
   
-##  <a name="meta"></a> 시스템 메타데이터 함수  
+##  <a name="system-metadata-functions"></a><a name="meta"></a> 시스템 메타데이터 함수  
   
 -   [COLUMNPROPERTY&#40;Transact-SQL&#41;](/sql/t-sql/functions/columnproperty-transact-sql)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66011306"
   
 -   [SERVERPROPERTY&#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)  
   
-##  <a name="proc"></a> 시스템 저장 프로시저  
+##  <a name="system-stored-procedures"></a><a name="proc"></a> 시스템 저장 프로시저  
   
 -   [sp_fulltext_keymappings&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql)  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66011306"
   
 -   [sp_help_fulltext_system_components&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)  
   
-##  <a name="cat"></a> 시스템 뷰 - 카탈로그 뷰  
+##  <a name="system-views---catalog-views"></a><a name="cat"></a> 시스템 뷰 - 카탈로그 뷰  
   
 -   [sys.fulltext_catalogs&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql)  
   
@@ -114,7 +114,7 @@ ms.locfileid: "66011306"
   
 -   [sys.registered_search_property_lists&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  
   
-##  <a name="dmv"></a> 시스템 뷰 - 동적 관리 뷰  
+##  <a name="system-views---dynamic-management-views"></a><a name="dmv"></a> 시스템 뷰 - 동적 관리 뷰  
   
 -   [sys.dm_fts_active_catalogs&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql)  
   

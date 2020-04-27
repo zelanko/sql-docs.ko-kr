@@ -31,10 +31,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d002208a83b58a4c8547bc6ce85db073ced70974
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010744"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>SqlXmlCommand 개체(SQLXML 관리되는 클래스)
@@ -106,7 +106,7 @@ public SqlXmlCommand(string cnString)
  CommandType  
  명령의 형식을 식별합니다. 이 속성은 실행할 명령의 형식을 지정하는 데 사용됩니다. 명령 형식은 다음 표에 나와 있는 값에 따라 결정됩니다. 작업 예제는 [.Net 환경에서 SQLXML 기능에 액세스](accessing-sqlxml-functionality-in-the-net-environment.md)를 참조 하세요.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SqlXmlCommandType .Sql|SQL 명령(예: `SELECT * FROM Employees FOR XML AUTO`)을 실행합니다.|  
 |SqlXmlCommandType XPath|XPath 명령(예: `Employees[@EmployeeID=1]`)을 실행합니다.|  

@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5965c48f91387944f223e1d0cfe666b19aba0e63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054302"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>XML 원본 편집기(연결 관리자 페이지)
-  
   **XML 원본 편집기** 의 **연결 관리자** 페이지를 사용하여 XML 데이터를 변환할 XML 파일 및 XSD를 지정할 수 있습니다.  
   
  XML 원본에 대한 자세한 내용은 [XML Source](data-flow/xml-source.md)을 참조하십시오.  
@@ -31,7 +30,7 @@ ms.locfileid: "66054302"
  **데이터 액세스 모드**  
  원본에서 데이터를 선택하는 방법을 지정합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |XML 파일 위치|XML 파일에서 데이터를 검색합니다.|  
 |변수를 사용한 XML 파일|변수에 XML 파일 이름을 지정합니다.<br /><br /> **관련 정보**: [패키지에서 변수 사용](../../2014/integration-services/use-variables-in-packages.md)|  
@@ -44,12 +43,10 @@ ms.locfileid: "66054302"
  XSD 스키마 파일의 경로 및 파일 이름을 입력하거나 **찾아보기**를 클릭하여 파일을 찾습니다.  
   
  **찾아보기**  
- 
-  **열기** 대화 상자를 사용하여 XSD 스키마 파일을 찾을 수 있습니다.  
+ **열기** 대화 상자를 사용하여 XSD 스키마 파일을 찾을 수 있습니다.  
   
  **XSD 생성**  
- 
-  **다른 이름으로 저장** 대화 상자를 사용하여 자동 생성된 XSD 스키마 파일의 위치를 선택할 수 있습니다. 편집기에서는 XML 데이터의 구조를 통해 스키마를 유추합니다.  
+ **다른 이름으로 저장** 대화 상자를 사용하여 자동 생성된 XSD 스키마 파일의 위치를 선택할 수 있습니다. 편집기에서는 XML 데이터의 구조를 통해 스키마를 유추합니다.  
   
 ## <a name="data-access-mode-dynamic-options"></a>데이터 액세스 모드 동적 옵션  
   
@@ -58,8 +55,7 @@ ms.locfileid: "66054302"
  XML 데이터 파일의 경로 및 파일 이름을 입력하거나 **찾아보기**를 클릭하여 파일을 찾습니다.  
   
  **찾아보기**  
- 
-  **열기** 대화 상자를 사용하여 XML 데이터 파일을 찾을 수 있습니다.  
+ **열기** 대화 상자를 사용하여 XML 데이터 파일을 찾을 수 있습니다.  
   
 ### <a name="data-access-mode--xml-file-from-variable"></a>데이터 액세스 모드 = 변수를 사용한 XML 파일  
  **변수 이름**  

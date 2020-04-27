@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 918c0ecd3a1ac1d0f1821ee8f19df291f9a5fa33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054476"
 ---
 # <a name="wmi-connection-manager-editor"></a>WMI 연결 관리자 편집기
-  
   **WMI 연결 관리자** 대화 상자를 사용하여 서버에 대한 Microsoft WMI(Windows Management Instrumentation) 연결을 지정할 수 있습니다.  
   
  WMI 연결 관리자에 대한 자세한 내용은 [WMI Connection Manager](connection-manager/wmi-connection-manager.md)를 참조하십시오.  
@@ -37,7 +36,7 @@ ms.locfileid: "66054476"
  **서버 이름**  
  WMI 연결을 만들 서버의 이름을 제공합니다.  
   
- **네임스페이스**  
+ **Namespace**  
  WMI 네임스페이스를 지정합니다.  
   
  **Windows 인증 사용**  
@@ -49,7 +48,7 @@ ms.locfileid: "66054476"
  **암호**  
  Windows 인증을 사용하지 않으면 연결할 때 암호를 제공해야 합니다.  
   
- **테스트할**  
+ **테스트**  
  연결 관리자 설정을 테스트합니다.  
   
 ## <a name="see-also"></a>참고 항목  

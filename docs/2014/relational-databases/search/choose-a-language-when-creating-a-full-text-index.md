@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5f045933735d2a26b1e9007868f96680bef4fc47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012728"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>전체 텍스트 인덱스 생성 시 언어 선택
@@ -32,12 +32,11 @@ ms.locfileid: "66012728"
 > [!NOTE]  
 >  전체 텍스트 인덱스 열에 대한 열 수준 언어를 지정하려면 열을 지정할 때 LANGUAGE *language_term* 절을 사용합니다. 자세한 내용은 [CREATE FULLTEXT INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql) 및 [ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)를 참조하세요.  
   
-##  <a name="langsupp"></a> 전체 텍스트 검색의 언어 지원  
+##  <a name="language-support-in-full-text-search"></a><a name="langsupp"></a> 전체 텍스트 검색의 언어 지원  
  이 섹션에서는 단어 분리기 및 형태소 분석기를 소개하고 전체 텍스트 검색에서 열 수준 언어의 LCID를 사용하는 방식에 대해 설명합니다.  
   
 ### <a name="introduction-to-word-breakers-and-stemmers"></a>단어 분리기 및 형태소 분석기 소개  
- 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서는 이전에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용되던 것보다 크게 향상된 완전히 새로운 단어 분리기 및 형태소 분석기 패밀리를 제공합니다.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서는 이전에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용되던 것보다 크게 향상된 완전히 새로운 단어 분리기 및 형태소 분석기 패밀리를 제공합니다.  
   
 > [!NOTE]  
 >  이러한 새로운 언어 구성 요소는 MS NLG(Microsoft Natural Language Group)에서 구현하고 지원합니다.  
@@ -50,8 +49,7 @@ ms.locfileid: "66012728"
   
 -   보안  
   
-     언어 구성 요소의 향상 된 보안 기능 덕분에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 새로운 단어 분리기는 기본적으로 사용 하도록 설정 되어 있습니다. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 전반적인 보안 및 견고성을 향상시키려면 단어 분리기 및 필터와 같은 외부 구성 요소의 서명을 확인하는 것이 좋습니다. 이러한 구성 요소에 서명이 있는지 확인하도록 전체 텍스트를 구성하는 방법은 다음과 같습니다.  
+     언어 구성 요소의 향상 된 보안 기능 덕분에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 새로운 단어 분리기는 기본적으로 사용 하도록 설정 되어 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 전반적인 보안 및 견고성을 향상시키려면 단어 분리기 및 필터와 같은 외부 구성 요소의 서명을 확인하는 것이 좋습니다. 이러한 구성 요소에 서명이 있는지 확인하도록 전체 텍스트를 구성하는 방법은 다음과 같습니다.  
   
     ```  
     EXEC sp_fulltext_service 'verify_signature';  
@@ -71,12 +69,11 @@ ms.locfileid: "66012728"
  전체 텍스트 인덱스를 만들 때는 각 열마다 유효한 언어 이름을 지정해야 합니다. 유효한 언어 이름이 [sys.fulltext_languages&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) 카탈로그 뷰에서 반환되지 않을 경우 전체 텍스트 검색은 동일 언어군에서 가장 근접한 언어 이름이 있으면 이를 대신 사용합니다. 그렇지 않으면 중립 단어 분리기를 사용합니다. 이러한 대체 동작은 재호출 정확성에 영향을 줄 수 있습니다. 따라서 전체 텍스트 인덱스를 만들 때는 각 열마다 유효하고 사용 가능한 언어 이름을 지정하는 것이 가장 좋습니다.  
   
 > [!NOTE]  
->  LCID는 `char` 또는 `nchar` 등의 전체 텍스트 인덱싱에 적합한 모든 데이터 형식에 대해 사용됩니다. 
-  `char`, `varchar` 또는 `text` 형식 열의 정렬 순서를 LCID로 식별된 언어와 다른 언어 설정으로 지정할 경우에도 이러한 행에 대한 전체 텍스트 인덱싱 및 쿼리를 수행하는 동안에는 LCID가 사용됩니다.  
+>  LCID는 `char` 또는 `nchar` 등의 전체 텍스트 인덱싱에 적합한 모든 데이터 형식에 대해 사용됩니다. `char`, `varchar` 또는 `text` 형식 열의 정렬 순서를 LCID로 식별된 언어와 다른 언어 설정으로 지정할 경우에도 이러한 행에 대한 전체 텍스트 인덱싱 및 쿼리를 수행하는 동안에는 LCID가 사용됩니다.  
   
 
   
-##  <a name="breaking"></a> 단어 분리  
+##  <a name="word-breaking"></a><a name="breaking"></a> 단어 분리  
  단어 분리기는 특정 언어와 관련된 단어 경계에서 인덱싱되는 텍스트를 토큰화합니다. 따라서 단어 분리 동작은 각 언어마다 다릅니다. x라는 언어를 사용하여 {x, y 및 z}의 여러 언어를 인덱싱하는 경우 일부 동작에서 예상치 못한 결과가 발생할 수 있습니다. 예를 들어 언어에 따라 대시(-) 또는 쉼표(,)가 버려지는 단어 분리 요소이거나 그렇지 않을 수 있습니다. 또한 드문 경우지만 특정 단어가 다른 언어에서는 다른 형태소로 분류되어 예상치 못한 형태소 분석 동작이 발생할 수도 있습니다. 예를 들어 영어에서는 일반적으로 공백이나 특정 형태의 문장 부호가 단어 경계로 사용되지만 독일어 등의 다른 언어에서는 단어 또는 문자 조합이 사용될 수 있습니다. 따라서 열의 행에 저장할 내용의 언어에 해당하는 열 수준 언어를 선택해야 합니다.  
   
 ### <a name="western-languages"></a>서구 언어  
@@ -103,14 +100,13 @@ ms.locfileid: "66012728"
   
 
   
-##  <a name="stemming"></a> 형태소 분석  
+##  <a name="stemming"></a><a name="stemming"></a> 형태소 분석  
  열 수준 언어를 선택할 때는 형태소 분석도 고려해야 합니다. 전체 텍스트 쿼리의*형태소 분석* 이란 특정 언어로 된 한 단어의 모든 형태소(굴절형)를 검색하는 프로세스를 말합니다. 일반적인 단어 분리기를 사용하여 몇 가지 언어를 처리하는 경우 형태소 분석 프로세스는 열에 대해 지정된 언어에 대해서만 작동하고, 열의 다른 언어에 대해서는 작동하지 않습니다. 예를 들어 독일어 형태소 분석기는 영어 또는 스페인어 등에는 작동하지 않습니다. 이는 쿼리 단계에서 선택한 언어에 따라 회수에 영향을 줄 수 있습니다.  
   
 
   
-##  <a name="type"></a> 전체 텍스트 검색에 대한 열 유형의 영향  
- 언어 선택에서 또 다른 고려 사항은 데이터 표현 방법과 관련이 있습니다. 
-  `varbinary(max)` 열에 저장되지 않은 데이터에 대해서는 특수 필터링이 수행되지 않습니다. 일반적으로 텍스트는 있는 그대로 단어 분리기 구성 요소를 통과합니다.  
+##  <a name="effect-of-column-type-on-full-text-search"></a><a name="type"></a> 전체 텍스트 검색에 대한 열 유형의 영향  
+ 언어 선택에서 또 다른 고려 사항은 데이터 표현 방법과 관련이 있습니다. `varbinary(max)` 열에 저장되지 않은 데이터에 대해서는 특수 필터링이 수행되지 않습니다. 일반적으로 텍스트는 있는 그대로 단어 분리기 구성 요소를 통과합니다.  
   
  또한 단어 분리기는 주로 문자 텍스트를 처리합니다. 따라서 HTML과 같은 표시 유형이 텍스트에 포함되어 있을 경우 인덱싱 및 검색 중에 언어 정확도가 떨어질 수 있습니다. 이 경우 두 가지 선택 사항이 있습니다. 기본 방법은 열에 `varbinary(max)` 텍스트 데이터를 저장 하 고 필터링 할 수 있도록 해당 문서 유형을 나타내는 것입니다. 이 방법을 선택할 수 없으면 중립 단어 분리기를 사용하고 가능한 경우 의미 없는 단어 목록에 HTML의 'br'과 같은 표시 데이터를 추가할 수 있습니다.  
   
@@ -119,7 +115,7 @@ ms.locfileid: "66012728"
   
 
   
-##  <a name="nondef"></a> 전체 텍스트 쿼리에서 기본이 아닌 열 수준 언어 지정  
+##  <a name="specifying-a-non-default-column-level-language-in-a-full-text-query"></a><a name="nondef"></a> 전체 텍스트 쿼리에서 기본이 아닌 열 수준 언어 지정  
  기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 전체 텍스트 검색을 수행하면 전체 텍스트 절에 포함된 각 열에 대해 지정된 언어를 사용하여 쿼리 용어가 구문 분석됩니다. 이러한 동작을 무시하려면 쿼리 단계에서 기본 언어가 아닌 다른 언어를 지정합니다. 리소스가 설치되어 있는 지원 언어의 경우 *CONTAINS* , [CONTAINSTABLE](/sql/t-sql/queries/contains-transact-sql), [FREETEXT](/sql/relational-databases/system-functions/containstable-transact-sql)또는 [FREETEXTTABLE](/sql/t-sql/queries/freetext-transact-sql)쿼리의 LANGUAGE [language_term](/sql/relational-databases/system-functions/freetexttable-transact-sql) 절을 사용하여 쿼리 용어의 단어 분리, 형태소 분석, 동의어 사전 및 중지 단어 처리에 사용되는 언어를 지정할 수 있습니다.  
   
 

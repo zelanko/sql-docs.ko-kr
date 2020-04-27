@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 627ab54ed35cbc0a43c5a0eac26a1397199edbd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014661"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Updategram에 주석이 추가된 매핑 스키마 지정(SQLXML 4.0)
@@ -38,7 +38,7 @@ ms.locfileid: "66014661"
 ## <a name="dealing-with-data-types"></a>데이터 형식 처리  
  `image`스키마가을 사용 `binary` `varbinary` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sql:datatype`하 여, 또는 데이터 형식을 지정 하 고 xml 데이터 형식을 지정 하지 않는 경우 updategram는 xml 데이터 형식이 인 `binary base 64`것으로 가정 합니다. 데이터가 `bin.base` 유형인 경우 명시적으로 유형(`dt:type=bin.base` 또는 `type="xsd:hexBinary"`)을 지정해야 합니다.  
   
- 스키마에서 `dateTime`, `date` 또는 `time` XSD 데이터 형식을 지정하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]을 사용하여 해당 `sql:datatype="dateTime"` 데이터 형식도 지정해야 합니다.  
+ 스키마에서 `dateTime`, `date` 또는 `time` XSD 데이터 형식을 지정하는 경우 `sql:datatype="dateTime"`을 사용하여 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식도 지정해야 합니다.  
   
  형식의 매개 변수 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 처리할 때 매핑 스키마의 적절 `sql:datatype="money"` 한 노드에 명시적으로를 지정 해야 합니다. `money`  
   
@@ -154,8 +154,7 @@ ms.locfileid: "66014661"
 </xsd:schema>  
 ```  
   
- 다음 updategram에서는이 XSD 스키마를 사용 하 여 주문 43860에 대해 새 주문 정보 레코드 ( ** \<after>** 블록의 ** \<OD>** 요소)를 추가 합니다. 
-  `mapping-schema` 특성은 Updategram의 매핑 스키마를 지정하는 데 사용됩니다.  
+ 다음 updategram에서는이 XSD 스키마를 사용 하 여 주문 43860에 대해 새 주문 정보 레코드 ( ** \<after>** 블록의 ** \<OD>** 요소)를 추가 합니다. `mapping-schema` 특성은 Updategram의 매핑 스키마를 지정하는 데 사용됩니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -235,11 +234,9 @@ ms.locfileid: "66014661"
   
  이 예에서는 다음 테이블이 **tempdb** 데이터베이스에 있다고 가정 합니다.  
   
--   
-  `Cust (CustomerID, CompanyName)`. 여기서 `CustomerID`는 기본 키입니다.  
+-   `Cust (CustomerID, CompanyName)`. 여기서 `CustomerID`는 기본 키입니다.  
   
--   
-  `Ord (OrderID, CustomerID)`. 여기서 `CustomerID`는 `CustomerID` 테이블의 `Cust` 기본 키를 참조하는 외래 키입니다.  
+-   `Ord (OrderID, CustomerID)`. 여기서 `CustomerID`는 `CustomerID` 테이블의 `Cust` 기본 키를 참조하는 외래 키입니다.  
   
  Updategram은 다음 XSD 스키마를 사용하여 Cust 및 Ord 테이블에 레코드를 삽입합니다.  
   

@@ -29,20 +29,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f27b47ae8216fa64b537d4c8b22b612c535a1869
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013667"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>sql:relationship을 사용하여 관계 지정(SQLXML 4.0)
   XML 문서의 요소는 서로 관련될 수 있습니다. 이러한 요소는 계층적으로 중첩될 수 있으며 요소 간에 ID, IDREF 또는 IDREFS 관계가 지정될 수 있습니다.  
   
- 예를 들어 XSD 스키마에서 ** \<Customer>** 요소는 자식 요소 ** \<>순서** 를 포함 합니다. 스키마가 AdventureWorks 데이터베이스에 매핑되면 ** \<customer>** 요소는 sales. customer 테이블에 매핑되고 ** \<Order>** 요소는 SalesOrderHeader 테이블에 매핑됩니다. 이러한 기본 테이블인 Sales.Customer와 Sales.SalesOrderHeader는 고객 주문과 관련하여 서로 관련되어 있습니다. Sales.SalesOrderHeader 테이블의 CustomerID는 Sales.Customer 테이블의 CustomerID 기본 키를 참조하는 외래 키입니다. 
-  `sql:relationship` 주석을 사용하면 매핑 스키마 요소 간에 이러한 관계를 설정할 수 있습니다.  
+ 예를 들어 XSD 스키마에서 ** \<Customer>** 요소는 자식 요소 ** \<>순서** 를 포함 합니다. 스키마가 AdventureWorks 데이터베이스에 매핑되면 ** \<customer>** 요소는 sales. customer 테이블에 매핑되고 ** \<Order>** 요소는 SalesOrderHeader 테이블에 매핑됩니다. 이러한 기본 테이블인 Sales.Customer와 Sales.SalesOrderHeader는 고객 주문과 관련하여 서로 관련되어 있습니다. Sales.SalesOrderHeader 테이블의 CustomerID는 Sales.Customer 테이블의 CustomerID 기본 키를 참조하는 외래 키입니다. `sql:relationship` 주석을 사용하면 매핑 스키마 요소 간에 이러한 관계를 설정할 수 있습니다.  
   
- 주석이 추가된 XSD 스키마에서 `sql:relationship` 주석은 요소가 매핑되는 기본 테이블 간의 기본 키 및 외래 키 관계를 기반으로 스키마 요소를 계층적으로 중첩하는 데 사용됩니다. 
-  `sql:relationship` 주석을 지정할 때는 다음을 확인해야 합니다.  
+ 주석이 추가된 XSD 스키마에서 `sql:relationship` 주석은 요소가 매핑되는 기본 테이블 간의 기본 키 및 외래 키 관계를 기반으로 스키마 요소를 계층적으로 중첩하는 데 사용됩니다. `sql:relationship` 주석을 지정할 때는 다음을 확인해야 합니다.  
   
 -   부모 테이블(Sales.Customer)과 자식 테이블(Sales.SalesOrderHeader).  
   
@@ -319,8 +317,7 @@ ms.locfileid: "66013667"
 ```  
   
 ### <a name="c-specifying-the-relationship-annotation-on-an-attribute"></a>C. 특성에 관계 주석 지정  
- 이 예제의 스키마에는 \< \<CustomerID> 하위 요소와 IDREFS 유형의 orderidlist 특성이 있는 Customer> 요소가 포함 됩니다. Customer \<> 요소는 AdventureWorks 데이터베이스의 Sales. customer 테이블에 매핑됩니다. 기본적으로이 매핑의 범위는 자식 요소나 특성에가 지정 되지 않은 `sql:relation` 경우 모든 자식 요소 또는 특성에 적용 됩니다 .이 경우에는 \<관계> 요소를 사용 하 여 적절 한 기본 키/외래 키 관계를 정의 해야 합니다. 
-  `relation` 주석을 사용하여 다른 테이블을 지정하는 자식 요소 또는 특성은 `relationship` 주석도 지정해야 합니다.  
+ 이 예제의 스키마에는 \< \<CustomerID> 하위 요소와 IDREFS 유형의 orderidlist 특성이 있는 Customer> 요소가 포함 됩니다. Customer \<> 요소는 AdventureWorks 데이터베이스의 Sales. customer 테이블에 매핑됩니다. 기본적으로이 매핑의 범위는 자식 요소나 특성에가 지정 되지 않은 `sql:relation` 경우 모든 자식 요소 또는 특성에 적용 됩니다 .이 경우에는 \<관계> 요소를 사용 하 여 적절 한 기본 키/외래 키 관계를 정의 해야 합니다. `relation` 주석을 사용하여 다른 테이블을 지정하는 자식 요소 또는 특성은 `relationship` 주석도 지정해야 합니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33dbfad3c3774abe3de74d4dbf1d67575630b21e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63460108"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 요소(DTA)
@@ -38,11 +38,9 @@ ms.locfileid: "63460108"
   
 |특성|Description|  
 |--------------------|-----------------|  
-|**데이터 형식 및 길이**|
-  `unsignedInt`, 길이 제한 없음|  
+|**데이터 형식 및 길이**|`unsignedInt`, 길이 제한 없음|  
 |**기본값**|없음|  
-|**발생 빈도**|(선택 사항) 
-  `TuningOptions` 요소에 한 번만 사용할 수 있습니다.|  
+|**발생 빈도**|(선택 사항) `TuningOptions` 요소에 한 번만 사용할 수 있습니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
@@ -60,8 +58,7 @@ ms.locfileid: "63460108"
   
  기본 스토리지 크기는 비클러스터형 인덱스 및 인덱싱된 뷰를 포함하지 않습니다.  
   
- 
-  `StorageBoundInMB` 요소에 지정된 값이 실제 디스크 공간을 초과할 경우 데이터베이스 엔진 튜닝 관리자는 오류를 반환하지만 튜닝 작업은 계속합니다. 튜닝이 완료된 후 권장 구성을 구현하려는 경우에는 디스크 공간을 추가할 수 있습니다.  
+ `StorageBoundInMB` 요소에 지정된 값이 실제 디스크 공간을 초과할 경우 데이터베이스 엔진 튜닝 관리자는 오류를 반환하지만 튜닝 작업은 계속합니다. 튜닝이 완료된 후 권장 구성을 구현하려는 경우에는 디스크 공간을 추가할 수 있습니다.  
   
 ## <a name="example"></a>예제  
   

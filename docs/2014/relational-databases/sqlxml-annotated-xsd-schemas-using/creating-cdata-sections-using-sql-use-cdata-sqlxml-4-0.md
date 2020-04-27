@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cddde2ed1e40b2ea21cf4ebff75bea3beed8f2ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014009"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>sql:use-cdata를 사용하여 CDATA 섹션 만들기(SQLXML 4.0)
@@ -31,15 +31,11 @@ ms.locfileid: "66014009"
   
  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 데이터베이스에는 XML 파서에서 태그 문자로 처리 되는 문자를 포함 하는 경우가 있습니다. 예를 들어 꺾쇠 괄호 (\< 및 >), 작거나 같음 기호 (<=) 및 앰퍼샌드 (&)는 태그 문자로 처리 됩니다. 하지만 이러한 유형의 특수 문자를 CDATA 섹션에 래핑하여 태그 문자로 처리되지 않도록 할 수 있습니다. CDATA 섹션 내의 텍스트는 XML 파서에서 일반 텍스트로 처리됩니다.  
   
- 
-  `sql:use-cdata` 주석은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 반환된 데이터를 CDATA 섹션에 래핑하도록 지정하는 데 사용됩니다. 즉, `sql:field`로 지정된 열의 값을 CDATA 섹션에 포함할지 여부를 나타냅니다. 
-  `sql:use-cdata` 주석은 데이터베이스 열에 매핑되는 요소에만 지정할 수 있습니다.  
+ `sql:use-cdata` 주석은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 반환된 데이터를 CDATA 섹션에 래핑하도록 지정하는 데 사용됩니다. 즉, `sql:field`로 지정된 열의 값을 CDATA 섹션에 포함할지 여부를 나타냅니다. `sql:use-cdata` 주석은 데이터베이스 열에 매핑되는 요소에만 지정할 수 있습니다.  
   
- 
-  `sql:use-cdata` 주석은 부울 값(0=false, 1=true)을 사용합니다. 허용되는 값은 0, 1, true 및 false입니다.  
+ `sql:use-cdata` 주석은 부울 값(0=false, 1=true)을 사용합니다. 허용되는 값은 0, 1, true 및 false입니다.  
   
- 
-  `sql:url-encode`나 ID, IDREF, IDREFS, NMTOKEN 및 NMTOKENS 특성 유형에는 이 주석을 사용할 수 없습니다.  
+ `sql:url-encode`나 ID, IDREF, IDREFS, NMTOKEN 및 NMTOKENS 특성 유형에는 이 주석을 사용할 수 없습니다.  
   
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  

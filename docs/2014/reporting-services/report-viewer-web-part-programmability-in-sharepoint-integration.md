@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a0bc7e2d99190e142647ab8732e2d2d48b3ea2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63255141"
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>SharePoint 통합의 보고서 뷰어 웹 파트 프로그래밍 기능
@@ -35,8 +35,7 @@ ms.locfileid: "63255141"
     > [!NOTE]  
     >  보고서 뷰어 웹 파트에는 한 번에 하나의 <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> 웹 파트만 연결할 수 있으며, <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> 웹 파트와 `T:Microsoft.SharePoint.WebPartPages.IFilterValues` 웹 파트를 동시에 모두 연결할 수는 없습니다.  
   
- 
-  <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> 웹 파트가 `T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart`와 함께 올바르게 작동하려면 <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A> 메서드에서 다음을 수행해야 합니다.  
+ <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> 웹 파트가 `T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart`와 함께 올바르게 작동하려면 <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A> 메서드에서 다음을 수행해야 합니다.  
   
 -   입력 매개 변수로 <xref:System.Data.DataRowView> 개체를 사용하여 콜백 메서드를 호출합니다.  
   
@@ -46,8 +45,7 @@ ms.locfileid: "63255141"
     >  [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2010용 추가 기능의 보고서 뷰어 웹 파트에서도 "FileRef" 열을 사용한 보고서 경로 받기를 지원합니다.  
   
 ### <a name="implementing-a-report-parameter-provider-with-ifiltervalues"></a>IFilterValues를 사용하여 보고서 매개 변수 공급자 구현  
- 
-  `T:Microsoft.SharePoint.WebPartPages.IFilterValues`를 구현하는 웹 파트는 보고서 뷰어 웹 파트에 하나의 매개 변수 값을 제공할 수 있습니다. 보고서 뷰어 웹 파트로 전달되는 이 매개 변수 값에는 보고서 정의에서 보고서 매개 변수에 대해 설정된 것과 동일한 제한(예: 데이터 형식, 유효한 값 등)이 적용됩니다.  
+ `T:Microsoft.SharePoint.WebPartPages.IFilterValues`를 구현하는 웹 파트는 보고서 뷰어 웹 파트에 하나의 매개 변수 값을 제공할 수 있습니다. 보고서 뷰어 웹 파트로 전달되는 이 매개 변수 값에는 보고서 정의에서 보고서 매개 변수에 대해 설정된 것과 동일한 제한(예: 데이터 형식, 유효한 값 등)이 적용됩니다.  
   
  보고서 뷰어 웹 파트에 보고서 매개 변수를 제공하려면 다음을 수행하십시오.  
   

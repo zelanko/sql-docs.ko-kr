@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3d24f945eeb64975c71e416ed1e53d04fd5ffff9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63287834"
 ---
 # <a name="example-retrieving-employee-information"></a>예제: 직원 정보 검색
@@ -123,9 +123,9 @@ FOR XML EXPLICIT;
   
  이 테이블은 범용 테이블의 행을 처리하여 결과 XML 트리를 생성하는 방법을 보여 줍니다.  
   
- 첫 번째 행은 `Tag` 값 `1`을 식별합니다. 따라서 `Tag` 값 `1` 이 있는 열 그룹은 `Employee!1!EmpID`로 식별됩니다. 이 열은 `Employee` 를 요소 이름으로 식별합니다. 그런 다음 `Employee` 특성이 포함된 <`EmpID`> 요소가 생성됩니다. 이러한 특성에는 해당 열 값이 할당됩니다.  
+ 첫 번째 행은 `Tag` 값 `1`을 식별합니다. 따라서 `Tag` 값 `1` 이 있는 열 그룹은 `Employee!1!EmpID`로 식별됩니다. 이 열은 `Employee` 를 요소 이름으로 식별합니다. 그런 다음 `EmpID` 특성이 포함된 <`Employee`> 요소가 생성됩니다. 이러한 특성에는 해당 열 값이 할당됩니다.  
   
- 두 번째 행에는 `Tag` 값 `2`가 포함됩니다. 따라서 열 이름에 `Tag` 값 `2` 가 포함된 열 그룹 `Name!2!FName`및 `Name!2!LName`이 식별됩니다. 이러한 열 이름은 `Name` 을 요소 이름으로 식별합니다. `Name` 및 `FName` 특성이 포함된 <`LName`> 요소가 생성됩니다. 이러한 특성에는 해당 열 값이 할당됩니다. 이 행은 `1` 을 `Parent`로 식별합니다. 이 요소 자식은 이전 <`Employee`> 요소에 추가됩니다.  
+ 두 번째 행에는 `Tag` 값 `2`가 포함됩니다. 따라서 열 이름에 `Tag` 값 `2` 가 포함된 열 그룹 `Name!2!FName`및 `Name!2!LName`이 식별됩니다. 이러한 열 이름은 `Name` 을 요소 이름으로 식별합니다. `FName` 및 `LName` 특성이 포함된 <`Name`> 요소가 생성됩니다. 이러한 특성에는 해당 열 값이 할당됩니다. 이 행은 `1` 을 `Parent`로 식별합니다. 이 요소 자식은 이전 <`Employee`> 요소에 추가됩니다.  
   
  이러한 프로세스는 행 집합의 남은 열에 대해 반복됩니다. FOR XML EXPLICIT에서 행 집합을 순서대로 처리하고 원하는 XML을 생성하기 위해서는 범용 테이블의 행을 정렬하는 것이 중요합니다.  
   

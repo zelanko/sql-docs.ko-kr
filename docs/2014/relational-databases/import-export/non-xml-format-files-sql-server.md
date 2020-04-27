@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6554691ce8debb96d4b0ee350ef98d2bfc57f02c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011874"
 ---
 # <a name="non-xml-format-files-sql-server"></a>비 XML 서식 파일(SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "66011874"
   
 -   [관련 작업](#RelatedTasks)  
   
-##  <a name="Benefits"></a> 비 XML 서식 파일의 이점  
+##  <a name="benefits-of-non-xml-format-files"></a><a name="Benefits"></a> 비 XML 서식 파일의 이점  
   
 -   **bcp** 명령에 **format** 옵션을 지정하여 비 XML 서식 파일을 자동으로 만들 수 있습니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66011874"
 > [!NOTE]  
 >  XML 서식 파일은 비 XML 서식 파일에 비해 몇 가지 이점이 있습니다. 자세한 내용은 [XML 서식 파일&#40;SQL Server&#41;](xml-format-files-sql-server.md)의 두 가지 서식 파일 유형을 대량으로 내보내고 가져올 수 있습니다.  
   
-##  <a name="Structure"></a> 비 XML 서식 파일의 구조  
+##  <a name="structure-of-non-xml-format-files"></a><a name="Structure"></a> 비 XML 서식 파일의 구조  
  비 XML 서식 파일은 특정 구조의 텍스트 파일입니다. 비 XML 서식 파일은 모든 테이블 열의 필드 종결자, 필드 길이, 접두사 길이 및 파일 스토리지 유형에 대한 정보를 포함합니다.  
   
  다음 그림에서는 예제 비 XML 서식 파일에 대한 서식 파일 필드를 보여 줍니다.  
@@ -58,8 +58,7 @@ ms.locfileid: "66011874"
   
 |서식 파일 필드|Description|  
 |------------------------|-----------------|  
-|버전|버전 번호는 **bcp**를 위한 것이며 [!INCLUDE[tsql](../../includes/tsql-md.md)]은 인식하지 않습니다. 
-  **bcp** 유틸리티의 버전 번호<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> 참고: 서식 파일을 읽는 데 사용되는 **bcp** 유틸리티(Bcp.exe)의 버전은 서식 파일을 만드는 데 사용되는 버전 이상이어야 합니다. 예를 들어 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** 는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp**에서 생성된 버전 10.0 서식 파일을 읽을 수 있지만 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** 는 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp**에서 생성된 버전 12.0 서식 파일을 읽을 수 없습니다.|  
+|버전|버전 번호는 **bcp**를 위한 것이며 [!INCLUDE[tsql](../../includes/tsql-md.md)]은 인식하지 않습니다. **bcp** 유틸리티의 버전 번호:<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> 참고: 서식 파일을 읽는 데 사용되는 **bcp** 유틸리티(Bcp.exe)의 버전은 서식 파일을 만드는 데 사용되는 버전 이상이어야 합니다. 예를 들어 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** 는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp**에서 생성된 버전 10.0 서식 파일을 읽을 수 있지만 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** 는 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp**에서 생성된 버전 12.0 서식 파일을 읽을 수 없습니다.|  
 |열 수|데이터 파일의 필드 개수. 이 개수는 모든 행에서 같아야 합니다.|  
   
  다른 서식 파일 필드에서는 대량으로 가져오거나 내보낸 데이터 필드에 대해 설명합니다. 각 데이터 필드를 사용하려면 서식 파일에 있는 별도의 행이 필요합니다. 모든 서식 파일 행에는 다음 표에 설명되어 있는 서식 파일 필드에 대한 값이 포함되어 있습니다.  
@@ -78,7 +77,7 @@ ms.locfileid: "66011874"
 > [!NOTE]  
 >  필드와 테이블 열의 번호 또는 순서가 서로 다른 데이터 파일로부터 대량 가져오기를 수행하도록 서식 파일을 수정할 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [관련 태스크](#RelatedTasks) 를 참조하세요.  
   
-##  <a name="Examples"></a> 비 XML 서식 파일의 예  
+##  <a name="example-of-a-non-xml-format-file"></a><a name="Examples"></a> 비 XML 서식 파일의 예  
  다음 예에서는 이전에 만든`myDepartmentIdentical-f-c.fmt`라는 비 XML 서식 파일을 보여 줍니다. 이 파일에서는 `HumanResources.Department` 예제 데이터베이스의 `AdventureWorks2012` 테이블에 있는 모든 열의 문자 데이터 필드에 대해 설명합니다.  
   
  생성된 `myDepartmentIdentical-f-c.fmt`서식 파일에는 다음 정보가 포함됩니다.  
@@ -95,7 +94,7 @@ ms.locfileid: "66011874"
 > [!NOTE]  
 >  예제 비 XML 서식 파일과 관련된 서식 파일 필드를 보여 주는 그림에 대한 자세한 내용은 이 항목의 앞부분에 나오는 [비 XML 서식 파일의 구조](#Structure)를 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [서식 파일 만들기&#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   

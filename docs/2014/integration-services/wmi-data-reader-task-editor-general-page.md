@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d25a77fd9a3fce701f65eca580647b193a6c0276
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054413"
 ---
 # <a name="wmi-data-reader-task-editor-general-page"></a>WMI 데이터 판독기 태스크 편집기(일반 페이지)
-  
   **WMI 데이터 판독기 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 WMI 데이터 판독기 태스크를 명명 및 설명할 수 있습니다.  
   
  이 태스크에 대한 자세한 내용은 [WMI Data Reader Task](control-flow/wmi-data-reader-task.md)를 참조하십시오. WQL(WMI Query Language)에 대한 자세한 내용은 MSDN 라이브러리의 WMI(Windows Management Instrumentation) 항목인 [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045)(WQL을 사용하여 쿼리)을 참조하세요.  

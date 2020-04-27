@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab8293cdd0e2d839bb3d850116bf13f0cc0a7f58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012306"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>클라이언트 쪽 및 서버 쪽 서식 지정(SQLXML 4.0)

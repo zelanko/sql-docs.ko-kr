@@ -11,14 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 238cf52a52e53aa4ee2712e0bd6abf43a6c5e128
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479381"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>마스터 데이터 관리자 웹 애플리케이션 만들기(Master Data Services)
-  
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션은 마스터 데이터 작업을 하는 사용자 및 MDS를 구성하고 관리하는 관리자를 위한 인터페이스를 제공합니다.  
   
  웹 애플리케이션은 항상 웹 사이트에 포함되어야 합니다. 웹 애플리케이션을 만들려면 다음 중 하나를 수행해야 합니다.  
@@ -39,8 +38,7 @@ ms.locfileid: "65479381"
  새 웹 사이트를 만들면 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션이 루트 웹 애플리케이션입니다. 또한 웹 애플리케이션이 새 애플리케이션 풀에 추가됩니다.  
   
 > [!NOTE]  
->  이 절차를 따르는 경우 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션의 가상 경로 및 별칭을 지정할 수 없습니다. 
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]에 대한 가상 경로 및 별칭을 지정하려면 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션으로 이미 구성되지 않은 기존 웹 사이트에서 웹 애플리케이션을 만들어야 합니다.  
+>  이 절차를 따르는 경우 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션의 가상 경로 및 별칭을 지정할 수 없습니다. [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]에 대한 가상 경로 및 별칭을 지정하려면 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션으로 이미 구성되지 않은 기존 웹 사이트에서 웹 애플리케이션을 만들어야 합니다.  
   
  또한 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 에서는 HTTP 바인딩만 사용하여 사이트를 만드는 것이 지원됩니다. HTTPS 바인딩을 추가하려면 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 에서 새 사이트 및 애플리케이션을 만듭니다. 자세한 내용은 [마스터 데이터 관리자 웹 애플리케이션의 보안 설정](secure-a-master-data-manager-web-application.md) 을 참조하세요.  
   
@@ -50,11 +48,9 @@ ms.locfileid: "65479381"
   
 2.  왼쪽 창에서 **웹 구성**을 클릭합니다.  
   
-3.  
-  **웹 구성** 페이지의 웹 사이트 목록에서 **새 웹 사이트 만들기**를 선택합니다.  
+3.  **웹 구성** 페이지의 웹 사이트 목록에서 **새 웹 사이트 만들기**를 선택합니다.  
   
-4.  
-  **웹 사이트 만들기** 대화 상자에서 새 웹 사이트에 대한 정보를 지정합니다. 대화 상자의 UI(사용자 인터페이스) 옵션에 대한 자세한 내용은 [웹 사이트 만들기 대화 상자&#40;Master Data Services 구성 관리자&#41;](../create-website-dialog-box-master-data-services-configuration-manager.md)를 참조하세요.  
+4.  **웹 사이트 만들기** 대화 상자에서 새 웹 사이트에 대한 정보를 지정합니다. 대화 상자의 UI(사용자 인터페이스) 옵션에 대한 자세한 내용은 [웹 사이트 만들기 대화 상자&#40;Master Data Services 구성 관리자&#41;](../create-website-dialog-box-master-data-services-configuration-manager.md)를 참조하세요.  
   
 5.  **확인**을 클릭합니다.  
   
@@ -67,14 +63,11 @@ ms.locfileid: "65479381"
   
 2.  왼쪽 창에서 **웹 구성**을 클릭합니다.  
   
-3.  
-  **웹 구성** 페이지의 **웹 사이트** 목록에서 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션을 만들려는 웹 사이트를 선택합니다.  
+3.  **웹 구성** 페이지의 **웹 사이트** 목록에서 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션을 만들려는 웹 사이트를 선택합니다.  
   
-4.  
-  **애플리케이션 만들기**를 클릭합니다.  
+4.  **애플리케이션 만들기**를 클릭합니다.  
   
-5.  
-  **웹 애플리케이션 만들기** 대화 상자에서 새 웹 애플리케이션에 대한 정보를 지정합니다. 대화 상자의 UI(사용자 인터페이스) 옵션에 대한 자세한 내용은 [웹 애플리케이션 만들기 대화 상자&#40;Master Data Services 구성 관리자&#41;](../create-web-application-dialog-box-master-data-services-configuration-manager.md)를 참조하세요.  
+5.  **웹 애플리케이션 만들기** 대화 상자에서 새 웹 애플리케이션에 대한 정보를 지정합니다. 대화 상자의 UI(사용자 인터페이스) 옵션에 대한 자세한 내용은 [웹 애플리케이션 만들기 대화 상자&#40;Master Data Services 구성 관리자&#41;](../create-web-application-dialog-box-master-data-services-configuration-manager.md)를 참조하세요.  
   
 6.  **확인**을 클릭합니다.  
   

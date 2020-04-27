@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 92238e27c364c8f09721a55d00c750022b53a18f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014730"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Updategram에 매개 변수 전달(SQLXML 4.0)
@@ -29,8 +29,7 @@ ms.locfileid: "66014730"
  Updategram을 사용하면 NULL을 매개 변수 값으로 전달할 수 있습니다. NULL 매개 변수 값을 전달하려면 `nullvalue` 특성을 지정합니다. 그런 다음 `nullvalue` 특성에 할당된 값을 매개 변수 값으로 제공합니다. Updategram은 이 값을 NULL로 처리합니다.  
   
 > [!NOTE]  
->  
-  `<sql:header>` 및 `<updg:header>`에서는 `nullvalue`를 unqualified로 지정해야 하는 반면 `<updg:sync>`에서는 `nullvalue`를 qualified로 지정합니다(예: `updg:nullvalue`).  
+>  `<sql:header>` 및 `<updg:header>`에서는 `nullvalue`를 unqualified로 지정해야 하는 반면 `<updg:sync>`에서는 `nullvalue`를 qualified로 지정합니다(예: `updg:nullvalue`).  
   
 ## <a name="examples"></a>예  
  다음 예제를 사용 하 여 작업 예제를 만들려면 [SQLXML 예를 실행 하기 위한 요구 사항](../../sqlxml/requirements-for-running-sqlxml-examples.md)에 지정 된 요구 사항을 충족 해야 합니다.  

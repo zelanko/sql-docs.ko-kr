@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 92e3b7b2099aabaa763fb6f6642bcc6267ebe6f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63277427"
 ---
 # <a name="connect-to-an-instance-from-object-explorer"></a>개체 탐색기에서 인스턴스에 연결
@@ -24,24 +24,17 @@ ms.locfileid: "63277427"
  개체 탐색기를 사용하려면 먼저 서버에 연결해야 합니다. 개체 탐색기 도구 모음에서 **연결** 을 클릭하고 드롭다운 목록에서 서버의 유형을 선택합니다. **서버에 연결** 대화 상자가 열립니다. 연결하려면 적어도 서버 이름과 올바른 인증 정보를 제공해야 합니다.  
   
 ## <a name="optional-object-explorer-connection-settings"></a>개체 탐색기 연결 설정(옵션)  
- 서버에 연결할 때 **서버에 연결** 대화 상자에서 추가 연결 정보를 지정할 수 있습니다. 
-  **서버에 연결** 대화 상자는 마지막으로 사용된 설정을 보유하며 새 코드 편집기 창과 같은 새 연결에서 이러한 설정을 사용합니다.  
+ 서버에 연결할 때 **서버에 연결** 대화 상자에서 추가 연결 정보를 지정할 수 있습니다. **서버에 연결** 대화 상자는 마지막으로 사용된 설정을 보유하며 새 코드 편집기 창과 같은 새 연결에서 이러한 설정을 사용합니다.  
   
  연결 설정(옵션)을 지정하려면 다음 단계를 따르십시오.  
   
-1.  개체 탐색기 도구 모음에서 **연결** 을 클릭하고 연결할 서버의 유형을 클릭합니다. 
-  **서버에 연결** 대화 상자가 표시됩니다.  
+1.  개체 탐색기 도구 모음에서 **연결** 을 클릭하고 연결할 서버의 유형을 클릭합니다. **서버에 연결** 대화 상자가 표시됩니다.  
   
-2.  
-  **서버 이름** 상자에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름을 입력합니다.  
+2.  **서버 이름** 상자에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름을 입력합니다.  
   
-3.  
-  **옵션**을 클릭합니다. 
-  **서버에 연결** 대화 상자에 추가 옵션이 표시됩니다.  
+3.  **옵션**을 클릭합니다. **서버에 연결** 대화 상자에 추가 옵션이 표시됩니다.  
   
-4.  
-  **연결 속성** 탭을 클릭하여 추가 설정을 구성합니다. 사용할 수 있는 설정은 서버 유형에 따라 다릅니다. 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 경우 다음 설정을 사용할 수 있습니다.  
+4.  **연결 속성** 탭을 클릭하여 추가 설정을 구성합니다. 사용할 수 있는 설정은 서버 유형에 따라 다릅니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 경우 다음 설정을 사용할 수 있습니다.  
   
     |설정|Description|  
     |-------------|-----------------|  
@@ -55,7 +48,6 @@ ms.locfileid: "63277427"
 5.  지정된 서버를 등록된 서버 목록에 추가하려면 **등록된 서버** 탭을 클릭하고 새 서버를 표시할 위치를 클릭한 다음 연결을 완료합니다.  
   
 > [!NOTE]  
->  
-  **추가 연결 매개 변수** 페이지를 사용하면 연결 문자열에 연결 매개 변수를 더 추가할 수 있습니다. 자세한 내용은 [서버에 연결&#40;추가 연결 매개 변수 페이지&#41;](../../database-engine/connect-to-server-additional-connection-parameters-page.md)을 참조하세요.  
+>  **추가 연결 매개 변수** 페이지를 사용하면 연결 문자열에 연결 매개 변수를 더 추가할 수 있습니다. 자세한 내용은 [서버에 연결&#40;추가 연결 매개 변수 페이지&#41;](../../database-engine/connect-to-server-additional-connection-parameters-page.md)을 참조하세요.  
   
   

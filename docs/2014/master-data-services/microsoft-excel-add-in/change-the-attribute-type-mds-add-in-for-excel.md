@@ -11,30 +11,26 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4406eb225002bbf5df93f8c67385694922d7d2c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482761"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>특성 유형 변경(Excel용 MDS 추가 기능)
-  
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]
-  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 관리자는 허용되는 문자 개수 또는 데이터 형식이 잘못된 경우 특성 유형을 변경할 수 있습니다.  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 관리자는 허용되는 문자 개수 또는 데이터 형식이 잘못된 경우 특성 유형을 변경할 수 있습니다.  
   
  제한된 목록(도메인 기반 특성)을 만들도록 특성 유형을 변경하려는 경우 [도메인 기반 특성 만들기&#40;Excel용 MDS 추가 기능&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)를 참조하세요.  
   
 > [!NOTE]  
->  
-  **이름** 또는 **코드** 열의 유형이나 길이는 업데이트할 수 없습니다.  
+>  **이름** 또는 **코드** 열의 유형이나 길이는 업데이트할 수 없습니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
--   
-  **시스템 관리** 와 **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
+-   **시스템 관리** 와 **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자 &#40;MDS(Master Data Services)&#41;](../administrators-master-data-services.md)를 참조 하세요.  
   
 -   기존 모델, 엔터티 및 특성이 있어야 합니다.  
   
@@ -44,11 +40,9 @@ ms.locfileid: "65482761"
   
 2.  변경할 열에서 셀을 클릭합니다.  
   
-3.  
-  **모델 작성** 그룹에서 **특성 속성**을 클릭합니다.  
+3.  **모델 작성** 그룹에서 **특성 속성**을 클릭합니다.  
   
-4.  
-  **특성 속성** 대화 상자에서 필요에 따라 설정을 업데이트합니다.  
+4.  **특성 속성** 대화 상자에서 필요에 따라 설정을 업데이트합니다.  
   
 5.  **확인**을 클릭합니다.  
   
@@ -80,6 +74,6 @@ ms.locfileid: "65482761"
   
 ## <a name="see-also"></a>참고 항목  
  [특성 &#40;MDS(Master Data Services)&#41;](../attributes-master-data-services.md)   
- [모델 &#40;Excel용 MDS 추가 기능&#41;빌드](building-a-model-mds-add-in-for-excel.md)  
+ [모델 작성&#40;Excel용 MDS 추가 기능&#41;](building-a-model-mds-add-in-for-excel.md)  
   
   

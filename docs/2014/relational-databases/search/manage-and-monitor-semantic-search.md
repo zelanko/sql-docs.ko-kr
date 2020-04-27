@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 94f8edc0fe8b2505adc36705200e299f36b2dbf9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011126"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>의미 체계 검색 관리 및 모니터링
   의미 체계 인덱싱의 과정과 인덱스를 모니터링하고 관리하는 데 관련된 태스크에 대해 설명합니다.  
   
-##  <a name="HowToMonitorStatus"></a>방법: 의미 체계 인덱싱의 상태 확인  
+##  <a name="how-to-check-the-status-of-semantic-indexing"></a><a name="HowToMonitorStatus"></a>방법: 의미 체계 인덱싱의 상태 확인  
  **의미 체계 인덱싱의 첫 번째 단계가 완료되었는지 확인**  
  동적 관리 뷰 [sys.dm_fts_index_population&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)을 쿼리하고 **status** 및 **status_description** 열을 확인합니다.  
   
@@ -50,7 +50,7 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population WHERE table_id = OBJECT_
 GO  
 ```  
   
-##  <a name="HowToCheckSize"></a>방법: 의미 체계 인덱스의 크기 확인  
+##  <a name="how-to-check-the-size-of-the-semantic-indexes"></a><a name="HowToCheckSize"></a>방법: 의미 체계 인덱스의 크기 확인  
  **의미 체계 키 구 인덱스 또는 의미 체계 문서 유사성 인덱스의 논리적 크기 확인**  
  동적 관리 뷰 [sys.dm_db_fts_index_physical_stats&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql)를 쿼리합니다.  
   
@@ -80,7 +80,7 @@ SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')
 GO  
 ```  
   
-##  <a name="HowToForcePopulation"></a>방법: 의미 체계 인덱스의 채우기 적용  
+##  <a name="how-to-force-the-population-of-the-semantic-indexes"></a><a name="HowToForcePopulation"></a>방법: 의미 체계 인덱스의 채우기 적용  
  전체 텍스트 인덱스에 대해 설명한 것과 구문 및 동작이 동일한 START/STOP/PAUSE 또는 RESUME POPULATION 절을 사용하여 전체 텍스트 및 의미 체계 인덱스의 채우기를 적용할 수 있습니다. 자세한 내용은 [ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql) 및 [전체 텍스트 인덱스 채우기](../indexes/indexes.md)를 참조하세요.  
   
  의미 체계 인덱싱은 전체 텍스트 인덱싱에 따라 달라지므로 의미 체계 인덱스는 연결된 전체 텍스트 인덱스가 채워진 경우에만 채워집니다.  
@@ -98,7 +98,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO  
 ```  
   
-##  <a name="HowToDisableIndexing"></a>방법: 의미 체계 인덱싱 해제 또는 다시 설정  
+##  <a name="how-to-disable-or-re-enable-semantic-indexing"></a><a name="HowToDisableIndexing"></a>방법: 의미 체계 인덱싱 해제 또는 다시 설정  
  전체 텍스트 인덱스에 대해 설명한 것과 구문 및 동작이 동일한 ENABLE/DISABLE 절을 사용하여 전체 텍스트 또는 의미 체계 인덱싱을 사용하거나 사용하지 않도록 설정할 수 있습니다. 자세한 내용은 [ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)를 참조하세요.  
   
  의미 체계 인덱싱이 사용하지 않도록 설정되거나 일시 중지된 경우에도 의미 체계 데이터에 대한 쿼리는 계속 작동하여 이전에 인덱싱된 데이터를 반환합니다. 이 동작은 전체 텍스트 검색의 동작과 같지 않습니다.  
@@ -119,7 +119,7 @@ ALTER FULLTEXT INDEX ON table_name ENABLE
 GO  
 ```  
   
-##  <a name="SemanticIndexing"></a>의미 체계 인덱싱의 단계  
+##  <a name="phases-of-semantic-indexing"></a><a name="SemanticIndexing"></a>의미 체계 인덱싱의 단계  
  의미 체계 검색에서는 의미 체계 검색을 사용하도록 설정된 각 열에 대해 다음 두 종류의 데이터를 인덱싱합니다.  
   
 1.  **핵심 구**  
@@ -133,7 +133,7 @@ GO
 2.  **단계 2**: 그런 다음 의미 체계 문서 유사성 인덱스가 채워집니다. 이 인덱스는 이전 단계에서 채워진 두 인덱스에 따라 달라집니다.  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="ProblemNotPopulated"></a>문제: 의미 체계 인덱스가 채워지지 않습니다.  
+##  <a name="problem-semantic-indexes-are-not-populated"></a><a name="ProblemNotPopulated"></a>문제: 의미 체계 인덱스가 채워지지 않습니다.  
  **연결된 전체 텍스트 인덱스가 채워졌습니까?**  
  의미 체계 인덱싱은 전체 텍스트 인덱싱에 따라 달라지므로 의미 체계 인덱스는 연결된 전체 텍스트 인덱스가 채워진 경우에만 채워집니다.  
   

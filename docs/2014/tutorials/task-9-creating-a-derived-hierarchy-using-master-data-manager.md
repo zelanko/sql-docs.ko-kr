@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7cb2f12115e3fe743c49c2f7e69f765da4501ba2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489538"
 ---
 # <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>태스크 9: 마스터 데이터 관리자를 사용하여 파생 계층 만들기
@@ -22,8 +22,7 @@ ms.locfileid: "65489538"
   
 1.  페이지 맨 위에 있는 **SQL Server 2012 MDS(Master Data Services)** 를 클릭 하 여 **마스터 데이터 관리자** 의 기본 페이지로 전환 합니다.  
   
-2.  
-  **관리 작업** 섹션에서 **시스템 관리** 를 클릭합니다.  
+2.  **관리 작업** 섹션에서 **시스템 관리** 를 클릭합니다.  
   
 3.  메뉴 모음에서 **관리** 위로 마우스를 가져가서 **파생 계층**을 클릭 합니다.  
   
@@ -51,8 +50,7 @@ ms.locfileid: "65489538"
   
 10. 페이지 맨 위에 있는 **SQL Server 2012 MDS(Master Data Services)** 를 클릭 하 여 **마스터 데이터 관리자** 의 기본 페이지로 전환 합니다.  
   
-11. 
-  **탐색기**를 클릭합니다.  
+11. **탐색기**를 클릭합니다.  
   
 12. **계층** 위로 마우스를 이동 하 고 **파생: SuppliersInState**를 클릭 합니다.  
   

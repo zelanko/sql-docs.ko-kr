@@ -25,16 +25,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d6f871fabba547268736dca990215b89ae84e9eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011174"
 ---
 # <a name="populate-full-text-indexes"></a>전체 텍스트 인덱스 채우기
   전체 텍스트 인덱스를 만들고 유지 관리하려면 *채우기* ( *탐색*이라고도 함)라는 프로세스를 사용하여 인덱스를 채워야 합니다.  
   
-##  <a name="types"></a>채우기 유형  
+##  <a name="types-of-population"></a><a name="types"></a>채우기 유형  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 전체 채우기, 변경 내용 추적 기반 자동 또는 수동 채우기 및 증분 타임 스탬프 기반 채우기와 같은 채우기 유형을 지원 합니다.  
   
 ### <a name="full-population"></a>전체 채우기  
@@ -45,12 +45,10 @@ ms.locfileid: "66011174"
 
   
 ### <a name="change-tracking-based-population"></a>변경 내용 추적 기반 채우기  
- 경우에 따라 초기 전체 채우기 후에 변경 내용 추적을 사용하여 전체 텍스트 인덱스를 유지 관리할 수도 있습니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 마지막 채우기 후에 기본 테이블의 변경 내용을 추적하는 테이블을 유지 관리하기 때문에 변경 내용 추적을 사용할 경우 약간의 오버헤드가 발생합니다. 변경 내용 추적을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 업데이트, 삭제 또는 삽입에 의해 수정된 기본 테이블 또는 인덱싱된 뷰의 행 레코드를 유지 관리합니다. WRITETEXT 및 UPDATETEXT를 통한 데이터 변경 내용은 전체 텍스트 인덱스에 반영되지 않고 변경 내용 추적 시 선택되지도 않습니다.  
+ 경우에 따라 초기 전체 채우기 후에 변경 내용 추적을 사용하여 전체 텍스트 인덱스를 유지 관리할 수도 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 마지막 채우기 후에 기본 테이블의 변경 내용을 추적하는 테이블을 유지 관리하기 때문에 변경 내용 추적을 사용할 경우 약간의 오버헤드가 발생합니다. 변경 내용 추적을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 업데이트, 삭제 또는 삽입에 의해 수정된 기본 테이블 또는 인덱싱된 뷰의 행 레코드를 유지 관리합니다. WRITETEXT 및 UPDATETEXT를 통한 데이터 변경 내용은 전체 텍스트 인덱스에 반영되지 않고 변경 내용 추적 시 선택되지도 않습니다.  
   
 > [!NOTE]  
->  
-  `timestamp` 열이 포함된 테이블에 대해서는 증분 채우기를 사용할 수 있습니다.  
+>  `timestamp` 열이 포함된 테이블에 대해서는 증분 채우기를 사용할 수 있습니다.  
   
  인덱스를 만드는 동안 변경 내용 추적을 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 새 전체 텍스트 인덱스를 만드는 즉시 완전히 채웁니다. 그 이후에는 변경 내용이 추적되고 전체 텍스트 인덱스로 전파됩니다. 변경 내용 추적에는 두 가지 유형, 자동(CHANGE_TRACKING AUTO 옵션)과 수동(CHANGE_TRACKING MANUAL 옵션)이 있습니다. 자동 변경 내용 추적이 기본 동작입니다.  
   
@@ -70,10 +68,9 @@ ms.locfileid: "66011174"
   
 -   수동 채우기  
   
-     CHANGE_TRACKING MANUAL을 지정한 경우 전체 텍스트 엔진에서는 전체 텍스트 인덱스에 대해 수동 채우기를 사용합니다. 초기 전체 채우기가 완료된 후 기본 테이블의 데이터가 수정되면 변경 내용이 추적됩니다. 그러나 ALTER 전체 텍스트 인덱스를 실행할 때까지 전체 텍스트 인덱스로 전파 되지 않습니다. 업데이트 채우기 문을 시작 합니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 주기적으로 호출할 수 있습니다.  
+     CHANGE_TRACKING MANUAL을 지정한 경우 전체 텍스트 엔진에서는 전체 텍스트 인덱스에 대해 수동 채우기를 사용합니다. 초기 전체 채우기가 완료된 후 기본 테이블의 데이터가 수정되면 변경 내용이 추적됩니다. 그러나 ALTER 전체 텍스트 인덱스를 실행할 때까지 전체 텍스트 인덱스로 전파 되지 않습니다. 업데이트 채우기 문을 시작 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 주기적으로 호출할 수 있습니다.  
   
-     **수동 채우기를 사용 하 여 변경 내용 추적을 시작 하려면**  
+     **수동 채우기가 있는 변경 내용 추적을 시작하려면**  
   
     -   [전체 텍스트 인덱스 만들기](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... CHANGE_TRACKING 수동  
   
@@ -92,12 +89,9 @@ ms.locfileid: "66011174"
 ### <a name="incremental-timestamp-based-population"></a>증분 타임스탬프 기반 채우기  
  증분 채우기는 전체 텍스트 인덱스를 수동으로 채우는 대체 메커니즘으로, CHANGE_TRACKING이 MANUAL 또는 OFF로 설정된 전체 텍스트 인덱스에 대해 실행할 수 있습니다. 전체 텍스트 인덱스에 대해 처음으로 실행하는 채우기가 증분 채우기이면 모든 행이 인덱싱되므로 그 결과가 전체 채우기의 경우와 같습니다.  
   
- 증분 채우기를 사용하려면 인덱싱된 테이블에 `timestamp` 데이터 형식의 열이 있어야 합니다. 
-  `timestamp` 열이 없으면 증분 채우기를 수행할 수 없습니다. 
-  `timestamp` 열이 없는 테이블에 대해 증분 채우기를 요청하면 전체 채우기 작업이 수행됩니다. 또한 테이블의 전체 텍스트 인덱스에 영향을 주는 메타데이터가 마지막 채우기 후에 변경된 경우 증분 채우기 요청은 전체 채우기로 구현됩니다. 여기에는 열, 인덱스 또는 전체 텍스트 인덱스 정의의 변경으로 인한 메타데이터 변경 내용이 포함됩니다.  
+ 증분 채우기를 사용하려면 인덱싱된 테이블에 `timestamp` 데이터 형식의 열이 있어야 합니다. `timestamp` 열이 없으면 증분 채우기를 수행할 수 없습니다. `timestamp` 열이 없는 테이블에 대해 증분 채우기를 요청하면 전체 채우기 작업이 수행됩니다. 또한 테이블의 전체 텍스트 인덱스에 영향을 주는 메타데이터가 마지막 채우기 후에 변경된 경우 증분 채우기 요청은 전체 채우기로 구현됩니다. 여기에는 열, 인덱스 또는 전체 텍스트 인덱스 정의의 변경으로 인한 메타데이터 변경 내용이 포함됩니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 `timestamp` 열을 사용하여 마지막 채우기 후에 변경된 행을 식별합니다. 그러면 증분 채우기는 마지막 채우기 후 또는 마지막 채우기를 진행 중인 동안 추가, 삭제 또는 수정된 행에 대해 전체 텍스트 인덱스를 업데이트합니다. 테이블에서 대량 삽입이 발생하는 경우 증분 채우기를 사용하는 것이 수동 채우기를 사용하는 것보다 효율적일 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 `timestamp` 열을 사용하여 마지막 채우기 후에 변경된 행을 식별합니다. 그러면 증분 채우기는 마지막 채우기 후 또는 마지막 채우기를 진행 중인 동안 추가, 삭제 또는 수정된 행에 대해 전체 텍스트 인덱스를 업데이트합니다. 테이블에서 대량 삽입이 발생하는 경우 증분 채우기를 사용하는 것이 수동 채우기를 사용하는 것보다 효율적일 수 있습니다.  
   
  채우기 완료 시 전체 텍스트 엔진은 새 `timestamp` 값을 기록합니다. 이 값은 SQL Gatherer에서 발생한 가장 큰 `timestamp` 값입니다. 이 값은 후속 증분 채우기가 시작될 때 사용됩니다.  
   
@@ -105,7 +99,7 @@ ms.locfileid: "66011174"
   
 
   
-##  <a name="examples"></a>전체 텍스트 인덱스를 채우는 예  
+##  <a name="examples-of-populating-full-text-indexes"></a><a name="examples"></a>전체 텍스트 인덱스를 채우는 예  
   
 > [!NOTE]  
 >  이 섹션의 예에서는 `Production.Document` 예제 데이터베이스의 `HumanResources.JobCandidate` 또는 `AdventureWorks` 테이블을 사용합니다.  
@@ -173,7 +167,7 @@ GO
   
 
   
-##  <a name="create"></a>증분 채우기 일정 만들기 또는 변경  
+##  <a name="creating-or-changing-a-schedule-for-incremental-population"></a><a name="create"></a>증분 채우기 일정 만들기 또는 변경  
   
 #### <a name="to-create-or-change-a-schedule-for-incremental-population-in-management-studio"></a>Management Studio에서 증분 채우기 일정을 만들거나 변경하려면  
   
@@ -199,8 +193,7 @@ GO
          그러면 일정을 만들 수 있는 **새 전체 텍스트 인덱싱 테이블 일정** 대화 상자가 열립니다. 일정을 저장하려면 **확인**을 클릭합니다.  
   
         > [!IMPORTANT]  
-        >  
-  *전체 텍스트 인덱스 속성*대화 상자를 닫으면 SQL Server 에이전트 작업(*database_name*. **table_name** 에 대한 증분 테이블 채우기 시작)이 새 일정에 연결됩니다. 전체 텍스트 인덱스 일정을 여러 개 만들 경우 모두 동일한 작업을 사용합니다.  
+        >  *전체 텍스트 인덱스 속성*대화 상자를 닫으면 SQL Server 에이전트 작업(*database_name*. **table_name** 에 대한 증분 테이블 채우기 시작)이 새 일정에 연결됩니다. 전체 텍스트 인덱스 일정을 여러 개 만들 경우 모두 동일한 작업을 사용합니다.  
   
     -   일정을 변경하려면 일정을 선택하고 **편집**을 클릭합니다.  
   
@@ -215,7 +208,7 @@ GO
   
 
   
-##  <a name="crawl"></a>전체 텍스트 채우기의 오류 문제 해결 (탐색)  
+##  <a name="troubleshooting-errors-in-a-full-text-population-crawl"></a><a name="crawl"></a>전체 텍스트 채우기의 오류 문제 해결 (탐색)  
  탐색 중에 오류가 발생하면 전체 텍스트 검색 탐색 로깅 기능은 일반 텍스트 파일인 탐색 로그를 만들고 유지 관리합니다. 각 탐색 로그는 특정 전체 텍스트 카탈로그에 해당합니다. 기본적으로 지정된 인스턴스(여기서는 첫 번째 인스턴스)의 탐색 로그는 %ProgramFiles%\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\LOG 폴더에 있습니다. 탐색 로그 파일은 다음 명명 구성표를 따릅니다.  
   
  SQLFT\<DatabaseID>\<FullTextCatalogID>입니다. 로그 [\<n>]  

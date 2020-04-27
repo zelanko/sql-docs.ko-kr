@@ -19,23 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013804"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field와 sql:limit-value를 사용하여 값 필터링(SQLXML 4.0)
-  데이터베이스 쿼리를 통해 반환되는 행을 어떤 제한 값을 기준으로 제한할 수 있습니다. 
-  `sql:limit-field` 및 `sql:limit-value` 주석은 제한 값이 포함된 데이터베이스 열을 식별하고 반환되는 데이터를 필터링하는 데 사용할 특정 제한 값을 지정하는 데 사용됩니다.  
+  데이터베이스 쿼리를 통해 반환되는 행을 어떤 제한 값을 기준으로 제한할 수 있습니다. `sql:limit-field` 및 `sql:limit-value` 주석은 제한 값이 포함된 데이터베이스 열을 식별하고 반환되는 데이터를 필터링하는 데 사용할 특정 제한 값을 지정하는 데 사용됩니다.  
   
- 
-  `sql:limit-field` 주석은 제한 값이 포함된 열을 식별하는 데 사용되며 매핑되는 각각의 요소나 특성에 사용할 수 있습니다.  
+ `sql:limit-field` 주석은 제한 값이 포함된 열을 식별하는 데 사용되며 매핑되는 각각의 요소나 특성에 사용할 수 있습니다.  
   
- 
-  `sql:limit-value` 주석은 `sql:limit-field` 주석에 지정한 열에 제한 값을 지정하는 데 사용됩니다. 
-  `sql:limit-value` 주석은 선택 사항입니다. 
-  `sql:limit-value`를 지정하지 않으면 NULL 값이 사용됩니다.  
+ `sql:limit-value` 주석은 `sql:limit-field` 주석에 지정한 열에 제한 값을 지정하는 데 사용됩니다. `sql:limit-value` 주석은 선택 사항입니다. `sql:limit-value`를 지정하지 않으면 NULL 값이 사용됩니다.  
   
 > [!NOTE]  
 >  매핑되는 SQL 열이 `sql:limit-field` 형식인 경우에 `real`를 사용하면 SQLXML 4.0에서는 XML 스키마에 지정된 대로 `sql:limit-value`를 지정된 `nvarchar` 값으로 변환합니다. 이 경우 공학용 표기법을 사용하여 10진수 제한 값을 지정해야 합니다. 자세한 내용은 아래 2번 예를 참조하십시오.  
@@ -58,8 +53,7 @@ ms.locfileid: "66013804"
   
  고객에 대해 배달 주소 및/또는 요금 청구서 주소가 존재할 수 있습니다. AddressType 열의 값은 Shipping과 Billing입니다.  
   
- **ShipTo** Schema 특성이 주소 관계의 StreetAddress 열에 매핑되는 매핑 스키마입니다. 
-  `sql:limit-field` 및 `sql:limit-value` 주석을 지정하면 이 특성에 대해 배달 주소만 반환되도록 제한할 수 있습니다. 마찬가지로 **BillTo** 스키마 특성은 고객의 청구 주소만 반환 합니다.  
+ **ShipTo** Schema 특성이 주소 관계의 StreetAddress 열에 매핑되는 매핑 스키마입니다. `sql:limit-field` 및 `sql:limit-value` 주석을 지정하면 이 특성에 대해 배달 주소만 반환되도록 제한할 수 있습니다. 마찬가지로 **BillTo** 스키마 특성은 고객의 청구 주소만 반환 합니다.  
   
  스키마는 다음과 같습니다.  
   

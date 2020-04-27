@@ -15,15 +15,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd7ce157e831d32272f6ff2531c39f789a01e901
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66015086"
 ---
 # <a name="troubleshoot-full-text-indexing"></a>전체 텍스트 인덱싱 문제 해결
      
-##  <a name="failure"></a> 전체 텍스트 인덱싱 오류 문제 해결  
+##  <a name="troubleshoot-full-text-indexing-failures"></a><a name="failure"></a> 전체 텍스트 인덱싱 오류 문제 해결  
  전체 텍스트 인덱스를 채우거나 유지 관리하는 동안 전체 텍스트 인덱서는 아래에서 설명하는 이유로 인해 하나 이상의 행을 인덱싱하지 못할 수 있습니다. 이러한 행 수준 오류가 발생해도 채우기는 완료됩니다. 그러나 인덱서가 이러한 행을 건너뛰므로 이러한 행에 포함된 내용은 쿼리할 수 없습니다.  
   
  인덱싱 오류는 다음과 같은 경우에 발생할 수 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "66015086"
   
 
   
-##  <a name="state"></a> 트랜잭션 로그가 복원된 후 일관성 없는 상태의 전체 텍스트 인덱스  
+##  <a name="full-text-index-in-inconsistent-state-after-transaction-log-restored"></a><a name="state"></a> 트랜잭션 로그가 복원된 후 일관성 없는 상태의 전체 텍스트 인덱스  
  데이터베이스의 트랜잭션 로그를 복원할 때 전체 텍스트 인덱스에 일관성이 없다는 경고가 표시될 수 있습니다. 이는 데이터베이스가 백업된 후 테이블에 대한 전체 텍스트 인덱스가 수정되었기 때문입니다. 전체 텍스트 인덱스를 일관성 있게 구성하려면 해당 테이블에 대해 전체 채우기(탐색)를 실행해야 합니다. 자세한 내용은 [전체 텍스트 인덱스 채우기](../indexes/indexes.md)를 참조하세요.  
   
 

@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 404ae57711a7d8376774c4e5340017f784b916e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013877"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>테이블 및 열에 대한 XSD 요소 및 특성의 기본 매핑(SQLXML 4.0)
@@ -161,8 +161,7 @@ ms.locfileid: "66013877"
 </xsd:schema>  
 ```  
   
- 
-  `xml` 데이터 형식은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입되었습니다.  
+ `xml` 데이터 형식은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입되었습니다.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>스키마에 대해 예제 XPath 쿼리를 테스트하려면  
   
@@ -206,7 +205,7 @@ ctions">
   
 ## <a name="see-also"></a>참고 항목  
  [SQLXML 4.0 &#40;주석이 추가 된 스키마 보안 고려 사항&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
- [XML 데이터&#40;SQL Server&#41;](../xml/xml-data-sql-server.md)   
+ [XML 데이터 &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)   
  [SQLXML 4.0의 xml 데이터 형식 지원](../sqlxml/xml-data-type-support-in-sqlxml-4-0.md)  
   
   

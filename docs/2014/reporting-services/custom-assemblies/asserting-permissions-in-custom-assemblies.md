@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f66896479ec06d78b94d6fe084ff806e3af67727
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265376"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>사용자 지정 어셈블리에서 권한 어설션
@@ -32,8 +32,7 @@ ms.locfileid: "63265376"
   
 2.  사용자 지정 어셈블리에 필요한 권한을 부여하기 위해 보고서 서버 정책 구성 파일을 수정합니다. 보안 정책 구성 파일에 대한 자세한 내용은 [Reporting Services 보안 정책 파일 사용](../extensions/secure-development/using-reporting-services-security-policy-files.md)을 참조하세요.  
   
-3.  필요한 권한을 보안 호출이 이루어지는 메서드의 일부로 어설션합니다. 보고서 서버에서 호출되는 사용자 지정 어셈블리 코드는 보고서 식 호스트 어셈블리의 일부로서 기본적으로 **Execution** 권한을 사용하여 실행되므로 이 작업이 필요합니다. 
-  **Execution** 권한 집합을 통해 코드를 실행할 수 있지만 보호된 리소스는 사용할 수 없습니다.  
+3.  필요한 권한을 보안 호출이 이루어지는 메서드의 일부로 어설션합니다. 보고서 서버에서 호출되는 사용자 지정 어셈블리 코드는 보고서 식 호스트 어셈블리의 일부로서 기본적으로 **Execution** 권한을 사용하여 실행되므로 이 작업이 필요합니다. **Execution** 권한 집합을 통해 코드를 실행할 수 있지만 보호된 리소스는 사용할 수 없습니다.  
   
 4.  강력한 이름으로 서명된 경우 사용자 지정 어셈블리를 **AllowPartiallyTrustedCallersAttribute**로 표시합니다. 사용자 지정 어셈블리는 기본적으로 **FullTrust**가 부여되지 않는(즉, "부분적으로 신뢰할 수 있는" 호출자) 보고서 식 호스트 어셈블리의 일부인 보고서 식에서 호출되므로 이 작업이 필요합니다. 자세한 내용은 [강력한 이름의 사용자 지정 어셈블리 사용](using-strong-named-custom-assemblies.md)을 참조하세요.  
   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 29404c4a3dc7b4b10106e7a3a8cb170ffe1e7a3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010626"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 부울 연산자 지정(SQLXML 4.0)
@@ -29,14 +29,13 @@ ms.locfileid: "66010626"
 ## <a name="examples"></a>예  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. OR 부울 연산자 지정  
- 이 XPath 쿼리는 **** ** \<** CustomerID 특성 값이 13 또는 31 인 컨텍스트 노드의 Customer>요소 자식을 반환 합니다.  
+ 이 XPath 쿼리는 **CustomerID** ** \<** CustomerID 특성 값이 13 또는 31 인 컨텍스트 노드의 Customer>요소 자식을 반환 합니다.  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
 ```  
   
- 
-  `attribute` 축에 대한 바로 가기(@)를 지정할 수 있으며 `child` 축은 기본값이므로 생략할 수 있습니다.  
+ `attribute` 축에 대한 바로 가기(@)를 지정할 수 있으며 `child` 축은 기본값이므로 생략할 수 있습니다.  
   
 ```  
 /Customer[@CustomerID="13" or @CustomerID="31"]  

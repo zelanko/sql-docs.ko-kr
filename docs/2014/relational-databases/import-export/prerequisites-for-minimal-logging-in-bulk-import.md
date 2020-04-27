@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ccb9642982b8680e4111346298e7a70bbc606dbb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011884"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prerequisites for Minimal Logging in Bulk Import
@@ -62,20 +62,20 @@ ms.locfileid: "66011884"
 > [!NOTE]  
 >  트랜잭션 복제를 사용하는 경우 대량 로그 복구 모델에서도 BULK INSERT 작업이 모두 기록됩니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
--   [데이터베이스 &#40;SQL Server 복구 모델 보기 또는 변경&#41;](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)  
+-   [데이터베이스 복구 모델 보기 또는 변경&#40;SQL Server&#41;](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)  
   
 
   
 ## <a name="see-also"></a>참고 항목  
- [복구 모델 &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)   
+ [복구 모델&#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)   
  [bcp 유틸리티](../../tools/bcp-utility.md)   
  [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [Transact-sql&#41;&#40;테이블 힌트](/sql/t-sql/queries/hints-transact-sql-table)   
+ [ALTER DATABASE &#40;Transact-SQL &#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [테이블 힌트&#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)   
  [INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)  
   
   

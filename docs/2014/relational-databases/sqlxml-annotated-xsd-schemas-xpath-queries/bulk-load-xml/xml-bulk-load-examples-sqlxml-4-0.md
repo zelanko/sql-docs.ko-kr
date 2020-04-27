@@ -32,10 +32,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc1618a40585ad1b20d4f59019f1dd3674468da7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013273"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 대량 로드 예(SQLXML 4.0)
@@ -1031,7 +1031,7 @@ set objBL=Nothing
   
 5.  VBScript 코드를 실행합니다.  
   
-     Customerid의 값이 중괄호 ( `sql:datatype` {및})를 포함 하는 **** GUID로 지정 된 경우 스키마는 **customerid** 특성에 해당 하는을 지정 해야 합니다. 예를 들면 다음과 같습니다.  
+     Customerid의 값이 중괄호 ( `sql:datatype` {및})를 포함 하는 **CustomerID** GUID로 지정 된 경우 스키마는 **customerid** 특성에 해당 하는을 지정 해야 합니다. 예를 들면 다음과 같습니다.  
   
     ```  
     <ROOT>  

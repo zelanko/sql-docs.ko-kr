@@ -18,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 280f4bc3c20fb65be24ace423f69982ad96bfbff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011107"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
   전체 텍스트 검색을 정의하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 쿼리는 전체 텍스트 조건자(CONTAINS 및 FREETEXT) 및 함수(CONTAINSTABLE 및 FREETEXTTABLE)를 사용합니다. 이러한 조건자와 함수는 다양한 형태의 쿼리 용어를 지원하는 많은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문을 지원합니다. 전체 텍스트 쿼리를 작성하려면 이러한 조건자와 함수를 사용하는 시기와 방법을 알아야 합니다.  
   
-##  <a name="OV_ft_predicates"></a>전체 텍스트 조건자 (CONTAINS 및 FREETEXT) 개요  
+##  <a name="overview-of-the-full-text-predicates-contains-and-freetext"></a><a name="OV_ft_predicates"></a>전체 텍스트 조건자 (CONTAINS 및 FREETEXT) 개요  
  CONTAINS 및 FREETEXT 조건자는 TRUE 또는 FALSE 값을 반환합니다. 이러한 조건자는 지정된 행이 전체 텍스트 쿼리와 일치하는지 여부를 확인하는 선택 조건을 지정하는 데에만 사용할 수 있습니다. 일치하는 행은 결과 집합에 반환됩니다. CONTAINS 및 FREETEXT는 SELECT 문의 WHERE 또는 HAVING 절에 지정됩니다. CONTAINS 및 FREETEXT는 LIKE와 BETWEEN 등의 다른 [!INCLUDE[tsql](../../includes/tsql-md.md)] 조건자와 결합할 수 있습니다.  
   
 > [!NOTE]  
@@ -81,7 +81,7 @@ GO
   
  
   
-##  <a name="OV_ft_functions_CONTAINSTABLE_FREETEXTTABLE"></a>전체 텍스트 함수 개요 (CONTAINSTABLE 및 FREETEXTTABLE)  
+##  <a name="overview-of-the-full-text-functions-containstable-and-freetexttable"></a><a name="OV_ft_functions_CONTAINSTABLE_FREETEXTTABLE"></a>전체 텍스트 함수 개요 (CONTAINSTABLE 및 FREETEXTTABLE)  
  CONTAINSTABLE 및 FREETEXTTABLE 함수는 일반 테이블 이름처럼 SELECT 문의 FROM 절에서 참조될 수 있습니다. 이러한 함수는 전체 텍스트 쿼리와 일치하는 행이 0개, 1개 또는 그 이상 있는 테이블을 반환합니다. 반환된 테이블에는 함수의 전체 텍스트 검색 조건에 지정된 선택 조건과 일치하는 기본 테이블의 행만 포함됩니다.  
   
 > [!NOTE]  
@@ -101,7 +101,7 @@ GO
   
  CONTAINSTABLE은 CONTAINS와 같은 유형의 일치에 유용하고 FREETEXTTABLE은 FREETEXT와 같은 유형의 일치에 유용합니다. 자세한 내용은 이 항목의 앞부분에 나오는 [전체 텍스트 조건자(CONTAINS 및 FREETEXT) 개요](#OV_ft_predicates)를 참조하세요. CONTAINSTABLE 및 FREETEXTTABLE 함수를 사용하는 쿼리를 실행할 경우 반환된 행을 원래 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 테이블의 행과 명시적으로 조인해야 합니다.  
   
- 일반적으로 CONTAINSTABLE 또는 FREETEXTTABLE 결과는 기본 테이블과 조인되어야 합니다. 이러한 경우 고유 키 열 이름을 알아야 합니다. 모든 전체 텍스트 사용 테이블에서 생성되는 이 열은 해당 테이블에 고유 행을 강제 적용하는 데 사용됩니다(*고유**키 열*). 자세한 내용은 [전체 텍스트 인덱스 관리](../indexes/indexes.md)를 참조하세요.  
+ 일반적으로 CONTAINSTABLE 또는 FREETEXTTABLE 결과는 기본 테이블과 조인되어야 합니다. 이러한 경우 고유 키 열 이름을 알아야 합니다. 모든 전체 텍스트 사용 테이블에서 발생 하는이 열은 테이블에 고유 행을 적용 하는 데 사용 됩니다 ( *고유 * * 키 열*). 자세한 내용은 [전체 텍스트 인덱스 관리](../indexes/indexes.md)를 참조하세요.  
   
  
   
@@ -165,7 +165,7 @@ GO
   
  
   
-##  <a name="Using_Boolean_Operators"></a>부울 연산자 (AND, OR 및 NOT in CONTAINS 및 CONTAINSTABLE) 사용  
+##  <a name="using-boolean-operators---and-or-and-not---in-contains-and-containstable"></a><a name="Using_Boolean_Operators"></a>부울 연산자 (AND, OR 및 NOT in CONTAINS 및 CONTAINSTABLE) 사용  
  CONTAINS 조건자와 CONTAINSTABLE 함수는 동일한 검색 조건을 사용하며, 둘 다 부울 연산자 (AND, OR 및 NOT)를 사용 하 여 여러 검색 단어를 결합 하 여 논리적 연산을 수행할 수 있도록 지원 합니다. 예를 들어 AND를 사용하여 "latte"와 "New York-style bagel"이 둘 다 포함된 행을 찾거나 AND NOT을 사용하여 "bagel"은 포함되지만 "cream cheese"는 포함되지 않은 행을 찾을 수 있습니다.  
   
 > [!NOTE]  
@@ -189,7 +189,7 @@ GO
   
  
   
-##  <a name="Additional_Considerations"></a>전체 텍스트 쿼리에 대 한 추가 고려 사항  
+##  <a name="additional-considerations-for-full-text-queries"></a><a name="Additional_Considerations"></a>전체 텍스트 쿼리에 대 한 추가 고려 사항  
  전체 텍스트 쿼리를 작성할 때 다음 사항도 고려하십시오.  
   
 -   LANGUAGE 옵션  
@@ -210,9 +210,8 @@ GO
   
 
   
-##  <a name="varbinary"></a>Varbinary (max) 및 xml 열 쿼리  
- 
-  `varbinary(max)`, `varbinary` 또는 `xml` 열이 전체 텍스트 인덱싱된 경우 다른 전체 텍스트 인덱싱된 열과 마찬가지로 전체 텍스트 조건자(CONTAINS 및 FREETEXT) 및 함수(CONTAINSTABLE 및 FREETEXTTABLE)를 사용하여 이러한 열을 쿼리할 수 있습니다.  
+##  <a name="querying-varbinarymax-and-xml-columns"></a><a name="varbinary"></a>Varbinary (max) 및 xml 열 쿼리  
+ `varbinary(max)`, `varbinary` 또는 `xml` 열이 전체 텍스트 인덱싱된 경우 다른 전체 텍스트 인덱싱된 열과 마찬가지로 전체 텍스트 조건자(CONTAINS 및 FREETEXT) 및 함수(CONTAINSTABLE 및 FREETEXTTABLE)를 사용하여 이러한 열을 쿼리할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  전체 텍스트 검색은 이미지 열에서도 작동합니다. 그러나 `image` 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서 제거될 예정입니다. 새 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하십시오. 대신 `varbinary(max)` 데이터 형식을 사용해야 합니다.  
@@ -226,40 +225,36 @@ GO
 EXEC sp_fulltext_service @action='load_os_resources', @value=1  
 ```  
   
- 
-  `varbinary(max)` 열에 대한 전체 텍스트 인덱스를 만들려면 전체 텍스트 엔진이 `varbinary(max)` 열에 있는 문서의 파일 확장명에 액세스해야 합니다. 이 정보는 전체 텍스트 인덱스의 `varbinary(max)` 열에 연결해야 하는 테이블 열, 즉 유형 열에 저장되어야 합니다. 문서를 인덱싱할 때 전체 텍스트 엔진은 유형 열의 파일 확장명을 사용하여 사용할 필터를 식별합니다.  
+ `varbinary(max)` 열에 대한 전체 텍스트 인덱스를 만들려면 전체 텍스트 엔진이 `varbinary(max)` 열에 있는 문서의 파일 확장명에 액세스해야 합니다. 이 정보는 전체 텍스트 인덱스의 `varbinary(max)` 열에 연결해야 하는 테이블 열, 즉 유형 열에 저장되어야 합니다. 문서를 인덱싱할 때 전체 텍스트 엔진은 유형 열의 파일 확장명을 사용하여 사용할 필터를 식별합니다.  
   
  
   
 ### <a name="xml-data"></a>xml 데이터  
- 
-  `xml` 데이터 형식 열에는 XML 문서만 저장되고 이러한 문서에는 XML 필터만 사용됩니다. 따라서 유형 열은 필요하지 않습니다. 
-  `xml` 열에서 전체 텍스트 인덱스는 XML 요소의 내용은 인덱싱하지만 XML 태그는 무시합니다. 특성 값은 숫자 값이 아니면 전체 텍스트 인덱싱됩니다. 요소 태그는 토큰 경계로 사용됩니다. 여러 언어를 포함하는 올바른 형식의 XML 또는 HTML 문서와 조각이 지원됩니다.  
+ `xml` 데이터 형식 열에는 XML 문서만 저장되고 이러한 문서에는 XML 필터만 사용됩니다. 따라서 유형 열은 필요하지 않습니다. `xml` 열에서 전체 텍스트 인덱스는 XML 요소의 내용은 인덱싱하지만 XML 태그는 무시합니다. 특성 값은 숫자 값이 아니면 전체 텍스트 인덱싱됩니다. 요소 태그는 토큰 경계로 사용됩니다. 여러 언어를 포함하는 올바른 형식의 XML 또는 HTML 문서와 조각이 지원됩니다.  
   
  열을 쿼리 하는 `xml` 방법에 대 한 자세한 내용은 [XML 열에 전체 텍스트 검색 사용](../xml/use-full-text-search-with-xml-columns.md)을 참조 하세요.  
   
  
   
-##  <a name="supported"></a>지원 되는 쿼리 용어 형태  
+##  <a name="supported-forms-of-query-terms"></a><a name="supported"></a>지원 되는 쿼리 용어 형태  
  이 섹션에서는 전체 텍스트 조건자 및 행 집합 반환 함수에서 각 쿼리 형태에 제공하는 지원에 대해 간략히 설명합니다.  
   
 > [!NOTE]  
->  쿼리 용어의 구문을 보려면 다음 표의 **지원 요소** 열에서 해당 링크를 클릭하세요.  
+>   쿼리 용어의 구문을 보려면 다음 표의 **지원 요소** 열에서 해당 링크를 클릭하십시오.  
   
-|쿼리 용어 형태|Description|지원 요소|  
+|쿼리 용어 형태|설명|지원 요소|  
 |----------------------|-----------------|------------------|  
-|하나 이상의 특정 단어 또는 구(*단순 단어*)|전체 텍스트 검색에서 단어(또는 *토큰*)는 지정된 언어의 언어 규칙에 따라 적절한 단어 분리기에 의해 경계가 식별되는 문자열입니다. 올바른 구는 여러 단어로 구성됩니다. 문장 부호는 있을 수도 있고 없을 수도 있습니다.<br /><br /> 예를 들어 "크 라 상"는 단어이 고 "caf?"는 au lait "는 구입니다. 이와 같은 단어 및 구를 단순 단어라고 합니다.<br /><br /> 자세한 내용은 이 항목 뒷부분의 [특정 단어 또는 구(단순 단어) 검색](#Simple_Term)을 참조하십시오.|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) 및 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 는 구와 정확히 일치 하는 항목을 찾습니다.<br /><br /> [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 및 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 은 구를 개별 단어로 나눕니다.|  
+|하나 이상의 특정 단어 또는 구(*단순 단어*)|전체 텍스트 검색에서 단어(또는 *토큰*)는 지정된 언어의 언어 규칙에 따라 적절한 단어 분리기에 의해 경계가 식별되는 문자열입니다. 올바른 구는 여러 단어로 구성됩니다. 문장 부호는 있을 수도 있고 없을 수도 있습니다.<br /><br /> 예를 들어 "크 라 상"는 단어이 고 "caf?"는 au lait "는 구입니다. 이와 같은 단어 및 구를 단순 단어라고 합니다.<br /><br /> 자세한 내용은 이 항목 뒷부분의 [특정 단어 또는 구(단순 단어) 검색](#Simple_Term)을 참조하십시오.|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) 및 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 은 정확히 일치하는 구를 검색합니다.<br /><br /> [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 및 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 은 구를 여러 개의 단어로 나눕니다.|  
 |특정 텍스트로 시작하는 단어 또는 그러한 단어를 포함하는 구(*접두사 단어*)|접두사 단어는 파생어를 만들거나 굴절형을 만들기 위해 단어 앞에 추가되는 문자열을 말합니다.<br /><br /> 단일 접두사 단어의 경우 지정된 단어로 시작하는 모든 단어가 결과 집합의 일부로 반환됩니다. 예를 들어 "auto*" 단어를 사용하면 "automatic", "automobile" 등이 검색됩니다.<br /><br /> 구의 경우 구에 포함된 각 단어가 접두사 단어로 간주됩니다. 예를 들어 "auto tran\*"은 "automatic transmission" 및 "automobile transducer"와 일치하지만 "automatic motor transmission"과는 일치하지 않습니다.<br /><br /> 자세한 내용은 이 항목 뒷부분의 [접두사(접두사 단어) 검색](#Prefix_Term)을 참조하십시오.|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) 및 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
-|특정 단어의 굴절 형 (*생성 단어-굴절 형*)|굴절형은 동사의 여러 시제 및 변화와 명사의 단수형 및 복수형을 의미합니다. 예를 들어 "drive"라는 단어의 굴절형을 검색한다고 가정합니다. 테이블의 여러 행에 "drive", "drives", "drove", "driving", "driven" 등의 단어가 포함되어 있는 경우 이러한 각 단어는 drive라는 단어를 활용하여 생성된 것이므로 모두 결과 집합에 포함됩니다.<br /><br /> 자세한 내용은 이 항목 뒷부분의 [특정 단어의 굴절형(생성 단어) 검색](#Inflectional_Generation_Term)을 참조하십시오.|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 및 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 는 기본적으로 지정 된 모든 단어의 굴절 형 용어를 찾습니다.<br /><br /> [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 및 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 은 선택적 굴절 형 인수를 지원 합니다.|  
+|특정 단어의 굴절 형 (*생성 단어-굴절 형*)|굴절형은 동사의 여러 시제 및 변화와 명사의 단수형 및 복수형을 의미합니다. 예를 들어 "drive"라는 단어의 굴절형을 검색한다고 가정합니다. 테이블의 여러 행에 "drive", "drives", "drove", "driving", "driven" 등의 단어가 포함되어 있는 경우 이러한 각 단어는 drive라는 단어를 활용하여 생성된 것이므로 모두 결과 집합에 포함됩니다.<br /><br /> 자세한 내용은 이 항목 뒷부분의 [특정 단어의 굴절형(생성 단어) 검색](#Inflectional_Generation_Term)을 참조하십시오.|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 및 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 은 기본적으로 지정된 모든 단어의 굴절형을 검색합니다.<br /><br /> [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 및 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 은 선택적 INFLECTIONAL 인수를 지원합니다.|  
 |특정 단어의 동의어 형태 (*생성 단어-동의어 사전*)|동의어 사전은 단어에 대한 사용자 지정 동의어를 정의합니다. 예를 들어 동의어 사전에 "{car, automobile, truck, van}" 항목을 추가하면 "car"라는 단어의 동의어 형태를 검색할 수 있습니다. "automobile", "truck", "van" 또는 "car"라는 단어는 각각 "car"라는 단어를 포함하는 동의어 확장 집합에 속하므로 이러한 단어를 포함하는 쿼리된 테이블의 모든 행이 결과 집합에 나타납니다.<br /><br /> 동의어 사전 파일의 구조에 대한 자세한 내용은 [전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리](configure-and-manage-thesaurus-files-for-full-text-search.md)를 참조하세요.|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 및 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 는 기본적으로 동의어 사전을 사용 합니다.<br /><br /> [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 및 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 는 선택적 동의어 사전 인수를 지원 합니다.|  
 |다른 단어나 구와 근접한 단어나 구(*근접 단어*)|근접 단어는 서로 근접하는 단어나 구를 나타냅니다. 첫 번째 검색 단어와 마지막 검색 단어를 구분하는 검색 대상이 아닌 단어의 최대 개수를 지정할 수도 있습니다. 또한 임의의 순서나 지정한 순서로 단어 또는 구를 검색할 수 있습니다.<br /><br /> 예를 들어 "ice"라는 단어가 "hockey"라는 단어와 근접해 있거나 "ice skating"이라는 구가 "ice hockey"라는 구와 근접해 있는 행을 검색할 수 있습니다.<br /><br /> 자세한 내용은 [NEAR를 사용하여 근접 단어 검색](search-for-words-close-to-another-word-with-near.md)을 참조하세요.|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) 및 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
 |가중치를 사용하는 단어나 구(*가중치 단어*)|단어와 구 집합에서 각 단어와 구의 중요도를 나타내는 가중치입니다. 가중치는 0.0이 가장 낮고 1.0이 가장 높습니다.<br /><br /> 예를 들어 여러 단어를 검색하는 쿼리에서 각 검색 단어에 검색 조건에 있는 다른 단어에 대한 상대적 중요도를 나타내는 가중치를 할당할 수 있습니다. 이러한 쿼리 유형의 결과에서는 검색 단어에 지정한 상대적 가중치에 따라 관련성이 가장 높은 행이 먼저 반환됩니다. 결과 집합에는 지정된 단어(또는 단어 사이의 내용) 중 적어도 하나를 포함하는 문서 또는 행이 반환되지만 일부 결과는 검색된 여러 개의 단어와 관련된 가중치의 차이 때문에 다른 결과보다 관련이 높은 것으로 간주됩니다.<br /><br /> 자세한 내용은 이 항목 뒷부분의 [가중치를 사용하는 단어 또는 구(가중치 단어) 검색](#Weighted_Term)을 참조하십시오.|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
   
 
   
-###  <a name="Simple_Term"></a>특정 단어 또는 구 (단순 단어) 검색  
- 
-  [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)또는 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 을 사용하여 테이블에서 특정 구를 검색할 수 있습니다. 예를 들어 `ProductReview` 데이터베이스의 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 테이블을 검색하여 "learning curve"라는 구가 포함된 제품 설명을 모두 찾으려면 CONTAINS 조건자를 다음과 같이 사용합니다.  
+###  <a name="searching-for-specific-word-or-phrase-simple-term"></a><a name="Simple_Term"></a>특정 단어 또는 구 (단순 단어) 검색  
+ [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)또는 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 을 사용하여 테이블에서 특정 구를 검색할 수 있습니다. 예를 들어 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 데이터베이스의 `ProductReview` 테이블을 검색하여 "learning curve"라는 구가 포함된 제품 설명을 모두 찾으려면 CONTAINS 조건자를 다음과 같이 사용합니다.  
   
 ```  
 USE AdventureWorks2012  
@@ -275,9 +270,8 @@ GO
   
  
   
-###  <a name="Prefix_Term"></a>접두사 검색 수행 (접두사 단어)  
- 
-  [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 또는 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 을 사용하여 지정된 접두사가 포함된 단어나 구를 검색할 수 있습니다. 열에서 지정된 접두사로 시작하는 텍스트가 포함된 모든 항목이 반환됩니다. 예를 들어 `top`, `top``ple`및 `top``ping`에서와 같이 `top`- 접두사가 포함된 모든 행을 검색하려면 쿼리는 다음과 같습니다.  
+###  <a name="performing-prefix-searches-prefix-term"></a><a name="Prefix_Term"></a>접두사 검색 수행 (접두사 단어)  
+ [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 또는 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 을 사용하여 지정된 접두사가 포함된 단어나 구를 검색할 수 있습니다. 열에서 지정된 접두사로 시작하는 텍스트가 포함된 모든 항목이 반환됩니다. 예를 들어 `top`, `top``ple`및 `top``ping`에서와 같이 `top`- 접두사가 포함된 모든 행을 검색하려면 쿼리는 다음과 같습니다.  
   
 ```  
 USE AdventureWorks2012  
@@ -289,16 +283,14 @@ WHERE CONTAINS (Description, '"top*"' )
 GO  
 ```  
   
- 별표(*) 앞에 지정된 텍스트와 일치하는 모든 텍스트가 반환됩니다. 
-  `CONTAINS (DESCRIPTION, 'top*')`에서와 같이 텍스트와 별표가 큰따옴표로 구분되지 않은 경우 전체 텍스트 검색은 별표를 와일드카드로 간주하지 않습니다.  
+ 별표(*) 앞에 지정된 텍스트와 일치하는 모든 텍스트가 반환됩니다. `CONTAINS (DESCRIPTION, 'top*')`에서와 같이 텍스트와 별표가 큰따옴표로 구분되지 않은 경우 전체 텍스트 검색은 별표를 와일드카드로 간주하지 않습니다.  
   
  접두사 단어가 구일 경우 구에 포함된 각 토큰이 별도의 접두사 단어로 간주되므로 접두사 단어로 시작하는 단어가 포함된 모든 행이 반환됩니다. 예를 들어 접두사 단어가 "light bread*"이면 "light breaded", "lightly breaded", "light bread" 등의 텍스트가 포함된 행이 검색되지만 "lightly toasted bread"는 반환되지 않습니다.  
   
  
   
-###  <a name="Inflectional_Generation_Term"></a>특정 단어의 굴절 형 (생성 단어) 검색  
- 
-  [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)또는 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 을 사용하여 동사의 여러 시제나 변화 또는 명사의 단수형과 복수형을 모두 검색(굴절형 검색)하거나, 특정 단어의 동의어 형태를 모두 검색(동의어 검색)할 수 있습니다.  
+###  <a name="searching-for-inflectional-forms-of-a-specific-word-generation-term"></a><a name="Inflectional_Generation_Term"></a>특정 단어의 굴절 형 (생성 단어) 검색  
+ [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)또는 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 을 사용하여 동사의 여러 시제나 변화 또는 명사의 단수형과 복수형을 모두 검색(굴절형 검색)하거나, 특정 단어의 동의어 형태를 모두 검색(동의어 검색)할 수 있습니다.  
   
  다음 예에서는 `Comments` 데이터베이스의 `ProductReview` 테이블에 있는 `AdventureWorks` 열에서 "foot"의 모든 형태("foot", "feet" 등)를 검색합니다.  
   
@@ -317,9 +309,8 @@ GO
   
 
   
-###  <a name="Weighted_Term"></a>가중치가 적용 되는 값을 사용 하 여 단어 또는 구 검색 (가중치 단어)  
- 
-  [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 을 사용하여 단어나 구를 검색하고 가중치를 지정할 수 있습니다. 가중치는 0.0에서 1.0 사이의 숫자로 측정되며 단어와 구 집합에서 각 단어와 구의 중요도를 나타냅니다. 가중치 0.0이 가장 낮고 1.0이 가장 높습니다.  
+###  <a name="searching-for-words-or-phrases-using-weighted-values-weighted-term"></a><a name="Weighted_Term"></a>가중치가 적용 되는 값을 사용 하 여 단어 또는 구 검색 (가중치 단어)  
+ [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 을 사용하여 단어나 구를 검색하고 가중치를 지정할 수 있습니다. 가중치는 0.0에서 1.0 사이의 숫자로 측정되며 단어와 구 집합에서 각 단어와 구의 중요도를 나타냅니다. 가중치 0.0이 가장 낮고 1.0이 가장 높습니다.  
   
  다음 예에서는 가중치를 사용하여 문자열 "Bay"로 시작하는 텍스트에 "Street" 또는 "View"가 있는 모든 고객 주소를 검색하는 쿼리를 보여 줍니다. 지정한 단어가 많이 포함된 행일수록 높은 가중치가 지정됩니다.  
   
@@ -342,17 +333,17 @@ GO
   
 
   
-##  <a name="tokens"></a>단어 분리기, 동의어 사전 및 중지 목록 조합의 토큰화 결과 보기  
+##  <a name="viewing-the-tokenization-result-of-a-word-breaker-thesaurus-and-stoplist-combination"></a><a name="tokens"></a>단어 분리기, 동의어 사전 및 중지 목록 조합의 토큰화 결과 보기  
  쿼리 문자열 입력에 특정 단어 분리기, 동의어 사전 및 중지 목록 조합을 적용하면 **sys.dm_fts_parser** 동적 관리 뷰를 사용하여 토큰화 결과를 볼 수 있습니다. 자세한 내용은 [sys.dm_fts_parser&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)를 참조하세요.  
   
  
   
 ## <a name="see-also"></a>참고 항목  
- [CONTAINS&#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)   
+ [&#40;Transact-sql&#41;를 포함 합니다.](/sql/t-sql/queries/contains-transact-sql)   
  [CONTAINSTABLE&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/containstable-transact-sql)   
  [FREETEXT&#40;Transact-SQL&#41;](/sql/t-sql/queries/freetext-transact-sql)   
  [FREETEXTTABLE&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)   
- [Visual Database Tools를 &#40;전체 텍스트 검색 쿼리를 만듭니다&#41;](../../ssms/visual-db-tools/visual-database-tools.md)   
+ [전체 텍스트 검색 쿼리 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md)   
  [전체 텍스트 쿼리 성능 향상](improve-the-performance-of-full-text-queries.md)  
   
   

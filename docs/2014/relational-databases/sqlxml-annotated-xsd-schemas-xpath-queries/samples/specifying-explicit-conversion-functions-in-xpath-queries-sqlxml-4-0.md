@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43e7067f00e21f57d64f2206fb1008f21d77dd4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010695"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 명시적 변환 함수 지정(SQLXML 4.0)
@@ -28,8 +28,7 @@ ms.locfileid: "66010695"
 ## <a name="examples"></a>예  
   
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. number() 명시적 변환 함수 사용  
- 
-  `number()` 함수는 인수를 숫자로 변환합니다.  
+ `number()` 함수는 인수를 숫자로 변환합니다.  
   
  **ContactID** 의 값이 숫자가 아닌 경우 다음 쿼리는 **ContactID** 를 숫자로 변환 하 고 값 4와 비교 합니다. 그런 다음 쿼리는 숫자 값이 4 인 **ContactID** 특성을 사용 하 여 컨텍스트 노드의 모든 ** \<Employee>** 요소 자식을 반환 합니다.  
   
@@ -37,8 +36,7 @@ ms.locfileid: "66010695"
 /child::Contact[number(attribute::ContactID)= 4]  
 ```  
   
- 
-  `attribute` 축에 대한 바로 가기(@)를 지정할 수 있으며 `child` 축은 기본값이므로 쿼리에서 생략할 수 있습니다.  
+ `attribute` 축에 대한 바로 가기(@)를 지정할 수 있으며 `child` 축은 기본값이므로 쿼리에서 생략할 수 있습니다.  
   
 ```  
 /Contact[number(@ContactID) = 4]  
@@ -79,8 +77,7 @@ ms.locfileid: "66010695"
 ```  
   
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. string() 명시적 변환 함수 사용  
- 
-  `string()` 함수는 인수를 문자열로 변환합니다.  
+ `string()` 함수는 인수를 문자열로 변환합니다.  
   
  다음 쿼리는 **ContactID** 을 문자열로 변환 하 고 문자열 값 "4"와 비교 합니다. 이 쿼리는 **ContactID** 를 사용 하 여 컨텍스트 노드의 모든 ** \<Employee>** 요소 자식을 반환 합니다.  
   
@@ -88,8 +85,7 @@ ms.locfileid: "66010695"
 /child::Contact[string(attribute::ContactID)="4"]  
 ```  
   
- 
-  `attribute` 축에 대한 바로 가기(@)를 지정할 수 있으며 `child` 축은 기본값이므로 쿼리에서 생략할 수 있습니다.  
+ `attribute` 축에 대한 바로 가기(@)를 지정할 수 있으며 `child` 축은 기본값이므로 쿼리에서 생략할 수 있습니다.  
   
 ```  
 /Contact[string(@ContactID)="4"]  

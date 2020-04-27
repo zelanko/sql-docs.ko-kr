@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd97b67974f248d002255c1977feebe4551e691f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013676"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>targetNamespace 특성을 사용하여 대상 네임스페이스 지정(SQLXML 4.0)
@@ -35,7 +35,7 @@ ms.locfileid: "66013676"
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-specifying-a-target-namespace"></a>A. 대상 네임스페이스 지정  
- 다음 XSD 스키마는 **xsd: targetNamespace** 특성을 사용 하 여 대상 네임 스페이스를 지정 합니다. 또한 스키마는 **elementformdefault** 및 **attributeformdefault** 특성 값을 **"정규화** 되지 않음" (이러한 특성의 기본값)으로 설정 합니다. 전역 선언 이며 스키마의 모든 로컬 요소 ****( **** ******\<스키마의 순서>** )와 특성 (스키마의 CustomerID, ContactName 및 OrderID)에 영향을 줍니다.  
+ 다음 XSD 스키마는 **xsd: targetNamespace** 특성을 사용 하 여 대상 네임 스페이스를 지정 합니다. 또한 스키마는 **elementformdefault** 및 **attributeformdefault** 특성 값을 **"정규화** 되지 않음" (이러한 특성의 기본값)으로 설정 합니다. 전역 선언 이며 스키마의 모든 로컬 요소 **ContactName**( **OrderID** **CustomerID****\<스키마의 순서>** )와 특성 (스키마의 CustomerID, ContactName 및 OrderID)에 영향을 줍니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

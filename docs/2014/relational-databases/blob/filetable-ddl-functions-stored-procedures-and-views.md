@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 85e0c761f5dc784698b3aed361ce50488a93e366
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010097"
 ---
 # <a name="filetable-ddl-functions-stored-procedures-and-views"></a>FileTable DDL, 함수, 저장 프로시저 및 뷰
@@ -26,7 +26,7 @@ ms.locfileid: "66010097"
   
  FILESTREAM을 지원하는 문과 데이터베이스 개체의 목록은 [FILESTREAM DDL, Functions, Stored Procedures, and Views](../views/views.md)를 참조하세요.  
   
-##  <a name="ddl"></a> Transact-SQL DDL(데이터 정의 언어) 문  
+##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Transact-SQL DDL(데이터 정의 언어) 문  
   
 |Object|상태|추가 정보|  
 |------------|------------|----------------------|  
@@ -36,7 +36,7 @@ ms.locfileid: "66010097"
 |[CREATE TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)|변경됨|[FileTable 만들기, 변경 및 삭제](create-alter-and-drop-filetables.md)|  
 |[RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)<br /><br /> [RESTORE 인수&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)|변경됨||  
   
-##  <a name="func"></a> 함수  
+##  <a name="functions"></a><a name="func"></a> 함수  
   
 |Object|상태|추가 정보|  
 |------------|------------|----------------------|  
@@ -44,13 +44,13 @@ ms.locfileid: "66010097"
 |[GetFileNamespacePath&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)|**추가됨**|[FileTable에서 디렉터리 및 경로 작업](work-with-directories-and-paths-in-filetables.md)|  
 |[GetPathLocator&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql)|**추가됨**|[FileTable에서 디렉터리 및 경로 작업](work-with-directories-and-paths-in-filetables.md)|  
   
-##  <a name="sproc"></a> 저장 프로시저  
+##  <a name="stored-procedures"></a><a name="sproc"></a> 저장 프로시저  
   
 |Object|상태|추가 정보|  
 |------------|------------|----------------------|  
 |[sp_kill_filestream_non_transacted_handles&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles)|**추가됨**|[FileTable 관리](manage-filetables.md)|  
   
-##  <a name="cv"></a> 카탈로그 뷰  
+##  <a name="catalog-views"></a><a name="cv"></a> 카탈로그 뷰  
   
 |Object|상태|추가 정보|  
 |------------|------------|----------------------|  
@@ -59,7 +59,7 @@ ms.locfileid: "66010097"
 |[sys.filetables&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetables-transact-sql)|**추가됨**|[FileTable 관리](manage-filetables.md)|  
 |[sys.tables&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)|변경됨|[FileTable 관리](manage-filetables.md)|  
   
-##  <a name="dmv"></a> 동적 관리 뷰  
+##  <a name="dynamic-management-views"></a><a name="dmv"></a> 동적 관리 뷰  
   
 |Object|상태|추가 정보|  
 |------------|------------|----------------------|  

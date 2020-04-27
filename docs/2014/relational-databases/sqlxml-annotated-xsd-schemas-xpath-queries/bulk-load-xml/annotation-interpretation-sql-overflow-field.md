@@ -16,17 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 594ebdbad3968ba2efe7e255b28379194d2fb77f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013467"
 ---
 # <a name="sqloverflow-field-sqlxml-40"></a>sql:overflow-field(SQLXML 4.0)
   스키마에서 열을 오버플로 열로 식별하여 XML 문서에서 사용되지 않은 데이터를 모두 받을 수 있습니다. 이 열은 `sql:overflow-field` 주석을 사용하여 스키마에 지정합니다. 오버플로 열을 여러 개 지정할 수도 있습니다.  
   
- 
-  `sql:overflow-field` 주석이 정의되어 있는 XML 노드(요소 또는 특성)가 범위에 들어오면 오버플로 열이 활성화되어 사용되지 않은 데이터를 받습니다. 노드가 범위를 벗어나면 오버플로 열이 더 이상 활성화되지 않고 XML 대량 로드를 통해 이전 오버플로 필드(있는 경우)가 활성화됩니다.  
+ `sql:overflow-field` 주석이 정의되어 있는 XML 노드(요소 또는 특성)가 범위에 들어오면 오버플로 열이 활성화되어 사용되지 않은 데이터를 받습니다. 노드가 범위를 벗어나면 오버플로 열이 더 이상 활성화되지 않고 XML 대량 로드를 통해 이전 오버플로 필드(있는 경우)가 활성화됩니다.  
   
  XML 대량 로드에서는 오버플로 열에 데이터를 저장할 때 `sql:overflow-field`가 정의된 부모 요소의 여는 태그와 닫는 태그도 저장됩니다.  
   

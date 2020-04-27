@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81d671c834cfeb1bf1191c0d5cd4ace72741ff10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010723"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 축 지정(SQLXML 4.0)
@@ -254,8 +254,7 @@ ms.locfileid: "66010723"
   
  조건자 `attribute::CustomerID`에서는 축 `attribute` 이 `CustomerID` 고는 노드 테스트입니다 `CustomerID` .이 특성 ** \<>** 노드가 `attribute` 축에 대 한 주 노드인지 때문에 노드 테스트는 TRUE입니다.  
   
- 
-  `attribute` 축에 대한 바로 가기(@)를 지정할 수 있으며 `child` 축은 기본 축이므로 쿼리에서 생략할 수 있습니다.  
+ `attribute` 축에 대한 바로 가기(@)를 지정할 수 있으며 `child` 축은 기본 축이므로 쿼리에서 생략할 수 있습니다.  
   
 ```  
 /Customer[@CustomerID="1"]  

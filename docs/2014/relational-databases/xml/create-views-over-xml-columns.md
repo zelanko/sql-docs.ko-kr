@@ -13,14 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d1e37f341c0606947b37eb10e8e3123ad410204
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63301323"
 ---
 # <a name="create-views-over-xml-columns"></a>XML 열에서 뷰 만들기
-  
   `xml` 유형 열을 사용하여 뷰를 만들 수 있습니다. 다음 예에서는 `xml` 데이터 형식의 `value()` 메서드를 사용하여 `xml` 유형 열의 값을 검색하는 뷰를 만듭니다.  
   
 ```  

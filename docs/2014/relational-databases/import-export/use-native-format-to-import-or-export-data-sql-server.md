@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a2e91899172dfc6d640df0c33c77e32de3c1c21c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011658"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>네이티브 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
@@ -55,21 +55,18 @@ ms.locfileid: "66011658"
   
      bcp 유틸리티는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부 binary 데이터 형식을 사용하여 문자가 아닌 테이블의 데이터를 데이터 파일에 기록합니다.  
   
--   
-  `char` 또는 `varchar` 데이터  
+-   `char` 또는 `varchar` 데이터  
   
      **Bcp** 는 각 또는 `varchar` 필드가 `char` 시작 될 때 접두사 길이를 추가 합니다.  
   
     > [!IMPORTANT]  
     >  기본 모드를 사용 하는 경우 기본적으로 **bcp** 유틸리티는 문자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 데이터 파일에 복사 하기 전에 OEM 문자로 변환 합니다. **Bcp** 유틸리티는 데이터 파일의 문자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 대량으로 가져오기 전에 문자를 ANSI 문자로 변환 합니다. 이러한 변환 과정에서 확장 문자 데이터가 손실될 수 있습니다. 확장 문자의 경우 유니코드 네이티브 형식을 사용하거나 코드 페이지를 지정하십시오.  
   
--   `sql_variant`데이터로  
+-   `sql_variant` 데이터  
   
-     
-  `sql_variant` 데이터가 네이티브 형식 데이터 파일에 SQLVARIANT로 저장되면 해당 데이터는 그 특성을 모두 유지합니다. 각 데이터 값의 데이터 형식을 기록하는 메타데이터는 데이터 값과 함께 저장됩니다. 이 메타데이터는 대상 `sql_variant` 열에 동일한 데이터 형식을 가진 데이터 값을 다시 만드는 데 사용됩니다.  
+     `sql_variant` 데이터가 네이티브 형식 데이터 파일에 SQLVARIANT로 저장되면 해당 데이터는 그 특성을 모두 유지합니다. 각 데이터 값의 데이터 형식을 기록하는 메타데이터는 데이터 값과 함께 저장됩니다. 이 메타데이터는 대상 `sql_variant` 열에 동일한 데이터 형식을 가진 데이터 값을 다시 만드는 데 사용됩니다.  
   
-     대상 열의 데이터 형식이 `sql_variant`가 아닌 경우 기본적인 암시적 데이터 변환 규칙에 따라 각 데이터 값이 대상 열의 데이터 형식으로 변환됩니다. 데이터 변환 중에 오류가 발생하면 현재 일괄 처리가 롤백됩니다. 
-  `char` 열 간에 전송되는 모든 `varchar` 및 `sql_variant` 값에는 코드 페이지 변환 문제가 있을 수 있습니다.  
+     대상 열의 데이터 형식이 `sql_variant`가 아닌 경우 기본적인 암시적 데이터 변환 규칙에 따라 각 데이터 값이 대상 열의 데이터 형식으로 변환됩니다. 데이터 변환 중에 오류가 발생하면 현재 일괄 처리가 롤백됩니다. `char` 열 간에 전송되는 모든 `varchar` 및 `sql_variant` 값에는 코드 페이지 변환 문제가 있을 수 있습니다.  
   
      데이터 변환에 대한 자세한 내용은 [데이터 형식 변환&#40;데이터베이스 엔진&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine)을 참조하세요.  
   
@@ -78,9 +75,9 @@ ms.locfileid: "66011658"
   
  네이티브 형식에 대해 지원되는 명령줄 옵션은 다음과 같습니다.  
   
-|명령|옵션|Description|  
+|명령|옵션|설명|  
 |-------------|------------|-----------------|  
-|**틀린**|**-n**|**Bcp** 유틸리티에서 데이터의 네이티브 데이터 형식을 사용 하도록 합니다. <sup>1</sup>|  
+|**bcp**|**-n**|**Bcp** 유틸리티에서 데이터의 네이티브 데이터 형식을 사용 하도록 합니다. <sup>1</sup>|  
 |BULK INSERT|DATAFILETYPE **= '** native **'**|데이터의 네이티브 또는 와이드 네이티브 데이터 형식을 사용합니다. 서식 파일로 데이터 형식을 지정하면 DATAFILETYPE은 필요하지 않습니다.|  
   
  <sup>1</sup> 네이티브 (**-n**) 데이터를 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트와 호환 되는 형식으로 로드 하려면 **-V** 스위치를 사용 합니다. 자세한 내용은 [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)를 참조하세요.  
@@ -94,8 +91,7 @@ ms.locfileid: "66011658"
  다음 예에서는 **bcp** 를 사용하여 네이티브 데이터의 대량 내보내기를 수행하고 내보낸 데이터에 BULK INSERT를 사용하여 대량 가져오기를 수행하는 방법을 보여 줍니다.  
   
 ### <a name="sample-table"></a>예제 테이블  
- 이 예에서는 **dbo** 스키마에서 **AdventureWorks** 예제 데이터베이스에 **myTestNativeData** 라는 이름의 테이블을 만들어야 합니다. 예를 실행하려면 이 테이블을 만들어야 합니다. 
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음을 실행합니다.  
+ 이 예에서는 **dbo** 스키마에서 **AdventureWorks** 예제 데이터베이스에 **myTestNativeData** 라는 이름의 테이블을 만들어야 합니다. 예를 실행하려면 이 테이블을 만들어야 합니다. [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음을 실행합니다.  
   
 ```  
 USE AdventureWorks;  
@@ -125,12 +121,9 @@ SELECT Col1,Col2,Col3 FROM myTestNativeData
 |한정자|Description|  
 |----------------|-----------------|  
 |**-n**|네이티브 데이터 형식을 지정합니다.|  
-|**-T**|
-  **bcp** 유틸리티가 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 연결되도록 지정합니다. 
-  **-T** 를 지정하지 않은 경우 성공적으로 로그인하려면 **-U** 와 **-P** 를 지정해야 합니다.|  
+|**-T**|**bcp** 유틸리티가 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 연결되도록 지정합니다. **-T** 를 지정하지 않은 경우 성공적으로 로그인하려면 **-U** 와 **-P** 를 지정해야 합니다.|  
   
- 다음 예에서는 `myTestNativeData` 테이블에서 `myTestNativeData-n.Dat` 데이터 파일로 네이티브 형식의 데이터를 대량으로 내보냅니다. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 명령 프롬프트에 다음을 입력합니다.  
+ 다음 예에서는 `myTestNativeData` 테이블에서 `myTestNativeData-n.Dat` 데이터 파일로 네이티브 형식의 데이터를 대량으로 내보냅니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 명령 프롬프트에 다음을 입력합니다.  
   
 ```  
 bcp AdventureWorks..myTestNativeData out C:\myTestNativeData-n.Dat -n -T  
@@ -138,8 +131,7 @@ bcp AdventureWorks..myTestNativeData out C:\myTestNativeData-n.Dat -n -T
 ```  
   
 ### <a name="using-bulk-insert-to-bulk-import-native-data"></a>BULK INSERT를 사용하여 네이티브 데이터 대량 가져오기  
- 다음 예에서는 BULK INSERT를 사용하여 `myTestNativeData-n.Dat` 데이터 파일의 데이터를 `myTestNativeData` 테이블로 가져옵니다. 
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음을 실행합니다.  
+ 다음 예에서는 BULK INSERT를 사용하여 `myTestNativeData-n.Dat` 데이터 파일의 데이터를 `myTestNativeData` 테이블로 가져옵니다. [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음을 실행합니다.  
   
 ```  
 USE AdventureWorks;  
@@ -153,24 +145,24 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
- **대량 가져오기 또는 대량 내보내기를 위한 데이터 형식을 사용 하려면**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
+ **대량 가져오기 또는 대량 내보내기를 위한 데이터 형식을 사용하려면**  
   
 -   [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [문자 형식을 사용 하 여 데이터 &#40;SQL Server 가져오거나 내보냅니다&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [유니코드 문자 형식을 사용 하 여 데이터 &#40;SQL Server 가져오기 또는 내보내기&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [유니코드 문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [유니코드 원시 형식을 사용 하 여 데이터 &#40;SQL Server 가져오기 또는 내보내기&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [유니코드 네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [bcp 유틸리티](../../tools/bcp-utility.md)   
  [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [데이터 형식&#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [Transact-sql&#41;sql_variant &#40;](/sql/t-sql/data-types/sql-variant-transact-sql)   
- [이전 버전의 SQL Server에서 기본 및 문자 형식 데이터 가져오기](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)   
+ [sql_variant&#40;Transact-SQL&#41;](/sql/t-sql/data-types/sql-variant-transact-sql)   
+ [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)   
  [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [유니코드 원시 형식을 사용 하 여 데이터 &#40;SQL Server 가져오기 또는 내보내기&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+ [유니코드 네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
   

@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d171270a7605c258f9bc347781cd9a4d91c7a348
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014682"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 업데이트(SQLXML 4.0)
@@ -59,8 +59,7 @@ ms.locfileid: "66014682"
  `<updg:after>`  
  After>블록의 요소는 업데이트를 적용 한 후에 ** \<>** 블록에 지정 된 레코드를 확인 하는 방법을 설명 합니다. ** \<**  
   
- 
-  `mapping-schema` 특성은 Updategram에서 사용될 매핑 스키마를 식별합니다. Updategram가 매핑 스키마를 지정 하는 경우 ** \<>before** 및 ** \<after>** 블록에 지정 된 요소 및 특성 이름은 스키마의 이름과 일치 해야 합니다. 매핑 스키마는 이러한 요소 또는 특성 이름을 데이터베이스 테이블 및 열 이름에 매핑합니다.  
+ `mapping-schema` 특성은 Updategram에서 사용될 매핑 스키마를 식별합니다. Updategram가 매핑 스키마를 지정 하는 경우 ** \<>before** 및 ** \<after>** 블록에 지정 된 요소 및 특성 이름은 스키마의 이름과 일치 해야 합니다. 매핑 스키마는 이러한 요소 또는 특성 이름을 데이터베이스 테이블 및 열 이름에 매핑합니다.  
   
  Updategram은 스키마를 지정하지 않을 경우 기본 매핑을 사용합니다. 기본 매핑에서 updategram에 지정 된 ** \<ElementName>** 은 데이터베이스 테이블에 매핑되고 자식 요소 또는 특성은 데이터베이스 열에 매핑됩니다.  
   

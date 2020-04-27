@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 66224262c88176fe0d0ddd1f4291b12213aed928
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054107"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>통합 사용 권한(Master Data Services)
@@ -27,33 +27,32 @@ ms.locfileid: "66054107"
   
  통합 사용 권한은 명시적 계층 및 컬렉션을 사용할 수 있는 엔터티에만 적용됩니다.  
   
- **메모란**  
+ **참고:**  
   
 -   리프 권한은 사용자 인터페이스의 **탐색기** 기능 영역에만 적용됩니다.  
   
--   
-  **이름** 및 **코드** 특성에 할당된 사용 권한은 적용되지 않습니다.  
+-   **이름** 및 **코드** 특성에 할당된 사용 권한은 적용되지 않습니다.  
   
-|사용 권한|Description|  
+|사용 권한|설명|  
 |----------------|-----------------|  
 |**읽기 전용**|통합 멤버가 표시되지만 사용자가 이를 추가, 제거 또는 변경할 수 없습니다.|  
-|**고침**|통합 멤버가 표시되고 사용자가 이를 추가, 제거 및 변경할 수 있습니다.|  
-|**거부**|엔터티의 통합 멤버가 표시되지 않습니다.|  
+|**업데이트**|통합 멤버가 표시되고 사용자가 이를 추가, 제거 및 변경할 수 있습니다.|  
+|**차단할**|엔터티의 통합 멤버가 표시되지 않습니다.|  
   
 ## <a name="attribute-permissions"></a>특성 사용 권한  
  특성 사용 권한은 특정 엔터티의 특성 값에 적용됩니다. 특성 사용 권한만 있는 사용자는 멤버를 추가하거나 제거할 수 없습니다.  
   
-|사용 권한|Description|  
+|사용 권한|설명|  
 |----------------|-----------------|  
 |**읽기 전용**|특성이 표시되지만 사용자가 특성 값을 변경할 수 없습니다.|  
-|**고침**|특성이 표시되고 사용자가 특성 값을 변경할 수 있습니다.|  
-|**거부**|특성이 표시되지 않습니다.<br /><br /> 참고: 이름 및 코드 특성에 대한 액세스를 명시적으로 거부할 수 없습니다.|  
+|**업데이트**|특성이 표시되고 사용자가 특성 값을 변경할 수 있습니다.|  
+|**차단할**|특성이 표시되지 않습니다.<br /><br /> 참고: 이름 및 코드 특성에 대한 액세스를 명시적으로 거부할 수 없습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [모델 개체 사용 권한 할당 &#40;MDS(Master Data Services)&#41;](assign-model-object-permissions-master-data-services.md)   
  [리프 권한 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
  [모델 개체 사용 권한 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [멤버가 MDS(Master Data Services)를 &#40;&#41;](../../2014/master-data-services/members-master-data-services.md)   
- [특성 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+ [특성&#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

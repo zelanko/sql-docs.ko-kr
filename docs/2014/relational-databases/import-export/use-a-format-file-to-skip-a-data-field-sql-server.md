@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f880dcacbd4571c188d0368a0378a89c45787af2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011720"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>서식 파일을 사용하여 데이터 필드 건너뛰기(SQL Server)
@@ -45,8 +45,7 @@ GO
 ```  
   
 ### <a name="sample-data-file"></a>예제 데이터 파일  
- 
-  `myTestSkipField-c.dat`데이터 파일에는 다음 레코드가 포함됩니다.  
+ `myTestSkipField-c.dat`데이터 파일에는 다음 레코드가 포함됩니다.  
   
 ```  
 1,Skipme,DataField3,DataField4  
@@ -54,8 +53,7 @@ GO
 1,Skipme,DataField3,DataField4  
 ```  
   
- 
-  `myTestSkipField-c.dat` 의 데이터를 `myTestSkipField` 테이블로 대량으로 가져오려면 서식 파일에서 다음과 같은 작업을 수행해야 합니다.  
+ `myTestSkipField-c.dat` 의 데이터를 `myTestSkipField` 테이블로 대량으로 가져오려면 서식 파일에서 다음과 같은 작업을 수행해야 합니다.  
   
 -   첫 번째 데이터 필드를 첫 번째 열인 `PersonID`에 매핑합니다.  
   
@@ -68,8 +66,7 @@ GO
 ## <a name="non-xml-format-file-for-more-data-fields"></a>더 많은 데이터 필드에 사용되는 비 XML 서식 파일  
  다음 `myTestSkipField.fmt` 서식 파일은 `myTestSkipField-c.dat`의 필드를 `myTestSkipField` 테이블의 열로 매핑합니다. 서식 파일은 문자 데이터 형식을 사용합니다. 이때 열 매핑을 건너뛰려면 해당 서식 파일의 `ExtraField` 열에서와 같이 열 순서 값을 0으로 변경해야 합니다.  
   
- 
-  `myTestSkipField.fmt` 서식 파일에는 다음 정보가 포함됩니다.  
+ `myTestSkipField.fmt` 서식 파일에는 다음 정보가 포함됩니다.  
   
 ```  
 9.0  
@@ -87,8 +84,7 @@ GO
 ### <a name="examples"></a>예  
  다음 예에서는 `INSERT ... SELECT * FROM OPENROWSET(BULK...)` 서식 파일을 사용하는 `myTestSkipField.fmt` 을 사용합니다. 또한 `myTestSkipField-c.dat` 데이터 파일을 `myTestSkipField` 테이블로 대량 가져옵니다. 예제 테이블 및 데이터 파일을 만들려면 이 항목의 앞부분에 나오는 "예제 데이터 파일 및 테이블"을 참조하십시오.  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음 코드를 실행합니다.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음 코드를 실행합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -106,8 +102,7 @@ GO
   
  다음 `myTestSkipField.xml` 서식 파일은 `myTestSkipField-c.dat`의 필드를 `myTestSkipField` 테이블의 열로 매핑합니다. 서식 파일은 문자 데이터 형식을 사용합니다.  
   
- 
-  `myTestSkipField.xml` 서식 파일에는 다음 정보가 포함됩니다.  
+ `myTestSkipField.xml` 서식 파일에는 다음 정보가 포함됩니다.  
   
 ```  
 <?xml version="1.0"?>  
@@ -129,8 +124,7 @@ GO
 ### <a name="examples"></a>예  
  다음 예에서는 `INSERT ... SELECT * FROM OPENROWSET(BULK...)` 서식 파일을 사용하는 `myTestSkipField.Xml` 을 사용합니다. 또한 `myTestSkipField-c.dat` 데이터 파일을 `myTestSkipField` 테이블로 대량 가져옵니다. 예제 테이블 및 데이터 파일을 만들려면 이 항목의 앞부분에 나오는 "예제 데이터 파일 및 테이블"을 참조하십시오.  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음 코드를 실행합니다.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음 코드를 실행합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -151,7 +145,7 @@ GO
  [bcp 유틸리티](../../tools/bcp-utility.md)   
  [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [서식 파일을 사용 하 여 테이블 열 &#40;SQL Server를 건너뜁니다&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
+ [서식 파일을 사용하여 테이블 열 건너뛰기&#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [서식 파일을 사용하여 테이블 열을 데이터 파일 필드에 매핑&#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c43cb42cffba31f20b0e9717204f5475b5bb156d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012078"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>대량 가져오기 또는 대량 내보내기를 위한 데이터 형식(SQL Server)
@@ -29,22 +29,21 @@ ms.locfileid: "66012078"
   
 -   [관련 작업](#RelatedTasks)  
   
-##  <a name="ComponentsAndConcepts"></a> 대량 내보내기 또는 가져오기를 위한 데이터 형식  
+##  <a name="data-formats-for-bulk-import-or-export"></a><a name="ComponentsAndConcepts"></a> 대량 내보내기 또는 가져오기를 위한 데이터 형식  
  다음 표에서는 데이터 표시 방식 및 작업의 원본 또는 대상에 따라 일반적으로 적절히 사용할 수 있는 데이터 형식을 보여 줍니다.  
   
 |작업(Operation)|네이티브|유니코드 네이티브|문자|유니코드 문자|  
 |---------------|------------|--------------------|---------------|-----------------------|  
 |확장 또는 DBCS(더블바이트 문자 집합) 문자가 들어 있지 않는 데이터 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 다수 인스턴스 간에 데이터를 대량으로 전송합니다. 서식 파일을 사용하지 않는 한 테이블을 동일하게 정의해야 합니다.|예<sup>1</sup>|-|-|-|  
-|
-  `sql_variant` 열의 경우 문자 또는 유니코드 형식과는 달리 네이티브 데이터 형식이 각 `sql_variant` 값에 대해 메타데이터를 보존하기 때문에 네이티브 데이터 형식을 사용하는 것이 가장 좋습니다.|yes|-|-|-|  
-|확장 또는 DBCS 문자가 들어 있는 데이터 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 다수 인스턴스 간에 데이터를 대량으로 전송합니다.|-|yes|-|-|  
-|다른 프로그램으로 생성된 텍스트 파일에서 데이터를 대량으로 가져옵니다.|-|-|yes|-|  
-|다른 프로그램에서 사용할 텍스트 파일로 데이터를 대량으로 내보냅니다.|-|-|yes|-|  
-|유니코드 데이터가 들어 있으나 확장 또는 DBCS 문자는 들어 있지 않는 데이터 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 다수 인스턴스 간에 데이터를 대량으로 전달합니다.|-|-|-|yes|  
+|`sql_variant` 열의 경우 문자 또는 유니코드 형식과는 달리 네이티브 데이터 형식이 각 `sql_variant` 값에 대해 메타데이터를 보존하기 때문에 네이티브 데이터 형식을 사용하는 것이 가장 좋습니다.|예|-|-|-|  
+|확장 또는 DBCS 문자가 들어 있는 데이터 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 다수 인스턴스 간에 데이터를 대량으로 전송합니다.|-|예|-|-|  
+|다른 프로그램으로 생성된 텍스트 파일에서 데이터를 대량으로 가져옵니다.|-|-|예|-|  
+|다른 프로그램에서 사용할 텍스트 파일로 데이터를 대량으로 내보냅니다.|-|-|예|-|  
+|유니코드 데이터가 들어 있으나 확장 또는 DBCS 문자는 들어 있지 않는 데이터 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 다수 인스턴스 간에 데이터를 대량으로 전달합니다.|-|-|-|예|  
   
  <sup>1</sup> 가장 빠른 방법으로 **bcp**를 사용 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 경우에서 데이터를 대량으로 내보냅니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   

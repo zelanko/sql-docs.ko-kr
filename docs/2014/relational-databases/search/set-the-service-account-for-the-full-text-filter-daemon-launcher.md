@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f327cefbb916bf83f695db40a1d3c3025b7a5d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010943"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>전체 텍스트 필터 데몬 시작 관리자 서비스 계정 설정
@@ -26,7 +26,7 @@ ms.locfileid: "66010943"
  SQL 전체 텍스트 필터 데몬 시작 관리자 서비스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 특정 인스턴스에 연결되는 인스턴스 인식형 서비스입니다. SQL 전체 텍스트 필터 데몬 시작 관리자 서비스는 서비스 계정 정보를 각 필터 데몬 호스트 프로세스에 전파합니다.  
   
   
-##  <a name="setting"></a>서비스 계정 설정  
+##  <a name="setting-the-service-account"></a><a name="setting"></a>서비스 계정 설정  
   
 #### <a name="to-set-the-sql-full-text-filter-daemon-launcher-service-account-for-full-text-search"></a>전체 텍스트 검색용 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스 계정을 설정하려면  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66010943"
 4.  대화 상자를 닫은 다음 **다시 시작** 을 클릭하여 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스를 다시 시작합니다.  
   
   
-##  <a name="error"></a>SQL 전체 텍스트 필터 데몬 시작 관리자 서비스가 시작 되지 않는 경우  
+##  <a name="if-the-sql-full-text-filter-daemon-launcher-service-does-not-start"></a><a name="error"></a>SQL 전체 텍스트 필터 데몬 시작 관리자 서비스가 시작 되지 않는 경우  
  다음과 같은 경우 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스가 시작되지 않을 수 있습니다.  
   
 -   SQL 전체 텍스트 필터 데몬 시작 관리자 서비스 계정과 연결된 암호가 만료되었습니다.  
@@ -48,8 +48,7 @@ ms.locfileid: "66010943"
   
     1.  계정에 대한 새 Windows 암호를 설정합니다.  
   
-    2.  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 새 암호를 사용하도록 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스를 업데이트합니다.  
+    2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 새 암호를 사용하도록 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스를 업데이트합니다.  
   
 -   서비스 계정의 사용자 계정 또는 암호가 잘못되었습니다.  
   
@@ -71,8 +70,7 @@ ms.locfileid: "66010943"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 그룹에 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스를 시작할 수 있는 권한이 없습니다.  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 그룹에는 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스를 관리, 쿼리 및 시작하기 위한 기본 사용 권한이 부여됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 후 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스 계정에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 그룹 사용 권한이 제거된 경우 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스를 시작할 수 없으며 전체 텍스트 검색이 비활성화됩니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 그룹에 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스 계정에 대한 사용 권한이 있는지 확인하세요.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 그룹에는 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스를 관리, 쿼리 및 시작하기 위한 기본 사용 권한이 부여됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 후 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스 계정에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 그룹 사용 권한이 제거된 경우 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스를 시작할 수 없으며 전체 텍스트 검색이 비활성화됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 그룹에 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스 계정에 대한 사용 권한이 있는지 확인하세요.  
   
   
 ## <a name="see-also"></a>참고 항목  

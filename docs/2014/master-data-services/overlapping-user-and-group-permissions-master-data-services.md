@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6c3bdb745d836959f563d19dc9897b718a2c9b16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478884"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>겹치는 사용자 및 그룹 권한(Master Data Services)
@@ -30,15 +30,14 @@ ms.locfileid: "65478884"
   
  사용자가 여러 그룹의 멤버이며 이러한 그룹에 마스터 데이터 관리자에 대한 액세스 권한이 있는 경우 다음 규칙이 적용됩니다.  
   
--   **Deny** 는 다른 모든 사용 권한을 재정의 합니다.  
+-   **거부** 는 다른 모든 사용 권한을 무시합니다.  
   
 -   **업데이트** 는 **읽기**전용을 재정의 합니다.  
   
  이러한 규칙은 **모델** 탭과 **계층 멤버** 탭 모두에 적용됩니다. 각 탭의 사용 권한이 확인된 후 결합됩니다. 자세한 내용은 [사용 권한이 결정되는 방식&#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)을 참조하세요.  
   
 > [!NOTE]  
->  겹치는 사용자 및 그룹 권한은 사용자 인터페이스에서 확인할 수 있습니다. 
-  **모델** 탭과 **계층 멤버** 탭 둘 다에 **유효** 를 선택하여 유효 사용 권한을 볼 수 있는 드롭다운 목록이 있습니다.  
+>  겹치는 사용자 및 그룹 권한은 사용자 인터페이스에서 확인할 수 있습니다. **모델** 탭과 **계층 멤버** 탭 둘 다에 **유효** 를 선택하여 유효 사용 권한을 볼 수 있는 드롭다운 목록이 있습니다.  
   
 ## <a name="example-1"></a>예 1  
  ![mds_conc_user_group_ex_1](../../2014/master-data-services/media/mds-conc-user-group-ex-1.gif "mds_conc_user_group_ex_1")  
@@ -81,6 +80,6 @@ ms.locfileid: "65478884"
   
 ## <a name="see-also"></a>참고 항목  
  [MDS(Master Data Services) &#40;사용 권한을 결정 하는 방법&#41;](how-permissions-are-determined-master-data-services.md)   
- [MDS(Master Data Services)&#41;&#40;겹치는 모델 및 멤버 권한](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
+ [겹치는 모델 및 멤버 권한&#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

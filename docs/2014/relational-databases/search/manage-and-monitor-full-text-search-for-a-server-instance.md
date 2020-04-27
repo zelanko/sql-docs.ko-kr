@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6ed18416eadf1c2cc664029588bf0201038c261
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011166"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링
@@ -29,7 +29,7 @@ ms.locfileid: "66011166"
   
 -   전체 텍스트 검색에 대한 사용자 데이터베이스 구성. 여기에는 데이터베이스에 대해 하나 이상의 전체 텍스트 카탈로그를 만들고 전체 텍스트 쿼리를 실행할 각 테이블 또는 인덱싱된 뷰에 대한 전체 텍스트 인덱스를 정의하는 작업이 포함됩니다.  
   
-##  <a name="props"></a> 전체 텍스트 검색의 서버 속성 보기 또는 변경  
+##  <a name="viewing-or-changing-server-properties-for-full-text-search"></a><a name="props"></a> 전체 텍스트 검색의 서버 속성 보기 또는 변경  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]인스턴스의 전체 텍스트 속성을 볼 수 있습니다.  
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>전체 텍스트 검색의 서버 속성을 보고 변경하려면  
@@ -67,7 +67,7 @@ ms.locfileid: "66011166"
         > [!NOTE]  
         >  [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)**upgrade_option** 동작을 사용하여 전체 텍스트 업그레이드 옵션을 설정할 수도 있습니다.  
   
-##  <a name="metadata"></a> 추가 전체 텍스트 서버 속성 보기  
+##  <a name="viewing-additional-full-text-server-properties"></a><a name="metadata"></a> 추가 전체 텍스트 서버 속성 보기  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 함수를 사용하여 전체 텍스트 검색의 다양한 서버 수준 속성 값을 가져올 수 있습니다. 이 정보는 전체 텍스트 검색을 관리하고 이러한 검색에서 발생하는 문제를 해결하는 데 유용합니다.  
   
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버 인스턴스의 전체 텍스트 속성 및 관련 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 함수를 보여 줍니다.  
@@ -78,10 +78,10 @@ ms.locfileid: "66011166"
 |`LoadOSResources`|운영 체제 단어 분리기 및 필터가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스와 함께 등록되고 사용되는지 여부를 나타냅니다.|FULLTEXTSERVICEPROPERTY|  
 |`VerifySignature`|전체 텍스트 엔진이 서명된 이진 파일만 로드할지 여부를 지정합니다.|FULLTEXTSERVICEPROPERTY|  
   
-##  <a name="monitor"></a>전체 텍스트 검색 작업 모니터링  
+##  <a name="monitoring-full-text-search-activity"></a><a name="monitor"></a> 전체 텍스트 검색 작업 모니터링  
  일부 동적 관리 뷰 및 함수는 서버 인스턴스의 전체 텍스트 검색 작업을 모니터링하는 데 유용합니다.  
   
- **진행 중인 채우기 작업을 포함 하는 전체 텍스트 카탈로그에 대 한 정보를 보려면**  
+ **채우기 작업이 진행 중인 전체 텍스트 카탈로그에 대한 정보를 보려면**  
   
 -   [sys.dm_fts_active_catalogs&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql)  
   
@@ -89,23 +89,23 @@ ms.locfileid: "66011166"
   
 -   [sys.dm_fts_fdhosts&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-fdhosts-transact-sql)  
   
- **진행 중인 인덱스 채우기에 대 한 정보를 보려면**  
+ **진행 중인 인덱스 채우기에 대한 정보를 보려면**  
   
 -   [sys.dm_fts_index_population&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)  
   
- **탐색 또는 탐색 범위의 일부로 사용 되는 메모리 풀의 메모리 버퍼를 보려면**  
+ **전체 텍스트 탐색이나 전체 텍스트 탐색 범위의 일부로 사용되는 메모리 풀의 메모리 버퍼를 보려면**  
   
 -   [sys.dm_fts_memory_buffers&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)  
   
- **전체 텍스트 탐색 이나 전체 텍스트 탐색 범위에 대해 전체 텍스트 gatherer 구성 요소에서 사용할 수 있는 공유 메모리 풀을 보려면**  
+ **전체 텍스트 탐색이나 전체 텍스트 탐색 범위에 대해 전체 텍스트 Gatherer 구성 요소에서 사용할 수 있는 공유 메모리 풀을 보려면**  
   
 -   [sys.dm_fts_memory_pools&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
   
- **각 전체 텍스트 인덱싱 일괄 처리에 대 한 정보를 보려면**  
+ **각 전체 텍스트 인덱싱 일괄 처리에 대한 정보를 보려면**  
   
 -   [sys.dm_fts_outstanding_batches&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql)  
   
- **진행 중인 채우기와 관련 된 특정 범위에 대 한 정보를 보려면**  
+ **진행 중인 채우기와 관련된 특정 범위에 대한 정보를 보려면**  
   
 -   [sys.dm_fts_population_ranges&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-population-ranges-transact-sql)  
   

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d0a3dd41259bcbf2567d34a86527865de011faf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012668"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>위치 경로에 노드 테스트 지정(SQLXML 4.0)
@@ -44,17 +44,14 @@ ms.locfileid: "66012668"
 ## <a name="abbreviated-syntax-for-the-axes"></a>축의 축약형 구문  
  위치 경로에 대한 다음 축약형 구문이 지원됩니다.  
   
--   
-  `attribute::`는 `@` 기호로 축약할 수 있습니다.  
+-   `attribute::`는 `@` 기호로 축약할 수 있습니다.  
   
      위치 경로 `Customer[@CustomerID="ALFKI"]`는 `child::Customer[attribute::CustomerID="ALFKI"]`와 같습니다.  
   
--   
-  `child::`는 위치 단계에서 생략할 수 있습니다.  
+-   `child::`는 위치 단계에서 생략할 수 있습니다.  
   
      따라서 기본 축은 `child`이고, 위치 경로 `Customer/Order`는 `child::Customer/child::Order`와 같습니다.  
   
--   
-  `self::node()`는 한 개의 마침표(.)로 축약할 수 있으며, `parent::node()`는 두 개의 마침표(..)로 축약할 수 있습니다.  
+-   `self::node()`는 한 개의 마침표(.)로 축약할 수 있으며, `parent::node()`는 두 개의 마침표(..)로 축약할 수 있습니다.  
   
   

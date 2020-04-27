@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72dfbcbd1ff264e596eecfecb5ebf759c2cbf5e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013841"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>테이블 및 열에 대한 XSD 요소 및 특성의 명시적 매핑(SQLXML 4.0)
@@ -41,8 +41,7 @@ ms.locfileid: "66013841"
  XPath 쿼리는 주석이 추가된 XSD 스키마에 대해 지정되며 스키마의 요소 및 특성에 대한 데이터는 매핑되는 테이블 및 열에서 검색됩니다. 데이터베이스에서 단일 값을 얻으려면 XSD 스키마에 지정된 매핑에 관계 및 필드 사양이 모두 있어야 합니다. 요소/특성의 이름이 매핑되는 테이블/뷰 또는 열 이름과 다른 경우 `sql:relation` 및 `sql:field` 주석을 사용하여 XML 문서의 요소 또는 특성과 데이터베이스의 테이블(뷰) 또는 열 간의 매핑을 지정할 수 있습니다.  
   
 ## <a name="sql-relation"></a>sql-relation  
- 
-  `sql:relation` 주석은 XSD 스키마의 XML 노드를 데이터베이스 테이블에 매핑하기 위해 추가됩니다. 테이블(뷰)의 이름은 `sql:relation` 주석의 값으로 지정됩니다.  
+ `sql:relation` 주석은 XSD 스키마의 XML 노드를 데이터베이스 테이블에 매핑하기 위해 추가됩니다. 테이블(뷰)의 이름은 `sql:relation` 주석의 값으로 지정됩니다.  
   
  요소에 `sql:relation`을 지정하면 이 주석의 범위가 해당 요소의 복합 유형 정의에 기술된 모든 특성 및 자식 요소에 적용되므로 주석을 쉽게 작성할 수 있습니다.  
   
@@ -53,9 +52,7 @@ ms.locfileid: "66013841"
 ```  
   
 ## <a name="sql-field"></a>sql-field  
- 
-  `sql-field` 주석은 요소 또는 특성을 데이터베이스 열에 매핑합니다. 
-  `sql:field` 주석은 스키마의 XML 노드를 데이터베이스 열에 매핑하기 위해 추가됩니다. 비어 있는 콘텐츠 요소에는 `sql:field`를 지정할 수 없습니다.  
+ `sql-field` 주석은 요소 또는 특성을 데이터베이스 열에 매핑합니다. `sql:field` 주석은 스키마의 XML 노드를 데이터베이스 열에 매핑하기 위해 추가됩니다. 비어 있는 콘텐츠 요소에는 `sql:field`를 지정할 수 없습니다.  
   
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 696a114c74ecb6d4b8f4cfe6b2d16b33869e1602
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478898"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Excel용 MDS 추가 기능의 데이터 품질 일치
@@ -48,8 +48,8 @@ ms.locfileid: "65478898"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|외부 데이터와 MDS 관리 데이터를 비교하기 전에 결합합니다.|[데이터 &#40;Excel용 MDS 추가 기능&#41;결합](combine-data-mds-add-in-for-excel.md)|  
-|DQS 기술 자료를 사용하여 데이터의 유사성을 찾습니다.|[유사한 데이터 &#40;Excel용 MDS 추가 기능 일치 시킵니다&#41;](match-similar-data-mds-add-in-for-excel.md)|  
+|외부 데이터와 MDS 관리 데이터를 비교하기 전에 결합합니다.|[데이터 결합&#40;Excel용 MDS 추가 기능&#41;](combine-data-mds-add-in-for-excel.md)|  
+|DQS 기술 자료를 사용하여 데이터의 유사성을 찾습니다.|[유사한 데이터 일치&#40;Excel용 MDS 추가 기능&#41;](match-similar-data-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   

@@ -21,17 +21,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5999a7f3a952cd0392136a96bf3bf166c8e6b155
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011897"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>대량 가져오기 수행 중 Null 유지 또는 기본값 사용(SQL Server)
-  기본적으로 데이터를 테이블로 가져올 때 **bcp** 명령 및 BULK INSERT 문은 해당 테이블의 열에 대해 정의된 기본값을 유지합니다. 예를 들어 데이터 파일에 null 필드가 있으면 열의 기본값이 대신 로드됩니다. 
-  **bcp** 명령 및 BULK INSERT 문을 사용하면 Null 값을 유지하도록 지정할 수 있습니다.  
+  기본적으로 데이터를 테이블로 가져올 때 **bcp** 명령 및 BULK INSERT 문은 해당 테이블의 열에 대해 정의된 기본값을 유지합니다. 예를 들어 데이터 파일에 null 필드가 있으면 열의 기본값이 대신 로드됩니다. **bcp** 명령 및 BULK INSERT 문을 사용하면 Null 값을 유지하도록 지정할 수 있습니다.  
   
- 반대로 일반 INSERT 문은 기본값을 삽입하는 대신 Null 값을 유지합니다. INSERT ... SELECT * FROM OPENROWSET(BULK...) 문은 일반 INSERT와 같은 기본 동작을 제공하지만 기본값 삽입에 대한 테이블 힌트 를 추가로 지원합니다.  
+ 반대로 일반 INSERT 문은 기본값을 삽입하는 대신 Null 값을 유지합니다. INSERT ... SELECT * FROM OPENROWSET(BULK...) 문은 일반 INSERT와 같은 기본 동작을 제공하지만 기본값 삽입에 대한 테이블 힌트를 추가로 지원합니다.  
   
 > [!NOTE]  
 >  테이블 열 건너뛰기 예제 서식 파일은 [서식 파일을 사용하여 테이블 열 건너뛰기&#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)를 참조하세요.  
@@ -67,8 +66,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
  서식 파일을 만드는 방법은 [서식 파일 만들기&#40;SQL Server&#41;](create-a-format-file-sql-server.md)를 사용하세요.  
   
 ### <a name="sample-data-file"></a>예제 데이터 파일  
- 이 예에서는 예제 데이터 파일( `MyTestEmptyField2-c.Dat`)을 사용하는데 이 파일은 두 번째 필드에 값이 없습니다. 
-  `MyTestEmptyField2-c.Dat` 데이터 파일에는 다음 레코드가 포함됩니다.  
+ 이 예에서는 예제 데이터 파일( `MyTestEmptyField2-c.Dat`)을 사용하는데 이 파일은 두 번째 필드에 값이 없습니다. `MyTestEmptyField2-c.Dat` 데이터 파일에는 다음 레코드가 포함됩니다.  
   
 ```  
 1,,DataField3  
@@ -81,7 +79,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
   
 |명령|한정자|한정자 유형|  
 |-------------|---------------|--------------------|  
-|**틀린**|`-k`|스위치|  
+|**bcp**|`-k`|스위치|  
 |BULK INSERT|KEEPNULLS<sup>1</sup>|인수|  
   
  <sup>1</sup> BULK INSERT의 경우 기본값을 사용할 수 없으면 null 값을 허용 하도록 테이블 열을 정의 해야 합니다.  
@@ -120,8 +118,7 @@ bcp AdventureWorks..MyTestDefaultCol2 in C:\MyTestEmptyField2-c.Dat -f C:\MyTest
 ```  
   
 #### <a name="using-bulk-insert-and-keeping-null-values"></a>BULK INSERT 사용 및 Null 값 유지  
- 다음 예에서는 BULK INSERT 문에서 KEEPNULLS 옵션을 사용하는 방법을 보여 줍니다. 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기 같은 쿼리 도구에서 다음을 실행합니다.  
+ 다음 예에서는 BULK INSERT 문에서 KEEPNULLS 옵션을 사용하는 방법을 보여 줍니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기 같은 쿼리 도구에서 다음을 실행합니다.  
   
 ```  
 USE AdventureWorks;  
@@ -142,7 +139,7 @@ GO
   
 |명령|한정자|한정자 유형|  
 |-------------|---------------|--------------------|  
-|INSERT ... SELECT * FROM OPENROWSET(BULK...)|WITH(KEEPDEFAULTS)|테이블 힌트|  
+|INSERT ... 선택 * OPENROWSET (BULK)에서|WITH(KEEPDEFAULTS)|테이블 힌트|  
   
 > [!NOTE]  
 >  자세한 내용은 sql [&#41;&#40;INSERT ](/sql/t-sql/statements/insert-transact-sql)를 참조 하 고 transact-sql [&#41;&#40;Transact-sql ](/sql/t-sql/queries/select-transact-sql), [OPENROWSET &#40;transact-sql&#41;](/sql/t-sql/functions/openrowset-transact-sql)및 [테이블 힌트 &#40;transact-sql](/sql/t-sql/queries/hints-transact-sql-table)&#41;  
@@ -159,8 +156,7 @@ GO
 |`1`|`NULL`|`DataField3`|  
 |`2`|`NULL`|`DataField3`|  
   
- "`Default value of Col2`" 대신 기본값인 "`NULL`" 를 삽입하려면 다음 예에서 예시하는 대로 KEEPDEFAULTS 테이블 힌트를 사용해야 합니다. 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기 같은 쿼리 도구에서 다음을 실행합니다.  
+ "`Default value of Col2`" 대신 기본값인 "`NULL`" 를 삽입하려면 다음 예에서 예시하는 대로 KEEPDEFAULTS 테이블 힌트를 사용해야 합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기 같은 쿼리 도구에서 다음을 실행합니다.  
   
 ```  
 USE AdventureWorks;  
@@ -175,13 +171,13 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
--   [데이터를 대량으로 가져올 때 Id 값을 유지 &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
+-   [데이터 대량 가져오기 중 ID 값 유지&#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
--   [대량 내보내기 또는 가져오기를 위한 데이터 준비 &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
+-   [대량 내보내기 또는 가져오기를 위한 데이터 준비&#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
   
- **서식 파일을 사용 하려면**  
+ **서식 파일을 사용하려면**  
   
 -   [서식 파일 만들기&#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   
@@ -193,25 +189,25 @@ GO
   
 -   [서식 파일을 사용하여 테이블 열 건너뛰기&#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
- **대량 가져오기 또는 대량 내보내기를 위한 데이터 형식을 사용 하려면**  
+ **대량 가져오기 또는 대량 내보내기를 위한 데이터 형식을 사용하려면**  
   
 -   [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [문자 형식을 사용 하 여 데이터 &#40;SQL Server 가져오거나 내보냅니다&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [네이티브 형식을 사용 하 여 데이터 &#40;SQL Server 가져오거나 내보냅니다&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [유니코드 문자 형식을 사용 하 여 데이터 &#40;SQL Server 가져오기 또는 내보내기&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [유니코드 문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [유니코드 원시 형식을 사용 하 여 데이터 &#40;SQL Server 가져오기 또는 내보내기&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [유니코드 네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
- **Bcp를 사용할 때 데이터 형식을 호환 되도록 지정 하려면**  
+ **bcp를 사용할 때 데이터 형식의 호환 가능성을 지정하려면**  
   
--   [필드 및 행 종결자를 지정 하 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
+-   [필드 및 행 종결자 지정&#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
--   [Bcp &#40;SQL Server를 사용 하 여 데이터 파일에 접두사 길이를 지정&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+-   [bcp를 사용하여 데이터 파일에 접두사 길이 지정&#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
--   [Bcp &#40;SQL Server를 사용 하 여 File Storage 유형을 지정&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+-   [bcp를 사용하여 파일 스토리지 유형 지정&#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   

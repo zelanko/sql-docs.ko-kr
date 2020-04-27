@@ -22,22 +22,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc3c063da7bb9133f8687a908c4bd7e0e13bae8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013816"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>sql:key-fields(SQLXML 4.0)를 사용하여 키 열 식별
-  XSD 스키마에 대해 XPath 쿼리가 지정된 경우 결과에서 올바른 중첩을 얻으려면 대부분 키 정보가 필요합니다. 
-  `sql:key-fields` 주석을 지정하면 적절한 계층이 생성됩니다.  
+  XSD 스키마에 대해 XPath 쿼리가 지정된 경우 결과에서 올바른 중첩을 얻으려면 대부분 키 정보가 필요합니다. `sql:key-fields` 주석을 지정하면 적절한 계층이 생성됩니다.  
   
 > [!NOTE]  
->  올바른 중첩을 얻으려면 테이블에 매핑되는 요소에 대해 `sql:key-fields`를 지정하는 것이 좋습니다. 기본 결과 집합의 순서가 생성되는 XML에 중요합니다. 
-  `sql:key-fields`를 지정하지 않으면 잘못된 형식의 XML이 생성될 수 있습니다.  
+>  올바른 중첩을 얻으려면 테이블에 매핑되는 요소에 대해 `sql:key-fields`를 지정하는 것이 좋습니다. 기본 결과 집합의 순서가 생성되는 XML에 중요합니다. `sql:key-fields`를 지정하지 않으면 잘못된 형식의 XML이 생성될 수 있습니다.  
   
- 
-  `sql:key-fields` 값은 관계의 행을 고유하게 식별하는 열을 나타냅니다. 행을 고유하게 식별하는 데 둘 이상의 열이 필요한 경우 열 값이 공백으로 구분됩니다.  
+ `sql:key-fields` 값은 관계의 행을 고유하게 식별하는 열을 나타냅니다. 행을 고유하게 식별하는 데 둘 이상의 열이 필요한 경우 열 값이 공백으로 구분됩니다.  
   
  요소에 요소와 `sql:key-fields` 자식 요소 사이에 정의 된 ** \<sql: relationship>** 포함 되어 있지만 부모 요소에 지정 된 테이블의 기본 키를 제공 하지 않는 경우 주석을 사용 해야 합니다.  
   

@@ -15,20 +15,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 63b88aa365139c4d22d7a074f2a30e64947158b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054523"
 ---
 # <a name="web-service-task-editor-input-page"></a>웹 서비스 태스크 편집기(입력 페이지)
-  
   **웹 서비스 태스크 편집기** 대화 상자의 **입력** 페이지를 사용하여 웹 서비스, 웹 메서드 및 웹 메서드에 입력으로 제공할 값을 지정할 수 있습니다. 문자열을 값 열에 직접 입력하거나 값 열에서 변수를 선택하여 값을 지정할 수 있습니다.  
   
  이 태스크에 대한 자세한 내용은 [웹 서비스 태스크](control-flow/web-service-task.md)를 참조하세요.  
   
 ## <a name="options"></a>옵션  
- **출력소**  
+ **서비스**  
  목록에서 웹 메서드를 실행하는 데 사용할 웹 서비스를 선택합니다.  
   
  **메서드**  
@@ -40,7 +39,7 @@ ms.locfileid: "66054523"
  **이름**  
  웹 메서드에 대한 입력의 이름을 나열합니다.  
   
- **형식**  
+ **Type**  
  입력의 데이터 형식을 나열합니다.  
   
 > [!NOTE]  

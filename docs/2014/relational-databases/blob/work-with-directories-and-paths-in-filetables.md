@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52e486dc6cb6c3da45d590d4ba2e557c87c1a556
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66009878"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>FileTable에서 디렉터리 및 경로 작업
   파일이 FileTable에 저장되는 디렉터리 구조에 대해 설명합니다.  
   
-##  <a name="HowToDirectories"></a> 방법: FileTable에서 디렉터리 및 경로 작업  
+##  <a name="how-to-work-with-directories-and-paths-in-filetables"></a><a name="HowToDirectories"></a> 방법: FileTable에서 디렉터리 및 경로 작업  
  다음 세 개의 함수를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 FileTable 디렉터리 작업을 수행할 수 있습니다.  
   
 |원하는 결과|사용할 함수|  
@@ -31,7 +31,7 @@ ms.locfileid: "66009878"
 |FileTable의 파일이나 디렉터리에 대한 절대 또는 상대 UNC 경로를 가져옵니다.|[GetFileNamespacePath&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)|  
 |경로를 제공하여 FileTable의 지정된 파일 또는 디렉터리에 대한 경로 로케이터 ID 값을 가져옵니다.|[GetPathLocator&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql)|  
   
-##  <a name="BestPracticeRelativePaths"></a> 방법: 이식 가능한 코드에 상대 경로 사용  
+##  <a name="how-to-use-relative-paths-for-portable-code"></a><a name="BestPracticeRelativePaths"></a> 방법: 이식 가능한 코드에 상대 경로 사용  
  코드와 애플리케이션을 현재 컴퓨터 및 데이터베이스 외에서도 사용할 수 있도록 하려면 코드를 작성할 때 절대 파일 경로를 사용하지 않는 것이 좋습니다. 대신 다음 예와 같이 [FileTableRootPath&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql) 및 [GetFileNamespacePath&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)함수를 함께 사용하여 런타임에 파일의 전체 경로를 가져옵니다. 기본적으로 `GetFileNamespacePath` 함수는 데이터베이스의 루트 경로 아래에 있는 파일의 상대 경로를 반환합니다.  
   
 ```sql  
@@ -48,23 +48,22 @@ PRINT @fullpath;
 GO  
 ```  
   
-##  <a name="restrictions"></a> 중요 제한 사항  
+##  <a name="important-restrictions"></a><a name="restrictions"></a> 중요 제한 사항  
   
-###  <a name="nesting"></a> 중첩 수준  
+###  <a name="nesting-level"></a><a name="nesting"></a> 중첩 수준  
   
 > [!IMPORTANT]  
 >  15개 수준을 초과하는 하위 디렉터리를 FileTable 디렉터리에 저장할 수 없습니다. 15개 수준의 하위 디렉터리를 저장할 경우 최하위 수준에는 파일이 포함될 수 없습니다. 최하위 수준에 파일이 있으면 수준이 초과됩니다.  
   
-###  <a name="fqnlength"></a>전체 경로 이름의 길이  
+###  <a name="length-of-full-path-name"></a><a name="fqnlength"></a>전체 경로 이름의 길이  
   
 > [!IMPORTANT]  
 >  NTFS 파일 시스템은 Windows 셸 및 대부분의 Windows API의 260자 제한보다 긴 경로 이름을 지원합니다. 따라서 전체 경로 이름이 260자를 초과할 수 있기 때문에 Windows 탐색기 또는 다른 많은 Windows 애플리케이션으로 보거나 열 수 없는 Transact-SQL을 사용하여 FileTable의 파일 계층에 파일을 만들 수 있습니다. 그러나 Transact-SQL을 사용해서도 이러한 파일에 계속 액세스할 수 있습니다.  
   
-##  <a name="fullpath"></a>FileTable에 저장 된 항목의 전체 경로입니다.  
+##  <a name="the-full-path-to-an-item-stored-in-a-filetable"></a><a name="fullpath"></a>FileTable에 저장 된 항목의 전체 경로입니다.  
  FileTable에 저장된 파일 또는 디렉터리의 전체 경로는 다음 요소로 시작됩니다.  
   
-1.  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 수준에서 파일 I/O 액세스를 위해 설정된 공유  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 수준에서 파일 I/O 액세스를 위해 설정된 공유  
   
 2.  데이터베이스 수준에서 지정된 **DIRECTORY_NAME**  
   
@@ -78,33 +77,31 @@ GO
   
  인스턴스 수준 FILESTREAM 공유에 만들어지는 디렉터리 계층 구조는 가상 디렉터리 계층 구조라는 것을 유념해야 합니다. 이 계층 구조는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 저장되며 NTFS 파일 시스템에는 물리적으로 표시되지 않습니다. 이 FILESTREAM 공유 및 여기에 포함된 FileTable에서 파일 및 디렉터리에 액세스하는 모든 작업은 파일 시스템에 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소에서 가로채어 처리합니다.  
   
-##  <a name="roots"></a>인스턴스, 데이터베이스 및 FileTable 수준에서 루트 디렉터리의 의미 체계  
+##  <a name="the-semantics-of-the-root-directories-at-the-instance-database-and-filetable-levels"></a><a name="roots"></a> 인스턴스, 데이터베이스 및 FileTable 수준에서 루트 디렉터리의 의미 체계  
  이 디렉터리 계층 구조는 다음과 같은 의미 체계를 적용합니다.  
   
--   인스턴스 수준 FILESTREAM 공유는 관리자에 의해 구성되어 서버 속성으로 저장됩니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 이 공유의 이름을 바꿀 수 있습니다. 이름 바꾸기 작업을 적용하려면 서버를 다시 시작해야 합니다.  
+-   인스턴스 수준 FILESTREAM 공유는 관리자에 의해 구성되어 서버 속성으로 저장됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 이 공유의 이름을 바꿀 수 있습니다. 이름 바꾸기 작업을 적용하려면 서버를 다시 시작해야 합니다.  
   
 -   새 데이터베이스를 만들 때 데이터베이스 수준 **DIRECTORY_NAME** 은 기본적으로 null입니다. 관리자는 **ALTER DATABASE** 문을 사용하여 이 이름을 설정하거나 변경할 수 있습니다. 이름은 해당 인스턴스에서 고유해야 하며 대/소문자를 구분하지 않습니다.  
   
--   일반적으로 FileTable을 만들 때 **FILETABLE_DIRECTORY** 이름을 **CREATE TABLE** 문의 일부로 제공합니다. 
-  **ALTER TABLE** 명령을 사용하여 이 이름을 변경할 수 있습니다.  
+-   일반적으로 FileTable을 만들 때 **FILETABLE_DIRECTORY** 이름을 **CREATE TABLE** 문의 일부로 제공합니다. **ALTER TABLE** 명령을 사용하여 이 이름을 변경할 수 있습니다.  
   
 -   파일 I/O 작업을 통해 이 루트 디렉터리의 이름을 바꿀 수 없습니다.  
   
 -   이러한 루트 디렉터리는 단독 파일 핸들로 열 수 있습니다.  
   
-##  <a name="is_directory"></a>FileTable 스키마의 is_directory 열  
+##  <a name="the-is_directory-column-in-the-filetable-schema"></a><a name="is_directory"></a>FileTable 스키마의 is_directory 열  
  다음 표에서는 **is_directory** 열과 FileTable의 FILESTREAM 데이터가 포함된 **file_stream** 열 간의 상호 작용에 대해 설명합니다.  
   
 ||||  
 |-|-|-|  
-|*is_directory* **값**|*file_stream* **값**|**동작**|  
+|*is_directory* **value**|*file_stream* **value**|**동작**|  
 |FALSE|NULL|이는 시스템 정의 제약 조건에 의해 catch되는 잘못된 조합입니다.|  
 |FALSE|\<값>|항목은 파일을 나타냅니다.|  
 |TRUE|NULL|항목은 디렉터리를 나타냅니다.|  
 |TRUE|\<값>|이는 시스템 정의 제약 조건에 의해 catch되는 잘못된 조합입니다.|  
   
-##  <a name="alwayson"></a>AlwaysOn 가용성 그룹에서 Virtual Network 이름 (VNNs) 사용  
+##  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="alwayson"></a>AlwaysOn 가용성 그룹에서 Virtual Network 이름 (VNNs) 사용  
  FILESTREAM 또는 FileTable 데이터가 포함된 데이터베이스가 AlwaysOn 가용성 그룹에 속하는 경우  
   
 -   FILESTREAM 및 FileTable 함수가 컴퓨터 이름 대신 VNN(가상 네트워크 이름)을 사용하거나 반환합니다. 이러한 함수에 대한 자세한 내용은 [Filestream 및 FileTable 함수&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filestream-and-filetable-functions-transact-sql)를 참조하세요.  

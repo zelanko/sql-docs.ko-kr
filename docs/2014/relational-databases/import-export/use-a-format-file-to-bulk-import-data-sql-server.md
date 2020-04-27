@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 772dbb86188bf164a2e135f7bb9b71a1cc030745
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011764"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>서식 파일을 사용하여 데이터 대량 가져오기(SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "66011764"
 |대량 로드 명령|서식 파일 옵션 사용|  
 |------------------------|-----------------------------------|  
 |BULK INSERT|FORMATFILE = '*format_file_path*'|  
-|INSERT ... SELECT * FROM OPENROWSET(BULK...)|FORMATFILE = '*format_file_path*'|  
+|INSERT ... 선택 * OPENROWSET (BULK)에서|FORMATFILE = '*format_file_path*'|  
 |**bcp** ... **에서**|**-f** *format_file*|  
   
  자세한 내용은 [bcp 유틸리티](../../tools/bcp-utility.md), [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 또는 [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)를 참조하세요.  
@@ -75,8 +75,7 @@ GO
  이 섹션의 일부 예에서는 XML 서식 파일 `myTestFormatFiles-f-x-c.Xml`을 사용하고 다른 예에서는 비 XML 서식 파일을 사용합니다. 두 서식 파일은 모두 문자 데이터 형식과 비기본 필드 종결자(,)를 사용합니다.  
   
 #### <a name="the-sample-non-xml-format-file"></a>예제 비 XML 서식 파일  
- 다음 예에서는 **bcp** 를 사용하여 `myTestFormatFiles` 테이블에서 XML 서식 파일을 생성합니다. 
-  `myTestFormatFiles.Fmt` 파일은 다음 정보를 포함합니다.  
+ 다음 예에서는 **bcp** 를 사용하여 `myTestFormatFiles` 테이블에서 XML 서식 파일을 생성합니다. `myTestFormatFiles.Fmt` 파일은 다음 정보를 포함합니다.  
   
 ```  
 9.0  
@@ -87,8 +86,7 @@ GO
 4       SQLCHAR       0       100     "\r\n"   4     Col4         SQL_Latin1_General_CP1_CI_AS  
 ```  
   
- 
-  **bcp** 에 **format** 옵션을 사용하여 이러한 서식 파일을 만들려면 Windows 명령 프롬프트에서 다음을 입력합니다.  
+ **bcp** 에 **format** 옵션을 사용하여 이러한 서식 파일을 만들려면 Windows 명령 프롬프트에서 다음을 입력합니다.  
   
 ```  
 bcp AdventureWorks2012..MyTestFormatFiles format nul -c -t, -f myTestFormatFiles.Fmt -T  
@@ -98,8 +96,7 @@ bcp AdventureWorks2012..MyTestFormatFiles format nul -c -t, -f myTestFormatFiles
  서식 파일을 만드는 방법은 [서식 파일 만들기&#40;SQL Server&#41;](create-a-format-file-sql-server.md)를 참조하세요.  
   
 #### <a name="the-sample-xml-format-file"></a>예제 XML 서식 파일  
- 다음 예에서는 **bcp** 를 사용하여 `myTestFormatFiles` 테이블에서 XML 서식 파일을 만듭니다. 
-  `myTestFormatFiles.Xml` 파일은 다음 정보를 포함합니다.  
+ 다음 예에서는 **bcp** 를 사용하여 `myTestFormatFiles` 테이블에서 XML 서식 파일을 만듭니다. `myTestFormatFiles.Xml` 파일은 다음 정보를 포함합니다.  
   
 ```  
 <?xml version="1.0"?>  
@@ -119,8 +116,7 @@ bcp AdventureWorks2012..MyTestFormatFiles format nul -c -t, -f myTestFormatFiles
 </BCPFORMAT>  
 ```  
   
- 
-  **bcp** 에 **format** 옵션을 사용하여 이러한 서식 파일을 만들려면 Windows 명령 프롬프트에서 다음을 입력합니다.  
+ **bcp** 에 **format** 옵션을 사용하여 이러한 서식 파일을 만들려면 Windows 명령 프롬프트에서 다음을 입력합니다.  
   
 ```  
 bcp AdventureWorks2012..MyTestFormatFiles format nul -c -t, -x -f myTestFormatFiles.Xml -T  
@@ -139,10 +135,9 @@ bcp AdventureWorks2012..myTestFormatFiles in C:\myTestFormatFiles-c.Dat -f C:\my
 >  이 명령에 대한 자세한 내용은 [bcp 유틸리티](../../tools/bcp-utility.md)를 참조하세요.  
   
 ### <a name="using-bulk-insert"></a>BULK INSERT 사용  
- 다음 예에서는 BULK INSERT를 사용하여 `myTestFormatFiles-c.Dat` 데이터 파일에서 `HumanResources.myTestFormatFiles` 예제 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 테이블로 데이터를 대량으로 가져옵니다. 이 예에서는 비 XML 서식 파일인 `MyTestFormatFiles.Fmt`를 사용합니다. 또한 데이터 파일을 가져오기 전에 기존 테이블 행을 모두 삭제합니다.  
+ 다음 예에서는 BULK INSERT를 사용하여 `myTestFormatFiles-c.Dat` 데이터 파일에서 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 예제 데이터베이스의 `HumanResources.myTestFormatFiles` 테이블로 데이터를 대량으로 가져옵니다. 이 예에서는 비 XML 서식 파일인 `MyTestFormatFiles.Fmt`를 사용합니다. 또한 데이터 파일을 가져오기 전에 기존 테이블 행을 모두 삭제합니다.  
   
- 
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음을 실행합니다.  
+ [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음을 실행합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -163,8 +158,7 @@ GO
 ### <a name="using-the-openrowset-bulk-rowset-provider"></a>OPENROWSET 대량 행 집합 공급자 사용  
  다음 예에서는 `INSERT ... SELECT * FROM OPENROWSET(BULK...)`을 사용하여 `myTestFormatFiles-c.Dat` 데이터 파일에서 `HumanResources.myTestFormatFiles` 예제 데이터베이스의 `AdventureWorks` 테이블로 데이터를 대량으로 가져옵니다. 이 예에서는 XML 서식 파일인 `MyTestFormatFiles.Xml`을 사용합니다. 또한 데이터 파일을 가져오기 전에 기존 테이블 행을 모두 삭제합니다.  
   
- 
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음을 실행합니다.  
+ [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음을 실행합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -202,7 +196,7 @@ DROP TABLE myTestFormatFiles
  [bcp 유틸리티](../../tools/bcp-utility.md)   
  [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [비 XML 서식 파일 &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
+ [비 XML 서식 파일&#40;SQL Server&#41;](xml-format-files-sql-server.md)   
  [XML 서식 파일&#40;SQL Server&#41;](xml-format-files-sql-server.md)  
   
   

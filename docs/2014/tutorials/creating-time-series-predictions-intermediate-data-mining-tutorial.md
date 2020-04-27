@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ca1aa4022931c78f6139a8058c05adc707af5e77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63313884"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>시계열 예측 만들기(중급 데이터 마이닝 자습서)
@@ -49,8 +49,7 @@ ms.locfileid: "63313884"
 7.  **필드** 열에서 **PredictTimeSeries**을 선택 합니다.  
   
     > [!NOTE]  
-    >  
-  `Predict` 함수도 시계열 모델에 사용할 수 있습니다. 그러나 기본적으로 Predict 함수는 각 계열에 대해 하나의 예측만 만듭니다. 따라서 여러 예측 단계를 지정 하려면 **PredictTimeSeries** 함수를 사용 해야 합니다.  
+    >  `Predict` 함수도 시계열 모델에 사용할 수 있습니다. 그러나 기본적으로 Predict 함수는 각 계열에 대해 하나의 예측만 만듭니다. 따라서 여러 예측 단계를 지정 하려면 **PredictTimeSeries** 함수를 사용 해야 합니다.  
   
 8.  **마이닝 모델** 창에서 마이닝 모델 열 Amount를 선택 합니다 **.** Amount를 이전에 추가한 **PredictTimeSeries** 함수에 대 한 **조건/인수** 상자로 끕니다.  
   
@@ -138,8 +137,7 @@ ms.locfileid: "63313884"
   
      DMX 쿼리 텍스트를 수동으로 편집할 수 있도록 뷰가 변경됩니다.  
   
-2.  
-  `FLATTENED` 키워드 다음에 `SELECT` 키워드를 입력합니다. 전체 쿼리 텍스트가 다음과 같이 됩니다.  
+2.  `FLATTENED` 키워드 다음에 `SELECT` 키워드를 입력합니다. 전체 쿼리 텍스트가 다음과 같이 됩니다.  
   
     ```  
     SELECT FLATTENED  

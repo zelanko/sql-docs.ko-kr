@@ -16,20 +16,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5f96f82919b9f4a130ce8a533e6ffcf31e765f5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65092037"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 테이블 및 인덱스 분할을 지원합니다. 분할 테이블 및 인덱스의 데이터는 데이터베이스에서 두 개 이상의 파일 그룹으로 분할될 수 있는 단위로 나뉩니다. 행 그룹이 개별 파티션에 매핑되도록 데이터는 수평적으로 분할됩니다. 단일 인덱스나 테이블의 모든 파티션은 동일 데이터베이스에 상주해야 합니다. 데이터에서 쿼리나 업데이트가 수행되면 테이블이나 인덱스는 단일 논리적 엔터티로 처리됩니다. 분할된 테이블 및 인덱스는 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서만 사용할 수 있습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 기본적으로 최대 15,000개의 파티션을 지원합니다. 
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]이전 버전에서는 파티션 수가 기본적으로 1,000개로 제한되었습니다. x86 기반 시스템에서는 파티션 수가 1,000개를 초과하는 테이블 또는 인덱스를 만들 수 있지만 해당 테이블 또는 인덱스는 지원되지 않습니다.  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 기본적으로 최대 15,000개의 파티션을 지원합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]이전 버전에서는 파티션 수가 기본적으로 1,000개로 제한되었습니다. x86 기반 시스템에서는 파티션 수가 1,000개를 초과하는 테이블 또는 인덱스를 만들 수 있지만 해당 테이블 또는 인덱스는 지원되지 않습니다.  
   
 ## <a name="benefits-of-partitioning"></a>분할의 이점  
  큰 테이블 또는 인덱스를 분할하면 관리 효율성과 성능 면에서 다음과 같은 이점이 있습니다.  
@@ -40,9 +37,7 @@ ms.locfileid: "65092037"
   
 -   자주 실행하는 쿼리 유형과 사용 중인 하드웨어 구성에 따라 쿼리 성능이 향상될 수 있습니다. 예를 들어 쿼리 최적화 프로그램에서는 파티션 자체를 조인할 수 있으므로 테이블의 분할 열이 동일한 경우 두 개 이상의 분할된 테이블 간의 동등 조인 쿼리를 더 빠르게 처리할 수 있습니다.  
   
-     
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 I/O 작업을 위해 데이터를 정렬할 때 먼저 파티션을 기준으로 데이터가 정렬됩니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 한 번에 한 드라이브에 액세스하므로 성능이 저하될 수 있습니다. 데이터 저장 성능을 향상시키려면 RAID를 설정하여 두 개 이상의 디스크 간에 파티션의 데이터 파일을 스트라이프합니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 여전히 파티션을 기준으로 데이터를 정렬하지만 동시에 각 파티션의 모든 드라이브에 액세스할 수 있습니다.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 I/O 작업을 위해 데이터를 정렬할 때 먼저 파티션을 기준으로 데이터가 정렬됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 한 번에 한 드라이브에 액세스하므로 성능이 저하될 수 있습니다. 데이터 저장 성능을 향상시키려면 RAID를 설정하여 두 개 이상의 디스크 간에 파티션의 데이터 파일을 스트라이프합니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 여전히 파티션을 기준으로 데이터를 정렬하지만 동시에 각 파티션의 모든 드라이브에 액세스할 수 있습니다.  
   
      또한 전체 테이블이 아니라 파티션 수준에서 잠금 에스컬레이션을 설정하여 성능을 향상시킬 수 있습니다. 따라서 테이블의 잠금 경합을 줄일 수 있습니다.  
   
@@ -56,9 +51,7 @@ ms.locfileid: "65092037"
  파티션 함수의 파티션을 파일 그룹 집합으로 매핑하는 데이터베이스 개체입니다. 별개의 파일 그룹에 파티션을 넣는 주된 이유는 파티션 백업 작업을 독립적으로 수행하기 위해서입니다. 이는 개별 파일 그룹에 대해 백업을 수행할 수 있기 때문입니다.  
   
  분할 열  
- 파티션 함수가 테이블이나 인덱스를 분할하는 데 사용하는 테이블 또는 인덱스의 열입니다. 파티션 함수에 참여하는 계산 열은 명시적으로 PERSISTED로 표시되어야 합니다. 
-  `timestamp`를 제외하고 인덱스 열로 사용할 수 있는 모든 데이터 형식을 분할 열로 사용할 수 있습니다. 
-  `ntext`, `text`, `image`, `xml`, `varchar(max)`, `nvarchar(max)` 또는 `varbinary(max)` 데이터 형식은 지정할 수 없습니다. 또한 Microsoft .NET Framework CLR(공용 언어 런타임) 사용자 정의 유형 및 별칭 데이터 형식 열은 지정할 수 없습니다.  
+ 파티션 함수가 테이블이나 인덱스를 분할하는 데 사용하는 테이블 또는 인덱스의 열입니다. 파티션 함수에 참여하는 계산 열은 명시적으로 PERSISTED로 표시되어야 합니다. `timestamp`를 제외하고 인덱스 열로 사용할 수 있는 모든 데이터 형식을 분할 열로 사용할 수 있습니다. `ntext`, `text`, `image`, `xml`, `varchar(max)`, `nvarchar(max)` 또는 `varbinary(max)` 데이터 형식은 지정할 수 없습니다. 또한 Microsoft .NET Framework CLR(공용 언어 런타임) 사용자 정의 유형 및 별칭 데이터 형식 열은 지정할 수 없습니다.  
   
  정렬된 인덱스  
  해당 테이블과 동일한 파티션 구성표를 기반으로 작성되는 인덱스입니다. 테이블과 인덱스가 정렬되면 SQL Server에서 테이블과 인덱스의 파티션 구조를 유지하면서 신속하고 효율적으로 파티션을 전환할 수 있습니다. 인덱스가 기본 테이블에 맞게 정렬되기 위해 반드시 같은 이름의 파티션 함수를 사용할 필요는 없습니다. 그러나 인덱스와 기본 테이블의 파티션 함수는 1) 파티션 함수의 인수가 동일한 데이터 형식이어야 하고 2) 정의되는 파티션 수가 같아야 하고 3) 동일한 파티션 경계 값이 정의되어야 한다는 점에서 기본적으로 동일합니다.  
@@ -98,14 +91,12 @@ ms.locfileid: "65092037"
 ### <a name="queries"></a>쿼리  
  파티션 제거를 사용하는 쿼리는 파티션 수가 많을 경우 향상된 성능을 나타낼 수 있습니다. 파티션 제거를 사용하지 않는 쿼리는 파티션 수가 늘어나면 실행하는 데 더 많은 시간이 걸릴 수 있습니다.  
   
- 예를 들어 테이블에 1억 개의 행과 `A`, `B`및 `C`열이 있다고 가정합니다. 시나리오 1에서는 테이블의 `A`열이 1,000개의 파티션으로 분할됩니다. 시나리오 2에서는 테이블의 `A`열이 10,000개의 파티션으로 분할됩니다. 
-  `A` 열에서 필터링하는 WHERE 절이 있는 테이블에 대한 쿼리는 파티션 제거를 수행하고 파티션 하나를 검사합니다. 시나리오 2에서는 파티션에 검사할 행이 더 적기 때문에 동일한 쿼리가 더 빠르게 실행될 수 있습니다. B 열에서 필터링하는 WHERE 절이 있는 쿼리는 모든 파티션을 검사합니다. 시나리오 1에서는 시나리오 2보다 검사할 파티션 수가 더 적기 때문에 쿼리가 더 빠르게 실행될 수 있습니다.  
+ 예를 들어 테이블에 1억 개의 행과 `A`, `B`및 `C`열이 있다고 가정합니다. 시나리오 1에서는 테이블의 `A`열이 1,000개의 파티션으로 분할됩니다. 시나리오 2에서는 테이블의 `A`열이 10,000개의 파티션으로 분할됩니다. `A` 열에서 필터링하는 WHERE 절이 있는 테이블에 대한 쿼리는 파티션 제거를 수행하고 파티션 하나를 검사합니다. 시나리오 2에서는 파티션에 검사할 행이 더 적기 때문에 동일한 쿼리가 더 빠르게 실행될 수 있습니다. B 열에서 필터링하는 WHERE 절이 있는 쿼리는 모든 파티션을 검사합니다. 시나리오 1에서는 시나리오 2보다 검사할 파티션 수가 더 적기 때문에 쿼리가 더 빠르게 실행될 수 있습니다.  
   
  분할 열이 아닌 열에서 TOP 또는 MAX/MIN과 같은 연산자를 사용하는 쿼리에서는 모든 파티션이 평가되어야 하므로 분할 성능이 저하될 수 있습니다.  
   
 ## <a name="behavior-changes-in-statistics-computation-during-partitioned-index-operations"></a>분할된 인덱스 작업 중 통계 계산의 동작 변경 내용  
- 
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 분할된 인덱스를 만들거나 다시 작성할 때 테이블의 모든 행을 검사하여 통계를 작성하지 않습니다. 대신 쿼리 최적화 프로그램에서 기본 샘플링 알고리즘을 사용하여 통계를 생성합니다. 분할된 인덱스로 데이터베이스를 업그레이드한 후 인덱스에 대한 히스토그램 데이터가 달라집니다. 이 동작 변경이 쿼리 성능에는 영향을 주지 않을 수 있습니다. 테이블의 모든 행을 검사하여 분할된 인덱스에 대한 통계를 얻으려면 FULLSCAN 절에서 CREATE STATISTICS 또는 UPDATE STATISTICS를 사용합니다.  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 분할된 인덱스를 만들거나 다시 작성할 때 테이블의 모든 행을 검사하여 통계를 작성하지 않습니다. 대신 쿼리 최적화 프로그램에서 기본 샘플링 알고리즘을 사용하여 통계를 생성합니다. 분할된 인덱스로 데이터베이스를 업그레이드한 후 인덱스에 대한 히스토그램 데이터가 달라집니다. 이 동작 변경이 쿼리 성능에는 영향을 주지 않을 수 있습니다. 테이블의 모든 행을 검사하여 분할된 인덱스에 대한 통계를 얻으려면 FULLSCAN 절에서 CREATE STATISTICS 또는 UPDATE STATISTICS를 사용합니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
   
@@ -118,14 +109,14 @@ ms.locfileid: "65092037"
 ## <a name="related-content"></a>관련 내용  
  분할된 테이블 및 인덱스 전략과 구현에 대한 자세한 내용은 다음 백서를 참조하십시오.  
   
--   [SQL Server 2008를 사용 하는 분할 된 테이블 및 인덱스 전략](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
+-   [SQL Server 2008을 사용할 경우의 분할된 테이블 및 인덱스 전략](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
   
--   [자동 슬라이딩 윈도우를 구현 하는 방법](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
+-   [자동 슬라이딩 윈도우를 구현하는 방법](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
   
--   [분할 된 테이블로 대량 로드](https://msdn.microsoft.com/library/cc966380.aspx)  
+-   [분할된 테이블로 대량 로드](https://msdn.microsoft.com/library/cc966380.aspx)  
   
--   [분할 된 테이블 및 인덱스에서의 향상 된 쿼리 처리](https://msdn.microsoft.com/library/ms345599.aspx)  
+-   [분할된 테이블 및 인덱스에서의 향상된 쿼리 처리](https://msdn.microsoft.com/library/ms345599.aspx)  
   
--   [대규모 관계형 데이터 웨어하우스를 구축 하기 위한 상위 10 가지 모범 사례](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
+-   [대규모 관계형 데이터 웨어하우스를 구축하기 위한 상위 10가지 최선의 방법](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
   
   

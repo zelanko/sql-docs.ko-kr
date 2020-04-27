@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a4dbc20442181ce97b060118094dfa0667803db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011078"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>검색 속성 목록을 사용하여 문서 속성 검색
@@ -30,7 +30,7 @@ ms.locfileid: "66011078"
   
  연결된 [필터](configure-and-manage-filters-for-search.md) (IFilter)에 따라 특정 문서 유형에서 속성 검색이 가능한지 여부가 결정됩니다. 일부 문서 유형의 경우 연결된 IFilter가 문서 본문의 내용뿐만 아니라 해당 문서 유형에 대해 정의된 속성의 일부 또는 전부를 추출합니다. 전체 텍스트 인덱싱 중 IFilter가 추출한 속성에 대해서만 속성 검색을 지원하도록 전체 텍스트 인덱스를 구성할 수 있습니다. 여러 문서 속성을 추출하는 IFilter 중에는 .docx, .xlsx 및 .pptx와 같은 Microsoft Office 문서 유형에 대한 IFilter가 있습니다. 반면에 XML 필터는 속성을 내보내지 않습니다.  
   
-##  <a name="How_FTS_Works_with_search_properties"></a> 전체 텍스트 검색이 검색 속성을 사용하는 방법  
+##  <a name="how-full-text-search-works-with-search-properties"></a><a name="How_FTS_Works_with_search_properties"></a> 전체 텍스트 검색이 검색 속성을 사용하는 방법  
   
 ### <a name="internal-property-ids"></a>내부 속성 ID  
  전체 텍스트 엔진은 특정 검색 목록에서 속성을 고유하게 식별하고 이 검색 속성 목록에 고유한 내부 속성 ID를 등록된 각 속성에 임의로 할당합니다. 따라서 속성이 여러 검색 속성 목록에 추가되면 목록마다 내부 속성 ID가 다를 수가 있습니다.  
@@ -58,16 +58,16 @@ ms.locfileid: "66011078"
   
   
   
-##  <a name="impact"></a> 속성 검색 사용의 영향  
+##  <a name="impact-of-enabling-property-searching"></a><a name="impact"></a> 속성 검색 사용의 영향  
  하나 이상의 속성에 대한 검색을 지원하도록 전체 텍스트 인덱스를 구성하면 검색 속성 목록에 지정한 속성 수와 각 속성의 내용에 따라 인덱스 크기가 어느 정도 커집니다.  
   
  Microsoft Word의 일반적인 인덱싱하도록?, Excel<sup>??</sup>?<sup>및 PowerPoint를 테스트 하</sup> <sup>는 경우</sup> 문서에서는 일반 검색 속성을 인덱싱하는 전체 텍스트 인덱스를 구성 했습니다. 이러한 속성을 인덱싱하면 전체 텍스트 인덱스 크기가 약 5% 커집니다. 대부분의 문서 모음에서는 대략 이 정도로 인덱스 크기가 증가할 것으로 예상됩니다. 하지만 궁극적으로 인덱스 크기는 전체 데이터 크기에 상대적인 지정된 문서 모음에 있는 속성 데이터 크기에 따라 증가할 것입니다.  
   
   
   
-##  <a name="creating"></a> 검색 속성 목록 만들기 및 속성 검색을 사용하도록 설정  
+##  <a name="creating-a-search-property-list-and-enabling-property-search"></a><a name="creating"></a>검색 속성 목록 만들기 및 속성 검색 활성화  
   
-###  <a name="creating_sub"></a> 검색 속성 목록 만들기  
+###  <a name="creating-a-search-property-list"></a><a name="creating_sub"></a> 검색 속성 목록 만들기  
  **Transact-SQL을 사용하여 검색 속성 목록을 만들려면**  
   
  [CREATE SEARCH PROPERTY LIST&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql) 문을 사용하고 목록에 이름을 하나 이상 제공합니다.  
@@ -98,7 +98,7 @@ ms.locfileid: "66011078"
   
  
   
-###  <a name="adding"></a> 검색 속성 목록에 속성 추가  
+###  <a name="adding-properties-to-a-search-property-list"></a><a name="adding"></a>검색 속성 목록에 속성 추가  
  속성 검색을 수행하려면 *검색 속성 목록* 을 만들고 검색 가능한 속성으로 만들 하나 이상의 속성을 지정해야 합니다. 속성을 검색 속성 목록에 추가하면 속성이 해당 목록에 등록됩니다. 속성을 검색 속성 목록에 추가하려면 다음과 같은 값이 있어야 합니다.  
   
 -   속성 집합 GUID  
@@ -132,8 +132,7 @@ ms.locfileid: "66011078"
   
  **Transact-SQL을 사용하여 속성을 검색 속성 목록에 추가하려면**  
   
- 
-  [검색 속성의 속성 집합 GUID 및 속성 정수 ID찾기](/sql/t-sql/statements/alter-search-property-list-transact-sql) 항목에서 설명한 방법 중 하나를 사용하여 가져온 값과 함께 [ALTER SEARCH PROPERTY LIST&#40;Transact-SQL&#41;](find-property-set-guids-and-property-integer-ids-for-search-properties.md) 문을 사용합니다.  
+ [검색 속성의 속성 집합 GUID 및 속성 정수 ID찾기](find-property-set-guids-and-property-integer-ids-for-search-properties.md) 항목에서 설명한 방법 중 하나를 사용하여 가져온 값과 함께 [ALTER SEARCH PROPERTY LIST&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql) 문을 사용합니다.  
   
  다음 예에서는 속성을 검색 속성 목록에 추가할 때 이러한 값을 사용하는 방법을 보여 줍니다.  
   
@@ -146,11 +145,11 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
  **Management Studio에서 속성을 검색 속성 목록에 추가하려면**  
   
- **검색 속성 목록 속성** 대화 상자를 사용하여 검색 속성을 추가하고 제거합니다. 개체 탐색기에서 연결된 데이터베이스의 **스토리지** 노드 아래에서 **검색 속성 목록** 을 찾을 수 있습니다.  
+ **검색 속성 목록 속성** 대화 상자를 사용하여 검색 속성을 추가하고 제거합니다. 개체 탐색기에서 연결된 데이터베이스의 **스토리지** 노드 아래에서 **검색 속성 목록**을 찾을 수 있습니다.  
   
   
   
-###  <a name="associating"></a> 전체 텍스트 인덱스에 검색 속성 목록 연결  
+###  <a name="associating-a-search-property-list-with-a-full-text-index"></a><a name="associating"></a> 전체 텍스트 인덱스에 검색 속성 목록 연결  
  전체 텍스트 인덱스가 검색 속성 목록에 등록된 속성에 대한 속성 검색을 지원하려면 검색 속성 목록을 인덱스와 연결하고 해당 인덱스를 다시 채워야 합니다. 전체 텍스트 인덱스를 다시 채우면 등록된 각 속성의 검색 단어에 대해 속성 관련 인덱스 항목이 만들어집니다.  
   
  전체 텍스트 인덱스가 이 검색 속성 목록에 연결되어 있는 한 전체 텍스트 쿼리는 CONTAINS 조건자의 PROPERTY 옵션을 사용하여 해당 검색 속성 목록에 등록된 속성을 검색합니다.  
@@ -159,15 +158,15 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
  **Transact-SQL을 사용하여 전체 텍스트 인덱스에 검색 속성 목록을 연결하려면**  
   
- [ 절과 함께 ](/sql/t-sql/statements/alter-fulltext-index-transact-sql)ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;`SET SEARCH PROPERTY LIST = <property_list_name>` 문을 사용합니다.  
+ `SET SEARCH PROPERTY LIST = <property_list_name>` 절과 함께 [ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql) 문을 사용합니다.  
   
  **Management Studio를 사용하여 전체 텍스트 인덱스에 검색 속성 목록을 연결하려면**  
   
- **전체 텍스트 인덱스 속성** 대화 상자의 **일반** 페이지에서 **검색 속성 목록** 의 값을 지정합니다.  
+ **전체 텍스트 인덱스 속성** 대화 상자의 **일반** 페이지에서 **검색 속성 목록**의 값을 지정합니다.  
   
   
   
-##  <a name="Ov_CONTAINS_using_PROPERTY"></a> CONTAINS를 사용하여 검색 속성 쿼리  
+##  <a name="querying-search-properties-with-contains"></a><a name="Ov_CONTAINS_using_PROPERTY"></a>CONTAINS를 사용 하 여 검색 속성 쿼리  
  속성 범위 전체 텍스트 쿼리를 위한 기본 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 구문은 다음과 같습니다.  
   
 ```sql  
@@ -189,9 +188,9 @@ GO
   
   
   
-##  <a name="managing"></a> 검색 속성 목록 관리  
+##  <a name="managing-search-property-lists"></a><a name="managing"></a>검색 속성 목록 관리  
   
-###  <a name="viewing"></a> 검색 속성 목록 보기 및 변경  
+###  <a name="viewing-and-changing-a-search-property-list"></a><a name="viewing"></a>검색 속성 목록 보기 및 변경  
  **Transact-SQL을 사용하여 검색 속성 목록을 변경하려면**  
   
  [ALTER SEARCH PROPERTY LIST&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql) 문을 사용하여 검색 속성을 추가 또는 제거합니다.  
@@ -204,15 +203,15 @@ GO
   
 3.  **스토리지**를 확장합니다.  
   
-4.  **검색 속성 목록** 을 확장하여 검색 속성 목록을 표시합니다.  
+4.  **검색 속성 목록**을 확장하여 검색 속성 목록을 표시합니다.  
   
 5.  속성 목록을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-6.  **검색 속성 목록 편집기** 대화 상자에서 속성 표를 사용하여 검색 속성을 추가하거나 제거합니다.  
+6.  ** 속성 목록 편집기** 대화 상자에서 속성 표를 사용하여 검색 속성을 추가하거나 제거합니다.  
   
     1.  문서 속성을 제거하려면 속성 왼쪽에 있는 행 머리글을 클릭하고 Del 키를 누릅니다.  
   
-    2.  문서 속성을 추가하려면 **\*** 오른쪽에 있는 목록 아래쪽에서 빈 행을 클릭하고 새 속성에 대한 값을 입력합니다.  
+    2.  문서 속성을 추가 하려면의 **\*** 오른쪽에 있는 목록 아래쪽에서 빈 행을 클릭 하 고 새 속성의 값을 입력 합니다.  
   
          이러한 값에 대한 자세한 내용은 [검색 속성 목록 편집기](../../database-engine/search-property-list-editor.md)를 참조하십시오. Microsoft에서 정의한 속성의 이러한 값을 가져오는 방법은 [검색 속성의 속성 집합 GUID 및 속성 정수 ID 찾기](find-property-set-guids-and-property-integer-ids-for-search-properties.md)를 참조하세요. ISV(Independent Software Vendor)에서 정의한 속성에 대한 자세한 내용은 해당 공급업체의 설명서를 참조하십시오.  
   
@@ -220,7 +219,7 @@ GO
   
   
   
-###  <a name="deleting"></a> 검색 속성 목록 삭제  
+###  <a name="deleting-a-search-property-list"></a><a name="deleting"></a>검색 속성 목록 삭제  
  데이터베이스의 속성 목록이 전체 텍스트 인덱스에 연결되어 있는 경우에는 해당 속성 목록을 삭제할 수 없습니다.  
   
  **Transact-SQL을 사용하여 검색 속성 목록을 삭제하려면**  
@@ -241,7 +240,7 @@ GO
 
   
 ## <a name="see-also"></a>참고 항목  
- [검색 속성의 속성 집합 GUID 및 속성 정수 ID찾기](find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
+ [검색 속성에 대 한 속성 집합 Guid 및 속성 정수 Id 찾기](find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
  [검색 필터 구성 및 관리](configure-and-manage-filters-for-search.md)  
   
   

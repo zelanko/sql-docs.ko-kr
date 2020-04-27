@@ -14,35 +14,29 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: df04cd5bcb216a716312783aff3b78d03ea01ac1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480141"
 ---
 # <a name="add-a-group-master-data-services"></a>그룹 추가(Master Data Services)
-  
   **의** 그룹 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 목록에 그룹을 추가하여 웹 애플리케이션에 사용 권한을 할당하는 프로세스를 시작합니다. 그룹의 사용자가 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에 액세스할 수 있게 하려면 하나 이상의 기능 영역과 모델 개체에 그룹 권한을 부여해야 합니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
--   
-  **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
+-   **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
 ### <a name="to-add-a-group"></a>그룹을 추가하려면  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **사용자 및 그룹 권한**을 클릭합니다.  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **사용자 및 그룹 권한**을 클릭합니다.  
   
-2.  
-  **사용자** 페이지의 메뉴 모음에서 **그룹 관리**를 클릭합니다.  
+2.  **사용자** 페이지의 메뉴 모음에서 **그룹 관리**를 클릭합니다.  
   
-3.  
-  **그룹 추가**를 클릭합니다.  
+3.  **그룹 추가**를 클릭합니다.  
   
-4.  
-  *domain\group_name* 또는 *computer\group_name*과 같이 Active Directory 도메인 이름이나 서버 컴퓨터 이름과 그룹 이름을 입력합니다.  
+4.  *domain\group_name* 또는 *computer\group_name*과 같이 Active Directory 도메인 이름이나 서버 컴퓨터 이름과 그룹 이름을 입력합니다.  
   
 5.  또는 **이름 확인**을 클릭합니다.  
   
@@ -53,9 +47,9 @@ ms.locfileid: "65480141"
   
 ## <a name="next-steps"></a>다음 단계  
   
--   [MDS(Master Data Services)&#41;&#40;기능 영역 권한 할당](assign-functional-area-permissions-master-data-services.md)  
+-   [기능 영역 권한 할당&#40;Master Data Services&#41;](assign-functional-area-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [보안 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/security-master-data-services.md)  
+ [보안&#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
   
   

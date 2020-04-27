@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 067f14e857addc5f43a0b17d81d554997adbc09f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010438"
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>Transact-SQL을 사용하여 FILESTREAM 데이터 액세스
@@ -25,7 +25,7 @@ ms.locfileid: "66010438"
 > [!NOTE]  
 >  이 항목의 예에서는 [FILESTREAM 사용 데이터베이스 만들기](create-a-filestream-enabled-database.md) 및 [FILESTREAM 데이터 저장용 테이블 만들기](create-a-table-for-storing-filestream-data.md)에서 만든 FILESTREAM 사용 데이터베이스 및 테이블이 필요합니다.  
   
-##  <a name="ins"></a> FILESTREAM 데이터가 들어 있는 행 삽입  
+##  <a name="inserting-a-row-that-contains-filestream-data"></a><a name="ins"></a> FILESTREAM 데이터가 들어 있는 행 삽입  
  FILESTREAM 데이터를 지원하는 테이블에 행을 추가하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 문을 사용합니다. FILESTREAM 열에 데이터를 삽입할 때 NULL 또는 `varbinary(max)` 값을 삽입할 수 있습니다.  
   
 ### <a name="inserting-null"></a>NULL 삽입  
@@ -43,10 +43,7 @@ ms.locfileid: "66010438"
   
  [!code-sql[FILESTREAM#FS_InsertData](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_insertdata)]  
   
- 
-  `Archive`
-  `dbo.Records`
- 테이블의 데이터를 모두 선택하면 결과가 다음 표와 유사하지만 `Id` 열에는 다른 GUID가 포함됩니다.  
+ `Archive``dbo.Records` 테이블의 데이터를 모두 선택하면 결과가 다음 표와 유사하지만 `Id` 열에는 다른 GUID가 포함됩니다.  
   
 |Id|SerialNumber|다시 시작|  
 |--------|------------------|------------|  
@@ -54,22 +51,21 @@ ms.locfileid: "66010438"
 |`F8F5C314-0559-4927-8FA9-1535EE0BDF50`|`2`|`0x`|  
 |`7F680840-B7A4-45D4-8CD5-527C44D35B3F`|`3`|`0x536569736D69632044617461`|  
   
-##  <a name="upd"></a> FILESTREAM 데이터 업데이트  
+##  <a name="updating-filestream-data"></a><a name="upd"></a>FILESTREAM 데이터 업데이트  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 파일 시스템 파일의 데이터를 업데이트할 수 있지만 많은 양의 데이터를 파일로 스트리밍해야 하는 경우에는 이렇게 하지 않는 것이 좋습니다.  
   
  다음 예에서는 파일 레코드에 있는 임의의 텍스트를 `Xray 1`로 바꿉니다.  
   
  [!code-sql[FILESTREAM#FS_UpdateData](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_updatedata)]  
   
-##  <a name="del"></a> FILESTREAM 데이터 삭제  
+##  <a name="deleting-filestream-data"></a><a name="del"></a> FILESTREAM 데이터 삭제  
  FILESTREAM 필드가 들어 있는 행을 삭제하면 해당 내부 파일 시스템 파일도 삭제됩니다. 행과 그 안에 들어 있는 파일을 삭제하는 유일한 방법은 [!INCLUDE[tsql](../../includes/tsql-md.md)] DELETE 문을 사용하는 것입니다.  
   
  다음 예에서는 행과 관련 파일 시스템 파일을 삭제하는 방법을 보여 줍니다.  
   
  [!code-sql[FILESTREAM#FS_DeleteData](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_deletedata)]  
   
- 
-  `dbo.Archive` 테이블의 데이터를 모두 선택하면 해당 행이 삭제되고 관련 파일도 더 이상 사용할 수 없게 됩니다.  
+ `dbo.Archive` 테이블의 데이터를 모두 선택하면 해당 행이 삭제되고 관련 파일도 더 이상 사용할 수 없게 됩니다.  
   
 > [!NOTE]  
 >  기본 파일은 FILESTREAM 가비지 수집기를 통해 제거됩니다.  

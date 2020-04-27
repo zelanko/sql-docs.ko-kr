@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 678a7d6ce075e6a1082856aa7962bb3f6eec522d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489715"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>4단원: MDS에 공급자 데이터 저장
@@ -32,28 +32,21 @@ ms.locfileid: "65489715"
   
  이 단원에서는 다음 작업을 수행합니다.  
   
-1.  
-  **마스터 데이터 관리자 웹 애플리케이션** 을 사용해서 **MDS** 에서 **Suppliers**모델을 만듭니다.  
+1.  **마스터 데이터 관리자 웹 애플리케이션** 을 사용해서 **MDS** 에서 **Suppliers**모델을 만듭니다.  
   
 2.  Excel에서 **Cleansed and Matched Supplier Data.xls** 를 열고 **Excel용 MDS 추가 기능** 을 사용하여 **Supplier** 라는 엔터티를 만들고 데이터를 MDS에 업로드합니다.  
   
-3.  
-  **마스터 데이터 관리자**를 사용해서 MDS에 데이터가 생성되었는지 확인합니다.  
+3.  **마스터 데이터 관리자**를 사용해서 MDS에 데이터가 생성되었는지 확인합니다.  
   
-4.  
-  **State** 라는 엔터티를 만들고 **State** 엔터티에 따라 **Supplier** 엔터티의 **State** 특성을 도메인 기반 특성으로 업데이트합니다. 이 작업은 모두 **Excel용 MDS 추가 기능**을 사용하여 수행합니다.  
+4.  **State** 라는 엔터티를 만들고 **State** 엔터티에 따라 **Supplier** 엔터티의 **State** 특성을 도메인 기반 특성으로 업데이트합니다. 이 작업은 모두 **Excel용 MDS 추가 기능**을 사용하여 수행합니다.  
   
-5.  
-  **마스터 데이터 관리자** 를 사용해서 도메인 기반 특성이 생성되었는지 확인하고 **State** 엔터티의 **Name** 특성에 대한 값을 업데이트합니다.  
+5.  **마스터 데이터 관리자** 를 사용해서 도메인 기반 특성이 생성되었는지 확인하고 **State** 엔터티의 **Name** 특성에 대한 값을 업데이트합니다.  
   
-6.  
-  **Excel** 에서 **마스터 데이터 관리자**를 사용하여 업데이트한 내용을 확인합니다.  
+6.  **Excel** 에서 **마스터 데이터 관리자**를 사용하여 업데이트한 내용을 확인합니다.  
   
-7.  
-  **마스터 데이터 관리자** 를 사용해서 **State** 엔터티의 값을 **Excel**에 로드하고, 값을 추가하고, 추가된 내용을 확인합니다.  
+7.  **마스터 데이터 관리자** 를 사용해서 **State** 엔터티의 값을 **Excel**에 로드하고, 값을 추가하고, 추가된 내용을 확인합니다.  
   
-8.  
-  **마스터 데이터 관리자** 를 사용해서 **Supplier** 엔터티와 **State**엔터티 사이의 도메인 기반 특성 관계를 사용하여 파생 계층을 만들고 사용합니다(Supplier 엔터티의 State 특성은 State 엔터티 유형임).  
+8.  **마스터 데이터 관리자** 를 사용해서 **Supplier** 엔터티와 **State**엔터티 사이의 도메인 기반 특성 관계를 사용하여 파생 계층을 만들고 사용합니다(Supplier 엔터티의 State 특성은 State 엔터티 유형임).  
   
 ## <a name="next-step"></a>다음 단계  
  [태스크 1: 마스터 데이터 관리자를 사용하여 공급자 모델 만들기](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  

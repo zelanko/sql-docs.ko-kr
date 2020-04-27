@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b5b12aa1456f7f4009f48a8c8609f296dfa4b27d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484329"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>.dqs 파일로 도메인 내보내기
@@ -26,36 +26,32 @@ ms.locfileid: "65484329"
   
  내보내기 프로세스에서 만든 .dqs 데이터 파일은 암호화되므로 내용을 볼 수 없습니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 조건  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
  도메인을 .dqs 데이터 파일로 내보내려면 단일 도메인 또는 여러 개의 단일 도메인이 포함된 복합 도메인을 만들고 선택해야 합니다. 기술 자료를 내보낼 .dqs 파일은 자동으로 생성되므로 필요하지 않습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  도메인을 .dqs 데이터 파일로 내보내려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="Export"></a>도메인을 dqs 파일로 내보내기  
+##  <a name="export-a-domain-to-a-dqs-file"></a><a name="Export"></a>도메인을 dqs 파일로 내보내기  
  모든 도메인 관리 페이지에서 내보낼 수 있습니다. 내보내기 명령은 사용자 인터페이스의 컨트롤과 도메인 목록 창의 상황에 맞는 메뉴에 있는 명령에서 사용할 수 있습니다.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 응용 프로그램을 실행](../../2014/data-quality-services/run-the-data-quality-client-application.md)합니다.  
   
-2.  
-  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면의 도메인 관리 작업에서 기술 자료를 엽니다.  
+2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면의 도메인 관리 작업에서 기술 자료를 엽니다.  
   
-3.  
-  **도메인 관리 페이지** (임의의 탭이 선택되어 있음)의 **도메인** 목록에서 단일 도메인 또는 복합 도메인을 선택합니다.  
+3.  **도메인 관리 페이지** (임의의 탭이 선택되어 있음)의 **도메인** 목록에서 단일 도메인 또는 복합 도메인을 선택합니다.  
   
 4.  도메인 목록 위의 **기술 자료 데이터 내보내기** 아이콘을 클릭한 다음 **도메인 내보내기**를 클릭합니다. 또는 **도메인** 목록에서 도메인을 마우스 오른쪽 단추를 클릭하고 **내보내기**를 가리킨 다음 **도메인 내보내기**를 클릭할 수도 있습니다.  
   
-5.  
-  **데이터 파일로 내보내기** 대화 상자에서 파일을 저장할 폴더로 이동하여 파일의 이름을 지정하거나 기본 이름을 유지한 후 **다른 이름으로 저장\* 형식으로 **DQS 데이터 파일(**.dqs)** 을 지정하고 **저장**을 클릭합니다.  
+5.  **데이터 파일로 내보내기** 대화 상자에서 파일을 저장할 폴더로 이동하여 파일의 이름을 지정하거나 기본 이름을 유지한 후 **다른 이름으로 저장** 형식으로 **DQS 데이터 파일(\*.dqs)** 을 지정하고 **저장**을 클릭합니다.  
   
-6.  
-  **도메인 내보내기** 대화 상자에서 상태 줄에 내보내기가 완료되었다고 표시되는지 확인합니다. **확인**을 클릭합니다.  
+6.  **도메인 내보내기** 대화 상자에서 상태 줄에 내보내기가 완료되었다고 표시되는지 확인합니다. **확인**을 클릭합니다.  
   
-##  <a name="FollowUp"></a>후속 작업: 도메인을 dqs 파일로 내보낸 후  
+##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a>후속 작업: 도메인을 dqs 파일로 내보낸 후  
  도메인을 .dqs 파일로 내보낸 후 다른 기술 자료로 해당 도메인을 가져올 수 있습니다.  
   
   

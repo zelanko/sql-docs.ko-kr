@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 153a88bcb31f65d4e6aff007cfbee7d1f7afc6df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013726"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>sql:encode를 사용하여 BLOB 데이터에 대한 URL 참조 요청(SQLXML 4.0)
@@ -31,15 +31,11 @@ ms.locfileid: "66013726"
   
  나중에 이진 형식으로 BLOB 데이터를 검색하는 데 사용할 수 있는 데이터 참조(URI)를 반환하려는 경우 `sql:encode` 주석을 지정합니다. 단순 유형의 특성이나 요소에 `sql:encode`를 지정할 수 있습니다.  
   
- 필드 값 대신 필드에 대한 URL이 반환되도록 하려면 `sql:encode` 주석을 지정합니다. 
-  `sql:encode`는 기본 키를 사용하여 URL에 단일 선택을 생성합니다. 
-  `sql:key-fields` 주석을 사용하여 기본 키를 지정할 수 있습니다.  
+ 필드 값 대신 필드에 대한 URL이 반환되도록 하려면 `sql:encode` 주석을 지정합니다. `sql:encode`는 기본 키를 사용하여 URL에 단일 선택을 생성합니다. `sql:key-fields` 주석을 사용하여 기본 키를 지정할 수 있습니다.  
   
- 
-  `sql:encode` 주석에 "url" 또는 "default" 값을 할당할 수 있습니다. "default" 값은 Base 64 인코딩 형식으로 데이터를 반환합니다.  
+ `sql:encode` 주석에 "url" 또는 "default" 값을 할당할 수 있습니다. "default" 값은 Base 64 인코딩 형식으로 데이터를 반환합니다.  
   
- 
-  `sql:encode`나 ID, IDREF, IDREFS, NMTOKEN 또는 NMTOKENS 특성 유형에는 `sql:use-cdata` 주석을 사용할 수 없습니다. XSD **fixed** 특성에도 사용할 수 없습니다.  
+ `sql:encode`나 ID, IDREF, IDREFS, NMTOKEN 또는 NMTOKENS 특성 유형에는 `sql:use-cdata` 주석을 사용할 수 없습니다. XSD **fixed** 특성에도 사용할 수 없습니다.  
   
 > [!NOTE]  
 >  BLOB 유형의 열은 키 또는 외래 키의 일부로 사용할 수 없습니다.  

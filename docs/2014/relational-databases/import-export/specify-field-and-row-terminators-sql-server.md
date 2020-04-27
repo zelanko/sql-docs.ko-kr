@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f00a8330673dc15eed57f770635a251d5aa97e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011851"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>필드 및 행 종결자 지정(SQL Server)
@@ -65,8 +65,7 @@ ms.locfileid: "66011851"
   
 -   서식 파일을 사용하지 않을 경우 다음과 같은 대체 방법이 있습니다.  
   
-    -   
-  **-t** 스위치를 사용하여 행의 마지막 필드를 제외한 모든 필드에 행 종결자를 지정하고 **-r** 스위치를 사용하여 행 종결자를 지정합니다.  
+    -   **-t** 스위치를 사용하여 행의 마지막 필드를 제외한 모든 필드에 행 종결자를 지정하고 **-r** 스위치를 사용하여 행 종결자를 지정합니다.  
   
     -   필드 종결자를 탭 문자 \t로 설정하는 **-t** 스위치 없이 문자 형식 스위치( **-c**또는 **-w** )를 사용합니다. 이 방식은 **-t**\t를 지정하는 것과 같습니다.  
   
@@ -96,22 +95,18 @@ ms.locfileid: "66011851"
 ### <a name="examples"></a>예  
  이 예에서는 `AdventureWorks``HumanResources.Department` 테이블의 데이터를 문자 형식을 사용하는 `Department-c-t.txt` 데이터 파일로 대량으로 내보내며 쉼표를 필드 종결자로, 줄 바꿈 문자(\n)를 행 종결자로 사용합니다.  
   
- 
-  **bcp** 명령에는 다음 스위치가 포함됩니다.  
+ **bcp** 명령에는 다음 스위치가 포함됩니다.  
   
 |스위치|Description|  
 |------------|-----------------|  
 |**-c**|데이터 필드가 데이터 문자로 로드되도록 지정합니다.|  
-|**-t**`,`|쉼표(,)를 필드 종결자로 지정합니다.|  
+|**-t** `,`|쉼표(,)를 필드 종결자로 지정합니다.|  
 |**-r** \n|행 종결자를 줄 바꿈 문자로 지정합니다. 이것은 기본 행 종결자이므로 이를 지정하는 것은 선택 사항입니다.|  
-|**-T**|
-  **bcp** 유틸리티가 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 연결되도록 지정합니다. 
-  **-T** 를 지정하지 않은 경우 성공적으로 로그인하려면 **-U** 와 **-P** 를 지정해야 합니다.|  
+|**-T**|**bcp** 유틸리티가 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 연결되도록 지정합니다. **-T** 를 지정하지 않은 경우 성공적으로 로그인하려면 **-U** 와 **-P** 를 지정해야 합니다.|  
   
  자세한 내용은 [bcp Utility](../../tools/bcp-utility.md)를 참조하세요.  
   
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 명령 프롬프트에 다음을 입력합니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 명령 프롬프트에 다음을 입력합니다.  
   
 ```  
 bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, -r \n -T  
@@ -120,10 +115,9 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
  이렇게 하면 각각 4개 필드로 된 16개의 레코드가 포함된 `Department-c-t.txt`가 생성됩니다. 필드는 열로 구분됩니다.  
   
 ## <a name="specifying-terminators-for-bulk-import"></a>대량 가져오기를 위한 종결자 지정  
- 
-  `char` 또는 `nchar` 데이터를 대량으로 가져올 때 대량 가져오기 명령이 데이터 파일에 사용된 종결자를 인식해야 합니다. 종결자 지정 방법은 대량 가져오기 명령에 따라 다르며 다음과 같이 지정합니다.  
+ `char` 또는 `nchar` 데이터를 대량으로 가져올 때 대량 가져오기 명령이 데이터 파일에 사용된 종결자를 인식해야 합니다. 종결자 지정 방법은 대량 가져오기 명령에 따라 다르며 다음과 같이 지정합니다.  
   
--   **틀린**  
+-   **bcp**  
   
      가져오기 작업을 위해 종결자를 지정하는 구문은 내보내기 작업을 위해 종결자를 지정하는 구문과 같습니다. 자세한 내용은 이 항목의 앞부분에 나오는 "대량 내보내기를 위한 종결자 지정"을 참조하십시오.  
   
@@ -133,20 +127,19 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
     |한정자|Description|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR **='*`field_terminator`*'**|문자 및 유니코드 문자 데이터 파일에 사용할 필드 종결자를 지정합니다.<br /><br /> 기본값은 \t(탭 문자)입니다.|  
-    |ROWTERMINATOR **='*`row_terminator`*'**|문자 및 유니코드 문자 데이터 파일에 사용할 행 종결자를 지정합니다.<br /><br /> 기본값은 \n(줄 바꿈 문자)입니다.|  
+    |FIELDTERMINATOR **= '*`field_terminator`*'**|문자 및 유니코드 문자 데이터 파일에 사용할 필드 종결자를 지정합니다.<br /><br /> 기본값은 \t(탭 문자)입니다.|  
+    |ROWTERMINATOR **= '*`row_terminator`*'**|문자 및 유니코드 문자 데이터 파일에 사용할 행 종결자를 지정합니다.<br /><br /> 기본값은 \n(줄 바꿈 문자)입니다.|  
   
      자세한 내용은 [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)를 참조하세요.  
   
--   INSERT ... SELECT * FROM OPENROWSET(BULK...)  
+-   INSERT ... 선택 * OPENROWSET (BULK)에서  
   
      OPENROWSET 대량 행 집합 공급자의 경우 종결자는 서식 파일에서만 지정할 수 있습니다(큰 개체 데이터 형식 이외의 형식에 필요). 문자 데이터 파일이 기본 종결자 이외의 종결자를 사용하면 이를 서식 파일에 정의해야 합니다. 자세한 내용은 [서식 파일 만들기&#40;SQL Server&#41;](create-a-format-file-sql-server.md) 및 [서식 파일을 사용하여 데이터 대량 가져오기&#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)를 참조하세요.  
   
      OPENROWSET BULK 절에 대한 자세한 내용은 [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)를 사용해 표시할 수 있습니다.  
   
 ### <a name="examples"></a>예  
- 이 섹션의 예에서는 앞의 예에서 생성한 `Department-c-t.txt` 데이터 파일의 문자 데이터를 `myDepartment` 예제 데이터베이스의 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 테이블로 대량으로 가져옵니다. 예를 실행하려면 이 테이블을 만들어야 합니다. 
-  **dbo** 스키마 아래에 이 테이블을 만들려면 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음 코드를 실행합니다.  
+ 이 섹션의 예에서는 앞의 예에서 생성한 `Department-c-t.txt` 데이터 파일의 문자 데이터를 `myDepartment` 예제 데이터베이스의 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 테이블로 대량으로 가져옵니다. 예를 실행하려면 이 테이블을 만들어야 합니다. **dbo** 스키마 아래에 이 테이블을 만들려면 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음 코드를 실행합니다.  
   
 ```  
 USE AdventureWorks;  
@@ -177,11 +170,10 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 |옵션|attribute|  
 |------------|---------------|  
 |DATAFILETYPE **= '`char`'**|데이터 필드가 데이터 문자로 로드되도록 지정합니다.|  
-|FIELDTERMINATOR **= '**`,`**'**|쉼표(`,`)를 필드 종결자로 지정합니다.|  
-|ROWTERMINATOR **= '**`\n`**'**|행 종결자를 줄 바꿈 문자로 지정합니다.|  
+|FIELDTERMINATOR **='** `,` **'**|쉼표(`,`)를 필드 종결자로 지정합니다.|  
+|ROWTERMINATOR **='** `\n` **'**|행 종결자를 줄 바꿈 문자로 지정합니다.|  
   
- 
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음 코드를 실행합니다.  
+ [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음 코드를 실행합니다.  
   
 ```  
 USE AdventureWorks;  
@@ -199,8 +191,8 @@ GO
  [bcp 유틸리티](../../tools/bcp-utility.md)   
  [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [Bcp &#40;SQL Server를 사용 하 여 필드 길이를 지정&#41;](specify-field-length-by-using-bcp-sql-server.md)   
- [Bcp &#40;SQL Server를 사용 하 여 데이터 파일에 접두사 길이를 지정&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
- [Bcp &#40;SQL Server를 사용 하 여 File Storage 유형을 지정&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+ [bcp를 사용하여 필드 길이 지정&#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
+ [bcp를 사용하여 데이터 파일에 접두사 길이 지정&#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
+ [bcp를 사용하여 파일 스토리지 유형 지정&#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   

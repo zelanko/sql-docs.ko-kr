@@ -15,55 +15,47 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c88e5ac59730eede7c252261d7509ee77de9cd6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483599"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>마법사를 사용하여 모델 배포 패키지 만들기
-  
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 모델 배포 마법사를 사용하여 모델 개체로만 패키지를 만들 수 있습니다. 패키지에 데이터를 포함해야 하는 경우 [MDSModelDeploy를 사용하여 모델 배포 패키지 만들기](../../2014/master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)를 참조하세요.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
--   
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션에서는 사용자에게 **시스템 관리** 기능 영역에 대한 액세스 권한이 있어야 합니다.  
+-   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션에서는 사용자에게 **시스템 관리** 기능 영역에 대한 액세스 권한이 있어야 합니다.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자 &#40;MDS(Master Data Services)&#41;](administrators-master-data-services.md)를 참조 하세요.  
   
 -   패키지를 만들 모델이 있어야 합니다. 자세한 내용은 [모델 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)를 참조하세요.  
   
 ### <a name="to-create-a-model-deployment-package"></a>모델 배포 패키지를 만들려면  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **시스템 관리**를 클릭합니다.  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **시스템 관리**를 클릭합니다.  
   
-2.  
-  **모델 뷰** 페이지의 메뉴 모음에서 **시스템** 을 가리키고 **배포**를 클릭합니다.  
+2.  **모델 뷰** 페이지의 메뉴 모음에서 **시스템** 을 가리키고 **배포**를 클릭합니다.  
   
-3.  
-  **모델 배포 마법사**에서 **만들기**를 클릭합니다.  
+3.  **모델 배포 마법사**에서 **만들기**를 클릭합니다.  
   
-4.  
-  **패키지 만들기** 페이지의 **모델** 목록에서 모델을 선택합니다.  
+4.  **패키지 만들기** 페이지의 **모델** 목록에서 모델을 선택합니다.  
   
 5.  **다음**을 클릭합니다.  
   
-6.  
-  **다운로드**를  
+6.  **다운로드**를 클릭합니다.  
   
 7.  파일을 저장합니다.  
   
-8.  
-  **닫기**를 클릭하여 마법사를 닫습니다.  
+8.  **닫기**를 클릭하여 마법사를 닫습니다.  
   
 ## <a name="next-steps"></a>다음 단계  
   
 -   [마법사를 사용하여 모델 배포 패키지 배포](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [모델 &#40;MDS(Master Data Services)&#41;배포](../../2014/master-data-services/deploying-models-master-data-services.md)  
+ [모델 배포&#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

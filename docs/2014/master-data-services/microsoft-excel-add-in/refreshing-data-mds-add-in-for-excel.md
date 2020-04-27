@@ -11,16 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b5f1297927510fe6f0f5b15ac185316687326ce6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482741"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>데이터 새로 고침(Excel용 MDS 추가 기능)
-  
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]
-  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 데이터를 새로 고쳐 새 워크시트를 열지 않고도 MDS 리포지토리에서 최신 정보를 가져올 수 있습니다. 모든 셀이나 선택한 셀을 새로 고칠 수 있습니다. 이 방법은 사용자 지정 수식이나 MDS에서 관리되지 않는 기타 데이터가 포함된 열을 삽입했으며 이를 보존하려는 경우에 유용하게 사용할 수 있습니다.  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 데이터를 새로 고쳐 새 워크시트를 열지 않고도 MDS 리포지토리에서 최신 정보를 가져올 수 있습니다. 모든 셀이나 선택한 셀을 새로 고칠 수 있습니다. 이 방법은 사용자 지정 수식이나 MDS에서 관리되지 않는 기타 데이터가 포함된 열을 삽입했으며 이를 보존하려는 경우에 유용하게 사용할 수 있습니다.  
   
 ## <a name="when-you-can-refresh-mds-managed-data"></a>MDS 관리 데이터를 새로 고칠 수 있는 경우  
  활성 워크시트에 MDS 관리 데이터가 이미 포함된 경우 활성 워크시트에서 MDS 관리 데이터를 새로 고칠 수 있습니다. 워크시트에 멤버를 추가했거나 특성 값을 변경한 경우 변경 내용을 새로 고치려면 먼저 변경 내용을 게시해야 합니다.  
@@ -29,8 +27,7 @@ ms.locfileid: "65482741"
  모든 셀을 새로 고칠 수도 있고 선택한 셀만 새로 고칠 수도 있습니다. 연속된 셀을 선택해야 합니다. 연속된 셀 집합을 선택하면 서버에 현재 저장된 값을 표시하도록 해당 집합의 모든 MDS 관리 셀이 업데이트됩니다. MDS로 관리되지 않는 변경되지 않은 행과 열은 영향을 받지 않습니다.  
   
 ## <a name="what-happens-when-you-refresh-mds-managed-data"></a>MDS 관리 데이터를 새로 고치는 경우 수행되는 작업  
- 
-  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 데이터를 새로 고칠 때 시트의 MDS 관리 데이터에 대해 수행되는 작업은 마지막으로 데이터를 로드한 후 MDS 리포지토리에서 변경된 내용에 따라 달라집니다.  
+ [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 데이터를 새로 고칠 때 시트의 MDS 관리 데이터에 대해 수행되는 작업은 마지막으로 데이터를 로드한 후 MDS 리포지토리에서 변경된 내용에 따라 달라집니다.  
   
 -   새 멤버가 저장소에 추가된 경우 워크시트의 끝에 추가되고 녹색으로 강조 표시됩니다.  
   
@@ -49,13 +46,12 @@ ms.locfileid: "65482741"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스에 대한 연결을 만듭니다.|[MDS 저장소 &#40;Excel용 MDS 추가 기능에 연결&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
+|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스에 대한 연결을 만듭니다.|[MDS 리포지토리에 연결&#40;Excel용 MDS 추가 기능&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
 |MDS 데이터를 Excel로 로드합니다.|[MDS에서 Excel로 데이터 로드](export-data-to-excel-from-master-data-services.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   
--   [연결 &#40;Excel용 MDS 추가 기능&#41;](connections-mds-add-in-for-excel.md)  
+-   [연결&#40;Excel용 MDS 추가 기능&#41;](connections-mds-add-in-for-excel.md)  
   
 -   [데이터 &#40;Excel용 MDS 추가 기능&#41;로드](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   

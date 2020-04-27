@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0db2a84b4be80fffec0f05aed11f39a3bcea7db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63287356"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>중첩 AUTO 모드 쿼리를 사용하여 형제 생성
@@ -140,13 +140,11 @@ FOR XML AUTO, TYPE
 </Sales.SalesOrderHeader>  
 ```  
   
- 
-  `TYPE` 지시어는 쿼리 결과를 `xml` 유형으로 반환하기 때문에 여러 `xml` 데이터 형식 메서드를 사용하여 결과 XML을 쿼리할 수 있습니다. 자세한 내용은 [xml 데이터 형식 메서드](/sql/t-sql/xml/xml-data-type-methods)를 참조하십시오. 다음 쿼리에서는 아래 사항을 유의하십시오.  
+ `TYPE` 지시어는 쿼리 결과를 `xml` 유형으로 반환하기 때문에 여러 `xml` 데이터 형식 메서드를 사용하여 결과 XML을 쿼리할 수 있습니다. 자세한 내용은 [xml 데이터 형식 메서드](/sql/t-sql/xml/xml-data-type-methods)를 참조하십시오. 다음 쿼리에서는 아래 사항을 유의하십시오.  
   
 -   이전 쿼리가 `FROM` 절에 추가되었습니다. 쿼리 결과는 테이블로 반환됩니다. 추가된 `XmlCol` 별칭에 유의하십시오.  
   
--   `SELECT` 절은 `XmlCol` 절에 반환된 `FROM` 에 대해 XQuery를 지정합니다. 
-  `query()` 데이터 형식의 `xml` 메서드는 XQuery를 지정하는 데 사용됩니다. 자세한 내용은 [query&#40;&#41; 메서드&#40;xml 데이터 형식&#41;](/sql/t-sql/xml/query-method-xml-data-type)를 참조하세요.  
+-   `SELECT` 절은 `XmlCol` 절에 반환된 `FROM` 에 대해 XQuery를 지정합니다. `query()` 데이터 형식의 `xml` 메서드는 XQuery를 지정하는 데 사용됩니다. 자세한 내용은 [query&#40;&#41; 메서드&#40;xml 데이터 형식&#41;](/sql/t-sql/xml/query-method-xml-data-type)를 참조하세요.  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  

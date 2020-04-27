@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d257b6eee1fb3adc0ba611f58a1d5eea5adf3f86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013389"
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>XML 대량 로드 소개(SQLXML 4.0)
@@ -40,8 +40,7 @@ ms.locfileid: "66013389"
   
 -   주석이 추가된 XSD 및 XDR 스키마. 주석이 추가 된 XSD 스키마에 대 한 자세한 내용은 주석이 추가 된 [Xsd 스키마 &#40;SQLXML 4.0&#41;를 ](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)참조 하세요. 주석이 추가 된 XDR 스키마에 대 한 자세한 내용은 [SQLXML 4.0&#41;에서 사용 되지 &#40;주석이 추가 된 Xdr 스키마 ](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)를 참조 하세요.  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] BULK INSERT 문, bcp 유틸리티와 같은 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 대량 삽입 메커니즘. 자세한 내용은 [BULK INSERT &#40;transact-sql&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 및 [bcp 유틸리티](../../../tools/bcp-utility.md)를 참조 하세요.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] BULK INSERT 문, bcp 유틸리티와 같은 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 대량 삽입 메커니즘. 자세한 내용은 [BULK INSERT &#40;transact-sql&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 및 [bcp 유틸리티](../../../tools/bcp-utility.md)를 참조 하세요.  
   
 ## <a name="streaming-of-xml-data"></a>XML 데이터 스트리밍  
  원본 XML 문서가 클 수 있으므로 대량 로드 처리를 위해 전체 문서를 메모리로 읽어 오지는 않습니다. 대신 XML 대량 로드에서 XML 데이터를 스트림으로 해석하고 읽습니다. 유틸리티는 데이터를 읽는 동안 데이터베이스 테이블을 식별하고, XML 데이터 원본에서 적절한 레코드를 생성한 다음 삽입을 위해 해당 레코드를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]로 보냅니다.  

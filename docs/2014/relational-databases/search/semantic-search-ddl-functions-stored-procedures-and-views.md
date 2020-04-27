@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ee5cf7136739b012615121e00d8b8d3ed7c7c6ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011041"
 ---
 # <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>의미 체계 검색 DDL, 함수, 저장 프로시저 및 뷰
@@ -24,14 +24,14 @@ ms.locfileid: "66011041"
   
  전체 텍스트 검색을 지원하는 문과 데이터베이스 개체의 목록은 [전체 텍스트 검색 DDL, 함수, 저장 프로시저 및 뷰](../views/views.md)를 참조하세요.  
   
-##  <a name="ddl"></a> Transact-SQL DDL(데이터 정의 언어) 문  
+##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a>Transact-sql DDL (데이터 정의 언어) 문  
   
 |Object|추가 정보|  
 |------------|----------------------|  
 |[ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)|[테이블 및 열에 대한 의미 체계 검색 사용](enable-semantic-search-on-tables-and-columns.md)|  
 |[CREATE FULLTEXT INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)|[테이블 및 열에 대한 의미 체계 검색 사용](enable-semantic-search-on-tables-and-columns.md)|  
   
-##  <a name="func"></a> 시스템 함수  
+##  <a name="system-functions"></a><a name="func"></a> 시스템 함수  
   
 |Object|추가 정보|  
 |------------|----------------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "66011041"
 |[semanticsimilaritydetailstable&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql)|[의미 체계 검색을 사용하여 유사하거나 관련된 문서 찾기](find-similar-and-related-documents-with-semantic-search.md)|  
 |[semanticsimilaritytable&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql)|[의미 체계 검색을 사용하여 유사하거나 관련된 문서 찾기](find-similar-and-related-documents-with-semantic-search.md)|  
   
-##  <a name="meta"></a> 시스템 메타데이터 함수  
+##  <a name="system-metadata-functions"></a><a name="meta"></a> 시스템 메타데이터 함수  
   
 |Object|추가 정보|  
 |------------|----------------------|  
@@ -50,14 +50,14 @@ ms.locfileid: "66011041"
 |[OBJECTPROPERTYEX&#40;Transact-SQL&#41;](/sql/t-sql/functions/objectproperty-transact-sql)|[테이블 및 열에 대한 의미 체계 검색 사용](enable-semantic-search-on-tables-and-columns.md)|  
 |[SERVERPROPERTY&#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)|[의미 체계 검색 설치 및 구성](install-and-configure-semantic-search.md)|  
   
-##  <a name="sproc"></a> 시스템 저장 프로시저  
+##  <a name="system-stored-procedures"></a><a name="sproc"></a> 시스템 저장 프로시저  
   
 |Object|추가 정보|  
 |------------|----------------------|  
 |[sp_fulltext_semantic_register_language_statistics_db&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql)|[의미 체계 검색 설치 및 구성](install-and-configure-semantic-search.md)|  
 |[sp_fulltext_semantic_unregister_language_statistics_db&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql)|[의미 체계 검색 설치 및 구성](install-and-configure-semantic-search.md)|  
   
-##  <a name="cv"></a> 시스템 뷰 - 카탈로그 뷰  
+##  <a name="system-views---catalog-views"></a><a name="cv"></a>시스템 뷰-카탈로그 뷰  
   
 |Object|추가 정보|  
 |------------|----------------------|  
@@ -65,7 +65,7 @@ ms.locfileid: "66011041"
 |[sys.fulltext_semantic_language_statistics_database&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql)|[의미 체계 검색 설치 및 구성](install-and-configure-semantic-search.md)|  
 |[sys.fulltext_semantic_languages&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql)|[의미 체계 검색 설치 및 구성](install-and-configure-semantic-search.md)|  
   
-##  <a name="dmv"></a> 시스템 뷰 - 동적 관리 뷰  
+##  <a name="system-views---dynamic-management-views"></a><a name="dmv"></a> 시스템 뷰 - 동적 관리 뷰  
   
 |Object|추가 정보|  
 |------------|----------------------|  

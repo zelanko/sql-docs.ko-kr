@@ -14,19 +14,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab658be26dc8ccbdd4e760d0b1bc835ace3b2c38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011667"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
   다른 프로그램에서 사용할 텍스트 파일로 데이터를 대량으로 내보내거나 다른 프로그램에서 생성한 텍스트 파일에서 데이터를 대량으로 가져오는 경우 문자 형식을 사용하는 것이 좋습니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 및 유니코드 문자 데이터는 포함하지만 확장 문자 또는 DBCS(더블바이트 문자 집합) 문자는 포함하지 않는 데이터 파일 간에 데이터를 대량 전송하는 경우에는 유니코드 문자 형식을 사용하세요. 자세한 내용은 [유니코드 문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)를 참조하세요.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 및 유니코드 문자 데이터는 포함하지만 확장 문자 또는 DBCS(더블바이트 문자 집합) 문자는 포함하지 않는 데이터 파일 간에 데이터를 대량 전송하는 경우에는 유니코드 문자 형식을 사용하세요. 자세한 내용은 [유니코드 문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)를 참조하세요.  
   
  문자 형식은 모든 열에 문자 데이터 형식을 사용합니다. 스프레드시트 등의 다른 프로그램에서 데이터를 사용하거나 Oracle 등의 다른 데이터베이스의 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 복사할 때는 문자 형식으로 정보를 저장하십시오.  
   
@@ -44,9 +42,7 @@ ms.locfileid: "66011667"
   
 -   변환 작업 중에 확장 문자가 손실되는 것을 방지하려면 유니코드 문자 형식을 사용하거나 코드 페이지를 지정하십시오.  
   
--   문자 서식 파일로 저장되는 모든 `sql_variant` 데이터는 메타데이터 없이 저장됩니다. 각 데이터 값은 암시적 데이터 변환 규칙에 따라 `char`로 변환되며 
-  `sql_variant` 열로 데이터를 가져오는 경우 `char`로 변환됩니다. 
-  `sql_variant` 이외의 데이터 형식으로 열에 가져오는 경우 해당 데이터는 `char`에서 암시적 변환을 거칩니다. 데이터 변환에 대한 자세한 내용은 [데이터 형식 변환&#40;데이터베이스 엔진&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine)을 참조하세요.  
+-   문자 서식 파일로 저장되는 모든 `sql_variant` 데이터는 메타데이터 없이 저장됩니다. 각 데이터 값은 암시적 데이터 변환 규칙에 따라 `char`로 변환되며 `sql_variant` 열로 데이터를 가져오는 경우 `char`로 변환됩니다. `sql_variant` 이외의 데이터 형식으로 열에 가져오는 경우 해당 데이터는 `char`에서 암시적 변환을 거칩니다. 데이터 변환에 대한 자세한 내용은 [데이터 형식 변환&#40;데이터베이스 엔진&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine)을 참조하세요.  
   
 -   **Bcp** 유틸리티는 소수점 `money` 뒤에 네 자리 숫자를 사용 하 고 쉼표 구분 기호와 같은 숫자 구분 기호를 사용 하지 않고 값을 문자 형식 데이터 파일로 내보냅니다. 예를 들어 1,234,567.123456이라는 값을 포함하는 `money` 열을 데이터 파일로 대량 내보내면 1234567.1235라는 문자열이 됩니다.  
   
@@ -55,10 +51,10 @@ ms.locfileid: "66011667"
   
  다음 명령줄 옵션으로 문자 형식을 사용할 수 있습니다.  
   
-|명령|옵션|Description|  
+|명령|옵션|설명|  
 |-------------|------------|-----------------|  
-|**틀린**|**-c**|**Bcp** 유틸리티가 문자 데이터를 사용 하도록 합니다. <sup>1</sup>|  
-|BULK INSERT|DATAFILETYPE **= ' char '**|데이터를 대량 가져올 때 문자 형식을 사용합니다.|  
+|**bcp**|**-c**|**Bcp** 유틸리티가 문자 데이터를 사용 하도록 합니다. <sup>1</sup>|  
+|BULK INSERT|DATAFILETYPE **='char'**|데이터를 대량 가져올 때 문자 형식을 사용합니다.|  
   
  <sup>1</sup> 문자 (**-c**) 데이터를 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트와 호환 되는 형식으로 로드 하려면 **-V** 스위치를 사용 합니다. 자세한 내용은 [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)를 참조하세요.  
   
@@ -101,13 +97,10 @@ SELECT Col1,Col2,Col3 FROM myTestCharData
 |한정자|Description|  
 |----------------|-----------------|  
 |**-c**|문자 형식을 지정합니다.|  
-|**-t**`,`|쉼표(`,`)를 필드 종결자로 지정합니다.<br /><br /> 참고: 기본 필드 종결자는 탭 문자(\t)입니다. 자세한 내용은 [필드 및 행 종결자 지정&#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)을 참조하세요.|  
-|**-T**|
-  **bcp** 유틸리티가 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 연결되도록 지정합니다. 
-  **-T** 를 지정하지 않은 경우 성공적으로 로그인하려면 **-U** 와 **-P** 를 지정해야 합니다.|  
+|**-t** `,`|쉼표(`,`)를 필드 종결자로 지정합니다.<br /><br /> 참고: 기본 필드 종결자는 탭 문자(\t)입니다. 자세한 내용은 [필드 및 행 종결자 지정&#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)을 참조하세요.|  
+|**-T**|**bcp** 유틸리티가 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 연결되도록 지정합니다. **-T** 를 지정하지 않은 경우 성공적으로 로그인하려면 **-U** 와 **-P** 를 지정해야 합니다.|  
   
- 다음 예에서는 `myTestCharData` 테이블에서 쉼표(,)를 필드 종결자로 사용하는 `myTestCharData-c.Dat`라는 새 데이터 파일로 문자 형식의 데이터를 대량으로 내보냅니다. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 명령 프롬프트에 다음을 입력합니다.  
+ 다음 예에서는 `myTestCharData` 테이블에서 쉼표(,)를 필드 종결자로 사용하는 `myTestCharData-c.Dat`라는 새 데이터 파일로 문자 형식의 데이터를 대량으로 내보냅니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 명령 프롬프트에 다음을 입력합니다.  
   
 ```  
 bcp AdventureWorks..myTestCharData out C:\myTestCharData-c.Dat -c -t, -T  
@@ -115,8 +108,7 @@ bcp AdventureWorks..myTestCharData out C:\myTestCharData-c.Dat -c -t, -T
 ```  
   
 ### <a name="using-bulk-insert-to-bulk-import-character-data"></a>BULK INSERT를 사용하여 문자 데이터 대량 가져오기  
- 다음 예에서는 BULK INSERT를 사용하여 `myTestCharData-c.Dat` 데이터 파일의 데이터를 `myTestCharData` 테이블로 가져옵니다. 
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음을 실행합니다.  
+ 다음 예에서는 BULK INSERT를 사용하여 `myTestCharData-c.Dat` 데이터 파일의 데이터를 `myTestCharData` 테이블로 가져옵니다. [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음을 실행합니다.  
   
 ```  
 USE AdventureWorks;  
@@ -133,16 +125,16 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
- **대량 가져오기 또는 대량 내보내기를 위한 데이터 형식을 사용 하려면**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
+ **대량 가져오기 또는 대량 내보내기를 위한 데이터 형식을 사용하려면**  
   
 -   [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [네이티브 형식을 사용 하 여 데이터 &#40;SQL Server 가져오거나 내보냅니다&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [유니코드 문자 형식을 사용 하 여 데이터 &#40;SQL Server 가져오기 또는 내보내기&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [유니코드 문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [유니코드 원시 형식을 사용 하 여 데이터 &#40;SQL Server 가져오기 또는 내보내기&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [유니코드 네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [bcp 유틸리티](../../tools/bcp-utility.md)   

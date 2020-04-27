@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 329fb8df41df5d97cfcc3750c2850d03278d3739
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013435"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>XML 대량 로드에 대한 지침 및 제한 사항(SQLXML 4.0)
@@ -151,8 +151,7 @@ ms.locfileid: "66013435"
     </ROOT>  
     ```  
   
--   
-  `sql:url-encode` 주석은 지원되지 않습니다.  
+-   `sql:url-encode` 주석은 지원되지 않습니다.  
   
      XML 데이터 입력에 URL을 지정하면 대량 로드는 해당 위치에서 데이터를 읽지 못합니다.  
   
@@ -172,7 +171,6 @@ ms.locfileid: "66013435"
   
 -   XML 대량 로드를 사용하여 날짜 값을 삽입할 경우 값을 (-)CCYY-MM-DD((+-)TZ) 형식으로 지정해야 합니다. 이 형식은 날짜에 대한 표준 XSD 형식입니다.  
   
--   일부 속성 플래그는 다른 속성 플래그와 함께 사용할 수 없습니다. 예를 들어 대량 로드는 `Ignoreduplicatekeys=true`와 `Keepidentity=false`를 동시에 지원하지 않습니다. 
-  `Keepidentity=false`이면 대량 로드에서는 서버를 통해 키 값이 생성되는 것으로 간주합니다. 테이블에는 키에 대한 `IDENTITY` 제약 조건이 있어야 합니다. 서버에서는 중복 키를 생성하지 않으므로 `Ignoreduplicatekeys`를 `true`로 설정할 필요가 없습니다. 행이 있는 테이블로 가져온 데이터로부터 기본 키 값을 업로드하고 기본 키가 충돌할 가능성이 있는 경우에만 `Ignoreduplicatekeys`를 `true`로 설정해야 합니다.  
+-   일부 속성 플래그는 다른 속성 플래그와 함께 사용할 수 없습니다. 예를 들어 대량 로드는 `Ignoreduplicatekeys=true`와 `Keepidentity=false`를 동시에 지원하지 않습니다. `Keepidentity=false`이면 대량 로드에서는 서버를 통해 키 값이 생성되는 것으로 간주합니다. 테이블에는 키에 대한 `IDENTITY` 제약 조건이 있어야 합니다. 서버에서는 중복 키를 생성하지 않으므로 `Ignoreduplicatekeys`를 `true`로 설정할 필요가 없습니다. 행이 있는 테이블로 가져온 데이터로부터 기본 키 값을 업로드하고 기본 키가 충돌할 가능성이 있는 경우에만 `Ignoreduplicatekeys`를 `true`로 설정해야 합니다.  
   
   

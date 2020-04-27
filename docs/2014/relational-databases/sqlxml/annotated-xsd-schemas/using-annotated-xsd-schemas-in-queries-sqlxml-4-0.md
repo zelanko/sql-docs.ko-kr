@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c435ff3bacecb101784695fe42b8b2158625e058
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014472"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>쿼리에 주석이 추가된 XSD 스키마 사용(SQLXML 4.0)
@@ -116,11 +116,9 @@ ms.locfileid: "66014472"
   
  이 템플릿에서는 두 개의 XPath 쿼리도 지정합니다. 각 ** \<xpath 쿼리>** 요소는 특성을 `mapping-schema` 지정 하 여 매핑 스키마를 고유 하 게 식별 합니다.  
   
- 템플릿에서 인라인 스키마를 지정 하는 경우 `sql:is-mapping-schema` ** \<xsd: schema>** 요소에도 주석을 지정 해야 합니다. 
-  `sql:is-mapping-schema`는 부울 값(0=false, 1=true)을 사용합니다. **Sql: is 매핑-schema = "1"** 인 인라인 스키마는 인라인 주석이 추가 된 스키마로 처리 되 고 XML 문서에서 반환 되지 않습니다.  
+ 템플릿에서 인라인 스키마를 지정 하는 경우 `sql:is-mapping-schema` ** \<xsd: schema>** 요소에도 주석을 지정 해야 합니다. `sql:is-mapping-schema`는 부울 값(0=false, 1=true)을 사용합니다. **Sql: is 매핑-schema = "1"** 인 인라인 스키마는 인라인 주석이 추가 된 스키마로 처리 되 고 XML 문서에서 반환 되지 않습니다.  
   
- 
-  `sql:is-mapping-schema` 주석은 템플릿 네임스페이스 `urn:schemas-microsoft-com:xml-sql`에 속합니다.  
+ `sql:is-mapping-schema` 주석은 템플릿 네임스페이스 `urn:schemas-microsoft-com:xml-sql`에 속합니다.  
   
  이 예를 테스트하려면 로컬 디렉터리에 템플릿(InlineSchemaTemplate.xml)을 지정한 다음 SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만들어서 사용하여 템플릿을 실행합니다. 자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   

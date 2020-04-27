@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d01cf5aa2a57ace05cdf7d6da02f1f082d77b0bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054491"
 ---
 # <a name="view-path-metadata-in-the-data-flow-path-editor"></a>데이터 흐름 경로 편집기를 사용하여 경로 메타데이터 보기
@@ -29,11 +29,9 @@ ms.locfileid: "66054491"
   
 2.  솔루션 탐색기에서 패키지를 두 번 클릭하여 엽니다.  
   
-3.  
-  **데이터 흐름** 탭을 클릭하고 경로를 두 번 클릭합니다.  
+3.  **데이터 흐름** 탭을 클릭하고 경로를 두 번 클릭합니다.  
   
-4.  
-  **데이터 흐름 경로 편집기** 대화 상자에서 **메타데이터**를 클릭합니다.  
+4.  **데이터 흐름 경로 편집기** 대화 상자에서 **메타데이터**를 클릭합니다.  
   
 5.  열 이름, 데이터 형식, 전체 자릿수, 소수 자릿수, 길이, 코드 페이지 및 각 열에 대한 원본 구성 요소의 이름과 같은 경로 메타데이터를 봅니다.  
   

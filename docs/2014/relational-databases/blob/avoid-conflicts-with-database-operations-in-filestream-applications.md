@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fafb116e1e5c02d27ad3242edd27064ffae6e401
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010364"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>FILESTREAM 애플리케이션에서 데이터베이스 작업과의 충돌 방지
@@ -141,7 +141,7 @@ HANDLE srcHandle =  OpenSqlFilestream(srcFilePath,
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [OpenSqlFilestream을 사용하여 FILESTREAM 데이터 액세스](access-filestream-data-with-opensqlfilestream.md)   
+ [OpenSqlFilestream을 사용 하 여 FILESTREAM 데이터 액세스](access-filestream-data-with-opensqlfilestream.md)   
  [MARS&#40;Multiple Active Result Sets&#41; 사용](../native-client/features/using-multiple-active-result-sets-mars.md)  
   
   

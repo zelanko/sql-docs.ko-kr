@@ -13,31 +13,27 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d933475231913edeccbc5206afb675916a765302
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054215"
 ---
 # <a name="change-a-model-name-master-data-services"></a>모델 이름 변경(Master Data Services)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델의 이름을 변경할 수 있습니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
--   
-  **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
+-   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자 &#40;MDS(Master Data Services)&#41;](administrators-master-data-services.md)를 참조 하세요.  
   
 ### <a name="to-change-a-model-name"></a>모델 이름을 변경하려면  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **시스템 관리**를 클릭합니다.  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **시스템 관리**를 클릭합니다.  
   
-2.  
-  **모델 뷰** 페이지의 메뉴 모음에서 **관리** 를 가리키고 **모델**을 클릭합니다.  
+2.  **모델 뷰** 페이지의 메뉴 모음에서 **관리** 를 가리키고 **모델**을 클릭합니다.  
   
 3.  **모델 유지 관리** 페이지의 표에서 이름을 변경 하려는 모델의 행을 클릭 합니다.  
   
@@ -48,12 +44,11 @@ ms.locfileid: "66054215"
   
 5.  **모델 이름** 상자에 모델의 업데이트 된 이름을 입력 합니다.  
   
-6.  
-  **모델 저장**을 클릭합니다.  
+6.  **모델 저장**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [모델 &#40;MDS(Master Data Services)를 만듭니다&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)   
  [모델 &#40;MDS(Master Data Services) 삭제&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)   
- [모델 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/models-master-data-services.md)  
+ [모델&#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)  
   
   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 795e27c020c9ea4c80c858da734ebd315d56615c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012662"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>위치 경로 지정(SQLXML 4.0)
@@ -45,9 +45,7 @@ ms.locfileid: "66012662"
   
 -   **축**  
   
-     축은 위치 단계에서 선택되는 노드와 컨텍스트 노드 간의 트리 관계를 지정합니다. 축에 사용할 수 있는 값은 `parent`, `child`, `attribute` 및 `self`입니다. 위치 경로에서 `child` 축을 지정하면 쿼리에서 선택되는 모든 노드가 컨텍스트 노드의 자식입니다. 
-  `parent` 축을 지정하면 선택되는 노드가 컨텍스트 노드의 부모 노드입니다. 
-  `attribute` 축을 지정하면 선택되는 노드가 컨텍스트 노드의 특성입니다.  
+     축은 위치 단계에서 선택되는 노드와 컨텍스트 노드 간의 트리 관계를 지정합니다. 축에 사용할 수 있는 값은 `parent`, `child`, `attribute` 및 `self`입니다. 위치 경로에서 `child` 축을 지정하면 쿼리에서 선택되는 모든 노드가 컨텍스트 노드의 자식입니다. `parent` 축을 지정하면 선택되는 노드가 컨텍스트 노드의 부모 노드입니다. `attribute` 축을 지정하면 선택되는 노드가 컨텍스트 노드의 특성입니다.  
   
 -   **노드 테스트**  
   

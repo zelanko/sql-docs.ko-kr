@@ -14,24 +14,24 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7e99c6e4f28ecef032ff3b793393e5465740156d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250737"
 ---
 # <a name="sql-serverbuffer-node"></a>SQL Server:Buffer Node
-  **Buffer Node** 개체는 **buffer Manager** 개체가 제공 하는 카운터를 보완 하는 카운터를 제공 합니다. 이 카운터를 사용하여 각 NUMA(Non-Uniform Memory Access) 노드에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버퍼 풀 페이지 배포를 모니터링할 수 있습니다. 사용 중인 각 NUMA 노드에 대해 하나의 **Buffer Node** 개체 인스턴스가 있습니다. 비-NUMA 아키텍처에는 단일 **Buffer Node** 개체 인스턴스가 있습니다.  
+  **Buffer Node** 개체는 **Buffer Manager** 개체가 제공하는 카운터를 보완하는 카운터를 제공합니다. 이 카운터를 사용하여 각 NUMA(Non-Uniform Memory Access) 노드에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버퍼 풀 페이지 배포를 모니터링할 수 있습니다. 사용 중인 각 NUMA 노드에 대해 하나의 **Buffer Node** 개체 인스턴스가 있습니다. 비-NUMA 아키텍처에는 단일 **Buffer Node** 개체 인스턴스가 있습니다.  
   
 ## <a name="buffer-node-performance-objects"></a>Buffer Node 성능 개체  
- 이 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Node** 성능 개체에 대해 설명합니다.  
+ 이 테이블에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Node** 성능 개체에 대해 설명합니다.  
   
 |SQL Server Buffer Node 카운터|Description|  
 |-------------------------------------|-----------------|  
-|**데이터베이스 페이지**|이 노드의 버퍼 풀에서 데이터베이스 내용이 있는 페이지 수를 나타냅니다.|  
-|**페이지 수명 예상**|페이지가 참조 없이 이 노드의 버퍼 풀에 남아 있는 최소 시간(초)을 나타냅니다.|  
-|**로컬 노드 페이지 조회/초**|이 노드에서 충족된 조회 요청 수를 나타냅니다.|  
-|**원격 메모 페이지 조회/초**|다른 노드에서 충족된 이 노드의 조회 요청 수를 나타냅니다.|  
+|**Database pages**|이 노드의 버퍼 풀에서 데이터베이스 내용이 있는 페이지 수를 나타냅니다.|  
+|**Page life expectancy**|페이지가 참조 없이 이 노드의 버퍼 풀에 남아 있는 최소 시간(초)을 나타냅니다.|  
+|**Local Node page lookups/sec**|이 노드에서 충족된 조회 요청 수를 나타냅니다.|  
+|**Remote Note page lookups/sec**|다른 노드에서 충족된 이 노드의 조회 요청 수를 나타냅니다.|  
   
  비-NUMA 하드웨어에서 SQL Server를 실행하는 경우 **Buffer Node** 및 **Buffer Manager** 개체의 카운터가 일치해야 합니다.  
   
@@ -44,6 +44,6 @@ ms.locfileid: "63250737"
  [SQL Server, Buffer Manager 개체](sql-server-buffer-manager-object.md)   
  [서버 메모리 서버 구성 옵션](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](monitor-resource-usage-system-monitor.md)   
- [dm_os_performance_counters &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)  
+ [sys.dm_os_performance_counters&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)  
   
   

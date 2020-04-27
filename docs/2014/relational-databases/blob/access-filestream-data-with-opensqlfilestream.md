@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 74dad8dc9795a30637a9ab08c56ce8d0940b6f0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010480"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>OpenSqlFilestream을 사용하여 FILESTREAM 데이터 액세스
@@ -48,7 +48,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
   
 #### <a name="parameters"></a>매개 변수  
  *FilestreamPath*  
- 진행 PathName 함수 `nvarchar(max)` 에서 반환 하는 경로입니다 [](/sql/relational-databases/system-functions/pathname-transact-sql) . PathName은 FILESTREAM 테이블 및 열에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT 또는 UPDATE 권한이 있는 계정의 컨텍스트에서 호출해야 합니다.  
+ 진행 PathName 함수 `nvarchar(max)` 에서 반환 하는 경로입니다 [PathName](/sql/relational-databases/system-functions/pathname-transact-sql) . PathName은 FILESTREAM 테이블 및 열에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT 또는 UPDATE 권한이 있는 계정의 컨텍스트에서 호출해야 합니다.  
   
  *DesiredAccess*  
  [in] FILESTREAM BLOB 데이터에 액세스하는 데 사용되는 모드를 설정합니다. 이 값은 [DeviceIoControl Function](https://go.microsoft.com/fwlink/?LinkId=105527)(DeviceIoControl 함수)에 전달됩니다.  

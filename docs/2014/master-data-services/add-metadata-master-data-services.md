@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 801872affac61572553cbbd2e9648e197e16bb47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054288"
 ---
 # <a name="add-metadata-master-data-services"></a>메타데이터 추가(Master Data Services)
@@ -26,8 +26,7 @@ ms.locfileid: "66054288"
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
--   
-  **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
+-   **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
 -   **메타 데이터** 모델의 경우 추가 하려는 메타 데이터 엔터티 또는 리프 멤버 유형에 대 한 **추가** 권한이 있어야 합니다.  
   
@@ -37,11 +36,9 @@ ms.locfileid: "66054288"
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 홈 페이지의 **모델** 목록에서 **메타 데이터** 모델을 선택 합니다.  
   
-2.  
-  **버전** 목록에서 버전을 선택합니다.  
+2.  **버전** 목록에서 버전을 선택합니다.  
   
-3.  
-  **탐색기**를 클릭합니다.  
+3.  **탐색기**를 클릭합니다.  
   
 4.  메뉴 모음에서 **엔터티** 를 가리키고 추가 하려는 메타 데이터 엔터티를 클릭 합니다.  
   

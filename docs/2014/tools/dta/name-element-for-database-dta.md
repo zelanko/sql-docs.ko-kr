@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01f0f192dbf931d5ad80c594b376973ee2db3f31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63297504"
 ---
 # <a name="name-element-for-database-dta"></a>Database의 Name 요소(DTA)
@@ -37,8 +37,7 @@ ms.locfileid: "63297504"
   
 |특성|Description|  
 |--------------------|-----------------|  
-|**데이터 형식 및 길이**|
-  `string`, 길이 제한 없음|  
+|**데이터 형식 및 길이**|`string`, 길이 제한 없음|  
 |**기본값**|없음|  
 |**발생 빈도**|각 `Database` 요소 당 한 번씩만 필요합니다.|  
   

@@ -15,26 +15,26 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8089309c8abe94d392b073fc916b2b0b8fa9292f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011948"
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>데이터를 가져오거나 내보내기 위한 서식 파일(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 데이터를 대량으로 가져오거나 테이블의 데이터를 대량으로 내보내는 경우 *서식 파일* 을 사용하여 데이터를 대량으로 내보내거나 가져오는 데 필요한 모든 서식 정보를 저장할 수 있습니다. 여기에는 해당 테이블을 기준으로 하는 데이터 파일의 각 필드에 대한 서식 정보가 포함됩니다.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 두 유형의 서식 파일, 즉 XML 서식 및 비 XML 서식 파일을 지원합니다. 비 XML 서식 파일과 XML 서식 파일은 모두 데이터 파일의 각 필드에 대한 설명을 포함하며, XML 서식 파일의 경우에는 해당하는 테이블 열에 대한 설명도 포함합니다. 일반적으로 XML 서식 파일과 비 XML 서식 파일은 서로 전환이 가능하지만 새 서식 파일에는 비 XML 서식 파일에 비해 여러 가지 장점이 있는 XML 구문을 사용하는 것이 좋습니다. 자세한 내용은 [XML 서식 파일&#40;SQL Server&#41;](xml-format-files-sql-server.md)의 두 가지 서식 파일 유형을 대량으로 내보내고 가져올 수 있습니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 다음과 같은 두 가지 유형의 형식 파일을 지원합니다. XML 서식 및 비 XML 서식 파일. 비 XML 서식 파일과 XML 서식 파일은 모두 데이터 파일의 각 필드에 대한 설명을 포함하며, XML 서식 파일의 경우에는 해당하는 테이블 열에 대한 설명도 포함합니다. 일반적으로 XML 서식 파일과 비 XML 서식 파일은 서로 전환이 가능하지만 새 서식 파일에는 비 XML 서식 파일에 비해 여러 가지 장점이 있는 XML 구문을 사용하는 것이 좋습니다. 자세한 내용은 [XML 서식 파일&#40;SQL Server&#41;](xml-format-files-sql-server.md)의 두 가지 서식 파일 유형을 대량으로 내보내고 가져올 수 있습니다.  
   
  
   
-##  <a name="Benefits"></a> 서식 파일의 이점  
+##  <a name="benefits-of-format-files"></a><a name="Benefits"></a> 서식 파일의 이점  
   
 -   다른 데이터 형식과 맞추기 위한 편집 작업이 거의 필요 없는 데이터 파일을 작성하거나 다른 소프트웨어의 데이터 파일을 읽는 작업을 유연하게 수행할 수 있습니다.  
   
 -   불필요한 데이터를 추가 또는 삭제하거나 데이터 파일에 있는 기존 데이터를 다시 정렬하지 않고도 대량의 데이터를 가져올 수 있습니다. 서식 파일은 데이터 파일의 필드와 테이블의 열이 일치하지 않을 때 특히 유용합니다.  
   
-##  <a name="ExamplesOfFFs"></a> 서식 파일의 예  
+##  <a name="examples-of-format-files"></a><a name="ExamplesOfFFs"></a> 서식 파일의 예  
  다음 예에서는 비 XML 서식 파일 및 XML 서식 파일의 레이아웃을 보여 줍니다. 이러한 서식 파일은 `HumanResources.myTeam` 예제 데이터베이스의 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 테이블에 해당합니다. 이 테이블에는 네 개의 열, 즉 `EmployeeID`, `Name`, `Title`및 `ModifiedDate`가 있습니다.  
   
 > [!NOTE]  
@@ -88,7 +88,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
 
   
-##  <a name="WhenFFrequired"></a> 서식 파일이 필요한 경우  
+##  <a name="when-is-a-format-file-required"></a><a name="WhenFFrequired"></a> 서식 파일이 필요한 경우  
  INSERT ... SELECT * FROM OPENROWSET(BULK...) 문을 사용하는 경우에는 항상 서식 파일이 필요합니다.  
   
 -   **bcp** 또는 BULK INSERT의 경우 단순한 상황에서는 필요에 따라 서식 파일을 사용할 수 있으며 필수적인 경우는 많지 않습니다. 그러나 복잡한 대량 가져오기 상황에서는 서식 파일이 필요한 경우가 종종 있습니다.  
@@ -114,7 +114,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [서식 파일 만들기&#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   
@@ -129,8 +129,8 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 
   
 ## <a name="see-also"></a>참고 항목  
- [비 XML 서식 파일 &#40;SQL Server&#41;](non-xml-format-files-sql-server.md)   
- [XML 서식 파일 &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
+ [비 XML 서식 파일&#40;SQL Server&#41;](non-xml-format-files-sql-server.md)   
+ [XML 서식 파일&#40;SQL Server&#41;](xml-format-files-sql-server.md)   
  [대량 가져오기 또는 대량 내보내기를 위한 데이터 형식&#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)  
   
   
