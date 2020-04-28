@@ -18,21 +18,21 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e54a81cf47804e1cf4568e739bb2c4cf83b9fe25
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81288613"
 ---
 # <a name="schema-rowset-support-ole-db"></a>스키마 행 집합 지원(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  네이티브 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트 OLE DB 공급자는 분산 쿼리를 처리할 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 때 연결된 서버에서 스키마 정보를 반환하는 것도 지원합니다.  
+  Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 분산 쿼리를 처리할 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 때 연결 된 서버에서 스키마 정보를 반환 하는 것도 지원 합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 동의어를 지원하기는 하지만 동의어의 메타데이터는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 반환하지 않습니다.  
   
- 다음 표에는 스키마 행 집합과 네이티브 클라이언트 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB 공급자가 지원하는 제한 열이 나열됩니다.  
+ 다음 표에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 지 원하는 스키마 행 집합 및 제한 열을 나열 합니다.  
   
 |스키마 행 집합|제한 열|  
 |-------------------|-------------------------|  
@@ -58,7 +58,7 @@ ms.locfileid: "81288613"
  [LINKEDSERVERS 행 집합&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL 서버 네이티브 클라이언트 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+ [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [사용자 정의 형식 사용](../../../relational-databases/native-client/features/using-user-defined-types.md)  
   
   

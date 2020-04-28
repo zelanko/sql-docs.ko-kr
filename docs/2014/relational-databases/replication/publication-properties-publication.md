@@ -1,5 +1,5 @@
 ---
-title: SQL 서버 복제 게시 속성 - | 마이크로 소프트 문서
+title: SQL Server 복제 게시 속성-| Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,14 +21,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19fee33c63b1287e43077640f381d4b57f489535
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380724"
 ---
-# <a name="sql-server-replication-publication-properties"></a>SQL 서버 복제 게시 속성 
-  이 섹션에서는 **게시 속성** 대화 상자의 모든 페이지에 대한 정보를 제공합니다. 
+# <a name="sql-server-replication-publication-properties"></a>SQL Server 복제 게시 속성 
+  이 섹션에서는 **게시 속성** 대화 상자의 모든 페이지에 대 한 정보를 제공 합니다. 
 
 ## <a name="general"></a>일반
   **게시 속성** 대화 상자의 **일반** 페이지에는 이름, 설명 및 구독 만료 정책을 포함하여 게시에 대한 기본 정보가 들어 있습니다.  
@@ -37,17 +37,17 @@ ms.locfileid: "80380724"
  **이름**  
  게시의 이름입니다(읽기 전용).  
   
- **데이터베이스**  
+ **Database**  
  게시 데이터베이스의 이름입니다(읽기 전용).  
   
  **설명**  
  게시에 대한 설명입니다.  
   
- **유형**  
+ **형식**  
  게시의 유형입니다(읽기 전용).  
   
  **구독 만료**  
- 구독 만료에 대해 **구독이 만료되지는 않지만 다시 초기화될 때까지 비활성화될 수 있습니다** 또는 명시적 기간( **간격**)을 사용하는**구독이 다음 시간 내에 동기화되지 않으면 만료되어 삭제될 수 있습니다**옵션 중 하나를 선택합니다.  
+ 구독 만료에 대한 옵션 중 하나를 선택합니다. 명시적 기간(**간격**)이 있는 **구독이 만료되지 않음** 또는 **구독이 만료됨**.  
   
  스냅샷 및 트랜잭션 게시의 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 은 기본값인 **구독이 만료되지는 않지만 다시 초기화될 때까지 비활성화될 수 있습니다**를 사용하는 것을 권장합니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "80380724"
  자세한 내용은 [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md)을(를) 참조하세요.  
   
  **호환성 수준**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 및 이후 버전만; 발행물만 병합할 수 있습니다. 이 게시와 동기화하는 구독자에 필요한 가장 낮은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 선택합니다. 호환성 수준 결정과 관련된 여러 가지 규칙이 있습니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전과 병합 게시에만 해당됩니다. 이 게시와 동기화하는 구독자에 필요한 가장 낮은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 선택합니다. 호환성 수준 결정과 관련된 여러 가지 규칙이 있습니다.  
 
 ## <a name="filter-rows"></a>행 필터링
 
@@ -84,7 +84,7 @@ ms.locfileid: "80380724"
  이 창은 게시의 테이블 아티클에 필터를 추가하면 추가된 필터로 채워집니다. 행 필터가 있는 테이블은 창에서 최상위 노드로 표시됩니다. 병합 게시의 경우 조인 필터를 통해 필터링이 확장된 테이블은 자식 노드로 표시됩니다.  
   
  **추가**  
- **추가** 를 클릭하면 테이블 아티클을 필터링할 수 있는 대화 상자가 시작됩니다. 스냅샷 또는 트랜잭션 게시에 대해 **추가** 를 클릭하면 대화 상자가 바로 시작됩니다. 병합 게시에 대해 **추가** 를 클릭하면 **필터 추가**, **선택한 필터 확장을 위해 조인 추가**, **자동으로 필터 생성**의 세 가지 선택이 표시됩니다.  
+ **추가** 를 클릭하면 테이블 아티클을 필터링할 수 있는 대화 상자가 시작됩니다. 스냅샷 또는 트랜잭션 게시에 대해 **추가** 를 클릭하면 대화 상자가 바로 시작됩니다. 병합 게시에 대해 **추가**를 클릭하면 **필터 추가**, **선택한 필터 확장을 위해 조인 추가**, **자동으로 필터 생성**의 세 가지 선택 사항이 표시됩니다.  
   
 -   **필터 추가** 를 선택하면 **필터 추가** 대화 상자가 시작됩니다. 이 대화 상자를 사용하여 테이블 아티클에 행 필터를 적용할 수 있습니다. 예를 들어 **필터 추가** 대화 상자에서 고객 데이터가 들어 있는 테이블을 구독자로 복제할 때 프랑스 고객의 데이터만 포함되도록 지정할 수 있습니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "80380724"
  **편집**  
  필터 창에서 행 필터 또는 조인 필터를 선택하고 **편집** 을 클릭하면 **필터 편집** 또는 **조인 편집** 대화 상자가 시작됩니다.  
   
- **삭제**  
+ **Delete**  
  필터 창에서 행 필터 또는 조인 필터를 선택하고 **삭제** 를 클릭하면 필터가 삭제됩니다.  
   
  **테이블 찾기**  
@@ -111,14 +111,14 @@ ms.locfileid: "80380724"
   
  창에서 바로 가기 노드를 선택하고 **테이블 찾기** 를 클릭하면 창이 확장되고 테이블이 강조 표시됩니다. 바로 가기 노드를 선택하지 않고 **테이블 찾기** 를 클릭하면 **테이블 찾기** 대화 상자가 시작됩니다.  
   
- **필터**  
+ **Filter**  
  필터 창에서 선택한 필터의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 정의를 포함합니다.  
 
 ## <a name="ftp-snapshot-and-internet"></a>FTP 스냅샷 및 인터넷
   
 이 페이지에서는 다음 작업을 수행할 수 있습니다.  
   
--   FTP(파일 전송 프로토콜)를 통해 스냅샷을 배달하는 속성을 설정합니다. 자세한 내용은 [FTP Windows를 통한 스냅샷 전송](transfer-snapshots-through-ftp.md) 설명서를 참조하십시오.  
+-   FTP(파일 전송 프로토콜)를 통해 스냅샷을 배달하는 속성을 설정합니다. 자세한 내용은 [FTP를 통해 스냅숏 전송](transfer-snapshots-through-ftp.md) Windows 설명서를 참조 하세요.  
   
     > [!NOTE]  
     >  FTP 설정을 변경하면 새 스냅샷을 생성해야 합니다.  
@@ -153,7 +153,7 @@ ms.locfileid: "80380724"
 
   이 페이지에서는 다음 작업을 수행할 수 있습니다.  
   
--   FTP(파일 전송 프로토콜)를 통해 스냅샷을 배달하는 속성을 설정합니다. 자세한 내용은 [FTP Windows를 통한 스냅샷 전송](transfer-snapshots-through-ftp.md) 설명서를 참조하십시오.  
+-   FTP(파일 전송 프로토콜)를 통해 스냅샷을 배달하는 속성을 설정합니다. 자세한 내용은 [FTP를 통해 스냅숏 전송](transfer-snapshots-through-ftp.md) Windows 설명서를 참조 하세요.  
   
     > [!NOTE]  
     >  FTP 설정을 변경하면 새 스냅샷을 생성해야 합니다.  
@@ -192,7 +192,7 @@ ms.locfileid: "80380724"
  **편집**  
  표에서 기존 파티션을 선택하고 **편집** 을 클릭하여 파티션을 편집합니다.  
   
- **삭제**  
+ **Delete**  
  표에서 기존 파티션을 선택하고 **삭제** 를 클릭하여 파티션을 삭제합니다.  
   
  **선택한 스냅샷 지금 생성**  
@@ -221,7 +221,7 @@ ms.locfileid: "80380724"
  **스냅샷 파일 위치**  
  스냅샷 파일을 저장할 위치를 선택합니다. 파일을 기본 위치에 저장할 수 있으며 기본 위치 대신 대체 위치에 저장할 수도 있습니다. 대체 위치에 저장된 파일을 압축할 수 있습니다.  
   
--   게시자에 대해 기본 스냅샷 폴더를 사용하려면 **기본 폴더에 파일 보관** 을 선택합니다. 스냅샷 폴더 위치는 **배포자 속성** 대화 상자에서 게시자에 대해서만 변경할 수 있으므로 이 대화 상자에서는 읽기 전용입니다. 자세한 내용은 [기본 스냅숏 위치 지정](snapshot-options.md#snapshot-folder-locations)을 참조하십시오.   
+-   게시자에 대해 기본 스냅샷 폴더를 사용하려면 **기본 폴더에 파일 보관** 을 선택합니다. 스냅샷 폴더 위치는 **배포자 속성** 대화 상자에서 게시자에 대해서만 변경할 수 있으므로 이 대화 상자에서는 읽기 전용입니다. 자세한 내용은 [기본 스냅숏 위치 지정](snapshot-options.md#snapshot-folder-locations)을 참조 하세요.   
 -   기본 위치 대신 대체 위치를 지정하려면 **다음 폴더에 파일 보관** 을 선택합니다. 입력란에 경로를 입력하거나 **찾아보기** 를 클릭하고 위치를 탐색합니다. 대체 스냅샷 위치의 파일을 압축하려면 **이 폴더에 있는 스냅샷 파일 압축** 을 선택합니다. 대체 위치는 다른 서버, 네트워크 드라이브 또는 이동식 미디어(CD-ROM 또는 이동식 디스크 등)가 될 수 있습니다. 자세한 내용은 [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md) 및 [Compressed Snapshots](compressed-snapshots.md)를 참조하세요.  
   
  **추가 스크립트 실행**  
@@ -234,12 +234,12 @@ ms.locfileid: "80380724"
 
 
 
-## <a name="see-also"></a>관련 항목  
- [발행물 만들기](publish/create-a-publication.md)   
+## <a name="see-also"></a>참고 항목  
+ [Create a Publication](publish/create-a-publication.md)   
  [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)   
  [데이터 및 데이터베이스 개체 게시](publish/publish-data-and-database-objects.md)   
- [복제 보안 모범 사례](security/replication-security-best-practices.md)   
- [SQL 서버 복제 보안](security/view-and-modify-replication-security-settings.md)  
+ [복제 보안을 위한 최선의 구현 방법](security/replication-security-best-practices.md)   
+ [SQL Server 복제 보안](security/view-and-modify-replication-security-settings.md)  
  [스냅샷으로 구독 초기화](initialize-a-subscription-with-a-snapshot.md)   
   
   

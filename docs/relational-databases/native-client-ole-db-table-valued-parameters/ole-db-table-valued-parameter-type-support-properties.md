@@ -1,5 +1,5 @@
 ---
-title: OLE DB 테이블 값 매개 변수 유형(속성)
+title: OLE DB 테이블 반환 매개 변수 형식 (속성)
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2f289da99108bb51c90f9f15bbe8d39a20a6be78
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81283223"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB 테이블 반환 매개 변수 형식 지원(속성)
@@ -47,7 +47,7 @@ ms.locfileid: "81283223"
 |DBPROP_DELAYSTORAGEOBJECTS|VARIANT_FALSE|  
 |DBPROP_IAccessor<br /><br /> DBPROP_IColumnsInfo<br /><br /> DBPROP_IConvertType<br /><br /> DBPROP_IRowset<br /><br /> DBPROP_IRowsetInfo<br /><br /> DBPROP_IColumnsRowset|VARIANT_TRUE|  
 |DBPROP_IConnectionPointContainer<br /><br /> DBPROP_IMultipleResults<br /><br /> DBPROP_IRowsetUpdate<br /><br /> DBPROP_IRowsetIdentity<br /><br /> DBPROP_IRowsetLocate<br /><br /> DBPROP_IRowsetScroll<br /><br /> DBPROP_IRowsetResynch|VARIANT_FALSE|  
-|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> 참고: 테이블 값 매개 변수 행 집합 개체는 IRowsetChange 인터페이스를 지원합니다.<br /><br /> DBPROP_IRowsetChange = VARIANT_TRUE를 사용하여 만들어진 행 집합은 즉시 업데이트 모드 동작을 나타냅니다.<br /><br /> 그러나 BLOB 열이 ISequentialStream 개체로 바인딩된 경우 소비자는 테이블 반환 매개 변수 행 집합 개체가 사용되는 동안 열을 유지해야 합니다.|  
+|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> 참고: 테이블 반환 매개 변수 행 집합 개체는 IRowsetChange 인터페이스를 지원 합니다.<br /><br /> DBPROP_IRowsetChange = VARIANT_TRUE를 사용하여 만들어진 행 집합은 즉시 업데이트 모드 동작을 나타냅니다.<br /><br /> 그러나 BLOB 열이 ISequentialStream 개체로 바인딩된 경우 소비자는 테이블 반환 매개 변수 행 집합 개체가 사용되는 동안 열을 유지해야 합니다.|  
 |DBPROP_ISupportErrorInfo|VARIANT_TRUE|  
 |DBPROP_ISequentialStream|VARIANT_TRUE|  
 |DBPROP_IMMOBILEROWS|VARIANT_TRUE|  
@@ -82,7 +82,7 @@ ms.locfileid: "81283223"
   
 |속성 ID|속성 값|  
 |-----------------|--------------------|  
-|SSPROP_COL_COMPUTED|R/W: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 유형: VT_BOOL<br /><br /> 설명: VARIANT_TRUE로 설정된 경우 열이 계산 열임을 나타냅니다. VARIANT_FALSE는 열이 계산 열이 아님을 나타냅니다.|  
+|SSPROP_COL_COMPUTED|R/W: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 형식: VT_BOOL<br /><br /> 설명: VARIANT_TRUE로 설정된 경우 열이 계산 열임을 나타냅니다. VARIANT_FALSE는 열이 계산 열이 아님을 나타냅니다.|  
 |||
 
 ### <a name="dbpropset_sqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
@@ -100,7 +100,7 @@ ms.locfileid: "81283223"
 |||
 
 ## <a name="see-also"></a>참고 항목  
- [OLE DB 테이블 값 매개 변수 유형 지원](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
+ [OLE DB 테이블 반환 매개 변수 형식 지원](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
  [테이블 반환 매개 변수&#40;OLE DB&#41; 사용](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

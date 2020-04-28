@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 01bca0b4e0c8d98d0a31451686f0396af99ed430
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112316"
 ---
 # <a name="wideworldimporters-data-generation"></a>WideWorldImporters 데이터 생성
@@ -67,7 +67,7 @@ WideWorldImportersDW는 성능 테스트를 위해 데이터 크기를 임의로
 
 ### <a name="procedure-details"></a>프로시저 세부 정보
 
-#### <a name="name"></a>속성
+#### <a name="name"></a>Name
 
     Application.Configuration_PopulateLargeSaleTable
 

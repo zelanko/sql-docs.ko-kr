@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18575c95602f73baa959d35b176cf16220fc8e64
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112164"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services(SSIS) 연결
@@ -66,7 +66,7 @@ ms.locfileid: "79112164"
 ### <a name="built-in-connection-managers"></a>기본 제공 연결 관리자  
  다음 표에서는에서 제공 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 연결 관리자 유형을 보여 줍니다.  
   
-|Type|Description|항목|  
+|유형|설명|항목|  
 |----------|-----------------|-----------|  
 |ADO|ADO(ActiveX Data Objects) 개체에 연결합니다.|[ADO 연결 관리자](ado-connection-manager.md)|  
 |ADO.NET|.NET 공급자를 사용하여 데이터 원본에 연결합니다.|[ADO.NET 연결 관리자](ado-net-connection-manager.md)|  
@@ -74,7 +74,7 @@ ms.locfileid: "79112164"
 |DQS|Data Quality Services 서버 및 서버의 Data Quality Services 데이터베이스에 연결합니다.|[DQS 정리 연결 관리자](dqs-cleansing-connection-manager.md)|  
 |EXCEL|Excel 통합 문서 파일에 연결합니다.|[Excel 연결 관리자](excel-connection-manager.md)|  
 |FILE|파일 또는 폴더에 연결합니다.|[파일 연결 관리자](file-connection-manager.md)|  
-|FLATFILE|단일 플랫 파일의 데이터에 연결합니다.|[플랫 파일 연결 관리자](flat-file-connection-manager.md)|  
+|FLATFILE|단일 플랫 파일의 데이터에 연결합니다.|[Flat File Connection Manager](flat-file-connection-manager.md)|  
 |FTP|FTP 서버에 연결합니다.|[FTP 연결 관리자](ftp-connection-manager.md)|  
 |HTTP|웹 서버에 연결합니다.|[HTTP 연결 관리자](http-connection-manager.md)|  
 |MSMQ|메시지 큐에 연결합니다.|[MSMQ 연결 관리자](msmq-connection-manager.md)|  
@@ -85,8 +85,7 @@ ms.locfileid: "79112164"
 |ODBC|ODBC를 사용하여 데이터 원본에 연결합니다.|[ODBC 연결 관리자](odbc-connection-manager.md)|  
 |SMOServer|SMO( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) 서버에 연결합니다.|[SMO 연결 관리자](smo-connection-manager.md)|  
 |SMTP|SMTP 메일 서버에 연결합니다.|[SMTP 연결 관리자](smtp-connection-manager.md)|  
-|SQLMOBILE|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스에 연결합니다.|[SQL Server Compact Edition 연결 관리자](sql-server-compact-edition-connection-manager.md)|  
+|SQLMOBILE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스에 연결합니다.|[SQL Server Compact Edition 연결 관리자](sql-server-compact-edition-connection-manager.md)|  
 |WMI|서버에 연결하고 해당 서버에서 WMI(Windows Management Instrumentation)의 범위를 지정합니다.|[WMI 연결 관리자](wmi-connection-manager.md)|  
   
 ### <a name="connection-managers-available-for-download"></a>다운로드할 수 있는 연결 관리자  
@@ -95,14 +94,11 @@ ms.locfileid: "79112164"
 > [!IMPORTANT]  
 >  다음 표에 나열된 연결 관리자는 [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] 및 [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)]에서만 작동합니다.  
   
-|Type|Description|항목|  
+|유형|설명|항목|  
 |----------|-----------------|-----------|  
-|ORACLE|Oracle \<버전 정보> 서버에 연결 합니다.|Oracle 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity의 연결 관리자 구성 요소입니다. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://go.microsoft.com/fwlink/?LinkId=251526)다운로드 페이지를 참조하십시오.|  
-|SAPBI|SAP NetWeaver BI 버전 7 시스템에 연결합니다.|SAP BI 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI의 연결 관리자 구성 요소입니다. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft SQL Server 2008 기능 팩](https://www.microsoft.com/download/details.aspx?id=30440)다운로드 페이지를 참조하십시오.|  
-|TERADATA|Teradata \<버전 정보> 서버에 연결 합니다.|Teradata 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity의 연결 관리자 구성 요소입니다. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://go.microsoft.com/fwlink/?LinkId=251526)다운로드 페이지를 참조하십시오.|  
+|ORACLE|Oracle \<버전 정보> 서버에 연결 합니다.|Oracle 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://go.microsoft.com/fwlink/?LinkId=251526)다운로드 페이지를 참조하십시오.|  
+|SAPBI|SAP NetWeaver BI 버전 7 시스템에 연결합니다.|SAP BI 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft SQL Server 2008 기능 팩](https://www.microsoft.com/download/details.aspx?id=30440)다운로드 페이지를 참조하십시오.|  
+|TERADATA|Teradata \<버전 정보> 서버에 연결 합니다.|Teradata 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://go.microsoft.com/fwlink/?LinkId=251526)다운로드 페이지를 참조하십시오.|  
   
 ### <a name="custom-connection-managers"></a>사용자 지정 연결 관리자  
  사용자 지정 연결 관리자를 작성할 수도 있습니다. 자세한 내용은 [Developing a Custom Connection Manager](../extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)을 참조하세요.  

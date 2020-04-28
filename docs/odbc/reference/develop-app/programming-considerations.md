@@ -1,5 +1,5 @@
 ---
-title: 프로그래밍 고려 사항 | 마이크로 소프트 문서
+title: 프로그래밍 고려 사항 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,22 +11,22 @@ ms.assetid: 6a1b7b7e-5d08-4df8-aa4a-688da7da1b30
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 22f71822847d72751ba3c2e5bec2f8e7ce776bd0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81282183"
 ---
 # <a name="programming-considerations"></a>프로그래밍 고려 사항
-이 섹션에서는 ODBC 응용 프로그램 및 드라이버 작성과 관련된 여러 가지 항목에 대해 간략하게 설명합니다.  
+이 섹션에서는 ODBC 응용 프로그램 및 드라이버 작성과 관련 된 다양 한 항목을 간략하게 설명 합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
 -   [다중 스레딩](../../../odbc/reference/develop-app/multithreading.md)  
   
--   [맞춤](../../../odbc/reference/develop-app/alignment.md)  
+-   [할당](../../../odbc/reference/develop-app/alignment.md)  
   
--   [Unicode](../../../odbc/reference/develop-app/unicode.md)  
+-   [유니코드(Unicode)](../../../odbc/reference/develop-app/unicode.md)  
   
 -   [변환 DLL](../../../odbc/reference/develop-app/translation-dlls.md)  
   

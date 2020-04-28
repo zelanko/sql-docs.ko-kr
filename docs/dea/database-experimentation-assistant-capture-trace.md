@@ -13,10 +13,10 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.openlocfilehash: 1c87d791d5a5a16ec3b0d07c6a630f133a7f673c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289831"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>데이터베이스 실험 도우미에서 추적 캡처
@@ -43,7 +43,7 @@ SQL Server의 쿼리 캐싱은 평가 결과에 영향을 줄 수 있습니다. 
         > [!NOTE]
         > 추적 파일의 파일 경로는 SQL Server를 실행 하는 컴퓨터에 있어야 합니다. SQL Server 서비스가 특정 계정에 대해 설정 되지 않은 경우 서비스는 기록할 추적 파일에 대해 지정 된 폴더에 대 한 쓰기 권한이 필요할 수 있습니다.
 
-3. **예, 수동으로 백업을 수행 했습니다** ...를 선택 하 여 백업을 수행 했는지 확인 합니다. 확인란을 선택합니다.
+3. **예, 수동으로 백업을 수행 했습니다** ...를 선택 하 여 백업을 수행 했는지 확인 합니다. 선택합니다.
 
 4. **세부 정보 캡처**에서 다음 정보를 입력 하거나 선택 합니다.
 
@@ -138,7 +138,7 @@ DEA를 사용 하 여 서버 또는 단일 데이터베이스의 모든 데이�
 
 다음은 표시 될 수 있는 몇 가지 오류와 해결 방법입니다.
 
-|가능한 오류|해결 방법|  
+|가능한 오류|솔루션|  
 |---|---|  
 |대상 SQL Server에서 추적을 시작할 수 없습니다. 필요한 권한이 있는지 확인 하 고 SQL Server 계정에 지정 된 추적 파일 경로 Sql 오류 코드 (53)에 대 한 쓰기 권한이 있는지 확인 하십시오.|DEA 도구를 실행 하는 사용자는 SQL Server를 실행 하는 컴퓨터에 액세스할 수 있어야 합니다. 사용자에 게 sysadmin 역할이 할당 되어야 합니다.|  
 |대상 SQL Server에서 추적을 시작할 수 없습니다. 필요한 권한이 있는지 확인 하 고 SQL Server 계정에 지정 된 추적 파일 경로 Sql 오류 코드 (19062)에 대 한 쓰기 권한이 있는지 확인 하십시오.|지정 된 추적 경로가 없거나, 해당 폴더에 SQL Server 서비스가 실행 중인 계정에 대 한 쓰기 권한이 없는 경우 (예: 네트워크 서비스) 경로가 있어야 하 고 추적을 시작 하는 데 필요한 권한이 있어야 합니다.|  

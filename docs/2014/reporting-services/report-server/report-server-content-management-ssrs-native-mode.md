@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 74ec775d958c6842f284dea5bc90e5d45955423b
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289591"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>보고서 서버 콘텐츠 관리(SSRS 기본 모드)
@@ -44,11 +44,11 @@ ms.locfileid: "79289591"
 
 -   보고서 처리를 예약하고 요청 시 실행될 수 있는 보고서 처리와 캐시에서 로드되는 보고서 처리를 지정하여 서버에 대한 보고서 처리 요청의 균형을 조정합니다.
 
--   관리 작업을 수행할 권한은 미리 정의된 **시스템 관리자** 및 **콘텐츠 관리자** 역할을 통해 제공됩니다. 보고서 서버 내용을 효과적으로 관리하려면 두 역할을 모두 할당 받아야 합니다.
+-   관리 태스크를 수행할 권한은 미리 정의된 **시스템 관리자** 및 **내용 관리자**역할을 사용하여 제공합니다. 보고서 서버 내용을 효과적으로 관리하려면 두 역할을 모두 할당 받아야 합니다.
 
  보고서 서버 내용을 관리하기 위한 도구에는 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 또는 보고서 관리자가 있습니다. [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 를 사용하면 기본값을 설정하고 기능을 활성화할 수 있습니다. 보고서 관리자는 사용자에게 보고서 서버 항목 및 작업에 대한 액세스 권한을 부여하고, 보고서 및 기타 내용 유형을 확인 및 사용하고, 모든 공유 항목 및 보고서 배포 기능을 확인 및 사용하는 데 사용됩니다. 자세한 내용은 [Reporting Services 도구](../tools/reporting-services-tools.md)를 참조하세요.
 
-##  <a name="bkmk_ReportServerItems"></a>보고서 서버 항목
+##  <a name="report-server-items"></a><a name="bkmk_ReportServerItems"></a>보고서 서버 항목
  보고서 서버 항목에는 보고서, 공유 데이터 원본, 공유 데이터 세트, 보고서 파트, 리소스(보고서 서버에 저장되어 있지만 보고서 서버에서 처리하지 않는 항목) 및 폴더가 포함됩니다. 항목이 다른 항목에 종속될 수 있습니다. 예를 들어 보고서가 참조하는 공유 데이터 원본에 종속될 수 있습니다. 종속 항목을 이동하는 경우 보고서 서버에서 참조 정보를 자동으로 업데이트합니다.
 
  보고서 서버 항목을 보고서 서버 폴더 계층의 다른 폴더 위치로 이동할 수 있습니다. 항목을 이동하면 모든 속성(보안 설정 포함)도 항목과 함께 새 위치로 이동됩니다. 폴더를 이동하면 폴더 내의 모든 항목이 함께 이동됩니다.
@@ -66,7 +66,7 @@ ms.locfileid: "79289591"
 
  작업하는 모든 항목을 이동할 수 있는 것은 아닙니다. 구독이나 보고서 기록과 같이 보고서와 연결된 항목은 이동할 수 없습니다. 이러한 항목은 연결된 보고서와 함께 이동됩니다. 마찬가지로 공유 일정과 같이 폴더 계층 밖에 있는 항목도 이동할 수 없습니다. 항목 이동 권한이 없으면 항목을 이동할 수 없습니다. 항목 이동 권한은 해당 항목에 대한 역할 할당에서 "보고서 관리," "모델 관리," "폴더 관리" 및 "데이터 원본 관리" 태스크를 선택한 경우에만 부여됩니다.
 
-##  <a name="bkmk_Folders"></a> 폴더
+##  <a name="folders"></a><a name="bkmk_Folders"></a>폴더만
  폴더 계층은 보고서 서버가 저장 및 관리하는 항목을 처리하는 데 사용됩니다.  기본적으로 폴더 구조는 홈이라는 루트 노드와 선택적인 내 보고서 기능을 지원하는 예약된 폴더로 구성됩니다. 추가 폴더는 사용자 정의됩니다. 보고서 서버 폴더는 동일한 수준의 액세스 권한을 여러 항목에 부여하려는 경우에 유용합니다. 폴더에 대해 설정된 권한은 해당 폴더의 항목과 그 하위 폴더에도 상속됩니다. 예를 들어 홈 폴더 아래에 폴더 집합을 만들고 각 폴더에 팀 권한을 할당할 수 있습니다. 그러면 팀원이 필요에 따라 팀 폴더 아래에서 폴더를 사용자 지정할 수 있습니다.
 
  브라우저를 사용하여 보고서 서버에 직접 연결하는 경우 폴더 구조의 루트 노드는 보고서 서버 가상 디렉터리의 이름입니다. 루트 노드에서 보고서 서버 내용을 구성하기 위해 폴더를 생성, 수정 및 삭제할 수 있습니다. 내용을 폴더에 추가하고, 폴더 간에 항목을 이동하고, 폴더 이름 또는 위치를 수정하고, 필요 없는 폴더를 삭제할 수 있습니다.
@@ -117,8 +117,8 @@ ms.locfileid: "79289591"
 
  폴더에 포함된 항목의 표시 유형은 역할 할당(예: 항목을 볼 수 있는 권한) 및 폴더에 적용되는 보기 옵션에 따라 좌우됩니다. 보고서 관리자에서 내용 페이지를 목록 뷰나 자세히 보기로 설정할 수 있습니다. 일부 경우에 보고서나 항목이 목록 뷰에서 숨겨질 수 있습니다. 따라서 내용을 삭제하기 전에 자세한 정보 보기에서 폴더를 확인해야 합니다.
 
-##  <a name="bkmk_Resources"></a> 리소스
- 리소스는 보고서 서버에 저장되지만 보고서 서버에서 처리되지는 않는 관리되는 항목입니다. 일반적으로 리소스는 보고서 사용자에게 외부 콘텐츠를 제공합니다. .jpg 파일, 공간 데이터를 포함하는 ESRI 셰이프 파일 또는 보고서에 사용되는 비즈니스 규칙을 설명하는 HTML의 이미지를 예로 들 수 있습니다. JPG, SHP 또는 HTML 파일은 보고서 서버에 저장되지만 보고서 서버는 이러한 파일을 먼저 처리하지 않고 브라우저에 직접 전달합니다. 자세한 내용은 [이미지&#40;보고서 작성기 및 SSRS&#41;](../report-design/images-report-builder-and-ssrs.md) 및 [지도&#40;보고서 작성기 및 SSRS&#41;](../report-design/maps-report-builder-and-ssrs.md)의 "지도에 데이터 추가" 섹션을 참조하세요.
+##  <a name="resources"></a><a name="bkmk_Resources"></a>인사
+ 리소스는 보고서 서버에 저장되지만 보고서 서버에서 처리되지는 않는 관리되는 항목입니다. 일반적으로 리소스는 보고서 사용자에게 외부 콘텐츠를 제공합니다. .jpg 파일, 공간 데이터를 포함하는 ESRI 셰이프 파일 또는 보고서에 사용되는 비즈니스 규칙을 설명하는 HTML의 이미지를 예로 들 수 있습니다. JPG, SHP 또는 HTML 파일은 보고서 서버에 저장되지만 보고서 서버는 이러한 파일을 먼저 처리하지 않고 브라우저에 직접 전달합니다. 자세한 내용은 [보고서 작성기 및 ssrs&#41;이미지 &#40;](../report-design/images-report-builder-and-ssrs.md) 및 [Maps &#40;보고서 작성기 및 ssrs&#41;](../report-design/maps-report-builder-and-ssrs.md)의 "맵에 데이터 추가" 섹션을 참조 하세요.
 
 ### <a name="adding-and-viewing-a-resource"></a>리소스 추가 및 보기
  보고서 서버에 리소스를 추가하려면 다음과 같이 파일을 업로드하거나 게시합니다.
@@ -146,7 +146,7 @@ ms.locfileid: "79289591"
 
  자세한 내용은 [리소스 업데이트&#40;보고서 관리자&#41;](update-a-resource-report-manager.md)를 참조하세요.
 
-##  <a name="bkmk_MyReports"></a> 내 보고서
+##  <a name="my-reports"></a><a name="bkmk_MyReports"></a>내 보고서
  내 보고서 폴더는 유효한 도메인 계정으로 보고서 서버에 로그인하는 각 사용자에게 제공되는 개인 작업 영역입니다. 이 특수한 용도의 폴더에는 작업 중인 보고서, 광범위 배포용이 아닌 보고서 또는 요구에 맞게 수정된 보고서를 위한 스토리지를 제공합니다. 내 보고서 폴더에 저장된 항목 수나 크기를 제한하거나 내 보고서 폴더를 다른 사용자와 공유하도록 구성할 수 없습니다.
 
  기술적인 측면에서 볼 때 내 보고서는 각 사용자에게 보이는 가상 폴더의 이름(내 보고서)을 마스터 사용자 폴더 폴더와 사용자 이름에 따라 고유한 하위 폴더에 매핑하는 것입니다. 사용자가 자신의 내 보고서 폴더에 액세스할 때 실제로는 사용자 폴더 아래에 있는 자신의 하위 폴더로 리디렉션됩니다. 각 하위 폴더에는 사용자가 내 보고서 폴더에 추가하는 보고서와 항목을 스토리지할 수 있습니다.
@@ -163,18 +163,18 @@ ms.locfileid: "79289591"
 |---------------|------------------|-------------|
 |(공백)|[ ]|*Firstname Lastname* 은 *Firstname[ ]Lastname*|
 |\(백슬래시)|공백 문자 하나로 바뀝니다.|*DomainName\Username* 은 *DomainName Username*|
-|@(at 기호)|[at]|*username*@hotmail.com 은 *username*[at]hotmail.com이 됩니다.|
-|& (앰퍼샌드)|[amp]|*username*@*company*&*company.com* 은 *username*[at]*company*[amp]*company.com*|
-|$(달러 기호)|[dollar]|*User* $*Name* 은 *User*[ ][dollar]*Name*|
+|@(at 기호)|[at]|*username* @hotmail.com 은 *사용자 이름*[at] hotmail .com|
+|& (앰퍼샌드)|[amp]|*username*@*company*회사&*company.com* 는 *username*[at]*company*[amp]*company.com* 이 됩니다.|
+|$(달러 기호)|[dollar]|*사용자*이름은 *user*[] [$]*name* 이 됩니다.*Name*  $|
 
  내 보고서 기능은 선택적입니다. 보고서 서버를 설치하면 내 보고서는 기본적으로 해제되어 있습니다. 이 기능을 사용하도록 설정하는 방법에 대한 자세한 내용은 [내 보고서 설정 및 해제](enable-and-disable-my-reports.md)를 참조하세요. 자세한 내용은 [내 보고서 보안 설정](../security/secure-my-reports.md)을 참조하세요.
 
 ## <a name="tasks"></a>작업
  [폴더에 파일 업로드](upload-files-to-a-folder.md)
 
- [폴더 &#40;보고서 관리자 만들기, 삭제 또는 수정&#41;](create-delete-or-modify-a-folder-report-manager.md)
+ [폴더 만들기, 삭제 또는 수정&#40;보고서 관리자&#41;](create-delete-or-modify-a-folder-report-manager.md)
 
- [리소스 &#40;보고서 관리자 업데이트&#41;](update-a-resource-report-manager.md)
+ [리소스 업데이트&#40;보고서 관리자&#41;](update-a-resource-report-manager.md)
 
  [폴더에 파일 업로드](upload-files-to-a-folder.md)
 

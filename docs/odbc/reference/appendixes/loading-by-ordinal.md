@@ -1,5 +1,5 @@
 ---
-title: 서수로 적재 | 마이크로 소프트 문서
+title: 서 수로 로드 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ ms.assetid: 337d90ab-68eb-4940-a2f3-f7d5693ee766
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 64bff8dcdd3802f75dc402c9ada60f82580aca5c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81288723"
 ---
 # <a name="loading-by-ordinal"></a>서수별 로드
-ODBC *2.x에서는*연결 프로세스의 성능을 향상시키기 위해 서수에 의한 로딩을 수행할 수 있습니다. ODBC *2.x* 드라이버는 서수 199와 더미 함수를 내보전; 드라이버 관리자가 이를 감지하면 ODBC 함수의 주소를 이름이 아닌 서수로 확인합니다. 이 기능은 ODBC *2.x* 드라이버에서 계속 지원되지만 ODBC *3.x* 드라이버에는 지원되지 않습니다.
+ODBC 2.x에서 서 *수를 기준*으로 로드를 수행 하 여 연결 프로세스의 성능을 향상 시킬 수 있습니다. ODBC 2.x *드라이버는* 서 수가 199 인 더미 함수를 내보냅니다. 드라이버 관리자는이를 검색할 때 이름이 아니라 서 수로 ODBC 함수의 주소를 확인 합니다. 이 기능은 ODBC 2.x 드라이버에 대해서도 지원 되지만 ODBC *3.x 드라이버에* 는 지원 되지 *않습니다.*

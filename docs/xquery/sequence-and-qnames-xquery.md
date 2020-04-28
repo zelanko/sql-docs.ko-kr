@@ -1,5 +1,5 @@
 ---
-title: 시퀀스 및 Q이름(X쿼리) | 마이크로 소프트 문서
+title: Sequence 및 Qname (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c71a7139c3adb354923b3c953b367ab506f30545
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380784"
 ---
 # <a name="sequence-and-qnames-xquery"></a>시퀀스 및 QName(XQuery)
@@ -101,7 +101,7 @@ SELECT @x.query('<x>11</x>, 22');
 ## <a name="qname"></a>QName  
  XQuery의 모든 식별자는 QName입니다. QName은 네임스페이스 접두사 및 로컬 이름으로 구성됩니다. 이 구현에서 XQuery에 있는 변수 이름은 QName이며 접두사가 포함될 수 없습니다.  
   
- 형식이 지정되지 않은 **xml** 변수에 대해 쿼리가 지정되는 다음 예제를 고려하십시오.  
+ 형식화 되지 않은 **xml** 변수에 대해 쿼리를 지정 하는 다음 예제를 살펴보십시오.  
   
 ```  
 DECLARE @x xml;  
@@ -111,7 +111,7 @@ SELECT @x.query('/Root/a');
   
  식(`/Root/a`)에서 `Root` 및 `a`는 QName입니다.  
   
- 다음 예제에서는 형식이 지정된 **xml** 열에 대해 쿼리가 지정됩니다. 쿼리는 첫 번째 \<작업 센터 위치에서 모든 단계> 요소를 거세게 거합니다.  
+ 다음 예에서는 형식화 된 **xml** 열에 대해 쿼리가 지정 됩니다. 이 쿼리는 첫 번째 \<workcenter 위치에서 모든 단계> 요소를 반복 합니다.  
   
 ```  
 SELECT Instructions.query('  
@@ -143,12 +143,12 @@ WHERE ProductModelID=7;
 |Xml|`http://www.w3.org/XML/1998/namespace`|  
 |(접두사 없음)|`https://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   
- 만드는 모든 데이터베이스에는 **sys** XML 스키마 컬렉션이 있습니다. 이 컬렉션은 사용자가 만든 XML 스키마 컬렉션에서 액세스할 수 있도록 이러한 스키마를 준비해 둡니다.  
+ 사용자가 만드는 모든 데이터베이스에는 **sys** XML 스키마 컬렉션이 있습니다. 이 컬렉션은 사용자가 만든 XML 스키마 컬렉션에서 액세스할 수 있도록 이러한 스키마를 준비해 둡니다.  
   
 > [!NOTE]  
->  이 구현에서는 XQuery 사양에 `local` 설명된 대로 http://www.w3.org/2004/07/xquery-local-functions접두사를 지원하지 않습니다.  
+>  이 구현은의 http://www.w3.org/2004/07/xquery-local-functionsXQuery 사양에 `local` 설명 된 대로 접두사를 지원 하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XQuery 기초](../xquery/xquery-basics.md)  
   
   

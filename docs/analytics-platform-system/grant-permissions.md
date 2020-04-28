@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289701"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에 대 한 T-sql 권한 부여
@@ -146,7 +146,7 @@ GRANT CONTROL ON DATABASE:: AdventureWorksPDW2012 TO KimAbercrombie;
 ## <a name="grant-permissions-to-manage-logins-users-and-database-roles"></a>로그인, 사용자 및 데이터베이스 역할을 관리 하는 권한 부여
 이 섹션에서는 로그인, 데이터베이스 사용자 및 데이터베이스 역할을 관리 하는 권한을 부여 하는 방법을 설명 합니다.  
   
-### <a name="PermsAdminConsole"></a>로그인을 관리할 수 있는 권한 부여  
+### <a name="grant-permissions-to-manage-logins"></a><a name="PermsAdminConsole"></a>로그인을 관리할 수 있는 권한 부여  
 **로그인 추가 또는 관리**  
   
 다음 SQL 문은 [CREATE login](../t-sql/statements/create-login-transact-sql.md) 문을 사용 하 여 새 로그인을 만들고 [alter login](../t-sql/statements/alter-login-transact-sql.md) 문을 사용 하 여 기존 로그인을 변경할 수 있는 KimAbercrombie 이라는 로그인을 만듭니다.  
@@ -220,7 +220,7 @@ For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Se
 ## <a name="grant-permissions-to-monitor-the-appliance"></a>어플라이언스를 모니터링할 수 있는 권한 부여
 관리 콘솔 또는 SQL Server PDW 시스템 뷰를 사용 하 여 SQL Server PDW 어플라이언스를 모니터링할 수 있습니다. 로그인 하려면 어플라이언스를 모니터링 하려면 서버 수준 **VIEW SERVER STATE** 권한이 필요 합니다. 로그인에는 관리 콘솔 이나 **KILL** 명령을 사용 하 여 연결을 종료 하는 **ALTER ANY CONNECTION** 권한이 필요 합니다. 관리 콘솔을 사용 하는 데 필요한 사용 권한에 대 한 자세한 내용은 [관리자 콘솔을 사용할 수 있는 권한 부여 &#40;SQL Server PDW&#41;](#grant-permissions-to-use-the-admin-console)를 참조 하세요.  
   
-### <a name="PermsAdminConsole"></a>시스템 뷰를 사용 하 여 어플라이언스를 모니터링할 수 있는 권한 부여  
+### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views"></a><a name="PermsAdminConsole"></a>시스템 뷰를 사용 하 여 어플라이언스를 모니터링할 수 있는 권한 부여  
 다음 SQL 문은 라는 `monitor_login` 로그인을 만들고 `monitor_login` 로그인에 **VIEW SERVER STATE** 권한을 부여 합니다.  
   
 ```sql  
@@ -246,7 +246,7 @@ GO
 관리자 로그인을 만들려면 [고정 서버 역할](pdw-permissions.md#fixed-server-roles)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목
-[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
-[CREATE USER](../t-sql/statements/create-user-transact-sql.md)  
+[로그인 만들기](../t-sql/statements/create-login-transact-sql.md)  
+[사용자 만들기](../t-sql/statements/create-user-transact-sql.md)  
 [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)  
 [로드](load-overview.md)  

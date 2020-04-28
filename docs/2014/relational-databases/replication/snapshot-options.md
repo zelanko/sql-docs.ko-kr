@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a611de458537156740521dae8b732eed3e2653c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289481"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>SQL 복제에 대한 스냅샷 초기화 옵션 수정
@@ -25,7 +25,7 @@ ms.locfileid: "79289481"
 이 문서에서는 [스냅숏으로 구독을 초기화할](initialize-a-subscription-with-a-snapshot.md)때 다양 한 옵션을 수정 하는 방법을 설명 합니다.
 
 ## <a name="snapshot-format"></a>스냅숏 형식
-  **게시 속성 - \<게시&gt;** 대화 상자의 **스냅샷** 페이지에서 스냅샷 형식을 지정합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)을 참조하세요.  
+  **게시 속성 - \<Publication&gt;** 대화 상자의 **스냅샷** 페이지에서 스냅샷 형식을 지정합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)을 참조하세요.  
 
 1.  **게시 속성 - \<게시&gt;** 대화 상자의 **스냅샷** 페이지에서 **네이티브 SQL Server - 모든 구독자는 SQL Server를 실행하는 서버여야 합니다** 또는 **문자 - 게시자 또는 구독자가 SQL Server를 실행하지 않는 경우 필요합니다**를 선택합니다. 
 
@@ -42,16 +42,15 @@ ms.locfileid: "79289481"
   
 #### <a name="modify-the-default-snapshot-location"></a>기본 스냅샷 위치 수정  
   
-1.  **배포자 속성 - \<Distributor&gt;** 대화 상자의 **게시자** 페이지에서 기본 스냅샷 위치를 변경하려는 게시자의 속성 단추( **...** )를 클릭합니다.    
+1.  **배포자 속성- \<배포자>** 대화 상자의 **게시자** 페이지에서 기본 스냅숏 위치를 변경할 게시자의 속성 단추 (**...**)를 클릭 합니다.    
 2.  **게시자 속성 - \<Publisher&gt;** 대화 상자에서 **기본 스냅샷 폴더** 속성에 대한 값을 입력합니다.
 
     > [!NOTE]  
-    >  스냅샷 에이전트는 지정한 디렉터리에 대해 쓰기 권한이 있어야 하며 배포 에이전트 또는 병합 에이전트는 읽기 권한이 있어야 합니다. 끌어오기 구독을 사용하는 경우 공유 디렉터리를 \\\computername\snapshot과 같이 UNC(범용 명명 규칙) 경로로 지정해야 합니다. 자세한 내용은 [스냅샷 폴더 보안 설정](security/secure-the-snapshot-folder.md)을 참조하세요.    
+    >  스냅샷 에이전트는 지정한 디렉터리에 대해 쓰기 권한이 있어야 하며 배포 에이전트 또는 병합 에이전트는 읽기 권한이 있어야 합니다. 끌어오기 구독을 사용하는 경우 공유 디렉터리를 \\\computername\snapshot과 같이 UNC(범용 명명 규칙) 경로로 지정해야 합니다. 자세한 내용은 [스냅숏 폴더 보안](security/secure-the-snapshot-folder.md)설정을 참조 하세요.    
 1.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
 ### <a name="alternate-snapshot-location"></a>대체 스냅숏 위치
-  
-  **게시 속성 - **Publication&gt;** 대화 상자의 \<스냅샷** 페이지에 대체 스냅샷 위치를 지정합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)을 참조하세요. 
+  **게시 속성 - \<Publication&gt;** 대화 상자의 **스냅샷** 페이지에 대체 스냅샷 위치를 지정합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)을 참조하세요. 
 
   
 #### <a name="specify-an-alternate-snapshot-location"></a>대체 스냅숏 위치 지정  
@@ -60,14 +59,14 @@ ms.locfileid: "79289481"
     1.  **다음 폴더에 파일 보관**을 선택한 다음 **찾아보기** 를 클릭하여 디렉터리로 이동하거나 스냅샷 파일을 저장할 디렉터리 경로를 입력합니다.    
 
         > [!NOTE]  
-        >  스냅샷 에이전트는 지정한 디렉터리에 대해 쓰기 권한이 있어야 하며 배포 에이전트 또는 병합 에이전트는 읽기 권한이 있어야 합니다. 끌어오기 구독을 사용하는 경우 공유 디렉터리를 \\\computername\snapshot과 같이 UNC(범용 명명 규칙) 경로로 지정해야 합니다. 자세한 내용은 [스냅샷 폴더 보안 설정](security/secure-the-snapshot-folder.md)을 참조하세요.    
+        >  스냅샷 에이전트는 지정한 디렉터리에 대해 쓰기 권한이 있어야 하며 배포 에이전트 또는 병합 에이전트는 읽기 권한이 있어야 합니다. 끌어오기 구독을 사용하는 경우 공유 디렉터리를 \\\computername\snapshot과 같이 UNC(범용 명명 규칙) 경로로 지정해야 합니다. 자세한 내용은 [스냅숏 폴더 보안](security/secure-the-snapshot-folder.md)설정을 참조 하세요.    
     a.  두 위치 모두에 스냅샷 파일을 쓸 필요가 없으면 **기본 폴더에 파일 보관** 의 선택을 취소합니다.    
      스냅샷 파일을 압축하려면 **이 폴더에 있는 스냅샷 파일 압축**을 선택합니다. 압축은 일반적으로 느린 대역폭 연결에 사용되며 CD-ROM 등의 이동식 미디어와 같은 대체 스냅샷 위치로 사용됩니다.    
 1.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]   
 
 
 ## <a name="compress-snapshot-files"></a>스냅숏 파일 압축
-**게시 속성- \<게시>** 대화 상자의 **스냅숏** 페이지에서 파일을 압축 하도록 지정 합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)을 참조하세요.  
+파일이 **게시 속성 - \<Publication&gt;** 대화 상자의 **스냅샷** 페이지에서 압축되도록 지정합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 1.  **게시 속성 - \<게시&gt;** 대화 상자의 **스냅샷** 페이지에서 다음을 수행합니다.  
   
@@ -92,8 +91,7 @@ ms.locfileid: "79289481"
  스냅샷 파일을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 파일 형식으로 압축하는 중이면 스크립트도 압축되어 CAB 파일 내에 위치합니다. 압축 스냅샷 파일을 구독자로 전송하고 구독자의 작업 디렉터리로 압축을 풀면 프리 스냅샷 스크립트로 표시된 모든 스크립트가 실행됩니다. 마찬가지로 모든 포스트 스냅샷 스크립트도 압축이 풀리고 스냅샷 적용의 마지막 단계로 구독자에서 실행됩니다.  
 
 ### <a name="execute-a-script-before-or-after-a-snapshot-is-applied"></a>스냅숏 적용 전후에 스크립트 실행  
- 
-  **게시 속성 - **게시&gt;** 대화 상자의 \<스냅샷** 페이지에 적용되기 전 또는 후에 실행할 스크립트를 선택적으로 지정합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)을 참조하세요.  
+ **게시 속성 - \<Publication&gt;** 대화 상자의 **스냅샷** 페이지에 적용되기 전 또는 후에 실행할 스크립트를 선택적으로 지정합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)을 참조하세요.  
 
 
 1.  **게시 속성 - \<게시&gt;** 대화 상자의 **스냅샷** 페이지에서 다음을 수행합니다.    

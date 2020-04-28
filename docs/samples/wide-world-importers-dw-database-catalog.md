@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: 167b9d1d9990c20be8c01a3407a5423644e524f8
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112437"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW 데이터베이스 카탈로그
@@ -30,7 +30,7 @@ WideWorldImportersDW 데이터베이스는 데이터 웨어하우징 및 분석 
 
 여러 유형의 테이블은 세 가지 스키마로 구성 됩니다.
 
-|스키마|Description|
+|스키마|설명|
 |-----------------------------|---------------------|
 |차원|차원 테이블|
 |팩트|팩트 테이블.|  
@@ -63,9 +63,9 @@ WideWorldImportersDW에는 다음과 같은 팩트 테이블이 있습니다. �
 |-----------------------------|---------------------|---------------------|
 |주문|`Sales.Orders` 및 `Sales.OrderLines`|판매 직원, 선택/팩 광고 생산성 및 주문 선택 시간을 선택 합니다. 또한 낮은 재고 상황은 주문에 선행 됩니다.|
 |Sale|`Sales.Invoices` 및 `Sales.InvoiceLines`|판매 날짜, 배달 날짜, 시간별 수익성, 영업 사원 수익성|
-|Purchase|`Purchasing.PurchaseOrderLines`|예상 및 실제 리드 시간|
+|구매|`Purchasing.PurchaseOrderLines`|예상 및 실제 리드 시간|
 |트랜잭션|`Sales.CustomerTransactions` 및 `Purchasing.SupplierTransactions`|문제 날짜와 종료 날짜 및 금액을 측정 합니다.|
-|방식|`Warehouse.StockTransactions`|시간이 지남에 따라 이동 합니다.|
+|이동|`Warehouse.StockTransactions`|시간이 지남에 따라 이동 합니다.|
 |재고 보유|`Warehouse.StockItemHoldings`|직접 재고 수준 및 가치.|
 
 ## <a name="stored-procedures"></a>저장 프로시저

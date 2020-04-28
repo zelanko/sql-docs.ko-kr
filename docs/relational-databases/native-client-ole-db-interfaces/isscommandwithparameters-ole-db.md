@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bbdef1bda50ae2d5ace31b56f003e48f8b4bc86b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81290234"
 ---
 # <a name="isscommandwithparameters-ole-db"></a>ISSCommandWithParameters(OLE DB)
@@ -37,8 +37,8 @@ ms.locfileid: "81290234"
 |[ISSCommandWithParameters::SetParameterProperties &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)|매개 변수별 서수로 매개 변수 속성을 설정하거나, **SSPARAMPROPS** 구조의 배열을 지정하여 대량 매개 변수 속성을 설정합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [올레 DB&#41;&#40;인터페이스](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   
- [XML 데이터 유형 사용](../../relational-databases/native-client/features/using-xml-data-types.md)   
+ [인터페이스 &#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   
+ [XML 데이터 형식 사용](../../relational-databases/native-client/features/using-xml-data-types.md)   
  [사용자 정의 형식 사용](../../relational-databases/native-client/features/using-user-defined-types.md)  
   
   

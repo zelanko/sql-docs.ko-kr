@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2fb0c990c03e0dfbf1cd279efa7a249bb5bc9645
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112386"
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Microsoft SQL 용 와이드 세계 가져오기 샘플 데이터베이스
@@ -61,7 +61,7 @@ SQL Server Analysis Services는 차원 데이터 모델의 데이터에서 분�
 
 이 회사는 11 월 1 일에 시작 하는 재무 연도를 사용 합니다.
 
-## <a name="terms-of-use"></a>사용 약관
+## <a name="terms-of-use"></a>사용 조건
 
 예제 데이터베이스 및 예제 코드에 대 한 라이선스는 다음에 설명 되어 있습니다. [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 

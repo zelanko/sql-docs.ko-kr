@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1827cf0acf8e600c58efca82bb3223a00efb3e41
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79217115"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>DMV(동적 관리 뷰)를 사용하여 Analysis Services 모니터링
@@ -40,27 +40,23 @@ SELECT * FROM $System.<schemaRowset>
   
  [DMV 참조](#bkmk_ref)  
   
-##  <a name="bkmk_ben"></a>DMV 쿼리 사용의 이점  
+##  <a name="benefits-of-using-dmv-queries"></a><a name="bkmk_ben"></a>DMV 쿼리 사용의 이점  
  DMV 쿼리는 다른 방법으로는 제공되지 않는 작업 및 리소스 소비에 대한 정보를 반환합니다.  
   
  DMV 쿼리는 XML/A Discover 명령을 실행하는 대신 사용할 수 있는 방법입니다. DMV는 쿼리 구문이 SQL에 기반을 두기 때문에 대부분의 관리자에게는 DMV 쿼리를 작성하는 것이 더 간편합니다. 또한 읽고 복사하기가 쉬운 테이블 형식으로 결과 집합이 반환됩니다.  
   
-##  <a name="bkmk_ex"></a>예제 및 시나리오  
+##  <a name="examples-and-scenarios"></a><a name="bkmk_ex"></a>예제 및 시나리오  
  DMV 쿼리를 사용하면 서비스 세션 및 연결에 대한 정보를 확인할 수 있으며 특정 시점에 CPU나 메모리를 가장 많이 사용하는 개체가 어떤 것인지 파악할 수 있습니다. 이 섹션에서는 DMV 쿼리가 가장 보편적으로 사용되는 시나리오의 예를 제공합니다. DMV 쿼리를 사용하여 서버 인스턴스를 모니터링하는 것에 대한 자세한 내용은 [SQL Server 2008 R2 Analysis Services 작업 가이드](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) 를 참조하십시오.  
   
- 
-  `Select * from $System.discover_object_activity` /** 이 쿼리는 서비스를 마지막으로 시작한 이후의 개체 작업에 대해 보고합니다. 이 DMV를 기반으로 한 쿼리 예를 보려면 [새 System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)를 참조하세요.  
+ `Select * from $System.discover_object_activity` /** 이 쿼리는 서비스를 마지막으로 시작한 이후의 개체 작업에 대해 보고합니다. 이 DMV를 기반으로 한 쿼리 예를 보려면 [새 System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)를 참조하세요.  
   
- 
-  `Select * from $System.discover_object_memory_usage` /** 이 쿼리는 개체별 메모리 사용량에 대해 보고합니다.  
+ `Select * from $System.discover_object_memory_usage` /** 이 쿼리는 개체별 메모리 사용량에 대해 보고합니다.  
   
- 
-  `Select * from $System.discover_sessions` /** 이 쿼리는 세션 사용자 및 기간을 포함하여 활성 세션에 대해 보고합니다.  
+ `Select * from $System.discover_sessions` /** 이 쿼리는 세션 사용자 및 기간을 포함하여 활성 세션에 대해 보고합니다.  
   
- 
-  `Select * from $System.discover_locks` /** 이 쿼리는 특정 시점에 사용된 잠금의 스냅샷을 반환합니다.  
+ `Select * from $System.discover_locks` /** 이 쿼리는 특정 시점에 사용된 잠금의 스냅샷을 반환합니다.  
   
-##  <a name="bkmk_syn"></a>쿼리 구문  
+##  <a name="query-syntax"></a><a name="bkmk_syn"></a>쿼리 구문  
  DMV의 쿼리 엔진은 데이터 마이닝 파서입니다. DMV 쿼리 구문은 [SELECT&#40;DMX&#41;](/sql/dmx/select-dmx) 문을 기반으로 합니다.  
   
  DMV 쿼리 구문은 SQL SELECT 문에 기반을 두지만 SELECT 문의 전체 구문을 지원하지는 않습니다. 특히 JOIN, GROUP BY, LIKE, CAST 및 CONVERT는 지원되지 않습니다.  
@@ -85,14 +81,14 @@ WHERE OBJECT_TYPE = 'ACTIVE_RELATIONSHIP'
 Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAME] = 'Adventure Works DW')  
 ```  
   
-##  <a name="bkmk_tools"></a>도구 및 사용 권한  
+##  <a name="tools-and-permissions"></a><a name="bkmk_tools"></a>도구 및 사용 권한  
  DMV를 쿼리하려면 Analysis Services 인스턴스에 대한 시스템 관리자 권한이 있어야 합니다.  
   
  SQL Server Management Studio, Reporting Services 보고서, PerformancePoint 대시보드 등 MDX 또는 DMX 쿼리를 지원하는 클라이언트 애플리케이션은 모두 사용할 수 있습니다.  
   
  Management Studio에서 DMV 쿼리를 실행하려면 쿼리할 인스턴스에 연결한 다음 **새 쿼리**를 클릭합니다. MDX 또는 DMX 쿼리 창에서 쿼리를 실행할 수 있습니다.  
   
-##  <a name="bkmk_ref"></a>DMV 참조  
+##  <a name="dmv-reference"></a><a name="bkmk_ref"></a>DMV 참조  
  모든 스키마 행 집합에 DMV 인터페이스가 있는 것은 아닙니다. DMV를 사용하여 쿼리할 수 있는 모든 스키마 행 집합 목록을 반환하려면 다음 쿼리를 실행합니다.  
   
 ```  
@@ -120,7 +116,7 @@ ORDER BY TABLE_NAME ASC
 |[DISCOVER_ENUMERATORS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-enumerators-rowset)|특정 데이터 원본에 대해 지원되는 열거자에 대한 메타데이터를 반환합니다.|  
 |[DISCOVER_INSTANCES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/discover-instances-rowset)|지정한 인스턴스에 대한 정보를 반환합니다.<br /><br /> SYSTEMRESTRICTSCHEMA 및 추가 매개 변수가 필요합니다.|  
 |[DISCOVER_JOBS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-jobs-rowset)|현재 작업에 대한 정보를 반환합니다.|  
-|[XMLA &#40;DISCOVER_KEYWORDS 행 집합&#41;](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-keywords-rowset-xmla)|예약된 키워드 목록을 반환합니다.|  
+|[DISCOVER_KEYWORDS 행 집합&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-keywords-rowset-xmla)|예약된 키워드 목록을 반환합니다.|  
 |[DISCOVER_LITERALS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-literals-rowset)|XMLA에서 지원되는 데이터 형식 및 값을 포함하여 리터럴 목록을 반환합니다.|  
 |[DISCOVER_LOCKS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-locks-rowset)|특정 시점에 사용된 잠금의 스냅샷을 반환합니다.|  
 |[DISCOVER_MEMORYGRANT 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-memorygrant-rowset)|시작할 때 Analysis Services에서 할당한 메모리에 대한 정보를 반환합니다.|  
@@ -169,6 +165,6 @@ ORDER BY TABLE_NAME ASC
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 2008 R2 Analysis Services 작업 가이드](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
  [새 시스템 Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)   
- [제한 된 행 집합 및 Dmv에 대 한 새 SYSTEMRESTRICTEDSCHEMA 함수](https://go.microsoft.com/fwlink/?LinkId=231885)  
+ [제한된 행 집합 및 DMV에 대한 새 SYSTEMRESTRICTEDSCHEMA 함수](https://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

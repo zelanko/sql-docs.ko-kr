@@ -19,10 +19,10 @@ ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1a8480b7e512c697f3645006d453866963b81aa
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289911"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats(Transact-SQL)
@@ -33,9 +33,9 @@ ms.locfileid: "79289911"
 > [!NOTE]  
 > 또는 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서이를 호출 하려면 이름 **sys. dm_pdw_nodes_os_latch_stats**을 사용 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|latch_class|**nvarchar (120)**|래치 클래스의 이름입니다.|  
+|latch_class|**nvarchar(120)**|래치 클래스의 이름입니다.|  
 |waiting_requests_count|**bigint**|이 클래스의 래치 대기 수입니다. 이 카운터는 래치 대기가 시작될 때 증가합니다.|  
 |wait_time_ms|**bigint**|이 클래스의 총 래치 대기 시간(밀리초)입니다.<br /><br /> **참고:** 이 열은 래치 대기 중에 5 분 마다 업데이트 되며 래치 대기의 끝에는 업데이트 됩니다.|  
 |max_wait_time_ms|**bigint**|메모리 개체가 이 래치를 기다린 최대 시간입니다. 이 값이 지나치게 높으면 내부 교착 상태가 발생한 것일 수 있습니다.|  
@@ -60,23 +60,21 @@ GO
 > [!NOTE]  
 >  이러한 통계는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작할 경우 지속되지 않습니다. 모든 데이터는 통계가 마지막으로 다시 설정된 이후나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 시작된 이후로 누적됩니다.  
   
-## <a name="latches"></a>래치  
+## <a name="latches"></a><a name="latches"></a>래치  
  래치는 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소에서 사용 하는 잠금과 유사한 내부 경량 동기화 개체입니다. 래치는 주로 버퍼 또는 파일 액세스와 같은 작업 중에 데이터베이스 페이지를 동기화 하는 데 사용 됩니다. 각 래치는 단일 할당 단위와 연결되어 있습니다. 
   
  충돌 모드의 다른 스레드에서 래치를 보유하기 때문에 래치 요청에 즉시 권한을 부여할 수 없을 때 래치 대기가 발생합니다. 잠금과 달리 래치는 작업 후 즉시 해제되는데 이는 쓰기 작업에서도 마찬가지입니다.  
   
- 래치는 구성 요소와 용도에 기반하여 클래스로 그룹화됩니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에는 언제든지 특정 클래스의 래치가 0개 이상 존재할 수 있습니다.  
+ 래치는 구성 요소와 용도에 기반하여 클래스로 그룹화됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에는 언제든지 특정 클래스의 래치가 0개 이상 존재할 수 있습니다.  
   
 > [!NOTE]  
 > `sys.dm_os_latch_stats`는 즉시 권한이 부여되었거나 대기하지 않고 실패한 래치 요청을 추적하지 않습니다.  
   
  다음 표에서는 다양한 래치 클래스에 대한 간략한 설명을 제공합니다.  
   
-|래치 클래스|Description|  
+|래치 클래스|설명|  
 |-----------------|-----------------|  
-|ALLOC_CREATE_RINGBUF|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 내부적으로 할당 링 버퍼 만들기의 동기화를 초기화하는 데 사용됩니다.|  
+|ALLOC_CREATE_RINGBUF|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 내부적으로 할당 링 버퍼 만들기의 동기화를 초기화하는 데 사용됩니다.|  
 |ALLOC_CREATE_FREESPACE_CACHE|힙에 대한 내부 사용 가능한 공간 캐시의 동기화를 초기화하는 데 사용됩니다.|  
 |ALLOC_CACHE_MANAGER|내부 일관성 테스트를 동기화하는 데 사용됩니다.|  
 |ALLOC_FREESPACE_CACHE|힙과 BLOB(Binary Large Object)에 대한 사용 가능한 공간이 있는 페이지의 캐시에 대한 액세스를 동기화하는 데 사용됩니다. 이 클래스의 래치에 대한 경합은 동시에 여러 연결이 힙이나 BLOB에 행을 삽입하려고 할 때 발생할 수 있습니다. 개체를 분할하여 이 경합을 줄일 수 있습니다. 각 분할에는 자체 래치가 있습니다. 분할하면 여러 래치에 삽입이 분산됩니다.|  

@@ -1,5 +1,5 @@
 ---
-title: 통화 저장 절차(ODBC) | 마이크로 소프트 문서
+title: 저장 프로시저 호출 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: baa8ad51341311014d841c0e31251b0780828389
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81282015"
 ---
 # <a name="running-stored-procedures---call-stored-procedures"></a>저장 프로시저 실행 - 저장 프로시저 호출
@@ -27,7 +27,7 @@ ms.locfileid: "81282015"
   
   SQL 문이 ODBC CALL 이스케이프 절을 사용하여 저장 프로시저를 호출하는 경우 Microsoft® SQL Server™ 드라이버는 RPC(원격 저장 프로시저) 메커니즘을 사용하여 해당 프로시저를 SQL Server로 보냅니다. RPC 요청은 SQL Server의 문 구문 분석과 매개 변수 처리를 대부분 무시하므로 Transact-SQL EXECUTE 문을 사용할 때보다 속도가 향상됩니다.  
   
- 이 기능을 보여 주는 샘플 응용 프로그램에 대 한 [ODBC&#41;&#40;프로세스 반환 코드 및 출력 매개 변수를 ](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)참조 하십시오.  
+ 이 기능을 보여 주는 예제 응용 프로그램은 [ODBC&#41;&#40;반환 코드 및 출력 매개 변수 처리 ](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)를 참조 하세요.  
   
 ### <a name="to-run-a-procedure-as-an-rpc"></a>프로시저를 RPC로 실행하려면  
   
@@ -48,6 +48,6 @@ ms.locfileid: "81282015"
   [저장 프로시저 호출 일괄 처리](../../relational-databases/native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
  [저장 프로시저 실행](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [저장 프로시저 호출](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
- [프로시저](../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)  
+ [절차](../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: IPD의 자동 채우기 | 마이크로 소프트 문서
+title: IPD 자동 채우기 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ ms.assetid: 1184a7d8-d557-4140-843b-6633ae6deacc
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 1998ea1992ee7f14d87d01e348d955b017166088
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81285073"
 ---
 # <a name="automatic-population-of-the-ipd"></a>IPD의 자동 채우기
-일부 드라이버는 매개 변수화된 쿼리가 준비된 후 IPD 필드를 설정할 수 있습니다. 설명자 필드는 데이터 형식, 정밀도, 배율 및 기타 특성을 포함하여 매개 변수에 대한 정보로 자동으로 채워집니다. 이는 **SQLDescribeParam을**지원하는 것과 같습니다. 이 정보는 응용 프로그램에서 알지 못하는 매개 변수로 임시 쿼리를 수행할 때와 같이 검색할 수 있는 다른 방법이 없는 경우 응용 프로그램에 특히 유용할 수 있습니다.  
+일부 드라이버는 매개 변수가 있는 쿼리를 준비한 후 IPD의 필드를 설정할 수 있습니다. 설명자 필드는 데이터 형식, 전체 자릿수, 소수 자릿수 및 기타 특성을 포함 하 여 매개 변수에 대 한 정보로 자동으로 채워집니다. 이는 **SQLDescribeParam**를 지 원하는 것과 같습니다. 응용 프로그램에서 알지 못하는 매개 변수를 사용 하 여 임시 쿼리를 수행 하는 경우와 같이이 정보는 응용 프로그램에서 다른 방법으로 검색할 수 없는 경우에 특히 유용할 수 있습니다.  
   
- 응용 프로그램은 드라이버가 SQL_ATTR_AUTO_IPD *특성을* 사용하여 **SQLGetConnectAttr을** 호출하여 자동 채우기를 지원하는지 여부를 결정합니다. SQL_TRUE 반환되면 드라이버는 이를 지원하며 응용 프로그램은 SQL_ATTR_ENABLE_AUTO_IPD 문 특성을 SQL_TRUE 설정하여 이를 활성화할 수 있습니다.  
+ 응용 프로그램은 SQL_ATTR_AUTO_IPD *특성* 으로 **SQLGetConnectAttr** 를 호출 하 여 드라이버가 자동 채우기를 지원 하는지 여부를 확인 합니다. SQL_TRUE 반환 되는 경우 드라이버는이를 지원 하 고, 응용 프로그램은 SQL_ATTR_ENABLE_AUTO_IPD statement 특성을 SQL_TRUE로 설정 하 여이 기능을 사용 하도록 설정할 수 있습니다.  
   
- 자동 채우기가 지원되고 활성화되면 **드라이버는 SQLPrepare**에 대한 호출을 통해 매개 변수 마커를 포함하는 SQL 문이 준비된 후 IPD 필드를 채웁니다. 응용 프로그램은 **SQLGetDescField** 또는 **SQLGetDescRec**또는 **SQLDescribeParam을**호출하여 이 정보를 검색할 수 있습니다. 응용 프로그램은 이 정보를 사용하여 매개 변수에 가장 적합한 응용 프로그램 버퍼를 바인딩하거나 매개 변수에 대한 데이터 변환을 지정할 수 있습니다.  
+ 자동 채우기를 지원 하 고 사용 하도록 설정 하면 매개 변수 표식을 포함 하는 SQL 문이 **Sqlprepare**호출로 준비 된 후 드라이버가 IPD의 필드를 채웁니다. 응용 프로그램은 **SQLGetDescField** 또는 **SQLGetDescRec**또는 **SQLDescribeParam**를 호출 하 여이 정보를 검색할 수 있습니다. 응용 프로그램은이 정보를 사용 하 여 매개 변수에 대 한 가장 적절 한 응용 프로그램 버퍼를 바인딩하거나이에 대 한 데이터 변환을 지정할 수 있습니다.  
   
- IPD의 자동 채우기는 성능 저하를 생성할 수 있습니다. 응용 프로그램은 SQL_ATTR_ENABLE_AUTO_IPD 문 특성을 SQL_FALSE(기본값)으로 재설정하여 해제할 수 있습니다.
+ IPD를 자동으로 채우는 경우 성능 저하가 발생할 수 있습니다. 응용 프로그램은 SQL_ATTR_ENABLE_AUTO_IPD statement 특성을 SQL_FALSE (기본값)로 다시 설정 하 여 해제할 수 있습니다.

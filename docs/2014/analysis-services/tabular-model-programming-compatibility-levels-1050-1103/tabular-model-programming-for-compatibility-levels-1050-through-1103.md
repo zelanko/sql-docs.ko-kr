@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c9b04245e14be67242d5cd1ea6d257ac4fc6038
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525434"
 ---
 # <a name="tabular-model-programming"></a>테이블 형식 모델 프로그래밍
@@ -25,11 +25,11 @@ ms.locfileid: "79525434"
  이 섹션에서는 프로그래밍 방식으로 테이블 형식 엔터티 및 해당 속성을 사용하여 작업하는 방법에 대해 자세히 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [비즈니스 인텔리전스 &#40;CSDLBI&#41;에 대 한 CSDL 주석](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
+ [비즈니스 인텔리전스에 대한 CSDL 주석&#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
  [테이블 형식 개체 모델 이해](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
- [CSDL에 대 한 BI 주석에 대 한 기술 참조](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl)  
+ [CSDL용 BI 주석에 대한 기술 참조](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl)  
   
  [IMDEmbedded 인터페이스](imdembeddeddata-interface.md)  
   

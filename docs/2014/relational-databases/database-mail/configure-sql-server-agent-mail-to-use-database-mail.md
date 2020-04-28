@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3c2f5f0be09e9a60997308efd72c360348efc60
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289211"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>데이터베이스 메일을 사용하도록 SQL Server 에이전트 메일 구성
@@ -25,7 +25,7 @@ ms.locfileid: "79289211"
   
 -   **시작하기 전 주의 사항:**  
   
--   [필수 구성 요소](#Prerequisites)  
+-   [전제 조건](#Prerequisites)  
   
 -   [보안](#Security)  
   
@@ -33,25 +33,24 @@ ms.locfileid: "79289211"
   
 -   [후속 작업](#Follow_Up)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 조건  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
   
 -   데이터베이스 메일을 활성화합니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정이 사용할 데이터베이스 메일 계정을 만듭니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정이 사용할 데이터베이스 메일 계정을 만듭니다.  
   
--   에이전트 서비스 계정에서 사용할 데이터베이스 메일 프로필을 만들고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**msdb** 데이터베이스의 **DatabaseMailUserRole** 에 사용자를 추가합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정에서 사용할 데이터베이스 메일 프로필을 만들고 **msdb** 데이터베이스의 **DatabaseMailUserRole** 에 사용자를 추가합니다.  
   
 -   프로필을 **msdb** 데이터베이스의 기본 프로필로 설정합니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  프로필 계정을 만들고 저장 프로시저를 실행하는 사용자는 sysadmin 고정 서버 역할의 멤버여야 합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **데이터베이스 메일을 사용하도록 SQL Server 에이전트를 구성하려면**  
   
 -   개체 탐색기에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 확장합니다.  
@@ -68,7 +67,7 @@ ms.locfileid: "79289211"
   
 -   SQL Server 에이전트를 다시 시작합니다.  
   
-##  <a name="Follow_Up"></a> 후속 작업  
+##  <a name="follow-up-tasks"></a><a name="Follow_Up"></a> 후속 작업  
  경고 및 알림을 보내도록 에이전트를 구성하려면 다음 태스크를 수행해야 합니다.  
   
 -   [경고](../../ssms/agent/alerts.md)  

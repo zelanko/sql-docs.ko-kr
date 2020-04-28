@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74f81deb2d9f5e4fcb770217a228a8b081098d89
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289141"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services의 로그 작업
@@ -26,48 +26,45 @@ ms.locfileid: "79289141"
   
 -   [로그의 위치 및 유형](#bkmk_location)  
   
--   [로그 파일 구성 설정에 대 한 일반 정보](#bkmk_general)  
+-   [로그 파일 구성 설정에 대한 일반 정보](#bkmk_general)  
   
 -   [MSMDSRV 서비스 로그 파일](#bkmk_msmdsrv)  
   
 -   [쿼리 로그](#bkmk_querylog)  
   
--   [미니 덤프 (.mdmp) 파일](#bkmk_mdmp)  
+-   [미니 덤프(.mdmp) 파일](#bkmk_mdmp)  
   
 -   [팁과 모범 사례](#bkmk_tips)  
   
 > [!NOTE]  
 >  로깅에 대한 정보를 찾는 경우 처리 및 쿼리 실행 경로를 보여주는 추적 작업에도 관심을 가질 수 있습니다. 임시 및 지속적인 추적(예: 큐브 액세스 감사)에 대한 추적 개체와 비행 레코더, SQL Server Profiler 및 xEvent를 최대한 활용하는 방법에 대한 권장 사항은 [Analysis Services 인스턴스 모니터](monitor-an-analysis-services-instance.md)페이지의 링크를 통해 확인할 수 있습니다.  
   
-##  <a name="bkmk_location"></a>로그의 위치 및 유형  
+##  <a name="location-and-types-of-logs"></a><a name="bkmk_location"></a>로그의 위치 및 유형  
  Analysis Services에서는 아래 설명된 로그를 제공합니다.  
   
-|파일 이름 또는 위치|Type|사용 대상|기본적으로 설정|  
+|파일 이름 또는 위치|유형|사용 목적|기본적으로 설정|  
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|오류 로그|일상 모니터링 및 기본 문제 해결|예|  
-|관계형 데이터베이스의 OlapQueryLog 테이블|쿼리 로그|사용 최적화 마법사에 대한 입력 수집|예|  
-|SQLDmp\<guid> mdmp 파일|충돌 및 예외|상세한 문제 해결|예|  
+|관계형 데이터베이스의 OlapQueryLog 테이블|쿼리 로그|사용 최적화 마법사에 대한 입력 수집|아니요|  
+|SQLDmp\<guid> mdmp 파일|충돌 및 예외|상세한 문제 해결|아니요|  
   
  이 항목에서 다루지 않는 추가 정보는 [Microsoft 지원의 초기 데이터 수집 팁](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)링크를 참조하세요.  
   
-##  <a name="bkmk_general"></a>로그 파일 구성 설정에 대 한 일반 정보  
+##  <a name="general-information-on-log-file-configuration-settings"></a><a name="bkmk_general"></a>로그 파일 구성 설정에 대 한 일반 정보  
  각 로그에 대한 섹션은 \Program Files\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config 폴더의 msmdsrv.ini 서버 구성 파일에 있습니다. 파일 편집 지침은 [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md) 을 참조하세요.  
   
  가능한 경우 Management Studio의 서버 속성 페이지에서 로깅 속성을 설정하는 것이 좋습니다. 하지만 일부 경우에 관리 도구에 표시되지 않는 설정을 구성하려면 msmdsrv.ini 파일을 직접 편집해야 합니다.  
   
  ![로그 설정을 보여주는 config 파일의 섹션](../media/ssas-logfilesettings.png "로그 설정을 보여주는 config 파일의 섹션")  
   
-##  <a name="bkmk_msmdsrv"></a>MSMDSRV.INI 서비스 로그 파일  
+##  <a name="msmdsrv-service-log-file"></a><a name="bkmk_msmdsrv"></a>MSMDSRV.INI 서비스 로그 파일  
  Analysis Services에서는 \program files\Microsoft SQL Server\\<instance\>\Olap\Log에 있는 msmdsrv.log 파일에 서버 작업을 인스턴스별로 하나씩 기록합니다.  
   
  이 로그 파일은 각 서비스를 다시 시작하면 비워집니다. 이전 릴리스에서는 관리자가 로그 파일이 사용할 수 없을 정도로 커지기 전에 로그 파일을 플러시하기 위해 종종 서비스를 다시 시작했습니다. 이제 더 이상 그럴 필요가 없습니다. SQL Server 2012 SP2 이상에 도입된 구성 설정을 사용하면 로그 파일의 크기와 기록을 제어할 수 있습니다.  
   
--   
-  `MaxFileSizeMB`는 최대 로그 파일 크기(MB)를 지정합니다. 기본값은 256입니다. 유효한 대체 값은 양의 정수여야 합니다. 
-  `MaxFileSizeMB`에 도달하면 Analysis Services에서 현재 파일의 이름을 msmdsrv{current timestamp}.log 파일로 변경하고 새 msmdsrv.log 파일을 시작합니다.  
+-   `MaxFileSizeMB`는 최대 로그 파일 크기(MB)를 지정합니다. 기본값은 256입니다. 유효한 대체 값은 양의 정수여야 합니다. `MaxFileSizeMB`에 도달하면 Analysis Services에서 현재 파일의 이름을 msmdsrv{current timestamp}.log 파일로 변경하고 새 msmdsrv.log 파일을 시작합니다.  
   
--   `MaxNumberFiles`이전 로그 파일의 보존 기간을 지정 합니다. 기본값은 0(사용 안 함)입니다. 이 값을 양의 정수로 변경하면 여러 버전의 로그 파일을 유지할 수 있습니다. 
-  `MaxNumberFiles`에 도달하면 Analysis Services는 이름의 타임스탬프가 가장 오래된 파일을 삭제합니다.  
+-   `MaxNumberFiles`이전 로그 파일의 보존 기간을 지정 합니다. 기본값은 0(사용 안 함)입니다. 이 값을 양의 정수로 변경하면 여러 버전의 로그 파일을 유지할 수 있습니다. `MaxNumberFiles`에 도달하면 Analysis Services는 이름의 타임스탬프가 가장 오래된 파일을 삭제합니다.  
   
  이러한 설정을 사용하려면 다음을 수행합니다.  
   
@@ -99,7 +96,7 @@ ms.locfileid: "79289141"
   
 6.  서비스를 다시 시작합니다.  
   
-##  <a name="bkmk_querylog"></a>로그 쿼리  
+##  <a name="query-logs"></a><a name="bkmk_querylog"></a>로그 쿼리  
  쿼리 로그는 사용자의 MDX 또는 DAX 쿼리 활동을 기록하지 않는다는 점에서 다소 잘못된 명칭입니다. 그 대신 쿼리 로그는 Analysis Services에서 생성된 쿼리에 대한 데이터를 수집하며, 이 데이터는 이후에 사용 빈도 기반 최적화 마법사에서 데이터 입력으로 사용됩니다. 쿼리 로그에서 수집된 데이터는 분석에 직접 사용되지 않습니다. 특히, 데이터 세트는 데이터 세트의 일부가 쿼리에 포함되어 있음을 나타내는 0 또는 1로 구성된 비트 배열로 설명됩니다. 즉, 이 데이터는 마법사에 사용하기 위한 것입니다.  
   
  쿼리 모니터링 및 문제 해결을 위해 대부분의 개발자와 관리자는 **ASTrace**커뮤니티 도구를 사용하여 쿼리를 모니터링합니다. SQL Server Profiler, xEvents 또는 Analysis Services 추적을 사용할 수도 있습니다. 추적 관련 링크는 [Analysis Services 인스턴스 모니터](monitor-an-analysis-services-instance.md) 를 참조하세요.  
@@ -128,7 +125,7 @@ ms.locfileid: "79289141"
   
  쿼리 로그 구성에 대한 자세한 내용은 [Analysis Services 쿼리 로그 구성](https://technet.microsoft.com/library/Cc917676) 을 참조하세요. 이 백서는 오래 전에 작성되었지만 쿼리 로그 구성은 최신 릴리스에서 변경되지 않았으므로 포함된 정보는 여전히 적용됩니다.  
   
-##  <a name="bkmk_mdmp"></a>미니 덤프 (.mdmp) 파일  
+##  <a name="mini-dump-mdmp-files"></a><a name="bkmk_mdmp"></a>미니 덤프 (.mdmp) 파일  
  덤프 파일은 비정상적 이벤트를 분석하는 데 사용되는 데이터를 캡처합니다. Analysis Services에서는 서버 충돌, 예외 및 일부 구성 오류에 응답하여 미니 덤프(.mdmp)를 자동으로 생성합니다. 기능을 사용하도록 설정해도 충돌 보고서를 자동으로 보내지 않습니다.  
   
  충돌 보고서는 Msmdsrv.ini 파일의 Exception 섹션을 통해 구성합니다. 이러한 설정은 메모리 덤프 파일 생성을 제어합니다. 다음 코드 조각은 기본값을 보여 줍니다.  
@@ -151,39 +148,36 @@ ms.locfileid: "79289141"
   
  **충돌 보고서 구성**  
   
- Microsoft 지원에서 별도로 지시하지 않는 한 대부분의 관리자는 기본 설정을 사용합니다. 
-  [Analysis Services를 구성하여 메모리 덤프 파일을 생성하는 방법](https://support.microsoft.com/kb/919711)라는 오래된 기술 자료 문서는 덤프 파일을 구성하는 방법에 대한 지침을 제공하는 데 사용됩니다.  
+ Microsoft 지원에서 별도로 지시하지 않는 한 대부분의 관리자는 기본 설정을 사용합니다. [Analysis Services를 구성하여 메모리 덤프 파일을 생성하는 방법](https://support.microsoft.com/kb/919711)라는 오래된 기술 자료 문서는 덤프 파일을 구성하는 방법에 대한 지침을 제공하는 데 사용됩니다.  
   
  수정될 가능성이 가장 높은 구성 설정은 메모리 덤프 파일을 생성할지 여부를 결정하는 데 사용되는 `CreateAndSendCrashReports` 설정입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0|메모리 덤프 파일을 해제합니다. 예외 섹션 아래의 모든 다른 설정은 무시됩니다.|  
 |1|(기본값) 사용하도록 설정되지만, 메모리 덤프 파일을 보내지 않습니다.|  
 |2|사용하도록 설정되고 오류 보고서를 Microsoft로 자동으로 보냅니다.|  
   
- 
-  `CrashReportsFolder`는 덤프 파일의 위치입니다. 기본적으로 .mdmp 파일 및 연결된 로그 레코드는 \Olap\Log 폴더에 있습니다.  
+ `CrashReportsFolder`는 덤프 파일의 위치입니다. 기본적으로 .mdmp 파일 및 연결된 로그 레코드는 \Olap\Log 폴더에 있습니다.  
   
- 
-  `SQLDumperFlagsOn`은 전체 덤프를 생성하는 데 사용됩니다. 기본적으로 전체 덤프는 사용되지 않습니다. 이 속성을 `0x34`로 설정할 수 있습니다.  
+ `SQLDumperFlagsOn`은 전체 덤프를 생성하는 데 사용됩니다. 기본적으로 전체 덤프는 사용되지 않습니다. 이 속성을 `0x34`로 설정할 수 있습니다.  
   
  다음 링크는 자세한 배경 정보를 제공합니다.  
   
--   [미니 덤프를 사용 하 여 SQL Server 자세히 보기](https://blogs.msdn.com/b/sqlcat/archive/2009/09/11/looking-deeper-into-sql-server-using-minidumps.aspx)  
+-   [미니 덤프를 사용하여 SQL Server 자세히 보기](https://blogs.msdn.com/b/sqlcat/archive/2009/09/11/looking-deeper-into-sql-server-using-minidumps.aspx)  
   
 -   [사용자 모드 덤프 파일을 만드는 방법](https://support.microsoft.com/kb/931673)  
   
--   [Sqldumper.exe 유틸리티를 사용 하 여 SQL Server에서 덤프 파일을 생성 하는 방법](https://support.microsoft.com/kb/917825)  
+-   [Sqldumper.exe 유틸리티를 사용하여 SQL Server에서 덤프 파일을 생성하는 방법](https://support.microsoft.com/kb/917825)  
   
-##  <a name="bkmk_tips"></a>팁과 모범 사례  
+##  <a name="tips-and-best-practices"></a><a name="bkmk_tips"></a>팁과 모범 사례  
  이 섹션에서는 이 문서 전체에서 언급되는 팁에 대해 간략하게 설명합니다.  
   
 -   msmdsrv 로그 파일의 크기와 수를 제어하도록 msmdsrv.log 파일을 구성합니다. 설정은 기본적으로 사용되지 않으므로 설치 후 단계로 설정을 추가해야 합니다. 이 항목의 [MSMDSRV 서비스 로그 파일](#bkmk_msmdsrv) 을 참조하세요.  
   
 -   서버 작업에 대한 정보를 가져오는 데 사용되는 리소스에 대한 자세한 내용은 Microsoft 고객 지원 서비스의 [초기 데이터 수집](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)블로그 게시물을 참조하세요.  
   
--   쿼리 로그 대신 ASTrace2012를 사용하여 큐브를 쿼리 중인 사용자에 대해 알아봅니다. 쿼리 로그는 일반적으로 사용 빈도 기반 최적화 마법사에 대한 입력을 제공하는 데 사용되며 쿼리 로그에 캡처되는 데이터는 읽거나 해석하기 쉽지 않습니다. ASTrace2012는 쿼리 작업을 캡처하는 데 널리 사용되는 커뮤니티 도구입니다. 다운로드 링크는 [Microsoft SQL Server 커뮤니티 샘플: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/)를 참조하세요.  
+-   쿼리 로그 대신 ASTrace2012를 사용하여 큐브를 쿼리 중인 사용자에 대해 알아봅니다. 쿼리 로그는 일반적으로 사용 빈도 기반 최적화 마법사에 대한 입력을 제공하는 데 사용되며 쿼리 로그에 캡처되는 데이터는 읽거나 해석하기 쉽지 않습니다. ASTrace2012는 쿼리 작업을 캡처하는 데 널리 사용되는 커뮤니티 도구입니다. [Microsoft SQL Server 커뮤니티 샘플: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Analysis Services 인스턴스 관리](analysis-services-instance-management.md)   

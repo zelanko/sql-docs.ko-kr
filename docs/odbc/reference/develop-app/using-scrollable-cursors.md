@@ -1,5 +1,5 @@
 ---
-title: 스크롤 가능한 커서 사용 | 마이크로 소프트 문서
+title: 스크롤 가능 커서 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ ms.assetid: c5d795ba-70b0-420f-a944-b1894061a755
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9a73f001146691edb8a59d8eee503ae3762fc541
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81289134"
 ---
 # <a name="using-scrollable-cursors"></a>스크롤 가능 커서 사용
-스크롤 가능한 커서를 사용하려면 다음 세 단계가 필요합니다.  
+스크롤 가능 커서를 사용 하려면 다음 세 단계가 필요 합니다.  
   
-1.  커서 기능을 확인합니다.  
+1.  커서 기능을 결정 합니다.  
   
-2.  커서를 설정합니다.  
+2.  커서를 설정 합니다.  
   
-3.  행을 스크롤하고 가져옵니다.  
+3.  행을 스크롤하고 페치합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

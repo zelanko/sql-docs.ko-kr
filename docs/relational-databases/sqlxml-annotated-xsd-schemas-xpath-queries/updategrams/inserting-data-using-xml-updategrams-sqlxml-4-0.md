@@ -35,10 +35,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 671dc9c8a0091a2fb14a4aa1c42ea8246b376c7a
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112263"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 삽입(SQLXML 4.0)
@@ -72,8 +72,7 @@ ms.locfileid: "79112263"
 ## <a name="after-block"></a>\<> 블록 이후  
  After>블록에서 하나 이상의 레코드를 지정할 수 있습니다. ** \<**  
   
- After>블록이 특정 열에 대 한 값을 제공 하지 않으면 updategram는 주석이 추가 된 스키마에 지정 된 기본값을 사용 합니다 (스키마가 지정 된 경우). ** \<** 스키마가 열의 기본값을 지정 하지 않는 경우 updategram는이 열에 명시적 값을 지정 하지 않고 대신 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본값 (지정 된 경우)을이 열에 할당 합니다. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본값이 없고 열에서 NULL 값을 허용하는 경우 Updategram에서 열 값을 NULL로 설정합니다. 열에 기본값이 없고 NULL 값을 허용하지도 않는 경우 명령이 실패하고 Updategram에서 오류를 반환합니다. 선택적인 **updg: returnid** 특성은 id 유형 열이 있는 테이블에 레코드가 추가 될 때 시스템에서 생성 하는 id 값을 반환 하는 데 사용 됩니다.  
+ After>블록이 특정 열에 대 한 값을 제공 하지 않으면 updategram는 주석이 추가 된 스키마에 지정 된 기본값을 사용 합니다 (스키마가 지정 된 경우). ** \<** 스키마가 열의 기본값을 지정 하지 않는 경우 updategram는이 열에 명시적 값을 지정 하지 않고 대신 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본값 (지정 된 경우)을이 열에 할당 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본값이 없고 열에서 NULL 값을 허용하는 경우 Updategram에서 열 값을 NULL로 설정합니다. 열에 기본값이 없고 NULL 값을 허용하지도 않는 경우 명령이 실패하고 Updategram에서 오류를 반환합니다. 선택적인 **updg: returnid** 특성은 id 유형 열이 있는 테이블에 레코드가 추가 될 때 시스템에서 생성 하는 id 값을 반환 하는 데 사용 됩니다.  
   
 ## <a name="updgid-attribute"></a>updg:id 특성  
  Updategram는 레코드만 삽입 하는 경우 updategram에 **updg: id** 특성이 필요 하지 않습니다. **Updg: id**에 대 한 자세한 내용은 [XML UPDATEGRAMS &#40;SQLXML 4.0&#41;를 사용 하 여 데이터 업데이트 ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md)를 참조 하세요.  
@@ -211,8 +210,7 @@ ms.locfileid: "79112263"
 ```  
   
 ### <a name="c-working-with-valid-sql-server-characters-that-are-not-valid-in-xml"></a>C. 유효한 XML이 아닌 유효한 SQL Server 문자 작업  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 테이블 이름은 Northwind 데이터베이스의 Order Details 테이블과 같이 공백을 포함할 수 있습니다. 그러나 잘못 된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 식별자 인 xml 문자는 유효 하지 않지만 잘못 된 xml 식별자는 ' __xHHHH\_\_'를 인코딩 값으로 사용 하 여 인코딩할 수 있습니다. 여기서 HHHH는 가장 중요 한 비트 우선 순서로 문자에 대 한 4 자리 16 진수 UCS-2 코드를 나타냅니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 테이블 이름은 Northwind 데이터베이스의 Order Details 테이블과 같이 공백을 포함할 수 있습니다. 그러나 잘못 된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 식별자 인 xml 문자는 유효 하지 않지만 잘못 된 xml 식별자는 ' __xHHHH\_\_'를 인코딩 값으로 사용 하 여 인코딩할 수 있습니다. 여기서 HHHH는 가장 중요 한 비트 우선 순서로 문자에 대 한 4 자리 16 진수 UCS-2 코드를 나타냅니다.  
   
 > [!NOTE]  
 >  이 예에서는 Northwind 데이터베이스를 사용합니다. 이 [Microsoft 웹 사이트](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)에서 다운로드할 수 있는 SQL 스크립트를 사용 하 여 Northwind 데이터베이스를 설치할 수 있습니다.  

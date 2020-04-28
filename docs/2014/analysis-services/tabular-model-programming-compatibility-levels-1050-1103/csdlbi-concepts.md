@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a51393748d47159cfc4cf6bf8bd25e50307cfb7
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525444"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI 개념
@@ -29,8 +29,7 @@ ms.locfileid: "79525444"
   
  모델은 다음과 같은 주요 엔터티, 연결 및 속성이 포함된 네임스페이스입니다.  
   
--   
-  `EntityContainer`는 모델의 테이블을 나열합니다.  
+-   `EntityContainer`는 모델의 테이블을 나열합니다.  
   
 -   각 테이블은 `EntityContainer`를 사용하여 `EntitySet`로 나열됩니다.  
   
@@ -38,8 +37,7 @@ ms.locfileid: "79525444"
   
 -   BISM이 테이블 및 해당 열에 대해 추가 세부 정보(정렬 및 표시용 속성 포함)를 제공하도록 `EntityType` 요소가 확장됩니다.  
   
--   
-  `Measure` 요소는 모델에 사용할 수 있는 계산을 정의합니다. 새 `KPI` 요소를 사용하면 특수 표시 특성 집합을 추가하여 측정값을 KPI로 전환할 수 있습니다.  
+-   `Measure` 요소는 모델에 사용할 수 있는 계산을 정의합니다. 새 `KPI` 요소를 사용하면 특수 표시 특성 집합을 추가하여 측정값을 KPI로 전환할 수 있습니다.  
   
 -   별도의 큐브 뷰 표현은 없습니다. 큐브 뷰에 포함되지 않은 열과 테이블은 CSDL로 표시되지만 `Hidden` 특성을 사용하여 플래그가 지정됩니다.  
   
@@ -60,8 +58,7 @@ ms.locfileid: "79525444"
   
 ```  
   
- 
-  `EntitySet`에는 테이블의 열이나 데이터에 대한 정보가 없습니다. 열과 해당 속성에 대한 자세한 설명은 EntityType 요소에 제공됩니다.  
+ `EntitySet`에는 테이블의 열이나 데이터에 대한 정보가 없습니다. 열과 해당 속성에 대한 자세한 설명은 EntityType 요소에 제공됩니다.  
   
  각 엔터티(테이블)에 대한 `EntitySet` 요소에는 키 열, 열의 데이터 형식과 길이, Null 허용 여부, 정렬 동작 등을 정의하는 속성 모음이 포함됩니다. 예를 들어 다음 CSDL 발췌 구문에서는 Customer 테이블에 있는 세 개의 열을 설명합니다. 첫 번째 열은 모델에 내부적으로 사용되며 숨겨진 특수한 열입니다.  
   
@@ -111,11 +108,9 @@ ms.locfileid: "79525444"
 ### <a name="name-properties-and-naming-conventions"></a>이름 속성 및 명명 규칙  
  CSDLBI 스키마는 키로 사용할 수 있는 고유 이름과 식별자를 각 엔터티에 제공합니다. 또한 일부 엔터티는 표시용으로 사용되는 캡션과 엔터티가 사용되는 위치에 따라 달라지는 컨텍스트 이름을 가질 수 있습니다.  
   
- 
-  `Documentation` 요소는 보고서 디자이너가 엔터티를 설명할 기회를 제공하여 비즈니스 사용자가 데이터의 의미를 이해하도록 돕습니다. 일부 엔터티는 애플리케이션이나 클라이언트에서 사용할 추가 메타데이터를 제공하는 `Annotation` 특성을 한 개 이상 허용하기도 합니다.  
+ `Documentation` 요소는 보고서 디자이너가 엔터티를 설명할 기회를 제공하여 비즈니스 사용자가 데이터의 의미를 이해하도록 돕습니다. 일부 엔터티는 애플리케이션이나 클라이언트에서 사용할 추가 메타데이터를 제공하는 `Annotation` 특성을 한 개 이상 허용하기도 합니다.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 도구로 모델을 생성하는 경우 개체를 위해 만든 이름은 개체 이름 지정과 이름의 고유성을 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 규칙을 따릅니다. 그러나 CSDLBI는 C# 식별자에 대한 명명 규칙을 준수해야 하는 EDF(엔터티 데이터 프레임워크)를 기반으로 하기 때문에 서버에서 모델의 CSDLBI 출력을 만들 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 스키마에서 사용하는 이름을 가져와서 EDF 요구 사항에 맞는 새 개체 이름을 자동으로 만듭니다. 다음 표에서는 새 이름을 생성하기 위한 작업에 대해 설명합니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 도구로 모델을 생성하는 경우 개체를 위해 만든 이름은 개체 이름 지정과 이름의 고유성을 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 규칙을 따릅니다. 그러나 CSDLBI는 C# 식별자에 대한 명명 규칙을 준수해야 하는 EDF(엔터티 데이터 프레임워크)를 기반으로 하기 때문에 서버에서 모델의 CSDLBI 출력을 만들 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 스키마에서 사용하는 이름을 가져와서 EDF 요구 사항에 맞는 새 개체 이름을 자동으로 만듭니다. 다음 표에서는 새 이름을 생성하기 위한 작업에 대해 설명합니다.  
   
 |규칙|작업|  
 |----------|------------|  
@@ -151,6 +146,6 @@ ms.locfileid: "79525444"
  **제한 사항:** 셀 보안은 지원 되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [비즈니스 인텔리전스 &#40;CSDLBI&#41;에 대 한 CSDL 주석](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
+ [비즈니스 인텔리전스에 대한 CSDL 주석&#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
   

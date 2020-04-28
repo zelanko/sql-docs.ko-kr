@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0348c262453d2de8e4db0c379b5bf70a2d7d7977
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525454"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>비즈니스 인텔리전스에 대한 CSDL 주석(CSDLBI)
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 CSDLBI(비즈니스 인텔리전스 포함 개념 스키마 정의 언어) 주석이라는 XML 형식으로 테이블 형식 모델 정의를 표현할 수 있도록 합니다.  
   
  이 항목에서는 CSDLBI의 개요와 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 모델에서 CSDLBI를 사용하는 방법을 설명합니다.  
@@ -26,12 +25,11 @@ ms.locfileid: "79525454"
 ## <a name="understanding-the-role-of-csdl"></a>CSDL의 역할 이해  
  CSDL(개념 스키마 데이터 언어)은 엔터티, 관계 및 함수를 설명하는 XML 기반 언어입니다. CSDL은 엔터티 데이터 프레임워크의 일부로 정의됩니다. BI 주석은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 사용하여 데이터 모델링을 지원하도록 설계된 확장 프로그램입니다.  
   
- CSDL이 엔터티 데이터 프레임워크와 호환되기는 하지만 엔터티 관계 모델을 이해하거나 모델을 기반으로 테이블 형식 모델이나 보고서를 작성할 수 있는 특수한 도구가 있어야 할 필요는 없습니다. 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]와 같은 클라이언트 도구 또는 AMO와 같은 API를 사용하여 모델을 작성하고 모델을 서버에 배포합니다. 클라이언트는 모델 정의 파일을 사용하여 모델에 연결하며, 이것은 보고서 디자이너와 보고서 소비자가 사용할 수 있도록 대개 SharePoint 라이브러리에 게시됩니다. 자세한 내용은 다음 링크를 참조하십시오.  
+ CSDL이 엔터티 데이터 프레임워크와 호환되기는 하지만 엔터티 관계 모델을 이해하거나 모델을 기반으로 테이블 형식 모델이나 보고서를 작성할 수 있는 특수한 도구가 있어야 할 필요는 없습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]와 같은 클라이언트 도구 또는 AMO와 같은 API를 사용하여 모델을 작성하고 모델을 서버에 배포합니다. 클라이언트는 모델 정의 파일을 사용하여 모델에 연결하며, 이것은 보고서 디자이너와 보고서 소비자가 사용할 수 있도록 대개 SharePoint 라이브러리에 게시됩니다. 자세한 내용은 다음 링크를 참조하십시오.  
   
--   [테이블 형식 모델 솔루션 &#40;SSAS 테이블 형식&#41;](../tabular-model-solutions-ssas-tabular.md)  
+-   [테이블 형식 모델 솔루션&#40;SSAS 테이블 형식&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
--   [테이블 형식 모델 솔루션 배포 &#40;SSAS 테이블 형식&#41;](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+-   [테이블 형식 모델 솔루션 배포&#40;SSAS 테이블 형식&#41;](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
 -   [PowerPivot BI 의미 체계 모델 연결 &#40;. bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
   
@@ -51,8 +49,7 @@ ms.locfileid: "79525454"
   
  **CSDLBI 1.0**  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델을 지원하기 위한 CSDL 스키마에 대한 초기 추가 기능 집합에는 데이터 모델링, 사용자 지정 계산 및 향상된 프레젠테이션을 지원하는 주석이 포함되었습니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델을 지원하기 위한 CSDL 스키마에 대한 초기 추가 기능 집합에는 데이터 모델링, 사용자 지정 계산 및 향상된 프레젠테이션을 지원하는 주석이 포함되었습니다.  
   
 -   테이블 형식 모델을 지원하는 새로운 요소 및 속성. 예를 들어, 모델을 채우는 데 사용되는 데이터베이스 쿼리 유형을 지정하기 위한 속성이 추가되었습니다.  
   

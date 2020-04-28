@@ -34,10 +34,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71aba1741b777a593f951300a975df4736525211
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112197"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 삽입(SQLXML 4.0)
@@ -70,8 +70,7 @@ ms.locfileid: "79112197"
 ## <a name="after-block"></a>\<> 블록 이후  
  After>블록에서 하나 이상의 레코드를 지정할 수 있습니다. ** \<**  
   
- After>블록이 특정 열에 대 한 값을 제공 하지 않으면 updategram는 주석이 추가 된 스키마에 지정 된 기본값을 사용 합니다 (스키마가 지정 된 경우). ** \<** 스키마가 열의 기본값을 지정 하지 않는 경우 updategram는이 열에 명시적 값을 지정 하지 않고 대신 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본값 (지정 된 경우)을이 열에 할당 합니다. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본값이 없고 열에서 NULL 값을 허용하는 경우 Updategram에서 열 값을 NULL로 설정합니다. 열에 기본값이 없고 NULL 값을 허용하지도 않는 경우 명령이 실패하고 Updategram에서 오류를 반환합니다. 선택적 `updg:returnid` 특성은 IDENTITY 유형 열이 있는 테이블에 레코드가 추가될 때 시스템에서 생성하는 ID 값을 반환하는 데 사용됩니다.  
+ After>블록이 특정 열에 대 한 값을 제공 하지 않으면 updategram는 주석이 추가 된 스키마에 지정 된 기본값을 사용 합니다 (스키마가 지정 된 경우). ** \<** 스키마가 열의 기본값을 지정 하지 않는 경우 updategram는이 열에 명시적 값을 지정 하지 않고 대신 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본값 (지정 된 경우)을이 열에 할당 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본값이 없고 열에서 NULL 값을 허용하는 경우 Updategram에서 열 값을 NULL로 설정합니다. 열에 기본값이 없고 NULL 값을 허용하지도 않는 경우 명령이 실패하고 Updategram에서 오류를 반환합니다. 선택적 `updg:returnid` 특성은 IDENTITY 유형 열이 있는 테이블에 레코드가 추가될 때 시스템에서 생성하는 ID 값을 반환하는 데 사용됩니다.  
   
 ## <a name="updgid-attribute"></a>updg:id 특성  
  Updategram에서 레코드만 삽입하는 경우에는 `updg:id` 특성이 필요하지 않습니다. 에 대 한 `updg:id`자세한 내용은 [XML Updategrams을 사용 하 여 데이터 업데이트 &#40;SQLXML 4.0&#41;](updating-data-using-xml-updategrams-sqlxml-4-0.md)를 참조 하세요.  
@@ -80,8 +79,7 @@ ms.locfileid: "79112197"
  Updategram은 IDENTITY 유형 열이 있는 테이블에 레코드를 삽입할 때 선택적 `updg:at-identity` 특성을 사용하여 시스템에서 할당된 값을 캡처할 수 있습니다. Updategram은 이 값을 이후 작업에 사용할 수 있습니다. Updategram을 실행할 때 `updg:returnid` 특성을 지정하여 생성된 ID 값을 반환할 수 있습니다.  
   
 ## <a name="updgguid-attribute"></a>updg:guid 특성  
- 
-  `updg:guid` 특성은 GUID(Globally Unique Identifier)를 생성하는 선택적 특성입니다. 이 값은 지정 된 전체 ** \<동기화>** 블록의 범위 내에 유지 됩니다. Sync>블록의 어디에서 나이 값을 사용할 수 있습니다. ** \<** 특성은 함수를 `NEWGUID()` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 호출 하 여 고유 식별자를 생성 합니다.  
+ `updg:guid` 특성은 GUID(Globally Unique Identifier)를 생성하는 선택적 특성입니다. 이 값은 지정 된 전체 ** \<동기화>** 블록의 범위 내에 유지 됩니다. Sync>블록의 어디에서 나이 값을 사용할 수 있습니다. ** \<** 특성은 함수를 `NEWGUID()` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 호출 하 여 고유 식별자를 생성 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예제를 사용 하 여 작업 예제를 만들려면 [SQLXML 예를 실행 하기 위한 요구 사항](../../sqlxml/requirements-for-running-sqlxml-examples.md)에 지정 된 요구 사항을 충족 해야 합니다.  
@@ -210,8 +208,7 @@ ms.locfileid: "79112197"
 ```  
   
 ### <a name="c-working-with-valid-sql-server-characters-that-are-not-valid-in-xml"></a>C. 유효한 XML이 아닌 유효한 SQL Server 문자 작업  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 테이블 이름은 Northwind 데이터베이스의 Order Details 테이블과 같이 공백을 포함할 수 있습니다. 그러나 잘못 된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 식별자 인 xml 문자는 유효 하지 않지만 잘못 된 xml 식별자는 ' __xHHHH\_\_'를 인코딩 값으로 사용 하 여 인코딩할 수 있습니다. 여기서 HHHH는 가장 중요 한 비트 우선 순서로 문자에 대 한 4 자리 16 진수 UCS-2 코드를 나타냅니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 테이블 이름은 Northwind 데이터베이스의 Order Details 테이블과 같이 공백을 포함할 수 있습니다. 그러나 잘못 된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 식별자 인 xml 문자는 유효 하지 않지만 잘못 된 xml 식별자는 ' __xHHHH\_\_'를 인코딩 값으로 사용 하 여 인코딩할 수 있습니다. 여기서 HHHH는 가장 중요 한 비트 우선 순서로 문자에 대 한 4 자리 16 진수 UCS-2 코드를 나타냅니다.  
   
 > [!NOTE]  
 >  이 예에서는 Northwind 데이터베이스를 사용합니다. 이 [Microsoft 웹 사이트](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)에서 다운로드할 수 있는 SQL 스크립트를 사용 하 여 Northwind 데이터베이스를 설치할 수 있습니다.  
@@ -288,8 +285,7 @@ ms.locfileid: "79112197"
 </ROOT>  
 ```  
   
- 
-  `updg:at-identity` 특성에서 생성된 ID 값을 반환하려는 경우 `updg:returnid` 특성을 사용할 수 있습니다. 다음은 이 ID 값을 반환하는 수정된 Updategram입니다. 이 Updategram은 예를 좀더 복잡하게 만들기 위해 주문 레코드 두 개와 주문 정보 레코드 두 개를 추가합니다.  
+ `updg:at-identity` 특성에서 생성된 ID 값을 반환하려는 경우 `updg:returnid` 특성을 사용할 수 있습니다. 다음은 이 ID 값을 반환하는 수정된 Updategram입니다. 이 Updategram은 예를 좀더 복잡하게 만들기 위해 주문 레코드 두 개와 주문 정보 레코드 두 개를 추가합니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -614,14 +610,11 @@ CustOrder(OrderID, EmployeeID, OrderType)
      자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
 ### <a name="i-inserting-data-into-an-xml-data-type-column"></a>9\. XML 데이터 형식 열에 데이터 삽입  
- 
-  `xml` 데이터 형식은 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 도입되었습니다. Updategram을 사용하여 다음 프로비전과 함께 `xml` 데이터 형식 열에 저장된 데이터를 삽입 및 업데이트할 수 있습니다.  
+ `xml` 데이터 형식은 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 도입되었습니다. Updategram을 사용하여 다음 프로비전과 함께 `xml` 데이터 형식 열에 저장된 데이터를 삽입 및 업데이트할 수 있습니다.  
   
--   
-  `xml` 열은 기존 행을 식별하는 데 사용할 수 없습니다. 따라서 Updategram의 `updg:before` 섹션에 포함할 수 없습니다.  
+-   `xml` 열은 기존 행을 식별하는 데 사용할 수 없습니다. 따라서 Updategram의 `updg:before` 섹션에 포함할 수 없습니다.  
   
--   
-  `xml` 열에 삽입된 XML 조각의 범위에 있는 네임스페이스가 유지되고 해당 네임스페이스 선언이 삽입된 조각의 최상위 요소에 추가됩니다.  
+-   `xml` 열에 삽입된 XML 조각의 범위에 있는 네임스페이스가 유지되고 해당 네임스페이스 선언이 삽입된 조각의 최상위 요소에 추가됩니다.  
   
  예를 들어 다음 updategram (sampleupdategram.xml)에서 ** \<Desc>** 요소는 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 샘플 데이터베이스의 Production>제품 모델 테이블에서 제품 설명 열을 업데이트 합니다. 이 updategram의 결과는 제품 설명 열의 xml 콘텐츠가 ** \<Desc>** 요소의 xml 내용으로 업데이트 된다는 것입니다.  
   

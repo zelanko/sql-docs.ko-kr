@@ -16,10 +16,10 @@ ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2b0934562f2f0ff1a2dd3ec8df1ed15f10d955ee
-ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79428154"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database를 사용한 Graph 처리
@@ -28,7 +28,7 @@ ms.locfileid: "79428154"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]다대다 관계를 모델링 하는 그래프 데이터베이스 기능을 제공 합니다. 그래프 관계는에 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 통합 되며를 기본 데이터베이스 관리 시스템으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하는 이점을 제공 합니다.
 
 
-## <a name="what-is-a-graph-database"></a>그래프 데이터베이스용 이란?  
+## <a name="what-is-a-graph-database"></a>그래프 데이터베이스란?  
 그래프 데이터베이스는 노드(또는 꼭짓점) 및 모서리(또는 관계) 컬렉션입니다. 노드는 엔터티(예: 개인 또는 조직)를 나타내고 에지는 에지가 연결하는 두 노드 간의 관계(예: 좋아요 또는 친구)를 나타냅니다. 노드와 가장자리 모두에 연결 된 속성이 있을 수 있습니다. 그래프 데이터베이스를 고유하게 만드는 몇 가지 기능은 다음과 같습니다.  
 -    에지 또는 관계는 그래프 데이터베이스의 첫 번째 클래스 엔터티이며 엔터티와 연결된 특성 또는 속성을 포함할 수 있습니다. 
 -    단일 에지는 유연하게 그래프 데이터베이스의 여러 노드를 연결할 수 있습니다.
@@ -58,7 +58,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 노드 및 가장자리가 테이블로 저장 됩니다.  
 
 ### <a name="query-language-extensions"></a>쿼리 언어 확장  
-New `MATCH` 절은 그래프를 통해 패턴 일치 및 다중 홉 탐색을 지원 하기 위해 도입 되었습니다. 함수 `MATCH` 는 패턴 일치에 ASCII 아트 스타일 구문을 사용 합니다. 다음은 그 예입니다.  
+New `MATCH` 절은 그래프를 통해 패턴 일치 및 다중 홉 탐색을 지원 하기 위해 도입 되었습니다. 함수 `MATCH` 는 패턴 일치에 ASCII 아트 스타일 구문을 사용 합니다. 예를 들면 다음과 같습니다.  
 
 ```   
 -- Find friends of John

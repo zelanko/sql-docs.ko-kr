@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8ed94b29d03fd2b95294bed28201b3bd3b63df45
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81281998"
 ---
 # <a name="profiling-odbc-driver-performance-odbc"></a>ODBC 드라이버 성능 프로파일링(ODBC)
@@ -29,9 +29,9 @@ ms.locfileid: "81281998"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [ODBC&#41;&#40;드라이버 성능 데이터 프로필](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-data.md)  
+-   [ODBC&#41;&#40;프로필 드라이버 성능 데이터](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-data.md)  
   
--   [ODBC&#41;&#40;장기 실행 쿼리 로그](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-data-log-long-running-queries.md)  
+-   [ODBC&#41;&#40;장기 실행 쿼리 기록](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-data-log-long-running-queries.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [ODBC 방법 도움말 항목](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  

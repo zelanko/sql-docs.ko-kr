@@ -11,17 +11,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8ce2cc85f936f49e6769bf3a855f903e5064b4be
-ms.sourcegitcommit: 554ddf3b9518f5659cdfff693bfa5a348854faac
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78259489"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 복원 및 복구
   메모리 최적화 테이블이 있는 데이터베이스를 복구하거나 복원하기 위한 기본 메커니즘은 디스크 기반 테이블만 있는 데이터베이스와 비슷합니다. 하지만 디스크 기반 테이블과 달리, 메모리 최적화 테이블은 먼저 메모리에 로드해야만 사용자가 데이터베이스에 액세스할 수 있습니다. 따라서 데이터베이스 복구에 새로운 단계가 추가됩니다. 수정된 데이터 복구 단계는 다음과 같이 변경됩니다.
 
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 다시 시작되면 각 데이터베이스가 다음 세 단계로 구성된 복구 단계를 거칩니다.
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 다시 시작되면 각 데이터베이스가 다음 세 단계로 구성된 복구 단계를 거칩니다.
 
 1.  분석 단계. 이 단계 중에는 커밋된 트랜잭션과 커밋되지 않은 트랜잭션을 감지하기 위한 패스가 활성 트랜잭션 로그에 작성됩니다. 메모리 내 OLTP 엔진은 로드할 검사점을 식별하고 시스템 테이블 로그 항목을 미리 로드합니다. 또한 일부 파일 할당 로그 레코드도 처리합니다.
 

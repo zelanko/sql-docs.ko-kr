@@ -11,14 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6478be669b53cd4d1a919ff6142be834de187dcc
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289571"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 데이터 경고
-  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 데이터 경고는 사용자가 관심을 가지고 있거나 사용자에게 중요한 보고서 데이터에 대한 정보를 적절한 시간에 받아 볼 수 있게 해주는 데이터 기반의 경고 솔루션입니다. 데이터 경고를 사용하면 정보를 자동으로 받아 볼 수 있으므로 더 이상 정보를 직접 찾을 필요가 없습니다.
 
  데이터 경고 메시지는 전자 메일로 전송됩니다. 정보의 중요도에 따라 메시지를 자주 보내거나 가끔 보내도록 선택하고 결과가 변경될 경우에만 메시지를 보내도록 선택할 수 있습니다. 전자 메일 받는 사람을 여러 명 지정하고 다른 사람들에게도 정보를 알려 효율성 및 협업을 향상시킬 수 있습니다.
@@ -27,7 +26,7 @@ ms.locfileid: "79289571"
 |-|
 |**[!INCLUDE[applies](../includes/applies-md.md)]** SharePoint 모드|
 
-##  <a name="AlertingWF"></a> 데이터 경고 아키텍처 및 워크플로
+##  <a name="data-alerts-architecture-and-workflow"></a><a name="AlertingWF"></a> 데이터 경고 아키텍처 및 워크플로
  다음은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 데이터 경고의 주요 영역을 요약한 것입니다.
 
 -   **데이터 경고 정의 및 경고 정의 저장** - 사용자가 보고서를 실행하고, 흥미로운 데이터 값을 식별하는 규칙을 만들고, 데이터 경고 메시지를 보내기 위한 되풀이 패턴을 정의하고, 경고 메시지를 받는 사람을 지정합니다.
@@ -110,7 +109,7 @@ ms.locfileid: "79289571"
 
  자세한 내용은 [Data Alert Messages](../../2014/reporting-services/data-alert-messages.md)을 참조하세요.
 
-##  <a name="InstallAlerting"></a> 데이터 경고 설치
+##  <a name="install-data-alerts"></a><a name="InstallAlerting"></a> 데이터 경고 설치
  데이터 경고 기능은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 가 SharePoint 모드로 설치된 경우에만 사용할 수 있습니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 를 SharePoint 모드로 설치하면 데이터 경고 정보 및 경고 메타데이터를 저장하는 경고 데이터베이스와 경고 관리를 위한 두 개의 SharePoint 페이지가 자동으로 생성되고 SharePoint 사이트에 데이터 경고 디자이너가 추가됩니다. 수행할 특수 단계 또는 설치 중 경고에 대해 설정할 옵션이 없습니다.
 
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 SharePoint 모드로 설치하는 방법과 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 새로 도입된 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 공유 서비스 및 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능을 사용하기 전에 만들고 구성해야 하는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대한 자세한 내용은 MSDN Library의 [SharePoint 2010용 Reporting Services SharePoint 모드 설치](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)를 참조하세요.
@@ -119,7 +118,7 @@ ms.locfileid: "79289571"
 
  SharePoint 중앙 관리의 **구독 및 경고 프로비전** 페이지를 사용하여 SQL Server 에이전트가 실행되고 있는지 알아보고, SQL Server 에이전트에 대한 사용 권한을 부여하기 위해 실행할 사용자 지정 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트를 만들고 다운로드할 수 있습니다. PowerShell을 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트를 생성할 수도 있습니다. 자세한 내용은 [SSRS 서비스 애플리케이션에 대한 구독 및 경고 프로비전](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.
 
-##  <a name="ConfigAlert"></a> 데이터 경고 구성
+##  <a name="configure-data-alerts"></a><a name="ConfigAlert"></a> 데이터 경고 구성
  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 부터 데이터 경고를 비롯한 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능에 대한 설정이 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 를 SharePoint 모드로 설치할 때마다 보고서 서버 구성 파일(rsreportserver.config)과 SharePoint 구성 데이터베이스 간에 배포됩니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]설치 및 구성 단계의 일환으로 서비스 애플리케이션을 만들면 SharePoint 구성 데이터베이스가 자동으로 생성됩니다. 자세한 내용은 [Rsreportserver.config 구성 파일](report-server/rsreportserver-config-configuration-file.md) 및 [Reporting Services 구성 파일](report-server/reporting-services-configuration-files.md)을 참조 하세요.
 
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 데이터 경고에 대한 설정에는 경고 데이터 및 메타데이터를 정리하는 간격과 데이터 경고 메시지를 전자 메일로 보낼 때의 다시 시도 횟수가 포함됩니다. 구성 파일 및 구성 데이터베이스를 업데이트하여 데이터 경고 설정에 다른 값을 사용할 수 있습니다.
@@ -128,7 +127,7 @@ ms.locfileid: "79289571"
 
  다음 표에서는 데이터 경고에 대한 구성 요소, 해당 기본값, 설명 및 위치를 보여 줍니다.
 
-|설정|기본값|Description|위치|
+|설정|기본값|설명|위치|
 |-------------|-------------------|-----------------|--------------|
 |AlertingCleanupCycleMinutes|20|정리 주기가 시작되는 지점 간의 간격(분)입니다.|보고서 서버 구성 파일|
 |AlertingExecutionLogCleanupMinutes|10080|실행 로그 항목이 유지되는 시간(분)입니다.|보고서 서버 구성 파일|
@@ -174,7 +173,7 @@ ms.locfileid: "79289571"
 
 -   SmtpStatusCode.MailboxUnavailable
 
-###  <a name="bkmk_disablealerts"></a> 데이터 경고를 사용하지 않도록 설정
+###  <a name="disable-data-alerts"></a><a name="bkmk_disablealerts"></a> 데이터 경고를 사용하지 않도록 설정
  데이터 경고 기능을 사용하지 않으려면 구성 파일의 Service 섹션을 업데이트합니다. 다음 코드에서는 구성 파일의 Service 섹션을 보여 줍니다.
 
  `<Service>`
@@ -193,7 +192,7 @@ ms.locfileid: "79289571"
 
  경고를 사용하지 않으려면 `<IsAlertingService>True</IsAlertingService>`에서 True를 False로 바꿉니다.
 
-##  <a name="Permissions"></a> 데이터 경고에 대한 사용 권한
+##  <a name="permissions-for-data-alerts"></a><a name="Permissions"></a> 데이터 경고에 대한 사용 권한
  보고서에 대해 데이터 경고를 만들려면 SharePoint 사이트에서 보고서를 실행하고 경고를 만들 수 있는 권한이 있어야 합니다. 보고서 사용 권한에 대한 자세한 내용은 다음 항목을 참조하세요.
 
 -   [보고서에서 데이터 피드 생성&#40;보고서 작성기 및 SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)
@@ -207,7 +206,7 @@ ms.locfileid: "79289571"
 |정보 근로자|항목 보기<br /><br /> 경고 만들기|보고서와 같은 항목을 보고 보고서에 대한 데이터 경고를 만듭니다. 경고를 편집 및 삭제합니다.|
 |경고 관리자|알림 관리|SharePoint 사이트에 저장된 모든 데이터 경고 목록을 보고 경고를 삭제합니다.|
 
-##  <a name="DiagnosticsLogging"></a> 진단 및 로깅
+##  <a name="diagnostics-and-logging"></a><a name="DiagnosticsLogging"></a> 진단 및 로깅
  데이터 경고를 사용하면 경고 내역 및 경고가 실패한 이유를 확인하고, 관리자가 로그를 사용하여 전송할 경고와 전송 대상자, 경고 인스턴스 수 등을 확인하는 등 여러 가지 방법으로 정보 근로자와 관리자의 업무에 도움을 줄 수 있습니다.
 
 ### <a name="data-alert-manager"></a>데이터 경고 관리자
@@ -251,7 +250,7 @@ ms.locfileid: "79289571"
 #### <a name="report-server-trace-log"></a>보고서 서버 추적 로그
  보고서 서버 추적 로그에는 보고서 서버 웹 서비스 및 백그라운드 처리가 수행하는 작업을 비롯하여 보고서 서버 서비스 작업에 대한 세부 정보가 들어 있습니다. 추적 로그 정보는 보고서 서버가 포함된 애플리케이션을 디버깅하거나 이벤트 로그 또는 실행 로그에 기록된 특정 문제를 조사하는 경우 유용할 수 있습니다. 자세한 내용은 [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)을 참조하세요.
 
-##  <a name="PerformanceCounters"></a> 성능 카운터
+##  <a name="performance-counters"></a><a name="PerformanceCounters"></a> 성능 카운터
  데이터 경고는 자체 성능 카운터를 제공합니다. 하나를 제외한 모든 성능 카운터가 경고 런타임 서비스에 포함된 이벤트와 관련되어 있습니다. 이벤트 큐와 관련된 성능 카운터를 보면 모든 활성 이벤트 큐의 길이를 알 수 있습니다.
 
 |이벤트 또는 이벤트 큐|성능 카운터|
@@ -267,14 +266,14 @@ ms.locfileid: "79289571"
 
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 기타 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능에 대한 성능 카운터를 제공합니다. 자세한 내용은 [ReportServer: service 및 ReportServerSharePoint: Service 성능 개체](report-server/performance-counters-reportserver-service-performance-objects.md)에 대 한 성능 카운터, Msrs [2014 웹 서비스 및 Msrs 2014 Windows 서비스 성능 개체에 대 한 성능 카운터 &#40;기본 모드&#41;](report-server/performance-counters-msrs-2011-web-service-performance-objects.md)및 Msrs [2014 웹 서비스 Sharepoint 모드 및 msrs 2014 Windows 서비스 sharepoint 모드 성능 개체에 대 한 성능 카운터 (sharepoint 모드&#41;&#40;](report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md))를 참조 하세요.
 
-##  <a name="SupportForSSL"></a> SSL 지원
+##  <a name="support-for-ssl"></a><a name="SupportForSSL"></a> SSL 지원
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP SSL(Secure Sockets Layer) 서비스를 사용하여 보고서 서버 또는 SharePoint 사이트에 대한 암호화된 연결을 설정할 수 있습니다.
 
  경고 런타임 서비스와 데이터 경고 사용자 인터페이스는 SSL을 지원하며 사용자가 SSL을 사용하는지, 아니면 HTTP를 사용하는지에 관계없이 유사하게 작동하지만 약간의 차이점은 있습니다. SSL 연결을 사용하여 데이터 경고 정의를 만들면 데이터 경고 메시지에서 SharePoint 라이브러리로 다시 연결되는 URL에도 SSL이 사용됩니다. URL에 HTTP 대신 HTTPS가 사용되므로 SSL 연결을 식별할 수 있습니다. 마찬가지로, HTTP 연결을 사용하여 데이터 경고 정의를 만들면 SharePoint 사이트로 다시 연결되는 링크에 HTTP가 사용됩니다. 경고 정의가 SSL 또는 HTTP 중 어떤 것을 사용하여 생성되었는지에 상관없이 사용자 및 경고 관리자는 데이터 경고 디자이너 또는 데이터 경고 관리자에서 동일한 환경을 사용하게 됩니다. 경고 정의가 생성된 다음 업데이트 및 다시 저장된 시점 사이에 프로토콜(HTTP 또는 SSL)을 변경해야 하는 경우에는 원래 프로토콜이 유지되어 링크 URL에 사용됩니다.
 
  SSL을 사용하도록 구성된 SharePoint 사이트에서 데이터 경고를 만든 다음 SSL 요구 사항을 제거하면 경고가 사이트에서 계속 작동합니다. 사이트가 삭제되면 기본 영역 사이트가 대신 사용됩니다.
 
-##  <a name="UserInterface"></a> 데이터 경고 사용자 인터페이스
+##  <a name="data-alert-user-interface"></a><a name="UserInterface"></a> 데이터 경고 사용자 인터페이스
  데이터 경고에는 경고 관리를 위한 SharePoint 페이지와 데이터 경고 정의를 만들고 편집하기 위한 디자이너가 제공됩니다.
 
 -   **데이터 경고 디자이너** 에서는 데이터 경고 정의를 만들거나 편집합니다. 자세한 내용은 [데이터 경고 디자이너](../../2014/reporting-services/data-alert-designer.md), [데이터 경고 디자이너에서 데이터 경고 만들기](create-a-data-alert-in-data-alert-designer.md) 및 [경고 디자이너에서 데이터 경고 편집](edit-a-data-alert-in-alert-designer.md)을 참조하세요.
@@ -287,7 +286,7 @@ ms.locfileid: "79289571"
 
 -   **구독 및 데이터 경고 프로비전** 에서는 Reporting Services가 데이터 경고를 위해 SQL Server 에이전트를 사용하고 SQL Server 에이전트에 대한 액세스를 허용하는 스크립트를 다운로드할 수 있는지 알아봅니다. 자세한 내용은 [SSRS 서비스 애플리케이션에 대한 구독 및 경고 프로비전](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.
 
-##  <a name="Globalization"></a> 데이터 경고의 세계화
+##  <a name="globalization-of-data-alerts"></a><a name="Globalization"></a> 데이터 경고의 세계화
  아랍어 및 히브리어와 같은 특정 스크립트는 오른쪽에서 왼쪽으로 씁니다. 데이터 경고는 오른쪽에서 왼쪽으로 쓰는 스크립트뿐만 아니라 왼쪽에서 오른쪽으로 쓰는 스크립트도 지원합니다. 데이터 경고는 culture를 감지하고, 이에 따라 데이터 경고 메시지의 레이아웃과 사용자 인터페이스 모양 및 동작을 변경합니다. culture는 사용자 컴퓨터에 있는 운영 체제의 국가별 설정에서 파생됩니다. culture는 사용자가 데이터 경고 정의를 업데이트한 다음 다시 저장할 때마다 저장됩니다.
 
  경고 정의의 culture에 따라 데이터가 경고 정의의 규칙을 만족하는지 여부가 달라질 수 있습니다. 문자열 비교는 culture별 규칙의 영향을 가장 많이 받습니다.
@@ -298,7 +297,7 @@ ms.locfileid: "79289571"
 
  사용하는 데이터 경고 사용자 인터페이스에 따라 오른쪽에서 왼쪽으로 쓰는 스크립트에 대한 지원이 달라집니다. 데이터 경고 디자이너는 입력란에서 오른쪽에서 왼쪽으로 쓰는 스크립트를 지원하지만 디자이너의 레이아웃은 오른쪽에서 왼쪽으로 되어 있지 않습니다. 해당 레이아웃은 다른 도구와 마찬가지로 왼쪽에서 오른쪽으로 되어 있습니다. 경고 정의를 오른쪽에서 왼쪽으로 진행되는 텍스트 방향을 사용하여 만든 다음 왼쪽에서 오른쪽으로 되어 있는 환경에서 편집하면 경고 정의를 저장할 때 오른쪽에서 왼쪽으로 진행되는 텍스트 방향이 유지됩니다. 데이터 경고 관리자는 SharePoint 페이지와 동일하게 작동합니다. 해당 레이아웃은 기타 SharePoint 페이지와 마찬가지로 오른쪽에서 왼쪽으로 되어 있습니다. 오른쪽에서 왼쪽으로 진행되는 데이터 경고 정의를 기반으로 하는 데이터 경고 메시지는 메시지 텍스트를 오른쪽에서 왼쪽으로 표시하며 메시지 레이아웃은 왼쪽에서 오른쪽으로 되어 있습니다.
 
-##  <a name="HowTo"></a> 관련 작업
+##  <a name="related-tasks"></a><a name="HowTo"></a> 관련 작업
 
 -   [SharePoint 라이브러리에 보고서 저장&#40;보고서 작성기&#41;](report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)
 

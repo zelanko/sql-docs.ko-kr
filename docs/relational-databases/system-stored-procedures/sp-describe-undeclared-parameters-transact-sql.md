@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: efa15bffc3b00dfce2c1c5d11bc3705f2b6f677e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78180128"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters(Transact-SQL)
@@ -55,13 +55,12 @@ sp_describe_undeclared_parameters
  매개 변수의 데이터 형식입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 성공 시 **sp_describe_undeclared_parameters** 항상 반환 상태 0을 반환 합니다. 프로시저에서 오류가 발생 하 고 프로시저가 RPC로 호출 된 경우에는 dm_exec_describe_first_result_set의 error_type 열에 설명 된 대로 오류 유형에 의해 반환 상태가 채워집니다. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 프로시저를 호출한 경우 반환 값은 오류가 발생한 경우에도 항상 0입니다.  
+ 성공 시 **sp_describe_undeclared_parameters** 항상 반환 상태 0을 반환 합니다. 프로시저에서 오류가 발생 하 고 프로시저가 RPC로 호출 된 경우에는 dm_exec_describe_first_result_set의 error_type 열에 설명 된 대로 오류 유형에 의해 반환 상태가 채워집니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 프로시저를 호출한 경우 반환 값은 오류가 발생한 경우에도 항상 0입니다.  
   
 ## <a name="result-sets"></a>결과 집합  
  **sp_describe_undeclared_parameters** 는 다음 결과 집합을 반환 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int NOT NULL**|결과 집합에서 매개 변수의 서수 위치를 포함합니다. 첫 번째 매개 변수의 위치가 1로 지정됩니다.|  
 |**name**|**sysname NULL이 아님**|매개 변수의 이름을 포함합니다.|  
@@ -85,8 +84,8 @@ sp_describe_undeclared_parameters
 |**suggested_is_input**|**비트 NOT NULL**|매개 변수가 대입의 왼쪽이 아닌 다른 곳에 사용되는 경우 1을 반환합니다. 그렇지 않으면 0을 반환합니다.|  
 |**suggested_is_output**|**비트 NOT NULL**|매개 변수가 대입의 왼쪽에 사용되거나 저장 프로시저의 출력 매개 변수로 전달되는 경우 1을 반환합니다. 그렇지 않으면 0을 반환합니다.|  
 |**formal_parameter_name**|**sysname NULL**|매개 변수가 저장 프로시저 또는 사용자 정의 함수의 인수인 경우 해당 형식 매개 변수의 이름을 반환합니다. 그렇지 않으면 NULL을 반환합니다.|  
-|**suggested_tds_type_id**|**int NOT NULL**|내부에 사용합니다.|  
-|**suggested_tds_length**|**int NOT NULL**|내부에 사용합니다.|  
+|**suggested_tds_type_id**|**int NOT NULL**|내부적으로만 사용할 수 있습니다.|  
+|**suggested_tds_length**|**int NOT NULL**|내부적으로만 사용할 수 있습니다.|  
   
 ## <a name="remarks"></a>설명  
  **sp_describe_undeclared_parameters** 는 항상 반환 상태 0을 반환 합니다.  
@@ -112,7 +111,7 @@ sp_describe_undeclared_parameters
 ## <a name="parameter-selection-algorithm"></a>매개 변수 선택 알고리즘  
  선언되지 않은 매개 변수가 있는 쿼리의 경우 선언되지 않은 매개 변수에 대한 데이터 형식 추론은 다음 3단계로 진행됩니다.  
   
- **1 단계**  
+ **1단계**  
   
  선언되지 않은 매개 변수가 있는 쿼리에 대한 데이터 형식 추론의 첫 번째 단계는 데이터 형식이 선언되지 않은 매개 변수에 종속되지 않는 모든 하위 식의 데이터 형식을 찾는 것입니다. 다음 식에 대해 형식을 확인할 수 있습니다.  
   
@@ -138,7 +137,7 @@ SELECT * FROM t1 WHERE @p1 = SUBSTRING(@p2, 2, 3)
 SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)  
 ```
   
- **2 단계**  
+ **2단계**  
   
  선언 되지 않은 지정 된 \@매개 변수 p의 경우 형식 추론 알고리즘은 p를 포함\@ \@하는 가장 안쪽의 E (p)를 검색 하며 다음 중 하나입니다.  
   
@@ -164,13 +163,13 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  P \@가 2 단계 시작 부분에 나열 된 식에 포함 되지 않은 경우 형식 추론 알고리즘\@은 e (p)가 p를 포함 \@하는 가장 큰 스칼라 식 임을 확인 하 고, 형식 추론 알고리즘은 e (\@\@p)의 대상 데이터 형식 TT (p)를 계산 하지 않습니다. `@p + 2` 예를 들어 쿼리가 SELECT 이면 E (\@p) = \@p + 2이 고 TT (\@p)가 없는 것입니다.  
   
- **3 단계**  
+ **3단계**  
   
  이제 E (\@p) 및 TT (\@p)가 확인 되었으므로 형식 추론 알고리즘은 다음 두 가지 방법 중 하나로 \@p의 데이터 형식을 추론 합니다.  
   
 -   단순 추론  
   
-     E\@(p) \@= p 및 TT (\@p)가 있는 경우 (예: \@p가 2 단계 시작 부분에 나열 된 식 중 하나에 대 한 인수) 이면 형식 추론 알고리즘에서 p의 \@데이터 형식을 TT (\@p)로 추론 합니다. 다음은 그 예입니다.   
+     E\@(p) \@= p 및 TT (\@p)가 있는 경우 (예: \@p가 2 단계 시작 부분에 나열 된 식 중 하나에 대 한 인수) 이면 형식 추론 알고리즘에서 p의 \@데이터 형식을 TT (\@p)로 추론 합니다. 예를 들면 다음과 같습니다.  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
@@ -218,7 +217,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 1.  E (\@p)에서 가장 적은 수의 암시적 변환을 생성 하는 데이터 형식이 선택 됩니다. \@특정 데이터 형식이 e (p)에 대해 tt (\@p)와 다른 데이터 형식을 생성 하는 경우 형식 추론 알고리즘은이를 e (\@p)의 데이터 형식에서 tt (\@p)로 추가 암시적 변환으로 간주 합니다.  
   
-     다음은 그 예입니다.   
+     예를 들면 다음과 같습니다.  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
@@ -250,7 +249,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  예를 들어 쿼리의 `SELECT * FROM t WHERE [Col_varchar(30)] > @p`경우 변환 (a)이 가장 적합 하므로 **varchar (8000)** 가 선택 됩니다. 쿼리의 `SELECT * FROM t WHERE [Col_char(30)] > @p`경우 varchar ( **8000)** 는 형식 (b)을 변환 하 고, 다른 선택 (예: **varchar (4000)**)을 통해 형식 (d) 변환이 발생 하기 때문에 계속 선택 됩니다.  
   
- 마지막 예로, 쿼리 `SELECT NULL + @p`를 지정 하면 형식 (c) 변환이 발생 하므로 p에 대해 **** \@int가 선택 됩니다.  
+ 마지막 예로, 쿼리 `SELECT NULL + @p`를 지정 하면 형식 (c) 변환이 발생 하므로 p에 대해 **int** \@int가 선택 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
  \@Tsql 인수를 실행할 수 있는 권한이 필요 합니다.  
@@ -266,8 +265,7 @@ WHERE object_id = @id OR name = @name'
   
 ```  
   
- 
-  `@id` 매개 변수가 `@params` 참조로 제공된 경우에는 `@id` 매개 변수가 결과 집합에서 생략되고 `@name` 매개 변수만 설명됩니다.  
+ `@id` 매개 변수가 `@params` 참조로 제공된 경우에는 `@id` 매개 변수가 결과 집합에서 생략되고 `@name` 매개 변수만 설명됩니다.  
   
 ```sql
 sp_describe_undeclared_parameters @tsql =   

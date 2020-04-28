@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289411"
 ---
 # <a name="the-transaction-log-sql-server"></a>트랜잭션 로그(SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "79289411"
 > [!NOTE]  
 >  데이터베이스 복구 중 트랜잭션 로그 적용을 시작할 알려진 올바른 지점은 검사점에 의해 만들어집니다. 자세한 내용은 [데이터베이스 검사점&#40;SQL Server&#41;](database-checkpoints-sql-server.md)을 참조하세요.  
   
- **항목 내용**  
+ **항목 내용:**  
   
 -   [이점: 트랜잭션 로그가 지원하는 작업](#Benefits)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "79289411"
   
 -   [관련 작업](#RelatedTasks)  
   
-##  <a name="Benefits"></a>이점: 트랜잭션 로그에서 지원 되는 작업  
+##  <a name="benefits-operations-supported-by-the-transaction-log"></a><a name="Benefits"></a>이점: 트랜잭션 로그에서 지원 되는 작업  
  트랜잭션 로그는 다음 작업을 지원합니다.  
   
 -   개별 트랜잭션 복구  
@@ -54,7 +54,7 @@ ms.locfileid: "79289411"
   
 -   고가용성 및 재해 복구 솔루션 지원: [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], 데이터베이스 미러링 및 로그 전달  
   
-##  <a name="Truncation"></a>트랜잭션 로그 잘림  
+##  <a name="transaction-log-truncation"></a><a name="Truncation"></a> 트랜잭션 로그 잘림  
  로그 잘림은 트랜잭션 로그에서 다시 사용할 수 있도록 로그 파일의 공간을 확보하는 것입니다. 로그가 가득 차지 않도록 하기 위해 로그 잘림은 필수적입니다. 로그 잘림은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 논리 트랜잭션 로그에서 비활성 가상 로그 파일을 삭제하여 물리적 트랜잭션 로그에서 다시 사용할 수 있도록 논리 로그의 공간을 확보합니다. 트랜잭션 로그가 잘리지 않으면 물리적 로그 파일에 할당된 디스크 공간이 모두 트랜잭션 로그로 채워지게 됩니다.  
   
  이 문제를 방지하기 위해 어떤 이유로 로그 잘림이 지연되고 있지 않는 한 다음과 같은 경우에 잘림이 자동으로 수행됩니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "79289411"
 > [!NOTE]  
 >  로그 잘림을 수행해도 물리적 로그 파일의 크기는 줄어들지 않습니다. 물리적 로그 파일의 실제 크기를 줄이려면 로그 파일을 축소해야 합니다. 물리적 로그 파일의 크기를 축소하는 방법은 [트랜잭션 로그 파일의 크기 관리](manage-the-size-of-the-transaction-log-file.md)를 참조하십시오.  
   
-##  <a name="FactorsThatDelayTruncation"></a>로그 잘림을 지연 시킬 수 있는 요소  
+##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a>로그 잘림을 지연 시킬 수 있는 요소  
  오랜 시간 동안 로그 레코드가 활성 상태로 유지되는 경우 로그 잘림이 지연되고 트랜잭션 로그가 가득 찰 수 있습니다.  
   
 > [!IMPORTANT]  
@@ -76,7 +76,7 @@ ms.locfileid: "79289411"
   
  여러 요소로 인해 로그 잘림이 지연될 수 있습니다. 로그 잘림이 발생하지 않는 이유는 **sys.databases** 카탈로그 뷰의 **log_reuse_wait** 및 [log_reuse_wait_desc](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 열을 쿼리하여 확인할 수 있습니다. 다음 표에서는 이러한 열의 값에 대해 설명합니다.  
   
-|log_reuse_wait 값|log_reuse_wait_desc 값|Description|  
+|log_reuse_wait 값|log_reuse_wait_desc 값|설명|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING|현재 다시 사용 가능한 가상 로그 파일이 하나 이상 있습니다.|  
 |1|CHECKPOINT|마지막 로그 잘림이나 로그 헤더가 가상 로그 파일을 넘어서 이동되지 않았기 때문에 검사점이 발생하지 있습니다(모든 복구 모델).<br /><br /> 로그 잘림 지연을 유발하는 일반적인 이유입니다. 자세한 내용은 [데이터베이스 검사점&#40;SQL Server&#41;](database-checkpoints-sql-server.md)을 참조하세요.|  
@@ -95,7 +95,7 @@ ms.locfileid: "79289411"
 |14|OTHER_TRANSIENT|이 값은 현재 사용되지 않습니다.|  
 |16|XTP_CHECKPOINT|데이터베이스에 메모리 최적화 파일 그룹이 있는 경우 트랜잭션 로그는 자동 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 검사점이 트리거될 때까지(로그가 512MB 증가할 때마다 발생함) 잘릴 수 없습니다.<br /><br /> 참고: 512 MB 크기 전에 트랜잭션 로그를 잘라내려면 해당 데이터베이스에 대해 검사점 명령을 수동으로 실행 합니다.|  
   
-##  <a name="MinimallyLogged"></a>최소로 기록 될 수 있는 작업  
+##  <a name="operations-that-can-be-minimally-logged"></a><a name="MinimallyLogged"></a>최소로 기록 될 수 있는 작업  
  *최소 로깅* 은 지정 시간 복구를 지원하지 않고 트랜잭션을 복구하는 데 필요한 정보만 기록합니다. 이 항목에서는 대량 로그 복구 모델 및 단순 복구 모델(백업이 실행 중인 경우 제외)에서 최소 로깅되는 작업을 식별합니다.  
   
 > [!NOTE]  
@@ -106,7 +106,7 @@ ms.locfileid: "79289411"
   
  전체 복구 모델에서 전체 로깅되는 다음 작업은 단순 및 대량 로그 복구 모델에서 최소 로깅됩니다.  
   
--   대량 가져오기 작업([bcp](../../tools/bcp-utility.md), [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql) 및 [INSERT... SELECT](/sql/t-sql/statements/insert-transact-sql)) 테이블로 대량 가져오기 작업이 최소한으로 기록되는 경우에 대한 자세한 내용은 [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)을 참조하십시오.  
+-   대량 가져오기 작업([bcp](../../tools/bcp-utility.md), [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql)및 [INSERT... SELECT](/sql/t-sql/statements/insert-transact-sql)) 테이블로 대량 가져오기 작업이 최소한으로 기록되는 경우에 대한 자세한 내용은 [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)을 참조하십시오.  
   
     > [!NOTE]  
     >  트랜잭션 복제를 사용하는 경우 대량 로그 복구 모델에서도 BULK INSERT 작업이 모두 기록됩니다.  
@@ -137,7 +137,7 @@ ms.locfileid: "79289411"
         > [!NOTE]  
         >  [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) 작업 중의 인덱스 페이지 할당 취소는 항상 모두 로깅됩니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  `Managing the transaction log`  
   
 -   [트랜잭션 로그 파일의 크기 관리](manage-the-size-of-the-transaction-log-file.md)  
@@ -154,9 +154,9 @@ ms.locfileid: "79289411"
   
 ## <a name="see-also"></a>참고 항목  
  [트랜잭션 내구성 제어](control-transaction-durability.md)   
- [대량 가져오기의 최소 로깅을 위한 선행 조건](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
+ [대량 가져오기의 최소 로깅을 위한 필수 구성 요소](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
  [SQL Server 데이터베이스 백업 및 복원](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [데이터베이스 검사점&#40;SQL Server&#41;](database-checkpoints-sql-server.md)   
+ [데이터베이스 검사점 &#40;SQL Server&#41;](database-checkpoints-sql-server.md)   
  [데이터베이스의 속성 보기 또는 변경](../databases/view-or-change-the-properties-of-a-database.md)   
  [복구 모델&#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)  
   

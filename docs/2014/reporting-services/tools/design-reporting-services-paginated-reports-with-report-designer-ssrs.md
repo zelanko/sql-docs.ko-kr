@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ffd46d75f0d3dc803f2fa3739b363bbb53b7d55b
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289561"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>보고서 디자이너로 보고서 디자인(SSRS)
@@ -33,10 +33,9 @@ ms.locfileid: "79289561"
   
 -   보고서 및 관련 항목에 대한 마스터 복사본 집합을 유지합니다. 배포 후 게시된 보고서를 실수로 수정할 수 있습니다.  
   
- 이 항목의 정보를 참조하여 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 솔루션에서 단일 보고 프로젝트의 보고서 및 관련 항목을 디자인하세요. 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 솔루션 및 여러 프로젝트에 자세한 내용은 [SQL Server Data Tools의 Reporting Services&#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md)를 참조하세요.  
+ 이 항목의 정보를 참조하여 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 솔루션에서 단일 보고 프로젝트의 보고서 및 관련 항목을 디자인하세요. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 솔루션 및 여러 프로젝트에 자세한 내용은 [SQL Server Data Tools의 Reporting Services&#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md)를 참조하세요.  
   
-##  <a name="bkmk_SharedDataSources"></a> 공유 데이터 원본  
+##  <a name="shared-data-sources"></a><a name="bkmk_SharedDataSources"></a>공유 데이터 원본  
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 를 사용하여 보고 솔루션용 공유 데이터 원본을 정의하고 배포합니다. **OverwriteDataSources** 및 **TargetDataSourceFolder** 속성을 사용하면 공유 데이터 원본을 프로젝트의 다른 항목과 별도로 배포할 수 있습니다. 자세한 내용은 [배포 속성 설정&#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)을 참조하세요.  
   
  보고서 디자이너의 보고서 데이터 창 및 솔루션 탐색기에서 보고서에 사용될 데이터 원본을 정의할 수 있습니다. 자세한 내용은 [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane)을 참조하세요. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 에서는 보고서 서버나 SharePoint 사이트에 게시되었지만 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 솔루션에는 포함되지 않은 데이터 원본을 열 수 없습니다. 이 기능을 사용 하려면 [보고서 작성기 &#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md)를 사용 합니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "79289561"
  자세한 내용은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)을 참조하세요.  
   
   
-##  <a name="bkmk_SharedDatasets"></a> 공유 데이터 세트  
+##  <a name="shared-datasets"></a><a name="bkmk_SharedDatasets"></a> 공유 데이터 세트  
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]를 사용하여 보고 솔루션용 공유 데이터 세트를 정의하고 배포합니다. **OverwriteDatasets** 및 **TargetDatasetFolder** 속성을 사용하면 공유 데이터 세트를 프로젝트의 다른 항목과 별도로 배포할 수 있습니다. 자세한 내용은 [배포 속성 설정&#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)을 참조하세요.  
   
  보고서 디자이너의 보고서 데이터 창 및 솔루션 탐색기에서 보고서에 사용될 공유 데이터 세트를 정의할 수 있습니다. 자세한 내용은 [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane)을 참조하세요. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서는 보고서 서버 또는 SharePoint 사이트에서 직접 게시된 데이터 세트를 열 수 없습니다. 이 기능을 사용 하려면 공유 데이터 집합 모드에서 [SSRS&#41;&#40;보고서 작성기](report-builder-authoring-environment-ssrs.md) 을 사용 합니다.  
@@ -54,7 +53,7 @@ ms.locfileid: "79289561"
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 클라이언트 도구입니다. 쿼리 디자이너를 사용하여 쿼리 결과를 만들고 로컬에서 미리 보기로 테스트할 수 있습니다. 배포 후 기반이 되는 공유 데이터 원분 및 보고서와는 별도로 공유 데이터 세트를 관리할 수 있습니다. 자세한 내용은 [보고서 포함 된 데이터 집합 및 공유 데이터 집합 &#40;보고서 작성기 및 ssrs&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [보고서 디자이너 SQL Server Data Tools의 쿼리 디자인 도구 &#40;Ssrs&#41;](../report-data/query-design-tools-ssrs.md)및 [공유 데이터 집합 관리](../report-data/manage-shared-datasets.md)를 참조 하세요.  
   
   
-##  <a name="bkmk_Reports"></a>보고서용  
+##  <a name="reports"></a><a name="bkmk_Reports"></a>보고서용  
  보고서는 보고서 프로젝트에 저장된 파일입니다. 보고서는 독립 실행형 보고서, 하위 보고서 또는 주 보고서의 드릴스루 동작 대상으로 사용할 수 없습니다. **TargetReportFolder** 및 기타 속성을 사용하면 보고서를 프로젝트의 다른 항목과 별도로 배포할 수 있습니다. 자세한 내용은 [배포 속성 설정&#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)을 참조하세요.  
   
 > [!NOTE]  
@@ -86,34 +85,33 @@ ms.locfileid: "79289561"
      자세한 내용은 [RDL(Report Definition Language)&#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)을 참조하세요.  
   
   
-##  <a name="bkmk_ReportParts"></a> 보고서 파트  
+##  <a name="report-parts"></a><a name="bkmk_ReportParts"></a>보고서 파트  
  보고서 디자이너에서 프로젝트에 테이블, 차트 및 기타 보고서 항목을 만든 후에는 자신과 다른 사람이 다른 보고서에서 다시 사용할 수 있도록 이들 항목을 보고서 서버 또는 보고서 서버와 통합된 SharePoint 사이트에 *보고서 파트* 로 게시할 수 있습니다. 자세한 내용은 [보고서 디자이너의 보고서 파트&#40;SSRS&#41;](../report-design/report-parts-in-report-designer-ssrs.md)를 참조하세요.  
   
  **TargetReportPartFolder** 및 기타 속성을 사용하면 보고서 파트를 프로젝트의 다른 항목과 별도로 배포할 수 있습니다. 자세한 내용은 [배포 속성 설정&#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)을 참조하세요.  
   
   
-##  <a name="bkmk_Resources"></a> 리소스  
+##  <a name="resources"></a><a name="bkmk_Resources"></a>인사  
  보고서와 관련되지만 보고서 서버에서 처리되지 않는 파일을 프로젝트에 추가할 수 있습니다. 예를 들어 사진의 경우 이미지를, 공간 데이터의 경우 ESRI 셰이프 파일을 추가할 수 있습니다. 자세한 내용은 [리소스](../report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources)를 참조하세요.  
   
   
-##  <a name="bkmk_ReportLayout"></a>보고서 레이아웃  
+##  <a name="report-layout"></a><a name="bkmk_ReportLayout"></a>보고서 레이아웃  
  보고서 레이아웃을 만들려면 보고서 항목 및 데이터 영역을 도구 상자에서 디자인 화면으로 끈 다음 해당 항목을 정렬합니다. 데이터 세트 필드를 디자인 화면의 항목으로 끌어 보고서에 데이터를 추가합니다. 테이블릭스 데이터 영역에서 데이터를 그룹으로 구성하려면 데이터 세트 필드를 그룹화 창으로 끕니다. 보고서 제작 도구는 기본적으로 보고서 정의를 만드는 방법이므로 보고서 디자인에 대한 접근 방식이 보고서 작성기와 보고서 디자이너 간에 유사합니다.  
   
   
-##  <a name="bkmk_Preview"></a>미리 보기  
+##  <a name="preview"></a><a name="bkmk_Preview"></a>미리 보기  
  **미리 보기** 를 사용하여 보고서 데이터 및 레이아웃 디자인을 확인할 수 있습니다. 보고서를 미리 보는 경우 보고서 처리기에서 보고서 정의 스키마와 식 구문의 유효성을 검사하고 문제를 [Output](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) 창에 나열합니다.  
   
 > [!NOTE]  
->  보고서를 미리 보면 보고서의 데이터가 로컬 컴퓨터의 파일에 캐시됩니다. 동일한 쿼리, 매개 변수 및 자격 증명을 사용하여 동일한 보고서를 다시 미리 보면 보고서 디자이너는 쿼리를 다시 실행하지 않고 캐시된 복사본을 검색합니다. 데이터 파일은 보고서 정의 파일과 같은 디렉터리에 *\<reportname>*.rdl.data로 저장됩니다. 이 파일은 보고서 디자이너를 닫아도 삭제되지 않습니다.  
+>  보고서를 미리 보면 보고서의 데이터가 로컬 컴퓨터의 파일에 캐시됩니다. 동일한 쿼리, 매개 변수 및 자격 증명을 사용하여 동일한 보고서를 다시 미리 보면 보고서 디자이너는 쿼리를 다시 실행하지 않고 캐시된 복사본을 검색합니다. 데이터 파일은 보고서 정의 파일과 같은 디렉터리에 * \<reportname>* 로 저장 됩니다. 이 파일은 보고서 디자이너를 닫아도 삭제되지 않습니다.  
   
  다음과 같은 방법으로 보고서를 미리 볼 수 있습니다.  
   
--   **미리 보기.** 미리 보기 도구 모음에서 **미리 보기** 탭을 클릭합니다. 보고서가 로컬로 실행되며 보고서 서버에 제공되는 동일한 보고서 처리 및 렌더링 기능을 사용합니다. 표시되는 보고서는 대화형 이미지이므로 매개 변수를 선택하고, 링크를 클릭하고, 문서 구조를 보고, 보고서의 숨겨진 영역을 확대 및 축소할 수 있습니다. 또한 설치된 렌더링 형식으로 보고서를 내보낼 수 있습니다.  
+-   **미리 보기 보기.** **미리 보기** 탭을 클릭 합니다. 보고서는 보고서 서버와 함께 제공 되는 동일한 보고서 처리 및 렌더링 기능을 사용 하 여 로컬로 실행 됩니다. 표시되는 보고서는 대화형 이미지이므로 매개 변수를 선택하고, 링크를 클릭하고, 문서 구조를 보고, 보고서의 숨겨진 영역을 확대 및 축소할 수 있습니다. 또한 설치된 렌더링 형식으로 보고서를 내보낼 수 있습니다.  
   
 -   **독립 실행형 미리 보기.** 로컬 보고서를 브라우저에서 실행합니다. 디버그 구성을 사용하면 작성하는 사용자 지정 어셈블리를 이 모드에서 디버깅할 수 있습니다. 디버그 모드에서 프로젝트를 실행하는 데는 세 가지 방법이 있습니다.  
   
-    -   
-  **디버그** 메뉴에서 **디버깅 시작**을 클릭합니다.  
+    -   **디버그** 메뉴에서 **디버깅 시작**을 클릭합니다.  
   
     -   [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 표준 도구 모음에서 **시작** 단추를 클릭합니다.  
   
@@ -145,7 +143,7 @@ ms.locfileid: "79289561"
     -   인쇄 형식에서 더 읽기 쉽도록 보고서 레이아웃을 수정해야 합니다.  
   
   
-##  <a name="bkmk_SaveandDeploy"></a>저장 및 배포  
+##  <a name="save-and-deploy"></a><a name="bkmk_SaveandDeploy"></a>저장 및 배포  
  보고서 디자이너에서 보고서 및 기타 프로젝트 파일을 로컬로 저장하거나 보고서 서버나 SharePoint 사이트에 배포할 수 있습니다. 구성한 프로젝트 배포 속성에 따라 공유 데이터 원본, 공유 데이터 세트, 보고서, 보고서 리소스 및 보고서 파트를 독립적으로 배포하거나 함께 배포할 수 있습니다. 자세한 내용은 [Configuration and Deployment Properties](deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties)을 참조하세요.  
   
  보고서 디자이너를 사용할 때는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 현재 버전의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 지원되는 보고서 정의 스키마를 사용하여 보고서를 디자인한다는 것을 이해해야 합니다. 특정 보고서 서버 또는 SharePoint 사이트에 대한 프로젝트 배포 속성을 설정한 후 보고서를 저장하는 경우 보고서 디자이너는 대상 보고서 서버의 버전과 일치하는 스키마로 디렉터리를 구축하는 보고서 정의를 저장합니다. 낮은 수준의 보고서 서버에 게시할 수 있는 보고서를 만들기 위해 보고서 디자이너는 대상 스키마에 존재하지 않는 보고서 항목을 삭제합니다. 이 동작은 메시지를 표시하지 않고 자동으로 수행됩니다. 이 동작이 수행되면 원본 보고서 정의가 프로젝트 폴더에 유지됩니다. 배포되는 수정된 보고서 정의는 작성기 폴더에 있습니다.  
@@ -158,7 +156,7 @@ ms.locfileid: "79289561"
 ### <a name="save-a-report-locally"></a>로컬로 보고서 저장  
  보고서 디자이너에서 보고서 또는 기타 프로젝트 항목을 작업할 때 파일은 로컬 컴퓨터에 저장하거나 액세스 권한을 가진 다른 컴퓨터에서 공유할 수 있습니다.  
   
- 원본 제어 소프트웨어를 사용하는 경우 보고서 저장 시 원본 제어 서버에 보고서를 체크 인할 수 있습니다. 자세한 내용은 [Source Control](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_SourceControl)를 참조하세요.  
+ 원본 제어 소프트웨어를 사용하는 경우 보고서 저장 시 원본 제어 서버에 보고서를 체크 인할 수 있습니다. 자세한 내용은 [원본 제어](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_SourceControl)를 참조 하세요.  
   
 ### <a name="deploy-or-publish"></a>배포 또는 게시  
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 보고서 또는 기타 프로젝트 항목을 여러 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 배포할 수 있습니다. 프로젝트 구성을 사용하면 보고서 정의를 대상 보고서 서버 호환 스키마 버전으로 업그레이드하는 작업을 제어할 수 있습니다. 프로젝트 구성으로 제어되는 속성에는 대상 보고서 서버, 오류 수준, 빌드 프로세스에서 미리 보기 및 배포용으로 보고서 정의를 임시 저장하는 폴더 등이 포함됩니다. 자세한 내용은 [구성 및 배포 속성](deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties) 및 [배포 속성 설정&#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)을 참조하세요.  
@@ -167,7 +165,7 @@ ms.locfileid: "79289561"
  보고서를 다양한 형식으로 내보낼 수 있으며, 이러한 형식은 일부 보고서 레이아웃 및 대화형 기능의 작동에 영향을 줍니다. 다양 한 출력 형식의 디자인 고려 사항에 대 한 자세한 내용은 [보고서 &#40;보고서 작성기 및 SSRS&#41;내보내기 ](../report-builder/export-reports-report-builder-and-ssrs.md)를 참조 하세요.  
   
   
-##  <a name="bkmk_ReportValidationandErrorLevels"></a> 보고서 유효성 검사 및 오류 수준  
+##  <a name="report-validation-and-error-levels"></a><a name="bkmk_ReportValidationandErrorLevels"></a> 보고서 유효성 검사 및 오류 수준  
  보고서는 미리 보기 전과 배포 도중에 유효성이 검사됩니다. 보고서를 빌드할 때 여러 빌드 문제가 발생할 수 있습니다. 예를 들어 프로젝트 구성이 지정하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 버전과 호환되지 않는 식 또는 쿼리와 같은 문자열이 보고서에 포함될 수 있습니다.  
   
  ErrorLevel 속성을 사용하여 빌드 경고와 오류를 관리할 수 있습니다. ErrorLevel 속성은 0에서 4(포함) 사이의 값을 포함할 수 있습니다. 이 값은 오류로 보고되는 빌드 문제 및 경고로 보고되는 빌드 문제를 결정합니다. 기본값은 2입니다. 경고와 오류는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)][출력](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) 창에 기록됩니다.  
@@ -176,7 +174,7 @@ ms.locfileid: "79289561"
   
  다음 표에서는 오류 수준을 보여 줍니다.  
   
-|오류 수준|Description|  
+|오류 수준|설명|  
 |-----------------|-----------------|  
 |0|보고서 미리 보기 및 배포를 불가능하게 만드는 가장 심각하고 불가피한 빌드 문제|  
 |1|보고서 레이아웃을 대폭 변경하는 심각한 빌드 문제|  
@@ -190,6 +188,6 @@ ms.locfileid: "79289561"
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md)   
  [SSRS&#41;&#40;보고서 디자이너 SQL Server Data Tools의 쿼리 디자인 도구](../report-data/query-design-tools-ssrs.md)   
- [SQL Server Data Tools &#40;SSRS&#41;의 배포 및 버전 지원](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
+ [SQL Server Data Tools의 배포 및 버전 지원&#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
   

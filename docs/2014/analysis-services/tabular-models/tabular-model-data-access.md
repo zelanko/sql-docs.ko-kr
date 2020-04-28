@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a35afb1c1bd38aa123211ae1801d914494aec91
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525474"
 ---
 # <a name="tabular-model-data-access"></a>테이블 형식 모델 데이터 액세스
@@ -31,21 +31,14 @@ ms.locfileid: "79525474"
  Excel은 또한 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 테이블 형식 모델을 찾아보는 데 권장되는 애플리케이션입니다. 이 도구에는 Excel의 새 인스턴스를 시작하고, Excel 통합 문서를 만들고, 통합 문서에서 모델 작업 영역 데이터베이스로의 데이터 연결을 여는 **Excel에서 분석** 옵션이 포함되어 있습니다. Excel에서 테이블 형식 모델 데이터를 찾아보는 경우 Excel은 Excel 피벗 테이블 클라이언트를 사용하여 모델에 대한 쿼리를 실행한다는 사실을 기억하십시오. 따라서 Excel 통합 문서 내에서 작업할 경우 DAX 쿼리가 아니라 MDX 쿼리가 작업 영역 데이터베이스로 전송됩니다. SQL 프로파일러 또는 기타 모니터링 도구를 사용하여 쿼리를 모니터링하는 경우 프로파일러 추적에 DAX가 아니라 MDX가 표시됩니다. Excel에서 분석 기능에 대한 자세한 내용은 [Excel에서 분석&#40;SSAS 테이블 형식&#41;](analyze-in-excel-ssas-tabular.md)을 참조하세요.  
   
 ### <a name="power-view"></a>파워 뷰  
- 
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 는 SharePoint 2010 환경에서 실행되는 Reporting Services 보고 클라이언트 애플리케이션입니다. 이 프로그램은 데이터 탐색, 쿼리 디자인 및 프레젠테이션 레이아웃을 통합된 임시 보고 환경으로 통합합니다. 
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 는 모델이 테이블 형식 모드로 실행되는 Analysis Services의 인스턴스에서 호스팅되는지 또는 DirectQuery 모드를 사용하여 관계형 데이터 저장소에서 검색되는지 여부에 관계없이 테이블 형식 모델을 데이터 원본으로 사용할 수 있습니다. 
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]에서 테이블 형식 모델에 연결하려면 서버 위치 및 데이터베이스 이름이 포함된 연결 파일을 만들어야 합니다. SharePoint에서 Reporting Services 공유 데이터 원본 또는 BI 의미 체계 모델 연결 파일을 만들 수 있습니다. BI 의미 체계 모델 연결에 대 한 자세한 내용은 [POWERPIVOT Bi 의미 체계 모델 연결 &#40;. bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)을 참조 하세요.  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 는 SharePoint 2010 환경에서 실행되는 Reporting Services 보고 클라이언트 애플리케이션입니다. 이 프로그램은 데이터 탐색, 쿼리 디자인 및 프레젠테이션 레이아웃을 통합된 임시 보고 환경으로 통합합니다. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 는 모델이 테이블 형식 모드로 실행되는 Analysis Services의 인스턴스에서 호스팅되는지 또는 DirectQuery 모드를 사용하여 관계형 데이터 저장소에서 검색되는지 여부에 관계없이 테이블 형식 모델을 데이터 원본으로 사용할 수 있습니다. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]에서 테이블 형식 모델에 연결하려면 서버 위치 및 데이터베이스 이름이 포함된 연결 파일을 만들어야 합니다. SharePoint에서 Reporting Services 공유 데이터 원본 또는 BI 의미 체계 모델 연결 파일을 만들 수 있습니다. BI 의미 체계 모델 연결에 대 한 자세한 내용은 [POWERPIVOT Bi 의미 체계 모델 연결 &#40;. bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)을 참조 하세요.  
   
- 
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 클라이언트는 지정된 데이터 원본에 요청을 보내 지정된 모델의 구조를 확인합니다. 이 요청에서는 클라이언트가 데이터 원본인 모델에 대한 쿼리를 만들고 데이터를 기반으로 작업을 수행하는 데 사용할 수 있는 스키마가 반환됩니다. 
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 사용자 인터페이스에서 데이터를 필터링하고, 계산 또는 집계를 수행하고, 관련 데이터를 표시하는 후속 작업은 클라이언트에 의해 제어되며 프로그래밍 방식으로 조작할 수 없습니다.  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 클라이언트는 지정된 데이터 원본에 요청을 보내 지정된 모델의 구조를 확인합니다. 이 요청에서는 클라이언트가 데이터 원본인 모델에 대한 쿼리를 만들고 데이터를 기반으로 작업을 수행하는 데 사용할 수 있는 스키마가 반환됩니다. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 사용자 인터페이스에서 데이터를 필터링하고, 계산 또는 집계를 수행하고, 관련 데이터를 표시하는 후속 작업은 클라이언트에 의해 제어되며 프로그래밍 방식으로 조작할 수 없습니다.  
   
- 
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 클라이언트에서 모델로 보내는 쿼리는 모델에 대해 추적을 설정하여 모니터링할 수 있는 DAX 문으로 실행됩니다.  또한 클라이언트는 CSDL(개념 스키마 정의 언어)에 따라 제공되는 초기 스키마 정의에 대한 요청을 서버에 보냅니다. 자세한 내용은 [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 클라이언트에서 모델로 보내는 쿼리는 모델에 대해 추적을 설정하여 모니터링할 수 있는 DAX 문으로 실행됩니다.  또한 클라이언트는 CSDL(개념 스키마 정의 언어)에 따라 제공되는 초기 스키마 정의에 대한 요청을 서버에 보냅니다. 자세한 내용은 [비즈니스 인텔리전스에 대한 CSDL 주석&#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 테이블 형식 모델을 호스팅하는 인스턴스를 관리하고 해당 메타데이터 및 데이터를 쿼리할 수 있습니다. 모델 또는 모델의 개체를 처리하고, 파티션을 생성 및 관리하고, 데이터 액세스를 관리하는 데 사용될 수 있는 보안을 설정할 수 있습니다. 자세한 내용은 아래 항목을 참조하세요.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 테이블 형식 모델을 호스팅하는 인스턴스를 관리하고 해당 메타데이터 및 데이터를 쿼리할 수 있습니다. 모델 또는 모델의 개체를 처리하고, 파티션을 생성 및 관리하고, 데이터 액세스를 관리하는 데 사용될 수 있는 보안을 설정할 수 있습니다. 자세한 내용은 아래 항목을 참조하세요.  
   
 -   [Analysis Services 인스턴스의 서버 모드 확인](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
@@ -53,18 +46,16 @@ ms.locfileid: "79525474"
   
 -   [Analysis Services 인스턴스 모니터](../instances/monitor-an-analysis-services-instance.md)  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 MDX 및 XMLA 쿼리 창을 사용하여 테이블 형식 데이터베이스에서 데이터 및 메타데이터를 검색할 수 있습니다. 그러나 다음과 같은 제한 사항이 있습니다.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 MDX 및 XMLA 쿼리 창을 사용하여 테이블 형식 데이터베이스에서 데이터 및 메타데이터를 검색할 수 있습니다. 그러나 다음과 같은 제한 사항이 있습니다.  
   
 -   MDX 및 DMX를 사용하는 문은 DirectQuery 모드로 배포된 모델에 지원되지 않으므로 DirectQuery 모드에서 테이블 형식 모델에 대한 쿼리를 만들려면 대신 **XMLA 쿼리** 창을 사용해야 합니다.  
   
--   
-  **쿼리** 창을 연 후에는 XMLA 쿼리 창의 데이터베이스 컨텍스트를 변경할 수 없습니다. 따라서 다른 데이터베이스 또는 다른 인스턴스에 쿼리를 보내려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 해당 데이터베이스 또는 인스턴스를 열고 해당 컨텍스트 내에서 새 **XMLA 쿼리** 창을 열어야 합니다.  
+-   **쿼리** 창을 연 후에는 XMLA 쿼리 창의 데이터베이스 컨텍스트를 변경할 수 없습니다. 따라서 다른 데이터베이스 또는 다른 인스턴스에 쿼리를 보내려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 해당 데이터베이스 또는 인스턴스를 열고 해당 컨텍스트 내에서 새 **XMLA 쿼리** 창을 열어야 합니다.  
   
  다차원 솔루션에서와 마찬가지로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델에 대한 추적을 만들 수 있습니다. 이 릴리스의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 메모리 사용, 쿼리 및 처리 작업, 파일 사용 등을 추적하는 데 사용할 수 있는 많은 새 이벤트를 제공합니다. 자세한 내용은 [Analysis Services 추적 이벤트](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events)를 참조하세요.  
   
 > [!WARNING]  
->  테이블 형식 모델 데이터베이스에 추적을 두면 DMX 쿼리로 분류되는 몇 가지 이벤트를 볼 수 있습니다. 그러나 데이터 마이닝은 테이블 형식 모델 데이터에서 지원되지 않으며 데이터베이스에서 실행되는 DMX 쿼리는 모델 메타데이터에 대한 SELECT 문으로 제한됩니다. 동일한 파서 프레임워크가 MDX에 사용되므로 이벤트는 DMX로만 분류됩니다.  
+>  테이블 형식 model 데이터베이스에 추적을 두면 DMX 쿼리로 분류되는 몇 가지 이벤트를 볼 수 있습니다. 그러나 데이터 마이닝은 테이블 형식 모델 데이터에서 지원되지 않으며 데이터베이스에서 실행되는 DMX 쿼리는 모델 메타데이터에 대한 SELECT 문으로 제한됩니다. 동일한 파서 프레임워크가 MDX에 사용되므로 이벤트는 DMX로만 분류됩니다.  
   
 ## <a name="query-languages"></a>쿼리 언어  
  Analysis Services 테이블 형식 모델은 다차원 모델에 대한 액세스를 위해 제공되는 것과 동일한 쿼리 언어의 대부분을 지원합니다. DirectQuery 모드로 배포된 테이블 형식 모델은 예외인데, 이러한 모델은 Analysis Services 데이터 저장소에서 데이터를 검색하는 것이 아니라 SQL Server 데이터 원본에서 직접 데이터를 검색하기 때문입니다. 이러한 모델은 MDX를 사용하여 쿼리할 수 없으며, DAX 식을 Transact-SQL 문으로 변환하도록 지원하는 클라이언트(예: [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 클라이언트)를 사용해야 합니다.  
@@ -77,8 +68,7 @@ ms.locfileid: "79525474"
  DAX를 사용 하는 테이블 형식 모델에 대 한 쿼리의 예는 [DAX 쿼리 구문 참조] (/dax/dax-syntax-reference)를 참조 하세요.
   
 ### <a name="mdx"></a>MDX  
- MDX를 사용하여 메모리 내 캐시를 기본 쿼리 방법으로 사용하는 테이블 모델(즉, DirectQuery 모드로 배포되지 않은 모델)에 대한 쿼리를 만들 수 있습니다. 
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 와 같은 클라이언트는 집계를 만드는 작업과 모델을 데이터 원본으로 쿼리하는 작업 모두에 DAX를 사용하지만 MDX에 친숙한 경우 MDX에서 예제 쿼리를 만드는 것이 더욱 효율적일 수 있습니다. 자세한 내용은 [MDX로 측정값 만들기](../multidimensional-models/mdx/mdx-building-measures.md)를 참조하세요.  
+ MDX를 사용하여 메모리 내 캐시를 기본 쿼리 방법으로 사용하는 테이블 모델(즉, DirectQuery 모드로 배포되지 않은 모델)에 대한 쿼리를 만들 수 있습니다. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 와 같은 클라이언트는 집계를 만드는 작업과 모델을 데이터 원본으로 쿼리하는 작업 모두에 DAX를 사용하지만 MDX에 친숙한 경우 MDX에서 예제 쿼리를 만드는 것이 더욱 효율적일 수 있습니다. 자세한 내용은 [MDX로 측정값 만들기](../multidimensional-models/mdx/mdx-building-measures.md)를 참조하세요.  
   
 ### <a name="csdl"></a>CSDL  
  개념 스키마 정의 언어는 쿼리 언어가 아니지만 본질적으로 모델 및 모델 메타데이터 정보를 검색하는 데 사용될 수 있습니다. 이러한 정보는 나중에 해당 모델에 대한 보고서나 쿼리를 만드는 데 사용될 수 있습니다.  
@@ -86,21 +76,20 @@ ms.locfileid: "79525474"
  테이블 형식 모델에서 CSDL을 사용하는 방법에 대한 자세한 내용은 [비즈니스 인텔리전스에 대한 CSDL 주석&#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)를 참조하세요.  
   
 ## <a name="programmatic-interfaces"></a>프로그래밍 방식 인터페이스  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델과 상호 작용하는 데 사용되는 주요 인터페이스는 스키마 행 집합, XMLA 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 와 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 제공하는 쿼리 클라이언트 및 쿼리 도구입니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델과 상호 작용하는 데 사용되는 주요 인터페이스는 스키마 행 집합, XMLA 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 와 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 제공하는 쿼리 클라이언트 및 쿼리 도구입니다.  
   
 ### <a name="data-and-metadata"></a>데이터 및 메타데이터  
  ADOMD.NET을 사용하여 관리 애플리케이션의 테이블 형식 모델에서 데이터 및 메타데이터를 검색할 수 있습니다. 테이블 형식 모델에서 개체를 만들고 수정하는 애플리케이션의 예는 다음 리소스를 참조하십시오.  
   
 -   Codeplex에서 테이블 형식 모델 AMO 예제  
   
--   [Dmv&#41; &#40;동적 관리 뷰를 사용 하 여 모니터링할 Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+-   [DMV&#40;동적 관리 뷰&#41;를 사용하여 Analysis Services 모니터링](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  관리되지 않는 클라이언트 애플리케이션에서 Analysis Services 9.0 OLE DB 공급자를 사용하여 테이블 형식 모델에 대한 OLE DB 액세스를 지원할 수 있습니다. 테이블 형식 모델 액세스를 사용하도록 설정하려면 업데이트된 버전의 Analysis Services OLE DB 공급자가 필요합니다. 테이블 형식 모델과 함께 사용되는 공급자에 대한 자세한 내용은 [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 를 참조하세요.  
   
- XML 기반 형식으로 Analysis Services 인스턴스에서 직접 데이터를 검색할 수도 있습니다. DISCOVER_CSDL_METADATA 행 집합을 사용하여 테이블 형식 모델의 스키마를 검색하거나 기본 ASSL 요소, 개체 또는 속성에 EXECUTE 또는 DISCOVER 명령을 사용할 수 있습니다. 자세한 내용은 다음 리소스를 참조하세요.  
+ XML 기반 형식으로 Analysis Services 인스턴스에서 직접 데이터를 검색할 수도 있습니다. DISCOVER_CSDL_METADATA 행 집합을 사용하여 테이블 형식 모델의 스키마를 검색하거나 기본 ASSL 요소, 개체 또는 속성에 EXECUTE 또는 DISCOVER 명령을 사용할 수 있습니다. 자세한 내용은 다음 자료를 참조하세요.  
   
--   [비즈니스 인텔리전스 &#40;CSDLBI&#41;에 대 한 CSDL 주석](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
+-   [비즈니스 인텔리전스에 대한 CSDL 주석&#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="manipulate-analysis-services-objects"></a>Analysis Services 개체 조작  
  XMLA 명령 또는 AMO를 사용하여 테이블 형식 모델과 해당 모델의 개체(예: 테이블, 열, 큐브 뷰, 측정값 및 파티션)를 생성, 수정, 삭제 및 처리할 수 있습니다. AMO와 XMLA 둘 다 향상된 보고 및 모델링을 위해 테이블 형식 모델에 사용되는 추가 속성을 지원하도록 업데이트되었습니다.  

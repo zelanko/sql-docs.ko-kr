@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e75230ed175c6fbf1b0a2492265bbe12067060ca
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289751"
 ---
 # <a name="transparent-data-encryption"></a>투명한 데이터 암호화
@@ -37,7 +37,7 @@ Tde ( *투명 한 데이터 암호화* )는 데이터 및 트랜잭션 로그 �
   
 ![계층 구조를 표시 합니다.](media/tde-architecture.png "TDE_Architecture")  
   
-## <a name="using-tde"></a>투명한 데이터 암호화 사용  
+## <a name="using-transparent-data-encryption"></a><a name="using-tde"></a>투명한 데이터 암호화 사용  
 TDE를 사용하려면 다음 단계를 수행합니다. 처음 세 단계는 TDE를 지원 하기 위해 SQL Server PDW를 준비할 때 한 번만 수행 됩니다.  
   
 1.  Master 데이터베이스에서 마스터 키를 만듭니다.  
@@ -121,8 +121,8 @@ TDE 인증서는 다음 문에서 수락된 데이터베이스 마스터 키로 
 |명령 또는 함수|목적|  
 |-----------------------|-----------|  
 |[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|데이터베이스 암호화에 사용할 키를 만듭니다.|  
-|[ALTER DATABASE ENCRYPTION 키](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|데이터베이스 암호화에 사용할 키를 변경합니다.|  
-|[데이터베이스 암호화 키 삭제](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|데이터베이스 암호화에 사용한 키를 제거합니다.|  
+|[ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|데이터베이스 암호화에 사용할 키를 변경합니다.|  
+|[DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|데이터베이스 암호화에 사용한 키를 제거합니다.|  
 |[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|TDE를 설정하는 데 사용된 **ALTER DATABASE** 옵션에 대해 설명합니다.|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>카탈로그 뷰 및 동적 관리 뷰  
@@ -279,7 +279,7 @@ TDE의 성능 영향은 사용자가 보유 한 데이터 유형, 저장 방법 
   
 ## <a name="see-also"></a>참고 항목  
 [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
-[CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)  
+[마스터 키 만들기](../t-sql/statements/create-master-key-transact-sql.md)  
 [CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
 [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  

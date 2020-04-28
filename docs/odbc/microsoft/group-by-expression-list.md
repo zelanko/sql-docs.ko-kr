@@ -1,5 +1,5 @@
 ---
-title: 그룹 별 식 목록 | 마이크로 소프트 문서
+title: GROUP BY 식 목록 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,11 +14,11 @@ ms.assetid: 1d203f69-ec46-457f-8d07-b22d282b6bf1
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 3981a076ca36a15a4dd4a2a8dd2b6d4d72702d26
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81286293"
 ---
 # <a name="group-by-expression-list"></a>GROUP BY 식 목록
-GROUP BY는 식 목록과 열 이름을 지원합니다. GROUP BY 절이 있는 SELECT 문의 선택 목록에는 GROUP BY 절 또는 설정 함수의 표현식만 포함될 수 있습니다.
+GROUP BY는 열 이름과 함께 식 목록을 지원 합니다. GROUP BY 절을 포함 하는 SELECT 문의 select 목록에는 GROUP BY 절 또는 set 함수의 식만 사용할 수 있습니다.

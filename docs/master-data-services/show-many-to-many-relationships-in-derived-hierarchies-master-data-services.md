@@ -11,10 +11,10 @@ ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a0300b7f613610403970862fe9e5aad594372b27
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289891"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>파생 계층에서 다 대 다 관계 표시(Master Data Services)
@@ -30,22 +30,19 @@ ms.locfileid: "79289891"
   
  위의 예에는 매핑 엔터티 **ClassRegistration** 으로 제공되는 **Employee** 및 **TrainingClass**엔터티 간에 M2M 관계가 있습니다. 직원은 여러 과정에 학생으로 등록될 수 있으며 각 과정은 여러 학생을 포함할 수 있습니다.  
   
- 이전에는 파생 계층에서 M2M 관계를 모델링할 수 없었습니다. 
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]부터는 과정별 학생 등을 표시하는 파생 계층을 만들고 관계를 반전하며 과정을 학생별로 그룹화할 수 있습니다.  
+ 이전에는 파생 계층에서 M2M 관계를 모델링할 수 없었습니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]부터는 과정별 학생 등을 표시하는 파생 계층을 만들고 관계를 반전하며 과정을 학생별로 그룹화할 수 있습니다.  
   
  먼저, 파생 계층 관리 페이지로 이동하고 새 파생 계층을 만듭니다.  
   
  ![mds_hierarchies_add_derived_hierarchy](../master-data-services/media/mds-hierarchies-add-derived-hierarchy.png "mds_hierarchies_add_derived_hierarchy")  
   
- 다음으로 새 파생 계층에 수준을 아래부터 위로 추가합니다. 이 예에서는 과정별로 그룹화된 학생(직원)을 보여주려고 합니다. 
-  **Employee** 엔터티는 계층에서 리프 수준이므로 먼저 추가됩니다.  
+ 다음으로 새 파생 계층에 수준을 아래부터 위로 추가합니다. 이 예에서는 과정별로 그룹화된 학생(직원)을 보여주려고 합니다. **Employee** 엔터티는 계층에서 리프 수준이므로 먼저 추가됩니다.  
   
  ![mds_hierarchies_edit_derived_hierarchy_one](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-one.PNG "mds_hierarchies_edit_derived_hierarchy_one")  
   
  위의 스크린 샷에서는 **Employee** 엔터티가 가운데 **현재 수준** 아래 유일한 수준으로 나타납니다. 오른쪽에 있는 파생 계층 **미리 보기** 는 **Employee** 엔터티의 모든 구성원 목록을 보여 줍니다. 왼쪽에 있는 **사용 가능한 수준** 섹션은 현재 최상위 수준(**Employee**)의 맨 위에 어떤 수준을 추가할 수 있는지 보여 줍니다. 이들 중 대부분은 **Department** DBA를 포함하여 **Employee** 엔터티에서 DBA(도메인 기반 특성)입니다.  
   
- 
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]부터는 M2M 관계를 모델링하는 새로운 유형의 수준이 있습니다(예: **Class(ClassRegistration.Student를 통해 매핑됨)**). 수준 이름은 매핑 관계를 명확하게 설명하는 데 필요한 추가 정보를 반영하기 위해 보다 세부적입니다. 이 수준을 **현재 수준** 섹션에서 **Employee** 수준으로 끌어서 놓습니다.  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]부터는 M2M 관계를 모델링하는 새로운 유형의 수준이 있습니다(예: **Class(ClassRegistration.Student를 통해 매핑됨)**). 수준 이름은 매핑 관계를 명확하게 설명하는 데 필요한 추가 정보를 반영하기 위해 보다 세부적입니다. 이 수준을 **현재 수준** 섹션에서 **Employee** 수준으로 끌어서 놓습니다.  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
@@ -63,8 +60,7 @@ ms.locfileid: "79289891"
   
 -   Excel용 MDS(Master Data Services) 추가 기능을 사용하거나 데이터 준비를 사용하여 **엔터티 탐색기** 페이지에서 매핑 엔터티 멤버를 수정합니다.  
   
--   
-  **파생 계층 구조 탐색기**에서 자식 노드를 부모 간에 끌어서 놓습니다.  
+-   **파생 계층 구조 탐색기**에서 자식 노드를 부모 간에 끌어서 놓습니다.  
   
      이 방법은 가능한 경우 기존 구성원을 수정하고 필요한 경우 새 구성원을 추가합니다. 기존 구성원은 삭제되지 않습니다.  
   
@@ -76,11 +72,10 @@ ms.locfileid: "79289891"
   
  다른 파생 계층 수준과 마찬가지로 M2M 수준은 숨길 수 있습니다.  
    
-### <a name="M2MSample"></a>샘플 모델의 M2M 관계  
+### <a name="m2m-relationship-in-sample-model"></a><a name="M2MSample"></a> 샘플 모델의 M2M 관계  
 M2M 관계의 데모를 보려면 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]에 포함된 Customer 샘플 모델의 Region Climate 파생 계층을 확인합니다.   
   
-다음 그림과 같이 이 관계를 모델링하는 수준 이름은 ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate(RegionClimate.Region을 통해 매핑됨)** 입니다. 
-  ![mds_Number2](../master-data-services/media/mds-number2.png)**미리 보기** 에서는 지역이 연결된 기후 유형별로 그룹화되어 표시됩니다. 여러 기후(부모)와 연결된 지역(자식 멤버)이 있기 때문에 M2M 관계입니다. 예를 들어 ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** 은 ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** 및 ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}** 와 연결되어 있습니다.  
+다음 그림과 같이 이 관계를 모델링하는 수준 이름은 ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate(RegionClimate.Region을 통해 매핑됨)** 입니다. ![mds_Number2](../master-data-services/media/mds-number2.png)**미리 보기** 에서는 지역이 연결된 기후 유형별로 그룹화되어 표시됩니다. 여러 기후(부모)와 연결된 지역(자식 멤버)이 있기 때문에 M2M 관계입니다. 예를 들어 ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** 은 ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** 및 ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}** 와 연결되어 있습니다.  
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   
@@ -95,8 +90,8 @@ Customer 샘플 모델 및 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md
   
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
-##  <a name="bkmk_member_security"></a>멤버 보안  
- 구성원 보안 권한을 할당하는 데 구성원 중복을 허용하는 계층(구성원이 둘 이상의 부모를 가질 수 있음)을 사용할 수 없습니다. 다음은 그 예입니다.  
+##  <a name="member-security"></a><a name="bkmk_member_security"></a> 멤버 보안  
+ 구성원 보안 권한을 할당하는 데 구성원 중복을 허용하는 계층(구성원이 둘 이상의 부모를 가질 수 있음)을 사용할 수 없습니다. 예를 들면 다음과 같습니다.  
   
 -   null 재귀에 앵커를 지정하지 않는 재귀적 파생 계층(RDH)입니다(재귀 수준에서 각 구성원은 루트와 해당 재귀 부모 아래에 나타남).  
   
@@ -108,6 +103,6 @@ Customer 샘플 모델 및 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md
  컬렉션 및 명시적 계층은 사용되지 않습니다. 변환 저장 프로시저(udpConvertCollectionAndConsolidatedMembersToLeaf)는 컬렉션 구성원을 리프 구성원으로 변환하고 컬렉션 구성원 정보를 캡처하기 위해 다 대 다 파생 계층을 만듭니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [파생 계층 &#40;MDS(Master Data Services)&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
+ [파생 계층&#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

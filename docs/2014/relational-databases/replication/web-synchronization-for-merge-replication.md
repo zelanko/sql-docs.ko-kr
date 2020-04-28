@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8cf6a58c50922b412b76576ee2a7fd44cdf9e32a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176704"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>병합 복제에 대한 웹 동기화
@@ -47,7 +47,7 @@ ms.locfileid: "78176704"
 
  ![웹 동기화 구성 요소 및 데이터 흐름](media/web-sync01.gif "웹 동기화 구성 요소 및 데이터 흐름")
 
- 웹 동기화는 끌어오기 구독 전용 옵션이므로 병합 에이전트가 항상 구독자에서 실행됩니다. 이 병합 에이전트는 표준 병합 에이전트, 병합 에이전트 ActiveX 컨트롤 또는 RMO(복제 관리 개체)를 통해 동기화를 제공하는 애플리케이션일 수 있습니다. IIS를 실행하는 컴퓨터의 위치를 지정하려면 병합 에이전트에 **–InternetUrl** 매개 변수를 사용합니다.
+ 웹 동기화는 끌어오기 구독 전용 옵션이므로 병합 에이전트가 항상 구독자에서 실행됩니다. 이 병합 에이전트는 표준 병합 에이전트, 병합 에이전트 ActiveX 컨트롤 또는 RMO(복제 관리 개체)를 통해 동기화를 제공하는 애플리케이션일 수 있습니다. IIS를 실행 하는 컴퓨터의 위치를 지정 하려면 병합 에이전트에 **-interneturl** 매개 변수를 사용 합니다.
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 수신기(replisapi.dll)는 IIS를 실행하는 컴퓨터에 구성되어 있으며 게시자와 구독자에서 서버로 전송된 메시지를 처리합니다. 토폴로지에 있는 각 노드는 병합 복제 조정자(Replrec.dll)를 사용하여 XML 데이터 스트림을 처리합니다.
 

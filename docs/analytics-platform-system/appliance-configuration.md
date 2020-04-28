@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 80fc899400be167badaae9d617d43a61e0d346b5
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289741"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대 한 어플라이언스 구성 검사 목록
@@ -22,9 +22,9 @@ ms.locfileid: "79289741"
 > [!WARNING]  
 > 분석 플랫폼 시스템**Configuration Manager** 를 사용 하는 것이 가장 좋은 방법 이며, 도구에서 사용할 수 있는 작업을 수행 하는 데 지원 되는 유일한 방법입니다.  
   
-## <a name="BeforeTasks"></a>시작하기 전 주의 사항  
+## <a name="before-you-begin"></a><a name="BeforeTasks"></a>시작 하기 전에  
   
-### <a name="prerequisites"></a>사전 요구 사항  
+### <a name="prerequisites"></a>전제 조건  
   
 1.  어플라이언스는 데이터 센터에 설치 되어 있어야 합니다.  
   
@@ -44,12 +44,12 @@ ms.locfileid: "79289741"
   
     2.  PDW 컨트롤 노드의 **시작** 메뉴에서 **Configuration Manager** 를 시작 합니다. Configuration Manager의 첫 번째 화면에는 IHV에서 만든 어플라이언스 토폴로지가 표시 됩니다. 기기의 일부로 SQL Server PDW 소프트웨어에서 인식 하는 하드웨어 노드 목록입니다. 어플라이언스 토폴로지 화면에서 설정을 변경할 필요가 없습니다.  
   
-## <a name="CMTasks"></a>Configuration Manager 작업 수행  
+## <a name="perform-configuration-manager-tasks"></a><a name="CMTasks"></a>Configuration Manager 작업 수행  
 Systemwcm (SQL Server PDW**Configuration Manager** )는 시스템 관리자가 어플라이언스 수준 작업을 수행 하 고 어플라이언스 수준 설정을 변경 하 SQL Server PDW는 데 사용 하는 어플라이언스 관리 도구입니다. 예를 들어 암호를 재설정 하 고, 표준 시간대를 설정 하 고, IP 주소를 변경 하 고, SSL 인증서를 구성 하 고, 방화벽을 통해 원격 액세스를 사용 하도록 설정 하 고, 어플라이언스를 시작 또는 중지 하 고, 즉시 파일 초기화를 설정  
   
 **Configuration Manager** 를 사용 하 여 다음 구성 작업을 수행 합니다.  
   
-|구성 태스크|Description|  
+|구성 태스크|설명|  
 |----------------------|---------------|  
 |물리적 구성 요소 이름에 익숙해져야 합니다.|[PDW 및 어플라이언스 패브릭 물리적 구성 요소 &#40;Analytics Platform System&#41;](pdw-and-appliance-fabric-physical-components.md)|  
 |시작 SQL Server PDW Configuration Manager|[Configuration Manager &#40;Analytics Platform System을 시작&#41;](launch-the-configuration-manager.md)|  
@@ -64,10 +64,10 @@ Systemwcm (SQL Server PDW**Configuration Manager** )는 시스템 관리자가 �
 |**권한** 대화 상자를 사용 하 여 즉시 파일 초기화 옵션 검토|즉시 파일 초기화는 데이터 파일 작업을 보다 신속 하 게 실행할 수 있는 SQL Server 기능입니다. 네트워크 서비스 계정에 SE_MANAGE_VOLUME_NAME 권한이 부여 된 경우에만 SQL Server PDW에서 사용 하도록 설정 됩니다. 기본적으로 꺼져 있습니다.<br /><br />자세한 내용은 [인스턴트 파일 초기화 구성 &#40;분석 플랫폼 시스템&#41;](instant-file-initialization-configuration.md)을 참조 하세요.|  
 |백업에서 master 데이터베이스 복원|현재 **master** 데이터베이스를 삭제 하 고 백업으로 바꿉니다. 자세한 내용은 [Restore The Master Database &#40;Analytics Platform System&#41;](restore-the-master-database.md)을 참조 하세요.|  
   
-## <a name="AddTasks"></a>추가 구성 작업을 수행 합니다.  
+## <a name="perform-additional-configuration-tasks"></a><a name="AddTasks"></a>추가 구성 작업을 수행 합니다.  
 **Configuration Manager** 작업을 수행한 후 다음 추가 구성 작업 목록을 수행 합니다. 이러한 작업 중 일부는 선택 사항입니다.  
   
-|구성 태스크|Description|  
+|구성 태스크|설명|  
 |----------------------|---------------|  
 |외부에 연결 된 노드에 대해 SQL Server PDW 어플라이언스에서 타사 바이러스 백신 소프트웨어를 설치 하 고 구성할 수 있습니다.<br /><br />(선택 사항)|자세한 내용은 [바이러스 백신 소프트웨어 &#40;분석 플랫폼 시스템&#41;](antivirus-software.md)을 참조 하세요.|  
 |DSRM의 암호를 변경할 수 있습니다.<br /><br />(선택 사항)|자세한 내용은 [디렉터리 서비스 복원 모드에서 AD 노드에 로그온 하기 위한 관리자 암호 설정 &#40;DSRM&#41; &#40;Analytics Platform System&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)을 참조 하세요.|  

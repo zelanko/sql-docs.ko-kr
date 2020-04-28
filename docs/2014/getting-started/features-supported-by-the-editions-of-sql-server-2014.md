@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caae4212e2182ae6afde29b0fed1aaee4f05645a
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289291"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 버전에서 지원하는 기능
@@ -28,7 +28,7 @@ ms.locfileid: "79289291"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기술과 관련된 표로 이동하려면 해당 링크를 클릭합니다.  
   
- [교차 상자 크기 제한](#CrossBoxScale)  
+ [교차 상자 확장 제한](#CrossBoxScale)  
   
  [고가용성](#High_availability)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "79289291"
   
  [Integration Services - 고급 변환](#SSIS_AT)  
   
- [Master  Data  Services](#MDS)  
+ [MDS(Master Data Services)](#MDS)  
   
  [데이터 웨어하우스](#Data_warehouse)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "79289291"
   
  [BI 의미 체계 모델(다차원)](#BISemModel_multi)  
   
- [BI 의미 체계 모델 (테이블 형식)](#BISemModel_tabular)  
+ [BI 의미 체계 모델(테이블 형식)](#BISemModel_tabular)  
   
  [SharePoint용 PowerPivot](#PowerPivot)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "79289291"
   
  [기타 구성 요소](#Other_Components)  
   
-##  <a name="CrossBoxScale"></a>교차 상자 크기 제한  
+##  <a name="cross-box-scale-limits"></a><a name="CrossBoxScale"></a>교차 상자 크기 제한  
   
 |기능 이름|Enterprise|비즈니스 인텔리전스|Standard|웹|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -87,9 +87,9 @@ ms.locfileid: "79289291"
 |최대 메모리 사용량( [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 인스턴스당)|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|64GB|64GB|4GB|해당 없음|해당 없음|  
 |최대 관계형 데이터베이스 크기|524PB|524PB|524PB|524PB|10 GB|10 GB|10 GB|  
   
- <sup>1</sup> SERVER + CAL (클라이언트 액세스 라이선스) 기반 라이선스가 포함 된 Enterprise Edition (새 계약에 사용할 수 없음)은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스당 최대 20 개의 코어로 제한 됩니다. 코어 기반 서버 라이선스 모델에서는 제한이 없습니다. 자세한 내용은 [SQL Server의 버전별 계산 용량 제한](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)을 참조 하세요.  
+ <sup>1</sup> SERVER + CAL (클라이언트 액세스 라이선스) 기반 라이선스가 포함 된 Enterprise Edition (새 계약에 사용할 수 없음)은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스당 최대 20 개의 코어로 제한 됩니다. 코어 기반 서버 라이선스 모델에서는 제한이 없습니다. 자세한 내용은 [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)를 참조하세요.  
   
-##  <a name="High_availability"></a>고가용성  
+##  <a name="high-availability"></a><a name="High_availability"></a>고가용성  
   
 |기능 이름|Enterprise|비즈니스 인텔리전스|Standard|웹|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -109,13 +109,13 @@ ms.locfileid: "79289291"
 |Hot Add 메모리 및 CPU<sup>2</sup>|예|||||||  
 |데이터베이스 복구 관리자|예|예|예|예|예|예|예|  
 |암호화된 백업|예|예|예|||||  
-|스마트 백업|예|예|예|예||||  
+|스마트 백업|예|예|예|아니요||||  
   
  <sup>1</sup> Server Core에 설치 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 하는 방법에 대 한 자세한 내용은 [server core에 SQL Server 2014 설치](../database-engine/install-windows/install-sql-server-on-server-core.md)를 참조 하세요.  
   
  <sup>2</sup> 이 기능은 64 비트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에만 사용할 수 있습니다.  
   
-##  <a name="Scalability"></a>확장성 및 성능  
+##  <a name="scalability-and-performance"></a><a name="Scalability"></a>확장성 및 성능  
   
 |기능 이름|Enterprise|비즈니스 인텔리전스|Standard|웹|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -133,7 +133,7 @@ ms.locfileid: "79289291"
   
  <sup>1</sup> 이 기능은 64 비트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에만 사용할 수 있습니다.  
   
-##  <a name="Enterprise_security"></a> 보안  
+##  <a name="security"></a><a name="Enterprise_security"></a> 보안  
   
 |기능 이름|Enterprise|비즈니스 인텔리전스|Standard|웹|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -143,13 +143,13 @@ ms.locfileid: "79289291"
 |확장 가능 키 관리|예|||||||  
 |사용자 정의 역할|예|예|예|예|예|예|예|  
 |포함된 데이터베이스|예|예|예|예|예|예|예|  
-|백업을 위한 암호화|예|예|yes|||||  
+|백업을 위한 암호화|예|예|예|||||  
   
-##  <a name="Replication"></a> 복제  
+##  <a name="replication"></a><a name="Replication"></a> 복제  
   
 |기능 이름|Enterprise|비즈니스 인텔리전스|Standard|웹|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]변경 내용 추적|예|예|예|예|예|예|예|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 변경 내용 추적|예|예|예|예|예|예|예|  
 |병합 복제|예|예|예|예(구독자만)|예(구독자만)|예(구독자만)|예(구독자만)|  
 |트랜잭션 복제|예|예|예|예(구독자만)|예(구독자만)|예(구독자만)|예(구독자만)|  
 |스냅샷 복제|예|예|예|예(구독자만)|예(구독자만)|예(구독자만)|예(구독자만)|  
@@ -157,17 +157,17 @@ ms.locfileid: "79289291"
 |Oracle 게시|예|||||||  
 |피어 투 피어 트랜잭션 복제|예|||||||  
   
-##  <a name="Mgmt_Tools"></a>관리 도구  
+##  <a name="management-tools"></a><a name="Mgmt_Tools"></a>관리 도구  
   
 |기능 이름|Enterprise|비즈니스 인텔리전스|Standard|웹|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |SMO(SQL Management Objects)|예|예|예|예|예|예|예|  
 |SQL 구성 관리자|예|예|예|예|예|예|예|  
 |SQL CMD(명령 프롬프트 도구)|예|예|예|예|예|예|예|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Management Studio|예|예|예|예|예|예||  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio|예|예|예|예|예|예||  
 |Distributed Replay - 관리 도구|예|예|예|예|예|예||  
-|Distributed Replay - 클라이언트|예|예|예|예||||  
-|Distributed Replay - 컨트롤러|예(Enterprise는 최대 16 클라이언트 지원, Developer는 1 클라이언트만 지원)|예|예(1 클라이언트만 지원)|예(1 클라이언트만 지원)||||  
+|Distributed Replay - 클라이언트|예|아니요|예|예||||  
+|Distributed Replay - 컨트롤러|예(Enterprise는 최대 16 클라이언트 지원, Developer는 1 클라이언트만 지원)|아니요|예(1 클라이언트만 지원)|예(1 클라이언트만 지원)||||  
 |SQL 프로파일러|예|예|예|아니요<sup>2</sup>|아니요<sup>2</sup>|아니요<sup>2</sup>|아니요<sup>2</sup>|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트|예|예|예|예||||  
 |Microsoft System Center Operations Manager 관리 팩|예|예|예|예||||  
@@ -179,7 +179,7 @@ ms.locfileid: "79289291"
   
  <sup>3</sup> 튜닝은 Standard edition 기능 에서만 사용할 수 있습니다.  
   
-##  <a name="RDBMS_mgmt"></a>RDBMS 관리 효율  
+##  <a name="rdbms-manageability"></a><a name="RDBMS_mgmt"></a>RDBMS 관리 효율  
   
 |기능 이름|Enterprise|비즈니스 인텔리전스|Standard|웹|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -200,8 +200,7 @@ ms.locfileid: "79289291"
 |병렬 인덱스 작업|예|||||||  
 |쿼리 최적화 프로그램의 인덱싱된 뷰 자동 사용|예|||||||  
 |병렬 일관성 검사|예|||||||  
-|
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 제어 지점|예|||||||  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 제어 지점|예|||||||  
 |포함된 데이터베이스|예|예|예|예|예|예|예|  
 |버퍼 풀 확장<sup>2</sup>|예|예|예|||||  
   
@@ -209,11 +208,11 @@ ms.locfileid: "79289291"
   
  <sup>2</sup> 이 기능은 64 비트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에만 사용할 수 있습니다.  
   
-##  <a name="Dev_tools"></a>개발 도구  
+##  <a name="development-tools"></a><a name="Dev_tools"></a>개발 도구  
   
 |기능 이름|Enterprise|비즈니스 인텔리전스|Standard|웹|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[msCoName](../includes/msconame-md.md)]Visual Studio 통합|예|예|예|예|예|예|예|  
+|[!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio 통합|예|예|예|예|예|예|예|  
 |Intellisense([!INCLUDE[tsql](../includes/tsql-md.md)] 및 MDX)|예|예|예|예|예|예|예|  
 |[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|예|예|예|예|예|||  
 |SQL 쿼리 편집 및 디자인 도구<sup>1</sup>|예|예|예|||||  
@@ -222,7 +221,7 @@ ms.locfileid: "79289291"
   
  <sup>1</sup> 이 기능은 Standard edition의 64 비트 버전에는 사용할 수 없습니다.  
   
-##  <a name="Programmability"></a> Programmability  
+##  <a name="programmability"></a><a name="Programmability"></a> Programmability  
   
 |기능 이름|Enterprise|비즈니스 인텔리전스|Standard|웹|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -237,14 +236,13 @@ ms.locfileid: "79289291"
 |전체 텍스트 및 의미 체계 검색|예|예|예|예|예|||  
 |쿼리에서 언어 지정|예|예|예|예|예|||  
 |Service Broker(메시징)|예|예|예|아니요(클라이언트 전용)|아니요(클라이언트 전용)|아니요(클라이언트 전용)|아니요(클라이언트 전용)|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]종점|예|예|예|예||||  
+|[!INCLUDE[tsql](../includes/tsql-md.md)] 엔드포인트|예|예|예|예||||  
   
-##  <a name="SSIS"></a> Integration Services  
+##  <a name="integration-services"></a><a name="SSIS"></a> Integration Services  
   
 |기능|Enterprise|비즈니스 인텔리전스|Standard|웹|Express with Advanced Services|Express with Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사|예|예|예|예|예|예|예|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사|예|예|예|예|예|예|예|  
 |기본 제공 데이터 원본 커넥터|예|예|예|예|예|예|예|  
 |SSIS 디자이너 및 런타임|예|예|예|||||  
 |기본 변환|예|예|예|||||  
@@ -252,7 +250,7 @@ ms.locfileid: "79289291"
 |Attunity Oracle CDC Service|예|||||||  
 |Change Data Capture Designer for Oracle by Attunity|예|||||||  
   
-###  <a name="SSIS_AA"></a>Integration Services-고급 어댑터  
+###  <a name="integration-services---advanced-adapters"></a><a name="SSIS_AA"></a>Integration Services - 고급 어댑터  
   
 |기능 이름|Enterprise|비즈니스 인텔리전스|Standard|웹|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -265,7 +263,7 @@ ms.locfileid: "79289291"
 |Attunity의 변경 데이터 캡처 구성 요소|예|||||||  
 |Attunity의 Connector for ODBC(Open Database Connectivity)|예|||||||  
   
-###  <a name="SSIS_AT"></a>Integration Services-고급 변환  
+###  <a name="integration-services---advanced-transforms"></a><a name="SSIS_AT"></a> Integration Services - 고급 변환  
   
 |기능 이름|Enterprise|비즈니스 인텔리전스|Standard|웹|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -274,18 +272,17 @@ ms.locfileid: "79289291"
 |유사 항목 그룹화 및 조회 변환|예|||||||  
 |용어 추출 및 조회 변환|예|||||||  
   
-##  <a name="MDS"></a>MDS(Master Data Services)  
+##  <a name="master-data-services"></a><a name="MDS"></a>MDS(Master Data Services)  
   
 > [!NOTE]  
->  -   
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]는 Business Intelligence 및 Enterprise 64비트 버전에서만 사용할 수 있습니다.  
+>  -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]는 Business Intelligence 및 Enterprise 64비트 버전에서만 사용할 수 있습니다.  
   
 |기능|Enterprise|비즈니스 인텔리전스|Standard|웹|Express with Advanced Services|Express with Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]데이터|예|예||||||  
-|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]웹 응용 프로그램|예|예||||||  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스|예|예||||||  
+|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션|예|예||||||  
   
-##  <a name="Data_warehouse"></a>데이터 웨어하우스  
+##  <a name="data-warehouse"></a><a name="Data_warehouse"></a>데이터 웨어하우스  
   
 |기능 이름|Enterprise|비즈니스 인텔리전스|Standard|웹|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -298,7 +295,7 @@ ms.locfileid: "79289291"
 |xVelocity 메모리 최적화 columnstore 인덱스|예|||||||  
 |글로벌 일괄 집계|예|||||||  
   
-##  <a name="SSAS"></a>Analysis Services  
+##  <a name="analysis-services"></a><a name="SSAS"></a>Analysis Services  
   
 |기능 이름|Enterprise|비즈니스 인텔리전스|Standard|웹|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -308,7 +305,7 @@ ms.locfileid: "79289291"
 |고가용성|예|예|예|||||  
 |프로그래밍 기능(AMO, ADOMD.Net, OLEDB, XML/A, ASSL)|예|예|예|||||  
   
-###  <a name="BISemModel_multi"></a>BI 의미 체계 모델 (다차원)  
+###  <a name="bi-semantic-model-multidimensional"></a><a name="BISemModel_multi"></a>BI 의미 체계 모델 (다차원)  
   
 |기능 이름|Enterprise|비즈니스 인텔리전스|Standard|웹|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -328,7 +325,7 @@ ms.locfileid: "79289291"
 |고급 차원(참조 차원, 다 대 다 차원|예|예|예|||||  
 |연결된 측정값 및 차원|예|예||||||  
 |Translations|예|예|예|||||  
-|집계|예|예|예|||||  
+|Aggregations|예|예|예|||||  
 |여러 파티션|예|예|예, 최대 3|||||  
 |자동 관리 캐싱|예|예||||||  
 |사용자 지정 어셈블리(저장 프로시저)|예|예|예|||||  
@@ -345,7 +342,7 @@ ms.locfileid: "79289291"
   
  <sup>1</sup> LastChild 반 가산적 측정값은 standard edition에서 지원 되지만 None, FirstChild, FirstNonEmpty 있지 않음, LastNonEmpty 있지 않음, AverageOfChildren 및 ByAccount와 같은 다른 반 가산적 측정값은 지원 되지 않습니다. Sum, Count, Min, Max와 같은 가산적 측정값과 비가산적 측정값(DistinctCount)은 모든 버전에서 지원됩니다.  
   
-###  <a name="BISemModel_tabular"></a>BI 의미 체계 모델 (테이블 형식)  
+###  <a name="bi-semantic-model-tabular"></a><a name="BISemModel_tabular"></a>BI 의미 체계 모델 (테이블 형식)  
   
 |기능 이름|Enterprise|비즈니스 인텔리전스|Standard|웹|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -358,7 +355,7 @@ ms.locfileid: "79289291"
 |파티션|예|예||||||  
 |메모리 내 및 DirectQuery 스토리지 모드(테이블 형식만 해당)|예|예||||||  
   
-###  <a name="PowerPivot"></a>SharePoint용 PowerPivot  
+###  <a name="powerpivot-for-sharepoint"></a><a name="PowerPivot"></a> SharePoint용 PowerPivot  
   
 |기능 이름|Enterprise|비즈니스 인텔리전스|Standard|웹|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -369,7 +366,7 @@ ms.locfileid: "79289291"
 |PowerPivot 데이터 새로 고침|예|예||||||  
 |PowerPivot 데이터 피드|예|예||||||  
   
-###  <a name="DataMining"></a>데이터 마이닝  
+###  <a name="data-mining"></a><a name="DataMining"></a>데이터 마이닝  
   
 |기능 이름|Enterprise|비즈니스 인텔리전스|Standard|웹|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -388,9 +385,9 @@ ms.locfileid: "79289291"
 |시퀀스 예측|예|예||||||  
 |Naive Bayes, 신경망, 로지스틱 회귀를 위한 다중 예측 대상|예|예||||||  
   
-##  <a name="Reporting"></a>Reporting Services  
+##  <a name="reporting-services"></a><a name="Reporting"></a>Reporting Services  
   
-###  <a name="Reporting_features"></a>Reporting Services 기능  
+###  <a name="reporting-services-features"></a><a name="Reporting_features"></a>Reporting Services 기능  
   
 |기능 이름|Enterprise|비즈니스 인텔리전스|Standard|웹|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -427,8 +424,7 @@ ms.locfileid: "79289291"
 ### <a name="report-server-database-server-edition-requirements"></a>보고서 서버 데이터베이스 서버 버전 요구 사항  
  보고서 서버 데이터베이스를 만들 때 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전은 데이터베이스 호스팅에 사용할 수 없습니다. 다음 표에서는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 특정 버전에 사용할 수 있는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]버전을 보여 줍니다.  
   
-|
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services 버전|데이터베이스 호스팅에 사용할 데이터베이스 엔진 인스턴스 버전|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services 버전|데이터베이스 호스팅에 사용할 데이터베이스 엔진 인스턴스 버전|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
 |Enterprise|Standard, Business Intelligence Enterprise 버전(로컬 또는 원격)|  
 |비즈니스 인텔리전스|Standard, Business Intelligence Enterprise 버전(로컬 또는 원격)|  
@@ -437,21 +433,21 @@ ms.locfileid: "79289291"
 |Express with Advanced Services|Express with Advanced Services(로컬 전용)|  
 |평가|평가|  
   
-##  <a name="BIClients"></a>비즈니스 인텔리전스 클라이언트  
+##  <a name="business-intelligence-clients"></a><a name="BIClients"></a> Business Intelligence 클라이언트  
  Microsoft 다운로드 센터에서 제공하는 다음 소프트웨어 클라이언트 애플리케이션을 사용하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 실행되는 비즈니스 인텔리전스 문서를 손쉽게 만들 수 있습니다. 이러한 문서를 서버 환경에서 호스팅하려는 경우 해당 문서 유형을 지원하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 사용하세요. 다음 표에서는 이러한 클라이언트 애플리케이션에서 만든 문서를 호스팅하는 데 필요한 서버 기능이 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 보여 줍니다.  
   
 |기능 이름|Enterprise|비즈니스 인텔리전스|Standard|웹|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]|예|예|예|||||  
 |Excel 및 Visio 2010용 데이터 마이닝 추가 기능|예|예|예|||||  
-|[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)]2010|예|예||||||  
+|[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 2010|예|예||||||  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|예|예||||||  
   
 > [!NOTE]
 >  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)]는 Excel 추가 기능이 며에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]종속 되지 않습니다. 그러나 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 은 SharePoint에서 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 통합 문서를 공유하고 공동 작업하는 데 필요하며 이 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 및 Business Intelligence 버전의 일부로 사용할 수 있습니다.  
 > 2.  위의 표는 이러한 클라이언트 도구를 활성화하는 데 필요한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 식별하지만 이러한 기능은 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서 호스팅되는 데이터에 액세스할 수 있습니다.  
   
-##  <a name="Spatial"></a>공간 및 위치 서비스  
+##  <a name="spatial-and-location-services"></a><a name="Spatial"></a>공간 및 위치 서비스  
   
 |기능 이름|Enterprise|비즈니스 인텔리전스|Standard|웹|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -460,15 +456,14 @@ ms.locfileid: "79289291"
 |고급 공간 라이브러리|예|예|예|예|예|예|예|  
 |산업 표준 공간 데이터 형식 가져오기/내보내기|예|예|예|예|예|예|예|  
   
-##  <a name="Add_DBServices"></a>추가 데이터베이스 서비스  
+##  <a name="additional-database-services"></a><a name="Add_DBServices"></a>추가 데이터베이스 서비스  
   
 |기능 이름|Enterprise|비즈니스 인텔리전스|Standard|웹|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant|예|예|예|예|예|예|예|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant|예|예|예|예|예|예|예|  
 |데이터베이스 메일|예|예|예|예||||  
   
-##  <a name="Other_Components"></a>기타 구성 요소  
+##  <a name="other-components"></a><a name="Other_Components"></a>기타 구성 요소  
   
 |기능 이름|Enterprise|비즈니스 인텔리전스|Standard|웹|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  

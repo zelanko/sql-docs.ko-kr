@@ -1,5 +1,5 @@
 ---
-title: 성명서 사용 (ODBC) | 마이크로 소프트 문서
+title: 문 사용 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 62c422e0fb5c5afe481b2d11a477523ca1466df3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81284453"
 ---
 # <a name="use-a-statement-odbc"></a>문 사용(ODBC)
@@ -38,11 +38,11 @@ ms.locfileid: "81284453"
   
 5.  SQLExecDirect를 사용하여 문을 직접 실행합니다.  
   
-     \- 또는-  
+     \- 또는 -  
   
      문이 준비되어 있는 경우 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)를 사용하여 여러 번 실행합니다.  
   
-     \- 또는-  
+     \- 또는 -  
   
      카탈로그 함수를 호출하여 결과가 반환되도록 합니다.  
   
@@ -50,11 +50,11 @@ ms.locfileid: "81284453"
   
      문의 결과 집합을 한 번에 한 행씩 인출합니다.  
   
-     \- 또는-  
+     \- 또는 -  
   
      블록 커서를 사용하여 결과 집합을 한 번에 여러 행씩 인출합니다.  
   
-     \- 또는-  
+     \- 또는 -  
   
      [SQLRowCount](../../../relational-databases/native-client-odbc-api/sqlrowcount.md)를 호출하여 INSERT, UPDATE 또는 DELETE 문의 영향을 받는 행 수를 확인합니다.  
   
@@ -73,6 +73,6 @@ ms.locfileid: "81284453"
 8.  SQL_HANDLE_STMT의 *HandleType*으로 [SQLFreeHandle](../../../relational-databases/native-client-odbc-api/sqlfreehandle.md)을 호출하여 문 핸들을 해제합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;쿼리 방법 항목 실행](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [쿼리 실행 방법 도움말 항목 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

@@ -13,14 +13,13 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: e1bdfd447fdf61123615dad329b297490172b191
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176673"
 ---
 # <a name="linestring"></a>LineString
-  
   `LineString`은 일련의 점과 이 점을 연결하는 선분을 나타내는 1차원 개체입니다.
 
 ## <a name="linestring-instances"></a>LineString 인스턴스
@@ -39,8 +38,7 @@ ms.locfileid: "78176673"
 -   그림 4는 닫혀 있고 단순하지 않은 `LineString` 인스턴스이므로 링이 아닙니다.
 
 ### <a name="accepted-instances"></a>허용되는 인스턴스
- 허용되는 `LineString` 인스턴스는 기하 도형 변수에 입력될 수 있지만 유효한 `LineString` 인스턴스가 아닐 수 있습니다. 
-  `LineString` 인스턴스가 허용되려면 다음 조건을 충족해야 합니다. 인스턴스는 2개 이상의 점으로 구성되어야 하거나 비어 있어야 합니다. 다음 LineString 인스턴스가 허용됩니다.
+ 허용되는 `LineString` 인스턴스는 기하 도형 변수에 입력될 수 있지만 유효한 `LineString` 인스턴스가 아닐 수 있습니다. `LineString` 인스턴스가 허용되려면 다음 조건을 충족해야 합니다. 인스턴스는 2개 이상의 점으로 구성되어야 하거나 비어 있어야 합니다. 다음 LineString 인스턴스가 허용됩니다.
 
 ```
 DECLARE @g1 geometry = 'LINESTRING EMPTY';
@@ -48,8 +46,7 @@ DECLARE @g2 geometry = 'LINESTRING(1 1,2 3,4 8, -6 3)';
 DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';
 ```
 
- 
-  `@g3`에서는 `LineString` 인스턴스를 허용할 수 있지만 유효하지 않음을 보여 줍니다.
+ `@g3`에서는 `LineString` 인스턴스를 허용할 수 있지만 유효하지 않음을 보여 줍니다.
 
  다음 `LineString` 인스턴스가 허용되지 않습니다. 이 인스턴스에서 `System.FormatException`이 발생합니다.
 
@@ -58,17 +55,13 @@ DECLARE @g geometry = 'LINESTRING(1 1)';
 ```
 
 ### <a name="valid-instances"></a>유효한 인스턴스
- 
-  `LineString` 인스턴스는 다음 조건을 충족해야 유효합니다.
+ `LineString` 인스턴스는 다음 조건을 충족해야 유효합니다.
 
-1.  
-  `LineString` 인스턴스가 허용되어야 합니다.
+1.  `LineString` 인스턴스가 허용되어야 합니다.
 
-2.  
-  `LineString` 인스턴스가 비어 있지 않는 경우 해당 인스턴스에 2개 이상의 고유 점이 포함되어야 합니다.
+2.  `LineString` 인스턴스가 비어 있지 않는 경우 해당 인스턴스에 2개 이상의 고유 점이 포함되어야 합니다.
 
-3.  
-  `LineString` 인스턴스는 두 개 이상의 연속 점 간격으로 자체적으로 겹쳐질 수 없습니다.
+3.  `LineString` 인스턴스는 두 개 이상의 연속 점 간격으로 자체적으로 겹쳐질 수 없습니다.
 
  다음 `LineString` 인스턴스는 유효합니다.
 
@@ -90,8 +83,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
 ```
 
 > [!WARNING]
->  
-  `LineString`의 겹침 여부가 정확하지 않은 부동 소수점 계산을 기준으로 검색됩니다.
+>  `LineString`의 겹침 여부가 정확하지 않은 부동 소수점 계산을 기준으로 검색됩니다.
 
 ## <a name="examples"></a>예
  다음 예에서는 세 점이 있고 SRID가 0인 `geometry``LineString` 인스턴스를 만드는 방법을 보여 줍니다.
@@ -101,16 +93,14 @@ DECLARE @g geometry;
 SET @g = geometry::STGeomFromText('LINESTRING(1 1, 2 4, 3 9)', 0);
 ```
 
- 
-  `LineString` 인스턴스의 각 점에는 Z(높이) 및 M(측정값) 값을 포함할 수 있습니다. 이 예에서는 위의 예에서 만들어진 `LineString` 인스턴스에 M 값을 추가합니다. M 및 Z는 Null 값이 될 수 있습니다.
+ `LineString` 인스턴스의 각 점에는 Z(높이) 및 M(측정값) 값을 포함할 수 있습니다. 이 예에서는 위의 예에서 만들어진 `LineString` 인스턴스에 M 값을 추가합니다. M 및 Z는 Null 값이 될 수 있습니다.
 
 ```
 DECLARE @g geometry;
 SET @g = geometry::STGeomFromText('LINESTRING(1 1 NULL 0, 2 4 NULL 12.3, 3 9 NULL 24.5)', 0);
 ```
 
- 다음 예에서는 동일한 점 두 개로 `geometry LineString` 인스턴스를 만드는 방법을 보여 줍니다. 
-  `IsValid`에 대한 호출은 `LineString` 인스턴스가 유효하지 않음을 나타내며 `MakeValid` 호출 시 `LineString` 인스턴스가 `Point`로 변환됩니다.
+ 다음 예에서는 동일한 점 두 개로 `geometry LineString` 인스턴스를 만드는 방법을 보여 줍니다. `IsValid`에 대한 호출은 `LineString` 인스턴스가 유효하지 않음을 나타내며 `MakeValid` 호출 시 `LineString` 인스턴스가 `Point`로 변환됩니다.
 
 ```sql
 DECLARE @g geometry

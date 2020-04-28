@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 033999701141387ee63712a8a9ce055ad3f55cb1
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289531"
 ---
 # <a name="specify-merge-replication-properties"></a>병합 복제 속성 지정
@@ -33,7 +33,7 @@ ms.locfileid: "79289531"
 -   구독이 초기화된 후 아티클을 다운로드 전용으로 지정하면 해당 아티클을 받은 모든 클라이언트 구독을 다시 초기화해야 합니다. 서버 구독은 다시 초기화할 필요가 없습니다. 속성 변경의 효과에 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
   
 ### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio 사용  
- 새 게시 마법사의 **아티클** 페이지 또는 **아티클 속성 - **Article>** 대화 상자의 \<속성** 탭에서 아티클을 다운로드 전용으로 지정합니다. 이 대화 상자는 새 게시 마법사 및 **게시 속성 - \<게시>** 대화 상자에서 사용할 수 있습니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](../publish/create-a-publication.md) 및 [게시 속성 보기 및 수정](../publish/view-and-modify-publication-properties.md)을 참조하세요.  
+ 새 게시 마법사의 **아티클** 페이지 또는 **아티클 속성 - \<Article>** 대화 상자의 **속성** 탭에서 아티클을 다운로드 전용으로 지정합니다. 이 대화 상자는 새 게시 마법사 및 **게시 속성 - \<게시>** 대화 상자에서 사용할 수 있습니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](../publish/create-a-publication.md) 및 [게시 속성 보기 및 수정](../publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="to-specify-that-an-article-is-download-only-on-the-articles-page"></a>아티클 페이지에서 아티클을 다운로드 전용으로 지정하려면  
   
@@ -43,7 +43,7 @@ ms.locfileid: "79289531"
   
 1.  새 게시 마법사의 **아티클** 페이지 또는 **게시 속성 - \<게시>** 대화 상자에서 테이블을 선택하고 **아티클 속성**을 클릭합니다.    
 2.  **선택한 테이블 아티클 속성 설정** 또는 **모든 테이블 아티클 속성 설정**을 클릭합니다.    
-3.  **아티클 속성 -** Article>**대화 상자의**속성 **탭에 있는 \<대상 개체** 섹션에서 **동기화 방향**에 대해 다음 값 중 하나를 지정합니다.    
+3.  **아티클 속성 - \<Article>** 대화 상자의 **속성** 탭에 있는 **대상 개체** 섹션에서 **동기화 방향**에 대해 다음 값 중 하나를 지정합니다.    
     -   **구독자로 다운로드 전용, 구독자 변경 금지**    
     -   **구독자로 다운로드 전용, 구독자 변경 허용**  
   
@@ -72,11 +72,11 @@ ms.locfileid: "79289531"
         > [!NOTE]  
         >  아티클의 원본 테이블이 이미 다른 게시에 게시된 경우 두 아티클의 다운로드 전용 동작이 동일해야 합니다.  
  
-## <a name="interactive-conflict-resolution">대화형 충돌 해결</a>
+## <a name=""></a><a name="interactive-conflict-resolution">대화형 충돌 해결</a>
 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제는 Windows 동기화 관리자에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 요청 시 동기화 중에 수동으로 충돌을 해결할 수 있는 대화형 해결 프로그램을 제공 합니다. 대화형 충돌 해결 기능을 설정하면 대화형 해결 프로그램을 사용하여 동기화 중 대화형으로 충돌을 해결할 수 있습니다. 대화형 해결 프로그램은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 동기화 관리자를 통해 사용할 수 있습니다. 자세한 내용은 [Windows 동기화 관리자를 사용하여 구독 동기화&#40;Windows 동기화 관리자&#41;](../synchronize-a-subscription-using-windows-synchronization-manager.md)를 참조하세요.  
   
     
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   Windows 동기화 관리자 외부에서 동기화가 수행된 경우(예: SQL Server Management Studio 또는 복제 모니터의 예약된 동기화 또는 요청 시 동기화) 아티클에 지정된 기본 충돌 해결을 사용하여 사용자 개입 없이 자동으로 충돌이 해결됩니다. 자세한 내용은 [Interactive Conflict Resolution](../merge/advanced-merge-replication-conflict-interactive-resolution.md)을 참조하세요.  
   
@@ -122,19 +122,19 @@ ms.locfileid: "79289531"
   
 
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   구독이 초기화된 후에 추적 수준을 수정하면 해당 구독을 다시 초기화해야 합니다. 속성 변경의 영향에 대한 자세한 내용은 [게시 및 아티클 속성 변경](../publish/change-publication-and-article-properties.md)을 참조하세요.    
 -   행 및 열 수준 추적을 사용하면 충돌 해결이 항상 행 수준에서 수행되고 적용되는 행이 무시되는 행을 덮어씁니다. 병합 복제를 사용하면 충돌을 추적하고 논리적 레코드 수준에서 충돌이 해결되도록 지정할 수도 있지만 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서는 이러한 옵션을 사용할 수 없습니다. 복제 저장 프로시저에서 이러한 옵션을 설정하는 방법은 [병합 테이블 아티클 간의 논리적 레코드 관계 정의](../publish/define-a-logical-record-relationship-between-merge-table-articles.md)를 참조하세요.  
   
-###  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- 새 게시 마법사 및 **게시 속성 -** 게시>**대화 상자에서 사용할 수 있는**아티클 속성 **대화 상자의 \<속성** 탭에서 병합 아티클에 대한 행 또는 열 수준 추적을 지정합니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](create-a-publication.md) 및 [게시 속성 보기 및 수정](../publish/view-and-modify-publication-properties.md)을 참조하세요.  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+ 새 게시 마법사 및 **게시 속성 - \<게시>** 대화 상자에서 사용할 수 있는 **아티클 속성** 대화 상자의 **속성** 탭에서 병합 아티클에 대한 행 또는 열 수준 추적을 지정합니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](create-a-publication.md) 및 [게시 속성 보기 및 수정](../publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="specify-row--or-column-level-tracking"></a>행 또는 열 수준 추적 지정  
   
 1.  새 게시 마법사의 **아티클** 페이지 또는 **게시 속성 - \<게시>** 대화 상자에서 테이블을 선택합니다.    
 2.  **아티클 속성**을 클릭한 다음 **선택한 테이블 아티클 속성 설정** 또는 **모든 테이블 아티클 속성 설정**을 클릭합니다.   
-3.  **아티클 속성** Article> **대화 상자의 \<속성** 탭에서 **추적 수준** 속성에 대해 **행 수준 추적** 또는 **열 수준 추적** 중 하나를 선택합니다.    
+3.  **아티클 속성 \<Article>** 대화 상자의 **속성** 탭에서 **추적 수준** 속성에 대해 **행 수준 추적** 또는 **열 수준 추적** 중 하나를 선택합니다.    
 4.  **게시 속성 - \<게시>** 대화 상자에 있는 경우 **확인**을 클릭하여 대화 상자를 저장하고 닫습니다.  
   
 ###  <a name="using-transact-sql"></a>Transact-SQL 사용  
@@ -183,7 +183,7 @@ ms.locfileid: "79289531"
 ## <a name="processing-order"></a>처리 순서
   병합 복제를 사용하면 동기화 프로세스 중에 병합 에이전트에서 아티클을 처리하는 순서를 지정할 수 있습니다. 아티클을 작성할 때 복제 저장 프로시저를 사용하여 각 아티클 순서를 프로그래밍 방식으로 할당할 수 있습니다. 아티클은 최하위에서 최상위의 순서로 처리됩니다. 두 아티클의 값이 같으면 동시에 처리됩니다. 자세한 내용은 [병합 복제 속성 지정](../publish/specify-merge-replication-properties.md)을 참조하세요.  
 
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 부터 병합 게시에 대 한 아티클의 기본 처리 순서를 재정의할 수 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]있습니다. 트리거를 통해 참조 무결성을 정의하고 이러한 트리거가 특정 순서로 발생해야 할 경우 이러한 작업이 유용할 수 있습니다. 
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터 병합 게시에 대한 아티클의 기본 처리 순서를 덮어쓸 수 있게 되었습니다. 트리거를 통해 참조 무결성을 정의하고 이러한 트리거가 특정 순서로 발생해야 할 경우 이러한 작업이 유용할 수 있습니다. 
 
 ### <a name="how-processing-order-is-determined"></a>처리 순서 결정 방식  
  병합 동기화 중 아티클은 기본적으로 기본 테이블에 정의된 DRI(선언적 참조 무결성) 제약 조건을 포함하여 개체 간 종속 관계에 필요한 순서대로 처리됩니다. 아티클 처리 시 테이블에 변경 내용을 열거한 다음 이들 변경 내용을 적용합니다. DRI가 없지만 조인 필터 또는 논리적 레코드가 테이블 아티클 사이에 존재할 경우 아티클은 필터 및 논리적 레코드에 필요한 순서대로 처리됩니다. DRI, 조인 필터, 논리적 레코드 또는 기타 종속 관계를 통해 다른 아티클과 관련되어 있지 않은 아티클은 [sysmergearticles&#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/sysmergearticles-transact-sql) 시스템 테이블에서의 아티클 애칭에 따라 처리됩니다.  
@@ -211,9 +211,9 @@ ms.locfileid: "79289531"
 
 ## <a name="see-also"></a>참고 항목  
  [조건부 삭제 추적으로 병합 복제 성능 최적화](../merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
- [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
- [Define a Logical Record Relationship Between Merge Table Articles](define-a-logical-record-relationship-between-merge-table-articles.md)   
+ [논리적 레코드에서 충돌 감지 및 해결](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
+ [병합 테이블 아티클 간의 논리적 레코드 관계 정의](define-a-logical-record-relationship-between-merge-table-articles.md)   
  [병합 복제 충돌 감지 및 해결](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [다운로드 전용 아티클로 병합 복제 성능 최적화](../merge/optimize-merge-replication-performance-with-download-only-articles.md)   
- [Define an Article](define-an-article.md)   
+ [아티클 정의](define-an-article.md)   
  [아티클 속성 보기 및 수정](view-and-modify-article-properties.md)  

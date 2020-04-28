@@ -1,5 +1,5 @@
 ---
-title: 데스크톱 데이터베이스 드라이버 구현 | 마이크로 소프트 문서
+title: 데스크톱 데이터베이스 드라이버 구현 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 0b25a5e8ed7a39a11b207c185f47855c7670473e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81290613"
 ---
 # <a name="implementing-desktop-database-drivers"></a>데스크톱 데이터베이스 드라이버 구현
-Microsoft ODBC 데스크톱 데이터베이스 드라이버를 구현하고 설정하는 방법에 대한 지침 및 기술 노트는 ODBC 데이터 원본 관리자 온라인 도움말에서 확인할 수 있습니다. 이 파일은 [Microsoft ODBC 데이터 원본 관리자의](../../odbc/admin/odbc-data-source-administrator.md)드라이버 설정 루틴 중에 액세스할 수 있습니다.  
+Microsoft ODBC 데스크톱 데이터베이스 드라이버를 구현 하 고 설정 하는 방법에 대 한 지침 및 기술 정보는 ODBC 데이터 원본 관리자 온라인 도움말에서 찾을 수 있습니다. 이 파일은 [MICROSOFT ODBC 데이터 원본 관리자](../../odbc/admin/odbc-data-source-administrator.md)에서 드라이버 설치 루틴을 실행 하는 동안 액세스할 수 있습니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
@@ -32,7 +32,7 @@ Microsoft ODBC 데스크톱 데이터베이스 드라이버를 구현하고 설�
   
 -   [하드웨어 및 소프트웨어 요구 사항](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
   
--   [데스크톱 데이터베이스 드라이버가 있는 설명자](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
+-   [데스크톱 데이터베이스 드라이버를 사용 하는 설명자](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
   
 -   [데스크톱 데이터베이스 드라이버에 대한 진단](../../odbc/microsoft/diagnostics-for-desktop-database-drivers.md)  
   

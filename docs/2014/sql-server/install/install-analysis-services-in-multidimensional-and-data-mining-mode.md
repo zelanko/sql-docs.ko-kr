@@ -17,24 +17,20 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 002a4ce66108622ce5efcf33231edaed9cd1c99b
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78280870"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>다차원 및 데이터 마이닝 모드에서 Analysis Services 설치
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 비즈니스 인텔리전스 애플리케이션을 위한 OLAP(온라인 분석 처리) 및 데이터 마이닝 기능을 제공합니다. 이 릴리스에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] *다차원 모드로*를 설치할 때 OLAP 데이터베이스 및 데이터 마이닝 모델에 대 한 지원을 사용할 수 있습니다. 다차원 모드는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]가 실행되는 세 가지 서버 모드 중 하나이며 기본 모드입니다. 기본값을 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 설치하면 다차원 데이터베이스 및 데이터 마이닝 모델을 실행하는 인스턴스를 얻게 됩니다.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 여러 인스턴스를 지원하므로 한 컴퓨터에 여러 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 설치하거나 새 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 이전 버전과 함께 실행할 수 있습니다. 서버 모드는 인스턴스에 적용됩니다. 다른 모드를 사용하려면 서버 인스턴스를 추가로 설치해야 합니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 여러 인스턴스를 지원하므로 한 컴퓨터에 여러 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 설치하거나 새 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 이전 버전과 함께 실행할 수 있습니다. 서버 모드는 인스턴스에 적용됩니다. 다른 모드를 사용하려면 서버 인스턴스를 추가로 설치해야 합니다.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 단독으로 설치하거나 다른 구성 요소와 함께 설치할 수 있습니다. 만 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]설치 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 기능 선택 페이지에서 **Analysis Services** 를 선택 하면 다음 기능이 설치 됩니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 단독으로 설치하거나 다른 구성 요소와 함께 설치할 수 있습니다. 만 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]설치 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 기능 선택 페이지에서 **Analysis Services** 를 선택 하면 다음 기능이 설치 됩니다.  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 및 데이터 마이닝 모델을 실행하기 위한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 및 데이터 마이닝 모델을 실행하기 위한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버  
   
 -   원본 데이터베이스에 대한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 액세스에 사용되는 데이터 공급자  
   
@@ -49,8 +45,7 @@ ms.locfileid: "78280870"
   
 -   데이터 이동, 복사 및 변환을 위한 그래픽 및 프로그래밍 가능 개체 모음인 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 및 복제 모니터를 비롯한 관리 도구  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 및 복제 모니터를 비롯한 관리 도구  
   
 ## <a name="installation-tasks"></a>설치 태스크  
  설치할 때는 다음 태스크를 수행해야 합니다.  
@@ -60,7 +55,7 @@ ms.locfileid: "78280870"
 |SQL Server 2014을 설치 하 고 [Windows 서비스 계정 및 사용 권한을 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) [하기 위한 하드웨어 및 소프트웨어 요구 사항](hardware-and-software-requirements-for-installing-sql-server.md) 입니다.|설치 프로그램을 실행하기 전에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 설치에 필요한 필수 구성 요소를 확인하고 서버 프로비전에 사용할 계정을 결정합니다.|  
 |설치 [마법사 &#40;설치&#41;에서 SQL Server 2014을 설치 ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)합니다.|SQL Server 설치 프로그램을 실행하여 소프트웨어를 설치합니다.|  
 |[Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|설치가 완료되면 서버로의 원격 연결을 허용하도록 방화벽 설정을 구성해야 합니다.|  
-|[Analysis Services&#41;&#40;개체 및 작업에 대 한 액세스 권한 부여](https://docs.microsoft.com/analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services)|Analysis Services 데이터베이스에 액세스하는 사용자는 서버에 있는 데이터베이스 하나 이상에 대해 읽기 권한을 가지고 있어야 합니다.|  
+|[개체 및 작업에 대한 액세스 승인&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services)|Analysis Services 데이터베이스에 액세스하는 사용자는 서버에 있는 데이터베이스 하나 이상에 대해 읽기 권한을 가지고 있어야 합니다.|  
   
 ## <a name="related-content"></a>관련 내용  
  설치와 관련된 추가적인 내용은 다음 항목을 참조하십시오.  

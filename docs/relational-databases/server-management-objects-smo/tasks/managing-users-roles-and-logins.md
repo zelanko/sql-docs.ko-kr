@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3cc82e51469a6eba82fb3ba6890bb84f0825c0e7
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81002733"
 ---
 # <a name="managing-users-roles-and-logins"></a>사용자, 역할 및 로그인 관리
@@ -34,7 +34,7 @@ ms.locfileid: "81002733"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스는 사용자가 특정 태스크를 수행할 수 있는 일련의 데이터베이스 수준 권한을 지정하는 역할도 포함합니다. 서버 역할과 달리 데이터베이스 역할은 고정되지 않아서 생성, 수정 및 제거할 수 있습니다. 대량 관리를 위해 데이터베이스 역할에 권한 및 사용자를 할당할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .NET에서 시각적 C&#35; SMO 프로젝트 만들기를](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)참조하십시오.  
+ 다음 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-c"></a>Visual C#에서 로그인 및 연관된 사용자 열거  
  데이터베이스의 모든 사용자는 로그온과 연관되어 있습니다. 로그온은 둘 이상의 데이터베이스의 사용자들과 연관될 수 있습니다. 코드 예제는 <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Login> 메서드를 호출하여 로그온과 연관된 데이터베이스 사용자를 모두 나열하는 방법을 보여 줍니다. 이 예에서는 열거할 매핑 정보가 있는지 확인하기 위해 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 데이터베이스에 로그온과 사용자를 만듭니다.  
@@ -90,7 +90,7 @@ foreach ($db in Get-ChildItem)
 ```  
   
 ## <a name="managing-roles-and-users"></a>역할 및 사용자 관리  
- 이 예제에서는 역할 및 사용자를 관리하는 방법을 보여 줍니다. 이 샘플을 실행하려면 다음 어셈블리를 참조해야 합니다.  
+ 이 예제에서는 역할 및 사용자를 관리하는 방법을 보여 줍니다. 이 샘플을 실행 하려면 다음 어셈블리를 참조 해야 합니다.  
   
 -   Microsoft.SqlServer.Smo.dll  
   

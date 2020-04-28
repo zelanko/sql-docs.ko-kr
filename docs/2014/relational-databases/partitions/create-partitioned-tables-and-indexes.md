@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be83b941e5b8000a0a802fbe9fe7254a364d69c9
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289381"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>분할된 테이블 및 인덱스 만들기
@@ -62,17 +62,17 @@ ms.locfileid: "79289381"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   파티션 함수 및 구성표의 범위는 해당 함수 및 구성표가 만들어진 데이터베이스로 제한됩니다. 데이터베이스 내에서 파티션 함수는 다른 함수와 서로 다른 네임스페이스에 있습니다.  
   
 -   파티션 함수 내부의 행에 값이 null인 분할 열이 있으면 이러한 행은 가장 왼쪽의 파티션에 할당됩니다. 하지만 NULL이 경계 값으로 지정되고 RIGHT가 지정된 경우에는 맨 왼쪽 파티션이 빈 상태로 유지되고 NULL 값이 두 번째 파티션에 배치됩니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  분할된 테이블을 만들려면 데이터베이스에는 CREATE TABLE 권한이 필요하고 테이블을 만들 구성표에 대해서는 ALTER 권한이 필요합니다. 분할된 인덱스를 만들려면 인덱스를 만들 테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 분할된 테이블 또는 인덱스를 만들려면 다음과 같은 추가 권한 중 하나가 필요합니다.  
   
 -   ALTER ANY DATASPACE 권한. 이 권한은 기본적으로 **sysadmin** 고정 서버 역할 및 **db_owner** 및 **db_ddladmin** 고정 데이터베이스 역할의 멤버에게 부여됩니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "79289381"
   
 -   파티션 함수 및 파티션 구성표를 만들 데이터베이스의 서버에 대한 CONTROL SERVER 또는 ALTER ANY DATABASE 권한  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  이 절차의 단계를 수행하여 하나 이상의 파일 그룹, 해당 파일 및 테이블을 만들 수 있습니다. 다음 절차에서 분할된 테이블을 만들 때 이 개체를 참조하게 됩니다.  
   
 #### <a name="to-create-new-filegroups-for-a-partitioned-table"></a>분할된 테이블에 대한 새 파일 그룹을 만들려면  
@@ -115,8 +115,7 @@ ms.locfileid: "79289381"
   
 3.  **분할 열 선택** 페이지의 **사용 가능한 분할 열** 표에서 테이블을 분할할 열을 선택합니다. 데이터를 분할하는 데 사용할 수 있는 데이터 형식을 가진 열만 **사용 가능한 분할 열** 표에 표시됩니다. 계산 열을 분할 열로 선택하면 해당 열은 지속형 열로 지정되어야 합니다.  
   
-     분할 열과 값 범위를 선택할 때는 논리적 방법으로 데이터를 그룹화할 수 있는 정도를 고려해야 합니다. 예를 들어 월 또는 연도의 분기에 따라 논리적 그룹으로 데이터를 분할하도록 선택할 수 있습니다. 데이터에 대해 만들게 될 쿼리에 따라 이 논리적 그룹이 테이블 파티션을 관리하기에 충분한지 여부가 결정됩니다. 
-  `text`, `ntext`, `image`, `xml`, `timestamp`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, 별칭 데이터 형식 또는 CLR 사용자 정의 데이터 형식을 제외한 모든 데이터 형식을 분할 열로 사용할 수 있습니다.  
+     분할 열과 값 범위를 선택할 때는 논리적 방법으로 데이터를 그룹화할 수 있는 정도를 고려해야 합니다. 예를 들어 월 또는 연도의 분기에 따라 논리적 그룹으로 데이터를 분할하도록 선택할 수 있습니다. 데이터에 대해 만들게 될 쿼리에 따라 이 논리적 그룹이 테이블 파티션을 관리하기에 충분한지 여부가 결정됩니다. `text`, `ntext`, `image`, `xml`, `timestamp`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, 별칭 데이터 형식 또는 CLR 사용자 정의 데이터 형식을 제외한 모든 데이터 형식을 분할 열로 사용할 수 있습니다.  
   
      이 페이지에서는 다음과 같은 옵션을 추가로 선택할 수 있습니다.  
   
@@ -202,7 +201,7 @@ ms.locfileid: "79289381"
   
                 -   **매(Day)** 를 선택한 경우 작업 일정을 실행할 날짜와 작업 일정을 반복할 월 수를 모두 입력합니다. 예를 들어 작업 일정을 격월로 15일에 실행하려면 **매(Day)** 를 선택하고 첫 번째 상자에 "15", 두 번째 상자에 "2"를 입력합니다. 두 번째 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
   
-                -   **매(The)** 를 선택한 경우 작업 일정을 실행할 요일 및 작업 일정을 반복할 월 수를 입력합니다. 예를 들어 작업 일정을 격월로 마지막 평일에 실행하려면 **매(Day)** 를 선택하고 첫 번째 목록에서 **마지막**, 두 번째 목록에서 **평일**을 선택한 다음, 마지막 상자에 "2"를 입력합니다. **첫 번째**, **두 번째**, **세 번째** 또는 **네 번째** 또는 특정 평일(예: 일요일 또는 수요일)을 선택할 수도 있습니다. 마지막 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
+                -   **매(The)** 를 선택한 경우 작업 일정을 실행할 요일 및 작업 일정을 반복할 월 수를 입력합니다. 예를 들어 작업 일정을 격월로 마지막 평일에 실행하려면 **매(Day)** 를 선택하고 첫 번째 목록에서 **마지막**, 두 번째 목록에서 **평일**을 선택한 다음, 마지막 상자에 "2"를 입력합니다. 처음 두 목록에서 **첫 번째**, **두 번째**, **세 번째**또는 **네 번째**및 특정 평일(예: 일요일 또는 수요일)을 선택할 수도 있습니다. 마지막 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
   
         2.  **일별 빈도**에서 작업 일정이 실행되는 날에 작업 일정을 반복하는 빈도를 지정합니다.  
   
@@ -259,7 +258,7 @@ ms.locfileid: "79289381"
   
  파티션 만들기 마법사는 파티션 함수 및 스키마를 만들고 파티션을 지정된 테이블에 적용합니다. 테이블 파티션을 확인하려면 개체 탐색기에서 테이블을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **스토리지** 페이지를 클릭합니다. 이 페이지에는 파티션 함수 및 스키마 이름과 파티션 수와 같은 정보가 표시됩니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-create-a-partitioned-table"></a>분할된 테이블을 만들려면  
   

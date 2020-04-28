@@ -13,23 +13,19 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: d03ce811c860b976d891dd096ec8e0a7d5507d3a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176633"
 ---
 # <a name="polygon"></a>Polygon
-  
   `Polygon`은 외부 경계 링과 0개 이상의 내부 링을 정의하는 일련의 점으로 저장되는 2차원 표면입니다.
 
 ## <a name="polygon-instances"></a>Polygon 인스턴스
- 
-  `Polygon` 인스턴스는 서로 다른 점이 3개 이상 있는 링에서 구성될 수 있습니다. 
-  `Polygon` 인스턴스가 비어 있을 수도 있습니다.
+ `Polygon` 인스턴스는 서로 다른 점이 3개 이상 있는 링에서 구성될 수 있습니다. `Polygon` 인스턴스가 비어 있을 수도 있습니다.
 
- 
-  `Polygon`의 외부 및 내부 링은 해당 경계를 정의합니다. 링 내부 공간은 `Polygon`의 내부를 정의합니다.
+ `Polygon`의 외부 및 내부 링은 해당 경계를 정의합니다. 링 내부 공간은 `Polygon`의 내부를 정의합니다.
 
  다음 그림에서는 `Polygon` 인스턴스의 예를 보여 줍니다.
 
@@ -52,14 +48,11 @@ ms.locfileid: "78176633"
 
  링이 허용되려면 다음 조건을 충족해야 합니다.
 
--   
-  `LineString` 인스턴스가 허용되어야 합니다.
+-   `LineString` 인스턴스가 허용되어야 합니다.
 
--   
-  `LineString` 인스턴스에 4개 이상의 점이 있어야 합니다.
+-   `LineString` 인스턴스에 4개 이상의 점이 있어야 합니다.
 
--   
-  `LineString` 인스턴스의 시작점 및 끝점이 같아야 합니다.
+-   `LineString` 인스턴스의 시작점 및 끝점이 같아야 합니다.
 
  다음 예에서는 허용되는 `Polygon` 인스턴스를 보여 줍니다.
 
@@ -71,25 +64,23 @@ DECLARE @g4 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(3 0, 6 0, 6 3, 
 DECLARE @g5 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';
 ```
 
- 
-  `@g4` 및 `@g5`가 보여 주듯이 허용된 `Polygon` 인스턴스는 유효한 `Polygon` 인스턴스가 아닐 수 있습니다. `@g5` 도 Polygon 인스턴스가 허용될 4개의 점이 있는 링만 포함해야 함을 보여 줍니다.
+ `@g4` 및 `@g5`가 보여 주듯이 허용된 `Polygon` 인스턴스는 유효한 `Polygon` 인스턴스가 아닐 수 있습니다. `@g5` 도 Polygon 인스턴스가 허용될 4개의 점이 있는 링만 포함해야 함을 보여 줍니다.
 
- 다음 예에서는 `System.FormatException` 인스턴스가 허용되지 않으므로 `Polygon`이 발생합니다.
+ 다음 예에서는 `Polygon` 인스턴스가 허용되지 않으므로 `System.FormatException`이 발생합니다.
 
 ```
 DECLARE @g1 geometry = 'POLYGON((1 1, 3 3, 1 1))';
 DECLARE @g2 geometry = 'POLYGON((1 1, 3 3, 3 1, 1 5))';
 ```
 
- 외부 링에 대한 `@g1` 인스턴스에 점이 부족하기 때문에 `LineString`이 허용되지 않습니다. 외부 링 `@g2` 인스턴스의 시작 점이 끝 점과 같지 않기 때문에 `LineString`가 허용되지 않습니다. 다음 예에는 허용 가능한 외부 링이 있지만 내부 링은 허용되지 않습니다. 여기서도 `System.FormatException`이 발생합니다.
+ 외부 링에 대한 `LineString` 인스턴스에 점이 부족하기 때문에 `@g1`이 허용되지 않습니다. 외부 링 `LineString` 인스턴스의 시작 점이 끝 점과 같지 않기 때문에 `@g2`가 허용되지 않습니다. 다음 예에는 허용 가능한 외부 링이 있지만 내부 링은 허용되지 않습니다. 여기서도 `System.FormatException`이 발생합니다.
 
 ```
 DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))';
 ```
 
 ### <a name="valid-instances"></a>유효한 인스턴스
- 
-  `Polygon`의 내부 링은 자신들과 서로 다른 링 모두 하나의 탄젠트 점에서 인접할 수 있지만 `Polygon`의 내부 링이 교차할 경우 해당 인스턴스가 유효하지 않습니다.
+ `Polygon`의 내부 링은 자신들과 서로 다른 링 모두 하나의 탄젠트 점에서 인접할 수 있지만 `Polygon`의 내부 링이 교차할 경우 해당 인스턴스가 유효하지 않습니다.
 
  다음 예에서는 유효한 `Polygon` 인스턴스를 보여 줍니다.
 

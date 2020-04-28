@@ -1,5 +1,5 @@
 ---
-title: 인터넷 익스플로러 오류 코드 | 마이크로 소프트 문서
+title: Internet Explorer 오류 코드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,20 +14,20 @@ ms.assetid: 71aed2a5-4c8a-41db-a869-37db4d07a5a9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d7c3364dba94f6b106509e2646821391bd01df1c
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81219272"
 ---
-# <a name="internet-explorer-error-codes-for-remote-data-service"></a>원격 데이터 서비스에 대한 인터넷 탐색기 오류 코드
-다음 표에는 원격 데이터 서비스 사용과 관련된 Microsoft® Internet Explorer 오류 코드가 나열되어 있습니다. 낮은 두 바이트의 양수 소수점 변환, 전체 오류 코드의 음수 소수점 변환 및 육각형 값이 표시됩니다.
+# <a name="internet-explorer-error-codes-for-remote-data-service"></a>원격 데이터 서비스에 대 한 Internet Explorer 오류 코드
+다음 표에는 원격 데이터 서비스 사용량과 관련 된 Microsoft® Internet Explorer 오류 코드가 나열 되어 있습니다. 낮은 2 바이트의 10 진수 변환, 전체 오류 코드의 음수 10 진수 변환 및 16 진수 값이 표시 됩니다.
 
-|인터넷 익스플로러(위니넷) 오류|Number|Description|
+|Wininet (Internet Explorer) 오류|숫자|설명|
 |------------------------------------------|------------|-----------------|
 |**IDS_WinInet_CantConnect**|8195 -2146820093 0x800A2003|인터넷 클라이언트 오류: 서버에 연결할 수 없습니다.|
-|**IDS_WinInet_ 연결 리셋**|12031 -2146816257 0x800A2EFF|인터넷 클라이언트 오류: 연결 재설정.|
+|**IDS_WinInet_ ConnectionReset**|12031 -2146816257 0x800A2EFF|인터넷 클라이언트 오류: 연결을 다시 설정 합니다.|
 |**IDS_WinInet_Error**|8193 -2146820095 0x800A2001|인터넷 클라이언트 오류입니다.|
-|**IDS_WinInet_ InvalidServerResponse**|8430 -2146819858 0x800A20EE|인터넷 클라이언트 오류: 잘못된 서버 응답입니다.|
-|**IDS_WinInet_ SSL포스트 제한**|8196 -2146820092 0x800A2004|인터넷 클라이언트 오류: TLS/SSL 오류(32K 데이터 업로드 제한).|
-|**IDS_WinInet_Timeout**|8194 -2146820094 0x800A2002|인터넷 클라이언트 오류: 시간 시간 시간 확인을 요청합니다.|
+|**IDS_WinInet_ InvalidServerResponse**|8430 -2146819858 0x800A20EE|인터넷 클라이언트 오류: 서버 응답이 잘못 되었습니다.|
+|**IDS_WinInet_ SSLPostLimitation**|8196 -2146820092 0x800A2004|인터넷 클라이언트 오류: TLS/SSL 오류입니다 (데이터 업로드 제한이 32K 일 수 있음).|
+|**IDS_WinInet_Timeout**|8194 -2146820094 0x800A2002|인터넷 클라이언트 오류: 요청 시간이 초과 되었습니다.|

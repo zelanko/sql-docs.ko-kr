@@ -1,5 +1,5 @@
 ---
-title: 표준 게이트웨이 | 마이크로 소프트 문서
+title: 표준 게이트웨이 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: b8341492-2141-4bab-80bd-f2752223079e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 67551845c0dd8c6a28c0c4bc1c50f54ee8232df1
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81280076"
 ---
 # <a name="standard-gateway"></a>표준 게이트웨이
-*게이트웨이는* 한 DBMS를 다른 DBMS처럼 보이게 하는 소프트웨어입니다. 즉, 게이트웨이는 단일 DBMS의 프로그래밍 인터페이스, SQL 문법 및 데이터 스트림 프로토콜을 허용하고 숨겨진 DBMS의 프로그래밍 인터페이스, SQL 문법 및 데이터 스트림 프로토콜로 변환합니다. 예를 들어 Microsoft® SQL Server™를 사용하도록 작성된 응용 프로그램은 마이크로 의사 결정기 DB2 게이트웨이를 통해 DB2 데이터에 액세스할 수도 있습니다. 이 제품으로 인해 DB2가 SQL 서버처럼 보입니다. 게이트웨이를 사용할 때는 각 대상 데이터베이스에 대해 다른 게이트웨이를 작성해야 합니다.  
+*게이트웨이* 는 하나의 DBMS가 다른 DBMS와 같이 보이도록 하는 소프트웨어의 일부입니다. 즉, 게이트웨이는 단일 DBMS의 프로그래밍 인터페이스, SQL 문법 및 데이터 스트림 프로토콜을 수락 하 고이를 숨겨진 DBMS의 프로그래밍 인터페이스, SQL 문법 및 데이터 스트림 프로토콜로 변환 합니다. 예를 들어 Microsoft® SQL Server™ 사용 하도록 작성 된 응용 프로그램은 마이크로 Decisionware DB2 게이트웨이를 통해 DB2 데이터에 액세스할 수도 있습니다. 이 제품을 통해 DB2는 SQL Server 같이 표시 됩니다. 게이트웨이를 사용 하는 경우 각 대상 데이터베이스에 대해 다른 게이트웨이를 작성 해야 합니다.  
   
- 게이트웨이는 DBMS 간의 아키텍처 차이에 의해 제한되지만 표준화에 적합합니다. 그러나 모든 DBMS가 단일 DBMS의 프로그래밍 인터페이스, SQL 문법 및 데이터 스트림 프로토콜을 표준화하는 경우 DBMS를 표준으로 선택해야 합니까? 물론 어떤 상용 DBMS 공급 업체는 경쟁사의 제품에 표준화에 동의 할 가능성이 없습니다. 또한 표준 프로그래밍 인터페이스, SQL 문법 및 데이터 스트림 프로토콜이 개발되면 게이트웨이가 필요하지 않습니다.
+ 게이트웨이는 Dbms 간의 아키텍처 차이로 제한 되지만 표준화에 적합 합니다. 그러나 모든 dbms를 표준으로 선택 해야 하는 단일 DBMS의 프로그래밍 인터페이스, SQL 문법 및 데이터 스트림 프로토콜에서 표준화 하려면 어떻게 해야 하나요? 물론 상업적 DBMS 공급 업체는 경쟁 업체의 제품을 표준화 하는 데 동의할 수 있습니다. 표준 프로그래밍 인터페이스, SQL 문법 및 데이터 스트림 프로토콜이 개발 되는 경우에는 게이트웨이가 필요 하지 않습니다.

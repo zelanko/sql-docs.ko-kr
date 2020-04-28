@@ -1,5 +1,5 @@
 ---
-title: 다중 인스턴스 보고서 서버 배포에 대한 URL 예약(SSRS 구성 관리자) | 마이크로 소프트 문서
+title: 다중 인스턴스 보고서 서버 배포를 위한 URL 예약 (SSRS Configuration Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c91db169984bbb2969a8339ed20e8e6bc5b804b6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380694"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments--ssrs-configuration-manager"></a>다중 인스턴스 보고서 서버 배포를 위한 URL 예약(SSRS 구성 관리자)
@@ -47,8 +47,8 @@ ms.locfileid: "80380694"
 ## <a name="uniqueness-requirements"></a>고유성 요구 사항  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 사용되는 기본 기술에는 고유 이름 관련 요구 사항이 적용됩니다. HTTP.SYS의 리포지토리 내에서 모든 URL이 고유해야 합니다. 포트, 호스트 이름 또는 가상 디렉터리 이름을 변경하여 고유한 URL을 만들 수 있습니다. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 을 사용하려면 애플리케이션 ID가 동일한 프로세스 내에서 고유해야 합니다. 이러한 요구 사항은 가상 디렉터리 이름에 영향을 줍니다. 따라서 동일한 보고서 서버 인스턴스 내에서 중복되는 가상 디렉터리 이름을 사용할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [SSRS 구성 관리자&#41;&#40;보고서 서버 URL 구성](configure-report-server-urls-ssrs-configuration-manager.md)   
+## <a name="see-also"></a>참고 항목  
+ [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
  [URL 구성&#40;SSRS 구성 관리자&#41;](configure-a-url-ssrs-configuration-manager.md)  
   
   

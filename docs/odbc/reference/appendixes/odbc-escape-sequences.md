@@ -1,5 +1,5 @@
 ---
-title: ODBC 이스케이프 시퀀스 | 마이크로 소프트 문서
+title: ODBC 이스케이프 시퀀스 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: 646d5f0b-df0c-47a6-a630-99cac1026a4c
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b32d12cc6be2814198160ce95cb8153227c19aa9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81287573"
 ---
 # <a name="odbc-escape-sequences"></a>ODBC 이스케이프 시퀀스
-다음 이스케이프 시퀀스는 ODBC에서 사용됩니다. 이 섹션의 문법은 SQL [문에 사용된 요소에](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md)정의된 일부 요소를 사용합니다.  
+ODBC에서 사용 되는 이스케이프 시퀀스는 다음과 같습니다. 이 섹션의 문법에서는 [SQL 문에 사용 되는 요소](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md)에 정의 된 일부 요소를 사용 합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd51a3e4c139c52d6510140324ae042c653377b5
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289521"
 ---
 # <a name="identity-and-access-control-replication"></a>ID 및 Access Control(복제)
@@ -45,7 +45,7 @@ ms.locfileid: "79289521"
   
 ## <a name="see-also"></a>참고 항목  
  [복제 에이전트 보안 모델](replication-agent-security-model.md)   
- [Replication Security Best Practices](replication-security-best-practices.md)   
+ [복제 보안을 위한 최선의 구현 방법](replication-security-best-practices.md)   
  [SQL Server 복제 보안](view-and-modify-replication-security-settings.md)   
  [복제 위협 요소 및 취약성 완화](threat-and-vulnerability-mitigation-replication.md)   
 

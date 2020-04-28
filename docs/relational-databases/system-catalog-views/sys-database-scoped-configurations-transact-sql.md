@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||= azure-sqldw-latest
 ms.openlocfilehash: a463fea7a70b5e01c26a6ff5e93c1c8c1dab32ea
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78288943"
 ---
 # <a name="sysdatabase_scoped_configurations-transact-sql"></a>sys. database_scoped_configurations (Transact-sql)
@@ -31,16 +31,16 @@ ms.locfileid: "78288943"
 
 구성 당 한 개의 행을 포함 합니다. 
 
-|열 이름|데이터 형식|Description|
+|열 이름|데이터 형식|설명|
 |-----------------|---------------|-----------------|
 |**configuration_id**|**int**|구성 옵션의 ID입니다.|
-|**name**|**nvarchar (60)**|구성 옵션의 이름입니다. 가능한 구성에 대 한 자세한 내용은 [ALTER DATABASE 범위 구성 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 참조 하세요.|
+|**name**|**nvarchar(60)**|구성 옵션의 이름입니다. 가능한 구성에 대 한 자세한 내용은 [ALTER DATABASE 범위 구성 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 참조 하세요.|
 |**value**|**sqlvariant**|주 복제본에 대 한이 구성 옵션에 설정 된 값입니다.|
 |**value_for_secondary**|**sqlvariant**|보조 복제본에 대 한이 구성 옵션에 설정 된 값입니다.|
 |**is_value_default**|**bit** |설정 값이 기본값 인지 여부를 지정 합니다.|
 |**dw_compatibility_level**|**int**|데이터베이스의 호환성 수준 (미리 보기)입니다.  기본값 = 0 (자동)|
 
-## <a name="Permissions"></a> 권한
+## <a name="permissions"></a><a name="Permissions"></a> 권한
 
 **public** 역할의 멤버 자격이 필요합니다.
 

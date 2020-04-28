@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 07e01e8069cce53d1c37d01cea7513fcbcdd1cb9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380754"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>웹 동기화를 위한 IIS 구성
@@ -42,7 +42,7 @@ ms.locfileid: "80380754"
   
 1.  SSL(Secure Sockets Layer)을 구성합니다. SSL은 IIS와 모든 구독자 간의 통신을 위해 필요합니다.  
   
-2.  설치 마법사를 사용하여 IIS를 실행하는 컴퓨터에 연결 구성 요소를 설치합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 3단계에서 언급한 웹 동기화 구성 마법사를 사용하려면 IIS를 실행하는 컴퓨터에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 도 설치해야 합니다.  
+2.  설치 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마법사를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하 여 IIS를 실행 하는 컴퓨터에 연결 구성 요소를 설치 합니다. 3단계에서 언급한 웹 동기화 구성 마법사를 사용하려면 IIS를 실행하는 컴퓨터에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 도 설치해야 합니다.  
   
 3.  IIS를 실행하는 컴퓨터를 웹 동기화용으로 구성합니다. 컴퓨터를 수동으로 구성할 수 있지만 웹 동기화 구성 마법사를 사용하는 것이 좋습니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "80380754"
   
     1.  **시작**을 클릭한 다음 **실행**을 클릭합니다.  
   
-    2.  **열기** 상자에서 을 `inetmgr`입력한 다음 **확인을**클릭합니다.  
+    2.  **열기** 상자에를 입력 `inetmgr`한 다음 **확인**을 클릭 합니다.  
   
 3.  IIS 인증서 마법사를 실행합니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "80380754"
         > [!NOTE]  
         >  기본적으로 SelfSSL에서 설치한 인증서는 7일 동안 유효합니다.  
   
-    -   하나 이상의 매개 변수에 대한 값을 지정하려면 **시작**, **실행**을 차례로 클릭합니다. **열기** 상자에서 을 `cmd`입력한 다음 **확인을**클릭합니다. SelfSSL 설치 디렉터리를 찾고 `SelfSSL`을 입력한 다음 하나 이상의 매개 변수에 대해 값을 지정합니다. 매개 변수 목록을 보려면 `SelfSSL -?`를 입력합니다.  
+    -   하나 이상의 매개 변수에 대한 값을 지정하려면 **시작**, **실행**을 차례로 클릭합니다. **열기** 상자에를 입력 `cmd`한 다음 **확인**을 클릭 합니다. SelfSSL 설치 디렉터리를 찾고 `SelfSSL`을 입력한 다음 하나 이상의 매개 변수에 대해 값을 지정합니다. 매개 변수 목록을 보려면 `SelfSSL -?`를 입력합니다.  
   
 ## <a name="installing-connectivity-components-and-sql-server-management-studio"></a>연결 구성 요소 및 SQL Server Management Studio 설치  
   
@@ -108,7 +108,7 @@ ms.locfileid: "80380754"
   
 1.  IIS를 실행하는 컴퓨터에 관리자로 로그온합니다.  
   
-2.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 설치 디스크에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 시작합니다. 이 마법사 사용에 대한 자세한 내용은 설치 마법사&#41;설치 [마법사에서 SQL Server 2014 설치를 &#40;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)참조합니다.  
+2.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 설치 디스크에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 시작합니다. 이 마법사를 사용 하는 방법에 대 한 자세한 내용은 설치 [마법사 &#40;설치&#41;에서 SQL Server 2014 설치 ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)를 참조 하세요.  
   
 3.  **기능 선택** 페이지에서 **클라이언트 도구 연결**을 선택합니다.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "80380754"
   
 -   가상 디렉터리 및 관련 별칭을 만듭니다. 별칭은 웹 동기화 구성 요소에 액세스할 때 사용됩니다. 예를 들어 IIS 주소가 `https://*server.domain.com*`이고 'websync1'이라는 별칭을 지정하면 replisapi.dll 구성 요소에 액세스하기 위한 주소는 `https://*server.domain.com*/websync1/replisapi.dll` 이 됩니다.  
   
--   기본 인증을 사용합니다. 기본 인증을 사용하면 Kerberos 위임 없이도 IIS와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자/배포자를 서로 다른 컴퓨터에서 실행(권장 구성)할 수 있으므로 기본 인증을 사용하는 것이 좋습니다. 기본 인증과 함께 SSL을 사용하면 로그인, 암호 및 모든 데이터가 전송 중에 암호화됩니다. (SSL은 사용되는 인증 유형에 관계없이 필요합니다.) 웹 동기화에 대한 모범 사례에 대한 자세한 내용은 [웹 동기화 구성의](configure-web-synchronization.md)"웹 동기화에 대한 보안 모범 사례" 절을 참조하십시오.  
+-   기본 인증을 사용합니다. 기본 인증을 사용하면 Kerberos 위임 없이도 IIS와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자/배포자를 서로 다른 컴퓨터에서 실행(권장 구성)할 수 있으므로 기본 인증을 사용하는 것이 좋습니다. 기본 인증과 함께 SSL을 사용하면 로그인, 암호 및 모든 데이터가 전송 중에 암호화됩니다. 사용 되는 인증 유형에 관계 없이 SSL이 필요 합니다. 웹 동기화에 대 한 모범 사례에 대 한 자세한 내용은 [웹 동기화 구성](configure-web-synchronization.md)에서 "웹 동기화에 대 한 최상의 보안 방법" 섹션을 참조 하세요.  
   
 #### <a name="to-configure-the-computer-that-is-running-iis-by-using-the-configure-web-synchronization-wizard"></a>웹 동기화 구성 마법사를 사용하여 IIS를 실행하는 컴퓨터를 구성하려면  
   
@@ -155,7 +155,7 @@ ms.locfileid: "80380754"
   
     1.  **별칭** 상자에 가상 디렉터리의 별칭을 입력합니다.  
   
-    2.  **경로** 상자에 가상 디렉터리의 경로를 입력합니다. 예를 들어 **별칭** 상자에 입력한 `C:\Inetpub\wwwroot\websync1` `websync1` 경우 **경로** 상자를 입력합니다. **다음**을 클릭합니다.  
+    2.  **경로** 상자에 가상 디렉터리의 경로를 입력합니다. 예를 들어 **별칭** 상자에 `websync1` 를 입력 한 경우 **경로** 상자 `C:\Inetpub\wwwroot\websync1` 에를 입력 합니다. **다음**을 클릭합니다.  
   
     3.  두 대화 상자에서 모두 **예**를 클릭합니다. 새 폴더가 생성되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ISAPI(Internet Server API) DLL이 복사됩니다. .  
   
@@ -179,11 +179,11 @@ ms.locfileid: "80380754"
   
 11. IIS를 실행하는 컴퓨터에서 64비트 버전의 Windows를 실행 중인 경우 replisapi.dll을 해당 디렉터리에 복사해야 합니다.  
   
-    1.  **시작**을 클릭한 다음 **실행**을 클릭합니다. **열기** 상자에서 을 `iisreset`입력한 다음 **확인을**클릭합니다.  
+    1.  **시작**을 클릭한 다음 **실행**을 클릭합니다. **열기** 상자에를 입력 `iisreset`한 다음 **확인**을 클릭 합니다.  
   
     2.  IIS를 중지했다가 다시 시작한 다음 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\replisapi에 있는 replisapi.dll을 6b단계에서 지정한 디렉터리로 복사합니다.  
   
-    3.  **시작**을 클릭한 다음 **실행**을 클릭합니다. **열기** 상자에서 을 `cmd`입력한 다음 **확인을**클릭합니다.  
+    3.  **시작**을 클릭한 다음 **실행**을 클릭합니다. **열기** 상자에를 입력 `cmd`한 다음 **확인**을 클릭 합니다.  
   
     4.  6b단계에서 지정한 디렉터리에서 다음 명령을 실행합니다.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "80380754"
   
 3.  replisapi.dll을 등록합니다.  
   
-    1.  **시작**을 클릭한 다음 **실행**을 클릭합니다. **열기** 상자에서 을 `cmd`입력한 다음 **확인을**클릭합니다.  
+    1.  **시작**을 클릭한 다음 **실행**을 클릭합니다. **열기** 상자에를 입력 `cmd`한 다음 **확인**을 클릭 합니다.  
   
     2.  1단계에서 만든 디렉터리에서 다음 명령을 실행합니다.  
   
@@ -224,7 +224,7 @@ ms.locfileid: "80380754"
 ## <a name="setting-permissions-for-the-sql-server-replication-listener"></a>SQL Server 복제 수신기에 대한 사용 권한 설정  
  구독자가 IIS를 실행하는 컴퓨터에 연결하면 IIS 구성 시 지정한 인증 유형을 사용하여 해당 구독자가 인증됩니다. IIS에서는 구독자를 인증한 다음 해당 구독자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제를 호출할 수 있는 권한이 있는지 여부를 확인합니다. replisapi.dll에 대한 권한을 설정하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제를 호출할 수 있는 사용자를 제어합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에 무단으로 액세스하지 못하도록 하려면 사용 권한을 적절하게 구성해야 합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 수신기를 실행할 계정에 대해 최소 사용 권한을 구성하려면 다음 절차를 완료합니다. 절차의 단계는 IIS 6.0 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 실행에 적용됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 수신기를 실행할 계정에 대해 최소 사용 권한을 구성하려면 다음 절차를 완료합니다. 이 절차의 단계는 IIS 6.0 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 실행에 적용 됩니다.  
   
  다음 단계를 수행한 다음에는 PAL(게시 액세스 목록)에 필요한 로그인을 추가합니다. PAL에 대한 자세한 내용은 [게시자 보안 설정](security/secure-the-publisher.md)을 참조하세요.  
   
@@ -276,7 +276,7 @@ ms.locfileid: "80380754"
   
     1.  **시작**을 클릭한 다음 **실행**을 클릭합니다.  
   
-    2.  **열기** 상자에서 을 `inetmgr`입력한 다음 **확인을**클릭합니다.  
+    2.  **열기** 상자에를 입력 `inetmgr`한 다음 **확인**을 클릭 합니다.  
   
     3.  **인터넷 정보 서비스(IIS) 관리자**에서 **로컬 컴퓨터** 노드를 확장합니다.  
   
@@ -290,7 +290,7 @@ ms.locfileid: "80380754"
   
     2.  만든 애플리케이션 풀을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-    3.  응용 ** \<프로그램풀 이름> 속성** 대화 상자에서 **ID** 탭에서 구성 가능 을 **클릭합니다.**  
+    3.  ApplicationPoolName> 속성 대화 상자의 **id** 탭에서 **구성 가능**을 클릭 합니다. ** \<**  
   
     4.  **사용자 이름** 및 **암호** 필드에 1단계에서 만든 계정과 암호를 입력합니다.  
   
@@ -313,7 +313,7 @@ ms.locfileid: "80380754"
   
 1.  구독자의 LAN(Local Area Network) 설정이 올바른지 확인합니다.  
   
-    1.  인터넷 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 익스플로러에서 **도구** 메뉴에서 **인터넷 옵션을 클릭합니다.**  
+    1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer의 **도구** 메뉴에서 **인터넷 옵션**을 클릭합니다.  
   
     2.  **연결** 탭에서 **LAN 설정**을 클릭합니다.  
   
@@ -357,7 +357,7 @@ ms.locfileid: "80380754"
   
     2.  진단 모드에서 서버에 연결합니다. 인증서가 제대로 설치된 경우 **보안 경고** 대화 상자가 나타나지 않습니다. 이 대화 상자가 나타나면 병합 에이전트가 IIS를 실행하는 컴퓨터에 연결할 수 없습니다. 액세스하는 서버에 대한 인증서가 구독자의 인증서 저장소에 신뢰할 수 있는 인증서로 추가되었는지 확인합니다. 인증서를 내보내는 방법은 IIS 설명서를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [웹 동기화 구성](configure-web-synchronization.md)  
   
   

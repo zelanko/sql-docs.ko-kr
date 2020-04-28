@@ -18,10 +18,10 @@ ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b0c847215d31bd2064467c3edbce42ba957c2e78
-ms.sourcegitcommit: f7af758b353b53ac3b596d79fd6e32ad7e1e61cf
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79448335"
 ---
 # <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login(Transact-SQL)
@@ -50,18 +50,17 @@ sp_change_users_login [ @Action = ] 'action'
  [ @Action= ] '*action*'  
  프로시저로 수행할 동작에 대해 설명합니다. *action* 은 **varchar (10)** 입니다. *작업* 은 다음 값 중 하나를 가질 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**Auto_Fix**|현재 데이터베이스의 sys.database_principals 시스템 카탈로그 뷰에 있는 사용자 항목을 동일한 이름의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 연결합니다. 동일한 이름의 로그인이 없으면 자동으로 생성됩니다. **Auto_Fix** 문의 결과를 검토 하 여 올바른 링크가 실제로 생성 되었는지 확인 합니다. 보안이 중요 한 상황에서는 **Auto_Fix** 사용 하지 마십시오.<br /><br /> **Auto_Fix**사용 하는 경우 로그인이 아직 없는 경우 *사용자* 와 *암호* 를 지정 해야 합니다. 그렇지 않으면 *사용자* 를 지정 해야 하지만 *암호* 는 무시 됩니다. *로그인* 은 NULL 이어야 합니다. *사용자* 는 현재 데이터베이스에서 유효한 사용자 여야 합니다. 로그인에는 다른 사용자가 매핑될 수 없습니다.|  
-|**Report**|현재 데이터베이스에서 어떠한 로그인에도 연결되지 않은 사용자와 해당 SID(보안 식별자)를 나열합니다. *사용자*, *로그인*및 *암호* 는 NULL 이거나 지정 하지 않아야 합니다.<br /><br /> 시스템 테이블을 사용 하 여 보고서 옵션을 쿼리로 바꾸려면 **sys. server_prinicpals** 의 항목을 **database_principals**의 항목과 비교 합니다.|  
+|**보고서**|현재 데이터베이스에서 어떠한 로그인에도 연결되지 않은 사용자와 해당 SID(보안 식별자)를 나열합니다. *사용자*, *로그인*및 *암호* 는 NULL 이거나 지정 하지 않아야 합니다.<br /><br /> 시스템 테이블을 사용 하 여 보고서 옵션을 쿼리로 바꾸려면 **sys. server_prinicpals** 의 항목을 **database_principals**의 항목과 비교 합니다.|  
 |**Update_One**|현재 데이터베이스의 지정 된 *사용자* 를 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *로그인*에 연결 합니다. *사용자* 및 *로그인* 을 지정 해야 합니다. *암호* 는 NULL 이거나 지정 하지 않아야 합니다.|  
   
  [ @UserNamePattern= ] '*user*'  
  현재 데이터베이스에 있는 사용자의 이름입니다. *사용자* 는 **sysname**이며 기본값은 NULL입니다.  
   
  [ @LoginName= ] '*로그인*'  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 이름입니다. *login* 은 **sysname**이며 기본값은 NULL입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 이름입니다. *login*은 **sysname**이며 기본값은 NULL입니다.  
   
  [ @Password= ] '*암호*'  
  Auto_Fix를 지정 하 여 만든 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 할당 된 암호입니다 **Auto_Fix**. 일치 하는 로그인이 이미 있는 경우 사용자와 로그인이 매핑되고 *암호* 는 무시 됩니다. 일치 하는 로그인이 없으면 sp_change_users_login 새 로그인을 만들고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *암호* 를 새 로그인의 암호로 할당 합니다. *password* 는 **sysname**이며 NULL이 아니어야 합니다.  
@@ -73,10 +72,10 @@ sp_change_users_login [ @Action = ] 'action'
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |UserName|**sysname**|데이터베이스 사용자 이름입니다.|  
-|UserSID|**varbinary (85)**|사용자의 보안 식별자입니다.|  
+|UserSID|**varbinary(85)**|사용자의 보안 식별자입니다.|  
   
 ## <a name="remarks"></a>설명  
  sp_change_users_login을 사용하여 현재 데이터베이스의 데이터베이스 사용자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인과 연결할 수 있습니다. 사용자에 대한 로그인이 변경된 경우 sp_change_users_login을 통해 사용자 권한을 그대로 유지한 채 새 로그인에 사용자를 연결할 수 있습니다. 새 *로그인* 은 sa가 될 수 없으며 *사용자* 는 dbo, guest 또는 INFORMATION_SCHEMA 사용자가 될 수 없습니다.  
@@ -114,7 +113,7 @@ GO
 ```  
   
 ### <a name="c-automatically-mapping-a-user-to-a-login-creating-a-new-login-if-it-is-required"></a>C. 사용자를 로그인에 자동으로 매핑하고 필요한 경우 새 로그인 만들기  
- 다음 예에서는 `Auto_Fix`를 사용하여 기존 사용자를 동일한 이름의 로그인에 매핑하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 없는 경우 암호가 `Mary`인 `B3r12-3x$098f6` 로그인 `Mary`를 만드는 방법을 보여 줍니다.  
+ 다음 예에서는 `Auto_Fix`를 사용하여 기존 사용자를 동일한 이름의 로그인에 매핑하거나 `Mary` 로그인이 없는 경우 암호가 `B3r12-3x$098f6`인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `Mary`를 만드는 방법을 보여 줍니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -125,10 +124,10 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [Transact-sql&#41;로그인 &#40;만들기](../../t-sql/statements/create-login-transact-sql.md)   
  [Transact-sql&#41;sp_adduser &#40;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
  [Transact-sql&#41;sp_helplogins &#40;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.database_principals&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   
   

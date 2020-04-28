@@ -23,16 +23,16 @@ ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: cbbb7ed7a20937d9963af7080fb16be4f6c78da5
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79111902"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>액세스용 SQL Server Migration Assistant 설치 (AccessToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ACCESS 용 ssma (Migration Assistant)는 Windows Installer 기반 마법사를 사용 하 여 설치 됩니다. 이 항목에서는 설치 필수 구성 요소, 최신 버전의 SSMA 링크 및 SSMA 설치, 라이선스, 제거 및 업그레이드에 대 한 지침을 제공 합니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>전제 조건  
 SSMA를 설치 하기 전에 시스템이 다음과 같은 요구 사항을 충족 하는지 확인 합니다.  
   
 -   Windows 7 이상 버전 또는 Windows Server 2008 이상 버전  
@@ -69,8 +69,7 @@ SSMA는 웹 다운로드입니다. 최신 버전을 다운로드 하려면 [SQL 
   
 4.  설치 유형 선택 페이지에서 **일반**을 클릭 합니다.  
   
-5.  
-  **설치**를 클릭합니다.  
+5.  **설치**를 클릭합니다.  
   
 기본 설치 위치는 액세스를 위한 C:\Program Files\Microsoft SQL Server Migration Assistant입니다.  
   
@@ -79,8 +78,7 @@ SSMA는 웹 다운로드입니다. 최신 버전을 다운로드 하려면 [SQL 
   
 **SSMA를 제거 하려면**  
   
-1.  
-  **시작**, **제어판**, **프로그램 추가/제거**를 차례로 클릭합니다.  
+1.  **시작**, **제어판**, **프로그램 추가/제거**를 차례로 클릭합니다.  
   
 2.  **액세스 Microsoft SQL Server Migration Assistant**선택 하 고 **제거**를 클릭 합니다.  
   
@@ -90,7 +88,7 @@ Access 용 SSMA의 이후 버전으로 업그레이드 하려면 먼저 액세�
 Access 용 SSMA의 이전 버전에서 만든 프로젝트를 여는 경우 SSMA는 프로젝트를 최신 버전으로 변환할지 묻는 메시지를 표시 합니다. 최신 버전의 SSMA에서 프로젝트를 사용 하려면 **예** 를 클릭 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[Access 데이터베이스에서 마이그레이션 준비](preparing-access-databases-for-migration-accesstosql.md)  
+[마이그레이션을 위해 Access 데이터베이스 준비](preparing-access-databases-for-migration-accesstosql.md)  
 [SQL Server로 Access 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [SQL Server에 액세스 응용 프로그램 연결](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)  
   

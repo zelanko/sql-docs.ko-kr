@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2337434a48e92ddc28af52cc3481951eafe66d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380704"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL 구성(SSRS 구성 관리자)
@@ -34,7 +34,7 @@ ms.locfileid: "80380704"
   
 -   추가 URL을 정의하는 고급 URL 속성 설정  
   
- URL이 저장 및 유지 관리되는 방법 또는 상호 운용성 문제에 대한 자세한 내용은 [URL 예약 및 등록 &#40;SSRS 구성 관리자&#41;및](about-url-reservations-and-registration-ssrs-configuration-manager.md) 설치 보고 서비스 및 인터넷 정보 서비스 &#40;[ ](install-reporting-and-internet-information-services-side-by-side.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSRS 네이티브 모드&#41;온라인으로 참조하세요. Reporting Services 설치에 자주 사용되는 URL에 대한 예를 검토하려면 이 항목에 포함된 [URL 예](#URLExamples) 를 참조하십시오.  
+ Url을 저장 하 고 유지 관리 하는 방법에 대 한 자세한 내용 및 상호 운용성 문제에 대 한 자세한 내용은 온라인 설명서의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Url 예약 및 등록 &#40;ssrs Configuration Manager&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md) 및 [설치 Reporting Services 및 인터넷 정보 서비스 함께 ssrs 기본 모드 ](install-reporting-and-internet-information-services-side-by-side.md)&#40;을 참조 하세요. Reporting Services 설치에 자주 사용되는 URL에 대한 예를 검토하려면 이 항목에 포함된 [URL 예](#URLExamples) 를 참조하십시오.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  URL을 만들거나 수정하기 전에 다음 사항을 유념하십시오.  
@@ -71,7 +71,7 @@ ms.locfileid: "80380704"
   
     -   **::1** - IPv6 형식의 루프백 주소입니다.  
   
-    -   특정 IP 주소가 이 목록에 표시될 수도 있습니다. IP 주소는 IPv4 및 IPv6 형식일 수 있습니다. *Nnn.nnn.nnn.nnn* 는 컴퓨터에 설치된 네트워크 어댑터 카드의 32비트 IPv4 주소입니다. IPv6 주소는 128비트이며 8개의 4바이트 필드가 콜론으로 \<구분됩니다: 접두사>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
+    -   특정 IP 주소가 이 목록에 표시될 수도 있습니다. IP 주소는 IPv4 및 IPv6 형식일 수 있습니다. *Nnn.nnn.nnn.nnn* 는 컴퓨터에 설치된 네트워크 어댑터 카드의 32비트 IPv4 주소입니다. IPv6 주소는 128비트이며 8개의 4바이트 필드가 콜론으로 구분되어 있습니다. \<prefix>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
   
          카드가 여러 개 있거나 네트워크에서 IPv4와 IPv6 주소를 모두 지원하는 경우 IP 주소가 여러 개 표시됩니다. IP 주소를 한 개만 선택할 경우 선택한 IP 주소(및 도메인 이름 서버가 이 IP 주소에 매핑한 호스트 이름)만 애플리케이션에 액세스할 수 있습니다. localhost를 사용하여 보고서 서버에 액세스할 수 없으며, 보고서 서버 컴퓨터에 설치된 다른 네트워크 어댑터 카드의 IP 주소를 사용할 수 없습니다. 일반적으로 이 값을 선택하는 경우는 명시적 IP 주소 또는 호스트 이름도 지정하는 URL 예약을 여러 개 구성하고 있기 때문입니다. 예를 들면 한 개는 인트라넷 연결에 사용되는 네트워크 어댑터 카드용으로, 다른 한 개는 익스트라넷 연결에 사용되는 네트워크 어댑터 카드용으로 구성할 수 있습니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "80380704"
   
 10. 페이지의 **URL** 섹션에 있는 링크를 클릭하여 URL을 테스트합니다. URL을 테스트하려면 먼저 보고서 서버 데이터베이스를 만들어 구성해야 합니다. 자세한 내용은 [기본 모드 보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](ssrs-report-server-create-a-native-mode-report-server-database.md)를 참조하세요.  
   
-11. 또한 보고서 서버가 SharePoint 통합 모드를 사용하도록 구성된 경우 SharePoint 중앙 관리에서 보고서 서버 웹 서비스 URL을 구성합니다. SharePoint 중앙 관리에서 보고서 서버 웹 서비스 URL을 업데이트하는 방법에 대한 자세한 내용은 보고서 서버 &#40;[보고 서비스 공유포인트 모드&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md) 및 보고 서비스 보고서 서버 &#40;[SharePoint 모드&#41;](../reporting-services-report-server-sharepoint-mode.md)참조하세요.  
+11. 또한 보고서 서버가 SharePoint 통합 모드를 사용하도록 구성된 경우 SharePoint 중앙 관리에서 보고서 서버 웹 서비스 URL을 구성합니다. SharePoint 중앙 관리에서 보고서 서버 웹 서비스 URL을 업데이트 하는 방법에 대 한 자세한 내용은 sharepoint 모드 [&#41;Reporting Services 보고서 서버의 구성 및 관리 &#40;](../configure-administer-report-server-reporting-services-sharepoint-mode.md) 하 고 [보고서 서버 &#40;sharepoint 모드&#41;를 Reporting Services ](../reporting-services-report-server-sharepoint-mode.md).  
   
 ### <a name="to-create-a-url-reservation-for-report-manager"></a>보고서 관리자에 대한 URL 예약을 만들려면  
   
@@ -103,7 +103,7 @@ ms.locfileid: "80380704"
   
 2.  **보고서 관리자 URL**을 클릭합니다.  
   
-3.  가상 디렉터리를 지정합니다. 보고서 관리자는 보고서 서버 웹 서비스와 동일한 IP 주소와 포트를 수신합니다. 다른 보고서 서버 웹 서비스를 가리키도록 보고서 관리자를 구성한 경우 RSReportServer.config 파일에서 보고서 관리자 URL 설정을 수정해야 합니다. 지침은 온라인 도서의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]&#41;보고서 관리자 &#40;네이티브 모드 [구성을](../report-server/configure-web-portal.md) 참조하십시오.  
+3.  가상 디렉터리를 지정합니다. 보고서 관리자는 보고서 서버 웹 서비스와 동일한 IP 주소와 포트를 수신합니다. 다른 보고서 서버 웹 서비스를 가리키도록 보고서 관리자를 구성한 경우 RSReportServer.config 파일에서 보고서 관리자 URL 설정을 수정해야 합니다. 지침은 온라인 설명서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 [&#41;보고서 관리자 &#40;기본 모드 구성](../report-server/configure-web-portal.md) 을 참조 하세요.  
   
 4.  SSL 인증서를 설치한 경우 지금 이 인증서를 선택하여 보고서 관리자에 대한 모든 요청이 HTTPS를 통해 라우팅되도록 할 수 있습니다.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "80380704"
 ## <a name="urls-for-multiple-report-server-instances-on-the-same-computer"></a>같은 컴퓨터에 있는 여러 보고서 서버 인스턴스에 대한 URL  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 여러 인스턴스에 대한 URL을 예약할 경우 이름이 충돌하지 않도록 다음 명명 규칙을 따라야 합니다. 자세한 내용은 [다중 인스턴스 보고서 서버 배포를 위한 URL 예약&#40;SSRS 구성 관리자&#41;](url-reservations-for-multi-instance-report-server-deployments.md)을 참조하세요.  
   
-##  <a name="examples-of-url-configurations"></a><a name="URLExamples"></a>URL 구성의 예  
+##  <a name="examples-of-url-configurations"></a><a name="URLExamples"></a> URL 구성 예  
  다음 목록에서는 보고서 서버 URL의 예를 보여 줍니다.  
   
 -   http://localhost/reportserver  
@@ -168,8 +168,8 @@ ms.locfileid: "80380704"
   
 -   `https://www.adventure-works.com:8080/reports`  
   
-## <a name="see-also"></a>관련 항목  
- [보고 서비스 구성 관리자 &#40;네이티브 모드&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+## <a name="see-also"></a>참고 항목  
+ [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

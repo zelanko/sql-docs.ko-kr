@@ -1,5 +1,5 @@
 ---
-title: SQLGetDiag필드 기능 | 마이크로 소프트 문서
+title: SQLGetDiagField 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -20,19 +20,19 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: a26319868a4b94b895da73d39b284f612fe35889
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81285433"
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 함수(SQLGetDiagField Function)
 
 **규칙**  
- 버전 출시: ODBC 3.0 표준 규정 준수: ISO 92  
+ 소개 된 버전: ODBC 3.0 표준 준수: ISO 92  
   
  **요약**  
- **SQLGetDiagField오류,** 경고 및 상태 정보를 포함하는 진단 데이터 구조(지정된 핸들와 연관된) 레코드 필드의 현재 값을 반환합니다.  
+ **SQLGetDiagField** 는 오류, 경고 및 상태 정보를 포함 하는 진단 데이터 구조 (지정 된 핸들과 연결 된) 레코드의 필드에 대 한 현재 값을 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,7 +50,7 @@ SQLRETURN SQLGetDiagField(
   
 ## <a name="arguments"></a>인수  
  *HandleType*  
- [입력] 진단이 필요한 핸들 유형을 설명하는 핸들 형식 식별자입니다. 다음 중 하나여야 합니다.  
+ 입력 진단이 필요한 핸들의 유형을 설명 하는 핸들 유형 식별자입니다. 다음 중 하나여야 합니다.  
   
 -   SQL_HANDLE_DBC  
   
@@ -62,163 +62,163 @@ SQLRETURN SQLGetDiagField(
   
 -   SQL_HANDLE_STMT  
   
- SQL_HANDLE_DBC_INFO_TOKEN 핸들은 드라이버 관리자와 드라이버에서만 사용됩니다. 응용 프로그램에서는 이 핸들 형식을 사용해서는 안 됩니다. SQL_HANDLE_DBC_INFO_TOKEN 대한 자세한 내용은 [ODBC 드라이버에서 연결-풀 인식 개발을](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)참조하십시오.  
+ SQL_HANDLE_DBC_INFO_TOKEN 핸들은 드라이버 관리자 및 드라이버 에서만 사용 됩니다. 응용 프로그램은이 핸들 형식을 사용 하면 안 됩니다. SQL_HANDLE_DBC_INFO_TOKEN에 대 한 자세한 내용은 [ODBC 드라이버에서 연결 풀 인식 개발](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)을 참조 하세요.  
   
  *Handle*  
- [입력] *핸들 Type으로*표시된 형식의 진단 데이터 구조에 대한 핸들입니다. *핸들유형이* SQL_HANDLE_ENV 경우 *핸들은* 공유 또는 공유되지 않은 환경 핸들일 수 있습니다.  
+ 입력 *HandleType*로 표시 되는 형식의 진단 데이터 구조에 대 한 핸들입니다. *HandleType* 가 SQL_HANDLE_ENV 경우 *handle* 은 공유 또는 공유 되지 않는 환경 핸들 일 수 있습니다.  
   
  *RecNumber*  
- [입력] 응용 프로그램에서 정보를 검색하는 상태 레코드를 나타냅니다. 상태 레코드는 1에서 번호가 매겨져 있습니다. *DiagIdentifier* 인수진단 헤더의 필드를 나타내는 경우 *RecNumber는* 무시됩니다. 그렇지 않은 경우 0보다 높아야 합니다.  
+ 입력 응용 프로그램에서 정보를 검색 하는 상태 레코드를 나타냅니다. 상태 레코드의 번호는 1입니다. *DiagIdentifier* 인수는 진단 헤더의 *필드를 나타내는 경우에는* 무시 됩니다. 그렇지 않은 경우에는 0 보다 커야 합니다.  
   
- *디아그식별서*  
- [입력] 값을 반환할 진단 의 필드를 나타냅니다. 자세한 내용은 "주석" 섹션의 *"DiagIdentifier* 인수" 섹션을 참조하십시오.  
+ *DiagIdentifier*  
+ 입력 값을 반환할 진단 필드를 나타냅니다. 자세한 내용은 "Comments"의 "*DiagIdentifier* 인수" 섹션을 참조 하세요.  
   
- *디아그포페프르*  
- [출력] 진단 정보를 반환할 버퍼에 대한 포인터입니다. 데이터 형식은 *DiagIdentifier*의 값에 따라 달라집니다. *DiagInfoPtr이* 정수 형식인 경우 일부 드라이버는 32비트 또는 16비트 버퍼만 작성하고 상위 순서의 비트를 변경하지 않고 그대로 둘 수 있기 때문에 응용 프로그램은 SQLULEN 버퍼를 사용하고 이 함수를 호출하기 전에 값을 0으로 초기화해야 합니다.  
+ *DiagInfoPtr*  
+ 출력 진단 정보를 반환할 버퍼에 대 한 포인터입니다. 데이터 형식은 *DiagIdentifier*의 값에 따라 달라 집니다. *DiagInfoPtr* 이 정수 형식이 면 응용 프로그램은이 함수를 호출 하기 전에 SQLULEN의 버퍼를 사용 하 고 값을 0으로 초기화 해야 합니다. 일부 드라이버는 버퍼의 하위 32 비트 또는 16 비트만 쓸 수 있고 고차 비트는 변경 되지 않은 상태로 둘 수 있습니다.  
   
- *DiagInfoPtr이* NULL인 경우 *StringLengthPtr은* *DiagInfoPtr에서*가리키는 버퍼에서 반환할 수 있는 총 바이트 수(문자 데이터에 대한 null 종료 문자 제외)를 반환합니다.  
+ *DiagInfoPtr* 가 NULL 인 경우 *StringLengthPtr* 는 *DiagInfoPtr*가 가리키는 버퍼에서 반환 될 수 있는 총 바이트 수 (문자 데이터의 NULL 종료 문자 제외)를 반환 합니다.  
   
- *버퍼 길이*  
- [입력] *DiagIdentifier가* ODBC 정의 진단이고 *DiagInfoPtr이* 문자 문자열 또는 이진 버퍼를 가리키는 \*경우 이 인수는 *DiagInfoPtr*의 길이여야 합니다. *DiagIdentifier가* ODBC 정의 필드이고 \* *DiagInfoPtr이* 정수인 경우 *버퍼길이는* 무시됩니다. DiagInfoPtr의 값이 유니코드 문자열인 **경우(SQLGetDiagFieldW를**호출할 때) *버퍼길이* 인수는 짝수여야 합니다. * \**  
+ *BufferLength*  
+ 입력 *DiagIdentifier* 이 ODBC에 정의 된 진단이 고 *DiagInfoPtr* 가 문자열 또는 이진 버퍼를 가리키는 경우이 인수는 \* *DiagInfoPtr*의 길이 여야 합니다. *DiagIdentifier* 가 ODBC 정의 필드이 고 \* *DiagInfoPtr* 가 정수인 경우 *bufferlength* 는 무시 됩니다. * \*DiagInfoPtr* 의 값이 유니코드 문자열이 면 ( **SQLGetDiagFieldW**호출 시) *bufferlength* 인수는 짝수 여야 합니다.  
   
- *DiagIdentifier가* 드라이버 정의 필드인 경우 응용 프로그램은 *BufferLength* 인수를 설정하여 드라이버 관리자에 필드의 특성을 나타냅니다. *BufferLength에는* 다음 값이 있을 수 있습니다.  
+ *DiagIdentifier* 가 드라이버 정의 필드인 경우 응용 프로그램은 *bufferlength* 인수를 설정 하 여 필드의 특성을 드라이버 관리자에 게 표시 합니다. *Bufferlength* 에는 다음 값을 사용할 수 있습니다.  
   
--   *DiagInfoPtr이* 문자 문자열에 대한 포인터인 경우 *BufferLength는* 문자열 또는 SQL_NTS 길이입니다.  
+-   *DiagInfoPtr* 이 문자열에 대 한 포인터인 경우 *bufferlength* 는 문자열 또는 SQL_NTS의 길이입니다.  
   
--   *DiagInfoPtr이* 이진 버퍼에 대한 포인터인 경우 응용 프로그램은 *버퍼길이*에*SQL_LEN_BINARY_ATTR(길이)* 매크로의 결과를 배치합니다. 이렇게 하면 *버퍼길이에*음수 값이 배치됩니다.  
+-   *DiagInfoPtr* 가 이진 버퍼에 대 한 포인터인 경우 응용 프로그램은 SQL_LEN_BINARY_ATTR (*길이*) 매크로의 결과를 *bufferlength*로 배치 합니다. 그러면 음수 값이 *Bufferlength*에 배치 됩니다.  
   
--   *DiagInfoPtr이* 문자열 문자열 이나 이진 문자열 이외의 값에 대 한 포인터 인 경우 *BufferLength* 값 SQL_IS_POINTER 있어야 합니다.  
+-   *DiagInfoPtr* 가 문자열 또는 이진 문자열이 아닌 값에 대 한 포인터인 경우 *bufferlength* 의 값은 SQL_IS_POINTER 이어야 합니다.  
   
--   * \*DiagInfoPtr* 고정 길이 데이터 형식이 포함 된 경우 *BufferLength는* 적절 하 게 SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT 또는 SQL_IS_USMALLINT.  
+-   * \*DiagInfoPtr* 에 고정 길이 데이터 형식이 포함 된 경우 *bufferlength* 는 SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT 또는 SQL_IS_USMALLINT입니다.  
   
- *문자열길이Ptr*  
- [출력] 문자 데이터에 대한 \* *DiagInfoPtr에서*반환할 수 있는 총 바이트 수(null-termination 문자에 필요한 바이트 수 제외)를 반환하는 버퍼에 대한 포인터입니다. 반환할 수 있는 바이트 수가 *BufferLength보다*크거나 같으면 \* *DiagInfoPtr의* 텍스트는 *BufferLength에* 잘려null 종료 문자의 길이를 뺀 값입니다.  
+ *StringLengthPtr*  
+ 출력 문자 데이터에 대해 \* *DiagInfoPtr*에서 반환 하는 데 사용할 수 있는 총 바이트 수 (null 종결 문자에 필요한 바이트 수 제외)를 반환할 버퍼에 대 한 포인터입니다. 반환할 수 있는 바이트 수가 *bufferlength*보다 크거나 같은 경우 \* *DiagInfoPtr* 의 텍스트는 *bufferlength* 에서 null 종료 문자의 길이를 뺀 값으로 잘립니다.  
   
 ## <a name="returns"></a>반환  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE 또는 SQL_NO_DATA.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE 또는 SQL_NO_DATA입니다.  
   
 ## <a name="diagnostics"></a>진단  
- **SQLGetDiagField는** 자체적으로 진단 레코드를 게시하지 않습니다. 다음 반환 값을 사용하여 자체 실행 결과를 보고합니다.  
+ **SQLGetDiagField** 는 자체에 대 한 진단 레코드를 게시 하지 않습니다. 다음 반환 값을 사용 하 여 자체 실행의 결과를 보고 합니다.  
   
--   SQL_SUCCESS: 함수가 진단 정보를 반환했습니다.  
+-   SQL_SUCCESS: 함수가 진단 정보를 성공적으로 반환 했습니다.  
   
--   SQL_SUCCESS_WITH_INFO: \* *DiagInfoPtr가* 너무 작아서 요청된 진단 필드를 보유할 수 없습니다. 따라서 진단 필드의 데이터가 잘렸습니다. 잘림이 발생했는지 확인하려면 응용 프로그램에서 *BufferLength를* **StringLengthPtr에*기록된 사용 가능한 실제 바이트 수와 비교해야 합니다.  
+-   SQL_SUCCESS_WITH_INFO: \* *DiagInfoPtr* 이 너무 작아서 요청 된 진단 필드를 보유할 수 없습니다. 따라서 진단 필드의 데이터가 잘렸습니다. 잘림이 발생 했는지 확인 하기 위해 응용 프로그램은 *Bufferlength* 를 사용 가능한 실제 바이트 수와 비교 하 여 **StringLengthPtr*에 기록 합니다.  
   
--   SQL_INVALID_HANDLE: HandleType *및* *Handle으로* 표시된 핸들이 올바른 핸들이 아닙니다.  
+-   SQL_INVALID_HANDLE: *HandleType* 및 *handle* 이 나타내는 핸들이 유효한 핸들이 아닙니다.  
   
--   SQL_ERROR: 다음 중 하나가 발생했습니다.  
+-   SQL_ERROR: 다음 중 하나가 발생 했습니다.  
   
-    -   *DiagIdentifier 인수는* 유효한 값 중 하나가 아닙니다.  
+    -   *DiagIdentifier* 인수가 유효한 값 중 하나가 아닙니다.  
   
-    -   *DiagIdentifier 인수는* SQL_DIAG_CURSOR_ROW_COUNT, SQL_DIAG_DYNAMIC_FUNCTION, SQL_DIAG_DYNAMIC_FUNCTION_CODE 또는 SQL_DIAG_ROW_COUNT 했지만 *핸들은* 문 핸들이 아닙니다. (드라이버 관리자가 이 진단을 반환합니다.)  
+    -   *DiagIdentifier* 인수가 SQL_DIAG_CURSOR_ROW_COUNT, SQL_DIAG_DYNAMIC_FUNCTION, SQL_DIAG_DYNAMIC_FUNCTION_CODE 또는 SQL_DIAG_ROW_COUNT 되었지만 *핸들이* 문 핸들이 아닙니다. (드라이버 관리자는이 진단을 반환 합니다.)  
   
-    -   *DiagIdentifier가* 진단 레코드의 필드를 나타낼 때 *RecNumber* 인수는 음수 또는 0입니다. *RecNumber는* 헤더 필드에 대해 무시됩니다.  
+    -   *DiagIdentifier* 가 진단 레코드에서 필드를 나타내는 경우 *에는 값* 이 음수 이거나 0입니다. 헤더 필드의 경우에는 *번호가* 무시 됩니다.  
   
-    -   요청된 값은 문자 문자열이고 *BufferLength는* 0보다 적습니다.  
+    -   요청 된 값이 문자열이 고 *Bufferlength* 가 0 보다 작은 경우  
   
-    -   비동기 알림을 사용하는 경우 핸들의 비동기 작업이 완료되지 않았습니다.  
+    -   비동기 알림을 사용 하는 경우 핸들에 대 한 비동기 작업이 완료 되지 않았습니다.  
   
--   SQL_NO_DATA: *RecNumber핸들에* 지정된 핸들에 대해 존재했던 진단 레코드 수보다 *큽입니다.* 또한 이 함수는 *handle*에 대한 진단 레코드가 없는 경우 양수 *RecNumber에* 대해 SQL_NO_DATA 반환합니다.  
+-   SQL_NO_DATA: *값* 이 *핸들* 에 지정 된 핸들에 대해 존재 하는 진단 레코드 수보다 큽니다. 또한 함수는 *핸들*에 대 한 진단 레코드가 없는 경우 양수 *값* 에 대 한 SQL_NO_DATA를 반환 합니다.  
   
 ## <a name="comments"></a>주석  
- 응용 프로그램은 일반적으로 **SQLGetDiagField를** 호출하여 다음 세 가지 목표 중 하나를 수행합니다.  
+ 응용 프로그램은 일반적으로 **SQLGetDiagField** 를 호출 하 여 다음 세 가지 목표 중 하나를 수행 합니다.  
   
-1.  함수 호출이 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO(또는 **SQLBrowseConnect** 함수에 대한 SQL_NEED_DATA)를 반환할 때 특정 오류 또는 경고 정보를 얻으려면  
+1.  함수 호출이 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO (또는 **SQLBrowseConnect** 함수의 경우 SQL_NEED_DATA)를 반환 했을 때 특정 오류 또는 경고 정보를 가져오려면  
   
-2.  삽입, 삭제 또는 업데이트 작업 때 영향을 받은 데이터 원본의 행 수를 확인 하려면 **SQLExecute,** **SQLExEcDirect**, **SQLBulkOperations**또는 **SQLSetPos(SQL_DIAG_ROW_COUNT** 헤더 필드)에 대 한 호출을 사용 하 여 수행 하거나 현재 열려 있는 커서에 있는 행 수를 확인 하려면 드라이버 (SQL_DIAG_CURSOR_ROW_COUNT 헤더 필드에서)에서이 정보를 제공할 수 있습니다.  
+2.  SQL_DIAG_ROW_COUNT 헤더 필드에서 **Sqlexecute**, **sqlexecdirect**, **SQLBulkOperations**또는 **SQLSetPos** 를 호출 하 여 삽입, 삭제 또는 업데이트 작업을 수행 했을 때 영향을 받는 데이터 원본의 행 수를 확인 하거나 드라이버가 SQL_DIAG_CURSOR_ROW_COUNT 헤더 필드에서이 정보를 제공할 수 있는 경우 현재 열린 커서에 있는 행 수를 확인 합니다.  
   
-3.  **SQLExecDirect** 또는 **SQLExecute(SQL_DIAG_DYNAMIC_FUNCTION** 및 SQL_DIAG_DYNAMIC_FUNCTION_CODE 헤더 필드)에 대한 호출에 의해 실행된 함수를 확인합니다.  
+3.  **Sqlexecdirect** 또는 **sqlexecute** 를 호출 하 여 실행 된 함수를 확인 하려면 (SQL_DIAG_DYNAMIC_FUNCTION 및 SQL_DIAG_DYNAMIC_FUNCTION_CODE 헤더 필드에서)  
   
- 모든 ODBC 함수는 호출될 때마다 0 개 이상의 진단 레코드를 게시할 수 있으므로 응용 프로그램은 ODBC 함수 호출 후 **SQLGetDiagField를** 호출할 수 있습니다. 한 번에 저장할 수 있는 진단 레코드 의 수에는 제한이 없습니다. **SQLGetDiagField는** *핸들* 인수에 지정된 진단 데이터 구조와 가장 최근에 연관된 진단 정보만 검색합니다. 응용 프로그램이 **SQLGetDiagField** 또는 **SQLGetDiagRec**이외의 ODBC 함수를 호출하는 경우 동일한 핸들을 가진 이전 호출의 진단 정보가 손실됩니다.  
+ 모든 ODBC 함수는 호출 될 때마다 0 개 이상의 진단 레코드를 게시할 수 있으므로 응용 프로그램은 ODBC 함수 호출 후 **SQLGetDiagField** 를 호출할 수 있습니다. 한 번에 저장할 수 있는 진단 레코드 수에는 제한이 없습니다. **SQLGetDiagField** 는 *핸들* 인수에 지정 된 진단 데이터 구조와 가장 최근에 연결 된 진단 정보만 검색 합니다. 응용 프로그램에서 **SQLGetDiagField** 또는 **SQLGetDiagRec**이외의 ODBC 함수를 호출 하는 경우 동일한 핸들이 있는 이전 호출의 진단 정보는 모두 손실 됩니다.  
   
- 응용 프로그램은 **SQLGetDiagField가** SQL_SUCCESS 반환하는 한 *RecNumber를*증가시켜 모든 진단 레코드를 검색할 수 있습니다. 상태 레코드 수는 SQL_DIAG_NUMBER 헤더 필드에 표시됩니다. **SQLGetDiagField에** 대한 호출은 헤더 및 레코드 필드에 비파괴적입니다. 응용 프로그램은 나중에 **SQLGetDiagField를** 호출하여 진단 함수 이외의 함수가 중간에 호출되지 않은 한 레코드에서 필드를 검색하여 동일한 핸들에 레코드를 게시할 수 있습니다.  
+ **SQLGetDiagField** 가 SQL_SUCCESS을 반환 하는 한 응용 프로그램은 *개수*를 증가 시켜 모든 진단 레코드를 검색할 수 있습니다. 상태 레코드의 수는 SQL_DIAG_NUMBER 헤더 필드에 표시 됩니다. **SQLGetDiagField** 에 대 한 호출은 헤더 및 레코드 필드에 대 한 비파괴입니다. 응용 프로그램은 나중에 **SQLGetDiagField** 를 다시 호출 하 여 진단 함수 이외의 함수가 중간에 호출 되지 않은 경우 동일한 핸들에 레코드를 게시할 수 있습니다.  
   
- 응용 프로그램은 **SQLGetDiagField를** 호출하여 SQL_DIAG_CURSOR_ROW_COUNT 또는 SQL_DIAG_ROW_COUNT 제외하고 언제든지 진단 필드를 반환할 수 있으며 핸들이 문 핸들이 아닌 *경우* SQL_ERROR 반환합니다. 다른 진단 필드가 정의되지 않은 경우 **SQLGetDiagField** 호출은 SQL_SUCCESS 반환되며(다른 진단이 발생하지 않는 경우) 필드에 대해 정의되지 않은 값이 반환됩니다.  
+ 응용 프로그램은 SQL_DIAG_CURSOR_ROW_COUNT 또는 SQL_DIAG_ROW_COUNT를 제외 하 고 언제 든 지 **SQLGetDiagField** 를 호출 하 여 진단 필드를 반환할 수 있습니다 .이는 *핸들이* 문 핸들이 아닌 경우 SQL_ERROR를 반환 합니다. 다른 진단 필드가 정의 되어 있지 않으면 **SQLGetDiagField** 에 대 한 호출에서 다른 진단이 발생 하지 않은 경우에는 SQL_SUCCESS을 반환 하 고 필드에 대해 정의 되지 않은 값이 반환 됩니다.  
   
- 자세한 내용은 [SQLGetDiagRec 및 SQLGetDiagField 사용](../../../odbc/reference/develop-app/using-sqlgetdiagrec-and-sqlgetdiagfield.md) 및 [SQLGetDiagRec 및 SQLGetDiagField 구현을](../../../odbc/reference/develop-app/implementing-sqlgetdiagrec-and-sqlgetdiagfield.md)참조하십시오.  
+ 자세한 내용은 [SQLGetDiagRec 및 SQLGetDiagField 사용](../../../odbc/reference/develop-app/using-sqlgetdiagrec-and-sqlgetdiagfield.md) 및 [SQLGetDiagRec 및 SQLGetDiagField 구현](../../../odbc/reference/develop-app/implementing-sqlgetdiagrec-and-sqlgetdiagfield.md)을 참조 하세요.  
   
- 비동기적으로 실행되는 API 이외의 API를 호출하면 HY010 "함수 시퀀스 오류"가 생성됩니다. 그러나 비동기 작업이 완료되기 전에는 오류 레코드를 검색할 수 없습니다.  
+ 비동기적으로 실행 되는 API 이외의 API를 호출 하면 "함수 시퀀스 오류" HY010 생성 됩니다. 그러나 비동기 작업이 완료 되기 전에는 오류 레코드를 검색할 수 없습니다.  
   
-## <a name="handletype-argument"></a>핸들 타입 인수  
- 각 핸들 유형에는 연결된 진단 정보가 있을 수 있습니다. *핸들 Type* 인수는 *핸들*의 핸들 형식을 나타냅니다.  
+## <a name="handletype-argument"></a>HandleType 인수  
+ 각 핸들 유형에는 연결 된 진단 정보가 있을 수 있습니다. *HandleType* 인수 *는 핸들의*핸들 형식을 나타냅니다.  
   
- 환경, 연결, 명령문 및 설명자 핸들에 대해 일부 헤더 및 레코드 필드를 반환할 수 없습니다. 필드가 적용되지 않는 핸들은 다음의 "헤더 필드" 및 "레코드 필드" 섹션에 표시됩니다.  
+ 환경, 연결, 문 및 설명자 핸들에 대해 일부 헤더 및 레코드 필드를 반환할 수 없습니다. 필드가 적용 되지 않는 핸들은 다음에 나오는 "헤더 필드" 및 "레코드 필드" 섹션에 나와 있습니다.  
   
- *핸들 유형이* SQL_HANDLE_ENV 경우 *핸들은* 공유 환경 핸들이거나 공유되지 않은 환경 핸들일 수 있습니다.  
+ *HandleType* 가 SQL_HANDLE_ENV 경우 *handle* 은 공유 또는 공유 되지 않는 환경 핸들 일 수 있습니다.  
   
- 드라이버 관련 헤더 진단 필드를 환경 핸들과 연결해서는 안 됩니다.  
+ 드라이버 관련 헤더 진단 필드는 환경 핸들과 연결 되지 않아야 합니다.  
   
- 설명자 핸들에 대해 정의된 진단 헤더 필드는 SQL_DIAG_NUMBER SQL_DIAG_RETURNCODE.  
+ 설명자 핸들에 대해 정의 된 진단 헤더 필드는 SQL_DIAG_NUMBER SQL_DIAG_RETURNCODE 됩니다.  
   
 ## <a name="diagidentifier-argument"></a>DiagIdentifier 인수  
- 이 인수는 진단 데이터 구조에서 필요한 필드의 식별자를 나타냅니다. *RecNumber가* 1보다 크거나 같으면 필드의 데이터는 함수에서 반환되는 진단 정보를 설명합니다. *RecNumber가* 0이면 필드가 진단 데이터 구조의 헤더에 있으므로 특정 정보가 아닌 진단 정보를 반환한 함수 호출과 관련된 데이터가 포함됩니다.  
+ 이 인수는 진단 데이터 구조에서 필요한 필드의 식별자를 나타냅니다. *값* 이 1 보다 크거나 같으면 필드의 데이터는 함수에서 반환 된 진단 정보를 설명 합니다. *값* 이 0 이면 필드는 진단 데이터 구조의 헤더에 있으므로 특정 정보가 아닌 진단 정보를 반환 하는 함수 호출과 관련 된 데이터를 포함 합니다.  
   
- 드라이버는 진단 데이터 구조에서 드라이버 별 헤더 및 레코드 필드를 정의할 수 있습니다.  
+ 드라이버는 드라이버 관련 헤더 및 레코드 필드를 진단 데이터 구조로 정의할 수 있습니다.  
   
- ODBC 2 *.x* 드라이버로 작업하는 ODBC 3 *.x* 응용 프로그램은 SQL_DIAG_CLASS_ORIGIN, SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_NUMBER, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME 또는 SQL_DIAG_SQLSTATE *대한 DiagIdentifier* 인수를 통해서만 **SQLGetDiagField를** 호출할 수 있습니다. 다른 모든 진단 필드는 SQL_ERROR 반환합니다.  
+ Odbc*2.x 드라이버를* 사용 하 여 작업 하는*odbc 3(sp3) 응용* 프로그램은 SQL_DIAG_CLASS_ORIGIN, SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_NUMBER, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME 또는 SQL_DIAG_SQLSTATE의 *DiagIdentifier* 인수를 사용 하 여 **SQLGetDiagField** 를 호출할 수 있습니다. 다른 모든 진단 필드는 SQL_ERROR을 반환 합니다.  
   
 ## <a name="header-fields"></a>헤더 필드  
- 다음 표에 나열된 헤더 필드는 *DiagIdentifier* 인수에 포함될 수 있습니다.  
+ 다음 표에 나열 된 헤더 필드는 *DiagIdentifier* 인수에 포함 될 수 있습니다.  
   
-|디아그식별서|반환 형식|반환|  
+|DiagIdentifier|반환 형식|반환|  
 |--------------------|-----------------|-------------|  
-|SQL_DIAG_CURSOR_ROW_COUNT|SQLLEN|이 필드에는 커서의 행 수가 포함됩니다. 시맨틱은 **SQLGetInfo** 정보 유형 SQL_DYNAMIC_CURSOR_ATTRIBUTES2, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2, SQL_KEYSET_CURSOR_ATTRIBUTES2 및 SQL_STATIC_CURSOR_ATTRIBUTES2 따라 달라지며, 이는 각 커서 유형(SQL_CA2_CRC_EXACT 및 SQL_CA2_CRC_APPROXIMATE 비트)에 사용할 수 있는 행 수를 나타냅니다.<br /><br /> 이 필드의 내용은 명령문 핸들에 대해서만 정의되며 **SQLExecute,** **SQLExecDirect**또는 **SQLMoreResults가** 호출된 후에만 정의됩니다. **SQLGetDiagField를** 문 핸들 이 외의 SQL_DIAG_CURSOR_ROW_COUNT *DiagIdentifier로* 호출하면 SQL_ERROR 반환됩니다.|  
-|SQL_DIAG_DYNAMIC_FUNCTION|SQLCHAR *|기본 함수가 실행한 SQL 문을 설명하는 문자열입니다. (특정 값은 이 섹션의 후반부 "동적 함수 필드의 값"을 참조하십시오.) 이 필드의 내용은 **SQLExecute,** **SQLExecDirect**또는 **SQLMoreResults**에 대한 호출 후에만 문 핸들에 대해서만 정의됩니다. **SQLGetDiagField를** 문 핸들 이 외의 *SQL_DIAG_DYNAMIC_FUNCTION DiagIdentifier로* 호출하면 SQL_ERROR 반환됩니다. 이 필드의 값은 **SQLExecute** 또는 **SQLExecDirect**.|  
-|SQL_DIAG_DYNAMIC_FUNCTION_CODE|SQLINTEGER|기본 함수에 의해 실행된 SQL 문을 설명하는 숫자 코드입니다. (특정 값은 이 섹션의 후반부 "동적 함수 필드의 값"을 참조하십시오.) 이 필드의 내용은 **SQLExecute,** **SQLExecDirect**또는 **SQLMoreResults**에 대한 호출 후에만 문 핸들에 대해서만 정의됩니다. **SQLGetDiagField를** 문 핸들 이외 다른 SQL_DIAG_DYNAMIC_FUNCTION_CODE *DiagIdentifier를* 호출하면 SQL_ERROR 반환됩니다. 이 필드의 값은 **SQLExecute** 또는 **SQLExecDirect**.|  
-|SQL_DIAG_NUMBER|SQLINTEGER|지정된 핸들에 사용할 수 있는 상태 레코드 의 수입니다.|  
-|SQL_DIAG_RETURNCODE|SQL리턴|함수에서 반환되는 코드를 반환합니다. 반환 코드 목록은 반환 [코드](../../../odbc/reference/develop-app/return-codes-odbc.md)를 참조하십시오. 드라이버는 SQL_DIAG_RETURNCODE 구현할 필요가 없습니다. 항상 드라이버 관리자에 의해 구현됩니다. *핸들에*아직 호출된 함수가 없는 경우 SQL_SUCCESS SQL_DIAG_RETURNCODE 동안 반환됩니다.|  
-|SQL_DIAG_ROW_COUNT|SQLLEN|**SQLExecute,** **SQLExecDirect**, **SQLBulkOperations**또는 **SQLSetPos에**의해 수행되는 삽입, 삭제 또는 업데이트의 영향을 받는 행 수입니다. *커서 사양이* 실행된 후 드라이버 정의됩니다. 이 필드의 내용은 명령문 핸들에 대해서만 정의됩니다. **SQLGetDiagField를** 문 핸들 이외 SQL_DIAG_ROW_COUNT *DiagIdentifier로* 호출하면 SQL_ERROR 반환됩니다. 이 필드의 데이터는 **SQLRowCount**의 *RowCount Ptr* 인수에서도 반환됩니다. 이 필드의 데이터는 모든 비진단 함수 호출 후에 재설정되지만 **SQLRowCount에서** 반환되는 행 수는 명령문이 준비되거나 할당된 상태로 다시 설정될 때까지 동일하게 유지됩니다.|  
+|SQL_DIAG_CURSOR_ROW_COUNT|SQLLEN|이 필드는 커서의 행 수를 포함 합니다. 이러한 의미 체계는 각 커서 유형에 사용할 수 있는 행 개수 (SQL_CA2_CRC_EXACT 및 SQL_CA2_CRC_APPROXIMATE 비트)를 나타내는 **SQLGetInfo** 정보 형식 SQL_DYNAMIC_CURSOR_ATTRIBUTES2, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2, SQL_KEYSET_CURSOR_ATTRIBUTES2 및 SQL_STATIC_CURSOR_ATTRIBUTES2에 따라 다릅니다.<br /><br /> 이 필드의 내용은 문 핸들에 대해서만 정의 되 고 **Sqlexecute**, **sqlexecdirect**또는 **SQLMoreResults** 가 호출 된 후에만 정의 됩니다. 문 핸들이 아닌 SQL_DIAG_CURSOR_ROW_COUNT *DiagIdentifier* 를 사용 하 여 **SQLGetDiagField** 를 호출 하면 SQL_ERROR 반환 됩니다.|  
+|SQL_DIAG_DYNAMIC_FUNCTION|SQLCHAR|이는 기본 함수가 실행 한 SQL 문을 설명 하는 문자열입니다. 특정 값에 대해서는이 섹션의 뒷부분에 나오는 "동적 함수 필드 값"을 참조 하세요. 이 필드의 내용은 **Sqlexecute**, **sqlexecdirect**또는 **SQLMoreResults**를 호출한 후에만 문 핸들에 대해 정의 됩니다. 문 핸들이 아닌 SQL_DIAG_DYNAMIC_FUNCTION *DiagIdentifier* 를 사용 하 여 **SQLGetDiagField** 를 호출 하면 SQL_ERROR 반환 됩니다. **Sqlexecute** 또는 **sqlexecdirect**를 호출 하기 전에이 필드의 값이 정의 되지 않았습니다.|  
+|SQL_DIAG_DYNAMIC_FUNCTION_CODE|SQLINTEGER|기본 함수에 의해 실행 된 SQL 문을 설명 하는 숫자 코드입니다. 특정 값에 대해서는이 섹션의 뒷부분에 나오는 "동적 함수 필드 값"을 참조 하세요. 이 필드의 내용은 **Sqlexecute**, **sqlexecdirect**또는 **SQLMoreResults**를 호출한 후에만 문 핸들에 대해 정의 됩니다. 문 핸들이 아닌 SQL_DIAG_DYNAMIC_FUNCTION_CODE *DiagIdentifier* 를 사용 하 여 **SQLGetDiagField** 를 호출 하면 SQL_ERROR 반환 됩니다. **Sqlexecute** 또는 **sqlexecdirect**를 호출 하기 전에이 필드의 값이 정의 되지 않았습니다.|  
+|SQL_DIAG_NUMBER|SQLINTEGER|지정 된 핸들에 사용할 수 있는 상태 레코드의 수입니다.|  
+|SQL_DIAG_RETURNCODE|SQLRETURN|함수에서 반환 하는 코드를 반환 합니다. 반환 코드 목록은 [반환 코드](../../../odbc/reference/develop-app/return-codes-odbc.md)를 참조 하세요. 드라이버는 SQL_DIAG_RETURNCODE를 구현할 필요가 없습니다. 항상 드라이버 관리자에 의해 구현 됩니다. *핸들*에 대해 아직 함수가 호출 되지 않은 경우에는 SQL_DIAG_RETURNCODE에 대해 SQL_SUCCESS 반환 됩니다.|  
+|SQL_DIAG_ROW_COUNT|SQLLEN|**Sqlexecute**, **sqlexecdirect**, **SQLBulkOperations**또는 **SQLSetPos**에서 수행 하는 insert, delete 또는 update의 영향을 받는 행 수입니다. *커서 사양이* 실행 된 후 드라이버에서 정의 됩니다. 이 필드의 내용은 문 핸들에 대해서만 정의 됩니다. 문 핸들이 아닌 SQL_DIAG_ROW_COUNT *DiagIdentifier* 를 사용 하 여 **SQLGetDiagField** 를 호출 하면 SQL_ERROR 반환 됩니다. 이 필드의 데이터는 **Sqlrowcount**의 *rowcountptr* 인수에도 반환 됩니다. 이 필드의 데이터는 진단이 아닌 함수를 호출할 때마다 다시 설정 되지만 **Sqlrowcount** 에서 반환 되는 행 수는 문이 준비 됨 또는 할당 됨 상태로 다시 설정 될 때까지 동일 하 게 유지 됩니다.|  
   
 ## <a name="record-fields"></a>레코드 필드  
- 다음 표에 나열된 레코드 필드는 *DiagIdentifier* 인수에 포함될 수 있습니다.  
+ 다음 표에 나열 된 레코드 필드는 *DiagIdentifier* 인수에 포함 될 수 있습니다.  
   
-|디아그식별서|반환 형식|반환|  
+|DiagIdentifier|반환 형식|반환|  
 |--------------------|-----------------|-------------|  
-|SQL_DIAG_CLASS_ORIGIN|SQLCHAR *|이 레코드에서 SQLSTATE 값의 클래스 부분을 정의하는 문서를 나타내는 문자열입니다. 해당 값은 오픈 그룹 및 ISO 호출 수준 인터페이스에 의해 정의된 모든 SQLSTATEs에 대해 "ISO 9075"입니다. ODBC 관련 SQLSTATEs(SQLSTATE 클래스가 "IM"인 모든 SQLSTAT)의 경우 해당 값은 "ODBC 3.0"입니다.|  
-|SQL_DIAG_COLUMN_NUMBER|SQLINTEGER|SQL_DIAG_ROW_NUMBER 필드가 행 집합의 유효한 행 번호이거나 매개 변수 집합인 경우 이 필드에는 결과 집합의 열 번호 또는 매개 변수 집합의 매개 변수 번호를 나타내는 값이 포함됩니다. 결과 집합 열 번호는 항상 1부터 시작됩니다. 이 상태 레코드가 책갈피 열과 관련된 경우 필드는 0이 될 수 있습니다. 매개 변수 번호는 1부터 시작합니다. 상태 레코드가 열 번호 또는 매개 변수 번호와 연결되지 않은 경우 SQL_NO_COLUMN_NUMBER 값이 있습니다. 드라이버가 이 레코드와 연결된 열 번호 또는 매개 변수 번호를 확인할 수 없는 경우 이 필드에는 SQL_COLUMN_NUMBER_UNKNOWN 값이 있습니다.<br /><br /> 이 필드의 내용은 명령문 핸들에 대해서만 정의됩니다.|  
-|SQL_DIAG_CONNECTION_NAME|SQLCHAR *|진단 레코드와 관련된 연결 이름을 나타내는 문자열입니다. 이 필드는 드라이버 정의입니다. 환경 핸들과 관련된 진단 데이터 구조와 연결과 관련이 없는 진단의 경우 이 필드는 길이가 0인 문자열입니다.|  
-|SQL_DIAG_MESSAGE_TEXT|SQLCHAR *|오류 또는 경고에 대한 정보 메시지입니다. 이 필드는 진단 메시지에 설명된 대로 서식이 [지정됩니다.](../../../odbc/reference/develop-app/diagnostic-messages.md) 진단 메시지 텍스트의 최대 길이가 없습니다.|  
-|SQL_DIAG_NATIVE|SQLINTEGER|드라이버/데이터 원본별 네이티브 오류 코드입니다. 기본 오류 코드가 없는 경우 드라이버는 0을 반환합니다.|  
-|SQL_DIAG_ROW_NUMBER|SQLLEN|이 필드에는 행 집합의 행 번호 또는 상태 레코드가 연결된 매개 변수 집합의 매개 변수 번호가 포함됩니다. 행 번호와 매개 변수 번호는 1로 시작합니다. 이 필드에는 이 상태 레코드가 행 번호 또는 매개 변수 번호와 연결되지 않은 경우 SQL_NO_ROW_NUMBER 값이 있습니다. 드라이버가 이 레코드와 연결된 행 번호 또는 매개 변수 번호를 확인할 수 없는 경우 이 필드에는 SQL_ROW_NUMBER_UNKNOWN 값이 있습니다.<br /><br /> 이 필드의 내용은 명령문 핸들에 대해서만 정의됩니다.|  
-|SQL_DIAG_SERVER_NAME|SQLCHAR *|진단 레코드와 관련된 서버 이름을 나타내는 문자열입니다. SQL_DATA_SOURCE_NAME 옵션을 사용하여 **SQLGetInfo** 호출에 대해 반환된 값과 동일합니다. 환경 핸들과 관련된 진단 데이터 구조와 서버와 관련이 없는 진단의 경우 이 필드는 길이가 0인 문자열입니다.|  
-|SQL_DIAG_SQLSTATE|SQLCHAR *|5자 SQLSTATE 진단 코드입니다. 자세한 내용은 [SQLSTATEs](../../../odbc/reference/develop-app/sqlstates.md)를 참조하십시오.|  
-|SQL_DIAG_SUBCLASS_ORIGIN|SQLCHAR *|SQLSTATE 코드의 하위 클래스 부분의 정의 부분을 식별하는 SQL_DIAG_CLASS_ORIGIN 동일한 형식과 유효한 값을 가진 문자열입니다. "ODBC 3.0"이 반환되는 ODBC 관련 SQLSTATES는 다음과 같습니다.<br /><br /> 01S00, 01S01, 01S02, 01S06, 01S07, 07S01, 08S01, 21S01, 21S02, 25S01, 25S02, 25S03, 42S01, 42S11, 42S12, 42S21, 42S22, HY095, HY099, HY099, HY099, HY099, HY099, HY099, HY099, HY099 HY100, HY101, HY105, HY107, HY109, HY110, HY111, HYT00, HYT01, IM001, IM002, IM003, IM004, IM005, IM006, IM007, IM008, IM010, IM0110, IM0110, IM0110.|  
+|SQL_DIAG_CLASS_ORIGIN|SQLCHAR|이 레코드에서 SQLSTATE 값의 클래스 부분을 정의 하는 문서를 나타내는 문자열입니다. Open Group 및 ISO 호출 수준 인터페이스에 의해 정의 된 모든 SQLSTATEs의 값은 "ISO 9075"입니다. ODBC 관련 SQLSTATEs (SQLSTATE 클래스가 "IM" 인 모든 해당)의 경우 해당 값은 "ODBC 3.0"입니다.|  
+|SQL_DIAG_COLUMN_NUMBER|SQLINTEGER|SQL_DIAG_ROW_NUMBER 필드가 행 집합 또는 매개 변수 집합의 올바른 행 번호가 면이 필드는 결과 집합의 열 번호 또는 매개 변수 집합의 매개 변수 번호를 나타내는 값을 포함 합니다. 결과 집합 열 번호는 항상 1부터 시작 합니다. 이 상태 레코드가 책갈피 열과 관련 된 경우이 필드는 0이 될 수 있습니다. 매개 변수 번호는 1부터 시작 합니다. 상태 레코드가 열 번호 또는 매개 변수 번호와 연결 되지 않은 경우 SQL_NO_COLUMN_NUMBER 값이 있습니다. 드라이버가이 레코드와 연결 된 열 번호 또는 매개 변수 번호를 확인할 수 없는 경우이 필드의 값은 SQL_COLUMN_NUMBER_UNKNOWN입니다.<br /><br /> 이 필드의 내용은 문 핸들에 대해서만 정의 됩니다.|  
+|SQL_DIAG_CONNECTION_NAME|SQLCHAR|진단 레코드와 관련 된 연결의 이름을 나타내는 문자열입니다. 이 필드는 드라이버에 정의 되어 있습니다. 환경 핸들과 연결 된 진단 데이터 구조 및 연결과 관련이 없는 진단의 경우이 필드는 길이가 0 인 문자열입니다.|  
+|SQL_DIAG_MESSAGE_TEXT|SQLCHAR|오류 또는 경고에 대 한 정보 메시지입니다. 이 필드는 [진단 메시지](../../../odbc/reference/develop-app/diagnostic-messages.md)에 설명 된 대로 형식이 지정 됩니다. 진단 메시지 텍스트에 대 한 최대 길이는 없습니다.|  
+|SQL_DIAG_NATIVE|SQLINTEGER|드라이버/데이터 소스 관련 네이티브 오류 코드입니다. 네이티브 오류 코드가 없으면 드라이버는 0을 반환 합니다.|  
+|SQL_DIAG_ROW_NUMBER|SQLLEN|이 필드에는 행 집합의 행 번호 또는 상태 레코드와 연결 된 매개 변수 집합의 매개 변수 번호가 포함 됩니다. 행 번호와 매개 변수 번호는 1로 시작 합니다. 이 필드에는이 상태 레코드가 행 번호 또는 매개 변수 번호와 연결 되지 않은 경우 SQL_NO_ROW_NUMBER 값이 있습니다. 드라이버가이 레코드와 연결 된 행 번호 또는 매개 변수 번호를 확인할 수 없는 경우이 필드의 값은 SQL_ROW_NUMBER_UNKNOWN입니다.<br /><br /> 이 필드의 내용은 문 핸들에 대해서만 정의 됩니다.|  
+|SQL_DIAG_SERVER_NAME|SQLCHAR|진단 레코드와 관련 된 서버 이름을 나타내는 문자열입니다. SQL_DATA_SOURCE_NAME 옵션을 사용 하 여 **SQLGetInfo** 호출에 대해 반환 되는 값과 같습니다. 환경 핸들과 연결 된 진단 데이터 구조와 서버와 관련이 없는 진단의 경우이 필드는 길이가 0 인 문자열입니다.|  
+|SQL_DIAG_SQLSTATE|SQLCHAR|5 자로 된 SQLSTATE 진단 코드입니다. 자세한 내용은 [Sqlstates](../../../odbc/reference/develop-app/sqlstates.md)을 참조 하세요.|  
+|SQL_DIAG_SUBCLASS_ORIGIN|SQLCHAR|SQLSTATE 코드에서 하위 클래스 부분의 정의 부분을 식별 하는 SQL_DIAG_CLASS_ORIGIN와 동일한 형식 및 유효한 값을 가진 문자열입니다. "ODBC 3.0"이 반환 되는 ODBC 관련 SQLSTATES는 다음과 같습니다.<br /><br /> 01S00, 01S01, 01 S 02, 01S06, 01S07, 07S01, 08S01, 21S01, 21S02, 25S01, 25S02, 25S03, 42S01, 42S01, 42S01, 42S01, 42S01, 42S01, HY095, HY097, HY098, HY099, HY100, HY101, HY105, HY107, HY109, HY110, HY111, HYT00, HYT01, IM001, IM002, IM003, IM004, IM005, IM006, IM007, IM008, IM010, IM011, IM012,,|  
   
 ## <a name="values-of-the-dynamic-function-fields"></a>동적 함수 필드의 값  
- 다음 표는 **SQLExecute** 또는 **SQLExecDirect**에 대한 호출에 의해 실행되는 각 SQL 문 유형에 적용되는 SQL_DIAG_DYNAMIC_FUNCTION 및 SQL_DIAG_DYNAMIC_FUNCTION_CODE 값에 대해 설명합니다. 드라이버는 나열된 값에 드라이버 정의 값을 추가할 수 있습니다.  
+ 다음 표에서는 **Sqlexecute** 또는 **sqlexecdirect**를 호출 하 여 실행 되는 각 SQL 문의 유형에 적용 되는 SQL_DIAG_DYNAMIC_FUNCTION 및 SQL_DIAG_DYNAMIC_FUNCTION_CODE 값에 대해 설명 합니다. 드라이버는 나열 된 값에 드라이버 정의 값을 추가할 수 있습니다.  
   
-|SQL 문<br /><br /> 실행|의 값<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION|의 값<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION_CODE|  
+|SQL 문<br /><br /> 될|의 값<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION|의 값<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION_CODE|  
 |--------------------------------|-----------------------------------------------|-----------------------------------------------------|  
-|*도메인 문 변경*|"도메인 변경"|SQL_DIAG_ALTER_DOMAIN|  
-|*테이블 문 변경*|"테이블 변경"|SQL_DIAG_ALTER_TABLE|  
+|*alter-domain 문*|"도메인 변경"|SQL_DIAG_ALTER_DOMAIN|  
+|*alter table 문*|"ALTER TABLE"|SQL_DIAG_ALTER_TABLE|  
 |*어설션 정의*|"어설션 만들기"|SQL_DIAG_CREATE_ASSERTION|  
-|*문자 집합 정의*|"캐릭터 세트 만들기"|SQL_DIAG_CREATE_CHARACTER_SET|  
-|*데이터 정렬 정의*|"데이터 정렬 만들기"|SQL_DIAG_CREATE_COLLATION|  
-|*도메인 정의*|"도메인 만들기"|SQL_DIAG_CREATE_DOMAIN|
-|*생성 인덱스 문*|"인덱스 만들기"|SQL_DIAG_CREATE_INDEX|  
-|*테이블 문 만들기*|"테이블 만들기"|SQL_DIAG_CREATE_TABLE|  
-|*뷰-문 만들기*|"뷰 만들기"|SQL_DIAG_CREATE_VIEW|  
+|*문자 집합-정의*|"문자 집합 만들기"|SQL_DIAG_CREATE_CHARACTER_SET|  
+|*데이터 정렬-정의*|"데이터 정렬 만들기"|SQL_DIAG_CREATE_COLLATION|  
+|*domainn-정의*|"도메인 만들기"|SQL_DIAG_CREATE_DOMAIN|
+|*create-index 문*|"인덱스 만들기"|SQL_DIAG_CREATE_INDEX|  
+|*create-table 문*|"CREATE TABLE"|SQL_DIAG_CREATE_TABLE|  
+|*create-view-문*|"뷰 만들기"|SQL_DIAG_CREATE_VIEW|  
 |*커서 사양*|"커서 선택"|SQL_DIAG_SELECT_CURSOR|  
-|*삭제 문 위치*|"동적 커서 삭제"|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
-|*문 삭제 검색*|"삭제 위치"|SQL_DIAG_DELETE_WHERE|  
-|*드롭 어설션-문*|"drop 어설션"|SQL_DIAG_DROP_ASSERTION|  
-|*드롭 문자 세트 - stmt*|"드롭 문자 세트"|SQL_DIAG_DROP_CHARACTER_SET|  
-|*드롭 데이터 정렬-문*|"드롭 데이터 정렬"|SQL_DIAG_DROP_COLLATION|  
-|*드롭 도메인 문*|"드롭 도메인"|SQL_DIAG_DROP_DOMAIN|  
-|*드롭 인덱스 문*|"드롭 인덱스"|SQL_DIAG_DROP_INDEX|  
-|*드롭 스키마 문*|"드롭 스키마"|SQL_DIAG_DROP_SCHEMA|  
-|*드롭 테이블 문*|"드롭 테이블"|SQL_DIAG_DROP_TABLE|  
-|*드롭 번역 문*|"드롭 번역"|SQL_DIAG_DROP_TRANSLATION|  
-|*드롭 뷰-문*|"드롭 뷰"|SQL_DIAG_DROP_VIEW|  
-|*교부금*|"그랜트"|SQL_DIAG_GRANT|
-|*삽입 문*|"삽입"|SQL_DIAG_INSERT|  
-|*ODBC 절차 확장*|"전화"|SQL_DIAG_ 통화|  
-|*취소 문*|"해지"|SQL_DIAG_REVOKE|  
+|*delete-문 배치*|"동적 커서 삭제"|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
+|*delete-문-검색*|"DELETE WHERE"|SQL_DIAG_DELETE_WHERE|  
+|*drop assertion 문*|"DROP ASSERTION"|SQL_DIAG_DROP_ASSERTION|  
+|*드롭 문자 집합-stmt*|"문자 집합 삭제"|SQL_DIAG_DROP_CHARACTER_SET|  
+|*drop collation-문*|"데이터 정렬 삭제"|SQL_DIAG_DROP_COLLATION|  
+|*drop 도메인 문*|"도메인 삭제"|SQL_DIAG_DROP_DOMAIN|  
+|*drop index 문*|"DROP INDEX"|SQL_DIAG_DROP_INDEX|  
+|*drop schema 문*|"스키마 삭제"|SQL_DIAG_DROP_SCHEMA|  
+|*drop table 문*|"테이블 삭제"|SQL_DIAG_DROP_TABLE|  
+|*drop translation 문*|"변환 삭제"|SQL_DIAG_DROP_TRANSLATION|  
+|*드롭 뷰-문*|"뷰 삭제"|SQL_DIAG_DROP_VIEW|  
+|*grantstatement*|부여|SQL_DIAG_GRANT|
+|*insert 문*|넣거나|SQL_DIAG_INSERT|  
+|*ODBC-프로시저 확장*|전화할|SQL_DIAG_ 호출|  
+|*revoke 문*|해지|SQL_DIAG_REVOKE|  
 |*스키마 정의*|"스키마 만들기"|SQL_DIAG_CREATE_SCHEMA|  
-|*번역 정의*|"번역 만들기"|SQL_DIAG_CREATE_TRANSLATION|  
-|*업데이트 문 위치*|"동적 업데이트 커서"|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
-|*업데이트 문 검색*|"어디에 업데이트"|SQL_DIAG_UPDATE_WHERE|  
-|알 수 없음|*빈 문자열*|SQL_DIAG_UNKNOWN_STATEMENT|  
+|*번역-정의*|"번역 만들기"|SQL_DIAG_CREATE_TRANSLATION|  
+|*업데이트-문 배치*|"동적 업데이트 커서"|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
+|*업데이트-문-검색*|"업데이트 위치"|SQL_DIAG_UPDATE_WHERE|  
+|Unknown|*빈 문자열*|SQL_DIAG_UNKNOWN_STATEMENT|  
 
 <!--
 These two malformed table rows were fixed by educated GUESS only.
@@ -245,40 +245,40 @@ n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
 
 ## <a name="sequence-of-status-records"></a>상태 레코드의 시퀀스
 
- 상태 레코드는 행 번호와 진단 유형에 따라 시퀀스에 배치됩니다. 드라이버 관리자는 생성되는 상태 레코드를 반환할 최종 순서를 결정합니다. 드라이버는 생성되는 상태 레코드를 반환할 최종 순서를 결정합니다.  
+ 상태 레코드는 행 번호 및 진단 유형에 따라 시퀀스에 배치 됩니다. 드라이버 관리자는 생성 된 상태 레코드를 반환 하는 마지막 순서를 결정 합니다. 드라이버는 생성 하는 상태 레코드를 반환 하는 마지막 순서를 결정 합니다.  
   
- 드라이버 관리자와 드라이버 모두에 의해 진단 레코드가 게시되는 경우 드라이버 관리자는 진단 레코드를 주문할 책임이 있습니다.  
+ 드라이버 관리자와 드라이버에서 진단 레코드를 게시 하는 경우 드라이버 관리자는 순서를 지정 해야 합니다.  
   
- 둘 이상의 상태 레코드가 있는 경우 레코드 의 시퀀스는 행 번호로 먼저 결정됩니다. 다음 규칙은 행별 진단 레코드의 순서를 결정하는 데 적용됩니다.  
+ 두 개 이상의 상태 레코드가 있는 경우 레코드의 순서는 먼저 행 번호로 결정 됩니다. 다음 규칙은 진단 레코드의 시퀀스를 행별로 확인 하는 데 적용 됩니다.  
   
--   SQL_NO_ROW_NUMBER -1로 정의되기 때문에 행에 일치하지 않는 레코드는 특정 행에 해당하는 레코드 앞에 나타납니다.  
+-   SQL_NO_ROW_NUMBER가-1로 정의 되어 있으므로 행에 해당 하지 않는 레코드는 특정 행에 해당 하는 레코드 앞에 표시 됩니다.  
   
--   행 번호를 알 수 없는 레코드는 SQL_ROW_NUMBER_UNKNOWN -2로 정의되므로 다른 모든 레코드 앞에 나타납니다.  
+-   SQL_ROW_NUMBER_UNKNOWN가-2로 정의 되어 있으므로 행 번호가 unknown 인 레코드는 다른 모든 레코드 앞에 표시 됩니다.  
   
--   특정 행과 관련된 모든 레코드의 경우 레코드는 SQL_DIAG_ROW_NUMBER 필드의 값으로 정렬됩니다. 영향을 받는 첫 번째 행의 모든 오류 및 경고가 나열되고 다음 행의 모든 오류 및 경고 등이 표시됩니다.  
+-   특정 행과 관련 된 모든 레코드에 대해 레코드는 SQL_DIAG_ROW_NUMBER 필드의 값을 기준으로 정렬 됩니다. 영향을 받은 첫 번째 행에 대 한 모든 오류 및 경고가 나열 된 다음 영향을 받는 다음 행의 모든 오류 및 경고가 표시 됩니다.  
   
 > [!NOTE]
->  SQLSTATE 01S01 (행의 오류)가 ODBC 2 *.x* 드라이버에 의해 반환되거나 SQLSTATE 01S01 (행의 오류)이 ODBC 3 *.x* 드라이버에 의해 반환되거나 **SQLSetPos가 SQLSetPos가 SQL로** 배치 된 커서에 호출 될 때 ODBC 3 *.x* 드라이버가 반환되는 경우 ODBC 3 .x 드라이버 관리자는 진단 큐에서 상태 레코드를 정렬하지 **않습니다.** **SQLExtendedFetch**  
+>  Odbc*3.X 드라이버 관리자* 는 sqlstate 01S01 (행 오류)가 odbc 2.x 드라이버에 의해 반환 되거나, sqlextendedfetch가 호출 되거나 **sqlextendedfetch**를 사용 하 여 배치 된 커서에 대해 **SQLSETPOS** 가 호출 되 면 odbc*2.X 드라이버에서* sqlstate *.x* 01S01 (행 오류 **SQLExtendedFetch** )가 반환 되는 경우 진단 큐에서 상태 레코드를 정렬 하지 않습니다.  
   
- 각 행 내에서 또는 행 번호와 일치하지 않거나 행 번호를 알 수 없는 모든 레코드또는 SQL_NO_ROW_NUMBER 동일한 행 번호를 가진 모든 레코드에 대해 나열된 첫 번째 레코드는 정렬 규칙 집합을 사용하여 결정됩니다. 첫 번째 레코드 후 행에 영향을 미치는 다른 레코드의 순서는 정의되지 않습니다. 응용 프로그램은 첫 번째 레코드 다음의 경고 앞에 오류가 있다고 가정할 수 없습니다. 응용 프로그램은 함수에 대한 실패한 호출에 대한 완전한 정보를 얻기 위해 전체 진단 데이터 구조를 검사해야 합니다.  
+ 각 행 이나 행에 해당 하지 않는 모든 레코드 또는 행 번호를 알 수 없는 모든 레코드의 경우 또는 행 번호가 SQL_NO_ROW_NUMBER와 같은 모든 레코드에 대해 나열 된 첫 번째 레코드는 정렬 규칙 집합을 사용 하 여 결정 됩니다. 첫 번째 레코드 이후 행에 영향을 주는 다른 레코드의 순서는 정의 되지 않습니다. 응용 프로그램은 첫 번째 레코드 뒤에서 오류가 경고 앞에 오는 것으로 간주할 수 없습니다. 응용 프로그램은 전체 진단 데이터 구조를 검색 하 여 함수에 대 한 실패 한 호출에 대 한 전체 정보를 가져와야 합니다.  
   
- 다음 규칙은 행 내의 첫 번째 레코드를 결정하는 데 사용됩니다. 순위가 가장 높은 레코드는 첫 번째 레코드입니다. 레코드의 소스(드라이버 관리자, 드라이버, 게이트웨이 등)는 레코드의 순위를 매를 정할 때 고려되지 않습니다.  
+ 다음 규칙은 행 내의 첫 번째 레코드를 확인 하는 데 사용 됩니다. 순위가 가장 높은 레코드는 첫 번째 레코드입니다. 레코드의 원본 (드라이버 관리자, 드라이버, 게이트웨이 등)은 레코드를 순위를 지정 하는 경우 고려 되지 않습니다.  
   
--   **오류** 오류를 설명하는 상태 레코드의 순위가 가장 높습니다. 정렬 오류에는 다음 규칙이 적용됩니다.  
+-   **오류** 오류를 설명 하는 상태 레코드의 순위가 가장 높습니다. 정렬 오류에 적용 되는 규칙은 다음과 같습니다.  
   
-    -   트랜잭션 실패 또는 가능한 트랜잭션 실패를 나타내는 레코드가 다른 모든 레코드보다 우선합니다.  
+    -   트랜잭션 실패 또는 가능한 트랜잭션 오류를 나타내는 레코드입니다. 다른 모든 레코드를 표시 합니다.  
   
-    -   둘 이상의 레코드가 동일한 오류 조건을 설명하는 경우 Open 그룹 CLI 사양(클래스 03 ~ HZ)에 의해 정의된 SQLSTAT는 ODBC 및 드라이버 정의 SQLSTATEs보다 훨씬 높습니다.  
+    -   두 개 이상의 레코드가 동일한 오류 조건을 설명 하는 경우 Open Group CLI 사양 (클래스 03 ~ HZ)에서 정의 된 SQLSTATEs와 드라이버에서 정의한 SQLSTATEs입니다.  
   
--   **구현 정의 데이터 값 없음** 드라이버 정의 데이터 없음 값(클래스 02)을 설명하는 상태 레코드의 순위가 두 번째로 높습니다.  
+-   **구현에서 정의 된 데이터 값 없음** 드라이버 정의 데이터 값 없음 (클래스 02)을 설명 하는 상태 레코드에는 두 번째 최고 순위가 있습니다.  
   
--   **경고 메시지** 경고(클래스 01)를 설명하는 상태 레코드의 순위가 가장 낮습니다. 둘 이상의 레코드가 동일한 경고 조건을 설명하는 경우 Open 그룹 CLI 사양에 정의된 SQLSTATEs경고가 ODBC 정의 및 드라이버 정의 SQLSTATEs보다 앞선다.  
+-   **경고** 경고 (클래스 01)를 설명 하는 상태 레코드의 순위가 가장 낮습니다. 두 개 이상의 레코드가 동일한 경고 조건을 설명 하는 경우 Open Group CLI 사양 outrank ODBC 정의 및 드라이버 정의 SQLSTATEs에서 정의 되는 경고 SQLSTATEs입니다.  
   
 ## <a name="related-functions"></a>관련 함수  
   
-|원하는 정보|참조|  
+|원하는 정보|참조 항목|  
 |---------------------------|---------|  
-|진단 데이터 구조의 여러 필드 구하기|[SQLGetDiagRec 함수](sqlgetdiagrec-function.md)|  
+|진단 데이터 구조의 여러 필드 가져오기|[SQLGetDiagRec 함수](sqlgetdiagrec-function.md)|  
   
 ## <a name="see-also"></a>참고 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   

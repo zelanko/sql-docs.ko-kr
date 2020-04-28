@@ -24,10 +24,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 58abfde651fb59bc69207db810324eb4c74b8c26
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112066"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>SQL Server에 액세스 응용 프로그램 연결-Azure SQL DB (AccessToSQL)
@@ -146,7 +146,7 @@ Recordset.LastModified
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>데이터 마이그레이션 후 하이퍼링크 기능이 손실 됨  
 **원인:** 데이터를 마이그레이션한 후에는 열의 하이퍼링크가 해당 기능을 상실 하 고 간단한 **nvarchar (max)** 열이 됩니다.  
   
-**해결 방법:** 없음을.  
+**해결 방법:** 없습니다.  
   
 ### <a name="some-sql-server-data-types-are-not-supported-by-access"></a>Access에서 일부 SQL Server 데이터 형식을 지원 하지 않습니다.  
 **원인:** 나중에 Access에서 지원 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하지 않는 데이터 형식을 포함 하도록 또는 SQL Azure 테이블을 업데이트 하는 경우 access에서 테이블을 열 수 없습니다.  

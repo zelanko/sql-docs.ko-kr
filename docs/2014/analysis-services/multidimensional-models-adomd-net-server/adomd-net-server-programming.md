@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 843d3037d2acb2876a21ae25d1bf15e52686e327
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79217160"
 ---
 # <a name="adomdnet-server-programming"></a>ADOMD.NET 서버 프로그래밍
@@ -25,7 +25,7 @@ ms.locfileid: "79217160"
   
  다음 표에서는 ADOMD.NET 서버 애플리케이션을 개발하는 데 도움이 되는 항목을 보여 줍니다.  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[ADOMD.NET Server 기능](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-functionality)|ADOMD.NET 서버 개체의 사용 방법을 설명합니다.|  
 |[ADOMD.NET 서버 개체 아키텍처](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture)|ADOMD.NET 서버 개체의 개체 아키텍처를 설명합니다.|  
